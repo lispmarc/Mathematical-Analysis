@@ -11,41 +11,237 @@
     of set theory> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-1><vspace|0.5fn>
 
+    1.1<space|2spc>Basic concepts about classes and sets
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-2>
+
+    1.2<space|2spc>Class operations <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-8>
+
+    1.3<space|2spc>Cartesian products <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-9>
+
+    1.4<space|2spc>Sets <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-13>
+
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|2<space|2spc>Partial
     Functions and Functions> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-2><vspace|0.5fn>
+    <no-break><pageref|auto-21><vspace|0.5fn>
+
+    2.1<space|2spc>Pairs and Triples <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-22>
+
+    2.2<space|2spc>Partial functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-24>
+
+    2.3<space|2spc>Partial function <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-25>
+
+    2.4<space|2spc>Functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-26>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|3<space|2spc>Relations>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-3><vspace|0.5fn>
+    <no-break><pageref|auto-27><vspace|0.5fn>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|4<space|2spc>The
+    natural numbers> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-28><vspace|0.5fn>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|5<space|2spc>Finite
+    and Infinite Sets> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-29><vspace|0.5fn>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|Index>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-30><vspace|0.5fn>
   </table-of-contents>
 
   <include|Set.tm>
 
   <include|Numbers.tm>
+
+  <\the-index|idx>
+    <index+1|<with|mode|math|<around*|\<langle\>|A,B,C|\<rangle\>>>|<pageref|auto-23>>
+
+    <index+1|<with|mode|math|\<cal-P\><around*|(|A|)>>|<pageref|auto-19>>
+
+    <index+1|<with|mode|math|\<cal-U\>>|<pageref|auto-4>>
+
+    <index+1|<with|mode|math|\<emptyset\>>|<pageref|auto-7>>
+
+    <index+1|<with|mode|math|A\<times\>B>|<pageref|auto-12>>
+
+    <index+1|<with|mode|math|A<big|cap>B>|<pageref|auto-6>>
+
+    <index+1|<with|mode|math|A<big|cup>B>|<pageref|auto-5>>
+
+    <index+1|axiom of extent|<pageref|auto-3>>
+
+    <index+1|axiom of infinity|<pageref|auto-15>>
+
+    <index+1|axiom of pairing|<pageref|auto-10>>
+
+    <index+1|axiom of power|<pageref|auto-20>>
+
+    <index+1|axiom of subsets|<pageref|auto-16>>
+
+    <index+1|axiom of union|<pageref|auto-17>>
+
+    <index+1|cartesian product|<pageref|auto-11>>
+
+    <index+1|power set|<pageref|auto-18>>
+
+    <index+1|successor set|<pageref|auto-14>>
+  </the-index>
 </body>
 
 <\initial>
   <\collection>
     <associate|page-medium|paper>
+    <associate|par-first|1.5fn>
     <associate|project-flag|true>
   </collection>
 </initial>
 
 <\references>
   <\collection>
+    <associate|\<less\>A,B,C\<gtr\>=\<less\>D,E,F\<gtr\>=\<gtr\>A=E,B=D,C=F|<tuple|2.5|24|Set.tm>>
+    <associate|\<less\>A,B\<gtr\>=\<less\>C,D\<gtr\>=\<gtr\>A=C,B=D|<tuple|2.3|23|Set.tm>>
     <associate|auto-1|<tuple|1|7|Set.tm>>
-    <associate|auto-2|<tuple|2|9|Set.tm>>
-    <associate|auto-3|<tuple|3|11|Set.tm>>
-    <associate|auto-4|<tuple|4|13|Numbers.tm>>
-    <associate|auto-5|<tuple|5|15|Numbers.tm>>
-    <associate|part:Numbers.tm|<tuple|3|13|../../.TeXmacs/texts/scratch/no_name_2.tm>>
-    <associate|part:Set.tm|<tuple|?|7|../../.TeXmacs/texts/scratch/no_name_2.tm>>
+    <associate|auto-10|<tuple|axiom of pairing|14|Set.tm>>
+    <associate|auto-11|<tuple|cartesian product|16|Set.tm>>
+    <associate|auto-12|<tuple|<with|mode|<quote|math>|A\<times\>B>|16|Set.tm>>
+    <associate|auto-13|<tuple|1.4|19|Set.tm>>
+    <associate|auto-14|<tuple|successor set|19|Set.tm>>
+    <associate|auto-15|<tuple|axiom of infinity|19|Set.tm>>
+    <associate|auto-16|<tuple|axiom of subsets|20|Set.tm>>
+    <associate|auto-17|<tuple|axiom of union|20|Set.tm>>
+    <associate|auto-18|<tuple|power set|20|Set.tm>>
+    <associate|auto-19|<tuple|<with|mode|<quote|math>|\<cal-P\><around*|(|A|)>>|20|Set.tm>>
+    <associate|auto-2|<tuple|1.1|7|Set.tm>>
+    <associate|auto-20|<tuple|axiom of power|20|Set.tm>>
+    <associate|auto-21|<tuple|2|23|Set.tm>>
+    <associate|auto-22|<tuple|2.1|23|Set.tm>>
+    <associate|auto-23|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|A,B,C|\<rangle\>>>|24|Set.tm>>
+    <associate|auto-24|<tuple|2.2|25|Set.tm>>
+    <associate|auto-25|<tuple|2.3|25|Set.tm>>
+    <associate|auto-26|<tuple|2.4|25|Set.tm>>
+    <associate|auto-27|<tuple|3|27|Set.tm>>
+    <associate|auto-28|<tuple|4|29|Numbers.tm>>
+    <associate|auto-29|<tuple|5|31|Numbers.tm>>
+    <associate|auto-3|<tuple|axiom of extent|8|Set.tm>>
+    <associate|auto-30|<tuple|5|33>>
+    <associate|auto-4|<tuple|<with|mode|<quote|math>|\<cal-U\>>|9|Set.tm>>
+    <associate|auto-5|<tuple|<with|mode|<quote|math>|A<big|cup>B>|9|Set.tm>>
+    <associate|auto-6|<tuple|<with|mode|<quote|math>|A<big|cap>B>|9|Set.tm>>
+    <associate|auto-7|<tuple|<with|mode|<quote|math>|\<emptyset\>>|9|Set.tm>>
+    <associate|auto-8|<tuple|1.2|10|Set.tm>>
+    <associate|auto-9|<tuple|1.3|14|Set.tm>>
+    <associate|axiom of construction|<tuple|1.9|9|Set.tm>>
+    <associate|axiom of extent|<tuple|1.5|8|Set.tm>>
+    <associate|axiom of infinity|<tuple|1.52|19|Set.tm>>
+    <associate|axiom of pairing|<tuple|1.36|14|Set.tm>>
+    <associate|axiom of power|<tuple|1.60|20|Set.tm>>
+    <associate|axiom of subsets|<tuple|1.54|20|Set.tm>>
+    <associate|axiom of union|<tuple|1.57|20|Set.tm>>
+    <associate|cartesian product|<tuple|1.44|16|Set.tm>>
+    <associate|cartesian product and inclusion|<tuple|1.48|17|Set.tm>>
+    <associate|cartesian product of the empty set|<tuple|1.46|16|Set.tm>>
+    <associate|cartesian product properties (1)|<tuple|1.49|17|Set.tm>>
+    <associate|cartesian product with enpty set|<tuple|1.47|17|Set.tm>>
+    <associate|class absorption laws|<tuple|1.27|11|Set.tm>>
+    <associate|class class commutative,idempotent,associative,distributivity|<tuple|1.30|12|Set.tm>>
+    <associate|class complement of comploment|<tuple|1.28|11|Set.tm>>
+    <associate|class de Morgan's law|<tuple|1.29|11|Set.tm>>
+    <associate|class difference|<tuple|1.24|10|Set.tm>>
+    <associate|class empty set|<tuple|1.18|10|Set.tm>>
+    <associate|class empty set is unique|<tuple|1.19|10|Set.tm>>
+    <associate|class inclusion and union and
+    intersection|<tuple|1.26|11|Set.tm>>
+    <associate|class intersection, union, inclusion|<tuple|1.25|10|Set.tm>>
+    <associate|class not empty sets|<tuple|1.20|10|Set.tm>>
+    <associate|class properties (1)|<tuple|1.8|8|Set.tm>>
+    <associate|class set difference and union ,
+    intersection|<tuple|1.31|13|Set.tm>>
+    <associate|class universal and empotyset
+    properties|<tuple|1.32|14|Set.tm>>
+    <associate|element a=b=\<gtr\>{a}={b}|<tuple|1.34|14|Set.tm>>
+    <associate|element equalitiy of unordered pairs|<tuple|1.39|15|Set.tm>>
+    <associate|element equality of unordered pairs
+    (1)|<tuple|1.40|15|Set.tm>>
+    <associate|element is set|<tuple|1.2|7|Set.tm>>
+    <associate|element {a,a}={a}|<tuple|1.37|14|Set.tm>>
+    <associate|element: {a} is a element|<tuple|1.38|14|Set.tm>>
+    <associate|empty set property|<tuple|1.17|10|Set.tm>>
+    <associate|eq 1.1 001|<tuple|1.1|8|Set.tm>>
+    <associate|eq 1.2 001|<tuple|1.2|8|Set.tm>>
+    <associate|eq 1.3 001|<tuple|1.3|8|Set.tm>>
+    <associate|eq 1.4 001|<tuple|1.4|8|Set.tm>>
+    <associate|eq 1.5.001|<tuple|1.5|15|Set.tm>>
+    <associate|eq 1.6.001|<tuple|1.6|15|Set.tm>>
+    <associate|eq 1.7.001|<tuple|1.7|17|Set.tm>>
+    <associate|eq 1.8.001|<tuple|1.8|17|Set.tm>>
+    <associate|eq 2.1.001|<tuple|2.2|23|Set.tm>>
+    <associate|eq 2.1.001.1|<tuple|2.1|23|Set.tm>>
+    <associate|eq 2.2.001|<tuple|2.4|23|Set.tm>>
+    <associate|eq 2.3.001.2|<tuple|2.3|23|Set.tm>>
+    <associate|eq 2.5.001.2|<tuple|2.5|23|Set.tm>>
+    <associate|eq 2.6.001|<tuple|2.6|24|Set.tm>>
+    <associate|eq 2.7.001|<tuple|2.7|24|Set.tm>>
+    <associate|eq 2.8.001|<tuple|2.8|24|Set.tm>>
+    <associate|eq 2.9.001|<tuple|2.9|24|Set.tm>>
+    <associate|pair of elements|<tuple|1.41|16|Set.tm>>
+    <associate|part:Numbers.tm|<tuple|3|29>>
+    <associate|part:Set.tm|<tuple|?|7>>
+    <associate|power set|<tuple|1.59|20|Set.tm>>
+    <associate|set A*B is subset of P(P(AUB))|<tuple|1.62|20|Set.tm>>
+    <associate|set element proper class|<tuple|1.50|19|Set.tm>>
+    <associate|set emptyset is not set of empty set|<tuple|2.2|23|Set.tm>>
+    <associate|set intersection of two sets is aset|<tuple|1.55|20|Set.tm>>
+    <associate|set restriction of a set of sets|<tuple|1.61|20|Set.tm>>
+    <associate|set union of two sets is a set|<tuple|1.58|20|Set.tm>>
+    <associate|successor set|<tuple|1.51|19|Set.tm>>
+    <associate|universal class|<tuple|1.12|9|Set.tm>>
+    <associate|universal class property|<tuple|1.13|9|Set.tm>>
   </collection>
 </references>
 
 <\auxiliary>
   <\collection>
+    <\associate|idx>
+      <tuple|<tuple|axiom of extent>|<pageref|auto-3>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-U\>>>|<pageref|auto-4>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|A<big|cup>B>>|<pageref|auto-5>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|A<big|cap>B>>|<pageref|auto-6>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<emptyset\>>>|<pageref|auto-7>>
+
+      <tuple|<tuple|axiom of pairing>|<pageref|auto-10>>
+
+      <tuple|<tuple|cartesian product>|<pageref|auto-11>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|A\<times\>B>>|<pageref|auto-12>>
+
+      <tuple|<tuple|successor set>|<pageref|auto-14>>
+
+      <tuple|<tuple|axiom of infinity>|<pageref|auto-15>>
+
+      <tuple|<tuple|axiom of subsets>|<pageref|auto-16>>
+
+      <tuple|<tuple|axiom of union>|<pageref|auto-17>>
+
+      <tuple|<tuple|power set>|<pageref|auto-18>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-P\><around*|(|A|)>>>|<pageref|auto-19>>
+
+      <tuple|<tuple|axiom of power>|<pageref|auto-20>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|A,B,C|\<rangle\>>>>|<pageref|auto-23>>
+    </associate>
     <\associate|parts>
       <tuple|Set.tm|chapter-nr|0|section-nr|0|subsection-nr|0>
 
@@ -56,21 +252,50 @@
       of set theory> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1><vspace|0.5fn>
 
+      1.1<space|2spc>Basic concepts about classes and sets
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-2>
+
+      1.2<space|2spc>Class operations <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-8>
+
+      1.3<space|2spc>Cartesian products <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-9>
+
+      1.4<space|2spc>Sets <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-13>
+
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Partial
       Functions and Functions> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-2><vspace|0.5fn>
+      <no-break><pageref|auto-21><vspace|0.5fn>
+
+      2.1<space|2spc>Pairs and Triples <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-22>
+
+      2.2<space|2spc>Partial functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-24>
+
+      2.3<space|2spc>Partial function <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-25>
+
+      2.4<space|2spc>Functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-26>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Relations>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-3><vspace|0.5fn>
+      <no-break><pageref|auto-27><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>The
       natural numbers> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-4><vspace|0.5fn>
+      <no-break><pageref|auto-28><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Finite
       and Infinite Sets> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-5><vspace|0.5fn>
+      <no-break><pageref|auto-29><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Index>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-30><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
