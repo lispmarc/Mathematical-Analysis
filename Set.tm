@@ -1820,12 +1820,12 @@
     <math|range<around*|(|f|)>> is defined by\ 
 
     <\equation*>
-      dom<around*|(|f|)>=<around*|{|x\|\<exists\>y\<in\>B<text| such that
+      dom<around*|(|f|)>=<around*|{|x\|\<exists\>y<text| such that
       ><around*|(|x,y|)>\<in\>f|}>
     </equation*>
 
     <\equation*>
-      range<around*|(|f|)>=<around*|{|y\|\<exists\>x\<in\>A<text| such that
+      range<around*|(|f|)>=<around*|{|y\|\<exists\>x<text| such that
       ><around*|(|x,y|)>\<in\>f|}>
     </equation*>
   </definition>
@@ -1838,16 +1838,16 @@
   </theorem>
 
   <\proof>
-    If <math|x\<in\>dom<around*|(|f|)>> then <math|\<exists\>y\<in\>B> such
-    that <math|<around*|(|x,y|)>\<in\>f\<Rightarrowlim\><rsub|f\<subseteq\>A\<times\>B><around*|(|x,y|)>\<in\>A\<times\>B>
+    If <math|x\<in\>dom<around*|(|f|)>> then <math|\<exists\>y> such that
+    <math|<around*|(|x,y|)>\<in\>f\<Rightarrowlim\><rsub|f\<subseteq\>A\<times\>B><around*|(|x,y|)>\<in\>A\<times\>B>
     proving that <math|x\<in\>A>, hence\ 
 
     <\equation*>
       dom<around*|(|f|)>\<subseteq\>A
     </equation*>
 
-    Further if <math|y\<in\>range<around*|(|f|)>> then
-    <math|\<exists\>x\<in\>A> such that <math|<around*|(|x,y|)>\<in\>f\<Rightarrowlim\><rsub|f\<subseteq\>A\<times\>B><around*|(|x,y|)>\<in\>A\<times\>B>
+    Further if <math|y\<in\>range<around*|(|f|)>> then <math|\<exists\>x>
+    such that <math|<around*|(|x,y|)>\<in\>f\<Rightarrowlim\><rsub|f\<subseteq\>A\<times\>B><around*|(|x,y|)>\<in\>A\<times\>B>
     proving that <math|y\<in\>B>, hence
 
     <\equation*>
@@ -1884,12 +1884,13 @@
   <\remark>
     Note that we use a conflicting notation here. On one hand
     <math|y=f<around*|(|x|)>> can be intepreted as
-    <math|<around*|(|x,y|)>\<in\>f>, on the other hand it can also mean that
-    <math|y> is the image of <math|x> by <math|f>. The convention that we
-    adopt is: If lower cases are used as in <math|y=f<around*|(|x|)>> we
-    interpret this as <math|<around*|(|x,y|)>\<in\>f>, if we use uppercases
-    like in <math|f<around*|(|C|)>> we are talking about images. In case of
-    doubt <math|<around*|(|f|)><around*|(|C|)>> always referes to the image.
+    <math|<around*|(|x,y|)>\<in\>f>, on the other hand it can also means that
+    <math|y> is the image of <math|x> by <math|f>. We adopt the following
+    convention. If lower cases are used as in <math|y=f<around*|(|x|)>> we
+    interpret this as <math|<around*|(|x,y|)>\<in\>f> and if we use
+    uppercases like in <math|f<around*|(|C|)>> we are talking about images.
+    In case of doubt <math|<around*|(|f|)><around*|(|C|)>> always referes to
+    the image.
   </remark>
 
   <\definition>
@@ -1928,8 +1929,7 @@
 
     <\enumerate>
       <item>If <math|y\<in\>f<around*|(|C|)>> then there exists a
-      <math|x\<in\>C> such that <math|<around*|(|x,y|)>\<in\>f>, as
-      <math|C\<subseteq\>A> it follows that <math|x\<in\>A> which proves that
+      <math|x\<in\>C> such that <math|<around*|(|x,y|)>\<in\>f>, so
       <math|y\<in\>range<around*|(|f|)>>. Hence\ 
 
       <\equation*>
@@ -1937,28 +1937,28 @@
       </equation*>
 
       <item>If <math|x\<in\>f<rsup|-1><around*|(|D|)>> then there exists a
-      <math|y\<in\>D> such that <math|<around*|(|x,y|)>\<in\>f>, as
-      <math|D\<subseteq\>B> <math|y\<in\>B>, which proves that
-      <math|x\<in\>dom<around*|(|f|)>>, hence\ 
+      <math|y\<in\>D> such that <math|<around*|(|x,y|)>\<in\>f>, which proves
+      that <math|x\<in\>dom<around*|(|f|)>>, hence\ 
 
       <\equation*>
         f<rsup|-1><around*|(|D|)>\<subseteq\>dom<around*|(|f|)>
       </equation*>
 
-      <item>If <math|y\<in\>range<around*|(|f|)>> then
-      <math|\<exists\>x\<in\>A> such that <math|<around*|(|x,y|)>\<in\>f>,
-      which proves that <math|y\<in\>f<around*|(|A|)>>, hence
-      <math|range<around*|(|f|)>\<subseteq\>f<around*|(|A|)>>. From (1) we
-      have <math|f<around*|(|A|)>\<subseteq\>range<around*|(|f|)>>, so using
-      [theorem: <reference|class properties (1)>]\ 
+      <item>If <math|y\<in\>range<around*|(|f|)>> then <math|\<exists\>x>
+      such that <math|<around*|(|x,y|)>\<in\>f>, which as
+      <math|f\<subseteq\>A\<times\>B> proves that <math|x\<in\>A>, hence
+      <math|y\<in\>f<around*|(|A|)>>, or <math|range<around*|(|f|)>\<subseteq\>f<around*|(|A|)>>.
+      From (1) we have <math|f<around*|(|A|)>\<subseteq\>range<around*|(|f|)>>,
+      so using [theorem: <reference|class properties (1)>]\ 
 
       <\equation*>
         f<around*|(|A|)>=range<around*|(|f|)>
       </equation*>
 
-      <item>If <math|x\<in\>dom<around*|(|f|)>> then
-      <math|\<exists\>y\<in\>B> such that <math|<around*|(|x,y|)>\<in\>f>,
-      which proves that <math|x\<in\>f<rsup|-1><around*|(|B|)>>, hence
+      <item>If <math|x\<in\>dom<around*|(|f|)>> then <math|\<exists\>y> such
+      that <math|<around*|(|x,y|)>\<in\>f>, which as
+      <math|f\<subseteq\>A\<times\>B> proves that <math|y\<in\>B>, giving
+      <math|x\<in\>f<rsup|-1><around*|(|B|)>>, hence
       <math|dom<around*|(|f|)>\<subseteq\>f<rsup|-1><around*|(|B|)>>. From
       (2) we have <math|f<rsup|-1><around*|(|B|)>\<subseteq\>dom<around*|(|f|)>>,
       so using [theorem: <reference|class properties (1)>]\ 
@@ -1986,8 +1986,7 @@
 
     <\equation*>
       g\<circ\>f=<around*|{|z\|z=<around*|(|x,y|)><text| such that
-      <math|\<exists\>u\<in\>B<text| with
-      <math|<around*|(|x,u|)>\<in\>f\<wedge\><around*|(|u,y|)>\<in\>g>>>>|}>
+      <math|\<exists\>u<text| with <math|<around*|(|x,u|)>\<in\>f\<wedge\><around*|(|u,y|)>\<in\>g>>>>|}>
     </equation*>
   </definition>
 
@@ -1997,32 +1996,32 @@
   <\theorem>
     <label|partial function composition of partial functions>Let
     <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>C> be partial
-    functions then <math|g\<circ\>f:A\<rightarrow\>C> is a partial function
+    functions then <math|g\<circ\>f:A\<rightarrow\>C> is a partial function.
   </theorem>
 
   <\proof>
-    If <math|<around*|(|x,y|)>\<in\>g\<circ\>f> then there exist a
-    <math|u\<in\>B> such that <math|<around*|(|x,u|)>\<in\>f> and
+    If <math|<around*|(|x,y|)>\<in\>g\<circ\>f> then there exist a <math|u>
+    such that <math|<around*|(|x,u|)>\<in\>f> and
     <math|<around*|(|u,y|)>\<in\>g>, as <math|f>, <math|g> are partial
     functions we have that <math|f\<subseteq\>A\<times\>B> and
     <math|g\<subseteq\>B\<times\>C>. So <math|<around*|(|x,u|)>\<in\>A\<times\>B>
     and <math|<around*|(|u,y|)>\<in\>B\<times\>C>. So <math|x\<in\>A> and
     <math|y\<in\>C> proving that <math|<around*|(|x,y|)>\<in\>A\<times\>C>.
-    Using the Axiom of Extent [axiom: <reference|axiom of extent>] we havr
+    Hence
 
     <\equation*>
       g\<circ\>f\<subseteq\>A\<times\>C
     </equation*>
 
     Further if <math|<around*|(|x,y|)>\<in\>g\<circ\>f\<wedge\><around*|(|x,y<rprime|'>|)>\<in\>g\<circ\>f>
-    then there exists <math|u,v\<in\>B> such that
+    then there exists <math|u,v> such that
     <math|<around*|(|x,u|)>\<in\>f\<wedge\><around*|(|u,y|)>\<in\>g\<wedge\><around*|(|x,v|)>\<in\>f\<wedge\><around*|(|v,y<rprime|'>|)>\<in\>g>.
     From <math|<around*|(|x,u|)>\<in\>f\<wedge\><around*|(|x,v|)>\<in\>f> it
     follows [as <math|f> is a partial function] that <math|u=v>. So
-    <math|<around*|(|v,y|)>\<equallim\><rsub|<text|u=v and [theorem:
-    <reference|pair equality of pairs>]>><around*|(|u,y|)>\<in\>g>. Hence as
-    <math|g> is a partial function it follows that <math|y=y<rprime|'>>. To
-    summarize
+    <math|<around*|(|u,y|)>\<equallim\><rsub|<text|u=v and [theorem:
+    <reference|pair equality of pairs>]>><around*|(|u,y<rprime|'>|)>\<in\>g>.
+    Hence as <math|g> is a partial function it follows that
+    <math|y=y<rprime|'>>. To summarize
 
     <\equation*>
       If <around*|(|x,y|)>\<in\>g\<circ\>f\<wedge\><around*|(|x,y<rprime|'>|)>\<in\>g\<circ\>f
@@ -2042,22 +2041,21 @@
 
   <\proof>
     If <math|<around*|(|x.z|)>\<in\>h\<circ\><around*|(|g\<circ\>f|)>> then
-    <math|\<exists\>u\<in\>C> such that <math|<around*|(|x,u|)>\<in\>g\<circ\>f>
-    and <math|<around*|(|u,z|)>\<in\>h>. As
-    <math|<around*|(|x,u|)>\<in\>g\<circ\>f> there exists a <math|v\<in\>B>
-    such that <math|<around*|(|x,v|)>\<in\>f> and
+    <math|\<exists\>u> such that <math|<around*|(|x,u|)>\<in\>g\<circ\>f> and
+    <math|<around*|(|u,z|)>\<in\>h>. As <math|<around*|(|x,u|)>\<in\>g\<circ\>f>
+    there exists a <math|v> such that <math|<around*|(|x,v|)>\<in\>f> and
     <math|<around*|(|v,u|)>\<in\>g>. As <math|<around*|(|v,u|)>\<in\>g\<wedge\><around*|(|u,z|)>\<in\>h>
     we have that <math|<around*|(|v,z|)>\<in\>h\<circ\>g>, as
-    <math|<around*|(|x,v|)>\<in\>f> then <math|<around*|(|x,z|)>\<in\><around*|(|h\<circ\>g|)>\<circ\>f>.
+    <math|<around*|(|x,v|)>\<in\>f> it follows
+    <math|<around*|(|x,z|)>\<in\><around*|(|h\<circ\>g|)>\<circ\>f>.
 
     If <math|<around*|(|x,z|)>\<in\><around*|(|h\<circ\>g|)>\<circ\>f> there
-    <math|\<exists\>u\<in\>B> such that <math|<around*|(|x,u|)>\<in\>f> and
+    <math|\<exists\>u> such that <math|<around*|(|x,u|)>\<in\>f> and
     <math|<around*|(|u,z|)>\<in\>h\<circ\>g>. As
-    <math|<around*|(|u,z|)>\<in\>h\<circ\>g> there <math|\<exists\>v\<in\>C>
-    such that <math|<around*|(|u,v|)>\<in\>g> and
-    <math|<around*|(|v,z|)>\<in\>h>. From <math|<around*|(|x,u|)>\<in\>f> and
-    <math|<around*|(|u,v|)>\<in\>g> we have that
-    <math|<around*|(|x,v|)>\<in\>g\<circ\>f>. As
+    <math|<around*|(|u,z|)>\<in\>h\<circ\>g> there <math|\<exists\>v> such
+    that <math|<around*|(|u,v|)>\<in\>g> and <math|<around*|(|v,z|)>\<in\>h>.
+    From <math|<around*|(|x,u|)>\<in\>f> and <math|<around*|(|u,v|)>\<in\>g>
+    we have that <math|<around*|(|x,v|)>\<in\>g\<circ\>f>. As
     <math|<around*|(|v,z|)>\<in\>h> we have that
     <math|<around*|(|x,z|)>\<in\>h\<circ\><around*|(|h\<circ\>f|)>>.
 
@@ -2089,9 +2087,9 @@
 
     <\enumerate>
       <item>If <math|x\<in\>dom<around*|(|g\<circ\>f|)>> then there exist a
-      <math|z\<in\>C> such that <math|<around*|(|x,z|)>\<in\>g\<circ\>f>. So
-      there exist a <math|y\<in\>B> such that <math|<around*|(|x,y|)>\<in\>f>
-      and <math|*<around*|(|y,z|)>\<in\>g>, hence
+      <math|z> such that <math|<around*|(|x,z|)>\<in\>g\<circ\>f>. So there
+      exist a <math|y> such that <math|<around*|(|x,y|)>\<in\>f> and
+      <math|*<around*|(|y,z|)>\<in\>g>, hence
       <math|x\<in\>dom<around*|(|f|)>> and
       <math|y\<in\>dom<around*|(|g|)>\<Rightarrowlim\><rsub|<around*|(|x,y|)>\<in\>f>x\<in\>f<rsup|-1><around*|(|dom<around*|(|g|)>|)>>.
       So <math|x\<in\>dom<around*|(|f|)><big|cap>f<rsup|-1><around*|(|dom<around*|(|g|)>|)>>.
@@ -2102,15 +2100,15 @@
       </equation>
 
       If <math|x\<in\>dom<around*|(|f|)><big|cap>f<rsup|-1><around*|(|dom<around*|\<nobracket\>|g|)>|)>>
-      then <math|x\<in\>dom<around*|(|f|)>> so that <math|\<exists\>y\<in\>B>
-      such that <math|<around*|(|x,y|)>\<in\>f> and
+      then <math|x\<in\>dom<around*|(|f|)>> so that <math|\<exists\>y> such
+      that <math|<around*|(|x,y|)>\<in\>f> and
       <math|x\<in\>f<rsup|-1><around*|(|dom<around*|(|g|)>|)>> so that
       <math|\<exists\>y<rprime|'>\<in\>dom<around*|(|g|)>> such that
       <math|<around*|(|x,y<rprime|'>|)>\<in\>f>. As <math|f> is a partial
       function it follows that <math|y=y<rprime|'>>. So
       <math|y\<in\>dom<around*|(|g|)>>, from which it follows that
-      <math|\<exists\>z\<in\>C> such that <math|<around*|(|y,z|)>\<in\>g>. As
-      we have <math|<around*|(|x,y|)>\<in\>f> and
+      <math|\<exists\>z> such that <math|<around*|(|y,z|)>\<in\>g>. As we
+      have <math|<around*|(|x,y|)>\<in\>f> and
       <math|<around*|(|y,z|)>\<in\>g> it follows that
       <math|<around*|(|x.z|)>\<in\>g\<circ\>f> or
       <math|x\<in\>dom<around*|(|g\<circ\>f|)>>. This proves that
@@ -2124,7 +2122,7 @@
 
       <item>If <math|z\<in\>range<around*|(|g\<circ\>f|)>> then there exists
       a <math|x\<in\>A> such that <math|<around*|(|x,z|)>\<in\>g\<circ\>f>,
-      so there exist a <math|y\<in\>B> such that
+      so there exist a <math|y> such that
       <math|<around*|(|x,y|)>\<in\>f\<wedge\><around*|(|y,z|)>\<in\>g>. Then
       <math|y\<in\>range<around*|(|f|)>> and <math|y\<in\>dom<around*|(|g|)>>
       or <math|y\<in\>range<around*|(|f|)><big|cap>dom<around*|(|g|)>>, which
@@ -2140,7 +2138,7 @@
       then <math|\<exists\>y\<in\>range<around*|(|f|)><big|cap>dom<around*|(|g|)>>
       such that <math|<around*|(|y,z|)>\<in\>g>. From
       <math|y\<in\>range<around*|(|f|)>> it follows that there exist a
-      <math|x\<in\>A> such that <math|<around*|(|x,y|)>\<in\>f>. So
+      <math|x> such that <math|<around*|(|x,y|)>\<in\>f>. So
       <math|<around*|(|x,z|)>\<in\>g\<circ\>f> proving that
       <math|x\<in\>range<around*|(|g\<circ\>f|)>>, hence
       <math|g<around*|(|range<around*|(|f|)><big|cap>dom<around*|(|g|)>|)>\<subseteq\>range<around*|(|g\<circ\>f|)>>.
@@ -2171,9 +2169,60 @@
     \ 
 
     <\enumerate>
-      <item>If <math|x\<in\>> TODO
+      <item>If <math|z\<in\><around*|(|g\<circ\>f|)><around*|(|C|)>> then
+      there exists a <math|x\<in\>C> such that
+      <math|<around*|(|x,z|)>\<in\>g\<circ\>f>. So by definition there exiss
+      a <math|y> such that <math|<around*|(|x,y|)>\<in\>f\<wedge\><around*|(|y,z|)>\<in\>g>.
+      From <math|<around*|(|x,y|)>\<in\>f> it follows that
+      <math|y\<in\>f<around*|(|C|)>> and as <math|<around*|(|y,z|)>\<in\>g>
+      it follows that <math|z\<in\>g<around*|(|f<around*|(|C|)>|)>>. Hence\ 
 
-      <item>
+      <\equation>
+        <label|eq 2.12.002><around*|(|g\<circ\>f|)><around*|(|C|)>\<subseteq\>g<around*|(|f<around*|(|C|)>|)>
+      </equation>
+
+      On the other hand if <math|z\<in\>g<around*|(|f<around*|(|C|)>|)>>
+      there exist a <math|y\<in\>f<around*|(|C|)>> such that
+      <math|<around*|(|y,z|)>\<in\>g>. As <math|y\<in\>f<around*|(|C|)>>
+      there exists a <math|x\<in\>C> such that
+      <math|<around*|(|x,y|)>\<in\>f>. From
+      <math|<around*|(|x,y|)>\<in\>f\<wedge\><around*|(|y,z|)>\<in\>g> it
+      follows that <math|<around*|(|x,z|)>\<in\>g\<circ\>f> so that [as
+      <math|x\<in\>C>] <math|z\<in\><around*|(|g\<circ\>f|)><around*|(|C|)>>.
+      Proving <math|g<around*|(|f<around*|(|C|)>|)>\<subseteq\><around*|(|g\<circ\>f|)><around*|(|C|)>>,
+      combining this with [eq <reference|eq 2.12.002>] and [theorem:
+      <reference|class properties (1)>] gives\ 
+
+      <\equation*>
+        <around*|(|g\<circ\>f|)><around*|(|C|)>=g<around*|(|f<around*|(|C|)>|)>
+      </equation*>
+
+      <item>If <math|x\<in\><around*|(|g\<circ\>f|)><rsup|-1><around*|(|D|)>>
+      then there exist a <math|z\<in\>D> such that
+      <math|<around*|(|x,z|)>\<in\>g\<circ\>f>, hence <math|\<exists\>y> such
+      that <math|<around*|(|x,y|)>\<in\>f\<wedge\><around*|(|y,z|)>\<in\>g>.
+      So by definition <math|y\<in\>g<rsup|-1><around*|(|D|)>> and as
+      <math|<around*|(|x,y|)>\<in\>f> it follows that
+      <math|x\<in\>f<rsup|-1><around*|(|g<rsup|-1><around*|(|D|)>|)>>. Hence\ 
+
+      <\equation>
+        <label|eq 2.13.002><around*|(|g\<circ\>f|)><rsup|-1><around*|(|D|)>\<subseteq\>f<rsup|-1><around*|(|g<rsup|-1><around*|(|D|)>|)>
+      </equation>
+
+      If <math|x\<in\>f<rsup|-1><around*|(|g<rsup|-1><around*|(|D|)>|)>> then
+      there exist a <math|y\<in\>g<rsup|-1><around*|(|D|)>> such that
+      <math|<around*|(|x,y|)>\<in\>f>, as
+      <math|y\<in\>g<rsup|-1><around*|(|D|)>> then there exist a
+      <math|z\<in\>D> such that <math|<around*|(|y,z|)>\<in\>g>. From
+      <math|z\<in\>D\<wedge\><around*|(|x,y|)>\<in\>f\<wedge\><around*|(|y,z|)>\<in\>g>
+      it follows that <math|x\<in\><around*|(|g\<circ\>f|)><rsup|-1><around*|(|D|)>>
+      proving that <math|f<rsup|-1><around*|(|g<rsup|-1><around*|(|D|)>|)>\<subseteq\><around*|(|g\<circ\>f|)><rsup|-1><around*|(|D|)>>.
+      Combining this with [eq: <reference|eq 2.13.002>] and [theorem:
+      <reference|class properties (1)>] gives
+
+      <\equation*>
+        <around*|(|g\<circ\>f|)><rsup|-1><around*|(|D|)>=f<rsup|-1><around*|(|g<rsup|-1><around*|(|D|)>|)>
+      </equation*>
     </enumerate>
   </proof>
 
@@ -2208,8 +2257,35 @@
   </proof>
 
   <\note>
-    Some books calls partial functions functions and functions mappings.\ 
+    Be aware that some books calls partial functions functions and functions
+    mappings.\ 
   </note>
+
+  We have the follow trivial fact about a function
+
+  <\proposition>
+    <label|function range restriction>Let <math|f:A\<rightarrow\>B> be a
+    function then if <math|range<around*|(|f|)>\<subseteq\>C> we have that
+    <math|f:A\<rightarrow\>C> is a function.
+  </proposition>
+
+  <\proof>
+    If <math|<around*|(|x,y|)>\<in\>f> then
+    <math|y\<in\>range<around*|(|f|)>> hence as
+    <math|range<around*|(|f|)>\<subseteq\>C> <math|y\<in\>C>. As
+    <math|f\<subseteq\>A\<times\>B> we have also <math|x\<in\>A> so that
+    <math|<around*|(|x,y|)>\<in\>C\<times\>B>. Hence
+    <math|f\<subseteq\>A\<times\>C>, further if
+    <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>f> we have as
+    <math|f:A\<rightarrow\>B> is a function that <math|y=y<rprime|'>>. So
+
+    <\equation*>
+      f:A\<rightarrow\>C<text| is a partial function>
+    </equation*>
+
+    As <math|range<around*|(|f|)>=A> (because <math|f:A\<rightarrow\>B> is a
+    function] we have that <math|f:A\<rightarrow\>C> a function
+  </proof>
 
   We have the following trivial proposition about the equality of two
   functions
@@ -2425,6 +2501,53 @@
     </equation*>
   </proof>
 
+  <\proposition>
+    <label|function composition of Id function>Let <math|f:A\<rightarrow\>B>
+    be a partial function then <math|f=f\<circ\>Id<rsub|A>> and
+    <math|f=Id<rsub|B>\<circ\>f>
+  </proposition>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|<around*|(|x,y|)>\<in\>f> then as
+      <math|f\<subseteq\>A\<times\>B> we have
+      <math|x\<in\>A\<wedge\>x\<in\>B>, by the definition of
+      <math|Id<rsub|A>> we have <math|<around*|(|x,x|)>\<in\>Id<rsub|A>>, as
+      <math|<around*|(|x,y|)>\<in\>f> we have
+      <math|<around*|(|x,y|)>\<in\>Id<rsub|A>\<circ\>f>. If
+      <math|<around*|(|x,y|)>\<in\>f\<circ\>Id<rsub|A>> then
+      <math|\<exists\>x<rprime|'>> such that
+      <math|<around*|(|x,x<rprime|'>|)>\<in\>Id<rsub|A>\<wedge\><around*|(|x<rprime|'>,y|)>\<in\>f>.
+      By defiition of <math|Id<rsub|A>> we have that
+      <math|\<exists\>z\<in\>A> such that
+      <math|<around*|(|x,x<rprime|'>|)>=<around*|(|z,z|)>> hence
+      <math|x=x<rprime|'>> so that <math|<around*|(|x,y|)>\<in\>f>. Using the
+      Axiom of Extent [axiom: <reference|axiom of extent>] we have then that\ 
+
+      <\equation*>
+        f=f\<circ\>Id<rsub|A>
+      </equation*>
+
+      <item>If <math|<around*|(|x,y|)>\<in\>f> then as
+      <math|f\<subseteq\>A\<times\>B> we have
+      <math|x\<in\>A\<wedge\>x\<in\>B>, by the definition of
+      <math|Id<rsub|B>> we have <math|<around*|(|y,y|)>\<in\>Id<rsub|B>>, so
+      <math|<around*|(|x,y|)>\<in\>Id<rsub|B>\<circ\>f>. If
+      <math|<around*|(|x,y|)>\<in\>Id<rsub|B>\<circ\>f> then
+      <math|\<exists\>y<rprime|'>> such that
+      <math|<around*|(|x,y<rprime|'>|)>\<in\>f\<wedge\><around*|(|y,y<rprime|'>|)>>,
+      from the definition of <math|Id<rsub|B>> we have that
+      <math|y=y<rprime|'>> so that <math|<around*|(|x,y|)>\<in\>f>. Using the
+      Axiom of Extent [axiom: <reference|axiom of extent>] we have then that\ 
+
+      <\equation*>
+        f=Id<rsub|B>\<circ\>f
+      </equation*>
+    </enumerate>
+  </proof>
+
   As a function <math|f:A\<rightarrow\>B> is a partial function with
   <math|dom<around*|(|f|)>=A> we can refine [theorem: <reference|partial
   functions image/preimage properties>].
@@ -2454,7 +2577,7 @@
   <\theorem>
     <label|function composition of functions is a fucntion>Let
     <math|f:A\<rightarrow\>B> and <math|g:A\<rightarrow\>B> functions then
-    <math|g\<circ\>f<rprime|'>:A\<rightarrow\>C> is also a function with
+    <math|g\<circ\>f:A\<rightarrow\>C> is also a function with
     <math|range<around*|(|f|)>=g<around*|(|range<around*|(|f|)>|)>>
   </theorem>
 
@@ -2532,6 +2655,11 @@
     proving surjectivity.
   </proof>
 
+  <\proposition>
+    If <math|f:A\<rightarrow\>B> is a injective function then
+    <math|f:A\<rightarrow\>f<around*|(|A|)>> is a bijection TODO
+  </proposition>
+
   The importance of injectivity is that it allows us to define the inverse of
   a partial function. First we define the inverse graph of the graph of a
   partial function.
@@ -2583,8 +2711,8 @@
   </note>
 
   If <math|f> is a injective function then the above theorem ensures that
-  <math|f<rsup|-1>> is a partial function however note that <math|f<rsup|-1>>
-  can be a graph of a function if we restrict the source of the function.
+  <math|f<rsup|-1>> is a partial function however \ <math|f<rsup|-1>> can be
+  a graph of a function if we restrict the source of the inverse function.
 
   <\theorem>
     <label|function injective inverse is a function>If
@@ -2635,7 +2763,26 @@
   </example>
 
   <\proof>
-    Let <math|x\<in\>>
+    Let <math|<around*|(|x,y|)>\<in\>Id<rsub|A>\<wedge\><around*|(|x<rprime|'>,y|)>\<in\>IdA>
+    then <math|\<exists\>z,z<rprime|'>\<in\>A> such that
+    <math|<around*|(|x,y|)>=<around*|(|z,z|)>\<wedge\><around*|(|x<rprime|'>,y|)>=<around*|(|z<rprime|'>,z<rprime|'>|)>>.
+    So using [theorem: <reference|pair equality of pairs>]
+    <math|x=z\<wedge\>y=z\<wedge\>x=z<rprime|'>\<wedge\>y=z<rprime|'>>. Using
+    [theorem: <reference|class properties (1)>] repeately gives then
+    <math|x=x<rprime|'>> proving that\ 
+
+    <\equation*>
+      Id<rsub|A><text| is injective>
+    </equation*>
+
+    If <math|y\<in\>A> then by definition
+    <math|<around*|(|y,y|)>\<in\>Id<rsub|A>> so that
+    <math|range<around*|(|Id<rsub|A>|)>\<subseteq\>A>. Using [theorem:
+    <reference|function surjection condition>] it follows that
+
+    <\equation*>
+      Id<rsub|A><text| is surjective>
+    </equation*>
   </proof>
 
   <\theorem>
@@ -2645,7 +2792,7 @@
 
   <\proof>
     As <math|f:A\<rightarrow\>B> is injective and surjective we have that
-    <math|f<around*|(|A|)>=B> and by [thorem: <reference|function injective
+    <math|f<around*|(|A|)>=B> and by [theorem: <reference|function injective
     inverse is a function>] that <math|f<rsup|-1>\<of\>f<around*|(|A|)>\<rightarrow\>B>
     is a function. Hence <math|f<rsup|-1>:B\<rightarrow\>A> is a function.
   </proof>
@@ -2655,21 +2802,19 @@
     then\ 
 
     <\enumerate>
-      <item><math|f\<circ\>f<rsup|-1>=\<bbb-1\><rsub|B>>
+      <item><math|f\<circ\>f<rsup|-1>=Id<rsub|B>>
 
-      <item><math|f<rsup|-1>\<circ\>f=\<bbb-1\><rsub|A>>
+      <item><math|f<rsup|-1>\<circ\>f=Id<rsub|A>>
     </enumerate>
   </theorem>
 
   <\proof>
-    \ 
+    \ First <math|f<rsup|-1>:B\<rightarrow\>A> is a function by [theorem:
+    <reference|function bijection has a inverse>].\ 
 
     <\enumerate>
-      <item>First <math|f<rsup|=1>:B\<rightarrow\>A> is a function by
-      [theorem: <reference|function bijection has a inverse>]. Let
-      <math|<around*|(|x,y|)>\<in\>f\<circ\>f<rsup|-1>> then
-      <math|\<exists\>z\<in\>A> such that
-      <math|<around*|(|x,z|)>\<in\>f<rsup|-1>\<Rightarrow\><around*|(|z,x|)>>
+      <item>Let <math|<around*|(|x,y|)>\<in\>f\<circ\>f<rsup|-1>> then
+      <math|\<exists\>z> such that <math|<around*|(|x,z|)>\<in\>f<rsup|-1>\<Rightarrow\><around*|(|z,x|)>>
       and <math|<around*|(|z,y|)>\<in\>f>. As <math|f<rsup|-1>> is the graph
       of a function we have that <math|x=y>. Further from
       <math|<around*|(|x,z|)>\<in\>f<rsup|-1>\<subseteq\>B\<times\>A> it
@@ -2680,20 +2825,21 @@
         <label|eq 2.12.001>f\<circ\>f<rsup|-1>\<subseteq\>Id<rsub|B>
       </equation>
 
-      If <math|<around*|(|x,y|)>\<in\>Id<rsub|B>> then <math|x\<in\>B> and
-      <math|x=y>. As <math|B=dom<around*|(|f<rsup|-1>|)>> there exists a
-      <math|z\<in\>A> such that <math|<around*|(|x,z|)>\<in\>f<rsup|-1>\<Rightarrow\><around*|(|z,x|)>\<in\>f<rsup|>>.
-      Hence <math|<around*|(|x,y|)>\<equallim\><rsub|x=y><around*|(|x,x|)>\<in\>f\<circ\>f<rsup|-1>>
-      proving that <math|Id<rsub|B>\<subseteq\>f\<circ\>f<rsup|-1>>.
-      Combining this with [eq: <reference|eq 2.12.001>] proves that\ 
+      If <math|<around*|(|x,y|)>\<in\>Id<rsub|B>> then
+      <math|\<exists\>z\<in\>B> such that
+      <math|<around*|(|x,y|)>=<around*|(|z,z|)>> so that <math|x=y\<in\>B>,
+      As <math|B=dom<around*|(|f<rsup|-1>|)>> there exists a <math|u> such
+      that <math|<around*|(|y,u|)>\<in\>f<rsup|-1>\<Rightarrow\><around*|(|u,y|)>\<in\>f>
+      so that <math|<around*|(|y,y|)>\<in\>f\<circ\>f<rsup|-1>\<Rightarrowlim\><rsub|x=y><around*|(|x,y|)>\<in\>f\<circ\>f<rsup|-1>>.
+      So <math|Id<rsub|B>\<subseteq\>f\<circ\>f<rsup|-1>>. Combining this
+      with [eq: <reference|eq 2.12.001>] proves that\ 
 
       <\equation*>
         f\<circ\>f<rsup|-1>=Id<rsub|B>
       </equation*>
 
       <item>Let <math|<around*|(|x,y|)>\<in\>f<rsup|-1>\<circ\>f> then
-      <math|\<exists\>z\<in\>B> such that
-      <math|<around*|(|x,z|)>\<in\>f\<Rightarrow\><around*|(|z,x|)>\<in\>f<rsup|-1>>
+      <math|\<exists\>z> such that <math|<around*|(|x,z|)>\<in\>f\<Rightarrow\><around*|(|z,x|)>\<in\>f<rsup|-1>>
       and <math|<around*|(|z,y|)>\<in\>f<rsup|-1>>. As <math|f<rsup|-1>> is
       the graph of a function we have that <math|x=y>. Further from
       <math|<around*|(|x,z|)>\<in\>f\<subseteq\>A\<times\>B> it follows that
@@ -2704,15 +2850,17 @@
         <label|eq 2.13.001>f<rsup|-1>\<circ\>f\<subseteq\>I<rsub|A>
       </equation>
 
-      If <math|<around*|(|x,y|)>\<in\>Id<rsub|A>> then <math|x\<in\>A> and
-      <math|x=y>. As <math|A=dom<around*|(|f|)>> there exists a
-      <math|z\<in\>B> such that <math|<around*|(|x,z|)>\<in\>f\<Rightarrow\><around*|(|z,x|)>\<in\>f<rsup|-1><rsup|>>.
-      Hence <math|<around*|(|x,y|)>\<equallim\><rsub|x=y><around*|(|x,x|)>\<in\>f<rsup|-1>\<circ\>f>
-      proving that <math|Id<rsub|A>\<subseteq\>f\<circ\>f<rsup|-1>>.
-      Combining this with [eq: <reference|eq 2.13.001>] proves that\ 
+      If <math|<around*|(|x,y|)>\<in\>Id<rsub|A>> then
+      <math|\<exists\>z\<in\>A> such that
+      <math|<around*|(|x,y|)>=<around*|(|z,z|)>> so that <math|x=y\<in\>A>,
+      As <math|A=dom<around*|(|f|)>> there exists a <math|u> such that
+      <math|<around*|(|x,u|)>\<in\>f<rsup|>\<Rightarrow\><around*|(|u,x|)>\<in\>f<rsup|-1>>
+      so that <math|<around*|(|x,x|)>\<in\>f<rsup|-1>\<circ\>f\<Rightarrowlim\><rsub|x=y><around*|(|x,y|)>\<in\>f<rsup|-1>\<circ\>f>.
+      So <math|Id<rsub|B>\<subseteq\>f<rsup|-1>\<circ\>f>. Combining this
+      with [eq: <reference|eq 2.13.001>] proves that\ 
 
       <\equation*>
-        f<rsup|-1>\<circ\>f=Id<rsub|B>
+        f<rsup|-1>\<circ\>f=Id<rsub|A>
       </equation*>
     </enumerate>
   </proof>
@@ -2730,14 +2878,14 @@
   </corollary>
 
   <\proof>
-    \ 
+    <space|1em>
 
-    <\enumerate>
-      <item>This follows from [theorem: <reference|function bijection f,f-1>]
-      by taking <math|g=f<rsup|-1>>
+    <\description>
+      <item*|<math|1\<Rightarrow\>2>>This follows from [theorem:
+      <reference|function bijection f,f-1>] by taking <math|g=f<rsup|-1>>
 
-      <item>Let <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>f\<subseteq\>A\<times\>B>
-      as <math|y=dom<around*|(|g|)>> there exisrs a <math|z\<in\>A> such that
+      <item*|<math|2\<Rightarrow\>1>>Let <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>f\<subseteq\>A\<times\>B>,
+      as <math|y=dom<around*|(|g|)>> there exisrs a <math|z> such that
       <math|<around*|(|y,z|)>\<in\>g>, hence
       <math|<around*|(|x,z|)>,<around*|(|x<rprime|'>,z|)>\<in\>g\<circ\>f=Id<rsub|A>>
       so that <math|x=z=x<rprime|'>> proving that\ 
@@ -2755,14 +2903,14 @@
       <\equation*>
         f:A\<rightarrow\>B<text| is a surjection>
       </equation*>
-    </enumerate>
+    </description>
   </proof>
 
   The inverse of a bijection is again a bijection
 
   <\corollary>
     <label|function bijection and inverse>If <math|f:A\<rightarrow\>B> is a
-    bijection then <math|f<rsup|-1>:B\<rightarrow\>A> is a bijection
+    bijection then <math|f<rsup|-1>:B\<rightarrow\>A> is a bijection\ 
   </corollary>
 
   <\proof>
@@ -2772,6 +2920,50 @@
     <math|f<rsup|-1>\<circ\>f=Id<rsub|A>> which iby [theorem:
     <reference|function bijection condition (2)>] proves that
     <math|f<rsup|-1>:B\<rightarrow\>A> is a bijection.
+  </proof>
+
+  <\proposition>
+    <label|function inverse of a bijection is unique>If
+    <math|f:A\<rightarrow\>B> is a bijection then we have:
+
+    <\enumerate>
+      <item>If <math|g:B\<rightarrow\>A> is such that
+      <math|f\<circ\>g=Id<rsub|B>> and <math|g\<circ\>f=Id<rsub|A>> then
+      <math|g=f<rsup|-1>>
+
+      <item><math|<around*|(|f<rsup|-1>|)><rsup|-1>=f>
+    </enumerate>
+  </proposition>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>We have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|f\<circ\>g=Id<rsub|B>>|<cell|\<Rightarrow\>>|<cell|f<rsup|-1>\<circ\><around*|(|f\<circ\>g|)>=f<rsup|-1>\<circ\>Id<rsub|B>>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|[proposition:
+        <reference|function composition of Id
+        function>>>>|<cell|f<rsup|-1>\<circ\><around*|(|f\<circ\>g|)>=f<rsup|-1>>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|[theorem:
+        <reference|partial function associativity>]>>>|<cell|<around*|(|f<rsup|-1>\<circ\>f|)>\<circ\>g=f<rsup|-1>>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|[function:
+        <reference|function bijection f,f-1>]>>>|<cell|Id<rsub|B>\<circ\>g=f<rsup|-1>>>|<row|<cell|>|<cell|<math|\<Rightarrowlim\><rsub|<text|[proposition:
+        <reference|function composition of Id
+        function>>>>>|<cell|g=f<rsup|-1>>>>>
+      </eqnarray*>
+
+      <item>We have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|x,y|)>\<in\><around*|(|f<rsup|-1>|)><rsup|-1>>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|y,x|)>\<in\>f<rsup|-1>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|x,y|)>\<in\>f>>>>
+      </eqnarray*>
+
+      which by the Axiom of Extent [axiom: <reference|axiom of extent>]
+      proves\ 
+
+      <\equation*>
+        <around*|(|f<rsup|-1>|)><rsup|-1>=f
+      </equation*>
+    </enumerate>
   </proof>
 
   Composition preserves injectivity, surjectivity and <math|bijectivity>
@@ -2792,6 +2984,9 @@
       <item>If <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>C> are
       bijective functions then <math|g\<circ\>f:A\<rightarrow\>C> is a
       bijective function
+
+      <item>If <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>C> are
+      bijective functions then <math|<around*|(|g\<circ\>f|)><rsup|-1>=f<rsup|-1>\<circ\>g<rsup|-1>>
     </enumerate>
   </theorem>
 
@@ -2800,7 +2995,7 @@
 
     <\enumerate>
       <item>Let <math|<around*|(|x,z|)>,<around*|(|x<rprime|'>,z|)>\<in\>g\<circ\>f>
-      then <math|\<exists\>u,v\<in\>B> such that
+      then <math|\<exists\>u,v> such that
 
       <\equation*>
         <around*|(|x,u|)>\<in\>f\<wedge\><around*|(|x<rprime|'>,v|)>\<in\>f\<wedge\><around*|(|u,y|)>\<in\>g\<wedge\><around*|(|v,y|)>\<in\>g
@@ -2816,17 +3011,44 @@
 
       <item>Let <math|z\<in\>C> then as <math|g> is surjective there
       <math|\<exists\>y\<in\>B> such that <math|<around*|(|y,z|)>\<in\>g>. As
-      <math|f> is bijective there exists a <math|x\<in\>A> such that
+      <math|f> is surjective there exists a <math|x\<in\>A> such that
       <math|<around*|(|x,y|)>\<in\>f>. But then
       <math|<around*|(|x,z|)>\<in\>g\<circ\>f> proving that <math|g\<circ\>f>
-      is bijective.
+      is surjective.
 
       <item>If <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>A> are
       bijections then these two functions are injective and surjective. Using
       (1) and (2) proves that <math|g\<circ\>f:A\<rightarrow\>C> is injective
       and surjective and thus by defiition bijective.
+
+      <item>By (3) <math|g\<circ\>f> is a bijection, so by [theorem:
+      <reference|function bijection f,f-1>] we have that
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|g\<circ\>f|)><rsup|-1>\<circ\><around*|(|g\<circ\>f|)>=Id<rsub|A>>|<cell|\<Rightarrowlim\><rsub|<text|[associativity:
+        <reference|partial function associativity>]
+        >>>|<cell|<around*|(|<around*|(|g\<circ\>f|)><rsup|-1>\<circ\>g|)>\<circ\>f=Id<rsub|A>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|<around*|(|<around*|(|<around*|(|g\<circ\>f|)><rsup|-1>\<circ\>g|)>\<circ\>f|)>\<circ\>f<rsup|-1>=Id<rsub|A>\<circ\>f<rsup|-1>>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|[proposition:
+        <reference|function composition of Id
+        function>]>>>|<cell|<around*|(|<around*|(|<around*|(|g\<circ\>f|)><rsup|-1>\<circ\>g|)>\<circ\>f|)>\<circ\>f<rsup|-1>=f<rsup|-1>>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|[associativity:
+        <reference|partial function associativity>]
+        >>>|<cell|<around*|(|<around*|(|g\<circ\>f|)><rsup|-1>\<circ\>g|)>\<circ\><around*|(|f\<circ\>f<rsup|-1>|)>=f<rsup|-1>>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|[theorem:
+        <reference|function bijection f,f-1>]<math|>>>>|<cell|<around*|(|<around*|(|g\<circ\>f|)><rsup|-1>\<circ\>g|)>\<circ\>Id<rsub|B>=f<rsup|-1>>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|[proposition:
+        <reference|function composition of Id
+        function>]>>>|<cell|<around*|(|g\<circ\>f|)><rsup|-1>\<circ\>g=f<rsup|-1>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|<around*|(|<around*|(|g\<circ\>f|)><rsup|-1>\<circ\>g|)>\<circ\>g<rsup|-1>=f<rsup|-1>\<circ\>g<rsup|-1>>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|[associativity:
+        <reference|partial function associativity>]
+        >>>|<cell|<around*|(|g\<circ\>f<rsup|-1>|)>\<circ\><around*|(|g\<circ\>g<rsup|-1>|)>=f<rsup|-1>\<circ\>g<rsup|-1>>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|[theorem:
+        <reference|function bijection f,f-1>]<math|>>>>|<cell|<around*|(|g\<circ\>f|)><rsup|-1>\<circ\>Id<rsub|A>=f<rsup|-1>\<circ\>g<rsup|-1>>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|[proposition:
+        <reference|function composition of Id
+        function>]>>>|<cell|<around*|(|g\<circ\>f|)><rsup|-1>=f<rsup|-1>\<circ\>g<rsup|-1>>>>>
+      </eqnarray*>
     </enumerate>
   </proof>
+
+  The following theorem will be used for manifolds later
+
+  <\theorem>
+    TODO
+  </theorem>
 
   <subsection|Restriction of a Function/Partial Function>
 
@@ -2837,7 +3059,7 @@
   <math|f:\<bbb-R\>\<rightarrow\>\<bbb-R\>> defined by
   <math|f<around*|(|x|)>=<choice|<tformat|<table|<row|<cell|1<text| if
   >x\<less\>1>>|<row|<cell|0<text| if >1\<leqslant\>x>>>>>> is not
-  continuous, as it is discontinuous at <math|1.>, However restricting this
+  continuous, as it is discontinuous at <math|1.> However restricting this
   function to <math|\<bbb-R\>\\<around*|{|1|}>> produces a continuous
   function. \ This is the idea of the next definition\ 
 
@@ -2861,7 +3083,7 @@
   <\proof>
     We must of course proof that <math|f<rsub|\|C>:C\<rightarrow\>B> is
     indeed a partial function. First, if <math|<around*|(|x,y|)>\<in\>f<rsub|\|C>>
-    then <math|<around*|(|x,y|)>\<in\>f> and <math|x\<in\>A>. As
+    then <math|<around*|(|x,y|)>\<in\>f> and <math|x\<in\>C>. As
     <math|f\<subseteq\>A\<times\>B> we have that <math|y\<in\>B> so we have
     <math|<around*|(|x,y|)>\<in\>C\<times\>B> proving
 
@@ -2898,9 +3120,9 @@
 
     <\enumerate>
       <item>If <math|x\<in\>dom<around*|(|f<rsub|\|C>|)>> then there exists a
-      <math|y\<in\>B> such that <math|<around*|(|x,y|)>\<in\>f<rsub|\|C>>,
-      hence <math|x\<in\>C> and <math|<around*|(|x,y|)>\<in\>f> or
-      <math|x\<in\>C> and <math|x\<in\>dom<around*|(|f|)>>, so that
+      <math|y> such that <math|<around*|(|x,y|)>\<in\>f<rsub|\|C>>, hence
+      <math|x\<in\>C> and <math|<around*|(|x,y|)>\<in\>f> or <math|x\<in\>C>
+      and <math|x\<in\>dom<around*|(|f|)>>, so that
       <math|x\<in\>C<big|cap>dom<around*|(|f|)>>. Hence\ 
 
       <\equation>
@@ -2909,7 +3131,7 @@
 
       Further if <math|x\<in\>C<big|cap>dom<around*|(|f|)>> then
       <math|x\<in\>C> and <math|x\<in\>dom<around*|(|f|)>>, so there exists a
-      <math|y\<in\>B> such that <math|<around*|(|x,y|)>\<in\>f>, hence
+      <math|y> such that <math|<around*|(|x,y|)>\<in\>f>, hence
       <math|<around*|(|x,y|)>\<in\>f<rsub|\|C>> or
       <math|x\<in\>dom<around*|(|f<rsub|\|C>|)>>. So
       <math|C<big|cap>dom<around*|(|f|)>\<subseteq\>dom<around*|(|f<rsub|\|C>|)>>
@@ -2920,11 +3142,11 @@
       </equation*>
 
       <item>If <math|y\<in\>range<around*|(|f<rsub|\|C>|)>> then
-      <math|\<exists\>x\<in\>C> such that
-      <math|<around*|(|x,y|)>\<in\>f<rsub|\|C>>, hence
-      <math|<around*|(|x,y|)>\<in\>f> so that <math|y\<in\>f<around*|(|C|)>>.
-      On the other hand if <math|y\<in\>f<around*|(|C|)>> there exists a
-      <math|x\<in\>C> such that <math|<around*|(|x,y|)>\<in\>f>, hence
+      <math|\<exists\>x> such that <math|<around*|(|x,y|)>\<in\>f<rsub|\|C>>,
+      hence <math|<around*|(|x,y|)>\<in\>f> and <math|x\<in\>C>, so that
+      <math|y\<in\>f<around*|(|C|)>>. On the other hand if
+      <math|y\<in\>f<around*|(|C|)>> there exists a <math|x\<in\>C> such that
+      <math|<around*|(|x,y|)>\<in\>f>, hence
       <math|<around*|(|x,y|)>\<in\>f<rsub|\|C>> so that
       <math|y\<in\>range<around*|(|f<rsub|\|C>|)>>. Hence using the Axiom of
       Extent [axiom: <reference|axiom of extent>] we have\ 
@@ -2961,7 +3183,7 @@
       have\ 
 
       <\equation*>
-        <around*|(|f<rsub|C>|)><rsup|-1><around*|(|E|)>=C<big|cap>f<rsup|-1><around*|(|E|)>
+        <around*|(|f<rsub|\|C>|)><rsup|-1><around*|(|E|)>=C<big|cap>f<rsup|-1><around*|(|E|)>
       </equation*>
     </enumerate>
   </proof>
@@ -2981,7 +3203,275 @@
     that <math|f<rsub|\|C>:C\<rightarrow\>B> is a function.
   </proof>
 
-  \;
+  <subsection|Set operations and (Partial) Functions>
+
+  <\theorem>
+    <label|function properties (1)>Let <math|f:A\<rightarrow\>B> be a
+    function then we have\ 
+
+    <\enumerate>
+      <item>If <math|C,D\<subseteq\>A> with <math|C\<subseteq\>D> then
+      <math|f<around*|(|C|)>\<subseteq\>f<around*|(|D|)>>
+
+      <item>If <math|C,D\<subseteq\>B> with <math|C\<subseteq\>D> then
+      <math|f<rsup|-1><around*|(|C|)>\<subseteq\>f<rsup|-1><around*|(|D|)>>
+
+      <item>If <math|C,D\<subseteq\>B> then
+      <math|f<rsup|-1><around*|(|C\\D|)>=f<rsup|-1><around*|(|C|)>\\f<rsup|-1><around*|(|D|)>>
+
+      <item>If <math|D\<subseteq\>B> then
+      <math|f<rsup|-1><around*|(|B\\D|)>=A\\f<rsup|-1><around*|(|D|)>>
+
+      <item>If <math|C,D\<subseteq\>A> then
+      <math|f<around*|(|C|)>\\f<around*|(|D|)>\<subseteq\>f<around*|(|C\\D|)>>
+
+      <item>If <math|C,D\<subseteq\>A> and <math|f> is
+      <with|font-series|bold|injective> then
+      <math|f<around*|(|C|)>\\f<around*|(|D|)>=f<around*|(|C\\D|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|y\<in\>f<around*|(|C|)>> then there exist a
+      <math|x\<in\>C> such that <math|<around*|(|x,y|)>\<in\>f>, as
+      <math|C\<subseteq\>D> we have <math|x\<in\>D> so that
+      <math|y\<in\>f<around*|(|D|)>>
+
+      <item>If <math|x\<in\>f<rsup|-1><around*|(|C|)>> there exists a
+      <math|y\<in\>C> such that <math|<around*|(|x,y|)>\<in\>f>, as
+      <math|C\<subseteq\>D> then <math|y\<in\>D> so that
+      <math|x\<in\>f<rsup|-1><around*|(|D|)>>
+
+      <item>If <math|x\<in\>f<rsup|-1><around*|(|C\\D|)>> then
+      <math|\<exists\>y\<in\>C\\D> such that <math|<around*|(|x,y|)>\<in\>f>.
+      As <math|y\<in\>C\\D> we have that <math|y\<in\>C> and
+      <math|y\<nin\>D>, from <math|y\<in\>C> it follows that
+      <math|x\<in\>f<rsup|-1><around*|(|C|)>>. Assume that also
+      <math|x\<in\>f<rsup|-1><around*|(|D|)>> then
+      <math|\<exists\>y<rprime|'>\<in\>D> such that
+      <math|<around*|(|x,y<rprime|'>|)>\<in\>f> which, as <math|f> is a
+      function and <math|<around*|(|x,y|)>\<in\>f>, proves that
+      <math|y=y<rprime|'>>, hence <math|y\<in\>D> contradicting
+      <math|y\<nin\>D>, so we must have <math|x\<nin\>f<rsup|-1><around*|(|D|)>>,
+      hence <math|x\<in\>f<around*|(|C|)>\\f*<around*|(|D|)>> proving\ 
+
+      <\equation>
+        <label|eq 2.17.002>f<rsup|-1><around*|(|C\\D|)>\<subseteq\>f<rsup|-1><around*|(|C|)>\\f<rsup|-1><around*|(|D|)>
+      </equation>
+
+      If <math|x\<in\>f<rsup|-1><around*|(|C|)>\\f<rsup|-1><around*|(|D|)>>
+      then <math|x\<in\>f<rsup|-1><around*|(|C|)>> and
+      <math|x\<nin\>f<rsup|-1><around*|(|D|)>>. As
+      <math|x\<in\>f<rsup|-1><around*|(|C|)>> there exists a <math|y\<in\>C>
+      such that <math|<around*|(|x,y|)>\<in\>f>. Assume that <math|y\<in\>D>,
+      then as <math|<around*|(|x,y|)>\<in\>f> we have
+      <math|x\<in\>f<rsup|-1><around*|(|D|)>> contradicting
+      <math|x\<nin\>f<rsup|-1><around*|(|D|)>>, so we must have
+      <math|y\<nin\>D>. Hence <math|y\<in\>C\\D> which proves that
+      <math|x\<in\>f<rsup|-1><around*|(|C\\D|)>> or
+      <math|f<rsup|-1><around*|(|C|)>\\f<rsup|-1><around*|(|D|)>\<subseteq\>f<rsup|-1><around*|(|C\\D|)>>.
+      Combining this with [eq: <reference|eq 2.17.002>] proves\ 
+
+      <\equation*>
+        f<rsup|-1><around*|(|C\\D|)>=f<rsup|-1><around*|(|C|)>\\f<rsup|-1><around*|(|D|)>
+      </equation*>
+
+      <item>As <math|D\<subseteq\>B\<subseteq\>B> we have by (3) that
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|f<rsup|-1><around*|(|B\\D|)>>|<cell|=>|<cell|f<rsup|-1><around*|(|B|)>\\f<rsup|-1><around*|(|D|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|function image preimage>]>>>|<cell|A\\f<rsup|-1><around*|(|D|)>>>>>
+      </eqnarray*>
+
+      <item>If <math|y\<in\>f<around*|(|C|)>\\f<around*|(|D|)>> then
+      <math|y\<in\>f<around*|(|C|)>> and <math|y\<nin\>f<around*|(|D|)>>.
+      From <math|y\<in\>f<around*|(|C|)>> it follows that
+      <math|\<exists\>x\<in\>C> such that <math|<around*|(|x,y|)>\<in\>f>.
+      Assume that <math|x\<in\>D> then as <math|<around*|(|x,y|)>\<in\>f> we
+      have <math|y\<in\>f<around*|(|D|)>> contradicting
+      <math|y\<nin\>f<around*|(|D|)>>, so we must have <math|x\<nin\>D>,
+      proving that <math|x\<in\>C\\D>. Hence
+      <math|y\<in\>f<around*|(|C\\D|)>> or\ 
+
+      <\equation*>
+        f<around*|(|C|)>\\f<around*|(|D|)>\<subseteq\>f<around*|(|C\\D|)>
+      </equation*>
+
+      <item>If <math|y\<in\>f<around*|(|C\\D|)>> then
+      <math|\<exists\>x\<in\>C\\D> such that <math|x\<in\>C>,
+      <math|x\<nin\>D> and <math|<around*|(|x,y|)>\<in\>f>. From
+      <math|x\<in\>C> it follows that <math|y\<in\>f<around*|(|C|)>>. Assume
+      that <math|y\<in\>f<around*|(|D|)>> then there exist a
+      <math|x<rprime|'>\<in\>D> such that
+      <math|<around*|(|x<rprime|'>,y|)>\<in\>f>, as <math|f> is
+      <with|font-series|bold|injective> we have <math|x=x<rprime|'>> so that
+      <math|x\<in\>D> contradicting <math|x\<nin\>D>, hence
+      <math|y\<nin\>f<around*|(|D|)>>. This proves that
+      <math|y\<in\>f<around*|(|C|)>\\f<around*|(|D|)>> or
+      <math|f<around*|(|C\\D|)>\<subseteq\>f<around*|(|C|)>\\f<around*|(|D|)>>
+      which combined with (3) gives\ 
+
+      <\equation*>
+        f<around*|(|C|)>\\f<around*|(|D|)>=f<around*|(|C\\D|)>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|function function and intersection and union>If
+    <math|f:A\<rightarrow\>B> is a function, <math|E,F\<subseteq\>A> and
+    <math|C,D\<subseteq\>B> then we have\ 
+
+    <\enumerate>
+      <item><math|f<around*|(|E<big|cup>F|)>=f<around*|(|E|)><big|cup>f<around*|(|F|)>>
+
+      <item><math|f<rsup|-1><around*|(|C<big|cup>D|)>=f<rsup|-1><around*|(|C|)><big|cup>f<rsup|-1><around*|(||)>>
+
+      <item><math|f<around*|(|E<big|cap>F|)>\<subseteq\>f<around*|(|E|)><big|cap>f<around*|(|F|)>>
+
+      <item>If <math|f> is injective then
+      <math|f<around*|(|E<big|cap>F|)>=f<around*|(|E|)><big|cap>f<around*|(|F|)>>
+
+      <item><math|f<rsup|-1><around*|(|C<big|cap>D|)>=f<rsup|-1><around*|(|C|)><big|cap>f<rsup|-1><around*|(|D|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|y\<in\>f<around*|(|E<big|cup>F|)>> then there exist a
+      <math|x\<in\>E<big|cup>F> with <math|<around*|(|x,y|)>\<in\>f>. \ So
+      <math|x\<in\>E> proving that <math|y\<in\>f<around*|(|E|)>> or
+      <math|x\<in\>F> proving <math|y\<in\>f<around*|(|F|)>>. So it follows
+      that <math|y\<in\>f<around*|(|E|)><big|cup>f<around*|(|F|)>> or
+
+      <\equation>
+        <label|eq 2.18.002>f<around*|(|E<big|cup>F|)>\<subseteq\>f<around*|(|E|)><big|cup>f<around*|(|F|)>
+      </equation>
+
+      If <math|y\<in\>f<around*|(|E|)><big|cup>f<around*|(|F|)>> then we have
+      the following possibilities
+
+      <\description>
+        <item*|<math|y\<in\>f<around*|(|E|)>>>Then <math|\<exists\>x\<in\>E>
+        such that <math|<around*|(|x,y|)>\<in\>f>. As by the definition of a
+        union <math|x\<in\>E<big|cup>F>, it follows that
+        <math|y\<in\>f<around*|(|E<big|cup>F|)>>
+
+        <item*|<math|y\<in\>f<around*|(|F|)>>>Then <math|\<exists\>x\<in\>F>
+        such that <math|<around*|(|x,y|)>\<in\>f>. As by the definition of a
+        union <math|x\<in\>E<big|cup>F>, it follows that
+        <math|y\<in\>f<around*|(|E<big|cup>F|)>>
+      </description>
+
+      So in all cases we have <math|y\<in\>f<around*|(|E<big|cup>F|)>>. Hence
+      <math|f<around*|(|E|)><big|cup>f<around*|(|F|)>\<subseteq\>f<around*|(|E<big|cup>F|)>>
+      which combined with [eq: <reference|eq 2.18.002>] proves\ 
+
+      <\equation*>
+        f<around*|(|E<big|cup>F|)>=f<around*|(|E|)><big|cup>f<around*|(|F|)>
+      </equation*>
+
+      <item>If <math|x\<in\>f<rsup|-1><around*|(|C<big|cup>D|)>> there exists
+      a <math|y\<in\>C<big|cup>D> such that <math|<around*|(|x,y|)>\<in\>f>.
+      From <math|y\<in\>C<big|cup>D> we have <math|y\<in\>C> hence
+      <math|x\<in\>f<rsup|-1><around*|(|C|)>> or <math|y\<in\>D> hence
+      <math|x\<in\>f<rsup|-1><around*|(|D|)>>. So
+      <math|x\<in\>f<rsup|-1><around*|(|C|)><big|cup>f<rsup|-1><around*|(|D|)>>
+      proving\ 
+
+      <\equation>
+        <label|eq 2.19.002>f<rsup|-1><around*|(|C<big|cup>D|)>\<subseteq\>f<rsup|-1><around*|(|C|)><big|cup>f<rsup|-1><around*|(|D|)>
+      </equation>
+
+      If <math|x\<in\>f<rsup|-1><around*|(|C|)><big|cup>f<rsup|-1><around*|(|D|)>>
+      then we have the following possibilities to consider:
+
+      <\description>
+        <item*|<math|x\<in\>f<rsup|-1><around*|(|C|)>>>Then
+        <math|\<exists\>y\<in\>C> such that <math|<around*|(|x,y|)>\<in\>f>.
+        As by the definition of a union <math|y\<in\>C<big|cup>D> it follows
+        that <math|x\<in\>f<rsup|-1><around*|(|C<big|cup>D|)>>
+
+        <item*|<math|x\<in\>f<rsup|-1><around*|(|D|)>>>Then
+        <math|\<exists\>y\<in\>D> such that <math|<around*|(|x,y|)>\<in\>f>.
+        As by the definition of a union <math|y\<in\>C<big|cup>D> it follows
+        that <math|x\<in\>f<rsup|-1><around*|(|C<big|cup>D|)>>
+      </description>
+
+      So in all cases we have <math|x\<in\>f<rsup|-1><around*|(|C<big|cup>D|)>>,
+      proving <math|f<rsup|-1><around*|(|C|)><big|cup>f<rsup|-1><around*|(|D|)>\<subseteq\>f<rsup|-1><around*|(|C<big|cup>D|)>>
+      which combined with [eq <reference|eq 2.19.002>] proves\ 
+
+      <\equation*>
+        f<rsup|-1><around*|(|C<big|cup>D|)>=f<rsup|-1><around*|(|C|)><big|cup>f<rsup|-1><around*|(|D|)>
+      </equation*>
+
+      <math|>
+
+      <item>If <math|y\<in\>f<around*|(|E<big|cap>F|)>> then
+      <math|\<exists\>x\<in\>E<big|cap>F> such that
+      <math|<around*|(|x,y|)>\<in\>f>. From <math|x\<in\>E<big|cap>F> we have
+      that <math|x\<in\>E> hence <math|y\<in\>f<around*|(|E|)>> and
+      <math|x\<in\>F>, so that <math|y\<in\>f<around*|(|F|)>>. Hence
+      <math|y\<in\>f<around*|(|E|)><big|cap>f<around*|(|F|)>> or\ 
+
+      <\equation*>
+        f<around*|(|E<big|cap>F|)>\<subseteq\>f<around*|(|E|)><big|cap>f<around*|(|F|)>
+      </equation*>
+
+      <item>Using (3) we have that\ 
+
+      <\equation>
+        <label|eq 2.20.002>f<around*|(|E<big|cap>F|)>\<subseteq\>f<around*|(|E|)><big|cap>f<around*|(|F|)>
+      </equation>
+
+      Let <math|y\<in\>f<around*|(|E|)><big|cap>f<around*|(|F|)>> then we
+      have <math|y\<in\>f<around*|(|E|)>> so that <math|\<exists\>x\<in\>E>
+      such that <math|<around*|(|x,y|)>\<in\>f> and
+      <math|y\<in\>f<around*|(|F|)>> so that
+      <math|\<exists\>x<rprime|'>\<in\>F> such that
+      <math|<around*|(|x<rprime|'>,y|)>\<in\>f>. As <math|f> is injective and
+      <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>f> we have
+      <math|x=x<rprime|'>> so that <math|x\<in\>E<big|cap>F>, proving that
+      <math|f<around*|(|E|)><big|cap>f<around*|(|F|)>\<subseteq\>f<around*|(|E<big|cap>F|)>>.
+      Combining this result with [eq: <reference|eq 2.20.002>] gives\ 
+
+      <\equation*>
+        f<around*|(|E<big|cap>F|)>=f<around*|(|E|)><big|cap>f<around*|(|F|)>
+      </equation*>
+
+      <item>If <math|x\<in\>f<rsup|-1><around*|(|C<big|cap>D|)>> then
+      <math|\<exists\>y\<in\>C<big|cap>D> such that <math|y\<in\>C>, so that
+      <math|x\<in\>f<rsup|-1><around*|(|C|)>> and <math|y\<in\>D>, so that
+      <math|x\<in\>f<rsup|-1><around*|(|D|)>>. Hence
+      <math|x\<in\>f<rsup|-1><around*|(|C|)><big|cap>f<rsup|-1><around*|(|D|)>>
+      proving\ 
+
+      <\equation>
+        <label|eq 2.21.002>f<rsup|-1><around*|(|C<big|cap>D|)>\<subseteq\>f<rsup|-1><around*|(|C|)><big|cap>f<rsup|-1><around*|(|D|)>
+      </equation>
+
+      If <math|x\<in\>f<rsup|-1><around*|(|C|)><big|cap>f<rsup|-1><around*|(|D|)>>
+      then <math|x\<in\>f<rsup|-1><around*|(|C|)>> so there exists a
+      <math|y\<in\>C> such that <math|<around*|(|x,y|)>\<in\>f> and
+      <math|x\<in\>f<rsup|-1><around*|(|D|)>> so
+      <math|\<exists\>y<rprime|'>\<in\>D> such that
+      <math|<around*|(|x,y<rprime|'>|)>\<in\>f>. As <math|f> is a function
+      <math|y=y<rprime|'>> proving <math|y\<in\>C<big|cap>D>, hence
+      <math|x\<in\>f<rsup|-1><around*|(|C<big|cap>D|)>>. So
+      <math|f<rsup|-1><around*|(|C|)><big|cap>f<rsup|-1><around*|(|D|)>\<subseteq\>f<rsup|-1><around*|(|C<big|cap>D|)>>,
+      combining this with [eq: <reference|eq 2.21.002>] gives\ 
+
+      <\equation*>
+        f<rsup|-1><around*|(|C<big|cap>D|)>=f<rsup|-1><around*|(|C|)><big|cap>f<rsup|-1><around*|(|D|)>
+      </equation*>
+    </enumerate>
+  </proof>
 
   <chapter|Relations>
 </body>
@@ -3001,7 +3491,7 @@
   <\collection>
     <associate|\<less\>A,B,C\<gtr\>=\<less\>D,E,F\<gtr\>=\<gtr\>A=E,B=D,C=F|<tuple|2.5|?>>
     <associate|\<less\>A,B\<gtr\>=\<less\>C,D\<gtr\>=\<gtr\>A=C,B=D|<tuple|2.3|?>>
-    <associate|Axiom of Replacement|<tuple|2.33|?>>
+    <associate|Axiom of Replacement|<tuple|2.35|?>>
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-10|<tuple|axiom of pairing|?>>
     <associate|auto-11|<tuple|cartesian product|?>>
@@ -3030,7 +3520,8 @@
     <associate|auto-32|<tuple|bijection|?>>
     <associate|auto-33|<tuple|2.2.4|?>>
     <associate|auto-34|<tuple|<with|mode|<quote|math>|f<rsub|\|C>>|?>>
-    <associate|auto-35|<tuple|3|?>>
+    <associate|auto-35|<tuple|2.2.5|?>>
+    <associate|auto-36|<tuple|3|?>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|\<cal-U\>>|3>>
     <associate|auto-5|<tuple|<with|mode|<quote|math>|A<big|cup>B>|5>>
     <associate|auto-6|<tuple|<with|mode|<quote|math>|A<big|cap>B>|?>>
@@ -3044,13 +3535,12 @@
     <associate|axiom of power|<tuple|1.60|?>>
     <associate|axiom of subsets|<tuple|1.54|?>>
     <associate|axiom of union|<tuple|1.57|?>>
-    <associate|bijection|<tuple|2.39|?>>
+    <associate|bijection|<tuple|2.42|?>>
     <associate|cartesian product|<tuple|1.44|?>>
     <associate|cartesian product and inclusion|<tuple|1.48|?>>
     <associate|cartesian product of the empty set|<tuple|1.46|?>>
     <associate|cartesian product properties (1)|<tuple|1.49|?>>
     <associate|cartesian product with enpty set|<tuple|1.47|?>>
-    <associate|characteristics function|<tuple|2.26|?>>
     <associate|class absorption laws|<tuple|1.27|?>>
     <associate|class class commutative,idempotent,associative,distributivity|<tuple|1.30|?>>
     <associate|class complement of comploment|<tuple|1.28|?>>
@@ -3064,14 +3554,12 @@
     <associate|class properties (1)|<tuple|1.8|2>>
     <associate|class set difference and union , intersection|<tuple|1.31|?>>
     <associate|class universal and empotyset properties|<tuple|1.32|?>>
-    <associate|constant function|<tuple|2.25|?>>
     <associate|element a=b=\<gtr\>{a}={b}|<tuple|1.34|?>>
     <associate|element equalitiy of unordered pairs|<tuple|1.39|?>>
     <associate|element equality of unordered pairs (1)|<tuple|1.40|?>>
     <associate|element is set|<tuple|1.2|?>>
     <associate|element {a,a}={a}|<tuple|1.37|?>>
     <associate|element: {a} is a element|<tuple|1.38|?>>
-    <associate|empty function|<tuple|2.24|?>>
     <associate|empty set property|<tuple|1.17|?>>
     <associate|eq 1.1 001|<tuple|1.1|2>>
     <associate|eq 1.2 001|<tuple|1.2|2>>
@@ -3085,10 +3573,17 @@
     <associate|eq 2.1.001.1|<tuple|2.1|?>>
     <associate|eq 2.10.001|<tuple|2.10|?>>
     <associate|eq 2.11.001|<tuple|2.11|?>>
-    <associate|eq 2.12.001|<tuple|2.12|?>>
-    <associate|eq 2.13.001|<tuple|2.13|?>>
-    <associate|eq 2.14.001|<tuple|2.14|?>>
+    <associate|eq 2.12.001|<tuple|2.14|?>>
+    <associate|eq 2.12.002|<tuple|2.12|?>>
+    <associate|eq 2.13.001|<tuple|2.15|?>>
+    <associate|eq 2.13.002|<tuple|2.13|?>>
+    <associate|eq 2.14.001|<tuple|2.16|?>>
+    <associate|eq 2.17.002|<tuple|2.17|?>>
+    <associate|eq 2.18.002|<tuple|2.18|?>>
+    <associate|eq 2.19.002|<tuple|2.19|?>>
     <associate|eq 2.2.001|<tuple|2.4|?>>
+    <associate|eq 2.20.002|<tuple|2.20|?>>
+    <associate|eq 2.21.002|<tuple|2.21|?>>
     <associate|eq 2.3.001.2|<tuple|2.3|?>>
     <associate|eq 2.5.001.2|<tuple|2.5|?>>
     <associate|eq 2.6.001|<tuple|2.6|?>>
@@ -3096,30 +3591,34 @@
     <associate|eq 2.8.001|<tuple|2.8|?>>
     <associate|eq 2.9.001|<tuple|2.9|?>>
     <associate|function|<tuple|2.20|?>>
-    <associate|function bijection and inverse|<tuple|2.44|?>>
-    <associate|function bijection condition (2)|<tuple|2.43|?>>
-    <associate|function bijection f,f-1|<tuple|2.42|?>>
-    <associate|function bijection has a inverse|<tuple|2.41|?>>
-    <associate|function characteristics function|<tuple|2.28|?>>
+    <associate|function bijection and inverse|<tuple|2.47|?>>
+    <associate|function bijection condition (2)|<tuple|2.46|?>>
+    <associate|function bijection f,f-1|<tuple|2.45|?>>
+    <associate|function bijection has a inverse|<tuple|2.44|?>>
+    <associate|function characteristics function|<tuple|2.29|?>>
     <associate|function composition injectivity, surjectivity and
-    bijectivity|<tuple|2.45|?>>
+    bijectivity|<tuple|2.49|?>>
+    <associate|function composition of Id function|<tuple|2.31|?>>
     <associate|function composition of functions is a
-    fucntion|<tuple|2.31|?>>
+    fucntion|<tuple|2.33|?>>
     <associate|function condition (1)|<tuple|2.21|?>>
-    <associate|function constant function|<tuple|2.27|?>>
-    <associate|function empty function|<tuple|2.26|?>>
-    <associate|function equality (1)|<tuple|2.23|?>>
-    <associate|function equality (2)|<tuple|2.25|?>>
-    <associate|function identity function|<tuple|2.29|?>>
-    <associate|function identity map is a bijection|<tuple|2.40|?>>
-    <associate|function image preimage|<tuple|2.30|?>>
-    <associate|function injective inverse is a function|<tuple|2.38|?>>
-    <associate|function notation|<tuple|2.24|?>>
-    <associate|function restricted function properties|<tuple|2.47|?>>
-    <associate|function restriction of a function|<tuple|2.48|?>>
-    <associate|function restriction of a graph|<tuple|2.46|?>>
-    <associate|function surjection condition|<tuple|2.34|?>>
-    <associate|identity function|<tuple|2.27|?>>
+    <associate|function constant function|<tuple|2.28|?>>
+    <associate|function empty function|<tuple|2.27|?>>
+    <associate|function equality (1)|<tuple|2.24|?>>
+    <associate|function equality (2)|<tuple|2.26|?>>
+    <associate|function function and intersection and union|<tuple|2.55|?>>
+    <associate|function identity function|<tuple|2.30|?>>
+    <associate|function identity map is a bijection|<tuple|2.43|?>>
+    <associate|function image preimage|<tuple|2.32|?>>
+    <associate|function injective inverse is a function|<tuple|2.41|?>>
+    <associate|function inverse of a bijection is unique|<tuple|2.48|?>>
+    <associate|function notation|<tuple|2.25|?>>
+    <associate|function properties (1)|<tuple|2.54|?>>
+    <associate|function range restriction|<tuple|2.23|?>>
+    <associate|function restricted function properties|<tuple|2.52|?>>
+    <associate|function restriction of a function|<tuple|2.53|?>>
+    <associate|function restriction of a graph|<tuple|2.51|?>>
+    <associate|function surjection condition|<tuple|2.36|?>>
     <associate|pair equality of pairs|<tuple|1.43|?>>
     <associate|pair of elements|<tuple|1.41|?>>
     <associate|partial function associativity|<tuple|2.17|?>>
@@ -3131,14 +3630,13 @@
     <associate|partial function image|<tuple|2.11|?>>
     <associate|partial function image preimage of
     compositions|<tuple|2.19|?>>
-    <associate|partial function injectivity and surjectivity|<tuple|2.32|?>>
-    <associate|partial function inverse graph|<tuple|2.35|?>>
-    <associate|partial function inverse if injective|<tuple|2.36|?>>
+    <associate|partial function injectivity and surjectivity|<tuple|2.34|?>>
+    <associate|partial function inverse graph|<tuple|2.38|?>>
+    <associate|partial function inverse if injective|<tuple|2.39|?>>
     <associate|partial function preimage|<tuple|2.13|?>>
     <associate|partial function set domain range|<tuple|2.10|?>>
     <associate|partial functions image/preimage properties|<tuple|2.14|?>>
     <associate|power set|<tuple|1.59|?>>
-    <associate|restriction of a grap|<tuple|2.42|?>>
     <associate|set A*B is subset of P(P(AUB))|<tuple|1.62|?>>
     <associate|set element proper class|<tuple|1.50|?>>
     <associate|set emptyset is not set of empty set|<tuple|2.2|?>>
@@ -3195,6 +3693,8 @@
       <tuple|<tuple|<with|mode|<quote|math>|Id<rsub|A>>>|<pageref|auto-30>>
 
       <tuple|<tuple|bijection>|<pageref|auto-32>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|f<rsub|\|C>>>|<pageref|auto-34>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Elements
@@ -3237,9 +3737,17 @@
       and bijectivity <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-31>>
 
+      <with|par-left|<quote|1tab>|2.2.4<space|2spc>Restriction of a
+      Function/Partial Function <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-33>>
+
+      <with|par-left|<quote|1tab>|2.2.5<space|2spc>Set operations and
+      (Partial) Functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-35>>
+
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Relations>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-33><vspace|0.5fn>
+      <no-break><pageref|auto-36><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
