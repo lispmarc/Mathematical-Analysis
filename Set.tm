@@ -91,8 +91,8 @@
   </axiom>
 
   <\definition>
-    Let <math|A> and <math|B> classes then <math|A> is a subclasss of
-    <math|B> noted by <math|A\<subseteq\>B> iff
+    Let <math|A> and <math|B> classes then <math|A> is a subclass of <math|B>
+    noted by <math|A\<subseteq\>B> iff
 
     <\equation*>
       x\<in\>A\<Rightarrow\>x\<in\>B
@@ -190,15 +190,15 @@
   paradoxes like the famous Russell paradox. Consider the predicate
   <math|R<around*|(|x|)>=x\<nin\>x>, this predicate is true for <math|x> if
   <math|x> is not a member of itself and consider the class that contains all
-  classes that has not themself as member. Does this class contain itself yes
-  or no? If the class contain itself then by definition
+  classes that has not them self as member. Does this class contain itself
+  yes or no? If the class contain itself then by definition
   <math|R<around*|(|x|)>> should be true so the class should not contain
   itself leading to a contradiction. If the class does not contain itself
-  then it satisifes <math|R<around*|(|x|)>>, hence it is a member of itself
+  then it satisfies <math|R<around*|(|x|)>>, hence it is a member of itself
   again leading to a contradiction. So we can not test the predicate
   <math|R<around*|(|x|)>> for all classes and thus can not define the class
-  of all classes for whch <math|R<around*|(|x|)>> is true. The axiom of class
-  construction allows us to create a new class in a safe way.
+  of all classes for which <math|R<around*|(|x|)>> is true. The axiom of
+  class construction allows us to create a new class in a safe way.
 
   <\axiom>
     <label|axiom of construction><dueto|Axiom of Construction>Let
@@ -235,7 +235,7 @@
   none of the axioms up to now can be used to get elements [or equivalent
   sets], for this we need extra axioms.
 
-  The axiom of construction is used as a way of creating a subclass of a
+  The axiom of construction can be used as a way of creating a subclass of a
   given class.
 
   <\definition>
@@ -327,8 +327,8 @@
       <math|\<varnothing\>\<subseteq\>A> is equivalent with
       <math|x\<in\>\<varnothing\>\<Rightarrow\>x\<in\>A>. We must proof that
       <math|x\<nin\>A\<Rightarrow\>x\<nin\>\<varnothing\>>. Well if
-      <math|x\<nin\>A> then certainely <math|x\<nin\>\<varnothing\>>
-      [Theorem: <reference|empty set property>] so that
+      <math|x\<nin\>A> then certainly <math|x\<nin\>\<varnothing\>> [Theorem:
+      <reference|empty set property>] so that
       <math|x\<nin\>A\<Rightarrow\>x\<nin\>\<varnothing\>>.
 
       <item>If <math|x\<in\>A> then <math|x> is a element, hence
@@ -347,15 +347,16 @@
 
   <\proof>
     Let <math|x\<in\>A> then we have a contradiction, so <math|x\<in\>A> must
-    be false and thus <math|x\<in\>A\<Rightarrow\>x\<in\>\<emptyset\>> is
-    vacuously true which proves that <math|A\<subseteq\>\<emptyset\>>,
+    be false and thus <math|x\<in\>A\<Rightarrow\>x\<in\>\<varnothing\>> is
+    vacuously true which proves that <math|A\<subseteq\>\<varnothing\>>,
     combining this with [theorem: <reference|class empty
-    set>,<reference|class properties (1)>] proves that <math|A=\<emptyset\>>
+    set>,<reference|class properties (1)>] proves that
+    <math|A=\<varnothing\>>
   </proof>
 
   <\corollary>
     <label|class not empty sets>Let <math|A> be a class such that
-    <math|A\<neq\>\<emptyset\>> then <math|\<exists\>x> such that
+    <math|A\<neq\>\<varnothing\>> then <math|\<exists\>x> such that
     <math|x\<in\>A>
   </corollary>
 
@@ -427,6 +428,12 @@
       <item><math|A<big|cap>B\<subseteq\>A>
 
       <item><math|A<big|cap>B\<subseteq\>B>
+
+      <item>If <math|C> is a class such that <math|A\<subseteq\>C> and
+      <math|B\<subseteq\>C> then <math|A<big|cup>B\<subseteq\>C>
+
+      <item>If <math|C> is a class such that <math|C\<subseteq\>A> and
+      <math|C\<subseteq\>B> then <math|C\<subseteq\>A<big|cap>B>
     </enumerate>
   </theorem>
 
@@ -447,6 +454,14 @@
       <item>If <math|x\<in\>A<big|cap>B> then
       <math|x\<in\>A\<wedge\>x\<in\>B>, hence <math|x\<in\>B> so that
       <math|x\<in\>A>, hence <math|A<big|cap>B\<subseteq\>B>
+
+      <item>If <math|x\<in\>A<big|cup>B> then
+      <math|x\<in\>A\<Rightarrowlim\><rsub|A\<subseteq\>C>x\<in\>C> or
+      <math|x\<in\>B\<Rightarrowlim\><rsub|B\<subseteq\>C>x\<in\>C> proving
+      that <math|x\<in\>C>
+
+      <item>If <math|x\<in\>C> then <math|x\<in\>A> and <math|x\<in\>B> so
+      that <math|x\<in\>A<big|cap>B>
     </enumerate>
   </proof>
 
@@ -583,7 +598,7 @@
         <item><math|A<big|cap>B=B<big|cap>A>
       </enumerate>
 
-      <item*|idempotency>\ 
+      <item*|idem potency>\ 
 
       <\enumerate>
         <item><math|A<big|cup>A=A>
@@ -599,7 +614,7 @@
         <item><math|A<big|cap><around*|(|B<big|cap>C|)>=<around*|(|A<big|cap>B|)><big|cap>C>
       </enumerate>
 
-      <item*|distributivity>
+      <item*|Distributivity>
 
       <\enumerate>
         <item><math|A<big|cup><around*|(|B<big|cap>C|)>=<around*|(|A<big|cup>B|)><big|cap><around*|(|A<big|cup>C|)>>
@@ -629,7 +644,7 @@
         </eqnarray*>
       </enumerate>
 
-      <item*|idempotency>\ 
+      <item*|idem potency>\ 
 
       <\enumerate>
         <item>This follows from [axiom: <reference|axiom of extent>] and
@@ -661,7 +676,7 @@
         </eqnarray*>
       </enumerate>
 
-      <item*|distributivity>\ 
+      <item*|Distributivity>\ 
 
       <\enumerate>
         <item>This follows from [axiom: <reference|axiom of extent>] and
@@ -699,7 +714,8 @@
       <\eqnarray*>
         <tformat|<table|<row|<cell|A\\<around*|(|B<big|cup>C|)>>|<cell|\<equallim\><rsub|<text|theorem:<reference|class
         difference>>>>|<cell|A<big|cap><around*|(|B<big|cup>C|)><rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|theorem:
-        <reference|class de Morgan's law>>>>|<cell|A<big|cap><around*|(|B<rsup|c><big|cap>C<rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|associativity>>>|<cell|<around*|(|A<big|cap>B<rsup|c>|)><big|cap>C<rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|idempotency>>>|<cell|<around*|(|<around*|(|A<big|cap>A|)><big|cap>B<rsup|c>|)><big|cap>C<rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|associativity>>>|<cell|<around*|(|A<big|cap><around*|(|A<big|cap>B<rsup|c>|)>|)><big|cap>C<rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|commutativity>>>|<cell|<around*|(|<around*|(|A<big|cap>B<rsup|c>|)><big|cap>A|)><big|cap>C<rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|associativity>>>|<cell|<around*|(|A<big|cap>B<rsup|c>|)><big|cap><around*|(|A<big|cap>C<rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|theorem:<reference|class
+        <reference|class de Morgan's law>>>>|<cell|A<big|cap><around*|(|B<rsup|c><big|cap>C<rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|associativity>>>|<cell|<around*|(|A<big|cap>B<rsup|c>|)><big|cap>C<rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|idem
+        potency>>>|<cell|<around*|(|<around*|(|A<big|cap>A|)><big|cap>B<rsup|c>|)><big|cap>C<rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|associativity>>>|<cell|<around*|(|A<big|cap><around*|(|A<big|cap>B<rsup|c>|)>|)><big|cap>C<rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|commutativity>>>|<cell|<around*|(|<around*|(|A<big|cap>B<rsup|c>|)><big|cap>A|)><big|cap>C<rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|associativity>>>|<cell|<around*|(|A<big|cap>B<rsup|c>|)><big|cap><around*|(|A<big|cap>C<rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|theorem:<reference|class
         difference>>>>|<cell|<around*|(|A\\B|)><big|cap><around*|(|A\\C|)>>>>>
       </eqnarray*>
 
@@ -708,7 +724,7 @@
       <\eqnarray*>
         <tformat|<table|<row|<cell|A\\<around*|(|B<big|cap>C|)>>|<cell|\<equallim\><rsub|<text|theorem:<reference|class
         difference>>>>|<cell|A<big|cap><around*|(|B<big|cap>C|)><rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|theorem:
-        <reference|class de Morgan's law>>>>|<cell|A<big|cap><around*|(|B<rsup|c><big|cup>C<rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|distributivity>>>|<cell|*<around*|(|A<big|cap>B<rsup|c>|)><big|cup><around*|(|A<big|cap>C<rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|theorem:<reference|class
+        <reference|class de Morgan's law>>>>|<cell|A<big|cap><around*|(|B<rsup|c><big|cup>C<rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|Distributivity>>>|<cell|*<around*|(|A<big|cap>B<rsup|c>|)><big|cup><around*|(|A<big|cap>C<rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|theorem:<reference|class
         difference>>>>|<cell|<around*|(|A\\B|)><big|cup><around*|(|A\\C|)>>>>>
       </eqnarray*>
     </enumerate>
@@ -975,8 +991,8 @@
     </equation*>
   </proof>
 
-  The above lemma actually shows that the order of the elements in unordere
-  pairs do not matter, to remedi this we construct a ordered pair.
+  The above lemma actually shows that the order of the elements in unordered
+  pairs do not matter, to remedy this we construct a ordered pair.
 
   <\definition>
     <label|pair of elements>If <math|a,b> are elements then
@@ -992,7 +1008,7 @@
     </note>
   </definition>
 
-  Next we show that the order of elements is important for a tupple
+  Next we show that the order of elements is important for a tuple
 
   <\theorem>
     <label|pair equality of pairs>Let <math|x,y,x<rprime|'>,y<rprime|'>> are
@@ -1097,7 +1113,7 @@
   <\proof>
     If <math|z\<in\>\<varnothing\>\<times\>\<varnothing\>> then there exists
     a <math|x,y\<in\>\<varnothing\>> such that <math|z=<around*|(|x,y|)>>
-    which contradict <math|x,y\<nin\>\<emptyset\>> \ [theorem:
+    which contradict <math|x,y\<nin\>\<varnothing\>> \ [theorem:
     <reference|empty set property>] hence by <reference|class empty set is
     unique> we have <math|\<varnothing\>\<times\>\<varnothing\>=\<varnothing\>>.
   </proof>
@@ -1163,7 +1179,7 @@
       </equation*>
 
       <item>Let <math|x\<in\>A> then, as <math|C\<neq\>\<varnothing\>>, we
-      have by \ [corollary: <reference|class not empty sets>] the existance
+      have by \ [corollary: <reference|class not empty sets>] the existence
       of a <math|y\<in\>C>, then <math|<around*|(|x,y|)>\<in\>A\<times\>C>
       which as <math|A\<times\>C\<subseteq\>B\<times\>D> proves that
       <math|<around*|(|x,y|)>\<in\>B\<times\>D>. By definition we have then
@@ -1174,7 +1190,7 @@
       </equation*>
 
       Likewise, let <math|y\<in\>C> then, as <math|A\<neq\>\<varnothing\>> we
-      have by \ [corollary: <reference|class not empty sets>] the existance
+      have by \ [corollary: <reference|class not empty sets>] the existence
       of a <math|x\<in\>A>, hence <math|<around*|(|x,y|)>\<in\>A\<times\>C>,
       which as <math|A\<times\>C\<subseteq\>B\<times\>D>, proves
       <math|<around*|(|x,y|)>\<in\>B*\<times\>D> and by definition
@@ -1215,7 +1231,7 @@
         <math|A\<subseteq\>B>, <math|C\<subseteq\>D>,
         <math|B\<subseteq\>A>,<math|D\<subseteq\>C> which using (1) gives
         that <math|A\<times\>C\<subseteq\>B\<times\>D\<wedge\>B\<times\>D\<subseteq\>A\<times\>C>.
-        Using [theorem: <reference|class properties (1)> it follws then that\ 
+        Using [theorem: <reference|class properties (1)> it follows then that\ 
 
         <\equation*>
           A\<times\>C=B\<times\>D
@@ -1319,7 +1335,7 @@
   <with|font-series|bold|set> [definition: <reference|element is set>]. Up to
   now we have used the name <with|font-series|bold|element>, because we want
   to think of a element as a member of a class. However a element is also a
-  class and can contain other elements. If we want to strees the collection
+  class and can contain other elements. If we want to stress the collection
   aspect then we use the word <with|font-series|bold|set> instead of
   <with|font-series|bold|element>. The convention is to use uppercase to
   represent a set and lower cases for a element. Of course set and element
@@ -1337,7 +1353,7 @@
   </definition>
 
   Up to know we had axioms that given a element/set create a new element/set,
-  but we have not ensured the existance of a element/set. To this we must
+  but we have not ensured the existence of a element/set. To this we must
   first define the concept of a successor set.
 
   <\definition>
@@ -1352,18 +1368,18 @@
   </definition>
 
   Of course nothing proves that successor set's exists, to ensure the
-  existance of a sucessor set we have the axiom of infinity.
+  existence of a successor set we have the axiom of infinity.
 
   <\axiom>
     <label|axiom of infinity><index|axiom of infinity><dueto|Axiom of
     Infinity>There exists a <with|font-series|bold|successor set>
   </axiom>
 
-  This axiom ensures that we have at least one set. We can then use the
-  orther axioms about elements/sets to create new elements. Later we will use
-  the Axiom of Infinity to create the Natural Numbers, form which we build
-  all the other numbers (integers, rationals, reals, complex numbers). The
-  Axiom of Infinity ensures also that the empty class is actually a set.
+  This axiom ensures that we have at least one set. We can then use the other
+  axioms about elements/sets to create new elements. Later we will use the
+  Axiom of Infinity to create the Natural Numbers, form which we build all
+  the other numbers (integers, rationals, reals, complex numbers). The Axiom
+  of Infinity ensures also that the empty class is actually a set.
 
   <\theorem>
     <math|\<varnothing\>> is a set
@@ -1371,19 +1387,19 @@
 
   <\proof>
     The Axiom of Infinity [axiom: <reference|axiom of infinity>] ensures the
-    existance of a successor set <math|S>. By definition we have then that
+    existence of a successor set <math|S>. By definition we have then that
     <math|\<varnothing\>\<in\>S> which proves that <math|\<varnothing\>> is a
     set.
   </proof>
 
-  So now we have two sets to start with, the sucessor set and the empty set.
+  So now we have two sets to start with, the successor set and the empty set.
   We can use the Axiom of Pairing [axiom: <reference|axiom of pairing>] to
   create new sets like singletons, unordered pairs and pairs. We introduce
   now extra axioms to create new sets given existing sets.
 
   <\axiom>
     <label|axiom of subsets><index|axiom of subsets><dueto|Axiom of
-    Subnets>Every subclass of a set is a set
+    Subsets>Every subclass of a set is a set
   </axiom>
 
   As a application we proof that the intersection of two sets is a set
@@ -1400,14 +1416,142 @@
     set.
   </proof>
 
+  We define now a more general concept of union and intersection
+
   <\definition>
-    Let <math|\<cal-A\>> be a set then using the Axiom of Constuction [axiom:
-    <reference|axiom of construction>] we define
-    <math|<big|cup>\<cal-A\>=<around*|{|x\|\<exists\>A\<in\>\<cal-A\><text|
-    such that >x\<in\>A|}>>
+    <label|class union>Let <math|\<cal-A\>> be a class then using the Axiom
+    of Construction [axiom: <reference|axiom of construction>] we define
+    <math|<big|cup>\<cal-A\>=<around*|{|x\|\<exists\>y\<in\>\<cal-A\><text|
+    such that >x\<in\>y|}>>
   </definition>
 
-  The Axiom of Unions will ensure that <math|<big|cup>A> is a set\ 
+  <\definition>
+    <label|class intersection>Let <math|\<cal-A\>> be a class then using the
+    Axiom of Construction [axiom: <reference|axiom of construction>] we
+    define <math|<big|cap>\<cal-A\>=<around*|{|x\|\<forall\>y\<in\>\<cal-A\><text|
+    we have >x\<in\>y|}>>
+  </definition>
+
+  <\example>
+    <label|class trivial union intersection>Let <math|A> be a class then\ 
+
+    <\enumerate>
+      <item><math|<big|cup><around*|{|A|}>=A>
+
+      <item><math|<big|cap><around*|{|A|}>=A>
+    </enumerate>
+  </example>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<in\><big|cup><around*|{|A|}>>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>y\<in\><around*|{|A|}><text|
+        with >x\<in\>y>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|y\<in\><around*|{|A|}>\<Leftrightarrow\>y=A>>|<cell|x\<in\>A>>>>
+      </eqnarray*>
+
+      proving that
+
+      <\equation*>
+        <big|cup><around*|{|A|}>=A
+      </equation*>
+
+      <item>\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<in\><big|cap><around*|{|A|}>>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>y\<in\><around*|{|A|}><text|
+        we have >x\<in\>y>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|y\<in\><around*|{|A|}>\<Leftrightarrow\>y=A>>|<cell|x\<in\>A>>>>
+      </eqnarray*>
+
+      proving that\ 
+
+      <\equation*>
+        <big|cap><around*|{|A|}>=A
+      </equation*>
+    </enumerate>
+
+    \;
+  </proof>
+
+  <\example>
+    <label|class union{A,B}>Let <math|A> and <math|B> classes then\ 
+
+    <\enumerate>
+      <item><math|<big|cup><around*|{|A,B|}>=A<big|cup>B>
+
+      <item><math|<big|cap><around*|{|A,B|}>=A<big|cap>B>
+    </enumerate>
+  </example>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<in\><big|cup><around*|{|A,B|}>>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>y\<in\><around*|{|A,B|}><text|
+        with >x\<in\>y>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|y\<in\><around*|{|A,B|}>\<Leftrightarrow\>y=A\<vee\>y=B>>|<cell|x\<in\>A\<vee\>x\<in\>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>A<big|cup>B>>>>
+      </eqnarray*>
+
+      proving that
+
+      <\equation*>
+        <big|cup><around*|{|A,B|}>=A<big|cup>B
+      </equation*>
+
+      <item>\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<in\><big|cap><around*|{|A,B|}>>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>y\<in\><around*|{|A,B|}><text|
+        with >x\<in\>y>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|y\<in\><around*|{|A,B|}>\<Leftrightarrow\>y=A\<vee\>y=B>>|<cell|x\<in\>A\<wedge\>x\<in\>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>A<big|cap>B>>>>
+      </eqnarray*>
+
+      proving that
+
+      <\equation*>
+        <big|cap><around*|{|A,B|}>=A<big|cap>B
+      </equation*>
+    </enumerate>
+
+    \;
+  </proof>
+
+  <\theorem>
+    <label|class general intersection>If <math|\<cal-A\>> is a class\ 
+
+    <\enumerate>
+      <item>If <math|A\<in\>\<cal-A\>> then
+      <math|<big|cap>\<cal-A\>\<subseteq\>A>
+
+      <item>If <math|\<cal-A\>\<neq\>\<varnothing\>> then
+      \ <math|<big|cap>\<cal-A\>> is a set
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|A\<in\>\<cal-A\>> then if
+      <math|x\<in\><big|cap>\<cal-A\>> we have by definition of
+      <math|<big|cap>\<cal-A\>> that <math|x\<in\>A>. Hence
+      <math|<big|cap>\<cal-A\>\<subseteq\>A>
+
+      <item>As <math|\<cal-A\>\<neq\>\<varnothing\>> there exists a
+      <math|A\<in\>\<cal-A\>>, which by definition means that <math|A> is a
+      set. Using (1) we have <math|<big|cap>\<cal-A\>\<subseteq\>A>, applying
+      then the Axiom of Subsets [axiom: <reference|axiom of subsets>] it
+      follows that <math|<big|cap>\<cal-A\>> is a set.
+    </enumerate>
+  </proof>
+
+  The above is not applicable for unions, however we state the Axiom of
+  Unions that will ensure that <math|<big|cup>\<cal-A\>> is a set if
+  <math|\<cal-A\>> is a set\ 
 
   <\axiom>
     <label|axiom of union><index|axiom of union><dueto|Axiom of Unions>If
@@ -1436,7 +1580,7 @@
 
   <\definition>
     <label|power set><index|power set><index|<math|\<cal-P\><around*|(|A|)>>>Let
-    <math|A> be a set then we use the Axiom of Construction to defiine
+    <math|A> be a set then we use the Axiom of Construction to define
     <math|\<cal-P\><around*|(|A|)>> by\ 
 
     <\equation*>
@@ -1494,7 +1638,7 @@
     Likewise if <math|e\<in\><around*|{|x,y|}>> then either
     <math|e=x\<Rightarrow\>e\<in\>A> or <math|e=y\<Rightarrow\>e\<in\>B>,
     hence ,by definition of the union, \ we have
-    <math|<around*|{|x,y|}>\<subseteq\>A<big|cup>B>. Using the defintion
+    <math|<around*|{|x,y|}>\<subseteq\>A<big|cup>B>. Using the definition
     <math|\<cal-P\><around*|(|A<big|cup>B|)>> we have then
 
     <\equation*>
@@ -1519,7 +1663,8 @@
   </proof>
 
   <\theorem>
-    If <math|A> and <math|B> are sets then <math|A\<times\>B> is a set
+    <label|set A*B>If <math|A> and <math|B> are sets then <math|A\<times\>B>
+    is a set
   </theorem>
 
   <\proof>
@@ -1714,8 +1859,8 @@
       <item*|<math|\<Leftarrow\>>>Assume that <math|A=C\<wedge\>B=D> then\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|x\<in\><around*|\<langle\>|A,B|\<rangle\>>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|(|A\<times\><around*|{|\<emptyset\>|}>|)><big|cup><around*|(|B\<times\><around*|{|<around*|{|\<emptyset\>|}>|}>|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>A\<times\><around*|{|\<varnothing\>|}>\<vee\>x\<in\>B\<times\><around*|{|<around*|{|\<varnothing\>|}>|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|x=<around*|(|a,\<emptyset\>|)>\<wedge\>a\<in\>A|)>\<vee\><around*|(|x=<around*|(|b,<around*|{|\<emptyset\>|}>|)>\<wedge\>b\<in\>B|)>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<text|[axiom:
-        <reference|axiom of extent>]>>>|<cell|<around*|(|x=<around*|(|a,\<emptyset\>|)>\<wedge\>a\<in\>C|)>\<vee\><around*|(|x=<around*|(|b,<around*|{|\<emptyset\>|}>|)>\<wedge\>b\<in\>D|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|(|C\<times\><around*|{|\<emptyset\>|}>|)><big|cup><around*|(|D\<times\><around*|{|<around*|{|\<emptyset\>|}>|}>|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|e\<in\><around*|\<langle\>|C,D|\<rangle\>>>>>>
+        <tformat|<table|<row|<cell|x\<in\><around*|\<langle\>|A,B|\<rangle\>>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|(|A\<times\><around*|{|\<varnothing\>|}>|)><big|cup><around*|(|B\<times\><around*|{|<around*|{|\<varnothing\>|}>|}>|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>A\<times\><around*|{|\<varnothing\>|}>\<vee\>x\<in\>B\<times\><around*|{|<around*|{|\<varnothing\>|}>|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|x=<around*|(|a,\<varnothing\>|)>\<wedge\>a\<in\>A|)>\<vee\><around*|(|x=<around*|(|b,<around*|{|\<varnothing\>|}>|)>\<wedge\>b\<in\>B|)>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<text|[axiom:
+        <reference|axiom of extent>]>>>|<cell|<around*|(|x=<around*|(|a,\<varnothing\>|)>\<wedge\>a\<in\>C|)>\<vee\><around*|(|x=<around*|(|b,<around*|{|\<varnothing\>|}>|)>\<wedge\>b\<in\>D|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|(|C\<times\><around*|{|\<varnothing\>|}>|)><big|cup><around*|(|D\<times\><around*|{|<around*|{|\<varnothing\>|}>|}>|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|e\<in\><around*|\<langle\>|C,D|\<rangle\>>>>>>
       </eqnarray*>
 
       so that by the Axiom of Extent [axiom: <reference|axiom of extent>]\ 
@@ -1726,7 +1871,7 @@
     </description>
   </proof>
 
-  We can now easely extend <math|<around*|\<langle\>|A,B|\<rangle\>>> to a
+  We can now easily extend <math|<around*|\<langle\>|A,B|\<rangle\>>> to a
   triple <math|<around*|\<langle\>|A,B,C|\<rangle\>>>.
 
   <\definition>
@@ -1775,7 +1920,7 @@
 
   <section|Partial functions and Functions>
 
-  The concept of a function as a mapping of one value to a unique value ia
+  The concept of a function as a mapping of one value to a unique value is
   used throughout mathematics, especially in analysis, which is essential a
   theory of functions. Note that a function maps a value <math|x> to a
   <with|font-series|bold|unique> value <math|y> which in the context of a set
@@ -1785,7 +1930,7 @@
   <subsection|Partial function>
 
   <\definition>
-    Then a tripple <math|<around*|\<langle\>|A,B,f|\<rangle\>>> is a
+    Then a triple <math|<around*|\<langle\>|A,B,f|\<rangle\>>> is a
     <with|font-series|bold|partial function between <math|A> and <math|B>> if\ 
 
     <\enumerate>
@@ -1803,7 +1948,7 @@
     partial function between <math|A> and <math|B> we use the notation
     <math|f:A\<rightarrow\>B> or <math|A<long-arrow|\<rubber-rightarrow\>|f>>B.
     Further the condition (2) is to ensure that only one value can be
-    associated with <math|x>. So it is usefull to use a special notation for
+    associated with <math|x>. So it is useful to use a special notation for
     this unique value, namely <math|f<around*|(|x|)>>. Essential if we say
     <math|f<around*|(|x|)>=y> we actually mean <math|>that
     <math|<around*|(|x,y|)>\<in\>f>.
@@ -1811,7 +1956,7 @@
 
   From now on we will use the Axiom of Construction [axiom: <reference|axiom
   of construction>] to define different classes related to partial functions
-  without explicitely mentioning this. It is assumed that the reader
+  without explicitly mentioning this. It is assumed that the reader
   understand when to use this axiom.
 
   <\definition>
@@ -1883,14 +2028,13 @@
 
   <\remark>
     Note that we use a conflicting notation here. On one hand
-    <math|y=f<around*|(|x|)>> can be intepreted as
+    <math|y=f<around*|(|x|)>> can be interpreted as
     <math|<around*|(|x,y|)>\<in\>f>, on the other hand it can also means that
     <math|y> is the image of <math|x> by <math|f>. We adopt the following
     convention. If lower cases are used as in <math|y=f<around*|(|x|)>> we
-    interpret this as <math|<around*|(|x,y|)>\<in\>f> and if we use
-    uppercases like in <math|f<around*|(|C|)>> we are talking about images.
-    In case of doubt <math|<around*|(|f|)><around*|(|C|)>> always referes to
-    the image.
+    interpret this as <math|<around*|(|x,y|)>\<in\>f> and if we use uppercase
+    like in <math|f<around*|(|C|)>> we are talking about images. In case of
+    doubt <math|<around*|(|f|)><around*|(|C|)>> always refers to the image.
   </remark>
 
   <\definition>
@@ -1991,7 +2135,7 @@
   </definition>
 
   The above defines the graph of a new function as is expressed in the
-  following hteorem
+  following theorem
 
   <\theorem>
     <label|partial function composition of partial functions>Let
@@ -2171,7 +2315,7 @@
     <\enumerate>
       <item>If <math|z\<in\><around*|(|g\<circ\>f|)><around*|(|C|)>> then
       there exists a <math|x\<in\>C> such that
-      <math|<around*|(|x,z|)>\<in\>g\<circ\>f>. So by definition there exiss
+      <math|<around*|(|x,z|)>\<in\>g\<circ\>f>. So by definition there exist
       a <math|y> such that <math|<around*|(|x,y|)>\<in\>f\<wedge\><around*|(|y,z|)>\<in\>g>.
       From <math|<around*|(|x,y|)>\<in\>f> it follows that
       <math|y\<in\>f<around*|(|C|)>> and as <math|<around*|(|y,z|)>\<in\>g>
@@ -2256,10 +2400,136 @@
     </equation*>
   </proof>
 
+  <\example>
+    <label|function between {0,1} and {A,B}>Let <math|A,B> be classes and
+    define <math|f=<around*|{|<around*|(|0,A|)>,<around*|(|1,B|)>|}>> then
+    <math|f:<around*|{|0,1|}>\<rightarrow\><around*|{|A,B|}>> is a function
+  </example>
+
+  <\proof>
+    If <math|<around*|(|x,y|)>\<in\>f> then
+
+    <\equation*>
+      <around*|(|x,y|)>=<around*|(|0,A|)>\<Rightarrow\>x=1\<in\><around*|{|0,1|}>\<wedge\>y=A\<in\><around*|{|A,B|}><text|
+      so that ><around*|(|x,y|)>\<in\><around*|{|0,1|}>\<times\><around*|{|A,B|}>
+    </equation*>
+
+    or
+
+    <\equation*>
+      <around*|(|x,y|)>=<around*|(|1,B|)>\<Rightarrow\>x=1\<in\><around*|{|0,1|}>\<wedge\>y=B\<in\><around*|{|A,B|}><text|
+      so that ><around*|(|x,y|)>\<in\><around*|{|0,1|}>\<times\><around*|{|A,B|}>
+    </equation*>
+
+    proving that\ 
+
+    <\equation*>
+      f\<subseteq\><around*|{|0,1|}>\<times\><around*|{|A,B|}>
+    </equation*>
+
+    If <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>f> then for
+    <math|<around*|(|x,y|)>> we have either:
+
+    <\description>
+      <item*|<math|<around*|(|x,y|)>=<around*|(|0,A|)>>>Then <math|x=0> and
+      <math|y=A> so that <math|<around*|(|x<rprime|'>,y<rprime|'>|)>=<around*|(|0,y<rprime|'>|)>\<in\>f\<Rightarrow\>y<rprime|'>=A>
+      hence <math|y=y<rprime|'>>
+
+      <item*|<math|<around*|(|x,y|)>=<around*|(|1,B|)>>>Then <math|x=1> and
+      <math|y=B> so that <math|<around*|(|x<rprime|'>,y<rprime|'>|)>=<around*|(|1,y<rprime|'>|)>\<in\>f\<Rightarrow\>y<rprime|'>=B>
+      hence <math|y=y<rprime|'>>
+    </description>
+
+    which proves that\ 
+
+    <\equation*>
+      f:<around*|{|0,1|}>\<rightarrow\><around*|{|A,B|}><text| is a partial
+      function>
+    </equation*>
+
+    If <math|x\<in\><around*|{|0,1|}>> then either <math|x=0> so that
+    <math|<around*|(|0,A|)>\<in\>f> or <math|x=1> so that
+    <math|<around*|(|1,B|)>\<in\>f>, so <math|<around*|{|0,1|}>\<subseteq\>dom<around*|(|f|)>>.
+    Using [proposition: <reference|function condition (1)>] it follows that\ 
+
+    <\equation*>
+      f:<around*|{|0,1|}>\<rightarrow\><around*|{|A,B|}><text| is a function>
+    </equation*>
+  </proof>
+
+  Next we define the class of all the graphs of functions between two classes
+
   <\note>
     Be aware that some books calls partial functions functions and functions
     mappings.\ 
   </note>
+
+  <\definition>
+    <label|function B^A><index|<math|B<rsup|A>>>Let <math|A,B> be two classes
+    then we define the class <math|B<rsup|A>> [using the Axiom of
+    Construction] as\ 
+
+    <\equation*>
+      B<rsup|A>=<around*|{|f\|f:A\<rightarrow\>B<text| is a function>|}>
+    </equation*>
+  </definition>
+
+  <\note>
+    <math|B<rsup|A>> is not the class of functions between <math|A> and
+    <math|B>, but the class of graphs of functions between <math|A> and
+    <math|B>. This distinction is important because it makes the following
+    theorem possible.
+  </note>
+
+  <\theorem>
+    <label|function B^A and inclusion>Let <math|A,B,C> be classes such that
+    <math|B\<subseteq\>C> then <math|B<rsup|A>\<subseteq\>C<rsup|A>>
+  </theorem>
+
+  <\proof>
+    Let <math|f\<in\>B<rsup|A>> then <math|f:A\<rightarrow\>B> is a function,
+    so by definition <math|f\<subseteq\>A\<times\>B>, if
+    <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>f> then
+    <math|y=y<rprime|'>> and <math|dom<around*|(|f|)>=A>, As
+    <math|B\<subseteq\>C> we have using [theorem: <reference|cartesian
+    product and inclusion>] that <math|A\<times\>B\<subseteq\>C>, so using
+    [theorem: <reference|class properties (1)>] we have that
+    <math|f\<subseteq\>A\<times\>C>. So <math|f:A\<rightarrow\>C> is a
+    function, hence <math|f\<in\>C<rsup|A>>m proving that\ 
+
+    <\equation*>
+      B<rsup|A>\<subseteq\>C<rsup|A>
+    </equation*>
+
+    \;
+  </proof>
+
+  We have also the following relation between <math|A\<times\>B> and
+  <math|B<rsup|C>>
+
+  <\theorem>
+    <label|function: A^B and sets>Let <math|A,B> be two classes then we have:
+
+    <\enumerate>
+      <item><math|B<rsup|A>\<subseteq\>A\<times\>B>
+
+      <item>If <math|A,B> are sets then <math|B<rsup|A>> is a set
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|f\<in\>B<rsup|A>> then <math|f:A\<rightarrow\>B> is a
+      function so that <math|f\<subseteq\>A\<times\>B> proving that
+      <math|B<rsup|A>\<subseteq\>A\<times\>B>
+
+      <item>If <math|A,B> are sets then by [theorem: <reference|set A*B>] we
+      have that <math|A\<times\>B> is a set. So using the Axiom of Subsets
+      [axiom: <reference|axiom of subsets>] we have that <math|f> is a set,
+    </enumerate>
+  </proof>
 
   We have the follow trivial fact about a function
 
@@ -2301,12 +2571,12 @@
 
   <\proof>
     Note that the statement <math|f:A\<rightarrow\>B> and
-    <math|g:A\<rightarrow\>B> are equal is equivalen with
+    <math|g:A\<rightarrow\>B> are equal is equivalent with
     <math|<around*|\<langle\>|A,B,f|\<rangle\>>=<around*|\<langle\>|A,B,g|\<rangle\>>>,
     which by <reference|\<less\>A,B,C\<gtr\>=\<less\>D,E,F\<gtr\>=\<gtr\>A=E,B=D,C=F>
     is equivalent with <math|A=A\<wedge\>B=B\<wedge\>f=g>, As <math|A=A> and
     <math|B=B> are true this is equivalent with <math|f=g>. Now by the Axiom
-    of Extent [axion: <reference|axiom of extent>] we have that\ 
+    of Extent [axiom: <reference|axiom of extent>] we have that\ 
 
     <\equation*>
       f=g\<Leftrightarrow\><around*|[|<around*|(|x,y|)>\<in\>f\<Rightarrow\><around*|(|x,y|)>\<in\>g\<wedge\><around*|(|x,y|)>\<in\>g\<Rightarrow\><around*|(|x,y|)>\<in\>f|]>
@@ -2378,7 +2648,7 @@
     <math|<around*|(|x,y|)>\<in\>g> hence <math|y=g<around*|(|x|)>> which
     proves that <math|f<around*|(|x|)>=g<around*|(|x|)>>.\ 
 
-    On the other hande assume that <math|\<forall\>x\<in\>A>
+    On the other hand assume that <math|\<forall\>x\<in\>A>
     <math|f<around*|(|x|)>=g<around*|(|x|)>> then if
     <math|<around*|(|x,y|)>\<in\>f> we have
     <math|y=f<around*|(|x|)>=g<around*|(|x|)>> so that
@@ -2520,7 +2790,7 @@
       <math|<around*|(|x,y|)>\<in\>f\<circ\>Id<rsub|A>> then
       <math|\<exists\>x<rprime|'>> such that
       <math|<around*|(|x,x<rprime|'>|)>\<in\>Id<rsub|A>\<wedge\><around*|(|x<rprime|'>,y|)>\<in\>f>.
-      By defiition of <math|Id<rsub|A>> we have that
+      By definition of <math|Id<rsub|A>> we have that
       <math|\<exists\>z\<in\>A> such that
       <math|<around*|(|x,x<rprime|'>|)>=<around*|(|z,z|)>> hence
       <math|x=x<rprime|'>> so that <math|<around*|(|x,y|)>\<in\>f>. Using the
@@ -2656,9 +2926,47 @@
   </proof>
 
   <\proposition>
-    If <math|f:A\<rightarrow\>B> is a injective function then
-    <math|f:A\<rightarrow\>f<around*|(|A|)>> is a bijection TODO
+    <label|function preimage of image>If <math|f:A\<rightarrow\>B> is a a
+    function and <math|C\<subseteq\>A> then\ 
+
+    <\enumerate>
+      <item><math|C\<subseteq\>f<rsup|-1><around*|(|f<around*|(|C|)>|)>>
+
+      <item>If <math|f> is injective then
+      <math|C=f<rsup|-1><around*|(|f<around*|(|C|)>|)>>
+    </enumerate>
   </proposition>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|x\<in\>C> then, as <math|f> is a function,
+      <math|A=dom<around*|(|f|)>>, so there exists a <math|y> such that
+      <math|<around*|(|x,y|)>\<in\>f> proving that
+      <math|y\<in\>f<around*|(|C|)>>, hence
+      <math|x\<in\>f<rsup|-1><around*|(|f<around*|(|C|)>|)>>. So\ 
+
+      <\equation*>
+        C\<subseteq\>f<rsup|-1><around*|(|f<around*|(|C|)>|)>
+      </equation*>
+
+      <item>If <math|x\<in\>f<rsup|-1><around*|(|f<around*|(|C|)>|)>> then
+      <math|\<exists\>y\<in\>f<around*|(|C|)>> such that
+      <math|<around*|(|y,x|)>\<in\>f<rsup|-1>>, hence
+      <math|<around*|(|x,y|)>\<in\>f>. As <math|y\<in\>f<around*|(|C|)>>
+      there exists a <math|x<rprime|'>\<in\>C> such that
+      <math|<around*|(|x<rprime|'>,y|)>\<in\>f>. Given that <math|f> is
+      injective it follows from <math|<around*|(|x,y|)>,*<around*|(|x<rprime|'>,y|)>\<in\>f>
+      that <math|x=x<rprime|'>>, so as <math|x<rprime|'>\<in\>C> it follow
+      that <math|x\<in\>C>. Hence <math|f<rsup|-1><around*|(|f<around*|(|C|)>|)>\<subseteq\>C>
+      which combined with (1) proves\ 
+
+      <\equation*>
+        C=f<rsup|-1><around*|(|f<around*|(|C|)>|)>
+      </equation*>
+    </enumerate>
+  </proof>
 
   The importance of injectivity is that it allows us to define the inverse of
   a partial function. First we define the inverse graph of the graph of a
@@ -2726,7 +3034,7 @@
     <math|y\<in\>A\<wedge\>x\<in\>B>, as <math|<around*|(|y,x|)>\<in\>f> we
     have that <math|x\<in\>f<around*|(|A|)>>, hence
     <math|<around*|(|x,y|)>\<in\>f<around*|(|A|)>\<times\>A>. So
-    <math|f<rsup|-1>\<subseteq\>f<around*|(|A|)>\<times\>B>. Futher if
+    <math|f<rsup|-1>\<subseteq\>f<around*|(|A|)>\<times\>B>. Further if
     <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>f<rsup|-1>> then
     <math|<around*|(|y,x|)>,<around*|(|y<rprime|'>,x|)>\<in\>f> which as
     <math|f> is injective proves <math|y=y<rprime|'>>. Hence
@@ -2756,6 +3064,12 @@
     <with|font-series|bold|injective> and <with|font-series|bold|surjective>.
   </definition>
 
+  <\definition>
+    <label|bijective classes><index|bijective>Two classes <math|A> and
+    <math|B> are bijective iff there exists a bijection between <math|A> and
+    <math|B>
+  </definition>
+
   <\example>
     <label|function identity map is a bijection>Let <math|A> be a class then
     <math|Id<rsub|A>:A\<rightarrow\>A> [example: <reference|function identity
@@ -2768,7 +3082,7 @@
     <math|<around*|(|x,y|)>=<around*|(|z,z|)>\<wedge\><around*|(|x<rprime|'>,y|)>=<around*|(|z<rprime|'>,z<rprime|'>|)>>.
     So using [theorem: <reference|pair equality of pairs>]
     <math|x=z\<wedge\>y=z\<wedge\>x=z<rprime|'>\<wedge\>y=z<rprime|'>>. Using
-    [theorem: <reference|class properties (1)>] repeately gives then
+    [theorem: <reference|class properties (1)>] repeatedly gives then
     <math|x=x<rprime|'>> proving that\ 
 
     <\equation*>
@@ -2783,6 +3097,43 @@
     <\equation*>
       Id<rsub|A><text| is surjective>
     </equation*>
+  </proof>
+
+  <\example>
+    <label|function trivial bijection>Let <math|I=<around*|{|1|}>> <math|B> a
+    class and take <math|f:I\<rightarrow\><around*|{|B|}>> defined by
+    <math|f=<around*|{|<around*|(|1,B|)>|}>> is a bijection
+  </example>
+
+  <\proof>
+    As <math|1\<in\><around*|{|1|}>> and <math|B\<in\><around*|{|B|}>> it
+    follows that <math|<around*|(|1,B|)>\<in\><around*|{|1|}>\<times\><around*|{|B|}>>,
+    hence <math|f=<around*|{|<around*|(|1,B|)>|}>\<subseteq\><around*|{|1|}>\<times\><around*|{|B|}>>.
+    If <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>f=<around*|{|1|}>\<times\><around*|{|B|}>>
+    then <math|y=B=y<rprime|'>>, further <math|dom<around*|(|f|)>=<around*|{|1|}>=I>.
+    So we conclude that <math|f:<around*|{|1|}>\<rightarrow\><around*|{|B|}>>
+    is indeed a function. Further if <math|y\<in\><around*|{|B|}>> then
+    <math|y=B> and as <math|<around*|(|1,B|)>\<in\>f> it follows that
+    <math|y\<in\>range<around*|(|f|)>> or
+    <math|<around*|{|B|}>\<subseteq\>range<around*|(|f|)>>, which by
+    [theorem: <reference|function surjection condition>] proves that <math|f>
+    is surjective. Finally if <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>f=<around*|{|<around*|(|1,B|)>|}>>
+    then <math|x=1=x<rprime|'>> proving that
+    <math|f:<around*|{|1|}>\<rightarrow\><around*|{|B|}>> is a bijection.
+  </proof>
+
+  <\proposition>
+    <label|function injectivity to bijection>If <math|f:A\<rightarrow\>B> is
+    a injective function then <math|f:A\<rightarrow\>f<around*|(|A|)>> is a
+    bijection
+  </proposition>
+
+  <\proof>
+    As injectivity is a property of the graph of a
+    function,<space|1em><math|>the function <math|f:A\<rightarrow\>B> is
+    still injective. Further <math|range<around*|(|f|)>\<equallim\><rsub|<text|[theorem:
+    <reference|partial functions image/preimage
+    properties>]>>f<around*|(|A|)>> which proves surjectivity.
   </proof>
 
   <\theorem>
@@ -2885,7 +3236,7 @@
       <reference|function bijection f,f-1>] by taking <math|g=f<rsup|-1>>
 
       <item*|<math|2\<Rightarrow\>1>>Let <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>f\<subseteq\>A\<times\>B>,
-      as <math|y=dom<around*|(|g|)>> there exisrs a <math|z> such that
+      as <math|y=dom<around*|(|g|)>> there exists a <math|z> such that
       <math|<around*|(|y,z|)>\<in\>g>, hence
       <math|<around*|(|x,z|)>,<around*|(|x<rprime|'>,z|)>\<in\>g\<circ\>f=Id<rsub|A>>
       so that <math|x=z=x<rprime|'>> proving that\ 
@@ -2917,7 +3268,7 @@
     If <math|f:A\<rightarrow\>B> is a bijection then by [theorem:
     <reference|function bijection f,f-1>]
     <math|f\<circ\>f<rsup|-1>=Id<rsub|B>> and
-    <math|f<rsup|-1>\<circ\>f=Id<rsub|A>> which iby [theorem:
+    <math|f<rsup|-1>\<circ\>f=Id<rsub|A>> which by [theorem:
     <reference|function bijection condition (2)>] proves that
     <math|f<rsup|-1>:B\<rightarrow\>A> is a bijection.
   </proof>
@@ -3019,7 +3370,7 @@
       <item>If <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>A> are
       bijections then these two functions are injective and surjective. Using
       (1) and (2) proves that <math|g\<circ\>f:A\<rightarrow\>C> is injective
-      and surjective and thus by defiition bijective.
+      and surjective and thus by definition bijective.
 
       <item>By (3) <math|g\<circ\>f> is a bijection, so by [theorem:
       <reference|function bijection f,f-1>] we have that
@@ -3044,11 +3395,175 @@
     </enumerate>
   </proof>
 
-  The following theorem will be used for manifolds later
+  The following is a example of a bijection between a class and the class of
+  functions in this set.
 
   <\theorem>
-    TODO
+    <label|function and power>Let <math|A> be a class then there exists a
+    bijection between <math|A> and <math|A<rsup|<around*|{|1|}>>>
   </theorem>
+
+  <\proof>
+    Given <math|x\<in\>A> define the function
+    <math|f<rsub|x>:<around*|{|1|}>\<rightarrow\><around*|{|x|}>> where
+    <math|f<rsub|x>=<around*|{|<around*|(|1,x|)>|}>> [see [example:
+    <reference|function trivial bijection>] to prove that this is a function
+    (even a bijection)]. So <math|f<rsub|x>\<in\><around*|{|x|}><rsup|<around*|{|1|}>>,>
+    which as <math|<around*|{|x|}>\<subseteq\>A> proves by [theorem:
+    <reference|function B^A and inclusion>] that
+    <math|f<rsub|x>\<in\>A<rsup|<around*|{|1|}>>>. Define now
+    <math|f=<around*|{|z\|z=<around*|(|x,f<rsub|x>|)><text| where
+    >x\<in\>A|}>>. If <math|<around*|(|x,y|)>\<in\>f> we have <math|x\<in\>A>
+    and thus <math|y=f<rsub|x>\<in\>A<rsup|<around*|{|1|}>>> hence
+    <math|<around*|(|x,y|)>\<in\>A\<times\>A<rsup|<around*|{|1|}>>>. Also if
+    <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>A> then
+    <math|y=f<rsub|x>> and <math|y<rprime|'>=f<rsub|x>> so that
+    <math|y=y<rprime|'>>. Further for every <math|x\<in\>A> we have by the
+    definition of <math|f> that <math|<around*|(|x,f<rsub|x>|)>\<in\>f>. So
+    we conclude that
+
+    <\equation*>
+      f:A\<rightarrow\>A<rsup|<around*|{|1|}>><text| is a function>
+    </equation*>
+
+    Assume now that <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>f>
+    then <math|f<rsub|x>=y=f<rsub|x<rprime|'>>>, so that
+    <math|<around*|{|<around*|(|1,x|)>|}>=<around*|{|<around*|(|1,x<rprime|'>|)>|}>>,
+    hence <math|<around*|(|1,x|)>=<around*|(|1,x<rprime|'>|)>>, from which it
+    follows that <math|x=x<rprime|'>>. this proves that\ 
+
+    <\equation*>
+      f:A\<rightarrow\>A<rsup|<around*|{|1|}>><text| is a injective function>
+    </equation*>
+
+    If <math|y\<in\>A<rsup|<around*|{|1|}>>> then
+    <math|y:<around*|{|1|}>\<rightarrow\>A> is a function, hence
+    <math|1\<in\><around*|{|1|}>=dom<around*|(|y|)>>, so there exists a
+    <math|z> such that <math|<around*|(|1,z|)>\<in\>y\<subseteq\><around*|{|1|}>\<times\>A>
+    proving that <math|z\<in\>A>. Hence\ 
+
+    <\equation>
+      <label|eq 2.16.005><around*|{|<around*|(|1,z|)>|}>\<subseteq\>y\<wedge\>z\<in\>A<text|>
+    </equation>
+
+    If <math|<around*|(|u,v|)>\<in\>y\<subseteq\><around*|{|1|}>\<times\>A>
+    then <math|u=1> so that <math|<around*|(|1,u|)>\<in\>y>, which, as
+    <math|<around*|(|1,z|)>\<in\>y> and <math|y> is a function, proves that
+    <math|u=z> or <math|<around*|(|u,v|)>=<around*|(|1,z|)>\<in\><around*|{|<around*|(|1,z|)>|}>>.
+    <math|>So <math|y\<subseteq\><around*|{|<around*|(|1,z|)>|}>> which
+    combined with [eq: <reference|eq 2.16.005>] proves that
+    <math|<around*|{|<around*|(|1,z|)>|}>=y>. As
+    <math|f<rsub|z>=<around*|{|<around*|(|1,z|)>|}>=y> we have that
+    <math|<around*|(|z,y|)>\<in\>f> which proves that\ 
+
+    <\equation*>
+      f<text| is a surjection>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|function P(A)=2^A>If <math|A> is a class then there is a bijection
+    between <math|\<cal-P\><around*|(|A|)>> and
+    <math|<around*|{|0,1|}><rsup|A>>.
+  </theorem>
+
+  <\proof>
+    Define <math|\<gamma\>:\<cal-P\><around*|(|A|)>\<rightarrow\><around*|{|0,1|}><rsup|A>>
+    by <math|\<gamma\>=<around*|{|z\|z=<around*|(|B,\<cal-X\><rsub|A,B>|)><text|
+    where >B\<in\>\<cal-P\><around*|(|A|)>|}>> where
+    <math|\<cal-X\><rsub|A,B>=<around*|(|B\<times\><around*|{|1|}>|)><big|cup><around*|(|<around*|(|A\\B|)>\<times\><around*|{|1|}>|)>>
+    is the graph of the Characteristic function [example: <reference|function
+    characteristics function>] If <math|<around*|(|B,f|)>\<in\>\<gamma\>>
+    then \ <math|B\<in\>\<cal-P\><around*|(|A|)>> and
+    <math|f=\<cal-X\><rsub|A,B>>, as <math|B\<in\>\<cal-P\><around*|(|A|)>\<Rightarrow\>B\<subseteq\>A>
+    it follow using [example: <reference|function characteristics function>]
+    that <math|\<cal-X\><rsub|A,B>:A\<rightarrow\><around*|{|0,1|}>> is a
+    function. So <math|<around*|(|B,f|)>\<in\><around*|{|0,1|}><rsup|A>>
+    giving\ 
+
+    <\equation*>
+      \<gamma\>\<subseteq\>\<cal-P\><around*|(|A|)>\<times\><around*|(|<around*|{|0,1|}><rsup|A>|)>
+    </equation*>
+
+    If <math|<around*|(|B,f|)>,<around*|(|B,g|)>\<in\>\<gamma\>> then
+    <math|f=\<cal-X\><rsub|A,B>> and <math|g=\<cal-X\><rsub|A,B>> so that
+    <math|f=g>, also by the definition of <math|\<gamma\>> we have that
+    <math|dom<around*|(|\<gamma\>|)>=\<cal-P\><around*|(|A|)>>, hence
+
+    <\equation*>
+      \<gamma\>:\<cal-P\><around*|(|A|)>\<rightarrow\><around*|{|0,1|}><rsup|A><text|
+      is a function>
+    </equation*>
+
+    If <math|<around*|(|B,f|)>,<around*|(|B<rprime|'>,f|)>\<in\>\<gamma\>>
+    then <math|\<cal-X\><rsub|A,B>=\<cal-X\><rsub|A,B<rprime|'>>> so that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|x\<in\>B>|<cell|\<Leftrightarrow\>>|<cell|\<cal-X\><rsub|A,B><around*|(|x|)>=1>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|\<cal-X\><rsub|A,B>=\<cal-X\><rsub|A,B<rprime|'>>>>|<cell|\<cal-X\><rsub|A,B<rprime|'>><around*|(|x|)>=1>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>B<rprime|'>>>>>
+    </eqnarray*>
+
+    proving that <math|B=B<rprime|'>>. Hence\ 
+
+    <\equation*>
+      \<gamma\>:\<cal-P\><around*|(|A|)>\<rightarrow\><around*|{|0,1|}><rsup|A><text|
+      is injective>
+    </equation*>
+
+    If <math|f\<in\><around*|{|0,1|}><rsup|A>> define then
+    <math|B=<around*|{|x\<in\>A\|<around*|(|x,1|)>\<in\>f|}>\<subseteq\>A> so
+    that <math|B\<in\>\<cal-P\><around*|(|A|)>>.
+
+    If <math|<around*|(|x,y|)>\<in\>f> then we have for x either:
+
+    <\description>
+      <item*|<math|x\<in\>B>>Then <math|<around*|(|x,1|)>\<in\>f> and as
+      <math|<around*|(|x,y|)>\<in\>f> we have that <math|y=1> so that
+      <math|<around*|(|x,y|)>=<around*|(|x,1|)>\<in\>\<cal-X\><rsub|A,B>>
+
+      <item*|<math|x\<nin\>B>>Then <math|<around*|(|x,0|)>\<in\>f> and as
+      <math|<around*|(|x,y|)>\<in\>f> we have that <math|y=0> so that
+      <math|<around*|(|x,y|)>=<around*|(|x,0|)>\<in\>\<cal-X\><rsub|A,B>> [as
+      <math|x\<in\>A\\B>]
+    </description>
+
+    proving that\ 
+
+    <\equation>
+      <label|eq 2.17.006>f\<subseteq\>\<cal-X\><rsub|A,B>
+    </equation>
+
+    If <math|<around*|(|x,y|)>\<in\>\<cal-X\><rsub|A,B>> then we have for
+    <math|x> either:
+
+    <\description>
+      <item*|<math|x\<in\>B>>Then as <math|<around*|(|x,1|)>\<in\>\<cal-X\><rsub|A,B>>
+      we must have that <math|y=1>, \ using the definition of <math|B> we
+      have also <math|<around*|(|x,1|)>\<in\>f\<Rightarrow\><around*|(|x,y|)>\<in\>f>
+
+      <item*|<math|x\<nin\>B>>Then <math|x\<in\>A\\B> so that
+      <math|<around*|(|x,0|)>\<in\>\<cal-X\><rsub|A,B>> hence we must have
+      that <math|y=0>. As <math|<around*|(|x,0|)>\<in\>f> [if
+      <math|<around*|(|x,1|)>\<in\>f> then <math|x\<in\>B> a contradiction]
+      it follows that <math|<around*|(|x,y|)>=<around*|(|x,0|)>\<in\>f>
+    </description>
+
+    proving that\ 
+
+    <\equation>
+      <label|eq 2.18.006>\<cal-X\><rsub|A,B>\<subseteq\>f
+    </equation>
+
+    So given <math|f\<in\><around*|{|0,1|}><rsup|A>> we have that there
+    exists a <math|B\<in\>\<cal-P\><around*|(|A|)>> such that
+    <math|\<cal-X\><rsub|A,B>\<equallim\><rsub|<text|[eq: <reference|eq
+    2.17.006>,<reference|eq 2.18.006>]>>f>, hence
+    <math|<around*|(|B,f|)>\<in\>\<gamma\>> proving that\ 
+
+    <\equation*>
+      \<gamma\>:\<cal-P\><around*|(|A|)>\<rightarrow\><around*|{|0,1|}><rsup|A><text|
+      is a surjective>
+    </equation*>
+  </proof>
 
   <subsection|Restriction of a Function/Partial Function>
 
@@ -3066,8 +3581,8 @@
   <\definition>
     <label|function restriction of a graph><index|<math|f<rsub|\|C>>>Let
     <math|f:A\<rightarrow\>B> be a function and <math|C\<subseteq\>A> a
-    subclass of <math|A> then the restiction of <math|f> to <math|C> noted by
-    <math|f<rsub|\|C>> is defined by
+    subclass of <math|A> then the restriction of <math|f> to <math|C> noted
+    by <math|f<rsub|\|C>> is defined by
 
     <\equation*>
       f<rsub|\|C>=<around*|{|z\|z=<around*|(|x,y|)>\<in\>f\<wedge\>x\<in\>C|}>
@@ -3159,7 +3674,7 @@
       <math|\<exists\>x\<in\>D> such that
       <math|<around*|(|x,y|)>\<in\>f<rsub|\|C>>, hence
       <math|<around*|(|x,y|)>\<in\>f> so that <math|y\<in\>f<around*|(|D|)>>.
-      On the orther hand if <math|y\<in\>f<around*|(|D|)>> then
+      On the other hand if <math|y\<in\>f<around*|(|D|)>> then
       <math|\<exists\>x\<in\>D> such that <math|<around*|(|x,y|)>\<in\>f>,
       which as <math|x\<in\>D\<subseteq\>C\<Rightarrow\>x\<in\>C> proves that
       <math|<around*|(|x,y|)>\<in\>f<rsub|\|C>>, so
@@ -3189,6 +3704,103 @@
   </proof>
 
   <\theorem>
+    <label|function restriction and domain>Let <math|f:A\<rightarrow\>B> be a
+    partial function then <math|f<rsub|\|dom<around*|(|f|)>>=f>
+  </theorem>
+
+  <\proof>
+    If <math|<around*|(|x,y|)>\<in\>f> then by definition
+    <math|x\<in\>dom<around*|(|f|)>> hence
+    <math|<around*|(|x,y|)>\<in\>f<rsub|\|dom<around*|(|f|)>>>, further if
+    <math|<around*|(|x,y|)>\<in\>f<rsub|\|dom<around*|(|f|)>>> then
+    <math|<around*|(|x,y|)>\<in\>f> and <math|x\<in\>dom<around*|(|f|)>>, so
+    evidently <math|<around*|(|x,y|)>\<in\>f>. Hence using the Axiom of
+    Extent [axiom: <reference|axiom of extent>] we have\ 
+
+    <\equation*>
+      f<rsub|\|dom<around*|(|f|)>>=f
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|function inverse and restriction>Let <math|f:A\<rightarrow\>B> be
+    a injective partial function and <math|C\<subseteq\>A> then
+    <math|<around*|(|f<rsup|-1>|)><rsub|\|f<around*|(|C|)>>=<around*|(|f<rsub|\|C>|)><rsup|-1>>
+  </theorem>
+
+  <\proof>
+    Let <math|<around*|(|x,y|)>\<in\><around*|(|f<rsup|-1>|)><rsub|\|f<around*|(|C|)>>>
+    then <math|x\<in\>f<around*|(|C|)>> and
+    <math|<around*|(|x,y|)>\<in\>f<rsup|-1>\<Rightarrow\><around*|(|y,x|)>\<in\>f>,
+    as <math|x\<in\>f<around*|(|C|)>> there exists a <math|z\<in\>C> such
+    that <math|<around*|(|z,x|)>\<in\>f>. As <math|f> is injective we have
+    that <math|z=y>, proving that <math|y\<in\>C>, which as
+    <math|<around*|(|y,x|)>\<in\>f> gives
+    <math|<around*|(|y,x|)>\<in\>f<rsub|\|C>> so that
+    <math|<around*|(|x,y|)>\<in\><around*|(|f<rsub|\|C>|)><rsup|-1>>. Hence\ 
+
+    <\equation>
+      <label|eq 2.17.004><around*|(|f<rsup|-1>|)><rsub|\|f<around*|(|C|)>>\<subseteq\>*<around*|(|f<rsub|\|C>|)><rsup|-1>
+    </equation>
+
+    If <math|<around*|(|x,y|)>\<in\><around*|(|f<rsub|\|C>|)><rsup|-1>> then
+    <math|<around*|(|y,x|)>\<in\>f<rsub|\|C>> so that <math|y\<in\>C> and
+    <math|<around*|(|y,x|)>\<in\>f>. Hence <math|x\<in\>f<around*|(|C|)>> and
+    as <math|<around*|(|y,x|)>\<in\>f> gives
+    <math|<around*|(|x,y|)>\<in\>f<rsup|-1>> we have
+    <math|<around*|(|x,y|)>\<in\><around*|(|f<rsup|-1>|)><rsub|\|f<around*|(|C|)>>>.
+    This proves that <math|<around*|(|f<rsub|\|C>|)><rsup|-1>\<subseteq\><around*|(|f<rsup|-1>|)><rsub|\|f<around*|(|C|)>>>,
+    combing this with [eq: <reference|eq 2.17.004>] gives:
+
+    <\equation*>
+      <around*|(|f<rsup|-1>|)><rsub|f<around*|(|C|)>>=<around*|(|f<rsub|\|C>|)><rsup|-1>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|function composition and restriction>Let <math|f:A\<rightarrow\>B>
+    and <math|g:B\<rightarrow\>C> be partial functions and
+    <math|C\<subseteq\>A> then
+
+    <\equation*>
+      <around*|(|g\<circ\>f|)><rsub|\|C>=g<rsub|\|f<around*|(|C|)>>\<circ\>f<rsub|\|C>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Let <math|<around*|(|x,z|)>\<in\><around*|(|f\<circ\>g|)><rsub|\|C>> then
+    <math|<around*|(|x,z|)>\<in\>f\<circ\>g> and <math|x\<in\>C>. Hence
+    <math|\<exists\>y> such that <math|<around*|(|x,y|)>\<in\>f\<wedge\><around*|(|y,z|)>\<in\>g>,
+    as <math|x\<in\>C> <math|<around*|(|x,y|)>\<in\>f<rsub|\|C>>. From
+    <math|x\<in\>C> and <math|<around*|(|x,y|)>\<in\>f> it follows also that
+    <math|y\<in\>f<around*|(|C|)>>, hence as <math|<around*|(|y,z|)>\<in\>g>
+    we have that <math|<around*|(|y,z|)>\<in\>g<rsub|\|f<around*|(|C|)>>>.
+    From <math|<around*|(|x,y|)>\<in\>f<rsub|\|C>> and
+    <math|<around*|(|y,z|)>\<in\>g<rsub|\|f<around*|(|C|)>>> it follows that
+    <math|<around*|(|x,z|)>\<in\>g<rsub|\|f<around*|(|C|)>>\<circ\>f<rsub|\|C>>
+    so that\ 
+
+    <\equation>
+      <label|eq 2.17.003><around*|(|g\<circ\>f|)><rsub|\|C>\<subseteq\>g<rsub|\|f<around*|(|C|)>>\<circ\>f<rsub|\|C>
+    </equation>
+
+    If <math|<around*|(|x,z|)>\<in\>g<rsub|\|f<around*|(|C|)>>\<circ\>f<rsub|\|C>>
+    then there exists a <math|y> such that
+    <math|<around*|(|x,y|)>\<in\>f<rsub|\|C>> and
+    <math|<around*|(|y,z|)>\<in\>g<rsub|\|f<around*|(|C|)>>>, so
+    <math|x\<in\>C>, <math|<around*|(|x,y|)>\<in\>f>,
+    <math|y\<in\>f<around*|(|C|)>> and <math|<around*|(|y,z|)>\<in\>g>. Hence
+    <math|x\<in\>C> and <math|<around*|(|x,z|)>\<in\>g\<circ\>f> proving that
+    <math|<around*|(|x,z|)>\<in\><around*|(|g\<circ\>f|)><rsub|\|C>.> So
+    <math|g<rsub|\|f<around*|(|C|)>>\<circ\>f<rsub|\|C>\<subseteq\><around*|(|g\<circ\>f|)><rsub|\|C>>
+    which combined with [eq: <reference|eq 2.17.003>] gives
+
+    <\equation*>
+      <around*|(|g\<circ\>f|)><rsub|\|C>=g<rsub|\|f<around*|(|C|)>>\<circ\>g<rsub|\|C>
+    </equation*>
+  </proof>
+
+  <\theorem>
     <label|function restriction of a function>Let <math|f:A\<rightarrow\>B>
     and <math|C\<subseteq\>A> a subclass of <math|A> then
     <math|f<rsub|\|C>:C\<rightarrow\>B> is a function.
@@ -3201,6 +3813,75 @@
     <math|dom<around*|(|f<rsub|\|C>|)>=C<big|cap>dom<around*|(|f|)>\<equallim\><rsub|f<text|
     is a function>>C<big|cap>A\<equallim\><rsub|C\<subseteq\>A>C>, it follows
     that <math|f<rsub|\|C>:C\<rightarrow\>B> is a function.
+  </proof>
+
+  The following theorem will be used for manifolds later
+
+  <\theorem>
+    Let <math|f:A\<rightarrow\>B> and <math|g:C\<rightarrow\>B> be injections
+    then we have\ 
+
+    <\enumerate>
+      <item><math|f:A\<rightarrow\>f<around*|(|A|)>> and
+      <math|g:C\<rightarrow\>f<around*|(|C|)>> are bijections
+
+      <item><math|dom<around*|(|f\<circ\>g<rsup|-1>|)>=g<around*|(|A<big|cap>C|)>>
+
+      <item><math|f\<circ\>g<rsup|-1>=<around*|(|f\<circ\>g<rsup|-1>|)><rsub|\|g<around*|(|A<big|cap>C|)>><rsup|>=f<rsub|\|A<big|cap>C>\<circ\><around*|(|g<rsup|-1>|)><rsub|\|g<around*|(|A<big|cap>C|)>>=f<rsub|\|<around*|(|A<big|cap>C|)>>\<circ\><around*|(|g<rsub|\|A<big|cap>C>|)><rsup|-1>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>This follows from [proposition: <reference|function injectivity
+      to bijection>]
+
+      <item>If <math|*z\<in\>dom<around*|(|f\<circ\>g<rsup|-1>|)>> then
+      <math|\<exists\>x> such that <math|<around*|(|z,x|)>\<in\>f\<circ\>g<rsup|-1>>,
+      hence <math|\<exists\>y> such that <math|<around*|(|z,y|)>\<in\>g<rsup|-1><text|
+      and ><around*|(|y,z|)>\<in\>f>, from which it follows that
+      <math|<around*|(|y,z|)>\<in\>g> and <math|<around*|(|y,z|)>\<in\>f>. As
+      <math|g\<subseteq\>C\<times\>B> and <math|f\<subseteq\>A\<times\>B> it
+      follows that <math|y\<in\>A> and <math|y\<in\>C> so that
+      <math|y\<in\>A<big|cap>C>, as <math|<around*|(|y,z|)>\<in\>g> we have
+      <math|z\<in\>g<around*|(|A<big|cap>C|)>>. This proves\ 
+
+      <\equation>
+        <label|eq 2.16.003>dom<around*|(|g\<circ\>f<rsup|-1>|)>\<subseteq\>g<around*|(|A<big|cap>C|)>
+      </equation>
+
+      If <math|z\<in\>g<around*|(|A<big|cap>C|)>> then
+      <math|\<exists\>y\<in\>A<big|cap>C> such that
+      <math|<around*|(|y,z|)>\<in\>g>, hence
+      <math|<around*|(|z,y|)>\<in\>g<rsup|-1>>. As <math|f> is a function we
+      have that <math|A=dom<around*|(|f|)>>, hence as
+      <math|y\<in\>A<big|cap>C\<Rightarrow\>y\<in\>A>, there exists a
+      <math|x> such that <math|<around*|(|y,x|)>\<in\>f>. As
+      <math|<around*|(|z,y|)>\<in\>g<rsup|-1>> we have
+      <math|<around*|(|z,x|)>\<in\>f\<circ\>g<rsup|-1>> proving that
+      <math|z\<in\>dom<around*|(|f\<circ\>g<rsup|-1>|)>>. Hence
+      <math|g<around*|(|A<big|cap>C|)>\<subseteq\>dom<around*|(|g\<circ\>f<rsup|-1>|)>>
+      which combined with [eq: <reference|eq 2.16.003>].
+
+      <\equation*>
+        dom<around*|(|g\<circ\>f<rsup|-1>|)>=g<around*|(|A<big|cap>C|)>
+      </equation*>
+
+      <item>We have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|f\<circ\>g<rsup|-1>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|function restriction and
+        domain>]>>>|<cell|<around*|(|f\<circ\>g<rsup|-1>|)><rsub|dom<around*|(|f\<circ\>g<rsup|-1>|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|1|)><text|>>>|<cell|<around*|(|f\<circ\>g<rsup|-1>|)><rsub|g<around*|(|A<big|cap>C|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|function composition and
+        restriction>]>>>|<cell|f<rsub|\|g<rsup|-1><around*|(|g<around*|(|A<big|cap>C|)>|)>>\<circ\><around*|(|g<rsup|-1>|)><rsub|g<around*|(|A<big|cap>C|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|g<text|
+        is injective and [theorem: <reference|function preimage of
+        image>]>>>|<cell|f<rsub|\|A<big|cap>C>\<circ\><around*|(|g<rsup|-1>|)><rsub|\|g<around*|(|A<big|cap>C|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|function inverse and restriction>]>>>|<cell|f<rsub|\|A<big|cap>C>\<circ\><around*|(|g<rsub|\|A<big|cap>C>|)><rsup|-1>>>>>
+      </eqnarray*>
+    </enumerate>
   </proof>
 
   <subsection|Set operations and (Partial) Functions>
@@ -3473,6 +4154,1213 @@
     </enumerate>
   </proof>
 
+  <section|Families>
+
+  <subsection|Family>
+
+  We introduce now the idea of a indexed family which is essential a function
+  of a class to another class. It is essential another notation for a
+  function where the emphasis is on the objects in a collection and a way of
+  indexing these objects and less on the function itself
+
+  <\notation>
+    <label|family><index|<math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>>>A
+    function\ 
+
+    <\equation*>
+      <with|font-series|bold|x:I\<rightarrow\>B>
+    </equation*>
+
+    is noted as a
+
+    <\equation*>
+      <with|font-series|bold|family <around*|{|x<rsub|i>|}><rsub|i\<in\>I> of
+      objects in B>
+    </equation*>
+
+    or as\ 
+
+    <\equation*>
+      <with|font-series|bold|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B>
+    </equation*>
+
+    Further <with|font-series|bold|<math|x<rsub|i>>> is another notation for
+    <math|<with|font-series|bold|x<around*|(|i|)>>> so that
+    <with|font-series|bold|<math|y=x<rsub|i>>> is equivalent with
+    <math|<with|font-series|bold|y=x<around*|(|i|)>>> or
+    <with|font-series|bold|<math|<around*|(|i,y|)>\<in\>x>>
+  </notation>
+
+  So a family is just another notation of a function. We introduce also a new
+  notation for the range of this function.
+
+  <\notation>
+    <label|family range><index|<math|<around*|{|A<rsub|i>\|i\<in\>I|}>>>If
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>> is a family of objects in B
+    [standing for the function <math|x:I\<rightarrow\>B>] then we define
+    <math|<around*|{|x<rsub|i>\|i\<in\>I|}>> by\ 
+
+    <\equation*>
+      <around*|{|x<rsub|i>\|i\<in\>I|}>=range<around*|(|x|)>
+    </equation*>
+  </notation>
+
+  The motivation for this definition if the following theorem
+
+  <\theorem>
+    <label|family range (1)>If <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B>
+    is a family of objects in <math|B> then\ 
+
+    <\equation*>
+      x\<in\><around*|{|x<rsub|i>\|i\<in\>I|}>\<Leftrightarrow\>\<exists\>i\<in\>I<text|
+      such that >x=x<rsub|i>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    As <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B> is
+    equivalent with <math|x:I\<rightarrow\>B> we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|z\<in\><around*|{|x<rsub|i>\|i\<in\>I|}>>|<cell|\<Leftrightarrowlim\><rsub|define>>|<cell|z\<in\>range<around*|(|x|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>i
+      with <around*|(|i,z|)>\<in\>x>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|f\<subseteq\>I\<times\>B>>|<cell|\<exists\>i<text|
+      with <math|i\<in\>I\<wedge\><around*|(|i,z|)>\<in\>x>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>i\<in\>I<text|
+      with ><around*|(|i,z|)>\<in\>x>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|definition>>|<cell|\<exists\>i\<in\>I<text|
+      with >z=x<rsub|i>>>>>
+    </eqnarray*>
+  </proof>
+
+  <\theorem>
+    <label|family set>If <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B>
+    is a family such that <math|I> and <math|B> are sets then
+    <math|<around*|{|x<rsub|i>\|i\<in\>I|}>> is a set
+  </theorem>
+
+  <\proof>
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B> is actually
+    the function <math|x:I\<rightarrow\>B> where
+    <math|range<around*|(|x|)>=<around*|{|x<rsub|i>\|i\<in\>I|}>>. As
+    <math|I>and <math|B> are sets, it follows from [theorem:
+    <reference|partial function set domain range>] that
+    <math|range<around*|(|x|)>> is a set, hence
+    <math|<around*|{|x<rsub|i>\|i\<in\>I|}>> is a set.
+  </proof>
+
+  Up to now we consider a family as a indexed collection of objects. What is
+  actually a object, in set theory it is a class which can be either a set or
+  a proper class. A class is a collection so we can talk about the union of
+  these collection. The convention is then to use upper case instead of lower
+  case. If we want to deal with the union and intersection of the objects
+  [considered as collections] in the family we use also a different notation.
+
+  <\notation>
+    <label|family union (1)>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B>
+    is a family of objects in <math|B> [standing for the function
+    <math|A:I\<rightarrow\>B>] then <math|<big|cup><rsub|i\<in\>I>A<rsub|i>>
+    is defined by\ 
+
+    <\equation*>
+      <big|cup><rsub|i\<in\>I>A<rsub|i>=<big|cup><around*|{|range<around*|(|A|)>|}><text|
+      [definition: <reference|class union>]>
+    </equation*>
+  </notation>
+
+  Using this new notation we have the following characterization of the union
+
+  <\theorem>
+    <label|family union (2)>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B>
+    is a family of objects in <math|B> then
+
+    <\equation*>
+      x\<in\><big|cup><rsub|i\<in\>I>A<rsub|i>\<Leftrightarrow\>\<exists\>i\<in\>I<text|
+      such that >x\<in\>A<rsub|i>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    As <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B> is actually
+    the function <math|A:I\<rightarrow\>B> where
+    <math|<big|cup><rsub|i\<in\>I>A<rsub|i>=<big|cup>range<around*|(|A|)>>.
+    Then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|x\<in\><big|cup><rsub|i\<in\>I>A<rsub|i>>|<cell|\<Leftrightarrowlim\><rsub|<text|definition>>>|<cell|x\<in\><big|cup>range<around*|(|A|)>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<text|[definition:
+      <reference|class union>]>>>|<cell|\<exists\>y\<in\>range<around*|(|A|)><text|
+      such that >x\<in\>y>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>i
+      <text|such that ><around*|(|i,y|)>\<in\>A<text| and
+      >x\<in\>y>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|A\<subseteq\>I\<times\>B>>|<cell|\<exists\>i\<in\>I<text|
+      such that ><around*|(|x,y|)>\<in\>A<infix-and>x\<in\>y>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>i\<in\>I<text|
+      such that <math|y=A<rsub|i><text| and
+      <math|x\<in\>y>>>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>i\<in\>I<text|
+      such that <math|x\<in\>A<rsub|i>>>>>>>
+    </eqnarray*>
+  </proof>
+
+  <\theorem>
+    <label|family intersection of sets>If
+    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B> is a family of
+    objects in <math|B> where <math|I> and <math|B> is a set then
+    <math|<big|cup><rsub|i\<in\>I>A<rsub|i>> is a set.
+  </theorem>
+
+  <\proof>
+    As <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B> is another
+    way of saying <math|A:I\<rightarrow\>B> and <math|I> and <math|B> are
+    sets, it follows from [theorem: <reference|partial function set domain
+    range>] that <math|range<around*|(|A|)>> is a set. Using the Axiom of
+    Union [axiom: <reference|axiom of union>]
+    <math|<big|cup>range<around*|(|A|)>> is a set, so by definition
+    <math|<big|cup><rsub|i\<in\>I>A<rsub|i>>. is a set.
+  </proof>
+
+  <\definition>
+    <label|family intersection(1)><index|<math|<big|cap><rsub|i\<in\>I>A<rsub|i>>>If
+    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B> is a family of
+    objects in <math|B> [standing for the function <math|A:I\<rightarrow\>B>]
+    then <math|<big|cap><rsub|i\<in\>I>A<rsub|i>> is defined by\ 
+
+    <\equation*>
+      <big|cap><rsub|i\<in\>I>A<rsub|i>=<big|cap>range<around*|(|A|)>
+      <text|[definition: <reference|class intersection>]>
+    </equation*>
+  </definition>
+
+  <\theorem>
+    <label|family intersection (2)>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B>
+    then <math|x\<in\><big|cap><rsub|i\<in\>I>A<rsub|i>\<Leftrightarrow\>\<forall\>i\<in\>I<text|
+    we have >x\<in\>A<rsub|i>>
+  </theorem>
+
+  <\proof>
+    \ <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B> is actually
+    the function <math|A:I\<rightarrow\>B> where
+    <math|<big|cap><rsub|i\<in\>I>A<rsub|i>=<big|cap>range<around*|(|A|)>>.
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|x\<in\><big|cap><rsub|i\<in\>I>A<rsub|i>>|<cell|\<Leftrightarrowlim\><rsub|<text|definition>>>|<cell|x\<in\><big|cap>range<around*|(|A|)>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<text|[definition:
+      <reference|class intersection>]>>>|<cell|\<forall\>y\<in\>range<around*|(|A|)><text|
+      we have >x\<in\>y>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|y\<in\>range<around*|(|A|)>\<Leftrightarrow\>\<exists\>i
+      <text| with ><around*|(|i,y|)>\<in\>A>>|<cell|\<forall\>i\<in\>I<text|
+      >with <around*|(|i,y|)>\<in\>A<text| we have
+      >x\<in\>y>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>i\<in\>I<text|
+      with >y=A<rsub|i><text| we have >x\<in\>y>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>i\<in\>I<text|
+      we have >x\<in\>A<rsub|i>>>>>
+    </eqnarray*>
+  </proof>
+
+  <\theorem>
+    <label|family intersection is a set>If
+    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B> is a family of
+    objects in <math|B> such that <math|I\<neq\>\<varnothing\>> then
+    <math|<big|cap><rsub|i\<in\>I>A<rsub|i>> is a set.
+  </theorem>
+
+  <\proof>
+    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B> is actually
+    the function <math|A:I\<rightarrow\>B> where
+    <math|<big|cap><rsub|i\<in\>I>A<rsub|i>=<big|cap>range<around*|(|A|)>>.
+    As <math|I\<neq\>\<varnothing\>> there exists a <math|i\<in\>I>. Given
+    that <math|A> is a function it follows that <math|dom<around*|(|A|)>=I>,
+    so there exists a <math|y> such that <math|<around*|(|i,y|)>\<in\>A> or
+    <math|y\<in\>range<around*|(|A|)>>. So
+    <math|\<varnothing\>\<neq\>range<around*|(|A|)> > which by [theorem:
+    <reference|class intersection>] proves that
+    <math|<big|cap>range<around*|(|A|)>> is a set, hence
+    <math|<big|cap><rsub|i\<in\>I>A<rsub|i>> is a set.
+  </proof>
+
+  <\example>
+    <label|family trivial>Let <math|I=<around*|{|1|}>>, <math|B> a class and
+    take <math|A:I\<rightarrow\><around*|{|B|}>> defined by
+    <math|A=<around*|{|<around*|(|1,B|)>|}>>, defining the family
+    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1|}>>\<subseteq\><around*|{|B|}>>
+    where <math|A<rsub|1>=B>. For this family we have
+    <math|<big|cap><rsub|i\<in\><around*|{|1|}>>A<rsub|i>=B> and
+    <math|<big|cup><rsub|i\<in\><around*|{|1|}>>A<rsub|i>=B>
+  </example>
+
+  <\proof>
+    Using [example: <reference|function trivial bijection>] it follows that
+    <math|A:I\<rightarrow\><around*|{|B|}>> is bijection, hence a function,
+    so that <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1|}>>\<subseteq\><around*|{|B|}>>
+    is a well defined family. Further as <math|A> is a bijection we have that
+
+    <\equation*>
+      range<around*|(|A|)>=<around*|{|B|}>
+    </equation*>
+
+    Finally
+
+    <\equation*>
+      <big|cup><rsub|i\<in\><around*|{|1|}>>A<rsub|i>=<big|cup>range<around*|(|A|)>=<big|cup><around*|{|B|}>\<equallim\><rsub|<text|[example:
+      <reference|class trivial union intersection>]>>A
+    </equation*>
+
+    and
+
+    <\equation*>
+      <big|cap><rsub|i\<in\><around*|{|1|}>>A<rsub|i>=<big|cap>range<around*|(|A|)>=<big|cap><around*|{|B|}>\<equallim\><rsub|<text|[example:
+      <reference|class trivial union intersection>]>>A
+    </equation*>
+  </proof>
+
+  <\example>
+    <label|family union{A,B}>Let <math|C,D> classes,
+    <math|I=<around*|{|0,1|}>> and take <math|A:I\<rightarrow\><around*|{|C,D|}>>
+    defined by <math|A=<around*|{|<around*|(|0,C|)>,<around*|(|1,D|)>|}>>
+    [see example: <reference|function between {0,1} and {A,B}>], defining the
+    family <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|0,1|}>>\<subseteq\><around*|{|C,D|}>>
+    where <math|A<rsub|0>=C> and <math|A<rsub|1>=D>. For this family we have
+    <math|<big|cup><rsub|i\<in\><around*|{|0,1|}>>A<rsub|i>=C<big|cup>D> and
+    <math|<big|cap><rsub|i\<in\><around*|{|0,1|}>>A<rsub|i>=C<big|cap>D>.
+  </example>
+
+  <\proof>
+    \ If <math|y\<in\>range<around*|(|A|)>> then <math|\<exists\>x> such that
+    <math|<around*|(|x,y|)>\<in\>A=<around*|{|<around*|(|0,C|)>,<around*|(|1,D|)>|}>>,
+    so that <math|<around*|(|x,y|)>=<around*|(|0,C|)>\<Rightarrow\>y=C> or
+    <math|<around*|(|x,y|)>=<around*|(|1,D|)>\<Rightarrow\>y=D>, proving that
+    <math|x\<in\><around*|{|C,D|}>>. Further if
+    <math|y\<in\><around*|{|C,D|}>> then <math|y=C\<Rightarrow\><around*|(|0,C|)>\<in\>A\<Rightarrow\>y\<in\>range<around*|(|A|)>>
+    or <math|y=D\<Rightarrow\><around*|(|1,D|)>\<in\>A\<Rightarrow\>y\<in\>range<around*|(|A|)>>.
+    So we have\ 
+
+    <\equation*>
+      range<around*|(|A|)>=<around*|{|C,D|}>
+    </equation*>
+
+    Finally
+
+    <\equation*>
+      <big|cup><rsub|i\<in\><around*|{|0,1|}>>A<rsub|i>=<big|cup>range<around*|(|A|)>\<equallim\><big|cup><around*|{|C,D|}>\<equallim\><rsub|<text|[example:
+      <reference|class union{A,B}>]]>>C<big|cup>D
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      <big|cap><rsub|i\<in\><around*|{|0,1|}>>A<rsub|i>=<big|cap>range<around*|(|A|)>\<equallim\><big|cap><around*|{|C,D|}>\<equallim\><rsub|<text|[example:
+      <reference|class union{A,B}>]]>>C<big|cap>D
+    </equation*>
+
+    \;
+  </proof>
+
+  <subsection|Properties of the union and intersection of families>
+
+  To save space, from now on we use [theorem: <reference|family intersection
+  of sets>] and [theorem: <reference|family union (2)>] about union and
+  intersection of families without explicit referring to these theorems.
+
+  <\theorem>
+    <label|family properties (1)>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B>
+    is a family then <math|>we have:
+
+    <\enumerate>
+      <item><math|\<forall\>i\<in\>I> we have
+      <math|A<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>I>A<rsub|i>>
+
+      <item><math|\<forall\>i\<in\>I> we have
+      <math|<big|cap><rsub|i\<in\>I>A<rsub|i>\<subseteq\>A<rsub|i>>
+
+      <item>If <math|\<forall\>i\<in\>I> we have that
+      <math|A<rsub|i>\<subseteq\>C> then <math|<big|cup><rsub|i\<in\>I>A<rsub|i>\<subseteq\>C>
+
+      <item>If <math|\<forall\>i\<in\>I> we have
+      <math|C\<subseteq\>A<rsub|i>> then <math|C\<subseteq\><big|cap><rsub|i\<in\>I>A<rsub|i>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|i\<in\>I> and assume that <math|x\<in\>A<rsub|i>> then
+      <math|\<exists\>i\<in\>I> such that <math|x\<in\>A<rsub|i>>, so
+      <math|x\<in\><big|cup><rsub|i\<in\>I>A<rsub|i>>, proving that
+      <math|A<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>I>A<rsub|i>>.
+
+      <item>Let <math|i\<in\>I> then if <math|x\<in\><big|cap><rsub|i\<in\>I>A<rsub|i>>
+      we have <math|\<forall\>j\<in\>I> that
+      <math|x\<in\>A<rsub|j>\<Rightarrowlim\><rsub|i\<in\>I>x\<in\>A<rsub|i>>,
+      proving that <math|<big|cap><rsub|i\<in\>I>A<rsub|i>\<subseteq\>A<rsub|i>>
+
+      <item>
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<in\><big|cup><rsub|i\<in\>I>A<rsub|i>>|<cell|\<Rightarrow\>>|<cell|\<exists\>i\<in\>I\<vdash\>x\<in\>A<rsub|i>>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|A<rsub|i>\<subseteq\>C>>|<cell|x\<in\>C>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|<big|cup><rsub|i\<in\>I>A<rsub|i>\<subseteq\>C>>>>
+      </eqnarray*>
+
+      <item>
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<in\>C>|<cell|\<Rightarrow\>>|<cell|\<forall\>i\<in\>I\<vDash\>x\<in\>A<rsub|i>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x\<in\><big|cap><rsub|i\<in\>I>A<rsub|i>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|C\<subseteq\><big|cap><rsub|i\<in\>I>A<rsub|i>>>>>
+      </eqnarray*>
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|family properties (2)>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B>
+    is a family then\ 
+
+    <\enumerate>
+      <item>If <math|J\<subseteq\>I> then\ 
+
+      <\enumerate>
+        <item><math|<big|cup><rsub|i\<in\>J>A<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>I>A<rsub|i>>
+
+        <item><math|<big|cap><rsub|i\<in\>I>A<rsub|i>\<subseteq\><big|cap><rsub|i\<in\>J>A<rsub|i>>
+      </enumerate>
+
+      <item>If <math|I=J<big|cup>K> then\ 
+
+      <\enumerate>
+        <item><math|<big|cup><rsub|i\<in\>I>A<rsub|i>=<around*|(|<big|cup><rsub|i\<in\>J>A<rsub|i>|)><big|cup><around*|(|<big|cup><rsub|i\<in\>K>A<rsub|i>|)>>
+
+        <item><math|<big|cap><rsub|i\<in\>I>A<rsub|i>=<around*|(|<big|cap><rsub|i\<in\>J>A<rsub|i>|)><big|cap><around*|(|<big|cap><rsub|i\<in\>K>A<rsub|i>|)>>
+      </enumerate>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>\ 
+
+      <\enumerate>
+        <item>If <math|x\<in\><big|cup><rsub|i\<in\>J>A<rsub|i>> then
+        <math|\<exists\>i\<in\>J> such that <math|x\<in\>A<rsub|i>>, as
+        <math|J\<subseteq\>I> we have \ <math|i\<in\>I> with
+        <math|x\<in\>A<rsub|i>>, so that <math|x\<in\><big|cup><rsub|i\<in\>I>A<rsub|i>>.
+
+        <item>If <math|x\<in\><big|cap><rsub|i\<in\>I>A<rsub|i>> then
+        <math|\<forall\>i\<in\>I> we have <math|x\<in\>A<rsub|i>>, as
+        <math|J\<subseteq\>I> we have also <math|\<forall\>i\<in\>J> that
+        <math|x\<in\>A<rsub|i>>, hence <math|x\<in\><big|cap><rsub|i\<in\>J>A<rsub|i>>.
+      </enumerate>
+
+      <item>\ 
+
+      <\enumerate>
+        <item>As by [theorem: <reference|class intersection, union,
+        inclusion>] <math|J,K\<subseteq\>I> we have using (1) that
+        <math|<big|cup><rsub|i\<in\>J>A<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>I>A<rsub|i>>
+        and <math|<big|cup><rsub|i\<in\>K>A<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>I>A<rsub|i>>.
+        Using [theorem: <reference|class intersection, union, inclusion> it
+        follows that\ 
+
+        <\equation>
+          <label|eq 2.25.004><around*|(|<big|cup><rsub|i\<in\>J>A<rsub|i>|)><big|cup><around*|(|<big|cup><rsub|i\<in\>K>A<rsub|i>|)>\<subseteq\><big|cup><rsub|i\<in\>I>A<rsub|i>
+        </equation>
+
+        If <math|x\<in\><big|cup><rsub|i\<in\>I>A> then
+        <math|\<exists\>i\<in\>I> such that <math|x\<in\>A<rsub|i>>, as
+        <math|I=J<big|cup>K> we have <math|i\<in\>J\<Rightarrow\>x\<in\><big|cup><rsub|i\<in\>J>A<rsub|i>>
+        or <math|i\<in\>K\<Rightarrow\>x\<in\><big|cup><rsub|i\<in\>K>A<rsub|i>>,
+        which proves that <math|x\<in\><around*|(|<big|cup><rsub|i\<in\>J>A<rsub|i>|)><big|cup><around*|(|<big|cup><rsub|i\<in\>K>A<rsub|i>|)>>.
+        Hence
+
+        <\equation*>
+          <big|cup><rsub|i\<in\>I>A<rsub|i>\<subseteq\><around*|(|<big|cup><rsub|i\<in\>J>A<rsub|i>|)><big|cup><around*|(|<big|cup><rsub|i\<in\>K>A<rsub|i>|)>
+        </equation*>
+
+        which combined with [eq: <reference|eq 2.25.004>] proves\ 
+
+        <\equation*>
+          <big|cup><rsub|i\<in\>I>A<rsub|i>=<around*|(|<big|cup><rsub|i\<in\>J>A<rsub|i>|)><big|cup><around*|(|<big|cup><rsub|i\<in\>K>A<rsub|i>|)>
+        </equation*>
+
+        <item>As by [theorem: <reference|class intersection, union,
+        inclusion>] <math|J,K\<subseteq\>I> we have using (1) that
+        <math|<big|cap><rsub|i\<in\>I>A<rsub|i>\<subseteq\><big|cap><rsub|i\<in\>J>A<rsub|i>>
+        and <math|<big|cap><rsub|i\<in\>I>A<rsub|i>\<subseteq\><big|cap><rsub|i\<in\>K>A<rsub|i>>.
+        Using [theorem: <reference|class intersection, union, inclusion>] it
+        follows that
+
+        <\equation>
+          <label|eq 2.26.004><big|cap><rsub|i\<in\>I>A<rsub|i>\<subseteq\><around*|(|<big|cap><rsub|i\<in\>J>A<rsub|i>|)><big|cap><around*|(|<big|cap><rsub|i\<in\>K>A<rsub|i>|)>
+        </equation>
+
+        If <math|x\<in\><around*|(|<big|cap><rsub|i\<in\>J>A|)><big|cap><around*|(|<big|cap><rsub|i\<in\>K>A|)>>
+        then <math|x\<in\><big|cap><rsub|i\<in\>J>A<rsub|i>> and
+        <math|x\<in\><big|cap><rsub|i\<in\>K>A<rsub|i>>. So
+        <math|\<forall\>i\<in\>J> we have <math|x\<in\>A<rsub|i>> and
+        <math|\<forall\>i\<in\>K> we have <math|x\<in\>A<rsub|i>>. Hence as
+        <math|\<forall\>i\<in\>I> we have
+        <math|i\<in\>J\<Rightarrow\>x\<in\>A<rsub|i>> or
+        <math|i\<in\>K\<Rightarrow\>x\<in\>A<rsub|i>> it follows that
+        <math|x\<in\><big|cap><rsub|i\<in\>I>A<rsub|i>>. So
+        <math|><math|<around*|(|<big|cap><rsub|i\<in\>J>A|)><big|cap><around*|(|<big|cap><rsub|i\<in\>K>A|)>\<subseteq\><big|cap><rsub|i\<in\>I>A<rsub|i>>
+        which combined with [eq: <reference|eq 2.26.004>] proves\ 
+
+        <\equation*>
+          <big|cap><rsub|i\<in\>I>A<rsub|i>=<around*|(|<big|cap><rsub|i\<in\>J>A<rsub|i>|)><big|cap><around*|(|<big|cap><rsub|i\<in\>K>A<rsub|i>|)>
+        </equation*>
+      </enumerate>
+    </enumerate>
+
+    \;
+  </proof>
+
+  <\theorem>
+    <label|family union intersection and inclusion>Let
+    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>C> and
+    <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>D> are two
+    families such that <math|\<forall\>i\<in\>I> we have
+    <math|A<rsub|i>\<subseteq\>B<rsub|i>> then\ 
+
+    <\enumerate>
+      <item><math|<big|cup><rsub|i\<in\>I>A<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>I>B<rsub|i>>
+
+      <item><math|<big|cap><rsub|i\<in\>I>A<rsub|i>\<subseteq\><big|cap><rsub|i\<in\>I>B<rsub|i>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|x\<in\><big|cup><rsub|i\<in\>I>A<rsub|i>> there exist a
+      <math|i\<in\>I> such that <math|x\<in\>A<rsub|i>\<Rightarrowlim\><rsub|A<rsub|i>\<subseteq\>B<rsub|i>>x\<in\>B<rsub|i>>,
+      hence <math|x\<in\><big|cup><rsub|i\<in\>I>B<rsub|i>>
+
+      <item>If <math|x\<in\><big|cap><rsub|i\<in\>I>A<rsub|i>> then
+      <math|\<forall\>i\<in\>I> we have <math|x\<in\>A<rsub|i>\<Rightarrowlim\><rsub|A<rsub|i>\<subseteq\>B<rsub|i>>x\<in\>B<rsub|i>>
+      proving <math|x\<in\><big|cap><rsub|i\<in\>I>B<rsub|i>>
+    </enumerate>
+  </proof>
+
+  We have also the distributive laws for union and intersection [theorem:
+  <reference|class class commutative,idempotent,associative,distributivity>]\ 
+
+  <\theorem>
+    <label|family distributivity><dueto|Distributivity>Let
+    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B> be a family
+    and <math|C> a class then\ 
+
+    <\enumerate>
+      <item><math|C<big|cap><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>=<big|cup><rsub|i\<in\>I><around*|(|C<big|cap>A<rsub|i>|)>>
+
+      <item><math|C<big|cup><around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)>=<big|cap><rsub|i\<in\>I><around*|(|C<big|cup>A<rsub|i>|)>>
+
+      <item><math|C<big|cap><around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)>=<big|cap><rsub|i\<in\>I><around*|(|C<big|cap>A<rsub|i>|)>>
+
+      <item><math|C<big|cup><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>=<big|cup><rsub|i\<in\>I><around*|(|C<big|cup>A<rsub|i>|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|x\<in\>C<big|cap><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>>
+      then <math|x\<in\>C> and <math|x\<in\><big|cup><rsub|i\<in\>I>A<rsub|i>\<Rightarrow\>\<exists\>i\<in\>I<text|
+      such that >x\<in\>A<rsub|i>>. Hence <math|x\<in\>C<big|cap>A<rsub|i>>,
+      proving by [theorem: <reference|family properties (1)>] that
+      <math|x\<in\><big|cup><rsub|i\<in\>I>A<rsub|i>>. So\ 
+
+      <\equation>
+        <label|eq 2.27.004>C<big|cap><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>\<subseteq\><big|cup><rsub|i\<in\>I><around*|(|C<big|cap>A<rsub|i>|)>
+      </equation>
+
+      If <math|x\<in\><big|cup><rsub|i\<in\>><around*|(|C<big|cap>A<rsub|i>|)>>
+      then there exist a <math|i\<in\>I> such that <math|x\<in\>C> and
+      <math|x\<in\>A<rsub|i>\<Rightarrow\>x\<in\><big|cup><rsub|i\<in\>I>A<rsub|i>>,
+      so <math|x\<in\>C<big|cap><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>>,
+      proving that <math|<big|cup><rsub|i\<in\>I><around*|(|C<big|cap>A<rsub|i>|)>\<subseteq\>C<big|cap><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>>.
+      Combining this with [eq: <reference|eq 2.27.004>] proves\ 
+
+      <\equation*>
+        C<big|cap><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>=<big|cup><rsub|i\<in\>I><around*|(|C<big|cap>A<rsub|i>|)>
+      </equation*>
+
+      <item>If <math|x\<in\>C<big|cup><around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)>>
+      then we have the following cases to consider:
+
+      <\description>
+        <item*|<math|x\<in\>C>>then <math|\<forall\>i\<in\>I> we have
+        <math|x\<in\>C<big|cup>A<rsub|i>> hence
+        <math|x\<in\><big|cap><rsub|i\<in\>I><around*|(|C<big|cup>A<rsub|i>|)>>
+
+        <item*|<math|x\<in\><big|cap><rsub|i\<in\>I>A<rsub|i>>>then
+        <math|\<forall\>i\<in\>I> we have <math|x\<in\>A<rsub|i>> hence
+        <math|x\<in\><big|cap><rsub|i\<in\>I><around*|(|C<big|cup>A<rsub|i>|)>>
+      </description>
+
+      which proves that\ 
+
+      <\equation>
+        <label|eq 2.28.004>C<big|cup><around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)>\<subseteq\><big|cap><rsub|i\<in\>I><around*|(|C<big|cup>A<rsub|i>|)>
+      </equation>
+
+      If <math|x\<in\><big|cap><rsub|i\<in\>I><around*|(|C<big|cup>A<rsub|i>|)>>
+      then we have two cases to consider:
+
+      <\description>
+        <item*|<math|x\<in\>C>>then <math|x\<in\>C<big|cup><around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)>>
+
+        <item*|<math|x\<nin\>C>>then, as <math|\<forall\>i\<in\>I> we have
+        <math|x\<in\>C<big|cup>A<rsub|i>\<Rightarrowlim\><rsub|x\<nin\>C>x\<in\>A<rsub|i>>,
+        it follows that <math|x\<in\><big|cap><rsub|i\<in\>I>A<rsub|i>> hence
+        <math|x\<in\>C<big|cup><around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)>>
+      </description>
+
+      In all cases we have <math|x\<in\>C<big|cup><around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)>>
+      proving that <math|<big|cap><rsub|i\<in\>I><around*|(|C<big|cup>A<rsub|i>|)>\<subseteq\>C<big|cup><around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)>>,
+      combining this with [eq: <reference|eq 2.28.004>] gives\ 
+
+      <\equation*>
+        C<big|cup><around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)>\<subseteq\><big|cap><rsub|i\<in\>I><around*|(|C<big|cup>A<rsub|i>|)>
+      </equation*>
+
+      <item>We have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<in\>C<big|cap><around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>C\<wedge\>\<forall\>i\<in\>I<text|
+        we have >x\<in\>A<rsub|i>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>i\<in\>I<text|
+        we have >x\<in\>C<big|cap>A<rsub|i>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><big|cap><rsub|i\<in\>I><around*|(|C<big|cap>A<rsub|i>|)>>>>>
+      </eqnarray*>
+
+      Proving\ 
+
+      <\equation*>
+        C<big|cap><around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)>=<big|cap><rsub|i\<in\>I><around*|(|C<big|cap>A<rsub|i>|)>
+      </equation*>
+
+      <item>We have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<in\>C<big|cup><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>C\<vee\>x\<in\><big|cup><rsub|i\<in\>I>A<rsub|i>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>C\<vee\>\<exists\>i\<in\>I<text|
+        with >x\<in\>A<rsub|i>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>i\<in\>I<text|
+        with ><around*|(|x\<in\>C\<vee\>x\<in\>A<rsub|i>|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>i\<in\>I<text|
+        we have >x\<in\>C<big|cup>A<rsub|i>>>>>
+      </eqnarray*>
+
+      proving that\ 
+
+      <\equation*>
+        C<big|cup><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>=<big|cup><rsub|i\<in\>I><around*|(|C<big|cup>A<rsub|i>|)>
+      </equation*>
+    </enumerate>
+
+    \;
+  </proof>
+
+  We have also a variant of the deMorgan's laws [theorem: <reference|class de
+  Morgan's law>]
+
+  <\theorem>
+    <label|family de Morgan><dueto|deMorgan's Law>Let
+    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B> be a family
+    then we have\ 
+
+    <\enumerate>
+      <item><math|<around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)><rsup|c>=<big|cap><rsub|i\<in\>I><around*|(|A<rsub|i>|)><rsup|c>>
+
+      <item><math|<around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)><rsup|c>=<big|cup><rsub|i\<in\>I><around*|(|A<rsub|i>|)><rsup|c>>
+
+      <item>If <math|C> is a class then <math|C\\<around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>=<big|cap><rsub|i\<in\>I><around*|(|A<rsub|i>\\C|)>>
+
+      <item>If <math|C> is a class then <math|C\<setminus\><around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)>=<big|cup><rsub|i\<in\>I><around*|(|C\\A<rsub|i>|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<in\><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)><rsup|c>>|<cell|\<Leftrightarrow\>>|<cell|x\<nin\><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<neg\><around*|(|x\<in\><big|cup><rsub|i\<in\>I>A<rsub|i>|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<neg\><around*|(|\<exists\>i\<in\>I<text|
+        with >x\<in\>A<rsub|i>|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>i\<in\>I<text|
+        we have >\<neg\><around*|(|x\<in\>A<rsub|i>|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>i\<in\>I<text|
+        we have >x\<nin\>A<rsub|i>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>i\<in\>I<text|
+        we have >x\<in\><around*|(|A<rsub|i>|)><rsup|c>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><big|cap><rsub|i\<in\>I><around*|(|A<rsub|i>|)><rsup|c>>>>>
+      </eqnarray*>
+
+      proving that\ 
+
+      <\equation*>
+        <around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)><rsup|c>=<big|cap><rsub|i\<in\>I><around*|(|A<rsub|i>|)><rsup|c>
+      </equation*>
+
+      <item>\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<in\><around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)><rsup|c>>|<cell|\<Leftrightarrow\>>|<cell|x\<nin\><around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)><rsup|c>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<neg\><around*|(|x\<in\><around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)>|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<neg\><around*|(|\<forall\>i\<in\>I<text|
+        we have >x\<in\>A<rsub|i>|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>i\<in\>I<text|
+        we have >\<neg\><around*|(|x\<in\>A<rsub|i>|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>i\<in\>I<text|
+        we have >x\<nin\>A<rsub|i>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>i\<in\>I<text|
+        we have >x\<in\><around*|(|A<rsub|i>|)><rsup|c>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><big|cup><rsub|i\<in\>I><around*|(|A<rsub|i>|)><rsup|c>>>>>
+      </eqnarray*>
+
+      proving that\ 
+
+      <\equation*>
+        <around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)><rsup|c>=<big|cup><rsub|i\<in\>I><around*|(|A<rsub|i>|)><rsup|c>
+      </equation*>
+
+      <item> We have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|C\\<around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class difference>]>>>|<cell|C<big|cap><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)><rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|1|)>>>|<cell|C<big|cap><around*|(|<big|cap><rsub|i\<in\>I><around*|(|A<rsub|i>|)><rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|family distributivity>]>>>|<cell|<big|cap><rsub|i\<in\>I><around*|(|C<big|cap><around*|(|A<rsub|i>|)><rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class difference>]>>>|<cell|<big|cap><rsub|i\<in\>I><around*|(|C\\A<rsub|i>|)>>>>>
+      </eqnarray*>
+
+      <item>We have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|C\\<around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class difference>]>>>|<cell|C<big|cap><around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)><rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|2|)>>>|<cell|C<big|cap><around*|(|<big|cup><rsub|i\<in\>I><around*|(|A<rsub|i>|)><rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|family distributivity>]>>>|<cell|<big|cup><rsub|i\<in\>I><around*|(|C<big|cap><around*|(|A<rsub|i>|)><rsup|c>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|cup><rsub|i\<in\>I><around*|(|C\\A<rsub|i>|)>>>>>
+      </eqnarray*>
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|family properties (3)>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B>
+    is a family and <math|A> a class then we have\ 
+
+    <\enumerate>
+      <item><math|<around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>\\A=<big|cup><rsub|i\<in\>I><around*|(|A<rsub|i>\\A|)>>
+
+      <item><math|<around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)>\\A=<big|cap><rsub|i\<in\>I><around*|(|A<rsub|i>\\A|)>>
+
+      <item><math|<around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>\<times\>A=<big|cup><rsub|i\<in\>I><around*|(|A<rsub|i>\<times\>A|)>>
+
+      <item><math|A\<times\><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>=<big|cup><rsub|i\<in\>I><around*|(|A\<times\>A<rsub|i>|)>>
+
+      <item><math|<around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)>\<times\>A=<big|cap><rsub|i\<in\>I><around*|(|A<rsub|i>\<times\>A|)>>
+
+      <item><math|A\<times\><around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)>=<big|cap><rsub|i\<in\>I><around*|(|A\<times\>A<rsub|i>|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>\\A>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class difference>]>>>|<cell|<around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)><big|cap>A<rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class class commutative,idempotent,associative,distributivity>]>>>|<cell|A<rsup|c><big|cap><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|family distributivity>]>>>|<cell|<big|cup><rsub|i\<in\>I><around*|(|A<rsup|c><big|cap>A<rsub|i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class class commutative,idempotent,associative,distributivity>]>>>|<cell|<big|cup><rsub|i\<in\>I><around*|(|A<rsub|i><big|cap>A<rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class difference>]>>>|<cell|<big|cup><rsub|i\<in\>I><around*|(|A<rsub|i>\\A|)>>>>>
+      </eqnarray*>
+
+      <item>\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)>\\A>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class difference>]>>>|<cell|<around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)><big|cap>A<rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class class commutative,idempotent,associative,distributivity>]>>>|<cell|A<rsup|c><big|cap><around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|family distributivity>]>>>|<cell|<big|cap><rsub|i\<in\>I><around*|(|A<rsup|c><big|cap>A<rsub|i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class class commutative,idempotent,associative,distributivity>]>>>|<cell|<big|cap><rsub|i\<in\>I><around*|(|A<rsub|i><big|cap>A<rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class difference>]>>>|<cell|<big|cap><rsub|i\<in\>I><around*|(|A<rsub|i>\\A|)>>>>>
+      </eqnarray*>
+
+      <item> \ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|x,y|)>\<in\><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>\<times\>A>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><big|cup><rsub|i\<in\>I>A<rsub|i>\<wedge\>y\<in\>A>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>A\<wedge\>\<exists\>i\<in\>I<text|
+        with >x\<in\>A<rsub|i>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>i\<in\>I
+        with <around*|(|x\<in\>A<rsub|i>\<wedge\>y\<in\>A|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>i\<in\>I<text|
+        with ><around*|(|x,y|)>\<in\>A<rsub|i>\<times\>A>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|x,y|)>\<in\><big|cup><rsub|i\<in\>I><around*|(|A<rsub|i>\<times\>A|)>>>>>
+      </eqnarray*>
+
+      <item>\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|x,y|)>\<in\>A\<times\><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>A\<wedge\>y\<in\><big|cup><rsub|i\<in\>I>A<rsub|i>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>A\<wedge\>\<exists\>i\<in\>I<text|
+        with >y\<in\>A<rsub|i>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>i\<in\>I
+        with <around*|(|x\<in\>A\<wedge\>y\<in\>A<rsub|i>|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>i\<in\>I<text|
+        with ><around*|(|x,y|)>\<in\>A\<times\>A<rsub|i>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|x,y|)>\<in\><big|cup><rsub|i\<in\>I><around*|(|A\<times\>A<rsub|i>|)>>>>>
+      </eqnarray*>
+
+      <item> \ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|x,y|)>\<in\><around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)>\<times\>A>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><big|cap><rsub|i\<in\>I>A<rsub|i>\<wedge\>y\<in\>A>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|\<forall\>i\<in\>I<text|
+        we have >x\<in\>A<rsub|i>|)>\<wedge\>y\<in\>A>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>i\<in\>I<text|
+        we have ><around*|(|x\<in\>A<rsub|i>\<wedge\>y\<in\>A|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>i\<in\>I<text|
+        we have ><around*|(|x,y|)>\<in\>A<rsub|i>\<times\>A>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|x,y|)>\<in\><big|cap><rsub|i\<in\>I><around*|(|A<rsub|i>\<times\>A|)>>>>>
+      </eqnarray*>
+
+      <item>
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|x,y|)>\<in\>A\<times\><around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>A\<wedge\>y\<in\><big|cap><rsub|i\<in\>I>A<rsub|i>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|\<forall\>i\<in\>I<text|
+        we have >y\<in\>A<rsub|i>|)>\<wedge\>x\<in\>A>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>i\<in\>I<text|
+        we have ><around*|(|y\<in\>A<rsub|i>\<wedge\>x\<in\>A|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>i\<in\>I<text|
+        we have ><around*|(|x,y|)>\<in\>A\<times\>A<rsub|i>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|x,y|)>\<in\><big|cap><rsub|i\<in\>I><around*|(|A\<times\>A<rsub|i>|)>>>>>
+      </eqnarray*>
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|family union intersection and empty set>Let
+    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B> a family then\ 
+
+    <\enumerate>
+      <item><math|<big|cup><rsub|i\<in\>I>A<rsub|i>=<big|cup><rsub|i\<in\><around*|{|j\<in\>I\|A<rsub|j>\<neq\>\<varnothing\>|}>>>
+
+      <item>If <math|\<exists\>i\<in\>I> such that
+      <math|A<rsub|i>=\<varnothing\>> then
+      <math|<big|cap><rsub|i\<in\>I>A<rsub|i>=\<varnothing\>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>As <math|<around*|{|j\<in\>I\|A<rsub|j>\<neq\>\<varnothing\>|}>\<subseteq\>I>
+      we have by [theorem: <reference|family properties (2)>] that\ 
+
+      <\equation>
+        <label|eq 2.29.004><big|cup><rsub|i\<in\><around*|{|j\<in\>I\|A<rsub|j>\<neq\>\<varnothing\>|}>>A<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>I>A<rsub|i>
+      </equation>
+
+      Further if <math|x\<in\><big|cup><rsub|i\<in\>I>A<rsub|i>> then there
+      exist a <math|i\<in\>I> such that <math|x\<in\>A<rsub|i>>. As
+      <math|x\<in\>A<rsub|i>> we must have that
+      <math|A<rsub|i>\<neq\>\<varnothing\>> or
+      <math|i\<in\><around*|{|j\<in\>I\|A<rsub|j>\<neq\>\<varnothing\>|}>>,
+      proving that <math|x\<in\><big|cup><rsub|i\<in\><around*|{|j\<in\>I\|A<rsub|j>\<neq\>\<varnothing\>|}>>A<rsub|i>>.
+      So
+
+      <\equation*>
+        <big|cup><rsub|i\<in\>I>A<rsub|i>\<subseteq\><big|cup><rsub|i\<in\><around*|{|j\<in\>I\|A<rsub|j>\<neq\>\<varnothing\>|}>>A<rsub|i>
+      </equation*>
+
+      combining this with [eq: <reference|eq 2.29.004>] proves\ 
+
+      <\equation*>
+        <big|cup><rsub|i\<in\>I>A<rsub|i>\<subseteq\><big|cup><rsub|i\<in\><around*|{|j\<in\>I\|A<rsub|j>\<neq\>\<varnothing\>|}>>A<rsub|i>
+      </equation*>
+
+      <item>Assume that <math|i\<in\>I> such that
+      <math|A<rsub|i>=\<varnothing\>>. If
+      <math|x\<in\><big|cap><rsub|j\<in\>I>A<rsub|j>> we have
+      <math|\<forall\>j\<in\>I> that <math|x\<in\>A<rsub|j>>, so for sure
+      <math|x\<in\>A<rsub|i>> which contradicts
+      <math|A<rsub|i>=\<varnothing\>>. Hence we have that
+      <math|<big|cap><rsub|j\<in\>I>A<rsub|j>=\<varnothing\>>.
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|family image and preimage>If <math|f:A\<rightarrow\>B> is a
+    function, <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>>\<subseteq\>\<cal-P\><around*|(|A|)>>
+    and <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|B|)>>
+    are families of sub classes of <math|A> and <math|B> then\ 
+
+    <\enumerate>
+      <item><math|f<around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>=<big|cup><rsub|i\<in\>I>f<around*|(|A<rsub|i>|)>>
+
+      <item><math|f<rsup|-1><around*|(|<big|cup><rsub|i\<in\>I>B<rsub|i>|)>=<big|cup><rsub|i\<in\>I>f<rsup|-1><around*|(|B<rsub|i>|)>>
+
+      <item><math|f<around*|(|<big|cap>A<rsub|i\<in\>I>|)>\<subseteq\><big|cap><rsub|i\<in\>I>f<around*|(|A<rsub|i>|)>>
+
+      <item>If <math|f> is injective and <math|I\<neq\>\<varnothing\>> then
+      <math|f<around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)>=<big|cap><rsub|i\<in\>I>f<around*|(|A<rsub|i>|)>>
+
+      <item><math|f<rsup|-1><around*|(|<big|cap><rsub|i\<in\>I>B<rsub|i>|)>=<big|cup><rsub|i\<in\>I>f<rsup|-1><around*|(|B<rsub|i>|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|y\<in\>f<around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>>
+      then <math|\<exists\>x\<in\><big|cup><rsub|i\<in\>I>A<rsub|i>> such
+      that <math|<around*|(|x,y|)>\<in\>f>, hence <math|\<exists\>i\<in\>I>
+      such that <math|x\<in\>A<rsub|i>>, which as
+      <math|<around*|(|x,y|)>\<in\>f> proves that
+      <math|y\<in\>f<around*|(|A<rsub|i>|)>>. So
+      <math|y\<in\><big|cup><rsub|i\<in\>I>f<around*|(|A<rsub|i>|)>> giving
+
+      <\equation>
+        <label|eq 2.30.004>f<around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>\<subseteq\><big|cup><rsub|i\<in\>I>f<around*|(|A<rsub|i>|)>
+      </equation>
+
+      If <math|y\<in\><big|cup><rsub|i\<in\>I>f<around*|(|A<rsub|i>|)>> then
+      there exists a <math|i\<in\>I> such that
+      <math|y\<in\>f<around*|(|A<rsub|i>|)>>, hence
+      <math|\<exists\>x\<in\>A<rsub|i>> such that
+      <math|<around*|(|x,y|)>\<in\>f>, as <math|x\<in\>A<rsub|i>> this
+      implies <math|x\<in\><big|cup><rsub|i\<in\>I>A<rsub|i>>, so we have
+      that <math|y\<in\>f<around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>>.
+      Hence <math|<big|cup><rsub|i\<in\>I>f<around*|(|A<rsub|i>|)>\<subseteq\>f<around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>>,
+      which combined with [eq: <reference|eq 2.30.004>] gives\ 
+
+      <\equation*>
+        f<around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>=<big|cup><rsub|i\<in\>I>f<around*|(|A<rsub|i>|)>
+      </equation*>
+
+      <item>If <math|x\<in\>f<rsup|-1><around*|(|<big|cup><rsub|i\<in\>I>B<rsub|i>|)>>
+      then there exists a <math|y\<in\><big|cup><rsub|i\<in\>I>B<rsub|i>>
+      such that <math|<around*|(|x,y|)>\<in\>f>, hence
+      <math|\<exists\>i\<in\>I> such that <math|y\<in\>B<rsub|i>>. So
+      <math|x\<in\>f<rsup|-1><around*|(|B<rsub|i>|)>> which as
+      <math|i\<in\>I> implies that <math|x\<in\><big|cup><rsub|i\<in\>I>f<rsup|-1><around*|(|B<rsub|i>|)>>
+      or\ 
+
+      <\equation>
+        <label|eq 2.31.004>f<rsup|-1><around*|(|<big|cup><rsub|i\<in\>I>B<rsub|i>|)>\<subseteq\><big|cup><rsub|i\<in\>I>f<rsup|-1><around*|(|A<rsub|i>|)>
+      </equation>
+
+      If <math|x\<in\><big|cup><rsub|i\<in\>I>f<rsup|-1><around*|(|A<rsub|i>|)>>
+      then there exists a <math|i\<in\>I> such that
+      <math|x\<in\>f<rsup|-1><around*|(|A<rsub|i>|)>>, so
+      <math|\<exists\>y\<in\>A<rsub|i>> with <math|<around*|(|x,y|)>\<in\>f>.
+      As from <math|y\<in\>A<rsub|i>> we have
+      <math|y\<in\><big|cup><rsub|i\<in\>I>> it follows that
+      <math|x\<in\>f<rsup|-1><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>>.
+      This proves that <math|<big|cup><rsub|i\<in\>I>f<rsup|-1><around*|(|A<rsub|i>|)>\<subseteq\>f<rsup|-1><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>>
+      which combined with [eq: <reference|eq 2.31.004>] gives\ 
+
+      <\equation*>
+        f<rsup|-1><around*|(|<big|cup><rsub|i\<in\>I>B<rsub|i>|)>=<big|cup><rsub|i\<in\>I>f<rsup|-1><around*|(|B<rsub|i>|)>
+      </equation*>
+
+      <item>If <math|y\<in\>f<around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)>>
+      then there exists a <math|x\<in\><big|cap><rsub|i\<in\>I>A<rsub|i>>
+      such that <math|<around*|(|x,y|)>\<in\>f>. From
+      <math|x\<in\><big|cap><rsub|i\<in\>I>A<rsub|i>> it follows that
+      <math|\<forall\>i\<in\>I> <math|x\<in\>A<rsub|i>>, which as
+      <math|<around*|(|x,y|)>\<in\>f> proves that <math|\<forall\>i\<in\>I>
+      <math|x\<in\>f<around*|(|A<rsub|i>|)>> or
+      <math|x\<in\><big|cap><rsub|i\<in\>I>f<around*|(|A<rsub|i>|)>>. So\ 
+
+      <\equation*>
+        f<around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)>\<subseteq\><big|cap><rsub|i\<in\>I>f<around*|(|A<rsub|i>|)>
+      </equation*>
+
+      <item>Let <math|y\<in\><big|cap><rsub|i\<in\>I>f<around*|(|A<rsub|i>|)>>
+      then <math|\<forall\>i\<in\>I> we have
+      <math|y\<in\>f<around*|(|A<rsub|i>|)>>. As
+      <math|I\<neq\>\<varnothing\>> there exists a <math|i\<in\>I> and we
+      must thus have that <math|y\<in\>f<around*|(|A<rsub|i>|)>>. So there
+      exists a <math|x\<in\>A<rsub|i>> such that
+      <math|<around*|(|x,y|)>\<in\>f>. Assume that
+      <math|x\<nin\><big|cap><rsub|i\<in\>I>A<rsub|i>> then
+      <math|\<exists\>j\<in\>I> such that <math|x\<nin\>A<rsub|j>>. However
+      as <math|j\<in\>I> we must have that
+      <math|y\<in\>f<around*|(|A<rsub|j>|)>>, so there exists a
+      <math|x<rprime|'>\<in\>A<rsub|j>> such that
+      <math|<around*|(|x<rprime|'>,y|)>\<in\>f>. As <math|f> is injective and
+      <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>f> we must
+      have <math|x=x<rprime|'>>, but this means that <math|x\<in\>A<rsub|j>>
+      contradicting <math|x\<nin\>A<rsub|j>>. So the assumption that
+      <math|x\<nin\><big|cap><rsub|i\<in\>I>A<rsub|i>> is wrong, hence
+      <math|x\<in\><big|cap>A<rsub|i>>. As <math|<around*|(|x,y|)>\<in\>f> we
+      have <math|y\<in\>f<around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)>>,
+      proving that <math|<big|cap><rsub|i\<in\>I>f<around*|(|A<rsub|i>|)>\<subseteq\>f<around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)>>,
+      which combined with (3) proves\ 
+
+      <\equation*>
+        f<around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)>=<big|cap><rsub|i\<in\>I>f<around*|(|A<rsub|i>|)>
+      </equation*>
+
+      <item>If <math|x\<in\>f<rsup|-1><around*|(|<big|cap><rsub|i\<in\>I>B<rsub|i>|)>>
+      then there exists a <math|y\<in\><big|cap><rsub|i\<in\>I>B<rsub|i>>
+      such that <math|<around*|(|x,y|)>\<in\>f>. Hence
+      <math|\<forall\>i\<in\>I> we have that
+      <math|y\<in\>B<rsub|i>\<Rightarrowlim\><rsub|<around*|(|x,y|)>\<in\>f>x\<in\>f<rsup|-1><around*|(|B<rsub|i>|)>>
+      proving that <math|x\<in\><big|cap><rsub|i\<in\>I>f<rsup|-1>B<rsub|i>>.
+      So\ 
+
+      <\equation>
+        <label|eq 2.32.004>f<rsup|-1><around*|(|<big|cap><rsub|i\<in\>I>B<rsub|i>|)>\<subseteq\><big|cap><rsub|i\<in\>I>f<rsup|-1><around*|(|B<rsub|i>|)>
+      </equation>
+
+      If <math|x\<in\><big|cap><rsub|i\<in\>I>f<rsup|-1><around*|(|B<rsub|i>|)>>
+      then <math|\<forall\>i\<in\>I> we have
+      <math|x\<in\>f<rsup|-1><around*|(|B<rsub|i>|)>> or
+      <math|\<exists\>y\<in\>B<rsub|i><text| with ><around*|(|x,y|)>\<in\>f>.
+      So <math|y\<in\><big|cap><rsub|i\<in\>I>B<rsub|i>> which as
+      <math|<around*|(|x,y|)>\<in\>f> proves that
+      <math|x\<in\>f<rsup|-1><around*|(|<big|cap><rsub|i\<in\>I>B<rsub|i>|)>>.
+      So <math|<big|cap><rsub|i\<in\>I>f<rsup|-1><around*|(|B<rsub|i>|)>\<subseteq\>f<rsup|-1><around*|(|<big|cap><rsub|i\<in\>I>B<rsub|i>|)>>
+      which combined with <reference|eq 2.32.004> gives\ 
+
+      <\equation*>
+        f<rsup|-1><around*|(|<big|cap><rsub|i\<in\>I>B<rsub|i>|)>=<big|cup><rsub|i\<in\>I>f<rsup|-1><around*|(|B<rsub|i>|)>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  <section|Product of a family of sets>
+
+  The Cartesian product <math|A\<times\>B> consists of all the possible pairs
+  that you can form, where the first element is a element of <math|A> and the
+  second element is a element of <math|B>. We want now to construct a
+  generalized product of a family of classes consisting of tuples whose
+  elements are indexed by the index of the family.
+
+  <\definition>
+    <label|product><index|<math|<big|prod><rsub|i\<in\>I>A<rsub|i>>><dueto|Product
+    of a family of sets>Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B>
+    a family then the <with|font-series|bold|product of
+    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>>> noted as
+    <math|<with|font-series|bold|<big|prod><rsub|i\<in\>I>A<rsub|i>>> is
+    defined by\ 
+
+    <\equation*>
+      <big|prod><rsub|i\<in\>I>A<rsub|i>=<around*|{|f:f\<in\><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)><rsup|I><text|
+      where >\<forall\>i\<in\>I<text| we have
+      >f<around*|(|i|)>\<in\>A<rsub|i>|}>
+    </equation*>
+
+    If <math|x\<in\><big|prod><rsub|i\<in\>I>A<rsub|i>> then <math|x<rsub|i>>
+    is defined as\ 
+
+    <\equation*>
+      x<rsub|i>=x<around*|(|i|)>
+    </equation*>
+
+    Here <math|<around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)><rsup|I>> is
+    the class of function graphs of functions between <math|I> and
+    <math|<big|cup><rsub|i\<in\>I>A<rsub|i>> [definition: <reference|function
+    B^A>] and <math|f<around*|(|i|)>> is the unique <math|y> such that
+    <math|<around*|(|i,y|)>\<in\>f>. So <math|<big|prod><rsub|i\<in\>I>A<rsub|i>>
+    is the class of graphs of functions from <math|I> to
+    <math|<big|cup><rsub|i\<in\>I>A<rsub|i>> such that
+    <math|\<forall\>i\<in\>I> <math|f<rsub|i>=f<around*|(|i|)>\<in\>A<rsub|i>>.
+    </definition>
+
+  The following shows that the product of a family of only one class is
+  \<#2018\>almost\<#2018\> that class itself.
+
+  <\example>
+    <label|product of family with one element>Let
+    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1|}>>\<subseteq\><around*|{|B|}>>
+    be the family in [example: <reference|family trivial>] defined by
+    <math|A:<around*|{|1|}>\<rightarrow\><around*|{|B|}>> where
+    <math|A=<around*|{|<around*|(|1,B|)>|}>> then there exists a bijection
+    between <math|B> and <math|<big|sqcap><rsub|i\<in\><around*|{|1|}>>A<rsub|i>>
+  </example>
+
+  <\proof>
+    First using [example: <reference|family trivial>] we have\ 
+
+    <\equation>
+      <label|eq 2.34.005>B=<big|cup><rsub|i\<in\><around*|{|1|}>>A<rsub|i>
+    </equation>
+
+    hence\ 
+
+    <\equation>
+      <label|eq 2.35.005><around*|(|<big|cup><rsub|i\<in\><around*|{|1|}>>A<rsub|i>|)><rsup|<around*|{|1|}>>=B<rsup|<around*|{|1|}>>
+    </equation>
+
+    Let <math|f\<in\>B<rsup|<around*|{|1|}>>\<equallim\><rsub|<text|[eq:
+    <reference|eq 2.35.005>]>><around*|(|<big|cup><rsub|i\<in\><around*|{|1|}>>A<rsub|i>|)>>
+    then if <math|i\<in\><around*|{|1|}>> we must have <math|i=1> hence
+    <math|f<around*|(|i|)>=f<around*|(|1|)>\<in\>B=A<around*|(|1|)>=A<rsub|1>>
+    proving that <math|\<forall\>i\<in\><around*|{|1|}>> we have
+    <math|f<around*|(|i|)>\<in\>A<rsub|i>>. Hence
+    <math|f\<in\><big|prod><rsub|i\<in\><around*|{|1|}>>A<rsub|i>> from which
+    it follows that <math|B<rsup|<around*|{|1|}>>\<subseteq\><big|prod><rsub|i\<in\><around*|{|1|}>>A<rsub|i>>.
+    As clearly <math|<big|prod><rsub|i\<in\><around*|{|1|}>>A<rsub|i>\<subseteq\><around*|(|<big|cup><rsub|i\<in\><around*|{|1|}>>A<rsub|i>|)><rsup|<around*|{|1|}>>\<equallim\><rsub|<text|[eq:
+    <reference|eq 2.35.005>]>>B<rsup|<around*|{|1|}>>> we have that\ 
+
+    <\equation*>
+      <big|prod><rsub|i\<in\><around*|{|1|}>>A<rsub|i>=B<rsup|<around*|{|1|}>>
+    </equation*>
+
+    Now by [theorem: <reference|function and power>] there exists a bijection
+    between <math|B> and <math|B<rsup|<around*|{|1|}>>> which by the above
+    proves the example.
+  </proof>
+
+  The next example shows that the product of a family of two classes is
+  \<#2018\>almost\<#2018\> the Cartesian product of these classes.
+
+  <\example>
+    <label|product of family with two classes>Let
+    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|0,1|}>>\<subseteq\><around*|{|C,D|}>>
+    be the family in [example: <reference|family union{A,B}>] defined by
+    <math|A:<around*|{|0,1|}>\<rightarrow\><around*|{|C,D|}> where>
+    <math|A=<around*|{|<around*|(|0,C|)>,<around*|(|1,D|)>|}>> then there
+    exists a bijection between <math|A\<times\>B> and
+    <math|<big|prod><rsub|i\<in\><around*|{|0,1|}>>A<rsub|i>>
+  </example>
+
+  <\proof>
+    First using [example: <reference|family union{A,B}>]: we have that\ 
+
+    <\equation>
+      <label|eq 2.38.006><big|cup><rsub|i\<in\><around*|{|0,1|}>>A<rsub|i>=C<big|cup>D
+    </equation>
+
+    so that\ 
+
+    <\equation>
+      <label|eq 2.39.006><around*|(|<big|cup><rsub|i\<in\><around*|{|0,1|}>>A<rsub|i>|)><rsup|<around*|{|0,1|}>>=<around*|(|C<big|cup>D|)><rsup|<around*|{|0,1|}>>
+    </equation>
+
+    Given <math|<around*|(|c,d|)>\<in\>C\<times\>D\<Rightarrow\>c\<in\>C\<wedge\>d\<in\>D>
+    define <math|f<rsub|c,d>=<around*|{|<around*|(|0,c|)>,<around*|(|1,d|)>|}>>.
+    If <math|<around*|(|x,y|)>\<in\>f<rsub|c,d>> we have either
+
+    <\equation*>
+      <around*|(|x,y|)>=<around*|(|0,c|)>\<Rightarrow\>x=0\<in\><around*|{|0,1|}>\<wedge\>y=c\<in\>C<big|cup>D\<Rightarrow\><around*|(|x,y|)>\<in\><around*|{|0,1|}>\<times\><around*|(|C<big|cup>D|)>
+    </equation*>
+
+    or
+
+    <\equation*>
+      <around*|(|x,y|)>=<around*|(|1,d|)>\<Rightarrow\>x=1\<in\><around*|{|0,1|}>\<wedge\>y=d\<in\>C<big|cup>D\<Rightarrow\><around*|(|x,y|)>\<in\><around*|{|0,1|}>\<times\><around*|(|C<big|cup>D|)>
+    </equation*>
+
+    proving that\ 
+
+    <\equation>
+      <label|eq 2.40.006>f<rsub|a,b>\<subseteq\><around*|{|0,1|}>\<times\><around*|(|C<big|cup>D|)>
+    </equation>
+
+    If <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>f<rsub|c,d>>
+    then either <math|<around*|(|x,y|)>=<around*|(|0,c|)>\<Rightarrow\>x=0\<Rightarrow\><around*|(|0,y<rprime|'>|)>\<in\>f<rsub|c,d>\<Rightarrow\>y<rprime|'>=c\<Rightarrow\>y=y<rprime|'>>
+    or <math|<around*|(|x,y|)>=<around*|(|1,d|)>\<Rightarrow\>x=1=<around*|(|1,y<rprime|'>|)>\<in\>f<rsub|c,d>\<Rightarrow\>y<rprime|'>=d=y=y<rprime|'>>.
+    Together with [eq: <reference|eq 2.40.006>] this proves that\ 
+
+    <\equation>
+      <label|eq 2.41.006>f<rsub|a,b>:<around*|{|0,1|}>\<rightarrow\>C<big|cup>D<text|
+      is a partial function>
+    </equation>
+
+    If <math|x\<in\><around*|{|0,1|}>> then either
+    <math|x=0\<Rightarrow\><around*|(|0,c|)>\<in\>f<rsub|c,d>> or
+    <math|x=1\<Rightarrow\><around*|(|1,d|)>\<in\>f<rsub|c,d>> proving that
+    <math|<around*|{|0,1|}>\<subseteq\>dom<around*|(|f<rsub|c,d>|)>> which by
+    [theorem: <reference|function condition (1)> proves that
+
+    <\equation>
+      <label|eq 2.42.006>f<rsub|c,d>:<around*|{|0,1|}>\<rightarrow\>C<big|cup>D<text|
+      is a function>
+    </equation>
+
+    Define now <math|\<gamma\>> by <math|\<gamma\>=<around*|{|<around*|(|<around*|(|c,d|)>,f<rsub|c,d>|)>\|<around*|(|c,d|)>\<in\>C\<times\>D|}>>.
+    If <math|<around*|(|x,y|)>\<in\>\<gamma\>> then
+    <math|x=<around*|(|c,d|)>\<in\>C\<times\>D> and <math|y=f<rsub|c,d>>, so
+    that <math|y:<around*|{|0,1|}>\<rightarrow\>C<big|cup>D> is a function
+    [eq: <reference|eq 2.42.006>], hence <math|y\<in\><around*|(|C<big|cup>D|)><rsup|<around*|{|0,1|}>>>.
+    This proves that <math|<around*|(|x,y|)>\<in\><around*|(|C\<times\>D|)>\<times\><around*|(|C<big|cup>D|)><rsup|<around*|{|0,1|}>>>.
+    This proves that\ 
+
+    <\equation>
+      <label|eq 2.43.006>\<gamma\>\<subseteq\><around*|(|C\<times\>D|)>\<times\><around*|(|C<big|cup>D|)><rsup|<around*|{|0,1|}>>
+    </equation>
+
+    If <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>\<gamma\>>
+    then <math|\<exists\><around*|(|c,d|)>\<in\>C\<times\>D> such that
+    <math|x=<around*|(|c,d|)>\<Rightarrow\>y=f<rsub|c,d>> and as
+    <math|<around*|(|x,y<rprime|'>|)>=<around*|(|<around*|(|c,d|)>,y<rprime|'>|)>\<in\>\<gamma\>\<Rightarrow\>y<rprime|'>=f<rsub|c,d>>,
+    so <math|y=y<rprime|'>>. Combining this with [eq:<reference|eq 2.43.006>]
+    proves that\ 
+
+    <\equation>
+      <label|eq 2.44.006>\<gamma\>:C\<times\>D\<rightarrow\><around*|(|C<big|cup>D|)><rsup|<around*|{|0,1|}>><text|
+      is a partial function>
+    </equation>
+
+    If <math|<around*|(|c,d|)>\<in\>C\<times\>D> then by definition of
+    <math|\<gamma\>> we have <math|<around*|(|<around*|(|c,d|)>,f<rsub|c,d>|)>\<in\>\<gamma\>>
+    so that <math|<around*|(|c,d|)>\<in\>dom<around*|(|\<gamma\>|)>> proving
+    that <math|C\<times\>D\<subseteq\>dom<around*|(|\<gamma\>|)>>. By
+    [theorem: <reference|function condition (1)>] and [eq: <reference|eq
+    2.44.006>] we have\ 
+
+    <\equation>
+      <label|eq 2.45.006>\<gamma\>:C\<times\>D\<rightarrow\><around*|(|C<big|cup>D|)><rsup|<around*|{|0,1|}>><text|
+      is a function>
+    </equation>
+
+    If <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>\<gamma\>>
+    then there exists <math|<around*|(|c,d|)>,<around*|(|c<rprime|'>,d<rprime|'>|)>\<in\>C\<times\>D>
+    such that <math|x=<around*|(|c,d|)>\<wedge\>x<rprime|'>=<around*|(|c<rprime|'>,d<rprime|'>|)>>
+    and <math|f<rsub|c,d>=y=f<rsub|c<rprime|'>,d<rprime|'>>>. As
+    <math|<around*|(|0,c|)>\<in\>f<rsub|c,d>=f<rsub|c<rprime|'>md<rprime|'>>>
+    we have <math|c=c<rprime|'>> and from
+    <math|<around*|(|1,d|)>\<in\>f<rsub|c,d>=f<rsub|c<rprime|'>,d<rprime|'>>>
+    we have <math|d=d<rprime|'>>. So <math|<around*|(|c,d|)>=<around*|(|c<rprime|'>,d<rprime|'>|)>>
+    proving that\ 
+
+    <\equation*>
+      \<gamma\>:C\<times\>D\<rightarrow\><around*|(|C<big|cup>D|)><rsup|<around*|{|0,1|}>><text|
+      is a injection>
+    </equation*>
+
+    If <math|g\<in\><around*|(|C<big|cup>D|)><rsup|<around*|{|0,1|}>>> then
+    <math|g:<around*|{|0,1|}>\<rightarrow\>C<big|cup>D> is a function so
+    <math|dom<around*|(|g|)>=<around*|{|0,1|}>>. Hence there exists a
+    <math|c\<in\>C> such that <math|<around*|(|0,c|)>\<in\>g> and there
+    exists a <math|d\<in\>D> such that <math|<around*|(|1,d|)>\<in\>g>. So
+    <math|g=<around*|{|<around*|(|0,c|)>,<around*|(|a,d|)>|}>=f<rsub|c,d>>
+    which proves that\ 
+
+    <\equation*>
+      \<gamma\>:C*\<times\>D\<rightarrow\><around*|(|C<big|cup>D|)><rsup|<around*|{|0,1|}>><text|
+      is a surjection>
+    </equation*>
+  </proof>
+
+  TODO Check the above
+
+  <\theorem>
+    <label|product inclusion>Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>A>
+    and <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B> classes
+    such that <math|\<forall\>i\<in\>I> <math|A<rsub|i>\<subseteq\>B<rsub|i>>
+    then
+
+    <\equation*>
+      <big|prod><rsub|i\<in\>I>A<rsub|i>\<subseteq\><big|prod><rsub|i\<in\>I>B<rsub|i>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Let <math|x\<in\><big|prod><rsub|i\<in\>I>A<rsub|i>> then
+    <math|x\<in\><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)><rsup|I>> and
+    <math|\<forall\>i\<in\>I> <math|x<around*|(|i|)>\<in\>A<rsub|i>>. Using
+    [theorem: <reference|family union intersection and inclusion>] it follows
+    that <math|<big|cup><rsub|i\<in\>I>A<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>I>B<rsub|i>>,
+    applying [theorem: <reference|function B^A and inclusion>] proves then
+    <math|<around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)><rsup|I>\<subseteq\><around*|(|<big|cup><rsub|i\<in\>I>B<rsub|i>|)><rsup|I>>,
+    so that\ 
+
+    <\equation*>
+      x\<in\><around*|(|<big|cup><rsub|i\<in\>I>B<rsub|i>|)><rsup|I>
+    </equation*>
+
+    If <math|i\<in\>I> then <math|x<around*|(|i|)>\<in\>A<rsub|i>>, which as
+    <math|A<rsub|i>\<subseteq\>B<rsub|i>> gives
+    <math|x<around*|(|i|)>\<in\>B<rsub|i>>, combining this with the above
+    proves that <math|x\<in\><big|prod><rsub|i\<in\>I>B<rsub|i>>. Hence we
+    have\ 
+
+    <\equation*>
+      <big|prod><rsub|i\<in\>I>A<rsub|i>\<subseteq\><big|prod><rsub|i\<in\>I>B<rsub|i>
+    </equation*>
+  </proof>
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
   <chapter|Relations>
 </body>
 
@@ -3491,7 +5379,7 @@
   <\collection>
     <associate|\<less\>A,B,C\<gtr\>=\<less\>D,E,F\<gtr\>=\<gtr\>A=E,B=D,C=F|<tuple|2.5|?>>
     <associate|\<less\>A,B\<gtr\>=\<less\>C,D\<gtr\>=\<gtr\>A=C,B=D|<tuple|2.3|?>>
-    <associate|Axiom of Replacement|<tuple|2.35|?>>
+    <associate|Axiom of Replacement|<tuple|2.40|?>>
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-10|<tuple|axiom of pairing|?>>
     <associate|auto-11|<tuple|cartesian product|?>>
@@ -3513,16 +5401,26 @@
     <associate|auto-26|<tuple|image|?>>
     <associate|auto-27|<tuple|2.2.2|?>>
     <associate|auto-28|<tuple|function|?>>
-    <associate|auto-29|<tuple|identity function|?>>
+    <associate|auto-29|<tuple|<with|mode|<quote|math>|B<rsup|A>>|?>>
     <associate|auto-3|<tuple|axiom of extent|2>>
-    <associate|auto-30|<tuple|<with|mode|<quote|math>|Id<rsub|A>>|?>>
-    <associate|auto-31|<tuple|2.2.3|?>>
-    <associate|auto-32|<tuple|bijection|?>>
-    <associate|auto-33|<tuple|2.2.4|?>>
-    <associate|auto-34|<tuple|<with|mode|<quote|math>|f<rsub|\|C>>|?>>
-    <associate|auto-35|<tuple|2.2.5|?>>
-    <associate|auto-36|<tuple|3|?>>
+    <associate|auto-30|<tuple|identity function|?>>
+    <associate|auto-31|<tuple|<with|mode|<quote|math>|Id<rsub|A>>|?>>
+    <associate|auto-32|<tuple|2.2.3|?>>
+    <associate|auto-33|<tuple|bijection|?>>
+    <associate|auto-34|<tuple|bijective|?>>
+    <associate|auto-35|<tuple|2.2.4|?>>
+    <associate|auto-36|<tuple|<with|mode|<quote|math>|f<rsub|\|C>>|?>>
+    <associate|auto-37|<tuple|2.2.5|?>>
+    <associate|auto-38|<tuple|2.3|?>>
+    <associate|auto-39|<tuple|2.3.1|?>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|\<cal-U\>>|3>>
+    <associate|auto-40|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>>|?>>
+    <associate|auto-41|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>\|i\<in\>I|}>>|?>>
+    <associate|auto-42|<tuple|<with|mode|<quote|math>|<big|cap><rsub|i\<in\>I>A<rsub|i>>|?>>
+    <associate|auto-43|<tuple|2.3.2|?>>
+    <associate|auto-44|<tuple|2.4|?>>
+    <associate|auto-45|<tuple|<with|mode|<quote|math>|<big|prod><rsub|i\<in\>I>A<rsub|i>>|?>>
+    <associate|auto-46|<tuple|3|?>>
     <associate|auto-5|<tuple|<with|mode|<quote|math>|A<big|cup>B>|5>>
     <associate|auto-6|<tuple|<with|mode|<quote|math>|A<big|cap>B>|?>>
     <associate|auto-7|<tuple|<with|mode|<quote|math>|\<emptyset\>>|?>>
@@ -3532,10 +5430,11 @@
     <associate|axiom of extent|<tuple|1.5|2>>
     <associate|axiom of infinity|<tuple|1.52|?>>
     <associate|axiom of pairing|<tuple|1.36|?>>
-    <associate|axiom of power|<tuple|1.60|?>>
+    <associate|axiom of power|<tuple|1.64|?>>
     <associate|axiom of subsets|<tuple|1.54|?>>
-    <associate|axiom of union|<tuple|1.57|?>>
-    <associate|bijection|<tuple|2.42|?>>
+    <associate|axiom of union|<tuple|1.61|?>>
+    <associate|bijection|<tuple|2.47|?>>
+    <associate|bijective classes|<tuple|2.48|?>>
     <associate|cartesian product|<tuple|1.44|?>>
     <associate|cartesian product and inclusion|<tuple|1.48|?>>
     <associate|cartesian product of the empty set|<tuple|1.46|?>>
@@ -3548,11 +5447,16 @@
     <associate|class difference|<tuple|1.24|?>>
     <associate|class empty set|<tuple|1.18|?>>
     <associate|class empty set is unique|<tuple|1.19|?>>
+    <associate|class general intersection|<tuple|1.60|?>>
     <associate|class inclusion and union and intersection|<tuple|1.26|?>>
+    <associate|class intersection|<tuple|1.57|?>>
     <associate|class intersection, union, inclusion|<tuple|1.25|?>>
     <associate|class not empty sets|<tuple|1.20|?>>
     <associate|class properties (1)|<tuple|1.8|2>>
     <associate|class set difference and union , intersection|<tuple|1.31|?>>
+    <associate|class trivial union intersection|<tuple|1.58|?>>
+    <associate|class union|<tuple|1.56|?>>
+    <associate|class union{A,B}|<tuple|1.59|?>>
     <associate|class universal and empotyset properties|<tuple|1.32|?>>
     <associate|element a=b=\<gtr\>{a}={b}|<tuple|1.34|?>>
     <associate|element equalitiy of unordered pairs|<tuple|1.39|?>>
@@ -3577,48 +5481,105 @@
     <associate|eq 2.12.002|<tuple|2.12|?>>
     <associate|eq 2.13.001|<tuple|2.15|?>>
     <associate|eq 2.13.002|<tuple|2.13|?>>
-    <associate|eq 2.14.001|<tuple|2.16|?>>
-    <associate|eq 2.17.002|<tuple|2.17|?>>
-    <associate|eq 2.18.002|<tuple|2.18|?>>
-    <associate|eq 2.19.002|<tuple|2.19|?>>
+    <associate|eq 2.14.001|<tuple|2.19|?>>
+    <associate|eq 2.16.003|<tuple|2.22|?>>
+    <associate|eq 2.16.004|<tuple|2.16|?>>
+    <associate|eq 2.16.005|<tuple|2.16|?>>
+    <associate|eq 2.17.002|<tuple|2.23|?>>
+    <associate|eq 2.17.003|<tuple|2.21|?>>
+    <associate|eq 2.17.004|<tuple|2.20|?>>
+    <associate|eq 2.17.006|<tuple|2.17|?>>
+    <associate|eq 2.18.002|<tuple|2.24|?>>
+    <associate|eq 2.18.006|<tuple|2.18|?>>
+    <associate|eq 2.19.002|<tuple|2.25|?>>
     <associate|eq 2.2.001|<tuple|2.4|?>>
-    <associate|eq 2.20.002|<tuple|2.20|?>>
-    <associate|eq 2.21.002|<tuple|2.21|?>>
+    <associate|eq 2.20.002|<tuple|2.26|?>>
+    <associate|eq 2.21.002|<tuple|2.27|?>>
+    <associate|eq 2.25.004|<tuple|2.28|?>>
+    <associate|eq 2.26.004|<tuple|2.29|?>>
+    <associate|eq 2.27.004|<tuple|2.30|?>>
+    <associate|eq 2.28.004|<tuple|2.31|?>>
+    <associate|eq 2.29.004|<tuple|2.32|?>>
     <associate|eq 2.3.001.2|<tuple|2.3|?>>
+    <associate|eq 2.30.004|<tuple|2.33|?>>
+    <associate|eq 2.31.004|<tuple|2.34|?>>
+    <associate|eq 2.32.004|<tuple|2.35|?>>
+    <associate|eq 2.34.005|<tuple|2.36|?>>
+    <associate|eq 2.35.005|<tuple|2.37|?>>
+    <associate|eq 2.38.006|<tuple|2.38|?>>
+    <associate|eq 2.39.006|<tuple|2.39|?>>
+    <associate|eq 2.40.006|<tuple|2.40|?>>
+    <associate|eq 2.41.006|<tuple|2.41|?>>
+    <associate|eq 2.42.006|<tuple|2.42|?>>
+    <associate|eq 2.43.006|<tuple|2.43|?>>
+    <associate|eq 2.44.006|<tuple|2.44|?>>
+    <associate|eq 2.45.006|<tuple|2.45|?>>
     <associate|eq 2.5.001.2|<tuple|2.5|?>>
     <associate|eq 2.6.001|<tuple|2.6|?>>
     <associate|eq 2.7.001|<tuple|2.7|?>>
     <associate|eq 2.8.001|<tuple|2.8|?>>
     <associate|eq 2.9.001|<tuple|2.9|?>>
+    <associate|family|<tuple|2.69|?>>
+    <associate|family de Morgan|<tuple|2.85|?>>
+    <associate|family distributivity|<tuple|2.84|?>>
+    <associate|family image and preimage|<tuple|2.88|?>>
+    <associate|family intersection (2)|<tuple|2.77|?>>
+    <associate|family intersection is a set|<tuple|2.78|?>>
+    <associate|family intersection of sets|<tuple|2.75|?>>
+    <associate|family intersection(1)|<tuple|2.76|?>>
+    <associate|family properties (1)|<tuple|2.81|?>>
+    <associate|family properties (2)|<tuple|2.82|?>>
+    <associate|family properties (3)|<tuple|2.86|?>>
+    <associate|family range|<tuple|2.70|?>>
+    <associate|family range (1)|<tuple|2.71|?>>
+    <associate|family set|<tuple|2.72|?>>
+    <associate|family trivial|<tuple|2.79|?>>
+    <associate|family union (1)|<tuple|2.73|?>>
+    <associate|family union (2)|<tuple|2.74|?>>
+    <associate|family union intersection and empty set|<tuple|2.87|?>>
+    <associate|family union intersection and inclusion|<tuple|2.83|?>>
+    <associate|family union{A,B}|<tuple|2.80|?>>
     <associate|function|<tuple|2.20|?>>
-    <associate|function bijection and inverse|<tuple|2.47|?>>
-    <associate|function bijection condition (2)|<tuple|2.46|?>>
-    <associate|function bijection f,f-1|<tuple|2.45|?>>
-    <associate|function bijection has a inverse|<tuple|2.44|?>>
-    <associate|function characteristics function|<tuple|2.29|?>>
+    <associate|function B^A|<tuple|2.24|?>>
+    <associate|function B^A and inclusion|<tuple|2.26|?>>
+    <associate|function P(A)=2^A|<tuple|2.59|?>>
+    <associate|function and power|<tuple|2.58|?>>
+    <associate|function between {0,1} and {A,B}|<tuple|2.22|?>>
+    <associate|function bijection and inverse|<tuple|2.55|?>>
+    <associate|function bijection condition (2)|<tuple|2.54|?>>
+    <associate|function bijection f,f-1|<tuple|2.53|?>>
+    <associate|function bijection has a inverse|<tuple|2.52|?>>
+    <associate|function characteristics function|<tuple|2.34|?>>
+    <associate|function composition and restriction|<tuple|2.64|?>>
     <associate|function composition injectivity, surjectivity and
-    bijectivity|<tuple|2.49|?>>
-    <associate|function composition of Id function|<tuple|2.31|?>>
+    bijectivity|<tuple|2.57|?>>
+    <associate|function composition of Id function|<tuple|2.36|?>>
     <associate|function composition of functions is a
-    fucntion|<tuple|2.33|?>>
+    fucntion|<tuple|2.38|?>>
     <associate|function condition (1)|<tuple|2.21|?>>
-    <associate|function constant function|<tuple|2.28|?>>
-    <associate|function empty function|<tuple|2.27|?>>
-    <associate|function equality (1)|<tuple|2.24|?>>
-    <associate|function equality (2)|<tuple|2.26|?>>
-    <associate|function function and intersection and union|<tuple|2.55|?>>
-    <associate|function identity function|<tuple|2.30|?>>
-    <associate|function identity map is a bijection|<tuple|2.43|?>>
-    <associate|function image preimage|<tuple|2.32|?>>
-    <associate|function injective inverse is a function|<tuple|2.41|?>>
-    <associate|function inverse of a bijection is unique|<tuple|2.48|?>>
-    <associate|function notation|<tuple|2.25|?>>
-    <associate|function properties (1)|<tuple|2.54|?>>
-    <associate|function range restriction|<tuple|2.23|?>>
-    <associate|function restricted function properties|<tuple|2.52|?>>
-    <associate|function restriction of a function|<tuple|2.53|?>>
-    <associate|function restriction of a graph|<tuple|2.51|?>>
-    <associate|function surjection condition|<tuple|2.36|?>>
+    <associate|function constant function|<tuple|2.33|?>>
+    <associate|function empty function|<tuple|2.32|?>>
+    <associate|function equality (1)|<tuple|2.29|?>>
+    <associate|function equality (2)|<tuple|2.31|?>>
+    <associate|function function and intersection and union|<tuple|2.68|?>>
+    <associate|function identity function|<tuple|2.35|?>>
+    <associate|function identity map is a bijection|<tuple|2.49|?>>
+    <associate|function image preimage|<tuple|2.37|?>>
+    <associate|function injective inverse is a function|<tuple|2.46|?>>
+    <associate|function injectivity to bijection|<tuple|2.51|?>>
+    <associate|function inverse and restriction|<tuple|2.63|?>>
+    <associate|function inverse of a bijection is unique|<tuple|2.56|?>>
+    <associate|function notation|<tuple|2.30|?>>
+    <associate|function preimage of image|<tuple|2.42|?>>
+    <associate|function properties (1)|<tuple|2.67|?>>
+    <associate|function range restriction|<tuple|2.28|?>>
+    <associate|function restricted function properties|<tuple|2.61|?>>
+    <associate|function restriction and domain|<tuple|2.62|?>>
+    <associate|function restriction of a function|<tuple|2.65|?>>
+    <associate|function restriction of a graph|<tuple|2.60|?>>
+    <associate|function surjection condition|<tuple|2.41|?>>
+    <associate|function trivial bijection|<tuple|2.50|?>>
+    <associate|function: A^B and sets|<tuple|2.27|?>>
     <associate|pair equality of pairs|<tuple|1.43|?>>
     <associate|pair of elements|<tuple|1.41|?>>
     <associate|partial function associativity|<tuple|2.17|?>>
@@ -3630,19 +5591,26 @@
     <associate|partial function image|<tuple|2.11|?>>
     <associate|partial function image preimage of
     compositions|<tuple|2.19|?>>
-    <associate|partial function injectivity and surjectivity|<tuple|2.34|?>>
-    <associate|partial function inverse graph|<tuple|2.38|?>>
-    <associate|partial function inverse if injective|<tuple|2.39|?>>
+    <associate|partial function injectivity and surjectivity|<tuple|2.39|?>>
+    <associate|partial function inverse graph|<tuple|2.43|?>>
+    <associate|partial function inverse if injective|<tuple|2.44|?>>
     <associate|partial function preimage|<tuple|2.13|?>>
     <associate|partial function set domain range|<tuple|2.10|?>>
     <associate|partial functions image/preimage properties|<tuple|2.14|?>>
-    <associate|power set|<tuple|1.59|?>>
-    <associate|set A*B is subset of P(P(AUB))|<tuple|1.62|?>>
+    <associate|power set|<tuple|1.63|?>>
+    <associate|product|<tuple|2.89|?>>
+    <associate|product inclusion|<tuple|2.92|?>>
+    <associate|product of family with one element|<tuple|2.90|?>>
+    <associate|product of family with two classes|<tuple|2.91|?>>
+    <associate|product of two classes|<tuple|2.91|?>>
+    <associate|product trivial|<tuple|2.90|?>>
+    <associate|set A*B|<tuple|1.67|?>>
+    <associate|set A*B is subset of P(P(AUB))|<tuple|1.66|?>>
     <associate|set element proper class|<tuple|1.50|?>>
     <associate|set emptyset is not set of empty set|<tuple|2.2|?>>
     <associate|set intersection of two sets is aset|<tuple|1.55|?>>
-    <associate|set restriction of a set of sets|<tuple|1.61|?>>
-    <associate|set union of two sets is a set|<tuple|1.58|?>>
+    <associate|set restriction of a set of sets|<tuple|1.65|?>>
+    <associate|set union of two sets is a set|<tuple|1.62|?>>
     <associate|successor set|<tuple|1.51|?>>
     <associate|universal class|<tuple|1.12|?>>
     <associate|universal class property|<tuple|1.13|?>>
@@ -3688,13 +5656,23 @@
 
       <tuple|<tuple|function>|<pageref|auto-28>>
 
-      <tuple|<tuple|identity function>|<pageref|auto-29>>
+      <tuple|<tuple|<with|mode|<quote|math>|B<rsup|A>>>|<pageref|auto-29>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|Id<rsub|A>>>|<pageref|auto-30>>
+      <tuple|<tuple|identity function>|<pageref|auto-30>>
 
-      <tuple|<tuple|bijection>|<pageref|auto-32>>
+      <tuple|<tuple|<with|mode|<quote|math>|Id<rsub|A>>>|<pageref|auto-31>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|f<rsub|\|C>>>|<pageref|auto-34>>
+      <tuple|<tuple|bijection>|<pageref|auto-33>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|f<rsub|\|C>>>|<pageref|auto-35>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>>>|<pageref|auto-39>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>\|i\<in\>I|}>>>|<pageref|auto-40>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|<big|cap><rsub|i\<in\>I>A<rsub|i>>>|<pageref|auto-41>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|<big|prod><rsub|i\<in\>I>A<rsub|i>>>|<pageref|auto-44>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Elements
@@ -3735,19 +5713,34 @@
 
       <with|par-left|<quote|1tab>|2.2.3<space|2spc>Injectivity, Surjectivity
       and bijectivity <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-31>>
+      <no-break><pageref|auto-32>>
 
       <with|par-left|<quote|1tab>|2.2.4<space|2spc>Restriction of a
       Function/Partial Function <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-33>>
+      <no-break><pageref|auto-34>>
 
       <with|par-left|<quote|1tab>|2.2.5<space|2spc>Set operations and
       (Partial) Functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-35>>
+      <no-break><pageref|auto-36>>
+
+      2.3<space|2spc>Families <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-37>
+
+      <with|par-left|<quote|1tab>|2.3.1<space|2spc>Family
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-38>>
+
+      <with|par-left|<quote|1tab>|2.3.2<space|2spc>Properties of the union
+      and intersection of families <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-42>>
+
+      2.4<space|2spc>Product of a family of sets
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-43>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Relations>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-36><vspace|0.5fn>
+      <no-break><pageref|auto-45><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
