@@ -49,51 +49,64 @@
 
     <with|par-left|1tab|2.2.4<space|2spc>Restriction of a Function/Partial
     Function <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-35>>
+    <no-break><pageref|auto-36>>
 
     <with|par-left|1tab|2.2.5<space|2spc>Set operations and (Partial)
     Functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-37>>
+    <no-break><pageref|auto-38>>
 
     2.3<space|2spc>Families <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-38>
+    <no-break><pageref|auto-39>
 
     <with|par-left|1tab|2.3.1<space|2spc>Family
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-39>>
+    <no-break><pageref|auto-40>>
 
     <with|par-left|1tab|2.3.2<space|2spc>Properties of the union and
     intersection of families <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-43>>
+    <no-break><pageref|auto-44>>
 
     2.4<space|2spc>Product of a family of sets
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-44>
+    <no-break><pageref|auto-45>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|3<space|2spc>Relations>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-47><vspace|0.5fn>
+    <no-break><pageref|auto-48><vspace|0.5fn>
 
     3.1<space|2spc>Relation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-48>
+    <no-break><pageref|auto-49>
 
-    3.2<space|2spc>Equivalence relation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-50>
-
-    3.3<space|2spc>Order Relation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    3.2<space|2spc>Equivalence relations <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-51>
+
+    <with|par-left|1tab|3.2.1<space|2spc>Equivalence relations and
+    equivalence classes <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-52>>
+
+    <with|par-left|1tab|3.2.2<space|2spc>Equivalence relations and functions
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-57>>
+
+    3.3<space|2spc>Partial ordered classes
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-59>
+
+    <with|par-left|1tab|3.3.1<space|2spc>Order relation
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-60>>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|4<space|2spc>The
     natural numbers> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-52><vspace|0.5fn>
+    <no-break><pageref|auto-65><vspace|0.5fn>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|5<space|2spc>Finite
     and Infinite Sets> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-53><vspace|0.5fn>
+    <no-break><pageref|auto-66><vspace|0.5fn>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|Index>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-54><vspace|0.5fn>
+    <no-break><pageref|auto-67><vspace|0.5fn>
   </table-of-contents>
 
   <include|Set.tm>
@@ -103,9 +116,9 @@
   <\the-index|idx>
     <index+1|<with|mode|math|<around*|\<langle\>|A,B,C|\<rangle\>>>|<pageref|auto-23>>
 
-    <index+1|<with|mode|math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>>|<pageref|auto-40>>
+    <index+1|<with|mode|math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>>|<pageref|auto-41>>
 
-    <index+1|<with|mode|math|<around*|{|A<rsub|i>\|i\<in\>I|}>>|<pageref|auto-41>>
+    <index+1|<with|mode|math|<around*|{|A<rsub|i>\|i\<in\>I|}>>|<pageref|auto-42>>
 
     <index+1|<with|mode|math|\<cal-P\><around*|(|A|)>>|<pageref|auto-19>>
 
@@ -113,11 +126,13 @@
 
     <index+1|<with|mode|math|\<emptyset\>>|<pageref|auto-7>>
 
-    <index+1|<with|mode|math|\<pi\><rsub|i>>|<pageref|auto-46>>
+    <index+1|<with|mode|math|\<pi\><rsub|i>>|<pageref|auto-47>>
 
-    <index+1|<with|mode|math|<big|prod><rsub|i\<in\>I>A<rsub|i>>|<pageref|auto-45>>
+    <index+1|<with|mode|math|<big|prod><rsub|i\<in\>I>A<rsub|i>>|<pageref|auto-46>>
 
-    <index+1|<with|mode|math|<big|cap><rsub|i\<in\>I>A<rsub|i>>|<pageref|auto-42>>
+    <index+1|<with|mode|math|<big|cap><rsub|i\<in\>I>A<rsub|i>>|<pageref|auto-43>>
+
+    <index+1|<with|mode|math|A/R>|<pageref|auto-56>>
 
     <index+1|<with|mode|math|A\<times\>B>|<pageref|auto-12>>
 
@@ -139,15 +154,21 @@
 
     <index+1|<with|mode|math|B<rsup|A>>|<pageref|auto-29>>
 
-    <index+1|bijection|<pageref|auto-33>>
+    <index+1|bijection|<pageref|auto-34>>
 
-    <index+1|bijective|<pageref|auto-34>>
+    <index+1|bijective|<pageref|auto-35>>
+
+    <index+1|canonical function|<pageref|auto-58>>
 
     <index+1|cartesian product|<pageref|auto-11>>
 
-    <index+1|<with|mode|math|f<rsub|\|C>>|<pageref|auto-36>>
+    <index+1|equivalence relation|<pageref|auto-53>>
+
+    <index+1|<with|mode|math|f<rsub|\|C>>|<pageref|auto-37>>
 
     <index+1|function|<pageref|auto-28>>
+
+    <index+1|<with|mode|math|i<rsub|B>>|<pageref|auto-33>>
 
     <index+1|<with|mode|math|Id<rsub|A>>|<pageref|auto-31>>
 
@@ -155,9 +176,21 @@
 
     <index+1|image|<pageref|auto-26>>
 
+    <index+1|order relation|<pageref|auto-63>>
+
+    <index+1|partial ordered class|<pageref|auto-64>>
+
+    <index+1|partition of a set|<pageref|auto-54>>
+
     <index+1|power set|<pageref|auto-18>>
 
-    <index+1|relation|<pageref|auto-49>>
+    <index+1|preorder|<pageref|auto-61>>
+
+    <index+1|pre-ordered class|<pageref|auto-62>>
+
+    <index+1|<with|mode|math|R<around*|[|x|]>>|<pageref|auto-55>>
+
+    <index+1|relation|<pageref|auto-50>>
 
     <index+1|successor set|<pageref|auto-14>>
   </the-index>
@@ -175,7 +208,7 @@
   <\collection>
     <associate|\<less\>A,B,C\<gtr\>=\<less\>D,E,F\<gtr\>=\<gtr\>A=E,B=D,C=F|<tuple|2.5|24|Set.tm>>
     <associate|\<less\>A,B\<gtr\>=\<less\>C,D\<gtr\>=\<gtr\>A=C,B=D|<tuple|2.3|23|Set.tm>>
-    <associate|Axiom of Replacement|<tuple|2.41|32|Set.tm>>
+    <associate|Axiom of Replacement|<tuple|2.43|33|Set.tm>>
     <associate|auto-1|<tuple|1|7|Set.tm>>
     <associate|auto-10|<tuple|axiom of pairing|14|Set.tm>>
     <associate|auto-11|<tuple|cartesian product|16|Set.tm>>
@@ -202,31 +235,44 @@
     <associate|auto-30|<tuple|identity function|31|Set.tm>>
     <associate|auto-31|<tuple|<with|mode|<quote|math>|Id<rsub|A>>|31|Set.tm>>
     <associate|auto-32|<tuple|2.2.3|32|Set.tm>>
-    <associate|auto-33|<tuple|bijection|33|Set.tm>>
-    <associate|auto-34|<tuple|bijective|33|Set.tm>>
-    <associate|auto-35|<tuple|2.2.4|37|Set.tm>>
-    <associate|auto-36|<tuple|<with|mode|<quote|math>|f<rsub|\|C>>|37|Set.tm>>
-    <associate|auto-37|<tuple|2.2.5|40|Set.tm>>
-    <associate|auto-38|<tuple|2.3|42|Set.tm>>
-    <associate|auto-39|<tuple|2.3.1|42|Set.tm>>
+    <associate|auto-33|<tuple|<with|mode|<quote|math>|i<rsub|B>>|32|Set.tm>>
+    <associate|auto-34|<tuple|bijection|34|Set.tm>>
+    <associate|auto-35|<tuple|bijective|34|Set.tm>>
+    <associate|auto-36|<tuple|2.2.4|38|Set.tm>>
+    <associate|auto-37|<tuple|<with|mode|<quote|math>|f<rsub|\|C>>|38|Set.tm>>
+    <associate|auto-38|<tuple|2.2.5|40|Set.tm>>
+    <associate|auto-39|<tuple|2.3|43|Set.tm>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|\<cal-U\>>|9|Set.tm>>
-    <associate|auto-40|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>>|42|Set.tm>>
-    <associate|auto-41|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>\|i\<in\>I|}>>|42|Set.tm>>
-    <associate|auto-42|<tuple|<with|mode|<quote|math>|<big|cap><rsub|i\<in\>I>A<rsub|i>>|43|Set.tm>>
-    <associate|auto-43|<tuple|2.3.2|44|Set.tm>>
-    <associate|auto-44|<tuple|2.4|52|Set.tm>>
-    <associate|auto-45|<tuple|<with|mode|<quote|math>|<big|prod><rsub|i\<in\>I>A<rsub|i>>|52|Set.tm>>
-    <associate|auto-46|<tuple|<with|mode|<quote|math>|\<pi\><rsub|i>>|56|Set.tm>>
-    <associate|auto-47|<tuple|3|57|Set.tm>>
-    <associate|auto-48|<tuple|3.1|57|Set.tm>>
-    <associate|auto-49|<tuple|relation|57|Set.tm>>
+    <associate|auto-40|<tuple|2.3.1|43|Set.tm>>
+    <associate|auto-41|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>>|43|Set.tm>>
+    <associate|auto-42|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>\|i\<in\>I|}>>|43|Set.tm>>
+    <associate|auto-43|<tuple|<with|mode|<quote|math>|<big|cap><rsub|i\<in\>I>A<rsub|i>>|44|Set.tm>>
+    <associate|auto-44|<tuple|2.3.2|45|Set.tm>>
+    <associate|auto-45|<tuple|2.4|53|Set.tm>>
+    <associate|auto-46|<tuple|<with|mode|<quote|math>|<big|prod><rsub|i\<in\>I>A<rsub|i>>|53|Set.tm>>
+    <associate|auto-47|<tuple|<with|mode|<quote|math>|\<pi\><rsub|i>>|57|Set.tm>>
+    <associate|auto-48|<tuple|3|59|Set.tm>>
+    <associate|auto-49|<tuple|3.1|59|Set.tm>>
     <associate|auto-5|<tuple|<with|mode|<quote|math>|A<big|cup>B>|9|Set.tm>>
-    <associate|auto-50|<tuple|3.2|57|Set.tm>>
-    <associate|auto-51|<tuple|3.3|57|Set.tm>>
-    <associate|auto-52|<tuple|4|59|Numbers.tm>>
-    <associate|auto-53|<tuple|5|61|Numbers.tm>>
-    <associate|auto-54|<tuple|5|63>>
+    <associate|auto-50|<tuple|relation|59|Set.tm>>
+    <associate|auto-51|<tuple|3.2|59|Set.tm>>
+    <associate|auto-52|<tuple|3.2.1|59|Set.tm>>
+    <associate|auto-53|<tuple|equivalence relation|60|Set.tm>>
+    <associate|auto-54|<tuple|partition of a set|60|Set.tm>>
+    <associate|auto-55|<tuple|<with|mode|<quote|math>|R<around*|[|x|]>>|61|Set.tm>>
+    <associate|auto-56|<tuple|<with|mode|<quote|math>|A/R>|62|Set.tm>>
+    <associate|auto-57|<tuple|3.2.2|62|Set.tm>>
+    <associate|auto-58|<tuple|canonical function|63|Set.tm>>
+    <associate|auto-59|<tuple|3.3|65|Set.tm>>
     <associate|auto-6|<tuple|<with|mode|<quote|math>|A<big|cap>B>|9|Set.tm>>
+    <associate|auto-60|<tuple|3.3.1|65|Set.tm>>
+    <associate|auto-61|<tuple|preorder|65|Set.tm>>
+    <associate|auto-62|<tuple|pre-ordered class|65|Set.tm>>
+    <associate|auto-63|<tuple|order relation|65|Set.tm>>
+    <associate|auto-64|<tuple|partial ordered class|66|Set.tm>>
+    <associate|auto-65|<tuple|4|69|Numbers.tm>>
+    <associate|auto-66|<tuple|5|71|Numbers.tm>>
+    <associate|auto-67|<tuple|5|73>>
     <associate|auto-7|<tuple|<with|mode|<quote|math>|\<emptyset\>>|9|Set.tm>>
     <associate|auto-8|<tuple|1.2|10|Set.tm>>
     <associate|auto-9|<tuple|1.3|14|Set.tm>>
@@ -237,8 +283,8 @@
     <associate|axiom of power|<tuple|1.64|21|Set.tm>>
     <associate|axiom of subsets|<tuple|1.54|20|Set.tm>>
     <associate|axiom of union|<tuple|1.61|21|Set.tm>>
-    <associate|bijection|<tuple|2.48|33|Set.tm>>
-    <associate|bijective classes|<tuple|2.49|33|Set.tm>>
+    <associate|bijection|<tuple|2.50|34|Set.tm>>
+    <associate|bijective classes|<tuple|2.51|34|Set.tm>>
     <associate|cartesian product|<tuple|1.44|16|Set.tm>>
     <associate|cartesian product and inclusion|<tuple|1.48|17|Set.tm>>
     <associate|cartesian product of the empty set|<tuple|1.46|16|Set.tm>>
@@ -250,6 +296,7 @@
     <associate|class de Morgan's law|<tuple|1.29|11|Set.tm>>
     <associate|class difference|<tuple|1.24|10|Set.tm>>
     <associate|class empty set|<tuple|1.18|10|Set.tm>>
+    <associate|class empty set definition|<tuple|1.16|9|Set.tm>>
     <associate|class empty set is unique|<tuple|1.19|10|Set.tm>>
     <associate|class general intersection|<tuple|1.60|21|Set.tm>>
     <associate|class inclusion and union and
@@ -287,127 +334,158 @@
     <associate|eq 2.11.001|<tuple|2.11|27|Set.tm>>
     <associate|eq 2.12.001|<tuple|2.15|34|Set.tm>>
     <associate|eq 2.12.002|<tuple|2.12|28|Set.tm>>
-    <associate|eq 2.13.001|<tuple|2.16|34|Set.tm>>
+    <associate|eq 2.13.001|<tuple|2.16|35|Set.tm>>
     <associate|eq 2.13.002|<tuple|2.13|28|Set.tm>>
     <associate|eq 2.14.001|<tuple|2.20|38|Set.tm>>
     <associate|eq 2.14.009|<tuple|2.14|29|Set.tm>>
-    <associate|eq 2.16.003|<tuple|2.23|39|Set.tm>>
-    <associate|eq 2.16.005|<tuple|2.17|36|Set.tm>>
-    <associate|eq 2.17.002|<tuple|2.24|40|Set.tm>>
+    <associate|eq 2.16.003|<tuple|2.23|40|Set.tm>>
+    <associate|eq 2.16.005|<tuple|2.17|37|Set.tm>>
+    <associate|eq 2.17.002|<tuple|2.24|41|Set.tm>>
     <associate|eq 2.17.003|<tuple|2.22|39|Set.tm>>
     <associate|eq 2.17.004|<tuple|2.21|39|Set.tm>>
     <associate|eq 2.17.006|<tuple|2.18|37|Set.tm>>
     <associate|eq 2.18.002|<tuple|2.25|41|Set.tm>>
-    <associate|eq 2.18.006|<tuple|2.19|37|Set.tm>>
-    <associate|eq 2.19.002|<tuple|2.26|41|Set.tm>>
+    <associate|eq 2.18.006|<tuple|2.19|38|Set.tm>>
+    <associate|eq 2.19.002|<tuple|2.26|42|Set.tm>>
     <associate|eq 2.2.001|<tuple|2.4|23|Set.tm>>
-    <associate|eq 2.20.002|<tuple|2.27|41|Set.tm>>
+    <associate|eq 2.20.002|<tuple|2.27|42|Set.tm>>
     <associate|eq 2.21.002|<tuple|2.28|42|Set.tm>>
-    <associate|eq 2.25.004|<tuple|2.29|45|Set.tm>>
-    <associate|eq 2.26.004|<tuple|2.30|46|Set.tm>>
-    <associate|eq 2.27.004|<tuple|2.31|46|Set.tm>>
-    <associate|eq 2.28.004|<tuple|2.32|46|Set.tm>>
-    <associate|eq 2.29.004|<tuple|2.34|51|Set.tm>>
+    <associate|eq 2.25.004|<tuple|2.29|46|Set.tm>>
+    <associate|eq 2.26.004|<tuple|2.30|47|Set.tm>>
+    <associate|eq 2.27.004|<tuple|2.31|47|Set.tm>>
+    <associate|eq 2.28.004|<tuple|2.32|48|Set.tm>>
+    <associate|eq 2.29.004|<tuple|2.34|52|Set.tm>>
     <associate|eq 2.3.001.2|<tuple|2.3|23|Set.tm>>
-    <associate|eq 2.30.004|<tuple|2.35|51|Set.tm>>
-    <associate|eq 2.31.004|<tuple|2.36|51|Set.tm>>
-    <associate|eq 2.31.010|<tuple|2.33|47|Set.tm>>
-    <associate|eq 2.32.004|<tuple|2.37|52|Set.tm>>
-    <associate|eq 2.34.005|<tuple|2.38|53|Set.tm>>
-    <associate|eq 2.35.005|<tuple|2.39|53|Set.tm>>
-    <associate|eq 2.38.006|<tuple|2.40|53|Set.tm>>
-    <associate|eq 2.39.006|<tuple|2.41|53|Set.tm>>
-    <associate|eq 2.40.006|<tuple|2.43|53|Set.tm>>
-    <associate|eq 2.40.007|<tuple|2.42|53|Set.tm>>
-    <associate|eq 2.41.006|<tuple|2.44|53|Set.tm>>
-    <associate|eq 2.42.006|<tuple|2.45|53|Set.tm>>
-    <associate|eq 2.43.006|<tuple|2.47|54|Set.tm>>
-    <associate|eq 2.44.006|<tuple|2.48|54|Set.tm>>
-    <associate|eq 2.44.007|<tuple|2.46|54|Set.tm>>
-    <associate|eq 2.45.006|<tuple|2.49|54|Set.tm>>
-    <associate|eq 2.48.007|<tuple|2.52|55|Set.tm>>
-    <associate|eq 2.48.008|<tuple|2.50|55|Set.tm>>
-    <associate|eq 2.49.007|<tuple|2.53|55|Set.tm>>
+    <associate|eq 2.30.004|<tuple|2.35|52|Set.tm>>
+    <associate|eq 2.31.004|<tuple|2.36|52|Set.tm>>
+    <associate|eq 2.31.010|<tuple|2.33|48|Set.tm>>
+    <associate|eq 2.32.004|<tuple|2.37|53|Set.tm>>
+    <associate|eq 2.34.005|<tuple|2.38|54|Set.tm>>
+    <associate|eq 2.35.005|<tuple|2.39|54|Set.tm>>
+    <associate|eq 2.38.006|<tuple|2.40|54|Set.tm>>
+    <associate|eq 2.39.006|<tuple|2.41|54|Set.tm>>
+    <associate|eq 2.40.006|<tuple|2.43|54|Set.tm>>
+    <associate|eq 2.40.007|<tuple|2.42|54|Set.tm>>
+    <associate|eq 2.41.006|<tuple|2.44|54|Set.tm>>
+    <associate|eq 2.42.006|<tuple|2.45|54|Set.tm>>
+    <associate|eq 2.43.006|<tuple|2.47|55|Set.tm>>
+    <associate|eq 2.44.006|<tuple|2.48|55|Set.tm>>
+    <associate|eq 2.44.007|<tuple|2.46|55|Set.tm>>
+    <associate|eq 2.45.006|<tuple|2.49|55|Set.tm>>
+    <associate|eq 2.48.007|<tuple|2.52|56|Set.tm>>
+    <associate|eq 2.48.008|<tuple|2.50|56|Set.tm>>
+    <associate|eq 2.49.007|<tuple|2.53|57|Set.tm>>
     <associate|eq 2.5.001.2|<tuple|2.5|23|Set.tm>>
-    <associate|eq 2.50.007|<tuple|2.54|56|Set.tm>>
-    <associate|eq 2.51.007|<tuple|2.55|56|Set.tm>>
-    <associate|eq 2.51.010|<tuple|2.51|55|Set.tm>>
+    <associate|eq 2.50.007|<tuple|2.54|57|Set.tm>>
+    <associate|eq 2.51.007|<tuple|2.55|57|Set.tm>>
+    <associate|eq 2.51.010|<tuple|2.51|56|Set.tm>>
     <associate|eq 2.6.001|<tuple|2.6|24|Set.tm>>
     <associate|eq 2.7.001|<tuple|2.7|24|Set.tm>>
     <associate|eq 2.8.001|<tuple|2.8|24|Set.tm>>
     <associate|eq 2.9.001|<tuple|2.9|24|Set.tm>>
-    <associate|family|<tuple|2.70|42|Set.tm>>
-    <associate|family de Morgan|<tuple|2.87|48|Set.tm>>
-    <associate|family distributivity|<tuple|2.85|46|Set.tm>>
-    <associate|family image and preimage|<tuple|2.90|51|Set.tm>>
-    <associate|family intersection (2)|<tuple|2.78|43|Set.tm>>
-    <associate|family intersection is a set|<tuple|2.79|44|Set.tm>>
-    <associate|family intersection of sets|<tuple|2.76|43|Set.tm>>
-    <associate|family intersection(1)|<tuple|2.77|43|Set.tm>>
-    <associate|family properties (1)|<tuple|2.82|44|Set.tm>>
-    <associate|family properties (2)|<tuple|2.83|45|Set.tm>>
-    <associate|family properties (3)|<tuple|2.88|49|Set.tm>>
-    <associate|family range|<tuple|2.71|42|Set.tm>>
-    <associate|family range (1)|<tuple|2.72|42|Set.tm>>
-    <associate|family set|<tuple|2.73|42|Set.tm>>
-    <associate|family trivial|<tuple|2.80|44|Set.tm>>
-    <associate|family union (1)|<tuple|2.74|43|Set.tm>>
-    <associate|family union (2)|<tuple|2.75|43|Set.tm>>
+    <associate|eq 3.1.009|<tuple|3.1|64|Set.tm>>
+    <associate|eq 3.2.009|<tuple|3.2|64|Set.tm>>
+    <associate|eq 3.3.009|<tuple|3.3|64|Set.tm>>
+    <associate|eq 3.4.009|<tuple|3.4|65|Set.tm>>
+    <associate|eq 3.5.009|<tuple|3.5|65|Set.tm>>
+    <associate|eq 3.6.009|<tuple|3.6|65|Set.tm>>
+    <associate|eq 3.7.009|<tuple|3.7|65|Set.tm>>
+    <associate|eq order preorder to order|<tuple|3.31|66|Set.tm>>
+    <associate|equivalence relation|<tuple|3.5|60|Set.tm>>
+    <associate|equivalence relation A/R|<tuple|3.16|62|Set.tm>>
+    <associate|equivalence relation R[x]=R[y]|<tuple|3.11|61|Set.tm>>
+    <associate|equivalence relation canical function|<tuple|3.21|63|Set.tm>>
+    <associate|equivalence relation canonical decomposition of a
+    function|<tuple|3.22|64|Set.tm>>
+    <associate|equivalence relation class|<tuple|3.9|61|Set.tm>>
+    <associate|equivalence relation determined by a
+    function|<tuple|3.20|63|Set.tm>>
+    <associate|equivalence relation function|<tuple|3.18|63|Set.tm>>
+    <associate|equivalence relation partition|<tuple|3.6|60|Set.tm>>
+    <associate|equivalence relation partition
+    alternative|<tuple|3.8|60|Set.tm>>
+    <associate|equivalence relation subsets|<tuple|3.19|63|Set.tm>>
+    <associate|family|<tuple|2.75|43|Set.tm>>
+    <associate|family de Morgan|<tuple|2.95|49|Set.tm>>
+    <associate|family distributivity|<tuple|2.93|47|Set.tm>>
+    <associate|family image and preimage|<tuple|2.98|52|Set.tm>>
+    <associate|family intersection (2)|<tuple|2.86|45|Set.tm>>
+    <associate|family intersection is a set|<tuple|2.87|45|Set.tm>>
+    <associate|family intersection of sets|<tuple|2.83|44|Set.tm>>
+    <associate|family intersection(1)|<tuple|2.85|44|Set.tm>>
+    <associate|family properties (1)|<tuple|2.90|46|Set.tm>>
+    <associate|family properties (2)|<tuple|2.91|46|Set.tm>>
+    <associate|family properties (3)|<tuple|2.96|50|Set.tm>>
+    <associate|family range|<tuple|2.76|43|Set.tm>>
+    <associate|family range (1)|<tuple|2.77|43|Set.tm>>
+    <associate|family set|<tuple|2.78|43|Set.tm>>
+    <associate|family trivial|<tuple|2.88|45|Set.tm>>
+    <associate|family union (1)|<tuple|2.79|44|Set.tm>>
+    <associate|family union (2)|<tuple|2.82|44|Set.tm>>
     <associate|family union intersection and empty
-    set|<tuple|2.89|50|Set.tm>>
+    set|<tuple|2.97|51|Set.tm>>
     <associate|family union intersection and
-    inclusion|<tuple|2.84|46|Set.tm>>
-    <associate|family union of union of two families|<tuple|2.86|47|Set.tm>>
-    <associate|family union{A,B}|<tuple|2.81|44|Set.tm>>
+    inclusion|<tuple|2.92|47|Set.tm>>
+    <associate|family union of a empty set|<tuple|2.84|44|Set.tm>>
+    <associate|family union of union of two families|<tuple|2.94|48|Set.tm>>
+    <associate|family union{A,B}|<tuple|2.89|45|Set.tm>>
     <associate|function|<tuple|2.20|28|Set.tm>>
+    <associate|function A^empty is empty|<tuple|2.26|29|Set.tm>>
     <associate|function B^A|<tuple|2.24|29|Set.tm>>
-    <associate|function B^A and inclusion|<tuple|2.26|29|Set.tm>>
-    <associate|function P(A)=2^A|<tuple|2.60|37|Set.tm>>
-    <associate|function and power|<tuple|2.59|36|Set.tm>>
+    <associate|function B^A and inclusion|<tuple|2.27|29|Set.tm>>
+    <associate|function P(A)=2^A|<tuple|2.62|37|Set.tm>>
+    <associate|function and power|<tuple|2.61|36|Set.tm>>
     <associate|function between {0,1} and {A,B}|<tuple|2.22|28|Set.tm>>
-    <associate|function bijection and inverse|<tuple|2.56|35|Set.tm>>
-    <associate|function bijection condition (2)|<tuple|2.55|34|Set.tm>>
-    <associate|function bijection f,f-1|<tuple|2.54|34|Set.tm>>
-    <associate|function bijection has a inverse|<tuple|2.53|34|Set.tm>>
-    <associate|function characteristics function|<tuple|2.35|31|Set.tm>>
-    <associate|function composition and restriction|<tuple|2.65|39|Set.tm>>
+    <associate|function bijection and inverse|<tuple|2.58|35|Set.tm>>
+    <associate|function bijection condition (2)|<tuple|2.57|35|Set.tm>>
+    <associate|function bijection f,f-1|<tuple|2.56|34|Set.tm>>
+    <associate|function bijection has a inverse|<tuple|2.55|34|Set.tm>>
+    <associate|function characteristics function|<tuple|2.36|31|Set.tm>>
+    <associate|function composition and restriction|<tuple|2.67|39|Set.tm>>
     <associate|function composition injectivity, surjectivity and
-    bijectivity|<tuple|2.58|35|Set.tm>>
-    <associate|function composition of Id function|<tuple|2.37|31|Set.tm>>
+    bijectivity|<tuple|2.60|36|Set.tm>>
+    <associate|function composition of Id function|<tuple|2.38|31|Set.tm>>
     <associate|function composition of functions is a
-    fucntion|<tuple|2.39|32|Set.tm>>
+    fucntion|<tuple|2.40|32|Set.tm>>
     <associate|function condition (1)|<tuple|2.21|28|Set.tm>>
-    <associate|function constant function|<tuple|2.34|31|Set.tm>>
-    <associate|function empty function|<tuple|2.33|31|Set.tm>>
-    <associate|function equality (1)|<tuple|2.30|30|Set.tm>>
-    <associate|function equality (2)|<tuple|2.32|30|Set.tm>>
+    <associate|function constant function|<tuple|2.35|31|Set.tm>>
+    <associate|function empty function|<tuple|2.34|31|Set.tm>>
+    <associate|function equality (1)|<tuple|2.31|30|Set.tm>>
+    <associate|function equality (2)|<tuple|2.33|30|Set.tm>>
     <associate|function function and intersection and
-    union|<tuple|2.69|41|Set.tm>>
-    <associate|function identity function|<tuple|2.36|31|Set.tm>>
-    <associate|function identity map is a bijection|<tuple|2.50|33|Set.tm>>
-    <associate|function image preimage|<tuple|2.38|32|Set.tm>>
+    union|<tuple|2.71|41|Set.tm>>
+    <associate|function identity function|<tuple|2.37|31|Set.tm>>
+    <associate|function identity map is a bijection|<tuple|2.52|34|Set.tm>>
+    <associate|function image preimage|<tuple|2.39|32|Set.tm>>
+    <associate|function inclusion function|<tuple|2.42|32|Set.tm>>
     <associate|function injective inverse is a
-    function|<tuple|2.47|33|Set.tm>>
-    <associate|function injectivity to bijection|<tuple|2.52|34|Set.tm>>
-    <associate|function inverse and restriction|<tuple|2.64|38|Set.tm>>
+    function|<tuple|2.49|33|Set.tm>>
+    <associate|function injectivity to bijection|<tuple|2.54|34|Set.tm>>
+    <associate|function inverse and restriction|<tuple|2.66|39|Set.tm>>
     <associate|function inverse of a bijection is
-    unique|<tuple|2.57|35|Set.tm>>
-    <associate|function notation|<tuple|2.31|30|Set.tm>>
-    <associate|function power of intersection|<tuple|2.28|29|Set.tm>>
-    <associate|function preimage of image|<tuple|2.43|32|Set.tm>>
-    <associate|function properties (1)|<tuple|2.68|40|Set.tm>>
-    <associate|function range restriction|<tuple|2.29|30|Set.tm>>
+    unique|<tuple|2.59|35|Set.tm>>
+    <associate|function notation|<tuple|2.32|30|Set.tm>>
+    <associate|function power of intersection|<tuple|2.29|29|Set.tm>>
+    <associate|function preimage of image|<tuple|2.45|33|Set.tm>>
+    <associate|function properties (1)|<tuple|2.70|40|Set.tm>>
+    <associate|function range restriction|<tuple|2.30|30|Set.tm>>
     <associate|function restricted function
-    properties|<tuple|2.62|38|Set.tm>>
-    <associate|function restriction and domain|<tuple|2.63|38|Set.tm>>
-    <associate|function restriction of a function|<tuple|2.66|39|Set.tm>>
-    <associate|function restriction of a graph|<tuple|2.61|37|Set.tm>>
-    <associate|function surjection condition|<tuple|2.42|32|Set.tm>>
-    <associate|function trivial bijection|<tuple|2.51|34|Set.tm>>
-    <associate|function: A^B and sets|<tuple|2.27|29|Set.tm>>
+    properties|<tuple|2.64|38|Set.tm>>
+    <associate|function restriction and domain|<tuple|2.65|39|Set.tm>>
+    <associate|function restriction of a function|<tuple|2.68|39|Set.tm>>
+    <associate|function restriction of a graph|<tuple|2.63|38|Set.tm>>
+    <associate|function simple definition|<tuple|2.72|42|Set.tm>>
+    <associate|function surjection condition|<tuple|2.44|33|Set.tm>>
+    <associate|function trivial bijection|<tuple|2.53|34|Set.tm>>
+    <associate|function: A^B and sets|<tuple|2.28|29|Set.tm>>
+    <associate|order order relation|<tuple|3.26|65|Set.tm>>
+    <associate|order partial ordered class|<tuple|3.27|66|Set.tm>>
+    <associate|order preorder|<tuple|3.24|65|Set.tm>>
+    <associate|order preordered class|<tuple|3.25|65|Set.tm>>
+    <associate|order strict order|<tuple|3.29|66|Set.tm>>
     <associate|pair equality of pairs|<tuple|1.43|16|Set.tm>>
     <associate|pair of elements|<tuple|1.41|16|Set.tm>>
-    <associate|part:Numbers.tm|<tuple|3.3|59>>
+    <associate|part:Numbers.tm|<tuple|<with|mode|<quote|math>|\<Leftarrow\>>|69>>
     <associate|part:Set.tm|<tuple|?|7>>
     <associate|partial function associativity|<tuple|2.17|27|Set.tm>>
     <associate|partial function composition of graphs|<tuple|2.15|26|Set.tm>>
@@ -421,30 +499,30 @@
     <associate|partial function image preimage of
     compositions|<tuple|2.19|27|Set.tm>>
     <associate|partial function injectivity and
-    surjectivity|<tuple|2.40|32|Set.tm>>
-    <associate|partial function inverse graph|<tuple|2.44|33|Set.tm>>
-    <associate|partial function inverse if injective|<tuple|2.45|33|Set.tm>>
+    surjectivity|<tuple|2.41|32|Set.tm>>
+    <associate|partial function inverse graph|<tuple|2.46|33|Set.tm>>
+    <associate|partial function inverse if injective|<tuple|2.47|33|Set.tm>>
     <associate|partial function preimage|<tuple|2.13|26|Set.tm>>
     <associate|partial function set domain range|<tuple|2.10|25|Set.tm>>
     <associate|partial functions image/preimage
     properties|<tuple|2.14|26|Set.tm>>
     <associate|power set|<tuple|1.63|21|Set.tm>>
-    <associate|product|<tuple|2.91|52|Set.tm>>
-    <associate|product and intersection|<tuple|2.95|54|Set.tm>>
-    <associate|product and power|<tuple|2.96|55|Set.tm>>
-    <associate|product inclusion|<tuple|2.94|54|Set.tm>>
-    <associate|product of family with one element|<tuple|2.92|52|Set.tm>>
-    <associate|product of family with two classes|<tuple|2.93|53|Set.tm>>
-    <associate|projection function|<tuple|2.97|56|Set.tm>>
-    <associate|relation|<tuple|3.1|57|Set.tm>>
-    <associate|relation properties|<tuple|3.4|57|Set.tm>>
-    <associate|relation trivial|<tuple|3.3|57|Set.tm>>
+    <associate|product|<tuple|2.99|53|Set.tm>>
+    <associate|product and intersection|<tuple|2.103|55|Set.tm>>
+    <associate|product and power|<tuple|2.104|56|Set.tm>>
+    <associate|product inclusion|<tuple|2.102|55|Set.tm>>
+    <associate|product of family with one element|<tuple|2.100|53|Set.tm>>
+    <associate|product of family with two classes|<tuple|2.101|54|Set.tm>>
+    <associate|projection function|<tuple|2.105|57|Set.tm>>
+    <associate|relation|<tuple|3.1|59|Set.tm>>
+    <associate|relation properties|<tuple|3.4|59|Set.tm>>
+    <associate|relation trivial|<tuple|3.3|59|Set.tm>>
     <associate|set A*B|<tuple|1.67|22|Set.tm>>
     <associate|set A*B is subset of P(P(AUB))|<tuple|1.66|22|Set.tm>>
     <associate|set element proper class|<tuple|1.50|19|Set.tm>>
     <associate|set emptyset is not set of empty set|<tuple|2.2|23|Set.tm>>
     <associate|set intersection of two sets is aset|<tuple|1.55|20|Set.tm>>
-    <associate|set restriction of a set of sets|<tuple|1.65|21|Set.tm>>
+    <associate|set restriction of a set of sets|<tuple|1.65|22|Set.tm>>
     <associate|set union of two sets is a set|<tuple|1.62|21|Set.tm>>
     <associate|successor set|<tuple|1.51|19|Set.tm>>
     <associate|universal class|<tuple|1.12|9|Set.tm>>
@@ -497,28 +575,48 @@
 
       <tuple|<tuple|<with|mode|<quote|math>|Id<rsub|A>>>|<pageref|auto-31>>
 
-      <tuple|<tuple|bijection>|<pageref|auto-33>>
+      <tuple|<tuple|<with|mode|<quote|math>|i<rsub|B>>>|<pageref|auto-33>>
 
-      <tuple|<tuple|bijective>|<pageref|auto-34>>
+      <tuple|<tuple|bijection>|<pageref|auto-34>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|f<rsub|\|C>>>|<pageref|auto-36>>
+      <tuple|<tuple|bijective>|<pageref|auto-35>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>>>|<pageref|auto-40>>
+      <tuple|<tuple|<with|mode|<quote|math>|f<rsub|\|C>>>|<pageref|auto-37>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>\|i\<in\>I|}>>>|<pageref|auto-41>>
+      <tuple|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>>>|<pageref|auto-41>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|<big|cap><rsub|i\<in\>I>A<rsub|i>>>|<pageref|auto-42>>
+      <tuple|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>\|i\<in\>I|}>>>|<pageref|auto-42>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|<big|prod><rsub|i\<in\>I>A<rsub|i>>>|<pageref|auto-45>>
+      <tuple|<tuple|<with|mode|<quote|math>|<big|cap><rsub|i\<in\>I>A<rsub|i>>>|<pageref|auto-43>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<pi\><rsub|i>>>|<pageref|auto-46>>
+      <tuple|<tuple|<with|mode|<quote|math>|<big|prod><rsub|i\<in\>I>A<rsub|i>>>|<pageref|auto-46>>
 
-      <tuple|<tuple|relation>|<pageref|auto-49>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<pi\><rsub|i>>>|<pageref|auto-47>>
+
+      <tuple|<tuple|relation>|<pageref|auto-50>>
+
+      <tuple|<tuple|equivalence relation>|<pageref|auto-53>>
+
+      <tuple|<tuple|partition of a set>|<pageref|auto-54>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|R<around*|[|x|]>>>|<pageref|auto-55>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|A/R>>|<pageref|auto-56>>
+
+      <tuple|<tuple|canonical function>|<pageref|auto-58>>
+
+      <tuple|<tuple|preorder>|<pageref|auto-61>>
+
+      <tuple|<tuple|pre-ordered class>|<pageref|auto-62>>
+
+      <tuple|<tuple|order relation>|<pageref|auto-63>>
+
+      <tuple|<tuple|partial ordered class>|<pageref|auto-64>>
     </associate>
     <\associate|parts>
       <tuple|Set.tm|chapter-nr|0|section-nr|0|subsection-nr|0>
 
-      <tuple|Numbers.tm|chapter-nr|3|section-nr|3|subsection-nr|0>
+      <tuple|Numbers.tm|chapter-nr|3|section-nr|3|subsection-nr|1>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Elements
@@ -563,52 +661,65 @@
 
       <with|par-left|<quote|1tab>|2.2.4<space|2spc>Restriction of a
       Function/Partial Function <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-35>>
+      <no-break><pageref|auto-36>>
 
       <with|par-left|<quote|1tab>|2.2.5<space|2spc>Set operations and
       (Partial) Functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-37>>
+      <no-break><pageref|auto-38>>
 
       2.3<space|2spc>Families <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-38>
+      <no-break><pageref|auto-39>
 
       <with|par-left|<quote|1tab>|2.3.1<space|2spc>Family
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-39>>
+      <no-break><pageref|auto-40>>
 
       <with|par-left|<quote|1tab>|2.3.2<space|2spc>Properties of the union
       and intersection of families <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-43>>
+      <no-break><pageref|auto-44>>
 
       2.4<space|2spc>Product of a family of sets
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-44>
+      <no-break><pageref|auto-45>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Relations>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-47><vspace|0.5fn>
+      <no-break><pageref|auto-48><vspace|0.5fn>
 
       3.1<space|2spc>Relation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-48>
+      <no-break><pageref|auto-49>
 
-      3.2<space|2spc>Equivalence relation
+      3.2<space|2spc>Equivalence relations
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-50>
-
-      3.3<space|2spc>Order Relation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-51>
+
+      <with|par-left|<quote|1tab>|3.2.1<space|2spc>Equivalence relations and
+      equivalence classes <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-52>>
+
+      <with|par-left|<quote|1tab>|3.2.2<space|2spc>Equivalence relations and
+      functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-57>>
+
+      3.3<space|2spc>Partial ordered classes
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-59>
+
+      <with|par-left|<quote|1tab>|3.3.1<space|2spc>Order relation
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-60>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>The
       natural numbers> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-52><vspace|0.5fn>
+      <no-break><pageref|auto-65><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Finite
       and Infinite Sets> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-53><vspace|0.5fn>
+      <no-break><pageref|auto-66><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Index>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-54><vspace|0.5fn>
+      <no-break><pageref|auto-67><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>

@@ -1953,12 +1953,16 @@
     Instead of writing <math|<around*|\<langle\>|A,B,f|\<rangle\>>> for a
     partial function between <math|A> and <math|B> we use the notation
     <math|f:A\<rightarrow\>B> or <math|A<long-arrow|\<rubber-rightarrow\>|f>>B.
-    Further the condition (2) is to ensure that only one value can be
-    associated with <math|x>. So it is useful to use a special notation for
-    this unique value, namely <math|f<around*|(|x|)>>. Essential if we say
-    <math|f<around*|(|x|)>=y> we actually mean <math|>that
-    <math|<around*|(|x,y|)>\<in\>f>.
+    Further the condition (2) ensurese that only one value can be associated
+    with <math|x>. So it is useful to use a special notation for this unique
+    value, especially if we have a expression to calculate this unique value.
   </remark>
+
+  <\definition>
+    Let <math|f:A\<rightarrow\>B> be a partial function then
+    <math|<around*|(|x,y|)>\<in\>f> is equivalen with
+    <math|y=f<around*|(|x|)>>
+  </definition>
 
   From now on we will use the Axiom of Construction [axiom: <reference|axiom
   of construction>] to define different classes related to partial functions
@@ -2140,8 +2144,8 @@
     </equation*>
   </definition>
 
-  The above defines the graph of a new function as is expressed in the
-  following theorem
+  The above defines the graph of a new partial function as is expressed in
+  the following theorem
 
   <\theorem>
     <label|partial function composition of partial functions>Let
@@ -2180,6 +2184,25 @@
 
     So all the requirements for <math|g\<circ\>f:A\<rightarrow\>C> to be a
     partial function are satisfied.
+  </proof>
+
+  <\theorem>
+    <label|partial function alternative for composition>f
+    <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>C> are two functions
+    then\ 
+
+    <\equation*>
+      <around*|(|g\<circ\>f|)><around*|(|x|)>=g<around*|(|f<around*|(|x|)>|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ Take <math|z=<around*|(|g\<circ\>f|)><around*|(|x|)>> then
+    <math|<around*|(|x,z|)>\<in\>g\<circ\>f> so that <math|\<exists\>y> such
+    that <math|<around*|(|x,y|)>\<in\>f> and <math|<around*|(|y,z|)>\<in\>g>.
+    Hence <math|y=f<around*|(|x|)>> and <math|z=g<around*|(|y|)>> so that
+    <math|z=g<around*|(|f<around*|(|x|)>|)>>, proving
+    <math|<around*|(|g\<circ\>f|)><around*|(|x|)>=g<around*|(|f<around*|(|x|)>|)>>.
   </proof>
 
   <\theorem>
@@ -2969,6 +2992,120 @@
     </enumerate>
   </definition>
 
+  <\proposition>
+    <label|function surjection condition>A partial function
+    <math|f:A\<rightarrow\>B> is surjective if
+    <math|B\<subseteq\>range<around*|(|f|)>>
+  </proposition>
+
+  <\proof>
+    By [theorem: <reference|partial function dom(f) range(f) as subclasses>]
+    <math|range<around*|(|f|)>\<subseteq\>B>, so if
+    <math|B\<subseteq\>range<around*|(|f|)>> it follows from [theorem:
+    <reference|class properties (1)>] that <math|B=range<around*|(|f|)>>,
+    proving surjectivity.
+  </proof>
+
+  Using the notation <math|y=f<around*|(|x|)>> is the same as
+  <math|<around*|(|x,y|)>\<in\>f> we have
+
+  <\theorem>
+    <label|partial function injectivity, surjectivity>Let
+    <math|f:A\<rightarrow\>B> be a partial function then\ 
+
+    <\enumerate>
+      <item><math|f> is injective if and only if <math|\<forall\>x,x\<in\>A>
+      with <math|f<around*|(|x|)>=f<around*|(|x<rprime|'>|)>> we have
+      <math|x=x<rprime|'>>
+
+      <item><math|f> is surjective if and only if \ <math|\<forall\>y\<in\>B>
+      there exists a <math|x\<in\>A> such that <math|y=f<around*|(|x|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    <space|1em>
+
+    <\enumerate>
+      <item>\ 
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>Let <math|x,x<rprime|'>\<in\>A> then if
+        <math|y=f<around*|(|x|)>=f<around*|(|x<rprime|'>|)>> we have
+        <math|<around*|(|x,y|)>\<in\>f> and
+        <math|<around*|(|x<rprime|'>,y|)>> so that <math|x=x<rprime|'>>
+
+        <item*|<math|\<Leftarrow\>>>If <math|<around*|(|x,y|)>\<in\>f> and
+        <math|<around*|(|x<rprime|'>,y|)>\<in\>f> then
+        <math|y=f<around*|(|x|)>\<wedge\>y=f<around*|(|x<rprime|'>|)>> so
+        that <math|f<around*|(|x|)>=f<around*|(|x<rprime|'>|)>> so that
+        <math|x=x<rprime|'>>
+      </description>
+
+      <item>\ 
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>As <math|B=range<around*|(|f|)>> we have
+        <math|y\<in\>B> then <math|\<exists\>x> such that
+        <math|<around*|(|x,y|)>\<in\>f\<Rightarrow\>y=f<around*|(|x|)>> which
+        as <math|f\<subseteq\>A\<times\>B> proves that <math|x\<in\>A>. So
+        <math|\<forall\>y\<in\>B> <math|\<exists\>x\<in\>A> such that
+        <math|y=f<around*|(|x|)>>
+
+        <item*|<math|\<Leftarrow\>>>Let <math|y\<in\>B> then
+        <math|\<exists\>x\<in\>A> such that <math|y=f<around*|(|x|)>> or
+        <math|<around*|(|x,y|)>\<in\>f> proving that
+        <math|B\<subseteq\>range<around*|(|f|)>>, using [proposition:
+        <reference|function surjection condition>] we have that <math|f> is
+        sujective
+      </description>
+    </enumerate>
+  </proof>
+
+  <\example>
+    <label|function inclusion function><index|<math|i<rsub|B>>>Let <math|A,B>
+    be classes, <math|B\<subseteq\>A> then <math|i<rsub|B>:B\<rightarrow\>A>
+    defined by <math|i<rsub|B>=<around*|{|<around*|(|x,x|)>\|x\<in\>B|}>> is
+    a injective function. This function is called the
+    <with|font-series|bold|inclusion> function.\ 
+  </example>
+
+  <\proof>
+    First if <math|<around*|(|x,y|)>\<in\>i<rsub|B>> then
+    <math|\<exists\>b\<in\>B> such that <math|<around*|(|x,y|)>=<around*|(|b,b|)>>
+    so that <math|x=b\<in\>B\<wedge\>y=b\<in\>B\<subseteq\>A> proving that
+
+    <\equation*>
+      i<rsub|B>\<subseteq\>B*\<times\>A
+    </equation*>
+
+    Further if <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>i<rsub|B>>
+    then <math|\<exists\>b,b<rprime|'>\<in\>B> such that
+    <math|<around*|(|x,y|)>=<around*|(|b,b|)>\<wedge\><around*|(|x,y<rprime|'>|)>=<around*|(|b<rprime|'>,b<rprime|'>|)>>,
+    so that <math|x=b\<wedge\>y=b\<wedge\>x=b<rprime|'>\<wedge\>y<rprime|'>=b<rprime|'>>,
+    hence <math|y=y<rprime|'>>. So\ 
+
+    <\equation*>
+      i<rsub|B>:B\<rightarrow\>A<text| is a partial function>
+    </equation*>
+
+    If <math|x\<in\>B> then <math|<around*|(|x,x|)>\<in\>i<rsub|B>> proving
+    that <math|A\<subseteq\>dom<around*|(|i<rsub|b>|)>> so using
+    [proposition: <reference|function condition (1)>] it follows that
+
+    <\equation*>
+      i<rsub|B>:B\<rightarrow\>A<text| is a function>
+    </equation*>
+
+    Finally if <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>i<rsub|B>>
+    then there exists <math|b,b<rprime|'>\<in\>B > such that
+    <math|<around*|(|x,y|)>=<around*|(|b,b|)>\<wedge\><around*|(|x<rprime|'>,y|)>=<around*|(|b<rprime|'>,b<rprime|'>|)>>,
+    so that <math|x=b\<wedge\>y=b\<wedge\>x<rprime|'>=b<rprime|'>\<wedge\>y=b<rprime|'>>,
+    hence <math|x=x<rprime|'>>, proving injectivity.
+
+    \;
+  </proof>
+
   The following axiom ensures that the image of a set by a surjection is a
   set.
 
@@ -2976,19 +3113,6 @@
     <label|Axiom of Replacement><dueto|Axiom of Replacement>If <math|A> is a
     set and <math|f:A\<rightarrow\>B> a surjection then <math|B> is a set.
   </axiom>
-
-  <\proposition>
-    <label|function surjection condition>A function <math|f:A\<rightarrow\>B>
-    is surjective if <math|B\<subseteq\>range<around*|(|f|)>>
-  </proposition>
-
-  <\proof>
-    By [theorem: <reference|partial function set domain range>]
-    <math|range<around*|(|f|)>\<subseteq\>B>, so if
-    <math|B\<subseteq\>range<around*|(|f|)>> it follows from [theorem:
-    <reference|class properties (1)>] that <math|B=range<around*|(|f|)>>,
-    proving surjectivity.
-  </proof>
 
   <\proposition>
     <label|function preimage of image>If <math|f:A\<rightarrow\>B> is a a
@@ -4235,10 +4359,10 @@
   </proposition>
 
   <\proof>
-    If <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>f> then
-    <math|<around*|(|x,y|)>=<around*|(|x,F<around*|(|x|)>|)>> and
-    <math|<around*|(|x,y<rprime|'>|)>=<around*|(|x,F<around*|(|x|)>|)>> so
-    that <math|y=F<around*|(|x|)>> and <math|y<rprime|'>=F<around*|(|x|)>>
+    If <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>f> then there
+    exists <math|a,a<rprime|'>\<in\>A> such that
+    <math|<around*|(|x,y|)>=<around*|(|a,F<around*|(|a|)>|)>\<wedge\><around*|(|x,y<rprime|'>|)>\<in\><around*|(|a<rprime|'>,F<around*|(|a<rprime|'>|)>|)>>,
+    hence <math|x=a\<wedge\>x=a<rprime|'>\<wedge\>y=f<around*|(|a|)>\<wedge\>y<rprime|'>=F<around*|(|a<rprime|'>|)>\<Rightarrow\>a=a<rprime|'>\<wedge\>y<rprime|'>=F<around*|(|a|)>\<wedge\>y=F<around*|(|a|)>>
     proving that <math|y=y<rprime|'>>. So\ 
 
     <\equation*>
@@ -4389,7 +4513,7 @@
     A family <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B> is
     <with|font-series|bold|pairwise disjoint> iff <math|\<forall\>i,j\<in\>I>
     with <math|i\<neq\>j> we have <math|A<rsub|i><big|cap>A<rsub|j>=\<varnothing\>>.
-    </definition>
+  </definition>
 
   <\notation>
     If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B> is pairwise
@@ -5936,8 +6060,9 @@
   <\definition>
     <label|equivalence relation><index|equivalence
     relation><dueto|Equivalence Relation>If <math|A> is a class then a
-    relation <math|R> is a <with|font-series|bold|equivalence> relation iff
-    it is reflexive, symmetric and transitive or in other words if\ 
+    relation <math|R> is a <with|font-series|bold|equivalence>
+    <with|font-series|bold|relation> iff it is reflexive, symmetric and
+    transitive or in other words if\ 
 
     <\description>
       <item*|reflectivity><math|\<forall\>x\<in\>A> <math|x R x>
@@ -5978,12 +6103,14 @@
     however <math|<around*|(|2|)>> is clearly satisfied.
   </note>
 
-  We can also formulate s partition of <math|A> this in the following way
+  We can also reformulate the definition of a partition of <math|A> in the
+  following way
 
   <\theorem>
     <label|equivalence relation partition alternative>Let <math|A> be a set
-    then a family <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|A|)>>
-    of non empty subsets of <math|A> then we have the following equivalences
+    and <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|A|)>>
+    a family of non empty subsets of <math|A> then we have the following
+    equivalences
 
     <\enumerate>
       <item><math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|A|)>>
@@ -6026,10 +6153,8 @@
         there exists a <math|i\<in\>I> such that <math|x\<in\>A<rsub|i>>
 
         <item>Let <math|i,j\<in\>I> with <math|A<rsub|i><big|cap>A<rsub|j>\<neq\>\<varnothing\>>.
-        Assume that <math|A<rsub|i>\<neq\>A<rsub|j>> then by (1.b)
-        <math|A<rsub|i><big|cap>A<rsub|j>=\<varnothing\>> contradicting
-        <math|A<rsub|i><big|cap>A<rsub|j>\<neq\>\<varnothing\>>, so we must
-        have that <math|A<rsub|i>=A<rsub|j>>.
+        As by definition of a partition <math|A<rsub|i><big|cap>A<rsub|j>=\<varnothing\>\<vee\>A<rsub|i>=A<rsub|j>>
+        we must have that <math|A<rsub|i>=A<rsub|j>>.
       </enumerate-alpha>
 
       <item*|<math|2\<Rightarrow\>3>>\ 
@@ -6047,7 +6172,7 @@
       <item*|<math|3\<Rightarrow\>1>>\ 
 
       <\enumerate-alpha>
-        <item>Using (2.a) it follows that
+        <item>Using (3.a) it follows that
         <math|A\<subseteq\><big|cup><rsub|i\<in\>I>A<rsub|i>>. If
         <math|z\<in\><big|cup><rsub|i\<in\>I>A<rsub|i>> then there exists a
         <math|i\<in\>I> such that <math|x\<in\>A<rsub|i>> [theorem:
@@ -6068,8 +6193,7 @@
     </description>
   </proof>
 
-  We define equivalence classes that will be used to partition a set based on
-  a equivalence relation
+  We show now how a equivalence relation can be used to partition a set.
 
   <\definition>
     <label|equivalence relation class><index|<math|R<around*|[|x|]>>>Let
@@ -6093,7 +6217,7 @@
 
   <\theorem>
     <label|equivalence relation R[x]=R[y]>Let <math|A> be a set with a
-    equivalence relation <math|R> in <math|A> then we have\ 
+    equivalence relation <math|R> in <math|A> then\ 
 
     <\enumerate>
       <item><math|\<forall\>x\<in\>A> we have <math|x\<in\>R<around*|[|x|]>>
@@ -6102,6 +6226,12 @@
 
       <\equation*>
         x R y\<Leftrightarrow\>R<around*|[|x|]>=R<around*|[|y|]>
+      </equation*>
+
+      <item><math|\<forall\>x\<in\>A> we have
+
+      <\equation*>
+        y\<in\>R<around*|[|x|]>\<Leftrightarrow\>R<around*|[|x|]>=R<around*|[|y|]>
       </equation*>
     </enumerate>
   </theorem>
@@ -6127,6 +6257,16 @@
         <math|x\<in\>R<around*|[|x|]>\<Rightarrowlim\><rsub|R<around*|[|x|]>=R<around*|[|y|]>>x\<in\>R<around*|[|y|]>>
         proving that <math|r R y>
       </description>
+
+      <item>\ 
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>If <math|y\<in\>R<around*|[|x|]>> then
+        <math|y R x> hence by (2) <math|R<around*|[|x|]>=R<around*|[|y|]>>
+
+        <item*|<math|\<Leftarrow\>>>If <math|R<around*|[|x|]>=R<around*|[|y|]>>
+        then <math|y R x> provomg that <math|y\<in\>R<around*|[|x|]>>
+      </description>
     </enumerate>
   </proof>
 
@@ -6135,7 +6275,7 @@
   elements of the set.
 
   <\definition>
-    Let <math|A> is a set and <math|R> a equivalence relation in <math|A>
+    Let <math|A> be a set and <math|R> a equivalence relation in <math|A>
     then <math|<around*|{|R<around*|[|x|]>|}><rsub|x\<in\>A>\<subseteq\>\<cal-P\><around*|(|X|)>>
     is the family defined by the function
     <math|R<around*|[||]>:A\<rightarrow\>\<cal-P\><around*|(|A|)>> where
@@ -6177,8 +6317,8 @@
       then there exists a
 
       <\equation*>
-        z\<in\>R<around*|[|x|]><big|cap>R<around*|[|y|]>\<Rightarrow\>x R
-        z\<wedge\>y R z\<Rightarrowlim\><rsub|symmetry>x R z\<wedge\>z R
+        z\<in\>R<around*|[|x|]><big|cap>R<around*|[|y|]>\<Rightarrow\>z R
+        x\<wedge\>z R y\<Rightarrowlim\><rsub|symmetry>x R z\<wedge\>z R
         y\<Rightarrowlim\><rsub|transitivity>x R y
       </equation*>
 
@@ -6250,12 +6390,19 @@
       [a partition is a family of non empty subsets] there exists a
       <math|x\<in\>A<rsub|i>>. Take <math|y\<in\>A<rsub|i>> then
       <math|x,y\<in\>A<rsub|i>> or <math|y R x> proving that
-      <math|y\<in\>R<around*|[|x|]>>. Take <math|y\<in\>R<around*|[|x|]>>
-      then <math|y R x> so there exist a <math|j\<in\>I> such that
-      <math|x,y\<in\>A<rsub|j>>, hence <math|A<rsub|i><big|cap>A<rsub|j>\<neq\>\<varnothing\>>
-      which by [theorem: <reference|equivalence relation partition
-      alternative>] proves that <math|A<rsub|i>=A<rsub|j>>, so that
-      <math|y\<in\>A<rsub|i>>. So\ 
+      <math|y\<in\>R<around*|[|x|]>>. So\ 
+
+      <\equation*>
+        A<rsub|i>\<subseteq\>R<around*|[|x|]>
+      </equation*>
+
+      Take <math|y\<in\>R<around*|[|x|]>> then <math|y R x> so there exist a
+      <math|j\<in\>I> such that <math|x,y\<in\>A<rsub|j>>, hence
+      <math|A<rsub|i><big|cap>A<rsub|j>\<neq\>\<varnothing\>> which by
+      [theorem: <reference|equivalence relation partition alternative>]
+      proves that <math|A<rsub|i>=A<rsub|j>>, so that
+      <math|y\<in\>A<rsub|i>>. So <math|R<around*|[|x|]>\<subseteq\>A<rsub|i>>
+      giving
 
       <\equation*>
         A<rsub|i>=R<around*|[|x|]>
@@ -6264,17 +6411,26 @@
       <item>If <math|x\<in\>A> then <math|\<exists\>i\<in\>I> such that
       <math|x\<in\>A<rsub|i>>. Take <math|y\<in\>A<rsub|i>> then
       <math|x,y\<in\>A<rsub|i>> or <math|y R x> proving that
-      <math|y\<in\>R<around*|[|x|]>>. Take <math|y\<in\>R<around*|[|x|]>>
-      then <math|y R x> so there exist a <math|j\<in\>I> such that
-      <math|x,y\<in\>A<rsub|j>>, hence <math|A<rsub|i><big|cap>A<rsub|j>\<neq\>\<varnothing\>>
-      which by [theorem: <reference|equivalence relation partition
-      alternative>] proves that <math|A<rsub|i>=A<rsub|j>>, so that
-      <math|y\<in\>A<rsub|i>>. So\ 
+      <math|y\<in\>R<around*|[|x|]>>, hence
+
+      <\equation*>
+        A<rsub|i>\<subseteq\>R<around*|[|x|]>
+      </equation*>
+
+      \ Take <math|y\<in\>R<around*|[|x|]>> then <math|y R x> so there exist
+      a <math|j\<in\>I> such that <math|x,y\<in\>A<rsub|j>>, hence
+      <math|A<rsub|i><big|cap>A<rsub|j>\<neq\>\<varnothing\>> which by
+      [theorem: <reference|equivalence relation partition alternative>]
+      proves that <math|A<rsub|i>=A<rsub|j>>, so that
+      <math|y\<in\>A<rsub|i>>. So <math|R<around*|[|x|]>\<subseteq\>A<rsub|i>>
+      giving
 
       <\equation*>
         A<rsub|i>=R<around*|[|x|]>
       </equation*>
     </enumerate>
+
+    \;
   </proof>
 
   <\definition>
@@ -6304,8 +6460,14 @@
     </equation*>
   </note>
 
-  We can use function to generate a equivalence relation on the domain of the
-  function based on a equivalence relation on the target of the function.
+  <subsection|Functions and equivalence relations>
+
+  In this section we show how a function can be decomposed as the composition
+  of a surject, a bijection and injection. First we examine the relation
+  between functions and equivalence relations.
+
+  We can use functions to generate a equivalence relation on the domain of
+  the function based on a equivalence relation on the target of the function.
 
   <\theorem>
     <label|equivalence relation function><math|f:A\<rightarrow\>B> a function
@@ -6313,10 +6475,10 @@
 
     <\equation*>
       f<around*|\<langle\>|R|\<rangle\>>=<around*|{|<around*|(|x,y|)>\|f<around*|(|x|)>
-      R f<around*|(|y|)>|}>
+      R f<around*|(|y|)>|}>\<subseteq\>A\<times\>A
     </equation*>
 
-    is a equivalence relation
+    is a equivalence relation in A
   </theorem>
 
   <\proof>
@@ -6325,11 +6487,11 @@
     <\description>
       <item*|reflectivity>If <math|x\<in\>A> then
       <math|f<around*|(|x|)>\<in\>B> so that <math|f<around*|(|x|)> R
-      f<around*|(|x|)>> then by definition <math|x R x>
+      f<around*|(|x|)>> hence by definition <math|x R x>
 
       <item*|symmetric>If <math|x R y> then <math|f<around*|(|x|)> R
       f<around*|(|y|)>> so that <math|f<around*|(|y|)> R f<around*|(|x|)>>
-      proving then <math|y R x>
+      proving <math|y R x>
 
       <item*|transitivity>If <math|x R y\<wedge\>y R z> then
       <math|f<around*|(|x|)> R f<around*|(|y|)>\<wedge\>f<around*|(|y|)> R
@@ -6342,12 +6504,12 @@
 
   <\theorem>
     <label|equivalence relation subsets>Let <math|A> be a class,
-    <math|B\<subseteq\>A> a subclass and <math|R> eq equivalence relation in
+    <math|B\<subseteq\>A> a subclass and <math|R> a equivalence relation in
     <math|R> then <math|R<rsub|\|B>> defined by\ 
 
     <\equation*>
       R<rsub|\|B>=<around*|{|<around*|(|x,y|)>\|x\<in\>B\<wedge\>y\<in\>B\<wedge\>x
-      R y|}>
+      R y|}>=R<big|cap><around*|(|B\<times\>B|)>
     </equation*>
 
     is a equivalence relation.
@@ -6360,13 +6522,13 @@
       <item*|reflexivity>If <math|x\<in\>B> then <math|x R x> so that <math|x
       R<rsub|\|B> x>
 
-      <item*|symmetric>If <math|xR<rsub|<around*|\||B|\<nobracket\>>>y\<Rightarrow\>x\<in\>B\<wedge\>y\<in\>B\<wedge\>xRy\<Rightarrow\>x\<in\>B\<wedge\>y\<in\>B\<wedge\>yRx\<Rightarrow\>yR<rsub|<around*|\||B|\<nobracket\>>>x>
+      <item*|symmetric>If <math|x R<rsub|<around*|\||B|\<nobracket\>>>y\<Rightarrow\>x\<in\>B\<wedge\>y\<in\>B\<wedge\>xRy\<Rightarrow\>yR<rsub|<around*|\||B|\<nobracket\>>>x>
 
-      <item*|transitivity>If <math|xR<rsub|<around*|\||B|\<nobracket\>>>y\<wedge\>yR<rsub|<around*|\||B|\<nobracket\>>>z\<Rightarrow\>x\<in\>B\<wedge\>y\<in\>B\<wedge\>z\<in\>B\<wedge\>xRy\<wedge\>yRz\<Rightarrow\>x\<in\>B\<wedge\>z\<in\>B\<wedge\>xRz\<Rightarrow\>xR<rsub|<around*|\||B|\<nobracket\>>>z>
+      <item*|transitivity>If <math|x R<rsub|\|B> y\<wedge\>y R<rsub|\|B> z>
+      then <math|x,y,z\<in\>\<bbb-R\>> and <math|x R y\<wedge\>y R z> so that
+      <math|x,z\<in\>B> and <math|x R z> proving <math|x R<rsub|\|B> z>
     </description>
   </proof>
-
-  <subsection|Equivalence relations and functions>
 
   <\theorem>
     <label|equivalence relation determined by a function>If
@@ -6388,7 +6550,7 @@
       <math|f<around*|(|x|)>=f<around*|(|x|)>> proving that <math|x R<rsub|f>
       x>
 
-      <item*|symmetic>If <math|x R<rsub|f> y> then
+      <item*|symmetric>If <math|x R<rsub|f> y> then
       <math|f<around*|(|x|)>=f<around*|(|y|)>\<Rightarrow\>f<around*|(|y|)>=f<around*|(|x|)>>
       proving that <math|y R<rsub|f> x>
 
@@ -6403,7 +6565,7 @@
   relation
 
   <\theorem>
-    <label|equivalence relation conical function><index|canonical
+    <label|equivalence relation canical function><index|canonical
     function><dueto|Canonical Function>Let <math|A> be a set and <math|R> a
     equivalence relation in <math|A> then:
 
@@ -6417,7 +6579,7 @@
   </theorem>
 
   <math|f<rsub|R>:A\<rightarrow\>A/R> is called the
-  <with|font-series|bold|Canical function associated with <math|R>>
+  <with|font-series|bold|Canonical function associated with <math|R>>
 
   <\proof>
     \ 
@@ -6446,7 +6608,7 @@
       <\eqnarray*>
         <tformat|<table|<row|<cell|<around*|(|x,y|)>\<in\>R>|<cell|\<Leftrightarrow\>>|<cell|x
         R y>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<text|[theorem:
-        <reference|equivalence relation R[x]=R[y]>>>>|<cell|R<around*|[|x|]>=R<around*|[|y|]>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|x,y|)>\<in\>R<rsub|f<rsub|R>>>>>>
+        <reference|equivalence relation R[x]=R[y]>]>>>|<cell|R<around*|[|x|]>=R<around*|[|y|]>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|f<rsub|R><around*|(|x|)>=f<rsub|R><around*|(|y|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|x,y|)>\<in\>R<rsub|f<rsub|R>>>>>>
       </eqnarray*>
     </enumerate>
   </proof>
@@ -6456,13 +6618,1278 @@
 
   \;
 
-  \;
+  <\theorem>
+    <label|equivalence relation canonical decomposition of a function>Let
+    <math|A,B> be sets and <math|f:A\<rightarrow\>B> a function and define
+    the following functions:
+
+    <\enumerate-alpha>
+      <item><math|s<rsub|f>:A/R<rsub|f>\<rightarrow\>f<around*|(|A|)>> where
+      <math|s<rsub|f>=<around*|{|<around*|(|R<rsub|f><around*|[|x|]>,f<around*|(|x|)>|)>\|x\<in\>A|}>>
+
+      <item><math|i<rsub|f<around*|(|A|)>>:f<around*|(|A|)>\<rightarrow\>B>
+      where <math|i<rsub|f<around*|(|A|)>>=<around*|{|<around*|(|x,x|)>\|x\<in\>f<around*|(|A|)>|}>>
+      [the inclusion function see [example: <reference|function inclusion
+      function>]
+
+      <item><math|f<rsub|R<rsub|f>>:A\<rightarrow\>A/R<rsub|f>> where
+      <math|f<rsub|R<rsub|f>><around*|(|x|)>=R<rsub|f><around*|[|x|]>>
+      [theorem: <reference|equivalence relation canical function>]
+    </enumerate-alpha>
+
+    then\ 
+
+    <\enumerate>
+      <item><math|><math|s<rsub|f>:A/R<rsub|f>\<rightarrow\>f<around*|(|A|)>>
+      is a bijection
+
+      <item><math|i<rsub|f<around*|(|A|)>>:f<around*|(|A|)>\<rightarrow\>B>
+      is a injective function
+
+      <item><math|f<rsub|R<rsub|f>>:A\<rightarrow\>A/R<rsub|f>><space|1em>is
+      a surjective function
+
+      <item><math|f=i<rsub|f<around*|(|A|)>>\<circ\><around*|(|s<rsub|f>\<circ\>f<rsub|R<rsub|f>>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|partial function associativity>]>><around*|(|i<rsub|f<around*|(|A|)>>\<circ\>s<rsub|f>|)>\<circ\>f<rsub|R<rsub|f>>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    Using \ [example: <reference|function inclusion function>] and [theorem:
+    <reference|equivalence relation canical function>] we have that
+
+    <\equation*>
+      i<rsub|f<around*|(|A|)>>:f<around*|(|A|)>\<rightarrow\>B <text| is a
+      injective function>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      f<rsub|R<rsub|f>>:A\<rightarrow\>A/R<rsub|f><text| is sutjective
+      function>
+    </equation*>
+
+    We proceed now to prove that <math|s<rsub|f>> is a bijection. If
+    <math|<around*|(|x,y|)>\<in\>s<rsub|f>> then there exists a
+    <math|a\<in\>A> such that <math|<around*|(|x,y|)>=<around*|(|R<rsub|f><around*|[|a|]>,f<around*|(|a|)>|)>>
+    hence <math|x=R<rsub|f><around*|[|a|]>\<in\>A/R<rsub|f>> and
+    <math|y=f<around*|(|a|)>\<Rightarrow\><around*|(|a,y|)>\<in\>f\<Rightarrow\>y\<in\>f<around*|(|A|)>>.
+    So that <math|<around*|(|x,y|)>\<in\><around*|(|A/R<rsub|f>|)>\<times\>f<around*|(|A|)>>
+    or\ 
+
+    <\equation*>
+      s<rsub|f>\<subseteq\><around*|(|A/R<rsub|f>|)>\<times\>f<around*|(|A|)>
+    </equation*>
+
+    If <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>s<rsub|f>>
+    then there exists <math|a,a<rprime|'>\<in\>A> such that
+
+    <\equation*>
+      <around*|(|x,y|)>=<around*|(|R<rsub|f><around*|[|a|]>,f<around*|(|a|)>|)>\<wedge\><around*|(|x,y<rprime|'>|)>=<around*|(|R<rsub|f><around*|[|a<rprime|'>|]>,f<around*|(|a<rprime|'>|)>|)>
+    </equation*>
+
+    or
+
+    <\equation>
+      <label|eq 3.1.009>x=R<rsub|f><around*|[|a|]>\<wedge\>y=f<around*|(|a|)>\<wedge\>x=R<rsub|f><around*|[|a<rprime|'>|]>\<wedge\>y<rprime|'>=f<around*|(|a<rprime|'>|)>
+    </equation>
+
+    From the above <math|R<rsub|f><around*|[|a|]>=x=R<rsub|f><around*|[|a<rprime|'>|]>>,
+    which using [theorem: <reference|equivalence relation R[x]=R[y]>] means
+    that <math|a R<rsub|f> a<rprime|'>>, so by the defiition of
+    <math|R<rsub|f>> [theorem: <reference|equivalence relation determined by
+    a function>] we have <math|f<around*|(|a|)>=f<around*|(|a<rprime|'>|)>>.
+    As by [eq: <reference|eq 3.1.009>] <math|y=f<around*|(|a|)>\<wedge\>y<rprime|'>=f<around*|(|a<rprime|'>|)>>
+    it follows that <math|y=y<rprime|'>>. So\ 
+
+    <\equation*>
+      s<rsub|f>:A/R<rsub|f>\<rightarrow\>f<around*|(|A|)><text| is a partial
+      function>
+    </equation*>
+
+    If <math|x\<in\>A/R<rsub|f>> then <math|\<exists\>a\<in\>A> such that
+    <math|x=<around*|[|a|]>>, hence if we take <math|y=f<around*|(|A|)>> we
+    have that <math|<around*|(|x,y|)>=<around*|(|<around*|[|a|]>,f<around*|(|a|)>|)>\<in\>s<rsub|f>>
+    proving that <math|x\<in\>dom<around*|(|s<rsub|f>|)>>. So
+    <math|A/R<rsub|f>\<subseteq\>dom<around*|(|f|)>> which by [proposition:
+    <reference|function condition (1)>] proves that\ 
+
+    <\equation*>
+      s<rsub|f>:A/R<rsub|f>\<rightarrow\>f<around*|(|A|)><text| is a
+      function>
+    </equation*>
+
+    Let <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>s<rsub|f>>
+    then <math|\<exists\>a,a<rprime|'>\<in\>A> such that
+    <math|<around*|(|x,y|)>=<around*|(|R<rsub|f><around*|[|a|]>,f<around*|(|a|)>|)>>
+    and <math|<around*|(|x<rprime|'>,y|)>=<around*|(|R<rsub|f><around*|[|a<rprime|'>|]>,f<around*|(|a<rprime|'>|)>|)>>,
+    hence\ 
+
+    <\equation>
+      <label|eq 3.2.009>x=R<rsub|f><around*|[|a|]>\<wedge\>x<rprime|'>=R<rsub|f><around*|[|a<rprime|'>|]>\<wedge\>y=f<around*|(|a|)>\<wedge\>y=f<around*|(|a<rprime|'>|)>
+    </equation>
+
+    From <math|f<around*|(|a|)>=y=f<around*|(|a<rprime|'>|)>> it follows that
+    <math|f<around*|(|a|)>=f<around*|(|a<rprime|'>|)>>, which by the
+    defiition of <math|R<rsub|f>> [theorem: <reference|equivalence relation
+    determined by a function>] proves that <math|a R<rsub|f> a<rprime|'>>.
+    Using [theorem: <reference|equivalence relation R[x]=R[y]> it follows
+    that <math|R<rsub|f><around*|[|a|]>=R<rsub|f><around*|[|a<rprime|'>|]>>
+    or using [eq: <reference|eq 3.2.009>] that <math|x=x<rprime|'>>. So we
+    have proved that\ 
+
+    <\equation>
+      <label|eq 3.3.009>s<rsub|f>:A/R<rsub|f>\<rightarrow\>f<around*|(|A|)><text|
+      is injective>
+    </equation>
+
+    Let <math|y\<in\>f<around*|(|A|)>> then there exist a <math|a\<in\>A>
+    such that <math|<around*|(|a,y|)>\<in\>f\<Rightarrow\>y=f<around*|(|a|)>>.
+    But then <math|<around*|(|R<rsub|f><around*|[|a|]>,y|)>=<around*|(|R<rsub|f><around*|[|a|]>,f<around*|(|a|)>|)>\<in\>s<rsub|f>>
+    proving that <math|y\<in\>range<around*|(|s<rsub|f>|)>>. So
+    <math|A/R<rsub|f>\<subseteq\>range<around*|(|s<rsub|f>|)>> which by
+    [proposition: <reference|function surjection condition>] proves that\ 
+
+    <\equation>
+      <label|eq 3.4.009>s<rsub|f>:A/R<rsub|f>\<rightarrow\>f<around*|(|A|)><text|
+      is surjective>
+    </equation>
+
+    Combining [eq: <reference|eq 3.3.009>] and [eq: <reference|eq 3.4.009>]
+    it follows that\ 
+
+    <\equation*>
+      s<rsub|f>:A/R<rsub|f>\<rightarrow\>f<around*|(|A|)><text| is a
+      bijection>
+    </equation*>
+
+    Now we proceed to prove that <math|f=<around*|(|i<rsub|f<around*|(|A|)>>\<circ\>s<rsub|f>|)>\<circ\>f<rsub|R<rsub|f>>>.
+    Let <math|<around*|(|x,u|)>\<in\><around*|(|i<rsub|f<around*|(|A|)>>\<circ\>s<rsub|f>|)>\<circ\>f<rsub|R<rsub|f>>>
+    then <math|\<exists\>y> such that <math|<around*|(|x,y|)>\<in\>f<rsub|R<rsub|f>>\<wedge\><around*|(|y,u|)>\<in\>i<rsub|f<around*|(|A|)>>\<circ\>s<rsub|f>>,
+    from <math|<around*|(|y,u|)>\<in\>i<rsub|f<around*|(|A|)>>\<circ\>s<rsub|f>>
+    \<exists\>z such that <math|<around*|(|y,z|)>\<in\>s<rsub|f>\<wedge\><around*|(|z,u|)>\<in\>i<rsub|f<around*|(|A|)>>>,
+    summarized
+
+    <\equation>
+      <label|eq 3.5.009><around*|(|x,y|)>\<in\>f<rsub|R<rsub|f>>\<wedge\><around*|(|y,z|)>\<in\>s<rsub|f>\<wedge\><around*|(|z,u|)>\<in\>i<rsub|f<around*|(|A|)>>
+    </equation>
+
+    From <math|<around*|(|x,y|)>\<in\>f<rsub|R<rsub|f>>> it follows that
+    <math|\<exists\>a\<in\>A> such that <math|<around*|(|x,y|)>=<around*|(|a,R<rsub|f><around*|[|a|]>|)>>
+    or\ 
+
+    <\equation>
+      <label|eq 3.6.009>x=a\<wedge\>y=R<rsub|f><around*|[|a|]>
+    </equation>
+
+    From <math|<around*|(|y,z|)>\<in\>s<rsub|f>> it folows that
+    <math|\<exists\>a<rprime|'>\<in\>A> such that
+    <math|<around*|(|y,z|)>=<around*|(|R<rsub|f><around*|[|a<rprime|'>|]>,f<around*|(|a<rprime|'>|)>|)>>
+    or <math|y=R<rsub|f><around*|[|a<rprime|'>|]>\<wedge\>z=f<around*|(|a<rprime|'>|)>>.
+    As <math|y\<equallim\><rsub|<text|[eq: <reference|eq
+    3.6.009>]>>R<rsub|f><around*|[|a|]>> we have that
+    <math|R<rsub|f><around*|[|a|]>=R<rsub|f><around*|[|a<rprime|'>|]>>, which
+    by [theorem: <reference|equivalence relation R[x]=R[y]>] proves that
+    <math|a R<rsub|f> a<rprime|'>>, so by the definition of <math|R<rsub|f>>
+    we have <math|f<around*|(|a|)>=f<around*|(|a<rprime|'>|)>> hence
+    <math|z=f<around*|(|a|)>>. From <math|<around*|(|z,u|)>\<in\>i<rsub|f<around*|(|A|)>>>
+    it follows that <math|z=u> hence <math|u=f<around*|(|a|)>>. As
+    <math|x\<equallim\><rsub|<text|[eq: <reference|eq 3.6.009>]>>a> it
+    follows that <math|<around*|(|x,u|)>=<around*|(|a,f<around*|(|a|)>|)>\<in\>f>.
+    Hence\ 
+
+    <\equation>
+      <label|eq 3.7.009><around*|(|i<rsub|f<around*|(|A|)>>\<circ\>s<rsub|f>|)>\<circ\>f<rsub|R<rsub|f>>\<subseteq\>f
+    </equation>
+
+    Finally if <math|<around*|(|x,y|)>\<in\>f> then as
+    <math|f\<subseteq\>A\<times\>B> proves that <math|x\<in\>A> and
+    <math|f<around*|(|x|)>=y\<in\>f<around*|(|A|)>>. Hence
+    <math|<around*|(|R<rsub|f><around*|[|x|]>,f<around*|(|x|)>|)>\<in\>s<rsub|f>>,
+    <math|<around*|(|x,R<rsub|f><around*|[|x|]>|)>\<in\>f<rsub|R<rsub|f>>>
+    and <math|<around*|(|f<around*|(|x|)>,y|)>=<around*|(|f<around*|(|x|)>,f<around*|(|x|)>|)>\<in\>i<rsub|f<around*|(|A|)>>>.
+    So that <math|<around*|(|R<rsub|f><around*|[|x|]>,y|)>\<in\>i<rsub|f<around*|(|A|)>>\<circ\>s<rsub|f>>
+    and <math|<around*|(|x,R<rsub|f><around*|[|x|]>|)>\<in\>f<rsub|R<rsub|f>>>
+    proving that <math|<around*|(|x,y|)>\<in\><around*|(|i<rsub|f<around*|(|A|)>>\<circ\>s<rsub|f>|)>\<circ\>f<rsub|R<rsub|f>>>.
+    So <math|f\<subseteq\><around*|(|i<rsub|f<around*|(|A|)>>\<circ\>s<rsub|f>|)>\<circ\>f<rsub|R<rsub|f>>>
+    which combined with [eq: <reference|eq 3.7.009>] gives\ 
+
+    <\equation*>
+      f=<around*|(|i<rsub|f<around*|(|A|)>>\<circ\>s<rsub|f>|)>\<circ\>f<rsub|R<rsub|f>>
+    </equation*>
+  </proof>
+
+  <\notation>
+    For the rest of this book we use the standard convention of noting a
+    equivalence relation as <math|\<sim\>>, The definition of <math|\<sim\>>
+    should then be clear from the context. If many equivalence relations are
+    used in the same context we use superscripts like
+    <math|\<sim\><rsub|\<bbb-R\>>> and <math|\<sim\><rsub|\<bbb-Z\>>> to
+    avoid conflicts.
+  </notation>
+
+  <section|Partial ordered classes>
+
+  <subsection|Order relation>
+
+  First we define a partial order relation that allows us to compare two
+  elements and specify which element 'lies before' another element. \ 
+
+  <\definition>
+    <label|order preorder><index|preorder><dueto|Pre-order>Let <math|A> be a
+    class then a relation <math|R\<subseteq\>A\<times\>A> in <math|A> is a
+    pre-order if it is <with|font-series|bold|reflexive> and
+    <with|font-series|bold|transitive> or in other words:
+
+    <\description>
+      <item*|reflectivity><math|\<forall\>x\<in\>A> we have <math|x R x>
+
+      <item*|transitivity>If <math|x R y\<wedge\>y R z> then <math|x R z>
+    </description>
+  </definition>
+
+  <\definition>
+    <label|order preordered class><index|pre-ordered
+    class><math|<around*|\<langle\>|A,R|\<rangle\>>> is a pre-ordered class
+    iff <math|A> is a class and <math|R> is a pre-order in <math|A>
+  </definition>
+
+  A order relation is a pre-order with one extra condition
+
+  <\definition>
+    <label|order order relation><index|order relation><dueto|Order
+    relation>If <math|A> is a class then a relation
+    <math|R\<subseteq\>A\<times\>A> in <math|A> is a
+    <with|font-series|bold|order> if it is a pre-order that is anti-symmetric
+    or in other words:
+
+    <\description>
+      <item*|reflectivity><math|\<forall\>x\<in\>A> we have <math|x R x>
+
+      <item*|anti-symmetry>If <math|x R y\<wedge\>y R x> then <math|x=y>
+
+      <item*|transitive>If <math|x R y\<wedge\>y R z> then <math|x R z>
+    </description>
+  </definition>
+
+  <\definition>
+    <label|order partial ordered class><index|partial ordered
+    class><dueto|Partial ordered class><math|<around*|\<langle\>|A,R|\<rangle\>>>
+    is a <with|font-series|bold|partial ordered class> if <math|A> is a class
+    and <math|R> is a order.
+  </definition>
+
+  <\notation>
+    <index|<math|\<leqslant\>>>We use the standard convention of noting a
+    pre-order relation as <math|\<leqslant\>>, The definition of
+    <math|\<leqslant\>> should then be clear from the context. If many
+    pre-order relations are used in the same context we use superscripts like
+    <math|\<leqslant\><rsub|\<bbb-R\>>> and
+    <math|\<leqslant\><rsub|\<bbb-Z\>>> or <math|\<preccurlyeq\>> to avoid
+    conflicts.
+  </notation>
+
+  <\definition>
+    <index|<math|\<less\>>>If <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>>
+    is a pre-ordered class [or partial ordered class] then <math|x\<less\>y>
+    is equivalen with <math|x\<leqslant\>y\<wedge\>x\<neq\>y>
+  </definition>
+
+  <\theorem>
+    <label|order strict order>If <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>>
+    is a partially ordered set then
+
+    <\enumerate>
+      <item><math|x\<leqslant\>y\<wedge\>y\<less\>z\<Rightarrow\>x\<less\>z>
+
+      <item><math|x\<less\>y\<wedge\>y\<leqslant\>z\<Rightarrow\>x\<less\>z>
+
+      <item><math|x\<less\>y\<wedge\>y\<less\>z\<Rightarrow\>x\<less\>z>
+
+      <item><math|<around*|(|x\<less\>y\<vee\>x=y|)>\<Leftrightarrow\><around*|(|x\<leqslant\>y|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|x\<leqslant\>y\<wedge\>y\<less\>z> then
+      <math|x\<leqslant\>y\<wedge\>y\<leqslant\>z\<wedge\>y\<neq\>z>, so that
+      <math|x\<leqslant\>z> and <math|y\<neq\>z>. Assume that <math|x=z> then
+      <math|z\<leqslant\>y\<equallim\><rsub|y\<leqslant\>z>z=y> contradicting
+      <math|y\<neq\>z>, so we must have <math|x\<neq\>z>, which together with
+      <math|x\<leqslant\>z> gives\ 
+
+      <\equation*>
+        x\<less\>z
+      </equation*>
+
+      <item>If <math|x\<less\>y\<wedge\>y\<leqslant\>z> then
+      <math|x\<leqslant\>y\<wedge\>y\<leqslant\>z\<wedge\>x\<neq\>y>, so that
+      <math|x\<leqslant\>z> and <math|x\<neq\>y>. Assume that <math|x=z> then
+      <math|y\<leqslant\>x\<Rightarrowlim\><rsub|x\<leqslant\>y>y=x>
+      contradicting <math|x\<neq\>y>, so we must have <math|x\<neq\>z>, which
+      together with <math|x\<leqslant\>z> gives\ 
+
+      <\equation*>
+        x\<less\>z
+      </equation*>
+
+      <item>If <math|x\<less\>y\<wedge\>y\<less\>z> then
+      <math|x\<neq\>y\<wedge\>x\<leqslant\>y\<wedge\>y\<less\>z> so that by
+      (1) we have <math|x\<less\>z>
+
+      <item>We have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|x\<less\>y\<vee\>x=y|)>>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|<around*|(|x\<leqslant\>y\<wedge\>x\<neq\>y|)>\<vee\>x=y|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|<around*|(|x\<leqslant\>y\<vee\>x=y|)>\<wedge\><around*|(|x\<neq\>y\<vee\>x=y|)>|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<leqslant\>y\<vee\>x=y>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<leqslant\>y>>>>
+      </eqnarray*>
+    </enumerate>
+  </proof>
+
+  <\example>
+    Let <math|A> be a class and <math|\<leqslant\>> defined by
+    <math|\<leqslant\>=<around*|{|<around*|(|x,y|)>\<in\>\<cal-P\><around*|(|A|)>\<times\>\<cal-P\><around*|(|A|)>\|x\<subseteq\>y|}>>
+    then <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>> is a partial
+    ordered class
+  </example>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|reflectivity>If <math|B\<in\>\<cal-P\><around*|(|A|)>> then by
+      [theorem: <reference|class properties (1)>] <math|A\<subseteq\>A> so
+      that <math|A\<leqslant\>A>
+
+      <item*|anti-symmetric>If <math|A\<leqslant\>B> and
+      <math|B\<leqslant\>A> then <math|A\<subseteq\>B\<wedge\>B\<subseteq\>A>
+      so that by [theorem: <reference|class properties (1)>] <math|A=B>
+
+      <item*|transitivity>If <math|A\<leqslant\>B\<wedge\>B\<leqslant\>C>
+      then <math|A\<subseteq\>B\<wedge\>B\<subseteq\>C> so that by [theorem:
+      <reference|class properties (1)>] <math|A\<subseteq\>C> or
+      <math|A\<leqslant\>C>
+    </description>
+  </proof>
+
+  Every pre-order can be used as the base to create a order relation as is
+  expressesd in the following theorem. The basic idea is that
+  <math|x\<leqslant\>y\<wedge\>y\<leqslant\>x\<Rightarrow\>x=y> is missing
+  from a pre-order. By defining a equivalence relation <math|\<sim\>> such
+  that <math|x\<sim\>y> if <math|x\<leqslant\>y\<wedge\>y\<leqslant\>x> we
+  turn this in equality of equivalence clasess. This is a typical example
+  about the use of equivalence relations, they allow you to define a new type
+  of equality, so that objects that are not equal have associated equivalence
+  classes that are equal.
+
+  <\theorem>
+    <label|eq order preorder to order>Let
+    <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>> be a pre-ordered
+    set then we have\ 
+
+    <\enumerate>
+      <item><math|\<sim\>\<subseteq\>A\<times\>A> defined by
+      <math|\<sim\>=<around*|{|<around*|(|x,y|)>\<in\>A\|x\<leqslant\>y\<wedge\>y\<leqslant\>x|}>>
+      is a equivalence relation
+
+      <item>Define <math|\<preccurlyeq\>\<subseteq\><around*|(|A/\<sim\>|)>\<times\><around*|(|A/\<sim\>|)>>
+      by\ 
+
+      <\equation*>
+        \<preccurlyeq\>=<around*|{|<around*|(|x,y|)>\<in\><around*|(|X/\<sim\>|)>\<times\><around*|(|X/\<sim\>|)>\|\<exists\>x<rprime|'>\<in\>\<sim\><around*|[|x|]><text|
+        and >\<exists\>y<rprime|'>\<in\>\<sim\><around*|[|y|]><text| such
+        that <math|x<rprime|'>\<leqslant\>y<rprime|'>>>|}>
+      </equation*>
+
+      then <math|\<preccurlyeq\>> is a order relation in <math|A/\<sim\>>. So
+      <math|<around*|\<langle\>|A/\<sim\>,\<preccurlyeq\>|\<rangle\>>> is a
+      partial ordered set
+
+      <item><math|\<forall\>x,y\<in\>A> we have
+      <math|x\<leqslant\>y\<Leftrightarrow\>\<sim\><around*|[|x|]>\<preccurlyeq\>\<sim\><around*|[|y|]>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>To prove that <math|\<sim\>> is a equivalence relation note:
+
+      <\description>
+        <item*|reflectivity>If <math|x\<in\>A> then <math|x\<leqslant\>x>
+        proving that <math|x\<sim\>x>
+
+        <item*|symmetric>If <math|x\<sim\>y> then
+        <math|x\<leqslant\>y\<wedge\>y\<leqslant\>x\<Rightarrow\>y\<leqslant\>x\<wedge\>x\<leqslant\>y>
+        so that <math|y\<sim\>x>
+
+        <item*|transitive>If <math|x\<sim\>y<infix-and>y\<sim\>z> then
+        <math|x\<leqslant\>y\<wedge\>y\<leqslant\>x\<wedge\>y\<leqslant\>z\<wedge\>z\<leqslant\>y>
+        so that <math|x\<leqslant\>z> and <math|z\<leqslant\>x> or
+        <math|x\<sim\>z>
+      </description>
+
+      <item>To prove that <math|\<preccurlyeq\>> is a order relation we must
+      prove reflectivity, symmetry and transitivity:
+
+      <\description>
+        <item*|reflexivity>Take <math|\<sim\><around*|[|x|]>> then as
+        <math|x\<leqslant\>x> there exists a
+        <math|u\<in\>\<sim\><around*|[|x|]>> and
+        <math|v\<in\>\<sim\><around*|[|x|]>> such that <math|u\<leqslant\>v>
+        [just take <math|u=x=v>] so that
+
+        <\equation*>
+          \<sim\><around*|[|x|]>\<preccurlyeq\>\<sim\><around*|[|x|]>
+        </equation*>
+
+        <item*|symmetry>Let <math|\<sim\><around*|[|x|]>\<leqslant\>\<sim\><around*|[|y|]>>
+        and <math|\<sim\><around*|[|y|]>\<leqslant\>\<sim\><around*|[|x|]>>
+        then <math|\<exists\>x<rprime|'>,x<rprime|''>\<in\>\<sim\><around*|[|x|]>>,
+        <math|\<exists\>y<rprime|'>y<rprime|''>\<in\>\<sim\><around*|[|y|]>>
+        such that\ 
+
+        <\equation*>
+          x<rprime|'>\<leqslant\>y<rprime|'>\<wedge\>y<rprime|''>\<leqslant\>x<rprime|''>
+        </equation*>
+
+        From <math|\<exists\>x<rprime|'>,x<rprime|''>\<in\>\<sim\><around*|[|x|]>>,
+        <math|\<exists\>y<rprime|'>y<rprime|''>\<in\>\<sim\><around*|[|y|]>>
+        we have\ 
+
+        <\equation*>
+          x<rprime|'>\<leqslant\>x\<wedge\>x\<leqslant\>x<rprime|'>\<wedge\>x<rprime|''>\<leqslant\>x\<wedge\>x\<leqslant\>x<rprime|''>\<wedge\>y<rprime|'>\<leqslant\>y\<wedge\>y\<leqslant\>y<rprime|'>\<wedge\>y<rprime|''>\<leqslant\>y\<wedge\>y\<leqslant\>y<rprime|''>
+        </equation*>
+
+        From <math|x\<leqslant\>x<rprime|'>> and
+        <math|x<rprime|'>\<leqslant\>y<rprime|'>> we have
+        <math|x\<leqslant\>y<rprime|'>>, as <math|y<rprime|'>\<leqslant\>y>
+        we have\ 
+
+        <\equation*>
+          x\<leqslant\>y
+        </equation*>
+
+        From <math|y\<leqslant\>y<rprime|''>> and
+        <math|y<rprime|''>\<leqslant\>x<rprime|''>> we have
+        <math|y\<leqslant\>x<rprime|''>>, as <math|x<rprime|''>\<leqslant\>x>
+        it follows that
+
+        <\equation*>
+          y\<leqslant\>x
+        </equation*>
+
+        Finally from <math|x\<leqslant\>y> and <math|y\<leqslant\>x> we have
+        that <math|x\<sim\>y which by <around*|[|theorem:<reference|equivalence
+        relation R[x]=R[y]>|]>> gives\ 
+
+        <\equation*>
+          \<sim\><around*|[|x|]>=\<sim\><around*|[|y|]>
+        </equation*>
+
+        <item*|transitivity>Assume that <math|\<sim\><around*|[|x|]>\<preccurlyeq\>\<sim\><around*|[|y|]>>
+        and <math|\<sim\><around*|[|y|]>\<preccurlyeq\>\<sim\><around*|[|z|]>>
+        then we have the existance of <math|x<rprime|'>\<in\>\<sim\><around*|[|x|]>>,
+        <math|y<rprime|'>,y<rprime|''>\<in\>\<sim\><around*|[|y|]>> and
+        <math|z<rprime|'>\<in\>\<sim\><around*|[|z|]>> such that\ 
+
+        <\equation*>
+          x<rprime|'>\<leqslant\>y<rprime|'>\<wedge\>y<rprime|''>\<leqslant\>z<rprime|'>
+        </equation*>
+
+        From <math|><math|x<rprime|'>\<in\>\<sim\><around*|[|x|]>>,
+        <math|y<rprime|'>,y<rprime|''>\<in\>\<sim\><around*|[|y|]>> and
+        <math|z<rprime|'>\<in\>\<sim\><around*|[|z|]>> it follows that\ 
+
+        <\equation*>
+          x<rprime|'>\<leqslant\>x\<wedge\>x\<leqslant\>x<rprime|'>\<wedge\>y<rprime|'>\<leqslant\>y\<wedge\>y\<leqslant\>y<rprime|'>\<wedge\>y<rprime|''>\<leqslant\>y\<wedge\>y\<leqslant\>y<rprime|''>\<wedge\>z<rprime|'>\<leqslant\>z\<wedge\>z\<leqslant\>z<rprime|'>
+        </equation*>
+
+        From <math|x\<leqslant\>x<rprime|'>> and
+        <math|x<rprime|'>\<leqslant\>y<rprime|'>> we have
+        <math|x\<leqslant\>y<rprime|'>>, as <math|y<rprime|'>\<leqslant\>y>
+        we have <math|x\<leqslant\>y>, as <math|y\<leqslant\>y<rprime|''>> it
+        follows that <math|x\<leqslant\>y<rprime|''>>, from
+        <math|y<rprime|''>\<leqslant\>z<rprime|'>> we have that
+        <math|x\<leqslant\>z<rprime|'>> and finally from
+        <math|z<rprime|'>\<leqslant\>z> it follows that
+        <math|x\<leqslant\>z>. Hence
+
+        <\equation*>
+          \<sim\><around*|[|x|]>\<preccurlyeq\>\<sim\><around*|[|z|]>
+        </equation*>
+      </description>
+
+      <item>\ 
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>If <math|x\<leqslant\>y> then as
+        <math|x\<in\>\<sim\><around*|[|x|]>> and
+        <math|y\<in\>\<sim\><around*|[|y|]>> we have
+        <math|\<sim\><around*|[|x|]>\<preccurlyeq\>\<sim\><around*|[|y|]>>
+
+        <item*|<math|\<Leftarrow\>>>If <math|\<sim\><around*|[|x|]>\<preccurlyeq\>\<sim\><around*|[|y|]>>
+        then <math|\<exists\>x<rprime|'>\<in\>\<sim\><around*|[|x|]>> and
+        <math|\<exists\>y<rprime|'>\<in\>\<sim\><around*|[|y|]>> such that
+
+        <\equation*>
+          x<rprime|'>\<leqslant\>y<rprime|'>
+        </equation*>
+
+        From <math|x<rprime|'>\<in\>\<sim\><around*|[|x|]>> and
+        <math|y<rprime|'>\<in\>\<sim\><around*|[|y|]>> we have that\ 
+
+        <\equation*>
+          x<rprime|'>\<leqslant\>x\<wedge\>x\<leqslant\>x<rprime|'>\<wedge\>y<rprime|'>\<leqslant\>y\<wedge\>y\<leqslant\>y<rprime|'>
+        </equation*>
+
+        From <math|x\<leqslant\>x<rprime|'>> and
+        <math|x<rprime|'>\<leqslant\>y<rprime|'>> it follows that
+        <math|x\<leqslant\>y<rprime|'>> and as
+        <math|y<rprime|'>\<leqslant\>y> it follows that\ 
+
+        <\equation*>
+          x\<leqslant\>y
+        </equation*>
+      </description>
+    </enumerate>
+  </proof>
+
+  Given a partial ordered class then we can induce the order on a sub class
+  making the subclass also a partial ordered class.
+
+  <\theorem>
+    <label|order partial order on sub class>If
+    <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>> is a partial
+    ordered sets and <math|B\<subseteq\>A> then <math|\<leqslant\><rsub|\|B>>
+    defined by\ 
+
+    <\equation*>
+      \<leqslant\><rsub|\|B>=\<leqslant\><big|cap>B\<times\>D=B
+    </equation*>
+
+    is a order relation in <math|B> making
+    <math|<around*|\<langle\>|B,\<leqslant\><rsub|\|B>|\<rangle\>>> a partial
+    ordered set.
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|reflectivity>If <math|x\<in\>B> then <math|x\<leqslant\>x> or
+      <math|<around*|(|x,x|)>\<in\>\<leqslant\>\<Rightarrowlim\><rsub|x\<in\>B><around*|(|x,x|)>\<in\>\<leqslant\><big|cap><around*|(|B\<times\>B|)>>
+      hence <math|x \<leqslant\><rsub|\|B>y>
+
+      <item*|symmetry>If <math|x\<leqslant\><rsub|<around*|\||B|\<nobracket\>>>y\<wedge\>y\<leqslant\><rsub|<around*|\||B|\<nobracket\>>>x\<Rightarrow\>x\<leqslant\>y\<wedge\>y\<leqslant\>x\<Rightarrow\>x=y>
+
+      <item*|transitivity>If <math|x\<leqslant\><rsub|<around*|\||B|\<nobracket\>>>y\<wedge\>y\<leqslant\><rsub|<around*|\||B|\<nobracket\>>>z\<Rightarrow\>x\<leqslant\>y\<wedge\>y\<leqslant\>z\<Rightarrow\>x\<leqslant\>z\<Rightarrowlim\><rsub|x,z\<in\>B>x\<leqslant\><rsub|<around*|\||B|\<nobracket\>>>z>
+    </description>
+  </proof>
+
+  The following shows a technique of defining a partial order on the
+  cartesian product of partial ordered set.
+
+  <\theorem>
+    <label|order lexical order><dueto|Lexical ordering>Let
+    <math|<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>> and
+    <math|<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>> be partial
+    ordered classes then <math|\<leqslant\><rsub|A\<times\>B>> defined by\ 
+
+    <\equation*>
+      \<leqslant\><rsub|A\<times\>B>=<around*|{|<around*|(|<around*|(|x,y|)>,<around*|(|u,v|)>|)>\<in\><around*|(|A\<times\>B|)>\<times\><around*|(|A\<times\>B|)>\|<around*|(|x\<neq\>u\<wedge\>x\<leqslant\><rsub|A>u|)>\<vee\><around*|(|x=y\<wedge\>y\<leqslant\><rsub|B>v|}>|\<nobracket\>>
+    </equation*>
+
+    is a order in <math|A\<times\>B> making
+    <math|<around*|\<langle\>|<around*|(|A\<times\>B|)>\<times\><around*|(|A\<times\>B|)>,\<leqslant\><rsub|A\<times\>B>|\<rangle\>>>
+    a partial ordered set
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|reflexivity>If <math|<around*|(|x,y|)>\<in\>A\<times\>B> then
+      <math|x\<leqslant\><rsub|A>x\<wedge\>y\<leqslant\><rsub|B>y> proving
+      that <math|<around*|(|x,y|)>\<leqslant\><rsub|A\<times\>B><around*|(|x,y|)>>
+
+      <item*|symmetry>Let <math|<around*|(|x,y|)>\<leqslant\><rsub|A\<times\>B><around*|(|u,v|)>\<wedge\><around*|(|u,v|)>\<leqslant\><rsub|A\<times\>B><around*|(|x,y|)>>.
+      If <math|x\<neq\>u> we would have <math|x\<leqslant\><rsub|A>u\<wedge\>u\<leqslant\><rsub|A>x\<Rightarrow\>x=u>
+      a contradiction. So we must have that <math|x=u> but then
+      <math|y\<leqslant\><rsub|B>v\<wedge\>v\<leqslant\><rsub|\|B>y\<Rightarrow\>y=v>
+      proving that\ 
+
+      <\equation*>
+        <around*|(|x,y|)>=<around*|(|u,v|)>
+      </equation*>
+
+      <item*|transitivity>Let <math|<around*|(|x,y|)>\<leqslant\><rsub|A\<times\>B><around*|(|u,v|)>\<wedge\><around*|(|u,v|)>\<leqslant\><rsub|A\<times\>B><around*|(|r,s|)>>
+      then we have to consider the folowing cases:
+
+      <\description>
+        <item*|<math|x=u>> Then <math|y\<leqslant\><rsub|B>v> and we have the
+        following possibilities
+
+        <\description>
+          <item*|<math|u=r>>Then <math|v\<leqslant\><rsub|B>s> so that
+          <math|y\<leqslant\><rsub|B>s> which as <math|x=r> proves that\ 
+
+          <\equation*>
+            <around*|(|x,y|)>\<leqslant\><rsub|A\<times\>B><around*|(|r,s|)>
+          </equation*>
+
+          <item*|<math|u\<neq\>r>>Then <math|u\<leqslant\><rsub|A>r\<Rightarrowlim\><rsub|x=u>x\<leqslant\><rsub|A>r>
+          which as <math|x\<neq\>r> proves that\ 
+
+          <\equation*>
+            <around*|(|x,y|)>\<leqslant\><rsub|A\<times\>B><around*|(|r,s|)>
+          </equation*>
+        </description>
+
+        <item*|<math|x\<neq\>u>>Then <math|x\<leqslant\><rsub|A>u> and we
+        have the following possibilities
+
+        <\description>
+          <item*|<math|u=r>>Then <math|x\<leqslant\><rsub|A>u\<Rightarrowlim\><rsub|u=r>x\<leqslant\><rsub|A>r>
+          and <math|x\<neq\>r> so that\ 
+
+          <\equation*>
+            <around*|(|x,y|)>\<leqslant\><rsub|A\<times\>B><around*|(|r,s|)>
+          </equation*>
+
+          <item*|<math|u\<neq\>r>>Then <math|u\<leqslant\><rsub|A>r> so that
+          <math|x\<leqslant\><rsub|A>r>. If <math|x=r> then we would have
+          <math|x\<leqslant\><rsub|A>u\<wedge\>u\<leqslant\><rsub|A>x>
+        </description>
+
+        giving <math|x=u> contradicting <math|x\<neq\>u>. So we must have
+        <math|x\<neq\>r> which as <math|x\<leqslant\><rsub|A>r> gives\ 
+
+        <\equation*>
+          <around*|(|x,y|)>\<leqslant\><rsub|A\<times\>B><around*|(|r,s|)>
+        </equation*>
+      </description>
+    </description>
+  </proof>
+
+  <\definition>
+    <label|order comparable><index|comparable elements>Let
+    <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>> be a partial
+    ordered class then <math|x,y\<in\>A> are
+    <with|font-series|bold|comparable> if <math|x\<leqslant\>y> or
+    <math|y\<leqslant\>x>
+  </definition>
+
+  <\theorem>
+    <label|order comparable property><label|order comparable
+    property><index|comparable elements>Let
+    <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>> be a partial
+    ordered class and <math|x,y\<in\>A> comparable elements then we have
+    either <math|x\<leqslant\>y> or <math|y\<less\>x>
+  </theorem>
+
+  <\proof>
+    As <math|x,y> are comparable then we have
+    <math|x\<leqslant\>y\<vee\>y\<leqslant\>x>, consider the following cases:
+
+    <\description>
+      <item*|<math|x\<leqslant\>y>>hen <math|x\<leqslant\>y>
+
+      <item*|<math|\<neg\><around*|(|x\<leqslant\>y|)>>>then we must have
+      <math|y\<leqslant\>x>. If <math|x=y> then as <math|x\<leqslant\>x> we
+      have <math|x\<leqslant\>y> contradicting
+      <math|\<neg\><around*|(|x\<leqslant\>y|)>> so that <math|x\<neq\>y>
+      proving <math|y\<less\>x>.
+    </description>
+
+    Hence we have\ 
+
+    <\equation*>
+      x\<leqslant\>y\<vee\>y\<less\>x
+    </equation*>
+
+    \;
+  </proof>
+
+  <\definition>
+    <label|totally ordered class><index|totally ordered class><index|fully
+    ordered class><index|linear ordered class>A pre-ordered class
+    <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>> is a
+    <with|font-series|bold|totally ordered class> iff
+
+    <\equation*>
+      \<forall\>x,y\<in\>A<text| we have >x\<leqslant\>y\<vee\>y\<leqslant\>x
+    </equation*>
+
+    In other words <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>> is a
+    <with|font-series|bold|totally ordered class> if every pair of elements
+    are comparable. Other names used in the literature are
+    <with|font-series|bold|fully ordered class> or
+    <with|font-series|bold|linear ordered class>.
+  </definition>
+
+  <\definition>
+    <label|order chain><index|chain><dueto|chain>Let
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a partial
+    ordered class and <math|B\<subseteq\>A> then <math|B> is called a
+    <with|font-series|bold|chain> if <math|\<forall\>x,y\<in\>B> we have that
+    <math|x\<leqslant\>y> or <math|y\<leqslant\>x>.
+  </definition>
+
+  <\theorem>
+    <label|order chain is a totally ordered class>Let
+    <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>> be a partial
+    ordered class and <math|B\<subseteq\>A> a chain then
+    <math|<around*|\<langle\>|B,\<leqslant\><rsub|\|B>|\<rangle\>>> is a
+    totally ordered class
+  </theorem>
+
+  <\proof>
+    Using [theorem: <reference|order partial order on sub class>] we have
+    that <math|<around*|\<langle\>|B,\<leqslant\><rsub|\|B>|\<rangle\>>> is a
+    partial ordered class. Let <math|x,y\<in\>B> then as <math|B> is a chain
+    we have that <math|\<forall\>x,y\<in\>B>
+    <math|x\<leqslant\>y\<vee\>y\<leqslant\>x> or using the definition of
+    <math|\<leqslant\><rsub|\|B>> that <math|x\<leqslant\><rsub|\|B>y\<vee\>y\<leqslant\><rsub|\|B>x>.
+  </proof>
+
+  <\theorem>
+    <label|order totally ordered subclass>Let
+    <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>> be a totally
+    ordered class and <math|B\<subseteq\>A> then <math|B> is a chain [hence
+    by [theorem: <reference|order chain is a totally ordered class>]
+    <math|<around*|\<langle\>|B,\<leqslant\><rsub|\|B>|\<rangle\>>> is a
+    totally ordered class]
+  </theorem>
+
+  <\proof>
+    If <math|x,y\<in\>B> then <math|x,y\<in\>A> and as <math|A> is totally
+    ordered we have <math|x\<leqslant\>y\<vee\>y\<leqslant\>x> so <math|B> is
+    a chain
+  </proof>
+
+  <\theorem>
+    <label|order totally lexicol ordering>Let
+    <math|<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>> and
+    <math|<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>> be totally
+    ordered classes then <math|<around*|\<langle\>|A\<times\>B,\<leqslant\><rsub|A\<times\>B>|\<rangle\>>>
+    is a totally ordered class.
+  </theorem>
+
+  <\proof>
+    First <math|<around*|\<langle\>|A\<times\>B,\<leqslant\><rsub|A\<times\>B>|\<rangle\>>>
+    is a partially ordered class by [theorem: <reference|order lexical
+    order>]. If \ <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y<rprime|'>|)>\<in\>A\<times\>B>
+    then we have for <math|x,x<rprime|'>> either\ 
+
+    <\description>
+      <item*|<math|x=x<rprime|'>>>As <math|<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>>
+      is fully ordered we have either\ 
+
+      <\description>
+        <item*|<math|y\<leqslant\>y<rprime|'>>>then
+        <math|<around*|(|x,y|)>\<leqslant\><around*|(|x<rprime|'>,y<rprime|'>|)>>
+
+        <item*|<math|y<rprime|'>\<leqslant\>y>>then
+        <math|<around*|(|x<rprime|'>,y<rprime|'>|)>\<leqslant\><around*|(|x,y|)>>
+      </description>
+
+      <item*|<math|x\<neq\>x<rprime|'>>>As
+      <math|<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>> is fully
+      ordered we have either\ 
+
+      <\description>
+        <item*|<math|x\<leqslant\>x<rprime|'>>>then
+        <math|<around*|(|x,y|)>\<leqslant\><around*|(|x<rprime|'>,y<rprime|'>|)>>
+
+        <item*|<math|x<rprime|'>\<leqslant\>x>>then
+        <math|<around*|(|x<rprime|'>,y<rprime|'>|)>\<leqslant\><around*|(|x,y|)>>
+      </description>
+    </description>
+  </proof>
+
+  <\definition>
+    <label|order initial segement><index|initial
+    segment><index|<math|\<cal-S\><rsub|a>>><dueto|Initial Segment>If
+    <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>> is a partial
+    ordered class, <math|a\<in\>A> then a <with|font-series|bold|intial
+    segment of A determined by a> noted as <math|S<rsub|A,a>> is defined by\ 
+
+    <\equation*>
+      S<rsub|A,a>=<around*|{|x\<in\>A\|x\<less\>a|}>
+    </equation*>
+  </definition>
+
+  <\theorem>
+    <label|order intial sergment property>If
+    <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>> is a partial
+    ordered class and <math|P> is a initial segment of <math|A> and <math|Q>
+    is a initial segement of <math|P> [using the induced order
+    <math|\<leqslant\><rsub|\|P>>] then <math|A> is a initial segment of
+    <math|A>
+  </theorem>
+
+  <\proof>
+    Using the hypothese there exists <math|a\<in\>A> such that
+    <math|P=<around*|{|x\<in\>A\|x\<less\>a|}>> and a <math|b\<in\>P> such
+    that <math|Q=<around*|{|x\<in\>P\|x\<less\>b|}>>. Consider then the
+    initial segement <math|S<rsub|A,b>=<around*|{|x\<in\>A\|x\<less\>b|}>> of
+    <math|A> determined by <math|a> then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|x\<in\>S<rsub|A,b>>|<cell|\<Rightarrow\>>|<cell|x\<in\>A\<wedge\>x\<less\>b>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|b\<less\>a\<Rightarrow\>x\<less\>b\<Rightarrow\>x\<less\>a>>|<cell|x\<in\>A\<wedge\>x\<less\>a\<wedge\>x\<less\>b>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x\<in\>P\<wedge\>x\<less\>b>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x\<in\>P\<wedge\>x\<less\><rsub|\|P>b>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x\<in\>Q>>|<row|<cell|x\<in\>Q>|<cell|\<Rightarrow\>>|<cell|x\<in\>P\<wedge\>x\<less\><rsub|\|P>b>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x\<in\>P\<wedge\>x\<less\>b>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|P\<subseteq\>A>>|<cell|x\<in\>A\<wedge\>x\<less\>b>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x\<in\>S<rsub|A,b>>>>>
+    </eqnarray*>
+
+    Hence <math|Q=S<rsub|A,b>> a initial segement of <math|A>
+  </proof>
+
+  Next we define the concept of a Dedekind cut that will be used later to
+  define the set of real numbers,
+
+  <\definition>
+    <label|order cut><index|cut><dueto|Dedekind cut>Let
+    <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>> be a partial
+    ordered class a pair <math|<around*|\<langle\>|C,D|\<rangle\>>> is a
+    <with|font-series|bold|cut> of <math|A> iff
+
+    <\enumerate>
+      <item><math|C,D\<subseteq\>A>
+
+      <item><math|C\<neq\>\<varnothing\>\<wedge\>D\<neq\>\<varnothing\>>
+
+      <item><math|C<big|cap>D=\<varnothing\>>
+
+      <item><math|x\<in\>C\<wedge\>y\<leqslant\>x\<Rightarrow\>y\<in\>C>
+
+      <item><math|x\<in\>D\<wedge\>x\<leqslant\>y\<Rightarrow\>D>
+    </enumerate>
+  </definition>
+
+  <subsection|Order relations and functions>
+
+  Functions between two partial ordered classes can be classified based on
+  the fact that they preserve or not preserve the order relation. This is
+  expressed in the next definition.
+
+  <\definition>
+    <label|order increasing, decreasing><index|increasing
+    function><index|decreasing function><index|order homomorphism>Let
+    <math|<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>>,
+    <math|<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>> be partial
+    ordered classes and <math|f:A\<rightarrow\>B> a function then:
+
+    <\enumerate>
+      <item><math|f:A\<rightarrow\>B> is <with|font-series|bold|increasing>
+      if <math|\<forall\>x,y\<in\>A> with <math|x\<leqslant\>y> we have
+      <math|f<around*|(|x|)>\<leqslant\>f<around*|(|y|)>>. Another name that
+      is used is <with|font-series|bold|a order homomorphism> [a homorphism
+      is a function that preserver a certain operation, in this case the
+      order relation]
+
+      <item><math|f:A\<rightarrow\>B> is <with|font-series|bold|strictly
+      increasing> if <math|\<forall\>x,y\<in\>A> with <math|x\<less\>y> we
+      have <math|f<around*|(|x|)>\<less\>f<around*|(|y|)>>
+
+      <item><math|f:A\<rightarrow\>B> is <with|font-series|bold|decreasing>
+      if <math|\<forall\>x,y\<in\>A> with <math|x\<leqslant\>y> we have
+      <math|f<around*|(|y|)>\<leqslant\>f<around*|(|x|)>>
+
+      <item><math|f:A\<rightarrow\>B> is <with|font-series|bold|strictly
+      decreasing> if <math|\<forall\>x,y\<in\>A> with <math|x\<less\>y> we
+      have <math|f<around*|(|y|)>\<less\>f<around*|(|x|)>>
+
+      <item><math|f:A\<rightarrow\>B> is a <with|font-series|bold|order
+      isomorphism> if <math|\<forall\>x,y\<in\>A> with
+      <math|x\<leqslant\>y\<Leftrightarrow\>f<around*|(|x|)>\<leqslant\>f<around*|(|y|)>>
+    </enumerate>
+  </definition>
+
+  <\definition>
+    <label|order A isomorphism B><index|<math|A\<cong\>B>>Two partial classes
+    <math|<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>> and
+    <math|<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>> are
+    <with|font-series|bold|order isomorph> noted as <math|A\<cong\>B> if
+    there exists order isomorphism between <math|A> and <math|B>.
+  </definition>
+
+  <\theorem>
+    <label|order composition of functions>Let
+    <math|<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>>,
+    <math|<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>>,<math|<around*|\<langle\>|C,\<leqslant\><rsub|C>|\<rangle\>>>
+    be partial ordered classes and <math|f:A\<rightarrow\>B>,
+    <math|g:B\<rightarrow\>C> functions then we have:
+
+    <\enumerate>
+      <item>If <math|f:A\<rightarrow\>B> is increaasing and
+      <math|g:B\<rightarrow\>C> is increasing then
+      <math|g\<circ\>f:A\<rightarrow\>C> is increasing
+
+      <item>If <math|f:A\<rightarrow\>B> is strictly increaasing and
+      <math|g:B\<rightarrow\>C> is strictly increasing then
+      <math|g\<circ\>f:A\<rightarrow\>C> is strictly increasing
+
+      <item>If <math|f:A\<rightarrow\>B> is a order isomorphism and
+      <math|g:B\<rightarrow\>C> is a order isomorphism then
+      <math|g\<circ\>f:A\<rightarrow\>C> is order isomorphism
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|x,y\<in\>A> with <math|x\<leqslant\><rsub|A>y> then
+      <math|f<around*|(|x|)>\<leqslant\>f<rsub|B><around*|(|y|)>> hence
+      <math|<around*|(|g\<circ\>f|)><around*|(|x|)>=g<around*|(|f<around*|(|x|)>|)>\<leqslant\><rsub|C>g<around*|(|f<around*|(|y|)>|)>=<around*|(|g\<circ\>f|)><around*|(||)>>.
+
+      <item>Let <math|x,y\<in\>A> with <math|x\<less\><rsub|A>y> then
+      <math|f<around*|(|x|)>\<less\><rsub|B>f<around*|(|y|)>> hence
+      <math|<around*|(|g\<circ\>f|)><around*|(|x|)>=g<around*|(|f<around*|(|x|)>|)>\<less\><rsub|C>g<around*|(|f<around*|(|y|)>|)>=<around*|(|g\<circ\>f|)><around*|(||)>>.
+
+      <item>Let <math|x,y\<in\>A>. If <math|x\<leqslant\><rsub|A>y> then
+      <math|f<around*|(|x|)>\<leqslant\><rsub|B>f<around*|(|y|)>> hence
+      <math|<around*|(|g\<circ\>f|)><around*|(|x|)>=g<around*|(|f<around*|(|x|)>|)>\<leqslant\><rsub|C>g<around*|(|f<around*|(|y|)>|)>=<around*|(|g\<circ\>f|)><around*|(|y|)>>.
+      Also if <math|<around*|(|g\<circ\>f|)><around*|(|x|)>\<leqslant\><rsub|C><around*|(|g\<circ\>f|)><around*|(|y|)>>
+      then <math|g<around*|(|f<around*|(|x|)>|)>\<leqslant\><rsub|C>g<around*|(|f<around*|(|y|)>|)>>
+      so that <math|f<around*|(|x|)>\<leqslant\><rsub|B>f<around*|(|y|)>>,
+      giving <math|x\<leqslant\><rsub|A>y>.
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|order isomorphism strictly>If <math|<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>>
+    and <math|<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>> are
+    partially ordered classes and <math|f:A\<rightarrow\>B> \ a order
+    isomorphism then
+
+    <\equation*>
+      x\<less\><rsub|A>y\<Leftrightarrow\>f<around*|(|x|)>\<less\><rsub|B>f<around*|(|y|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>If <math|x\<less\><rsub|A>y> then
+      <math|x\<neq\>y> and <math|x\<leqslant\><rsub|A>y\<Rightarrow\>f<around*|(|x|)>\<leqslant\><rsub|B>f<around*|(|y|)>>.
+      Assume that <math|f<around*|(|x|)>=f<around*|(|y|)>> then as <math|f>
+      is a bijection we would have <math|x=y> contradicting <math|x\<neq\>y>.
+      So we must have that <math|f<around*|(|x|)>\<neq\>f<around*|(|y|)>>
+      hence\ 
+
+      <\equation*>
+        f<around*|(|x|)>\<less\><rsub|B>f<around*|(|y|)>
+      </equation*>
+
+      <item*|<math|\<Leftarrow\>>>As <math|f<around*|(|x|)>\<less\><rsub|B>f<around*|(|y|)>>
+      we have that <math|f<around*|(|x|)>\<neq\>f<around*|(|y|)>> so that we
+      must have <math|x\<neq\>y>. Further as <math|f> is a isomorphism we
+      have <math|x\<leqslant\><rsub|A>y>. So\ 
+
+      <\equation*>
+        x\<less\><rsub|A>y
+      </equation*>
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|order condition for isomorphism>If
+    <math|<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>> and
+    <math|<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>> are
+    partially ordered classes and <math|f:A\<rightarrow\>B> a bijection then\ 
+
+    <\equation*>
+      f:A\<rightarrow\>B<text| is a order isomorphism
+      >\<Leftrightarrow\><text| >f:A\<rightarrow\>B<text| and
+      >f<rsup|-1>:B\<rightarrow\>A<text| are increasing functions>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    As <math|f:A\<rightarrow\>B> is a bijection we have by [theorems:
+    <reference|function bijection has a inverse>, <reference|function
+    bijection and inverse>] that <math|f<rsup|=1>:B\<rightarrow\>A> is a
+    bijection.
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>As <math|f:A\<rightarrow\>B> is a
+      isomorphism we have that <math|\<forall\>x,y\<in\>A> with
+      <math|x\<leqslant\><rsub|A>y\<Rightarrow\>f<around*|(|x|)>\<leqslant\>f<around*|(|b|)>>
+      hence <math|f:A\<rightarrow\>B> is increasing. If <math|x,y\<in\>B>
+      with <math|x\<leqslant\><rsub|B>y> then
+
+      <\equation*>
+        f<around*|(|f<rsup|-1><around*|(|x|)>|)>=*<around*|(|f\<circ\>f<rsup|-1>|)><around*|(|x|)>\<equallim\><rsub|<text|[theorem:
+        <reference|function bijection f,f-1>>>x\<leqslant\><rsub|B>y=<around*|(|f\<circ\>f<rsup|-1>|)><around*|(|y|)>=f<around*|(|f<rsup|-1><around*|(|y|)>|)>
+      </equation*>
+
+      which as <math|f> is a isomorphism proves that
+      <math|f<rsup|-1><around*|(|x|)>\<leqslant\><rsub|A>f<rsup|-1><around*|(|y|)>>,
+      hence <math|f<rsup|-1>> is increasing.
+
+      <item*|<math|\<Leftarrow\>>>Suppose that <math|f,f<rsup|-1>> are
+      increasing functions then if <math|x\<leqslant\><rsub|A>y\<Rightarrowlim\><rsub|f
+      is increasing>f<around*|(|x|)>\<leqslant\><rsub|B>f<around*|(|y|)>>.
+      Further if <math|f<around*|(|x|)>\<leqslant\><rsub|B>f<around*|(|y|)>\<Rightarrowlim\><rsub|f<rsup|-1>
+      is increasing>f<rsup|-1><around*|(|f<around*|(|x|)>|)>\<leqslant\><rsub|A>f<rsup|-1><around*|(|f<around*|(|y|)>|)>\<Rightarrow\>x\<leqslant\>y>
+      </description>
+  </proof>
+
+  <\theorem>
+    <label|order isomorphism condition (2)>If
+    <math|<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>> and
+    <math|<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>> are
+    partially ordered classes then\ 
+
+    <\enumerate>
+      <item><math|1<rsub|A>:A\<rightarrow\>A> is a order isomorphism
+
+      <item>If <math|f:A\<rightarrow\>B> is a order isomorphism then
+      <math|f<rsup|-1>:B\<rightarrow\>A> is a order isomorphism
+
+      <item>If <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>C> are
+      order isomorphism's then <math|g\<circ\>f> is a order isomorphism
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>By <reference|function identity function> we have that
+      <math|Id<rsub|A>:A\<rightarrow\>A> is a bijection then, as
+      <math|x=I<rsub|A><around*|(|x|)>> and
+      <math|y=Id<rsub|A><around*|(|y|)>>, we have
+      <math|x\<leqslant\>y\<Leftrightarrow\>Id<rsub|A><around*|(|x|)>\<leqslant\>Id<rsub|A><around*|(|y|)>>.
+
+      <item>If <math|f:A\<rightarrow\>B> is a isomorphism then by [theorem:
+      <reference|function bijection and inverse>] we have that
+      <math|f<rsup|-1>:B\<rightarrow\>A> is a bijection. By the previous
+      theorem [theorem: <reference|order condition for isomorphism>] we have
+      that <math|f<rsup|-1>> is increasing. Further as by <reference|function
+      inverse of a bijection is unique> <math|f=<around*|(|f<rsup|-1>|)><rsup|-1>>
+      and by [theorem: <reference|order condition for isomorphism>] <math|f>
+      is increasing it follows that <math|<around*|(|f<rsup|-1>|)><rsup|-1>>
+      is increasing. Using then [theorem: <reference|order condition for
+      isomorphism>] it follows that <math|f<rsup|-1>> is a isomorphism.
+
+      <item>This follows from [theorem: <reference|order composition of
+      functions>]
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|order properties of the isomorph relation>If
+    <math|<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>>,
+    <math|<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>> and
+    <math|<around*|\<langle\>|C,\<leqslant\><rsub|C>|\<rangle\>>> are
+    partially ordered classes then we have
+
+    <\enumerate>
+      <item><math|A\<cong\>A>
+
+      <item>If <math|A\<cong\>B> then <math|B\<cong\>A>
+
+      <item>If <math|A\<cong\>B> and <math|B\<cong\>D> then <math|B\<cong\>D>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ This follows easily from the previous theorem [theorem:
+    <reference|order isomorphism condition (2)>]
+  </proof>
+
+  <\theorem>
+    <label|order condition for isomorphism in a totallu ordered set>Let
+    <math|<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>>. be a
+    totally ordered class and <math|<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>>
+    is a partially ordered class then a bijective and increasing function
+    <math|f:A\<rightarrow\>B> is a isomorphism
+  </theorem>
+
+  <\proof>
+    Suppose that <math|f<around*|(|x|)>\<leqslant\><rsub|B>f<around*|(|y|)>>
+    then since <math|A> is fully ordered we have that <math|x,y> are
+    comparable therefore by [theorem: <reference|order comparable>] we have
+    the following exclusive cases
+
+    <\enumerate>
+      <item><math|x\<leqslant\><rsub|A>y> in this case our theorem is proved
+
+      <item><math|y\<less\><rsub|A>x> in this case we would have
+      <math|f<around*|(|y|)>\<leqslant\><rsub|B>f<around*|(|x|)>\<Rightarrow\>f<around*|(|y|)>=f<around*|(|x|)>\<Rightarrowlim\><rsub|f
+      is injective>x=y> a contradiction. So this case does not occurs.
+    </enumerate>
+  </proof>
+
+  <subsection|Min, max, supremums and infinums>
 
   \;
 
-  \;
+  <\definition>
+    <label|order maximal minimal element><index|maximal
+    element><index|minimal element>Let <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>>
+    be a pre-ordered class and <math|A\<subseteq\>X> then\ 
 
-  <section|Order Relation>\ 
+    <\enumerate>
+      <item><math|m> is a <with|font-series|bold|maximal element> of <math|A>
+      iff <math|m\<in\>A> and if <math|x\<in\>A> is such that
+      <math|m\<leqslant\>x> then <math|x\<leqslant\>m>
+
+      <item><math|m> is a <with|font-series|bold|minimal element> of <math|A>
+      iff <math|m\<in\>A> and if <math|x\<in\>A> is such that
+      <math|x\<leqslant\>m> then <math|m\<leqslant\>x>
+    </enumerate>
+  </definition>
+
+  <\definition>
+    <label|order greatest lowest element><index|greatest
+    element><index|lowest element>If <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>>
+    is a partial ordered class and <math|A\<subseteq\>X> then\ 
+
+    <\enumerate>
+      <item><math|m> is the <with|font-series|bold|greatest element >of
+      <math|A> iff <math|m\<in\>A> and <math|\<forall\>x\<in\>A> we have
+      <math|x\<leqslant\>m>
+
+      <item><math|m> is the <with|font-series|bold|lowest element> of
+      <math|A> iff <math|m\<in\>A> and <math|\<forall\>x\<in\>A> we have
+      <math|m\<leqslant\>x>
+    </enumerate>
+  </definition>
+
+  <\note>
+    There is a subtile difference between the definition of a maximal
+    (minimal) element and the greatest (lowest) element. If <math|m> is the
+    greatest (lowest) element of <math|A> then every element in <math|A> is
+    comparable with <math|m>, which is not the case if <math|m> is a maximal
+    (minimal) element of <math|A>.
+  </note>
+
+  <\note>
+    The empty set <math|\<varnothing\>> can not have a maximal, minimal
+    element, greatest element or lowest element.
+  </note>
+
+  <\theorem>
+    <label|order greatest and lowest element are
+    unique><index|<math|max<around*|(|A|)>>><index|<math|min<around*|(|A|)>>>If
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is a partial
+    ordered class and <math|A\<subseteq\>X> then
+
+    <\enumerate>
+      <item>If <math|m,m<rprime|'>> are greatest elements of <math|A> then
+      <math|m=m<rprime|'>>
+
+      <item>If <math|m,m<rprime|'>> are lowest elements of <math|A> then
+      <math|m=m<rprime|'>>
+    </enumerate>
+
+    The unique greatest element of <math|A> (if it exist) is called the
+    maximum of <math|A> and noted as <math|max<around*|(|A|)>>, the unique
+    lowest element of <math|A> (if it exist) is called the minimum of
+    <math|A> and noted as <math|min<around*|(|A|)>>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|m,m<rprime|'>> are greatest ekements of <math|A> then as
+      <math|m,m<rprime|'>\<in\>A> we have
+      <math|m\<leqslant\>m<rprime|'>\<wedge\>m<rprime|'>\<leqslant\>m> so
+      that <math|m=m<rprime|'>>.
+
+      <item>If <math|m,m<rprime|'>> are lowest ekements of <math|A> then as
+      <math|m,m<rprime|'>\<in\>A> we have
+      <math|m\<leqslant\>m<rprime|'>\<wedge\>m<rprime|'>\<leqslant\>m> so
+      that <math|m=m<rprime|'>>.
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|order min(A)\<less\>=max(A)>If
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is a partial
+    ordered class and <math|A\<subseteq\>X> such that
+    <math|min<around*|(|A|)>> and <math|max<around*|(|A|)>> exist then
+    <math|min<around*|(|A|)>\<leqslant\>max<around*|(|A|)>>
+  </theorem>
+
+  <\proof>
+    As <math|min<around*|(|A|)>\<in\>A> we have by definition that
+    <math|min<around*|(|A|)>\<leqslant\>max<around*|(|A|)>>.
+  </proof>
+
+  <\theorem>
+    <label|order maximum of class with bigger elements>Let
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a partial
+    ordered class, <math|A\<subseteq\>X>, <math|B\<subseteq\>X> then
+
+    <\enumerate>
+      <item>If <math|max<around*|(|A|)>> and <math|max<around*|(|B|)>> exist
+      and <math|\<forall\>x\<in\>A> <math|\<exists\>y\<in\>B> such that
+      <math|x\<leqslant\>y> then <math|max<around*|(|A|)>\<leqslant\>max<around*|(|B|)>>
+
+      <item>If <math|min<around*|(|A|)>> and <math|min<around*|(|B|)>> exist
+      <math|\<forall\>x\<in\>B> <math|\<exists\>y\<in\>A> such that
+      <math|y\<leqslant\>x> then then <math|min<around*|(|A|)>\<leqslant\>min*<around*|(|B|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>As <math|max*<around*|(|A|)>\<in\>A> there exist a
+      <math|y\<in\>B> such that <math|max<around*|(|A|)>\<leqslant\>y>, as
+      <math|y\<leqslant\>max<around*|(|B|)>> we have
+
+      <\equation*>
+        max<around*|(|A|)>\<leqslant\>max<around*|(|B|)>
+      </equation*>
+
+      <item>As <math|min<around*|(|B|)>\<in\>A> there exist a <math|y\<in\>A>
+      such that <math|y\<leqslant\>min<around*|(|B|)>>, as
+      <math|min<around*|(|A|)>\<leqslant\>y> we have\ 
+
+      <\equation*>
+        min<around*|(|A|)>\<leqslant\>max<around*|(|A|)>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  <\definition>
+    <label|order upport lower bound><index|upper bound><index|lower bound>If
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is a partial
+    ordered class and <math|A\<subseteq\>X> then\ 
+
+    <\enumerate>
+      <item><math|u\<in\>A> is a <with|font-series|bold|upper bound> of
+      <math|A> if <math|\<forall\>a\<in\>A> <math|a\<leqslant\>u>.
+
+      <item><math|A> is <with|font-series|bold|bounded above> if it has a
+      upper bound.
+
+      <item><math|l\<in\>A> is a <with|font-series|bold|lower bound> of
+      <math|A> if <math|\<forall\>x\<in\>A> <math|l\<leqslant\>a>
+
+      <item><math|A> is <with|font-series|bold|bounded below> if it has a
+      lower bound.
+
+      <item><math|\<upsilon\><around*|(|A|)>=<around*|{|x\<in\>X\|x<text| is
+      a upper bound of >A|}>> [the class of upper bound of <math|A>]
+
+      <item><math|\<lambda\><around*|(|A|)>=<around*|{|x\<in\>X\|x<text| is a
+      lower bound of >A|}>> [the class of lower bounds of <math|A>]
+    </enumerate>
+  </definition>
+
+  \;
 </body>
 
 <\initial>
@@ -6480,7 +7907,7 @@
   <\collection>
     <associate|\<less\>A,B,C\<gtr\>=\<less\>D,E,F\<gtr\>=\<gtr\>A=E,B=D,C=F|<tuple|2.5|?>>
     <associate|\<less\>A,B\<gtr\>=\<less\>C,D\<gtr\>=\<gtr\>A=C,B=D|<tuple|2.3|?>>
-    <associate|Axiom of Replacement|<tuple|2.42|?>>
+    <associate|Axiom of Replacement|<tuple|2.47|?>>
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-10|<tuple|axiom of pairing|?>>
     <associate|auto-11|<tuple|cartesian product|?>>
@@ -6507,37 +7934,68 @@
     <associate|auto-30|<tuple|identity function|?>>
     <associate|auto-31|<tuple|<with|mode|<quote|math>|Id<rsub|A>>|?>>
     <associate|auto-32|<tuple|2.2.3|?>>
-    <associate|auto-33|<tuple|bijection|?>>
-    <associate|auto-34|<tuple|bijective|?>>
-    <associate|auto-35|<tuple|2.2.4|?>>
-    <associate|auto-36|<tuple|<with|mode|<quote|math>|f<rsub|\|C>>|?>>
-    <associate|auto-37|<tuple|2.2.5|?>>
-    <associate|auto-38|<tuple|2.3|?>>
-    <associate|auto-39|<tuple|2.3.1|?>>
+    <associate|auto-33|<tuple|<with|mode|<quote|math>|i<rsub|B>>|?>>
+    <associate|auto-34|<tuple|bijection|?>>
+    <associate|auto-35|<tuple|bijective|?>>
+    <associate|auto-36|<tuple|2.2.4|?>>
+    <associate|auto-37|<tuple|<with|mode|<quote|math>|f<rsub|\|C>>|?>>
+    <associate|auto-38|<tuple|2.2.5|?>>
+    <associate|auto-39|<tuple|2.3|?>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|\<cal-U\>>|3>>
-    <associate|auto-40|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>>|?>>
-    <associate|auto-41|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>\|i\<in\>I|}>>|?>>
-    <associate|auto-42|<tuple|<with|mode|<quote|math>|<big|cap><rsub|i\<in\>I>A<rsub|i>>|?>>
-    <associate|auto-43|<tuple|2.3.2|?>>
-    <associate|auto-44|<tuple|2.4|?>>
-    <associate|auto-45|<tuple|<with|mode|<quote|math>|<big|prod><rsub|i\<in\>I>A<rsub|i>>|?>>
-    <associate|auto-46|<tuple|<with|mode|<quote|math>|\<pi\><rsub|i>>|?>>
-    <associate|auto-47|<tuple|3|?>>
-    <associate|auto-48|<tuple|3.1|?>>
-    <associate|auto-49|<tuple|relation|?>>
+    <associate|auto-40|<tuple|2.3.1|?>>
+    <associate|auto-41|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>>|?>>
+    <associate|auto-42|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>\|i\<in\>I|}>>|?>>
+    <associate|auto-43|<tuple|<with|mode|<quote|math>|<big|cap><rsub|i\<in\>I>A<rsub|i>>|?>>
+    <associate|auto-44|<tuple|2.3.2|?>>
+    <associate|auto-45|<tuple|2.4|?>>
+    <associate|auto-46|<tuple|<with|mode|<quote|math>|<big|prod><rsub|i\<in\>I>A<rsub|i>>|?>>
+    <associate|auto-47|<tuple|<with|mode|<quote|math>|\<pi\><rsub|i>>|?>>
+    <associate|auto-48|<tuple|3|?>>
+    <associate|auto-49|<tuple|3.1|?>>
     <associate|auto-5|<tuple|<with|mode|<quote|math>|A<big|cup>B>|5>>
-    <associate|auto-50|<tuple|3.2|?>>
-    <associate|auto-51|<tuple|3.2.1|?>>
-    <associate|auto-52|<tuple|equivalence relation|?>>
-    <associate|auto-53|<tuple|partition of a set|?>>
-    <associate|auto-54|<tuple|<with|mode|<quote|math>|R<around*|[|x|]>>|?>>
-    <associate|auto-55|<tuple|<with|mode|<quote|math>|A/R>|?>>
-    <associate|auto-56|<tuple|3.2.2|?>>
-    <associate|auto-57|<tuple|canonical function|?>>
-    <associate|auto-58|<tuple|3.3|?>>
+    <associate|auto-50|<tuple|relation|?>>
+    <associate|auto-51|<tuple|3.2|?>>
+    <associate|auto-52|<tuple|3.2.1|?>>
+    <associate|auto-53|<tuple|equivalence relation|?>>
+    <associate|auto-54|<tuple|partition of a set|?>>
+    <associate|auto-55|<tuple|<with|mode|<quote|math>|R<around*|[|x|]>>|?>>
+    <associate|auto-56|<tuple|<with|mode|<quote|math>|A/R>|?>>
+    <associate|auto-57|<tuple|3.2.2|?>>
+    <associate|auto-58|<tuple|canonical function|?>>
+    <associate|auto-59|<tuple|3.3|?>>
     <associate|auto-6|<tuple|<with|mode|<quote|math>|A<big|cap>B>|?>>
+    <associate|auto-60|<tuple|3.3.1|?>>
+    <associate|auto-61|<tuple|preorder|?>>
+    <associate|auto-62|<tuple|pre-ordered class|?>>
+    <associate|auto-63|<tuple|order relation|?>>
+    <associate|auto-64|<tuple|partial ordered class|?>>
+    <associate|auto-65|<tuple|<with|mode|<quote|math>|\<leqslant\>>|?>>
+    <associate|auto-66|<tuple|<with|mode|<quote|math>|\<less\>>|?>>
+    <associate|auto-67|<tuple|comparable elements|?>>
+    <associate|auto-68|<tuple|comparable elements|?>>
+    <associate|auto-69|<tuple|totally ordered class|?>>
     <associate|auto-7|<tuple|<with|mode|<quote|math>|\<emptyset\>>|?>>
+    <associate|auto-70|<tuple|fully ordered class|?>>
+    <associate|auto-71|<tuple|linear ordered class|?>>
+    <associate|auto-72|<tuple|chain|?>>
+    <associate|auto-73|<tuple|initial segment|?>>
+    <associate|auto-74|<tuple|<with|mode|<quote|math>|\<cal-S\><rsub|a>>|?>>
+    <associate|auto-75|<tuple|cut|?>>
+    <associate|auto-76|<tuple|3.3.2|?>>
+    <associate|auto-77|<tuple|increasing function|?>>
+    <associate|auto-78|<tuple|decreasing function|?>>
+    <associate|auto-79|<tuple|order homomorphism|?>>
     <associate|auto-8|<tuple|1.2|?>>
+    <associate|auto-80|<tuple|<with|mode|<quote|math>|A\<cong\>B>|?>>
+    <associate|auto-81|<tuple|3.3.3|?>>
+    <associate|auto-82|<tuple|maximal element|?>>
+    <associate|auto-83|<tuple|minimal element|?>>
+    <associate|auto-84|<tuple|greatest element|?>>
+    <associate|auto-85|<tuple|lowest element|?>>
+    <associate|auto-86|<tuple|<with|mode|<quote|math>|max<around*|(|A|)>>|?>>
+    <associate|auto-87|<tuple|<with|mode|<quote|math>|min<around*|(|A|)>>|?>>
+    <associate|auto-88|<tuple|upper bound|?>>
+    <associate|auto-89|<tuple|lower bound|?>>
     <associate|auto-9|<tuple|1.3|?>>
     <associate|axiom of construction|<tuple|1.9|?>>
     <associate|axiom of extent|<tuple|1.5|2>>
@@ -6546,8 +8004,8 @@
     <associate|axiom of power|<tuple|1.64|?>>
     <associate|axiom of subsets|<tuple|1.54|?>>
     <associate|axiom of union|<tuple|1.61|?>>
-    <associate|bijection|<tuple|2.49|?>>
-    <associate|bijective classes|<tuple|2.50|?>>
+    <associate|bijection|<tuple|2.53|?>>
+    <associate|bijective classes|<tuple|2.54|?>>
     <associate|cartesian product|<tuple|1.44|?>>
     <associate|cartesian product and inclusion|<tuple|1.48|?>>
     <associate|cartesian product of the empty set|<tuple|1.46|?>>
@@ -6572,6 +8030,8 @@
     <associate|class union|<tuple|1.56|?>>
     <associate|class union{A,B}|<tuple|1.59|?>>
     <associate|class universal and empotyset properties|<tuple|1.32|?>>
+    <associate|condition for isomorphism in a full ordered
+    set|<tuple|3.52|?>>
     <associate|element a=b=\<gtr\>{a}={b}|<tuple|1.34|?>>
     <associate|element equalitiy of unordered pairs|<tuple|1.39|?>>
     <associate|element equality of unordered pairs (1)|<tuple|1.40|?>>
@@ -6642,112 +8102,152 @@
     <associate|eq 2.7.001|<tuple|2.7|?>>
     <associate|eq 2.8.001|<tuple|2.8|?>>
     <associate|eq 2.9.001|<tuple|2.9|?>>
-    <associate|equivalence class|<tuple|3.9|?>>
+    <associate|eq 3.1.009|<tuple|3.1|?>>
+    <associate|eq 3.2.009|<tuple|3.2|?>>
+    <associate|eq 3.3.009|<tuple|3.3|?>>
+    <associate|eq 3.4.009|<tuple|3.4|?>>
+    <associate|eq 3.5.009|<tuple|3.5|?>>
+    <associate|eq 3.6.009|<tuple|3.6|?>>
+    <associate|eq 3.7.009|<tuple|3.7|?>>
+    <associate|eq order preorder to order|<tuple|3.32|?>>
     <associate|equivalence relation|<tuple|3.5|?>>
     <associate|equivalence relation A/R|<tuple|3.16|?>>
     <associate|equivalence relation R[x]=R[y]|<tuple|3.11|?>>
+    <associate|equivalence relation canical function|<tuple|3.21|?>>
+    <associate|equivalence relation canonical decomposition of a
+    function|<tuple|3.22|?>>
     <associate|equivalence relation class|<tuple|3.9|?>>
-    <associate|equivalence relation conical function|<tuple|3.21|?>>
     <associate|equivalence relation determined by a function|<tuple|3.20|?>>
-    <associate|equivalence relation family of classes|<tuple|3.12|?>>
-    <associate|equivalence relation finer coarser|<tuple|3.20|?>>
     <associate|equivalence relation function|<tuple|3.18|?>>
     <associate|equivalence relation partition|<tuple|3.6|?>>
     <associate|equivalence relation partition alternative|<tuple|3.8|?>>
-    <associate|equivalence relation refinement|<tuple|3.20|?>>
     <associate|equivalence relation subsets|<tuple|3.19|?>>
-    <associate|family|<tuple|2.74|?>>
-    <associate|family de Morgan|<tuple|2.94|?>>
-    <associate|family distributivity|<tuple|2.92|?>>
-    <associate|family image and preimage|<tuple|2.97|?>>
-    <associate|family intersection (2)|<tuple|2.85|?>>
-    <associate|family intersection is a set|<tuple|2.86|?>>
-    <associate|family intersection of sets|<tuple|2.82|?>>
-    <associate|family intersection(1)|<tuple|2.84|?>>
-    <associate|family properties (1)|<tuple|2.89|?>>
-    <associate|family properties (2)|<tuple|2.90|?>>
-    <associate|family properties (3)|<tuple|2.95|?>>
-    <associate|family range|<tuple|2.75|?>>
-    <associate|family range (1)|<tuple|2.76|?>>
-    <associate|family set|<tuple|2.77|?>>
-    <associate|family trivial|<tuple|2.87|?>>
-    <associate|family union (1)|<tuple|2.78|?>>
-    <associate|family union (2)|<tuple|2.81|?>>
-    <associate|family union intersection and empty set|<tuple|2.96|?>>
-    <associate|family union intersection and inclusion|<tuple|2.91|?>>
-    <associate|family union of a empty set|<tuple|2.83|?>>
-    <associate|family union of union of two families|<tuple|2.93|?>>
-    <associate|family union{A,B}|<tuple|2.88|?>>
-    <associate|function|<tuple|2.20|?>>
-    <associate|function A^empty is empty|<tuple|2.26|?>>
-    <associate|function B^A|<tuple|2.24|?>>
-    <associate|function B^A and inclusion|<tuple|2.27|?>>
-    <associate|function P(A)=2^A|<tuple|2.61|?>>
-    <associate|function and power|<tuple|2.60|?>>
-    <associate|function between {0,1} and {A,B}|<tuple|2.22|?>>
-    <associate|function bijection and inverse|<tuple|2.57|?>>
-    <associate|function bijection condition (2)|<tuple|2.56|?>>
-    <associate|function bijection f,f-1|<tuple|2.55|?>>
-    <associate|function bijection has a inverse|<tuple|2.54|?>>
-    <associate|function characteristics function|<tuple|2.36|?>>
-    <associate|function composition and restriction|<tuple|2.66|?>>
+    <associate|family|<tuple|2.78|?>>
+    <associate|family de Morgan|<tuple|2.98|?>>
+    <associate|family distributivity|<tuple|2.96|?>>
+    <associate|family image and preimage|<tuple|2.101|?>>
+    <associate|family intersection (2)|<tuple|2.89|?>>
+    <associate|family intersection is a set|<tuple|2.90|?>>
+    <associate|family intersection of sets|<tuple|2.86|?>>
+    <associate|family intersection(1)|<tuple|2.88|?>>
+    <associate|family properties (1)|<tuple|2.93|?>>
+    <associate|family properties (2)|<tuple|2.94|?>>
+    <associate|family properties (3)|<tuple|2.99|?>>
+    <associate|family range|<tuple|2.79|?>>
+    <associate|family range (1)|<tuple|2.80|?>>
+    <associate|family set|<tuple|2.81|?>>
+    <associate|family trivial|<tuple|2.91|?>>
+    <associate|family union (1)|<tuple|2.82|?>>
+    <associate|family union (2)|<tuple|2.85|?>>
+    <associate|family union intersection and empty set|<tuple|2.100|?>>
+    <associate|family union intersection and inclusion|<tuple|2.95|?>>
+    <associate|family union of a empty set|<tuple|2.87|?>>
+    <associate|family union of union of two families|<tuple|2.97|?>>
+    <associate|family union{A,B}|<tuple|2.92|?>>
+    <associate|function|<tuple|2.22|?>>
+    <associate|function A^empty is empty|<tuple|2.28|?>>
+    <associate|function B^A|<tuple|2.26|?>>
+    <associate|function B^A and inclusion|<tuple|2.29|?>>
+    <associate|function P(A)=2^A|<tuple|2.65|?>>
+    <associate|function and power|<tuple|2.64|?>>
+    <associate|function between {0,1} and {A,B}|<tuple|2.24|?>>
+    <associate|function bijection and inverse|<tuple|2.61|?>>
+    <associate|function bijection condition (2)|<tuple|2.60|?>>
+    <associate|function bijection f,f-1|<tuple|2.59|?>>
+    <associate|function bijection has a inverse|<tuple|2.58|?>>
+    <associate|function characteristics function|<tuple|2.38|?>>
+    <associate|function composition and restriction|<tuple|2.70|?>>
     <associate|function composition injectivity, surjectivity and
-    bijectivity|<tuple|2.59|?>>
-    <associate|function composition of Id function|<tuple|2.38|?>>
+    bijectivity|<tuple|2.63|?>>
+    <associate|function composition of Id function|<tuple|2.40|?>>
     <associate|function composition of functions is a
-    fucntion|<tuple|2.40|?>>
-    <associate|function condition (1)|<tuple|2.21|?>>
-    <associate|function constant function|<tuple|2.35|?>>
-    <associate|function empty function|<tuple|2.34|?>>
-    <associate|function equality (1)|<tuple|2.31|?>>
-    <associate|function equality (2)|<tuple|2.33|?>>
-    <associate|function function and intersection and union|<tuple|2.70|?>>
-    <associate|function identity function|<tuple|2.37|?>>
-    <associate|function identity map is a bijection|<tuple|2.51|?>>
-    <associate|function image preimage|<tuple|2.39|?>>
-    <associate|function injective inverse is a function|<tuple|2.48|?>>
-    <associate|function injectivity to bijection|<tuple|2.53|?>>
-    <associate|function inverse and restriction|<tuple|2.65|?>>
-    <associate|function inverse of a bijection is unique|<tuple|2.58|?>>
-    <associate|function notation|<tuple|2.32|?>>
-    <associate|function power of intersection|<tuple|2.29|?>>
-    <associate|function preimage of image|<tuple|2.44|?>>
-    <associate|function properties (1)|<tuple|2.69|?>>
-    <associate|function range restriction|<tuple|2.30|?>>
-    <associate|function restricted function properties|<tuple|2.63|?>>
-    <associate|function restriction and domain|<tuple|2.64|?>>
-    <associate|function restriction of a function|<tuple|2.67|?>>
-    <associate|function restriction of a graph|<tuple|2.62|?>>
-    <associate|function simple definition|<tuple|2.71|?>>
-    <associate|function surjection condition|<tuple|2.43|?>>
-    <associate|function trivial bijection|<tuple|2.52|?>>
-    <associate|function: A^B and sets|<tuple|2.28|?>>
+    fucntion|<tuple|2.42|?>>
+    <associate|function condition (1)|<tuple|2.23|?>>
+    <associate|function constant function|<tuple|2.37|?>>
+    <associate|function empty function|<tuple|2.36|?>>
+    <associate|function equality (1)|<tuple|2.33|?>>
+    <associate|function equality (2)|<tuple|2.35|?>>
+    <associate|function function and intersection and union|<tuple|2.74|?>>
+    <associate|function identity function|<tuple|2.39|?>>
+    <associate|function identity map is a bijection|<tuple|2.55|?>>
+    <associate|function image preimage|<tuple|2.41|?>>
+    <associate|function inclusion function|<tuple|2.46|?>>
+    <associate|function injective inverse is a function|<tuple|2.52|?>>
+    <associate|function injectivity to bijection|<tuple|2.57|?>>
+    <associate|function inverse and restriction|<tuple|2.69|?>>
+    <associate|function inverse of a bijection is unique|<tuple|2.62|?>>
+    <associate|function notation|<tuple|2.34|?>>
+    <associate|function power of intersection|<tuple|2.31|?>>
+    <associate|function preimage of image|<tuple|2.48|?>>
+    <associate|function properties (1)|<tuple|2.73|?>>
+    <associate|function range restriction|<tuple|2.32|?>>
+    <associate|function restricted function properties|<tuple|2.67|?>>
+    <associate|function restriction and domain|<tuple|2.68|?>>
+    <associate|function restriction of a function|<tuple|2.71|?>>
+    <associate|function restriction of a graph|<tuple|2.66|?>>
+    <associate|function simple definition|<tuple|2.75|?>>
+    <associate|function surjection condition|<tuple|2.44|?>>
+    <associate|function trivial bijection|<tuple|2.56|?>>
+    <associate|function: A^B and sets|<tuple|2.30|?>>
+    <associate|order A isomorphism B|<tuple|3.46|?>>
+    <associate|order chain|<tuple|3.38|?>>
+    <associate|order chain is a totally ordered class|<tuple|3.39|?>>
+    <associate|order comparable|<tuple|3.35|?>>
+    <associate|order comparable property|<tuple|3.36|?>>
+    <associate|order composition of functions|<tuple|3.47|?>>
+    <associate|order condition for isomorphism|<tuple|3.49|?>>
+    <associate|order condition for isomorphism in a totallu ordered
+    set|<tuple|3.52|?>>
+    <associate|order cut|<tuple|3.44|?>>
+    <associate|order greatest and lowest element are unique|<tuple|3.57|?>>
+    <associate|order greatest lowest element|<tuple|3.54|?>>
+    <associate|order increasing, decreasing|<tuple|3.45|?>>
+    <associate|order initial segement|<tuple|3.42|?>>
+    <associate|order intial sergment property|<tuple|3.43|?>>
+    <associate|order isomorphism condition (2)|<tuple|3.50|?>>
+    <associate|order isomorphism strictly|<tuple|3.48|?>>
+    <associate|order lexical order|<tuple|3.34|?>>
+    <associate|order maximal minimal element|<tuple|3.53|?>>
+    <associate|order maximum of class with bigger elements|<tuple|3.59|?>>
+    <associate|order min(A)\<less\>=max(A)|<tuple|3.58|?>>
+    <associate|order order relation|<tuple|3.26|?>>
+    <associate|order partial order on sub class|<tuple|3.33|?>>
+    <associate|order partial ordered class|<tuple|3.27|?>>
+    <associate|order preorder|<tuple|3.24|?>>
+    <associate|order preordered class|<tuple|3.25|?>>
+    <associate|order properties of the isomorph relation|<tuple|3.51|?>>
+    <associate|order strict order|<tuple|3.30|?>>
+    <associate|order totally lexicol ordering|<tuple|3.41|?>>
+    <associate|order totally ordered subclass|<tuple|3.40|?>>
+    <associate|order upport lower bound|<tuple|3.60|?>>
     <associate|pair equality of pairs|<tuple|1.43|?>>
     <associate|pair of elements|<tuple|1.41|?>>
-    <associate|partial function associativity|<tuple|2.17|?>>
-    <associate|partial function composition of graphs|<tuple|2.15|?>>
+    <associate|partial function alternative for composition|<tuple|2.18|?>>
+    <associate|partial function associativity|<tuple|2.19|?>>
+    <associate|partial function composition of graphs|<tuple|2.16|?>>
     <associate|partial function composition of partial
-    functions|<tuple|2.16|?>>
-    <associate|partial function dom(f) range(f) as subclasses|<tuple|2.9|?>>
-    <associate|partial function domain range composition|<tuple|2.18|?>>
-    <associate|partial function image|<tuple|2.11|?>>
+    functions|<tuple|2.17|?>>
+    <associate|partial function dom(f) range(f) as subclasses|<tuple|2.10|?>>
+    <associate|partial function domain range composition|<tuple|2.20|?>>
+    <associate|partial function image|<tuple|2.12|?>>
     <associate|partial function image preimage of
-    compositions|<tuple|2.19|?>>
-    <associate|partial function injectivity and surjectivity|<tuple|2.41|?>>
-    <associate|partial function inverse graph|<tuple|2.45|?>>
-    <associate|partial function inverse if injective|<tuple|2.46|?>>
-    <associate|partial function preimage|<tuple|2.13|?>>
-    <associate|partial function set domain range|<tuple|2.10|?>>
-    <associate|partial functions image/preimage properties|<tuple|2.14|?>>
+    compositions|<tuple|2.21|?>>
+    <associate|partial function injectivity and surjectivity|<tuple|2.43|?>>
+    <associate|partial function injectivity, surjectivity|<tuple|2.45|?>>
+    <associate|partial function inverse graph|<tuple|2.49|?>>
+    <associate|partial function inverse if injective|<tuple|2.50|?>>
+    <associate|partial function preimage|<tuple|2.14|?>>
+    <associate|partial function set domain range|<tuple|2.11|?>>
+    <associate|partial functions image/preimage properties|<tuple|2.15|?>>
     <associate|power set|<tuple|1.63|?>>
-    <associate|product|<tuple|2.98|?>>
-    <associate|product and intersection|<tuple|2.102|?>>
-    <associate|product and power|<tuple|2.103|?>>
-    <associate|product inclusion|<tuple|2.101|?>>
-    <associate|product of family with one element|<tuple|2.99|?>>
-    <associate|product of family with two classes|<tuple|2.100|?>>
-    <associate|projection function|<tuple|2.104|?>>
-    <associate|refinement|<tuple|3.20|?>>
+    <associate|product|<tuple|2.102|?>>
+    <associate|product and intersection|<tuple|2.106|?>>
+    <associate|product and power|<tuple|2.107|?>>
+    <associate|product inclusion|<tuple|2.105|?>>
+    <associate|product of family with one element|<tuple|2.103|?>>
+    <associate|product of family with two classes|<tuple|2.104|?>>
+    <associate|projection function|<tuple|2.108|?>>
+    <associate|properties of the isomorph relation|<tuple|3.51|?>>
     <associate|relation|<tuple|3.1|?>>
     <associate|relation properties|<tuple|3.4|?>>
     <associate|relation trivial|<tuple|3.3|?>>
@@ -6759,6 +8259,8 @@
     <associate|set restriction of a set of sets|<tuple|1.65|?>>
     <associate|set union of two sets is a set|<tuple|1.62|?>>
     <associate|successor set|<tuple|1.51|?>>
+    <associate|theorem|<tuple|2.16|?>>
+    <associate|totally ordered class|<tuple|3.37|?>>
     <associate|universal class|<tuple|1.12|?>>
     <associate|universal class property|<tuple|1.13|?>>
   </collection>
@@ -6809,23 +8311,59 @@
 
       <tuple|<tuple|<with|mode|<quote|math>|Id<rsub|A>>>|<pageref|auto-31>>
 
-      <tuple|<tuple|bijection>|<pageref|auto-33>>
+      <tuple|<tuple|<with|mode|<quote|math>|i<rsub|B>>>|<pageref|auto-33>>
 
-      <tuple|<tuple|bijective>|<pageref|auto-34>>
+      <tuple|<tuple|bijection>|<pageref|auto-34>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|f<rsub|\|C>>>|<pageref|auto-36>>
+      <tuple|<tuple|bijective>|<pageref|auto-35>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>>>|<pageref|auto-40>>
+      <tuple|<tuple|<with|mode|<quote|math>|f<rsub|\|C>>>|<pageref|auto-37>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>\|i\<in\>I|}>>>|<pageref|auto-41>>
+      <tuple|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>>>|<pageref|auto-41>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|<big|cap><rsub|i\<in\>I>A<rsub|i>>>|<pageref|auto-42>>
+      <tuple|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>\|i\<in\>I|}>>>|<pageref|auto-42>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|<big|prod><rsub|i\<in\>I>A<rsub|i>>>|<pageref|auto-45>>
+      <tuple|<tuple|<with|mode|<quote|math>|<big|cap><rsub|i\<in\>I>A<rsub|i>>>|<pageref|auto-43>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<pi\><rsub|i>>>|<pageref|auto-46>>
+      <tuple|<tuple|<with|mode|<quote|math>|<big|prod><rsub|i\<in\>I>A<rsub|i>>>|<pageref|auto-46>>
 
-      <tuple|<tuple|relation>|<pageref|auto-49>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<pi\><rsub|i>>>|<pageref|auto-47>>
+
+      <tuple|<tuple|relation>|<pageref|auto-50>>
+
+      <tuple|<tuple|equivalence relation>|<pageref|auto-53>>
+
+      <tuple|<tuple|partition of a set>|<pageref|auto-54>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|R<around*|[|x|]>>>|<pageref|auto-55>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|A/R>>|<pageref|auto-56>>
+
+      <tuple|<tuple|canonical function>|<pageref|auto-58>>
+
+      <tuple|<tuple|preorder>|<pageref|auto-61>>
+
+      <tuple|<tuple|pre-ordered class>|<pageref|auto-62>>
+
+      <tuple|<tuple|order relation>|<pageref|auto-63>>
+
+      <tuple|<tuple|partial ordered class>|<pageref|auto-64>>
+
+      <tuple|<tuple|comparable elements>|<pageref|auto-65>>
+
+      <tuple|<tuple|comparable elements>|<pageref|auto-66>>
+
+      <tuple|<tuple|totally ordered class>|<pageref|auto-67>>
+
+      <tuple|<tuple|fully ordered class>|<pageref|auto-68>>
+
+      <tuple|<tuple|linear ordered class>|<pageref|auto-69>>
+
+      <tuple|<tuple|chain>|<pageref|auto-70>>
+
+      <tuple|<tuple|initial segment>|<pageref|auto-71>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-S\><rsub|a>>>|<pageref|auto-72>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Elements
@@ -6870,40 +8408,53 @@
 
       <with|par-left|<quote|1tab>|2.2.4<space|2spc>Restriction of a
       Function/Partial Function <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-35>>
+      <no-break><pageref|auto-36>>
 
       <with|par-left|<quote|1tab>|2.2.5<space|2spc>Set operations and
       (Partial) Functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-37>>
+      <no-break><pageref|auto-38>>
 
       2.3<space|2spc>Families <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-38>
+      <no-break><pageref|auto-39>
 
       <with|par-left|<quote|1tab>|2.3.1<space|2spc>Family
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-39>>
+      <no-break><pageref|auto-40>>
 
       <with|par-left|<quote|1tab>|2.3.2<space|2spc>Properties of the union
       and intersection of families <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-43>>
+      <no-break><pageref|auto-44>>
 
       2.4<space|2spc>Product of a family of sets
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-44>
+      <no-break><pageref|auto-45>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Relations>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-47><vspace|0.5fn>
+      <no-break><pageref|auto-48><vspace|0.5fn>
 
       3.1<space|2spc>Relation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-48>
+      <no-break><pageref|auto-49>
 
-      3.2<space|2spc>Equivalence relation
+      3.2<space|2spc>Equivalence relations
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-50>
-
-      3.3<space|2spc>Order Relation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-51>
+
+      <with|par-left|<quote|1tab>|3.2.1<space|2spc>Equivalence relations and
+      equivalence classes <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-52>>
+
+      <with|par-left|<quote|1tab>|3.2.2<space|2spc>Equivalence relations and
+      functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-57>>
+
+      3.3<space|2spc>Partial ordered classes
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-59>
+
+      <with|par-left|<quote|1tab>|3.3.1<space|2spc>Order relation
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-60>>
     </associate>
   </collection>
 </auxiliary>
