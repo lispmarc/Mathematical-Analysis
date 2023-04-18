@@ -1,4 +1,4 @@
-<TeXmacs|2.1.1>
+<TeXmacs|2.1.2>
 
 <project|Book.tm>
 
@@ -2187,25 +2187,6 @@
   </proof>
 
   <\theorem>
-    <label|partial function alternative for composition>f
-    <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>C> are two functions
-    then\ 
-
-    <\equation*>
-      <around*|(|g\<circ\>f|)><around*|(|x|)>=g<around*|(|f<around*|(|x|)>|)>
-    </equation*>
-  </theorem>
-
-  <\proof>
-    \ Take <math|z=<around*|(|g\<circ\>f|)><around*|(|x|)>> then
-    <math|<around*|(|x,z|)>\<in\>g\<circ\>f> so that <math|\<exists\>y> such
-    that <math|<around*|(|x,y|)>\<in\>f> and <math|<around*|(|y,z|)>\<in\>g>.
-    Hence <math|y=f<around*|(|x|)>> and <math|z=g<around*|(|y|)>> so that
-    <math|z=g<around*|(|f<around*|(|x|)>|)>>, proving
-    <math|<around*|(|g\<circ\>f|)><around*|(|x|)>=g<around*|(|f<around*|(|x|)>|)>>.
-  </proof>
-
-  <\theorem>
     <label|partial function associativity><dueto|Associativity of
     Composition>Let <math|f:A\<rightarrow\>B>, <math|g:B\<rightarrow\>C> and
     <math|h:C\<rightarrow\>D> be functions then
@@ -2252,6 +2233,8 @@
       <item><math|dom*<around*|(|g\<circ\>f|)>=dom<around*|(|f|)><big|cap>f<rsup|-1><around*|(|dom<around*|(|g|)>|)>>
 
       <item><math|range<around*|(|g\<circ\>f|)>=g<around*|(|range<around*|(|f|)><big|cap>dom<around*|(|g|)>|)>>
+
+      <item><math|range<around*|(|g\<circ\>f|)>\<subseteq\>range<around*|(|g|)>>
     </enumerate>
   </theorem>
 
@@ -2321,6 +2304,11 @@
       <\equation*>
         range<around*|(|g\<circ\>f|)>=g<around*|(|range<around*|(|f|)><big|cap>dom<around*|(|g|)>|)>
       </equation*>
+
+      <item>If <math|z\<in\>range<around*|(|g\<circ\>f|)>> then there exists
+      a <math|x> such that <math|<around*|(|x,z|)>\<in\>g\<circ\>f>, so there
+      exists a <math|y> such that <math|<around*|(|x,y|)>\<in\>f\<wedge\><around*|(|y,z|)>\<in\>g>.
+      Hence <math|z\<in\>range<around*|(|g|)>>
     </enumerate>
   </proof>
 
@@ -2673,15 +2661,32 @@
     \;
   </proof>
 
-  <\notation>
-    <label|function notation>If <math|f:A\<rightarrow\>B> is a function then
-    for every <math|x\<in\>A> we have a unique <math|y\<in\>B> such that
-    <math|<around*|(|x,y|)>\<in\>f>. This unique <math|y> is noted as
-    <math|f<around*|(|x|)>>, so <math|y=f<around*|(|x|)>> is another way of
-    saying <math|<around*|(|x,y|)>\<in\>f>. This notation is very useful if
-    we have a expression to calculate the unique <math|y> associated with
-    <math|x>. For example let <math|3\<cdot\>x+1> be the value associated
-    with <math|x>, so <math|f=<around*|{|z\|z=<around*|(|x,3\<cdot\>x+1|)>\<in\>f\<wedge\>x\<in\>A|}>>,
+  If <math|f:A\<rightarrow\>B> is a function then for every <math|x\<in\>A>
+  we have a unique <math|y\<in\>B> such that <math|<around*|(|x,y|)>\<in\>f>.
+  Furthermore in many cases we have actually a expression valid for every
+  <math|x\<in\>A> to calculate this unique value. To express this we use the
+  following notation.
+
+  <\definition>
+    <label|function f(x)>If <math|f:A\<rightarrow\>B> is a function then
+    <with|font-series|bold|<math|y=f<around*|(|x|)>>> or
+    <with|font-series|bold|<math|f<around*|(|x|)>=y>> where
+    <math|<with|font-series|bold|y>> is a symbol or a mathematical expression
+    is equivalent with\ 
+
+    <\equation*>
+      <with|font-series|bold|<around*|(|x,y|)>\<in\>f>
+    </equation*>
+
+    Further if <math|D\<subseteq\>B> then
+    <with|font-series|bold|<math|f<around*|(|x|)>\<in\>D>> is the same as
+    <with|font-series|bold|<math|\<exists\>y\<in\>D> such that
+    <math|y=f<around*|(|x|)>>>
+  </definition>
+
+  <\example>
+    Let <math|3\<cdot\>x+1> be the value associated with <math|x>, so
+    <math|f=<around*|{|z\|z=<around*|(|x,3\<cdot\>x+1|)>\<in\>f\<wedge\>x\<in\>A|}>>,
     then we can use the following equivalent notations to define our function
 
     <\equation*>
@@ -2713,7 +2718,7 @@
     In all of the above cases we actually means that
     <math|<around*|\<langle\>|f,A,B|\<rangle\>>> is a function with
     <math|f=<around*|{|z\|z=<around*|(|x,3\<cdot\>x+1|)>\<wedge\>x\<in\>A|}>>.
-  </notation>
+  </example>
 
   Using the above notation we can reformulate [proposition:
   <reference|function equality (1)>] in a form that is easier to work with if
@@ -2745,6 +2750,63 @@
     <math|<around*|(|x,y|)>\<in\>g>. Using [proposition: <reference|function
     equality (1)>] we have then that <math|f:A\<rightarrow\>B> and
     <math|g:A\<rightarrow\>B> are equal.
+  </proof>
+
+  Using the new notation, composition of function is written as\ 
+
+  <\theorem>
+    <label|function alternative for composition>f <math|f:A\<rightarrow\>B>
+    and <math|g:B\<rightarrow\>C> are two functions then\ 
+
+    <\equation*>
+      <around*|(|g\<circ\>f|)><around*|(|x|)>=g<around*|(|f<around*|(|x|)>|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ Take <math|z=<around*|(|g\<circ\>f|)><around*|(|x|)>> then
+    <math|<around*|(|x,z|)>\<in\>g\<circ\>f> so that <math|\<exists\>y> such
+    that <math|<around*|(|x,y|)>\<in\>f> and <math|<around*|(|y,z|)>\<in\>g>.
+    Hence <math|y=f<around*|(|x|)>> and <math|z=g<around*|(|y|)>> so that
+    <math|z=g<around*|(|f<around*|(|x|)>|)>>, proving
+    <math|<around*|(|g\<circ\>f|)><around*|(|x|)>=g<around*|(|f<around*|(|x|)>|)>>.
+  </proof>
+
+  Image and pre-image can also be expressed in the new notation.
+
+  <\proposition>
+    <label|function image preimage alternative>Let <math|f:A\<rightarrow\>B>
+    a function, <math|C\<subseteq\>A> and
+    <math|D\<subseteq\>B><space|1em>then\ 
+
+    <\enumerate>
+      <item><math|y\<in\>f<around*|(|C|)>\<Leftrightarrow\>\<exists\>x\<in\>A>
+      such that <math|y=f<around*|(|x|)>>
+
+      <item><math|x\<in\>f<rsup|-1><around*|(|D|)>\<Leftrightarrow\>f<around*|(|x|)>\<in\>D>
+    </enumerate>
+  </proposition>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|y\<in\>f<around*|(|C|)>>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>x\<in\>C<text|
+        such that ><around*|(|x,y|)>\<in\>f>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>x\<in\>C<text|
+        such that >y=f<around*|(|x|)>>>>>
+      </eqnarray*>
+
+      <item>
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<in\>f<rsup|-1><around*|(|C|)>>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>y\<in\>D<text|
+        such that ><around*|(|x,y|)>\<in\>f>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>y\<in\>D<text|
+        such that >y=f<around*|(|x|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|f<around*|(|x|)>\<in\>D>>>>
+      </eqnarray*>
+    </enumerate>
   </proof>
 
   Let's now look at some example of functions:
@@ -3010,8 +3072,8 @@
   <math|<around*|(|x,y|)>\<in\>f> we have
 
   <\theorem>
-    <label|partial function injectivity, surjectivity>Let
-    <math|f:A\<rightarrow\>B> be a partial function then\ 
+    <label|function injectivity, surjectivity>Let <math|f:A\<rightarrow\>B>
+    be a function then\ 
 
     <\enumerate>
       <item><math|f> is injective if and only if <math|\<forall\>x,x\<in\>A>
@@ -3116,13 +3178,16 @@
 
   <\proposition>
     <label|function preimage of image>If <math|f:A\<rightarrow\>B> is a a
-    function and <math|C\<subseteq\>A> then\ 
+    function and <math|C\<subseteq\>A>,<math|D\<subseteq\>B> then\ 
 
     <\enumerate>
       <item><math|C\<subseteq\>f<rsup|-1><around*|(|f<around*|(|C|)>|)>>
 
       <item>If <math|f> is injective then
       <math|C=f<rsup|-1><around*|(|f<around*|(|C|)>|)>>
+
+      <item>If <math|f> is surjective then
+      <math|D=f<around*|(|f<rsup|-1><around*|(|D|)>|)>>
     </enumerate>
   </proposition>
 
@@ -3153,6 +3218,28 @@
 
       <\equation*>
         C=f<rsup|-1><around*|(|f<around*|(|C|)>|)>
+      </equation*>
+
+      <item>If <math|y\<in\>f<around*|(|f<rsup|-1><around*|(|D|)>|)>> then
+      <math|\<exists\>x\<in\>f<rsup|-1><around*|(|D|)>> such that
+      <math|<around*|(|x,y|)>\<in\>f>, hence <math|\<exists\>z\<in\>D> such
+      that <math|<around*|(|z,x|)>\<in\>f<rsup|-1>\<Rightarrow\><around*|(|x,z|)>\<in\>f>,
+      As <math|f> is a function we have <math|y=z> so that <math|y\<in\>D>.
+      Hence\ 
+
+      <\equation>
+        <label|eq 2.15.013>f<around*|(|f<rsup|-1><around*|(|D|)>|)>\<subseteq\>D
+      </equation>
+
+      If <math|y\<in\>D> then as <math|f> is a surjection there exist a
+      <math|x\<in\>A> such that <math|<around*|(|x,y|)>\<in\>f>, hence
+      <math|x\<in\>f<rsup|-1><around*|(|D|)>> proving that
+      <math|y\<in\>f<around*|(|f<rsup|-1><around*|(|D|)>|)>>. So
+      <math|D\<subseteq\>f<around*|(|f<rsup|-1><around*|(|D|)>|)>> which
+      together with [eq: <reference|eq 2.15.013>] proves\ 
+
+      <\equation*>
+        D=f<around*|(|f<rsup|-1><around*|(|D|)>|)>
       </equation*>
     </enumerate>
   </proof>
@@ -3402,6 +3489,31 @@
       <\equation*>
         f<rsup|-1>\<circ\>f=Id<rsub|A>
       </equation*>
+    </enumerate>
+  </proof>
+
+  <\corollary>
+    <label|function inverse function and f(x)>If <math|f:A\<rightarrow\>B> is
+    bijection then\ 
+
+    <\enumerate>
+      <item><math|\<forall\>x\<in\>A> we have
+      <math|<around*|(|f<rsup|-1>|)><around*|(|f<around*|(|x|)>|)>=x>
+
+      <item><math|\<forall\>y\<in\>B> we have
+      <math|f<around*|(|<around*|(|f<rsup|-1>|)><around*|(|y|)>|)>=y>
+    </enumerate>
+  </corollary>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|x\<in\>A> then <math|<around*|(|f<rsup|-1>|)><around*|(|f<around*|(|x|)>|)>=<around*|(|<around*|(|f<rsup|-1>|)>\<circ\>f|)><around*|(|x|)>\<equallim\><rsub|<text|[theorem:
+      >>Id<rsub|A><around*|(|x|)>=x>
+
+      <item>If <math|y\<in\>B> then <math|f<around*|(|<around*|(|f<rsup|-1>|)><around*|(|y|)>|)>\<equallim\><rsub|<text|[theorem:
+      >>Id<rsub|B><around*|(|y|)>=y>
     </enumerate>
   </proof>
 
@@ -4407,25 +4519,18 @@
   function where the emphasis is on the objects in a collection and a way of
   indexing these objects and less on the function itself
 
-  <\notation>
-    <label|family><index|<math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>>>A
-    function\ 
-
-    <\equation*>
-      <with|font-series|bold|x:I\<rightarrow\>B>
-    </equation*>
-
-    is noted as a
-
-    <\equation*>
-      <with|font-series|bold|family <around*|{|x<rsub|i>|}><rsub|i\<in\>I> of
-      objects in B>
-    </equation*>
-
-    or as\ 
+  <\definition>
+    <label|family><index|<math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>>>A Let
+    <math|I,B> be classes then a family\ 
 
     <\equation*>
       <with|font-series|bold|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B>
+    </equation*>
+
+    is actually another way of writing a function
+
+    <\equation*>
+      <with|font-series|bold|x:I\<rightarrow\>B>
     </equation*>
 
     Further <with|font-series|bold|<math|x<rsub|i>>> is another notation for
@@ -4433,12 +4538,12 @@
     <with|font-series|bold|<math|y=x<rsub|i>>> is equivalent with
     <math|<with|font-series|bold|y=x<around*|(|i|)>>> or
     <with|font-series|bold|<math|<around*|(|i,y|)>\<in\>x>>
-  </notation>
+  </definition>
 
   So a family is just another notation of a function. We introduce also a new
   notation for the range of this function.
 
-  <\notation>
+  <\definition>
     <label|family range><index|<math|<around*|{|A<rsub|i>\|i\<in\>I|}>>>If
     <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>> is a family of objects in B
     [standing for the function <math|x:I\<rightarrow\>B>] then we define
@@ -4447,9 +4552,9 @@
     <\equation*>
       <around*|{|x<rsub|i>\|i\<in\>I|}>=range<around*|(|x|)>
     </equation*>
-  </notation>
+  </definition>
 
-  The motivation for this definition if the following theorem
+  The motivation for this definition is the following theorem
 
   <\theorem>
     <label|family range (1)>If <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B>
@@ -4489,6 +4594,26 @@
     <math|range<around*|(|x|)>> is a set, hence
     <math|<around*|{|x<rsub|i>\|i\<in\>I|}>> is a set.
   </proof>
+
+  Composition of functions can also also be represented via the family
+  notation
+
+  <\definition>
+    If you have a function <math|<with|font-series|bold|f:I\<rightarrow\>J>>
+    and a family <math|<with|font-series|bold|<around*|{|x<rsub|j>|}><rsub|j\<in\>J>><with|font-series|bold|\<subseteq\>A>>
+    [associated with the function <math|<with|font-series|bold|x:J\<rightarrow\>A>>]
+    then\ 
+
+    <\equation*>
+      <with|font-series|bold|<around*|{|z<rsub|f<around*|(|i|)>>|}><rsub|i\<in\>I>>
+    </equation*>
+
+    is a notation for the function
+
+    <\equation*>
+      <with|font-series|bold|x\<circ\>f:I\<rightarrow\>A>
+    </equation*>
+  </definition>
 
   Up to now we consider a family as a indexed collection of objects. What is
   actually a object, in set theory it is a class which can be either a set or
@@ -4554,6 +4679,50 @@
       <math|x\<in\>y>>>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>i\<in\>I<text|
       such that <math|x\<in\>A<rsub|i>>>>>>>
     </eqnarray*>
+  </proof>
+
+  <\corollary>
+    <label|family union of family set and surjections>If
+    <math|<around*|{|A<rsub|j>|}><rsub|j\<in\>J>\<subseteq\>B> is a family
+    and <math|f:I\<rightarrow\>J> is a surjection then\ 
+
+    <\equation*>
+      <big|cup><rsub|j\<in\>J>A<rsub|j>=<big|cup><rsub|i\<in\>I>A<rsub|f<around*|(|i|)>>
+    </equation*>
+  </corollary>
+
+  <\proof>
+    If <math|x\<in\><big|cup><rsub|i\<in\>J>A<rsub|j>> then by [theorem:
+    <reference|family union (2)>] there exist a <math|j\<in\>J> such that
+    <math|x\<in\>A<rsub|j>=A<around*|(|j|)>>. As <math|f> is surjective we
+    have by [theorem: <reference|function injectivity, surjectivity>] that
+    there exist a <math|i\<in\>I> such that <math|j=f<around*|(|i|)>>. Hence
+    <math|x\<in\>A<around*|(|f<around*|(|i|)>|)>=<around*|(|A\<circ\>f|)><around*|(|i|)>>.
+    So by [theorem: <reference|family union (2)>] and the definiton of
+    <math|<big|cup><rsub|i\<in\>I>A<rsub|f<around*|(|i|)>>> we have
+    <math|x\<in\><big|cup><rsub|i\<in\>I>A<rsub|f<around*|(|i|)>>>. Hence\ 
+
+    <\equation>
+      <label|eq 2.29.012><big|cup><rsub|j\<in\>J>A<rsub|j>\<subseteq\><big|cup><rsub|i\<in\>I>A<rsub|f<around*|(|i|)>>
+    </equation>
+
+    If <math|x\<in\><big|cup><rsub|i\<in\>I>A<rsub|f<around*|(|i|)>>> then
+    there exist a <math|i\<in\>I> such that
+    <math|x\<in\><around*|(|A\<circ\>f|)><around*|(|i|)>>, which, as using
+    [theorem: <reference|partial function domain range composition>]
+    \ <math|<around*|(|A\<circ\>f|)><around*|(|i|)>\<in\>range<around*|(|A|)>>,
+    means that there exists a <math|j\<in\>J> such that
+    <math|A<rsub|j>=<around*|(|A\<circ\>f|)><around*|(|i|)>>. Hence
+    <math|x\<in\>A<rsub|j>> proving by [theorem: <reference|family union
+    (2)>] that <math|x\<in\><big|cup><rsub|j\<in\>J>A<rsub|j>>. So
+    <math|<big|cup><rsub|i\<in\>I>A<rsub|f<around*|(|i|)>>\<subseteq\><big|cup><rsub|j\<in\>J>A<rsub|j>>
+    which combined with [eq: <reference|eq 2.29.012>] gives\ 
+
+    <\equation*>
+      <big|cup><rsub|j\<in\>J>A<rsub|j>=<big|cup><rsub|i\<in\>I>A<rsub|f<around*|(|i|)>>
+    </equation*>
+
+    \;
   </proof>
 
   <\theorem>
@@ -6950,10 +7119,10 @@
   </proof>
 
   <\example>
-    Let <math|A> be a class and <math|\<leqslant\>> defined by
-    <math|\<leqslant\>=<around*|{|<around*|(|x,y|)>\<in\>\<cal-P\><around*|(|A|)>\<times\>\<cal-P\><around*|(|A|)>\|x\<subseteq\>y|}>>
-    then <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>> is a partial
-    ordered class
+    <label|order inclusion is a order>Let <math|A> be a class and
+    <math|\<leqslant\>> defined by <math|\<leqslant\>=<around*|{|<around*|(|x,y|)>\<in\>\<cal-P\><around*|(|A|)>\<times\>\<cal-P\><around*|(|A|)>\|x\<subseteq\>y|}>>
+    then <math|<around*|\<langle\>|\<cal-P\><around*|(|A|)>,\<leqslant\>|\<rangle\>>>
+    is a partial ordered class
   </example>
 
   <\proof>
@@ -7637,7 +7806,7 @@
       is increasing>f<around*|(|x|)>\<leqslant\><rsub|B>f<around*|(|y|)>>.
       Further if <math|f<around*|(|x|)>\<leqslant\><rsub|B>f<around*|(|y|)>\<Rightarrowlim\><rsub|f<rsup|-1>
       is increasing>f<rsup|-1><around*|(|f<around*|(|x|)>|)>\<leqslant\><rsub|A>f<rsup|-1><around*|(|f<around*|(|y|)>|)>\<Rightarrow\>x\<leqslant\>y>
-      </description>
+    </description>
   </proof>
 
   <\theorem>
@@ -7757,23 +7926,23 @@
       <math|A> iff <math|m\<in\>A> and <math|\<forall\>x\<in\>A> we have
       <math|x\<leqslant\>m>
 
-      <item><math|m> is the <with|font-series|bold|lowest element> of
-      <math|A> iff <math|m\<in\>A> and <math|\<forall\>x\<in\>A> we have
+      <item><math|m> is the <with|font-series|bold|least element> of <math|A>
+      iff <math|m\<in\>A> and <math|\<forall\>x\<in\>A> we have
       <math|m\<leqslant\>x>
     </enumerate>
   </definition>
 
   <\note>
     There is a subtile difference between the definition of a maximal
-    (minimal) element and the greatest (lowest) element. If <math|m> is the
-    greatest (lowest) element of <math|A> then every element in <math|A> is
+    (minimal) element and the greatest (least) element. If <math|m> is the
+    greatest (least) element of <math|A> then every element in <math|A> is
     comparable with <math|m>, which is not the case if <math|m> is a maximal
     (minimal) element of <math|A>.
   </note>
 
   <\note>
     The empty set <math|\<varnothing\>> can not have a maximal, minimal
-    element, greatest element or lowest element.
+    element, greatest element or least element.
   </note>
 
   <\theorem>
@@ -7786,14 +7955,14 @@
       <item>If <math|m,m<rprime|'>> are greatest elements of <math|A> then
       <math|m=m<rprime|'>>
 
-      <item>If <math|m,m<rprime|'>> are lowest elements of <math|A> then
+      <item>If <math|m,m<rprime|'>> are least elements of <math|A> then
       <math|m=m<rprime|'>>
     </enumerate>
 
     The unique greatest element of <math|A> (if it exist) is called the
     maximum of <math|A> and noted as <math|max<around*|(|A|)>>, the unique
-    lowest element of <math|A> (if it exist) is called the minimum of
-    <math|A> and noted as <math|min<around*|(|A|)>>
+    least element of <math|A> (if it exist) is called the minimum of <math|A>
+    and noted as <math|min<around*|(|A|)>>
   </theorem>
 
   <\proof>
@@ -7805,7 +7974,7 @@
       <math|m\<leqslant\>m<rprime|'>\<wedge\>m<rprime|'>\<leqslant\>m> so
       that <math|m=m<rprime|'>>.
 
-      <item>If <math|m,m<rprime|'>> are lowest ekements of <math|A> then as
+      <item>If <math|m,m<rprime|'>> are least ekements of <math|A> then as
       <math|m,m<rprime|'>\<in\>A> we have
       <math|m\<leqslant\>m<rprime|'>\<wedge\>m<rprime|'>\<leqslant\>m> so
       that <math|m=m<rprime|'>>.
@@ -7889,6 +8058,638 @@
     </enumerate>
   </definition>
 
+  <\example>
+    <label|order lower upper bounds of empty set>If
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> then
+    <math|\<upsilon\><around*|(|\<varnothing\>|)>=X> and
+    <math|\<lambda\><around*|(|\<varnothing\>|)>=X>
+  </example>
+
+  <\proof>
+    Let <math|x\<in\>X> then as <math|\<forall\>a\<in\>\<varnothing\>>
+    <math|a\<leqslant\>x> [or <math|x\<leqslant\>a>] is vacuously satisfied
+    <math|X\<subseteq\>\<upsilon\><around*|(|A|)>> and
+    <math|X\<subseteq\>\<lambda\><around*|(|A|)>>, \ which as
+    <math|\<upsilon\><around*|(|X|)>\<subseteq\>X> and
+    <math|\<lambda\><around*|(|X|)>\<subseteq\>X> proves
+    <math|\<upsilon\><around*|(|A|)>=X=\<lambda\><around*|(|A|)>>.
+  </proof>
+
+  <\definition>
+    <label|order supremum infinum><index|supremum><index|infinum><index|<math|inf<around*|(|A|)>>><index|<math|sup<around*|(|A|)>>>If
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is a partial
+    ordered class and <math|A\<subseteq\>X> then\ 
+
+    <\enumerate>
+      <item>If <math|min<around*|(|\<upsilon\><around*|(|A|)>|)>> exists then
+      <math|min<around*|(|\<upsilon\><around*|(|A|)>|)>> is called the
+      supremum of <math|A> and noted as <math|sup<around*|(|A|)>>.
+
+      <item>If <math|max<around*|(|\<lambda\><around*|(|A|)>|)>> exists then
+      <math|max<around*|(|\<lambda\><around*|(|A|)>|)>> is called the infinum
+      of <math|A> and noted as <math|inf<around*|(|A|)>>
+    </enumerate>
+  </definition>
+
+  \ In other words if <math|\<upsilon\><around*|(|A|)>> has a least element
+  then the supremum of <math|A> is this unique, by [theorem: <reference|order
+  greatest and lowest element are unique>], element. So
+  <math|sup<around*|(|A|)>> is the least upper bound of <math|A> [if it
+  exist] and it is itself a upper bound. If <math|\<lambda\><around*|(|A|)>>
+  has a least element then the infinum of <math|A> is this unique, by
+  [theorem: <reference|order greatest and lowest element are unique>],
+  element. So <math|inf<around*|(|A|)>> is the greatest lower bound [if it
+  exist] and it is itself a lower bound.
+
+  The following theorem wil be used a lot of time when dealing with supremums
+  and infinums.
+
+  <\theorem>
+    <label|order sup, inf stalls>Let <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>>
+    be a totally ordered set and <math|A\<subseteq\>X> then
+
+    <\enumerate>
+      <item>If <math|sup<around*|(|A|)>> exists then
+      <math|\<forall\>x\<in\>X> with <math|x\<less\>sup<around*|(|A|)>> then
+      <math|\<exists\>a\<in\>A> such that
+      <math|x\<less\>a\<wedge\>a\<leqslant\>sup<around*|(|A|)>>
+
+      <item>If <math|inf<around*|(|A|)>> exist then <math|\<forall\>x\<in\>X>
+      with <math|inf<around*|(|A|)>\<less\>x> then <math|\<exists\>a\<in\>A>
+      such that <math|inf<around*|(|A|)>\<leqslant\>a\<wedge\>a\<less\>x>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    First as <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is totally
+    ordered we have that <math|\<forall\>x,y\<in\>X> we have that <math|x,y>
+    are comparable, hence by [theorem: <reference|order comparable
+    property>], we have <math|x\<leqslant\>y\<wedge\>y\<less\>x>/
+
+    <\enumerate>
+      <item>Let <math|x\<in\>X> such that <math|x\<less\>sup<around*|(|A|)>>.
+      Assume that <math|\<forall\>a\<in\>A> we have
+      <math|\<neg\><around*|(|x\<less\>a|)>> so that <math|a\<leqslant\>x>,
+      so <math|x> is a upper bound of <math|A>, hence
+      <math|x\<in\>\<upsilon\>*<around*|(|A|)>> so that
+      <math|sup<around*|(|A|)>=min<around*|(|\<upsilon\><around*|(|A|)>|)>\<leqslant\>x>
+      which, as <math|x\<less\>sup<around*|(|A|)>,>leads to the contradiction
+      <math|x\<less\>x>. So we must have that <math|\<exists\>a\<in\>A> such
+      that <math|x\<less\>a>, further as <math|sup<around*|(|A|)>> is a upper
+      bound we have that <math|a\<leqslant\>sup<around*|(|A|)>>. So\ 
+
+      <\equation*>
+        \<exists\>a\<in\>A<text| > x\<less\>a\<wedge\>a\<leqslant\>sup<around*|(|A|)>
+      </equation*>
+
+      <item>Let <math|x\<in\>X> such that <math|inf<around*|(|A|)>\<less\>x>.
+      Assume that <math|\<forall\>a\<in\>A> we have
+      <math|\<neg\><around*|(|a\<less\>x|)>> so that <math|x\<leqslant\>a>,
+      so <math|x> is a lower bound of <math|A>, hence
+      <math|x\<in\>\<lambda\><around*|(|A|)>> so that
+      <math|x\<leqslant\>max<around*|(|\<lambda\><around*|(|A|)>|)>=inf<around*|(|A|)>>,
+      which, as <math|inf<around*|(|A|)>\<less\>x>, leads to the
+      contradiction <math|x\<less\>x>. So we must have that
+      <math|\<exists\>a\<in\>A> such that <math|a\<leqslant\>x>, further as
+      <math|inf<around*|(|A|)>> is a lower bound we have we have that
+      <math|inf<around*|(|A|)>\<leqslant\>a>. So\ 
+
+      <\equation*>
+        \<exists\>a\<in\>A<text| >inf<around*|(|A|)>\<leqslant\>a\<wedge\>a\<less\>x
+      </equation*>
+    </enumerate>
+  </proof>
+
+  <\lemma>
+    <label|order inclusion and greatest and least element>If
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is a partially
+    ordered class and <math|A\<subseteq\>X,B\<subseteq\>X> with
+    <math|A\<subseteq\>B> then
+
+    <\enumerate>
+      <item>If <math|max<around*|(|A|)>> and <math|max<around*|(|B|)>> exist
+      then <math|max<around*|(|A|)>\<leqslant\>max<around*|(|B|)>>
+
+      <item>If <math|min<around*|(|A|)>> and <math|min<around*|(|B|)>> exists
+      then <math|min<around*|(|B|)>\<leqslant\>min<around*|(|A|)>>
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>As <math|max<around*|(|A|)>\<in\>A> and <math|A\<subseteq\>B> we
+      have that <math|max<around*|(|A|)>\<in\>B> so that
+      <math|max<around*|(|A|)>\<leqslant\>max<around*|(|B|)>>
+
+      <item>As <math|min<around*|(|A|)>\<in\>A> and <math|A\<subseteq\>B> we
+      have that <math|min<around*|(|A|)>\<in\>B> so that
+      <math|min*<around*|(|B|)>\<leqslant\>min<around*|(|A|)>>
+    </enumerate>
+  </proof>
+
+  <\lemma>
+    <label|order lower upper bound and inclusion>If
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is a partially
+    ordered class and <math|A\<subseteq\>X,B\<subseteq\>X> with
+    <math|A\<subseteq\>B> then
+
+    <\enumerate>
+      <item><math|\<upsilon\><around*|(|B|)>\<subseteq\>\<upsilon\><around*|(|A|)>>
+
+      <item><math|\<lambda\><around*|(|B|)>\<subseteq\>\<lambda\><around*|(|A|)>>
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|x\<in\>\<upsilon\><around*|(|B|)>> then
+      <math|\<forall\>a\<in\>A> we have, as <math|A\<subseteq\>B> that
+      <math|a\<in\>B> hence <math|a\<leqslant\>x> proving that <math|x> is a
+      upper bound of <math|A> or <math|x\<in\>\<upsilon\><around*|(|A|)>>.
+
+      <item>Let <math|x\<in\>\<lambda\><around*|(|B|)>> then
+      <math|\<forall\>a\<in\>A> we have as <math|A\<subseteq\>B> hat
+      <math|a\<in\>B> hence <math|x\<leqslant\>a> proving that <math|x> is a
+      lower bound of <math|A> or <math|x\<in\>\<lambda\><around*|(|A|)>>.
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|order sup,inf and inclusion>Let
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a partial
+    ordered class and \ <math|A\<subseteq\>X>, <math|B\<subseteq\>Y> such
+    that <math|A\<subseteq\>B> then\ 
+
+    <\enumerate>
+      <item>If <math|sup<around*|(|A|)>> and <math|sup<around*|(|B|)>> exist
+      then <math|sup<around*|(|A|)>\<leqslant\>sup<around*|(|B|)>>
+
+      <item>If <math|inf<around*|(|A|)>> and <math|inf<around*|(|B|)>> exist
+      then <math|inf<around*|(|B|)>\<leqslant\>inf<around*|(|A|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Using [lemma: <reference|order lower upper bound and inclusion>]
+      we have that <math|\<upsilon\><around*|(|B|)>\<subseteq\>\<upsilon\><around*|(|A|)>>
+      so that by [lemma: <reference|order inclusion and greatest and least
+      element>]
+
+      <\equation*>
+        sup<around*|(|A|)>=min<around*|(|\<upsilon\>*<around*|(|A|)>|)>\<leqslant\>min<around*|(|\<upsilon\><around*|(|B|)>|)>=sup<around*|(|B|)>
+      </equation*>
+
+      <item>Using [lemma: <reference|order lower upper bound and inclusion>]
+      we have that <math|\<lambda\><around*|(|B|)>\<subseteq\>\<lambda\><around*|(|A|)>>
+      so that by [lemma: <reference|order inclusion and greatest and least
+      element>]
+
+      <\equation*>
+        inf<around*|(|B|)>=max<around*|(|\<lambda\>*<around*|(|B|)>|)>\<leqslant\>max<around*|(|\<lambda\><around*|(|A|)>|)>=inf<around*|(|A|)>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|order sup and inf and bigger elements>Let
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a partial
+    ordered class and <math|A\<subseteq\>X,B\<subseteq\>X> then
+
+    <\enumerate>
+      <item>If <math|sup<around*|(|A|)>>, <math|sup<around*|(|B|)>> exists
+      and <math|\<forall\>a\<in\>A> <math|\<exists\>b\<in\>B<text|>> such
+      that <math|a\<leqslant\>b> then <math|sup<around*|(|A|)>\<leqslant\>sup<around*|(|B|)>>
+
+      <item>If <math|inf<around*|(|A|)>> and <math|inf<around*|(|B|)>> exist
+      and <math|\<forall\>a\<in\>A> <math|\<exists\>b\<in\>B> such that
+      <math|b\<leqslant\>a> then <math|inf<around*|(|B|)>\<leqslant\>inf<around*|(|A|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|a\<in\>A> then <math|\<exists\>b\<in\>B> such that
+      <math|a\<leqslant\>b>, as <math|b\<leqslant\>sup<around*|(|B|)>> it
+      follows that <math|a\<leqslant\>sup<around*|(|B|)>>. Hence
+      <math|sup<around*|(|B|)>\<in\>\<upsilon\><around*|(|A|)>>. So
+      <math|sup<around*|(|A|)>=min<around*|(|\<upsilon\><around*|(|A|)>|)>\<leqslant\>sup<around*|(|A|)>>,
+      hence
+
+      <\equation*>
+        sup<around*|(|A|)>\<leqslant\>sup<around*|(|B|)>
+      </equation*>
+
+      <item>Let <math|a\<in\>A> then <math|\<exists\>b\<in\>B> such that
+      <math|b\<leqslant\>a>, as <math|inf<around*|(|B|)>\<leqslant\>b> it
+      follows that <math|inf<around*|(|B|)>\<leqslant\>a>. Hence
+      <math|inf<around*|(|B|)>\<in\>\<lambda\><around*|(|A|)>>, So
+      <math|inf<around*|(|B|)>\<leqslant\>max*<around*|(|\<lambda\><around*|(|A|)>|)>=inf<around*|(|A|)>>,
+      hence\ 
+
+      <\equation*>
+        inf<around*|(|B|)>\<leqslant\>inf<around*|(|A|)>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  We have by definition that <math|sup<around*|(|A|)>> exists if
+  <math|min<around*|(|\<upsilon\><around*|(|A|)>|)>> exists and
+  <math|inf<around*|(|A|)>> exist if <math|max<around*|(|\<lambda\><around*|(|A|)>|)>>
+  exist. The following theorem shows that there is a weaker condition for the
+  existance of <math|sup<around*|(|A|)>> and <math|inf<around*|(|A|)>>.
+
+  <\theorem>
+    <label|order sup inf condition>Let <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>>
+    be a partial ordered class and <math|A\<subseteq\>X> then\ 
+
+    <\enumerate>
+      <item>If <math|\<lambda\><around*|(|A|)>> has a supremum then <math|A>
+      has a infinum and <math|sup<around*|(|\<lambda\><around*|(|A|)>|)>=inf<around*|(|A|)>>
+
+      <item>If <math|\<upsilon\><around*|(|A|)>> has a infinum then <math|A>
+      has a supremum and <math|inf<around*|(|\<upsilon\><around*|(|A|)>|)>=sup<around*|(|A|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|a\<in\>A> then <math|\<forall\>y\<in\>\<lambda\><around*|(|A|)>>
+      we have <math|y\<leqslant\>a> so that
+      <math|a\<in\>\<upsilon\><around*|(|\<lambda\><around*|(|A|)>|)>>. As
+      <math|sup<around*|(|\<lambda\><around*|(|A|)>|)>=min<around*|(|\<upsilon\><around*|(|\<lambda\><around*|(|A|)>|)>|)>>
+      we have that <math|sup<around*|(|\<lambda\><around*|(|A|)>|)>\<leqslant\>a>.
+      As <math|a\<in\>A> was arbitrary choosen we have that
+
+      <\equation>
+        <label|eq 3.8.011>sup<around*|(|\<lambda\><around*|(|A|)>|)>\<in\>\<lambda\><around*|(|A|)>
+      </equation>
+
+      If <math|x\<in\>\<lambda\><around*|(|A|)>>, then, as
+      <math|sup<around*|(|\<lambda\><around*|(|A|)>|)>> is a upper bound of
+      <math|\<lambda\><around*|(|A|)>>, we have
+      <math|x\<leqslant\>sup<around*|(|\<lambda\><around*|(|A|)>|)>>. So we
+      have that\ 
+
+      <\equation>
+        <label|eq 3.9.011>\<forall\>x\<in\>\<lambda\><around*|(|A|)><text| we
+        have that <math|x\<leqslant\>sup<around*|(|\<lambda\><around*|(|A|)>|)>>>
+      </equation>
+
+      Using [eq: <reference|eq 3.8.011>] and [eq: <reference|eq 3.9.011>] it
+      follows that <math|sup<around*|(|\<lambda\><around*|(|A|)>|)>=max<around*|(|\<lambda\><around*|(|A|)>|)>=inf<around*|(|A|)>>
+      or\ 
+
+      <\equation*>
+        sup<around*|(|\<lambda\><around*|(|A|)>|)>=inf<around*|(|A|)>
+      </equation*>
+
+      <item>If <math|a\<in\>A> then <math|\<forall\>y\<in\>\<upsilon\><around*|(|A|)>>
+      we have <math|a\<leqslant\>y> so that
+      <math|a\<in\>\<lambda\><around*|(|\<upsilon\><around*|(|A|)>|)>>. As
+      <math|inf<around*|(|\<upsilon\><around*|(|A|)>|)>=max<around*|(|\<lambda\><around*|(|\<upsilon\><around*|(|A|)>|)>|)>>
+      we have that <math|a\<leqslant\>inf<around*|(|\<upsilon\><around*|(|A|)>|)>>.
+      As <math|a\<in\>A> was arbitrary choosen we have that
+
+      <\equation>
+        <label|eq 3.10.012>inf<around*|(|\<upsilon\><around*|(|A|)>|)>\<in\>\<upsilon\><around*|(|A|)>
+      </equation>
+
+      If <math|x\<in\>\<upsilon\><around*|(|A|)>>, then, as
+      <math|inf<around*|(|\<upsilon\><around*|(|A|)>|)>> is a lower bound of
+      <math|\<upsilon\><around*|(|A|)>>, we have
+      <math|inf<around*|(|\<upsilon\><around*|(|A|)>|)>\<leqslant\>x>. So we
+      have that\ 
+
+      <\equation>
+        <label|eq 3.11.012>\<forall\>x\<in\>\<upsilon\><around*|(|A|)><text|
+        we have that <math|inf<around*|(|\<upsilon\><around*|(|A|)>|)>\<leqslant\>x>>
+      </equation>
+
+      Using [eq: <reference|eq 3.10.012>] and [eq: <reference|eq 3.11.012>]
+      it follows that <math|sup<around*|(|\<lambda\><around*|(|A|)>|)>=max<around*|(|\<lambda\><around*|(|A|)>|)>=inf<around*|(|A|)>>
+      or\ 
+
+      <\equation*>
+        sup<around*|(|\<lambda\><around*|(|A|)>|)>=inf<around*|(|A|)>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  In general it is not guaranteed that <math|sup<around*|(|A|)>> or
+  <math|inf<around*|(|A|)>> exists. Later we will find for the real numbers a
+  condition that quarantees the existance of a supremum. This is the idea of
+  the following definition.
+
+  <\definition>
+    <label|order conditional complete order><index|conditional
+    completeness><dueto|Conditional Completeness>A partial ordered class
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is
+    <with|font-series|bold|conditional complete >if every nonempty subclass
+    of <math|A> that is bounded above has a supremum.
+  </definition>
+
+  The next theorem shows that conditional completeness can also be defined
+  based on bounded belowness and infinum.
+
+  <\theorem>
+    <label|order conditional complete alternatives>If
+    <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>> is a partial
+    ordered class then the following are equivalent
+
+    <\enumerate>
+      <item>Every non empty subclass of <math|X> that is bounded above has a
+      supremum [<math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is
+      contional complete]
+
+      <item>Every non empty subclass of <math|X> that is bounded below has a
+      infinum\ 
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|1\<Rightarrow\>2>>Let <math|A\<subseteq\>X> a non empty
+      subclass that is bounded below. As <math|A\<neq\>\<varnothing\>> there
+      exists a <math|a\<in\>A>, further by defnition of
+      <math|\<lambda\><around*|(|A|)>> we have
+      <math|\<forall\>y\<in\>\<lambda\><around*|(|A|)>> that
+      <math|y\<leqslant\>a> so <math|\<lambda\><around*|(|A|)>> is bounded
+      above. As <math|A> is bounded below we have that
+      <math|\<lambda\><around*|(|A|)>\<neq\>\<varnothing\>>. So by the
+      hypothesis <math|sup<around*|(|\<lambda\><around*|(|A|)>|)>> exist.
+      Applying then [theorem: <reference|order sup inf condition>] proves\ 
+
+      <\equation*>
+        inf<around*|(|A|)><text| exist>
+      </equation*>
+
+      <item*|<math|2\<Rightarrow\>1>>Let <math|A\<subseteq\>X> a non empty
+      subclass that is bounded above. As <math|A\<neq\>\<varnothing\>> there
+      exists a <math|a\<in\>A>, further by defnition of
+      <math|\<upsilon\><around*|(|A|)>> we have
+      <math|\<forall\>y\<in\>\<upsilon\><around*|(|A|)>> that
+      <math|a\<leqslant\>u> so <math|\<upsilon\><around*|(|A|)>> is bounded
+      below. As <math|A> is bounded above we have that
+      <math|\<upsilon\><around*|(|A|)>\<neq\>\<varnothing\>>. So by the
+      hypothesis <math|inf<around*|(|\<upsilon\><around*|(|A|)>|)>> exist.
+      Applying then [theorem: <reference|order sup inf condition>] proves\ 
+
+      <\equation*>
+        sup<around*|(|A|)><text| exist>
+      </equation*>
+    </description>
+  </proof>
+
+  Next we show that a order isomorphism preserves the concepts of greatest
+  element, least element, upper bound, lower bound, supremum and infinum.
+
+  <\lemma>
+    <label|order isomorphism preservers sup and inf>Let
+    <math|<around*|\<langle\>|X,\<leqslant\><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,\<leqslant\><rsub|Y>|\<rangle\>>> be partial
+    ordered classes, <math|f:X\<rightarrow\>Y> is a order isomorphism,
+    <math|A\<subseteq\>X> then
+
+    <\enumerate>
+      <item>If <math|u> is a upper bound of <math|B> then
+      <math|<around*|(|f<rsup|-1>|)><around*|(|u|)>> is a upper bound of
+      <math|f<rsup|-1><around*|(|B|)>>
+
+      <item>If <math|l> is a upper bound of <math|B> then
+      <math|<around*|(|f<rsup|-1>|)><around*|(|l|)>> is a lower bound of
+      <math|f<rsup|-1><around*|(|B|)>>
+
+      <item>If <math|u> is a upper bound of <math|A> then
+      <math|f<around*|(|u|)>> is a upper bound of <math|f<around*|(|A|)>>
+
+      <item>If <math|l> is a lower bound of <math|A> then
+      <math|f<around*|(|u|)>> is a lower bound of <math|f<around*|(|A|)>>
+
+      <item><math|f<around*|(|\<upsilon\><around*|(|A|)>|)>=\<upsilon\><around*|(|f<around*|(|A|)>|)>>
+
+      <item><math|f<around*|(|\<lambda\><around*|(|A|)>|)>=\<lambda\><around*|(|f<around*|(|A|)>|)>>
+
+      <item>If <math|max<around*|(|A|)>> exist then
+      <math|max<around*|(|f<around*|(|A|)>|)>> exist and
+      <math|max<around*|(|f<around*|(|A|)>|)>=f<around*|(|max<around*|(|A|)>|)>>
+
+      <item>If <math|min<around*|(|A|)>> exist then
+      <math|min<around*|(|f<around*|(|A|)>|)>> exist and
+      <math|min<around*|(|f<around*|(|A|)>|)>=f<around*|(|min<around*|(|A|)>|)>>
+
+      <item>If <math|sup<around*|(|A|)>> exist then
+      <math|sup<around*|(|f<around*|(|A|)>|)>> exist and
+      <math|sup<around*|(|f<around*|(|A|)>|)>=f<around*|(|sup<around*|(|A|)>|)>>
+
+      <item>If <math|inf<around*|(|A|)>> exist then
+      <math|inf<around*|(|f<around*|(|A|)>|)>> exist and
+      <math|inf<around*|(|f<around*|(|A|)>|)>=f<around*|(|inf<around*|(|A|)>|)>>
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    First using [theorem: <reference|order condition for isomorphism>] we
+    have that <math|f:X\<rightarrow\>Y> and
+    <math|f<rsup|-1>:Y\<rightarrow\>X> are increasing.
+
+    <\enumerate>
+      <item>Let <math|x\<in\>f<rsup|-1><around*|(|B|)>> then
+      <math|\<exists\>y\<in\>B> such that <math|y=f<around*|(|x|)>>, as
+      <math|u> is a upper bound of <math|B>, we have that
+      <math|y\<leqslant\><rsub|B>u>. So <math|x\<equallim\><rsub|<text|[theorem:
+      <reference|function inverse function and
+      f(x)>]>><around*|(|f<rsup|-1>|)><around*|(|f<around*|(|x|)>|)>\<leqslant\><rsub|A><around*|(|f<rsup|-1>|)><around*|(|u|)>>,
+      proving that <math|<around*|(|f<rsup|-1>|)><around*|(|u|)>> is a upper
+      bound of <math|f<rsup|-1><around*|(|B|)>>.
+
+      <item>Let <math|x\<in\>f<rsup|-1><around*|(|B|)>> then
+      <math|\<exists\>y\<in\>B> such that <math|y=f<around*|(|x|)>>, as
+      <math|l> is a lower bound of <math|B> we have that
+      <math|l\<leqslant\><rsub|B>x>. So <math|x\<equallim\><rsub|<text|[theorem:
+      <reference|function inverse function and
+      f(x)>]>><around*|(|f<rsup|-1>|)><around*|(|l|)>\<leqslant\><rsub|A><around*|(|f<rsup|-1>|)><around*|(|f<around*|(|x|)>|)>>,
+      proving that <math|<around*|(|f<rsup|-1>|)><around*|(|l|)>> is a lower
+      bound of <math|f<rsup|-1><around*|(|B|)>>.
+
+      <item>If <math|y\<in\>f<around*|(|A|)>> then <math|\<exists\>x\<in\>A>
+      such that <math|f<around*|(|x|)>\<in\>A>, hence as <math|u> is a upper
+      bound of <math|A> we have that <math|x\<leqslant\><rsub|A>u>. So
+      <math|y=f<around*|(|x|)>\<leqslant\><rsub|B>f<around*|(|u|)>> proving
+      that <math|f<around*|(|u|)>> is a upper bound of
+      <math|f<around*|(|A|)>>.
+
+      <item>If <math|y\<in\>f<around*|(|A|)>> then <math|\<exists\>x\<in\>A>
+      such that <math|f<around*|(|x|)>\<in\>A>, hence as <math|l> is a lower
+      bound of <math|A> we have that <math|l\<leqslant\><rsub|A>x>. So
+      <math|f<around*|(|l|)>\<leqslant\><rsub|B>f<around*|(|x|)>=y> proving
+      that <math|f<around*|(|l|)>> is a lower bound of
+      <math|f<around*|(|A|)>>.
+
+      <item> If <math|y\<in\>f<around*|(|\<upsilon\><around*|(|A|)>|)>> then
+      <math|\<exists\>x\<in\>\<upsilon\><around*|(|A|)>> such that
+      <math|y=f<around*|(|x|)>>. As <math|x\<in\>\<upsilon\><around*|(|B|)>>
+      <math|x> is a upper bound of <math|B> so that by (3)
+      <math|y=f<around*|(|x|)>> is a upper bound of <math|f<around*|(|A|)>>.
+      Hence\ 
+
+      <\equation>
+        <label|eq 3.12.012>f<around*|(|\<upsilon\><around*|(|A|)>|)>\<subseteq\>\<upsilon\><around*|(|f<around*|(|A|)>|)>
+      </equation>
+
+      If <math|y\<in\>v<around*|(|f<around*|(|A|)>|)>> then by (1)
+      <math|<around*|(|f<rsup|-1>|)><around*|(|y|)>> is a upper bound of
+      <math|f<rsup|-1><around*|(|f<around*|(|A|)>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|function preimage of image>]>>A> so that
+      <math|<around*|(|f<rsup|-1>|)><around*|(|y|)>\<in\>\<upsilon\><around*|(|A|)>>.
+      So <math|y\<equallim\><rsub|<text|[theorem: <reference|function inverse
+      function and f(x)>>>f<around*|(|<around*|(|f<rsup|-1>|)><around*|(|y|)>|)>\<in\>f<around*|(|\<upsilon\><around*|(|A|)>|)>>.
+      Hence <math|\<upsilon\><around*|(|f<around*|(|A|)>|)>\<subseteq\>f<around*|(|\<upsilon\><around*|(|A|)>|)>>
+      which combined with [eq: <reference|eq 3.12.012>] proves\ 
+
+      <\equation*>
+        f<around*|(|\<upsilon\><around*|(|A|)>|)>=\<upsilon\><around*|(|f<around*|(|A|)>|)>
+      </equation*>
+
+      <item>If <math|y\<in\>f<around*|(|\<lambda\><around*|(|A|)>|)>> then
+      <math|\<exists\>x\<in\>\<lambda\><around*|(|A|)>> such that
+      <math|y=f<around*|(|x|)>>. As <math|x\<in\>\<lambda\><around*|(|A|)>>
+      <math|x> is a lower bound of <math|A> so that by (4)
+      <math|y=f<around*|(|x|)>> is a lower bound of <math|f<around*|(|A|)>>.
+      Hence\ 
+
+      <\equation>
+        <label|eq 3.14.012>f<around*|(|\<lambda\><around*|(|A|)>|)>\<subseteq\>\<lambda\><around*|(|f<around*|(|A|)>|)>
+      </equation>
+
+      If <math|y\<in\>\<lambda\><around*|(|f<around*|(|A|)>|)>> then by (2)
+      <math|<around*|(|f<rsup|-1>|)><around*|(|y|)>> is a lower bound of
+      <math|f<rsup|-1><around*|(|f<around*|(|A|)>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|function preimage of image>]>>A> so that
+      <math|<around*|(|f<rsup|-1>|)><around*|(|y|)>\<in\>\<lambda\><around*|(|A|)>>.
+      So <math|y\<equallim\><rsub|<text|[theorem: <reference|function inverse
+      function and f(x)>>>f<around*|(|<around*|(|f<rsup|-1>|)><around*|(|y|)>|)>\<in\>f<around*|(|\<lambda\><around*|(|A|)>|)>>.
+      Hence <math|\<lambda\><around*|(|f<around*|(|A|)>|)>\<subseteq\>f<around*|(|\<lambda\><around*|(|A|)>|)>>
+      which combined with [eq: <reference|eq 3.12.012>] proves\ 
+
+      <\equation*>
+        f<around*|(|\<lambda\><around*|(|A|)>|)>=\<lambda\><around*|(|f<around*|(|A|)>|)>
+      </equation*>
+
+      <item>If <math|max<around*|(|A|)>> exist then
+      <math|max<around*|(|A|)>\<in\>A> giving
+      <math|f<around*|(|max<around*|(|A|)>|)>\<in\>f<around*|(|A|)>>. Let
+      <math|y\<in\>f<around*|(|A|)>> then <math|\<exists\>x\<in\>A> such that
+      <math|y=f<around*|(|x|)>>, as <math|max<around*|(|A|)>> exist we have
+      <math|x\<leqslant\><rsub|A>max<around*|(|A|)>> so that
+      <math|y=f<around*|(|x|)>\<leqslant\><rsub|B>f<around*|(|max<around*|(|A|)>|)>>.
+      So\ 
+
+      <\equation*>
+        max<around*|(|f<around*|(|A|)>|)><text| exist and
+        >max<around*|(|f<around*|(|A|)>|)>=f<around*|(|max<around*|(|A|)>|)>
+      </equation*>
+
+      <item>If <math|min<around*|(|A|)>> exist then
+      <math|min<around*|(|A|)>\<in\>A> giving
+      <math|f<around*|(|min<around*|(|A|)>|)>\<in\>f<around*|(|A|)>>. Let
+      <math|y\<in\>f<around*|(|A|)>> then <math|\<exists\>x\<in\>A> such that
+      <math|y=f<around*|(|x|)>>, as <math|min<around*|(|A|)>> exist we have
+      <math|max<around*|(|A|)>\<leqslant\><rsub|A>x> so that
+      <math|f<around*|(|max<around*|(|A|)>|)>\<leqslant\><rsub|B>f<around*|(|x|)>=y>.
+      So\ 
+
+      <\equation*>
+        min<around*|(|f<around*|(|A|)>|)><text| exist and
+        >min<around*|(|f<around*|(|A|)>|)>=f<around*|(|min<around*|(|A|)>|)>
+      </equation*>
+
+      <item>If <math|sup<around*|(|A|)>> exists then
+      <math|min<around*|(|\<upsilon\><around*|(|A|)>|)>> exists and
+      <math|sup<around*|(|A|)>=min<around*|(|\<upsilon\><around*|(|A|)>|)>>.
+      Using (8) <math|min<around*|(|f<around*|(|\<upsilon\>*<around*|(|A|)>|)>|)>>
+      exist, As <math|f<around*|(|\<upsilon\><around*|(|A|)>|)>\<equallim\><rsub|<around*|(|5|)>>\<upsilon\><around*|(|f<around*|(|A|)>|)>>
+      we have that <math|min<around*|(|\<upsilon\><around*|(|f<around*|(|A|)>|)>|)>>
+      exist and\ 
+
+      <\equation*>
+        sup<around*|(|f<around*|(|A|)>|)>=min<around*|(|\<upsilon\><around*|(|f<around*|(|A|)>|)>|)>\<equallim\><rsub|<around*|(|5|)>>min<around*|(|f<around*|(|\<upsilon\><around*|(|A|)>|)>|)>\<equallim\><rsub|<around*|(|8|)>>f<around*|(|min<around*|(|\<upsilon\><around*|(|A|)>|)>|)>=f<around*|(|sup<around*|(|A|)>|)>
+      </equation*>
+
+      <item>If <math|inf<around*|(|A|)>> exists then
+      <math|max<around*|(|\<lambda\><around*|(|A|)>|)>> exists and
+      <math|inf<around*|(|A|)>=max<around*|(|\<lambda\><around*|(|A|)>|)>>.
+      Using (7) <math|max<around*|(|f<around*|(|\<lambda\>*<around*|(|A|)>|)>|)>>
+      exist, As <math|f<around*|(|\<lambda\><around*|(|A|)>|)>\<equallim\><rsub|<around*|(|6|)>>\<lambda\><around*|(|f<around*|(|A|)>|)>>
+      we have that <math|max<around*|(|\<lambda\><around*|(|f<around*|(|A|)>|)>|)>>
+      exist and\ 
+
+      <\equation*>
+        inf<around*|(|f<around*|(|A|)>|)>=max<around*|(|\<lambda\><around*|(|f<around*|(|A|)>|)>|)>\<equallim\><rsub|<around*|(|6|)>>max<around*|(|f<around*|(|\<lambda\><around*|(|A|)>|)>|)>\<equallim\><rsub|<around*|(|7|)>>f<around*|(|max<around*|(|\<lambda\><around*|(|A|)>|)>|)>=f<around*|(|inf<around*|(|A|)>|)>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|order isomorphism and conditional complete>Let
+    <math|<around*|\<langle\>|X,\<leqslant\><rsub|X>|\<rangle\>>> be a
+    conditionally complete partial ordered set,
+    <math|<around*|\<langle\>|Y,\<leqslant\><rsub|Y>|\<rangle\>>> a partial
+    ordered class and <math|f:X\<rightarrow\>Y> a order isomorphism then
+    <math|<around*|\<langle\>|Y,\<leqslant\><rsub|Y>|\<rangle\>>> is
+    conditionally complete.
+  </theorem>
+
+  <\proof>
+    Let <math|A\<subseteq\>Y> such that <math|A> is bounded above and non
+    empty. Let <math|u> be a upper bound of <math|A> then by [lemma:
+    <reference|order isomorphism preservers sup and inf>] we have that
+    <math|<around*|(|f<rsup|-1>|)><around*|(|u|)>> is a upper bound of
+    <math|f<rsup|-1><around*|(|A|)>>. As <math|A\<neq\>\<varnothing\>> there
+    exists a <math|a\<in\>A> which as <math|f> is surjective means that
+    <math|\<exists\>x> such that <math|a=f<around*|(|x|)>> hence
+    <math|x\<in\>f<rsup|-1><around*|(|A|)>> proving that
+    <math|f<rsup|-1><around*|(|A|)>\<neq\>\<varnothing\>>. As
+    <math|<around*|\<langle\>|X,\<leqslant\><rsub|X>|\<rangle\>>> is
+    conditional complete <math|sup<around*|(|f<rsup|-1><around*|(|A|)>|)>>
+    exist. Using \ [lemma: <reference|order isomorphism preservers sup and
+    inf>] <math|sup<around*|(|f*<around*|(|f<rsup|-1><around*|(|A|)>|)>|)>>
+    exist which as <math|A\<equallim\><rsub|<text|[theorem:
+    <reference|function preimage of image>]>>f<around*|(|f<rsup|-1><around*|(|A|)>|)><rsub|>>
+    proves that <math|sup<around*|(|A|)>> exist. So
+    <math|<around*|\<langle\>|X,\<leqslant\><rsub|Y>|\<rangle\>>> is
+    conditionally complete.
+  </proof>
+
+  <subsection|Well ordering>
+
+  <\definition>
+    <label|order well-rodered class><index|well-ordered class>A partial
+    ordered class <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is
+    <with|font-series|bold|well-ordered> is every nonempty subclass of
+    <math|X> has a least element. In other words if
+    <math|\<forall\>A\<in\>\<cal-P\><around*|(|X|)>>
+    <math|min<around*|(|A|)>> exitst.
+  </definition>
+
+  \;
+
+  \;
+
+  \;
+
   \;
 </body>
 
@@ -7907,7 +8708,7 @@
   <\collection>
     <associate|\<less\>A,B,C\<gtr\>=\<less\>D,E,F\<gtr\>=\<gtr\>A=E,B=D,C=F|<tuple|2.5|?>>
     <associate|\<less\>A,B\<gtr\>=\<less\>C,D\<gtr\>=\<gtr\>A=C,B=D|<tuple|2.3|?>>
-    <associate|Axiom of Replacement|<tuple|2.47|?>>
+    <associate|Axiom of Replacement|<tuple|2.49|?>>
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-10|<tuple|axiom of pairing|?>>
     <associate|auto-11|<tuple|cartesian product|?>>
@@ -7997,6 +8798,13 @@
     <associate|auto-88|<tuple|upper bound|?>>
     <associate|auto-89|<tuple|lower bound|?>>
     <associate|auto-9|<tuple|1.3|?>>
+    <associate|auto-90|<tuple|supremum|?>>
+    <associate|auto-91|<tuple|infinum|?>>
+    <associate|auto-92|<tuple|<with|mode|<quote|math>|inf<around*|(|A|)>>|?>>
+    <associate|auto-93|<tuple|<with|mode|<quote|math>|sup<around*|(|A|)>>|?>>
+    <associate|auto-94|<tuple|conditional completeness|?>>
+    <associate|auto-95|<tuple|3.3.4|?>>
+    <associate|auto-96|<tuple|well-ordered class|?>>
     <associate|axiom of construction|<tuple|1.9|?>>
     <associate|axiom of extent|<tuple|1.5|2>>
     <associate|axiom of infinity|<tuple|1.52|?>>
@@ -8004,8 +8812,8 @@
     <associate|axiom of power|<tuple|1.64|?>>
     <associate|axiom of subsets|<tuple|1.54|?>>
     <associate|axiom of union|<tuple|1.61|?>>
-    <associate|bijection|<tuple|2.53|?>>
-    <associate|bijective classes|<tuple|2.54|?>>
+    <associate|bijection|<tuple|2.55|?>>
+    <associate|bijective classes|<tuple|2.56|?>>
     <associate|cartesian product|<tuple|1.44|?>>
     <associate|cartesian product and inclusion|<tuple|1.48|?>>
     <associate|cartesian product of the empty set|<tuple|1.46|?>>
@@ -8030,8 +8838,6 @@
     <associate|class union|<tuple|1.56|?>>
     <associate|class union{A,B}|<tuple|1.59|?>>
     <associate|class universal and empotyset properties|<tuple|1.32|?>>
-    <associate|condition for isomorphism in a full ordered
-    set|<tuple|3.52|?>>
     <associate|element a=b=\<gtr\>{a}={b}|<tuple|1.34|?>>
     <associate|element equalitiy of unordered pairs|<tuple|1.39|?>>
     <associate|element equality of unordered pairs (1)|<tuple|1.40|?>>
@@ -8051,64 +8857,72 @@
     <associate|eq 2.1.001.1|<tuple|2.1|?>>
     <associate|eq 2.10.001|<tuple|2.10|?>>
     <associate|eq 2.11.001|<tuple|2.11|?>>
-    <associate|eq 2.12.001|<tuple|2.15|?>>
+    <associate|eq 2.12.001|<tuple|2.16|?>>
     <associate|eq 2.12.002|<tuple|2.12|?>>
-    <associate|eq 2.13.001|<tuple|2.16|?>>
+    <associate|eq 2.13.001|<tuple|2.17|?>>
     <associate|eq 2.13.002|<tuple|2.13|?>>
-    <associate|eq 2.14.001|<tuple|2.20|?>>
+    <associate|eq 2.14.001|<tuple|2.21|?>>
     <associate|eq 2.14.009|<tuple|2.14|?>>
-    <associate|eq 2.16.003|<tuple|2.23|?>>
-    <associate|eq 2.16.005|<tuple|2.17|?>>
-    <associate|eq 2.17.002|<tuple|2.24|?>>
-    <associate|eq 2.17.003|<tuple|2.22|?>>
-    <associate|eq 2.17.004|<tuple|2.21|?>>
-    <associate|eq 2.17.006|<tuple|2.18|?>>
-    <associate|eq 2.18.002|<tuple|2.25|?>>
-    <associate|eq 2.18.006|<tuple|2.19|?>>
-    <associate|eq 2.19.002|<tuple|2.26|?>>
+    <associate|eq 2.15.013|<tuple|2.15|?>>
+    <associate|eq 2.16.003|<tuple|2.24|?>>
+    <associate|eq 2.16.005|<tuple|2.18|?>>
+    <associate|eq 2.17.002|<tuple|2.25|?>>
+    <associate|eq 2.17.003|<tuple|2.23|?>>
+    <associate|eq 2.17.004|<tuple|2.22|?>>
+    <associate|eq 2.17.006|<tuple|2.19|?>>
+    <associate|eq 2.18.002|<tuple|2.26|?>>
+    <associate|eq 2.18.006|<tuple|2.20|?>>
+    <associate|eq 2.19.002|<tuple|2.27|?>>
     <associate|eq 2.2.001|<tuple|2.4|?>>
-    <associate|eq 2.20.002|<tuple|2.27|?>>
-    <associate|eq 2.21.002|<tuple|2.28|?>>
-    <associate|eq 2.25.004|<tuple|2.29|?>>
-    <associate|eq 2.26.004|<tuple|2.30|?>>
-    <associate|eq 2.27.004|<tuple|2.31|?>>
-    <associate|eq 2.28.004|<tuple|2.32|?>>
-    <associate|eq 2.29.004|<tuple|2.34|?>>
+    <associate|eq 2.20.002|<tuple|2.28|?>>
+    <associate|eq 2.21.002|<tuple|2.29|?>>
+    <associate|eq 2.25.004|<tuple|2.31|?>>
+    <associate|eq 2.26.004|<tuple|2.32|?>>
+    <associate|eq 2.27.004|<tuple|2.33|?>>
+    <associate|eq 2.28.004|<tuple|2.34|?>>
+    <associate|eq 2.29.004|<tuple|2.36|?>>
+    <associate|eq 2.29.012|<tuple|2.30|?>>
     <associate|eq 2.3.001.2|<tuple|2.3|?>>
-    <associate|eq 2.30.004|<tuple|2.35|?>>
-    <associate|eq 2.31.004|<tuple|2.36|?>>
-    <associate|eq 2.31.010|<tuple|2.33|?>>
-    <associate|eq 2.32.004|<tuple|2.37|?>>
-    <associate|eq 2.34.005|<tuple|2.38|?>>
-    <associate|eq 2.35.005|<tuple|2.39|?>>
-    <associate|eq 2.38.006|<tuple|2.40|?>>
-    <associate|eq 2.39.006|<tuple|2.41|?>>
-    <associate|eq 2.40.006|<tuple|2.43|?>>
-    <associate|eq 2.40.007|<tuple|2.42|?>>
-    <associate|eq 2.41.006|<tuple|2.44|?>>
-    <associate|eq 2.42.006|<tuple|2.45|?>>
-    <associate|eq 2.43.006|<tuple|2.47|?>>
-    <associate|eq 2.44.006|<tuple|2.48|?>>
-    <associate|eq 2.44.007|<tuple|2.46|?>>
-    <associate|eq 2.45.006|<tuple|2.49|?>>
-    <associate|eq 2.48.007|<tuple|2.52|?>>
-    <associate|eq 2.48.008|<tuple|2.50|?>>
-    <associate|eq 2.49.007|<tuple|2.53|?>>
+    <associate|eq 2.30.004|<tuple|2.37|?>>
+    <associate|eq 2.31.004|<tuple|2.38|?>>
+    <associate|eq 2.31.010|<tuple|2.35|?>>
+    <associate|eq 2.32.004|<tuple|2.39|?>>
+    <associate|eq 2.34.005|<tuple|2.40|?>>
+    <associate|eq 2.35.005|<tuple|2.41|?>>
+    <associate|eq 2.38.006|<tuple|2.42|?>>
+    <associate|eq 2.39.006|<tuple|2.43|?>>
+    <associate|eq 2.40.006|<tuple|2.45|?>>
+    <associate|eq 2.40.007|<tuple|2.44|?>>
+    <associate|eq 2.41.006|<tuple|2.46|?>>
+    <associate|eq 2.42.006|<tuple|2.47|?>>
+    <associate|eq 2.43.006|<tuple|2.49|?>>
+    <associate|eq 2.44.006|<tuple|2.50|?>>
+    <associate|eq 2.44.007|<tuple|2.48|?>>
+    <associate|eq 2.45.006|<tuple|2.51|?>>
+    <associate|eq 2.48.007|<tuple|2.54|?>>
+    <associate|eq 2.48.008|<tuple|2.52|?>>
+    <associate|eq 2.49.007|<tuple|2.55|?>>
     <associate|eq 2.5.001.2|<tuple|2.5|?>>
-    <associate|eq 2.50.007|<tuple|2.54|?>>
-    <associate|eq 2.51.007|<tuple|2.55|?>>
-    <associate|eq 2.51.010|<tuple|2.51|?>>
+    <associate|eq 2.50.007|<tuple|2.56|?>>
+    <associate|eq 2.51.007|<tuple|2.57|?>>
+    <associate|eq 2.51.010|<tuple|2.53|?>>
     <associate|eq 2.6.001|<tuple|2.6|?>>
     <associate|eq 2.7.001|<tuple|2.7|?>>
     <associate|eq 2.8.001|<tuple|2.8|?>>
     <associate|eq 2.9.001|<tuple|2.9|?>>
     <associate|eq 3.1.009|<tuple|3.1|?>>
+    <associate|eq 3.10.012|<tuple|3.10|?>>
+    <associate|eq 3.11.012|<tuple|3.11|?>>
+    <associate|eq 3.12.012|<tuple|3.12|?>>
+    <associate|eq 3.14.012|<tuple|3.13|?>>
     <associate|eq 3.2.009|<tuple|3.2|?>>
     <associate|eq 3.3.009|<tuple|3.3|?>>
     <associate|eq 3.4.009|<tuple|3.4|?>>
     <associate|eq 3.5.009|<tuple|3.5|?>>
     <associate|eq 3.6.009|<tuple|3.6|?>>
     <associate|eq 3.7.009|<tuple|3.7|?>>
+    <associate|eq 3.8.011|<tuple|3.8|?>>
+    <associate|eq 3.9.011|<tuple|3.9|?>>
     <associate|eq order preorder to order|<tuple|3.32|?>>
     <associate|equivalence relation|<tuple|3.5|?>>
     <associate|equivalence relation A/R|<tuple|3.16|?>>
@@ -8122,73 +8936,78 @@
     <associate|equivalence relation partition|<tuple|3.6|?>>
     <associate|equivalence relation partition alternative|<tuple|3.8|?>>
     <associate|equivalence relation subsets|<tuple|3.19|?>>
-    <associate|family|<tuple|2.78|?>>
-    <associate|family de Morgan|<tuple|2.98|?>>
-    <associate|family distributivity|<tuple|2.96|?>>
-    <associate|family image and preimage|<tuple|2.101|?>>
-    <associate|family intersection (2)|<tuple|2.89|?>>
-    <associate|family intersection is a set|<tuple|2.90|?>>
-    <associate|family intersection of sets|<tuple|2.86|?>>
-    <associate|family intersection(1)|<tuple|2.88|?>>
-    <associate|family properties (1)|<tuple|2.93|?>>
-    <associate|family properties (2)|<tuple|2.94|?>>
-    <associate|family properties (3)|<tuple|2.99|?>>
-    <associate|family range|<tuple|2.79|?>>
-    <associate|family range (1)|<tuple|2.80|?>>
-    <associate|family set|<tuple|2.81|?>>
-    <associate|family trivial|<tuple|2.91|?>>
-    <associate|family union (1)|<tuple|2.82|?>>
-    <associate|family union (2)|<tuple|2.85|?>>
-    <associate|family union intersection and empty set|<tuple|2.100|?>>
-    <associate|family union intersection and inclusion|<tuple|2.95|?>>
-    <associate|family union of a empty set|<tuple|2.87|?>>
-    <associate|family union of union of two families|<tuple|2.97|?>>
-    <associate|family union{A,B}|<tuple|2.92|?>>
-    <associate|function|<tuple|2.22|?>>
-    <associate|function A^empty is empty|<tuple|2.28|?>>
-    <associate|function B^A|<tuple|2.26|?>>
-    <associate|function B^A and inclusion|<tuple|2.29|?>>
-    <associate|function P(A)=2^A|<tuple|2.65|?>>
-    <associate|function and power|<tuple|2.64|?>>
-    <associate|function between {0,1} and {A,B}|<tuple|2.24|?>>
-    <associate|function bijection and inverse|<tuple|2.61|?>>
-    <associate|function bijection condition (2)|<tuple|2.60|?>>
-    <associate|function bijection f,f-1|<tuple|2.59|?>>
-    <associate|function bijection has a inverse|<tuple|2.58|?>>
-    <associate|function characteristics function|<tuple|2.38|?>>
-    <associate|function composition and restriction|<tuple|2.70|?>>
+    <associate|family|<tuple|2.81|?>>
+    <associate|family de Morgan|<tuple|2.103|?>>
+    <associate|family distributivity|<tuple|2.101|?>>
+    <associate|family image and preimage|<tuple|2.106|?>>
+    <associate|family intersection (2)|<tuple|2.94|?>>
+    <associate|family intersection is a set|<tuple|2.95|?>>
+    <associate|family intersection of sets|<tuple|2.91|?>>
+    <associate|family intersection(1)|<tuple|2.93|?>>
+    <associate|family properties (1)|<tuple|2.98|?>>
+    <associate|family properties (2)|<tuple|2.99|?>>
+    <associate|family properties (3)|<tuple|2.104|?>>
+    <associate|family range|<tuple|2.82|?>>
+    <associate|family range (1)|<tuple|2.83|?>>
+    <associate|family set|<tuple|2.84|?>>
+    <associate|family trivial|<tuple|2.96|?>>
+    <associate|family union (1)|<tuple|2.86|?>>
+    <associate|family union (2)|<tuple|2.89|?>>
+    <associate|family union intersection and empty set|<tuple|2.105|?>>
+    <associate|family union intersection and inclusion|<tuple|2.100|?>>
+    <associate|family union of a empty set|<tuple|2.92|?>>
+    <associate|family union of family set and surjections|<tuple|2.90|?>>
+    <associate|family union of union of two families|<tuple|2.102|?>>
+    <associate|family union{A,B}|<tuple|2.97|?>>
+    <associate|function|<tuple|2.21|?>>
+    <associate|function A^empty is empty|<tuple|2.27|?>>
+    <associate|function B^A|<tuple|2.25|?>>
+    <associate|function B^A and inclusion|<tuple|2.28|?>>
+    <associate|function P(A)=2^A|<tuple|2.68|?>>
+    <associate|function alternative for composition|<tuple|2.36|?>>
+    <associate|function and power|<tuple|2.67|?>>
+    <associate|function between {0,1} and {A,B}|<tuple|2.23|?>>
+    <associate|function bijection and inverse|<tuple|2.64|?>>
+    <associate|function bijection condition (2)|<tuple|2.63|?>>
+    <associate|function bijection f,f-1|<tuple|2.61|?>>
+    <associate|function bijection has a inverse|<tuple|2.60|?>>
+    <associate|function characteristics function|<tuple|2.40|?>>
+    <associate|function composition and restriction|<tuple|2.73|?>>
     <associate|function composition injectivity, surjectivity and
-    bijectivity|<tuple|2.63|?>>
-    <associate|function composition of Id function|<tuple|2.40|?>>
+    bijectivity|<tuple|2.66|?>>
+    <associate|function composition of Id function|<tuple|2.42|?>>
     <associate|function composition of functions is a
-    fucntion|<tuple|2.42|?>>
-    <associate|function condition (1)|<tuple|2.23|?>>
-    <associate|function constant function|<tuple|2.37|?>>
-    <associate|function empty function|<tuple|2.36|?>>
-    <associate|function equality (1)|<tuple|2.33|?>>
+    fucntion|<tuple|2.44|?>>
+    <associate|function condition (1)|<tuple|2.22|?>>
+    <associate|function constant function|<tuple|2.39|?>>
+    <associate|function empty function|<tuple|2.38|?>>
+    <associate|function equality (1)|<tuple|2.32|?>>
     <associate|function equality (2)|<tuple|2.35|?>>
-    <associate|function function and intersection and union|<tuple|2.74|?>>
-    <associate|function identity function|<tuple|2.39|?>>
-    <associate|function identity map is a bijection|<tuple|2.55|?>>
-    <associate|function image preimage|<tuple|2.41|?>>
-    <associate|function inclusion function|<tuple|2.46|?>>
-    <associate|function injective inverse is a function|<tuple|2.52|?>>
-    <associate|function injectivity to bijection|<tuple|2.57|?>>
-    <associate|function inverse and restriction|<tuple|2.69|?>>
-    <associate|function inverse of a bijection is unique|<tuple|2.62|?>>
-    <associate|function notation|<tuple|2.34|?>>
-    <associate|function power of intersection|<tuple|2.31|?>>
-    <associate|function preimage of image|<tuple|2.48|?>>
-    <associate|function properties (1)|<tuple|2.73|?>>
-    <associate|function range restriction|<tuple|2.32|?>>
-    <associate|function restricted function properties|<tuple|2.67|?>>
-    <associate|function restriction and domain|<tuple|2.68|?>>
-    <associate|function restriction of a function|<tuple|2.71|?>>
-    <associate|function restriction of a graph|<tuple|2.66|?>>
-    <associate|function simple definition|<tuple|2.75|?>>
-    <associate|function surjection condition|<tuple|2.44|?>>
-    <associate|function trivial bijection|<tuple|2.56|?>>
-    <associate|function: A^B and sets|<tuple|2.30|?>>
+    <associate|function f(x)|<tuple|2.33|?>>
+    <associate|function function and intersection and union|<tuple|2.77|?>>
+    <associate|function identity function|<tuple|2.41|?>>
+    <associate|function identity map is a bijection|<tuple|2.57|?>>
+    <associate|function image preimage|<tuple|2.43|?>>
+    <associate|function image preimage alternative|<tuple|2.37|?>>
+    <associate|function inclusion function|<tuple|2.48|?>>
+    <associate|function injective inverse is a function|<tuple|2.54|?>>
+    <associate|function injectivity to bijection|<tuple|2.59|?>>
+    <associate|function injectivity, surjectivity|<tuple|2.47|?>>
+    <associate|function inverse and restriction|<tuple|2.72|?>>
+    <associate|function inverse function and f(x)|<tuple|2.62|?>>
+    <associate|function inverse of a bijection is unique|<tuple|2.65|?>>
+    <associate|function power of intersection|<tuple|2.30|?>>
+    <associate|function preimage of image|<tuple|2.50|?>>
+    <associate|function properties (1)|<tuple|2.76|?>>
+    <associate|function range restriction|<tuple|2.31|?>>
+    <associate|function restricted function properties|<tuple|2.70|?>>
+    <associate|function restriction and domain|<tuple|2.71|?>>
+    <associate|function restriction of a function|<tuple|2.74|?>>
+    <associate|function restriction of a graph|<tuple|2.69|?>>
+    <associate|function simple definition|<tuple|2.78|?>>
+    <associate|function surjection condition|<tuple|2.46|?>>
+    <associate|function trivial bijection|<tuple|2.58|?>>
+    <associate|function: A^B and sets|<tuple|2.29|?>>
     <associate|order A isomorphism B|<tuple|3.46|?>>
     <associate|order chain|<tuple|3.38|?>>
     <associate|order chain is a totally ordered class|<tuple|3.39|?>>
@@ -8198,15 +9017,23 @@
     <associate|order condition for isomorphism|<tuple|3.49|?>>
     <associate|order condition for isomorphism in a totallu ordered
     set|<tuple|3.52|?>>
+    <associate|order conditional complete alternatives|<tuple|3.70|?>>
+    <associate|order conditional complete order|<tuple|3.69|?>>
     <associate|order cut|<tuple|3.44|?>>
     <associate|order greatest and lowest element are unique|<tuple|3.57|?>>
     <associate|order greatest lowest element|<tuple|3.54|?>>
+    <associate|order inclusion and greatest and least element|<tuple|3.64|?>>
+    <associate|order inclusion is a order|<tuple|3.31|?>>
     <associate|order increasing, decreasing|<tuple|3.45|?>>
     <associate|order initial segement|<tuple|3.42|?>>
     <associate|order intial sergment property|<tuple|3.43|?>>
+    <associate|order isomorphism and conditional complete|<tuple|3.72|?>>
     <associate|order isomorphism condition (2)|<tuple|3.50|?>>
+    <associate|order isomorphism preservers sup and inf|<tuple|3.71|?>>
     <associate|order isomorphism strictly|<tuple|3.48|?>>
     <associate|order lexical order|<tuple|3.34|?>>
+    <associate|order lower upper bound and inclusion|<tuple|3.65|?>>
+    <associate|order lower upper bounds of empty set|<tuple|3.61|?>>
     <associate|order maximal minimal element|<tuple|3.53|?>>
     <associate|order maximum of class with bigger elements|<tuple|3.59|?>>
     <associate|order min(A)\<less\>=max(A)|<tuple|3.58|?>>
@@ -8217,37 +9044,40 @@
     <associate|order preordered class|<tuple|3.25|?>>
     <associate|order properties of the isomorph relation|<tuple|3.51|?>>
     <associate|order strict order|<tuple|3.30|?>>
+    <associate|order sup and inf and bigger elements|<tuple|3.67|?>>
+    <associate|order sup inf condition|<tuple|3.68|?>>
+    <associate|order sup, inf stalls|<tuple|3.63|?>>
+    <associate|order sup,inf and inclusion|<tuple|3.66|?>>
+    <associate|order supremum infinum|<tuple|3.62|?>>
     <associate|order totally lexicol ordering|<tuple|3.41|?>>
     <associate|order totally ordered subclass|<tuple|3.40|?>>
     <associate|order upport lower bound|<tuple|3.60|?>>
+    <associate|order well-rodered class|<tuple|3.73|?>>
     <associate|pair equality of pairs|<tuple|1.43|?>>
     <associate|pair of elements|<tuple|1.41|?>>
-    <associate|partial function alternative for composition|<tuple|2.18|?>>
-    <associate|partial function associativity|<tuple|2.19|?>>
+    <associate|partial function associativity|<tuple|2.18|?>>
     <associate|partial function composition of graphs|<tuple|2.16|?>>
     <associate|partial function composition of partial
     functions|<tuple|2.17|?>>
     <associate|partial function dom(f) range(f) as subclasses|<tuple|2.10|?>>
-    <associate|partial function domain range composition|<tuple|2.20|?>>
+    <associate|partial function domain range composition|<tuple|2.19|?>>
     <associate|partial function image|<tuple|2.12|?>>
     <associate|partial function image preimage of
-    compositions|<tuple|2.21|?>>
-    <associate|partial function injectivity and surjectivity|<tuple|2.43|?>>
-    <associate|partial function injectivity, surjectivity|<tuple|2.45|?>>
-    <associate|partial function inverse graph|<tuple|2.49|?>>
-    <associate|partial function inverse if injective|<tuple|2.50|?>>
+    compositions|<tuple|2.20|?>>
+    <associate|partial function injectivity and surjectivity|<tuple|2.45|?>>
+    <associate|partial function inverse graph|<tuple|2.51|?>>
+    <associate|partial function inverse if injective|<tuple|2.52|?>>
     <associate|partial function preimage|<tuple|2.14|?>>
     <associate|partial function set domain range|<tuple|2.11|?>>
     <associate|partial functions image/preimage properties|<tuple|2.15|?>>
     <associate|power set|<tuple|1.63|?>>
-    <associate|product|<tuple|2.102|?>>
-    <associate|product and intersection|<tuple|2.106|?>>
-    <associate|product and power|<tuple|2.107|?>>
-    <associate|product inclusion|<tuple|2.105|?>>
-    <associate|product of family with one element|<tuple|2.103|?>>
-    <associate|product of family with two classes|<tuple|2.104|?>>
-    <associate|projection function|<tuple|2.108|?>>
-    <associate|properties of the isomorph relation|<tuple|3.51|?>>
+    <associate|product|<tuple|2.107|?>>
+    <associate|product and intersection|<tuple|2.111|?>>
+    <associate|product and power|<tuple|2.112|?>>
+    <associate|product inclusion|<tuple|2.110|?>>
+    <associate|product of family with one element|<tuple|2.108|?>>
+    <associate|product of family with two classes|<tuple|2.109|?>>
+    <associate|projection function|<tuple|2.113|?>>
     <associate|relation|<tuple|3.1|?>>
     <associate|relation properties|<tuple|3.4|?>>
     <associate|relation trivial|<tuple|3.3|?>>
@@ -8259,7 +9089,6 @@
     <associate|set restriction of a set of sets|<tuple|1.65|?>>
     <associate|set union of two sets is a set|<tuple|1.62|?>>
     <associate|successor set|<tuple|1.51|?>>
-    <associate|theorem|<tuple|2.16|?>>
     <associate|totally ordered class|<tuple|3.37|?>>
     <associate|universal class|<tuple|1.12|?>>
     <associate|universal class property|<tuple|1.13|?>>
@@ -8349,21 +9178,61 @@
 
       <tuple|<tuple|partial ordered class>|<pageref|auto-64>>
 
-      <tuple|<tuple|comparable elements>|<pageref|auto-65>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<leqslant\>>>|<pageref|auto-65>>
 
-      <tuple|<tuple|comparable elements>|<pageref|auto-66>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<less\>>>|<pageref|auto-66>>
 
-      <tuple|<tuple|totally ordered class>|<pageref|auto-67>>
+      <tuple|<tuple|comparable elements>|<pageref|auto-67>>
 
-      <tuple|<tuple|fully ordered class>|<pageref|auto-68>>
+      <tuple|<tuple|comparable elements>|<pageref|auto-68>>
 
-      <tuple|<tuple|linear ordered class>|<pageref|auto-69>>
+      <tuple|<tuple|totally ordered class>|<pageref|auto-69>>
 
-      <tuple|<tuple|chain>|<pageref|auto-70>>
+      <tuple|<tuple|fully ordered class>|<pageref|auto-70>>
 
-      <tuple|<tuple|initial segment>|<pageref|auto-71>>
+      <tuple|<tuple|linear ordered class>|<pageref|auto-71>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<cal-S\><rsub|a>>>|<pageref|auto-72>>
+      <tuple|<tuple|chain>|<pageref|auto-72>>
+
+      <tuple|<tuple|initial segment>|<pageref|auto-73>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-S\><rsub|a>>>|<pageref|auto-74>>
+
+      <tuple|<tuple|cut>|<pageref|auto-75>>
+
+      <tuple|<tuple|increasing function>|<pageref|auto-77>>
+
+      <tuple|<tuple|decreasing function>|<pageref|auto-78>>
+
+      <tuple|<tuple|order homomorphism>|<pageref|auto-79>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|A\<cong\>B>>|<pageref|auto-80>>
+
+      <tuple|<tuple|maximal element>|<pageref|auto-82>>
+
+      <tuple|<tuple|minimal element>|<pageref|auto-83>>
+
+      <tuple|<tuple|greatest element>|<pageref|auto-84>>
+
+      <tuple|<tuple|lowest element>|<pageref|auto-85>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|max<around*|(|A|)>>>|<pageref|auto-86>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|min<around*|(|A|)>>>|<pageref|auto-87>>
+
+      <tuple|<tuple|upper bound>|<pageref|auto-88>>
+
+      <tuple|<tuple|lower bound>|<pageref|auto-89>>
+
+      <tuple|<tuple|supremum>|<pageref|auto-90>>
+
+      <tuple|<tuple|infinum>|<pageref|auto-91>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|inf<around*|(|A|)>>>|<pageref|auto-92>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|sup<around*|(|A|)>>>|<pageref|auto-93>>
+
+      <tuple|<tuple|conditional completeness>|<pageref|auto-94>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Elements
@@ -8444,8 +9313,8 @@
       equivalence classes <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-52>>
 
-      <with|par-left|<quote|1tab>|3.2.2<space|2spc>Equivalence relations and
-      functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|3.2.2<space|2spc>Functions and equivalence
+      relations <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-57>>
 
       3.3<space|2spc>Partial ordered classes
@@ -8455,6 +9324,14 @@
       <with|par-left|<quote|1tab>|3.3.1<space|2spc>Order relation
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-60>>
+
+      <with|par-left|<quote|1tab>|3.3.2<space|2spc>Order relations and
+      functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-76>>
+
+      <with|par-left|<quote|1tab>|3.3.3<space|2spc>Min, max, supremums and
+      infinums <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-81>>
     </associate>
   </collection>
 </auxiliary>
