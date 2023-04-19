@@ -8038,13 +8038,13 @@
     ordered class and <math|A\<subseteq\>X> then\ 
 
     <\enumerate>
-      <item><math|u\<in\>A> is a <with|font-series|bold|upper bound> of
+      <item><math|u\<in\>X> is a <with|font-series|bold|upper bound> of
       <math|A> if <math|\<forall\>a\<in\>A> <math|a\<leqslant\>u>.
 
       <item><math|A> is <with|font-series|bold|bounded above> if it has a
       upper bound.
 
-      <item><math|l\<in\>A> is a <with|font-series|bold|lower bound> of
+      <item><math|l\<in\>X> is a <with|font-series|bold|lower bound> of
       <math|A> if <math|\<forall\>x\<in\>A> <math|l\<leqslant\>a>
 
       <item><math|A> is <with|font-series|bold|bounded below> if it has a
@@ -8110,29 +8110,29 @@
 
     <\enumerate>
       <item>If <math|sup<around*|(|A|)>> exists then
-      <math|\<forall\>x\<in\>X> with <math|x\<less\>sup<around*|(|A|)>> then
+      <math|\<forall\>x\<in\>X> with <math|x\<less\>sup<around*|(|A|)>> there
       <math|\<exists\>a\<in\>A> such that
       <math|x\<less\>a\<wedge\>a\<leqslant\>sup<around*|(|A|)>>
 
       <item>If <math|inf<around*|(|A|)>> exist then <math|\<forall\>x\<in\>X>
-      with <math|inf<around*|(|A|)>\<less\>x> then <math|\<exists\>a\<in\>A>
+      with <math|inf<around*|(|A|)>\<less\>x> there <math|\<exists\>a\<in\>A>
       such that <math|inf<around*|(|A|)>\<leqslant\>a\<wedge\>a\<less\>x>
     </enumerate>
   </theorem>
 
   <\proof>
     First as <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is totally
-    ordered we have that <math|\<forall\>x,y\<in\>X> we have that <math|x,y>
-    are comparable, hence by [theorem: <reference|order comparable
-    property>], we have <math|x\<leqslant\>y\<wedge\>y\<less\>x>/
+    ordered we have <math|\<forall\>x,y\<in\>X> that <math|x,y> are
+    comparable, hence by [theorem: <reference|order comparable property>], we
+    have <math|x\<leqslant\>y\<wedge\>y\<less\>x>/
 
     <\enumerate>
       <item>Let <math|x\<in\>X> such that <math|x\<less\>sup<around*|(|A|)>>.
       Assume that <math|\<forall\>a\<in\>A> we have
       <math|\<neg\><around*|(|x\<less\>a|)>> so that <math|a\<leqslant\>x>,
       so <math|x> is a upper bound of <math|A>, hence
-      <math|x\<in\>\<upsilon\>*<around*|(|A|)>> so that
-      <math|sup<around*|(|A|)>=min<around*|(|\<upsilon\><around*|(|A|)>|)>\<leqslant\>x>
+      <math|x\<in\>\<upsilon\>*<around*|(|A|)>>, so that
+      <math|sup<around*|(|A|)>=min<around*|(|\<upsilon\><around*|(|A|)>|)>\<leqslant\>x>,
       which, as <math|x\<less\>sup<around*|(|A|)>,>leads to the contradiction
       <math|x\<less\>x>. So we must have that <math|\<exists\>a\<in\>A> such
       that <math|x\<less\>a>, further as <math|sup<around*|(|A|)>> is a upper
@@ -8146,7 +8146,7 @@
       Assume that <math|\<forall\>a\<in\>A> we have
       <math|\<neg\><around*|(|a\<less\>x|)>> so that <math|x\<leqslant\>a>,
       so <math|x> is a lower bound of <math|A>, hence
-      <math|x\<in\>\<lambda\><around*|(|A|)>> so that
+      <math|x\<in\>\<lambda\><around*|(|A|)>>, so that
       <math|x\<leqslant\>max<around*|(|\<lambda\><around*|(|A|)>|)>=inf<around*|(|A|)>>,
       which, as <math|inf<around*|(|A|)>\<less\>x>, leads to the
       contradiction <math|x\<less\>x>. So we must have that
@@ -8338,12 +8338,11 @@
       If <math|x\<in\>\<lambda\><around*|(|A|)>>, then, as
       <math|sup<around*|(|\<lambda\><around*|(|A|)>|)>> is a upper bound of
       <math|\<lambda\><around*|(|A|)>>, we have
-      <math|x\<leqslant\>sup<around*|(|\<lambda\><around*|(|A|)>|)>>. So we
-      have that\ 
+      <math|x\<leqslant\>sup<around*|(|\<lambda\><around*|(|A|)>|)>>. So
 
       <\equation>
         <label|eq 3.9.011>\<forall\>x\<in\>\<lambda\><around*|(|A|)><text| we
-        have that <math|x\<leqslant\>sup<around*|(|\<lambda\><around*|(|A|)>|)>>>
+        have <math|x\<leqslant\>sup<around*|(|\<lambda\><around*|(|A|)>|)>>>
       </equation>
 
       Using [eq: <reference|eq 3.8.011>] and [eq: <reference|eq 3.9.011>] it
@@ -8377,19 +8376,19 @@
       </equation>
 
       Using [eq: <reference|eq 3.10.012>] and [eq: <reference|eq 3.11.012>]
-      it follows that <math|sup<around*|(|\<lambda\><around*|(|A|)>|)>=max<around*|(|\<lambda\><around*|(|A|)>|)>=inf<around*|(|A|)>>
+      it follows that <math|inf<around*|(|\<upsilon\><around*|(|A|)>|)>=min<around*|(|\<upsilon\><around*|(|A|)>|)>=sup<around*|(|A|)>>
       or\ 
 
       <\equation*>
-        sup<around*|(|\<lambda\><around*|(|A|)>|)>=inf<around*|(|A|)>
+        inf<around*|(|\<upsilon\><around*|(|A|)>|)>=sup<around*|(|A|)>
       </equation*>
     </enumerate>
   </proof>
 
   In general it is not guaranteed that <math|sup<around*|(|A|)>> or
-  <math|inf<around*|(|A|)>> exists. Later we will find for the real numbers a
-  condition that quarantees the existance of a supremum. This is the idea of
-  the following definition.
+  <math|inf<around*|(|A|)>> exists. However there exists partial order
+  classes that guarantees the existance of a supremum for non empty
+  subclasses that are bounded above.\ 
 
   <\definition>
     <label|order conditional complete order><index|conditional
@@ -8400,7 +8399,7 @@
   </definition>
 
   The next theorem shows that conditional completeness can also be defined
-  based on bounded belowness and infinum.
+  based on bounded belown and infinum.
 
   <\theorem>
     <label|order conditional complete alternatives>If
@@ -8441,7 +8440,7 @@
       exists a <math|a\<in\>A>, further by defnition of
       <math|\<upsilon\><around*|(|A|)>> we have
       <math|\<forall\>y\<in\>\<upsilon\><around*|(|A|)>> that
-      <math|a\<leqslant\>u> so <math|\<upsilon\><around*|(|A|)>> is bounded
+      <math|a\<leqslant\>y> so <math|\<upsilon\><around*|(|A|)>> is bounded
       below. As <math|A> is bounded above we have that
       <math|\<upsilon\><around*|(|A|)>\<neq\>\<varnothing\>>. So by the
       hypothesis <math|inf<around*|(|\<upsilon\><around*|(|A|)>|)>> exist.
@@ -8461,14 +8460,14 @@
     <math|<around*|\<langle\>|X,\<leqslant\><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,\<leqslant\><rsub|Y>|\<rangle\>>> be partial
     ordered classes, <math|f:X\<rightarrow\>Y> is a order isomorphism,
-    <math|A\<subseteq\>X> then
+    <math|A\<subseteq\>X> and <math|B\<subseteq\>Y> then
 
     <\enumerate>
       <item>If <math|u> is a upper bound of <math|B> then
       <math|<around*|(|f<rsup|-1>|)><around*|(|u|)>> is a upper bound of
       <math|f<rsup|-1><around*|(|B|)>>
 
-      <item>If <math|l> is a upper bound of <math|B> then
+      <item>If <math|l> is a lower bound of <math|B> then
       <math|<around*|(|f<rsup|-1>|)><around*|(|l|)>> is a lower bound of
       <math|f<rsup|-1><around*|(|B|)>>
 
@@ -8511,37 +8510,36 @@
       <math|u> is a upper bound of <math|B>, we have that
       <math|y\<leqslant\><rsub|B>u>. So <math|x\<equallim\><rsub|<text|[theorem:
       <reference|function inverse function and
-      f(x)>]>><around*|(|f<rsup|-1>|)><around*|(|f<around*|(|x|)>|)>\<leqslant\><rsub|A><around*|(|f<rsup|-1>|)><around*|(|u|)>>,
+      f(x)>]>><around*|(|f<rsup|-1>|)><around*|(|f<around*|(|x|)>|)>=<around*|(|f<rsup|-1>|)><around*|(|y|)>\<leqslant\><rsub|A><around*|(|f<rsup|-1>|)><around*|(|u|)>>,
       proving that <math|<around*|(|f<rsup|-1>|)><around*|(|u|)>> is a upper
       bound of <math|f<rsup|-1><around*|(|B|)>>.
 
       <item>Let <math|x\<in\>f<rsup|-1><around*|(|B|)>> then
       <math|\<exists\>y\<in\>B> such that <math|y=f<around*|(|x|)>>, as
       <math|l> is a lower bound of <math|B> we have that
-      <math|l\<leqslant\><rsub|B>x>. So <math|x\<equallim\><rsub|<text|[theorem:
-      <reference|function inverse function and
-      f(x)>]>><around*|(|f<rsup|-1>|)><around*|(|l|)>\<leqslant\><rsub|A><around*|(|f<rsup|-1>|)><around*|(|f<around*|(|x|)>|)>>,
-      proving that <math|<around*|(|f<rsup|-1>|)><around*|(|l|)>> is a lower
-      bound of <math|f<rsup|-1><around*|(|B|)>>.
+      <math|l\<leqslant\><rsub|B>y>. So <math|<around*|(|f<rsup|-1>|)><around*|(|l|)>\<leqslant\><rsub|A><around*|(|f<rsup|-1>|)><around*|(|y|)>=<around*|(|f<rsup|-1>|)><around*|(|f<around*|(|x|)>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|function inverse function and f(x)>]>>x>, proving that
+      <math|<around*|(|f<rsup|-1>|)><around*|(|l|)>> is a lower bound of
+      <math|f<rsup|-1><around*|(|B|)>>.
 
       <item>If <math|y\<in\>f<around*|(|A|)>> then <math|\<exists\>x\<in\>A>
-      such that <math|f<around*|(|x|)>\<in\>A>, hence as <math|u> is a upper
-      bound of <math|A> we have that <math|x\<leqslant\><rsub|A>u>. So
+      such that <math|y=f<around*|(|x|)>>. As <math|u> is a upper bound of
+      <math|A> we have that <math|x\<leqslant\><rsub|A>u>, so
       <math|y=f<around*|(|x|)>\<leqslant\><rsub|B>f<around*|(|u|)>> proving
       that <math|f<around*|(|u|)>> is a upper bound of
       <math|f<around*|(|A|)>>.
 
       <item>If <math|y\<in\>f<around*|(|A|)>> then <math|\<exists\>x\<in\>A>
-      such that <math|f<around*|(|x|)>\<in\>A>, hence as <math|l> is a lower
-      bound of <math|A> we have that <math|l\<leqslant\><rsub|A>x>. So
+      such that <math|y=f<around*|(|x|)>>, As <math|l> is a lower bound of
+      <math|A> we have that <math|l\<leqslant\><rsub|A>x>, so
       <math|f<around*|(|l|)>\<leqslant\><rsub|B>f<around*|(|x|)>=y> proving
       that <math|f<around*|(|l|)>> is a lower bound of
       <math|f<around*|(|A|)>>.
 
       <item> If <math|y\<in\>f<around*|(|\<upsilon\><around*|(|A|)>|)>> then
-      <math|\<exists\>x\<in\>\<upsilon\><around*|(|A|)>> such that
-      <math|y=f<around*|(|x|)>>. As <math|x\<in\>\<upsilon\><around*|(|B|)>>
-      <math|x> is a upper bound of <math|B> so that by (3)
+      there <math|\<exists\>x\<in\>\<upsilon\><around*|(|A|)>> such that
+      <math|y=f<around*|(|x|)>>. As <math|x\<in\>\<upsilon\><around*|(|A|)>>,
+      <math|x> is a upper bound of <math|B>, so that by (3)
       <math|y=f<around*|(|x|)>> is a upper bound of <math|f<around*|(|A|)>>.
       Hence\ 
 
@@ -8555,7 +8553,7 @@
       <reference|function preimage of image>]>>A> so that
       <math|<around*|(|f<rsup|-1>|)><around*|(|y|)>\<in\>\<upsilon\><around*|(|A|)>>.
       So <math|y\<equallim\><rsub|<text|[theorem: <reference|function inverse
-      function and f(x)>>>f<around*|(|<around*|(|f<rsup|-1>|)><around*|(|y|)>|)>\<in\>f<around*|(|\<upsilon\><around*|(|A|)>|)>>.
+      function and f(x)>>>f<around*|(|<around*|(|f<rsup|-1>|)><around*|(|y|)>|)>=y\<in\>f<around*|(|\<upsilon\><around*|(|A|)>|)>>.
       Hence <math|\<upsilon\><around*|(|f<around*|(|A|)>|)>\<subseteq\>f<around*|(|\<upsilon\><around*|(|A|)>|)>>
       which combined with [eq: <reference|eq 3.12.012>] proves\ 
 
@@ -8564,9 +8562,9 @@
       </equation*>
 
       <item>If <math|y\<in\>f<around*|(|\<lambda\><around*|(|A|)>|)>> then
-      <math|\<exists\>x\<in\>\<lambda\><around*|(|A|)>> such that
-      <math|y=f<around*|(|x|)>>. As <math|x\<in\>\<lambda\><around*|(|A|)>>
-      <math|x> is a lower bound of <math|A> so that by (4)
+      there <math|\<exists\>x\<in\>\<lambda\><around*|(|A|)>> such that
+      <math|y=f<around*|(|x|)>>. As <math|x\<in\>\<lambda\><around*|(|A|)>>,
+      <math|x> is a lower bound of <math|A>, so that by (4)
       <math|y=f<around*|(|x|)>> is a lower bound of <math|f<around*|(|A|)>>.
       Hence\ 
 
@@ -8580,7 +8578,7 @@
       <reference|function preimage of image>]>>A> so that
       <math|<around*|(|f<rsup|-1>|)><around*|(|y|)>\<in\>\<lambda\><around*|(|A|)>>.
       So <math|y\<equallim\><rsub|<text|[theorem: <reference|function inverse
-      function and f(x)>>>f<around*|(|<around*|(|f<rsup|-1>|)><around*|(|y|)>|)>\<in\>f<around*|(|\<lambda\><around*|(|A|)>|)>>.
+      function and f(x)>>>f<around*|(|<around*|(|f<rsup|-1>|)><around*|(|y|)>|)>=y\<in\>f<around*|(|\<lambda\><around*|(|A|)>|)>>.
       Hence <math|\<lambda\><around*|(|f<around*|(|A|)>|)>\<subseteq\>f<around*|(|\<lambda\><around*|(|A|)>|)>>
       which combined with [eq: <reference|eq 3.12.012>] proves\ 
 
@@ -8607,8 +8605,8 @@
       <math|f<around*|(|min<around*|(|A|)>|)>\<in\>f<around*|(|A|)>>. Let
       <math|y\<in\>f<around*|(|A|)>> then <math|\<exists\>x\<in\>A> such that
       <math|y=f<around*|(|x|)>>, as <math|min<around*|(|A|)>> exist we have
-      <math|max<around*|(|A|)>\<leqslant\><rsub|A>x> so that
-      <math|f<around*|(|max<around*|(|A|)>|)>\<leqslant\><rsub|B>f<around*|(|x|)>=y>.
+      <math|min<around*|(|A|)>\<leqslant\><rsub|A>x> so that
+      <math|f<around*|(|min<around*|(|A|)>|)>\<leqslant\><rsub|B>f<around*|(|x|)>=y>.
       So\ 
 
       <\equation*>
@@ -8645,7 +8643,7 @@
   <\theorem>
     <label|order isomorphism and conditional complete>Let
     <math|<around*|\<langle\>|X,\<leqslant\><rsub|X>|\<rangle\>>> be a
-    conditionally complete partial ordered set,
+    conditional complete partial ordered set,
     <math|<around*|\<langle\>|Y,\<leqslant\><rsub|Y>|\<rangle\>>> a partial
     ordered class and <math|f:X\<rightarrow\>Y> a order isomorphism then
     <math|<around*|\<langle\>|Y,\<leqslant\><rsub|Y>|\<rangle\>>> is
@@ -8653,7 +8651,7 @@
   </theorem>
 
   <\proof>
-    Let <math|A\<subseteq\>Y> such that <math|A> is bounded above and non
+    Let <math|A\<subseteq\>Y> be such that <math|A> is bounded above and non
     empty. Let <math|u> be a upper bound of <math|A> then by [lemma:
     <reference|order isomorphism preservers sup and inf>] we have that
     <math|<around*|(|f<rsup|-1>|)><around*|(|u|)>> is a upper bound of
@@ -8670,7 +8668,7 @@
     <reference|function preimage of image>]>>f<around*|(|f<rsup|-1><around*|(|A|)>|)><rsub|>>
     proves that <math|sup<around*|(|A|)>> exist. So
     <math|<around*|\<langle\>|X,\<leqslant\><rsub|Y>|\<rangle\>>> is
-    conditionally complete.
+    conditional complete.
   </proof>
 
   <subsection|Well ordering>
@@ -8678,11 +8676,132 @@
   <\definition>
     <label|order well-rodered class><index|well-ordered class>A partial
     ordered class <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is
-    <with|font-series|bold|well-ordered> is every nonempty subclass of
+    <with|font-series|bold|well ordered> is every nonempty subclass of
     <math|X> has a least element. In other words if
     <math|\<forall\>A\<in\>\<cal-P\><around*|(|X|)>>
     <math|min<around*|(|A|)>> exitst.
   </definition>
+
+  <\theorem>
+    <label|order total/well-order inclusion>If
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a partial
+    ordered class and <math|B\<subseteq\>X> and
+    <math|<around*|\<langle\>|B,\<leqslant\><rsub|\|B>|\<rangle\>>> [see
+    theorem: <reference|order partial order on sub class>] then\ 
+
+    <\enumerate>
+      <item>If <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is
+      totally ordered then <math|<around*|\<langle\>|B,\<leqslant\><rsub|\|B>|\<rangle\>>>
+      is totally ordered
+
+      <item>If <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is well
+      ordered then <math|<around*|\<langle\>|B,\<leqslant\><rsub|\|B>|\<rangle\>>>
+      is totally ordered
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|x,y\<in\>B\<Rightarrow\>x,y\<in\>X> hence
+      <math|x\<leqslant\>y\<vee\>y\<leqslant\>x> so that
+      <math|x\<leqslant\><rsub|\|B>y\<vee\>y\<leqslant\><rsub|\|B>x>.
+
+      <item>If <math|C\<subseteq\>B> is a nonempty set then as
+      <math|B\<subseteq\>X> we have <math|\<varnothing\>\<neq\>C\<subseteq\>X>.
+      So there exists a least element <math|c> of <math|C>. So
+      <math|c\<in\>C> and <math|\<forall\>x\<in\>C> we have
+      <math|c\<leqslant\>x\<Rightarrowlim\><rsub|x\<in\>B>c\<leqslant\><rsub|\|B>x>
+      proving that <math|c> is a least element of <math|C> using the order
+      relation <math|\<leqslant\><rsub|\|B>>.
+    </enumerate>
+  </proof>
+
+  Well ordering is a stronger condition then conditional completeness and
+  totally ordering
+
+  <\theorem>
+    <label|order well order implies conditional complete and totally
+    ordering>Let <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is a
+    well ordered class then\ 
+
+    <\enumerate>
+      <item><math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is totally
+      ordered
+
+      <item><math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is
+      conditional complete
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|x,y\<in\>X> then <math|<around*|{|x,y|}>> is a nonempty
+      subclass of <math|X> and must have a least element. If <math|x> is the
+      least element then <math|x\<leqslant\>y> and if <math|y> is the least
+      element then <math|y\<leqslant\>x>, so
+      <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is totally
+      ordered.\ 
+
+      <item>If <math|A> is a nonempty subclass of <math|X> that is bounded
+      above then <math|\<upsilon\><around*|(|A|)>\<neq\>\<varnothing\>>.
+      Using well-ordering we have that <math|sup<around*|(|A|)>=min<around*|(|\<upsilon\><around*|(|A|)>|)>>
+      exist.
+    </enumerate>
+  </proof>
+
+  One difference between the order relation on the set of whole numbers
+  <math|\<bbb-Z\>> and the set of real numbers <math|\<bbb-R\>> is that there
+  does not exist a whole number between 1 and 2 while for the real numbers
+  there is the number <math|1.5> between <math|1> and <math|2>. This leeds to
+  the following definition.
+
+  <\definition>
+    <label|order immediate successor><index|immediate
+    successor><dueto|Immediate successor>Let
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a partial
+    ordered set and <math|x,y\<in\>X> then <math|y> is the
+    <with|font-series|bold|immediate> successor of <math|x> iff\ 
+
+    <\enumerate>
+      <item><math|x\<less\>y>
+
+      <item><math|\<neg\><around*|(|\<exists\>z\<in\>X<text| such that
+      >x\<less\>z\<wedge\>z\<less\>y|)>> [in words ther does not exists a
+      <math|x\<in\>X> such that <math|x\<less\>z\<less\>y>]
+    </enumerate>
+  </definition>
+
+  <\theorem>
+    <label|order well order and immediate successor>Let
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a well ordered
+    class then every element that is not a greatest element of <math|X> has a
+    immediate successor.
+  </theorem>
+
+  <\proof>
+    Using [theorem: <reference|order well order implies conditional
+    complete>] we have that <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>>
+    is totally ordered. Let <math|x\<in\>X> such that <math|x> is not a
+    greatest element in <math|X>. If <math|B=<around*|{|y\<in\>X\|x\<less\>y|}>>
+    then if <math|B=\<varnothing\>> we have that <math|X\\B=X> so
+    <math|\<forall\>x\<in\>X> we have <math|x\<nin\>B> or
+    <math|\<neg\><around*|(|x\<less\>y|)>>, as by [theorem: <reference|order
+    comparable property>] we have <math|y\<leqslant\>x\<vee\>x\<less\>y>,
+    that <math|y\<leqslant\>x> giving the contradiction that <math|x> is a
+    greatest element of <math|X>.\ 
+
+    So we must have that <math|B\<neq\>\<varnothing\>>, by well ordering
+    there exist a least element <math|b\<in\>B>, so <math|x\<less\>b>. Assume
+    that there exist a <math|a\<in\>X> such that
+    <math|x\<less\>a\<wedge\>a\<less\>b>, then we must have that
+    <math|a\<in\>B> and <math|a\<less\>b>. As <math|b> is the least element
+    of <math|B> and <math|a\<in\>B> we have <math|b\<less\>a> leading to the
+    contradiction <math|a\<less\>a>. \ \ 
+  </proof>
 
   \;
 
@@ -8805,6 +8924,7 @@
     <associate|auto-94|<tuple|conditional completeness|?>>
     <associate|auto-95|<tuple|3.3.4|?>>
     <associate|auto-96|<tuple|well-ordered class|?>>
+    <associate|auto-97|<tuple|immediate successor|?>>
     <associate|axiom of construction|<tuple|1.9|?>>
     <associate|axiom of extent|<tuple|1.5|2>>
     <associate|axiom of infinity|<tuple|1.52|?>>
@@ -9022,6 +9142,7 @@
     <associate|order cut|<tuple|3.44|?>>
     <associate|order greatest and lowest element are unique|<tuple|3.57|?>>
     <associate|order greatest lowest element|<tuple|3.54|?>>
+    <associate|order immediate successor|<tuple|3.76|?>>
     <associate|order inclusion and greatest and least element|<tuple|3.64|?>>
     <associate|order inclusion is a order|<tuple|3.31|?>>
     <associate|order increasing, decreasing|<tuple|3.45|?>>
@@ -9049,9 +9170,15 @@
     <associate|order sup, inf stalls|<tuple|3.63|?>>
     <associate|order sup,inf and inclusion|<tuple|3.66|?>>
     <associate|order supremum infinum|<tuple|3.62|?>>
+    <associate|order total/well-order inclusion|<tuple|3.74|?>>
     <associate|order totally lexicol ordering|<tuple|3.41|?>>
     <associate|order totally ordered subclass|<tuple|3.40|?>>
     <associate|order upport lower bound|<tuple|3.60|?>>
+    <associate|order well order and immediate successor|<tuple|3.77|?>>
+    <associate|order well order implies conditional complete|<tuple|3.75|?>>
+    <associate|order well order implies conditional complete and totally
+    ordering|<tuple|3.75|?>>
+    <associate|order well ordered implies totally|<tuple|3.75|?>>
     <associate|order well-rodered class|<tuple|3.73|?>>
     <associate|pair equality of pairs|<tuple|1.43|?>>
     <associate|pair of elements|<tuple|1.41|?>>
@@ -9233,6 +9360,8 @@
       <tuple|<tuple|<with|mode|<quote|math>|sup<around*|(|A|)>>>|<pageref|auto-93>>
 
       <tuple|<tuple|conditional completeness>|<pageref|auto-94>>
+
+      <tuple|<tuple|well-ordered class>|<pageref|auto-96>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Elements
@@ -9332,6 +9461,10 @@
       <with|par-left|<quote|1tab>|3.3.3<space|2spc>Min, max, supremums and
       infinums <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-81>>
+
+      <with|par-left|<quote|1tab>|3.3.4<space|2spc>Well ordering
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-95>>
     </associate>
   </collection>
 </auxiliary>
