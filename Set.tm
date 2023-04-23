@@ -91,26 +91,26 @@
   </axiom>
 
   <\definition>
-    Let <math|A> and <math|B> classes then <math|A> is a subclass of <math|B>
-    noted by <math|A\<subseteq\>B> iff
+    Let <math|A> and <math|B> classes then <math|A> is a sub-class of
+    <math|B> noted by <math|A\<subseteq\>B> iff
 
     <\equation*>
       x\<in\>A\<Rightarrow\>x\<in\>B
     </equation*>
 
-    So <math|A> is a subclass of <math|B> iff every element of <math|A> is
+    So <math|A> is a sub-class of <math|B> iff every element of <math|A> is
     also a element of <math|B>.
   </definition>
 
   <\definition>
-    Let <math|A> and <math|B> classes then <math|A> is a proper subclass of
+    Let <math|A> and <math|B> classes then <math|A> is a proper sub-class of
     <math|B> noted by <math|A\<subseteq\>B> iff
 
     <\equation*>
       x\<in\>A\<Rightarrow\>x\<in\>B\<wedge\>A\<neq\>B
     </equation*>
 
-    So <math|A> is a proper subclass of <math|B> iff <math|A> is different
+    So <math|A> is a proper sub-class of <math|B> iff <math|A> is different
     from <math|B> and every element of <math|A> is also a element of
     <math|B>.
   </definition>
@@ -235,7 +235,7 @@
   none of the axioms up to now can be used to get elements [or equivalent
   sets], for this we need extra axioms.
 
-  The axiom of construction can be used as a way of creating a subclass of a
+  The axiom of construction can be used as a way of creating a sub-class of a
   given class.
 
   <\definition>
@@ -429,6 +429,8 @@
 
       <item><math|A<big|cap>B\<subseteq\>B>
 
+      <item><math|A\\B\<subseteq\>A>
+
       <item>If <math|C> is a class such that <math|A\<subseteq\>C> and
       <math|B\<subseteq\>C> then <math|A<big|cup>B\<subseteq\>C>
 
@@ -454,6 +456,9 @@
       <item>If <math|x\<in\>A<big|cap>B> then
       <math|x\<in\>A\<wedge\>x\<in\>B>, hence <math|x\<in\>B> so that
       <math|x\<in\>A>, hence <math|A<big|cap>B\<subseteq\>B>
+
+      <item>If <math|x\<in\>A\\B> then <math|x\<in\>A\<wedge\>x\<nin\>B> so
+      that <math|A\\B\<subseteq\>A>
 
       <item>If <math|x\<in\>A<big|cup>B> then
       <math|x\<in\>A\<Rightarrowlim\><rsub|A\<subseteq\>C>x\<in\>C> or
@@ -1399,7 +1404,7 @@
 
   <\axiom>
     <label|axiom of subsets><index|axiom of subsets><dueto|Axiom of
-    Subsets>Every subclass of a set is a set
+    Subsets>Every sub-class of a set is a set
   </axiom>
 
   As a application we proof that the intersection of two sets is a set
@@ -1953,14 +1958,14 @@
     Instead of writing <math|<around*|\<langle\>|A,B,f|\<rangle\>>> for a
     partial function between <math|A> and <math|B> we use the notation
     <math|f:A\<rightarrow\>B> or <math|A<long-arrow|\<rubber-rightarrow\>|f>>B.
-    Further the condition (2) ensurese that only one value can be associated
+    Further the condition (2) ensures that only one value can be associated
     with <math|x>. So it is useful to use a special notation for this unique
     value, especially if we have a expression to calculate this unique value.
   </remark>
 
   <\definition>
     Let <math|f:A\<rightarrow\>B> be a partial function then
-    <math|<around*|(|x,y|)>\<in\>f> is equivalen with
+    <math|<around*|(|x,y|)>\<in\>f> is equivalent with
     <math|y=f<around*|(|x|)>>
   </definition>
 
@@ -2510,6 +2515,23 @@
     <math|f=\<varnothing\>>
   </proof>
 
+  <\lemma>
+    <label|function extend target>If <math|f:A\<rightarrow\>B> is a function
+    and <math|B\<subseteq\>C> then <math|f:A\<rightarrow\>C> is a function
+  </lemma>
+
+  <\proof>
+    As <math|f:A\<rightarrow\>B> is a function we have
+    <math|f\<subseteq\>A\<times\>B> which as by [theorem:
+    <reference|cartesian product and inclusion>]
+    <math|A\<times\>B\<subseteq\>A\<times\>C> means that
+    <math|f\<subseteq\>A\<times\>C>'. Further as <math|f:A\<rightarrow\>B> is
+    a function we we have also <math|dom<around*|(|f|)>=A> and if
+    <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>f> then
+    <math|y=y<rprime|'>>. So by definition<math|f:A\<rightarrow\>C> is a
+    function.
+  </proof>
+
   <\theorem>
     <label|function B^A and inclusion>Let <math|A,B,C> be classes such that
     <math|B\<subseteq\>C> then <math|B<rsup|A>\<subseteq\>C<rsup|A>>
@@ -2517,20 +2539,13 @@
 
   <\proof>
     Let <math|f\<in\>B<rsup|A>> then <math|f:A\<rightarrow\>B> is a function,
-    so by definition <math|f\<subseteq\>A\<times\>B>, if
-    <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>f> then
-    <math|y=y<rprime|'>> and <math|dom<around*|(|f|)>=A>, As
-    <math|B\<subseteq\>C> we have using [theorem: <reference|cartesian
-    product and inclusion>] that <math|A\<times\>B\<subseteq\>C>, so using
-    [theorem: <reference|class properties (1)>] we have that
-    <math|f\<subseteq\>A\<times\>C>. So <math|f:A\<rightarrow\>C> is a
-    function, hence <math|f\<in\>C<rsup|A>>m proving that\ 
+    using the above lemma [lemma: <reference|function extend target>] we have
+    that <math|f:A\<rightarrow\>C> is a function, hence
+    <math|f\<in\>C<rsup|A>> proving that\ 
 
     <\equation*>
       B<rsup|A>\<subseteq\>C<rsup|A>
     </equation*>
-
-    \;
   </proof>
 
   We have also the following relation between <math|A\<times\>B> and
@@ -3080,6 +3095,9 @@
       with <math|f<around*|(|x|)>=f<around*|(|x<rprime|'>|)>> we have
       <math|x=x<rprime|'>>
 
+      <item>If <math|B\<subseteq\>C> and <math|f:A\<rightarrow\>B> is
+      injective then <math|f:A\<rightarrow\>C> is injective
+
       <item><math|f> is surjective if and only if \ <math|\<forall\>y\<in\>B>
       there exists a <math|x\<in\>A> such that <math|y=f<around*|(|x|)>>
     </enumerate>
@@ -3104,6 +3122,9 @@
         <math|x=x<rprime|'>>
       </description>
 
+      <item>This is trivial because injectivity is a property of the graph of
+      a function.
+
       <item>\ 
 
       <\description>
@@ -3119,7 +3140,7 @@
         <math|<around*|(|x,y|)>\<in\>f> proving that
         <math|B\<subseteq\>range<around*|(|f|)>>, using [proposition:
         <reference|function surjection condition>] we have that <math|f> is
-        sujective
+        surjective
       </description>
     </enumerate>
   </proof>
@@ -3336,7 +3357,7 @@
 
   <\definition>
     <label|bijection><index|bijection>A function <math|f:A\<rightarrow\>B> is
-    a <with|font-series|bold|bijection> if the function is
+    a <with|font-series|bold|bijection> iff the function is
     <with|font-series|bold|injective> and <with|font-series|bold|surjective>.
   </definition>
 
@@ -3871,7 +3892,7 @@
 
   Sometimes we only want to work with functions whose graphs satisfies
   certain conditions. It could be that the graph of a function does not
-  satisfies these, but that the restriction of this graph to a subclass
+  satisfies these, but that the restriction of this graph to a sub-class
   satisfies the conditions. For example, the function
   <math|f:\<bbb-R\>\<rightarrow\>\<bbb-R\>> defined by
   <math|f<around*|(|x|)>=<choice|<tformat|<table|<row|<cell|1<text| if
@@ -3883,7 +3904,7 @@
   <\definition>
     <label|function restriction of a graph><index|<math|f<rsub|\|C>>>Let
     <math|f:A\<rightarrow\>B> be a function and <math|C\<subseteq\>A> a
-    subclass of <math|A> then the restriction of <math|f> to <math|C> noted
+    sub-class of <math|A> then the restriction of <math|f> to <math|C> noted
     by <math|f<rsub|\|C>> is defined by
 
     <\equation*>
@@ -3917,7 +3938,7 @@
   <\theorem>
     <label|function restricted function properties>Let
     <math|f:A\<rightarrow\>B> be a partial function and <math|C\<subseteq\>A>
-    a subclass of <math|A> then we have:
+    a sub-class of <math|A> then we have:
 
     <\enumerate>
       <item><math|dom<around*|(|f<rsub|\|C>|)>=C<big|cap>dom<around*|(|f|)>>
@@ -3929,6 +3950,9 @@
 
       <item>If <math|E\<subseteq\>B> then
       <math|<around*|(|f<rsub|\|C>|)><rsup|-1><around*|(|E|)>=C<big|cap>f<rsup|-1><around*|(|E|)>>
+
+      <item>If <math|f:A\<rightarrow\>B> is injective then
+      <math|f<rsub|\|C>:C\<rightarrow\>B> is injective
     </enumerate>
   </theorem>
 
@@ -4002,6 +4026,11 @@
       <\equation*>
         <around*|(|f<rsub|\|C>|)><rsup|-1><around*|(|E|)>=C<big|cap>f<rsup|-1><around*|(|E|)>
       </equation*>
+
+      <item>If <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>f<rsub|\|C>>
+      then as <math|f<rsub|\|C>\<subseteq\>f> we have
+      <math|*<around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>f> which as
+      <math|f> is injective proves <math|y=y<rprime|'>>
     </enumerate>
   </proof>
 
@@ -4104,7 +4133,7 @@
 
   <\theorem>
     <label|function restriction of a function>Let <math|f:A\<rightarrow\>B>
-    and <math|C\<subseteq\>A> a subclass of <math|A> then
+    and <math|C\<subseteq\>A> a sub-class of <math|A> then
     <math|f<rsub|\|C>:C\<rightarrow\>B> is a function.
   </theorem>
 
@@ -4698,7 +4727,7 @@
     have by [theorem: <reference|function injectivity, surjectivity>] that
     there exist a <math|i\<in\>I> such that <math|j=f<around*|(|i|)>>. Hence
     <math|x\<in\>A<around*|(|f<around*|(|i|)>|)>=<around*|(|A\<circ\>f|)><around*|(|i|)>>.
-    So by [theorem: <reference|family union (2)>] and the definiton of
+    So by [theorem: <reference|family union (2)>] and the definition of
     <math|<big|cup><rsub|i\<in\>I>A<rsub|f<around*|(|i|)>>> we have
     <math|x\<in\><big|cup><rsub|i\<in\>I>A<rsub|f<around*|(|i|)>>>. Hence\ 
 
@@ -5476,7 +5505,7 @@
     <label|family image and preimage>If <math|f:A\<rightarrow\>B> is a
     function, <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>>\<subseteq\>\<cal-P\><around*|(|A|)>>
     and <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|B|)>>
-    are families of sub classes of <math|A> and <math|B> then\ 
+    are families of sub-classes of <math|A> and <math|B> then\ 
 
     <\enumerate>
       <item><math|f<around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>=<big|cup><rsub|i\<in\>I>f<around*|(|A<rsub|i>|)>>
@@ -6145,7 +6174,7 @@
 
   <\definition>
     <label|relation><index|relation>Let <math|A> be a class then a relation
-    in <math|A> is a subclass of <math|A\<times\>A>
+    in <math|A> is a sub-class of <math|A\<times\>A>
   </definition>
 
   <\notation>
@@ -6434,7 +6463,7 @@
         <math|y R x> hence by (2) <math|R<around*|[|x|]>=R<around*|[|y|]>>
 
         <item*|<math|\<Leftarrow\>>>If <math|R<around*|[|x|]>=R<around*|[|y|]>>
-        then <math|y R x> provomg that <math|y\<in\>R<around*|[|x|]>>
+        then <math|y R x> proving that <math|y\<in\>R<around*|[|x|]>>
       </description>
     </enumerate>
   </proof>
@@ -6632,7 +6661,7 @@
   <subsection|Functions and equivalence relations>
 
   In this section we show how a function can be decomposed as the composition
-  of a surject, a bijection and injection. First we examine the relation
+  of a surjection, a bijection and injection. First we examine the relation
   between functions and equivalence relations.
 
   We can use functions to generate a equivalence relation on the domain of
@@ -6673,7 +6702,7 @@
 
   <\theorem>
     <label|equivalence relation subsets>Let <math|A> be a class,
-    <math|B\<subseteq\>A> a subclass and <math|R> a equivalence relation in
+    <math|B\<subseteq\>A> a sub-class and <math|R> a equivalence relation in
     <math|R> then <math|R<rsub|\|B>> defined by\ 
 
     <\equation*>
@@ -6835,7 +6864,7 @@
     and\ 
 
     <\equation*>
-      f<rsub|R<rsub|f>>:A\<rightarrow\>A/R<rsub|f><text| is sutjective
+      f<rsub|R<rsub|f>>:A\<rightarrow\>A/R<rsub|f><text| is surjective
       function>
     </equation*>
 
@@ -6866,7 +6895,7 @@
 
     From the above <math|R<rsub|f><around*|[|a|]>=x=R<rsub|f><around*|[|a<rprime|'>|]>>,
     which using [theorem: <reference|equivalence relation R[x]=R[y]>] means
-    that <math|a R<rsub|f> a<rprime|'>>, so by the defiition of
+    that <math|a R<rsub|f> a<rprime|'>>, so by the definition of
     <math|R<rsub|f>> [theorem: <reference|equivalence relation determined by
     a function>] we have <math|f<around*|(|a|)>=f<around*|(|a<rprime|'>|)>>.
     As by [eq: <reference|eq 3.1.009>] <math|y=f<around*|(|a|)>\<wedge\>y<rprime|'>=f<around*|(|a<rprime|'>|)>>
@@ -6901,7 +6930,7 @@
 
     From <math|f<around*|(|a|)>=y=f<around*|(|a<rprime|'>|)>> it follows that
     <math|f<around*|(|a|)>=f<around*|(|a<rprime|'>|)>>, which by the
-    defiition of <math|R<rsub|f>> [theorem: <reference|equivalence relation
+    definition of <math|R<rsub|f>> [theorem: <reference|equivalence relation
     determined by a function>] proves that <math|a R<rsub|f> a<rprime|'>>.
     Using [theorem: <reference|equivalence relation R[x]=R[y]> it follows
     that <math|R<rsub|f><around*|[|a|]>=R<rsub|f><around*|[|a<rprime|'>|]>>
@@ -6952,7 +6981,7 @@
       <label|eq 3.6.009>x=a\<wedge\>y=R<rsub|f><around*|[|a|]>
     </equation>
 
-    From <math|<around*|(|y,z|)>\<in\>s<rsub|f>> it folows that
+    From <math|<around*|(|y,z|)>\<in\>s<rsub|f>> it follows that
     <math|\<exists\>a<rprime|'>\<in\>A> such that
     <math|<around*|(|y,z|)>=<around*|(|R<rsub|f><around*|[|a<rprime|'>|]>,f<around*|(|a<rprime|'>|)>|)>>
     or <math|y=R<rsub|f><around*|[|a<rprime|'>|]>\<wedge\>z=f<around*|(|a<rprime|'>|)>>.
@@ -7062,7 +7091,7 @@
   <\definition>
     <index|<math|\<less\>>>If <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>>
     is a pre-ordered class [or partial ordered class] then <math|x\<less\>y>
-    is equivalen with <math|x\<leqslant\>y\<wedge\>x\<neq\>y>
+    is equivalent with <math|x\<leqslant\>y\<wedge\>x\<neq\>y>
   </definition>
 
   <\theorem>
@@ -7145,11 +7174,11 @@
   </proof>
 
   Every pre-order can be used as the base to create a order relation as is
-  expressesd in the following theorem. The basic idea is that
+  expressed in the following theorem. The basic idea is that
   <math|x\<leqslant\>y\<wedge\>y\<leqslant\>x\<Rightarrow\>x=y> is missing
   from a pre-order. By defining a equivalence relation <math|\<sim\>> such
   that <math|x\<sim\>y> if <math|x\<leqslant\>y\<wedge\>y\<leqslant\>x> we
-  turn this in equality of equivalence clasess. This is a typical example
+  turn this in equality of equivalence classes. This is a typical example
   about the use of equivalence relations, they allow you to define a new type
   of equality, so that objects that are not equal have associated equivalence
   classes that are equal.
@@ -7262,7 +7291,7 @@
 
         <item*|transitivity>Assume that <math|\<sim\><around*|[|x|]>\<preccurlyeq\>\<sim\><around*|[|y|]>>
         and <math|\<sim\><around*|[|y|]>\<preccurlyeq\>\<sim\><around*|[|z|]>>
-        then we have the existance of <math|x<rprime|'>\<in\>\<sim\><around*|[|x|]>>,
+        then we have the existence of <math|x<rprime|'>\<in\>\<sim\><around*|[|x|]>>,
         <math|y<rprime|'>,y<rprime|''>\<in\>\<sim\><around*|[|y|]>> and
         <math|z<rprime|'>\<in\>\<sim\><around*|[|z|]>> such that\ 
 
@@ -7328,8 +7357,8 @@
     </enumerate>
   </proof>
 
-  Given a partial ordered class then we can induce the order on a sub class
-  making the subclass also a partial ordered class.
+  Given a partial ordered class then we can induce the order on a sub-class
+  making the sub-class also a partial ordered class.
 
   <\theorem>
     <label|order partial order on sub class>If
@@ -7361,7 +7390,7 @@
   </proof>
 
   The following shows a technique of defining a partial order on the
-  cartesian product of partial ordered set.
+  Cartesian product of partial ordered set.
 
   <\theorem>
     <label|order lexical order><dueto|Lexical ordering>Let
@@ -7397,7 +7426,7 @@
       </equation*>
 
       <item*|transitivity>Let <math|<around*|(|x,y|)>\<leqslant\><rsub|A\<times\>B><around*|(|u,v|)>\<wedge\><around*|(|u,v|)>\<leqslant\><rsub|A\<times\>B><around*|(|r,s|)>>
-      then we have to consider the folowing cases:
+      then we have to consider the following cases:
 
       <\description>
         <item*|<math|x=u>> Then <math|y\<leqslant\><rsub|B>v> and we have the
@@ -7585,7 +7614,7 @@
     <label|order initial segement><index|initial
     segment><index|<math|\<cal-S\><rsub|a>>><dueto|Initial Segment>If
     <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>> is a partial
-    ordered class, <math|a\<in\>A> then a <with|font-series|bold|intial
+    ordered class, <math|a\<in\>A> then a <with|font-series|bold|initial
     segment of A determined by a> noted as <math|S<rsub|A,a>> is defined by\ 
 
     <\equation*>
@@ -7593,27 +7622,41 @@
     </equation*>
   </definition>
 
+  We have the following trivial result for initial segments.
+
+  <\proposition>
+    <label|order initial segement inclusion>If
+    <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>> is a partial
+    ordered class and <math|a,b\<in\>A> such that <math|a\<leqslant\>b> then
+    <math|S<rsub|A,a>\<subseteq\>S<rsub|A,b>>
+  </proposition>
+
+  <\proof>
+    If <math|x\<in\>S<rsub|A,a>> then <math|x\<less\>a\<Rightarrowlim\><rsub|a\<leqslant\>b>x\<less\>b>
+    proving that <math|x\<in\>S<rsub|A,b>>
+  </proof>
+
   <\theorem>
     <label|order intial sergment property>If
     <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>> is a partial
     ordered class and <math|P> is a initial segment of <math|A> and <math|Q>
-    is a initial segement of <math|P> [using the induced order
+    is a initial segment of <math|P> [using the induced order
     <math|\<leqslant\><rsub|\|P>>] then <math|A> is a initial segment of
     <math|A>
   </theorem>
 
   <\proof>
-    Using the hypothese there exists <math|a\<in\>A> such that
+    Using the hypothesis there exists <math|a\<in\>A> such that
     <math|P=<around*|{|x\<in\>A\|x\<less\>a|}>> and a <math|b\<in\>P> such
     that <math|Q=<around*|{|x\<in\>P\|x\<less\>b|}>>. Consider then the
-    initial segement <math|S<rsub|A,b>=<around*|{|x\<in\>A\|x\<less\>b|}>> of
+    initial segment <math|S<rsub|A,b>=<around*|{|x\<in\>A\|x\<less\>b|}>> of
     <math|A> determined by <math|a> then we have\ 
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|x\<in\>S<rsub|A,b>>|<cell|\<Rightarrow\>>|<cell|x\<in\>A\<wedge\>x\<less\>b>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|b\<less\>a\<Rightarrow\>x\<less\>b\<Rightarrow\>x\<less\>a>>|<cell|x\<in\>A\<wedge\>x\<less\>a\<wedge\>x\<less\>b>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x\<in\>P\<wedge\>x\<less\>b>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x\<in\>P\<wedge\>x\<less\><rsub|\|P>b>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x\<in\>Q>>|<row|<cell|x\<in\>Q>|<cell|\<Rightarrow\>>|<cell|x\<in\>P\<wedge\>x\<less\><rsub|\|P>b>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x\<in\>P\<wedge\>x\<less\>b>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|P\<subseteq\>A>>|<cell|x\<in\>A\<wedge\>x\<less\>b>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x\<in\>S<rsub|A,b>>>>>
     </eqnarray*>
 
-    Hence <math|Q=S<rsub|A,b>> a initial segement of <math|A>
+    Hence <math|Q=S<rsub|A,b>> a initial segment of <math|A>
   </proof>
 
   Next we define the concept of a Dedekind cut that will be used later to
@@ -7655,9 +7698,9 @@
       <item><math|f:A\<rightarrow\>B> is <with|font-series|bold|increasing>
       if <math|\<forall\>x,y\<in\>A> with <math|x\<leqslant\>y> we have
       <math|f<around*|(|x|)>\<leqslant\>f<around*|(|y|)>>. Another name that
-      is used is <with|font-series|bold|a order homomorphism> [a homorphism
-      is a function that preserver a certain operation, in this case the
-      order relation]
+      is used is <with|font-series|bold|a order homeomorphism> [a
+      homeomorphism is a function that preserver a certain operation, in this
+      case the order relation]
 
       <item><math|f:A\<rightarrow\>B> is <with|font-series|bold|strictly
       increasing> if <math|\<forall\>x,y\<in\>A> with <math|x\<less\>y> we
@@ -7681,7 +7724,7 @@
     <label|order A isomorphism B><index|<math|A\<cong\>B>>Two partial classes
     <math|<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>> and
     <math|<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>> are
-    <with|font-series|bold|order isomorph> noted as <math|A\<cong\>B> if
+    <with|font-series|bold|order isomorphic> noted as <math|A\<cong\>B> if
     there exists order isomorphism between <math|A> and <math|B>.
   </definition>
 
@@ -7693,11 +7736,11 @@
     <math|g:B\<rightarrow\>C> functions then we have:
 
     <\enumerate>
-      <item>If <math|f:A\<rightarrow\>B> is increaasing and
+      <item>If <math|f:A\<rightarrow\>B> is increasing and
       <math|g:B\<rightarrow\>C> is increasing then
       <math|g\<circ\>f:A\<rightarrow\>C> is increasing
 
-      <item>If <math|f:A\<rightarrow\>B> is strictly increaasing and
+      <item>If <math|f:A\<rightarrow\>B> is strictly increasing and
       <math|g:B\<rightarrow\>C> is strictly increasing then
       <math|g\<circ\>f:A\<rightarrow\>C> is strictly increasing
 
@@ -7896,7 +7939,7 @@
     </enumerate>
   </proof>
 
-  <subsection|Min, max, supremums and infinums>
+  <subsection|Min, max, supremum and infinum>
 
   \;
 
@@ -7933,7 +7976,7 @@
   </definition>
 
   <\note>
-    There is a subtile difference between the definition of a maximal
+    There is a subtle difference between the definition of a maximal
     (minimal) element and the greatest (least) element. If <math|m> is the
     greatest (least) element of <math|A> then every element in <math|A> is
     comparable with <math|m>, which is not the case if <math|m> is a maximal
@@ -7969,12 +8012,12 @@
     \ 
 
     <\enumerate>
-      <item>If <math|m,m<rprime|'>> are greatest ekements of <math|A> then as
+      <item>If <math|m,m<rprime|'>> are greatest elements of <math|A> then as
       <math|m,m<rprime|'>\<in\>A> we have
       <math|m\<leqslant\>m<rprime|'>\<wedge\>m<rprime|'>\<leqslant\>m> so
       that <math|m=m<rprime|'>>.
 
-      <item>If <math|m,m<rprime|'>> are least ekements of <math|A> then as
+      <item>If <math|m,m<rprime|'>> are least elements of <math|A> then as
       <math|m,m<rprime|'>\<in\>A> we have
       <math|m\<leqslant\>m<rprime|'>\<wedge\>m<rprime|'>\<leqslant\>m> so
       that <math|m=m<rprime|'>>.
@@ -8101,8 +8144,8 @@
   element. So <math|inf<around*|(|A|)>> is the greatest lower bound [if it
   exist] and it is itself a lower bound.
 
-  The following theorem wil be used a lot of time when dealing with supremums
-  and infinums.
+  The following theorem will be used a lot of time when dealing with
+  supremums and infinums.
 
   <\theorem>
     <label|order sup, inf stalls>Let <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>>
@@ -8305,7 +8348,7 @@
   <math|min<around*|(|\<upsilon\><around*|(|A|)>|)>> exists and
   <math|inf<around*|(|A|)>> exist if <math|max<around*|(|\<lambda\><around*|(|A|)>|)>>
   exist. The following theorem shows that there is a weaker condition for the
-  existance of <math|sup<around*|(|A|)>> and <math|inf<around*|(|A|)>>.
+  existence of <math|sup<around*|(|A|)>> and <math|inf<around*|(|A|)>>.
 
   <\theorem>
     <label|order sup inf condition>Let <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>>
@@ -8329,7 +8372,7 @@
       <math|a\<in\>\<upsilon\><around*|(|\<lambda\><around*|(|A|)>|)>>. As
       <math|sup<around*|(|\<lambda\><around*|(|A|)>|)>=min<around*|(|\<upsilon\><around*|(|\<lambda\><around*|(|A|)>|)>|)>>
       we have that <math|sup<around*|(|\<lambda\><around*|(|A|)>|)>\<leqslant\>a>.
-      As <math|a\<in\>A> was arbitrary choosen we have that
+      As <math|a\<in\>A> was arbitrary chosen we have that
 
       <\equation>
         <label|eq 3.8.011>sup<around*|(|\<lambda\><around*|(|A|)>|)>\<in\>\<lambda\><around*|(|A|)>
@@ -8358,7 +8401,7 @@
       <math|a\<in\>\<lambda\><around*|(|\<upsilon\><around*|(|A|)>|)>>. As
       <math|inf<around*|(|\<upsilon\><around*|(|A|)>|)>=max<around*|(|\<lambda\><around*|(|\<upsilon\><around*|(|A|)>|)>|)>>
       we have that <math|a\<leqslant\>inf<around*|(|\<upsilon\><around*|(|A|)>|)>>.
-      As <math|a\<in\>A> was arbitrary choosen we have that
+      As <math|a\<in\>A> was arbitrary chosen we have that
 
       <\equation>
         <label|eq 3.10.012>inf<around*|(|\<upsilon\><around*|(|A|)>|)>\<in\>\<upsilon\><around*|(|A|)>
@@ -8387,19 +8430,19 @@
 
   In general it is not guaranteed that <math|sup<around*|(|A|)>> or
   <math|inf<around*|(|A|)>> exists. However there exists partial order
-  classes that guarantees the existance of a supremum for non empty
-  subclasses that are bounded above.\ 
+  classes that guarantees the existence of a supremum for non empty
+  sub-classes that are bounded above.\ 
 
   <\definition>
     <label|order conditional complete order><index|conditional
     completeness><dueto|Conditional Completeness>A partial ordered class
     <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is
-    <with|font-series|bold|conditional complete >if every nonempty subclass
+    <with|font-series|bold|conditional complete >if every non empty sub-class
     of <math|A> that is bounded above has a supremum.
   </definition>
 
   The next theorem shows that conditional completeness can also be defined
-  based on bounded belown and infinum.
+  based on bounded below and infinum.
 
   <\theorem>
     <label|order conditional complete alternatives>If
@@ -8407,11 +8450,11 @@
     ordered class then the following are equivalent
 
     <\enumerate>
-      <item>Every non empty subclass of <math|X> that is bounded above has a
+      <item>Every non empty sub-class of <math|X> that is bounded above has a
       supremum [<math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is
-      contional complete]
+      conditional complete]
 
-      <item>Every non empty subclass of <math|X> that is bounded below has a
+      <item>Every non empty sub-class of <math|X> that is bounded below has a
       infinum\ 
     </enumerate>
   </theorem>
@@ -8421,8 +8464,8 @@
 
     <\description>
       <item*|<math|1\<Rightarrow\>2>>Let <math|A\<subseteq\>X> a non empty
-      subclass that is bounded below. As <math|A\<neq\>\<varnothing\>> there
-      exists a <math|a\<in\>A>, further by defnition of
+      sub-class that is bounded below. As <math|A\<neq\>\<varnothing\>> there
+      exists a <math|a\<in\>A>, further by definition of
       <math|\<lambda\><around*|(|A|)>> we have
       <math|\<forall\>y\<in\>\<lambda\><around*|(|A|)>> that
       <math|y\<leqslant\>a> so <math|\<lambda\><around*|(|A|)>> is bounded
@@ -8436,8 +8479,8 @@
       </equation*>
 
       <item*|<math|2\<Rightarrow\>1>>Let <math|A\<subseteq\>X> a non empty
-      subclass that is bounded above. As <math|A\<neq\>\<varnothing\>> there
-      exists a <math|a\<in\>A>, further by defnition of
+      sub-class that is bounded above. As <math|A\<neq\>\<varnothing\>> there
+      exists a <math|a\<in\>A>, further by definition of
       <math|\<upsilon\><around*|(|A|)>> we have
       <math|\<forall\>y\<in\>\<upsilon\><around*|(|A|)>> that
       <math|a\<leqslant\>y> so <math|\<upsilon\><around*|(|A|)>> is bounded
@@ -8676,18 +8719,18 @@
   <\definition>
     <label|order well-rodered class><index|well-ordered class>A partial
     ordered class <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is
-    <with|font-series|bold|well ordered> is every nonempty subclass of
+    <with|font-series|bold|well ordered> is every non empty sub-class of
     <math|X> has a least element. In other words if
     <math|\<forall\>A\<in\>\<cal-P\><around*|(|X|)>>
-    <math|min<around*|(|A|)>> exitst.
+    <math|min<around*|(|A|)>> exist.
   </definition>
 
   <\theorem>
     <label|order total/well-order inclusion>If
-    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a partial
-    ordered class and <math|B\<subseteq\>X> and
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is a partial
+    ordered class, <math|B\<subseteq\>X> then for
     <math|<around*|\<langle\>|B,\<leqslant\><rsub|\|B>|\<rangle\>>> [see
-    theorem: <reference|order partial order on sub class>] then\ 
+    theorem: <reference|order partial order on sub class>] we have\ 
 
     <\enumerate>
       <item>If <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is
@@ -8708,7 +8751,7 @@
       <math|x\<leqslant\>y\<vee\>y\<leqslant\>x> so that
       <math|x\<leqslant\><rsub|\|B>y\<vee\>y\<leqslant\><rsub|\|B>x>.
 
-      <item>If <math|C\<subseteq\>B> is a nonempty set then as
+      <item>If <math|C\<subseteq\>B> is a non empty class then as
       <math|B\<subseteq\>X> we have <math|\<varnothing\>\<neq\>C\<subseteq\>X>.
       So there exists a least element <math|c> of <math|C>. So
       <math|c\<in\>C> and <math|\<forall\>x\<in\>C> we have
@@ -8732,6 +8775,9 @@
 
       <item><math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is
       conditional complete
+
+      <item><math|\<forall\>x,y\<in\>X> we have <math|x\<leqslant\>y> or
+      <math|y\<less\>x>
     </enumerate>
   </theorem>
 
@@ -8739,25 +8785,30 @@
     \ 
 
     <\enumerate>
-      <item>If <math|x,y\<in\>X> then <math|<around*|{|x,y|}>> is a nonempty
-      subclass of <math|X> and must have a least element. If <math|x> is the
+      <item>If <math|x,y\<in\>X> then <math|<around*|{|x,y|}>> is a non empty
+      sub-class of <math|X> and must have a least element. If <math|x> is the
       least element then <math|x\<leqslant\>y> and if <math|y> is the least
       element then <math|y\<leqslant\>x>, so
       <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is totally
       ordered.\ 
 
-      <item>If <math|A> is a nonempty subclass of <math|X> that is bounded
+      <item>If <math|A> is a non empty sub-class of <math|X> that is bounded
       above then <math|\<upsilon\><around*|(|A|)>\<neq\>\<varnothing\>>.
       Using well-ordering we have that <math|sup<around*|(|A|)>=min<around*|(|\<upsilon\><around*|(|A|)>|)>>
       exist.
+
+      <item>As by (1) <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>>
+      is totally ordered we have that <math|x<text| and >y> are comparable,
+      hence by [theorem: <reference|order comparable property>] we have
+      <math|x\<leqslant\>y\<vee\>y\<less\>x>.
     </enumerate>
   </proof>
 
   One difference between the order relation on the set of whole numbers
   <math|\<bbb-Z\>> and the set of real numbers <math|\<bbb-R\>> is that there
   does not exist a whole number between 1 and 2 while for the real numbers
-  there is the number <math|1.5> between <math|1> and <math|2>. This leeds to
-  the following definition.
+  there is the real number <math|1.5> between <math|1> and <math|2>. This
+  leads to the following definition.
 
   <\definition>
     <label|order immediate successor><index|immediate
@@ -8770,7 +8821,7 @@
       <item><math|x\<less\>y>
 
       <item><math|\<neg\><around*|(|\<exists\>z\<in\>X<text| such that
-      >x\<less\>z\<wedge\>z\<less\>y|)>> [in words ther does not exists a
+      >x\<less\>z\<wedge\>z\<less\>y|)>> [in words there does not exists a
       <math|x\<in\>X> such that <math|x\<less\>z\<less\>y>]
     </enumerate>
   </definition>
@@ -8783,27 +8834,916 @@
   </theorem>
 
   <\proof>
-    Using [theorem: <reference|order well order implies conditional
-    complete>] we have that <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>>
+    Using [theorem: <reference|order well order implies conditional complete
+    and totally ordering>] we have that <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>>
     is totally ordered. Let <math|x\<in\>X> such that <math|x> is not a
-    greatest element in <math|X>. If <math|B=<around*|{|y\<in\>X\|x\<less\>y|}>>
+    greatest element in <math|X>. Take <math|B=<around*|{|y\<in\>X\|x\<less\>y|}>>
     then if <math|B=\<varnothing\>> we have that <math|X\\B=X> so
-    <math|\<forall\>x\<in\>X> we have <math|x\<nin\>B> or
-    <math|\<neg\><around*|(|x\<less\>y|)>>, as by [theorem: <reference|order
-    comparable property>] we have <math|y\<leqslant\>x\<vee\>x\<less\>y>,
-    that <math|y\<leqslant\>x> giving the contradiction that <math|x> is a
-    greatest element of <math|X>.\ 
-
-    So we must have that <math|B\<neq\>\<varnothing\>>, by well ordering
-    there exist a least element <math|b\<in\>B>, so <math|x\<less\>b>. Assume
-    that there exist a <math|a\<in\>X> such that
+    <math|\<forall\>r\<in\>X> we have <math|r\<nin\>B> or
+    <math|\<neg\><around*|(|x\<less\>r|)>>, by [theorem: <reference|order
+    well order implies conditional complete and totally ordering>] we have
+    that <math|r\<leqslant\>x>, proving that <math|x> is a greatest element
+    of <math|X> which contradicts or hypothesis.. So we must have that
+    <math|B\<neq\>\<varnothing\>>, by well ordering there exist a least
+    element <math|b> of <math|B>, which as <math|b\<in\>B> gives
+    <math|x\<less\>b>. Assume that there exist a <math|a\<in\>X> such that
     <math|x\<less\>a\<wedge\>a\<less\>b>, then we must have that
     <math|a\<in\>B> and <math|a\<less\>b>. As <math|b> is the least element
     of <math|B> and <math|a\<in\>B> we have <math|b\<less\>a> leading to the
-    contradiction <math|a\<less\>a>. \ \ 
+    contradiction <math|a\<less\>a>. So <math|b> is a immediate successor of
+    <math|x>/
   </proof>
 
-  \;
+  <\definition>
+    <label|order section><index|section>Let
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a partial
+    ordered class then <math|B\<subseteq\>A> is a
+    <with|font-series|bold|section> of <math|X> if\ 
+
+    <\equation*>
+      \<forall\>x\<in\>X we have<text| >\<forall\>y\<in\>B<text| with
+      >x\<leqslant\>y<text| that >x\<in\>B
+    </equation*>
+  </definition>
+
+  <\lemma>
+    <label|order section and well ordering>Let
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a well ordered
+    class and <math|B\<subseteq\>X> then\ 
+
+    <\equation*>
+      B<text| is a section >\<Leftrightarrow\><text| >B=X<text| or >B<text|
+      is a initial segment of >X<text| [definition: <reference|order initial
+      segement>]>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|B> be a section of <math|X> then
+      if <math|B=X> we are done. So we must prove the theorem for
+      <math|B\<neq\>X> or equivalently <math|X\\B\<neq\>\<varnothing\>>.
+      Because <math|X> is well ordered, there a exists a least element
+      <math|l\<in\>X\\B>. Consider the initial segment
+      <math|S<rsub|X,l>=<around*|{|x\<in\>X\|x\<less\>l|}>> [see definition:
+      <reference|order initial segement>]. Let <math|x\<in\>S<rsub|X,l>> so
+      that <math|x\<less\>l>. Assume that <math|x\<nin\>B> then
+      <math|x\<in\>X\\B> so, as <math|l> is a least element of <math|X\\B>,
+      we have <math|l\<leqslant\>x> which combined with <math|x\<less\>l>
+      leads to the contradiction <math|l\<less\>l>. So we must have that
+      <math|x\<in\>B> which proves that\ 
+
+      <\equation>
+        <label|eq 3.14.013>S<rsub|X,l>\<subseteq\>B
+      </equation>
+
+      Let <math|x\<in\>B>, as <math|X> is well ordered we have by [theorem:
+      <reference|order well order implies conditional complete and totally
+      ordering>] that <math|l\<leqslant\>x\<vee\>x\<less\>l>. Assume that
+      <math|l\<leqslant\>x> then, as <math|B> is a section, we have
+      <math|l\<in\>B> contradicting <math|l\<in\>X\\B> [as <math|l> is least
+      element of <math|X\\B>]. So we must have <math|x\<less\>l> or
+      <math|x\<in\>S<rsub|X,l>> so <math|B\<subseteq\>S<rsub|X,l>>. Combining
+      this result with [eq: <reference|eq 3.14.013>] proves\ 
+
+      <\equation*>
+        S<rsub|X,l>=B
+      </equation*>
+
+      <item*|<math|\<Leftarrow\>>>If <math|X=B> then
+      <math|\<forall\>x\<in\>X> we have <math|\<forall\>y\<in\>B=X> with
+      <math|x\<leqslant\>y> that trivially <math|x\<in\>X=B>, so <math|B> is
+      a section. If <math|B> is initial segment then there exist a
+      <math|l\<in\>X> such that <math|B=<around*|{|y\<in\>X\|y\<less\>l|}>>.
+      Take <math|x\<in\>X> then if <math|y\<in\>B> with <math|x\<leqslant\>y>
+      we have <math|y\<less\>l> so that <math|x\<less\>l> hence
+      <math|x\<in\>B>, proving that <math|B> is a section.
+    </description>
+  </proof>
+
+  A application of the above lemma is Transfinite Induction.
+
+  <\theorem>
+    <label|order transfinite induction><index|transfinite
+    induction><dueto|Transfinite Induction>Let
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a well ordered
+    class and let <math|P<around*|(|x|)>> a proposition about <math|x> [a
+    statement about <math|x> that can be true or false] such that\ 
+
+    <\equation>
+      <label|eq 3.15.013>\<forall\>x\<in\>X<text| such that, if
+      <math|P<around*|(|y|)>> is true for every <math|y\<less\>x> then
+      <math|P<around*|(|x|)><text| is true>>>
+    </equation>
+
+    then\ 
+
+    <\equation*>
+      \<forall\>x\<in\>X<text| >P<around*|(|x|)><text| is true>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    We prove this by contradiction. Assume that <math|\<exists\>x\<in\>X>
+    such that <math|P<around*|(|x|)>> is false, then
+    <math|B=<around*|{|x\<in\>X\|\<cal-P\><around*|(|x|)><text| is false>|}>>
+    is non empty. \ As <math|X> is well ordered there exist a least element
+    <math|l\<in\>B>. Take <math|x\<in\>X> with <math|x\<less\>l> then
+    <math|x\<nin\>B> [for if <math|x\<in\>B> then <math|l\<leqslant\>x>,
+    which combined with <math|x\<less\>l> gives the contradiction
+    <math|l\<less\>l>] so that <math|P<around*|(|x|)>> is true. By the
+    hypothesis [eq: <reference|eq 3.15.013>] we have that
+    <math|P<around*|(|l|)>> is true, which means that <math|l\<nin\>B>
+    contradicting <math|l\<in\>B>. So we must have that
+    <math|\<forall\>x\<in\>X> <math|P<around*|(|x|)>> is true.
+  </proof>
+
+  <\lemma>
+    <label|order well ordered and order isomorphism>Let
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a well ordered
+    class, <math|B\<subseteq\>X> and <math|f:X\<rightarrow\>B> a order
+    isomorphism then <math|\<forall\>x\<in\>X> we have
+    <math|x\<leqslant\>f<around*|(|x|)>>
+  </lemma>
+
+  <\proof>
+    We prove this by contradiction. Assume that that<math|\<exists\>x\<in\>X>
+    such that <math|\<neg\><around*|(|x\<leqslant\>f<around*|(|x|)>|)>>. As
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> if well ordered we
+    have by \ [theorem: <reference|order well order implies conditional
+    complete and totally ordering>] that <math|f<around*|(|x|)>\<less\>x>,
+    hence <math|C=<around*|{|x\<in\>X\|f<around*|(|x|)>\<less\>x|}>\<neq\>\<varnothing\>>.
+    By well ordering there exists a least element <math|c> of <math|C>. As
+    <math|c\<in\>C> we have that <math|f<around*|(|c|)>\<less\>c>, hence by
+    [theorem: <reference|order isomorphism strictly>]
+    <math|f<around*|(|f<around*|(|c|)>|)>\<less\>f<around*|(|c|)>> so that
+    <math|f<around*|(|c|)>\<in\>C>. As <math|c> is the least element of
+    <math|C> we have <math|c\<leqslant\>f<around*|(|c|)>>, which combined
+    with <math|f<around*|(|c|)>\<less\>c> gives the contradiction
+    <math|c\<less\>c>. So we must have <math|\<forall\>x\<in\>X> that
+    <math|x\<leqslant\>f<around*|(|x|)>>.
+  </proof>
+
+  <\theorem>
+    <label|order well ordered class and isomorphism>Let
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a well ordered
+    class then there does not exist a order isomorphism from <math|X> to a
+    sub-class of an initial segment of <math|X>.
+  </theorem>
+
+  <\proof>
+    We prove this by contradiction. So assume that there exists a initial
+    segment <math|S<rsub|X,a>=<around*|{|y\<in\>X\|y\<less\>a|}>> of
+    <math|X>, a <math|B\<subseteq\>S<rsub|X,\<alpha\>>> and a isomorphism
+    <math|f:X\<rightarrow\>B>. Using the previous lemma [lemma:
+    <reference|order well ordered and order isomorphism>] we have that
+    <math|a\<leqslant\>f<around*|(|a|)>>, so
+    <math|f<around*|(|a|)>\<nin\>S<rsub|X,a>> [for if
+    <math|f<around*|(|a|)>\<in\>S<rsub|X,a>> then
+    <math|f<around*|(|a|)>\<less\>a> leading to the contradiction
+    <math|a\<less\>a>]. However as <math|range<around*|(|f|)>=B\<subseteq\>S<rsub|X,a>>
+    we must have that <math|f<around*|(|a|)>\<in\>S<rsub|X,a>> and we reach a
+    contradiction.
+  </proof>
+
+  <\corollary>
+    <label|order well ordered is not isomorph to a initial segment >Let
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a well ordered
+    class then there does not exist a order isomorphism between <math|X> and
+    initial segment of <math|X>
+  </corollary>
+
+  <\proof>
+    As a initial segment is a sub-class of itself this follows from the
+    previous theorem [theorem: <reference|order well ordered class and
+    isomorphism>]
+  </proof>
+
+  <\theorem>
+    <label|order well ordered isomorphism property>If
+    <math|<around*|\<langle\>|X,\<leqslant\><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,\<leqslant\><rsub|Y>|\<rangle\>>> are well
+    ordered classes then if <math|X> is order isomorphic with an initial
+    segment of <math|Y> we have that <math|Y> is not order isomorphic with
+    any sub-class of <math|X>.
+  </theorem>
+
+  <\proof>
+    Let <math|S<rsub|X,y>> be a initial segment of <math|Y> and
+    <math|f:X\<rightarrow\>S<rsub|X,y>> a order isomorphism. Assume that
+    there exist a <math|A\<subseteq\>X> and a order isomorphism
+    <math|g:Y\<rightarrow\>A>, As by [lemma: <reference|function extend
+    target>],[theorem: <reference|function injectivity, surjectivity>] and
+    the fact that 'increasing' is a property of the graph of a function,we
+    have that <math|g:Y\<rightarrow\>X> is a injective increasing function.
+    Using [theorem: <reference|function composition injectivity, surjectivity
+    and bijectivity>],[theorem: <reference|order composition of functions>]
+    <math|we have \ that f\<circ\>g:Y\<rightarrow\>S<rsub|X,y>> is a
+    injective increasing function, hence <math|f\<circ\>f:Y\<rightarrow\><around*|(|f\<circ\>g|)><around*|(|Y|)>>
+    is a bijective function [see theorem: <reference|function injectivity to
+    bijection>] which is increasing, hence by [theorem: <reference|order
+    condition for isomorphism in a totallu ordered set>] we have that
+    <math|f\<circ\>g:Y\<rightarrow\><around*|(|f\<circ\>g|)><around*|(|Y|)>>
+    is a order isomorphism. As <math|<around*|(|f\<circ\>g|)><around*|(|Y|)>\<subseteq\>range<around*|(|f|)>>
+    [see theorem: <reference|partial function domain range composition>] and
+    <math|range<around*|(|f|)>\<subseteq\>S<rsub|X,y>> we have a order
+    isomorphim \ between <math|Y> and a sub-class of a initial segment of
+    <math|Y>. By [theorem: <reference|order well ordered class and
+    isomorphism>] this is impossible so the assumption is false, hence
+    <math|Y> is not order isomorphic to a an initial segment of <math|Y>.
+  </proof>
+
+  <\corollary>
+    <label|order well ordered isomorphic property (3)>If
+    <math|<around*|\<langle\>|X,\<leqslant\><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,\<leqslant\><rsub|Y>|\<rangle\>>> are well
+    ordered classes such that <math|X> is order isomorphic with <math|Y> then\ 
+
+    <\enumerate>
+      <item><math|X> can not be order isomorphic with a initial segment of
+      <math|Y>
+
+      <item><math|Y> can not be order isomorphic with a initial segment of
+      <math|X>
+    </enumerate>
+  </corollary>
+
+  <\proof>
+    \ We prove this by contraduction. First by the hypothesis we have
+    <math|X\<cong\>Y> and by [theorem: <reference|order properties of the
+    isomorph relation>] <math|Y\<cong\>X>.
+
+    <\enumerate>
+      <item>If <math|X> is order isomorphic with a initial segment of
+      <math|Y> then as <math|Y\<cong\>X> we have that <math|Y> is order
+      isomorphic with a sub-class of <math|X>, which by [theorem:
+      <reference|order well ordered isomorphism property>] is not allowed.
+
+      <item>If <math|Y> is order isomorphic with a initial segment of
+      <math|X> then as <math|X\<cong\>Y> we have that <math|X> is order
+      isomorphic with a sub-class of <math|Y>, which by [theorem:
+      <reference|order well ordered isomorphism property>] is not allowed.
+    </enumerate>
+  </proof>
+
+  <\lemma>
+    <label|order initial segement a\<less\>b>Let
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a well ordered
+    class and <math|a,b\<in\>X> with <math|a\<less\>b> then
+    <math|S<rsub|X,a>> is a initial segment of <math|\<cal-S\><rsub|X,b>>
+    [using the order <math|\<leqslant\><rsub|\|S<rsub|X,y>>>]
+  </lemma>
+
+  <\proof>
+    First if <math|x\<in\>S<rsub|X,a>> then
+    <math|x\<less\>a\<Rightarrowlim\><rsub|<text|a\<less\>b>>x\<less\>b<rsub|>>
+    so that <math|x\<in\>S<rsub|X,b>>, hence\ 
+
+    <\equation*>
+      S<rsub|X,a>\<subseteq\>S<rsub|X,b>
+    </equation*>
+
+    Now if <math|x\<in\>S<rsub|X,b>> and <math|y\<in\>S<rsub|X,a>> is such
+    that <math|x\<leqslant\><rsub|\|S<rsub|X<rsub|B>>>y<text| then
+    >x\<leqslant\>y\<Rightarrowlim\><rsub|y\<in\>S<rsub|X,a>\<Rightarrow\>y\<less\>a>x\<less\>a<text|
+    hence >x\<in\>S<rsub|X,a>>. So <math|S<rsub|X,a>> is a section of
+    <math|S<rsub|X,b>>, as <math|a\<nin\>S<rsub|X,a>\<wedge\>a\<in\>S<rsub|X,b>>
+    [for <math|a\<less\>b>] we have <math|S<rsub|X,a>\<neq\>S<rsub|X,b>> so
+    that, using [theorem: <reference|order section and well ordering>],
+    <math|S<rsub|X,a>> is a initial segment of <math|S<rsub|X,b>>.
+  </proof>
+
+  <\theorem>
+    <label|order well ordering and isomorphism (2)>Let Let
+    <math|<around*|\<langle\>|X,\<leqslant\><rsub|X>|\<rangle\>>> and
+    <math|<around*|\<langle\>|Y,\<leqslant\><rsub|Y>|\<rangle\>>> be well
+    ordered classes then exactly one of the following cases hold
+
+    <\enumerate>
+      <item><math|X> is order isomorphic with <math|Y>
+
+      <item><math|X> is order isomorphic with an initial segment of <math|Y>
+
+      <item><math|Y> is order isomorphic with an initial segment of <math|X>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    Define
+
+    <\equation>
+      <label|eq 3.16.016>C=<around*|{|x\<in\>X\|\<exists\>y\<in\>Y<text| such
+      that >S<rsub|X,x>\<cong\>S<rsub|Y,y>|}>
+    </equation>
+
+    and
+
+    <\equation>
+      <label|eq 3.17.016>F=<around*|{|<around*|(|x,y|)>\<in\>C\<times\>Y\|S<rsub|X,x>\<cong\>S<rsub|Y,y>|)>
+    </equation>
+
+    We prove now that <math|F> is the graph of a order isomorphism between
+    <math|C> and <math|F<around*|(|C|)>>. We have trivially from the
+    definition of <math|F> that
+
+    <\equation>
+      <label|eq 3.16.014>F\<subseteq\>C\<times\>Y
+    </equation>
+
+    Let <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>F>, then
+    <math|\<cal-S\><rsub|X,x>\<cong\>S<rsub|Y,y>> and
+    <math|S<rsub|x,x>\<cong\>S<rsub|Y,y<rprime|'>>> so by [theorem:
+    <reference|order properties of the isomorph relation>]
+
+    <\equation>
+      <label|eq 3.17.014>S<rsub|Y,y>\<cong\>S<rsub|Y,y<rprime|'>><rsub|>
+    </equation>
+
+    Assume that <math|y\<neq\>y<rprime|'>> then, as
+    <math|<around*|\<langle\>|Y,\<leqslant\><rsub|Y>|\<rangle\>>> is well
+    ordered we have by [theorem: <reference|order well order implies
+    conditional complete and totally ordering>] either:
+
+    <\description>
+      <item*|<math|y\<leqslant\>y<rprime|'>>>then <math|y\<less\>y<rprime|'>>
+      so that by the previous lemma [lemma: <reference|order initial segement
+      a\<less\>b>] we have that <math|S<rsub|Y,y>> is a initial segment of
+      <math|S<rsub|Y,y<rprime|'>>>. Using [corollary: <reference|order well
+      ordered is not isomorph to a initial segment >] we have then that
+      <math|S<rsub|Y,y<rprime|'>>> is not order isomorphic with
+      <math|S<rsub|Y,y>> contradicting [eq: <reference|eq 3.17.014>].
+
+      <item*|<math|y<rprime|'>\<less\>y>>then by the previous lemma [lemma:
+      <reference|order initial segement a\<less\>b>] we have that
+      <math|S<rsub|Y,y<rprime|'>>> is a initial segment of
+      <math|S<rsub|Y,y>>. Using [corollary: <reference|order well ordered is
+      not isomorph to a initial segment >] we have then that
+      <math|S<rsub|Y,y>> is not order isomorphic with
+      <math|S<rsub|Y,y<rprime|'>>> contradicting [eq: <reference|eq
+      3.17.014>].
+    </description>
+
+    as in all cases we have a contradiction, the assumption must be wrong.
+    Hence\ 
+
+    <\equation>
+      <label|eq 3.18.014><text|If ><around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>F<text|
+      then >y=y<rprime|'>
+    </equation>
+
+    Further if <math|x\<in\>C> then by definition of <math|C> there exists a
+    <math|y\<in\>Y> such that <math|S<rsub|X,x>=S<rsub|Y,y>> hence
+    <math|<around*|(|x,y|)>\<in\>F> proving that\ 
+
+    <\equation>
+      <label|eq 3.19.014>C\<subseteq\>dom<around*|(|F|)>
+    </equation>
+
+    If <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>F> then
+    <math|S<rsub|X,x>\<cong\>S<rsub|Y,y>> and
+    <math|\<cal-S\><rsub|X,x<rprime|'>>\<cong\>S<rsub|Y,y>> so by \ [theorem:
+    <reference|order properties of the isomorph relation>] we have that\ 
+
+    <\equation>
+      <label|eq 3.20.014>S<rsub|X,x>\<cong\>S<rsub|X,x<rprime|'>>
+    </equation>
+
+    Assume that <math|x\<neq\>x<rprime|'>> then, as
+    <math|<around*|\<langle\>|X,\<leqslant\><rsub|X>|\<rangle\>>> is well
+    ordered we have by \ [theorem: <reference|order well order implies
+    conditional complete and totally ordering>] either:
+
+    <\description>
+      <item*|<math|x\<leqslant\>x<rprime|'>>>then <math|x\<less\>x<rprime|'>>
+      so that by the previous lemma [lemma: <reference|order initial segement
+      a\<less\>b>] we have that <math|S<rsub|X,x>> is a initial segment of
+      <math|S<rsub|X,x<rprime|'>>>. Using [corollary: <reference|order well
+      ordered is not isomorph to a initial segment >] we have then that
+      <math|S<rsub|X,x<rprime|'>>> is not order isomorphic with
+      <math|S<rsub|X,x>> contradicting [eq: <reference|eq 3.20.014>].
+
+      <item*|<math|x<rprime|'>\<leqslant\>x>>then by the previous lemma
+      [lemma: <reference|order initial segement a\<less\>b>] we have that
+      <math|S<rsub|X,x<rprime|'>>> is a initial segment of
+      <math|S<rsub|X,x>>. Using [corollary: <reference|order well ordered is
+      not isomorph to a initial segment >] we have then that
+      <math|S<rsub|X,x>> is not order isomorphic with
+      <math|S<rsub|X,x<rprime|'>>> contradicting [eq: <reference|eq
+      3.20.014>].
+    </description>
+
+    as in all cases we have a contradiction, the assumption must be wrong.
+    Hence\ 
+
+    <\equation>
+      <label|eq 3.21.014><text|If ><around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>F<text|
+      we have >x=x<rprime|'>
+    </equation>
+
+    Combining [eq: <reference|eq 3.16.014>], [eq: <reference|eq 3.18.014>],
+    [eq: <reference|eq 3.19.014>] and [eq: <reference|eq 3.21.014>] it
+    follows that <math|F:C\<rightarrow\>Y<text| is a injective \ function>>.
+    Applying then [proposition: <reference|function injectivity to
+    bijection>] gives if we define <math|D=F<around*|(|C|)>>
+
+    <\equation>
+      <label|eq 3.22.014>F:C\<rightarrow\>D<text| is a bijection>
+    </equation>
+
+    Take <math|x,y\<in\>C> such that <math|x\<leqslant\><rsub|X>y<rsub|>>
+    then by definition of <math|F> we have
+
+    <\equation>
+      <label|eq 3.23.014>S<rsub|X,x>\<cong\>S<rsub|Y,F<around*|(|x|)>><text|
+      and >S<rsub|X,y>\<cong\>S<rsub|Y,F<around*|(|y|)>>
+    </equation>
+
+    Assume now that <math|\<neg\><around*|(|F<around*|(|x|)>\<leqslant\><rsub|Y>F<around*|(|y|)>|)>>
+    then as <math|<around*|\<langle\>|Y,\<leqslant\><rsub|Y>|\<rangle\>>> is
+    well ordered we have by [theorem: <reference|order well order implies
+    conditional complete and totally ordering>] that
+    <math|F<around*|(|y|)>\<less\><rsub|Y>F<around*|(|x|)>>. So using
+    [theorem: <reference|order initial segement a\<less\>b>] we have that
+    <math|S<rsub|Y,F<around*|(|y|)>>> is a initial segment of
+    <math|S<rsub|Y,F<around*|(|x|)>>>. As <math|x\<leqslant\><rsub|X>y> it
+    follows that <math|S<rsub|X,x>\<subseteq\>S<rsub|X,y>> [see proposition:
+    <reference|order initial segement inclusion>]. So we have using [eq:
+    <reference|eq 3.23.014>]
+
+    <\enumerate-alpha>
+      <item><math|S<rsub|X,y>> is order isomorphic with
+      <math|S<rsub|Y,F<around*|(|y|)>>> a initial segment of
+      <math|S<rsub|Y,F<around*|(|x|)>>>
+
+      <item><math|S<rsub|F<around*|(|x|)>>> is order isomorphic with
+      <math|S<rsub|X,x>> a sub-class of <math|S<rsub|X,y>>
+    </enumerate-alpha>
+
+    Using [theorem: <reference|order well ordered isomorphism property>] we
+    see that (a) and (b) can not be all true, hence our assumption is false
+    so that <math|F<around*|(|x|)>\<leqslant\>F<around*|(|y|)>>. Hence we
+    have that <math|F:C\<rightarrow\>D> is a increasing bijection which by
+    [theorem: <reference|order condition for isomorphism in a totallu ordered
+    set>] proves that\ 
+
+    <\equation>
+      <label|eq 3.21.014.1>F:C\<rightarrow\>D<text| is a order isomorphism or
+      >C\<cong\>D
+    </equation>
+
+    Next we prove that
+
+    <\equation>
+      <label|eq 3.25.015>C<text| is a section of >X
+    </equation>
+
+    <\proof>
+      Let <math|x\<in\>X> and take <math|c\<in\>C> such that
+      <math|x\<leqslant\><rsub|X>c>. As <math|S<rsub|X,c>\<cong\>S<rsub|Y,F<around*|(|c|)>>>
+      there exist a order isomorphism
+
+      <\equation>
+        <label|eq 3.25.014>g:S<rsub|X,c>\<rightarrow\>S<rsub|Y,F<around*|(|c|)>>
+      </equation>
+
+      Now as <math|x\<leqslant\><rsub|X>c> we have by [proposition:
+      <reference|order initial segement inclusion>] that
+      <math|S<rsub|X,x>\<subseteq\>S<rsub|X,c>>. Hence by <reference|function
+      restriction of a function> we have that\ 
+
+      <\equation>
+        <label|eq 3.26.014>g<rsub|\|S<rsub|X,x>>:S<rsub|X,x>\<rightarrow\>S<rsub|X,c><text|
+        is a function>
+      </equation>
+
+      Further if <math|y\<in\>S<rsub|X,x>> we have that
+      <math|y\<less\><rsub|X>x>, so as <math|g> is a order isomorphism we
+      have <math|g<around*|(|y|)>\<less\><rsub|Y>g<around*|(|x|)>> proving
+      that <math|g<rsub|\|S<rsub|X,x>><around*|(|y|)>=g<around*|(|y|)>\<in\>S<rsub|Y,g<around*|(|x|)>>>
+      or <math|range<around*|(|g<rsub|\|S<rsub|X,x>>|)>\<subseteq\>S<rsub|Y,g<around*|(|x|)>>>.
+      So by [theorem: <reference|function range restriction>] it follows that\ 
+
+      <\equation>
+        <label|eq 3.27.014>g<rsub|\|S<rsub|X,x>>:S<rsub|X,x>\<rightarrow\>S<rsub|Y,g<around*|(|x|)>><text|
+        is a function>
+      </equation>
+
+      As <math|g> is a isomorphism and thus injective it follows from
+      [theorem: <reference|function restricted function properties>] that\ 
+
+      <\equation>
+        <label|eq 3.28.014>g<rsub|\|S<rsub|X,x>>:S<rsub|X<rsub|x>>\<rightarrow\>S<rsub|Y,g<around*|(|x|)>><text|
+        is injective>
+      </equation>
+
+      Further if <math|y\<in\>S<rsub|Y,g<around*|(|x|)>>> then
+      <math|y\<less\><rsub|Y>g<around*|(|x|)>>, as
+      <math|g<around*|(|x|)>\<in\>S<rsub|Y,F<around*|(|c|)>>> [see eq:
+      <reference|eq 3.25.014>] we have <math|g<around*|(|x|)>\<less\><rsub|Y>F<around*|(|c|)>>
+      so that <math|y\<less\><rsub|Y>F<around*|(|c|)>> proving
+      <math|y\<in\>S<rsub|Y,F<around*|(|c|)>>>. As <math|g> is surjective
+      there exist a <math|u\<in\>S<rsub|X,c>> such that
+      <math|y=g<around*|(|u|)>>. Assume that <math|x\<leqslant\><rsub|X>u>
+      then <math|g<around*|(|x|)>\<leqslant\><rsub|Y>g<around*|(|u|)>=y>, as
+      <math|y\<less\><rsub|Y>g<around*|(|x|)>> this gives the contradiction
+      <math|g<around*|(|x|)>\<less\>g<around*|(|x|)>>. So we have
+      <math|\<neg\><around*|(|x\<leqslant\>u|)>> which, as
+      <math|<around*|\<langle\>|X,\<leqslant\><rsub|X>|\<rangle\>>> is well
+      ordered, gives by [theorem: <reference|order well order implies
+      conditional complete and totally ordering>] that
+      <math|u\<less\><rsub|X>x> so that <math|u\<in\>S<rsub|X,x>>. So for
+      <math|y\<in\>S<rsub|Y,g<around*|(|x|)>>> we found a
+      <math|u\<in\>S<rsub|X,x>> such that
+      <math|g<rsub|\|S<rsub|X,x>><around*|(|u|)>=g<around*|(|u|)>=y> proving
+      that\ 
+
+      <\equation>
+        <label|eq 3.29.014>g<rsub|\|S<rsub|X,x>>:S<rsub|X,x>\<rightarrow\>S<rsub|Y,g<around*|(|x|)>><text|
+        is surjective>
+      </equation>
+
+      Further if <math|u,v\<in\>S<rsub|X,x>> are such that
+      <math|u\<leqslant\><rsub|X>v> so that
+      <math|g<rsub|\|S<rsub|X,x>><around*|(|u|)>=g<around*|(|u|)>\<leqslant\><rsub|X>g<around*|(|v|)>=g<rsub|\|S<rsub|X,x>><around*|(|v|)>>
+      proving that\ 
+
+      <\equation>
+        <label|eq 3.30.014>g<rsub|\|S<rsub|X,x>>:S<rsub|X,x>\<rightarrow\>S<rsub|Y,g<around*|(|x|)>><text|
+        is increasing>
+      </equation>
+
+      Combining [eq: <reference|eq 3.26.014>], [eq: <reference|eq 3.27.014>],
+      [eq: <reference|eq 3.29.014>], [eq: <reference|eq 3.30.014>] we have
+      that <math|g<rsub|\|S<rsub|X,x>>:S<rsub|X,x>\<rightarrow\>S<rsub|Y,g<around*|(|x|)>><rsub|>>
+      is a order isomorphism so that <math|S<rsub|X,x>\<cong\>S<rsub|Y,g<around*|(|x|)>>>
+      hence <math|x\<in\>C>. Proving that <math|C> is as section of <math|X>.
+    </proof>
+
+    Next we prove that\ 
+
+    <\equation>
+      <label|eq 3.31.014>D<text| is a section of >Y
+    </equation>
+
+    <\proof>
+      Let <math|y\<in\>Y> and take <math|d\<in\>D> such that
+      <math|y\<leqslant\><rsub|Y>d>. As <math|d\<in\>D=range<around*|(|F|)>>
+      there exist a <math|c\<in\>C> such that <math|F<around*|(|c|)>=d>, so
+      <math|S<rsub|X,c>\<cong\>S<rsub|Y,d>\<Rightarrowlim\><rsub|<text|[theorem:
+      <reference|order properties of the isomorph
+      relation>]>>S<rsub|Y,d>\<cong\>S<rsub|X,c>>. So there exist a order
+      isomorphism\ 
+
+      <\equation>
+        <label|eq 3.32.014>f:S<rsub|Y,d>\<rightarrow\>S<rsub|X,c>
+      </equation>
+
+      Now from <math|y\<leqslant\><rsub|D>d> we have by [theorem:
+      <reference|order initial segement inclusion>]
+      <math|S<rsub|Y,y>\<subseteq\>S<rsub|Y,d>>. Hence by <reference|function
+      restriction of a function> we have that\ 
+
+      <\equation>
+        <label|eq 3.33.014>f<rsub|\|S<rsub|Y,y>>:S<rsub|Y,y>\<rightarrow\>S<rsub|X,c><text|
+        is a function>
+      </equation>
+
+      If <math|x\<in\>S<rsub|Y,y>> then <math|x\<less\><rsub|Y>y> so, as
+      <math|f> is a order isomorphism, <math|f<rsub|\|S<rsub|Y,y>><around*|(|x|)>=f<around*|(|x|)>\<less\><rsub|X>f<around*|(|y|)>>,
+      we have that <math|f<rsub|\|S<rsub|Y,y>><around*|(|x|)>\<in\>S<rsub|Y,f<around*|(|y|)>>>,
+      so <math|range<around*|(|f<rsub|\|S<rsub|Y,y>>|)>\<subseteq\>S<rsub|X,f<around*|(|y|)>>>.
+      By [theorem: <reference|function range restriction>] it follows that\ 
+
+      <\equation>
+        <label|eq 3.34.014>f<rsub|\|S<rsub|Y,y>>:S<rsub|Y,y>\<rightarrow\>S<rsub|X,f<around*|(|y|)>><text|
+        is a function>
+      </equation>
+
+      As <math|f> is a isomorphism and injective it follows from [theorem:
+      <reference|function restricted function properties>] that\ 
+
+      <\equation>
+        <label|eq 3.35.014>f<rsub|\|S<rsub|Y,y>>:S<rsub|Y,y>\<rightarrow\>S<rsub|X,f<around*|(|y|)>><text|
+        is injective><rsub|>
+      </equation>
+
+      If <math|x\<in\>S<rsub|X,f<around*|(|y|)>>> then
+      <math|x\<less\><rsub|X>f<around*|(|y|)>>, as by [eq: <reference|eq
+      3.32.014>] <math|f<around*|(|y|)>\<in\>S<rsub|X,c>>, we have
+      <math|f<around*|(|y|)>\<less\>c>, so that <math|x\<less\><rsub|X>c> or
+      <math|x\<in\>S<rsub|X,c>>. As <math|f> is surjective there exists a
+      <math|u\<in\>S<rsub|Y,d>> such that <math|f<around*|(|u|)>=x>. As
+      <math|u\<in\>S<rsub|Y,d>> we have that <math|u\<less\><rsub|Y>d>.
+      Assume now that <math|y\<leqslant\><rsub|Y>u> then, as <math|f> is a
+      order isomorphism, <math|f<around*|(|y|)>\<leqslant\><rsub|X>f<around*|(|u|)>=x>,
+      which as <math|x\<less\><rsub|X>f<around*|(|y|)>> gives the
+      contradiction <math|x\<less\><rsub|X>x>. So we must have that
+      <math|\<neg\><around*|(|y\<leqslant\><rsub|Y>u|)>>, which, as
+      <math|<around*|\<langle\>|Y,\<leqslant\><rsub|Y>|\<rangle\>>> is well
+      ordered, gives by [theorem: <reference|order well order implies
+      conditional complete and totally ordering>] that
+      <math|u\<less\><rsub|Y>y> or <math|u\<in\>S<rsub|Y,y>>. So for
+      <math|x\<in\>S<rsub|X,f<around*|(|y|)>>> there exist a
+      <math|u\<in\>S<rsub|Y,y>> such that <math|f<around*|(|u|)>=x>, proving
+      that\ 
+
+      <\equation>
+        <label|eq 3.36.014>f<rsub|\|S<rsub|Y,y>>:S<rsub|Y,y>\<rightarrow\>S<rsub|X,f<around*|(|y|)>><text|
+        is surjective>
+      </equation>
+
+      Further if <math|u,v\<in\>S<rsub|Y,y>> is such that
+      <math|u\<leqslant\>v> then <math|f<rsub|\|S<rsub|Y,y>><around*|(|u|)>=f<around*|(|u|)>\<leqslant\>f<around*|(|v|)>=f<rsub|\|S<rsub|U,y>><around*|(|v|)>>
+      proving that
+
+      <\equation>
+        <label|eq 3.37.014>f<rsub|\|S<rsub|Y,y>>:S<rsub|Y,y>\<rightarrow\>S<rsub|X,f<around*|(|y|)>><text|
+        is increasing>
+      </equation>
+
+      Combining [eq: <reference|eq 3.34.014>], [eq: <reference|eq 3.35.014>],
+      [eq: <reference|eq 3.36.014>] and [eq: <reference|eq 3.37.014>] we have
+      that <math|f<rsub|\|S<rsub|Y,y>>:S<rsub|Y,y>\<rightarrow\>S<rsub|X,f<around*|(|y|)>>>
+      is a order isomorphism, hence <math|S<rsub|Y,y>\<cong\>S<rsub|X,f<around*|(|y|)>>>.
+      As <math|f<around*|(|y|)>\<in\>S<rsub|X,c>\<subseteq\>X> and
+      <math|y\<in\>Y> it follows from the definition of <math|C> that
+      <math|f<around*|(|y|)>\<in\>C>, hence by definition of <math|F>
+      <math|<around*|(|f<around*|(|y|)>,y|)>\<in\>F> or
+      <math|y=F<around*|(|f<around*|(|y|)>|)>\<in\>F<around*|(|C|)>=D>,
+      giving <math|y\<in\>D>. Proving that <math|D> is a section of <math|Y>.
+    </proof>
+
+    To summarize [eq: <reference|eq 3.21.014.1>], [eq: <reference|eq
+    3.25.015>] and [eq: <reference|eq 3.31.014>] we have\ 
+
+    <\equation>
+      <label|eq 3.39.015>C\<cong\>D\<wedge\>C<text| is a segment of
+      >X\<wedge\>D<text| is a segment of >Y
+    </equation>
+
+    Assume now that <math|C> is a initial segment of <math|X> and <math|D> is
+    a initial segment of <math|Y> then there exist a <math|r\<in\>X> and a
+    <math|s\<in\>Y> such that <math|C=S<rsub|X,r>> and <math|D=S<rsub|Y,s>>.
+    By <reference|eq 3.39.015> we have that
+    <math|S<rsub|X,r>\<cong\>S<rsub|Y,s>> which by definition of <math|C>
+    means that <math|r\<in\>C> or as <math|C=S<rsub|X,r>> that
+    <math|r\<less\>r> a contradiction. So we have that\ 
+
+    <\equation>
+      <label|eq 3.42.015>\<neg\><around*|(|C<text| is a initial segment of
+      <math|X\<wedge\>D<text| is a initial segment of >Y>>|)>
+    </equation>
+
+    As <math|C> is a section of <math|X> we have by [theorem:
+    <reference|order section and well ordering>] that
+
+    <\equation>
+      <label|eq 3.43.015>X=C<text| or >C<text| is a initial segment of >X
+    </equation>
+
+    Like wise, as <math|D> is a section of <math|Y> we have by \ [theorem:
+    <reference|order section and well ordering>] that
+
+    <\equation>
+      <label|eq 3.44.015>Y=D<text| or >D<text| is a initial segment of >Y
+    </equation>
+
+    We have taking [eq: <reference|eq 3.43.015>] and [eq: <reference|eq
+    3.44.015>] in account that either:\ 
+
+    <\description>
+      <item*|<math|X=C\<wedge\>Y=D>>then by [eq: <reference|eq 3.39.015>]\ 
+
+      <\equation*>
+        X\<cong\>Y
+      </equation*>
+
+      Using theorem [theorem: <reference|order well ordered isomorphic
+      property (3)>] and the above we have that\ 
+
+      <\equation*>
+        X<text| is not order isomorphic with a sub-class of Y>
+      </equation*>
+
+      <\equation*>
+        Y<text| is not order isomorphic with a sub-class of X>
+      </equation*>
+
+      <item*|<math|X=C\<wedge\>Y\<neq\>D>>then by [eq: <reference|eq
+      3.44.015>] we have that <math|D> is a initial segment of <math|Y>,
+      which as by [eq: <reference|eq 3.39.015>] <math|X=C\<cong\>D> prove
+      that\ 
+
+      <\equation*>
+        X<text| is order isomorphic with a initial segment of <math|Y>>
+      </equation*>
+
+      If <math|Y> is order isomorphic with a initial segment of <math|X> then
+      by [theorem: <reference|order well ordered isomorphism property>] we
+      have that <math|X> is not order isomorphic to a subset of <math|Y>
+      contradicting <math|X\<cong\>D> and <math|X\<cong\>Y>. So \ 
+
+      <\equation*>
+        Y<text| is not >order isomorphic to a initial segment of X
+      </equation*>
+
+      <\equation*>
+        X<text| is not order isomorphic to >Y
+      </equation*>
+
+      <item*|<math|X\<neq\>C\<wedge\>Y=D>>then by [eq: <reference|eq
+      3.43.015>] we have that <math|C> is a initial segment of <math|X>,
+      which as by [eq: <reference|eq 3.39.015>]
+      <math|C\<cong\>D\<Rightarrowlim\><rsub|<text|[theorem: <reference|order
+      properties of the isomorph relation>]>>Y=D\<cong\>C> proves that
+
+      <\equation*>
+        Y<text| is order isomorphic with a initial segment of <math|X>>
+      </equation*>
+
+      If <math|X> is order isomorphic with a initial segment of <math|Y> then
+      by [theorem: <reference|order well ordered isomorphism property>] we
+      have that <math|Y> is not order isomorphic to a subset of <math|X>
+      contradicting <math|Y\<cong\>C> and <math|Y\<cong\>X>. So \ 
+
+      <\equation*>
+        X<text| is not >order isomorphic to a initial segment of Y
+      </equation*>
+
+      <\equation*>
+        X<text| is not order isomorphic to >Y
+      </equation*>
+
+      <item*|<math|X\<neq\>C\<wedge\>Y\<neq\>D>>Using [eq: <reference|eq
+      3.43.015>] and [eq: <reference|eq 3.44.015>] we have that <math|C> is a
+      initial segment of <math|X> and <math|D> is a initial segment of
+      <math|Y> which contradicts [eq: <reference|eq 3.42.015>]. Hence this
+      case does not apply.
+    </description>
+  </proof>
+
+  <\corollary>
+    <label|order well order every subclass is isomorphic with A or a iitial
+    segement>Let <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a
+    well ordered class and <math|Y\<subseteq\>X> then we have either (but not
+    both):
+
+    <\enumerate>
+      <item><math|Y> is order isomorphic with <math|X>
+
+      <item><math|X> is order isomorphic with a initial segment of <math|X>
+    </enumerate>
+  </corollary>
+
+  <\proof>
+    If <math|Y\<subseteq\>X> then <math|<around*|\<langle\>|Y,\<leqslant\><rsub|\|Y>|\<rangle\>>>
+    is a well ordered class [see theorem: <reference|order total/well-order
+    inclusion>], so using the previous [theorem: <reference|order well
+    ordering and isomorphism (2)>] we have either:\ 
+
+    <\enumerate>
+      <item><math|Y> is order isomorphic with X
+
+      <item><math|Y> is order isomorphic with a initial segment of <math|X>
+
+      <item><math|X> is order isomorphic with a initial segment of <math|Y>.
+      By [theorem: <reference|order well ordered isomorphism property>] we
+      may not have that <math|Y> is order isomorphic with a sub-class of
+      <math|X>. As by [theorem: <reference|order properties of the isomorph
+      relation>] <math|Y\<cong\>Y> and <math|Y> is a sub-class of <math|X> we
+      reach a contradiction, so this case never applies.
+    </enumerate>
+  </proof>
+
+  <section|Axiom of choice>
+
+  The axiom of choice in it's many equivalent forms like
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|>|<cell|Hausdorff<rprime|'>s Maximal
+    Principle>|<cell|>>|<row|<cell|>|<cell|Zorn<rprime|'>s
+    Lemma>|<cell|>>|<row|<cell|>|<cell|Well-Ordering Theorem>|<cell|>>>>
+  </eqnarray*>
+
+  play's a major role in some fundamental theorems about the product of sets,
+  the existence of a basis for a vector space.
+
+  <\definition>
+    <label|choice P'(A)><index|<math|\<cal-P\><rprime|'><around*|(|A|)>>>Let
+    <math|A> be a class then <math|\<cal-P\><rprime|'><around*|(|A|)>> is
+    defined as\ 
+
+    <\equation*>
+      \<cal-P\><rprime|'><around*|(|A|)>=\<cal-P\><around*|(|A|)>\\<around*|{|\<varnothing\>|}>
+    </equation*>
+
+    In other words it is the collection of all non mepty sets of a set
+  </definition>
+
+  It turns out that if <math|A> is a set then
+  <math|\<cal-P\><rprime|'><around*|(|A|)>> is also a set.
+
+  <\theorem>
+    <label|choice P'(A) is a set>If <math|A> is a set then
+    <math|\<cal-P\><rprime|'><around*|(|A|)>> is a set
+  </theorem>
+
+  <\proof>
+    Using the Axiom of Pwer [axiom <reference|axiom of power>] we have that
+    <math|\<cal-P\><around*|(|A|)>> is a set. As
+    <math|\<cal-P\><rprime|'><around*|(|A|)>\<subseteq\>\<cal-P\><around*|(|A|)>>
+    [see [theorem: <reference|class intersection, union, inclusion>] it
+    follow from the Axiom of Subsets [axiom: <reference|axiom of subsets>] it
+    follows that <math|\<cal-P\><rprime|'><around*|(|A|)>> is a set.
+  </proof>
+
+  <\definition>
+    <label|choice choice function><index|choice function><dueto|Choice
+    Function>Let <math|A> be a set then a <with|font-series|bold|choice
+    function for <math|A>> is a function <math|f:\<cal-P\><rprime|'><around*|(|A|)>\<rightarrow\>A>
+    such that <math|\<forall\>B\<in\>\<cal-P\><rprime|'><around*|(|A|)>> we
+    have <math|f<around*|(|B|)>\<in\>B>
+  </definition>
+
+  The axiom of choice ensures the existence of a choice function for a set.
+
+  <\axiom>
+    <label|axiom of choice><index|axiom of choice><dueto|Axiom of Choice>If
+    <math|A> is a set then there exist a choice function for <math|A>
+  </axiom>
+
+  As a application of the axiom of choice we have the following theorem
+
+  <\theorem>
+    <label|function surjection and construction of inverse function>If
+    <math|f:A\<rightarrow\>B> is a surjective function then there exists a
+    injective function <math|g:B\<rightarrow\>A> such that
+    <math|f\<circ\>g=Id<rsub|B>>
+  </theorem>
+
+  <\proof>
+    If <math|f:A\<rightarrow\>B> is surjective. Then
+    <math|\<forall\>y\<in\>B> we have that
+    <math|f<rsup|-1><around*|(|<around*|{|y|}>|)>> is a non empty subset of
+    <math|A\<Rightarrow\>><math|f<rsup|-1><around*|(|<around*|{|y|}>|)>\<in\>\<cal-P\><rprime|'><around*|(|A|)>>.
+    By the axiom of choice there exists a choice function
+    <math|c:\<cal-P\><rprime|'><around*|(|A|)>\<rightarrow\>A>. Define then
+    the function
+
+    <\equation*>
+      g:B\<rightarrow\>Y<text| by >g<around*|(|y|)>=c<around*|(|f<rsup|-1><around*|(|<around*|{|y|}>|)>|)>
+    </equation*>
+
+    Now if <math|y\<in\>Y> then <math|c<around*|(|f<rsup|-1><around*|(|<around*|{|y|}>|)>|)>\<in\>f<rsup|-1><around*|(|<around*|{|y|}>|)>>
+    so that <math|f<around*|(|c<around*|(|f<rsup|-1><around*|(|<around*|{|y|}>|)>|)>|)>=y>.
+    Hence we have that <math|<around*|(|f\<circ\>g|)><around*|(|y|)>=f<around*|(|g<around*|(|y|)>|)>=f<around*|(|c<around*|(|f<rsup|-1><around*|(|<around*|{|y|}>|)>|)>|)>=y>
+    or\ 
+
+    <\equation*>
+      f\<circ\>g=Id<rsub|B>
+    </equation*>
+
+    If <math|g<around*|(|y|)>=g<around*|(|y<rprime|'>|)>> then we have
+    <math|f<around*|(|g<around*|(|y|)>|)>=f<around*|(|g<around*|(|y<rprime|'>|)>|)>\<Rightarrow\>1<rsub|B><around*|(|y|)>=1<rsub|B><around*|(|y<rprime|'>|)>\<Rightarrow\>y=y<rprime|'>>
+    proving that\ 
+
+    <\equation*>
+      g:B\<rightarrow\>Y is injective
+    </equation*>
+  </proof>
+
+  The important thing to remember in the above is that the axiom of choice
+  ensures the existence of <math|g:B\<rightarrow\>A> but does not give a way
+  to construct the function <math|g> itself.
+
+  We have the following equivalent statements of the axiom of choice
+
+  <\theorem>
+    <label|choice axiom of choice equivalences (1)>The following are
+    equivalent
+
+    <\enumerate>
+      <item>The Axiom of Choice\ 
+
+      <item>Let <math|\<cal-A\>> be a set of sets such that:
+
+      <\enumerate>
+        <item><math|\<forall\>A\<in\>\<cal-A\>> we have
+        <math|A=\<varnothing\>>
+
+        <item><math|\<forall\>A,B\<in\>\<cal-A\>> with <math|A\<neq\>B> we
+        have <math|A<big|cap>B=\<varnothing\>>
+      </enumerate>
+
+      \ then there exist a set <math|C> [called the choice set for
+      <math|\<cal-A\>>] that consists of exactly one element from each
+      <math|A\<in\>\<cal-A\>>.
+
+      <item>
+    </enumerate>
+  </theorem>
 
   \;
 
@@ -8827,9 +9767,13 @@
   <\collection>
     <associate|\<less\>A,B,C\<gtr\>=\<less\>D,E,F\<gtr\>=\<gtr\>A=E,B=D,C=F|<tuple|2.5|?>>
     <associate|\<less\>A,B\<gtr\>=\<less\>C,D\<gtr\>=\<gtr\>A=C,B=D|<tuple|2.3|?>>
-    <associate|Axiom of Replacement|<tuple|2.49|?>>
+    <associate|Axiom of Replacement|<tuple|2.50|?>>
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-10|<tuple|axiom of pairing|?>>
+    <associate|auto-100|<tuple|3.4|?>>
+    <associate|auto-101|<tuple|<with|mode|<quote|math>|\<cal-P\><rprime|'><around*|(|A|)>>|?>>
+    <associate|auto-102|<tuple|choice function|?>>
+    <associate|auto-103|<tuple|axiom of choice|?>>
     <associate|auto-11|<tuple|cartesian product|?>>
     <associate|auto-12|<tuple|<with|mode|<quote|math>|A\<times\>B>|?>>
     <associate|auto-13|<tuple|1.4|?>>
@@ -8925,6 +9869,9 @@
     <associate|auto-95|<tuple|3.3.4|?>>
     <associate|auto-96|<tuple|well-ordered class|?>>
     <associate|auto-97|<tuple|immediate successor|?>>
+    <associate|auto-98|<tuple|section|?>>
+    <associate|auto-99|<tuple|transfinite induction|?>>
+    <associate|axiom of choice|<tuple|3.93|?>>
     <associate|axiom of construction|<tuple|1.9|?>>
     <associate|axiom of extent|<tuple|1.5|2>>
     <associate|axiom of infinity|<tuple|1.52|?>>
@@ -8932,13 +9879,17 @@
     <associate|axiom of power|<tuple|1.64|?>>
     <associate|axiom of subsets|<tuple|1.54|?>>
     <associate|axiom of union|<tuple|1.61|?>>
-    <associate|bijection|<tuple|2.55|?>>
-    <associate|bijective classes|<tuple|2.56|?>>
+    <associate|bijection|<tuple|2.56|?>>
+    <associate|bijective classes|<tuple|2.57|?>>
     <associate|cartesian product|<tuple|1.44|?>>
     <associate|cartesian product and inclusion|<tuple|1.48|?>>
     <associate|cartesian product of the empty set|<tuple|1.46|?>>
     <associate|cartesian product properties (1)|<tuple|1.49|?>>
     <associate|cartesian product with enpty set|<tuple|1.47|?>>
+    <associate|choice P'(A)|<tuple|3.90|?>>
+    <associate|choice P'(A) is a set|<tuple|3.91|?>>
+    <associate|choice axiom of choice equivalences (1)|<tuple|3.95|?>>
+    <associate|choice choice function|<tuple|3.92|?>>
     <associate|class absorption laws|<tuple|1.27|?>>
     <associate|class class commutative,idempotent,associative,distributivity|<tuple|1.30|?>>
     <associate|class complement of comploment|<tuple|1.28|?>>
@@ -9035,9 +9986,42 @@
     <associate|eq 3.11.012|<tuple|3.11|?>>
     <associate|eq 3.12.012|<tuple|3.12|?>>
     <associate|eq 3.14.012|<tuple|3.13|?>>
+    <associate|eq 3.14.013|<tuple|3.14|?>>
+    <associate|eq 3.15.013|<tuple|3.15|?>>
+    <associate|eq 3.16.014|<tuple|3.18|?>>
+    <associate|eq 3.16.016|<tuple|3.16|?>>
+    <associate|eq 3.17.014|<tuple|3.19|?>>
+    <associate|eq 3.17.016|<tuple|3.17|?>>
+    <associate|eq 3.18.014|<tuple|3.20|?>>
+    <associate|eq 3.19.014|<tuple|3.21|?>>
     <associate|eq 3.2.009|<tuple|3.2|?>>
+    <associate|eq 3.20.014|<tuple|3.22|?>>
+    <associate|eq 3.21.014|<tuple|3.23|?>>
+    <associate|eq 3.21.014.1|<tuple|3.26|?>>
+    <associate|eq 3.22.014|<tuple|3.24|?>>
+    <associate|eq 3.23.014|<tuple|3.25|?>>
+    <associate|eq 3.25.014|<tuple|3.28|?>>
+    <associate|eq 3.25.015|<tuple|3.27|?>>
+    <associate|eq 3.26.014|<tuple|3.29|?>>
+    <associate|eq 3.27.014|<tuple|3.30|?>>
+    <associate|eq 3.28.014|<tuple|3.31|?>>
+    <associate|eq 3.29.014|<tuple|3.32|?>>
     <associate|eq 3.3.009|<tuple|3.3|?>>
+    <associate|eq 3.30.014|<tuple|3.33|?>>
+    <associate|eq 3.31.014|<tuple|3.34|?>>
+    <associate|eq 3.32.014|<tuple|3.35|?>>
+    <associate|eq 3.33.014|<tuple|3.36|?>>
+    <associate|eq 3.34.014|<tuple|3.37|?>>
+    <associate|eq 3.35.014|<tuple|3.38|?>>
+    <associate|eq 3.36.014|<tuple|3.39|?>>
+    <associate|eq 3.37.014|<tuple|3.40|?>>
+    <associate|eq 3.39.015|<tuple|3.41|?>>
     <associate|eq 3.4.009|<tuple|3.4|?>>
+    <associate|eq 3.42.015|<tuple|3.42|?>>
+    <associate|eq 3.43.015|<tuple|3.43|?>>
+    <associate|eq 3.43.016|<tuple|3.43|?>>
+    <associate|eq 3.43.017|<tuple|3.43|?>>
+    <associate|eq 3.44.015|<tuple|3.44|?>>
     <associate|eq 3.5.009|<tuple|3.5|?>>
     <associate|eq 3.6.009|<tuple|3.6|?>>
     <associate|eq 3.7.009|<tuple|3.7|?>>
@@ -9056,130 +10040,146 @@
     <associate|equivalence relation partition|<tuple|3.6|?>>
     <associate|equivalence relation partition alternative|<tuple|3.8|?>>
     <associate|equivalence relation subsets|<tuple|3.19|?>>
-    <associate|family|<tuple|2.81|?>>
-    <associate|family de Morgan|<tuple|2.103|?>>
-    <associate|family distributivity|<tuple|2.101|?>>
-    <associate|family image and preimage|<tuple|2.106|?>>
-    <associate|family intersection (2)|<tuple|2.94|?>>
-    <associate|family intersection is a set|<tuple|2.95|?>>
-    <associate|family intersection of sets|<tuple|2.91|?>>
-    <associate|family intersection(1)|<tuple|2.93|?>>
-    <associate|family properties (1)|<tuple|2.98|?>>
-    <associate|family properties (2)|<tuple|2.99|?>>
-    <associate|family properties (3)|<tuple|2.104|?>>
-    <associate|family range|<tuple|2.82|?>>
-    <associate|family range (1)|<tuple|2.83|?>>
-    <associate|family set|<tuple|2.84|?>>
-    <associate|family trivial|<tuple|2.96|?>>
-    <associate|family union (1)|<tuple|2.86|?>>
-    <associate|family union (2)|<tuple|2.89|?>>
-    <associate|family union intersection and empty set|<tuple|2.105|?>>
-    <associate|family union intersection and inclusion|<tuple|2.100|?>>
-    <associate|family union of a empty set|<tuple|2.92|?>>
-    <associate|family union of family set and surjections|<tuple|2.90|?>>
-    <associate|family union of union of two families|<tuple|2.102|?>>
-    <associate|family union{A,B}|<tuple|2.97|?>>
+    <associate|family|<tuple|2.82|?>>
+    <associate|family de Morgan|<tuple|2.104|?>>
+    <associate|family distributivity|<tuple|2.102|?>>
+    <associate|family image and preimage|<tuple|2.107|?>>
+    <associate|family intersection (2)|<tuple|2.95|?>>
+    <associate|family intersection is a set|<tuple|2.96|?>>
+    <associate|family intersection of sets|<tuple|2.92|?>>
+    <associate|family intersection(1)|<tuple|2.94|?>>
+    <associate|family properties (1)|<tuple|2.99|?>>
+    <associate|family properties (2)|<tuple|2.100|?>>
+    <associate|family properties (3)|<tuple|2.105|?>>
+    <associate|family range|<tuple|2.83|?>>
+    <associate|family range (1)|<tuple|2.84|?>>
+    <associate|family set|<tuple|2.85|?>>
+    <associate|family trivial|<tuple|2.97|?>>
+    <associate|family union (1)|<tuple|2.87|?>>
+    <associate|family union (2)|<tuple|2.90|?>>
+    <associate|family union intersection and empty set|<tuple|2.106|?>>
+    <associate|family union intersection and inclusion|<tuple|2.101|?>>
+    <associate|family union of a empty set|<tuple|2.93|?>>
+    <associate|family union of family set and surjections|<tuple|2.91|?>>
+    <associate|family union of union of two families|<tuple|2.103|?>>
+    <associate|family union{A,B}|<tuple|2.98|?>>
     <associate|function|<tuple|2.21|?>>
     <associate|function A^empty is empty|<tuple|2.27|?>>
     <associate|function B^A|<tuple|2.25|?>>
-    <associate|function B^A and inclusion|<tuple|2.28|?>>
-    <associate|function P(A)=2^A|<tuple|2.68|?>>
-    <associate|function alternative for composition|<tuple|2.36|?>>
-    <associate|function and power|<tuple|2.67|?>>
+    <associate|function B^A and inclusion|<tuple|2.29|?>>
+    <associate|function P(A)=2^A|<tuple|2.69|?>>
+    <associate|function alternative for composition|<tuple|2.37|?>>
+    <associate|function and power|<tuple|2.68|?>>
     <associate|function between {0,1} and {A,B}|<tuple|2.23|?>>
-    <associate|function bijection and inverse|<tuple|2.64|?>>
-    <associate|function bijection condition (2)|<tuple|2.63|?>>
-    <associate|function bijection f,f-1|<tuple|2.61|?>>
-    <associate|function bijection has a inverse|<tuple|2.60|?>>
-    <associate|function characteristics function|<tuple|2.40|?>>
-    <associate|function composition and restriction|<tuple|2.73|?>>
+    <associate|function bijection and inverse|<tuple|2.65|?>>
+    <associate|function bijection condition (2)|<tuple|2.64|?>>
+    <associate|function bijection f,f-1|<tuple|2.62|?>>
+    <associate|function bijection has a inverse|<tuple|2.61|?>>
+    <associate|function characteristics function|<tuple|2.41|?>>
+    <associate|function composition and restriction|<tuple|2.74|?>>
     <associate|function composition injectivity, surjectivity and
-    bijectivity|<tuple|2.66|?>>
-    <associate|function composition of Id function|<tuple|2.42|?>>
+    bijectivity|<tuple|2.67|?>>
+    <associate|function composition of Id function|<tuple|2.43|?>>
     <associate|function composition of functions is a
-    fucntion|<tuple|2.44|?>>
+    fucntion|<tuple|2.45|?>>
     <associate|function condition (1)|<tuple|2.22|?>>
-    <associate|function constant function|<tuple|2.39|?>>
-    <associate|function empty function|<tuple|2.38|?>>
-    <associate|function equality (1)|<tuple|2.32|?>>
-    <associate|function equality (2)|<tuple|2.35|?>>
-    <associate|function f(x)|<tuple|2.33|?>>
-    <associate|function function and intersection and union|<tuple|2.77|?>>
-    <associate|function identity function|<tuple|2.41|?>>
-    <associate|function identity map is a bijection|<tuple|2.57|?>>
-    <associate|function image preimage|<tuple|2.43|?>>
-    <associate|function image preimage alternative|<tuple|2.37|?>>
-    <associate|function inclusion function|<tuple|2.48|?>>
-    <associate|function injective inverse is a function|<tuple|2.54|?>>
-    <associate|function injectivity to bijection|<tuple|2.59|?>>
-    <associate|function injectivity, surjectivity|<tuple|2.47|?>>
-    <associate|function inverse and restriction|<tuple|2.72|?>>
-    <associate|function inverse function and f(x)|<tuple|2.62|?>>
-    <associate|function inverse of a bijection is unique|<tuple|2.65|?>>
-    <associate|function power of intersection|<tuple|2.30|?>>
-    <associate|function preimage of image|<tuple|2.50|?>>
-    <associate|function properties (1)|<tuple|2.76|?>>
-    <associate|function range restriction|<tuple|2.31|?>>
-    <associate|function restricted function properties|<tuple|2.70|?>>
-    <associate|function restriction and domain|<tuple|2.71|?>>
-    <associate|function restriction of a function|<tuple|2.74|?>>
-    <associate|function restriction of a graph|<tuple|2.69|?>>
-    <associate|function simple definition|<tuple|2.78|?>>
-    <associate|function surjection condition|<tuple|2.46|?>>
-    <associate|function trivial bijection|<tuple|2.58|?>>
-    <associate|function: A^B and sets|<tuple|2.29|?>>
-    <associate|order A isomorphism B|<tuple|3.46|?>>
+    <associate|function constant function|<tuple|2.40|?>>
+    <associate|function empty function|<tuple|2.39|?>>
+    <associate|function equality (1)|<tuple|2.33|?>>
+    <associate|function equality (2)|<tuple|2.36|?>>
+    <associate|function extend target|<tuple|2.28|?>>
+    <associate|function f(x)|<tuple|2.34|?>>
+    <associate|function function and intersection and union|<tuple|2.78|?>>
+    <associate|function identity function|<tuple|2.42|?>>
+    <associate|function identity map is a bijection|<tuple|2.58|?>>
+    <associate|function image preimage|<tuple|2.44|?>>
+    <associate|function image preimage alternative|<tuple|2.38|?>>
+    <associate|function inclusion function|<tuple|2.49|?>>
+    <associate|function injective inverse is a function|<tuple|2.55|?>>
+    <associate|function injectivity to bijection|<tuple|2.60|?>>
+    <associate|function injectivity, surjectivity|<tuple|2.48|?>>
+    <associate|function inverse and restriction|<tuple|2.73|?>>
+    <associate|function inverse function and f(x)|<tuple|2.63|?>>
+    <associate|function inverse of a bijection is unique|<tuple|2.66|?>>
+    <associate|function power of intersection|<tuple|2.31|?>>
+    <associate|function preimage of image|<tuple|2.51|?>>
+    <associate|function properties (1)|<tuple|2.77|?>>
+    <associate|function range restriction|<tuple|2.32|?>>
+    <associate|function restricted function properties|<tuple|2.71|?>>
+    <associate|function restriction and domain|<tuple|2.72|?>>
+    <associate|function restriction of a function|<tuple|2.75|?>>
+    <associate|function restriction of a graph|<tuple|2.70|?>>
+    <associate|function simple definition|<tuple|2.79|?>>
+    <associate|function surjection and construction of inverse
+    function|<tuple|3.94|?>>
+    <associate|function surjection condition|<tuple|2.47|?>>
+    <associate|function trivial bijection|<tuple|2.59|?>>
+    <associate|function: A^B and sets|<tuple|2.30|?>>
+    <associate|order A isomorphism B|<tuple|3.47|?>>
     <associate|order chain|<tuple|3.38|?>>
     <associate|order chain is a totally ordered class|<tuple|3.39|?>>
     <associate|order comparable|<tuple|3.35|?>>
     <associate|order comparable property|<tuple|3.36|?>>
-    <associate|order composition of functions|<tuple|3.47|?>>
-    <associate|order condition for isomorphism|<tuple|3.49|?>>
+    <associate|order composition of functions|<tuple|3.48|?>>
+    <associate|order condition for isomorphism|<tuple|3.50|?>>
     <associate|order condition for isomorphism in a totallu ordered
-    set|<tuple|3.52|?>>
-    <associate|order conditional complete alternatives|<tuple|3.70|?>>
-    <associate|order conditional complete order|<tuple|3.69|?>>
-    <associate|order cut|<tuple|3.44|?>>
-    <associate|order greatest and lowest element are unique|<tuple|3.57|?>>
-    <associate|order greatest lowest element|<tuple|3.54|?>>
-    <associate|order immediate successor|<tuple|3.76|?>>
-    <associate|order inclusion and greatest and least element|<tuple|3.64|?>>
+    set|<tuple|3.53|?>>
+    <associate|order conditional complete alternatives|<tuple|3.71|?>>
+    <associate|order conditional complete order|<tuple|3.70|?>>
+    <associate|order cut|<tuple|3.45|?>>
+    <associate|order greatest and lowest element are unique|<tuple|3.58|?>>
+    <associate|order greatest lowest element|<tuple|3.55|?>>
+    <associate|order immediate successor|<tuple|3.77|?>>
+    <associate|order inclusion and greatest and least element|<tuple|3.65|?>>
     <associate|order inclusion is a order|<tuple|3.31|?>>
-    <associate|order increasing, decreasing|<tuple|3.45|?>>
+    <associate|order increasing, decreasing|<tuple|3.46|?>>
     <associate|order initial segement|<tuple|3.42|?>>
-    <associate|order intial sergment property|<tuple|3.43|?>>
-    <associate|order isomorphism and conditional complete|<tuple|3.72|?>>
-    <associate|order isomorphism condition (2)|<tuple|3.50|?>>
-    <associate|order isomorphism preservers sup and inf|<tuple|3.71|?>>
-    <associate|order isomorphism strictly|<tuple|3.48|?>>
+    <associate|order initial segement a\<less\>b|<tuple|3.87|?>>
+    <associate|order initial segement inclusion|<tuple|3.43|?>>
+    <associate|order intial sergment property|<tuple|3.44|?>>
+    <associate|order isomorphism and conditional complete|<tuple|3.73|?>>
+    <associate|order isomorphism condition (2)|<tuple|3.51|?>>
+    <associate|order isomorphism preservers sup and inf|<tuple|3.72|?>>
+    <associate|order isomorphism strictly|<tuple|3.49|?>>
     <associate|order lexical order|<tuple|3.34|?>>
-    <associate|order lower upper bound and inclusion|<tuple|3.65|?>>
-    <associate|order lower upper bounds of empty set|<tuple|3.61|?>>
-    <associate|order maximal minimal element|<tuple|3.53|?>>
-    <associate|order maximum of class with bigger elements|<tuple|3.59|?>>
-    <associate|order min(A)\<less\>=max(A)|<tuple|3.58|?>>
+    <associate|order lower upper bound and inclusion|<tuple|3.66|?>>
+    <associate|order lower upper bounds of empty set|<tuple|3.62|?>>
+    <associate|order maximal minimal element|<tuple|3.54|?>>
+    <associate|order maximum of class with bigger elements|<tuple|3.60|?>>
+    <associate|order min(A)\<less\>=max(A)|<tuple|3.59|?>>
     <associate|order order relation|<tuple|3.26|?>>
     <associate|order partial order on sub class|<tuple|3.33|?>>
     <associate|order partial ordered class|<tuple|3.27|?>>
     <associate|order preorder|<tuple|3.24|?>>
     <associate|order preordered class|<tuple|3.25|?>>
-    <associate|order properties of the isomorph relation|<tuple|3.51|?>>
+    <associate|order properties of the isomorph relation|<tuple|3.52|?>>
+    <associate|order section|<tuple|3.79|?>>
+    <associate|order section and well ordering|<tuple|3.80|?>>
     <associate|order strict order|<tuple|3.30|?>>
-    <associate|order sup and inf and bigger elements|<tuple|3.67|?>>
-    <associate|order sup inf condition|<tuple|3.68|?>>
-    <associate|order sup, inf stalls|<tuple|3.63|?>>
-    <associate|order sup,inf and inclusion|<tuple|3.66|?>>
-    <associate|order supremum infinum|<tuple|3.62|?>>
-    <associate|order total/well-order inclusion|<tuple|3.74|?>>
+    <associate|order sup and inf and bigger elements|<tuple|3.68|?>>
+    <associate|order sup inf condition|<tuple|3.69|?>>
+    <associate|order sup, inf stalls|<tuple|3.64|?>>
+    <associate|order sup,inf and inclusion|<tuple|3.67|?>>
+    <associate|order supremum infinum|<tuple|3.63|?>>
+    <associate|order total/well-order inclusion|<tuple|3.75|?>>
     <associate|order totally lexicol ordering|<tuple|3.41|?>>
     <associate|order totally ordered subclass|<tuple|3.40|?>>
-    <associate|order upport lower bound|<tuple|3.60|?>>
-    <associate|order well order and immediate successor|<tuple|3.77|?>>
-    <associate|order well order implies conditional complete|<tuple|3.75|?>>
+    <associate|order transfinite induction|<tuple|3.81|?>>
+    <associate|order upport lower bound|<tuple|3.61|?>>
+    <associate|order well order and immediate successor|<tuple|3.78|?>>
+    <associate|order well order every subclass is isomorphic with A or a
+    iitial segement|<tuple|3.89|?>>
     <associate|order well order implies conditional complete and totally
-    ordering|<tuple|3.75|?>>
-    <associate|order well ordered implies totally|<tuple|3.75|?>>
-    <associate|order well-rodered class|<tuple|3.73|?>>
+    ordering|<tuple|3.76|?>>
+    <associate|order well ordered and order isomorphism|<tuple|3.82|?>>
+    <associate|order well ordered class and isomorphism|<tuple|3.83|?>>
+    <associate|order well ordered is not isomorph to a initial segment
+    |<tuple|3.84|?>>
+    <associate|order well ordered isomorphic propertu (3)|<tuple|3.86|?>>
+    <associate|order well ordered isomorphic property (3)|<tuple|3.86|?>>
+    <associate|order well ordered isomorphism property|<tuple|3.85|?>>
+    <associate|order well ordering and isomorphism (2)|<tuple|3.88|?>>
+    <associate|order well-rodered class|<tuple|3.74|?>>
     <associate|pair equality of pairs|<tuple|1.43|?>>
     <associate|pair of elements|<tuple|1.41|?>>
     <associate|partial function associativity|<tuple|2.18|?>>
@@ -9191,20 +10191,20 @@
     <associate|partial function image|<tuple|2.12|?>>
     <associate|partial function image preimage of
     compositions|<tuple|2.20|?>>
-    <associate|partial function injectivity and surjectivity|<tuple|2.45|?>>
-    <associate|partial function inverse graph|<tuple|2.51|?>>
-    <associate|partial function inverse if injective|<tuple|2.52|?>>
+    <associate|partial function injectivity and surjectivity|<tuple|2.46|?>>
+    <associate|partial function inverse graph|<tuple|2.52|?>>
+    <associate|partial function inverse if injective|<tuple|2.53|?>>
     <associate|partial function preimage|<tuple|2.14|?>>
     <associate|partial function set domain range|<tuple|2.11|?>>
     <associate|partial functions image/preimage properties|<tuple|2.15|?>>
     <associate|power set|<tuple|1.63|?>>
-    <associate|product|<tuple|2.107|?>>
-    <associate|product and intersection|<tuple|2.111|?>>
-    <associate|product and power|<tuple|2.112|?>>
-    <associate|product inclusion|<tuple|2.110|?>>
-    <associate|product of family with one element|<tuple|2.108|?>>
-    <associate|product of family with two classes|<tuple|2.109|?>>
-    <associate|projection function|<tuple|2.113|?>>
+    <associate|product|<tuple|2.108|?>>
+    <associate|product and intersection|<tuple|2.112|?>>
+    <associate|product and power|<tuple|2.113|?>>
+    <associate|product inclusion|<tuple|2.111|?>>
+    <associate|product of family with one element|<tuple|2.109|?>>
+    <associate|product of family with two classes|<tuple|2.110|?>>
+    <associate|projection function|<tuple|2.114|?>>
     <associate|relation|<tuple|3.1|?>>
     <associate|relation properties|<tuple|3.4|?>>
     <associate|relation trivial|<tuple|3.3|?>>
@@ -9362,6 +10362,12 @@
       <tuple|<tuple|conditional completeness>|<pageref|auto-94>>
 
       <tuple|<tuple|well-ordered class>|<pageref|auto-96>>
+
+      <tuple|<tuple|immediate successor>|<pageref|auto-97>>
+
+      <tuple|<tuple|section>|<pageref|auto-98>>
+
+      <tuple|<tuple|transfinite induction>|<pageref|auto-99>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Elements
@@ -9458,13 +10464,16 @@
       functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-76>>
 
-      <with|par-left|<quote|1tab>|3.3.3<space|2spc>Min, max, supremums and
-      infinums <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|3.3.3<space|2spc>Min, max, supremum and
+      infinum <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-81>>
 
       <with|par-left|<quote|1tab>|3.3.4<space|2spc>Well ordering
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-95>>
+
+      3.4<space|2spc>Axiom of choice <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-100>
     </associate>
   </collection>
 </auxiliary>
