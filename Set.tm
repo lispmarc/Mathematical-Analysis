@@ -1565,6 +1565,12 @@
       <item>If <math|A\<in\>\<cal-A\>> then
       <math|A\<subseteq\><big|cup>\<cal-A\>>
 
+      <item>If <math|\<forall\>A\<in\>\<cal-A\>> we have
+      <math|C\<subseteq\>A> then <math|C\<subseteq\><big|cap>\<cal-A\>>
+
+      <item>If <math|\<forall\>A\<in\>\<cal-A\>> we have
+      <math|A\<subseteq\>C> then <math|<big|cup>\<cal-A\>\<subseteq\>C>
+
       <item>If <math|\<cal-A\>\<neq\>\<varnothing\>> then
       \ <math|<big|cap>\<cal-A\>> is a set
     </enumerate>
@@ -1582,6 +1588,14 @@
       <item>If <math|x\<in\>A> then <math|\<exists\>y\<in\>\<cal-A\>> such
       that <math|x\<in\>y> [take <math|y=A>] so that
       <math|x\<in\><big|cup>\<cal-A\>>
+
+      <item>If <math|x\<in\>C> then <math|\<forall\>A\<in\>\<cal-A\>> we have
+      as <math|C\<in\>A> that <math|x\<in\>A> so that
+      <math|x\<in\><big|cap>\<cal-A\>>
+
+      <item>If <math|x\<in\><big|cup>\<cal-A\>> then
+      <math|\<exists\>A\<in\>\<cal-A\>> such that <math|x\<in\>A> which as
+      <math|A\<subseteq\>C> proves that <math|x\<in\>A>
 
       <item>As <math|\<cal-A\>\<neq\>\<varnothing\>> there exists a
       <math|A\<in\>\<cal-A\>>, which by definition means that <math|A> is a
@@ -7540,19 +7554,19 @@
   </proof>
 
   <\example>
-    <label|order inclusion is a order>Let <math|A> be a class and
-    <math|\<leqslant\>> defined by <math|\<leqslant\>=<around*|{|<around*|(|x,y|)>\<in\>\<cal-P\><around*|(|A|)>\<times\>\<cal-P\><around*|(|A|)>\|x\<subseteq\>y|}>>
-    then <math|<around*|\<langle\>|\<cal-P\><around*|(|A|)>,\<leqslant\>|\<rangle\>>>
-    is a partial ordered class
+    <label|order inclusion is a order>Let <math|A> be a class of classes and
+    <math|\<leqslant\>> defined by <math|\<leqslant\>=<around*|{|<around*|(|x,y|)>\<in\>\<cal-A\>\<times\>\<cal-A\>\|x\<subseteq\>y|}>>
+    then <math|<around*|\<langle\>|\<cal-A\>,\<leqslant\>|\<rangle\>>> is a
+    partial ordered class
   </example>
 
   <\proof>
     \ 
 
     <\description>
-      <item*|reflectivity>If <math|B\<in\>\<cal-P\><around*|(|A|)>> then by
-      [theorem: <reference|class properties (1)>] <math|A\<subseteq\>A> so
-      that <math|A\<leqslant\>A>
+      <item*|reflectivity>If <math|A\<in\>\<cal-C\>> then by [theorem:
+      <reference|class properties (1)>] <math|A\<subseteq\>A> so that
+      <math|A\<leqslant\>A>
 
       <item*|anti-symmetric>If <math|A\<leqslant\>B> and
       <math|B\<leqslant\>A> then <math|A\<subseteq\>B\<wedge\>B\<subseteq\>A>
@@ -7924,11 +7938,22 @@
 
   <\definition>
     <label|order chain><index|chain><dueto|chain>Let
-    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a partial
-    ordered class and <math|B\<subseteq\>A> then <math|B> is called a
-    <with|font-series|bold|chain> if <math|\<forall\>x,y\<in\>B> we have that
+    <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>> be a partial
+    ordered class and <math|C\<subseteq\>A> then <math|C> is called a
+    <with|font-series|bold|chain> if <math|\<forall\>x,y\<in\>C> we have that
     <math|x\<leqslant\>y> or <math|y\<leqslant\>x>.
   </definition>
+
+  <\example>
+    <label|order empty set is a chain>Let
+    <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>> be a partial
+    ordered class then <math|\<varnothing\>> is a chain
+  </example>
+
+  <\proof>
+    The condition <math|\<forall\>x,y\<in\>\<varnothing\>> we have that
+    <math|x,y> are comparable is satisfied vacously.
+  </proof>
 
   <\theorem>
     <label|order chain is a totally ordered class>Let
@@ -8342,12 +8367,12 @@
 
     <\enumerate>
       <item><math|m> is a <with|font-series|bold|maximal element> of <math|A>
-      iff <math|m\<in\>A> and if <math|x\<in\>A> is such that
-      <math|m\<leqslant\>x> then <math|x\<leqslant\>m>
+      iff <math|m\<in\>A> and if <math|\<forall\>x\<in\>A> with
+      <math|m\<leqslant\>x> we have <math|x=m>
 
       <item><math|m> is a <with|font-series|bold|minimal element> of <math|A>
-      iff <math|m\<in\>A> and if <math|x\<in\>A> is such that
-      <math|x\<leqslant\>m> then <math|m\<leqslant\>x>
+      iff <math|m\<in\>A> and if <math|\<forall\>x\<in\>A> with
+      <math|x\<leqslant\>m> we have <math|x=m>
     </enumerate>
   </definition>
 
@@ -8535,6 +8560,61 @@
   [theorem: <reference|order greatest and lowest element are unique>],
   element. So <math|inf<around*|(|A|)>> is the greatest lower bound [if it
   exist] and it is itself a lower bound.
+
+  <\example>
+    <label|order example inclusion order and sup, inf>Let <math|\<cal-A\>> be
+    a class of classes and <math|<around*|\<langle\>|\<cal-A\>,\<leqslant\>|\<rangle\>>>
+    the partial class where
+
+    <\equation*>
+      \<leqslant\>=<around*|{|<around*|(|x,y|)>\<in\>\<cal-A\>\<times\>\<cal-A\>\|x\<subseteq\>y|}>
+    </equation*>
+
+    [see example: <reference|order inclusion is a order>] and
+    <math|\<cal-B\>\<subseteq\>\<cal-A\>> we have that\ 
+
+    <\enumerate>
+      <item>If <math|<big|cap>\<cal-B\>\<in\>\<cal-A\>> then
+      <math|inf<around*|(|\<cal-B\>|)>> exist and
+      <math|inf<around*|(|\<cal-B\>|)>=<big|cap>\<cal-B\>>
+
+      <item>If <math|<big|cup>\<cal-B\>\<in\>\<cal-A\><text| then >>
+      <math|sup<around*|(|\<cal-B\>|)>> exist and
+      <math|sup<around*|(|\<cal-B\>|)>=<big|cup>\<cal-B\>>
+    </enumerate>
+  </example>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|B\<in\>\<cal-B\>> then by [theorem: <reference|class
+      general intersection>] <math|<big|cap>\<cal-B\>\<subseteq\>B\<Rightarrow\><big|cap>\<cal-B\>\<leqslant\>B>
+      so that <math|<big|cap>\<cal-B\>\<in\>\<lambda\><around*|(|\<cal-B\>|)>>.
+      Now if <math|C\<in\>\<lambda\><around*|(|\<cal-B\>|)>> then
+      <math|\<forall\>B\<in\>\<cal-B\>> we have that
+      <math|C\<leqslant\>B\<Rightarrow\>C\<subseteq\>B>, so that by [theorem:
+      <reference|class general intersection>] we have
+      <math|C\<subseteq\><big|cap>\<cal-B\>\<Rightarrow\>C\<leqslant\><big|cap>\<cal-B\>>
+      so that <math|<big|cap>\<cal-B\>> is the greatest element of
+      <math|\<lambda\><around*|(|\<cal-B\>|)>> proving that
+      <math|inf<around*|(|\<cal-B\>|)>> exists and
+      <math|inf<around*|(|\<cal-B\>|)>=<big|cap>\<cal-B\>>.
+
+      <item>If <math|B\<in\>\<cal-B\>> then by [theorem: <reference|class
+      general intersection>] <math|B\<subseteq\><big|cup>\<cal-B\>\<Rightarrow\>B\<leqslant\><big|cup>\<cal-B\>>
+      so that <math|<big|cup>\<cal-B\>\<in\>\<upsilon\><around*|(|\<cal-B\>|)>>.
+      Now if <math|C\<in\>\<upsilon\><around*|(|\<cal-B\>|)>> then
+      <math|\<forall\>B\<in\>\<cal-B\>> we have that
+      <math|B\<leqslant\>C\<Rightarrow\>B\<subseteq\>C>, so that by [theorem:
+      <reference|class general intersection>] we have
+      <math|<big|cup>\<cal-B\>\<subseteq\>C\<Rightarrow\><big|cup>\<cal-B\>\<leqslant\>C>
+      so that <math|<big|cup>\<cal-B\>> is the lowest element of
+      <math|\<upsilon\><around*|(|\<cal-B\>|)>> proving that
+      <math|sup<around*|(|\<cal-B\>|)>> exists and
+      <math|sup<around*|(|\<cal-B\>|)>=<big|cup>\<cal-B\>>.
+    </enumerate>
+  </proof>
 
   The following theorem will be used a lot of time when dealing with
   supremums and infinums.
@@ -10426,7 +10506,8 @@
     </description>
   </proof>
 
-  As a application we have the following theorem proving that the projection
+  As a application of the Axiom of Choice we have the following theorems
+  about the product of a family of sets. First we prove that the projection
   function is surjective.
 
   <\theorem>
@@ -10475,8 +10556,8 @@
     proving surjectivity.
   </proof>
 
-  Another theorem about the product of family of sets that needs the axiom of
-  choice is the following.
+  Second we prove that the product of a family of sets is no empty if and
+  only if every set in the family is non empty.
 
   <\theorem>
     <label|product product is not empty>Let
@@ -10523,6 +10604,1128 @@
     </description>
   </proof>
 
+  We can rephrase the above theorem in another way.
+
+  <\corollary>
+    <label|product product is empty>Let <math|<around*|{|A|}><rsub|i\<in\>I>\<subseteq\>\<cal-A\>>
+    be a family of sets where <math|I,\<cal-A\>> are sets then we have\ 
+
+    <\equation*>
+      <big|prod><rsub|i\<in\>I>A<rsub|i>=\<varnothing\>\<Leftrightarrow\>\<exists\>i\<in\>I<text|
+      such that >A<rsub|i>=\<varnothing\>
+    </equation*>
+  </corollary>
+
+  <\proof>
+    \ We proceed by contradiction to prove this
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Assume that <math|\<forall\>i\<in\>I> we
+      have that <math|A<rsub|i>\<neq\>\<varnothing\>> then by [theorem:
+      <reference|product product is not empty>]
+      <math|<big|prod><rsub|i\<in\>I>A<rsub|i>\<neq\>\<varnothing\>>
+      contradicting <math|<big|prod><rsub|i\<in\>I>A<rsub|i>=\<varnothing\>>.
+      So the assumption is false or <math|\<exists\>i\<in\>I> such that
+      <math|A<rsub|i>=\<varnothing\>>.
+
+      <item*|<math|\<Leftarrow\>>>Assume that
+      <math|><math|<big|prod><rsub|i\<in\>I>A<rsub|i>\<neq\>0> then by
+      [theorem: <reference|product product is not empty>] we have
+      <math|\<forall\>i\<in\>I> we have <math|A<rsub|i>\<neq\>\<varnothing\>>
+      contradicting <math|\<exists\>i\<in\>I> such that <math|A<rsub|i>=0>.
+      Hence we must have <math|<big|prod><rsub|i\<in\>I>A<rsub|i>=\<varnothing\>>.
+    </description>
+  </proof>
+
+  The Axiom of Choice has also consequences for partial ordered sets.
+
+  <\theorem>
+    <label|choice existence of successor>Let
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a partial
+    ordered <with|font-series|bold|set> such that:
+
+    <\enumerate>
+      <item><math|X> has a least element <math|p>
+
+      <item>Every chain [see definition:<reference|order chain>] of <math|X>
+      has a supremum
+    </enumerate>
+
+    then there is a element <math|x\<in\>X> which has no immediate successor
+    [see definition: <reference|order immediate successor>]
+  </theorem>
+
+  <\proof>
+    We prove this by contradiction, so assume that <math|\<forall\>x\<in\>X>
+    there exist a successor.\ 
+
+    Given <math|x\<in\>X> define <math|T<rsub|x>=<around*|{|y\|y<text| is a
+    immediate successor of >x|}>> then <math|T<rsub|x>\<neq\>\<varnothing\>>
+    so that <math|T<rsub|x>\<in\>\<cal-P\><rprime|'><around*|(|X|)>>. Using
+    the Axiom of Choice [axiom: <reference|axiom of choice>] there exist a
+    choice function\ 
+
+    <\equation>
+      <label|eq 3.57.018>c:\<cal-P\><rprime|'><around*|(|A|)>\<rightarrow\>A<text|
+      such that <math|\<forall\>A\<in\>\<cal-P\><rprime|'><around*|(|X|)>> we
+      have >c<around*|(|A|)>\<in\>A
+    </equation>
+
+    Define now <math|succ=<around*|{|<around*|(|x,y|)>\|x\<in\>X\<wedge\>y=c<around*|(|T<rsub|x>|)>|}>>.
+    If <math|<around*|(|x,y|)>\<in\>succ> then <math|x\<in\>A> and
+    <math|y=c<around*|(|T<rsub|x>|)>\<in\>T<rsub|x>\<in\>X> proving that
+    <math|succ\<subseteq\>X\<times\>X>. If
+    <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>succ> then
+    <math|x\<in\>X> and <math|y=c<around*|(|T<rsub|x>|)>>,
+    <math|y<rprime|'>=c<around*|(|T<rsub|x>|)>> so that <math|y=y<rprime|'>>.
+    Further if <math|x\<in\>X> then as <math|T<rsub|x>\<in\>\<cal-P\><rprime|'><around*|(|X|)>>
+    <math|c<around*|(|T<rsub|x>|)>> exists so that
+    <math|<around*|(|x,c<around*|(|T<rsub|x>|)>|)>\<in\>succ> proving that
+    <math|X\<subseteq\>dom<around*|(|succ|)>>. So\ 
+
+    <\equation*>
+      succ:X\<rightarrow\>X<text| by >succ=<around*|{|<around*|(|x,y|)>\|x\<in\>X\<wedge\>y=c<around*|(|T<rsub|x>|)>|}><text|
+      is a function>
+    </equation*>
+
+    If <math|x\<in\>X> then <math|succ<around*|(|x|)>=c<around*|(|T<rsub|x>|)>\<in\>T<rsub|x>>
+    so that <math|succ<around*|(|x|)>> is a immediate successor of <math|x>
+    To summarize\ 
+
+    <\equation>
+      <label|eq 3.58.018>succ:X\<rightarrow\>X<text| is a function such that
+      >\<forall\>x\<in\>X<text| >succ<around*|(|x|)><text| is a immediate
+      successor of >x
+    </equation>
+
+    Before we can reach the contradiction we need to have some definitions
+    and sub lemmas.
+
+    <\definition>
+      <label|choice lemma p-sequence><math|A\<subseteq\>X> is a
+      <with|font-series|bold|p-sequence> iff\ 
+
+      <\enumerate>
+        <item><math|p\<in\>A>
+
+        <item>If <math|x\<in\>A<text| then >succ<around*|(|x|)>\<in\>A>
+
+        <item>If <math|C\<subseteq\>A> is a chain then
+        <math|sup<around*|(|C|)>\<in\>A> [note that by hypothesis (2)
+        <math|sup<around*|(|C|)>> exist]
+      </enumerate>
+    </definition>
+
+    <\note>
+      <math|X> is a p-sequence so there exist p-sequences.
+    </note>
+
+    <\proof>
+      First <math|p\<in\>X> by the hypothesis (1), second if <math|x\<in\>X>
+      then by [eq: <reference|eq 3.58.018>] <math|succ<around*|(|X|)>\<in\>X>
+      and finally if <math|C> is chain then by definition of the supremum
+      <math|sup<around*|(|C|)>\<in\>X>
+    </proof>
+
+    <\lemma>
+      <label|choice intersection of p-sewuences>Every intersection of a set
+      of p-sequences is a p-sequence
+    </lemma>
+
+    <\proof>
+      Let <math|\<cal-A\>> be a set of p-sequences then\ 
+
+      <\enumerate>
+        <item><math|\<forall\>A\<in\>\<cal-A\>> <math|A> is a p-seqeunce
+        hence <math|p\<in\>A> so that <math|p\<in\><big|cap>\<cal-A\>>
+
+        <item>If <math|x\<in\><big|cap>\<cal-A\>> then
+        <math|\<forall\>A\<in\>\<cal-A\>> we have <math|p\<in\>A> which as
+        <math|A> is a p-sequence gives that <math|succ<around*|(|x|)>\<in\>A>
+        hence <math|succ<around*|(|x|)>\<in\><big|cap>\<cal-A\>>
+
+        <item>If <math|C\<subseteq\><big|cap>\<cal-A\>> is a chain then
+        <math|\<forall\>A\<in\>\<cal-A\>> we have <math|C\<subseteq\>A> and
+        as <math|A> is a p-sequence we have sthat
+        <math|sup<around*|(|C|)>\<in\>A> so that
+        <math|sup<around*|(|A|)>\<in\><big|cap>\<cal-A\>>
+      </enumerate>
+
+      so by definition of a p-sequence we have that\ 
+
+      <\equation*>
+        <big|cap>\<cal-A\><text| is a p-sequence>
+      </equation*>
+    </proof>
+
+    From the above lemma [lemma: <reference|choice intersection of
+    p-sewuences>] we have that <math|<big|cap><around*|{|A\<in\>\<cal-P\><around*|(|X|)>\|A<text|
+    is a p-sequence>|}>> is a p-sequence and by definition
+    <math|p\<in\><big|cap><around*|{|A\<in\>\<cal-P\><around*|(|X|)>\|A<text|
+    is a p-sequence>|}>>. Further if <math|A> is a p-sequence then
+    <math|<big|cap><around*|{|A\<in\>\<cal-P\><around*|(|X|)>\|A<text| is a
+    p-sequence>|}>\<subseteq\>A>. Summarized
+
+    <\equation>
+      <label|eq 3.59.018>P=<big|cap><around*|{|B\<in\>\<cal-P\><around*|(|X|)>\|B<text|
+      is a p-seqeunce >|}><text| is a p-sequence>\<wedge\>p\<in\>P\<wedge\><text|>A<text|
+      is a p-sequence>\<Rightarrow\>P\<subseteq\>A
+    </equation>
+
+    <\definition>
+      A element <math|x\<in\>P> is <with|font-series|bold|seleect >if
+      <math|x> is comparable with every element in <math|P>. In other words
+      <math|x\<in\>P> is select if <math|\<forall\>y\<in\>P> we have
+      <math|x\<leqslant\>y\<vee\>y\<less\>x>
+    </definition>
+
+    <\lemma>
+      <label|choice lemma property of select elements>If <math|x\<in\>P> is
+      select then <math|\<forall\>y\<in\>P> with <math|y\<less\>x> have
+      <math|succ<around*|(|y|)>\<leqslant\>x>
+    </lemma>
+
+    <\proof>
+      If <math|y\<in\>P> with <math|y\<less\>x> then as <math|P> is a
+      p-sequence we have that <math|succ<around*|(|y|)>\<in\>P>. Now <math|x>
+      is select we have that <math|x,succ<around*|(|y|)>> are comparable,
+      hence by [theorem: <reference|order comparable property>] we have
+      either <math|succ<around*|(|y|)>\<leqslant\>x> or
+      <math|x\<less\>succ<around*|(|y|)>>. If
+      <math|x\<less\>succ<around*|(|y|)>> then from <math|y\<less\>x> it
+      follows that <math|y\<less\>x\<wedge\>x\<less\>succ<around*|(|y|)>>
+      contradicting the fact that by [eq: <reference|eq 3.58.018>]
+      <math|succ<around*|(|y|)>> is the immediat successor of <math|y>. Hence
+      we must have that\ 
+
+      <\equation*>
+        succ<around*|(|y|)>\<leqslant\>x
+      </equation*>
+    </proof>
+
+    <\lemma>
+      <label|choice lemma p-sequence generation>If <math|x> is select then
+      <math|A<rsub|x>=<around*|{|y\<in\>P\|y\<leqslant\>x\<vee\>succ<around*|(|x|)>\<leqslant\>y|}>>
+      is a p-sequence
+    </lemma>
+
+    <\proof>
+      \ 
+
+      <\enumerate>
+        <item>As <math|p> is a least element of <math|X> we have that
+        <math|p\<leqslant\>x> so that <math|p\<in\>A<rsub|x>>
+
+        <item>Let <math|y\<in\>A<rsub|x>> Then we have either:
+
+        <\description>
+          <item*|<math|y=x>>Then <math|succ<around*|(|x|)>=succ<around*|(|y|)>\<Rightarrow\>succ<around*|(|x|)>\<leqslant\>succ<around*|(|y|)>>
+          so that <math|succ<around*|(|y|)>\<in\>A<rsub|x>>
+
+          <item*|<math|y\<less\>x>>Then as <math|y\<in\>P> we have by the
+          previous lemma [lemma: <reference|choice lemma property of select
+          elements>] that <math|succ<around*|(|y|)>\<less\>x\<Rightarrow\>succ<around*|(|y|)>\<leqslant\>x>
+          so that <math|succ<around*|(|y|)>\<in\>A<rsub|x>>
+
+          <item*|<math|succ<around*|(|x|)>\<leqslant\>y>>As
+          <math|succ<around*|(|y|)>> is the immediate successor of <math|y>
+          we have <math|y\<less\>succ<around*|(|y|)>> so that
+          <math|succ<around*|(|x|)>\<less\>succ<around*|(|y|)>\<Rightarrow\>succ<around*|(|x|)>\<leqslant\>succ<around*|(|y|)>>
+          proving that <math|succ<around*|(|y|)>\<in\>A<rsub|x>>
+        </description>
+
+        so in all cases we have\ 
+
+        <\equation*>
+          succ<around*|(|y|)>\<in\>A<rsub|x>
+        </equation*>
+
+        <item>If <math|C\<subseteq\>A<rsub|x>> is a chain then we have the
+        following excluding cases:
+
+        <\description>
+          <item*|<math|\<exists\>y\<in\>C<text| with
+          >succ<around*|(|x|)>\<leqslant\>y>>Then as
+          <math|y\<leqslant\>sup<around*|(|C|)>> we have that
+          <math|succ<around*|(|x|)>\<leqslant\>sup<around*|(|C|)>> so that
+          <math|sup<around*|(|C|)>\<in\>A<rsub|x>.>
+
+          <item*|<math|\<forall\>y\<in\>C<text| we have
+          >\<neg\><around*|(|succ<around*|(|x|)>\<leqslant\>y|)>>>Now
+          <math|\<forall\>y\<in\>C> as <math|y\<in\>C\<subseteq\>A<rsub|x>>
+          we have either <math|y\<leqslant\>x> or
+          <math|succ<around*|(|y|)>\<leqslant\>y>. As
+          <math|\<neg\><around*|(|succ<around*|(|x|)>\<leqslant\>y|)>> is
+          true we must have <math|y\<leqslant\>x> and thus <math|x> is a
+          upper bound of <math|C>. So by definition of the supremum as the
+          least upper bound of <math|C> we must have that
+          <math|sup<around*|(|C|)>\<leqslant\>x>, hence
+          <math|sup<around*|(|C|)>\<in\>A<rsub|x>>
+        </description>
+
+        So in all cases weh ave\ 
+
+        <\equation*>
+          sup<around*|(|C|)>\<in\>A<rsub|x>
+        </equation*>
+      </enumerate>
+
+      From (1),(2) and (3) it follows then that\ 
+
+      <\equation*>
+        A<rsub|x><text| is a p-sequence>
+      </equation*>
+    </proof>
+
+    <\corollary>
+      <label|choice lemma properties of select>If <math|x> is select then
+      <math|\<forall\>y\<in\>P> we have <math|y\<leqslant\>x> or
+      <math|succ<around*|(|x|)>\<leqslant\>y>
+    </corollary>
+
+    <\proof>
+      As <math|A<rsub|x>> is a p-sequence by the previous lemma [lemma:
+      <reference|choice lemma p-sequence generation>] we have by [eq:
+      <reference|eq 3.59.018>] that <math|P\<subseteq\>A<rsub|x>> and as by
+      definition of <math|A<rsub|x>> <math|A<rsub|x>\<subseteq\>P> it follows
+      that\ 
+
+      <\equation*>
+        P=A<rsub|x>
+      </equation*>
+    </proof>
+
+    <\lemma>
+      <label|choice lemma select elements froms a p-sewuence>The set
+      <math|<around*|{|x\<in\>X\|x<text| is select>|}>> is \ a p-sequence.
+    </lemma>
+
+    <\proof>
+      \ 
+
+      <\enumerate>
+        <item>As <math|p> is a least element of <math|X> we have
+        <math|\<forall\>x\<in\>P> that <math|p\<leqslant\>x> so it is
+        comparable with every element of <math|p>, hence <math|p> is select,
+        so \ <math|p\<in\><around*|{|x\<in\>X\|s<text| is select>|}>>.
+
+        <item>If <math|x\<in\><around*|{|x\<in\>X\|x<text| is select>|}>>
+        then <math|x> is select and by [corollary: <reference|choice lemma
+        properties of select>] we have <math|\<forall\>y\<in\>P> either:
+
+        <\description>
+          <item*|<math|y\<leqslant\>x>>Then as <math|succ<around*|(|x|)>> is
+          the immediate succesort of <math|x> we have
+          <math|x\<less\>succ<around*|(|x|)>> so that
+          <math|y\<less\>succ<around*|(|x|)>\<Rightarrow\>y\<leqslant\>succ<around*|(|x|)>>
+          proving that <math|succ<around*|(|x|)>> is comparable with <math|y>
+
+          <item*|<math|succ<around*|(|x|)>\<leqslant\>y>>Then
+          <math|succ<around*|(|x|)>> is comparable with <math|y>
+        </description>
+
+        from the above it follows that <math|succ<around*|(|x|)>> is
+        comparable with every <math|y\<in\>P> hence
+
+        <\equation*>
+          succ<around*|(|x|)>\<in\><around*|{|x\<in\>X\|x<text| is
+          selected>|}>
+        </equation*>
+
+        <item>Let <math|C\<subseteq\><around*|{|x\<in\>X\|x<text| is
+        select>|}>> be a chain. Then as <math|C\<subseteq\>X> we have the
+        hypothesis (3) that <math|sup<around*|(|C|)>> exist. Then
+        <math|\<forall\>y\<in\>P> we have the following possibilities for
+        <math|C>:
+
+        <\description>
+          <item*|<math|\<exists\>x\<in\>C<text| with >y\<leqslant\>x>>Then
+          <math|x\<leqslant\>sup<around*|(|C|)>> so that
+          <math|y\<leqslant\>sup*<around*|(|C|)>> so that
+          <math|sup<around*|(|C|)>> is comparable with <math|y>
+
+          <item*|<math|\<forall\>x\<in\>C> we have
+          <math|\<neg\><around*|(|y\<leqslant\>x|)>>>Then given
+          <math|x\<in\>C> we have as <math|C\<subseteq\><around*|{|x\<in\>X\|x<text|
+          is select>|}>> that <math|x> is select. By [corollary:
+          <reference|choice lemma properties of select>] we have either
+          <math|y\<leqslant\>x> which is not allowed or
+          <math|succ<around*|(|x|)>\<leqslant\>y>. As
+          <math|succ<around*|(|x|)>> is a immediate successor of <math|x> we
+          have <math|x\<less\>succ<around*|(|x|)>> so that <math|x\<less\>y>
+          proving that <math|y> is a upper bound of <math|C>. Hence
+          <math|sup<around*|(|C|)>\<leqslant\>y> proving that
+          <math|sup<around*|(|C|)>> is comparable with <math|y>
+        </description>
+
+        So in all cases we have that <math|sup<around*|(|C|)>> is comparable
+        with <math|y> proving that <math|sup<around*|(|C|)>> is select and
+        thus that <math|sup<around*|(|C|)>\<in\><around*|{|x\<in\>X\|x<text|
+        is select>|}>>
+      </enumerate>
+
+      From (1),(2),(3) it follows then that
+      <math|<around*|{|x\<in\>X\|x<text| is select>|}>> is a p-sequence.
+    </proof>
+
+    Now for the last corollary in the proof.
+
+    <\corollary>
+      <math|P> is a chain
+    </corollary>
+
+    <\proof>
+      As by the previous lemma [lemma: <reference|choice lemma select
+      elements froms a p-sewuence>] <math|<around*|{|x\<in\>X\|x<text| is
+      select>|}>> is a p-sequence it follows from [eq: <reference|eq
+      3.59.018>] that <math|P\<subseteq\><around*|{|x\<in\>X\|x<text| is
+      select>|}>>. So if <math|x,y\<in\>P> then <math|x> is select and as
+      <math|y\<in\>P> comparable with <math|y>, proving that <math|P> is a
+      chain..
+    </proof>
+
+    We are now finally able to reach a contradiction and prove the theorem.
+    As <math|P> is a chain we have by hypothesis (2) that
+    <math|sup<around*|(|P|)>> exist. Now as <math|P> is a p-sequence [see eq:
+    <reference|eq 3.59.018>] we have by [definition: <reference|choice lemma
+    p-sequence> (3)] that <math|sup<around*|(|P|)>\<in\>P> and by
+    [definition: <reference|choice lemma p-sequence> (2)] that
+
+    <\equation>
+      <label|eq 3.60.018>succ<around*|(|sup<around*|(|P|)>|)>\<in\>P
+    </equation>
+
+    Now as <math|succ<around*|(|sup<around*|(|P|)>|)>> is the immediate
+    successor of <math|sup<around*|(|P|)>> we have
+    <math|sup<around*|(|P|)>\<less\>succ<around*|(|sup<around*|(|P|)>|)>> now
+    as <math|succ<around*|(|sup<around*|(|P|)>|)>\<in\>P> [see eq:
+    <reference|eq 3.60.018>] we have <math|><math|succ<around*|(|sup<around*|(|P|)>|)>\<less\>sup<around*|(|P|)>>
+    giving the contradiction <math|sup<around*|(|P|)>\<less\>sup<around*|(|P|)>>.
+    So the assumption is wrong and there is a element in <math|X> with no
+    immediate successor.
+  </proof>
+
+  This was a long proof but it will be used in the following important
+  theorem.
+
+  <\definition>
+    <label|choice Hausdorff maximal principle><index|Hausdorff's maximality>A
+    partial ordered set <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>>
+    is <with|font-series|bold|Hausdorff maximal> if there exist a chain
+    <math|C> such that if <math|D> is a chain with <math|C\<subseteq\>D> then
+    <math|C=D>.\ 
+  </definition>
+
+  We show now that as a consequence of the Axiom of choice every partial
+  ordered set is Hausdorff maximal.
+
+  <\theorem>
+    <dueto|Hausdorff's Maximal Theorem><label|choice Hausdorff's Maximal
+    Principle>Let <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a
+    partial ordered set then it is Hasudorff maximal. In other words there
+    exists a chain <math|C> such that if <math|D> is a chain such that
+    <math|C\<subseteq\>D> then <math|C=D>.\ 
+  </theorem>
+
+  <\proof>
+    Define the set of all chain of <math|X>
+
+    <\equation*>
+      \<cal-C\>=<around*|{|A\<in\>\<cal-P\><around*|(|X|)>\|A<text| is a
+      chain in ><around*|\<langle\>|X,\<leqslant\>|\<rangle\>>|}>
+    </equation*>
+
+    Using the fact <math|\<cal-P\><around*|(|X|)>> is a set by the Axiom of
+    Power Sets [axiom: <reference|axiom of power>] we have by the Axiom of
+    Subsets [axiom: <reference|axiom of subsets>] and the fact that
+    <math|\<cal-C\>\<subseteq\>\<cal-P\><around*|(|X|)>> it follows that\ 
+
+    <\equation>
+      <label|eq 3.61.018>\<cal-C\><text| is a set>
+    </equation>
+
+    Using [example: <reference|order inclusion is a order> we have that\ 
+
+    <\equation*>
+      <around*|\<langle\>|\<cal-C\>,\<preccurlyeq\>|\<rangle\>><text| where
+      >\<preccurlyeq\>=<around*|{|<around*|(|x,y|)>\<in\>\<cal-C\>\<times\>\<cal-C\>\|x\<subseteq\>y|}><text|
+      is a partial ordered set>
+    </equation*>
+
+    As <math|\<forall\>A\<in\>\<cal-S\>> we have
+    <math|\<varnothing\>\<subseteq\>A\<Rightarrow\>\<varnothing\>\<preccurlyeq\>>and
+    <math|\<varnothing\>> is a chain [see example: <reference|order empty set
+    is a chain>] in <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>><text|>
+    it follows that <text|>>
+
+    <\equation>
+      <label|eq 3.62.018>\<cal-C\><text| has a least element [using
+      <math|\<leqslant\>>]>
+    </equation>
+
+    Let <math|\<cal-D\>> a chain in <math|<around*|\<langle\>|\<cal-C\>,\<preccurlyeq\>|\<rangle\>>>
+    then if <math|x,y\<in\><big|cup>\<cal-D\>> there exists
+    <math|A,B\<in\>\<cal-D\>\<subseteq\>\<cal-C\>> such that
+    <math|x\<in\>A\<wedge\>y\<in\>B> where <math|A,B> are chains in
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>>. \ As
+    <math|\<cal-D\>> is a chain we have either:
+
+    <\description>
+      <item*|<math|A\<subseteq\>B>>Then <math|x,y\<in\>B> which as <math|B>
+      is a chain [using <math|\<leqslant\>>] means that <math|x,y> are
+      comparable [using the order <math|\<leqslant\>>]
+
+      <item*|<math|B\<subseteq\>A>>Then <math|x,y\<in\>A> which as <math|A>
+      is a chain [using <math|\<leqslant\>>] \ means that <math|x,y> are
+      comparable [using the order <math|\<leqslant\>>]
+    </description>
+
+    From the above it follows that <math|<big|cup>\<cal-D\>> is a chain in
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> hence
+    <math|<big|cap>\<cal-D\>\<in\>\<cal-C\>>, so by [example:
+    <reference|order example inclusion order and sup, inf>] it follows that
+    <math|<big|cup>\<cal-D\>=sup<around*|(|\<cal-D\>|)>>. Thus we have proved
+    that
+
+    <\equation>
+      <label|eq 3.63.018><text|Every chain of
+      ><around*|\<langle\>|\<cal-C\>,\<preccurlyeq\>|\<rangle\>><text| has a
+      supremum>
+    </equation>
+
+    Now the conditions for [theorem: <reference|choice existence of
+    successor>] are satisfied by [eq: <reference|eq 3.61.018>], [eq:
+    <reference|eq 3.62.018>] and [eq: <reference|eq 3.63.018>] so we have\ 
+
+    <\equation>
+      <label|eq 3.64.018>\<exists\>C\<in\>\<cal-C\><text| [so <math|C<text|
+      is a chain in <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>>]>>
+      which has no immediate successor> <around*|[|using\<preccurlyeq\>|]>\ 
+    </equation>
+
+    Let now <math|D> be a chain in <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>>
+    [so that <math|D\<in\>\<cal-C\>>] such that <math|C\<subseteq\>D>. Take
+    <math|d\<in\>D> and assume that <math|d\<nin\>C > then
+    <math|C\<subset\>C<big|cup><around*|{|d|}>> [as
+    <math|C<big|cup><around*|{|d|}>\<nsubseteq\>C\<Rightarrow\>C\<neq\>C<big|cup><around*|{|d|}>>]
+    so that <math|C\<prec\>C<big|cup><around*|{|d|}>>. As <math|C> has no
+    immediate successor [using <math|\<prec\>>] there must be a
+    <math|H\<in\>\<cal-C\>> such that <math|C\<prec\>H\<wedge\>H\<prec\>C<big|cup><around*|{|d|}>>
+    or <math|C\<subset\>H\<wedge\>H\<subset\>C<big|cup><around*|{|d|}>>. As
+    <math|C\<subset\>H> there exists a <math|h\<in\>H> such that
+    <math|h\<nin\>C>, but then as <math|H\<subset\>C<big|cup><around*|{|d|}>>
+    we must have <math|h\<in\><around*|{|d|}>> or <math|h=d>, so
+    <math|d\<in\>H>. Now as <math|H\<subset\>C<big|cup><around*|{|d|}>> there
+    exists a <math|y\<in\>C<big|cup><around*|{|d|}>> such that
+    <math|y\<nin\>H>, we can not have <math|y=d> [as <math|d\<in\>H>] so we
+    must have <math|y\<in\>C> but then as <math|C\<subset\>H> we have
+    <math|y\<in\>H> contradicting <math|y\<in\>H>. So we must have
+    <math|d\<in\>C>. As <math|d\<in\>D> was chosen arbitrary we have that
+    <math|D\<subseteq\>C> or <math|C=D> which proves maximality.
+  </proof>
+
+  We state now Zorn's lemma but not prove it yet, it will be show to be
+  directly indepenedent on the Hausdorff maximal principle, which in turn
+  depends on the Axiom of Choice. So if we accept the Axiom of Choice [which
+  we do as it is a Axion] then Zorn's lemma applies.
+
+  <\lemma>
+    <label|choice Zorn's lemma><index|Zorn's Lemma><dueto|Zorn's Lemma>Let
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a partial
+    ordered set such that <math|>every every chain has a upper bound then
+    <math|X> has a maimal element.
+  </lemma>
+
+  We prove now that the Hausdorff Maximal principle implies Zorn's lemma\ 
+
+  <\theorem>
+    <label|choice Hausdorff's implies Zorn's>Let
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> that is Hausdorff
+    Maximal then Zorn's lemma follows.
+  </theorem>
+
+  <\proof>
+    Let <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a partial
+    ordered set such that every chain in <math|X> has a upper bound. As
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is Hasudorf maximal
+    [definition: <reference|choice Hausdorff maximal principle>] there exist
+    a chain <math|C> such that for every chain <math|D> with
+    <math|C\<subseteq\>D> we have <math|C=D>. As <math|C> is a chain it has
+    by the hypothesis that there exist a upper bound <math|u> for <math|C>.
+    Assume now that <math|u> is not a maximal element of <math|u>, then by
+    the definition of a maximal element [definiition: <reference|order
+    maximal minimal element>] there exist a <math|x\<in\>X> with
+    <math|u\<leqslant\>x> and <math|u\<neq\>x> so that <math|u\<less\>x>. If
+    <math|x\<in\>C> then as <math|u> is a upper bound of <math|C> we have
+    <math|x\<leqslant\>u> so that <math|u\<less\>u> a contradiction. So we
+    must have that <math|x\<nin\>C>. Consider now
+    <math|r,s\<in\>C<big|cup><around*|{|x|}>> then we have to consider the
+    following possibilities:
+
+    <\description>
+      <item*|<math|r=x\<wedge\>s=x>>Then by reflectivity we have
+      <math|r\<leqslant\>s>, so <math|r,s> are comparable.
+
+      <item*|<math|r=x\<wedge\>s\<neq\>x>>Then <math|s\<in\>C> so that
+      <math|s\<leqslant\>u>, which as <math|u\<leqslant\>x> proves that
+      <math|s\<leqslant\>x\<Rightarrowlim\><rsub|r=x>s\<leqslant\>r>, so
+      <math|r,s> are comparable.
+
+      <item*|<math|r\<neq\>x\<wedge\>s=x>>Then <math|r\<in\>C> so that
+      <math|r\<leqslant\>u>, which as <math|u\<leqslant\>x> proves that
+      <math|r\<leqslant\>x\<Rightarrowlim\><rsub|s=x>r\<leqslant\>s>, so
+      <math|r,s> are comparable.
+
+      <item*|<math|r\<neq\>x\<wedge\>s\<neq\>x>>Then <math|r,s\<in\>C>, which
+      as <math|C> is a chain proves that <math|r,s> are comparable
+    </description>
+
+    From the above it follows that <math|C<big|cup><around*|{|x|}>> is achain
+    such that <math|C\<subseteq\>C<big|cup><around*|{|x|}>> giving by
+    maximality of <math|C> that <math|C=C<big|cup><around*|{|x|}>>
+    contradicting <math|x\<nin\>C>. Hence the assumption that <math|u> is not
+    a maiximal element of <math|X> is false. So <math|u> is a maximal element
+    of <math|X>.
+  </proof>
+
+  We show now that Zorn's lemma implies well ordering.
+
+  <\theorem>
+    <label|choice Zorn implies welll ordering>Zorn's lemma implies that given
+    a set <math|X> there exist a order relation <math|\<leqslant\>> on
+    <math|X> such that <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>>
+    is well ordered [see <reference|order well-rodered class>]\ 
+  </theorem>
+
+  <\proof>
+    Just like the proof of [theorem: <reference|choice existence of
+    successor>] this proof will consist of many sub lemma's.\ 
+
+    Let <math|X> be a set and define the class
+
+    <\equation*>
+      \<cal-A\>=<around*|{|<around*|(|B,R|)>\|B\<in\>\<cal-P\><around*|(|A|)>\<wedge\>R<text|
+      a order relation on <math|B> so that
+      ><around*|\<langle\>|B,R|\<rangle\>><text| is well ordered>|}>
+    </equation*>
+
+    Define now <math|\<preccurlyeq\>\<in\>\<cal-A\>\<times\>\<cal-A\>> by\ 
+
+    <\equation*>
+      \<preccurlyeq\>=<around*|{|<around*|(|<around*|(|B,R|)>,<around*|(|B<rprime|'>,R<rprime|'>|)>|)>\|B\<subseteq\>B<rprime|'>\<wedge\>R\<subseteq\>R<rprime|'>\<wedge\><text|If
+      >x\<in\>B\<wedge\><text|>y\<in\>B<rprime|'>\\B<text| then
+      ><around*|(|x,y|)>\<in\>R<rprime|'>|}>
+    </equation*>
+
+    then we have that\ 
+
+    <\equation>
+      <label|eq 3.65.018><around*|\<langle\>|\<cal-A\>,\<preccurlyeq\>|\<rangle\>><text|
+      is a order relation>
+    </equation>
+
+    <\proof>
+      We have to prove reflexivity, anti-symmetry and transitivity.
+
+      <\description>
+        <item*|reflectivity>If <math|<around*|(|B,R|)>\<in\>\<cal-A\>> then
+        we have\ 
+
+        <\enumerate>
+          <item><math|B\<subseteq\>B>
+
+          <item><math|R\<subseteq\>R>
+
+          <item>If <math|x\<in\>B\<wedge\>y\<in\>B\\B\<equallim\><rsub|<text|[theorem:
+          <reference|class universal and empotyset
+          properties>]>>\<varnothing\>> which can not occur so that
+          <math|<around*|(|x,y|)>\<in\>R> is satisfied vacously
+        </enumerate>
+
+        proving that <math|<around*|(|B,R|)>\<preccurlyeq\><around*|(|B,R|)>>
+
+        <item*|<math|>anti-symmetry>If <math|<around*|(|B,R|)>\<preccurlyeq\><around*|(|B<rprime|'>,R<rprime|'>|)>\<wedge\><around*|(|B<rprime|'>,R<rprime|'>|)>\<preccurlyeq\><around*|(|B,R|)>>
+        then <math|B\<subseteq\>B<rprime|'>\<wedge\>R\<subseteq\>R<rprime|'>\<wedge\>B<rprime|'>\<subseteq\>B\<wedge\>R<rprime|'>\<subseteq\>R>
+        proving that <math|B=B<rprime|'>> and <math|R=R<rprime|'>> so that
+        <math|<around*|(|B,R|)>=<around*|(|B<rprime|'>,R<rprime|'>|)>>
+
+        <item*|transitivity>Let <math|<around*|(|B,R|)>\<preccurlyeq\><around*|(|B<rprime|'>,R<rprime|'>|)>>
+        and <math|<around*|(|B<rprime|'>,R<rprime|'>|)>\<preccurlyeq\><around*|(|B<rprime|''>,R<rprime|''>|)>>
+        then we have\ 
+
+        <\enumerate>
+          <item><math|B\<subseteq\>B<rprime|'>\<wedge\>B<rprime|'>\<subseteq\>B<rprime|''>\<Rightarrow\>B\<subseteq\>B<rprime|''>>
+
+          <item><math|R\<subseteq\>R<rprime|'>\<wedge\>R<rprime|'>\<subseteq\>R<rprime|''>\<Rightarrow\>R\<subseteq\>R<rprime|''>>
+
+          <item>If <math|x\<in\>B\<wedge\>y\<in\>B<rprime|''>\\B> we have for
+          <math|y> to consider the following possibilities
+
+          <\description>
+            <item*|<math|y\<in\>B<rprime|'>>>Then
+            <math|y\<in\>B<rprime|'>\\B> so that
+            <math|<around*|(|x,y|)>\<in\>R<rprime|'>\<Rightarrowlim\><rsub|R<rprime|'>\<subseteq\>R<rprime|''>><around*|(|x,y|)>\<in\>R<rprime|''>>
+
+            <item*|<math|y\<nin\>B<rprime|'>>>Then
+            <math|y\<in\>B<rprime|''>\\B<rprime|'>> so that
+            <math|<around*|(|x,y|)>\<in\>R<rprime|''>>
+          </description>
+
+          so in all cases we have <math|<around*|(|x,y|)>\<in\>R<rprime|''>>.
+        </enumerate>
+
+        proving <math|<around*|(|B,R|)>\<preccurlyeq\><around*|(|B<rprime|''>,R<rprime|''>|)>>.
+      </description>
+    </proof>
+
+    We have now the following sub lemma:
+
+    <\lemma>
+      <label|choice lemma well ordering lemma (1)>If <math|\<cal-C\>> is a
+      chain in <math|<around*|\<langle\>|\<cal-A\>,\<preccurlyeq\>|\<rangle\>>>
+      then if\ 
+
+      <\equation*>
+        B<rsub|\<cal-C\>>=<big|cup><around*|{|B\|<around*|(|B,R|)>\<in\>\<cal-C\>|}><text|>
+      </equation*>
+
+      <\equation*>
+        R<rsub|\<cal-C\>>=<big|cup><around*|{|R\|<around*|(|B,R|)>\<in\>\<cal-C\>|}>
+      </equation*>
+
+      then\ 
+
+      <\equation*>
+        <around*|(|B<rsub|\<cal-C\>>,R<rsub|\<cal-C\>><rsub|>|)>\<in\>\<cal-A\>
+      </equation*>
+    </lemma>
+
+    <\proof>
+      \ First note that if <math|<around*|(|B,R|)>\<in\>\<cal-C\>> then
+      <math|B\<subseteq\><big|cup><around*|{|B\|<around*|(|B,R|)>\<in\>\<cal-C\>|}>=B<rsub|\<cal-C\>>>
+      and <math|R\<subseteq\><big|cup><around*|{|R\|<around*|(|B,R|)>\<in\>\<cal-C\>|}>=R<rsub|\<cal-C\>>>
+      or\ 
+
+      <\equation>
+        <label|eq 3.66.019>\<forall\><around*|(|B,R|)>\<in\>\<cal-C\><text|
+        we have >B\<subseteq\>B<rsub|\<cal-C\>>\<wedge\>R\<subseteq\>R<rsub|\<cal-C\>>
+      </equation>
+
+      <\enumerate>
+        <item>If <math|x\<in\>B<rsub|\<cal-C\>>> then
+        <math|\<exists\><around*|(|B,R|)>\<in\>\<cal-C\>> such that
+        <math|x\<in\>B>, as <math|\<cal-C\>\<subseteq\>\<cal-A\>> we have
+        <math|<around*|(|B,R|)>\<in\>\<cal-A\>>, so that
+        <math|B\<in\>\<cal-P\><around*|(|A|)>> hence <math|B\<subseteq\>A>,
+        proving that <math|x\<in\>A>. In other words
+        <math|B<rsub|\<cal-C\>>\<subseteq\>A> or
+        <math|B\<in\>\<cal-P\><around*|(|A|)>>.
+
+        <item>We must prove that <math|R<rsub|\<cal-C\>>> is a a order
+        relation on <math|B<rsub|\<cal-C\>>>:
+
+        <\description>
+          <item*|reflectivity>If <math|x\<in\>B<rsub|\<cal-C\>>> then
+          <math|\<exists\><around*|(|B,R|)>\<in\>\<cal-C\>> such that
+          <math|x\<in\>B>, as <math|R> is a order relation we have that
+          <math|<around*|(|x,x|)>\<in\>R> so that
+          <math|<around*|(|x,y|)>\<in\>R<rsub|\<cal-C\>>>
+
+          <item*|anti-symmetry>If <math|<around*|(|x,y|)>\<in\>R<rsub|\<cal-C\>>\<wedge\><around*|(|y,x|)>\<in\>R<rsub|\<cal-C\>>>
+          then <math|\<exists\><around*|(|B,R|)>,<around*|(|B<rprime|'>,R<rprime|'>|)>\<in\>\<cal-C\>>
+          such that <math|<around*|(|x,y|)>\<in\>R> and
+          <math|<around*|(|y,x|)>\<in\>R<rprime|'>>. As <math|\<cal-C\>> is a
+          chain we have either:
+
+          <\description>
+            <item*|<math|<around*|(|B,R|)>\<preccurlyeq\><around*|(|B<rprime|'>,R<rprime|'>|)>>>Then
+            <math|R\<subseteq\>R<rprime|'>> so that
+            <math|<around*|(|x,y|)>\<in\>R<rprime|'>\<wedge\><around*|(|y,x|)>\<in\>R<rprime|'>>,
+            which as <math|R<rprime|'>> is a order relation proves that
+            <math|x=y>.
+
+            <item*|<math|<around*|(|B<rprime|'>,R<rprime|'>|)>\<preccurlyeq\><around*|(|B,R|)>>>Then
+            <math|R<rprime|'>\<subseteq\>R> so that
+            <math|<around*|(|x,y|)>\<in\>R\<wedge\><around*|(|y,x|)>\<in\>R>,
+            which as <math|R> is a order relation proves that <math|x=y>.
+          </description>
+
+          <item*|transitivity>If <math|<around*|(|x,y|)>\<in\>R<rsub|\<cal-C\>>\<wedge\><around*|(|y,z|)>\<in\>R<rsub|\<cal-C\>>>
+          then <math|\<exists\><around*|(|B,R|)>,<around*|(|B<rprime|'>,R<rprime|'>|)>\<in\>\<cal-C\>>
+          such that <math|<around*|(|x,y|)>\<in\>R> and
+          <math|<around*|(|y,x|)>\<in\>R<rprime|'>>. As <math|\<cal-C\>> is a
+          chain we have either:
+
+          <\description>
+            <item*|<math|<around*|(|B,R|)>\<preccurlyeq\><around*|(|B<rprime|'>,R<rprime|'>|)>>>Then
+            <math|R\<subseteq\>R<rprime|'>> so that
+            <math|<around*|(|x,y|)>\<in\>R<rprime|'>\<wedge\><around*|(|y,z|)>\<in\>R<rprime|'>>,
+            which as <math|R<rprime|'>> is a order relation proves that
+            <math|<around*|(|x,z|)>\<in\>R<rprime|'>>, hence
+            <math|<around*|(|x,z|)>\<in\>R<rsub|\<cal-C\>>>
+
+            <item*|<math|<around*|(|B<rprime|'>,R<rprime|'>|)>\<preccurlyeq\><around*|(|B,R|)>>>Then
+            <math|R<rprime|'>\<subseteq\>R> so that
+            <math|<around*|(|x,y|)>\<in\>R\<wedge\><around*|(|y,z|)>\<in\>R>,
+            which as <math|R> is a order relation proves that
+            <math|<around*|(|x,z|)>\<in\>R>, hence
+            <math|<around*|(|x,z|)>\<in\>R<rsub|\<cal-C\>>>.
+          </description>
+        </description>
+
+        <item>Next we have to prove well-ordering of
+        <math|<around*|\<langle\>|B<rsub|\<cal-C\>>,R<rsub|\<cal-C\>>|\<rangle\>>>.
+        Let <math|D\<subseteq\>B<rsub|\<cal-C\>>> and
+        <math|D\<neq\>\<varnothing\>>. Then there exist a <math|x\<in\>D> so
+        that <math|x\<in\>B<rsub|\<cal-C\>>>, so there exist a
+        <math|<around*|(|B,R|)>\<in\>\<cal-C\>> such that <math|x\<in\>B> so
+        that <math|x\<in\>D<big|cap>B> proving that
+        <math|D<big|cap>B\<neq\>\<varnothing\>>. As
+        <math|\<cal-C\>\<subseteq\>\<cal-A\>> we have by the definition of
+        <math|\<cal-A\>> that <math|<around*|\<langle\>|B,R|\<rangle\>>> is
+        well-ordered there exist a least element <math|b\<in\>B>. So\ 
+
+        <\equation>
+          <label|eq 3.66.018>\<forall\>y\<in\>B<text| we have
+          ><around*|(|b,y|)>\<in\>R
+        </equation>
+
+        We prove now that\ 
+
+        <\equation*>
+          b<text| is a least element of >D
+        </equation*>
+
+        <\proof>
+          If <math|x\<in\>D> then <math|\<exists\><around*|(|B<rprime|'>,R<rprime|'>|)>>
+          such that <math|x\<in\>B<rprime|'>> then we have for <math|x> and
+          <math|B> the following cases to consider:
+
+          <\description>
+            <item*|<math|x\<in\>B>>Then by [eq: <reference|eq 3.66.018>] we
+            have that <math|<around*|(|b,x|)>\<in\>R> so that
+            <math|<around*|(|b,x|)>\<in\>R<rsub|\<cal-C\>>>
+
+            <item*|<math|x\<nin\>B>>Then <math|x\<in\>B<rprime|'>\\B\<wedge\>b\<in\>B>.
+            As <math|\<cal-C\>> is a chain we have the following cases to
+            consider:
+
+            <\description>
+              <item*|<math|<around*|(|B,R|)>\<preccurlyeq\><around*|(|B<rprime|'>,R<rprime|'>|)>>>Then
+              by definition of <math|\<preccurlyeq\>> we have
+              <math|<around*|(|b,x|)>\<in\>R<rprime|'>> so that
+              <math|<around*|(|b,x|)>\<in\>R<rsub|\<cal-C\>>.>
+
+              <item*|<math|<around*|(|B<rprime|'>,R<rprime|'>|)>\<preccurlyeq\><around*|(|B,R|)>>>Then
+              <math|B<rprime|'>\<subseteq\>B> then as
+              <math|x\<in\>B<rprime|'>> we have <math|x\<in\>B> contradicting
+              <math|x\<in\>B>. So this case never occurs.
+            </description>
+          </description>
+
+          So in all cases we have <math|<around*|(|b,x|)>\<in\>R<rsub|\<cal-C\>>>
+          proving that <math|b> is a least element of <math|D>.
+        </proof>
+
+        So <math|<around*|\<langle\>|B<rsub|\<cal-C\>>,R<rsub|\<cal-C\>>|\<rangle\>>>
+        is well-ordered.
+      </enumerate>
+
+      From (1),(2) and (3) it follows that\ 
+
+      <\equation*>
+        <around*|(|B<rsub|\<cal-C\>>,R<rsub|\<cal-C\>>|)>\<in\>\<cal-A\>
+      </equation*>
+    </proof>
+
+    <\lemma>
+      <label|choice lemma upper bound of chain>If <math|\<cal-C\>> is a chain
+      in <math|<around*|\<langle\>|\<cal-A\>,\<preccurlyeq\>|\<rangle\>>>
+      then <math|<around*|(|B<rsub|\<cal-C\>>,R<rsub|\<cal-C\>>|)>> is a
+      upper bound of <math|\<cal-C\>>
+    </lemma>
+
+    <\proof>
+      Let <math|<around*|(|B,R|)>\<in\>\<cal-C\>> then
+
+      <\enumerate>
+        <item><math|B\<subseteq\>B<rsub|\<cal-C\>>> [see eq: <reference|eq
+        3.66.019>]
+
+        <item><math|R\<subseteq\>R<rsub|\<cal-C\>>> [see eq: <reference|eq
+        3.66.019>]
+
+        <item>Let <math|x\<in\>B> and <math|y\<in\>B<rsub|\<cal-C\>>\\B> then
+        <math|\<exists\><around*|(|B<rprime|'>,R<rprime|'>|)>\<in\>\<cal-C\>>
+        such that <math|y\<in\>B<rprime|'>> or as
+        <math|y\<in\>B<rsub|\<cal-C\>>\\B> that
+
+        <\equation*>
+          y\<in\>B<rprime|'>\\B
+        </equation*>
+
+        As <math|\<cal-C\>> is a chain we have either
+        <math|<around*|(|B,R|)>\<preccurlyeq\><around*|(|B<rprime|'>,R<rprime|'>|)>>
+        or <math|<around*|(|B<rprime|'>,R<rprime|'>|)>\<preccurlyeq\><around*|(|B,R|)>>.
+        If <math|<around*|(|B<rprime|'>,R<rprime|'>|)>\<preccurlyeq\><around*|(|B,R|)>>
+        we have <math|B<rprime|'>\<subseteq\>B>, as <math|y\<in\>B<rprime|'>>
+        we would have <math|y\<in\>B> contradiction
+        <math|y\<in\>B<rsub|\<cal-C\>>\\B>. So we have
+
+        <\equation*>
+          <around*|(|B,R|)>\<preccurlyeq\><around*|(|B<rprime|'>,R<rprime|'>|)>
+        </equation*>
+
+        As <math|x\<in\>B> and <math|y\<in\>B<rprime|'>\\B> we have by
+        definition of <math|\<preccurlyeq\>> and the above that
+        <math|<around*|(|x,y|)>\<in\>R<rprime|'>> which as
+        <math|R<rprime|'>\<subseteq\>R<rsub|C>> [see eq: <reference|eq
+        3.66.019>] proves that <math|<around*|(|x,y|)>\<in\>R<rsub|\<cal-C\>>>
+      </enumerate>
+
+      So by the definition of <math|\<preccurlyeq\>> we have by (1),(2) and
+      (3) that\ 
+
+      <\equation*>
+        <around*|(|B,R|)>\<preccurlyeq\><around*|(|B<rsub|\<cal-C\>>,R<rsub|\<cal-C\>>|)>
+      </equation*>
+
+      \;
+    </proof>
+
+    Using Zorn's [lemma: <reference|choice Zorn's lemma>] together with
+    [lemma: <reference|choice lemma upper bound of chain>] we have
+
+    <\equation>
+      <label|eq 3.68.019>\<exists\><around*|(|B<rsub|m>,R<rsub|m>|)>\<in\>\<cal-A\><text|
+      such that ><around*|(|B<rsub|m>,R<rsub|m>|)><text| is a maximum element
+      of <math|\<cal-A\>>>
+    </equation>
+
+    We prove now by contradiction that
+
+    <\equation*>
+      B<rsub|m>=X
+    </equation*>
+
+    <\proof>
+      Assume that <math|X\<neq\>B<rsub|m>>. Then as
+      <math|B<rsub|m>\<in\>\<cal-P\><around*|(|X|)>\<Rightarrow\>B<rsub|m>\<subseteq\>X>
+      there exist a <math|x\<in\>X\\B<rsub|m>\<Rightarrow\>x\<nin\>B<rsub|m>>.
+      Define
+
+      <\equation>
+        <label|eq 3.69.019>R<rsup|\<ast\>>=R<rsub|m><big|cup><around*|{|<around*|(|b,x|)>\|b\<in\>B<rsub|m>|}><big|cup><around*|{|<around*|(|x,x|)>|}>
+      </equation>
+
+      Then if <math|<around*|(|r,s|)>\<in\>R<rsub|m><big|cap><around*|{|<around*|(|b,x|)>\|b\<in\>B<rsub|m>|}>>
+      we have as <math|R<rsub|m>\<subseteq\>B<rsub|m>\<times\>B<rsub|m>> that
+      <math|s\<in\>B<rsub|m>\<wedge\>s=x\<nin\>B<rsub|m>> a contradiction, if
+      <math|<around*|(|r,s|)>\<in\>R<rsub|m><big|cap><around*|{|<around*|(|x,x|)>|}>>
+      then <math|r\<in\>B<rsub|m>\<wedge\>r=x\<nin\>B<rsub|m>> a
+      contradiction and finally if <math|<around*|(|r,s|)>\<in\><around*|{|<around*|(|b,x|)>\|b\<in\>B<rsub|m>|}><big|cap><around*|{|<around*|(|x,x|)>|}>>
+      then <math|r\<in\>B<rsub|m>\<wedge\>r=x\<nin\>B<rsub|m>> a
+      contradiciton. So we have\ 
+
+      <\equation>
+        <label|eq 3.70.019>R<rsub|m><big|cap><around*|{|<around*|(|b,x|)>\|b\<in\>B<rsub|m>|}>=\<varnothing\>\<wedge\>R<rsub|m><big|cap><around*|{|<around*|(|x,x|)>|}>=\<varnothing\>\<wedge\><around*|{|<around*|(|b,x|)>\|b\<in\>B<rsub|m>|}><big|cap><around*|{|<around*|(|x,x|)>|}>=\<varnothing\>
+      </equation>
+
+      Further if <math|*<around*|(|x,r|)>\<in\>R<rsup|\<star\>>> then we have
+      either <math|<around*|(|x,r|)>\<in\>R<rsub|m>\<Rightarrow\>x\<in\>B<rsub|m>>
+      contradicting <math|x\<nin\>m>, <math|<around*|(|x,r|)>\<in\><around*|{|<around*|(|b,x|)>\|b\<in\>B<rsub|m>|}>\<Rightarrow\>x\<in\>B<rsub|m><text|
+      contradicting >x\<nin\>B<rsub|m>> or
+      <math|<around*|(|x,r|)>\<in\><around*|{|<around*|(|x,x|)>|}>\<Rightarrow\>r=x>.
+      To summarize we have\ 
+
+      <\equation>
+        <label|eq 3.71.019><text|If ><around*|(|x,r|)>\<in\>R<rsup|\<ast\>><text|
+        then >r=x
+      </equation>
+
+      We prove now that <math|<around*|\<langle\>|B<rsub|m><big|cup><around*|{|x|}>,R<rsup|\<ast\>>|\<rangle\>><text|
+      is a well-ordered partial set>>.
+
+      <\proof>
+        First we have:\ 
+
+        <\description>
+          <item*|reflexivity>If <math|r\<in\>B<rsub|m><big|cup><around*|{|x|}>>
+          then we have either:
+
+          <\description>
+            <item*|<math|r\<in\>B<rsub|m>>>Then as
+            <math|<around*|\<langle\>|B<rsub|m>,R<rsub|m>|\<rangle\>>> is a
+            partial order we have <math|<around*|(|r,r|)>\<in\>R<rsub|m>\<subseteq\>R<rsup|\<ast\>>>.
+
+            <item*|<math|r\<nin\>B<rsub|m>>>Then
+            <math|r\<in\><around*|{|x|}>> so that <math|r=x> hence
+            <math|<around*|(|r,r|)>=<around*|(|x,x|)>\<in\><around*|{|<around*|(|x,x|)>|}>\<subseteq\>R<rsup|\<ast\>>>
+          </description>
+
+          proving that <math|<around*|(|r,r|)>\<in\>R<rsup|\<ast\>>>
+
+          <item*|anti-symmetry>If <math|<around*|(|r,s|)>\<in\>R<rsup|\<ast\>>>
+          and <math|<around*|(|s,r|)>\<in\>R<rsup|\<ast\>>> then we have by
+          [eq: <reference|eq 3.69.019>] for <math|<around*|(|r,s|)>> either:
+
+          <\description>
+            <item*|<math|<around*|(|r,s|)>\<in\>R<rsub|m>>>Then as
+            <math|R<rsub|m>\<subseteq\>B<rsub|m>\<times\>B<rsub|m>> we have
+            <math|r,s\<in\>B<rsub|m>> so that <math|r\<neq\>x\<neq\>s> so
+            that <math|<around*|(|s,r|)>\<in\>R<rsub|m>>, which as
+            <math|<around*|\<langle\>|R<rsub|m>,R<rsub|m>|\<rangle\>>> is a
+            partial order gives that <math|r=s>
+
+            \ <item*|<math|<around*|(|r,s|)>\<in\><around*|{|<around*|(|b,x|)>\|b\<in\>B<rsub|m>|}>>>Then
+            <math|s=x> so that <math|<around*|(|x,r|)>=<around*|(|s,r|)>\<in\>R<rsup|\<ast\>>\<Rightarrowlim\><rsub|<text|[eq:
+            <reference|eq 3.71.019>]>>r=x=s> hence <math|s=r>.
+
+            <item*|<math|<around*|(|r,s|)>\<in\><around*|{|<around*|(|x,x|)>|}>>>Then
+            <math|r=x=s\<Rightarrow\>r=s>
+          </description>
+
+          proving <math|r=s>
+
+          <item*|transitivity>If <math|<around*|(|r,s|)>\<in\>R<rsup|\<ast\>>\<wedge\><around*|(|s,t|)>\<in\>R<rsup|\<ast\>>>
+          then we have by [eq: <reference|eq 3.69.019>] that:
+
+          <\description>
+            <item*|<math|<around*|(|r,s|)>\<in\>R<rsub|m><rsup|>>>We have the
+            following case for <math|<around*|(|s,t|)>>:
+
+            <\description>
+              <item*|<math|<around*|(|s,t|)>\<in\>R<rsub|m>>>Then as
+              <math|<around*|\<langle\>|B<rsub|m>,R<rsub|m>|\<rangle\>>> is a
+              partial ordered we have <math|<around*|(|r,t|)>\<in\>R<rsub|m>\<subseteq\>R<rsup|\<ast\>>>.
+
+              <item*|<math|<around*|(|s,t|)>\<in\><around*|{|<around*|(|b,x|)>\|b\<in\>B<rsub|m>|}>>>Then
+              <math|t=x> and <math|r\<in\>B<rsub|m>> so that
+              <math|<around*|(|s,t|)>\<in\><around*|{|<around*|(|b,x|)>\|b\<in\>B<rsub|m>|}>\<subseteq\>R<rsup|\<ast\>>>.
+
+              <item*|<math|<around*|(|s,t|)>\<in\><around*|{|<around*|(|x,x|)>|}>>>Then
+              <math|t=x> and <math|r\<in\>B<rsub|m>> so that
+              <math|<around*|(|s,t|)>\<in\><around*|{|<around*|(|b,x|)>\|x\<in\>B<rsub|m>|}>\<subseteq\>R<rsup|\<ast\>>>.
+            </description>
+
+            <item*|<math|<around*|(|r,s|)>\<in\><around*|{|<around*|(|b,x|)>\|b\<in\>B<rsub|m>|}>>>Then
+            <math|s=x> so that <math|<around*|(|s,t|)>=<around*|(|x,t|)>\<in\>R<rsup|\<ast\>>\<Rightarrowlim\><rsub|<text|[eq:
+            <reference|eq 3.71.019>]>>t=x>. As <math|r\<in\>B<rsub|m>> we
+            have <math|<around*|(|r,t|)>\<in\><around*|{|<around*|(|b,x|)>\|b\<in\>B<rsub|m>|}>>.
+
+            <item*|<math|<around*|(|r,s|)>\<in\><around*|{|<around*|(|x,x|)>|}>>>Then
+            <math|r=x\<wedge\>t=x> so that
+            <math|<around*|(|x,t|)>=<around*|(|s,t|)>\<in\>R<rsup|\<ast\>>\<Rightarrowlim\><rsub|<text|[eq:
+            <reference|eq 3.71.019>]>>t=x> hence
+            <math|<around*|(|r,t|)>=<around*|(|x,x|)>\<in\><around*|{|<around*|(|x,x|)>|}>\<subseteq\>R<rsup|\<star\>>.>
+          </description>
+
+          proving <math|*<around*|(|r,t|)>\<in\>R<rsup|\<ast\>>>.
+        </description>
+
+        Hence\ 
+
+        <\equation*>
+          <around*|\<langle\>|B<rsub|m><big|cup><around*|{|x|}>,R<rsup|\<ast\>>|\<rangle\>><text|
+          is a partial ordered >
+        </equation*>
+
+        If <math|\<varnothing\>\<neq\>C\<subseteq\>B<rsub|m><big|cup><around*|{|x|}>>
+        is non empty then we have for <math|C<big|cap>B<rsub|m>> the
+        following possibilitie:
+
+        <\description>
+          <item*|<math|C<big|cap>B<rsub|m>\<neq\>\<varnothing\>>>Then as
+          <math|\<varnothing\>\<neq\>C<big|cap>B<rsub|m>\<subseteq\>B<rsub|m>>
+          and <math|<around*|\<langle\>|B<rsub|m>,R<rsub|m>|\<rangle\>>> is
+          well-ordered [see defiintion of <math|\<cal-A\>>] there exist a
+          least element <math|l\<in\>C<big|cap>B<rsub|m>> so
+
+          <\equation>
+            <label|eq 3.72.019>\<forall\>r\<in\>C<big|cap>B<rsub|m><text| we
+            have ><around*|(|l,r|)>\<in\>R<rsub|m>
+          </equation>
+
+          Now if <math|r\<in\>C> we have either:
+
+          <\description>
+            <item*|<math|r\<in\>B<rsub|m>>>then
+            <math|r\<in\>C<big|cap>B<rsub|m>> so that by the above [eq:
+            <reference|eq 3.72.019>] <math|<around*|(|l,r|)>\<in\>R<rsub|m>\<subseteq\>R<rsup|\<ast\>>>
+
+            <item*|<math|r\<nin\>B<rsub|m>>>then as
+            <math|C\<subseteq\>B<rsub|m><big|cup><around*|{|x|}>> we have
+            <math|r=x> so <math|<around*|(|l,r|)>\<in\><around*|{|<around*|(|b,x|)>\|b\<in\>B<rsub|m>|}><big|cup><around*|{|<around*|(|x,x|)>|}>\<subseteq\>R<rsup|\<ast\>>>
+          </description>
+
+          proving that <math|<around*|(|l,r|)>\<in\>R<rsup|\<ast\>>>. Hence\ 
+
+          <\equation*>
+            C<text| has a least element >based<around*|\<langle\>|B<big|cup><around*|{|x|}>,R<rsup|\<ast\>>|\<rangle\>>
+          </equation*>
+
+          <item*|<math|C<big|cap>B<rsub|m>=\<varnothing\>>>Then
+          <math|C=<around*|{|x|}>> so that <math|\<forall\>r\<in\>C> we have
+          <math|r=x> so that <math|<around*|(|r,x|)>=<around*|(|x,x|)>\<in\><around*|{|<around*|(|x,x|)>|}>\<subseteq\>R<rsup|\<ast\>>>
+          proving that <math|x> is a least element of <math|C>
+        </description>
+
+        So in all cases we have that <math|C> has a least element, So we have
+        that
+
+        <\equation*>
+          <around*|\<langle\>|B<rsub|m><big|cup><around*|{|x|}>,R<rsup|\<ast\>>|\<rangle\>><text|
+          is well ordered>
+        </equation*>
+      </proof>
+
+      Now as <math|B<rsub|m><big|cup><around*|{|x|}>\<subseteq\>X>, we have
+      by the definition of <math|\<cal-A\>> that\ 
+
+      <\equation*>
+        <around*|(|B<rsub|m><big|cup><around*|{|x|}>,R<rsup|\<ast\>>|)>\<in\>\<cal-A\>
+      </equation*>
+
+      Next we have:\ 
+
+      <\enumerate>
+        <item><math|B<rsub|m>\<subseteq\>B<rsub|m><big|cup><around*|{|x|}>>
+
+        <item><math|R<rsub|m>\<in\>=R<rsup|\<ast\>>>
+
+        <item>If <math|r\<in\>B<rsub|m>> and
+        <math|s\<in\><around*|(|B<rsub|m><big|cup><around*|{|x|}>|)>\\B<rsub|m>>
+        then <math|s=x> so that <math|<around*|(|r,s|)>=<around*|(|r,x|)>\<in\><around*|{|<around*|(|b,x|)>\|b\<in\>B<rsub|m>|}>\<subseteq\>R<rsup|\<ast\>>>
+      </enumerate>
+
+      proving that <math|<around*|(|B<rsub|m>,R<rsub|m>|)>\<preccurlyeq\><around*|(|B<rsub|m><big|cup><around*|{|x|}>,R<rsup|\<ast\>>|)>>.
+      As <math|<around*|(|B<rsub|m>,R<rsub|m>|)>> is a maximal element of
+      <math|<around*|\<langle\>|\<cal-A\>,\<preccurlyeq\>|\<rangle\>>> we
+      must have <math|<around*|(|B<rsub|m>,R<rsub|m>|)>=<around*|(|B<rsub|m><big|cup><around*|{|x|}>,R<rsup|\<ast\>>|)>>
+      so that <math|B=B<big|cup><around*|{|x|}> which as x\<nin\>B<rsub|m>>
+      leads to a contradiction. Hence the assumption that
+      <math|X\<neq\>B<rsub|m>> is wrong and we must have that\ 
+
+      <\equation*>
+        X=B<rsub|m>
+      </equation*>
+    </proof>
+
+    Which as <math|<around*|\<langle\>|B<rsub|m>,R<rsub|m>|\<rangle\>>> is a
+    well-roderd proves that there exists a partial order <math|R<rsub|m>>
+    such that\ 
+
+    <\equation*>
+      <around*|\<langle\>|X,B<rsub|m>|\<rangle\>><text| is well-ordered>
+    </equation*>
+  </proof>
+
+  \;
+
+  \;
+
+  \;
+
   \;
 
   \;
@@ -10552,12 +11755,16 @@
     <associate|\<less\>A,B,C\<gtr\>=\<less\>D,E,F\<gtr\>=\<gtr\>A=E,B=D,C=F|<tuple|2.5|?>>
     <associate|\<less\>A,B\<gtr\>=\<less\>C,D\<gtr\>=\<gtr\>A=C,B=D|<tuple|2.3|?>>
     <associate|Axiom of Replacement|<tuple|2.50|?>>
+    <associate|Well ordering theorem|<tuple|3.115|?>>
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-10|<tuple|axiom of pairing|?>>
     <associate|auto-100|<tuple|3.4|?>>
     <associate|auto-101|<tuple|<with|mode|<quote|math>|\<cal-P\><rprime|'><around*|(|A|)>>|?>>
     <associate|auto-102|<tuple|choice function|?>>
     <associate|auto-103|<tuple|axiom of choice|?>>
+    <associate|auto-104|<tuple|Hausdorff's maximality|?>>
+    <associate|auto-105|<tuple|Zorn's Lemma|?>>
+    <associate|auto-106|<tuple|well ordering theorem|?>>
     <associate|auto-11|<tuple|cartesian product|?>>
     <associate|auto-12|<tuple|<with|mode|<quote|math>|A\<times\>B>|?>>
     <associate|auto-13|<tuple|1.4|?>>
@@ -10655,7 +11862,7 @@
     <associate|auto-97|<tuple|immediate successor|?>>
     <associate|auto-98|<tuple|section|?>>
     <associate|auto-99|<tuple|transfinite induction|?>>
-    <associate|axiom of choice|<tuple|3.93|?>>
+    <associate|axiom of choice|<tuple|3.95|?>>
     <associate|axiom of construction|<tuple|1.9|?>>
     <associate|axiom of extent|<tuple|1.5|2>>
     <associate|axiom of infinity|<tuple|1.52|?>>
@@ -10670,10 +11877,30 @@
     <associate|cartesian product of the empty set|<tuple|1.46|?>>
     <associate|cartesian product properties (1)|<tuple|1.49|?>>
     <associate|cartesian product with enpty set|<tuple|1.47|?>>
-    <associate|choice P'(A)|<tuple|3.90|?>>
-    <associate|choice P'(A) is a set|<tuple|3.91|?>>
-    <associate|choice axiom of choice equivalences (1)|<tuple|3.95|?>>
-    <associate|choice choice function|<tuple|3.92|?>>
+    <associate|choice Hausdorff maximal principle|<tuple|3.111|?>>
+    <associate|choice Hausdorff's Maximal Principle|<tuple|3.112|?>>
+    <associate|choice Hausdorff's implies Zorn's|<tuple|3.114|?>>
+    <associate|choice P'(A)|<tuple|3.92|?>>
+    <associate|choice P'(A) is a set|<tuple|3.93|?>>
+    <associate|choice Zorn implies Well ordering|<tuple|3.115|?>>
+    <associate|choice Zorn implies welll ordering|<tuple|3.115|?>>
+    <associate|choice Zorn's lemma|<tuple|3.113|?>>
+    <associate|choice axiom of choice equivalences (1)|<tuple|3.97|?>>
+    <associate|choice choice function|<tuple|3.94|?>>
+    <associate|choice existence of successor|<tuple|3.101|?>>
+    <associate|choice inductive set|<tuple|3.112|?>>
+    <associate|choice intersection of p-sewuences|<tuple|3.104|?>>
+    <associate|choice lemma p-sequence|<tuple|3.102|?>>
+    <associate|choice lemma p-sequence generation|<tuple|3.107|?>>
+    <associate|choice lemma properties of select|<tuple|3.108|?>>
+    <associate|choice lemma property of select elements|<tuple|3.106|?>>
+    <associate|choice lemma select elements froms a
+    p-sewuence|<tuple|3.109|?>>
+    <associate|choice lemma upper bound of chain|<tuple|3.117|?>>
+    <associate|choice lemma well ordering lemma|<tuple|3.116|?>>
+    <associate|choice lemma well ordering lemma (1)|<tuple|3.116|?>>
+    <associate|choice maximal principal|<tuple|3.111|?>>
+    <associate|choice well ordering theorem|<tuple|3.115|?>>
     <associate|class absorption laws|<tuple|1.27|?>>
     <associate|class class commutative,idempotent,associative,distributivity|<tuple|1.30|?>>
     <associate|class complement of comploment|<tuple|1.28|?>>
@@ -10820,8 +12047,25 @@
     <associate|eq 3.54.016|<tuple|3.54|?>>
     <associate|eq 3.55.016|<tuple|3.55|?>>
     <associate|eq 3.56.016|<tuple|3.56|?>>
+    <associate|eq 3.57.018|<tuple|3.57|?>>
+    <associate|eq 3.58.018|<tuple|3.58|?>>
+    <associate|eq 3.59.018|<tuple|3.59|?>>
     <associate|eq 3.6.009|<tuple|3.6|?>>
+    <associate|eq 3.60.018|<tuple|3.60|?>>
+    <associate|eq 3.61.018|<tuple|3.61|?>>
+    <associate|eq 3.62.018|<tuple|3.62|?>>
+    <associate|eq 3.63.018|<tuple|3.63|?>>
+    <associate|eq 3.64.018|<tuple|3.64|?>>
+    <associate|eq 3.65.018|<tuple|3.65|?>>
+    <associate|eq 3.66.018|<tuple|3.67|?>>
+    <associate|eq 3.66.019|<tuple|3.66|?>>
+    <associate|eq 3.67.018|<tuple|3|?>>
+    <associate|eq 3.68.019|<tuple|3.68|?>>
+    <associate|eq 3.69.019|<tuple|3.69|?>>
     <associate|eq 3.7.009|<tuple|3.7|?>>
+    <associate|eq 3.70.019|<tuple|3.70|?>>
+    <associate|eq 3.71.019|<tuple|3.71|?>>
+    <associate|eq 3.72.019|<tuple|3.72|?>>
     <associate|eq 3.8.011|<tuple|3.8|?>>
     <associate|eq 3.9.011|<tuple|3.9|?>>
     <associate|eq order preorder to order|<tuple|3.32|?>>
@@ -10914,76 +12158,77 @@
     <associate|function restriction of a function|<tuple|2.79|?>>
     <associate|function restriction of a graph|<tuple|2.70|?>>
     <associate|function simple definition|<tuple|2.83|?>>
-    <associate|function singleton function|<tuple|2.23|?>>
     <associate|function surjection and construction of inverse
-    function|<tuple|3.94|?>>
+    function|<tuple|3.96|?>>
     <associate|function surjection condition|<tuple|2.47|?>>
     <associate|function trivial bijection|<tuple|2.59|?>>
     <associate|function: A^B and sets|<tuple|2.30|?>>
-    <associate|order A isomorphism B|<tuple|3.47|?>>
+    <associate|order A isomorphism B|<tuple|3.48|?>>
     <associate|order chain|<tuple|3.38|?>>
-    <associate|order chain is a totally ordered class|<tuple|3.39|?>>
+    <associate|order chain is a totally ordered class|<tuple|3.40|?>>
     <associate|order comparable|<tuple|3.35|?>>
     <associate|order comparable property|<tuple|3.36|?>>
-    <associate|order composition of functions|<tuple|3.48|?>>
-    <associate|order condition for isomorphism|<tuple|3.50|?>>
+    <associate|order composition of functions|<tuple|3.49|?>>
+    <associate|order condition for isomorphism|<tuple|3.51|?>>
     <associate|order condition for isomorphism in a totallu ordered
-    set|<tuple|3.53|?>>
-    <associate|order conditional complete alternatives|<tuple|3.71|?>>
-    <associate|order conditional complete order|<tuple|3.70|?>>
-    <associate|order cut|<tuple|3.45|?>>
-    <associate|order greatest and lowest element are unique|<tuple|3.58|?>>
-    <associate|order greatest lowest element|<tuple|3.55|?>>
-    <associate|order immediate successor|<tuple|3.77|?>>
-    <associate|order inclusion and greatest and least element|<tuple|3.65|?>>
+    set|<tuple|3.54|?>>
+    <associate|order conditional complete alternatives|<tuple|3.73|?>>
+    <associate|order conditional complete order|<tuple|3.72|?>>
+    <associate|order cut|<tuple|3.46|?>>
+    <associate|order empty set is a chain|<tuple|3.39|?>>
+    <associate|order example inclusion order and sup, inf|<tuple|3.65|?>>
+    <associate|order greatest and lowest element are unique|<tuple|3.59|?>>
+    <associate|order greatest lowest element|<tuple|3.56|?>>
+    <associate|order immediate successor|<tuple|3.79|?>>
+    <associate|order inclusion and greatest and least element|<tuple|3.67|?>>
     <associate|order inclusion is a order|<tuple|3.31|?>>
-    <associate|order increasing, decreasing|<tuple|3.46|?>>
-    <associate|order initial segement|<tuple|3.42|?>>
-    <associate|order initial segement a\<less\>b|<tuple|3.87|?>>
-    <associate|order initial segement inclusion|<tuple|3.43|?>>
-    <associate|order intial sergment property|<tuple|3.44|?>>
-    <associate|order isomorphism and conditional complete|<tuple|3.73|?>>
-    <associate|order isomorphism condition (2)|<tuple|3.51|?>>
-    <associate|order isomorphism preservers sup and inf|<tuple|3.72|?>>
-    <associate|order isomorphism strictly|<tuple|3.49|?>>
+    <associate|order increasing, decreasing|<tuple|3.47|?>>
+    <associate|order initial segement|<tuple|3.43|?>>
+    <associate|order initial segement a\<less\>b|<tuple|3.89|?>>
+    <associate|order initial segement inclusion|<tuple|3.44|?>>
+    <associate|order intial sergment property|<tuple|3.45|?>>
+    <associate|order isomorphism and conditional complete|<tuple|3.75|?>>
+    <associate|order isomorphism condition (2)|<tuple|3.52|?>>
+    <associate|order isomorphism preservers sup and inf|<tuple|3.74|?>>
+    <associate|order isomorphism strictly|<tuple|3.50|?>>
     <associate|order lexical order|<tuple|3.34|?>>
-    <associate|order lower upper bound and inclusion|<tuple|3.66|?>>
-    <associate|order lower upper bounds of empty set|<tuple|3.62|?>>
-    <associate|order maximal minimal element|<tuple|3.54|?>>
-    <associate|order maximum of class with bigger elements|<tuple|3.60|?>>
-    <associate|order min(A)\<less\>=max(A)|<tuple|3.59|?>>
+    <associate|order lower upper bound and inclusion|<tuple|3.68|?>>
+    <associate|order lower upper bounds of empty set|<tuple|3.63|?>>
+    <associate|order maximal minimal element|<tuple|3.55|?>>
+    <associate|order maximum of class with bigger elements|<tuple|3.61|?>>
+    <associate|order min(A)\<less\>=max(A)|<tuple|3.60|?>>
     <associate|order order relation|<tuple|3.26|?>>
     <associate|order partial order on sub class|<tuple|3.33|?>>
     <associate|order partial ordered class|<tuple|3.27|?>>
     <associate|order preorder|<tuple|3.24|?>>
     <associate|order preordered class|<tuple|3.25|?>>
-    <associate|order properties of the isomorph relation|<tuple|3.52|?>>
-    <associate|order section|<tuple|3.79|?>>
-    <associate|order section and well ordering|<tuple|3.80|?>>
+    <associate|order properties of the isomorph relation|<tuple|3.53|?>>
+    <associate|order section|<tuple|3.81|?>>
+    <associate|order section and well ordering|<tuple|3.82|?>>
     <associate|order strict order|<tuple|3.30|?>>
-    <associate|order sup and inf and bigger elements|<tuple|3.68|?>>
-    <associate|order sup inf condition|<tuple|3.69|?>>
-    <associate|order sup, inf stalls|<tuple|3.64|?>>
-    <associate|order sup,inf and inclusion|<tuple|3.67|?>>
-    <associate|order supremum infinum|<tuple|3.63|?>>
-    <associate|order total/well-order inclusion|<tuple|3.75|?>>
-    <associate|order totally lexicol ordering|<tuple|3.41|?>>
-    <associate|order totally ordered subclass|<tuple|3.40|?>>
-    <associate|order transfinite induction|<tuple|3.81|?>>
-    <associate|order upport lower bound|<tuple|3.61|?>>
-    <associate|order well order and immediate successor|<tuple|3.78|?>>
+    <associate|order sup and inf and bigger elements|<tuple|3.70|?>>
+    <associate|order sup inf condition|<tuple|3.71|?>>
+    <associate|order sup, inf stalls|<tuple|3.66|?>>
+    <associate|order sup,inf and inclusion|<tuple|3.69|?>>
+    <associate|order supremum infinum|<tuple|3.64|?>>
+    <associate|order total/well-order inclusion|<tuple|3.77|?>>
+    <associate|order totally lexicol ordering|<tuple|3.42|?>>
+    <associate|order totally ordered subclass|<tuple|3.41|?>>
+    <associate|order transfinite induction|<tuple|3.83|?>>
+    <associate|order upport lower bound|<tuple|3.62|?>>
+    <associate|order well order and immediate successor|<tuple|3.80|?>>
     <associate|order well order every subclass is isomorphic with A or a
-    iitial segement|<tuple|3.89|?>>
+    iitial segement|<tuple|3.91|?>>
     <associate|order well order implies conditional complete and totally
-    ordering|<tuple|3.76|?>>
-    <associate|order well ordered and order isomorphism|<tuple|3.82|?>>
-    <associate|order well ordered class and isomorphism|<tuple|3.83|?>>
+    ordering|<tuple|3.78|?>>
+    <associate|order well ordered and order isomorphism|<tuple|3.84|?>>
+    <associate|order well ordered class and isomorphism|<tuple|3.85|?>>
     <associate|order well ordered is not isomorph to a initial segment
-    |<tuple|3.84|?>>
-    <associate|order well ordered isomorphic property (3)|<tuple|3.86|?>>
-    <associate|order well ordered isomorphism property|<tuple|3.85|?>>
-    <associate|order well ordering and isomorphism (2)|<tuple|3.88|?>>
-    <associate|order well-rodered class|<tuple|3.74|?>>
+    |<tuple|3.86|?>>
+    <associate|order well ordered isomorphic property (3)|<tuple|3.88|?>>
+    <associate|order well ordered isomorphism property|<tuple|3.87|?>>
+    <associate|order well ordering and isomorphism (2)|<tuple|3.90|?>>
+    <associate|order well-rodered class|<tuple|3.76|?>>
     <associate|pair equality of pairs|<tuple|1.43|?>>
     <associate|pair of elements|<tuple|1.41|?>>
     <associate|partial function associativity|<tuple|2.18|?>>
@@ -11009,9 +12254,10 @@
     <associate|product inclusion|<tuple|2.119|?>>
     <associate|product of family with one element|<tuple|2.117|?>>
     <associate|product of family with two classes|<tuple|2.118|?>>
-    <associate|product product is not empty|<tuple|3.97|?>>
+    <associate|product product is empty|<tuple|3.100|?>>
+    <associate|product product is not empty|<tuple|3.99|?>>
     <associate|product projection function|<tuple|2.124|?>>
-    <associate|product projection is surjective|<tuple|3.96|?>>
+    <associate|product projection is surjective|<tuple|3.98|?>>
     <associate|product sub-product|<tuple|2.122|?>>
     <associate|relation|<tuple|3.1|?>>
     <associate|relation properties|<tuple|3.4|?>>
