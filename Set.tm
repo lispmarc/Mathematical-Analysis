@@ -184,8 +184,8 @@
     \;
   </proof>
 
-  One way to create a new class is to specify a predicate that a object must
-  satisfies and then take the class of all objects that satisfies this
+  One way to create a new class is to specify a prediFIdcate that a object
+  must satisfies and then take the class of all objects that satisfies this
   predicate. The problem with this construction is that it can lead to
   paradoxes like the famous Russell paradox. Consider the predicate
   <math|R<around*|(|x|)>=x\<nin\>x>, this predicate is true for <math|x> if
@@ -2122,6 +2122,12 @@
       <item><math|f<around*|(|A|)>=range<around*|(|f|)>>
 
       <item><math|f<rsup|-1><around*|(|B|)>=dom<around*|(|f|)>>
+
+      <item>If <math|E\<subseteq\>C> then
+      <math|f<around*|(|E|)>\<subseteq\>f<around*|(|C|)>>
+
+      <item>If <math|E\<subseteq\>D> then
+      <math|f<rsup|-1><around*|(|E|)>\<subseteq\>f<rsup|-1><around*|(|D|)><rsup|>>
     </enumerate>
 
     and if in addition <math|A,B> are sets then <math|f<around*|(|C|)>> and
@@ -2169,6 +2175,25 @@
 
       <\equation*>
         f<rsup|-1><around*|(|B|)>=dom<around*|(|f|)>
+      </equation*>
+
+      <item>If <math|y\<in\>f<around*|(|E|)>> then <math|\<exists\>x\<in\>E>
+      such that <math|<around*|(|x,y|)>\<in\>f>, as <math|E\<subseteq\>C> we
+      have <math|x\<in\>C> and still <math|<around*|(|x,y|)>\<in\>f> so that
+      <math|y\<in\>f<around*|(|C|)>> proving\ 
+
+      <\equation*>
+        f<around*|(|E|)>\<subseteq\>f<around*|(|C|)>
+      </equation*>
+
+      <item>If <math|x\<in\>f<rsup|-1><around*|(|E|)>> there
+      <math|\<exists\>y\<in\>E> such that <math|<around*|(|x,y|)>\<in\>f>, as
+      <math|E\<subseteq\>D> we have <math|x\<in\>D> and still
+      <math|<around*|(|x,y|)>\<in\>f> so that
+      <math|x\<in\>f<rsup|-1><around*|(|D|)>> proving\ 
+
+      <\equation*>
+        f<rsup|-1><around*|(|E|)>\<subseteq\>f<rsup|-1><around*|(|D|)>
       </equation*>
     </enumerate>
 
@@ -7590,7 +7615,7 @@
   classes that are equal.
 
   <\theorem>
-    <label|eq order preorder to order>Let
+    <label|order eq order preorder to order>Let
     <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>> be a pre-ordered
     set then we have\ 
 
@@ -7603,7 +7628,7 @@
       by\ 
 
       <\equation*>
-        \<preccurlyeq\>=<around*|{|<around*|(|x,y|)>\<in\><around*|(|X/\<sim\>|)>\<times\><around*|(|X/\<sim\>|)>\|\<exists\>x<rprime|'>\<in\>\<sim\><around*|[|x|]><text|
+        \<preccurlyeq\>=<around*|{|<around*|(|x,y|)>\<in\><around*|(|A/\<sim\>|)>\<times\><around*|(|A/\<sim\>|)>\|\<exists\>x<rprime|'>\<in\>\<sim\><around*|[|x|]><text|
         and >\<exists\>y<rprime|'>\<in\>\<sim\><around*|[|y|]><text| such
         that <math|x<rprime|'>\<leqslant\>y<rprime|'>>>|}>
       </equation*>
@@ -10773,8 +10798,8 @@
     </equation>
 
     <\definition>
-      A element <math|x\<in\>P> is <with|font-series|bold|seleect >if
-      <math|x> is comparable with every element in <math|P>. In other words
+      A element <math|x\<in\>P> is <with|font-series|bold|select >if <math|x>
+      is comparable with every element in <math|P>. In other words
       <math|x\<in\>P> is select if <math|\<forall\>y\<in\>P> we have
       <math|x\<leqslant\>y\<vee\>y\<less\>x>
     </definition>
@@ -11132,15 +11157,15 @@
   <\lemma>
     <label|choice Zorn's lemma><index|Zorn's Lemma><dueto|Zorn's Lemma>Let
     <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a partial
-    ordered set such that <math|>every every chain has a upper bound then
-    <math|X> has a maimal element.
+    ordered set such that <math|>every chain has a upper bound then <math|X>
+    has a maimal element.
   </lemma>
 
   We prove now that the Hausdorff Maximal principle implies Zorn's lemma\ 
 
   <\theorem>
     <label|choice Hausdorff's implies Zorn's>Let
-    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> that is Hausdorff
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be Hausdorff
     Maximal then Zorn's lemma follows.
   </theorem>
 
@@ -11712,13 +11737,345 @@
     </proof>
 
     Which as <math|<around*|\<langle\>|B<rsub|m>,R<rsub|m>|\<rangle\>>> is a
-    well-roderd proves that there exists a partial order <math|R<rsub|m>>
+    well-ordered proves that there exists a partial order <math|R<rsub|m>>
     such that\ 
 
     <\equation*>
       <around*|\<langle\>|X,B<rsub|m>|\<rangle\>><text| is well-ordered>
     </equation*>
   </proof>
+
+  We show now that Well- Ordering implies the Axiom of Choice.
+
+  <\theorem>
+    <label|choice well-order implies Axiom of Choice>Assume that for every
+    <math|X> there exist a order relation such that
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is well-ordered
+    then there exists a function <math|c:\<cal-P\><rprime|'><around*|(|X|)>\<rightarrow\>X>
+    such that <math|\<forall\>A\<in\>\<cal-P\><rprime|'><around*|(|X|)>> we
+    have <math|c<around*|(|A|)>\<in\>A>
+  </theorem>
+
+  <\proof>
+    Let <math|X> be a set then by the hypothesis there exist a order
+    <math|\<leqslant\>> on <math|X> such that
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is well-ordered.
+    Define now <math|c=<around*|{|<around*|(|A,x|)>\|A\<in\>\<cal-P\><rprime|'><around*|(|X|)>\<wedge\>x<text|
+    is a least element of <math|A>>|}>>. If <math|<around*|(|A,x|)>\<in\>c>
+    then <math|A\<in\>\<cal-P\><rprime|'><around*|(|X|)>> and <math|x> is a
+    least element of <math|A>, so that <math|x\<in\>A\<subseteq\>X> proving
+    that <math|<around*|(|A,x|)>\<in\>\<cal-P\><rprime|'><around*|(|X|)>\<times\>X>.
+    So <math|c\<subseteq\>\<cal-P\><rprime|'><around*|(|X|)>\<times\>X>. If
+    <math|<around*|(|A,x|)>,<around*|(|A,x<rprime|'>|)>\<in\>c> then <math|x>
+    and <math|x<rprime|'>> are least elements of <math|A>, which are unique
+    by [theorem: <reference|order greatest and lowest element are unique>] so
+    that <math|x=x<rprime|'>>. Hence we have that\ 
+
+    <\equation*>
+      c:\<cal-P\><rprime|'><around*|(|X|)>\<times\>X\<rightarrow\>X<text| is
+      a partial function>
+    </equation*>
+
+    If <math|A\<in\>\<cal-P\><rprime|'><around*|(|X|)>> then
+    <math|A\<neq\>\<varnothing\>> so by well-ordering <math|A> has a least
+    element <math|l> so that <math|<around*|(|A,l|)>\<in\>c>, so
+    <math|\<cal-P\><rprime|'><around*|(|A|)>\<subseteq\>dom<around*|(|c|)>>.
+    Hence by [proposition: <reference|function condition (1)>] we have that\ 
+
+    <\equation*>
+      c:\<cal-P\><rprime|'><around*|(|X|)>\<times\>X\<rightarrow\>X<text| is
+      a function>
+    </equation*>
+
+    If <math|<around*|(|A,x|)>\<in\>c> then <math|x> is the least element of
+    <math|A> so that <math|x\<in\>A=c<around*|(|A|)>> proving that
+
+    <\equation*>
+      c:\<cal-P\><rprime|'><around*|(|X|)>\<rightarrow\>X<text| is a choice
+      function> for X
+    </equation*>
+  </proof>
+
+  We are now ready to specify the different equivalent statements of the
+  Axiom of Choice
+
+  <\theorem>
+    The following statements are equivalent\ 
+
+    <\enumerate>
+      <item>Axiom of Choice
+
+      <item>Hausdorff's Maximal Principle
+
+      <item>Zorn's Lemma
+
+      <item>Every set can be well-ordered
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|1\<Rightarrow\>2>>This follows from [theorem:
+      <reference|choice Hausdorff's Maximal Principle>]
+
+      <item*|<math|2\<Rightarrow\>3>>This follows from [theorem:
+      <reference|choice Hausdorff's implies Zorn's>]
+
+      <item*|<math|3\<Rightarrow\>4>>This follows from [theorem:
+      <reference|choice Zorn implies welll ordering>]
+
+      <item*|<math|4\<Rightarrow\>1>>This follows from [theorem:
+      <reference|choice well-order implies Axiom of Choice>]
+    </description>
+  </proof>
+
+  As in most of works about mathematics we assume the Axiom of Choice. To
+  summarize the consequences of the Axiom of Choice we have [taking in
+  account [theorem: <reference|choice axiom of choice equivalences (1)>] that
+  the following statements are true.
+
+  <\theorem>
+    <label|choice Axiom of choice consequences>
+
+    <\description>
+      <item*|Axiom of Choice>Let <math|X> be a set then there exist a
+      function <math|c:\<cal-P\><rprime|'><around*|(|X|)>\<rightarrow\>X>
+      such that <math|\<forall\>A\<in\>\<cal-P\>.<around*|(|X|)>> we have
+      <math|c<around*|(|A|)>\<in\>A>.
+
+      <item*|Existance of Choice set>Let <math|\<cal-A\>> be a set of sets
+      such that\ 
+
+      <\enumerate-alpha>
+        <item><math|\<forall\>A\<in\>\<cal-A\><text| we have
+        >A\<neq\>\<varnothing\>>
+
+        <item><math|\<forall\>A,B\<in\>\<cal-A\><text| with >A\<neq\>B> with
+        <math|A<big|cap>B=\<varnothing\>>
+      </enumerate-alpha>
+
+      then there exist a set <math|C> [called the
+      <with|font-series|bold|choice set of <math|\<cal-A\>>>] such that
+
+      <\enumerate-alpha>
+        <item><math|C\<subseteq\><big|cup>\<cal-A\>>
+
+        <item><math|\<forall\>A\<in\>\<cal-A\>> we have
+        <math|A<big|cap>C\<neq\>\<varnothing\>> and if
+        <math|y,y<rprime|'>\<in\>A<big|cap>C> then <math|y=y<rprime|'>>
+      </enumerate-alpha>
+
+      <item*|Axiom of Choice alternative>If
+      <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-A\>> is a
+      family of non empty sets [<math|\<forall\>i\<in\>I> we have
+      <math|A<rsub|i>\<neq\>\<varnothing\>>] where <math|I,\<cal-A\>> are
+      sets then there exists a function <math|f:I\<rightarrow\><big|cup><rsub|i\<in\>I>A<rsub|i>>
+      such that <math|\<forall\>i\<in\>I> we have
+      <math|f<around*|(|i|)>\<in\>A<rsub|i>>
+
+      <item*|Hausdorff's Maximal Theorem>If
+      <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is a partial
+      ordered set then there exists a chain <math|C\<subseteq\>X> such that
+      for every chain <math|D\<subseteq\>X> with <math|C\<subseteq\>D> we
+      have <math|C=D>
+
+      <item*|Zorn's Lemma>If <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>>
+      is a partial ordered set such that every chain has a upper bound then
+      <math|X> has a maximal element.
+
+      <item*|Well-Ordering Theorem>For every set there exists a order
+      relation making <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>>
+      well-erdered.
+
+      \ \ 
+    </description>
+  </theorem>
+
+  There is a kind of extension of Zorn's lemma to pre-ordered sets.
+
+  <\theorem>
+    <label|choice Zorn's lemma for pre-order>Let
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a pre-ordered
+    set [see definitions: <reference|order preordered class>,
+    <reference|order preorder>] such that every chain <math|>has a upper
+    bound then there exists a <math|m\<in\>X> such that
+    <math|\<forall\>x\<in\>X> with <math|m\<leqslant\>x> we have
+    <math|x\<leqslant\>m>
+  </theorem>
+
+  <\proof>
+    Using [theorem: <reference|order eq order preorder to order>] we have\ 
+
+    <\enumerate>
+      <item><math|\<sim\>\<subseteq\>X\<times\>X> defined by
+      <math|\<sim\>=<around*|{|<around*|(|x,y|)>\<in\>X\|x\<leqslant\>y\<wedge\>y\<leqslant\>x|}>>
+      is a equivalence relation
+
+      <item>Define <math|\<preccurlyeq\>\<subseteq\><around*|(|X/\<sim\>|)>\<times\><around*|(|X/\<sim\>|)>>
+      by\ 
+
+      <\equation*>
+        \<preccurlyeq\>=<around*|{|<around*|(|x,y|)>\<in\><around*|(|X/\<sim\>|)>\<times\><around*|(|X/\<sim\>|)>\|\<exists\>x<rprime|'>\<in\>\<sim\><around*|[|x|]><text|
+        and >\<exists\>y<rprime|'>\<in\>\<sim\><around*|[|y|]><text| such
+        that <math|x<rprime|'>\<leqslant\>y<rprime|'>>>|}>
+      </equation*>
+
+      then <math|\<preccurlyeq\>> is a order relation in <math|X/\<sim\>>. So
+      <math|<around*|\<langle\>|X/\<sim\>,\<preccurlyeq\>|\<rangle\>>> is a
+      partial ordered set
+
+      <item><math|\<forall\>x,y\<in\>A> we have
+      <math|x\<leqslant\>y\<Leftrightarrow\>\<sim\><around*|[|x|]>\<preccurlyeq\>\<sim\><around*|[|y|]>>
+    </enumerate>
+
+    Let <math|C\<subseteq\>X/\<sim\>> be a chain [using the order
+    <math|\<preccurlyeq\>>] and construct <math|C<rprime|'>=<big|cup>C>. If
+    <math|x,y\<in\>C<rprime|'>> then <math|\<exists\>\<sim\><around*|[|x<rprime|'>|]>,\<sim\><around*|[|y<rprime|'>|]>>
+    such that <math|x\<in\>\<sim\><around*|[|x<rprime|'>|]>> and
+    <math|y\<in\>\<sim\><around*|[|y<rprime|'>|]>>, so
+    <math|x\<sim\>x<rprime|'>> and <math|y\<sim\>y<rprime|'>> or
+    <math|x\<leqslant\>x<rprime|'>\<wedge\>x<rprime|'>\<leqslant\>x><space|1em>and
+    <math|y\<leqslant\>y<rprime|'>\<wedge\>y<rprime|'>\<leqslant\>y>. As
+    <math|C> is a chain [using <math|\<preccurlyeq\>>] we have:
+
+    <\description>
+      <item*|<math|\<sim\><around*|[|x<rprime|'>|]>\<preccurlyeq\>\<sim\><around*|[|y<rprime|'>|]>>>then
+      <math|x<rprime|'>\<leqslant\>y<rprime|'>> and as
+      <math|x\<leqslant\>x<rprime|'>> and <math|y<rprime|'>\<leqslant\>y> we
+      have <math|x\<leqslant\>y>
+
+      <item*|<math|\<sim\><around*|[|y<rprime|'>|]>\<preccurlyeq\>\<sim\><around*|[|x<rprime|'>|]>>>then
+      <math|y<rprime|'>\<leqslant\>x<rprime|'>> and as
+      <math|y\<less\>y<rprime|'>> and <math|x<rprime|'>\<leqslant\>x> we have
+      <math|y\<leqslant\>x>
+    </description>
+
+    proving that <math|x,y> are comparable. Hence\ 
+
+    <\equation*>
+      C<rprime|'><text| is a chain [using >\<leqslant\><text|]>
+    </equation*>
+
+    By the hypothesis we have that there exist a upper bound <math|u> of
+    <math|C<rprime|'>> [using <math|\<leqslant\>>], in other words
+
+    <\equation*>
+      \<exists\>u\<in\>X<text| such that >\<forall\>x\<in\>C<rprime|'><text|
+      we have >x
+    </equation*>
+
+    Take now <math|\<sim\><around*|[|z|]>\<in\>C> then
+    <math|z\<in\>\<sim\><around*|[|z|]>\<subseteq\>C<rprime|'>> so that
+    <math|z\<leqslant\>u> and thus by (3)
+    <math|\<sim\><around*|[|z|]>\<preccurlyeq\>\<sim\><around*|[|u|]>>. So
+    <math|\<sim\><around*|[|u|]>> is a upper bound of <math|C>. As we just
+    have proved that every chain in <math|X/\<sim\>> has a upper bound and
+    <math|<around*|\<langle\>|X/\<sim\>,\<preccurlyeq\>|\<rangle\>>> is a
+    partial order, it follows from Zorn's lemma that there exist a maximal
+    element <math|\<sim\><around*|[|m|]>> in <math|X/\<sim\>>. So by
+    [definition: <reference|order maximal minimal element>] we have\ 
+
+    <\equation*>
+      \<forall\>\<sim\><around*|[|x|]>\<in\>X/\<sim\><text| with
+      <math|\<sim\><around*|[|m|]>\<preccurlyeq\>\<sim\><around*|[|x|]><text|
+      then <math|\<sim\><around*|[|x|]>=\<sim\><around*|[|m|]>>>>>
+    </equation*>
+
+    If now <math|x\<in\>X> such that <math|x\<leqslant\>m> then by (3) we
+    have <math|\<sim\><around*|[|x|]>\<preccurlyeq\>\<sim\><around*|[|m|]>>
+    hence by the above we have <math|\<sim\><around*|[|x|]>=\<sim\><around*|[|m|]>>
+    so that <math|x\<sim\>m> hence <math|x\<leqslant\>m>.
+  </proof>
+
+  As a interestubg application of the Axiom of Choice we have that every
+  function can be restricted to a injection or bijection.
+
+  <\theorem>
+    <label|choice function to injection/bijection>Let <math|X,Y> be sets,
+    <math|f:X\<rightarrow\>Y> a function then there exist a
+    <math|Z\<subseteq\>X> such that:
+
+    <\enumerate>
+      <item><math|f<rsub|\|Z>:Z\<rightarrow\>Y<text| is a injection>>
+
+      <item><math|f<rsub|\|Z><around*|(|X|)>=f<around*|(|X|)>>
+
+      <item><math|f<rsub|\|Z>:Z\<rightarrow\>f<around*|(|X|)>> is a bijection
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Define <math|\<cal-A\>=<around*|{|f<rsup|-1><around*|(|<around*|{|y|}>|)>\|y\<in\>f<around*|(|X|)>|}>>.
+      If <math|A\<in\>\<cal-A\>> then <math|\<exists\>y\<in\>f<around*|(|X|)>>
+      such that <math|A=f<rsup|-1><around*|(|<around*|{|y|}>|)>\<subseteq\>X>
+      and as <math|y\<in\>f<around*|(|X|)>> there exists a <math|x\<in\>X>
+      such that <math|f<around*|(|x|)>=y\<in\><around*|{|y|}>\<Rightarrow\>x\<in\>f<rsup|-1><around*|(|<around*|{|y|}>|)>>,
+      proving that <math|A\<neq\>\<varnothing\>>. So we have proved that\ 
+
+      <\equation*>
+        \<cal-A\>\<subseteq\>\<cal-P\><rprime|'><around*|(|X|)>
+      </equation*>
+
+      By the Axiom of Choice [axiom: <reference|axiom of choice>] there exist
+      a function <math|c:\<cal-P\><rprime|'><around*|(|X|)>\<rightarrow\>X>
+      such that <math|\<forall\>A\<in\>\<cal-P\><rprime|'><around*|(|A|)>> we
+      have <math|<around*|(|c|)><around*|(|A|)>\<in\>A>. Take
+      <math|Z=c<around*|(|\<cal-A\>|)>\<subseteq\>X>
+      <math|<around*|[|c<around*|(|\<cal-A\>|)>|]>> consider\ 
+
+      <\equation*>
+        f<rsub|\|Z>:Z\<rightarrow\>Y
+      </equation*>
+
+      Let <math|x,y\<in\>Z> such that <math|f<rsub|\|Z><around*|(|x|)>=f<rsub|\|Z><around*|(|y|)>\<Rightarrowlim\><rsub|x,y\<in\>Z>f<around*|(|x|)>=f<around*|(|y|)>>.
+      As <math|x,y\<in\>Z=c<around*|(|\<cal-A\>|)>> there exists
+      <math|A<rsub|x>\<in\>\<cal-A\>\<wedge\>A<rsub|y>\<in\>\<cal-A\>> such
+      that <math|<around*|(|c|)><around*|(|A<rsub|x>|)>=x\<in\>A<rsub|x>> and
+      <math|<around*|(|c|)><around*|(|A<rsub|y>|)>=y\<in\>A<rsub|x>>. As
+      <math|A<rsub|x>,A<rsub|y>\<in\>\<cal-A\>> there exist
+      <math|x<rprime|'>,y<rprime|'>\<in\>f<around*|(|X|)>> such that
+      <math|A<rsub|x>=f<rsup|-1><around*|(|<around*|{|x<rprime|'>|}>|)>> and
+      <math|A<rsub|y>=f<rsup|-1><around*|(|<around*|{|y<rprime|'>|}>|)>>.
+      Then <math|f<around*|(|x|)>\<equallim\><rsub|x\<in\>A<rsub|x>>x<rprime|'>>
+      and <math|f<around*|(|y|)>\<equallim\><rsub|y\<in\>A<rsub|y>>y<rprime|'>>.
+      As <math|f<around*|(|x|)>=f<around*|(|y|)>> we have
+      <math|x<rprime|'>=y<rprime|'>> so that
+      <math|A<rsub|x>=f<rsup|-1><around*|(|<around*|{|x<rprime|'>|}>|)>=f<rsup|-1><around*|(|<around*|{|y<rprime|'>|}>|)>=A<rsub|y>>.
+      So <math|x=<around*|(|c|)><around*|(|A<rsub|x>|)>=<around*|(|c|)><around*|(|A<rsub|y>|)>=y>,
+      proving that <math|x=y>.
+
+      <item>If <math|y\<in\>f<around*|(|X|)>> then
+      <math|f<rsup|-1><around*|(|<around*|{|y|}>|)>\<in\>\<cal-A\>> so to
+      that x=<math|<around*|(|c|)><around*|(|f<rsup|-1><around*|(|<around*|{|y|}>|)>|)>\<in\>c<around*|(|\<cal-A\>|)>=Z>.
+      Further as <math|<around*|(|c|)><around*|(|f<rsup|-1><around*|(|<around*|{|x|}>|)>|)>\<in\>f<rsup|-1><around*|(|<around*|{|x|}>|)>>
+      we have that <math|f<around*|(|x|)>=f<around*|(|<around*|(|c|)><around*|(|f<rsup|-1><around*|(|<around*|{|y|}>|)>|)>|)>\<in\><around*|{|y|}>>
+      so that <math|y=f<around*|(|x|)>\<in\>f<around*|(|Z|)>>, proving that
+      <math|f<around*|(|X|)>\<subseteq\>f<around*|(|Z|)>>. As
+      <math|Z\<subseteq\>X> we have by [theorem: <reference|partial functions
+      image/preimage properties>] that <math|f<around*|(|Z|)>\<subseteq\>f<around*|(|X|)>>
+      so that\ 
+
+      <\equation*>
+        f<around*|(|X|)>=f<around*|(|Z|)>
+      </equation*>
+
+      <item>From (2) we have that <math|f<rsub|\|Z>:Z\<rightarrow\>f<around*|(|X|)>>
+      is surjective which together with (1) proves bijectivity.
+    </enumerate>
+  </proof>
+
+  \;
+
+  \;
+
+  \;
+
+  \;
 
   \;
 
@@ -11755,7 +12112,6 @@
     <associate|\<less\>A,B,C\<gtr\>=\<less\>D,E,F\<gtr\>=\<gtr\>A=E,B=D,C=F|<tuple|2.5|?>>
     <associate|\<less\>A,B\<gtr\>=\<less\>C,D\<gtr\>=\<gtr\>A=C,B=D|<tuple|2.3|?>>
     <associate|Axiom of Replacement|<tuple|2.50|?>>
-    <associate|Well ordering theorem|<tuple|3.115|?>>
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-10|<tuple|axiom of pairing|?>>
     <associate|auto-100|<tuple|3.4|?>>
@@ -11764,7 +12120,6 @@
     <associate|auto-103|<tuple|axiom of choice|?>>
     <associate|auto-104|<tuple|Hausdorff's maximality|?>>
     <associate|auto-105|<tuple|Zorn's Lemma|?>>
-    <associate|auto-106|<tuple|well ordering theorem|?>>
     <associate|auto-11|<tuple|cartesian product|?>>
     <associate|auto-12|<tuple|<with|mode|<quote|math>|A\<times\>B>|?>>
     <associate|auto-13|<tuple|1.4|?>>
@@ -11877,18 +12232,19 @@
     <associate|cartesian product of the empty set|<tuple|1.46|?>>
     <associate|cartesian product properties (1)|<tuple|1.49|?>>
     <associate|cartesian product with enpty set|<tuple|1.47|?>>
+    <associate|choice Axiom of choice consequences|<tuple|3.120|?>>
     <associate|choice Hausdorff maximal principle|<tuple|3.111|?>>
     <associate|choice Hausdorff's Maximal Principle|<tuple|3.112|?>>
     <associate|choice Hausdorff's implies Zorn's|<tuple|3.114|?>>
     <associate|choice P'(A)|<tuple|3.92|?>>
     <associate|choice P'(A) is a set|<tuple|3.93|?>>
-    <associate|choice Zorn implies Well ordering|<tuple|3.115|?>>
     <associate|choice Zorn implies welll ordering|<tuple|3.115|?>>
     <associate|choice Zorn's lemma|<tuple|3.113|?>>
+    <associate|choice Zorn's lemma for pre-order|<tuple|3.121|?>>
     <associate|choice axiom of choice equivalences (1)|<tuple|3.97|?>>
     <associate|choice choice function|<tuple|3.94|?>>
     <associate|choice existence of successor|<tuple|3.101|?>>
-    <associate|choice inductive set|<tuple|3.112|?>>
+    <associate|choice function to injection/bijection|<tuple|3.122|?>>
     <associate|choice intersection of p-sewuences|<tuple|3.104|?>>
     <associate|choice lemma p-sequence|<tuple|3.102|?>>
     <associate|choice lemma p-sequence generation|<tuple|3.107|?>>
@@ -11897,10 +12253,8 @@
     <associate|choice lemma select elements froms a
     p-sewuence|<tuple|3.109|?>>
     <associate|choice lemma upper bound of chain|<tuple|3.117|?>>
-    <associate|choice lemma well ordering lemma|<tuple|3.116|?>>
     <associate|choice lemma well ordering lemma (1)|<tuple|3.116|?>>
-    <associate|choice maximal principal|<tuple|3.111|?>>
-    <associate|choice well ordering theorem|<tuple|3.115|?>>
+    <associate|choice well-order implies Axiom of Choice|<tuple|3.118|?>>
     <associate|class absorption laws|<tuple|1.27|?>>
     <associate|class class commutative,idempotent,associative,distributivity|<tuple|1.30|?>>
     <associate|class complement of comploment|<tuple|1.28|?>>
@@ -12059,7 +12413,6 @@
     <associate|eq 3.65.018|<tuple|3.65|?>>
     <associate|eq 3.66.018|<tuple|3.67|?>>
     <associate|eq 3.66.019|<tuple|3.66|?>>
-    <associate|eq 3.67.018|<tuple|3|?>>
     <associate|eq 3.68.019|<tuple|3.68|?>>
     <associate|eq 3.69.019|<tuple|3.69|?>>
     <associate|eq 3.7.009|<tuple|3.7|?>>
@@ -12068,7 +12421,6 @@
     <associate|eq 3.72.019|<tuple|3.72|?>>
     <associate|eq 3.8.011|<tuple|3.8|?>>
     <associate|eq 3.9.011|<tuple|3.9|?>>
-    <associate|eq order preorder to order|<tuple|3.32|?>>
     <associate|equivalence relation|<tuple|3.5|?>>
     <associate|equivalence relation A/R|<tuple|3.16|?>>
     <associate|equivalence relation R[x]=R[y]|<tuple|3.11|?>>
@@ -12176,6 +12528,7 @@
     <associate|order conditional complete order|<tuple|3.72|?>>
     <associate|order cut|<tuple|3.46|?>>
     <associate|order empty set is a chain|<tuple|3.39|?>>
+    <associate|order eq order preorder to order|<tuple|3.32|?>>
     <associate|order example inclusion order and sup, inf|<tuple|3.65|?>>
     <associate|order greatest and lowest element are unique|<tuple|3.59|?>>
     <associate|order greatest lowest element|<tuple|3.56|?>>
@@ -12428,6 +12781,10 @@
       <tuple|<tuple|choice function>|<pageref|auto-102>>
 
       <tuple|<tuple|axiom of choice>|<pageref|auto-103>>
+
+      <tuple|<tuple|Hausdorff's maximality>|<pageref|auto-104>>
+
+      <tuple|<tuple|Zorn's Lemma>|<pageref|auto-105>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Elements
