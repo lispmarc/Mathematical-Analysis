@@ -54,7 +54,7 @@
     <\enumerate>
       <item><math|G\<neq\>\<varnothing\>>
 
-      <item><math|G> has only one neutrla element
+      <item><math|G> has only one neutral element
     </enumerate>
   </theorem>
 
@@ -80,7 +80,7 @@
     <label|group example set of functions>Let <math|X> be a set
     <math|<around*|\<langle\>|X<rsup|X>,\<circ\>|\<rangle\>>> is a semi group
     [see definition: <reference|function B^A>]. Where <math|X<rsup|X>> is the
-    set of function graphs beteen <math|X> and <math|X> and <math|\<circ\>>
+    set of function graphs between <math|X> and <math|X> and <math|\<circ\>>
     is the composition between functions.
   </example>
 
@@ -90,7 +90,7 @@
     <math|f,g\<in\>X<rsup|X>> then <math|f:X\<rightarrow\>> and
     <math|g:X\<rightarrow\>X> are functions, so that by [theorem:
     <reference|function composition of functions is a fucntion>]
-    <math|f\<circ\>g:X\<rightarrow\>X> is afunction, hence
+    <math|f\<circ\>g:X\<rightarrow\>X> is a function, hence
     <math|f\<circ\>g\<in\>X<rsup|X>>. So
 
     <\equation*>
@@ -176,10 +176,10 @@
   <\definition>
     <label|group abelian group/sub group>A semi-group or group
     <math|<around*|\<langle\>|G,\<odot\>|\<rangle\>>> is abelian or
-    <with|font-series|bold|commitative> iff\ 
+    <with|font-series|bold|commutative> iff\ 
 
     <\description>
-      <item*|commutatitivity><math|\<forall\>x,y\<in\>G<text| we have
+      <item*|commutativity><math|\<forall\>x,y\<in\>G<text| we have
       <math|x\<odot\>y=y\<odot\>x>>>
     </description>
   </definition>
@@ -294,7 +294,7 @@
           <around*|(|x\<odot\><rsub|\|F\<times\>F>y|)>\<odot\><rsub|\|F\<times\>F>z=<around*|(|x\<circ\>y|)>\<circ\>z=x\<circ\><around*|(|y\<circ\>z|)>=x\<odot\><rsub|\|F\<times\>F><around*|(|y\<odot\><rsub|\|F\<times\>F>z|)>
         </equation*>
 
-        <item*|inverse element>Let <math|x\<in\>F> then alo
+        <item*|inverse element>Let <math|x\<in\>F> then also
         <math|x<rsup|-1>\<in\>F> then\ 
 
         <\equation*>
@@ -351,20 +351,20 @@
   </proof>
 
   <\definition>
-    <label|group group homomorphism><dueto|group homomorphism>If
+    <label|group homeomorphism><dueto|Group Homeomorphism>If
     <math|<around*|\<langle\>|F,\<odot\>|\<rangle\>>> and
     <math|<around*|\<langle\>|G,\<oplus\>|\<rangle\>>> be semi-groups then a
     function <math|f:F\<rightarrow\>G> is a
-    <with|font-series|bold|><with|font-series|bold|group homomorphism> if
+    <with|font-series|bold|><with|font-series|bold|group homeomorphism> if
     <math|\<forall\>x,y\<in\>F> we have <math|f<around*|(|x\<odot\>y|)>=f<around*|(|x|)>\<oplus\>g<around*|(|y|)>>.
   </definition>
 
   <\theorem>
-    <label|group group homomorphism properties>If
+    <label|group homeomorphism properties>If
     <math|<around*|\<langle\>|F,\<odot\>|\<rangle\>>> and
     <math|<around*|\<langle\>|G,\<oplus\>|\<rangle\>>> be groups with neutral
-    elements <math|e<rsub|F>,e<rsub|G>> snd <math|f:F\<rightarrow\>G> a
-    <with|font-series|bold|><with|font-series|bold|group homomorphism> then:
+    elements <math|e<rsub|F>,e<rsub|G>> and <math|f:F\<rightarrow\>G> a
+    <with|font-series|bold|><with|font-series|bold|group homeomorphism> then:
 
     <\enumerate>
       <item><math|f<around*|(|e<rsub|F>|)>=e<rsub|G>>
@@ -399,10 +399,110 @@
       </enumerate>
     </proof>
 
-    <\enumerate>
-      \;
-    </enumerate>
+    <\definition>
+      <label|group isomorphism><index|group isomorphism><dueto|Group
+      Isomorphism>If <math|<around*|\<langle\>|F,\<odot\>|\<rangle\>>> and
+      <math|<around*|\<langle\>|G,\<oplus\>|\<rangle\>>> are semi-groups then
+      a <with|font-series|bold|group isomorphism> is a
+      <with|font-series|bold|bijection> <math|f:F\<rightarrow\>G> that is a
+      group <with|font-series|bold|homeomorphism>.
+    </definition>
+
+    The following theorem show how we can define a group on the product of a
+    family of groups.
+
+    TODO
+
+    <\theorem>
+      <label|group product of groups>If <math|<around*|{|<around*|\<langle\>|G<rsub|i>,\<odot\><rsub|i>|\<rangle\>>|}><rsub|i\<in\>I>>
+      is a family of semi groups then:
+
+      <\enumerate>
+        <item><math|\<forall\>x,y\<in\><big|prod><rsub|i\<in\>I>G<rsub|i>> we
+        have:
+
+        <\enumerate>
+          <item><math|\<forall\>i\<in\>I> that
+          <math|x<around*|(|i|)>\<odot\><rsub|i>y<around*|(|i|)>\<in\>F<rsub|i>>
+
+          <item><math|x\<odot\>y:I\<rightarrow\><big|cup><rsub|i\<in\>I>F<rsub|i>>
+          defined by <math|i\<rightarrow\>x<around*|(|i|)>\<odot\><rsub|i>y<around*|(|i|)>>
+          is a element of <math|<big|prod><rsub|i\<in\>I>F<rsub|i>>
+        </enumerate>
+
+        <item><math|\<odot\>:<big|prod><rsub|i\<in\>I>F<rsub|i>\<times\><big|prod><rsub|i\<in\>I>F<rsub|i>\<rightarrow\><big|prod><rsub|i\<in\>I>F<rsub|i>>
+        defined by <math|<around*|(|x,y|)>\<rightarrow\>x\<odot\>y> is a
+        function [here we use <math|x\<odot\>y> to actually note the function
+        <math|<around*|\<langle\>|x\<odot\>y,I,<big|cup><rsub|i\<in\>I>F<rsub|i>|\<rangle\>>>]\ 
+
+        <item><math|<around*|\<langle\>|<big|prod><rsub|i\<in\>I>F<rsub|i>,\<odot\>|\<rangle\>>>
+        is a semi-group with neutral element
+        <math|e:I\<rightarrow\><big|cup><rsub|i\<in\>I>F<rsub|i>> defined by
+        <math|i\<rightarrow\>e<rsub|i>\<in\>F<rsub|i>> (where
+        <math|e<rsub|i>> is the neutral element in <math|F<rsub|i>>) and if
+        <math|x\<in\><big|prod><rsub|i\<in\>I>F<rsub|i>> then
+        <math|-x:I\<rightarrow\><big|cup><rsub|i\<in\>I>F<rsub|i>> defined by
+        <math|i\<rightarrow\>-x<around*|(|i|)>\<in\>F<rsub|i>> (where
+        <math|-x<around*|(|i|)>> is the inverse element of
+        <math|x<around*|(|i|)>>)
+      </enumerate>
+    </theorem>
   </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|x,y\<in\><big|prod><rsub|i\<in\>I>F<rsub|i>> then we
+      have
+
+      <\enumerate>
+        <item>As <math|x<around*|(|i|)>,y<around*|(|i|)>\<in\>F<rsub|i>> by
+        the definition of <math|<big|prod><rsub|i\<in\>I>F<rsub|i>> we have
+        as <math|\<odot\>:F<rsub|i>\<odot\><rsub|i>F<rsub|i>\<rightarrow\>F<rsub|i><rsub|>>
+        is a function we have that <math|x<around*|(|i|)>\<odot\><rsub|i>y<around*|(|i|)>\<in\>F<rsub|i>>\ 
+
+        <item>As <math|\<forall\>i\<in\>I> we have by
+        <math|x<around*|(|i|)>\<odot\><rsub|i>y<around*|(|i|)>\<in\>F<rsub|i>>
+        we have by definition of <math|<big|prod><rsub|i\<in\>I>F<rsub|i>>
+        that <math|x\<odot\>y\<in\><big|prod><rsub|i\<in\>I>F<rsub|i>>
+      </enumerate>
+
+      <item>This follows from the definition of <math|\<odot\>> and the fact
+      that <math|x\<odot\>y\<in\>F<rsub|i>>
+
+      <item>We have if <math|<around*|{|<around*|\<langle\>|F<rsub|i>,\<odot\><rsub|i>|\<rangle\>>|}><rsub|i\<in\>I>>
+      is a family of semi-groups then we have\ 
+
+      <\itemize-dot>
+        <item><dueto|associativity><math|\<forall\>i\<in\>I> we have
+        <math|<around*|(|<around*|(|x\<odot\>y|)>\<odot\>z|)><around*|(|i|)>=<around*|(|x\<odot\>y|)><around*|(|i|)>\<odot\><rsub|i>z<around*|(|i|)>=<around*|(|x<around*|(|i|)>\<odot\><rsub|i>y<around*|(|i|)>|)>\<odot\><rsub|i>z<around*|(|i|)>\<equallim\><rsub|<around*|\<langle\>|F<rsub|i>,\<odot\><rsub|i>|\<rangle\>>
+        is a semi-group>x<around*|(|i|)>\<odot\><rsub|i><around*|(|y<around*|(|i|)>\<odot\><rsub|i>z<around*|(|i|)>|)>=x<around*|(|i|)>\<odot\><rsub|i><around*|(|y\<odot\>z|)><around*|(|i|)>=<around*|(|x\<odot\><around*|(|y\<odot\>z|)>|)><around*|(|i|)>>
+        resulting in <math|<around*|(|x\<odot\>y|)>\<odot\>z=x\<odot\><around*|(|y\<odot\>z|)>>
+
+        <item><dueto|neutral element><math|\<forall\>i\<in\>I> we have
+        <math|<around*|(|x\<odot\>0|)><around*|(|i|)>=x<around*|(|i|)>\<odot\><rsub|i>0<around*|(|i|)>=x<around*|(|i|)>\<odot\><rsub|i>0<rsub|i>=x<around*|(|i|)>=0<rsub|i>\<odot\><rsub|i>x<around*|(|i|)>=<around*|(|0\<odot\>x|)>>
+        proving that <math|0\<odot\>x=x=x\<odot\>0>
+      </itemize-dot>
+
+      If <math|<around*|{|<around*|\<langle\>|F<rsub|i>,\<odot\><rsub|i>|\<rangle\>>|}><rsub|i\<in\>I>>
+      is also a group then we have\ 
+
+      <\itemize>
+        <item><dueto|inverse element><math|\<forall\>i\<in\>I> we have
+        <math|<around*|(|x\<odot\><around*|(|-x|)>|)><around*|(|i|)>=x<around*|(|i|)>\<odot\><rsub|i><around*|(|<around*|(|-x|)><around*|(|i|)>|)>=x<around*|(|i|)>\<odot\><around*|(|-<around*|(|x<around*|(|i|)>|)>|)>=0<rsub|i>=0<around*|(|i|)>=0<rsub|i>=<around*|(|-x<around*|(|i|)>|)>\<odot\>x<around*|(|i|)>=<around*|(|-x|)><around*|(|i|)>\<circ\><rsub|i>x<around*|(|i|)>=<around*|(|<around*|(|-x|)>\<odot\>x|)><around*|(|i|)>>
+        giving <math|x\<circ\><around*|(|-x|)>=0=<around*|(|-x|)>\<odot\>x>
+      </itemize>
+
+      and in case of a abelian family we have
+
+      <\itemize>
+        <item><dueto|commutativity><math|\<forall\>i\<in\>I> we have
+        <math|<around*|(|x\<odot\>y|)><around*|(|i|)>=x<around*|(|i|)>\<odot\><rsub|i>y<around*|(|i|)>=y<around*|(|i|)>\<odot\><rsub|i>x<around*|(|i|)>=<around*|(|y\<odot\>x|)><around*|(|i|)>>
+        giving <math|x\<odot\>y=y\<odot\>x>
+      </itemize>
+    </enumerate>
+  </proof>
 
   <chapter|Natural Numbers>
 
@@ -412,7 +512,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|3>
-    <associate|page-first|101>
+    <associate|page-first|103>
     <associate|page-medium|paper>
     <associate|section-nr|4>
     <associate|subsection-nr|0>
@@ -421,32 +521,36 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|4|101>>
-    <associate|auto-2|<tuple|operator|101>>
-    <associate|auto-3|<tuple|4.1|101>>
-    <associate|auto-4|<tuple|semi-group|101>>
-    <associate|auto-5|<tuple|group|103>>
-    <associate|auto-6|<tuple|sub-semi-group|105>>
-    <associate|auto-7|<tuple|sup-group|?>>
-    <associate|auto-8|<tuple|5|?>>
-    <associate|auto-9|<tuple|6|?>>
-    <associate|group abelian group/sub group|<tuple|4.8|?>>
-    <associate|group example bijections|<tuple|4.13|?>>
-    <associate|group example set of functions|<tuple|4.4|?>>
-    <associate|group group|<tuple|4.5|?>>
-    <associate|group group homeomorphism|<tuple|4.14|?>>
-    <associate|group group homomorphism|<tuple|4.15|?>>
-    <associate|group group homomorphism properties|<tuple|4.15|?>>
-    <associate|group group inheritance|<tuple|4.12|?>>
-    <associate|group group inverse of inverse|<tuple|4.7|?>>
-    <associate|group inverse element|<tuple|4.6|?>>
-    <associate|group semi-group inheritance|<tuple|4.11|?>>
-    <associate|group semig-group inheritance|<tuple|4.12|?>>
-    <associate|group semigroup properties|<tuple|4.3|101>>
-    <associate|group sub-group|<tuple|4.10|?>>
-    <associate|operator|<tuple|4.1|101>>
-    <associate|semi-group|<tuple|4.2|101>>
-    <associate|sub-semi-group|<tuple|4.9|?>>
+    <associate|auto-1|<tuple|4|103>>
+    <associate|auto-10|<tuple|6|?>>
+    <associate|auto-2|<tuple|operator|103>>
+    <associate|auto-3|<tuple|4.1|103>>
+    <associate|auto-4|<tuple|semi-group|103>>
+    <associate|auto-5|<tuple|group|104>>
+    <associate|auto-6|<tuple|sub-semi-group|104>>
+    <associate|auto-7|<tuple|sup-group|104>>
+    <associate|auto-8|<tuple|group isomorphism|107>>
+    <associate|auto-9|<tuple|5|109>>
+    <associate|group abelian group/sub group|<tuple|4.8|104>>
+    <associate|group example bijections|<tuple|4.13|105>>
+    <associate|group example set of functions|<tuple|4.4|103>>
+    <associate|group group|<tuple|4.5|104>>
+    <associate|group group homomorphism|<tuple|4.14|105>>
+    <associate|group group homomorphism properties|<tuple|4.15|105>>
+    <associate|group group inheritance|<tuple|4.12|105>>
+    <associate|group group inverse of inverse|<tuple|4.7|104>>
+    <associate|group homeomorphism|<tuple|4.14|?>>
+    <associate|group homeomorphism properties|<tuple|4.15|?>>
+    <associate|group inverse element|<tuple|4.6|104>>
+    <associate|group isomorphism|<tuple|4.16|?>>
+    <associate|group product of groups|<tuple|4.17|?>>
+    <associate|group semi-group inheritance|<tuple|4.11|104>>
+    <associate|group semigroup properties|<tuple|4.3|103>>
+    <associate|group sub-group|<tuple|4.10|104>>
+    <associate|operator|<tuple|4.1|103>>
+    <associate|product of a family of groups|<tuple|4.18|?>>
+    <associate|semi-group|<tuple|4.2|103>>
+    <associate|sub-semi-group|<tuple|4.9|104>>
   </collection>
 </references>
 
@@ -456,6 +560,12 @@
       <tuple|<tuple|operator>|<pageref|auto-2>>
 
       <tuple|<tuple|semi-group>|<pageref|auto-4>>
+
+      <tuple|<tuple|group>|<pageref|auto-5>>
+
+      <tuple|<tuple|sub-semi-group>|<pageref|auto-6>>
+
+      <tuple|<tuple|sup-group>|<pageref|auto-7>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Algebraic
@@ -467,11 +577,11 @@
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Natural
       Numbers> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-5><vspace|0.5fn>
+      <no-break><pageref|auto-8><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6<space|2spc>Finite
       and Infinite Sets> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-6><vspace|0.5fn>
+      <no-break><pageref|auto-9><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>

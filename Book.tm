@@ -120,15 +120,15 @@
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|5<space|2spc>Natural
     Numbers> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-113><vspace|0.5fn>
+    <no-break><pageref|auto-114><vspace|0.5fn>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|6<space|2spc>Finite
     and Infinite Sets> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-114><vspace|0.5fn>
+    <no-break><pageref|auto-115><vspace|0.5fn>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|Index>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-115><vspace|0.5fn>
+    <no-break><pageref|auto-116><vspace|0.5fn>
   </table-of-contents>
 
   <include|Set.tm>
@@ -219,6 +219,8 @@
     <index+1|greatest element|<pageref|auto-84>>
 
     <index+1|group|<pageref|auto-110>>
+
+    <index+1|group isomorphism|<pageref|auto-113>>
 
     <index+1|Hausdorff's maximality|<pageref|auto-104>>
 
@@ -329,9 +331,10 @@
     <associate|auto-110|<tuple|group|104|Numbers.tm>>
     <associate|auto-111|<tuple|sub-semi-group|104|Numbers.tm>>
     <associate|auto-112|<tuple|sup-group|104|Numbers.tm>>
-    <associate|auto-113|<tuple|5|107|Numbers.tm>>
-    <associate|auto-114|<tuple|6|109|Numbers.tm>>
-    <associate|auto-115|<tuple|6|111>>
+    <associate|auto-113|<tuple|group isomorphism|106|Numbers.tm>>
+    <associate|auto-114|<tuple|5|107|Numbers.tm>>
+    <associate|auto-115|<tuple|6|109|Numbers.tm>>
+    <associate|auto-116|<tuple|6|111>>
     <associate|auto-12|<tuple|<with|mode|<quote|math>|A\<times\>B>|17|Set.tm>>
     <associate|auto-13|<tuple|1.4|19|Set.tm>>
     <associate|auto-14|<tuple|successor set|19|Set.tm>>
@@ -449,7 +452,7 @@
     <associate|choice Hausdorff's implies Zorn's|<tuple|3.114|95|Set.tm>>
     <associate|choice P'(A)|<tuple|3.92|88|Set.tm>>
     <associate|choice P'(A) is a set|<tuple|3.93|88|Set.tm>>
-    <associate|choice Zorn implies welll ordering|<tuple|3.115|96|Set.tm>>
+    <associate|choice Zorn implies welll ordering|<tuple|3.115|95|Set.tm>>
     <associate|choice Zorn's lemma|<tuple|3.113|95|Set.tm>>
     <associate|choice Zorn's lemma for pre-order|<tuple|3.121|101|Set.tm>>
     <associate|choice axiom of choice equivalences
@@ -464,11 +467,11 @@
     <associate|choice lemma property of select
     elements|<tuple|3.106|93|Set.tm>>
     <associate|choice lemma select elements froms a
-    p-sewuence|<tuple|3.109|94|Set.tm>>
+    p-sewuence|<tuple|3.109|93|Set.tm>>
     <associate|choice lemma upper bound of chain|<tuple|3.117|97|Set.tm>>
     <associate|choice lemma well ordering lemma (1)|<tuple|3.116|96|Set.tm>>
     <associate|choice well-order implies Axiom of
-    Choice|<tuple|3.118|100|Set.tm>>
+    Choice|<tuple|3.118|99|Set.tm>>
     <associate|class absorption laws|<tuple|1.27|11|Set.tm>>
     <associate|class class commutative,idempotent,associative,distributivity|<tuple|1.30|12|Set.tm>>
     <associate|class complement of comploment|<tuple|1.28|11|Set.tm>>
@@ -609,7 +612,7 @@
     <associate|eq 3.44.015|<tuple|3.44|87|Set.tm>>
     <associate|eq 3.46.016|<tuple|3.46|89|Set.tm>>
     <associate|eq 3.47.016|<tuple|3.47|89|Set.tm>>
-    <associate|eq 3.48.016|<tuple|3.48|90|Set.tm>>
+    <associate|eq 3.48.016|<tuple|3.48|89|Set.tm>>
     <associate|eq 3.49.016|<tuple|3.49|90|Set.tm>>
     <associate|eq 3.5.009|<tuple|3.5|69|Set.tm>>
     <associate|eq 3.50.016|<tuple|3.50|90|Set.tm>>
@@ -618,25 +621,24 @@
     <associate|eq 3.53.016|<tuple|3.53|90|Set.tm>>
     <associate|eq 3.54.016|<tuple|3.54|90|Set.tm>>
     <associate|eq 3.55.016|<tuple|3.55|90|Set.tm>>
-    <associate|eq 3.56.016|<tuple|3.56|91|Set.tm>>
+    <associate|eq 3.56.016|<tuple|3.56|90|Set.tm>>
     <associate|eq 3.57.018|<tuple|3.57|92|Set.tm>>
     <associate|eq 3.58.018|<tuple|3.58|92|Set.tm>>
-    <associate|eq 3.59.018|<tuple|3.59|93|Set.tm>>
+    <associate|eq 3.59.018|<tuple|3.59|92|Set.tm>>
     <associate|eq 3.6.009|<tuple|3.6|69|Set.tm>>
-    <associate|eq 3.60.018|<tuple|3.60|94|Set.tm>>
-    <associate|eq 3.61.018|<tuple|3.61|95|Set.tm>>
-    <associate|eq 3.62.018|<tuple|3.62|95|Set.tm>>
-    <associate|eq 3.63.018|<tuple|3.63|95|Set.tm>>
-    <associate|eq 3.64.018|<tuple|3.64|95|Set.tm>>
-    <associate|eq 3.65.018|<tuple|3.65|96|Set.tm>>
-    <associate|eq 3.66.018|<tuple|3.67|97|Set.tm>>
-    <associate|eq 3.66.019|<tuple|3.66|97|Set.tm>>
-    <associate|eq 3.68.019|<tuple|3.68|98|Set.tm>>
-    <associate|eq 3.69.019|<tuple|3.69|98|Set.tm>>
+    <associate|eq 3.61.018|<tuple|3.60|94|Set.tm>>
+    <associate|eq 3.62.018|<tuple|3.61|94|Set.tm>>
+    <associate|eq 3.63.018|<tuple|3.62|95|Set.tm>>
+    <associate|eq 3.64.018|<tuple|3.63|95|Set.tm>>
+    <associate|eq 3.65.018|<tuple|3.64|96|Set.tm>>
+    <associate|eq 3.66.018|<tuple|3.66|97|Set.tm>>
+    <associate|eq 3.66.019|<tuple|3.65|96|Set.tm>>
+    <associate|eq 3.68.019|<tuple|3.67|98|Set.tm>>
+    <associate|eq 3.69.019|<tuple|3.68|98|Set.tm>>
     <associate|eq 3.7.009|<tuple|3.7|69|Set.tm>>
-    <associate|eq 3.70.019|<tuple|3.70|98|Set.tm>>
-    <associate|eq 3.71.019|<tuple|3.71|98|Set.tm>>
-    <associate|eq 3.72.019|<tuple|3.72|99|Set.tm>>
+    <associate|eq 3.70.019|<tuple|3.69|98|Set.tm>>
+    <associate|eq 3.71.019|<tuple|3.70|98|Set.tm>>
+    <associate|eq 3.72.019|<tuple|3.71|99|Set.tm>>
     <associate|eq 3.8.011|<tuple|3.8|79|Set.tm>>
     <associate|eq 3.9.011|<tuple|3.9|79|Set.tm>>
     <associate|equivalence relation|<tuple|3.5|64|Set.tm>>
@@ -746,11 +748,13 @@
     <associate|group example bijections|<tuple|4.13|105|Numbers.tm>>
     <associate|group example set of functions|<tuple|4.4|103|Numbers.tm>>
     <associate|group group|<tuple|4.5|104|Numbers.tm>>
-    <associate|group group homomorphism|<tuple|4.14|105|Numbers.tm>>
-    <associate|group group homomorphism properties|<tuple|4.15|105|Numbers.tm>>
     <associate|group group inheritance|<tuple|4.12|105|Numbers.tm>>
     <associate|group group inverse of inverse|<tuple|4.7|104|Numbers.tm>>
+    <associate|group homeomorphism|<tuple|4.14|105|Numbers.tm>>
+    <associate|group homeomorphism properties|<tuple|4.15|105|Numbers.tm>>
     <associate|group inverse element|<tuple|4.6|104|Numbers.tm>>
+    <associate|group isomorphism|<tuple|4.16|106|Numbers.tm>>
+    <associate|group product of groups|<tuple|4.17|106|Numbers.tm>>
     <associate|group semi-group inheritance|<tuple|4.11|104|Numbers.tm>>
     <associate|group semigroup properties|<tuple|4.3|103|Numbers.tm>>
     <associate|group sub-group|<tuple|4.10|104|Numbers.tm>>
@@ -867,7 +871,7 @@
     <associate|product inclusion|<tuple|2.119|59|Set.tm>>
     <associate|product of family with one element|<tuple|2.117|58|Set.tm>>
     <associate|product of family with two classes|<tuple|2.118|58|Set.tm>>
-    <associate|product product is empty|<tuple|3.100|92|Set.tm>>
+    <associate|product product is empty|<tuple|3.100|91|Set.tm>>
     <associate|product product is not empty|<tuple|3.99|91|Set.tm>>
     <associate|product projection function|<tuple|2.124|62|Set.tm>>
     <associate|product projection is surjective|<tuple|3.98|91|Set.tm>>
@@ -1057,6 +1061,8 @@
       <tuple|<tuple|sub-semi-group>|<pageref|auto-111>>
 
       <tuple|<tuple|sup-group>|<pageref|auto-112>>
+
+      <tuple|<tuple|group isomorphism>|<pageref|auto-113>>
     </associate>
     <\associate|parts>
       <tuple|Set.tm|chapter-nr|0|section-nr|0|subsection-nr|0>
@@ -1178,15 +1184,15 @@
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Natural
       Numbers> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-113><vspace|0.5fn>
+      <no-break><pageref|auto-114><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6<space|2spc>Finite
       and Infinite Sets> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-114><vspace|0.5fn>
+      <no-break><pageref|auto-115><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Index>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-115><vspace|0.5fn>
+      <no-break><pageref|auto-116><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>

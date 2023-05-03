@@ -184,8 +184,8 @@
     \;
   </proof>
 
-  One way to create a new class is to specify a prediFIdcate that a object
-  must satisfies and then take the class of all objects that satisfies this
+  One way to create a new class is to specify a predicate that a object must
+  satisfies and then take the class of all objects that satisfies this
   predicate. The problem with this construction is that it can lead to
   paradoxes like the famous Russell paradox. Consider the predicate
   <math|R<around*|(|x|)>=x\<nin\>x>, this predicate is true for <math|x> if
@@ -4851,7 +4851,7 @@
   <\note>
     In the above definition <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>>
     only make sense if you specify what the defining function is. To avoid
-    excesive notation, we assume that if we write
+    excessive notation, we assume that if we write
     <with|font-series|bold|<math|<around*|{|x|}><rsub|i\<in\>I>\<subseteq\>B>>
     that the defining function is <math|<with|font-series|bold|x:I\<rightarrow\>B>>.
     However this is sometimes not feasible and in that case we state what the
@@ -4938,8 +4938,8 @@
     </equation*>
   </definition>
 
-  So a family is just another notation fo a function. We introduce also a new
-  notation for the range of this function.
+  So a family is just another notation for a function. We introduce also a
+  new notation for the range of this function.
 
   <\definition>
     <label|family range><index|<math|<around*|{|A<rsub|i>\|i\<in\>I|}>>>If
@@ -4956,7 +4956,7 @@
 
   <\theorem>
     <label|family range (1)>If <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B>
-    is a family of objects in <math|B> with asscoiated function <math|f> then\ 
+    is a family of objects in <math|B> with associated function <math|f> then\ 
 
     <\equation*>
       x\<in\><around*|{|x<rsub|i>\|i\<in\>I|}>\<Leftrightarrow\>\<exists\>i\<in\>I<text|
@@ -6500,7 +6500,7 @@
     <math|I=<around*|(|I\\<around*|{|i|}>|)><big|cup><around*|{|i|}>> and
     <math|<big|cup><rsub|j\<in\>I>A<rsub|j>\<equallim\><rsub|<text|[theorem:
     <reference|family union intersection and empty
-    set>]>><around*|{|A<rsub|i>|}><big|cup><around*|(|<big|cup><rsub|j\<in\>I\\<around*|{|i|}>>A<rsub|j>|)>>
+    set>]>>A<rsub|i><big|cup><around*|(|<big|cup><rsub|j\<in\>I\\<around*|{|i|}>>A<rsub|j>|)>>
     we have by [theorem: <reference|function extending funtion domain>] that\ 
 
     <\equation*>
@@ -7977,7 +7977,7 @@
 
   <\proof>
     The condition <math|\<forall\>x,y\<in\>\<varnothing\>> we have that
-    <math|x,y> are comparable is satisfied vacously.
+    <math|x,y> are comparable is satisfied vacuously.
   </proof>
 
   <\theorem>
@@ -9291,7 +9291,7 @@
 
       <item>If <math|A> is a non empty sub-class of <math|X> that is bounded
       above then <math|\<upsilon\><around*|(|A|)>\<neq\>\<varnothing\>>.
-      Using well-ordering we have that <math|sup<around*|(|A|)>=min<around*|(|\<upsilon\><around*|(|A|)>|)>>
+      Using well ordering we have that <math|sup<around*|(|A|)>=min<around*|(|\<upsilon\><around*|(|A|)>|)>>
       exist.
 
       <item>As by (1) <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>>
@@ -9546,7 +9546,7 @@
     is a order isomorphism. As <math|<around*|(|f\<circ\>g|)><around*|(|Y|)>\<subseteq\>range<around*|(|f|)>>
     [see theorem: <reference|partial function domain range composition>] and
     <math|range<around*|(|f|)>\<subseteq\>S<rsub|X,y>> we have a order
-    isomorphim \ between <math|Y> and a sub-class of a initial segment of
+    isomorphism \ between <math|Y> and a sub-class of a initial segment of
     <math|Y>. By [theorem: <reference|order well ordered class and
     isomorphism>] this is impossible so the assumption is false, hence
     <math|Y> is not order isomorphic to a an initial segment of <math|Y>.
@@ -9568,7 +9568,7 @@
   </corollary>
 
   <\proof>
-    \ We prove this by contraduction. First by the hypothesis we have
+    \ We prove this by contradiction. First by the hypothesis we have
     <math|X\<cong\>Y> and by [theorem: <reference|order properties of the
     isomorph relation>] <math|Y\<cong\>X>.
 
@@ -10136,7 +10136,7 @@
       \<cal-P\><rprime|'><around*|(|A|)>=\<cal-P\><around*|(|A|)>\\<around*|{|\<varnothing\>|}>
     </equation*>
 
-    In other words it is the collection of all non empty sets of a set
+    In other words it is the collection of all non empty sub sets of a set
   </definition>
 
   It turns out that if <math|A> is a set then
@@ -10164,7 +10164,9 @@
     have <math|f<around*|(|B|)>\<in\>B>
   </definition>
 
-  The axiom of choice ensures the existence of a choice function for a set.
+  So a choice function picks out one element out of each subset of <math|A>
+  and the axiom of choice ensures the existence of a choice function for a
+  set.
 
   <\axiom>
     <label|axiom of choice><index|axiom of choice><dueto|Axiom of Choice>If
@@ -10184,7 +10186,9 @@
     \ By the axiom of choice there exists a choice function
 
     <\equation*>
-      c:\<cal-P\><rprime|'><around*|(|A|)>\<rightarrow\>A<text|>
+      c:\<cal-P\><rprime|'><around*|(|A|)>\<rightarrow\>A<text| such that
+      >\<forall\>A\<in\>\<cal-P\><rprime|'><around*|(|A|)><text| we have
+      >c<around*|(|A|)>\<in\>A
     </equation*>
 
     If <math|f:A\<rightarrow\>B> is surjective. Then
@@ -10274,7 +10278,8 @@
 
       <\equation*>
         c:\<cal-P\><rprime|'><around*|(|U|)>\<rightarrow\>U<text| such that
-        >\<forall\>A\<in\>\<cal-A\> <text| we have >c<around*|(|A|)>\<in\>A
+        >\<forall\>A\<in\>\<cal-P\><rprime|'><around*|(|U|)> <text| we have
+        >c<around*|(|A|)>\<in\>A
       </equation*>
 
       If <math|A\<in\>\<cal-A\>> then <math|A\<neq\>\<varnothing\>> and using
@@ -10297,8 +10302,8 @@
 
       <\enumerate-alpha>
         <item>If <math|x\<in\>C> then <math|\<exists\>A\<in\>\<cal-A\>> such
-        that <math|x=c<around*|(|A|)>>, which as <math|c> is a choice
-        function means that <math|x\<in\>A> hence, by [theorem:
+        that <math|x=<around*|(|c|)><around*|(|A|)>>, which as <math|c> is a
+        choice function means that <math|x\<in\>A> hence, by [theorem:
         <reference|class general intersection>], we have that
         <math|x\<in\><big|cup>\<cal-A\>> proving that
 
@@ -10310,7 +10315,7 @@
         <math|<around*|(|c|)><around*|(|A|)>\<in\>c<around*|(|\<cal-A\>|)>=C>
         and, as <math|c> is a choice function,
         <math|<around*|(|c|)><around*|(|A|)>\<in\>A> [note:
-        <math|<around*|(|c|)><around*|(|A|)>> is function applicaton and
+        <math|<around*|(|c|)><around*|(|A|)>> is function application and
         <math|c<around*|(|\<cal-A\>|)>> is the image of <math|\<cal-A\>> by
         <math|c>]. Hence\ 
 
@@ -10321,10 +10326,11 @@
         If <math|y,y<rprime|'>\<in\>A<big|cap>C> then as
         <math|y,y<rprime|'>\<in\>C=c<around*|(|\<cal-A\>|)>> there exist
         <math|Y,Y<rprime|'>\<in\>\<cal-A\>> such that
-        <math|y=c<around*|(|Y|)>> and <math|y<rprime|'>=c<around*|(|Y<rprime|'>|)>>,
-        as <math|c> is a choice function we have
-        <math|y=c<around*|(|Y|)>\<in\>Y> and
-        <math|y<rprime|'>=c<around*|(|Y<rprime|'>|)>\<in\>Y<rprime|'>>.
+        <math|y=<around*|(|c|)><around*|(|Y|)>> and
+        <math|y<rprime|'>=<around*|(|c|)><around*|(|Y<rprime|'>|)>>, as
+        <math|c> is a choice function we have
+        <math|y=<around*|(|c|)><around*|(|Y|)>\<in\>Y> and
+        <math|y<rprime|'>=<around*|(|c|)><around*|(|Y<rprime|'>|)>\<in\>Y<rprime|'>>.
         Assume that <math|Y\<neq\>Y<rprime|'>> then we have the contradiction
         <math|y,y<rprime|'>\<in\>Y<big|cap>Y<rprime|'>=\<varnothing\>,so we
         have that >Y=Y' but then <math|y=c<around*|(|Y|)>=c<around*|(|Y<rprime|'>|)>=y<rprime|'>>
@@ -10346,8 +10352,8 @@
       </equation>
 
       If <math|<around*|(|B,x|)>\<in\>P<rsub|B>> then as
-      <math|B\<in\>\<cal-P\><rprime|'><around*|(|A|)>\<subseteq\>\<cal-P\><around*|(|A|)>>
-      and <math|x\<in\>B\<subseteq\>A> we have
+      <math|B\<in\>\<cal-P\><rprime|'><around*|(|A|)>> and
+      <math|x\<in\>B\<subseteq\>A> we have
       <math|<around*|(|B,x|)>\<in\>\<cal-P\><rprime|'><around*|(|A|)>\<times\>A>
       or
 
@@ -10357,7 +10363,7 @@
       </equation>
 
       As <math|B\<neq\>\<varnothing\>> we have that <math|\<exists\>b\<in\>B>
-      so that <math|<around*|(|B,x|)>\<in\>P<rsub|B>> proving that
+      so that <math|<around*|(|B,p|)>\<in\>P<rsub|B>> proving that
 
       <\equation>
         <label|eq 3.47.016>\<forall\>B\<in\>\<cal-P\><rprime|'><around*|(|A|)><text|
@@ -10379,7 +10385,7 @@
       Define
 
       <\equation>
-        <label|eq 3.49.016>\<cal-A\>=<around*|{|P<rsub|B>\|B\<in\>\<cal-P\><rprime|'><around*|(|A|)>|}>
+        <label|eq 3.49.016>\<cal-A\>=<around*|{|P<rsub|B>\|B\<in\>\<cal-P\><rprime|'><around*|(|A|)>|}>\<subseteq\>\<cal-P\><around*|(|\<cal-P\><rprime|'><around*|(|A|)>\<times\>A|)>
       </equation>
 
       As <math|A> is a set we have by [theorem: <reference|choice P'(A) is a
@@ -10398,9 +10404,9 @@
       </equation>
 
       So the conditions for the hypothesis (2) are satisfied by [eq:
-      <reference|eq 3.49.016>],[eq: <reference|eq 3.50.016>],[eq:
-      <reference|eq 3.47.016>] and [eq: <reference|eq 3.48.016>] hence there
-      exist a choice set <math|C> for <math|\<cal-A\>> such that:\ 
+      <reference|eq 3.50.016>],[eq: <reference|eq 3.47.016>] and [eq:
+      <reference|eq 3.48.016>] hence there exist a choice set <math|C> for
+      <math|\<cal-A\>> such that:\ 
 
       <\equation>
         <label|eq 3.51.016>C\<subseteq\><big|cup>\<cal-A\><text| and
@@ -10449,7 +10455,7 @@
         is a function>
       </equation>
 
-      Let <math|B\<in\>\<cal-P\><rprime|'><around*|(|B|)>> then
+      Let <math|B\<in\>\<cal-P\><rprime|'><around*|(|A|)>> then
       <math|<around*|(|B,C<around*|(|B|)>|)>\<in\>C\<subseteq\><big|cup>\<cal-A\>>
       so that <math|\<exists\>B<rprime|'>\<in\>\<cal-P\><rprime|'><around*|(|A|)>>
       such that <math|<around*|(|B,C<around*|(|B|)>|)>\<in\>P<rsub|B<rprime|'>>>
@@ -10488,25 +10494,25 @@
       hence <math|range<around*|(|A|)>\<subseteq\>\<cal-P\><rprime|'><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>>.
       Using [theorem: <reference|function range restriction>] it follows that
       <math|A:I\<rightarrow\>\<cal-P\><rprime|'><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>>
-      is a function. If we take <math|f=c\<circ\>A> then\ 
+      is also a function. If we take <math|f=c\<circ\>A> then\ 
 
       <\equation*>
         f:I\<rightarrow\><big|cup><rsub|i\<in\>I>A<rsub|i><text| is a
         function and >\<forall\>i\<in\>I<text| we have
-        >f<around*|(|i|)>=c<around*|(|A<around*|(|i|)>|)>=c<around*|(|A<rsub|i>|)>\<in\>A<rsub|>
+        >f<around*|(|i|)>=c<around*|(|A<around*|(|i|)>|)>=c<around*|(|A<rsub|i>|)>\<in\>A<rsub|i><rsub|>
       </equation*>
 
       proving (3).
 
       <item*|<math|3\<Rightarrow\>1>>Let <math|A> be a set and define the
-      family <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>\<cal-P\><rprime|'>*A>\<subseteq\>\<cal-P\><rprime|'><around*|(|A|)>>
+      family <math|<around*|{|B<rsub|C>|}><rsub|C\<in\>\<cal-P\><rprime|'>*A>\<subseteq\>\<cal-P\><rprime|'><around*|(|A|)>>
       by <math|B=Id<rsub|\<cal-P\><rprime|'><around*|(|A|)>>:\<cal-P\><rprime|'><around*|(|A|)>\<rightarrow\>\<cal-P\><rprime|'><around*|(|A|)>>
       [see example: <reference|function identity function>]. For every
       <math|C\<in\>\<cal-P\><rprime|'><around*|(|A|)>> we have
       <math|B<rsub|C>=Id<around*|(|C|)>=C\<neq\>\<varnothing\>>, further as
       <math|A> is a set we have by [theorem: <reference|choice P'(A) is a
       set>] that <math|\<cal-P\><rprime|'><around*|(|A|)>> is a set. So the
-      conditions for (3) are satisified and by (3) there exist a function
+      conditions for (3) are satisfied and by (3) there exist a function
 
       <\equation>
         <label|eq 3.56.016>f:\<cal-P\><rprime|'><around*|(|A|)>\<rightarrow\><big|cup><rsub|C\<in\>\<cal-P\><rprime|'><around*|(|A|)>>B<rsub|C><text|
@@ -10543,7 +10549,7 @@
     the projection function
 
     <\equation*>
-      \<pi\><rsub|i>:<big|prod><rsub|i\<in\>I>A<rsub|j>\<rightarrow\>A<rsub|i><text|
+      \<pi\><rsub|i>:<big|prod><rsub|j\<in\>I>A<rsub|j>\<rightarrow\>A<rsub|i><text|
       defined by >\<pi\><rsub|j><around*|(|x|)>=x<around*|(|j|)><text| [see
       definition: ><reference|product projection function><text|]>
     </equation*>
@@ -10554,9 +10560,9 @@
   <\proof>
     Let <math|i\<in\>I> and take <math|x\<in\>A<rsub|i>>. Consider the family
     <math|<around*|{|A<rsub|j>|}><rsub|j\<in\>I\\<around*|{|i|}>>> [see
-    definiton: <reference|family definition (2)>] then
+    definition: <reference|family definition (2)>] then
     <math|\<forall\>j\<in\>I\\<around*|{|i|}>> we have
-    <math|A<rsub|i>\<neq\>\<varnothing\>>. So we can use [theorem:
+    <math|A<rsub|j>\<neq\>\<varnothing\>>. So we can use [theorem:
     <reference|choice axiom of choice equivalences (1)> (3)] to find a
     function
 
@@ -10581,7 +10587,7 @@
     proving surjectivity.
   </proof>
 
-  Second we prove that the product of a family of sets is no empty if and
+  Second we prove that the product of a family of sets is not empty if and
   only if every set in the family is non empty.
 
   <\theorem>
@@ -10603,14 +10609,14 @@
       that <math|\<exists\>i\<in\>I> such that
       <math|A<rsub|i>=\<varnothing\>>. As
       <math|<big|prod><rsub|i\<in\>I>A<rsub|i>\<neq\>\<varnothing\>> there
-      exists a <math|x\<in\><big|prod><rsub|i\<in\>I>A<rsub|i>> such thar
+      exists a <math|x\<in\><big|prod><rsub|i\<in\>I>A<rsub|i>> such that
       <math|\<forall\>j\<in\>I> <math|x<rsub|j>\<in\>A<rsub|j>>, in
       particular \ we would have <math|x<rsub|i>\<in\>A<rsub|i>>
       contradicting <math|A<rsub|i>=\<varnothing\>>. So we must have that
       <math|\<forall\>i\<in\>I> we have <math|A<rsub|i>\<neq\>\<varnothing\>>.
 
       <item*|<math|\<Leftarrow\>>>If <math|\<forall\>i\<in\>I> we have
-      <math|A<rsub|i>\<neq\>\<varnothing\>> we havc by [theorem:
+      <math|A<rsub|i>\<neq\>\<varnothing\>> we have by [theorem:
       <reference|choice axiom of choice equivalences (1)> (3)] that there
       exist a function
 
@@ -10656,13 +10662,13 @@
       <item*|<math|\<Leftarrow\>>>Assume that
       <math|><math|<big|prod><rsub|i\<in\>I>A<rsub|i>\<neq\>0> then by
       [theorem: <reference|product product is not empty>] we have
-      <math|\<forall\>i\<in\>I> we have <math|A<rsub|i>\<neq\>\<varnothing\>>
+      <math|\<forall\>i\<in\>I> that <math|A<rsub|i>\<neq\>\<varnothing\>>
       contradicting <math|\<exists\>i\<in\>I> such that <math|A<rsub|i>=0>.
       Hence we must have <math|<big|prod><rsub|i\<in\>I>A<rsub|i>=\<varnothing\>>.
     </description>
   </proof>
 
-  The Axiom of Choice has also consequences for partial ordered sets.
+  The Axiom of Choice has also import consequences for partial ordered sets.\ 
 
   <\theorem>
     <label|choice existence of successor>Let
@@ -10682,13 +10688,12 @@
 
   <\proof>
     We prove this by contradiction, so assume that <math|\<forall\>x\<in\>X>
-    there exist a successor.\ 
-
-    Given <math|x\<in\>X> define <math|T<rsub|x>=<around*|{|y\|y<text| is a
-    immediate successor of >x|}>> then <math|T<rsub|x>\<neq\>\<varnothing\>>
-    so that <math|T<rsub|x>\<in\>\<cal-P\><rprime|'><around*|(|X|)>>. Using
-    the Axiom of Choice [axiom: <reference|axiom of choice>] there exist a
-    choice function\ 
+    there exist a immediate successor. Given <math|x\<in\>X> define
+    <math|T<rsub|x>=<around*|{|y\|y<text| is a immediate successor of >x|}>>
+    then <math|T<rsub|x>\<neq\>\<varnothing\>> so that
+    <math|T<rsub|x>\<in\>\<cal-P\><rprime|'><around*|(|X|)>>. Using the Axiom
+    of Choice [axiom: <reference|axiom of choice>] there exist a choice
+    function
 
     <\equation>
       <label|eq 3.57.018>c:\<cal-P\><rprime|'><around*|(|A|)>\<rightarrow\>A<text|
@@ -10696,26 +10701,18 @@
       have >c<around*|(|A|)>\<in\>A
     </equation>
 
-    Define now <math|succ=<around*|{|<around*|(|x,y|)>\|x\<in\>X\<wedge\>y=c<around*|(|T<rsub|x>|)>|}>>.
-    If <math|<around*|(|x,y|)>\<in\>succ> then <math|x\<in\>A> and
-    <math|y=c<around*|(|T<rsub|x>|)>\<in\>T<rsub|x>\<in\>X> proving that
-    <math|succ\<subseteq\>X\<times\>X>. If
-    <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>succ> then
-    <math|x\<in\>X> and <math|y=c<around*|(|T<rsub|x>|)>>,
-    <math|y<rprime|'>=c<around*|(|T<rsub|x>|)>> so that <math|y=y<rprime|'>>.
-    Further if <math|x\<in\>X> then as <math|T<rsub|x>\<in\>\<cal-P\><rprime|'><around*|(|X|)>>
-    <math|c<around*|(|T<rsub|x>|)>> exists so that
-    <math|<around*|(|x,c<around*|(|T<rsub|x>|)>|)>\<in\>succ> proving that
-    <math|X\<subseteq\>dom<around*|(|succ|)>>. So\ 
+    As <math|\<forall\>x\<in\>X <text| we have
+    >T<rsub|x>\<in\>\<cal-P\><rprime|'><around*|(|X|)>> so that
+    <math|c<around*|(|T<rsub|x>|)>> is well defined we can use [proposition:
+    <reference|function simple definition>] to define the function
 
     <\equation*>
-      succ:X\<rightarrow\>X<text| by >succ=<around*|{|<around*|(|x,y|)>\|x\<in\>X\<wedge\>y=c<around*|(|T<rsub|x>|)>|}><text|
-      is a function>
+      succ:X\<rightarrow\>X<text| by >succ<around*|(|x|)>=c<around*|(|T<rsub|x>|)>.
     </equation*>
 
     If <math|x\<in\>X> then <math|succ<around*|(|x|)>=c<around*|(|T<rsub|x>|)>\<in\>T<rsub|x>>
-    so that <math|succ<around*|(|x|)>> is a immediate successor of <math|x>
-    To summarize\ 
+    so that <math|succ<around*|(|x|)>> is a immediate successor of <math|x>,
+    to summarize
 
     <\equation>
       <label|eq 3.58.018>succ:X\<rightarrow\>X<text| is a function such that
@@ -10761,7 +10758,7 @@
       Let <math|\<cal-A\>> be a set of p-sequences then\ 
 
       <\enumerate>
-        <item><math|\<forall\>A\<in\>\<cal-A\>> <math|A> is a p-seqeunce
+        <item><math|\<forall\>A\<in\>\<cal-A\>> <math|A> is a p-sequence
         hence <math|p\<in\>A> so that <math|p\<in\><big|cap>\<cal-A\>>
 
         <item>If <math|x\<in\><big|cap>\<cal-A\>> then
@@ -10771,7 +10768,7 @@
 
         <item>If <math|C\<subseteq\><big|cap>\<cal-A\>> is a chain then
         <math|\<forall\>A\<in\>\<cal-A\>> we have <math|C\<subseteq\>A> and
-        as <math|A> is a p-sequence we have sthat
+        as <math|A> is a p-sequence we have that
         <math|sup<around*|(|C|)>\<in\>A> so that
         <math|sup<around*|(|A|)>\<in\><big|cap>\<cal-A\>>
       </enumerate>
@@ -10793,15 +10790,13 @@
 
     <\equation>
       <label|eq 3.59.018>P=<big|cap><around*|{|B\<in\>\<cal-P\><around*|(|X|)>\|B<text|
-      is a p-seqeunce >|}><text| is a p-sequence>\<wedge\>p\<in\>P\<wedge\><text|>A<text|
-      is a p-sequence>\<Rightarrow\>P\<subseteq\>A
+      is a p-sequence >|}><text| is a p-sequence>\<wedge\>p\<in\>P\<wedge\><text|>If
+      A<text| is a p-sequence>\<Rightarrow\>P\<subseteq\>A
     </equation>
 
     <\definition>
       A element <math|x\<in\>P> is <with|font-series|bold|select >if <math|x>
-      is comparable with every element in <math|P>. In other words
-      <math|x\<in\>P> is select if <math|\<forall\>y\<in\>P> we have
-      <math|x\<leqslant\>y\<vee\>y\<less\>x>
+      is comparable with every element in <math|P>.\ 
     </definition>
 
     <\lemma>
@@ -10812,16 +10807,17 @@
 
     <\proof>
       If <math|y\<in\>P> with <math|y\<less\>x> then as <math|P> is a
-      p-sequence we have that <math|succ<around*|(|y|)>\<in\>P>. Now <math|x>
-      is select we have that <math|x,succ<around*|(|y|)>> are comparable,
-      hence by [theorem: <reference|order comparable property>] we have
-      either <math|succ<around*|(|y|)>\<leqslant\>x> or
+      p-sequence we have by [definition: <reference|choice lemma p-sequence>
+      (2)] that <math|succ<around*|(|y|)>\<in\>P>. Now as <math|x> is select
+      we have that <math|x,succ<around*|(|y|)>> are comparable, hence by
+      [theorem: <reference|order comparable property>] we have either
+      <math|succ<around*|(|y|)>\<leqslant\>x> or
       <math|x\<less\>succ<around*|(|y|)>>. If
       <math|x\<less\>succ<around*|(|y|)>> then from <math|y\<less\>x> it
       follows that <math|y\<less\>x\<wedge\>x\<less\>succ<around*|(|y|)>>
       contradicting the fact that by [eq: <reference|eq 3.58.018>]
-      <math|succ<around*|(|y|)>> is the immediat successor of <math|y>. Hence
-      we must have that\ 
+      <math|succ<around*|(|y|)>> is the immediate successor of <math|y>.
+      Hence we must have that\ 
 
       <\equation*>
         succ<around*|(|y|)>\<leqslant\>x
@@ -10845,18 +10841,19 @@
 
         <\description>
           <item*|<math|y=x>>Then <math|succ<around*|(|x|)>=succ<around*|(|y|)>\<Rightarrow\>succ<around*|(|x|)>\<leqslant\>succ<around*|(|y|)>>
-          so that <math|succ<around*|(|y|)>\<in\>A<rsub|x>>
+          so that <math|succ<around*|(|y|)>\<in\>A<rsub|x>>.
 
-          <item*|<math|y\<less\>x>>Then as <math|y\<in\>P> we have by the
-          previous lemma [lemma: <reference|choice lemma property of select
-          elements>] that <math|succ<around*|(|y|)>\<less\>x\<Rightarrow\>succ<around*|(|y|)>\<leqslant\>x>
-          so that <math|succ<around*|(|y|)>\<in\>A<rsub|x>>
+          <item*|<math|y\<less\>x>>Then as
+          <math|y\<in\>A<rsub|x>\<subseteq\>P> we have by the previous lemma
+          [lemma: <reference|choice lemma property of select elements>] that
+          <math|succ<around*|(|y|)>\<less\>x\<Rightarrow\>succ<around*|(|y|)>\<leqslant\>x>
+          so that <math|succ<around*|(|y|)>\<in\>A<rsub|x>>.
 
           <item*|<math|succ<around*|(|x|)>\<leqslant\>y>>As
           <math|succ<around*|(|y|)>> is the immediate successor of <math|y>
           we have <math|y\<less\>succ<around*|(|y|)>> so that
           <math|succ<around*|(|x|)>\<less\>succ<around*|(|y|)>\<Rightarrow\>succ<around*|(|x|)>\<leqslant\>succ<around*|(|y|)>>
-          proving that <math|succ<around*|(|y|)>\<in\>A<rsub|x>>
+          proving that <math|succ<around*|(|y|)>\<in\>A<rsub|x>>.
         </description>
 
         so in all cases we have\ 
@@ -10888,7 +10885,7 @@
           <math|sup<around*|(|C|)>\<in\>A<rsub|x>>
         </description>
 
-        So in all cases weh ave\ 
+        So in all cases we have
 
         <\equation*>
           sup<around*|(|C|)>\<in\>A<rsub|x>
@@ -10940,7 +10937,7 @@
 
         <\description>
           <item*|<math|y\<leqslant\>x>>Then as <math|succ<around*|(|x|)>> is
-          the immediate succesort of <math|x> we have
+          the immediate successor of <math|x> we have
           <math|x\<less\>succ<around*|(|x|)>> so that
           <math|y\<less\>succ<around*|(|x|)>\<Rightarrow\>y\<leqslant\>succ<around*|(|x|)>>
           proving that <math|succ<around*|(|x|)>> is comparable with <math|y>
@@ -11006,7 +11003,7 @@
       3.59.018>] that <math|P\<subseteq\><around*|{|x\<in\>X\|x<text| is
       select>|}>>. So if <math|x,y\<in\>P> then <math|x> is select and as
       <math|y\<in\>P> comparable with <math|y>, proving that <math|P> is a
-      chain..
+      chain.
     </proof>
 
     We are now finally able to reach a contradiction and prove the theorem.
@@ -11015,19 +11012,13 @@
     <reference|eq 3.59.018>] we have by [definition: <reference|choice lemma
     p-sequence> (3)] that <math|sup<around*|(|P|)>\<in\>P> and by
     [definition: <reference|choice lemma p-sequence> (2)] that
-
-    <\equation>
-      <label|eq 3.60.018>succ<around*|(|sup<around*|(|P|)>|)>\<in\>P
-    </equation>
-
-    Now as <math|succ<around*|(|sup<around*|(|P|)>|)>> is the immediate
-    successor of <math|sup<around*|(|P|)>> we have
-    <math|sup<around*|(|P|)>\<less\>succ<around*|(|sup<around*|(|P|)>|)>> now
-    as <math|succ<around*|(|sup<around*|(|P|)>|)>\<in\>P> [see eq:
-    <reference|eq 3.60.018>] we have <math|><math|succ<around*|(|sup<around*|(|P|)>|)>\<less\>sup<around*|(|P|)>>
-    giving the contradiction <math|sup<around*|(|P|)>\<less\>sup<around*|(|P|)>>.
-    So the assumption is wrong and there is a element in <math|X> with no
-    immediate successor.
+    <math|succ<around*|(|sup<around*|(|P|)>|)>\<in\>P > so that
+    <math|succ<around*|(|sup<around*|(|P|)>|)>\<leqslant\>sup<around*|(|P|)>>.
+    As <math|><math|succ<around*|(|sup<around*|(|P|)>|)>> is the immediate
+    successor of <math|sup<around*|(|P|)>> we have that
+    <math|sup<around*|(|P|)>\<less\>succ<around*|(|sup<around*|(|P|)>|)>>.
+    Hence <math|sup<around*|(|P|)>\<less\>sup<around*|(|P|)>> which is a
+    contradiction.
   </proof>
 
   This was a long proof but it will be used in the following important
@@ -11038,7 +11029,8 @@
     partial ordered set <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>>
     is <with|font-series|bold|Hausdorff maximal> if there exist a chain
     <math|C> such that if <math|D> is a chain with <math|C\<subseteq\>D> then
-    <math|C=D>.\ 
+    <math|C=D>. In other words <math|C> is maximal when using the order
+    relation defined by <math|\<subseteq\>>.
   </definition>
 
   We show now that as a consequence of the Axiom of choice every partial
@@ -11047,7 +11039,7 @@
   <\theorem>
     <dueto|Hausdorff's Maximal Theorem><label|choice Hausdorff's Maximal
     Principle>Let <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a
-    partial ordered set then it is Hasudorff maximal. In other words there
+    partial ordered set then it is Hausdorff maximal. In other words there
     exists a chain <math|C> such that if <math|D> is a chain such that
     <math|C\<subseteq\>D> then <math|C=D>.\ 
   </theorem>
@@ -11069,7 +11061,7 @@
       <label|eq 3.61.018>\<cal-C\><text| is a set>
     </equation>
 
-    Using [example: <reference|order inclusion is a order> we have that\ 
+    Using [example: <reference|order inclusion is a order>] we have that\ 
 
     <\equation*>
       <around*|\<langle\>|\<cal-C\>,\<preccurlyeq\>|\<rangle\>><text| where
@@ -11077,15 +11069,15 @@
       is a partial ordered set>
     </equation*>
 
-    As <math|\<forall\>A\<in\>\<cal-S\>> we have
-    <math|\<varnothing\>\<subseteq\>A\<Rightarrow\>\<varnothing\>\<preccurlyeq\>>and
-    <math|\<varnothing\>> is a chain [see example: <reference|order empty set
-    is a chain>] in <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>><text|>
+    As <math|\<forall\>A\<in\>\<cal-C\>> we have
+    <math|\<varnothing\>\<subseteq\>A\<Rightarrow\>\<varnothing\>\<preccurlyeq\>A>
+    and <math|\<varnothing\>> is a chain [see example: <reference|order empty
+    set is a chain>] in <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>><text|>
     it follows that <text|>>
 
     <\equation>
       <label|eq 3.62.018>\<cal-C\><text| has a least element [using
-      <math|\<leqslant\>>]>
+      <math|\<preccurlyeq\>>]>
     </equation>
 
     Let <math|\<cal-D\>> a chain in <math|<around*|\<langle\>|\<cal-C\>,\<preccurlyeq\>|\<rangle\>>>
@@ -11107,10 +11099,10 @@
 
     From the above it follows that <math|<big|cup>\<cal-D\>> is a chain in
     <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> hence
-    <math|<big|cap>\<cal-D\>\<in\>\<cal-C\>>, so by [example:
+    <math|<big|cup>\<cal-D\>\<in\>\<cal-C\>>. Hence by [example:
     <reference|order example inclusion order and sup, inf>] it follows that
-    <math|<big|cup>\<cal-D\>=sup<around*|(|\<cal-D\>|)>>. Thus we have proved
-    that
+    <math|<big|cup>\<cal-D\>=sup<around*|(|\<cal-D\>|)>> [using
+    <math|\<preccurlyeq\>>]. So we have proved that
 
     <\equation>
       <label|eq 3.63.018><text|Every chain of
@@ -11150,18 +11142,18 @@
   </proof>
 
   We state now Zorn's lemma but not prove it yet, it will be show to be
-  directly indepenedent on the Hausdorff maximal principle, which in turn
+  directly dependent on the Hausdorff maximal principle, which in turn
   depends on the Axiom of Choice. So if we accept the Axiom of Choice [which
-  we do as it is a Axion] then Zorn's lemma applies.
+  we do as it is a expressed as a Axiom] then Zorn's lemma applies.
 
   <\lemma>
     <label|choice Zorn's lemma><index|Zorn's Lemma><dueto|Zorn's Lemma>Let
     <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a partial
     ordered set such that <math|>every chain has a upper bound then <math|X>
-    has a maimal element.
+    has a maximal element.
   </lemma>
 
-  We prove now that the Hausdorff Maximal principle implies Zorn's lemma\ 
+  We prove now that the Hausdorff Maximal principle implies Zorn's lemma.\ 
 
   <\theorem>
     <label|choice Hausdorff's implies Zorn's>Let
@@ -11172,20 +11164,19 @@
   <\proof>
     Let <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a partial
     ordered set such that every chain in <math|X> has a upper bound. As
-    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is Hasudorf maximal
-    [definition: <reference|choice Hausdorff maximal principle>] there exist
-    a chain <math|C> such that for every chain <math|D> with
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is Hausdorff
+    maximal [definition: <reference|choice Hausdorff maximal principle>]
+    there exist a chain <math|C> such that for every chain <math|D> with
     <math|C\<subseteq\>D> we have <math|C=D>. As <math|C> is a chain it has
-    by the hypothesis that there exist a upper bound <math|u> for <math|C>.
-    Assume now that <math|u> is not a maximal element of <math|u>, then by
-    the definition of a maximal element [definiition: <reference|order
-    maximal minimal element>] there exist a <math|x\<in\>X> with
-    <math|u\<leqslant\>x> and <math|u\<neq\>x> so that <math|u\<less\>x>. If
-    <math|x\<in\>C> then as <math|u> is a upper bound of <math|C> we have
-    <math|x\<leqslant\>u> so that <math|u\<less\>u> a contradiction. So we
-    must have that <math|x\<nin\>C>. Consider now
-    <math|r,s\<in\>C<big|cup><around*|{|x|}>> then we have to consider the
-    following possibilities:
+    by the hypothesis a upper bound <math|u> for <math|C>. Assume now that
+    <math|u> is not a maximal element of <math|X>, then by the definition of
+    a maximal element [definition: <reference|order maximal minimal element>]
+    there exist a <math|x\<in\>X> with <math|u\<leqslant\>x> and
+    <math|u\<neq\>x> so that <math|u\<less\>x>. If <math|x\<in\>C> then as
+    <math|u> is a upper bound of <math|C> we have <math|x\<leqslant\>u> so
+    that <math|u\<less\>u> a contradiction. So we must have that
+    <math|x\<nin\>C>. Consider now <math|r,s\<in\>C<big|cup><around*|{|x|}>>
+    then we have to consider the following possibilities:
 
     <\description>
       <item*|<math|r=x\<wedge\>s=x>>Then by reflectivity we have
@@ -11205,11 +11196,11 @@
       as <math|C> is a chain proves that <math|r,s> are comparable
     </description>
 
-    From the above it follows that <math|C<big|cup><around*|{|x|}>> is achain
-    such that <math|C\<subseteq\>C<big|cup><around*|{|x|}>> giving by
+    From the above it follows that <math|C<big|cup><around*|{|x|}>> is a
+    chain such that <math|C\<subseteq\>C<big|cup><around*|{|x|}>> giving by
     maximality of <math|C> that <math|C=C<big|cup><around*|{|x|}>>
     contradicting <math|x\<nin\>C>. Hence the assumption that <math|u> is not
-    a maiximal element of <math|X> is false. So <math|u> is a maximal element
+    a maximal element of <math|X> is false. So <math|u> is a maximal element
     of <math|X>.
   </proof>
 
@@ -11250,7 +11241,7 @@
     </equation>
 
     <\proof>
-      We have to prove reflexivity, anti-symmetry and transitivity.
+      We have to prove reflexivity, anti-symmetry and transitivity:
 
       <\description>
         <item*|reflectivity>If <math|<around*|(|B,R|)>\<in\>\<cal-A\>> then
@@ -11264,7 +11255,7 @@
           <item>If <math|x\<in\>B\<wedge\>y\<in\>B\\B\<equallim\><rsub|<text|[theorem:
           <reference|class universal and empotyset
           properties>]>>\<varnothing\>> which can not occur so that
-          <math|<around*|(|x,y|)>\<in\>R> is satisfied vacously
+          <math|<around*|(|x,y|)>\<in\>R> is satisfied vacuously
         </enumerate>
 
         proving that <math|<around*|(|B,R|)>\<preccurlyeq\><around*|(|B,R|)>>
@@ -11303,19 +11294,22 @@
       </description>
     </proof>
 
-    We have now the following sub lemma:
+    We now have the following sub lemma:
 
     <\lemma>
-      <label|choice lemma well ordering lemma (1)>If <math|\<cal-C\>> is a
-      chain in <math|<around*|\<langle\>|\<cal-A\>,\<preccurlyeq\>|\<rangle\>>>
-      then if\ 
+      <label|choice lemma well ordering lemma (1)>If
+      <math|\<cal-C\>\<subseteq\>\<cal-A\>> is a chain in
+      <math|<around*|\<langle\>|\<cal-A\>,\<preccurlyeq\>|\<rangle\>>> then
+      if\ 
 
       <\equation*>
-        B<rsub|\<cal-C\>>=<big|cup><around*|{|B\|<around*|(|B,R|)>\<in\>\<cal-C\>|}><text|>
+        B<rsub|\<cal-C\>>=<big|cup><around*|{|B\|\<exists\>R<text| such that
+        ><around*|(|B,R|)>\<in\>\<cal-C\>|}><text|>
       </equation*>
 
       <\equation*>
-        R<rsub|\<cal-C\>>=<big|cup><around*|{|R\|<around*|(|B,R|)>\<in\>\<cal-C\>|}>
+        R<rsub|\<cal-C\>>=<big|cup><around*|{|R\|\<exists\>B<text| such that
+        ><around*|(|B,R|)>\<in\>\<cal-C\>|}>
       </equation*>
 
       then\ 
@@ -11327,8 +11321,19 @@
 
     <\proof>
       \ First note that if <math|<around*|(|B,R|)>\<in\>\<cal-C\>> then
-      <math|B\<subseteq\><big|cup><around*|{|B\|<around*|(|B,R|)>\<in\>\<cal-C\>|}>=B<rsub|\<cal-C\>>>
-      and <math|R\<subseteq\><big|cup><around*|{|R\|<around*|(|B,R|)>\<in\>\<cal-C\>|}>=R<rsub|\<cal-C\>>>
+
+      <\equation*>
+        B\<in\><around*|{|B\|\<exists\>R<text| such that
+        ><around*|(|B,R|)>\<in\>\<cal-C\>|}>
+      </equation*>
+
+      and
+
+      <\equation*>
+        R\<in\><around*|{|R\|\<exists\>B<text| such that
+        ><around*|(|B,R|)>\<in\>\<cal-C\>|}>
+      </equation*>
+
       or\ 
 
       <\equation>
@@ -11340,8 +11345,8 @@
         <item>If <math|x\<in\>B<rsub|\<cal-C\>>> then
         <math|\<exists\><around*|(|B,R|)>\<in\>\<cal-C\>> such that
         <math|x\<in\>B>, as <math|\<cal-C\>\<subseteq\>\<cal-A\>> we have
-        <math|<around*|(|B,R|)>\<in\>\<cal-A\>>, so that
-        <math|B\<in\>\<cal-P\><around*|(|A|)>> hence <math|B\<subseteq\>A>,
+        <math|<around*|(|B,R|)>\<in\>\<cal-C\>>, so that
+        <math|B\<in\>\<cal-P\><around*|(|A|)>>, hence <math|B\<subseteq\>A>,
         proving that <math|x\<in\>A>. In other words
         <math|B<rsub|\<cal-C\>>\<subseteq\>A> or
         <math|B\<in\>\<cal-P\><around*|(|A|)>>.
@@ -11353,8 +11358,8 @@
           <item*|reflectivity>If <math|x\<in\>B<rsub|\<cal-C\>>> then
           <math|\<exists\><around*|(|B,R|)>\<in\>\<cal-C\>> such that
           <math|x\<in\>B>, as <math|R> is a order relation we have that
-          <math|<around*|(|x,x|)>\<in\>R> so that
-          <math|<around*|(|x,y|)>\<in\>R<rsub|\<cal-C\>>>
+          <math|<around*|(|x,x|)>\<in\>R> so that by [eq: <reference|eq
+          3.66.019>] <math|<around*|(|x,x|)>\<in\>R<rsub|\<cal-C\>>>
 
           <item*|anti-symmetry>If <math|<around*|(|x,y|)>\<in\>R<rsub|\<cal-C\>>\<wedge\><around*|(|y,x|)>\<in\>R<rsub|\<cal-C\>>>
           then <math|\<exists\><around*|(|B,R|)>,<around*|(|B<rprime|'>,R<rprime|'>|)>\<in\>\<cal-C\>>
@@ -11387,28 +11392,30 @@
             <math|<around*|(|x,y|)>\<in\>R<rprime|'>\<wedge\><around*|(|y,z|)>\<in\>R<rprime|'>>,
             which as <math|R<rprime|'>> is a order relation proves that
             <math|<around*|(|x,z|)>\<in\>R<rprime|'>>, hence
-            <math|<around*|(|x,z|)>\<in\>R<rsub|\<cal-C\>>>
+            <math|<around*|(|x,z|)>\<in\>R<rsub|\<cal-C\>>> [see eq:
+            <reference|eq 3.66.019>].
 
             <item*|<math|<around*|(|B<rprime|'>,R<rprime|'>|)>\<preccurlyeq\><around*|(|B,R|)>>>Then
             <math|R<rprime|'>\<subseteq\>R> so that
             <math|<around*|(|x,y|)>\<in\>R\<wedge\><around*|(|y,z|)>\<in\>R>,
             which as <math|R> is a order relation proves that
             <math|<around*|(|x,z|)>\<in\>R>, hence
-            <math|<around*|(|x,z|)>\<in\>R<rsub|\<cal-C\>>>.
+            <math|<around*|(|x,z|)>\<in\>R<rsub|\<cal-C\>>> [see eq:
+            <reference|eq 3.66.019>].
           </description>
         </description>
 
-        <item>Next we have to prove well-ordering of
+        <item>Next we have to prove well ordering of
         <math|<around*|\<langle\>|B<rsub|\<cal-C\>>,R<rsub|\<cal-C\>>|\<rangle\>>>.
         Let <math|D\<subseteq\>B<rsub|\<cal-C\>>> and
         <math|D\<neq\>\<varnothing\>>. Then there exist a <math|x\<in\>D> so
-        that <math|x\<in\>B<rsub|\<cal-C\>>>, so there exist a
-        <math|<around*|(|B,R|)>\<in\>\<cal-C\>> such that <math|x\<in\>B> so
-        that <math|x\<in\>D<big|cap>B> proving that
+        that <math|x\<in\>B<rsub|\<cal-C\>>>, hence there exist a
+        <math|<around*|(|B,R|)>\<in\>\<cal-C\>> such that <math|x\<in\>B> or
+        <math|x\<in\>D<big|cap>B> proving that
         <math|D<big|cap>B\<neq\>\<varnothing\>>. As
         <math|\<cal-C\>\<subseteq\>\<cal-A\>> we have by the definition of
         <math|\<cal-A\>> that <math|<around*|\<langle\>|B,R|\<rangle\>>> is
-        well-ordered there exist a least element <math|b\<in\>B>. So\ 
+        well ordered, hence there exist a least element <math|b\<in\>B>. So\ 
 
         <\equation>
           <label|eq 3.66.018>\<forall\>y\<in\>B<text| we have
@@ -11423,37 +11430,39 @@
 
         <\proof>
           If <math|x\<in\>D> then <math|\<exists\><around*|(|B<rprime|'>,R<rprime|'>|)>>
-          such that <math|x\<in\>B<rprime|'>> then we have for <math|x> and
-          <math|B> the following cases to consider:
+          such that <math|x\<in\>B<rprime|'>>. For <math|x> and <math|B> we
+          the following possible cases:
 
           <\description>
             <item*|<math|x\<in\>B>>Then by [eq: <reference|eq 3.66.018>] we
-            have that <math|<around*|(|b,x|)>\<in\>R> so that
-            <math|<around*|(|b,x|)>\<in\>R<rsub|\<cal-C\>>>
+            have that <math|<around*|(|b,x|)>\<in\>R> so that by [eq:
+            <reference|eq 3.66.019>] \ <math|<around*|(|b,x|)>\<in\>R<rsub|\<cal-C\>>>.\ 
 
             <item*|<math|x\<nin\>B>>Then <math|x\<in\>B<rprime|'>\\B\<wedge\>b\<in\>B>.
-            As <math|\<cal-C\>> is a chain we have the following cases to
-            consider:
+            As <math|\<cal-C\>> is a chain we have the following cases:
 
             <\description>
               <item*|<math|<around*|(|B,R|)>\<preccurlyeq\><around*|(|B<rprime|'>,R<rprime|'>|)>>>Then
               by definition of <math|\<preccurlyeq\>> we have
-              <math|<around*|(|b,x|)>\<in\>R<rprime|'>> so that
-              <math|<around*|(|b,x|)>\<in\>R<rsub|\<cal-C\>>.>
+              <math|<around*|(|b,x|)>\<in\>R<rprime|'>> so that by [eq:
+              <reference|eq 3.66.019>] \ <math|<around*|(|b,x|)>\<in\>R<rsub|\<cal-C\>>>
 
               <item*|<math|<around*|(|B<rprime|'>,R<rprime|'>|)>\<preccurlyeq\><around*|(|B,R|)>>>Then
-              <math|B<rprime|'>\<subseteq\>B> then as
+              <math|B<rprime|'>\<subseteq\>B> and as
               <math|x\<in\>B<rprime|'>> we have <math|x\<in\>B> contradicting
-              <math|x\<in\>B>. So this case never occurs.
+              <math|x\<nin\>B>. So this case never occurs.
             </description>
           </description>
 
-          So in all cases we have <math|<around*|(|b,x|)>\<in\>R<rsub|\<cal-C\>>>
-          proving that <math|b> is a least element of <math|D>.
+          So in all cases that apply we have
+          <math|<around*|(|b,x|)>\<in\>R<rsub|\<cal-C\>>> proving that
+          <math|b> is a least element of <math|D>.
         </proof>
 
-        So <math|<around*|\<langle\>|B<rsub|\<cal-C\>>,R<rsub|\<cal-C\>>|\<rangle\>>>
-        is well-ordered.
+        As we have proved that every non empty <math|D\<subseteq\>B<rsub|C>>
+        has a least element [using the order <math|R<rsub|\<cal-C\>>> it
+        follows that <math|<around*|\<langle\>|B<rsub|\<cal-C\>>,R<rsub|\<cal-C\>>|\<rangle\>>>
+        is well ordered.
       </enumerate>
 
       From (1),(2) and (3) it follows that\ 
@@ -11493,8 +11502,8 @@
         <math|<around*|(|B,R|)>\<preccurlyeq\><around*|(|B<rprime|'>,R<rprime|'>|)>>
         or <math|<around*|(|B<rprime|'>,R<rprime|'>|)>\<preccurlyeq\><around*|(|B,R|)>>.
         If <math|<around*|(|B<rprime|'>,R<rprime|'>|)>\<preccurlyeq\><around*|(|B,R|)>>
-        we have <math|B<rprime|'>\<subseteq\>B>, as <math|y\<in\>B<rprime|'>>
-        we would have <math|y\<in\>B> contradiction
+        then <math|B<rprime|'>\<subseteq\>B>, as <math|y\<in\>B<rprime|'>> we
+        would have <math|y\<in\>B> contradiction
         <math|y\<in\>B<rsub|\<cal-C\>>\\B>. So we have
 
         <\equation*>
@@ -11514,12 +11523,11 @@
       <\equation*>
         <around*|(|B,R|)>\<preccurlyeq\><around*|(|B<rsub|\<cal-C\>>,R<rsub|\<cal-C\>>|)>
       </equation*>
-
-      \;
     </proof>
 
-    Using Zorn's [lemma: <reference|choice Zorn's lemma>] together with
-    [lemma: <reference|choice lemma upper bound of chain>] we have
+    Using Zorn's [lemma: <reference|choice Zorn's lemma>] together with the
+    above lemma [lemma: <reference|choice lemma upper bound of chain>] we
+    have
 
     <\equation>
       <label|eq 3.68.019>\<exists\><around*|(|B<rsub|m>,R<rsub|m>|)>\<in\>\<cal-A\><text|
@@ -11536,7 +11544,12 @@
     <\proof>
       Assume that <math|X\<neq\>B<rsub|m>>. Then as
       <math|B<rsub|m>\<in\>\<cal-P\><around*|(|X|)>\<Rightarrow\>B<rsub|m>\<subseteq\>X>
-      there exist a <math|x\<in\>X\\B<rsub|m>\<Rightarrow\>x\<nin\>B<rsub|m>>.
+      there exist a
+
+      <\equation*>
+        x\<in\>X\\B<rsub|m>\<Rightarrow\>x\<nin\>B<rsub|m>.
+      </equation*>
+
       Define
 
       <\equation>
@@ -11550,7 +11563,7 @@
       then <math|r\<in\>B<rsub|m>\<wedge\>r=x\<nin\>B<rsub|m>> a
       contradiction and finally if <math|<around*|(|r,s|)>\<in\><around*|{|<around*|(|b,x|)>\|b\<in\>B<rsub|m>|}><big|cap><around*|{|<around*|(|x,x|)>|}>>
       then <math|r\<in\>B<rsub|m>\<wedge\>r=x\<nin\>B<rsub|m>> a
-      contradiciton. So we have\ 
+      contradiction. So we have\ 
 
       <\equation>
         <label|eq 3.70.019>R<rsub|m><big|cap><around*|{|<around*|(|b,x|)>\|b\<in\>B<rsub|m>|}>=\<varnothing\>\<wedge\>R<rsub|m><big|cap><around*|{|<around*|(|x,x|)>|}>=\<varnothing\>\<wedge\><around*|{|<around*|(|b,x|)>\|b\<in\>B<rsub|m>|}><big|cap><around*|{|<around*|(|x,x|)>|}>=\<varnothing\>
@@ -11558,7 +11571,8 @@
 
       Further if <math|*<around*|(|x,r|)>\<in\>R<rsup|\<star\>>> then we have
       either <math|<around*|(|x,r|)>\<in\>R<rsub|m>\<Rightarrow\>x\<in\>B<rsub|m>>
-      contradicting <math|x\<nin\>m>, <math|<around*|(|x,r|)>\<in\><around*|{|<around*|(|b,x|)>\|b\<in\>B<rsub|m>|}>\<Rightarrow\>x\<in\>B<rsub|m><text|
+      contradicting <math|x\<nin\>B<rsub|m>>,,
+      <math|<around*|(|x,r|)>\<in\><around*|{|<around*|(|b,x|)>\|b\<in\>B<rsub|m>|}>\<Rightarrow\>x\<in\>B<rsub|m><text|
       contradicting >x\<nin\>B<rsub|m>> or
       <math|<around*|(|x,r|)>\<in\><around*|{|<around*|(|x,x|)>|}>\<Rightarrow\>r=x>.
       To summarize we have\ 
@@ -11568,8 +11582,8 @@
         then >r=x
       </equation>
 
-      We prove now that <math|<around*|\<langle\>|B<rsub|m><big|cup><around*|{|x|}>,R<rsup|\<ast\>>|\<rangle\>><text|
-      is a well-ordered partial set>>.
+      We prove now that <math|<around*|\<langle\>|B<rsub|m><big|cup><around*|{|x|}>,R<rsup|\<ast\>>|\<rangle\>><text|>>
+      is well ordered.
 
       <\proof>
         First we have:\ 
@@ -11588,7 +11602,7 @@
             <math|<around*|(|r,r|)>=<around*|(|x,x|)>\<in\><around*|{|<around*|(|x,x|)>|}>\<subseteq\>R<rsup|\<ast\>>>
           </description>
 
-          proving that <math|<around*|(|r,r|)>\<in\>R<rsup|\<ast\>>>
+          proving that <math|<around*|(|r,r|)>\<in\>R<rsup|\<ast\>>>.
 
           <item*|anti-symmetry>If <math|<around*|(|r,s|)>\<in\>R<rsup|\<ast\>>>
           and <math|<around*|(|s,r|)>\<in\>R<rsup|\<ast\>>> then we have by
@@ -11598,16 +11612,18 @@
             <item*|<math|<around*|(|r,s|)>\<in\>R<rsub|m>>>Then as
             <math|R<rsub|m>\<subseteq\>B<rsub|m>\<times\>B<rsub|m>> we have
             <math|r,s\<in\>B<rsub|m>> so that <math|r\<neq\>x\<neq\>s> so
-            that <math|<around*|(|s,r|)>\<in\>R<rsub|m>>, which as
-            <math|<around*|\<langle\>|R<rsub|m>,R<rsub|m>|\<rangle\>>> is a
-            partial order gives that <math|r=s>
+            that <math|<around*|(|s,r|)>\<in\>R<rsub|m>> [if
+            <math|<around*|(|s,r|)>\<in\><around*|{|<around*|(|b,x|)>\|b\<in\>B|}><big|cup><around*|{|<around*|(|x,x|)>|}>>
+            then <math|r=x> contradicting <math|r\<neq\>x>], which as
+            <math|<around*|\<langle\>|B<rsub|m>,R<rsub|m>|\<rangle\>>> is a
+            partial order gives that <math|r=s>.
 
             \ <item*|<math|<around*|(|r,s|)>\<in\><around*|{|<around*|(|b,x|)>\|b\<in\>B<rsub|m>|}>>>Then
             <math|s=x> so that <math|<around*|(|x,r|)>=<around*|(|s,r|)>\<in\>R<rsup|\<ast\>>\<Rightarrowlim\><rsub|<text|[eq:
             <reference|eq 3.71.019>]>>r=x=s> hence <math|s=r>.
 
             <item*|<math|<around*|(|r,s|)>\<in\><around*|{|<around*|(|x,x|)>|}>>>Then
-            <math|r=x=s\<Rightarrow\>r=s>
+            <math|r=x=s\<Rightarrow\>r=s>.
           </description>
 
           proving <math|r=s>
@@ -11626,17 +11642,17 @@
 
               <item*|<math|<around*|(|s,t|)>\<in\><around*|{|<around*|(|b,x|)>\|b\<in\>B<rsub|m>|}>>>Then
               <math|t=x> and <math|r\<in\>B<rsub|m>> so that
-              <math|<around*|(|s,t|)>\<in\><around*|{|<around*|(|b,x|)>\|b\<in\>B<rsub|m>|}>\<subseteq\>R<rsup|\<ast\>>>.
+              <math|<around*|(|r,t|)>\<in\><around*|{|<around*|(|b,x|)>\|b\<in\>B<rsub|m>|}>\<subseteq\>R<rsup|\<ast\>>>.
 
               <item*|<math|<around*|(|s,t|)>\<in\><around*|{|<around*|(|x,x|)>|}>>>Then
               <math|t=x> and <math|r\<in\>B<rsub|m>> so that
-              <math|<around*|(|s,t|)>\<in\><around*|{|<around*|(|b,x|)>\|x\<in\>B<rsub|m>|}>\<subseteq\>R<rsup|\<ast\>>>.
+              <math|<around*|(|r,t|)>\<in\><around*|{|<around*|(|b,x|)>\|x\<in\>B<rsub|m>|}>\<subseteq\>R<rsup|\<ast\>>>.
             </description>
 
             <item*|<math|<around*|(|r,s|)>\<in\><around*|{|<around*|(|b,x|)>\|b\<in\>B<rsub|m>|}>>>Then
             <math|s=x> so that <math|<around*|(|s,t|)>=<around*|(|x,t|)>\<in\>R<rsup|\<ast\>>\<Rightarrowlim\><rsub|<text|[eq:
             <reference|eq 3.71.019>]>>t=x>. As <math|r\<in\>B<rsub|m>> we
-            have <math|<around*|(|r,t|)>\<in\><around*|{|<around*|(|b,x|)>\|b\<in\>B<rsub|m>|}>>.
+            have <math|<around*|(|r,t|)>\<in\><around*|{|<around*|(|b,x|)>\|b\<in\>B<rsub|m>|}>\<subseteq\>R<rsup|\<ast\>>>.
 
             <item*|<math|<around*|(|r,s|)>\<in\><around*|{|<around*|(|x,x|)>|}>>>Then
             <math|r=x\<wedge\>t=x> so that
@@ -11652,18 +11668,18 @@
 
         <\equation*>
           <around*|\<langle\>|B<rsub|m><big|cup><around*|{|x|}>,R<rsup|\<ast\>>|\<rangle\>><text|
-          is a partial ordered >
+          is partial ordered >
         </equation*>
 
         If <math|\<varnothing\>\<neq\>C\<subseteq\>B<rsub|m><big|cup><around*|{|x|}>>
         is non empty then we have for <math|C<big|cap>B<rsub|m>> the
-        following possibilitie:
+        following possibilities:
 
         <\description>
           <item*|<math|C<big|cap>B<rsub|m>\<neq\>\<varnothing\>>>Then as
           <math|\<varnothing\>\<neq\>C<big|cap>B<rsub|m>\<subseteq\>B<rsub|m>>
           and <math|<around*|\<langle\>|B<rsub|m>,R<rsub|m>|\<rangle\>>> is
-          well-ordered [see defiintion of <math|\<cal-A\>>] there exist a
+          well ordered [see definition of <math|\<cal-A\>>] there exist a
           least element <math|l\<in\>C<big|cap>B<rsub|m>> so
 
           <\equation>
@@ -11686,17 +11702,17 @@
           proving that <math|<around*|(|l,r|)>\<in\>R<rsup|\<ast\>>>. Hence\ 
 
           <\equation*>
-            C<text| has a least element >based<around*|\<langle\>|B<big|cup><around*|{|x|}>,R<rsup|\<ast\>>|\<rangle\>>
+            C<text| has a least element[>using
+            <around*|\<langle\>|B<big|cup><around*|{|x|}>,R<rsup|\<ast\>>|]>
           </equation*>
 
           <item*|<math|C<big|cap>B<rsub|m>=\<varnothing\>>>Then
           <math|C=<around*|{|x|}>> so that <math|\<forall\>r\<in\>C> we have
           <math|r=x> so that <math|<around*|(|r,x|)>=<around*|(|x,x|)>\<in\><around*|{|<around*|(|x,x|)>|}>\<subseteq\>R<rsup|\<ast\>>>
-          proving that <math|x> is a least element of <math|C>
+          proving that <math|x> is a least element of <math|C>.
         </description>
 
-        So in all cases we have that <math|C> has a least element, So we have
-        that
+        So in all cases we have that <math|C> has a least element, hence
 
         <\equation*>
           <around*|\<langle\>|B<rsub|m><big|cup><around*|{|x|}>,R<rsup|\<ast\>>|\<rangle\>><text|
@@ -11705,7 +11721,7 @@
       </proof>
 
       Now as <math|B<rsub|m><big|cup><around*|{|x|}>\<subseteq\>X>, we have
-      by the definition of <math|\<cal-A\>> that\ 
+      by the definition of <math|\<cal-A\>> and the above that\ 
 
       <\equation*>
         <around*|(|B<rsub|m><big|cup><around*|{|x|}>,R<rsup|\<ast\>>|)>\<in\>\<cal-A\>
@@ -11716,7 +11732,7 @@
       <\enumerate>
         <item><math|B<rsub|m>\<subseteq\>B<rsub|m><big|cup><around*|{|x|}>>
 
-        <item><math|R<rsub|m>\<in\>=R<rsup|\<ast\>>>
+        <item><math|R<rsub|m>\<subseteq\>R<rsup|\<ast\>>>
 
         <item>If <math|r\<in\>B<rsub|m>> and
         <math|s\<in\><around*|(|B<rsub|m><big|cup><around*|{|x|}>|)>\\B<rsub|m>>
@@ -11736,30 +11752,32 @@
       </equation*>
     </proof>
 
-    Which as <math|<around*|\<langle\>|B<rsub|m>,R<rsub|m>|\<rangle\>>> is a
-    well-ordered proves that there exists a partial order <math|R<rsub|m>>
-    such that\ 
+    As <math|<around*|\<langle\>|B<rsub|m>,R<rsub|m>|\<rangle\>>> is a well
+    ordered the above proves that there exists a partial order
+    <math|R<rsub|m>> such that\ 
 
     <\equation*>
-      <around*|\<langle\>|X,B<rsub|m>|\<rangle\>><text| is well-ordered>
+      <around*|\<langle\>|X,R<rsub|m>|\<rangle\>>=<around*|\<langle\>|B<rsub|m>,R<rsub|m>|\<rangle\>>
+      <text| is well-ordered by [by definition of <math|\<cal-A\>>
+      >B<rsub|m><text| is well ordered]>
     </equation*>
   </proof>
 
-  We show now that Well- Ordering implies the Axiom of Choice.
+  We show now that Well Ordering implies the Axiom of Choice.
 
   <\theorem>
     <label|choice well-order implies Axiom of Choice>Assume that for every
     <math|X> there exist a order relation such that
-    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is well-ordered
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is well ordered
     then there exists a function <math|c:\<cal-P\><rprime|'><around*|(|X|)>\<rightarrow\>X>
     such that <math|\<forall\>A\<in\>\<cal-P\><rprime|'><around*|(|X|)>> we
-    have <math|c<around*|(|A|)>\<in\>A>
+    have <math|c<around*|(|A|)>\<in\>A> (Axiom of Choice).
   </theorem>
 
   <\proof>
     Let <math|X> be a set then by the hypothesis there exist a order
     <math|\<leqslant\>> on <math|X> such that
-    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is well-ordered.
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is well ordered.
     Define now <math|c=<around*|{|<around*|(|A,x|)>\|A\<in\>\<cal-P\><rprime|'><around*|(|X|)>\<wedge\>x<text|
     is a least element of <math|A>>|}>>. If <math|<around*|(|A,x|)>\<in\>c>
     then <math|A\<in\>\<cal-P\><rprime|'><around*|(|X|)>> and <math|x> is a
@@ -11772,23 +11790,23 @@
     that <math|x=x<rprime|'>>. Hence we have that\ 
 
     <\equation*>
-      c:\<cal-P\><rprime|'><around*|(|X|)>\<times\>X\<rightarrow\>X<text| is
-      a partial function>
+      c:\<cal-P\><rprime|'><around*|(|X|)>\<rightarrow\>X<text| is a partial
+      function>
     </equation*>
 
     If <math|A\<in\>\<cal-P\><rprime|'><around*|(|X|)>> then
-    <math|A\<neq\>\<varnothing\>> so by well-ordering <math|A> has a least
+    <math|A\<neq\>\<varnothing\>> so by well ordering <math|A> has a least
     element <math|l> so that <math|<around*|(|A,l|)>\<in\>c>, so
     <math|\<cal-P\><rprime|'><around*|(|A|)>\<subseteq\>dom<around*|(|c|)>>.
     Hence by [proposition: <reference|function condition (1)>] we have that\ 
 
     <\equation*>
-      c:\<cal-P\><rprime|'><around*|(|X|)>\<times\>X\<rightarrow\>X<text| is
-      a function>
+      c:\<cal-P\><rprime|'><around*|(|X|)>\<rightarrow\>X<text| is a
+      function>
     </equation*>
 
     If <math|<around*|(|A,x|)>\<in\>c> then <math|x> is the least element of
-    <math|A> so that <math|x\<in\>A=c<around*|(|A|)>> proving that
+    <math|A> so that <math|c<around*|(|A|)>=x\<in\>A> proving that
 
     <\equation*>
       c:\<cal-P\><rprime|'><around*|(|X|)>\<rightarrow\>X<text| is a choice
@@ -11809,7 +11827,7 @@
 
       <item>Zorn's Lemma
 
-      <item>Every set can be well-ordered
+      <item>Every set can be well ordered
     </enumerate>
   </theorem>
 
@@ -11842,18 +11860,18 @@
     <\description>
       <item*|Axiom of Choice>Let <math|X> be a set then there exist a
       function <math|c:\<cal-P\><rprime|'><around*|(|X|)>\<rightarrow\>X>
-      such that <math|\<forall\>A\<in\>\<cal-P\>.<around*|(|X|)>> we have
-      <math|c<around*|(|A|)>\<in\>A>.
+      such that <math|\<forall\>A\<in\>\<cal-P\><rprime|'><around*|(|X|)>> we
+      have <math|c<around*|(|A|)>\<in\>A>.
 
-      <item*|Existance of Choice set>Let <math|\<cal-A\>> be a set of sets
+      <item*|Existence of Choice set>Let <math|\<cal-A\>> be a set of sets
       such that\ 
 
       <\enumerate-alpha>
         <item><math|\<forall\>A\<in\>\<cal-A\><text| we have
         >A\<neq\>\<varnothing\>>
 
-        <item><math|\<forall\>A,B\<in\>\<cal-A\><text| with >A\<neq\>B> with
-        <math|A<big|cap>B=\<varnothing\>>
+        <item><math|\<forall\>A,B\<in\>\<cal-A\><text| with >A\<neq\>B> we
+        have <math|A<big|cap>B=\<varnothing\>>
       </enumerate-alpha>
 
       then there exist a set <math|C> [called the
@@ -11893,7 +11911,8 @@
     </description>
   </theorem>
 
-  There is a kind of extension of Zorn's lemma to pre-ordered sets.
+  There is a kind of extension of Zorn's lemma to pre-ordered sets if change
+  the definition of maximal element slightly.
 
   <\theorem>
     <label|choice Zorn's lemma for pre-order>Let
@@ -11906,7 +11925,8 @@
   </theorem>
 
   <\proof>
-    Using [theorem: <reference|order eq order preorder to order>] we have\ 
+    Using [theorem: <reference|order eq order preorder to order>] we have the
+    following
 
     <\enumerate>
       <item><math|\<sim\>\<subseteq\>X\<times\>X> defined by
@@ -11938,7 +11958,8 @@
     <math|x\<sim\>x<rprime|'>> and <math|y\<sim\>y<rprime|'>> or
     <math|x\<leqslant\>x<rprime|'>\<wedge\>x<rprime|'>\<leqslant\>x><space|1em>and
     <math|y\<leqslant\>y<rprime|'>\<wedge\>y<rprime|'>\<leqslant\>y>. As
-    <math|C> is a chain [using <math|\<preccurlyeq\>>] we have:
+    <math|C> is a chain [using <math|\<preccurlyeq\>>] we have the following
+    possibilities:
 
     <\description>
       <item*|<math|\<sim\><around*|[|x<rprime|'>|]>\<preccurlyeq\>\<sim\><around*|[|y<rprime|'>|]>>>then
@@ -11948,8 +11969,8 @@
 
       <item*|<math|\<sim\><around*|[|y<rprime|'>|]>\<preccurlyeq\>\<sim\><around*|[|x<rprime|'>|]>>>then
       <math|y<rprime|'>\<leqslant\>x<rprime|'>> and as
-      <math|y\<less\>y<rprime|'>> and <math|x<rprime|'>\<leqslant\>x> we have
-      <math|y\<leqslant\>x>
+      <math|y\<leqslant\>y<rprime|'>> and <math|x<rprime|'>\<leqslant\>x> we
+      have <math|y\<leqslant\>x>
     </description>
 
     proving that <math|x,y> are comparable. Hence\ 
@@ -11963,7 +11984,7 @@
 
     <\equation*>
       \<exists\>u\<in\>X<text| such that >\<forall\>x\<in\>C<rprime|'><text|
-      we have >x
+      we have >x\<leqslant\>u
     </equation*>
 
     Take now <math|\<sim\><around*|[|z|]>\<in\>C> then
@@ -11980,7 +12001,7 @@
     <\equation*>
       \<forall\>\<sim\><around*|[|x|]>\<in\>X/\<sim\><text| with
       <math|\<sim\><around*|[|m|]>\<preccurlyeq\>\<sim\><around*|[|x|]><text|
-      then <math|\<sim\><around*|[|x|]>=\<sim\><around*|[|m|]>>>>>
+      we have <math|\<sim\><around*|[|x|]>=\<sim\><around*|[|m|]>>>>>
     </equation*>
 
     If now <math|x\<in\>X> such that <math|x\<leqslant\>m> then by (3) we
@@ -11989,7 +12010,7 @@
     so that <math|x\<sim\>m> hence <math|x\<leqslant\>m>.
   </proof>
 
-  As a interestubg application of the Axiom of Choice we have that every
+  As a interesting application of the Axiom of Choice we prove that every
   function can be restricted to a injection or bijection.
 
   <\theorem>
@@ -12010,11 +12031,16 @@
     \ 
 
     <\enumerate>
-      <item>Define <math|\<cal-A\>=<around*|{|f<rsup|-1><around*|(|<around*|{|y|}>|)>\|y\<in\>f<around*|(|X|)>|}>>.
+      <item>Define
+
+      <\equation*>
+        \<cal-A\>=<around*|{|f<rsup|-1><around*|(|<around*|{|y|}>|)>\|y\<in\>f<around*|(|X|)>|}>.
+      </equation*>
+
       If <math|A\<in\>\<cal-A\>> then <math|\<exists\>y\<in\>f<around*|(|X|)>>
       such that <math|A=f<rsup|-1><around*|(|<around*|{|y|}>|)>\<subseteq\>X>
       and as <math|y\<in\>f<around*|(|X|)>> there exists a <math|x\<in\>X>
-      such that <math|f<around*|(|x|)>=y\<in\><around*|{|y|}>\<Rightarrow\>x\<in\>f<rsup|-1><around*|(|<around*|{|y|}>|)>>,
+      such that <math|f<around*|(|x|)>=y\<in\><around*|{|y|}>\<Rightarrow\>x\<in\>f<rsup|-1><around*|(|<around*|{|y|}>|)>=A>,
       proving that <math|A\<neq\>\<varnothing\>>. So we have proved that\ 
 
       <\equation*>
@@ -12022,11 +12048,21 @@
       </equation*>
 
       By the Axiom of Choice [axiom: <reference|axiom of choice>] there exist
-      a function <math|c:\<cal-P\><rprime|'><around*|(|X|)>\<rightarrow\>X>
-      such that <math|\<forall\>A\<in\>\<cal-P\><rprime|'><around*|(|A|)>> we
-      have <math|<around*|(|c|)><around*|(|A|)>\<in\>A>. Take
-      <math|Z=c<around*|(|\<cal-A\>|)>\<subseteq\>X>
-      <math|<around*|[|c<around*|(|\<cal-A\>|)>|]>> consider\ 
+      a function
+
+      <\equation*>
+        c:\<cal-P\><rprime|'><around*|(|X|)>\<rightarrow\>X<text| such that
+        >\<forall\>A\<in\>\<cal-P\><rprime|'><around*|(|X|)><text|
+        ><around*|(|c|)><around*|(|A|)>\<in\>A
+      </equation*>
+
+      Take
+
+      <\equation*>
+        Z=c<around*|(|\<cal-A\>|)>\<subseteq\>X
+      </equation*>
+
+      and consider the restriction of <math|f> to <math|Z>
 
       <\equation*>
         f<rsub|\|Z>:Z\<rightarrow\>Y
@@ -12035,8 +12071,8 @@
       Let <math|x,y\<in\>Z> such that <math|f<rsub|\|Z><around*|(|x|)>=f<rsub|\|Z><around*|(|y|)>\<Rightarrowlim\><rsub|x,y\<in\>Z>f<around*|(|x|)>=f<around*|(|y|)>>.
       As <math|x,y\<in\>Z=c<around*|(|\<cal-A\>|)>> there exists
       <math|A<rsub|x>\<in\>\<cal-A\>\<wedge\>A<rsub|y>\<in\>\<cal-A\>> such
-      that <math|<around*|(|c|)><around*|(|A<rsub|x>|)>=x\<in\>A<rsub|x>> and
-      <math|<around*|(|c|)><around*|(|A<rsub|y>|)>=y\<in\>A<rsub|x>>. As
+      that <math|x=<around*|(|c|)><around*|(|A<rsub|x>|)>\<in\>A<rsub|x>> and
+      <math|y=<around*|(|c|)><around*|(|A<rsub|y>|)>\<in\>A<rsub|x>>. As
       <math|A<rsub|x>,A<rsub|y>\<in\>\<cal-A\>> there exist
       <math|x<rprime|'>,y<rprime|'>\<in\>f<around*|(|X|)>> such that
       <math|A<rsub|x>=f<rsup|-1><around*|(|<around*|{|x<rprime|'>|}>|)>> and
@@ -12047,12 +12083,12 @@
       <math|x<rprime|'>=y<rprime|'>> so that
       <math|A<rsub|x>=f<rsup|-1><around*|(|<around*|{|x<rprime|'>|}>|)>=f<rsup|-1><around*|(|<around*|{|y<rprime|'>|}>|)>=A<rsub|y>>.
       So <math|x=<around*|(|c|)><around*|(|A<rsub|x>|)>=<around*|(|c|)><around*|(|A<rsub|y>|)>=y>,
-      proving that <math|x=y>.
+      proving that <math|x=y>.\ 
 
       <item>If <math|y\<in\>f<around*|(|X|)>> then
       <math|f<rsup|-1><around*|(|<around*|{|y|}>|)>\<in\>\<cal-A\>> so to
       that x=<math|<around*|(|c|)><around*|(|f<rsup|-1><around*|(|<around*|{|y|}>|)>|)>\<in\>c<around*|(|\<cal-A\>|)>=Z>.
-      Further as <math|<around*|(|c|)><around*|(|f<rsup|-1><around*|(|<around*|{|x|}>|)>|)>\<in\>f<rsup|-1><around*|(|<around*|{|x|}>|)>>
+      Further as <math|<around*|(|c|)><around*|(|f<rsup|-1><around*|(|<around*|{|y|}>|)>|)>\<in\>f<rsup|-1><around*|(|<around*|{|y|}>|)>>
       we have that <math|f<around*|(|x|)>=f<around*|(|<around*|(|c|)><around*|(|f<rsup|-1><around*|(|<around*|{|y|}>|)>|)>|)>\<in\><around*|{|y|}>>
       so that <math|y=f<around*|(|x|)>\<in\>f<around*|(|Z|)>>, proving that
       <math|f<around*|(|X|)>\<subseteq\>f<around*|(|Z|)>>. As
@@ -12405,20 +12441,19 @@
     <associate|eq 3.58.018|<tuple|3.58|?>>
     <associate|eq 3.59.018|<tuple|3.59|?>>
     <associate|eq 3.6.009|<tuple|3.6|?>>
-    <associate|eq 3.60.018|<tuple|3.60|?>>
-    <associate|eq 3.61.018|<tuple|3.61|?>>
-    <associate|eq 3.62.018|<tuple|3.62|?>>
-    <associate|eq 3.63.018|<tuple|3.63|?>>
-    <associate|eq 3.64.018|<tuple|3.64|?>>
-    <associate|eq 3.65.018|<tuple|3.65|?>>
-    <associate|eq 3.66.018|<tuple|3.67|?>>
-    <associate|eq 3.66.019|<tuple|3.66|?>>
-    <associate|eq 3.68.019|<tuple|3.68|?>>
-    <associate|eq 3.69.019|<tuple|3.69|?>>
+    <associate|eq 3.61.018|<tuple|3.60|?>>
+    <associate|eq 3.62.018|<tuple|3.61|?>>
+    <associate|eq 3.63.018|<tuple|3.62|?>>
+    <associate|eq 3.64.018|<tuple|3.63|?>>
+    <associate|eq 3.65.018|<tuple|3.64|?>>
+    <associate|eq 3.66.018|<tuple|3.66|?>>
+    <associate|eq 3.66.019|<tuple|3.65|?>>
+    <associate|eq 3.68.019|<tuple|3.67|?>>
+    <associate|eq 3.69.019|<tuple|3.68|?>>
     <associate|eq 3.7.009|<tuple|3.7|?>>
-    <associate|eq 3.70.019|<tuple|3.70|?>>
-    <associate|eq 3.71.019|<tuple|3.71|?>>
-    <associate|eq 3.72.019|<tuple|3.72|?>>
+    <associate|eq 3.70.019|<tuple|3.69|?>>
+    <associate|eq 3.71.019|<tuple|3.70|?>>
+    <associate|eq 3.72.019|<tuple|3.71|?>>
     <associate|eq 3.8.011|<tuple|3.8|?>>
     <associate|eq 3.9.011|<tuple|3.9|?>>
     <associate|equivalence relation|<tuple|3.5|?>>
