@@ -7,6 +7,10 @@
 <\body>
   <chapter|Algebraic constructs>
 
+  <\note>
+    From now on we start to use the simplified notations for function
+  </note>
+
   Before we define the different number systems, like the natural numbers,
   whole numbers, rational numbers, real numbers and complex numbers, we
   define the algebraic operations and structures that we can define on them.
@@ -372,137 +376,374 @@
       <item><math|\<forall\>x\<in\>F> we have
       <math|f<around*|(|x<rsup|-1>|)>=f<around*|(|x|)><rsup|-1>>
     </enumerate>
-
-    <\proof>
-      \ 
-
-      <\enumerate>
-        <item>
-
-        <\eqnarray*>
-          <tformat|<table|<row|<cell|e<rsub|G>>|<cell|=>|<cell|f<rsup|><around*|(|e<rsub|F>|)><rsup|-1>\<oplus\>f<around*|(|e<rsub|F>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|e<rsub|F>|)><rsup|-1>\<oplus\>f<around*|(|e<rsub|F>\<odot\>e<rsub|F>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|e<rsub|F>|)><rsup|-1>\<oplus\><around*|(|f<around*|(|e<rsub|F>|)>\<oplus\>f<around*|(|e<rsub|F>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|f<around*|(|e<rsub|F>|)><rsup|-1>\<oplus\>f<around*|(|e<rsub|F>|)>|)>\<oplus\>f<around*|(|e<rsub|F>|)>>>|<row|<cell|>|<cell|=>|<cell|e<rsub|G>\<circ\>f<around*|(|e<rsub|F>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|e<rsub|F>|)>>>>>
-        </eqnarray*>
-
-        <item>If <math|x\<in\>F> then
-
-        <\equation*>
-          f<around*|(|x<rsup|-1>|)>\<oplus\>f<around*|(|x|)>=f<around*|(|x<rsup|-1>\<odot\>x|)>=f<around*|(|e<rsub|F>|)>\<equallim\><rsub|<around*|(|1|)>>e<rsub|G>
-        </equation*>
-
-        and
-
-        <\equation*>
-          f<around*|(|x|)>\<oplus\>f<around*|(|x<rsup|-1>|)>=f<around*|(|x\<odot\>x<rsup|-1>|)>=f<around*|(|e<rsub|F>|)>\<equallim\><rsub|<around*|(|1|)>>e<rsub|G>
-        </equation*>
-
-        so that <math|f<around*|(|x|)><rsup|-1>=f<around*|(|x<rsup|-1>|)>>
-      </enumerate>
-    </proof>
-
-    <\definition>
-      <label|group isomorphism><index|group isomorphism><dueto|Group
-      Isomorphism>If <math|<around*|\<langle\>|F,\<odot\>|\<rangle\>>> and
-      <math|<around*|\<langle\>|G,\<oplus\>|\<rangle\>>> are semi-groups then
-      a <with|font-series|bold|group isomorphism> is a
-      <with|font-series|bold|bijection> <math|f:F\<rightarrow\>G> that is a
-      group <with|font-series|bold|homeomorphism>.
-    </definition>
-
-    The following theorem show how we can define a group on the product of a
-    family of groups.
-
-    TODO
-
-    <\theorem>
-      <label|group product of groups>If <math|<around*|{|<around*|\<langle\>|G<rsub|i>,\<odot\><rsub|i>|\<rangle\>>|}><rsub|i\<in\>I>>
-      is a family of semi groups then:
-
-      <\enumerate>
-        <item><math|\<forall\>x,y\<in\><big|prod><rsub|i\<in\>I>G<rsub|i>> we
-        have:
-
-        <\enumerate>
-          <item><math|\<forall\>i\<in\>I> that
-          <math|x<around*|(|i|)>\<odot\><rsub|i>y<around*|(|i|)>\<in\>F<rsub|i>>
-
-          <item><math|x\<odot\>y:I\<rightarrow\><big|cup><rsub|i\<in\>I>F<rsub|i>>
-          defined by <math|i\<rightarrow\>x<around*|(|i|)>\<odot\><rsub|i>y<around*|(|i|)>>
-          is a element of <math|<big|prod><rsub|i\<in\>I>F<rsub|i>>
-        </enumerate>
-
-        <item><math|\<odot\>:<big|prod><rsub|i\<in\>I>F<rsub|i>\<times\><big|prod><rsub|i\<in\>I>F<rsub|i>\<rightarrow\><big|prod><rsub|i\<in\>I>F<rsub|i>>
-        defined by <math|<around*|(|x,y|)>\<rightarrow\>x\<odot\>y> is a
-        function [here we use <math|x\<odot\>y> to actually note the function
-        <math|<around*|\<langle\>|x\<odot\>y,I,<big|cup><rsub|i\<in\>I>F<rsub|i>|\<rangle\>>>]\ 
-
-        <item><math|<around*|\<langle\>|<big|prod><rsub|i\<in\>I>F<rsub|i>,\<odot\>|\<rangle\>>>
-        is a semi-group with neutral element
-        <math|e:I\<rightarrow\><big|cup><rsub|i\<in\>I>F<rsub|i>> defined by
-        <math|i\<rightarrow\>e<rsub|i>\<in\>F<rsub|i>> (where
-        <math|e<rsub|i>> is the neutral element in <math|F<rsub|i>>) and if
-        <math|x\<in\><big|prod><rsub|i\<in\>I>F<rsub|i>> then
-        <math|-x:I\<rightarrow\><big|cup><rsub|i\<in\>I>F<rsub|i>> defined by
-        <math|i\<rightarrow\>-x<around*|(|i|)>\<in\>F<rsub|i>> (where
-        <math|-x<around*|(|i|)>> is the inverse element of
-        <math|x<around*|(|i|)>>)
-      </enumerate>
-    </theorem>
   </theorem>
 
   <\proof>
     \ 
 
     <\enumerate>
-      <item>If <math|x,y\<in\><big|prod><rsub|i\<in\>I>F<rsub|i>> then we
-      have
+      <item>
 
-      <\enumerate>
-        <item>As <math|x<around*|(|i|)>,y<around*|(|i|)>\<in\>F<rsub|i>> by
-        the definition of <math|<big|prod><rsub|i\<in\>I>F<rsub|i>> we have
-        as <math|\<odot\>:F<rsub|i>\<odot\><rsub|i>F<rsub|i>\<rightarrow\>F<rsub|i><rsub|>>
-        is a function we have that <math|x<around*|(|i|)>\<odot\><rsub|i>y<around*|(|i|)>\<in\>F<rsub|i>>\ 
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|e<rsub|G>>|<cell|=>|<cell|f<rsup|><around*|(|e<rsub|F>|)><rsup|-1>\<oplus\>f<around*|(|e<rsub|F>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|e<rsub|F>|)><rsup|-1>\<oplus\>f<around*|(|e<rsub|F>\<odot\>e<rsub|F>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|e<rsub|F>|)><rsup|-1>\<oplus\><around*|(|f<around*|(|e<rsub|F>|)>\<oplus\>f<around*|(|e<rsub|F>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|f<around*|(|e<rsub|F>|)><rsup|-1>\<oplus\>f<around*|(|e<rsub|F>|)>|)>\<oplus\>f<around*|(|e<rsub|F>|)>>>|<row|<cell|>|<cell|=>|<cell|e<rsub|G>\<circ\>f<around*|(|e<rsub|F>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|e<rsub|F>|)>>>>>
+      </eqnarray*>
 
-        <item>As <math|\<forall\>i\<in\>I> we have by
-        <math|x<around*|(|i|)>\<odot\><rsub|i>y<around*|(|i|)>\<in\>F<rsub|i>>
-        we have by definition of <math|<big|prod><rsub|i\<in\>I>F<rsub|i>>
-        that <math|x\<odot\>y\<in\><big|prod><rsub|i\<in\>I>F<rsub|i>>
-      </enumerate>
+      <item>If <math|x\<in\>F> then
 
-      <item>This follows from the definition of <math|\<odot\>> and the fact
-      that <math|x\<odot\>y\<in\>F<rsub|i>>
+      <\equation*>
+        f<around*|(|x<rsup|-1>|)>\<oplus\>f<around*|(|x|)>=f<around*|(|x<rsup|-1>\<odot\>x|)>=f<around*|(|e<rsub|F>|)>\<equallim\><rsub|<around*|(|1|)>>e<rsub|G>
+      </equation*>
 
-      <item>We have if <math|<around*|{|<around*|\<langle\>|F<rsub|i>,\<odot\><rsub|i>|\<rangle\>>|}><rsub|i\<in\>I>>
-      is a family of semi-groups then we have\ 
+      and
 
-      <\itemize-dot>
-        <item><dueto|associativity><math|\<forall\>i\<in\>I> we have
-        <math|<around*|(|<around*|(|x\<odot\>y|)>\<odot\>z|)><around*|(|i|)>=<around*|(|x\<odot\>y|)><around*|(|i|)>\<odot\><rsub|i>z<around*|(|i|)>=<around*|(|x<around*|(|i|)>\<odot\><rsub|i>y<around*|(|i|)>|)>\<odot\><rsub|i>z<around*|(|i|)>\<equallim\><rsub|<around*|\<langle\>|F<rsub|i>,\<odot\><rsub|i>|\<rangle\>>
-        is a semi-group>x<around*|(|i|)>\<odot\><rsub|i><around*|(|y<around*|(|i|)>\<odot\><rsub|i>z<around*|(|i|)>|)>=x<around*|(|i|)>\<odot\><rsub|i><around*|(|y\<odot\>z|)><around*|(|i|)>=<around*|(|x\<odot\><around*|(|y\<odot\>z|)>|)><around*|(|i|)>>
-        resulting in <math|<around*|(|x\<odot\>y|)>\<odot\>z=x\<odot\><around*|(|y\<odot\>z|)>>
+      <\equation*>
+        f<around*|(|x|)>\<oplus\>f<around*|(|x<rsup|-1>|)>=f<around*|(|x\<odot\>x<rsup|-1>|)>=f<around*|(|e<rsub|F>|)>\<equallim\><rsub|<around*|(|1|)>>e<rsub|G>
+      </equation*>
 
-        <item><dueto|neutral element><math|\<forall\>i\<in\>I> we have
-        <math|<around*|(|x\<odot\>0|)><around*|(|i|)>=x<around*|(|i|)>\<odot\><rsub|i>0<around*|(|i|)>=x<around*|(|i|)>\<odot\><rsub|i>0<rsub|i>=x<around*|(|i|)>=0<rsub|i>\<odot\><rsub|i>x<around*|(|i|)>=<around*|(|0\<odot\>x|)>>
-        proving that <math|0\<odot\>x=x=x\<odot\>0>
-      </itemize-dot>
-
-      If <math|<around*|{|<around*|\<langle\>|F<rsub|i>,\<odot\><rsub|i>|\<rangle\>>|}><rsub|i\<in\>I>>
-      is also a group then we have\ 
-
-      <\itemize>
-        <item><dueto|inverse element><math|\<forall\>i\<in\>I> we have
-        <math|<around*|(|x\<odot\><around*|(|-x|)>|)><around*|(|i|)>=x<around*|(|i|)>\<odot\><rsub|i><around*|(|<around*|(|-x|)><around*|(|i|)>|)>=x<around*|(|i|)>\<odot\><around*|(|-<around*|(|x<around*|(|i|)>|)>|)>=0<rsub|i>=0<around*|(|i|)>=0<rsub|i>=<around*|(|-x<around*|(|i|)>|)>\<odot\>x<around*|(|i|)>=<around*|(|-x|)><around*|(|i|)>\<circ\><rsub|i>x<around*|(|i|)>=<around*|(|<around*|(|-x|)>\<odot\>x|)><around*|(|i|)>>
-        giving <math|x\<circ\><around*|(|-x|)>=0=<around*|(|-x|)>\<odot\>x>
-      </itemize>
-
-      and in case of a abelian family we have
-
-      <\itemize>
-        <item><dueto|commutativity><math|\<forall\>i\<in\>I> we have
-        <math|<around*|(|x\<odot\>y|)><around*|(|i|)>=x<around*|(|i|)>\<odot\><rsub|i>y<around*|(|i|)>=y<around*|(|i|)>\<odot\><rsub|i>x<around*|(|i|)>=<around*|(|y\<odot\>x|)><around*|(|i|)>>
-        giving <math|x\<odot\>y=y\<odot\>x>
-      </itemize>
+      so that <math|f<around*|(|x|)><rsup|-1>=f<around*|(|x<rsup|-1>|)>>
     </enumerate>
   </proof>
+
+  <\definition>
+    <label|group isomorphism><index|group isomorphism><dueto|Group
+    Isomorphism>If <math|<around*|\<langle\>|F,\<odot\>|\<rangle\>>> and
+    <math|<around*|\<langle\>|G,\<oplus\>|\<rangle\>>> are semi-groups then a
+    <with|font-series|bold|group isomorphism> is a
+    <with|font-series|bold|bijection> <math|f:F\<rightarrow\>G> that is a
+    group <with|font-series|bold|homeomorphism>.
+  </definition>
+
+  <\theorem>
+    <label|group isomorphism inverse>Let <math|<around*|\<langle\>|F,\<odot\>|\<rangle\>>>,
+    <math|<around*|\<langle\>|G,\<oplus\>|\<rangle\>>> be semi groups and
+    <math|f:F\<rightarrow\>G> is a isomorphism then
+    <math|f<rsup|-1>:G\<rightarrow\>F> is a isomorphism.
+  </theorem>
+
+  <\proof>
+    As <math|f:F\<rightarrow\>G> is a bijection we have by [theorem:
+    <reference|function bijection and inverse>] that
+    <math|f<rsup|-1>:G\<rightarrow\>F> is a bijection. Take <math|x,y\<in\>G>
+    then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|f<rsup|-1><around*|(|x\<oplus\>y|)>>|<cell|=>|<cell|f<rsup|-1><around*|(|Id<rsub|G><around*|(|x|)>\<oplus\>Id<rsub|G><around*|(|y|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|function bijection f,f-1>>>>|<cell|f<rsup|-1><around*|(|<around*|(|f\<circ\>f<rsup|-1>|)><around*|(|x|)>\<oplus\><around*|(|f\<circ\>f<rsup|-1>|)><around*|(|y|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|function alternative for
+      composition>]>>>|<cell|f<rsup|-1><around*|(|f<around*|(|f<rsup|-1><around*|(|x|)>|)>\<oplus\>f<around*|(|f<rsup|-1><around*|(|y|)>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|f<text|
+      is homeomorphism>>>|<cell|f<rsup|-1><around*|(|f<around*|(|f<rsup|-1><around*|(|x|)>\<odot\>f<rsup|-1><around*|(|y|)>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|function alternative for
+      composition>]>>>|<cell|<around*|(|f<rsup|-1>\<circ\>f|)><around*|(|f<rsup|-1><around*|(|x|)>\<odot\>f<rsup|-1><around*|(|y|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|function bijection f,f-1>>>>|<cell|Id<rsub|F><around*|(|f<rsup|-1><around*|(|x|)>\<odot\>f<rsup|-1><around*|(|y|)>|)>>>|<row|<cell|>|<cell|=>|<cell|f<rsup|-1><around*|(|x|)>\<odot\>f<rsup|-1><around*|(|y|)>>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation*>
+      f<rsup|-1>:F\<rightarrow\>G<text| is a bijection>
+    </equation*>
+
+    \;
+  </proof>
+
+  The following theorem show how we can define a group on the product of a
+  family of groups.
+
+  <\theorem>
+    Let <math|<around*|{|<around*|\<langle\>|A<rsub|i>,\<odot\><rsub|i>|\<rangle\>>|}><rsub|i\<in\>I>>
+    be a family of semi-groups then we have\ 
+
+    <\enumerate>
+      <item>If <math|x,y\<in\><big|prod><rsub|i\<in\>I>A<rsub|i>> then
+      <math|<around*|(|x\<odot\>y|)>\<in\><big|prod><rsub|i\<in\>I>A<rsub|i>>
+      where <math|x\<odot\>y> is defined by
+      <math|<around*|(|x\<odot\>y|)><rsub|i>=x<rsub|i>\<odot\><rsub|i>y<rsub|i>>
+
+      <item>If we define <math|\<odot\>:<around*|(|<big|prod><rsub|i\<in\>I>A<rsub|i>|)>\<times\><around*|(|<big|prod><rsub|i\<in\>I>A<rsub|i>|)>\<rightarrow\><big|prod><rsub|i\<in\>I>A<rsub|i>>
+      by <math|\<odot\><around*|(|x,y|)>=x\<odot\>y> then\ 
+
+      <\equation*>
+        <around*|\<langle\>|<big|prod><rsub|i\<in\>I>A<rsub|i>,\<odot\>|\<rangle\>>
+      </equation*>
+
+      is a semi-group with neutrale element <math|e> defined by
+      <math|<around*|(|e|)><rsub|i>=e<rsub|i>> wher <math|e<rsub|i>> is the
+      neutral element of <math|<around*|\<langle\>|A<rsub|i>,\<odot\><rsub|i>|\<rangle\>>>
+
+      <item>If <math|\<forall\>i\<in\>I> we have that
+      <math|<around*|\<langle\>|A<rsub|i>,\<odot\><rsub|i>|\<rangle\>>> is
+      abelian then <math|<around*|\<langle\>|<big|prod><rsub|i\<in\>I>A<rsub|i>,\<odot\>|\<rangle\>>>
+      is abelian.
+
+      <item>If <math|\<forall\>i\<in\>I> we have that
+      <math|<around*|\<langle\>|A<rsub|i>,\<odot\><rsub|i>|\<rangle\>>> is a
+      group then <math|<around*|\<langle\>|<big|prod><rsub|i\<in\>I>A<rsub|i>,\<odot\>|\<rangle\>>>
+      is a group where the inverse for each
+      <math|x\<in\><big|prod><rsub|i\<in\>I>A<rsub|i>> the inverse
+      <math|x<rsup|=1>> is defined by <math|<around*|(|x<rsup|-1>|)><rsub|i>=<around*|(|x<rsub|i>|)><rsup|-1>>
+      [here <math|<around*|(|x<rsub|i>|)><rsup|-1>> is the inverse of
+      <math|x<rsub|i>> in the group <math|<around*|\<langle\>|A<rsub|i>,\<odot\><rsub|i>|\<rangle\>>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|x,y\<in\><big|prod><rsub|i\<in\>I>A<rsub|i>> then
+      <math|x> is <math|x:I\<rightarrow\><big|cup><rsub|i\<in\>I>A<rsub|i>>
+      is a function such that <math|\<forall\>i\<in\>I>
+      <math|x<rsub|i>=x<around*|(|i|)>\<in\>A<rsub|i>> and
+      <math|y:I\<rightarrow\><big|cup><rsub|i\<in\>I>A<rsub|i>> is a function
+      such that <math|\<forall\>i\<in\>I>
+      <math|y<rsub|i>=y<around*|(|i|)>\<in\>A<rsub|i>>. So if we define
+      <math|x\<odot\>y> by <math|<around*|(|x\<odot\>y|)><around*|(|i|)>=<around*|(|x\<odot\>y|)><rsub|i>=x<rsub|i>\<odot\><rsub|i>y<rsub|i>=x<around*|(|i|)>\<odot\><rsub|i>y<around*|(|i|)>>
+      then <math|x\<odot\>y:I\<rightarrow\><big|cup><rsub|i\<in\>I>A<rsub|i>>
+      is a function and <math|\<forall\>i\<in\>I> we have
+      <math|<around*|(|x\<odot\>y|)><around*|(|i|)>=x<around*|(|i|)>\<odot\><rsub|i>y<around*|(|i|)>\<in\>A<rsub|i>>
+      [as <math|<around*|\<langle\>|A<rsub|i>,\<odot\><rsub|i>|\<rangle\>>>
+      is a semi-group]. Hence <math|x\<odot\>y\<in\><big|prod><rsub|i\<in\>I>A<rsub|i>>
+
+      <item>We have\ 
+
+      <\description>
+        <item*|associativity>Let <math|x,y,z\<in\><big|prod><rsub|i\<in\>I>A<rsub|i>>
+        then we have for <math|i\<in\>I>
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|x\<odot\><around*|(|y\<odot\>z|)>|)><around*|(|i|)>>|<cell|=>|<cell|x<around*|(|i|)>\<odot\><rsub|i><around*|(|y\<odot\>z|)><around*|(|i|)>>>|<row|<cell|>|<cell|=>|<cell|x<around*|(|i|)>\<odot\><rsub|i><around*|(|y<around*|(|i|)>\<odot\><rsub|i>z<around*|(|i|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|\<langle\>|A<rsub|i>,\<odot\><rsub|i>|\<rangle\>><text|
+          is a semi group>>>|<cell|<around*|(|x<around*|(|i|)>\<odot\>y<around*|(|i|)>|)>\<odot\>z<around*|(|i|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x\<odot\>y|)><around*|(|i|)>\<odot\><rsub|i>z<around*|(|i|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|x\<odot\>y|)>\<odot\>z|)><around*|(|i|)>>>>>
+        </eqnarray*>
+
+        so that\ 
+
+        <\equation*>
+          x\<odot\><around*|(|y\<odot\>z|)>=<around*|(|x\<odot\>y|)>\<odot\>z
+        </equation*>
+
+        <item*|neutral element>Let <math|x\<in\><big|prod><rsub|i\<in\>I>A<rsub|i>>
+        then <math|\<forall\>i\<in\>I>
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|x\<odot\>e|)><around*|(|i|)>>|<cell|=>|<cell|x<around*|(|i|)>\<odot\><rsub|i>e<around*|(|i|)>>>|<row|<cell|>|<cell|=>|<cell|x<around*|(|i|)>\<odot\><rsub|i>e<rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|\<langle\>|A<rsub|i>,\<odot\><rsub|i>|\<rangle\>><text|
+          is a semi group>>>|<cell|x<around*|(|i|)>>>|<row|<cell|<around*|(|e\<odot\>x|)><around*|(|i|)>>|<cell|=>|<cell|e<around*|(|i|)>\<odot\><rsub|i>x<around*|(|i|)>>>|<row|<cell|>|<cell|=>|<cell|e<rsub|i>\<odot\><rsub|i>x<around*|(|i|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|\<langle\>|A<rsub|i>,\<odot\><rsub|i>|\<rangle\>><text|
+          is a semi group>>>|<cell|x<around*|(|i|)>>>>>
+        </eqnarray*>
+
+        so that\ 
+
+        <\equation*>
+          x\<odot\>e=x=e\<odot\>x
+        </equation*>
+      </description>
+
+      <item>Let <math|x,y\<in\><big|prod><rsub|i\<in\>I>A<rsub|i>> then
+      <math|\<forall\>i\<in\>I> we have
+
+      <\equation*>
+        <around*|(|x\<circ\>y|)><around*|(|i|)>=x<around*|(|i|)>\<odot\><rsub|i>y<around*|(|i|)>\<equallim\><rsub|<around*|\<langle\>|A<rsub|i>,\<odot\><rsub|i>|\<rangle\>><text|
+        is abelian>>y<around*|(|i|)>\<odot\><rsub|i>x<around*|(|i|)>=<around*|(|y\<odot\>x|)><around*|(|i|)>
+      </equation*>
+
+      so that <math|x\<odot\>y=y\<odot\>x>
+
+      <item>Let <math|x\<in\><big|prod><rsub|i\<in\>I>A<rsub|i>> then we have
+      <math|\<forall\>i\<in\>I> that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|x\<odot\>x<rsup|-1>|)><around*|(|i|)>>|<cell|=>|<cell|x<around*|(|i|)>\<odot\><rsub|i><around*|(|x<rsup|-1>|)><around*|(|i|)>>>|<row|<cell|>|<cell|=>|<cell|x<around*|(|i|)>\<odot\><rsub|i><around*|(|x<rsub|i>|)><rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|x<rsub|i>\<odot\><rsub|i><around*|(|x<rsub|i>|)><rsup|-1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|\<langle\>|A<rsub|i>,\<odot\><rsub|i>|\<rangle\>><text|
+        is a group>>>|<cell|e<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|e<around*|(|i|)>>>|<row|<cell|<around*|(|x<rsup|-1>\<odot\>x|)><around*|(|i|)>>|<cell|=>|<cell|<around*|(|x<rsup|-1>|)><around*|(|i|)>\<odot\><rsub|i>x<around*|(|i|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x<rsub|i>|)><rsup|-1>\<odot\><rsub|i>x<around*|(|i|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x<rsub|i>|)><rsup|-1>\<odot\><rsub|i>x<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|e<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|e<around*|(|i|)>>>>>
+      </eqnarray*>
+
+      So that <math|x\<odot\>x<rsup|-1>=e=x<rsup|-1>\<odot\>x>. Which as by
+      (2) <math|<around*|\<langle\>|<big|prod><rsub|i\<in\>I>A<rsub|i>,\<odot\>|\<rangle\>>>
+      is a semi grup proves that <math|<around*|\<langle\>|<big|prod><rsub|i\<in\>I>A<rsub|i>,\<odot\>|\<rangle\>>>
+      is a group.
+    </enumerate>
+  </proof>
+
+  The following five definitions will be later used in Linear Algebra.
+
+  <\definition>
+    <label|group left (right action)><index|left action><index|right
+    action><index|<math|g\<vartriangleright\>x>><index|<math|x\<vartriangleleft\>g>>Let
+    <math|<around*|\<langle\>|G,\<odot\>|\<rangle\>>> be a group with neutral
+    element <math|e> and let <math|X> be a set then we have the following
+    definitions:
+
+    <\enumerate>
+      <item>A <strong|left group action> is a function
+      <math|\<vartriangleright\>:G\<times\>X\<rightarrow\>X> where
+      <math|\<vartriangleright\><around*|(|g,x|)>\<equallim\><rsub|notation>g\<vartriangleright\>x>
+      such that\ 
+
+      <\enumerate>
+        <item><math|\<forall\>x\<in\>X> we have
+        <math|e\<vartriangleright\>x=x>
+
+        <item><math|\<forall\>g,g<rprime|'>\<in\>G> and
+        <math|\<forall\>x\<in\>X> we have
+        <math|<around*|(|g\<odot\>g<rprime|'>|)>\<vartriangleright\>x=g\<vartriangleright\><around*|(|g<rprime|'>\<vartriangleright\>x|)>>
+      </enumerate>
+
+      <item>A <strong|right group action > is a function
+      <math|\<vartriangleleft\>:X\<times\>G\<rightarrow\>X> where
+      <math|\<vartriangleleft\><around*|(|x,g|)>\<equallim\><rsub|notation>x\<vartriangleleft\>g>
+      such that
+
+      <\enumerate>
+        <item><math|\<forall\>x\<in\>X> we have
+        <math|x\<vartriangleleft\>e=x>
+
+        <item><math|\<forall\>g,g<rprime|'>\<in\>G> and
+        <math|\<forall\>x\<in\>X> we have
+        <math|x\<vartriangleleft\><around*|(|g\<odot\>g<rprime|'>|)>=<around*|(|x\<vartriangleleft\>g|)>\<vartriangleleft\>g<rprime|'>>
+      </enumerate>
+    </enumerate>
+  </definition>
+
+  <\definition>
+    <index|<math|g<rsub|\<vartriangleright\>>>>Let
+    <math|<around*|\<langle\>|G,\<odot\>|\<rangle\>>> be a group, <math|X> a
+    set then if <math|\<vartriangleright\>> is a left group action then if
+    <math|g\<in\>G> we define\ 
+
+    <\equation*>
+      g<rsub|\<vartriangleright\>>:X\<rightarrow\>X<text| by
+      <math|g<rsub|\<vartriangleright\>><around*|(|x|)>=g\<vartriangleright\>x>>
+    </equation*>
+  </definition>
+
+  <\definition>
+    <index|<math|g<rsub|\<vartriangleleft\>>>>Let
+    <math|<around*|\<langle\>|G,\<odot\>|\<rangle\>>> be a group, <math|X> a
+    set then if <math|\<vartriangleleft\>> is a right group action then if
+    <math|g\<in\>G> we define\ 
+
+    <\equation*>
+      g<rsub|\<vartriangleleft\>>:X\<rightarrow\>X<text| by
+      <math|g<rsub|\<vartriangleleft\>><around*|(|x|)>=x\<vartriangleleft\>g>>
+    </equation*>
+  </definition>
+
+  <\definition>
+    <label|group faithful, transitive action (1)><index|faithful
+    action><index|transitive action>Let <math|<around*|\<langle\>|G,\<odot\>|\<rangle\>>>
+    be a group with neutral element <math|e> and let <math|X> be a set then
+    we have the following definitions for a left group action
+    <math|\<vartriangleright\>>
+
+    <\enumerate>
+      <item><math|\<vartriangleright\>> is <strong|faithful> if
+
+      <\equation*>
+        g<rsub|\<vartriangleright\>>=Id<rsub|X><text| if and only if >g=e
+      </equation*>
+
+      or equivalently\ 
+
+      <\equation*>
+        <around*|{|g\<in\>G\|\<forall\>x\<in\>X\|g\<vartriangleright\>x=x|}>=<around*|{|e|}>
+      </equation*>
+
+      <item><math|\<vartriangleright\>> is <strong|transitive> iff
+      <math|\<forall\>x<rsub|1>,x<rsub|2>> there exists a <math|g\<in\>G>
+      such that <math|g\<vartriangleright\>x<rsub|1>=x<rsub|2>>
+
+      <item><math|\<vartriangleright\>> is <strong|free> iff
+      <math|\<forall\>x\<in\>X> we have <math|<around*|{|g\<in\>G\|g\<vartriangleright\>x=x|}>=<around*|{|e|}>>
+    </enumerate>
+  </definition>
+
+  <\definition>
+    <label|group faithful, transitive action (2)><index|faithful
+    action><index|transitive action>Let <math|<around*|\<langle\>|G,\<odot\>|\<rangle\>>>
+    be a group with neutral element <math|e> and let <math|X> be a set then
+    we have the following definitions for a left group action
+    <math|\<vartriangleright\>>
+
+    <\enumerate>
+      <item><math|\<vartriangleright\>> is <strong|faithful> if
+
+      <\equation*>
+        g<rsub|\<vartriangleright\>>=Id<rsub|X><text| if and only if >g=e
+      </equation*>
+
+      or equivalently\ 
+
+      <\equation*>
+        <around*|{|g\<in\>G\|\<forall\>x\<in\>X\|g\<vartriangleright\>x=x|}>=<around*|{|e|}>
+      </equation*>
+
+      <item><math|\<vartriangleright\>> is <strong|transitive> iff
+      <math|\<forall\>x<rsub|1>,x<rsub|2>> there exists a <math|g\<in\>G>
+      such that <math|g\<vartriangleright\>x<rsub|1>=x<rsub|2>>
+
+      <item><math|\<vartriangleright\>> is <strong|free> iff
+      <math|\<forall\>x\<in\>X> we have <math|<around*|{|g\<in\>G\|g\<vartriangleright\>x=x|}>=<around*|{|e|}>>
+    </enumerate>
+  </definition>
+
+  <section|Rings>
+
+  <\definition>
+    <label|ring><index|ring><dueto|Ring>A triple
+    <math|<around*|\<langle\>|R,\<oplus\>,\<odot\>|\<rangle\>>> is a ring iff
+
+    <\enumerate>
+      <item><math|R> is a set
+
+      <item><math|<around*|\<langle\>|R,\<oplus\>|\<rangle\>>> is a abelian
+      group or <math|\<oplus\>:R\<times\>R\<rightarrow\>R> is a operator such
+      that
+
+      <\description>
+        <item*|associativity><math|\<forall\>x,y,z\<in\>R> we have
+        <math|x\<oplus\><around*|(|y\<oplus\>z|)>=<around*|(|x\<oplus\>y|)>\<oplus\>z>
+
+        <item*|neutral element><math|\<exists\>0\<in\>R> such that
+        <math|\<forall\>x\<in\>R> we have <math|0\<oplus\>x=x=x\<oplus\>0>
+
+        <item*|inverse element><math|\<forall\>x\<in\>R> there exist a
+        <math|x<rsup|-1>> such that <math|x\<oplus\>x<rsup|-1>=0=x<rsup|-1>\<oplus\>x>
+
+        <item*|commutatitivity><math|\<forall\>x,y\<in\>R> we have
+        <math|x\<oplus\>y=y\<oplus\>x>
+      </description>
+
+      <item><math|\<odot\>:R*\<times\>R\<rightarrow\>R> is a operator so that\ 
+
+      <\description>
+        <item*|distributivity><math|\<forall\>x,y,z\<in\>R> we have
+        <math|x\<odot\><around*|(|y\<oplus\>z|)>=<around*|(|x\<odot\>y|)>\<oplus\><around*|(|x\<odot\>z|)>>
+
+        <item*|neutral element><math|\<exists\>1\<in\>R> such that
+        <math|\<forall\>x\<in\>R> we have <math|1\<odot\>x=x=x\<odot\>1>
+
+        <item*|commutatitivity><math|\<forall\>x,y\<in\>R> we have
+        <math|x\<odot\>y=y\<odot\>x>
+
+        <item*|associativity><math|\<forall\>x,y,z> we have
+        <math|x\<odot\><around*|(|y\<odot\>z|)>=<around*|(|x\<odot\>y|)>\<odot\>z>
+      </description>
+    </enumerate>
+  </definition>
+
+  <\definition>
+    <label|ring zero divisor><index|zero divisor>If
+    <math|<around*|\<langle\>|R,\<oplus\>,\<odot\>|\<rangle\>>> is a ring
+    then a <with|font-series|bold|zero divisor of R> is a
+    <math|x\<in\>R\\<around*|{|0|}>> so that <math|\<exists\>y\<in\>R> such
+    that <math|x\<odot\>y=0>
+  </definition>
+
+  <\definition>
+    <label|ring integer domain>A ring <math|<around*|\<langle\>|R,\<oplus\>,\<odot\>|\<rangle\>>>
+    is a <with|font-series|bold|integral domain> if it does not contains a
+    <with|font-series|bold|zero divisor>
+  </definition>
+
+  \;
 
   <chapter|Natural Numbers>
 
@@ -522,35 +763,55 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|4|103>>
-    <associate|auto-10|<tuple|6|?>>
+    <associate|auto-10|<tuple|right action|109>>
+    <associate|auto-11|<tuple|<with|mode|<quote|math>|g\<vartriangleright\>x>|?>>
+    <associate|auto-12|<tuple|<with|mode|<quote|math>|x\<vartriangleleft\>g>|?>>
+    <associate|auto-13|<tuple|<with|mode|<quote|math>|g<rsub|\<vartriangleright\>>>|?>>
+    <associate|auto-14|<tuple|<with|mode|<quote|math>|g<rsub|\<vartriangleleft\>>>|?>>
+    <associate|auto-15|<tuple|faithful action|?>>
+    <associate|auto-16|<tuple|transitive action|?>>
+    <associate|auto-17|<tuple|faithful action|?>>
+    <associate|auto-18|<tuple|transitive action|?>>
+    <associate|auto-19|<tuple|4.2|?>>
     <associate|auto-2|<tuple|operator|103>>
+    <associate|auto-20|<tuple|ring|?>>
+    <associate|auto-21|<tuple|zero divisor|?>>
+    <associate|auto-22|<tuple|5|?>>
+    <associate|auto-23|<tuple|6|?>>
     <associate|auto-3|<tuple|4.1|103>>
     <associate|auto-4|<tuple|semi-group|103>>
     <associate|auto-5|<tuple|group|104>>
     <associate|auto-6|<tuple|sub-semi-group|104>>
     <associate|auto-7|<tuple|sup-group|104>>
-    <associate|auto-8|<tuple|group isomorphism|107>>
-    <associate|auto-9|<tuple|5|109>>
-    <associate|group abelian group/sub group|<tuple|4.8|104>>
-    <associate|group example bijections|<tuple|4.13|105>>
-    <associate|group example set of functions|<tuple|4.4|103>>
-    <associate|group group|<tuple|4.5|104>>
-    <associate|group group homomorphism|<tuple|4.14|105>>
-    <associate|group group homomorphism properties|<tuple|4.15|105>>
-    <associate|group group inheritance|<tuple|4.12|105>>
-    <associate|group group inverse of inverse|<tuple|4.7|104>>
-    <associate|group homeomorphism|<tuple|4.14|?>>
-    <associate|group homeomorphism properties|<tuple|4.15|?>>
-    <associate|group inverse element|<tuple|4.6|104>>
-    <associate|group isomorphism|<tuple|4.16|?>>
-    <associate|group product of groups|<tuple|4.17|?>>
-    <associate|group semi-group inheritance|<tuple|4.11|104>>
-    <associate|group semigroup properties|<tuple|4.3|103>>
-    <associate|group sub-group|<tuple|4.10|104>>
-    <associate|operator|<tuple|4.1|103>>
-    <associate|product of a family of groups|<tuple|4.18|?>>
-    <associate|semi-group|<tuple|4.2|103>>
-    <associate|sub-semi-group|<tuple|4.9|104>>
+    <associate|auto-8|<tuple|group isomorphism|106>>
+    <associate|auto-9|<tuple|left action|107>>
+    <associate|faithful, trasitive action|<tuple|4.23|?>>
+    <associate|group abelian group/sub group|<tuple|4.9|104>>
+    <associate|group example bijections|<tuple|4.14|105>>
+    <associate|group example set of functions|<tuple|4.5|103>>
+    <associate|group faithful, transitive action|<tuple|4.23|?>>
+    <associate|group faithful, transitive action (1)|<tuple|4.23|?>>
+    <associate|group faithful, transitive action (2)|<tuple|4.24|?>>
+    <associate|group group|<tuple|4.6|104>>
+    <associate|group group inheritance|<tuple|4.13|105>>
+    <associate|group group inverse of inverse|<tuple|4.8|104>>
+    <associate|group homeomorphism|<tuple|4.15|105>>
+    <associate|group homeomorphism properties|<tuple|4.16|105>>
+    <associate|group inverse element|<tuple|4.7|104>>
+    <associate|group isomorphism|<tuple|4.17|106>>
+    <associate|group isomorphism inverse|<tuple|4.18|?>>
+    <associate|group left (right action)|<tuple|4.20|?>>
+    <associate|group product of groups|<tuple|4.17|106>>
+    <associate|group semi-group inheritance|<tuple|4.12|104>>
+    <associate|group semigroup properties|<tuple|4.4|103>>
+    <associate|group sub-group|<tuple|4.11|104>>
+    <associate|left (right action)|<tuple|4.20|?>>
+    <associate|operator|<tuple|4.2|103>>
+    <associate|ring|<tuple|4.25|?>>
+    <associate|ring integer domain|<tuple|4.27|?>>
+    <associate|ring zero divisor|<tuple|4.26|?>>
+    <associate|semi-group|<tuple|4.3|103>>
+    <associate|sub-semi-group|<tuple|4.10|104>>
   </collection>
 </references>
 
@@ -566,6 +827,8 @@
       <tuple|<tuple|sub-semi-group>|<pageref|auto-6>>
 
       <tuple|<tuple|sup-group>|<pageref|auto-7>>
+
+      <tuple|<tuple|group isomorphism>|<pageref|auto-8>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Algebraic
@@ -577,11 +840,11 @@
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Natural
       Numbers> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-8><vspace|0.5fn>
+      <no-break><pageref|auto-9><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6<space|2spc>Finite
       and Infinite Sets> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-9><vspace|0.5fn>
+      <no-break><pageref|auto-10><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>

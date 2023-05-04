@@ -2847,7 +2847,7 @@
   Using the new notation, composition of function is written as\ 
 
   <\theorem>
-    <label|function alternative for composition>f <math|f:A\<rightarrow\>B>
+    <label|function alternative for composition>If <math|f:A\<rightarrow\>B>
     and <math|g:B\<rightarrow\>C> are two functions then\ 
 
     <\equation*>
@@ -4803,10 +4803,10 @@
   This leads to a notation that we will gradually start to use
 
   <\notation>
-    The function definition <math|f:A\<rightarrow\>B> defined by
-    <math|f<around*|(|x|)>=F<around*|(|x|)>> [where <math|E<around*|(|x|)>>
-    is a parameterized expression that calculates a unique value for every
-    <math|x\<in\>A>] is equivalent with
+    <label|function simple definition notation>The function definition
+    <math|f:A\<rightarrow\>B> defined by <math|f<around*|(|x|)>=F<around*|(|x|)>>
+    [where <math|E<around*|(|x|)>> is a parameterized expression that
+    calculates a unique value for every <math|x\<in\>A>] is equivalent with
 
     <\equation*>
       f=<around*|{|z\|z=<around*|(|x,E*x|)>\<wedge\>x\<in\>E|}>=<around*|{|<around*|(|x,E<around*|(|x|)>|)>\|x\<in\>X|}>
@@ -11905,7 +11905,7 @@
 
       <item*|Well-Ordering Theorem>For every set there exists a order
       relation making <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>>
-      well-erdered.
+      well-ordered.
 
       \ \ 
     </description>
@@ -12104,6 +12104,17 @@
       is surjective which together with (1) proves bijectivity.
     </enumerate>
   </proof>
+
+  From this point on we will gradually start to use the simpler notations for
+  functions and families that are mentioned in the references [definition:
+  <reference|function f(x)>], [theorem: <reference|function equality (2)>],
+  [theorem: <reference|function alternative for composition>], [theorem:
+  <reference|function injectivity, surjectivity>], [theorem:
+  <reference|function simple definition>], [notation: <reference|function
+  simple definition notation>], [theorem: <reference|family union (2)>] and
+  [theorem: <reference|family intersection (2)>] without explicit referring
+  to them. This to avoid excessive notation and difference of notation
+  between this text and standard mathematical practice.
 
   \;
 
@@ -12545,6 +12556,7 @@
     <associate|function restriction of a function|<tuple|2.79|?>>
     <associate|function restriction of a graph|<tuple|2.70|?>>
     <associate|function simple definition|<tuple|2.83|?>>
+    <associate|function simple definition notation|<tuple|2.84|?>>
     <associate|function surjection and construction of inverse
     function|<tuple|3.96|?>>
     <associate|function surjection condition|<tuple|2.47|?>>
