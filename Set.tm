@@ -1386,7 +1386,7 @@
   first define the concept of a successor set.
 
   <\definition>
-    <label|successor set><index|successor set>A set <math|S> is a
+    <label|set successor set><index|successor set>A set <math|S> is a
     <with|font-series|bold|successor set> iff
 
     <\enumerate>
@@ -12668,6 +12668,7 @@
     <associate|set emptyset is not set of empty set|<tuple|2.2|?>>
     <associate|set intersection of two sets is aset|<tuple|1.55|?>>
     <associate|set restriction of a set of sets|<tuple|1.65|?>>
+    <associate|set successor set|<tuple|1.51|?>>
     <associate|set union of two sets is a set|<tuple|1.62|?>>
     <associate|successor set|<tuple|1.51|?>>
     <associate|totally ordered class|<tuple|3.37|?>>
