@@ -7,10 +7,6 @@
 <\body>
   <chapter|Algebraic constructs>
 
-  <\note>
-    From now on we start to use the simplified notations for function
-  </note>
-
   Before we define the different number systems, like the natural numbers,
   whole numbers, rational numbers, real numbers and complex numbers, we
   define the algebraic operations and structures that we can define on them.
@@ -40,11 +36,12 @@
   <\definition>
     <label|semi-group><index|semi-group>A semi-group is a pair
     <math|<around*|\<langle\>|G,\<odot\>|\<rangle\>>> where <math|G> is a set
-    and a operator <math|\<odot\>:G\<times\>G\<rightarrow\>G> such that:
+    and <math|\<odot\>> a operator <math|\<odot\>:G\<times\>G\<rightarrow\>G>
+    such that:
 
     <\description>
       <item*|neutral element><math|\<exists\>e\<in\>G<text| such that
-      >\<forall\>x\<in\>G> we have <math|x\<odot\>e=x=e\<varnothing\>x>
+      >\<forall\>x\<in\>G> we have <math|x\<odot\>e=x=e\<odot\>x>
 
       <item*|associativity><math|\<forall\>x,y,z\<in\>G> we have
       <math|<around*|(|x\<odot\>y|)>\<odot\>z=x\<odot\><around*|(|y\<odot\>z|)>>
@@ -67,7 +64,7 @@
 
     <\enumerate>
       <item>As <math|G> is a group there exist a neutral element
-      <math|e\<in\>G> so that <math|G\<neq\>\<odot\>>
+      <math|e\<in\>G> so that <math|G\<neq\>\<varnothing\>>
 
       <item>Assume that there exists two neutral elements
       <math|e,e<rprime|'>> then we have\ 
@@ -81,9 +78,9 @@
   </proof>
 
   <\example>
-    <label|group example set of functions>Let <math|X> be a set
+    <label|group example set of functions>Let <math|X> be a set then
     <math|<around*|\<langle\>|X<rsup|X>,\<circ\>|\<rangle\>>> is a semi group
-    [see definition: <reference|function B^A>]. Where <math|X<rsup|X>> is the
+    [see definition: <reference|function B^A>]. Here <math|X<rsup|X>> is the
     set of function graphs between <math|X> and <math|X> and <math|\<circ\>>
     is the composition between functions.
   </example>
@@ -102,17 +99,17 @@
       <text|defined by >\<circ\><around*|(|f,g|)>=f\<circ\>g
     </equation*>
 
-    <\description>
-      <item*|neutral element>If <math|f\<in\>X<rsup|X>> then
-      <math|f\<circ\>Id<rsub|X>\<equallim\><rsub|<text|[theorem:
+    is a function. The neutral element is <math|Id<rsub|X>> because
+    <math|\<forall\>f\<in\>X<rsup|X>> we have
+
+    <\equation*>
+      f\<circ\>Id<rsub|X>\<equallim\><rsub|<text|[theorem:
       <reference|function composition of Id
       function>>>f\<equallim\><rsub|<text|[theorem: <reference|function
-      composition of Id function>>>Id<rsub|X>\<circ\>f>
+      composition of Id function>>>Id<rsub|X>\<circ\>f
+    </equation*>
 
-      <item*|associativity>If <math|f,g,h\<in\>X<rsup|x>> then by [theorem:
-      <reference|partial function associativity>] we have
-      <math|h\<circ\><around*|(|g\<circ\>f|)>=<around*|(|h\<circ\>g|)>\<circ\>f>
-    </description>
+    \;
   </proof>
 
   A group is a semi-group with the extra condition that is has a inverse
@@ -130,6 +127,8 @@
       <\equation*>
         x\<odot\>y=e=y\<odot\>x
       </equation*>
+
+      where <math|e> is the neutral element of the group.
     </description>
   </definition>
 
@@ -182,10 +181,9 @@
     <math|<around*|\<langle\>|G,\<odot\>|\<rangle\>>> is abelian or
     <with|font-series|bold|commutative> iff\ 
 
-    <\description>
-      <item*|commutativity><math|\<forall\>x,y\<in\>G<text| we have
-      <math|x\<odot\>y=y\<odot\>x>>>
-    </description>
+    <\equation*>
+      \<forall\>x,y\<in\>G<text| we have <math|x\<odot\>y=y\<odot\>x>>
+    </equation*>
   </definition>
 
   <\definition>
@@ -195,7 +193,7 @@
 
     <\enumerate>
       <item><math|\<forall\>x,y\<in\>F<text| we have
-      <math|f\<circ\>g\<in\>F>>>
+      <math|x\<odot\>y\<in\>F>>>
 
       <item><math|e\<in\>F> [<math|e> is the neutral element of <math|G>]
     </enumerate>
@@ -203,11 +201,11 @@
 
   <\definition>
     <label|group sub-group><index|sup-group>Let
-    <math|<around*|\<langle\>|G,\<odot\>|\<rangle\>>> be a group then
+    <math|<around*|\<langle\>|G,\<odot\>|\<rangle\>>> be groups then
     <math|F\<subseteq\>G> is a sub-group iff
 
     <\enumerate>
-      <item><math|\<forall\>x,y\<in\>F> we have <math|f\<circ\>g\<in\>F>
+      <item><math|\<forall\>x,y\<in\>F> we have <math|x\<odot\>y\<in\>F>
 
       <item><math|e\<in\>F> [<math|e> is the neutral element of <math|G>]
 
@@ -239,15 +237,18 @@
 
   <\proof>
     \ First as <math|G> is a set we have by the Axiom of Subsets [axiom:
-    <reference|axiom of subsets>] <math|G> is a set.
+    <reference|axiom of subsets>] that <math|G> is a set.
 
     <\enumerate>
-      <item>For <math|<around*|\<langle\>|F,\<odot\><rsub|\|F\<times\>F>|\<rangle\>>>
-      we have\ 
+      <item>For <math|<around*|\<langle\>|F,\<odot\><rsub|\|F\<times\>F>|\<rangle\>>>\ 
 
       <\description>
-        <item*|neutral element>Let <math|x\<in\>F> then
-        <math|e\<odot\><rsub|\|F\<times\>F>x\<equallim\><rsub|e,x\<in\>F>e\<odot\>x=x=x\<odot\>e=x\<circ\>,<rsub|\|F\<times\>F>e>
+        <item*|neutral element>By definition of a subgroup <math|e\<in\>F>.
+        Let <math|x\<in\>F> then
+
+        <\equation*>
+          e\<odot\><rsub|\|F\<times\>F>x\<equallim\><rsub|e,x\<in\>F>e\<odot\>x=x=x\<odot\>e=x\<odot\><rsub|\|F\<times\>F>e
+        </equation*>
 
         <item*|associativity>Let <math|x,y,z\<in\>F> then
 
@@ -417,8 +418,18 @@
   <\theorem>
     <label|group isomorphism inverse>Let <math|<around*|\<langle\>|F,\<odot\>|\<rangle\>>>,
     <math|<around*|\<langle\>|G,\<oplus\>|\<rangle\>>> be semi groups and
-    <math|f:F\<rightarrow\>G> is a isomorphism then
-    <math|f<rsup|-1>:G\<rightarrow\>F> is a isomorphism.
+
+    <\equation*>
+      f:F\<rightarrow\>G
+    </equation*>
+
+    is a isomorphism then
+
+    <\equation*>
+      f<rsup|-1>:G\<rightarrow\>F
+    </equation*>
+
+    is a isomorphism.
   </theorem>
 
   <\proof>
@@ -441,10 +452,8 @@
     proving that\ 
 
     <\equation*>
-      f<rsup|-1>:F\<rightarrow\>G<text| is a bijection>
+      f<rsup|-1>:F\<rightarrow\>G<text| is a isomorphism>
     </equation*>
-
-    \;
   </proof>
 
   The following theorem show how we can define a group on the product of a
@@ -479,9 +488,9 @@
       <item>If <math|\<forall\>i\<in\>I> we have that
       <math|<around*|\<langle\>|A<rsub|i>,\<odot\><rsub|i>|\<rangle\>>> is a
       group then <math|<around*|\<langle\>|<big|prod><rsub|i\<in\>I>A<rsub|i>,\<odot\>|\<rangle\>>>
-      is a group where the inverse for each
-      <math|x\<in\><big|prod><rsub|i\<in\>I>A<rsub|i>> the inverse
-      <math|x<rsup|=1>> is defined by <math|<around*|(|x<rsup|-1>|)><rsub|i>=<around*|(|x<rsub|i>|)><rsup|-1>>
+      is a group where the inverse <math|x<rsup|-1>> for each
+      <math|x\<in\><big|prod><rsub|i\<in\>I>A<rsub|i>> is defined by
+      <math|<around*|(|x<rsup|-1>|)><rsub|i>=<around*|(|x<rsub|i>|)><rsup|-1>>
       [here <math|<around*|(|x<rsub|i>|)><rsup|-1>> is the inverse of
       <math|x<rsub|i>> in the group <math|<around*|\<langle\>|A<rsub|i>,\<odot\><rsub|i>|\<rangle\>>>
     </enumerate>
@@ -492,13 +501,13 @@
 
     <\enumerate>
       <item>If <math|x,y\<in\><big|prod><rsub|i\<in\>I>A<rsub|i>> then
-      <math|x> is <math|x:I\<rightarrow\><big|cup><rsub|i\<in\>I>A<rsub|i>>
-      is a function such that <math|\<forall\>i\<in\>I>
-      <math|x<rsub|i>=x<around*|(|i|)>\<in\>A<rsub|i>> and
-      <math|y:I\<rightarrow\><big|cup><rsub|i\<in\>I>A<rsub|i>> is a function
+      <math|x> is a function <math|x:I\<rightarrow\><big|cup><rsub|i\<in\>I>A<rsub|i>>
       such that <math|\<forall\>i\<in\>I>
-      <math|y<rsub|i>=y<around*|(|i|)>\<in\>A<rsub|i>>. So if we define
-      <math|x\<odot\>y> by <math|<around*|(|x\<odot\>y|)><around*|(|i|)>=<around*|(|x\<odot\>y|)><rsub|i>=x<rsub|i>\<odot\><rsub|i>y<rsub|i>=x<around*|(|i|)>\<odot\><rsub|i>y<around*|(|i|)>>
+      <math|x<rsub|i>=x<around*|(|i|)>\<in\>A<rsub|i>> and <math|y> is a
+      function <math|y:I\<rightarrow\><big|cup><rsub|i\<in\>I>A<rsub|i>> such
+      that <math|\<forall\>i\<in\>I> <math|y<rsub|i>=y<around*|(|i|)>\<in\>A<rsub|i>>.
+      So if we define <math|x\<odot\>y> by
+      <math|<around*|(|x\<odot\>y|)><around*|(|i|)>=<around*|(|x\<odot\>y|)><rsub|i>=x<rsub|i>\<odot\><rsub|i>y<rsub|i>=x<around*|(|i|)>\<odot\><rsub|i>y<around*|(|i|)>>
       then <math|x\<odot\>y:I\<rightarrow\><big|cup><rsub|i\<in\>I>A<rsub|i>>
       is a function and <math|\<forall\>i\<in\>I> we have
       <math|<around*|(|x\<odot\>y|)><around*|(|i|)>=x<around*|(|i|)>\<odot\><rsub|i>y<around*|(|i|)>\<in\>A<rsub|i>>
@@ -606,8 +615,8 @@
   <\definition>
     <index|<math|g<rsub|\<vartriangleright\>>>>Let
     <math|<around*|\<langle\>|G,\<odot\>|\<rangle\>>> be a group, <math|X> a
-    set then if <math|\<vartriangleright\>> is a left group action then if
-    <math|g\<in\>G> we define\ 
+    set, <math|\<vartriangleright\>> a left group action and <math|g\<in\>G>
+    then we define\ 
 
     <\equation*>
       g<rsub|\<vartriangleright\>>:X\<rightarrow\>X<text| by
@@ -617,9 +626,9 @@
 
   <\definition>
     <index|<math|g<rsub|\<vartriangleleft\>>>>Let
-    <math|<around*|\<langle\>|G,\<odot\>|\<rangle\>>> be a group, <math|X> a
-    set then if <math|\<vartriangleleft\>> is a right group action then if
-    <math|g\<in\>G> we define\ 
+    <math|<around*|\<langle\>|G,\<odot\>|\<rangle\>>> be a group, <math|X>,
+    <math|\<vartriangleleft\>> a right group action and <math|g\<in\>G> then
+    we define\ 
 
     <\equation*>
       g<rsub|\<vartriangleleft\>>:X\<rightarrow\>X<text| by
@@ -644,12 +653,13 @@
       or equivalently\ 
 
       <\equation*>
-        <around*|{|g\<in\>G\|\<forall\>x\<in\>X\|g\<vartriangleright\>x=x|}>=<around*|{|e|}>
+        <around*|{|g\<in\>G\|\<forall\>x\<in\>X<text| we have
+        >g\<vartriangleright\>x=x|}>=<around*|{|e|}>
       </equation*>
 
       <item><math|\<vartriangleright\>> is <strong|transitive> iff
-      <math|\<forall\>x<rsub|1>,x<rsub|2>> there exists a <math|g\<in\>G>
-      such that <math|g\<vartriangleright\>x<rsub|1>=x<rsub|2>>
+      <math|\<forall\>x<rsub|1>,x<rsub|2>> there exist a <math|g\<in\>G> such
+      that <math|g\<vartriangleright\>x<rsub|1>=x<rsub|2>>
 
       <item><math|\<vartriangleright\>> is <strong|free> iff
       <math|\<forall\>x\<in\>X> we have <math|<around*|{|g\<in\>G\|g\<vartriangleright\>x=x|}>=<around*|{|e|}>>
@@ -660,28 +670,29 @@
     <label|group faithful, transitive action (2)><index|faithful
     action><index|transitive action>Let <math|<around*|\<langle\>|G,\<odot\>|\<rangle\>>>
     be a group with neutral element <math|e> and let <math|X> be a set then
-    we have the following definitions for a left group action
-    <math|\<vartriangleright\>>
+    we have the following definitions for a right group action
+    <math|\<vartriangleleft\>>
 
     <\enumerate>
       <item><math|\<vartriangleright\>> is <strong|faithful> if
 
       <\equation*>
-        g<rsub|\<vartriangleright\>>=Id<rsub|X><text| if and only if >g=e
+        g<rsub|\<vartriangleleft\>>=Id<rsub|X><text| if and only if >g=e
       </equation*>
 
       or equivalently\ 
 
       <\equation*>
-        <around*|{|g\<in\>G\|\<forall\>x\<in\>X\|g\<vartriangleright\>x=x|}>=<around*|{|e|}>
+        <around*|{|g\<in\>G\|\<forall\>x\<in\>X<text| we have
+        >g\<vartriangleleft\>x=x|}>=<around*|{|e|}>
       </equation*>
 
       <item><math|\<vartriangleright\>> is <strong|transitive> iff
       <math|\<forall\>x<rsub|1>,x<rsub|2>> there exists a <math|g\<in\>G>
-      such that <math|g\<vartriangleright\>x<rsub|1>=x<rsub|2>>
+      such that <math|g\<vartriangleleft\>x<rsub|1>=x<rsub|2>>
 
       <item><math|\<vartriangleright\>> is <strong|free> iff
-      <math|\<forall\>x\<in\>X> we have <math|<around*|{|g\<in\>G\|g\<vartriangleright\>x=x|}>=<around*|{|e|}>>
+      <math|\<forall\>x\<in\>X> we have <math|<around*|{|g\<in\>G\|g\<vartriangleleft\>x=x|}>=<around*|{|e|}>>
     </enumerate>
   </definition>
 
@@ -738,8 +749,8 @@
     <label|ring zero divisor><index|zero divisor>If
     <math|<around*|\<langle\>|R,\<oplus\>,\<odot\>|\<rangle\>>> is a ring
     then a <with|font-series|bold|zero divisor of R> is a
-    <math|x\<in\>R\\<around*|{|0|}>> so that <math|\<exists\>y\<in\>R> such
-    that <math|x\<odot\>y=0>
+    <math|x\<in\>R\\<around*|{|0|}>> so that
+    <math|\<exists\>y\<in\>R\\<around*|{|0|}>> such that <math|x\<odot\>y=0>
   </definition>
 
   <\definition>
@@ -781,37 +792,9 @@
       <item><math|S> is a set as <math|R> is a set by the Axiom of Subsets
       [axiom: <reference|axiom of subsets>].
 
-      <item><math|<around*|\<langle\>|S,\<oplus\>|\<rangle\>>> is a abelian
-      group or <math|\<oplus\><rsub|\|S\<times\>S>:S\<times\>S\<rightarrow\>S>
-      is a operator such that
-
-      <\description>
-        <item*|associativity><math|\<forall\>x,y,z\<in\>S> we have
-
-        <\equation*>
-          x\<oplus\><rsub|\|S\<times\>S><around*|(|y\<oplus\><rsub|\|S\<times\>S>z|)>=x\<oplus\><around*|(|y\<oplus\>z|)>=<around*|(|x\<oplus\>y|)>\<oplus\>z=<around*|(|x\<oplus\><rsub|\|S\<times\>S>y|)>\<oplus\><rsub|\|S\<times\>S>z
-        </equation*>
-
-        <item*|neutral element>For <math|0\<in\>R> we have
-        \ <math|\<forall\>x\<in\>S> that
-
-        <\equation*>
-          0\<oplus\><rsub|\|S\<times\>S>=x=0\<oplus\>x=x=x\<oplus\>0=x\<oplus\><rsub|\|S\<times\>S>0
-        </equation*>
-
-        <item*|inverse element><math|\<forall\>x\<in\>S> there exist a
-        <math|-x> such that
-
-        <\equation*>
-          x\<oplus\><rsub|\|S\<times\>S><around*|(|-x|)>=x\<oplus\><around*|(|-x|)>=0=<around*|(|-x|)>\<oplus\>x=<around*|(|-x|)>\<oplus\><rsub|\|S\<times\>S>x
-        </equation*>
-
-        <item*|commutativity><math|\<forall\>x,y\<in\>S> we have
-
-        <\equation*>
-          x\<oplus\><rsub|\|S\<times\>S>y=x\<oplus\>y=y\<oplus\>x=y\<oplus\><rsub|\|S\<times\>S>x
-        </equation*>
-      </description>
+      <item><math|<around*|\<langle\>|S,\<oplus\><rsub|\|S\<times\>S>|\<rangle\>>>
+      is a abelian group by [theorem: <reference|group semi-group
+      inheritance>]
 
       <item><math|\<odot\>:R*\<times\>R\<rightarrow\>R> is a operator so that\ 
 
@@ -832,7 +815,7 @@
         <item*|commutativity><math|\<forall\>x,y\<in\>S> we have
 
         <\equation*>
-          x\<odot\><rsub|\|S\<times\>S>y-x\<odot\>y=y\<odot\>x=y\<odot\><rsub|\|S\<times\>S>x
+          x\<odot\><rsub|\|S\<times\>S>y=x\<odot\>y=y\<odot\>x=y\<odot\><rsub|\|S\<times\>S>x
         </equation*>
 
         <item*|associativity><math|\<forall\>x,y,z\<in\>S> we have
@@ -862,7 +845,8 @@
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|0>|<cell|\<equallim\><rsub|<text|inverse
-      element>>>|<cell|<around*|(|0\<odot\>x|)>\<oplus\>-<around*|(|0\<odot\>x|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|9\<oplus\>0=0>>|<cell|<around*|(|<around*|(|0\<oplus\>0|)>\<odot\>x|)>\<oplus\><around*|(|-<around*|(|0\<odot\>x|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|distributivity>>|<cell|<around*|[|<around*|(|0\<odot\>x|)>\<oplus\><around*|(|0\<odot\>x|)>|]>\<oplus\><around*|(|-<around*|(|0\<odot\>x|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|associativity>>>|<cell|0\<odot\>x\<oplus\><around*|[|<around*|(|0\<odot\>x|)>+<around*|(|-<around*|(|0\<odot\>x|)>|)>|]>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|inverse
+      element>>>|<cell|<around*|(|0\<odot\>x|)>\<oplus\>-<around*|(|0\<odot\>x|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|0\<oplus\>0=0>>|<cell|<around*|(|<around*|(|0\<oplus\>0|)>\<odot\>x|)>\<oplus\><around*|(|-<around*|(|0\<odot\>x|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|distributivity>>|<cell|<around*|[|<around*|(|0\<odot\>x|)>\<oplus\><around*|(|0\<odot\>x|)>|]>\<oplus\><around*|(|-<around*|(|0\<odot\>x|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|associativity>>>|<cell|<around*|(|0\<odot\>x|)>\<oplus\><around*|[|<around*|(|0\<odot\>x|)>+<around*|(|-<around*|(|0\<odot\>x|)>|)>|]>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|inverse
+      element>>>|<cell|<around*|(|0\<odot\>x|)>\<oplus\>0>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|inverse
       element>>>|<cell|0\<odot\>x>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|commutativity>>>|<cell|x\<odot\>0>>>>
     </eqnarray*>
   </proof>
@@ -931,7 +915,7 @@
   so that we have\ 
 
   <\equation*>
-    \<forall\>x\<in\>R<text| that <math|x=1\<odot\>x=1\<odot\>x=0\<odot\>x><math|\<equallim\><rsub|<text|[theorem:
+    \<forall\>x\<in\>R<text| that <math|x=1\<odot\>x=0\<odot\>x><math|\<equallim\><rsub|<text|[theorem:
     <reference|ring absorbing element>]>>>0>
   </equation*>
 
@@ -974,7 +958,7 @@
         <math|x\<oplus\>y=y\<oplus\>x>
       </description>
 
-      <math|\<oplus\>> is called the sum operator of the ring.
+      <math|\<oplus\>> is called the sum operator of the field.
 
       <item><math|\<odot\>:F*\<times\>F\<rightarrow\>F> is a operator so that\ 
 
@@ -995,7 +979,7 @@
         >\<exists\>b\<in\>F<text| such that >x\<odot\>b=1=b\<odot\>x>
       </description>
 
-      <math|\<odot\>> is called the multiplication operator of the ring.
+      <math|\<odot\>> is called the multiplication operator of the field.
     </enumerate>
   </definition>
 
@@ -1003,19 +987,18 @@
 
   <\theorem>
     <label|field inverse is unique>If <math|<around*|\<langle\>|F,\<oplus\>,\<odot\>|\<rangle\>>>
-    then <math|\<forall\>x\<in\>F\\<around*|{|0|}>> [<math|0> is the neutral
-    element for <math|\<oplus\>>] there exist a
+    then <math|\<forall\>x\<in\>F\\<around*|{|0|}>> there exist a
     <with|font-series|bold|unique> inverse element for <math|\<odot\>>. We
-    note this element as <math|x<rsup|-1>>
+    note this element as <math|x<rsup|-1>>.
   </theorem>
 
   <\proof>
     Let <math|x\<in\>F\\<around*|{|0|}>> and assume that
-    <math|b,b<rprime|'>\<in\>F> such that <math|b\<odot\>x=1=x\<odot\>b> and
-    <math|b<rprime|'>\<odot\>x=1=x\<odot\>b<rprime|'>> then we have
+    <math|y,y<rprime|'>\<in\>F> such that <math|y\<odot\>x=1=x\<odot\>y> and
+    <math|y<rprime|'>\<odot\>x=1=x\<odot\>y<rprime|'>> then we have
 
     <\equation*>
-      b=b\<odot\>1=b\<circ\><around*|(|x\<odot\>b<rprime|'>|)>=<around*|(|b\<odot\>x|)>\<odot\>b<rprime|'>=1\<odot\>y<rprime|'>=y<rprime|'>
+      y=y\<odot\>1=y\<circ\><around*|(|x\<odot\>y<rprime|'>|)>=<around*|(|y\<odot\>x|)>\<odot\>y<rprime|'>=1\<odot\>y<rprime|'>=y<rprime|'>
     </equation*>
   </proof>
 
@@ -1062,7 +1045,7 @@
     <label|field homeomorphism><index|field homeomorphism>If
     <math|<around*|\<langle\>|A,\<odot\><rsub|A>,\<oplus\><rsub|A>|\<rangle\>>>
     and <math|<around*|\<langle\>|B,\<odot\><rsub|B>,\<oplus\><rsub|B>|\<rangle\>>>
-    are fields with multiplicative units <math|1<rsub|A>,1<rsub|A>> then a
+    are fields with multiplicative units <math|1<rsub|A>,1<rsub|B>> then a
     function <math|f:A\<rightarrow\>B> is a field homeomorphism iff
 
     <\enumerate>
@@ -1121,7 +1104,7 @@
         <tformat|<table|<row|<cell|f<rsup|-1><around*|(|x\<odot\><rsub|B>y|)>>|<cell|=>|<cell|f<rsup|-1><around*|(|Id<rsub|B><around*|(|x|)>\<odot\><rsub|B>Id<rsub|B><around*|(|y|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|function bijection f,f-1>>>>|<cell|f<rsup|-1><around*|(|<around*|(|f\<circ\>f<rsup|-1>|)><around*|(|x|)>\<odot\><rsub|B><around*|(|f\<circ\>f<rsup|-1>|)><around*|(|y|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|function alternative for
-        composition>]>>>|<cell|f<rsup|-1><around*|(|f<around*|(|f<rsup|-1><around*|(|x|)>|)>\<odot\>f<around*|(|f<rsup|-1><around*|(|y|)>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|f<text|
+        composition>]>>>|<cell|f<rsup|-1><around*|(|f<around*|(|f<rsup|-1><around*|(|x|)>|)>\<odot\><rsub|B>f<around*|(|f<rsup|-1><around*|(|y|)>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|f<text|
         is homeomorphism>>>|<cell|f<rsup|-1><around*|(|f<around*|(|f<rsup|-1><around*|(|x|)>\<odot\><rsub|A>f<rsup|-1><around*|(|y|)>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|function alternative for
         composition>]>>>|<cell|<around*|(|f<rsup|-1>\<circ\>f|)><around*|(|f<rsup|-1><around*|(|x|)>\<odot\><rsub|A>f<rsup|-1><around*|(|y|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
@@ -1329,9 +1312,9 @@
   <\proof>
     By <math|<around*|(|1|)>,<around*|(|2|)>> it follows that <math|X> is a
     successor set so that <math|X\<in\><around*|{|A\|A<text| is a successor
-    set>|}>> so that by [theorem: <reference|class general intersection>]
-    <math|X\<subseteq\><big|cap><around*|{|A\|A<text| is a successor
-    set>|}>=\<bbb-N\>> which together with <math|X\<subseteq\>\<bbb-N\>>
+    set>|}>> hence by [theorem: <reference|class general intersection>]
+    <math|\<bbb-N\><rsub|0>=<big|cap><around*|{|A\|A<text| is a successor
+    set>|}>\<subseteq\>X>, which together with <math|X\<subseteq\>\<bbb-N\>>
     proves that <math|X=\<bbb-N\>>.
   </proof>
 
@@ -1349,7 +1332,7 @@
   <\definition>
     <label|natural numbers transitive><index|transitive set>A set <math|A> is
     <with|font-series|bold|transitive> if <math|\<forall\>x\<in\>A> we have
-    <math|x\<subseteq\>A>
+    <math|x\<subseteq\>A>.
   </definition>
 
   As a application of mathematical induction we prove that every natural
@@ -1371,13 +1354,13 @@
       is satisfied vacuously.
 
       <item*|<math|n\<in\>S\<Rightarrow\>s<around*|(|n|)>\<in\>S>>If
-      <math|n\<in\>S> then we have if <math|m\<in\>s<around*|(|n|)>> by the
+      <math|n\<in\>S> then we have for <math|m\<in\>s<around*|(|n|)>> by the
       previous theorem [theorem: <reference|natural numbers successor
       properties>] that:
 
       <\description>
-        <item*|<math|m\<in\>n>>Then as <math|n\<in\>S> <math|n> is transitive
-        so that <math|m\<subseteq\>n\<subseteq\>n<big|cup><around*|{|n|}>=s<around*|(|n|)>>
+        <item*|<math|m\<in\>n>>Then as <math|n\<in\>S>, <math|n> is
+        transitive so that <math|m\<subseteq\>n\<subseteq\>n<big|cup><around*|{|n|}>=s<around*|(|n|)>>
 
         <item*|<math|m=n>>Then <math|m=n\<subseteq\>n<big|cup><around*|{|n|}>=s<around*|(|n|)>>
       </description>
@@ -1423,12 +1406,12 @@
       conclude that <math|n=s<around*|(|n|)>> giving the contradiction
       <math|n\<nin\>S>. So we must have that
       <math|s<around*|(|s<around*|(|n|)>|)>\<neq\>s<around*|(|n|)>> proving
-      that <math|s<around*|(|n|)>\<in\>S>
+      that <math|s<around*|(|n|)>\<in\>S>.
     </description>
 
     Using mathematical induction it follows then that
     <math|\<bbb-N\><rsub|0>=S> so if <math|n\<in\>\<bbb-N\><rsub|0>> then
-    <math|s\<in\>S> and thus <math|n\<neq\>s<around*|(|n|)>>
+    <math|n\<in\>S> and thus <math|n\<neq\>s<around*|(|n|)>>.
   </proof>
 
   The next theorem shows that the successor function is a injection.
@@ -1458,8 +1441,8 @@
 
       <\description>
         <item*|<math|m\<in\>n>>As <math|n> is transitive we have that
-        <math|m\<subseteq\>n> which combined wit <math|n\<subseteq\>m> proves
-        <math|n=m>
+        <math|m\<subseteq\>n> which combined with <math|n\<subseteq\>m>
+        proves <math|n=m>
 
         <item*|<math|m=n>>Then clearly <math|n=m>
       </description>
@@ -1540,24 +1523,368 @@
       <math|m=n> satisfies <math|s<around*|(|n|)>=s<around*|(|m|)>>, if there
       is another <math|m<rprime|'>\<in\>\<bbb-N\><rsub|0>> such that
       <math|s<around*|(|n|)>=s<around*|(|m<rprime|'>|)>>, then by [theorem:
-      <reference|natural numbers successor function is injective>] so that
+      <reference|natural numbers successor function is injective>] we have
       <math|n=m<rprime|'>>. So <math|s<around*|(|n|)>\<in\>S>.
     </description>
 
     Mathematical induction [see: <reference|natural numbers mathematical
     induction>] proves then that <math|\<bbb-N\><rsub|0>=S>. So if
     <math|n\<in\>\<bbb-N\><rsub|0>> with <math|n\<neq\>0> we have as
-    <math|n\<in\>S> proving that <math|\<exists\>!m\<in\>\<bbb-N\><rsub|0>>
-    such that <math|n=s<around*|(|m|)>>.
+    <math|n\<in\>S> that <math|\<exists\>!m\<in\>\<bbb-N\><rsub|0>> such that
+    <math|n=s<around*|(|m|)>>.
   </proof>
 
-  \;
+  <section|Recursion>
 
-  \;
+  Recursion will be used to essential define things in terms of itself. It is
+  the mathematical eqivalent of iteration in many programming languages.
+  Actually languages that are mathematical oriented like Haskell have no
+  iteration , loop constructs and relay also on recursion. Recursion is based
+  on he following theorem.
 
-  \;
+  <\theorem>
+    <label|recursion><index|recursion><dueto|Recursion>Let <math|A> be a set,
+    <math|a\<in\>A> and <math|f:A\<rightarrow\>A> a function then there
+    exists a <with|font-series|bold|unique> function
 
-  \;
+    <\equation*>
+      \<lambda\>:\<bbb-N\><rsub|0>\<rightarrow\>A
+    </equation*>
+
+    such that\ 
+
+    <\enumerate>
+      <item><math|\<lambda\><around*|(|0|)>=a>
+
+      <item><math|\<forall\>n\<in\>\<bbb-N\><rsub|0><text|>> we have
+      <math|\<lambda\><around*|(|s<around*|(|n|)>|)>=f<around*|(|\<lambda\><around*|(|n|)>|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    Define
+
+    <\equation*>
+      \<cal-G\>=<around*|{|G\|G\<subseteq\>\<bbb-N\><rsub|0>\<times\>A<text|
+      such that ><around*|(|0,a|)>\<in\>G<text|> and
+      \<forall\>n\<in\>\<bbb-N\><rsub|0><text| that
+      ><around*|(|n,x|)>\<in\>G\<Rightarrow\><around*|(|s<around*|(|n|)>,f<around*|(|x|)>|)>\<in\>G|}>
+    </equation*>
+
+    Define <math|G=\<bbb-N\><rsub|0>\<times\>A> then as
+    <math|0\<in\>\<bbb-N\><rsub|0>> and <math|a\<in\>A> we have
+    <math|<around*|(|0,a|)>\<in\>\<bbb-N\><rsub|0>\<times\>A>. Further if
+    <math|<around*|(|n,x|)>\<in\>\<bbb-N\><rsub|0>\<times\>A> then
+    <math|n\<in\>\<bbb-N\><rsub|0>> and <math|x\<in\>A> so that
+    <math|s<around*|(|n|)>\<in\>\<bbb-N\><rsub|0>> and
+    <math|f<around*|(|x|)>\<in\>A>, hence
+    <math|<around*|(|s<around*|(|n|)>,f<around*|(|x|)>|)>\<in\>\<bbb-N\><rsub|0>\<times\>A>.
+    So
+
+    <\equation>
+      <label|eq 5.1.019>\<bbb-N\><rsub|0>\<times\>A\<in\>\<cal-G\>
+    </equation>
+
+    We prove now that\ 
+
+    <\equation>
+      <label|eq 5.2.019>\<lambda\>=<big|cap>\<cal-G\>\<in\>\<cal-G\>\<wedge\>\<lambda\>\<subseteq\>N<rsub|0>\<times\>A\<wedge\><around*|(|0,a|)>\<in\>\<lambda\>
+    </equation>
+
+    <\proof>
+      \ 
+
+      <\enumerate>
+        <item>By [eq: <reference|eq 5.1.019>] we have
+        <math|\<bbb-N\><rsub|0>\<times\>A\<in\>\<cal-G\>> so that by
+        [theorem: <reference|class general intersection>]
+        <math|<big|cap>\<cal-G\>\<subseteq\>\<bbb-N\><rsub|0>\<times\>A>
+
+        <item><math|\<forall\>G\<in\>\<cal-G\>> we have by definition that
+        <math|<around*|(|0,a|)>\<in\>G> hence
+        <math|<around*|(|0,a|)>\<in\><big|cap>\<cal-G\>>
+
+        <item>If <math|<around*|(|n,x|)>\<in\><big|cap>\<cal-G\>> then
+        <math|\<forall\>G\<in\>\<cal-G\>> we have
+        <math|<around*|(|n,x|)>\<in\>G\<Rightarrow\><around*|(|s<around*|(|n|)>,f<around*|(|x|)>|)>\<in\>G>,
+        so that <math|<around*|(|s<around*|(|n|)>,f<around*|(|x|)>|)>\<in\><big|cap>\<cal-G\>>
+      </enumerate>
+
+      Using (1),(2) and (3) it follows that
+      <math|<big|cap>\<cal-G\>\<in\>\<cal-G\>>.
+    </proof>
+
+    If <math|x\<in\>dom<around*|(|\<lambda\>|)>> then <math|\<exists\>y> such
+    that <math|<around*|(|x,y|)>\<in\>\<lambda\>\<subseteq\>\<bbb-N\><rsub|0>\<times\>A>
+    [see eq: <reference|eq 5.2.019>] so that <math|x\<in\>\<bbb-N\><rsub|0>>,
+    hence\ 
+
+    <\equation>
+      <label|eq 5.3.019>dom<around*|(|\<lambda\>|)>\<subseteq\>\<bbb-N\><rsub|0>
+    </equation>
+
+    As by [eq: <reference|eq 5.2.019>] <math|<around*|(|o,a|)>\<in\>\<lambda\>>
+    we have that\ 
+
+    <\equation>
+      <label|eq 5.4.019>0\<in\>dom<around*|(|\<lambda\>|)>
+    </equation>
+
+    If <math|n\<in\>dom<around*|(|\<lambda\>|)>> then then <math|\<exists\>x>
+    such that <math|<around*|(|n,x|)>\<in\>\<lambda\>>, as by [eq:
+    <reference|eq 5.2.019>] <math|\<lambda\>\<in\>\<cal-G\>> we have
+    <math|<around*|(|s<around*|(|n|)>,f<around*|(|x|)>|)>\<in\>\<lambda\>> so
+    that <math|s<around*|(|n|)>\<in\>dom<around*|(|\<lambda\>|)>>. In other
+    words we have\ 
+
+    <\equation>
+      <label|eq 5.5.019>if n\<in\>dom<around*|(|\<lambda\>|)><text| then
+      >s<around*|(|n|)>\<in\>dom<around*|(|\<lambda\>|)>
+    </equation>
+
+    Now [eq: <reference|eq 5.3.019>], [eq: <reference|eq 5.4.019>] and [eq:
+    <reference|eq 5.5.019>] are the conditions for amthematical induction
+    [theorem: <reference|natural numbers mathematical induction>], so we have\ 
+
+    <\equation>
+      <label|eq 5.6.019>dom<around*|(|\<lambda\>|)>=\<bbb-N\><rsub|0>
+    </equation>
+
+    We use now mathematical induction to prove that <math|\<lambda\>> is the
+    graph of a function. Let\ 
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|<text|<math|\<exists\>!x> such
+      that <math|<around*|(|n,x|)>\<in\>\<lambda\>>>|}>\<subseteq\>\<bbb-N\><rsub|0>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|0\<in\>S>>By [eq: <reference|eq 5.2.019>] we have
+      <math|<around*|(|0,a|)>\<in\>\<lambda\>>. Assume that
+      <math|\<exists\>x\<in\>A> with <math|x\<neq\>a> such that
+      <math|<around*|(|0,x|)>\<in\>\<lambda\>>, then
+      <math|<around*|(|0,a|)>\<neq\><around*|(|0,x|)>>. Define now
+      <math|\<beta\>=\<lambda\>\\<around*|{|<around*|(|0,x|)>|}>>
+
+      <\enumerate>
+        <item><math|\<beta\>\<subseteq\>\<lambda\>\<subseteq\>\<bbb-N\><rsub|0>\<times\>A>
+
+        <item>As <math|<around*|(|0,a|)>\<neq\><around*|(|0,x|)>> we have
+        <math|<around*|(|0,a|)>\<in\>\<beta\>>
+
+        <item>If <math|<around*|(|n,y|)>\<in\>\<beta\>\<Rightarrowlim\><rsub|\<beta\>\<subset\>\<lambda\>><around*|(|n,y|)>\<in\>\<lambda\>>
+        so that <math|<around*|(|s<around*|(|n|)>,f<around*|(|x|)>|)>\<in\>\<lambda\>>,
+        as by [theorem: <reference|natural numbers s(n)=/0>]
+        <math|s<around*|(|n|)>\<neq\>0> we have that
+        <math|<around*|(|s<around*|(|n|)>,f<around*|(|x|)>|)>\<neq\><around*|(|0,x|)>>,
+        hence <math|<around*|(|s<around*|(|n|)>,f<around*|(|y|)>|)>\<in\>\<beta\>>
+      </enumerate>
+
+      From (1),(2) and (3) it follows that <math|\<beta\>\<in\>\<cal-G\>> so
+      that by [theorem: <reference|class general intersection>]
+      <math|\<lambda\>=<big|cap>\<cal-G\>\<subseteq\>\<cal-B\>> which as
+      <math|<around*|(|0,x\<in\>\<lambda\>|)> would give
+      <around*|(|0,x|)>\<in\>\<beta\>=\<lambda\>\\<around*|{|<around*|(|0,x|)>|}>>
+      a contradiction. So the assumption is wrong and we must have that
+      <math|x=a>, proving that <math|0\<in\>S>
+
+      <item*|<math|n\<in\>S\<Rightarrow\>s<around*|(|n|)>\<in\>S>>As
+      <math|n\<in\>S> there exist a <with|font-series|bold|<with|font-series|medium|unique>>
+      <math|x\<in\>\<cal-S\>> such that <math|<around*|(|n,x|)>\<in\>\<lambda\>>.
+      As <math|<around*|(|n,x|)>\<in\>\<lambda\>> we have as
+      <math|\<lambda\>\<in\>\<cal-G\>> that
+      <math|<around*|(|s<around*|(|n|)>,f<around*|(|x|)>|)>\<in\>\<lambda\>>.
+      Assume now that <math|\<exists\>y> such that
+      <math|<around*|(|s<around*|(|n|)>,y|)>\<in\>\<lambda\>> and
+      <math|f<around*|(|x|)>\<neq\>y>. Define then
+      <math|\<beta\>=\<lambda\>\\<around*|{|<around*|(|s<around*|(|n|)>,y|)>|}>>
+      then we have:
+
+      <\enumerate>
+        <item><math|\<beta\>\<subseteq\>\<lambda\>\<subseteq\>\<bbb-N\><rsub|0>\<times\>A>
+
+        <item>As by [theorem: <reference|natural numbers n=/s(n)>]
+        <math|s<around*|(|n|)>\<neq\>0> we have that
+        <math|<around*|(|0,a|)>\<neq\><around*|(|s<around*|(|n|)>,y|)>>, as
+        further <math|<around*|(|0,a|)>\<in\>\<lambda\>> it follows that
+        <math|<around*|(|0,a|)>\<in\>\<beta\>>
+
+        <item>If <math|*<around*|(|m,z|)>\<in\>\<beta\>> then
+        <math|<around*|(|m,z|)>\<in\>\<lambda\>> so that
+        <math|<around*|(|\<lambda\><around*|(|m|)>,f<around*|(|z|)>|)>\<in\>\<lambda\>>
+        we must now consider two cases for
+        <math|s<around*|(|n|)>,s<around*|(|m|)>>:
+
+        <\description>
+          <item*|<math|s<around*|(|m|)>=s<around*|(|n|)>>>Then by [theorem:
+          <reference|natural numbers successor function is injective>] we
+          have <math|n=m> so that <math|<around*|(|n,z|)>=<around*|(|m,z|)>\<in\>\<lambda\>>.
+          As <math|n\<in\>S> and we have <math|<around*|(|n,x|)>\<in\>\<lambda\>>
+          it follows that <math|z=x>. So that
+          <math|<around*|(|s<around*|(|m|)>,f<around*|(|z|)>|)>=<around*|(|s<around*|(|n|)>,f<around*|(|x|)>|)>\<neq\><around*|(|s<around*|(|n|)>,y|)>>
+          [as we assumed that <math|y\<neq\>f<around*|(|x|)>>] hence we have
+          that <math|<around*|(|s<around*|(|m|)>,f<around*|(|z|)>|)>\<in\>\<beta\>>.
+
+          <item*|<math|s<around*|(|m|)>\<neq\>s<around*|(|n|)>>>then
+          <math|<around*|(|s<around*|(|m|)>,f<around*|(|z|)>|)>\<neq\><around*|(|s<around*|(|n|)>,y|)>>
+          so that <math|<around*|(|s<around*|(|m|)>|)>\<in\>\<beta\>>
+        </description>
+
+        So we have proves that if <math|<around*|(|m,z|)>\<in\>\<beta\>> then
+        <math|<around*|(|s<around*|(|m|)>,f<around*|(|z|)>|)>\<in\>\<beta\>>
+      </enumerate>
+
+      From (1),(2) and (3) it follows that <math|\<beta\>\<in\>\<cal-G\>> but
+      then using \ [theorem: <reference|class general intersection>] we have
+      that <math|\<lambda\>=<big|cap>\<cal-G\>\<subseteq\>\<beta\>> which as
+      <math|<around*|(|s<around*|(|n|)>,y|)>\<in\>\<lambda\>> leads to
+      <math|<around*|(|s<around*|(|n|)>,y|)>\<in\>\<beta\>=\<lambda\>\\<around*|{|<around*|(|s<around*|(|n|)>,y|)>|}>>
+      a contradiction. So the assumption is wrong and we must have that
+      <math|y=f<around*|(|x|)>> proving that <math|s<around*|(|n|)>\<in\>S>.
+    </description>
+
+    Using mathematical induction [theorem: <reference|natural numbers
+    mathematical induction>] it follows that <math|\<bbb-N\><rsub|0>=S>. So
+    if <math|<around*|(|n,x|)>,<around*|(|n,x<rprime|'>|)>\<in\>\<lambda\>>
+    then <math|n\<in\>\<bbb-N\><rsub|0>=S> so that <math|y=y<rprime|'>>
+    giving
+
+    <\equation>
+      <label|eq 5.7.019>If \ <around*|(|n,x|)>,<around*|(|n,x<rprime|'>|)>\<in\>\<lambda\><text|
+      then >x=x<rprime|'>
+    </equation>
+
+    From [eq: <reference|eq 5.2.019>], [eq: <reference|eq 5.6.019>] and [eq:
+    <reference|eq 5.7.019>] it follows that\ 
+
+    <\equation>
+      <label|eq 5.8.019>\<lambda\>:\<bbb-N\><rsub|0>\<rightarrow\>A<text| is
+      a function>
+    </equation>
+
+    Further as <math|\<lambda\>\<in\>\<cal-G\>> we have that
+    <math|<around*|(|0,a|)>\<in\>\<lambda\>\<Rightarrow\>a=\<lambda\><around*|(|0|)><text|>>,
+    further if <math|n\<in\>\<bbb-N\><rsub|0>=dom<around*|(|\<lambda\>|)>>
+    then <math|\<exists\>x> such that <math|<around*|(|n,x|)>\<in\>\<lambda\>\<Rightarrow\>x=\<lambda\><around*|(|n|)>>
+    hence <math|<around*|(|s<around*|(|n|)>,f<around*|(|x|)>|)>\<in\>\<lambda\>\<Rightarrow\>\<lambda\><around*|(|s<around*|(|n|)>|)>=f<around*|(|x|)>=f<around*|(|\<lambda\><around*|(|n|)>|)>>
+
+    <\equation>
+      <label|eq 5.9.019>\<lambda\><around*|(|0|)>=a <text| and
+      >\<forall\>n\<in\>\<bbb-N\><rsub|0><text| we have
+      >\<lambda\><around*|(|s<around*|(|n|)>|)>=f<around*|(|\<lambda\><around*|(|n|)>|)>
+    </equation>
+
+    So we have proved the existance of our function, next we must prove that
+    this function is unique' So assume that there exist a nother function
+
+    <\equation*>
+      \<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>A<text| such that
+      >\<beta\><around*|(|0|)>=a<text| and
+      >\<forall\>n\<in\>\<bbb-N\><rsub|0><text| we have
+      >\<lambda\><around*|(|s<around*|(|n|)>|)>=f<around*|(|\<lambda\><around*|(|n|)>|)>
+    </equation*>
+
+    We proceed by mathematical induction, so define
+    <math|T=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|\<lambda\><around*|(|n|)>=\<beta\><around*|(|\<lambda\>|)>|}>>
+    then we have
+
+    <\description>
+      <item*|<math|0\<in\>T>>As <math|\<lambda\><around*|(|0|)>=\<beta\><around*|(|0|)>>
+      we have that <math|0\<in\>T>.
+
+      <item*|<math|n\<in\>T\<Rightarrow\>s<around*|(|n|)>\<in\>T>>As
+      <math|n\<in\>T> we have <math|\<lambda\><around*|(|n|)>=\<beta\><around*|(|n|)>>
+      but then <math|\<lambda\><around*|(|s<around*|(|n|)>|)>=f<around*|(|\<lambda\><around*|(|n|)>|)>=\<beta\><around*|(|s<around*|(|n|)>|)>>
+      so that <math|s<around*|(|n|)>\<in\>T>
+    </description>
+
+    Using mathematical induction [theorem: <reference|natural numbers
+    mathematical induction>] we have then <math|T=\<bbb-N\><rsub|0>>. So
+    <math|\<forall\>n\<in\>\<bbb-N\><rsub|0>> we have <math|n\<in\>T> hence
+    <math|\<lambda\><around*|(|n|)>=\<beta\><around*|(|n|)>> which by
+    [theorem: <reference|function equality (2)>] proves that\ 
+
+    <\equation*>
+      \<lambda\>=\<beta\>
+    </equation*>
+  </proof>
+
+  To understand how recursion works in the above theorem consider the
+  following:
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|\<lambda\><around*|(|0|)>>|<cell|=>|<cell|a>>|<row|<cell|\<lambda\><around*|(|1|)>=\<lambda\><around*|(|s<around*|(|n|)>|)>>|<cell|=>|<cell|f<around*|(|\<lambda\><around*|(|0|)>|)>=f<around*|(|a|)>>>|<row|<cell|\<lambda\><around*|(|2|)>=\<lambda\><around*|(|s<around*|(|1|)>|)>>|<cell|=>|<cell|f<around*|(|\<lambda\><around*|(|1|)>|)>=f<around*|(|f<around*|(|a|)>|)>>>|<row|<cell|\<lambda\><around*|(|3|)>=\<lambda\><around*|(|s<around*|(|2|)>|)>>|<cell|=>|<cell|f<around*|(|\<lambda\><around*|(|2|)>|)>=f<around*|(|f<around*|(|f<around*|(|a|)>|)>|)>>>|<row|<cell|>|<cell|\<ldots\>>|<cell|>>|<row|<cell|\<lambda\><around*|(|n|)>>|<cell|=>|<cell|<wide|f<around*|(|f<around*|(|\<ldots\><around*|(|f<around*|(|a|)>|)>|)>|)>|\<wide-overbrace\>><rsup|<text|n
+    times>>>>>>
+  </eqnarray*>
+
+  so it allows us to define a function <math|\<lambda\>:\<bbb-N\><rsub|0>\<rightarrow\>A>
+  so that <math|\<lambda\><around*|(|n|)>> is the result of applying <math|f>
+  <math|n>-times.
+
+  <\corollary>
+    <label|recursion injective function>If <math|A> is a set, <math|a\<in\>A>
+    and <math|f:A\<rightarrow\>A> a injective function then there exists a
+    unique function\ 
+
+    <\equation*>
+      \<lambda\>:\<bbb-N\><rsub|0>\<rightarrow\>A
+    </equation*>
+
+    such that\ 
+
+    <\enumerate>
+      <item><math|\<lambda\><around*|(|0|)>=a>
+
+      <item><math|\<forall\>n\<in\>\<bbb-N\><rsub|0><text| we have
+      >\<lambda\><around*|(|s<around*|(|n|)>|)>=f<around*|(|\<lambda\><around*|(|n|)>|)>>
+
+      <item>If <math|a\<in\>f<around*|(|A|)>> then <math|\<lambda\>> is
+      injective
+    </enumerate>
+  </corollary>
+
+  <\proof>
+    The first part is easy. Using recursion [theorem: <reference|recursion>]
+    there exists a function\ 
+
+    <\equation*>
+      \<lambda\>:\<bbb-N\><rsub|0>\<rightarrow\>A
+    </equation*>
+
+    such that\ 
+
+    <\equation*>
+      \<lambda\><around*|(|0|)>=a<text| and
+      >\<forall\>n\<in\>\<bbb-N\><rsub|0><text| we have
+      >\<lambda\><around*|(|s<around*|(|n|)>|)>=f<around*|(|\<lambda\><around*|(|n|)>|)>
+    </equation*>
+
+    We prove now mathematical induction to prove (3). Assume that
+    <math|a\<nin\>f<around*|(|A|)>> and take
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|\<forall\>m\<in\>\<bbb-N\><rsub|0><text|
+      with >\<lambda\><around*|(|n|)>=\<lambda\><around*|(|m|)><text| we have
+      n=m>|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|0\<in\>S>>If <math|\<lambda\><around*|(|m|)>=\<lambda\><around*|(|0|)>>
+      then TODO
+
+      <item*|<math|n\<in\>S\<Rightarrow\>s<around*|(|n|)>\<in\>S>>
+    </description>
+
+    \;
+  </proof>
+
+  <\equation*>
+    \;
+  </equation*>
 
   <chapter|Finite and Infinite Sets>
 </body>
@@ -1592,74 +1919,87 @@
     <associate|auto-23|<tuple|ring homeomorphism|110>>
     <associate|auto-24|<tuple|ring isomorphism|110>>
     <associate|auto-25|<tuple|4.3|110>>
-    <associate|auto-26|<tuple|field|111>>
+    <associate|auto-26|<tuple|field|110>>
     <associate|auto-27|<tuple|subfield|111>>
     <associate|auto-28|<tuple|field homeomorphism|111>>
     <associate|auto-29|<tuple|5|113>>
     <associate|auto-3|<tuple|4.1|103>>
     <associate|auto-30|<tuple|5.1|113>>
-    <associate|auto-31|<tuple|mathematical induction|115>>
-    <associate|auto-32|<tuple|transitive set|?>>
-    <associate|auto-33|<tuple|6|?>>
+    <associate|auto-31|<tuple|mathematical induction|114>>
+    <associate|auto-32|<tuple|transitive set|114>>
+    <associate|auto-33|<tuple|5.2|117>>
+    <associate|auto-34|<tuple|recursion|?>>
+    <associate|auto-35|<tuple|6|?>>
     <associate|auto-4|<tuple|semi-group|103>>
     <associate|auto-5|<tuple|group|104>>
     <associate|auto-6|<tuple|sub-semi-group|104>>
     <associate|auto-7|<tuple|sup-group|104>>
     <associate|auto-8|<tuple|group isomorphism|106>>
     <associate|auto-9|<tuple|left action|108>>
-    <associate|field|<tuple|4.34|111>>
-    <associate|field homeomorphism|<tuple|4.38|111>>
-    <associate|field inverse is unique|<tuple|4.35|111>>
-    <associate|field isomorphism and neutral element|<tuple|4.40|112>>
-    <associate|field subfield|<tuple|4.36|111>>
-    <associate|field subfield is a field|<tuple|4.37|111>>
-    <associate|group abelian group/sub group|<tuple|4.9|104>>
-    <associate|group example bijections|<tuple|4.14|105>>
-    <associate|group example set of functions|<tuple|4.5|103>>
-    <associate|group faithful, transitive action (1)|<tuple|4.23|108>>
-    <associate|group faithful, transitive action (2)|<tuple|4.24|108>>
-    <associate|group group|<tuple|4.6|104>>
-    <associate|group group inheritance|<tuple|4.13|105>>
-    <associate|group group inverse of inverse|<tuple|4.8|104>>
-    <associate|group homeomorphism|<tuple|4.15|105>>
-    <associate|group homeomorphism properties|<tuple|4.16|105>>
-    <associate|group inverse element|<tuple|4.7|104>>
-    <associate|group isomorphism|<tuple|4.17|106>>
-    <associate|group isomorphism inverse|<tuple|4.18|106>>
-    <associate|group left (right action)|<tuple|4.20|108>>
-    <associate|group semi-group inheritance|<tuple|4.12|104>>
-    <associate|group semigroup properties|<tuple|4.4|103>>
-    <associate|group sub-group|<tuple|4.11|104>>
+    <associate|eq 5.1.019|<tuple|5.1|?>>
+    <associate|eq 5.2.019|<tuple|5.2|?>>
+    <associate|eq 5.3.019|<tuple|5.3|?>>
+    <associate|eq 5.4.019|<tuple|5.4|?>>
+    <associate|eq 5.5.019|<tuple|5.5|?>>
+    <associate|eq 5.6.019|<tuple|5.6|?>>
+    <associate|eq 5.7.019|<tuple|5.7|?>>
+    <associate|eq 5.8.019|<tuple|5.8|?>>
+    <associate|eq 5.9.019|<tuple|5.9|?>>
+    <associate|field|<tuple|4.33|110>>
+    <associate|field homeomorphism|<tuple|4.37|111>>
+    <associate|field inverse is unique|<tuple|4.34|111>>
+    <associate|field isomorphism and neutral element|<tuple|4.39|112>>
+    <associate|field subfield|<tuple|4.35|111>>
+    <associate|field subfield is a field|<tuple|4.36|111>>
+    <associate|group abelian group/sub group|<tuple|4.8|104>>
+    <associate|group example bijections|<tuple|4.13|105>>
+    <associate|group example set of functions|<tuple|4.4|103>>
+    <associate|group faithful, transitive action (1)|<tuple|4.22|108>>
+    <associate|group faithful, transitive action (2)|<tuple|4.23|108>>
+    <associate|group group|<tuple|4.5|104>>
+    <associate|group group inheritance|<tuple|4.12|105>>
+    <associate|group group inverse of inverse|<tuple|4.7|104>>
+    <associate|group homeomorphism|<tuple|4.14|105>>
+    <associate|group homeomorphism properties|<tuple|4.15|105>>
+    <associate|group inverse element|<tuple|4.6|104>>
+    <associate|group isomorphism|<tuple|4.16|106>>
+    <associate|group isomorphism inverse|<tuple|4.17|106>>
+    <associate|group left (right action)|<tuple|4.19|108>>
+    <associate|group semi-group inheritance|<tuple|4.11|104>>
+    <associate|group semigroup properties|<tuple|4.3|103>>
+    <associate|group sub-group|<tuple|4.10|104>>
     <associate|inverse of a field isomorphism is a field
-    isomorphism|<tuple|4.39|112>>
-    <associate|natural numbers|<tuple|5.3|?>>
-    <associate|natural numbers 0|<tuple|5.7|?>>
-    <associate|natural numbers Peano|<tuple|5.17|?>>
+    isomorphism|<tuple|4.38|111>>
+    <associate|natural numbers|<tuple|5.3|113>>
+    <associate|natural numbers 0|<tuple|5.7|113>>
+    <associate|natural numbers Peano|<tuple|5.17|115>>
     <associate|natural numbers every non zero number is a
-    successor|<tuple|5.18|?>>
-    <associate|natural numbers is a set|<tuple|5.4|?>>
-    <associate|natural numbers mathematical induction|<tuple|5.11|?>>
-    <associate|natural numbers n=/s(n)|<tuple|5.15|?>>
-    <associate|natural numbers number is transitive|<tuple|5.14|?>>
-    <associate|natural numbers s(n)=/0|<tuple|5.10|?>>
-    <associate|natural numbers successor|<tuple|5.5|?>>
-    <associate|natural numbers successor function|<tuple|5.6|?>>
+    successor|<tuple|5.18|115>>
+    <associate|natural numbers is a set|<tuple|5.4|113>>
+    <associate|natural numbers mathematical induction|<tuple|5.11|114>>
+    <associate|natural numbers n=/s(n)|<tuple|5.15|114>>
+    <associate|natural numbers number is transitive|<tuple|5.14|114>>
+    <associate|natural numbers s(n)=/0|<tuple|5.10|114>>
+    <associate|natural numbers successor|<tuple|5.5|113>>
+    <associate|natural numbers successor function|<tuple|5.6|113>>
     <associate|natural numbers successor function is
-    injective|<tuple|5.16|?>>
-    <associate|natural numbers successor properties|<tuple|5.12|?>>
-    <associate|natural numbers transitive|<tuple|5.13|?>>
-    <associate|operator|<tuple|4.2|103>>
-    <associate|ring|<tuple|4.25|108>>
-    <associate|ring absorbing element|<tuple|4.30|110>>
-    <associate|ring homeomorphism|<tuple|4.31|110>>
-    <associate|ring integer domain|<tuple|4.27|109>>
-    <associate|ring isomorphism|<tuple|4.33|110>>
-    <associate|ring ring homeomorphism and neutral element|<tuple|4.32|110>>
-    <associate|ring subring is a ring|<tuple|4.29|109>>
-    <associate|ring zero divisor|<tuple|4.26|109>>
-    <associate|semi-group|<tuple|4.3|103>>
-    <associate|sub-semi-group|<tuple|4.10|104>>
-    <associate|subring|<tuple|4.28|109>>
+    injective|<tuple|5.16|115>>
+    <associate|natural numbers successor properties|<tuple|5.12|114>>
+    <associate|natural numbers transitive|<tuple|5.13|114>>
+    <associate|operator|<tuple|4.1|103>>
+    <associate|recursion|<tuple|5.20|?>>
+    <associate|recursion injective function|<tuple|5.20|?>>
+    <associate|ring|<tuple|4.24|108>>
+    <associate|ring absorbing element|<tuple|4.29|109>>
+    <associate|ring homeomorphism|<tuple|4.30|110>>
+    <associate|ring integer domain|<tuple|4.26|109>>
+    <associate|ring isomorphism|<tuple|4.32|110>>
+    <associate|ring ring homeomorphism and neutral element|<tuple|4.31|110>>
+    <associate|ring subring is a ring|<tuple|4.28|109>>
+    <associate|ring zero divisor|<tuple|4.25|109>>
+    <associate|semi-group|<tuple|4.2|103>>
+    <associate|sub-semi-group|<tuple|4.9|104>>
+    <associate|subring|<tuple|4.27|109>>
   </collection>
 </references>
 
@@ -1713,6 +2053,10 @@
       <tuple|<tuple|subfield>|<pageref|auto-27>>
 
       <tuple|<tuple|field homeomorphism>|<pageref|auto-28>>
+
+      <tuple|<tuple|mathematical induction>|<pageref|auto-31>>
+
+      <tuple|<tuple|transitive set>|<pageref|auto-32>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Algebraic
@@ -1738,7 +2082,7 @@
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6<space|2spc>Finite
       and Infinite Sets> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-31><vspace|0.5fn>
+      <no-break><pageref|auto-33><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
