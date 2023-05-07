@@ -1811,18 +1811,6 @@
     </equation*>
   </proof>
 
-  To understand how recursion works in the above theorem consider the
-  following:
-
-  <\eqnarray*>
-    <tformat|<table|<row|<cell|\<lambda\><around*|(|0|)>>|<cell|=>|<cell|a>>|<row|<cell|\<lambda\><around*|(|1|)>=\<lambda\><around*|(|s<around*|(|n|)>|)>>|<cell|=>|<cell|f<around*|(|\<lambda\><around*|(|0|)>|)>=f<around*|(|a|)>>>|<row|<cell|\<lambda\><around*|(|2|)>=\<lambda\><around*|(|s<around*|(|1|)>|)>>|<cell|=>|<cell|f<around*|(|\<lambda\><around*|(|1|)>|)>=f<around*|(|f<around*|(|a|)>|)>>>|<row|<cell|\<lambda\><around*|(|3|)>=\<lambda\><around*|(|s<around*|(|2|)>|)>>|<cell|=>|<cell|f<around*|(|\<lambda\><around*|(|2|)>|)>=f<around*|(|f<around*|(|f<around*|(|a|)>|)>|)>>>|<row|<cell|>|<cell|\<ldots\>>|<cell|>>|<row|<cell|\<lambda\><around*|(|n|)>>|<cell|=>|<cell|<wide|f<around*|(|f<around*|(|\<ldots\><around*|(|f<around*|(|a|)>|)>|)>|)>|\<wide-overbrace\>><rsup|<text|n
-    times>>>>>>
-  </eqnarray*>
-
-  so it allows us to define a function <math|\<lambda\>:\<bbb-N\><rsub|0>\<rightarrow\>A>
-  so that <math|\<lambda\><around*|(|n|)>> is the result of applying <math|f>
-  <math|n>-times.
-
   <\corollary>
     <label|recursion injective function>If <math|A> is a set, <math|a\<in\>A>
     and <math|f:A\<rightarrow\>A> a injective function then there exists a
@@ -1840,7 +1828,7 @@
       <item><math|\<forall\>n\<in\>\<bbb-N\><rsub|0><text| we have
       >\<lambda\><around*|(|s<around*|(|n|)>|)>=f<around*|(|\<lambda\><around*|(|n|)>|)>>
 
-      <item>If <math|a\<in\>f<around*|(|A|)>> then <math|\<lambda\>> is
+      <item>If <math|a\<nin\>f<around*|(|A|)>> then <math|\<lambda\>> is
       injective
     </enumerate>
   </corollary>
@@ -1874,17 +1862,555 @@
 
     <\description>
       <item*|<math|0\<in\>S>>If <math|\<lambda\><around*|(|m|)>=\<lambda\><around*|(|0|)>>
-      then TODO
+      then as <math|\<lambda\><around*|(|0|)>=a> we have that
+      <math|\<lambda\><around*|(|m|)>=a>. Assume that <math|m\<neq\>0> then
+      by [theorem: <reference|natural numbers every non zero number is a
+      successor>] there exists a <math|k\<in\>\<bbb-N\><rsub|0>> such that
+      <math|m=s<around*|(|k|)>> so that <math|a=\<lambda\><around*|(|m|)>=\<lambda\><around*|(|s<around*|(|k|)>|)>=f<around*|(|\<lambda\><around*|(|k|)>|)>>,
+      which proves that <math|a\<in\>f<around*|(|A|)>> contradicting
+      <math|a\<nin\>f<around*|(|A|)>>. Hence we must have <math|m=0> so that
+      <math|0\<in\>S>.
 
-      <item*|<math|n\<in\>S\<Rightarrow\>s<around*|(|n|)>\<in\>S>>
+      <item*|<math|n\<in\>S\<Rightarrow\>s<around*|(|n|)>\<in\>S>>Let
+      <math|m\<in\>\<bbb-N\><rsub|0>> such that
+      <math|\<lambda\><around*|(|s<around*|(|n|)>|)>=\<lambda\><around*|(|m|)>>.
+      Assume that <math|m=0> then <math|\<lambda\><around*|(|s<around*|(|n|)>|)>=\<lambda\><around*|(|m|)>=\<lambda\><around*|(|0|)>=a>
+      so that <math|f<around*|(|\<lambda\><around*|(|n|)>|)>=\<lambda\><around*|(|s<around*|(|n|)>|)>=a>,
+      resulting in <math|a\<in\>f<around*|(|A|)>> contradicting
+      <math|a\<nin\>f<around*|(|A|)>>. Hence we must have that
+      <math|m\<neq\>0>. Using [theorem: <reference|natural numbers every non
+      zero number is a successor>] there exists a
+      <math|k\<in\>\<bbb-N\><rsub|0>> such that <math|m=s<around*|(|k|)>>,
+      from <math|\<lambda\><around*|(|s<around*|(|n|)>|)>=\<lambda\><around*|(|m|)>>
+      it follows then that <math|\<lambda\><around*|(|s<around*|(|n|)>|)>=\<lambda\><around*|(|s<around*|(|k|)>|)>>
+      so that <math|f<around*|(|\<lambda\><around*|(|n|)>|)>=\<lambda\><around*|(|s<around*|(|n|)>|)>=\<lambda\><around*|(|s<around*|(|k|)>|)>=f<around*|(|\<lambda\><around*|(|k|)>|)>>.
+      As <math|f> is injective we have <math|\<lambda\><around*|(|n|)>=\<lambda\><around*|(|k|)>>.
+      Now as <math|n\<in\>S> we have <math|n=k> or
+      <math|s<around*|(|n|)>=s<around*|(|k|)>=m>. This proves that
+      <math|\<forall\>m\<in\>\<bbb-N\><rsub|0>> with
+      <math|\<lambda\><around*|(|s<around*|(|n|)>|)>=\<lambda\><around*|(|m|)>>
+      we have <math|s<around*|(|n|)>=m>, hence <math|s<around*|(|n|)>\<in\>S>
     </description>
 
-    \;
+    Using mathematical induction [theorem: <reference|natural numbers
+    mathematical induction>] it follows that <math|\<bbb-N\><rsub|0>=S>. So
+    if <math|n,m\<in\>\<bbb-N\><rsub|0>> is such that
+    <math|\<lambda\><around*|(|n|)>=\<lambda\><around*|(|m|)>> then
+    <math|n\<in\>S> and as <math|m\<in\>\<bbb-N\><rsub|0>> we have
+    <math|n=m>, proving that
+
+    <\equation*>
+      \<lambda\><text| is injective>
+    </equation*>
   </proof>
+
+  <\remark>
+    To understand how recursion works in the above theorem consider the
+    following, Let <math|f:A\<rightarrow\>A> a function, <math|a\<in\>A> and
+    <math|\<lambda\>:\<bbb-N\><rsub|0>\<rightarrow\>A> such that
+    <math|\<lambda\><around*|(|0|)>=a> and
+    <math|\<lambda\><around*|(|s<around*|(|n|)>|)>=f<around*|(|\<lambda\><around*|(|n|)>|)>>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<lambda\><around*|(|0|)>>|<cell|=>|<cell|a>>|<row|<cell|\<lambda\><around*|(|1|)>=\<lambda\><around*|(|s<around*|(|n|)>|)>>|<cell|=>|<cell|f<around*|(|\<lambda\><around*|(|0|)>|)>=f<around*|(|a|)>>>|<row|<cell|\<lambda\><around*|(|2|)>=\<lambda\><around*|(|s<around*|(|1|)>|)>>|<cell|=>|<cell|f<around*|(|\<lambda\><around*|(|1|)>|)>=f<around*|(|f<around*|(|a|)>|)>>>|<row|<cell|\<lambda\><around*|(|3|)>=\<lambda\><around*|(|s<around*|(|2|)>|)>>|<cell|=>|<cell|f<around*|(|\<lambda\><around*|(|2|)>|)>=f<around*|(|f<around*|(|f<around*|(|a|)>|)>|)>>>|<row|<cell|>|<cell|\<ldots\>>|<cell|>>|<row|<cell|\<lambda\><around*|(|n|)>>|<cell|=>|<cell|<wide|f<around*|(|f<around*|(|\<ldots\><around*|(|f<around*|(|a|)>|)>|)>|)>|\<wide-overbrace\>><rsup|<text|n
+      times>>>>>>
+    </eqnarray*>
+
+    so <math|\<lambda\><around*|(|n|)>> is the result of applying <math|f>
+    <math|n>-times on a value <math|a>. If <math|a\<nin\>f<around*|(|A|)>>
+    and <math|f> is injective then <math|\<lambda\>> is injective and we
+    would have that <math|f<around*|(|a|)>,f<around*|(|f<around*|(|z|)>|)>,f<around*|(|f<around*|(|f<around*|(|a|)>|)>|)>,\<ldots\>,<wide|f<around*|(|f<around*|(|\<ldots\><around*|(|f<around*|(|a|)>|)>|)>|)>|\<wide-overbrace\>><rsup|<text|n
+    times>>> are all different numbers.
+  </remark>
+
+  We can rephrase the above remark in the iteration principle that is useful
+  in proves using mathematical induction.
+
+  <\theorem>
+    <label|recursion iteration><index|iteration><dueto|Iteration>Let <math|A>
+    be a non empty set and <math|f:A\<rightarrow\>A> a function. Then
+    <math|\<forall\>n\<in\>\<bbb-N\><rsub|0>> there exist a function\ 
+
+    <\equation*>
+      <around*|(|f|)><rsup|n>:A\<rightarrow\>A
+    </equation*>
+
+    such that\ 
+
+    <\enumerate>
+      <item><math|<around*|(|f|)><rsup|0>=Id<rsub|A>>
+
+      <item><math|<around*|(|f|)><rsup|s<around*|(|n|)>>=f\<circ\><around*|(|f|)><rsup|n>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    Let <math|a\<in\>A> and use the recursion [theorem:
+    <reference|recursion>] to find a function\ 
+
+    <\equation*>
+      \<lambda\><rsub|a>:\<bbb-N\><rsub|0>\<rightarrow\>A<text| such that
+      >\<lambda\><rsub|a><around*|(|0|)>=a<text| and
+      >\<forall\>n\<in\>\<bbb-N\><rsub|0><text|
+      >\<lambda\><rsub|a><around*|(|s<around*|(|n|)>|)>=f<around*|(|\<lambda\><rsub|a><around*|(|n|)>|)>
+    </equation*>
+
+    Define now <math|>
+
+    <\equation*>
+      <around*|(|f|)><rsup|n>:A\<rightarrow\>A<text| where
+      ><around*|(|f<rsup|>|)><rsup|n><around*|(|a|)>=\<lambda\><rsub|a><around*|(|n|)>
+    </equation*>
+
+    Then we have\ 
+
+    <\enumerate>
+      <item><math|\<forall\>a\<in\>A> we have that
+      <math|<around*|(|f|)><rsup|0><around*|(|a|)>=\<lambda\><rsub|a><around*|(|0|)>=a>
+      so that
+
+      <\equation*>
+        <around*|(|f|)><rsup|0>=Id<rsub|A>
+      </equation*>
+
+      <item><math|\<forall\>a\<in\>A> we have that
+      <math|<around*|(|f|)><rsup|s<around*|(|n|)>><around*|(|a|)>=\<lambda\><rsub|a><around*|(|s<around*|(|n|)>|)>=f<around*|(|\<lambda\><rsub|a><around*|(|n|)>|)>=f<around*|(|<around*|(|f|)><rsup|n><around*|(|a|)>|)>=<around*|(|f\<circ\><around*|(|f|)><rsup|n>|)><around*|(|a|)>>
+      so that
+
+      <\equation*>
+        <around*|(|f|)><rsup|s<around*|(|n|)>>=f\<circ\><around*|(|f|)><rsup|n>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  As illustration of iteration let <math|f:A\<rightarrow\>A> then we have
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|<around*|(|f|)><rsup|0>>|<cell|=>|<cell|Id<rsub|A>>>|<row|<cell|<around*|(|f|)><rsup|1>=<around*|(|f|)><rsup|s<around*|(|0|)>>>|<cell|=>|<cell|f\<circ\><around*|(|f|)><rsup|0>=f\<circ\>Id<rsub|A>=f>>|<row|<cell|<around*|(|f|)><rsup|2>=<around*|(|f|)><rsup|s<around*|(|1|)>>>|<cell|=>|<cell|f\<circ\><around*|(|f|)><rsup|1>=f\<circ\>f>>|<row|<cell|<around*|(|f|)><rsup|3>=<around*|(|f|)><rsup|s<around*|(|2|)>>>|<cell|=>|<cell|f\<circ\><around*|(|f|)><rsup|2>=f\<circ\>f\<circ\>f>>|<row|<cell|>|<cell|\<ldots\>>|<cell|>>|<row|<cell|<around*|(|f|)><rsup|n>>|<cell|=>|<cell|<wide|f\<circ\>\<ldots\>\<circ\>f|\<wide-overbrace\>><rsup|n
+    times>>>>>
+  </eqnarray*>
 
   <\equation*>
     \;
   </equation*>
+
+  We can apply the above on a group to define new operations on the group.
+
+  <\example>
+    <label|recursion iteration in a group>Let
+    <math|<around*|\<langle\>|A,\<oplus\>|\<rangle\>>> be a group and
+    <math|a\<in\>A> define then <math|\<oplus\><rsub|a>:A\<rightarrow\>A> by
+    <math|x\<rightarrow\>\<oplus\><rsub|a><around*|(|x|)>=x\<oplus\>a> we
+    define then given <math|n\<in\>\<bbb-N\>>
+    <math|a<around*|\<langle\>|\<oplus\>|\<rangle\>>n=<around*|(|\<oplus\><rsub|a>|)><rsup|n><around*|(|e|)>>
+    where <math|e> is the neutral element in the group . So
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|a<around*|\<langle\>|\<oplus\>|\<rangle\>>0>|<cell|=>|<cell|<around*|(|\<oplus\><rsub|a>|)><rsup|0><around*|(|e|)>=Id<rsub|A><around*|(|e|)>=e>>|<row|<cell|a<around*|\<langle\>|\<oplus\>|\<rangle\>>1>|<cell|=>|<cell|<around*|(|\<oplus\><rsub|a>|)><rsup|1><around*|(|e|)>=\<oplus\><rsub|a><around*|(|e|)>=a\<oplus\>e=e>>|<row|<cell|a<around*|\<langle\>|\<oplus\>|\<rangle\>>2>|<cell|=>|<cell|<around*|(|\<oplus\><rsub|a>|)><rsup|2><around*|(|e|)>=\<oplus\><rsub|a><around*|(|\<oplus\><rsub|a><around*|(|e|)>|)>=a\<oplus\><around*|(|a\<oplus\>e|)>=a\<oplus\><around*|(|a\<oplus\>e|)>=a\<oplus\>a>>|<row|<cell|a<around*|\<langle\>|\<oplus\>|\<rangle\>>3>|<cell|=>|<cell|<around*|(|\<oplus\><rsub|a>|)><rsup|3><around*|(|e|)>=<around*|(|\<oplus\><rsub|a><around*|(|\<oplus\><rsub|a><around*|(|\<oplus\><rsub|a><around*|(|e|)>|)>|)>|)>=a\<oplus\><around*|(|a\<oplus\><around*|(|a\<oplus\>e|)>|)>=a\<oplus\>a\<oplus\>a>>|<row|<cell|>|<cell|\<ldots\>>|<cell|>>|<row|<cell|a<around*|\<langle\>|\<oplus\>|\<rangle\>>n>|<cell|=>|<cell|<wide|a\<oplus\>\<cdots\>\<oplus\>a|\<wide-overbrace\>><rsup|<text|n
+      times >>>>>>
+    </eqnarray*>
+
+    \;
+
+    Sometimes we consider a group to be additive or multiplicative, this is
+    either noted as <math|<around*|\<langle\>|A,+|\<rangle\>>> with neutral
+    element <math|0> or <math|<around*|\<langle\>|A,\<cdot\>|\<rangle\>>>
+    with neutral element <math|1>. Then we note
+    <math|a<around*|\<langle\>|+|\<rangle\>>n<with|mode|text| as >
+    a\<cdot\>n> as and <math|a<around*|\<langle\>|\<cdot\>|\<rangle\>>n> as
+    <math|a<rsup|n>> hence we have
+
+    <\enumerate>
+      <item>Additive group <math|<around*|\<langle\>|A,+|\<rangle\>>> with
+      neutral element <math|0> gives
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|a\<cdot\>0>|<cell|=>|<cell|0>>|<row|<cell|a\<cdot\>1>|<cell|=>|<cell|a>>|<row|<cell|a\<cdot\>2>|<cell|=>|<cell|a\<upl\>a>>|<row|<cell|a\<cdot\>3>|<cell|=>|<cell|a+a+a>>|<row|<cell|>|<cell|\<ldots\>>|<cell|>>|<row|<cell|a\<cdot\>n>|<cell|=>|<cell|<wide|a+\<cdots\>+a<rsup|<rsub|>>|\<wide-overbrace\>><rsup|<text|n
+        times>>>>>>
+      </eqnarray*>
+
+      <item>Multiplicative group <math|<around*|\<langle\>|A,\<cdot\>|\<rangle\>>>
+      with neutral element <math|1> gives\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|a<rsup|0>>|<cell|=>|<cell|1>>|<row|<cell|a<rsup|1>>|<cell|=>|<cell|a>>|<row|<cell|a<rsup|2>>|<cell|=>|<cell|a\<cdot\>a>>|<row|<cell|a<rsup|3>>|<cell|=>|<cell|a\<cdot\>a\<cdot\>a>>|<row|<cell|>|<cell|\<ldots\>>|<cell|>>|<row|<cell|a<rsup|n>>|<cell|=>|<cell|<wide|a\<cdot\>\<cdots\>\<cdot\>a|\<wide-overbrace\>><rsup|<text|n
+        times>>>>>>
+      </eqnarray*>
+    </enumerate>
+  </example>
+
+  Recursion is mostly used in it's step form to define functions recursive
+  functions.
+
+  <\theorem>
+    <label|recursion step form (1)><dueto|Recursion on
+    <math|\<bbb-N\><rsub|0>>- Step Form>Let <math|A> be a set,
+    <math|a\<in\>A> and <math|g:\<bbb-N\>\<times\>A\<rightarrow\>A> a
+    function then there exist a <with|font-series|bold|unique> function
+    <math|\<lambda\>:\<bbb-N\><rsub|0>\<rightarrow\>A> such that\ 
+
+    <\enumerate>
+      <item><math|\<lambda\><around*|(|0|)>=a>
+
+      <item><math|\<forall\>n\<in\>\<bbb-N\><rsub|0>> we have
+      <math|\<lambda\><around*|(|s*<around*|(|n|)>|)>=g<around*|(|n,\<lambda\><around*|(|n|)>|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    First we define the projection functions\ 
+
+    <\equation*>
+      \<pi\><rsub|1>:\<bbb-N\><rsub|0>\<times\>A\<rightarrow\>\<bbb-N\><rsub|0><text|
+      where >\<pi\><rsub|1><around*|(|n,x|)>=n
+    </equation*>
+
+    <\equation*>
+      \<pi\><rsub|2>:\<bbb-N\><rsub|0>\<times\>A\<rightarrow\>A<text| where
+      >\<pi\><rsub|2><around*|(|n,x|)>=x
+    </equation*>
+
+    Define now\ 
+
+    <\equation>
+      <label|eq 5.10.019>\<gamma\>:\<bbb-N\>\<times\>A\<rightarrow\>\<bbb-N\>\<times\>A<text|
+      where >\<gamma\><around*|(|x|)>=<around*|(|s<around*|(|\<pi\><rsub|1><around*|(|x|\<nobracket\>>|)>,g<around*|(|\<pi\><rsub|1><around*|(|x|)>,\<pi\><rsub|2><around*|(|x|)>|)>|)>
+    </equation>
+
+    Using iteration [theorem: <reference|recursion iteration>] on the above
+    functions gives <math|\<forall\>n\<in\>\<bbb-N\><rsub|0>> the existance
+    of the function\ 
+
+    <\equation>
+      <label|eq 5.11.019><around*|(|\<gamma\>|)><rsup|n>:\<bbb-N\><rsub|0>\<times\>A\<rightarrow\>\<bbb-N\><rsub|0>\<times\>A<text|
+      such that ><around*|(|\<gamma\>|)><rsup|0>=Id<rsub|\<bbb-N\><rsub|0>\<times\>A><infix-and>\<forall\>n\<in\>\<bbb-N\><rsub|0><text|
+      we have ><around*|(|\<gamma\>|)><rsup|s<around*|(|n|)>>=\<gamma\>\<circ\><around*|(|\<gamma\>|)><rsup|n>
+    </equation>
+
+    We prove now by mathematical induction that
+    <math|\<forall\>n\<in\>\<bbb-N\><rsub|0>>
+    <math|\<pi\><rsub|1><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,a|)>|)>=n>.
+    So let\ 
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|\<pi\><rsub|1><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,a|)>|)>=n|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|0\<in\>S>>As <math|\<pi\><rsub|1><around*|(|<around*|(|\<gamma\>|)><rsup|0><around*|(|0,a|)>|)>\<equallim\><rsub|<text|[eq:
+      <reference|eq 5.11.019>>>\<pi\><rsub|1><around*|(|Id<rsub|\<bbb-N\><rsub|0>\<times\>A><around*|(|0,a|)>|)>=\<pi\><rsub|1><around*|(|0.a|)>=0>
+      we have that <math|0\<in\>S>
+
+      <item*|<math|n\<in\>\<b-S\>\<Rightarrow\>s<around*|(|n|)>\<in\>S>>We
+      have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<pi\><rsub|1><around*|(|<around*|(|\<gamma\>|)><rsup|s<around*|(|n|)>><around*|(|0,a|)>|)>>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 5.11.019>]>>>|<cell|\<pi\><rsub|1><around*|(|<around*|(|\<gamma\>\<circ\><around*|(|\<gamma\>|)><rsup|n>|)><around*|(|0,a|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsub|1><around*|(|\<gamma\><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,n|)>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 5.10.019>]>>>|<cell|\<pi\><rsub|1><around*|(|\<pi\><rsub|1><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,n|)>|)>,g<around*|(|\<pi\><rsub|1><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,a|)>|)>,\<pi\><rsub|2><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,a|)>|)>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|n\<in\>S\<Rightarrow\>\<pi\><rsub|1><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,a|)>=n|)>>>|<cell|\<pi\><rsub|1><around*|(|n,g<around*|(|n,\<pi\><rsub|2><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,a|)>|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|n>>>>
+      </eqnarray*>
+
+      proving that <math|s<around*|(|n|)>\<in\>S>
+    </description>
+
+    Using mathematical induction [theorem: <reference|natural numbers
+    mathematical induction>] we have <math|\<bbb-N\><rsub|0>=S>, hence\ 
+
+    <\equation>
+      <label|eq 5.12.019>\<forall\>n\<in\>\<bbb-N\><rsub|0><text| we have
+      >\<pi\><rsub|1><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,a|)>|)>=n
+    </equation>
+
+    Define now\ 
+
+    <\equation>
+      <label|eq 5.13.019>\<lambda\>:\<bbb-N\><rsub|0>\<rightarrow\>A<text| by
+      >\<gamma\><around*|(|n|)>=\<pi\><rsub|2><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,a|)>|)>
+    </equation>
+
+    then we have:
+
+    <\enumerate>
+      <item><math|\<lambda\><around*|(|0|)>=\<pi\><rsub|2><around*|(|<around*|(|\<gamma\>|)><rsup|0><around*|(|0,a|)>|)>=\<pi\><rsub|2><around*|(|Id<rsub|\<bbb-N\><rsub|0>\<times\>A><around*|(|0,a|)>|)>=\<pi\><rsub|2><around*|(|0,a|)>=a>
+
+      <item>If <math|n\<in\>\<bbb-N\><rsub|0>> then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<lambda\><around*|(|s<around*|(|n|)>|)>>|<cell|=>|<cell|\<pi\><rsub|2><around*|(|<around*|(|\<gamma\>|)><rsup|s<around*|(|n|)>><around*|(|0,a|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 5.11.019>]>>>|<cell|\<pi\><rsub|2><around*|(|<around*|(|\<gamma\>\<circ\><around*|(|\<gamma\>|)><rsup|n>|)><around*|(|0,a|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsub|2><around*|(|\<gamma\><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,a|)>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 5.10.019>>>>|<cell|\<pi\><rsub|2><around*|(|\<pi\><rsub|1><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,a|)>|)>,g<around*|(|\<pi\><rsub|1><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,a|)>|)>,\<pi\><rsub|2><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,a|)>|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|g<around*|(|\<pi\><rsub|1><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,a|)>|)>,\<pi\><rsub|2><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,a|)>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 5.12.019>>>>|<cell|g<around*|(|n,\<pi\><rsub|2><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,a|)>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 5.1.019>>>>|<cell|g<around*|(|n,\<lambda\><around*|(|n|)>|)>>>>>
+      </eqnarray*>
+    </enumerate>
+
+    This proves the existance of the function we are searching for. Now for
+    uniqueness assume that there is a\ 
+
+    <\equation*>
+      \<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>A<text| such that
+      >\<beta\><around*|(|0|)>=a<text| and
+      >\<forall\>n\<in\>\<bbb-N\><rsub|0><text| that
+      >\<beta\><around*|(|s<around*|(|n|)>|)>=g<around*|(|n,\<beta\><around*|(|n|)>|)>
+    </equation*>
+
+    Define now <math|B=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|\<lambda\><around*|(|n|)>=\<beta\><around*|(|n|)>|}>>
+    then we have:
+
+    <\description>
+      <item*|<math|0\<in\>B>>As <math|\<beta\><around*|(|0|)>=a=\<lambda\><around*|(|0|)>>
+      it follows that <math|0\<in\>B>.
+
+      <item*|<math|n\<in\>B\<Rightarrow\>s<around*|(|n|)>\<in\>B>>As\ 
+
+      <\equation*>
+        \<beta\><around*|(|s<around*|(|n|)>|)>=g<around*|(|n,\<beta\><around*|(|n|)>|)>\<equallim\><rsub|n\<in\>B>g<around*|(|n,\<lambda\><around*|(|n|)>|)>=\<lambda\><around*|(|s<around*|(|n|)>|)>
+      </equation*>
+
+      we have that <math|s<around*|(|n|)>\<in\>B>
+    </description>
+
+    Using mathematical induction we have <math|B=\<bbb-N\><rsub|0>>, so
+    <math|\<forall\>n\<in\>\<bbb-N\><rsub|0>> we have <math|n\<in\>B> hence
+    <math|\<beta\><around*|(|n|)>=\<lambda\><around*|(|n|)>> proving that\ 
+
+    <\equation*>
+      \<beta\>=\<lambda\>
+    </equation*>
+  </proof>
+
+  Up to now we have used the successor function
+  <math|s:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0>> in the recursion
+  and induction theorems. Once we have introduced the arithmetic of the
+  natural numbers, we wil rewrite these theorems by a version where
+  <math|s<around*|(|n|)>> is replaced by <math|n+1>.\ 
+
+  <section|Arithmetic of the Natural numbers>
+
+  <subsection|Addition and Multiplication>
+
+  <\definition>
+    <label|natural numbers addition><index|addition of natural numbers>Let
+    <math|m,n\<in\>\<bbb-N\><rsub|0>> then the addition operator <math|+> is
+    defined by\ 
+
+    <\equation*>
+      +:\<bbb-N\><rsub|0>\<times\>\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0><text|
+      where <math|n+m\<equallim\><rsub|<text|notation>>+<around*|(|n,m|)>=<around*|(|s|)><rsup|m><around*|(|n|)>>>
+    </equation*>
+
+    Here <math|s:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0>> is the
+    successor function [definition: <reference|natural numbers successor
+    function>].\ 
+  </definition>
+
+  <\example>
+    Using this definition we can easely calculate that <math|1+1=2>
+  </example>
+
+  <\proof>
+    <math|1+1=<around*|(|s|)><rsup|1><around*|(|1|)>=<around*|(|s\<circ\><around*|(|s|)><rsup|0>|)><around*|(|s|)>=s<around*|(|<around*|(|s|)><rsup|0><around*|(|1|)>|)>=s<around*|(|Id<rsub|\<bbb-N\><rsub|0>><around*|(|1|)>|)>=s<around*|(|1|)>=2>
+  </proof>
+
+  <\theorem>
+    <math|<label|natural numbers n+0=n>>Let <math|n\<in\>\<bbb-N\><rsub|0>>
+    then <math|n+0=n=0+n>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item><math|n+0=<around*|(|s|)><rsup|0><around*|(|n|)>=Id<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>=n>
+
+      <item>For the second equality we use mathematical induction. So let
+      <math|S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|0+n=n|}>> then we have:
+
+      <\description>
+        <item*|<math|0\<in\>S>>As <math|0+0=<around*|(|s|)><rsup|0><around*|(|0|)>=Id<rsub|\<bbb-N\><rsub|0>><around*|(|0|)>=0>
+        proving <math|0\<in\>S>
+
+        <item*|<math|n\<in\>S\<Rightarrow\>s<around*|(|n|)>\<in\>S>>We have
+        <math|0+s<around*|(|n|)>=<around*|(|s|)><rsup|s<around*|(|n|)>><around*|(|0|)>=<around*|(|s\<circ\><around*|(|s|)><rsup|n>|)><around*|(|0|)>=s<around*|(|<around*|(|s|)><rsup|n><around*|(|0|)>|)>\<equallim\><rsub|n\<in\>S>s<around*|(|n|)>>
+        proving that <math|s<around*|(|n|)>\<in\>S>
+      </description>
+
+      Using mathematical induction <reference|natural numbers mathematical
+      induction> we have <math|S=\<bbb-N\><rsub|0>>. So if
+      <math|n\<in\>\<bbb-N\><rsub|0>\<Rightarrow\>n\<in\>S<text| then
+      >0\<upl\>n=n>.
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|natural numbers s(n) = n+1><math|\<forall\>n\<in\>\<bbb-N\><rsub|0>>
+    we have <math|n+1=s<around*|(|n|)>=1+n>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item><math|n+1=<around*|(|s|)><rsup|1><around*|(|n|)>=<around*|(|s\<circ\><around*|(|s|)><rsup|0>|)><around*|(|n|)>=s<around*|(|<around*|(|s|)><rsup|0><around*|(|n|)>|)>=s<around*|(|Id<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>|)>=s<around*|(|n|)>>
+
+      <item>Let <math|S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|1+n=s<around*|(|n|)>|}>>
+      then we have:
+
+      <\description>
+        <item*|<math|0\<in\>S>><math|1+0=<around*|(|s|)><rsup|0><around*|(|1|)>=Id<rsub|\<bbb-N\><rsub|0>><around*|(|1|)>=1=s<around*|(|0|)>>
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>
+
+        <\equation*>
+          1+s<around*|(|n|)>=<around*|(|s|)><rsup|s<around*|(|n|)>><around*|(|1|)>=s<around*|(|<around*|(|s|)><rsup|n><around*|(|1|)>|)>\<equallim\>s<around*|(|1+n|)>\<equallim\><rsub|n\<in\>S>s<around*|(|s<around*|(|n|)>|)>
+        </equation*>
+
+        proving that <math|s<around*|(|n|)>\<in\>S>.
+      </description>
+
+      By mathematical induction [theorem: <reference|natural numbers
+      mathematical induction>] we have <math|S=\<bbb-N\><rsub|0>> completing
+      the proof.
+    </enumerate>
+  </proof>
+
+  <\lemma>
+    <label|natural numbers n+s(m)=s(n+m)>If <math|n,m\<in\>\<bbb-N\>> then
+    <math|n\<upl\>s<around*|(|m|)>=s<around*|(|n\<upl\>m|)>>
+  </lemma>
+
+  <\proof>
+    <math|n\<upl\>s<around*|(|m|)>=<around*|(|s|)><rsup|s<around*|(|m|)>><around*|(|n|)>=<around*|(|s\<circ\><around*|(|s|)><rsup|m>|)><around*|(|n|)>=s<around*|(|<around*|(|s|)><rsup|m><around*|(|n|)>|)>=s<around*|(|n\<upl\>m|)>>
+  </proof>
+
+  <\theorem>
+    <label|natural numbers associativity><dueto|Associativity>If
+    <math|n,m,k\<in\>\<bbb-N\>> then <math|<around*|(|n\<upl\>m|)>\<upl\>k=n\<upl\><around*|(|m\<upl\>k|)>>
+  </theorem>
+
+  <\proof>
+    The proof is by mathematical induction given
+    <math|n,m\<in\>\<bbb-N\><rsub|0>> define
+
+    <\equation*>
+      S<rsub|n,m>=<around*|{|k\<in\>\<bbb-N\><around*|\||<around*|(|n\<upl\>m|)>\<upl\>k=n\<upl\><around*|(|m\<upl\>k|)>|\<nobracket\>>|}>
+    </equation*>
+
+    then we have:\ 
+
+    <\description>
+      <item*|<math|0\<in\>S<rsub|n,m>>><math|<around*|(|n\<upl\>m|)>\<upl\>0\<equallim\><rsub|<text|[theorem:
+      <reference|natural numbers n+0=n>>>n\<upl\>m<math|\<equallim\><rsub|<text|[theorem:
+      <reference|natural numbers n+0=n>>>>n\<upl\><around*|(|m\<upl\>0|)>\<Rightarrow\>0\<in\>S<rsub|n,m>>
+
+      <item*|<math|k\<in\>S<rsub|n,m>\<Rightarrow\>s<around*|(|k|)>\<in\>S<rsub|n,m>>>We
+      have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|n+m|)>+s<around*|(|k|)>>|<cell|\<equallim\><rsub|<text|[lemma:
+        <reference|natural numbers n+s(m)=s(n+m)>>>>|<cell|s<around*|(|<around*|(|n+m|)>+k|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|k\<in\>S>>|<cell|s<around*|(|n+<around*|(|m+k|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+        <reference|natural numbers n+s(m)=s(n+m)>>>>|<cell|<around*|(|n+s<around*|(|m+k|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+        <reference|natural numbers n+s(m)=s(n+m)>>>>|<cell|<around*|(|n+<around*|(|m+s<around*|(|k|)>|)>|)>>>>>
+      </eqnarray*>
+
+      proving that <math|s<around*|(|k|)>\<in\>S<rsub|n,m>>.
+    </description>
+
+    By By mathematical induction [theorem: <reference|natural numbers
+    mathematical induction>] we have <math|\<bbb-N\><rsub|0>=S<rsub|n,m>>. So
+    if <math|n,m,k\<in\>\<bbb-N\><rsub|0>> then
+    <math|k\<in\>S<rsub|n,m>\<Rightarrow\><around*|(|n\<upl\>m|)>\<upl\>k=n\<upl\><around*|(|m\<upl\>k|)>>
+  </proof>
+
+  <\theorem>
+    <label|natural numbers commutativity>If <math|n,m\<in\>\<bbb-N\>> then
+    <math|n\<upl\>m=m\<upl\>n>
+  </theorem>
+
+  <\proof>
+    This is done again by induction. Let <math|n\<in\>\<bbb-N\><rsub|0>> and
+    define
+
+    <\equation*>
+      S<rsub|n>=<around*|{|k\<in\>\<bbb-N\><rsub|0>\|n+k=k+n|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|0\<in\>S<rsub|n>>>Using [theorem: <reference|natural
+      numbers n+0=n>] it follows that <math|n+0=0+n> proving that <math|>
+
+      <item*|<math|k\<in\>S<rsub|n>\<Rightarrow\>s<around*|(|k|)>\<in\>S<rsub|n>>>We
+      have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|n+s<around*|(|k|)>>|<cell|\<equallim\><rsub|<text|[lemma:
+        <reference|natural numbers n+s(m)=s(n+m)>>>>|<cell|s<around*|(|n+k|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|k\<in\>S<rsub|n,m>>>|<cell|s<around*|(|k+n|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|natural numbers s(n) =
+        n+1>>>>|<cell|1+<around*|(|k+n|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|natural numbers associativity>>>>|<cell|<around*|(|1+k|)>+n>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|natural numbers s(n) =
+        n+1>>>>|<cell|s<around*|(|k|)>+n>>>>
+      </eqnarray*>
+    </description>
+
+    Using mathematical induction [theorem: <reference|natural numbers
+    mathematical induction>] we have that <math|S<rsub|n>=\<bbb-N\><rsub|0>>,
+    So if <math|n,m\<in\>\<bbb-N\><rsub|>\<Rightarrow\>m\<in\>S<rsub|n>\<Rightarrow\>n\<upl\>m=m\<upl\>n>.
+  </proof>
+
+  We can summarize the above theorems as follows.
+
+  <\theorem>
+    <label|natural numbers group><math|<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>>
+    forms a Abelian semi-group with neutral element <math|0>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|neutral element>This follows from [theorem: <reference|natural
+      numbers n+0=n>].
+
+      <item*|associativity>This follows from [theorem: <reference|natural
+      numbers associativity>].
+
+      <item*|commutativity>This follows from [theorem: <reference|natural
+      numbers commutativity>]
+    </description>
+  </proof>
+
+  <\definition>
+    <label|natural numbers multiplication><index|multiplication of natural
+    numbers><dueto|Multiplication>Given <math|n\<in\>\<bbb-N\>> define
+
+    <\equation*>
+      \<alpha\><rsub|n>:\<bbb-N\>\<rightarrow\>\<bbb-N\><text| by
+      >\<alpha\><rsub|n><around*|(|m|)>=n+m
+    </equation*>
+
+    Then we define
+
+    <\equation*>
+      \<cdot\>:\<bbb-N\>\<times\>\<bbb-N\>\<rightarrow\>\<bbb-N\><text| by
+      >n\<cdot\>m=.<around*|(|n,m|)>=<around*|(|\<alpha\><rsub|n>|)><rsup|m><around*|(|0|)>
+    </equation*>
+  </definition>
+
+  Using the above definition we have\ 
+
+  We have the following examples to see how multiplication works by repeating
+  summation
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|2\<cdot\>0>|<cell|=>|<cell|<around*|(|\<alpha\><rsub|2>|)><rsup|0><around*|(|0|)>=Id<rsub|\<bbb-N\>><around*|(|0|)>=0>>|<row|<cell|2\<cdot\>1>|<cell|=>|<cell|<around*|(|\<alpha\><rsub|2>|)><rsup|1><around*|(|0|)>=<around*|(|\<alpha\><rsub|2>|)><rsup|s<around*|(|0|)>><around*|(|0|)>=<around*|(|\<alpha\><rsub|2>\<circ\><around*|(|\<alpha\><rsub|2>|)><rsup|0>|)><around*|(|0|)>=\<alpha\><rsub|2><around*|(|0|)>=2\<upl\>0=2>>|<row|<cell|2\<cdot\>2>|<cell|=>|<cell|<around*|(|\<alpha\><rsub|2>|)><rsup|2><around*|(|0|)>=<around*|(|\<alpha\><rsub|2>|)><rsup|s<around*|(|1|)>><around*|(|0|)>=<around*|(|\<alpha\><rsub|2><around*|(|<around*|(|\<alpha\><rsub|2>|)><rsup|1><around*|(|0|)>|)>|)>=\<alpha\><rsub|2><around*|(|2|)>=2\<upl\>2=4>>|<row|<cell|>|<cell|\<ldots\>.>|<cell|>>>>
+  </eqnarray*>
+
+  \;
 
   <chapter|Finite and Infinite Sets>
 </body>
@@ -1927,24 +2453,33 @@
     <associate|auto-30|<tuple|5.1|113>>
     <associate|auto-31|<tuple|mathematical induction|114>>
     <associate|auto-32|<tuple|transitive set|114>>
-    <associate|auto-33|<tuple|5.2|117>>
-    <associate|auto-34|<tuple|recursion|?>>
-    <associate|auto-35|<tuple|6|?>>
+    <associate|auto-33|<tuple|5.2|116>>
+    <associate|auto-34|<tuple|recursion|116>>
+    <associate|auto-35|<tuple|iteration|119>>
+    <associate|auto-36|<tuple|5.3|?>>
+    <associate|auto-37|<tuple|5.3.1|?>>
+    <associate|auto-38|<tuple|addition of natural numbers|?>>
+    <associate|auto-39|<tuple|multiplication of natural numbers|?>>
     <associate|auto-4|<tuple|semi-group|103>>
+    <associate|auto-40|<tuple|6|?>>
     <associate|auto-5|<tuple|group|104>>
     <associate|auto-6|<tuple|sub-semi-group|104>>
     <associate|auto-7|<tuple|sup-group|104>>
     <associate|auto-8|<tuple|group isomorphism|106>>
     <associate|auto-9|<tuple|left action|108>>
-    <associate|eq 5.1.019|<tuple|5.1|?>>
-    <associate|eq 5.2.019|<tuple|5.2|?>>
-    <associate|eq 5.3.019|<tuple|5.3|?>>
-    <associate|eq 5.4.019|<tuple|5.4|?>>
-    <associate|eq 5.5.019|<tuple|5.5|?>>
-    <associate|eq 5.6.019|<tuple|5.6|?>>
-    <associate|eq 5.7.019|<tuple|5.7|?>>
-    <associate|eq 5.8.019|<tuple|5.8|?>>
-    <associate|eq 5.9.019|<tuple|5.9|?>>
+    <associate|eq 5.1.019|<tuple|5.1|116>>
+    <associate|eq 5.10.019|<tuple|5.10|?>>
+    <associate|eq 5.11.019|<tuple|5.11|?>>
+    <associate|eq 5.12.019|<tuple|5.12|?>>
+    <associate|eq 5.13.019|<tuple|5.13|?>>
+    <associate|eq 5.2.019|<tuple|5.2|116>>
+    <associate|eq 5.3.019|<tuple|5.3|116>>
+    <associate|eq 5.4.019|<tuple|5.4|116>>
+    <associate|eq 5.5.019|<tuple|5.5|116>>
+    <associate|eq 5.6.019|<tuple|5.6|116>>
+    <associate|eq 5.7.019|<tuple|5.7|117>>
+    <associate|eq 5.8.019|<tuple|5.8|117>>
+    <associate|eq 5.9.019|<tuple|5.9|117>>
     <associate|field|<tuple|4.33|110>>
     <associate|field homeomorphism|<tuple|4.37|111>>
     <associate|field inverse is unique|<tuple|4.34|111>>
@@ -1970,25 +2505,39 @@
     <associate|group sub-group|<tuple|4.10|104>>
     <associate|inverse of a field isomorphism is a field
     isomorphism|<tuple|4.38|111>>
+    <associate|multiplaction of natural numbers|<tuple|5.33|?>>
     <associate|natural numbers|<tuple|5.3|113>>
     <associate|natural numbers 0|<tuple|5.7|113>>
     <associate|natural numbers Peano|<tuple|5.17|115>>
+    <associate|natural numbers addition|<tuple|5.25|?>>
+    <associate|natural numbers associativity|<tuple|5.30|?>>
+    <associate|natural numbers commutativity|<tuple|5.31|?>>
     <associate|natural numbers every non zero number is a
     successor|<tuple|5.18|115>>
+    <associate|natural numbers group|<tuple|5.32|?>>
     <associate|natural numbers is a set|<tuple|5.4|113>>
     <associate|natural numbers mathematical induction|<tuple|5.11|114>>
+    <associate|natural numbers multiplication|<tuple|5.33|?>>
+    <associate|natural numbers n+0=n|<tuple|5.27|?>>
+    <associate|natural numbers n+s(m)=s(n+m)|<tuple|5.29|?>>
     <associate|natural numbers n=/s(n)|<tuple|5.15|114>>
     <associate|natural numbers number is transitive|<tuple|5.14|114>>
+    <associate|natural numbers s(n) = n+1|<tuple|5.28|?>>
     <associate|natural numbers s(n)=/0|<tuple|5.10|114>>
     <associate|natural numbers successor|<tuple|5.5|113>>
     <associate|natural numbers successor function|<tuple|5.6|113>>
     <associate|natural numbers successor function is
     injective|<tuple|5.16|115>>
     <associate|natural numbers successor properties|<tuple|5.12|114>>
+    <associate|natural numbers sum|<tuple|5.25|?>>
     <associate|natural numbers transitive|<tuple|5.13|114>>
     <associate|operator|<tuple|4.1|103>>
-    <associate|recursion|<tuple|5.20|?>>
-    <associate|recursion injective function|<tuple|5.20|?>>
+    <associate|recursion|<tuple|5.19|116>>
+    <associate|recursion injective function|<tuple|5.20|118>>
+    <associate|recursion iteration|<tuple|5.22|?>>
+    <associate|recursion iteration in a group|<tuple|5.23|?>>
+    <associate|recursion step form|<tuple|5.24|?>>
+    <associate|recursion step form (1)|<tuple|5.24|?>>
     <associate|ring|<tuple|4.24|108>>
     <associate|ring absorbing element|<tuple|4.29|109>>
     <associate|ring homeomorphism|<tuple|4.30|110>>
@@ -2057,6 +2606,8 @@
       <tuple|<tuple|mathematical induction>|<pageref|auto-31>>
 
       <tuple|<tuple|transitive set>|<pageref|auto-32>>
+
+      <tuple|<tuple|recursion>|<pageref|auto-34>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Algebraic
@@ -2080,9 +2631,12 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-30>
 
+      5.2<space|2spc>Recursion <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-33>
+
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6<space|2spc>Finite
       and Infinite Sets> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-33><vspace|0.5fn>
+      <no-break><pageref|auto-35><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>

@@ -12114,9 +12114,14 @@
   simple definition notation>], [theorem: <reference|family union (2)>] and
   [theorem: <reference|family intersection (2)>] without explicit referring
   to them. This to avoid excessive notation and difference of notation
-  between this text and standard mathematical practice.
+  between this text and standard mathematical practice. Another
+  simplification of natation that we introduce is the following.
 
-  \;
+  <\notation>
+    If <math|f:A\<times\>B\<rightarrow\>C> is a function then
+    <math|f<around*|(|<around*|(|x,y|)>|)>> is noted as
+    <math|f<around*|(|x,y|)>>
+  </notation>
 
   \;
 
@@ -12670,7 +12675,6 @@
     <associate|set restriction of a set of sets|<tuple|1.65|?>>
     <associate|set successor set|<tuple|1.51|?>>
     <associate|set union of two sets is a set|<tuple|1.62|?>>
-    <associate|successor set|<tuple|1.51|?>>
     <associate|totally ordered class|<tuple|3.37|?>>
     <associate|universal class|<tuple|1.12|?>>
     <associate|universal class property|<tuple|1.13|?>>
