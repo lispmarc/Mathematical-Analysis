@@ -1256,7 +1256,7 @@
   counting.
 
   <\notation>
-    We define the numbers 1,2,3,<text-dots> as follows
+    We define the numbers 0,1,2,3,<text-dots> as follows
 
     <\enumerate>
       <item><math|0=\<varnothing\>>
@@ -1336,7 +1336,9 @@
   </definition>
 
   As a application of mathematical induction we prove that every natural
-  number is transitive
+  number is transitive, this fact will be used later, when we define a order
+  relation on <math|\<bbb-N\><rsub|0>> to prove transitivity, hence the name
+  for this property.
 
   <\theorem>
     <label|natural numbers are transitive><math|\<forall\>n\<in\>\<bbb-N\><rsub|0>>
@@ -1357,7 +1359,7 @@
       <item*|<math|n\<in\>S\<Rightarrow\>s<around*|(|n|)>\<in\>S>>If
       <math|n\<in\>S> then we have for <math|m\<in\>s<around*|(|n|)>> by the
       previous theorem [theorem: <reference|natural numbers successor
-      properties>] that:
+      properties>] the following cases:
 
       <\description>
         <item*|<math|m\<in\>n>>Then as <math|n\<in\>S>, <math|n> is
@@ -1372,13 +1374,14 @@
       <math|s<around*|(|n|)>\<in\>S>
     </description>
 
-    Using mathematical induction [see theorem:<reference|natural numbers
+    Using mathematical induction [see theorem: <reference|natural numbers
     mathematical induction>] it follows then that <math|S=\<bbb-N\><rsub|0>>.
     So if <math|n\<in\>\<bbb-N\><rsub|0>> then <math|n\<in\>S> or <math|n> is
     transitive.
   </proof>
 
-  Another application of mathematical induction is the following theorem
+  Another application of transitivity and mathematical induction is the
+  following theorem.
 
   <\theorem>
     <label|natural numbers n=/s(n)>If <math|n\<in\>\<bbb-N\><rsub|0>> then
@@ -1400,12 +1403,11 @@
       so <math|s<around*|(|n|)>\<in\>n<big|cup><around*|{|n|}>>. As
       <math|n\<in\>S> we have that <math|n\<neq\>s<around*|(|n|)>> so we must
       have that <math|s<around*|(|n|)>\<in\>n>. As by [theorem:
-      <reference|natural numbers number is transitive>]
-      <math|s<around*|(|n|)>> is transitive it follows that
-      <math|s<around*|(|n|)>\<subseteq\>n>, further we have that
-      <math|n\<subseteq\>n<big|cup><around*|{|n|}>=s<around*|(|n|)>>. So we
-      conclude that <math|n=s<around*|(|n|)>> giving the contradiction
-      <math|n\<nin\>S>. So we must have that
+      <reference|natural numbers are transitive>] <math|s<around*|(|n|)>> is
+      transitive it follows that <math|s<around*|(|n|)>\<subseteq\>n>,
+      further we have that <math|n\<subseteq\>n<big|cup><around*|{|n|}>=s<around*|(|n|)>>.
+      So we conclude that <math|n=s<around*|(|n|)>> proving <math|n\<nin\>S>
+      which contradicts <math|n\<in\>S>. So we must have that
       <math|s<around*|(|s<around*|(|n|)>|)>\<neq\>s<around*|(|n|)>> proving
       that <math|s<around*|(|n|)>\<in\>S>.
     </description>
@@ -1428,30 +1430,20 @@
   </theorem>
 
   <\proof>
-    If <math|s<around*|(|n|)>=s<around*|(|m|)>> then as
-    <math|n\<in\>n<big|cup><around*|{|n|}>=s<around*|(|n|)>=s<around*|(|m|)>>
-    we have by [theorem: <reference|natural numbers successor properties>]
-    the following possibilities to consider:
+    As <math|n\<in\>n<big|cup><around*|{|n|}>=s<around*|(|n|)>=s<around*|(|m|)>>
+    and <math|m\<in\>m<big|cup><around*|{|m|}>=s<around*|(|m|)>=s<around*|(|n|)>>
+    we have that <math|n\<in\>s<around*|(|m|)>\<wedge\>m\<in\>s<around*|(|n|)>>.
+    Using [theorem: <reference|natural numbers successor properties>] this
+    becomes
 
-    <\description>
-      <item*|<math|n\<in\>m>>As by [theorem: <reference|natural numbers
-      number is transitive>] <math|m> is transitive it follows that
-      <math|n\<subseteq\>m>. Now <math|m\<in\>m<big|cup><around*|{|m|}>=s<around*|(|m|)>>,
-      so by [theorem: <reference|natural numbers successor properties>] we
-      have to consider:
+    <\equation*>
+      <around*|(|n\<in\>m\<vee\>n=m|)>\<wedge\><around*|(|m\<in\>n\<vee\>n=m|)>\<Rightarrow\><around*|(|n\<in\>m\<wedge\>m\<in\>n|)>\<vee\>n=m
+    </equation*>
 
-      <\description>
-        <item*|<math|m\<in\>n>>As <math|n> is transitive we have that
-        <math|m\<subseteq\>n> which combined with <math|n\<subseteq\>m>
-        proves <math|n=m>
-
-        <item*|<math|m=n>>Then clearly <math|n=m>
-      </description>
-
-      <item*|<math|n=m>>Then clearly <math|n=m>
-    </description>
-
-    So in all cases we have <math|n=m>.
+    If <math|n=m> we are done. So we must look at the case that
+    <math|m\<in\>n\<wedge\>n\<in\>m>. By transitivity [theorem:
+    <reference|natural numbers are transitive>] we have then
+    <math|n\<subseteq\>m> and <math|m\<subseteq\>n> proving that <math|n=m>.
   </proof>
 
   The above theorems are part of what is in number theory the Peano Axioms.\ 
@@ -1469,7 +1461,7 @@
       <item><math|\<forall\>n\<in\>\<bbb-N\><rsub|0>> we have that
       <math|s<around*|(|n|)>\<neq\>0>
 
-      <item>If <math|X\<subseteq\>\<bbb-N\>> is such that\ 
+      <item>If <math|X\<subseteq\>\<bbb-N\><rsub|0>> is such that\ 
 
       <\enumerate>
         <item><math|0\<in\>X>
@@ -1477,9 +1469,9 @@
         <item><math|n\<in\>X\<Rightarrow\>s*<around*|(|n|)>\<in\>X>
       </enumerate>
 
-      then <math|X=\<bbb-N\>>
+      then <math|X=\<bbb-N\><rsub|0>>
 
-      <item>If <math|n,m\<in\>\<bbb-N\>> is such that
+      <item>If <math|n,m\<in\>\<bbb-N\><rsub|0>> is such that
       <math|s<around*|(|n|)>=s<around*|(|m|)>> then <math|n=m>
     </enumerate>
   </theorem>
@@ -1518,14 +1510,18 @@
     then we have:
 
     <\description>
-      <item*|<math|0\<in\>S>>This follows from the definition.
+      <item*|<math|0\<in\>S>>As <math|0=0> we have that <math|0\<in\>S>.
 
-      <item*|<math|n\<in\>S\<Rightarrow\>s<around*|(|n|)>\<in\>S>>Then
-      <math|m=n> satisfies <math|s<around*|(|n|)>=s<around*|(|m|)>>, if there
-      is another <math|m<rprime|'>\<in\>\<bbb-N\><rsub|0>> such that
+      <item*|<math|n\<in\>S\<Rightarrow\>s<around*|(|n|)>\<in\>S>>Consider
+      <math|s<around*|(|n|)>> then by [theorem: <reference|natural numbers
+      s(n)=/0>] <math|s<around*|(|n|)>\<neq\>0>, further we have that
+      <math|m=n> satisfies <math|s<around*|(|n|)>=s<around*|(|m|)>> proving
+      the existance part. Assume that there is another
+      <math|m<rprime|'>\<in\>\<bbb-N\><rsub|0>> such that
       <math|s<around*|(|n|)>=s<around*|(|m<rprime|'>|)>>, then by [theorem:
       <reference|natural numbers successor function is injective>] we have
-      <math|n=m<rprime|'>>. So <math|s<around*|(|n|)>\<in\>S>.
+      <math|n=m<rprime|'>>, proving uniqueness. So
+      <math|s<around*|(|n|)>\<in\>S>.
     </description>
 
     Mathematical induction [see: <reference|natural numbers mathematical
@@ -1539,9 +1535,11 @@
 
   Recursion will be used to essential define things in terms of itself. It is
   the mathematical eqivalent of iteration in many programming languages.
-  Actually languages that are mathematical oriented like Haskell have no
-  iteration , loop constructs and relay also on recursion. Recursion is based
-  on he following theorem.
+  Actually, functional languages that are mathematical oriented, like
+  Haskell, have no iteration and loop constructs at all and relay fully on
+  recursion. Recursion is based on the definition of a recursive function
+  that takes the role of iterating. The following theorem ensures the
+  existance of such a function.
 
   <\theorem>
     <label|recursion><index|recursion><dueto|Recursion>Let <math|A> be a set,
@@ -1586,10 +1584,12 @@
       <label|eq 5.1.019>\<bbb-N\><rsub|0>\<times\>A\<in\>\<cal-G\>
     </equation>
 
-    We prove now that\ 
+    We prove now that
 
     <\equation>
-      <label|eq 5.2.019>\<lambda\>=<big|cap>\<cal-G\>\<in\>\<cal-G\>\<wedge\>\<lambda\>\<subseteq\>N<rsub|0>\<times\>A\<wedge\><around*|(|0,a|)>\<in\>\<lambda\>
+      <label|eq 5.2.019>If \<lambda\>=<big|cap>\<cal-G\><text| then
+      >\<lambda\>\<in\>\<cal-G\><text|, >\<lambda\>\<subseteq\>N<rsub|0>\<times\>A<text|
+      and ><around*|(|0,a|)>\<in\>\<lambda\>
     </equation>
 
     <\proof>
@@ -1600,15 +1600,17 @@
         <math|\<bbb-N\><rsub|0>\<times\>A\<in\>\<cal-G\>> so that by
         [theorem: <reference|class general intersection>]
         <math|<big|cap>\<cal-G\>\<subseteq\>\<bbb-N\><rsub|0>\<times\>A>
+        hence <math|\<lambda\>\<subseteq\>\<bbb-N\><rsub|0>\<times\>A>
 
         <item><math|\<forall\>G\<in\>\<cal-G\>> we have by definition that
         <math|<around*|(|0,a|)>\<in\>G> hence
-        <math|<around*|(|0,a|)>\<in\><big|cap>\<cal-G\>>
+        <math|<around*|(|0,a|)>\<in\><big|cap>\<cal-G\>> or
+        <math|<around*|(|0,a|)>\<in\>\<lambda\>>
 
         <item>If <math|<around*|(|n,x|)>\<in\><big|cap>\<cal-G\>> then
         <math|\<forall\>G\<in\>\<cal-G\>> we have
         <math|<around*|(|n,x|)>\<in\>G\<Rightarrow\><around*|(|s<around*|(|n|)>,f<around*|(|x|)>|)>\<in\>G>,
-        so that <math|<around*|(|s<around*|(|n|)>,f<around*|(|x|)>|)>\<in\><big|cap>\<cal-G\>>
+        so that <math|<around*|(|s<around*|(|n|)>,f<around*|(|x|)>|)>\<in\><big|cap>\<cal-G\>>.
       </enumerate>
 
       Using (1),(2) and (3) it follows that
@@ -1624,7 +1626,7 @@
       <label|eq 5.3.019>dom<around*|(|\<lambda\>|)>\<subseteq\>\<bbb-N\><rsub|0>
     </equation>
 
-    As by [eq: <reference|eq 5.2.019>] <math|<around*|(|o,a|)>\<in\>\<lambda\>>
+    As by [eq: <reference|eq 5.2.019>] <math|<around*|(|0,a|)>\<in\>\<lambda\>>
     we have that\ 
 
     <\equation>
@@ -1633,7 +1635,7 @@
 
     If <math|n\<in\>dom<around*|(|\<lambda\>|)>> then then <math|\<exists\>x>
     such that <math|<around*|(|n,x|)>\<in\>\<lambda\>>, as by [eq:
-    <reference|eq 5.2.019>] <math|\<lambda\>\<in\>\<cal-G\>> we have
+    <reference|eq 5.2.019>] <math|\<lambda\>\<in\>\<cal-G\>>, we have
     <math|<around*|(|s<around*|(|n|)>,f<around*|(|x|)>|)>\<in\>\<lambda\>> so
     that <math|s<around*|(|n|)>\<in\>dom<around*|(|\<lambda\>|)>>. In other
     words we have\ 
@@ -1644,8 +1646,9 @@
     </equation>
 
     Now [eq: <reference|eq 5.3.019>], [eq: <reference|eq 5.4.019>] and [eq:
-    <reference|eq 5.5.019>] are the conditions for amthematical induction
-    [theorem: <reference|natural numbers mathematical induction>], so we have\ 
+    <reference|eq 5.5.019>] are the conditions for mathematical induction
+    [theorem: <reference|natural numbers mathematical induction>], so we have
+    proved that
 
     <\equation>
       <label|eq 5.6.019>dom<around*|(|\<lambda\>|)>=\<bbb-N\><rsub|0>
@@ -1667,15 +1670,17 @@
       <math|\<exists\>x\<in\>A> with <math|x\<neq\>a> such that
       <math|<around*|(|0,x|)>\<in\>\<lambda\>>, then
       <math|<around*|(|0,a|)>\<neq\><around*|(|0,x|)>>. Define now
-      <math|\<beta\>=\<lambda\>\\<around*|{|<around*|(|0,x|)>|}>>
+      <math|\<beta\>=\<lambda\>\\<around*|{|<around*|(|0,x|)>|}>> then we
+      have
 
       <\enumerate>
         <item><math|\<beta\>\<subseteq\>\<lambda\>\<subseteq\>\<bbb-N\><rsub|0>\<times\>A>
 
-        <item>As <math|<around*|(|0,a|)>\<neq\><around*|(|0,x|)>> we have
+        <item>As <math|<around*|(|0,a|)>\<neq\><around*|(|0,x|)>> and
+        <math|<around*|(|0,a|)>\<in\>\<lambda\>> we have
         <math|<around*|(|0,a|)>\<in\>\<beta\>>
 
-        <item>If <math|<around*|(|n,y|)>\<in\>\<beta\>\<Rightarrowlim\><rsub|\<beta\>\<subset\>\<lambda\>><around*|(|n,y|)>\<in\>\<lambda\>>
+        <item>If <math|<around*|(|n,y|)>\<in\>\<beta\>\<Rightarrowlim\><rsub|\<beta\>\<subseteq\>\<lambda\>><around*|(|n,y|)>\<in\>\<lambda\>>
         so that <math|<around*|(|s<around*|(|n|)>,f<around*|(|x|)>|)>\<in\>\<lambda\>>,
         as by [theorem: <reference|natural numbers s(n)=/0>]
         <math|s<around*|(|n|)>\<neq\>0> we have that
@@ -1686,13 +1691,13 @@
       From (1),(2) and (3) it follows that <math|\<beta\>\<in\>\<cal-G\>> so
       that by [theorem: <reference|class general intersection>]
       <math|\<lambda\>=<big|cap>\<cal-G\>\<subseteq\>\<cal-B\>> which as
-      <math|<around*|(|0,x\<in\>\<lambda\>|)> would give
+      <math|<around*|(|0,x|)>\<in\>\<lambda\> would give
       <around*|(|0,x|)>\<in\>\<beta\>=\<lambda\>\\<around*|{|<around*|(|0,x|)>|}>>
       a contradiction. So the assumption is wrong and we must have that
-      <math|x=a>, proving that <math|0\<in\>S>
+      <math|x=a>, proving uniqueness, hence that <math|0\<in\>S>.
 
       <item*|<math|n\<in\>S\<Rightarrow\>s<around*|(|n|)>\<in\>S>>As
-      <math|n\<in\>S> there exist a <with|font-series|bold|<with|font-series|medium|unique>>
+      <math|n\<in\>S> there exist a <with|font-series|bold|<with|font-series|medium|<with|font-series|bold|unique>>>
       <math|x\<in\>\<cal-S\>> such that <math|<around*|(|n,x|)>\<in\>\<lambda\>>.
       As <math|<around*|(|n,x|)>\<in\>\<lambda\>> we have as
       <math|\<lambda\>\<in\>\<cal-G\>> that
@@ -1714,7 +1719,7 @@
 
         <item>If <math|*<around*|(|m,z|)>\<in\>\<beta\>> then
         <math|<around*|(|m,z|)>\<in\>\<lambda\>> so that
-        <math|<around*|(|\<lambda\><around*|(|m|)>,f<around*|(|z|)>|)>\<in\>\<lambda\>>
+        <math|<around*|(|s<around*|(|m|)>,f<around*|(|z|)>|)>\<in\>\<lambda\>>
         we must now consider two cases for
         <math|s<around*|(|n|)>,s<around*|(|m|)>>:
 
@@ -1730,10 +1735,10 @@
 
           <item*|<math|s<around*|(|m|)>\<neq\>s<around*|(|n|)>>>then
           <math|<around*|(|s<around*|(|m|)>,f<around*|(|z|)>|)>\<neq\><around*|(|s<around*|(|n|)>,y|)>>
-          so that <math|<around*|(|s<around*|(|m|)>|)>\<in\>\<beta\>>
+          so that <math|<around*|(|s<around*|(|m|)>,f<around*|(|z|)>|)>\<in\>\<beta\>>
         </description>
 
-        So we have proves that if <math|<around*|(|m,z|)>\<in\>\<beta\>> then
+        So we have prove that if <math|<around*|(|m,z|)>\<in\>\<beta\>> then
         <math|<around*|(|s<around*|(|m|)>,f<around*|(|z|)>|)>\<in\>\<beta\>>
       </enumerate>
 
@@ -1743,7 +1748,8 @@
       <math|<around*|(|s<around*|(|n|)>,y|)>\<in\>\<lambda\>> leads to
       <math|<around*|(|s<around*|(|n|)>,y|)>\<in\>\<beta\>=\<lambda\>\\<around*|{|<around*|(|s<around*|(|n|)>,y|)>|}>>
       a contradiction. So the assumption is wrong and we must have that
-      <math|y=f<around*|(|x|)>> proving that <math|s<around*|(|n|)>\<in\>S>.
+      <math|y=f<around*|(|x|)>> proving <with|font-series|bold|uniqueness>,
+      hence we have that <math|s<around*|(|n|)>\<in\>S>.
     </description>
 
     Using mathematical induction [theorem: <reference|natural numbers
@@ -1765,11 +1771,16 @@
       a function>
     </equation>
 
-    Further as <math|\<lambda\>\<in\>\<cal-G\>> we have that
+    As <math|\<lambda\>\<in\>\<cal-G\>> we have that
     <math|<around*|(|0,a|)>\<in\>\<lambda\>\<Rightarrow\>a=\<lambda\><around*|(|0|)><text|>>,
     further if <math|n\<in\>\<bbb-N\><rsub|0>=dom<around*|(|\<lambda\>|)>>
-    then <math|\<exists\>x> such that <math|<around*|(|n,x|)>\<in\>\<lambda\>\<Rightarrow\>x=\<lambda\><around*|(|n|)>>
-    hence <math|<around*|(|s<around*|(|n|)>,f<around*|(|x|)>|)>\<in\>\<lambda\>\<Rightarrow\>\<lambda\><around*|(|s<around*|(|n|)>|)>=f<around*|(|x|)>=f<around*|(|\<lambda\><around*|(|n|)>|)>>
+    then <math|\<exists\>x> such that <math|<around*|(|n\<comma\>x|)>\<in\>\<lambda\>>
+    and <math|<around*|(|s<around*|(|n|)>,f<around*|(|x|)>|)>\<in\>\<lambda\>>,
+    Now <math|<around*|(|n,x|)>\<in\>\<lambda\>> is equivalent with
+    <math|\<lambda\><around*|(|n|)>=x> and
+    <math|<around*|(|s<around*|(|n|)>,f<around*|(|x|)>|)>\<in\>\<lambda\>> is
+    equivalent with <math|\<lambda\><around*|(|s<around*|(|n|)>|)>=f<around*|(|x|)>=f<around*|(|\<lambda\><around*|(|n|)>|)>>.
+    So we have for <math|\<lambda\>> that
 
     <\equation>
       <label|eq 5.9.019>\<lambda\><around*|(|0|)>=a <text| and
@@ -1778,7 +1789,7 @@
     </equation>
 
     So we have proved the existance of our function, next we must prove that
-    this function is unique' So assume that there exist a nother function
+    this function is unique. Assume that there exist another function
 
     <\equation*>
       \<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>A<text| such that
@@ -1792,7 +1803,7 @@
     then we have
 
     <\description>
-      <item*|<math|0\<in\>T>>As <math|\<lambda\><around*|(|0|)>=\<beta\><around*|(|0|)>>
+      <item*|<math|0\<in\>T>>As <math|\<lambda\><around*|(|0|)>=a=\<beta\><around*|(|0|)>>
       we have that <math|0\<in\>T>.
 
       <item*|<math|n\<in\>T\<Rightarrow\>s<around*|(|n|)>\<in\>T>>As
@@ -1814,8 +1825,8 @@
 
   <\corollary>
     <label|recursion injective function>If <math|A> is a set, <math|a\<in\>A>
-    and <math|f:A\<rightarrow\>A> a injective function then there exists a
-    unique function\ 
+    and <math|f:A\<rightarrow\>A> a <with|font-series|bold|injective>
+    function then there exists a unique function\ 
 
     <\equation*>
       \<lambda\>:\<bbb-N\><rsub|0>\<rightarrow\>A
@@ -1850,7 +1861,7 @@
       >\<lambda\><around*|(|s<around*|(|n|)>|)>=f<around*|(|\<lambda\><around*|(|n|)>|)>
     </equation*>
 
-    We prove now mathematical induction to prove (3). Assume that
+    We use now mathematical induction to prove (3). Assume that
     <math|a\<nin\>f<around*|(|A|)>> and take
 
     <\equation*>
@@ -1886,7 +1897,7 @@
       it follows then that <math|\<lambda\><around*|(|s<around*|(|n|)>|)>=\<lambda\><around*|(|s<around*|(|k|)>|)>>
       so that <math|f<around*|(|\<lambda\><around*|(|n|)>|)>=\<lambda\><around*|(|s<around*|(|n|)>|)>=\<lambda\><around*|(|s<around*|(|k|)>|)>=f<around*|(|\<lambda\><around*|(|k|)>|)>>.
       As <math|f> is injective we have <math|\<lambda\><around*|(|n|)>=\<lambda\><around*|(|k|)>>.
-      Now as <math|n\<in\>S> we have <math|n=k> or
+      Now as <math|n\<in\>S> we must have <math|n=k> or
       <math|s<around*|(|n|)>=s<around*|(|k|)>=m>. This proves that
       <math|\<forall\>m\<in\>\<bbb-N\><rsub|0>> with
       <math|\<lambda\><around*|(|s<around*|(|n|)>|)>=\<lambda\><around*|(|m|)>>
@@ -1924,8 +1935,41 @@
     times>>> are all different numbers.
   </remark>
 
+  To see the conditions for injectivity of <math|\<lambda\>> consider the
+  following two examples:
+
+  <\example>
+    Define <math|f:<around*|{|1,2,3|}>\<rightarrow\>f<around*|(|<around*|{|1,2,3|}>|)>>
+    by <math|f<around*|(|i|)>=<choice|<tformat|<table|<row|<cell|2 if
+    i=1>>|<row|<cell|3 if i=2>>|<row|<cell|2 if i=1>>>>>> (so <math|f> is not
+    injective) and <math|a=3>
+  </example>
+
+  then we have\ 
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|\<lambda\><around*|(|0|)>>|<cell|=>|<cell|3>>|<row|<cell|\<lambda\><around*|(|1|)>>|<cell|=>|<cell|f<around*|(|3|)>=2>>|<row|<cell|\<lambda\><around*|(|2|)>>|<cell|=>|<cell|f<around*|(|f<around*|(|3|)>|)>=f<around*|(|2|)>=1>>|<row|<cell|\<lambda\><around*|(|3|)>>|<cell|=>|<cell|f<around*|(|f<around*|(|f<around*|(|3|)>|)>|)>=f<around*|(|1|)>=2>>|<row|<cell|\<lambda\><around*|(|4|)>>|<cell|=>|<cell|f<around*|(|f<around*|(|f<around*|(|3|)>|)>|)>=f<around*|(|2|)>=1>>|<row|<cell|>|<cell|\<ldots\>>|<cell|>>>>
+  </eqnarray*>
+
+  So that <math|\<lambda\>:\<bbb-N\><rsub|0>-A> is clearly not injective.
+
+  <\example>
+    Take <math|f:<around*|{|1,2,3|}>\<rightarrow\><around*|{|1,2,3|}>> by
+    <math|f<around*|(|i|)>=<choice|<tformat|<table|<row|<cell|2 if
+    i=1>>|<row|<cell|3 if i=2>>|<row|<cell|1 if i=3>>>>>> so that <math|f> is
+    injective and <math|a=2> so that <math|a\<in\>f<around*|(|<around*|{|1,2,3|}>|)>>
+    then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<lambda\><around*|(|0|)>>|<cell|=>|<cell|2>>|<row|<cell|\<lambda\><around*|(|1|)>>|<cell|=>|<cell|f<around*|(|2|)>=1>>|<row|<cell|\<lambda\><around*|(|2|)>>|<cell|=>|<cell|f<around*|(|f<around*|(|2|)>|)>=f<around*|(|1|)>=2>>|<row|<cell|\<lambda\><around*|(|3|)>>|<cell|=>|<cell|f<around*|(|f<around*|(|f<around*|(|2|)>|)>|)>=f<around*|(|2|)>=1>>|<row|<cell|>|<cell|\<ldots\>>|<cell|>>>>
+    </eqnarray*>
+
+    So that <math|\<lambda\>:\<bbb-N\><rsub|0>\<rightarrow\><around*|{|1,2,3|}>>
+    is not injective.
+  </example>
+
   We can rephrase the above remark in the iteration principle that is useful
-  in proves using mathematical induction.
+  in proofs using mathematical induction.
 
   <\theorem>
     <label|recursion iteration><index|iteration><dueto|Iteration>Let <math|A>
@@ -2040,14 +2084,13 @@
     </enumerate>
   </example>
 
-  Recursion is mostly used in it's step form to define functions recursive
-  functions.
+  Recursion is mostly used in it's step form to define recursive functions.
 
   <\theorem>
     <label|recursion step form (1)><dueto|Recursion on
-    <math|\<bbb-N\><rsub|0>>- Step Form>Let <math|A> be a set,
-    <math|a\<in\>A> and <math|g:\<bbb-N\>\<times\>A\<rightarrow\>A> a
-    function then there exist a <with|font-series|bold|unique> function
+    <math|\<bbb-N\><rsub|0>> Step Form>Let <math|A> be a set, <math|a\<in\>A>
+    and <math|g:\<bbb-N\>\<times\>A\<rightarrow\>A> a function then there
+    exist a <with|font-series|bold|unique> function
     <math|\<lambda\>:\<bbb-N\><rsub|0>\<rightarrow\>A> such that\ 
 
     <\enumerate>
@@ -2074,13 +2117,13 @@
     Define now\ 
 
     <\equation>
-      <label|eq 5.10.019>\<gamma\>:\<bbb-N\>\<times\>A\<rightarrow\>\<bbb-N\>\<times\>A<text|
-      where >\<gamma\><around*|(|x|)>=<around*|(|s<around*|(|\<pi\><rsub|1><around*|(|x|\<nobracket\>>|)>,g<around*|(|\<pi\><rsub|1><around*|(|x|)>,\<pi\><rsub|2><around*|(|x|)>|)>|)>
+      <label|eq 5.10.019>\<gamma\>:\<bbb-N\><rsub|0>\<times\>A\<rightarrow\>\<bbb-N\><rsub|0>\<times\>A<text|
+      where >\<gamma\><around*|(|x|)>=<around*|(|s<around*|(|\<pi\><rsub|1>*<around*|(|x|)>|)>,g<around*|(|\<pi\><rsub|1><around*|(|x|)>,\<pi\><rsub|2><around*|(|x|)>|)>|)>
     </equation>
 
-    Using iteration [theorem: <reference|recursion iteration>] on the above
-    functions gives <math|\<forall\>n\<in\>\<bbb-N\><rsub|0>> the existance
-    of the function\ 
+    Using the iteration [theorem: <reference|recursion iteration>] on the
+    above functions gives <math|\<forall\>n\<in\>\<bbb-N\><rsub|0>> the
+    existance of the function\ 
 
     <\equation>
       <label|eq 5.11.019><around*|(|\<gamma\>|)><rsup|n>:\<bbb-N\><rsub|0>\<times\>A\<rightarrow\>\<bbb-N\><rsub|0>\<times\>A<text|
@@ -2101,7 +2144,7 @@
 
     <\description>
       <item*|<math|0\<in\>S>>As <math|\<pi\><rsub|1><around*|(|<around*|(|\<gamma\>|)><rsup|0><around*|(|0,a|)>|)>\<equallim\><rsub|<text|[eq:
-      <reference|eq 5.11.019>>>\<pi\><rsub|1><around*|(|Id<rsub|\<bbb-N\><rsub|0>\<times\>A><around*|(|0,a|)>|)>=\<pi\><rsub|1><around*|(|0.a|)>=0>
+      <reference|eq 5.11.019>]>>\<pi\><rsub|1><around*|(|Id<rsub|\<bbb-N\><rsub|0>\<times\>A><around*|(|0,a|)>|)>=\<pi\><rsub|1><around*|(|0,a|)>=0>
       we have that <math|0\<in\>S>
 
       <item*|<math|n\<in\>\<b-S\>\<Rightarrow\>s<around*|(|n|)>\<in\>S>>We
@@ -2110,7 +2153,7 @@
       <\eqnarray*>
         <tformat|<table|<row|<cell|\<pi\><rsub|1><around*|(|<around*|(|\<gamma\>|)><rsup|s<around*|(|n|)>><around*|(|0,a|)>|)>>|<cell|\<equallim\><rsub|<text|[eq:
         <reference|eq 5.11.019>]>>>|<cell|\<pi\><rsub|1><around*|(|<around*|(|\<gamma\>\<circ\><around*|(|\<gamma\>|)><rsup|n>|)><around*|(|0,a|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsub|1><around*|(|\<gamma\><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,n|)>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
-        <reference|eq 5.10.019>]>>>|<cell|\<pi\><rsub|1><around*|(|\<pi\><rsub|1><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,n|)>|)>,g<around*|(|\<pi\><rsub|1><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,a|)>|)>,\<pi\><rsub|2><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,a|)>|)>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|n\<in\>S\<Rightarrow\>\<pi\><rsub|1><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,a|)>=n|)>>>|<cell|\<pi\><rsub|1><around*|(|n,g<around*|(|n,\<pi\><rsub|2><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,a|)>|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|n>>>>
+        <reference|eq 5.10.019>]>>>|<cell|\<pi\><rsub|1><around*|(|\<pi\><rsub|1><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,n|)>|)>,g<around*|(|\<pi\><rsub|1><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,a|)>|)>,\<pi\><rsub|2><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,a|)>|)>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|n\<in\>S\<Rightarrow\>\<pi\><rsub|1><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,a|)>|)>=n>>|<cell|\<pi\><rsub|1><around*|(|n,g<around*|(|n,\<pi\><rsub|2><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,a|)>|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|n>>>>
       </eqnarray*>
 
       proving that <math|s<around*|(|n|)>\<in\>S>
@@ -2143,7 +2186,7 @@
         <reference|eq 5.11.019>]>>>|<cell|\<pi\><rsub|2><around*|(|<around*|(|\<gamma\>\<circ\><around*|(|\<gamma\>|)><rsup|n>|)><around*|(|0,a|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsub|2><around*|(|\<gamma\><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,a|)>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
         <reference|eq 5.10.019>>>>|<cell|\<pi\><rsub|2><around*|(|\<pi\><rsub|1><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,a|)>|)>,g<around*|(|\<pi\><rsub|1><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,a|)>|)>,\<pi\><rsub|2><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,a|)>|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|g<around*|(|\<pi\><rsub|1><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,a|)>|)>,\<pi\><rsub|2><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,a|)>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
         <reference|eq 5.12.019>>>>|<cell|g<around*|(|n,\<pi\><rsub|2><around*|(|<around*|(|\<gamma\>|)><rsup|n><around*|(|0,a|)>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
-        <reference|eq 5.1.019>>>>|<cell|g<around*|(|n,\<lambda\><around*|(|n|)>|)>>>>>
+        <reference|eq 5.13.019>>>>|<cell|g<around*|(|n,\<lambda\><around*|(|n|)>|)>>>>>
       </eqnarray*>
     </enumerate>
 
@@ -2190,6 +2233,8 @@
 
   <section|Arithmetic of the Natural numbers>
 
+  We use recursion to define the sum of two natural numbers.
+
   <\definition>
     <label|natural numbers addition><index|addition of natural numbers>Let
     <math|m,n\<in\>\<bbb-N\><rsub|0>> then the addition operator <math|+> is
@@ -2202,7 +2247,9 @@
 
     Here <math|s:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0>> is the
     successor function [definition: <reference|natural numbers successor
-    function>].\ 
+    function>] and we use the iteration principle from [theorem:
+    <reference|recursion iteration>] to define
+    <math|<around*|(|s|)><rsup|n>>.
   </definition>
 
   <\example>
@@ -2212,6 +2259,9 @@
   <\proof>
     <math|1+1=<around*|(|s|)><rsup|1><around*|(|1|)>=<around*|(|s\<circ\><around*|(|s|)><rsup|0>|)><around*|(|s|)>=s<around*|(|<around*|(|s|)><rsup|0><around*|(|1|)>|)>=s<around*|(|Id<rsub|\<bbb-N\><rsub|0>><around*|(|1|)>|)>=s<around*|(|1|)>=2>
   </proof>
+
+  We will show now that <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>>
+  forms a abelian semi-group.
 
   <\theorem>
     <math|<label|natural numbers n+0=n>><dueto|Neutral Element>Let
@@ -2228,7 +2278,7 @@
       <math|S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|0+n=n|}>> then we have:
 
       <\description>
-        <item*|<math|0\<in\>S>>As <math|0+0=<around*|(|s|)><rsup|0><around*|(|0|)>=Id<rsub|\<bbb-N\><rsub|0>><around*|(|0|)>=0>
+        <item*|<math|0\<in\>S>>As <math|0+0\<equallim\><rsub|<around*|(|1|)>>0>
         proving <math|0\<in\>S>
 
         <item*|<math|n\<in\>S\<Rightarrow\>s<around*|(|n|)>\<in\>S>>We have
@@ -2259,12 +2309,13 @@
       then we have:
 
       <\description>
-        <item*|<math|0\<in\>S>><math|1+0=<around*|(|s|)><rsup|0><around*|(|1|)>=Id<rsub|\<bbb-N\><rsub|0>><around*|(|1|)>=1=s<around*|(|0|)>>
+        <item*|<math|0\<in\>S>><math|1+0\<equallim\><rsub|<text|[theorem:
+        <reference|natural numbers n+0=n>]>>=1=s<around*|(|0|)>>
 
         <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>
 
         <\equation*>
-          1+s<around*|(|n|)>=<around*|(|s|)><rsup|s<around*|(|n|)>><around*|(|1|)>=s<around*|(|<around*|(|s|)><rsup|n><around*|(|1|)>|)>\<equallim\>s<around*|(|1+n|)>\<equallim\><rsub|n\<in\>S>s<around*|(|s<around*|(|n|)>|)>
+          1+s<around*|(|n|)>=<around*|(|s|)><rsup|s<around*|(|n|)>><around*|(|1|)>=<around*|(|s\<circ\><around*|(|s|)><rsup|n>|)>*<around*|(|1|)>=s<around*|(|<around*|(|s|)><rsup|n><around*|(|1|)>|)>\<equallim\>s<around*|(|1+n|)>\<equallim\><rsub|n\<in\>S>s<around*|(|s<around*|(|n|)>|)>
         </equation*>
 
         proving that <math|s<around*|(|n|)>\<in\>S>.
@@ -2291,7 +2342,7 @@
   </theorem>
 
   <\proof>
-    The proof is by mathematical induction given
+    The proof is by mathematical induction, so given
     <math|n,m\<in\>\<bbb-N\><rsub|0>> define
 
     <\equation*>
@@ -2318,7 +2369,7 @@
       proving that <math|s<around*|(|k|)>\<in\>S<rsub|n,m>>.
     </description>
 
-    By By mathematical induction [theorem: <reference|natural numbers
+    By mathematical induction [theorem: <reference|natural numbers
     mathematical induction>] we have <math|\<bbb-N\><rsub|0>=S<rsub|n,m>>. So
     if <math|n,m,k\<in\>\<bbb-N\><rsub|0>> then
     <math|k\<in\>S<rsub|n,m>\<Rightarrow\><around*|(|n\<upl\>m|)>\<upl\>k=n\<upl\><around*|(|m\<upl\>k|)>>
@@ -2341,7 +2392,8 @@
 
     <\description>
       <item*|<math|0\<in\>S<rsub|n>>>Using [theorem: <reference|natural
-      numbers n+0=n>] it follows that <math|n+0=0+n> proving that <math|>
+      numbers n+0=n>] it follows that <math|n+0=0+n> proving that
+      <math|0\<in\>S<rsub|n>>
 
       <item*|<math|k\<in\>S<rsub|n>\<Rightarrow\>s<around*|(|k|)>\<in\>S<rsub|n>>>We
       have\ 
@@ -2384,20 +2436,25 @@
     </description>
   </proof>
 
+  Next we use recursion to define multiplication in <math|\<bbb-N\><rsub|0>>
+  and prove that <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>>
+  is a abelian group.
+
   <\definition>
     <label|natural numbers multiplication><index|multiplication of natural
-    numbers><dueto|Multiplication>Given <math|n\<in\>\<bbb-N\>> define
+    numbers><dueto|Multiplication>Given <math|n\<in\>\<bbb-N\><rsub|0>>
+    define
 
     <\equation*>
-      \<alpha\><rsub|n>:\<bbb-N\>\<rightarrow\>\<bbb-N\><text| by
-      >\<alpha\><rsub|n><around*|(|m|)>=n+m
+      \<alpha\><rsub|n>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0><text|
+      by >\<alpha\><rsub|n><around*|(|m|)>=n+m
     </equation*>
 
-    Then we define
+    Then we define the multiplication operator as follows
 
     <\equation*>
-      \<cdot\>:\<bbb-N\>\<times\>\<bbb-N\>\<rightarrow\>\<bbb-N\><text| by
-      >n\<cdot\>m=.<around*|(|n,m|)>=<around*|(|\<alpha\><rsub|n>|)><rsup|m><around*|(|0|)>
+      \<cdot\>:\<bbb-N\><rsub|0>\<times\>\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0><text|
+      by >n\<cdot\>m=.<around*|(|n,m|)>=<around*|(|\<alpha\><rsub|n>|)><rsup|m><around*|(|0|)>
     </equation*>
   </definition>
 
@@ -2420,7 +2477,7 @@
     \ 
 
     <\enumerate>
-      <item><math|n\<cdot\>0=<around*|(|\<alpha\><rsub|n>|)><rsup|0><around*|(|0|)>=Id<rsub|\<bbb-N\><rsub|0>><around*|(|0|)><around*|(|0|)>>
+      <item><math|n\<cdot\>0=<around*|(|\<alpha\><rsub|n>|)><rsup|0><around*|(|0|)>=Id<rsub|\<bbb-N\><rsub|0>><around*|(|0|)>=0>
 
       <item>We prove by induction that <math|0\<cdot\>n=0>, so let
       <math|S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|0\<cdot\>n=0|}>> then we
@@ -2475,7 +2532,7 @@
         <item*|<math|n\<in\>S\<Rightarrow\>s<around*|(|n|)>\<in\>S>>We have\ 
 
         <\eqnarray*>
-          <tformat|<table|<row|<cell|1\<cdot\>s<around*|(|n|)>>|<cell|=>|<cell|<around*|(|\<alpha\><rsub|1>|)><rsup|s<around*|(|n|)>><around*|(|n|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<alpha\><rsub|1>\<circ\><around*|(|\<alpha\><rsub|1>|)><rsup|n>|)><around*|(|0|)>>>|<row|<cell|>|<cell|=>|<cell|a<rsub|1><around*|(|\<alpha\><rsub|1>|)><rsup|n><around*|(|0|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\><rsub|1><around*|(|1\<cdot\>n|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|n\<in\>S>>|<cell|\<alpha\><rsub|1><around*|(|n|)>>>|<row|<cell|>|<cell|=>|<cell|1+n>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <tformat|<table|<row|<cell|1\<cdot\>s<around*|(|n|)>>|<cell|=>|<cell|<around*|(|\<alpha\><rsub|1>|)><rsup|s<around*|(|n|)>><around*|(|n|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<alpha\><rsub|1>\<circ\><around*|(|\<alpha\><rsub|1>|)><rsup|n>|)><around*|(|0|)>>>|<row|<cell|>|<cell|=>|<cell|a<rsub|1><around*|(|<around*|(|\<alpha\><rsub|1>|)><rsup|n><around*|(|0|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\><rsub|1><around*|(|1\<cdot\>n|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|n\<in\>S>>|<cell|\<alpha\><rsub|1><around*|(|n|)>>>|<row|<cell|>|<cell|=>|<cell|1+n>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
           <reference|natural numbers s(n) =
           n+1>>>>|<cell|s<around*|(|n|)>>>>>
         </eqnarray*>
@@ -2496,18 +2553,22 @@
   </lemma>
 
   <\proof>
-    <math|n\<cdot\>s<around*|(|m|)>=<around*|(|\<alpha\><rsub|n>|)><rsup|s<around*|(|m|)>><around*|(|0|)>=<around*|(|\<alpha\><rsub|n>\<circ\><around*|(|\<alpha\><rsub|n>|)><rsup|m>|)><around*|(|0|)>=a<rsub|n><around*|(|<around*|(|\<alpha\><rsub|n>|)><rsup|m><around*|(|0|)>|)>=\<alpha\><rsub|n><around*|(|n\<cdot\>m|)>=n+n\<cdot\>m>
+    <math|n\<cdot\>s<around*|(|m|)>=<around*|(|\<alpha\><rsub|n>|)><rsup|s<around*|(|m|)>><around*|(|0|)>=<around*|(|\<alpha\><rsub|n>\<circ\><around*|(|\<alpha\><rsub|n>|)><rsup|m>|)><around*|(|0|)>=a<rsub|n><around*|(|<around*|(|\<alpha\><rsub|n>|)><rsup|m><around*|(|0|)>|)>=\<alpha\><rsub|n><around*|(|n\<cdot\>m|)>=n+n\<cdot\>m>.
   </proof>
 
   <\theorem>
     <label|natural numbers distributivity><dueto|Distributivity><math|\<forall\>n,m,k\<in\>\<bbb-N\><rsub|0>>
-    we have <math|<around*|(|n+m|)>\<cdot\>k=n\<cdot\>k+m\<cdot\>k>
+    we have <math|<around*|(|n+m|)>\<cdot\>k=n\<cdot\>k+m\<cdot\>k>.
   </theorem>
 
   <\proof>
     We use induction to prove this. So given
     <math|n,m\<in\>\<bbb-N\><rsub|0>> let
-    <math|S<rsub|n,m>=<around*|{|k\<in\>\<bbb-N\><rsub|0>\|<around*|(|n+m|)>\<cdot\>k=n\<cdot\>k+m\<cdot\>k|}>>
+
+    <\equation*>
+      S<rsub|n,m>=<around*|{|k\<in\>\<bbb-N\><rsub|0>\|<around*|(|n+m|)>\<cdot\>k=n\<cdot\>k+m\<cdot\>k|}>
+    </equation*>
+
     then we have:\ 
 
     <\description>
@@ -2598,7 +2659,8 @@
       <item*|<math|0\<in\>S<rsub|n,m>>>This follows from
       <math|<around*|(|n\<cdot\>m|)>\<cdot\>0\<equallim\><rsub|<text|[theorem:
       <reference|natural numbers absorbing
-      element>]>>0=n\<cdot\>0=\<equallim\><rsub|<text|[theorem:
+      element>]>>0\<equallim\><rsub|<text|[theorem: <reference|natural
+      numbers absorbing element>]>>n\<cdot\>0=\<equallim\><rsub|<text|[theorem:
       <reference|natural numbers absorbing
       element>]>>n\<cdot\><around*|(|m\<cdot\>0|)>>
 
@@ -2647,8 +2709,8 @@
     </description>
   </proof>
 
-  Although we have not a inverse element for addition in
-  <math|\<bbb-N\><rsub|0>> [this will be solved by the set of whole numbers]
+  Although there is no inverse element for addition in
+  <math|\<bbb-N\><rsub|0>> [this will be solved by the set of whole numbers],
   we can still solve equations as is expressed in the next theorem.
 
   <\theorem>
@@ -2689,9 +2751,11 @@
 
   <\note>
     We do not have a equivalent theorem for the product of two natural
-    numbers, for example <math|0\<cdot\>0=1\<cdot\>0> but we dot have that
+    numbers, for example <math|0\<cdot\>0=1\<cdot\>0> but we don't have that
     <math|1=0>.
   </note>
+
+  \;
 
   <section|Order relation on the natural numbers>
 
@@ -2725,7 +2789,8 @@
       then we have
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<around*|(|n\<in\>m\<vee\>n=m|)>\<wedge\><around*|(|m\<in\>n\<vee\>m=n|)>>|<cell|\<Rightarrow\>>|<cell|<around*|(|n\<in\>m\<vee\>n=m|)>\<wedge\><around*|(|m\<in\>n\<vee\>n=m|)>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|<around*|(|n\<in\>m\<wedge\>m\<in\>n|)>\<vee\>n=m>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|n=m\<vee\>n=m>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|n=m>>>>
+        <tformat|<table|<row|<cell|<around*|(|n\<in\>m\<vee\>n=m|)>\<wedge\><around*|(|m\<in\>n\<vee\>m=n|)>>|<cell|\<Rightarrow\>>|<cell|<around*|(|n\<in\>m\<vee\>n=m|)>\<wedge\><around*|(|m\<in\>n\<vee\>n=m|)>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|<around*|(|n\<in\>m\<wedge\>m\<in\>n|)>\<vee\>n=m>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|[theorem:
+        <reference|natural numbers are transitive>]>>>|<cell|<around*|(|n\<subseteq\>m\<wedge\>m\<subseteq\>n|)>\<vee\>n=m>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|n=m\<vee\>n=m>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|n=m>>>>
       </eqnarray*>
 
       <item*|transitivity>If <math|n\<leqslant\>m\<wedge\>m\<leqslant\>k>
@@ -2750,15 +2815,13 @@
     </description>
   </proof>
 
-  We have the following extension of transitivy for the natural numbers.
-
   <\theorem>
     <label|natural numbers 0\<less\>=n><math|\<forall\>n\<in\>\<bbb-N\><rsub|0>>
     we have <math|0\<leqslant\>n>
   </theorem>
 
   <\proof>
-    We prove this by induction, so let <math|S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|0\<leqslant\>0|}>>
+    We prove this by induction, so let <math|S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|0\<leqslant\>n|}>>
     then we have:
 
     <\description>
@@ -2769,7 +2832,7 @@
       <math|s<around*|(|n|)>=n<big|cup><around*|{|n|}>> we have that
       <math|n\<in\>s<around*|(|n|)>> so that
       <math|n\<leqslant\>s<around*|(|n|)>>, as <math|n\<in\>S>
-      <math|0\<leqslant\>s>, \ so by transitivity we ahave that
+      <math|0\<leqslant\>n>, \ so by transitivity we have that
       <math|0\<leqslant\>s<around*|(|n|)>>. Hence we have
       <math|s<around*|(|n|)>\<in\>S>.
     </description>
@@ -2780,8 +2843,8 @@
   </proof>
 
   <\theorem>
-    <label|natural numbers n\<less\>s(n)><math|\<forall\>n\<in\>\<bbb-N\><rsub|0>
-    we have > <math|n\<less\>s<around*|(|n|)>> [in other words using
+    <label|natural numbers n\<less\>s(n)><math|\<forall\>n\<in\>\<bbb-N\><rsub|0>>
+    we have \ <math|n\<less\>s<around*|(|n|)>> [in other words using
     [theorem: <reference|natural numbers s(n) = n+1>] we have
     <math|n\<less\>n+1>]
   </theorem>
@@ -2789,12 +2852,13 @@
   <\proof>
     From <math|n\<in\>n<big|cup><around*|{|n|}>=s<around*|(|n|)>> we have
     that <math|n\<leqslant\>s<around*|(|n|)>> and by [theorem:
-    <reference|natural numbers n=/s(n)>] <math|n\<neq\>s<around*|(|n|)>>.
+    <reference|natural numbers n=/s(n)>] <math|n\<neq\>s<around*|(|n|)>> so
+    that <math|n\<less\>s<around*|(|n|)>>.
   </proof>
 
   <\theorem>
     <label|natural numbers k\<less\>n condition>If
-    <math|n\<in\>\<bbb-N\><rsub|0>> then <math|k\<in\>n\<Leftrightarrow\>k\<less\>n>
+    <math|n\<in\>\<bbb-N\><rsub|0>> then <math|k\<in\>n\<Leftrightarrow\>k\<less\>n>.
   </theorem>
 
   <\proof>
@@ -2855,7 +2919,7 @@
     <\description>
       <item*|<math|0\<in\>S<rsub|n>>>If <math|n\<less\>0> then
       <math|n\<neq\>0> and <math|n\<leqslant\>0\<Rightarrow\>n\<in\>0=\<varnothing\>>
-      giving a contradiction, so <math|\<less\>m\<Rightarrow\>s<around*|(|n|)>\<leqslant\>m>
+      giving a contradiction, so <math|n\<less\>0\<Rightarrow\>s<around*|(|n|)>\<leqslant\>m>
       is true, proving that <math|0\<in\>S<rsub|n>>.
 
       <item*|<math|m\<in\>S<rsub|n>\<rightarrow\>s<around*|(|m|)>\<in\>S<rsub|n>>>Let
@@ -2866,15 +2930,16 @@
       to look at:
 
       <\description>
-        <item*|<math|n\<in\>m>>So by [theorem: <reference|natural numbers
+        <item*|<math|n\<in\>m>>By [theorem: <reference|natural numbers
         k\<less\>n condition>] we have <math|n\<less\>m>, as
         <math|m\<in\>S<rsub|n>> we have <math|s<around*|(|n|)>\<leqslant\>m>,
         as by [theorem: <reference|natural numbers n\<less\>s(n)>]
         <math|m\<less\>s<around*|(|m|)>> it follows by transitivity that
-        <math|s<around*|(|n|)>\<leqslant\>s<around*|(|m|)>.>
+        <math|s<around*|(|n|)>\<leqslant\>s<around*|(|m|)>> [actually even
+        <math|s<around*|(|n|)>\<less\>s<around*|(|m|)>>].
 
         <item*|<math|n=m>>Then <math|s<around*|(|n|)>=s<around*|(|m|)>> so
-        that <math|s<around*|(|n|)>\<leqslant\>s<around*|(|m|)>>
+        that <math|s<around*|(|n|)>\<leqslant\>s<around*|(|m|)>>.
       </description>
 
       So we have <math|s<around*|(|m|)>\<in\>S<rsub|n>>
@@ -2882,19 +2947,19 @@
 
     Using induction [theorem: <reference|natural numbers mathematical
     induction>] it follows that <math|\<forall\>n,m\<in\>\<bbb-N\><rsub|0>>
-    with <math|n\<less\>m> we have <math|m\<in\>S<rsub|n>> such that
+    with <math|n\<less\>m> we have as <math|m\<in\>S<rsub|n>> such that
     <math|s<around*|(|n|)>\<leqslant\>m>.
   </proof>
 
   <\theorem>
     <label|natural numbers are well ordered><math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>>
-    is a well ordered set
+    is a well ordered set.
   </theorem>
 
   <\proof>
-    We prove this by contradiction. Assume that there exist a
-    <math|\<varnothing\>\<neq\>A\<subseteq\>\<bbb-N\><rsub|0>> with no least
-    element. Define then
+    We prove this by contradiction. Assume that there exist a <math|A> such
+    that <math|\<varnothing\>\<neq\>A\<subseteq\>\<bbb-N\><rsub|0>> with no
+    least element. Define then
 
     <\equation*>
       S<rsub|A>=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|\<forall\>m\<in\>A<text|
@@ -2910,11 +2975,11 @@
     <\description>
       <item*|<math|0\<in\>S<rsub|A>>>If <math|m\<in\>A> we have by [theorem:
       <reference|natural numbers 0\<less\>=n>] that <math|0\<leqslant\>m> so
-      that <math|0\<in\>S<rsub|A>>
+      that <math|0\<in\>S<rsub|A>>.
 
       <item*|<math|n\<in\>S<rsub|A>\<Rightarrow\>s<around*|(|n|)>\<in\>S<rsub|A>>>As
       <math|n\<in\>S<rsub|A>> we have <math|\<forall\>m\<in\>A> that
-      <math|n\<leqslant\>m,> <math|S<rsub|A><big|cap>A=\<varnothing\>> we
+      <math|n\<leqslant\>m,> <math|S<rsub|A><big|cap>A=\<varnothing\>> so we
       have <math|n\<neq\>m> so that <math|n\<less\>m>, using then [theorem:
       <reference|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>=m>] proves
       <math|s<around*|(|n|)>\<leqslant\>m>. Hence
@@ -2925,7 +2990,8 @@
     so that <math|S<rsub|A><big|cap>A=\<bbb-N\><rsub|0><big|cap>A=A\<neq\>\<varnothing\>>
     contradicting <math|S<rsub|A><big|cap>A=\<varnothing\>>. As the assumtion
     gives a contradiction every non empty subset of <math|\<bbb-N\><rsub|0>>
-    has a least element
+    has a least element and <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>>
+    must be well ordered.
   </proof>
 
   As a consequence of the above we have:
@@ -2947,8 +3013,6 @@
   <\theorem>
     <label|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>s(m)><math|\<forall\>n,m\<in\>\<bbb-N\>>
     then <math|n\<less\>m\<Leftrightarrow\>s<around*|(|n|)>\<less\>s<around*|(|m|)>>
-    [in other words, using [theorem: <reference|natural numbers s(n) = n+1>],
-    \ <math|n\<less\>m\<Rightarrow\>n+1\<less\>m+1>]
   </theorem>
 
   <\proof>
@@ -2986,6 +3050,235 @@
       </equation*>
     </description>
   </proof>
+
+  <\theorem>
+    <label|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>If
+    <math|n,m,k\<in\>\<bbb-N\><rsub|0>> then we have
+
+    <\equation*>
+      n\<less\>m\<Leftrightarrow\>n+k\<less\>m+k
+    </equation*>
+  </theorem>
+
+  <\note>
+    Combining this with the fact that <math|n=m\<Leftrightarrow\>n+k=m+k>
+    [see [theorem: <reference|natural numbers n+k=m+k\<less\>=\<gtr\>n=m>]]
+    we have also\ 
+
+    <\equation*>
+      n\<leqslant\>n\<Leftrightarrow\>n+k\<leqslant\>m+k
+    </equation*>
+  </note>
+
+  <\proof>
+    We use induction , so let <math|S=<around*|{|k\<in\>\<bbb-N\><rsub|0>\|<text|If
+    >m,n\<in\>\<bbb-N\><rsub|0><text| then
+    >n\<less\>m\<Leftrightarrow\>n+k\<less\>m+k<text| >|}>> then we have:
+
+    <\description>
+      <item*|<math|0\<in\>S>>If <math|k=0> then for
+      <math|n,m\<in\>\<bbb-N\><rsub|0>> we have, as by [theorem:
+      <reference|natural numbers n+0=n>] <math|n=n+0\<wedge\>m=m+0> that
+      <math|n\<less\>m\<Leftrightarrow\>n+0\<less\>m+0>. So <math|0\<in\>S>.
+
+      <item*|<math|k\<in\>S\<Rightarrow\>s<around*|(|k|)>\<in\>S>>then we
+      have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|n\<less\>m>|<cell|\<Leftrightarrowlim\><rsub|k\<in\>S>>|<cell|n+k\<less\>m+k>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<text|[theorem:
+        <reference|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>=m>]>>>|<cell|s<around*|(|n+k|)>\<less\>s<around*|(|m+k|)>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<text|[theorem:
+        <reference|natural numbers n+s(m)=s(n+m)>>>>|<cell|n+s<around*|(|k|)>\<less\>m+s<around*|(|k|)>>>>>
+      </eqnarray*>
+
+      proving that <math|s<around*|(|k|)>\<in\>S>
+    </description>
+
+    Induction [theorem: <reference|natural numbers mathematical induction>]
+    proves then <math|\<bbb-N\><rsub|0>=S> completing the proof.
+  </proof>
+
+  TODO Check the rest
+
+  <\theorem>
+    <label|natural numbers n\<less\>s(m)=\<gtr\>s\<less\>=m>If
+    <math|n,m\<in\>\<bbb-N\><rsub|0>> with <math|n\<less\>s<around*|(|m|)>>
+    then <math|n\<leqslant\>m>.
+  </theorem>
+
+  <\note>
+    As by [theorem: <reference|natural numbers s(n) = n+1>]
+    <math|s<around*|(|m|)>=m+1> this is equivalent with
+    <math|n\<less\>m+1\<Rightarrow\>n\<leqslant\>m>
+  </note>
+
+  <\proof>
+    As <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>>
+    is well ordered [see theorem: <reference|natural numbers are well
+    ordered>] it follows from [theorem: <reference|order well order implies
+    conditional complete and totally ordering>] that either
+    <math|n\<leqslant\>m> or <math|m\<less\>n>. If <math|m\<less\>n> then by
+    [theorem: <reference|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>=m>]
+    <math|s<around*|(|m|)>\<leqslant\>n>, which combined with the hypothesis
+    <math|n\<less\>s<around*|(|m|)>> gives the contradiction
+    <math|n\<less\>m>. Hence we must have <math|n\<leqslant\>m>.\ 
+  </proof>
+
+  <\theorem>
+    <label|natural numbers n\<less\>m then there exists a k such that
+    m=n+k>If <math|n,m\<in\>\<bbb-N\><rsub|0>> with <math|n\<less\>m> then
+    <math|\<exists\>!k\<in\>\<bbb-N\><rsub|0>\\<around*|{|0|}>> such that
+    <math|m=n+k>.
+  </theorem>
+
+  <\proof>
+    First we prove existance by induction, so let
+
+    <\equation*>
+      S<rsub|n>=<around*|{|m\<in\>\<bbb-N\><rsub|0>\|<text|If
+      >n\<less\>m<text| then there exist a> k\<in\>\<bbb-N\><rsub|0><text|
+      such that >k\<neq\>0<text| and >m=n+k|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|0\<in\>S<rsub|n>>>If <math|n\<less\>0> then by ]theorem:
+      <reference|natural numbers k\<less\>n condition>]
+      <math|n\<in\>0=\<varnothing\>> a contradiction. Hence the condition is
+      satisfied vacuously, proving that <math|0\<in\>S<rsub|n>>.
+
+      <item*|<math|m\<in\>S<rsub|n>\<Rightarrow\>s<around*|(|m|)>\<in\>S<rsub|n>>>If
+      <math|n\<less\>s<around*|(|m|)>> then we have by [theorem:
+      <reference|natural numbers n\<less\>s(m)=\<gtr\>s\<less\>=m>] that
+      <math|n\<leqslant\>m> so that we have the following possibilities to
+      consider:
+
+      <\description>
+        <item*|<math|n=m>>Then <math|n+1\<equallim\><rsub|<text|[theorem:
+        <reference|natural numbers s(n) =
+        n+1>]>>s<around*|(|n|)>=s<around*|(|m|)>>, as
+        <math|1=s<around*|(|0|)>\<neq\>0> we have if we take <math|k=1> that
+        <math|k\<neq\>0> and <math|n+k=s<around*|(|m|)>>, proving that
+        <math|s<around*|(|m|)>\<in\>S<rsub|n>>
+
+        <item*|<math|n\<less\>m>>Then as <math|m\<in\>S> there exist a
+        <math|l\<in\>\<bbb-N\><rsub|0>> such that <math|l\<neq\>0> and
+        <math|n+k=m>. Now
+
+        <\equation*>
+          s<around*|(|m|)>=s<around*|(|n+l|)>\<equallim\><rsub|<text|[theorem:
+          <reference|natural numbers n+s(m)=s(n+m)>>>n+s<around*|(|l|)>
+        </equation*>
+
+        Take <math|k=s<around*|(|l|)>> then <math|n+k=s<around*|(|m|)>>,
+        further by [theorems: <reference|natural numbers 0\<less\>=n>,
+        <reference|natural numbers n\<less\>s(n)>] we have
+        <math|0\<leqslant\>l\<wedge\>l\<less\>s<around*|(|l|)>=k> so that
+        <math|0\<less\>k> hence <math|k\<neq\>0>. This proves that in this
+        case we also have <math|s<around*|(|m|)>\<in\>S<rsub|n>>.
+      </description>
+    </description>
+
+    Induction [see theorem: <reference|natural numbers mathematical
+    induction>] proves then that <math|\<bbb-N\><rsub|0>=S<rsub|n>>. Hence if
+    <math|n,m\<in\>\<bbb-N\><rsub|0>> we have <math|m\<in\>S<rsub|n>> so that
+    if <math|n\<less\>m> there exist a <math|k\<in\>\<bbb-N\><rsub|0>> such
+    that <math|k\<neq\>0> and <math|m=n+k>.
+
+    Now for uniqueness assume that <math|n\<less\>m> and there exists
+    <math|k,l\<in\>\<bbb-N\><rsub|0>> such that
+
+    <\equation*>
+      k+n\<equallim\><rsub|<text|[theorem: <reference|natural numbers sum
+      commutativity>]>>n+k=m=n+l\<equallim\><rsub|<text|[theorem:
+      <reference|natural numbers sum commutativity>]>>l+n
+    </equation*>
+
+    then by [theorem: <reference|natural numbers n+k=m+k\<less\>=\<gtr\>n=m>]
+    <math|k=l>.
+  </proof>
+
+  <\corollary>
+    <label|natural numbers n\<less\>m\<less\>=\<gtr\>there exists a k such
+    that m=k>If <math|n,m\<in\>\<bbb-N\><rsub|0>> then
+    <math|n\<less\>m\<Leftrightarrow\>\<exists\>!k\<in\>\<bbb-N\><rsub|0>\|<around*|{|0|}>>
+    such that <math|n+k=m>
+  </corollary>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>This follows from the previous theorem
+      [theorem: <reference|natural numbers n\<less\>m then there exists a k
+      such that m=n+k>].
+
+      <item*|<math|\<Leftarrow\>>>If there exist a
+      <math|k\<in\>\<bbb-N\><rsub|0>\\<around*|{|0|}>> such that
+      <math|n+k=m>. As <math|k\<in\>\<bbb-N\><rsub|0>\\<around*|{|0|}>> we
+      have <math|0\<less\>k> so that by [theorem: <reference|natural numbers
+      n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>]
+      <math|0+n\<less\>k+n\<Rightarrowlim\><rsub|<text|[theorems:
+      <reference|natural numbers n+0=n>,<reference|natural numbers sum
+      commutativity>]>>n\<less\>n+k=m>.
+    </description>
+  </proof>
+
+  <\corollary>
+    <label|natural numbers n\<less\>=m\<less\>=\<gtr\>there exists a k such
+    that m=k>If <math|n,m\<in\>\<bbb-N\><rsub|0>> then
+    <math|n\<leqslant\>m\<Leftrightarrow\>><math|\<exists\>!k\<in\>\<bbb-N\><rsub|0>>
+    such that <math|m=n+k>\ 
+  </corollary>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>If <math|n\<leqslant\>m> then we have
+      either:
+
+      <\description>
+        <item*|<math|n=m>>Then <math|m\<equallim\><rsub|<text|[theorem:
+        <reference|natural numbers n+0=n>]>>n+0> where
+        <math|0\<in\>\<bbb-N\><rsub|0>>.
+
+        <item*|<math|n\<less\>m>>Then by the previous corollary [collary:
+        <reference|natural numbers n\<less\>m\<less\>=\<gtr\>there exists a k
+        such that m=k>] ther exists a <math|k\<in\>\<bbb-N\><rsub|0>\\<around*|{|0|}>\<subseteq\>\<bbb-N\><rsub|0><rsub|>>
+        such that <math|m=n+k>.
+      </description>
+
+      proving existence. For uniqueness anssume that <math|n+k=m=n+l> then\ 
+
+      <\equation*>
+        k+n\<equallim\><rsub|<text|[theorem: <reference|natural numbers sum
+        commutativity>]>>n+k=m=n+l\<equallim\><rsub|<text|[theorem:
+        <reference|natural numbers sum commutativity>]>>l+n
+      </equation*>
+
+      proving by [theorem: <reference|natural numbers
+      n+k=m+k\<less\>=\<gtr\>n=m>] that <math|k=l>.
+
+      <item*|<math|\<Leftarrow\>>>As <math|k\<in\>\<bbb-N\><rsub|0>> we have
+      either:\ 
+
+      <\description>
+        <item*|<math|k=0>>Then <math|m=n+0\<equallim\><rsub|<text|[theorem:
+        <reference|natural numbers n+0=n>]>>n> so that <math|n\<leqslant\>m>.
+
+        <item*|<math|0\<less\>k>>Then by the previouss corollary [corollary:
+        <reference|natural numbers n\<less\>m then there exists a k such that
+        m=n+k>] we have <math|n\<less\>m> so that <math|n\<leqslant\>m>.
+      </description>
+    </description>
+  </proof>
+
+  \;
+
+  \;
+
+  \;
 
   \;
 
@@ -3035,11 +3328,11 @@
     <associate|auto-35|<tuple|iteration|118>>
     <associate|auto-36|<tuple|5.3|121>>
     <associate|auto-37|<tuple|addition of natural numbers|121>>
-    <associate|auto-38|<tuple|multiplication of natural numbers|123>>
-    <associate|auto-39|<tuple|absorbing element|125>>
+    <associate|auto-38|<tuple|multiplication of natural numbers|122>>
+    <associate|auto-39|<tuple|absorbing element|123>>
     <associate|auto-4|<tuple|semi-group|103>>
-    <associate|auto-40|<tuple|5.4|?>>
-    <associate|auto-41|<tuple|6|?>>
+    <associate|auto-40|<tuple|5.4|125>>
+    <associate|auto-41|<tuple|6|129>>
     <associate|auto-5|<tuple|group|104>>
     <associate|auto-6|<tuple|sub-semi-group|104>>
     <associate|auto-7|<tuple|sup-group|104>>
@@ -3083,60 +3376,64 @@
     <associate|group sub-group|<tuple|4.10|104>>
     <associate|inverse of a field isomorphism is a field
     isomorphism|<tuple|4.38|111>>
-    <associate|n\<less\>m=\<gtr\>s(n)\<less\>s(m) n,m natural
-    numbers|<tuple|5.50|?>>
-    <associate|natural number|<tuple|5.44|?>>
     <associate|natural numbers|<tuple|5.3|113>>
     <associate|natural numbers 0|<tuple|5.7|113>>
-    <associate|natural numbers 0\<less\>=n|<tuple|5.44|?>>
+    <associate|natural numbers 0\<less\>=n|<tuple|5.46|126>>
     <associate|natural numbers Peano|<tuple|5.17|115>>
-    <associate|natural numbers absorbing element|<tuple|5.34|?>>
-    <associate|natural numbers addition|<tuple|5.25|121>>
-    <associate|natural numbers additive semi-group|<tuple|5.32|?>>
-    <associate|natural numbers are total ordered|<tuple|5.49|?>>
-    <associate|natural numbers are transitive|<tuple|5.14|?>>
-    <associate|natural numbers are well ordered|<tuple|5.48|?>>
-    <associate|natural numbers distributivity|<tuple|5.37|?>>
+    <associate|natural numbers absorbing element|<tuple|5.36|123>>
+    <associate|natural numbers addition|<tuple|5.27|121>>
+    <associate|natural numbers additive semi-group|<tuple|5.34|122>>
+    <associate|natural numbers are total ordered|<tuple|5.51|127>>
+    <associate|natural numbers are transitive|<tuple|5.14|114>>
+    <associate|natural numbers are well ordered|<tuple|5.50|127>>
+    <associate|natural numbers difference|<tuple|5.59|?>>
+    <associate|natural numbers distributivity|<tuple|5.39|124>>
     <associate|natural numbers every non zero number is a
     successor|<tuple|5.18|115>>
-    <associate|natural numbers group|<tuple|5.32|123>>
     <associate|natural numbers is a set|<tuple|5.4|113>>
-    <associate|natural numbers k\<less\>n condition|<tuple|5.46|?>>
+    <associate|natural numbers k\<less\>n condition|<tuple|5.48|126>>
     <associate|natural numbers mathematical induction|<tuple|5.11|114>>
-    <associate|natural numbers multiplication|<tuple|5.33|123>>
-    <associate|natural numbers multiplication associativity|<tuple|5.39|?>>
-    <associate|natural numbers multiplication commutativity|<tuple|5.38|?>>
-    <associate|natural numbers multiplication neutral element|<tuple|5.35|?>>
-    <associate|natural numbers multiplicative abelian group|<tuple|5.40|?>>
+    <associate|natural numbers multiplication|<tuple|5.35|122>>
+    <associate|natural numbers multiplication associativity|<tuple|5.41|124>>
+    <associate|natural numbers multiplication commutativity|<tuple|5.40|124>>
+    <associate|natural numbers multiplication neutral
+    element|<tuple|5.37|123>>
     <associate|natural numbers multiplicative abelian
-    semi-group|<tuple|5.40|?>>
-    <associate|natural numbers n+0=n|<tuple|5.27|121>>
-    <associate|natural numbers n+k=m+k\<less\>=\<gtr\>n=m|<tuple|5.41|?>>
-    <associate|natural numbers n+s(m)=s(n+m)|<tuple|5.29|122>>
-    <associate|natural numbers n.s(m)=n+n.m|<tuple|5.36|?>>
-    <associate|natural numbers n\<less\>=m\<less\>k=\<gtr\>n\<less\>k|<tuple|5.44|?>>
-    <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>=m|<tuple|5.47|?>>
-    <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>s(m)|<tuple|5.50|?>>
-    <associate|natural numbers n\<less\>s(n)|<tuple|5.45|?>>
+    semi-group|<tuple|5.42|125>>
+    <associate|natural numbers n+0=n|<tuple|5.29|121>>
+    <associate|natural numbers n+k=m+k\<less\>=\<gtr\>n=m|<tuple|5.43|125>>
+    <associate|natural numbers n+s(m)=s(n+m)|<tuple|5.31|121>>
+    <associate|natural numbers n.s(m)=n+n.m|<tuple|5.38|124>>
+    <associate|natural numbers n\<less\>=m\<less\>=\<gtr\>there exists a k
+    such that m=k|<tuple|5.59|?>>
+    <associate|natural numbers n\<less\>m then there exists a k such that
+    m=n+k|<tuple|5.57|?>>
+    <associate|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k|<tuple|5.53|?>>
+    <associate|natural numbers n\<less\>m\<less\>=\<gtr\>there exists a k
+    such that m=k|<tuple|5.58|?>>
+    <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>=m|<tuple|5.49|126>>
+    <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>s(m)|<tuple|5.52|127>>
+    <associate|natural numbers n\<less\>n+k|<tuple|5.58|?>>
+    <associate|natural numbers n\<less\>s(m)=\<gtr\>s\<less\>=m|<tuple|5.55|?>>
+    <associate|natural numbers n\<less\>s(n)|<tuple|5.47|126>>
     <associate|natural numbers n=/s(n)|<tuple|5.15|114>>
-    <associate|natural numbers number is transitive|<tuple|5.14|114>>
-    <associate|natural numbers order relation|<tuple|5.43|?>>
-    <associate|natural numbers s(n) = n+1|<tuple|5.28|122>>
+    <associate|natural numbers order relation|<tuple|5.45|125>>
+    <associate|natural numbers s(n) = n+1|<tuple|5.30|121>>
     <associate|natural numbers s(n)=/0|<tuple|5.10|114>>
     <associate|natural numbers successor|<tuple|5.5|113>>
     <associate|natural numbers successor function|<tuple|5.6|113>>
     <associate|natural numbers successor function is
     injective|<tuple|5.16|115>>
     <associate|natural numbers successor properties|<tuple|5.12|114>>
-    <associate|natural numbers sum associativity|<tuple|5.30|122>>
-    <associate|natural numbers sum commutativity|<tuple|5.31|122>>
+    <associate|natural numbers sum associativity|<tuple|5.32|122>>
+    <associate|natural numbers sum commutativity|<tuple|5.33|122>>
     <associate|natural numbers transitive|<tuple|5.13|114>>
     <associate|operator|<tuple|4.1|103>>
     <associate|recursion|<tuple|5.19|116>>
-    <associate|recursion injective function|<tuple|5.20|118>>
-    <associate|recursion iteration|<tuple|5.22|118>>
-    <associate|recursion iteration in a group|<tuple|5.23|119>>
-    <associate|recursion step form (1)|<tuple|5.24|120>>
+    <associate|recursion injective function|<tuple|5.20|117>>
+    <associate|recursion iteration|<tuple|5.24|118>>
+    <associate|recursion iteration in a group|<tuple|5.25|119>>
+    <associate|recursion step form (1)|<tuple|5.26|120>>
     <associate|ring|<tuple|4.24|108>>
     <associate|ring absorbing element|<tuple|4.29|109>>
     <associate|ring homeomorphism|<tuple|4.30|110>>
@@ -3213,6 +3510,8 @@
       <tuple|<tuple|addition of natural numbers>|<pageref|auto-37>>
 
       <tuple|<tuple|multiplication of natural numbers>|<pageref|auto-38>>
+
+      <tuple|<tuple|absorbing element>|<pageref|auto-39>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Algebraic
@@ -3243,9 +3542,13 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-36>
 
+      5.4<space|2spc>Order relation on the natural numbers
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-40>
+
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6<space|2spc>Finite
       and Infinite Sets> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-39><vspace|0.5fn>
+      <no-break><pageref|auto-41><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>

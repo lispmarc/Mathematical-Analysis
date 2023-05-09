@@ -139,17 +139,17 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-141>
 
-    <with|par-left|1tab|5.3.1<space|2spc>Addition and Multiplication
+    5.4<space|2spc>Order relation on the natural numbers
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-142>>
+    <no-break><pageref|auto-145>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|6<space|2spc>Finite
     and Infinite Sets> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-145><vspace|0.5fn>
+    <no-break><pageref|auto-146><vspace|0.5fn>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|Index>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-146><vspace|0.5fn>
+    <no-break><pageref|auto-147><vspace|0.5fn>
   </table-of-contents>
 
   <include|Set.tm>
@@ -193,7 +193,9 @@
 
     <index+1|<with|mode|math|A<big|cup>B>|<pageref|auto-5>>
 
-    <index+1|addition of natural numbers|<pageref|auto-143>>
+    <index+1|absorbing element|<pageref|auto-144>>
+
+    <index+1|addition of natural numbers|<pageref|auto-142>>
 
     <index+1|axiom of choice|<pageref|auto-103>>
 
@@ -297,7 +299,7 @@
 
     <index+1|minimal element|<pageref|auto-83>>
 
-    <index+1|multiplication of natural numbers|<pageref|auto-144>>
+    <index+1|multiplication of natural numbers|<pageref|auto-143>>
 
     <index+1|operator|<pageref|auto-107>>
 
@@ -426,14 +428,15 @@
     <associate|auto-138|<tuple|5.2|116|Numbers.tm>>
     <associate|auto-139|<tuple|recursion|116|Numbers.tm>>
     <associate|auto-14|<tuple|successor set|19|Set.tm>>
-    <associate|auto-140|<tuple|iteration|118|Numbers.tm>>
-    <associate|auto-141|<tuple|5.3|121|Numbers.tm>>
-    <associate|auto-142|<tuple|5.3.1|121|Numbers.tm>>
-    <associate|auto-143|<tuple|addition of natural numbers|121|Numbers.tm>>
-    <associate|auto-144|<tuple|multiplication of natural
-    numbers|123|Numbers.tm>>
-    <associate|auto-145|<tuple|6|125|Numbers.tm>>
-    <associate|auto-146|<tuple|6|127>>
+    <associate|auto-140|<tuple|iteration|119|Numbers.tm>>
+    <associate|auto-141|<tuple|5.3|122|Numbers.tm>>
+    <associate|auto-142|<tuple|addition of natural numbers|122|Numbers.tm>>
+    <associate|auto-143|<tuple|multiplication of natural
+    numbers|124|Numbers.tm>>
+    <associate|auto-144|<tuple|absorbing element|124|Numbers.tm>>
+    <associate|auto-145|<tuple|5.4|127|Numbers.tm>>
+    <associate|auto-146|<tuple|6|131|Numbers.tm>>
+    <associate|auto-147|<tuple|6|133>>
     <associate|auto-15|<tuple|axiom of infinity|20|Set.tm>>
     <associate|auto-16|<tuple|axiom of subsets|20|Set.tm>>
     <associate|auto-17|<tuple|axiom of union|21|Set.tm>>
@@ -738,10 +741,10 @@
     <associate|eq 3.8.011|<tuple|3.8|79|Set.tm>>
     <associate|eq 3.9.011|<tuple|3.9|79|Set.tm>>
     <associate|eq 5.1.019|<tuple|5.1|116|Numbers.tm>>
-    <associate|eq 5.10.019|<tuple|5.10|120|Numbers.tm>>
-    <associate|eq 5.11.019|<tuple|5.11|120|Numbers.tm>>
-    <associate|eq 5.12.019|<tuple|5.12|120|Numbers.tm>>
-    <associate|eq 5.13.019|<tuple|5.13|120|Numbers.tm>>
+    <associate|eq 5.10.019|<tuple|5.10|121|Numbers.tm>>
+    <associate|eq 5.11.019|<tuple|5.11|121|Numbers.tm>>
+    <associate|eq 5.12.019|<tuple|5.12|121|Numbers.tm>>
+    <associate|eq 5.13.019|<tuple|5.13|121|Numbers.tm>>
     <associate|eq 5.2.019|<tuple|5.2|116|Numbers.tm>>
     <associate|eq 5.3.019|<tuple|5.3|116|Numbers.tm>>
     <associate|eq 5.4.019|<tuple|5.4|116|Numbers.tm>>
@@ -884,28 +887,57 @@
     isomorphism|<tuple|4.38|111|Numbers.tm>>
     <associate|natural numbers|<tuple|5.3|113|Numbers.tm>>
     <associate|natural numbers 0|<tuple|5.7|113|Numbers.tm>>
+    <associate|natural numbers 0\<less\>=n|<tuple|5.46|127|Numbers.tm>>
     <associate|natural numbers Peano|<tuple|5.17|115|Numbers.tm>>
-    <associate|natural numbers addition|<tuple|5.25|121|Numbers.tm>>
-    <associate|natural numbers associativity|<tuple|5.30|122|Numbers.tm>>
-    <associate|natural numbers commutativity|<tuple|5.31|122|Numbers.tm>>
+    <associate|natural numbers absorbing element|<tuple|5.36|124|Numbers.tm>>
+    <associate|natural numbers addition|<tuple|5.27|122|Numbers.tm>>
+    <associate|natural numbers additive semi-group|<tuple|5.34|123|Numbers.tm>>
+    <associate|natural numbers are total ordered|<tuple|5.51|128|Numbers.tm>>
+    <associate|natural numbers are transitive|<tuple|5.14|114|Numbers.tm>>
+    <associate|natural numbers are well ordered|<tuple|5.50|128|Numbers.tm>>
+    <associate|natural numbers distributivity|<tuple|5.39|125|Numbers.tm>>
     <associate|natural numbers every non zero number is a
     successor|<tuple|5.18|115|Numbers.tm>>
-    <associate|natural numbers group|<tuple|5.32|123|Numbers.tm>>
     <associate|natural numbers is a set|<tuple|5.4|113|Numbers.tm>>
+    <associate|natural numbers k\<less\>n
+    condition|<tuple|5.48|127|Numbers.tm>>
     <associate|natural numbers mathematical
     induction|<tuple|5.11|114|Numbers.tm>>
-    <associate|natural numbers multiplication|<tuple|5.33|123|Numbers.tm>>
-    <associate|natural numbers n+0=n|<tuple|5.27|121|Numbers.tm>>
-    <associate|natural numbers n+s(m)=s(n+m)|<tuple|5.29|122|Numbers.tm>>
-    <associate|natural numbers n=/s(n)|<tuple|5.15|114|Numbers.tm>>
-    <associate|natural numbers number is transitive|<tuple|5.14|114|Numbers.tm>>
-    <associate|natural numbers s(n) = n+1|<tuple|5.28|122|Numbers.tm>>
+    <associate|natural numbers multiplication|<tuple|5.35|124|Numbers.tm>>
+    <associate|natural numbers multiplication
+    associativity|<tuple|5.41|126|Numbers.tm>>
+    <associate|natural numbers multiplication
+    commutativity|<tuple|5.40|125|Numbers.tm>>
+    <associate|natural numbers multiplication neutral
+    element|<tuple|5.37|124|Numbers.tm>>
+    <associate|natural numbers multiplicative abelian
+    semi-group|<tuple|5.42|126|Numbers.tm>>
+    <associate|natural numbers n+0=n|<tuple|5.29|122|Numbers.tm>>
+    <associate|natural numbers n+k=m+k\<less\>=\<gtr\>n=m|<tuple|5.43|126|Numbers.tm>>
+    <associate|natural numbers n+s(m)=s(n+m)|<tuple|5.31|123|Numbers.tm>>
+    <associate|natural numbers n.s(m)=n+n.m|<tuple|5.38|125|Numbers.tm>>
+    <associate|natural numbers n\<less\>=m\<less\>=\<gtr\>there exists a k
+    such that m=k|<tuple|5.59|130|Numbers.tm>>
+    <associate|natural numbers n\<less\>m then there exists a k such that
+    m=n+k|<tuple|5.57|129|Numbers.tm>>
+    <associate|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k|<tuple|5.53|129|Numbers.tm>>
+    <associate|natural numbers n\<less\>m\<less\>=\<gtr\>there exists a k
+    such that m=k|<tuple|5.58|130|Numbers.tm>>
+    <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>=m|<tuple|5.49|128|Numbers.tm>>
+    <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>s(m)|<tuple|5.52|128|Numbers.tm>>
+    <associate|natural numbers n\<less\>s(m)=\<gtr\>s\<less\>=m|<tuple|5.55|129|Numbers.tm>>
+    <associate|natural numbers n\<less\>s(n)|<tuple|5.47|127|Numbers.tm>>
+    <associate|natural numbers n=/s(n)|<tuple|5.15|115|Numbers.tm>>
+    <associate|natural numbers order relation|<tuple|5.45|127|Numbers.tm>>
+    <associate|natural numbers s(n) = n+1|<tuple|5.30|122|Numbers.tm>>
     <associate|natural numbers s(n)=/0|<tuple|5.10|114|Numbers.tm>>
     <associate|natural numbers successor|<tuple|5.5|113|Numbers.tm>>
     <associate|natural numbers successor function|<tuple|5.6|113|Numbers.tm>>
     <associate|natural numbers successor function is
     injective|<tuple|5.16|115|Numbers.tm>>
     <associate|natural numbers successor properties|<tuple|5.12|114|Numbers.tm>>
+    <associate|natural numbers sum associativity|<tuple|5.32|123|Numbers.tm>>
+    <associate|natural numbers sum commutativity|<tuple|5.33|123|Numbers.tm>>
     <associate|natural numbers transitive|<tuple|5.13|114|Numbers.tm>>
     <associate|operator|<tuple|4.1|103|Numbers.tm>>
     <associate|order A isomorphism B|<tuple|3.48|75|Set.tm>>
@@ -1027,9 +1059,9 @@
     <associate|product sub-product|<tuple|2.122|61|Set.tm>>
     <associate|recursion|<tuple|5.19|116|Numbers.tm>>
     <associate|recursion injective function|<tuple|5.20|118|Numbers.tm>>
-    <associate|recursion iteration|<tuple|5.22|118|Numbers.tm>>
-    <associate|recursion iteration in a group|<tuple|5.23|119|Numbers.tm>>
-    <associate|recursion step form (1)|<tuple|5.24|120|Numbers.tm>>
+    <associate|recursion iteration|<tuple|5.24|119|Numbers.tm>>
+    <associate|recursion iteration in a group|<tuple|5.25|120|Numbers.tm>>
+    <associate|recursion step form (1)|<tuple|5.26|120|Numbers.tm>>
     <associate|relation|<tuple|3.1|63|Set.tm>>
     <associate|relation properties|<tuple|3.4|63|Set.tm>>
     <associate|relation trivial|<tuple|3.3|63|Set.tm>>
@@ -1272,9 +1304,11 @@
 
       <tuple|<tuple|iteration>|<pageref|auto-140>>
 
-      <tuple|<tuple|addition of natural numbers>|<pageref|auto-143>>
+      <tuple|<tuple|addition of natural numbers>|<pageref|auto-142>>
 
-      <tuple|<tuple|multiplication of natural numbers>|<pageref|auto-144>>
+      <tuple|<tuple|multiplication of natural numbers>|<pageref|auto-143>>
+
+      <tuple|<tuple|absorbing element>|<pageref|auto-144>>
     </associate>
     <\associate|parts>
       <tuple|Set.tm|chapter-nr|0|section-nr|0|subsection-nr|0>
@@ -1415,17 +1449,17 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-141>
 
-      <with|par-left|<quote|1tab>|5.3.1<space|2spc>Addition and
-      Multiplication <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-142>>
+      5.4<space|2spc>Order relation on the natural numbers
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-145>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6<space|2spc>Finite
       and Infinite Sets> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-145><vspace|0.5fn>
+      <no-break><pageref|auto-146><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Index>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-146><vspace|0.5fn>
+      <no-break><pageref|auto-147><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
