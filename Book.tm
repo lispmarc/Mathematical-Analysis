@@ -143,13 +143,24 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-145>
 
+    5.5<space|2spc>Other forms of Mathematical Induction and Recursion
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-146>
+
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|6<space|2spc>Finite
     and Infinite Sets> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-146><vspace|0.5fn>
+    <no-break><pageref|auto-147><vspace|0.5fn>
+
+    6.1<space|2spc>Equipotence <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-148>
+
+    6.2<space|2spc>Finite, Infinite and Countable sets
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-154>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|Index>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-147><vspace|0.5fn>
+    <no-break><pageref|auto-160><vspace|0.5fn>
   </table-of-contents>
 
   <include|Set.tm>
@@ -162,6 +173,8 @@
     <index+1|<with|mode|math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>>|<pageref|auto-41>>
 
     <index+1|<with|mode|math|<around*|{|A<rsub|i>\|i\<in\>I|}>>|<pageref|auto-42>>
+
+    <index+1|<with|mode|math|\<approx\>>|<pageref|auto-150>>
 
     <index+1|<with|mode|math|\<cal-P\><rprime|'><around*|(|A|)>>|<pageref|auto-101>>
 
@@ -178,6 +191,10 @@
     <index+1|<with|mode|math|\<less\>>|<pageref|auto-66>>
 
     <index+1|<with|mode|math|\<pi\><rsub|i>>|<pageref|auto-47>>
+
+    <index+1|<with|mode|math|\<prec\>>|<pageref|auto-153>>
+
+    <index+1|<with|mode|math|\<preccurlyeq\>>|<pageref|auto-152>>
 
     <index+1|<with|mode|math|<big|prod><rsub|i\<in\>I>A<rsub|i>>|<pageref|auto-46>>
 
@@ -229,9 +246,17 @@
 
     <index+1|conditional completeness|<pageref|auto-94>>
 
+    <index+1|countable set|<pageref|auto-159>>
+
     <index+1|cut|<pageref|auto-75>>
 
     <index+1|decreasing function|<pageref|auto-78>>
+
+    <index+1|denumerable set|<pageref|auto-157>>
+
+    <index+1|equipotence|<pageref|auto-149>>
+
+    <index+1|equipotency|<pageref|auto-151>>
 
     <index+1|equivalence relation|<pageref|auto-53>>
 
@@ -242,6 +267,8 @@
     <index+1|field|<pageref|auto-131>>
 
     <index+1|field homeomorphism|<pageref|auto-133>>
+
+    <index+1|finite set|<pageref|auto-155>>
 
     <index+1|fully ordered class|<pageref|auto-70>>
 
@@ -274,6 +301,10 @@
     <index+1|increasing function|<pageref|auto-77>>
 
     <index+1|<with|mode|math|inf<around*|(|A|)>>|<pageref|auto-92>>
+
+    <index+1|infinite countable set|<pageref|auto-158>>
+
+    <index+1|infinite set|<pageref|auto-156>>
 
     <index+1|infinum|<pageref|auto-91>>
 
@@ -384,61 +415,74 @@
     <associate|Axiom of Replacement|<tuple|2.50|34|Set.tm>>
     <associate|auto-1|<tuple|1|7|Set.tm>>
     <associate|auto-10|<tuple|axiom of pairing|14|Set.tm>>
-    <associate|auto-100|<tuple|3.4|88|Set.tm>>
-    <associate|auto-101|<tuple|<with|mode|<quote|math>|\<cal-P\><rprime|'><around*|(|A|)>>|88|Set.tm>>
-    <associate|auto-102|<tuple|choice function|88|Set.tm>>
-    <associate|auto-103|<tuple|axiom of choice|88|Set.tm>>
-    <associate|auto-104|<tuple|Hausdorff's maximality|94|Set.tm>>
-    <associate|auto-105|<tuple|Zorn's Lemma|95|Set.tm>>
-    <associate|auto-106|<tuple|4|103|Numbers.tm>>
-    <associate|auto-107|<tuple|operator|103|Numbers.tm>>
-    <associate|auto-108|<tuple|4.1|103|Numbers.tm>>
-    <associate|auto-109|<tuple|semi-group|103|Numbers.tm>>
+    <associate|auto-100|<tuple|3.4|90|Set.tm>>
+    <associate|auto-101|<tuple|<with|mode|<quote|math>|\<cal-P\><rprime|'><around*|(|A|)>>|90|Set.tm>>
+    <associate|auto-102|<tuple|choice function|90|Set.tm>>
+    <associate|auto-103|<tuple|axiom of choice|90|Set.tm>>
+    <associate|auto-104|<tuple|Hausdorff's maximality|97|Set.tm>>
+    <associate|auto-105|<tuple|Zorn's Lemma|98|Set.tm>>
+    <associate|auto-106|<tuple|4|107|Numbers.tm>>
+    <associate|auto-107|<tuple|operator|107|Numbers.tm>>
+    <associate|auto-108|<tuple|4.1|107|Numbers.tm>>
+    <associate|auto-109|<tuple|semi-group|107|Numbers.tm>>
     <associate|auto-11|<tuple|cartesian product|17|Set.tm>>
-    <associate|auto-110|<tuple|group|104|Numbers.tm>>
-    <associate|auto-111|<tuple|sub-semi-group|104|Numbers.tm>>
-    <associate|auto-112|<tuple|sup-group|104|Numbers.tm>>
-    <associate|auto-113|<tuple|group isomorphism|106|Numbers.tm>>
-    <associate|auto-114|<tuple|left action|108|Numbers.tm>>
-    <associate|auto-115|<tuple|right action|108|Numbers.tm>>
-    <associate|auto-116|<tuple|<with|mode|<quote|math>|g\<vartriangleright\>x>|108|Numbers.tm>>
-    <associate|auto-117|<tuple|<with|mode|<quote|math>|x\<vartriangleleft\>g>|108|Numbers.tm>>
-    <associate|auto-118|<tuple|<with|mode|<quote|math>|g<rsub|\<vartriangleright\>>>|108|Numbers.tm>>
-    <associate|auto-119|<tuple|<with|mode|<quote|math>|g<rsub|\<vartriangleleft\>>>|108|Numbers.tm>>
+    <associate|auto-110|<tuple|group|108|Numbers.tm>>
+    <associate|auto-111|<tuple|sub-semi-group|108|Numbers.tm>>
+    <associate|auto-112|<tuple|sup-group|108|Numbers.tm>>
+    <associate|auto-113|<tuple|group isomorphism|110|Numbers.tm>>
+    <associate|auto-114|<tuple|left action|112|Numbers.tm>>
+    <associate|auto-115|<tuple|right action|112|Numbers.tm>>
+    <associate|auto-116|<tuple|<with|mode|<quote|math>|g\<vartriangleright\>x>|112|Numbers.tm>>
+    <associate|auto-117|<tuple|<with|mode|<quote|math>|x\<vartriangleleft\>g>|112|Numbers.tm>>
+    <associate|auto-118|<tuple|<with|mode|<quote|math>|g<rsub|\<vartriangleright\>>>|112|Numbers.tm>>
+    <associate|auto-119|<tuple|<with|mode|<quote|math>|g<rsub|\<vartriangleleft\>>>|112|Numbers.tm>>
     <associate|auto-12|<tuple|<with|mode|<quote|math>|A\<times\>B>|17|Set.tm>>
-    <associate|auto-120|<tuple|faithful action|108|Numbers.tm>>
-    <associate|auto-121|<tuple|transitive action|108|Numbers.tm>>
-    <associate|auto-122|<tuple|faithful action|108|Numbers.tm>>
-    <associate|auto-123|<tuple|transitive action|108|Numbers.tm>>
-    <associate|auto-124|<tuple|4.2|108|Numbers.tm>>
-    <associate|auto-125|<tuple|ring|108|Numbers.tm>>
-    <associate|auto-126|<tuple|zero divisor|109|Numbers.tm>>
-    <associate|auto-127|<tuple|subring|109|Numbers.tm>>
-    <associate|auto-128|<tuple|ring homeomorphism|110|Numbers.tm>>
-    <associate|auto-129|<tuple|ring isomorphism|110|Numbers.tm>>
+    <associate|auto-120|<tuple|faithful action|112|Numbers.tm>>
+    <associate|auto-121|<tuple|transitive action|112|Numbers.tm>>
+    <associate|auto-122|<tuple|faithful action|112|Numbers.tm>>
+    <associate|auto-123|<tuple|transitive action|112|Numbers.tm>>
+    <associate|auto-124|<tuple|4.2|112|Numbers.tm>>
+    <associate|auto-125|<tuple|ring|112|Numbers.tm>>
+    <associate|auto-126|<tuple|zero divisor|113|Numbers.tm>>
+    <associate|auto-127|<tuple|subring|113|Numbers.tm>>
+    <associate|auto-128|<tuple|ring homeomorphism|114|Numbers.tm>>
+    <associate|auto-129|<tuple|ring isomorphism|114|Numbers.tm>>
     <associate|auto-13|<tuple|1.4|19|Set.tm>>
-    <associate|auto-130|<tuple|4.3|110|Numbers.tm>>
-    <associate|auto-131|<tuple|field|110|Numbers.tm>>
-    <associate|auto-132|<tuple|subfield|111|Numbers.tm>>
-    <associate|auto-133|<tuple|field homeomorphism|111|Numbers.tm>>
-    <associate|auto-134|<tuple|5|113|Numbers.tm>>
-    <associate|auto-135|<tuple|5.1|113|Numbers.tm>>
-    <associate|auto-136|<tuple|mathematical induction|114|Numbers.tm>>
-    <associate|auto-137|<tuple|transitive set|114|Numbers.tm>>
-    <associate|auto-138|<tuple|5.2|116|Numbers.tm>>
-    <associate|auto-139|<tuple|recursion|116|Numbers.tm>>
+    <associate|auto-130|<tuple|4.3|114|Numbers.tm>>
+    <associate|auto-131|<tuple|field|114|Numbers.tm>>
+    <associate|auto-132|<tuple|subfield|115|Numbers.tm>>
+    <associate|auto-133|<tuple|field homeomorphism|115|Numbers.tm>>
+    <associate|auto-134|<tuple|5|117|Numbers.tm>>
+    <associate|auto-135|<tuple|5.1|117|Numbers.tm>>
+    <associate|auto-136|<tuple|mathematical induction|118|Numbers.tm>>
+    <associate|auto-137|<tuple|transitive set|118|Numbers.tm>>
+    <associate|auto-138|<tuple|5.2|120|Numbers.tm>>
+    <associate|auto-139|<tuple|recursion|120|Numbers.tm>>
     <associate|auto-14|<tuple|successor set|19|Set.tm>>
-    <associate|auto-140|<tuple|iteration|119|Numbers.tm>>
-    <associate|auto-141|<tuple|5.3|122|Numbers.tm>>
-    <associate|auto-142|<tuple|addition of natural numbers|122|Numbers.tm>>
+    <associate|auto-140|<tuple|iteration|123|Numbers.tm>>
+    <associate|auto-141|<tuple|5.3|126|Numbers.tm>>
+    <associate|auto-142|<tuple|addition of natural numbers|126|Numbers.tm>>
     <associate|auto-143|<tuple|multiplication of natural
-    numbers|124|Numbers.tm>>
-    <associate|auto-144|<tuple|absorbing element|124|Numbers.tm>>
-    <associate|auto-145|<tuple|5.4|127|Numbers.tm>>
-    <associate|auto-146|<tuple|6|131|Numbers.tm>>
-    <associate|auto-147|<tuple|6|133>>
+    numbers|128|Numbers.tm>>
+    <associate|auto-144|<tuple|absorbing element|128|Numbers.tm>>
+    <associate|auto-145|<tuple|5.4|131|Numbers.tm>>
+    <associate|auto-146|<tuple|5.5|138|Numbers.tm>>
+    <associate|auto-147|<tuple|6|141|Numbers.tm>>
+    <associate|auto-148|<tuple|6.1|141|Numbers.tm>>
+    <associate|auto-149|<tuple|equipotence|141|Numbers.tm>>
     <associate|auto-15|<tuple|axiom of infinity|20|Set.tm>>
+    <associate|auto-150|<tuple|<with|mode|<quote|math>|\<approx\>>|141|Numbers.tm>>
+    <associate|auto-151|<tuple|equipotency|141|Numbers.tm>>
+    <associate|auto-152|<tuple|<with|mode|<quote|math>|\<preccurlyeq\>>|141|Numbers.tm>>
+    <associate|auto-153|<tuple|<with|mode|<quote|math>|\<prec\>>|141|Numbers.tm>>
+    <associate|auto-154|<tuple|6.2|143|Numbers.tm>>
+    <associate|auto-155|<tuple|finite set|144|Numbers.tm>>
+    <associate|auto-156|<tuple|infinite set|144|Numbers.tm>>
+    <associate|auto-157|<tuple|denumerable set|144|Numbers.tm>>
+    <associate|auto-158|<tuple|infinite countable set|144|Numbers.tm>>
+    <associate|auto-159|<tuple|countable set|144|Numbers.tm>>
     <associate|auto-16|<tuple|axiom of subsets|20|Set.tm>>
+    <associate|auto-160|<tuple|countable set|145>>
     <associate|auto-17|<tuple|axiom of union|21|Set.tm>>
     <associate|auto-18|<tuple|power set|22|Set.tm>>
     <associate|auto-19|<tuple|<with|mode|<quote|math>|\<cal-P\><around*|(|A|)>>|22|Set.tm>>
@@ -449,7 +493,7 @@
     <associate|auto-23|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|A,B,C|\<rangle\>>>|24|Set.tm>>
     <associate|auto-24|<tuple|2.2|25|Set.tm>>
     <associate|auto-25|<tuple|2.2.1|25|Set.tm>>
-    <associate|auto-26|<tuple|image|25|Set.tm>>
+    <associate|auto-26|<tuple|image|26|Set.tm>>
     <associate|auto-27|<tuple|2.2.2|28|Set.tm>>
     <associate|auto-28|<tuple|function|28|Set.tm>>
     <associate|auto-29|<tuple|<with|mode|<quote|math>|B<rsup|A>>|29|Set.tm>>
@@ -458,79 +502,79 @@
     <associate|auto-31|<tuple|<with|mode|<quote|math>|Id<rsub|A>>|32|Set.tm>>
     <associate|auto-32|<tuple|2.2.3|33|Set.tm>>
     <associate|auto-33|<tuple|<with|mode|<quote|math>|i<rsub|B>>|34|Set.tm>>
-    <associate|auto-34|<tuple|bijection|35|Set.tm>>
-    <associate|auto-35|<tuple|bijective|35|Set.tm>>
-    <associate|auto-36|<tuple|2.2.4|39|Set.tm>>
-    <associate|auto-37|<tuple|<with|mode|<quote|math>|f<rsub|\|C>>|39|Set.tm>>
-    <associate|auto-38|<tuple|2.2.5|43|Set.tm>>
-    <associate|auto-39|<tuple|2.3|46|Set.tm>>
+    <associate|auto-34|<tuple|bijection|36|Set.tm>>
+    <associate|auto-35|<tuple|bijective|36|Set.tm>>
+    <associate|auto-36|<tuple|2.2.4|40|Set.tm>>
+    <associate|auto-37|<tuple|<with|mode|<quote|math>|f<rsub|\|C>>|40|Set.tm>>
+    <associate|auto-38|<tuple|2.2.5|45|Set.tm>>
+    <associate|auto-39|<tuple|2.3|47|Set.tm>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|\<cal-U\>>|9|Set.tm>>
-    <associate|auto-40|<tuple|2.3.1|46|Set.tm>>
-    <associate|auto-41|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>>|46|Set.tm>>
-    <associate|auto-42|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>\|i\<in\>I|}>>|47|Set.tm>>
-    <associate|auto-43|<tuple|<with|mode|<quote|math>|<big|cap><rsub|i\<in\>I>A<rsub|i>>|48|Set.tm>>
-    <associate|auto-44|<tuple|2.3.2|49|Set.tm>>
-    <associate|auto-45|<tuple|2.4|57|Set.tm>>
-    <associate|auto-46|<tuple|<with|mode|<quote|math>|<big|prod><rsub|i\<in\>I>A<rsub|i>>|57|Set.tm>>
-    <associate|auto-47|<tuple|<with|mode|<quote|math>|\<pi\><rsub|i>>|62|Set.tm>>
-    <associate|auto-48|<tuple|3|63|Set.tm>>
-    <associate|auto-49|<tuple|3.1|63|Set.tm>>
+    <associate|auto-40|<tuple|2.3.1|47|Set.tm>>
+    <associate|auto-41|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>>|47|Set.tm>>
+    <associate|auto-42|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>\|i\<in\>I|}>>|48|Set.tm>>
+    <associate|auto-43|<tuple|<with|mode|<quote|math>|<big|cap><rsub|i\<in\>I>A<rsub|i>>|50|Set.tm>>
+    <associate|auto-44|<tuple|2.3.2|51|Set.tm>>
+    <associate|auto-45|<tuple|2.4|59|Set.tm>>
+    <associate|auto-46|<tuple|<with|mode|<quote|math>|<big|prod><rsub|i\<in\>I>A<rsub|i>>|59|Set.tm>>
+    <associate|auto-47|<tuple|<with|mode|<quote|math>|\<pi\><rsub|i>>|63|Set.tm>>
+    <associate|auto-48|<tuple|3|65|Set.tm>>
+    <associate|auto-49|<tuple|3.1|65|Set.tm>>
     <associate|auto-5|<tuple|<with|mode|<quote|math>|A<big|cup>B>|9|Set.tm>>
-    <associate|auto-50|<tuple|relation|63|Set.tm>>
-    <associate|auto-51|<tuple|3.2|63|Set.tm>>
-    <associate|auto-52|<tuple|3.2.1|63|Set.tm>>
-    <associate|auto-53|<tuple|equivalence relation|64|Set.tm>>
-    <associate|auto-54|<tuple|partition of a set|64|Set.tm>>
-    <associate|auto-55|<tuple|<with|mode|<quote|math>|R<around*|[|x|]>>|65|Set.tm>>
-    <associate|auto-56|<tuple|<with|mode|<quote|math>|A/R>|66|Set.tm>>
-    <associate|auto-57|<tuple|3.2.2|67|Set.tm>>
-    <associate|auto-58|<tuple|canonical function|67|Set.tm>>
-    <associate|auto-59|<tuple|3.3|69|Set.tm>>
+    <associate|auto-50|<tuple|relation|65|Set.tm>>
+    <associate|auto-51|<tuple|3.2|65|Set.tm>>
+    <associate|auto-52|<tuple|3.2.1|65|Set.tm>>
+    <associate|auto-53|<tuple|equivalence relation|66|Set.tm>>
+    <associate|auto-54|<tuple|partition of a set|66|Set.tm>>
+    <associate|auto-55|<tuple|<with|mode|<quote|math>|R<around*|[|x|]>>|67|Set.tm>>
+    <associate|auto-56|<tuple|<with|mode|<quote|math>|A/R>|68|Set.tm>>
+    <associate|auto-57|<tuple|3.2.2|69|Set.tm>>
+    <associate|auto-58|<tuple|canonical function|69|Set.tm>>
+    <associate|auto-59|<tuple|3.3|71|Set.tm>>
     <associate|auto-6|<tuple|<with|mode|<quote|math>|A<big|cap>B>|9|Set.tm>>
-    <associate|auto-60|<tuple|3.3.1|69|Set.tm>>
-    <associate|auto-61|<tuple|preorder|69|Set.tm>>
-    <associate|auto-62|<tuple|pre-ordered class|70|Set.tm>>
-    <associate|auto-63|<tuple|order relation|70|Set.tm>>
-    <associate|auto-64|<tuple|partial ordered class|70|Set.tm>>
-    <associate|auto-65|<tuple|<with|mode|<quote|math>|\<leqslant\>>|70|Set.tm>>
-    <associate|auto-66|<tuple|<with|mode|<quote|math>|\<less\>>|70|Set.tm>>
-    <associate|auto-67|<tuple|comparable elements|73|Set.tm>>
-    <associate|auto-68|<tuple|comparable elements|73|Set.tm>>
-    <associate|auto-69|<tuple|totally ordered class|73|Set.tm>>
+    <associate|auto-60|<tuple|3.3.1|71|Set.tm>>
+    <associate|auto-61|<tuple|preorder|71|Set.tm>>
+    <associate|auto-62|<tuple|pre-ordered class|72|Set.tm>>
+    <associate|auto-63|<tuple|order relation|72|Set.tm>>
+    <associate|auto-64|<tuple|partial ordered class|72|Set.tm>>
+    <associate|auto-65|<tuple|<with|mode|<quote|math>|\<leqslant\>>|72|Set.tm>>
+    <associate|auto-66|<tuple|<with|mode|<quote|math>|\<less\>>|72|Set.tm>>
+    <associate|auto-67|<tuple|comparable elements|75|Set.tm>>
+    <associate|auto-68|<tuple|comparable elements|75|Set.tm>>
+    <associate|auto-69|<tuple|totally ordered class|75|Set.tm>>
     <associate|auto-7|<tuple|<with|mode|<quote|math>|\<emptyset\>>|9|Set.tm>>
-    <associate|auto-70|<tuple|fully ordered class|73|Set.tm>>
-    <associate|auto-71|<tuple|linear ordered class|73|Set.tm>>
-    <associate|auto-72|<tuple|chain|73|Set.tm>>
-    <associate|auto-73|<tuple|initial segment|74|Set.tm>>
-    <associate|auto-74|<tuple|<with|mode|<quote|math>|\<cal-S\><rsub|a>>|74|Set.tm>>
-    <associate|auto-75|<tuple|cut|74|Set.tm>>
-    <associate|auto-76|<tuple|3.3.2|74|Set.tm>>
-    <associate|auto-77|<tuple|increasing function|74|Set.tm>>
-    <associate|auto-78|<tuple|decreasing function|74|Set.tm>>
-    <associate|auto-79|<tuple|order homomorphism|74|Set.tm>>
+    <associate|auto-70|<tuple|fully ordered class|75|Set.tm>>
+    <associate|auto-71|<tuple|linear ordered class|75|Set.tm>>
+    <associate|auto-72|<tuple|chain|75|Set.tm>>
+    <associate|auto-73|<tuple|initial segment|76|Set.tm>>
+    <associate|auto-74|<tuple|<with|mode|<quote|math>|\<cal-S\><rsub|a>>|76|Set.tm>>
+    <associate|auto-75|<tuple|cut|76|Set.tm>>
+    <associate|auto-76|<tuple|3.3.2|77|Set.tm>>
+    <associate|auto-77|<tuple|increasing function|77|Set.tm>>
+    <associate|auto-78|<tuple|decreasing function|77|Set.tm>>
+    <associate|auto-79|<tuple|order homomorphism|77|Set.tm>>
     <associate|auto-8|<tuple|1.2|10|Set.tm>>
-    <associate|auto-80|<tuple|<with|mode|<quote|math>|A\<cong\>B>|75|Set.tm>>
-    <associate|auto-81|<tuple|3.3.3|76|Set.tm>>
-    <associate|auto-82|<tuple|maximal element|76|Set.tm>>
-    <associate|auto-83|<tuple|minimal element|76|Set.tm>>
-    <associate|auto-84|<tuple|greatest element|76|Set.tm>>
-    <associate|auto-85|<tuple|lowest element|76|Set.tm>>
-    <associate|auto-86|<tuple|<with|mode|<quote|math>|max<around*|(|A|)>>|76|Set.tm>>
-    <associate|auto-87|<tuple|<with|mode|<quote|math>|min<around*|(|A|)>>|76|Set.tm>>
-    <associate|auto-88|<tuple|upper bound|77|Set.tm>>
-    <associate|auto-89|<tuple|lower bound|77|Set.tm>>
+    <associate|auto-80|<tuple|<with|mode|<quote|math>|A\<cong\>B>|77|Set.tm>>
+    <associate|auto-81|<tuple|3.3.3|78|Set.tm>>
+    <associate|auto-82|<tuple|maximal element|78|Set.tm>>
+    <associate|auto-83|<tuple|minimal element|78|Set.tm>>
+    <associate|auto-84|<tuple|greatest element|79|Set.tm>>
+    <associate|auto-85|<tuple|lowest element|79|Set.tm>>
+    <associate|auto-86|<tuple|<with|mode|<quote|math>|max<around*|(|A|)>>|79|Set.tm>>
+    <associate|auto-87|<tuple|<with|mode|<quote|math>|min<around*|(|A|)>>|79|Set.tm>>
+    <associate|auto-88|<tuple|upper bound|79|Set.tm>>
+    <associate|auto-89|<tuple|lower bound|79|Set.tm>>
     <associate|auto-9|<tuple|1.3|14|Set.tm>>
-    <associate|auto-90|<tuple|supremum|77|Set.tm>>
-    <associate|auto-91|<tuple|infinum|77|Set.tm>>
-    <associate|auto-92|<tuple|<with|mode|<quote|math>|inf<around*|(|A|)>>|77|Set.tm>>
-    <associate|auto-93|<tuple|<with|mode|<quote|math>|sup<around*|(|A|)>>|77|Set.tm>>
-    <associate|auto-94|<tuple|conditional completeness|80|Set.tm>>
-    <associate|auto-95|<tuple|3.3.4|82|Set.tm>>
-    <associate|auto-96|<tuple|well-ordered class|82|Set.tm>>
-    <associate|auto-97|<tuple|immediate successor|82|Set.tm>>
-    <associate|auto-98|<tuple|section|82|Set.tm>>
-    <associate|auto-99|<tuple|transfinite induction|83|Set.tm>>
-    <associate|axiom of choice|<tuple|3.95|88|Set.tm>>
+    <associate|auto-90|<tuple|supremum|80|Set.tm>>
+    <associate|auto-91|<tuple|infinum|80|Set.tm>>
+    <associate|auto-92|<tuple|<with|mode|<quote|math>|inf<around*|(|A|)>>|80|Set.tm>>
+    <associate|auto-93|<tuple|<with|mode|<quote|math>|sup<around*|(|A|)>>|80|Set.tm>>
+    <associate|auto-94|<tuple|conditional completeness|82|Set.tm>>
+    <associate|auto-95|<tuple|3.3.4|84|Set.tm>>
+    <associate|auto-96|<tuple|well-ordered class|84|Set.tm>>
+    <associate|auto-97|<tuple|immediate successor|85|Set.tm>>
+    <associate|auto-98|<tuple|section|85|Set.tm>>
+    <associate|auto-99|<tuple|transfinite induction|85|Set.tm>>
+    <associate|axiom of choice|<tuple|3.96|90|Set.tm>>
     <associate|axiom of construction|<tuple|1.9|9|Set.tm>>
     <associate|axiom of extent|<tuple|1.5|8|Set.tm>>
     <associate|axiom of infinity|<tuple|1.52|20|Set.tm>>
@@ -538,39 +582,39 @@
     <associate|axiom of power|<tuple|1.64|22|Set.tm>>
     <associate|axiom of subsets|<tuple|1.54|20|Set.tm>>
     <associate|axiom of union|<tuple|1.61|21|Set.tm>>
-    <associate|bijection|<tuple|2.56|35|Set.tm>>
-    <associate|bijective classes|<tuple|2.57|35|Set.tm>>
+    <associate|bijection|<tuple|2.57|36|Set.tm>>
+    <associate|bijective classes|<tuple|2.58|36|Set.tm>>
     <associate|cartesian product|<tuple|1.44|17|Set.tm>>
     <associate|cartesian product and inclusion|<tuple|1.48|17|Set.tm>>
     <associate|cartesian product of the empty set|<tuple|1.46|17|Set.tm>>
     <associate|cartesian product properties (1)|<tuple|1.49|18|Set.tm>>
     <associate|cartesian product with enpty set|<tuple|1.47|17|Set.tm>>
-    <associate|choice Axiom of choice consequences|<tuple|3.120|100|Set.tm>>
-    <associate|choice Hausdorff maximal principle|<tuple|3.111|94|Set.tm>>
-    <associate|choice Hausdorff's Maximal Principle|<tuple|3.112|94|Set.tm>>
-    <associate|choice Hausdorff's implies Zorn's|<tuple|3.114|95|Set.tm>>
-    <associate|choice P'(A)|<tuple|3.92|88|Set.tm>>
-    <associate|choice P'(A) is a set|<tuple|3.93|88|Set.tm>>
-    <associate|choice Zorn implies welll ordering|<tuple|3.115|96|Set.tm>>
-    <associate|choice Zorn's lemma|<tuple|3.113|95|Set.tm>>
-    <associate|choice Zorn's lemma for pre-order|<tuple|3.121|101|Set.tm>>
+    <associate|choice Axiom of choice consequences|<tuple|3.121|103|Set.tm>>
+    <associate|choice Hausdorff maximal principle|<tuple|3.112|97|Set.tm>>
+    <associate|choice Hausdorff's Maximal Principle|<tuple|3.113|97|Set.tm>>
+    <associate|choice Hausdorff's implies Zorn's|<tuple|3.115|98|Set.tm>>
+    <associate|choice P'(A)|<tuple|3.93|90|Set.tm>>
+    <associate|choice P'(A) is a set|<tuple|3.94|90|Set.tm>>
+    <associate|choice Zorn implies welll ordering|<tuple|3.116|98|Set.tm>>
+    <associate|choice Zorn's lemma|<tuple|3.114|98|Set.tm>>
+    <associate|choice Zorn's lemma for pre-order|<tuple|3.122|103|Set.tm>>
     <associate|choice axiom of choice equivalences
-    (1)|<tuple|3.97|89|Set.tm>>
-    <associate|choice choice function|<tuple|3.94|88|Set.tm>>
-    <associate|choice existence of successor|<tuple|3.101|92|Set.tm>>
-    <associate|choice function to injection/bijection|<tuple|3.122|101|Set.tm>>
-    <associate|choice intersection of p-sewuences|<tuple|3.104|92|Set.tm>>
-    <associate|choice lemma p-sequence|<tuple|3.102|92|Set.tm>>
-    <associate|choice lemma p-sequence generation|<tuple|3.107|93|Set.tm>>
-    <associate|choice lemma properties of select|<tuple|3.108|93|Set.tm>>
+    (1)|<tuple|3.98|91|Set.tm>>
+    <associate|choice choice function|<tuple|3.95|90|Set.tm>>
+    <associate|choice existence of successor|<tuple|3.102|94|Set.tm>>
+    <associate|choice function to injection/bijection|<tuple|3.123|104|Set.tm>>
+    <associate|choice intersection of p-sewuences|<tuple|3.105|95|Set.tm>>
+    <associate|choice lemma p-sequence|<tuple|3.103|95|Set.tm>>
+    <associate|choice lemma p-sequence generation|<tuple|3.108|95|Set.tm>>
+    <associate|choice lemma properties of select|<tuple|3.109|96|Set.tm>>
     <associate|choice lemma property of select
-    elements|<tuple|3.106|93|Set.tm>>
+    elements|<tuple|3.107|95|Set.tm>>
     <associate|choice lemma select elements froms a
-    p-sewuence|<tuple|3.109|94|Set.tm>>
-    <associate|choice lemma upper bound of chain|<tuple|3.117|97|Set.tm>>
-    <associate|choice lemma well ordering lemma (1)|<tuple|3.116|96|Set.tm>>
+    p-sewuence|<tuple|3.110|96|Set.tm>>
+    <associate|choice lemma upper bound of chain|<tuple|3.118|100|Set.tm>>
+    <associate|choice lemma well ordering lemma (1)|<tuple|3.117|99|Set.tm>>
     <associate|choice well-order implies Axiom of
-    Choice|<tuple|3.118|100|Set.tm>>
+    Choice|<tuple|3.119|102|Set.tm>>
     <associate|class absorption laws|<tuple|1.27|11|Set.tm>>
     <associate|class class commutative,idempotent,associative,distributivity|<tuple|1.30|12|Set.tm>>
     <associate|class complement of comploment|<tuple|1.28|11|Set.tm>>
@@ -593,6 +637,10 @@
     <associate|class union{A,B}|<tuple|1.59|21|Set.tm>>
     <associate|class universal and empotyset
     properties|<tuple|1.32|14|Set.tm>>
+    <associate|countable set|<tuple|6.20|144|Numbers.tm>>
+    <associate|definition by recursion (1)|<tuple|5.80|139|Numbers.tm>>
+    <associate|definition by recursion (2)|<tuple|5.81|140|Numbers.tm>>
+    <associate|denumerable set|<tuple|6.19|144|Numbers.tm>>
     <associate|element a=b=\<gtr\>{a}={b}|<tuple|1.34|14|Set.tm>>
     <associate|element equalitiy of unordered pairs|<tuple|1.39|15|Set.tm>>
     <associate|element equality of unordered pairs
@@ -600,6 +648,7 @@
     <associate|element is set|<tuple|1.2|7|Set.tm>>
     <associate|element {a,a}={a}|<tuple|1.37|14|Set.tm>>
     <associate|element: {a} is a element|<tuple|1.38|15|Set.tm>>
+    <associate|empty set is finite|<tuple|6.17|144|Numbers.tm>>
     <associate|empty set property|<tuple|1.17|9|Set.tm>>
     <associate|eq 1.1 001|<tuple|1.1|8|Set.tm>>
     <associate|eq 1.2 001|<tuple|1.2|8|Set.tm>>
@@ -612,428 +661,471 @@
     <associate|eq 2.1.001|<tuple|2.2|23|Set.tm>>
     <associate|eq 2.1.001.1|<tuple|2.1|23|Set.tm>>
     <associate|eq 2.10.001|<tuple|2.10|27|Set.tm>>
-    <associate|eq 2.11.001|<tuple|2.11|27|Set.tm>>
-    <associate|eq 2.12.001|<tuple|2.16|36|Set.tm>>
+    <associate|eq 2.11.001|<tuple|2.11|28|Set.tm>>
+    <associate|eq 2.12.001|<tuple|2.16|37|Set.tm>>
     <associate|eq 2.12.002|<tuple|2.12|28|Set.tm>>
-    <associate|eq 2.13.001|<tuple|2.17|36|Set.tm>>
+    <associate|eq 2.13.001|<tuple|2.17|37|Set.tm>>
     <associate|eq 2.13.002|<tuple|2.13|28|Set.tm>>
-    <associate|eq 2.14.001|<tuple|2.23|41|Set.tm>>
-    <associate|eq 2.14.009|<tuple|2.14|29|Set.tm>>
-    <associate|eq 2.15.013|<tuple|2.15|34|Set.tm>>
-    <associate|eq 2.16.003|<tuple|2.26|43|Set.tm>>
-    <associate|eq 2.16.005|<tuple|2.18|38|Set.tm>>
-    <associate|eq 2.17.002|<tuple|2.27|44|Set.tm>>
-    <associate|eq 2.17.003|<tuple|2.25|42|Set.tm>>
-    <associate|eq 2.17.004|<tuple|2.24|42|Set.tm>>
-    <associate|eq 2.17.006|<tuple|2.19|39|Set.tm>>
-    <associate|eq 2.18.002|<tuple|2.28|44|Set.tm>>
-    <associate|eq 2.18.006|<tuple|2.20|39|Set.tm>>
-    <associate|eq 2.19.002|<tuple|2.29|45|Set.tm>>
+    <associate|eq 2.14.001|<tuple|2.23|43|Set.tm>>
+    <associate|eq 2.14.009|<tuple|2.14|30|Set.tm>>
+    <associate|eq 2.15.013|<tuple|2.15|35|Set.tm>>
+    <associate|eq 2.16.003|<tuple|2.26|44|Set.tm>>
+    <associate|eq 2.16.005|<tuple|2.18|39|Set.tm>>
+    <associate|eq 2.17.002|<tuple|2.27|45|Set.tm>>
+    <associate|eq 2.17.003|<tuple|2.25|44|Set.tm>>
+    <associate|eq 2.17.004|<tuple|2.24|44|Set.tm>>
+    <associate|eq 2.17.006|<tuple|2.19|40|Set.tm>>
+    <associate|eq 2.18.002|<tuple|2.28|46|Set.tm>>
+    <associate|eq 2.18.006|<tuple|2.20|40|Set.tm>>
+    <associate|eq 2.19.002|<tuple|2.29|46|Set.tm>>
     <associate|eq 2.2.001|<tuple|2.4|23|Set.tm>>
-    <associate|eq 2.20.002|<tuple|2.30|45|Set.tm>>
-    <associate|eq 2.21.002|<tuple|2.31|45|Set.tm>>
-    <associate|eq 2.21.017|<tuple|2.21|40|Set.tm>>
-    <associate|eq 2.22.017|<tuple|2.22|40|Set.tm>>
-    <associate|eq 2.25.004|<tuple|2.33|50|Set.tm>>
-    <associate|eq 2.26.004|<tuple|2.34|51|Set.tm>>
-    <associate|eq 2.27.004|<tuple|2.35|51|Set.tm>>
-    <associate|eq 2.28.004|<tuple|2.36|52|Set.tm>>
-    <associate|eq 2.29.004|<tuple|2.38|56|Set.tm>>
-    <associate|eq 2.29.012|<tuple|2.32|48|Set.tm>>
+    <associate|eq 2.20.002|<tuple|2.30|46|Set.tm>>
+    <associate|eq 2.21.002|<tuple|2.31|47|Set.tm>>
+    <associate|eq 2.21.017|<tuple|2.21|41|Set.tm>>
+    <associate|eq 2.22.017|<tuple|2.22|41|Set.tm>>
+    <associate|eq 2.25.004|<tuple|2.33|52|Set.tm>>
+    <associate|eq 2.26.004|<tuple|2.34|52|Set.tm>>
+    <associate|eq 2.27.004|<tuple|2.35|53|Set.tm>>
+    <associate|eq 2.28.004|<tuple|2.36|53|Set.tm>>
+    <associate|eq 2.29.004|<tuple|2.38|57|Set.tm>>
+    <associate|eq 2.29.012|<tuple|2.32|49|Set.tm>>
     <associate|eq 2.3.001.2|<tuple|2.3|23|Set.tm>>
-    <associate|eq 2.30.004|<tuple|2.39|56|Set.tm>>
-    <associate|eq 2.31.004|<tuple|2.40|56|Set.tm>>
-    <associate|eq 2.31.010|<tuple|2.37|52|Set.tm>>
-    <associate|eq 2.32.004|<tuple|2.41|57|Set.tm>>
-    <associate|eq 2.34.005|<tuple|2.42|58|Set.tm>>
-    <associate|eq 2.35.005|<tuple|2.43|58|Set.tm>>
-    <associate|eq 2.38.006|<tuple|2.44|58|Set.tm>>
-    <associate|eq 2.39.006|<tuple|2.45|58|Set.tm>>
-    <associate|eq 2.40.006|<tuple|2.47|58|Set.tm>>
-    <associate|eq 2.40.007|<tuple|2.46|58|Set.tm>>
-    <associate|eq 2.41.006|<tuple|2.48|58|Set.tm>>
-    <associate|eq 2.42.006|<tuple|2.49|59|Set.tm>>
-    <associate|eq 2.43.006|<tuple|2.51|59|Set.tm>>
-    <associate|eq 2.44.006|<tuple|2.52|59|Set.tm>>
-    <associate|eq 2.44.007|<tuple|2.50|59|Set.tm>>
-    <associate|eq 2.45.006|<tuple|2.53|59|Set.tm>>
-    <associate|eq 2.48.007|<tuple|2.56|61|Set.tm>>
-    <associate|eq 2.48.008|<tuple|2.54|60|Set.tm>>
-    <associate|eq 2.49.007|<tuple|2.57|61|Set.tm>>
-    <associate|eq 2.5.001.2|<tuple|2.5|23|Set.tm>>
-    <associate|eq 2.50.007|<tuple|2.58|61|Set.tm>>
-    <associate|eq 2.51.007|<tuple|2.61|62|Set.tm>>
-    <associate|eq 2.51.010|<tuple|2.55|60|Set.tm>>
-    <associate|eq 2.59.018|<tuple|2.59|62|Set.tm>>
+    <associate|eq 2.30.004|<tuple|2.39|58|Set.tm>>
+    <associate|eq 2.31.004|<tuple|2.40|58|Set.tm>>
+    <associate|eq 2.31.010|<tuple|2.37|54|Set.tm>>
+    <associate|eq 2.32.004|<tuple|2.41|58|Set.tm>>
+    <associate|eq 2.34.005|<tuple|2.42|59|Set.tm>>
+    <associate|eq 2.35.005|<tuple|2.43|59|Set.tm>>
+    <associate|eq 2.38.006|<tuple|2.44|59|Set.tm>>
+    <associate|eq 2.39.006|<tuple|2.45|59|Set.tm>>
+    <associate|eq 2.40.006|<tuple|2.47|60|Set.tm>>
+    <associate|eq 2.40.007|<tuple|2.46|59|Set.tm>>
+    <associate|eq 2.41.006|<tuple|2.48|60|Set.tm>>
+    <associate|eq 2.42.006|<tuple|2.49|60|Set.tm>>
+    <associate|eq 2.43.006|<tuple|2.51|60|Set.tm>>
+    <associate|eq 2.44.006|<tuple|2.52|60|Set.tm>>
+    <associate|eq 2.44.007|<tuple|2.50|60|Set.tm>>
+    <associate|eq 2.45.006|<tuple|2.53|60|Set.tm>>
+    <associate|eq 2.48.007|<tuple|2.56|62|Set.tm>>
+    <associate|eq 2.48.008|<tuple|2.54|61|Set.tm>>
+    <associate|eq 2.49.007|<tuple|2.57|62|Set.tm>>
+    <associate|eq 2.5.001.2|<tuple|2.5|24|Set.tm>>
+    <associate|eq 2.50.007|<tuple|2.58|62|Set.tm>>
+    <associate|eq 2.51.007|<tuple|2.61|63|Set.tm>>
+    <associate|eq 2.51.010|<tuple|2.55|61|Set.tm>>
+    <associate|eq 2.59.018|<tuple|2.59|63|Set.tm>>
     <associate|eq 2.6.001|<tuple|2.6|24|Set.tm>>
-    <associate|eq 2.60.018|<tuple|2.60|62|Set.tm>>
+    <associate|eq 2.60.018|<tuple|2.60|63|Set.tm>>
     <associate|eq 2.7.001|<tuple|2.7|24|Set.tm>>
     <associate|eq 2.8.001|<tuple|2.8|24|Set.tm>>
     <associate|eq 2.9.001|<tuple|2.9|24|Set.tm>>
-    <associate|eq 3.1.009|<tuple|3.1|68|Set.tm>>
-    <associate|eq 3.10.012|<tuple|3.10|79|Set.tm>>
-    <associate|eq 3.11.012|<tuple|3.11|79|Set.tm>>
-    <associate|eq 3.12.012|<tuple|3.12|81|Set.tm>>
-    <associate|eq 3.14.012|<tuple|3.13|81|Set.tm>>
-    <associate|eq 3.14.013|<tuple|3.14|83|Set.tm>>
-    <associate|eq 3.15.013|<tuple|3.15|83|Set.tm>>
-    <associate|eq 3.16.014|<tuple|3.18|84|Set.tm>>
-    <associate|eq 3.16.016|<tuple|3.16|84|Set.tm>>
-    <associate|eq 3.17.014|<tuple|3.19|84|Set.tm>>
-    <associate|eq 3.17.016|<tuple|3.17|84|Set.tm>>
-    <associate|eq 3.18.014|<tuple|3.20|85|Set.tm>>
-    <associate|eq 3.19.014|<tuple|3.21|85|Set.tm>>
-    <associate|eq 3.2.009|<tuple|3.2|69|Set.tm>>
-    <associate|eq 3.20.014|<tuple|3.22|85|Set.tm>>
-    <associate|eq 3.21.014|<tuple|3.23|85|Set.tm>>
-    <associate|eq 3.21.014.1|<tuple|3.26|85|Set.tm>>
-    <associate|eq 3.22.014|<tuple|3.24|85|Set.tm>>
-    <associate|eq 3.23.014|<tuple|3.25|85|Set.tm>>
-    <associate|eq 3.25.014|<tuple|3.28|85|Set.tm>>
-    <associate|eq 3.25.015|<tuple|3.27|85|Set.tm>>
-    <associate|eq 3.26.014|<tuple|3.29|85|Set.tm>>
-    <associate|eq 3.27.014|<tuple|3.30|86|Set.tm>>
-    <associate|eq 3.28.014|<tuple|3.31|86|Set.tm>>
-    <associate|eq 3.29.014|<tuple|3.32|86|Set.tm>>
-    <associate|eq 3.3.009|<tuple|3.3|69|Set.tm>>
-    <associate|eq 3.30.014|<tuple|3.33|86|Set.tm>>
-    <associate|eq 3.31.014|<tuple|3.34|86|Set.tm>>
-    <associate|eq 3.32.014|<tuple|3.35|86|Set.tm>>
-    <associate|eq 3.33.014|<tuple|3.36|86|Set.tm>>
-    <associate|eq 3.34.014|<tuple|3.37|86|Set.tm>>
-    <associate|eq 3.35.014|<tuple|3.38|86|Set.tm>>
-    <associate|eq 3.36.014|<tuple|3.39|86|Set.tm>>
-    <associate|eq 3.37.014|<tuple|3.40|86|Set.tm>>
-    <associate|eq 3.39.015|<tuple|3.41|87|Set.tm>>
-    <associate|eq 3.4.009|<tuple|3.4|69|Set.tm>>
-    <associate|eq 3.42.015|<tuple|3.42|87|Set.tm>>
-    <associate|eq 3.43.015|<tuple|3.43|87|Set.tm>>
-    <associate|eq 3.44.015|<tuple|3.44|87|Set.tm>>
-    <associate|eq 3.46.016|<tuple|3.46|89|Set.tm>>
-    <associate|eq 3.47.016|<tuple|3.47|90|Set.tm>>
-    <associate|eq 3.48.016|<tuple|3.48|90|Set.tm>>
-    <associate|eq 3.49.016|<tuple|3.49|90|Set.tm>>
-    <associate|eq 3.5.009|<tuple|3.5|69|Set.tm>>
-    <associate|eq 3.50.016|<tuple|3.50|90|Set.tm>>
-    <associate|eq 3.51.016|<tuple|3.51|90|Set.tm>>
-    <associate|eq 3.52.016|<tuple|3.52|90|Set.tm>>
-    <associate|eq 3.53.016|<tuple|3.53|90|Set.tm>>
-    <associate|eq 3.54.016|<tuple|3.54|90|Set.tm>>
-    <associate|eq 3.55.016|<tuple|3.55|90|Set.tm>>
-    <associate|eq 3.56.016|<tuple|3.56|91|Set.tm>>
-    <associate|eq 3.57.018|<tuple|3.57|92|Set.tm>>
-    <associate|eq 3.58.018|<tuple|3.58|92|Set.tm>>
-    <associate|eq 3.59.018|<tuple|3.59|93|Set.tm>>
-    <associate|eq 3.6.009|<tuple|3.6|69|Set.tm>>
-    <associate|eq 3.61.018|<tuple|3.60|95|Set.tm>>
-    <associate|eq 3.62.018|<tuple|3.61|95|Set.tm>>
-    <associate|eq 3.63.018|<tuple|3.62|95|Set.tm>>
-    <associate|eq 3.64.018|<tuple|3.63|95|Set.tm>>
-    <associate|eq 3.65.018|<tuple|3.64|96|Set.tm>>
-    <associate|eq 3.66.018|<tuple|3.66|97|Set.tm>>
-    <associate|eq 3.66.019|<tuple|3.65|97|Set.tm>>
-    <associate|eq 3.68.019|<tuple|3.67|98|Set.tm>>
-    <associate|eq 3.69.019|<tuple|3.68|98|Set.tm>>
-    <associate|eq 3.7.009|<tuple|3.7|69|Set.tm>>
-    <associate|eq 3.70.019|<tuple|3.69|98|Set.tm>>
-    <associate|eq 3.71.019|<tuple|3.70|98|Set.tm>>
-    <associate|eq 3.72.019|<tuple|3.71|99|Set.tm>>
-    <associate|eq 3.8.011|<tuple|3.8|79|Set.tm>>
-    <associate|eq 3.9.011|<tuple|3.9|79|Set.tm>>
-    <associate|eq 5.1.019|<tuple|5.1|116|Numbers.tm>>
-    <associate|eq 5.10.019|<tuple|5.10|121|Numbers.tm>>
-    <associate|eq 5.11.019|<tuple|5.11|121|Numbers.tm>>
-    <associate|eq 5.12.019|<tuple|5.12|121|Numbers.tm>>
-    <associate|eq 5.13.019|<tuple|5.13|121|Numbers.tm>>
-    <associate|eq 5.2.019|<tuple|5.2|116|Numbers.tm>>
-    <associate|eq 5.3.019|<tuple|5.3|116|Numbers.tm>>
-    <associate|eq 5.4.019|<tuple|5.4|116|Numbers.tm>>
-    <associate|eq 5.5.019|<tuple|5.5|116|Numbers.tm>>
-    <associate|eq 5.6.019|<tuple|5.6|116|Numbers.tm>>
-    <associate|eq 5.7.019|<tuple|5.7|117|Numbers.tm>>
-    <associate|eq 5.8.019|<tuple|5.8|117|Numbers.tm>>
-    <associate|eq 5.9.019|<tuple|5.9|117|Numbers.tm>>
-    <associate|equivalence relation|<tuple|3.5|64|Set.tm>>
-    <associate|equivalence relation A/R|<tuple|3.16|66|Set.tm>>
-    <associate|equivalence relation R[x]=R[y]|<tuple|3.11|65|Set.tm>>
-    <associate|equivalence relation canical function|<tuple|3.21|67|Set.tm>>
+    <associate|eq 3.1.009|<tuple|3.1|70|Set.tm>>
+    <associate|eq 3.10.012|<tuple|3.10|82|Set.tm>>
+    <associate|eq 3.11.012|<tuple|3.11|82|Set.tm>>
+    <associate|eq 3.12.012|<tuple|3.12|83|Set.tm>>
+    <associate|eq 3.14.012|<tuple|3.13|83|Set.tm>>
+    <associate|eq 3.14.013|<tuple|3.14|85|Set.tm>>
+    <associate|eq 3.15.013|<tuple|3.15|85|Set.tm>>
+    <associate|eq 3.16.014|<tuple|3.18|87|Set.tm>>
+    <associate|eq 3.16.016|<tuple|3.16|87|Set.tm>>
+    <associate|eq 3.17.014|<tuple|3.19|87|Set.tm>>
+    <associate|eq 3.17.016|<tuple|3.17|87|Set.tm>>
+    <associate|eq 3.18.014|<tuple|3.20|87|Set.tm>>
+    <associate|eq 3.19.014|<tuple|3.21|87|Set.tm>>
+    <associate|eq 3.2.009|<tuple|3.2|71|Set.tm>>
+    <associate|eq 3.20.014|<tuple|3.22|87|Set.tm>>
+    <associate|eq 3.21.014|<tuple|3.23|87|Set.tm>>
+    <associate|eq 3.21.014.1|<tuple|3.26|88|Set.tm>>
+    <associate|eq 3.22.014|<tuple|3.24|87|Set.tm>>
+    <associate|eq 3.23.014|<tuple|3.25|88|Set.tm>>
+    <associate|eq 3.25.014|<tuple|3.28|88|Set.tm>>
+    <associate|eq 3.25.015|<tuple|3.27|88|Set.tm>>
+    <associate|eq 3.26.014|<tuple|3.29|88|Set.tm>>
+    <associate|eq 3.27.014|<tuple|3.30|88|Set.tm>>
+    <associate|eq 3.28.014|<tuple|3.31|88|Set.tm>>
+    <associate|eq 3.29.014|<tuple|3.32|88|Set.tm>>
+    <associate|eq 3.3.009|<tuple|3.3|71|Set.tm>>
+    <associate|eq 3.30.014|<tuple|3.33|88|Set.tm>>
+    <associate|eq 3.31.014|<tuple|3.34|88|Set.tm>>
+    <associate|eq 3.32.014|<tuple|3.35|88|Set.tm>>
+    <associate|eq 3.33.014|<tuple|3.36|88|Set.tm>>
+    <associate|eq 3.34.014|<tuple|3.37|89|Set.tm>>
+    <associate|eq 3.35.014|<tuple|3.38|89|Set.tm>>
+    <associate|eq 3.36.014|<tuple|3.39|89|Set.tm>>
+    <associate|eq 3.37.014|<tuple|3.40|89|Set.tm>>
+    <associate|eq 3.39.015|<tuple|3.41|89|Set.tm>>
+    <associate|eq 3.4.009|<tuple|3.4|71|Set.tm>>
+    <associate|eq 3.42.015|<tuple|3.42|89|Set.tm>>
+    <associate|eq 3.43.015|<tuple|3.43|89|Set.tm>>
+    <associate|eq 3.44.015|<tuple|3.44|89|Set.tm>>
+    <associate|eq 3.46.016|<tuple|3.46|92|Set.tm>>
+    <associate|eq 3.47.016|<tuple|3.47|92|Set.tm>>
+    <associate|eq 3.48.016|<tuple|3.48|92|Set.tm>>
+    <associate|eq 3.49.016|<tuple|3.49|92|Set.tm>>
+    <associate|eq 3.5.009|<tuple|3.5|71|Set.tm>>
+    <associate|eq 3.50.016|<tuple|3.50|92|Set.tm>>
+    <associate|eq 3.51.016|<tuple|3.51|92|Set.tm>>
+    <associate|eq 3.52.016|<tuple|3.52|92|Set.tm>>
+    <associate|eq 3.53.016|<tuple|3.53|92|Set.tm>>
+    <associate|eq 3.54.016|<tuple|3.54|92|Set.tm>>
+    <associate|eq 3.55.016|<tuple|3.55|92|Set.tm>>
+    <associate|eq 3.56.016|<tuple|3.56|93|Set.tm>>
+    <associate|eq 3.57.018|<tuple|3.57|94|Set.tm>>
+    <associate|eq 3.58.018|<tuple|3.58|94|Set.tm>>
+    <associate|eq 3.59.018|<tuple|3.59|95|Set.tm>>
+    <associate|eq 3.6.009|<tuple|3.6|71|Set.tm>>
+    <associate|eq 3.61.018|<tuple|3.60|97|Set.tm>>
+    <associate|eq 3.62.018|<tuple|3.61|97|Set.tm>>
+    <associate|eq 3.63.018|<tuple|3.62|97|Set.tm>>
+    <associate|eq 3.64.018|<tuple|3.63|97|Set.tm>>
+    <associate|eq 3.65.018|<tuple|3.64|98|Set.tm>>
+    <associate|eq 3.66.018|<tuple|3.66|99|Set.tm>>
+    <associate|eq 3.66.019|<tuple|3.65|99|Set.tm>>
+    <associate|eq 3.68.019|<tuple|3.67|100|Set.tm>>
+    <associate|eq 3.69.019|<tuple|3.68|100|Set.tm>>
+    <associate|eq 3.7.009|<tuple|3.7|71|Set.tm>>
+    <associate|eq 3.70.019|<tuple|3.69|100|Set.tm>>
+    <associate|eq 3.71.019|<tuple|3.70|101|Set.tm>>
+    <associate|eq 3.72.019|<tuple|3.71|101|Set.tm>>
+    <associate|eq 3.8.011|<tuple|3.8|81|Set.tm>>
+    <associate|eq 3.9.011|<tuple|3.9|81|Set.tm>>
+    <associate|eq 5.1.019|<tuple|5.1|120|Numbers.tm>>
+    <associate|eq 5.10.019|<tuple|5.10|125|Numbers.tm>>
+    <associate|eq 5.11.019|<tuple|5.11|125|Numbers.tm>>
+    <associate|eq 5.12.019|<tuple|5.12|125|Numbers.tm>>
+    <associate|eq 5.13.019|<tuple|5.13|125|Numbers.tm>>
+    <associate|eq 5.14.019|<tuple|5.14|136|Numbers.tm>>
+    <associate|eq 5.15.019|<tuple|5.15|136|Numbers.tm>>
+    <associate|eq 5.16.019|<tuple|5.16|136|Numbers.tm>>
+    <associate|eq 5.17.019|<tuple|5.17|139|Numbers.tm>>
+    <associate|eq 5.2.019|<tuple|5.2|120|Numbers.tm>>
+    <associate|eq 5.3.019|<tuple|5.3|120|Numbers.tm>>
+    <associate|eq 5.4.019|<tuple|5.4|120|Numbers.tm>>
+    <associate|eq 5.5.019|<tuple|5.5|120|Numbers.tm>>
+    <associate|eq 5.6.019|<tuple|5.6|120|Numbers.tm>>
+    <associate|eq 5.7.019|<tuple|5.7|121|Numbers.tm>>
+    <associate|eq 5.8.019|<tuple|5.8|121|Numbers.tm>>
+    <associate|eq 5.9.019|<tuple|5.9|121|Numbers.tm>>
+    <associate|eq 7.1.019|<tuple|6.1|144|Numbers.tm>>
+    <associate|equipotence|<tuple|6.1|141|Numbers.tm>>
+    <associate|equipotence 2^A and P(A)|<tuple|6.13|143|Numbers.tm>>
+    <associate|equipotence A^C~B^D|<tuple|6.12|143|Numbers.tm>>
+    <associate|equipotence AxC~BxD|<tuple|6.11|142|Numbers.tm>>
+    <associate|equipotence equivalence relation|<tuple|6.2|141|Numbers.tm>>
+    <associate|equipotence property (1)|<tuple|6.8|142|Numbers.tm>>
+    <associate|equipotence union|<tuple|6.10|142|Numbers.tm>>
+    <associate|equivalence relation|<tuple|3.5|66|Set.tm>>
+    <associate|equivalence relation A/R|<tuple|3.16|68|Set.tm>>
+    <associate|equivalence relation R[x]=R[y]|<tuple|3.11|67|Set.tm>>
+    <associate|equivalence relation canical function|<tuple|3.21|69|Set.tm>>
     <associate|equivalence relation canonical decomposition of a
-    function|<tuple|3.22|68|Set.tm>>
-    <associate|equivalence relation class|<tuple|3.9|65|Set.tm>>
+    function|<tuple|3.22|70|Set.tm>>
+    <associate|equivalence relation class|<tuple|3.9|67|Set.tm>>
     <associate|equivalence relation determined by a
-    function|<tuple|3.20|67|Set.tm>>
-    <associate|equivalence relation function|<tuple|3.18|67|Set.tm>>
-    <associate|equivalence relation partition|<tuple|3.6|64|Set.tm>>
+    function|<tuple|3.20|69|Set.tm>>
+    <associate|equivalence relation function|<tuple|3.18|69|Set.tm>>
+    <associate|equivalence relation partition|<tuple|3.6|66|Set.tm>>
     <associate|equivalence relation partition
-    alternative|<tuple|3.8|64|Set.tm>>
-    <associate|equivalence relation subsets|<tuple|3.19|67|Set.tm>>
-    <associate|family|<tuple|2.86|46|Set.tm>>
-    <associate|family and function composition|<tuple|2.91|47|Set.tm>>
-    <associate|family de Morgan|<tuple|2.112|53|Set.tm>>
-    <associate|family definition (1)|<tuple|2.88|46|Set.tm>>
-    <associate|family definition (2)|<tuple|2.89|46|Set.tm>>
-    <associate|family definition (3)|<tuple|2.90|46|Set.tm>>
-    <associate|family distributivity|<tuple|2.110|51|Set.tm>>
-    <associate|family image and preimage|<tuple|2.115|56|Set.tm>>
-    <associate|family intersection (2)|<tuple|2.103|49|Set.tm>>
-    <associate|family intersection is a set|<tuple|2.104|49|Set.tm>>
-    <associate|family intersection(1)|<tuple|2.102|48|Set.tm>>
-    <associate|family properties (1)|<tuple|2.107|50|Set.tm>>
-    <associate|family properties (2)|<tuple|2.108|50|Set.tm>>
-    <associate|family properties (3)|<tuple|2.113|54|Set.tm>>
-    <associate|family range|<tuple|2.92|47|Set.tm>>
-    <associate|family range (1)|<tuple|2.93|47|Set.tm>>
-    <associate|family set|<tuple|2.94|47|Set.tm>>
-    <associate|family trivial|<tuple|2.105|49|Set.tm>>
-    <associate|family union (1)|<tuple|2.95|47|Set.tm>>
-    <associate|family union (2)|<tuple|2.98|48|Set.tm>>
-    <associate|family union condition set|<tuple|2.100|48|Set.tm>>
+    alternative|<tuple|3.8|66|Set.tm>>
+    <associate|equivalence relation subsets|<tuple|3.19|69|Set.tm>>
+    <associate|family|<tuple|2.89|47|Set.tm>>
+    <associate|family and function composition|<tuple|2.94|48|Set.tm>>
+    <associate|family de Morgan|<tuple|2.115|54|Set.tm>>
+    <associate|family definition (1)|<tuple|2.91|48|Set.tm>>
+    <associate|family definition (2)|<tuple|2.92|48|Set.tm>>
+    <associate|family definition (3)|<tuple|2.93|48|Set.tm>>
+    <associate|family distributivity|<tuple|2.113|52|Set.tm>>
+    <associate|family image and preimage|<tuple|2.118|57|Set.tm>>
+    <associate|family intersection (2)|<tuple|2.106|50|Set.tm>>
+    <associate|family intersection is a set|<tuple|2.107|50|Set.tm>>
+    <associate|family intersection(1)|<tuple|2.105|50|Set.tm>>
+    <associate|family properties (1)|<tuple|2.110|51|Set.tm>>
+    <associate|family properties (2)|<tuple|2.111|51|Set.tm>>
+    <associate|family properties (3)|<tuple|2.116|55|Set.tm>>
+    <associate|family range|<tuple|2.95|48|Set.tm>>
+    <associate|family range (1)|<tuple|2.96|48|Set.tm>>
+    <associate|family set|<tuple|2.97|48|Set.tm>>
+    <associate|family trivial|<tuple|2.108|50|Set.tm>>
+    <associate|family union (1)|<tuple|2.98|49|Set.tm>>
+    <associate|family union (2)|<tuple|2.101|49|Set.tm>>
+    <associate|family union condition set|<tuple|2.103|50|Set.tm>>
     <associate|family union intersection and empty
-    set|<tuple|2.114|55|Set.tm>>
+    set|<tuple|2.117|57|Set.tm>>
     <associate|family union intersection and
-    inclusion|<tuple|2.109|51|Set.tm>>
-    <associate|family union of a empty set|<tuple|2.101|48|Set.tm>>
+    inclusion|<tuple|2.112|52|Set.tm>>
+    <associate|family union of a empty set|<tuple|2.104|50|Set.tm>>
     <associate|family union of family set and
-    surjections|<tuple|2.99|48|Set.tm>>
-    <associate|family union of union of two families|<tuple|2.111|52|Set.tm>>
-    <associate|family union{A,B}|<tuple|2.106|49|Set.tm>>
-    <associate|field|<tuple|4.33|110|Numbers.tm>>
-    <associate|field homeomorphism|<tuple|4.37|111|Numbers.tm>>
-    <associate|field inverse is unique|<tuple|4.34|111|Numbers.tm>>
+    surjections|<tuple|2.102|49|Set.tm>>
+    <associate|family union of union of two families|<tuple|2.114|54|Set.tm>>
+    <associate|family union{A,B}|<tuple|2.109|50|Set.tm>>
+    <associate|field|<tuple|4.33|114|Numbers.tm>>
+    <associate|field homeomorphism|<tuple|4.37|115|Numbers.tm>>
+    <associate|field inverse is unique|<tuple|4.34|115|Numbers.tm>>
     <associate|field isomorphism and neutral
-    element|<tuple|4.39|112|Numbers.tm>>
-    <associate|field subfield|<tuple|4.35|111|Numbers.tm>>
-    <associate|field subfield is a field|<tuple|4.36|111|Numbers.tm>>
+    element|<tuple|4.39|116|Numbers.tm>>
+    <associate|field subfield|<tuple|4.35|115|Numbers.tm>>
+    <associate|field subfield is a field|<tuple|4.36|115|Numbers.tm>>
+    <associate|finite set|<tuple|6.16|144|Numbers.tm>>
     <associate|function|<tuple|2.21|28|Set.tm>>
     <associate|function A^empty is empty|<tuple|2.27|29|Set.tm>>
     <associate|function B^A|<tuple|2.25|29|Set.tm>>
     <associate|function B^A and inclusion|<tuple|2.29|29|Set.tm>>
-    <associate|function P(A)=2^A|<tuple|2.69|38|Set.tm>>
+    <associate|function P(A) bijective with 2^A|<tuple|6.5|141|Numbers.tm>>
+    <associate|function P(A)=2^A|<tuple|2.71|39|Set.tm>>
     <associate|function alternative for composition|<tuple|2.37|31|Set.tm>>
-    <associate|function and power|<tuple|2.68|38|Set.tm>>
-    <associate|function between {0,1} and {A,B}|<tuple|2.23|28|Set.tm>>
-    <associate|function bijection and inverse|<tuple|2.65|37|Set.tm>>
-    <associate|function bijection condition (2)|<tuple|2.64|36|Set.tm>>
-    <associate|function bijection f,f-1|<tuple|2.62|36|Set.tm>>
-    <associate|function bijection has a inverse|<tuple|2.61|36|Set.tm>>
+    <associate|function and power|<tuple|2.70|39|Set.tm>>
+    <associate|function between {0,1} and {A,B}|<tuple|2.23|29|Set.tm>>
+    <associate|function bijection and inverse|<tuple|2.67|38|Set.tm>>
+    <associate|function bijection condition (2)|<tuple|2.66|37|Set.tm>>
+    <associate|function bijection f,f-1|<tuple|2.64|37|Set.tm>>
+    <associate|function bijection has a inverse|<tuple|2.63|37|Set.tm>>
     <associate|function characteristics function|<tuple|2.41|32|Set.tm>>
-    <associate|function combining functions (1)|<tuple|2.71|40|Set.tm>>
-    <associate|function combining functions (2)|<tuple|2.72|41|Set.tm>>
-    <associate|function composition and restriction|<tuple|2.78|42|Set.tm>>
+    <associate|function combining bijections|<tuple|2.75|42|Set.tm>>
+    <associate|function combining functions (1)|<tuple|2.73|41|Set.tm>>
+    <associate|function combining functions (2)|<tuple|2.74|42|Set.tm>>
+    <associate|function composition and restriction|<tuple|2.81|44|Set.tm>>
     <associate|function composition injectivity, surjectivity and
-    bijectivity|<tuple|2.67|37|Set.tm>>
+    bijectivity|<tuple|2.69|38|Set.tm>>
     <associate|function composition of Id function|<tuple|2.43|32|Set.tm>>
     <associate|function composition of functions is a
     fucntion|<tuple|2.45|33|Set.tm>>
-    <associate|function condition (1)|<tuple|2.22|28|Set.tm>>
+    <associate|function condition (1)|<tuple|2.22|29|Set.tm>>
     <associate|function constant function|<tuple|2.40|32|Set.tm>>
-    <associate|function empty function|<tuple|2.39|31|Set.tm>>
+    <associate|function empty function|<tuple|2.39|32|Set.tm>>
+    <associate|function empty function bijection|<tuple|2.59|36|Set.tm>>
     <associate|function equality (1)|<tuple|2.33|30|Set.tm>>
     <associate|function equality (2)|<tuple|2.36|31|Set.tm>>
     <associate|function extend target|<tuple|2.28|29|Set.tm>>
-    <associate|function extending funtion domain|<tuple|2.73|41|Set.tm>>
-    <associate|function f(x)|<tuple|2.34|30|Set.tm>>
+    <associate|function extending funtion domain|<tuple|2.76|42|Set.tm>>
+    <associate|function f(x)|<tuple|2.34|31|Set.tm>>
     <associate|function function and intersection and
-    union|<tuple|2.82|44|Set.tm>>
+    union|<tuple|2.85|46|Set.tm>>
     <associate|function identity function|<tuple|2.42|32|Set.tm>>
-    <associate|function identity map is a bijection|<tuple|2.58|35|Set.tm>>
-    <associate|function image preimage|<tuple|2.44|32|Set.tm>>
+    <associate|function identity map is a bijection|<tuple|2.60|36|Set.tm>>
+    <associate|function image preimage|<tuple|2.44|33|Set.tm>>
     <associate|function image preimage alternative|<tuple|2.38|31|Set.tm>>
     <associate|function inclusion function|<tuple|2.49|34|Set.tm>>
+    <associate|function injection and inverse
+    surjection|<tuple|6.9|142|Numbers.tm>>
+    <associate|function injection condition|<tuple|2.56|35|Set.tm>>
     <associate|function injective inverse is a
     function|<tuple|2.55|35|Set.tm>>
-    <associate|function injectivity to bijection|<tuple|2.60|35|Set.tm>>
-    <associate|function injectivity, surjectivity|<tuple|2.48|33|Set.tm>>
-    <associate|function inverse and restriction|<tuple|2.77|42|Set.tm>>
-    <associate|function inverse function and f(x)|<tuple|2.63|36|Set.tm>>
+    <associate|function injectivity to bijection|<tuple|2.62|36|Set.tm>>
+    <associate|function injectivity, surjectivity|<tuple|2.48|34|Set.tm>>
+    <associate|function inverse and restriction|<tuple|2.80|44|Set.tm>>
+    <associate|function inverse function and f(x)|<tuple|2.65|37|Set.tm>>
     <associate|function inverse of a bijection is
-    unique|<tuple|2.66|37|Set.tm>>
-    <associate|function power of intersection|<tuple|2.31|29|Set.tm>>
+    unique|<tuple|2.68|38|Set.tm>>
+    <associate|function no surjection between A and
+    P(A)|<tuple|6.7|141|Numbers.tm>>
+    <associate|function power of intersection|<tuple|2.31|30|Set.tm>>
     <associate|function preimage of image|<tuple|2.51|34|Set.tm>>
-    <associate|function properties (1)|<tuple|2.81|43|Set.tm>>
+    <associate|function properties (1)|<tuple|2.84|45|Set.tm>>
     <associate|function range restriction|<tuple|2.32|30|Set.tm>>
     <associate|function restricted function
-    properties|<tuple|2.75|41|Set.tm>>
-    <associate|function restriction and domain|<tuple|2.76|42|Set.tm>>
-    <associate|function restriction of a function|<tuple|2.79|43|Set.tm>>
-    <associate|function restriction of a graph|<tuple|2.70|39|Set.tm>>
-    <associate|function simple definition|<tuple|2.83|45|Set.tm>>
-    <associate|function simple definition notation|<tuple|2.84|46|Set.tm>>
+    properties|<tuple|2.78|43|Set.tm>>
+    <associate|function restriction and domain|<tuple|2.79|43|Set.tm>>
+    <associate|function restriction of a function|<tuple|2.82|44|Set.tm>>
+    <associate|function restriction of a graph|<tuple|2.72|40|Set.tm>>
+    <associate|function simple definition|<tuple|2.86|47|Set.tm>>
+    <associate|function simple definition notation|<tuple|2.87|47|Set.tm>>
     <associate|function surjection and construction of inverse
-    function|<tuple|3.96|88|Set.tm>>
-    <associate|function surjection condition|<tuple|2.47|33|Set.tm>>
-    <associate|function trivial bijection|<tuple|2.59|35|Set.tm>>
-    <associate|function: A^B and sets|<tuple|2.30|29|Set.tm>>
-    <associate|group abelian group/sub group|<tuple|4.8|104|Numbers.tm>>
-    <associate|group example bijections|<tuple|4.13|105|Numbers.tm>>
-    <associate|group example set of functions|<tuple|4.4|103|Numbers.tm>>
+    function|<tuple|3.97|91|Set.tm>>
+    <associate|function surjection condition|<tuple|2.47|34|Set.tm>>
+    <associate|function trivial bijection|<tuple|2.61|36|Set.tm>>
+    <associate|function: A^B and sets|<tuple|2.30|30|Set.tm>>
+    <associate|group abelian group/sub group|<tuple|4.8|108|Numbers.tm>>
+    <associate|group example bijections|<tuple|4.13|109|Numbers.tm>>
+    <associate|group example set of functions|<tuple|4.4|107|Numbers.tm>>
     <associate|group faithful, transitive action
-    (1)|<tuple|4.22|108|Numbers.tm>>
+    (1)|<tuple|4.22|112|Numbers.tm>>
     <associate|group faithful, transitive action
-    (2)|<tuple|4.23|108|Numbers.tm>>
-    <associate|group group|<tuple|4.5|104|Numbers.tm>>
-    <associate|group group inheritance|<tuple|4.12|105|Numbers.tm>>
-    <associate|group group inverse of inverse|<tuple|4.7|104|Numbers.tm>>
-    <associate|group homeomorphism|<tuple|4.14|105|Numbers.tm>>
-    <associate|group homeomorphism properties|<tuple|4.15|105|Numbers.tm>>
-    <associate|group inverse element|<tuple|4.6|104|Numbers.tm>>
-    <associate|group isomorphism|<tuple|4.16|106|Numbers.tm>>
-    <associate|group isomorphism inverse|<tuple|4.17|106|Numbers.tm>>
-    <associate|group left (right action)|<tuple|4.19|108|Numbers.tm>>
-    <associate|group semi-group inheritance|<tuple|4.11|104|Numbers.tm>>
-    <associate|group semigroup properties|<tuple|4.3|103|Numbers.tm>>
-    <associate|group sub-group|<tuple|4.10|104|Numbers.tm>>
+    (2)|<tuple|4.23|112|Numbers.tm>>
+    <associate|group group|<tuple|4.5|108|Numbers.tm>>
+    <associate|group group inheritance|<tuple|4.12|109|Numbers.tm>>
+    <associate|group group inverse of inverse|<tuple|4.7|108|Numbers.tm>>
+    <associate|group homeomorphism|<tuple|4.14|109|Numbers.tm>>
+    <associate|group homeomorphism properties|<tuple|4.15|109|Numbers.tm>>
+    <associate|group inverse element|<tuple|4.6|108|Numbers.tm>>
+    <associate|group isomorphism|<tuple|4.16|110|Numbers.tm>>
+    <associate|group isomorphism inverse|<tuple|4.17|110|Numbers.tm>>
+    <associate|group left (right action)|<tuple|4.19|112|Numbers.tm>>
+    <associate|group semi-group inheritance|<tuple|4.11|108|Numbers.tm>>
+    <associate|group semigroup properties|<tuple|4.3|107|Numbers.tm>>
+    <associate|group sub-group|<tuple|4.10|108|Numbers.tm>>
+    <associate|infinite set|<tuple|6.18|144|Numbers.tm>>
     <associate|inverse of a field isomorphism is a field
-    isomorphism|<tuple|4.38|111|Numbers.tm>>
-    <associate|natural numbers|<tuple|5.3|113|Numbers.tm>>
-    <associate|natural numbers 0|<tuple|5.7|113|Numbers.tm>>
-    <associate|natural numbers 0\<less\>=n|<tuple|5.46|127|Numbers.tm>>
-    <associate|natural numbers Peano|<tuple|5.17|115|Numbers.tm>>
-    <associate|natural numbers absorbing element|<tuple|5.36|124|Numbers.tm>>
-    <associate|natural numbers addition|<tuple|5.27|122|Numbers.tm>>
-    <associate|natural numbers additive semi-group|<tuple|5.34|123|Numbers.tm>>
-    <associate|natural numbers are total ordered|<tuple|5.51|128|Numbers.tm>>
-    <associate|natural numbers are transitive|<tuple|5.14|114|Numbers.tm>>
-    <associate|natural numbers are well ordered|<tuple|5.50|128|Numbers.tm>>
-    <associate|natural numbers distributivity|<tuple|5.39|125|Numbers.tm>>
+    isomorphism|<tuple|4.38|115|Numbers.tm>>
+    <associate|iteration final|<tuple|5.77|139|Numbers.tm>>
+    <associate|mathematical induction|<tuple|5.75|138|Numbers.tm>>
+    <associate|natural numbers|<tuple|5.3|117|Numbers.tm>>
+    <associate|natural numbers 0|<tuple|5.7|117|Numbers.tm>>
+    <associate|natural numbers 0\<less\>=n|<tuple|5.46|131|Numbers.tm>>
+    <associate|natural numbers \<less\> properties|<tuple|5.49|132|Numbers.tm>>
+    <associate|natural numbers Archimedean
+    property|<tuple|5.71|136|Numbers.tm>>
+    <associate|natural numbers Peano|<tuple|5.17|119|Numbers.tm>>
+    <associate|natural numbers absorbing element|<tuple|5.36|128|Numbers.tm>>
+    <associate|natural numbers addition|<tuple|5.27|126|Numbers.tm>>
+    <associate|natural numbers additive semi-group|<tuple|5.34|127|Numbers.tm>>
+    <associate|natural numbers are segments|<tuple|6.15|143|Numbers.tm>>
+    <associate|natural numbers are total ordered|<tuple|5.52|133|Numbers.tm>>
+    <associate|natural numbers are transitive|<tuple|5.14|118|Numbers.tm>>
+    <associate|natural numbers are well ordered|<tuple|5.51|132|Numbers.tm>>
+    <associate|natural numbers difference|<tuple|5.62|135|Numbers.tm>>
+    <associate|natural numbers distributivity|<tuple|5.39|129|Numbers.tm>>
+    <associate|natural numbers division|<tuple|5.72|137|Numbers.tm>>
     <associate|natural numbers every non zero number is a
-    successor|<tuple|5.18|115|Numbers.tm>>
-    <associate|natural numbers is a set|<tuple|5.4|113|Numbers.tm>>
+    successor|<tuple|5.18|119|Numbers.tm>>
+    <associate|natural numbers is a set|<tuple|5.4|117|Numbers.tm>>
     <associate|natural numbers k\<less\>n
-    condition|<tuple|5.48|127|Numbers.tm>>
+    condition|<tuple|5.48|132|Numbers.tm>>
     <associate|natural numbers mathematical
-    induction|<tuple|5.11|114|Numbers.tm>>
-    <associate|natural numbers multiplication|<tuple|5.35|124|Numbers.tm>>
+    induction|<tuple|5.11|118|Numbers.tm>>
+    <associate|natural numbers multiplication|<tuple|5.35|128|Numbers.tm>>
     <associate|natural numbers multiplication
-    associativity|<tuple|5.41|126|Numbers.tm>>
+    associativity|<tuple|5.41|130|Numbers.tm>>
     <associate|natural numbers multiplication
-    commutativity|<tuple|5.40|125|Numbers.tm>>
+    commutativity|<tuple|5.40|129|Numbers.tm>>
     <associate|natural numbers multiplication neutral
-    element|<tuple|5.37|124|Numbers.tm>>
+    element|<tuple|5.37|128|Numbers.tm>>
     <associate|natural numbers multiplicative abelian
-    semi-group|<tuple|5.42|126|Numbers.tm>>
-    <associate|natural numbers n+0=n|<tuple|5.29|122|Numbers.tm>>
-    <associate|natural numbers n+k=m+k\<less\>=\<gtr\>n=m|<tuple|5.43|126|Numbers.tm>>
-    <associate|natural numbers n+s(m)=s(n+m)|<tuple|5.31|123|Numbers.tm>>
-    <associate|natural numbers n.s(m)=n+n.m|<tuple|5.38|125|Numbers.tm>>
+    semi-group|<tuple|5.42|130|Numbers.tm>>
+    <associate|natural numbers n+0=n|<tuple|5.29|126|Numbers.tm>>
+    <associate|natural numbers n+k=m+k\<less\>=\<gtr\>n=m|<tuple|5.43|130|Numbers.tm>>
+    <associate|natural numbers n+s(m)=s(n+m)|<tuple|5.31|127|Numbers.tm>>
+    <associate|natural numbers n.k=m.k=\<gtr\>n=m|<tuple|5.70|136|Numbers.tm>>
+    <associate|natural numbers n.s(m)=n+n.m|<tuple|5.38|129|Numbers.tm>>
+    <associate|natural numbers n\<less\>=i\<less\>=m=\<gtr\>0\<less\>=i-n\<less\>=m-n|<tuple|5.64|135|Numbers.tm>>
     <associate|natural numbers n\<less\>=m\<less\>=\<gtr\>there exists a k
-    such that m=k|<tuple|5.59|130|Numbers.tm>>
+    such that m=k|<tuple|5.61|135|Numbers.tm>>
+    <associate|natural numbers n\<less\>=n+k|<tuple|5.56|134|Numbers.tm>>
+    <associate|natural numbers n\<less\>k\<less\>s(n)|<tuple|5.65|135|Numbers.tm>>
+    <associate|natural numbers n\<less\>m and r\<less\>s then
+    n+r\<less\>m+s|<tuple|5.67|135|Numbers.tm>>
     <associate|natural numbers n\<less\>m then there exists a k such that
-    m=n+k|<tuple|5.57|129|Numbers.tm>>
-    <associate|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k|<tuple|5.53|129|Numbers.tm>>
+    m=n+k|<tuple|5.59|134|Numbers.tm>>
+    <associate|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k|<tuple|5.55|133|Numbers.tm>>
     <associate|natural numbers n\<less\>m\<less\>=\<gtr\>there exists a k
-    such that m=k|<tuple|5.58|130|Numbers.tm>>
-    <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>=m|<tuple|5.49|128|Numbers.tm>>
-    <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>s(m)|<tuple|5.52|128|Numbers.tm>>
-    <associate|natural numbers n\<less\>s(m)=\<gtr\>s\<less\>=m|<tuple|5.55|129|Numbers.tm>>
-    <associate|natural numbers n\<less\>s(n)|<tuple|5.47|127|Numbers.tm>>
-    <associate|natural numbers n=/s(n)|<tuple|5.15|115|Numbers.tm>>
-    <associate|natural numbers order relation|<tuple|5.45|127|Numbers.tm>>
-    <associate|natural numbers s(n) = n+1|<tuple|5.30|122|Numbers.tm>>
-    <associate|natural numbers s(n)=/0|<tuple|5.10|114|Numbers.tm>>
-    <associate|natural numbers successor|<tuple|5.5|113|Numbers.tm>>
-    <associate|natural numbers successor function|<tuple|5.6|113|Numbers.tm>>
+    such that m=k|<tuple|5.60|134|Numbers.tm>>
+    <associate|natural numbers n\<less\>m=\<gtr\>n.k\<less\>m.k|<tuple|5.69|136|Numbers.tm>>
+    <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>=m|<tuple|5.50|132|Numbers.tm>>
+    <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>s(m)|<tuple|5.54|133|Numbers.tm>>
+    <associate|natural numbers n\<less\>s(m)=\<gtr\>s\<less\>=m|<tuple|5.57|134|Numbers.tm>>
+    <associate|natural numbers n\<less\>s(n)|<tuple|5.47|131|Numbers.tm>>
+    <associate|natural numbers n=/s(n)|<tuple|5.15|119|Numbers.tm>>
+    <associate|natural numbers order relation|<tuple|5.45|131|Numbers.tm>>
+    <associate|natural numbers product of non zero numbers is non
+    zero|<tuple|5.68|135|Numbers.tm>>
+    <associate|natural numbers s(n) = n+1|<tuple|5.30|126|Numbers.tm>>
+    <associate|natural numbers s(n)=/0|<tuple|5.10|118|Numbers.tm>>
+    <associate|natural numbers successor|<tuple|5.5|117|Numbers.tm>>
+    <associate|natural numbers successor function|<tuple|5.6|117|Numbers.tm>>
     <associate|natural numbers successor function is
-    injective|<tuple|5.16|115|Numbers.tm>>
-    <associate|natural numbers successor properties|<tuple|5.12|114|Numbers.tm>>
-    <associate|natural numbers sum associativity|<tuple|5.32|123|Numbers.tm>>
-    <associate|natural numbers sum commutativity|<tuple|5.33|123|Numbers.tm>>
-    <associate|natural numbers transitive|<tuple|5.13|114|Numbers.tm>>
-    <associate|operator|<tuple|4.1|103|Numbers.tm>>
-    <associate|order A isomorphism B|<tuple|3.48|75|Set.tm>>
-    <associate|order chain|<tuple|3.38|73|Set.tm>>
-    <associate|order chain is a totally ordered class|<tuple|3.40|73|Set.tm>>
-    <associate|order comparable|<tuple|3.35|73|Set.tm>>
-    <associate|order comparable property|<tuple|3.36|73|Set.tm>>
-    <associate|order composition of functions|<tuple|3.49|75|Set.tm>>
-    <associate|order condition for isomorphism|<tuple|3.51|75|Set.tm>>
+    injective|<tuple|5.16|119|Numbers.tm>>
+    <associate|natural numbers successor properties|<tuple|5.12|118|Numbers.tm>>
+    <associate|natural numbers sum associativity|<tuple|5.32|127|Numbers.tm>>
+    <associate|natural numbers sum commutativity|<tuple|5.33|127|Numbers.tm>>
+    <associate|natural numbers sup property|<tuple|5.66|135|Numbers.tm>>
+    <associate|natural numbers transitive|<tuple|5.13|118|Numbers.tm>>
+    <associate|natural numbers x\<less\>=y or
+    y\<less\>x|<tuple|5.53|133|Numbers.tm>>
+    <associate|operator|<tuple|4.1|107|Numbers.tm>>
+    <associate|order A isomorphism B|<tuple|3.49|77|Set.tm>>
+    <associate|order a\<less\>=b\<less\>=c|<tuple|3.29|72|Set.tm>>
+    <associate|order chain|<tuple|3.39|75|Set.tm>>
+    <associate|order chain is a totally ordered class|<tuple|3.41|75|Set.tm>>
+    <associate|order comparable|<tuple|3.36|75|Set.tm>>
+    <associate|order comparable property|<tuple|3.37|75|Set.tm>>
+    <associate|order composition of functions|<tuple|3.50|77|Set.tm>>
+    <associate|order condition for isomorphism|<tuple|3.52|78|Set.tm>>
     <associate|order condition for isomorphism in a totallu ordered
-    set|<tuple|3.54|76|Set.tm>>
+    set|<tuple|3.55|78|Set.tm>>
     <associate|order conditional complete
-    alternatives|<tuple|3.73|80|Set.tm>>
-    <associate|order conditional complete order|<tuple|3.72|80|Set.tm>>
-    <associate|order cut|<tuple|3.46|74|Set.tm>>
-    <associate|order empty set is a chain|<tuple|3.39|73|Set.tm>>
-    <associate|order eq order preorder to order|<tuple|3.32|71|Set.tm>>
+    alternatives|<tuple|3.74|82|Set.tm>>
+    <associate|order conditional complete order|<tuple|3.73|82|Set.tm>>
+    <associate|order cut|<tuple|3.47|76|Set.tm>>
+    <associate|order empty set is a chain|<tuple|3.40|75|Set.tm>>
+    <associate|order eq order preorder to order|<tuple|3.33|73|Set.tm>>
     <associate|order example inclusion order and sup,
-    inf|<tuple|3.65|77|Set.tm>>
+    inf|<tuple|3.66|80|Set.tm>>
     <associate|order greatest and lowest element are
-    unique|<tuple|3.59|76|Set.tm>>
-    <associate|order greatest lowest element|<tuple|3.56|76|Set.tm>>
-    <associate|order immediate successor|<tuple|3.79|82|Set.tm>>
+    unique|<tuple|3.60|79|Set.tm>>
+    <associate|order greatest lowest element|<tuple|3.57|79|Set.tm>>
+    <associate|order immediate successor|<tuple|3.80|85|Set.tm>>
     <associate|order inclusion and greatest and least
-    element|<tuple|3.67|78|Set.tm>>
-    <associate|order inclusion is a order|<tuple|3.31|70|Set.tm>>
-    <associate|order increasing, decreasing|<tuple|3.47|74|Set.tm>>
-    <associate|order initial segement|<tuple|3.43|74|Set.tm>>
-    <associate|order initial segement a\<less\>b|<tuple|3.89|84|Set.tm>>
-    <associate|order initial segement inclusion|<tuple|3.44|74|Set.tm>>
-    <associate|order intial sergment property|<tuple|3.45|74|Set.tm>>
+    element|<tuple|3.68|80|Set.tm>>
+    <associate|order inclusion is a order|<tuple|3.32|73|Set.tm>>
+    <associate|order increasing, decreasing|<tuple|3.48|77|Set.tm>>
+    <associate|order initial segement|<tuple|3.44|76|Set.tm>>
+    <associate|order initial segement a\<less\>b|<tuple|3.90|86|Set.tm>>
+    <associate|order initial segement inclusion|<tuple|3.45|76|Set.tm>>
+    <associate|order intial sergment property|<tuple|3.46|76|Set.tm>>
     <associate|order isomorphism and conditional
-    complete|<tuple|3.75|81|Set.tm>>
-    <associate|order isomorphism condition (2)|<tuple|3.52|75|Set.tm>>
+    complete|<tuple|3.76|84|Set.tm>>
+    <associate|order isomorphism condition (2)|<tuple|3.53|78|Set.tm>>
     <associate|order isomorphism preservers sup and
-    inf|<tuple|3.74|80|Set.tm>>
-    <associate|order isomorphism strictly|<tuple|3.50|75|Set.tm>>
-    <associate|order lexical order|<tuple|3.34|72|Set.tm>>
-    <associate|order lower upper bound and inclusion|<tuple|3.68|78|Set.tm>>
-    <associate|order lower upper bounds of empty set|<tuple|3.63|77|Set.tm>>
-    <associate|order maximal minimal element|<tuple|3.55|76|Set.tm>>
+    inf|<tuple|3.75|82|Set.tm>>
+    <associate|order isomorphism strictly|<tuple|3.51|77|Set.tm>>
+    <associate|order lexical order|<tuple|3.35|74|Set.tm>>
+    <associate|order lower upper bound and inclusion|<tuple|3.69|81|Set.tm>>
+    <associate|order lower upper bounds of empty set|<tuple|3.64|79|Set.tm>>
+    <associate|order maximal minimal element|<tuple|3.56|78|Set.tm>>
     <associate|order maximum of class with bigger
-    elements|<tuple|3.61|77|Set.tm>>
-    <associate|order min(A)\<less\>=max(A)|<tuple|3.60|77|Set.tm>>
-    <associate|order order relation|<tuple|3.26|70|Set.tm>>
-    <associate|order partial order on sub class|<tuple|3.33|72|Set.tm>>
-    <associate|order partial ordered class|<tuple|3.27|70|Set.tm>>
-    <associate|order preorder|<tuple|3.24|69|Set.tm>>
-    <associate|order preordered class|<tuple|3.25|70|Set.tm>>
+    elements|<tuple|3.62|79|Set.tm>>
+    <associate|order min(A)\<less\>=max(A)|<tuple|3.61|79|Set.tm>>
+    <associate|order order relation|<tuple|3.26|72|Set.tm>>
+    <associate|order partial order on sub class|<tuple|3.34|74|Set.tm>>
+    <associate|order partial ordered class|<tuple|3.27|72|Set.tm>>
+    <associate|order preorder|<tuple|3.24|71|Set.tm>>
+    <associate|order preordered class|<tuple|3.25|72|Set.tm>>
     <associate|order properties of the isomorph
-    relation|<tuple|3.53|76|Set.tm>>
-    <associate|order section|<tuple|3.81|82|Set.tm>>
-    <associate|order section and well ordering|<tuple|3.82|83|Set.tm>>
-    <associate|order strict order|<tuple|3.30|70|Set.tm>>
-    <associate|order sup and inf and bigger elements|<tuple|3.70|79|Set.tm>>
-    <associate|order sup inf condition|<tuple|3.71|79|Set.tm>>
-    <associate|order sup, inf stalls|<tuple|3.66|78|Set.tm>>
-    <associate|order sup,inf and inclusion|<tuple|3.69|78|Set.tm>>
-    <associate|order supremum infinum|<tuple|3.64|77|Set.tm>>
-    <associate|order total/well-order inclusion|<tuple|3.77|82|Set.tm>>
-    <associate|order totally lexicol ordering|<tuple|3.42|73|Set.tm>>
-    <associate|order totally ordered subclass|<tuple|3.41|73|Set.tm>>
-    <associate|order transfinite induction|<tuple|3.83|83|Set.tm>>
-    <associate|order upport lower bound|<tuple|3.62|77|Set.tm>>
+    relation|<tuple|3.54|78|Set.tm>>
+    <associate|order section|<tuple|3.82|85|Set.tm>>
+    <associate|order section and well ordering|<tuple|3.83|85|Set.tm>>
+    <associate|order strict order|<tuple|3.31|72|Set.tm>>
+    <associate|order sup and inf and bigger elements|<tuple|3.71|81|Set.tm>>
+    <associate|order sup inf condition|<tuple|3.72|81|Set.tm>>
+    <associate|order sup, inf property|<tuple|3.67|80|Set.tm>>
+    <associate|order sup,inf and inclusion|<tuple|3.70|81|Set.tm>>
+    <associate|order supremum infinum|<tuple|3.65|80|Set.tm>>
+    <associate|order total/well-order inclusion|<tuple|3.78|84|Set.tm>>
+    <associate|order totally lexicol ordering|<tuple|3.43|76|Set.tm>>
+    <associate|order totally ordered subclass|<tuple|3.42|76|Set.tm>>
+    <associate|order transfinite induction|<tuple|3.84|85|Set.tm>>
+    <associate|order upport lower bound|<tuple|3.63|79|Set.tm>>
     <associate|order well order and immediate
-    successor|<tuple|3.80|82|Set.tm>>
+    successor|<tuple|3.81|85|Set.tm>>
     <associate|order well order every subclass is isomorphic with A or a
-    iitial segement|<tuple|3.91|87|Set.tm>>
+    iitial segement|<tuple|3.92|90|Set.tm>>
     <associate|order well order implies conditional complete and totally
-    ordering|<tuple|3.78|82|Set.tm>>
+    ordering|<tuple|3.79|84|Set.tm>>
     <associate|order well ordered and order
-    isomorphism|<tuple|3.84|83|Set.tm>>
+    isomorphism|<tuple|3.85|86|Set.tm>>
     <associate|order well ordered class and
-    isomorphism|<tuple|3.85|83|Set.tm>>
+    isomorphism|<tuple|3.86|86|Set.tm>>
     <associate|order well ordered is not isomorph to a initial segment
-    |<tuple|3.86|83|Set.tm>>
+    |<tuple|3.87|86|Set.tm>>
     <associate|order well ordered isomorphic property
-    (3)|<tuple|3.88|84|Set.tm>>
+    (3)|<tuple|3.89|86|Set.tm>>
     <associate|order well ordered isomorphism
-    property|<tuple|3.87|84|Set.tm>>
+    property|<tuple|3.88|86|Set.tm>>
     <associate|order well ordering and isomorphism
-    (2)|<tuple|3.90|84|Set.tm>>
-    <associate|order well-rodered class|<tuple|3.76|82|Set.tm>>
+    (2)|<tuple|3.91|87|Set.tm>>
+    <associate|order well-rodered class|<tuple|3.77|84|Set.tm>>
     <associate|pair equality of pairs|<tuple|1.43|16|Set.tm>>
     <associate|pair of elements|<tuple|1.41|16|Set.tm>>
-    <associate|part:Numbers.tm|<tuple|3.123|103>>
+    <associate|part:Numbers.tm|<tuple|3.124|107>>
     <associate|part:Set.tm|<tuple|?|7>>
     <associate|partial function associativity|<tuple|2.18|27|Set.tm>>
-    <associate|partial function composition of graphs|<tuple|2.16|26|Set.tm>>
+    <associate|partial function composition of graphs|<tuple|2.16|27|Set.tm>>
     <associate|partial function composition of partial
-    functions|<tuple|2.17|26|Set.tm>>
+    functions|<tuple|2.17|27|Set.tm>>
     <associate|partial function dom(f) range(f) as
     subclasses|<tuple|2.10|25|Set.tm>>
     <associate|partial function domain range
     composition|<tuple|2.19|27|Set.tm>>
-    <associate|partial function image|<tuple|2.12|25|Set.tm>>
+    <associate|partial function image|<tuple|2.12|26|Set.tm>>
     <associate|partial function image preimage of
     compositions|<tuple|2.20|28|Set.tm>>
     <associate|partial function injectivity and
@@ -1045,36 +1137,39 @@
     <associate|partial functions image/preimage
     properties|<tuple|2.15|26|Set.tm>>
     <associate|power set|<tuple|1.63|22|Set.tm>>
-    <associate|product|<tuple|2.116|57|Set.tm>>
-    <associate|product and intersection|<tuple|2.120|60|Set.tm>>
-    <associate|product and power|<tuple|2.121|60|Set.tm>>
-    <associate|product extension|<tuple|2.123|61|Set.tm>>
-    <associate|product inclusion|<tuple|2.119|59|Set.tm>>
-    <associate|product of family with one element|<tuple|2.117|58|Set.tm>>
-    <associate|product of family with two classes|<tuple|2.118|58|Set.tm>>
-    <associate|product product is empty|<tuple|3.100|92|Set.tm>>
-    <associate|product product is not empty|<tuple|3.99|91|Set.tm>>
-    <associate|product projection function|<tuple|2.124|62|Set.tm>>
-    <associate|product projection is surjective|<tuple|3.98|91|Set.tm>>
-    <associate|product sub-product|<tuple|2.122|61|Set.tm>>
-    <associate|recursion|<tuple|5.19|116|Numbers.tm>>
-    <associate|recursion injective function|<tuple|5.20|118|Numbers.tm>>
-    <associate|recursion iteration|<tuple|5.24|119|Numbers.tm>>
-    <associate|recursion iteration in a group|<tuple|5.25|120|Numbers.tm>>
-    <associate|recursion step form (1)|<tuple|5.26|120|Numbers.tm>>
-    <associate|relation|<tuple|3.1|63|Set.tm>>
-    <associate|relation properties|<tuple|3.4|63|Set.tm>>
-    <associate|relation trivial|<tuple|3.3|63|Set.tm>>
-    <associate|ring|<tuple|4.24|108|Numbers.tm>>
-    <associate|ring absorbing element|<tuple|4.29|109|Numbers.tm>>
-    <associate|ring homeomorphism|<tuple|4.30|110|Numbers.tm>>
-    <associate|ring integer domain|<tuple|4.26|109|Numbers.tm>>
-    <associate|ring isomorphism|<tuple|4.32|110|Numbers.tm>>
+    <associate|product|<tuple|2.119|59|Set.tm>>
+    <associate|product and intersection|<tuple|2.123|61|Set.tm>>
+    <associate|product and power|<tuple|2.124|62|Set.tm>>
+    <associate|product extension|<tuple|2.126|63|Set.tm>>
+    <associate|product inclusion|<tuple|2.122|61|Set.tm>>
+    <associate|product of family with one element|<tuple|2.120|59|Set.tm>>
+    <associate|product of family with two classes|<tuple|2.121|59|Set.tm>>
+    <associate|product product is empty|<tuple|3.101|94|Set.tm>>
+    <associate|product product is not empty|<tuple|3.100|94|Set.tm>>
+    <associate|product projection function|<tuple|2.127|63|Set.tm>>
+    <associate|product projection is surjective|<tuple|3.99|93|Set.tm>>
+    <associate|product sub-product|<tuple|2.125|62|Set.tm>>
+    <associate|recursion|<tuple|5.19|120|Numbers.tm>>
+    <associate|recursion final|<tuple|5.76|139|Numbers.tm>>
+    <associate|recursion injective function|<tuple|5.20|122|Numbers.tm>>
+    <associate|recursion iteration|<tuple|5.24|123|Numbers.tm>>
+    <associate|recursion iteration in a group|<tuple|5.25|124|Numbers.tm>>
+    <associate|recursion step (2)|<tuple|5.78|139|Numbers.tm>>
+    <associate|recursion step form (1)|<tuple|5.26|125|Numbers.tm>>
+    <associate|recursion step form (3)|<tuple|5.79|139|Numbers.tm>>
+    <associate|relation|<tuple|3.1|65|Set.tm>>
+    <associate|relation properties|<tuple|3.4|65|Set.tm>>
+    <associate|relation trivial|<tuple|3.3|65|Set.tm>>
+    <associate|ring|<tuple|4.24|112|Numbers.tm>>
+    <associate|ring absorbing element|<tuple|4.29|113|Numbers.tm>>
+    <associate|ring homeomorphism|<tuple|4.30|114|Numbers.tm>>
+    <associate|ring integer domain|<tuple|4.26|113|Numbers.tm>>
+    <associate|ring isomorphism|<tuple|4.32|114|Numbers.tm>>
     <associate|ring ring homeomorphism and neutral
-    element|<tuple|4.31|110|Numbers.tm>>
-    <associate|ring subring is a ring|<tuple|4.28|109|Numbers.tm>>
-    <associate|ring zero divisor|<tuple|4.25|109|Numbers.tm>>
-    <associate|semi-group|<tuple|4.2|103|Numbers.tm>>
+    element|<tuple|4.31|114|Numbers.tm>>
+    <associate|ring subring is a ring|<tuple|4.28|113|Numbers.tm>>
+    <associate|ring zero divisor|<tuple|4.25|113|Numbers.tm>>
+    <associate|semi-group|<tuple|4.2|107|Numbers.tm>>
     <associate|set A*B|<tuple|1.67|22|Set.tm>>
     <associate|set A*B is subset of P(P(AUB))|<tuple|1.66|22|Set.tm>>
     <associate|set element proper class|<tuple|1.50|19|Set.tm>>
@@ -1083,9 +1178,9 @@
     <associate|set restriction of a set of sets|<tuple|1.65|22|Set.tm>>
     <associate|set successor set|<tuple|1.51|19|Set.tm>>
     <associate|set union of two sets is a set|<tuple|1.62|22|Set.tm>>
-    <associate|sub-semi-group|<tuple|4.9|104|Numbers.tm>>
-    <associate|subring|<tuple|4.27|109|Numbers.tm>>
-    <associate|totally ordered class|<tuple|3.37|73|Set.tm>>
+    <associate|sub-semi-group|<tuple|4.9|108|Numbers.tm>>
+    <associate|subring|<tuple|4.27|113|Numbers.tm>>
+    <associate|totally ordered class|<tuple|3.38|75|Set.tm>>
     <associate|universal class|<tuple|1.12|9|Set.tm>>
     <associate|universal class property|<tuple|1.13|9|Set.tm>>
   </collection>
@@ -1309,6 +1404,26 @@
       <tuple|<tuple|multiplication of natural numbers>|<pageref|auto-143>>
 
       <tuple|<tuple|absorbing element>|<pageref|auto-144>>
+
+      <tuple|<tuple|equipotence>|<pageref|auto-149>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<approx\>>>|<pageref|auto-150>>
+
+      <tuple|<tuple|equipotency>|<pageref|auto-151>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<preccurlyeq\>>>|<pageref|auto-152>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<prec\>>>|<pageref|auto-153>>
+
+      <tuple|<tuple|finite set>|<pageref|auto-155>>
+
+      <tuple|<tuple|infinite set>|<pageref|auto-156>>
+
+      <tuple|<tuple|denumerable set>|<pageref|auto-157>>
+
+      <tuple|<tuple|infinite countable set>|<pageref|auto-158>>
+
+      <tuple|<tuple|countable set>|<pageref|auto-159>>
     </associate>
     <\associate|parts>
       <tuple|Set.tm|chapter-nr|0|section-nr|0|subsection-nr|0>
@@ -1453,13 +1568,24 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-145>
 
+      5.5<space|2spc>Other forms of Mathematical Induction and Recursion
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-146>
+
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6<space|2spc>Finite
       and Infinite Sets> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-146><vspace|0.5fn>
+      <no-break><pageref|auto-147><vspace|0.5fn>
+
+      6.1<space|2spc>Equipotence <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-148>
+
+      6.2<space|2spc>Finite, Infinite and Countable sets
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-154>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Index>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-147><vspace|0.5fn>
+      <no-break><pageref|auto-160><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>

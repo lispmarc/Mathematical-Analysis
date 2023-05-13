@@ -1495,8 +1495,9 @@
 
   <\theorem>
     <label|natural numbers every non zero number is a successor>If
-    <math|n\<in\>\<bbb-N\>\<wedge\>n\<neq\>0> then
-    <math|\<exists\>!m\<in\>\<bbb-N\>> such that <math|n=s<around*|(|m|)>>
+    <math|n\<in\>\<bbb-N\><rsub|0>\<wedge\>n\<neq\>0> then
+    <math|\<exists\>!m\<in\>\<bbb-N\><rsub|9>> such that
+    <math|n=s<around*|(|m|)>>
   </theorem>
 
   <\proof>
@@ -1825,8 +1826,8 @@
 
   <\corollary>
     <label|recursion injective function>If <math|A> is a set, <math|a\<in\>A>
-    and <math|f:A\<rightarrow\>A> a <with|font-series|bold|injective>
-    function then there exists a unique function\ 
+    and <math|f:A\<rightarrow\>A> a function then there exists a unique
+    function\ 
 
     <\equation*>
       \<lambda\>:\<bbb-N\><rsub|0>\<rightarrow\>A
@@ -1840,8 +1841,8 @@
       <item><math|\<forall\>n\<in\>\<bbb-N\><rsub|0><text| we have
       >\<lambda\><around*|(|s<around*|(|n|)>|)>=f<around*|(|\<lambda\><around*|(|n|)>|)>>
 
-      <item>If <math|a\<nin\>f<around*|(|A|)>> then <math|\<lambda\>> is
-      injective
+      <item>If <math|a\<nin\>f<around*|(|A|)>> and <math|f:A\<rightarrow\>A>
+      is injective then <math|\<lambda\>> is injective
     </enumerate>
   </corollary>
 
@@ -1974,7 +1975,8 @@
   <\theorem>
     <label|recursion iteration><index|iteration><dueto|Iteration>Let <math|A>
     be a non empty set and <math|f:A\<rightarrow\>A> a function. Then
-    <math|\<forall\>n\<in\>\<bbb-N\><rsub|0>> there exist a function\ 
+    <math|\<forall\>n\<in\>\<bbb-N\><rsub|0>> there exist a
+    <with|font-series|bold|unique> function\ 
 
     <\equation*>
       <around*|(|f|)><rsup|n>:A\<rightarrow\>A
@@ -2905,6 +2907,48 @@
   </proof>
 
   <\theorem>
+    <label|natural numbers \<less\> properties>If
+    <math|n,m\<in\>\<bbb-N\><rsub|0>> then we have that\ 
+
+    <\enumerate>
+      <item><math|n\<less\>0> is false.
+
+      <item>If <math|n\<leqslant\>0> then <math|n=0>.
+
+      <item><math|n\<less\>m\<wedge\>m\<less\>n> is false.\ 
+
+      <item><math|n\<leqslant\>m\<wedge\>m\<less\>n> is false.
+
+      <item><math|n\<less\>m\<wedge\>m\<leqslant\>n> is false.
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|n\<less\>0> then by [theorem: <reference|natural numbers
+      k\<less\>n condition>] we have <math|n\<in\>0=\<varnothing\>> which is
+      false.
+
+      <item>If <math|n\<leqslant\>0> then we have either <math|n\<less\>0>
+      [which by (1) is false] or <math|n=0>.
+
+      <item>If <math|n\<less\>m\<wedge\>m\<less\>n> then
+      <math|n\<leqslant\>m\<wedge\>m\<leqslant\>n\<Rightarrow\>n=m> and
+      <math|n\<neq\>m> which is a contradiction.
+
+      <item>If <math|n\<leqslant\>m\<wedge\>m\<less\>n> then
+      <math|n\<leqslant\>m\<wedge\>m\<leqslant\>n\<Rightarrow\>n=m> and
+      <math|n\<neq\>m> which is a contradiction.
+
+      <item>If <math|n\<less\>m\<wedge\>m\<leqslant\>n> then
+      <math|n\<leqslant\>m\<wedge\>m\<leqslant\>n\<Rightarrow\>n=m> and
+      <math|n\<neq\>m> which is a contradiction.
+    </enumerate>
+  </proof>
+
+  <\theorem>
     <label|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>=m><math|\<forall\>n,m\<in\>\<bbb-N\><rsub|0>>
     with <math|n\<less\>m> we have <math|s<around*|(|n|)>\<leqslant\>m> [in
     other words using [theorem: <reference|natural numbers s(n) = n+1>]
@@ -2917,10 +2961,10 @@
     then we have:
 
     <\description>
-      <item*|<math|0\<in\>S<rsub|n>>>If <math|n\<less\>0> then
-      <math|n\<neq\>0> and <math|n\<leqslant\>0\<Rightarrow\>n\<in\>0=\<varnothing\>>
-      giving a contradiction, so <math|n\<less\>0\<Rightarrow\>s<around*|(|n|)>\<leqslant\>m>
-      is true, proving that <math|0\<in\>S<rsub|n>>.
+      <item*|<math|0\<in\>S<rsub|n>>>By [theorem: <reference|natural numbers
+      \<less\> properties>] \ <math|n\<less\>0> is false, so
+      <math|n\<less\>0\<Rightarrow\>s<around*|(|n|)>\<leqslant\>m> is true,
+      proving that <math|0\<in\>S<rsub|n>>.
 
       <item*|<math|m\<in\>S<rsub|n>\<rightarrow\>s<around*|(|m|)>\<in\>S<rsub|n>>>Let
       <math|n\<less\>s<around*|(|m|)>> then we have
@@ -3010,6 +3054,18 @@
     totally ordered and conditional complete.
   </proof>
 
+  <\corollary>
+    <label|natural numbers x\<less\>=y or y\<less\>x>If
+    <math|x,y\<in\>\<bbb-N\><rsub|0>> then we have either
+    <math|x\<leqslant\>y> or <math|y\<less\>x>
+  </corollary>
+
+  <\proof>
+    As <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>>
+    is well ordered the corollary follows from [theroem: <reference|order
+    well order implies conditional complete and totally ordering>].
+  </proof>
+
   <\theorem>
     <label|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>s(m)><math|\<forall\>n,m\<in\>\<bbb-N\>>
     then <math|n\<less\>m\<Leftrightarrow\>s<around*|(|n|)>\<less\>s<around*|(|m|)>>
@@ -3040,10 +3096,9 @@
         \<neg\><around*|(|m\<leqslant\>n|)>
       </equation*>
 
-      As <math|<around*|\<langle\>|\<bbb-N\><rsub|0>\<leqslant\>|\<rangle\>>>
-      is well ordered we have by [theorem: <reference|order well order
-      implies conditional complete and totally ordering>] that
-      <math|m\<leqslant\>n> or <math|n\<less\>m> so that we must have\ 
+      Using [corollary: <reference|natural numbers x\<less\>=y or
+      y\<less\>x>] we have <math|m\<leqslant\>n> or <math|n\<less\>m> so that
+      we must have\ 
 
       <\equation*>
         n\<less\>m
@@ -3058,17 +3113,14 @@
     <\equation*>
       n\<less\>m\<Leftrightarrow\>n+k\<less\>m+k
     </equation*>
-  </theorem>
 
-  <\note>
-    Combining this with the fact that <math|n=m\<Leftrightarrow\>n+k=m+k>
-    [see [theorem: <reference|natural numbers n+k=m+k\<less\>=\<gtr\>n=m>]]
-    we have also\ 
+    which, using \ [theorem: <reference|natural numbers
+    n+k=m+k\<less\>=\<gtr\>n=m>], implies that\ 
 
     <\equation*>
-      n\<leqslant\>n\<Leftrightarrow\>n+k\<leqslant\>m+k
+      n\<leqslant\>m\<Leftrightarrow\>n+k\<leqslant\>m+k
     </equation*>
-  </note>
+  </theorem>
 
   <\proof>
     We use induction , so let <math|S=<around*|{|k\<in\>\<bbb-N\><rsub|0>\|<text|If
@@ -3099,6 +3151,42 @@
 
   TODO Check the rest
 
+  <\corollary>
+    <label|natural numbers n\<less\>=n+k>If <math|n\<in\>\<bbb-N\><rsub|0>>
+    then we have:
+
+    <\enumerate>
+      <item>If <math|k\<in\>\<bbb-N\><rsub|0>\\<around*|{|0|}>> then
+      <math|n\<less\>n+k>
+
+      <item>If <math|k\<in\>\<bbb-N\><rsub|0>> then <math|n\<leqslant\>n+k>
+    </enumerate>
+  </corollary>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|k\<neq\>0> then <math|0\<less\>k> so that by the above
+      theorem [theorem: <reference|natural numbers
+      n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>] we have\ 
+
+      <\equation*>
+        n\<equallim\><rsub|<text|[theorem: <reference|natural numbers
+        n+0=n>]>>n\<less\>n+k
+      </equation*>
+
+      <item>As <math|0\<leqslant\>0> it follows from the above theorem
+      [theorem: <reference|natural numbers
+      n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>] we have<space|1em>that
+
+      <\equation*>
+        n\<equallim\><rsub|<text|[theorem: <reference|natural numbers
+        n+0=n>]>>n\<leqslant\>n+k
+      </equation*>
+    </enumerate>
+  </proof>
+
   <\theorem>
     <label|natural numbers n\<less\>s(m)=\<gtr\>s\<less\>=m>If
     <math|n,m\<in\>\<bbb-N\><rsub|0>> with <math|n\<less\>s<around*|(|m|)>>
@@ -3112,15 +3200,13 @@
   </note>
 
   <\proof>
-    As <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>>
-    is well ordered [see theorem: <reference|natural numbers are well
-    ordered>] it follows from [theorem: <reference|order well order implies
-    conditional complete and totally ordering>] that either
-    <math|n\<leqslant\>m> or <math|m\<less\>n>. If <math|m\<less\>n> then by
-    [theorem: <reference|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>=m>]
-    <math|s<around*|(|m|)>\<leqslant\>n>, which combined with the hypothesis
-    <math|n\<less\>s<around*|(|m|)>> gives the contradiction
-    <math|n\<less\>m>. Hence we must have <math|n\<leqslant\>m>.\ 
+    Using [corollary: <reference|natural numbers x\<less\>=y or y\<less\>x>]
+    we have that either <math|n\<leqslant\>m> or <math|m\<less\>n>. If
+    <math|m\<less\>n> then by [theorem: <reference|natural numbers
+    n\<less\>m=\<gtr\>s(n)\<less\>=m>] <math|s<around*|(|m|)>\<leqslant\>n>,
+    which combined with the hypothesis <math|n\<less\>s<around*|(|m|)>> gives
+    the contradiction <math|n\<less\>m>. Hence we must have
+    <math|n\<leqslant\>m>.\ 
   </proof>
 
   <\theorem>
@@ -3142,10 +3228,9 @@
     then we have:
 
     <\description>
-      <item*|<math|0\<in\>S<rsub|n>>>If <math|n\<less\>0> then by ]theorem:
-      <reference|natural numbers k\<less\>n condition>]
-      <math|n\<in\>0=\<varnothing\>> a contradiction. Hence the condition is
-      satisfied vacuously, proving that <math|0\<in\>S<rsub|n>>.
+      <item*|<math|0\<in\>S<rsub|n>>>As <math|n\<less\>0> is false by
+      [theorem: <reference|natural numbers \<less\> properties>], the
+      condition is satisfied vacuously, proving that <math|0\<in\>S<rsub|n>>.
 
       <item*|<math|m\<in\>S<rsub|n>\<Rightarrow\>s<around*|(|m|)>\<in\>S<rsub|n>>>If
       <math|n\<less\>s<around*|(|m|)>> then we have by [theorem:
@@ -3274,6 +3359,696 @@
     </description>
   </proof>
 
+  The above corollary ensures that the following definition is well defined.
+
+  <\definition>
+    <label|natural numbers difference>If <math|n,m\<in\>\<bbb-N\><rsub|0>>
+    with <math|n\<leqslant\>m> then the <with|font-series|bold|unique>
+    <math|k\<in\>\<bbb-N\><rsub|0>> such that <math|m=n+k> is noted as
+    <math|m-n>. So we have that <math|n+<around*|(|m-n|)>\<equallim\><rsub|<text|[theorem:
+    <reference|natural numbers sum commutativity>]>><around*|(|m-n|)>+n> and
+    using [theorem: <reference|natural numbers n+0=n>] that <math|n-n=0>.
+  </definition>
+
+  <\note>
+    The condition <math|n\<leqslant\>m> is essential fro the existance of
+    <math|n-m> as this is needed for [corollary: <reference|natural numbers
+    n\<less\>=m\<less\>=\<gtr\>there exists a k such that m=k>]. Later when
+    we define the set <math|\<bbb-Z\>> of integers we will relax this
+    condition.
+  </note>
+
+  <\theorem>
+    <label|natural numbers n\<less\>=i\<less\>=m=\<gtr\>0\<less\>=i-n\<less\>=m-n>If
+    <math|n,m,i\<in\>\<bbb-N\><rsub|0>> such that
+    <math|n\<leqslant\>i\<leqslant\>m> then
+    <math|0\<leqslant\>i-n\<leqslant\>m-n>
+  </theorem>
+
+  <\proof>
+    From [corollary: <reference|natural numbers x\<less\>=y or y\<less\>x>]
+    it follows that <math|0\<leqslant\>i-n\<vee\>i-n\<less\>0> and
+    <math|i-n\<leqslant\>m-n\<vee\>m-n\<less\>i-n>. Now by [theorem:
+    <reference|natural numbers \<less\> properties>] we have that
+    <math|i-n\<less\>0> is false so we must have that
+    <math|0\<leqslant\>i-n>. If <math|m-n\<less\>i-n> then by [theorem:
+    <reference|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>]
+    <math|m=<around*|(|m-n|)>+n\<less\><around*|(|i-n|)>+n=n> proving htat
+    <math|m\<less\>n> which by [theorem: <reference|natural numbers \<less\>
+    properties>] contradicts with <math|n\<less\>m>, so we must have
+    <math|i-n\<leqslant\>m-n>.
+  </proof>
+
+  <\theorem>
+    <label|natural numbers n\<less\>k\<less\>s(n)>If
+    <math|n\<in\>\<bbb-N\><rsub|0>> then there does not exist a
+    <math|k\<in\>\<bbb-N\><rsub|0>> such that
+    <math|n\<less\>k\<less\>s<around*|(|n|)>>
+  </theorem>
+
+  <\proof>
+    Assume the <math|\<exists\>k\<in\>\<bbb-N\><rsub|0>> such that
+    <math|n\<less\>k\<less\>s<around*|(|n|)>>. As <math|n\<less\>k> we have
+    by [theorem: <reference|natural numbers
+    n\<less\>m=\<gtr\>s(n)\<less\>=m>] that
+    <math|s<around*|(|n|)>\<leqslant\>k> which combined with
+    <math|k\<less\>s<around*|(|n|)>> gives
+    <math|s<around*|(|n|)>\<less\>s<around*|(|n|)>> a contradiction.
+  </proof>
+
+  <\theorem>
+    <label|natural numbers sup property>If
+    <math|\<varnothing\>\<neq\>A\<subseteq\>\<bbb-N\><rsub|0>> is a set such
+    that <math|sup<around*|(|A|)>> exist then
+    <math|sup<around*|(|A|)>\<in\>A>
+  </theorem>
+
+  <\proof>
+    We have the following cases for <math|sup<around*|(|A|)>> to consider:
+
+    <\description>
+      <item*|<math|sup<around*|(|A|)>=0>>As <math|A\<neq\>\<varnothing\>>
+      there exist a <math|x\<in\>A> as the <math|sup<around*|(|A|)>> is a
+      upper bound of <math|A> we have that <math|x\<leqslant\>0>, which by
+      [theorem: <reference|natural numbers \<less\> properties>] proves that
+      <math|x=0=sup<around*|(|A|)>>, giving that
+      <math|sup<around*|(|A|)>=x\<in\>A>.
+
+      <item*|<math|sup<around*|(|A|)>\<neq\>0>>Using [theorem:
+      <reference|natural numbers every non zero number is a successor>] there
+      exist a <math|k\<in\>\<bbb-N\><rsub|0>> such that
+      <math|s<around*|(|k|)>=sup<around*|(|A|)>>. As
+      <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>>
+      is totally ordered [see theorem: <reference|natural numbers are total
+      ordered>] and by [theorem: <reference|natural numbers n\<less\>s(n)>]
+      <math|k\<less\>s<around*|(|k|)>=sup<around*|(|A|)>> it follows from the
+      properties of the supremum [theorem: <reference|order sup, inf
+      property>] that there exist a <math|a\<in\>A> such that
+      <math|k\<less\>a\<leqslant\>sup<around*|(|A|)>=sup<around*|(|k|)>>. By
+      the previous theorem [theorem: <reference|natural numbers
+      n\<less\>k\<less\>s(n)>] it follows that <math|a=sup<around*|(|A|)>> so
+      that <math|sup<around*|(|A|)>\<in\>A>.
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|natural numbers n\<less\>m and r\<less\>s then n+r\<less\>m+s>If
+    <math|n,m,r,s\<in\>\<bbb-N\><rsub|0>> such that
+    <math|n\<less\>m*\<wedge\>r\<less\>s> then <math|n+r\<less\>m+s>.
+  </theorem>
+
+  <\proof>
+    Using [theorem: <reference|natural numbers
+    n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>] to follows that
+    <math|n+r\<less\>m+r> and <math|r+m\<less\>s+m\<Rightarrowlim\><rsub|<text|[theorem:
+    <reference|natural numbers sum commutativity>]>>m+r\<less\>m+s> proving,
+    using transitivity, that <math|n+r\<less\>m+1>.
+  </proof>
+
+  <\theorem>
+    <label|natural numbers product of non zero numbers is non zero>Let
+    <math|n,m\<in\>\<bbb-N\><rsub|0>\\<around*|{|0|}>> then
+    <math|n\<cdot\>m\<in\>\<bbb-N\><rsub|0>\\<around*|{|0|}>>.
+  </theorem>
+
+  <\proof>
+    As <math|m\<neq\>0> it follows from [theorem: <reference|natural numbers
+    every non zero number is a successor>] that
+    <math|\<exists\>k\<in\>\<bbb-N\><rsub|0>> such that
+    <math|m=s<around*|(|k|)>>. So <math|n\<cdot\>m=n\<cdot\>s<around*|(|k|)>\<equallim\><rsub|<text|[theorem:
+    <reference|natural numbers n.s(m)=n+n.m>]>>n+n\<cdot\>k>. Further as
+    <math|n\<neq\>0> we have that <math|0\<less\>n>, so that by [theorem:
+    <reference|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>]
+    <math|n\<equallim\><rsub|<text|<reference|natural numbers
+    n+0=n>>>n+0\<leqslant\>n+n\<cdot\>k=n\<cdot\>m>, using transitivity gives
+    then finally <math|0\<less\>n\<cdot\>m>.
+  </proof>
+
+  <\theorem>
+    <label|natural numbers n\<less\>m=\<gtr\>n.k\<less\>m.k>If
+    <math|n,m\<in\>\<bbb-N\><rsub|0>> such that <math|n\<less\>m> then\ 
+
+    <\enumerate>
+      <item>If <math|k\<in\>\<bbb-N\><rsub|0>\\<around*|{|0|}>> then
+      <math|n\<cdot\>k\<less\>m\<cdot\>k>
+
+      <item><math|>If <math|k\<in\>\<bbb-N\><rsub|0>> then
+      <math|n\<cdot\>k\<leqslant\>m\<cdot\>k>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>As <math|n\<less\>m> we have by [theorem: <reference|natural
+      numbers n\<less\>m then there exists a k such that m=n+k>] that there
+      exist a <math|l\<in\>\<bbb-N\><rsub|0>\\<around*|{|0|}>> such that
+      <math|m=n+l>. So
+
+      <\equation*>
+        m\<cdot\>k=<around*|(|n+l|)>\<cdot\>k\<equallim\><rsub|<text|[theorem:
+        <reference|natural numbers distributivity>]>>n\<cdot\>k+l\<cdot\>k.
+      </equation*>
+
+      As <math|l,k\<in\>\<bbb-N\><rsub|0>\\<around*|{|0|}>> we have by
+      [theorem: <reference|natural numbers product of non zero numbers is non
+      zero>] that <math|l\<cdot\>k\<neq\>0> so that
+      <math|0\<less\>l\<cdot\>k>, hence using [theorem: <reference|natural
+      numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>] we have that
+
+      <\equation*>
+        n\<cdot\>k\<equallim\><rsub|<text|[theorem: <reference|natural
+        numbers n+0=n>]>>0=n\<cdot\>k\<less\>l\<cdot\>k+n\<cdot\>k\<equallim\><rsub|<text|[theorem:
+        <reference|natural numbers sum commutativity>]>>n\<cdot\>k+l\<cdot\>k=m\<cdot\>k
+      </equation*>
+
+      <item>If <math|k\<in\>\<bbb-N\><rsub|0>> then we have either:
+
+      <\description>
+        <item*|<math|k=0>>Then by [theorem: <reference|natural numbers
+        absorbing element>] we have <math|n\<cdot\>k=0=m\<cdot\>k> so that
+        <math|n\<cdot\>k\<leqslant\>m\<cdot\>l>.
+
+        <item*|<math|k\<neq\>0>>Then by (1)
+        <math|n\<cdot\>k\<less\>m\<cdot\>k\<Rightarrow\>n\<cdot\>k\<leqslant\>m\<cdot\>k>.
+      </description>
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|natural numbers n.k=m.k=\<gtr\>n=m>If
+    <math|n,m\<in\>\<bbb-N\><rsub|0>> such that
+    <math|\<exists\>k\<in\>\<bbb-N\><rsub|0>\\<around*|{|n|}>> such that
+    <math|n\<cdot\>k=m\<cdot\>k> then <math|n=m>.
+  </theorem>
+
+  <\proof>
+    As <math|\<bbb-N\><rsub|0>> is well-ordered we have by [theorem:
+    <reference|order well order implies conditional complete and totally
+    ordering>] that <math|n\<less\>m>, <math|m\<less\>n> or <math|n=m>. If
+    <math|n\<less\>m> then by [theorem: <reference|natural numbers
+    n\<less\>m=\<gtr\>n.k\<less\>m.k>] <math|n\<cdot\>k\<less\>m\<cdot\>k>
+    contradicting <math|n\<cdot\>k=m\<cdot\>k>, likewise if <math|m\<less\>n>
+    then by [theorem: <reference|natural numbers
+    n\<less\>m=\<gtr\>n.k\<less\>m.k>] <math|m\<cdot\>k\<less\>n\<cdot\>k>
+    contradicting <math|n\<cdot\>k=m\<cdot\>k>. So we must have <math|n=m>.
+  </proof>
+
+  <\theorem>
+    <label|natural numbers Archimedean property><dueto|Archimedean
+    Property>If <math|x,y\<in\>\<bbb-N\><rsub|0>> and <math|x\<neq\>0> then
+    there exists a <math|z\<in\>\<bbb-N\><rsub|0>> such that
+    <math|y\<less\>z\<cdot\>x>
+  </theorem>
+
+  <\proof>
+    For <math|y> we have two possibilities:
+
+    <\description>
+      <item*|<math|y=0>>As <math|x\<neq\>0> we have
+      <math|y=0\<less\>x\<equallim\><rsub|<text|[theorem: <reference|natural
+      numbers multiplication neutral element>]>>1\<cdot\>x>, so using
+      <math|z=1> proves the theorem.
+
+      <item*|<math|y\<neq\>0>>Using [corollary: <reference|natural numbers
+      x\<less\>=y or y\<less\>x>] we have for
+      <math|x,y\<in\>\<bbb-N\><rsub|0>> either:
+
+      <\description>
+        <item*|<math|y\<leqslant\>x>>Then as
+        <math|1\<less\>s<around*|(|1|)>=2> [see theorem: <reference|natural
+        numbers n\<less\>s(n)>] we have <math|x\<equallim\><rsub|<text|[theorem:
+        <reference|natural numbers multiplication neutral
+        element>]>>1\<cdot\>x\<less\>2\<cdot\>x> [see: theorem:
+        <reference|natural numbers n\<less\>m=\<gtr\>n.k\<less\>m.k>], hence
+        <math|y\<less\>2\<cdot\>x>, so using <math|z=2> proves the theorem.
+
+        <item*|<math|x\<less\>y>>Using [theorem: <reference|natural numbers
+        n\<less\>m then there exists a k such that m=n+k>] there exist
+        <math|k\<in\>\<bbb-N\><rsub|0>\\<around*|{|0|}>> such that
+
+        <\equation>
+          <label|eq 5.14.019>y=x+k
+        </equation>
+
+        As <math|0\<less\>x> we have by [theorem: <reference|natural numbers
+        n\<less\>m=\<gtr\>s(n)\<less\>=m>]
+        <math|1=s<around*|(|0|)>\<leqslant\>x> so that by multiplication with
+        <math|k> we have [see [see theorem: <reference|natural numbers
+        n\<less\>m=\<gtr\>n.k\<less\>m.k>] that
+
+        <\equation>
+          <label|eq 5.15.019>k=1\<cdot\>k\<leqslant\>x\<cdot\>k
+        </equation>
+
+        As <math|0\<neq\>k\<less\>s<around*|(|k|)>> and <math|x\<neq\>0> we
+        have by [see theorem: <reference|natural numbers
+        n\<less\>m=\<gtr\>n.k\<less\>m.k>] that
+        <math|x\<cdot\>k\<less\>x.s<around*|(|k|)>> combining this with [eq:
+        <reference|eq 5.15.019>] gives that\ 
+
+        <\equation>
+          <label|eq 5.16.019>k\<less\>x\<cdot\>s<around*|(|k|)>
+        </equation>
+
+        Using [theorem: <reference|natural numbers
+        n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>] we have
+
+        <\equation*>
+          x+k\<less\>x+x\<cdot\>s<around*|(|k|)>=x\<cdot\>1+x\<cdot\>s<around*|(|k|)>\<equallim\><rsub|<text|distributivity>>x\<cdot\><around*|(|1+s<around*|(|k|)>|)>
+        </equation*>
+
+        or using [eq: <reference|eq 5.14.019>] that
+        <math|y\<less\>x\<cdot\><around*|(|s+s<around*|(|k|)>|)>>. So if we
+        take <math|z=1+s<around*|(|k|)>> the theorem is proved.
+      </description>
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|natural numbers division><dueto|Division>If
+    <math|m\<in\>\<bbb-N\><rsub|0>> and <math|n\<in\>\<bbb-N\><rsub|0>\\<around*|{|0|}>>
+    there exists a <with|font-series|bold|unique>
+    <math|r\<in\>\<bbb-N\><rsub|0>> with <math|0\<leqslant\>r\<less\>n> and a
+    unique <math|q\<in\>\<bbb-N\><rsub|0>> such that\ 
+
+    <\equation*>
+      m=n\<cdot\>q+r<text| and >0\<leqslant\>r\<less\>n
+    </equation*>
+  </theorem>
+
+  <\proof>
+    First we prove existence of <math|q> and <math|r>. As
+    <math|n\<in\>\<bbb-N\><rsub|0>\\<around*|{|0|}>> <math|n\<neq\>0> so that
+    <math|0\<less\>n>. For <math|m> we have the following cases to consider:
+
+    <\description>
+      <item*|<math|m=0>>In this case taking <math|q=0> and <math|r=0> gives
+      <math|n\<cdot\>0+0\<equallim\><rsub|<text|[theorem: <reference|natural
+      numbers absorbing element>]>>0+0\<equallim\><rsub|<text|[theorem:
+      <reference|natural numbers n+0=n>]>>0=m>. and
+      <math|0\<leqslant\>0\<less\>n>, so <math|q=0=r> satisfies <math|the
+      conditions.=n\<cdot\>q+r> and <math|0\<leqslant\>r\<less\>n>.
+
+      <item*|<math|0\<less\>m>>Then we have the following cases for <math|n>
+      to consider:
+
+      <\description>
+        <item*|<math|n=1>>Take <math|q=m> and <math|r=0> then
+        <math|n\<cdot\>q+r=1\<cdot\>m+0\<equallim\><rsub|<text|[theorem:
+        <reference|natural numbers n+0=n>,<reference|natural numbers
+        multiplication neutral element>]>>m> and
+        <math|0\<leqslant\>0\<less\>n>, so <math|q,r> satisfies
+        <math|m=n\<cdot\>q+r> and <math|0\<leqslant\>r\<less\>n>.
+
+        <item*|<math|n\<neq\>1>>Then as <math|0\<less\>n\<Rightarrowlim\><rsub|<text|[theorem:
+        <reference|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>=m>>>1=s<around*|(|0|)>\<leqslant\>n>
+        we have <math|1\<less\>n>. By [theorem: <reference|natural numbers
+        n\<less\>m=\<gtr\>n.k\<less\>m.k>] it follows that
+        <math|m=1\<cdot\>m\<less\>n\<cdot\>m>, so if we define\ 
+
+        <\equation*>
+          A<rsub|n,m>=<around*|{|x\<in\>\<bbb-N\><rsub|0>\|m\<less\>n\<cdot\>x\<wedge\>x\<leqslant\>m|}>
+        </equation*>
+
+        then <math|m\<in\>A<rsub|n,m>> proving that\ 
+
+        <\equation*>
+          A<rsub|n,m>\<neq\>\<varnothing\>
+        </equation*>
+
+        As <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>>
+        is well ordered [see theorem: <reference|natural numbers are well
+        ordered>] there exist a least element
+
+        <\equation*>
+          q<rprime|'>=min<around*|(|A<rsub|n,m>|)>
+        </equation*>
+
+        If <math|q<rprime|'>=0> then as <math|q<rprime|'>\<in\>A<rsub|n,m>>
+        we would have <math|m\<less\>n\<cdot\>0\<equallim\><rsub|<text|[theroem:
+        <reference|natural numbers absorbing element>]>>0> a contraiction,
+        hence we must have that <math|0\<less\>q<rprime|'>.> So by [theorem:
+        <reference|natural numbers every non zero number is a successor>]
+        there exist a <math|q\<in\>\<bbb-N\><rsub|0>> such that
+        <math|s<around*|(|q|)>=q<rprime|'>>. As
+        <math|q\<less\>s<around*|(|q|)>=q<rprime|'>> [see theorem:
+        <reference|natural numbers n\<less\>s(n)>] we must have that
+        <math|q\<nin\>A<rsub|n,m>>, which, as
+        <math|q\<less\>q<rprime|'>\<leqslant\>m>, means that
+        <math|n\<cdot\>q\<leqslant\>m>. From this we have by [theorem:
+        <reference|natural numbers n\<less\>m=\<gtr\>n.k\<less\>m.k>] the
+        existance of a <math|r\<in\>\<bbb-N\><rsub|0>> such that
+
+        <\equation*>
+          m=n\<cdot\>q+r
+        </equation*>
+
+        Using [corollary: <reference|natural numbers x\<less\>=y or
+        y\<less\>x>] w have that either <math|n\<leqslant\>r> or
+        <math|r\<less\>n>. If <math|n\<leqslant\>r> then by [theorem:
+        <reference|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>]
+        we have <math|n+n\<cdot\>q\<leqslant\>r+n\<cdot\>q=n\<cdot\>q+r=m>,
+        hence
+
+        <\equation*>
+          n\<cdot\>q<rprime|'>=n\<cdot\>s<around*|(|q|)>\<equallim\><rsub|<text|[theorem:
+          <reference|natural numbers n.s(m)=n+n.m>>>n+n\<cdot\>q\<leqslant\>m
+        </equation*>
+
+        which as <math|q<rprime|'>\<in\>A<rsub|n,m>\<Rightarrow\>m\<less\>n\<cdot\>q<rprime|'>>
+        yields the contraediction <math|m\<less\>m>. So we must have\ 
+
+        <\equation*>
+          0\<leqslant\>r\<less\>n
+        </equation*>
+
+        To summarize we have found <math|q,r> such that <math|m=n\<cdot\>q+r>
+        and <math|0\<leqslant\>r\<less\>n> proving existence.
+      </description>
+    </description>
+
+    Now to prove uniqueness. Assume that <math|n\<cdot\>q+r=m=n\<cdot\>q<rprime|''>+r<rprime|\<asterisk\>>>
+    and <math|0\<leqslant\>q\<less\>n>, <math|0\<leqslant\>q<rprime|''>\<less\>n>
+    with <math|q\<neq\>q<rprime|''>> then by [corollary: <reference|natural
+    numbers x\<less\>=y or y\<less\>x>] we have either
+    <math|q\<leqslant\>q<rprime|''>>, <math|q<rprime|''>\<less\>q> or
+    <math|q=q<rprime|'>>. For the cases <math|q\<less\>q<rprime|''>> or
+    <math|q<rprime|''>\<less\>q> we have
+
+    <\description>
+      <item*|<math|q\<less\>q<rprime|''>>>Then by [theorem:
+      <reference|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>=m>]
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|s<around*|(|q|)>\<leqslant\>q<rprime|''>>|<cell|\<Rightarrowlim\><rsub|<text|[theorem:
+        <reference|natural numbers n\<less\>m=\<gtr\>n.k\<less\>m.k>>>>|<cell|s<around*|(|q|)>\<cdot\>n\<leqslant\>q<rprime|''>\<cdot\>n>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|[theroems
+        <reference|natural numbers multiplication
+        commutativity>]>>>|<cell|n\<cdot\>s<around*|(|q|)>\<leqslant\>q<rprime|''>\<cdot\>n>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|[theorem:
+        <reference|natural numbers n.s(m)=n+n.m>]>>>|<cell|n\<cdot\>q+n\<leqslant\>q<rprime|''>\<cdot\>n>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|[theorem:
+        <reference|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>]>>>|<cell|n\<cdot\>q+n+r+r<rprime|''>\<leqslant\>q<rprime|''>\<cdot\>n+r+r<rprime|''>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|m+n+r<rprime|''>\<leqslant\>m+r>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|[theorem:
+        <reference|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>]>>>|<cell|n+r<rprime|''>\<leqslant\>r>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|[theorem:
+        <reference|natural numbers n\<less\>=n+k>]>>>|<cell|n\<leqslant\>n+r<rprime|''>\<leqslant\>r>>>>
+      </eqnarray*>
+
+      contradicting <math|r\<less\>n>.\ 
+
+      <item*|<math|q<rprime|''>\<less\>q>>Then by \ [theorem:
+      <reference|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>=m>]
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|s<around*|(|q<rprime|''>|)>\<leqslant\>q>|<cell|\<Rightarrowlim\><rsub|<text|[theorem:
+        <reference|natural numbers n\<less\>m=\<gtr\>n.k\<less\>m.k>>>>|<cell|s<around*|(|q<rprime|''>|)>\<cdot\>n\<leqslant\>q\<cdot\>n>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|[theroems
+        <reference|natural numbers multiplication
+        commutativity>]>>>|<cell|n\<cdot\>s<around*|(|q<rprime|''>|)>\<leqslant\>q\<cdot\>n>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|[theorem:
+        <reference|natural numbers n.s(m)=n+n.m>]>>>|<cell|n\<cdot\>q<rprime|''>+n\<leqslant\>q\<cdot\>n>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|[theorem:
+        <reference|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>]>>>|<cell|n\<cdot\>q<rprime|''>+n+r+r<rprime|''>\<leqslant\>q\<cdot\>n+r+r<rprime|''>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|m+n+r\<leqslant\>m+r<rprime|''>>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|[theorem:
+        <reference|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>]>>>|<cell|n+r\<leqslant\>r<rprime|''>>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|[theorem:
+        <reference|natural numbers n\<less\>=n+k>]>>>|<cell|n\<leqslant\>n+r\<leqslant\>r<rprime|''>>>>>
+      </eqnarray*>
+
+      contradicting <math|r\<less\>n>.
+    </description>
+
+    So we must have that <math|q=q<rprime|''>> but then
+    <math|r+n\<cdot\>q=n\<cdot\>q+r=n\<cdot\>q+r<rprime|''>=r<rprime|''>+n\<cdot\>q>
+    proving by [theorem: <reference|natural numbers
+    n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>] that <math|r=r<rprime|''>>.
+  </proof>
+
+  <section|Other forms of Mathematical Induction and Recursion>
+
+  In this section we rewrite the theorem of induction and recursion using
+  <math|n+1> instead of <math|s<around*|(|n|)>> [see theorem:
+  <reference|natural numbers s(n) = n+1>]. First we introduce some
+  definiions.
+
+  <\definition>
+    Let <math|n\<in\>\<bbb-N\><rsub|0>> then
+    <math|<around*|{|n,\<ldots\>\<infty\>|}>> is defined as\ 
+
+    <\equation*>
+      <around*|{|n,\<ldots\>\<infty\>|}>=<around*|{|i\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>i|}>
+    </equation*>
+  </definition>
+
+  <\definition>
+    Let <math|n,m\<in\>\<bbb-N\><rsub|0>> then
+    <math|<around*|{|n,\<ldots\>,m|}>> is defined as\ 
+
+    <\equation*>
+      <around*|{|n,\<ldots\>,m|}>=<around*|{|i\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>i\<wedge\>i\<leqslant\>m|}>
+    </equation*>
+  </definition>
+
+  We have now the following variation on mathematical induction.
+
+  <\theorem>
+    <label|mathematical induction><dueto|Mathematical Induction>If
+    <math|n\<in\>\<bbb-N\><rsub|0>> and <math|X\<subseteq\><around*|{|n,\<ldots\>,\<infty\>|}>>
+    is such that
+
+    <\enumerate>
+      <item><math|n\<in\>X>
+
+      <item>If <math|i\<in\>X> then <math|i+1\<in\>X>
+    </enumerate>
+
+    then <math|X=<around*|{|n,\<ldots\>,\<infty\>|}>>.
+  </theorem>
+
+  <\proof>
+    Take <math|S=<around*|{|i\<in\>\<bbb-N\><rsub|0>\|i+n\<in\>X|}>> then we
+    have:
+
+    <\description>
+      <item*|<math|0\<in\>S>>As <math|0+n\<equallim\><rsub|<text|[theorem:
+      <reference|natural numbers n+0=n>]>>n\<in\>X> we have <math|0\<in\>S>.
+
+      <item*|<math|i\<in\>S\<Rightarrow\>s<around*|(|i|)>\<in\>S>>As
+      <math|i\<in\>S> we have <math|i+n\<in\>X> so that by the hypothesis
+      <math|<around*|(|i+n|)>+1\<in\>X>. Now
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|i+n|)>+1>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|natural numbers sum associativity>]>>>|<cell|i+<around*|(|n+1|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|natural numbers sum commutativity>]>>>|<cell|i+<around*|(|1+n|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|natural numbers sum associativity>]>>>|<cell|<around*|(|i+1|)>+n>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|natural numbers s(n) =
+        n+1>>>>|<cell|s<around*|(|i|)>+n>>>>
+      </eqnarray*>
+
+      so that <math|s<around*|(|i|)>+n\<in\>X>, proving
+      <math|s<around*|(|i|)>\<in\>S>.
+    </description>
+
+    By mathematical induction we have that <math|S=\<bbb-N\><rsub|0>>. If
+    <math|i\<in\><around*|{|n,\<ldots\>\<infty\>|}>> then
+    <math|n\<leqslant\>i> so by [theorem: <reference|natural numbers
+    n\<less\>=m\<less\>=\<gtr\>there exists a k such that m=k>]
+    <math|\<exists\>k\<in\>\<bbb-N\><rsub|0>> such that
+    <math|i=n+k\<equallim\><rsub|<text|[theorem: <reference|natural numbers
+    sum commutativity>]>>k+n\<Rightarrowlim\><rsub|k\<in\>\<bbb-N\><rsub|0>=S>i\<in\>X>.
+    Hence <math|<around*|{|n,\<ldots\>,\<infty\>|}>\<subseteq\>X> which
+    together with <math|X\<subset\><around*|{|1,\<ldots\>,n|}>> proves that\ 
+
+    <\equation*>
+      X=<around*|{|1,\<ldots\>,\<infty\>|}>
+    </equation*>
+  </proof>
+
+  For recursion we have the following theorems that follows from \ [theorem:
+  <reference|recursion injective function>], [theorem: \ <reference|recursion
+  iteration>] and [theorem: <reference|recursion step form (1)>] by replacing
+  <math|s<around*|(|n|)>> by its equivalent form <math|n+1>.
+
+  <\theorem>
+    <label|recursion final>Let <math|A> be a set, <math|a\<in\>A> and
+    <math|f:A\<rightarrow\>A> a function then there exist a
+    <with|font-series|bold|unique> function\ 
+
+    <\equation*>
+      \<lambda\>:\<bbb-N\><rsub|0>\<rightarrow\>A\ 
+    </equation*>
+
+    such that:
+
+    <\enumerate>
+      <item><math|\<lambda\><around*|(|0|)>=a>
+
+      <item><math|\<forall\>n\<in\>\<bbb-N\><rsub|0>> we have
+      <math|\<lambda\><around*|(|n+1|)>=f<around*|(|\<lambda\><around*|(|n|)>|)>>
+    </enumerate>
+
+    Further if <math|f:A\<rightarrow\>A> is injective and
+    <math|a\<nin\>f<around*|(|A|)>> then <math|\<lambda\>:\<bbb-N\><rsub|0>\<rightarrow\>A>
+    is injective.
+
+    \ 
+  </theorem>
+
+  <\theorem>
+    <label|iteration final>Let <math|A> be a set, <math|f:A\<rightarrow\>A> a
+    function then <math|\<forall\>n\<in\>\<bbb-N\><rsub|0>> there exist a
+    <with|font-series|bold|unique> function\ 
+
+    <\equation*>
+      <around*|(|f|)><rsup|n>:A\<rightarrow\>A
+    </equation*>
+
+    such that:
+
+    <\enumerate>
+      <item><math|<around*|(|f|)><rsup|0>=Id<rsub|A>>
+
+      <item><math|<around*|(|f|)><rsup|n+1>=f\<circ\><around*|(|f|)><rsup|n>>
+    </enumerate>
+  </theorem>
+
+  <\theorem>
+    <label|recursion step (2)>Let <math|A> be a set, <math|a\<in\>A> and
+    <math|g:\<bbb-N\><rsub|0>*\<times\>A\<rightarrow\>A> then there exist a
+    <with|font-series|bold|unique> function
+
+    <\equation*>
+      \<lambda\>:\<bbb-N\><rsub|0>\<rightarrow\>A
+    </equation*>
+
+    such that:
+
+    <\enumerate>
+      <item><math|\<lambda\><around*|(|0|)>=a>
+
+      <item><math|\<forall\>n\<in\>\<bbb-N\><rsub|0>>
+      <math|\<lambda\><around*|(|n+1|)>=g<around*|(|n,\<lambda\><around*|(|n|)>|)>>
+    </enumerate>
+  </theorem>
+
+  <\corollary>
+    <label|recursion step form (3)>Let <math|A> be a set, <math|a\<in\>A> and
+    <math|g:\<bbb-N\><rsub|0>\<times\>A\<rightarrow\>A> then there exist a
+    <with|font-series|bold|unique> function\ 
+
+    <\equation*>
+      \<lambda\>:\<bbb-N\><rsub|0>\<rightarrow\>A
+    </equation*>
+
+    such that:
+
+    <\enumerate>
+      <item><math|\<lambda\><around*|(|0|)>=a>
+
+      <item><math|\<forall\>n\<in\><around*|{|1,\<ldots\>,\<infty\>|}>>
+      <math|\<lambda\><around*|(|n|)>=g<around*|(|n-1,\<lambda\><around*|(|n-1|)>|)>>
+    </enumerate>
+  </corollary>
+
+  <\proof>
+    Using [theorem: <reference|recursion step (2)>] ther exists a
+    <math|\<lambda\>:\<bbb-N\><rsub|0>\<rightarrow\>A> such that\ 
+
+    <\equation>
+      <label|eq 5.17.019>\<lambda\><around*|(|0|)>=a<text| and
+      >\<forall\>n\<in\>\<bbb-N\><rsub|0><text|
+      >\<lambda\><around*|(|n+1|)>=g<around*|(|n,\<lambda\><around*|(|n|)>|)>
+    </equation>
+
+    Let <math|n\<in\><around*|{|1,\<ldots\>,\<infty\>|}>> then
+    <math|1\<leqslant\>n> so by [definition: <reference|natural numbers
+    difference>] we have that <math|n-1\<in\>\<bbb-N\><rsub|0>> such that
+    <math|n=<around*|(|n-1|)>+1>, hence <math|\<lambda\><around*|(|n|)>=\<lambda\><around*|(|<around*|(|n-1|)>+1|)>=g<around*|(|n-1,\<lambda\><around*|(|n-1|)>|)>>.
+  </proof>
+
+  In the above the function <math|\<lambda\>:\<bbb-N\><rsub|0>\<rightarrow\>A>
+  is specified by saying what <math|a\<in\>A> is and what the function
+  <math|g:N<rsub|0>\<times\>A\<rightarrow\>A> is. We use \ more intuitive way
+  of specifying these requirement as is expressed in the following
+  definitiosn.
+
+  <\definition>
+    <label|definition by recursion (1)>Let <math|A> be a set, <math|a\<in\>A>
+    then we can define a function as follows:
+
+    <\equation*>
+      f:\<bbb-N\><rsub|0>\<rightarrow\>A
+    </equation*>
+
+    \ is defined by:
+
+    <\enumerate>
+      <item><math|f<around*|(|0|)>=a>
+
+      <item><math|f<around*|(|n+1|)>=G<around*|(|n,\<lambda\><around*|(|n|)>|)>>
+    </enumerate>
+
+    where <math|G<around*|(|n,\<lambda\><around*|(|n|)>|)>> is a expression
+    of two parameters. Which is equivalent with the function defined by
+    [theorem: <reference|recursion step (2)>] where <math|a\<in\>A> and
+    <math|g:\<bbb-N\><rsub|0>\<times\>A\<rightarrow\>A> is defined by
+    <math|g<around*|(|n,x|)>=G<around*|(|n,x|)>>.
+  </definition>
+
+  Another way to define a recursive function is based on [corollary:
+  <reference|recursion step form (3)>]\ 
+
+  <\definition>
+    <label|definition by recursion (2)>Let <math|A> be a set, <math|a\<in\>A>
+    then we define <math|f:\<bbb-N\><rsub|0>\<rightarrow\>A> as follows
+
+    <\equation*>
+      f<around*|(|n|)>=<choice|<tformat|<table|<row|<cell|a<text| if
+      >n=0>>|<row|<cell|G<around*|(|n-1,f<around*|(|n-1|)>|)><text| if
+      >n\<in\><around*|{|1,\<ldots\>\<infty\>|}>>>>>>
+    </equation*>
+
+    Which is equivalent with the function defined by [theorem:
+    <reference|recursion step form (3)>] where <math|a\<in\>A> and
+    <math|g:\<bbb-N\><rsub|0>\<times\>A\<rightarrow\>A> is defined by
+    <math|g<around*|(|,x|)>=G<around*|(|n,x|)>>.
+  </definition>
+
+  <\example>
+    <dueto|Faculity><math|fac:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0>>
+    is defined by\ 
+
+    <\equation*>
+      fac<around*|(|n|)>=<choice|<tformat|<table|<row|<cell|1<text| if
+      n=0>>>|<row|<cell|n\<cdot\>fac<around*|(|n-1|)>=<around*|(|<around*|(|n-1|)>+1|)>\<cdot\>fac<around*|(|n-1|)>>>>>>
+    </equation*>
+
+    this is the function defined by [corollary: <reference|recursion step
+    form (3)>] where <math|a=1> and <math|g:\<bbb-N\><rsub|0>\<times\>A\<rightarrow\>A>
+    is define by <math|g<around*|(|n,x|)>=<around*|(|n+1|)>\<cdot\>x> then we
+    have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|fac<around*|(|0|)>>|<cell|=>|<cell|1>>|<row|<cell|fac<around*|(|1|)>>|<cell|=>|<cell|g<around*|(|0,fac<around*|(|0|)>|)>=<around*|(|0+1|)>\<cdot\>fac<around*|(|0|)>=1\<cdot\>fac<around*|(|0|)>=1\<cdot\>1=1>>|<row|<cell|fac<around*|(|2|)>>|<cell|=>|<cell|g<around*|(|1,fac<around*|(|1|)>|)>=<around*|(|1+1|)>\<cdot\>fac<around*|(|1|)>=2\<cdot\>fac<around*|(|1|)>=2\<cdot\>1=2>>|<row|<cell|fac<around*|(|3|)>>|<cell|=>|<cell|g<around*|(|2,fac<around*|(|2|)>|)>=<around*|(|2+1|)>\<cdot\>fac<around*|(|2|)>=3\<cdot\>fac<around*|(|2|)>=3\<cdot\>2=6>>|<row|<cell|>|<cell|\<ldots\>>|<cell|>>|<row|<cell|fac<around*|(|n|)>>|<cell|=>|<cell|g<around*|(|n-1,fac<around*|(|n-1|)>|)>=<around*|(|<around*|(|n-1|)>+1|)>\<cdot\>fac<around*|(|n-1|)>=n\<cdot\>fac<around*|(|n-1|)>>>|<row|<cell|>|<cell|\<ldots\>>|<cell|>>>>
+    </eqnarray*>
+
+    or in other words without using <math|g>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|fac<around*|(|0|)>>|<cell|=>|<cell|1>>|<row|<cell|fac<around*|(|1|)>>|<cell|=>|<cell|1\<cdot\>fac<around*|(|0|)>=1\<cdot\>1=1>>|<row|<cell|fac<around*|(|2|)>>|<cell|=>|<cell|2\<cdot\>fac<around*|(|1|)>=2\<cdot\>1=2>>|<row|<cell|fac<around*|(|3|)>>|<cell|=>|<cell|3\<cdot\>fac<around*|(|2|)>=3\<cdot\>2=6>>|<row|<cell|>|<cell|\<ldots\>>|<cell|>>|<row|<cell|fac<around*|(|n|)>>|<cell|=>|<cell|n\<cdot\>fac<around*|(|n-1|)>>>|<row|<cell|>|<cell|\<ldots\>>|<cell|>>>>
+    </eqnarray*>
+
+    which is exactly what we mean by the definition
+
+    <\equation*>
+      fac<around*|(|n|)>=<choice|<tformat|<table|<row|<cell|1<text| if
+      n=0>>>|<row|<cell|n\<cdot\>fac<around*|(|n-1|)><text| if
+      >n\<in\><around*|{|1,\<ldots\>,\<infty\>|}>>>>>>
+    </equation*>
+  </example>
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
   \;
 
   \;
@@ -3283,13 +4058,454 @@
   \;
 
   <chapter|Finite and Infinite Sets>
+
+  <section|Equipotence>
+
+  First we define the concept of equipotency which allows us to state that
+  two sets have the same number size without actually counting the number of
+  eleemnts. The latter will turn out to be impossible for every set.
+
+  <\definition>
+    <label|equipotence><index|equipotence><index|<math|\<approx\>>><index|equipotency>Two
+    sets <math|A> and <math|B> are <with|font-series|bold|equipotent> if
+    there exist a bijection <math|f:A\<rightarrow\>B>. We note this as
+    <math|A\<approx\>B>.
+  </definition>
+
+  <\theorem>
+    <label|equipotence equivalence relation>Let <math|A,B,C> be sets then\ 
+
+    <\enumerate>
+      <item><math|A\<approx\>A>
+
+      <item>If <math|A\<approx\>B> then <math|B\<approx\>A>
+
+      <item>If <math|A\<approx\>B\<wedge\>B\<approx\>C> then
+      <math|A\<approx\>C>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item><math|Id:A\<rightarrow\>A> is a bijection [see example:
+      <reference|function identity map is a bijection>] proving that
+      <math|A\<approx\>A>
+
+      <item>As <math|A\<approx\>B> there existss a bijection
+      <math|f:A\<rightarrow\>B> but then by [theorem: <reference|function
+      bijection and inverse>] <math|f<rsup|-1><around*|\||B\<rightarrow\>A|\|>>
+      is also a bijection, so that <math|B\<approx\>A>.
+
+      <item>If <math|A\<sim\>B> and <math|B\<approx\>C> then there exists
+      bijections <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>C>,
+      using [theorem: <reference|function composition injectivity,
+      surjectivity and bijectivity>] we have that
+      <math|g\<circ\>f:A\<rightarrow\>C> is a bijection, so
+      <math|A\<approx\>C>.
+    </enumerate>
+  </proof>
+
+  Next we define a relation that says one set is smaller or equal to another
+  set.
+
+  <\definition>
+    <index|<math|\<preccurlyeq\>>>Let <math|A,B> be sets then
+    <math|A\<preccurlyeq\>B> if there exist a <math|C\<subseteq\>B> such that
+    <math|A\<approx\>C>.
+  </definition>
+
+  The following relation expresses that one set is smaller then another set.
+
+  <\definition>
+    <index|<math|\<prec\>>>Let <math|A,B> be sets then <math|A\<prec\>B> if
+    <math|A\<preccurlyeq\>B> and <math|\<neg\><around*|(|A\<approx\>B|)>>\ 
+  </definition>
+
+  Clearly we have the following:
+
+  <\theorem>
+    <label|function P(A) bijective with 2^A>If <math|A> is a set then
+    <math|\<cal-P\><around*|(|A|)>\<approx\>2<rsup|A>>
+  </theorem>
+
+  <\proof>
+    As <math|2=s<around*|(|1|)>=s<around*|(|s<around*|(|0|)>|)>=s<around*|(|<around*|{|\<varnothing\>|}>|)>=<around*|{|\<varnothing\>|}><big|cup><around*|{|<around*|{|\<varnothing\>|}>|}>=<around*|{|\<varnothing\>,<around*|{|\<varnothing\>|}>|}>=<around*|{|0,1|}>>
+    we have that <math|2<rsup|A>=<around*|{|0,1|}><rsup|A>>, finally using
+    [theorem: <reference|function P(A)=2^A>] there exist a bijection
+    <math|\<cal-P\><around*|(|A|)>> and <math|<around*|{|0,1|}>>
+  </proof>
+
+  <\theorem>
+    Let <math|A,B> be sets then <math|A\<preccurlyeq\>B> if and only if there
+    eexist a injection <math|f:A\<rightarrow\>B>
+  </theorem>
+
+  <\proof>
+    If <math|A\<preccurlyeq\>B> then there exist a set <math|C\<subseteq\>B>
+    and a bijection <math|f:A\<rightarrow\>C>, as a bijection is injective we
+    have that <math|f:A\<rightarrow\>C> is injective and finally by [theorem:
+    <reference|function injectivity, surjectivity>] <math|f:A\<rightarrow\>B>
+    is a injection.\ 
+
+    If <math|f:A\<rightarrow\>C> is a injection then by [theorem:
+    <reference|function injectivity to bijection>]
+    <math|f:A\<rightarrow\>f<around*|(|A|)>> is a bijection where
+    <math|f<around*|(|A|)>\<subseteq\>B> proving that
+    <math|A\<preccurlyeq\>B>.
+  </proof>
+
+  <\theorem>
+    <label|function no surjection between A and P(A)>If <math|A> is a set
+    then there exist no surjection between <math|A> and
+    <math|\<cal-P\><around*|(|A|)>>
+  </theorem>
+
+  <\proof>
+    We prove this by contradiction. So assume that there exists a surjective
+    function
+
+    <\equation*>
+      f:A\<rightarrow\>\<cal-P\><around*|(|A|)>
+    </equation*>
+
+    Define
+
+    <\equation*>
+      B=<around*|{|x\<in\>A\|x\<nin\>f<around*|(|x|)>|}>
+    </equation*>
+
+    As <math|B\<subseteq\>A> we have that
+    <math|B\<in\>\<cal-P\><around*|(|A|)>> and by surjectivity there exists a
+    <math|a\<in\>A> such that <math|f<around*|(|a|)>=B>. If <math|a\<in\>B>
+    then <math|a\<nin\>f<around*|(|a|)>=B> leading to the contradiction
+    <math|a\<in\>B\<wedge\>a\<nin\>B>, so we must have
+    <math|a\<nin\>B=f<around*|(|a|)>> giving the contradiction
+    <math|a\<in\>B\<wedge\>a\<nin\>B>. So the the assumption must be wrong
+    hence there is no surjection between <math|A> and
+    <math|\<cal-P\><around*|(|A|)>>.
+  </proof>
+
+  <\corollary>
+    <label|equipotence property (1)>If <math|A> is a set then no subset of
+    <math|A> can be equipotent with <math|\<cal-P\><around*|(|A|)>> or
+    <math|2<rsup|A>>
+  </corollary>
+
+  <\proof>
+    First we prove that no subset of <math|A> can be equipotent with
+    <math|\<cal-P\><around*|(|A|)>>. If <math|B\<subseteq\>A> then we have
+    the following possible cases to consider:
+
+    <\description>
+      <item*|<math|B=A>>Then by [theorem: <reference|function no surjection
+      between A and P(A)>] we can not have a surjection between <math|B> and
+      <math|\<cal-P\><around*|(|A|)>>, which as a bijection is surjection,
+      proves that there is no bijection between <math|B> and
+      <math|\<cal-P\><around*|(|A|)>>. So <math|B> is not equipotent with
+      <math|\<cal-P\><around*|(|A|)>>.
+
+      <item*|<math|B\<subset\>A>>Then <math|A\\B\<neq\>\<varnothing\>> and
+      <math|B<big|cap><around*|(|A\\B|)>=\<varnothing\>>. Assume now that
+      <math|B> is equipotent with <math|\<cal-P\><around*|(|A|)>> then a
+      bijection <math|g:B\<rightarrow\>\<cal-P\><around*|(|A|)>> exist, take
+      the constant function <math|C<rsub|\<varnothing\>>:A\\B\<rightarrow\>\<cal-P\><around*|(|A|)>>
+      where <math|C<rsub|\<varnothing\>><around*|(|x|)>=\<varnothing\>> and
+      form then using [theorem: <reference|function combining functions (1)>]
+      the function\ 
+
+      <\equation*>
+        f=g<big|cup>C<rsub|\<varnothing\>>:A\<rightarrow\>\<cal-P\><around*|(|A|)>
+      </equation*>
+
+      If <math|C\<in\>\<cal-P\><around*|(|A|)>> then as <math|g> is bijective
+      <math|\<exists\>x\<in\>B> such that <math|g<around*|(|x|)>=C> or
+      <math|f<around*|(|x|)>=C,hence f> is a surjection which is not allowed
+      by [theorem: <reference|function no surjection between A and P(A)>]. So
+      <math|B> is not equipotent with <math|\<cal-P\><around*|(|A|)>>.
+    </description>
+
+    If <math|B\<approx\>2<rsup|A>> then, as by [theorem: <reference|function
+    P(A) bijective with 2^A>] <math|2<rsup|A>\<approx\>\<cal-P\><around*|(|A|)>>,
+    we have by [theorem: <reference|equipotence equivalence relation>]] that
+    <math|B\<approx\>\<cal-P\><around*|(|A|)>> which we have just shown to be
+    impossible. So <math|B> can not be equipotence with <math|2<rsup|A>>.
+  </proof>
+
+  <\theorem>
+    <label|function injection and inverse surjection>If <math|A,B> are sets,
+    <math|A\<neq\>\<varnothing\>> then there exists a injection
+    <math|f:A\<rightarrow\>B> if and only there exist a surjection
+    <math|g:B\<rightarrow\>A>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|f:A\<rightarrow\>B> be a
+      injection then by [theorem: <reference|function injection condition>]
+      there exist a <math|g:B\<rightarrow\>A> such that
+      <math|g\<circ\>f=Id<rsub|A>>. If <math|x\<in\>A> then
+      <math|y=Id<rsub|A><around*|(|y|)>=<around*|(|g\<circ\>f|)>=g<around*|(|f<around*|(|y|)>|)>>
+      so that <math|g> is surjective.
+
+      <item*|<math|\<Leftarrow\>>>Let <math|g:B\<rightarrow\>A> be a
+      surjection then by [theorem: <reference|function surjection and
+      construction of inverse function>] there exist a injective function
+      <math|f:A\<rightarrow\>B>.
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|equipotence union>Let <math|A,B,C,D> classes with
+    <math|A<big|cap>C=\<varnothing\>=B<big|cap>D>, <math|A\<approx\>B> and
+    <math|C\<approx\>D> then
+
+    <\equation*>
+      <around*|(|A<big|cup>C|)>\<approx\><around*|(|B<big|cup>D|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    As <math|A\<approx\>B> and <math|C\<approx\>D> then there exists
+    bijections <math|f:A\<rightarrow\>B> and <math|g:C\<rightarrow\>D> then
+    by [theorem: <reference|function combining bijections>] there exists a
+    bijection <math|f<big|cup>g:A<big|cup>C\<rightarrow\>B<big|cup>D>. Hen ce
+    <math|A<big|cup>C\<approx\>B<big|cup>D>.
+  </proof>
+
+  <\theorem>
+    <label|equipotence AxC~BxD>If <math|A,B,C,D> are sets such that
+    <math|A\<approx\>B> and <math|C\<approx\>D> then
+    <math|A\<times\>C\<approx\>B\<times\>D>
+  </theorem>
+
+  <\proof>
+    As <math|A\<approx\>B> and <math|C\<approx\>D> there exist bijections
+    <math|f:A\<rightarrow\>B> and <math|g:C\<rightarrow\>D>. Define
+
+    <\equation*>
+      h:A\<times\>C\<rightarrow\>B\<times\>D<text| by
+      >h<around*|(|x,y|)>=<around*|(|f<around*|(|x|)>,g<around*|(|x|)>|)>
+    </equation*>
+
+    then we have:\ 
+
+    <\description>
+      <item*|injectivity>If <math|h<around*|(|x,y|)>=h<around*|(|x<rprime|'>,y<rprime|'>|)>>
+      then <math|<around*|(|f<around*|(|x|)>,g<around*|(|x|)>|)>=<around*|(|f<around*|(|x<rprime|'>|)>,g<around*|(|x<rprime|'>|)>|)>>
+      so that <math|f<around*|(|x|)>=f<rprime|'><around*|(|x|)>> and
+      <math|g<around*|(|x|)>=g<around*|(|x<rprime|'>|)>>, as <math|f> and
+      <math|g> are injective we have <math|x=x<rprime|'>> and
+      <math|y=y<rprime|'>> so that <math|<around*|(|x,y|)>=<around*|(|x<rprime|'>,y<rprime|'>|)>>.
+
+      <item*|surjectivity>If <math|<around*|(|r,s|)>\<in\>B\<times\>D> then
+      as <math|f,g> are surjective ther exists <math|x\<in\>A>,
+      <math|y\<in\>C> such that <math|r=f*<around*|(|x|)>> and
+      <math|s=g<around*|(|y|)>> so that <math|h<around*|(|x,y|)>=<around*|(|f<around*|(|x|)>,g<around*|(|y|)>|)>=<around*|(|r,s|)>>.
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|equipotence A^C~B^D>If <math|A,B,C,D> are sets such that
+    <math|A\<approx\>B> and <math|C\<approx\>D> then
+    <math|A<rsup|C>\<approx\>B<rsup|D>>
+  </theorem>
+
+  <\proof>
+    \ As <math|A\<approx\>B> and <math|C\<approx\>D> then there exists
+    bijections <math|f:A\<rightarrow\>B> and <math|g:D\<rightarrow\>C>. If
+    <math|x\<in\>A<rsup|C>> then <math|x:C\<rightarrow\>A> is a function so
+    that <math|x\<circ\>g:D\<rightarrow\>A> is a function, hence
+    <math|f\<circ\><around*|(|x\<circ\>g|)>:D\<rightarrow\>B> proving that
+    <math|f\<circ\><around*|(|x\<circ\>g|)>> is a function, hence
+    <math|f\<circ\><around*|(|x\<circ\>g|)>\<in\>B<rsup|D>>. Define now
+    <math|h:A<rsup|C>\<rightarrow\>B<rsup|D>> by
+    <math|h<around*|(|x|)>=f\<circ\><around*|(|x\<circ\>g|)>> then we have:\ 
+
+    <\description>
+      <item*|injectivity>If <math|x,y\<in\>A<rsup|C>> such that
+      <math|h<around*|(|x|)>=h<around*|(|y|)>> then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|f\<circ\><around*|(|x\<circ\>g|)>=f\<circ\><around*|(|y\<circ\>g|)>>|<cell|\<Rightarrow\>>|<cell|f<rsup|-1>\<circ\><around*|(|f\<circ\><around*|(|x\<circ\>g|)>|)>=f<rsup|-1>\<circ\><around*|(|f\<circ\><around*|(|y\<circ\>g|)>|)>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|<around*|(|f<rsup|-1>\<circ\>f|)>\<circ\><around*|(|x\<circ\>g|)>=<around*|(|f<rsup|-1>\<circ\>f|)>\<circ\><around*|(|y\<circ\>g|)>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|Id<rsub|A>\<circ\><around*|(|x\<circ\>g|)>=Id<rsub|A>\<circ\><around*|(|y\<circ\>g|)>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x\<circ\>g=y\<circ\>g>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|<around*|(|x\<circ\>g|)>\<circ\>g<rsup|-1>=<around*|(|y\<circ\>g|)>\<circ\>g<rsup|-1>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x\<circ\><around*|(|g\<circ\>g<rsup|-1>|)>=y\<circ\><around*|(|g\<circ\>g<rsup|-1>|)>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x\<circ\>Id<rsub|C>=y\<circ\>Id<rsub|C>>>|<row|<cell|>|<cell|\<Rightarrow\>x=y>|<cell|>>>>
+      </eqnarray*>
+
+      <item*|surjectivity>If <math|y\<in\>B<rsup|D>> then
+      <math|y:D\<rightarrow\>B> is a function so that
+      <math|y\<circ\>g<rsup|-1>:C\<rightarrow\>B> is a function, hence
+      <math|f<rsup|-1>\<circ\><around*|(|y\<circ\>g<rsup|-1>|)>:C\<rightarrow\>A>
+      or <math|f<rsup|-1>\<circ\><around*|(|y\<circ\>g<rsup|-1>|)>\<in\>A<rsup|C>>.
+      Further
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|h<around*|(|f<rsup|-1>\<circ\><around*|(|y\<circ\>g<rsup|-1>|)>|)>>|<cell|=>|<cell|f\<circ\><around*|(|<around*|(|f<rsup|-1>\<circ\><around*|(|y\<circ\>g<rsup|-1>|)>|)>\<circ\>g|)>>>|<row|<cell|>|<cell|=>|<cell|f\<circ\><around*|(|<around*|(|f<rsup|-1>\<circ\>y|)>\<circ\><around*|(|g<rsup|-1>\<circ\>g|)>|)>>>|<row|<cell|>|<cell|=>|<cell|f\<circ\><around*|(|<around*|(|f<rsup|-1>\<circ\>y|)>\<circ\>Id<rsub|D>|)>>>|<row|<cell|>|<cell|=>|<cell|f\<circ\><around*|(|f<rsup|-1>\<circ\>y|)>>>|<row|<cell|>|<cell|=>|<cell|*<around*|(|f\<circ\>f<rsup|-1>|)>\<circ\>y>>|<row|<cell|>|<cell|=>|<cell|Id<rsub|B>\<circ\>y>>|<row|<cell|>|<cell|=>|<cell|y>>>>
+      </eqnarray*>
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|equipotence 2^A and P(A)>If <math|A,B> are sets such that
+    <math|A\<approx\>B> then <math|\<cal-P\><around*|(|A|)>\<approx\>\<cal-P\><around*|(|B|)>>
+    and <math|2<rsup|A>\<approx\>2<rsup|B>>
+  </theorem>
+
+  <\proof>
+    As we have <math|A\<approx\>B> and <math|2\<approx\>2> [see theorem:
+    <reference|equipotence equivalence relation>], so by [theorem:
+    <reference|equipotence A^C~B^D>] we have
+    <math|2<rsup|A>\<approx\>2<rsup|B>>. As by [theorem:
+    <reference|equipotence property (1)>]
+    <math|\<cal-P\><around*|[|A|]>\<approx\>2<rsup|A>> and
+    <math|\<cal-P\><around*|(|B|)>=2<rsup|B>> it follows by [theorem:
+    <reference|equipotence equivalence relation>] that
+    <math|\<cal-P\><around*|(|A|)>=\<cal-P\><around*|(|B|)>>.\ 
+  </proof>
+
+  <section|Finite, Infinite and Countable sets>
+
+  Applying the concept of initial segments [see definition: <reference|order
+  initial segement>] on <math|<around*|\<langle\>|\<bbb-N\><rsub|0>.\<leqslant\>|\<rangle\>>>
+  we have the following definition.
+
+  <\definition>
+    Let <math|n\<in\>\<bbb-N\><rsub|0>> then <math|S<rsub|n>> is defined by
+
+    <\equation*>
+      S<rsub|n>=<around*|{|m\<in\>\<bbb-N\><rsub|0>\|m\<less\>n|}>
+    </equation*>
+  </definition>
+
+  Actual we have already encountered the initial segments for
+  <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>>
+  because they are actual the natural numbers as is proved in the following
+  theorem.
+
+  <\theorem>
+    <label|natural numbers are segments><math|\<forall\>n\<in\>\<bbb-N\><rsub|0>>
+    we have <math|n=S<rsub|n>>
+  </theorem>
+
+  <\proof>
+    We prove this by induction. So let <math|S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|n=S<rsub|n>|}>>
+    then we have:
+
+    <\description>
+      <item*|<math|0\<in\>S>>If <math|x\<in\>S<rsub|0>> then
+      <math|x\<less\>0> which by [theorem: <reference|natural numbers
+      \<less\> properties>] is false, so <math|S<rsub|0>=\<varnothing\>=0>
+      proving that <math|0\<in\>S>.
+
+      <item*|<math|n\<in\>S\<Rightarrow\>s<around*|(|n|)>\<in\>S>>As
+      <math|n\<in\>S> we have that <math|n=S<rsub|n>> so that
+
+      <\equation*>
+        s<around*|(|n|)>=n<big|cup><around*|{|n|}>=S<rsub|n><big|cup><around*|{|n|}>
+      </equation*>
+
+      If <math|m\<in\>s<around*|(|n|)>> then we have the following
+      possibilities to consider:
+
+      <\description>
+        <item*|<math|m=n>>Then by [theorem: <reference|natural numbers
+        n\<less\>s(n)>] we have that <math|m\<less\>s<around*|(|n|)>> so that
+        <math|m\<in\>S<rsub|s<around*|(|n|)>>>
+
+        <item*|<math|m\<in\>S<rsub|n>>>Then <math|m\<less\>n> which as by
+        [theorem: <reference|natural numbers n\<less\>s(n)>]
+        <math|n\<less\>s<around*|(|n|)>> proves that
+        <math|m\<less\>s<around*|(|n|)>> hence
+        <math|m\<in\>S<rsub|s<around*|(|n|)>>>
+      </description>
+
+      this proves that\ 
+
+      <\equation>
+        <label|eq 7.1.019>s<around*|(|n|)>\<subseteq\>S<rsub|s<around*|(|n|)>>
+      </equation>
+
+      If <math|m\<in\>S<rsub|s<around*|(|n|)>>> then
+      <math|m\<less\>s<around*|(|n|)>>, now by [theorem: <reference|natural
+      numbers x\<less\>=y or y\<less\>x>] we have either <math|n\<less\>m> or
+      <math|m\<leqslant\>n>. If <math|n\<less\>m> then by [theorem:
+      <reference|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>=m>] we have
+      <math|s<around*|(|n|)>\<leqslant\>m> so that by transitivity we have
+      <math|m\<less\>m> a contradiction. So we must have that
+      <math|m\<leqslant\>n>, if <math|m=n> then
+      <math|m\<in\>n<big|cup><around*|{|n|}>=s<around*|(|n|)>> and if
+      <math|m\<less\>n> then <math|m\<in\>S<rsub|n>\<subseteq\>S<rsub|n><big|cup><around*|{|n|}>=s<around*|(|n|)>>.
+      So in all cases we have <math|m\<in\>s<around*|(|n|)>> proving that
+      <math|S<rsub|s<around*|(|n|)>>\<subseteq\>s<around*|(|n|)>>, combining
+      this with [eq: <reference|eq 7.1.019>] gives\ 
+
+      <\equation*>
+        s<around*|(|n|)>=S<rsub|s<around*|(|n|)>>
+      </equation*>
+
+      proving that <math|s<around*|(|n|)>\<in\>S>.
+    </description>
+
+    Using induction [theorem: <reference|natural numbers mathematical
+    induction>] it follows that <math|S=\<bbb-N\><rsub|0>> proving the
+    theorem.
+  </proof>
+
+  We define now the concept of a finite set.
+
+  <\definition>
+    <label|finite set><index|finite set><dueto|Finite Set>A set <math|A> is
+    <with|font-series|bold|finite> if <math|\<exists\>n\<in\>\<bbb-N\><rsub|0>>
+    such that <math|n\<approx\>A>
+  </definition>
+
+  <\example>
+    <label|empty set is finite><math|\<varnothing\>> is finite.
+  </example>
+
+  <\proof>
+    <math|\<varnothing\>:\<varnothing\>\<rightarrow\>\<varnothing\>> is a
+    bijection by [example: <reference|function empty function bijection>], so
+    as <math|0=\<varnothing\>> we have that <math|0\<approx\>\<varnothing\>>.
+  </proof>
+
+  <\definition>
+    <label|infinite set><index|infinite set><dueto|Infinite Set>A set
+    <math|A> is <with|font-series|bold|infinite> if <math|A> is not
+    <with|font-series|bold|finite>.
+  </definition>
+
+  <\definition>
+    <label|denumerable set><index|denumerable set><index|infinite countable
+    set><dueto|Denumerable Set>A set <math|A>is
+    <with|font-series|bold|denumerable> or <with|font-series|bold|infinite
+    countable> if <math|\<bbb-N\><rsub|0>\<approx\>A>.
+  </definition>
+
+  <\definition>
+    <label|countable set><index|countable set><dueto|Countable Set>A set
+    <math|A> is countable if it is <with|font-series|bold|finite> or
+    <with|font-series|bold|denumerable.>
+  </definition>
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
+  \;
 </body>
 
 <\initial>
   <\collection>
     <associate|chapter-nr|3>
-    <associate|page-first|103>
+    <associate|page-first|107>
     <associate|page-medium|paper>
+    <associate|project-flag|false>
     <associate|section-nr|4>
     <associate|subsection-nr|0>
   </collection>
@@ -3297,154 +4513,208 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|4|103>>
-    <associate|auto-10|<tuple|right action|108>>
-    <associate|auto-11|<tuple|<with|mode|<quote|math>|g\<vartriangleright\>x>|108>>
-    <associate|auto-12|<tuple|<with|mode|<quote|math>|x\<vartriangleleft\>g>|108>>
-    <associate|auto-13|<tuple|<with|mode|<quote|math>|g<rsub|\<vartriangleright\>>>|108>>
-    <associate|auto-14|<tuple|<with|mode|<quote|math>|g<rsub|\<vartriangleleft\>>>|108>>
-    <associate|auto-15|<tuple|faithful action|108>>
-    <associate|auto-16|<tuple|transitive action|108>>
-    <associate|auto-17|<tuple|faithful action|108>>
-    <associate|auto-18|<tuple|transitive action|108>>
-    <associate|auto-19|<tuple|4.2|108>>
-    <associate|auto-2|<tuple|operator|103>>
-    <associate|auto-20|<tuple|ring|108>>
-    <associate|auto-21|<tuple|zero divisor|109>>
-    <associate|auto-22|<tuple|subring|109>>
-    <associate|auto-23|<tuple|ring homeomorphism|110>>
-    <associate|auto-24|<tuple|ring isomorphism|110>>
-    <associate|auto-25|<tuple|4.3|110>>
-    <associate|auto-26|<tuple|field|110>>
-    <associate|auto-27|<tuple|subfield|111>>
-    <associate|auto-28|<tuple|field homeomorphism|111>>
-    <associate|auto-29|<tuple|5|113>>
-    <associate|auto-3|<tuple|4.1|103>>
-    <associate|auto-30|<tuple|5.1|113>>
-    <associate|auto-31|<tuple|mathematical induction|114>>
-    <associate|auto-32|<tuple|transitive set|114>>
-    <associate|auto-33|<tuple|5.2|116>>
-    <associate|auto-34|<tuple|recursion|116>>
-    <associate|auto-35|<tuple|iteration|118>>
-    <associate|auto-36|<tuple|5.3|121>>
-    <associate|auto-37|<tuple|addition of natural numbers|121>>
-    <associate|auto-38|<tuple|multiplication of natural numbers|122>>
-    <associate|auto-39|<tuple|absorbing element|123>>
-    <associate|auto-4|<tuple|semi-group|103>>
-    <associate|auto-40|<tuple|5.4|125>>
-    <associate|auto-41|<tuple|6|129>>
-    <associate|auto-5|<tuple|group|104>>
-    <associate|auto-6|<tuple|sub-semi-group|104>>
-    <associate|auto-7|<tuple|sup-group|104>>
-    <associate|auto-8|<tuple|group isomorphism|106>>
-    <associate|auto-9|<tuple|left action|108>>
-    <associate|eq 5.1.019|<tuple|5.1|116>>
-    <associate|eq 5.10.019|<tuple|5.10|120>>
-    <associate|eq 5.11.019|<tuple|5.11|120>>
-    <associate|eq 5.12.019|<tuple|5.12|120>>
-    <associate|eq 5.13.019|<tuple|5.13|120>>
-    <associate|eq 5.2.019|<tuple|5.2|116>>
-    <associate|eq 5.3.019|<tuple|5.3|116>>
-    <associate|eq 5.4.019|<tuple|5.4|116>>
-    <associate|eq 5.5.019|<tuple|5.5|116>>
-    <associate|eq 5.6.019|<tuple|5.6|116>>
-    <associate|eq 5.7.019|<tuple|5.7|117>>
-    <associate|eq 5.8.019|<tuple|5.8|117>>
-    <associate|eq 5.9.019|<tuple|5.9|117>>
-    <associate|field|<tuple|4.33|110>>
-    <associate|field homeomorphism|<tuple|4.37|111>>
-    <associate|field inverse is unique|<tuple|4.34|111>>
-    <associate|field isomorphism and neutral element|<tuple|4.39|112>>
-    <associate|field subfield|<tuple|4.35|111>>
-    <associate|field subfield is a field|<tuple|4.36|111>>
-    <associate|group abelian group/sub group|<tuple|4.8|104>>
-    <associate|group example bijections|<tuple|4.13|105>>
-    <associate|group example set of functions|<tuple|4.4|103>>
-    <associate|group faithful, transitive action (1)|<tuple|4.22|108>>
-    <associate|group faithful, transitive action (2)|<tuple|4.23|108>>
-    <associate|group group|<tuple|4.5|104>>
-    <associate|group group inheritance|<tuple|4.12|105>>
-    <associate|group group inverse of inverse|<tuple|4.7|104>>
-    <associate|group homeomorphism|<tuple|4.14|105>>
-    <associate|group homeomorphism properties|<tuple|4.15|105>>
-    <associate|group inverse element|<tuple|4.6|104>>
-    <associate|group isomorphism|<tuple|4.16|106>>
-    <associate|group isomorphism inverse|<tuple|4.17|106>>
-    <associate|group left (right action)|<tuple|4.19|108>>
-    <associate|group semi-group inheritance|<tuple|4.11|104>>
-    <associate|group semigroup properties|<tuple|4.3|103>>
-    <associate|group sub-group|<tuple|4.10|104>>
+    <associate|auto-1|<tuple|4|107>>
+    <associate|auto-10|<tuple|right action|112>>
+    <associate|auto-11|<tuple|<with|mode|<quote|math>|g\<vartriangleright\>x>|112>>
+    <associate|auto-12|<tuple|<with|mode|<quote|math>|x\<vartriangleleft\>g>|112>>
+    <associate|auto-13|<tuple|<with|mode|<quote|math>|g<rsub|\<vartriangleright\>>>|112>>
+    <associate|auto-14|<tuple|<with|mode|<quote|math>|g<rsub|\<vartriangleleft\>>>|112>>
+    <associate|auto-15|<tuple|faithful action|112>>
+    <associate|auto-16|<tuple|transitive action|112>>
+    <associate|auto-17|<tuple|faithful action|112>>
+    <associate|auto-18|<tuple|transitive action|112>>
+    <associate|auto-19|<tuple|4.2|112>>
+    <associate|auto-2|<tuple|operator|107>>
+    <associate|auto-20|<tuple|ring|112>>
+    <associate|auto-21|<tuple|zero divisor|113>>
+    <associate|auto-22|<tuple|subring|113>>
+    <associate|auto-23|<tuple|ring homeomorphism|114>>
+    <associate|auto-24|<tuple|ring isomorphism|114>>
+    <associate|auto-25|<tuple|4.3|114>>
+    <associate|auto-26|<tuple|field|114>>
+    <associate|auto-27|<tuple|subfield|115>>
+    <associate|auto-28|<tuple|field homeomorphism|115>>
+    <associate|auto-29|<tuple|5|117>>
+    <associate|auto-3|<tuple|4.1|107>>
+    <associate|auto-30|<tuple|5.1|117>>
+    <associate|auto-31|<tuple|mathematical induction|118>>
+    <associate|auto-32|<tuple|transitive set|118>>
+    <associate|auto-33|<tuple|5.2|120>>
+    <associate|auto-34|<tuple|recursion|120>>
+    <associate|auto-35|<tuple|iteration|123>>
+    <associate|auto-36|<tuple|5.3|126>>
+    <associate|auto-37|<tuple|addition of natural numbers|126>>
+    <associate|auto-38|<tuple|multiplication of natural numbers|128>>
+    <associate|auto-39|<tuple|absorbing element|128>>
+    <associate|auto-4|<tuple|semi-group|107>>
+    <associate|auto-40|<tuple|5.4|131>>
+    <associate|auto-41|<tuple|5.5|138>>
+    <associate|auto-42|<tuple|6|141>>
+    <associate|auto-43|<tuple|6.1|141>>
+    <associate|auto-44|<tuple|equipotence|141>>
+    <associate|auto-45|<tuple|<with|mode|<quote|math>|\<approx\>>|141>>
+    <associate|auto-46|<tuple|equipotency|141>>
+    <associate|auto-47|<tuple|<with|mode|<quote|math>|\<preccurlyeq\>>|141>>
+    <associate|auto-48|<tuple|<with|mode|<quote|math>|\<prec\>>|141>>
+    <associate|auto-49|<tuple|6.2|145>>
+    <associate|auto-5|<tuple|group|108>>
+    <associate|auto-50|<tuple|finite set|145>>
+    <associate|auto-51|<tuple|infinite set|145>>
+    <associate|auto-52|<tuple|denumerable set|145>>
+    <associate|auto-53|<tuple|infinite countable set|145>>
+    <associate|auto-54|<tuple|countable set|145>>
+    <associate|auto-6|<tuple|sub-semi-group|108>>
+    <associate|auto-7|<tuple|sup-group|108>>
+    <associate|auto-8|<tuple|group isomorphism|110>>
+    <associate|auto-9|<tuple|left action|112>>
+    <associate|countable set|<tuple|6.20|145>>
+    <associate|definition by recursion (1)|<tuple|5.80|139>>
+    <associate|definition by recursion (2)|<tuple|5.81|139>>
+    <associate|denumerable set|<tuple|6.19|145>>
+    <associate|empty set is finite|<tuple|6.17|145>>
+    <associate|eq 5.1.019|<tuple|5.1|120>>
+    <associate|eq 5.10.019|<tuple|5.10|125>>
+    <associate|eq 5.11.019|<tuple|5.11|125>>
+    <associate|eq 5.12.019|<tuple|5.12|125>>
+    <associate|eq 5.13.019|<tuple|5.13|125>>
+    <associate|eq 5.14.019|<tuple|5.14|136>>
+    <associate|eq 5.15.019|<tuple|5.15|136>>
+    <associate|eq 5.16.019|<tuple|5.16|136>>
+    <associate|eq 5.17.019|<tuple|5.17|139>>
+    <associate|eq 5.2.019|<tuple|5.2|120>>
+    <associate|eq 5.3.019|<tuple|5.3|120>>
+    <associate|eq 5.4.019|<tuple|5.4|120>>
+    <associate|eq 5.5.019|<tuple|5.5|120>>
+    <associate|eq 5.6.019|<tuple|5.6|120>>
+    <associate|eq 5.7.019|<tuple|5.7|121>>
+    <associate|eq 5.8.019|<tuple|5.8|121>>
+    <associate|eq 5.9.019|<tuple|5.9|121>>
+    <associate|eq 7.1.019|<tuple|6.1|145>>
+    <associate|equipotence|<tuple|6.1|141>>
+    <associate|equipotence 2^A and P(A)|<tuple|6.13|143>>
+    <associate|equipotence A^C~B^D|<tuple|6.12|143>>
+    <associate|equipotence AxC~BxD|<tuple|6.11|142>>
+    <associate|equipotence equivalence relation|<tuple|6.2|141>>
+    <associate|equipotence property (1)|<tuple|6.8|142>>
+    <associate|equipotence union|<tuple|6.10|142>>
+    <associate|field|<tuple|4.33|114>>
+    <associate|field homeomorphism|<tuple|4.37|115>>
+    <associate|field inverse is unique|<tuple|4.34|115>>
+    <associate|field isomorphism and neutral element|<tuple|4.39|116>>
+    <associate|field subfield|<tuple|4.35|115>>
+    <associate|field subfield is a field|<tuple|4.36|115>>
+    <associate|finite set|<tuple|6.16|145>>
+    <associate|function P(A) bijective with 2^A|<tuple|6.5|141>>
+    <associate|function injection and inverse surjection|<tuple|6.9|142>>
+    <associate|function no surjection between A and P(A)|<tuple|6.7|141>>
+    <associate|group abelian group/sub group|<tuple|4.8|108>>
+    <associate|group example bijections|<tuple|4.13|109>>
+    <associate|group example set of functions|<tuple|4.4|107>>
+    <associate|group faithful, transitive action (1)|<tuple|4.22|112>>
+    <associate|group faithful, transitive action (2)|<tuple|4.23|112>>
+    <associate|group group|<tuple|4.5|108>>
+    <associate|group group inheritance|<tuple|4.12|109>>
+    <associate|group group inverse of inverse|<tuple|4.7|108>>
+    <associate|group homeomorphism|<tuple|4.14|109>>
+    <associate|group homeomorphism properties|<tuple|4.15|109>>
+    <associate|group inverse element|<tuple|4.6|108>>
+    <associate|group isomorphism|<tuple|4.16|110>>
+    <associate|group isomorphism inverse|<tuple|4.17|110>>
+    <associate|group left (right action)|<tuple|4.19|112>>
+    <associate|group semi-group inheritance|<tuple|4.11|108>>
+    <associate|group semigroup properties|<tuple|4.3|107>>
+    <associate|group sub-group|<tuple|4.10|108>>
+    <associate|infinite set|<tuple|6.18|145>>
     <associate|inverse of a field isomorphism is a field
-    isomorphism|<tuple|4.38|111>>
-    <associate|natural numbers|<tuple|5.3|113>>
-    <associate|natural numbers 0|<tuple|5.7|113>>
-    <associate|natural numbers 0\<less\>=n|<tuple|5.46|126>>
-    <associate|natural numbers Peano|<tuple|5.17|115>>
-    <associate|natural numbers absorbing element|<tuple|5.36|123>>
-    <associate|natural numbers addition|<tuple|5.27|121>>
-    <associate|natural numbers additive semi-group|<tuple|5.34|122>>
-    <associate|natural numbers are total ordered|<tuple|5.51|127>>
-    <associate|natural numbers are transitive|<tuple|5.14|114>>
-    <associate|natural numbers are well ordered|<tuple|5.50|127>>
-    <associate|natural numbers difference|<tuple|5.59|?>>
-    <associate|natural numbers distributivity|<tuple|5.39|124>>
+    isomorphism|<tuple|4.38|115>>
+    <associate|iteration final|<tuple|5.77|139>>
+    <associate|mathematical induction|<tuple|5.75|138>>
+    <associate|natural numbers|<tuple|5.3|117>>
+    <associate|natural numbers 0|<tuple|5.7|117>>
+    <associate|natural numbers 0\<less\>=n|<tuple|5.46|131>>
+    <associate|natural numbers \<less\> properties|<tuple|5.49|132>>
+    <associate|natural numbers Archimedean property|<tuple|5.71|136>>
+    <associate|natural numbers Peano|<tuple|5.17|119>>
+    <associate|natural numbers absorbing element|<tuple|5.36|128>>
+    <associate|natural numbers addition|<tuple|5.27|126>>
+    <associate|natural numbers additive semi-group|<tuple|5.34|127>>
+    <associate|natural numbers are segments|<tuple|6.15|145>>
+    <associate|natural numbers are total ordered|<tuple|5.52|133>>
+    <associate|natural numbers are transitive|<tuple|5.14|118>>
+    <associate|natural numbers are well ordered|<tuple|5.51|132>>
+    <associate|natural numbers difference|<tuple|5.62|135>>
+    <associate|natural numbers distributivity|<tuple|5.39|129>>
+    <associate|natural numbers division|<tuple|5.72|136>>
     <associate|natural numbers every non zero number is a
-    successor|<tuple|5.18|115>>
-    <associate|natural numbers is a set|<tuple|5.4|113>>
-    <associate|natural numbers k\<less\>n condition|<tuple|5.48|126>>
-    <associate|natural numbers mathematical induction|<tuple|5.11|114>>
-    <associate|natural numbers multiplication|<tuple|5.35|122>>
-    <associate|natural numbers multiplication associativity|<tuple|5.41|124>>
-    <associate|natural numbers multiplication commutativity|<tuple|5.40|124>>
+    successor|<tuple|5.18|119>>
+    <associate|natural numbers is a set|<tuple|5.4|117>>
+    <associate|natural numbers k\<less\>n condition|<tuple|5.48|131>>
+    <associate|natural numbers mathematical induction|<tuple|5.11|118>>
+    <associate|natural numbers multiplication|<tuple|5.35|128>>
+    <associate|natural numbers multiplication associativity|<tuple|5.41|130>>
+    <associate|natural numbers multiplication commutativity|<tuple|5.40|129>>
     <associate|natural numbers multiplication neutral
-    element|<tuple|5.37|123>>
+    element|<tuple|5.37|128>>
     <associate|natural numbers multiplicative abelian
-    semi-group|<tuple|5.42|125>>
-    <associate|natural numbers n+0=n|<tuple|5.29|121>>
-    <associate|natural numbers n+k=m+k\<less\>=\<gtr\>n=m|<tuple|5.43|125>>
-    <associate|natural numbers n+s(m)=s(n+m)|<tuple|5.31|121>>
-    <associate|natural numbers n.s(m)=n+n.m|<tuple|5.38|124>>
+    semi-group|<tuple|5.42|130>>
+    <associate|natural numbers n+0=n|<tuple|5.29|126>>
+    <associate|natural numbers n+k=m+k\<less\>=\<gtr\>n=m|<tuple|5.43|130>>
+    <associate|natural numbers n+s(m)=s(n+m)|<tuple|5.31|127>>
+    <associate|natural numbers n.k=m.k=\<gtr\>n=m|<tuple|5.70|136>>
+    <associate|natural numbers n.s(m)=n+n.m|<tuple|5.38|129>>
+    <associate|natural numbers n\<less\>=i\<less\>=m=\<gtr\>0\<less\>=i-n\<less\>=m-n|<tuple|5.64|135>>
     <associate|natural numbers n\<less\>=m\<less\>=\<gtr\>there exists a k
-    such that m=k|<tuple|5.59|?>>
+    such that m=k|<tuple|5.61|134>>
+    <associate|natural numbers n\<less\>=n+k|<tuple|5.56|133>>
+    <associate|natural numbers n\<less\>k\<less\>s(n)|<tuple|5.65|135>>
+    <associate|natural numbers n\<less\>m and r\<less\>s then
+    n+r\<less\>m+s|<tuple|5.67|135>>
     <associate|natural numbers n\<less\>m then there exists a k such that
-    m=n+k|<tuple|5.57|?>>
-    <associate|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k|<tuple|5.53|?>>
+    m=n+k|<tuple|5.59|134>>
+    <associate|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k|<tuple|5.55|133>>
     <associate|natural numbers n\<less\>m\<less\>=\<gtr\>there exists a k
-    such that m=k|<tuple|5.58|?>>
-    <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>=m|<tuple|5.49|126>>
-    <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>s(m)|<tuple|5.52|127>>
-    <associate|natural numbers n\<less\>n+k|<tuple|5.58|?>>
-    <associate|natural numbers n\<less\>s(m)=\<gtr\>s\<less\>=m|<tuple|5.55|?>>
-    <associate|natural numbers n\<less\>s(n)|<tuple|5.47|126>>
-    <associate|natural numbers n=/s(n)|<tuple|5.15|114>>
-    <associate|natural numbers order relation|<tuple|5.45|125>>
-    <associate|natural numbers s(n) = n+1|<tuple|5.30|121>>
-    <associate|natural numbers s(n)=/0|<tuple|5.10|114>>
-    <associate|natural numbers successor|<tuple|5.5|113>>
-    <associate|natural numbers successor function|<tuple|5.6|113>>
+    such that m=k|<tuple|5.60|134>>
+    <associate|natural numbers n\<less\>m=\<gtr\>n.k\<less\>m.k|<tuple|5.69|135>>
+    <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>=m|<tuple|5.50|132>>
+    <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>s(m)|<tuple|5.54|133>>
+    <associate|natural numbers n\<less\>s(m)=\<gtr\>s\<less\>=m|<tuple|5.57|134>>
+    <associate|natural numbers n\<less\>s(n)|<tuple|5.47|131>>
+    <associate|natural numbers n=/s(n)|<tuple|5.15|119>>
+    <associate|natural numbers order relation|<tuple|5.45|131>>
+    <associate|natural numbers product of non zero numbers is non
+    zero|<tuple|5.68|135>>
+    <associate|natural numbers s(n) = n+1|<tuple|5.30|126>>
+    <associate|natural numbers s(n)=/0|<tuple|5.10|118>>
+    <associate|natural numbers successor|<tuple|5.5|117>>
+    <associate|natural numbers successor function|<tuple|5.6|117>>
     <associate|natural numbers successor function is
-    injective|<tuple|5.16|115>>
-    <associate|natural numbers successor properties|<tuple|5.12|114>>
-    <associate|natural numbers sum associativity|<tuple|5.32|122>>
-    <associate|natural numbers sum commutativity|<tuple|5.33|122>>
-    <associate|natural numbers transitive|<tuple|5.13|114>>
-    <associate|operator|<tuple|4.1|103>>
-    <associate|recursion|<tuple|5.19|116>>
-    <associate|recursion injective function|<tuple|5.20|117>>
-    <associate|recursion iteration|<tuple|5.24|118>>
-    <associate|recursion iteration in a group|<tuple|5.25|119>>
-    <associate|recursion step form (1)|<tuple|5.26|120>>
-    <associate|ring|<tuple|4.24|108>>
-    <associate|ring absorbing element|<tuple|4.29|109>>
-    <associate|ring homeomorphism|<tuple|4.30|110>>
-    <associate|ring integer domain|<tuple|4.26|109>>
-    <associate|ring isomorphism|<tuple|4.32|110>>
-    <associate|ring ring homeomorphism and neutral element|<tuple|4.31|110>>
-    <associate|ring subring is a ring|<tuple|4.28|109>>
-    <associate|ring zero divisor|<tuple|4.25|109>>
-    <associate|semi-group|<tuple|4.2|103>>
-    <associate|sub-semi-group|<tuple|4.9|104>>
-    <associate|subring|<tuple|4.27|109>>
+    injective|<tuple|5.16|119>>
+    <associate|natural numbers successor properties|<tuple|5.12|118>>
+    <associate|natural numbers sum associativity|<tuple|5.32|127>>
+    <associate|natural numbers sum commutativity|<tuple|5.33|127>>
+    <associate|natural numbers sup property|<tuple|5.66|135>>
+    <associate|natural numbers transitive|<tuple|5.13|118>>
+    <associate|natural numbers x\<less\>=y or y\<less\>x|<tuple|5.53|133>>
+    <associate|operator|<tuple|4.1|107>>
+    <associate|recursion|<tuple|5.19|120>>
+    <associate|recursion final|<tuple|5.76|138>>
+    <associate|recursion injective function|<tuple|5.20|122>>
+    <associate|recursion iteration|<tuple|5.24|123>>
+    <associate|recursion iteration in a group|<tuple|5.25|124>>
+    <associate|recursion step (2)|<tuple|5.78|139>>
+    <associate|recursion step form (1)|<tuple|5.26|124>>
+    <associate|recursion step form (3)|<tuple|5.79|139>>
+    <associate|ring|<tuple|4.24|112>>
+    <associate|ring absorbing element|<tuple|4.29|113>>
+    <associate|ring homeomorphism|<tuple|4.30|114>>
+    <associate|ring integer domain|<tuple|4.26|113>>
+    <associate|ring isomorphism|<tuple|4.32|114>>
+    <associate|ring ring homeomorphism and neutral element|<tuple|4.31|114>>
+    <associate|ring subring is a ring|<tuple|4.28|113>>
+    <associate|ring zero divisor|<tuple|4.25|113>>
+    <associate|semi-group|<tuple|4.2|107>>
+    <associate|sub-semi-group|<tuple|4.9|108>>
+    <associate|subring|<tuple|4.27|113>>
   </collection>
 </references>
 
@@ -3512,6 +4782,26 @@
       <tuple|<tuple|multiplication of natural numbers>|<pageref|auto-38>>
 
       <tuple|<tuple|absorbing element>|<pageref|auto-39>>
+
+      <tuple|<tuple|equipotence>|<pageref|auto-44>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<approx\>>>|<pageref|auto-45>>
+
+      <tuple|<tuple|equipotency>|<pageref|auto-46>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<preccurlyeq\>>>|<pageref|auto-47>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<prec\>>>|<pageref|auto-48>>
+
+      <tuple|<tuple|finite set>|<pageref|auto-50>>
+
+      <tuple|<tuple|infinite set>|<pageref|auto-51>>
+
+      <tuple|<tuple|denumerable set>|<pageref|auto-52>>
+
+      <tuple|<tuple|infinite countable set>|<pageref|auto-53>>
+
+      <tuple|<tuple|countable set>|<pageref|auto-54>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Algebraic
@@ -3546,9 +4836,20 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-40>
 
+      5.5<space|2spc>Other forms of Mathematical Induction and Recursion
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-41>
+
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6<space|2spc>Finite
       and Infinite Sets> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-41><vspace|0.5fn>
+      <no-break><pageref|auto-42><vspace|0.5fn>
+
+      6.1<space|2spc>Equipotence <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-43>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|7<space|2spc>Finite
+      and Infinite sets> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-49><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>

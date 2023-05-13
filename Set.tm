@@ -3428,9 +3428,67 @@
     </equation*>
   </proof>
 
-  From the above theorem it follows that if <math|f<around*|(|A|)>=B> that
-  <math|f<rsup|-1>:B\<rightarrow\>A> is a function, that is the idea of a
-  bijection.
+  <\corollary>
+    <label|function injection condition>If <math|f:A\<rightarrow\>B> is a
+    function, <math|A\<neq\>\<varnothing\>> then <math|f:A\<rightarrow\>B> is
+    injective if and only if there exist a function <math|g:B\<rightarrow\>A>
+    such that <math|g\<circ\>f=Id<rsub|A>>
+  </corollary>
+
+  <\proof>
+    \;
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Using the above [theorem:
+      <reference|function injective inverse is a function>] we have that
+      <math|f<rsup|-1>:f<around*|(|A|)>\<rightarrow\>A> is a function. As
+      <math|A\<neq\>0> there exist a <math|a\<in\>A> so we can consider the
+      constant function <math|C<rsub|a>:B\\f<around*|(|A|)>\<rightarrow\>A>
+      [see example: <reference|function constant function>]. As
+      <math|f<around*|(|A|)><big|cap><around*|(|B\\f<around*|(|A|)>|)>=\<varnothing\>>
+      and <math|B=f<around*|(|A|)><big|cup><around*|(|B\<setminus\>f<around*|(|A|)>|)>>
+      we have by [theorem: <reference|function combining functions (1)>] that\ 
+
+      <\equation*>
+        g=C<rsub|a><big|cup>f<rsup|-1>\<of\>B\<rightarrow\>A
+      </equation*>
+
+      is a function. If <math|<around*|(|x,y|)>\<in\>g\<circ\>f> <math|then
+      >\<exists\>z such that <math|<around*|(|x,z|)>\<in\>f\<wedge\><around*|(|z,y|)>\<in\>g>.
+      As <math|<around*|(|x,z|)>\<in\>f> we have that
+      <math|<around*|(|z,x|)>\<in\>f<rsup|-1>\<subseteq\>C<rsub|a><big|cup>f<rsup|-1>=g>,
+      as also <math|<around*|(|z,y|)>\<in\>g> and <math|g> is function, we
+      have that <math|y=x> so that <math|<around*|(|x,y|)>=<around*|(|x,x|)>\<in\>Id<rsub|A>>
+      hence\ 
+
+      <\equation*>
+        g\<circ\>f\<subseteq\>Id<rsub|A>
+      </equation*>
+
+      Further if <math|<around*|(|x,y|)>\<in\>Id<rsub|A>> then <math|x=y>, as
+      <math|x\<in\>A=dom<around*|(|f|)>> there exist a <math|z\<in\>B> such
+      that <math|<around*|(|x,z|)>\<in\>f\<Rightarrow\><around*|(|z,x|)>\<in\>f<rsup|-1>\<subseteq\>C<rsub|a><big|cup>f<rsup|-1>=g>
+      proving that <math|<around*|(|x,y|)>=<around*|(|x,x|)>\<in\>g\<circ\>f>.
+      Hence\ 
+
+      <\equation*>
+        Id<rsub|A>\<subseteq\>g\<circ\>f
+      </equation*>
+
+      proving that\ 
+
+      <\equation*>
+        g\<circ\>f=Id<rsub|A>
+      </equation*>
+
+      <item*|<math|\<Leftarrow\>>>Assume that there exists a function
+      <math|g:B\<rightarrow\>A> such that <math|g\<circ\>f=Id<rsub|A>> then
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>f\<subseteq\>A\<times\>B>|<cell|\<Rightarrowlim\><rsub|y\<in\>B,dom<around*|(|g|)>=B>>|<cell|\<exists\>z\<vdash\><around*|(|y,z|)>\<in\>g>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|<around*|(|x,z|)>,<around*|(|x<rprime|'>,z|)>\<in\>g\<circ\>f=Id<rsub|A>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x=z=x<rprime|'>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x=x<rprime|'>>>>>
+      </eqnarray*>
+    </description>
+  </proof>
 
   <\definition>
     <label|bijection><index|bijection>A function <math|f:A\<rightarrow\>B> is
@@ -3443,6 +3501,27 @@
     <math|B> are bijective iff there exists a bijection between <math|A> and
     <math|B>
   </definition>
+
+  <\example>
+    <label|function empty function bijection>The function
+    <math|\<varnothing\>:\<varnothing\>\<rightarrow\>\<varnothing\>> is a
+    bijection.
+  </example>
+
+  <\proof>
+    By [example: <reference|function empty function>]
+    <math|\<varnothing\>:\<varnothing\>\<rightarrow\>\<varnothing\>> is a
+    function. To prove that is a bijection we have:
+
+    <\description>
+      <item*|injectivity><math|\<forall\><around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>\<varnothing\>>
+      we have <math|x=x<rprime|'>> is satisfied vacuously.
+
+      <item*|surjectivity><math|\<forall\>y\<in\>\<varnothing\>> there exist
+      a <math|x\<in\>\<varnothing\>> such that
+      <math|<around*|(|x,y|)>\<in\>\<varnothing\>> is satisfied vacuously.
+    </description>
+  </proof>
 
   <\example>
     <label|function identity map is a bijection>Let <math|A> be a class then
@@ -3863,7 +3942,8 @@
   <\theorem>
     <label|function P(A)=2^A>If <math|A> is a class then there is a bijection
     between <math|\<cal-P\><around*|(|A|)>> and
-    <math|<around*|{|0,1|}><rsup|A>>.
+    <math|<around*|{|0,1|}><rsup|A>> where <math|0=\<varnothing\>> and
+    <math|1=<around*|{|\<varnothing\>|}>> are different elements.
   </theorem>
 
   <\proof>
@@ -4180,6 +4260,62 @@
     previous theorem [theorem: <reference|function combining functions (1)>]
     proves that <math|f<big|cup>g:A<big|cup>C\<rightarrow\>B<big|cup>D> is a
     function.
+  </proof>
+
+  <\corollary>
+    <label|function combining bijections>Let <math|f:A\<rightarrow\>B> and
+    <math|g:C\<rightarrow\>D> be bijections with
+    <math|A<big|cap>C=\<varnothing\>> and <math|B<big|cap>D=\<varnothing\>>
+    then
+
+    <\equation*>
+      f<big|cup>g:A<big|cup>C\<rightarrow\>B<big|cup>D
+    </equation*>
+
+    is a bijection.
+  </corollary>
+
+  <\proof>
+    Using the previous theorem [theorem: <reference|function combining
+    functions (2)>] we have that <math|f<big|cup>g:A<big|cup>C\<rightarrow\>B<big|cup>D>
+    is a function. Now we have:\ 
+
+    <\description>
+      <item*|injectivity>If <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>f<big|cup>g\<subseteq\><around*|(|A<big|cup>C|)>\<times\><around*|(|B<big|cup>D|)>>
+      we have the following possibilities for <math|y>:\ 
+
+      <\description>
+        <item*|<math|y\<in\>B>>As <math|f\<subseteq\>A\<times\>B> and
+        <math|g\<subseteq\>C\<times\>D> we can not have
+        <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>g> [for then
+        <math|y\<in\>D\<Rightarrow\>y\<in\>B<big|cap>D=\<varnothing\>>], as
+        <math|g> is injective we have <math|x=x<rprime|'>>.
+
+        <item*|<math|y\<in\>D>>As <math|f\<subseteq\>A\<times\>B> and
+        <math|g\<subseteq\>C\<times\>D> we can not have
+        <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>f> [for then
+        <math|y\<in\>B\<Rightarrow\>y\<in\>B<big|cap>D=\<varnothing\>>], as
+        <math|f> is injective we have <math|x=x<rprime|'>>.
+      </description>
+
+      so in all cases we have <math|x=x<rprime|'>> proving injectivity of
+      <math|><math|f<big|cup>g:A<big|cup>C\<rightarrow\>B<big|cup>D>.\ 
+
+      <item*|surjectivity>If <math|y\<in\>B<big|cup>D> then we have either:
+
+      <\description>
+        <item*|<math|y\<in\>B>>Then as <math|f> is surjective there exist a
+        <math|x\<in\>A\<subseteq\>A<big|cup>C> such that
+        <math|<around*|(|x,y|)>\<in\>f\<subseteq\>f<big|cup>g>.
+
+        <item*|<math|y\<in\>D>>Then as <math|g> is surjective there exist a
+        <math|x\<in\>C\<subseteq\>A<big|cup>C> such that
+        <math|<around*|(|x,y|)>\<in\>g\<subseteq\>f<big|cup>g>.
+      </description>
+
+      proving that in all cases there exist a <math|x\<in\>A<big|cup>C> such
+      that <math|<around*|(|x,y|)>\<in\>f<big|cup>g>.
+    </description>
   </proof>
 
   <\corollary>
@@ -7520,6 +7656,20 @@
   </notation>
 
   <\definition>
+    <label|order a\<less\>=b\<less\>=c>If
+    <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>> is a pre-ordered or
+    partial class and <math|x,y,z\<in\>A> then we define:
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|x\<leqslant\>y\<leqslant\>z>|<cell|<text| is
+      the same as >>|<cell|x\<leqslant\>y\<wedge\>y\<leqslant\>z>>|<row|<cell|x\<leqslant\>y\<less\>z>|<cell|<text|
+      is the same as >>|<cell|x\<leqslant\>y\<wedge\>y\<less\>z>>|<row|<cell|x\<less\>y\<leqslant\>z>|<cell|<text|
+      is the same as >>|<cell|x\<less\>y\<wedge\>y\<leqslant\>z>>|<row|<cell|x\<less\>y\<less\>z>|<cell|<text|
+      is the same as >>|<cell|x\<less\>y\<wedge\>y\<less\>z>>>>
+    </eqnarray*>
+  </definition>
+
+  <\definition>
     <index|<math|\<less\>>>If <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>>
     is a pre-ordered class [or partial ordered class] then <math|x\<less\>y>
     is equivalent with <math|x\<leqslant\>y\<wedge\>x\<neq\>y>
@@ -7537,6 +7687,18 @@
       <item><math|x\<less\>y\<wedge\>y\<less\>z\<Rightarrow\>x\<less\>z>
 
       <item><math|<around*|(|x\<less\>y\<vee\>x=y|)>\<Leftrightarrow\><around*|(|x\<leqslant\>y|)>>
+    </enumerate>
+
+    \ or in other words\ 
+
+    <\enumerate>
+      <item><math|x\<leqslant\>y\<less\>z\<Rightarrow\>x\<less\>z>
+
+      <item><math|x\<less\>y\<leqslant\>z\<Rightarrow\>x\<less\>z>
+
+      <item><math|x\<less\>y\<less\>z\<Rightarrow\>x\<less\>z>
+
+      <item><math|<around*|(|x\<less\>y\<vee\>x=y|)>\<Leftrightarrow\>x\<leqslant\>y>
     </enumerate>
   </theorem>
 
@@ -8645,7 +8807,7 @@
   supremums and infinums.
 
   <\theorem>
-    <label|order sup, inf stalls>Let <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>>
+    <label|order sup, inf property>Let <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>>
     be a totally ordered set and <math|A\<subseteq\>X> then
 
     <\enumerate>
@@ -12269,7 +12431,7 @@
     <associate|auto-97|<tuple|immediate successor|?>>
     <associate|auto-98|<tuple|section|?>>
     <associate|auto-99|<tuple|transfinite induction|?>>
-    <associate|axiom of choice|<tuple|3.95|?>>
+    <associate|axiom of choice|<tuple|3.96|?>>
     <associate|axiom of construction|<tuple|1.9|?>>
     <associate|axiom of extent|<tuple|1.5|2>>
     <associate|axiom of infinity|<tuple|1.52|?>>
@@ -12277,36 +12439,36 @@
     <associate|axiom of power|<tuple|1.64|?>>
     <associate|axiom of subsets|<tuple|1.54|?>>
     <associate|axiom of union|<tuple|1.61|?>>
-    <associate|bijection|<tuple|2.56|?>>
-    <associate|bijective classes|<tuple|2.57|?>>
+    <associate|bijection|<tuple|2.57|?>>
+    <associate|bijective classes|<tuple|2.58|?>>
     <associate|cartesian product|<tuple|1.44|?>>
     <associate|cartesian product and inclusion|<tuple|1.48|?>>
     <associate|cartesian product of the empty set|<tuple|1.46|?>>
     <associate|cartesian product properties (1)|<tuple|1.49|?>>
     <associate|cartesian product with enpty set|<tuple|1.47|?>>
-    <associate|choice Axiom of choice consequences|<tuple|3.120|?>>
-    <associate|choice Hausdorff maximal principle|<tuple|3.111|?>>
-    <associate|choice Hausdorff's Maximal Principle|<tuple|3.112|?>>
-    <associate|choice Hausdorff's implies Zorn's|<tuple|3.114|?>>
-    <associate|choice P'(A)|<tuple|3.92|?>>
-    <associate|choice P'(A) is a set|<tuple|3.93|?>>
-    <associate|choice Zorn implies welll ordering|<tuple|3.115|?>>
-    <associate|choice Zorn's lemma|<tuple|3.113|?>>
-    <associate|choice Zorn's lemma for pre-order|<tuple|3.121|?>>
-    <associate|choice axiom of choice equivalences (1)|<tuple|3.97|?>>
-    <associate|choice choice function|<tuple|3.94|?>>
-    <associate|choice existence of successor|<tuple|3.101|?>>
-    <associate|choice function to injection/bijection|<tuple|3.122|?>>
-    <associate|choice intersection of p-sewuences|<tuple|3.104|?>>
-    <associate|choice lemma p-sequence|<tuple|3.102|?>>
-    <associate|choice lemma p-sequence generation|<tuple|3.107|?>>
-    <associate|choice lemma properties of select|<tuple|3.108|?>>
-    <associate|choice lemma property of select elements|<tuple|3.106|?>>
+    <associate|choice Axiom of choice consequences|<tuple|3.121|?>>
+    <associate|choice Hausdorff maximal principle|<tuple|3.112|?>>
+    <associate|choice Hausdorff's Maximal Principle|<tuple|3.113|?>>
+    <associate|choice Hausdorff's implies Zorn's|<tuple|3.115|?>>
+    <associate|choice P'(A)|<tuple|3.93|?>>
+    <associate|choice P'(A) is a set|<tuple|3.94|?>>
+    <associate|choice Zorn implies welll ordering|<tuple|3.116|?>>
+    <associate|choice Zorn's lemma|<tuple|3.114|?>>
+    <associate|choice Zorn's lemma for pre-order|<tuple|3.122|?>>
+    <associate|choice axiom of choice equivalences (1)|<tuple|3.98|?>>
+    <associate|choice choice function|<tuple|3.95|?>>
+    <associate|choice existence of successor|<tuple|3.102|?>>
+    <associate|choice function to injection/bijection|<tuple|3.123|?>>
+    <associate|choice intersection of p-sewuences|<tuple|3.105|?>>
+    <associate|choice lemma p-sequence|<tuple|3.103|?>>
+    <associate|choice lemma p-sequence generation|<tuple|3.108|?>>
+    <associate|choice lemma properties of select|<tuple|3.109|?>>
+    <associate|choice lemma property of select elements|<tuple|3.107|?>>
     <associate|choice lemma select elements froms a
-    p-sewuence|<tuple|3.109|?>>
-    <associate|choice lemma upper bound of chain|<tuple|3.117|?>>
-    <associate|choice lemma well ordering lemma (1)|<tuple|3.116|?>>
-    <associate|choice well-order implies Axiom of Choice|<tuple|3.118|?>>
+    p-sewuence|<tuple|3.110|?>>
+    <associate|choice lemma upper bound of chain|<tuple|3.118|?>>
+    <associate|choice lemma well ordering lemma (1)|<tuple|3.117|?>>
+    <associate|choice well-order implies Axiom of Choice|<tuple|3.119|?>>
     <associate|class absorption laws|<tuple|1.27|?>>
     <associate|class class commutative,idempotent,associative,distributivity|<tuple|1.30|?>>
     <associate|class complement of comploment|<tuple|1.28|?>>
@@ -12484,156 +12646,160 @@
     <associate|equivalence relation partition|<tuple|3.6|?>>
     <associate|equivalence relation partition alternative|<tuple|3.8|?>>
     <associate|equivalence relation subsets|<tuple|3.19|?>>
-    <associate|family|<tuple|2.86|?>>
-    <associate|family and function composition|<tuple|2.91|?>>
-    <associate|family de Morgan|<tuple|2.112|?>>
-    <associate|family definition (1)|<tuple|2.88|?>>
-    <associate|family definition (2)|<tuple|2.89|?>>
-    <associate|family definition (3)|<tuple|2.90|?>>
-    <associate|family distributivity|<tuple|2.110|?>>
-    <associate|family image and preimage|<tuple|2.115|?>>
-    <associate|family intersection (2)|<tuple|2.103|?>>
-    <associate|family intersection is a set|<tuple|2.104|?>>
-    <associate|family intersection(1)|<tuple|2.102|?>>
-    <associate|family properties (1)|<tuple|2.107|?>>
-    <associate|family properties (2)|<tuple|2.108|?>>
-    <associate|family properties (3)|<tuple|2.113|?>>
-    <associate|family range|<tuple|2.92|?>>
-    <associate|family range (1)|<tuple|2.93|?>>
-    <associate|family set|<tuple|2.94|?>>
-    <associate|family trivial|<tuple|2.105|?>>
-    <associate|family union (1)|<tuple|2.95|?>>
-    <associate|family union (2)|<tuple|2.98|?>>
-    <associate|family union condition set|<tuple|2.100|?>>
-    <associate|family union intersection and empty set|<tuple|2.114|?>>
-    <associate|family union intersection and inclusion|<tuple|2.109|?>>
-    <associate|family union of a empty set|<tuple|2.101|?>>
-    <associate|family union of family set and surjections|<tuple|2.99|?>>
-    <associate|family union of union of two families|<tuple|2.111|?>>
-    <associate|family union{A,B}|<tuple|2.106|?>>
+    <associate|family|<tuple|2.89|?>>
+    <associate|family and function composition|<tuple|2.94|?>>
+    <associate|family de Morgan|<tuple|2.115|?>>
+    <associate|family definition (1)|<tuple|2.91|?>>
+    <associate|family definition (2)|<tuple|2.92|?>>
+    <associate|family definition (3)|<tuple|2.93|?>>
+    <associate|family distributivity|<tuple|2.113|?>>
+    <associate|family image and preimage|<tuple|2.118|?>>
+    <associate|family intersection (2)|<tuple|2.106|?>>
+    <associate|family intersection is a set|<tuple|2.107|?>>
+    <associate|family intersection(1)|<tuple|2.105|?>>
+    <associate|family properties (1)|<tuple|2.110|?>>
+    <associate|family properties (2)|<tuple|2.111|?>>
+    <associate|family properties (3)|<tuple|2.116|?>>
+    <associate|family range|<tuple|2.95|?>>
+    <associate|family range (1)|<tuple|2.96|?>>
+    <associate|family set|<tuple|2.97|?>>
+    <associate|family trivial|<tuple|2.108|?>>
+    <associate|family union (1)|<tuple|2.98|?>>
+    <associate|family union (2)|<tuple|2.101|?>>
+    <associate|family union condition set|<tuple|2.103|?>>
+    <associate|family union intersection and empty set|<tuple|2.117|?>>
+    <associate|family union intersection and inclusion|<tuple|2.112|?>>
+    <associate|family union of a empty set|<tuple|2.104|?>>
+    <associate|family union of family set and surjections|<tuple|2.102|?>>
+    <associate|family union of union of two families|<tuple|2.114|?>>
+    <associate|family union{A,B}|<tuple|2.109|?>>
     <associate|function|<tuple|2.21|?>>
     <associate|function A^empty is empty|<tuple|2.27|?>>
     <associate|function B^A|<tuple|2.25|?>>
     <associate|function B^A and inclusion|<tuple|2.29|?>>
-    <associate|function P(A)=2^A|<tuple|2.69|?>>
+    <associate|function P(A)=2^A|<tuple|2.71|?>>
     <associate|function alternative for composition|<tuple|2.37|?>>
-    <associate|function and power|<tuple|2.68|?>>
+    <associate|function and power|<tuple|2.70|?>>
     <associate|function between {0,1} and {A,B}|<tuple|2.23|?>>
-    <associate|function bijection and inverse|<tuple|2.65|?>>
-    <associate|function bijection condition (2)|<tuple|2.64|?>>
-    <associate|function bijection f,f-1|<tuple|2.62|?>>
-    <associate|function bijection has a inverse|<tuple|2.61|?>>
+    <associate|function bijection and inverse|<tuple|2.67|?>>
+    <associate|function bijection condition (2)|<tuple|2.66|?>>
+    <associate|function bijection f,f-1|<tuple|2.64|?>>
+    <associate|function bijection has a inverse|<tuple|2.63|?>>
     <associate|function characteristics function|<tuple|2.41|?>>
-    <associate|function combining functions (1)|<tuple|2.71|?>>
-    <associate|function combining functions (2)|<tuple|2.72|?>>
-    <associate|function composition and restriction|<tuple|2.78|?>>
+    <associate|function combining bijections|<tuple|2.75|?>>
+    <associate|function combining functions (1)|<tuple|2.73|?>>
+    <associate|function combining functions (2)|<tuple|2.74|?>>
+    <associate|function composition and restriction|<tuple|2.81|?>>
     <associate|function composition injectivity, surjectivity and
-    bijectivity|<tuple|2.67|?>>
+    bijectivity|<tuple|2.69|?>>
     <associate|function composition of Id function|<tuple|2.43|?>>
     <associate|function composition of functions is a
     fucntion|<tuple|2.45|?>>
     <associate|function condition (1)|<tuple|2.22|?>>
     <associate|function constant function|<tuple|2.40|?>>
     <associate|function empty function|<tuple|2.39|?>>
+    <associate|function empty function bijection|<tuple|2.59|?>>
     <associate|function equality (1)|<tuple|2.33|?>>
     <associate|function equality (2)|<tuple|2.36|?>>
     <associate|function extend target|<tuple|2.28|?>>
-    <associate|function extending funtion domain|<tuple|2.73|?>>
+    <associate|function extending funtion domain|<tuple|2.76|?>>
     <associate|function f(x)|<tuple|2.34|?>>
-    <associate|function function and intersection and union|<tuple|2.82|?>>
+    <associate|function function and intersection and union|<tuple|2.85|?>>
     <associate|function identity function|<tuple|2.42|?>>
-    <associate|function identity map is a bijection|<tuple|2.58|?>>
+    <associate|function identity map is a bijection|<tuple|2.60|?>>
     <associate|function image preimage|<tuple|2.44|?>>
     <associate|function image preimage alternative|<tuple|2.38|?>>
     <associate|function inclusion function|<tuple|2.49|?>>
+    <associate|function injection condition|<tuple|2.56|?>>
     <associate|function injective inverse is a function|<tuple|2.55|?>>
-    <associate|function injectivity to bijection|<tuple|2.60|?>>
+    <associate|function injectivity to bijection|<tuple|2.62|?>>
     <associate|function injectivity, surjectivity|<tuple|2.48|?>>
-    <associate|function inverse and restriction|<tuple|2.77|?>>
-    <associate|function inverse function and f(x)|<tuple|2.63|?>>
-    <associate|function inverse of a bijection is unique|<tuple|2.66|?>>
+    <associate|function inverse and restriction|<tuple|2.80|?>>
+    <associate|function inverse function and f(x)|<tuple|2.65|?>>
+    <associate|function inverse of a bijection is unique|<tuple|2.68|?>>
     <associate|function power of intersection|<tuple|2.31|?>>
     <associate|function preimage of image|<tuple|2.51|?>>
-    <associate|function properties (1)|<tuple|2.81|?>>
+    <associate|function properties (1)|<tuple|2.84|?>>
     <associate|function range restriction|<tuple|2.32|?>>
-    <associate|function restricted function properties|<tuple|2.75|?>>
-    <associate|function restriction and domain|<tuple|2.76|?>>
-    <associate|function restriction of a function|<tuple|2.79|?>>
-    <associate|function restriction of a graph|<tuple|2.70|?>>
-    <associate|function simple definition|<tuple|2.83|?>>
-    <associate|function simple definition notation|<tuple|2.84|?>>
+    <associate|function restricted function properties|<tuple|2.78|?>>
+    <associate|function restriction and domain|<tuple|2.79|?>>
+    <associate|function restriction of a function|<tuple|2.82|?>>
+    <associate|function restriction of a graph|<tuple|2.72|?>>
+    <associate|function simple definition|<tuple|2.86|?>>
+    <associate|function simple definition notation|<tuple|2.87|?>>
     <associate|function surjection and construction of inverse
-    function|<tuple|3.96|?>>
+    function|<tuple|3.97|?>>
     <associate|function surjection condition|<tuple|2.47|?>>
-    <associate|function trivial bijection|<tuple|2.59|?>>
+    <associate|function trivial bijection|<tuple|2.61|?>>
     <associate|function: A^B and sets|<tuple|2.30|?>>
-    <associate|order A isomorphism B|<tuple|3.48|?>>
-    <associate|order chain|<tuple|3.38|?>>
-    <associate|order chain is a totally ordered class|<tuple|3.40|?>>
-    <associate|order comparable|<tuple|3.35|?>>
-    <associate|order comparable property|<tuple|3.36|?>>
-    <associate|order composition of functions|<tuple|3.49|?>>
-    <associate|order condition for isomorphism|<tuple|3.51|?>>
+    <associate|order A isomorphism B|<tuple|3.49|?>>
+    <associate|order a\<less\>=b\<less\>=c|<tuple|3.29|?>>
+    <associate|order chain|<tuple|3.39|?>>
+    <associate|order chain is a totally ordered class|<tuple|3.41|?>>
+    <associate|order comparable|<tuple|3.36|?>>
+    <associate|order comparable property|<tuple|3.37|?>>
+    <associate|order composition of functions|<tuple|3.50|?>>
+    <associate|order condition for isomorphism|<tuple|3.52|?>>
     <associate|order condition for isomorphism in a totallu ordered
-    set|<tuple|3.54|?>>
-    <associate|order conditional complete alternatives|<tuple|3.73|?>>
-    <associate|order conditional complete order|<tuple|3.72|?>>
-    <associate|order cut|<tuple|3.46|?>>
-    <associate|order empty set is a chain|<tuple|3.39|?>>
-    <associate|order eq order preorder to order|<tuple|3.32|?>>
-    <associate|order example inclusion order and sup, inf|<tuple|3.65|?>>
-    <associate|order greatest and lowest element are unique|<tuple|3.59|?>>
-    <associate|order greatest lowest element|<tuple|3.56|?>>
-    <associate|order immediate successor|<tuple|3.79|?>>
-    <associate|order inclusion and greatest and least element|<tuple|3.67|?>>
-    <associate|order inclusion is a order|<tuple|3.31|?>>
-    <associate|order increasing, decreasing|<tuple|3.47|?>>
-    <associate|order initial segement|<tuple|3.43|?>>
-    <associate|order initial segement a\<less\>b|<tuple|3.89|?>>
-    <associate|order initial segement inclusion|<tuple|3.44|?>>
-    <associate|order intial sergment property|<tuple|3.45|?>>
-    <associate|order isomorphism and conditional complete|<tuple|3.75|?>>
-    <associate|order isomorphism condition (2)|<tuple|3.52|?>>
-    <associate|order isomorphism preservers sup and inf|<tuple|3.74|?>>
-    <associate|order isomorphism strictly|<tuple|3.50|?>>
-    <associate|order lexical order|<tuple|3.34|?>>
-    <associate|order lower upper bound and inclusion|<tuple|3.68|?>>
-    <associate|order lower upper bounds of empty set|<tuple|3.63|?>>
-    <associate|order maximal minimal element|<tuple|3.55|?>>
-    <associate|order maximum of class with bigger elements|<tuple|3.61|?>>
-    <associate|order min(A)\<less\>=max(A)|<tuple|3.60|?>>
+    set|<tuple|3.55|?>>
+    <associate|order conditional complete alternatives|<tuple|3.74|?>>
+    <associate|order conditional complete order|<tuple|3.73|?>>
+    <associate|order cut|<tuple|3.47|?>>
+    <associate|order empty set is a chain|<tuple|3.40|?>>
+    <associate|order eq order preorder to order|<tuple|3.33|?>>
+    <associate|order example inclusion order and sup, inf|<tuple|3.66|?>>
+    <associate|order greatest and lowest element are unique|<tuple|3.60|?>>
+    <associate|order greatest lowest element|<tuple|3.57|?>>
+    <associate|order immediate successor|<tuple|3.80|?>>
+    <associate|order inclusion and greatest and least element|<tuple|3.68|?>>
+    <associate|order inclusion is a order|<tuple|3.32|?>>
+    <associate|order increasing, decreasing|<tuple|3.48|?>>
+    <associate|order initial segement|<tuple|3.44|?>>
+    <associate|order initial segement a\<less\>b|<tuple|3.90|?>>
+    <associate|order initial segement inclusion|<tuple|3.45|?>>
+    <associate|order intial sergment property|<tuple|3.46|?>>
+    <associate|order isomorphism and conditional complete|<tuple|3.76|?>>
+    <associate|order isomorphism condition (2)|<tuple|3.53|?>>
+    <associate|order isomorphism preservers sup and inf|<tuple|3.75|?>>
+    <associate|order isomorphism strictly|<tuple|3.51|?>>
+    <associate|order lexical order|<tuple|3.35|?>>
+    <associate|order lower upper bound and inclusion|<tuple|3.69|?>>
+    <associate|order lower upper bounds of empty set|<tuple|3.64|?>>
+    <associate|order maximal minimal element|<tuple|3.56|?>>
+    <associate|order maximum of class with bigger elements|<tuple|3.62|?>>
+    <associate|order min(A)\<less\>=max(A)|<tuple|3.61|?>>
     <associate|order order relation|<tuple|3.26|?>>
-    <associate|order partial order on sub class|<tuple|3.33|?>>
+    <associate|order partial order on sub class|<tuple|3.34|?>>
     <associate|order partial ordered class|<tuple|3.27|?>>
     <associate|order preorder|<tuple|3.24|?>>
     <associate|order preordered class|<tuple|3.25|?>>
-    <associate|order properties of the isomorph relation|<tuple|3.53|?>>
-    <associate|order section|<tuple|3.81|?>>
-    <associate|order section and well ordering|<tuple|3.82|?>>
-    <associate|order strict order|<tuple|3.30|?>>
-    <associate|order sup and inf and bigger elements|<tuple|3.70|?>>
-    <associate|order sup inf condition|<tuple|3.71|?>>
-    <associate|order sup, inf stalls|<tuple|3.66|?>>
-    <associate|order sup,inf and inclusion|<tuple|3.69|?>>
-    <associate|order supremum infinum|<tuple|3.64|?>>
-    <associate|order total/well-order inclusion|<tuple|3.77|?>>
-    <associate|order totally lexicol ordering|<tuple|3.42|?>>
-    <associate|order totally ordered subclass|<tuple|3.41|?>>
-    <associate|order transfinite induction|<tuple|3.83|?>>
-    <associate|order upport lower bound|<tuple|3.62|?>>
-    <associate|order well order and immediate successor|<tuple|3.80|?>>
+    <associate|order properties of the isomorph relation|<tuple|3.54|?>>
+    <associate|order section|<tuple|3.82|?>>
+    <associate|order section and well ordering|<tuple|3.83|?>>
+    <associate|order strict order|<tuple|3.31|?>>
+    <associate|order sup and inf and bigger elements|<tuple|3.71|?>>
+    <associate|order sup inf condition|<tuple|3.72|?>>
+    <associate|order sup, inf property|<tuple|3.67|?>>
+    <associate|order sup,inf and inclusion|<tuple|3.70|?>>
+    <associate|order supremum infinum|<tuple|3.65|?>>
+    <associate|order total/well-order inclusion|<tuple|3.78|?>>
+    <associate|order totally lexicol ordering|<tuple|3.43|?>>
+    <associate|order totally ordered subclass|<tuple|3.42|?>>
+    <associate|order transfinite induction|<tuple|3.84|?>>
+    <associate|order upport lower bound|<tuple|3.63|?>>
+    <associate|order well order and immediate successor|<tuple|3.81|?>>
     <associate|order well order every subclass is isomorphic with A or a
-    iitial segement|<tuple|3.91|?>>
+    iitial segement|<tuple|3.92|?>>
     <associate|order well order implies conditional complete and totally
-    ordering|<tuple|3.78|?>>
-    <associate|order well ordered and order isomorphism|<tuple|3.84|?>>
-    <associate|order well ordered class and isomorphism|<tuple|3.85|?>>
+    ordering|<tuple|3.79|?>>
+    <associate|order well ordered and order isomorphism|<tuple|3.85|?>>
+    <associate|order well ordered class and isomorphism|<tuple|3.86|?>>
     <associate|order well ordered is not isomorph to a initial segment
-    |<tuple|3.86|?>>
-    <associate|order well ordered isomorphic property (3)|<tuple|3.88|?>>
-    <associate|order well ordered isomorphism property|<tuple|3.87|?>>
-    <associate|order well ordering and isomorphism (2)|<tuple|3.90|?>>
-    <associate|order well-rodered class|<tuple|3.76|?>>
+    |<tuple|3.87|?>>
+    <associate|order well ordered isomorphic property (3)|<tuple|3.89|?>>
+    <associate|order well ordered isomorphism property|<tuple|3.88|?>>
+    <associate|order well ordering and isomorphism (2)|<tuple|3.91|?>>
+    <associate|order well-rodered class|<tuple|3.77|?>>
     <associate|pair equality of pairs|<tuple|1.43|?>>
     <associate|pair of elements|<tuple|1.41|?>>
     <associate|partial function associativity|<tuple|2.18|?>>
@@ -12652,18 +12818,18 @@
     <associate|partial function set domain range|<tuple|2.11|?>>
     <associate|partial functions image/preimage properties|<tuple|2.15|?>>
     <associate|power set|<tuple|1.63|?>>
-    <associate|product|<tuple|2.116|?>>
-    <associate|product and intersection|<tuple|2.120|?>>
-    <associate|product and power|<tuple|2.121|?>>
-    <associate|product extension|<tuple|2.123|?>>
-    <associate|product inclusion|<tuple|2.119|?>>
-    <associate|product of family with one element|<tuple|2.117|?>>
-    <associate|product of family with two classes|<tuple|2.118|?>>
-    <associate|product product is empty|<tuple|3.100|?>>
-    <associate|product product is not empty|<tuple|3.99|?>>
-    <associate|product projection function|<tuple|2.124|?>>
-    <associate|product projection is surjective|<tuple|3.98|?>>
-    <associate|product sub-product|<tuple|2.122|?>>
+    <associate|product|<tuple|2.119|?>>
+    <associate|product and intersection|<tuple|2.123|?>>
+    <associate|product and power|<tuple|2.124|?>>
+    <associate|product extension|<tuple|2.126|?>>
+    <associate|product inclusion|<tuple|2.122|?>>
+    <associate|product of family with one element|<tuple|2.120|?>>
+    <associate|product of family with two classes|<tuple|2.121|?>>
+    <associate|product product is empty|<tuple|3.101|?>>
+    <associate|product product is not empty|<tuple|3.100|?>>
+    <associate|product projection function|<tuple|2.127|?>>
+    <associate|product projection is surjective|<tuple|3.99|?>>
+    <associate|product sub-product|<tuple|2.125|?>>
     <associate|relation|<tuple|3.1|?>>
     <associate|relation properties|<tuple|3.4|?>>
     <associate|relation trivial|<tuple|3.3|?>>
@@ -12675,7 +12841,7 @@
     <associate|set restriction of a set of sets|<tuple|1.65|?>>
     <associate|set successor set|<tuple|1.51|?>>
     <associate|set union of two sets is a set|<tuple|1.62|?>>
-    <associate|totally ordered class|<tuple|3.37|?>>
+    <associate|totally ordered class|<tuple|3.38|?>>
     <associate|universal class|<tuple|1.12|?>>
     <associate|universal class property|<tuple|1.13|?>>
   </collection>
