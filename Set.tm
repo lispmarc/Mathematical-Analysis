@@ -12488,6 +12488,7 @@
     <associate|class union|<tuple|1.56|?>>
     <associate|class union{A,B}|<tuple|1.59|?>>
     <associate|class universal and empotyset properties|<tuple|1.32|?>>
+    <associate|denumerable with one less element|<tuple|3.125|?>>
     <associate|element a=b=\<gtr\>{a}={b}|<tuple|1.34|?>>
     <associate|element equalitiy of unordered pairs|<tuple|1.39|?>>
     <associate|element equality of unordered pairs (1)|<tuple|1.40|?>>

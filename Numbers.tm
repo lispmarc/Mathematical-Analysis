@@ -3379,6 +3379,28 @@
   </note>
 
   <\theorem>
+    <label|natural numbers n\<less\>m=\<gtr\>n\<less\>=m-1>Let
+    <math|n,m\<in\>\<bbb-N\><rsub|0>> such thet <math|n\<less\>m> then
+    <math|n\<leqslant\>m-1>
+  </theorem>
+
+  <\proof>
+    As <math|n\<less\>m> we have by [theorem: <reference|natural numbers
+    n\<less\>m then there exists a k such that m=n+k>] a
+    <math|k\<in\>\<bbb-N\><rsub|0>\\<around*|{|0|}>> such that <math|m=n+k>.
+    As <math|0\<neq\>k> we have by [theorem: <reference|natural numbers every
+    non zero number is a successor>] that there exist a
+    <math|l\<in\>\<bbb-N\><rsub|0>> such that <math|k=s<around*|(|l|)>=l+1>,
+    so <math|m=<around*|(|n+l|)>+1> which by [definition <reference|natural
+    numbers difference>] meeans that <math|n+l=m-1>. Further by [theorem:
+    <reference|natural numbers n\<less\>=n+k>] we have
+    <math|n\<leqslant\>n+l> so that by transitivity we have
+    <math|n\<leqslant\>m-1>.\ 
+  </proof>
+
+  TODO
+
+  <\theorem>
     <label|natural numbers n\<less\>=i\<less\>=m=\<gtr\>0\<less\>=i-n\<less\>=m-n>If
     <math|n,m,i\<in\>\<bbb-N\><rsub|0>> such that
     <math|n\<leqslant\>i\<leqslant\>m> then
@@ -3393,7 +3415,7 @@
     <math|i-n\<less\>0> is false so we must have that
     <math|0\<leqslant\>i-n>. If <math|m-n\<less\>i-n> then by [theorem:
     <reference|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>]
-    <math|m=<around*|(|m-n|)>+n\<less\><around*|(|i-n|)>+n=n> proving htat
+    <math|m=<around*|(|m-n|)>+n\<less\><around*|(|i-n|)>+n=n> proving that
     <math|m\<less\>n> which by [theorem: <reference|natural numbers \<less\>
     properties>] contradicts with <math|n\<less\>m>, so we must have
     <math|i-n\<leqslant\>m-n>.
@@ -3792,6 +3814,11 @@
       <around*|{|n,\<ldots\>\<infty\>|}>=<around*|{|i\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>i|}>
     </equation*>
   </definition>
+
+  <\note>
+    <math|<around*|{|0,\<ldots\>,\<infty\>|}>=<around*|{|x\<in\>\<bbb-N\><rsub|0>\|0\<leqslant\>x|}>\<equallim\><rsub|<text|[theorem:
+    <reference|natural numbers 0\<less\>=n>]>>\<bbb-N\><rsub|0>>
+  </note>
 
   <\definition>
     Let <math|n,m\<in\>\<bbb-N\><rsub|0>> then
@@ -4480,7 +4507,11 @@
     <label|denumerable set><index|denumerable set><index|infinite countable
     set><dueto|Denumerable Set>A set <math|A>is
     <with|font-series|bold|denumerable> or <with|font-series|bold|infinite
-    countable> if <math|\<bbb-N\><rsub|0>\<approx\>A>.
+    countable> if
+
+    <\equation*>
+      \<bbb-N\><rsub|0>\<approx\>A.
+    </equation*>
   </definition>
 
   <\definition>
@@ -4488,6 +4519,322 @@
     <math|A> is countable if it is <with|font-series|bold|finite> or
     <with|font-series|bold|denumerable.>
   </definition>
+
+  <\lemma>
+    <label|denumerable with one less element>If <math|A> is a
+    <with|font-series|bold|denumerable> set and <math|a\<in\>A> then
+    <math|A\\<around*|{|a|}>> is a denumerable set.
+  </lemma>
+
+  <\proof>
+    As <math|A> is denumerable there exist a bijection
+    <math|f:\<bbb-N\>\<rightarrow\>A>. As <math|a\<in\>A> we have by
+    surjectivity that <math|\<exists\>n\<in\>\<bbb-N\><rsub|0>> such that
+    <math|f<around*|(|n|)>=a>. Define now\ 
+
+    <\equation*>
+      g:\<bbb-N\><rsub|0>\<rightarrow\>A<text| where
+      >g<around*|(|i|)>=<choice|<tformat|<table|<row|<cell|f<around*|(|i|)><text|
+      if >i\<less\>n>>|<row|<cell|f<around*|(|i+1|)><text|
+      <math|n\<leqslant\>i>>>>>>>
+    </equation*>
+
+    which as <math|<around*|{|x\<in\>\<bbb-N\><rsub|0>\|x\<less\>n|}><big|cap><around*|{|x\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>x|}>=\<varnothing\>>
+    and <math|\<bbb-N\><rsub|0>=<around*|{|x\<in\>\<bbb-N\><rsub|0>\|x\<less\>n|}><big|cup><around*|{|x\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>x|}>>
+    is a function, we prove now bijectivity.
+
+    <\description>
+      <item*|injectivity>If <math|g<around*|(|i|)>=g<around*|(|i<rprime|'>|)>>
+      then for <math|i,i<rprime|'>> we have either:
+
+      <\description>
+        <item*|<math|i\<less\>n\<wedge\>i<rprime|'>\<less\>n>>Then
+        <math|f<around*|(|i|)>=g<around*|(|i|)>=g<around*|(|i<rprime|'>|)>=f<around*|(|i<rprime|'>|)>>
+        which as <math|f> is injective gives <math|i=i<rprime|'>>.
+
+        <item*|<math|i\<less\>n\<wedge\>n\<leqslant\>i<rprime|'>>>Then
+        <math|f<around*|(|i|)>=g<around*|(|i|)>=g<around*|(|i<rprime|'>|)>=f<around*|(|i<rprime|'>+1|)>>
+        which as <math|f> is injective gives <math|i=i<rprime|'>+1,>Now as
+        <math|n\<leqslant\>i<rprime|'>\<less\>i<rprime|'>+1=i> and
+        <math|i\<less\>n> we reach the contradiction \ <math|n\<less\>n>, so
+        this case is not possible.
+
+        <item*|<math|n\<leqslant\>i\<wedge\>i<rprime|'>\<less\>n>>Then
+        <math|f<around*|(|i+1|)>=g<around*|(|i|)>=g<around*|(|i<rprime|'>|)>=f<around*|(|i<rprime|'>|)>>
+        which as <math|f> is injective gives <math|i+1=i<rprime|'>>. Now as
+        <math|n\<leqslant\>i\<less\>i+1=i<rprime|'>> and
+        <math|i<rprime|'>\<less\>n> we reach the contradiction
+        <math|n\<less\>n>, so this case is not possible.
+
+        <item*|<math|n\<leqslant\>i\<wedge\>n\<leqslant\>i<rprime|'>>>Then
+        <math|f<around*|(|i+1|)>=g<around*|(|i|)>=g<around*|(|i<rprime|'>|)>=f<around*|(|i<rprime|'>+1|)>>
+        then as <math|f> is injective <math|i+1=i+1<rprime|'>> so that by
+        [theorem: <reference|natural numbers n+k=m+k\<less\>=\<gtr\>n=m>]
+        <math|i=i<rprime|'>>.
+      </description>
+
+      Soin all valid cases we have <math|i=i<rprime|'>> proving injectivity.
+
+      <item*|surjectivity>If <math|y\<in\>A\\<around*|{|x|}>> there exists by
+      surjectivity of <math|f> a <math|i\<in\>\<bbb-N\><rsub|0>> such that
+      <math|f<around*|(|i|)>=y>. We can not have <math|i=n> because we would
+      have that <math|f<around*|(|i|)>=f<around*|(|n|)>=y\<nin\>A\\<around*|{|y|}>>.
+      So we have either\ 
+
+      <\description>
+        <item*|<math|i\<less\>n>>Then <math|g<around*|(|i|)>=f<around*|(|i|)>=y>
+
+        <item*|<math|n\<less\>i>>Then by [theorem: <reference|natural numbers
+        n\<less\>m=\<gtr\>n\<less\>=m-1>] <math|n\<leqslant\>i-1>, so
+        <math|g<around*|(|i-1|)>=f<around*|(|<around*|(|i-1|)>+1|)>=f<around*|(|i|)>=y>
+      </description>
+
+      proving surjectivity.
+    </description>
+  </proof>
+
+  <\lemma>
+    <label|denumerable is not subset of a natural number>Let
+    <math|n\<in\>\<bbb-N\><rsub|0>> then <math|n> has no denumerable subset.
+    So as <math|n\<subseteq\>n> <math|n> is not denumerable.
+  </lemma>
+
+  <\proof>
+    We prove this by induction, so define\ 
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|n<text| does not contain a
+      denumerable subset>|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|0\<in\>S>>As <math|0=\<varnothing\>> we have if
+      <math|A\<subseteq\>0> that <math|A=\<varnothing\>>. If now
+      <math|\<bbb-N\><rsub|0>\<approx\>A> then there exists a bijection
+      <math|f:\<bbb-N\><rsub|0>\<rightarrow\>A> so that
+      <math|f<around*|(|0|)>\<in\>A=\<varnothing\>> which is a contradiction.
+      So <math|0> does not contains a denumerable subset.
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>We proceed by
+      contradiction, so assume that <math|A\<subseteq\>n+1=s<around*|(|n|)>=n<big|cup><around*|{|n|}>>
+      such that <math|A> is denumerable. If <math|n\<nin\>A> then
+      <math|A\<subseteq\>n> which is impossible because <math|n\<in\>S> so we
+      must have that <math|n\<in\>A>. If now
+      <math|a\<in\>A\\<around*|{|n|}>\<subseteq\>n<big|cup><around*|{|n|}>>
+      we have as <math|a\<neq\>n> that <math|a\<in\>n> proving that
+      <math|A\\<around*|{|n|}>\<subseteq\>n>. Now by the previous lemma
+      [lemma: <reference|denumerable with one less element>] we have as
+      <math|A> is denumerable that <math|A\\<around*|{|n|}>> is denumerable
+      which is forbidden as <math|n\<in\>S>. So the assumption is wrong,
+      hence everys subset of <math|s<around*|(|n|)>> is not denumerable,
+      proving that <math|n+1\<in\>S>.
+    </description>
+
+    Using induction [see theorem: <reference|mathematical induction>] it
+    follows that <math|S=<around*|{|0,\<ldots\>,\<infty\>|}>=\<bbb-N\><rsub|0>>
+    proving the lemma.
+  </proof>
+
+  <\theorem>
+    <label|set containing a denumerable set is infinite>Let <math|A> be a set
+    then <math|A> is infinite if and only if <math|A> contains a denumerable
+    subset.
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|A> be a infinite set. Using the
+      well ordering theorem [see theorem: <reference|choice Axiom of choice
+      consequences>] there exists a order relation
+      <math|\<leqslant\><rsub|A>> such that
+      <math|<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>> is a well
+      ordered set. Using [theorem: <reference|order well ordering and
+      isomorphism (2)>] and the fact that
+      <math|<around*|\<langle\>|\<bbb-N\><rsub|>,\<leqslant\>|\<rangle\>>> is
+      well ordered [see theorem: <reference|natural numbers are well
+      ordered>] we have exactly one of the following cases:
+
+      <\description>
+        <item*|<math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>><text|
+        is order isomorphic with ><around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>>>This
+        implies that <math|A\<approx\>\<bbb-N\><rsub|0>> so that <math|A> is
+        a denumerable subset of itself.
+
+        <item*|<math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>>
+        is order isomorphic with an initial segment of
+        <math|<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>>>This
+        implies that <math|A> has a denumerable subset [the initial segment].
+
+        <item*|<math|<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>>
+        is order isomorphic with an initial segment of
+        <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>>>So
+        there exists a <math|n\<in\>\<bbb-N\><rsub|0>> such that
+        <math|A\<approx\>S<rsub|n>\<equallim\><rsub|<text|[theorem:
+        <reference|natural numbers are segments>]>>n> so that <math|A> is
+        finite, contradicting the fact that <math|A> is infinite. Hence this
+        case does not apply.
+      </description>
+
+      So in all applicable cases we have that <math|A> contains a denumerable
+      subset.
+
+      <item*|<math|\<Leftarrow\>>>Let <math|B\<subseteq\>A> be a denumerable
+      subset of <math|A>. Assume that <math|A> is finite then there exists a
+      <math|n\<in\>\<bbb-N\><rsub|0>> such that <math|n\<approx\>A>, hence
+      there exist a bijection <math|f:A\<rightarrow\>n>. As
+      <math|B\<subseteq\>A> we have that <math|f<rsub|\|B>:B\<rightarrow\>f<around*|(|B|)>>
+      is a bijection [see theorems: <reference|function restricted function
+      properties>, <reference|function injectivity to bijection>] so that
+      <math|B\<approx\>f<around*|(|B|)>>, as <math|B> is denumerable
+      <math|\<bbb-N\><rsub|0>\<approx\>B> we have by [theorem:
+      <reference|equipotence equivalence relation>] that
+      <math|\<bbb-N\><rsub|0>\<approx\>f<around*|(|B|)>\<subseteq\>n>. So
+      there exists a denumerable subset of <math|n> which by [theorem:
+      <reference|denumerable is not subset of a natural number>] is
+      impossible. So <math|A> is not finite wich by definition means that
+      <math|A> is infinite.
+    </description>
+  </proof>
+
+  <\corollary>
+    <label|set is infinitie if it contains a infinite subset>Every set with a
+    infinite subset is infinite
+  </corollary>
+
+  <\proof>
+    If <math|A> is a set such that there exists a infinite set <math|B> with
+    <math|B\<subseteq\>A> then as <math|B> is infinite we have by [theorem:
+    <reference|set containing a denumerable set is infinite>] the existence
+    of a denumerable set <math|C\<subseteq\>B> but then <math|C\<subseteq\>A>
+    and thus <math|A> has a denumerable subset and by [theorem:
+    <reference|set containing a denumerable set is infinite>] we have that
+    <math|A> is infinite.
+  </proof>
+
+  <\corollary>
+    <label|every subset of a finite set is finite>Every subset of a finite
+    set is finite
+  </corollary>
+
+  <\proof>
+    If a finite set would contain a infinite subset then by the previous
+    theorem the finite set would be infinite.
+  </proof>
+
+  <\theorem>
+    <label|union of two finite sets is finite>Let <math|A,B> be sets such
+    that <math|n\<approx\>A> and <math|m\<approx\>B> then
+    <math|A<big|cup>B\<approx\>n+m>. In other words if <math|A> and B are
+    finite sets then <math|A<big|cup>B> is a finite set.
+  </theorem>
+
+  <\proof>
+    As <math|A> is finite we have by [theorem: <reference|every subset of a
+    finite set is finite>] that <math|A\\B> is finite. So there exists
+    <math|n,m\<in\>\<bbb-N\><rsub|0>> such that <math|n\<approx\>A\\B> and
+    <math|m\<approx\>B>, hence we have two bijections
+
+    <\equation>
+      <label|eq 6.2.019>f:A\\B\<rightarrow\>n\<equallim\><rsub|<text|[theorem:
+      <reference|natural numbers are segments>] >>S<rsub|n><text| and
+      >g<rprime|'>:B\<rightarrow\>m\<equallim\><rsub|<text|[theorem:
+      <reference|natural numbers are segments>] >>S<rsub|m>
+    </equation>
+
+    If <math|b\<in\>B> then <math|g<rprime|'><around*|(|b|)>\<in\>S<rsub|n>>
+    , hence \ <math|0\<leqslant\>g<rprime|'><around*|(|b|)>\<less\>m> so that
+    by [theorem: <reference|natural numbers
+    n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>]
+    <math|n=0+n\<leqslant\>g<rprime|'><around*|(|b|)>+n\<less\>m+n> so that
+
+    <\equation>
+      <label|eq 6.3.019>g:B\<rightarrow\><around*|{|i\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>i\<wedge\>i\<less\>n+m|}><text|
+      by >g<around*|(|i|)>=g<rprime|'><around*|(|i|)>+n<text|>
+    </equation>
+
+    is a function. Further we have:
+
+    <\description>
+      <item*|injectivity>If <math|g<around*|(|b|)>=g<around*|(|b<rprime|'>|)>>
+      then <math|g<rprime|'><around*|(|b|)>+n=g<rprime|'><around*|(|b<rprime|'>|)>+n>,
+      so using [theorem: <reference|natural numbers
+      n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>]
+      <math|g<rprime|'><around*|(|b|)>=g<rprime|'><around*|(|b<rprime|'>|)>>,
+      as <math|g<rprime|'>> is injective we have that <math|b=b<rprime|'>>.
+
+      <item*|surjectivity>If <math|i\<in\><around*|{|i\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>i\<wedge\>i\<less\>n+m|}>>
+      then <math|n\<leqslant\>i\<less\>n+m>, using [theorem:
+      <reference|natural numbers n\<less\>m then there exists a k such that
+      m=n+k>] there exist a <math|k\<in\>\<bbb-N\><rsub|0>> such that
+      <math|n+k=i>. If <math|m\<leqslant\>k> then by [theorem:
+      <reference|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>]
+      <math|n+m\<leqslant\>n+k=i\<less\>n+m> a contradiction. So we have that
+      <math|k\<less\>m> and thus <math|k\<in\>S<rsub|m>>. As
+      <math|g<rprime|'>> is surjective there exists a <math|b\<in\>B> such
+      that <math|g<rprime|'><around*|(|b|)>=k> and thus
+      <math|g<around*|(|b|)>=g<rprime|'><around*|(|b|)>=k+n=i>.\ 
+    </description>
+
+    proving that\ 
+
+    <\equation>
+      <label|eq 6.4.019>g:B\<rightarrow\><around*|{|i\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>i\<wedge\>i\<less\>n+m|}><text|
+      is a bijection>
+    </equation>
+
+    Further if <math|i\<in\>n<big|cap><around*|{|i\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>i\<wedge\>i\<less\>n+m|}>=S<rsub|n><big|cap><around*|{|i\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>i\<wedge\>i\<less\>n+m|}>>
+    then <math|i\<less\>n\<wedge\>n\<leqslant\>i> yielding the contradiction
+    <math|i\<less\>i> so we have that\ 
+
+    <\equation>
+      <label|eq 6.5.019>n<big|cap><around*|{|i\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>i\<wedge\>i\<less\>n+m|}>\<neq\>\<varnothing\>
+    </equation>
+
+    Further if <math|i\<in\>n<big|cup><around*|{|i\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>i\<wedge\>i\<less\>n+m|}>>
+    then either\ 
+
+    <\description>
+      <item*|<math|i\<in\>n>>Then as <math|n=S<rsub|n>> we have
+      <math|i\<less\>n> which as <math|n\<leqslant\>n+m> proves that
+      <math|i\<less\>n+m> hence <math|i\<in\>S<rsub|n+m>>.
+
+      <item*|<math|i\<in\><around*|{|i\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>i\<wedge\>i\<less\>n+m|}>>>then
+      <math|i\<less\>n+m> so that <math|i\<in\>S<rsub|n+m>>
+    </description>
+
+    proving that\ 
+
+    <\equation>
+      <label|eq 6.6.019>n<big|cup><around*|{|i\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>i\<wedge\>i\<less\>n+m|}>\<subseteq\>S<rsub|n+m>
+    </equation>
+
+    If <math|i\<in\>S<rsub|n+m>> then <math|i\<less\>n+m>, further we have
+    either <math|i\<less\>n> so that <math|i\<in\>S<rsub|n>=n> or
+    <math|n\<leqslant\>i> giving <math|i\<in\><around*|{|i\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>i\<wedge\>i\<less\>n+m|}>>,
+    hence <math|i\<in\>n<big|cup><around*|{|i\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>i\<wedge\>i\<less\>n+m|}>>
+    or <math|S<rsub|n+m>\<subseteq\>n<big|cup><around*|{|i\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>i\<wedge\>i\<less\>n+m|}>>
+    which by [eq: <reference|eq 6.6.019>] proves that\ 
+
+    <\equation>
+      <label|eq 6.7.019>n<big|cup><around*|{|i\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>i\<wedge\>i\<less\>n+m|}>=S<rsub|n+m>
+    </equation>
+
+    Using [eq: <reference|eq 6.2.019>], [eq: <reference|eq 6.4.019>], [eq
+    <reference|eq 6.5.019>],[eq: <reference|eq 6.7.019>],
+    <math|A<big|cup>B=<around*|(|A\\B|)><big|cup>B> and
+    <math|<around*|(|A\\B|)><big|cap>B=\<varnothing\>> \ allows use to use
+    [theorem: <reference|function combining bijections>] to get the bijection\ 
+
+    <\equation*>
+      f<big|cup>g:A<big|cup>B\<rightarrow\>S<rsub|n+m>
+    </equation*>
+  </proof>
+
+  \;
 
   \;
 
@@ -4556,22 +4903,26 @@
     <associate|auto-46|<tuple|equipotency|141>>
     <associate|auto-47|<tuple|<with|mode|<quote|math>|\<preccurlyeq\>>|141>>
     <associate|auto-48|<tuple|<with|mode|<quote|math>|\<prec\>>|141>>
-    <associate|auto-49|<tuple|6.2|145>>
+    <associate|auto-49|<tuple|6.2|143>>
     <associate|auto-5|<tuple|group|108>>
-    <associate|auto-50|<tuple|finite set|145>>
-    <associate|auto-51|<tuple|infinite set|145>>
-    <associate|auto-52|<tuple|denumerable set|145>>
-    <associate|auto-53|<tuple|infinite countable set|145>>
-    <associate|auto-54|<tuple|countable set|145>>
+    <associate|auto-50|<tuple|finite set|144>>
+    <associate|auto-51|<tuple|infinite set|144>>
+    <associate|auto-52|<tuple|denumerable set|144>>
+    <associate|auto-53|<tuple|infinite countable set|144>>
+    <associate|auto-54|<tuple|countable set|144>>
     <associate|auto-6|<tuple|sub-semi-group|108>>
     <associate|auto-7|<tuple|sup-group|108>>
     <associate|auto-8|<tuple|group isomorphism|110>>
     <associate|auto-9|<tuple|left action|112>>
-    <associate|countable set|<tuple|6.20|145>>
-    <associate|definition by recursion (1)|<tuple|5.80|139>>
-    <associate|definition by recursion (2)|<tuple|5.81|139>>
-    <associate|denumerable set|<tuple|6.19|145>>
-    <associate|empty set is finite|<tuple|6.17|145>>
+    <associate|countable set|<tuple|6.20|144>>
+    <associate|definition by recursion (1)|<tuple|5.82|139>>
+    <associate|definition by recursion (2)|<tuple|5.83|139>>
+    <associate|denumerable is not subset of a natural number|<tuple|6.22|?>>
+    <associate|denumerable is not subset of a nautral number|<tuple|6.22|?>>
+    <associate|denumerable set|<tuple|6.19|144>>
+    <associate|denumerable set is infinite|<tuple|6.23|?>>
+    <associate|denumerable with one less element|<tuple|6.21|?>>
+    <associate|empty set is finite|<tuple|6.17|144>>
     <associate|eq 5.1.019|<tuple|5.1|120>>
     <associate|eq 5.10.019|<tuple|5.10|125>>
     <associate|eq 5.11.019|<tuple|5.11|125>>
@@ -4589,7 +4940,13 @@
     <associate|eq 5.7.019|<tuple|5.7|121>>
     <associate|eq 5.8.019|<tuple|5.8|121>>
     <associate|eq 5.9.019|<tuple|5.9|121>>
-    <associate|eq 7.1.019|<tuple|6.1|145>>
+    <associate|eq 6.2.019|<tuple|6.2|?>>
+    <associate|eq 6.3.019|<tuple|6.3|?>>
+    <associate|eq 6.4.019|<tuple|6.4|?>>
+    <associate|eq 6.5.019|<tuple|6.5|?>>
+    <associate|eq 6.6.019|<tuple|6.6|?>>
+    <associate|eq 6.7.019|<tuple|6.7|?>>
+    <associate|eq 7.1.019|<tuple|6.1|144>>
     <associate|equipotence|<tuple|6.1|141>>
     <associate|equipotence 2^A and P(A)|<tuple|6.13|143>>
     <associate|equipotence A^C~B^D|<tuple|6.12|143>>
@@ -4597,13 +4954,14 @@
     <associate|equipotence equivalence relation|<tuple|6.2|141>>
     <associate|equipotence property (1)|<tuple|6.8|142>>
     <associate|equipotence union|<tuple|6.10|142>>
+    <associate|every subset of a finite set is finite|<tuple|6.25|?>>
     <associate|field|<tuple|4.33|114>>
     <associate|field homeomorphism|<tuple|4.37|115>>
     <associate|field inverse is unique|<tuple|4.34|115>>
     <associate|field isomorphism and neutral element|<tuple|4.39|116>>
     <associate|field subfield|<tuple|4.35|115>>
     <associate|field subfield is a field|<tuple|4.36|115>>
-    <associate|finite set|<tuple|6.16|145>>
+    <associate|finite set|<tuple|6.16|144>>
     <associate|function P(A) bijective with 2^A|<tuple|6.5|141>>
     <associate|function injection and inverse surjection|<tuple|6.9|142>>
     <associate|function no surjection between A and P(A)|<tuple|6.7|141>>
@@ -4624,27 +4982,27 @@
     <associate|group semi-group inheritance|<tuple|4.11|108>>
     <associate|group semigroup properties|<tuple|4.3|107>>
     <associate|group sub-group|<tuple|4.10|108>>
-    <associate|infinite set|<tuple|6.18|145>>
+    <associate|infinite set|<tuple|6.18|144>>
     <associate|inverse of a field isomorphism is a field
     isomorphism|<tuple|4.38|115>>
-    <associate|iteration final|<tuple|5.77|139>>
-    <associate|mathematical induction|<tuple|5.75|138>>
+    <associate|iteration final|<tuple|5.79|139>>
+    <associate|mathematical induction|<tuple|5.77|138>>
     <associate|natural numbers|<tuple|5.3|117>>
     <associate|natural numbers 0|<tuple|5.7|117>>
     <associate|natural numbers 0\<less\>=n|<tuple|5.46|131>>
     <associate|natural numbers \<less\> properties|<tuple|5.49|132>>
-    <associate|natural numbers Archimedean property|<tuple|5.71|136>>
+    <associate|natural numbers Archimedean property|<tuple|5.72|136>>
     <associate|natural numbers Peano|<tuple|5.17|119>>
     <associate|natural numbers absorbing element|<tuple|5.36|128>>
     <associate|natural numbers addition|<tuple|5.27|126>>
     <associate|natural numbers additive semi-group|<tuple|5.34|127>>
-    <associate|natural numbers are segments|<tuple|6.15|145>>
+    <associate|natural numbers are segments|<tuple|6.15|143>>
     <associate|natural numbers are total ordered|<tuple|5.52|133>>
     <associate|natural numbers are transitive|<tuple|5.14|118>>
     <associate|natural numbers are well ordered|<tuple|5.51|132>>
     <associate|natural numbers difference|<tuple|5.62|135>>
     <associate|natural numbers distributivity|<tuple|5.39|129>>
-    <associate|natural numbers division|<tuple|5.72|136>>
+    <associate|natural numbers division|<tuple|5.73|136>>
     <associate|natural numbers every non zero number is a
     successor|<tuple|5.18|119>>
     <associate|natural numbers is a set|<tuple|5.4|117>>
@@ -4660,21 +5018,22 @@
     <associate|natural numbers n+0=n|<tuple|5.29|126>>
     <associate|natural numbers n+k=m+k\<less\>=\<gtr\>n=m|<tuple|5.43|130>>
     <associate|natural numbers n+s(m)=s(n+m)|<tuple|5.31|127>>
-    <associate|natural numbers n.k=m.k=\<gtr\>n=m|<tuple|5.70|136>>
+    <associate|natural numbers n.k=m.k=\<gtr\>n=m|<tuple|5.71|136>>
     <associate|natural numbers n.s(m)=n+n.m|<tuple|5.38|129>>
-    <associate|natural numbers n\<less\>=i\<less\>=m=\<gtr\>0\<less\>=i-n\<less\>=m-n|<tuple|5.64|135>>
+    <associate|natural numbers n\<less\>=i\<less\>=m=\<gtr\>0\<less\>=i-n\<less\>=m-n|<tuple|5.65|135>>
     <associate|natural numbers n\<less\>=m\<less\>=\<gtr\>there exists a k
     such that m=k|<tuple|5.61|134>>
     <associate|natural numbers n\<less\>=n+k|<tuple|5.56|133>>
-    <associate|natural numbers n\<less\>k\<less\>s(n)|<tuple|5.65|135>>
+    <associate|natural numbers n\<less\>k\<less\>s(n)|<tuple|5.66|135>>
     <associate|natural numbers n\<less\>m and r\<less\>s then
-    n+r\<less\>m+s|<tuple|5.67|135>>
+    n+r\<less\>m+s|<tuple|5.68|135>>
     <associate|natural numbers n\<less\>m then there exists a k such that
     m=n+k|<tuple|5.59|134>>
     <associate|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k|<tuple|5.55|133>>
     <associate|natural numbers n\<less\>m\<less\>=\<gtr\>there exists a k
     such that m=k|<tuple|5.60|134>>
-    <associate|natural numbers n\<less\>m=\<gtr\>n.k\<less\>m.k|<tuple|5.69|135>>
+    <associate|natural numbers n\<less\>m=\<gtr\>n.k\<less\>m.k|<tuple|5.70|135>>
+    <associate|natural numbers n\<less\>m=\<gtr\>n\<less\>=m-1|<tuple|5.64|?>>
     <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>=m|<tuple|5.50|132>>
     <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>s(m)|<tuple|5.54|133>>
     <associate|natural numbers n\<less\>s(m)=\<gtr\>s\<less\>=m|<tuple|5.57|134>>
@@ -4682,7 +5041,7 @@
     <associate|natural numbers n=/s(n)|<tuple|5.15|119>>
     <associate|natural numbers order relation|<tuple|5.45|131>>
     <associate|natural numbers product of non zero numbers is non
-    zero|<tuple|5.68|135>>
+    zero|<tuple|5.69|135>>
     <associate|natural numbers s(n) = n+1|<tuple|5.30|126>>
     <associate|natural numbers s(n)=/0|<tuple|5.10|118>>
     <associate|natural numbers successor|<tuple|5.5|117>>
@@ -4692,18 +5051,18 @@
     <associate|natural numbers successor properties|<tuple|5.12|118>>
     <associate|natural numbers sum associativity|<tuple|5.32|127>>
     <associate|natural numbers sum commutativity|<tuple|5.33|127>>
-    <associate|natural numbers sup property|<tuple|5.66|135>>
+    <associate|natural numbers sup property|<tuple|5.67|135>>
     <associate|natural numbers transitive|<tuple|5.13|118>>
     <associate|natural numbers x\<less\>=y or y\<less\>x|<tuple|5.53|133>>
     <associate|operator|<tuple|4.1|107>>
     <associate|recursion|<tuple|5.19|120>>
-    <associate|recursion final|<tuple|5.76|138>>
+    <associate|recursion final|<tuple|5.78|138>>
     <associate|recursion injective function|<tuple|5.20|122>>
     <associate|recursion iteration|<tuple|5.24|123>>
     <associate|recursion iteration in a group|<tuple|5.25|124>>
-    <associate|recursion step (2)|<tuple|5.78|139>>
+    <associate|recursion step (2)|<tuple|5.80|139>>
     <associate|recursion step form (1)|<tuple|5.26|124>>
-    <associate|recursion step form (3)|<tuple|5.79|139>>
+    <associate|recursion step form (3)|<tuple|5.81|139>>
     <associate|ring|<tuple|4.24|112>>
     <associate|ring absorbing element|<tuple|4.29|113>>
     <associate|ring homeomorphism|<tuple|4.30|114>>
@@ -4713,8 +5072,12 @@
     <associate|ring subring is a ring|<tuple|4.28|113>>
     <associate|ring zero divisor|<tuple|4.25|113>>
     <associate|semi-group|<tuple|4.2|107>>
+    <associate|set containing a denumerable set is infinite|<tuple|6.23|?>>
+    <associate|set is infinitie if it contains a infinite
+    subset|<tuple|6.24|?>>
     <associate|sub-semi-group|<tuple|4.9|108>>
     <associate|subring|<tuple|4.27|113>>
+    <associate|union of two finite sets is finite|<tuple|6.26|?>>
   </collection>
 </references>
 
@@ -4847,9 +5210,9 @@
       6.1<space|2spc>Equipotence <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-43>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|7<space|2spc>Finite
-      and Infinite sets> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-49><vspace|0.5fn>
+      6.2<space|2spc>Finite, Infinite and Countable sets
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-49>
     </associate>
   </collection>
 </auxiliary>
