@@ -3149,8 +3149,6 @@
     proves then <math|\<bbb-N\><rsub|0>=S> completing the proof.
   </proof>
 
-  TODO Check the rest
-
   <\corollary>
     <label|natural numbers n\<less\>=n+k>If <math|n\<in\>\<bbb-N\><rsub|0>>
     then we have:
@@ -3173,7 +3171,7 @@
 
       <\equation*>
         n\<equallim\><rsub|<text|[theorem: <reference|natural numbers
-        n+0=n>]>>n\<less\>n+k
+        n+0=n>]>>0+n\<less\>n+k
       </equation*>
 
       <item>As <math|0\<leqslant\>0> it follows from the above theorem
@@ -3182,7 +3180,7 @@
 
       <\equation*>
         n\<equallim\><rsub|<text|[theorem: <reference|natural numbers
-        n+0=n>]>>n\<leqslant\>n+k
+        n+0=n>]>>0+n\<leqslant\>n+k
       </equation*>
     </enumerate>
   </proof>
@@ -3246,9 +3244,9 @@
         <math|k\<neq\>0> and <math|n+k=s<around*|(|m|)>>, proving that
         <math|s<around*|(|m|)>\<in\>S<rsub|n>>
 
-        <item*|<math|n\<less\>m>>Then as <math|m\<in\>S> there exist a
-        <math|l\<in\>\<bbb-N\><rsub|0>> such that <math|l\<neq\>0> and
-        <math|n+k=m>. Now
+        <item*|<math|n\<less\>m>>Then as <math|m\<in\>S<rsub|n>> there exist
+        a <math|l\<in\>\<bbb-N\><rsub|0>> such that <math|l\<neq\>0> and
+        <math|n+l=m>. Now
 
         <\equation*>
           s<around*|(|m|)>=s<around*|(|n+l|)>\<equallim\><rsub|<text|[theorem:
@@ -3286,7 +3284,7 @@
   <\corollary>
     <label|natural numbers n\<less\>m\<less\>=\<gtr\>there exists a k such
     that m=k>If <math|n,m\<in\>\<bbb-N\><rsub|0>> then
-    <math|n\<less\>m\<Leftrightarrow\>\<exists\>!k\<in\>\<bbb-N\><rsub|0>\|<around*|{|0|}>>
+    <math|n\<less\>m\<Leftrightarrow\>\<exists\>!k\<in\>\<bbb-N\><rsub|0>\\<around*|{|0|}>>
     such that <math|n+k=m>
   </corollary>
 
@@ -3298,11 +3296,10 @@
       [theorem: <reference|natural numbers n\<less\>m then there exists a k
       such that m=n+k>].
 
-      <item*|<math|\<Leftarrow\>>>If there exist a
-      <math|k\<in\>\<bbb-N\><rsub|0>\\<around*|{|0|}>> such that
-      <math|n+k=m>. As <math|k\<in\>\<bbb-N\><rsub|0>\\<around*|{|0|}>> we
-      have <math|0\<less\>k> so that by [theorem: <reference|natural numbers
-      n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>]
+      <item*|<math|\<Leftarrow\>>>Let <math|k\<in\>\<bbb-N\><rsub|0>\\<around*|{|0|}>>
+      such that <math|n+k=m>. As <math|k\<in\>\<bbb-N\><rsub|0>\\<around*|{|0|}>>
+      we have <math|0\<less\>k> so that by [theorem: <reference|natural
+      numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>]
       <math|0+n\<less\>k+n\<Rightarrowlim\><rsub|<text|[theorems:
       <reference|natural numbers n+0=n>,<reference|natural numbers sum
       commutativity>]>>n\<less\>n+k=m>.
@@ -3330,7 +3327,7 @@
 
         <item*|<math|n\<less\>m>>Then by the previous corollary [collary:
         <reference|natural numbers n\<less\>m\<less\>=\<gtr\>there exists a k
-        such that m=k>] ther exists a <math|k\<in\>\<bbb-N\><rsub|0>\\<around*|{|0|}>\<subseteq\>\<bbb-N\><rsub|0><rsub|>>
+        such that m=k>] there exists a <math|k\<in\>\<bbb-N\><rsub|0>\\<around*|{|0|}>\<subseteq\>\<bbb-N\><rsub|0><rsub|>>
         such that <math|m=n+k>.
       </description>
 
@@ -3353,8 +3350,9 @@
         <reference|natural numbers n+0=n>]>>n> so that <math|n\<leqslant\>m>.
 
         <item*|<math|0\<less\>k>>Then by the previouss corollary [corollary:
-        <reference|natural numbers n\<less\>m then there exists a k such that
-        m=n+k>] we have <math|n\<less\>m> so that <math|n\<leqslant\>m>.
+        <reference|natural numbers n\<less\>m\<less\>=\<gtr\>there exists a k
+        such that m=k>] we have <math|n\<less\>m> so that
+        <math|n\<leqslant\>m>.
       </description>
     </description>
   </proof>
@@ -3398,8 +3396,6 @@
     <math|n\<leqslant\>m-1>.\ 
   </proof>
 
-  TODO
-
   <\theorem>
     <label|natural numbers n\<less\>=i\<less\>=m=\<gtr\>0\<less\>=i-n\<less\>=m-n>If
     <math|n,m,i\<in\>\<bbb-N\><rsub|0>> such that
@@ -3429,7 +3425,7 @@
   </theorem>
 
   <\proof>
-    Assume the <math|\<exists\>k\<in\>\<bbb-N\><rsub|0>> such that
+    Assume that <math|\<exists\>k\<in\>\<bbb-N\><rsub|0>> such that
     <math|n\<less\>k\<less\>s<around*|(|n|)>>. As <math|n\<less\>k> we have
     by [theorem: <reference|natural numbers
     n\<less\>m=\<gtr\>s(n)\<less\>=m>] that
@@ -3450,10 +3446,10 @@
 
     <\description>
       <item*|<math|sup<around*|(|A|)>=0>>As <math|A\<neq\>\<varnothing\>>
-      there exist a <math|x\<in\>A> as the <math|sup<around*|(|A|)>> is a
-      upper bound of <math|A> we have that <math|x\<leqslant\>0>, which by
-      [theorem: <reference|natural numbers \<less\> properties>] proves that
-      <math|x=0=sup<around*|(|A|)>>, giving that
+      there exist a <math|x\<in\>A>, further as the <math|sup<around*|(|A|)>>
+      is a upper bound of <math|A> we have that <math|x\<leqslant\>0>, which
+      by [theorem: <reference|natural numbers \<less\> properties>] proves
+      that <math|x=0=sup<around*|(|A|)>>, giving that
       <math|sup<around*|(|A|)>=x\<in\>A>.
 
       <item*|<math|sup<around*|(|A|)>\<neq\>0>>Using [theorem:
@@ -3462,14 +3458,13 @@
       <math|s<around*|(|k|)>=sup<around*|(|A|)>>. As
       <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>>
       is totally ordered [see theorem: <reference|natural numbers are total
-      ordered>] and by [theorem: <reference|natural numbers n\<less\>s(n)>]
-      <math|k\<less\>s<around*|(|k|)>=sup<around*|(|A|)>> it follows from the
-      properties of the supremum [theorem: <reference|order sup, inf
-      property>] that there exist a <math|a\<in\>A> such that
-      <math|k\<less\>a\<leqslant\>sup<around*|(|A|)>=sup<around*|(|k|)>>. By
-      the previous theorem [theorem: <reference|natural numbers
-      n\<less\>k\<less\>s(n)>] it follows that <math|a=sup<around*|(|A|)>> so
-      that <math|sup<around*|(|A|)>\<in\>A>.
+      ordered>] and <math|k\<less\>s<around*|(|k|)>=sup<around*|(|A|)>>, it
+      follows from the properties of the supremum [theorem: <reference|order
+      sup, inf property>] that there exist a <math|a\<in\>A> such that
+      <math|k\<less\>a\<leqslant\>sup<around*|(|A|)>=s<around*|(|k|)>>. As we
+      can not have <math|k\<less\>a\<less\>s<around*|(|k|)>> [see theorem:
+      <reference|natural numbers n\<less\>k\<less\>s(n)>], it follows that
+      <math|a=sup<around*|(|A|)>> so that <math|sup<around*|(|A|)>\<in\>A>.
     </description>
   </proof>
 
@@ -3501,9 +3496,9 @@
     <reference|natural numbers n.s(m)=n+n.m>]>>n+n\<cdot\>k>. Further as
     <math|n\<neq\>0> we have that <math|0\<less\>n>, so that by [theorem:
     <reference|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>]
-    <math|n\<equallim\><rsub|<text|<reference|natural numbers
-    n+0=n>>>n+0\<leqslant\>n+n\<cdot\>k=n\<cdot\>m>, using transitivity gives
-    then finally <math|0\<less\>n\<cdot\>m>.
+    <math|n\<equallim\><rsub|<text|[theorem: <reference|natural numbers
+    n+0=n>]>>n+0\<leqslant\>n+n\<cdot\>k=n\<cdot\>m>, using transitivity
+    gives then finally <math|0\<less\>n\<cdot\>m>.
   </proof>
 
   <\theorem>
@@ -3541,8 +3536,14 @@
 
       <\equation*>
         n\<cdot\>k\<equallim\><rsub|<text|[theorem: <reference|natural
-        numbers n+0=n>]>>0=n\<cdot\>k\<less\>l\<cdot\>k+n\<cdot\>k\<equallim\><rsub|<text|[theorem:
+        numbers n+0=n>]>>0+n\<cdot\>k\<less\>l\<cdot\>k+n\<cdot\>k\<equallim\><rsub|<text|[theorem:
         <reference|natural numbers sum commutativity>]>>n\<cdot\>k+l\<cdot\>k=m\<cdot\>k
+      </equation*>
+
+      so that\ 
+
+      <\equation*>
+        n\<cdot\>k\<less\>m\<cdot\>k
       </equation*>
 
       <item>If <math|k\<in\>\<bbb-N\><rsub|0>> then we have either:
@@ -3566,9 +3567,8 @@
   </theorem>
 
   <\proof>
-    As <math|\<bbb-N\><rsub|0>> is well-ordered we have by [theorem:
-    <reference|order well order implies conditional complete and totally
-    ordering>] that <math|n\<less\>m>, <math|m\<less\>n> or <math|n=m>. If
+    Using [corollary: <reference|natural numbers x\<less\>=y or y\<less\>x>]
+    we have that <math|n\<less\>m>, <math|m\<less\>n> or <math|n=m>. If
     <math|n\<less\>m> then by [theorem: <reference|natural numbers
     n\<less\>m=\<gtr\>n.k\<less\>m.k>] <math|n\<cdot\>k\<less\>m\<cdot\>k>
     contradicting <math|n\<cdot\>k=m\<cdot\>k>, likewise if <math|m\<less\>n>
@@ -3580,7 +3580,7 @@
   <\theorem>
     <label|natural numbers Archimedean property><dueto|Archimedean
     Property>If <math|x,y\<in\>\<bbb-N\><rsub|0>> and <math|x\<neq\>0> then
-    there exists a <math|z\<in\>\<bbb-N\><rsub|0>> such that
+    there exists a <math|z\<in\>\<bbb-N\><rsub|0>\\<around*|{|0|}>> such that
     <math|y\<less\>z\<cdot\>x>
   </theorem>
 
@@ -3617,7 +3617,7 @@
         As <math|0\<less\>x> we have by [theorem: <reference|natural numbers
         n\<less\>m=\<gtr\>s(n)\<less\>=m>]
         <math|1=s<around*|(|0|)>\<leqslant\>x> so that by multiplication with
-        <math|k> we have [see [see theorem: <reference|natural numbers
+        <math|k> we have [see theorem: <reference|natural numbers
         n\<less\>m=\<gtr\>n.k\<less\>m.k>] that
 
         <\equation>
@@ -3627,8 +3627,8 @@
         As <math|0\<neq\>k\<less\>s<around*|(|k|)>> and <math|x\<neq\>0> we
         have by [see theorem: <reference|natural numbers
         n\<less\>m=\<gtr\>n.k\<less\>m.k>] that
-        <math|x\<cdot\>k\<less\>x.s<around*|(|k|)>> combining this with [eq:
-        <reference|eq 5.15.019>] gives that\ 
+        <math|k\<cdot\>x\<less\>s<around*|(|k|)>\<cdot\>x\<Rightarrow\>x\<cdot\>k\<less\>x\<cdot\>s<around*|(|k|)>>
+        combining this with [eq: <reference|eq 5.15.019>] gives that\ 
 
         <\equation>
           <label|eq 5.16.019>k\<less\>x\<cdot\>s<around*|(|k|)>
@@ -3638,12 +3638,14 @@
         n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>] we have
 
         <\equation*>
-          x+k\<less\>x+x\<cdot\>s<around*|(|k|)>=x\<cdot\>1+x\<cdot\>s<around*|(|k|)>\<equallim\><rsub|<text|distributivity>>x\<cdot\><around*|(|1+s<around*|(|k|)>|)>
+          x+k=k+x\<less\>\<cdot\>s<around*|(|k|)>+x=x+x\<cdot\>s<around*|(|k|)>=x\<cdot\>1+x\<cdot\>s<around*|(|k|)>\<equallim\><rsub|<text|distributivity>>x\<cdot\><around*|(|1+s<around*|(|k|)>|)>
         </equation*>
 
         or using [eq: <reference|eq 5.14.019>] that
         <math|y\<less\>x\<cdot\><around*|(|s+s<around*|(|k|)>|)>>. So if we
-        take <math|z=1+s<around*|(|k|)>> the theorem is proved.
+        take <math|z=1+s<around*|(|k|)>> we have that
+        <math|y\<less\>x\<cdot\>z> which as also
+        <math|0\<less\>1\<less\>1+s<around*|(|k|)>> proves the theorem.
       </description>
     </description>
   </proof>
@@ -3651,9 +3653,9 @@
   <\theorem>
     <label|natural numbers division><dueto|Division>If
     <math|m\<in\>\<bbb-N\><rsub|0>> and <math|n\<in\>\<bbb-N\><rsub|0>\\<around*|{|0|}>>
-    there exists a <with|font-series|bold|unique>
-    <math|r\<in\>\<bbb-N\><rsub|0>> with <math|0\<leqslant\>r\<less\>n> and a
-    unique <math|q\<in\>\<bbb-N\><rsub|0>> such that\ 
+    then there exists a <with|font-series|bold|unique>
+    <math|r\<in\>\<bbb-N\><rsub|0>> and a unique
+    <math|q\<in\>\<bbb-N\><rsub|0>> such that\ 
 
     <\equation*>
       m=n\<cdot\>q+r<text| and >0\<leqslant\>r\<less\>n
@@ -3669,9 +3671,9 @@
       <item*|<math|m=0>>In this case taking <math|q=0> and <math|r=0> gives
       <math|n\<cdot\>0+0\<equallim\><rsub|<text|[theorem: <reference|natural
       numbers absorbing element>]>>0+0\<equallim\><rsub|<text|[theorem:
-      <reference|natural numbers n+0=n>]>>0=m>. and
-      <math|0\<leqslant\>0\<less\>n>, so <math|q=0=r> satisfies <math|the
-      conditions.=n\<cdot\>q+r> and <math|0\<leqslant\>r\<less\>n>.
+      <reference|natural numbers n+0=n>]>>0\<cdot\>m>+0 and
+      <math|0\<leqslant\>0\<less\>n>, so <math|q=0=r> satisfies
+      <math|m=n\<cdot\>q+r> and <math|0\<leqslant\>r\<less\>n>.
 
       <item*|<math|0\<less\>m>>Then we have the following cases for <math|n>
       to consider:
@@ -3685,7 +3687,7 @@
         <math|m=n\<cdot\>q+r> and <math|0\<leqslant\>r\<less\>n>.
 
         <item*|<math|n\<neq\>1>>Then as <math|0\<less\>n\<Rightarrowlim\><rsub|<text|[theorem:
-        <reference|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>=m>>>1=s<around*|(|0|)>\<leqslant\>n>
+        <reference|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>=m>]>>1=s<around*|(|0|)>\<leqslant\>n>
         we have <math|1\<less\>n>. By [theorem: <reference|natural numbers
         n\<less\>m=\<gtr\>n.k\<less\>m.k>] it follows that
         <math|m=1\<cdot\>m\<less\>n\<cdot\>m>, so if we define\ 
@@ -3728,7 +3730,7 @@
         </equation*>
 
         Using [corollary: <reference|natural numbers x\<less\>=y or
-        y\<less\>x>] w have that either <math|n\<leqslant\>r> or
+        y\<less\>x>] w have either <math|n\<leqslant\>r> or
         <math|r\<less\>n>. If <math|n\<leqslant\>r> then by [theorem:
         <reference|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>]
         we have <math|n+n\<cdot\>q\<leqslant\>r+n\<cdot\>q=n\<cdot\>q+r=m>,
@@ -3739,8 +3741,9 @@
           <reference|natural numbers n.s(m)=n+n.m>>>n+n\<cdot\>q\<leqslant\>m
         </equation*>
 
-        which as <math|q<rprime|'>\<in\>A<rsub|n,m>\<Rightarrow\>m\<less\>n\<cdot\>q<rprime|'>>
-        yields the contraediction <math|m\<less\>m>. So we must have\ 
+        As <math|q<rprime|'>\<in\>A<rsub|n,m>> we have by definition that
+        <math|m\<less\>n\<cdot\>q<rprime|'>> which combined with the above
+        yields the contradiction <math|m\<less\>m>. So we must have\ 
 
         <\equation*>
           0\<leqslant\>r\<less\>n
@@ -3751,11 +3754,11 @@
       </description>
     </description>
 
-    Now to prove uniqueness. Assume that <math|n\<cdot\>q+r=m=n\<cdot\>q<rprime|''>+r<rprime|\<asterisk\>>>
+    Now to prove uniqueness. Assume that <math|n\<cdot\>q+r=m=n\<cdot\>q<rprime|''>+r<rprime|''>>
     and <math|0\<leqslant\>q\<less\>n>, <math|0\<leqslant\>q<rprime|''>\<less\>n>
     with <math|q\<neq\>q<rprime|''>> then by [corollary: <reference|natural
     numbers x\<less\>=y or y\<less\>x>] we have either
-    <math|q\<leqslant\>q<rprime|''>>, <math|q<rprime|''>\<less\>q> or
+    <math|q\<less\>q<rprime|''>>, <math|q<rprime|''>\<less\>q> or
     <math|q=q<rprime|'>>. For the cases <math|q\<less\>q<rprime|''>> or
     <math|q<rprime|''>\<less\>q> we have
 
@@ -3794,7 +3797,7 @@
     </description>
 
     So we must have that <math|q=q<rprime|''>> but then
-    <math|r+n\<cdot\>q=n\<cdot\>q+r=n\<cdot\>q+r<rprime|''>=r<rprime|''>+n\<cdot\>q>
+    <math|r+n\<cdot\>q=n\<cdot\>q+r=m=n\<cdot\>q+r<rprime|''>=r<rprime|''>+n\<cdot\>q>
     proving by [theorem: <reference|natural numbers
     n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>] that <math|r=r<rprime|''>>.
   </proof>
@@ -3878,7 +3881,7 @@
     <math|i=n+k\<equallim\><rsub|<text|[theorem: <reference|natural numbers
     sum commutativity>]>>k+n\<Rightarrowlim\><rsub|k\<in\>\<bbb-N\><rsub|0>=S>i\<in\>X>.
     Hence <math|<around*|{|n,\<ldots\>,\<infty\>|}>\<subseteq\>X> which
-    together with <math|X\<subset\><around*|{|1,\<ldots\>,n|}>> proves that\ 
+    together with <math|X\<subseteq\><around*|{|1,\<ldots\>,n|}>> proves that\ 
 
     <\equation*>
       X=<around*|{|1,\<ldots\>,\<infty\>|}>
@@ -3972,7 +3975,7 @@
   </corollary>
 
   <\proof>
-    Using [theorem: <reference|recursion step (2)>] ther exists a
+    Using [theorem: <reference|recursion step (2)>] there exists a
     <math|\<lambda\>:\<bbb-N\><rsub|0>\<rightarrow\>A> such that\ 
 
     <\equation>
@@ -3989,8 +3992,8 @@
 
   In the above the function <math|\<lambda\>:\<bbb-N\><rsub|0>\<rightarrow\>A>
   is specified by saying what <math|a\<in\>A> is and what the function
-  <math|g:N<rsub|0>\<times\>A\<rightarrow\>A> is. We use \ more intuitive way
-  of specifying these requirement as is expressed in the following
+  <math|g:N<rsub|0>\<times\>A\<rightarrow\>A> is. Ther exist a more intuitive
+  way of specifying these requirement as is expressed in the following
   definitiosn.
 
   <\definition>
@@ -4010,7 +4013,7 @@
     </enumerate>
 
     where <math|G<around*|(|n,\<lambda\><around*|(|n|)>|)>> is a expression
-    of two parameters. Which is equivalent with the function defined by
+    of two parameters. The above is equivalent with the function defined by
     [theorem: <reference|recursion step (2)>] where <math|a\<in\>A> and
     <math|g:\<bbb-N\><rsub|0>\<times\>A\<rightarrow\>A> is defined by
     <math|g<around*|(|n,x|)>=G<around*|(|n,x|)>>.
@@ -4032,7 +4035,7 @@
     Which is equivalent with the function defined by [theorem:
     <reference|recursion step form (3)>] where <math|a\<in\>A> and
     <math|g:\<bbb-N\><rsub|0>\<times\>A\<rightarrow\>A> is defined by
-    <math|g<around*|(|,x|)>=G<around*|(|n,x|)>>.
+    <math|g<around*|(|n,x|)>=G<around*|(|n,x|)>>.
   </definition>
 
   <\example>
@@ -4089,7 +4092,7 @@
   <section|Equipotence>
 
   First we define the concept of equipotency which allows us to state that
-  two sets have the same number size without actually counting the number of
+  two sets have the same size without actually counting the number of
   eleemnts. The latter will turn out to be impossible for every set.
 
   <\definition>
@@ -4125,7 +4128,7 @@
       bijection and inverse>] <math|f<rsup|-1><around*|\||B\<rightarrow\>A|\|>>
       is also a bijection, so that <math|B\<approx\>A>.
 
-      <item>If <math|A\<sim\>B> and <math|B\<approx\>C> then there exists
+      <item>If <math|A\<approx\>B> and <math|B\<approx\>C> then there exists
       bijections <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>C>,
       using [theorem: <reference|function composition injectivity,
       surjectivity and bijectivity>] we have that
@@ -4161,26 +4164,31 @@
     As <math|2=s<around*|(|1|)>=s<around*|(|s<around*|(|0|)>|)>=s<around*|(|<around*|{|\<varnothing\>|}>|)>=<around*|{|\<varnothing\>|}><big|cup><around*|{|<around*|{|\<varnothing\>|}>|}>=<around*|{|\<varnothing\>,<around*|{|\<varnothing\>|}>|}>=<around*|{|0,1|}>>
     we have that <math|2<rsup|A>=<around*|{|0,1|}><rsup|A>>, finally using
     [theorem: <reference|function P(A)=2^A>] there exist a bijection
-    <math|\<cal-P\><around*|(|A|)>> and <math|<around*|{|0,1|}>>
+    <math|\<cal-P\><around*|(|A|)>> and <math|<around*|{|0,1|}><rsup|A>>.
   </proof>
 
   <\theorem>
     Let <math|A,B> be sets then <math|A\<preccurlyeq\>B> if and only if there
-    eexist a injection <math|f:A\<rightarrow\>B>
+    exist a injection <math|f:A\<rightarrow\>B>
   </theorem>
 
   <\proof>
-    If <math|A\<preccurlyeq\>B> then there exist a set <math|C\<subseteq\>B>
-    and a bijection <math|f:A\<rightarrow\>C>, as a bijection is injective we
-    have that <math|f:A\<rightarrow\>C> is injective and finally by [theorem:
-    <reference|function injectivity, surjectivity>] <math|f:A\<rightarrow\>B>
-    is a injection.\ 
+    \ 
 
-    If <math|f:A\<rightarrow\>C> is a injection then by [theorem:
-    <reference|function injectivity to bijection>]
-    <math|f:A\<rightarrow\>f<around*|(|A|)>> is a bijection where
-    <math|f<around*|(|A|)>\<subseteq\>B> proving that
-    <math|A\<preccurlyeq\>B>.
+    <\description>
+      <item*|<math|\<Rightarrow\>>>If <math|A\<preccurlyeq\>B> then there
+      exist a set <math|C\<subseteq\>B> and a bijection
+      <math|f:A\<rightarrow\>C>, as a bijection is injective we have that
+      <math|f:A\<rightarrow\>C> is injective and finally by [theorem:
+      <reference|function injectivity, surjectivity>]
+      <math|f:A\<rightarrow\>B> is a injection.\ 
+
+      <item*|<math|\<Leftarrow\>>>If <math|f:A\<rightarrow\>C> is a injection
+      then by [theorem: <reference|function injectivity to bijection>]
+      <math|f:A\<rightarrow\>f<around*|(|A|)>> is a bijection where
+      <math|f<around*|(|A|)>\<subseteq\>B> proving that
+      <math|A\<preccurlyeq\>B>.
+    </description>
   </proof>
 
   <\theorem>
@@ -4233,11 +4241,11 @@
       <math|\<cal-P\><around*|(|A|)>>. So <math|B> is not equipotent with
       <math|\<cal-P\><around*|(|A|)>>.
 
-      <item*|<math|B\<subset\>A>>Then <math|A\\B\<neq\>\<varnothing\>> and
-      <math|B<big|cap><around*|(|A\\B|)>=\<varnothing\>>. Assume now that
-      <math|B> is equipotent with <math|\<cal-P\><around*|(|A|)>> then a
-      bijection <math|g:B\<rightarrow\>\<cal-P\><around*|(|A|)>> exist, take
-      the constant function <math|C<rsub|\<varnothing\>>:A\\B\<rightarrow\>\<cal-P\><around*|(|A|)>>
+      <item*|<math|B\<subset\>A>>Then <math|A\\B\<neq\>\<varnothing\>>,<math|B<big|cap><around*|(|A\\B|)>=\<varnothing\>>
+      and <math|A=<around*|(|A\\B|)><big|cup>B>. Assume now that <math|B> is
+      equipotent with <math|\<cal-P\><around*|(|A|)>> then a bijection
+      <math|g:B\<rightarrow\>\<cal-P\><around*|(|A|)>> exist, take the
+      constant function <math|C<rsub|\<varnothing\>>:A\\B\<rightarrow\>\<cal-P\><around*|(|A|)>>
       where <math|C<rsub|\<varnothing\>><around*|(|x|)>=\<varnothing\>> and
       form then using [theorem: <reference|function combining functions (1)>]
       the function\ 
@@ -4246,8 +4254,9 @@
         f=g<big|cup>C<rsub|\<varnothing\>>:A\<rightarrow\>\<cal-P\><around*|(|A|)>
       </equation*>
 
-      If <math|C\<in\>\<cal-P\><around*|(|A|)>> then as <math|g> is bijective
-      <math|\<exists\>x\<in\>B> such that <math|g<around*|(|x|)>=C> or
+      If <math|C\<in\>\<cal-P\><around*|(|A|)>> then, as <math|g> is
+      bijective <math|\<exists\>x\<in\>B> such that
+      <math|<around*|(|x,C|)>\<in\>g\<subseteq\>f> or
       <math|f<around*|(|x|)>=C,hence f> is a surjection which is not allowed
       by [theorem: <reference|function no surjection between A and P(A)>]. So
       <math|B> is not equipotent with <math|\<cal-P\><around*|(|A|)>>.
@@ -4275,7 +4284,7 @@
       injection then by [theorem: <reference|function injection condition>]
       there exist a <math|g:B\<rightarrow\>A> such that
       <math|g\<circ\>f=Id<rsub|A>>. If <math|x\<in\>A> then
-      <math|y=Id<rsub|A><around*|(|y|)>=<around*|(|g\<circ\>f|)>=g<around*|(|f<around*|(|y|)>|)>>
+      <math|y=Id<rsub|A><around*|(|y|)>=<around*|(|g\<circ\>f|)><around*|(|y|)>=g<around*|(|f<around*|(|y|)>|)>>
       so that <math|g> is surjective.
 
       <item*|<math|\<Leftarrow\>>>Let <math|g:B\<rightarrow\>A> be a
@@ -4329,7 +4338,7 @@
       <math|y=y<rprime|'>> so that <math|<around*|(|x,y|)>=<around*|(|x<rprime|'>,y<rprime|'>|)>>.
 
       <item*|surjectivity>If <math|<around*|(|r,s|)>\<in\>B\<times\>D> then
-      as <math|f,g> are surjective ther exists <math|x\<in\>A>,
+      as <math|f,g> are surjective there exists <math|x\<in\>A>,
       <math|y\<in\>C> such that <math|r=f*<around*|(|x|)>> and
       <math|s=g<around*|(|y|)>> so that <math|h<around*|(|x,y|)>=<around*|(|f<around*|(|x|)>,g<around*|(|y|)>|)>=<around*|(|r,s|)>>.
     </description>
@@ -4344,16 +4353,15 @@
   <\proof>
     \ As <math|A\<approx\>B> and <math|C\<approx\>D> then there exists
     bijections <math|f:A\<rightarrow\>B> and <math|g:D\<rightarrow\>C>. If
-    <math|x\<in\>A<rsup|C>> then <math|x:C\<rightarrow\>A> is a function so
-    that <math|x\<circ\>g:D\<rightarrow\>A> is a function, hence
-    <math|f\<circ\><around*|(|x\<circ\>g|)>:D\<rightarrow\>B> proving that
-    <math|f\<circ\><around*|(|x\<circ\>g|)>> is a function, hence
-    <math|f\<circ\><around*|(|x\<circ\>g|)>\<in\>B<rsup|D>>. Define now
-    <math|h:A<rsup|C>\<rightarrow\>B<rsup|D>> by
+    <math|x\<in\>A<rsup|C>> then <math|x:C\<rightarrow\>A> is a function, so
+    <math|x\<circ\>g:D\<rightarrow\>A> is a function, hence
+    <math|f\<circ\><around*|(|x\<circ\>g|)>:D\<rightarrow\>B> is a function,
+    proving that <math|f\<circ\><around*|(|x\<circ\>g|)>\<in\>B<rsup|D>>.
+    Define now <math|h:A<rsup|C>\<rightarrow\>B<rsup|D>> by
     <math|h<around*|(|x|)>=f\<circ\><around*|(|x\<circ\>g|)>> then we have:\ 
 
     <\description>
-      <item*|injectivity>If <math|x,y\<in\>A<rsup|C>> such that
+      <item*|injectivity>If <math|x,y\<in\>A<rsup|C>> satisfies
       <math|h<around*|(|x|)>=h<around*|(|y|)>> then\ 
 
       <\eqnarray*>
@@ -4364,7 +4372,7 @@
       <math|y:D\<rightarrow\>B> is a function so that
       <math|y\<circ\>g<rsup|-1>:C\<rightarrow\>B> is a function, hence
       <math|f<rsup|-1>\<circ\><around*|(|y\<circ\>g<rsup|-1>|)>:C\<rightarrow\>A>
-      or <math|f<rsup|-1>\<circ\><around*|(|y\<circ\>g<rsup|-1>|)>\<in\>A<rsup|C>>.
+      is a function or <math|f<rsup|-1>\<circ\><around*|(|y\<circ\>g<rsup|-1>|)>\<in\>A<rsup|C>>.
       Further
 
       <\eqnarray*>
@@ -4380,14 +4388,14 @@
   </theorem>
 
   <\proof>
-    As we have <math|A\<approx\>B> and <math|2\<approx\>2> [see theorem:
-    <reference|equipotence equivalence relation>], so by [theorem:
-    <reference|equipotence A^C~B^D>] we have
-    <math|2<rsup|A>\<approx\>2<rsup|B>>. As by [theorem:
+    As <math|A\<approx\>B> and <math|2\<approx\>2> [see theorem:
+    <reference|equipotence equivalence relation>], we have by [theorem:
+    <reference|equipotence A^C~B^D>] that
+    <math|2<rsup|A>\<approx\>2<rsup|B>>. Further by [theorem:
     <reference|equipotence property (1)>]
     <math|\<cal-P\><around*|[|A|]>\<approx\>2<rsup|A>> and
-    <math|\<cal-P\><around*|(|B|)>=2<rsup|B>> it follows by [theorem:
-    <reference|equipotence equivalence relation>] that
+    <math|\<cal-P\><around*|(|B|)>\<approx\>2<rsup|B>>, so by [theorem:
+    <reference|equipotence equivalence relation>] it follows that
     <math|\<cal-P\><around*|(|A|)>=\<cal-P\><around*|(|B|)>>.\ 
   </proof>
 
@@ -4437,8 +4445,8 @@
 
       <\description>
         <item*|<math|m=n>>Then by [theorem: <reference|natural numbers
-        n\<less\>s(n)>] we have that <math|m\<less\>s<around*|(|n|)>> so that
-        <math|m\<in\>S<rsub|s<around*|(|n|)>>>
+        n\<less\>s(n)>] we have that <math|m\<less\>s<around*|(|m|)>=s<around*|(|n|)>>
+        so that <math|m\<in\>S<rsub|s<around*|(|n|)>>>
 
         <item*|<math|m\<in\>S<rsub|n>>>Then <math|m\<less\>n> which as by
         [theorem: <reference|natural numbers n\<less\>s(n)>]
@@ -4528,20 +4536,20 @@
 
   <\proof>
     As <math|A> is denumerable there exist a bijection
-    <math|f:\<bbb-N\>\<rightarrow\>A>. As <math|a\<in\>A> we have by
+    <math|f:\<bbb-N\><rsub|0>\<rightarrow\>A>. As <math|a\<in\>A> we have by
     surjectivity that <math|\<exists\>n\<in\>\<bbb-N\><rsub|0>> such that
     <math|f<around*|(|n|)>=a>. Define now\ 
 
     <\equation*>
       g:\<bbb-N\><rsub|0>\<rightarrow\>A<text| where
       >g<around*|(|i|)>=<choice|<tformat|<table|<row|<cell|f<around*|(|i|)><text|
-      if >i\<less\>n>>|<row|<cell|f<around*|(|i+1|)><text|
+      if >i\<less\>n>>|<row|<cell|f<around*|(|i+1|)><text| if
       <math|n\<leqslant\>i>>>>>>>
     </equation*>
 
-    which as <math|<around*|{|x\<in\>\<bbb-N\><rsub|0>\|x\<less\>n|}><big|cap><around*|{|x\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>x|}>=\<varnothing\>>
-    and <math|\<bbb-N\><rsub|0>=<around*|{|x\<in\>\<bbb-N\><rsub|0>\|x\<less\>n|}><big|cup><around*|{|x\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>x|}>>
-    is a function, we prove now bijectivity.
+    which, as <math|<around*|{|x\<in\>\<bbb-N\><rsub|0>\|x\<less\>n|}><big|cap><around*|{|x\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>x|}>=\<varnothing\>>
+    and <math|\<bbb-N\><rsub|0>=<around*|{|x\<in\>\<bbb-N\><rsub|0>\|x\<less\>n|}><big|cup><around*|{|x\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>x|}>>,
+    is a function As for bijectivity we have:
 
     <\description>
       <item*|injectivity>If <math|g<around*|(|i|)>=g<around*|(|i<rprime|'>|)>>
@@ -4550,35 +4558,35 @@
       <\description>
         <item*|<math|i\<less\>n\<wedge\>i<rprime|'>\<less\>n>>Then
         <math|f<around*|(|i|)>=g<around*|(|i|)>=g<around*|(|i<rprime|'>|)>=f<around*|(|i<rprime|'>|)>>
-        which as <math|f> is injective gives <math|i=i<rprime|'>>.
+        which as <math|f> is injective proves that <math|i=i<rprime|'>>.
 
         <item*|<math|i\<less\>n\<wedge\>n\<leqslant\>i<rprime|'>>>Then
         <math|f<around*|(|i|)>=g<around*|(|i|)>=g<around*|(|i<rprime|'>|)>=f<around*|(|i<rprime|'>+1|)>>
-        which as <math|f> is injective gives <math|i=i<rprime|'>+1,>Now as
-        <math|n\<leqslant\>i<rprime|'>\<less\>i<rprime|'>+1=i> and
+        which as <math|f> is injective proves that <math|i=i<rprime|'>+1,>
+        Now as <math|n\<leqslant\>i<rprime|'>\<less\>i<rprime|'>+1=i> and
         <math|i\<less\>n> we reach the contradiction \ <math|n\<less\>n>, so
         this case is not possible.
 
         <item*|<math|n\<leqslant\>i\<wedge\>i<rprime|'>\<less\>n>>Then
         <math|f<around*|(|i+1|)>=g<around*|(|i|)>=g<around*|(|i<rprime|'>|)>=f<around*|(|i<rprime|'>|)>>
-        which as <math|f> is injective gives <math|i+1=i<rprime|'>>. Now as
-        <math|n\<leqslant\>i\<less\>i+1=i<rprime|'>> and
+        which as <math|f> is injective proves that <math|i+1=i<rprime|'>>.
+        Now as <math|n\<leqslant\>i\<less\>i+1=i<rprime|'>> and
         <math|i<rprime|'>\<less\>n> we reach the contradiction
         <math|n\<less\>n>, so this case is not possible.
 
         <item*|<math|n\<leqslant\>i\<wedge\>n\<leqslant\>i<rprime|'>>>Then
-        <math|f<around*|(|i+1|)>=g<around*|(|i|)>=g<around*|(|i<rprime|'>|)>=f<around*|(|i<rprime|'>+1|)>>
-        then as <math|f> is injective <math|i+1=i+1<rprime|'>> so that by
-        [theorem: <reference|natural numbers n+k=m+k\<less\>=\<gtr\>n=m>]
+        <math|f<around*|(|i+1|)>=g<around*|(|i|)>=g<around*|(|i<rprime|'>|)>=f<around*|(|i<rprime|'>+1|)>>,
+        hence, as <math|f> is injective, we have <math|i+1=i+1<rprime|'>> or
+        by [theorem: <reference|natural numbers n+k=m+k\<less\>=\<gtr\>n=m>]
         <math|i=i<rprime|'>>.
       </description>
 
-      Soin all valid cases we have <math|i=i<rprime|'>> proving injectivity.
+      So in all valid cases we have <math|i=i<rprime|'>> proving injectivity.
 
-      <item*|surjectivity>If <math|y\<in\>A\\<around*|{|x|}>> there exists by
-      surjectivity of <math|f> a <math|i\<in\>\<bbb-N\><rsub|0>> such that
-      <math|f<around*|(|i|)>=y>. We can not have <math|i=n> because we would
-      have that <math|f<around*|(|i|)>=f<around*|(|n|)>=y\<nin\>A\\<around*|{|y|}>>.
+      <item*|surjectivity>If <math|y\<in\>A\\<around*|{|x|}>> then there
+      exists by surjectivity of <math|f> a <math|i\<in\>\<bbb-N\><rsub|0>>
+      such that <math|f<around*|(|i|)>=y>. We can not have <math|i=n>,
+      because we would then have <math|f<around*|(|i|)>=f<around*|(|n|)>=y\<nin\>A\\<around*|{|y|}>>.
       So we have either\ 
 
       <\description>
@@ -4596,7 +4604,7 @@
   <\lemma>
     <label|denumerable is not subset of a natural number>Let
     <math|n\<in\>\<bbb-N\><rsub|0>> then <math|n> has no denumerable subset.
-    So as <math|n\<subseteq\>n> <math|n> is not denumerable.
+    In particular, as <math|n\<subseteq\>n>, <math|n> is not denumerable.
   </lemma>
 
   <\proof>
@@ -4618,18 +4626,18 @@
       So <math|0> does not contains a denumerable subset.
 
       <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>We proceed by
-      contradiction, so assume that <math|A\<subseteq\>n+1=s<around*|(|n|)>=n<big|cup><around*|{|n|}>>
-      such that <math|A> is denumerable. If <math|n\<nin\>A> then
-      <math|A\<subseteq\>n> which is impossible because <math|n\<in\>S> so we
-      must have that <math|n\<in\>A>. If now
-      <math|a\<in\>A\\<around*|{|n|}>\<subseteq\>n<big|cup><around*|{|n|}>>
-      we have as <math|a\<neq\>n> that <math|a\<in\>n> proving that
+      contradiction, so assume that there exist a
+      <math|A\<subseteq\>n+1=s<around*|(|n|)>=n<big|cup><around*|{|n|}>>
+      which is denumerable. If <math|n\<nin\>A> then <math|A\<subseteq\>n>
+      which is impossible because <math|n\<in\>S>, \ so we must have that
+      <math|n\<in\>A>. Let <math|a\<in\>A\\<around*|{|n|}>\<subseteq\>n<big|cup><around*|{|n|}>>
+      then, as <math|a\<neq\>n>, <math|a\<in\>n> proving that
       <math|A\\<around*|{|n|}>\<subseteq\>n>. Now by the previous lemma
-      [lemma: <reference|denumerable with one less element>] we have as
-      <math|A> is denumerable that <math|A\\<around*|{|n|}>> is denumerable
-      which is forbidden as <math|n\<in\>S>. So the assumption is wrong,
-      hence everys subset of <math|s<around*|(|n|)>> is not denumerable,
-      proving that <math|n+1\<in\>S>.
+      [lemma: <reference|denumerable with one less element>] we have, as
+      <math|A> is denumerable, \ that <math|A\\<around*|{|n|}>> is
+      denumerable which is forbidden as <math|n\<in\>S>. So the assumption is
+      wrong, hence everys subset of <math|s<around*|(|n|)>> is not
+      denumerable, proving that <math|n+1\<in\>S>.
     </description>
 
     Using induction [see theorem: <reference|mathematical induction>] it
@@ -4690,29 +4698,29 @@
       is a bijection [see theorems: <reference|function restricted function
       properties>, <reference|function injectivity to bijection>] so that
       <math|B\<approx\>f<around*|(|B|)>>, as <math|B> is denumerable
-      <math|\<bbb-N\><rsub|0>\<approx\>B> we have by [theorem:
-      <reference|equipotence equivalence relation>] that
+      <math|\<bbb-N\><rsub|0>\<approx\>B>, so by [theorem:
+      <reference|equipotence equivalence relation>] it follows that
       <math|\<bbb-N\><rsub|0>\<approx\>f<around*|(|B|)>\<subseteq\>n>. So
       there exists a denumerable subset of <math|n> which by [theorem:
       <reference|denumerable is not subset of a natural number>] is
-      impossible. So <math|A> is not finite wich by definition means that
+      impossible. Hence <math|A> is not finite wich by definition means that
       <math|A> is infinite.
     </description>
   </proof>
 
   <\corollary>
     <label|set is infinitie if it contains a infinite subset>Every set with a
-    infinite subset is infinite
+    infinite subset is infinite.
   </corollary>
 
   <\proof>
     If <math|A> is a set such that there exists a infinite set <math|B> with
-    <math|B\<subseteq\>A> then as <math|B> is infinite we have by [theorem:
+    <math|B\<subseteq\>A> then, as <math|B> is infinite, we have by [theorem:
     <reference|set containing a denumerable set is infinite>] the existence
-    of a denumerable set <math|C\<subseteq\>B> but then <math|C\<subseteq\>A>
-    and thus <math|A> has a denumerable subset and by [theorem:
-    <reference|set containing a denumerable set is infinite>] we have that
-    <math|A> is infinite.
+    of a denumerable set <math|C\<subseteq\>B>, but then
+    <math|C\<subseteq\>A> and thus <math|A> has a denumerable subset. Using
+    [theorem: <reference|set containing a denumerable set is infinite>] it
+    follows that <math|A> is infinite.
   </proof>
 
   <\corollary>
@@ -4745,34 +4753,41 @@
       <reference|natural numbers are segments>] >>S<rsub|m>
     </equation>
 
+    Define\ 
+
+    <\equation*>
+      C=<around*|{|i\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>i\<wedge\>i\<less\>n+m|}>
+    </equation*>
+
     If <math|b\<in\>B> then <math|g<rprime|'><around*|(|b|)>\<in\>S<rsub|n>>
     , hence \ <math|0\<leqslant\>g<rprime|'><around*|(|b|)>\<less\>m> so that
     by [theorem: <reference|natural numbers
     n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>]
-    <math|n=0+n\<leqslant\>g<rprime|'><around*|(|b|)>+n\<less\>m+n> so that
+    <math|n=0+n\<leqslant\>g<rprime|'><around*|(|b|)>+n\<less\>m+n> or
+    <math|g<rprime|'><around*|(|b|)>+n\<in\>C>. So
 
     <\equation>
-      <label|eq 6.3.019>g:B\<rightarrow\><around*|{|i\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>i\<wedge\>i\<less\>n+m|}><text|
-      by >g<around*|(|i|)>=g<rprime|'><around*|(|i|)>+n<text|>
+      <label|eq 6.3.019>g:B\<rightarrow\>C<text| where
+      >g<around*|(|i|)>=g<rprime|'><around*|(|i|)>+n<text|>
     </equation>
 
-    is a function. Further we have:
+    defines a function. Further we have:
 
     <\description>
       <item*|injectivity>If <math|g<around*|(|b|)>=g<around*|(|b<rprime|'>|)>>
       then <math|g<rprime|'><around*|(|b|)>+n=g<rprime|'><around*|(|b<rprime|'>|)>+n>,
       so using [theorem: <reference|natural numbers
-      n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>]
-      <math|g<rprime|'><around*|(|b|)>=g<rprime|'><around*|(|b<rprime|'>|)>>,
-      as <math|g<rprime|'>> is injective we have that <math|b=b<rprime|'>>.
+      n+k=m+k\<less\>=\<gtr\>n=m>] <math|g<rprime|'><around*|(|b|)>=g<rprime|'><around*|(|b<rprime|'>|)>>,
+      hence, as <math|g<rprime|'>> is injective, we have
+      <math|b=b<rprime|'>>.
 
-      <item*|surjectivity>If <math|i\<in\><around*|{|i\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>i\<wedge\>i\<less\>n+m|}>>
-      then <math|n\<leqslant\>i\<less\>n+m>, using [theorem:
-      <reference|natural numbers n\<less\>m then there exists a k such that
-      m=n+k>] there exist a <math|k\<in\>\<bbb-N\><rsub|0>> such that
-      <math|n+k=i>. If <math|m\<leqslant\>k> then by [theorem:
-      <reference|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>]
-      <math|n+m\<leqslant\>n+k=i\<less\>n+m> a contradiction. So we have that
+      <item*|surjectivity>If <math|i\<in\>C> then
+      <math|n\<leqslant\>i\<less\>n+m>, using [theorem: <reference|natural
+      numbers n\<less\>m then there exists a k such that m=n+k>] there exist
+      a <math|k\<in\>\<bbb-N\><rsub|0>> such that <math|n+k=i>. If
+      <math|m\<leqslant\>k> then by [theorem: <reference|natural numbers
+      n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>]
+      <math|n+m\<leqslant\>n+k=i\<less\>n+m> a contradiction. So
       <math|k\<less\>m> and thus <math|k\<in\>S<rsub|m>>. As
       <math|g<rprime|'>> is surjective there exists a <math|b\<in\>B> such
       that <math|g<rprime|'><around*|(|b|)>=k> and thus
@@ -4782,45 +4797,42 @@
     proving that\ 
 
     <\equation>
-      <label|eq 6.4.019>g:B\<rightarrow\><around*|{|i\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>i\<wedge\>i\<less\>n+m|}><text|
-      is a bijection>
+      <label|eq 6.4.019>g:B\<rightarrow\>C<text| is a bijection>
     </equation>
 
-    Further if <math|i\<in\>n<big|cap><around*|{|i\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>i\<wedge\>i\<less\>n+m|}>=S<rsub|n><big|cap><around*|{|i\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>i\<wedge\>i\<less\>n+m|}>>
-    then <math|i\<less\>n\<wedge\>n\<leqslant\>i> yielding the contradiction
+    Further if <math|i\<in\>n<big|cap>C=S<rsub|n><big|cap>C> then
+    <math|i\<less\>n\<wedge\>n\<leqslant\>i> yielding the contradiction
     <math|i\<less\>i> so we have that\ 
 
     <\equation>
-      <label|eq 6.5.019>n<big|cap><around*|{|i\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>i\<wedge\>i\<less\>n+m|}>\<neq\>\<varnothing\>
+      <label|eq 6.5.019>n<big|cap>C\<neq\>\<varnothing\>
     </equation>
 
-    Further if <math|i\<in\>n<big|cup><around*|{|i\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>i\<wedge\>i\<less\>n+m|}>>
-    then either\ 
+    If <math|i\<in\>n<big|cup>C> then either\ 
 
     <\description>
-      <item*|<math|i\<in\>n>>Then as <math|n=S<rsub|n>> we have
+      <item*|<math|i\<in\>n>>Then, as <math|n=S<rsub|n>>, we have
       <math|i\<less\>n> which as <math|n\<leqslant\>n+m> proves that
       <math|i\<less\>n+m> hence <math|i\<in\>S<rsub|n+m>>.
 
-      <item*|<math|i\<in\><around*|{|i\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>i\<wedge\>i\<less\>n+m|}>>>then
-      <math|i\<less\>n+m> so that <math|i\<in\>S<rsub|n+m>>
+      <item*|<math|i\<in\>C>>Then <math|i\<less\>n+m> so that
+      <math|i\<in\>S<rsub|n+m>>
     </description>
 
-    proving that\ 
+    proving
 
     <\equation>
-      <label|eq 6.6.019>n<big|cup><around*|{|i\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>i\<wedge\>i\<less\>n+m|}>\<subseteq\>S<rsub|n+m>
+      <label|eq 6.6.019>n<big|cup>C\<subseteq\>S<rsub|n+m>
     </equation>
 
     If <math|i\<in\>S<rsub|n+m>> then <math|i\<less\>n+m>, further we have
     either <math|i\<less\>n> so that <math|i\<in\>S<rsub|n>=n> or
-    <math|n\<leqslant\>i> giving <math|i\<in\><around*|{|i\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>i\<wedge\>i\<less\>n+m|}>>,
-    hence <math|i\<in\>n<big|cup><around*|{|i\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>i\<wedge\>i\<less\>n+m|}>>
-    or <math|S<rsub|n+m>\<subseteq\>n<big|cup><around*|{|i\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>i\<wedge\>i\<less\>n+m|}>>
+    <math|n\<leqslant\>i> giving <math|i\<in\>C>, hence
+    <math|i\<in\>n<big|cup>C> or <math|S<rsub|n+m>\<subseteq\>n<big|cup>C>
     which by [eq: <reference|eq 6.6.019>] proves that\ 
 
     <\equation>
-      <label|eq 6.7.019>n<big|cup><around*|{|i\<in\>\<bbb-N\><rsub|0>\|n\<leqslant\>i\<wedge\>i\<less\>n+m|}>=S<rsub|n+m>
+      <label|eq 6.7.019>n<big|cup>C=S<rsub|n+m>
     </equation>
 
     Using [eq: <reference|eq 6.2.019>], [eq: <reference|eq 6.4.019>], [eq
@@ -4832,6 +4844,183 @@
     <\equation*>
       f<big|cup>g:A<big|cup>B\<rightarrow\>S<rsub|n+m>
     </equation*>
+
+    proving that\ 
+
+    <\equation*>
+      A<big|cup>B\<approx\>S<rsub|n+m>
+    </equation*>
+
+    \;
+  </proof>
+
+  TODO
+
+  <\lemma>
+    <label|finite union of finite sets is finite (lemma)>If
+    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>S<rsub|n>>> is such that
+    <math|\<forall\>i\<in\>S<rsub|n>> <math|A<rsub|i>> is finite then
+    <math|<big|cup><rsub|i\<in\>S<rsub|n>>A<rsub|i>> is finite.
+  </lemma>
+
+  <\proof>
+    We use induction to prove this, so define\ 
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|If
+      <around*|{|A<rsub|i>|}><rsub|i\<in\>I><text| is a finite family of sets
+      then <math|<big|cup><rsub|i\<in\>S<rsub|n>>A<rsub|i>>>|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|0\<in\>S>>If <math|n=0> then
+      <math|S<rsub|0>=0=\<varnothing\>> so that
+      <math|<big|cup><rsub|i\<in\>S<rsub|0>>A<rsub|i>=<big|cup><rsub|i\<in\>\<varnothing\>>A<rsub|i>\<equallim\><rsub|<text|[example:
+      <reference|family union of a empty set>>>\<varnothing\>> which is
+      finite, hence <math|0\<in\>S>.\ 
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+      <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>n+1>> a family of empty sets.
+      As <math|S<rsub|n+1>=n+1=s<around*|(|n|)>=n<big|cup><around*|{|n|}>=S<rsub|n><big|cup><around*|{|n|}>>
+      and <math|n\<nin\>S<rsub|n>> we have that
+      <math|S<rsub|n+1>\\<around*|{|n|}>=S<rsub|n>>. So\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|cup><rsub|i\<in\>S<rsub|n+1>>A<rsub|i>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|family union intersection and empty
+        set>]>>>|<cell|<around*|(|<big|cup><rsub|i\<in\>S<rsub|n>\\<around*|{|n|}>>A<rsub|i>|)><big|cup>A<rsub|n>>>>>
+      </eqnarray*>
+
+      As <math|n\<in\>S> <math|<big|cup><rsub|i\<in\>S<rsub|n>\\<around*|{|n|}>>A<rsub|i>>
+      is finite which, as <math|A<rsub|n>> is also finite, proves, using
+      [theorem: <reference|union of two finite sets is finite>] that
+      <math|<around*|(|<big|cup><rsub|i\<in\>S<rsub|n>\\<around*|{|n|}>>A<rsub|i>|)><big|cup>A<rsub|n>>
+      is finite. So <math|<big|cup><rsub|i\<in\>S<rsub|n+1>>A<rsub|i>> is
+      finite proving that <math|n+1\<in\>S>.\ 
+    </description>
+
+    Mathematical induction [see theorem: <reference|mathematical induction>]
+    proves then the lemma.
+  </proof>
+
+  <\theorem>
+    <label|finitie union of finite sets is finite>If
+    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>> is a family of finite sets
+    where <math|I> is finite then <math|<big|cup><rsub|i\<in\>I>A<rsub|i>> is
+    finite.
+  </theorem>
+
+  <\proof>
+    As <math|I> is finite there exists a <math|n\<in\>\<bbb-N\><rsub|0>> and
+    a bijection <math|f:S<rsub|n>\<rightarrow\>I> so that by [theorem:
+    <reference|family union of family set and surjections>] we have that\ 
+
+    <\equation>
+      <label|eq 6.8.019><big|cup><rsub|i\<in\>I>A<rsub|i>=<big|cup><rsub|i\<in\>S<rsub|n>>A<rsub|f<around*|(|i|)>>
+    </equation>
+
+    As, <math|\<forall\>i\<in\>S<rsub|n>> we have that
+    <math|f<around*|(|i|)>\<in\>I> so that <math|A<rsub|f<around*|(|i|)>>> is
+    finite, it follows by the previous lemma [lemma: <reference|finite union
+    of finite sets is finite (lemma)>] that
+    <math|<big|cup><rsub|i\<in\>S<rsub|n>>A<rsub|f<around*|(|i|)>>> is
+    finite. So using [eq: <reference|eq 6.8.019>] we have\ 
+
+    <\equation*>
+      <big|cup><rsub|i\<in\>I>A<rsub|i><text| is finite>
+    </equation*>
+  </proof>
+
+  Another import indication of a infinite set is the following:
+
+  <\theorem>
+    <label|infinite condition (1)>A set <math|A> is infinite if and only if
+    <math|\<exists\>B\<subset\>A> such that <math|B\<approx\>A>. In other
+    words if <math|A> is equipotent with a proper subset of itself.
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>If <math|A> is infinite then by [theorem:
+      <reference|set containing a denumerable set is infinite>] there exist a
+      denumerable <math|B\<subseteq\>A>. So there exists a bijection
+      <math|f:\<bbb-N\><rsub|0>\<rightarrow\>B>. Define now the function
+      [taking in account that <math|<around*|(|A\\B|)><big|cap>B=\<varnothing\>>
+      and <math|A=<around*|(|A\\B|)><big|cup>B>)]
+
+      <\equation*>
+        g:A\<rightarrow\>A<text| where >f<around*|(|x|)>=<choice|<tformat|<table|<row|<cell|x
+        if x\<in\>A\\B>>|<row|<cell|f<around*|(|f<rsup|-1><around*|(|x|)>+1|)><text|
+        if >x\<in\>B>>>>>
+      </equation*>
+
+      where <math|f<rsup|-1>:B\<rightarrow\>\<bbb-N\><rsub|0>> is the inverse
+      of <math|f>.
+
+      Then we have:
+
+      <\equation>
+        <label|eq 6.9.019>g<around*|(|A|)>=A\\<around*|{|f<around*|(|0|)>|}>
+      </equation>
+
+      <\proof>
+        If <math|y\<in\>g<around*|(|A|)>> then there exists a <math|x\<in\>A>
+        such that <math|y=g<around*|(|x|)>>, we have for <math|x> either:
+
+        <\description>
+          <item*|<math|x\<in\>A\\B>>Then <math|y=f<around*|(|x|)>=x> so that
+          <math|y\<in\>A\\B> or as <math|f<around*|(|0|)>\<in\>B> that
+          <math|y\<in\>A\\<around*|{|f<around*|(|0|)>|}>>
+
+          <item*|<math|x\<in\>B>>If we would have that
+          <math|f<around*|(|0|)>=f<around*|(|f<rsup|-1><around*|(|x|)>+1|)>>
+          we have as <math|f> is a bijection that
+          <math|0=f<rsup|-1><around*|(|x|)>+1> which contradicts
+          <math|0\<less\>f<rsup|-1><around*|(|x|)>+1>. So we have that
+          <math|f<around*|(|0|)>\<neq\>f<around*|(|f<rsup|-1><around*|(|x|)>+1|)>=y>.
+          Hence <math|y\<in\>A\\<around*|{|f<around*|(|0|)>|}>>.
+        </description>
+
+        proving that\ 
+
+        <\equation>
+          <label|eq 6.10.019>g<around*|(|A|)>\<subseteq\>A\\<around*|{|f<around*|(|0|)>|}>
+        </equation>
+
+        If <math|y\<in\>A\\<around*|{|f<around*|(|0|)>|}>> then we have
+        either:
+
+        <\description>
+          <item*|<math|y\<in\>B>>If <math|f<rsup|-1><around*|(|y|)>=0> we
+          would have that <math|y=f<around*|(|f<rsup|-1><around*|(|y|)>|)>=f<around*|(|0|)>>
+          contradicting <math|y\<in\>A\\<around*|{|f<around*|(|0|)>|}>>. So
+          we have that <math|f<rsup|-1><around*|(|y|)>\<neq\>0> or
+          <math|0\<less\>f<rsup|-1><around*|(|y|)>>, using [theorem:
+          <reference|natural numbers n\<less\>m=\<gtr\>n\<less\>=m-1>] we
+          have then that <math|0\<leqslant\>f<rsup|-1><around*|(|y|)>-1>.
+          Take then <math|x=f<around*|(|f<rsup|-1><around*|(|y|)>-1|)>\<in\>B\<subseteq\>A>
+          then we have:
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|g<around*|(|x|)>>|<cell|=>|<cell|f<around*|(|f<rsup|-1><around*|(|x|)>+1|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|f<rsup|-1><around*|(|f<around*|(|f<rsup|-1><around*|(|y|)>-1|)>|)>+1|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|f<rsup|-1><around*|(|y|)>-1|)>+1|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|f<rsup|-1><around*|(|y|)>|)>>>|<row|<cell|>|<cell|=>|<cell|y>>>>
+          </eqnarray*>
+
+          so that <math|y\<in\>g<around*|(|A|)>>.
+
+          <item*|<math|y\<nin\>B>>As <math|y\<nin\>B>
+        </description>
+
+        \;
+      </proof>
+
+      <item*|<math|\<Leftarrow\>>>
+    </description>
+
+    \;
   </proof>
 
   \;
@@ -4916,12 +5105,11 @@
     <associate|auto-9|<tuple|left action|112>>
     <associate|countable set|<tuple|6.20|144>>
     <associate|definition by recursion (1)|<tuple|5.82|139>>
-    <associate|definition by recursion (2)|<tuple|5.83|139>>
-    <associate|denumerable is not subset of a natural number|<tuple|6.22|?>>
-    <associate|denumerable is not subset of a nautral number|<tuple|6.22|?>>
+    <associate|definition by recursion (2)|<tuple|5.83|140>>
+    <associate|denumerable is not subset of a natural
+    number|<tuple|6.22|145>>
     <associate|denumerable set|<tuple|6.19|144>>
-    <associate|denumerable set is infinite|<tuple|6.23|?>>
-    <associate|denumerable with one less element|<tuple|6.21|?>>
+    <associate|denumerable with one less element|<tuple|6.21|144>>
     <associate|empty set is finite|<tuple|6.17|144>>
     <associate|eq 5.1.019|<tuple|5.1|120>>
     <associate|eq 5.10.019|<tuple|5.10|125>>
@@ -4940,12 +5128,15 @@
     <associate|eq 5.7.019|<tuple|5.7|121>>
     <associate|eq 5.8.019|<tuple|5.8|121>>
     <associate|eq 5.9.019|<tuple|5.9|121>>
-    <associate|eq 6.2.019|<tuple|6.2|?>>
-    <associate|eq 6.3.019|<tuple|6.3|?>>
-    <associate|eq 6.4.019|<tuple|6.4|?>>
-    <associate|eq 6.5.019|<tuple|6.5|?>>
-    <associate|eq 6.6.019|<tuple|6.6|?>>
-    <associate|eq 6.7.019|<tuple|6.7|?>>
+    <associate|eq 6.10.019|<tuple|6.10|?>>
+    <associate|eq 6.2.019|<tuple|6.2|146>>
+    <associate|eq 6.3.019|<tuple|6.3|146>>
+    <associate|eq 6.4.019|<tuple|6.4|146>>
+    <associate|eq 6.5.019|<tuple|6.5|146>>
+    <associate|eq 6.6.019|<tuple|6.6|146>>
+    <associate|eq 6.7.019|<tuple|6.7|146>>
+    <associate|eq 6.8.019|<tuple|6.8|?>>
+    <associate|eq 6.9.019|<tuple|6.9|?>>
     <associate|eq 7.1.019|<tuple|6.1|144>>
     <associate|equipotence|<tuple|6.1|141>>
     <associate|equipotence 2^A and P(A)|<tuple|6.13|143>>
@@ -4954,7 +5145,7 @@
     <associate|equipotence equivalence relation|<tuple|6.2|141>>
     <associate|equipotence property (1)|<tuple|6.8|142>>
     <associate|equipotence union|<tuple|6.10|142>>
-    <associate|every subset of a finite set is finite|<tuple|6.25|?>>
+    <associate|every subset of a finite set is finite|<tuple|6.25|145>>
     <associate|field|<tuple|4.33|114>>
     <associate|field homeomorphism|<tuple|4.37|115>>
     <associate|field inverse is unique|<tuple|4.34|115>>
@@ -4962,6 +5153,8 @@
     <associate|field subfield|<tuple|4.35|115>>
     <associate|field subfield is a field|<tuple|4.36|115>>
     <associate|finite set|<tuple|6.16|144>>
+    <associate|finite union of finite sets is finite (lemma)|<tuple|6.27|?>>
+    <associate|finitie union of finite sets is finite|<tuple|6.28|?>>
     <associate|function P(A) bijective with 2^A|<tuple|6.5|141>>
     <associate|function injection and inverse surjection|<tuple|6.9|142>>
     <associate|function no surjection between A and P(A)|<tuple|6.7|141>>
@@ -4982,6 +5175,8 @@
     <associate|group semi-group inheritance|<tuple|4.11|108>>
     <associate|group semigroup properties|<tuple|4.3|107>>
     <associate|group sub-group|<tuple|4.10|108>>
+    <associate|infinite condition|<tuple|6.29|?>>
+    <associate|infinite condition (1)|<tuple|6.29|?>>
     <associate|infinite set|<tuple|6.18|144>>
     <associate|inverse of a field isomorphism is a field
     isomorphism|<tuple|4.38|115>>
@@ -5002,7 +5197,7 @@
     <associate|natural numbers are well ordered|<tuple|5.51|132>>
     <associate|natural numbers difference|<tuple|5.62|135>>
     <associate|natural numbers distributivity|<tuple|5.39|129>>
-    <associate|natural numbers division|<tuple|5.73|136>>
+    <associate|natural numbers division|<tuple|5.73|137>>
     <associate|natural numbers every non zero number is a
     successor|<tuple|5.18|119>>
     <associate|natural numbers is a set|<tuple|5.4|117>>
@@ -5032,8 +5227,8 @@
     <associate|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k|<tuple|5.55|133>>
     <associate|natural numbers n\<less\>m\<less\>=\<gtr\>there exists a k
     such that m=k|<tuple|5.60|134>>
-    <associate|natural numbers n\<less\>m=\<gtr\>n.k\<less\>m.k|<tuple|5.70|135>>
-    <associate|natural numbers n\<less\>m=\<gtr\>n\<less\>=m-1|<tuple|5.64|?>>
+    <associate|natural numbers n\<less\>m=\<gtr\>n.k\<less\>m.k|<tuple|5.70|136>>
+    <associate|natural numbers n\<less\>m=\<gtr\>n\<less\>=m-1|<tuple|5.64|135>>
     <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>=m|<tuple|5.50|132>>
     <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>s(m)|<tuple|5.54|133>>
     <associate|natural numbers n\<less\>s(m)=\<gtr\>s\<less\>=m|<tuple|5.57|134>>
@@ -5056,7 +5251,7 @@
     <associate|natural numbers x\<less\>=y or y\<less\>x|<tuple|5.53|133>>
     <associate|operator|<tuple|4.1|107>>
     <associate|recursion|<tuple|5.19|120>>
-    <associate|recursion final|<tuple|5.78|138>>
+    <associate|recursion final|<tuple|5.78|139>>
     <associate|recursion injective function|<tuple|5.20|122>>
     <associate|recursion iteration|<tuple|5.24|123>>
     <associate|recursion iteration in a group|<tuple|5.25|124>>
@@ -5072,12 +5267,12 @@
     <associate|ring subring is a ring|<tuple|4.28|113>>
     <associate|ring zero divisor|<tuple|4.25|113>>
     <associate|semi-group|<tuple|4.2|107>>
-    <associate|set containing a denumerable set is infinite|<tuple|6.23|?>>
+    <associate|set containing a denumerable set is infinite|<tuple|6.23|145>>
     <associate|set is infinitie if it contains a infinite
-    subset|<tuple|6.24|?>>
+    subset|<tuple|6.24|145>>
     <associate|sub-semi-group|<tuple|4.9|108>>
     <associate|subring|<tuple|4.27|113>>
-    <associate|union of two finite sets is finite|<tuple|6.26|?>>
+    <associate|union of two finite sets is finite|<tuple|6.26|146>>
   </collection>
 </references>
 
