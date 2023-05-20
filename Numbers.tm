@@ -5580,6 +5580,26 @@
     then that <math|B> is finite with <math|\<circ\>B\<leqslant\>n>.
   </proof>
 
+  <\corollary>
+    <label|set of finite family is finite>Let <math|I> be a finite set and
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>X> a finite
+    family of elements in <math|X> then <math|<around*|{|x<rsub|i>\|i\<in\>I|}>>
+    is finite.
+  </corollary>
+
+  <\proof>
+    Define the function <math|f:I\<rightarrow\><around*|{|x<rsub|i>\|i\<in\>I|}>>
+    by <math|f<around*|(|i|)>=x<rsub|i>> then if
+    <math|y\<in\><around*|{|x<rsub|i>\|i\<in\>I|}>> there exist a
+    <math|i\<in\>I> such that <math|y=x<rsub|i>>, hence
+    <math|y=f<around*|(|i|)>>. This proves that
+    <math|f:I\<rightarrow\><around*|{|x<rsub|i>\|i\<in\>I|}>> is a
+    surjection, so by the previous corollary [corollary:
+    <reference|surjection f:A-\<gtr\>B if A is finite then B is finite>] we
+    have as <math|I> is finite that <math|<around*|{|x<rsub|i>\|i\<in\>I|}>>
+    is finite.
+  </proof>
+
   <\theorem>
     Let <math|A,B> be sets, <math|A> infinite and <math|f:A\<rightarrow\>B> a
     injection then <math|B> is infinite.
@@ -5753,14 +5773,225 @@
     <math|f<around*|(|m|)>=a>.
   </proof>
 
+  \;
+
   We show now that every finite family of elements of a totally ordered set
   can be sorted.
 
-  <\theorem>
+  <\lemma>
+    <label|extract maximum element of a family>Let
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a totally
+    ordered set, <math|n\<in\>\<bbb-N\><rsub|0>> and
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>S<rsub|n+1>>\<subseteq\>X> then
+    there exists a bijection <math|\<beta\>:S<rsub|n+1>\<rightarrow\>S<rsub|n+1>>
+    such that if <math|\<forall\>i\<in\>S<rsub|n>> we have
+    <math|x<rsub|\<beta\><around*|(|i|)>>\<leqslant\>x<rsub|\<beta\><around*|(|n|)>>>
+  </lemma>
+
+  <\proof>
+    We prove this by inductin so let\ 
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|\<forall\><around*|{|x<rsub|i>|}><rsub|i\<in\>S<rsub|n+1>>\<subseteq\>X<text|
+      there exist a bijection >\<beta\>:S<rsub|n+1>\<rightarrow\>S<rsub|n+1><text|
+      such that >\<forall\>i\<in\>S<rsub|n><text|
+      >x<rsub|i>\<leqslant\>x<rsub|n>|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|0\<in\>S>>If <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>S<rsub|1>=<around*|{|0|}>>\<subseteq\>X>
+      then for the bijection <math|\<beta\>=Id<rsub|S<rsub|i>>:S<rsub|1>\<rightarrow\>S<rsub|1>>
+      we have <math|\<forall\>i\<in\>S<rsub|0>=\<varnothing\>> we have that
+      <math|x<rsub|\<beta\><around*|(|i|)>>\<leqslant\>x<rsub|\<beta\><around*|(|0|)>>>
+      is satisfied vacuously, proving that <math|0\<in\>S>.
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+      <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>S<rsub|<around*|(|n+1|)>+1>>\<subseteq\>X>
+      then for <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>S<rsub|n+1>>> we
+      have, as <math|n\<in\>S> the existence of a bijection
+      <math|\<alpha\>:S<rsub|n+1>\<rightarrow\>S<rsub|n+1>> such that
+      <math|\<forall\>i\<in\>S<rsub|n><text|
+      <math|x<rsub|\<alpha\><around*|(|i|)>>\<leqslant\>x<rsub|\<alpha\><around*|(|n|)>>>>>.
+      For <math|x<rsub|n+1>> we have now two cases to consider:
+
+      <\description>
+        <item*|<math|x<rsub|\<alpha\><around*|(|n|)>>\<leqslant\>x<rsub|n+1>>>Define
+
+        <\equation*>
+          \<beta\>:S<rsub|<around*|(|n+1|)>+1>\<rightarrow\>S<rsub|<around*|(|n+1|)>+1><text|
+          by >\<beta\><around*|(|i|)>=<choice|<tformat|<table|<row|<cell|\<alpha\><around*|(|i|)><text|
+          if >i\<in\>S<rsub|n+1>>>|<row|<cell|n+1<text| if >i=n+1>>>>>
+        </equation*>
+
+        then we have:
+
+        <\description>
+          <item*|injectivity>Let <math|i,j\<in\>S<rsub|<around*|(|n+1|)>+1>>
+          be such that <math|\<beta\><around*|(|i|)>=\<beta\><around*|(|j|)>>
+          then we have the following possibilities:
+
+          <\description>
+            <item*|<math|i\<in\>S<rsub|n+1>\<wedge\>j\<in\>S<rsub|n+1>>>Then
+            <math|\<alpha\><around*|(|i|)>=\<beta\><around*|(|i|)>=\<beta\><around*|(|j|)>=\<alpha\><around*|(|j|)>>
+            which as <math|\<alpha\>> is a bijection proves that <math|i=j>.
+
+            <item*|<math|i\<in\>S<rsub|n+1>\<wedge\>j=n+1>>Then
+            <math|\<alpha\><around*|(|i|)>=\<beta\><around*|(|i|)>=\<beta\><around*|(|j|)>=n+1>
+            from which it follows that <math|n+1=\<alpha\><around*|(|i|)>\<in\>S<rsub|n+1>>
+            giving the contradiction <math|n+1>\<less\>n+1. So this case
+            never occurs.
+
+            <item*|<math|i=n+1\<wedge\>j\<in\>S<rsub|n+1>>>Then
+            <math|n+1=\<beta\><around*|(|i|)>=\<beta\><around*|(|j|)>=\<alpha\><around*|(|j|)>>
+            from which it follows that <math|n+1=\<alpha\><around*|(|j|)>\<in\>S<rsub|n+1>>
+            giving the contradiction <math|n+1>\<less\>n+1. So this case
+            never occurs.
+
+            <item*|<math|i=n+t\<wedge\>j=n+1>>Then <math|i=j>
+          </description>
+
+          <item*|surjectivity>If <math|j\<in\>S<rsub|<around*|(|n+1|)>+1>>
+          then we have the following possibilities:
+
+          <\description>
+            <item*|<math|j=n+1>>Then <math|n+1=\<beta\><around*|(|n+1|)>>.
+
+            <item*|<math|j\<in\>S<rsub|n>>>Then as <math|\<alpha\>> is a
+            bijection there exist a <math|i\<in\>S<rsub|n>> such that
+            <math|j=\<alpha\><around*|(|i|)>\<Rightarrowlim\><rsub|i\<in\>S<rsub|n>>j=\<beta\><around*|(|i|)>>.
+          </description>
+        </description>
+
+        So <math|\<beta\>:S<rsub|<around*|(|n+1|)>+1>\<rightarrow\>S<rsub|<around*|(|n+1|)>+1>>
+        is a bijection. Let now <math|i\<in\>S<rsub|n+1>> then we have the
+        following possibilities:\ 
+
+        <\description>
+          <item*|<math|i=n>>Then <math|x<rsub|\<beta\><around*|(|i|)>>=x<rsub|\<alpha\><around*|(|i|)>>=x<rsub|\<alpha\><around*|(|n|)>>\<leqslant\>x<rsub|n+1>=x<rsub|\<beta\><around*|(|n+1|)>>>.
+
+          <item*|<math|i\<in\>S<rsub|n>>>Then
+          <math|x<rsub|\<beta\><around*|(|i|)>>=x<rsub|\<alpha\><around*|(|i|)>>\<leqslant\>x<rsub|\<alpha\><around*|(|n|)>>\<leqslant\>x<rsub|n+1>=x<rsub|\<beta\><around*|(|n+1|)>.><rsub|>>
+        </description>
+
+        which proves that in this case we have <math|n+1\<in\>S>.
+
+        <item*|<math|x<rsub|n+1>\<less\>x<rsub|\<alpha\><around*|(|n|)>>>>Define
+
+        <\equation*>
+          \<beta\>:S<rsub|<around*|(|n+1|)>+1>\<rightarrow\>S<rsub|<around*|(|n+1|)>+1><text|
+          by >\<beta\><around*|(|i|)>=<choice|<tformat|<table|<row|<cell|\<alpha\><around*|(|i|)><text|
+          if >i\<in\>S<rsub|n>>>|<row|<cell|n+1<text| if
+          >i=n>>|<row|<cell|\<alpha\><around*|(|n|)><text| if >i=n+1>>>>>
+        </equation*>
+
+        then we have:
+
+        <\description>
+          <item*|injectivity>Let <math|i,j\<in\>S<rsub|<around*|(|n+1|)>+1>>
+          such that <math|\<beta\><around*|(|i|)>=\<beta\><around*|(|j|)>>
+          then we have the following possibilities:
+
+          <\description>
+            <item*|<math|i\<in\>S<rsub|n>\<wedge\>j\<in\>S<rsub|n>>>Then
+            <math|\<alpha\><around*|(|i|)>=\<beta\><around*|(|i|)>=\<beta\><around*|(|j|)>=\<alpha\><around*|(|j|)>>
+            which as <math|\<beta\>> is a bijection gives <math|i=j>.
+
+            <item*|<math|i\<in\>S<rsub|n>\<wedge\>j=n>>Then
+            <math|\<alpha\><around*|(|i|)>=\<beta\><around*|(|i|)>=\<beta\><around*|(|j|)>=n+1>
+            so that <math|n+1=\<alpha\><around*|(|i|)>\<in\>S<rsub|n+1>>
+            giving the contradiction <math|n+1\<less\>n+1>, so this case
+            never occurs.
+
+            <item*|<math|i\<in\>S<rsub|n>\<wedge\>j=n+1>>Then
+            <math|\<alpha\><around*|(|i|)>=\<beta\><around*|(|i|)>=\<beta\><around*|(|j|)>=\<alpha\><around*|(|n|)>>,
+            which as <math|\<alpha\>> is a bijection, gives <math|i=n>
+            contradicting <math|i\<in\>S<rsub|n>\<Rightarrow\>i\<less\>n>, so
+            this case never occurs.
+
+            <item*|<math|i=n\<wedge\>j\<in\>S<rsub|n>>>Then
+            <math|n+1=\<beta\><around*|(|i|)>=\<beta\><around*|(|j|)>=\<alpha\><around*|(|j|)>>
+            so that <math|n+1=\<alpha\><around*|(|j|)>\<in\>S<rsub|n+1>>
+            giving the contradiction <math|n+1\<less\>n+1>, so this case
+            never occurs.
+
+            <item*|<math|i=n\<wedge\>j=n>>Then <math|i=j>.
+
+            <item*|<math|i=n\<wedge\>j=n+1>>Then
+            <math|n+1=\<beta\><around*|(|i|)>=\<beta\><around*|(|j|)>=\<alpha\><around*|(|n|)>>
+            so that <math|n+1=\<alpha\><around*|(|n|)>\<in\>S<rsub|n+1>>
+            giving the contradiction <math|n+1\<less\>n+1>, so this case
+            never occurs.
+
+            <item*|<math|i=n+1\<wedge\>j\<in\>S<rsub|n>>>Then
+            <math|\<alpha\><around*|(|n|)>=\<beta\><around*|(|i|)>=\<beta\><around*|(|j|)>=\<alpha\><around*|(|j|)>>,
+            which as <math|\<alpha\>> is a bijection gives
+            <math|n=j\<in\>S<rsub|n>> resulting in the contradiction
+            <math|n\<less\>n>, so this case never occurs.
+
+            <item*|<math|i=n+1\<wedge\>j=n>>Then
+            <math|\<alpha\><around*|(|n|)>=\<beta\><around*|(|i|)>=\<beta\><around*|(|j|)>=n+1>
+            so that <math|n+1=\<alpha\><around*|(|n|)>\<in\>S<rsub|n+1>>
+            leading to the contradiction <math|n+1\<less\>n+1>, so this case
+            never occur.
+
+            <item*|<math|i=n+1\<wedge\>j=n+1>>Then <math|i=j>.
+          </description>
+
+          <item*|surjectivity>Let <math|j\<in\>S<rsub|<around*|(|n+1|)>+1>>
+          then we have the following possibilities to check:
+
+          <\description>
+            <item*|<math|j=n+1>>then <math|\<beta\><around*|(|n|)>=j>
+
+            <item*|<math|j\<in\>S<rsub|n+1>>>then as <math|\<alpha\>> is a
+            bijection there exist a <math|i\<in\>S<rsub|n+1>> so that
+            <math|\<alpha\><around*|(|i|)>=j>. If <math|i=n> then
+            <math|\<beta\><around*|(|n+1|)>=\<alpha\><around*|(|n|)>=j> and
+            if <math|i\<in\>S<rsub|n>> then
+            <math|\<beta\><around*|(|i|)>=\<alpha\><around*|(|i|)>=j>.
+          </description>
+        </description>
+
+        So <math|\<beta\>:S<rsub|<around*|(|n+1|)>+1>\<rightarrow\>S<rsub|<around*|(|n+1|)>+1>>
+        is a bijection. Let now <math|i\<in\>S<rsub|n+1>> then we have to
+        consider the following possibilities:
+
+        <\description>
+          <item*|<math|i=n>>Then <math|x<rsub|\<beta\><around*|(|i|)>>=x<rsub|n+1>\<leqslant\>x<rsub|\<alpha\><around*|(|n|)>>=x<rsub|\<beta\><around*|(|n+1|)>>>.
+
+          <item*|<math|i\<in\>S<rsub|n>>>Then
+          <math|x<rsub|\<beta\><around*|(|i|)>>=x<rsub|\<alpha\><around*|(|i|)>>\<leqslant\>x<rsub|\<alpha\><around*|(|n|)>>=x<rsub|\<beta\><around*|(|n+1|)>>>,
+        </description>
+
+        which proves that in this case <math|n+1\<in\>S>.
+      </description>
+
+      Mathematical induction [seee theorem: <reference|mathematical
+      induction>] proves then that <math|S=\<bbb-N\><rsub|0>>.
+    </description>
+  </proof>
+
+  <\lemma>
     <label|ordering of a finite family>Let
     <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a totally
-    ordered set and let <math|>\ 
-  </theorem>
+    ordered set, <math|n\<in\><around*|{|2,\<ldots\>,\<infty\>|}>> and
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>S<rsub|n>>\<subseteq\>X> then
+    there exists a bijection <math|\<beta\>:S<rsub|n>\<rightarrow\>S<rsub|n>>
+    such that\ 
+
+    <\equation*>
+      \<forall\>i\<in\>S<rsub|n-1><text| we have
+      >x<rsub|\<beta\><around*|(|i|)>>\<leqslant\>x<rsub|\<beta\><around*|(|i+1|)>>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    \;
+
+    \;
+  </proof>
 
   \;
 
@@ -5848,7 +6079,7 @@
     <associate|auto-8|<tuple|group isomorphism|110>>
     <associate|auto-9|<tuple|left action|112>>
     <associate|cardinality of natural numbers|<tuple|6.33|151>>
-    <associate|cardinality of the empty set is 0|<tuple|6.34|?>>
+    <associate|cardinality of the empty set is 0|<tuple|6.34|151>>
     <associate|cardinality of union of two disjoint finite
     sets|<tuple|6.36|151>>
     <associate|countable set|<tuple|6.21|146>>
@@ -5876,7 +6107,7 @@
     <associate|eq 5.7.019|<tuple|5.7|121>>
     <associate|eq 5.8.019|<tuple|5.8|121>>
     <associate|eq 5.9.019|<tuple|5.9|121>>
-    <associate|eq 6.10.019|<tuple|6.10|149>>
+    <associate|eq 6.10.019|<tuple|6.10|150>>
     <associate|eq 6.11.019|<tuple|6.11|150>>
     <associate|eq 6.2.019|<tuple|6.2|148>>
     <associate|eq 6.3.019|<tuple|6.3|148>>
@@ -5889,26 +6120,28 @@
     <associate|eq 7.1.019|<tuple|6.1|146>>
     <associate|equipotence|<tuple|6.1|143>>
     <associate|equipotence 2^A and P(A)|<tuple|6.13|145>>
-    <associate|equipotence A^C~B^D|<tuple|6.12|145>>
+    <associate|equipotence A^C~B^D|<tuple|6.12|144>>
     <associate|equipotence AxC~BxD|<tuple|6.11|144>>
     <associate|equipotence equivalence relation|<tuple|6.2|143>>
     <associate|equipotence property (1)|<tuple|6.8|144>>
     <associate|equipotence union|<tuple|6.10|144>>
     <associate|every subset of a finite set is finite|<tuple|6.27|148>>
+    <associate|extract maximum element of a family|<tuple|6.45|?>>
     <associate|field|<tuple|4.33|114>>
     <associate|field homeomorphism|<tuple|4.37|115>>
     <associate|field inverse is unique|<tuple|4.34|115>>
     <associate|field isomorphism and neutral element|<tuple|4.39|116>>
     <associate|field subfield|<tuple|4.35|115>>
     <associate|field subfield is a field|<tuple|4.36|115>>
-    <associate|finite ordered sets have a maximum and minimum|<tuple|6.41|?>>
+    <associate|finite ordered sets have a maximum and
+    minimum|<tuple|6.42|153>>
     <associate|finite set|<tuple|6.17|146>>
     <associate|finite union of finite sets is finite
-    (lemma)|<tuple|6.29|148>>
+    (lemma)|<tuple|6.29|149>>
     <associate|finitie union of finite sets is finite|<tuple|6.30|149>>
     <associate|function P(A) bijective with 2^A|<tuple|6.5|143>>
     <associate|function injection and inverse surjection|<tuple|6.9|144>>
-    <associate|function no surjection between A and P(A)|<tuple|6.7|144>>
+    <associate|function no surjection between A and P(A)|<tuple|6.7|143>>
     <associate|group abelian group/sub group|<tuple|4.8|108>>
     <associate|group example bijections|<tuple|4.13|109>>
     <associate|group example set of functions|<tuple|4.4|107>>
@@ -5931,11 +6164,10 @@
     <associate|inverse of a field isomorphism is a field
     isomorphism|<tuple|4.38|115>>
     <associate|iteration final|<tuple|5.81|139>>
-    <associate|mapping of N into a finite set|<tuple|6.43|?>>
-    <associate|mapping of N to a finite set (1)|<tuple|6.42|?>>
-    <associate|mapping of N to a finite set (2)|<tuple|6.43|?>>
+    <associate|mapping of N to a finite set (1)|<tuple|6.43|154>>
+    <associate|mapping of N to a finite set (2)|<tuple|6.44|154>>
     <associate|mathematical induction|<tuple|5.79|139>>
-    <associate|n\<less\>=m=\<gtr\>S_n\<less\>=S_m|<tuple|6.16|?>>
+    <associate|n\<less\>=m=\<gtr\>S_n\<less\>=S_m|<tuple|6.16|146>>
     <associate|natural numbers|<tuple|5.3|117>>
     <associate|natural numbers (n+m)-n=m|<tuple|5.64|135>>
     <associate|natural numbers 0|<tuple|5.7|117>>
@@ -5946,7 +6178,7 @@
     <associate|natural numbers absorbing element|<tuple|5.36|128>>
     <associate|natural numbers addition|<tuple|5.27|126>>
     <associate|natural numbers additive semi-group|<tuple|5.34|127>>
-    <associate|natural numbers are infinite|<tuple|6.25|?>>
+    <associate|natural numbers are infinite|<tuple|6.25|147>>
     <associate|natural numbers are segments|<tuple|6.15|145>>
     <associate|natural numbers are total ordered|<tuple|5.52|133>>
     <associate|natural numbers are transitive|<tuple|5.14|118>>
@@ -6007,8 +6239,7 @@
     <associate|natural numbers transitive|<tuple|5.13|118>>
     <associate|natural numbers x\<less\>=y or y\<less\>x|<tuple|5.53|133>>
     <associate|operator|<tuple|4.1|107>>
-    <associate|ordering of a finite family|<tuple|6.44|?>>
-    <associate|ordering of a finite set|<tuple|6.44|?>>
+    <associate|ordering of a finite family|<tuple|6.46|154>>
     <associate|product of finite sets|<tuple|6.35|151>>
     <associate|recursion|<tuple|5.19|120>>
     <associate|recursion final|<tuple|5.80|139>>
@@ -6029,14 +6260,15 @@
     <associate|semi-group|<tuple|4.2|107>>
     <associate|set containing a denumerable set is infinite|<tuple|6.24|147>>
     <associate|set is infinitie if it contains a infinite
-    subset|<tuple|6.26|147>>
+    subset|<tuple|6.26|148>>
+    <associate|set of finite family is finite|<tuple|6.40|153>>
     <associate|sub-semi-group|<tuple|4.9|108>>
     <associate|subring|<tuple|4.27|113>>
     <associate|subset of finite sets|<tuple|6.37|152>>
     <associate|surjection f:A-\<gtr\>B if A is finite then B is
-    finite|<tuple|6.39|?>>
+    finite|<tuple|6.39|153>>
     <associate|surjection of a Sn to a set implies set is
-    finite|<tuple|6.38|?>>
+    finite|<tuple|6.38|153>>
     <associate|union of two finite sets is finite|<tuple|6.28|148>>
   </collection>
 </references>
