@@ -3440,9 +3440,6 @@
       <item>If <math|n\<leqslant\>i\<leqslant\>m> then
       <math|0\<leqslant\>i-n\<leqslant\>m-n>
     </enumerate>
-
-    such that <math|n\<leqslant\>i\<less\>m> then
-    <math|0\<leqslant\>i-n\<leqslant\>m-n>
   </theorem>
 
   <\proof>
@@ -3476,6 +3473,36 @@
       \<less\> properties>] contradicts with <math|n\<leqslant\>m>, so we
       must have <math|i-n\<leqslant\>m-n>.
     </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|natural numbers n\<less\>=m\<less\>=\<gtr\>n-k\<less\>=m-k>If
+    <math|k,n,m\<in\>\<bbb-N\><rsub|0>> such that
+    <math|k\<leqslant\>n\<wedge\>k\<leqslant\>m> then we have\ 
+
+    <\equation*>
+      n\<leqslant\>m\<Leftrightarrow\>n-k\<leqslant\>m-k
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Using [theorem: <reference|natural numbers
+      x\<less\>=y or y\<less\>x>] we have either <math|m-k\<less\>n-k> or
+      <math|n-k\<leqslant\>m-k>, if <math|m-k\<less\>n-k> we have by
+      [theorem: <reference|natural numbers
+      n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>] that
+      <math|<around*|(|m-k|)>+k\<less\><around*|(|n-k|)>+k> so that
+      <math|m\<less\>n> which as <math|n\<leqslant\>m> gives the
+      contradiction <math|m\<less\>m>, so we have <math|n-k\<leqslant\>m-k>.
+
+      <item*|<math|\<Leftarrow\>>>Using [theorem: <reference|natural numbers
+      n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>] we have that
+      <math|<around*|(|n-k|)>+k\<leqslant\><around*|(|m-k|)>+k> so that
+      <math|n\<leqslant\>m>.
+    </description>
   </proof>
 
   <\theorem>
@@ -4612,6 +4639,121 @@
       or <math|n\<in\>m> which by [theorem: <reference|natural numbers are
       transitive>] we have that <math|n\<subseteq\>m\<Rightarrowlim\><rsub|n=S<rsub|n>,m=S<rsub|m>>S<rsub|n>\<subseteq\>S<rsub|m>>.
     </description>
+  </proof>
+
+  TODO Check the next theorem
+
+  <\theorem>
+    <label|{n,..,m} bijection>Let <math|n,m\<in\>\<bbb-N\><rsub|0>> with
+    <math|n\<leqslant\>m> then there exists a bijection
+    <math|\<beta\>:<around*|{|n,\<ldots\>,m|}>\<rightarrow\>S<rsub|<around*|(|m-n|)>+1>>
+    such that\ 
+
+    <\enumerate>
+      <item><math|\<beta\><around*|(|n|)>=0> and
+      <math|\<beta\><around*|(|m|)>=m-n>
+
+      <item><math|\<forall\>i,j\<in\><around*|{|n,\<ldots\>,m|}>> we have
+      <math|i\<leqslant\>j\<Leftrightarrow\>\<beta\><around*|(|i|)>\<leqslant\>\<beta\><around*|(|j|)>>.
+    </enumerate>
+
+    or for\ 
+
+    <\equation*>
+      \<beta\><rsup|-1>:S<rsub|<around*|(|m-n|)>+1>\<rightarrow\><around*|{|n,\<ldots\>,m|}>
+    </equation*>
+
+    <\enumerate>
+      <item><math|\<beta\><rsup|-1><around*|(|m-n|)>=m> and
+      <math|\<beta\><rsup|-1><around*|(|0|)>=n>
+
+      <item><math|\<forall\>i\<in\>S<rsub|<around*|(|m-n|)>+1>> we have
+      <math|\<beta\><rsup|-1><around*|(|i|)>=i+k>
+
+      <item><math|\<forall\>i,j\<in\>S<rsub|<around*|(|m-n|)>+1>> we have
+      <math|i\<leqslant\>j\<Leftrightarrow\>\<beta\><rsup|-1><around*|(|i|)>\<leqslant\>\<beta\><rsup|-1><around*|(|j|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    If <math|i\<in\><around*|{|n,\<ldots\>,m|}>> then <math|n\<leqslant\>i>
+    and <math|i\<leqslant\>m> hence by [theorem: <reference|natural numbers
+    n\<less\>=i\<less\>=m=\<gtr\>0\<less\>=i-n\<less\>=m-n>] we have that
+    <math|0\<leqslant\>i-n\<leqslant\>m-n>, so that
+    <math|0\<leqslant\>i-n\<less\><around*|(|m-n|)>+1>, hence we can define
+    the following function:
+
+    <\equation*>
+      \<beta\>:<around*|{|n,\<ldots\>,m|}>\<rightarrow\>S<rsub|<around*|(|m-n|)>+1><text|
+      where >\<beta\><around*|(|i|)>=i-n
+    </equation*>
+
+    We have then:
+
+    <\description>
+      <item*|injectivity>If <math|k,l\<in\><around*|{|n,\<ldots\>,m|}>> such
+      that <math|\<beta\><around*|(|k|)>=\<beta\><around*|(|l|)>> then
+      <math|k-n=l-n>, so by [theorem: <reference|natural numbers
+      n+k=m+k\<less\>=\<gtr\>n=m>] <math|k=<around*|(|k-n|)>+n=<around*|(|l-n|)>+n=l>
+      proving that <math|k=l>.
+
+      <item*|surjectivity>If <math|k\<in\>S<rsub|<around*|(|m-n|)>+1>> then
+      <math|0\<leqslant\>k\<wedge\>k\<less\><around*|(|m-n|)>+1> so that by
+      [theorem: <reference|natural numbers n\<less\>s(m)=\<gtr\>s\<less\>=m>]
+      \ <math|0\<leqslant\>k\<leqslant\>m-n>, then by [theorem:
+      <reference|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>]
+      we have that <math|n=0+n\<leqslant\>k+n\<leqslant\><around*|(|m-n|)>+n=m>.
+      If we take <math|i=k+n> then we have <math|0\<leqslant\>i\<leqslant\>m>
+      and further <math|i-n=<around*|(|k+n|)>-n\<equallim\><rsub|<text|[theroem:
+      <reference|natural numbers (n+m)-n=m>]>>k> proving that
+      <math|\<beta\><around*|(|i|)>=k>.
+    </description>
+
+    proving that\ 
+
+    <\equation*>
+      \<beta\>:<around*|{|n,\<ldots\>,m|}>\<rightarrow\>S<rsub|<around*|(|m-n|)>+1><text|
+      is a bijection>
+    </equation*>
+
+    Further we have
+
+    <\equation*>
+      \<beta\><around*|(|n|)>=n-n=0<text| and >\<beta\><around*|(|m|)>=m-n
+    </equation*>
+
+    If <math|i,j\<in\><around*|{|n,\<ldots\>,m|}>> then we have by [theorem:
+    <reference|natural numbers n\<less\>=m\<less\>=\<gtr\>n-k\<less\>=m-k>]\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|i\<leqslant\>j>|<cell|\<Leftrightarrow\>>|<cell|i-n\<leqslant\>j-n>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<beta\><around*|(|i|)>\<leqslant\>\<beta\><around*|(|j|)>>>>>
+    </eqnarray*>
+
+    As <math|\<beta\><rsup|-1><around*|(|0|)>=\<beta\><rsup|-1><around*|(|\<beta\><around*|(|n|)>|)>=n>
+    and <math|\<beta\><rsup|-1><around*|(|m-n|)>=\<beta\><rsup|-1><around*|(|\<beta\><around*|(|m|)>|)>=m>
+    provin gthat\ 
+
+    <\equation*>
+      \<beta\><rsup|-1><around*|(|0|)>=n\<wedge\>\<beta\><rsup|-1><around*|(|m-n|)>=m
+    </equation*>
+
+    If <math|k\<in\>S<rsub|<around*|(|m-n|)>+1>> then
+    <math|k=\<beta\><around*|(|\<beta\><rsup|-1><around*|(|k|)>|)>=\<beta\><rsup|-1><around*|(|k|)>-n>
+    so that <math|k+n=<around*|(|\<beta\><rsup|-1><around*|(|k|)>-n|)>+n=\<beta\>>
+    proving that\ 
+
+    <\equation*>
+      \<forall\>k\<in\>S<rsub|<around*|(|m-n|)>+1><text| we have
+      >\<beta\><rsup|-1><around*|(|k|)>=k+n
+    </equation*>
+
+    Using the above we have finally <math|\<forall\>i.j\<in\>S<rsub|<around*|(|m-n|)>+1>>
+    that
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|i\<leqslant\>j>|<cell|\<Leftrightarrowlim\><rsub|<text|[theorem::
+      <reference|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k>]>>>|<cell|i+n\<leqslant\>j+n>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<beta\><rsup|-1><around*|(|i|)>\<in\>=\<beta\><around*|(|j|)>>>>>
+    </eqnarray*>
   </proof>
 
   We define now the concept of a finite set.
@@ -5773,12 +5915,10 @@
     <math|f<around*|(|m|)>=a>.
   </proof>
 
-  \;
-
   We show now that every finite family of elements of a totally ordered set
   can be sorted.
 
-  <\lemma>
+  <\theorem>
     <label|extract maximum element of a family>Let
     <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a totally
     ordered set, <math|n\<in\>\<bbb-N\><rsub|0>> and
@@ -5786,7 +5926,7 @@
     there exists a bijection <math|\<beta\>:S<rsub|n+1>\<rightarrow\>S<rsub|n+1>>
     such that if <math|\<forall\>i\<in\>S<rsub|n>> we have
     <math|x<rsub|\<beta\><around*|(|i|)>>\<leqslant\>x<rsub|\<beta\><around*|(|n|)>>>
-  </lemma>
+  </theorem>
 
   <\proof>
     We prove this by inductin so let\ 
@@ -5973,24 +6113,244 @@
     </description>
   </proof>
 
-  <\lemma>
+  <\corollary>
+    <label|max element of a family>Let <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>>,
+    <math|n,m\<in\>\<bbb-N\><rsub|0>> such that <math|n\<leqslant\>m> and
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|n,\<ldots\>,m|}>>\<subseteq\>X>
+    then there exist a bijection <math|\<alpha\>:<around*|{|n,\<ldots\>,m|}>\<rightarrow\><around*|{|n,\<ldots\>,m|}>>
+    such that <math|\<forall\>i\<in\><around*|{|n,\<ldots\>,m-1|}>> we have
+    <math|x<rsub|\<alpha\><around*|(|i|)>>\<leqslant\>x<rsub|\<alpha\><around*|(|m|)>>>
+  </corollary>
+
+  <\proof>
+    Using [theorem: <reference|{n,..,m} bijection>] there exists bijections
+
+    <\equation>
+      <label|eq 6.12.021>\<beta\>:<around*|{|n,\<ldots\>,m|}>\<rightarrow\>S<rsub|<around*|(|m-n|)>+1>\<wedge\>\<beta\><rsup|-1>:S<rsub|<around*|(|m-n|)>+1>\<rightarrow\><around*|{|n,\<ldots\>,m|}>
+    </equation>
+
+    such that\ 
+
+    <\equation>
+      <label|eq 6.13.021>\<beta\><around*|(|n|)>=0\<wedge\>\<beta\><around*|(|m|)>=m-n\<wedge\>\<beta\><rsup|-1><around*|(|0|)>=n\<wedge\>\<beta\><rsup|-1><around*|(|m-n|)>=m
+    </equation>
+
+    and\ 
+
+    <\equation>
+      <label|eq 6.14.021>\<forall\>i,j\<in\><around*|{|n,\<ldots\>,m|}><text|
+      >i\<leqslant\>j\<Leftrightarrow\>\<beta\><around*|(|i|)>\<leqslant\>\<beta\><around*|(|j|)><text|
+      and >\<forall\>i,j\<in\>S<rsub|<around*|(|m-n|)>+1><text|
+      >i\<leqslant\>j\<Leftrightarrow\>\<beta\><rsup|-1><around*|(|i|)>\<leqslant\>\<beta\><rsup|-1><around*|(|j|)>
+    </equation>
+
+    Consider now <math|<around*|{|x<rsub|\<beta\><rsup|-1><around*|(|i|)>>|}><rsub|i\<in\>S<rsub|<around*|(|m-n|)>+1>>>
+    then by [theorem: <reference|extract maximum element of a family>] there
+    exist a bijection\ 
+
+    <\equation>
+      <label|eq 6.15.021>\<gamma\>:S<rsub|<around*|(|m-n|)>+1>\<rightarrow\>S<rsub|<around*|(|m-n|)>+1><text|
+      such that >\<forall\>i\<in\>S<rsub|<around*|(|m-n|)>> <text| we have
+      >x<rsub|\<beta\><rsup|-1><around*|(|\<gamma\><around*|(|i|)>|)>>\<leqslant\>x<rsub|\<beta\><rsup|-1><around*|(|\<gamma\><around*|(|m-n|)>|)>>
+    </equation>
+
+    Take now the bijection
+
+    <\equation*>
+      \<alpha\>:\<beta\><rsup|-1>\<circ\>\<gamma\>\<circ\>\<beta\>:<around*|{|n,\<ldots\>,m|}>\<rightarrow\><around*|{|n,\<ldots\>,m|}>
+    </equation*>
+
+    If <math|i\<in\><around*|{|n,\<ldots\>,m-1|}>> then <math|i\<less\>m> so
+    that by [eq: <reference|eq 6.14.021>]
+    \ <math|\<beta\><around*|(|i|)>\<leqslant\>\<beta\><around*|(|m|)>>. If
+    <math|\<beta\><around*|(|i|)>=\<beta\><around*|(|m|)>> then as
+    <math|\<beta\>> is a bijectione we have that <math|i=m> contradicting
+    <math|i\<less\>m>. So <math|\<beta\><around*|(|i|)>\<less\>\<beta\><around*|(|m|)>\<equallim\><rsub|<text|[eq:
+    <reference|eq 6.13.021>]>>m-n> or <math|\<beta\><around*|(|i|)>\<in\>S<rsub|m-n>>
+    which by [eq: <reference|eq 6.15.021>] proves that
+
+    <\equation>
+      <label|eq 6.16.021>x<rsub|\<beta\><rsup|-1><around*|(|\<gamma\><around*|(|\<beta\><around*|(|i|)>|)>|)>>\<leqslant\>x<rsub|\<beta\><rsup|-1><around*|(|\<gamma\><around*|(|n-n|)>|)>>\<equallim\><rsub|<text|[eq:
+      <reference|eq 6.13.021>]>>x<rsub|\<beta\><rsup|-1><around*|(|\<gamma\><around*|(|\<beta\><around*|(|m|)>|)>|)>>
+    </equation>
+
+    Finally\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|x<rsub|\<alpha\><around*|(|i|)>>>|<cell|=>|<cell|x<rsub|<around*|(|\<beta\><rsup|-1>\<circ\>\<gamma\>\<circ\>\<beta\>|)><around*|(|i|)>>>>|<row|<cell|>|<cell|=>|<cell|x<rsub|\<beta\><rsup|-1><around*|(|\<gamma\><around*|(|\<beta\><around*|(|i|)>|)>|)>>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[eq:
+      <reference|eq 6.16.021>]>>>|<cell|x<rsub|\<beta\><rsup|-1><around*|(|\<gamma\><around*|(|\<beta\><around*|(|m|)>|)>|)>>>>|<row|<cell|>|<cell|=>|<cell|x<rsub|<around*|(|\<beta\><rsup|-1>\<circ\>\<gamma\>\<circ\>\<beta\>|)><around*|(|m|)>>>>|<row|<cell|>|<cell|=>|<cell|x<rsub|\<alpha\><around*|(|m|)>>>>>>
+    </eqnarray*>
+
+    Summarized\ 
+
+    <\equation*>
+      \<forall\>i\<in\><around*|{|m,\<ldots\>,m-1|}><text| we have
+      >x<rsub|\<alpha\><around*|(|i|)>>\<leqslant\>x<rsub|\<alpha\><around*|(|m|)>><text|
+      where <math|\<alpha\>:<around*|{|n,\<ldots\>,m|}>\<rightarrow\><around*|{|n,\<ldots\>,m|}><text|
+      is a bijection.>>>
+    </equation*>
+  </proof>
+
+  <\theorem>
     <label|ordering of a finite family>Let
     <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a totally
-    ordered set, <math|n\<in\><around*|{|2,\<ldots\>,\<infty\>|}>> and
-    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>S<rsub|n>>\<subseteq\>X> then
-    there exists a bijection <math|\<beta\>:S<rsub|n>\<rightarrow\>S<rsub|n>>
+    ordered set, <math|n\<in\>\<bbb-N\><rsub|0>> and
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>S<rsub|n+1>>\<subseteq\>X> then
+    there exists a bijection <math|\<beta\>:S<rsub|n+1>\<rightarrow\>S<rsub|n+1>>
     such that\ 
 
     <\equation*>
-      \<forall\>i\<in\>S<rsub|n-1><text| we have
+      \<forall\>i\<in\>S<rsub|n><text| we have
       >x<rsub|\<beta\><around*|(|i|)>>\<leqslant\>x<rsub|\<beta\><around*|(|i+1|)>>
     </equation*>
-  </lemma>
+  </theorem>
 
   <\proof>
-    \;
+    We proof this by induction, so let\ 
 
-    \;
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|\<forall\><around*|{|x<rsub|i>|}><rsub|i\<in\>N+1>\<subseteq\>X<text|
+      there exist a bijection >\<beta\>:S<rsub|n+1>\<rightarrow\>S<rsub|n+1><text|
+      such that >\<forall\>i\<in\>S<rsub|n><text|
+      >x<rsub|\<beta\><around*|(|i|)>>\<leqslant\>x<rsub|\<beta\>i+1>|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|0\<in\>S>>Then <math|S<rsub|0>=\<varnothing\>> and
+      <math|S<rsub|1>=<around*|{|0|}>>. Let
+      <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>S<rsub|1>=<around*|{|0|}>>\<subseteq\>X>
+      then, for the bijection <math|\<beta\>:S<rsub|s>\<rightarrow\>S<rsub|1>>
+      where <math|\<beta\>=Id<rsub|S<rsub|1>>>, we have that,
+      <math|\<forall\>i\<in\>S<rsub|0>=\<varnothing\>>
+      <math|x<rsub|\<beta\><around*|(|i|)>>\<leqslant\>x<rsub|\<beta\><around*|(|i+1|)>>>,
+      is satified vacuously. <math|>
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+      <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>S<rsub|<around*|(|n+1|)>+1>>\<subseteq\>X>
+      then by the previous theorem [theorem: <reference|extract maximum
+      element of a family>] there exists a bijection
+
+      <\equation>
+        <label|eq 6.15.020>\<alpha\>:S<rsub|<around*|(|n+1|)>+1>\<rightarrow\>S<rsub|<around*|(|n+1|)>+1><text|
+        such that >\<forall\>i\<in\>S<rsub|n+1><text|
+        >x<rsub|\<alpha\><around*|(|i|)>>\<leqslant\>x<rsub|\<alpha\><around*|(|n+1|)>>
+      </equation>
+
+      Consider now <math|<around*|{|x<rsub|\<alpha\><around*|(|i|)>>|}><rsub|i\<in\>S<rsub|n+1>>>
+      then as <math|n\<in\>S> we have the existance of a bijection\ 
+
+      <\equation>
+        <label|eq 6.16.020>\<gamma\>:S<rsub|n+1>\<rightarrow\>S<rsub|n+1><text|
+        such that >\<forall\>i\<in\>S<rsub|n><text| we have
+        >x<rsub|\<alpha\><around*|(|\<gamma\><around*|(|i|)>|)>>\<leqslant\>x<rsub|\<alpha\><around*|(|\<gamma\><around*|(|i+1|)>|)>>
+      </equation>
+
+      Define now
+
+      <\equation*>
+        \<beta\>:S<rsub|<around*|(|n+1|)>+1>\<rightarrow\>S<rsub|<around*|(|n+1|)>+1><text|
+        by >\<beta\><around*|(|i|)>=<choice|<tformat|<table|<row|<cell|\<alpha\><around*|(|\<gamma\><around*|(|i|)>|)><text|
+        if >i\<in\>S<rsub|n>>>|<row|<cell|\<alpha\><around*|(|n+1|)><text| if
+        >i=n+1>>>>>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|injectivity>Let <math|k,l\<in\>S> be such that
+        <math|\<beta\><around*|(|k|)>=\<beta\><around*|(|l|)>> then we must
+        condiser the following possibilities:
+
+        <\description>
+          <item*|<math|k\<in\>S<rsub|n+1>\<wedge\>l\<in\>S<rsub|n+1>>>Then
+
+          <\equation*>
+            <around*|(|\<alpha\>\<circ\>\<gamma\>|)><around*|(|k|)>=\<alpha\><around*|(|\<gamma\><around*|(|k|)>|)>=\<beta\><around*|(|k|)>=\<beta\><around*|(|l|)>=<around*|(|\<alpha\><around*|(|\<gamma\><around*|(|l|)>|)>|)>=<around*|(|\<alpha\>\<circ\>\<gamma\>|)><around*|(|l|)>
+          </equation*>
+
+          which as <math|\<alpha\>\<circ\>\<lambda\>> is a bijection proves
+          that <math|k=l>.
+
+          <item*|<math|k\<in\>S<rsub|n+1>\<wedge\>l=n+1>>Then
+          <math|\<alpha\><around*|(|n+1|)>=\<beta\><around*|(|l|)>=\<beta\><around*|(|k|)>=\<alpha\><around*|(|\<gamma\><around*|(|k|)>|)>>
+          which, as <math|\<alpha\>> is a bijection, gives
+          <math|n+1=\<gamma\><around*|(|k|)>>, as
+          <math|\<gamma\><around*|(|k|)>\<in\>S<rsub|n+1>\<Rightarrow\>\<gamma\><around*|(|k|)>\<less\>n+1>
+          we reach the contradiction <math|n+1\<less\>n+1>, so this case
+          never occurs.\ 
+
+          <item*|<math|k=n+1\<wedge\>l\<in\>S<rsub|n+1>>>Then
+          <math|\<alpha\><around*|(|n+1|)>=\<beta\><around*|(|k|)>=\<beta\><around*|(|l|)>=\<alpha\><around*|(|\<gamma\><around*|(|l|)>|)>>
+          which, as <math|\<alpha\>> is a bijection, gives
+          <math|n+1=\<gamma\><around*|(|l|)>>, as
+          <math|\<gamma\><around*|(|l|)>\<in\>S<rsub|n+1>\<Rightarrow\>\<gamma\><around*|(|l|)>\<less\>n+1>,
+          we reach the contradiction <math|n+1\<less\>n+1>, so this case
+          never occurs.
+
+          <item*|<math|k=n+1\<wedge\>l=n+1>>then <math|k=l>
+        </description>
+
+        <item*|surjectivity>If <math|k\<in\>S<rsub|<around*|(|n+1|)>+1>> we
+        have as <math|\<alpha\>> is a bijection there exist a
+        <math|l\<in\>S<rsub|<around*|(|n+1|)>+1>> such that
+        <math|\<alpha\><around*|(|l|)>=k>, for <math|l> we have then the
+        following possibilities:
+
+        <\description>
+          <item*|<math|l=n+1>>Then <math|\<beta\><around*|(|n+1|)>=\<alpha\><around*|(|n+1|)>=k>
+
+          <item*|<math|l\<in\>S<rsub|n+1>>>Then as <math|\<gamma\>> is a
+          bijection there exist a <math|i\<in\>S<rsub|n+1>> such that
+          <math|l=\<gamma\><around*|(|i|)>>, hence
+          <math|\<beta\><around*|(|i|)>=\<alpha\><around*|(|\<gamma\><around*|(|i|)>|)>=\<alpha\><around*|(|l|)>=k>.
+        </description>
+      </description>
+
+      Further if <math|i\<in\>S<rsub|n+1>> we have the following posibilities
+      to consider:
+
+      <\description>
+        <item*|<math|i=n>>Then <math|\<gamma\><around*|(|n|)>\<in\>S<rsub|n+1>>
+        so that by [eq: <reference|eq 6.15.020>]
+        <math|x<rsub|\<alpha\><around*|(|\<gamma\><around*|(|i|)>|)>>\<leqslant\>x<rsub|\<alpha\><around*|(|n+1|)>>=x<rsub|\<beta\><around*|(|n+1|)>>>
+        hence\ 
+
+        <\equation*>
+          x<rsub|\<beta\><around*|(|i|)>>=x<rsub|\<alpha\><around*|(|\<gamma\><around*|(|i|)>|)>>\<leqslant\>x<rsub|\<beta\><around*|(|n+1|)>>=x<rsub|\<beta\><around*|(|i+1|)>>
+        </equation*>
+
+        <item*|<math|i\<in\>S<rsub|n>>>Then by [eq: <reference|eq 6.16.020>]
+        we have <math|x<rsub|\<alpha\><around*|(|\<gamma\><around*|(|i|)>|)>>\<leqslant\>x<rsub|\<alpha\><around*|(|\<gamma\><around*|(|i+1|)>|)>>>
+        so that\ 
+
+        <\equation*>
+          x<rsub|\<beta\><around*|(|i|)>>=x<rsub|\<alpha\><around*|(|\<gamma\><around*|(|i|)>|)>>\<leqslant\>x<rsub|\<alpha\><around*|(|\<gamma\><around*|(|i+1|)>|)>>=x<rsub|\<beta\><around*|(|i+1|)>>
+        </equation*>
+      </description>
+
+      Hence <math|\<forall\>i\<in\>S<rsub|n+1>> we have
+      <math|x<rsub|\<beta\><around*|(|i|)>>\<leqslant\>x<rsub|\<beta\><around*|(|i+1|)>>>
+      proving that <math|n+1\<in\>S>.
+    </description>
+
+    Mathematical induction [see theorem: <reference|mathematical induction>]
+    proves that <math|S=\<bbb-N\><rsub|0>> and thus the theorem.
+  </proof>
+
+  <\corollary>
+    <label|ordering of a finite family (1)>Let
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a totally
+    ordered set, <math|n,m\<in\>\<bbb-N\><rsub|0>> such that
+    <math|n\<leqslant\>m> and <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|n,\<ldots\>m|}>>\<subseteq\>X>
+    then there exist a bijection <math|\<alpha\>:<around*|{|n,\<ldots\>,m|}>\<rightarrow\><around*|{|n,\<ldots\>,m|}>>
+    such that <math|\<forall\>i\<in\><around*|{|n,\<ldots\>,m-1|}>> we have
+    <math|x<rsub|\<alpha\><around*|(|i|)>>\<leqslant\>x<rsub|\<alpha\><around*|(|i+1|)>>>.
+  </corollary>
+
+  <\proof>
+    \ 
   </proof>
 
   \;
@@ -6078,18 +6438,18 @@
     <associate|auto-7|<tuple|sup-group|108>>
     <associate|auto-8|<tuple|group isomorphism|110>>
     <associate|auto-9|<tuple|left action|112>>
-    <associate|cardinality of natural numbers|<tuple|6.33|151>>
-    <associate|cardinality of the empty set is 0|<tuple|6.34|151>>
+    <associate|cardinality of natural numbers|<tuple|6.34|151>>
+    <associate|cardinality of the empty set is 0|<tuple|6.35|151>>
     <associate|cardinality of union of two disjoint finite
-    sets|<tuple|6.36|151>>
-    <associate|countable set|<tuple|6.21|146>>
-    <associate|definition by recursion (1)|<tuple|5.84|140>>
-    <associate|definition by recursion (2)|<tuple|5.85|140>>
+    sets|<tuple|6.37|151>>
+    <associate|countable set|<tuple|6.22|146>>
+    <associate|definition by recursion (1)|<tuple|5.85|140>>
+    <associate|definition by recursion (2)|<tuple|5.86|140>>
     <associate|denumerable is not subset of a natural
-    number|<tuple|6.23|147>>
-    <associate|denumerable set|<tuple|6.20|146>>
-    <associate|denumerable with one less element|<tuple|6.22|146>>
-    <associate|empty set is finite|<tuple|6.18|146>>
+    number|<tuple|6.24|147>>
+    <associate|denumerable set|<tuple|6.21|146>>
+    <associate|denumerable with one less element|<tuple|6.23|146>>
+    <associate|empty set is finite|<tuple|6.19|146>>
     <associate|eq 5.1.019|<tuple|5.1|120>>
     <associate|eq 5.10.019|<tuple|5.10|125>>
     <associate|eq 5.11.019|<tuple|5.11|125>>
@@ -6109,6 +6469,16 @@
     <associate|eq 5.9.019|<tuple|5.9|121>>
     <associate|eq 6.10.019|<tuple|6.10|150>>
     <associate|eq 6.11.019|<tuple|6.11|150>>
+    <associate|eq 6.12.020|<tuple|6.14|?>>
+    <associate|eq 6.12.021|<tuple|6.12|?>>
+    <associate|eq 6.13.020|<tuple|6.15|?>>
+    <associate|eq 6.13.021|<tuple|6.13|?>>
+    <associate|eq 6.14.020|<tuple|6.15|?>>
+    <associate|eq 6.14.021|<tuple|6.14|?>>
+    <associate|eq 6.15.020|<tuple|6.17|?>>
+    <associate|eq 6.15.021|<tuple|6.15|?>>
+    <associate|eq 6.16.020|<tuple|6.18|?>>
+    <associate|eq 6.16.021|<tuple|6.16|?>>
     <associate|eq 6.2.019|<tuple|6.2|148>>
     <associate|eq 6.3.019|<tuple|6.3|148>>
     <associate|eq 6.4.019|<tuple|6.4|148>>
@@ -6125,8 +6495,8 @@
     <associate|equipotence equivalence relation|<tuple|6.2|143>>
     <associate|equipotence property (1)|<tuple|6.8|144>>
     <associate|equipotence union|<tuple|6.10|144>>
-    <associate|every subset of a finite set is finite|<tuple|6.27|148>>
-    <associate|extract maximum element of a family|<tuple|6.45|?>>
+    <associate|every subset of a finite set is finite|<tuple|6.28|148>>
+    <associate|extract maximum element of a family|<tuple|6.46|154>>
     <associate|field|<tuple|4.33|114>>
     <associate|field homeomorphism|<tuple|4.37|115>>
     <associate|field inverse is unique|<tuple|4.34|115>>
@@ -6134,11 +6504,11 @@
     <associate|field subfield|<tuple|4.35|115>>
     <associate|field subfield is a field|<tuple|4.36|115>>
     <associate|finite ordered sets have a maximum and
-    minimum|<tuple|6.42|153>>
-    <associate|finite set|<tuple|6.17|146>>
+    minimum|<tuple|6.43|153>>
+    <associate|finite set|<tuple|6.18|146>>
     <associate|finite union of finite sets is finite
-    (lemma)|<tuple|6.29|149>>
-    <associate|finitie union of finite sets is finite|<tuple|6.30|149>>
+    (lemma)|<tuple|6.30|149>>
+    <associate|finitie union of finite sets is finite|<tuple|6.31|149>>
     <associate|function P(A) bijective with 2^A|<tuple|6.5|143>>
     <associate|function injection and inverse surjection|<tuple|6.9|144>>
     <associate|function no surjection between A and P(A)|<tuple|6.7|143>>
@@ -6159,33 +6529,34 @@
     <associate|group semi-group inheritance|<tuple|4.11|108>>
     <associate|group semigroup properties|<tuple|4.3|107>>
     <associate|group sub-group|<tuple|4.10|108>>
-    <associate|infinite condition (1)|<tuple|6.31|149>>
-    <associate|infinite set|<tuple|6.19|146>>
+    <associate|infinite condition (1)|<tuple|6.32|149>>
+    <associate|infinite set|<tuple|6.20|146>>
     <associate|inverse of a field isomorphism is a field
     isomorphism|<tuple|4.38|115>>
-    <associate|iteration final|<tuple|5.81|139>>
-    <associate|mapping of N to a finite set (1)|<tuple|6.43|154>>
-    <associate|mapping of N to a finite set (2)|<tuple|6.44|154>>
-    <associate|mathematical induction|<tuple|5.79|139>>
+    <associate|iteration final|<tuple|5.82|139>>
+    <associate|mapping of N to a finite set (1)|<tuple|6.44|154>>
+    <associate|mapping of N to a finite set (2)|<tuple|6.45|154>>
+    <associate|mathematical induction|<tuple|5.80|139>>
+    <associate|max element of a family|<tuple|6.47|?>>
     <associate|n\<less\>=m=\<gtr\>S_n\<less\>=S_m|<tuple|6.16|146>>
     <associate|natural numbers|<tuple|5.3|117>>
     <associate|natural numbers (n+m)-n=m|<tuple|5.64|135>>
     <associate|natural numbers 0|<tuple|5.7|117>>
     <associate|natural numbers 0\<less\>=n|<tuple|5.46|131>>
     <associate|natural numbers \<less\> properties|<tuple|5.49|132>>
-    <associate|natural numbers Archimedean property|<tuple|5.74|137>>
+    <associate|natural numbers Archimedean property|<tuple|5.75|137>>
     <associate|natural numbers Peano|<tuple|5.17|119>>
     <associate|natural numbers absorbing element|<tuple|5.36|128>>
     <associate|natural numbers addition|<tuple|5.27|126>>
     <associate|natural numbers additive semi-group|<tuple|5.34|127>>
-    <associate|natural numbers are infinite|<tuple|6.25|147>>
+    <associate|natural numbers are infinite|<tuple|6.26|147>>
     <associate|natural numbers are segments|<tuple|6.15|145>>
     <associate|natural numbers are total ordered|<tuple|5.52|133>>
     <associate|natural numbers are transitive|<tuple|5.14|118>>
     <associate|natural numbers are well ordered|<tuple|5.51|132>>
     <associate|natural numbers difference|<tuple|5.62|135>>
     <associate|natural numbers distributivity|<tuple|5.39|129>>
-    <associate|natural numbers division|<tuple|5.75|137>>
+    <associate|natural numbers division|<tuple|5.76|137>>
     <associate|natural numbers every non zero number is a
     successor|<tuple|5.18|119>>
     <associate|natural numbers is a set|<tuple|5.4|117>>
@@ -6202,21 +6573,22 @@
     <associate|natural numbers n+k=m+k\<less\>=\<gtr\>n=m|<tuple|5.43|130>>
     <associate|natural numbers n+s(m)=s(n+m)|<tuple|5.31|127>>
     <associate|natural numbers n.(m-1)=n.m-n|<tuple|5.66|135>>
-    <associate|natural numbers n.k=m.k=\<gtr\>n=m|<tuple|5.73|137>>
+    <associate|natural numbers n.k=m.k=\<gtr\>n=m|<tuple|5.74|137>>
     <associate|natural numbers n.s(m)=n+n.m|<tuple|5.38|129>>
     <associate|natural numbers n\<less\>=i\<less\>=m=\<gtr\>0\<less\>=i-n\<less\>=m-n|<tuple|5.67|135>>
+    <associate|natural numbers n\<less\>=m\<less\>=\<gtr\>n-k\<less\>=m-k|<tuple|5.68|?>>
     <associate|natural numbers n\<less\>=m\<less\>=\<gtr\>there exists a k
     such that m=k|<tuple|5.61|134>>
     <associate|natural numbers n\<less\>=n+k|<tuple|5.56|133>>
-    <associate|natural numbers n\<less\>k\<less\>s(n)|<tuple|5.68|135>>
+    <associate|natural numbers n\<less\>k\<less\>s(n)|<tuple|5.69|135>>
     <associate|natural numbers n\<less\>m and r\<less\>s then
-    n+r\<less\>m+s|<tuple|5.70|136>>
+    n+r\<less\>m+s|<tuple|5.71|136>>
     <associate|natural numbers n\<less\>m then there exists a k such that
     m=n+k|<tuple|5.59|134>>
     <associate|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k|<tuple|5.55|133>>
     <associate|natural numbers n\<less\>m\<less\>=\<gtr\>there exists a k
     such that m=k|<tuple|5.60|134>>
-    <associate|natural numbers n\<less\>m=\<gtr\>n.k\<less\>m.k|<tuple|5.72|136>>
+    <associate|natural numbers n\<less\>m=\<gtr\>n.k\<less\>m.k|<tuple|5.73|136>>
     <associate|natural numbers n\<less\>m=\<gtr\>n\<less\>=m-1|<tuple|5.65|135>>
     <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>=m|<tuple|5.50|132>>
     <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>s(m)|<tuple|5.54|133>>
@@ -6225,7 +6597,7 @@
     <associate|natural numbers n=/s(n)|<tuple|5.15|119>>
     <associate|natural numbers order relation|<tuple|5.45|131>>
     <associate|natural numbers product of non zero numbers is non
-    zero|<tuple|5.71|136>>
+    zero|<tuple|5.72|136>>
     <associate|natural numbers s(n) = n+1|<tuple|5.30|126>>
     <associate|natural numbers s(n)=/0|<tuple|5.10|118>>
     <associate|natural numbers successor|<tuple|5.5|117>>
@@ -6235,20 +6607,21 @@
     <associate|natural numbers successor properties|<tuple|5.12|118>>
     <associate|natural numbers sum associativity|<tuple|5.32|127>>
     <associate|natural numbers sum commutativity|<tuple|5.33|127>>
-    <associate|natural numbers sup property|<tuple|5.69|136>>
+    <associate|natural numbers sup property|<tuple|5.70|136>>
     <associate|natural numbers transitive|<tuple|5.13|118>>
     <associate|natural numbers x\<less\>=y or y\<less\>x|<tuple|5.53|133>>
     <associate|operator|<tuple|4.1|107>>
-    <associate|ordering of a finite family|<tuple|6.46|154>>
-    <associate|product of finite sets|<tuple|6.35|151>>
+    <associate|ordering of a finite family|<tuple|6.48|156>>
+    <associate|ordering of a finite family (1)|<tuple|6.49|?>>
+    <associate|product of finite sets|<tuple|6.36|151>>
     <associate|recursion|<tuple|5.19|120>>
-    <associate|recursion final|<tuple|5.80|139>>
+    <associate|recursion final|<tuple|5.81|139>>
     <associate|recursion injective function|<tuple|5.20|122>>
     <associate|recursion iteration|<tuple|5.24|123>>
     <associate|recursion iteration in a group|<tuple|5.25|124>>
-    <associate|recursion step (2)|<tuple|5.82|139>>
+    <associate|recursion step (2)|<tuple|5.83|139>>
     <associate|recursion step form (1)|<tuple|5.26|124>>
-    <associate|recursion step form (3)|<tuple|5.83|140>>
+    <associate|recursion step form (3)|<tuple|5.84|140>>
     <associate|ring|<tuple|4.24|112>>
     <associate|ring absorbing element|<tuple|4.29|113>>
     <associate|ring homeomorphism|<tuple|4.30|114>>
@@ -6258,18 +6631,20 @@
     <associate|ring subring is a ring|<tuple|4.28|113>>
     <associate|ring zero divisor|<tuple|4.25|113>>
     <associate|semi-group|<tuple|4.2|107>>
-    <associate|set containing a denumerable set is infinite|<tuple|6.24|147>>
+    <associate|set containing a denumerable set is infinite|<tuple|6.25|147>>
     <associate|set is infinitie if it contains a infinite
-    subset|<tuple|6.26|148>>
-    <associate|set of finite family is finite|<tuple|6.40|153>>
+    subset|<tuple|6.27|148>>
+    <associate|set of finite family is finite|<tuple|6.41|153>>
     <associate|sub-semi-group|<tuple|4.9|108>>
     <associate|subring|<tuple|4.27|113>>
-    <associate|subset of finite sets|<tuple|6.37|152>>
+    <associate|subset of finite sets|<tuple|6.38|152>>
     <associate|surjection f:A-\<gtr\>B if A is finite then B is
-    finite|<tuple|6.39|153>>
+    finite|<tuple|6.40|153>>
     <associate|surjection of a Sn to a set implies set is
-    finite|<tuple|6.38|153>>
-    <associate|union of two finite sets is finite|<tuple|6.28|148>>
+    finite|<tuple|6.39|153>>
+    <associate|union of two finite sets is finite|<tuple|6.29|148>>
+    <associate|{n,..,m}|<tuple|6.17|?>>
+    <associate|{n,..,m} bijection|<tuple|6.17|?>>
   </collection>
 </references>
 
