@@ -6398,7 +6398,76 @@
     <math|x<rsub|\<alpha\><around*|(|k|)>>\<leqslant\>x<rsub|\<alpha\><around*|(|k+1|)>>>
   </proof>
 
-  <subsection|Denumerable and countable sets>
+  The next theorem allows use later to apply induction on the product of a
+  finite family of sets.
+
+  <\theorem>
+    <label|product of finite family of sets>Let
+    <math|n\<in\>\<bbb-N\><rsub|0>> and let
+    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>S<rsub|n+1>>> a family of sets
+    then
+
+    <\equation*>
+      <big|prod><rsub|i\<in\>S<rsub|n+1>>A<rsub|i>\<approx\><around*|(|<big|prod><rsub|i\<in\>S<rsub|n>>A<rsub|i>|)>\<times\>A<rsub|n>.
+    </equation*>
+  </theorem>
+
+  <\proof>
+    If <math|x\<in\><big|prod><rsub|i\<in\>S<rsub|n+1>>A<rsub|i>> then
+    <math|x\<in\><around*|(|<big|cup><rsub|i\<in\>S<rsub|n+1>>A<rsub|i>|)><rsup|S<rsub|n+1>>>
+    such that <math|\<forall\>i\<in\>S<rsub|n+1>> we have
+    <math|x<around*|(|i|)>\<in\>A<rsub|i>> or equivalently
+    <math|x:S<rsub|n+1>\<rightarrow\><big|cup><rsub|i\<in\>S<rsub|n+1>>A<rsub|i>>
+    is a function so that <math|\<forall\>i\<in\>S<rsub|n+1>> we have
+    <math|x<around*|(|i|)>\<in\>A<rsub|i>>. So that
+    <math|\<forall\>i\<in\>S<rsub|n>> we have
+    <math|x<around*|(|i|)>\<in\>A<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>S<rsub|n>>A<rsub|i>>,
+    hence <math|x<rsub|\|S<rsub|n>>:S<rsub|n>\<rightarrow\><big|cup><rsub|i\<in\>S<rsub|n>>A<rsub|i>>
+    is a function or <math|x<rsub|\|S<rsub|n>>\<in\><big|prod><rsub|i\<in\>S<rsub|n>>A<rsub|i>>.
+    So we can define now the following function
+
+    <\equation*>
+      \<beta\>:<around*|(|<big|prod><rsub|i\<in\>S<rsub|n+1>>A<rsub|i>|)>\<rightarrow\><around*|(|<big|prod><rsub|i\<in\>S<rsub|n>>A<rsub|i>|)>\<times\>A<rsub|n><text|
+      by >\<beta\><around*|(|x|)>\<rightarrow\><around*|(|x<rsub|\|S<rsub|n>>,x<around*|(|n|)>|)>
+    </equation*>
+
+    Then we have:
+
+    <\description>
+      <item*|injectivity>If <math|\<beta\><around*|(|x|)>=\<beta\><around*|(|y|)>>
+      then <math|<around*|(|x<rsub|\|S<rsub|n>>,x<around*|(|n|)>|)>=<around*|(|y<rsub|\|S<rsub|n>>,y<around*|(|n|)><rsub|>|)>>
+      or <math|x<rsub|\|S<rsub|n>>=y<rsub|\|S<rsub|n>>> and
+      <math|x<around*|(|n|)>=y<around*|(|n|)>>. So if
+      <math|i\<in\>S<rsub|n+1>> we have either <math|i\<in\>S<rsub|n>> then
+      <math|x<around*|(|i|)>=x<rsub|\|S<rsub|n>><around*|(|i|)>=y<rsub|\|S<rsub|n>><around*|(|i|)>=x<around*|(|i|)>>
+      or <math|i=n> and then <math|x<around*|(|i|)>=x<around*|(|n|)>=y<around*|(|n|)>=y<around*|(|i|)>>,
+      proving that <math|x=y>.
+
+      <item*|surjectivity>Let <math|<around*|(|y,a|)>\<in\><around*|(|<big|amalg><rsub|i\<in\>S<rsub|n>>A<rsub|i>|)>\<times\>A<rsub|n>>
+      then <math|x\<in\><big|prod><rsub|i\<in\>S<rsub|n>>A<rsub|i>> and
+      <math|a\<in\>A<rsub|n>>. Define then the function:
+
+      <\equation*>
+        x:S<rsub|n+1>\<rightarrow\><big|cup><rsub|i\<in\>S<rsub|n+1>>A<rsub|i><text|
+        by >x<around*|(|i|)>=<choice|<tformat|<table|<row|<cell|y<around*|(|i|)><text|
+        if >i\<in\>S<rsub|n>>>|<row|<cell|a<text| if i=n>>>>>>
+      </equation*>
+
+      Then <math|\<forall\>i\<in\>S<rsub|n+1>> we have either
+      <math|i\<in\>S<rsub|n>> then <math|x<around*|(|i|)>=y<around*|(|i|)>\<in\>S<rsub|n>>
+      and <math|x<around*|(|n|)>=a\<in\>A<rsub|n>> proving that
+      <math|x\<in\><big|prod><rsub|i\<in\>S<rsub|n+1>>A<rsub|i>>. Further as
+      clearly <math|x<rsub|\|S<rsub|n>>=y> and <math|x<around*|(|n|)>=a> we
+      have that <math|\<beta\><around*|(|x|)>=y>.
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|product of a finite family of finite sets is is finite>Let
+    <math|n\<in\>\<bbb-N\><rsub|0>\\<around*|{|0|}>> TODO
+  </theorem>
+
+  <subsection|Denumerable sets>
 
   <\lemma>
     <label|denumerable subsets of N_0>Every subset of
@@ -6648,8 +6717,8 @@
           <reference|eq 6.25.022>]>>>|<cell|f<around*|(|<around*|(|k+m|)>-1,0|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|0,k+m|)>>>>>
         </eqnarray*>
 
-        Combining the above with [proposition: <reference|proposition 6.53>]
-        we have that <math|\<lambda\><around*|(|<around*|(|l+1|)>+k|)>=<around*|(|k,m|)>>,
+        Combining the above with [proposition: <reference|proposition
+        6.53.022>] we have that <math|\<lambda\><around*|(|<around*|(|l+1|)>+k|)>=<around*|(|k,m|)>>,
         so that <math|0\<in\>S>.
       </description>
     </description>
@@ -6921,14 +6990,150 @@
   Remember that a countable set is a set that is either finite or
   denumerable.
 
+  <\theorem>
+    <label|countable subset of denumerable set is countable>Every subset of a
+    denumerable set is countable
+  </theorem>
+
+  <\proof>
+    This follows from [theorem: <reference|denumerable every subset is finite
+    denumerable.>] and the definition of countable sets.
+  </proof>
+
+  <\theorem>
+    <label|countable subset of countable set is countable>Every subset of a
+    countable set is countable
+  </theorem>
+
+  <\proof>
+    If <math|A> is countable then <math|A> is either denumerable<space|1em>or
+    finite. If <math|A> is finite then by [theorem: <reference|subset of
+    finite sets>] every subset of <math|A> is finite hence countable. If
+    <math|A> is denumerable then by [theorem: <reference|countable subset of
+    denumerable set is countable>] every subset of <math|A> is countable.
+  </proof>
+
+  <\theorem>
+    <label|countable set conditions (1)>Let <math|A> be a non empty set then
+    the following are equivalent:
+
+    <\enumerate>
+      <item><math|A> is countable
+
+      <item>There exists a surjection <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>A>
+
+      <item>There exists a injection <math|\<alpha\>:A\<rightarrow\>\<bbb-N\><rsub|0>>
+
+      <item>There exist a denumerableset <math|B> and a injection
+      <math|\<alpha\>:A\<rightarrow\>B>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|1\<Rightarrow\>2>>If <math|A> is countable then we have
+      either:
+
+      <\description>
+        <item*|<math|A<text| is finite>>>Then
+        <math|\<exists\>n\<in\>\<bbb-N\><rsub|0>> and a bijection
+        <math|\<alpha\>:n=S<rsub|n>\<rightarrow\>A>. As
+        <math|A\<neq\>\<varnothing\>> there exiss a <math|a\<in\>A>, this
+        allows us to define the function\ 
+
+        <\equation*>
+          \<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>A<text| where
+          >\<beta\><around*|(|i|)>=<choice|<tformat|<table|<row|<cell|\<alpha\><around*|(|i|)><text|
+          if >i\<less\>n>>|<row|<cell|a<text| if >n\<leqslant\>i>>>>>
+        </equation*>
+
+        If <math|y\<in\>A> then as <math|\<alpha\>> is surjective we have
+        that <math|\<exists\>i\<in\>S<rsub|n>=n> suh that
+        <math|\<alpha\><around*|(|i|)>=y> so that
+        <math|\<beta\><around*|(|i|)>=\<alpha\><around*|(|i|)>=y> proving hat
+        <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>A> is surjective.
+
+        <item*|<math|A<text| is denumerable>>>Then
+        <math|\<bbb-N\><rsub|0>\<approx\>A> so there exist a bijection, hence
+        surjection, <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>A>.
+      </description>
+
+      <item*|<math|2\<Rightarrow\>3>>Given that there exists a surjection
+      <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>A> and
+      <math|A\<neq\>\<varnothing\>> we have by [theorem: <reference|function
+      injection and inverse surjection>] the exisence of a injection
+      <math|\<alpha\>:A\<rightarrow\>\<bbb-N\><rsub|0>>.\ 
+
+      <item*|<math|3\<Rightarrow\>4>>As <math|B> is denumerable we have
+      <math|\<bbb-N\><rsub|0>\<approx\>B> so there exist a bijection
+      <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>B>. by (3) there exist a
+      injection <math|\<alpha\>:A\<rightarrow\>\<bbb-N\><rsub|0>>, hence we
+      have the injection <math|\<beta\>\<circ\>\<alpha\>:A\<rightarrow\>B>.
+
+      <item*|<math|4\<Rightarrow\>1>>As <math|B> \ is denumerable there exist
+      a bijection <math|\<beta\>:B\<rightarrow\>\<bbb-N\><rsub|0>> so that we
+      have a injection <math|\<beta\>\<circ\>\<alpha\>:A\<rightarrow\>\<bbb-N\><rsub|0>>.
+      Using [theorem: <reference|function injectivity to bijection>] it
+      follows that <math|\<beta\>\<circ\>\<alpha\>:A\<rightarrow\><around*|(|\<beta\>\<circ\>\<alpha\>|)><around*|(|A|)>\<subseteq\>\<bbb-N\><rsub|0>>
+      is a bijection hence\ 
+
+      <\equation*>
+        A\<approx\><around*|(|\<beta\>\<circ\>\<alpha\>|)><around*|(|A|)>\<subseteq\>\<bbb-N\><rsub|0>
+      </equation*>
+
+      Using [theorem: <reference|denumerable subsets of N_0>] we have that
+      <math|<around*|(|\<beta\>\<circ\>\<alpha\>|)><around*|(|A|)>> is either
+      fnite or denumerable. If <math|<around*|(|\<beta\>\<circ\>\<alpha\>|)><around*|(|A|)>>
+      is finite then there exist a <math|n\<in\>\<bbb-N\><rsub|0>> such that
+      <math|n\<approx\><around*|(|\<beta\>\<circ\>\<alpha\>|)><around*|(|A|)>>,
+      hence <math|n\<approx\>A> proving that <math|A> is finite hence
+      countable. If <math|<around*|(|\<beta\>\<circ\>\<alpha\>|)><around*|(|A|)>>
+      is denumerable then <math|\<bbb-N\><rsub|0>\<approx\>> so that
+      <math|\<bbb-N\><rsub|0>\<approx\>A> proving that <math|A> is
+      denumerable hence countable. So in allases we reach the conclusion that
+      <math|A> is countable.
+    </description>
+  </proof>
+
   <\lemma>
-    <label|countable AUB is a countable if A is finte and B is denumerable>If
-    <math|A> is fiinite and <math|B> is denumerable then <math|A<big|cup>B>
-    is countable
+    <label|countable AUB is a countable if A is finite and B is
+    denumerable>If <math|A> is fiinite and <math|B> is denumerable then
+    <math|A<big|cup>B> is countable
   </lemma>
 
   <\proof>
-    TODO
+    As <math|A> is finite and <math|B> is denumerable there exist bijections
+    <math|\<alpha\>:n=S<rsub|n>\<rightarrow\>A> and
+    <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>B> where
+    <math|n\<in\>\<bbb-N\><rsub|0>>. IDefine the function:
+
+    <\equation*>
+      \<gamma\>:\<bbb-N\><rsub|0>\<rightarrow\>A<big|cup>B<text| where
+      >\<gamma\><around*|(|i|)>=<choice|<tformat|<table|<row|<cell|\<alpha\><around*|(|i|)><text|
+      if >i\<in\>n>>|<row|<cell|\<beta\><around*|(|i-n|)><text| if
+      >i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>>>>>
+    </equation*>
+
+    Now if <math|y\<in\>A<big|cup>B> then we have either:
+
+    <\description>
+      <item*|<math|y\<in\>A>>Then as <math|\<alpha\>:n\<rightarrow\>A> is a
+      bijection there exist a <math|i\<in\>n> such that
+      <math|\<alpha\><around*|(|i|)>=y> so that
+      <math|\<gamma\><around*|(|i|)>=\<alpha\><around*|(|i|)>=y>
+
+      <item*|<math|y\<in\>B>>Then as <math|\<beta\>> is a bijection there
+      exist a <math|k\<in\>\<bbb-N\><rsub|0>> such that
+      <math|\<beta\><around*|(|k|)>=y>, take now <math|i=k+n> then
+      <math|n\<leqslant\>k+n=i\<Rightarrow\>i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>
+      so that <math|\<gamma\><around*|(|i|)>=\<beta\><around*|(|i-n|)>=\<beta\><around*|(|<around*|(|k+n|)>-n|)>=\<beta\><around*|(|k|)>=y>
+    </description>
+
+    Hence <math|\<gamma\>:\<bbb-N\><rsub|0>\<rightarrow\>A<big|cup>B> is a
+    surjection which by [theorem: <reference|countable set conditions (1)>]
+    that <math|A<big|cup>B> is countable.
   </proof>
 
   <\theorem>
@@ -6954,10 +7159,12 @@
         <math|A<big|cup>B> is finite hence <math|A<big|cup>B> is countable.
 
         <item*|<math|><math|A<text| is finite and >B<text| is
-        denumerable>>>Then ther exist <math|n\<in\>\<bbb-N\><rsub|0>> and two
-        functions\ 
+        denumerable>>>Then by [lemma: <reference|countable AUB and AxB>]
+        <math|A<big|cup>B> is countable.
 
-        <item*|<math|A<text| is denumerable and >B<text| is finite>>>
+        <item*|<math|A<text| is denumerable and >B<text| is finite>>>Then by
+        \ [lemma: <reference|countable AUB and AxB>] <math|A<big|cup>B> is
+        countable.
 
         <item*|<math|A<text| is denumerable and >B<text| is
         denumerable>>>Then by [theorem: <reference|denumerable union of a
@@ -6965,11 +7172,93 @@
         is denumerable hence <math|A<big|cup>B> is countable.
       </description>
 
-      <item>
+      So in all cases we have that <math|A> is countable.
+
+      <item>For <math|A,B> we have the following possibilities:
+
+      <\description>
+        <item*|<math|A<text| is finite and >B<text| is finite>>>Then by
+        [theorem: <reference|product of finite sets>] <math|A\<times\>B> is
+        finite hence countable.
+
+        <item*|<math|><math|A<text| is finite and >B<text| is
+        denumerable>>>Then by [theorem: <reference|denumerable product of
+        finite set and a denumerable set is denurable>] <math|A\<times\>B> is
+        denumerable hence countable.
+
+        <item*|<math|A<text| is denumerable and >B<text| is finite>>>Then by
+        [theorem: <reference|denumerable product of finite set and a
+        denumerable set is denurable>] <math|A\<times\>B> is denumerable
+        hence countable.
+
+        <item*|<math|A<text| is denumerable and >B<text| is
+        denumerable>>>Then by [theorem: <reference|denumerable product of
+        denumerable sets is denumerable>] <math|A\<times\>B> is denumerable
+        hence countable.
+      </description>
     </enumerate>
   </proof>
 
-  \;
+  <\lemma>
+    <label|countable finite uunion product of countable sets (1)>Let
+    <math|n\<in\>\<bbb-N\><rsub|0>> and <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>S<rsub|n>=n>>
+    is such that <math|\<forall\>i\<in\>S<rsub|n>> we have <math|A<rsub|i>>
+    is countable then\ 
+
+    <\enumerate>
+      <item><math|<big|cup><rsub|i\<in\>S<rsub|n>>A<rsub|i>> is countable.
+
+      <item><math|<big|prod><rsub|i\<in\>S<rsub|n>>A<rsub|i>> is countable.
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>We prove this by induction so let
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|<text|If
+        ><around*|{|A<rsub|i>|}><rsub|i\<in\>S<rsub|n>><text| with
+        >\<forall\>i\<in\>S<rsub|n><text| >A<rsub|i><text| is countable then
+        ><big|cup><rsub|i\<in\>S<rsub|n>>A<rsub|i><text| is countable>|}>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|0\<in\>S>>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>S<rsub|0>>>
+        then by [theorem: <reference|family union of a empty set>] we have
+        <math|<big|cup><rsub|i\<in\>S<rsub|0>>A<rsub|i>=\<varnothing\>> which
+        is finite proving that <math|0\<in\>S>.
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+        <math|<around*|{|A<rsub|i><rsub|>|}><rsub|i\<in\>S<rsub|n+1>>> be
+        such that <math|\<forall\>i\<in\>S<rsub|n+1>> <math|A<rsub|i>> is
+        countable. Now as <math|S<rsub|n>\<subseteq\>S<rsub|n+1>>,
+        <math|n\<nin\>S<rsub|n>> and <math|n\<in\>S<rsub|n+1>> we have that
+        <math|S<rsub|n>=S<rsub|n+1>\\<around*|{|n|}>> so that\ 
+
+        <\equation*>
+          <big|cup><rsub|i\<in\>S<rsub|n+1>>A<rsub|i>\<equallim\><rsub|<text|[theorem:
+          <reference|family union intersection and empty
+          set>]>><around*|(|<big|cup><rsub|i\<in\>S<rsub|n+1>\\<around*|{|n|}>>S<rsub|i>|)><big|cup>A<rsub|n>=<around*|(|<big|cup><rsub|i\<in\>S<rsub|n>>A<rsub|i>|)><big|cup>A<rsub|n>
+        </equation*>
+
+        As <math|n\<in\>S> we have that <math|<big|cup><rsub|i\<in\>S<rsub|n>>A<rsub|i>>
+        is countable and as also \ <math|A<rsub|n>> is countable it follows
+        from the above that <math|<big|cup><rsub|i\<in\>S<rsub|n+1>>A<rsub|i>>
+        is countable. Hence <math|n+1\<in\>S>,
+      </description>
+
+      Mathematical induction completes then the theorem.
+
+      <item>
+    </enumerate>
+
+    \;
+  </proof>
 
   \;
 
@@ -7059,7 +7348,7 @@
     <associate|auto-56|<tuple|<with|mode|<quote|math>|#A>|152>>
     <associate|auto-57|<tuple|6.2.2|155>>
     <associate|auto-58|<tuple|6.2.3|159>>
-    <associate|auto-59|<tuple|6.2.4|?>>
+    <associate|auto-59|<tuple|6.2.4|162>>
     <associate|auto-6|<tuple|sub-semi-group|108>>
     <associate|auto-7|<tuple|sup-group|108>>
     <associate|auto-8|<tuple|group isomorphism|110>>
@@ -7068,29 +7357,35 @@
     <associate|cardinality of the empty set is 0|<tuple|6.36|152>>
     <associate|cardinality of union of two disjoint finite
     sets|<tuple|6.38|152>>
-    <associate|countable AUB and AxB|<tuple|6.61|?>>
+    <associate|countable AUB and AxB|<tuple|6.66|162>>
+    <associate|countable AUB is a countable if A is finite and B is
+    denumerable|<tuple|6.65|?>>
     <associate|countable AUB is a countable if A is finte and B is
-    denumerable|<tuple|6.60|?>>
-    <associate|countable finite union of countable sets is
-    countable|<tuple|6.60|?>>
+    denumerable|<tuple|6.63|162>>
+    <associate|countable finite uunion product of countable sets
+    (1)|<tuple|6.67|?>>
     <associate|countable set|<tuple|6.23|147>>
+    <associate|countable set conditions (1)|<tuple|6.64|?>>
+    <associate|countable subset of countable set is countable|<tuple|6.63|?>>
+    <associate|countable subset of denumerable set is
+    countable|<tuple|6.62|?>>
     <associate|definition by recursion (1)|<tuple|5.86|140>>
     <associate|definition by recursion (2)|<tuple|5.87|141>>
     <associate|denumerable every subset is finite
-    denumerable.|<tuple|6.52|159>>
+    denumerable.|<tuple|6.54|159>>
     <associate|denumerable is not subset of a natural
     number|<tuple|6.25|147>>
-    <associate|denumerable product nxN is denumerable|<tuple|6.56|?>>
+    <associate|denumerable product nxN is denumerable|<tuple|6.58|161>>
     <associate|denumerable product of denumerable sets is
-    denumerable|<tuple|6.55|?>>
+    denumerable|<tuple|6.57|161>>
     <associate|denumerable product of finite set and a denumerable set is
-    denurable|<tuple|6.57|?>>
+    denurable|<tuple|6.59|161>>
     <associate|denumerable product of two denumerable set is
-    denumerable|<tuple|6.53|159>>
+    denumerable|<tuple|6.55|159>>
     <associate|denumerable set|<tuple|6.22|147>>
-    <associate|denumerable subsets of N_0|<tuple|6.51|159>>
+    <associate|denumerable subsets of N_0|<tuple|6.53|159>>
     <associate|denumerable union of a finite family of denumerable sets is
-    denumerable|<tuple|6.58|?>>
+    denumerable|<tuple|6.60|161>>
     <associate|denumerable with one less element|<tuple|6.24|147>>
     <associate|empty set is finite|<tuple|6.20|147>>
     <associate|eq 5.1.019|<tuple|5.1|120>>
@@ -7124,9 +7419,9 @@
     <associate|eq 6.20.022|<tuple|6.20|158>>
     <associate|eq 6.21.022|<tuple|6.21|158>>
     <associate|eq 6.22.022|<tuple|6.22|159>>
-    <associate|eq 6.23.022|<tuple|6.23|160>>
-    <associate|eq 6.24.022|<tuple|6.24|?>>
-    <associate|eq 6.25.022|<tuple|6.25|?>>
+    <associate|eq 6.23.022|<tuple|6.23|159>>
+    <associate|eq 6.24.022|<tuple|6.24|160>>
+    <associate|eq 6.25.022|<tuple|6.25|160>>
     <associate|eq 6.3.019|<tuple|6.3|149>>
     <associate|eq 6.4.019|<tuple|6.4|149>>
     <associate|eq 6.5.019|<tuple|6.5|149>>
@@ -7137,9 +7432,9 @@
     <associate|eq 7.1.019|<tuple|6.1|146>>
     <associate|equipotence|<tuple|6.1|143>>
     <associate|equipotence 2^A and P(A)|<tuple|6.14|145>>
-    <associate|equipotence \<less\>= condition|<tuple|6.6|?>>
-    <associate|equipotence \<less\>= definition|<tuple|6.3|?>>
-    <associate|equipotence A\<less\>=B condition (2)|<tuple|6.10|?>>
+    <associate|equipotence \<less\>= condition|<tuple|6.6|143>>
+    <associate|equipotence \<less\>= definition|<tuple|6.3|143>>
+    <associate|equipotence A\<less\>=B condition (2)|<tuple|6.10|144>>
     <associate|equipotence A^C~B^D|<tuple|6.13|145>>
     <associate|equipotence AxC~BxD|<tuple|6.12|144>>
     <associate|equipotence equivalence relation|<tuple|6.2|143>>
@@ -7184,7 +7479,7 @@
     <associate|inverse of a field isomorphism is a field
     isomorphism|<tuple|4.38|115>>
     <associate|iteration final|<tuple|5.83|140>>
-    <associate|mapping of N to a finite set (1)|<tuple|6.45|155>>
+    <associate|mapping of N to a finite set (1)|<tuple|6.45|154>>
     <associate|mapping of N to a finite set (2)|<tuple|6.46|155>>
     <associate|mathematical induction|<tuple|5.81|139>>
     <associate|max element of a family|<tuple|6.48|157>>
@@ -7201,7 +7496,7 @@
     <associate|natural numbers addition|<tuple|5.27|126>>
     <associate|natural numbers additive semi-group|<tuple|5.34|127>>
     <associate|natural numbers are infinite|<tuple|6.27|148>>
-    <associate|natural numbers are segments|<tuple|6.16|145>>
+    <associate|natural numbers are segments|<tuple|6.16|146>>
     <associate|natural numbers are total ordered|<tuple|5.52|133>>
     <associate|natural numbers are transitive|<tuple|5.14|118>>
     <associate|natural numbers are well ordered|<tuple|5.51|132>>
@@ -7264,9 +7559,11 @@
     <associate|operator|<tuple|4.1|107>>
     <associate|ordering of a finite family|<tuple|6.49|157>>
     <associate|ordering of a finite family (1)|<tuple|6.50|158>>
+    <associate|product of a finite family of finite sets is is
+    finite|<tuple|6.52|?>>
+    <associate|product of finite family of sets|<tuple|6.51|?>>
     <associate|product of finite sets|<tuple|6.37|152>>
-    <associate|proposition 6.53|<tuple|6.53|?>>
-    <associate|proposition 6.53.022|<tuple|6.54|?>>
+    <associate|proposition 6.53.022|<tuple|6.56|160>>
     <associate|recursion|<tuple|5.19|120>>
     <associate|recursion final|<tuple|5.82|140>>
     <associate|recursion injective function|<tuple|5.20|122>>
@@ -7446,6 +7743,10 @@
       <with|par-left|<quote|1tab>|6.2.3<space|2spc>Denumerable and countable
       sets <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-58>>
+
+      <with|par-left|<quote|1tab>|6.2.4<space|2spc>Countable Sets
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-59>>
     </associate>
   </collection>
 </auxiliary>
