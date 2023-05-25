@@ -2951,7 +2951,7 @@
   <\example>
     <label|function characteristics function><dueto|Characteristics
     Function>Let <math|A> be a class and <math|B\<subseteq\>A> then
-    <math|\<cal-X\><rsub|A,B>:A\<rightarrow\><around*|{|0.1|}>> is defined by
+    <math|\<cal-X\><rsub|A,B>:A\<rightarrow\><around*|{|0,1|}>> is defined by
     <math|\<cal-X\><rsub|A,B>=<around*|(|B\<times\><around*|{|1|}>|)><big|cup><around*|(|<around*|(|A\\B|)>\<times\><around*|{|0|}>|)>>
     [so that <math|\<cal-X\><rsub|A,B><around*|(|x|)>=<choice|<tformat|<table|<row|<cell|1
     <text|if >x\<in\>B>>|<row|<cell|0<text| if >x\<in\>A\\B>>>>>>
@@ -3553,26 +3553,26 @@
   </proof>
 
   <\example>
-    <label|function trivial bijection>Let <math|I=<around*|{|1|}>> <math|B> a
+    <label|function trivial bijection>Let <math|I=<around*|{|0|}>> <math|B> a
     class and take <math|f:I\<rightarrow\><around*|{|B|}>> defined by
-    <math|f=<around*|{|<around*|(|1,B|)>|}>> is a bijection
+    <math|f=<around*|{|<around*|(|0,B|)>|}>> is a bijection
   </example>
 
   <\proof>
-    As <math|1\<in\><around*|{|1|}>> and <math|B\<in\><around*|{|B|}>> it
-    follows that <math|<around*|(|1,B|)>\<in\><around*|{|1|}>\<times\><around*|{|B|}>>,
-    hence <math|f=<around*|{|<around*|(|1,B|)>|}>\<subseteq\><around*|{|1|}>\<times\><around*|{|B|}>>.
-    If <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>f=<around*|{|1|}>\<times\><around*|{|B|}>>
-    then <math|y=B=y<rprime|'>>, further <math|dom<around*|(|f|)>=<around*|{|1|}>=I>.
-    So we conclude that <math|f:<around*|{|1|}>\<rightarrow\><around*|{|B|}>>
+    As <math|0\<in\><around*|{|0|}>> and <math|B\<in\><around*|{|B|}>> it
+    follows that <math|<around*|(|0,B|)>\<in\><around*|{|0|}>\<times\><around*|{|B|}>>,
+    hence <math|f=<around*|{|<around*|(|0,B|)>|}>\<subseteq\><around*|{|0|}>\<times\><around*|{|B|}>>.
+    If <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>f=<around*|{|0|}>\<times\><around*|{|B|}>>
+    then <math|y=B=y<rprime|'>>, further <math|dom<around*|(|f|)>=<around*|{|0|}>=I>.
+    So we conclude that <math|f:<around*|{|0|}>\<rightarrow\><around*|{|B|}>>
     is indeed a function. Further if <math|y\<in\><around*|{|B|}>> then
-    <math|y=B> and as <math|<around*|(|1,B|)>\<in\>f> it follows that
+    <math|y=B> and as <math|<around*|(|0,B|)>\<in\>f> it follows that
     <math|y\<in\>range<around*|(|f|)>> or
     <math|<around*|{|B|}>\<subseteq\>range<around*|(|f|)>>, which by
     [theorem: <reference|function surjection condition>] proves that <math|f>
-    is surjective. Finally if <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>f=<around*|{|<around*|(|1,B|)>|}>>
-    then <math|x=1=x<rprime|'>> proving that
-    <math|f:<around*|{|1|}>\<rightarrow\><around*|{|B|}>> is a bijection.
+    is surjective. Finally if <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>f=<around*|{|<around*|(|0,B|)>|}>>
+    then <math|x=0=x<rprime|'>> proving that
+    <math|f:<around*|{|0|}>\<rightarrow\><around*|{|B|}>> is a bijection.
   </proof>
 
   <\proposition>
@@ -3878,22 +3878,22 @@
 
   <\theorem>
     <label|function and power>Let <math|A> be a class then there exists a
-    bijection between <math|A> and <math|A<rsup|<around*|{|1|}>>>
+    bijection between <math|A> and <math|A<rsup|<around*|{|0|}>>>
   </theorem>
 
   <\proof>
     Given <math|x\<in\>A> define the function
-    <math|f<rsub|x>:<around*|{|1|}>\<rightarrow\><around*|{|x|}>> where
-    <math|f<rsub|x>=<around*|{|<around*|(|1,x|)>|}>> [see [example:
+    <math|f<rsub|x>:<around*|{|0|}>\<rightarrow\><around*|{|x|}>> where
+    <math|f<rsub|x>=<around*|{|<around*|(|0,x|)>|}>> [see [example:
     <reference|function trivial bijection>] to prove that this is a function
-    (even a bijection)]. So <math|f<rsub|x>\<in\><around*|{|x|}><rsup|<around*|{|1|}>>,>
+    (even a bijection)]. So <math|f<rsub|x>\<in\><around*|{|x|}><rsup|<around*|{|0|}>>,>
     which as <math|<around*|{|x|}>\<subseteq\>A> proves by [theorem:
     <reference|function B^A and inclusion>] that
-    <math|f<rsub|x>\<in\>A<rsup|<around*|{|1|}>>>. Define now
+    <math|f<rsub|x>\<in\>A<rsup|<around*|{|0|}>>>. Define now
     <math|f=<around*|{|z\|z=<around*|(|x,f<rsub|x>|)><text| where
     >x\<in\>A|}>>. If <math|<around*|(|x,y|)>\<in\>f> we have <math|x\<in\>A>
-    and thus <math|y=f<rsub|x>\<in\>A<rsup|<around*|{|1|}>>> hence
-    <math|<around*|(|x,y|)>\<in\>A\<times\>A<rsup|<around*|{|1|}>>>. Also if
+    and thus <math|y=f<rsub|x>\<in\>A<rsup|<around*|{|0|}>>> hence
+    <math|<around*|(|x,y|)>\<in\>A\<times\>A<rsup|<around*|{|0|}>>>. Also if
     <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>A> then
     <math|y=f<rsub|x>> and <math|y<rprime|'>=f<rsub|x>> so that
     <math|y=y<rprime|'>>. Further for every <math|x\<in\>A> we have by the
@@ -3901,37 +3901,37 @@
     we conclude that
 
     <\equation*>
-      f:A\<rightarrow\>A<rsup|<around*|{|1|}>><text| is a function>
+      f:A\<rightarrow\>A<rsup|<around*|{|0|}>><text| is a function>
     </equation*>
 
     Assume now that <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>f>
     then <math|f<rsub|x>=y=f<rsub|x<rprime|'>>>, so that
-    <math|<around*|{|<around*|(|1,x|)>|}>=<around*|{|<around*|(|1,x<rprime|'>|)>|}>>,
-    hence <math|<around*|(|1,x|)>=<around*|(|1,x<rprime|'>|)>>, from which it
+    <math|<around*|{|<around*|(|0,x|)>|}>=<around*|{|<around*|(|0,x<rprime|'>|)>|}>>,
+    hence <math|<around*|(|0,x|)>=<around*|(|0,x<rprime|'>|)>>, from which it
     follows that <math|x=x<rprime|'>>. this proves that\ 
 
     <\equation*>
-      f:A\<rightarrow\>A<rsup|<around*|{|1|}>><text| is a injective function>
+      f:A\<rightarrow\>A<rsup|<around*|{|0|}>><text| is a injective function>
     </equation*>
 
-    If <math|y\<in\>A<rsup|<around*|{|1|}>>> then
-    <math|y:<around*|{|1|}>\<rightarrow\>A> is a function, hence
-    <math|1\<in\><around*|{|1|}>=dom<around*|(|y|)>>, so there exists a
-    <math|z> such that <math|<around*|(|1,z|)>\<in\>y\<subseteq\><around*|{|1|}>\<times\>A>
+    If <math|y\<in\>A<rsup|<around*|{|0|}>>> then
+    <math|y:<around*|{|0|}>\<rightarrow\>A> is a function, hence
+    <math|0\<in\><around*|{|0|}>=dom<around*|(|y|)>>, so there exists a
+    <math|z> such that <math|<around*|(|0,z|)>\<in\>y\<subseteq\><around*|{|0|}>\<times\>A>
     proving that <math|z\<in\>A>. Hence\ 
 
     <\equation>
-      <label|eq 2.16.005><around*|{|<around*|(|1,z|)>|}>\<subseteq\>y\<wedge\>z\<in\>A<text|>
+      <label|eq 2.16.005><around*|{|<around*|(|0,z|)>|}>\<subseteq\>y\<wedge\>z\<in\>A<text|>
     </equation>
 
-    If <math|<around*|(|u,v|)>\<in\>y\<subseteq\><around*|{|1|}>\<times\>A>
-    then <math|u=1> so that <math|<around*|(|1,u|)>\<in\>y>, which, as
-    <math|<around*|(|1,z|)>\<in\>y> and <math|y> is a function, proves that
-    <math|u=z> or <math|<around*|(|u,v|)>=<around*|(|1,z|)>\<in\><around*|{|<around*|(|1,z|)>|}>>.
-    <math|>So <math|y\<subseteq\><around*|{|<around*|(|1,z|)>|}>> which
+    If <math|<around*|(|u,v|)>\<in\>y\<subseteq\><around*|{|0|}>\<times\>A>
+    then <math|u=0> so that <math|<around*|(|0,u|)>\<in\>y>, which, as
+    <math|<around*|(|0,z|)>\<in\>y> and <math|y> is a function, proves that
+    <math|u=z> or <math|<around*|(|u,v|)>=<around*|(|0,z|)>\<in\><around*|{|<around*|(|0,z|)>|}>>.
+    <math|>So <math|y\<subseteq\><around*|{|<around*|(|0,z|)>|}>> which
     combined with [eq: <reference|eq 2.16.005>] proves that
-    <math|<around*|{|<around*|(|1,z|)>|}>=y>. As
-    <math|f<rsub|z>=<around*|{|<around*|(|1,z|)>|}>=y> we have that
+    <math|<around*|{|<around*|(|0,z|)>|}>=y>. As
+    <math|f<rsub|z>=<around*|{|<around*|(|0,z|)>|}>=y> we have that
     <math|<around*|(|z,y|)>\<in\>f> which proves that\ 
 
     <\equation*>
@@ -5333,19 +5333,19 @@
   </proof>
 
   <\example>
-    <label|family trivial>Let <math|I=<around*|{|1|}>>, <math|B> a class and
+    <label|family trivial>Let <math|I=<around*|{|0|}>>, <math|B> a class and
     take <math|A:I\<rightarrow\><around*|{|B|}>> defined by
-    <math|A=<around*|{|<around*|(|1,B|)>|}>>, defining the family
-    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1|}>>\<subseteq\><around*|{|B|}>>
-    where <math|A<rsub|1>=B>. For this family we have
-    <math|<big|cap><rsub|i\<in\><around*|{|1|}>>A<rsub|i>=B> and
-    <math|<big|cup><rsub|i\<in\><around*|{|1|}>>A<rsub|i>=B>
+    <math|A=<around*|{|<around*|(|0,B|)>|}>>, defining the family
+    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|0|}>>\<subseteq\><around*|{|B|}>>
+    where <math|A<rsub|0>=B>. For this family we have
+    <math|<big|cap><rsub|i\<in\><around*|{|0|}>>A<rsub|i>=B> and
+    <math|<big|cup><rsub|i\<in\><around*|{|0|}>>A<rsub|i>=B>
   </example>
 
   <\proof>
     Using [example: <reference|function trivial bijection>] it follows that
     <math|A:I\<rightarrow\><around*|{|B|}>> is bijection, hence a function,
-    so that <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1|}>>\<subseteq\><around*|{|B|}>>
+    so that <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|0|}>>\<subseteq\><around*|{|B|}>>
     is a well defined family. Further as <math|A> is a bijection we have that
 
     <\equation*>
@@ -5355,14 +5355,14 @@
     Finally
 
     <\equation*>
-      <big|cup><rsub|i\<in\><around*|{|1|}>>A<rsub|i>=<big|cup>range<around*|(|A|)>=<big|cup><around*|{|B|}>\<equallim\><rsub|<text|[example:
+      <big|cup><rsub|i\<in\><around*|{|0|}>>A<rsub|i>=<big|cup>range<around*|(|A|)>=<big|cup><around*|{|B|}>\<equallim\><rsub|<text|[example:
       <reference|class trivial union intersection>]>>A
     </equation*>
 
     and
 
     <\equation*>
-      <big|cap><rsub|i\<in\><around*|{|1|}>>A<rsub|i>=<big|cap>range<around*|(|A|)>=<big|cap><around*|{|B|}>\<equallim\><rsub|<text|[example:
+      <big|cap><rsub|i\<in\><around*|{|0|}>>A<rsub|i>=<big|cap>range<around*|(|A|)>=<big|cap><around*|{|B|}>\<equallim\><rsub|<text|[example:
       <reference|class trivial union intersection>]>>A
     </equation*>
   </proof>
@@ -6185,43 +6185,45 @@
 
   <\example>
     <label|product of family with one element>Let
-    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1|}>>\<subseteq\><around*|{|B|}>>
+    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|0|}>>\<subseteq\><around*|{|B|}>>
     be the family in [example: <reference|family trivial>] defined by
-    <math|A:<around*|{|1|}>\<rightarrow\><around*|{|B|}>> where
-    <math|A=<around*|{|<around*|(|1,B|)>|}>> then there exists a bijection
-    between <math|B> and <math|<big|sqcap><rsub|i\<in\><around*|{|1|}>>A<rsub|i>>
+    <math|A:<around*|{|0|}>\<rightarrow\><around*|{|B|}>> where
+    <math|A=<around*|{|<around*|(|0,B|)>|}>> then there exists a bijection
+    between <math|B> and <math|<big|sqcap><rsub|i\<in\><around*|{|0|}>>A<rsub|i>>
+    or as <math|A<rsub|0>=B> there exists a bijection between
+    <math|A<rsub|0>> and <math|<big|prod><rsub|i\<in\><around*|{|0|}>>A<rsub|i>>.
   </example>
 
   <\proof>
     First using [example: <reference|family trivial>] we have\ 
 
     <\equation>
-      <label|eq 2.34.005>B=<big|cup><rsub|i\<in\><around*|{|1|}>>A<rsub|i>
+      <label|eq 2.34.005>B=<big|cup><rsub|i\<in\><around*|{|0|}>>A<rsub|i>
     </equation>
 
     hence\ 
 
     <\equation>
-      <label|eq 2.35.005><around*|(|<big|cup><rsub|i\<in\><around*|{|1|}>>A<rsub|i>|)><rsup|<around*|{|1|}>>=B<rsup|<around*|{|1|}>>
+      <label|eq 2.35.005><around*|(|<big|cup><rsub|i\<in\><around*|{|0|}>>A<rsub|i>|)><rsup|<around*|{|0|}>>=B<rsup|<around*|{|0|}>>
     </equation>
 
-    Let <math|f\<in\>B<rsup|<around*|{|1|}>>\<equallim\><rsub|<text|[eq:
-    <reference|eq 2.35.005>]>><around*|(|<big|cup><rsub|i\<in\><around*|{|1|}>>A<rsub|i>|)>>
-    then if <math|i\<in\><around*|{|1|}>> we must have <math|i=1> hence
-    <math|f<around*|(|i|)>=f<around*|(|1|)>\<in\>B=A<around*|(|1|)>=A<rsub|1>>
-    proving that <math|\<forall\>i\<in\><around*|{|1|}>> we have
+    Let <math|f\<in\>B<rsup|<around*|{|0|}>>\<equallim\><rsub|<text|[eq:
+    <reference|eq 2.35.005>]>><around*|(|<big|cup><rsub|i\<in\><around*|{|0|}>>A<rsub|i>|)>>
+    then if <math|i\<in\><around*|{|0|}>> we must have <math|i=1> hence
+    <math|f<around*|(|i|)>=f<around*|(|0|)>\<in\>B=A<around*|(|0|)>=A<rsub|0>>
+    proving that <math|\<forall\>i\<in\><around*|{|0|}>> we have
     <math|f<around*|(|i|)>\<in\>A<rsub|i>>. Hence
-    <math|f\<in\><big|prod><rsub|i\<in\><around*|{|1|}>>A<rsub|i>> from which
-    it follows that <math|B<rsup|<around*|{|1|}>>\<subseteq\><big|prod><rsub|i\<in\><around*|{|1|}>>A<rsub|i>>.
-    As clearly <math|<big|prod><rsub|i\<in\><around*|{|1|}>>A<rsub|i>\<subseteq\><around*|(|<big|cup><rsub|i\<in\><around*|{|1|}>>A<rsub|i>|)><rsup|<around*|{|1|}>>\<equallim\><rsub|<text|[eq:
-    <reference|eq 2.35.005>]>>B<rsup|<around*|{|1|}>>> we have that\ 
+    <math|f\<in\><big|prod><rsub|i\<in\><around*|{|0|}>>A<rsub|i>> from which
+    it follows that <math|B<rsup|<around*|{|0|}>>\<subseteq\><big|prod><rsub|i\<in\><around*|{|0|}>>A<rsub|i>>.
+    As clearly <math|<big|prod><rsub|i\<in\><around*|{|0|}>>A<rsub|i>\<subseteq\><around*|(|<big|cup><rsub|i\<in\><around*|{|0|}>>A<rsub|i>|)><rsup|<around*|{|0|}>>\<equallim\><rsub|<text|[eq:
+    <reference|eq 2.35.005>]>>B<rsup|<around*|{|0|}>>> we have that\ 
 
     <\equation*>
-      <big|prod><rsub|i\<in\><around*|{|1|}>>A<rsub|i>=B<rsup|<around*|{|1|}>>
+      <big|prod><rsub|i\<in\><around*|{|0|}>>A<rsub|i>=B<rsup|<around*|{|0|}>>
     </equation*>
 
     Now by [theorem: <reference|function and power>] there exists a bijection
-    between <math|B> and <math|B<rsup|<around*|{|1|}>>> which by the above
+    between <math|B> and <math|B<rsup|<around*|{|0|}>>> which by the above
     proves the example.
   </proof>
 
@@ -6587,6 +6589,81 @@
       </equation*>
 
       <math|>
+    </description>
+  </proof>
+
+  TODO check the next theorem
+
+  <\theorem>
+    <label|family product and index transformation>Let <math|I,J,B> be
+    classes, <math|f:I\<rightarrow\>J> a bijection and
+    <math|<around*|{|A<rsub|j>|}><rsub|j\<in\>J>> then\ 
+
+    <\equation*>
+      \<beta\>:<big|prod><rsub|j\<in\>J>A<rsub|j>\<rightarrow\><big|prod><rsub|i\<in\>I>A<rsub|f<around*|(|j|)>><text|
+      where >\<beta\><around*|(|x|)>=x\<circ\>f
+    </equation*>
+
+    is a bijection.
+  </theorem>
+
+  <\proof>
+    First as <math|f:I\<rightarrow\>J> is a bijection we have by [theorem:
+    <reference|family union of family set and surjections>] that\ 
+
+    <\equation>
+      <label|eq 2.59.022><big|cup><rsub|j\<in\>J>A<rsub|j>=<big|cup><rsub|i\<in\>I>A<rsub|f<around*|(|i|)>>
+    </equation>
+
+    Let <math|x\<in\><big|prod><rsub|j\<in\>J>A<rsub|j>> then
+    <math|x\<in\><around*|(|<big|cup><rsub|j\<in\>J>A<rsub|j>|)><rsup|J>>,
+    which is equivalent with <math|x:J\<rightarrow\><big|cup><rsub|j\<in\>J>A<rsub|j>>
+    is a function, and <math|\<forall\>j\<in\>J> we have
+    <math|x<around*|(|j|)>\<in\>A<rsub|j>>. So
+    <math|x\<circ\>f:I\<rightarrow\><big|cup><rsub|j\<in\>J>A<rsub|j>\<equallim\><rsub|<text|[eq:
+    <reference|eq 2.59.022>]>><big|cup><rsub|i\<in\>I>A<rsub|f<around*|(|i|)>>>
+    proving that <math|x\<circ\>f\<in\><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|f<around*|(|i|)>>|)><rsup|I>>,
+    further if <math|i\<in\>I> then <math|<around*|(|x\<circ\>f|)><around*|(|i|)>=x<around*|(|f<around*|(|i|)>|)>\<in\>A<rsub|f<around*|(|i|)>>>,
+    hence\ 
+
+    <\equation>
+      <label|eq 2.60.022>x\<circ\>f\<in\><big|prod><rsub|i\<in\>I>A<rsub|f<around*|(|i|)>>
+    </equation>
+
+    So\ 
+
+    <\equation*>
+      \<beta\>:<big|prod><rsub|j\<in\>J>A<rsub|j>\<rightarrow\><big|prod><rsub|i\<in\>I>A<rsub|f<around*|(|i|)>><text|>
+    </equation*>
+
+    is indeed a function. To prove that it is a bijection note:
+
+    <\description>
+      <item*|injectivity>Assume that <math|\<beta\><around*|(|x|)>=\<beta\><around*|(|y|)>>
+      then
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<circ\>f=y\<circ\>f>|<cell|\<Rightarrowlim\><rsub|f
+        <text| is bijective>>>|<cell|<around*|(|x\<circ\>f|)>\<circ\>f<rsup|-1>=<around*|(|y\<circ\>f|)>\<circ\>f<rsup|-1>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x\<circ\><around*|(|f\<circ\>f<rsup|-1>|)>=y\<circ\><around*|(|f\<circ\>f<rsup|-1>|)>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x\<circ\>Id<rsub|J>=y\<circ\>Id<rsub|J>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x=y>>>>
+      </eqnarray*>
+
+      <item*|surjectivity>If <math|y\<in\><big|prod><rsub|i\<in\>I>A<rsub|f<around*|(|i|)>>>
+      then <math|y:I\<rightarrow\><big|cup><rsub|i\<in\>I>A<rsub|f<around*|(|i|)>>\<equallim\><rsub|<text|[eq:
+      <reference|eq 2.59.022>]>><big|cup><rsub|j\<in\>J>A<rsub|j>> is a
+      function and <math|\<forall\>i\<in\>I> we have
+      <math|y<around*|(|i|)>\<in\>A<rsub|f<around*|(|i|)>>>. As
+      <math|f<rsup|-1>:J\<rightarrow\>I> is a function we have that
+      <math|y\<circ\>f<rsup|-1>:J\<rightarrow\><big|cup><rsub|j\<in\>J>A<rsub|j>>
+      is a function, so that <math|y\<circ\>f<rsup|-1>\<in\><around*|(|<big|cup><rsub|j\<in\>J>A<rsub|j>|)><rsup|J>>,
+      and <math|<around*|(|y\<circ\>f<rsup|-1>|)>*<around*|(|j|)>=y<around*|(|f<rsup|-1><around*|(|j|)>|)>\<in\>A<rsub|f<around*|(|f<rsup|-1><around*|(|j|)>|)>>=A<rsub|j>>.
+      So that\ 
+
+      <\equation*>
+        y\<circ\>f<rsup|-1>\<in\><big|prod><rsub|j\<in\>J>A<rsub|j>
+      </equation*>
+
+      Finally <math|\<beta\><around*|(|y\<circ\>f<rsup|-1>|)>=<around*|(|y\<circ\>f<rsup|-1>|)>\<circ\>f=y\<circ\><around*|(|f<rsup|-1>\<circ\>f|)>=y\<circ\>Id<rsub|A>=y>
+      proving surjectivity.
     </description>
   </proof>
 
@@ -12488,7 +12565,6 @@
     <associate|class union|<tuple|1.56|?>>
     <associate|class union{A,B}|<tuple|1.59|?>>
     <associate|class universal and empotyset properties|<tuple|1.32|?>>
-    <associate|denumerable with one less element|<tuple|3.125|?>>
     <associate|element a=b=\<gtr\>{a}={b}|<tuple|1.34|?>>
     <associate|element equalitiy of unordered pairs|<tuple|1.39|?>>
     <associate|element equality of unordered pairs (1)|<tuple|1.40|?>>
@@ -12557,11 +12633,13 @@
     <associate|eq 2.49.007|<tuple|2.57|?>>
     <associate|eq 2.5.001.2|<tuple|2.5|?>>
     <associate|eq 2.50.007|<tuple|2.58|?>>
-    <associate|eq 2.51.007|<tuple|2.61|?>>
+    <associate|eq 2.51.007|<tuple|2.63|?>>
     <associate|eq 2.51.010|<tuple|2.55|?>>
-    <associate|eq 2.59.018|<tuple|2.59|?>>
+    <associate|eq 2.59.018|<tuple|2.61|?>>
+    <associate|eq 2.59.022|<tuple|2.59|?>>
     <associate|eq 2.6.001|<tuple|2.6|?>>
-    <associate|eq 2.60.018|<tuple|2.60|?>>
+    <associate|eq 2.60.018|<tuple|2.62|?>>
+    <associate|eq 2.60.022|<tuple|2.60|?>>
     <associate|eq 2.7.001|<tuple|2.7|?>>
     <associate|eq 2.8.001|<tuple|2.8|?>>
     <associate|eq 2.9.001|<tuple|2.9|?>>
@@ -12658,6 +12736,7 @@
     <associate|family intersection (2)|<tuple|2.106|?>>
     <associate|family intersection is a set|<tuple|2.107|?>>
     <associate|family intersection(1)|<tuple|2.105|?>>
+    <associate|family product and index transformation|<tuple|2.125|?>>
     <associate|family properties (1)|<tuple|2.110|?>>
     <associate|family properties (2)|<tuple|2.111|?>>
     <associate|family properties (3)|<tuple|2.116|?>>
@@ -12822,15 +12901,15 @@
     <associate|product|<tuple|2.119|?>>
     <associate|product and intersection|<tuple|2.123|?>>
     <associate|product and power|<tuple|2.124|?>>
-    <associate|product extension|<tuple|2.126|?>>
+    <associate|product extension|<tuple|2.127|?>>
     <associate|product inclusion|<tuple|2.122|?>>
     <associate|product of family with one element|<tuple|2.120|?>>
     <associate|product of family with two classes|<tuple|2.121|?>>
     <associate|product product is empty|<tuple|3.101|?>>
     <associate|product product is not empty|<tuple|3.100|?>>
-    <associate|product projection function|<tuple|2.127|?>>
+    <associate|product projection function|<tuple|2.128|?>>
     <associate|product projection is surjective|<tuple|3.99|?>>
-    <associate|product sub-product|<tuple|2.125|?>>
+    <associate|product sub-product|<tuple|2.126|?>>
     <associate|relation|<tuple|3.1|?>>
     <associate|relation properties|<tuple|3.4|?>>
     <associate|relation trivial|<tuple|3.3|?>>
