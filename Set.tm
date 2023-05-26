@@ -6592,15 +6592,13 @@
     </description>
   </proof>
 
-  TODO check the next theorem
-
   <\theorem>
     <label|family product and index transformation>Let <math|I,J,B> be
     classes, <math|f:I\<rightarrow\>J> a bijection and
     <math|<around*|{|A<rsub|j>|}><rsub|j\<in\>J>> then\ 
 
     <\equation*>
-      \<beta\>:<big|prod><rsub|j\<in\>J>A<rsub|j>\<rightarrow\><big|prod><rsub|i\<in\>I>A<rsub|f<around*|(|j|)>><text|
+      \<beta\>:<big|prod><rsub|j\<in\>J>A<rsub|j>\<rightarrow\><big|prod><rsub|i\<in\>I>A<rsub|f<around*|(|i|)>><text|
       where >\<beta\><around*|(|x|)>=x\<circ\>f
     </equation*>
 
@@ -6608,8 +6606,9 @@
   </theorem>
 
   <\proof>
-    First as <math|f:I\<rightarrow\>J> is a bijection we have by [theorem:
-    <reference|family union of family set and surjections>] that\ 
+    First as <math|f:I\<rightarrow\>J> is a bijection, hence surjective, we
+    have by [theorem: <reference|family union of family set and surjections>]
+    that\ 
 
     <\equation>
       <label|eq 2.59.022><big|cup><rsub|j\<in\>J>A<rsub|j>=<big|cup><rsub|i\<in\>I>A<rsub|f<around*|(|i|)>>
@@ -6622,7 +6621,7 @@
     <math|x<around*|(|j|)>\<in\>A<rsub|j>>. So
     <math|x\<circ\>f:I\<rightarrow\><big|cup><rsub|j\<in\>J>A<rsub|j>\<equallim\><rsub|<text|[eq:
     <reference|eq 2.59.022>]>><big|cup><rsub|i\<in\>I>A<rsub|f<around*|(|i|)>>>
-    proving that <math|x\<circ\>f\<in\><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|f<around*|(|i|)>>|)><rsup|I>>,
+    is a function, proving that <math|x\<circ\>f\<in\><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|f<around*|(|i|)>>|)><rsup|I>>,
     further if <math|i\<in\>I> then <math|<around*|(|x\<circ\>f|)><around*|(|i|)>=x<around*|(|f<around*|(|i|)>|)>\<in\>A<rsub|f<around*|(|i|)>>>,
     hence\ 
 
@@ -6652,7 +6651,7 @@
       <reference|eq 2.59.022>]>><big|cup><rsub|j\<in\>J>A<rsub|j>> is a
       function and <math|\<forall\>i\<in\>I> we have
       <math|y<around*|(|i|)>\<in\>A<rsub|f<around*|(|i|)>>>. As
-      <math|f<rsup|-1>:J\<rightarrow\>I> is a function we have that
+      <math|f<rsup|-1>:J\<rightarrow\>I> is a bijection we have that
       <math|y\<circ\>f<rsup|-1>:J\<rightarrow\><big|cup><rsub|j\<in\>J>A<rsub|j>>
       is a function, so that <math|y\<circ\>f<rsup|-1>\<in\><around*|(|<big|cup><rsub|j\<in\>J>A<rsub|j>|)><rsup|J>>,
       and <math|<around*|(|y\<circ\>f<rsup|-1>|)>*<around*|(|j|)>=y<around*|(|f<rsup|-1><around*|(|j|)>|)>\<in\>A<rsub|f<around*|(|f<rsup|-1><around*|(|j|)>|)>>=A<rsub|j>>.
@@ -6662,7 +6661,7 @@
         y\<circ\>f<rsup|-1>\<in\><big|prod><rsub|j\<in\>J>A<rsub|j>
       </equation*>
 
-      Finally <math|\<beta\><around*|(|y\<circ\>f<rsup|-1>|)>=<around*|(|y\<circ\>f<rsup|-1>|)>\<circ\>f=y\<circ\><around*|(|f<rsup|-1>\<circ\>f|)>=y\<circ\>Id<rsub|A>=y>
+      Finally <math|\<beta\><around*|(|y\<circ\>f<rsup|-1>|)>=<around*|(|y\<circ\>f<rsup|-1>|)>\<circ\>f=y\<circ\><around*|(|f<rsup|-1>\<circ\>f|)>=y\<circ\>Id<rsub|I>=y>
       proving surjectivity.
     </description>
   </proof>
