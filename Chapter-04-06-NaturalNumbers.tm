@@ -754,7 +754,7 @@
   </definition>
 
   <\definition>
-    <label|ring integer domain>A ring <math|<around*|\<langle\>|R,\<oplus\>,\<odot\>|\<rangle\>>>
+    <label|ring integral domain>A ring <math|<around*|\<langle\>|R,\<oplus\>,\<odot\>|\<rangle\>>>
     is a <with|font-series|bold|integral domain> if it does not contains a
     <with|font-series|bold|zero divisor>
   </definition>
@@ -3466,7 +3466,7 @@
 
     so that <math|<around*|(|m-1|)>\<cdot\>n=n\<cdot\>m-n> and by
     commutativity [see theorem: <reference|natural numbers sum
-    commutativity>] <math|n\<cdot\><around*|(|m-n|)>=n\<cdot\>m-n>
+    commutativity>] <math|n\<cdot\><around*|(|m-1|)>=n\<cdot\>m-n>
   </proof>
 
   <\theorem>
@@ -7766,7 +7766,7 @@
     <associate|ring|<tuple|4.24|110>>
     <associate|ring absorbing element|<tuple|4.29|111>>
     <associate|ring homeomorphism|<tuple|4.30|112>>
-    <associate|ring integer domain|<tuple|4.26|111>>
+    <associate|ring integral domain|<tuple|4.26|111>>
     <associate|ring isomorphism|<tuple|4.32|112>>
     <associate|ring ring homeomorphism and neutral element|<tuple|4.31|112>>
     <associate|ring subring is a ring|<tuple|4.28|111>>
