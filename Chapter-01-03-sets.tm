@@ -8036,7 +8036,7 @@
     defined by\ 
 
     <\equation*>
-      \<leqslant\><rsub|\|B>=\<leqslant\><big|cap>B\<times\>D=B
+      \<leqslant\><rsub|\|B>=\<leqslant\><big|cap>B\<times\>B=B
     </equation*>
 
     is a order relation in <math|B> making
@@ -12389,7 +12389,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|0>
-    <associate|page-first|7>
+    <associate|page-first|5>
     <associate|page-medium|papyrus>
     <associate|project-flag|false>
     <associate|section-nr|0>

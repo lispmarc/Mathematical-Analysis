@@ -171,15 +171,14 @@
     <\eqnarray*>
       <tformat|<table|<row|<cell|<around*|(|x\<odot\>y|)>\<odot\><around*|(|y<rsup|-1>\<odot\>x<rsup|-1>|)>>|<cell|=>|<cell|x\<odot\><around*|(|y\<odot\><around*|(|y<rsup|-1>\<odot\>x<rsup|-1>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|x\<odot\><around*|(|<around*|(|y\<odot\>y<rsup|-1>|)>\<odot\>x<rsup|-1>|)>>>|<row|<cell|>|<cell|=>|<cell|x\<odot\><around*|(|e\<odot\>x<rsup|-1>|)>>>|<row|<cell|>|<cell|=>|<cell|x\<odot\>x<rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|e>>|<row|<cell|<around*|(|y<rsup|-1>\<odot\>x<rsup|-1>|)>\<odot\><around*|(|x\<odot\>y|)>>|<cell|=>|<cell|y<rsup|-1>\<odot\><around*|(|x<rsup|-1>\<odot\><around*|(|x\<odot\>y|)>|)>>>|<row|<cell|>|<cell|=>|<cell|y<rsup|-1>\<odot\><around*|(|<around*|(|x<rsup|-1>\<odot\>x|)>\<odot\>y|)>>>|<row|<cell|>|<cell|=>|<cell|y<rsup|-1>\<odot\><around*|(|e\<odot\>y|)>>>|<row|<cell|>|<cell|=>|<cell|y<rsup|-1>\<odot\>y>>|<row|<cell|>|<cell|=>|<cell|e>>>>
     </eqnarray*>
-
-    \;
   </proof>
 
   <\theorem>
     <label|group group inverse of inverse>If
     <math|<around*|\<langle\>|G,\<odot\>|\<rangle\>>> is a group then
     <math|\<forall\>x\<in\>G<text| we have
-    ><around*|(|x<rsup|-1>|)><rsup|-1>=x>
+    ><around*|(|x<rsup|-1>|)><rsup|-1>=x> and <math|e<rsup|-1>=e> where
+    <math|e> is the neutral element.
   </theorem>
 
   <\proof>
@@ -190,6 +189,38 @@
     <\eqnarray*>
       <tformat|<table|<row|<cell|x>|<cell|=>|<cell|x\<odot\>e>>|<row|<cell|>|<cell|=>|<cell|x\<odot\><around*|(|x<rsup|-1>\<odot\><around*|(|x<rsup|-1>|)><rsup|-1>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x\<odot\>x<rsup|-1>|)>\<odot\><around*|(|x<rsup|-1>|)><rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|e\<circ\><around*|(|x<rsup|-1>|)><rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x<rsup|-1>|)><rsup|-1>>>>>
     </eqnarray*>
+
+    Further\ 
+
+    <\equation*>
+      e<rsup|-1>=e\<cdot\>e<rsup|-1>=e
+    </equation*>
+
+    \;
+  </proof>
+
+  <\theorem>
+    <label|group -x=-y\<less\>=\<gtr\>x=y>If
+    <math|<around*|\<langle\>|G,\<odot\>|\<rangle\>>> then
+    <math|\<forall\>x,y\<in\>X> we have <math|x=y\<Leftrightarrow\>x<rsup|-1>=y<rsup|-1>>
+  </theorem>
+
+  <\proof>
+    <space|1em>
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>><math|e=x<rsup|-1>\<cdot\>x=x<rsup|-1>\<cdot\>y>
+      and <math|e=x\<cdot\>x<rsup|-1>=y\<cdot\>x<rsup|-1>> proving by
+      uniqueness of the inverse [see theorem: <reference|group inverse
+      element>] that <math|y<rsup|-1>=x<rsup|-1>>
+
+      <item*|<math|\<Leftarrow\>>>If <math|x<rsup|-1>=y<rsup|-1>> then by the
+      above we have <math|<around*|(|x<rsup|-1>|)><rsup|-1>=*<around*|(|y<rsup|-1>|)><rsup|-1>>
+      it follows from [theorem: <reference|group group inverse of inverse>]
+      that <math|x=y>.
+    </description>
+
+    \;
   </proof>
 
   <\definition>
@@ -7516,15 +7547,15 @@
     <associate|auto-16|<tuple|transitive action|110>>
     <associate|auto-17|<tuple|faithful action|110>>
     <associate|auto-18|<tuple|transitive action|110>>
-    <associate|auto-19|<tuple|4.2|110>>
+    <associate|auto-19|<tuple|4.2|111>>
     <associate|auto-2|<tuple|operator|105>>
-    <associate|auto-20|<tuple|ring|110>>
+    <associate|auto-20|<tuple|ring|111>>
     <associate|auto-21|<tuple|zero divisor|111>>
     <associate|auto-22|<tuple|subring|111>>
     <associate|auto-23|<tuple|ring homeomorphism|112>>
     <associate|auto-24|<tuple|ring isomorphism|112>>
     <associate|auto-25|<tuple|4.3|112>>
-    <associate|auto-26|<tuple|field|112>>
+    <associate|auto-26|<tuple|field|113>>
     <associate|auto-27|<tuple|subfield|113>>
     <associate|auto-28|<tuple|field homeomorphism|113>>
     <associate|auto-29|<tuple|5|115>>
@@ -7562,7 +7593,7 @@
     <associate|auto-58|<tuple|6.2.3|158>>
     <associate|auto-59|<tuple|6.2.4|161>>
     <associate|auto-6|<tuple|sub-semi-group|106>>
-    <associate|auto-7|<tuple|sup-group|106>>
+    <associate|auto-7|<tuple|sup-group|107>>
     <associate|auto-8|<tuple|group isomorphism|108>>
     <associate|auto-9|<tuple|left action|110>>
     <associate|cardinality of natural numbers|<tuple|6.36|150>>
@@ -7584,12 +7615,12 @@
     denumerable|<tuple|6.66|162>>
     <associate|countable union of a finite family of countable sets is
     countable|<tuple|6.67|163>>
-    <associate|definition by recursion (1)|<tuple|5.87|138>>
+    <associate|definition by recursion (1)|<tuple|5.87|139>>
     <associate|definition by recursion (2)|<tuple|5.88|139>>
     <associate|denumerable every subset is finite
     denumerable.|<tuple|6.55|158>>
     <associate|denumerable is not subset of a natural
-    number|<tuple|6.26|145>>
+    number|<tuple|6.26|146>>
     <associate|denumerable product nxN is denumerable|<tuple|6.59|160>>
     <associate|denumerable product of denumerable sets is
     denumerable|<tuple|6.58|160>>
@@ -7604,15 +7635,15 @@
     <associate|denumerable union of a finite family of denumerable sets is
     denumerable|<tuple|6.61|160>>
     <associate|denumerable with one less element|<tuple|6.25|145>>
-    <associate|empty set is finite|<tuple|6.20|144>>
+    <associate|empty set is finite|<tuple|6.20|145>>
     <associate|eq 5.1.019|<tuple|5.1|118>>
     <associate|eq 5.10.019|<tuple|5.10|123>>
     <associate|eq 5.11.019|<tuple|5.11|123>>
     <associate|eq 5.12.019|<tuple|5.12|123>>
     <associate|eq 5.13.019|<tuple|5.13|123>>
     <associate|eq 5.14.019|<tuple|5.14|135>>
-    <associate|eq 5.15.019|<tuple|5.15|135>>
-    <associate|eq 5.16.019|<tuple|5.16|135>>
+    <associate|eq 5.15.019|<tuple|5.15|136>>
+    <associate|eq 5.16.019|<tuple|5.16|136>>
     <associate|eq 5.17.019|<tuple|5.17|138>>
     <associate|eq 5.2.019|<tuple|5.2|118>>
     <associate|eq 5.3.019|<tuple|5.3|118>>
@@ -7632,7 +7663,7 @@
     <associate|eq 6.18.020|<tuple|6.17|155>>
     <associate|eq 6.18.022|<tuple|6.18|156>>
     <associate|eq 6.19.022|<tuple|6.19|156>>
-    <associate|eq 6.2.019|<tuple|6.2|146>>
+    <associate|eq 6.2.019|<tuple|6.2|147>>
     <associate|eq 6.20.022|<tuple|6.20|156>>
     <associate|eq 6.21.022|<tuple|6.21|156>>
     <associate|eq 6.22.022|<tuple|6.22|158>>
@@ -7660,12 +7691,12 @@
     <associate|equipotence union|<tuple|6.11|142>>
     <associate|every subset of a finite set is finite|<tuple|6.30|146>>
     <associate|extract maximum element of a family|<tuple|6.47|153>>
-    <associate|field|<tuple|4.34|112>>
-    <associate|field homeomorphism|<tuple|4.38|113>>
-    <associate|field inverse is unique|<tuple|4.35|113>>
-    <associate|field isomorphism and neutral element|<tuple|4.40|114>>
-    <associate|field subfield|<tuple|4.36|113>>
-    <associate|field subfield is a field|<tuple|4.37|113>>
+    <associate|field|<tuple|4.35|113>>
+    <associate|field homeomorphism|<tuple|4.39|113>>
+    <associate|field inverse is unique|<tuple|4.36|113>>
+    <associate|field isomorphism and neutral element|<tuple|4.41|114>>
+    <associate|field subfield|<tuple|4.37|113>>
+    <associate|field subfield is a field|<tuple|4.38|113>>
     <associate|finite ordered sets have a maximum and
     minimum|<tuple|6.44|152>>
     <associate|finite set|<tuple|6.19|144>>
@@ -7675,28 +7706,29 @@
     <associate|function P(A) bijective with 2^A|<tuple|6.5|141>>
     <associate|function injection and inverse surjection|<tuple|6.9|142>>
     <associate|function no surjection between A and P(A)|<tuple|6.7|141>>
-    <associate|group abelian group/sub group|<tuple|4.9|106>>
-    <associate|group example bijections|<tuple|4.14|107>>
+    <associate|group -x=-y\<less\>=\<gtr\>x=y|<tuple|4.9|?>>
+    <associate|group abelian group/sub group|<tuple|4.10|106>>
+    <associate|group example bijections|<tuple|4.15|107>>
     <associate|group example set of functions|<tuple|4.4|105>>
-    <associate|group faithful, transitive action (1)|<tuple|4.23|110>>
-    <associate|group faithful, transitive action (2)|<tuple|4.24|110>>
+    <associate|group faithful, transitive action (1)|<tuple|4.24|110>>
+    <associate|group faithful, transitive action (2)|<tuple|4.25|110>>
     <associate|group group|<tuple|4.5|106>>
-    <associate|group group inheritance|<tuple|4.13|107>>
+    <associate|group group inheritance|<tuple|4.14|107>>
     <associate|group group inverse of inverse|<tuple|4.8|106>>
-    <associate|group homeomorphism|<tuple|4.15|107>>
-    <associate|group homeomorphism properties|<tuple|4.16|107>>
+    <associate|group homeomorphism|<tuple|4.16|108>>
+    <associate|group homeomorphism properties|<tuple|4.17|108>>
     <associate|group inverse element|<tuple|4.6|106>>
-    <associate|group inverse of x.y|<tuple|4.7|?>>
-    <associate|group isomorphism|<tuple|4.17|108>>
-    <associate|group isomorphism inverse|<tuple|4.18|108>>
-    <associate|group left (right action)|<tuple|4.20|110>>
-    <associate|group semi-group inheritance|<tuple|4.12|106>>
+    <associate|group inverse of x.y|<tuple|4.7|106>>
+    <associate|group isomorphism|<tuple|4.18|108>>
+    <associate|group isomorphism inverse|<tuple|4.19|108>>
+    <associate|group left (right action)|<tuple|4.21|110>>
+    <associate|group semi-group inheritance|<tuple|4.13|107>>
     <associate|group semigroup properties|<tuple|4.3|105>>
-    <associate|group sub-group|<tuple|4.11|106>>
+    <associate|group sub-group|<tuple|4.12|107>>
     <associate|infinite condition (1)|<tuple|6.34|148>>
     <associate|infinite set|<tuple|6.21|145>>
     <associate|inverse of a field isomorphism is a field
-    isomorphism|<tuple|4.39|113>>
+    isomorphism|<tuple|4.40|114>>
     <associate|iteration final|<tuple|5.84|138>>
     <associate|mapping of N to a finite set (1)|<tuple|6.45|152>>
     <associate|mapping of N to a finite set (2)|<tuple|6.46|153>>
@@ -7741,7 +7773,7 @@
     <associate|natural numbers n.(m-1)=n.m-n|<tuple|5.68|133>>
     <associate|natural numbers n.k=m.k=\<gtr\>n=m|<tuple|5.76|135>>
     <associate|natural numbers n.s(m)=n+n.m|<tuple|5.38|127>>
-    <associate|natural numbers n\<less\>=i\<less\>=m=\<gtr\>0\<less\>=i-n\<less\>=m-n|<tuple|5.69|133>>
+    <associate|natural numbers n\<less\>=i\<less\>=m=\<gtr\>0\<less\>=i-n\<less\>=m-n|<tuple|5.69|134>>
     <associate|natural numbers n\<less\>=m\<less\>=\<gtr\>n-k\<less\>=m-k|<tuple|5.70|134>>
     <associate|natural numbers n\<less\>=m\<less\>=\<gtr\>there exists a k
     such that m=k|<tuple|5.62|132>>
@@ -7763,7 +7795,7 @@
     <associate|natural numbers n=/s(n)|<tuple|5.15|117>>
     <associate|natural numbers order relation|<tuple|5.45|129>>
     <associate|natural numbers product of non zero numbers is non
-    zero|<tuple|5.74|134>>
+    zero|<tuple|5.74|135>>
     <associate|natural numbers s(n) = n+1|<tuple|5.30|124>>
     <associate|natural numbers s(n)=/0|<tuple|5.10|116>>
     <associate|natural numbers successor|<tuple|5.5|115>>
@@ -7794,25 +7826,25 @@
     <associate|recursion step (2)|<tuple|5.85|138>>
     <associate|recursion step form (1)|<tuple|5.26|122>>
     <associate|recursion step form (3)|<tuple|5.86|138>>
-    <associate|ring|<tuple|4.25|110>>
-    <associate|ring absorbing element|<tuple|4.30|111>>
-    <associate|ring homeomorphism|<tuple|4.31|112>>
-    <associate|ring integral domain|<tuple|4.27|111>>
-    <associate|ring isomorphism|<tuple|4.33|112>>
-    <associate|ring ring homeomorphism and neutral element|<tuple|4.32|112>>
-    <associate|ring subring is a ring|<tuple|4.29|111>>
-    <associate|ring zero divisor|<tuple|4.26|111>>
+    <associate|ring|<tuple|4.26|111>>
+    <associate|ring absorbing element|<tuple|4.31|112>>
+    <associate|ring homeomorphism|<tuple|4.32|112>>
+    <associate|ring integral domain|<tuple|4.28|111>>
+    <associate|ring isomorphism|<tuple|4.34|112>>
+    <associate|ring ring homeomorphism and neutral element|<tuple|4.33|112>>
+    <associate|ring subring is a ring|<tuple|4.30|111>>
+    <associate|ring zero divisor|<tuple|4.27|111>>
     <associate|semi-group|<tuple|4.2|105>>
     <associate|set containing a denumerable set is infinite|<tuple|6.27|146>>
     <associate|set is infinitie if it contains a infinite
     subset|<tuple|6.29|146>>
     <associate|set of finite family is finite|<tuple|6.42|152>>
-    <associate|sub-semi-group|<tuple|4.10|106>>
-    <associate|subring|<tuple|4.28|111>>
+    <associate|sub-semi-group|<tuple|4.11|106>>
+    <associate|subring|<tuple|4.29|111>>
     <associate|subset of finite sets|<tuple|6.40|151>>
     <associate|surjection f:A-\<gtr\>B if A is finite then B is
     finite|<tuple|6.41|151>>
-    <associate|union of two finite sets is finite|<tuple|6.31|146>>
+    <associate|union of two finite sets is finite|<tuple|6.31|147>>
     <associate|{n,..,m} is bijective to S_(m-n)+1|<tuple|6.18|144>>
   </collection>
 </references>
