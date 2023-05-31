@@ -11996,7 +11996,7 @@
 
     <\equation*>
       <around*|\<langle\>|X,R<rsub|m>|\<rangle\>>=<around*|\<langle\>|B<rsub|m>,R<rsub|m>|\<rangle\>>
-      <text| is well-ordered by [by definition of <math|\<cal-A\>>
+      <text| is well-ordered [by definition of <math|\<cal-A\>>
       >B<rsub|m><text| is well ordered]>
     </equation*>
   </proof>

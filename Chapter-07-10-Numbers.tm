@@ -1097,31 +1097,6 @@
   </proof>
 
   <\theorem>
-    <label|integers order preserving bijection><math|i<rsub|\<bbb-N\><rsub|0>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\><rsup|+><rsub|0>>
-    defined by <math|i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>=\<sim\><around*|[|<around*|(|n,0|)>|]>>
-    is a order isomorphism between <math|<around*|\<langle\>|N<rsub|0>,\<leqslant\>|\<rangle\>>>
-    and <math|<around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,\<leqslant\>|\<rangle\>>>.
-    In other words <math|><math|i<rsub|\<bbb-N\><rsub|0>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\><rsup|+><rsub|0>>
-    is a bijection and <math|x\<leqslant\>y\<Leftrightarrow\>i<rsub|\<bbb-N\><rsub|0>><around*|(|x|)>\<leqslant\>i<rsub|\<bbb-N\><rsub|0>><around*|(|y|)>>.
-  </theorem>
-
-  <\proof>
-    Using [theorem: <reference|integers properties (1)>] it follows that
-
-    <\equation*>
-      i<rsub|\<bbb-N\><rsub|0>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\><rsup|+><rsub|0><text|
-      is a bijection>
-    </equation*>
-
-    Further we have:
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|i<rsub|\<bbb-N\><rsub|0>><around*|(|x|)>\<leqslant\>i<rsub|\<bbb-N\><rsub|0>><around*|(|y|)>>|<cell|\<Leftrightarrow\>>|<cell|i<rsub|\<bbb-N\><rsub|0>><around*|(|y|)>+<around*|(|-i<rsub|\<bbb-N\><rsub|0>><around*|(|x|)>|)>\<in\>\<bbb-Z\><rsup|+><rsub|0>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<sim\><around*|[|<around*|(|y,0|)>|]>+<around*|(|-<around*|[|<around*|(|x,0|)>|]>|)>\<in\>\<bbb-Z\><rsup|+><rsub|0>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<sim\><around*|[|<around*|(|y,0|)>|]>+\<sim\><around*|[|<around*|(|0,x|)>|]>\<in\>\<bbb-Z\><rsup|+><rsub|0>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<sim\><around*|[|<around*|(|y,x|)>|]>\<in\>\<bbb-Z\><rsup|+><rsub|0>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<text|[theorem:
-      <reference|integeres positive condition>]>>>|<cell|x\<leqslant\>y>>>>
-    </eqnarray*>
-  </proof>
-
-  <\theorem>
     <label|integers properties (2)>If <math|n,m,k\<in\>\<bbb-Z\>> then\ 
 
     <\enumerate>
@@ -1294,6 +1269,192 @@
     </description>
   </proof>
 
+  <\theorem>
+    <label|integers order preserving bijection><math|i<rsub|\<bbb-N\><rsub|0>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\><rsup|+><rsub|0>>
+    defined by <math|i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>=\<sim\><around*|[|<around*|(|n,0|)>|]>>
+    is a order isomorphism between <math|<around*|\<langle\>|N<rsub|0>,\<leqslant\>|\<rangle\>>>
+    and <math|<around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,\<leqslant\>|\<rangle\>>>.
+    In other words <math|><math|i<rsub|\<bbb-N\><rsub|0>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\><rsup|+><rsub|0>>
+    is a bijection and <math|x\<leqslant\>y\<Leftrightarrow\>i<rsub|\<bbb-N\><rsub|0>><around*|(|x|)>\<leqslant\>i<rsub|\<bbb-N\><rsub|0>><around*|(|y|)>>.
+  </theorem>
+
+  <\proof>
+    Using [theorem: <reference|integers properties (1)>] it follows that
+
+    <\equation*>
+      i<rsub|\<bbb-N\><rsub|0>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\><rsup|+><rsub|0><text|
+      is a bijection>
+    </equation*>
+
+    Further we have:
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|i<rsub|\<bbb-N\><rsub|0>><around*|(|x|)>\<leqslant\>i<rsub|\<bbb-N\><rsub|0>><around*|(|y|)>>|<cell|\<Leftrightarrow\>>|<cell|i<rsub|\<bbb-N\><rsub|0>><around*|(|y|)>+<around*|(|-i<rsub|\<bbb-N\><rsub|0>><around*|(|x|)>|)>\<in\>\<bbb-Z\><rsup|+><rsub|0>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<sim\><around*|[|<around*|(|y,0|)>|]>+<around*|(|-<around*|[|<around*|(|x,0|)>|]>|)>\<in\>\<bbb-Z\><rsup|+><rsub|0>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<sim\><around*|[|<around*|(|y,0|)>|]>+\<sim\><around*|[|<around*|(|0,x|)>|]>\<in\>\<bbb-Z\><rsup|+><rsub|0>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<sim\><around*|[|<around*|(|y,x|)>|]>\<in\>\<bbb-Z\><rsup|+><rsub|0>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<text|[theorem:
+      <reference|integers positive condition>]>>>|<cell|x\<leqslant\>y>>>>
+    </eqnarray*>
+  </proof>
+
+  The above theorem allows us to transfer properties of
+  <math|\<bbb-N\><rsub|0>> to <math|\<bbb-Z\><rsup|+><rsub|0>> as is
+  expressed in the following theorems.
+
+  <\theorem>
+    <label|integers Archimedean><dueto|Archimedean property>If
+    <math|x,y\<in\>\<bbb-Z\>> with <math|0\<less\>x> then there exist a
+    <math|k\<in\>\<bbb-Z\><rsup|+><rsub|0>>such that
+    <math|y\<less\>k\<cdot\>x>
+  </theorem>
+
+  <\proof>
+    We have the following cases for <math|x>:
+
+    <\description>
+      <item*|<math|x\<leqslant\>0>>Take <math|k=1\<in\>\<bbb-Z\><rsup|+><rsub|0>>
+      then as <math|x\<leqslant\>0\<less\>y=1\<cdot\>y=k\<cdot\>y> proving
+      that <math|x\<less\>k\<cdot\>y>
+
+      <item*|<math|0\<less\>x>>Then <math|x\<in\>\<bbb-Z\><rsup|+><rsub|0>>
+      so that as <math|i<rsub|\<bbb-N\><rsub|0>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\><rsup|+><rsub|0>>
+      defined by <math|i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>=\<sim\><around*|[|<around*|(|n,0|)>|]>>
+      is a group isomorphism [see theorem: <reference|integers properties
+      (1)>] between <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>>
+      and <math|<around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,+|\<rangle\>>>.
+      Take <math|n=<around*|(|i<rsub|\<bbb-N\><rsub|0>>|)><rsup|-1><around*|(|x|)>>
+      and <math|m=<around*|(|i<rsub|\<bbb-N\><rsub|0>>|)><rsup|-1><around*|(|y|)>>
+      then <math|x=i<rsub|\<bbb-N\><rsub|0>>*<around*|(|n|)>> and
+      <math|n\<neq\>0> [otherwise <math|x=i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>=i<rsub|\<bbb-N\><rsub|0>><around*|(|0|)>=0>]].
+      Using the Archimedean property of the natural numbers [see theorem:
+      <reference|natural numbers Archimedean property>] there exists a
+      <math|l\<in\>\<bbb-N\><rsub|0>> such that <math|m\<less\>l\<cdot\>n>.
+      So by [theorem: <reference|integers order preserving bijection>] we
+      have that
+
+      <\equation>
+        <label|eq 7.9.022>i<rsub|\<bbb-N\><rsub|0>><around*|(|m|)>\<less\>i<rsub|\<bbb-N\><rsub|0>><around*|(|l\<cdot\>n|)>\<equallim\><rsub|<text|[theorem:
+        <reference|integers properties (1)>]>>i<rsub|\<bbb-N\><rsub|0>><around*|(|l|)>\<cdot\>i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>
+      </equation>
+
+      Take <math|k=i<rsub|\<bbb-N\><rsub|0>><around*|(|l|)>\<in\>\<bbb-Z\><rsup|+><rsub|9>>
+      then as <math|i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>=i<rsub|\<bbb-N\><rsub|0>><around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>>|)><rsup|-1><around*|(|x|)>|)>=x>
+      and <math|i<rsub|\<bbb-N\><rsub|0>><around*|(|m|)>=i<rsub|\<bbb-N\><rsub|0>><around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>>|)><rsup|-1><around*|(|y|)>|)>=y>
+      we have by [eq: <reference|eq 7.9.022>] that\ 
+
+      <\equation*>
+        y\<less\>k\<cdot\>x
+      </equation*>
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|integers positive integeres are well
+    ordered><math|<around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,\<leqslant\>|\<rangle\>>>
+    is a well-ordered set
+  </theorem>
+
+  <\proof>
+    Using [theorem: <reference|integers order preserving bijection>] we have
+    that\ 
+
+    <\equation*>
+      i<rsub|\<bbb-N\><rsub|0>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\><rsup|+><rsub|0><text|
+      is a order isomorphism between <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>>>
+      <text|and ><around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>|\<rangle\>>
+    </equation*>
+
+    Let <math|A\<subseteq\>\<bbb-Z\><rsup|+><rsub|0>> such that
+    <math|A\<neq\>0> then as <math|i<rsub|\<bbb-N\><rsub|0>>> is a bijection,
+    hence a surjection, we have that <math|<around*|(|i<rsub|\<bbb-N\><rsub|0>>|)><rsup|-1><around*|(|A|)>\<neq\>\<varnothing\>>.
+    By [theorem: <reference|natural numbers are well ordered>]
+    <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>> is
+    well-ordered so there exists a least element <math|m> of
+    <math|<around*|(|i<rsub|\<bbb-N\><rsub|0>>|)><rsup|-1><around*|(|A|)>>.
+    So\ 
+
+    <\equation*>
+      m\<in\><around*|(|i<rsub|\<bbb-N\><rsub|0>>|)><rsup|-1><around*|(|A|)><text|
+      and >\<forall\>n\<in\><around*|(|i<rsub|\<bbb-N\><rsub|0>>|)><rsup|-1><around*|(|A|)><text|
+      we have >m\<leqslant\>n
+    </equation*>
+
+    As <math|m\<in\><around*|(|i<rsub|\<bbb-N\><rsub|0>>|)><rsup|-1><around*|(|A|)>>
+    we have for <math|M=i<rsub|\<bbb-N\><rsub|0>><around*|(|m|)>> that\ 
+
+    <\equation>
+      <label|eq 7.10.022>M\<in\>A
+    </equation>
+
+    Further if <math|x\<in\>A> then as <math|i<rsub|\<bbb-N\><rsub|0>><around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>>|)><rsup|-1><around*|(|x|)>|)>=x\<in\>A>
+    we have that <math|<around*|(|i<rsub|\<bbb-N\><rsub|0>>|)><rsup|-1><around*|(|x|)>\<in\><around*|(|i<rsub|\<bbb-N\><rsub|0>>|)><rsup|-1><around*|(|A|)>>
+    so that <math|m\<leqslant\><around*|(|i<rsub|\<bbb-N\><rsub|0>>|)><rsup|-1><around*|(|x|)>*>,
+    hence by [theorem: <reference|integers order preserving bijection>] we
+    have that <math|M=i<rsub|\<bbb-N\><rsub|0>><around*|(|m|)>\<leqslant\>i<rsub|\<bbb-N\><rsub|0>><around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>>|)><rsup|-1><around*|(|x|)>|)>=x>.
+    Proving that\ 
+
+    <\equation>
+      <label|eq 7.11.022>\<forall\>x\<in\>A<text| we have
+      <math|M\<leqslant\>x>>
+    </equation>
+
+    From [eq: <reference|eq 7.10.022>] and [eq: <reference|eq 7.11.022>] i
+    follows that <math|A> has a least element proving that
+    <math|<around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,\<leqslant\>|\<rangle\>>>
+    is a well-ordered set.
+  </proof>
+
+  <\theorem>
+    <label|integers are conditional complete><math|<around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,\<leqslant\>|\<rangle\>>>
+    is conditional complete [see definition: <reference|order conditional
+    complete order>].
+  </theorem>
+
+  <\proof>
+    As by [theorem: <reference|integers positive integeres are well ordered>]
+    <math|<around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,\<leqslant\>|\<rangle\>>>
+    is well-ordered it follows from [theorem: <reference|order well order
+    implies conditional complete and totally ordering>] it follows that
+    <math|<around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,\<leqslant\>|\<rangle\>>>
+    is conditional complete.
+  </proof>
+
+  <\theorem>
+    <label|integers sup is max>If <math|A\<subseteq\>\<bbb-Z\><rsup|+><rsub|0>>
+    is such that <math|A\<neq\>\<varnothing\>> and <math|sup<around*|(|A|)>>
+    exists then <math|sup<around*|(|A|)>\<in\>A>.
+  </theorem>
+
+  <\proof>
+    By [theorem: <reference|integers order preserving bijection>]\ 
+
+    <\equation*>
+      i<rsub|\<bbb-N\><rsub|0>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\><rsup|+><rsub|0><text|
+      is a order isomorphism between ><around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>><text|
+      and ><around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,\<leqslant\>|\<rangle\>>
+    </equation*>
+
+    which by [theorem: <reference|order isomorphism condition (2)>] means
+    that\ 
+
+    <\equation*>
+      <around*|(|i<rsub|\<bbb-N\><rsub|0>>|)><rsup|-1>:\<bbb-Z\><rsup|+><rsub|>\<rightarrow\>\<bbb-N\><rsub|0><text|
+      is a order isomorphism between ><around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,\<leqslant\>|\<rangle\>><text|
+      and ><around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>
+    </equation*>
+
+    Assume that <math|M=sup<around*|(|A|)>> exists then by [theorem:
+    <reference|order isomorphism preservers sup and inf>]
+    <math|sup<around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>>|)><rsup|-1><around*|(|A|)>|)>>
+    exist and <math|sup<around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>>|)><rsup|-1><around*|(|A|)>|)>=<around*|(|i<rsub|\<bbb-N\><rsub|0>>|)><rsup|-1><around*|(|M|)>>.
+    By [theorem: <reference|natural numbers sup property>] we have that
+    <math|sup<around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>>|)><rsup|-1><around*|(|A|)>|)>\<in\><around*|(|i<rsub|\<bbb-N\><rsub|0>>|)><rsup|-1><around*|(|A|)>>
+    so that <math|<around*|(|i<rsub|\<bbb-N\><rsub|0>>|)><rsup|-1><around*|(|M|)>\<in\><around*|(|i<rsub|\<bbb-N\><rsub|0>>|)><rsup|-1><around*|(|A|)>>,
+    hence <math|M=i<rsub|\<bbb-N\><rsub|0>><around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>>|)><rsup|-1><around*|(|M|)>|)>\<in\><around*|(|i<rsub|\<bbb-N\><rsub|0>>|)><around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>>|)><rsup|-1><around*|(|A|)>|)>=A>
+    or\ 
+
+    <\equation*>
+      sup<around*|(|A|)>\<in\>A
+    </equation*>
+  </proof>
+
   \;
 
   \;
@@ -1314,7 +1475,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|6>
-    <associate|page-first|165>
+    <associate|page-first|167>
     <associate|section-nr|2>
     <associate|subsection-nr|4>
   </collection>
@@ -1329,6 +1490,8 @@
     <associate|auto-5|<tuple|7.2|?>>
     <associate|auto-6|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>>|?>>
     <associate|eq 7.1.022|<tuple|7.1|?>>
+    <associate|eq 7.10.022|<tuple|7.10|?>>
+    <associate|eq 7.11.022|<tuple|7.11|?>>
     <associate|eq 7.2.022|<tuple|7.2|?>>
     <associate|eq 7.3.022|<tuple|7.3|?>>
     <associate|eq 7.4.022|<tuple|7.4|?>>
@@ -1336,41 +1499,45 @@
     <associate|eq 7.6.022|<tuple|7.6|?>>
     <associate|eq 7.7.022|<tuple|7.7|?>>
     <associate|eq 7.8.022|<tuple|7.8|?>>
+    <associate|eq 7.9.022|<tuple|7.9|?>>
     <associate|integeres order|<tuple|7.28|?>>
-    <associate|integeres positive condition|<tuple|7.31|?>>
     <associate|integers|<tuple|7.2|?>>
     <associate|integers (-1).n|<tuple|7.17|?>>
     <associate|integers -(n,m)=(-n),(-m)|<tuple|7.18|?>>
-    <associate|integers 0\<less\>=n.n|<tuple|7.37|?>>
+    <associate|integers 0\<less\>=n.n|<tuple|7.36|?>>
     <associate|integers 0\<less\>n and 0\<less\>m then
-    0\<less\>n.m|<tuple|7.34|?>>
+    0\<less\>n.m|<tuple|7.33|?>>
+    <associate|integers Archimedean|<tuple|7.38|?>>
     <associate|integers absorbing element|<tuple|7.16|?>>
+    <associate|integers are conditional complete|<tuple|7.40|?>>
     <associate|integers condition for 0|<tuple|7.14|?>>
     <associate|integers difference|<tuple|7.10|?>>
     <associate|integers equivalence relation|<tuple|7.1|?>>
     <associate|integers integers forms a group|<tuple|7.8|?>>
     <associate|integers integral domain|<tuple|7.13|?>>
+    <associate|integers is conditional complete|<tuple|7.40|?>>
     <associate|integers multiplication|<tuple|7.12|?>>
     <associate|integers multiplication equivalence|<tuple|7.11|?>>
     <associate|integers n.r=k.r=\<gtr\>n=k|<tuple|7.19|?>>
-    <associate|integers n\<less\>=m=\<gtr\>n.k\<less\>=m.k|<tuple|7.36|?>>
-    <associate|integers n\<less\>m=\<gtr\>n,k\<less\>=m.k|<tuple|7.35|?>>
+    <associate|integers n\<less\>=m=\<gtr\>n.k\<less\>=m.k|<tuple|7.35|?>>
+    <associate|integers n\<less\>m=\<gtr\>n,k\<less\>=m.k|<tuple|7.34|?>>
     <associate|integers neutral element|<tuple|7.6|?>>
     <associate|integers non negative|<tuple|7.23|?>>
     <associate|integers non positive numbers|<tuple|7.25|?>>
-    <associate|integers order preserving bijection|<tuple|7.32|?>>
+    <associate|integers order preserving bijection|<tuple|7.37|?>>
     <associate|integers positive and negative|<tuple|7.27|?>>
     <associate|integers positive condition|<tuple|7.31|?>>
+    <associate|integers positive integeres are well ordered|<tuple|7.39|?>>
     <associate|integers properties|<tuple|7.22|?>>
     <associate|integers properties (1)|<tuple|7.24|?>>
-    <associate|integers properties (2)|<tuple|7.33|?>>
+    <associate|integers properties (2)|<tuple|7.32|?>>
     <associate|integers sum uniqueness|<tuple|7.4|?>>
+    <associate|integers sup is max|<tuple|7.41|?>>
     <associate|integers x\<less\>=y\<less\>=\<gtr\>-y\<less\>=x|<tuple|7.30|?>>
     <associate|integers z=-z=\<gtr\>z=0|<tuple|7.15|?>>
     <associate|integers z^n++m=z^n.z^m|<tuple|7.21|?>>
     <associate|integers {x\|-\<less\>=x}|<tuple|7.29|?>>
     <associate|integers ~([n,m])~([n+k,m+k)]|<tuple|7.3|?>>
-    <associate|n\<less\>=m=\<gtr\>n.k\<less\>=m.k|<tuple|7.36|?>>
   </collection>
 </references>
 
