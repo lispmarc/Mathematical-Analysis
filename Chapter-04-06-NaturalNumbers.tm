@@ -7182,8 +7182,6 @@
     set is countable>] every subset of <math|A> is countable.
   </proof>
 
-  TODO
-
   <\theorem>
     <label|countable set conditions (1)>Let <math|A> be a non empty set then
     the following are equivalent:
