@@ -129,7 +129,8 @@
 
   <\definition>
     <label|integers><index|integers>The set of integers <math|\<bbb-Z\>> is
-    defined by <math|\<bbb-Z\>/\<sim\>> or in other words\ 
+    defined by <math|<around*|(|\<bbb-N\><rsub|0>\<times\>\<bbb-N\><rsub|0>|)>/\<sim\>>
+    or in other words\ 
 
     <\equation*>
       \<bbb-Z\>=<around*|{|\<sim\><around*|[|<around*|(|n,m|)>|]>\|<around*|(|n,m|)>\<in\>\<bbb-N\><rsub|0>\<times\>\<bbb-N\><rsub|0>|}>
@@ -2209,28 +2210,399 @@
 
   TODO<chapter|The Rational Numbers>
 
-  The reason to introduce the integer numbers was to extend it to the group
-  <math|<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>> where
-  <math|\<bbb-N\><rsub|0>> is in embedded as
-  <math|\<bbb-Z\><rsup|+><rsub|0>>. For that we introduced a equivalence
-  relation allowing us to have a additive inverse element. We introduced also
-  multiplication making <math|<around*|\<langle\>|\<bbb-Z\>,+,-|\<rangle\>>>
-  a integral domain. Next we want to extend <math|\<bbb-Z\>> itself to a
-  ring, again we will use equivalence relations to do this.\ 
+  n this chapter we will introduce the set of rational numbers and embed the
+  integer numbers in it. Just as with <math|\<bbb-Z\>> and
+  <math|\<bbb-N\><rsub|0>> we will introduce a order relation, a sum
+  operator, a product operator, neutral elements for addition and
+  multiplication as well as inverse elements. If we would use different
+  symbols to note these we introduce a lot of excessive notation clutter. So
+  we use the same symbols for the natural numbers, integers and rational
+  numbers, and use context to determine the meaning of the symbols involved.
+  The following table should help you in determining the meaning of the
+  different symbols based on the context of there usage.
+
+  \;
+
+  <block|<tformat|<table|<row|<cell|Context>|<cell|Expression>|<cell|Operator>>|<row|<cell|<math|n,m\<in\>\<bbb-N\><rsub|0>>>|<cell|n+m>|<cell|sum
+  in <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|n\<cdot\>m>>|<cell|product
+  in <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|n\<leqslant\>m>>|<cell|order
+  in <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|n\<less\>m>>|<cell|strict
+  order in <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|n-m>>|<cell|subtraction
+  in <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>>>>|<row|<cell|<math|n\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|n+0>
+  or <math|0+n>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>>>>|<row|<cell|<math|n\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|n\<cdot\>1<text|
+  or >1\<cdot\>n>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|n\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|-n>>|<cell|inverse
+  element in <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-Z\>>>|<cell|n+m>|<cell|sum
+  in <math|<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-Z\>>>|<cell|<math|n\<cdot\>m>>|<cell|product
+  in <math|<around*|\<langle\>|\<bbb-Z\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-Z\>>>|<cell|<math|n\<leqslant\>m>>|<cell|order
+  in <math|<around*|\<langle\>|\<bbb-Z\>\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-Z\>>>|<cell|<math|n\<less\>m>>|<cell|strict
+  order in <math|<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-Z\>>>|<cell|<math|n-m>>|<cell|subtraction
+  in <math|<around*|\<langle\>|\<bbb-Z\>,-|\<rangle\>>>>>|<row|<cell|<math|n\<in\>\<bbb-Z\>>>|<cell|<math|n+0>
+  or <math|0+n>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>>>>|<row|<cell|<math|n\<in\>\<bbb-Z\>>>|<cell|<math|n\<cdot\>1<text|
+  or >1\<cdot\>n>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-Z\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|n\<in\>\<bbb-Z\>>>|<cell|<math|-n>>|<cell|inverse
+  element in <math|<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-Q\>>>|<cell|q+r>|<cell|sum
+  in <math|<around*|\<langle\>|\<bbb-Q\>,+|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-Q\>>>|<cell|<math|q\<cdot\>r>>|<cell|product
+  in <math|<around*|\<langle\>|\<bbb-Q\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-Q\>>>|<cell|<math|q\<leqslant\>r>>|<cell|order
+  in <math|<around*|\<langle\>|\<bbb-Q\>\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-Q\>>>|<cell|<math|q\<less\>r>>|<cell|strict
+  order in <math|<around*|\<langle\>|\<bbb-Q\>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|q,e\<in\>\<bbb-Q\>>>|<cell|<math|q-r>>|<cell|subtraction
+  in <math|<around*|\<langle\>|\<bbb-Q\>,-|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-Q\>>>|<cell|<math|q/r>>|<cell|division
+  in <math|<around*|\<langle\>|\<bbb-Q\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-Q\>>>|<cell|<math|q+0>
+  or <math|0+q>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-Q\>,+|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-Q\>>>|<cell|<math|q\<cdot\>1<text|
+  or >1\<cdot\>q>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-Q\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-Q\>>>|<cell|<math|-q>>|<cell|inverse
+  element in <math|<around*|\<langle\>|\<bbb-Q\>,+|\<rangle\>>>>>>>>
 
   \;
 
   \;
 
-  \;
+  <section|Definition and arithmetic>
 
-  \;
+  One of the problems that the integer numbers have is that the quotient of
+  two numbers <math|n> and <math|m> is only defined if <math|n> divides
+  <math|m>.\ 
 
-  \;
+  <\example>
+    If <math|x> is a even number and <math|y> is a odd number then <math|x>
+    can not divide <math|y>.
+  </example>
 
-  \;
+  <\proof>
+    As <math|x> is even there exists a <math|n\<in\>\<bbb-Z\>> such that
+    <math|x=2\<cdot\>n> and as <math|y> is <math|odd> <math|y> is not even.
+    Assume that <math|n\|m> then there exists a <math|q\<in\>\<bbb-Z\>> such
+    that <math|x\<cdot\>y=m> but then <math|y=2\<cdot\><around*|(|x\<cdot\>q|)>>
+    proving that <math|y> is even, contradicting the fact that <math|y> is
+    odd.
+  </proof>
 
-  \;
+  The rational number will resolve this defect. Just as we have done with set
+  of integers we work with pairs of integers <math|*<around*|(|n,m|)>> that
+  will be interpreted as the quotient <math|<frac|n|m>> [the integer such
+  that <math|<frac|n|m>\<cdot\>m=n>] if <math|m> divides <math|n> or a formal
+  quotient if <math|m> does not divide <math|n>. We have to be carefull
+  however for if <math|m=0> then the quotient only exist if <math|n=0> and
+  then every integer is a quotient. So we should only consider pairs
+  <math|<around*|(|n,m|)>> where <math|n\<in\>\<bbb-Z\>> and
+  <math|m\<in\>\<bbb-Z\>\\<around*|{|0|}>>. Further we have that
+  <math|<frac|8|4>=<frac|6|3>=<frac|4|2>=<frac|2|1>=2> so we have to define a
+  equivalence relation and work with equivalence classes.\ 
+
+  <\definition>
+    <label|integers without 0><math|\<bbb-Z\><rsup|\<ast\>>=\<bbb-Z\>\\<around*|{|0|}>>
+  </definition>
+
+  <\theorem>
+    <label|rational equivalence relation>The relation
+    <math|\<simeq\>\<subseteq\><around*|(|\<bbb-Z\>\<times\>\<bbb-Z\><rsup|\<ast\>>|)>\<times\><around*|(|\<bbb-Z\>\<times\>\<bbb-Z\><rsup|\<ast\>>|)>>
+    defined by\ 
+
+    <\equation*>
+      \<simeq\>=<around*|{|<around*|(|<around*|(|n,m|)>,<around*|(|r,s|)>|)>\<in\><around*|(|\<bbb-Z\>\<times\>\<bbb-Z\><rsup|\<ast\>>|)>\<times\><around*|(|\<bbb-Z\>\<times\>\<bbb-Z\><rsup|\<ast\>>|)>\|n\<cdot\>s=m\<cdot\>r|}>
+    </equation*>
+
+    is a equivalence relation in <math|\<bbb-Z\>\<times\>\<bbb-Z\><rsup|\<ast\>>>.
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|reflexivity>If <math|<around*|{|n,m|}>\<in\>\<bbb-Z\>\<times\>\<bbb-Z\><rsup|\<ast\>>>
+      then <math|n\<cdot\>m\<equallim\><rsub|<text|[theorem:
+      <reference|integers integers forms a group>]>>m\<cdot\>n> so that
+      <math|<around*|(|n,m|)>\<simeq\><around*|(|n,m|)>>
+
+      <item*|symmetry>If <math|<around*|(|n,m|)>\<simeq\><around*|(|r,s|)>>
+      then <math|n\<cdot\>s=m\<cdot\>r\<Rightarrowlim\><rsub|<text|[theorem:
+      <reference|integers integers forms a group>]>>r\<cdot\>m=s\<cdot\>n>
+      proving that <math|<around*|(|r,s|)>\<simeq\><around*|(|n,m|)>>
+
+      <item*|transitivity>If <math|<around*|(|n,m|)>\<simeq\><around*|(|k.l|)>>
+      and <math|<around*|(|k,l|)>\<simeq\><around*|(|r,s|)>> then
+      <math|n\<cdot\>l=m\<cdot\>k> and <math|k\<cdot\>s=l\<cdot\>r> then we
+      have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|n\<cdot\>l|)>\<cdot\>s=<around*|(|m\<cdot\>k|)>\<cdot\>s>|<cell|\<Rightarrowlim\><rsub|<text|[theorem:
+        <reference|integers integral domain>]>>>|<cell|<around*|(|n\<cdot\>s|)>\<cdot\>l=m\<cdot\><around*|(|k\<cdot\>s|)>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|<around*|(|n\<cdot\>s|)>\<cdot\>l=m\<cdot\><around*|(|l\<cdot\>r|)>>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|[theorem:
+        <reference|integers integral domain>]>>>|<cell|<around*|(|n\<cdot\>s|)>\<cdot\>l=<around*|(|m\<cdot\>r|)>\<cdot\>l>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|l\<neq\>0\<wedge\><text|[theorem:
+        <reference|integers n.r=k.r=\<gtr\>n=k>]>>>|<cell|n\<cdot\>s=m\<cdot\>r>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|<around*|(|n,m|)>\<simeq\><around*|(|r,s|)>>>>>
+      </eqnarray*>
+    </description>
+  </proof>
+
+  <\definition>
+    <label|rational numbers>The set of rational numbers noted as
+    <math|\<bbb-Q\>> is defined as
+
+    <\equation*>
+      \<bbb-Q\>=<around*|(|\<bbb-Z\>\<times\>\<bbb-Z\><rsup|\<ast\>>|)>/\<simeq\>
+    </equation*>
+
+    or using the definition of <math|<around*|(|\<bbb-Z\>\<times\>\<bbb-Z\><rsup|\<ast\>>|)>/\<simeq\>>
+
+    <\equation*>
+      \<bbb-Q\>=<around*|{|\<simeq\><around*|[|<around*|(|n,m|)>|]>\|<around*|(|n,m|)>\<in\>\<bbb-Z\>\<times\>\<bbb-Z\><rsup|\<ast\>>|}>
+    </equation*>
+
+    We note <math|\<simeq\><around*|[|<around*|(|n,m|)>|]>\<in\>\<bbb-Q\>> as
+    <math|<frac|n|m>>, <math|n> is called the
+    <with|font-series|bold|numerator> and <math|m> is called the
+    <with|font-series|bold|denominator>. Using this notation we have that
+    <math|<frac|n|m>=<frac|n<rprime|'>|m<rprime|'>>\<Leftrightarrow\>n\<cdot\>m<rprime|'>=m\<cdot\>n<rprime|'>>.
+  </definition>
+
+  <\theorem>
+    <label|rational n/m=n.k/m.k>If <math|k\<in\>\<bbb-Z\><rsub|0>> and
+    <math|n,m\<in\>\<bbb-Z\>> then\ 
+
+    <\enumerate>
+      <item><math|<frac|n|m>=<frac|n\<cdot\>k|m\<cdot\>k>>
+
+      <item><math|<frac|0|n>=<frac|0|1>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>First as <math|k\<neq\>0> and <math|m\<neq\>0> we have that
+      <math|m\<cdot\>k\<neq\>0> so that <math|<frac|n\<cdot\>k|m\<cdot\>k>\<in\>\<bbb-Q\>>.
+      Further\ 
+
+      <\equation*>
+        n\<cdot\><around*|(|m\<cdot\>k|)>\<equallim\><rsub|<text|[theorem:
+        <reference|integers integral domain>]>>m\<cdot\><around*|(|n\<cdot\>k|)>
+      </equation*>
+
+      proving that\ 
+
+      <\equation*>
+        <frac|n|m>=<frac|n\<cdot\>k|m\<cdot\>k>
+      </equation*>
+
+      <item>As <math|0\<cdot\>1=0=n\<cdot\>0> we have
+      <math|<frac|0|n>=<frac|0|1>>
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|rational sum operator (1)>Let <math|<frac|n|m>,<frac|n<rprime|'>|m<rprime|'>>,<frac|r|s>,<frac|r<rprime|'>|s<rprime|'>>\<in\>\<bbb-Q\>>
+    are such that <math|<frac|n|m>=<frac|n<rprime|'>|m<rprime|'>>> and
+    <math|<frac|r|s>=<frac|r<rprime|'>|s<rprime|'>>> then\ 
+
+    <\equation*>
+      <frac|n\<cdot\>s+r\<cdot\>m|m\<cdot\>s>,<frac|n<rprime|'>\<cdot\>s<rprime|'>+r<rprime|'>\<cdot\>m<rprime|'>|m<rprime|'>\<cdot\>s<rprime|'>>\<in\>\<bbb-Q\><text|
+      and ><frac|n\<cdot\>s+r\<cdot\>m|m\<cdot\>s>=<frac|n<rprime|'>\<cdot\>s<rprime|'>+r<rprime|'>\<cdot\>m<rprime|'>|m<rprime|'>\<cdot\>s<rprime|'>>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    First as <math|m\<neq\>0,m<rprime|'>\<neq\>0,s\<neq\>0> and
+    <math|s<rprime|'>\<neq\>0> then <math|m\<cdot\>s\<neq\>0,m<rprime|'>\<cdot\>s<rprime|'>=0>
+    we have that\ 
+
+    <\equation*>
+      <frac|n\<cdot\>s+r\<cdot\>m|m\<cdot\>s>,<frac|n<rprime|'>\<cdot\>s<rprime|'>+r<rprime|'>\<cdot\>m<rprime|'>|m<rprime|'>\<cdot\>s<rprime|'>>\<in\>\<bbb-Q\>
+    </equation*>
+
+    As <math|><math|<frac|n|m>=<frac|n<rprime|'>|m<rprime|'>>> and
+    <math|<frac|r|s>=<frac|r<rprime|'>|s<rprime|'>>> we have
+
+    <\equation>
+      <label|eq 8.1.023>n\<cdot\>m<rprime|'>=m\<cdot\>n<rprime|'>\<wedge\>r\<cdot\>s<rprime|'>=s\<cdot\>r<rprime|'>
+    </equation>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|n\<cdot\>s+r\<cdot\>m|)>\<cdot\><around*|(|m<rprime|'>\<cdot\>s<rprime|'>|)>>|<cell|=>|<cell|<around*|(|n\<cdot\>s|)>\<cdot\><around*|(|m<rprime|'>\<cdot\>s<rprime|'>|)>+<around*|(|r\<cdot\>m|)>\<cdot\><around*|(|m<rprime|'>\<cdot\>s<rprime|'>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|integers integral domain>]>>>|<cell|<around*|(|n\<cdot\>m<rprime|'>|)>\<cdot\><around*|(|s\<cdot\>s<rprime|'>|)>+<around*|(|r\<cdot\>s<rprime|'>|)>\<cdot\><around*|(|m\<cdot\>m<rprime|'>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 8.1.023>]>>>|<cell|<around*|(|m\<cdot\>n<rprime|'>|)>\<cdot\><around*|(|s\<cdot\>s<rprime|'>|)>+<around*|(|s\<cdot\>r<rprime|'>|)>\<cdot\><around*|(|m\<cdot\>m<rprime|'>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|integers integral domain>]>>>|<cell|<around*|(|n<rprime|'>\<cdot\>s|)>\<cdot\><around*|(|m\<cdot\>s|)>+<around*|(|r<rprime|'>\<cdot\>m<rprime|'>|)>\<cdot\><around*|(|m\<cdot\>s|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|n<rprime|'>\<cdot\>s+r<rprime|'>\<cdot\>m<rprime|'>|)>\<cdot\><around*|(|m\<cdot\>s|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|integers integral domain>]>>>|<cell|<around*|(|m\<cdot\>s|)>\<cdot\><around*|(|n<rprime|'>\<cdot\>s+r<rprime|'>\<cdot\>m<rprime|'>|)>>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation*>
+      <frac|n\<cdot\>s+r\<cdot\>m|m\<cdot\>s>=<frac|n<rprime|'>\<cdot\>s<rprime|'>+r<rprime|'>\<cdot\>m<rprime|'>|m<rprime|'>\<cdot\>s<rprime|'>>
+    </equation*>
+  </proof>
+
+  The above theorem ensures that the following is well-defined.
+
+  <\definition>
+    <label|rational sum operator>The sum operator
+    <math|+:\<bbb-Q\>\<times\>\<bbb-Q\>\<rightarrow\>\<bbb-Q\>> is defined by\ 
+
+    <\equation*>
+      <frac|n|m>+<frac|r|s>=<frac|n\<cdot\>s+m\<cdot\>r|m\<cdot\>s>
+    </equation*>
+  </definition>
+
+  <\theorem>
+    <label|rational group><index|<math|<around*|\<langle\>|\<bbb-Q\>,+|)>>><math|<around*|\<langle\>|\<bbb-Q\>,+|\<rangle\>>>
+    is a <with|font-series|bold|Abelian group> with neutral element
+    <math|0=<frac|0|1>> and for <math|<frac|n|m>\<in\>\<bbb-Q\>> the inverse
+    element <math|<frac|-n|m>>.
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|associativity> Let <math|<frac|a|b>,<frac|c|d>,<frac|e|f>\<in\>\<bbb-Q\>>
+      then
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<frac|a|b>+<around*|(|<frac|c|d>+<frac|e|f>|)>>|<cell|=>|<cell|<frac|a|b>+<frac|c\<cdot\>f+d\<cdot\>e|d\<cdot\>f>>>|<row|<cell|>|<cell|=>|<cell|<frac|a\<cdot\><around*|(|d\<cdot\>f|)>+b\<cdot\><around*|(|c\<cdot\>f+d\<cdot\>e|)>|b\<cdot\><around*|(|d\<cdot\>f|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|integers integral domain>]>>>|<cell|<frac|<around*|(|a\<cdot\>d|)>\<cdot\>f+<around*|(|c\<cdot\>b|)>\<cdot\>f+<around*|(|b\<cdot\>d|)>\<cdot\>e|<around*|(|b\<cdot\>d|)>\<cdot\>f>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|integers integral domain>]>>>|<cell|<frac|<around|(|a\<cdot\>d+c\<cdot\>b|)>\<cdot\>f+<around*|(|b\<cdot\>d|)>\<cdot\>e|<around*|(|b\<cdot\>d|)>\<cdot\>f>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<frac|a|b>+<frac|c|d>|)>+<frac|e|f>>>>>
+      </eqnarray*>
+
+      <item*|commutativity>Let <math|<frac|a|b>,<frac|c|d>\<in\>\<bbb-Q\>>
+      then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<frac|a|b>+<frac|c|d>>|<cell|=>|<cell|<frac|a\<cdot\>d+b\<cdot\>c|b\<cdot\>d>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|integers integral domain>]>>>|<cell|<frac|c\<cdot\>b+d\<cdot\>a|d\<cdot\>b>>>|<row|<cell|>|<cell|=>|<cell|<frac|c|d>+<frac|a|b>>>>>
+      </eqnarray*>
+
+      <item*|neutral element>Let <math|<frac|a|b>\<in\>\<bbb-Q\>> then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<frac|a|b>+<frac|0|1>>|<cell|\<equallim\><rsub|<text|commutativity>>>|<cell|<frac|a\<cdot\>1+b\<cdot\>0|b\<cdot\>1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|integers integral domain>] and [theorem:
+        <reference|integers absorbing element>]>>>|<cell|<frac|a|b>>>>>
+      </eqnarray*>
+
+      <item*|inverse element> Let <math|<frac|a|b>\<in\>\<bbb-Q\>> then we
+      have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<frac|a|b>+<frac|-a|b>>|<cell|=>|<cell|<frac|-a|b>+<frac|a|b>>>|<row|<cell|>|<cell|=>|<cell|<frac|<around*|(|-a|)>\<cdot\>b+b\<cdot\>a|b\<cdot\>b>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|integers integral domain>]>>>|<cell|<frac|b\<cdot\><around*|(|<around*|(|-a|)>+a|)>|b\<cdot\>b>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|integers integral domain>]>>>|<cell|<frac|0|b\<cdot\>b>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|rational n/m=n.k/m.k>]>>>|<cell|<frac|0|1>>>|<row|<cell|>|<cell|=>|<cell|0>>>>
+      </eqnarray*>
+    </description>
+  </proof>
+
+  <\definition>
+    <label|rational x-y>If <math|x,y\<in\>\<bbb-Q\>> then
+    <math|x-y=x+<around*|(|-y|)>>.
+  </definition>
+
+  Next we define multiplication.
+
+  <\theorem>
+    <label|rational product (1)>If <math|<frac|n|m>,<frac|n<rprime|'>|m<rprime|'>>,<frac|r|s>,<frac|r<rprime|'>|s<rprime|'>>\<in\>\<bbb-Q\>>
+    such that <math|<frac|n|m>=<frac|n<rprime|'>|m<rprime|'>>> and
+    <math|<frac|r|s>=<frac|r<rprime|'>|s<rprime|'>>> then\ 
+
+    <\equation*>
+      <frac|n\<cdot\>r|m\<cdot\>s>,<frac|n<rprime|'>\<cdot\>r<rprime|'>|m<rprime|'>\<cdot\>s<rprime|'>>\<in\>\<bbb-Q\><text|
+      and ><frac|n\<cdot\>r|m\<cdot\>s>=<frac|n<rprime|'>\<cdot\>r<rprime|'>|m<rprime|'>\<cdot\>s<rprime|'>>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    First as <math|m\<neq\>0,m<rprime|'>\<neq\>0,s\<neq\>0> and
+    <math|s<rprime|'>\<neq\>0> we have that <math|m\<cdot\>s\<neq\>0> and
+    <math|m<rprime|'>\<cdot\>s<rprime|'>\<neq\>0> so that
+    <math|<frac|n\<cdot\>r|m\<cdot\>s>,<frac|n<rprime|'>\<cdot\>r<rprime|'>|m<rprime|'>\<cdot\>s<rprime|'>>\<in\>\<bbb-Q\>>.
+    As <math|<frac|n|m>=<frac|n<rprime|'>|m<rprime|'>>> and
+    <math|<frac|r|s>=<frac|r<rprime|'>|s<rprime|'>>> we have that\ 
+
+    <\equation>
+      <label|eq 8.2.023>n\<cdot\>m<rprime|'>=m\<cdot\>n<rprime|'>\<wedge\>r\<cdot\>s<rprime|'>=s\<cdot\>r<rprime|'>
+    </equation>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|n\<cdot\>r|)>\<cdot\><around*|(|m<rprime|'>\<cdot\>s<rprime|'>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|integers integral domain>]>>>|<cell|<around*|(|n\<cdot\>m<rprime|'>|)>\<cdot\><around*|(|r\<cdot\>s<rprime|'>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 8.2.023>]>>>|<cell|<around*|(|m\<cdot\>n<rprime|'>|)>\<cdot\><around*|(|s\<cdot\>r<rprime|'>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|m\<cdot\>s|)>\<cdot\><around*|(|n<rprime|'>\<cdot\>r<rprime|'>|)>>>>>
+    </eqnarray*>
+
+    so that\ 
+
+    <\equation*>
+      <frac|n\<cdot\>r|m\<cdot\>s>=<frac|n<rprime|'>\<cdot\>r<rprime|'>|m<rprime|'>\<cdot\>s<rprime|'>>
+    </equation*>
+  </proof>
+
+  The above theorem ensures that the next definition is well defined.
+
+  <\definition>
+    <label|rational product>The product operator
+    \ <math|\<cdot\>:<math|\<bbb-Q\>\<times\>\<bbb-Q\>\<rightarrow\>\<bbb-Q\>>>
+    is defined by\ 
+
+    <\equation*>
+      <frac|n|m>\<cdot\><frac|r|s>=<frac|n\<cdot\>r|m\<cdot\>s>
+    </equation*>
+  </definition>
+
+  <\theorem>
+    <label|rational field><index|<math|<around*|\<langle\>|\<bbb-Q\>,+,\<cdot\>|\<rangle\>>>><math|<around*|\<langle\>|\<bbb-Q\>,+,\<cdot\>|\<rangle\>>>
+    is a field [see [definition: <reference|field>] \ more specifically:
+
+    <\enumerate>
+      <item><math|<around*|\<langle\>|\<bbb-Q\>,+|\<rangle\>>> is a Abelian
+      group [see theorem: <reference|rational group>]\ 
+
+      <item><math|\<cdot\>:\<bbb-Q\>\<times\>\<bbb-Q\>\<rightarrow\>\<bbb-Q\>>
+      satisfies
+
+      <\description>
+        <item*|distributivity><math|\<forall\>x,y,z\<in\>\<bbb-Q\>> we have
+        <math|x\<cdot\><around*|(|y+z|)>=x\<cdot\>y+x\<cdot\>z>
+
+        <item*|commutativity><math|\<forall\>x,y\<in\>\<bbb-Q\>> we have
+        <math|x\<cdot\>y=y\<cdot\>x>
+
+        <item*|neutral element><math|\<forall\>x\<in\>\<bbb-Q\>>
+        <math|<frac|1|1>\<cdot\>x=1=x\<cdot\><frac|1|1>> so
+        <math|1\<equallim\><rsub|definition><frac|1|1>> is the neutral
+        element.\ 
+
+        <item*|associativity><math|\<forall\>x,y,z\<in\>\<bbb-Q\>>
+        <math|<around*|(|x\<cdot\>y|)>\<cdot\>z=x\<cdot\><around*|(|y\<cdot\>z|)>>
+
+        <item*|inverse element><math|\<forall\>x\<in\>\<bbb-Q\>\\<around*|{|0|}>>
+        there exists a <math|x<rsup|-1>\<cdot\>x=x\<cdot\>x<rsup|-1>>. More
+        specific if <math|x=<frac|a|b>\<neq\>0> then
+        <math|x<rsup|-1>=<frac|b|a>>.
+      </description>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>This follows from [theorem: <reference|rational group>].
+
+      <item>We have:
+
+      <\description>
+        <item*|distributivity>
+
+        <item*|commutativity>
+
+        <item*|neutral elemnt>
+
+        <item*|associativity>
+
+        <item*|inverse element>
+      </description>
+    </enumerate>
+  </proof>
 
   \;
 
@@ -2259,6 +2631,9 @@
     <associate|auto-13|<tuple|odd integers|?>>
     <associate|auto-14|<tuple|7.3|?>>
     <associate|auto-15|<tuple|8|?>>
+    <associate|auto-16|<tuple|8.1|?>>
+    <associate|auto-17|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-Q\>,+|)>>|?>>
+    <associate|auto-18|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-Q\>,+,\<cdot\>|\<rangle\>>>|?>>
     <associate|auto-2|<tuple|7.1|?>>
     <associate|auto-3|<tuple|integers|?>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>>|?>>
@@ -2270,7 +2645,6 @@
     <associate|eq 7.1.022|<tuple|7.1|?>>
     <associate|eq 7.10.022|<tuple|7.10|?>>
     <associate|eq 7.11.022|<tuple|7.11|?>>
-    <associate|eq 7.11.023|<tuple|7.11|?>>
     <associate|eq 7.12.022|<tuple|7.14|?>>
     <associate|eq 7.12.022.1|<tuple|7.12|?>>
     <associate|eq 7.13.022|<tuple|7.15|?>>
@@ -2285,9 +2659,10 @@
     <associate|eq 7.5.022|<tuple|7.5|?>>
     <associate|eq 7.6.022|<tuple|7.6|?>>
     <associate|eq 7.7.022|<tuple|7.7|?>>
-    <associate|eq 7.7.023|<tuple|7.7|?>>
     <associate|eq 7.8.022|<tuple|7.8|?>>
     <associate|eq 7.9.022|<tuple|7.9|?>>
+    <associate|eq 8.1.023|<tuple|8.1|?>>
+    <associate|eq 8.2.023|<tuple|8.2|?>>
     <associate|integeres order|<tuple|7.26|?>>
     <associate|integers|<tuple|7.2|?>>
     <associate|integers (-1).n|<tuple|7.15|?>>
@@ -2332,6 +2707,7 @@
     <associate|integers quotient theorem|<tuple|7.47|?>>
     <associate|integers sum uniqueness|<tuple|7.4|?>>
     <associate|integers sup is max|<tuple|7.38|?>>
+    <associate|integers without 0|<tuple|8.2|?>>
     <associate|integers x\<less\>=y\<less\>=\<gtr\>-y\<less\>=x|<tuple|7.28|?>>
     <associate|integers x\<less\>=\|x\||<tuple|7.41|?>>
     <associate|integers z=-z=\<gtr\>z=0|<tuple|7.13|?>>
@@ -2339,6 +2715,16 @@
     <associate|integers {x\|-\<less\>=x}|<tuple|7.27|?>>
     <associate|integers \|x.y\|=\|x\|.\|y\||<tuple|7.40|?>>
     <associate|integers ~([n,m])~([n+k,m+k)]|<tuple|7.3|?>>
+    <associate|rational equivalence relation|<tuple|8.3|?>>
+    <associate|rational field|<tuple|8.12|?>>
+    <associate|rational group|<tuple|8.8|?>>
+    <associate|rational n/m=n.k/m.k|<tuple|8.5|?>>
+    <associate|rational numbers|<tuple|8.4|?>>
+    <associate|rational product|<tuple|8.11|?>>
+    <associate|rational product (1)|<tuple|8.10|?>>
+    <associate|rational sum operator|<tuple|8.7|?>>
+    <associate|rational sum operator (1)|<tuple|8.6|?>>
+    <associate|rational x-y|<tuple|8.9|?>>
   </collection>
 </references>
 
