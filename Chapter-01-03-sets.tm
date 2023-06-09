@@ -9461,6 +9461,59 @@
   </definition>
 
   <\theorem>
+    <label|order well ordering and order isomorphism>If
+    <math|<around*|\<langle\>|X,\<leqslant\><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,\<leqslant\><rsub|Y>|\<rangle\>>> are partial
+    ordered sets, <math|f:X\<rightarrow\>Y> a order isomorphism then if
+    <math|<around*|\<langle\>|X,\<leqslant\><rsub|X>|\<rangle\>>> is well
+    ordered <math|<around*|\<langle\>|Y,\<leqslant\><rsub|Y>|\<rangle\>>> is
+    well ordered.
+  </theorem>
+
+  <\proof>
+    Let <math|A\<subseteq\>Y> be a non empty subclass of <math|Y>. Then
+    <math|\<exists\>a\<in\>A> and as <math|f> is a bijection there exist a
+    <math|x\<in\>X> such that <math|y=f<around*|(|x|)>>, from which it
+    follows that <math|x\<in\>f<rsup|-1><around*|(|A|)>>. So\ 
+
+    <\equation*>
+      f<rsup|-1><around*|(|A|)>\<neq\>\<varnothing\>
+    </equation*>
+
+    As <math|<around*|\<langle\>|X,\<leqslant\><rsub|X>|\<rangle\>>> is well
+    ordered we have that <math|f<rsup|-1><around*|(|A|)>> has a least
+    element, hence\ 
+
+    <\equation*>
+      \<exists\>m<rprime|'>\<in\>f<rsup|-1><around*|(|A|)> such that
+      \<forall\>a\<in\>f<rsup|-1><around*|(|A|)><text| we have
+      >m<rprime|'>\<leqslant\><rsub|X>a
+    </equation*>
+
+    Take now <math|m=f<around*|(|m<rprime|'>|)>> then as
+    <math|m<rprime|'>\<in\>f<rsup|-1><around*|(|A|)>> we have that\ 
+
+    <\equation>
+      <label|eq 3.14.026>m\<in\>A
+    </equation>
+
+    Further if <math|a\<in\>A> then as <math|f> is surjective there exists a
+    <math|b\<in\>X> such that <math|a=f<around*|(|b|)>> or
+    <math|b\<in\>f<rsup|-1><around*|(|A|)>>, so that
+    <math|m<rprime|'>\<leqslant\><rsub|X>b>. As <math|f> is a order
+    isomorphism we have <math|m=f<around*|(|m<rprime|'>|)>\<leqslant\><rsub|Y>f<around*|(|b|)>=a>.
+    Hence we have proved that\ 
+
+    <\equation>
+      <label|eq 3.15.026>\<forall\>a\<in\>A<text| we have >m\<leqslant\>a
+    </equation>
+
+    From [eq: <reference|eq 3.14.026>] and [eq: <reference|eq 3.15.026>] we
+    conclude finally that <math|<around*|\<langle\>|Y,\<leqslant\><rsub|Y>|\<rangle\>>>
+    is well ordered.
+  </proof>
+
+  <\theorem>
     <label|order total/well-order inclusion>If
     <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is a partial
     ordered class, <math|B\<subseteq\>X> then for
@@ -12389,7 +12442,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|0>
-    <associate|page-first|5>
+    <associate|page-first|7>
     <associate|page-medium|papyrus>
     <associate|project-flag|false>
     <associate|section-nr|0>
@@ -12507,7 +12560,7 @@
     <associate|auto-97|<tuple|immediate successor|?>>
     <associate|auto-98|<tuple|section|?>>
     <associate|auto-99|<tuple|transfinite induction|?>>
-    <associate|axiom of choice|<tuple|3.96|?>>
+    <associate|axiom of choice|<tuple|3.97|?>>
     <associate|axiom of construction|<tuple|1.9|?>>
     <associate|axiom of extent|<tuple|1.5|2>>
     <associate|axiom of infinity|<tuple|1.52|?>>
@@ -12522,29 +12575,29 @@
     <associate|cartesian product of the empty set|<tuple|1.46|?>>
     <associate|cartesian product properties (1)|<tuple|1.49|?>>
     <associate|cartesian product with enpty set|<tuple|1.47|?>>
-    <associate|choice Axiom of choice consequences|<tuple|3.121|?>>
-    <associate|choice Hausdorff maximal principle|<tuple|3.112|?>>
-    <associate|choice Hausdorff's Maximal Principle|<tuple|3.113|?>>
-    <associate|choice Hausdorff's implies Zorn's|<tuple|3.115|?>>
-    <associate|choice P'(A)|<tuple|3.93|?>>
-    <associate|choice P'(A) is a set|<tuple|3.94|?>>
-    <associate|choice Zorn implies welll ordering|<tuple|3.116|?>>
-    <associate|choice Zorn's lemma|<tuple|3.114|?>>
-    <associate|choice Zorn's lemma for pre-order|<tuple|3.122|?>>
-    <associate|choice axiom of choice equivalences (1)|<tuple|3.98|?>>
-    <associate|choice choice function|<tuple|3.95|?>>
-    <associate|choice existence of successor|<tuple|3.102|?>>
-    <associate|choice function to injection/bijection|<tuple|3.123|?>>
-    <associate|choice intersection of p-sewuences|<tuple|3.105|?>>
-    <associate|choice lemma p-sequence|<tuple|3.103|?>>
-    <associate|choice lemma p-sequence generation|<tuple|3.108|?>>
-    <associate|choice lemma properties of select|<tuple|3.109|?>>
-    <associate|choice lemma property of select elements|<tuple|3.107|?>>
+    <associate|choice Axiom of choice consequences|<tuple|3.122|?>>
+    <associate|choice Hausdorff maximal principle|<tuple|3.113|?>>
+    <associate|choice Hausdorff's Maximal Principle|<tuple|3.114|?>>
+    <associate|choice Hausdorff's implies Zorn's|<tuple|3.116|?>>
+    <associate|choice P'(A)|<tuple|3.94|?>>
+    <associate|choice P'(A) is a set|<tuple|3.95|?>>
+    <associate|choice Zorn implies welll ordering|<tuple|3.117|?>>
+    <associate|choice Zorn's lemma|<tuple|3.115|?>>
+    <associate|choice Zorn's lemma for pre-order|<tuple|3.123|?>>
+    <associate|choice axiom of choice equivalences (1)|<tuple|3.99|?>>
+    <associate|choice choice function|<tuple|3.96|?>>
+    <associate|choice existence of successor|<tuple|3.103|?>>
+    <associate|choice function to injection/bijection|<tuple|3.124|?>>
+    <associate|choice intersection of p-sewuences|<tuple|3.106|?>>
+    <associate|choice lemma p-sequence|<tuple|3.104|?>>
+    <associate|choice lemma p-sequence generation|<tuple|3.109|?>>
+    <associate|choice lemma properties of select|<tuple|3.110|?>>
+    <associate|choice lemma property of select elements|<tuple|3.108|?>>
     <associate|choice lemma select elements froms a
-    p-sewuence|<tuple|3.110|?>>
-    <associate|choice lemma upper bound of chain|<tuple|3.118|?>>
-    <associate|choice lemma well ordering lemma (1)|<tuple|3.117|?>>
-    <associate|choice well-order implies Axiom of Choice|<tuple|3.119|?>>
+    p-sewuence|<tuple|3.111|?>>
+    <associate|choice lemma upper bound of chain|<tuple|3.119|?>>
+    <associate|choice lemma well ordering lemma (1)|<tuple|3.118|?>>
+    <associate|choice well-order implies Axiom of Choice|<tuple|3.120|?>>
     <associate|class absorption laws|<tuple|1.27|?>>
     <associate|class class commutative,idempotent,associative,distributivity|<tuple|1.30|?>>
     <associate|class complement of comploment|<tuple|1.28|?>>
@@ -12647,69 +12700,71 @@
     <associate|eq 3.11.012|<tuple|3.11|?>>
     <associate|eq 3.12.012|<tuple|3.12|?>>
     <associate|eq 3.14.012|<tuple|3.13|?>>
-    <associate|eq 3.14.013|<tuple|3.14|?>>
-    <associate|eq 3.15.013|<tuple|3.15|?>>
-    <associate|eq 3.16.014|<tuple|3.18|?>>
-    <associate|eq 3.16.016|<tuple|3.16|?>>
-    <associate|eq 3.17.014|<tuple|3.19|?>>
-    <associate|eq 3.17.016|<tuple|3.17|?>>
-    <associate|eq 3.18.014|<tuple|3.20|?>>
-    <associate|eq 3.19.014|<tuple|3.21|?>>
+    <associate|eq 3.14.013|<tuple|3.16|?>>
+    <associate|eq 3.14.026|<tuple|3.14|?>>
+    <associate|eq 3.15.013|<tuple|3.17|?>>
+    <associate|eq 3.15.026|<tuple|3.15|?>>
+    <associate|eq 3.16.014|<tuple|3.20|?>>
+    <associate|eq 3.16.016|<tuple|3.18|?>>
+    <associate|eq 3.17.014|<tuple|3.21|?>>
+    <associate|eq 3.17.016|<tuple|3.19|?>>
+    <associate|eq 3.18.014|<tuple|3.22|?>>
+    <associate|eq 3.19.014|<tuple|3.23|?>>
     <associate|eq 3.2.009|<tuple|3.2|?>>
-    <associate|eq 3.20.014|<tuple|3.22|?>>
-    <associate|eq 3.21.014|<tuple|3.23|?>>
-    <associate|eq 3.21.014.1|<tuple|3.26|?>>
-    <associate|eq 3.22.014|<tuple|3.24|?>>
-    <associate|eq 3.23.014|<tuple|3.25|?>>
-    <associate|eq 3.25.014|<tuple|3.28|?>>
-    <associate|eq 3.25.015|<tuple|3.27|?>>
-    <associate|eq 3.26.014|<tuple|3.29|?>>
-    <associate|eq 3.27.014|<tuple|3.30|?>>
-    <associate|eq 3.28.014|<tuple|3.31|?>>
-    <associate|eq 3.29.014|<tuple|3.32|?>>
+    <associate|eq 3.20.014|<tuple|3.24|?>>
+    <associate|eq 3.21.014|<tuple|3.25|?>>
+    <associate|eq 3.21.014.1|<tuple|3.28|?>>
+    <associate|eq 3.22.014|<tuple|3.26|?>>
+    <associate|eq 3.23.014|<tuple|3.27|?>>
+    <associate|eq 3.25.014|<tuple|3.30|?>>
+    <associate|eq 3.25.015|<tuple|3.29|?>>
+    <associate|eq 3.26.014|<tuple|3.31|?>>
+    <associate|eq 3.27.014|<tuple|3.32|?>>
+    <associate|eq 3.28.014|<tuple|3.33|?>>
+    <associate|eq 3.29.014|<tuple|3.34|?>>
     <associate|eq 3.3.009|<tuple|3.3|?>>
-    <associate|eq 3.30.014|<tuple|3.33|?>>
-    <associate|eq 3.31.014|<tuple|3.34|?>>
-    <associate|eq 3.32.014|<tuple|3.35|?>>
-    <associate|eq 3.33.014|<tuple|3.36|?>>
-    <associate|eq 3.34.014|<tuple|3.37|?>>
-    <associate|eq 3.35.014|<tuple|3.38|?>>
-    <associate|eq 3.36.014|<tuple|3.39|?>>
-    <associate|eq 3.37.014|<tuple|3.40|?>>
-    <associate|eq 3.39.015|<tuple|3.41|?>>
+    <associate|eq 3.30.014|<tuple|3.35|?>>
+    <associate|eq 3.31.014|<tuple|3.36|?>>
+    <associate|eq 3.32.014|<tuple|3.37|?>>
+    <associate|eq 3.33.014|<tuple|3.38|?>>
+    <associate|eq 3.34.014|<tuple|3.39|?>>
+    <associate|eq 3.35.014|<tuple|3.40|?>>
+    <associate|eq 3.36.014|<tuple|3.41|?>>
+    <associate|eq 3.37.014|<tuple|3.42|?>>
+    <associate|eq 3.39.015|<tuple|3.43|?>>
     <associate|eq 3.4.009|<tuple|3.4|?>>
-    <associate|eq 3.42.015|<tuple|3.42|?>>
-    <associate|eq 3.43.015|<tuple|3.43|?>>
-    <associate|eq 3.44.015|<tuple|3.44|?>>
-    <associate|eq 3.46.016|<tuple|3.46|?>>
-    <associate|eq 3.47.016|<tuple|3.47|?>>
-    <associate|eq 3.48.016|<tuple|3.48|?>>
-    <associate|eq 3.49.016|<tuple|3.49|?>>
+    <associate|eq 3.42.015|<tuple|3.44|?>>
+    <associate|eq 3.43.015|<tuple|3.45|?>>
+    <associate|eq 3.44.015|<tuple|3.46|?>>
+    <associate|eq 3.46.016|<tuple|3.48|?>>
+    <associate|eq 3.47.016|<tuple|3.49|?>>
+    <associate|eq 3.48.016|<tuple|3.50|?>>
+    <associate|eq 3.49.016|<tuple|3.51|?>>
     <associate|eq 3.5.009|<tuple|3.5|?>>
-    <associate|eq 3.50.016|<tuple|3.50|?>>
-    <associate|eq 3.51.016|<tuple|3.51|?>>
-    <associate|eq 3.52.016|<tuple|3.52|?>>
-    <associate|eq 3.53.016|<tuple|3.53|?>>
-    <associate|eq 3.54.016|<tuple|3.54|?>>
-    <associate|eq 3.55.016|<tuple|3.55|?>>
-    <associate|eq 3.56.016|<tuple|3.56|?>>
-    <associate|eq 3.57.018|<tuple|3.57|?>>
-    <associate|eq 3.58.018|<tuple|3.58|?>>
-    <associate|eq 3.59.018|<tuple|3.59|?>>
+    <associate|eq 3.50.016|<tuple|3.52|?>>
+    <associate|eq 3.51.016|<tuple|3.53|?>>
+    <associate|eq 3.52.016|<tuple|3.54|?>>
+    <associate|eq 3.53.016|<tuple|3.55|?>>
+    <associate|eq 3.54.016|<tuple|3.56|?>>
+    <associate|eq 3.55.016|<tuple|3.57|?>>
+    <associate|eq 3.56.016|<tuple|3.58|?>>
+    <associate|eq 3.57.018|<tuple|3.59|?>>
+    <associate|eq 3.58.018|<tuple|3.60|?>>
+    <associate|eq 3.59.018|<tuple|3.61|?>>
     <associate|eq 3.6.009|<tuple|3.6|?>>
-    <associate|eq 3.61.018|<tuple|3.60|?>>
-    <associate|eq 3.62.018|<tuple|3.61|?>>
-    <associate|eq 3.63.018|<tuple|3.62|?>>
-    <associate|eq 3.64.018|<tuple|3.63|?>>
-    <associate|eq 3.65.018|<tuple|3.64|?>>
-    <associate|eq 3.66.018|<tuple|3.66|?>>
-    <associate|eq 3.66.019|<tuple|3.65|?>>
-    <associate|eq 3.68.019|<tuple|3.67|?>>
-    <associate|eq 3.69.019|<tuple|3.68|?>>
+    <associate|eq 3.61.018|<tuple|3.62|?>>
+    <associate|eq 3.62.018|<tuple|3.63|?>>
+    <associate|eq 3.63.018|<tuple|3.64|?>>
+    <associate|eq 3.64.018|<tuple|3.65|?>>
+    <associate|eq 3.65.018|<tuple|3.66|?>>
+    <associate|eq 3.66.018|<tuple|3.68|?>>
+    <associate|eq 3.66.019|<tuple|3.67|?>>
+    <associate|eq 3.68.019|<tuple|3.69|?>>
+    <associate|eq 3.69.019|<tuple|3.70|?>>
     <associate|eq 3.7.009|<tuple|3.7|?>>
-    <associate|eq 3.70.019|<tuple|3.69|?>>
-    <associate|eq 3.71.019|<tuple|3.70|?>>
-    <associate|eq 3.72.019|<tuple|3.71|?>>
+    <associate|eq 3.70.019|<tuple|3.71|?>>
+    <associate|eq 3.71.019|<tuple|3.72|?>>
+    <associate|eq 3.72.019|<tuple|3.73|?>>
     <associate|eq 3.8.011|<tuple|3.8|?>>
     <associate|eq 3.9.011|<tuple|3.9|?>>
     <associate|equivalence relation|<tuple|3.5|?>>
@@ -12807,7 +12862,7 @@
     <associate|function simple definition|<tuple|2.86|?>>
     <associate|function simple definition notation|<tuple|2.87|?>>
     <associate|function surjection and construction of inverse
-    function|<tuple|3.97|?>>
+    function|<tuple|3.98|?>>
     <associate|function surjection condition|<tuple|2.47|?>>
     <associate|function trivial bijection|<tuple|2.61|?>>
     <associate|function: A^B and sets|<tuple|2.30|?>>
@@ -12829,12 +12884,12 @@
     <associate|order example inclusion order and sup, inf|<tuple|3.66|?>>
     <associate|order greatest and lowest element are unique|<tuple|3.60|?>>
     <associate|order greatest lowest element|<tuple|3.57|?>>
-    <associate|order immediate successor|<tuple|3.80|?>>
+    <associate|order immediate successor|<tuple|3.81|?>>
     <associate|order inclusion and greatest and least element|<tuple|3.68|?>>
     <associate|order inclusion is a order|<tuple|3.32|?>>
     <associate|order increasing, decreasing|<tuple|3.48|?>>
     <associate|order initial segement|<tuple|3.44|?>>
-    <associate|order initial segement a\<less\>b|<tuple|3.90|?>>
+    <associate|order initial segement a\<less\>b|<tuple|3.91|?>>
     <associate|order initial segement inclusion|<tuple|3.45|?>>
     <associate|order intial sergment property|<tuple|3.46|?>>
     <associate|order isomorphism and conditional complete|<tuple|3.76|?>>
@@ -12853,31 +12908,32 @@
     <associate|order preorder|<tuple|3.24|?>>
     <associate|order preordered class|<tuple|3.25|?>>
     <associate|order properties of the isomorph relation|<tuple|3.54|?>>
-    <associate|order section|<tuple|3.82|?>>
-    <associate|order section and well ordering|<tuple|3.83|?>>
+    <associate|order section|<tuple|3.83|?>>
+    <associate|order section and well ordering|<tuple|3.84|?>>
     <associate|order strict order|<tuple|3.31|?>>
     <associate|order sup and inf and bigger elements|<tuple|3.71|?>>
     <associate|order sup inf condition|<tuple|3.72|?>>
     <associate|order sup, inf property|<tuple|3.67|?>>
     <associate|order sup,inf and inclusion|<tuple|3.70|?>>
     <associate|order supremum infinum|<tuple|3.65|?>>
-    <associate|order total/well-order inclusion|<tuple|3.78|?>>
+    <associate|order total/well-order inclusion|<tuple|3.79|?>>
     <associate|order totally lexicol ordering|<tuple|3.43|?>>
     <associate|order totally ordered subclass|<tuple|3.42|?>>
-    <associate|order transfinite induction|<tuple|3.84|?>>
+    <associate|order transfinite induction|<tuple|3.85|?>>
     <associate|order upport lower bound|<tuple|3.63|?>>
-    <associate|order well order and immediate successor|<tuple|3.81|?>>
+    <associate|order well order and immediate successor|<tuple|3.82|?>>
     <associate|order well order every subclass is isomorphic with A or a
-    iitial segement|<tuple|3.92|?>>
+    iitial segement|<tuple|3.93|?>>
     <associate|order well order implies conditional complete and totally
-    ordering|<tuple|3.79|?>>
-    <associate|order well ordered and order isomorphism|<tuple|3.85|?>>
-    <associate|order well ordered class and isomorphism|<tuple|3.86|?>>
+    ordering|<tuple|3.80|?>>
+    <associate|order well ordered and order isomorphism|<tuple|3.86|?>>
+    <associate|order well ordered class and isomorphism|<tuple|3.87|?>>
     <associate|order well ordered is not isomorph to a initial segment
-    |<tuple|3.87|?>>
-    <associate|order well ordered isomorphic property (3)|<tuple|3.89|?>>
-    <associate|order well ordered isomorphism property|<tuple|3.88|?>>
-    <associate|order well ordering and isomorphism (2)|<tuple|3.91|?>>
+    |<tuple|3.88|?>>
+    <associate|order well ordered isomorphic property (3)|<tuple|3.90|?>>
+    <associate|order well ordered isomorphism property|<tuple|3.89|?>>
+    <associate|order well ordering and isomorphism (2)|<tuple|3.92|?>>
+    <associate|order well ordering and order isomorphism|<tuple|3.78|?>>
     <associate|order well-rodered class|<tuple|3.77|?>>
     <associate|pair equality of pairs|<tuple|1.43|?>>
     <associate|pair of elements|<tuple|1.41|?>>
@@ -12904,10 +12960,10 @@
     <associate|product inclusion|<tuple|2.122|?>>
     <associate|product of family with one element|<tuple|2.120|?>>
     <associate|product of family with two classes|<tuple|2.121|?>>
-    <associate|product product is empty|<tuple|3.101|?>>
-    <associate|product product is not empty|<tuple|3.100|?>>
+    <associate|product product is empty|<tuple|3.102|?>>
+    <associate|product product is not empty|<tuple|3.101|?>>
     <associate|product projection function|<tuple|2.128|?>>
-    <associate|product projection is surjective|<tuple|3.99|?>>
+    <associate|product projection is surjective|<tuple|3.100|?>>
     <associate|product sub-product|<tuple|2.126|?>>
     <associate|relation|<tuple|3.1|?>>
     <associate|relation properties|<tuple|3.4|?>>
