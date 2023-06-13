@@ -209,9 +209,17 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-185>
 
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|9<space|2spc>The
+    real numbers> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-186><vspace|0.5fn>
+
+    9.1<space|2spc>Definition and arithmetic
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-187>
+
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|Index>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-186><vspace|0.5fn>
+    <no-break><pageref|auto-188><vspace|0.5fn>
   </table-of-contents>
 
   <include|Chapter-01-03-sets.tm>
@@ -493,7 +501,6 @@
 
 <\references>
   <\collection>
-    <associate|8.20.026|<tuple|8.21|207|Chapter-07-10-Numbers.tm>>
     <associate|\<less\>A,B,C\<gtr\>=\<less\>D,E,F\<gtr\>=\<gtr\>A=E,B=D,C=F|<tuple|2.5|24|Chapter-01-03-sets.tm>>
     <associate|\<less\>A,B\<gtr\>=\<less\>C,D\<gtr\>=\<gtr\>A=C,B=D|<tuple|2.3|23|Chapter-01-03-sets.tm>>
     <associate|Axiom of Replacement|<tuple|2.50|34|Chapter-01-03-sets.tm>>
@@ -501,7 +508,7 @@
     <associate|auto-1|<tuple|1|7|Chapter-01-03-sets.tm>>
     <associate|auto-10|<tuple|axiom of pairing|14|Chapter-01-03-sets.tm>>
     <associate|auto-100|<tuple|3.4|90|Chapter-01-03-sets.tm>>
-    <associate|auto-101|<tuple|<with|mode|<quote|math>|\<cal-P\><rprime|'><around*|(|A|)>>|91|Chapter-01-03-sets.tm>>
+    <associate|auto-101|<tuple|<with|mode|<quote|math>|\<cal-P\><rprime|'><around*|(|A|)>>|90|Chapter-01-03-sets.tm>>
     <associate|auto-102|<tuple|choice function|91|Chapter-01-03-sets.tm>>
     <associate|auto-103|<tuple|axiom of choice|91|Chapter-01-03-sets.tm>>
     <associate|auto-104|<tuple|Hausdorff's
@@ -599,11 +606,13 @@
     <associate|auto-18|<tuple|power set|22|Chapter-01-03-sets.tm>>
     <associate|auto-180|<tuple|8.1|191|Chapter-07-10-Numbers.tm>>
     <associate|auto-181|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-Q\>,+|)>>|193|Chapter-07-10-Numbers.tm>>
-    <associate|auto-182|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-Q\>,+,\<cdot\>|\<rangle\>>>|194|Chapter-07-10-Numbers.tm>>
+    <associate|auto-182|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-Q\>,+,\<cdot\>|\<rangle\>>>|195|Chapter-07-10-Numbers.tm>>
     <associate|auto-183|<tuple|8.2|198|Chapter-07-10-Numbers.tm>>
     <associate|auto-184|<tuple|<with|mode|<quote|math>|\<bbb-Z\><rsub|\<bbb-Q\>>>|204|Chapter-07-10-Numbers.tm>>
     <associate|auto-185|<tuple|8.3|212|Chapter-07-10-Numbers.tm>>
-    <associate|auto-186|<tuple|8.51|213>>
+    <associate|auto-186|<tuple|9|213|Chapter-07-10-Numbers.tm>>
+    <associate|auto-187|<tuple|9.1|213|Chapter-07-10-Numbers.tm>>
+    <associate|auto-188|<tuple|9.1|215>>
     <associate|auto-19|<tuple|<with|mode|<quote|math>|\<cal-P\><around*|(|A|)>>|22|Chapter-01-03-sets.tm>>
     <associate|auto-2|<tuple|1.1|7|Chapter-01-03-sets.tm>>
     <associate|auto-20|<tuple|axiom of power|22|Chapter-01-03-sets.tm>>
@@ -678,17 +687,17 @@
     <associate|auto-81|<tuple|3.3.3|78|Chapter-01-03-sets.tm>>
     <associate|auto-82|<tuple|maximal element|78|Chapter-01-03-sets.tm>>
     <associate|auto-83|<tuple|minimal element|78|Chapter-01-03-sets.tm>>
-    <associate|auto-84|<tuple|greatest element|79|Chapter-01-03-sets.tm>>
-    <associate|auto-85|<tuple|lowest element|79|Chapter-01-03-sets.tm>>
+    <associate|auto-84|<tuple|greatest element|78|Chapter-01-03-sets.tm>>
+    <associate|auto-85|<tuple|lowest element|78|Chapter-01-03-sets.tm>>
     <associate|auto-86|<tuple|<with|mode|<quote|math>|max<around*|(|A|)>>|79|Chapter-01-03-sets.tm>>
     <associate|auto-87|<tuple|<with|mode|<quote|math>|min<around*|(|A|)>>|79|Chapter-01-03-sets.tm>>
     <associate|auto-88|<tuple|upper bound|79|Chapter-01-03-sets.tm>>
     <associate|auto-89|<tuple|lower bound|79|Chapter-01-03-sets.tm>>
     <associate|auto-9|<tuple|1.3|14|Chapter-01-03-sets.tm>>
-    <associate|auto-90|<tuple|supremum|80|Chapter-01-03-sets.tm>>
-    <associate|auto-91|<tuple|infinum|80|Chapter-01-03-sets.tm>>
-    <associate|auto-92|<tuple|<with|mode|<quote|math>|inf<around*|(|A|)>>|80|Chapter-01-03-sets.tm>>
-    <associate|auto-93|<tuple|<with|mode|<quote|math>|sup<around*|(|A|)>>|80|Chapter-01-03-sets.tm>>
+    <associate|auto-90|<tuple|supremum|79|Chapter-01-03-sets.tm>>
+    <associate|auto-91|<tuple|infinum|79|Chapter-01-03-sets.tm>>
+    <associate|auto-92|<tuple|<with|mode|<quote|math>|inf<around*|(|A|)>>|79|Chapter-01-03-sets.tm>>
+    <associate|auto-93|<tuple|<with|mode|<quote|math>|sup<around*|(|A|)>>|79|Chapter-01-03-sets.tm>>
     <associate|auto-94|<tuple|conditional
     completeness|82|Chapter-01-03-sets.tm>>
     <associate|auto-95|<tuple|3.3.4|84|Chapter-01-03-sets.tm>>
@@ -696,7 +705,7 @@
     <associate|auto-97|<tuple|immediate successor|85|Chapter-01-03-sets.tm>>
     <associate|auto-98|<tuple|section|85|Chapter-01-03-sets.tm>>
     <associate|auto-99|<tuple|transfinite
-    induction|86|Chapter-01-03-sets.tm>>
+    induction|85|Chapter-01-03-sets.tm>>
     <associate|axiom of choice|<tuple|3.97|91|Chapter-01-03-sets.tm>>
     <associate|axiom of construction|<tuple|1.9|9|Chapter-01-03-sets.tm>>
     <associate|axiom of extent|<tuple|1.5|8|Chapter-01-03-sets.tm>>
@@ -726,7 +735,7 @@
     Principle|<tuple|3.114|97|Chapter-01-03-sets.tm>>
     <associate|choice Hausdorff's implies
     Zorn's|<tuple|3.116|98|Chapter-01-03-sets.tm>>
-    <associate|choice P'(A)|<tuple|3.94|91|Chapter-01-03-sets.tm>>
+    <associate|choice P'(A)|<tuple|3.94|90|Chapter-01-03-sets.tm>>
     <associate|choice P'(A) is a set|<tuple|3.95|91|Chapter-01-03-sets.tm>>
     <associate|choice Zorn implies welll ordering|<tuple|3.117|98|Chapter-01-03-sets.tm>>
     <associate|choice Zorn's lemma|<tuple|3.115|98|Chapter-01-03-sets.tm>>
@@ -794,7 +803,7 @@
     <associate|denumerable every subset is finite
     denumerable.|<tuple|6.55|162|Chapter-04-06-NaturalNumbers.tm>>
     <associate|denumerable is not subset of a natural
-    number|<tuple|6.26|150|Chapter-04-06-NaturalNumbers.tm>>
+    number|<tuple|6.26|149|Chapter-04-06-NaturalNumbers.tm>>
     <associate|denumerable product nxN is
     denumerable|<tuple|6.59|164|Chapter-04-06-NaturalNumbers.tm>>
     <associate|denumerable product of denumerable sets is
@@ -818,7 +827,7 @@
     <associate|element is set|<tuple|1.2|7|Chapter-01-03-sets.tm>>
     <associate|element {a,a}={a}|<tuple|1.37|14|Chapter-01-03-sets.tm>>
     <associate|element: {a} is a element|<tuple|1.38|15|Chapter-01-03-sets.tm>>
-    <associate|empty set is finite|<tuple|6.20|149|Chapter-04-06-NaturalNumbers.tm>>
+    <associate|empty set is finite|<tuple|6.20|148|Chapter-04-06-NaturalNumbers.tm>>
     <associate|empty set property|<tuple|1.17|9|Chapter-01-03-sets.tm>>
     <associate|eq 1.1 001|<tuple|1.1|8|Chapter-01-03-sets.tm>>
     <associate|eq 1.2 001|<tuple|1.2|8|Chapter-01-03-sets.tm>>
@@ -879,7 +888,7 @@
     <associate|eq 2.48.007|<tuple|2.56|62|Chapter-01-03-sets.tm>>
     <associate|eq 2.48.008|<tuple|2.54|61|Chapter-01-03-sets.tm>>
     <associate|eq 2.49.007|<tuple|2.57|62|Chapter-01-03-sets.tm>>
-    <associate|eq 2.5.001.2|<tuple|2.5|24|Chapter-01-03-sets.tm>>
+    <associate|eq 2.5.001.2|<tuple|2.5|23|Chapter-01-03-sets.tm>>
     <associate|eq 2.50.007|<tuple|2.58|62|Chapter-01-03-sets.tm>>
     <associate|eq 2.51.007|<tuple|2.63|64|Chapter-01-03-sets.tm>>
     <associate|eq 2.51.010|<tuple|2.55|61|Chapter-01-03-sets.tm>>
@@ -892,13 +901,13 @@
     <associate|eq 2.8.001|<tuple|2.8|24|Chapter-01-03-sets.tm>>
     <associate|eq 2.9.001|<tuple|2.9|24|Chapter-01-03-sets.tm>>
     <associate|eq 3.1.009|<tuple|3.1|70|Chapter-01-03-sets.tm>>
-    <associate|eq 3.10.012|<tuple|3.10|82|Chapter-01-03-sets.tm>>
+    <associate|eq 3.10.012|<tuple|3.10|81|Chapter-01-03-sets.tm>>
     <associate|eq 3.11.012|<tuple|3.11|82|Chapter-01-03-sets.tm>>
     <associate|eq 3.12.012|<tuple|3.12|83|Chapter-01-03-sets.tm>>
     <associate|eq 3.14.012|<tuple|3.13|83|Chapter-01-03-sets.tm>>
     <associate|eq 3.14.013|<tuple|3.16|85|Chapter-01-03-sets.tm>>
     <associate|eq 3.14.026|<tuple|3.14|84|Chapter-01-03-sets.tm>>
-    <associate|eq 3.15.013|<tuple|3.17|86|Chapter-01-03-sets.tm>>
+    <associate|eq 3.15.013|<tuple|3.17|85|Chapter-01-03-sets.tm>>
     <associate|eq 3.15.026|<tuple|3.15|84|Chapter-01-03-sets.tm>>
     <associate|eq 3.16.014|<tuple|3.20|87|Chapter-01-03-sets.tm>>
     <associate|eq 3.16.016|<tuple|3.18|87|Chapter-01-03-sets.tm>>
@@ -919,7 +928,7 @@
     <associate|eq 3.28.014|<tuple|3.33|88|Chapter-01-03-sets.tm>>
     <associate|eq 3.29.014|<tuple|3.34|88|Chapter-01-03-sets.tm>>
     <associate|eq 3.3.009|<tuple|3.3|71|Chapter-01-03-sets.tm>>
-    <associate|eq 3.30.014|<tuple|3.35|89|Chapter-01-03-sets.tm>>
+    <associate|eq 3.30.014|<tuple|3.35|88|Chapter-01-03-sets.tm>>
     <associate|eq 3.31.014|<tuple|3.36|89|Chapter-01-03-sets.tm>>
     <associate|eq 3.32.014|<tuple|3.37|89|Chapter-01-03-sets.tm>>
     <associate|eq 3.33.014|<tuple|3.38|89|Chapter-01-03-sets.tm>>
@@ -938,7 +947,7 @@
     <associate|eq 3.49.016|<tuple|3.51|92|Chapter-01-03-sets.tm>>
     <associate|eq 3.5.009|<tuple|3.5|71|Chapter-01-03-sets.tm>>
     <associate|eq 3.50.016|<tuple|3.52|92|Chapter-01-03-sets.tm>>
-    <associate|eq 3.51.016|<tuple|3.53|93|Chapter-01-03-sets.tm>>
+    <associate|eq 3.51.016|<tuple|3.53|92|Chapter-01-03-sets.tm>>
     <associate|eq 3.52.016|<tuple|3.54|93|Chapter-01-03-sets.tm>>
     <associate|eq 3.53.016|<tuple|3.55|93|Chapter-01-03-sets.tm>>
     <associate|eq 3.54.016|<tuple|3.56|93|Chapter-01-03-sets.tm>>
@@ -962,7 +971,7 @@
     <associate|eq 3.71.019|<tuple|3.72|101|Chapter-01-03-sets.tm>>
     <associate|eq 3.72.019|<tuple|3.73|102|Chapter-01-03-sets.tm>>
     <associate|eq 3.8.011|<tuple|3.8|81|Chapter-01-03-sets.tm>>
-    <associate|eq 3.9.011|<tuple|3.9|82|Chapter-01-03-sets.tm>>
+    <associate|eq 3.9.011|<tuple|3.9|81|Chapter-01-03-sets.tm>>
     <associate|eq 5.1.019|<tuple|5.1|122|Chapter-04-06-NaturalNumbers.tm>>
     <associate|eq 5.10.019|<tuple|5.10|127|Chapter-04-06-NaturalNumbers.tm>>
     <associate|eq 5.11.019|<tuple|5.11|127|Chapter-04-06-NaturalNumbers.tm>>
@@ -990,7 +999,7 @@
     <associate|eq 6.18.020|<tuple|6.17|159|Chapter-04-06-NaturalNumbers.tm>>
     <associate|eq 6.18.022|<tuple|6.18|160|Chapter-04-06-NaturalNumbers.tm>>
     <associate|eq 6.19.022|<tuple|6.19|160|Chapter-04-06-NaturalNumbers.tm>>
-    <associate|eq 6.2.019|<tuple|6.2|151|Chapter-04-06-NaturalNumbers.tm>>
+    <associate|eq 6.2.019|<tuple|6.2|150|Chapter-04-06-NaturalNumbers.tm>>
     <associate|eq 6.20.022|<tuple|6.20|160|Chapter-04-06-NaturalNumbers.tm>>
     <associate|eq 6.21.022|<tuple|6.21|160|Chapter-04-06-NaturalNumbers.tm>>
     <associate|eq 6.22.022|<tuple|6.22|162|Chapter-04-06-NaturalNumbers.tm>>
@@ -1025,7 +1034,7 @@
     <associate|eq 7.8.022|<tuple|7.8|182|Chapter-07-10-Numbers.tm>>
     <associate|eq 7.9.022|<tuple|7.9|183|Chapter-07-10-Numbers.tm>>
     <associate|eq 8.1.023|<tuple|8.1|193|Chapter-07-10-Numbers.tm>>
-    <associate|eq 8.11.024|<tuple|8.11|199|Chapter-07-10-Numbers.tm>>
+    <associate|eq 8.11.024|<tuple|8.11|200|Chapter-07-10-Numbers.tm>>
     <associate|eq 8.12.024|<tuple|8.12|201|Chapter-07-10-Numbers.tm>>
     <associate|eq 8.13.024|<tuple|8.13|205|Chapter-07-10-Numbers.tm>>
     <associate|eq 8.14.024|<tuple|8.14|205|Chapter-07-10-Numbers.tm>>
@@ -1036,6 +1045,7 @@
     <associate|eq 8.18.026|<tuple|8.19|207|Chapter-07-10-Numbers.tm>>
     <associate|eq 8.19.026|<tuple|8.20|207|Chapter-07-10-Numbers.tm>>
     <associate|eq 8.2.023|<tuple|8.2|194|Chapter-07-10-Numbers.tm>>
+    <associate|eq 8.20.026.1|<tuple|8.21|207|Chapter-07-10-Numbers.tm>>
     <associate|eq 8.21.026|<tuple|8.22|207|Chapter-07-10-Numbers.tm>>
     <associate|eq 8.22.026|<tuple|8.23|207|Chapter-07-10-Numbers.tm>>
     <associate|eq 8.23.026|<tuple|8.24|207|Chapter-07-10-Numbers.tm>>
@@ -1044,7 +1054,7 @@
     <associate|eq 8.25.027|<tuple|8.26|208|Chapter-07-10-Numbers.tm>>
     <associate|eq 8.26.027|<tuple|8.27|208|Chapter-07-10-Numbers.tm>>
     <associate|eq 8.28.027|<tuple|8.29|209|Chapter-07-10-Numbers.tm>>
-    <associate|eq 8.3.023|<tuple|8.3|198|Chapter-07-10-Numbers.tm>>
+    <associate|eq 8.3.023|<tuple|8.3|199|Chapter-07-10-Numbers.tm>>
     <associate|eq 8.32.028|<tuple|8.32|210|Chapter-07-10-Numbers.tm>>
     <associate|eq 8.33.028|<tuple|8.33|210|Chapter-07-10-Numbers.tm>>
     <associate|eq 8.34.028|<tuple|8.34|210|Chapter-07-10-Numbers.tm>>
@@ -1054,7 +1064,8 @@
     <associate|eq 8.38.028|<tuple|8.38|211|Chapter-07-10-Numbers.tm>>
     <associate|eq 8.39.028|<tuple|8.39|211|Chapter-07-10-Numbers.tm>>
     <associate|eq 8.4.023|<tuple|8.4|199|Chapter-07-10-Numbers.tm>>
-    <associate|eq 8.40.028|<tuple|8.40|212|Chapter-07-10-Numbers.tm>>
+    <associate|eq 8.40.028|<tuple|8.41|212|Chapter-07-10-Numbers.tm>>
+    <associate|eq 8.40.029|<tuple|8.40|211|Chapter-07-10-Numbers.tm>>
     <associate|eq 8.5.023|<tuple|8.5|199|Chapter-07-10-Numbers.tm>>
     <associate|eq 8.6.023|<tuple|8.6|199|Chapter-07-10-Numbers.tm>>
     <associate|eq 8.7.023|<tuple|8.7|199|Chapter-07-10-Numbers.tm>>
@@ -1154,7 +1165,7 @@
     <associate|function bijection condition
     (2)|<tuple|2.66|37|Chapter-01-03-sets.tm>>
     <associate|function bijection f,f-1|<tuple|2.64|37|Chapter-01-03-sets.tm>>
-    <associate|function bijection has a inverse|<tuple|2.63|37|Chapter-01-03-sets.tm>>
+    <associate|function bijection has a inverse|<tuple|2.63|36|Chapter-01-03-sets.tm>>
     <associate|function characteristics function|<tuple|2.41|32|Chapter-01-03-sets.tm>>
     <associate|function combining bijections|<tuple|2.75|42|Chapter-01-03-sets.tm>>
     <associate|function combining functions
@@ -1168,7 +1179,7 @@
     function|<tuple|2.43|32|Chapter-01-03-sets.tm>>
     <associate|function composition of functions is a
     fucntion|<tuple|2.45|33|Chapter-01-03-sets.tm>>
-    <associate|function condition (1)|<tuple|2.22|29|Chapter-01-03-sets.tm>>
+    <associate|function condition (1)|<tuple|2.22|28|Chapter-01-03-sets.tm>>
     <associate|function constant function|<tuple|2.40|32|Chapter-01-03-sets.tm>>
     <associate|function empty function|<tuple|2.39|32|Chapter-01-03-sets.tm>>
     <associate|function empty function bijection|<tuple|2.59|36|Chapter-01-03-sets.tm>>
@@ -1177,7 +1188,7 @@
     <associate|function extend target|<tuple|2.28|29|Chapter-01-03-sets.tm>>
     <associate|function extending funtion
     domain|<tuple|2.76|42|Chapter-01-03-sets.tm>>
-    <associate|function f(x)|<tuple|2.34|31|Chapter-01-03-sets.tm>>
+    <associate|function f(x)|<tuple|2.34|30|Chapter-01-03-sets.tm>>
     <associate|function function and intersection and
     union|<tuple|2.85|46|Chapter-01-03-sets.tm>>
     <associate|function identity function|<tuple|2.42|32|Chapter-01-03-sets.tm>>
@@ -1214,9 +1225,9 @@
     notation|<tuple|2.87|47|Chapter-01-03-sets.tm>>
     <associate|function surjection and construction of inverse
     function|<tuple|3.98|91|Chapter-01-03-sets.tm>>
-    <associate|function surjection condition|<tuple|2.47|34|Chapter-01-03-sets.tm>>
+    <associate|function surjection condition|<tuple|2.47|33|Chapter-01-03-sets.tm>>
     <associate|function trivial bijection|<tuple|2.61|36|Chapter-01-03-sets.tm>>
-    <associate|function: A^B and sets|<tuple|2.30|30|Chapter-01-03-sets.tm>>
+    <associate|function: A^B and sets|<tuple|2.30|29|Chapter-01-03-sets.tm>>
     <associate|group -x=-y\<less\>=\<gtr\>x=y|<tuple|4.10|109|Chapter-04-06-NaturalNumbers.tm>>
     <associate|group abelian group/sub group|<tuple|4.11|109|Chapter-04-06-NaturalNumbers.tm>>
     <associate|group cancelation|<tuple|4.6|108|Chapter-04-06-NaturalNumbers.tm>>
@@ -1401,7 +1412,7 @@
     <associate|order comparable|<tuple|3.36|75|Chapter-01-03-sets.tm>>
     <associate|order comparable property|<tuple|3.37|75|Chapter-01-03-sets.tm>>
     <associate|order composition of functions|<tuple|3.50|77|Chapter-01-03-sets.tm>>
-    <associate|order condition for isomorphism|<tuple|3.52|78|Chapter-01-03-sets.tm>>
+    <associate|order condition for isomorphism|<tuple|3.52|77|Chapter-01-03-sets.tm>>
     <associate|order condition for isomorphism in a totallu ordered
     set|<tuple|3.55|78|Chapter-01-03-sets.tm>>
     <associate|order conditional complete
@@ -1416,7 +1427,7 @@
     inf|<tuple|3.66|80|Chapter-01-03-sets.tm>>
     <associate|order greatest and lowest element are
     unique|<tuple|3.60|79|Chapter-01-03-sets.tm>>
-    <associate|order greatest lowest element|<tuple|3.57|79|Chapter-01-03-sets.tm>>
+    <associate|order greatest lowest element|<tuple|3.57|78|Chapter-01-03-sets.tm>>
     <associate|order immediate successor|<tuple|3.81|85|Chapter-01-03-sets.tm>>
     <associate|order inclusion and greatest and least
     element|<tuple|3.68|80|Chapter-01-03-sets.tm>>
@@ -1427,7 +1438,7 @@
     <associate|order initial segement inclusion|<tuple|3.45|76|Chapter-01-03-sets.tm>>
     <associate|order intial sergment property|<tuple|3.46|76|Chapter-01-03-sets.tm>>
     <associate|order isomorphism and conditional
-    complete|<tuple|3.76|84|Chapter-01-03-sets.tm>>
+    complete|<tuple|3.76|83|Chapter-01-03-sets.tm>>
     <associate|order isomorphism condition
     (2)|<tuple|3.53|78|Chapter-01-03-sets.tm>>
     <associate|order isomorphism preservers sup and
@@ -1435,7 +1446,7 @@
     <associate|order isomorphism strictly|<tuple|3.51|77|Chapter-01-03-sets.tm>>
     <associate|order lexical order|<tuple|3.35|74|Chapter-01-03-sets.tm>>
     <associate|order lower upper bound and
-    inclusion|<tuple|3.69|81|Chapter-01-03-sets.tm>>
+    inclusion|<tuple|3.69|80|Chapter-01-03-sets.tm>>
     <associate|order lower upper bounds of empty
     set|<tuple|3.64|79|Chapter-01-03-sets.tm>>
     <associate|order maximal minimal element|<tuple|3.56|78|Chapter-01-03-sets.tm>>
@@ -1458,11 +1469,11 @@
     <associate|order sup inf condition|<tuple|3.72|81|Chapter-01-03-sets.tm>>
     <associate|order sup, inf property|<tuple|3.67|80|Chapter-01-03-sets.tm>>
     <associate|order sup,inf and inclusion|<tuple|3.70|81|Chapter-01-03-sets.tm>>
-    <associate|order supremum infinum|<tuple|3.65|80|Chapter-01-03-sets.tm>>
+    <associate|order supremum infinum|<tuple|3.65|79|Chapter-01-03-sets.tm>>
     <associate|order total/well-order inclusion|<tuple|3.79|84|Chapter-01-03-sets.tm>>
     <associate|order totally lexicol ordering|<tuple|3.43|76|Chapter-01-03-sets.tm>>
-    <associate|order totally ordered subclass|<tuple|3.42|76|Chapter-01-03-sets.tm>>
-    <associate|order transfinite induction|<tuple|3.85|86|Chapter-01-03-sets.tm>>
+    <associate|order totally ordered subclass|<tuple|3.42|75|Chapter-01-03-sets.tm>>
+    <associate|order transfinite induction|<tuple|3.85|85|Chapter-01-03-sets.tm>>
     <associate|order upport lower bound|<tuple|3.63|79|Chapter-01-03-sets.tm>>
     <associate|order well order and immediate
     successor|<tuple|3.82|85|Chapter-01-03-sets.tm>>
@@ -1535,11 +1546,11 @@
     <associate|product product is empty|<tuple|3.102|94|Chapter-01-03-sets.tm>>
     <associate|product product is not empty|<tuple|3.101|94|Chapter-01-03-sets.tm>>
     <associate|product projection function|<tuple|2.128|64|Chapter-01-03-sets.tm>>
-    <associate|product projection is surjective|<tuple|3.100|94|Chapter-01-03-sets.tm>>
+    <associate|product projection is surjective|<tuple|3.100|93|Chapter-01-03-sets.tm>>
     <associate|product sub-product|<tuple|2.126|63|Chapter-01-03-sets.tm>>
     <associate|proposition 6.53.022|<tuple|6.57|163|Chapter-04-06-NaturalNumbers.tm>>
-    <associate|ration power properties|<tuple|8.19|197|Chapter-07-10-Numbers.tm>>
-    <associate|rational (-q).(-r)|<tuple|8.16|196|Chapter-07-10-Numbers.tm>>
+    <associate|ration power properties|<tuple|8.19|198|Chapter-07-10-Numbers.tm>>
+    <associate|rational (-q).(-r)|<tuple|8.16|197|Chapter-07-10-Numbers.tm>>
     <associate|rational 0\<less\>1|<tuple|8.33|202|Chapter-07-10-Numbers.tm>>
     <associate|rational 0\<less\>=q and 0\<less\>=q=\<gtr\>0\<less\>=q+r|<tuple|8.29|201|Chapter-07-10-Numbers.tm>>
     <associate|rational 0\<less\>=q property|<tuple|8.25|200|Chapter-07-10-Numbers.tm>>
@@ -1558,7 +1569,7 @@
     <associate|rational densitiy|<tuple|8.44|209|Chapter-07-10-Numbers.tm>>
     <associate|rational embedded integers|<tuple|8.39|204|Chapter-07-10-Numbers.tm>>
     <associate|rational equivalence relation|<tuple|8.3|192|Chapter-07-10-Numbers.tm>>
-    <associate|rational field|<tuple|8.12|194|Chapter-07-10-Numbers.tm>>
+    <associate|rational field|<tuple|8.12|195|Chapter-07-10-Numbers.tm>>
     <associate|rational group|<tuple|8.8|193|Chapter-07-10-Numbers.tm>>
     <associate|rational n/m and n\<less\>m or
     m\<less\>n|<tuple|8.34|202|Chapter-07-10-Numbers.tm>>
@@ -1570,12 +1581,12 @@
     <associate|rational numbers|<tuple|8.4|192|Chapter-07-10-Numbers.tm>>
     <associate|rational order relation (1)|<tuple|8.24|200|Chapter-07-10-Numbers.tm>>
     <associate|rational power|<tuple|8.17|197|Chapter-07-10-Numbers.tm>>
-    <associate|rational product|<tuple|8.11|194|Chapter-07-10-Numbers.tm>>
+    <associate|rational product|<tuple|8.11|195|Chapter-07-10-Numbers.tm>>
     <associate|rational product (1)|<tuple|8.10|194|Chapter-07-10-Numbers.tm>>
     <associate|rational properties of 0, 1 and
     inverse|<tuple|8.38|204|Chapter-07-10-Numbers.tm>>
     <associate|rational q\<less\>=0 and 0\<less\>=q then
-    q=0|<tuple|8.27|200|Chapter-07-10-Numbers.tm>>
+    q=0|<tuple|8.27|201|Chapter-07-10-Numbers.tm>>
     <associate|rational q\<less\>=r =\<gtr\>
     -r\<less\>=-q|<tuple|8.30|201|Chapter-07-10-Numbers.tm>>
     <associate|rational q\<less\>=r=\<gtr\>q+s\<less\>=r+s|<tuple|8.28|201|Chapter-07-10-Numbers.tm>>
@@ -1640,7 +1651,7 @@
     finite|<tuple|6.41|155|Chapter-04-06-NaturalNumbers.tm>>
     <associate|totally ordered class|<tuple|3.38|75|Chapter-01-03-sets.tm>>
     <associate|union of two finite sets is
-    finite|<tuple|6.31|151|Chapter-04-06-NaturalNumbers.tm>>
+    finite|<tuple|6.31|150|Chapter-04-06-NaturalNumbers.tm>>
     <associate|universal class|<tuple|1.12|9|Chapter-01-03-sets.tm>>
     <associate|universal class property|<tuple|1.13|9|Chapter-01-03-sets.tm>>
     <associate|{n,..,m} is bijective to S_(m-n)+1|<tuple|6.18|148|Chapter-04-06-NaturalNumbers.tm>>
@@ -2121,9 +2132,17 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-185>
 
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|9<space|2spc>The
+      real numbers> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-186><vspace|0.5fn>
+
+      9.1<space|2spc>Definition and arithmetic
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-187>
+
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Index>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-186><vspace|0.5fn>
+      <no-break><pageref|auto-188><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
