@@ -2362,7 +2362,7 @@
   multiplication as well as inverse elements. If we would use different
   symbols to note these we introduce a lot of excessive notation clutter. So
   we use the same symbols for the natural numbers, integers and rational
-  numbers, and use context to determine the meaning of the symbols involved.
+  numbers and use context to determine the meaning of the symbols involved.
   The following table should help you in determining the meaning of the
   different symbols based on the context of there usage.
 
@@ -3447,6 +3447,35 @@
       <\equation*>
         -r\<less\>-q
       </equation*>
+    </enumerate>
+  </proof>
+
+  <\corollary>
+    <label|rational q\<less\>q+1 and q-1\<less\>q>If <math|q\<in\>\<bbb-Q\>>
+    then\ 
+
+    <\enumerate>
+      <item><math|q\<less\>q+1>
+
+      <item><math|q+<around*|(|-1|)>=q-1>\<less\>q
+    </enumerate>
+  </corollary>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Using [theorem: <reference|rational 0\<less\>1>] we have that
+      <math|0\<less\>1> so that by [theorem: <reference|rational
+      q\<less\>=r=\<gtr\>q+s\<less\>=r+s>] <math|q=0+q\<less\>1+q=q+1>
+      proving that <math|q\<less\>q+1>
+
+      <item>As <math|0\<less\>1> we have by [theorem: <reference|rational
+      q\<less\>=r =\<gtr\> -r\<less\>=-q>] we have that <math|-1>\<less\>0 so
+      that by [theorem: <reference|rational
+      q\<less\>=r=\<gtr\>q+s\<less\>=r+s>]
+      <math|q-1=<around*|(|-1|)>+q\<less\>0+q=q> proving that
+      <math|q-1\<less\>q>.
     </enumerate>
   </proof>
 
@@ -4772,7 +4801,347 @@
 
   <chapter|The real numbers>
 
-  <section|Definition and arithmetic>
+  In this chapter we will introduce the set of real numbers and embed the
+  natural, integer and rational numbers in it. Just as with <math|\<bbb-Q\>>,
+  <math|\<bbb-Z\>> and <math|\<bbb-N\><rsub|0>> we will introduce a order
+  relation, a sum operator, a product operator, neutral elements for addition
+  and multiplication as well as inverse elements. If we would use different
+  symbols for these we introduce a lot of excessive notation clutter. So we
+  use the same symbols for the natural numbers, integers, rational numbers
+  and real numbers and use context to determine the meaning of the symbols
+  involved. The following table should help you in determining the meaning of
+  the different symbols based on the context of there usage.
+
+  \;
+
+  <block|<tformat|<table|<row|<cell|Context>|<cell|Expression>|<cell|Operator>>|<row|<cell|<math|n,m\<in\>\<bbb-N\><rsub|0>>>|<cell|n+m>|<cell|sum
+  in <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|n\<cdot\>m>>|<cell|product
+  in <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|n\<leqslant\>m>>|<cell|order
+  in <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|n\<less\>m>>|<cell|strict
+  order in <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|n-m>>|<cell|subtraction
+  in <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>>>>|<row|<cell|<math|n\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|n+0>
+  or <math|0+n>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>>>>|<row|<cell|<math|n\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|n\<cdot\>1<text|
+  or >1\<cdot\>n>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|n\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|-n>>|<cell|inverse
+  element in <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-Z\>>>|<cell|n+m>|<cell|sum
+  in <math|<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-Z\>>>|<cell|<math|n\<cdot\>m>>|<cell|product
+  in <math|<around*|\<langle\>|\<bbb-Z\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-Z\>>>|<cell|<math|n\<leqslant\>m>>|<cell|order
+  in <math|<around*|\<langle\>|\<bbb-Z\>\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-Z\>>>|<cell|<math|n\<less\>m>>|<cell|strict
+  order in <math|<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-Z\>>>|<cell|<math|n-m>>|<cell|subtraction
+  in <math|<around*|\<langle\>|\<bbb-Z\>,-|\<rangle\>>>>>|<row|<cell|<math|n\<in\>\<bbb-Z\>>>|<cell|<math|n+0>
+  or <math|0+n>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>>>>|<row|<cell|<math|n\<in\>\<bbb-Z\>>>|<cell|<math|n\<cdot\>1<text|
+  or >1\<cdot\>n>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-Z\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|n\<in\>\<bbb-Z\>>>|<cell|<math|-n>>|<cell|inverse
+  element in <math|<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-Q\>>>|<cell|q+r>|<cell|sum
+  in <math|<around*|\<langle\>|\<bbb-Q\>,+|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-Q\>>>|<cell|<math|q\<cdot\>r>>|<cell|product
+  in <math|<around*|\<langle\>|\<bbb-Q\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-Q\>>>|<cell|<math|q\<leqslant\>r>>|<cell|order
+  in <math|<around*|\<langle\>|\<bbb-Q\>\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-Q\>>>|<cell|<math|q\<less\>r>>|<cell|strict
+  order in <math|<around*|\<langle\>|\<bbb-Q\>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|q,e\<in\>\<bbb-Q\>>>|<cell|<math|q-r>>|<cell|subtraction
+  in <math|<around*|\<langle\>|\<bbb-Q\>,-|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-Q\>>>|<cell|<math|q/r>>|<cell|division
+  in <math|<around*|\<langle\>|\<bbb-Q\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-Q\>>>|<cell|<math|q+0>
+  or <math|0+q>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-Q\>,+|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-Q\>>>|<cell|<math|q\<cdot\>1<text|
+  or >1\<cdot\>q>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-Q\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-Q\>>>|<cell|<math|-q>>|<cell|inverse
+  element in <math|<around*|\<langle\>|\<bbb-Q\>,+|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-R\>>>|<cell|q+r>|<cell|sum
+  in <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-R\>>>|<cell|<math|q\<cdot\>r>>|<cell|product
+  in <math|<around*|\<langle\>|\<bbb-R\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-R\>>>|<cell|<math|q\<leqslant\>r>>|<cell|order
+  in <math|<around*|\<langle\>|\<bbb-R\>\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-R\>>>|<cell|<math|q\<less\>r>>|<cell|strict
+  order in <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|q,e\<in\>\<bbb-R\>>>|<cell|<math|q-r>>|<cell|subtraction
+  in <math|<around*|\<langle\>|\<bbb-R\>,-|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-R\>>>|<cell|<math|q/r>>|<cell|division
+  in <math|<around*|\<langle\>|\<bbb-R\>\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-R\>>>|<cell|<math|q+0>
+  or <math|0+q>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-R\>>>|<cell|<math|q\<cdot\>1<text|
+  or >1\<cdot\>q>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-R\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-R\>>>|<cell|<math|-q>>|<cell|inverse
+  element in <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>>>>>>>
+
+  \;
+
+  <section|Definition of the real numbers>
+
+  <\definition>
+    <label|real Dedekind's cut><index|Dedekind's cut><dueto|Dedekind Cut>A
+    subset <math|\<alpha\>\<subseteq\>\<bbb-Q\>> is a Dedekidn's cut of
+    <math|\<bbb-Q\>> if the following properties hold
+
+    <\enumerate>
+      <item><math|\<alpha\>\<neq\>\<varnothing\>>
+
+      <item><math|\<alpha\>\<neq\>\<bbb-Q\>>
+
+      <item><math|\<forall\>q\<in\>\<alpha\>\<wedge\>\<forall\>r\<in\>Q\\\<alpha\>>
+      we have <math|q\<less\>r>
+
+      <item><math|\<alpha\>> does not have a greatest element
+    </enumerate>
+  </definition>
+
+  So a Dedekind cut <math|\<alpha\>> devides <math|\<bbb-Q\>> in two disjoint
+  pieces so that <math|\<alpha\>\<neq\>\<varnothing\>\<neq\>Q\\\<alpha\>>
+  where every element in <math|\<alpha\>> is strict lower of elements in
+  <math|\<bbb-Q\>\\\<alpha\>> and <math|\<alpha\>> has not a greatest
+  element. The collection of Dedekind cuts will from the set of real numbers.
+
+  <\definition>
+    <label|real real numbers><index|<math|\<bbb-R\>>>The set of real numbers,
+    noted as <math|\<bbb-R\>> is the set of Dedekind cuts of <math|\<bbb-Q\>>
+    hence\ 
+
+    <\equation*>
+      \<bbb-R\>=<around*|{|\<alpha\>\<subseteq\>\<bbb-Q\>\|\<alpha\><text| is
+      a Dedekind cut>|}>
+    </equation*>
+  </definition>
+
+  <\lemma>
+    <label|real property to determine membership of a
+    cut><math|\<forall\>\<alpha\>\<in\>\<bbb-R\>> we have
+    <math|\<forall\>q\<in\>\<alpha\>> then <math|\<forall\>r\<in\>\<bbb-Q\>>
+    with <math|r\<leqslant\>q> that <math|r\<in\>\<alpha\>>
+  </lemma>
+
+  <\proof>
+    We prove this by contradiction, so assume that there exist a
+    <math|\<alpha\>\<in\>\<bbb-R\>>, a <math|q\<in\>\<alpha\>> and a
+    <math|r\<in\>\<bbb-Q\>> with <math|r\<leqslant\>q> such that
+    <math|r\<nin\>\<alpha\>>. As <math|r\<nin\>\<alpha\>> we have that
+    <math|r\<in\>\<bbb-Q\>\\\<alpha\>> hence by definition of a Dedekind cut
+    that <math|q\<less\>r> contradicting <math|r\<leqslant\>q>.
+  </proof>
+
+  We prove now that every rational number can be associated with a Dedekind
+  cut of <math|\<bbb-Q\>>.
+
+  <\theorem>
+    <label|real rational cut><dueto|Rational cuts>If <math|q\<in\>\<bbb-Q\>>
+    then <math|\<alpha\><rsub|q>=<around*|{|r\<in\>\<bbb-Q\>\|r\<less\>q|}>>
+    is a Dedekind cut. Dedekind cuts of this forms are called rational cuts.
+    Furthermore we have:
+
+    <\enumerate>
+      <item><math|\<alpha\><rsub|q>=\<alpha\><rsub|r>\<Leftrightarrow\>q=r>
+
+      <item><math|\<alpha\>> is a rational cut <math|\<Leftrightarrow\>>
+      <math|q=min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> exist and in that case
+      <math|\<alpha\>=\<alpha\><rsub|q>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ First we prove that given <math|q\<in\>\<bbb-Q\>>
+    <math|\<alpha\><rsub|q>=<around*|{|r\<in\>\<bbb-Q\>\|r\<less\>q|}>> is a
+    cut.\ 
+
+    <\enumerate>
+      <item>As <math|q+<around*|(|-<around*|(|q+<around*|(|-1|)>|)>|)>=q+<around*|(|-q+<around*|(|-<around*|(|-1|)>|)>|)>=1\<gtr\>0>
+      so that <math|q-1\<less\>q> hence <math|q-1\<in\>\<alpha\><rsub|q>>
+      proving that <math|\<alpha\><rsub|q>\<neq\>\<varnothing\>>.
+
+      <item>As <math|q\<less\>q> is false we have that
+      <math|q\<in\>\<bbb-Q\>\\\<alpha\><rsub|q>> so that
+      <math|\<bbb-Q\>\\\<alpha\><rsub|q>\<neq\>\<varnothing\>>.
+
+      <item>If <math|r\<in\>\<alpha\><rsub|q>> and
+      <math|s\<in\>\<bbb-Q\>\\\<alpha\><rsub|q>> then <math|r\<less\>q> and
+      <math|\<neg\><around*|(|s\<less\>q|)>\<Rightarrow\>q\<leqslant\>s> so
+      that <math|r\<less\>s>.
+
+      <item>Assume that <math|m> is a greatest element of
+      <math|\<alpha\><rsub|q>> then <math|m\<in\>\<alpha\><rsub|q>> and
+      <math|\<forall\>r\<in\>\<alpha\><rsub|q>> we have
+      <math|r\<leqslant\>m>. As <math|m\<in\>\<alpha\><rsub|q>> we have that
+      <math|m\<less\>q>, using the density of <math|\<bbb-Q\>> [see theorem:
+      <reference|rational densitiy>] there exist a <math|r\<in\>\<bbb-Q\>>
+      such that <math|m\<less\>r\<less\>q>. As <math|r\<less\>q> we have that
+      <math|r\<in\>\<alpha\><rsub|q>> so that <math|r\<leqslant\>m>
+      contradicting <math|m\<less\>r>. So the assumption is false proving
+      that <math|\<alpha\><rsub|q>> has no greatest element.
+    </enumerate>
+
+    Next we prove (1) and (2)\ 
+
+    <\enumerate>
+      <item>\ 
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>If <math|\<alpha\><rsub|q>=\<alpha\><rsub|r>>
+        then if <math|q\<neq\>r> we have either\ 
+
+        <\description>
+          <item*|<math|q\<less\>r>>then <math|q\<in\>\<alpha\><rsub|r>> and
+          so that <math|q\<in\>\<alpha\><rsub|q>> resulting in the
+          contradiction <math|q\<less\>q>.
+
+          <item*|<math|r\<less\>q>>then <math|r\<in\>\<alpha\><rsub|q>> and
+          so that <math|r\<in\>\<alpha\><rsub|r>> resulting in the
+          contradiction <math|r\<less\>r>.
+        </description>
+
+        so we must have <math|q=r>.
+
+        <item*|<math|\<Leftarrow\>>><math|s\<in\>\<alpha\><rsub|q>\<Leftrightarrow\>s\<in\>\<bbb-Q\>\<wedge\>s\<less\>q\<Leftrightarrowlim\><rsub|r=r>s\<in\>\<bbb-Q\>\<wedge\>s\<less\>r\<Leftrightarrow\>s\<in\>\<alpha\><rsub|r>>
+        hence <math|\<alpha\><rsub|q>=\<alpha\><rsub|s>>
+      </description>
+
+      <item>\ 
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>If <math|\<alpha\>> is a rational cut
+        then there exist a <math|q\<in\>\<bbb-Q\>> such that
+        <math|\<alpha\>=<around*|{|r\<in\>\<bbb-Q\>\|r\<less\>q|}>>. So\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|s\<in\>\<bbb-Q\>\\\<alpha\>>|<cell|\<Leftrightarrow\>>|<cell|s\<in\>\<bbb-Q\>\<wedge\>\<neg\><around*|(|s\<less\>q|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|s\<in\>\<bbb-Q\>\<wedge\>q\<leqslant\>s>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|s\<in\><around*|{|s\<in\>\<bbb-Q\>\|q\<leqslant\>s|}>>>>>
+        </eqnarray*>
+
+        proving that <math|\<bbb-Q\>\\\<alpha\>=<around*|{|s\<in\>\<bbb-Q\>\|q\<leqslant\>s|}>>.
+        So <math|q\<in\><around*|{|s\<in\>\<bbb-Q\>\|q\<leqslant\>s|}>> and
+        <math|\<forall\>s\<in\>Q\\\<alpha\>> we have <math|q\<leqslant\>s>
+        proving that <math|q=min<around*|(|\<bbb-Q\>\\a|)>> and
+        <math|\<alpha\>=<around*|{|r\<in\>\<bbb-Q\>\|r\<less\>q|}>=\<alpha\><rsub|q>>
+
+        <item*|<math|\<Leftarrow\>>>If <math|q=min<around*|(|\<bbb-Q\>\\\<alpha\>|)>>
+        exists then <math|q\<in\>\<bbb-Q\>\\\<alpha\>> and
+        <math|\<forall\>r\<in\>\<bbb-Q\>\\a> we have <math|q\<leqslant\>r>.
+        If now <math|r\<in\>\<alpha\>> then by the definition of a cut we
+        have <math|r\<less\>q>, hence <math|r\<in\><around*|{|r\<in\>\<bbb-Q\>\|r\<less\>q|}>=\<alpha\><rsub|q>>.
+        Further if <math|r\<in\>\<alpha\><rsub|q>> then <math|r\<less\>q>,
+        assume that <math|r\<nin\>\<alpha\>> then we have
+        <math|q\<leqslant\>r> contradicting <math|r\<less\>q>, so we must
+        have that <math|r\<in\>\<alpha\>>. Hence we have that\ 
+
+        <\equation*>
+          \<alpha\>=\<alpha\><rsub|q><text| where
+          >q=min<around*|(|\<bbb-Q\>\\\<alpha\>|)>
+        </equation*>
+      </description>
+    </enumerate>
+  </proof>
+
+  <\corollary>
+    <label|reals the set of reals are non empty><math|\<bbb-R\>\<neq\>0>
+  </corollary>
+
+  <\proof>
+    As <math|0,1\<in\>\<bbb-Q\>> we have that
+    <math|\<alpha\><rsub|0>,\<alpha\><rsub|1>\<in\>\<bbb-R\>> proving that
+    <math|\<bbb-R\>\<neq\>\<varnothing\>>/
+  </proof>
+
+  We embed now the rational numbers in the set of reals.
+
+  <\definition>
+    <label|reals QR>The set <math|\<bbb-Q\><rsub|\<bbb-R\>>> is defined by\ 
+
+    <\equation*>
+      \<bbb-Q\><rsub|\<bbb-R\>>=<around*|{|\<alpha\><rsub|q>\|q\<in\>\<bbb-Q\>|}>\<subseteq\>\<bbb-R\>
+      </equation*>
+
+    where <math|\<alpha\><rsub|q>=<around*|{|r\<in\>\<bbb-Q\>\|r\<less\>q|}>>
+  </definition>
+
+  To make the above a embedding we need a bijection between <math|\<bbb-Q\>>
+  and <math|\<bbb-Q\><rsub|\<bbb-R\>>> and once we have defined sum, product
+  and order that it is field and order isomorphism. We start with providing a
+  bijection.
+
+  <\theorem>
+    <label|real NQ bijection><math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Q\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>>>
+    defined by <math|i<rsub|\<bbb-Q\>><around*|(|q|)>=\<alpha\><rsub|q>> is a
+    bijection.
+  </theorem>
+
+  <\proof>
+    We have\ 
+
+    <\description>
+      <item*|reflexivity>If <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|q|)>=i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|r|)>>
+      then <math|\<alpha\><rsub|q>=\<alpha\><rsub|r>> so that by [theorem:
+      <reference|real rational cut>]
+
+      <item*|surjective>If <math|\<alpha\>\<in\>\<bbb-Q\><rsub|\<bbb-Q\>>> we
+      have a <math|q\<in\>\<bbb-Q\>> such that
+      <math|\<alpha\>=\<alpha\><rsub|q>=i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|q|)>>
+      \ 
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|real gap theorem><dueto|Gap theorem>If
+    <math|\<alpha\>\<in\>\<bbb-R\>> then <math|\<forall\>\<varepsilon\>\<in\>\<bbb-Q\>>
+    with <math|0\<less\>\<varepsilon\>> there
+    <math|\<exists\>q\<in\>\<alpha\>> and
+    <math|\<exists\>r\<in\>\<bbb-Q\>\\\<alpha\>> such that\ 
+
+    <\equation*>
+      r-q=r+<around*|(|-q|)>\<less\>\<varepsilon\>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Let <math|\<alpha\>\<in\>\<bbb-R\>> and
+    <math|\<varepsilon\>\<in\>\<bbb-Q\>\\<around*|{|0|}>>. By the definition
+    of a cut there exist a <math|q<rprime|'>\<in\>\<alpha\>> and a
+    <math|r<rprime|'>\<in\>\<bbb-Q\>\\\<alpha\>> such that
+    <math|q<rprime|'>\<less\>r<rprime|'>>, so
+    <math|0\<less\>r<rprime|'>+<around*|(|-q<rprime|'>|)>=r<rprime|'>-q<rprime|'>>
+    and we have by the Archimedean property [see theorem: <reference|rational
+    Archimedean>] the existence of a <math|k\<in\>\<bbb-N\><rsub|\<bbb-Q\>>>
+    such that <math|r<rprime|'>-q<rprime|'>\<less\>k\<cdot\>\<varepsilon\>>.
+    If <math|k=0> then we would have that
+    <math|0\<less\>r<rprime|'>-k<rprime|'>\<less\>0> a contradiction, so
+    <math|k\<neq\>0> which by [theorem: <reference|rational NQ properties
+    (1)>] proves that <math|0\<less\>k>. Applying [theorem:
+    <reference|rational 0\<less\>q-\<gtr\>0\<less\>q^-1>] we have that
+    <math|0\<less\>k<rsup|-1>>, so multiplying both sides of
+    <math|r<rprime|'>-q<rprime|'>\<less\>k\<cdot\>\<varepsilon\>> gives\ 
+
+    <\equation>
+      <label|eq 9.1.028>k<rsup|-1>\<cdot\><around*|(|r<rprime|'>-q<rprime|'>|)>\<less\>\<varepsilon\>
+    </equation>
+
+    Define now\ 
+
+    <\equation*>
+      A=<around*|{|n\<in\>\<bbb-N\><rsub|\<bbb-Q\>>\|q<rprime|'>+<around*|(|n\<cdot\>k<rsup|-1>|)>\<cdot\><around*|(|r<rprime|'>-q<rprime|'>|)>\<nin\>\<alpha\>|}>\<subseteq\>\<bbb-N\><rsub|\<bbb-Q\>>
+    </equation*>
+
+    As <math|q<rprime|'>+<around*|(|k\<cdot\>k<rsup|-1>|)>\<cdot\><around*|(|r<rprime|'>-q<rprime|'>|)>=q<rprime|'>+<around*|(|r<rprime|'>-q<rprime|'>|)>=r<rprime|'>\<in\>\<bbb-Q\>\\\<alpha\>>
+    it follows that <math|k\<in\>A> so that <math|A\<neq\>0>, as
+    <math|\<bbb-N\><rsub|\<bbb-Q\>>> is well ordered [see theorem:
+    <reference|rational NQ is well-ordered>] it follows that
+    <math|k<rprime|'>=min<around*|(|A|)>> exist. If <math|k<rprime|'>=0> theb
+    as <math|k<rprime|'>\<in\>A> we would have
+    <math|q<rprime|'>=q<rprime|'>+<around*|(|0\<cdot\>k<rsup|-1>|)>\<cdot\><around*|(|r<rprime|'>-q<rprime|'>|)>\<nin\>\<alpha\>>
+    contradicting <math|q<rprime|'>\<in\>a>, so we must have that
+    <math|k<rprime|'>\<neq\>0> and using [theorem: <reference|rational NQ
+    properties (1)>] it follows that <math|1\<leqslant\>k<rprime|'>>, hence
+    <math|0\<leqslant\>k<rprime|'>-1>, where by [theorem: <reference|rational
+    NQ properties (1)>] <math|k<rprime|'>-1\<in\>\<bbb-N\><rsub|\<bbb-Q\>>>.
+    As by [theorem: <reference|rational q\<less\>q+1 and q-1\<less\>q>]
+    <math|k<rprime|'>-1\<less\>k<rprime|'>> we have as
+    <math|k<rprime|'>=min<around*|(|A|)>> that <math|k<rprime|'>-1\<nin\>A>
+    so that
+
+    <\equation*>
+      q<rprime|'>+<around*|(|<around*|(|k<rprime|'>-1|)>\<cdot\>k<rsup|-1>|)>\<cdot\><around*|(|r<rprime|'>-q<rprime|'>|)>\<in\>\<alpha\>
+    </equation*>
+
+    Define now <math|q=q<rprime|'>+<around*|(|<around*|(|k<rprime|'>-1|)>\<cdot\>k<rsup|-1>|)>\<cdot\><around*|(|r<rprime|'>-q<rprime|'>|)>>
+    and <math|r=q<rprime|'>+<around*|(|k<rprime|'>\<cdot\>k<rsup|-1>|)>\<cdot\><around*|(|r<rprime|'>-q<rprime|'>|)>>
+    then we have <math|q\<in\>\<alpha\>> and
+    <math|r\<in\>\<bbb-Q\>\\\<alpha\>> [as <math|k<rprime|'>\<in\>Q>]. Next\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|r-q>|<cell|=>|<cell|<around*|(|q<rprime|'>+<around*|(|k<rprime|'>\<cdot\>k<rsup|-1>|)>\<cdot\><around*|(|r<rprime|'>-q<rprime|'>|)>|)>-<around*|(|q<rprime|'>+<around*|(|<around*|(|k<rprime|'>-1|)>\<cdot\>k<rsup|-1>|)>\<cdot\><around*|(|r<rprime|'>-q<rprime|'>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|k<rprime|'>\<cdot\>k<rsup|-1>|)>\<cdot\><around*|(|r<rprime|'>-q<rprime|'>|)>-<around*|(|<around*|(|k<rprime|'>-1|)>\<cdot\>k<rsup|-1>|)>\<cdot\><around*|(|r<rprime|'>-q<rprime|'>|)>>>|<row|<cell|>|<cell|=>|<cell|k<rsup|-1>\<cdot\><around*|(|r<rprime|'>-q<rprime|'>|)>>>|<row|<cell|>|<cell|\<less\>\<varepsilon\>>|<cell|<text|[see
+      eq: <reference|eq 9.1.028>]>>>>>
+    </eqnarray*>
+  </proof>
+
+  \;
 </body>
 
 <\initial>
@@ -4786,8 +5155,7 @@
 
 <\references>
   <\collection>
-    <associate|8.20.026|<tuple|8.21|?>>
-    <associate|NQ is conditional complete|<tuple|8.46|?>>
+    <associate|NQ is conditional complete|<tuple|8.47|?>>
     <associate|auto-1|<tuple|7|?>>
     <associate|auto-10|<tuple|quotient|?>>
     <associate|auto-11|<tuple|<with|mode|<quote|math>|<frac|m|n>>|?>>
@@ -4804,6 +5172,8 @@
     <associate|auto-21|<tuple|8.3|?>>
     <associate|auto-22|<tuple|9|?>>
     <associate|auto-23|<tuple|9.1|?>>
+    <associate|auto-24|<tuple|Dedekind's cut|?>>
+    <associate|auto-25|<tuple|<with|mode|<quote|math>|\<bbb-R\>>|?>>
     <associate|auto-3|<tuple|integers|?>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>>|?>>
     <associate|auto-5|<tuple|7.2|?>>
@@ -4869,6 +5239,7 @@
     <associate|eq 8.8.024|<tuple|8.8|?>>
     <associate|eq 8.9.024|<tuple|8.10|?>>
     <associate|eq 8.9.024.1|<tuple|8.9|?>>
+    <associate|eq 9.1.028|<tuple|9.1|?>>
     <associate|integeres order|<tuple|7.28|?>>
     <associate|integers|<tuple|7.2|?>>
     <associate|integers (-1).n|<tuple|7.16|?>>
@@ -4931,29 +5302,29 @@
     <associate|integers ~([n,m])~([n+k,m+k)]|<tuple|7.3|?>>
     <associate|ration power properties|<tuple|8.19|?>>
     <associate|rational (-q).(-r)|<tuple|8.16|?>>
-    <associate|rational 0\<less\>1|<tuple|8.33|?>>
+    <associate|rational 0\<less\>1|<tuple|8.34|?>>
     <associate|rational 0\<less\>=q and 0\<less\>=q=\<gtr\>0\<less\>=q+r|<tuple|8.29|?>>
     <associate|rational 0\<less\>=q property|<tuple|8.25|?>>
     <associate|rational 0\<less\>q and 0\<less\>r =\<gtr\>
-    0\<less\>q,r|<tuple|8.35|?>>
-    <associate|rational 0\<less\>q-\<gtr\>0\<less\>q^-1|<tuple|8.37|?>>
-    <associate|rational 0\<less\>q=\<gtr\>q=n/m|<tuple|8.32|?>>
+    0\<less\>q,r|<tuple|8.36|?>>
+    <associate|rational 0\<less\>q-\<gtr\>0\<less\>q^-1|<tuple|8.38|?>>
+    <associate|rational 0\<less\>q=\<gtr\>q=n/m|<tuple|8.33|?>>
     <associate|rational 1+1=2|<tuple|8.13|?>>
-    <associate|rational Archimedean|<tuple|8.43|?>>
-    <associate|rational NQ is denumerable|<tuple|8.49|?>>
-    <associate|rational NQ is well-ordered|<tuple|8.45|?>>
-    <associate|rational NQ properties (1)|<tuple|8.42|?>>
-    <associate|rational Q is denumerable|<tuple|8.51|?>>
-    <associate|rational ZQ is denumerable|<tuple|8.50|?>>
+    <associate|rational Archimedean|<tuple|8.44|?>>
+    <associate|rational NQ is denumerable|<tuple|8.50|?>>
+    <associate|rational NQ is well-ordered|<tuple|8.46|?>>
+    <associate|rational NQ properties (1)|<tuple|8.43|?>>
+    <associate|rational Q is denumerable|<tuple|8.52|?>>
+    <associate|rational ZQ is denumerable|<tuple|8.51|?>>
     <associate|rational absorbing element|<tuple|8.15|?>>
-    <associate|rational densitiy|<tuple|8.44|?>>
-    <associate|rational embedded integers|<tuple|8.39|?>>
+    <associate|rational densitiy|<tuple|8.45|?>>
+    <associate|rational embedded integers|<tuple|8.40|?>>
     <associate|rational equivalence relation|<tuple|8.3|?>>
     <associate|rational field|<tuple|8.12|?>>
     <associate|rational group|<tuple|8.8|?>>
-    <associate|rational n/m and n\<less\>m or m\<less\>n|<tuple|8.34|?>>
+    <associate|rational n/m and n\<less\>m or m\<less\>n|<tuple|8.35|?>>
     <associate|rational n/m=n.k/m.k|<tuple|8.5|?>>
-    <associate|rational natural numbers|<tuple|8.41|?>>
+    <associate|rational natural numbers|<tuple|8.42|?>>
     <associate|rational non negative rationals|<tuple|8.22|?>>
     <associate|rational non negative rationals from a
     semi-group|<tuple|8.23|?>>
@@ -4962,23 +5333,35 @@
     <associate|rational power|<tuple|8.17|?>>
     <associate|rational product|<tuple|8.11|?>>
     <associate|rational product (1)|<tuple|8.10|?>>
-    <associate|rational properties of 0, 1 and inverse|<tuple|8.38|?>>
+    <associate|rational properties of 0, 1 and inverse|<tuple|8.39|?>>
     <associate|rational q\<less\>=0 and 0\<less\>=q then q=0|<tuple|8.27|?>>
     <associate|rational q\<less\>=r =\<gtr\> -r\<less\>=-q|<tuple|8.30|?>>
     <associate|rational q\<less\>=r=\<gtr\>q+s\<less\>=r+s|<tuple|8.28|?>>
+    <associate|rational q\<less\>q+1 and q-1\<less\>q|<tuple|8.31|?>>
+    <associate|rational q\<less\>q+q and q-1\<less\>q|<tuple|8.31|?>>
     <associate|rational q\<less\>r\<less\>=\<gtr\>0\<less\>r+(-q)|<tuple|8.26|?>>
     <associate|rational q=r\<less\>=\<gtr\>q.s=r.s|<tuple|8.14|?>>
     <associate|rational q^(n+m)=q^n.q^m|<tuple|8.18|?>>
-    <associate|rational r\<less\>=q and multiplying by s|<tuple|8.36|?>>
+    <associate|rational r\<less\>=q and multiplying by s|<tuple|8.37|?>>
     <associate|rational rational numbers are not conditional
-    complete|<tuple|8.48|?>>
-    <associate|rational square root of 2 does not exist|<tuple|8.47|?>>
-    <associate|rational sub-ring|<tuple|8.40|?>>
+    complete|<tuple|8.49|?>>
+    <associate|rational square root of 2 does not exist|<tuple|8.48|?>>
+    <associate|rational sub-ring|<tuple|8.41|?>>
     <associate|rational sum operator|<tuple|8.7|?>>
     <associate|rational sum operator (1)|<tuple|8.6|?>>
-    <associate|rational totally ordered|<tuple|8.31|?>>
+    <associate|rational totally ordered|<tuple|8.32|?>>
     <associate|rational x-y|<tuple|8.9|?>>
     <associate|rational {0}|<tuple|8.21|?>>
+    <associate|real Dedekin's cut|<tuple|9.1|?>>
+    <associate|real Dedekind's cut|<tuple|9.1|?>>
+    <associate|real NQ bijection|<tuple|9.7|?>>
+    <associate|real gap theorem|<tuple|9.8|?>>
+    <associate|real property to determine membership of a cut|<tuple|9.3|?>>
+    <associate|real rational cut|<tuple|9.4|?>>
+    <associate|real real numbers|<tuple|9.2|?>>
+    <associate|reals QR|<tuple|9.6|?>>
+    <associate|reals the set of reals are non empty|<tuple|9.5|?>>
+    <associate|reals the set of reals are non empy|<tuple|9.5|?>>
     <associate|sign function|<tuple|8.20|?>>
   </collection>
 </references>
@@ -5043,6 +5426,14 @@
       8.3<space|2spc>Denumerability of the rationals
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-21>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|9<space|2spc>The
+      real numbers> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-22><vspace|0.5fn>
+
+      9.1<space|2spc>Definition and arithmetic
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-23>
     </associate>
   </collection>
 </auxiliary>
