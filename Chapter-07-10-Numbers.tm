@@ -4860,7 +4860,11 @@
 
   \;
 
-  <section|Definition of the real numbers>
+  <section|Definition and Arithmetic on <math|\<bbb-R\>>>
+
+  <\subsection>
+    Definition of the real numbers
+  </subsection>
 
   <\definition>
     <label|real Dedekind's cut><index|Dedekind's cut><dueto|Dedekind Cut>A
@@ -4870,7 +4874,9 @@
     <\enumerate>
       <item><math|\<alpha\>\<neq\>\<varnothing\>>
 
-      <item><math|\<alpha\>\<neq\>\<bbb-Q\>>
+      <item><math|\<alpha\>\<neq\>\<bbb-Q\>> [which as
+      <math|\<alpha\>\<subseteq\>\<bbb-Q\>> implies that
+      <math|\<bbb-Q\>\\\<alpha\>\<neq\>\<varnothing\>>]
 
       <item><math|\<forall\>q\<in\>\<alpha\>\<wedge\>\<forall\>r\<in\>Q\\\<alpha\>>
       we have <math|q\<less\>r>
@@ -5038,7 +5044,7 @@
 
     <\equation*>
       \<bbb-Q\><rsub|\<bbb-R\>>=<around*|{|\<alpha\><rsub|q>\|q\<in\>\<bbb-Q\>|}>\<subseteq\>\<bbb-R\>
-      </equation*>
+    </equation*>
 
     where <math|\<alpha\><rsub|q>=<around*|{|r\<in\>\<bbb-Q\>\|r\<less\>q|}>>
   </definition>
@@ -5132,14 +5138,265 @@
 
     Define now <math|q=q<rprime|'>+<around*|(|<around*|(|k<rprime|'>-1|)>\<cdot\>k<rsup|-1>|)>\<cdot\><around*|(|r<rprime|'>-q<rprime|'>|)>>
     and <math|r=q<rprime|'>+<around*|(|k<rprime|'>\<cdot\>k<rsup|-1>|)>\<cdot\><around*|(|r<rprime|'>-q<rprime|'>|)>>
-    then we have <math|q\<in\>\<alpha\>> and
-    <math|r\<in\>\<bbb-Q\>\\\<alpha\>> [as <math|k<rprime|'>\<in\>Q>]. Next\ 
+    then we have
+
+    <\equation*>
+      q\<in\>\<alpha\><text| and >r\<in\>\<bbb-Q\>\\\<alpha\>
+    </equation*>
+
+    Next\ 
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|r-q>|<cell|=>|<cell|<around*|(|q<rprime|'>+<around*|(|k<rprime|'>\<cdot\>k<rsup|-1>|)>\<cdot\><around*|(|r<rprime|'>-q<rprime|'>|)>|)>-<around*|(|q<rprime|'>+<around*|(|<around*|(|k<rprime|'>-1|)>\<cdot\>k<rsup|-1>|)>\<cdot\><around*|(|r<rprime|'>-q<rprime|'>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|k<rprime|'>\<cdot\>k<rsup|-1>|)>\<cdot\><around*|(|r<rprime|'>-q<rprime|'>|)>-<around*|(|<around*|(|k<rprime|'>-1|)>\<cdot\>k<rsup|-1>|)>\<cdot\><around*|(|r<rprime|'>-q<rprime|'>|)>>>|<row|<cell|>|<cell|=>|<cell|k<rsup|-1>\<cdot\><around*|(|r<rprime|'>-q<rprime|'>|)>>>|<row|<cell|>|<cell|\<less\>\<varepsilon\>>|<cell|<text|[see
       eq: <reference|eq 9.1.028>]>>>>>
     </eqnarray*>
   </proof>
+
+  <\theorem>
+    <label|real negative cut><dueto|Negative cut>If
+    <math|\<alpha\>\<in\>\<bbb-R\>> then <math|-\<alpha\>> defined by\ 
+
+    <\equation*>
+      -\<alpha\>=<around*|{|-r\|r\<in\>\<bbb-Q\>\\\<alpha\><text| such that
+      if <math|min<around*|(|\<bbb-Q\>\\a|)><text| exist then
+      >r\<neq\>min<around*|(|\<bbb-Q\>\\\<alpha\>|)>>>|}>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>As <math|\<alpha\>\<in\>\<bbb-R\>> <math|\<alpha\>> is a Dedekind
+      cut, so there exist a <math|q\<in\>\<bbb-Q\>\\\<alpha\>> [definition:
+      <reference|real Dedekind's cut>]. Assume that <math|q+1\<in\>\<alpha\>>
+      then by definition of a cut we have <math|q+1\<less\>q> contradicting
+      <math|q\<less\>q+1> [see theorem: <reference|rational q\<less\>q+1 and
+      q-1\<less\>q>], hence we must have that
+      <math|q+1\<in\>\<bbb-Q\>\\\<alpha\>>. If
+      <math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> exists then as
+      <math|q+1\<in\>\<bbb-Q\>\\\<alpha\>> we have that
+      <math|q\<less\>q+1\<leqslant\>min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> so
+      that <math|q+1\<neq\>min<around*|(|\<bbb-Q\>\\\<alpha\>|)>>. Hence we
+      have that <math|-<around*|(|q+1|)>\<in\>-\<alpha\>> proving that
+      <math|-\<alpha\>\<neq\>\<varnothing\>>.
+
+      <item>As <math|\<alpha\>> is a Dedekind cut,
+      <math|\<alpha\>\<neq\>\<varnothing\>> so there exist a
+      <math|q\<in\>\<alpha\>\<subseteq\>\<bbb-Q\>> so that
+      <math|q\<nin\>\<bbb-Q\>\\\<alpha\>>. If <math|-q\<in\>-\<alpha\>> then
+      there exist a <math|r\<in\>\<bbb-Q\>\\\<alpha\>> such that
+      <math|-q=-r\<Rightarrow\>q=r\<Rightarrow\>q\<in\>\<bbb-Q\>\\\<alpha\>>
+      contradicting <math|q\<in\>\<bbb-Q\>\\\<alpha\>>. Hence
+      <math|-q\<nin\>-\<alpha\>> proving that
+      <math|\<alpha\>\<neq\>\<bbb-Q\>>.
+
+      <item>Let <math|q\<in\>-\<alpha\>> and
+      <math|s\<in\>\<bbb-Q\>\\-\<alpha\>>. Assume that <math|s\<leqslant\>q>.
+      Then by [theorem: <reference|rational q\<less\>=r =\<gtr\>
+      -r\<less\>=-q>] we have\ 
+
+      <\equation>
+        <label|eq 9.2.029>-q\<leqslant\>-s
+      </equation>
+
+      As <math|q\<in\>-\<alpha\>> ther exist a
+      <math|r\<in\>\<bbb-Q\>\\\<alpha\>> such that if
+      <math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> exist then
+      <math|r\<neq\>min<around*|(|\<bbb-Q\>\\\<alpha\>|)>>, such that
+      <math|q=-r>, as <math|r=-<around*|(|-r|)>=-q> we have that
+
+      <\equation>
+        <label|eq 9.3.029>-q\<in\>\<bbb-Q\>\\\<alpha\><text| and if
+        >min<around*|(|\<bbb-Q\>\\\<alpha\>|)><text| exist then
+        >-q\<neq\>min<around*|(|\<bbb-Q\>\\\<alpha\>|)>
+      </equation>
+
+      If <math|-s\<nin\>\<bbb-Q\>\\\<alpha\>> then as
+      <math|-s\<in\>\<bbb-Q\>><space|1em>we have that
+      <math|-s\<in\>\<alpha\>>, as <math|-q\<in\>\<bbb-Q\>\\\<alpha\>> we
+      have by the definition of a cut that <math|-s\<less\>-q> contradicting
+      [eq: <reference|eq 9.2.029>]. So we must have that\ 
+
+      <\equation>
+        <label|eq 9.4.029>-s\<in\>\<bbb-Q\>\\\<alpha\>
+      </equation>
+
+      If <math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> exist then if
+      <math|-s=min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> we have as
+      <math|-q\<in\>\<bbb-Q\>\\\<alpha\>> [see eq: <reference|eq 9.3.029>]
+      that <math|-s\<leqslant\>-q> which combined with [eq: <reference|eq
+      9.2.029>] gives <math|-s=-q>, but then
+      <math|-q=min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> contradicting [eq:
+      <reference|eq 9.3.029>]. So we have that\ 
+
+      <\equation>
+        <label|eq 9.5.029><text|if >min<around*|(|\<bbb-Q\>\\\<alpha\>|)><text|
+        exist then >-s\<neq\>min<around*|(|\<bbb-Q\>\\\<alpha\>|)>
+      </equation>
+
+      So as <math|s=-<around*|(|-s|)>> we have by [eq: <reference|eq
+      9.4.029>] and [eq: <reference|eq 9.5.029>] that
+      <math|s\<in\>-\<alpha\>> contradicting the fact that
+      <math|s\<in\>\<bbb-Q\>\\-\<alpha\>>. So the assumption is wrong and we
+      must have\ 
+
+      <\equation*>
+        q\<less\>s
+      </equation*>
+
+      <item>Assume that <math|-\<alpha\>> has a greatest element <math|m>
+      then\ 
+
+      <\equation>
+        <label|eq 9.6.029>m\<in\>-\<alpha\><text| and
+        >\<forall\>r\<in\>-\<alpha\><text| we have >r\<leqslant\>m
+      </equation>
+
+      As <math|m\<in\>-\<alpha\>> there exists a
+      <math|r\<in\>\<bbb-Q\>\\\<alpha\>> such that if
+      <math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> exist then <math|>
+      <math|r\<neq\>min<around*|(|\<bbb-Q\>\\\<alpha\>|)>>, such that
+      <math|m=-r>, which as <math|-m=-<around*|(|-r|)>=r\<in\>\<bbb-Q\>\\\<alpha\>>,
+      gives <math|-m\<nin\>-\<alpha\>> hence\ 
+
+      <\equation>
+        <label|eq 9.7.029>-m\<in\>\<bbb-Q\>\\\<alpha\><text| and if
+        >min<around*|(|\<bbb-Q\>\\\<alpha\>|)><text| exist then
+        >-m\<neq\>min<around*|(|\<bbb-Q\>\\\<alpha\>|)>
+      </equation>
+
+      For <math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> we have now two
+      possible cases:
+
+      <\description>
+        <item*|<math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)><text| does not
+        exist>>>As <math|-m\<in\>\<bbb-Q\>\\\<alpha\>> there exist a
+        <math|s\<in\>\<bbb-Q\>\\\<alpha\>> such that <math|s\<less\>-m>
+        [otherwise <math|-m> would be <math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>>.
+        Using [theorem: <reference|rational q\<less\>=r =\<gtr\>
+        -r\<less\>=-q>] we have that
+
+        <\equation>
+          <label|eq 9.8.029>-s\<less\>m
+        </equation>
+
+        As <math|s\<in\>\<bbb-Q\>\\\<alpha\>> and \ 'if
+        <math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> does exist then
+        <math|s\<neq\>min<around*|(|\<bbb-Q\>\\\<alpha\>|)>>' is true [as
+        <math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> does not exist] we have
+        that <math|-s\<in\>-\<alpha\>>. So by [eq: <reference|eq 9.6.029>]
+        <math|-s\<less\>m> contradicting [eq: <reference|eq 9.8.029>].
+
+        <item*|<math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)><text| exist>>>As
+        <math|-m\<in\>\<bbb-Q\>\\\<alpha\>> we have
+        <math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>\<leqslant\>-m> so that by
+        [eq: <reference|eq 9.7.029>] we have
+        <math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>\<less\>-m>. Using the
+        density theorem [see theorem: <reference|rational densitiy>] there
+        exist a <math|s\<in\>\<bbb-Q\>> such that\ 
+
+        <\equation>
+          <label|eq 9.9.029>min<around*|(|\<bbb-Q\>\\\<alpha\>|)>\<less\>s\<less\>-m
+        </equation>
+
+        Assume that <math|s\<in\>\<alpha\>> then as
+        <math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>\<in\>\<bbb-Q\>\\\<alpha\>>
+        we have, as <math|\<alpha\>> is a cut, that
+        <math|s\<less\>min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> contradicting
+        [eq: <reference|eq 9.9.029>]. So we must have that
+        <math|s\<nin\>\<alpha\>> or <math|s\<in\>\<bbb-Q\>\\\<alpha\>> which
+        as <math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>\<neq\>s> proves that
+        <math|-s\<in\>-\<alpha\>>. Using [eq: <reference|eq 9.6.029>] we have
+        then that <math|-s\<less\>m>, which by [theorem: <reference|rational
+        q\<less\>=r =\<gtr\> -r\<less\>=-q>] results in <math|-m\<less\>s>
+        contradicting [eq: <reference|eq 9.9.029>].\ 
+      </description>
+
+      As all cases we reach a contradiction the assumption is false, hence
+      <math|-\<alpha\>> has not a greatest element.
+    </enumerate>
+  </proof>
+
+  For rational cuts there is a simpler expression for negative curs of as cut
+
+  <\theorem>
+    <label|real negastive cut of rational cut>If <math|q\<in\>\<bbb-Q\>> then
+    <math|-\<alpha\><rsub|q>=\<alpha\><rsub|-q>>
+  </theorem>
+
+  <\proof>
+    \ Using [theorem: <reference|real rational cut>] we have that\ 
+
+    <\equation*>
+      min<around*|(|\<bbb-Q\>\\\<alpha\><rsub|q>|)><text| exist and
+      >q=min<around*|(|\<bbb-Q\>\\\<alpha\><rsub|q>|)>
+    </equation*>
+
+    If <math|x\<in\>-\<alpha\><rsub|q>> then using the above there exist a
+    <math|r\<in\>\<bbb-Q\>\\\<alpha\><rsub|q>> with <math|r\<neq\>q> such
+    that <math|x=-q>, hence <math|-x\<in\>\<bbb-Q\>\\\<alpha\><rsub|q>> and
+    <math|-x\<neq\>q>. As <math|\<alpha\><rsub|q>=<around*|{|r\<in\>\<bbb-Q\>\|r\<less\>q|}>>
+    <math|>and <math|-x\<in\>\<bbb-Q\>\\\<alpha\><rsub|q>> we have
+    <math|q\<leqslant\>-x> or <math|x\<leqslant\>-q> which as
+    <math|-x\<neq\>q\<Rightarrow\>x\<neq\>-q>, gives <math|x\<less\>-q>.
+    Hence <math|x\<in\><around*|{|r\<in\>\<bbb-Q\>\|r\<less\>-q|}>=\<alpha\><rsub|-q>>
+    proving that
+
+    <\equation*>
+      -\<alpha\><rsub|q>\<subseteq\>\<alpha\><rsub|-q>
+    </equation*>
+
+    If <math|x\<in\>\<alpha\><rsub|-q>> then <math|x\<less\>-q> so that
+    <math|q\<less\>-x> hence <math|-x\<neq\>q=min<around*|(|\<bbb-Q\>\\\<alpha\>|)>>
+    and <math|-x\<in\>\<alpha\><rsub|q>\<Rightarrow\>-x\<in\>\<bbb-Q\>\\\<alpha\><rsub|q>>.
+    This proves that <math|x=-<around*|(|-x|)>\<in\>-\<alpha\><rsub|q>> or
+    <math|\<alpha\><rsub|-q>\<subseteq\>\<alpha\><rsub|q>> we have by the
+    above that\ 
+
+    <\equation*>
+      -\<alpha\><rsub|q>=\<alpha\><rsub|-q>
+    </equation*>
+  </proof>
+
+  <subsection|Arithmetic on <math|\<bbb-R\>>>
+
+  <subsubsection|Addition in <math|\<bbb-R\>>>
+
+  <\definition>
+    If <math|\<alpha\>,\<beta\>\<in\>\<bbb-R\>> then we define
+    <math|\<alpha\>+\<beta\>> by\ 
+
+    <\equation*>
+      \<alpha\>+b=<around*|{|q+r\|q\<in\>\<alpha\>\<wedge\>r\<in\>\<beta\>|}>
+    </equation*>
+  </definition>
+
+  Before we can use the above definition to define the addition operator in
+  <math|\<bbb-R\>> we must prove that <math|\<alpha\>+\<beta\>> is a Dedekind
+  cut hence a element of <math|\<bbb-R\>>. First we need a little lemma.
+
+  <\lemma>
+    <math|\<forall\>\<alpha\>\<in\>\<bbb-R\>> and
+    <math|\<forall\>\<varepsilon\>\<in\>\<bbb-Q\>> with
+    <math|0\<less\>\<varepsilon\>> there exist a <math|r\<in\>\<alpha\>> such
+    that <math|r+\<varepsilon\>\<nin\>\<alpha\>>
+  </lemma>
+
+  <\proof>
+    Let <math|\<alpha\>\<in\>Rr> and <math|\<varepsilon\>\<in\>\<bbb-Q\>>
+    such that <math|0\<less\>\<varepsilon\>>. Using [theorem: <reference|real
+    gap theorem>] there exist a <math|q\<in\>\<alpha\>> and a
+    <math|r\<in\>\<bbb-Q\>\\\<alpha\>> such that
+    <math|r-q\<less\>\<varepsilon\>>. Assume that
+    <math|q+\<varepsilon\>\<in\>\<alpha\>> then we have by the definitionof a
+    cut that <math|q+\<varepsilon\>\<less\>r> so that
+    <math|\<varepsilon\>\<less\>r-q> contradicting
+    <math|r-q\<less\>\<varepsilon\>>. Hence we must have that
+    <math|q+\<varepsilon\>\<nin\>\<alpha\>>.
+  </proof>
+
+  \;
 
   \;
 </body>
@@ -5172,8 +5429,12 @@
     <associate|auto-21|<tuple|8.3|?>>
     <associate|auto-22|<tuple|9|?>>
     <associate|auto-23|<tuple|9.1|?>>
-    <associate|auto-24|<tuple|Dedekind's cut|?>>
-    <associate|auto-25|<tuple|<with|mode|<quote|math>|\<bbb-R\>>|?>>
+    <associate|auto-24|<tuple|9.1.1|?>>
+    <associate|auto-25|<tuple|Dedekind's cut|?>>
+    <associate|auto-26|<tuple|<with|mode|<quote|math>|\<bbb-R\>>|?>>
+    <associate|auto-27|<tuple|9.1.2|?>>
+    <associate|auto-28|<tuple|9.1.2.1|?>>
+    <associate|auto-29|<tuple|<with|mode|<quote|math>|\<bbb-R\>>|?>>
     <associate|auto-3|<tuple|integers|?>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>>|?>>
     <associate|auto-5|<tuple|7.2|?>>
@@ -5212,6 +5473,7 @@
     <associate|eq 8.18.026|<tuple|8.19|?>>
     <associate|eq 8.19.026|<tuple|8.20|?>>
     <associate|eq 8.2.023|<tuple|8.2|?>>
+    <associate|eq 8.2.028|<tuple|9.2|?>>
     <associate|eq 8.20.026.1|<tuple|8.21|?>>
     <associate|eq 8.21.026|<tuple|8.22|?>>
     <associate|eq 8.22.026|<tuple|8.23|?>>
@@ -5240,6 +5502,18 @@
     <associate|eq 8.9.024|<tuple|8.10|?>>
     <associate|eq 8.9.024.1|<tuple|8.9|?>>
     <associate|eq 9.1.028|<tuple|9.1|?>>
+    <associate|eq 9.10.029|<tuple|9.10|?>>
+    <associate|eq 9.2.028|<tuple|9.6|?>>
+    <associate|eq 9.2.029|<tuple|9.2|?>>
+    <associate|eq 9.3.028|<tuple|9.7|?>>
+    <associate|eq 9.3.029|<tuple|9.3|?>>
+    <associate|eq 9.4.028|<tuple|9.8|?>>
+    <associate|eq 9.4.029|<tuple|9.4|?>>
+    <associate|eq 9.5.029|<tuple|9.5|?>>
+    <associate|eq 9.6.029|<tuple|9.6|?>>
+    <associate|eq 9.7.029|<tuple|9.7|?>>
+    <associate|eq 9.8.029|<tuple|9.8|?>>
+    <associate|eq 9.9.029|<tuple|9.9|?>>
     <associate|integeres order|<tuple|7.28|?>>
     <associate|integers|<tuple|7.2|?>>
     <associate|integers (-1).n|<tuple|7.16|?>>
@@ -5338,7 +5612,6 @@
     <associate|rational q\<less\>=r =\<gtr\> -r\<less\>=-q|<tuple|8.30|?>>
     <associate|rational q\<less\>=r=\<gtr\>q+s\<less\>=r+s|<tuple|8.28|?>>
     <associate|rational q\<less\>q+1 and q-1\<less\>q|<tuple|8.31|?>>
-    <associate|rational q\<less\>q+q and q-1\<less\>q|<tuple|8.31|?>>
     <associate|rational q\<less\>r\<less\>=\<gtr\>0\<less\>r+(-q)|<tuple|8.26|?>>
     <associate|rational q=r\<less\>=\<gtr\>q.s=r.s|<tuple|8.14|?>>
     <associate|rational q^(n+m)=q^n.q^m|<tuple|8.18|?>>
@@ -5352,16 +5625,16 @@
     <associate|rational totally ordered|<tuple|8.32|?>>
     <associate|rational x-y|<tuple|8.9|?>>
     <associate|rational {0}|<tuple|8.21|?>>
-    <associate|real Dedekin's cut|<tuple|9.1|?>>
     <associate|real Dedekind's cut|<tuple|9.1|?>>
     <associate|real NQ bijection|<tuple|9.7|?>>
     <associate|real gap theorem|<tuple|9.8|?>>
+    <associate|real negastive cut of rational cut|<tuple|9.10|?>>
+    <associate|real negative cut|<tuple|9.9|?>>
     <associate|real property to determine membership of a cut|<tuple|9.3|?>>
     <associate|real rational cut|<tuple|9.4|?>>
     <associate|real real numbers|<tuple|9.2|?>>
     <associate|reals QR|<tuple|9.6|?>>
     <associate|reals the set of reals are non empty|<tuple|9.5|?>>
-    <associate|reals the set of reals are non empy|<tuple|9.5|?>>
     <associate|sign function|<tuple|8.20|?>>
   </collection>
 </references>
@@ -5394,6 +5667,10 @@
       <tuple|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-Q\>,+,\<cdot\>|\<rangle\>>>>|<pageref|auto-18>>
 
       <tuple|<tuple|<with|mode|<quote|math>|\<bbb-Z\><rsub|\<bbb-Q\>>>>|<pageref|auto-20>>
+
+      <tuple|<tuple|Dedekind's cut>|<pageref|auto-24>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<bbb-R\>>>|<pageref|auto-25>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|7<space|2spc>The
@@ -5431,7 +5708,7 @@
       real numbers> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-22><vspace|0.5fn>
 
-      9.1<space|2spc>Definition and arithmetic
+      9.1<space|2spc>Definition of the real numbers
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-23>
     </associate>
