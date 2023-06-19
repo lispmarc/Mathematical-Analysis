@@ -4881,7 +4881,7 @@
       <item><math|\<forall\>q\<in\>\<alpha\>\<wedge\>\<forall\>r\<in\>Q\\\<alpha\>>
       we have <math|q\<less\>r>
 
-      <item><math|\<alpha\>> does not have a greatest element
+      <item><math|\<alpha\>> does not have a greatest element [or maximum]
     </enumerate>
   </definition>
 
@@ -4905,8 +4905,8 @@
   <\lemma>
     <label|real property to determine membership of a
     cut><math|\<forall\>\<alpha\>\<in\>\<bbb-R\>> we have
-    <math|\<forall\>q\<in\>\<alpha\>> then <math|\<forall\>r\<in\>\<bbb-Q\>>
-    with <math|r\<leqslant\>q> that <math|r\<in\>\<alpha\>>
+    <math|\<forall\>q\<in\>\<alpha\>> that <math|\<forall\>r\<in\>\<bbb-Q\>>
+    with <math|r\<leqslant\>q> we have <math|r\<in\>\<alpha\>>
   </lemma>
 
   <\proof>
@@ -5157,9 +5157,9 @@
     <math|\<alpha\>\<in\>\<bbb-R\>> then <math|-\<alpha\>> defined by\ 
 
     <\equation*>
-      -\<alpha\>=<around*|{|-r\|r\<in\>\<bbb-Q\>\\\<alpha\><text| such that
-      if <math|min<around*|(|\<bbb-Q\>\\a|)><text| exist then
-      >r\<neq\>min<around*|(|\<bbb-Q\>\\\<alpha\>|)>>>|}>
+      -\<alpha\>=<around*|{|r\|r\<in\>\<bbb-Q\>\\\<alpha\><text| such that if
+      <math|min<around*|(|\<bbb-Q\>\\a|)><text| exist then
+      >-r\<neq\>min<around*|(|\<bbb-Q\>\\\<alpha\>|)>>>|}>
     </equation*>
   </theorem>
 
@@ -5169,75 +5169,68 @@
     <\enumerate>
       <item>As <math|\<alpha\>\<in\>\<bbb-R\>> <math|\<alpha\>> is a Dedekind
       cut, so there exist a <math|q\<in\>\<bbb-Q\>\\\<alpha\>> [definition:
-      <reference|real Dedekind's cut>]. Assume that <math|q+1\<in\>\<alpha\>>
-      then by definition of a cut we have <math|q+1\<less\>q> contradicting
-      <math|q\<less\>q+1> [see theorem: <reference|rational q\<less\>q+1 and
-      q-1\<less\>q>], hence we must have that
-      <math|q+1\<in\>\<bbb-Q\>\\\<alpha\>>. If
+      <reference|real Dedekind's cut> (2)]. Assume that
+      <math|q+1\<in\>\<alpha\>> then by definition of a cut we have
+      <math|q+1\<less\>q>, contradicting <math|q\<less\>q+1>, hence we must
+      have that <math|q+1\<in\>\<bbb-Q\>\\\<alpha\>>. If
       <math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> exists then as
-      <math|q+1\<in\>\<bbb-Q\>\\\<alpha\>> we have that
-      <math|q\<less\>q+1\<leqslant\>min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> so
-      that <math|q+1\<neq\>min<around*|(|\<bbb-Q\>\\\<alpha\>|)>>. Hence we
-      have that <math|-<around*|(|q+1|)>\<in\>-\<alpha\>> proving that
+      <math|q\<in\>\<bbb-Q\>\\\<alpha\>> we have
+      <math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>\<leqslant\>q\<less\>q+1> so
+      that <math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>\<neq\>q+1>. So if we
+      take <math|r=-<around*|(|q+1|)>\<Rightarrow\>-r=q+1> then
+      <math|-r\<in\>\<bbb-Q\>\\\<alpha\>> and
+      <math|-r\<neq\>min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> [if it exist]
+      proving that <math|r\<in\>-\<alpha\>>, hence
       <math|-\<alpha\>\<neq\>\<varnothing\>>.
 
       <item>As <math|\<alpha\>> is a Dedekind cut,
       <math|\<alpha\>\<neq\>\<varnothing\>> so there exist a
       <math|q\<in\>\<alpha\>\<subseteq\>\<bbb-Q\>> so that
       <math|q\<nin\>\<bbb-Q\>\\\<alpha\>>. If <math|-q\<in\>-\<alpha\>> then
-      there exist a <math|r\<in\>\<bbb-Q\>\\\<alpha\>> such that
-      <math|-q=-r\<Rightarrow\>q=r\<Rightarrow\>q\<in\>\<bbb-Q\>\\\<alpha\>>
-      contradicting <math|q\<in\>\<bbb-Q\>\\\<alpha\>>. Hence
-      <math|-q\<nin\>-\<alpha\>> proving that
-      <math|\<alpha\>\<neq\>\<bbb-Q\>>.
+      <math|q=-<around*|(|-q|)>\<in\>\<bbb-Q\>\\\<alpha\>> a contradiction,
+      so <math|-q\<nin\>-\<alpha\>>, proving that
+      <math|-\<alpha\>\<neq\>\<bbb-Q\>>.
 
       <item>Let <math|q\<in\>-\<alpha\>> and
-      <math|s\<in\>\<bbb-Q\>\\-\<alpha\>>. Assume that <math|s\<leqslant\>q>.
-      Then by [theorem: <reference|rational q\<less\>=r =\<gtr\>
-      -r\<less\>=-q>] we have\ 
+      <math|s\<in\>\<bbb-Q\>\\-\<alpha\>>. Assume that <math|s\<leqslant\>q>
+      then\ 
 
       <\equation>
-        <label|eq 9.2.029>-q\<leqslant\>-s
+        <label|eq 9.2.030>-q\<leqslant\>-s
       </equation>
 
-      As <math|q\<in\>-\<alpha\>> ther exist a
-      <math|r\<in\>\<bbb-Q\>\\\<alpha\>> such that if
-      <math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> exist then
-      <math|r\<neq\>min<around*|(|\<bbb-Q\>\\\<alpha\>|)>>, such that
-      <math|q=-r>, as <math|r=-<around*|(|-r|)>=-q> we have that
+      As <math|q\<in\>-\<alpha\>> we have that\ 
 
       <\equation>
-        <label|eq 9.3.029>-q\<in\>\<bbb-Q\>\\\<alpha\><text| and if
+        <label|eq 9.3.030>-q\<in\>\<bbb-Q\>\\\<alpha\><text| and if
         >min<around*|(|\<bbb-Q\>\\\<alpha\>|)><text| exist then
         >-q\<neq\>min<around*|(|\<bbb-Q\>\\\<alpha\>|)>
       </equation>
 
       If <math|-s\<nin\>\<bbb-Q\>\\\<alpha\>> then as
-      <math|-s\<in\>\<bbb-Q\>><space|1em>we have that
-      <math|-s\<in\>\<alpha\>>, as <math|-q\<in\>\<bbb-Q\>\\\<alpha\>> we
-      have by the definition of a cut that <math|-s\<less\>-q> contradicting
-      [eq: <reference|eq 9.2.029>]. So we must have that\ 
+      <math|-s\<in\>\<bbb-Q\>> we have <math|-s\<in\>\<alpha\>>, which as
+      <math|-q\<in\>\<bbb-Q\>\\\<alpha\>> we have <math|-s\<less\>-q>
+      contradicting [eq: <reference|eq 9.2.030>] so we have that\ 
 
       <\equation>
-        <label|eq 9.4.029>-s\<in\>\<bbb-Q\>\\\<alpha\>
+        <label|eq 9.4.030>-s\<in\>\<bbb-Q\>\\\<alpha\>
       </equation>
 
-      If <math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> exist then if
+      If <math|min*<around*|(|\<bbb-Q\>\\\<alpha\>|)>> exist then if
       <math|-s=min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> we have as
-      <math|-q\<in\>\<bbb-Q\>\\\<alpha\>> [see eq: <reference|eq 9.3.029>]
+      <math|-q\<in\>\<bbb-Q\>\\\<alpha\>> [see eq: <reference|eq 9.3.030>]
       that <math|-s\<leqslant\>-q> which combined with [eq: <reference|eq
-      9.2.029>] gives <math|-s=-q>, but then
+      9.2.030>] gives <math|-s=-q>, but then
       <math|-q=min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> contradicting [eq:
-      <reference|eq 9.3.029>]. So we have that\ 
+      <reference|eq 9.3.030>]. So we have that\ 
 
       <\equation>
-        <label|eq 9.5.029><text|if >min<around*|(|\<bbb-Q\>\\\<alpha\>|)><text|
+        <label|eq 9.5.030><text|if >min<around*|(|\<bbb-Q\>\\\<alpha\>|)><text|
         exist then >-s\<neq\>min<around*|(|\<bbb-Q\>\\\<alpha\>|)>
       </equation>
 
-      So as <math|s=-<around*|(|-s|)>> we have by [eq: <reference|eq
-      9.4.029>] and [eq: <reference|eq 9.5.029>] that
-      <math|s\<in\>-\<alpha\>> contradicting the fact that
+      So we have by [eq: <reference|eq 9.4.030>] and [eq: <reference|eq
+      9.5.030>] that <math|s\<in\>-\<alpha\>> contradicting the fact that
       <math|s\<in\>\<bbb-Q\>\\-\<alpha\>>. So the assumption is wrong and we
       must have\ 
 
@@ -5249,19 +5242,14 @@
       then\ 
 
       <\equation>
-        <label|eq 9.6.029>m\<in\>-\<alpha\><text| and
+        <label|eq 9.6.030>m\<in\>-\<alpha\><text| and
         >\<forall\>r\<in\>-\<alpha\><text| we have >r\<leqslant\>m
       </equation>
 
-      As <math|m\<in\>-\<alpha\>> there exists a
-      <math|r\<in\>\<bbb-Q\>\\\<alpha\>> such that if
-      <math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> exist then <math|>
-      <math|r\<neq\>min<around*|(|\<bbb-Q\>\\\<alpha\>|)>>, such that
-      <math|m=-r>, which as <math|-m=-<around*|(|-r|)>=r\<in\>\<bbb-Q\>\\\<alpha\>>,
-      gives <math|-m\<nin\>-\<alpha\>> hence\ 
+      As <math|m\<in\>-\<alpha\>> we have
 
       <\equation>
-        <label|eq 9.7.029>-m\<in\>\<bbb-Q\>\\\<alpha\><text| and if
+        <label|eq 9.7.030>-m\<in\>\<bbb-Q\>\\\<alpha\><text| and if
         >min<around*|(|\<bbb-Q\>\\\<alpha\>|)><text| exist then
         >-m\<neq\>min<around*|(|\<bbb-Q\>\\\<alpha\>|)>
       </equation>
@@ -5271,46 +5259,48 @@
 
       <\description>
         <item*|<math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)><text| does not
-        exist>>>As <math|-m\<in\>\<bbb-Q\>\\\<alpha\>> there exist a
-        <math|s\<in\>\<bbb-Q\>\\\<alpha\>> such that <math|s\<less\>-m>
-        [otherwise <math|-m> would be <math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>>.
-        Using [theorem: <reference|rational q\<less\>=r =\<gtr\>
-        -r\<less\>=-q>] we have that
+        exist>>>As <math|-m\<in\>\<bbb-Q\>\\\<alpha\>> and
+        <math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> does not exist there
+        exist a <math|s<rprime|'>\<in\>\<bbb-Q\>\\\<alpha\>> such that
+        <math|s<rprime|'>\<less\>-m>, take
+        <math|s=-s<rprime|'>\<Rightarrow\>-s=s<rprime|'>> then
+        <math|-s\<in\>\<bbb-Q\>\\\<alpha\>> and <math|-s\<less\>-m>, hence\ 
 
         <\equation>
-          <label|eq 9.8.029>-s\<less\>m
+          <label|eq 9.8.030>-s\<in\>\<bbb-Q\>\\\<alpha\><text| and
+          >m\<less\>s
         </equation>
 
-        As <math|s\<in\>\<bbb-Q\>\\\<alpha\>> and \ 'if
+        As <math|-s\<in\>\<bbb-Q\>\\\<alpha\>> and \ 'if
         <math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> does exist then
         <math|s\<neq\>min<around*|(|\<bbb-Q\>\\\<alpha\>|)>>' is true [as
         <math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> does not exist] we have
-        that <math|-s\<in\>-\<alpha\>>. So by [eq: <reference|eq 9.6.029>]
-        <math|-s\<less\>m> contradicting [eq: <reference|eq 9.8.029>].
+        that <math|s\<in\>-\<alpha\>>. So by [eq: <reference|eq 9.6.030>]
+        <math|s\<less\>m> contradicting [eq: <reference|eq 9.8.030>].
 
         <item*|<math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)><text| exist>>>As
         <math|-m\<in\>\<bbb-Q\>\\\<alpha\>> we have
         <math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>\<leqslant\>-m> so that by
-        [eq: <reference|eq 9.7.029>] we have
+        [eq: <reference|eq 9.7.030>] we have
         <math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>\<less\>-m>. Using the
         density theorem [see theorem: <reference|rational densitiy>] there
         exist a <math|s\<in\>\<bbb-Q\>> such that\ 
 
         <\equation>
-          <label|eq 9.9.029>min<around*|(|\<bbb-Q\>\\\<alpha\>|)>\<less\>s\<less\>-m
+          <label|eq 9.9.030>min<around*|(|\<bbb-Q\>\\\<alpha\>|)>\<less\>s\<less\>-m
         </equation>
 
         Assume that <math|s\<in\>\<alpha\>> then as
         <math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>\<in\>\<bbb-Q\>\\\<alpha\>>
         we have, as <math|\<alpha\>> is a cut, that
         <math|s\<less\>min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> contradicting
-        [eq: <reference|eq 9.9.029>]. So we must have that
-        <math|s\<nin\>\<alpha\>> or <math|s\<in\>\<bbb-Q\>\\\<alpha\>> which
-        as <math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>\<neq\>s> proves that
-        <math|-s\<in\>-\<alpha\>>. Using [eq: <reference|eq 9.6.029>] we have
-        then that <math|-s\<less\>m>, which by [theorem: <reference|rational
-        q\<less\>=r =\<gtr\> -r\<less\>=-q>] results in <math|-m\<less\>s>
-        contradicting [eq: <reference|eq 9.9.029>].\ 
+        [eq: <reference|eq 9.9.030>]. So we must have that
+        <math|s\<nin\>\<alpha\>> or <math|-<around*|(|-s|)>=s\<in\>\<bbb-Q\>\\\<alpha\>>
+        which as <math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>\<neq\>s=-<around*|(|-s|)>>
+        proves that <math|-s\<in\>-\<alpha\>>. Using [eq: <reference|eq
+        9.8.030>] we have then that <math|-s\<less\>m>, which by [theorem:
+        <reference|rational q\<less\>=r =\<gtr\> -r\<less\>=-q>] results in
+        <math|-m\<less\>s> contradicting [eq: <reference|eq 9.9.030>].\ 
       </description>
 
       As all cases we reach a contradiction the assumption is false, hence
@@ -5333,26 +5323,26 @@
       >q=min<around*|(|\<bbb-Q\>\\\<alpha\><rsub|q>|)>
     </equation*>
 
-    If <math|x\<in\>-\<alpha\><rsub|q>> then using the above there exist a
-    <math|r\<in\>\<bbb-Q\>\\\<alpha\><rsub|q>> with <math|r\<neq\>q> such
-    that <math|x=-q>, hence <math|-x\<in\>\<bbb-Q\>\\\<alpha\><rsub|q>> and
-    <math|-x\<neq\>q>. As <math|\<alpha\><rsub|q>=<around*|{|r\<in\>\<bbb-Q\>\|r\<less\>q|}>>
+    If <math|x\<in\>-\<alpha\><rsub|q>> then
+    <math|-x\<in\>\<bbb-Q\>\\\<alpha\><rsub|q>> and <math|-x\<neq\>q> [as
+    <math|q=min<around*|(|\<bbb-Q\>\\r|)>>]. As
+    <math|\<alpha\><rsub|q>=<around*|{|r\<in\>\<bbb-Q\>\|r\<less\>q|}>>
     <math|>and <math|-x\<in\>\<bbb-Q\>\\\<alpha\><rsub|q>> we have
     <math|q\<leqslant\>-x> or <math|x\<leqslant\>-q> which as
     <math|-x\<neq\>q\<Rightarrow\>x\<neq\>-q>, gives <math|x\<less\>-q>.
     Hence <math|x\<in\><around*|{|r\<in\>\<bbb-Q\>\|r\<less\>-q|}>=\<alpha\><rsub|-q>>
     proving that
 
-    <\equation*>
-      -\<alpha\><rsub|q>\<subseteq\>\<alpha\><rsub|-q>
-    </equation*>
+    <\equation>
+      <label|eq 9.10.030>-\<alpha\><rsub|q>\<subseteq\>\<alpha\><rsub|-q>
+    </equation>
 
     If <math|x\<in\>\<alpha\><rsub|-q>> then <math|x\<less\>-q> so that
     <math|q\<less\>-x> hence <math|-x\<neq\>q=min<around*|(|\<bbb-Q\>\\\<alpha\>|)>>
     and <math|-x\<in\>\<alpha\><rsub|q>\<Rightarrow\>-x\<in\>\<bbb-Q\>\\\<alpha\><rsub|q>>.
-    This proves that <math|x=-<around*|(|-x|)>\<in\>-\<alpha\><rsub|q>> or
-    <math|\<alpha\><rsub|-q>\<subseteq\>\<alpha\><rsub|q>> we have by the
-    above that\ 
+    This proves that <math|x\<in\>-\<alpha\><rsub|q>> or
+    <math|\<alpha\><rsub|-q>\<subseteq\>\<alpha\><rsub|q>>, combining this
+    with [eq: <reference|eq 9.10.030>] gives
 
     <\equation*>
       -\<alpha\><rsub|q>=\<alpha\><rsub|-q>
@@ -5377,10 +5367,10 @@
   cut hence a element of <math|\<bbb-R\>>. First we need a little lemma.
 
   <\lemma>
-    <math|\<forall\>\<alpha\>\<in\>\<bbb-R\>> and
-    <math|\<forall\>\<varepsilon\>\<in\>\<bbb-Q\>> with
+    <math|<label|real lemma for sum operator>\<forall\>\<alpha\>\<in\>\<bbb-R\>>
+    and <math|\<forall\>\<varepsilon\>\<in\>\<bbb-Q\>> with
     <math|0\<less\>\<varepsilon\>> there exist a <math|r\<in\>\<alpha\>> such
-    that <math|r+\<varepsilon\>\<nin\>\<alpha\>>
+    that <math|r+\<varepsilon\>\<in\>\<bbb-Q\>\\\<alpha\>>
   </lemma>
 
   <\proof>
@@ -5389,12 +5379,964 @@
     gap theorem>] there exist a <math|q\<in\>\<alpha\>> and a
     <math|r\<in\>\<bbb-Q\>\\\<alpha\>> such that
     <math|r-q\<less\>\<varepsilon\>>. Assume that
-    <math|q+\<varepsilon\>\<in\>\<alpha\>> then we have by the definitionof a
-    cut that <math|q+\<varepsilon\>\<less\>r> so that
+    <math|q+\<varepsilon\>\<in\>\<alpha\>> then we have by the definition of
+    a cut that <math|q+\<varepsilon\>\<less\>r> so that
     <math|\<varepsilon\>\<less\>r-q> contradicting
     <math|r-q\<less\>\<varepsilon\>>. Hence we must have that
-    <math|q+\<varepsilon\>\<nin\>\<alpha\>>.
+    <math|q+\<varepsilon\>\<nin\>\<alpha\>> or
+    <math|q+\<varepsilon\>\<in\>\<bbb-Q\>\\\<alpha\>>/
   </proof>
+
+  <\theorem>
+    <label|real sum is a operator><math|\<forall\>\<alpha\>,\<beta\>\<in\>\<bbb-R\>>
+    we have that <math|\<alpha\>+\<beta\>\<in\>\<bbb-R\>>, hence
+    <math|+:\<bbb-R\>\<times\>\<bbb-R\>\<rightarrow\>\<bbb-R\>> where
+    <math|+<around*|(|\<alpha\>,\<beta\>|)>=\<alpha\>+\<beta\>> is a operator
+    on <math|\<bbb-R\>>.
+  </theorem>
+
+  <\proof>
+    Given Dedekind cuts <math|\<alpha\>> and <math|\<beta\>> we must prove
+    that <math|\<alpha\>+\<beta\>> is a Dedekind cut.\ 
+
+    <\enumerate>
+      <item>As <math|\<alpha\>\<neq\>\<varnothing\>> and
+      <math|\<beta\>\<neq\>\<varnothing\>> it follows that
+      <math|\<exists\>a\<in\>\<alpha\>> and <math|\<exists\>b\<in\>\<beta\>>
+      so that <math|\<alpha\>+\<beta\>\<in\><around*|{|q+r\|q\<in\>\<alpha\>\<wedge\>r\<in\>\<beta\>|}>=\<alpha\>+\<beta\>>,
+      proving that\ 
+
+      <\equation*>
+        \<alpha\>+\<beta\>\<neq\>\<varnothing\>
+      </equation*>
+
+      <item>Given <math|\<varepsilon\>=<frac|1|2>\<in\>\<bbb-Q\>> we can as
+      <math|0\<less\>\<varepsilon\>> use [lemma: <reference|real lemma for
+      sum operator>] find a <math|r<rprime|'>\<in\>\<alpha\>> and a
+      <math|s<rprime|'>\<in\>\<beta\>> such that
+      <math|q<rprime|'>+\<varepsilon\>\<in\>\<bbb-Q\>\\\<alpha\>> and
+      <math|r<rprime|'>+\<varepsilon\>\<in\>\<bbb-Q\>\\\<beta\>>. Assume that
+      <math|q<rprime|'>+y<rprime|'>+1\<in\>\<alpha\>+\<beta\>> then there
+      exists a <math|q\<in\>\<alpha\>> and <math|r\<in\>\<beta\>> such that
+
+      <\equation>
+        <label|eq 9.10.029>q<rprime|'>+y<rprime|'>+1=q+r
+      </equation>
+
+      As <math|q\<in\>\<alpha\>\<wedge\>q<rprime|'>+\<varepsilon\>\<in\>\<bbb-Q\>\\\<alpha\>>
+      and <math|r\<in\>\<beta\>\<wedge\>r<rprime|'>+\<varepsilon\>\<in\>\<bbb-Q\>\\\<beta\>>
+      it follows from the defintion of Dedekind cuts that
+      <math|q\<less\>q<rprime|'>+\<varepsilon\>> and
+      <math|r\<less\>r<rprime|'>+\<varepsilon\>> so that
+      <math|q+r\<less\>q<rprime|'>+r<rprime|'>+2\<cdot\>\<varepsilon\>=q<rprime|'>+r<rprime|'>+1\<equallim\><rsub|<text|[eq:
+      <reference|eq 9.10.029>]>>q+r> giving the contradiction that
+      <math|q+r\<less\>q+r>. So we must have that
+      <math|q<rprime|'>+r<rprime|'>+1\<nin\>\<alpha\>+\<beta\>> proving that\ 
+
+      <\equation*>
+        \<alpha\>+\<beta\>\<neq\>\<bbb-Q\>
+      </equation*>
+
+      <item>Let <math|s\<in\>\<alpha\>+\<beta\>> and
+      <math|t\<in\>\<bbb-Q\>\\\<alpha\>+\<beta\>> then there exists a
+      <math|q\<in\>\<alpha\>> and a <math|r\<in\>\<beta\>> such that
+      <math|s=q+r>. Assume now that that <math|t\<leqslant\>s>, then
+      <math|t\<leqslant\>q+r>, so that <math|t-r\<leqslant\>q>, by [theorem:
+      <reference|real property to determine membership of a cut>] it follows
+      then that <math|t-r\<in\>\<alpha\>>. From this and the fact that
+      <math|r\<in\>\<alpha\>> it follows that
+      <math|t=<around*|(|t-r|)>+r\<in\>\<alpha\>+\<beta\>> contradicting
+      <math|t\<in\>\<bbb-Q\>\\\<alpha\>+\<beta\>>, hence we must have that
+      <math|s\<less\>t>.\ 
+
+      <item>Assume that <math|\<alpha\>+\<beta\>> has a greates element
+      <math|m> then we have\ 
+
+      <\equation>
+        <label|eq 9.11.029>m\<in\>\<alpha\>+\<beta\><text| and
+        >\<forall\>q\<in\>\<alpha\>+\<beta\><text| we have >q\<leqslant\>m
+      </equation>
+
+      As <math|m\<in\>\<alpha\>+\<beta\>> there exists a
+      <math|q\<in\>\<alpha\>> and a <math|r\<in\>\<beta\>> such that
+      <math|m=q+r>. As <math|\<alpha\>> has no greatest element there exist a
+      <math|q<rprime|'>\<in\>\<alpha\>> such that
+      <math|q\<less\>q<rprime|'>>, hence <math|m=q+r\<less\>q<rprime|'>+r>
+      which as <math|q<rprime|'>+r\<in\>\<alpha\>+\<beta\>> contradicts [eq:
+      <reference|eq 9.11.029>]. So the assumption is wrong, hence
+      <math|\<alpha\>+\<beta\>> has no greatest element.
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|real group><math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>> is a
+    Abelian group with neutral ekement <math|0=\<alpha\><rsub|0>=<around*|{|q\<in\>\<bbb-Q\>\|q\<less\>0|}>>
+    and if <math|\<alpha\>\<in\>\<bbb-R\>> then <math|-\<alpha\>> [the
+    negative cut of <math|\<alpha\>>] is the inverse element of
+    <math|\<alpha\>>.
+  </theorem>
+
+  <\proof>
+    We make use of the fact that <math|<around*|\<langle\>|\<bbb-Q\>,+|\<rangle\>>>
+    is a Abelian group [see theorem: <reference|rational group>]. So we have\ 
+
+    <\description>
+      <item*|associativity>If <math|\<alpha\>,\<beta\>,\<gamma\>\<in\>\<bbb-R\>>
+      then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|z\<in\><around*|(|\<alpha\>+\<beta\>|)>+\<gamma\>>|<cell|\<Leftrightarrow\>>|<cell|z=r+s\<wedge\>r\<in\><around*|(|a+\<beta\>|)>\<wedge\>s\<in\>\<gamma\>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|z=<around*|(|q+t|)>+s\<wedge\>q\<in\>\<alpha\>\<wedge\>t\<in\>\<beta\>\<wedge\>s\<in\>\<gamma\>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|z=q+<around*|(|t+s|)>\<wedge\>q\<in\>\<alpha\>\<wedge\>t\<in\>\<beta\>\<wedge\>s\<in\>\<gamma\>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|z=q+r\<wedge\>q\<in\>\<alpha\>\<wedge\>r\<in\>\<beta\>+\<gamma\>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|z\<in\>\<alpha\>+<around*|(|\<beta\>+\<gamma\>|)>>>>>
+      </eqnarray*>
+
+      proving that <math|<around*|(|\<alpha\>+\<beta\>|)>+\<gamma\>=\<alpha\>+<around*|(|\<beta\>+\<gamma\>|)>>.
+
+      <item*|commutativity>If <math|\<alpha\>,\<beta\>\<in\>\<bbb-R\>> then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|z\<in\>\<alpha\>\<upl\>\<beta\>>|<cell|\<Leftrightarrow\>>|<cell|z=r\<upl\>s\<wedge\>r\<in\>\<alpha\>\<wedge\>s\<in\>\<beta\>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|z=s\<upl\>r\<wedge\>r\<in\>\<alpha\>\<wedge\>s\<in\>\<beta\>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|z\<in\>\<beta\>\<upl\>\<alpha\>>>>>
+      </eqnarray*>
+
+      <item*|neutral element>Let <math|\<alpha\>\<in\>\<bbb-R\>> and take
+      <math|\<alpha\><rsub|0>=<around*|{|q\<in\>\<bbb-Q\>\|q\<less\>0|}>>. If
+      <math|q\<in\>\<alpha\>+\<alpha\><rsub|0>> then there exists
+      <math|r\<in\>\<alpha\>> and <math|s\<in\>\<alpha\><rsub|0>> such that
+      <math|q=r+s>, as <math|s\<in\>\<alpha\><rsub|0>> we have that
+      <math|s\<less\>0> so that <math|q=r+s\<less\>r>, using [theorem:
+      <reference|real property to determine membership of a cut>] it follows
+      then that <math|q\<in\>\<alpha\>>. Hence we have that\ 
+
+      <\equation>
+        <label|eq 9.12.029>\<alpha\>+\<alpha\><rsub|0>\<subseteq\>\<alpha\>
+      </equation>
+
+      If <math|q\<in\>\<alpha\>> then as <math|\<alpha\>> has no maximum
+      there exist a <math|r\<in\>\<alpha\>> such that <math|q\<less\>r>, so
+      <math|q-r\<less\>0> so that <math|q-r\<in\>\<alpha\><rsub|0>>, hence
+      <math|q=<around*|(|q-r|)>+r\<in\>\<alpha\>+\<alpha\><rsub|0>>.<space|1em>So
+      <math|\<alpha\>\<subseteq\>\<alpha\>+\<alpha\><rsub|0>> which together
+      with [eq: <reference|eq 9.12.029>] proves that\ 
+
+      <\equation*>
+        \<alpha\>=\<alpha\>+\<alpha\><rsub|0>\<equallim\><rsub|<text|commutativity>>\<alpha\><rsub|0>+\<alpha\>
+      </equation*>
+
+      <item*|inverse element>Let <math|\<alpha\>\<in\>\<bbb-R\>> and take
+
+      <\equation*>
+        -\<alpha\>\<equallim\><rsub|<text|[theorem: <reference|real negative
+        cut>]>><around*|{|r\|-r\<in\>\<bbb-Q\>\\\<alpha\><text| such that if
+        >min<around*|(|\<bbb-Q\>\\\<alpha\>|)><text| exist then
+        >-r\<neq\>min<around*|(|\<bbb-Q\>\\\<alpha\>|)>|}>
+      </equation*>
+
+      then we have the following cases to consider:
+
+      <\description>
+        <item*|<math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> does not exist>If
+        <math|q\<in\>\<alpha\><rsub|0>> then <math|q\<less\>0>, hence by
+        [theorem: <reference|rational q\<less\>=r =\<gtr\> -r\<less\>=-q>]
+        <math|0\<less\>-q>, by [theorem: <reference|real lemma for sum
+        operator>] there exist a <math|r\<in\>\<alpha\>> such that
+        <math|r-q=r+<around*|(|-q|)>\<in\>\<bbb-Q\>\\\<alpha\>>, as
+        <math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> does not exist we have
+        that <math|q-r=-<around*|(|r-q|)>\<in\>-\<alpha\>>. Hence
+        <math|q=<around*|(|q-r|)>+r\<in\><around*|(|-\<alpha\>|)>+\<alpha\>>.
+        So\ 
+
+        <\equation>
+          <label|eq 9.13.029>\<alpha\><rsub|0>\<subseteq\><around*|(|-\<alpha\>|)>+\<alpha\>
+        </equation>
+
+        If <math|q\<in\><around*|(|-\<alpha\>|)>+\<alpha\>> there exists
+        <math|r\<in\>-\<alpha\>> and <math|s\<in\>\<alpha\>> such that
+        <math|q=r+s>. As <math|r\<in\>-\<alpha\>><space|1em>we have
+        <math|-r\<in\>\<bbb-Q\>\\\<alpha\>>, hence by the definition of a cut
+        we have <math|s\<less\>-r> so that <math|q=s+r\<less\>0>, hence
+        <math|q\<in\>\<alpha\><rsub|0>>. So
+        <math|<around*|(|-\<alpha\>|)>+\<alpha\>\<subseteq\>\<alpha\><rsub|0>>
+        which by [eq: <reference|eq 9.13.029>] proves that\ 
+
+        <\equation*>
+          \<alpha\><rsub|0>=<around*|(|-\<alpha\>|)>+\<alpha\>\<equallim\><rsub|<text|commutativity>>\<alpha\>+<around*|(|-\<alpha\>|)>
+        </equation*>
+
+        <item*|<math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> exist>Let
+        <math|m=min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> then by [theorem:
+        <reference|real rational cut>]
+
+        <\equation*>
+          \<alpha\>=\<alpha\><rsub|m>=<around*|{|q\<in\>\<bbb-Q\>\|q\<less\>m|}>
+        </equation*>
+
+        Further by [theorem: <reference|real negastive cut of rational cut>]
+        we have then that\ 
+
+        <\equation*>
+          -\<alpha\>=-\<alpha\><rsub|m>=\<alpha\><rsub|-m>
+        </equation*>
+
+        so that\ 
+
+        <\equation*>
+          \<alpha\>+<around*|(|-\<alpha\>|)>=\<alpha\><rsub|m>+\<alpha\><rsub|-m>
+        </equation*>
+
+        If <math|q\<in\>\<alpha\>+<around*|(|-\<alpha\>|)>> then there exist
+        a <math|r\<in\>\<alpha\><rsub|m>> and a
+        <math|s\<in\>\<alpha\><rsub|-m>> such that <math|q=r+s>. As
+        <math|r\<in\>\<alpha\><rsub|m>> we have <math|r\<less\>m> and as
+        <math|s\<in\>\<alpha\><rsub|-m>> <math|s\<less\>-m> so that
+        <math|q=r+s\<less\>m+<around*|(|-m|)>=0> proving that
+        <math|q\<in\>\<alpha\><rsub|0>>. Hence\ 
+
+        <\equation>
+          <label|eq 9.14.029>\<alpha\>+<around*|(|-\<alpha\>|)>\<subseteq\>\<alpha\><rsub|0>
+        </equation>
+
+        Further if <math|q\<in\>\<alpha\><rsub|0>> then <math|q\<less\>0>
+        then as <math|0\<less\><frac|1|2>> we have that
+        <math|<frac|1|2>\<cdot\>x\<less\>0> so that
+        <math|m+<frac|1|2>\<cdot\>q\<less\>m> and
+        <math|-m+<frac|1|2>\<cdot\>q\<less\>-m> so that
+        <math|m+<frac|1|2>\<cdot\>q\<in\>a<rsub|m>> and
+        <math|-m+<frac|1|2>\<cdot\>q\<in\>\<alpha\><rsub|-m>> hence\ 
+
+        <\equation*>
+          <around*|(|m+<frac|1|2>\<cdot\>q|)>+<around*|(|-m+<frac|1|2>\<cdot\>q|)>\<in\>\<alpha\><rsub|m>+\<alpha\><rsub|-m>=\<alpha\>+<around*|(|-\<alpha\>|)>
+        </equation*>
+
+        which as <math|><math|<around*|(|m+<frac|1|2>\<cdot\>q|)>+<around*|(|-m+<frac|1|2>\<cdot\>q|)>=<frac|1|2>\<cdot\>q+<frac|1|2>\<cdot\>q=<around*|(|<frac|1|2>+<frac|1|2>|)>\<cdot\>q=q>
+        proves that <math|q\<in\>\<alpha\>+<around*|(|-\<alpha\>|)>>. So
+        <math|\<alpha\><rsub|0>\<subseteq\>\<alpha\>+-\<alpha\><frac||>>
+        which combined with [eq: <reference|eq 9.14.029>] gives\ 
+
+        <\equation*>
+          \<alpha\><rsub|0>=\<alpha\>+<around*|(|-\<alpha\>|)>\<equallim\><rsub|<text|commutativity>><around*|(|-\<alpha\>|)>+\<alpha\>
+        </equation*>
+      </description>
+    </description>
+  </proof>
+
+  <subsubsection|Multiplication>
+
+  Before we can define multiplication we have to divide the set of real
+  numbers in the positive real numbers, the negative real numbers and the
+  <math|0> element.
+
+  <\definition>
+    <label|real positive negative numbers><index|<math|\<bbb-R\><rsup|+>>><index|<math|\<bbb-R\><rsup|->>>The
+    set of positive real numbers noted by <math|\<bbb-R\><rsup|+>> and
+    negative real numbers noted by <math|\<bbb-R\><rsup|->> is defined by\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|\<bbb-R\><rsup|+>=<around*|{|\<alpha\>\<in\>\<bbb-R\>\|0\<in\>\<alpha\>|}>\<subseteq\>\<bbb-R\>>|<cell|>>|<row|<cell|>|<cell|\<bbb-R\><rsup|->=<around*|{|\<alpha\>\|-\<alpha\>\<in\>\<bbb-R\><rsup|+>|}>\<subseteq\>\<bbb-R\>>|<cell|>>>>
+    </eqnarray*>
+  </definition>
+
+  <\theorem>
+    <label|real division of real numbers in positive and negative
+    numbers><math|\<bbb-R\>=\<bbb-R\><rsup|+><big|cup>\<bbb-R\><rsup|-><big|cup><around*|{|0|}>>
+    where <math|\<bbb-R\><rsup|+><big|cap>\<bbb-R\><rsup|->=\<varnothing\>>,
+    <math|\<bbb-R\><rsup|+><big|cap><around*|{|0|}>=\<varnothing\>> and
+    <math|\<bbb-R\><rsup|-><big|cap><around*|{|0|}>=\<varnothing\>>
+  </theorem>
+
+  <\note>
+    Be carefull here, <math|0> can mean either <math|0\<in\>\<bbb-Z\>> or
+    <math|0\<in\>\<bbb-R\>> in which case <math|0=\<alpha\><rsub|0>>
+  </note>
+
+  <\proof>
+    As <math|<around*|{|0|}>\<subseteq\>\<bbb-R\>>,
+    <math|\<bbb-R\><rsup|+>\<subseteq\>\<bbb-R\>> and
+    <math|\<bbb-R\><rsup|->\<subseteq\>\<bbb-R\>> we have\ 
+
+    <\equation>
+      <label|eq 9.16.030>\<bbb-R\><rsup|+><big|cup>\<bbb-R\><rsup|-><big|cup><around*|{|0|}>\<subseteq\>\<bbb-R\>
+    </equation>
+
+    If <math|\<alpha\>\<in\>\<bbb-R\>> then we have either:
+
+    <\description>
+      <item*|<math|0\<in\>\<alpha\>>>then
+      <math|\<alpha\>\<in\>\<bbb-R\><rsup|+>> so that
+      <math|\<alpha\>\<in\>\<bbb-R\><rsup|+><big|cup>\<bbb-R\><rsup|-><big|cup><around*|{|0|}>>
+
+      <item*|<math|0\<nin\>\<alpha\>>>then we have either:
+
+      <\description>
+        <item*|<math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> does not exist>As
+        <math|0\<nin\>\<alpha\>> we have <math|-0=0\<in\>\<bbb-Q\>\\\<alpha\>>
+        and 'if <math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> exist
+        <math|-0\<neq\>min<around*|(|\<bbb-Q\>\\\<alpha\>|)>>' is true so
+        that <math|0\<in\>-\<alpha\>>, hence
+        <math|-\<alpha\>\<in\>\<bbb-R\><rsup|+>> proving that
+        <math|\<alpha\>\<in\>\<bbb-R\><rsup|->\<subseteq\>\<bbb-R\><rsup|+><big|cup>\<bbb-R\><rsup|-><big|cup><around*|{|0|}>>.
+
+        <item*|<math|min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> exist>Then by
+        [theorem: <reference|real rational cut>]
+        \ <math|\<alpha\>=\<alpha\><rsub|m>> where
+        <math|m=min<around*|(|\<bbb-Q\>\\\<alpha\>|)>>
+
+        <\description>
+          <item*|<math|0=m>>Then <math|\<alpha\>=\<alpha\><rsub|0>=0> so that
+          <math|\<alpha\>\<in\><around*|{|0|}>\<subseteq\>\<bbb-R\><rsup|+><big|cup>\<bbb-R\><rsup|-><big|cup><around*|{|0|}>>.
+
+          <item*|<math|0\<less\>m>>Then <math|0\<in\>\<alpha\><rsub|m>=\<alpha\>>
+          so that <math|\<alpha\>\<in\>\<bbb-R\><rsup|+>\<subseteq\>\<bbb-R\><rsup|+><big|cup>\<bbb-R\><rsup|-><big|cup><around*|{|0|}>>.
+
+          <item*|<math|m\<less\>0>>Then <math|0\<nin\>\<alpha\><rsub|m>=\<alpha\>>
+          so that <math|-0=0\<in\>\<bbb-Q\>\\\<alpha\>> and as
+          <math|-0=0\<neq\>min<around*|(|\<bbb-Q\>\\\<alpha\>|)>> it follows
+          that <math|0\<in\>-\<alpha\>>, proving that
+          <math|-\<alpha\>\<in\>\<bbb-R\><rsup|+>>, hence
+          <math|\<alpha\>\<in\>\<bbb-R\><rsup|->\<subseteq\>\<bbb-R\><rsup|+><big|cup>\<bbb-R\><rsup|-><big|cup><around*|{|0|}>>
+        </description>
+      </description>
+    </description>
+
+    So in all cases we have <math|\<alpha\>\<in\>\<bbb-R\><rsup|+><big|cup>\<bbb-R\><rsup|-><big|cup><around*|{|0|}>>
+    proving <math|\<bbb-R\>\<subseteq\>\<bbb-R\><rsup|+><big|cup>\<bbb-R\><rsup|-><big|cup><around*|{|0|}>>
+    which combined with [eq: <reference|eq 9.16.030>] proves\ 
+
+    <\equation*>
+      \<bbb-R\>=\<bbb-R\><rsup|+><big|cup>\<bbb-R\><rsup|-><big|cup><around*|{|0|}>
+    </equation*>
+
+    Now as <math|0=\<alpha\><rsub|0>=<around*|{|q\<in\>\<bbb-Q\>\|q\<less\>0|}>>
+    we have that <math|0\<nin\>\<alpha\><rsub|0>> hence
+    <math|0=\<alpha\><rsub|0>\<nin\>\<bbb-R\><rsup|+>> proving that\ 
+
+    <\equation*>
+      \<bbb-R\><rsup|+><big|cap><around*|{|0|}>=\<varnothing\>
+    </equation*>
+
+    Using [theorem: <reference|real negastive cut of rational cut>] it
+    follows that <math|-\<alpha\><rsub|0>=\<alpha\><rsub|-0>=\<alpha\><rsub|0>>
+    so that <math|-0=-\<alpha\><rsub|0>\<nin\>\<bbb-R\><rsup|+>> hence
+    <math|0\<nin\>\<bbb-R\><rsup|->> proving that\ 
+
+    <\equation*>
+      \<bbb-R\><rsup|-><big|cap><around*|{|0|}>=\<varnothing\>
+    </equation*>
+
+    Finally if <math|\<alpha\>\<in\>\<bbb-R\><rsup|+><big|cap>\<bbb-R\><rsup|->>
+    then <math|0\<in\>\<alpha\>> and <math|0\<in\>-\<alpha\>>, as
+    <math|0\<in\>-\<alpha\>> then at least
+    <math|-0\<in\>\<bbb-Q\>\\\<alpha\>> so that <math|0=-0\<nin\>\<alpha\>>
+    contradicting <math|0\<in\>\<alpha\>>. So we have\ 
+
+    <\equation*>
+      \<bbb-R\><rsup|+><big|cap>\<bbb-R\><rsup|->=\<varnothing\>
+    </equation*>
+  </proof>
+
+  Defining multiplication in <math|\<bbb-R\>> is difficult. we first define
+  multiplication for <math|\<bbb-R\><rsup|+>> and extend it later to
+  <math|\<bbb-R\>>.
+
+  <\definition>
+    Given <math|\<alpha\>,b\<in\>\<bbb-R\><rsup|+>> we define
+    <math|A=\<alpha\>\<odot\>\<beta\>> by\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<alpha\>\<odot\>\<beta\>>|<cell|=>|<cell|\<bbb-Q\><rsup|-><rsub|0><big|cup><around*|{|s\<cdot\>t\|<around*|(|s,t|)>\<in\>\<alpha\>\<times\>\<beta\>\<wedge\>0\<less\>s\<wedge\>0\<less\>t|}>>>|<row|<cell|>|<cell|=>|<cell|<around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}><big|cup><around*|{|s\<cdot\>t\|<around*|(|s,t|)>\<in\>\<alpha\>\<times\>\<beta\>\<wedge\>0\<less\>s\<wedge\>0\<less\>t|}>>>>>
+    </eqnarray*>
+  </definition>
+
+  <\theorem>
+    <label|real product is internal><math|\<forall\>\<alpha\>,\<beta\>\<in\>\<bbb-R\><rsup|+>>
+    we have that <math|\<alpha\>\<odot\>\<beta\>\<in\>\<bbb-R\><rsup|+>>
+  </theorem>
+
+  <\proof>
+    First we prove that <math|\<alpha\>\<odot\>\<beta\>> is a Dedekind cut.\ 
+
+    <\enumerate>
+      <item>As <math|0\<in\><around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}>>
+      it follows that\ 
+
+      <\equation*>
+        \<alpha\>\<odot\>\<beta\>\<neq\>\<varnothing\>
+      </equation*>
+
+      <item>As <math|\<alpha\>,\<beta\>\<in\>\<bbb-R\><rsup|+>> it follows
+      that <math|0\<in\>\<alpha\>\<wedge\>0\<in\>\<beta\>> and as
+      <math|\<alpha\>,\<beta\>> do not have a greatest element we have\ 
+
+      <\equation>
+        <label|eq 9.17.030>\<exists\>s<rsub|1>\<in\>\<alpha\>,\<exists\>s<rsub|2>\<in\>\<beta\><text|
+        such that >0\<less\>s<rsub|1>\<wedge\>0\<less\>t<rsub|1>
+      </equation>
+
+      As <math|0\<less\>1> we have by [theorem: <reference|real lemma for sum
+      operator>] that\ 
+
+      <\equation>
+        <label|eq 9.18.030>\<exists\>s<rsub|2>\<in\>\<alpha\>,\<exists\>t<rsub|2>\<in\>\<beta\><text|
+        such that >s<rsub|2>+1\<in\>\<bbb-Q\>\\\<alpha\>\<wedge\>t<rsub|2>+1\<in\>\<bbb-Q\>\\\<beta\>
+      </equation>
+
+      Take now\ 
+
+      <\equation>
+        <label|eq 9.19.030>s=max<around*|(|<around*|{|s<rsub|1>,s<rsub|2>|}>|)><text|
+        and >t=max<around*|(|<around*|{|t<rsub|1>,t<rsub|2>|}>|)>
+      </equation>
+
+      If <math|s\<nin\>\<alpha\>> then <math|s\<in\>\<bbb-Q\>\\\<alpha\>> so
+      that by [definition: <reference|real Dedekind's cut> (3)] and [eq:
+      <reference|eq 9.17.030>] we have <math|s1\<less\>s> and
+      <math|s<rsub|2>\<less\>s> contradicting the fact that
+      <math|s\<in\><around*|{|s<rsub|1>,s<rsub|2>|}>>, so we must have that
+      <math|s\<in\>\<alpha\>>. Likewise if <math|t\<nin\>\<beta\>> then
+      <math|t\<in\>\<bbb-Q\>\\\<beta\>> so that by [definition:
+      <reference|real Dedekind's cut> (3)] \ and [eq: <reference|eq
+      9.17.030>]<space|1em>we have <math|t1\<less\>t> and
+      <math|t<rsub|2>\<less\>t> contradicting the fact that
+      <math|t\<in\><around*|{|t<rsub|1>,t<rsub|2>|}>>, so we must have that
+      <math|s\<in\>\<beta\>>. So we have\ 
+
+      <\equation>
+        <label|eq 9.20.030>s\<in\>\<alpha\>\<wedge\>t\<in\>\<beta\><text| and
+        by [eqs: <reference|eq 9.17.030>,<reference|eq 9.19.030>] that
+        >0\<less\>s\<wedge\>\<less\>t
+      </equation>
+
+      If <math|s+1\<in\>\<alpha\>> then by [definition: <reference|real
+      Dedekind's cut> (3)] and [eq: <reference|eq 9.18.030>] we have
+      <math|s+1\<less\>s<rsub|2>+1\<Rightarrow\>s\<less\>s<rsub|2>>
+      contradicting <math|s=max<around*|(|s<rsub|1>,s<rsub|2>|)>>. Likewise
+      if <math|t+1\<in\>\<beta\>> then by [definition: <reference|real
+      Dedekind's cut> (3)] and [eq: <reference|eq 9.18.030>] we have
+      <math|t+1\<less\>t<rsub|2>+t\<Rightarrow\>t\<less\>t<rsub|2>>
+      contradicting <math|t=max<around*|(|t<rsub|1>,t<rsub|2>|)>>. So we must
+      have
+
+      <\equation>
+        <label|eq 9.21.030>s+1\<in\>\<bbb-Q\>\\\<alpha\><text| and
+        >t+1\<in\>\<bbb-Q\>\\\<alpha\>
+      </equation>
+
+      Assume now that <math|s\<cdot\>t+s+t+1\<in\>\<alpha\>\<odot\>\<beta\>>.
+      As <math|0\<less\>s\<wedge\>0\<less\>t> we have that
+      <math|0\<less\>s\<cdot\>t> giving <math|0\<less\>s\<cdot\>t+s+t+1> so
+      that <math|s\<cdot\>t+s+t+1\<nin\><around*|{|q\<in\>\<bbb-Q\>\|q\<leqslant\>0|}>>
+      so we must have that
+
+      <\equation*>
+        s\<cdot\>t+s+t+1\<in\><around*|{|s\<cdot\>t\|<around*|(|s,t|)>\<in\>\<alpha\>\<times\>\<beta\>\<wedge\>0\<less\>s\<wedge\>0\<less\>t|}>
+      </equation*>
+
+      hence there exists <math|s<rprime|'>\<in\>\<alpha\>> and
+      <math|t<rprime|'>\<in\>\<beta\>> with
+      <math|0\<less\>s<rprime|'>\<wedge\>0\<less\>t<rprime|'>> such that
+      <math|s\<cdot\>t+s+t+1=s<rprime|'>\<cdot\>t<rprime|'>>. Using
+      \ [definition: <reference|real Dedekind's cut> (3)] and [eq:
+      <reference|eq 9.21.030>] we have that <math|s<rprime|'>\<less\>s+1> and
+      <math|t<rprime|'>\<less\>t+1> so <math|s<rprime|'>\<cdot\>t<rprime|'>\<less\><around*|(|s+1|)>\<cdot\>t<rprime|'>>
+      and <math|t<rprime|'>\<cdot\><around*|(|s+1|)>\<less\><around*|(|t+1|)>\<cdot\><around*|(|s+1|)>>
+      , hence <math|s<rprime|'>\<cdot\>t<rprime|'>\<less\><around*|(|s+1|)>\<cdot\><around*|(|t+1|)>=s\<cdot\>t+s+t+1=s<rprime|'>\<cdot\>t<rprime|'>>
+      giving the contradiction <math|s<rprime|'>\<cdot\>t<rprime|'>\<less\>s<rprime|'>\<cdot\>t<rprime|'>>.
+      Hence the assumption is false so that
+      <math|s\<cdot\>t+s+t+1\<nin\>\<alpha\>\<odot\>\<beta\>> proving that\ 
+
+      <\equation*>
+        \<alpha\>\<odot\>\<beta\>\<neq\>\<bbb-Q\>
+      </equation*>
+
+      <item>Let <math|q\<in\>\<alpha\>\<odot\>\<beta\>> and
+      <math|r\<in\>\<bbb-Q\>\\\<alpha\>\<odot\>\<beta\>> then for <math|q> we
+      have either:
+
+      <\description>
+        <item*|<math|q\<in\><around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}>>>Then
+        <math|q\<leqslant\>0> furher as <math|r\<in\>\<bbb-Q\>\\\<alpha\>\<odot\>\<beta\>>
+        we have that <math|r\<nin\><around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}>>
+        so that <math|0\<less\>r> from which it follows that
+        <math|q\<less\>r>.
+
+        <item*|<math|q\<nin\><around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}>>>Then
+        <math|q\<in\><around*|{|s\<cdot\>t\|<around*|(|s,t|)>\<in\>\<alpha\>\<times\>\<beta\>\<wedge\>0\<less\>s\<wedge\>0\<less\>t|}>>
+        so that\ 
+
+        <\equation>
+          <label|eq 9.22.030>\<exists\>s<rprime|'>\<in\>\<alpha\>,\<exists\>t<rprime|'>\<in\>\<beta\><text|
+          with >0\<less\>s<rprime|'>\<wedge\>0\<less\>t<rprime|'><text| such
+          that >q=s<rprime|'>\<cdot\>t<rprime|'>
+        </equation>
+
+        Assume now that <math|r\<leqslant\>q>. As
+        <math|r\<in\>\<bbb-Q\>\\\<alpha\>\<odot\>\<beta\>> we have that
+        <math|r\<neq\>q> [as <math|q\<in\>\<alpha\>\<odot\>\<beta\>> and
+        <math|r\<nin\><around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}>> so that
+        <math|0\<less\>r>. Hence we have 0\<less\><math|r\<less\>q> or
+        multiplying by <math|r<rsup|-1>> [which exists and
+        <math|0\<less\>r<rsup|-1>> by [theorem: <reference|rational
+        properties of 0, 1 and inverse>]] we have
+        <math|1=r\<cdot\>r<rsup|-1>\<less\>q\<cdot\>r<rsup|-1>> or if we
+        define <math|t=q\<cdot\>r<rsup|-1>>, it follows that
+
+        <\equation>
+          <label|eq 9.23.030>1\<less\>t<text| and >t\<cdot\>r=q
+        </equation>
+
+        Using the above, we have by [theorem: <reference|rational properties
+        of 0, 1 and inverse>] that <math|0\<less\>t<rsup|-1>\<less\>1> so
+        that by multiplying by <math|s<rprime|'>> we have, as
+        <math|0\<less\>s<rprime|'>>, that
+
+        <\equation>
+          <label|eq 9.24.030>t<rsup|-1>\<cdot\>s<rprime|'>\<less\>s<rprime|'>
+        </equation>
+
+        If now <math|t<rsup|-1>\<cdot\>s<rprime|'>\<nin\>\<alpha\>> then
+        <math|t<rsup|-1>\<cdot\>s<rprime|'>\<in\>\<bbb-Q\>\\\<alpha\>> which,
+        as <math|s<rprime|'>\<in\>\<alpha\>>, means by [definition:
+        <reference|real Dedekind's cut> (3)] that
+        <math|s<rprime|'>\<less\>t<rsup|-1>\<cdot\>s<rprime|'>> contradicting
+        [eq: <reference|eq 9.24.030>]. Hence we must have that\ 
+
+        <\equation>
+          <label|eq 9.25.030>t<rsup|-1>\<cdot\>s<rprime|'>\<in\>\<alpha\>
+        </equation>
+
+        As by [eq: <reference|eq 9.22.030>] <math|t<rprime|'>\<in\>\<beta\>>
+        we using the above that <math|<around*|(|t<rsup|-1>\<cdot\>s<rprime|'>|)>\<cdot\>t<rprime|'>\<in\><around*|{|s\<cdot\>t\|<around*|(|s,t|)>\<in\>\<alpha\>\<times\>\<beta\>\<wedge\>0\<less\>s\<wedge\>0\<less\>t|}>>
+        so that\ 
+
+        <\equation>
+          <label|eq 9.26.030><around*|(|t<rsup|-1>\<cdot\>s<rprime|'>|)>\<cdot\>t<rprime|'>\<in\>\<alpha\>\<odot\>\<beta\>
+        </equation>
+
+        Now\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|t<rsup|-1>\<cdot\>s<rprime|'>|)>\<cdot\>t<rprime|'>>|<cell|=>|<cell|t<rsup|-1>\<cdot\><around*|(|s<rprime|'>\<cdot\>t<rprime|'>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 9.22.030>]>>>|<cell|t<rsup|-1>\<cdot\>q>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 9.23.030>]>>>|<cell|t<rsup|-1>\<cdot\><around*|(|t\<cdot\>r|)>>>|<row|<cell|>|<cell|=>|<cell|r>>>>
+        </eqnarray*>
+
+        which combined with [eq: <reference|eq 9.25.030>] proves that
+        <math|r\<in\>\<alpha\>\<oplus\>\<beta\>> contradicting the fact
+        <math|r\<in\>\<bbb-Q\>\\\<alpha\>\<odot\>\<beta\>>, hence the
+        assumption is wrong and we must have\ 
+
+        <\equation*>
+          q\<less\>r
+        </equation*>
+      </description>
+
+      <item>Assume now that <math|\<alpha\>\<odot\>\<beta\>> has a greatest
+      element <math|m> then we have\ 
+
+      <\equation>
+        <label|eq 9.27.030>m\<in\>\<alpha\>\<odot\>\<beta\><text| and
+        >\<forall\>r\<in\>\<alpha\>\<odot\>\<beta\><text| we have
+        >r\<leqslant\>m
+      </equation>
+
+      As <math|m\<in\>\<alpha\>\<odot\>\<beta\>> we have the following cases
+      to consider:
+
+      <\description>
+        <item*|<math|m\<in\><around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}>>>Then
+        <math|m\<leqslant\>0>. As <math|\<alpha\>,\<beta\>\<in\>\<bbb-R\><rsup|+>>
+        we have that <math|0\<in\>\<alpha\>> and <math|0\<in\>\<beta\>>
+        which, as <math|\<alpha\>,\<beta\>> have no greatest element, that
+        there exists <math|s\<in\>\<alpha\>> and <math|t\<in\>\<beta\>> such
+        that <math|0\<less\>s> and <math|0\<less\>t>, hence
+        <math|s\<cdot\>t\<in\><around*|{|s\<cdot\>t\|<around*|(|s,t|)>\<in\>\<alpha\>\<times\>\<beta\>\<wedge\>0\<less\>s\<wedge\>0\<less\>t|}>>
+        proving that
+
+        <\equation*>
+          s\<cdot\>t\<in\>\<alpha\>\<odot\>\<beta\><text| and thus
+          >s\<cdot\>t\<leqslant\>m
+        </equation*>
+
+        As <math|0\<less\>s\<wedge\>0\<less\>t> we have that
+        <math|0\<less\>s\<cdot\>t> so, as <math|m\<leqslant\>0>, we have
+        <math|m\<less\>s\<cdot\>t> contradicting the above.
+
+        <item*|<math|m\<nin\><around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}>>>Then
+        <math|0\<less\>m> and <math|m\<in\><around*|{|s\<cdot\>t\|<around*|(|s,t|)>\<in\>\<alpha\>\<times\>\<beta\>\<wedge\>0\<less\>s\<wedge\>0\<less\>t|}>>
+        hence there exists <math|s\<in\>\<alpha\>> and <math|t\<in\>\<beta\>>
+        with <math|0\<less\>s> and <math|0\<less\>t> such that
+
+        <\equation>
+          <label|eq 9.28.030>m=s\<cdot\>t
+        </equation>
+
+        As <math|\<alpha\>,\<beta\>> has no greatest element there exists
+        <math|s<rprime|'>\<in\>\<alpha\>> and
+        <math|t<rprime|'>\<in\>\<beta\>> such that
+        <math|0\<less\>s\<less\>s<rprime|'>> and
+        <math|0\<less\>t\<less\>t<rprime|'>>. As
+        <math|0\<less\>s\<wedge\>0\<less\>t> we have
+        <math|s\<cdot\>t\<less\>s<rprime|'>\<cdot\>t> and
+        <math|t\<cdot\>s<rprime|'>\<less\>s<rprime|'>\<cdot\>t<rprime|'>> so
+        that <math|s\<cdot\>t\<less\>s<rprime|'>\<cdot\>t<rprime|'>> or using
+        [eq: <reference|eq 9.28.030>]\ 
+
+        <\equation>
+          <label|eq 9.29.030>m\<less\>s<rprime|'>\<cdot\>t<rprime|'>
+        </equation>
+
+        Further as <math|s\<cdot\>t\<in\><around*|{|s\<cdot\>t\|<around*|(|s,t|)>\<in\>\<alpha\>\<times\>\<beta\>\<wedge\>0\<less\>s\<wedge\>0\<less\>t|}>>
+        we have that <math|s<rprime|'>\<cdot\>t<rprime|'>\<in\>\<alpha\>\<odot\>\<beta\>>
+        so that by [eq: <reference|eq 9.27.030>]
+        <math|s<rprime|'>\<cdot\>t<rprime|'>\<leqslant\>m> contradicting [eq:
+        <reference|eq 9.29.030>]. \ 
+      </description>
+
+      As in all cases we have a contradiction the assumption must be wrong,
+      so <math|\<alpha\>\<odot\>\<beta\>> has no greatest element.
+    </enumerate>
+
+    By (1),(2),(3) and (4) we have that <math|\<alpha\>\<odot\>\<beta\>> is a
+    Dedekind cut, hence
+
+    <\equation*>
+      \<alpha\>\<odot\>\<beta\>\<in\>\<bbb-R\>
+    </equation*>
+
+    Finally as <math|0\<in\><around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}>>
+    we have <math|0\<in\>\<alpha\>\<odot\>\<beta\>> proving that\ 
+
+    <\equation*>
+      \<alpha\>\<odot\>\<beta\>\<in\>\<bbb-R\><rsup|+>
+    </equation*>
+  </proof>
+
+  \;
+
+  <\theorem>
+    <label|real a.b=b.a><math|\<forall\>\<alpha\>,\<beta\>\<in\>\<bbb-R\><rsup|+>>
+    we have <math|\<alpha\>\<odot\>\<beta\>=\<beta\>\<odot\>\<alpha\>>
+  </theorem>
+
+  <\proof>
+    Then we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|q\<in\>\<alpha\>\<odot\>\<beta\>>|<cell|\<Leftrightarrow\>>|<cell|q\<in\><around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}><big|cup><around*|{|s\<cdot\>t\|<around*|(|s,t|)>\<in\>\<alpha\>\<times\>\<beta\>\<wedge\>0\<less\>s\<wedge\>0\<less\>t|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|q\<leqslant\>0\<vee\>\<exists\><around*|(|s,t|)>\<in\>\<alpha\>\<times\>\<beta\><text|
+      with >0\<less\>s\<wedge\>0\<less\>t<text| such that
+      <math|q=s\<cdot\>t>>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<text|[theorem:
+      <reference|rational field>>>>|<cell|q\<leqslant\>0\<vee\>\<exists\><around*|(|s,t|)>\<in\>\<alpha\>\<times\>\<beta\><text|
+      with >0\<less\>s\<wedge\>0\<less\>t<text| such that
+      <math|q=t\<cdot\>s>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|q\<leqslant\>0\<vee\>\<exists\><around*|(|t,s|)>\<in\>\<beta\>\<times\>\<alpha\><text|
+      with >0\<less\>t\<wedge\>0\<less\>s<text| such that
+      <math|q=s\<cdot\>t>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|q\<in\>\<beta\>\<odot\>\<alpha\>>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation*>
+      \<alpha\>\<circ\>,\<beta\>=\<beta\>\<odot\>\<alpha\>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    Let <math|\<alpha\>,\<beta\>,\<gamma\>\<in\>\<bbb-R\><rsup|+>> then we
+    have that <math|\<alpha\>\<odot\><around*|(|\<beta\>\<odot\>\<gamma\>|)>=<around*|(|\<alpha\>\<odot\>\<beta\>|)>\<odot\>\<gamma\>>
+  </theorem>
+
+  <\proof>
+    Using the definition of <math|\<odot\>> we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<alpha\>\<odot\>\<beta\>>|<cell|=>|<cell|<around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}><big|cup><around*|{|s\<cdot\>t\|<around*|(|s,t|)>\<in\>\<alpha\>\<times\>\<beta\><text|
+      with >0\<less\>s\<wedge\>0\<less\>t|}><eq-number><label|eq
+      9.30.031>>>|<row|<cell|\<beta\>\<odot\>\<gamma\>>|<cell|=>|<cell|<around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}><big|cup><around*|{|s\<cdot\>t\|<around*|(|s,t|)>\<in\>\<beta\>\<times\>\<gamma\><text|
+      with >0\<less\>s\<wedge\>0\<less\>t|}><eq-number><label|eq
+      9.31.031>>>|<row|<cell|\<alpha\>\<odot\><around*|(|\<beta\>\<odot\>\<gamma\>|)>>|<cell|=>|<cell|<around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}><big|cup><around*|{|s\<cdot\>t\|<around*|(|s,t|)>\<in\>\<alpha\>\<times\><around*|(|\<beta\>\<odot\>\<gamma\>|)><text|
+      with >0\<less\>s\<wedge\>0\<less\>t|}><eq-number><label|eq
+      9.32.031>>>|<row|<cell|<around*|(|\<alpha\>\<odot\>\<beta\>|)>\<odot\>\<gamma\>>|<cell|=>|<cell|<around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}><big|cup><around*|{|s\<cdot\>t\|<around*|(|s,t|)>\<in\><around*|(|\<alpha\>\<odot\>\<beta\>|)>\<times\>\<gamma\><text|
+      with >0\<less\>s\<wedge\>0\<less\>t|}><eq-number><label|eq
+      9.33.031>>>>>
+    </eqnarray*>
+
+    Let <math|x\<in\>\<alpha\>\<cdot\><around*|(|\<beta\>\<cdot\>\<gamma\>|)>>
+    then we have either
+
+    <\description>
+      <item*|<math|x\<leqslant\>0>>Then we have
+      <math|x\<in\><around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}>> proving by
+      [eq: <reference|eq 9.33.031>] that <math|x\<in\><around*|(|\<alpha\>\<odot\>\<beta\>|)>\<odot\>\<gamma\>>
+
+      <item*|<math|0\<less\>x>>Then by [eq: <reference|eq 9.32.031>] there
+      exista <math|q\<in\>\<alpha\>> and <math|r\<in\>\<beta\>\<odot\>\<gamma\>>
+      with <math|0\<less\>q\<wedge\>0\<less\>r> such that\ 
+
+      <\equation>
+        <label|eq 9.34.031>x=q\<cdot\>r
+      </equation>
+
+      As <math|0\<less\>r> and <math|r\<in\>\<beta\>\<odot\>\<gamma\>> it
+      follows from [eq: <reference|eq 9.31.031>] that there exists a
+      <math|s\<in\>\<beta\>> and <math|t\<in\>\<gamma\>> such that
+      <math|r=s\<cdot\>t> hence \ <math|x=q\<cdot\>r=q\<cdot\><around*|(|s\<cdot\>t|)>\<equallim\><rsub|<text|[theorem:
+      <reference|rational field>]>><around*|(|q\<cdot\>s|)>\<cdot\>t> proving
+      that\ 
+
+      <\equation>
+        <label|eq 9.35.031>x=<around*|(|q\<cdot\>s|)>\<cdot\>t
+      </equation>
+
+      As <math|q\<in\>\<alpha\>\<wedge\>s\<in\>\<beta\>\<wedge\>0\<less\>\<alpha\>\<wedge\>0\<less\>\<beta\>>
+      we have by [eq: <reference|eq 9.30.031>] that
+      <math|q\<cdot\>s\<in\>\<alpha\>\<odot\>\<beta\>>. Further as
+      <math|0\<less\>q\<wedge\>0\<less\>s> we have <math|0\<less\>q\<cdot\>s>
+      which together with \ <math|t\<in\>\<gamma\>\<wedge\>0\<less\>\<gamma\>>
+      proves that <math|<around*|(|q\<cdot\>s|)>\<cdot\>t\<in\><around*|(|\<alpha\>\<odot\>\<beta\>|)>\<odot\>\<gamma\>>
+      or using [eq: <reference|eq 9.35.031>] that\ 
+
+      <\equation*>
+        x\<in\><around*|(|\<alpha\>\<odot\>\<beta\>|)>\<odot\>\<gamma\>
+      </equation*>
+    </description>
+
+    So we have proved that\ 
+
+    <\equation>
+      <label|eq 9.36.031>\<alpha\>\<odot\>*<around*|(|\<beta\>\<odot\>\<gamma\>|)>\<subseteq\><around*|(|\<alpha\>\<odot\>\<beta\>|)>\<odot\>\<gamma\>
+    </equation>
+
+    Let <math|x\<in\><around*|(|\<alpha\>\<odot\>\<beta\>|)>\<odot\>\<gamma\>>
+    then we have either:
+
+    <\description>
+      <item*|<math|x\<leqslant\>0>>Then we have
+      <math|x\<in\><around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}>> proving by
+      [eq: <reference|eq 9.33.031>] that <math|x\<in\><around*|(|\<alpha\>\<odot\>\<beta\>|)>\<odot\>\<gamma\>>.
+
+      <item*|<math|0\<less\>x>>Then by [eq: <reference|eq 9.33.031>] we have
+      that there exists a <math|q\<in\>\<alpha\>\<odot\>\<beta\>> and a
+      <math|r\<in\>\<gamma\>> with <math|0\<less\>q\<wedge\>0\<less\>r> such
+      that\ 
+
+      <\equation>
+        <label|eq 9.37.031>x=q\<cdot\>r
+      </equation>
+
+      As <math|0\<less\>q> and <math|q\<in\>\<alpha\>\<odot\>\<beta\>> it
+      follows from [eq: <reference|eq 9.30.031>] that there exists a
+      <math|s\<in\>\<alpha\>> and <math|t\<in\>\<beta\>> with
+      <math|0\<less\>s\<wedge\>0\<less\>t> such that <math|q=s\<cdot\>t>.
+      Hence <math|x=q\<cdot\>r=<around*|(|s\<cdot\>t|)>\<cdot\>r=s\<cdot\><around*|(|t\<cdot\>r|)>>
+      giving\ 
+
+      <\equation>
+        <label|eq 9.38.031>x=s\<cdot\><around*|(|t\<cdot\>r|)>
+      </equation>
+
+      As <math|t\<in\>\<beta\>\<wedge\>r\<in\>\<gamma\>\<wedge\><rsup|>0\<less\>\<beta\>\<wedge\>0\<less\>\<gamma\>>
+      we have by [eq: <reference|eq 9.31.031>] that
+      <math|t\<cdot\>r\<in\>\<beta\>\<odot\>\<gamma\>>. Further as
+      <math|0\<less\>t\<wedge\>0\<less\>r> we have <math|0\<less\>t\<cdot\>r>
+      which together with <math|s\<in\>\<alpha\>\<wedge\>0\<less\>s> proves
+      that <math|s\<cdot\><around*|(|t\<cdot\>r|)>\<in\>\<alpha\>\<odot\><around*|(|\<beta\>\<odot\>\<gamma\>|)>>
+      or using [eq: <reference|eq 9.38.031>] we have that
+
+      <\equation*>
+        x\<in\>\<alpha\>\<odot\><around*|(|\<beta\>\<odot\>\<gamma\>|)>
+      </equation*>
+    </description>
+
+    So we have proved that <math|<around*|(|\<alpha\>\<odot\>\<beta\>|)>\<odot\>\<gamma\>\<subseteq\>\<alpha\>\<odot\><around*|(|\<beta\>\<odot\>\<gamma\>|)>>
+    which combined with [eq: <reference|eq 9.36.031>] gives\ 
+
+    <\equation*>
+      <around*|(|\<alpha\>\<odot\>\<beta\>|)>\<odot\>\<gamma\>-\<alpha\>\<odot\><around*|(|\<beta\>\<odot\>\<gamma\>|)>
+    </equation*>
+  </proof>
+
+  We prove now that <math|\<bbb-R\>\<times\>\<bbb-R\>> is the disjoint union
+  of sets of the form <math|A\<times\>B> where
+  <math|A,B\<in\><around*|{|\<bbb-R\><rsup|+>,\<bbb-R\><rsup|->,<around*|{|0|}>|}>>
+
+  <\theorem>
+    <label|real RxR><math|\<bbb-R\>\<times\>\<bbb-R\>> can be expressed as
+    follows
+
+    <\equation*>
+      \<bbb-R\>*\<times\>\<bbb-R\>=<around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|+>|)><big|cup><around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|->|)><big|cup><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|+>|)><big|cup><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|->|)><big|cup><around*|(|<around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)><big|cup><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)>|)>
+    </equation*>
+
+    where\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|<around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|+>|)><big|cap><around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|->|)>=\<varnothing\>>|<cell|>>|<row|<cell|>|<cell|<around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|+>|)><big|cap><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|+>|)>=\<varnothing\>>|<cell|>>|<row|<cell|>|<cell|<around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|+>|)><big|cap><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|->|)>=\<varnothing\>>|<cell|>>|<row|<cell|>|<cell|<around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|+>|)><big|cap><around*|(|<around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)><big|cup><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)>|)>=\<varnothing\>>|<cell|>>|<row|<cell|>|<cell|<around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|->|)><big|cap><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|+>|)>=\<varnothing\>>|<cell|>>|<row|<cell|>|<cell|<around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|->|)><big|cap><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|->|)>=\<varnothing\>>|<cell|>>|<row|<cell|>|<cell|<around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|->|)><big|cap><around*|(|<around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)><big|cup><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)>|)>=\<varnothing\>>|<cell|>>|<row|<cell|>|<cell|<around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|+>|)><big|cap><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|-1>|)>=\<varnothing\>>|<cell|>>|<row|<cell|>|<cell|<around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|+>|)><big|cap><around*|(|<around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)><big|cup><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)>|)>=\<varnothing\>>|<cell|>>|<row|<cell|>|<cell|<around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|->|)><big|cap><around*|(|<around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)><big|cup><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)>|)>=\<varnothing\>>|<cell|>>>>
+    </eqnarray*>
+  </theorem>
+
+  <\proof>
+    First note that by [theorem: <reference|real division of real numbers in
+    positive and negative numbers>]
+
+    <\equation>
+      <label|eq 9.30.030>\<bbb-R\>=\<bbb-R\><rsup|+><big|cup>\<bbb-R\><rsup|-><big|cup><around*|{|0|}>=<big|cup><rsub|A\<in\><around*|{|\<bbb-R\><rsup|+>,\<bbb-R\><rsup|->,<around*|{|0|}>|}>>A
+    </equation>
+
+    and
+
+    <\equation>
+      <label|eq 9.31.030>\<bbb-R\><rsup|+><big|cap>\<bbb-R\><rsup|->=\<varnothing\><text|
+      and >\<bbb-R\><rsup|+><big|cap>\<bbb-R\><rsup|+><big|cap><around*|{|0|}>=\<varnothing\><text|
+      and >\<bbb-R\><rsup|-><big|cap><around*|{|0|}>=\<varnothing\>
+    </equation>
+
+    First as <math|\<bbb-R\><rsup|+>\<subseteq\>\<bbb-R\>>,
+    <math|\<bbb-R\><rsup|->>, <math|<around*|{|0|}>\<in\>\<bbb-R\>> and
+    <math|\<bbb-R\>\<subseteq\>\<bbb-R\>> we have by [theorem:
+    <reference|cartesian product and inclusion>] that
+    <math|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|+>\<subseteq\>\<bbb-R\>\<times\>\<bbb-R\>>,
+    <math|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|->\<subseteq\>\<bbb-R\>\<times\>\<bbb-R\>>,
+    <math|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|+>\<subseteq\>\<bbb-R\>\<times\>\<bbb-R\>>,
+    <math|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|->\<subseteq\>\<bbb-R\>\<times\>\<bbb-R\>>,
+    <math|<around*|(|<around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)><big|cup><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)>|)>\<subseteq\>\<bbb-R\>*\<times\>\<bbb-R\>>
+    so that\ 
+
+    <\equation>
+      <label|eq 9.32.030><around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|+>|)><big|cup><around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|->|)><big|cup><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|+>|)><big|cup><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|->|)><big|cup><around*|(|<around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)><big|cup><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)>|)>\<subseteq\>\<bbb-R\>\<times\>\<bbb-R\>
+    </equation>
+
+    Let <math|*<around*|(|x,y|)>\<in\>\<bbb-R\>\<times\>\<bbb-R\>> then
+    <math|x\<in\>\<bbb-R\>\<equallim\><rsub|<text|[eq: <reference|eq
+    9.30.030>]>>\<bbb-R\><rsup|+><big|cup>\<bbb-R\><rsup|-><big|cup><around*|{|0|}>>
+    and <math|x\<in\>\<bbb-R\>\<equallim\><rsub|<text|[eq: <reference|eq
+    9.30.030>]>>\<bbb-R\><rsup|+><big|cup>\<bbb-R\><rsup|-><big|cup><around*|{|0|}>>
+    so that for <math|x> we have either:
+
+    <\description>
+      <item*|<math|x\<in\>\<bbb-R\><rsup|+>>>Then for <math|y> we have
+      either:
+
+      <\description>
+        <item*|<math|y\<in\>\<bbb-R\><rsup|+>>>Then
+        <math|<around*|(|x,y|)>\<in\>\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|+>>
+        so that
+
+        <\equation*>
+          <around*|(|x,y|)>\<in\><around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|+>|)><big|cup><around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|->|)><big|cup><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|+>|)><big|cup><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|->|)><big|cup><around*|(|<around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)><big|cup><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)>|)>
+        </equation*>
+
+        <item*|<math|y\<in\>\<bbb-R\><rsup|->>>Then
+        <math|<around*|(|x,y|)>\<in\>\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|->>
+        so that\ 
+
+        <\equation*>
+          <around*|(|x,y|)>\<in\><around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|+>|)><big|cup><around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|->|)><big|cup><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|+>|)><big|cup><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|->|)><big|cup><around*|(|<around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)><big|cup><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)>|)>
+        </equation*>
+
+        <item*|<math|y\<in\><around*|{|0|}>>>Then
+        <math|<around*|(|x,y|)>\<in\>\<bbb-R\>\<times\><around*|{|0|}>> so
+        that
+
+        <\equation*>
+          <around*|(|x,y|)>\<in\><around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|+>|)><big|cup><around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|->|)><big|cup><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|+>|)><big|cup><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|->|)><big|cup><around*|(|<around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)><big|cup><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)>|)>
+        </equation*>
+      </description>
+
+      <item*|<math|x\<in\>\<bbb-R\><rsup|->>>Then for <math|y> we have
+      either:
+
+      <\description>
+        <item*|<math|y\<in\>\<bbb-R\><rsup|+>>>Then
+        <math|<around*|(|x,y|)>\<in\>\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|+>>
+        so that
+
+        <\equation*>
+          <around*|(|x,y|)>\<in\><around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|+>|)><big|cup><around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|->|)><big|cup><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|+>|)><big|cup><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|->|)><big|cup><around*|(|<around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)><big|cup><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)>|)>
+        </equation*>
+
+        <item*|<math|y\<in\>\<bbb-R\><rsup|->>>Then
+        <math|<around*|(|x,y|)>\<in\>\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|->>
+        so that\ 
+
+        <\equation*>
+          <around*|(|x,y|)>\<in\><around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|+>|)><big|cup><around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|->|)><big|cup><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|+>|)><big|cup><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|->|)><big|cup><around*|(|<around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)><big|cup><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)>|)>
+        </equation*>
+
+        <item*|<math|y\<in\><around*|{|0|}>>>Then
+        <math|<around*|(|x,y|)>\<in\>\<bbb-R\>\<times\><around*|{|0|}>> so
+        that
+
+        <\equation*>
+          <around*|(|x,y|)>\<in\><around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|+>|)><big|cup><around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|->|)><big|cup><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|+>|)><big|cup><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|->|)><big|cup><around*|(|<around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)><big|cup><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)>|)>
+        </equation*>
+      </description>
+
+      <item*|<math|x\<in\><around*|{|0|}>>>Them
+      <math|<around*|(|x,y|)>\<in\><around*|{|0|}>\<times\>\<bbb-R\>> so that\ 
+
+      <\equation*>
+        <around*|(|x,y|)>\<in\><around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|+>|)><big|cup><around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|->|)><big|cup><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|+>|)><big|cup><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|->|)><big|cup><around*|(|<around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)><big|cup><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)>|)>
+      </equation*>
+    </description>
+
+    So <math|<around*|(|x,y|)>\<in\><around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|+>|)><big|cup><around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|->|)><big|cup><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|+>|)><big|cup><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|->|)><big|cup><around*|(|<around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)><big|cup><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)>|)>>
+    proving that <math|\<bbb-R\>\<times\>\<bbb-R\>\<subseteq\><around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|+>|)><big|cup><around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|->|)><big|cup><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|+>|)><big|cup><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|->|)><big|cup><around*|(|<around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)><big|cup><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)>|)>>
+    which combined with [eq: <reference|eq 9.32.030>] we have\ 
+
+    <\equation>
+      <label|eq 9.33.030>\<bbb-R\>\<times\>\<bbb-R\>=<around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|+>|)><big|cup><around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|->|)><big|cup><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|+>|)><big|cup><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|->|)><big|cup><around*|(|<around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)><big|cup><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)>|)>
+    </equation>
+
+    Next we have by [theorem: <reference|cartesian product properties (1)>]
+    and [theorem: <reference|cartesian product with enpty set>] that
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|+>|)><big|cap><around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|->|)>>|<cell|=>|<cell|<around*|(|\<bbb-R\><rsup|+><big|cap>\<bbb-R\><rsup|+>|)>\<times\><around*|(|\<bbb-R\><rsup|+><big|cap>\<bbb-R\><rsup|->|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 9.31.030>]>>>|<cell|<around*|(|\<bbb-R\><rsup|+><big|cap>\<bbb-R\><rsup|+>|)>\<times\>\<varnothing\>>>|<row|<cell|>|<cell|=>|<cell|\<varnothing\>>>|<row|<cell|<around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|+>|)><big|cap><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|+>|)>>|<cell|=>|<cell|<around*|(|\<bbb-R\><rsup|+><big|cap>\<bbb-R\><rsup|->|)>\<times\><around*|(|\<bbb-R\><rsup|+><big|cap>\<bbb-R\><rsup|+>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 9.31.030>]>>>|<cell|\<varnothing\>\<times\><around*|(|\<bbb-R\><rsup|+><big|cap>\<bbb-R\><rsup|+>|)>>>|<row|<cell|>|<cell|=>|<cell|\<varnothing\>>>|<row|<cell|<around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|+>|)><big|cap><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|->|)>>|<cell|=>|<cell|<around*|(|\<bbb-R\><rsup|+><big|cap>\<bbb-R\><rsup|->|)>\<times\><around*|(|\<bbb-R\><rsup|+><big|cap>\<bbb-R\><rsup|->|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 9.31.030>]>>>|<cell|\<varnothing\>\<times\>\<varnothing\>>>|<row|<cell|>|<cell|=>|<cell|\<varnothing\>>>|<row|<cell|<around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|+>|)><big|cap><around*|(|<around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)><big|cup><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)>|)>>|<cell|=>|<cell|<around*|(|<around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|->|)><big|cap><around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)>|)><big|cup><around*|(|<around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|+>|)><big|cap><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|\<bbb-R\><rsup|+><big|cap>\<bbb-R\>|)>\<times\><around*|(|\<bbb-R\><rsup|-><big|cap><around*|{|0|}>|)>|)><big|cup><around*|(|<around*|(|\<bbb-R\><rsup|+><big|cap><around*|{|0|}>|)>\<times\><around*|(|\<bbb-R\><rsup|+><big|cap>\<bbb-R\>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 9.31.030>]>>>|<cell|<around*|(|<around*|(|\<bbb-R\><rsup|+><big|cap>\<bbb-R\>|)>\<times\>\<varnothing\>|)><big|cup><around*|(|\<varnothing\>\<times\><around*|(|\<bbb-R\><rsup|+><big|cap>\<bbb-R\>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<varnothing\><big|cup>\<varnothing\>>>|<row|<cell|>|<cell|=>|<cell|\<varnothing\>>>|<row|<cell|<around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|->|)><big|cap><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|+>|)>>|<cell|=>|<cell|<around*|(|\<bbb-R\><rsup|+><big|cap>\<bbb-R\><rsup|->|)>\<times\><around*|(|\<bbb-R\><rsup|-><big|cap>\<bbb-R\><rsup|+>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 9.31.030>]>>>|<cell|\<varnothing\>\<times\>\<varnothing\>>>|<row|<cell|>|<cell|=>|<cell|\<varnothing\>>>|<row|<cell|<around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|->|)><big|cap><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|->|)>>|<cell|=>|<cell|<around*|(|\<bbb-R\><rsup|+><big|cap>\<bbb-R\><rsup|->|)>\<times\><around*|(|\<bbb-R\><rsup|-><big|cap>\<bbb-R\><rsup|->|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 9.31.030>]>>>|<cell|\<varnothing\>\<times\><around*|(|\<bbb-R\><rsup|+><big|cap>\<bbb-R\><rsup|->|)>>>|<row|<cell|>|<cell|=>|<cell|\<varnothing\>>>|<row|<cell|<around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|->|)><big|cap><around*|(|<around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)><big|cup><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)>|)>>|<cell|=>|<cell|<around*|(|<around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|->|)><big|cap><around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)>|)><big|cup><around*|(|<around*|(|\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|->|)><big|cap><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|\<bbb-R\><rsup|+><big|cap>\<bbb-R\>|)>\<times\><around*|(|\<bbb-R\><rsup|-><big|cap><around*|{|0|}>|)>|)><big|cup><around*|(|<around*|(|\<bbb-R\><rsup|+><big|cap><around*|{|0|}>|)>\<times\><around*|(|\<bbb-R\><rsup|-><big|cap>\<bbb-R\>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 9.31.030>]>>>|<cell|<around*|(|<around*|(|\<bbb-R\><rsup|+><big|cap>\<bbb-R\>|)>\<times\>\<varnothing\>|)><big|cup><around*|(|\<varnothing\>\<times\><around*|(|\<bbb-R\><rsup|-><big|cap>\<bbb-R\>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<varnothing\><big|cup>\<varnothing\>>>|<row|<cell|>|<cell|=>|<cell|\<varnothing\>>>|<row|<cell|<around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|+>|)><big|cap><around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|->|)>>|<cell|=>|<cell|<around*|(|\<bbb-R\><rsup|-><big|cap>\<bbb-R\><rsup|->|)>\<times\><around*|(|\<bbb-R\><rsup|+><big|cap>\<bbb-R\><rsup|->|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<bbb-R\><rsup|-><big|cap>\<bbb-R\><rsup|->|)>\<times\>\<varnothing\>>>|<row|<cell|>|<cell|=>|<cell|\<varnothing\>>>|<row|<cell|<around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|+>|)><big|cap><around*|(|<around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)><big|cup><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)>|)>>|<cell|=>|<cell|<around*|(|<around*|(|<around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|+>|)><big|cap><around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)>|)><big|cup><around*|(|<around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|+>|)><big|cap><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|\<bbb-R\><rsup|-><big|cap>\<bbb-R\>|)>\<times\><around*|(|\<bbb-R\><rsup|+><big|cap><around*|{|0|}>|)>|)><big|cup><around*|(|<around*|(|\<bbb-R\><rsup|-><big|cap><around*|{|0|}>|)>\<times\><around*|(|\<bbb-R\><rsup|+><big|cap>\<bbb-R\>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 9.31.030>]>>>|<cell|<around*|(|<around*|(|\<bbb-R\><rsup|-><big|cap>\<bbb-R\>|)>\<times\>\<varnothing\>|)><big|cup><around*|(|\<varnothing\>\<times\><around*|(|\<bbb-R\><rsup|+><big|cap>\<bbb-R\>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<varnothing\><big|cup>\<varnothing\>>>|<row|<cell|>|<cell|=>|<cell|\<varnothing\>>>|<row|<cell|<around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|->|)><big|cap><around*|(|<around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)><big|cup><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)>|)>>|<cell|=>|<cell|<around*|(|<around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|->|)><big|cap><around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)>|)><big|cup><around*|(|<around*|(|\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|->|)><big|cap><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|\<bbb-R\><rsup|-><big|cap>\<bbb-R\>|)>\<times\><around*|(|\<bbb-R\><rsup|-><big|cap><around*|{|0|}>|)>|)><big|cup><around*|(|<around*|(|\<bbb-R\><rsup|-><big|cap><around*|{|0|}>|)>\<times\><around*|(|\<bbb-R\><rsup|-><big|cap>\<bbb-R\>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 9.31.030>]>>>|<cell|<around*|(|<around*|(|\<bbb-R\><rsup|-><big|cap>\<bbb-R\>|)>\<times\>\<varnothing\>|)><big|cup><around*|(|\<varnothing\>\<times\><around*|(|\<bbb-R\><rsup|-><big|cap>\<bbb-R\>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<varnothing\><big|cup>\<varnothing\>>>|<row|<cell|>|<cell|=>|<cell|\<varnothing\>>>>>
+    </eqnarray*>
+  </proof>
+
+  The two previous theorems, [theorem: <reference|real product is internal>]
+  and [theorem: <reference|real RxR>] allowws us to define the multiplication
+  operator on <math|\<bbb-R\>>.
+
+  <\definition>
+    <label|real multiplication operator>THe multiplication operator
+    <math|\<cdot\>:\<bbb-R\>\<times\>\<bbb-R\>\<Rightarrow\>\<bbb-R\>> is
+    defined as\ 
+
+    <\equation*>
+      \<alpha\>\<cdot\>\<beta\>=<choice|<tformat|<table|<row|<cell|\<alpha\>\<odot\>\<beta\><text|
+      if ><around*|(|\<alpha\>,b|)>\<in\>\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|+>>>|<row|<cell|-<around*|(|<around*|(|-\<alpha\>|)>\<odot\>\<beta\>|)><text|
+      if ><around*|(|\<alpha\>,\<beta\>|)>\<in\>\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|+>>>|<row|<cell|-<around*|(|\<alpha\>\<odot\><around*|(|-\<beta\>|)>|)><text|
+      if ><around*|(|\<alpha\>,\<beta\>|)>\<in\>\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|->>>|<row|<cell|<around*|(|-\<alpha\>|)>\<odot\><around*|(|-\<beta\>|)><text|
+      if ><around*|(|\<alpha\>,\<beta\>|)>\<in\>\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|->>>|<row|<cell|0<text|
+      if ><around*|(|\<alpha\>,\<beta\>|)><text| if >>>>>>
+    </equation*>
+  </definition>
+
+  If we want to prove something about multiplication then we have 5 cases to
+  consider per use of the multiplication operator. The following lemma allows
+  to reduce the amount work.
+
+  <\lemma>
+    <label|real -(a.b)=(-a).b=(a.(-b)><math|\<forall\>a,b\<in\>\<bbb-R\>\<times\>\<bbb-R\>>
+    we have <math|-<around*|(|\<alpha\>\<cdot\>\<beta\>|)>=<around*|(|-\<alpha\>|)>\<cdot\>\<beta\>=\<alpha\>\<cdot\><around*|(|-\<beta\>|)>>
+  </lemma>
+
+  <\proof>
+    \ TODO
+  </proof>
+
+  \;
+
+  \;
+
+  \;
 
   \;
 
@@ -5434,8 +6376,10 @@
     <associate|auto-26|<tuple|<with|mode|<quote|math>|\<bbb-R\>>|?>>
     <associate|auto-27|<tuple|9.1.2|?>>
     <associate|auto-28|<tuple|9.1.2.1|?>>
-    <associate|auto-29|<tuple|<with|mode|<quote|math>|\<bbb-R\>>|?>>
+    <associate|auto-29|<tuple|9.1.2.2|?>>
     <associate|auto-3|<tuple|integers|?>>
+    <associate|auto-30|<tuple|<with|mode|<quote|math>|\<bbb-R\><rsup|+>>|?>>
+    <associate|auto-31|<tuple|<with|mode|<quote|math>|\<bbb-R\><rsup|->>|?>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>>|?>>
     <associate|auto-5|<tuple|7.2|?>>
     <associate|auto-6|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>>|?>>
@@ -5473,7 +6417,6 @@
     <associate|eq 8.18.026|<tuple|8.19|?>>
     <associate|eq 8.19.026|<tuple|8.20|?>>
     <associate|eq 8.2.023|<tuple|8.2|?>>
-    <associate|eq 8.2.028|<tuple|9.2|?>>
     <associate|eq 8.20.026.1|<tuple|8.21|?>>
     <associate|eq 8.21.026|<tuple|8.22|?>>
     <associate|eq 8.22.026|<tuple|8.23|?>>
@@ -5502,18 +6445,49 @@
     <associate|eq 8.9.024|<tuple|8.10|?>>
     <associate|eq 8.9.024.1|<tuple|8.9|?>>
     <associate|eq 9.1.028|<tuple|9.1|?>>
-    <associate|eq 9.10.029|<tuple|9.10|?>>
-    <associate|eq 9.2.028|<tuple|9.6|?>>
-    <associate|eq 9.2.029|<tuple|9.2|?>>
-    <associate|eq 9.3.028|<tuple|9.7|?>>
-    <associate|eq 9.3.029|<tuple|9.3|?>>
-    <associate|eq 9.4.028|<tuple|9.8|?>>
-    <associate|eq 9.4.029|<tuple|9.4|?>>
-    <associate|eq 9.5.029|<tuple|9.5|?>>
-    <associate|eq 9.6.029|<tuple|9.6|?>>
-    <associate|eq 9.7.029|<tuple|9.7|?>>
-    <associate|eq 9.8.029|<tuple|9.8|?>>
-    <associate|eq 9.9.029|<tuple|9.9|?>>
+    <associate|eq 9.10.029|<tuple|9.11|?>>
+    <associate|eq 9.10.030|<tuple|9.10|?>>
+    <associate|eq 9.11.029|<tuple|9.12|?>>
+    <associate|eq 9.12.029|<tuple|9.13|?>>
+    <associate|eq 9.13.029|<tuple|9.14|?>>
+    <associate|eq 9.14.029|<tuple|9.15|?>>
+    <associate|eq 9.16.030|<tuple|9.16|?>>
+    <associate|eq 9.17.030|<tuple|9.17|?>>
+    <associate|eq 9.18.030|<tuple|9.18|?>>
+    <associate|eq 9.19.030|<tuple|9.19|?>>
+    <associate|eq 9.2.030|<tuple|9.2|?>>
+    <associate|eq 9.20.030|<tuple|9.20|?>>
+    <associate|eq 9.21.030|<tuple|9.21|?>>
+    <associate|eq 9.22.030|<tuple|9.22|?>>
+    <associate|eq 9.23.030|<tuple|9.23|?>>
+    <associate|eq 9.24.030|<tuple|9.24|?>>
+    <associate|eq 9.25.030|<tuple|9.25|?>>
+    <associate|eq 9.26.030|<tuple|9.26|?>>
+    <associate|eq 9.27.030|<tuple|9.27|?>>
+    <associate|eq 9.28.030|<tuple|9.28|?>>
+    <associate|eq 9.29.030|<tuple|9.29|?>>
+    <associate|eq 9.3.030|<tuple|9.3|?>>
+    <associate|eq 9.30.030|<tuple|9.39|?>>
+    <associate|eq 9.30.031|<tuple|9.30|?>>
+    <associate|eq 9.31.030|<tuple|9.40|?>>
+    <associate|eq 9.31.031|<tuple|9.31|?>>
+    <associate|eq 9.32.030|<tuple|9.41|?>>
+    <associate|eq 9.32.031|<tuple|9.32|?>>
+    <associate|eq 9.33.030|<tuple|9.42|?>>
+    <associate|eq 9.33.031|<tuple|9.33|?>>
+    <associate|eq 9.34.031|<tuple|9.34|?>>
+    <associate|eq 9.35.031|<tuple|9.35|?>>
+    <associate|eq 9.36.021|<tuple|9.36|?>>
+    <associate|eq 9.36.031|<tuple|9.36|?>>
+    <associate|eq 9.37.031|<tuple|9.37|?>>
+    <associate|eq 9.38.031|<tuple|9.38|?>>
+    <associate|eq 9.4.030|<tuple|9.4|?>>
+    <associate|eq 9.5.030|<tuple|9.5|?>>
+    <associate|eq 9.6.030|<tuple|9.6|?>>
+    <associate|eq 9.7.030|<tuple|9.7|?>>
+    <associate|eq 9.8.030|<tuple|9.8|?>>
+    <associate|eq 9.9.030|<tuple|9.9|?>>
+    <associate|eq9.31.030|<tuple|9.31|?>>
     <associate|integeres order|<tuple|7.28|?>>
     <associate|integers|<tuple|7.2|?>>
     <associate|integers (-1).n|<tuple|7.16|?>>
@@ -5625,14 +6599,25 @@
     <associate|rational totally ordered|<tuple|8.32|?>>
     <associate|rational x-y|<tuple|8.9|?>>
     <associate|rational {0}|<tuple|8.21|?>>
+    <associate|real -(a.b)=(-a).b=(a.(-b)|<tuple|9.24|?>>
     <associate|real Dedekind's cut|<tuple|9.1|?>>
     <associate|real NQ bijection|<tuple|9.7|?>>
+    <associate|real RxR|<tuple|9.22|?>>
+    <associate|real a.b=b.a|<tuple|9.20|?>>
+    <associate|real division of real numbers in positive and negative
+    numbers|<tuple|9.16|?>>
     <associate|real gap theorem|<tuple|9.8|?>>
+    <associate|real group|<tuple|9.14|?>>
+    <associate|real lemma for sum operator|<tuple|9.12|?>>
+    <associate|real multiplication operator|<tuple|9.23|?>>
     <associate|real negastive cut of rational cut|<tuple|9.10|?>>
     <associate|real negative cut|<tuple|9.9|?>>
+    <associate|real positive negative numbers|<tuple|9.15|?>>
+    <associate|real product is internal|<tuple|9.19|?>>
     <associate|real property to determine membership of a cut|<tuple|9.3|?>>
     <associate|real rational cut|<tuple|9.4|?>>
     <associate|real real numbers|<tuple|9.2|?>>
+    <associate|real sum is a operator|<tuple|9.13|?>>
     <associate|reals QR|<tuple|9.6|?>>
     <associate|reals the set of reals are non empty|<tuple|9.5|?>>
     <associate|sign function|<tuple|8.20|?>>
@@ -5668,9 +6653,13 @@
 
       <tuple|<tuple|<with|mode|<quote|math>|\<bbb-Z\><rsub|\<bbb-Q\>>>>|<pageref|auto-20>>
 
-      <tuple|<tuple|Dedekind's cut>|<pageref|auto-24>>
+      <tuple|<tuple|Dedekind's cut>|<pageref|auto-25>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<bbb-R\>>>|<pageref|auto-25>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<bbb-R\>>>|<pageref|auto-26>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<bbb-R\><rsup|+>>>|<pageref|auto-30>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<bbb-R\><rsup|->>>|<pageref|auto-31>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|7<space|2spc>The
@@ -5708,9 +6697,25 @@
       real numbers> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-22><vspace|0.5fn>
 
-      9.1<space|2spc>Definition of the real numbers
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      9.1<space|2spc>Definition and Arithmetic on
+      <with|mode|<quote|math>|\<bbb-R\>> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-23>
+
+      <with|par-left|<quote|1tab>|9.1.1<space|2spc>Definition of the real
+      numbers <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-24>>
+
+      <with|par-left|<quote|1tab>|9.1.2<space|2spc>Arithmetic on
+      <with|mode|<quote|math>|\<bbb-R\>> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-27>>
+
+      <with|par-left|<quote|2tab>|9.1.2.1<space|2spc>Addition in
+      <with|mode|<quote|math>|\<bbb-R\>> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-28>>
+
+      <with|par-left|<quote|2tab>|9.1.2.2<space|2spc>Multiplication
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-29>>
     </associate>
   </collection>
 </auxiliary>
