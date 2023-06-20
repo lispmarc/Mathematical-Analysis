@@ -6011,7 +6011,7 @@
   \;
 
   <\theorem>
-    <label|real a.b=b.a><math|\<forall\>\<alpha\>,\<beta\>\<in\>\<bbb-R\><rsup|+>>
+    <label|real a.b=b.a positive numbers><math|\<forall\>\<alpha\>,\<beta\>\<in\>\<bbb-R\><rsup|+>>
     we have <math|\<alpha\>\<odot\>\<beta\>=\<beta\>\<odot\>\<alpha\>>
   </theorem>
 
@@ -6037,8 +6037,9 @@
   </proof>
 
   <\theorem>
-    Let <math|\<alpha\>,\<beta\>,\<gamma\>\<in\>\<bbb-R\><rsup|+>> then we
-    have that <math|\<alpha\>\<odot\><around*|(|\<beta\>\<odot\>\<gamma\>|)>=<around*|(|\<alpha\>\<odot\>\<beta\>|)>\<odot\>\<gamma\>>
+    <label|real associativity positive numbers>Let
+    <math|\<alpha\>,\<beta\>,\<gamma\>\<in\>\<bbb-R\><rsup|+>> then we have
+    that <math|\<alpha\>\<odot\><around*|(|\<beta\>\<odot\>\<gamma\>|)>=<around*|(|\<alpha\>\<odot\>\<beta\>|)>\<odot\>\<gamma\>>
   </theorem>
 
   <\proof>
@@ -6148,6 +6149,255 @@
 
     <\equation*>
       <around*|(|\<alpha\>\<odot\>\<beta\>|)>\<odot\>\<gamma\>-\<alpha\>\<odot\><around*|(|\<beta\>\<odot\>\<gamma\>|)>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    Let <math|\<alpha\>\<in\>\<bbb-R\><rsup|+>> then
+    <math|inv<around*|(|\<alpha\>|)>> defined by\ 
+
+    <\equation*>
+      inv<around*|(|\<alpha\>|)>=<around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}><big|cup><around*|{|s<rsup|-1>\|s\<in\>\<bbb-Q\>\\\<alpha\><text|
+      with >0\<less\>s<text| and >\<exists\>t\<in\>\<bbb-Q\>\\\<alpha\>\<vdash\>t\<less\>s|}>
+    </equation*>
+
+    is a Dedekind cut such that <math|inv<around*|(|\<alpha\>|)>\<in\>\<bbb-R\><rsup|+>>
+  </theorem>
+
+  <\proof>
+    We havc\ 
+
+    <\enumerate>
+      <item>As <math|0\<in\><around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}>>
+      it follow that <math|0\<in\>inv<around*|(|\<alpha\>|)>> proving that\ 
+
+      <\equation*>
+        inv<around*|(|\<alpha\>|)>\<neq\>\<varnothing\>
+      </equation*>
+
+      <item>As <math|\<alpha\>\<in\>\<bbb-R\><rsup|+>> we have
+      <math|0\<in\>\<alpha\>> and as <math|\<alpha\>> has no greatest element
+      there exist a <math|s\<in\>\<alpha\>> such that <math|0\<less\>s>.
+      Hence <math|s<rsup|-1>> exist and by [theorem: <reference|rational
+      properties of 0, 1 and inverse>] <math|0\<less\>s<rsup|-1>> so that
+      <math|s<rsup|-1>\<nin\><around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}>>.
+      Assume that <math|s<rsup|-1>\<in\>inv<around*|(|\<alpha\>|)>> then as
+      <math|s<rsup|-1>\<nin\><around*|{|r\<in\>\<bbb-Q\>\|r\<geqslant\>0|}>>
+      we must have that
+
+      <\equation*>
+        s<rsup|-1>\<in\><math|<around*|{|s<rsup|-1>\|s\<in\>\<bbb-Q\>\\\<alpha\><text|
+        with >0\<less\>s<text| and >\<exists\>t\<in\>\<bbb-Q\>\\\<alpha\>\<vdash\>t\<less\>s|}>>
+      </equation*>
+
+      so that <math|\<exists\>t\<in\>\<bbb-Q\>\\\<alpha\>> such that
+      <math|s<rsup|-1>=t<rsup|-1>\<Rightarrowlim\><rsub|<text|[theorem:
+      <reference|field x^-1=y^-1=\<gtr\>x=y>]]>>s=t>. So
+      <math|s\<in\>\<bbb-Q\>\\\<alpha\>> contradicting
+      <math|s\<in\>\<alpha\>> hence <math|s<rsup|-1>\<in\>inv<around*|(|\<alpha\>|)>>
+      proving that\ 
+
+      <\equation*>
+        inv<around*|(|\<alpha\>|)>\<neq\>\<bbb-Q\>
+      </equation*>
+
+      <item>Let <math|q\<in\>inv<around*|(|\<alpha\>|)>> and
+      <math|r\<in\>\<bbb-Q\>\\inv<around*|(|\<alpha\>|)>>. For <math|q> we
+      have the following possibilities:
+
+      <\description>
+        <item*|<math|q\<leqslant\>0>>Then as
+        <math|r\<in\>\<bbb-Q\>\\inv<around*|(|\<alpha\>|)>> we have
+        <math|r\<nin\>inv<around*|(|\<alpha\>|)>> hence
+        <math|r\<nin\><around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}>> so that
+        <math|0\<less\>r> giving
+
+        <\equation*>
+          q\<less\>r
+        </equation*>
+
+        <item*|<math|0\<less\>q>>Then <math|q\<nin\><around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}>>
+        so that
+
+        <\equation*>
+          q\<in\><around*|{|s<rsup|-1>\|s\<in\>\<bbb-Q\>\\\<alpha\><text|
+          with >0\<less\>s<text| and >\<exists\>t\<in\>\<bbb-Q\>\\\<alpha\>\<vdash\>t\<less\>s|}>
+        </equation*>
+
+        hence there exist a <math|s\<in\>\<bbb-Q\>\\\<alpha\>> with
+        <math|0\<less\>s> and <math|\<exists\>t\<in\>\<bbb-Q\>\\\<alpha\>\<vdash\>t\<less\>s>
+        \ such that <math|q=s<rsup|-1>>, hence
+        <math|q<rsup|-1>=<around*|(|s<rsup|-1>|)><rsup|-1>\<equallim\><rsub|<text|[theorem:
+        <reference|field inverse of inverse>]>>s> so that\ 
+
+        <\equation>
+          <label|eq 9.39.032>q<rsup|-1>\<in\>\<bbb-Q\>\\\<alpha\><text|,
+          >0\<less\>q<rsup|-1><text| and >\<exists\>t\<in\>\<bbb-Q\>\\\<alpha\>\<vdash\>t\<less\>q<rsup|-1>
+        </equation>
+
+        Further as <math|r\<in\>\<bbb-Q\>\\inv<around*|(|\<alpha\>|)>> we
+        have that <math|r\<nin\><around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}>>
+        or <math|0\<less\>r> so that by [theorem: <reference|rational
+        properties of 0, 1 and inverse>]\ 
+
+        <\equation>
+          <label|eq 9.40.032>0\<less\>r<text| and >0\<less\>r<rsup|-1>
+        </equation>
+
+        For <math|r<rsup|-1>> we have the following possibilities:
+
+        <\description>
+          <item*|<math|r<rsup|-1>\<in\>\<alpha\>>>Then as
+          <math|q<rsup|-1>\<in\>\<bbb-Q\>\\\<alpha\>> we have by [definition:
+          <reference|real Dedekind's cut> (3)] that
+          <math|r<rsup|-1>\<less\>q<rsup|-1>>, so as
+          <math|0\<less\>r<rsup|-1>> we have by [theorem: <reference|rational
+          properties of 0, 1 and inverse>] that
+
+          <\equation*>
+            q\<less\>r
+          </equation*>
+
+          <item*|<math|r<rsup|-1>\<nin\>\<alpha\>>>Then
+          <math|r<rsup|-1>\<in\>\<bbb-Q\>\\\<alpha\>> and we have to look at
+          the following possibilities
+
+          <\description>
+            <item*|<math|\<forall\>s\<in\>\<bbb-Q\>\<vDash\>r<rsup|-1>\<leqslant\>s>>Then
+            as <math|q<rsup|-1>\<in\>\<bbb-Q\>\\\<alpha\>> [see eq:
+            <reference|eq 9.39.032>] we have that
+            <math|r<rsup|-1>\<leqslant\>q<rsup|-1>>. If
+            <math|r<rsup|-1>=q<rsup|-1>> we have by [eq: <reference|eq
+            9.39.032>] a <math|s\<in\>\<bbb-Q\>\\\<alpha\>> such that
+            <math|s\<less\>r<rsup|-1>> contradicting
+            <math|\<forall\>s\<in\>\<bbb-Q\>\<vDash\>r<rsup|-1>\<leqslant\>s>,
+            hence <math|r<rsup|-1>\<neq\>s<rsup|-1>>. So
+            <math|r<rsup|-1>\<less\>q<rsup|-1>> and by \ [theorem:
+            <reference|rational properties of 0, 1 and inverse>]\ 
+
+            <\equation*>
+              q\<less\>r
+            </equation*>
+
+            <item*|<math|\<exists\>s\<in\>\<bbb-Q\>> such that
+            <math|s\<less\>r<rsup|-1>>>Then as
+            <math|r<rsup|-1>\<in\>\<bbb-Q\>\\\<alpha\>> and
+            <math|0\<less\>r<rsup|-1>> we have that
+            <math|r=<around*|(|r<rsup|-1>|)><rsup|-1>\<in\><around*|{|s<rsup|-1>\|s\<in\>\<bbb-Q\>\\\<alpha\><text|
+            with >0\<less\>s<text| and >\<exists\>t\<in\>\<bbb-Q\>\\\<alpha\>\<vdash\>t\<less\>s|}>>
+            so that <math|r\<in\>inv<around*|(|\<alpha\>|)>> contradicting
+            <math|r\<in\>\<bbb-Q\>\\inv<around*|(|\<alpha\>|)>> so this case
+            does not apply.
+          </description>
+        </description>
+      </description>
+
+      <item>Assume that <math|inv<around*|(|\<alpha\>|)>> has a greatest
+      element <math|m> then we have\ 
+
+      <\equation>
+        <label|eq 9.41.032>m\<in\>inv<around*|(|\<alpha\>|)><text| and
+        >\<forall\>s\<in\>inv<around*|(|\<alpha\>|)><text| we have
+        >s\<leqslant\>m
+      </equation>
+
+      For <math|m> we have to look at the following possibilities:
+
+      <\description>
+        <item*|<math|m\<leqslant\>0>>Using [definition: <reference|real
+        Dedekind's cut> (2)] <math|\<varnothing\>\<neq\>\<bbb-Q\>\\\<alpha\>>
+        so there exist a <math|r\<in\>\<bbb-Q\>\\\<alpha\>>. As
+        <math|\<alpha\>\<in\>\<bbb-R\><rsup|+>> we have that
+        <math|0\<in\>\<alpha\>> so that by [definition: <reference|real
+        Dedekind's cut> (3)] that\ 
+
+        <\equation>
+          <label|eq 9.42.032>0\<less\>r<text| hence as <math|r\<less\>r+1>>
+          that 0\<less\>r+1<text| and by [theorem: <reference|rational
+          properties of 0, 1 and inverse>]
+          <math|0\<less\><around*|(|r+1|)><rsup|-1>>>
+        </equation>
+
+        If <math|r+1\<in\>\<alpha\>> then then as
+        <math|r\<in\>\<bbb-Q\>\\\<alpha\>> we have by [definition:
+        <reference|real Dedekind's cut> (3)] that <math|r+1\<less\>r> a
+        contradiction, so we must have that <math|r+1\<nin\>\<alpha\>> or
+        <math|r+1\<in\>\<bbb-Q\>\\\<alpha\>>. As further <math|r\<less\>r+1>
+        and <math|0\<less\>r+1> it follows that
+        <math|<around*|(|r+1|)><rsup|-1>\<in\><around*|{|s<rsup|-1>\|s\<in\>\<bbb-Q\>\\\<alpha\><text|
+        with >0\<less\>s<text| and >\<exists\>t\<in\>\<bbb-Q\>\\\<alpha\>\<vdash\>t\<less\>s|}>>
+        so that <math|<around*|(|r+1|)><rsup|-1>\<in\>inv<around*|(|\<alpha\>|)>>
+        hence by [eq: <reference|eq 9.41.032>]
+        <math|<around*|(|r+1|)><rsup|-1>\<leqslant\>m\<leqslant\>0>
+        contradicting <math|0\<less\><around*|(|r+1|)><rsup|-1>> [see eq:
+        <reference|eq 9.42.032>]. So we end in a contradiction.
+
+        <item*|<math|0\<less\>m>>As <math|m\<in\>inv<around*|(|\<alpha\>|)>>
+        and <math|m\<nin\><around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}>> we
+        have <math|m\<in\><around*|{|s<rsup|-1>\|s\<in\>\<bbb-Q\>\\\<alpha\><text|
+        with >0\<less\>s<text| and >\<exists\>t\<in\>\<bbb-Q\>\\\<alpha\>\<vdash\>t\<less\>s|}>>
+        so there exist a <math|s\<in\>\<bbb-Q\>\\\<alpha\>> with
+        <math|0\<less\>s> and <math|\<exists\>t\<in\>\<bbb-Q\>\\\<alpha\>\<vdash\>t\<less\>s>
+        such that <math|m=s<rsup|-1>>, hence <math|m<rsup|-1>=s> so that\ 
+
+        <\equation>
+          <label|eq 9.43.032>m<rsup|-1>\<in\>\<bbb-Q\>\\\<alpha\><text|,
+          >0\<less\>m<rsup|-1><text| and >\<exists\>t\<in\>\<bbb-Q\>\\\<alpha\><text|
+          such that >t\<less\>m<rsup|-1>
+        </equation>
+
+        As <math|t\<in\>\<bbb-Q\>\\\<alpha\>> we have that
+        <math|t\<nin\><around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}>> so that
+        <math|0\<less\>t>, further as <math|t\<less\>m<rsup|-1>> we have by
+        the density of <math|\<bbb-Q\>> [see theorem: <reference|rational
+        densitiy>] there exist a <math|s\<in\>\<bbb-Q\>> such that
+        <math|t\<less\>s\<less\>m<rsup|-1>>, hence
+
+        <\equation>
+          <label|eq 9.44.032>0\<less\>t\<less\>s\<less\>m<rsup|-1><text|
+          which by [theorem: <reference|rational properties of 0, 1 and
+          inverse>] gives also >m\<less\>s<rsup|-1>
+        </equation>
+
+        If <math|s\<in\>\<alpha\>> then by [definition: <reference|real
+        Dedekind's cut> (4)] we have <math|s\<less\>t> contradicting
+        <math|t\<less\>s\<less\>m<rsup|-1>>, so we have that
+        <math|s\<nin\>\<alpha\>> hence <math|s\<in\>\<bbb-Q\>\\\<alpha\>>, as
+        <math|s\<nin\>a> we have <math|s\<nin\><around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}>>
+        so that
+
+        <\equation*>
+          0\<less\>s
+        </equation*>
+
+        Further <math|t\<less\>s> where <math|t\<in\>\<bbb-Q\>\\\<alpha\>>.
+        Hence we have that <math|s<rsup|-1>\<in\><around*|{|s<rsup|-1>\|s\<in\>\<bbb-Q\>\\\<alpha\><text|
+        with >0\<less\>s<text| and >\<exists\>t\<in\>\<bbb-Q\>\\\<alpha\>\<vdash\>t\<less\>s|}>>
+        proving that <math|s<rsup|-1>\<in\>inv<around*|(|\<alpha\>|)>>. Using
+        [eq: <reference|eq 9.41.032>] it follows that
+        <math|s<rsup|-1>\<leqslant\>m> which contradicts [eq: <reference|eq
+        9.44.032>]. So this case end also in a contradiction.\ 
+      </description>
+
+      As all possible cases ends in a contradiction the assumption must be
+      false hence\ 
+
+      <\equation*>
+        inv<around*|(|\<alpha\>|)><text| has no greatest element.>
+      </equation*>
+    </enumerate>
+
+    (1),(2),(3),(4) proves that\ 
+
+    <\equation*>
+      inv<around*|(|\<alpha\>|)><text| is a Dedekind cut>
+    </equation*>
+
+    Further as <math|0\<in\><around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}>>
+    we have that <math|0\<in\>inv<around*|(|\<alpha\>|)>> hence\ 
+
+    <\equation*>
+      inv<around*|(|\<alpha\>|)>\<in\>\<bbb-R\><rsup|+>
     </equation*>
   </proof>
 
@@ -6467,27 +6717,36 @@
     <associate|eq 9.28.030|<tuple|9.28|?>>
     <associate|eq 9.29.030|<tuple|9.29|?>>
     <associate|eq 9.3.030|<tuple|9.3|?>>
-    <associate|eq 9.30.030|<tuple|9.39|?>>
+    <associate|eq 9.30.030|<tuple|9.45|?>>
     <associate|eq 9.30.031|<tuple|9.30|?>>
-    <associate|eq 9.31.030|<tuple|9.40|?>>
+    <associate|eq 9.31.030|<tuple|9.46|?>>
     <associate|eq 9.31.031|<tuple|9.31|?>>
-    <associate|eq 9.32.030|<tuple|9.41|?>>
+    <associate|eq 9.32.030|<tuple|9.47|?>>
     <associate|eq 9.32.031|<tuple|9.32|?>>
-    <associate|eq 9.33.030|<tuple|9.42|?>>
+    <associate|eq 9.33.030|<tuple|9.48|?>>
     <associate|eq 9.33.031|<tuple|9.33|?>>
     <associate|eq 9.34.031|<tuple|9.34|?>>
     <associate|eq 9.35.031|<tuple|9.35|?>>
-    <associate|eq 9.36.021|<tuple|9.36|?>>
     <associate|eq 9.36.031|<tuple|9.36|?>>
     <associate|eq 9.37.031|<tuple|9.37|?>>
     <associate|eq 9.38.031|<tuple|9.38|?>>
+    <associate|eq 9.39.031|<tuple|9.45|?>>
+    <associate|eq 9.39.032|<tuple|9.39|?>>
     <associate|eq 9.4.030|<tuple|9.4|?>>
+    <associate|eq 9.40.031|<tuple|9.46|?>>
+    <associate|eq 9.40.032|<tuple|9.40|?>>
+    <associate|eq 9.41.031|<tuple|9.47|?>>
+    <associate|eq 9.41.032|<tuple|9.41|?>>
+    <associate|eq 9.42.031|<tuple|9.48|?>>
+    <associate|eq 9.42.032|<tuple|9.42|?>>
+    <associate|eq 9.43.031|<tuple|9.49|?>>
+    <associate|eq 9.43.032|<tuple|9.43|?>>
+    <associate|eq 9.44.032|<tuple|9.44|?>>
     <associate|eq 9.5.030|<tuple|9.5|?>>
     <associate|eq 9.6.030|<tuple|9.6|?>>
     <associate|eq 9.7.030|<tuple|9.7|?>>
     <associate|eq 9.8.030|<tuple|9.8|?>>
     <associate|eq 9.9.030|<tuple|9.9|?>>
-    <associate|eq9.31.030|<tuple|9.31|?>>
     <associate|integeres order|<tuple|7.28|?>>
     <associate|integers|<tuple|7.2|?>>
     <associate|integers (-1).n|<tuple|7.16|?>>
@@ -6599,17 +6858,19 @@
     <associate|rational totally ordered|<tuple|8.32|?>>
     <associate|rational x-y|<tuple|8.9|?>>
     <associate|rational {0}|<tuple|8.21|?>>
-    <associate|real -(a.b)=(-a).b=(a.(-b)|<tuple|9.24|?>>
+    <associate|real -(a.b)=(-a).b=(a.(-b)|<tuple|9.25|?>>
     <associate|real Dedekind's cut|<tuple|9.1|?>>
     <associate|real NQ bijection|<tuple|9.7|?>>
-    <associate|real RxR|<tuple|9.22|?>>
-    <associate|real a.b=b.a|<tuple|9.20|?>>
+    <associate|real RxR|<tuple|9.23|?>>
+    <associate|real a.b=b.a positive numbers|<tuple|9.20|?>>
+    <associate|real associativity positive numbers|<tuple|9.21|?>>
     <associate|real division of real numbers in positive and negative
     numbers|<tuple|9.16|?>>
     <associate|real gap theorem|<tuple|9.8|?>>
     <associate|real group|<tuple|9.14|?>>
+    <associate|real inverse cut existence|<tuple|9.23|?>>
     <associate|real lemma for sum operator|<tuple|9.12|?>>
-    <associate|real multiplication operator|<tuple|9.23|?>>
+    <associate|real multiplication operator|<tuple|9.24|?>>
     <associate|real negastive cut of rational cut|<tuple|9.10|?>>
     <associate|real negative cut|<tuple|9.9|?>>
     <associate|real positive negative numbers|<tuple|9.15|?>>

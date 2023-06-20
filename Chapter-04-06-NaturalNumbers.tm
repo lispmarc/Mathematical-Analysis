@@ -1061,7 +1061,7 @@
 
   <\theorem>
     <label|field inverse is unique>If <math|<around*|\<langle\>|F,\<oplus\>,\<odot\>|\<rangle\>>>
-    then <math|\<forall\>x\<in\>F\\<around*|{|0|}>> there exist a
+    is field then <math|\<forall\>x\<in\>F\\<around*|{|0|}>> there exist a
     <with|font-series|bold|unique> inverse element for <math|\<odot\>>. We
     note this element as <math|x<rsup|-1>>.
   </theorem>
@@ -1074,6 +1074,43 @@
     <\equation*>
       y=y\<odot\>1=y\<circ\><around*|(|x\<odot\>y<rprime|'>|)>=<around*|(|y\<odot\>x|)>\<odot\>y<rprime|'>=1\<odot\>y<rprime|'>=y<rprime|'>
     </equation*>
+  </proof>
+
+  <\theorem>
+    <label|field inverse of inverse>If <math|<around*|\<langle\>|F,\<oplus\>,\<odot\>|\<rangle\>>>
+    is field then <math|\<forall\>x\<in\>F\\<around*|{|0|}>> we have
+    <math|<around*|(|x<rsup|-1>|)><rsup|-1>=x>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|1=x<rsup|-1>\<odot\><around*|(|x<rsup|-1>|)><rsup|-1>>|<cell|\<Rightarrow\>>|<cell|x\<odot\>1=x\<odot\><around*|(|x<rsup|-1>\<odot\><around*|(|x<rsup|-1>|)><rsup|-1>|)>>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|neutral
+      element>>>|<cell|x=x\<odot\><around*|(|x<rsup|-1>\<odot\><around*|(|x<rsup|-1>|)><rsup|-1>|)>>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|associativity>>>|<cell|x=<around*|(|x\<odot\>x<rsup|-1>|)>\<odot\><around*|(|x<rsup|-1>|)><rsup|-1>>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|inverse
+      element>>>|<cell|x=1\<odot\><around*|(|x<rsup|-1>|)><rsup|-1>>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|neutral
+      element>>>|<cell|x=<around*|(|x<rsup|-1>|)><rsup|-1>>>>>
+    </eqnarray*>
+
+    \;
+  </proof>
+
+  <\theorem>
+    <label|field x^-1=y^-1=\<gtr\>x=y>If <math|<around*|\<langle\>|F,\<oplus\>,\<odot\>|\<rangle\>>>
+    is a field then <math|\<forall\>x,y\<in\>F\\<around*|{|0|}>> we have
+    <math|x<rsup|-1>=y<rsup|-1>\<Rightarrow\>x=y>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|x<rsup|-1>=y<rsup|->>|<cell|\<Rightarrow\>>|<cell|x<rsup|-1>\<cdot\>y=y<rsup|-1>\<cdot\>y>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|inverse
+      element>>>|<cell|x<rsup|-1>\<cdot\>y=1>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x\<cdot\><around*|(|x<rsup|-1>\<cdot\>y|)>=x\<cdot\>1>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|neutral
+      element>>>|<cell|x\<cdot\><around*|(|x<rsup|-1>\<cdot\>y|)>=x>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|associativity>>>|<cell|*<around*|(|x\<cdot\>x<rsup|-1>|)>\<cdot\>y=x>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|inverse
+      element>>>|<cell|1\<cdot\>y=x>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|neutral
+      element>>>|<cell|y=x>>>>
+    </eqnarray*>
   </proof>
 
   <\definition>
@@ -7609,7 +7646,7 @@
     <associate|auto-49|<tuple|6.2|147>>
     <associate|auto-5|<tuple|group|108>>
     <associate|auto-50|<tuple|6.2.1|147>>
-    <associate|auto-51|<tuple|finite set|149>>
+    <associate|auto-51|<tuple|finite set|148>>
     <associate|auto-52|<tuple|infinite set|149>>
     <associate|auto-53|<tuple|denumerable set|149>>
     <associate|auto-54|<tuple|infinite countable set|149>>
@@ -7625,7 +7662,7 @@
     <associate|cardinality of natural numbers|<tuple|6.36|154>>
     <associate|cardinality of the empty set is 0|<tuple|6.37|154>>
     <associate|cardinality of union of two disjoint finite
-    sets|<tuple|6.39|155>>
+    sets|<tuple|6.39|154>>
     <associate|countable AUB and AxB|<tuple|6.68|167>>
     <associate|countable product of a finite family of countable sets is
     countable (2)|<tuple|6.70|168>>
@@ -7667,10 +7704,10 @@
     <associate|eq 5.11.019|<tuple|5.11|127>>
     <associate|eq 5.12.019|<tuple|5.12|127>>
     <associate|eq 5.13.019|<tuple|5.13|127>>
-    <associate|eq 5.14.019|<tuple|5.14|140>>
+    <associate|eq 5.14.019|<tuple|5.14|139>>
     <associate|eq 5.15.019|<tuple|5.15|140>>
     <associate|eq 5.16.019|<tuple|5.16|140>>
-    <associate|eq 5.17.019|<tuple|5.17|143>>
+    <associate|eq 5.17.019|<tuple|5.17|142>>
     <associate|eq 5.2.019|<tuple|5.2|122>>
     <associate|eq 5.3.019|<tuple|5.3|122>>
     <associate|eq 5.4.019|<tuple|5.4|122>>
@@ -7686,12 +7723,12 @@
     <associate|eq 6.14.022|<tuple|6.14|159>>
     <associate|eq 6.15.022|<tuple|6.15|159>>
     <associate|eq 6.17.020|<tuple|6.16|159>>
-    <associate|eq 6.18.020|<tuple|6.17|160>>
+    <associate|eq 6.18.020|<tuple|6.17|159>>
     <associate|eq 6.18.022|<tuple|6.18|160>>
     <associate|eq 6.19.022|<tuple|6.19|160>>
     <associate|eq 6.2.019|<tuple|6.2|151>>
     <associate|eq 6.20.022|<tuple|6.20|160>>
-    <associate|eq 6.21.022|<tuple|6.21|161>>
+    <associate|eq 6.21.022|<tuple|6.21|160>>
     <associate|eq 6.22.022|<tuple|6.22|163>>
     <associate|eq 6.23.022|<tuple|6.23|163>>
     <associate|eq 6.24.022|<tuple|6.24|163>>
@@ -7715,23 +7752,25 @@
     <associate|equipotence finite, denumerable , countable|<tuple|6.24|149>>
     <associate|equipotence property (1)|<tuple|6.8|146>>
     <associate|equipotence union|<tuple|6.11|146>>
-    <associate|every subset of a finite set is finite|<tuple|6.30|151>>
+    <associate|every subset of a finite set is finite|<tuple|6.30|150>>
     <associate|extract maximum element of a family|<tuple|6.47|157>>
     <associate|field|<tuple|4.36|115>>
-    <associate|field homeomorphism|<tuple|4.40|116>>
+    <associate|field homeomorphism|<tuple|4.42|116>>
     <associate|field inverse is unique|<tuple|4.37|116>>
-    <associate|field isomorphism and neutral element|<tuple|4.42|117>>
-    <associate|field subfield|<tuple|4.38|116>>
-    <associate|field subfield is a field|<tuple|4.39|116>>
+    <associate|field inverse of inverse|<tuple|4.38|?>>
+    <associate|field isomorphism and neutral element|<tuple|4.44|117>>
+    <associate|field subfield|<tuple|4.40|116>>
+    <associate|field subfield is a field|<tuple|4.41|116>>
+    <associate|field x^-1=y^-1=\<gtr\>x=y|<tuple|4.39|116>>
     <associate|finite ordered sets have a maximum and
     minimum|<tuple|6.44|156>>
-    <associate|finite set|<tuple|6.19|149>>
+    <associate|finite set|<tuple|6.19|148>>
     <associate|finite union of finite sets is finite|<tuple|6.33|152>>
     <associate|finite union of finite sets is finite
     (lemma)|<tuple|6.32|151>>
     <associate|function P(A) bijective with 2^A|<tuple|6.5|145>>
     <associate|function injection and inverse surjection|<tuple|6.9|146>>
-    <associate|function no surjection between A and P(A)|<tuple|6.7|146>>
+    <associate|function no surjection between A and P(A)|<tuple|6.7|145>>
     <associate|group -x=-y\<less\>=\<gtr\>x=y|<tuple|4.10|109>>
     <associate|group abelian group/sub group|<tuple|4.11|109>>
     <associate|group cancelation|<tuple|4.6|108>>
@@ -7755,19 +7794,19 @@
     <associate|infinite condition (1)|<tuple|6.34|152>>
     <associate|infinite set|<tuple|6.21|149>>
     <associate|inverse of a field isomorphism is a field
-    isomorphism|<tuple|4.41|116>>
+    isomorphism|<tuple|4.43|116>>
     <associate|iteration final|<tuple|5.84|142>>
     <associate|mapping of N to a finite set (1)|<tuple|6.45|157>>
     <associate|mapping of N to a finite set (2)|<tuple|6.46|157>>
-    <associate|mathematical induction|<tuple|5.82|142>>
+    <associate|mathematical induction|<tuple|5.82|141>>
     <associate|max element of a family|<tuple|6.48|159>>
     <associate|n\<less\>=m=\<gtr\>S_n\<less\>=S_m|<tuple|6.17|148>>
-    <associate|natural numbers|<tuple|5.28|119>>
+    <associate|natural numbers|<tuple|5.3|119>>
     <associate|natural numbers (n+m)-k=(n-k)+m|<tuple|5.65|137>>
     <associate|natural numbers (n+m)-n=m|<tuple|5.66|137>>
     <associate|natural numbers 0|<tuple|5.7|119>>
     <associate|natural numbers 0\<less\>=n|<tuple|5.46|133>>
-    <associate|natural numbers 1+1=2|<tuple|5.28|?>>
+    <associate|natural numbers 1+1=2|<tuple|5.28|128>>
     <associate|natural numbers \<less\> properties|<tuple|5.49|134>>
     <associate|natural numbers Archimedean property|<tuple|5.77|139>>
     <associate|natural numbers Peano|<tuple|5.17|121>>
@@ -7775,7 +7814,7 @@
     <associate|natural numbers addition|<tuple|5.27|128>>
     <associate|natural numbers additive semi-group|<tuple|5.34|129>>
     <associate|natural numbers are infinite|<tuple|6.28|150>>
-    <associate|natural numbers are segments|<tuple|6.16|148>>
+    <associate|natural numbers are segments|<tuple|6.16|147>>
     <associate|natural numbers are total ordered|<tuple|5.52|135>>
     <associate|natural numbers are transitive|<tuple|5.14|120>>
     <associate|natural numbers are well ordered|<tuple|5.51|134>>
@@ -7785,7 +7824,7 @@
     <associate|natural numbers every non zero number is a
     successor|<tuple|5.18|121>>
     <associate|natural numbers is a set|<tuple|5.4|119>>
-    <associate|natural numbers k\<less\>n condition|<tuple|5.48|134>>
+    <associate|natural numbers k\<less\>n condition|<tuple|5.48|133>>
     <associate|natural numbers mathematical induction|<tuple|5.11|120>>
     <associate|natural numbers multiplication|<tuple|5.35|130>>
     <associate|natural numbers multiplication associativity|<tuple|5.41|132>>
@@ -7795,16 +7834,16 @@
     <associate|natural numbers multiplicative abelian
     semi-group|<tuple|5.42|132>>
     <associate|natural numbers n+0=n|<tuple|5.29|128>>
-    <associate|natural numbers n+k=0=\<gtr\>n=0|<tuple|5.57|136>>
+    <associate|natural numbers n+k=0=\<gtr\>n=0|<tuple|5.57|135>>
     <associate|natural numbers n+k=m+k\<less\>=\<gtr\>n=m|<tuple|5.43|132>>
     <associate|natural numbers n+s(m)=s(n+m)|<tuple|5.31|129>>
-    <associate|natural numbers n.(m-1)=n.m-n|<tuple|5.68|138>>
+    <associate|natural numbers n.(m-1)=n.m-n|<tuple|5.68|137>>
     <associate|natural numbers n.k=m.k=\<gtr\>n=m|<tuple|5.76|139>>
     <associate|natural numbers n.s(m)=n+n.m|<tuple|5.38|131>>
     <associate|natural numbers n\<less\>=i\<less\>=m=\<gtr\>0\<less\>=i-n\<less\>=m-n|<tuple|5.69|138>>
     <associate|natural numbers n\<less\>=m\<less\>=\<gtr\>n-k\<less\>=m-k|<tuple|5.70|138>>
     <associate|natural numbers n\<less\>=m\<less\>=\<gtr\>there exists a k
-    such that m=k|<tuple|5.62|137>>
+    such that m=k|<tuple|5.62|136>>
     <associate|natural numbers n\<less\>=n+k|<tuple|5.56|135>>
     <associate|natural numbers n\<less\>k\<less\>s(n)|<tuple|5.71|138>>
     <associate|natural numbers n\<less\>m and r\<less\>s then
@@ -7852,7 +7891,7 @@
     <associate|recursion iteration|<tuple|5.24|125>>
     <associate|recursion iteration in a group|<tuple|5.25|126>>
     <associate|recursion step (2)|<tuple|5.85|142>>
-    <associate|recursion step form (1)|<tuple|5.26|127>>
+    <associate|recursion step form (1)|<tuple|5.26|126>>
     <associate|recursion step form (3)|<tuple|5.86|142>>
     <associate|ring|<tuple|4.27|113>>
     <associate|ring absorbing element|<tuple|4.32|114>>
@@ -7871,7 +7910,7 @@
     <associate|subring|<tuple|4.30|114>>
     <associate|subset of finite sets|<tuple|6.40|155>>
     <associate|surjection f:A-\<gtr\>B if A is finite then B is
-    finite|<tuple|6.41|156>>
+    finite|<tuple|6.41|155>>
     <associate|union of two finite sets is finite|<tuple|6.31|151>>
     <associate|{n,..,m} is bijective to S_(m-n)+1|<tuple|6.18|148>>
   </collection>
