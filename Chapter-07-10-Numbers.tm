@@ -6000,7 +6000,63 @@
     </equation*>
   </proof>
 
-  \;
+  After we have defined multiplication in <math|\<bbb-R\><rsup|+>> we want to
+  specify the neutral element for <math|\<odot\>>
+
+  <\theorem>
+    <label|real 1.a=a for positive numbers><math|\<forall\>\<alpha\>\<in\>\<bbb-R\><rsup|+>>
+    we have <math|\<alpha\><rsub|1>\<odot\>\<alpha\>=\<alpha\>>
+  </theorem>
+
+  <\proof>
+    Let <math|x\<in\>\<alpha\><rsub|1>\<odot\>\<alpha\>> then we have either:
+
+    <\description>
+      <item*|<math|x\<leqslant\>0>>As <math|\<alpha\>\<in\>\<bbb-R\><rsup|<rsub|>+>>
+      we have that <math|0\<in\>\<alpha\>> and as <math|x\<leqslant\>0> it
+      follows from [theorem: <reference|real property to determine membership
+      of a cut>] that <math|x\<in\>\<alpha\>>.
+
+      <item*|<math|0\<less\>x>>Then <math|x\<nin\>\<bbb-Q\><rsup|-><rsub|0>>
+      so there exists a <math|s\<in\>\<alpha\><rsub|1>> and a
+      <math|t\<in\>\<alpha\>> with <math|0\<less\>s\<wedge\>0\<less\>t> such
+      that <math|x=s\<cdot\>t>. From <math|s\<in\>\<alpha\><rsub|1>> it
+      follows that <math|s\<less\>1> so, as <math|0\<less\>t> we have that
+      <math|x=s\<cdot\>t\<less\>t\<Rightarrow\>x\<less\>t>. As
+      <math|t\<in\>\<alpha\>> it follows from [theorem: <reference|real
+      property to determine membership of a cut>] that
+      <math|x\<in\>\<alpha\>>.
+    </description>
+
+    As in all cases <math|x\<in\>\<alpha\>> it follows that\ 
+
+    <\equation>
+      <label|eq 9.27.034>\<alpha\><rsub|1>\<odot\>\<alpha\>\<subseteq\>\<alpha\>
+    </equation>
+
+    If <math|x\<in\>\<alpha\>> then we have either:
+
+    <\description>
+      <item*|<math|x\<leqslant\>0>>Then <math|x\<in\>\<bbb-Q\><rsup|-><rsub|0>>
+      so that <math|x\<in\>\<alpha\><rsub|1>\<odot\>\<alpha\>>
+
+      <item*|<math|0\<less\>x>>As <math|\<alpha\>> has no greatest element
+      [see definition: <reference|real Dedekind's cut> (4)] there exist a
+      <math|t\<in\>\<alpha\>> such that <math|0\<less\>x\<less\>t>. Then as
+      by [theorem: <reference|rational properties of 0, 1 and inverse>[
+      <math|0\<less\>t<rsup|-1>> we have that
+      <math|0\<less\>x\<cdot\>t<rsup|-1>\<less\>t\<cdot\>t<rsup|-1>=1> so
+      that <math|x\<cdot\>t<rsup|-1>\<in\>\<alpha\><rsub|1>>. Now
+      <math|0\<less\>t>, <math|0\<less\>x\<cdot\>t<rsup|-1>> so that
+      <math|x=<around*|(|x\<cdot\>t<rsup|-1>|)>\<cdot\>t\<in\>a<rsub|1>\<odot\>\<alpha\>>.
+      Hence <math|\<alpha\>\<subseteq\>\<alpha\><rsub|1>\<odot\>\<alpha\>>
+      <math|>which combined with [eq: <reference|eq 9.27.034>] results in\ 
+
+      <\equation*>
+        \<alpha\><rsub|1>\<circ\>\<alpha\>=\<alpha\>
+      </equation*>
+    </description>
+  </proof>
 
   <\theorem>
     <label|real a.b=b.a positive numbers><math|\<forall\>\<alpha\>,\<beta\>\<in\>\<bbb-R\><rsup|+>>
@@ -6024,7 +6080,7 @@
     proving that\ 
 
     <\equation*>
-      \<alpha\>\<circ\>,\<beta\>=\<beta\>\<odot\>\<alpha\>
+      \<alpha\>\<circ\>\<beta\>=\<beta\>\<odot\>\<alpha\>
     </equation*>
   </proof>
 
@@ -6443,43 +6499,161 @@
       have that <math|0\<in\>\<alpha\>>, further as <math|\<alpha\>> is a
       Dedekind cut, <math|\<alpha\>> has no greatest element [see defintion:
       <reference|real Dedekind's cut> (4)] so
-      <math|\<exists\>s<rsub|1>\<in\>\<alpha\>> such that
-      <math|0\<less\>s<rsub|1>>. As <math|0\<less\>x\<less\>1> we have
-      <math|0\<less\>1-x>, and by [theorem: <reference|rational properties of
-      0, 1 and inverse>] <math|0\<less\>x<rsup|-1>> so that for
-      <math|\<varepsilon\>=s<rsub|1>\<cdot\><around*|(|t-x|)>\<cdot\>x<rsup|-1>>
+
+      <\equation>
+        <label|eq 9.43.033>\<exists\>s<rsub|1>\<in\>\<alpha\><text| such that
+        >0\<less\>s<rsub|1>
+      </equation>
+
+      As <math|0\<less\>x\<less\>1> we have <math|0\<less\>1-x>, and by
+      [theorem: <reference|rational properties of 0, 1 and inverse>]
+      <math|0\<less\>x<rsup|-1>> so that for
+
+      <\equation>
+        <label|eq 9.44.033>\<varepsilon\>=s<rsub|1>\<cdot\><around*|(|1-x|)>\<cdot\>x<rsup|-1>
+      </equation>
+
       we have <math|0\<less\>\<varepsilon\>> we have by [theorem:
       <reference|real lemma for sum operator>] that there exist a
       <math|s<rsub|2>\<in\>\<alpha\>> such that
-      <math|s<rsub|2>+\<varepsilon\>\<in\>\<bbb-Q\>\\\<alpha\>>. We have now
-      for <math|s<rsub|2>+\<varepsilon\>> two cases to consider:
+      <math|s<rsub|2>+\<varepsilon\>\<in\>\<bbb-Q\>\\\<alpha\>>. As
+      <math|\<alpha\>> has no maximal element and
+      <math|s<rsub|2>\<in\>\<alpha\>> there exist a
+      <math|s<rsub|3>\<in\>\<alpha\>> such that
+      <math|s<rsub|2>\<less\>s<rsub|3>> then
+      <math|s<rsub|2>+\<varepsilon\>\<less\>s<rsub|3>+\<varepsilon\>>. If
+      <math|s<rsub|3>+\<varepsilon\>\<in\>\<alpha\>> then by [definition:
+      <reference|real Dedekind's cut> (3)] we have as
+      <math|s<rsub|2>+\<varepsilon\>\<in\>\<bbb-Q\>\\\<alpha\>> that
+      <math|s<rsub|3>+\<varepsilon\>\<less\>s<rsub|2>+s<rsub|3>>
+      contradicting <math|s<rsub|2>+\<varepsilon\>\<less\>s<rsub|3>+\<varepsilon\>>
+      hence we must have that
+
+      <\equation>
+        <label|eq 9.45.034>s<rsub|3>+\<varepsilon\>\<in\>\<bbb-Q\>\\\<alpha\><text|
+        and >s<rsub|2>+\<varepsilon\>\<less\>s<rsub|3>+\<varepsilon\>\<wedge\>s<rsub|2>+\<varepsilon\>\<in\>\<bbb-Q\>\\\<alpha\>
+      </equation>
+
+      For <math|s<rsub|1>>,<math|s<rsub|2>> we have either:
 
       <\description>
-        <item*|<math|\<forall\>t\<in\>\<bbb-Q\>\\\<alpha\>\<vDash\>t\<leqslant\>s<rsub|2>+\<varepsilon\>>>As
-        <math|\<alpha\>> has no maximal element and
-        <math|s<rsub|2>\<in\>\<alpha\>> there exist a
-        <math|s<rsub|3>\<in\>\<alpha\>> such that
-        <math|s<rsub|2>\<less\>s<rsub|3>> then
-        <math|s<rsub|2>+\<varepsilon\>\<less\>s<rsub|3>+\<varepsilon\>>. If
-        <math|s<rsub|3>+\<varepsilon\>\<in\>\<alpha\>> then by [definition:
-        <reference|real Dedekind's cut> (3)] we have as
-        <math|s<rsub|2>+\<varepsilon\>\<in\>\<bbb-Q\>\\\<alpha\>> that
-        <math|s<rsub|3>+\<varepsilon\>\<less\>s<rsub|2>+s<rsub|3>>
-        contradicting <math|s<rsub|2>+\<varepsilon\>\<less\>s<rsub|3>+\<varepsilon\>>
-        hence we must have that <math|s<rsub|3>+\<varepsilon\>\<in\>\<bbb-Q\>\\\<alpha\>>.\ 
+        <item*|<math|s<rsub|3>\<less\>s<rsub|1>>>Then
+        <math|s<rsub|3>+\<varepsilon\>\<less\>s<rsub|1>+\<varepsilon\>>. If
+        <math|s<rsub|1>+\<varepsilon\>\<in\>\<alpha\>> then as
+        <math|s<rsub|3>+\<varepsilon\>\<in\>\<bbb-Q\>\\\<alpha\>> we have by
+        [definition: <reference|real Dedekind's cut> (3)] that
+        <math|s<rsub|1>+\<varepsilon\>\<less\>s<rsub|3>+\<varepsilon\>>
+        contradicting <math|s<rsub|3>+\<varepsilon\>\<less\>s<rsub|1>+\<varepsilon\>>
+        so we must have that\ 
 
-        <item*|<math|\<exists\>t\<in\>\<bbb-Q\>\\\<alpha\>\<vdash\>s<rsub|2>+\<varepsilon\>>>
+        <\equation>
+          <label|eq 9.45.033>s<rsub|1>+\<varepsilon\>\<in\>\<bbb-Q\>\\\<alpha\>
+        </equation>
+
+        As <math|0\<in\>\<alpha\>> and <math|x<rsub|1>+\<varepsilon\>\<in\>\<bbb-Q\>\\\<alpha\>>
+        we have by [definition: <reference|real Dedekind's cut> (3)] that\ 
+
+        <\equation>
+          <label|eq 9.46.033>0\<less\>s<rsub|1>+\<varepsilon\><text| and by
+          [theorem: <reference|rational properties of 0, 1 and inverse>]
+          >0\<less\><around*|(|s<rsub|1>+\<varepsilon\>|)><rsup|-1>
+        </equation>
+
+        By [eq: <reference|eq 9.45.033>], [eq: <reference|eq 9.46.033>] and
+        the fact that <math|s<rsub|3>+\<varepsilon\>\<less\>s<rsub|1>+\<varepsilon\>>,
+        <math|s<rsub|3>+\<varepsilon\>\<in\>\<bbb-Q\>\\\<alpha\>> we have by
+        the definition of <math|inv<around*|(|\<alpha\>|)>> we have that
+
+        <\equation*>
+          <around*|(|s<rsub|1>+\<varepsilon\>|)><rsup|-1>\<in\>inv<around*|(|\<alpha\>|)>
+        </equation*>
+
+        As <math|0\<less\>s<rsub|1>\<in\>\<alpha\>>,
+        <math|0\<less\><around*|(|s<rsub|1>+\<varepsilon\>|)><rsup|-1>\<in\>inv<around*|(|\<alpha\>|)>>
+        [see eqs: <reference|eq 9.43.033>, <reference|eq 9.45.033>,
+        <reference|eq 9.46.033>] it follows from the definition of
+        <math|\<odot\>> that\ 
+
+        <\equation>
+          <label|eq 9.47.033>s<rsub|1>\<cdot\><around*|(|s<rsub|1>+\<varepsilon\>|)><rsup|-1>\<in\>\<alpha\>\<odot\>inv<around*|(|\<alpha\>|)>
+        </equation>
+
+        Now
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|s<rsub|1>\<cdot\><around*|(|s<rsub|1>+\<varepsilon\>|)><rsup|-1>>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 9.44.033>]>>>|<cell|s<rsub|1>\<cdot\><around*|(|s<rsub|1>+s<rsub|1>\<cdot\><around*|(|1-x|)>\<cdot\>x<rsup|-1>|)><rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|s<rsub|1>\<cdot\><around*|(|s<rsub|1>+s<rsub|1>\<cdot\>x<rsup|-1>-s<rsub|1>\<cdot\>x<rsup|-1>\<cdot\>x|)><rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|s<rsub|1>\<cdot\><around*|(|s<rsub|1>+s<rsub|1>\<cdot\>x<rsup|-1>-s<rsub|1>|)><rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|s<rsub|1>\<cdot\><around*|(|s<rsub|1>\<cdot\>x<rsup|-1>|)><rsup|-1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|field inverse of product>]>>>|<cell|s<rsub|1>\<cdot\><around*|(|s<rsub|1><rsup|-1>\<cdot\><around*|(|x<rsup|-1>|)><rsup|-1>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x<rsup|-1>|)><rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|x>>>>
+        </eqnarray*>
+
+        proving using [eq: <reference|eq 9.47.033>[ that
+
+        <\equation*>
+          x\<in\>\<alpha\>\<odot\>inv<around*|(|\<alpha\>|)>
+        </equation*>
+
+        <item*|<math|s<rsub|1>\<leqslant\>s<rsub|3>>>Then as
+        <math|0\<in\>\<alpha\>> and <math|s<rsub|3>+\<varepsilon\>\<in\>\<bbb-Q\>\\\<alpha\>>
+        [see eq: <reference|eq 9.45.034>] it follows from [definition:
+        <reference|real Dedekind's cut>] that
+
+        <\equation>
+          <label|eq 9.49.034>0\<less\>s<rsub|3>+\<varepsilon\><text| and by
+          [theorem: <reference|rational properties of 0, 1 and inverse>]
+          <math|0\<less\><around*|(|s<rsub|3>+\<varepsilon\>|)><rsup|-1>>>
+        </equation>
+
+        So using the definition if <math|inv<around*|(|\<alpha\>|)>> together
+        with [eqs: <reference|eq 9.45.034>, <reference|eq 9.49.034>] that\ 
+
+        <\equation>
+          <label|eq 9.50.034><around*|(|s<rsub|3>+\<varepsilon\>|)><rsup|-1>\<in\>inv<around*|(|\<alpha\>|)>
+        </equation>
+
+        Now by [eq: <reference|eq 9.43.033>]
+        <math|0\<less\>s<rsub|1>\<leqslant\>s<rsub|3>\<in\>\<alpha\>> and
+        <math|0\<less\><around*|(|s<rsub|3>+\<varepsilon\>|)><rsup|-1>\<in\>inv<around*|(|\<alpha\>|)>>
+        [see eq: <reference|eq 9.49.034>, <reference|eq 9.45.034>] so that\ 
+
+        <\equation>
+          <label|eq 9.51.034>s<rsub|3>\<cdot\><around*|(|s<rsub|3>+\<varepsilon\>|)><rsup|-1>\<in\>\<alpha\>\<odot\>inv<around*|(|\<alpha\>|)>
+        </equation>
+
+        Now\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|s<rsub|1>\<leqslant\>s<rsub|3>>|<cell|\<Rightarrowlim\><rsub|0\<less\>1-x>>|<cell|s<rsub|1>\<cdot\><around*|(|1-x|)>\<leqslant\>s<rsub|3>\<cdot\><around*|(|1-x|)>>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|0\<less\>x<rsup|-1>>>|<cell|s<rsub|1>\<cdot\><around*|(|1-x|)>\<cdot\>x<rsup|-1>\<leqslant\>s<rsub|3>\<cdot\><around*|(|1-x|)>\<cdot\>x<rsup|-1>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|s<rsub|3>+s<rsub|1>\<cdot\><around*|(|1-x|)>\<cdot\>x<rsup|-1>\<leqslant\>s<rsub|3>+s<rsub|3>\<cdot\><around*|(|1-x|)>\<cdot\>x<rsup|-1>>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|[theorem:
+          <reference|rational properties of 0, 1 and
+          inverse>]>>>|<cell|<around*|(|s<rsub|3>+s<rsub|1>\<cdot\><around*|(|1-x|)>\<cdot\>x<rsup|-1>|)><rsup|-1>\<geqslant\><around*|(|s<rsub|3>+s<rsub|3>\<cdot\><around*|(|1-x|)>\<cdot\>x<rsup|-1>|)><rsup|-1>>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|[eq:
+          <reference|eq 9.44.033>]>>>|<cell|<around*|(|s<rsub|3>+\<varepsilon\>|)><rsup|-1>\<geqslant\><around*|(|s<rsub|3>+s<rsub|3>\<cdot\><around*|(|1-x|)>\<cdot\>x<rsup|-1>|)><rsup|-1>>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|0\<less\>s<rsub|1>\<leqslant\>s<rsub|3>>>|<cell|s<rsub|3>\<cdot\><around*|(|s<rsub|3>+\<varepsilon\>|)><rsup|-1>\<geqslant\>s<rsub|3>\<cdot\><around*|(|s<rsub|3>+s<rsub|3>\<cdot\><around*|(|1-x|)>\<cdot\>x<rsup|-1>|)><rsup|-1><eq-number><label|eq
+          9.52.034>>>>>
+        </eqnarray*>
+
+        Further\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|s<rsub|3>\<cdot\><around*|(|s<rsub|3>+\<varepsilon\>|)><rsup|-1>>|<cell|=>|<cell|s<rsub|3>\<cdot\><around*|(|s<rsub|3>+\<varepsilon\>|)><rsup|-1>>>|<row|<cell|>|<cell|\<geqslant\><rsub|<text|[eq:
+          <reference|eq 9.52.034>]>>>|<cell|s<rsub|3>\<cdot\><around*|(|s<rsub|3>+s<rsub|3>\<cdot\><around*|(|1-x|)>\<cdot\>x<rsup|-1>|)><rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|s<rsub|3>\<cdot\><around*|(|s<rsub|3>+s<rsub|3>\<cdot\>x<rsup|-1>-s<rsub|3>\<cdot\>x\<cdot\>x<rsup|-1>|)><rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|s<rsub|3>\<cdot\><around*|(|s<rsub|3>+s<rsub|3>\<cdot\>x<rsup|-1>-s<rsub|3>|)><rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|s<rsub|3>\<cdot\><around*|(|s<rsub|3>\<cdot\>x|)><rsup|-1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|field inverse of product>]>>>|<cell|s<rsub|3>\<cdot\>s<rsub|3><rsup|-1>\<cdot\><around*|(|x<rsup|-1>|)><rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|x>>>>
+        </eqnarray*>
+
+        which by [theorem: <reference|real property to determine membership
+        of a cut>[ proves that\ 
+
+        <\equation*>
+          x\<in\>\<alpha\>\<odot\>inv<around*|(|\<alpha\>|)>
+        </equation*>
       </description>
-
-      \ 
     </description>
 
-    \ 
+    As in all cases <math|x\<in\>\<alpha\>\<odot\>in<around*|(|\<alpha\>|)>>
+    it follows that <math|\<alpha\><rsub|1>\<subseteq\>\<alpha\>\<odot\>inv<around*|(|\<alpha\>|)>>
+    which combined with [eq: <reference|eq 9.42.033>] proves finally that\ 
 
-    \;
+    <\equation*>
+      \<alpha\><rsub|1>=\<alpha\>\<odot\>inv<around*|(|\<alpha\>|)>
+    </equation*>
   </proof>
-
-  \;
 
   \;
 
@@ -6661,7 +6835,20 @@
   </lemma>
 
   <\proof>
-    \ TODO
+    \ We have to consider the following 5 cases [see theorem: <reference|real
+    RxR>]:
+
+    <\description>
+      <item*|<math|<around*|(|\<alpha\>,\<beta\>|)>\<in\>\<bbb-R\><rsub|+>\<times\>\<bbb-R\><rsub|+>>>
+
+      <item*|<math|<around*|(|\<alpha\>,\<beta\>|)>\<in\>\<bbb-R\><rsub|+>\<times\>\<bbb-R\><rsub|->>>
+
+      <item*|<math|<around*|(|\<alpha\>,\<beta\>|)>\<in\>\<bbb-R\><rsub|->\<times\>\<bbb-R\><rsub|+>>>
+
+      <item*|<math|<around*|(|\<alpha\>,\<beta\>|)>\<in\>\<bbb-R\><rsub|->\<times\>\<bbb-R\><rsub|->>>
+
+      <item*|<math|<around*|(|\<alpha\>,\<beta\>|)>\<in\><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)><big|cup><around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)>>>
+    </description>
   </proof>
 
   \;
@@ -6782,13 +6969,11 @@
     <associate|eq 9.11.029|<tuple|9.9|?>>
     <associate|eq 9.11.034|<tuple|9.11|?>>
     <associate|eq 9.12.029|<tuple|9.10|?>>
-    <associate|eq 9.13.029|<tuple|9.13|?>>
     <associate|eq 9.14.029|<tuple|9.12|?>>
     <associate|eq 9.16.030|<tuple|9.13|?>>
     <associate|eq 9.17.030|<tuple|9.14|?>>
     <associate|eq 9.18.030|<tuple|9.15|?>>
     <associate|eq 9.19.030|<tuple|9.16|?>>
-    <associate|eq 9.2.030|<tuple|9.7|?>>
     <associate|eq 9.2.033|<tuple|9.2|?>>
     <associate|eq 9.20.030|<tuple|9.17|?>>
     <associate|eq 9.21.030|<tuple|9.18|?>>
@@ -6798,38 +6983,43 @@
     <associate|eq 9.25.030|<tuple|9.22|?>>
     <associate|eq 9.26.030|<tuple|9.23|?>>
     <associate|eq 9.27.030|<tuple|9.24|?>>
+    <associate|eq 9.27.034|<tuple|9.27|?>>
     <associate|eq 9.28.030|<tuple|9.25|?>>
     <associate|eq 9.29.030|<tuple|9.26|?>>
-    <associate|eq 9.3.030|<tuple|9.8|?>>
     <associate|eq 9.3.033|<tuple|9.3|?>>
-    <associate|eq 9.30.030|<tuple|9.43|?>>
-    <associate|eq 9.30.031|<tuple|9.27|?>>
-    <associate|eq 9.31.030|<tuple|9.44|?>>
-    <associate|eq 9.31.031|<tuple|9.28|?>>
-    <associate|eq 9.32.030|<tuple|9.45|?>>
-    <associate|eq 9.32.031|<tuple|9.29|?>>
-    <associate|eq 9.33.030|<tuple|9.46|?>>
-    <associate|eq 9.33.031|<tuple|9.30|?>>
-    <associate|eq 9.34.031|<tuple|9.31|?>>
-    <associate|eq 9.35.031|<tuple|9.32|?>>
-    <associate|eq 9.36.031|<tuple|9.33|?>>
-    <associate|eq 9.37.031|<tuple|9.34|?>>
-    <associate|eq 9.38.031|<tuple|9.35|?>>
-    <associate|eq 9.39.032|<tuple|9.36|?>>
-    <associate|eq 9.4.030|<tuple|9.9|?>>
+    <associate|eq 9.30.030|<tuple|9.54|?>>
+    <associate|eq 9.30.031|<tuple|9.28|?>>
+    <associate|eq 9.31.030|<tuple|9.55|?>>
+    <associate|eq 9.31.031|<tuple|9.29|?>>
+    <associate|eq 9.32.030|<tuple|9.56|?>>
+    <associate|eq 9.32.031|<tuple|9.30|?>>
+    <associate|eq 9.33.030|<tuple|9.57|?>>
+    <associate|eq 9.33.031|<tuple|9.31|?>>
+    <associate|eq 9.34.031|<tuple|9.32|?>>
+    <associate|eq 9.35.031|<tuple|9.33|?>>
+    <associate|eq 9.36.031|<tuple|9.34|?>>
+    <associate|eq 9.37.031|<tuple|9.35|?>>
+    <associate|eq 9.38.031|<tuple|9.36|?>>
+    <associate|eq 9.39.032|<tuple|9.37|?>>
     <associate|eq 9.4.033|<tuple|9.4|?>>
-    <associate|eq 9.40.032|<tuple|9.37|?>>
-    <associate|eq 9.41.032|<tuple|9.38|?>>
-    <associate|eq 9.42.032|<tuple|9.39|?>>
-    <associate|eq 9.42.033|<tuple|9.42|?>>
-    <associate|eq 9.43.032|<tuple|9.40|?>>
-    <associate|eq 9.44.032|<tuple|9.41|?>>
-    <associate|eq 9.5.030|<tuple|9.10|?>>
+    <associate|eq 9.40.032|<tuple|9.38|?>>
+    <associate|eq 9.41.032|<tuple|9.39|?>>
+    <associate|eq 9.42.032|<tuple|9.40|?>>
+    <associate|eq 9.42.033|<tuple|9.43|?>>
+    <associate|eq 9.43.032|<tuple|9.41|?>>
+    <associate|eq 9.43.033|<tuple|9.44|?>>
+    <associate|eq 9.44.032|<tuple|9.42|?>>
+    <associate|eq 9.44.033|<tuple|9.45|?>>
+    <associate|eq 9.45.033|<tuple|9.47|?>>
+    <associate|eq 9.45.034|<tuple|9.46|?>>
+    <associate|eq 9.46.033|<tuple|9.48|?>>
+    <associate|eq 9.47.033|<tuple|9.49|?>>
+    <associate|eq 9.49.034|<tuple|9.50|?>>
     <associate|eq 9.5.033|<tuple|9.5|?>>
+    <associate|eq 9.50.034|<tuple|9.51|?>>
+    <associate|eq 9.51.034|<tuple|9.52|?>>
+    <associate|eq 9.52.034|<tuple|9.53|?>>
     <associate|eq 9.6.030|<tuple|9.6|?>>
-    <associate|eq 9.7.030|<tuple|9.12|?>>
-    <associate|eq 9.8.030|<tuple|9.13|?>>
-    <associate|eq 9.9.030|<tuple|9.14|?>>
     <associate|integeres order|<tuple|7.28|?>>
     <associate|integers|<tuple|7.2|?>>
     <associate|integers (-1).n|<tuple|7.16|?>>
@@ -6941,20 +7131,22 @@
     <associate|rational totally ordered|<tuple|8.32|?>>
     <associate|rational x-y|<tuple|8.9|?>>
     <associate|rational {0}|<tuple|8.21|?>>
-    <associate|real -(a.b)=(-a).b=(a.(-b)|<tuple|9.26|?>>
+    <associate|real -(a.b)=(-a).b=(a.(-b)|<tuple|9.27|?>>
+    <associate|real 1.a=a for positive numbers|<tuple|9.20|?>>
     <associate|real Dedekind's cut|<tuple|9.1|?>>
     <associate|real NQ bijection|<tuple|9.7|?>>
-    <associate|real RxR|<tuple|9.24|?>>
-    <associate|real a.b=b.a positive numbers|<tuple|9.20|?>>
-    <associate|real associativity positive numbers|<tuple|9.21|?>>
+    <associate|real RxR|<tuple|9.25|?>>
+    <associate|real a.b=b.a positive numbers|<tuple|9.21|?>>
+    <associate|real associativity positive numbers|<tuple|9.22|?>>
     <associate|real division of real numbers in positive and negative
     numbers|<tuple|9.16|?>>
     <associate|real gap theorem|<tuple|9.8|?>>
     <associate|real group|<tuple|9.14|?>>
     <associate|real lemma for sum operator|<tuple|9.12|?>>
-    <associate|real multiplication operator|<tuple|9.25|?>>
+    <associate|real multiplication operator|<tuple|9.26|?>>
     <associate|real negastive cut of rational cut|<tuple|9.10|?>>
-    <associate|real negative cut|<tuple|9.10|?>>
+    <associate|real negative cut|<tuple|9.9|?>>
+    <associate|real neutral element of positive numbers|<tuple|9.20|?>>
     <associate|real positive negative numbers|<tuple|9.15|?>>
     <associate|real product is internal|<tuple|9.19|?>>
     <associate|real property to determine membership of a cut|<tuple|9.3|?>>

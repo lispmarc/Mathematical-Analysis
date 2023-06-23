@@ -1105,12 +1105,38 @@
     \ 
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|x<rsup|-1>=y<rsup|->>|<cell|\<Rightarrow\>>|<cell|x<rsup|-1>\<cdot\>y=y<rsup|-1>\<cdot\>y>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|inverse
-      element>>>|<cell|x<rsup|-1>\<cdot\>y=1>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x\<cdot\><around*|(|x<rsup|-1>\<cdot\>y|)>=x\<cdot\>1>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|neutral
-      element>>>|<cell|x\<cdot\><around*|(|x<rsup|-1>\<cdot\>y|)>=x>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|associativity>>>|<cell|*<around*|(|x\<cdot\>x<rsup|-1>|)>\<cdot\>y=x>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|inverse
-      element>>>|<cell|1\<cdot\>y=x>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|neutral
+      <tformat|<table|<row|<cell|x<rsup|-1>=y<rsup|-1>>|<cell|\<Rightarrow\>>|<cell|x<rsup|-1>\<odot\>y=y<rsup|-1>\<odot\>y>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|inverse
+      element>>>|<cell|x<rsup|-1>\<odot\>y=1>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x\<cdot\><around*|(|x<rsup|-1>\<odot\>y|)>=x\<odot\>1>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|neutral
+      element>>>|<cell|x\<odot\><around*|(|x<rsup|-1>\<odot\>y|)>=x>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|associativity>>>|<cell|*<around*|(|x\<odot\>x<rsup|-1>|)>\<odot\>y=x>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|inverse
+      element>>>|<cell|1\<odot\>y=x>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|neutral
       element>>>|<cell|y=x>>>>
     </eqnarray*>
+  </proof>
+
+  <\theorem>
+    <label|field inverse of product>If <math|<around*|\<langle\>|F,\<oplus\>,\<odot\>|\<rangle\>>>
+    is a field then <math|\<forall\>x,y\<in\>F> we have
+    <math|<around*|(|x\<odot\>y|)><rsup|-1>=x<rsup|-1>\<odot\>y<rsup|-1>>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|x<rsup|-1>\<circ\>y<rsup|-1>|)>\<odot\><around*|(|x\<odot\>y|)>>|<cell|\<equallim\><rsub|commutativity>>|<cell|<around*|(|x\<odot\>y|)>\<odot\><around*|(|x<rsup|-1>\<circ\>y<rsup|-1>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|commutativity>>|<cell|<around*|(|x\<odot\>y|)>\<odot\><around*|(|y<rsup|->\<odot\>x<rsup|-1>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|associativity>>>|<cell|<around*|(|<around*|(|x\<odot\>y|)>\<odot\>y<rsup|-1>|)>\<odot\>x<rsup|-1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|associativity>>>|<cell|<around*|(|x\<odot\><around*|(|y\<odot\>y<rsup|-1>|)>|)>\<odot\>x<rsup|-1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|inverse
+      element>>>|<cell|<around*|(|x\<odot\>1|)>\<odot\>x<rsup|-1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|neutral
+      element>>>|<cell|x\<cdot\>x<rsup|-1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|ubverse
+      element>>>|<cell|1>>>>
+    </eqnarray*>
+
+    proving by the uniqueness of the inverse [theorem: <reference|field
+    inverse is unique>] that\ 
+
+    <\equation*>
+      <around*|(|x\<odot\>y|)><rsup|-1>=x<rsup|-1>\<odot\>y<rsup|-1>
+    </equation*>
+
+    \;
   </proof>
 
   <\definition>
@@ -7620,7 +7646,7 @@
     <associate|auto-25|<tuple|4.3|115>>
     <associate|auto-26|<tuple|field|115>>
     <associate|auto-27|<tuple|subfield|116>>
-    <associate|auto-28|<tuple|field homeomorphism|116>>
+    <associate|auto-28|<tuple|field homeomorphism|117>>
     <associate|auto-29|<tuple|5|119>>
     <associate|auto-3|<tuple|4.1|107>>
     <associate|auto-30|<tuple|5.1|119>>
@@ -7654,7 +7680,7 @@
     <associate|auto-56|<tuple|<with|mode|<quote|math>|#A>|154>>
     <associate|auto-57|<tuple|6.2.2|157>>
     <associate|auto-58|<tuple|6.2.3|162>>
-    <associate|auto-59|<tuple|6.2.4|166>>
+    <associate|auto-59|<tuple|6.2.4|165>>
     <associate|auto-6|<tuple|sub-semi-group|109>>
     <associate|auto-7|<tuple|sup-group|109>>
     <associate|auto-8|<tuple|group isomorphism|111>>
@@ -7667,13 +7693,13 @@
     <associate|countable product of a finite family of countable sets is
     countable (2)|<tuple|6.70|168>>
     <associate|countable product of finite family of countable sets is
-    countable|<tuple|6.69|168>>
+    countable|<tuple|6.69|167>>
     <associate|countable set|<tuple|6.23|149>>
     <associate|countable set conditions (1)|<tuple|6.65|166>>
     <associate|countable subset of countable set is
-    countable|<tuple|6.64|166>>
+    countable|<tuple|6.64|165>>
     <associate|countable subset of denumerable set is
-    countable|<tuple|6.63|166>>
+    countable|<tuple|6.63|165>>
     <associate|countable union of a denumerable family of countable sets is
     denumerable|<tuple|6.66|166>>
     <associate|countable union of a finite family of countable sets is
@@ -7696,7 +7722,7 @@
     <associate|denumerable union of a denumerable family of denumerable sets
     is denumerable|<tuple|6.62|165>>
     <associate|denumerable union of a finite family of denumerable sets is
-    denumerable|<tuple|6.61|165>>
+    denumerable|<tuple|6.61|164>>
     <associate|denumerable with one less element|<tuple|6.25|149>>
     <associate|empty set is finite|<tuple|6.20|149>>
     <associate|eq 5.1.019|<tuple|5.1|122>>
@@ -7729,10 +7755,10 @@
     <associate|eq 6.2.019|<tuple|6.2|151>>
     <associate|eq 6.20.022|<tuple|6.20|160>>
     <associate|eq 6.21.022|<tuple|6.21|160>>
-    <associate|eq 6.22.022|<tuple|6.22|163>>
-    <associate|eq 6.23.022|<tuple|6.23|163>>
+    <associate|eq 6.22.022|<tuple|6.22|162>>
+    <associate|eq 6.23.022|<tuple|6.23|162>>
     <associate|eq 6.24.022|<tuple|6.24|163>>
-    <associate|eq 6.25.022|<tuple|6.25|164>>
+    <associate|eq 6.25.022|<tuple|6.25|163>>
     <associate|eq 6.3.019|<tuple|6.3|151>>
     <associate|eq 6.4.019|<tuple|6.4|151>>
     <associate|eq 6.5.019|<tuple|6.5|151>>
@@ -7755,12 +7781,13 @@
     <associate|every subset of a finite set is finite|<tuple|6.30|150>>
     <associate|extract maximum element of a family|<tuple|6.47|157>>
     <associate|field|<tuple|4.36|115>>
-    <associate|field homeomorphism|<tuple|4.42|116>>
+    <associate|field homeomorphism|<tuple|4.43|117>>
     <associate|field inverse is unique|<tuple|4.37|116>>
-    <associate|field inverse of inverse|<tuple|4.38|?>>
-    <associate|field isomorphism and neutral element|<tuple|4.44|117>>
-    <associate|field subfield|<tuple|4.40|116>>
-    <associate|field subfield is a field|<tuple|4.41|116>>
+    <associate|field inverse of inverse|<tuple|4.38|116>>
+    <associate|field inverse of product|<tuple|4.40|?>>
+    <associate|field isomorphism and neutral element|<tuple|4.45|117>>
+    <associate|field subfield|<tuple|4.41|116>>
+    <associate|field subfield is a field|<tuple|4.42|116>>
     <associate|field x^-1=y^-1=\<gtr\>x=y|<tuple|4.39|116>>
     <associate|finite ordered sets have a maximum and
     minimum|<tuple|6.44|156>>
@@ -7794,9 +7821,9 @@
     <associate|infinite condition (1)|<tuple|6.34|152>>
     <associate|infinite set|<tuple|6.21|149>>
     <associate|inverse of a field isomorphism is a field
-    isomorphism|<tuple|4.43|116>>
+    isomorphism|<tuple|4.44|117>>
     <associate|iteration final|<tuple|5.84|142>>
-    <associate|mapping of N to a finite set (1)|<tuple|6.45|157>>
+    <associate|mapping of N to a finite set (1)|<tuple|6.45|156>>
     <associate|mapping of N to a finite set (2)|<tuple|6.46|157>>
     <associate|mathematical induction|<tuple|5.82|141>>
     <associate|max element of a family|<tuple|6.48|159>>
@@ -7834,7 +7861,7 @@
     <associate|natural numbers multiplicative abelian
     semi-group|<tuple|5.42|132>>
     <associate|natural numbers n+0=n|<tuple|5.29|128>>
-    <associate|natural numbers n+k=0=\<gtr\>n=0|<tuple|5.57|135>>
+    <associate|natural numbers n+k=0=\<gtr\>n=0|<tuple|5.57|136>>
     <associate|natural numbers n+k=m+k\<less\>=\<gtr\>n=m|<tuple|5.43|132>>
     <associate|natural numbers n+s(m)=s(n+m)|<tuple|5.31|129>>
     <associate|natural numbers n.(m-1)=n.m-n|<tuple|5.68|137>>
@@ -7881,7 +7908,7 @@
     <associate|product of a finite family of finite sets is is
     finite|<tuple|6.52|161>>
     <associate|product of a finite family of finite sets is is finite
-    (1)|<tuple|6.53|162>>
+    (1)|<tuple|6.53|161>>
     <associate|product of finite family of sets|<tuple|6.51|161>>
     <associate|product of finite sets|<tuple|6.38|154>>
     <associate|proposition 6.53.022|<tuple|6.57|163>>
