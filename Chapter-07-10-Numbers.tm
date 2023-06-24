@@ -5334,7 +5334,7 @@
     </equation*>
   </proof>
 
-  <subsection|Arithmetic on <math|\<bbb-R\>>>
+  <subsection|Arithmetic in <math|\<bbb-R\>>>
 
   <subsubsection|Addition in <math|\<bbb-R\>>>
 
@@ -6094,13 +6094,13 @@
     Using the definition of <math|\<odot\>> we have\ 
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|\<alpha\>\<odot\>\<beta\>>|<cell|=>|<cell|<around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}><big|cup><around*|{|s\<cdot\>t\|<around*|(|s,t|)>\<in\>\<alpha\>\<times\>\<beta\><text|
+      <tformat|<table|<row|<cell|\<alpha\>\<odot\>\<beta\>>|<cell|=>|<cell|\<bbb-Q\><rsup|-><rsub|0><big|cup><around*|{|s\<cdot\>t\|<around*|(|s,t|)>\<in\>\<alpha\>\<times\>\<beta\><text|
       with >0\<less\>s\<wedge\>0\<less\>t|}><eq-number><label|eq
-      9.30.031>>>|<row|<cell|\<beta\>\<odot\>\<gamma\>>|<cell|=>|<cell|<around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}><big|cup><around*|{|s\<cdot\>t\|<around*|(|s,t|)>\<in\>\<beta\>\<times\>\<gamma\><text|
+      9.30.031>>>|<row|<cell|\<beta\>\<odot\>\<gamma\>>|<cell|=>|<cell|\<bbb-Q\><rsup|-><rsub|0><big|cup><around*|{|s\<cdot\>t\|<around*|(|s,t|)>\<in\>\<beta\>\<times\>\<gamma\><text|
       with >0\<less\>s\<wedge\>0\<less\>t|}><eq-number><label|eq
-      9.31.031>>>|<row|<cell|\<alpha\>\<odot\><around*|(|\<beta\>\<odot\>\<gamma\>|)>>|<cell|=>|<cell|<around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}><big|cup><around*|{|s\<cdot\>t\|<around*|(|s,t|)>\<in\>\<alpha\>\<times\><around*|(|\<beta\>\<odot\>\<gamma\>|)><text|
+      9.31.031>>>|<row|<cell|\<alpha\>\<odot\><around*|(|\<beta\>\<odot\>\<gamma\>|)>>|<cell|=>|<cell|\<bbb-Q\><rsup|-><rsub|0><big|cup><around*|{|s\<cdot\>t\|<around*|(|s,t|)>\<in\>\<alpha\>\<times\><around*|(|\<beta\>\<odot\>\<gamma\>|)><text|
       with >0\<less\>s\<wedge\>0\<less\>t|}><eq-number><label|eq
-      9.32.031>>>|<row|<cell|<around*|(|\<alpha\>\<odot\>\<beta\>|)>\<odot\>\<gamma\>>|<cell|=>|<cell|<around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}><big|cup><around*|{|s\<cdot\>t\|<around*|(|s,t|)>\<in\><around*|(|\<alpha\>\<odot\>\<beta\>|)>\<times\>\<gamma\><text|
+      9.32.031>>>|<row|<cell|<around*|(|\<alpha\>\<odot\>\<beta\>|)>\<odot\>\<gamma\>>|<cell|=>|<cell|\<bbb-Q\><rsup|-><rsub|0><big|cup><around*|{|s\<cdot\>t\|<around*|(|s,t|)>\<in\><around*|(|\<alpha\>\<odot\>\<beta\>|)>\<times\>\<gamma\><text|
       with >0\<less\>s\<wedge\>0\<less\>t|}><eq-number><label|eq
       9.33.031>>>>>
     </eqnarray*>
@@ -6110,8 +6110,8 @@
 
     <\description>
       <item*|<math|x\<leqslant\>0>>Then we have
-      <math|x\<in\><around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}>> proving by
-      [eq: <reference|eq 9.33.031>] that <math|x\<in\><around*|(|\<alpha\>\<odot\>\<beta\>|)>\<odot\>\<gamma\>>
+      <math|x\<in\>\<bbb-Q\><rsup|-><rsub|0>> proving by [eq: <reference|eq
+      9.33.031>] that <math|x\<in\><around*|(|\<alpha\>\<odot\>\<beta\>|)>\<odot\>\<gamma\>>
 
       <item*|<math|0\<less\>x>>Then by [eq: <reference|eq 9.32.031>] there
       exista <math|q\<in\>\<alpha\>> and <math|r\<in\>\<beta\>\<odot\>\<gamma\>>
@@ -6156,8 +6156,8 @@
 
     <\description>
       <item*|<math|x\<leqslant\>0>>Then we have
-      <math|x\<in\><around*|{|r\<in\>\<bbb-Q\>\|r\<leqslant\>0|}>> proving by
-      [eq: <reference|eq 9.33.031>] that <math|x\<in\><around*|(|\<alpha\>\<odot\>\<beta\>|)>\<odot\>\<gamma\>>.
+      <math|x\<in\>\<bbb-Q\><rsup|-><rsub|0>> proving by [eq: <reference|eq
+      9.33.031>] that <math|x\<in\><around*|(|\<alpha\>\<odot\>\<beta\>|)>\<odot\>\<gamma\>>.
 
       <item*|<math|0\<less\>x>>Then by [eq: <reference|eq 9.33.031>] we have
       that there exists a <math|q\<in\>\<alpha\>\<odot\>\<beta\>> and a
@@ -6198,6 +6198,116 @@
     <\equation*>
       <around*|(|\<alpha\>\<odot\>\<beta\>|)>\<odot\>\<gamma\>-\<alpha\>\<odot\><around*|(|\<beta\>\<odot\>\<gamma\>|)>
     </equation*>
+  </proof>
+
+  <\theorem>
+    <label|real distributivity><math|\<forall\>\<alpha\>,\<beta\>,\<gamma\>\<in\>\<bbb-R\><rsup|+>>
+    we have that <math|\<alpha\>\<odot\><around*|(|\<beta\>+\<gamma\>|)>=\<alpha\>\<odot\>\<beta\>+\<alpha\>\<odot\>\<gamma\>>
+  </theorem>
+
+  <\proof>
+    Let <math|x\<in\>\<alpha\>\<cdot\><around*|(|\<beta\>+\<gamma\>|)>> then
+    we have either:
+
+    <\description>
+      <item*|<math|x\<leqslant\>0>>Then <math|0,x\<in\>\<bbb-Q\><rsup|-><rsub|0>>
+      so that <math|x\<in\>\<alpha\>\<odot\>\<beta\>> and
+      <math|0\<in\>\<alpha\>\<odot\>\<gamma\>> hence
+      <math|x=x+0\<in\>\<alpha\>\<odot\>\<beta\>+\<alpha\>\<odot\>\<gamma\>>.\ 
+
+      <item*|<math|0\<less\>x>>Then <math|x=s\<cdot\>t> where
+      <math|s\<in\>\<alpha\>\<wedge\>0\<less\>s> and
+      <math|t\<in\>\<beta\>+\<gamma\>\<wedge\>0\<less\>t>. As
+      <math|t\<in\>\<beta\>+\<gamma\>> there exists <math|u\<in\>\<beta\>>
+      and <math|v\<in\>\<gamma\>> such that <math|t=u+v>. Using [theorem:
+      <reference|rational field>] we have that
+
+      <\equation>
+        <label|eq 9.37.035>x=s\<cdot\>t=s\<cdot\><around*|(|u+v|)>=s\<cdot\>u+s\<cdot\>v
+      </equation>
+
+      We have now the following possibilities for <math|u> and <math|v>:
+
+      <\description>
+        <item*|<math|u\<leqslant\>0\<wedge\>v\<leqslant\>0>>Then
+        <math|t=u+v\<leqslant\>0> giving the contradiction
+        <math|0\<less\>t\<leqslant\>0> so this case will not occur.
+
+        <item*|<math|u\<leqslant\>0\<wedge\>0\<less\>v>>Then as
+        <math|0\<less\>s> we have <math|s\<cdot\>u\<leqslant\>0\<Rightarrow\>s\<cdot\>u\<in\>\<bbb-Q\><rsup|-><rsub|0>\<Rightarrow\>s\<cdot\>u\<in\>\<alpha\>\<odot\>\<beta\>>,
+        further as <math|0\<less\>s\<wedge\>0\<less\>v> we have that
+        <math|s\<cdot\>u\<in\>\<alpha\>\<odot\>\<gamma\>>. Hence
+        <math|x\<equallim\><rsub|<text|[eq: <reference|eq
+        9.37.035>]>>s\<cdot\>u+s\<cdot\>v\<in\>\<alpha\>\<odot\>\<beta\>+\<alpha\>\<odot\>\<gamma\>>.\ 
+
+        <item*|<math|0\<less\>u\<wedge\>v\<leqslant\>0>>Then as
+        <math|0\<less\>s\<wedge\>0\<less\>u> we have that
+        <math|s\<cdot\>u\<in\>\<alpha\>\<odot\>\<beta\>>, further
+        <math|s\<cdot\>v\<leqslant\>0\<Rightarrow\>s\<cdot\>v\<in\>\<bbb-Q\><rsup|-><rsub|0>\<Rightarrow\>s\<cdot\>v\<in\>\<alpha\>\<odot\>\<gamma\>>.
+        Hence <math|x\<equallim\><rsub|<text|[eq: <reference|eq
+        9.37.035>]>>s\<cdot\>u+s\<cdot\>v\<in\>\<alpha\>\<odot\>\<beta\>+s\<odot\>\<gamma\>>
+
+        <item*|<math|0\<less\>u\<wedge\>0\<less\>v>>Then as
+        <math|0\<less\>s\<wedge\>0\<less\>u\<wedge\>0\<less\>v> we have that
+        <math|s\<cdot\>u\<in\>\<alpha\>\<circ\>\<beta\>> and
+        <math|s\<cdot\>v\<in\>\<alpha\>\<odot\>\<gamma\>>. Hence
+        <math|x\<equallim\><rsub|<text|[eq: <reference|eq
+        9.37.035>]>>s\<cdot\>u+s\<cdot\>v\<in\>\<alpha\>\<odot\>\<beta\>+s\<odot\>\<gamma\>>.
+      </description>
+    </description>
+
+    So in call cases we have that <math|x\<in\>\<alpha\>\<odot\>\<beta\>+\<alpha\>\<odot\>\<gamma\>>
+    proving that\ 
+
+    <\equation>
+      <label|eq 9.38.035>\<alpha\>\<odot\><around*|(|\<beta\>+\<gamma\>|)>\<subseteq\>\<alpha\>\<odot\>\<beta\>+\<alpha\>\<odot\>\<gamma\>
+    </equation>
+
+    For the opposite inclusion let <math|x\<in\>\<alpha\>\<odot\>\<beta\>+\<alpha\>\<odot\>\<gamma\>>.
+    Then\ 
+
+    <\equation>
+      <label|eq 9.39.035>x=r+t<text| where
+      >r\<in\>\<alpha\>\<odot\>\<beta\><text| and
+      >t\<in\>\<alpha\>\<odot\>\<gamma\>
+    </equation>
+
+    We must now consider the following cases for <math|x>:\ 
+
+    <\description>
+      <item*|<math|x\<leqslant\>0>>Then <math|x\<in\>\<bbb-Q\><rsup|-><rsub|0>>
+      so that <math|x\<in\>\<alpha\>\<odot\><around*|(|\<beta\>+\<gamma\>|)>>
+
+      <item*|<math|0\<less\>x>>Then we have to look at the following sub
+      cases:\ 
+
+      <\description>
+        <item*|<math|r\<leqslant\>0\<wedge\>t\<leqslant\>0>>Then
+        <math|x\<equallim\><rsub|<text|[eq: <reference|eq
+        9.39.035>]>>r+t\<leqslant\>0> a contradicting <math|0\<less\>x>, so
+        this case does not occur.
+
+        <item*|<math|r\<leqslant\>0\<wedge\>0\<less\>t>>Then as
+        <math|t\<nin\>\<bbb-Q\><rsup|+><rsub|0>> there exists
+        <math|u\<in\>\<alpha\>> and <math|v\<in\>\<gamma\>> with
+        <math|0\<less\>u\<wedge\>0\<less\>v> such that
+        <math|t=u\<cdot\>v=u\<cdot\><around*|(|0+v|)>\<in\>\<alpha\>\<odot\><around*|(|\<alpha\>+\<beta\>|)>>.
+        Since <math|r\<leqslant\>0> we have <math|x=r+t\<leqslant\>0+t=t>,
+        which, as <math|t\<in\>\<alpha\>\<odot\><around*|(|\<alpha\>+\<beta\>|)>>,
+        proves by [theorem: <reference|real property to determine membership
+        of a cut>] that\ 
+
+        <\equation*>
+          x\<in\>\<alpha\>\<odot\><around*|(|\<beta\>+\<gamma\>|)>
+        </equation*>
+
+        <item*|<math|0\<less\>r\<wedge\>t\<leqslant\>0>>TODO
+
+        <item*|<math|0\<less\>r\<wedge\>0\<less\>t>>
+      </description>
+    </description>
+
+    \;
   </proof>
 
   <\theorem>
@@ -6811,7 +6921,7 @@
   operator on <math|\<bbb-R\>>.
 
   <\definition>
-    <label|real multiplication operator>THe multiplication operator
+    <label|real multiplication operator>The multiplication operator
     <math|\<cdot\>:\<bbb-R\>\<times\>\<bbb-R\>\<Rightarrow\>\<bbb-R\>> is
     defined as\ 
 
@@ -6821,7 +6931,8 @@
       if ><around*|(|\<alpha\>,\<beta\>|)>\<in\>\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|+>>>|<row|<cell|-<around*|(|\<alpha\>\<odot\><around*|(|-\<beta\>|)>|)><text|
       if ><around*|(|\<alpha\>,\<beta\>|)>\<in\>\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|->>>|<row|<cell|<around*|(|-\<alpha\>|)>\<odot\><around*|(|-\<beta\>|)><text|
       if ><around*|(|\<alpha\>,\<beta\>|)>\<in\>\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|->>>|<row|<cell|0<text|
-      if ><around*|(|\<alpha\>,\<beta\>|)><text| if >>>>>>
+      if ><around*|(|\<alpha\>,\<beta\>|)><text| if
+      ><around*|(|\<alpha\>,\<beta\>|)>\<in\><around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)><big|cup><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)>>>>>>
     </equation*>
   </definition>
 
@@ -6839,19 +6950,117 @@
     RxR>]:
 
     <\description>
-      <item*|<math|<around*|(|\<alpha\>,\<beta\>|)>\<in\>\<bbb-R\><rsub|+>\<times\>\<bbb-R\><rsub|+>>>
+      <item*|<math|<around*|(|\<alpha\>,\<beta\>|)>\<in\>\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|+>>>Then\ 
 
-      <item*|<math|<around*|(|\<alpha\>,\<beta\>|)>\<in\>\<bbb-R\><rsub|+>\<times\>\<bbb-R\><rsub|->>>
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|-\<alpha\>|)>\<cdot\>\<beta\>>|<cell|\<equallim\><rsub|-\<alpha\>\<in\>\<bbb-R\><rsup|->\<wedge\>\<beta\>\<in\>\<bbb-R\><rsup|+>>>|<cell|-<around*|(|<around*|(|-<around*|(|-\<alpha\>|)>|)>\<odot\>\<beta\>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|-<around*|(|-\<alpha\>|)>=\<alpha\>>>|<cell|-<around*|(|\<alpha\>\<odot\>\<beta\>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|\<alpha\>\<in\>\<bbb-R\><rsup|+>\<wedge\>\<beta\>\<in\>\<bbb-R\><rsup|+>>>|<cell|-<around*|(|\<alpha\>\<cdot\>\<beta\>|)>>>|<row|<cell|\<alpha\>\<cdot\><around*|(|-\<beta\>|)>>|<cell|\<equallim\><rsub|\<alpha\>\<in\>\<bbb-R\><rsup|+>\<wedge\>-\<beta\>\<in\>\<bbb-R\><rsup|->>>|<cell|-<around*|(|\<alpha\>\<odot\><around*|(|-<around*|(|-\<beta\>|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|-<around*|(|\<alpha\>\<odot\>\<beta\>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|\<alpha\>\<in\>\<bbb-R\><rsup|+>\<wedge\>\<beta\>\<in\>\<bbb-R\><rsup|+>>>|<cell|-<around*|(|\<alpha\>\<cdot\>\<beta\>|)>>>>>
+      </eqnarray*>
 
-      <item*|<math|<around*|(|\<alpha\>,\<beta\>|)>\<in\>\<bbb-R\><rsub|->\<times\>\<bbb-R\><rsub|+>>>
+      <item*|<math|<around*|(|\<alpha\>,\<beta\>|)>\<in\>\<bbb-R\><rsup|+>\<times\>\<bbb-R\><rsup|->>>Then\ 
 
-      <item*|<math|<around*|(|\<alpha\>,\<beta\>|)>\<in\>\<bbb-R\><rsub|->\<times\>\<bbb-R\><rsub|->>>
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|-<around*|(|\<alpha\>\<cdot\>\<beta\>|)>>|<cell|\<equallim\><rsub|\<alpha\>\<in\>\<bbb-R\><rsup|+><rsup|>\<wedge\>\<beta\>\<in\>\<bbb-R\><rsup|->>>|<cell|-<around*|(|-<around*|(|\<alpha\>\<odot\><around*|(|-\<beta\>|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<odot\><around*|(|-\<beta\>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|\<alpha\>\<in\>\<bbb-R\><rsup|+>\<wedge\>-\<beta\>\<in\>\<bbb-R\><rsup|->>>|<cell|\<alpha\>\<cdot\><around*|(|-\<beta\>|)><eq-number><label|eq
+        9.60.034>>>|<row|<cell|<around*|(|-\<alpha\>|)>\<cdot\>\<beta\>>|<cell|\<equallim\><rsub|-\<alpha\>\<in\>\<bbb-R\><rsup|->\<wedge\>\<beta\>\<in\>\<bbb-R\><rsup|->>>|<cell|<around*|(|-<around*|(|-\<alpha\>|)>|)>\<odot\><around*|(|-\<beta\>|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<odot\><around*|(|-\<beta\>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|\<alpha\>\<in\>\<bbb-R\><rsup|+>\<wedge\>-\<beta\>\<in\>\<bbb-R\><rsup|+>>>|<cell|\<alpha\>\<cdot\><around*|(|-\<beta\>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq>:<reference|eq
+        9.60.034>>>|<cell|-<around*|(|\<alpha\>\<cdot\>\<beta\>|)>>>>>
+      </eqnarray*>
 
-      <item*|<math|<around*|(|\<alpha\>,\<beta\>|)>\<in\><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)><big|cup><around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)>>>
+      <item*|<math|<around*|(|\<alpha\>,\<beta\>|)>\<in\>\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|+>>>Then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|-<around*|(|\<alpha\>\<cdot\>\<beta\>|)>>|<cell|\<equallim\><rsub|\<alpha\>\<in\>\<bbb-R\><rsup|->\<wedge\>\<beta\>\<in\>\<bbb-R\><rsup|+>>>|<cell|-<around*|(|-<around*|(|<around*|(|-\<alpha\>|)>\<odot\>\<beta\>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|-\<alpha\>|)>\<odot\>\<beta\>>>|<row|<cell|>|<cell|\<equallim\><rsub|-\<alpha\>\<in\>\<bbb-R\><rsup|+>\<wedge\>\<beta\>\<in\>\<bbb-R\><rsup|+><text|>>>|<cell|<around*|(|-\<alpha\>|)>\<cdot\>\<beta\>>>|<row|<cell|\<alpha\>\<cdot\><around*|(|-\<beta\>|)>>|<cell|\<equallim\><rsub|\<alpha\>\<in\>\<bbb-R\><rsup|->\<wedge\>-\<beta\>\<in\>\<bbb-R\><rsup|->>>|<cell|<around*|(|-\<alpha\>|)>\<odot\><around*|(|-<around*|(|-\<beta\>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|-\<alpha\>|)>\<odot\>\<beta\>>>|<row|<cell|>|<cell|\<equallim\><rsub|-\<alpha\>\<in\>\<bbb-E\><rsup|+>\<wedge\>\<beta\>\<in\>\<bbb-R\><rsup|+>>>|<cell|<around*|(|-\<alpha\>|)>\<cdot\>\<beta\>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 9.59.034>]>>>|<cell|-<around*|(|\<alpha\>\<cdot\>\<beta\>|)>>>>>
+      </eqnarray*>
+
+      <item*|<math|<around*|(|\<alpha\>,\<beta\>|)>\<in\>\<bbb-R\><rsup|->\<times\>\<bbb-R\><rsup|->>>Then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|-<around*|(|\<alpha\>\<cdot\>\<beta\>|)>>|<cell|\<equallim\><rsub|\<alpha\>\<in\>\<bbb-R\><rsup|->\<wedge\>\<beta\>\<in\>\<bbb-R\><rsup|->>>|<cell|-<around*|(|<around*|(|-\<alpha\>|)>\<odot\><around*|(|-\<beta\>|)>|)><eq-number><label|eq
+        9.59.034>>>|<row|<cell|<around*|(|-\<alpha\>|)>\<cdot\>\<beta\>>|<cell|\<equallim\><rsub|-\<alpha\>\<in\>\<bbb-R\><rsup|+>\<wedge\>\<beta\>\<in\>\<bbb-R\><rsup|->>>|<cell|-<around*|(|<around*|(|-\<alpha\>|)>\<odot\><around*|(|-\<beta\>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 9.59.034>]>>>|<cell|-<around*|(|\<alpha\>\<cdot\>\<beta\>|)>>>|<row|<cell|\<alpha\>\<cdot\><around*|(|-\<beta\>|)>>|<cell|\<equallim\><rsub|\<alpha\>\<in\>\<bbb-R\><rsup|->\<wedge\>-\<beta\>\<in\>\<bbb-R\><rsup|+>><rsub|>>|<cell|-<around*|(|<around*|(|-\<alpha\>|)>\<odot\><around*|(|-\<beta\>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 9.59.034>]>>>|<cell|-<around*|(|\<alpha\>\<cdot\>\<beta\>|)>>>>>
+      </eqnarray*>
+
+      <item*|<math|<around*|(|\<alpha\>,\<beta\>|)>\<in\><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)><big|cup><around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)>>>Then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|-<around*|(|\<alpha\>\<cdot\>\<beta\>|)>>|<cell|\<equallim\><rsub|<around*|(|\<alpha\>,\<beta\>|)>\<in\><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)><big|cup><around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)>>>|<cell|0>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|-\<alpha\>,\<beta\>|)>\<in\><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)><big|cup><around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)>>>|<cell|<around*|(|-\<alpha\>|)>\<cdot\>\<beta\>>>|<row|<cell|-<around*|(|\<alpha\>\<cdot\>\<beta\>|)>>|<cell|\<equallim\><rsub|<around*|(|\<alpha\>,\<beta\>|)>\<in\><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)><big|cup><around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)>>>|<cell|0>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|\<alpha\>,-\<beta\>|)>\<in\><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)><big|cup><around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)>>>|<cell|\<alpha\>\<cdot\><around*|(|-\<beta\>|)>>>>>
+      </eqnarray*>
     </description>
   </proof>
 
+  We are finally ready to prove that <math|<around*|\<langle\>|\<bbb-R\>,*+,\<cdot\>|\<rangle\>>>
+  is a field
+
   \;
+
+  <\definition>
+    <label|real a^-1>If <math|\<alpha\>\<in\>\<bbb-R\>\\<around*|{|0|}>> then
+    we define <math|\<alpha\><rsup|-1>> by
+    <math|\<alpha\><rsup|-1>=<choice|<tformat|<table|<row|<cell|inv<around*|(|\<alpha\>|)><text|
+    if >\<alpha\>\<in\>\<bbb-R\><rsup|+>>>|<row|<cell|-inv<around*|(|-\<alpha\>|)><text|
+    if >\<alpha\>\<in\>\<bbb-R\><rsup|->>>>>>>
+  </definition>
+
+  <\proof>
+    As by [theorem: <reference|real division of real numbers in positive and
+    negative numbers>] <math|\<bbb-R\>\\<around*|{|0|}>=\<bbb-R\><rsup|+><big|cup>\<bbb-R\><rsup|->>
+    and <math|\<bbb-R\><rsup|+><big|cap>\<bbb-R\><rsup|->=\<varnothing\>>
+    <math|\<alpha\><rsup|-1>> is we;; defined.
+  </proof>
+
+  <\theorem>
+    <label|real field><math|<around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>>
+    is a field where
+
+    <\enumerate>
+      <item><math|+:\<bbb-R\>\<times\>\<bbb-R\>\<rightarrow\>\<bbb-R\>>is
+      defined in [theorem: <reference|real group>]
+
+      <item><math|\<cdot\>:\<bbb-R\>*\<times\>\<bbb-R\>\<rightarrow\>\<bbb-R\>>
+      is defined in [definition: <reference|real multiplication operator>]
+
+      <item><math|0=\<alpha\><rsub|0>> is the additive inverse [see theorem:
+      <reference|real group>]
+
+      <item><math|\<forall\>\<alpha\>\<in\>\<bbb-R\>> the additive inverse is
+      the neagative cut of <math|\<alpha\>> [see theorem: <reference|real
+      group>]
+
+      <item><math|1=\<alpha\><rsub|1>> is the multiplicative rational element
+
+      <item><math|\<forall\>\<alpha\>\<in\>\<bbb-R\>\\<around*|{|0|}>> we
+      have the multiplicative inverse is defined by [definition:
+      <reference|real a^-1>]
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Using [theorem: <reference|real group>]
+      <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>> is a Abelian group
+      with neutral element <math|0=\<alpha\><rsub|0>> and
+      <math|\<forall\>\<alpha\>\<in\>\<bbb-R\>> the negative cut
+      <math|-\<alpha\>> as inverse.
+
+      <item>For the multiplaction operator
+      <math|\<cdot\>:\<bbb-R\>\<times\>\<bbb-R\>\<rightarrow\>\<bbb-R\>> we
+      have:
+
+      <\description>
+        <item*|commutativity>
+
+        <item*|<math|neutral element>>
+
+        <item*|inverse element>
+
+        <item*|associativity>
+
+        <item*|distibutive element>
+      </description>
+    </enumerate>
+  </proof>
 
   \;
 
@@ -6987,39 +7196,46 @@
     <associate|eq 9.28.030|<tuple|9.25|?>>
     <associate|eq 9.29.030|<tuple|9.26|?>>
     <associate|eq 9.3.033|<tuple|9.3|?>>
-    <associate|eq 9.30.030|<tuple|9.54|?>>
+    <associate|eq 9.30.030|<tuple|9.57|?>>
     <associate|eq 9.30.031|<tuple|9.28|?>>
-    <associate|eq 9.31.030|<tuple|9.55|?>>
+    <associate|eq 9.31.030|<tuple|9.58|?>>
     <associate|eq 9.31.031|<tuple|9.29|?>>
-    <associate|eq 9.32.030|<tuple|9.56|?>>
+    <associate|eq 9.32.030|<tuple|9.59|?>>
     <associate|eq 9.32.031|<tuple|9.30|?>>
-    <associate|eq 9.33.030|<tuple|9.57|?>>
+    <associate|eq 9.33.030|<tuple|9.60|?>>
     <associate|eq 9.33.031|<tuple|9.31|?>>
     <associate|eq 9.34.031|<tuple|9.32|?>>
     <associate|eq 9.35.031|<tuple|9.33|?>>
     <associate|eq 9.36.031|<tuple|9.34|?>>
     <associate|eq 9.37.031|<tuple|9.35|?>>
+    <associate|eq 9.37.034|<tuple|9.37|?>>
+    <associate|eq 9.37.035|<tuple|9.37|?>>
     <associate|eq 9.38.031|<tuple|9.36|?>>
-    <associate|eq 9.39.032|<tuple|9.37|?>>
+    <associate|eq 9.38.035|<tuple|9.38|?>>
+    <associate|eq 9.39.032|<tuple|9.40|?>>
+    <associate|eq 9.39.035|<tuple|9.39|?>>
     <associate|eq 9.4.033|<tuple|9.4|?>>
-    <associate|eq 9.40.032|<tuple|9.38|?>>
-    <associate|eq 9.41.032|<tuple|9.39|?>>
-    <associate|eq 9.42.032|<tuple|9.40|?>>
-    <associate|eq 9.42.033|<tuple|9.43|?>>
-    <associate|eq 9.43.032|<tuple|9.41|?>>
-    <associate|eq 9.43.033|<tuple|9.44|?>>
-    <associate|eq 9.44.032|<tuple|9.42|?>>
-    <associate|eq 9.44.033|<tuple|9.45|?>>
-    <associate|eq 9.45.033|<tuple|9.47|?>>
-    <associate|eq 9.45.034|<tuple|9.46|?>>
-    <associate|eq 9.46.033|<tuple|9.48|?>>
-    <associate|eq 9.47.033|<tuple|9.49|?>>
-    <associate|eq 9.49.034|<tuple|9.50|?>>
+    <associate|eq 9.40.032|<tuple|9.41|?>>
+    <associate|eq 9.41.032|<tuple|9.42|?>>
+    <associate|eq 9.42.032|<tuple|9.43|?>>
+    <associate|eq 9.42.033|<tuple|9.46|?>>
+    <associate|eq 9.43.032|<tuple|9.44|?>>
+    <associate|eq 9.43.033|<tuple|9.47|?>>
+    <associate|eq 9.44.032|<tuple|9.45|?>>
+    <associate|eq 9.44.033|<tuple|9.48|?>>
+    <associate|eq 9.45.033|<tuple|9.50|?>>
+    <associate|eq 9.45.034|<tuple|9.49|?>>
+    <associate|eq 9.46.033|<tuple|9.51|?>>
+    <associate|eq 9.47.033|<tuple|9.52|?>>
+    <associate|eq 9.49.034|<tuple|9.53|?>>
     <associate|eq 9.5.033|<tuple|9.5|?>>
-    <associate|eq 9.50.034|<tuple|9.51|?>>
-    <associate|eq 9.51.034|<tuple|9.52|?>>
-    <associate|eq 9.52.034|<tuple|9.53|?>>
+    <associate|eq 9.50.034|<tuple|9.54|?>>
+    <associate|eq 9.51.034|<tuple|9.55|?>>
+    <associate|eq 9.52.034|<tuple|9.56|?>>
+    <associate|eq 9.58.034|<tuple|9.58|?>>
+    <associate|eq 9.59.034|<tuple|9.62|?>>
     <associate|eq 9.6.030|<tuple|9.6|?>>
+    <associate|eq 9.60.034|<tuple|9.61|?>>
     <associate|integeres order|<tuple|7.28|?>>
     <associate|integers|<tuple|7.2|?>>
     <associate|integers (-1).n|<tuple|7.16|?>>
@@ -7131,22 +7347,24 @@
     <associate|rational totally ordered|<tuple|8.32|?>>
     <associate|rational x-y|<tuple|8.9|?>>
     <associate|rational {0}|<tuple|8.21|?>>
-    <associate|real -(a.b)=(-a).b=(a.(-b)|<tuple|9.27|?>>
+    <associate|real -(a.b)=(-a).b=(a.(-b)|<tuple|9.28|?>>
     <associate|real 1.a=a for positive numbers|<tuple|9.20|?>>
     <associate|real Dedekind's cut|<tuple|9.1|?>>
     <associate|real NQ bijection|<tuple|9.7|?>>
-    <associate|real RxR|<tuple|9.25|?>>
+    <associate|real RxR|<tuple|9.26|?>>
     <associate|real a.b=b.a positive numbers|<tuple|9.21|?>>
+    <associate|real a^-1|<tuple|9.29|?>>
     <associate|real associativity positive numbers|<tuple|9.22|?>>
+    <associate|real distributivity|<tuple|9.23|?>>
     <associate|real division of real numbers in positive and negative
     numbers|<tuple|9.16|?>>
+    <associate|real field|<tuple|9.30|?>>
     <associate|real gap theorem|<tuple|9.8|?>>
     <associate|real group|<tuple|9.14|?>>
     <associate|real lemma for sum operator|<tuple|9.12|?>>
-    <associate|real multiplication operator|<tuple|9.26|?>>
+    <associate|real multiplication operator|<tuple|9.27|?>>
     <associate|real negastive cut of rational cut|<tuple|9.10|?>>
     <associate|real negative cut|<tuple|9.9|?>>
-    <associate|real neutral element of positive numbers|<tuple|9.20|?>>
     <associate|real positive negative numbers|<tuple|9.15|?>>
     <associate|real product is internal|<tuple|9.19|?>>
     <associate|real property to determine membership of a cut|<tuple|9.3|?>>
