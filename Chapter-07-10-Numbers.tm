@@ -5040,7 +5040,7 @@
   We embed now the rational numbers in the set of reals.
 
   <\definition>
-    <label|reals QR>The set <math|\<bbb-Q\><rsub|\<bbb-R\>>> is defined by\ 
+    <label|real QR>The set <math|\<bbb-Q\><rsub|\<bbb-R\>>> is defined by\ 
 
     <\equation*>
       \<bbb-Q\><rsub|\<bbb-R\>>=<around*|{|\<alpha\><rsub|q>\|q\<in\>\<bbb-Q\>|}>\<subseteq\>\<bbb-R\>
@@ -5055,7 +5055,7 @@
   bijection.
 
   <\theorem>
-    <label|real NQ bijection><math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Q\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>>>
+    <label|real QR bijection><math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Q\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>>>
     defined by <math|i<rsub|\<bbb-Q\>><around*|(|q|)>=\<alpha\><rsub|q>> is a
     bijection.
   </theorem>
@@ -6458,7 +6458,7 @@
 
       <item>Let <math|q\<in\>inv<around*|(|\<alpha\>|)>> and
       <math|r\<in\>\<bbb-Q\>\\inv<around*|(|\<alpha\>|)>>. For <math|q> we
-      have the following possibilities:
+      have the follTowing possibilities:
 
       <\description>
         <item*|<math|q\<leqslant\>0>>Then as
@@ -7781,6 +7781,419 @@
     </enumerate>
   </proof>
 
+  Remember that <math|x+<around*|(|-y|)>> has a shorthand notation
+  <math|x-y>, in the same way we have some shorthand notations for
+  multiplication with a inverse element.
+
+  <\notation>
+    If <math|x,y\<in\>\<bbb-R\>> <math|x\<neq\>0> then we use the following
+    shorthand notation\ 
+
+    <\enumerate>
+      <item><math|x<rsup|-1>> is noted as <math|1/x>
+
+      <item><math|y\<cdot\>x<rsup|-1>> is noted as <math|y/x>
+    </enumerate>
+  </notation>
+
+  We show now how the rational numbers as a field can be embedded in the
+  field of the real numbers. The primary candidate fore this are the rational
+  cuts, lets review some of the properties of the rational cuts. First we
+  need two little lemmas.
+
+  <\lemma>
+    <label|real inverse of rational cut>If <math|r\<in\>\<bbb-Q\>> such that
+    <math|\<alpha\><rsub|r>\<in\>\<bbb-R\><rsup|+>> then
+    <math|inv<around*|(|\<alpha\><rsub|r>|)>=\<alpha\><rsub|r<rsup|-1>>>
+  </lemma>
+
+  <\proof>
+    As <math|\<alpha\><rsub|r>\<in\>\<bbb-R\><rsup|+> we have
+    0\<in\>\<alpha\><rsub|r>> hence <math|0\<less\>r\<Rightarrow\>0\<less\>r<rsup|-1>>.
+    Let <math|x\<in\>inv<around*|(|\<alpha\><rsub|r>|)>> then we have for
+    <math|x> to consider:
+
+    <\description>
+      <item*|<math|x\<leqslant\>0>>Then <math|x\<leqslant\>0\<less\>r<rsup|-1>>
+      proving that <math|x\<in\>\<alpha\><rsub|r<rsup|-1>>>.
+
+      <item*|<math|0\<less\>x>>Then <math|x\<nin\>\<bbb-Q\><rsup|-><rsub|0>>
+      so there exists a <math|s\<in\>\<bbb-Q\>\\\<alpha\><rsub|r>> such that
+      <math|0\<less\>s> and <math|\<exists\>t\<in\>\<bbb-Q\>\\\<alpha\>\<vdash\>t\<less\>s>
+      such that <math|x=s<rsup|-1>>. Hence <math|s=x<rsup|-1>> and
+      <math|x<rsup|-1>\<in\>\<bbb-Q\>\\\<alpha\><rsub|r>> and
+      <math|\<exists\>t\<in\>\<bbb-Q\>\\\<alpha\><rsub|r>> such that
+      <math|t\<less\>x<rsup|-1>>. As <math|\<alpha\><rsub|r>> is a rational
+      cut we haveby [theorem: <reference|real rational cut>] that
+      <math|r=min<around*|(|\<bbb-Q\>\\\<alpha\><rsub|r>|)>> hence
+      <math|\<forall\>t\<in\>\<bbb-Q\>\\\<alpha\><rsub|r>> we have
+      <math|r\<leqslant\>t>, from which we conclude that
+      <math|x<rsup|-1>\<neq\>r>. As <math|x<rsup|-1>\<in\>\<bbb-Q\>\\\<alpha\><rsub|r>\<Rightarrow\>r\<leqslant\>x<rsup|-1>>
+      we conclude that <math|0\<less\>r\<less\>x<rsup|-1>> or using [theorem:
+      <reference|rational properties of 0, 1 and inverse>] that
+      <math|x\<less\>r<rsup|-1>>. Hence we have
+      <math|x\<in\>\<alpha\><rsub|r<rsup|-1>>>
+    </description>
+
+    So we have that\ 
+
+    <\equation>
+      <label|eq 9.67.036>inv<around*|(|\<alpha\><rsub|r>|)>\<subseteq\>\<alpha\><rsub|r<rsup|-1>>
+    </equation>
+
+    Let <math|x\<in\>\<alpha\><rsub|r<rsup|-1>>>. For <math|x> we have
+    either:
+
+    <\description>
+      <item*|<math|x\<leqslant\>0>>Then <math|x\<in\>\<bbb-Q\><rsup|-><rsub|0>>
+      so that <math|x\<in\>inv<around*|(|\<alpha\><rsub|r>|)>>.
+
+      <item*|<math|0\<less\>x>>Then as <math|x\<in\>\<alpha\><rsub|r<rsup|-1>>>
+      we have that <math|x\<less\>r<rsup|-1>> so that
+      <math|r\<less\>x<rsup|-1>>, hence <math|x<rsup|-1>\<nin\>\<alpha\><rsub|r>>
+      or <math|x<rsup|-1>\<in\>\<bbb-Q\>\\\<alpha\><rsub|r>>, as
+      <math|0\<less\>r> we have <math|0\<less\>x<rsup|-1>>, further
+      <math|\<bbb-Q\>\\\<alpha\>\<ni\>min<around*|(|\<bbb-Q\>\\\<alpha\><rsub|r>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|real rational cut>]>>r\<less\>x<rsup|-1>>. Summarized we
+      have <math|x<rsup|-1>\<in\>\<bbb-Q\>\\\<alpha\><rsub|r>\<wedge\>0\<less\>x<rsup|-1>\<wedge\>\<exists\>t\<in\>\<bbb-Q\>\\\<alpha\><rsub|r>\<vdash\>t\<less\>x<rsup|-1>>
+      proving that <math|x\<in\>inv<around*|(|\<alpha\><rsub|r>|)>>.
+    </description>
+
+    So we have proved that <math|\<alpha\><rsub|r<rsup|-1>>\<in\>inv<around*|(|\<alpha\><rsub|r>|)>>,
+    combining this with [eq: <reference|eq 9.67.036>] gives
+
+    <\equation*>
+      inv<around*|(|\<alpha\><rsub|r>|)>=\<alpha\><rsub|r<rsup|-1>>
+    </equation*>
+  </proof>
+
+  <\lemma>
+    <label|real a_r.a_s=a_r.s>Let <math|\<alpha\><rsub|r>,\<alpha\><rsub|s>\<in\>\<bbb-R\><rsup|+>>
+    then <math|\<alpha\><rsub|r>\<odot\>\<alpha\><rsub|s>=\<alpha\><rsub|r\<cdot\>s>>
+  </lemma>
+
+  <\proof>
+    As <math|\<alpha\><rsub|r>,\<alpha\><rsub|s>\<in\>\<bbb-R\><rsup|+>> we
+    have <math|0\<in\>\<alpha\><rsub|r>\<wedge\>0\<in\>\<alpha\><rsub|s>> so
+    that\ 
+
+    <\equation>
+      <label|eq 9.67.036>0\<less\>r\<wedge\>0\<less\>s
+    </equation>
+
+    Let <math|x\<in\>\<alpha\><rsub|r>\<odot\>\<alpha\><rsub|s>> then we have
+    the following possibilities:
+
+    <\description>
+      <item*|<math|x\<leqslant\>0>>Then as
+      <math|0\<less\>r\<wedge\>0\<less\>s> we have that
+      <math|0\<less\>r\<cdot\>s> so that <math|x\<less\>r\<cdot\>s> proving
+      that <math|x\<in\>\<alpha\><rsub|r\<cdot\>s>>
+
+      <item*|<math|0\<less\>x>>Then we have
+      <math|x\<nin\>\<bbb-Q\><rsup|-><rsub|0>> so there exists
+      <math|u\<in\>\<alpha\><rsub|r>> and <math|v\<in\>\<alpha\><rsub|s>> so
+      that <math|x=u\<cdot\>v> with <math|0\<less\>u> and <math|0\<less\>v>.
+      As <math|u\<in\>\<alpha\><rsub|r>> and <math|v\<in\>\<alpha\>s> we have
+      <math|u\<less\>r> and <math|v\<less\>s>. So
+      <math|u\<cdot\>v\<less\>r\<cdot\>v> and
+      <math|r\<cdot\>v\<less\>r\<cdot\>s> hence
+      <math|x=u\<cdot\>v\<less\>r\<cdot\>s>.
+    </description>
+
+    So we conclude that\ 
+
+    <\equation>
+      <label|eq 9.68.036>\<alpha\><rsub|r>\<odot\>\<alpha\><rsub|s>\<subseteq\>\<alpha\><rsub|r\<cdot\>s>
+    </equation>
+
+    Let <math|x\<in\>\<alpha\><rsub|r\<cdot\>s>> then
+    <math|x\<less\>r\<cdot\>s>. For <math|x> we have now the following cases
+    to consider:\ 
+
+    <\description>
+      <item*|<math|x\<leqslant\>0>>Then <math|x\<in\>\<bbb-Q\><rsup|-><rsub|0>>
+      so that <math|x\<in\>\<alpha\><rsub|r>\<cdot\>\<alpha\><rsub|s>>\ 
+
+      <item*|<math|0\<less\>x>>As <math|0\<less\>r> we have by the density of
+      <math|\<bbb-Q\>> [see theorem: <reference|rational densitiy>] the
+      existence of <math|\<varepsilon\><rsub|1>\<in\>\<bbb-Q\>> such that
+      <math|0\<less\>\<varepsilon\><rsub|1>\<less\>r>. From
+      <math|x\<less\>r\<cdot\>s> it follows that <math|0\<less\>r\<cdot\>s-x>
+      hence, as <math|0\<less\>s\<Rightarrow\>0\<less\>s<rsup|-1>> we have
+      that <math|0\<less\><around*|(|r\<cdot\>s-x|)>\<cdot\>s<rsup|-1>=r-x\<cdot\>s<rsup|-1>>.
+      Using desnuty of <math|\<bbb-Q\>> again there exist a
+      <math|\<varepsilon\><rsub|2>\<in\>\<bbb-Q\>> such that
+      <math|0\<less\>\<varepsilon\><rsub|2>\<less\><around*|(|r\<cdot\>s-x|)>\<cdot\>s<rsup|-1>>.
+      Take now <math|\<varepsilon\>=min<around*|(|\<varepsilon\><rsub|1>,\<varepsilon\><rsub|3>|)>>
+      then we have\ 
+
+      <\equation>
+        <label|eq 9.69.036>0\<less\>\<varepsilon\>\<leqslant\>\<varepsilon\><rsub|1>\<less\>r<text|
+        and >0\<less\>\<varepsilon\>\<leqslant\>\<varepsilon\><rsub|2>\<less\>0\<less\>r-x\<cdot\>s<rsup|-1>
+      </equation>
+
+      From the above we have \ <math|x\<cdot\>s<rsup|-1>\<less\>r-\<varepsilon\>>
+      or as <math|0\<less\>x\<wedge\>0\<less\>s<rsup|-1>\<Rightarrow\>x\<cdot\>s<rsup|-1>>
+      that <math|0\<less\>x\<cdot\>s<rsup|-1>\<less\>r-\<varepsilon\>>
+      allowing use to apply [theorem: <reference|rational properties of 0, 1
+      and inverse>] giving
+
+      <\equation*>
+        0\<less\><around*|(|r-\<varepsilon\>|)><rsup|-1>\<less\><around*|(|x\<cdot\>s<rsup|-1>|)><rsup|-1>\<equallim\><rsub|<text|[theorem:
+        <reference|field inverse of product>>><around*|(|s<rsup|-1>|)><rsup|-1>\<cdot\>x<rsup|-1>=s\<cdot\>x<rsup|-1>
+      </equation*>
+
+      multiplying by <math|0\<less\>x> we get
+      <math|0\<less\>x\<cdot\><around*|(|r-\<varepsilon\>|)><rsup|-1>\<less\>s>
+      so that <math|>
+
+      <\equation>
+        <label|eq 9.70.036>0\<less\>x\<cdot\><around*|(|r-\<varepsilon\>|)><rsup|-1>\<in\>\<alpha\><rsub|s>
+      </equation>
+
+      As <math|0\<less\>\<varepsilon\>\<less\>r> [see eq: <reference|eq
+      9.69.036>] we have <math|0\<less\>r-\<varepsilon\>\<less\>r> so that\ 
+
+      <\equation>
+        <label|eq 9.71.036>0\<less\>r-s\<in\>\<alpha\><rsub|r>
+      </equation>
+
+      Now <math|<around*|(|x\<cdot\><around*|(|r-\<varepsilon\>|)><rsup|-1>|)>\<cdot\><around*|(|r-s|)>=x>
+      which combined with [eqs: <reference|eq 9.70.036>, <reference|eq
+      9.71.036>] proves that <math|x\<in\>\<alpha\><rsub|r>\<cdot\>\<alpha\><rsub|s>>.
+    </description>
+
+    So in all cases we have <math|x\<in\>\<alpha\><rsub|r>\<cdot\>\<alpha\><rsub|s>>
+    hence it follows that <math|\<alpha\><rsub|r\<cdot\>s>\<subseteq\>\<alpha\><rsub|r>\<cdot\>\<alpha\><rsub|s>>.
+    Combining this with [eq: <reference|eq 9.68.036>] proves that\ 
+
+    <\equation*>
+      \<alpha\><rsub|r\<cdot\>s>=\<alpha\><rsub|r>\<cdot\>\<alpha\><rsub|s>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|real rational cut properties>Let <math|r,s\<in\>\<bbb-Q\>> then we
+    have\ 
+
+    <\enumerate>
+      <item><math|\<alpha\><rsub|r>+\<alpha\><rsub|s>=\<alpha\><rsub|r+s>>
+
+      <item><math|-\<alpha\><rsub|r>=\<alpha\><rsub|-r>>
+
+      <item><math|\<alpha\><rsub|r>\<cdot\>\<alpha\><rsub|s>=\<alpha\><rsub|r\<cdot\>s>>
+
+      <item>If <math|\<alpha\><rsub|r>\<neq\>0> then
+      <math|1/\<alpha\><rsub|r>\<equallim\><rsub|notation><around*|(|\<alpha\><rsub|r>|)><rsup|-1>=\<alpha\><rsub|r<rsup|-1>>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|x\<in\>\<alpha\><rsub|r>+\<alpha\><rsub|s>> then there
+      exists <math|u\<in\>\<alpha\><rsub|r>> and
+      <math|v\<in\>\<alpha\><rsub|s>> such that <math|x=u+v>. As
+      <math|u\<in\>\<alpha\><rsub|r>> and <math|v\<in\>\<alpha\><rsub|s>> we
+      have that <math|u\<less\>r> and <math|v\<less\>s> so that
+      <math|u+v\<less\>r+v> and <math|v+r\<less\>s+r> giving
+      <math|x=u+v\<less\>r+s> proving that
+      <math|x\<in\>\<alpha\><rsub|r>+\<alpha\><rsub|s>>. Hence we have\ 
+
+      <\equation>
+        <label|eq 9.67.035>\<alpha\><rsub|r>+\<alpha\><rsub|s>\<subseteq\>\<alpha\><rsub|r+s>
+      </equation>
+
+      Let <math|x\<in\>\<alpha\><rsub|r+s>> then <math|x\<less\>r+s> hence
+      <math|x-r\<less\>s>. Using the density of <math|\<bbb-Q\>> [see
+      theorem: <reference|rational densitiy>] there exist a
+      <math|z\<in\>\<bbb-Q\>> such that <math|x-r\<less\>z\<less\>s>. Then
+      <math|z\<in\>\<alpha\><rsub|s>> and if we define
+      <math|\<varepsilon\>=z-<around*|(|x-r|)>> we have
+      <math|0\<less\>\<varepsilon\>\<Rightarrow\>-\<varepsilon\>\<less\>0>.
+      So <math|r-\<varepsilon\>=r+<around*|(|-\<varepsilon\>|)>\<less\>r>
+      proving that <math|r-\<varepsilon\>\<in\>\<alpha\><rsub|r>>. Hence\ 
+
+      <\equation>
+        <label|eq 9.68.035><around*|(|r-\<varepsilon\>|)>+z\<in\>\<alpha\><rsub|r>+\<alpha\><rsub|s>
+      </equation>
+
+      Now
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|r-\<varepsilon\>|)>+z>|<cell|=>|<cell|r-<around*|(|z-<around*|(|x-r|)>|)>+z>>|<row|<cell|>|<cell|=>|<cell|r-z+x-r+z>>|<row|<cell|>|<cell|=>|<cell|x>>>>
+      </eqnarray*>
+
+      so that by [eq: <reference|eq 9.68.035>]
+      <math|x\<in\>\<alpha\><rsub|r>+\<alpha\><rsub|s>>. Hence
+      <math|\<alpha\><rsub|r+s>\<subseteq\>\<alpha\><rsub|r>+\<alpha\><rsub|s>>
+      which together with [eq: <reference|eq 9.67.035>] proves\ 
+
+      <\equation*>
+        \<alpha\><rsub|r+s>=\<alpha\><rsub|r>+\<alpha\><rsub|s>
+      </equation*>
+
+      <item>This is stated in [theorem: <reference|real negastive cut of
+      rational cut>]
+
+      <item>Using [theorem: <reference|real RxR>] we have to look at the
+      following five cases:
+
+      <\description>
+        <item*|<math|\<alpha\><rsub|r>\<in\>\<bbb-R\><rsup|+>\<wedge\>\<alpha\><rsub|s>\<in\>\<bbb-R\><rsup|+>>>Then\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|\<alpha\><rsub|r>\<cdot\>\<alpha\><rsub|s>>|<cell|=>|<cell|\<alpha\><rsub|r>\<odot\>\<alpha\><rsub|s>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+          <reference|real a_r.a_s=a_r.s>]>>>|<cell|\<alpha\><rsub|r\<cdot\>s>>>>>
+        </eqnarray*>
+
+        <item*|<math|\<alpha\><rsub|r>\<in\>\<bbb-R\><rsup|+>\<wedge\>\<alpha\><rsub|s>\<in\>\<bbb-R\><rsup|->>>Then\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|\<alpha\><rsub|r>\<cdot\>\<alpha\><rsub|s>>|<cell|=>|<cell|-<around*|(|\<alpha\><rsub|r>\<odot\><around*|(|-\<alpha\><rsub|s>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|2|)>>>|<cell|-<around*|(|\<alpha\><rsub|r>\<odot\>\<alpha\><rsub|-s>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+          <reference|real a_r.a_s=a_r.s>]>>>|<cell|-\<alpha\><rsub|r\<cdot\><around*|(|-s|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|rational (-q).(-r)>>>>|<cell|-\<alpha\><rsub|-<around*|(|r\<cdot\>s|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|2|)>>>|<cell|\<alpha\><rsub|-<around*|(|-<around*|(|r\<cdot\>s|)>|)>>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\><rsub|r\<cdot\>s>>>>>
+        </eqnarray*>
+
+        <item*|<math|\<alpha\><rsub|r>\<in\>\<bbb-R\><rsup|->\<wedge\>\<alpha\><rsub|s>\<in\>\<bbb-R\><rsup|+>>>Then\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|\<alpha\><rsub|r>\<cdot\>\<alpha\><rsub|s>>|<cell|=>|<cell|-<around*|(|<around*|(|-\<alpha\><rsub|r>|)>\<odot\>\<alpha\><rsub|s>|)>>>|<row|<cell|>|<cell|\<equallim\>>|<cell|-<around*|(|\<alpha\><rsub|-r>\<odot\>\<alpha\><rsub|s>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+          <reference|real a_r.a_s=a_r.s>]>>>|<cell|-<around*|(|\<alpha\><rsub|<around*|(|-r|)>\<cdot\>s>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|rational (-q).(-r)>>>>|<cell|-<around*|(|\<alpha\><rsub|-<around*|(|r\<cdot\>s|)>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|2|)>>>|<cell|\<alpha\><rsub|-<around*|(|-<around*|(|r\<cdot\>s|)>|)>>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\><rsub|r\<cdot\>s>>>>>
+        </eqnarray*>
+
+        <item*|<math|\<alpha\><rsub|r>\<in\>\<bbb-R\><rsup|->\<wedge\>\<alpha\><rsub|s>\<in\>\<bbb-R\><rsup|->>>Then
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|\<alpha\><rsub|r>\<cdot\>\<alpha\><rsub|s>>|<cell|=>|<cell|<around*|(|-\<alpha\><rsub|r>|)>\<odot\><around*|(|-\<alpha\><rsub|s>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|2|)>>>|<cell|\<alpha\><rsub|-r>\<odot\>\<alpha\><rsub|-s>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+          <reference|real a_r.a_s=a_r.s>]>>>|<cell|\<alpha\><rsub|<around*|(|-r|)>\<cdot\><around*|(|-s|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|rational (-q).(-r)>>>>|<cell|\<alpha\><rsub|r\<cdot\>s>>>>>
+        </eqnarray*>
+
+        <item*|<math|<around*|(|\<alpha\><rsub|r>,\<alpha\><rsub|s>|)>\<in\><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)><big|cup><around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)>>>Then
+        we have two subcases:
+
+        <\description>
+          <item*|<math|<around*|(|\<alpha\><rsub|r>,\<alpha\><rsub|s>|)>\<in\><around*|{|0|}>\<times\>\<bbb-R\>>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|\<alpha\><rsub|r>\<cdot\>\<alpha\><rsub|s>>|<cell|=>|<cell|0\<cdot\>\<alpha\><rsub|s>>>|<row|<cell|>|<cell|=>|<cell|0>>|<row|<cell|>|<cell|=>|<cell|\<alpha\><rsub|0>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\><rsub|0\<cdot\>s>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\><rsub|r\<cdot\>s>>>>>
+          </eqnarray*>
+
+          <item*|<math|<around*|(|\<alpha\><rsub|r>,\<alpha\><rsub|s>|)>\<in\>\<bbb-R\>\<times\><around*|{|0|}>>>Then
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|\<alpha\><rsub|r>\<cdot\>\<alpha\><rsub|s>>|<cell|=>|<cell|\<alpha\><rsub|r>\<cdot\>0>>|<row|<cell|>|<cell|=>|<cell|0>>|<row|<cell|>|<cell|=>|<cell|\<alpha\><rsub|0>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\><rsub|r\<cdot\>0>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\><rsub|r\<cdot\>s>>>>>
+          </eqnarray*>
+        </description>
+      </description>
+
+      <item>Let <math|\<alpha\><rsub|r>\<in\>\<bbb-R\>\\<around*|{|0|}>> then
+      we have the following possibilites:
+
+      <\description>
+        <item*|<math|\<alpha\><rsub|r>\<in\>\<bbb-R\><rsup|+>>>Then
+        <math|<around*|(|\<alpha\><rsub|r>|)><rsup|-1>=inv<around*|(|\<alpha\><rsub|r>|)>\<equallim\><rsub|<text|[lemma:
+        <reference|real inverse of rational
+        cut>]>>\<alpha\><rsub|r<rsup|-1>>>
+
+        <item*|<math|\<alpha\><rsub|r>\<in\>\<bbb-R\><rsup|->>>Then
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|\<alpha\><rsub|r>|)><rsup|-1>>|<cell|=>|<cell|-inv<around*|(|-\<alpha\><rsub|r>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|2|)>>>|<cell|-inv<around*|(|\<alpha\><rsub|-r>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+          <reference|real inverse of rational
+          cut>]>>>|<cell|-\<alpha\><rsub|<around*|(|-r|)><rsup|-1>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|rational properties of 0, 1 and
+          inverse>]>>>|<cell|-\<alpha\><rsub|-<around*|(|r<rsup|-1>|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|2|)>>>|<cell|\<alpha\><rsub|-<around*|(|-<around*|(|r<rsup|-1>|)>|)>>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\><rsub|r<rsup|=1>>>>>>
+        </eqnarray*>
+      </description>
+    </enumerate>
+  </proof>
+
+  We show now that <math|\<bbb-Q\><rsub|\<bbb-R\>>> is a embedding of
+  <math|\<bbb-Q\>> in <math|\<bbb-R\>> that conserves the field structure.
+
+  <\theorem>
+    For <math|\<bbb-Q\><rsub|\<bbb-R\>>=<around*|{|\<alpha\><rsub|r>\|r\<in\>\<bbb-Q\>|}>>
+    [definition: <reference|real QR>] we have:
+
+    <\enumerate>
+      <item><math|<around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-R\>>,+,\<cdot\>|\<rangle\>>>
+      is a sub field of <math|<around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>>
+
+      <item>The function <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Q\>\<rightarrow\>\<bbb-R\>>
+      defined by <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|q|)>=\<alpha\><rsub|q>>
+      is a field isomorphism
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|x,y\<in\>\<bbb-Q\><rsub|\<bbb-R\>>> then we have that
+      <math|\<exists\>r,s\<in\>\<bbb-Q\>> such that
+      <math|x=\<alpha\><rsub|r>> and <math|y=\<alpha\><rsub|s>>. Then we
+      have:
+
+      <\enumerate>
+        <item><math|x+y=\<alpha\><rsub|r>+\<alpha\><rsub|s>\<equallim\><rsub|<text|[theorem:
+        <reference|real rational cut properties>]>>\<alpha\><rsub|r+s>\<in\>\<bbb-Q\><rsub|\<bbb-R\>>>
+
+        <item><math|x\<cdot\>y=\<alpha\><rsub|r>\<cdot\>\<alpha\><rsub|s>\<equallim\><rsub|<text|[theorem:
+        <reference|real rational cut properties>]>>\<alpha\><rsub|r\<cdot\>s>\<in\>\<bbb-Q\><rsub|\<bbb-R\>>>
+
+        <item>If <math|x\<neq\>0> then <math|x<rsup|-1>=<around*|(|\<alpha\><rsub|r>|)><rsup|-1>=\<alpha\><rsub|r<rsup|-1>>\<in\>\<bbb-Q\><rsub|\<bbb-R\>>>
+
+        <item><math|0=\<alpha\><rsub|0>\<in\>\<bbb-Q\><rsub|\<bbb-R\>>>
+
+        <item><math|1=\<alpha\><rsub|1>\<in\>\<bbb-Q\><rsub|\<bbb-R\>>>
+      </enumerate>
+
+      which proves that <math|<around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-R\>>,+,\<cdot\>|\<rangle\>>>
+      is a sub field of <math|<around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>>.
+
+      <item>Using [theorem: <reference|real QR bijection>] it follows that\ 
+
+      <\equation*>
+        i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Q\>\<rightarrow\>\<bbb-R\><text|
+        is a bijection>
+      </equation*>
+
+      Next we have to prove the homeomorphism properties:
+
+      <\enumerate>
+        <item>If <math|r,s\<in\>\<bbb-Q\>> then
+        <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|r+s|)>=\<alpha\><rsub|r+s>\<equallim\><rsub|<text|[theorem:
+        <reference|real rational cut properties>]>>\<alpha\><rsub|r>+\<alpha\><rsub|s>=i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|r|)>+i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|s|)><rsub|>>
+
+        <item>If <math|r,s\<in\>\<bbb-Q\>> then
+        <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|r\<cdot\>s|)>=\<alpha\><rsub|r>\<cdot\>\<alpha\><rsub|s>\<equallim\><rsub|<text|[theorem:
+        <reference|real rational cut properties>]>>\<alpha\><rsub|r\<cdot\>s>=i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|r|)>\<cdot\>i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|s|)>>
+
+        <item><math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|1|)>=\<alpha\><rsub|1>=1>
+      </enumerate>
+    </enumerate>
+  </proof>
+
+  <\corollary>
+    <label|real QR is denumerable>The set <math|\<bbb-Q\><rsub|\<bbb-R\>>> is
+    denumerable.
+  </corollary>
+
+  <\proof>
+    TODO
+  </proof>
+
+  \;
+
+  \;
+
+  \;
+
   \;
 
   \;
@@ -7957,6 +8370,14 @@
     <associate|eq 9.60.034|<tuple|9.63|?>>
     <associate|eq 9.65.035|<tuple|9.65|?>>
     <associate|eq 9.66.035|<tuple|9.66|?>>
+    <associate|eq 9.67.035|<tuple|9.73|?>>
+    <associate|eq 9.67.036|<tuple|9.67|?>>
+    <associate|eq 9.68.035|<tuple|9.74|?>>
+    <associate|eq 9.68.036|<tuple|9.69|?>>
+    <associate|eq 9.69.036|<tuple|9.70|?>>
+    <associate|eq 9.70.036|<tuple|9.71|?>>
+    <associate|eq 9.71.036|<tuple|9.72|?>>
+    <associate|eq real inverse of rational cut|<tuple|9.33|?>>
     <associate|integeres order|<tuple|7.28|?>>
     <associate|integers|<tuple|7.2|?>>
     <associate|integers (-1).n|<tuple|7.16|?>>
@@ -8072,10 +8493,14 @@
     <associate|real 1.a=a for positive numbers|<tuple|9.20|?>>
     <associate|real Dedekind's cut|<tuple|9.1|?>>
     <associate|real NQ bijection|<tuple|9.7|?>>
+    <associate|real QR|<tuple|9.6|?>>
+    <associate|real QR bijection|<tuple|9.7|?>>
+    <associate|real QR is denumerable|<tuple|9.37|?>>
     <associate|real RxR|<tuple|9.26|?>>
     <associate|real a.(b+g) where b or g is negative|<tuple|9.29|?>>
     <associate|real a.b=b.a positive numbers|<tuple|9.21|?>>
     <associate|real a^-1|<tuple|9.30|?>>
+    <associate|real a_r.a_s=a_r.s|<tuple|9.34|?>>
     <associate|real associativity positive numbers|<tuple|9.22|?>>
     <associate|real distributivity|<tuple|9.23|?>>
     <associate|real division of real numbers in positive and negative
@@ -8085,6 +8510,7 @@
     <associate|real group|<tuple|9.14|?>>
     <associate|real inv|<tuple|9.24|?>>
     <associate|real inv(a) is inverse element|<tuple|9.25|?>>
+    <associate|real inverse of rational cut|<tuple|9.33|?>>
     <associate|real lemma for sum operator|<tuple|9.12|?>>
     <associate|real multiplication operator|<tuple|9.27|?>>
     <associate|real negastive cut of rational cut|<tuple|9.10|?>>
@@ -8093,6 +8519,7 @@
     <associate|real product is internal|<tuple|9.19|?>>
     <associate|real property to determine membership of a cut|<tuple|9.3|?>>
     <associate|real rational cut|<tuple|9.4|?>>
+    <associate|real rational cut properties|<tuple|9.35|?>>
     <associate|real real numbers|<tuple|9.2|?>>
     <associate|real sum is a operator|<tuple|9.13|?>>
     <associate|reals QR|<tuple|9.6|?>>
