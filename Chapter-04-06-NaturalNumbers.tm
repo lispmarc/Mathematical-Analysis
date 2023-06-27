@@ -1139,6 +1139,28 @@
     \;
   </proof>
 
+  <\theorem>
+    <label|field x=y\<less\>=\<gtr\>x.z=y.z if z\<less\>\<gtr\>0>Let
+    <math|<around*|\<langle\>|F,\<oplus\>,\<odot\>|\<rangle\>>> be a field
+    and <math|x,y\<in\>F> and <math|z\<in\>F\\<around*|{|0|}>> then
+    <math|x=y\<Leftrightarrow\>x\<cdot\>z=y\<cdot\>z>
+  </theorem>
+
+  <\proof>
+    \ As <math|z\<neq\>0> we have that <math|z<rsup|-1>> exist.
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>If <math|x=y> then clearly
+      <math|x\<cdot\>z=y\<cdot\>z>
+
+      <item*|<math|\<Leftarrow\>>>If <math|x\<cdot\>z+y\<cdot\>z> then
+
+      <\equation*>
+        x=x\<cdot\>1=x\<cdot\>*<around*|(|z\<cdot\>z<rsup|-1>|)>=*<around*|(|x\<cdot\>z|)>\<cdot\>z<rsup|-1>\<equallim\><rsub|x\<cdot\>z=y\<cdot\>z><around*|(|y\<cdot\>z|)>\<cdot\>z<rsup|-1>=y\<cdot\><around*|(|z\<cdot\>z<rsup|-1>|)>=y\<cdot\>1=y
+      </equation*>
+    </description>
+  </proof>
+
   <\definition>
     <label|field subfield><index|subfield>If
     <math|<around*|\<langle\>|F,\<oplus\>,\<odot\>|\<rangle\>>> is a field
@@ -7645,7 +7667,7 @@
     <associate|auto-24|<tuple|ring isomorphism|115>>
     <associate|auto-25|<tuple|4.3|115>>
     <associate|auto-26|<tuple|field|115>>
-    <associate|auto-27|<tuple|subfield|116>>
+    <associate|auto-27|<tuple|subfield|117>>
     <associate|auto-28|<tuple|field homeomorphism|117>>
     <associate|auto-29|<tuple|5|119>>
     <associate|auto-3|<tuple|4.1|107>>
@@ -7709,7 +7731,7 @@
     <associate|denumerable every subset is finite
     denumerable.|<tuple|6.55|162>>
     <associate|denumerable is not subset of a natural
-    number|<tuple|6.26|150>>
+    number|<tuple|6.26|149>>
     <associate|denumerable product nxN is denumerable|<tuple|6.59|164>>
     <associate|denumerable product of denumerable sets is
     denumerable|<tuple|6.58|164>>
@@ -7724,7 +7746,7 @@
     <associate|denumerable union of a finite family of denumerable sets is
     denumerable|<tuple|6.61|164>>
     <associate|denumerable with one less element|<tuple|6.25|149>>
-    <associate|empty set is finite|<tuple|6.20|149>>
+    <associate|empty set is finite|<tuple|6.20|148>>
     <associate|eq 5.1.019|<tuple|5.1|122>>
     <associate|eq 5.10.019|<tuple|5.10|127>>
     <associate|eq 5.11.019|<tuple|5.11|127>>
@@ -7752,7 +7774,7 @@
     <associate|eq 6.18.020|<tuple|6.17|159>>
     <associate|eq 6.18.022|<tuple|6.18|160>>
     <associate|eq 6.19.022|<tuple|6.19|160>>
-    <associate|eq 6.2.019|<tuple|6.2|151>>
+    <associate|eq 6.2.019|<tuple|6.2|150>>
     <associate|eq 6.20.022|<tuple|6.20|160>>
     <associate|eq 6.21.022|<tuple|6.21|160>>
     <associate|eq 6.22.022|<tuple|6.22|162>>
@@ -7781,13 +7803,16 @@
     <associate|every subset of a finite set is finite|<tuple|6.30|150>>
     <associate|extract maximum element of a family|<tuple|6.47|157>>
     <associate|field|<tuple|4.36|115>>
-    <associate|field homeomorphism|<tuple|4.43|117>>
+    <associate|field homeomorphism|<tuple|4.44|117>>
     <associate|field inverse is unique|<tuple|4.37|116>>
     <associate|field inverse of inverse|<tuple|4.38|116>>
-    <associate|field inverse of product|<tuple|4.40|?>>
-    <associate|field isomorphism and neutral element|<tuple|4.45|117>>
-    <associate|field subfield|<tuple|4.41|116>>
-    <associate|field subfield is a field|<tuple|4.42|116>>
+    <associate|field inverse of product|<tuple|4.40|116>>
+    <associate|field isomorphism and neutral element|<tuple|4.46|118>>
+    <associate|field subfield|<tuple|4.42|117>>
+    <associate|field subfield is a field|<tuple|4.43|117>>
+    <associate|field x=y\<less\>=\<gtr\>x+z=y+z|<tuple|4.41|?>>
+    <associate|field x=y\<less\>=\<gtr\>x.z=y.z if
+    z\<less\>\<gtr\>0|<tuple|4.41|?>>
     <associate|field x^-1=y^-1=\<gtr\>x=y|<tuple|4.39|116>>
     <associate|finite ordered sets have a maximum and
     minimum|<tuple|6.44|156>>
@@ -7821,7 +7846,7 @@
     <associate|infinite condition (1)|<tuple|6.34|152>>
     <associate|infinite set|<tuple|6.21|149>>
     <associate|inverse of a field isomorphism is a field
-    isomorphism|<tuple|4.44|117>>
+    isomorphism|<tuple|4.45|117>>
     <associate|iteration final|<tuple|5.84|142>>
     <associate|mapping of N to a finite set (1)|<tuple|6.45|156>>
     <associate|mapping of N to a finite set (2)|<tuple|6.46|157>>
@@ -7938,7 +7963,7 @@
     <associate|subset of finite sets|<tuple|6.40|155>>
     <associate|surjection f:A-\<gtr\>B if A is finite then B is
     finite|<tuple|6.41|155>>
-    <associate|union of two finite sets is finite|<tuple|6.31|151>>
+    <associate|union of two finite sets is finite|<tuple|6.31|150>>
     <associate|{n,..,m} is bijective to S_(m-n)+1|<tuple|6.18|148>>
   </collection>
 </references>
