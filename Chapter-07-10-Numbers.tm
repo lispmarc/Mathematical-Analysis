@@ -3915,7 +3915,13 @@
     <math|<around*|\<langle\>|\<bbb-Q\>,+,\<cdot\>|\<rangle\>>> and
     <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-Q\>>>
     defined by <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>><around*|(|z|)>=<frac|z|1>>
-    is a ring and order isomorphism.
+    is a ring isomorphism between <math|<around*|\<langle\>|\<bbb-Z\>,+,\<cdot\>|\<rangle\>>>
+    and <math|<around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-Q\>>,+,\<cdot\>|\<rangle\>>>
+    and a order order isomorphism between
+    <math|<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>> and
+    <math|<around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-Q\>>,\<leqslant\>|\<rangle\>>>
+    [using the induced order from <math|<around*|\<langle\>|\<bbb-Q\>,\<leqslant\>|\<rangle\>>>
+    [see theorem: <reference|order partial order on sub class>]]
   </theorem>
 
   <\proof>
@@ -8142,7 +8148,7 @@
   <math|\<bbb-Q\>> in <math|\<bbb-R\>> that conserves the field structure.
 
   <\theorem>
-    For <math|\<bbb-Q\><rsub|\<bbb-R\>>=<around*|{|\<alpha\><rsub|r>\|r\<in\>\<bbb-Q\>|}>>
+    <label|real field embedding Q>For <math|\<bbb-Q\><rsub|\<bbb-R\>>=<around*|{|\<alpha\><rsub|r>\|r\<in\>\<bbb-Q\>|}>>
     [definition: <reference|real QR>] we have:
 
     <\enumerate>
@@ -8217,6 +8223,17 @@
       <tformat|<table|<row|<cell|\<alpha\><rsup|0>>|<cell|=>|<cell|1>>|<row|<cell|\<alpha\><rsup|n+1>>|<cell|=>|<cell|\<alpha\>\<cdot\>\<alpha\><rsup|n>>>>>
     </eqnarray*>
   </definition>
+
+  <\theorem>
+    Let <math|\<alpha\>\<in\>\<bbb-R\>> we have
+    <math|\<alpha\><rsup|1>=\<alpha\>> and
+    <math|\<alpha\><rsup|2>=\<alpha\>\<cdot\>\<alpha\>>
+  </theorem>
+
+  <\proof>
+    We have <math|\<alpha\><rsup|1>=\<alpha\><rsup|0+1>=\<alpha\>\<cdot\>\<alpha\><rsup|0>=\<alpha\>\<cdot\>1=\<alpha\>>
+    and <math|\<alpha\><rsup|2>=\<alpha\><rsup|1+1>=\<alpha\>\<cdot\>\<alpha\><rsup|1>=\<alpha\>\<cdot\>\<alpha\>>
+  </proof>
 
   <\theorem>
     <label|real q^(n+m)=q^n.q^m>If <math|n,m\<in\>\<bbb-N\><rsub|0>> and
@@ -8628,10 +8645,10 @@
         <item>If <math|\<gamma\>\<in\>\<bbb-R\><rsup|-><rsup|>> then
         <math|\<alpha\>\<leqslant\>\<beta\>\<Leftrightarrow\>\<beta\>\<cdot\>\<gamma\>\<leqslant\>\<alpha\>\<cdot\>\<gamma\>>
 
-        <item>If <math|\<gamma\>\<in\>\<bbb-R\><rsup|+><rsub|0>> then
+        <item>If <math|\<gamma\>\<in\>\<bbb-R\><rsup|-><rsub|0>> then
         <math|\<alpha\>\<less\>\<beta\>\<Rightarrow\>\<beta\>\<cdot\>\<gamma\>\<leqslant\>\<alpha\>\<cdot\>\<gamma\>>
 
-        <item>If <math|\<gamma\>\<in\>\<bbb-R\><rsup|+><rsub|0>> then
+        <item>If <math|\<gamma\>\<in\>\<bbb-R\><rsup|-><rsub|0>> then
         <math|\<alpha\>\<leqslant\>\<beta\>\<Rightarrow\>\<beta\>\<cdot\>\<gamma\>\<leqslant\>\<alpha\>\<cdot\>\<gamma\>>
       </enumerate>
 
@@ -8645,12 +8662,20 @@
         <item><math|0\<leqslant\>\<alpha\><rsup|2>> and if
         <math|\<alpha\>\<neq\>0> then <math|0\<less\>\<alpha\><rsup|2>>
 
-        <item>If <math|\<alpha\>,\<beta\>\<in\>\<bbb-R\><rsup|+><rsub|0>>
-        then <math|\<alpha\>\<less\>\<beta\>\<Rightarrow\>\<alpha\><rsup|2>\<less\>\<beta\><rsup|2>>
+        <item>If <math|0\<less\>\<alpha\>\<less\>1> then
+        <math|\<forall\>n\<in\><around*|{|1,\<ldots\>,\<infty\>|}>> we have
+        <math|0\<less\>\<alpha\><rsup|n>\<less\>1>
+
+        <item>If <math|0\<less\>\<alpha\>\<less\>1> then
+        <math|\<forall\>n\<in\><around*|{|2,\<ldots\>,\<infty\>|}>> we have
+        <math|0\<less\>\<alpha\><rsup|n>\<less\>\<alpha\>>
       </enumerate>
 
+      <item>If <math|\<alpha\>,\<beta\>\<in\>\<bbb-R\><rsup|+><rsub|0>> then
+      <math|\<alpha\>\<less\>\<beta\>\<Rightarrow\>\<alpha\><rsup|2>\<less\>\<beta\><rsup|2>>
+
       <item>If <math|\<alpha\>,\<beta\>\<in\>\<bbb-R\>> such that
-      <math|1\<leqslant\>\<alpha\>>\ 
+      <math|1\<leqslant\>\<alpha\>> and <math|n\<in\>\<bbb-N\>>
 
       <\enumerate>
         <item>If <math|\<alpha\>\<less\>\<beta\>> then
@@ -8773,40 +8798,937 @@
           so that <math|\<alpha\>\<cdot\>\<gamma\>\<leqslant\>\<beta\>\<cdot\>\<gamma\>>
         </description>
 
-        <item>
+        <item>As <math|\<gamma\>\<in\>\<bbb-R\><rsup|+><rsub|0>> then we have
+        either:
 
-        <item>
+        <\description>
+          <item*|<math|\<gamma\>\<in\>\<bbb-R\><rsup|+>>>Then as
+          <math|\<alpha\>\<leqslant\>\<beta\>> we have by (7.b) that
+          <math|\<alpha\>\<cdot\>\<gamma\>\<leqslant\>\<beta\>\<cdot\>\<gamma\>>
 
-        <item>
+          <item*|<math|\<gamma\>=0>>The <math|\<alpha\>\<cdot\>\<gamma\>=0=\<beta\>\<cdot\>\<gamma\>>
+          so that <math|\<alpha\>\<cdot\>\<gamma\>\<leqslant\>\<beta\>\<cdot\>\<gamma\>>
+        </description>
 
-        <item>
+        <item>As <math|\<gamma\>\<in\>\<bbb-R\><rsup|->> it follows that
+        <math|-\<gamma\>\<in\>\<bbb-R\><rsup|+>> so that\ 
 
-        <item>
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|\<alpha\>\<less\>\<beta\>>|<cell|\<Leftrightarrowlim\><rsub|<around*|(|7.a|)>>>|<cell|\<alpha\>\<cdot\><around*|(|-\<gamma\>|)>\<less\>\<beta\>\<cdot\><around*|(|-\<gamma\>|)>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<text|[theorem:
+          <reference|real -(a.b)=(-a).b=(a.(-b)>]>>>|<cell|-<around*|(|\<alpha\>\<cdot\>\<gamma\>|)>\<less\>-<around*|(|\<beta\>\<cdot\>\<gamma\>|)>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<around*|(|5|)>>>|<cell|\<beta\>\<cdot\>\<gamma\>\<less\>\<alpha\>\<cdot\>\<gamma\>>>>>
+        </eqnarray*>
+
+        <item>As <math|\<gamma\>\<in\>\<bbb-R\><rsup|->> we have
+        <math|-\<gamma\>\<in\>\<bbb-R\><rsup|+>>, hence
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|\<alpha\>\<leqslant\>\<beta\>>|<cell|\<Leftrightarrowlim\><rsub|<around*|(|7.b|)>>>|<cell|\<alpha\>\<cdot\><around*|(|-\<gamma\>|)>\<leqslant\>\<beta\>\<cdot\><around*|(|-\<gamma\>|)>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<text|[theorem:
+          <reference|real -(a.b)=(-a).b=(a.(-b)>]>>>|<cell|-<around*|(|\<alpha\>\<cdot\>\<gamma\>|)>\<leqslant\>-<around*|(|\<beta\>\<cdot\>\<gamma\>|)>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<around*|(|5|)>>>|<cell|\<beta\>\<cdot\>\<gamma\>\<leqslant\>\<alpha\>\<cdot\>\<gamma\>>>>>
+        </eqnarray*>
+
+        <item>As <math|\<gamma\>\<in\>\<bbb-R\><rsup|-><rsub|0>> we have
+        <math|-\<gamma\>\<in\>\<bbb-R\><rsup|+><rsub|0>>, hence
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|\<alpha\>\<less\>\<beta\>>|<cell|\<Rightarrowlim\><rsub|<around*|(|7.c|)>>>|<cell|\<alpha\>\<cdot\><around*|(|-\<gamma\>|)>\<leqslant\>\<beta\>\<cdot\><around*|(|-\<gamma\>|)>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<text|[theorem:
+          <reference|real -(a.b)=(-a).b=(a.(-b)>]>>>|<cell|-<around*|(|\<alpha\>\<cdot\>\<gamma\>|)>\<leqslant\>-<around*|(|\<beta\>\<cdot\>\<gamma\>|)>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<around*|(|5|)>>>|<cell|\<beta\>\<cdot\>\<gamma\>\<leqslant\>\<alpha\>\<cdot\>\<gamma\>>>>>
+        </eqnarray*>
+
+        <item>As <math|\<gamma\>\<in\>\<bbb-R\><rsup|-><rsub|0>> we have
+        <math|-\<gamma\>\<in\>\<bbb-R\><rsup|+><rsub|0>>, hence
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|\<alpha\>\<leqslant\>\<beta\>>|<cell|\<Rightarrowlim\><rsub|<around*|(|7.d|)>>>|<cell|\<alpha\>\<cdot\><around*|(|-\<gamma\>|)>\<leqslant\>\<beta\>\<cdot\><around*|(|-\<gamma\>|)>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<text|[theorem:
+          <reference|real -(a.b)=(-a).b=(a.(-b)>]>>>|<cell|-<around*|(|\<alpha\>\<cdot\>\<gamma\>|)>\<leqslant\>-<around*|(|\<beta\>\<cdot\>\<gamma\>|)>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<around*|(|5|)>>>|<cell|\<beta\>\<cdot\>\<gamma\>\<leqslant\>\<alpha\>\<cdot\>\<gamma\>>>>>
+        </eqnarray*>
       </enumerate>
 
       <item>\ 
 
       <\enumerate>
-        <item>
+        <item>As <math|0\<less\>\<alpha\>> we have by (1) that
+        <math|\<alpha\>\<in\>\<bbb-R\><rsup|+>>, so
+        <math|\<alpha\><rsup|-1>=inv<around*|(|\<alpha\>|)>\<in\>\<bbb-R\><rsup|+>>
+        [see theorem: <reference|real inv>], which by (1) proves that
+        <math|0\<less\>\<alpha\><rsup|-1>>.
 
-        <item>
+        <item>As <math|0\<less\>\<alpha\>\<less\>\<beta\>> we have by (8.a)
+        that <math|0\<less\>\<alpha\><rsup|-1>> and
+        <math|0\<less\>\<beta\><rsup|-1>> so that by (1)
+        <math|\<alpha\><rsup|-1>,\<beta\><rsup|-1>\<in\>\<bbb-R\><rsup|+>>.
+        Hence we have\ 
 
-        <item>
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|\<alpha\>\<less\>\<beta\>>|<cell|\<Rightarrowlim\><rsub|<around*|(|7.a|)>>>|<cell|\<alpha\>\<cdot\>\<alpha\><rsup|-1>\<less\>\<beta\>\<cdot\>\<alpha\><rsup|-1>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|1\<less\>\<beta\>\<cdot\>\<alpha\><rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|1\<less\>\<alpha\><rsup|-1>\<cdot\>\<beta\>>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<around*|(|7.a|)>>>|<cell|1\<cdot\>\<beta\><rsup|-1>\<less\><around*|(|\<alpha\><rsup|-1>\<cdot\>\<beta\>|)>\<cdot\>\<beta\><rsup|-1>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|\<beta\><rsup|-1>\<less\>\<alpha\><rsup|-1>\<cdot\><around*|(|\<beta\>\<cdot\>\<beta\><rsup|-1>|)>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|\<beta\><rsup|-1>\<less\>\<alpha\><rsup|-1>\<cdot\>1>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|\<beta\><rsup|-1>\<less\>\<alpha\><rsup|-1>>>>>
+        </eqnarray*>
 
-        <item>
+        <item>As <math|\<alpha\>\<in\>\<bbb-R\>> then we have either:\ 
+
+        <\description>
+          <item*|<math|\<alpha\>=0>>Then <math|\<alpha\><rsup|2>=\<alpha\>\<cdot\>\<alpha\>=0>.
+
+          <item*|<math|\<alpha\>\<neq\>0>>Then we have either:\ 
+
+          <\description>
+            <item*|<math|\<alpha\>\<in\>\<bbb-R\><rsup|+>>>Then
+            <math|\<alpha\><rsup|2>=\<alpha\>\<cdot\>\<alpha\>\<in\>\<bbb-R\><rsup|+>>
+            [see theorem: <reference|real properties positive numbers>] hence
+            <math|0\<less\>\<alpha\><rsup|2>>
+
+            <item*|<math|\<alpha\>\<in\>\<bbb-R\><rsup|->>>Then
+            <math|-\<alpha\>\<in\>\<bbb-R\><rsup|+>> and by [theorem:
+            <reference|real product is internal>]
+            <math|<around*|(|-\<alpha\>|)>\<odot\><around*|(|-\<alpha\>|)>\<in\>\<bbb-R\><rsup|+>>,
+            so
+
+            <\equation*>
+              \<alpha\><rsup|2>=\<alpha\>\<cdot\>\<alpha\>=<around*|(|-\<alpha\>|)>\<circ\><around*|(|-\<alpha\>|)>\<in\>\<bbb-R\><rsup|+>
+            </equation*>
+
+            hence <math|0\<less\>\<alpha\><rsup|2>>
+          </description>
+        </description>
+
+        <item>We prove this by induction on <math|n> so let
+        <math|S=<around*|{|n\<in\><around*|{|1,\<ldots\>,\<infty\>|}>\|0\<less\>\<alpha\><rsup|n>\<less\>1|}>>
+        then we have:
+
+        <\description>
+          <item*|<math|1\<in\>S>>As <math|0\<less\>\<alpha\>\<less\>1> we
+          have by (7.a) that <math|0=0\<cdot\>\<alpha\>\<less\>\<alpha\><rsup|1>=\<alpha\>\<less\>1\<cdot\>\<alpha\>>
+          so \ that <math|0\<less\>\<alpha\><rsup|1>\<less\>\<alpha\>>
+          proving that <math|1\<in\>S>
+
+          <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>As <math|n\<in\>S>
+          we have <math|0\<less\>\<alpha\><rsup|n>\<less\>1>, so using (7.a)
+          we have that <math|0=0\<cdot\>\<alpha\>\<less\>\<alpha\><rsup|n>\<cdot\>\<alpha\>\<less\>1\<cdot\>\<alpha\>=\<alpha\>\<less\>1>
+          or <math|0\<less\>\<alpha\><rsup|n+1>\<less\>1>. Hence
+          <math|n+1\<in\>\<b-S\>>
+        </description>
+
+        Proving that <math|S=<around*|{|1,\<ldots\>,\<infty\>|}>> or
+        <math|\<forall\>n\<in\><around*|{|1,\<ldots\>,\<infty\>|}>> we have
+        <math|0\<less\>\<alpha\><rsup|n>\<less\>1>
+
+        <item>As <math|n\<in\><around*|{|2,\<ldots\>,\<infty\>|}>> we have
+        <math|2\<leqslant\>n\<Rightarrow\>1=2+<around*|(|-1|)>\<leqslant\>n+<around*|(|-1|)>=n-1>
+        so that <math|<around*|(|n-1|)>\<in\><around*|{|2,\<ldots\>,\<infty\>|}>>.
+        Using <math|<around*|(|8.d|)>> we have
+        <math|0\<less\>\<alpha\><rsup|n-1>\<less\>1> which as
+        <math|0\<less\>\<alpha\>> gives by (7.a)
+        <math|0\<less\>0\<cdot\>\<alpha\>\<less\>\<alpha\><rsup|n-1>\<cdot\>\<alpha\>\<less\>1\<cdot\>\<alpha\>=\<alpha\>>.
+        Or as <math|\<alpha\><rsup|n-1>\<cdot\>\<alpha\>=\<alpha\><rsup|n>>
+        that <math|0\<less\>\<alpha\><rsup|n>\<less\>\<alpha\>>.
       </enumerate>
 
-      <item>\ 
+      <item>As <math|\<alpha\>,\<beta\>\<in\>\<bbb-R\><rsup|+><rsub|0>> we
+      have for <math|\<alpha\>> either:
+
+      <\description>
+        <item*|<math|\<alpha\>=0>>Then as <math|\<alpha\>\<less\>\<beta\>> we
+        have <math|0\<less\>\<beta\>> hence <math|\<beta\>\<neq\>0> so that
+        by (8.c) <math|0\<less\>\<beta\><rsup|2>> which as
+        <math|\<alpha\><rsup|2>=0\<cdot\>0=0> proves that
+        <math|\<alpha\><rsup|2>\<less\>\<beta\><rsup|2>>.
+
+        <item*|<math|\<alpha\>\<in\>\<bbb-R\><rsup|+>>>Then by (1) we have
+        <math|0\<less\>\<alpha\>> and as <math|\<alpha\>\<less\>\<beta\>> we
+        have that <math|0\<less\>\<beta\>> so that by (1)
+        <math|\<alpha\>,\<beta\>\<in\>\<bbb-R\><rsup|+>>. Then by (7,a) we
+        have that <math|\<alpha\>\<cdot\>\<beta\>\<less\>\<beta\>\<cdot\>\<beta\>=\<beta\><rsup|2>>
+        and <math|\<alpha\><rsup|2>=\<alpha\>\<cdot\>\<alpha\>\<less\>\<beta\>\<cdot\>\<alpha\>=\<alpha\>\<cdot\>\<beta\>>
+        so that\ 
+
+        <\equation*>
+          \<alpha\><rsup|2>\<less\>\<beta\><rsup|2>
+        </equation*>
+      </description>
+
+      <item> Let <math|\<alpha\>,\<beta\>\<in\>\<bbb-R\>> such that
+      <math|1\<leqslant\>\<alpha\>> and <math|n\<in\>\<bbb-N\>>
 
       <\enumerate>
-        <item>
+        <item>If <math|\<alpha\>\<less\>\<beta\>> we have to prove that
+        <math|\<alpha\>\<less\>\<beta\><rsup|n>>. Let
+        <math|S=<around*|{|n\<in\><around*|{|1,\<ldots\>,n|}>\|\<alpha\>\<less\>\<beta\><rsup|n>|}>>
+        then we have:
 
-        <item>
+        <\description>
+          <item*|<math|1\<in\>S>>As <math|\<alpha\>\<less\>\<beta\>=\<beta\><rsup|1>>
+          we have that <math|1\<in\>S>
+
+          <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>As
+          <math|1\<leqslant\>\<alpha\>\<less\>\<beta\>\<Rightarrow\>1\<less\>\<beta\>>
+          we have by (7.a) that
+
+          <\equation>
+            <label|eq 9.80.036>\<alpha\>=1\<cdot\>\<alpha\>\<less\>\<beta\>\<cdot\>\<alpha\>=\<alpha\>\<cdot\>\<beta\>
+          </equation>
+
+          As <math|n\<in\>S> we have that
+          <math|\<alpha\>\<less\>\<beta\><rsup|n>> which by (7.a) gives
+          <math|\<alpha\>\<cdot\>\<beta\>\<less\>\<beta\><rsup|n>\<cdot\>\<beta\>=\<beta\><rsup|n+1>>,
+          combining this with [eq: <reference|eq 9.80.036>] proves
+          <math|\<alpha\>\<less\>\<beta\><rsup|n+1>>. So <math|n+1\<in\>S>.\ 
+        </description>
+
+        So <math|S=<around*|{|1,\<ldots\>,n|}>=\<bbb-N\>> hence
+        <math|\<forall\>n\<in\>\<bbb-N\>> we have
+        <math|\<alpha\>\<less\>\<beta\><rsup|n>>.
+
+        <item>If <math|\<alpha\>\<leqslant\>\<beta\>> we have to prove that
+        <math|\<alpha\>\<leqslant\>\<beta\><rsup|n>>. Let
+        <math|S=<around*|{|n\<in\><around*|{|1,\<ldots\>,n|}>\|\<alpha\>\<leqslant\>\<beta\><rsup|n>|}>>
+        then we have:
+
+        <\description>
+          <item*|<math|1\<in\>S>>As <math|\<alpha\>\<leqslant\>\<beta\>=\<beta\><rsup|1>>
+          we have that <math|1\<in\>S>
+
+          <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>As
+          <math|1\<leqslant\>\<alpha\>\<leqslant\>\<beta\>\<Rightarrow\>1\<leqslant\>\<beta\>>
+          we have by (7.a) that
+
+          <\equation>
+            <label|eq 9.81.036>\<alpha\>=1\<cdot\>\<alpha\>\<leqslant\>\<beta\>\<cdot\>\<alpha\>=\<alpha\>\<cdot\>\<beta\>
+          </equation>
+
+          As <math|n\<in\>S> we have that
+          <math|\<alpha\>\<leqslant\>\<beta\><rsup|n>> which by (7.a) gives
+          <math|\<alpha\>\<cdot\>\<beta\>\<leqslant\>\<beta\><rsup|n>\<cdot\>\<beta\>=\<beta\><rsup|n+1>>,
+          combining this with [eq: <reference|eq 9.81.036>] proves
+          <math|\<alpha\>\<leqslant\>\<beta\><rsup|n+1>>. So
+          <math|n+1\<in\>S>.\ 
+        </description>
+
+        So <math|S=<around*|{|1,\<ldots\>,n|}>=\<bbb-N\>> hence
+        <math|\<forall\>n\<in\>\<bbb-N\>> we have
+        <math|\<alpha\>\<leqslant\>\<beta\><rsup|n>>.
       </enumerate>
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|real 0\<less\>=a,b and a+b=0 then a=0=b>If
+    <math|\<alpha\>,\<beta\>\<in\>\<bbb-R\><rsup|+><rsub|0>> [so that
+    <math|0\<leqslant\>\<alpha\>\<wedge\>*0\<leqslant\>\<beta\>>] such that
+    <math|\<alpha\>+\<beta\>=0> then <math|\<alpha\>=0=\<beta\>>
+  </theorem>
+
+  <\proof>
+    As <math|0\<leqslant\>\<alpha\>>, <math|0\<leqslant\>\<beta\>> then we
+    have either
+
+    <\description>
+      <item*|<math|0\<less\>\<alpha\>>>Then
+      <math|\<beta\>=0+\<beta\>\<less\>\<alpha\>+\<beta\>=0> hence
+      <math|\<beta\>\<less\>0> contradicting <math|0\<leqslant\>\<beta\>>, so
+      this case does not occur.
+
+      <item*|<math|0\<less\>\<beta\>>>Then
+      <math|\<alpha\>=\<alpha\>+0\<less\>\<alpha\>+\<beta\>=0> hence
+      <math|\<alpha\>\<less\>0> contradicting <math|0\<leqslant\>\<alpha\>>,
+      so this case does not occur.
+
+      <item*|<math|\<alpha\>=\<beta\>=0>>This is the only resting case
+      porving that <math|\<alpha\>=\<beta\>=0>
+    </description>
+  </proof>
+
+  <\lemma>
+    <label|real r\<less\>s=\<gtr\>a_r\<less\>a_s>Let
+    <math|r,s\<in\>\<bbb-Q\>> then we have\ 
+
+    <\enumerate>
+      <item><math|r\<less\>s\<Leftrightarrow\>\<alpha\><rsub|r>\<less\>\<alpha\><rsub|s>>
+
+      <item><math|r\<leqslant\>s\<Leftrightarrow\>\<alpha\><rsub|r>\<less\>\<alpha\><rsub|s>>
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>\ 
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>If <math|x\<in\>\<alpha\><rsub|r>> then
+        <math|x\<less\>r> which as <math|r\<less\>s> proves that
+        <math|x\<less\>s> hence <math|x\<in\>\<alpha\><rsub|s>>, so
+        <math|\<alpha\><rsub|r>\<subseteq\>\<alpha\><rsub|s>>. Further as
+        <math|r\<less\>s> we have by the density of <math|\<bbb-Q\>> [see
+        theorem: <reference|rational densitiy>] that there exists a
+        <math|q\<in\>\<bbb-Q\>> such that <math|r\<less\>q\<less\>s> hence
+        <math|q\<in\>\<alpha\><rsub|s>> and <math|q\<nin\>r>, proving that
+        <math|\<alpha\><rsub|r>\<subset\>\<alpha\><rsub|s>>. By [theorem:
+        <reference|real order relation eauivalences>] it follows then that\ 
+
+        <\equation*>
+          \<alpha\><rsub|r>\<less\>\<alpha\><rsub|s>
+        </equation*>
+
+        <item*|<math|\<Leftarrow\>>>If <math|\<alpha\><rsub|r>\<less\>\<alpha\><rsub|s>>
+        then we have by [theorem: <reference|real order relation
+        eauivalences>] that <math|\<alpha\><rsub|r>\<subset\>\<alpha\><rsub|s>>.
+        Assume that <math|s\<leqslant\>r> then
+        <math|\<forall\>t\<in\>\<alpha\><rsub|s>> we have
+        <math|t\<less\>s\<leqslant\>r\<Rightarrow\>t\<less\>r\<Rightarrow\>t\<in\>\<alpha\><rsub|r>>
+        proving that <math|\<alpha\><rsub|s>\<subseteq\>\<alpha\><rsub|r>>
+        contradicting <math|\<alpha\><rsub|r>\<subset\>\<alpha\><rsub|s>>. As
+        the assumption <math|s\<leqslant\>r> leads to a contradiction we must
+        have that <math|r\<less\>s>.
+      </description>
+
+      <item>
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|r\<leqslant\>s>|<cell|\<Leftrightarrow\>>|<cell|r=s\<vee\>r\<less\>s>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<alpha\><rsub|r>=\<alpha\><rsub|s>\<vee\>r\<less\>s>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<around*|(|1|)>>>|<cell|\<alpha\><rsub|r>=a<rsub|s>\<vee\>\<alpha\><rsub|r>\<less\>\<alpha\><rsub|s>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<alpha\><rsub|r>\<leqslant\>\<alpha\><rsub|s>>>>>
+      </eqnarray*>
+
+      If <math|r\<leqslant\>s> then we have either <math|r=s> giving
+      <math|\<alpha\><rsub|r>=\<alpha\><rsub|s>\<Rightarrow\>\<alpha\><rsub|r>\<subseteq\>\<alpha\><rsub|s>>
+      or <math|r\<less\>s\<Rightarrowlim\><rsub|<around*|(|1|)>>\<alpha\><rsub|r>\<less\>\<alpha\><rsub|s>\<Rightarrow\>\<alpha\><rsub|r>\<leqslant\>a<rsub|s>>
     </enumerate>
 
     \;
   </proof>
+
+  The above lemma allows us to show that the embedding of <math|\<bbb-Q\>> in
+  <math|\<bbb-R\>> by <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>> is not
+  only preserving the field structure but alsp the order.
+
+  <\theorem>
+    <label|real embedding of Q and order>The field isomorphism
+    <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Q\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>>>
+    defined by <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|r|)>=\<alpha\><rsub|r>>
+    [see theorem: <reference|real field embedding Q>] is a order isomorphism
+  </theorem>
+
+  <\proof>
+    Using [theorem: <reference|real field embedding Q>] we have that
+    <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Q\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>>>
+    is a bijection. Further for <math|r,s\<in\>\<bbb-Q\>> we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|r\<leqslant\>s>|<cell|\<Leftrightarrowlim\><rsub|<text|[theorem:
+      <reference|real r\<less\>s=\<gtr\>a_r\<less\>a_s>]>>>|<cell|\<alpha\><rsub|r>\<leqslant\>\<alpha\><rsub|s>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|r|)>\<leqslant\>i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|s|)>>>>>
+    </eqnarray*>
+  </proof>
+
+  <\theorem>
+    <label|real QR is not conditional complete><math|<around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-R\>>,\<leqslant\>|\<rangle\>>>
+    is not conditional complete
+  </theorem>
+
+  <\proof>
+    We prove this by contradiction. Assume that
+    <math|<around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-R\>>,\<leqslant\>|\<rangle\>>>
+    is conditional complete. Using the previous theorem [theorem:
+    <reference|real embedding of Q and order>] there exists a order
+    isomorphism <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Q\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>>>,
+    by [theorem: <reference|order isomorphism condition (2)>]
+    <math|<around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>|)><rsup|-1>:\<bbb-Q\><rsub|\<bbb-R\>>\<rightarrow\>\<bbb-R\>>
+    is a order isomorphism, hence using [theorem: <reference|order
+    isomorphism and conditional complete>] we have that
+    <math|<around*|\<langle\>|\<bbb-Q\>,\<leqslant\>|\<rangle\>>> is
+    conditional complete, contradiction the fact that by [theorem:
+    <reference|rational rational numbers are not conditional complete>]
+    <math|<around*|\<langle\>|\<bbb-Q\>,\<leqslant\>|\<rangle\>>> is not
+    conditional complete. So the assumption is wrong and
+    <math|<around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-R\>>,\<leqslant\>|\<rangle\>>>
+    is not conditional complete.
+  </proof>
+
+  We have seen in [theorem: <reference|rational rational numbers are not
+  conditional complete>] that the rational numbers are not conditional
+  complete [causing <math|<around*|\<langle\>|\<bbb-R\><rsub|\<bbb-R\>>,\<leqslant\>|\<rangle\>>>
+  to be not conditional complete], the prime reason that we construct the
+  real numbers is that the real numbers are conditional complete.
+
+  <\theorem>
+    <label|real conditional complete><math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>>
+    is conditional complete [defniition: <reference|order conditional
+    complete order>] in other words\ 
+
+    <\equation*>
+      \<forall\>S\<subseteq\>\<bbb-R\><text| with
+      >S\<neq\>\<varnothing\><text| such that
+      <math|\<exists\>\<upsilon\>\<in\>\<bbb-R\><text| such that
+      <math|\<forall\>\<alpha\>\<in\>S<text| we have
+      >\<alpha\>\<leqslant\>\<upsilon\>>>> we have that
+      >sup<around*|(|S|)><text| exist>
+    </equation*>
+
+    Using [theorem: <reference|order conditional complete alternatives>] this
+    is equivalent with
+
+    <\equation*>
+      \<forall\>S\<subseteq\>\<bbb-R\><text| with
+      >S\<neq\>\<varnothing\><text| such that
+      <math|\<exists\>\<lambda\>\<in\>\<bbb-R\><text| such that
+      <math|\<forall\>\<alpha\>\<in\>S<text| we have
+      >\<lambda\>\<leqslant\>\<alpha\>>>> we have that
+      >inf<around*|(|S|)><text| exist>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Let <math|S\<subseteq\>\<bbb-R\>> with <math|S\<neq\>0> such that there
+    exists a <math|\<mu\>\<in\>S> such that <math|\<forall\>\<alpha\>\<in\>S>
+    we have <math|\<alpha\>\<leqslant\>\<upsilon\>>. Define <math|\<gamma\>>
+    by
+
+    <\equation*>
+      \<gamma\>=<around*|{|q\<in\>\<bbb-Q\>\|\<exists\>\<alpha\>\<in\>S\|x\<in\>\<alpha\>|}>
+    </equation*>
+
+    First we prove that <math|\<gamma\>\<in\>\<bbb-R\>> [or <math|\<gamma\>>
+    is a Dedekind cut]
+
+    <\enumerate>
+      <item>As <math|S\<neq\>\<varnothing\>> there exist a
+      <math|\<alpha\>\<in\>S\<subseteq\>\<bbb-R\>>. As <math|\<alpha\>> is a
+      Dedekind cut we have by [definition: <reference|real Dedekind's cut>
+      (1)] that <math|\<alpha\>\<neq\>\<varnothing\>>. Hence
+      <math|\<exists\>q\<in\>\<alpha\>\<subseteq\>\<bbb-Q\>> such that
+      <math|q\<in\>\<gamma\>>, proving that
+
+      <\equation*>
+        \<gamma\>\<neq\>\<varnothing\>
+      </equation*>
+
+      <item>As <math|S\<neq\>\<varnothing\>> there exist a
+      <math|\<alpha\>\<in\>S>, hence as <math|\<upsilon\>> is a upper bound
+      of <math|S> we have <math|\<alpha\>\<leqslant\>\<beta\>\<Rightarrowlim\><rsub|<text|[theorem:
+      <reference|real order relation eauivalences>]>>\<alpha\>\<subseteq\>\<beta\>>.
+      As <math|\<beta\>\<in\>\<bbb-R\>> we have by [definition:
+      <reference|real Dedekind's cut> (2)] that
+      <math|\<beta\>\<neq\>\<bbb-Q\>> hence <math|\<exists\>q\<in\>\<bbb-Q\>>
+      such that <math|x\<nin\>\<beta\>\<Rightarrowlim\><rsub|\<alpha\>\<subseteq\>\<beta\>>x\<nin\>\<alpha\>>
+      proving that\ 
+
+      <\equation*>
+        \<gamma\>\<neq\>\<bbb-Q\>
+      </equation*>
+
+      <item>Let <math|r\<in\>\<gamma\>> and
+      <math|s\<in\>\<bbb-Q\>\\\<gamma\>>. As <math|r\<in\>\<gamma\>> there
+      exists a <math|\<alpha\>\<in\>S> such that <math|r\<in\>\<alpha\>> and
+      as <math|s\<in\>\<bbb-Q\>\\\<gamma\>> we have that
+      <math|\<forall\>\<zeta\>\<in\>S> we have <math|s\<nin\>\<zeta\>>, so in
+      particular <math|s\<in\>\<alpha\>> hence
+      <math|s\<in\>\<bbb-Q\>\\\<alpha\>>. Using [definition: <reference|real
+      Dedekind's cut> (3)] we have that <math|r\<less\>s>. So
+
+      <\equation*>
+        <text|If >r\<in\>\<gamma\>\<wedge\>s\<in\>\<bbb-Q\>\\\<gamma\><text|
+        then >r\<less\>s
+      </equation*>
+
+      <item>Assune that <math|\<gamma\>> has a greatest element <math|m> then\ 
+
+      <\equation>
+        <label|eq 9.82.036>m\<in\>\<gamma\><text| and
+        >\<forall\>r\<in\>\<gamma\><text| we have >r\<leqslant\>m
+      </equation>
+
+      Now as <math|m\<in\>\<gamma\>> there exist a <math|\<alpha\>\<in\>S>
+      such that <math|m\<in\>\<alpha\>>. As by [definition: <reference|real
+      Dedekind's cut> (4)] <math|\<alpha\>> has no greatest element there
+      exist a <math|s\<in\>\<alpha\>> such that <math|m\<less\>s>. As
+      <math|s\<in\>\<alpha\>\<in\>S> it follows that <math|s\<in\>\<gamma\>>
+      so by [eq: <reference|eq 9.82.036>] we must have that
+      <math|s\<leqslant\>m> contradicting <math|s\<less\>m>. So the
+      assumption is wrong and we have\ 
+
+      <\equation*>
+        \<gamma\><text| has no greatest element>
+      </equation*>
+    </enumerate>
+
+    From (1),(2),(3) and (4) we conclude that <math|\<gamma\>> is a Dedekind
+    cut, hence
+
+    <\equation*>
+      \<gamma\>\<in\>\<bbb-R\>
+    </equation*>
+
+    Next we proof that <math|\<gamma\>> is a upper bound of <math|S>. So let
+    <math|\<alpha\>\<in\>S> then if <math|q\<in\>\<alpha\>> we have by
+    definition that <math|q\<in\>\<gamma\>> proving that
+    <math|\<alpha\>\<subseteq\>\<gamma\>> which by [theorem: <reference|real
+    order relation eauivalences>] results in
+    <math|\<alpha\>\<leqslant\>\<gamma\>>. Hence\ 
+
+    <\equation*>
+      \<gamma\><text| is a upper bound of S>
+    </equation*>
+
+    Finally let <math|\<lambda\>\<in\>\<upsilon\><around*|(|S|)>=<around*|{|\<alpha\>\<in\>\<bbb-R\>\|\<alpha\><text|
+    is a upper bound of >S|}>>. If <math|q\<in\>\<gamma\>> there exist a
+    <math|\<alpha\>\<in\>\<cal-S\>> such that <math|q\<in\>\<alpha\>>, as
+    <math|\<lambda\>> is a upper bound of <math|S> we have
+    <math|\<alpha\>\<leqslant\>\<lambda\>\<Rightarrowlim\><rsub|<text|[theorem:
+    <reference|real order relation eauivalences>]>>\<alpha\>\<subseteq\>\<lambda\>>,
+    so <math|q\<in\>\<lambda\>>, proving that
+    <math|\<gamma\>\<subseteq\>\<lambda\>> or by [theorem: <reference|real
+    order relation eauivalences>] that <math|\<gamma\>\<leqslant\>\<lambda\>>.
+    Hence <math|\<gamma\>> is the least element of
+    <math|\<upsilon\><around*|(|S|)>> which by definition proves that\ 
+
+    <\equation*>
+      sup<around*|(|S|)> exist
+    </equation*>
+  </proof>
+
+  As we have show that <math|<around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-R\>>,\<leqslant\>|\<rangle\>>>
+  is not conditional complete and <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>>
+  is conditional complete we conclude that
+  <math|\<bbb-Q\><rsub|\<bbb-R\>>\<neq\>\<bbb-R\>> so there exist real
+  numbers different from embedded rational numbers. This is expressed in the
+  following corollary.
+
+  <\corollary>
+    <label|real irrational numbers><math|<dueto|Irrational
+    Numbers>\<bbb-Q\><rsub|\<bbb-R\>>\<subset\>\<bbb-R\>> so that
+    <math|\<bbb-R\>\\\<bbb-Q\><rsub|\<bbb-R\>>\<neq\>\<varnothing\>>. The set
+    <math|\<bbb-R\>\\\<bbb-Q\><rsub|\<bbb-R\>>> is called the set of
+    <with|font-series|bold|irrational numbers>.
+  </corollary>
+
+  <\proof>
+    By [theorem: <reference|real QR is not conditional complete>]
+    <math|<around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-R\>>,\<leqslant\>|\<rangle\>>>
+    is not conditional complete. Hence there exists a non empoty
+    <math|S\<subseteq\>\<bbb-Q\><rsub|\<bbb-R\>>> with a upper bound
+    <math|\<upsilon\>> such that <math|sup<around*|(|S|)>> does not exist in
+    <math|\<bbb-Q\><rsub|\<bbb-R\>>>. As <math|\<bbb-Q\><rsub|\<bbb-R\>>\<subseteq\>\<bbb-R\>>
+    we have <math|S\<subseteq\>\<bbb-R\>> so that <math|s=sup<around*|(|A|)>>
+    exist. If now <math|s\<in\>\<bbb-Q\><rsub|\<bbb-R\>>> then it would be a
+    upper bound of <math|S> and if <math|b\<in\>\<bbb-Q\><rsub|\<bbb-R\>>\<subseteq\>\<bbb-R\>>
+    of <math|S> is another upper bound of <math|S> it is also a upper bound
+    of <math|S> in <math|\<bbb-R\>> and thus <math|s\<leqslant\>b> so
+    <math|s> would be the supremum of <math|S> in
+    <math|\<bbb-Q\><rsub|\<bbb-R\>>> contradicting the fact that
+    <math|sup<around*|(|A|)>> does not exists in
+    <math|\<bbb-Q\><rsub|\<bbb-R\>>>. Hence
+    <math|s\<in\>\<bbb-R\>\\\<bbb-Q\><rsub|\<bbb-R\>>>.
+  </proof>
+
+  <\theorem>
+    <label|real inf or sup of -S>Let <math|S\<subseteq\>\<bbb-R\>> with
+    <math|S\<neq\>\<varnothing\>> then for
+    <math|-S=<around*|{|-s\|s\<in\>S|}>> we have:
+
+    <\enumerate>
+      <item>If <math|sup<around*|(|S|)>> exist then
+      <math|inf<around*|(|-S|)>> exist and
+      <math|inf<around*|(|-S|)>=-sup<around*|(|S|)>>
+
+      <item>If <math|inf<around*|(|S|)>> exist then
+      <math|sup<around*|(|-S|)>> exist and
+      <math|sup<around*|(|-S|)>=-inf<around*|(|S|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|s\<in\>-S> then <math|\<exists\>t\<in\>S> such that
+      <math|s=-t\<Rightarrow\>t=-s> or <math|-s\<in\>S>. As
+      <math|sup<around*|(|S|)>> is a upper bound of <math|S> we have that
+      <math|-s\<leqslant\>sup<around*|(|S|)>\<Rightarrowlim\><rsub|<text|[theorem:
+      <reference|real order properties>]>>-sup<around*|(|S|)>\<leqslant\>s>
+      so that\ 
+
+      <\equation>
+        <label|eq 9.83.036><text|>-sup<around*|(|S|)><text| is a lower bound
+        of >-S
+      </equation>
+
+      As <math|S\<neq\>\<varnothing\>\<Rightarrow\>-S\<neq\>\<varnothing\>>
+      and <math|-S> has a lower bound <math|-sup<around*|(|S|)>>, it follows
+      from the conditonal completeness of <math|\<bbb-R\>> [see theorem:
+      <reference|real conditional complete>] that\ 
+
+      <\equation>
+        <label|eq 9.84.036>inf<around*|(|-S|)><text| exist
+        >and-sup*<around*|(|S|)>\<leqslant\>inf<around*|(|-S|)>
+      </equation>
+
+      Assume now that <math|-sup<around*|(|S|)>\<less\>inf<around*|(|-S|)>\<Rightarrowlim\><rsub|<text|[theorem:
+      <reference|real order properties>]>>-inf<around*|(|-S|)>\<less\>sup<around*|(|S|)>>.
+      then as <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>>
+      is totally ordered it follows from [theorem: <reference|order sup, inf
+      property>] that there exist a <math|\<alpha\>\<in\>S> such that
+      <math|-inf<around*|(|-S|)>\<less\>\<alpha\>\<leqslant\>sup<around*|(|S|)>>.
+      Using [theorem: <reference|real order properties>] we have
+      <math|-\<alpha\>\<less\>inf<around*|(|-S|)>>, as
+      <math|\<alpha\>\<in\>S\<Rightarrow\>-\<alpha\>\<in\>-S> so that
+      <math|inf<around*|(|-S|)>\<leqslant\>-\<alpha\>> contradicting
+      <math|-\<alpha\>\<less\>inf<around*|(|-S|)>>. So the assumption is
+      wrong and we must have that <math|inf<around*|(|-S|)>\<leqslant\>-sup<around*|(|S|)>>
+      which combined with [eq: <reference|eq 9.84.036>] proves that\ 
+
+      <\equation*>
+        inf<around*|(|-S|)>=-sup<around*|(|S|)>
+      </equation*>
+
+      <item>Let <math|s\<in\>-S> then <math|\<exists\>t\<in\>S> such that
+      <math|s=-t\<Rightarrow\>t=-s> or <math|-s\<in\>S>. As
+      <math|inf<around*|(|S|)>> is a lower bound of <math|S> we have that
+      <math|inf<around*|(|S|)>\<leqslant\>-s\<Rightarrowlim\><rsub|<text|[theorem:
+      <reference|real order properties>]>>s\<leqslant\>-inf<around*|(|S|)>>
+      so that\ 
+
+      <\equation>
+        <label|eq 9.85.036><text|>-inf<around*|(|S|)><text| is a upper bound
+        of >-S
+      </equation>
+
+      As <math|S\<neq\>\<varnothing\>\<Rightarrow\>-S\<neq\>\<varnothing\>>
+      and <math|-S> has a upper bound <math|-inf<around*|(|S|)>>, it follows
+      from the conditonal completeness of <math|\<bbb-R\>> [see theorem:
+      <reference|real conditional complete>] that\ 
+
+      <\equation>
+        <label|eq 9.86.036>sup<around*|(|-S|)><text| exist >and
+        sup<around*|(|-S|)>\<leqslant\> -inf<around*|(|S|)>
+      </equation>
+
+      Assume now that <math|sup<around*|(|-S|)>\<less\>-inf<around*|(|S|)>\<Rightarrowlim\><rsub|<text|[theorem:
+      <reference|real order properties>]>>inf<around*|(|S|)>\<less\>sup<around*|(|-S|)>>.
+      then as <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>>
+      is totally ordered it follows from [theorem: <reference|order sup, inf
+      property>] that there exist a <math|\<alpha\>\<in\>S> such that
+      <math|inf<around*|(|S|)>\<leqslant\>\<alpha\>\<less\>sup<around*|(|-S|)>>.
+      Using [theorem: <reference|real order properties>] we have
+      <math|sup<around*|(|-S|)>\<less\>\<alpha\>>, as
+      <math|\<alpha\>\<in\>S\<Rightarrow\>-\<alpha\>\<in\>-S> so that
+      <math|-\<alpha\>\<leqslant\>sup<around*|(|-S|)>> contradicting
+      <math|sup<around*|(|-S|)>\<less\>-\<alpha\>>. So the assumption is
+      wrong and we must have that <math|-inf<around*|(|S|)>\<leqslant\>sup<around*|(|-S|)>>
+      which combined with [eq: <reference|eq 9.86.036>] proves that\ 
+
+      <\equation*>
+        sup<around*|(|-S|)>=-inf<around*|(|S|)>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|real sup(S+T) and inf(S+T)>Let <math|S,T\<subseteq\>\<bbb-R\>>
+    with <math|S\<neq\>\<varnothing\>\<neq\>T> then for
+
+    <\equation*>
+      S+t=<around*|{|\<alpha\>+\<beta\>\|\<alpha\>\<in\>S\<wedge\>\<beta\>\<in\>T|}>
+    </equation*>
+
+    <\enumerate>
+      <item>If <math|sup<around*|(|S|)>,sup<around*|(|T|)>> exists then
+      <math|sup<around*|(|S+T|)>> exist and
+      <math|sup<around*|(|S+T|)>=sup<around*|(|S|)>+sup<around*|(|T|)>>
+
+      <item>If <math|inf<around*|(|S|)>,inf<around*|(|T|)>> exists then
+      <math|inf<around*|(|S+T|)>> exist and
+      <math|inf<around*|(|S+T|)>=inf<around*|(|S|)>+sup<around*|(|T|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ First as <math|S\<neq\>\<varnothing\>\<neq\>T> there exists
+    <math|s\<in\>S> and <math|t\<in\>T> so that <math|s+t\<in\>S+T> hence\ 
+
+    <\equation*>
+      S+T\<neq\>\<varnothing\>
+    </equation*>
+
+    <\enumerate>
+      <item>Let <math|q\<in\>S+T> then <math|\<exists\>s\<in\>S> and
+      <math|\<exists\>t\<in\>T> such that <math|q=s+t>, as
+      <math|s\<leqslant\>sup<around*|(|S|)>> we have
+      <math|q=s+t\<leqslant\>sup<around*|(|S|)>+t>, further as
+      <math|t\<leqslant\>sup<around*|(|T|)>> it follows that
+      <math|sup<around*|(|S|)>+t\<leqslant\>sup<around*|(|S|)>+sup<around*|(|T|)>>
+      giving <math|q\<leqslant\>sup<around*|(|S|)>+sup<around*|(|T|)>>. So
+      <math|sup<around*|(|S|)>+sup<around*|(|T|)>> is a upper bound of
+      <math|S+T> which as <math|S+T\<neq\>\<varnothing\>> and
+      <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>> is
+      conditional complete [see theorem: <reference|real conditional
+      complete>] proves thaat\ 
+
+      <\equation>
+        <label|eq 9.87.036>sup<around*|(|S+T|)><text| exist and
+        >sup<around*|(|S+T|)>\<leqslant\>sup<around*|(|S|)>+sup<around*|(|T|)>
+      </equation>
+
+      Assume now that <math|sup<around*|(|S+T|)>\<less\>sup<around*|(|S|)>+sup<around*|(|T|)>>
+      then for <math|\<varepsilon\>=sup<around*|(|S|)>+sup<around*|(|T|)>-sup<around*|(|S+T|)>>
+      we have <math|0\<less\>\<varepsilon\>>. So
+      <math|-\<varepsilon\>\<less\>0> and as
+      <math|0\<less\>2\<Rightarrow\>0\<less\>2<rsup|-1>> we have that
+      <math|-<around*|(|\<varepsilon\>/2|)>\<less\>0>. So
+      <math|sup<around*|(|S|)>-\<varepsilon\>/2\<less\>sup<around*|(|S|)>>
+      and <math|sup<around*|(|T|)>-\<varepsilon\>/2\<less\>sup<around*|(|T|)>>.
+      As <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>> is
+      totally ordered we have by [theorem: <reference|order sup, inf
+      property>] that there exists <math|s\<in\>S> and <math|t\<in\>T> such
+      that <math|sup<around*|(|S|)>-\<varepsilon\>/2\<less\>s> and
+      <math|sup<around*|(|T|)>-\<varepsilon\>/2\<less\>t>. So\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|s+t>|<cell|\<gtr\>>|<cell|sup<around*|(|S|)>-\<varepsilon\>/2+sup<around*|(|T|)>-\<varepsilon\>/2>>|<row|<cell|>|<cell|=>|<cell|sup<around*|(|S|)>+sup<around*|(|T|)>-<around*|(|\<varepsilon\>+\<varepsilon\>|)>/2>>|<row|<cell|>|<cell|=>|<cell|sup<around*|(|S|)>+sup<around*|(|T|)>-\<varepsilon\>>>|<row|<cell|>|<cell|=>|<cell|sup<around*|(|S|)>+sup<around*|(|T|)>-sup<around*|(|S|)>-sup<around*|(|T|)>+sup<around*|(|S+T|)>>>|<row|<cell|>|<cell|=>|<cell|sup<around*|(|s+t|)><eq-number><label|eq
+        9.88.036>>>>>
+      </eqnarray*>
+
+      As <math|s+t\<in\>S+T> we have that
+      <math|s+t\<leqslant\>sup<around*|(|S|)>> contradicting [eq:
+      <reference|eq 9.88.036>], so the assumption is wrong and we must have
+      <math|sup<around*|(|S|)>+sup<around*|(|T|)>\<leqslant\>sup<around*|(|S+T|)>>
+      which combined with [eq: <reference|eq 9.87.036>] proves that\ 
+
+      <\equation*>
+        sup<around*|(|S+T|)>=sup<around*|(|S|)>+sup<around*|(|T|)>
+      </equation*>
+
+      <item>Let <math|q\<in\>S+T> then <math|\<exists\>s\<in\>S> and
+      <math|\<exists\>t\<in\>T> such that <math|q=s+t>, as
+      <math|inf<around*|(|S|)>\<leqslant\>s> we have
+      <math|inf<around*|(|S|)>+t\<leqslant\>s+t=q>, further as
+      <math|inf<around*|(|T|)>\<leqslant\>t> it follows that
+      <math|inf<around*|(|S|)>+inf<around*|(|T|)>\<leqslant\>inf<around*|(|T|)>+t>
+      giving <math|sup<around*|(|S|)>+sup<around*|(|T|)>\<leqslant\>q>. So
+      <math|inf<around*|(|S|)>+inf<around*|(|T|)>> is a lower bound of
+      <math|S+T> which as <math|S+T\<neq\>\<varnothing\>> and
+      <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>> is
+      conditional complete [see theorem: <reference|real conditional
+      complete>] proves that\ 
+
+      <\equation>
+        <label|eq 9.89.036>inf<around*|(|S+T|)><text| exist and
+        >inf<around*|(|S|)>+inf<around*|(|T|)>\<leqslant\>inf<around*|(|S+T|)>
+      </equation>
+
+      Assume now that <math|inf<around*|(|S|)>+inf<around*|(|T|)>\<less\>inf<around*|(|S+T|)>>
+      then for <math|\<varepsilon\>=inf<around*|(|S+T|)>-inf<around*|(|S|)>-inf<around*|(|T|)>>
+      we have <math|0\<less\>\<varepsilon\>>. As
+      <math|0\<less\>2\<Rightarrow\>0\<less\>2<rsup|-1>> we have that
+      <math|0\<less\>\<varepsilon\>/2>. So
+      <math|inf<around*|(|S|)>\<less\>inf<around*|(|S|)>+\<varepsilon\>/2>
+      and <math|inf<around*|(|T|)>\<less\>inf<around*|(|T|)>+\<varepsilon\>/2>.
+      As <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>> is
+      totally ordered we have by [theorem: <reference|order sup, inf
+      property>] that there exists <math|s\<in\>S> and <math|t\<in\>T> such
+      that <math|s\<less\>inf<around*|(|S|)>+\<varepsilon\>/2> and
+      <math|t\<less\>inf<around*|(|T|)>+\<varepsilon\>/2>. So\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|s+t>|<cell|\<less\>>|<cell|inf<around*|(|S|)>+\<varepsilon\>/2+inf<around*|(|T|)>+\<varepsilon\>/2>>|<row|<cell|>|<cell|=>|<cell|inf<around*|(|S|)>+inf<around*|(|T|)>+\<varepsilon\>>>|<row|<cell|>|<cell|=>|<cell|inf<around*|(|S|)>+inf<around*|(|T|)>+inf<around*|(|S+T|)>-inf<around*|(|S|)>-inf<around*|(|T|)>>>|<row|<cell|>|<cell|=>|<cell|inf<around*|(|S+T|)><eq-number><label|eq
+        9.90.036>>>>>
+      </eqnarray*>
+
+      As <math|s+t\<in\>S+T> we have that
+      <math|inf<around*|(|S+T|)>\<leqslant\>s+t> contradicting [eq:
+      <reference|eq 9.90.036>], so the assumption is wrong and we must have
+      <math|inf<around*|(|S+T|)>\<leqslant\>inf<around*|(|S|)>+inf<around*|(|T|)>>
+      which combined with [eq: <reference|eq 9.89.036>] proves that\ 
+
+      <\equation*>
+        inf<around*|(|S+T|)>=inf<around*|(|S|)>+inf<around*|(|T|)>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  <\corollary>
+    <label|real sup(S+s) inf(T+t)>Let <math|S\<subseteq\>\<bbb-R\>> with
+    <math|S\<neq\>\<varnothing\>> and <math|\<alpha\>\<in\>\<bbb-R\>> then
+    for <math|S+\<alpha\>=<around*|{|s+\<alpha\>\|s\<in\>S|}>> we have that\ 
+
+    <\enumerate>
+      <item>If <math|sup<around*|(|S|)>> exists then
+      <math|sup<around*|(|S+\<alpha\>|)>> exists and
+      <math|sup<around*|(|S+\<alpha\>|)>=sup<around*|(|S|)>+\<alpha\>>
+
+      <item>If <math|inf<around*|(|S|)>> exists then
+      <math|inf<around*|(|S+\<alpha\>|)>> exists and
+      <math|inf<around*|(|S+\<alpha\>|)>=inf<around*|(|S|)>+\<alpha\>>
+    </enumerate>
+
+    <\proof>
+      First\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<in\>S+\<alpha\>>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>s\<in\>S<text|
+        such that >x=s+\<varepsilon\>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|t\<in\><around*|{|\<alpha\>|}>\<Leftrightarrow\>t=\<alpha\>>>|<cell|\<exists\>s\<in\>S\<wedge\>\<exists\>t\<in\><around*|{|\<alpha\>|}><text|
+        such that <math|x=s+t>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>S+<around*|{|\<alpha\>|}>>>>>
+      </eqnarray*>
+
+      hence we have\ 
+
+      <\equation*>
+        S+\<alpha\>=S+<around*|{|\<alpha\>|}>
+      </equation*>
+
+      Now we have\ 
+
+      <\enumerate>
+        <item>If <math|sup<around*|(|S|)>> exists then by [real
+        <reference|real sup(S+T) and inf(S+T)>] that
+        <math|sup<around*|(|S+<around*|{|a|}>|)>> exist and
+        <math|sup<around*|(|S+<around*|{|\<alpha\>|}>|)>=sup<around*|(|S|)>+sup<around*|(|<around*|{|\<alpha\>|}>|)>>
+        which as <math|S+<around*|{|\<alpha\>|}>=S+\<alpha\>> and
+        <math|sup<around*|(|<around*|{|\<alpha\>|}>|)>=\<alpha\>> proves that\ 
+
+        <\equation*>
+          sup<around*|(|S+\<alpha\>|)><text| exist and
+          >sup<around*|(|S+\<alpha\>|)>=sup<around*|(|S|)>+\<alpha\>
+        </equation*>
+
+        <item>If <math|inf> exists then by [real <reference|real sup(S+T) and
+        inf(S+T)>] that <math|inf<around*|(|S+<around*|{|a|}>|)>> exist and
+        <math|inf<around*|(|S+<around*|{|\<alpha\>|}>|)>=inf<around*|(|S|)>+inf<around*|(|<around*|{|\<alpha\>|}>|)>>
+        which as <math|S+<around*|{|\<alpha\>|}>=S+\<alpha\>> and
+        <math|inf<around*|(|<around*|{|\<alpha\>|}>|)>=\<alpha\>> proves that\ 
+
+        <\equation*>
+          inf<around*|(|S+\<alpha\>|)><text| exist and
+          >inf<around*|(|S+\<alpha\>|)>=inf<around*|(|S|)>+\<alpha\>
+        </equation*>
+      </enumerate>
+    </proof>
+
+    <subsection|Embeddings in <math|\<bbb-R\>>>
+  </corollary>
+
+  First remember that by [theorems: <reference|real field embedding
+  Q>,<reference|real embedding of Q and order>] we have a embedding of
+  <math|\<bbb-Q\>> in <math|\<bbb-R\>> by the order and field isomorphism
+  <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Q\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>>>
+  defined by <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|r|)>=\<alpha\><rsub|r>>.
+  We show now that there exist also embeddings of <math|\<bbb-N\><rsub|0>>
+  and <math|\<bbb-Z\>> in <math|\<bbb-R\>>.
+
+  <\definition>
+    <label|real ZQ><index|<math|\<bbb-Z\><rsub|\<bbb-R\>>>><math|\<bbb-Z\><rsub|\<bbb-R\>>=<around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>|)><around*|(|\<bbb-Z\>|)>=<around*|{|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>><around*|(|z|)>|)>\|z\<in\>\<bbb-Z\>|}>>
+  </definition>
+
+  <\theorem>
+    <label|real ZR properties>For <math|<around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>.+,\<cdot\>|\<rangle\>>>
+    and <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>>>
+    defined by <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>\<circ\>i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>>
+    then we have
+
+    <\enumerate>
+      <item><math|><math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>>>
+      is a order isomorphism between <math|<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>>
+      and <math|<around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,\<leqslant\>|\<rangle\>>>
+
+      <item><math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>>>
+      is a ring isomorphism between <math|<around*|\<langle\>|\<bbb-Z\>,+,\<cdot\>|\<rangle\>>>
+      and <math|<around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,+,\<cdot\>|\<rangle\>>>
+
+      <item><math|<around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,+,\<cdot\><rsub|>|\<rangle\>>>
+      is a sub-ring of <math|<around*|\<langle\>|\<bbb-R\>,<rsub|,\<cdot\>>|\<rangle\>>>
+
+      <item><math|\<bbb-Z\><rsub|\<bbb-R\>>> ide denumerable
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item> Using [theorem: <reference|rational sub-ring>] we have that
+      <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-Q\>>>
+      is a order isomorphism between <math|<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>>
+      and <math|<around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-Q\>>,\<leqslant\>|\<rangle\>>>
+      and by \ [theorem: <reference|real embedding of Q and order>]
+      <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Q\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>>>
+      is a order isomorphism. So using [theorem: <reference|order composition
+      of functions>] we have that
+
+      <\equation*>
+        i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>\<circ\>i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>><text|
+        is a order isomorphism>
+      </equation*>
+
+      <item>Using [theorem: <reference|rational sub-ring>] we have that
+      <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-Q\>>>
+      is a ring isomorphism between <math|<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>>
+      and <math|<around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-Q\>>,\<leqslant\>|\<rangle\>>>
+      and by \ [theorem: <reference|real embedding of Q and order>]
+      <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Q\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>>>
+      is a ring isomorphism, further by [theorem: <reference|rational
+      sub-ring>] <math|<around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-Q\>>,+,\<cdot\>|\<rangle\>>>
+      is a sub-ring of <math|<around*|\<langle\>|\<bbb-Q\>,+,\<cdot\>|\<rangle\>>>,
+      so using [theorem: <reference|ring homeomorphism composition>] we have
+      that
+
+      <\equation*>
+        i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>\<circ\>i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>><text|
+        is a order isomorphism>
+      </equation*>
+
+      <item>Let <math|\<alpha\>,\<beta\>\<in\>\<bbb-Z\><rsub|\<bbb-R\>>> then
+      there exists <math|u,v\<in\>\<bbb-Z\>> such that
+      <math|\<alpha\>=<around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>|)><around*|(|u|)>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|u|)>>
+      and <math|\<beta\>=<around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>|)><around*|(|v|)>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|v|)>>.
+      So we have\ 
+
+      <\enumerate>
+        <item><math|\<alpha\>+\<beta\>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|u|)>+i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|v|)>\<equallim\><rsub|<around*|(|2|)>>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|u+v|)>\<in\>\<bbb-Z\><rsub|\<bbb-R\>>>
+
+        <item><math|\<alpha\>\<cdot\>\<beta\>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|u|)>\<cdot\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|v|)>\<equallim\><rsub|<around*|(|2|)>>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|u\<cdot\>v|)>\<in\>\<bbb-Z\><rsub|\<bbb-R\>>>
+
+        <item>By (2) we have <math|1=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|1|)>\<in\>\<bbb-Z\><rsub|\<bbb-R\>>>
+
+        <item>By (2) and [theorem: <reference|field isomorphism and neutral
+        element>] we have that <math|0=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|0|)>\<in\>\<bbb-Z\><rsub|\<bbb-R\>>>
+      </enumerate>
+
+      <item>By (1) we have that <math|\<bbb-Z\>\<approx\>\<bbb-Z\><rsub|\<bbb-R\>>>
+      which, as by [theorem: <reference|integers denumerability>]
+      <math|\<bbb-Z\>\<approx\>\<bbb-N\><rsub|0>>, gives
+      <math|\<bbb-Z\><rsub|\<bbb-R\>>\<approx\>\<bbb-N\><rsub|0>> proving
+      that <math|\<bbb-Z\><rsub|\<bbb-R\>>> is denumerable.
+    </enumerate>
+  </proof>
+
+  We can use the same technic to embed the set of natural numbers in
+  <math|\<bbb-R\>>.
+
+  <\definition>
+    <label|real NR><index|<math|\<bbb-N\><rsub|0,\<bbb-R\>>>><math|\<bbb-N\><rsub|0,\<bbb-R\>>=<around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>|)><around*|(|\<bbb-N\><rsub|0>|)>>
+    </definition>
+
+  <\theorem>
+    <label|real NR properties>For <math|\<bbb-N\><rsub|0,\<bbb-R\>>> and
+    <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0,\<bbb-R\>>>
+    defined by <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>><space|1em>we
+    have
+
+    <\enumerate>
+      <item><math|i<rsub|>>
+    </enumerate>
+  </theorem>
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
+  \;
 
   \;
 
@@ -8856,6 +9778,9 @@
     <associate|auto-31|<tuple|<with|mode|<quote|math>|\<bbb-R\><rsup|->>|?>>
     <associate|auto-32|<tuple|9.1.2.3|?>>
     <associate|auto-33|<tuple|9.2|?>>
+    <associate|auto-34|<tuple|9.2.1|?>>
+    <associate|auto-35|<tuple|<with|mode|<quote|math>|\<bbb-Z\><rsub|\<bbb-R\>>>|?>>
+    <associate|auto-36|<tuple|<with|mode|<quote|math>|\<bbb-N\><rsub|0,\<bbb-R\>>>|?>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>>|?>>
     <associate|auto-5|<tuple|7.2|?>>
     <associate|auto-6|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>>|?>>
@@ -8999,6 +9924,17 @@
     <associate|eq 9.77.036|<tuple|9.77|?>>
     <associate|eq 9.78.036|<tuple|9.78|?>>
     <associate|eq 9.79.036|<tuple|9.79|?>>
+    <associate|eq 9.80.036|<tuple|9.80|?>>
+    <associate|eq 9.81.036|<tuple|9.81|?>>
+    <associate|eq 9.82.036|<tuple|9.82|?>>
+    <associate|eq 9.83.036|<tuple|9.83|?>>
+    <associate|eq 9.84.036|<tuple|9.84|?>>
+    <associate|eq 9.85.036|<tuple|9.85|?>>
+    <associate|eq 9.86.036|<tuple|9.86|?>>
+    <associate|eq 9.87.036|<tuple|9.87|?>>
+    <associate|eq 9.88.036|<tuple|9.88|?>>
+    <associate|eq 9.89.036|<tuple|9.89|?>>
+    <associate|eq 9.90.036|<tuple|9.90|?>>
     <associate|integeres order|<tuple|7.28|?>>
     <associate|integers|<tuple|7.2|?>>
     <associate|integers (-1).n|<tuple|7.16|?>>
@@ -9111,46 +10047,60 @@
     <associate|rational x-y|<tuple|8.9|?>>
     <associate|rational {0}|<tuple|8.21|?>>
     <associate|real -(a.b)=(-a).b=(a.(-b)|<tuple|9.29|?>>
+    <associate|real 0\<less\>=a,b and a+b=0 then a=0=b|<tuple|9.48|?>>
     <associate|real 1.a=a for positive numbers|<tuple|9.21|?>>
     <associate|real Dedekind's cut|<tuple|9.1|?>>
+    <associate|real NR|<tuple|9.59|?>>
+    <associate|real NR properties|<tuple|9.60|?>>
     <associate|real QR|<tuple|9.6|?>>
     <associate|real QR bijection|<tuple|9.7|?>>
     <associate|real QR is denumerable|<tuple|9.8|?>>
+    <associate|real QR is not conditional complete|<tuple|9.51|?>>
     <associate|real RxR|<tuple|9.27|?>>
+    <associate|real ZQ|<tuple|9.57|?>>
+    <associate|real ZR properties|<tuple|9.58|?>>
     <associate|real a.(b+g) where b or g is negative|<tuple|9.30|?>>
     <associate|real a.b=b.a positive numbers|<tuple|9.22|?>>
     <associate|real a^-1|<tuple|9.31|?>>
     <associate|real a_r.a_s=a_r.s|<tuple|9.35|?>>
     <associate|real associativity positive numbers|<tuple|9.23|?>>
+    <associate|real conditional complete|<tuple|9.52|?>>
     <associate|real distributivity|<tuple|9.24|?>>
     <associate|real division of real numbers in positive and negative
     numbers|<tuple|9.17|?>>
+    <associate|real embedding of Q and order|<tuple|9.50|?>>
     <associate|real field|<tuple|9.32|?>>
+    <associate|real field embedding Q|<tuple|9.37|?>>
     <associate|real gap theorem|<tuple|9.9|?>>
     <associate|real group|<tuple|9.15|?>>
+    <associate|real inf or sup of -S|<tuple|9.54|?>>
     <associate|real inv|<tuple|9.25|?>>
     <associate|real inv(a) is inverse element|<tuple|9.26|?>>
     <associate|real inverse of rational cut|<tuple|9.34|?>>
+    <associate|real irrational numbers|<tuple|9.53|?>>
     <associate|real lemma for sum operator|<tuple|9.13|?>>
     <associate|real multiplication operator|<tuple|9.28|?>>
     <associate|real negastive cut of rational cut|<tuple|9.11|?>>
     <associate|real negative cut|<tuple|9.10|?>>
-    <associate|real order properties|<tuple|9.46|?>>
-    <associate|real order relation (1)|<tuple|9.43|?>>
-    <associate|real order relation eauivalences|<tuple|9.44|?>>
+    <associate|real order properties|<tuple|9.47|?>>
+    <associate|real order relation (1)|<tuple|9.44|?>>
+    <associate|real order relation eauivalences|<tuple|9.45|?>>
     <associate|real positive negative numbers|<tuple|9.16|?>>
     <associate|real power|<tuple|9.38|?>>
-    <associate|real power properties|<tuple|9.40|?>>
+    <associate|real power properties|<tuple|9.41|?>>
     <associate|real product is internal|<tuple|9.20|?>>
-    <associate|real properties positive numbers|<tuple|9.41|?>>
+    <associate|real properties positive numbers|<tuple|9.42|?>>
     <associate|real property to determine membership of a cut|<tuple|9.3|?>>
-    <associate|real q^(n+m)=q^n.q^m|<tuple|9.39|?>>
+    <associate|real q^(n+m)=q^n.q^m|<tuple|9.40|?>>
+    <associate|real r\<less\>s=\<gtr\>a_r\<less\>a_s|<tuple|9.49|?>>
     <associate|real rational cut|<tuple|9.4|?>>
     <associate|real rational cut properties|<tuple|9.36|?>>
     <associate|real real numbers|<tuple|9.2|?>>
-    <associate|real strict order relation definition|<tuple|9.42|?>>
+    <associate|real strict order relation definition|<tuple|9.43|?>>
     <associate|real sum is a operator|<tuple|9.14|?>>
-    <associate|real totally ordered|<tuple|9.45|?>>
+    <associate|real sup(S+T) and inf(S+T)|<tuple|9.55|?>>
+    <associate|real sup(S+s) inf(T+t)|<tuple|9.56|?>>
+    <associate|real totally ordered|<tuple|9.46|?>>
     <associate|reals the set of reals are non empty|<tuple|9.5|?>>
     <associate|sign function|<tuple|8.20|?>>
   </collection>
@@ -9256,6 +10206,10 @@
       9.2<space|2spc>Order relation on <with|mode|<quote|math>|\<bbb-R\>>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-33>
+
+      <with|par-left|<quote|1tab>|9.2.1<space|2spc>Embeddings in
+      <with|mode|<quote|math>|\<bbb-R\>> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-34>>
     </associate>
   </collection>
 </auxiliary>

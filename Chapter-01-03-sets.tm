@@ -1986,7 +1986,14 @@
   <subsection|Partial function>
 
   <\definition>
-    Then a triple <math|<around*|\<langle\>|A,B,f|\<rangle\>>> is a
+    <label|parttial function graph><dueto|Graph>A graph is a sub class of
+    <math|\<cal-U\>\<times\>\<cal-U\>>, or in other words a graph is a
+    collection of pairs.
+  </definition>
+
+  <\definition>
+    <label|partial function>A triple <math|<around*|\<langle\>|A,B,f|\<rangle\>>>
+    where <math|A,B> are classes and <math|f> a graph is a
     <with|font-series|bold|partial function between <math|A> and <math|B>> if\ 
 
     <\enumerate>
@@ -1996,7 +2003,10 @@
       then <math|y=y<rprime|'>>
     </enumerate>
 
-    we class <math|f> the <with|font-series|bold|graph> of the function.
+    We call <math|A> the <with|font-series|bold|source> of the partial
+    function, <math|B> the <with|font-series|bold|destination> of the partial
+    function and <math|f> the <with|font-series|bold|graph> of the partial
+    function.
   </definition>
 
   <\remark>
@@ -2099,20 +2109,26 @@
 
   <\definition>
     <label|partial function preimage>Let <math|f:A\<rightarrow\>B> be a
-    partial function and <math|C> a class such that <math|C\<subseteq\>B>
-    then <with|font-series|bold|the preimage of C by f> noted as
-    <math|f<rsup|-1><around*|(|C|)>> is defined by\ 
+    partial function and <math|C> a class then <with|font-series|bold|the
+    preimage of C by f> noted as <math|f<rsup|-1><around*|(|C|)>> is defined
+    by\ 
 
     <\equation*>
-      f<rsup|-1><around*|(|C|)>=<around*|{|x\|\<exists\>y\<in\>B<text| such
+      f<rsup|-1><around*|(|C|)>=<around*|{|x\|\<exists\>y\<in\>C<text| such
       that ><around*|(|x,y|)>\<in\>f|}>
     </equation*>
   </definition>
 
+  <\note>
+    In contrast with most text books we do not require that
+    <math|C\<subseteq\>B>, this will give us more flexibility if we compose
+    partial functions.
+  </note>
+
   <\theorem>
     <label|partial functions image/preimage properties>Let
     <math|f:A\<rightarrow\>B> be a partial function, <math|C\<subseteq\>A>
-    and <math|D\<subseteq\>B> then we have:
+    and <math|D> a class then we have:
 
     <\enumerate>
       <item><math|f<around*|(|C|)>\<subseteq\>range<around*|(|f|)>>
@@ -2188,7 +2204,7 @@
 
       <item>If <math|x\<in\>f<rsup|-1><around*|(|E|)>> there
       <math|\<exists\>y\<in\>E> such that <math|<around*|(|x,y|)>\<in\>f>, as
-      <math|E\<subseteq\>D> we have <math|x\<in\>D> and still
+      <math|E\<subseteq\>D> we have <math|y\<in\>D> and still
       <math|<around*|(|x,y|)>\<in\>f> so that
       <math|x\<in\>f<rsup|-1><around*|(|D|)>> proving\ 
 
@@ -2208,10 +2224,9 @@
   Next we define the composition of two partial functions.
 
   <\definition>
-    <label|partial function composition of graphs>Let
-    <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>C> be two partial
-    function then we define the composition of <math|f> and <math|g> noted as
-    <math|g\<circ\>f> by\ 
+    <label|partial function composition of
+    graphs><index|<math|g\<circ\>f>><dueto|Composition of graphs>Let
+    <math|f,g> be two graphs then <math|f\<circ\>g> is defined by
 
     <\equation*>
       g\<circ\>f=<around*|{|z\|z=<around*|(|x,y|)><text| such that
@@ -2219,13 +2234,18 @@
     </equation*>
   </definition>
 
-  The above defines the graph of a new partial function as is expressed in
-  the following theorem
-
   <\theorem>
     <label|partial function composition of partial functions>Let
-    <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>C> be partial
-    functions then <math|g\<circ\>f:A\<rightarrow\>C> is a partial function.
+    <math|f:A\<rightarrow\>B> and <math|g:C\<rightarrow\>D> be partial
+    functions then
+
+    <\equation*>
+      g\<circ\>f:A\<rightarrow\>D
+    </equation*>
+
+    is a partial function. We call <math|g\<circ\>f:A\<rightarrow\>D> the
+    <with|font-series|bold|composiiton> of <math|f:A\<rightarrow\>B> and
+    <math|g:C-D>
   </theorem>
 
   <\proof>
@@ -2233,13 +2253,13 @@
     such that <math|<around*|(|x,u|)>\<in\>f> and
     <math|<around*|(|u,y|)>\<in\>g>, as <math|f>, <math|g> are partial
     functions we have that <math|f\<subseteq\>A\<times\>B> and
-    <math|g\<subseteq\>B\<times\>C>. So <math|<around*|(|x,u|)>\<in\>A\<times\>B>
-    and <math|<around*|(|u,y|)>\<in\>B\<times\>C>. So <math|x\<in\>A> and
-    <math|y\<in\>C> proving that <math|<around*|(|x,y|)>\<in\>A\<times\>C>.
+    <math|g\<subseteq\>C\<times\>D>. So <math|<around*|(|x,u|)>\<in\>A\<times\>B>
+    and <math|<around*|(|u,y|)>\<in\>C\<times\>D>. So <math|x\<in\>A> and
+    <math|y\<in\>D> proving that <math|<around*|(|x,y|)>\<in\>A\<times\>D>.
     Hence
 
     <\equation*>
-      g\<circ\>f\<subseteq\>A\<times\>C
+      g\<circ\>f\<subseteq\>A\<times\>D
     </equation*>
 
     Further if <math|<around*|(|x,y|)>\<in\>g\<circ\>f\<wedge\><around*|(|x,y<rprime|'>|)>\<in\>g\<circ\>f>
@@ -2257,14 +2277,22 @@
       <text| then >y=y<rprime|'>
     </equation*>
 
-    So all the requirements for <math|g\<circ\>f:A\<rightarrow\>C> to be a
+    So all the requirements for <math|g\<circ\>f:A\<rightarrow\>D> to be a
     partial function are satisfied.
   </proof>
 
+  <\note>
+    In contrast with most textbooks we do not require that <math|B=C> in this
+    theorem, there is no need for this because for partial functions
+    <math|dom<around*|(|f\<circ\>g|)>> can be different from <math|A>. Later
+    we will compose functions and then we will need a extra condition for
+    <math|C>.
+  </note>
+
   <\theorem>
     <label|partial function associativity><dueto|Associativity of
-    Composition>Let <math|f:A\<rightarrow\>B>, <math|g:B\<rightarrow\>C> and
-    <math|h:C\<rightarrow\>D> be functions then
+    Composition>Let <math|f:A\<rightarrow\>B>, <math|g:C\<rightarrow\>D> and
+    <math|h:E\<rightarrow\>F> be partial functions <math|>then
     <math|h\<circ\><around*|(|g\<circ\>f|)>=<around*|(|h\<circ\>g|)>\<circ\>f>
   </theorem>
 
@@ -2301,8 +2329,8 @@
 
   <\theorem>
     <label|partial function domain range composition>Let
-    <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>C> be partial
-    functions then for <math|g\<circ\>f:A\<rightarrow\>C> we have\ 
+    <math|f:A\<rightarrow\>B> and <math|g:C\<rightarrow\>D> be partial
+    functions then for <math|g\<circ\>f:A\<rightarrow\>D> we have\ 
 
     <\enumerate>
       <item><math|dom*<around*|(|g\<circ\>f|)>=dom<around*|(|f|)><big|cap>f<rsup|-1><around*|(|dom<around*|(|g|)>|)>>
@@ -2330,7 +2358,7 @@
         <label|eq 2.10.001>dom<around*|(|g\<circ\>f|)>\<subseteq\>dom<around*|(|f|)><big|cap>f<rsup|-1><around*|(|dom<around*|(|g|)>|)>
       </equation>
 
-      If <math|x\<in\>dom<around*|(|f|)><big|cap>f<rsup|-1><around*|(|dom<around*|\<nobracket\>|g|)>|)>>
+      If <math|x\<in\>dom<around*|(|f|)><big|cap>f<rsup|-1><around*|(|dom<around*|\<nobracket\>|<around*|(|g|)>|)>|\<nobracket\>>>
       then <math|x\<in\>dom<around*|(|f|)>> so that <math|\<exists\>y> such
       that <math|<around*|(|x,y|)>\<in\>f> and
       <math|x\<in\>f<rsup|-1><around*|(|dom<around*|(|g|)>|)>> so that
@@ -2383,21 +2411,21 @@
       <item>If <math|z\<in\>range<around*|(|g\<circ\>f|)>> then there exists
       a <math|x> such that <math|<around*|(|x,z|)>\<in\>g\<circ\>f>, so there
       exists a <math|y> such that <math|<around*|(|x,y|)>\<in\>f\<wedge\><around*|(|y,z|)>\<in\>g>.
-      Hence <math|z\<in\>range<around*|(|g|)>>
+      Hence <math|z\<in\>range<around*|(|g|)>>.
     </enumerate>
   </proof>
 
   <\theorem>
     <label|partial function image preimage of compositions>If
-    <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>C> are partial
+    <math|f:A\<rightarrow\>B> and <math|g:C\<rightarrow\>D> are partial
     functions then we have\ 
 
     <\enumerate>
-      <item>If <math|C\<subseteq\>A> then
-      <math|<around*|(|g\<circ\>f|)><around*|(|C|)>=g<around*|(|f<around*|(|C|)>|)>>
+      <item>If <math|E\<subseteq\>A> then
+      <math|<around*|(|g\<circ\>f|)><around*|(|E|)>=g<around*|(|f<around*|(|E|)>|)>>
 
-      <item>If <math|D\<subseteq\>B> then
-      <math|<around*|(|g\<circ\>f|)><rsup|-1><around*|(|D|)>=f<rsup|-1><around*|(|g<rsup|-1><around*|(|D|)>|)>>
+      <item>If <math|E\<subseteq\>D> then
+      <math|<around*|(|g\<circ\>f|)><rsup|-1><around*|(|E|)>=f<rsup|-1><around*|(|g<rsup|-1><around*|(|E|)>|)>>
     </enumerate>
   </theorem>
 
@@ -2405,64 +2433,62 @@
     \ 
 
     <\enumerate>
-      <item>If <math|z\<in\><around*|(|g\<circ\>f|)><around*|(|C|)>> then
-      there exists a <math|x\<in\>C> such that
+      <item>If <math|z\<in\><around*|(|g\<circ\>f|)><around*|(|E|)>> then
+      there exists a <math|x\<in\>E> such that
       <math|<around*|(|x,z|)>\<in\>g\<circ\>f>. So by definition there exist
       a <math|y> such that <math|<around*|(|x,y|)>\<in\>f\<wedge\><around*|(|y,z|)>\<in\>g>.
       From <math|<around*|(|x,y|)>\<in\>f> it follows that
-      <math|y\<in\>f<around*|(|C|)>> and as <math|<around*|(|y,z|)>\<in\>g>
-      it follows that <math|z\<in\>g<around*|(|f<around*|(|C|)>|)>>. Hence\ 
+      <math|y\<in\>f<around*|(|E|)>> and as <math|<around*|(|y,z|)>\<in\>g>
+      it follows that <math|z\<in\>g<around*|(|f<around*|(|E|)>|)>>. Hence\ 
 
       <\equation>
-        <label|eq 2.12.002><around*|(|g\<circ\>f|)><around*|(|C|)>\<subseteq\>g<around*|(|f<around*|(|C|)>|)>
+        <label|eq 2.12.002><around*|(|g\<circ\>f|)><around*|(|E|)>\<subseteq\>g<around*|(|f<around*|(|E|)>|)>
       </equation>
 
-      On the other hand if <math|z\<in\>g<around*|(|f<around*|(|C|)>|)>>
-      there exist a <math|y\<in\>f<around*|(|C|)>> such that
-      <math|<around*|(|y,z|)>\<in\>g>. As <math|y\<in\>f<around*|(|C|)>>
-      there exists a <math|x\<in\>C> such that
+      On the other hand if <math|z\<in\>g<around*|(|f<around*|(|E|)>|)>>
+      there exist a <math|y\<in\>f<around*|(|E|)>> such that
+      <math|<around*|(|y,z|)>\<in\>g>. As <math|y\<in\>f<around*|(|E|)>>
+      there exists a <math|x\<in\>E> such that
       <math|<around*|(|x,y|)>\<in\>f>. From
       <math|<around*|(|x,y|)>\<in\>f\<wedge\><around*|(|y,z|)>\<in\>g> it
       follows that <math|<around*|(|x,z|)>\<in\>g\<circ\>f> so that [as
-      <math|x\<in\>C>] <math|z\<in\><around*|(|g\<circ\>f|)><around*|(|C|)>>.
-      Proving <math|g<around*|(|f<around*|(|C|)>|)>\<subseteq\><around*|(|g\<circ\>f|)><around*|(|C|)>>,
+      <math|x\<in\>E>] <math|z\<in\><around*|(|g\<circ\>f|)><around*|(|E|)>>.
+      Proving <math|g<around*|(|f<around*|(|E|)>|)>\<subseteq\><around*|(|g\<circ\>f|)><around*|(|E|)>>,
       combining this with [eq <reference|eq 2.12.002>] and [theorem:
       <reference|class properties (1)>] gives\ 
 
       <\equation*>
-        <around*|(|g\<circ\>f|)><around*|(|C|)>=g<around*|(|f<around*|(|C|)>|)>
+        <around*|(|g\<circ\>f|)><around*|(|E|)>=g<around*|(|f<around*|(|E|)>|)>
       </equation*>
 
-      <item>If <math|x\<in\><around*|(|g\<circ\>f|)><rsup|-1><around*|(|D|)>>
-      then there exist a <math|z\<in\>D> such that
+      <item>If <math|x\<in\><around*|(|g\<circ\>f|)><rsup|-1><around*|(|E|)>>
+      then there exist a <math|z\<in\>E> such that
       <math|<around*|(|x,z|)>\<in\>g\<circ\>f>, hence <math|\<exists\>y> such
       that <math|<around*|(|x,y|)>\<in\>f\<wedge\><around*|(|y,z|)>\<in\>g>.
-      So by definition <math|y\<in\>g<rsup|-1><around*|(|D|)>> and as
+      So by definition <math|y\<in\>g<rsup|-1><around*|(|E|)>> and as
       <math|<around*|(|x,y|)>\<in\>f> it follows that
-      <math|x\<in\>f<rsup|-1><around*|(|g<rsup|-1><around*|(|D|)>|)>>. Hence\ 
+      <math|x\<in\>f<rsup|-1><around*|(|g<rsup|-1><around*|(|E|)>|)>>. Hence\ 
 
       <\equation>
-        <label|eq 2.13.002><around*|(|g\<circ\>f|)><rsup|-1><around*|(|D|)>\<subseteq\>f<rsup|-1><around*|(|g<rsup|-1><around*|(|D|)>|)>
+        <label|eq 2.13.002><around*|(|g\<circ\>f|)><rsup|-1><around*|(|E|)>\<subseteq\>f<rsup|-1><around*|(|g<rsup|-1><around*|(|E|)>|)>
       </equation>
 
-      If <math|x\<in\>f<rsup|-1><around*|(|g<rsup|-1><around*|(|D|)>|)>> then
-      there exist a <math|y\<in\>g<rsup|-1><around*|(|D|)>> such that
+      If <math|x\<in\>f<rsup|-1><around*|(|g<rsup|-1><around*|(|E|)>|)>> then
+      there exist a <math|y\<in\>g<rsup|-1><around*|(|E|)>> such that
       <math|<around*|(|x,y|)>\<in\>f>, as
-      <math|y\<in\>g<rsup|-1><around*|(|D|)>> then there exist a
-      <math|z\<in\>D> such that <math|<around*|(|y,z|)>\<in\>g>. From
-      <math|z\<in\>D\<wedge\><around*|(|x,y|)>\<in\>f\<wedge\><around*|(|y,z|)>\<in\>g>
-      it follows that <math|x\<in\><around*|(|g\<circ\>f|)><rsup|-1><around*|(|D|)>>
-      proving that <math|f<rsup|-1><around*|(|g<rsup|-1><around*|(|D|)>|)>\<subseteq\><around*|(|g\<circ\>f|)><rsup|-1><around*|(|D|)>>.
+      <math|y\<in\>g<rsup|-1><around*|(|E|)>> then there exist a
+      <math|z\<in\>E> such that <math|<around*|(|y,z|)>\<in\>g>. From
+      <math|z\<in\>E\<wedge\><around*|(|x,y|)>\<in\>f\<wedge\><around*|(|y,z|)>\<in\>g>
+      it follows that <math|x\<in\><around*|(|g\<circ\>f|)><rsup|-1><around*|(|E|)>>
+      proving that <math|f<rsup|-1><around*|(|g<rsup|-1><around*|(|E|)>|)>\<subseteq\><around*|(|g\<circ\>f|)><rsup|-1><around*|(|E|)>>.
       Combining this with [eq: <reference|eq 2.13.002>] and [theorem:
       <reference|class properties (1)>] gives
 
       <\equation*>
-        <around*|(|g\<circ\>f|)><rsup|-1><around*|(|D|)>=f<rsup|-1><around*|(|g<rsup|-1><around*|(|D|)>|)>
+        <around*|(|g\<circ\>f|)><rsup|-1><around*|(|E|)>=f<rsup|-1><around*|(|g<rsup|-1><around*|(|E|)>|)>
       </equation*>
     </enumerate>
   </proof>
-
-  \;
 
   <subsection|Functions>
 
@@ -2473,7 +2499,22 @@
   </definition>
 
   So every function is also a partial function, hence statements about
-  partial functions applies also for functions.
+  partial functions applies also for functions. One special benefiit of
+  functions is the following.
+
+  <\theorem>
+    <label|function preimage of image (1)>If <math|f:A\<rightarrow\>B> is a
+    function then for <math|C\<subseteq\>A> we have
+    <math|C\<subseteq\>f<rsup|-1><around*|(|f<around*|(|C|)>|)>>.
+  </theorem>
+
+  <\proof>
+    If <math|x\<in\>C\<subseteq\>A> then as <math|A=dom<around*|(|f|)>> there
+    exist a <math|y> such that <math|<around*|(|x,y|)>\<in\>f> so that
+    <math|y\<in\>f<around*|(|C|)>>, which as <math|<around*|(|x,y|)>\<in\>f>
+    proves that <math|x\<in\>f<rsup|-1><around*|(|f<around*|(|C|)>|)>>. Hence
+    we have <math|C\<subseteq\>f<rsup|-1><around*|(|f<around*|(|C|)>|)>>.
+  </proof>
 
   <\proposition>
     <label|function condition (1)>A partial function
@@ -2547,6 +2588,71 @@
     <\equation*>
       f:<around*|{|0,1|}>\<rightarrow\><around*|{|A,B|}><text| is a function>
     </equation*>
+  </proof>
+
+  Although the composition of functions <math|f:A\<rightarrow\>B> and
+  <math|g:C\<rightarrow\>D> is a partial function [see theorem:
+  <reference|partial function composition of partial functions>], it does not
+  have to be a function as we need the extra requirement that
+  <math|dom<around*|(|g\<circ\>f|)>=A>. So we must have a extra condition on
+  <math|C>. This is expressed in the following theorem,
+
+  <\theorem>
+    <label|function composition of functions is a fucntion>Let
+    <math|f:A\<rightarrow\>B> and <math|g:C\<rightarrow\>D> functions with
+    <math|f<around*|(|A|)>\<subseteq\>C> then
+    <math|g\<circ\>f:C\<rightarrow\>D> is also a function with
+    <math|range<around*|(|g\<circ\>f|)>=g<around*|(|range<around*|(|f|)>|)>>
+  </theorem>
+
+  <\proof>
+    Using [theorem: <reference|partial function composition of partial
+    functions>] we have that\ 
+
+    <\equation*>
+      g\<circ\>f:A\<rightarrow\>D<text| is a partial function>
+    </equation*>
+
+    Using [theorem: <reference|function preimage of image (1)>] we have that
+    <math|A\<subseteq\>f<rsup|-1><around*|(|f<around*|(|A|)>|)>> and by
+    [theorem: <reference|partial functions image/preimage properties>]
+    together with <math|f<around*|(|A|)>\<subseteq\>C> we have
+    <math|f<rsup|-1><around*|(|f<around*|(|A|)>|)>\<subseteq\>f<rsup|-1><around*|(|C|)>>
+    proving that\ 
+
+    <\equation>
+      <label|eq 2.14.038>A\<subseteq\>f<rsup|-1><around*|(|C|)>
+    </equation>
+
+    \ 
+
+    Further using [theorem: <reference|partial function domain range
+    composition>] we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|dom<around*|(|g\<circ\>f|)>>|<cell|=>|<cell|dom<around*|(|f|)><big|cap>f<rsup|-1><around*|(|dom<around*|(|g|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|f,g
+      <text| are functions>>>|<cell|A<big|cap>f<rsup|-1><around*|(|C|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|eq 2.14.038>]>>>|<cell|A>>>>
+    </eqnarray*>
+
+    which proves that\ 
+
+    <\equation*>
+      g\<circ\>f<text| is a function>
+    </equation*>
+
+    Finally
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|range<around*|(|g\<circ\>f|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|partial function domain range
+      composition>>>>|<cell|g<around*|(|range<around*|(|f|)><big|cap>dom<around*|(|g|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|f<text|
+      is a function>>>|<cell|g<around*|(|range<around*|(|f|)><big|cap>C|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|partial functions image/preimage
+      properties>]>>>|<cell|g<around*|(|f<around*|(|A|)><big|cap>C|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|f<around*|(|A|)>\<subseteq\>C>>|<cell|g<around*|(|f<around*|(|A|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|partial functions image/preimage
+      properties>]>>>|<cell|g<around*|(|range<around*|(|f|)>|)>>>>>
+    </eqnarray*>
   </proof>
 
   Next we define the class of all the graphs of functions between two classes
@@ -2848,7 +2954,8 @@
 
   <\theorem>
     <label|function alternative for composition>If <math|f:A\<rightarrow\>B>
-    and <math|g:B\<rightarrow\>C> are two functions then\ 
+    and <math|g:C\<rightarrow\>D> are two functions with
+    <math|f<around*|(|A|)>\<subseteq\>C> then\ 
 
     <\equation*>
       <around*|(|g\<circ\>f|)><around*|(|x|)>=g<around*|(|f<around*|(|x|)>|)>
@@ -3084,49 +3191,7 @@
     properties> taking in account that <math|A=dom<around*|(|f|)>>
   </proof>
 
-  Next we proof that the composition of two functions is again a function
-
-  <\theorem>
-    <label|function composition of functions is a fucntion>Let
-    <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>C> functions then
-    <math|g\<circ\>f:A\<rightarrow\>C> is also a function with
-    <math|range<around*|(|f|)>=g<around*|(|range<around*|(|f|)>|)>>
-  </theorem>
-
-  <\proof>
-    Using [theorem: <reference|partial function composition of partial
-    functions>] we have that\ 
-
-    <\equation*>
-      g\<circ\>f:A\<rightarrow\>C<text| is a partial function>
-    </equation*>
-
-    Further using [theorem: <reference|partial function domain range
-    composition>] we have
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|dom<around*|(|g\<circ\>f|)>>|<cell|=>|<cell|dom<around*|(|f|)><big|cap>f<rsup|-1><around*|(|dom<around*|(|g|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|f,g
-      <text| are functions>>>|<cell|A<big|cap>f<rsup|-1><around*|(|B|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|function image preimage>>>>|<cell|A>>>>
-    </eqnarray*>
-
-    which proves that\ 
-
-    <\equation*>
-      g\<circ\>f<text| is a function>
-    </equation*>
-
-    Finally
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|range<around*|(|g\<circ\>f|)>>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|partial function domain range
-      composition>>>>|<cell|g<around*|(|range<around*|(|f|)><big|cap>dom<around*|(|g|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|f<text|
-      is a function>>>|<cell|g<around*|(|range<around*|(|f|)><big|cap>B|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|range<around*|(|f|)>\<subseteq\>B<text|
-      [theorem: <reference|partial function dom(f) range(f) as
-      subclasses>]>>>|<cell|g<around*|(|range<around*|(|f|)>|)>>>>>
-    </eqnarray*>
-  </proof>
+  \;
 
   <subsection|Injectivity, Surjectivity and bijectivity>
 
@@ -3293,15 +3358,8 @@
     \ 
 
     <\enumerate>
-      <item>Let <math|x\<in\>C> then, as <math|f> is a function,
-      <math|A=dom<around*|(|f|)>>, so there exists a <math|y> such that
-      <math|<around*|(|x,y|)>\<in\>f> proving that
-      <math|y\<in\>f<around*|(|C|)>>, hence
-      <math|x\<in\>f<rsup|-1><around*|(|f<around*|(|C|)>|)>>. So\ 
-
-      <\equation*>
-        C\<subseteq\>f<rsup|-1><around*|(|f<around*|(|C|)>|)>
-      </equation*>
+      <item>This is stated in [theorem: <reference|function preimage of image
+      (1)>]
 
       <item>If <math|x\<in\>f<rsup|-1><around*|(|f<around*|(|C|)>|)>> then
       <math|\<exists\>y\<in\>f<around*|(|C|)>> such that
@@ -3795,27 +3853,30 @@
     </enumerate>
   </proof>
 
-  Composition preserves injectivity, surjectivity and <math|bijectivity>
+  Composition preserves injectivity, surjectivity and <math|bijectivity>.
 
   <\theorem>
-    <label|function composition injectivity, surjectivity and bijectivity>If
-    <math|A,B> and <math|C> are classes then we have
+    <label|function composition injectivity, surjectivity and bijectivity>We
+    have\ 
 
     <\enumerate>
-      <item>If <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>C> are
-      injective partial functions then <math|g\<circ\>f:A\<rightarrow\>C> is
-      a injective partial function
+      <item><math|If> <math|f:A\<rightarrow\>B> and <math|g:C\<rightarrow\>D>
+      are injective functions with <math|f<around*|(|A|)>\<subseteq\>C> then
+      <math|g\<circ\>f:A\<rightarrow\>D> is a injective function.
 
-      <item>If <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>C> are
-      surjective partial functions then <math|g\<circ\>f:A\<rightarrow\>C> is
-      a surjective partial function
+      <item>If <math|f:A\<rightarrow\>B> is a function and
+      <math|g:C\<rightarrow\>D> a surjective function so that
+      <math|f<around*|(|A|)>=C> then <math|g\<circ\>f:A\<rightarrow\>D> is a
+      surjective function.
 
-      <item>If <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>C> are
-      bijective functions then <math|g\<circ\>f:A\<rightarrow\>C> is a
-      bijective function
+      <item>If <math|f:A\<rightarrow\>B> is a injective function and
+      <math|g:C\<rightarrow\>D> a bijective function so that
+      <math|f<around*|(|A|)>=C> then <math|g\<circ\>f:A\<rightarrow\>D> is a
+      bijective function.
 
-      <item>If <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>C> are
-      bijective functions then <math|<around*|(|g\<circ\>f|)><rsup|-1>=f<rsup|-1>\<circ\>g<rsup|-1>>
+      <item>If <math|f:A\<rightarrow\>B> is a injective function and
+      <math|g:C\<rightarrow\>D> a bijective function \ so that
+      <math|f<around*|(|A|)>=C> then <math|<around*|(|g\<circ\>f|)><rsup|-1>=f<rsup|-1>\<circ\>g<rsup|-1>>.
     </enumerate>
   </theorem>
 
@@ -3838,17 +3899,15 @@
         x=x<rprime|'>
       </equation*>
 
-      <item>Let <math|z\<in\>C> then as <math|g> is surjective there
-      <math|\<exists\>y\<in\>B> such that <math|<around*|(|y,z|)>\<in\>g>. As
-      <math|f> is surjective there exists a <math|x\<in\>A> such that
+      <item>Let <math|z\<in\>D> then as <math|g> is surjective there
+      <math|\<exists\>y\<in\>C> such that <math|<around*|(|y,z|)>\<in\>g>. As
+      <math|f<around*|(|A|)>=C> there exists a <math|x\<in\>A> such that
       <math|<around*|(|x,y|)>\<in\>f>. But then
       <math|<around*|(|x,z|)>\<in\>g\<circ\>f> proving that <math|g\<circ\>f>
       is surjective.
 
-      <item>If <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>A> are
-      bijections then these two functions are injective and surjective. Using
-      (1) and (2) proves that <math|g\<circ\>f:A\<rightarrow\>C> is injective
-      and surjective and thus by definition bijective.
+      <item>Using (1) and (2) proves that <math|g\<circ\>f:A\<rightarrow\>D>
+      is injective and surjective and thus by definition bijective.
 
       <item>By (3) <math|g\<circ\>f> is a bijection, so by [theorem:
       <reference|function bijection f,f-1>] we have that
@@ -3870,6 +3929,50 @@
         <reference|function composition of Id
         function>]>>>|<cell|<around*|(|g\<circ\>f|)><rsup|-1>=f<rsup|-1>\<circ\>g<rsup|-1>>>>>
       </eqnarray*>
+    </enumerate>
+  </proof>
+
+  In the special case that <math|B=C> we have\ 
+
+  <\corollary>
+    <label|function composition injectivity, surjectivity and bijectivity
+    (1)>We have\ 
+
+    <\enumerate>
+      <item><math|If> <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>C>
+      are injective functions with then <math|g\<circ\>f:A\<rightarrow\>C> is
+      a injective function.
+
+      <item>If <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>C> are
+      surjective functions then <math|g\<circ\>f:A\<rightarrow\>C> is a
+      surjective function.
+
+      <item>If <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>C> are
+      bijective function then <math|g\<circ\>f:A\<rightarrow\>C> is a
+      bijective function.
+
+      <item>If <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>C> are
+      bijective function \ then <math|<around*|(|g\<circ\>f|)><rsup|-1>=f<rsup|-1>\<circ\>g<rsup|-1>>.
+    </enumerate>
+  </corollary>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>This follows from [theorem: <reference|function composition
+      injectivity, surjectivity and bijectivity> (1)] because
+      <math|f<around*|(|A|)>\<subseteq\>B>.
+
+      <item>This follows from [theorem: <reference|function composition
+      injectivity, surjectivity and bijectivity> (2)] because if <math|f> is
+      surjective we have <math|f<around*|(|A|)>=B>.
+
+      <item>This follows from (1) and (2)
+
+      <item>This follows from [theorem: <reference|function composition
+      injectivity, surjectivity and bijectivity> (4)] because if <math|f> is
+      bijective, hence surjective, we have <math|f<around*|(|A|)>=B>
     </enumerate>
   </proof>
 
@@ -4076,7 +4179,7 @@
   </definition>
 
   <\proof>
-    We must of course proof that <math|><math|<around*|{|z\|z=<around*|(|x,y|)>\<in\>f\<wedge\>x\<in\>C|}>>
+    We must of course proof that <math|><math|<around*|{|z\|z=<around*|(|x,y|)>\<in\>f\<wedge\>x\<in\>C|}>=f<big|cap><around*|(|C\<times\>B|)>>
     and that <math|f<rsub|\|C>:C\<rightarrow\>B> is indeed a partial
     function. If <math|<around*|(|x,y|)>\<in\><around*|{|z\|z=<around*|(|x,y|)>\<in\>f\<wedge\>x\<in\>C|}>>
     then <math|<around*|(|x,y|)>\<in\>f\<subseteq\>A\<times\>B\<Rightarrow\>y\<in\>B>
@@ -4451,7 +4554,8 @@
 
   <\theorem>
     <label|function restriction and domain>Let <math|f:A\<rightarrow\>B> be a
-    partial function then <math|f<rsub|\|dom<around*|(|f|)>>=f>
+    <with|font-series|bold|partial> function then
+    <math|f<rsub|\|dom<around*|(|f|)>>=f>
   </theorem>
 
   <\proof>
@@ -4470,8 +4574,8 @@
 
   <\theorem>
     <label|function inverse and restriction>Let <math|f:A\<rightarrow\>B> be
-    a injective partial function and <math|C\<subseteq\>A> then
-    <math|<around*|(|f<rsup|-1>|)><rsub|\|f<around*|(|C|)>>=<around*|(|f<rsub|\|C>|)><rsup|-1>>
+    a injective <with|font-series|bold|partial> function and
+    <math|C\<subseteq\>A> then <math|<around*|(|f<rsup|-1>|)><rsub|\|f<around*|(|C|)>>=<around*|(|f<rsub|\|C>|)><rsup|-1>>
   </theorem>
 
   <\proof>
@@ -4505,44 +4609,44 @@
 
   <\theorem>
     <label|function composition and restriction>Let <math|f:A\<rightarrow\>B>
-    and <math|g:B\<rightarrow\>C> be partial functions and
-    <math|C\<subseteq\>A> then
+    and <math|g:C\<rightarrow\>D> be <with|font-series|bold|partial>
+    functions and <math|E\<subseteq\>A> then
 
     <\equation*>
-      <around*|(|g\<circ\>f|)><rsub|\|C>=g<rsub|\|f<around*|(|C|)>>\<circ\>f<rsub|\|C>
+      <around*|(|g\<circ\>f|)><rsub|\|E>=g<rsub|\|f<around*|(|E|)>>\<circ\>f<rsub|\|E>
     </equation*>
   </theorem>
 
   <\proof>
-    Let <math|<around*|(|x,z|)>\<in\><around*|(|f\<circ\>g|)><rsub|\|C>> then
-    <math|<around*|(|x,z|)>\<in\>f\<circ\>g> and <math|x\<in\>C>. Hence
+    Let <math|<around*|(|x,z|)>\<in\><around*|(|f\<circ\>g|)><rsub|\|E>> then
+    <math|<around*|(|x,z|)>\<in\>f\<circ\>g> and <math|x\<in\>E>. Hence
     <math|\<exists\>y> such that <math|<around*|(|x,y|)>\<in\>f\<wedge\><around*|(|y,z|)>\<in\>g>,
-    as <math|x\<in\>C> <math|<around*|(|x,y|)>\<in\>f<rsub|\|C>>. From
-    <math|x\<in\>C> and <math|<around*|(|x,y|)>\<in\>f> it follows also that
-    <math|y\<in\>f<around*|(|C|)>>, hence as <math|<around*|(|y,z|)>\<in\>g>
-    we have that <math|<around*|(|y,z|)>\<in\>g<rsub|\|f<around*|(|C|)>>>.
-    From <math|<around*|(|x,y|)>\<in\>f<rsub|\|C>> and
-    <math|<around*|(|y,z|)>\<in\>g<rsub|\|f<around*|(|C|)>>> it follows that
-    <math|<around*|(|x,z|)>\<in\>g<rsub|\|f<around*|(|C|)>>\<circ\>f<rsub|\|C>>
+    as <math|x\<in\>E> <math|<around*|(|x,y|)>\<in\>f<rsub|\|E>>. From
+    <math|x\<in\>E> and <math|<around*|(|x,y|)>\<in\>f> it follows also that
+    <math|y\<in\>f<around*|(|E|)>>, hence as <math|<around*|(|y,z|)>\<in\>g>
+    we have that <math|<around*|(|y,z|)>\<in\>g<rsub|\|f<around*|(|E|)>>>.
+    From <math|<around*|(|x,y|)>\<in\>f<rsub|\|E>> and
+    <math|<around*|(|y,z|)>\<in\>g<rsub|\|f<around*|(|E|)>>> it follows that
+    <math|<around*|(|x,z|)>\<in\>g<rsub|\|f<around*|(|E|)>>\<circ\>f<rsub|\|E>>
     so that\ 
 
     <\equation>
-      <label|eq 2.17.003><around*|(|g\<circ\>f|)><rsub|\|C>\<subseteq\>g<rsub|\|f<around*|(|C|)>>\<circ\>f<rsub|\|C>
+      <label|eq 2.17.003><around*|(|g\<circ\>f|)><rsub|\|E>\<subseteq\>g<rsub|\|f<around*|(|E|)>>\<circ\>f<rsub|\|E>
     </equation>
 
-    If <math|<around*|(|x,z|)>\<in\>g<rsub|\|f<around*|(|C|)>>\<circ\>f<rsub|\|C>>
+    If <math|<around*|(|x,z|)>\<in\>g<rsub|\|f<around*|(|E|)>>\<circ\>f<rsub|\|E>>
     then there exists a <math|y> such that
-    <math|<around*|(|x,y|)>\<in\>f<rsub|\|C>> and
-    <math|<around*|(|y,z|)>\<in\>g<rsub|\|f<around*|(|C|)>>>, so
-    <math|x\<in\>C>, <math|<around*|(|x,y|)>\<in\>f>,
-    <math|y\<in\>f<around*|(|C|)>> and <math|<around*|(|y,z|)>\<in\>g>. Hence
-    <math|x\<in\>C> and <math|<around*|(|x,z|)>\<in\>g\<circ\>f> proving that
-    <math|<around*|(|x,z|)>\<in\><around*|(|g\<circ\>f|)><rsub|\|C>.> So
-    <math|g<rsub|\|f<around*|(|C|)>>\<circ\>f<rsub|\|C>\<subseteq\><around*|(|g\<circ\>f|)><rsub|\|C>>
+    <math|<around*|(|x,y|)>\<in\>f<rsub|\|E>> and
+    <math|<around*|(|y,z|)>\<in\>g<rsub|\|f<around*|(|E|)>>>, so
+    <math|x\<in\>E>, <math|<around*|(|x,y|)>\<in\>f>,
+    <math|y\<in\>f<around*|(|E|)>> and <math|<around*|(|y,z|)>\<in\>g>. Hence
+    <math|x\<in\>E> and <math|<around*|(|x,z|)>\<in\>g\<circ\>f> proving that
+    <math|<around*|(|x,z|)>\<in\><around*|(|g\<circ\>f|)><rsub|\|E>.> So
+    <math|g<rsub|\|f<around*|(|E|)>>\<circ\>f<rsub|\|E>\<subseteq\><around*|(|g\<circ\>f|)><rsub|\|E>>
     which combined with [eq: <reference|eq 2.17.003>] gives
 
     <\equation*>
-      <around*|(|g\<circ\>f|)><rsub|\|C>=g<rsub|\|f<around*|(|C|)>>\<circ\>g<rsub|\|C>
+      <around*|(|g\<circ\>f|)><rsub|\|E>=g<rsub|\|f<around*|(|E|)>>\<circ\>g<rsub|\|E>
     </equation*>
   </proof>
 
@@ -4564,7 +4668,7 @@
   The following theorem will be used for manifolds later
 
   <\theorem>
-    Let <math|f:A\<rightarrow\>B> and <math|g:C\<rightarrow\>B> be injections
+    Let <math|f:A\<rightarrow\>B> and <math|g:C\<rightarrow\>D> be injections
     then we have\ 
 
     <\enumerate>
@@ -4572,6 +4676,9 @@
       <math|g:C\<rightarrow\>f<around*|(|C|)>> are bijections
 
       <item><math|dom<around*|(|f\<circ\>g<rsup|-1>|)>=g<around*|(|A<big|cap>C|)>>
+
+      <item><math|f\<circ\>g<rsup|-1>:g<around*|(|A<big|cap>C|)>\<rightarrow\>f<around*|(|A<big|cap>C|)>>
+      is a bijection
 
       <item><math|f\<circ\>g<rsup|-1>=<around*|(|f\<circ\>g<rsup|-1>|)><rsub|\|g<around*|(|A<big|cap>C|)>><rsup|>=f<rsub|\|A<big|cap>C>\<circ\><around*|(|g<rsup|-1>|)><rsub|\|g<around*|(|A<big|cap>C|)>>=f<rsub|\|<around*|(|A<big|cap>C|)>>\<circ\><around*|(|g<rsub|\|A<big|cap>C>|)><rsup|-1>>
     </enumerate>
@@ -4614,6 +4721,29 @@
       <\equation*>
         dom<around*|(|g\<circ\>f<rsup|-1>|)>=g<around*|(|A<big|cap>C|)>
       </equation*>
+
+      <item>\ 
+
+      <\description>
+        <item*|injectivity>If <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>f\<circ\>g<rsup|-1>>
+        then <math|\<exists\>z,z<rprime|'>> such that
+        <math|*<around*|(|x,z|)>,<around*|(|x<rprime|'>,z<rprime|'>|)>\<in\>f>
+        and <math|<around*|(|z,y|)>,<around*|(|z<rprime|'>,y|)>\<in\>g<rsup|-1>>.
+        Hence <math|<around*|(|y,z|)>,<around*|(|y,z<rprime|'>|)>\<in\>g> so
+        that <math|z=z<rprime|'>> [as <math|g<rsup|-1>> is a function] hence
+        <math|<around*|(|x,z|)>,<around*|(|x<rprime|'>,z|)>\<in\>f> giving
+        <math|x=x<rprime|'>>.
+
+        <item*|<math|surjectivity>>If <math|y\<in\>f<around*|(|A<big|cap>C|)>>
+        then <math|\<exists\>x\<in\>A<big|cap>C> such that
+        <math|*<around*|(|x,y|)>\<in\>f>. As <math|A<big|cap>C\<subseteq\>C>
+        we have that <math|x\<in\>C>, so as <math|g:C\<rightarrow\>B> is a
+        function there exist a <math|z> such that
+        <math|<around*|(|x,z|)>\<in\>g>, hence
+        <math|<around*|(|z,x|)>\<in\>g<rsup|-1>>. As
+        <math|<around*|(|x,y|)>\<in\>f> it follows that
+        <math|<around*|(|z,y|)>\<in\>f\<circ\>g<rsup|-1>>.
+      </description>
 
       <item>We have\ 
 
@@ -8072,7 +8202,7 @@
 
     is a order relation in <math|B> making
     <math|<around*|\<langle\>|B,\<leqslant\><rsub|\|B>|\<rangle\>>> a partial
-    ordered set.
+    ordered set.<space|1em>
   </theorem>
 
   <\proof>
@@ -8088,6 +8218,12 @@
       <item*|transitivity>If <math|x\<leqslant\><rsub|<around*|\||B|\<nobracket\>>>y\<wedge\>y\<leqslant\><rsub|<around*|\||B|\<nobracket\>>>z\<Rightarrow\>x\<leqslant\>y\<wedge\>y\<leqslant\>z\<Rightarrow\>x\<leqslant\>z\<Rightarrowlim\><rsub|x,z\<in\>B>x\<leqslant\><rsub|<around*|\||B|\<nobracket\>>>z>
     </description>
   </proof>
+
+  <\convention>
+    To avoid excessive usage notation we write
+    <math|<around*|\<langle\>|B,\<leqslant\>|\<rangle\>>> instead of
+    <math|<around*|\<langle\>|B,\<leqslant\><rsub|\|B>|\<rangle\>>>
+  </convention>
 
   The following shows a technique of defining a partial order on the
   Cartesian product of partial ordered set.
@@ -8370,28 +8506,6 @@
     Hence <math|Q=S<rsub|A,b>> a initial segment of <math|A>
   </proof>
 
-  Next we define the concept of a Dedekind cut that will be used later to
-  define the set of real numbers,
-
-  <\definition>
-    <label|order cut><index|cut><dueto|Dedekind cut>Let
-    <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>> be a partial
-    ordered class a pair <math|<around*|\<langle\>|C,D|\<rangle\>>> is a
-    <with|font-series|bold|cut> of <math|A> iff
-
-    <\enumerate>
-      <item><math|C,D\<subseteq\>A>
-
-      <item><math|C\<neq\>\<varnothing\>\<wedge\>D\<neq\>\<varnothing\>>
-
-      <item><math|C<big|cap>D=\<varnothing\>>
-
-      <item><math|x\<in\>C\<wedge\>y\<leqslant\>x\<Rightarrow\>y\<in\>C>
-
-      <item><math|x\<in\>D\<wedge\>x\<leqslant\>y\<Rightarrow\>D>
-    </enumerate>
-  </definition>
-
   <subsection|Order relations and functions>
 
   Functions between two partial ordered classes can be classified based on
@@ -8443,19 +8557,26 @@
     <label|order composition of functions>Let
     <math|<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>>,
     <math|<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>>,<math|<around*|\<langle\>|C,\<leqslant\><rsub|C>|\<rangle\>>>
-    be partial ordered classes and <math|f:A\<rightarrow\>B>,
-    <math|g:B\<rightarrow\>C> functions then we have:
+    be partial ordered classes and <math|f:A\<rightarrow\>D>,
+    <math|g:B\<rightarrow\>C> functions with <math|D\<subseteq\>B> then we
+    have:
 
     <\enumerate>
-      <item>If <math|f:A\<rightarrow\>B> is increasing and
+      <item>If <math|f:A\<rightarrow\>D> is increasing [using
+      <math|<around*|\<langle\>|D,\<leqslant\><rsub|B>|\<rangle\>>> [see
+      theorem: <reference|order partial order on sub class>]] and
       <math|g:B\<rightarrow\>C> is increasing then
       <math|g\<circ\>f:A\<rightarrow\>C> is increasing
 
-      <item>If <math|f:A\<rightarrow\>B> is strictly increasing and
+      <item>If <math|f:A\<rightarrow\>D> is strictly increasing [using
+      <math|<around*|\<langle\>|D,\<leqslant\><rsub|B>|\<rangle\>>> [see
+      theorem: <reference|order partial order on sub class>]] and
       <math|g:B\<rightarrow\>C> is strictly increasing then
       <math|g\<circ\>f:A\<rightarrow\>C> is strictly increasing
 
-      <item>If <math|f:A\<rightarrow\>B> is a order isomorphism and
+      <item>If <math|f:A\<rightarrow\>D> is a order isomorphism [using
+      <math|<around*|\<langle\>|D,\<leqslant\><rsub|B>|\<rangle\>>> [see
+      theorem: <reference|order partial order on sub class>]] and
       <math|g:B\<rightarrow\>C> is a order isomorphism then
       <math|g\<circ\>f:A\<rightarrow\>C> is order isomorphism
     </enumerate>
@@ -12485,7 +12606,7 @@
   <\collection>
     <associate|\<less\>A,B,C\<gtr\>=\<less\>D,E,F\<gtr\>=\<gtr\>A=E,B=D,C=F|<tuple|2.5|?>>
     <associate|\<less\>A,B\<gtr\>=\<less\>C,D\<gtr\>=\<gtr\>A=C,B=D|<tuple|2.3|?>>
-    <associate|Axiom of Replacement|<tuple|2.50|?>>
+    <associate|Axiom of Replacement|<tuple|2.54|?>>
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-10|<tuple|axiom of pairing|?>>
     <associate|auto-100|<tuple|3.4|?>>
@@ -12511,60 +12632,60 @@
     <associate|auto-24|<tuple|2.2|?>>
     <associate|auto-25|<tuple|2.2.1|?>>
     <associate|auto-26|<tuple|image|?>>
-    <associate|auto-27|<tuple|2.2.2|?>>
-    <associate|auto-28|<tuple|function|?>>
-    <associate|auto-29|<tuple|<with|mode|<quote|math>|B<rsup|A>>|?>>
+    <associate|auto-27|<tuple|<with|mode|<quote|math>|g\<circ\>f>|?>>
+    <associate|auto-28|<tuple|2.2.2|?>>
+    <associate|auto-29|<tuple|function|?>>
     <associate|auto-3|<tuple|axiom of extent|2>>
-    <associate|auto-30|<tuple|identity function|?>>
-    <associate|auto-31|<tuple|<with|mode|<quote|math>|Id<rsub|A>>|?>>
-    <associate|auto-32|<tuple|2.2.3|?>>
-    <associate|auto-33|<tuple|<with|mode|<quote|math>|i<rsub|B>>|?>>
-    <associate|auto-34|<tuple|bijection|?>>
-    <associate|auto-35|<tuple|bijective|?>>
-    <associate|auto-36|<tuple|2.2.4|?>>
-    <associate|auto-37|<tuple|<with|mode|<quote|math>|f<rsub|\|C>>|?>>
-    <associate|auto-38|<tuple|2.2.5|?>>
-    <associate|auto-39|<tuple|2.3|?>>
+    <associate|auto-30|<tuple|<with|mode|<quote|math>|B<rsup|A>>|?>>
+    <associate|auto-31|<tuple|identity function|?>>
+    <associate|auto-32|<tuple|<with|mode|<quote|math>|Id<rsub|A>>|?>>
+    <associate|auto-33|<tuple|2.2.3|?>>
+    <associate|auto-34|<tuple|<with|mode|<quote|math>|i<rsub|B>>|?>>
+    <associate|auto-35|<tuple|bijection|?>>
+    <associate|auto-36|<tuple|bijective|?>>
+    <associate|auto-37|<tuple|2.2.4|?>>
+    <associate|auto-38|<tuple|<with|mode|<quote|math>|f<rsub|\|C>>|?>>
+    <associate|auto-39|<tuple|2.2.5|?>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|\<cal-U\>>|3>>
-    <associate|auto-40|<tuple|2.3.1|?>>
-    <associate|auto-41|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>>|?>>
-    <associate|auto-42|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>\|i\<in\>I|}>>|?>>
-    <associate|auto-43|<tuple|<with|mode|<quote|math>|<big|cap><rsub|i\<in\>I>A<rsub|i>>|?>>
-    <associate|auto-44|<tuple|2.3.2|?>>
-    <associate|auto-45|<tuple|2.4|?>>
-    <associate|auto-46|<tuple|<with|mode|<quote|math>|<big|prod><rsub|i\<in\>I>A<rsub|i>>|?>>
-    <associate|auto-47|<tuple|<with|mode|<quote|math>|\<pi\><rsub|i>>|?>>
-    <associate|auto-48|<tuple|3|?>>
-    <associate|auto-49|<tuple|3.1|?>>
+    <associate|auto-40|<tuple|2.3|?>>
+    <associate|auto-41|<tuple|2.3.1|?>>
+    <associate|auto-42|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>>|?>>
+    <associate|auto-43|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>\|i\<in\>I|}>>|?>>
+    <associate|auto-44|<tuple|<with|mode|<quote|math>|<big|cap><rsub|i\<in\>I>A<rsub|i>>|?>>
+    <associate|auto-45|<tuple|2.3.2|?>>
+    <associate|auto-46|<tuple|2.4|?>>
+    <associate|auto-47|<tuple|<with|mode|<quote|math>|<big|prod><rsub|i\<in\>I>A<rsub|i>>|?>>
+    <associate|auto-48|<tuple|<with|mode|<quote|math>|\<pi\><rsub|i>>|?>>
+    <associate|auto-49|<tuple|3|?>>
     <associate|auto-5|<tuple|<with|mode|<quote|math>|A<big|cup>B>|5>>
-    <associate|auto-50|<tuple|relation|?>>
-    <associate|auto-51|<tuple|3.2|?>>
-    <associate|auto-52|<tuple|3.2.1|?>>
-    <associate|auto-53|<tuple|equivalence relation|?>>
-    <associate|auto-54|<tuple|partition of a set|?>>
-    <associate|auto-55|<tuple|<with|mode|<quote|math>|R<around*|[|x|]>>|?>>
-    <associate|auto-56|<tuple|<with|mode|<quote|math>|A/R>|?>>
-    <associate|auto-57|<tuple|3.2.2|?>>
-    <associate|auto-58|<tuple|canonical function|?>>
-    <associate|auto-59|<tuple|3.3|?>>
+    <associate|auto-50|<tuple|3.1|?>>
+    <associate|auto-51|<tuple|relation|?>>
+    <associate|auto-52|<tuple|3.2|?>>
+    <associate|auto-53|<tuple|3.2.1|?>>
+    <associate|auto-54|<tuple|equivalence relation|?>>
+    <associate|auto-55|<tuple|partition of a set|?>>
+    <associate|auto-56|<tuple|<with|mode|<quote|math>|R<around*|[|x|]>>|?>>
+    <associate|auto-57|<tuple|<with|mode|<quote|math>|A/R>|?>>
+    <associate|auto-58|<tuple|3.2.2|?>>
+    <associate|auto-59|<tuple|canonical function|?>>
     <associate|auto-6|<tuple|<with|mode|<quote|math>|A<big|cap>B>|?>>
-    <associate|auto-60|<tuple|3.3.1|?>>
-    <associate|auto-61|<tuple|preorder|?>>
-    <associate|auto-62|<tuple|pre-ordered class|?>>
-    <associate|auto-63|<tuple|order relation|?>>
-    <associate|auto-64|<tuple|partial ordered class|?>>
-    <associate|auto-65|<tuple|<with|mode|<quote|math>|\<leqslant\>>|?>>
-    <associate|auto-66|<tuple|<with|mode|<quote|math>|\<less\>>|?>>
-    <associate|auto-67|<tuple|comparable elements|?>>
+    <associate|auto-60|<tuple|3.3|?>>
+    <associate|auto-61|<tuple|3.3.1|?>>
+    <associate|auto-62|<tuple|preorder|?>>
+    <associate|auto-63|<tuple|pre-ordered class|?>>
+    <associate|auto-64|<tuple|order relation|?>>
+    <associate|auto-65|<tuple|partial ordered class|?>>
+    <associate|auto-66|<tuple|<with|mode|<quote|math>|\<leqslant\>>|?>>
+    <associate|auto-67|<tuple|<with|mode|<quote|math>|\<less\>>|?>>
     <associate|auto-68|<tuple|comparable elements|?>>
-    <associate|auto-69|<tuple|totally ordered class|?>>
+    <associate|auto-69|<tuple|comparable elements|?>>
     <associate|auto-7|<tuple|<with|mode|<quote|math>|\<emptyset\>>|?>>
-    <associate|auto-70|<tuple|fully ordered class|?>>
-    <associate|auto-71|<tuple|linear ordered class|?>>
-    <associate|auto-72|<tuple|chain|?>>
-    <associate|auto-73|<tuple|initial segment|?>>
-    <associate|auto-74|<tuple|<with|mode|<quote|math>|\<cal-S\><rsub|a>>|?>>
-    <associate|auto-75|<tuple|cut|?>>
+    <associate|auto-70|<tuple|totally ordered class|?>>
+    <associate|auto-71|<tuple|fully ordered class|?>>
+    <associate|auto-72|<tuple|linear ordered class|?>>
+    <associate|auto-73|<tuple|chain|?>>
+    <associate|auto-74|<tuple|initial segment|?>>
+    <associate|auto-75|<tuple|<with|mode|<quote|math>|\<cal-S\><rsub|a>>|?>>
     <associate|auto-76|<tuple|3.3.2|?>>
     <associate|auto-77|<tuple|increasing function|?>>
     <associate|auto-78|<tuple|decreasing function|?>>
@@ -12599,8 +12720,8 @@
     <associate|axiom of power|<tuple|1.64|?>>
     <associate|axiom of subsets|<tuple|1.54|?>>
     <associate|axiom of union|<tuple|1.61|?>>
-    <associate|bijection|<tuple|2.57|?>>
-    <associate|bijective classes|<tuple|2.58|?>>
+    <associate|bijection|<tuple|2.61|?>>
+    <associate|bijective classes|<tuple|2.62|?>>
     <associate|cartesian product|<tuple|1.44|?>>
     <associate|cartesian product and inclusion|<tuple|1.48|?>>
     <associate|cartesian product of the empty set|<tuple|1.46|?>>
@@ -12667,62 +12788,63 @@
     <associate|eq 2.1.001.1|<tuple|2.1|?>>
     <associate|eq 2.10.001|<tuple|2.10|?>>
     <associate|eq 2.11.001|<tuple|2.11|?>>
-    <associate|eq 2.12.001|<tuple|2.16|?>>
+    <associate|eq 2.12.001|<tuple|2.17|?>>
     <associate|eq 2.12.002|<tuple|2.12|?>>
-    <associate|eq 2.13.001|<tuple|2.17|?>>
+    <associate|eq 2.13.001|<tuple|2.18|?>>
     <associate|eq 2.13.002|<tuple|2.13|?>>
-    <associate|eq 2.14.001|<tuple|2.23|?>>
-    <associate|eq 2.14.009|<tuple|2.14|?>>
-    <associate|eq 2.15.013|<tuple|2.15|?>>
-    <associate|eq 2.16.003|<tuple|2.26|?>>
-    <associate|eq 2.16.005|<tuple|2.18|?>>
-    <associate|eq 2.17.002|<tuple|2.27|?>>
-    <associate|eq 2.17.003|<tuple|2.25|?>>
-    <associate|eq 2.17.004|<tuple|2.24|?>>
-    <associate|eq 2.17.006|<tuple|2.19|?>>
-    <associate|eq 2.18.002|<tuple|2.28|?>>
-    <associate|eq 2.18.006|<tuple|2.20|?>>
-    <associate|eq 2.19.002|<tuple|2.29|?>>
+    <associate|eq 2.14.001|<tuple|2.24|?>>
+    <associate|eq 2.14.009|<tuple|2.15|?>>
+    <associate|eq 2.14.038|<tuple|2.14|?>>
+    <associate|eq 2.15.013|<tuple|2.16|?>>
+    <associate|eq 2.16.003|<tuple|2.27|?>>
+    <associate|eq 2.16.005|<tuple|2.19|?>>
+    <associate|eq 2.17.002|<tuple|2.28|?>>
+    <associate|eq 2.17.003|<tuple|2.26|?>>
+    <associate|eq 2.17.004|<tuple|2.25|?>>
+    <associate|eq 2.17.006|<tuple|2.20|?>>
+    <associate|eq 2.18.002|<tuple|2.29|?>>
+    <associate|eq 2.18.006|<tuple|2.21|?>>
+    <associate|eq 2.19.002|<tuple|2.30|?>>
     <associate|eq 2.2.001|<tuple|2.4|?>>
-    <associate|eq 2.20.002|<tuple|2.30|?>>
-    <associate|eq 2.21.002|<tuple|2.31|?>>
-    <associate|eq 2.21.017|<tuple|2.21|?>>
-    <associate|eq 2.22.017|<tuple|2.22|?>>
-    <associate|eq 2.25.004|<tuple|2.33|?>>
-    <associate|eq 2.26.004|<tuple|2.34|?>>
-    <associate|eq 2.27.004|<tuple|2.35|?>>
-    <associate|eq 2.28.004|<tuple|2.36|?>>
-    <associate|eq 2.29.004|<tuple|2.38|?>>
-    <associate|eq 2.29.012|<tuple|2.32|?>>
+    <associate|eq 2.20.002|<tuple|2.31|?>>
+    <associate|eq 2.21.002|<tuple|2.32|?>>
+    <associate|eq 2.21.017|<tuple|2.22|?>>
+    <associate|eq 2.22.017|<tuple|2.23|?>>
+    <associate|eq 2.25.004|<tuple|2.34|?>>
+    <associate|eq 2.26.004|<tuple|2.35|?>>
+    <associate|eq 2.27.004|<tuple|2.36|?>>
+    <associate|eq 2.28.004|<tuple|2.37|?>>
+    <associate|eq 2.29.004|<tuple|2.39|?>>
+    <associate|eq 2.29.012|<tuple|2.33|?>>
     <associate|eq 2.3.001.2|<tuple|2.3|?>>
-    <associate|eq 2.30.004|<tuple|2.39|?>>
-    <associate|eq 2.31.004|<tuple|2.40|?>>
-    <associate|eq 2.31.010|<tuple|2.37|?>>
-    <associate|eq 2.32.004|<tuple|2.41|?>>
-    <associate|eq 2.34.005|<tuple|2.42|?>>
-    <associate|eq 2.35.005|<tuple|2.43|?>>
-    <associate|eq 2.38.006|<tuple|2.44|?>>
-    <associate|eq 2.39.006|<tuple|2.45|?>>
-    <associate|eq 2.40.006|<tuple|2.47|?>>
-    <associate|eq 2.40.007|<tuple|2.46|?>>
-    <associate|eq 2.41.006|<tuple|2.48|?>>
-    <associate|eq 2.42.006|<tuple|2.49|?>>
-    <associate|eq 2.43.006|<tuple|2.51|?>>
-    <associate|eq 2.44.006|<tuple|2.52|?>>
-    <associate|eq 2.44.007|<tuple|2.50|?>>
-    <associate|eq 2.45.006|<tuple|2.53|?>>
-    <associate|eq 2.48.007|<tuple|2.56|?>>
-    <associate|eq 2.48.008|<tuple|2.54|?>>
-    <associate|eq 2.49.007|<tuple|2.57|?>>
+    <associate|eq 2.30.004|<tuple|2.40|?>>
+    <associate|eq 2.31.004|<tuple|2.41|?>>
+    <associate|eq 2.31.010|<tuple|2.38|?>>
+    <associate|eq 2.32.004|<tuple|2.42|?>>
+    <associate|eq 2.34.005|<tuple|2.43|?>>
+    <associate|eq 2.35.005|<tuple|2.44|?>>
+    <associate|eq 2.38.006|<tuple|2.45|?>>
+    <associate|eq 2.39.006|<tuple|2.46|?>>
+    <associate|eq 2.40.006|<tuple|2.48|?>>
+    <associate|eq 2.40.007|<tuple|2.47|?>>
+    <associate|eq 2.41.006|<tuple|2.49|?>>
+    <associate|eq 2.42.006|<tuple|2.50|?>>
+    <associate|eq 2.43.006|<tuple|2.52|?>>
+    <associate|eq 2.44.006|<tuple|2.53|?>>
+    <associate|eq 2.44.007|<tuple|2.51|?>>
+    <associate|eq 2.45.006|<tuple|2.54|?>>
+    <associate|eq 2.48.007|<tuple|2.57|?>>
+    <associate|eq 2.48.008|<tuple|2.55|?>>
+    <associate|eq 2.49.007|<tuple|2.58|?>>
     <associate|eq 2.5.001.2|<tuple|2.5|?>>
-    <associate|eq 2.50.007|<tuple|2.58|?>>
-    <associate|eq 2.51.007|<tuple|2.63|?>>
-    <associate|eq 2.51.010|<tuple|2.55|?>>
-    <associate|eq 2.59.018|<tuple|2.61|?>>
-    <associate|eq 2.59.022|<tuple|2.59|?>>
+    <associate|eq 2.50.007|<tuple|2.59|?>>
+    <associate|eq 2.51.007|<tuple|2.64|?>>
+    <associate|eq 2.51.010|<tuple|2.56|?>>
+    <associate|eq 2.59.018|<tuple|2.62|?>>
+    <associate|eq 2.59.022|<tuple|2.60|?>>
     <associate|eq 2.6.001|<tuple|2.6|?>>
-    <associate|eq 2.60.018|<tuple|2.62|?>>
-    <associate|eq 2.60.022|<tuple|2.60|?>>
+    <associate|eq 2.60.018|<tuple|2.63|?>>
+    <associate|eq 2.60.022|<tuple|2.61|?>>
     <associate|eq 2.7.001|<tuple|2.7|?>>
     <associate|eq 2.8.001|<tuple|2.8|?>>
     <associate|eq 2.9.001|<tuple|2.9|?>>
@@ -12810,108 +12932,110 @@
     <associate|equivalence relation partition|<tuple|3.6|?>>
     <associate|equivalence relation partition alternative|<tuple|3.8|?>>
     <associate|equivalence relation subsets|<tuple|3.19|?>>
-    <associate|family|<tuple|2.89|?>>
-    <associate|family and function composition|<tuple|2.94|?>>
-    <associate|family de Morgan|<tuple|2.115|?>>
-    <associate|family definition (1)|<tuple|2.91|?>>
-    <associate|family definition (2)|<tuple|2.92|?>>
-    <associate|family definition (3)|<tuple|2.93|?>>
-    <associate|family distributivity|<tuple|2.113|?>>
-    <associate|family image and preimage|<tuple|2.119|?>>
-    <associate|family intersection (2)|<tuple|2.106|?>>
-    <associate|family intersection is a set|<tuple|2.107|?>>
-    <associate|family intersection(1)|<tuple|2.105|?>>
-    <associate|family product and index transformation|<tuple|2.126|?>>
-    <associate|family properties (1)|<tuple|2.110|?>>
-    <associate|family properties (2)|<tuple|2.111|?>>
-    <associate|family properties (3)|<tuple|2.116|?>>
-    <associate|family range|<tuple|2.95|?>>
-    <associate|family range (1)|<tuple|2.96|?>>
-    <associate|family set|<tuple|2.97|?>>
-    <associate|family trivial|<tuple|2.108|?>>
-    <associate|family union (1)|<tuple|2.98|?>>
-    <associate|family union (2)|<tuple|2.101|?>>
-    <associate|family union condition set|<tuple|2.103|?>>
-    <associate|family union intersection and empty set|<tuple|2.117|?>>
-    <associate|family union intersection and inclusion|<tuple|2.112|?>>
-    <associate|family union of a empty set|<tuple|2.104|?>>
-    <associate|family union of family of families|<tuple|2.118|?>>
-    <associate|family union of family set and surjections|<tuple|2.102|?>>
-    <associate|family union of union of two families|<tuple|2.114|?>>
-    <associate|family union{A,B}|<tuple|2.109|?>>
-    <associate|function|<tuple|2.21|?>>
-    <associate|function A^empty is empty|<tuple|2.27|?>>
-    <associate|function B^A|<tuple|2.25|?>>
-    <associate|function B^A and inclusion|<tuple|2.29|?>>
-    <associate|function P(A)=2^A|<tuple|2.71|?>>
-    <associate|function alternative for composition|<tuple|2.37|?>>
-    <associate|function and power|<tuple|2.70|?>>
-    <associate|function between {0,1} and {A,B}|<tuple|2.23|?>>
-    <associate|function bijection and inverse|<tuple|2.67|?>>
-    <associate|function bijection condition (2)|<tuple|2.66|?>>
-    <associate|function bijection f,f-1|<tuple|2.64|?>>
-    <associate|function bijection has a inverse|<tuple|2.63|?>>
-    <associate|function characteristics function|<tuple|2.41|?>>
-    <associate|function combining bijections|<tuple|2.75|?>>
-    <associate|function combining functions (1)|<tuple|2.73|?>>
-    <associate|function combining functions (2)|<tuple|2.74|?>>
-    <associate|function composition and restriction|<tuple|2.81|?>>
+    <associate|family|<tuple|2.94|?>>
+    <associate|family and function composition|<tuple|2.99|?>>
+    <associate|family de Morgan|<tuple|2.120|?>>
+    <associate|family definition (1)|<tuple|2.96|?>>
+    <associate|family definition (2)|<tuple|2.97|?>>
+    <associate|family definition (3)|<tuple|2.98|?>>
+    <associate|family distributivity|<tuple|2.118|?>>
+    <associate|family image and preimage|<tuple|2.124|?>>
+    <associate|family intersection (2)|<tuple|2.111|?>>
+    <associate|family intersection is a set|<tuple|2.112|?>>
+    <associate|family intersection(1)|<tuple|2.110|?>>
+    <associate|family product and index transformation|<tuple|2.131|?>>
+    <associate|family properties (1)|<tuple|2.115|?>>
+    <associate|family properties (2)|<tuple|2.116|?>>
+    <associate|family properties (3)|<tuple|2.121|?>>
+    <associate|family range|<tuple|2.100|?>>
+    <associate|family range (1)|<tuple|2.101|?>>
+    <associate|family set|<tuple|2.102|?>>
+    <associate|family trivial|<tuple|2.113|?>>
+    <associate|family union (1)|<tuple|2.103|?>>
+    <associate|family union (2)|<tuple|2.106|?>>
+    <associate|family union condition set|<tuple|2.108|?>>
+    <associate|family union intersection and empty set|<tuple|2.122|?>>
+    <associate|family union intersection and inclusion|<tuple|2.117|?>>
+    <associate|family union of a empty set|<tuple|2.109|?>>
+    <associate|family union of family of families|<tuple|2.123|?>>
+    <associate|family union of family set and surjections|<tuple|2.107|?>>
+    <associate|family union of union of two families|<tuple|2.119|?>>
+    <associate|family union{A,B}|<tuple|2.114|?>>
+    <associate|function|<tuple|2.24|?>>
+    <associate|function A^empty is empty|<tuple|2.32|?>>
+    <associate|function B^A|<tuple|2.30|?>>
+    <associate|function B^A and inclusion|<tuple|2.34|?>>
+    <associate|function P(A)=2^A|<tuple|2.76|?>>
+    <associate|function alternative for composition|<tuple|2.42|?>>
+    <associate|function and power|<tuple|2.75|?>>
+    <associate|function between {0,1} and {A,B}|<tuple|2.27|?>>
+    <associate|function bijection and inverse|<tuple|2.71|?>>
+    <associate|function bijection condition (2)|<tuple|2.70|?>>
+    <associate|function bijection f,f-1|<tuple|2.68|?>>
+    <associate|function bijection has a inverse|<tuple|2.67|?>>
+    <associate|function characteristics function|<tuple|2.46|?>>
+    <associate|function combining bijections|<tuple|2.80|?>>
+    <associate|function combining functions (1)|<tuple|2.78|?>>
+    <associate|function combining functions (2)|<tuple|2.79|?>>
+    <associate|function composition and restriction|<tuple|2.86|?>>
     <associate|function composition injectivity, surjectivity and
-    bijectivity|<tuple|2.69|?>>
-    <associate|function composition of Id function|<tuple|2.43|?>>
+    bijectivity|<tuple|2.73|?>>
+    <associate|function composition injectivity, surjectivity and bijectivity
+    (1)|<tuple|2.74|?>>
+    <associate|function composition of Id function|<tuple|2.48|?>>
     <associate|function composition of functions is a
-    fucntion|<tuple|2.45|?>>
-    <associate|function condition (1)|<tuple|2.22|?>>
-    <associate|function constant function|<tuple|2.40|?>>
-    <associate|function empty function|<tuple|2.39|?>>
-    <associate|function empty function bijection|<tuple|2.59|?>>
-    <associate|function equality (1)|<tuple|2.33|?>>
-    <associate|function equality (2)|<tuple|2.36|?>>
-    <associate|function extend target|<tuple|2.28|?>>
-    <associate|function extending funtion domain|<tuple|2.76|?>>
-    <associate|function f(x)|<tuple|2.34|?>>
-    <associate|function function and intersection and union|<tuple|2.85|?>>
-    <associate|function identity function|<tuple|2.42|?>>
-    <associate|function identity map is a bijection|<tuple|2.60|?>>
-    <associate|function image preimage|<tuple|2.44|?>>
-    <associate|function image preimage alternative|<tuple|2.38|?>>
-    <associate|function inclusion function|<tuple|2.49|?>>
-    <associate|function injection condition|<tuple|2.56|?>>
-    <associate|function injective inverse is a function|<tuple|2.55|?>>
-    <associate|function injectivity to bijection|<tuple|2.62|?>>
-    <associate|function injectivity, surjectivity|<tuple|2.48|?>>
-    <associate|function inverse and restriction|<tuple|2.80|?>>
-    <associate|function inverse function and f(x)|<tuple|2.65|?>>
-    <associate|function inverse of a bijection is unique|<tuple|2.68|?>>
-    <associate|function power of intersection|<tuple|2.31|?>>
-    <associate|function preimage of image|<tuple|2.51|?>>
-    <associate|function properties (1)|<tuple|2.84|?>>
-    <associate|function range restriction|<tuple|2.32|?>>
-    <associate|function restricted function properties|<tuple|2.78|?>>
-    <associate|function restriction and domain|<tuple|2.79|?>>
-    <associate|function restriction of a function|<tuple|2.82|?>>
-    <associate|function restriction of a graph|<tuple|2.72|?>>
-    <associate|function simple definition|<tuple|2.86|?>>
-    <associate|function simple definition notation|<tuple|2.87|?>>
+    fucntion|<tuple|2.28|?>>
+    <associate|function condition (1)|<tuple|2.26|?>>
+    <associate|function constant function|<tuple|2.45|?>>
+    <associate|function empty function|<tuple|2.44|?>>
+    <associate|function empty function bijection|<tuple|2.63|?>>
+    <associate|function equality (1)|<tuple|2.38|?>>
+    <associate|function equality (2)|<tuple|2.41|?>>
+    <associate|function extend target|<tuple|2.33|?>>
+    <associate|function extending funtion domain|<tuple|2.81|?>>
+    <associate|function f(x)|<tuple|2.39|?>>
+    <associate|function function and intersection and union|<tuple|2.90|?>>
+    <associate|function identity function|<tuple|2.47|?>>
+    <associate|function identity map is a bijection|<tuple|2.64|?>>
+    <associate|function image preimage|<tuple|2.49|?>>
+    <associate|function image preimage alternative|<tuple|2.43|?>>
+    <associate|function inclusion function|<tuple|2.53|?>>
+    <associate|function injection condition|<tuple|2.60|?>>
+    <associate|function injective inverse is a function|<tuple|2.59|?>>
+    <associate|function injectivity to bijection|<tuple|2.66|?>>
+    <associate|function injectivity, surjectivity|<tuple|2.52|?>>
+    <associate|function inverse and restriction|<tuple|2.85|?>>
+    <associate|function inverse function and f(x)|<tuple|2.69|?>>
+    <associate|function inverse of a bijection is unique|<tuple|2.72|?>>
+    <associate|function power of intersection|<tuple|2.36|?>>
+    <associate|function preimage of image|<tuple|2.55|?>>
+    <associate|function preimage of image (1)|<tuple|2.25|?>>
+    <associate|function properties (1)|<tuple|2.89|?>>
+    <associate|function range restriction|<tuple|2.37|?>>
+    <associate|function restricted function properties|<tuple|2.83|?>>
+    <associate|function restriction and domain|<tuple|2.84|?>>
+    <associate|function restriction of a function|<tuple|2.87|?>>
+    <associate|function restriction of a graph|<tuple|2.77|?>>
+    <associate|function simple definition|<tuple|2.91|?>>
+    <associate|function simple definition notation|<tuple|2.92|?>>
     <associate|function surjection and construction of inverse
     function|<tuple|3.98|?>>
-    <associate|function surjection condition|<tuple|2.47|?>>
-    <associate|function trivial bijection|<tuple|2.61|?>>
-    <associate|function: A^B and sets|<tuple|2.30|?>>
+    <associate|function surjection condition|<tuple|2.51|?>>
+    <associate|function trivial bijection|<tuple|2.65|?>>
+    <associate|function: A^B and sets|<tuple|2.35|?>>
     <associate|order A isomorphism B|<tuple|3.49|?>>
     <associate|order a\<less\>=b\<less\>=c|<tuple|3.29|?>>
-    <associate|order chain|<tuple|3.39|?>>
-    <associate|order chain is a totally ordered class|<tuple|3.41|?>>
-    <associate|order comparable|<tuple|3.36|?>>
-    <associate|order comparable property|<tuple|3.37|?>>
+    <associate|order chain|<tuple|3.40|?>>
+    <associate|order chain is a totally ordered class|<tuple|3.42|?>>
+    <associate|order comparable|<tuple|3.37|?>>
+    <associate|order comparable property|<tuple|3.38|?>>
     <associate|order composition of functions|<tuple|3.50|?>>
     <associate|order condition for isomorphism|<tuple|3.52|?>>
     <associate|order condition for isomorphism in a totallu ordered
     set|<tuple|3.55|?>>
     <associate|order conditional complete alternatives|<tuple|3.74|?>>
     <associate|order conditional complete order|<tuple|3.73|?>>
-    <associate|order cut|<tuple|3.47|?>>
-    <associate|order empty set is a chain|<tuple|3.40|?>>
+    <associate|order empty set is a chain|<tuple|3.41|?>>
     <associate|order eq order preorder to order|<tuple|3.33|?>>
     <associate|order example inclusion order and sup, inf|<tuple|3.66|?>>
     <associate|order greatest and lowest element are unique|<tuple|3.60|?>>
@@ -12920,15 +13044,15 @@
     <associate|order inclusion and greatest and least element|<tuple|3.68|?>>
     <associate|order inclusion is a order|<tuple|3.32|?>>
     <associate|order increasing, decreasing|<tuple|3.48|?>>
-    <associate|order initial segement|<tuple|3.44|?>>
+    <associate|order initial segement|<tuple|3.45|?>>
     <associate|order initial segement a\<less\>b|<tuple|3.91|?>>
-    <associate|order initial segement inclusion|<tuple|3.45|?>>
-    <associate|order intial sergment property|<tuple|3.46|?>>
+    <associate|order initial segement inclusion|<tuple|3.46|?>>
+    <associate|order intial sergment property|<tuple|3.47|?>>
     <associate|order isomorphism and conditional complete|<tuple|3.76|?>>
     <associate|order isomorphism condition (2)|<tuple|3.53|?>>
     <associate|order isomorphism preservers sup and inf|<tuple|3.75|?>>
     <associate|order isomorphism strictly|<tuple|3.51|?>>
-    <associate|order lexical order|<tuple|3.35|?>>
+    <associate|order lexical order|<tuple|3.36|?>>
     <associate|order lower upper bound and inclusion|<tuple|3.69|?>>
     <associate|order lower upper bounds of empty set|<tuple|3.64|?>>
     <associate|order maximal minimal element|<tuple|3.56|?>>
@@ -12949,8 +13073,8 @@
     <associate|order sup,inf and inclusion|<tuple|3.70|?>>
     <associate|order supremum infinum|<tuple|3.65|?>>
     <associate|order total/well-order inclusion|<tuple|3.79|?>>
-    <associate|order totally lexicol ordering|<tuple|3.43|?>>
-    <associate|order totally ordered subclass|<tuple|3.42|?>>
+    <associate|order totally lexicol ordering|<tuple|3.44|?>>
+    <associate|order totally ordered subclass|<tuple|3.43|?>>
     <associate|order transfinite induction|<tuple|3.85|?>>
     <associate|order upport lower bound|<tuple|3.63|?>>
     <associate|order well order and immediate successor|<tuple|3.82|?>>
@@ -12969,34 +13093,36 @@
     <associate|order well-rodered class|<tuple|3.77|?>>
     <associate|pair equality of pairs|<tuple|1.43|?>>
     <associate|pair of elements|<tuple|1.41|?>>
-    <associate|partial function associativity|<tuple|2.18|?>>
-    <associate|partial function composition of graphs|<tuple|2.16|?>>
+    <associate|partial function|<tuple|2.7|?>>
+    <associate|partial function associativity|<tuple|2.21|?>>
+    <associate|partial function composition of graphs|<tuple|2.18|?>>
     <associate|partial function composition of partial
-    functions|<tuple|2.17|?>>
-    <associate|partial function dom(f) range(f) as subclasses|<tuple|2.10|?>>
-    <associate|partial function domain range composition|<tuple|2.19|?>>
-    <associate|partial function image|<tuple|2.12|?>>
+    functions|<tuple|2.19|?>>
+    <associate|partial function dom(f) range(f) as subclasses|<tuple|2.11|?>>
+    <associate|partial function domain range composition|<tuple|2.22|?>>
+    <associate|partial function image|<tuple|2.13|?>>
     <associate|partial function image preimage of
-    compositions|<tuple|2.20|?>>
-    <associate|partial function injectivity and surjectivity|<tuple|2.46|?>>
-    <associate|partial function inverse graph|<tuple|2.52|?>>
-    <associate|partial function inverse if injective|<tuple|2.53|?>>
-    <associate|partial function preimage|<tuple|2.14|?>>
-    <associate|partial function set domain range|<tuple|2.11|?>>
-    <associate|partial functions image/preimage properties|<tuple|2.15|?>>
+    compositions|<tuple|2.23|?>>
+    <associate|partial function injectivity and surjectivity|<tuple|2.50|?>>
+    <associate|partial function inverse graph|<tuple|2.56|?>>
+    <associate|partial function inverse if injective|<tuple|2.57|?>>
+    <associate|partial function preimage|<tuple|2.15|?>>
+    <associate|partial function set domain range|<tuple|2.12|?>>
+    <associate|partial functions image/preimage properties|<tuple|2.17|?>>
+    <associate|parttial function graph|<tuple|2.6|?>>
     <associate|power set|<tuple|1.63|?>>
-    <associate|product|<tuple|2.120|?>>
-    <associate|product and intersection|<tuple|2.124|?>>
-    <associate|product and power|<tuple|2.125|?>>
-    <associate|product extension|<tuple|2.128|?>>
-    <associate|product inclusion|<tuple|2.123|?>>
-    <associate|product of family with one element|<tuple|2.121|?>>
-    <associate|product of family with two classes|<tuple|2.122|?>>
+    <associate|product|<tuple|2.125|?>>
+    <associate|product and intersection|<tuple|2.129|?>>
+    <associate|product and power|<tuple|2.130|?>>
+    <associate|product extension|<tuple|2.133|?>>
+    <associate|product inclusion|<tuple|2.128|?>>
+    <associate|product of family with one element|<tuple|2.126|?>>
+    <associate|product of family with two classes|<tuple|2.127|?>>
     <associate|product product is empty|<tuple|3.102|?>>
     <associate|product product is not empty|<tuple|3.101|?>>
-    <associate|product projection function|<tuple|2.129|?>>
+    <associate|product projection function|<tuple|2.134|?>>
     <associate|product projection is surjective|<tuple|3.100|?>>
-    <associate|product sub-product|<tuple|2.127|?>>
+    <associate|product sub-product|<tuple|2.132|?>>
     <associate|relation|<tuple|3.1|?>>
     <associate|relation properties|<tuple|3.4|?>>
     <associate|relation trivial|<tuple|3.3|?>>
@@ -13008,7 +13134,7 @@
     <associate|set restriction of a set of sets|<tuple|1.65|?>>
     <associate|set successor set|<tuple|1.51|?>>
     <associate|set union of two sets is a set|<tuple|1.62|?>>
-    <associate|totally ordered class|<tuple|3.38|?>>
+    <associate|totally ordered class|<tuple|3.39|?>>
     <associate|universal class|<tuple|1.12|?>>
     <associate|universal class property|<tuple|1.13|?>>
   </collection>
@@ -13051,73 +13177,73 @@
 
       <tuple|<tuple|image>|<pageref|auto-26>>
 
-      <tuple|<tuple|function>|<pageref|auto-28>>
+      <tuple|<tuple|<with|mode|<quote|math>|g\<circ\>f>>|<pageref|auto-27>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|B<rsup|A>>>|<pageref|auto-29>>
+      <tuple|<tuple|function>|<pageref|auto-29>>
 
-      <tuple|<tuple|identity function>|<pageref|auto-30>>
+      <tuple|<tuple|<with|mode|<quote|math>|B<rsup|A>>>|<pageref|auto-30>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|Id<rsub|A>>>|<pageref|auto-31>>
+      <tuple|<tuple|identity function>|<pageref|auto-31>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|i<rsub|B>>>|<pageref|auto-33>>
+      <tuple|<tuple|<with|mode|<quote|math>|Id<rsub|A>>>|<pageref|auto-32>>
 
-      <tuple|<tuple|bijection>|<pageref|auto-34>>
+      <tuple|<tuple|<with|mode|<quote|math>|i<rsub|B>>>|<pageref|auto-34>>
 
-      <tuple|<tuple|bijective>|<pageref|auto-35>>
+      <tuple|<tuple|bijection>|<pageref|auto-35>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|f<rsub|\|C>>>|<pageref|auto-37>>
+      <tuple|<tuple|bijective>|<pageref|auto-36>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>>>|<pageref|auto-41>>
+      <tuple|<tuple|<with|mode|<quote|math>|f<rsub|\|C>>>|<pageref|auto-38>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>\|i\<in\>I|}>>>|<pageref|auto-42>>
+      <tuple|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>>>|<pageref|auto-42>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|<big|cap><rsub|i\<in\>I>A<rsub|i>>>|<pageref|auto-43>>
+      <tuple|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>\|i\<in\>I|}>>>|<pageref|auto-43>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|<big|prod><rsub|i\<in\>I>A<rsub|i>>>|<pageref|auto-46>>
+      <tuple|<tuple|<with|mode|<quote|math>|<big|cap><rsub|i\<in\>I>A<rsub|i>>>|<pageref|auto-44>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<pi\><rsub|i>>>|<pageref|auto-47>>
+      <tuple|<tuple|<with|mode|<quote|math>|<big|prod><rsub|i\<in\>I>A<rsub|i>>>|<pageref|auto-47>>
 
-      <tuple|<tuple|relation>|<pageref|auto-50>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<pi\><rsub|i>>>|<pageref|auto-48>>
 
-      <tuple|<tuple|equivalence relation>|<pageref|auto-53>>
+      <tuple|<tuple|relation>|<pageref|auto-51>>
 
-      <tuple|<tuple|partition of a set>|<pageref|auto-54>>
+      <tuple|<tuple|equivalence relation>|<pageref|auto-54>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|R<around*|[|x|]>>>|<pageref|auto-55>>
+      <tuple|<tuple|partition of a set>|<pageref|auto-55>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|A/R>>|<pageref|auto-56>>
+      <tuple|<tuple|<with|mode|<quote|math>|R<around*|[|x|]>>>|<pageref|auto-56>>
 
-      <tuple|<tuple|canonical function>|<pageref|auto-58>>
+      <tuple|<tuple|<with|mode|<quote|math>|A/R>>|<pageref|auto-57>>
 
-      <tuple|<tuple|preorder>|<pageref|auto-61>>
+      <tuple|<tuple|canonical function>|<pageref|auto-59>>
 
-      <tuple|<tuple|pre-ordered class>|<pageref|auto-62>>
+      <tuple|<tuple|preorder>|<pageref|auto-62>>
 
-      <tuple|<tuple|order relation>|<pageref|auto-63>>
+      <tuple|<tuple|pre-ordered class>|<pageref|auto-63>>
 
-      <tuple|<tuple|partial ordered class>|<pageref|auto-64>>
+      <tuple|<tuple|order relation>|<pageref|auto-64>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<leqslant\>>>|<pageref|auto-65>>
+      <tuple|<tuple|partial ordered class>|<pageref|auto-65>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<less\>>>|<pageref|auto-66>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<leqslant\>>>|<pageref|auto-66>>
 
-      <tuple|<tuple|comparable elements>|<pageref|auto-67>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<less\>>>|<pageref|auto-67>>
 
       <tuple|<tuple|comparable elements>|<pageref|auto-68>>
 
-      <tuple|<tuple|totally ordered class>|<pageref|auto-69>>
+      <tuple|<tuple|comparable elements>|<pageref|auto-69>>
 
-      <tuple|<tuple|fully ordered class>|<pageref|auto-70>>
+      <tuple|<tuple|totally ordered class>|<pageref|auto-70>>
 
-      <tuple|<tuple|linear ordered class>|<pageref|auto-71>>
+      <tuple|<tuple|fully ordered class>|<pageref|auto-71>>
 
-      <tuple|<tuple|chain>|<pageref|auto-72>>
+      <tuple|<tuple|linear ordered class>|<pageref|auto-72>>
 
-      <tuple|<tuple|initial segment>|<pageref|auto-73>>
+      <tuple|<tuple|chain>|<pageref|auto-73>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<cal-S\><rsub|a>>>|<pageref|auto-74>>
+      <tuple|<tuple|initial segment>|<pageref|auto-74>>
 
-      <tuple|<tuple|cut>|<pageref|auto-75>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-S\><rsub|a>>>|<pageref|auto-75>>
 
       <tuple|<tuple|increasing function>|<pageref|auto-77>>
 
@@ -13206,61 +13332,61 @@
 
       <with|par-left|<quote|1tab>|2.2.2<space|2spc>Functions
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-27>>
+      <no-break><pageref|auto-28>>
 
       <with|par-left|<quote|1tab>|2.2.3<space|2spc>Injectivity, Surjectivity
       and bijectivity <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-32>>
+      <no-break><pageref|auto-33>>
 
       <with|par-left|<quote|1tab>|2.2.4<space|2spc>Restriction of a
       Function/Partial Function <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-36>>
+      <no-break><pageref|auto-37>>
 
       <with|par-left|<quote|1tab>|2.2.5<space|2spc>Set operations and
       (Partial) Functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-38>>
+      <no-break><pageref|auto-39>>
 
       2.3<space|2spc>Families <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-39>
+      <no-break><pageref|auto-40>
 
       <with|par-left|<quote|1tab>|2.3.1<space|2spc>Family
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-40>>
+      <no-break><pageref|auto-41>>
 
       <with|par-left|<quote|1tab>|2.3.2<space|2spc>Properties of the union
       and intersection of families <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-44>>
+      <no-break><pageref|auto-45>>
 
       2.4<space|2spc>Product of a family of sets
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-45>
+      <no-break><pageref|auto-46>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Relations>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-48><vspace|0.5fn>
+      <no-break><pageref|auto-49><vspace|0.5fn>
 
       3.1<space|2spc>Relation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-49>
+      <no-break><pageref|auto-50>
 
       3.2<space|2spc>Equivalence relations
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-51>
+      <no-break><pageref|auto-52>
 
       <with|par-left|<quote|1tab>|3.2.1<space|2spc>Equivalence relations and
       equivalence classes <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-52>>
+      <no-break><pageref|auto-53>>
 
       <with|par-left|<quote|1tab>|3.2.2<space|2spc>Functions and equivalence
       relations <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-57>>
+      <no-break><pageref|auto-58>>
 
       3.3<space|2spc>Partial ordered classes
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-59>
+      <no-break><pageref|auto-60>
 
       <with|par-left|<quote|1tab>|3.3.1<space|2spc>Order relation
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-60>>
+      <no-break><pageref|auto-61>>
 
       <with|par-left|<quote|1tab>|3.3.2<space|2spc>Order relations and
       functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
