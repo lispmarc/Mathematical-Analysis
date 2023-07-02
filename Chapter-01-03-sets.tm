@@ -8557,26 +8557,22 @@
     <label|order composition of functions>Let
     <math|<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>>,
     <math|<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>>,<math|<around*|\<langle\>|C,\<leqslant\><rsub|C>|\<rangle\>>>
-    be partial ordered classes and <math|f:A\<rightarrow\>D>,
-    <math|g:B\<rightarrow\>C> functions with <math|D\<subseteq\>B> then we
-    have:
+    be partial ordered classes, <math|D\<subseteq\>B>
 
     <\enumerate>
-      <item>If <math|f:A\<rightarrow\>D> is increasing [using
+      <item>If <math|f:A\<rightarrow\>D> is a order homeomorphism [using
       <math|<around*|\<langle\>|D,\<leqslant\><rsub|B>|\<rangle\>>> [see
       theorem: <reference|order partial order on sub class>]] and
-      <math|g:B\<rightarrow\>C> is increasing then
-      <math|g\<circ\>f:A\<rightarrow\>C> is increasing
+      <math|g:B\<rightarrow\>C> is a order homeomorphism then
+      <math|g\<circ\>f:A\<rightarrow\>C> is order homeomorphism
 
-      <item>If <math|f:A\<rightarrow\>D> is strictly increasing [using
-      <math|<around*|\<langle\>|D,\<leqslant\><rsub|B>|\<rangle\>>> [see
-      theorem: <reference|order partial order on sub class>]] and
-      <math|g:B\<rightarrow\>C> is strictly increasing then
+      <item>If <math|f:A\<rightarrow\>D> is s strictly increasing function
+      [using <math|<around*|\<langle\>|D,\<leqslant\><rsub|B>|\<rangle\>>>
+      [see theorem: <reference|order partial order on sub class>]] and
+      <math|g:B\<rightarrow\>C> is a strictly increasing function then
       <math|g\<circ\>f:A\<rightarrow\>C> is strictly increasing
 
-      <item>If <math|f:A\<rightarrow\>D> is a order isomorphism [using
-      <math|<around*|\<langle\>|D,\<leqslant\><rsub|B>|\<rangle\>>> [see
-      theorem: <reference|order partial order on sub class>]] and
+      <item>If <math|f:A\<rightarrow\>B> is a order isomorphism and
       <math|g:B\<rightarrow\>C> is a order isomorphism then
       <math|g\<circ\>f:A\<rightarrow\>C> is order isomorphism
     </enumerate>

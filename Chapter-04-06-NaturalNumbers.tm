@@ -564,14 +564,16 @@
     <math|<around*|\<langle\>|A,\<oplus\><rsub|A>|\<rangle\>>>,
     <math|<around*|\<langle\>|B,\<oplus\><rsub|B>|\<rangle\>>> and
     <math|<around*|\<langle\>|C,\<oplus\><rsub|C>|\<rangle\>>> are groups
-    with <math|D\<subseteq\>B> a sub-group of <math|B> then
+    then
 
     <\enumerate>
-      <item>If <math|f:A\<rightarrow\>D> and <math|g:B\<rightarrow\>C> are
-      group homeomorphisms then <math|g\<circ\>f:A\<rightarrow\>C> is a group
-      homeomorphism.
+      <item>If <math|f:A\<rightarrow\>D>,
+      <math|<around*|\<langle\>|D,\<oplus\><rsub|B>|\<rangle\>>> a sub group
+      of <math|<around*|\<langle\>|B,\<oplus\><rsub|B>|\<rangle\>>> and
+      <math|g:B\<rightarrow\>C> are group homeomorphisms then
+      <math|g\<circ\>f:A\<rightarrow\>C> is a group homeomorphism.
 
-      <item>If <math|f:A\<rightarrow\>D> and <math|g:B\<rightarrow\>C> are
+      <item>If <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>C> are
       group isomorphisms then <math|g\<circ\>f:A\<rightarrow\>C> is a group
       isomorphism.
     </enumerate>
@@ -592,7 +594,7 @@
       proving that <math|g\<circ\>f> is a group homeomorphism.
 
       <item>Using [theorem: <reference|function composition injectivity,
-      surjectivity and bijectivity>] we have that
+      surjectivity and bijectivity (1)>] we have that
       <math|g\<circ\>f:A\<rightarrow\>C> is a bijection which combined with
       (1) proves that <math|g\<circ\>f> is a group isomorphism.
     </enumerate>
@@ -1020,8 +1022,6 @@
   Using <reference|group homeomorphism properties> \ we have then the
   following theorem.
 
-  TODO check this
-
   <\theorem>
     <label|ring ring homeomorphism and neutral element>If
     <math|<around*|\<langle\>|A,\<oplus\><rsub|A>,\<odot\><rsub|A>|\<rangle\>>>
@@ -1050,13 +1050,13 @@
       <item>We have
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|0<rsub|B>>|<cell|=>|<cell|<around*|(|-f<rsup|><around*|(|0<rsub|A>|)>|)>\<oplus\><rsub|B>f<around*|(|0<rsub|A>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|-f<around*|(|0<rsub|A>|)>|)>\<oplus\><rsub|B>f<around*|(|0<rsub|A><rsub|>\<odot\>0<rsub|A>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|-f<around*|(|0<rsub|A>|)>|)>\<oplus\><rsub|B><around*|(|f<around*|(|0<rsub|A>|)>\<oplus\>f<around*|(|0<rsub|A>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|-f<around*|(|0<rsub|A>|)>|)>\<oplus\><rsub|B>f<around*|(|0<rsub|A>|)>|)>\<oplus\>f<around*|(|0<rsub|A>|)>>>|<row|<cell|>|<cell|=>|<cell|0<rsub|B>\<oplus\><rsub|B>f<around*|(|0<rsub|A>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|0<rsub|A>|)>>>>>
+        <tformat|<table|<row|<cell|0<rsub|B>>|<cell|=>|<cell|<around*|(|-f<rsup|><around*|(|0<rsub|A>|)>|)>\<oplus\><rsub|B>f<around*|(|0<rsub|A>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|-f<around*|(|0<rsub|A>|)>|)>\<oplus\><rsub|B>f<around*|(|0<rsub|A><rsub|>\<oplus\><rsub|A>0<rsub|A>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|-f<around*|(|0<rsub|A>|)>|)>\<oplus\><rsub|B><around*|(|f<around*|(|0<rsub|A>|)>\<oplus\><rsub|B>f<around*|(|0<rsub|A>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|-f<around*|(|0<rsub|A>|)>|)>\<oplus\><rsub|B>f<around*|(|0<rsub|A>|)>|)>\<oplus\><rsub|B>f<around*|(|0<rsub|A>|)>>>|<row|<cell|>|<cell|=>|<cell|0<rsub|B>\<oplus\><rsub|B>f<around*|(|0<rsub|A>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|0<rsub|A>|)>>>>>
       </eqnarray*>
 
       <item>We have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|f<around*|(|-x|)>+f<around*|(|x|)>>|<cell|=>|<cell|f<around*|(|x+<around*|(|-x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|0<rsub|A>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|1|)>>>|<cell|0<rsub|B>>>|<row|<cell|f<around*|(|x|)>+f<around*|(|-x|)>>|<cell|=>|<cell|f<around*|(|x+<around*|(|-x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|0<rsub|A>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|1|)>>>|<cell|0<rsub|A>>>>>
+        <tformat|<table|<row|<cell|f<around*|(|-x|)>\<oplus\><rsub|B>f<around*|(|x|)>>|<cell|=>|<cell|f<around*|(|x\<oplus\><rsub|A><around*|(|-x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|0<rsub|A>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|1|)>>>|<cell|0<rsub|B>>>|<row|<cell|f<around*|(|x|)>\<oplus\><rsub|B>f<around*|(|-x|)>>|<cell|=>|<cell|f<around*|(|x\<oplus\><rsub|A><around*|(|-x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|0<rsub|A>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|1|)>>>|<cell|0<rsub|A>>>>>
       </eqnarray*>
 
       so that\ 
@@ -1078,6 +1078,8 @@
       <\equation*>
         x\<odot\><rsub|B>y=f<around*|(|u|)>\<odot\><rsub|B>f<around*|(|v|)>=f<around*|(|u\<odot\><rsub|A>v|)>\<in\>f<around*|(|A|)>
       </equation*>
+
+      and
 
       <\equation*>
         -x=-f<around*|(|x|)>\<equallim\><rsub|<around*|(|2|)>>f<around*|(|-x|)>\<in\>f<around*|(|A|)>
@@ -1110,14 +1112,15 @@
     <math|<around*|\<langle\>|A,\<oplus\><rsub|A>,\<odot\><rsub|A>|\<rangle\>>>,
     <math|<around*|\<langle\>|B,\<oplus\><rsub|B>,\<odot\><rsub|B>|\<rangle\>>>
     and <math|<around*|\<langle\>|C,\<oplus\><rsub|C>,\<odot\><rsub|C>|\<rangle\>>>
-    are rings with <math|D\<subseteq\>B> a sub-ring of <math|B> then
+    are rings then
 
     <\enumerate>
       <item>If <math|f:A\<rightarrow\>D> and <math|g:B\<rightarrow\>C> are
-      ring homeomorphisms then <math|g\<circ\>f:A\<rightarrow\>C> is a ring
-      homeomorphism.
+      ring homeomorphisms and <math|<around*|\<langle\>|D,\<oplus\><rsub|B>,\<odot\><rsub|B>|\<rangle\>>>
+      be a sub-ring of <math|<around*|\<langle\>|B,\<oplus\><rsub|B>,\<odot\><rsub|B>|\<rangle\>>>
+      then <math|g\<circ\>f:A\<rightarrow\>C> is a ring homeomorphism.
 
-      <item>If <math|f:A\<rightarrow\>D> and <math|g:B\<rightarrow\>C> are
+      <item>If <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>C> are
       ring isomorphisms then <math|g\<circ\>f:A\<rightarrow\>C> is a ring
       isomorphism.
     </enumerate>
@@ -1140,7 +1143,7 @@
       </eqnarray*>
 
       <item>Using [theorem: <reference|function composition injectivity,
-      surjectivity and bijectivity>] we have that
+      surjectivity and bijectivity (1)>] we have that
       <math|g\<circ\>f:A\<rightarrow\>C> is a bijection which combined with
       (1) proves that <math|g\<circ\>f> is a ring isomorphism.
     </enumerate>
@@ -1468,8 +1471,87 @@
 
       <item><math|\<forall\>a\<in\>A> with <math|a\<neq\>0<rsub|A>> we have
       <math|f<around*|(|a<rsup|-1><rsup|>|)>=<around*|(|f<around*|(|a|)>|)><rsup|-1>>
+
+      <item><math|f<around*|(|A|)>> is a sub field of
+      <math|<around*|\<langle\>|B,\<oplus\><rsub|B>,\<odot\><rsub|B>|\<rangle\>>>
     </enumerate>
   </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>We have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|0<rsub|B>>|<cell|=>|<cell|<around*|(|-f<around*|(|0<rsub|A>|)>|)>\<oplus\><rsub|B>f<around*|(|0<rsub|A>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|-f<around*|(|0<rsub|A>|)>|)>\<oplus\><rsub|B>f<around*|(|0<rsub|A>\<oplus\><rsub|A>0<rsub|A>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|-f<around*|(|0<rsub|A>|)>|)>\<oplus\><rsub|B><around*|(|f<around*|(|0<rsub|A>|)>\<oplus\><rsub|A>f<around*|(|0<rsub|A>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|-f<around*|(|0<rsub|A>|)>|)>\<oplus\><rsub|B>f<around*|(|0<rsub|A>|)>|)>\<oplus\><rsub|B>f<around*|(|0<rsub|A>|)>>>|<row|<cell|>|<cell|=>|<cell|0<rsub|B>\<oplus\>f<around*|(|0<rsub|A>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|0<rsub|A>|)>>>>>
+      </eqnarray*>
+
+      <item>We have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|f<around*|(|-x|)>\<oplus\><rsub|B>f<around*|(|x|)>>|<cell|=>|<cell|f<around*|(|x\<oplus\><rsub|A><around*|(|-x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|0<rsub|A>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|1|)>>>|<cell|0<rsub|B>>>|<row|<cell|f<around*|(|x|)>\<oplus\><rsub|B>f<around*|(|-x|)>>|<cell|=>|<cell|f<around*|(|x\<oplus\><rsub|A><around*|(|-x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|0<rsub|A>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|1|)>>>|<cell|0<rsub|A>>>>>
+      </eqnarray*>
+
+      so that\ 
+
+      <\equation*>
+        f<around*|(|-x|)>=-f<around*|(|x|)>
+      </equation*>
+
+      <item>If <math|a\<in\>A> with <math|a\<neq\>0<rsub|A>> then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|f<around*|(|a<rsup|-1>|)>\<odot\><rsub|B>f<around*|(|a|)>>|<cell|=>|<cell|f<around*|(|a<rsup|-1>\<odot\><rsub|A>a|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|1<rsub|A>|)>>>|<row|<cell|>|<cell|=>|<cell|1<rsub|B>>>|<row|<cell|f<around*|(|a|)>\<odot\><rsub|B>f<around*|(|a<rsup|-1>|)>>|<cell|=>|<cell|f<around*|(|a\<odot\><rsub|A>a<rsup|-1>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|1<rsub|A>|)>>>|<row|<cell|>|<cell|=>|<cell|1<rsub|B>>>>>
+      </eqnarray*>
+
+      so that\ 
+
+      <\equation*>
+        f<around*|(|x<rsup|-1>|)>=f<around*|(|x|)><rsup|-1>
+      </equation*>
+
+      <item>Let <math|x,y\<in\>f<around*|(|A|)>> then
+      <math|\<exists\>u,v\<in\>A> such that <math|x=f<around*|(|u|)>> and
+      <math|y=f<around*|(|v|)>> then we have\ 
+
+      <\equation*>
+        x\<oplus\><rsub|B>y=f<around*|(|u|)>\<oplus\><rsub|B>f<around*|(|v|)>=f<around*|(|u\<oplus\><rsub|A>v|)>\<in\>f<around*|(|A|)>
+      </equation*>
+
+      and\ 
+
+      <\equation*>
+        x\<odot\><rsub|B>y=f<around*|(|u|)>\<odot\><rsub|B>f<around*|(|v|)>=f<around*|(|u\<odot\><rsub|A>v|)>\<in\>f<around*|(|A|)>
+      </equation*>
+
+      and
+
+      <\equation*>
+        -x=-f<around*|(|x|)>\<equallim\><rsub|<around*|(|2|)>>f<around*|(|-x|)>\<in\>f<around*|(|A|)>
+      </equation*>
+
+      and if <math|x\<neq\>0<rsub|B>> then\ 
+
+      <\equation*>
+        x<rsup|-1>=f<around*|(|u|)><rsup|-1>\<equallim\><rsub|<around*|(|3|)>>f<around*|(|u<rsup|-1>|)>\<in\>f<around*|(|A|)>
+      </equation*>
+
+      and
+
+      <\equation*>
+        0<rsub|B>\<equallim\><rsub|<around*|(|1|)>>f<around*|(|0<rsub|A>|)>\<in\>f<around*|(|A|)>
+      </equation*>
+
+      and
+
+      <\equation*>
+        1<rsub|B>=f<around*|(|1<rsub|A>|)>
+      </equation*>
+    </enumerate>
+
+    TODO Check the above
+  </proof>
 
   <\proof>
     As field homeomorphism <math|f:A\<rightarrow\>B> for the fields
@@ -1494,14 +1576,14 @@
     <math|<around*|\<langle\>|A,\<oplus\><rsub|A>,\<odot\><rsub|A>|\<rangle\>>>,
     <math|<around*|\<langle\>|B,\<oplus\><rsub|B>,\<odot\><rsub|B>|\<rangle\>>>
     and <math|<around*|\<langle\>|C,\<oplus\><rsub|C>,\<odot\><rsub|C>|\<rangle\>>>
-    are fields with <math|D\<subseteq\>B> a sub-field of <math|B> then
+    are fields then
 
     <\enumerate>
       <item>If <math|f:A\<rightarrow\>D> and <math|g:B\<rightarrow\>C> are
       field homeomorphisms then <math|g\<circ\>f:A\<rightarrow\>C> is a field
       homeomorphism.
 
-      <item>If <math|f:A\<rightarrow\>D> and <math|g:B\<rightarrow\>C> are
+      <item>If <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>C> are
       field isomorphisms then <math|g\<circ\>f:A\<rightarrow\>C> is a field
       isomorphism.
     </enumerate>
@@ -1524,7 +1606,7 @@
       </eqnarray*>
 
       <item>Using [theorem: <reference|function composition injectivity,
-      surjectivity and bijectivity>] we have that
+      surjectivity and bijectivity (1)>] we have that
       <math|g\<circ\>f:A\<rightarrow\>C> is a bijection which combined with
       (1) proves that <math|g\<circ\>f> is a field isomorphism.
     </enumerate>
@@ -7880,11 +7962,11 @@
     <associate|auto-21|<tuple|zero divisor|116>>
     <associate|auto-22|<tuple|subring|116>>
     <associate|auto-23|<tuple|ring homeomorphism|117>>
-    <associate|auto-24|<tuple|ring isomorphism|117>>
-    <associate|auto-25|<tuple|4.3|118>>
-    <associate|auto-26|<tuple|field|118>>
+    <associate|auto-24|<tuple|ring isomorphism|118>>
+    <associate|auto-25|<tuple|4.3|119>>
+    <associate|auto-26|<tuple|field|119>>
     <associate|auto-27|<tuple|subfield|120>>
-    <associate|auto-28|<tuple|field homeomorphism|120>>
+    <associate|auto-28|<tuple|field homeomorphism|121>>
     <associate|auto-29|<tuple|5|123>>
     <associate|auto-3|<tuple|4.1|109>>
     <associate|auto-30|<tuple|5.1|123>>
@@ -7910,7 +7992,7 @@
     <associate|auto-49|<tuple|6.2|151>>
     <associate|auto-5|<tuple|group|110>>
     <associate|auto-50|<tuple|6.2.1|151>>
-    <associate|auto-51|<tuple|finite set|152>>
+    <associate|auto-51|<tuple|finite set|153>>
     <associate|auto-52|<tuple|infinite set|153>>
     <associate|auto-53|<tuple|denumerable set|153>>
     <associate|auto-54|<tuple|infinite countable set|153>>
@@ -7918,7 +8000,7 @@
     <associate|auto-56|<tuple|<with|mode|<quote|math>|#A>|158>>
     <associate|auto-57|<tuple|6.2.2|161>>
     <associate|auto-58|<tuple|6.2.3|166>>
-    <associate|auto-59|<tuple|6.2.4|169>>
+    <associate|auto-59|<tuple|6.2.4|170>>
     <associate|auto-6|<tuple|sub-semi-group|111>>
     <associate|auto-7|<tuple|sup-group|111>>
     <associate|auto-8|<tuple|group isomorphism|113>>
@@ -7926,23 +8008,23 @@
     <associate|cardinality of natural numbers|<tuple|6.36|158>>
     <associate|cardinality of the empty set is 0|<tuple|6.37|158>>
     <associate|cardinality of union of two disjoint finite
-    sets|<tuple|6.39|158>>
+    sets|<tuple|6.39|159>>
     <associate|countable AUB and AxB|<tuple|6.68|171>>
     <associate|countable product of a finite family of countable sets is
     countable (2)|<tuple|6.70|172>>
     <associate|countable product of finite family of countable sets is
-    countable|<tuple|6.69|171>>
+    countable|<tuple|6.69|172>>
     <associate|countable set|<tuple|6.23|153>>
     <associate|countable set conditions (1)|<tuple|6.65|170>>
     <associate|countable subset of countable set is
-    countable|<tuple|6.64|169>>
+    countable|<tuple|6.64|170>>
     <associate|countable subset of denumerable set is
-    countable|<tuple|6.63|169>>
+    countable|<tuple|6.63|170>>
     <associate|countable union of a denumerable family of countable sets is
     denumerable|<tuple|6.66|170>>
     <associate|countable union of a finite family of countable sets is
     countable|<tuple|6.67|171>>
-    <associate|definition by recursion (1)|<tuple|5.87|146>>
+    <associate|definition by recursion (1)|<tuple|5.87|147>>
     <associate|definition by recursion (2)|<tuple|5.88|147>>
     <associate|denumerable every subset is finite
     denumerable.|<tuple|6.55|166>>
@@ -7960,7 +8042,7 @@
     <associate|denumerable union of a denumerable family of denumerable sets
     is denumerable|<tuple|6.62|169>>
     <associate|denumerable union of a finite family of denumerable sets is
-    denumerable|<tuple|6.61|168>>
+    denumerable|<tuple|6.61|169>>
     <associate|denumerable with one less element|<tuple|6.25|153>>
     <associate|empty set is finite|<tuple|6.20|153>>
     <associate|eq 5.1.019|<tuple|5.1|126>>
@@ -7968,10 +8050,10 @@
     <associate|eq 5.11.019|<tuple|5.11|131>>
     <associate|eq 5.12.019|<tuple|5.12|131>>
     <associate|eq 5.13.019|<tuple|5.13|131>>
-    <associate|eq 5.14.019|<tuple|5.14|143>>
-    <associate|eq 5.15.019|<tuple|5.15|143>>
-    <associate|eq 5.16.019|<tuple|5.16|143>>
-    <associate|eq 5.17.019|<tuple|5.17|146>>
+    <associate|eq 5.14.019|<tuple|5.14|144>>
+    <associate|eq 5.15.019|<tuple|5.15|144>>
+    <associate|eq 5.16.019|<tuple|5.16|144>>
+    <associate|eq 5.17.019|<tuple|5.17|147>>
     <associate|eq 5.2.019|<tuple|5.2|126>>
     <associate|eq 5.3.019|<tuple|5.3|126>>
     <associate|eq 5.4.019|<tuple|5.4|126>>
@@ -7992,11 +8074,11 @@
     <associate|eq 6.19.022|<tuple|6.19|164>>
     <associate|eq 6.2.019|<tuple|6.2|155>>
     <associate|eq 6.20.022|<tuple|6.20|164>>
-    <associate|eq 6.21.022|<tuple|6.21|164>>
-    <associate|eq 6.22.022|<tuple|6.22|166>>
-    <associate|eq 6.23.022|<tuple|6.23|166>>
+    <associate|eq 6.21.022|<tuple|6.21|165>>
+    <associate|eq 6.22.022|<tuple|6.22|167>>
+    <associate|eq 6.23.022|<tuple|6.23|167>>
     <associate|eq 6.24.022|<tuple|6.24|167>>
-    <associate|eq 6.25.022|<tuple|6.25|167>>
+    <associate|eq 6.25.022|<tuple|6.25|168>>
     <associate|eq 6.3.019|<tuple|6.3|155>>
     <associate|eq 6.4.019|<tuple|6.4|155>>
     <associate|eq 6.5.019|<tuple|6.5|155>>
@@ -8016,29 +8098,29 @@
     <associate|equipotence finite, denumerable , countable|<tuple|6.24|153>>
     <associate|equipotence property (1)|<tuple|6.8|150>>
     <associate|equipotence union|<tuple|6.11|150>>
-    <associate|every subset of a finite set is finite|<tuple|6.30|154>>
+    <associate|every subset of a finite set is finite|<tuple|6.30|155>>
     <associate|extract maximum element of a family|<tuple|6.47|161>>
-    <associate|field|<tuple|4.38|118>>
-    <associate|field homeomorphism|<tuple|4.46|120>>
-    <associate|field homeomorphism composition|<tuple|4.49|121>>
+    <associate|field|<tuple|4.38|119>>
+    <associate|field homeomorphism|<tuple|4.46|121>>
+    <associate|field homeomorphism composition|<tuple|4.49|122>>
     <associate|field inverse is unique|<tuple|4.39|119>>
     <associate|field inverse of inverse|<tuple|4.40|119>>
-    <associate|field inverse of product|<tuple|4.42|119>>
+    <associate|field inverse of product|<tuple|4.42|120>>
     <associate|field isomorphism and neutral element|<tuple|4.48|121>>
     <associate|field subfield|<tuple|4.44|120>>
     <associate|field subfield is a field|<tuple|4.45|120>>
     <associate|field x=y\<less\>=\<gtr\>x.z=y.z if
     z\<less\>\<gtr\>0|<tuple|4.43|120>>
-    <associate|field x^-1=y^-1=\<gtr\>x=y|<tuple|4.41|119>>
+    <associate|field x^-1=y^-1=\<gtr\>x=y|<tuple|4.41|120>>
     <associate|finite ordered sets have a maximum and
     minimum|<tuple|6.44|160>>
-    <associate|finite set|<tuple|6.19|152>>
+    <associate|finite set|<tuple|6.19|153>>
     <associate|finite union of finite sets is finite|<tuple|6.33|156>>
     <associate|finite union of finite sets is finite
     (lemma)|<tuple|6.32|155>>
     <associate|function P(A) bijective with 2^A|<tuple|6.5|149>>
     <associate|function injection and inverse surjection|<tuple|6.9|150>>
-    <associate|function no surjection between A and P(A)|<tuple|6.7|149>>
+    <associate|function no surjection between A and P(A)|<tuple|6.7|150>>
     <associate|group -x=-y\<less\>=\<gtr\>x=y|<tuple|4.10|111>>
     <associate|group abelian group/sub group|<tuple|4.11|111>>
     <associate|group cancelation|<tuple|4.6|110>>
@@ -8063,11 +8145,11 @@
     <associate|infinite condition (1)|<tuple|6.34|156>>
     <associate|infinite set|<tuple|6.21|153>>
     <associate|inverse of a field isomorphism is a field
-    isomorphism|<tuple|4.47|120>>
+    isomorphism|<tuple|4.47|121>>
     <associate|iteration final|<tuple|5.84|146>>
-    <associate|mapping of N to a finite set (1)|<tuple|6.45|160>>
+    <associate|mapping of N to a finite set (1)|<tuple|6.45|161>>
     <associate|mapping of N to a finite set (2)|<tuple|6.46|161>>
-    <associate|mathematical induction|<tuple|5.82|145>>
+    <associate|mathematical induction|<tuple|5.82|146>>
     <associate|max element of a family|<tuple|6.48|163>>
     <associate|n\<less\>=m=\<gtr\>S_n\<less\>=S_m|<tuple|6.17|152>>
     <associate|natural numbers|<tuple|5.3|123>>
@@ -8083,8 +8165,8 @@
     <associate|natural numbers addition|<tuple|5.27|132>>
     <associate|natural numbers additive semi-group|<tuple|5.34|133>>
     <associate|natural numbers are infinite|<tuple|6.28|154>>
-    <associate|natural numbers are segments|<tuple|6.16|151>>
-    <associate|natural numbers are total ordered|<tuple|5.52|138>>
+    <associate|natural numbers are segments|<tuple|6.16|152>>
+    <associate|natural numbers are total ordered|<tuple|5.52|139>>
     <associate|natural numbers are transitive|<tuple|5.14|124>>
     <associate|natural numbers are well ordered|<tuple|5.51|138>>
     <associate|natural numbers difference|<tuple|5.63|141>>
@@ -8093,7 +8175,7 @@
     <associate|natural numbers every non zero number is a
     successor|<tuple|5.18|125>>
     <associate|natural numbers is a set|<tuple|5.4|123>>
-    <associate|natural numbers k\<less\>n condition|<tuple|5.48|137>>
+    <associate|natural numbers k\<less\>n condition|<tuple|5.48|138>>
     <associate|natural numbers mathematical induction|<tuple|5.11|124>>
     <associate|natural numbers multiplication|<tuple|5.35|134>>
     <associate|natural numbers multiplication associativity|<tuple|5.41|136>>
@@ -8103,16 +8185,16 @@
     <associate|natural numbers multiplicative abelian
     semi-group|<tuple|5.42|136>>
     <associate|natural numbers n+0=n|<tuple|5.29|132>>
-    <associate|natural numbers n+k=0=\<gtr\>n=0|<tuple|5.57|139>>
+    <associate|natural numbers n+k=0=\<gtr\>n=0|<tuple|5.57|140>>
     <associate|natural numbers n+k=m+k\<less\>=\<gtr\>n=m|<tuple|5.43|136>>
     <associate|natural numbers n+s(m)=s(n+m)|<tuple|5.31|133>>
-    <associate|natural numbers n.(m-1)=n.m-n|<tuple|5.68|141>>
+    <associate|natural numbers n.(m-1)=n.m-n|<tuple|5.68|142>>
     <associate|natural numbers n.k=m.k=\<gtr\>n=m|<tuple|5.76|143>>
     <associate|natural numbers n.s(m)=n+n.m|<tuple|5.38|135>>
-    <associate|natural numbers n\<less\>=i\<less\>=m=\<gtr\>0\<less\>=i-n\<less\>=m-n|<tuple|5.69|141>>
+    <associate|natural numbers n\<less\>=i\<less\>=m=\<gtr\>0\<less\>=i-n\<less\>=m-n|<tuple|5.69|142>>
     <associate|natural numbers n\<less\>=m\<less\>=\<gtr\>n-k\<less\>=m-k|<tuple|5.70|142>>
     <associate|natural numbers n\<less\>=m\<less\>=\<gtr\>there exists a k
-    such that m=k|<tuple|5.62|140>>
+    such that m=k|<tuple|5.62|141>>
     <associate|natural numbers n\<less\>=n+k|<tuple|5.56|139>>
     <associate|natural numbers n\<less\>k\<less\>s(n)|<tuple|5.71|142>>
     <associate|natural numbers n\<less\>m and r\<less\>s then
@@ -8131,7 +8213,7 @@
     <associate|natural numbers n=/s(n)|<tuple|5.15|125>>
     <associate|natural numbers order relation|<tuple|5.45|137>>
     <associate|natural numbers product of non zero numbers is non
-    zero|<tuple|5.74|142>>
+    zero|<tuple|5.74|143>>
     <associate|natural numbers s(n) = n+1|<tuple|5.30|132>>
     <associate|natural numbers s(n)=/0|<tuple|5.10|124>>
     <associate|natural numbers successor|<tuple|5.5|123>>
@@ -8150,7 +8232,7 @@
     <associate|product of a finite family of finite sets is is
     finite|<tuple|6.52|165>>
     <associate|product of a finite family of finite sets is is finite
-    (1)|<tuple|6.53|165>>
+    (1)|<tuple|6.53|166>>
     <associate|product of finite family of sets|<tuple|6.51|165>>
     <associate|product of finite sets|<tuple|6.38|158>>
     <associate|proposition 6.53.022|<tuple|6.57|167>>
@@ -8160,14 +8242,14 @@
     <associate|recursion iteration|<tuple|5.24|129>>
     <associate|recursion iteration in a group|<tuple|5.25|130>>
     <associate|recursion step (2)|<tuple|5.85|146>>
-    <associate|recursion step form (1)|<tuple|5.26|130>>
+    <associate|recursion step form (1)|<tuple|5.26|131>>
     <associate|recursion step form (3)|<tuple|5.86|146>>
     <associate|ring|<tuple|4.28|116>>
     <associate|ring absorbing element|<tuple|4.33|117>>
     <associate|ring homeomorphism|<tuple|4.34|117>>
-    <associate|ring homeomorphism composition|<tuple|4.37|117>>
+    <associate|ring homeomorphism composition|<tuple|4.37|118>>
     <associate|ring integral domain|<tuple|4.30|116>>
-    <associate|ring isomorphism|<tuple|4.36|117>>
+    <associate|ring isomorphism|<tuple|4.36|118>>
     <associate|ring ring homeomorphism and neutral element|<tuple|4.35|117>>
     <associate|ring subring is a ring|<tuple|4.32|116>>
     <associate|ring zero divisor|<tuple|4.29|116>>
@@ -8180,7 +8262,7 @@
     <associate|subring|<tuple|4.31|116>>
     <associate|subset of finite sets|<tuple|6.40|159>>
     <associate|surjection f:A-\<gtr\>B if A is finite then B is
-    finite|<tuple|6.41|159>>
+    finite|<tuple|6.41|160>>
     <associate|union of two finite sets is finite|<tuple|6.31|155>>
     <associate|{n,..,m} is bijective to S_(m-n)+1|<tuple|6.18|152>>
   </collection>

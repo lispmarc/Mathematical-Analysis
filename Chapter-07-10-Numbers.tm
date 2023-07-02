@@ -9632,12 +9632,71 @@
       <item><math|<around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,+,\<cdot\><rsub|>|\<rangle\>>>
       is a sub-ring of <math|<around*|\<langle\>|\<bbb-R\>,<rsub|,\<cdot\>>|\<rangle\>>>
 
-      <item><math|\<bbb-Z\><rsub|\<bbb-R\>>> ide denumerable
+      <item><math|\<bbb-Z\><rsub|\<bbb-R\>>> id denumerable
     </enumerate>
   </theorem>
 
   <\proof>
-    \ 
+    \ First we have that
+
+    <\equation>
+      <label|eq 9.91.038>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>\<circ\>i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>><text|
+      is a bijection>
+    </equation>
+
+    <\proof>
+      \ 
+
+      <\description>
+        <item*|injectivity>Using [theorems: \ <reference|rational sub-ring>,
+        <reference|real embedding of Q and order>] we have that
+        <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-Q\>>>
+        and <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Q\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>>>
+        are bijections, hence injections. Applying [theorem:
+        <reference|function composition injectivity, surjectivity and
+        bijectivity>] that <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>\<circ\>i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>>>
+        is a injective.
+
+        <item*|surjectivity>This follows from the definiton of
+        <math|\<bbb-Z\><rsub|\<bbb-R\>>> <math|>
+      </description>
+    </proof>
+
+    <\enumerate>
+      <item>Using [theorems: \ <reference|rational sub-ring>, <reference|real
+      embedding of Q and order>] we have that
+      <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-Q\>>>
+      and <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Q\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>>>
+      are order isomorphisms, hence using [theorem: <reference|order
+      composition of functions>] we have that
+      <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>>>
+      is a order homeomorphism. Using [eq: <reference|eq 9.91.038>] we have
+      then\ 
+
+      <\equation*>
+        i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>><text|
+        is a order isomorphism>
+      </equation*>
+
+      <item>Using [theorems: \ <reference|rational sub-ring>, <reference|real
+      embedding of Q and order>] and the fact that a field isomorphism is
+      also a ring isomorphism we have that
+      <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-Q\>>>
+      and <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Q\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>>>
+      are ring isomorphisms, we have by [theorem: <reference|ring
+      homeomorphism composition>] that <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>>>
+      is a ring homeomorphism, combining this with [eq: <reference|eq
+      9.91.038> proves \ 
+
+      <\equation*>
+        i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>><text|
+        is a order isomorphism>
+      </equation*>
+
+      <item>Using (2) and [theorem:\ 
+    </enumerate>
+
+    TODO
 
     <\enumerate>
       <item> Using [theorem: <reference|rational sub-ring>] we have that
@@ -9701,7 +9760,7 @@
 
   <\definition>
     <label|real NR><index|<math|\<bbb-N\><rsub|0,\<bbb-R\>>>><math|\<bbb-N\><rsub|0,\<bbb-R\>>=<around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>|)><around*|(|\<bbb-N\><rsub|0>|)>>
-    </definition>
+  </definition>
 
   <\theorem>
     <label|real NR properties>For <math|\<bbb-N\><rsub|0,\<bbb-R\>>> and
@@ -9742,7 +9801,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|6>
-    <associate|page-first|169>
+    <associate|page-first|173>
     <associate|section-nr|2>
     <associate|subsection-nr|4>
   </collection>
@@ -9935,6 +9994,7 @@
     <associate|eq 9.88.036|<tuple|9.88|?>>
     <associate|eq 9.89.036|<tuple|9.89|?>>
     <associate|eq 9.90.036|<tuple|9.90|?>>
+    <associate|eq 9.91.038|<tuple|9.91|?>>
     <associate|integeres order|<tuple|7.28|?>>
     <associate|integers|<tuple|7.2|?>>
     <associate|integers (-1).n|<tuple|7.16|?>>
@@ -10142,6 +10202,10 @@
       <tuple|<tuple|<with|mode|<quote|math>|\<bbb-R\><rsup|+>>>|<pageref|auto-30>>
 
       <tuple|<tuple|<with|mode|<quote|math>|\<bbb-R\><rsup|->>>|<pageref|auto-31>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<bbb-Z\><rsub|\<bbb-R\>>>>|<pageref|auto-35>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<bbb-N\><rsub|0,\<bbb-R\>>>>|<pageref|auto-36>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|7<space|2spc>The
