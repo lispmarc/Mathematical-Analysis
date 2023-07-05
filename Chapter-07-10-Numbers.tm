@@ -1656,14 +1656,14 @@
 
   <\proof>
     Using [theorem: <reference|integers order preserving bijection>] we have
-    that <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Q\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|\<bbb-Q\>>>
+    that <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\><rsup|+><rsub|0>>
     is a order isomorphism, further by [theorem: <reference|natural numbers
     are well ordered>] <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>>
     is well ordered. so using [theorem: <reference|order well ordered and
     order isomorphism>] we conclude that\ 
 
     <\equation*>
-      <around*|\<langle\>|\<bbb-N\><rsub|\<bbb-Q\>>,\<leqslant\>|\<rangle\>><text|
+      <around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,\<leqslant\>|\<rangle\>><text|
       is well ordered>
     </equation*>
   </proof>
@@ -4032,7 +4032,7 @@
   </proof>
 
   <\definition>
-    <label|rational natural numbers><math|\<bbb-N\><rsub|\<bbb-Q\>>=<around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Q\>>|)><around*|(|\<bbb-N\><rsub|0>|)>\<subseteq\>\<bbb-Q\>>
+    <label|rational natural numbers><math|\<bbb-N\><rsub|0,\<bbb-Q\>>=<around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Q\>>|)><around*|(|\<bbb-N\><rsub|0>|)>\<subseteq\>\<bbb-Q\>>
     where\ 
 
     <\eqnarray*>
@@ -4046,33 +4046,33 @@
     <label|rational NQ properties (1)>We have that\ 
 
     <\enumerate>
-      <item><math|\<bbb-N\><rsub|\<bbb-Q\>>=<around*|{|<frac|n|1>\|n\<in\>\<bbb-Z\><rsup|+><rsub|0>|}>>
+      <item><math|\<bbb-N\><rsub|0,\<bbb-Q\>>=<around*|{|<frac|n|1>\|n\<in\>\<bbb-Z\><rsup|+><rsub|0>|}>>
 
-      <item><math|<around*|\<langle\>|\<bbb-N\><rsub|\<bbb-Q\>>,+|\<rangle\>>>
+      <item><math|<around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-Q\>>,+|\<rangle\>>>
       is a sub semi-group of <math|<around*|\<langle\>|\<bbb-Q\>,+|\<rangle\>>>
 
-      <item><math|<around*|\<langle\>|\<bbb-N\><rsub|\<bbb-Q\>>,\<cdot\>|\<rangle\>>>
+      <item><math|<around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-Q\>>,\<cdot\>|\<rangle\>>>
       is a sub semi-group of <math|<around*|\<langle\>|\<bbb-Q\>,\<cdot\>|\<rangle\>>>
 
-      <item>If we define <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Q\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|\<bbb-Q\>>>
+      <item>If we define <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Q\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0,\<bbb-Q\>>>
       by <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Q\>>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>>
       then we have\ 
 
       <\enumerate>
-        <item><math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Q\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|\<bbb-Q\>>>
+        <item><math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Q\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0,\<bbb-Q\>>>
         is a group isomorphism between <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>>
-        and <math|<around*|\<langle\>|\<bbb-N\><rsub|\<bbb-Q\>>,+|\<rangle\>>>
+        and <math|<around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-Q\>>,+|\<rangle\>>>
 
-        <item><math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Q\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|\<bbb-Q\>>>
+        <item><math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Q\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0,\<bbb-Q\>>>
         is a group isomorphism between <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>>
-        and <math|<around*|\<langle\>|\<bbb-N\><rsub|\<bbb-Q\>>,\<cdot\>|\<rangle\>>>
+        and <math|<around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-Q\>>,\<cdot\>|\<rangle\>>>
 
-        <item><math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Q\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|\<bbb-Q\>>>
+        <item><math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Q\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0,\<bbb-Q\>>>
         is a order isomorphism between <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>>
-        and <math|<around*|\<langle\>|\<bbb-N\><rsub|\<bbb-Q\>>,\<leqslant\>|\<rangle\>>>
+        and <math|<around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-Q\>>,\<leqslant\>|\<rangle\>>>
       </enumerate>
 
-      <item><math|\<forall\>n\<in\>\<bbb-N\><rsub|\<bbb-Q\>>> we have that
+      <item><math|\<forall\>n\<in\>\<bbb-N\><rsub|0,\<bbb-Q\>>> we have that
       <math|0\<leqslant\>n>, if <math|n\<neq\>0> then
       <math|0\<less\>1\<leqslant\>n>
     </enumerate>
@@ -4085,14 +4085,14 @@
       <item>We have
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|x\<in\>\<bbb-N\><rsub|\<bbb-Q\>>>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>n\<subset\>\<bbb-N\><rsub|0><text|
+        <tformat|<table|<row|<cell|x\<in\>\<bbb-N\><rsub|0,\<bbb-Q\>>>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>n\<subset\>\<bbb-N\><rsub|0><text|
         such that >x=<around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>|)><around*|(|n|)>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>><around*|(|n|)>|)>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x=<frac|\<sim\><around*|[|<around*|(|n,0|)>|]>|1>>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|\<sim\><around*|[|<around*|(|n,0|)>|]>\<in\>\<bbb-Z\><rsup|+><rsub|0>>>|<cell|x\<in\><around*|{|<frac|n|1>\|n\<in\>\<bbb-Z\><rsup|+><rsub|0>|}>>>>>
       </eqnarray*>
 
       proving that\ 
 
       <\equation>
-        <label|eq 8.15.028>\<bbb-N\><rsub|\<bbb-Q\>>\<subseteq\><around*|{|<frac|n|1>\|n\<in\>\<bbb-Z\><rsup|+><rsub|0>|}>
+        <label|eq 8.15.028>\<bbb-N\><rsub|0,\<bbb-Q\>>\<subseteq\><around*|{|<frac|n|1>\|n\<in\>\<bbb-Z\><rsup|+><rsub|0>|}>
       </equation>
 
       Further
@@ -4101,17 +4101,17 @@
         <tformat|<table|<row|<cell|x\<in\><around*|{|<frac|n|1>\|n\<in\>\<bbb-Z\><rsup|+><rsub|0>|}>>|<cell|\<Rightarrow\>>|<cell|\<exists\>n\<in\>\<bbb-Z\><rsup|+><rsub|0><text|
         such that >x=<frac|n|1>>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|definition
         of >\<bbb-Z\><rsup|+><rsub|0>>>|<cell|\<exists\>n<rprime|'>\<in\>\<bbb-N\><rsub|0><text|
-        such that <math|n\<equallim\>\<sim\><around*|[|<around*|(|n<rprime|'>,0|)>|]>>>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x=<frac|\<sim\><around*|[|<around*|(|n,0|)>|]>|1>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>><around*|(|n<rprime|'>|)>|)>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|<around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>|)><around*|(|n<rprime|'>|)>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x\<in\>\<bbb-N\><rsub|\<bbb-Q\>>>>>>
+        such that <math|n\<equallim\>\<sim\><around*|[|<around*|(|n<rprime|'>,0|)>|]>>>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x=<frac|\<sim\><around*|[|<around*|(|n,0|)>|]>|1>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>><around*|(|n<rprime|'>|)>|)>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|<around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>|)><around*|(|n<rprime|'>|)>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x\<in\>\<bbb-N\><rsub|0,\<bbb-Q\>>>>>>
       </eqnarray*>
 
-      proving that <math|<around*|{|<frac|n|1>\|n\<in\>\<bbb-Z\><rsup|+><rsub|0>|}>\<subseteq\>\<bbb-N\><rsub|\<bbb-Q\>>>
+      proving that <math|<around*|{|<frac|n|1>\|n\<in\>\<bbb-Z\><rsup|+><rsub|0>|}>\<subseteq\>\<bbb-N\><rsub|0,\<bbb-Q\>>>
       which combined with [eq: <reference|eq 8.15.028>]\ 
 
       <\equation*>
-        \<bbb-N\><rsub|\<bbb-Q\>>=<around*|{|<frac|n|1>\|n\<in\>\<bbb-Z\><rsup|+><rsub|0>|}>
+        \<bbb-N\><rsub|0,\<bbb-Q\>>=<around*|{|<frac|n|1>\|n\<in\>\<bbb-Z\><rsup|+><rsub|0>|}>
       </equation*>
 
-      <item>If <math|x,y\<in\>\<bbb-N\><rsub|\<bbb-Q\>>> then
+      <item>If <math|x,y\<in\>\<bbb-N\><rsub|0,\<bbb-Q\>>> then
       <math|\<exists\>n,m\<in\>\<bbb-N\><rsub|0>> such that
       <math|x=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>><around*|(|n|)>|)>>
       and <math|y=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>><around*|(|m|)>|)>>,
@@ -4119,14 +4119,14 @@
       <math|y=<frac|\<sim\><around*|[|<around*|(|m,0|)>|]>|1>>. So that\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|x+y>|<cell|=>|<cell|<frac|\<sim\><around*|[|<around*|(|n,0|)>|]>|1>+<frac|\<sim\><around*|[|<around*|(|m,0|)>|]>|1>>>|<row|<cell|>|<cell|=>|<cell|<frac|\<sim\><around*|[|<around*|(|n,0|)>|]>\<cdot\>1=1\<cdot\>\<sim\><around*|[|<around*|(|m,0|)>|]>|1\<cdot\>1>>>|<row|<cell|>|<cell|=>|<cell|<frac|\<sim\><around*|[|<around*|(|n,0|)>|]>+\<sim\><around*|[|<around*|(|m,0|)>|]>|1>>>|<row|<cell|>|<cell|=>|<cell|<frac|\<sim\><around*|[|<around*|(|n+m,0|)>|]>|1>>>|<row|<cell|>|<cell|=>|<cell|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>><around*|(|n+m|)>|)>\<in\>\<bbb-N\><rsub|\<bbb-Q\>>>>>>
+        <tformat|<table|<row|<cell|x+y>|<cell|=>|<cell|<frac|\<sim\><around*|[|<around*|(|n,0|)>|]>|1>+<frac|\<sim\><around*|[|<around*|(|m,0|)>|]>|1>>>|<row|<cell|>|<cell|=>|<cell|<frac|\<sim\><around*|[|<around*|(|n,0|)>|]>\<cdot\>1=1\<cdot\>\<sim\><around*|[|<around*|(|m,0|)>|]>|1\<cdot\>1>>>|<row|<cell|>|<cell|=>|<cell|<frac|\<sim\><around*|[|<around*|(|n,0|)>|]>+\<sim\><around*|[|<around*|(|m,0|)>|]>|1>>>|<row|<cell|>|<cell|=>|<cell|<frac|\<sim\><around*|[|<around*|(|n+m,0|)>|]>|1>>>|<row|<cell|>|<cell|=>|<cell|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>><around*|(|n+m|)>|)>\<in\>\<bbb-N\><rsub|0,\<bbb-Q\>>>>>>
       </eqnarray*>
 
       proving that\ 
 
       <\equation>
-        <label|eq 8.15.026>\<forall\>x,y\<in\>\<bbb-N\><rsub|\<bbb-Q\>><text|
-        we have >x+y\<in\>\<bbb-N\><rsub|\<bbb-Q\>>
+        <label|eq 8.15.026>\<forall\>x,y\<in\>\<bbb-N\><rsub|0,\<bbb-Q\>><text|
+        we have >x+y\<in\>\<bbb-N\><rsub|0,\<bbb-Q\>>
       </equation>
 
       As <math|\<sim\><around*|[|<around*|(|0,0|)>|]>=0\<in\>\<bbb-Z\>> we
@@ -4135,18 +4135,18 @@
       proving that
 
       <\equation>
-        <label|eq 8.16.026>0\<in\>\<bbb-N\><rsub|\<bbb-Q\>><text|>
+        <label|eq 8.16.026>0\<in\>\<bbb-N\><rsub|0,\<bbb-Q\>><text|>
       </equation>
 
       So using [eq: <reference|eq 8.15.026>] and [eq: <reference|eq
       8.16.026>] it follows that\ 
 
       <\equation*>
-        <around*|\<langle\>|\<bbb-N\><rsub|\<bbb-Q\>>,+|\<rangle\>><text| is
-        a sub semi-group ><around*|\<langle\>|\<bbb-Q\>,+|\<rangle\>>
+        <around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-Q\>>,+|\<rangle\>><text|
+        is a sub semi-group ><around*|\<langle\>|\<bbb-Q\>,+|\<rangle\>>
       </equation*>
 
-      <item>If <math|x,y\<in\>\<bbb-N\><rsub|\<bbb-Q\>>> then
+      <item>If <math|x,y\<in\>\<bbb-N\><rsub|0,\<bbb-Q\>>> then
       <math|\<exists\>n,m\<in\>\<bbb-N\><rsub|0>> such that
       <math|x=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>><around*|(|n|)>|)>>
       and <math|y=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>><around*|(|m|)>|)>>,
@@ -4154,14 +4154,14 @@
       <math|y=<frac|\<sim\><around*|[|<around*|(|m,0|)>|]>|1>>. So that\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|x\<cdot\>y>|<cell|=>|<cell|<frac|\<sim\><around*|[|<around*|(|n,0|)>|]>|1>\<cdot\><frac|\<sim\><around*|[|<around*|(|m,0|)>|]>|1>>>|<row|<cell|>|<cell|=>|<cell|<frac|\<sim\><around*|[|<around*|(|n,0|)>|]>\<cdot\>\<sim\><around*|[|<around*|(|m,0|)>|]>|1\<cdot\>1>>>|<row|<cell|>|<cell|=>|<cell|<frac|<around*|(|n\<cdot\>m+0\<cdot\>0,0\<cdot\>m+n\<cdot\>0|)>|1>>>|<row|<cell|>|<cell|=>|<cell|<frac|<around*|(|n\<cdot\>m,0|)>|1>>>|<row|<cell|>|<cell|=>|<cell|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>><around*|(|n\<cdot\>m|)>|)>\<in\>\<bbb-N\><rsub|\<bbb-Q\>>>>>>
+        <tformat|<table|<row|<cell|x\<cdot\>y>|<cell|=>|<cell|<frac|\<sim\><around*|[|<around*|(|n,0|)>|]>|1>\<cdot\><frac|\<sim\><around*|[|<around*|(|m,0|)>|]>|1>>>|<row|<cell|>|<cell|=>|<cell|<frac|\<sim\><around*|[|<around*|(|n,0|)>|]>\<cdot\>\<sim\><around*|[|<around*|(|m,0|)>|]>|1\<cdot\>1>>>|<row|<cell|>|<cell|=>|<cell|<frac|<around*|(|n\<cdot\>m+0\<cdot\>0,0\<cdot\>m+n\<cdot\>0|)>|1>>>|<row|<cell|>|<cell|=>|<cell|<frac|<around*|(|n\<cdot\>m,0|)>|1>>>|<row|<cell|>|<cell|=>|<cell|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>><around*|(|n\<cdot\>m|)>|)>\<in\>\<bbb-N\><rsub|0,\<bbb-Q\>>>>>>
       </eqnarray*>
 
       proving that\ 
 
       <\equation>
-        <label|eq 8.17.026>\<forall\>x,y\<in\>\<bbb-N\><rsub|\<bbb-Q\>><text|
-        we have >x\<cdot\>y\<in\>\<bbb-N\><rsub|\<bbb-Q\>>
+        <label|eq 8.17.026>\<forall\>x,y\<in\>\<bbb-N\><rsub|0,\<bbb-Q\>><text|
+        we have >x\<cdot\>y\<in\>\<bbb-N\><rsub|0,\<bbb-Q\>>
       </equation>
 
       As <math|\<sim\><around*|[|<around*|(|1,0|)>|]>=1\<in\>\<bbb-Z\>> we
@@ -4170,14 +4170,14 @@
       proving that
 
       <\equation>
-        <label|eq 8.18.026>1\<in\>\<bbb-N\><rsub|\<bbb-Q\>>
+        <label|eq 8.18.026>1\<in\>\<bbb-N\><rsub|0,\<bbb-Q\>>
       </equation>
 
       Using [eq: <reference|eq 8.17.026>] and [eq: <reference|eq 8.18.026>]
       we have that\ 
 
       <\equation*>
-        <around*|\<langle\>|\<bbb-N\><rsub|\<bbb-Q\>>,\<cdot\>|\<rangle\>><text|
+        <around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-Q\>>,\<cdot\>|\<rangle\>><text|
         is a sub semi-group ><around*|\<langle\>|\<bbb-Q\>,\<cdot\>|\<rangle\>>
       </equation*>
 
@@ -4188,11 +4188,11 @@
       are bijections, hence <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>
       and <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>
       are injections, so that <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Q\>>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Q\>>
-      is a injection, which as <math|><math|\<bbb-N\><rsub|\<bbb-Q\>>=<around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Q\>>|)><around*|(|\<bbb-N\><rsub|0>|)>>
+      is a injection, which as <math|><math|\<bbb-N\><rsub|0,\<bbb-Q\>>=<around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Q\>>|)><around*|(|\<bbb-N\><rsub|0>|)>>
       proves that\ 
 
       <\equation>
-        <label|eq 8.19.026>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|\<bbb-Q\>><text|
+        <label|eq 8.19.026>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0,\<bbb-Q\>><text|
         is bijective>
       </equation>
 
@@ -4220,9 +4220,9 @@
         8.20.026.1>] and [eq: <reference|eq 8.21.026>] we have\ 
 
         <\equation*>
-          i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|\<bbb-Q\>><text|
+          i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0,\<bbb-Q\>><text|
           is a group isomorphism between ><around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>><text|
-          and ><around*|\<langle\>|\<bbb-N\><rsub|\<bbb-Q\>>,+|\<rangle\>>
+          and ><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-Q\>>,+|\<rangle\>>
         </equation*>
 
         <item>If <math|x,y\<in\>\<bbb-N\><rsub|0>> then
@@ -4246,9 +4246,9 @@
         and [eq: <reference|eq 8.23.026>]\ 
 
         <\equation*>
-          i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|\<bbb-Q\>><text|
+          i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0,\<bbb-Q\>><text|
           is a group isomorphism between ><around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>><text|
-          and ><around*|\<langle\>|\<bbb-N\><rsub|\<bbb-Q\>>,\<cdot\>|\<rangle\>>
+          and ><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-Q\>>,\<cdot\>|\<rangle\>>
         </equation*>
 
         <item>If <math|x,y\<subset\>\<bbb-N\><rsub|0>> then we have
@@ -4263,12 +4263,12 @@
         proving together with [eq: <reference|eq 8.19.026>] that\ 
 
         <\equation*>
-          i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|\<bbb-Q\>><text|
+          i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0,\<bbb-Q\>><text|
           is a order isomorphism>.
         </equation*>
       </enumerate>
 
-      <item>If <math|n\<in\>\<bbb-N\><rsub|\<bbb-Q\>>> then there exist a
+      <item>If <math|n\<in\>\<bbb-N\><rsub|0,\<bbb-Q\>>> then there exist a
       <math|n<rprime|'>\<in\>\<bbb-N\><rsub|0>> such that
 
       <\equation*>
@@ -4305,7 +4305,7 @@
   <\theorem>
     <label|rational Archimedean><dueto|Archimedean Property>If
     <math|x,y\<in\>\<bbb-Q\>> with <math|0\<less\>x> then there exists
-    <math|n\<in\>\<bbb-N\><rsub|\<bbb-Q\>>> such that
+    <math|n\<in\>\<bbb-N\><rsub|0,\<bbb-Q\>>> such that
     <math|y\<less\>n\<cdot\>x>
   </theorem>
 
@@ -4316,7 +4316,7 @@
     <\description>
       <item*|<math|y\<leqslant\>0>>Take <math|1\<in\>\<bbb-Q\>> then by
       [theorem: <reference|rational NQ properties (1)>]
-      <math|1\<in\>\<bbb-N\><rsub|\<bbb-Q\>>> so if we take <math|n=1> then
+      <math|1\<in\>\<bbb-N\><rsub|0,\<bbb-Q\>>> so if we take <math|n=1> then
       <math|y\<leqslant\>0\<less\>x=1\<cdot\>x=n\<cdot\>x>, hence
       <math|y\<less\>n\<cdot\>x>.
 
@@ -4344,7 +4344,7 @@
       so that\ 
 
       <\equation>
-        <label|eq 8.25.027>n\<in\>\<bbb-N\><rsub|\<bbb-Q\>>
+        <label|eq 8.25.027>n\<in\>\<bbb-N\><rsub|0,\<bbb-Q\>>
       </equation>
 
       Now\ 
@@ -4363,7 +4363,7 @@
       <math|0\<less\>n\<cdot\>x-y> h
 
       <\equation*>
-        y\<less\>n\<cdot\>x<text| where >n\<in\>\<bbb-N\><rsub|\<bbb-Q\>><text|>
+        y\<less\>n\<cdot\>x<text| where >n\<in\>\<bbb-N\><rsub|0,\<bbb-Q\>><text|>
       </equation*>
     </description>
   </proof>
@@ -4401,39 +4401,39 @@
   </proof>
 
   <\theorem>
-    <label|rational NQ is well-ordered><math|<around*|\<langle\>|\<bbb-N\><rsub|\<bbb-Q\>>,\<leqslant\>|\<rangle\>>>
+    <label|rational NQ is well-ordered><math|<around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-Q\>>,\<leqslant\>|\<rangle\>>>
     is well ordered\ 
   </theorem>
 
   <\proof>
     Using the previous theorem [theorem: <reference|rational NQ is
-    well-ordered>] we have that <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Q\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|\<bbb-Q\>>>
+    well-ordered>] we have that <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Q\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0,\<bbb-Q\>>>
     is a order isomorphism, further by [theorem: <reference|natural numbers
     are well ordered>] <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>>
     is well ordered. so using [theorem: <reference|order well ordering and
     order isomorphism>] we conclude that\ 
 
     <\equation*>
-      <around*|\<langle\>|\<bbb-N\><rsub|\<bbb-Q\>>,\<leqslant\>|\<rangle\>><text|
+      <around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-Q\>>,\<leqslant\>|\<rangle\>><text|
       is well ordered>
     </equation*>
   </proof>
 
   <\theorem>
-    <math|<label|NQ is conditional complete><around*|\<langle\>|\<bbb-N\><rsub|\<bbb-Q\>>,\<leqslant\>|\<rangle\>>>
+    <math|<label|NQ is conditional complete><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-Q\>>,\<leqslant\>|\<rangle\>>>
     is conditional complete
   </theorem>
 
   <\proof>
     As by [theorem: <reference|rational NQ is well-ordered>]
-    <math|<around*|\<langle\>|\<bbb-N\><rsub|\<bbb-Q\>>,\<leqslant\>|\<rangle\>>>
+    <math|<around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-Q\>>,\<leqslant\>|\<rangle\>>>
     is well-ordered it follows from [theorem: <reference|order well order
     implies conditional complete and totally ordering>] it follows that
     <math|<around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,\<leqslant\>|\<rangle\>>>
     is conditional complete.
   </proof>
 
-  Although <math|<around*|\<langle\>|\<bbb-N\><rsub|\<bbb-Q\>>,\<leqslant\>|\<rangle\>>>
+  Although <math|<around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-Q\>>,\<leqslant\>|\<rangle\>>>
   is conditional complete <math|<around*|\<langle\>|\<bbb-Q\>,\<leqslant\>|\<rangle\>>>
   is not conditional complete as we will prove now. First we have a lemma
   that essentially says that <math|<sqrt|2>> is not a rational number.
@@ -4554,7 +4554,7 @@
       <item*|<math|u\<cdot\>u\<less\><frac|2|1>>>So
       <math|0\<less\><frac|2|1>+<around*|(|-u\<cdot\>u|)>> and by the
       Archimedean property [see theorem: <reference|rational Archimedean>]
-      there exist a <math|n<rprime|'>\<in\>\<bbb-N\><rsub|\<bbb-Q\>>> such
+      there exist a <math|n<rprime|'>\<in\>\<bbb-N\><rsub|0,\<bbb-Q\>>> such
       that\ 
 
       <\equation*>
@@ -4637,7 +4637,7 @@
 
       <item*|<math|<frac|2|1>\<less\>u\<cdot\>u>>So
       <math|0\<less\>u\<cdot\>u+<frac|-2|1>> and using the Archimedean
-      property there exist a <math|n<rprime|'>\<in\>\<bbb-N\><rsub|\<bbb-Q\>>>
+      property there exist a <math|n<rprime|'>\<in\>\<bbb-N\><rsub|0,\<bbb-Q\>>>
       such that
 
       <\equation>
@@ -4730,7 +4730,7 @@
     is not conditional complete.
   </proof>
 
-  So we have that <math|<around*|\<langle\>|\<bbb-N\><rsub|\<bbb-Q\>>,\<leqslant\>|\<rangle\>>>
+  So we have that <math|<around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-Q\>>,\<leqslant\>|\<rangle\>>>
   is conditional complete but <math|<around*|\<langle\>|\<bbb-Q\>,\<leqslant\>|\<rangle\>>>
   is not. This defect will be resolved by introducing the set of real numbers
   that will extend the set of rationals.
@@ -4738,13 +4738,13 @@
   <section|Denumerability of the rationals>
 
   <\theorem>
-    \ <math|<label|rational NQ is denumerable>\<bbb-N\><rsub|\<bbb-Q\>> is
+    \ <math|<label|rational NQ is denumerable>\<bbb-N\><rsub|0,\<bbb-Q\>> is
     denumerable>.
   </theorem>
 
   <\proof>
     Using [theorem: <reference|rational NQ properties (1)>]
-    <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>Q>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|\<bbb-Q\>>>
+    <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>Q>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0,\<bbb-Q\>>>
     is a bijection, hence <math|\<bbb-N\><rsub|0>\<approx\>\<bbb-Q\>> proving
     that <math|\<bbb-Q\>> is denumerable.
   </proof>
@@ -4798,9 +4798,9 @@
     <math|f\<circ\>g:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Q\>> is a
     surjection. By [theorem: <reference|countable set conditions (1)>]
     <math|\<bbb-Q\>> is countable, hence either finite or denumerable. As
-    <math|\<bbb-N\><rsub|\<bbb-Q\>>\<subseteq\>\<bbb-Q\>> and
-    <math|\<bbb-N\><rsub|\<bbb-Q\>>> is denumerable, it follow from [theorem:
-    <reference|set containing a denumerable set is infinite>] that
+    <math|\<bbb-N\><rsub|0,\<bbb-Q\>>\<subseteq\>\<bbb-Q\>> and
+    <math|\<bbb-N\><rsub|0,\<bbb-Q\>>> is denumerable, it follow from
+    [theorem: <reference|set containing a denumerable set is infinite>] that
     <math|\<bbb-Q\>> is not finite, hence we must have that <math|\<bbb-Q\>>
     is denumerable.
   </proof>
@@ -5115,7 +5115,7 @@
     <math|q<rprime|'>\<less\>r<rprime|'>>, so
     <math|0\<less\>r<rprime|'>+<around*|(|-q<rprime|'>|)>=r<rprime|'>-q<rprime|'>>
     and we have by the Archimedean property [see theorem: <reference|rational
-    Archimedean>] the existence of a <math|k\<in\>\<bbb-N\><rsub|\<bbb-Q\>>>
+    Archimedean>] the existence of a <math|k\<in\>\<bbb-N\><rsub|0,\<bbb-Q\>>>
     such that <math|r<rprime|'>-q<rprime|'>\<less\>k\<cdot\>\<varepsilon\>>.
     If <math|k=0> then we would have that
     <math|0\<less\>r<rprime|'>-k<rprime|'>\<less\>0> a contradiction, so
@@ -5132,12 +5132,12 @@
     Define now\ 
 
     <\equation*>
-      A=<around*|{|n\<in\>\<bbb-N\><rsub|\<bbb-Q\>>\|q<rprime|'>+<around*|(|n\<cdot\>k<rsup|-1>|)>\<cdot\><around*|(|r<rprime|'>-q<rprime|'>|)>\<nin\>\<alpha\>|}>\<subseteq\>\<bbb-N\><rsub|\<bbb-Q\>>
+      A=<around*|{|n\<in\>\<bbb-N\><rsub|0,\<bbb-Q\>>\|q<rprime|'>+<around*|(|n\<cdot\>k<rsup|-1>|)>\<cdot\><around*|(|r<rprime|'>-q<rprime|'>|)>\<nin\>\<alpha\>|}>\<subseteq\>\<bbb-N\><rsub|0,\<bbb-Q\>>
     </equation*>
 
     As <math|q<rprime|'>+<around*|(|k\<cdot\>k<rsup|-1>|)>\<cdot\><around*|(|r<rprime|'>-q<rprime|'>|)>=q<rprime|'>+<around*|(|r<rprime|'>-q<rprime|'>|)>=r<rprime|'>\<in\>\<bbb-Q\>\\\<alpha\>>
     it follows that <math|k\<in\>A> so that <math|A\<neq\>0>, as
-    <math|\<bbb-N\><rsub|\<bbb-Q\>>> is well ordered [see theorem:
+    <math|\<bbb-N\><rsub|0,\<bbb-Q\>>> is well ordered [see theorem:
     <reference|rational NQ is well-ordered>] it follows that
     <math|k<rprime|'>=min<around*|(|A|)>> exist. If <math|k<rprime|'>=0> theb
     as <math|k<rprime|'>\<in\>A> we would have
@@ -5146,7 +5146,7 @@
     <math|k<rprime|'>\<neq\>0> and using [theorem: <reference|rational NQ
     properties (1)>] it follows that <math|1\<leqslant\>k<rprime|'>>, hence
     <math|0\<leqslant\>k<rprime|'>-1>, where by [theorem: <reference|rational
-    NQ properties (1)>] <math|k<rprime|'>-1\<in\>\<bbb-N\><rsub|\<bbb-Q\>>>.
+    NQ properties (1)>] <math|k<rprime|'>-1\<in\>\<bbb-N\><rsub|0,\<bbb-Q\>>>.
     As by [theorem: <reference|rational q\<less\>q+1 and q-1\<less\>q>]
     <math|k<rprime|'>-1\<less\>k<rprime|'>> we have as
     <math|k<rprime|'>=min<around*|(|A|)>> that <math|k<rprime|'>-1\<nin\>A>
@@ -9621,7 +9621,16 @@
     then we have
 
     <\enumerate>
-      <item><math|><math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>>>
+      <item><math|><math|<around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,+,\<cdot\><rsub|>|\<rangle\>>>
+      is a subring of <math|<around*|\<langle\>|\<bbb-R\>,<rsub|,+,\<cdot\>>|\<rangle\>>>
+
+      <item><math|<around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,+|\<rangle\>>>
+      is a subgroup of <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>>
+
+      <item><math|<around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,\<cdot\>|\<rangle\>>>
+      is a sub semi-group of <math|<around*|\<langle\>|\<bbb-R\>,\<cdot\>|\<rangle\>>>
+
+      <item><math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>>>
       is a order isomorphism between <math|<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>>
       and <math|<around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,\<leqslant\>|\<rangle\>>>
 
@@ -9629,133 +9638,75 @@
       is a ring isomorphism between <math|<around*|\<langle\>|\<bbb-Z\>,+,\<cdot\>|\<rangle\>>>
       and <math|<around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,+,\<cdot\>|\<rangle\>>>
 
-      <item><math|<around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,+,\<cdot\><rsub|>|\<rangle\>>>
-      is a sub-ring of <math|<around*|\<langle\>|\<bbb-R\>,<rsub|,\<cdot\>>|\<rangle\>>>
+      <item><math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>>>
+      is a group isomorphism between <math|<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>>
+      and <math|<around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,+|\<rangle\>>>
 
-      <item><math|\<bbb-Z\><rsub|\<bbb-R\>>> id denumerable
+      <item><math|\<bbb-Z\><rsub|\<bbb-R\>>> is denumerable
     </enumerate>
   </theorem>
 
   <\proof>
-    \ First we have that
+    Using \ [theorems: \ <reference|rational sub-ring>, <reference|real
+    embedding of Q and order>] we have that
+    <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-Q\>>>
+    and <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Q\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>>>
+    are order and field isomorphism. So that by [theorems:
+    <reference|function composition injectivity, surjectivity and
+    bijectivity>, <reference|order composition of functions>,
+    <reference|field homeomorphism composition> and <reference|rational
+    sub-ring>] we have that\ 
 
     <\equation>
-      <label|eq 9.91.038>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>\<circ\>i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>><text|
-      is a bijection>
+      <label|eq 9.91.038>i<rsub|\<bbb-Z\>->i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>><text|
+      is a injective order and field homeomorphism>
     </equation>
 
-    <\proof>
-      \ 
+    Further by definition we have that <math|\<bbb-Z\><rsub|\<bbb-R\>>=<around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>|)><around*|(|\<bbb-Z\>|)>>
+    so that by [theorem: <reference|function injectivity to bijection>]\ 
 
-      <\description>
-        <item*|injectivity>Using [theorems: \ <reference|rational sub-ring>,
-        <reference|real embedding of Q and order>] we have that
-        <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-Q\>>>
-        and <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Q\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>>>
-        are bijections, hence injections. Applying [theorem:
-        <reference|function composition injectivity, surjectivity and
-        bijectivity>] that <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>\<circ\>i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>>>
-        is a injective.
+    <\equation>
+      <label|eq 9.92.038>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>><text|
+      is a order and field isomorphism>
+    </equation>
 
-        <item*|surjectivity>This follows from the definiton of
-        <math|\<bbb-Z\><rsub|\<bbb-R\>>> <math|>
-      </description>
-    </proof>
+    Then we have:
 
     <\enumerate>
-      <item>Using [theorems: \ <reference|rational sub-ring>, <reference|real
-      embedding of Q and order>] we have that
-      <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-Q\>>>
-      and <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Q\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>>>
-      are order isomorphisms, hence using [theorem: <reference|order
-      composition of functions>] we have that
-      <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>>>
-      is a order homeomorphism. Using [eq: <reference|eq 9.91.038>] we have
-      then\ 
+      <item>Using [eq: <reference|eq 9.91.038>],
+      <math|\<bbb-Z\><rsub|\<bbb-R\>>=<around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>|)><around*|(|\<bbb-Z\>|)>>
+      and [theorem: <reference|field isomorphism and neutral element>] it
+      follows that
 
       <\equation*>
-        i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>><text|
-        is a order isomorphism>
+        <around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,+,\<cdot\>|\<rangle\>><text|
+        is a subring of ><around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>
       </equation*>
 
-      <item>Using [theorems: \ <reference|rational sub-ring>, <reference|real
-      embedding of Q and order>] and the fact that a field isomorphism is
-      also a ring isomorphism we have that
-      <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-Q\>>>
-      and <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Q\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>>>
-      are ring isomorphisms, we have by [theorem: <reference|ring
-      homeomorphism composition>] that <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>>>
-      is a ring homeomorphism, combining this with [eq: <reference|eq
-      9.91.038> proves \ 
+      <item>As by [note: <reference|ring homeomorphism is group
+      homeomorphism>] and [eq: <reference|eq 9.91.038>] we have that
+      <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>>>
+      is a group homeomorphismx between <math|<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>>
 
-      <\equation*>
-        i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>><text|
-        is a order isomorphism>
-      </equation*>
+      <item>This is [eq: <reference|eq 9.92.038>]
 
-      <item>Using (2) and [theorem:\ 
-    </enumerate>
+      <item>This is [eq: <reference|eq 9.92.038>]
 
-    TODO
+      <item>This follows from [eq: <reference|eq 9.92.038>] and the fact that
+      a ring homeomorphism is by definition also a group homeomorphism [see
+      note: <reference|ring homeomorphism is group homeomorphism>]
 
-    <\enumerate>
-      <item> Using [theorem: <reference|rational sub-ring>] we have that
-      <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-Q\>>>
-      is a order isomorphism between <math|<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>>
-      and <math|<around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-Q\>>,\<leqslant\>|\<rangle\>>>
-      and by \ [theorem: <reference|real embedding of Q and order>]
-      <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Q\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>>>
-      is a order isomorphism. So using [theorem: <reference|order composition
-      of functions>] we have that
-
-      <\equation*>
-        i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>\<circ\>i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>><text|
-        is a order isomorphism>
-      </equation*>
-
-      <item>Using [theorem: <reference|rational sub-ring>] we have that
-      <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-Q\>>>
-      is a ring isomorphism between <math|<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>>
-      and <math|<around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-Q\>>,\<leqslant\>|\<rangle\>>>
-      and by \ [theorem: <reference|real embedding of Q and order>]
-      <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Q\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>>>
-      is a ring isomorphism, further by [theorem: <reference|rational
-      sub-ring>] <math|<around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-Q\>>,+,\<cdot\>|\<rangle\>>>
-      is a sub-ring of <math|<around*|\<langle\>|\<bbb-Q\>,+,\<cdot\>|\<rangle\>>>,
-      so using [theorem: <reference|ring homeomorphism composition>] we have
-      that
-
-      <\equation*>
-        i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>\<circ\>i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>><text|
-        is a order isomorphism>
-      </equation*>
-
-      <item>Let <math|\<alpha\>,\<beta\>\<in\>\<bbb-Z\><rsub|\<bbb-R\>>> then
-      there exists <math|u,v\<in\>\<bbb-Z\>> such that
-      <math|\<alpha\>=<around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>|)><around*|(|u|)>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|u|)>>
-      and <math|\<beta\>=<around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>|)><around*|(|v|)>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|v|)>>.
-      So we have\ 
-
-      <\enumerate>
-        <item><math|\<alpha\>+\<beta\>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|u|)>+i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|v|)>\<equallim\><rsub|<around*|(|2|)>>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|u+v|)>\<in\>\<bbb-Z\><rsub|\<bbb-R\>>>
-
-        <item><math|\<alpha\>\<cdot\>\<beta\>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|u|)>\<cdot\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|v|)>\<equallim\><rsub|<around*|(|2|)>>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|u\<cdot\>v|)>\<in\>\<bbb-Z\><rsub|\<bbb-R\>>>
-
-        <item>By (2) we have <math|1=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|1|)>\<in\>\<bbb-Z\><rsub|\<bbb-R\>>>
-
-        <item>By (2) and [theorem: <reference|field isomorphism and neutral
-        element>] we have that <math|0=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|0|)>\<in\>\<bbb-Z\><rsub|\<bbb-R\>>>
-      </enumerate>
-
-      <item>By (1) we have that <math|\<bbb-Z\>\<approx\>\<bbb-Z\><rsub|\<bbb-R\>>>
-      which, as by [theorem: <reference|integers denumerability>]
-      <math|\<bbb-Z\>\<approx\>\<bbb-N\><rsub|0>>, gives
-      <math|\<bbb-Z\><rsub|\<bbb-R\>>\<approx\>\<bbb-N\><rsub|0>> proving
+      <item>As by [eq: <reference|eq 9.92.038>] <math|\<bbb-Z\>> and
+      <math|\<bbb-Z\><rsub|\<bbb-R\>>> are bijective we have that
+      <math|\<bbb-Z\>\<approx\>\<bbb-Z\><rsub|\<bbb-R\>>> which, as by
+      [theorem: <reference|integers denumerability>]
+      <math|\<bbb-N\><rsub|0>\<approx\>\<bbb-Z\>> we have that
+      <math|\<bbb-N\><rsub|0>\<approx\>\<bbb-Z\><rsub|\<bbb-R\>>> proving
       that <math|\<bbb-Z\><rsub|\<bbb-R\>>> is denumerable.
     </enumerate>
   </proof>
 
-  We can use the same technic to embed the set of natural numbers in
+  We can use the same technique to embed the set of natural numbers in
   <math|\<bbb-R\>>.
 
   <\definition>
@@ -9763,15 +9714,38 @@
   </definition>
 
   <\theorem>
-    <label|real NR properties>For <math|\<bbb-N\><rsub|0,\<bbb-R\>>> and
-    <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0,\<bbb-R\>>>
-    defined by <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>><space|1em>we
-    have
+    <label|real NR properties>For <math|<around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>.+,\<cdot\>|\<rangle\>>>
+    and <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0,\<bbb-R\>>>
+    defined by <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>>
+    we have\ 
 
     <\enumerate>
-      <item><math|i<rsub|>>
+      <item><math|<around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,+|\<rangle\>>>
+      is a sub-semi-group of <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>>
+
+      <item><math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0,\<bbb-R\>>>
+      is a order isomorphism
+
+      <item><math|i<rsub|\<bbb-N\>\<rightarrow\>\<bbb-R\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0,\<bbb-R\>>>
+      is a group isomorphism\ 
+
+      <item><math|\<bbb-N\><rsub|0,\<bbb-R\>>> is denumerable
     </enumerate>
   </theorem>
+
+  <\proof>
+    Using [theorems: <reference|rational NQ properties (1)> and
+    <reference|real ZR properties>] we have that
+    <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Q\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0,\<bbb-Q\>>>
+    and <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>>>
+    are order and group isomorphisms. So that by [theorems:
+    <reference|function composition injectivity, surjectivity and
+    bijectivity>, <reference|order composition of functions>,
+    <reference|group homeomorphism composition> and <reference|rational NQ
+    properties (1)>]\ 
+  </proof>
+
+  \;
 
   \;
 
@@ -9801,7 +9775,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|6>
-    <associate|page-first|173>
+    <associate|page-first|175>
     <associate|section-nr|2>
     <associate|subsection-nr|4>
   </collection>
@@ -9995,6 +9969,7 @@
     <associate|eq 9.89.036|<tuple|9.89|?>>
     <associate|eq 9.90.036|<tuple|9.90|?>>
     <associate|eq 9.91.038|<tuple|9.91|?>>
+    <associate|eq 9.92.038|<tuple|9.92|?>>
     <associate|integeres order|<tuple|7.28|?>>
     <associate|integers|<tuple|7.2|?>>
     <associate|integers (-1).n|<tuple|7.16|?>>
