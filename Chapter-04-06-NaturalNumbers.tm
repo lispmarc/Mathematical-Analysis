@@ -1,4 +1,4 @@
-<TeXmacs|2.1.2>
+<TeXmacs|2.1.1>
 
 <project|Book.tm>
 
@@ -263,6 +263,8 @@
     </enumerate>
   </definition>
 
+  It turns out that a sub group of a sub group is again a sub group
+
   <\definition>
     <label|group sub-group><index|sup-group>Let
     <math|<around*|\<langle\>|G,\<odot\>|\<rangle\>>> be groups then
@@ -383,7 +385,7 @@
   <\example>
     <label|group example bijections>Let <math|X> be a set,
     <math|<around*|\<langle\>|X<rsup|X>,\<circ\>|\<rangle\>>> the semi-group
-    from [example: <reference|group example set of functions>] then
+    used in [example: <reference|group example set of functions>] then
     <math|<around*|\<langle\>|\<cal-B\><around*|[|X|]>,\<circ\>|\<rangle\>>>
     is a group \ where \ <math|\<cal-B\><around*|[|X|]>=<around*|{|f\<in\>X<rsup|X>\|f:X\<rightarrow\>X<text|
     is a bijection>|}>>.
@@ -425,9 +427,53 @@
     <math|<around*|\<langle\>|F,\<odot\>|\<rangle\>>> and
     <math|<around*|\<langle\>|G,\<oplus\>|\<rangle\>>> be semi-groups then a
     function <math|f:F\<rightarrow\>G> is a
-    <with|font-series|bold|><with|font-series|bold|group homeomorphism> if
-    <math|\<forall\>x,y\<in\>F> we have <math|f<around*|(|x\<odot\>y|)>=f<around*|(|x|)>\<oplus\>g<around*|(|y|)>>.
+    <with|font-series|bold|><with|font-series|bold|group homeomorphism
+    between ><math|<around*|\<langle\>|F,\<odot\>|\<rangle\>>>
+    <with|font-series|bold|and ><math|<around*|\<langle\>|G,\<oplus\>|\<rangle\>>>
+    iff <math|\<forall\>x,y\<in\>F> we have
+    <math|f<around*|(|x\<odot\>y|)>=f<around*|(|x|)>\<oplus\>g<around*|(|y|)>>.\ 
+
+    <\notation>
+      We use the following notation for a group homeomorphism between
+      <math|<around*|\<langle\>|F.\<odot\>|\<rangle\>>> and
+      <math|<around*|\<langle\>|G,\<oplus\>|\<rangle\>>>
+
+      <\equation*>
+        f:<around*|\<langle\>|F,\<odot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|G,\<oplus\>|\<rangle\>><text|
+        is a group homeomorphism>
+      </equation*>
+    </notation>
   </definition>
+
+  <\theorem>
+    <label|group homeomorphism to a sub group>If
+    <math|<around*|\<langle\>|F,\<odot\>|\<rangle\>>> and
+    <math|<around*|\<langle\>|G,\<oplus\>|\<rangle\>>> are semi-groups,
+    <math|H\<subseteq\>G> a sub-semi-group of
+    <math|<around*|\<langle\>|G,\<oplus\>|\<rangle\>>> and\ 
+
+    <\equation*>
+      f:<around*|\<langle\>|F,\<odot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|H,\<oplus\><rsub|\|H\<times\>H>|\<rangle\>>
+      <text|is a group homeomorphism>
+    </equation*>
+
+    then
+
+    <\equation*>
+      f:<around*|\<langle\>|F,\<odot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|G,\<oplus\>|\<rangle\>><text|
+      is a group homeomorphism>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Let <math|x,y\<in\>F> then we have\ 
+
+    <\equation*>
+      f<around*|(|x\<odot\>y|)>=f<around*|(|x|)>\<oplus\><rsub|\|H\<times\>H>f<around*|(|y|)>=f<around*|(|x|)>\<oplus\>f<around*|(|y|)>
+    </equation*>
+
+    \;
+  </proof>
 
   <\theorem>
     <label|group homeomorphism properties>If
@@ -506,8 +552,12 @@
     Isomorphism>If <math|<around*|\<langle\>|F,\<odot\>|\<rangle\>>> and
     <math|<around*|\<langle\>|G,\<oplus\>|\<rangle\>>> are semi-groups then a
     <with|font-series|bold|group isomorphism> is a
-    <with|font-series|bold|bijection> <math|f:F\<rightarrow\>G> that is a
-    <with|font-series|bold|group> <with|font-series|bold|homeomorphism>.
+    <with|font-series|bold|bijection> <math|f:F\<rightarrow\>G> such that\ 
+
+    <\equation*>
+      f:<around*|\<langle\>|F,\<odot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|G,\<oplus\>|\<rangle\>><text|
+      is a group homeomorphism>
+    </equation*>
   </definition>
 
   <\theorem>
@@ -515,16 +565,16 @@
     <math|<around*|\<langle\>|G,\<oplus\>|\<rangle\>>> be semi groups and
 
     <\equation*>
-      f:F\<rightarrow\>G
+      f:<around*|\<langle\>|F,\<odot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|G,\<oplus\>|\<rangle\>><text|
+      is a group isomorphism>
     </equation*>
 
-    is a group isomorphism then
+    then
 
     <\equation*>
-      f<rsup|-1>:G\<rightarrow\>F
+      f<rsup|-1>:<around*|\<langle\>|G,\<oplus\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|F,\<odot\>|\<rangle\>><text|
+      is a group isomorphism>
     </equation*>
-
-    is a group isomorphism.
   </theorem>
 
   <\proof>
@@ -567,15 +617,36 @@
     then
 
     <\enumerate>
-      <item>If <math|f:A\<rightarrow\>D>,
-      <math|<around*|\<langle\>|D,\<oplus\><rsub|B>|\<rangle\>>> a sub group
-      of <math|<around*|\<langle\>|B,\<oplus\><rsub|B>|\<rangle\>>> and
-      <math|g:B\<rightarrow\>C> are group homeomorphisms then
-      <math|g\<circ\>f:A\<rightarrow\>C> is a group homeomorphism.
+      <item>If <math|D> is a sub group of
+      <math|<around*|\<langle\>|B,\<oplus\><rsub|B>|\<rangle\>>> and
 
-      <item>If <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>C> are
-      group isomorphisms then <math|g\<circ\>f:A\<rightarrow\>C> is a group
-      isomorphism.
+      <\equation*>
+        f:<around*|\<langle\>|A,\<oplus\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|D,\<oplus\><rsub|B>|\<rangle\>><text|
+        and >g:<around*|\<langle\>|B,\<oplus\><rsub|B>|\<rangle\>>\<rightarrow\><around*|\<langle\>|C,\<oplus\><rsub|C>|\<rangle\>><text|
+        are group homeomorphism>
+      </equation*>
+
+      then\ 
+
+      <\equation*>
+        g\<circ\>f:<around*|\<langle\>|A,\<oplus\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|C,\<oplus\><rsub|C>|\<rangle\>><text|
+        is a group homeomorphism>
+      </equation*>
+
+      <item>If\ 
+
+      <\equation*>
+        f:<around*|\<langle\>|A,\<oplus\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|D,\<oplus\><rsub|B>|\<rangle\>><text|
+        and >g:<around*|\<langle\>|B,\<oplus\><rsub|B>|\<rangle\>>\<rightarrow\><around*|\<langle\>|C,\<oplus\><rsub|C>|\<rangle\>><text|
+        are group isomorphisms>
+      </equation*>
+
+      then\ 
+
+      <\equation*>
+        g\<circ\>f:<around*|\<langle\>|A,\<oplus\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|C,\<oplus\><rsub|C>|\<rangle\>><text|
+        is a group isomorphism>
+      </equation*>
     </enumerate>
   </theorem>
 
@@ -596,7 +667,8 @@
       <item>Using [theorem: <reference|function composition injectivity,
       surjectivity and bijectivity (1)>] we have that
       <math|g\<circ\>f:A\<rightarrow\>C> is a bijection which combined with
-      (1) proves that <math|g\<circ\>f> is a group isomorphism.
+      (1) proves that <math|g\<circ\>f:<around*|\<langle\>|A,\<oplus\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|C,\<oplus\><rsub|C>|\<rangle\>>>
+      is a group isomorphism.
     </enumerate>
   </proof>
 
@@ -1013,17 +1085,72 @@
       is the multiplicative neutral element in <math|A> and <math|1<rsub|B>>
       is the multiplicative neutral element in <math|B>.
     </enumerate>
+
+    <\notation>
+      As ring homeomorphism between <math|<around*|\<langle\>|A,\<oplus\><rsub|A>,\<odot\><rsub|A>|\<rangle\>>>
+      and <math|<around*|\<langle\>|B,\<oplus\><rsub|B>,\<odot\><rsub|B>|\<rangle\>>>
+      is noted as\ 
+
+      <\equation*>
+        f:<around*|\<langle\>|A,\<oplus\><rsub|A>,\<odot\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<oplus\><rsub|B>,\<odot\><rsub|B>|\<rangle\>><text|
+        is a ring homeomorphism>
+      </equation*>
+    </notation>
   </definition>
 
   <\note>
     <label|ring homeomorphism is group homeomorphism>Note that a ring
-    homeomorphism <math|f:A\<rightarrow\>B> for the rings
-    <math|<around*|\<langle\>|A,\<oplus\><rsub|A>,\<odot\><rsub|A>|\<rangle\>>,<around*|\<langle\>|B,\<oplus\><rsub|B>,\<odot\><rsub|B>|\<rangle\>>>
-    is automatically a group homeomorphism for the groups
-    <math|<around*|\<langle\>|A,\<oplus\><rsub|A>|\<rangle\>>,<around*|\<langle\>|B,\<oplus\><rsub|B>|\<rangle\>>>
-    and <math|<around*|\<langle\>|A,\<odot\><rsub|A>|\<rangle\>>>,
-    <math|<around*|\<langle\>|B,\<odot\>|\<rangle\>>>.\ 
+    homeomorphism <math|f:<around*|\<langle\>|A,\<oplus\><rsub|A>,\<odot\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<oplus\><rsub|B>,\<odot\><rsub|B>|\<rangle\>>>
+    is automatically a
+
+    <\equation*>
+      f:<around*|\<langle\>|A,\<oplus\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<oplus\><rsub|B>|\<rangle\>><text|
+      and >f:<around*|\<langle\>|A,\<odot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<odot\><rsub|B>|\<rangle\>><text|
+      group homeomorphism>
+    </equation*>
   </note>
+
+  <\theorem>
+    <label|ring homeomorphism to a sub ring>If
+    <math|<around*|\<langle\>|F,\<odot\><rsub|F>,\<oplus\><rsub|F>|\<rangle\>>>
+    and <math|<around*|\<langle\>|G,\<oplus\><rsub|G>,\<odot\><rsub|G>|\<rangle\>>>
+    are rings, <math|H\<subseteq\>G> a sub-ring of
+    <math|<around*|\<langle\>|G,\<oplus\>|\<rangle\>>> and
+
+    <\equation*>
+      f:<around*|\<langle\>|F,\<oplus\><rsub|F>,\<odot\><rsub|F>|\<rangle\>>\<rightarrow\><around*|\<langle\>|H,<around*|(|\<oplus\><rsub|G>|)><rsub|\|H\<times\>H>,<around*|(|\<odot\><rsub|G>|)><rsub|\|H\<times\>H>|\<rangle\>><text|
+      is a ring homeomorphism>
+    </equation*>
+
+    then
+
+    <\equation*>
+      f:<around*|\<langle\>|F,\<oplus\><rsub|F>,\<odot\><rsub|F>|\<rangle\>>\<rightarrow\><around*|\<langle\>|G,\<oplus\><rsub|G>,\<odot\><rsub|G>|\<rangle\>><text|
+      is a ring homeomorphism>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Let <math|x,y\<in\>F> then we have\ 
+
+    <\equation*>
+      f<around*|(|x\<oplus\><rsub|F>y|)>=f<around*|(|x|)><around*|(|\<oplus\><rsub|G>|)><rsub|\|H\<times\>H>f<around*|(|y|)>=f<around*|(|x|)>\<oplus\><rsub|G>f<around*|(|y|)>
+    </equation*>
+
+    and
+
+    <\equation*>
+      f<around*|(|x\<odot\><rsub|F>y|)>=f<around*|(|x|)><around*|(|\<odot\><rsub|G>|)><rsub|\|H\<times\>H>f<around*|(|y|)>=f<around*|(|x|)>\<odot\><rsub|G>f<around*|(|y|)>
+    </equation*>
+
+    and finally as the neutral element in
+    <math|<around*|\<langle\>|H,<around*|(|\<oplus\><rsub|G>|)><rsub|\|H\<times\>H>,<around*|(|\<odot\><rsub|G>|)><rsub|\|H\<times\>H>|\<rangle\>>>
+    is <math|1<rsub|B>\<in\>B>
+
+    <\equation*>
+      f<around*|(|1<rsub|A>|)>=1<rsub|B>
+    </equation*>
+  </proof>
 
   Using <reference|group homeomorphism properties> \ we have then the
   following theorem.
@@ -1033,8 +1160,12 @@
     <math|<around*|\<langle\>|A,\<oplus\><rsub|A>,\<odot\><rsub|A>|\<rangle\>>>
     and <math|<around*|\<langle\>|B,\<oplus\><rsub|B>,\<odot\><rsub|B>|\<rangle\>>>
     are rings with additive units <math|0<rsub|A>,0<rsub|B>>, multipliccative
-    units <math|1<rsub|A>,1<rsub|B>> and <math|f:A\<rightarrow\>B> a ring
-    homeomorphism then we have
+    units <math|1<rsub|A>,1<rsub|B>> and
+
+    <\equation*>
+      f:<around*|\<langle\>|A,\<oplus\><rsub|A>,\<odot\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<oplus\><rsub|B>,\<odot\><rsub|B>|\<rangle\>><text|
+      a ring homeomorphism>
+    </equation*>
 
     <\enumerate>
       <item><math|f<around*|(|0<rsub|A>|)>=0<rsub|B>>
@@ -1110,7 +1241,12 @@
     <math|<around*|\<langle\>|A,\<oplus\><rsub|A>,\<odot\><rsub|A>|\<rangle\>>>
     and <math|<around*|\<langle\>|B,\<oplus\><rsub|B>,\<odot\><rsub|B>|\<rangle\>>>
     are rings then a function <math|f:A\<rightarrow\>B> is a ring isomorphism
-    if it is a ring homeomorphism and a bijection.
+    if it is a bijection and\ 
+
+    <\equation*>
+      f:<around*|\<langle\>|A,\<oplus\><rsub|A>,\<odot\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<oplus\><rsub|B>,\<odot\><rsub|B>|\<rangle\>><text|
+      is a ring homeomorphism>
+    </equation*>
   </definition>
 
   <\theorem>
@@ -1121,14 +1257,36 @@
     are rings then
 
     <\enumerate>
-      <item>If <math|f:A\<rightarrow\>D> and <math|g:B\<rightarrow\>C> are
-      ring homeomorphisms and <math|<around*|\<langle\>|D,\<oplus\><rsub|B>,\<odot\><rsub|B>|\<rangle\>>>
-      be a sub-ring of <math|<around*|\<langle\>|B,\<oplus\><rsub|B>,\<odot\><rsub|B>|\<rangle\>>>
-      then <math|g\<circ\>f:A\<rightarrow\>C> is a ring homeomorphism.
+      <item>If <math|D> is a subring of <math|<around*|\<langle\>|B,\<oplus\><rsub|B>,\<odot\><rsub|B>|\<rangle\>>>
+      and\ 
 
-      <item>If <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>C> are
-      ring isomorphisms then <math|g\<circ\>f:A\<rightarrow\>C> is a ring
-      isomorphism.
+      <\equation*>
+        f:<around*|\<langle\>|A,\<oplus\><rsub|A>,\<odot\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|D,\<oplus\><rsub|B>,\<odot\><rsub|B>|\<rangle\>><text|
+        and >g:<around*|\<langle\>|B,\<oplus\><rsub|B>,\<odot\><rsub|B>|\<rangle\>>\<rightarrow\><around*|\<langle\>|C,\<oplus\><rsub|C>,\<odot\><rsub|C>|\<rangle\>><text|
+        are ring homeomorphisms>
+      </equation*>
+
+      then\ 
+
+      <\equation*>
+        g\<circ\>f:<around*|\<langle\>|A,\<oplus\><rsub|A>,\<odot\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|C,\<oplus\><rsub|C>,\<odot\><rsub|C>|\<rangle\>><text|
+        is a ring homeomorphism>
+      </equation*>
+
+      <item>If\ 
+
+      <\equation*>
+        f:<around*|\<langle\>|A,\<oplus\><rsub|A>,\<odot\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|D,\<oplus\><rsub|B>,\<odot\><rsub|B>|\<rangle\>><text|
+        and >g:<around*|\<langle\>|B,\<oplus\><rsub|B>,\<odot\><rsub|B>|\<rangle\>>\<rightarrow\><around*|\<langle\>|C,\<oplus\><rsub|C>,\<odot\><rsub|C>|\<rangle\>><text|
+        are ring homeomorphisms>
+      </equation*>
+
+      then\ 
+
+      <\equation*>
+        g\<circ\>f:<around*|\<langle\>|A,\<oplus\><rsub|A>,\<odot\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|C,\<oplus\><rsub|C>,\<odot\><rsub|C>|\<rangle\>><text|
+        is a ring homeomorphism>
+      </equation*>
     </enumerate>
   </theorem>
 
@@ -1151,7 +1309,8 @@
       <item>Using [theorem: <reference|function composition injectivity,
       surjectivity and bijectivity (1)>] we have that
       <math|g\<circ\>f:A\<rightarrow\>C> is a bijection which combined with
-      (1) proves that <math|g\<circ\>f> is a ring isomorphism.
+      (1) proves that <math|g\<circ\>f:<around*|\<langle\>|A,\<oplus\><rsub|A>,\<odot\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|C,\<oplus\><rsub|C>,\<odot\><rsub|C>|\<rangle\>>>
+      is a ring isomorphism.
     </enumerate>
 
     \;
@@ -1399,12 +1558,77 @@
       <item><math|f<around*|(|1<rsub|A>|)>=1<rsub|B>>
     </enumerate>
 
-    If <math|f> is also a bijection then we call <math|f> a
-    <with|font-series|bold|field isomorphism>.
+    <\notation>
+      A field homeomorphism between <math|<around*|\<langle\>|A,\<odot\><rsub|A>,\<oplus\><rsub|A>|\<rangle\>>>
+      and <math|<around*|\<langle\>|B,\<odot\><rsub|B>,\<oplus\><rsub|B>|\<rangle\>>>
+      is noted as\ 
+
+      <\equation*>
+        f:<around*|\<langle\>|A,\<odot\><rsub|A>,\<oplus\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<odot\><rsub|B>,\<oplus\><rsub|B>|\<rangle\>><text|
+        is a field homeomorphism>
+      </equation*>
+    </notation>
   </definition>
 
-  Note that a field homeomorphism <math|f:A\<rightarrow\>B> \ is
-  automatically a group homeomorphism.
+  <\note>
+    <label|field field homeomorphism is a ring isomomorphism>If
+    <math|><math|<around*|\<langle\>|A,\<odot\><rsub|A>,\<oplus\><rsub|A>|\<rangle\>>>
+    and <math|<around*|\<langle\>|B,\<odot\><rsub|B>,\<oplus\><rsub|B>|\<rangle\>>>
+    are fields and\ 
+
+    <\equation*>
+      f:<around*|\<langle\>|A,\<odot\><rsub|A>,\<oplus\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<odot\><rsub|B>,\<oplus\><rsub|B>|\<rangle\>><text|
+      a field homeomorphism>
+    </equation*>
+
+    then\ 
+
+    <\equation*>
+      f:<around*|\<langle\>|A,\<odot\><rsub|A>,\<oplus\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<odot\><rsub|B>,\<oplus\><rsub|B>|\<rangle\>><text|
+      is a ring homeomorphism>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      f:<around*|\<langle\>|A,\<oplus\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<oplus\><rsub|B>|\<rangle\>><text|
+      and >f:<around*|\<langle\>|A,\<odot\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<odot\><rsub|B>|\<rangle\>><text|
+      are group homeomorphisms>
+    </equation*>
+  </note>
+
+  <\proof>
+    As a field is also a ring [see definitions: <reference|ring> and
+    <reference|field>] we have by [definitions: <reference|ring
+    homeomorphism> and <reference|field homeomorphism>] that\ 
+
+    <\equation*>
+      f:<around*|\<langle\>|A,\<odot\><rsub|A>,\<oplus\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<odot\><rsub|B>,\<oplus\><rsub|B>|\<rangle\>><text|
+      is a ring homeomorphism>
+    </equation*>
+
+    Finally using [note: <reference|ring homeomorphism is group
+    homeomorphism>] we have that\ 
+
+    <\equation*>
+      f:<around*|\<langle\>|A,\<oplus\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<oplus\><rsub|B>|\<rangle\>><text|
+      and >f:<around*|\<langle\>|A,\<odot\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<odot\><rsub|B>|\<rangle\>><text|
+      are group homeomorphisms>
+    </equation*>
+  </proof>
+
+  <\definition>
+    <label|field isomorphism>Let <math|<around*|\<langle\>|A,\<odot\><rsub|A>,\<oplus\><rsub|A>|\<rangle\>>>
+    and <math|<around*|\<langle\>|B,\<odot\><rsub|B>,\<oplus\><rsub|B>|\<rangle\>>>
+    be fields then a field homeomorphism\ 
+
+    <\equation*>
+      f:<around*|\<langle\>|A,\<oplus\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<oplus\><rsub|B>|\<rangle\>><text|
+      and >f:<around*|\<langle\>|A,\<odot\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<odot\><rsub|B>|\<rangle\>>
+    </equation*>
+
+    is a field isomorphism if it is also a bijection.
+  </definition>
 
   <\theorem>
     <label|inverse of a field isomorphism is a field isomorphism>If
@@ -1413,11 +1637,17 @@
     are fields with multiplicative units <math|1<rsub|A>,1<rsub|B>> and
 
     <\equation*>
-      f:A\<rightarrow\>B
+      f:<around*|\<langle\>|A,\<oplus\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<oplus\><rsub|B>|\<rangle\>><text|
+      and >f:<around*|\<langle\>|A,\<odot\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<odot\><rsub|B>|\<rangle\>><text|
+      is a field isomorphism>
     </equation*>
 
-    is a field isomorphism then <math|f<rsup|-1>:B\<rightarrow\>A> is a field
-    isomorphism
+    then\ 
+
+    <\equation*>
+      f<rsup|-1>:<around*|\<langle\>|B,\<odot\><rsub|B>|\<rangle\>>\<rightarrow\><around*|\<langle\>|A,\<odot\><rsub|A>|\<rangle\>><text|
+      is a field isomorphism>
+    </equation*>
   </theorem>
 
   <\proof>
@@ -8107,18 +8337,21 @@
     <associate|equipotence union|<tuple|6.11|152>>
     <associate|every subset of a finite set is finite|<tuple|6.30|156>>
     <associate|extract maximum element of a family|<tuple|6.47|163>>
-    <associate|field|<tuple|4.39|119>>
-    <associate|field homeomorphism|<tuple|4.47|121>>
-    <associate|field homeomorphism composition|<tuple|4.50|123>>
-    <associate|field inverse is unique|<tuple|4.40|119>>
-    <associate|field inverse of inverse|<tuple|4.41|119>>
-    <associate|field inverse of product|<tuple|4.43|120>>
-    <associate|field isomorphism and neutral element|<tuple|4.49|121>>
-    <associate|field subfield|<tuple|4.45|120>>
-    <associate|field subfield is a field|<tuple|4.46|120>>
+    <associate|field|<tuple|4.43|119>>
+    <associate|field field homeomorphism is a ring
+    isomomorphism|<tuple|4.53|?>>
+    <associate|field homeomorphism|<tuple|4.51|121>>
+    <associate|field homeomorphism composition|<tuple|4.57|123>>
+    <associate|field inverse is unique|<tuple|4.44|119>>
+    <associate|field inverse of inverse|<tuple|4.45|119>>
+    <associate|field inverse of product|<tuple|4.47|120>>
+    <associate|field isomorphism|<tuple|4.54|?>>
+    <associate|field isomorphism and neutral element|<tuple|4.56|121>>
+    <associate|field subfield|<tuple|4.49|120>>
+    <associate|field subfield is a field|<tuple|4.50|120>>
     <associate|field x=y\<less\>=\<gtr\>x.z=y.z if
-    z\<less\>\<gtr\>0|<tuple|4.44|120>>
-    <associate|field x^-1=y^-1=\<gtr\>x=y|<tuple|4.42|120>>
+    z\<less\>\<gtr\>0|<tuple|4.48|120>>
+    <associate|field x^-1=y^-1=\<gtr\>x=y|<tuple|4.46|120>>
     <associate|finite ordered sets have a maximum and
     minimum|<tuple|6.44|162>>
     <associate|finite set|<tuple|6.19|154>>
@@ -8133,26 +8366,29 @@
     <associate|group cancelation|<tuple|4.6|110>>
     <associate|group example bijections|<tuple|4.16|112>>
     <associate|group example set of functions|<tuple|4.4|109>>
-    <associate|group faithful, transitive action (1)|<tuple|4.26|115>>
-    <associate|group faithful, transitive action (2)|<tuple|4.27|115>>
+    <associate|group faithful, transitive action (1)|<tuple|4.28|115>>
+    <associate|group faithful, transitive action (2)|<tuple|4.29|115>>
     <associate|group group|<tuple|4.5|110>>
     <associate|group group inheritance|<tuple|4.15|111>>
     <associate|group group inverse of inverse|<tuple|4.9|110>>
     <associate|group homeomorphism|<tuple|4.17|112>>
-    <associate|group homeomorphism composition|<tuple|4.21|113>>
-    <associate|group homeomorphism properties|<tuple|4.18|112>>
+    <associate|group homeomorphism composition|<tuple|4.23|113>>
+    <associate|group homeomorphism properties|<tuple|4.20|112>>
+    <associate|group homeomorphism to a sub group|<tuple|4.19|?>>
+    <associate|group homeomorphism to asub group|<tuple|4.37|?>>
     <associate|group inverse element|<tuple|4.7|110>>
     <associate|group inverse of x.y|<tuple|4.8|110>>
-    <associate|group isomorphism|<tuple|4.19|113>>
-    <associate|group isomorphism inverse|<tuple|4.20|113>>
-    <associate|group left (right action)|<tuple|4.23|115>>
+    <associate|group isomorphism|<tuple|4.21|113>>
+    <associate|group isomorphism inverse|<tuple|4.22|113>>
+    <associate|group left (right action)|<tuple|4.25|115>>
     <associate|group semi-group inheritance|<tuple|4.14|111>>
     <associate|group semigroup properties|<tuple|4.3|109>>
+    <associate|group sub sub group|<tuple|4.13|?>>
     <associate|group sub-group|<tuple|4.13|111>>
     <associate|infinite condition (1)|<tuple|6.34|158>>
     <associate|infinite set|<tuple|6.21|155>>
     <associate|inverse of a field isomorphism is a field
-    isomorphism|<tuple|4.48|121>>
+    isomorphism|<tuple|4.55|121>>
     <associate|iteration final|<tuple|5.84|148>>
     <associate|mapping of N to a finite set (1)|<tuple|6.45|162>>
     <associate|mapping of N to a finite set (2)|<tuple|6.46|163>>
@@ -8251,23 +8487,24 @@
     <associate|recursion step (2)|<tuple|5.85|148>>
     <associate|recursion step form (1)|<tuple|5.26|132>>
     <associate|recursion step form (3)|<tuple|5.86|148>>
-    <associate|ring|<tuple|4.28|116>>
-    <associate|ring absorbing element|<tuple|4.33|117>>
-    <associate|ring homeomorphism|<tuple|4.34|117>>
-    <associate|ring homeomorphism composition|<tuple|4.38|118>>
-    <associate|ring homeomorphism is group homeomorphism|<tuple|4.35|117>>
-    <associate|ring integral domain|<tuple|4.30|116>>
-    <associate|ring isomorphism|<tuple|4.37|118>>
-    <associate|ring ring homeomorphism and neutral element|<tuple|4.36|117>>
-    <associate|ring subring is a ring|<tuple|4.32|116>>
-    <associate|ring zero divisor|<tuple|4.29|116>>
+    <associate|ring|<tuple|4.30|116>>
+    <associate|ring absorbing element|<tuple|4.35|117>>
+    <associate|ring homeomorphism|<tuple|4.36|117>>
+    <associate|ring homeomorphism composition|<tuple|4.42|118>>
+    <associate|ring homeomorphism is group homeomorphism|<tuple|4.38|117>>
+    <associate|ring homeomorphism to a sub ring|<tuple|4.39|?>>
+    <associate|ring integral domain|<tuple|4.32|116>>
+    <associate|ring isomorphism|<tuple|4.41|118>>
+    <associate|ring ring homeomorphism and neutral element|<tuple|4.40|117>>
+    <associate|ring subring is a ring|<tuple|4.34|116>>
+    <associate|ring zero divisor|<tuple|4.31|116>>
     <associate|semi-group|<tuple|4.2|109>>
     <associate|set containing a denumerable set is infinite|<tuple|6.27|156>>
     <associate|set is infinitie if it contains a infinite
     subset|<tuple|6.29|156>>
     <associate|set of finite family is finite|<tuple|6.42|162>>
     <associate|sub-semi-group|<tuple|4.12|111>>
-    <associate|subring|<tuple|4.31|116>>
+    <associate|subring|<tuple|4.33|116>>
     <associate|subset of finite sets|<tuple|6.40|161>>
     <associate|surjection f:A-\<gtr\>B if A is finite then B is
     finite|<tuple|6.41|161>>

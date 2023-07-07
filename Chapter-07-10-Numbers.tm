@@ -1,4 +1,4 @@
-<TeXmacs|2.1.2>
+<TeXmacs|2.1.1>
 
 <project|Book.tm>
 
@@ -9651,24 +9651,42 @@
     embedding of Q and order>] we have that
     <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-Q\>>>
     and <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Q\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>>>
-    are order and field isomorphism. So that by [theorems:
+    are order and ring isomorphisms. So that by [theorems:
     <reference|function composition injectivity, surjectivity and
     bijectivity>, <reference|order composition of functions>,
     <reference|field homeomorphism composition> and <reference|rational
     sub-ring>] we have that\ 
 
     <\equation>
-      <label|eq 9.91.038>i<rsub|\<bbb-Z\>->i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>><text|
-      is a injective order and field homeomorphism>
+      <label|eq 9.91.038>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>><text|
+      is a injective order and ring homeomorphism>
+    </equation>
+
+    As a field homeomorphism is alos a group a additve and multipicative
+    group homeomorphism [see note: <reference|ring homeomorphism is group
+    homeomorphism>] we have that\ 
+
+    <\equation>
+      <label|eq 9.92.039>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>><text|
+      is a group homeomorphism between ><around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>><text|
+      and ><around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-R\>>,+|\<rangle\>>
+    </equation>
+
+    <\equation>
+      <label|eq 9.93.039>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>><text|
+      is a group homeomorphism between ><around*|\<langle\>|\<bbb-Z\>,\<cdot\>|\<rangle\>><text|
+      and ><around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-R\>>,\<cdot\>|\<rangle\>>
     </equation>
 
     Further by definition we have that <math|\<bbb-Z\><rsub|\<bbb-R\>>=<around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>|)><around*|(|\<bbb-Z\>|)>>
     so that by [theorem: <reference|function injectivity to bijection>]\ 
 
     <\equation>
-      <label|eq 9.92.038>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>><text|
-      is a order and field isomorphism>
+      <label|eq 9.92.038>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>><text|
+      is a order and ring isomorphism>
     </equation>
+
+    \;
 
     Then we have:
 
@@ -9681,6 +9699,16 @@
       <\equation*>
         <around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,+,\<cdot\>|\<rangle\>><text|
         is a subring of ><around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>
+      </equation*>
+
+      <item>Using [eq: <reference|eq 9.92.039>],
+      <math|\<bbb-Z\><rsub|\<bbb-R\>>=<around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>|)><around*|(|\<bbb-Z\>|)>>
+      and [theorem: <reference|group homeomorphism properties>] it follows
+      that\ 
+
+      <\equation*>
+        <around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,+|\<rangle\>><text| is
+        a subgroup of ><around*|\<langle\>|\<bbb-G\>|\<rangle\>>
       </equation*>
 
       <item>As by [note: <reference|ring homeomorphism is group
@@ -9704,6 +9732,8 @@
       <math|\<bbb-N\><rsub|0>\<approx\>\<bbb-Z\><rsub|\<bbb-R\>>> proving
       that <math|\<bbb-Z\><rsub|\<bbb-R\>>> is denumerable.
     </enumerate>
+
+    \;
   </proof>
 
   We can use the same technique to embed the set of natural numbers in
@@ -9969,7 +9999,9 @@
     <associate|eq 9.89.036|<tuple|9.89|?>>
     <associate|eq 9.90.036|<tuple|9.90|?>>
     <associate|eq 9.91.038|<tuple|9.91|?>>
-    <associate|eq 9.92.038|<tuple|9.92|?>>
+    <associate|eq 9.92.038|<tuple|9.94|?>>
+    <associate|eq 9.92.039|<tuple|9.92|?>>
+    <associate|eq 9.93.039|<tuple|9.93|?>>
     <associate|integeres order|<tuple|7.28|?>>
     <associate|integers|<tuple|7.2|?>>
     <associate|integers (-1).n|<tuple|7.16|?>>
