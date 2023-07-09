@@ -1,4 +1,4 @@
-<TeXmacs|2.1.2>
+<TeXmacs|2.1.1>
 
 <project|Book.tm>
 
@@ -8520,38 +8520,68 @@
     ordered classes and <math|f:A\<rightarrow\>B> a function then:
 
     <\enumerate>
-      <item><math|f:A\<rightarrow\>B> is <with|font-series|bold|increasing>
-      if <math|\<forall\>x,y\<in\>A> with <math|x\<leqslant\>y> we have
-      <math|f<around*|(|x|)>\<leqslant\>f<around*|(|y|)>>. Another name that
-      is used is <with|font-series|bold|a order homeomorphism> [a
-      homeomorphism is a function that preserver a certain operation, in this
-      case the order relation]
+      <item><math|f:<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>\<rightarrow\>B>
+      is <with|font-series|bold|increasing> if <math|\<forall\>x,y\<in\>A>
+      with <math|x\<leqslant\>y> we have <math|f<around*|(|x|)>\<leqslant\>f<around*|(|y|)>>.
+      Another name that is used is <with|font-series|bold|a order
+      homeomorphism> [a homeomorphism is a function that preserver a certain
+      operation, in this case the order relation]
 
-      <item><math|f:A\<rightarrow\>B> is <with|font-series|bold|strictly
-      increasing> if <math|\<forall\>x,y\<in\>A> with <math|x\<less\>y> we
-      have <math|f<around*|(|x|)>\<less\>f<around*|(|y|)>>
+      <item><math|f:<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>>
+      is <with|font-series|bold|strictly increasing> if
+      <math|\<forall\>x,y\<in\>A> with <math|x\<less\>y> we have
+      <math|f<around*|(|x|)>\<less\>f<around*|(|y|)>>
 
-      <item><math|f:A\<rightarrow\>B> is <with|font-series|bold|decreasing>
-      if <math|\<forall\>x,y\<in\>A> with <math|x\<leqslant\>y> we have
-      <math|f<around*|(|y|)>\<leqslant\>f<around*|(|x|)>>
+      <item><math|f:<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>>
+      is <with|font-series|bold|decreasing> if <math|\<forall\>x,y\<in\>A>
+      with <math|x\<leqslant\>y> we have <math|f<around*|(|y|)>\<leqslant\>f<around*|(|x|)>>
 
-      <item><math|f:A\<rightarrow\>B> is <with|font-series|bold|strictly
-      decreasing> if <math|\<forall\>x,y\<in\>A> with <math|x\<less\>y> we
-      have <math|f<around*|(|y|)>\<less\>f<around*|(|x|)>>
+      <item><math|f:<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>>
+      is <with|font-series|bold|strictly decreasing> if
+      <math|\<forall\>x,y\<in\>A> with <math|x\<less\>y> we have
+      <math|f<around*|(|y|)>\<less\>f<around*|(|x|)>>
 
-      <item><math|f:A\<rightarrow\>B> is a <with|font-series|bold|order
-      isomorphism> if <math|\<forall\>x,y\<in\>A> with
-      <math|x\<leqslant\>y\<Leftrightarrow\>f<around*|(|x|)>\<leqslant\>f<around*|(|y|)>>
+      <item><math|f:<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>>
+      is a <with|font-series|bold|order isomorphism> if
+      <math|\<forall\>x,y\<in\>A> with <math|x\<leqslant\>y\<Leftrightarrow\>f<around*|(|x|)>\<leqslant\>f<around*|(|y|)>>
     </enumerate>
   </definition>
 
   <\definition>
-    <label|order A isomorphism B><index|<math|A\<cong\>B>>Two partial classes
-    <math|<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>> and
+    <label|order A isomorphism B><index|<math|A\<cong\>B>>Two partial ordered
+    classes <math|<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>> and
     <math|<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>> are
     <with|font-series|bold|order isomorphic> noted as <math|A\<cong\>B> if
     there exists order isomorphism between <math|A> and <math|B>.
   </definition>
+
+  <\theorem>
+    <label|order homeomorphism extending>Let
+    <math|<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>>,
+    <math|<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>> be two
+    partial ordered classes, <math|D\<subseteq\>B> and\ 
+
+    <\equation*>
+      f:<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|D,<around*|(|\<leqslant\><rsub|B>|)><rsub|\|D>|\<rangle\>><text|
+      be a order homeomorphism [see theorem: <reference|order partial order
+      on sub class> for <math|<around*|\<langle\>|D,<around*|(|\<leqslant\><rsub|B>|)><rsub|\|D>|\<rangle\>>>>
+    </equation*>
+
+    then\ 
+
+    <\equation*>
+      f:<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>><text|
+      is a order homeomorphism>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    The proof is trivial for if <math|x,y\<in\>A> with
+    <math|x\<leqslant\><rsub|A>y> then <math|f<around*|(|x|)><around*|(|\<leqslant\><rsub|B>|)><rsub|\|D>f<around*|(|y|)>\<Rightarrowlim\><rsub|<text|<reference|order
+    partial order on sub class>>>f<around*|(|x|)>\<leqslant\><rsub|B>f<around*|(|y|)>>
+
+    \;
+  </proof>
 
   <\theorem>
     <label|order composition of functions>Let
@@ -8560,21 +8590,54 @@
     be partial ordered classes, <math|D\<subseteq\>B>
 
     <\enumerate>
-      <item>If <math|f:A\<rightarrow\>D> is a order homeomorphism [using
-      <math|<around*|\<langle\>|D,\<leqslant\><rsub|B>|\<rangle\>>> [see
-      theorem: <reference|order partial order on sub class>]] and
-      <math|g:B\<rightarrow\>C> is a order homeomorphism then
-      <math|g\<circ\>f:A\<rightarrow\>C> is order homeomorphism
+      <item>If <math|D\<subseteq\>B> is equiped with the induced order from
+      <math|<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>> [see
+      theorem: <reference|order partial order on sub class>] and\ 
 
-      <item>If <math|f:A\<rightarrow\>D> is s strictly increasing function
-      [using <math|<around*|\<langle\>|D,\<leqslant\><rsub|B>|\<rangle\>>>
-      [see theorem: <reference|order partial order on sub class>]] and
-      <math|g:B\<rightarrow\>C> is a strictly increasing function then
-      <math|g\<circ\>f:A\<rightarrow\>C> is strictly increasing
+      <\equation*>
+        f:<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|D,\<leqslant\><rsub|B>|\<rangle\>><text|
+        and >g:<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>\<rightarrow\><around*|\<langle\>|C,\<leqslant\><rsub|C>|\<rangle\>><text|
+        are order homeomorphisms>
+      </equation*>
 
-      <item>If <math|f:A\<rightarrow\>B> is a order isomorphism and
-      <math|g:B\<rightarrow\>C> is a order isomorphism then
-      <math|g\<circ\>f:A\<rightarrow\>C> is order isomorphism
+      then\ 
+
+      <\equation*>
+        g\<circ\>f:<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|C,\<leqslant\><rsub|C>|\<rangle\>><text|
+        is a order isomorphism>
+      </equation*>
+
+      <item>If <math|D\<subseteq\>B> is equiped with the induced order from
+      <math|<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>> [see
+      theorem: <reference|order partial order on sub class>] and
+
+      <\equation*>
+        f:<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|D,\<leqslant\><rsub|B>|\<rangle\>><text|
+        and >g:<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>\<rightarrow\><around*|\<langle\>|C,\<leqslant\><rsub|C>|\<rangle\>><text|
+        are strictly increasing>
+      </equation*>
+
+      then\ 
+
+      <\equation*>
+        g\<circ\>f:<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|C,\<leqslant\><rsub|C>|\<rangle\>><text|
+        is stritly increasing>
+      </equation*>
+
+      <item>If
+
+      <\equation*>
+        f:<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|D,\<leqslant\><rsub|B>|\<rangle\>><text|
+        and >g:<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>\<rightarrow\><around*|\<langle\>|C,\<leqslant\><rsub|C>|\<rangle\>><text|
+        are order isomorphism>
+      </equation*>
+
+      then\ 
+
+      <\equation*>
+        g\<circ\>f:<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|C,\<leqslant\><rsub|C>|\<rangle\>><text|
+        is a order isomorphism>
+      </equation*>
     </enumerate>
   </theorem>
 
@@ -8603,8 +8666,14 @@
   <\theorem>
     <label|order isomorphism strictly>If <math|<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>>
     and <math|<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>> are
-    partially ordered classes and <math|f:A\<rightarrow\>B> \ a order
-    isomorphism then
+    partially ordered classes and
+
+    <\equation*>
+      f:<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>><text|
+      a order isomorphism>
+    </equation*>
+
+    then <math|\<forall\>x,y\<in\>A> we have
 
     <\equation*>
       x\<less\><rsub|A>y\<Leftrightarrow\>f<around*|(|x|)>\<less\><rsub|B>f<around*|(|y|)>
@@ -8644,9 +8713,11 @@
     partially ordered classes and <math|f:A\<rightarrow\>B> a bijection then\ 
 
     <\equation*>
-      f:A\<rightarrow\>B<text| is a order isomorphism
-      >\<Leftrightarrow\><text| >f:A\<rightarrow\>B<text| and
-      >f<rsup|-1>:B\<rightarrow\>A<text| are increasing functions>
+      f:<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>><text|
+      is a order isomorphism >\<Leftrightarrow\><text|
+      >f:<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>><text|
+      and >f<rsup|-1>:<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>\<rightarrow\><around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>><text|
+      are increasing functions>
     </equation*>
   </theorem>
 
@@ -8657,8 +8728,8 @@
     bijection.
 
     <\description>
-      <item*|<math|\<Rightarrow\>>>As <math|f:A\<rightarrow\>B> is a
-      isomorphism we have that <math|\<forall\>x,y\<in\>A> with
+      <item*|<math|\<Rightarrow\>>>As <math|f:<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>>
+      is a isomorphism we have that <math|\<forall\>x,y\<in\>A> with
       <math|x\<leqslant\><rsub|A>y\<Rightarrow\>f<around*|(|x|)>\<leqslant\>f<around*|(|b|)>>
       hence <math|f:A\<rightarrow\>B> is increasing. If <math|x,y\<in\>B>
       with <math|x\<leqslant\><rsub|B>y> then
@@ -8682,18 +8753,26 @@
 
   <\theorem>
     <label|order isomorphism condition (2)>If
-    <math|<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>> and
-    <math|<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>> are
+    <math|<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>,<around*|\<langle\>|C,\<leqslant\><rsub|C>|\<rangle\>>>
+    and <math|<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>> are
     partially ordered classes then\ 
 
     <\enumerate>
-      <item><math|1<rsub|A>:A\<rightarrow\>A> is a order isomorphism
+      <item><math|1<rsub|A>:<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>>
+      is a order isomorphism
 
-      <item>If <math|f:A\<rightarrow\>B> is a order isomorphism then
-      <math|f<rsup|-1>:B\<rightarrow\>A> is a order isomorphism
+      <item>If <math|f:<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>>
+      is a order isomorphism then <math|f<rsup|-1>:<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>\<rightarrow\><around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>>
+      is a order isomorphism
 
-      <item>If <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>C> are
-      order isomorphism's then <math|g\<circ\>f> is a order isomorphism
+      <item>If <math|f:<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>\<rightarrow\>B>
+      and <math|g:<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>\<rightarrow\><around*|\<langle\>|C,\<leqslant\><rsub|C>|\<rangle\>>>
+      are order isomorphism's then
+
+      <\equation*>
+        g\<circ\>f:<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|C,\<leqslant\><rsub|C>|\<rangle\>><text|
+        is a order isomorphism>
+      </equation*>
     </enumerate>
   </theorem>
 
@@ -8749,7 +8828,8 @@
     <math|<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>>. be a
     totally ordered class and <math|<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>>
     is a partially ordered class then a bijective and increasing function
-    <math|f:A\<rightarrow\>B> is a isomorphism
+    <math|f:<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>>
+    is a isomorphism
   </theorem>
 
   <\proof>
@@ -9385,8 +9465,9 @@
     <label|order isomorphism preservers sup and inf>Let
     <math|<around*|\<langle\>|X,\<leqslant\><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,\<leqslant\><rsub|Y>|\<rangle\>>> be partial
-    ordered classes, <math|f:X\<rightarrow\>Y> is a order isomorphism,
-    <math|A\<subseteq\>X> and <math|B\<subseteq\>Y> then
+    ordered classes, <math|f:<around*|\<langle\>|X,\<leqslant\><rsub|X>|\<rangle\>>\<rightarrow\><around*|\<langle\>|Y,\<leqslant\><rsub|Y>|\<rangle\>>>
+    is a order isomorphism, <math|A\<subseteq\>X> and <math|B\<subseteq\>Y>
+    then
 
     <\enumerate>
       <item>If <math|u> is a upper bound of <math|B> then
@@ -9427,8 +9508,9 @@
 
   <\proof>
     First using [theorem: <reference|order condition for isomorphism>] we
-    have that <math|f:X\<rightarrow\>Y> and
-    <math|f<rsup|-1>:Y\<rightarrow\>X> are increasing.
+    have that <math|f:<around*|\<langle\>|X,\<leqslant\><rsub|X>|\<rangle\>>\<rightarrow\><around*|\<langle\>|Y,\<leqslant\><rsub|Y>|\<rangle\>>>
+    and <math|f<rsup|-1>:<around*|\<langle\>|Y,\<leqslant\><rsub|Y>|\<rangle\>>\<rightarrow\><around*|\<langle\>|X,\<leqslant\><rsub|X>|\<rangle\>>>
+    are increasing.
 
     <\enumerate>
       <item>Let <math|x\<in\>f<rsup|-1><around*|(|B|)>> then
@@ -9571,9 +9653,9 @@
     <math|<around*|\<langle\>|X,\<leqslant\><rsub|X>|\<rangle\>>> be a
     conditional complete partial ordered set,
     <math|<around*|\<langle\>|Y,\<leqslant\><rsub|Y>|\<rangle\>>> a partial
-    ordered class and <math|f:X\<rightarrow\>Y> a order isomorphism then
-    <math|<around*|\<langle\>|Y,\<leqslant\><rsub|Y>|\<rangle\>>> is
-    conditionally complete.
+    ordered class and <math|f:<around*|\<langle\>|X,\<leqslant\><rsub|X>|\<rangle\>>\<rightarrow\><around*|\<langle\>|Y,\<leqslant\><rsub|Y>|\<rangle\>>>
+    a order isomorphism then <math|<around*|\<langle\>|Y,\<leqslant\><rsub|Y>|\<rangle\>>>
+    is conditionally complete.
   </theorem>
 
   <\proof>
@@ -9612,10 +9694,10 @@
     <label|order well ordering and order isomorphism>If
     <math|<around*|\<langle\>|X,\<leqslant\><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,\<leqslant\><rsub|Y>|\<rangle\>>> are partial
-    ordered sets, <math|f:X\<rightarrow\>Y> a order isomorphism then if
-    <math|<around*|\<langle\>|X,\<leqslant\><rsub|X>|\<rangle\>>> is well
-    ordered <math|<around*|\<langle\>|Y,\<leqslant\><rsub|Y>|\<rangle\>>> is
-    well ordered.
+    ordered sets, <math|f:<around*|\<langle\>|X,\<leqslant\><rsub|X>|\<rangle\>>\<rightarrow\><around*|\<langle\>|Y,\<leqslant\><rsub|Y>|\<rangle\>>>
+    a order isomorphism then if <math|<around*|\<langle\>|X,\<leqslant\><rsub|X>|\<rangle\>>>
+    is well ordered <math|<around*|\<langle\>|Y,\<leqslant\><rsub|Y>|\<rangle\>>>
+    is well ordered.
   </theorem>
 
   <\proof>
@@ -9899,8 +9981,8 @@
   <\lemma>
     <label|order well ordered and order isomorphism>Let
     <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a well ordered
-    class, <math|B\<subseteq\>X> and <math|f:X\<rightarrow\>B> a order
-    isomorphism then <math|\<forall\>x\<in\>X> we have
+    class, <math|B\<subseteq\>X> and <math|f:<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<leqslant\>|\<rangle\>>>
+    a order isomorphism then <math|\<forall\>x\<in\>X> we have
     <math|x\<leqslant\>f<around*|(|x|)>>
   </lemma>
 
@@ -9932,10 +10014,10 @@
   <\proof>
     We prove this by contradiction. So assume that there exists a initial
     segment <math|S<rsub|X,a>=<around*|{|y\<in\>X\|y\<less\>a|}>> of
-    <math|X>, a <math|B\<subseteq\>S<rsub|X,\<alpha\>>> and a isomorphism
-    <math|f:X\<rightarrow\>B>. Using the previous lemma [lemma:
-    <reference|order well ordered and order isomorphism>] we have that
-    <math|a\<leqslant\>f<around*|(|a|)>>, so
+    <math|X>, a <math|B\<subseteq\>S<rsub|X,\<alpha\>>> and a order
+    isomorphism <math|f:<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<leqslant\>|\<rangle\>>>.
+    Using the previous lemma [lemma: <reference|order well ordered and order
+    isomorphism>] we have that <math|a\<leqslant\>f<around*|(|a|)>>, so
     <math|f<around*|(|a|)>\<nin\>S<rsub|X,a>> [for if
     <math|f<around*|(|a|)>\<in\>S<rsub|X,a>> then
     <math|f<around*|(|a|)>\<less\>a> leading to the contradiction
@@ -9967,24 +10049,27 @@
   </theorem>
 
   <\proof>
-    Let <math|S<rsub|X,y>> be a initial segment of <math|Y> and
-    <math|f:X\<rightarrow\>S<rsub|X,y>> a order isomorphism. Assume that
-    there exist a <math|A\<subseteq\>X> and a order isomorphism
-    <math|g:Y\<rightarrow\>A>, As by [lemma: <reference|function extend
-    target>],[theorem: <reference|function injectivity, surjectivity>] and
-    the fact that 'increasing' is a property of the graph of a function,we
-    have that <math|g:Y\<rightarrow\>X> is a injective increasing function.
-    Using [theorem: <reference|function composition injectivity, surjectivity
-    and bijectivity>],[theorem: <reference|order composition of functions>]
-    <math|we have \ that f\<circ\>g:Y\<rightarrow\>S<rsub|X,y>> is a
-    injective increasing function, hence <math|f\<circ\>f:Y\<rightarrow\><around*|(|f\<circ\>g|)><around*|(|Y|)>>
+    Let <math|S<rsub|Y,y>> be a initial segment of <math|Y> and
+    <math|f:<around*|\<langle\>|X,\<leqslant\><rsub|X>|\<rangle\>>\<rightarrow\><around*|\<langle\>|S<rsub|Y,y>,\<leqslant\><rsub|Y>|\<rangle\>>>
+    a order isomorphism. Assume that there exist a <math|A\<subseteq\>X> and
+    a order isomorphism <math|g:<around*|\<langle\>|Y,\<leqslant\><rsub|Y>|\<rangle\>>\<rightarrow\><around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>>,
+    As by [lemma: <reference|function extend target>],[theorem:
+    <reference|function injectivity, surjectivity>] and the fact that
+    'increasing' is a property of the graph of a function,we have that
+    <math|g:<around*|\<langle\>|Y,\<leqslant\><rsub|Y>|\<rangle\>>\<rightarrow\><around*|\<langle\>|X,\<leqslant\><rsub|X>|\<rangle\>>>
+    is a injective increasing function. Using [theorem: <reference|function
+    composition injectivity, surjectivity and bijectivity>],[theorem:
+    <reference|order composition of functions>] <math|we have \ that
+    f\<circ\>g:<around*|\<langle\>|Y,\<leqslant\><rsub|Y>|\<rangle\>>\<rightarrow\><around*|\<langle\>|S<rsub|Y,y>,\<leqslant\><rsub|Y>|\<rangle\>>>
+    is a injective increasing function, hence
+    <math|f\<circ\>g:Y\<rightarrow\><around*|(|f\<circ\>g|)><around*|(|Y|)>>
     is a bijective function [see theorem: <reference|function injectivity to
     bijection>] which is increasing, hence by [theorem: <reference|order
     condition for isomorphism in a totallu ordered set>] we have that
-    <math|f\<circ\>g:Y\<rightarrow\><around*|(|f\<circ\>g|)><around*|(|Y|)>>
+    <math|f\<circ\>g:<around*|\<langle\>|Y,\<leqslant\><rsub|Y>|\<rangle\>>\<rightarrow\><around*|\<langle\>|<around*|(|f\<circ\>g|)><around*|(|Y|)>,\<leqslant\><rsub|Y>|\<rangle\>>>
     is a order isomorphism. As <math|<around*|(|f\<circ\>g|)><around*|(|Y|)>\<subseteq\>range<around*|(|f|)>>
     [see theorem: <reference|partial function domain range composition>] and
-    <math|range<around*|(|f|)>\<subseteq\>S<rsub|X,y>> we have a order
+    <math|range<around*|(|f|)>\<subseteq\>S<rsub|Y,y>> we have a order
     isomorphism \ between <math|Y> and a sub-class of a initial segment of
     <math|Y>. By [theorem: <reference|order well ordered class and
     isomorphism>] this is impossible so the assumption is false, hence
@@ -10225,8 +10310,8 @@
     set>] proves that\ 
 
     <\equation>
-      <label|eq 3.21.014.1>F:C\<rightarrow\>D<text| is a order isomorphism or
-      >C\<cong\>D
+      <label|eq 3.21.014.1>F:<around*|\<langle\>|C,\<leqslant\><rsub|X>|\<rangle\>>\<rightarrow\><around*|\<langle\>|D,\<leqslant\><rsub|Y>|\<rangle\>><text|
+      is a order isomorphism or >C\<cong\>D
     </equation>
 
     Next we prove that
@@ -10312,7 +10397,7 @@
 
       Combining [eq: <reference|eq 3.26.014>], [eq: <reference|eq 3.27.014>],
       [eq: <reference|eq 3.29.014>], [eq: <reference|eq 3.30.014>] we have
-      that <math|g<rsub|\|S<rsub|X,x>>:S<rsub|X,x>\<rightarrow\>S<rsub|Y,g<around*|(|x|)>><rsub|>>
+      that <math|g<rsub|\|S<rsub|X,x>>:<around*|\<langle\>|S<rsub|X,x>,\<leqslant\><rsub|X>|\<rangle\>>\<rightarrow\><around*|\<langle\>|S<rsub|Y,g<around*|(|x|)>><rsub|>,\<leqslant\><rsub|Y>|\<rangle\>>>
       is a order isomorphism so that <math|S<rsub|X,x>\<cong\>S<rsub|Y,g<around*|(|x|)>>>
       hence <math|x\<in\>C>. Proving that <math|C> is as section of <math|X>.
     </proof>
@@ -10401,9 +10486,15 @@
 
       Combining [eq: <reference|eq 3.34.014>], [eq: <reference|eq 3.35.014>],
       [eq: <reference|eq 3.36.014>] and [eq: <reference|eq 3.37.014>] we have
-      that <math|f<rsub|\|S<rsub|Y,y>>:S<rsub|Y,y>\<rightarrow\>S<rsub|X,f<around*|(|y|)>>>
-      is a order isomorphism, hence <math|S<rsub|Y,y>\<cong\>S<rsub|X,f<around*|(|y|)>>>.
-      As <math|f<around*|(|y|)>\<in\>S<rsub|X,c>\<subseteq\>X> and
+      that
+
+      <\equation*>
+        f<rsub|\|S<rsub|Y,y>>:<around*|\<langle\>|S<rsub|Y,y>,\<leqslant\><rsub|>|\<rangle\>>\<rightarrow\><around*|\<langle\>|S<rsub|X,f<around*|(|y|)>>,\<leqslant\><rsub|X>|\<rangle\>><text|
+        is a order isomorphism>,
+      </equation*>
+
+      hence <math|S<rsub|Y,y>\<cong\>S<rsub|X,f<around*|(|y|)>>>. As
+      <math|f<around*|(|y|)>\<in\>S<rsub|X,c>\<subseteq\>X> and
       <math|y\<in\>Y> it follows from the definition of <math|C> that
       <math|f<around*|(|y|)>\<in\>C>, hence by definition of <math|F>
       <math|<around*|(|f<around*|(|y|)>,y|)>\<in\>F> or
@@ -12708,7 +12799,7 @@
     <associate|auto-97|<tuple|immediate successor|?>>
     <associate|auto-98|<tuple|section|?>>
     <associate|auto-99|<tuple|transfinite induction|?>>
-    <associate|axiom of choice|<tuple|3.97|?>>
+    <associate|axiom of choice|<tuple|3.98|?>>
     <associate|axiom of construction|<tuple|1.9|?>>
     <associate|axiom of extent|<tuple|1.5|2>>
     <associate|axiom of infinity|<tuple|1.52|?>>
@@ -12723,29 +12814,29 @@
     <associate|cartesian product of the empty set|<tuple|1.46|?>>
     <associate|cartesian product properties (1)|<tuple|1.49|?>>
     <associate|cartesian product with enpty set|<tuple|1.47|?>>
-    <associate|choice Axiom of choice consequences|<tuple|3.122|?>>
-    <associate|choice Hausdorff maximal principle|<tuple|3.113|?>>
-    <associate|choice Hausdorff's Maximal Principle|<tuple|3.114|?>>
-    <associate|choice Hausdorff's implies Zorn's|<tuple|3.116|?>>
-    <associate|choice P'(A)|<tuple|3.94|?>>
-    <associate|choice P'(A) is a set|<tuple|3.95|?>>
-    <associate|choice Zorn implies welll ordering|<tuple|3.117|?>>
-    <associate|choice Zorn's lemma|<tuple|3.115|?>>
-    <associate|choice Zorn's lemma for pre-order|<tuple|3.123|?>>
-    <associate|choice axiom of choice equivalences (1)|<tuple|3.99|?>>
-    <associate|choice choice function|<tuple|3.96|?>>
-    <associate|choice existence of successor|<tuple|3.103|?>>
-    <associate|choice function to injection/bijection|<tuple|3.124|?>>
-    <associate|choice intersection of p-sewuences|<tuple|3.106|?>>
-    <associate|choice lemma p-sequence|<tuple|3.104|?>>
-    <associate|choice lemma p-sequence generation|<tuple|3.109|?>>
-    <associate|choice lemma properties of select|<tuple|3.110|?>>
-    <associate|choice lemma property of select elements|<tuple|3.108|?>>
+    <associate|choice Axiom of choice consequences|<tuple|3.123|?>>
+    <associate|choice Hausdorff maximal principle|<tuple|3.114|?>>
+    <associate|choice Hausdorff's Maximal Principle|<tuple|3.115|?>>
+    <associate|choice Hausdorff's implies Zorn's|<tuple|3.117|?>>
+    <associate|choice P'(A)|<tuple|3.95|?>>
+    <associate|choice P'(A) is a set|<tuple|3.96|?>>
+    <associate|choice Zorn implies welll ordering|<tuple|3.118|?>>
+    <associate|choice Zorn's lemma|<tuple|3.116|?>>
+    <associate|choice Zorn's lemma for pre-order|<tuple|3.124|?>>
+    <associate|choice axiom of choice equivalences (1)|<tuple|3.100|?>>
+    <associate|choice choice function|<tuple|3.97|?>>
+    <associate|choice existence of successor|<tuple|3.104|?>>
+    <associate|choice function to injection/bijection|<tuple|3.125|?>>
+    <associate|choice intersection of p-sewuences|<tuple|3.107|?>>
+    <associate|choice lemma p-sequence|<tuple|3.105|?>>
+    <associate|choice lemma p-sequence generation|<tuple|3.110|?>>
+    <associate|choice lemma properties of select|<tuple|3.111|?>>
+    <associate|choice lemma property of select elements|<tuple|3.109|?>>
     <associate|choice lemma select elements froms a
-    p-sewuence|<tuple|3.111|?>>
-    <associate|choice lemma upper bound of chain|<tuple|3.119|?>>
-    <associate|choice lemma well ordering lemma (1)|<tuple|3.118|?>>
-    <associate|choice well-order implies Axiom of Choice|<tuple|3.120|?>>
+    p-sewuence|<tuple|3.112|?>>
+    <associate|choice lemma upper bound of chain|<tuple|3.120|?>>
+    <associate|choice lemma well ordering lemma (1)|<tuple|3.119|?>>
+    <associate|choice well-order implies Axiom of Choice|<tuple|3.121|?>>
     <associate|class absorption laws|<tuple|1.27|?>>
     <associate|class class commutative,idempotent,associative,distributivity|<tuple|1.30|?>>
     <associate|class complement of comploment|<tuple|1.28|?>>
@@ -13015,7 +13106,7 @@
     <associate|function simple definition|<tuple|2.91|?>>
     <associate|function simple definition notation|<tuple|2.92|?>>
     <associate|function surjection and construction of inverse
-    function|<tuple|3.98|?>>
+    function|<tuple|3.99|?>>
     <associate|function surjection condition|<tuple|2.51|?>>
     <associate|function trivial bijection|<tuple|2.65|?>>
     <associate|function: A^B and sets|<tuple|2.35|?>>
@@ -13025,68 +13116,69 @@
     <associate|order chain is a totally ordered class|<tuple|3.42|?>>
     <associate|order comparable|<tuple|3.37|?>>
     <associate|order comparable property|<tuple|3.38|?>>
-    <associate|order composition of functions|<tuple|3.50|?>>
-    <associate|order condition for isomorphism|<tuple|3.52|?>>
+    <associate|order composition of functions|<tuple|3.51|?>>
+    <associate|order condition for isomorphism|<tuple|3.53|?>>
     <associate|order condition for isomorphism in a totallu ordered
-    set|<tuple|3.55|?>>
-    <associate|order conditional complete alternatives|<tuple|3.74|?>>
-    <associate|order conditional complete order|<tuple|3.73|?>>
+    set|<tuple|3.56|?>>
+    <associate|order conditional complete alternatives|<tuple|3.75|?>>
+    <associate|order conditional complete order|<tuple|3.74|?>>
     <associate|order empty set is a chain|<tuple|3.41|?>>
     <associate|order eq order preorder to order|<tuple|3.33|?>>
-    <associate|order example inclusion order and sup, inf|<tuple|3.66|?>>
-    <associate|order greatest and lowest element are unique|<tuple|3.60|?>>
-    <associate|order greatest lowest element|<tuple|3.57|?>>
-    <associate|order immediate successor|<tuple|3.81|?>>
-    <associate|order inclusion and greatest and least element|<tuple|3.68|?>>
+    <associate|order example inclusion order and sup, inf|<tuple|3.67|?>>
+    <associate|order greatest and lowest element are unique|<tuple|3.61|?>>
+    <associate|order greatest lowest element|<tuple|3.58|?>>
+    <associate|order homeomorphism extending|<tuple|3.50|?>>
+    <associate|order immediate successor|<tuple|3.82|?>>
+    <associate|order inclusion and greatest and least element|<tuple|3.69|?>>
     <associate|order inclusion is a order|<tuple|3.32|?>>
     <associate|order increasing, decreasing|<tuple|3.48|?>>
     <associate|order initial segement|<tuple|3.45|?>>
-    <associate|order initial segement a\<less\>b|<tuple|3.91|?>>
+    <associate|order initial segement a\<less\>b|<tuple|3.92|?>>
     <associate|order initial segement inclusion|<tuple|3.46|?>>
     <associate|order intial sergment property|<tuple|3.47|?>>
-    <associate|order isomorphism and conditional complete|<tuple|3.76|?>>
-    <associate|order isomorphism condition (2)|<tuple|3.53|?>>
-    <associate|order isomorphism preservers sup and inf|<tuple|3.75|?>>
-    <associate|order isomorphism strictly|<tuple|3.51|?>>
+    <associate|order isomorphism and conditional complete|<tuple|3.77|?>>
+    <associate|order isomorphism condition (2)|<tuple|3.54|?>>
+    <associate|order isomorphism preservers sup and inf|<tuple|3.76|?>>
+    <associate|order isomorphism strictly|<tuple|3.52|?>>
     <associate|order lexical order|<tuple|3.36|?>>
-    <associate|order lower upper bound and inclusion|<tuple|3.69|?>>
-    <associate|order lower upper bounds of empty set|<tuple|3.64|?>>
-    <associate|order maximal minimal element|<tuple|3.56|?>>
-    <associate|order maximum of class with bigger elements|<tuple|3.62|?>>
-    <associate|order min(A)\<less\>=max(A)|<tuple|3.61|?>>
+    <associate|order lower upper bound and inclusion|<tuple|3.70|?>>
+    <associate|order lower upper bounds of empty set|<tuple|3.65|?>>
+    <associate|order maximal minimal element|<tuple|3.57|?>>
+    <associate|order maximum of class with bigger elements|<tuple|3.63|?>>
+    <associate|order min(A)\<less\>=max(A)|<tuple|3.62|?>>
     <associate|order order relation|<tuple|3.26|?>>
     <associate|order partial order on sub class|<tuple|3.34|?>>
     <associate|order partial ordered class|<tuple|3.27|?>>
     <associate|order preorder|<tuple|3.24|?>>
     <associate|order preordered class|<tuple|3.25|?>>
-    <associate|order properties of the isomorph relation|<tuple|3.54|?>>
-    <associate|order section|<tuple|3.83|?>>
-    <associate|order section and well ordering|<tuple|3.84|?>>
+    <associate|order properties of the isomorph relation|<tuple|3.55|?>>
+    <associate|order section|<tuple|3.84|?>>
+    <associate|order section and well ordering|<tuple|3.85|?>>
     <associate|order strict order|<tuple|3.31|?>>
-    <associate|order sup and inf and bigger elements|<tuple|3.71|?>>
-    <associate|order sup inf condition|<tuple|3.72|?>>
-    <associate|order sup, inf property|<tuple|3.67|?>>
-    <associate|order sup,inf and inclusion|<tuple|3.70|?>>
-    <associate|order supremum infinum|<tuple|3.65|?>>
-    <associate|order total/well-order inclusion|<tuple|3.79|?>>
+    <associate|order sup and inf and bigger elements|<tuple|3.72|?>>
+    <associate|order sup inf condition|<tuple|3.73|?>>
+    <associate|order sup, inf property|<tuple|3.68|?>>
+    <associate|order sup,inf and inclusion|<tuple|3.71|?>>
+    <associate|order supremum infinum|<tuple|3.66|?>>
+    <associate|order total/well-order inclusion|<tuple|3.80|?>>
     <associate|order totally lexicol ordering|<tuple|3.44|?>>
     <associate|order totally ordered subclass|<tuple|3.43|?>>
-    <associate|order transfinite induction|<tuple|3.85|?>>
-    <associate|order upport lower bound|<tuple|3.63|?>>
-    <associate|order well order and immediate successor|<tuple|3.82|?>>
+    <associate|order transfinite induction|<tuple|3.86|?>>
+    <associate|order upport lower bound|<tuple|3.64|?>>
+    <associate|order well order and immediate successor|<tuple|3.83|?>>
     <associate|order well order every subclass is isomorphic with A or a
-    iitial segement|<tuple|3.93|?>>
+    iitial segement|<tuple|3.94|?>>
     <associate|order well order implies conditional complete and totally
-    ordering|<tuple|3.80|?>>
-    <associate|order well ordered and order isomorphism|<tuple|3.86|?>>
-    <associate|order well ordered class and isomorphism|<tuple|3.87|?>>
+    ordering|<tuple|3.81|?>>
+    <associate|order well ordered and order isomorphism|<tuple|3.87|?>>
+    <associate|order well ordered class and isomorphism|<tuple|3.88|?>>
     <associate|order well ordered is not isomorph to a initial segment
-    |<tuple|3.88|?>>
-    <associate|order well ordered isomorphic property (3)|<tuple|3.90|?>>
-    <associate|order well ordered isomorphism property|<tuple|3.89|?>>
-    <associate|order well ordering and isomorphism (2)|<tuple|3.92|?>>
-    <associate|order well ordering and order isomorphism|<tuple|3.78|?>>
-    <associate|order well-rodered class|<tuple|3.77|?>>
+    |<tuple|3.89|?>>
+    <associate|order well ordered isomorphic property (3)|<tuple|3.91|?>>
+    <associate|order well ordered isomorphism property|<tuple|3.90|?>>
+    <associate|order well ordering and isomorphism (2)|<tuple|3.93|?>>
+    <associate|order well ordering and order isomorphism|<tuple|3.79|?>>
+    <associate|order well-rodered class|<tuple|3.78|?>>
     <associate|pair equality of pairs|<tuple|1.43|?>>
     <associate|pair of elements|<tuple|1.41|?>>
     <associate|partial function|<tuple|2.7|?>>
@@ -13114,10 +13206,10 @@
     <associate|product inclusion|<tuple|2.128|?>>
     <associate|product of family with one element|<tuple|2.126|?>>
     <associate|product of family with two classes|<tuple|2.127|?>>
-    <associate|product product is empty|<tuple|3.102|?>>
-    <associate|product product is not empty|<tuple|3.101|?>>
+    <associate|product product is empty|<tuple|3.103|?>>
+    <associate|product product is not empty|<tuple|3.102|?>>
     <associate|product projection function|<tuple|2.134|?>>
-    <associate|product projection is surjective|<tuple|3.100|?>>
+    <associate|product projection is surjective|<tuple|3.101|?>>
     <associate|product sub-product|<tuple|2.132|?>>
     <associate|relation|<tuple|3.1|?>>
     <associate|relation properties|<tuple|3.4|?>>

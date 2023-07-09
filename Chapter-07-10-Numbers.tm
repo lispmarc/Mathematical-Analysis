@@ -779,16 +779,16 @@
       <math|<around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,\<cdot\>|\<rangle\>>>
       is a Abelian semi-group].
 
-      <item><math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\><rsup|+><rsub|0>>
+      <item>For <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\><rsup|+><rsub|0>>
       defined by <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>><around*|(|n|)>=\<sim\><around*|[|<around*|(|n,0|)>|]>>
-      is a\ 
+      we have that
 
       <\enumerate>
-        <item>group isomorphism between <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>>
-        and <math|<around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,+|\<rangle\>>>
+        <item><math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,+|\<rangle\>>>
+        is a group isomorphism
 
-        <item>group isomorphism between <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>>
-        and <math|<around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,\<cdot\>|\<rangle\>>>
+        <item><math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,\<cdot\>|\<rangle\>>>
+        is a group isomorphism
       </enumerate>
 
       <item>For every <math|z\<in\>\<bbb-Z\>>
@@ -1573,12 +1573,15 @@
   </proof>
 
   <\theorem>
-    <label|integers order preserving bijection><math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\><rsup|+><rsub|0>>
-    defined by <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>><around*|(|n|)>=\<sim\><around*|[|<around*|(|n,0|)>|]>>
-    is a order isomorphism between <math|<around*|\<langle\>|N<rsub|0>,\<leqslant\>|\<rangle\>>>
-    and <math|<around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,\<leqslant\>|\<rangle\>>>.
-    In other words <math|><math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\><rsup|+><rsub|0>>
-    is a bijection and <math|x\<leqslant\>y\<Leftrightarrow\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>><around*|(|x|)>\<leqslant\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>><around*|(|y|)>>.
+    <label|integers order preserving bijection>Define
+    <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\><rsup|+><rsub|0>>
+    by <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>><around*|(|n|)>=\<sim\><around*|[|<around*|(|n,0|)>|]>>
+    then
+
+    <\equation*>
+      i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,\<leqslant\>|\<rangle\>><text|
+      is a order isomorphism>
+    </equation*>
   </theorem>
 
   <\proof>
@@ -1618,11 +1621,9 @@
 
       <item*|<math|0\<less\>y>>Then <math|y\<in\>\<bbb-Z\><rsup|+><rsub|0>>.
       Using [theorem: <reference|integers properties (1)>]
-      <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\><rsup|+><rsub|0>>
+      <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,\<cdot\>|\<rangle\>>>
       defined by <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>><around*|(|n|)>=\<sim\><around*|[|<around*|(|n,0|)>|]>>
-      is a group isomorphism between <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>>
-      and <math|<around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,+|\<rangle\>>>.
-      Take <math|n=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>|)><rsup|-1><around*|(|x|)>>
+      is a group isomorphism. Take <math|n=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>|)><rsup|-1><around*|(|x|)>>
       and <math|m=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>|)><rsup|-1><around*|(|y|)>>
       then <math|x=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>*<around*|(|n|)>>
       and <math|n\<neq\>0> [otherwise <math|x=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>><around*|(|n|)>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>><around*|(|0|)>=0>].
@@ -1693,18 +1694,16 @@
     By [theorem: <reference|integers order preserving bijection>]\ 
 
     <\equation*>
-      i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\><rsup|+><rsub|0><text|
-      is a order isomorphism between ><around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>><text|
-      and ><around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,\<leqslant\>|\<rangle\>>
+      i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,\<leqslant\>|\<rangle\>><text|
+      is a order isomorphism>
     </equation*>
 
     which by [theorem: <reference|order isomorphism condition (2)>] means
     that\ 
 
     <\equation*>
-      <around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>|)><rsup|-1>:\<bbb-Z\><rsup|+><rsub|>\<rightarrow\>\<bbb-N\><rsub|0><text|
-      is a order isomorphism between ><around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,\<leqslant\>|\<rangle\>><text|
-      and ><around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>
+      <around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>|)><rsup|-1>:<around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>><text|
+      is a order isomorphism>
     </equation*>
 
     Assume that <math|M=sup<around*|(|A|)>> exists then by [theorem:
@@ -2353,7 +2352,7 @@
     </equation*>
   </proof>
 
-  TODO<chapter|The Rational Numbers>
+  <chapter|The Rational Numbers>
 
   In this chapter we will introduce the set of rational numbers and embed the
   integer numbers in it. Just as with <math|\<bbb-Z\>> and
@@ -4000,7 +3999,7 @@
     which combined with [eq: <reference|eq 8.13.024>] proves that\ 
 
     <\equation*>
-      i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-Q\>><text|
+      i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-Q\>>,\<leqslant\>|\<rangle\>><text|
       is a order isomorphism>
     </equation*>
 
@@ -4026,7 +4025,7 @@
     proving with [eq: <reference|eq 8.13.024>] that\ 
 
     <\equation*>
-      i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-Q\>><text|
+      i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:<around*|\<langle\>|\<bbb-Z\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-Q\>>,+,\<cdot\>|\<rangle\>><text|
       is a ring isomorphism>
     </equation*>
   </proof>
@@ -4059,17 +4058,14 @@
       then we have\ 
 
       <\enumerate>
-        <item><math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Q\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0,\<bbb-Q\>>>
-        is a group isomorphism between <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>>
-        and <math|<around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-Q\>>,+|\<rangle\>>>
+        <item><math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Q\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-Q\>>,+|\<rangle\>>>
+        is a group isomorphism
 
-        <item><math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Q\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0,\<bbb-Q\>>>
-        is a group isomorphism between <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>>
-        and <math|<around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-Q\>>,\<cdot\>|\<rangle\>>>
+        <item><math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Q\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-Q\>>,\<cdot\>|\<rangle\>>>
+        is a group isomorphism
 
-        <item><math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Q\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0,\<bbb-Q\>>>
-        is a order isomorphism between <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>>
-        and <math|<around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-Q\>>,\<leqslant\>|\<rangle\>>>
+        <item><math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Q\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-Q\>>,\<leqslant\>|\<rangle\>>>
+        is a order isomorphism
       </enumerate>
 
       <item><math|\<forall\>n\<in\>\<bbb-N\><rsub|0,\<bbb-Q\>>> we have that
@@ -4220,9 +4216,8 @@
         8.20.026.1>] and [eq: <reference|eq 8.21.026>] we have\ 
 
         <\equation*>
-          i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0,\<bbb-Q\>><text|
-          is a group isomorphism between ><around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>><text|
-          and ><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-Q\>>,+|\<rangle\>>
+          i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-Q\>>,+|\<rangle\>><text|
+          is a group isomorphism>
         </equation*>
 
         <item>If <math|x,y\<in\>\<bbb-N\><rsub|0>> then
@@ -4246,9 +4241,8 @@
         and [eq: <reference|eq 8.23.026>]\ 
 
         <\equation*>
-          i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0,\<bbb-Q\>><text|
-          is a group isomorphism between ><around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>><text|
-          and ><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-Q\>>,\<cdot\>|\<rangle\>>
+          i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-Q\>>,\<cdot\>|\<rangle\>><text|
+          is a group isomorphism><text|>
         </equation*>
 
         <item>If <math|x,y\<subset\>\<bbb-N\><rsub|0>> then we have
@@ -4263,7 +4257,7 @@
         proving together with [eq: <reference|eq 8.19.026>] that\ 
 
         <\equation*>
-          i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0,\<bbb-Q\>><text|
+          i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-Q\>>,\<leqslant\>|\<rangle\>><text|
           is a order isomorphism>.
         </equation*>
       </enumerate>
@@ -4428,7 +4422,7 @@
     As by [theorem: <reference|rational NQ is well-ordered>]
     <math|<around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-Q\>>,\<leqslant\>|\<rangle\>>>
     is well-ordered it follows from [theorem: <reference|order well order
-    implies conditional complete and totally ordering>] it follows that
+    implies conditional complete and totally ordering>] that
     <math|<around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,\<leqslant\>|\<rangle\>>>
     is conditional complete.
   </proof>
@@ -8155,7 +8149,7 @@
       <item><math|<around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-R\>>,+,\<cdot\>|\<rangle\>>>
       is a sub field of <math|<around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>>
 
-      <item>The function <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Q\>\<rightarrow\>\<bbb-R\>>
+      <item>The function <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Q\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>>
       defined by <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|q|)>=\<alpha\><rsub|q>>
       is a field isomorphism
     </enumerate>
@@ -9100,9 +9094,11 @@
 
   <\theorem>
     <label|real embedding of Q and order>The field isomorphism
-    <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Q\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>>>
+    <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Q\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-R\>>,+,\<cdot\>|\<rangle\>>>
     defined by <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|r|)>=\<alpha\><rsub|r>>
     [see theorem: <reference|real field embedding Q>] is a order isomorphism
+    between <math|<around*|\<langle\>|\<bbb-Q\>,\<leqslant\>|\<rangle\>>> and
+    <math|<around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-R\>>,\<leqslant\>|\<rangle\>>>
   </theorem>
 
   <\proof>
@@ -9630,110 +9626,156 @@
       <item><math|<around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,\<cdot\>|\<rangle\>>>
       is a sub semi-group of <math|<around*|\<langle\>|\<bbb-R\>,\<cdot\>|\<rangle\>>>
 
-      <item><math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>>>
-      is a order isomorphism between <math|<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>>
-      and <math|<around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,\<leqslant\>|\<rangle\>>>
+      <item><math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,\<leqslant\>|\<rangle\>>>
+      is a order isomorphism
 
-      <item><math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>>>
-      is a ring isomorphism between <math|<around*|\<langle\>|\<bbb-Z\>,+,\<cdot\>|\<rangle\>>>
-      and <math|<around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,+,\<cdot\>|\<rangle\>>>
+      <item><math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Z\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,+,\<cdot\>|\<rangle\>>>
+      is a ring isomorphism <math|>
 
-      <item><math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>>>
-      is a group isomorphism between <math|<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>>
-      and <math|<around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,+|\<rangle\>>>
+      <item><math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,+|\<rangle\>>>
+      is a group isomorphism
+
+      <item><math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Z\>,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,\<cdot\>|\<rangle\>>>
+      is a group isomorphism
 
       <item><math|\<bbb-Z\><rsub|\<bbb-R\>>> is denumerable
     </enumerate>
   </theorem>
 
   <\proof>
-    Using \ [theorems: \ <reference|rational sub-ring>, <reference|real
-    embedding of Q and order>] we have that
-    <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-Q\>>>
-    and <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Q\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>>>
-    are order and ring isomorphisms. So that by [theorems:
-    <reference|function composition injectivity, surjectivity and
-    bijectivity>, <reference|order composition of functions>,
-    <reference|field homeomorphism composition> and <reference|rational
-    sub-ring>] we have that\ 
+    Using [theorems: \ <reference|rational sub-ring>, <reference|real
+    embedding of Q and order>] we have that\ 
+
+    <\equation*>
+      i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:<around*|\<langle\>|\<bbb-Z\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-Q\>>,+,\<cdot\>|\<rangle\>><text|
+      and >i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<of\><around*|\<langle\>|\<bbb-Q\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-R\>>,+,\<cdot\>|\<rangle\>><text|
+      are ring isomorphisms>
+    </equation*>
+
+    and
+
+    <\equation*>
+      i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-Q\>>,\<leqslant\>|\<rangle\>><text|
+      and >i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<of\><around*|\<langle\>|\<bbb-Q\>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-R\>>,\<leqslant\>|\<rangle\>><text|
+      are order isomorphisms>
+    </equation*>
+
+    Using [theorems: <reference|function composition injectivity,
+    surjectivity and bijectivity>, <reference|order composition of
+    functions>, <reference|field homeomorphism composition> and
+    <reference|rational sub-ring>] on the above we have for
+    <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>>
+    that\ 
+
+    <\equation*>
+      i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Z\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-R\>>,+,\<cdot\>|\<rangle\>><text|
+      is a injective ring homeomorphism >
+    </equation*>
+
+    and
+
+    <\equation*>
+      i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|Z,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-R\>>,\<leqslant\>|\<rangle\>><text|
+      is a injective order homeomorphism>
+    </equation*>
+
+    or applying using [theorems: <reference|order homeomorphism extending>,
+    <reference|group homeomorphism to a sub group> and <reference|field
+    homeomorphism to a sub field>\ 
 
     <\equation>
-      <label|eq 9.91.038>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>><text|
-      is a injective order and ring homeomorphism>
+      <label|eq 9.91.040>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Z\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>><text|
+      is a injective ring homeomorphism >
     </equation>
 
-    As a field homeomorphism is alos a group a additve and multipicative
-    group homeomorphism [see note: <reference|ring homeomorphism is group
+    and
+
+    <\equation>
+      <label|eq 9.92.040>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|Z,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>><text|
+      is a injective order homeomorphism>
+    </equation>
+
+    Further using [theorem: <reference|ring homeomorphism is group
     homeomorphism>] we have that\ 
 
     <\equation>
-      <label|eq 9.92.039>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>><text|
-      is a group homeomorphism between ><around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>><text|
-      and ><around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-R\>>,+|\<rangle\>>
+      <label|eq 9.93.40>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-R\>,+|\<rangle\>><text|
+      and >i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Z\>,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-R\>,\<cdot\>|\<rangle\>><text|
+      are group homeomorphisms>
     </equation>
 
-    <\equation>
-      <label|eq 9.93.039>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>><text|
-      is a group homeomorphism between ><around*|\<langle\>|\<bbb-Z\>,\<cdot\>|\<rangle\>><text|
-      and ><around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-R\>>,\<cdot\>|\<rangle\>>
-    </equation>
-
-    Further by definition we have that <math|\<bbb-Z\><rsub|\<bbb-R\>>=<around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>|)><around*|(|\<bbb-Z\>|)>>
-    so that by [theorem: <reference|function injectivity to bijection>]\ 
-
-    <\equation>
-      <label|eq 9.92.038>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>><text|
-      is a order and ring isomorphism>
-    </equation>
-
-    \;
-
-    Then we have:
+    So we have that\ 
 
     <\enumerate>
-      <item>Using [eq: <reference|eq 9.91.038>],
-      <math|\<bbb-Z\><rsub|\<bbb-R\>>=<around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>|)><around*|(|\<bbb-Z\>|)>>
-      and [theorem: <reference|field isomorphism and neutral element>] it
-      follows that
+      <item>As <math|\<bbb-Z\><rsub|\<bbb-R\>>=><math|<around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>|)><around*|(|\<bbb-Z\>|)>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-Z\>|)>>
+      we have using [theorem: <reference|ring ring homeomorphism and neutral
+      element>] and [eq: <reference|eq 9.91.040>] that\ 
 
       <\equation*>
         <around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,+,\<cdot\>|\<rangle\>><text|
-        is a subring of ><around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>
+        is a subring of <math|<around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>>>
       </equation*>
 
-      <item>Using [eq: <reference|eq 9.92.039>],
-      <math|\<bbb-Z\><rsub|\<bbb-R\>>=<around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>|)><around*|(|\<bbb-Z\>|)>>
-      and [theorem: <reference|group homeomorphism properties>] it follows
-      that\ 
+      <item>As <math|\<bbb-Z\><rsub|\<bbb-R\>>=><math|<around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>|)><around*|(|\<bbb-Z\>|)>>
+      we have using [theorem: <reference|group homeomorphism properties>] and
+      [eq: <reference|eq 9.93.40>] that\ 
 
       <\equation*>
         <around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,+|\<rangle\>><text| is
-        a subgroup of ><around*|\<langle\>|\<bbb-G\>|\<rangle\>>
+        a subring of <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>>>
       </equation*>
 
-      <item>As by [note: <reference|ring homeomorphism is group
-      homeomorphism>] and [eq: <reference|eq 9.91.038>] we have that
-      <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>>>
-      is a group homeomorphismx between <math|<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>>
+      <item>As <math|\<bbb-Z\><rsub|\<bbb-R\>>=><math|<around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>|)><around*|(|\<bbb-Z\>|)>>
+      we have using [theorem: <reference|group homeomorphism properties>] and
+      [eq: <reference|eq 9.93.40>] that\ 
 
-      <item>This is [eq: <reference|eq 9.92.038>]
+      <\equation*>
+        <around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,\<cdot\>|\<rangle\>><text|
+        is a subring of <math|<around*|\<langle\>|\<bbb-R\>,\<cdot\>|\<rangle\>>>>
+      </equation*>
 
-      <item>This is [eq: <reference|eq 9.92.038>]
+      <item>As <math|\<bbb-Z\><rsub|\<bbb-R\>>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-Z\>|)>>
+      we have using [theorem: <reference|function injectivity to bijection>]
+      and [eq: <reference|eq 9.92.040>] that\ 
 
-      <item>This follows from [eq: <reference|eq 9.92.038>] and the fact that
-      a ring homeomorphism is by definition also a group homeomorphism [see
-      note: <reference|ring homeomorphism is group homeomorphism>]
+      <\equation*>
+        i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Z\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>><text|
+        is a order isomorphism>
+      </equation*>
 
-      <item>As by [eq: <reference|eq 9.92.038>] <math|\<bbb-Z\>> and
-      <math|\<bbb-Z\><rsub|\<bbb-R\>>> are bijective we have that
-      <math|\<bbb-Z\>\<approx\>\<bbb-Z\><rsub|\<bbb-R\>>> which, as by
-      [theorem: <reference|integers denumerability>]
-      <math|\<bbb-N\><rsub|0>\<approx\>\<bbb-Z\>> we have that
-      <math|\<bbb-N\><rsub|0>\<approx\>\<bbb-Z\><rsub|\<bbb-R\>>> proving
-      that <math|\<bbb-Z\><rsub|\<bbb-R\>>> is denumerable.
+      <item>As <math|\<bbb-Z\><rsub|\<bbb-R\>>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-Z\>|)>>
+      we have using [theorem: <reference|function injectivity to bijection>]
+      and [eq: <reference|eq 9.91.040>] that\ 
+
+      <\equation*>
+        i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Z\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>><text|
+        is a ring isomorphism>
+      </equation*>
+
+      <item>As <math|\<bbb-Z\><rsub|\<bbb-R\>>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-Z\>|)>>
+      we have using [theorem: <reference|function injectivity to bijection>]
+      and [eq: <reference|eq 9.93.40>] that\ 
+
+      <\equation*>
+        i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-R\>,+|\<rangle\>><text|
+        is a ring isomorphism>
+      </equation*>
+
+      <item>As <math|\<bbb-Z\><rsub|\<bbb-R\>>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-Z\>|)>>
+      we have using [theorem: <reference|function injectivity to bijection>]
+      and [eq: <reference|eq 9.93.40>] that\ 
+
+      <\equation*>
+        i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Z\>,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-R\>,\<cdot\>|\<rangle\>><text|
+        is a ring isomorphism>
+      </equation*>
+
+      <item>Using (4) we have that <math|Z\<approx\>Z<rsub|\<bbb-R\>>> which
+      as by [theorem: <reference|integers denumerability>]
+      <math|\<bbb-N\><rsub|0>\<approx\>\<bbb-Z\>> proves that
+      <math|\<bbb-N\><rsub|0>\<approx\>\<bbb-Z\><rsub|R>> proving that
+      <math|\<bbb-Z\><rsub|\<bbb-R\>>> is denumerable.
     </enumerate>
-
-    \;
   </proof>
 
   We can use the same technique to embed the set of natural numbers in
@@ -9751,12 +9793,18 @@
 
     <\enumerate>
       <item><math|<around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,+|\<rangle\>>>
-      is a sub-semi-group of <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>>
+      is a abelian sub-semi-group of <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>>
 
-      <item><math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0,\<bbb-R\>>>
+      <item><math|<around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<cdot\>|\<rangle\>>>
+      is a sub-semi-group of <math|<around*|\<langle\>|\<bbb-R\>,\<cdot\>|\<rangle\>>>
+
+      <item><math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<leqslant\>|\<rangle\>>>
       is a order isomorphism
 
-      <item><math|i<rsub|\<bbb-N\>\<rightarrow\>\<bbb-R\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0,\<bbb-R\>>>
+      <item><math|i<rsub|\<bbb-N\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,+|\<rangle\>>>
+      is a group isomorphism\ 
+
+      <item><math|i<rsub|\<bbb-N\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<cdot\>|\<rangle\>>>
       is a group isomorphism\ 
 
       <item><math|\<bbb-N\><rsub|0,\<bbb-R\>>> is denumerable
@@ -9764,20 +9812,129 @@
   </theorem>
 
   <\proof>
-    Using [theorems: <reference|rational NQ properties (1)> and
-    <reference|real ZR properties>] we have that
-    <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Q\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0,\<bbb-Q\>>>
-    and <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>>>
-    are order and group isomorphisms. So that by [theorems:
-    <reference|function composition injectivity, surjectivity and
-    bijectivity>, <reference|order composition of functions>,
-    <reference|group homeomorphism composition> and <reference|rational NQ
-    properties (1)>]\ 
+    Using \ [theorems: <reference|integers properties (1)>,
+    <reference|integers order preserving bijection> and <reference|real ZR
+    properties>] we have that\ 
+
+    <\equation*>
+      i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,+|\<rangle\>><text|
+      and >i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,\<cdot\>|\<rangle\>><text|
+      are group isomorphisms>
+    </equation*>
+
+    and
+
+    <\equation*>
+      i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,+|\<rangle\>><text|
+      and >i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Z\>,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,\<cdot\>|\<rangle\>><text|
+      are group isomorphisms>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,\<leqslant\>|\<rangle\>><text|
+      and >i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,\<leqslant\>|\<rangle\>><text|
+      are order isomorphisms>
+    </equation*>
+
+    Hence using [theorems: <reference|function composition injectivity,
+    surjectivity and bijectivity>, <reference|order composition of
+    functions>, <reference|group homeomorphism composition> and
+    <reference|integers properties (1)>] on the above we have for
+    <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-N\>\<rightarrow\>\<bbb-Z\>>>
+    that\ 
+
+    <\equation*>
+      i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|\<bbb-Z\>>,+|\<rangle\>><text|
+      and >i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,\<cdot\>|\<rangle\>><text|
+      are group homeomorphism>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,\<leqslant\>|\<rangle\>><text|
+      is a order isomorphism>
+    </equation*>
+
+    or applying using [theorems: <reference|order homeomorphism extending>
+    and <reference|group homeomorphism to a sub group> we have that\ 
+
+    <\equation>
+      <label|eq 9.94.040>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-R\>,+|\<rangle\>><text|
+      and >i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-R\>,\<cdot\>|\<rangle\>><text|
+      are group homeomorphism><text|>
+    </equation>
+
+    <\equation>
+      <label|eq 9.95.040>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>><text|
+      is a order isomorphism>
+    </equation>
+
+    So we have that\ 
+
+    <\enumerate>
+      <item>As <math|\<bbb-N\><rsub|0,\<bbb-R\>>=<around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>|)><around*|(|\<bbb-N\><rsub|0>|)>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-N\><rsub|0>|)>>
+      we have by [theorem: <reference|group homeomorphism properties>] and
+      [eq: <reference|eq 9.94.040>] that\ 
+
+      <\equation*>
+        <around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,+|\<rangle\>><text|
+        is a semi group of <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>>>
+      </equation*>
+
+      which, as <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>> is abelian
+      by [theorem: <reference|real group>], proves by [theorem:
+      <reference|group semi-group inheritance>] that\ 
+
+      <\equation*>
+        <around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,+|\<rangle\>><text|
+        is a abelian semi group of <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>>>
+      </equation*>
+
+      <item>As <math|\<bbb-N\><rsub|0,\<bbb-R\>>=<around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>|)><around*|(|\<bbb-N\><rsub|0>|)>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-N\><rsub|0>|)>>
+      we have by [theorem: <reference|group homeomorphism properties>] and
+      [eq: <reference|eq 9.94.040>] that\ 
+
+      <\equation*>
+        <around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<cdot\>|\<rangle\>><text|
+        is a semi group of <math|<around*|\<langle\>|\<bbb-R\>,\<cdot\>|\<rangle\>>>>
+      </equation*>
+
+      <item>As <math|\<bbb-N\><rsub|0,\<bbb-R\>>=<around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>|)><around*|(|\<bbb-N\><rsub|0>|)>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-N\><rsub|0>|)>>
+      we have by [theorem: <reference|function injectivity to bijection>] and
+      [eq: <reference|eq 9.95.040>] that\ 
+
+      <\equation*>
+        i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<leqslant\>|\<rangle\>><text|
+        is a order isomorphism>
+      </equation*>
+
+      <item>As <math|\<bbb-N\><rsub|0,\<bbb-R\>>=<around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>|)><around*|(|\<bbb-N\><rsub|0>|)>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-N\><rsub|0>|)>>
+      we have by [theorem: <reference|function injectivity to bijection>] and
+      [eq: <reference|eq 9.94.040>] that\ 
+
+      <\equation*>
+        i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,+|\<rangle\>><text|
+        is a group isomorphism>
+      </equation*>
+
+      <item>As <math|\<bbb-N\><rsub|0,\<bbb-R\>>=<around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>|)><around*|(|\<bbb-N\><rsub|0>|)>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-N\><rsub|0>|)>>
+      we have by [theorem: <reference|function injectivity to bijection>] and
+      [eq: <reference|eq 9.94.040>] that\ 
+
+      <\equation*>
+        i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<cdot\>|\<rangle\>><text|
+        is a group isomorphism>
+      </equation*>
+
+      <item>Using (3) we have that <math|\<bbb-N\><rsub|0>\<approx\>\<bbb-N\><rsub|0,\<bbb-R\>>>
+      proving that <math|\<bbb-N\><rsub|0,\<bbb-R\>>> is denumerable
+    </enumerate>
+
+    \;
   </proof>
-
-  \;
-
-  \;
 
   \;
 
@@ -9998,10 +10155,15 @@
     <associate|eq 9.88.036|<tuple|9.88|?>>
     <associate|eq 9.89.036|<tuple|9.89|?>>
     <associate|eq 9.90.036|<tuple|9.90|?>>
-    <associate|eq 9.91.038|<tuple|9.91|?>>
-    <associate|eq 9.92.038|<tuple|9.94|?>>
-    <associate|eq 9.92.039|<tuple|9.92|?>>
-    <associate|eq 9.93.039|<tuple|9.93|?>>
+    <associate|eq 9.91.038|<tuple|9.94|?>>
+    <associate|eq 9.91.040|<tuple|9.91|?>>
+    <associate|eq 9.92.038|<tuple|9.97|?>>
+    <associate|eq 9.92.039|<tuple|9.95|?>>
+    <associate|eq 9.92.040|<tuple|9.92|?>>
+    <associate|eq 9.93.039|<tuple|9.96|?>>
+    <associate|eq 9.93.40|<tuple|9.93|?>>
+    <associate|eq 9.94.040|<tuple|9.94|?>>
+    <associate|eq 9.95.040|<tuple|9.95|?>>
     <associate|integeres order|<tuple|7.28|?>>
     <associate|integers|<tuple|7.2|?>>
     <associate|integers (-1).n|<tuple|7.16|?>>

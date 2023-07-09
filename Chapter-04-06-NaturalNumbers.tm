@@ -1631,6 +1631,48 @@
   </definition>
 
   <\theorem>
+    <label|field homeomorphism to a sub field>If
+    <math|<around*|\<langle\>|F,\<odot\><rsub|F>,\<oplus\><rsub|F>|\<rangle\>>>
+    and <math|<around*|\<langle\>|G,\<oplus\><rsub|G>,\<odot\><rsub|G>|\<rangle\>>>
+    are fields, <math|H\<subseteq\>G> a sub-field of
+    <math|<around*|\<langle\>|G,\<oplus\>|\<rangle\>>> and
+
+    <\equation*>
+      f:<around*|\<langle\>|F,\<oplus\><rsub|F>,\<odot\><rsub|F>|\<rangle\>>\<rightarrow\><around*|\<langle\>|H,<around*|(|\<oplus\><rsub|G>|)><rsub|\|H\<times\>H>,<around*|(|\<odot\><rsub|G>|)><rsub|\|H\<times\>H>|\<rangle\>><text|
+      is a field homeomorphism>
+    </equation*>
+
+    then
+
+    <\equation*>
+      f:<around*|\<langle\>|F,\<oplus\><rsub|F>,\<odot\><rsub|F>|\<rangle\>>\<rightarrow\><around*|\<langle\>|G,\<oplus\><rsub|G>,\<odot\><rsub|G>|\<rangle\>><text|
+      is a field homeomorphism>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Let <math|x,y\<in\>F> then we have\ 
+
+    <\equation*>
+      f<around*|(|x\<oplus\><rsub|F>y|)>=f<around*|(|x|)><around*|(|\<oplus\><rsub|G>|)><rsub|\|H\<times\>H>f<around*|(|y|)>=f<around*|(|x|)>\<oplus\><rsub|G>f<around*|(|y|)>
+    </equation*>
+
+    and
+
+    <\equation*>
+      f<around*|(|x\<odot\><rsub|F>y|)>=f<around*|(|x|)><around*|(|\<odot\><rsub|G>|)><rsub|\|H\<times\>H>f<around*|(|y|)>=f<around*|(|x|)>\<odot\><rsub|G>f<around*|(|y|)>
+    </equation*>
+
+    and finally as the neutral element in
+    <math|<around*|\<langle\>|H,<around*|(|\<oplus\><rsub|G>|)><rsub|\|H\<times\>H>,<around*|(|\<odot\><rsub|G>|)><rsub|\|H\<times\>H>|\<rangle\>>>
+    is <math|1<rsub|B>\<in\>B>
+
+    <\equation*>
+      f<around*|(|1<rsub|A>|)>=1<rsub|B>
+    </equation*>
+  </proof>
+
+  <\theorem>
     <label|inverse of a field isomorphism is a field isomorphism>If
     <math|<around*|\<langle\>|A,\<odot\><rsub|A>,\<oplus\><rsub|A>|\<rangle\>>>
     and <math|<around*|\<langle\>|B,\<odot\><rsub|B>,\<oplus\><rsub|B>|\<rangle\>>>
@@ -1697,7 +1739,8 @@
     and <math|<around*|\<langle\>|B,\<oplus\><rsub|B>,\<odot\><rsub|B>|\<rangle\>>>
     are fields with additive units <math|0<rsub|A>,0<rsub|B>> and
     multiplicative units <math|1<rsub|A>>,<math|1<rsub|B>> and
-    <math|f:A\<rightarrow\>B> a field homeomorphism then we have
+    <math|f:<around*|\<langle\>|A,\<oplus\><rsub|A>,\<odot\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<oplus\><rsub|B>,\<odot\><rsub|B>|\<rangle\>>>
+    a field homeomorphism then we have
 
     <\enumerate>
       <item><math|f<around*|(|0<rsub|A>|)>=0<rsub|B>>
@@ -1720,13 +1763,13 @@
       <item>We have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|0<rsub|B>>|<cell|=>|<cell|<around*|(|-f<around*|(|0<rsub|A>|)>|)>\<oplus\><rsub|B>f<around*|(|0<rsub|A>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|-f<around*|(|0<rsub|A>|)>|)>\<oplus\><rsub|B>f<around*|(|0<rsub|A>\<oplus\><rsub|A>0<rsub|A>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|-f<around*|(|0<rsub|A>|)>|)>\<oplus\><rsub|B><around*|(|f<around*|(|0<rsub|A>|)>\<oplus\><rsub|A>f<around*|(|0<rsub|A>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|-f<around*|(|0<rsub|A>|)>|)>\<oplus\><rsub|B>f<around*|(|0<rsub|A>|)>|)>\<oplus\><rsub|B>f<around*|(|0<rsub|A>|)>>>|<row|<cell|>|<cell|=>|<cell|0<rsub|B>\<oplus\>f<around*|(|0<rsub|A>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|0<rsub|A>|)>>>>>
+        <tformat|<table|<row|<cell|0<rsub|B>>|<cell|=>|<cell|<around*|(|-f<around*|(|0<rsub|A>|)>|)>\<oplus\><rsub|B>f<around*|(|0<rsub|A>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|-f<around*|(|0<rsub|A>|)>|)>\<oplus\><rsub|B>f<around*|(|0<rsub|A>\<oplus\><rsub|A>0<rsub|A>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|-f<around*|(|0<rsub|A>|)>|)>\<oplus\><rsub|B><around*|(|f<around*|(|0<rsub|A>|)>\<oplus\><rsub|B>f<around*|(|0<rsub|A>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|-f<around*|(|0<rsub|A>|)>|)>\<oplus\><rsub|B>f<around*|(|0<rsub|A>|)>|)>\<oplus\><rsub|B>f<around*|(|0<rsub|A>|)>>>|<row|<cell|>|<cell|=>|<cell|0<rsub|B>\<oplus\>f<around*|(|0<rsub|A>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|0<rsub|A>|)>>>>>
       </eqnarray*>
 
       <item>We have
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|f<around*|(|-x|)>\<oplus\><rsub|B>f<around*|(|x|)>>|<cell|=>|<cell|f<around*|(|x\<oplus\><rsub|A><around*|(|-x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|0<rsub|A>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|1|)>>>|<cell|0<rsub|B>>>|<row|<cell|f<around*|(|x|)>\<oplus\><rsub|B>f<around*|(|-x|)>>|<cell|=>|<cell|f<around*|(|x\<oplus\><rsub|A><around*|(|-x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|0<rsub|A>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|1|)>>>|<cell|0<rsub|A>>>>>
+        <tformat|<table|<row|<cell|f<around*|(|-x|)>\<oplus\><rsub|B>f<around*|(|x|)>>|<cell|=>|<cell|f<around*|(|<around*|(|-x|)>\<oplus\><rsub|A>x|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|0<rsub|A>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|1|)>>>|<cell|0<rsub|B>>>|<row|<cell|f<around*|(|x|)>\<oplus\><rsub|B>f<around*|(|-x|)>>|<cell|=>|<cell|f<around*|(|x\<oplus\><rsub|A><around*|(|-x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|0<rsub|A>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|1|)>>>|<cell|0<rsub|A>>>>>
       </eqnarray*>
 
       so that\ 
@@ -1749,7 +1792,7 @@
 
       <item>Let <math|x,y\<in\>f<around*|(|A|)>> then
       <math|\<exists\>u,v\<in\>A> such that <math|x=f<around*|(|u|)>> and
-      <math|y=f<around*|(|v|)>> then we have\ 
+      <math|y=f<around*|(|v|)>> so we have\ 
 
       <\equation*>
         x\<oplus\><rsub|B>y=f<around*|(|u|)>\<oplus\><rsub|B>f<around*|(|v|)>=f<around*|(|u\<oplus\><rsub|A>v|)>\<in\>f<around*|(|A|)>
@@ -1779,32 +1822,12 @@
         0<rsub|B>\<equallim\><rsub|<around*|(|1|)>>f<around*|(|0<rsub|A>|)>\<in\>f<around*|(|A|)>
       </equation*>
 
-      and
+      and by definition of a field homeomorphism
 
       <\equation*>
         1<rsub|B>=f<around*|(|1<rsub|A>|)>
       </equation*>
     </enumerate>
-
-    TODO Check the above
-  </proof>
-
-  <\proof>
-    As field homeomorphism <math|f:A\<rightarrow\>B> for the fields
-    <math|<around*|\<langle\>|A,\<oplus\><rsub|A>,\<odot\><rsub|A>|\<rangle\>>,<around*|\<langle\>|B,\<oplus\><rsub|B>,\<odot\><rsub|B>|\<rangle\>>>
-    is automatically a group homeomorphism for the groups
-    <math|<around*|\<langle\>|A,\<oplus\><rsub|A>|\<rangle\>>,<around*|\<langle\>|B,\<oplus\><rsub|B>|\<rangle\>>>
-    we have by <reference|group homeomorphism properties> \ that (1) and (2)
-    are valid. As for (3), if <math|x\<in\>A> with <math|x\<neq\>0<rsub|A>>
-    then there exists a <math|x<rsup|-1>> such that
-    <math|x<rsup|-1>\<cdot\>x=1<rsub|A>> hence
-
-    <\equation*>
-      1<rsub|B>=f<around*|(|1<rsub|A>|)>=f<around*|(|x<rsup|-1>\<odot\><rsub|A>x|)>=f<around*|(|x<rsup|-1>|)>\<odot\><rsub|B>f<around*|(|x|)>\<equallim\><rsub|<text|commutativity>>f<around*|(|x|)>\<odot\><rsub|B>f<around*|(|x<rsup|-1>|)>
-    </equation*>
-
-    proving by [theorem: <reference|field inverse is unique>] that
-    <math|f<around*|(|x<rsup|-1>|)>=<around*|(|f<around*|(|x|)>|)><rsup|-1>>.
   </proof>
 
   <\theorem>
@@ -1815,14 +1838,37 @@
     are fields then
 
     <\enumerate>
-      <item>If <math|f:A\<rightarrow\>D> and <math|g:B\<rightarrow\>C> are
-      field homeomorphisms and <math|<around*|\<langle\>|D,\<oplus\><rsub|B>,\<odot\><rsub|B>|\<rangle\>>>
-      is a sub field of <math|<around*|\<langle\>|B,\<oplus\><rsub|B>,\<odot\><rsub|B>|\<rangle\>>>
-      then <math|g\<circ\>f:A\<rightarrow\>C> is a field homeomorphism.
+      <item>If <math|D\<subseteq\>B> is a subfield of
+      <math|<around*|\<langle\>|B,\<oplus\><rsub|B>,\<odot\><rsub|B>|\<rangle\>>>
+      and\ 
 
-      <item>If <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>C> are
-      field isomorphisms then <math|g\<circ\>f:A\<rightarrow\>C> is a field
-      isomorphism.
+      <\equation*>
+        f:<around*|\<langle\>|A,\<oplus\><rsub|A>,\<odot\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|D,\<oplus\><rsub|B>,\<odot\><rsub|B>|\<rangle\>><text|
+        and >g:<around*|\<langle\>|B,\<oplus\><rsub|B>,\<odot\><rsub|B>|\<rangle\>>\<rightarrow\><around*|\<langle\>|C,\<oplus\><rsub|C>,\<odot\><rsub|C>|\<rangle\>><text|
+        are field homeomorphisms>
+      </equation*>
+
+      \ then
+
+      <\equation*>
+        g\<circ\>f:<around*|\<langle\>|A,\<oplus\><rsub|A>,\<odot\><rsub|A>|\<rangle\>>\<rightarrow\>\<langle\>C,\<varoplus\><rsub|C>,\<varodot\><rsub|C>\<rangle\><text|
+        is a field homeomorphism>
+      </equation*>
+
+      <item>If
+
+      <\equation*>
+        f:<around*|\<langle\>|A,\<oplus\><rsub|A>,\<odot\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|B,\<oplus\><rsub|B>,\<odot\><rsub|B>|\<rangle\>><text|
+        and >g:<around*|\<langle\>|B,\<oplus\><rsub|B>,\<odot\><rsub|B>|\<rangle\>>\<rightarrow\>\<langle\>C,\<varoplus\><rsub|C>,\<varodot\><rsub|C>\<rangle\><text|
+        are field isomorphisms>
+      </equation*>
+
+      then\ 
+
+      <\equation*>
+        g\<circ\>f:<around*|\<langle\>|A,\<oplus\><rsub|A>,\<odot\><rsub|A>|\<rangle\>>\<rightarrow\>\<langle\>C,\<varoplus\><rsub|C>,\<varodot\><rsub|C>\<rangle\><text|
+        is a field isomorphism>
+      </equation*>
     </enumerate>
   </theorem>
 
@@ -8187,23 +8233,23 @@
     <associate|auto-10|<tuple|right action|115>>
     <associate|auto-11|<tuple|<with|mode|<quote|math>|g\<vartriangleright\>x>|115>>
     <associate|auto-12|<tuple|<with|mode|<quote|math>|x\<vartriangleleft\>g>|115>>
-    <associate|auto-13|<tuple|<with|mode|<quote|math>|g<rsub|\<vartriangleright\>>>|115>>
-    <associate|auto-14|<tuple|<with|mode|<quote|math>|g<rsub|\<vartriangleleft\>>>|115>>
-    <associate|auto-15|<tuple|faithful action|115>>
-    <associate|auto-16|<tuple|transitive action|115>>
-    <associate|auto-17|<tuple|faithful action|115>>
-    <associate|auto-18|<tuple|transitive action|115>>
+    <associate|auto-13|<tuple|<with|mode|<quote|math>|g<rsub|\<vartriangleright\>>>|116>>
+    <associate|auto-14|<tuple|<with|mode|<quote|math>|g<rsub|\<vartriangleleft\>>>|116>>
+    <associate|auto-15|<tuple|faithful action|116>>
+    <associate|auto-16|<tuple|transitive action|116>>
+    <associate|auto-17|<tuple|faithful action|116>>
+    <associate|auto-18|<tuple|transitive action|116>>
     <associate|auto-19|<tuple|4.2|116>>
     <associate|auto-2|<tuple|operator|109>>
     <associate|auto-20|<tuple|ring|116>>
-    <associate|auto-21|<tuple|zero divisor|116>>
-    <associate|auto-22|<tuple|subring|116>>
+    <associate|auto-21|<tuple|zero divisor|117>>
+    <associate|auto-22|<tuple|subring|117>>
     <associate|auto-23|<tuple|ring homeomorphism|117>>
-    <associate|auto-24|<tuple|ring isomorphism|118>>
-    <associate|auto-25|<tuple|4.3|119>>
-    <associate|auto-26|<tuple|field|119>>
-    <associate|auto-27|<tuple|subfield|120>>
-    <associate|auto-28|<tuple|field homeomorphism|121>>
+    <associate|auto-24|<tuple|ring isomorphism|119>>
+    <associate|auto-25|<tuple|4.3|120>>
+    <associate|auto-26|<tuple|field|120>>
+    <associate|auto-27|<tuple|subfield|121>>
+    <associate|auto-28|<tuple|field homeomorphism|122>>
     <associate|auto-29|<tuple|5|125>>
     <associate|auto-3|<tuple|4.1|109>>
     <associate|auto-30|<tuple|5.1|125>>
@@ -8287,10 +8333,10 @@
     <associate|eq 5.11.019|<tuple|5.11|133>>
     <associate|eq 5.12.019|<tuple|5.12|133>>
     <associate|eq 5.13.019|<tuple|5.13|133>>
-    <associate|eq 5.14.019|<tuple|5.14|145>>
+    <associate|eq 5.14.019|<tuple|5.14|146>>
     <associate|eq 5.15.019|<tuple|5.15|146>>
     <associate|eq 5.16.019|<tuple|5.16|146>>
-    <associate|eq 5.17.019|<tuple|5.17|148>>
+    <associate|eq 5.17.019|<tuple|5.17|149>>
     <associate|eq 5.2.019|<tuple|5.2|128>>
     <associate|eq 5.3.019|<tuple|5.3|128>>
     <associate|eq 5.4.019|<tuple|5.4|128>>
@@ -8337,21 +8383,22 @@
     <associate|equipotence union|<tuple|6.11|152>>
     <associate|every subset of a finite set is finite|<tuple|6.30|156>>
     <associate|extract maximum element of a family|<tuple|6.47|163>>
-    <associate|field|<tuple|4.43|119>>
+    <associate|field|<tuple|4.43|120>>
     <associate|field field homeomorphism is a ring
-    isomomorphism|<tuple|4.53|?>>
-    <associate|field homeomorphism|<tuple|4.51|121>>
-    <associate|field homeomorphism composition|<tuple|4.57|123>>
-    <associate|field inverse is unique|<tuple|4.44|119>>
-    <associate|field inverse of inverse|<tuple|4.45|119>>
-    <associate|field inverse of product|<tuple|4.47|120>>
-    <associate|field isomorphism|<tuple|4.54|?>>
-    <associate|field isomorphism and neutral element|<tuple|4.56|121>>
-    <associate|field subfield|<tuple|4.49|120>>
-    <associate|field subfield is a field|<tuple|4.50|120>>
+    isomomorphism|<tuple|4.53|122>>
+    <associate|field homeomorphism|<tuple|4.51|122>>
+    <associate|field homeomorphism composition|<tuple|4.58|124>>
+    <associate|field homeomorphism to a sub field|<tuple|4.55|?>>
+    <associate|field inverse is unique|<tuple|4.44|120>>
+    <associate|field inverse of inverse|<tuple|4.45|120>>
+    <associate|field inverse of product|<tuple|4.47|121>>
+    <associate|field isomorphism|<tuple|4.54|122>>
+    <associate|field isomorphism and neutral element|<tuple|4.57|123>>
+    <associate|field subfield|<tuple|4.49|121>>
+    <associate|field subfield is a field|<tuple|4.50|121>>
     <associate|field x=y\<less\>=\<gtr\>x.z=y.z if
-    z\<less\>\<gtr\>0|<tuple|4.48|120>>
-    <associate|field x^-1=y^-1=\<gtr\>x=y|<tuple|4.46|120>>
+    z\<less\>\<gtr\>0|<tuple|4.48|121>>
+    <associate|field x^-1=y^-1=\<gtr\>x=y|<tuple|4.46|121>>
     <associate|finite ordered sets have a maximum and
     minimum|<tuple|6.44|162>>
     <associate|finite set|<tuple|6.19|154>>
@@ -8366,16 +8413,15 @@
     <associate|group cancelation|<tuple|4.6|110>>
     <associate|group example bijections|<tuple|4.16|112>>
     <associate|group example set of functions|<tuple|4.4|109>>
-    <associate|group faithful, transitive action (1)|<tuple|4.28|115>>
-    <associate|group faithful, transitive action (2)|<tuple|4.29|115>>
+    <associate|group faithful, transitive action (1)|<tuple|4.28|116>>
+    <associate|group faithful, transitive action (2)|<tuple|4.29|116>>
     <associate|group group|<tuple|4.5|110>>
     <associate|group group inheritance|<tuple|4.15|111>>
     <associate|group group inverse of inverse|<tuple|4.9|110>>
     <associate|group homeomorphism|<tuple|4.17|112>>
-    <associate|group homeomorphism composition|<tuple|4.23|113>>
+    <associate|group homeomorphism composition|<tuple|4.23|114>>
     <associate|group homeomorphism properties|<tuple|4.20|112>>
-    <associate|group homeomorphism to a sub group|<tuple|4.19|?>>
-    <associate|group homeomorphism to asub group|<tuple|4.37|?>>
+    <associate|group homeomorphism to a sub group|<tuple|4.19|112>>
     <associate|group inverse element|<tuple|4.7|110>>
     <associate|group inverse of x.y|<tuple|4.8|110>>
     <associate|group isomorphism|<tuple|4.21|113>>
@@ -8383,12 +8429,11 @@
     <associate|group left (right action)|<tuple|4.25|115>>
     <associate|group semi-group inheritance|<tuple|4.14|111>>
     <associate|group semigroup properties|<tuple|4.3|109>>
-    <associate|group sub sub group|<tuple|4.13|?>>
     <associate|group sub-group|<tuple|4.13|111>>
     <associate|infinite condition (1)|<tuple|6.34|158>>
     <associate|infinite set|<tuple|6.21|155>>
     <associate|inverse of a field isomorphism is a field
-    isomorphism|<tuple|4.55|121>>
+    isomorphism|<tuple|4.56|122>>
     <associate|iteration final|<tuple|5.84|148>>
     <associate|mapping of N to a finite set (1)|<tuple|6.45|162>>
     <associate|mapping of N to a finite set (2)|<tuple|6.46|163>>
@@ -8490,21 +8535,21 @@
     <associate|ring|<tuple|4.30|116>>
     <associate|ring absorbing element|<tuple|4.35|117>>
     <associate|ring homeomorphism|<tuple|4.36|117>>
-    <associate|ring homeomorphism composition|<tuple|4.42|118>>
-    <associate|ring homeomorphism is group homeomorphism|<tuple|4.38|117>>
-    <associate|ring homeomorphism to a sub ring|<tuple|4.39|?>>
-    <associate|ring integral domain|<tuple|4.32|116>>
-    <associate|ring isomorphism|<tuple|4.41|118>>
-    <associate|ring ring homeomorphism and neutral element|<tuple|4.40|117>>
-    <associate|ring subring is a ring|<tuple|4.34|116>>
-    <associate|ring zero divisor|<tuple|4.31|116>>
+    <associate|ring homeomorphism composition|<tuple|4.42|119>>
+    <associate|ring homeomorphism is group homeomorphism|<tuple|4.38|118>>
+    <associate|ring homeomorphism to a sub ring|<tuple|4.55|118>>
+    <associate|ring integral domain|<tuple|4.32|117>>
+    <associate|ring isomorphism|<tuple|4.41|119>>
+    <associate|ring ring homeomorphism and neutral element|<tuple|4.40|118>>
+    <associate|ring subring is a ring|<tuple|4.34|117>>
+    <associate|ring zero divisor|<tuple|4.31|117>>
     <associate|semi-group|<tuple|4.2|109>>
     <associate|set containing a denumerable set is infinite|<tuple|6.27|156>>
     <associate|set is infinitie if it contains a infinite
     subset|<tuple|6.29|156>>
     <associate|set of finite family is finite|<tuple|6.42|162>>
     <associate|sub-semi-group|<tuple|4.12|111>>
-    <associate|subring|<tuple|4.33|116>>
+    <associate|subring|<tuple|4.33|117>>
     <associate|subset of finite sets|<tuple|6.40|161>>
     <associate|surjection f:A-\<gtr\>B if A is finite then B is
     finite|<tuple|6.41|161>>
