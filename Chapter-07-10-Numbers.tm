@@ -3449,35 +3449,6 @@
     </enumerate>
   </proof>
 
-  <\corollary>
-    <label|rational q\<less\>q+1 and q-1\<less\>q>If <math|q\<in\>\<bbb-Q\>>
-    then\ 
-
-    <\enumerate>
-      <item><math|q\<less\>q+1>
-
-      <item><math|q+<around*|(|-1|)>=q-1>\<less\>q
-    </enumerate>
-  </corollary>
-
-  <\proof>
-    \ 
-
-    <\enumerate>
-      <item>Using [theorem: <reference|rational 0\<less\>1>] we have that
-      <math|0\<less\>1> so that by [theorem: <reference|rational
-      q\<less\>=r=\<gtr\>q+s\<less\>=r+s>] <math|q=0+q\<less\>1+q=q+1>
-      proving that <math|q\<less\>q+1>
-
-      <item>As <math|0\<less\>1> we have by [theorem: <reference|rational
-      q\<less\>=r =\<gtr\> -r\<less\>=-q>] we have that <math|-1>\<less\>0 so
-      that by [theorem: <reference|rational
-      q\<less\>=r=\<gtr\>q+s\<less\>=r+s>]
-      <math|q-1=<around*|(|-1|)>+q\<less\>0+q=q> proving that
-      <math|q-1\<less\>q>.
-    </enumerate>
-  </proof>
-
   <\theorem>
     <label|rational totally ordered><math|<around*|\<langle\>|\<bbb-Q\>,\<leqslant\>|\<rangle\>>>
     is a totally ordered set.
@@ -3614,6 +3585,35 @@
     <math|1=1\<cdot\>1> and <math|0\<less\>1> [see example:
     <reference|integers 0\<less\>1 and 0\<less\>2>] it follows from [lemma:
     <reference|rational 0\<less\>q=\<gtr\>q=n/m>] that <math|0\<less\>1>.\ 
+  </proof>
+
+  <\corollary>
+    <label|rational q\<less\>q+1 and q-1\<less\>q>If <math|q\<in\>\<bbb-Q\>>
+    then\ 
+
+    <\enumerate>
+      <item><math|q\<less\>q+1>
+
+      <item><math|q+<around*|(|-1|)>=q-1>\<less\>q
+    </enumerate>
+  </corollary>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Using [theorem: <reference|rational 0\<less\>1>] we have that
+      <math|0\<less\>1> so that by [theorem: <reference|rational
+      q\<less\>=r=\<gtr\>q+s\<less\>=r+s>] <math|q=0+q\<less\>1+q=q+1>
+      proving that <math|q\<less\>q+1>
+
+      <item>As <math|0\<less\>1> we have by [theorem: <reference|rational
+      q\<less\>=r =\<gtr\> -r\<less\>=-q>] we have that <math|-1>\<less\>0 so
+      that by [theorem: <reference|rational
+      q\<less\>=r=\<gtr\>q+s\<less\>=r+s>]
+      <math|q-1=<around*|(|-1|)>+q\<less\>0+q=q> proving that
+      <math|q-1\<less\>q>.
+    </enumerate>
   </proof>
 
   <\theorem>
@@ -3905,7 +3905,7 @@
   Next we embed the set of integer numbers in the set of rational numbers.
 
   <\definition>
-    <label|rational embedded integers><index|<math|\<bbb-Z\><rsub|\<bbb-Q\>>>><math|\<bbb-Z\><rsub|\<bbb-Q\>>=<around*|{|<frac|z|1>\|z\<in\>\<bbb-Z\>|}>>
+    <label|rational embedded integers><index|<math|\<bbb-Z\><rsub|\<bbb-Q\>>>><math|\<bbb-Z\><rsub|\<bbb-Q\>>=<around*|{|<frac|z|1>\|z\<in\>\<bbb-Z\>|}>\<subseteq\>\<bbb-Q\>>
   </definition>
 
   <\theorem>
@@ -4027,6 +4027,49 @@
     <\equation*>
       i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:<around*|\<langle\>|\<bbb-Z\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-Q\>>,+,\<cdot\>|\<rangle\>><text|
       is a ring isomorphism>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|rational alternative definition><math|\<bbb-Q\>=<around*|{|x\<cdot\>y<rsup|-1>\|x\<in\>\<bbb-Z\><rsub|\<bbb-Q\>>\<wedge\>y\<in\>\<bbb-Z\><rsub|\<bbb-Q\>>\\<around*|{|0|}>|}>>
+  </theorem>
+
+  <\proof>
+    If <math|q\<in\>\<bbb-Q\>> there exists <math|x<rprime|'>\<in\>\<bbb-Z\>>
+    and <math|y<rprime|'>\<in\>\<bbb-Z\><rsup|\<ast\>>=\<bbb-Z\>\\<around*|{|0|}>>
+    such that <math|q=<frac|x<rprime|'>|y<rprime|'>>>. Define now
+    <math|x=<frac|x<rprime|'>|1>> and <math|<frac|y<rprime|'>|1>> then by the
+    previous theoremg \ [theorem: <reference|rational sub-ring>] we have that
+    <math|x\<in\>\<bbb-Z\><rsub|\<bbb-Q\>>> and
+    <math|y\<in\>\<bbb-Z\><rsub|\<bbb-Q\>>\\<around*|{|0|}>>. Further
+
+    <\equation*>
+      q=<frac|x<rprime|'>|y<rprime|'>>=<frac|x<rprime|'>|1>\<cdot\><frac|1|y<rprime|'>>=<frac|x<rprime|'>|1>\<cdot\><around*|(|<frac|y<rprime|'>|1>|)><rsup|-1>=x\<cdot\>y<rsup|-1>\<in\><around*|{|x\<cdot\>y<rsup|-1>\|x\<in\>\<bbb-Z\><rsub|\<bbb-Q\>>\<wedge\>y\<in\>\<bbb-Z\><rsub|\<bbb-Q\>>\\<around*|{|0|}>|}>
+    </equation*>
+
+    proving\ 
+
+    <\equation>
+      <label|eq 8.15.040>\<bbb-Q\>\<subseteq\><around*|{|x\<cdot\>y<rsup|-1>\|x\<in\>\<bbb-Z\><rsub|\<bbb-Q\>>\<wedge\>y\<in\>\<bbb-Z\><rsub|\<bbb-Q\>>\\<around*|{|0|}>|}>
+    </equation>
+
+    If <math|q\<in\><around*|{|x\<cdot\>y<rsup|-1>\|x\<in\>\<bbb-Z\><rsub|\<bbb-Q\>>\<wedge\>y\<in\>\<bbb-Z\><rsub|\<bbb-Q\>>\\<around*|{|0|}>|}>>
+    there exists a <math|x\<in\>\<bbb-Z\><rsub|\<bbb-Q\>>> and
+    <math|y\<in\>\<bbb-Z\><rsub|\<bbb-Q\>>\\<around*|{|0|}><rsub|>> such that
+    <math|q=x\<cdot\>y<rsup|-1>>. Using \ [theorem: <reference|rational
+    sub-ring>] again there exists <math|x<rprime|'>\<in\>\<bbb-Z\>> and
+    <math|y<rprime|'>\<in\>\<bbb-Z\>\\<around*|{|0|}>> such that
+    <math|x=<frac|x<rprime|'>|1>> and <math|y=<frac|y<rprime|'>|1>> so that\ 
+
+    <\equation*>
+      q=x\<cdot\>y<rsup|-1>=<frac|x<rprime|'>|1>\<cdot\><around*|(|<frac|1|y<rprime|'>>|)><rsup|-1>=<frac|x<rprime|'>|1>\<cdot\><frac|1|y<rprime|'>>=<frac|x<rprime|'>|y<rprime|'>>\<in\>\<bbb-Q\>
+    </equation*>
+
+    proving that <math|q\<in\><around*|{|x\<cdot\>y<rsup|-1>\|x\<in\>\<bbb-Z\><rsub|\<bbb-Q\>>\<wedge\>y\<in\>\<bbb-Z\><rsub|\<bbb-Q\>>\\<around*|{|0|}>|}>\<subseteq\>\<bbb-Q\>>
+    which combined with [eq: <reference|eq 8.15.040>] results in\ 
+
+    <\equation*>
+      \<bbb-Q\>=<around*|{|x\<cdot\>y<rsup|-1>\|x\<in\>\<bbb-Z\><rsub|\<bbb-Q\>>\<wedge\>y\<in\>\<bbb-Z\><rsub|\<bbb-Q\>>\\<around*|{|0|}>|}>
     </equation*>
   </proof>
 
@@ -7811,8 +7854,8 @@
   multiplication with a inverse element.
 
   <\notation>
-    If <math|x,y\<in\>\<bbb-R\>> <math|x\<neq\>0> then we use the following
-    shorthand notation\ 
+    <label|real notation for division>If <math|x,y\<in\>\<bbb-R\>>
+    <math|x\<neq\>0> then we use the following shorthand notation\ 
 
     <\enumerate>
       <item><math|x<rsup|-1>> is noted as <math|1/x>
@@ -8540,6 +8583,40 @@
     </enumerate>
   </proof>
 
+  <\corollary>
+    <label|real 0\<less\>1>For <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>>
+    we have that <math|0\<less\>1>
+  </corollary>
+
+  <\proof>
+    Note that <math|1=\<alpha\><rsub|1>=<around*|{|q\<in\>\<bbb-Q\>\|q\<less\>1|}>>
+    and <math|1=<around*|{|q\<in\>\<bbb-Q\>\|q\<less\>1|}>>. So if
+    <math|q\<in\>\<alpha\><rsub|1>> we have in
+    <math|<around*|\<langle\>|\<bbb-Q\>,\<leqslant\>|\<rangle\>>> that
+    <math|q\<less\>0\<less\>1> proving that <math|q\<in\>\<alpha\><rsub|1>>.
+    Hence we have that\ 
+
+    <\equation*>
+      \<alpha\><rsub|0>\<subseteq\>\<alpha\><rsub|1>
+    </equation*>
+
+    Now using [see theorem: <reference|rational densitiy>] there exist a
+    <math|q\<in\>\<bbb-Q\>> such that <math|0\<less\>q\<less\>1> hence
+    <math|q\<in\>\<alpha\><rsub|1>> but <math|q\<nin\>\<alpha\><rsub|1>>
+    proving that\ 
+
+    <\equation*>
+      \<alpha\><rsub|0>\<subset\>\<alpha\><rsub|1>
+    </equation*>
+
+    whcih by the previous theorem [theorem: <reference|real order relation
+    eauivalences>] proves that\ 
+
+    <\equation*>
+      0\<less\>1
+    </equation*>
+  </proof>
+
   <\theorem>
     <label|real totally ordered><math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>>
     is a totally ordered set
@@ -9001,6 +9078,33 @@
       </enumerate>
     </enumerate>
   </proof>
+
+  <\corollary>
+    <label|real a\<less\>a+1 and a-1\<less\>a>Let
+    <math|\<alpha\>\<in\>\<bbb-R\>>
+
+    <\enumerate>
+      <item><math|\<forall\>\<alpha\>\<in\>\<bbb-R\><text| we have
+      >\<alpha\>\<less\>\<alpha\>+1>
+
+      <item><math|\<alpha\>-1\<less\>\<alpha\>>
+    </enumerate>
+
+    <\proof>
+      \ 
+
+      <\enumerate>
+        <item>As <math|0\<less\>1> [see corollary: <reference|real
+        0\<less\>1>[ we have by [theorem: <reference|real order properties>]
+        that <math|\<alpha\>=0+\<alpha\>\<less\>1+\<alpha\>=\<alpha\>+1>
+
+        <item>As <math|0\<less\>1> we have by theorem: <reference|real order
+        properties>] that <math|-1\<less\>0> hence suing theorem:
+        <reference|real order properties>] again we have
+        <math|\<alpha\>-1=<around*|(|-1|)>+\<alpha\>\<less\>0+\<alpha\>=\<alpha\>>.
+      </enumerate>
+    </proof>
+  </corollary>
 
   <\theorem>
     <label|real 0\<less\>=a,b and a+b=0 then a=0=b>If
@@ -9604,10 +9708,31 @@
   <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Q\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>>>
   defined by <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|r|)>=\<alpha\><rsub|r>>.
   We show now that there exist also embeddings of <math|\<bbb-N\><rsub|0>>
-  and <math|\<bbb-Z\>> in <math|\<bbb-R\>>.
+  and <math|\<bbb-Z\>> in <math|\<bbb-R\>>.\ 
 
   <\definition>
-    <label|real ZQ><index|<math|\<bbb-Z\><rsub|\<bbb-R\>>>><math|\<bbb-Z\><rsub|\<bbb-R\>>=<around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>|)><around*|(|\<bbb-Z\>|)>=<around*|{|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>><around*|(|z|)>|)>\|z\<in\>\<bbb-Z\>|}>>
+    <label|real ZQ><index|<math|\<bbb-Z\><rsub|\<bbb-R\>>>><math|\<bbb-Z\><rsub|\<bbb-R\>>=<around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>|)><around*|(|\<bbb-Z\>|)>>
+    where\ 
+
+    <\equation*>
+      i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-Q\>>\<subseteq\>\<bbb-Q\><text|
+      is defined by <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>><around*|(|z|)>=<frac|z|1><rsub|>>
+      [theorem: <reference|rational sub-ring>]>\ 
+    </equation*>
+
+    and
+
+    <\equation*>
+      i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:\<bbb-Q\>\<rightarrow\>\<bbb-Q\><rsub|\<bbb-R\>><text|
+      is defined by <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|r|)>=\<alpha\><rsub|r><text|
+      [theorem: <reference|real embedding of Q and order>]>>>
+    </equation*>
+
+    so that
+
+    <\equation*>
+      \<bbb-Z\><rsub|\<bbb-R\>>\<subseteq\>\<bbb-Q\><rsub|\<bbb-R\>>
+    </equation*>
   </definition>
 
   <\theorem>
@@ -9783,6 +9908,31 @@
 
   <\definition>
     <label|real NR><index|<math|\<bbb-N\><rsub|0,\<bbb-R\>>>><math|\<bbb-N\><rsub|0,\<bbb-R\>>=<around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>|)><around*|(|\<bbb-N\><rsub|0>|)>>
+    where\ 
+
+    <\equation*>
+      i<rsub|\<bbb-N\><rsub|0>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\><rsup|+><rsub|0>\<subseteq\>\<bbb-Z\><text|
+      is defined by >i<rsub|\<bbb-N\><rsub|0>><around*|(|z|)>=\<sim\><around*|[|<around*|(|z,0|)>|]><text|
+      [theorem: <reference|integers properties (1)>] >and
+    </equation*>
+
+    <\equation*>
+      i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>><text|
+      [theorem: <reference|real ZR properties>]>
+    </equation*>
+
+    so that
+
+    <\equation*>
+      \<bbb-N\><rsub|0,\<bbb-R\>>\<subseteq\>\<bbb-Z\><rsub|\<bbb-R\>>
+    </equation*>
+  </definition>
+
+  In many cases we want to exclude <math|0> from the embedded real numbers,
+  hene the following definition.
+
+  <\definition>
+    <index|<math|\<bbb-N\><rsub|\<bbb-R\>>>><math|\<bbb-N\><rsub|\<bbb-R\>>=\<bbb-N\><rsub|0,\<bbb-R\>>\\<around*|{|0|}>>
   </definition>
 
   <\theorem>
@@ -9808,6 +9958,9 @@
       is a group isomorphism\ 
 
       <item><math|\<bbb-N\><rsub|0,\<bbb-R\>>> is denumerable
+
+      <item><math|<around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<leqslant\>|\<rangle\>>>
+      is well ordered
     </enumerate>
   </theorem>
 
@@ -9930,11 +10083,531 @@
       </equation*>
 
       <item>Using (3) we have that <math|\<bbb-N\><rsub|0>\<approx\>\<bbb-N\><rsub|0,\<bbb-R\>>>
-      proving that <math|\<bbb-N\><rsub|0,\<bbb-R\>>> is denumerable
+      proving that <math|\<bbb-N\><rsub|0,\<bbb-R\>>> is denumerable.
+
+      <item>By [theorem: <reference|natural numbers are well ordered>]
+      <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>>
+      is well ordered, futher by <math|<around*|(|3|)>>
+      <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<leqslant\>|\<rangle\>>>
+      is a order isomorphism, hence by [theorem: <reference|order well
+      ordered and order isomorphism>] it follows that\ 
+
+      <\equation*>
+        <around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<leqslant\>|\<rangle\>><text|
+        is well ordered>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  For the relation between <math|\<bbb-N\><rsub|0,\<bbb-R\>>>,
+  <math|\<bbb-Z\><rsub|\<bbb-R\>>>, <math|\<bbb-Q\><rsub|\<bbb-R\>>> and
+  <math|\<bbb-R\>> we have\ 
+
+  <\theorem>
+    <label|real natural numbers, integers and rational numbers>We have the
+    following properties for <math|\<bbb-N\><rsub|0,\<bbb-R\>>>,
+    <math|\<bbb-Z\><rsub|\<bbb-R\>>>, <math|\<bbb-Q\><rsub|\<bbb-R\>>> and
+    <math|\<bbb-R\>>
+
+    <\enumerate>
+      <item><math|\<bbb-N\><rsub|0,\<bbb-R\>>\<subseteq\>\<bbb-Z\><rsub|\<bbb-R\>>\<subseteq\>\<bbb-Q\><rsub|\<bbb-R\>>\<subseteq\>\<bbb-R\>>
+
+      <item><math|\<bbb-N\><rsub|0,\<bbb-R\>>=<around*|{|z\<in\>\<bbb-Z\><rsub|\<bbb-R\>>\|0\<leqslant\>z|}>>
+
+      <item><math|-\<bbb-N\><rsub|0,\<bbb-R\>>=<around*|{|z\<in\>\<bbb-Z\><rsub|\<bbb-R\>>\|z\<leqslant\>0|}>>
+      where <math|-\<bbb-N\><rsub|0,\<bbb-R\>>=<around*|{|-n\|n\<in\>\<bbb-N\><rsub|\<bbb-R\>>|}>>
+
+      <item><math|\<bbb-Z\><rsub|\<bbb-R\>>=\<bbb-N\><rsub|0,\<bbb-R\>><big|cup><around*|(|-\<bbb-N\><rsub|0,\<bbb-R\>>|)>>
+      and <math|\<bbb-N\><rsub|0,\<bbb-R\>><big|cap><around*|(|-\<bbb-N\><rsub|0,\<bbb-R\>>|)>=<around*|{|0|}>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Using [definition: <reference|real QR>] we have that
+      <math|\<bbb-Q\><rsub|\<bbb-R\>>\<subseteq\>\<bbb-R\>>, using
+      [definition: <reference|real ZQ>] we have that
+      <math|\<bbb-Z\><rsub|\<bbb-R\>>\<subseteq\>\<bbb-Q\><rsub|\<bbb-R\>>>
+      and finally by [definition: <reference|real NR>] it follows that
+      <math|\<bbb-N\><rsub|0,\<bbb-R\>>\<subseteq\>\<bbb-Z\><rsub|\<bbb-R\>>>
+
+      <item>Using [theorem: <reference|real NR properties> (3)] we have that\ 
+
+      <\equation>
+        <label|eq 9.96.040>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<leqslant\>|\<rangle\>><text|
+        is a order isomorphism>
+      </equation>
+
+      and\ 
+
+      <\equation>
+        <label|eq 9.97.040>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,+|\<rangle\>><text|
+        is a group isomorphism>
+      </equation>
+
+      If <math|z\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>\<subseteq\>\<bbb-Z\><rsub|\<bbb-R\>>>
+      [see (1)] then by [eq: <reference|eq 9.96.040>] there exist a
+      <math|n\<in\>\<bbb-N\><rsub|0>> such that
+      <math|z=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>>.
+      Now by [theorem: <reference|natural numbers 0\<less\>=n>] we have that
+      <math|0\<leqslant\>n> so that by [eq: <reference|eq 9.96.040>] we have
+      that
+
+      <\equation*>
+        0\<equallim\><rsub|<text|[eq: <reference|eq
+        9.97.040>]>>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|0|)>\<leqslant\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>=z
+      </equation*>
+
+      So we have that\ 
+
+      <\equation>
+        <label|eq 9.98.040>\<bbb-N\><rsub|0,\<bbb-R\>>\<subseteq\><around*|{|z\<in\><rsub|\<bbb-R\>>\|0\<leqslant\>z|}>
+      </equation>
+
+      For the opposite inclusion. Using [theorem: <reference|real ZR
+      properties>] we have that\ 
+
+      <\equation>
+        <label|eq 9.99.040>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,\<leqslant\>|\<rangle\>><text|
+        is a order isomorphism>
+      </equation>
+
+      and
+
+      <\equation>
+        <label|eq 9.100.040>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,+|\<rangle\>><text|
+        is a group isomorphism>
+      </equation>
+
+      Hence if <math|z\<in\><around*|{|z\<in\>\<bbb-Z\><rsub|\<bbb-R\>>\|0\<leqslant\>z|}>>
+      then by [eq: <reference|eq 9.99.040>] there exists a
+      <math|z<rprime|'>\<in\>\<bbb-Z\>> such that
+      <math|z=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|z<rprime|'>|)>>
+      Assume that <math|z<rprime|'>\<less\>0> then by [eqs: <reference|eq
+      9.99.040>, <reference|eq 9.100.040>] we have that
+      <math|z=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|z<rprime|'>|)>\<less\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|0|)>=0>
+      contradicting <math|0\<leqslant\>\<bbb-Z\>>, so we must have that
+      <math|0\<leqslant\>z<rprime|'>>, which by <reference|integers
+      {x\|-\<less\>=x}> proves that <math|z<rprime|'>\<in\>\<bbb-Z\><rsup|+><rsub|0>>.
+      Using [theorems: <reference|integers properties (1)>] we have that
+      <math|\<exists\>n\<in\>\<bbb-N\><rsub|0>> such that
+      <math|z<rprime|'>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>><around*|(|n|)>>.
+      Hence
+
+      <\equation*>
+        z=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>><around*|(|n|)>|)>=<around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>|)><around*|(|n|)>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)><rsub|>\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>
+      </equation*>
+
+      proving that <math|<around*|{|z\<in\>\<bbb-Z\><rsub|\<bbb-R\>>\|0\<leqslant\>z|}>\<subseteq\>\<bbb-N\><rsub|0,Rr>>.
+      Combining this with [eq: <reference|eq 9.98.040>] proves that\ 
+
+      <\equation*>
+        \<bbb-N\><rsub|0,\<bbb-R\>>=<around*|{|z\<in\>\<bbb-Z\><rsub|\<bbb-R\>>\|0\<leqslant\>z|}>
+      </equation*>
+
+      <item>We have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<in\><around*|{|z\<in\>\<bbb-Z\>\|z\<leqslant\>0|}>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>\<bbb-Z\>\<wedge\>x\<leqslant\>0>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<text|[theorem:
+        <reference|real order properties>]>>>|<cell|x\<in\>\<bbb-Z\>\<wedge\>0\<leqslant\>-x>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|-<around*|(|-x|)>\<in\>\<bbb-Z\>\<wedge\>0\<leqslant\>-x>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|-x\<in\><around*|{|z\<in\>\<bbb-Z\>\|0\<leqslant\>z|}>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<around*|(|2|)>>>|<cell|-x\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|-\<bbb-N\><rsub|0,\<bbb-R\>>>>>>
+      </eqnarray*>
+
+      <item>As <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>>
+      is totaly ordered [see theorem: <reference|real totally ordered>] and
+      <math|0\<in\>\<bbb-Z\><rsub|\<bbb-R\>>> [as
+      <math|<around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,+|\<rangle\>>> is a
+      sub group of <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>>] we
+      have that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<in\>\<bbb-Z\><rsub|\<bbb-R\>>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>\<bbb-Z\><rsub|\<bbb-R\>>\<wedge\><around*|(|0\<leqslant\>x\<vee\>x\<leqslant\>0|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|x\<in\>\<bbb-Z\><rsub|\<bbb-R\>>\<wedge\>0\<leqslant\>x|)>\<vee\><around*|(|x\<in\>\<bbb-Z\><rsub|\<bbb-R\>>\<wedge\>x\<leqslant\>0|)>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<around*|(|2|)><text|
+        and ><around*|{|3|}>>>|<cell|x\<in\>\<bbb-N\><rsub|\<bbb-R\>>\<vee\>x\<in\><around*|(|-\<bbb-N\><rsub|\<bbb-R\>>|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>\<bbb-N\><rsub|\<bbb-R\>><big|cup><around*|(|-\<bbb-N\><rsub|\<bbb-R\>>|)>>>>>
+      </eqnarray*>
+
+      proving that\ 
+
+      <\equation*>
+        \<bbb-Z\><rsub|\<bbb-R\>>=\<bbb-N\><rsub|\<bbb-R\>><big|cup><around*|(|-\<bbb-N\><rsub|\<bbb-R\>>|)>
+      </equation*>
+
+      If <math|z\<in\>\<bbb-N\><rsub|\<bbb-R\>><big|cap><around*|(|-\<bbb-N\><rsub|\<bbb-R\>>|)>\<equallim\><rsub|<around*|(|2|)><text|
+      and ><around*|(|3|)>><around*|{|z\<in\>\<bbb-Z\>\|0\<leqslant\>z|}><big|cap><around*|{|z\<in\>\<bbb-Z\>\|z\<leqslant\>0|}>>
+      so that <math|0\<leqslant\>z\<wedge\>z\<leqslant\>0> so that <math|z=0>
+      proving that\ 
+
+      <\equation*>
+        \<bbb-N\><rsub|\<bbb-R\>><big|cap><around*|(|-\<bbb-N\><rsub|\<bbb-R\>>|)>=<around*|{|0|}>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|real rational numbers specification><math|\<bbb-Q\><rsub|\<bbb-R\>>=<around*|{|x/y\|x\<in\>\<bbb-Z\><rsub|\<bbb-R\>>\<wedge\>y\<in\>\<bbb-Z\><rsub|\<bbb-R\>>\\<around*|{|0|}>|}>>
+    where <math|q/r> is a shorthand for <math|q\<cdot\>r<rsup|-1>> [see
+    notation: <reference|real notation for division>]
+  </theorem>
+
+  <\proof>
+    Using [theorems: <reference|rational sub-ring>, <reference|real field
+    embedding Q>, <reference|real ZR properties>] we have the following\ 
+
+    <\equation>
+      <label|eq 9.101.041>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:<around*|\<langle\>|\<bbb-Z\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-Q\>>,+,\<cdot\>|\<rangle\>><text|
+      is a field isomorphism>
+    </equation>
+
+    <\equation>
+      <label|eq 9.102.041>i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Q\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-R\>>,+,\<cdot\>|\<rangle\>><text|
+      is a field isomorphism>
+    </equation>
+
+    <\equation>
+      <label|eq 9.103.041>i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:<around*|\<langle\>|\<bbb-Z\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,+,\<cdot\>|\<rangle\>><text|
+      is a ring isomorphism>
+    </equation>
+
+    Let <math|q\<in\>\<bbb-Q\><rsub|\<bbb-R\>>> then by [eq: <reference|eq
+    9.102.041>] there exist a <math|q<rprime|'>\<in\>\<bbb-Q\>> such that
+    <math|q=i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|q<rprime|'>|)>>.
+    As <math|q<rprime|'>\<in\>\<bbb-Q\>> we have by [theorem:
+    <reference|rational alternative definition>] that there exists
+    <math|x\<in\>\<bbb-Z\><rsub|\<bbb-Q\>><infix-and>y\<in\>\<bbb-Z\><rsub|\<bbb-Q\>>\\<around*|{|0|}>>
+    such that <math|q<rprime|'>=x\<cdot\>y<rsup|-1>>, hence we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|q>|<cell|=>|<cell|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|q<rprime|'>|)>>>|<row|<cell|>|<cell|=>|<cell|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|x\<cdot\>y<rsup|-1>|)>>>|<row|<cell|>|<cell|=>|<cell|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|x|)>\<cdot\>i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|y<rsup|-1>|)>>>|<row|<cell|>|<cell|=>|<cell|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|x|)>\<cdot\><around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|y|)>|)><rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|x|)>/i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|y|)><eq-number><label|eq
+      9.104.041>>>>>
+    </eqnarray*>
+
+    As <math|x\<in\>\<bbb-Z\><rsub|\<bbb-Q\>>> and
+    <math|y\<in\>\<bbb-Z\><rsub|\<bbb-Q\>>\\<around*|{|0|}>> there exists by
+    [eq: <reference|eq 9.101.040>] a <math|x<rprime|'>\<in\>\<bbb-Z\>> and
+    <math|y<rprime|'>\<in\>\<bbb-Z\>> such that
+    <math|x=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>><around*|(|x<rprime|'>|)>>
+    and <math|y=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>><around*|(|y<rprime|'>|)>>.
+    So by [eq: <reference|eq 9.103.041>] we have that
+    <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|x|)>=<around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>|)><around*|(|x<rprime|'>|)>\<in\>\<bbb-Z\><rsub|R>>
+    and <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|y|)>=<around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>|)><around*|(|y<rprime|'>|)>\<in\>\<bbb-Z\><rsub|\<bbb-R\>>\\<around*|{|0|}>>.
+    Combining this with [eq: <reference|eq 9.104.041>] we have that
+    <math|q\<in\><around*|{|x/y\|x\<in\>\<bbb-Z\><rsub|\<bbb-R\>>\<wedge\>y\<in\>\<bbb-Z\><rsub|\<bbb-R\>>\\<around*|{|0|}>|}>>
+    proving that\ 
+
+    <\equation>
+      <label|eq 9.105.041>\<bbb-Q\><rsub|\<bbb-R\>>\<subseteq\><around*|{|x/y\|x\<in\>\<bbb-Z\><rsub|\<bbb-R\>>\<wedge\>y\<in\>\<bbb-Z\><rsub|\<bbb-R\>>\\<around*|{|0|}>|}>
+    </equation>
+
+    If <math|q\<in\><around*|{|x/y\|x\<in\>\<bbb-Z\><rsub|\<bbb-R\>>\<wedge\>y\<in\>\<bbb-Z\><rsub|\<bbb-R\>>\\<around*|{|0|}>|}>>
+    there exists <math|x\<in\>\<bbb-Z\><rsub|\<bbb-R\>>> and
+    <math|y\<in\>\<bbb-Z\><rsub|\<bbb-R\>>\\<around*|{|0|}>> such that
+    <math|q=x/y>. Using [eq: <reference|eq 9.103.041>] there exists
+    <math|x<rprime|'>\<in\>\<bbb-Z\>> and
+    <math|z<rprime|'>\<in\>\<bbb-Z\>\\<around*|{|0|}>> such that
+    <math|x=i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>><around*|(|x<rprime|'>|)>|)>>
+    and <math|y=i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>><around*|(|y<rprime|'>|)>|)>>.
+    From [eq: <reference|eq 9.101.041>] it follows that
+    <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>><around*|(|x<rprime|'>|)>\<in\>\<bbb-Z\><rsub|\<bbb-Q\>>>
+    and <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>><around*|(|y<rprime|'>|)>\<in\>\<bbb-Z\><rsub|\<bbb-Q\>>\\<around*|{|0|}>>
+    which by [theorem: <reference|rational alternative definition>] gives
+    <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>><around*|(|x<rprime|'>|)>\<cdot\><around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>><around*|(|y<rprime|'>|)>|)><rsup|-1>\<in\>\<bbb-Q\>>.
+    So by [eq: <reference|eq 9.103.041>]\ 
+
+    <\equation>
+      <label|eq 9.106.041>i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>><around*|(|x<rprime|'>|)>\<cdot\><around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>><around*|(|y<rprime|'>|)>|)><rsup|-1>|)>\<in\>\<bbb-Q\><rsub|\<bbb-R\>>
+    </equation>
+
+    Further\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>><around*|(|x<rprime|'>|)>\<cdot\><around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>><around*|(|y<rprime|'>|)>|)><rsup|-1>|)>>|<cell|=>|<cell|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>><around*|(|x<rprime|'>|)>|)>\<cdot\>i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|<around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>><around*|(|y<rprime|'>|)>|)><rsup|-1>|)>>>|<row|<cell|>|<cell|=>|<cell|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>><around*|(|x<rprime|'>|)>|)>\<cdot\><around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>*<around*|(|y<rprime|'>|)>|)>|)><rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|x\<cdot\>y<rsup|-1>>>|<row|<cell|>|<cell|=q>|<cell|>>>>
+    </eqnarray*>
+
+    proving by [eq: <reference|eq 9.106.041>] that
+    <math|q\<in\>\<bbb-Q\><rsub|\<bbb-R\>>>. Hence
+    <math|<around*|{|x/y\|x\<in\>\<bbb-Z\><rsub|\<bbb-R\>>\<wedge\>y\<in\>\<bbb-Z\><rsub|\<bbb-R\>>\\<around*|{|0|}>|}>\<subseteq\>\<bbb-Q\><rsub|\<bbb-R\>>>
+    which combined with [eq: <reference|eq 9.105.041>] proves finally that\ 
+
+    <\equation*>
+      \<bbb-Q\><rsub|\<bbb-R\>>=<around*|{|x/y\|x\<in\>\<bbb-Z\><rsub|\<bbb-R\>>\<wedge\>y\<in\>\<bbb-Z\><rsub|\<bbb-R\>>\\<around*|{|0|}>|}>
+    </equation*>
+  </proof>
+
+  <\notation>
+    The above theorem allows us to write\ 
+  </notation>
+
+  <\theorem>
+    <label|real x\<less\>y=\<gtr\>x+1\<less\>=y>Let
+    <math|x,y\<in\>\<bbb-Z\><rsub|\<bbb-R\>>> with <math|x\<less\>y> then
+
+    <\enumerate>
+      <item><math|x+1\<leqslant\>y>
+
+      <item><math|x\<leqslant\>y-1>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    By [theorem: <reference|real NR properties>] that
+
+    <\equation>
+      <label|eq 9.101.040>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<leqslant\>|\<rangle\>><text|
+      is a order isomorphism>
+    </equation>
+
+    <\equation>
+      <label|eq 9.102.040>i<rsub|\<bbb-N\><rsub|0>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<cdot\>|\<rangle\>><text|
+      is a group homeomorphism>
+    </equation>
+
+    Let <math|x\<in\>\<bbb-Z\>> with <math|0\<less\>x> then by [theorem:
+    <reference|real natural numbers, integers and rational numbers>] we have
+    that <math|x\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> so that by [eq:
+    <reference|eq 9.101.040>] <math|\<exists\>n\<in\>\<bbb-N\><rsub|0>> such
+    that <math|x=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>>.
+    Using [theorem: <reference|order isomorphism strictly>] we have then that
+    <math|0\<less\>n> so that by [theorem: <reference|natural numbers
+    n\<less\>m=\<gtr\>s(n)\<less\>=m>] we have that <math|1\<leqslant\>n>,
+    hence we have that <math|1\<equallim\><rsub|<text|[eq: <reference|eq
+    9.102.040>]>>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|1|)>\<leqslant\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>=x<rsub|>>,
+    so we have\ 
+
+    <\equation>
+      <label|eq 9.103.040>\<forall\>x\<in\>\<bbb-Z\><text| with
+      >0\<less\>x<text| we have >1\<leqslant\>x
+    </equation>
+
+    Next\ 
+
+    <\enumerate>
+      <item>Let <math|x,y\<in\>\<bbb-Z\>> with <math|x\<less\>y> then
+      <math|0\<less\>y-x\<in\>\<bbb-Z\>> [as
+      <math|<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>> is a sub group of
+      <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>>], so by
+      [eq: <reference|eq 9.103.040>] we have that <math|1\<leqslant\>y-x>,
+      hence
+
+      <\equation*>
+        x+1\<leqslant\>y
+      </equation*>
+
+      <item>As <math|x+1\<leqslant\>y> we have that\ 
+
+      <\equation*>
+        x=<around*|(|x+1|)>-1\<leqslant\>y-1
+      </equation*>
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|real Archimedean property><dueto|Archimedean Property>If
+    <math|x,y\<in\>\<bbb-R\>> with <math|0\<less\>x> then
+    <math|\<exists\>n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> such that
+    <math|y\<less\>n\<cdot\>x>
+  </theorem>
+
+  <\proof>
+    For <math|y> we have either\ 
+
+    <\description>
+      <item*|<math|y\<leqslant\>0>>Then for <math|n=1> we have
+      <math|y\<leqslant\>0\<less\>x=1\<cdot\>x=n\<cdot\>x> proving that
+      <math|y\<less\>n\<cdot\>x>
+
+      <item*|<math|0\<less\>y>>We prove this by contradiction. Assume that
+      <math|\<forall\>n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> we have
+      <math|n\<cdot\>x\<leqslant\>y>. Define\ 
+
+      <\equation*>
+        A=<around*|{|n\<cdot\>x\|n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>|}>=0
+      </equation*>
+
+      then <math|\<forall\>t\<in\>A> we have <math|t\<leqslant\>y> so that
+      <math|y<text| is a upper bound of <math|A>>>. By [theorem:
+      <reference|real conditional complete>]
+      <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>> is
+      conditional complete so that <math|sup<around*|(|A|)>> exists. As
+      <math|0\<less\>x> we have <math|-x\<less\>0> so that
+      <math|sup<around*|(|A|)>-x\<less\>sup<around*|(|A|)>>, given that by
+      [theorem: <reference|real totally ordered>]
+      <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>> is
+      totally ordered we have by [theorem: <reference|order sup, inf
+      property>] that <math|\<exists\>t\<in\>A> such that
+      <math|sup<around*|(|A|)>-x\<less\>t>. Given the definition of <math|A>
+      we have that <math|\<exists\>n\<in\>\<bbb-N\><rsub|0>,\<bbb-R\>> such
+      that <math|t=n\<cdot\>x> hence <math|sup<around*|(|A|)>-x\<less\>n\<cdot\>x>
+      so that\ 
+
+      <\equation>
+        <label|eq 9.104.040>sup<around*|(|A|)>\<less\>n\<cdot\>x+x=<around*|(|n+1|)>\<cdot\>x
+      </equation>
+
+      As <math|n+1\<in\>\<bbb-N\><rsub|0>> we have that
+      <math|<around*|(|n+1|)>\<cdot\>x\<in\>A> so that
+      <math|<around*|(|n+1|)>\<cdot\>x\<leqslant\>sup<around*|(|A|)>>
+      contradicting [eq: <reference|eq 9.104.040>]. So our assumption is
+      wrong hence\ 
+
+      <\equation*>
+        \<exists\>n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>><text| such that
+        >y\<less\>n\<cdot\>x
+      </equation*>
+    </description>
+  </proof>
+
+  <\corollary>
+    <label|real Archimedean property consequence (1)>Let
+    <math|x\<in\>\<bbb-R\>> then we have\ 
+
+    <\enumerate>
+      <item><math|\<exists\>n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> such that
+      <math|x\<less\>n>
+
+      <item><math|\<exists\>n\<in\>\<bbb-Z\><rsub|\<bbb-R\>>> such that
+      <math|n\<leqslant\>x\<less\>n+1>
+
+      <item><math|\<exists\>n\<in\>\<bbb-Z\><rsub|\<bbb-R\>>> such that
+      <math|n\<less\>x\<leqslant\>n+1>
+
+      <item><math|\<exists\>n\<in\>\<bbb-Z\><rsub|\<bbb-R\>><text| such that
+      <math|n-1\<leqslant\>x\<less\>n>>>
+
+      <item><math|\<exists\>n\<in\>\<bbb-Z\><rsub|\<bbb-R\>>> such that
+      <math|n-1\<less\>x\<leqslant\>n>
+
+      <item>If <math|0\<less\>x> then <math|\<exists\>n\<in\>\<bbb-N\><rsub|\<bbb-R\>>>
+      such that <math|<frac|1|n>\<less\>x>
+    </enumerate>
+  </corollary>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>As <math|0\<less\>1> [see corollary: <reference|real 0\<less\>1>]
+      \ we have by the Archimedean property [see theorem: <reference|real
+      Archimedean property>] that there exist a
+      <math|n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> such that
+      <math|x\<less\>n\<cdot\>1=n>
+
+      <item>By (1) <math|A=<around*|{|n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>\|x\<less\>n|}>\<neq\>\<varnothing\>>
+      and by the well ordering of <math|<around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<leqslant\>|\<rangle\>>>
+      [see theorem: <reference|real NR properties> (7)] there exists a least
+      element <math|m\<in\>A>. As <math|m-1\<less\>m> [see corollary:
+      <reference|real a\<less\>a+1 and a-1\<less\>a>] we have that
+      <math|m-1\<nin\>A> hence <math|m-1\<leqslant\>x> and as <math|m\<in\>A>
+      we have also <math|x\<less\>m>. Take <math|n=m-1> then
+      <math|n\<leqslant\>x\<less\>m=n+1>.
+
+      <item>Using (2) there exist a <math|m\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>>
+      such that <math|m\<leqslant\>x\<less\>m+1>. As <math|m\<leqslant\>x> we
+      have the following possibilities to consider:
+
+      <\description>
+        <item*|<math|m=x>>Take then <math|n=m-1> so that <math|n+1=m> then we
+        have <math|n\<less\>x\<leqslant\>n+1>
+
+        <item*|<math|m\<less\>x>>Take then <math|n=m> so that
+        <math|n\<less\>x\<leqslant\>n+1>
+      </description>
+
+      <item>Using (2) there exist a <math|m\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>>
+      such that <math|m\<leqslant\>x\<less\>m+1>, take then <math|n=m+1> so
+      that <math|m=n-1>, hence <math|n-1\<leqslant\>x\<less\>n>.
+
+      <item>Using (3) there exist a <math|m\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>>
+      such that <math|m\<less\>x\<leqslant\>m+1>, take then <math|n=m+1> so
+      that <math|m=n-1>, hence <math|n-1\<less\>x\<leqslant\>n>.
+
+      <item>Using the Archimedean Property [see theorem: <reference|real
+      Archimedean property>] there exists a
+      <math|n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> such that
+      <math|1\<less\>n\<cdot\>x>. If <math|n=0> we would have
+      <math|1\<less\>0> a contradiction so <math|0\<neq\>n>. Using [theorem:
+      <reference|real natural numbers, integers and rational numbers>] we
+      have that <math|0\<leqslant\>n> so we find that <math|0\<less\>n>.
+      Applying then [theorem: <reference|real order properties>] we have
+      <math|0\<less\>n<rsup|-1>> which using \ [theorem: <reference|real
+      order properties>] on <math|1\<less\>n\<cdot\>x> gives
+      <math|1/n=1\<cdot\>n<rsup|-1>\<less\><around*|(|n\<cdot\>x|)>\<cdot\>n<rsup|-1>=x>.
+      </enumerate>
+  </proof>
+
+  <\corollary>
+    <label|real Archimedean property consequence (2)>Let
+    <math|x,y\<in\>\<bbb-R\>> then we have\ 
+
+    <\enumerate>
+      <item>If <math|\<forall\>n\<in\>\<bbb-N\><rsub|\<bbb-R\>>> we have that
+      <math|x\<leqslant\>y+1/n> then <math|x\<leqslant\>y>
+
+      <item>If <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> we have
+      that <math|x\<leqslant\>y+\<varepsilon\>> then <math|x\<leqslant\>y>
+
+      <item>Let <math|a\<in\>\<bbb-R\><rsup|+><rsub|0>> then if
+      <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> we have that
+      <math|x\<leqslant\>y+\<varepsilon\>\<cdot\>a> then
+      <math|x\<leqslant\>y>
+
+      <item>Let <math|a\<in\>\<bbb-R\><rsup|+><rsub|0>> then if
+      <math|\<forall\>n\<in\>\<bbb-N\><rsub|\<bbb-R\>>> we have that
+      <math|x\<leqslant\>y+a\\n> then <math|x\<leqslant\>y>
+    </enumerate>
+  </corollary>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Assume that <math|y\<less\>x> then we have <math|0\<less\>x-y> so
+      by [corollary: <reference|real Archimedean property consequence (1)>]
+      there exist a <math|n\<in\>\<bbb-N\><rsub|\<bbb-R\>>> such that
+      <math|1/n\<less\>x-y>. As we also have that
+      <math|x\<leqslant\>y+1/n\<Rightarrow\>x-y\<leqslant\>1/n> we reach the
+      contradiction <math|1/n\<less\>1/n>. So the assumption is wrong and we
+      must have that\ 
+
+      <\equation*>
+        x\<leqslant\>y
+      </equation*>
+
+      <item>Assume that <math|y\<less\>x> then we have <math|0\<less\>x-y> so
+      by [corollary: <reference|real Archimedean property consequence (1)>]
+      there exist a <math|n\<in\>\<bbb-N\><rsub|\<bbb-R\>>> such that
+      <math|1/n\<less\>x-y>. Take <math|\<varepsilon\>=1/n> then we have also
+      <math|x\<leqslant\>y+\<varepsilon\>\<Rightarrow\>x-y\<leqslant\>\<varepsilon\>=<frac|1|n>>
+      so we reach the contradiction <math|1/n\<less\>1/n>. So the assumption
+      is wrong and we must have that\ 
+
+      <\equation*>
+        x\<leqslant\>y
+      </equation*>
+
+      <item>As <math|0\<leqslant\>a> we have <math|0\<leqslant\>a\<less\>a+1>
+      so that by [theorem: <reference|real order properties>]
+      <math|<around*|(|a+1|)><rsup|-1>\<less\>a<rsup|-1>>. Assume that
+      <math|\<forall\>\<delta\>\<in\>\<bbb-R\><rsup|+>> we have
+      <math|x\<leqslant\>y+\<varepsilon\>\<cdot\>a>. Given
+      <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> we have then
+      <math|\<varepsilon\>/<around*|(|a+1|)>\<less\>\<varepsilon\>/a> so that
+      for <math|\<delta\>=\<varepsilon\>/<around*|(|a+1|)>> we have
+      <math|\<delta\>\<cdot\>a\<less\>\<varepsilon\>>, giving that
+      <math|x\<leqslant\>y+\<delta\>\<cdot\>a\<less\>y+\<varepsilon\>>, this
+      proves that <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> we
+      have <math|x\<leqslant\>y+\<varepsilon\>> which by (2) gives\ 
+
+      <\equation*>
+        x\<leqslant\>y
+      </equation*>
     </enumerate>
 
     \;
   </proof>
+
+  \;
+
+  \;
 
   \;
 
@@ -9962,7 +10635,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|6>
-    <associate|page-first|175>
+    <associate|page-first|177>
     <associate|section-nr|2>
     <associate|subsection-nr|4>
   </collection>
@@ -9970,7 +10643,7 @@
 
 <\references>
   <\collection>
-    <associate|NQ is conditional complete|<tuple|8.47|?>>
+    <associate|NQ is conditional complete|<tuple|8.48|?>>
     <associate|auto-1|<tuple|7|?>>
     <associate|auto-10|<tuple|quotient|?>>
     <associate|auto-11|<tuple|<with|mode|<quote|math>|<frac|m|n>>|?>>
@@ -10001,6 +10674,7 @@
     <associate|auto-34|<tuple|9.2.1|?>>
     <associate|auto-35|<tuple|<with|mode|<quote|math>|\<bbb-Z\><rsub|\<bbb-R\>>>|?>>
     <associate|auto-36|<tuple|<with|mode|<quote|math>|\<bbb-N\><rsub|0,\<bbb-R\>>>|?>>
+    <associate|auto-37|<tuple|<with|mode|<quote|math>|\<bbb-N\><rsub|\<bbb-R\>>>|?>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>>|?>>
     <associate|auto-5|<tuple|7.2|?>>
     <associate|auto-6|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>>|?>>
@@ -10031,34 +10705,35 @@
     <associate|eq 8.12.024|<tuple|8.12|?>>
     <associate|eq 8.13.024|<tuple|8.13|?>>
     <associate|eq 8.14.024|<tuple|8.14|?>>
-    <associate|eq 8.15.026|<tuple|8.16|?>>
-    <associate|eq 8.15.028|<tuple|8.15|?>>
-    <associate|eq 8.16.026|<tuple|8.17|?>>
-    <associate|eq 8.17.026|<tuple|8.18|?>>
-    <associate|eq 8.18.026|<tuple|8.19|?>>
-    <associate|eq 8.19.026|<tuple|8.20|?>>
+    <associate|eq 8.15.026|<tuple|8.17|?>>
+    <associate|eq 8.15.028|<tuple|8.16|?>>
+    <associate|eq 8.15.040|<tuple|8.15|?>>
+    <associate|eq 8.16.026|<tuple|8.18|?>>
+    <associate|eq 8.17.026|<tuple|8.19|?>>
+    <associate|eq 8.18.026|<tuple|8.20|?>>
+    <associate|eq 8.19.026|<tuple|8.21|?>>
     <associate|eq 8.2.023|<tuple|8.2|?>>
-    <associate|eq 8.20.026.1|<tuple|8.21|?>>
-    <associate|eq 8.21.026|<tuple|8.22|?>>
-    <associate|eq 8.22.026|<tuple|8.23|?>>
-    <associate|eq 8.23.026|<tuple|8.24|?>>
-    <associate|eq 8.24.026|<tuple|8.28|?>>
-    <associate|eq 8.24.027|<tuple|8.25|?>>
-    <associate|eq 8.25.027|<tuple|8.26|?>>
-    <associate|eq 8.26.027|<tuple|8.27|?>>
-    <associate|eq 8.28.027|<tuple|8.29|?>>
+    <associate|eq 8.20.026.1|<tuple|8.22|?>>
+    <associate|eq 8.21.026|<tuple|8.23|?>>
+    <associate|eq 8.22.026|<tuple|8.24|?>>
+    <associate|eq 8.23.026|<tuple|8.25|?>>
+    <associate|eq 8.24.026|<tuple|8.29|?>>
+    <associate|eq 8.24.027|<tuple|8.26|?>>
+    <associate|eq 8.25.027|<tuple|8.27|?>>
+    <associate|eq 8.26.027|<tuple|8.28|?>>
+    <associate|eq 8.28.027|<tuple|8.30|?>>
     <associate|eq 8.3.023|<tuple|8.3|?>>
-    <associate|eq 8.32.028|<tuple|8.32|?>>
-    <associate|eq 8.33.028|<tuple|8.33|?>>
-    <associate|eq 8.34.028|<tuple|8.34|?>>
-    <associate|eq 8.35.028|<tuple|8.35|?>>
-    <associate|eq 8.36.028|<tuple|8.36|?>>
-    <associate|eq 8.37.028|<tuple|8.37|?>>
-    <associate|eq 8.38.028|<tuple|8.38|?>>
-    <associate|eq 8.39.028|<tuple|8.39|?>>
+    <associate|eq 8.32.028|<tuple|8.33|?>>
+    <associate|eq 8.33.028|<tuple|8.34|?>>
+    <associate|eq 8.34.028|<tuple|8.35|?>>
+    <associate|eq 8.35.028|<tuple|8.36|?>>
+    <associate|eq 8.36.028|<tuple|8.37|?>>
+    <associate|eq 8.37.028|<tuple|8.38|?>>
+    <associate|eq 8.38.028|<tuple|8.39|?>>
+    <associate|eq 8.39.028|<tuple|8.40|?>>
     <associate|eq 8.4.023|<tuple|8.4|?>>
-    <associate|eq 8.40.028|<tuple|8.41|?>>
-    <associate|eq 8.40.029|<tuple|8.40|?>>
+    <associate|eq 8.40.028|<tuple|8.42|?>>
+    <associate|eq 8.40.029|<tuple|8.41|?>>
     <associate|eq 8.5.023|<tuple|8.5|?>>
     <associate|eq 8.6.023|<tuple|8.6|?>>
     <associate|eq 8.7.023|<tuple|8.7|?>>
@@ -10068,6 +10743,18 @@
     <associate|eq 9.1.028|<tuple|9.1|?>>
     <associate|eq 9.10.029|<tuple|9.8|?>>
     <associate|eq 9.10.030|<tuple|9.7|?>>
+    <associate|eq 9.100.040|<tuple|9.100|?>>
+    <associate|eq 9.101.040|<tuple|9.107|?>>
+    <associate|eq 9.101.041|<tuple|9.101|?>>
+    <associate|eq 9.101.41|<tuple|9.101|?>>
+    <associate|eq 9.102.040|<tuple|9.108|?>>
+    <associate|eq 9.102.041|<tuple|9.102|?>>
+    <associate|eq 9.103.040|<tuple|9.109|?>>
+    <associate|eq 9.103.041|<tuple|9.103|?>>
+    <associate|eq 9.104.040|<tuple|9.110|?>>
+    <associate|eq 9.104.041|<tuple|9.104|?>>
+    <associate|eq 9.105.041|<tuple|9.105|?>>
+    <associate|eq 9.106.041|<tuple|9.106|?>>
     <associate|eq 9.11.029|<tuple|9.9|?>>
     <associate|eq 9.11.034|<tuple|9.11|?>>
     <associate|eq 9.12.029|<tuple|9.10|?>>
@@ -10155,15 +10842,15 @@
     <associate|eq 9.88.036|<tuple|9.88|?>>
     <associate|eq 9.89.036|<tuple|9.89|?>>
     <associate|eq 9.90.036|<tuple|9.90|?>>
-    <associate|eq 9.91.038|<tuple|9.94|?>>
     <associate|eq 9.91.040|<tuple|9.91|?>>
-    <associate|eq 9.92.038|<tuple|9.97|?>>
-    <associate|eq 9.92.039|<tuple|9.95|?>>
     <associate|eq 9.92.040|<tuple|9.92|?>>
-    <associate|eq 9.93.039|<tuple|9.96|?>>
     <associate|eq 9.93.40|<tuple|9.93|?>>
     <associate|eq 9.94.040|<tuple|9.94|?>>
     <associate|eq 9.95.040|<tuple|9.95|?>>
+    <associate|eq 9.96.040|<tuple|9.96|?>>
+    <associate|eq 9.97.040|<tuple|9.97|?>>
+    <associate|eq 9.98.040|<tuple|9.98|?>>
+    <associate|eq 9.99.040|<tuple|9.99|?>>
     <associate|integeres order|<tuple|7.28|?>>
     <associate|integers|<tuple|7.2|?>>
     <associate|integers (-1).n|<tuple|7.16|?>>
@@ -10226,29 +10913,30 @@
     <associate|integers ~([n,m])~([n+k,m+k)]|<tuple|7.3|?>>
     <associate|ration power properties|<tuple|8.19|?>>
     <associate|rational (-q).(-r)|<tuple|8.16|?>>
-    <associate|rational 0\<less\>1|<tuple|8.34|?>>
+    <associate|rational 0\<less\>1|<tuple|8.33|?>>
     <associate|rational 0\<less\>=q and 0\<less\>=q=\<gtr\>0\<less\>=q+r|<tuple|8.29|?>>
     <associate|rational 0\<less\>=q property|<tuple|8.25|?>>
     <associate|rational 0\<less\>q and 0\<less\>r =\<gtr\>
     0\<less\>q,r|<tuple|8.36|?>>
     <associate|rational 0\<less\>q-\<gtr\>0\<less\>q^-1|<tuple|8.38|?>>
-    <associate|rational 0\<less\>q=\<gtr\>q=n/m|<tuple|8.33|?>>
+    <associate|rational 0\<less\>q=\<gtr\>q=n/m|<tuple|8.32|?>>
     <associate|rational 1+1=2|<tuple|8.13|?>>
-    <associate|rational Archimedean|<tuple|8.44|?>>
-    <associate|rational NQ is denumerable|<tuple|8.50|?>>
-    <associate|rational NQ is well-ordered|<tuple|8.46|?>>
-    <associate|rational NQ properties (1)|<tuple|8.43|?>>
-    <associate|rational Q is denumerable|<tuple|8.52|?>>
-    <associate|rational ZQ is denumerable|<tuple|8.51|?>>
+    <associate|rational Archimedean|<tuple|8.45|?>>
+    <associate|rational NQ is denumerable|<tuple|8.51|?>>
+    <associate|rational NQ is well-ordered|<tuple|8.47|?>>
+    <associate|rational NQ properties (1)|<tuple|8.44|?>>
+    <associate|rational Q is denumerable|<tuple|8.53|?>>
+    <associate|rational ZQ is denumerable|<tuple|8.52|?>>
     <associate|rational absorbing element|<tuple|8.15|?>>
-    <associate|rational densitiy|<tuple|8.45|?>>
+    <associate|rational alternative definition|<tuple|8.42|?>>
+    <associate|rational densitiy|<tuple|8.46|?>>
     <associate|rational embedded integers|<tuple|8.40|?>>
     <associate|rational equivalence relation|<tuple|8.3|?>>
     <associate|rational field|<tuple|8.12|?>>
     <associate|rational group|<tuple|8.8|?>>
     <associate|rational n/m and n\<less\>m or m\<less\>n|<tuple|8.35|?>>
     <associate|rational n/m=n.k/m.k|<tuple|8.5|?>>
-    <associate|rational natural numbers|<tuple|8.42|?>>
+    <associate|rational natural numbers|<tuple|8.43|?>>
     <associate|rational non negative rationals|<tuple|8.22|?>>
     <associate|rational non negative rationals from a
     semi-group|<tuple|8.23|?>>
@@ -10261,57 +10949,66 @@
     <associate|rational q\<less\>=0 and 0\<less\>=q then q=0|<tuple|8.27|?>>
     <associate|rational q\<less\>=r =\<gtr\> -r\<less\>=-q|<tuple|8.30|?>>
     <associate|rational q\<less\>=r=\<gtr\>q+s\<less\>=r+s|<tuple|8.28|?>>
-    <associate|rational q\<less\>q+1 and q-1\<less\>q|<tuple|8.31|?>>
+    <associate|rational q\<less\>q+1 and q-1\<less\>q|<tuple|8.34|?>>
     <associate|rational q\<less\>r\<less\>=\<gtr\>0\<less\>r+(-q)|<tuple|8.26|?>>
     <associate|rational q=r\<less\>=\<gtr\>q.s=r.s|<tuple|8.14|?>>
     <associate|rational q^(n+m)=q^n.q^m|<tuple|8.18|?>>
     <associate|rational r\<less\>=q and multiplying by s|<tuple|8.37|?>>
     <associate|rational rational numbers are not conditional
-    complete|<tuple|8.49|?>>
-    <associate|rational square root of 2 does not exist|<tuple|8.48|?>>
+    complete|<tuple|8.50|?>>
+    <associate|rational square root of 2 does not exist|<tuple|8.49|?>>
     <associate|rational sub-ring|<tuple|8.41|?>>
     <associate|rational sum operator|<tuple|8.7|?>>
     <associate|rational sum operator (1)|<tuple|8.6|?>>
-    <associate|rational totally ordered|<tuple|8.32|?>>
+    <associate|rational totally ordered|<tuple|8.31|?>>
     <associate|rational x-y|<tuple|8.9|?>>
     <associate|rational {0}|<tuple|8.21|?>>
     <associate|real -(a.b)=(-a).b=(a.(-b)|<tuple|9.29|?>>
-    <associate|real 0\<less\>=a,b and a+b=0 then a=0=b|<tuple|9.48|?>>
+    <associate|real 0\<less\>1|<tuple|9.46|?>>
+    <associate|real 0\<less\>=a,b and a+b=0 then a=0=b|<tuple|9.50|?>>
     <associate|real 1.a=a for positive numbers|<tuple|9.21|?>>
+    <associate|real Archimedean property|<tuple|9.68|?>>
+    <associate|real Archimedean property consequence|<tuple|9.68|?>>
+    <associate|real Archimedean property consequence (1)|<tuple|9.69|?>>
+    <associate|real Archimedean property consequence (2)|<tuple|9.70|?>>
     <associate|real Dedekind's cut|<tuple|9.1|?>>
-    <associate|real NR|<tuple|9.59|?>>
-    <associate|real NR properties|<tuple|9.60|?>>
+    <associate|real NR|<tuple|9.61|?>>
+    <associate|real NR properties|<tuple|9.63|?>>
     <associate|real QR|<tuple|9.6|?>>
     <associate|real QR bijection|<tuple|9.7|?>>
     <associate|real QR is denumerable|<tuple|9.8|?>>
-    <associate|real QR is not conditional complete|<tuple|9.51|?>>
+    <associate|real QR is not conditional complete|<tuple|9.53|?>>
     <associate|real RxR|<tuple|9.27|?>>
-    <associate|real ZQ|<tuple|9.57|?>>
-    <associate|real ZR properties|<tuple|9.58|?>>
+    <associate|real ZQ|<tuple|9.59|?>>
+    <associate|real ZR properties|<tuple|9.60|?>>
     <associate|real a.(b+g) where b or g is negative|<tuple|9.30|?>>
     <associate|real a.b=b.a positive numbers|<tuple|9.22|?>>
+    <associate|real a\<less\>a+1 and a-1\<less\>a|<tuple|9.49|?>>
     <associate|real a^-1|<tuple|9.31|?>>
     <associate|real a_r.a_s=a_r.s|<tuple|9.35|?>>
     <associate|real associativity positive numbers|<tuple|9.23|?>>
-    <associate|real conditional complete|<tuple|9.52|?>>
+    <associate|real conditional complete|<tuple|9.54|?>>
     <associate|real distributivity|<tuple|9.24|?>>
     <associate|real division of real numbers in positive and negative
     numbers|<tuple|9.17|?>>
-    <associate|real embedding of Q and order|<tuple|9.50|?>>
+    <associate|real embedding of Q and order|<tuple|9.52|?>>
     <associate|real field|<tuple|9.32|?>>
     <associate|real field embedding Q|<tuple|9.37|?>>
     <associate|real gap theorem|<tuple|9.9|?>>
     <associate|real group|<tuple|9.15|?>>
-    <associate|real inf or sup of -S|<tuple|9.54|?>>
+    <associate|real inf or sup of -S|<tuple|9.56|?>>
     <associate|real inv|<tuple|9.25|?>>
     <associate|real inv(a) is inverse element|<tuple|9.26|?>>
     <associate|real inverse of rational cut|<tuple|9.34|?>>
-    <associate|real irrational numbers|<tuple|9.53|?>>
+    <associate|real irrational numbers|<tuple|9.55|?>>
     <associate|real lemma for sum operator|<tuple|9.13|?>>
     <associate|real multiplication operator|<tuple|9.28|?>>
+    <associate|real natural numbers, integers and rational
+    numbers|<tuple|9.64|?>>
     <associate|real negastive cut of rational cut|<tuple|9.11|?>>
     <associate|real negative cut|<tuple|9.10|?>>
-    <associate|real order properties|<tuple|9.47|?>>
+    <associate|real notation for division|<tuple|9.33|?>>
+    <associate|real order properties|<tuple|9.48|?>>
     <associate|real order relation (1)|<tuple|9.44|?>>
     <associate|real order relation eauivalences|<tuple|9.45|?>>
     <associate|real positive negative numbers|<tuple|9.16|?>>
@@ -10321,15 +11018,17 @@
     <associate|real properties positive numbers|<tuple|9.42|?>>
     <associate|real property to determine membership of a cut|<tuple|9.3|?>>
     <associate|real q^(n+m)=q^n.q^m|<tuple|9.40|?>>
-    <associate|real r\<less\>s=\<gtr\>a_r\<less\>a_s|<tuple|9.49|?>>
+    <associate|real r\<less\>s=\<gtr\>a_r\<less\>a_s|<tuple|9.51|?>>
     <associate|real rational cut|<tuple|9.4|?>>
     <associate|real rational cut properties|<tuple|9.36|?>>
+    <associate|real rational numbers specification|<tuple|9.65|?>>
     <associate|real real numbers|<tuple|9.2|?>>
     <associate|real strict order relation definition|<tuple|9.43|?>>
     <associate|real sum is a operator|<tuple|9.14|?>>
-    <associate|real sup(S+T) and inf(S+T)|<tuple|9.55|?>>
-    <associate|real sup(S+s) inf(T+t)|<tuple|9.56|?>>
-    <associate|real totally ordered|<tuple|9.46|?>>
+    <associate|real sup(S+T) and inf(S+T)|<tuple|9.57|?>>
+    <associate|real sup(S+s) inf(T+t)|<tuple|9.58|?>>
+    <associate|real totally ordered|<tuple|9.47|?>>
+    <associate|real x\<less\>y=\<gtr\>x+1\<less\>=y|<tuple|9.67|?>>
     <associate|reals the set of reals are non empty|<tuple|9.5|?>>
     <associate|sign function|<tuple|8.20|?>>
   </collection>
