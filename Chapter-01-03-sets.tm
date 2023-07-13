@@ -13110,6 +13110,7 @@
     <associate|function surjection condition|<tuple|2.51|?>>
     <associate|function trivial bijection|<tuple|2.65|?>>
     <associate|function: A^B and sets|<tuple|2.35|?>>
+    <associate|order|<tuple|3.30|?>>
     <associate|order A isomorphism B|<tuple|3.49|?>>
     <associate|order a\<less\>=b\<less\>=c|<tuple|3.29|?>>
     <associate|order chain|<tuple|3.40|?>>

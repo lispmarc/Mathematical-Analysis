@@ -10531,7 +10531,7 @@
       <math|0\<less\>n<rsup|-1>> which using \ [theorem: <reference|real
       order properties>] on <math|1\<less\>n\<cdot\>x> gives
       <math|1/n=1\<cdot\>n<rsup|-1>\<less\><around*|(|n\<cdot\>x|)>\<cdot\>n<rsup|-1>=x>.
-      </enumerate>
+    </enumerate>
   </proof>
 
   <\corollary>
@@ -10552,7 +10552,7 @@
 
       <item>Let <math|a\<in\>\<bbb-R\><rsup|+><rsub|0>> then if
       <math|\<forall\>n\<in\>\<bbb-N\><rsub|\<bbb-R\>>> we have that
-      <math|x\<leqslant\>y+a\\n> then <math|x\<leqslant\>y>
+      <math|x\<leqslant\>y+a/n> then <math|x\<leqslant\>y>
     </enumerate>
   </corollary>
 
@@ -10584,25 +10584,777 @@
         x\<leqslant\>y
       </equation*>
 
-      <item>As <math|0\<leqslant\>a> we have <math|0\<leqslant\>a\<less\>a+1>
-      so that by [theorem: <reference|real order properties>]
-      <math|<around*|(|a+1|)><rsup|-1>\<less\>a<rsup|-1>>. Assume that
-      <math|\<forall\>\<delta\>\<in\>\<bbb-R\><rsup|+>> we have
-      <math|x\<leqslant\>y+\<varepsilon\>\<cdot\>a>. Given
-      <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> we have then
-      <math|\<varepsilon\>/<around*|(|a+1|)>\<less\>\<varepsilon\>/a> so that
-      for <math|\<delta\>=\<varepsilon\>/<around*|(|a+1|)>> we have
-      <math|\<delta\>\<cdot\>a\<less\>\<varepsilon\>>, giving that
-      <math|x\<leqslant\>y+\<delta\>\<cdot\>a\<less\>y+\<varepsilon\>>, this
-      proves that <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> we
-      have <math|x\<leqslant\>y+\<varepsilon\>> which by (2) gives\ 
+      <item>As <math|a\<in\>\<bbb-R\><rsup|+><rsub|0>> we have two
+      possibilities to consider:
 
-      <\equation*>
-        x\<leqslant\>y
-      </equation*>
+      <\description>
+        <item*|<math|a=0>>Then if we take
+        <math|\<varepsilon\>=1\<in\>\<bbb-R\><rsup|+>> we have from
+        <math|x\<leqslant\>y+a\<cdot\>\<varepsilon\>=y+0.1=y> that
+        <math|x\<leqslant\>y>
+
+        <item*|<math|0\<less\>a>>Take <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+        then for <math|\<delta\>=\<varepsilon\>/a\<in\>\<bbb-R\><rsup|+>> we
+        have by the assumption that <math|x\<leqslant\>y+a\<cdot\>\<delta\>=y+<around*|(|\<varepsilon\>/a|)>\<cdot\>a=y+\<varepsilon\>>.
+        So we have <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+        that <math|x\<leqslant\>y+\<varepsilon\>> which by (2) proves that
+
+        <\equation*>
+          x\<leqslant\>y
+        </equation*>
+      </description>
+
+      <item>As <math|a\<in\>\<bbb-R\><rsup|+><rsub|0>> we have two
+      possibilities to consider:
+
+      <\description>
+        <item*|<math|a=0>>Then if we take
+        <math|n=1\<in\>\<bbb-N\><rsub|\<bbb-R\>>> we have from
+        <math|x\<leqslant\>y+a/n=y+1/1\<cdot\>0=y> that <math|x\<leqslant\>y>
+
+        <item*|<math|0\<less\>a>>Take <math|n\<in\>\<bbb-N\><rsub|\<bbb-R\>>>
+        then <math|0\<less\>n\<Rightarrowlim\><rsub|<text|theorem:
+        <reference|real order properties>]>>0\<less\>a\<cdot\>n\<Rightarrowlim\><rsub|<text|theorem:
+        <reference|real order properties>]>>0\<less\><around*|(|a\<cdot\>n|)><rsup|-1>=a<rsup|-1>\<cdot\>n<rsup|-1>>
+        so that by [corollary: <reference|real Archimedean property
+        consequence (1)>] there exists a <math|m\<in\>\<bbb-N\><rsub|\<bbb-R\>>>
+        such that <math|1/m>\<less\><math|a<rsup|-1>\<cdot\>n<rsup|-1>>. By
+        assumption we have now <math|x\<leqslant\>y+a/m=y+a\<cdot\><around*|(|a<rsup|-1>\<cdot\>n<rsup|-1>|)>=y+1/n>.
+        So we have <math|\<forall\>n\<in\>\<bbb-N\><rsub|\<bbb-R\>>> that
+        <math|x\<leqslant\>y+1/n> which by (1) implies that\ 
+
+        <\equation*>
+          x\<leqslant\>y
+        </equation*>
+      </description>
+    </enumerate>
+  </proof>
+
+  The next theorem shows how the embedded rational numbers are dense in the
+  set of real numbers.\ 
+
+  <\theorem>
+    <label|real densitiy theorem><dueto|Density Theorem>If
+    <math|x\<in\>y\<in\>\<bbb-R\>> such that <math|x\<less\>y> then we have
+
+    <\enumerate>
+      <item><math|\<exists\>q\<in\>\<bbb-Q\><rsub|\<bbb-R\>>> such that
+      <math|x\<less\>q\<less\>y>
+
+      <item><math|\<exists\>r\<in\>\<bbb-R\>\\\<bbb-Q\><rsub|\<bbb-R\>>> such
+      that <math|x\<less\>r\<less\>y>
     </enumerate>
 
-    \;
+    In other words if we have two different real numbers then we can alwys
+    find a rational number and a irationl number that lies between the two
+    real numbers.
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>We first prove the case for <math|0\<leqslant\>x>, then we have
+      either\ 
+
+      <\description>
+        <item*|<math|0\<less\>x>>From <math|x\<less\>y> we have that
+        <math|0\<less\>y-x> so that by [theorem: <reference|real order
+        properties>] <math|0\<less\><around*|(|y-x|)><rsup|-1>>. Using
+        [corollary: <reference|real Archimedean property consequence (1)>]
+        there exists a <math|n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> such that
+        <math|0\<less\><around*|(|y-x|)><rsup|-1>\<less\>n>. As
+        <math|0\<less\>y-x> we have that <math|1=<around*|(|y-x|)><rsup|-1>\<cdot\><around*|(|y-x|)>\<less\>n\<cdot\><around*|(|y-x|)>>
+        so that
+
+        <\equation>
+          <label|eq 9.111.041>1+n\<cdot\>x\<less\>n\<cdot\>y
+        </equation>
+
+        and from <math|0\<less\><around*|(|y-x|)><rsup|-1>\<less\>n> that
+
+        <\equation>
+          <label|eq 9.112.041>0\<less\>n\<Rightarrowlim\><rsub|<text|[theorem:
+          <reference|real order properties>]>>0\<less\>n<rsup|-1>=1/n
+        </equation>
+
+        Using [corollary: <reference|real Archimedean property consequence
+        (1)>] there exist a <math|m\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> such
+        that
+
+        <\equation>
+          <label|eq 9.113.041>m-1\<leqslant\>n\<cdot\>x\<less\>m
+        </equation>
+
+        Multiplying by <math|n<rsup|-1>> gives then by \ [theorem:
+        <reference|real order properties>] that
+        <math|x=<around*|(|n\<cdot\>x|)>\<cdot\>n<rsup|-1>\<less\>m\<cdot\>n<rsup|-1>=m/n>.
+        Take <math|q=m/n> then, as <math|n,m\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>\<subseteq\>\<bbb-Z\><rsub|\<bbb-R\>>>,
+        we have by [theorem: <reference|real rational numbers specification>]
+        that <math|q\<in\>\<bbb-Q\><rsub|\<bbb-R\>>>. So we have\ 
+
+        <\equation>
+          <label|eq 9.114.041>x\<less\>q\<in\>\<bbb-Q\><rsub|\<bbb-R\>>
+        </equation>
+
+        From [eq: <reference|eq 9.113.041>] we have that
+        <math|m\<leqslant\>n\<cdot\>x+1\<less\>n\<cdot\>y> [see eq:
+        <reference|eq 9.111.041>] so that <math|m\<less\>n\<cdot\>y> and by
+        multiplying both sides by <math|n<rsup|-1>> that
+        <math|q=m/n\<less\>y>. Combining this with [eq: <reference|eq
+        9.114.041>] gives finally
+
+        <\equation*>
+          x\<less\>q\<less\>y<text| where
+          <math|q\<in\>\<bbb-Q\><rsub|\<bbb-R\>>>>
+        </equation*>
+
+        <item*|<math|x=0>>Then <math|0\<less\>y> and by [corollary:
+        <reference|real Archimedean property consequence (1)>] there exists a
+        <math|n\<in\>\<bbb-N\><rsub|\<bbb-R\>>> such that
+        <math|0\<less\>1/n\<less\>y>. As <math|1,n\<in\>\<bbb-N\><rsub|\<bbb-R\>>\<subseteq\>\<bbb-Z\><rsub|\<bbb-R\>>>
+        we have by [theorem: <reference|real rational numbers specification>]
+        that <math|1/n\<in\>\<bbb-Q\><rsub|\<bbb-R\>>> hence if we take
+        <math|q=1/n> we have that\ 
+
+        <\equation*>
+          x\<less\>q\<less\>y<text| where
+          <math|q\<in\>\<bbb-Q\><rsub|\<bbb-R\>>>>
+        </equation*>
+      </description>
+
+      So we have proved that\ 
+
+      <\equation>
+        <label|eq 9.115.041>\<forall\>x,y\<in\>\<bbb-R\><text| with
+        <math|0\<leqslant\>x\<wedge\>x\<less\>y<text| there exist a
+        <math|q\<in\>\<bbb-Q\><rsub|\<bbb-R\>><text| such that
+        <math|x\<less\>q\<less\>y>>>>>>
+      </equation>
+
+      So the only case left to prove is where <math|x\<less\>0>. Then we for
+      <math|y> we have either\ 
+
+      <\description>
+        <item*|<math|0\<less\>y>>Then if we tak
+        <math|q=0\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>\<subseteq\>\<bbb-Z\><rsub|\<bbb-R\>>\<subseteq\>\<bbb-Q\><rsub|\<bbb-R\>>>
+        so that\ 
+
+        <\equation*>
+          x\<less\>q\<less\>y<text| with >q\<in\>\<bbb-Q\><rsub|\<bbb-R\>>
+        </equation*>
+
+        <item*|<math|y\<leqslant\>0>>Then <math|x\<less\>y\<leqslant\>0> or
+        using [theorem: <reference|real order properties>]
+        <math|0\<leqslant\>-y\<less\>-x>. Take <math|x<rprime|'>=-y> and
+        <math|y<rprime|'>=-x> then <math|0\<leqslant\>x<rprime|'>\<less\>y<rprime|'>>
+        and by [eq: <reference|eq 9.115.041>] there exists a
+        <math|q<rprime|'>\<in\>\<bbb-Q\><rsub|\<bbb-R\>>> such that
+        <math|x<rprime|'>\<less\>q<rprime|'>\<less\>y<rprime|'>>. So
+        <math|-y\<less\>q<rprime|'>\<less\>-x> or
+        <math|x\<less\>-q<rprime|'>\<less\>y>. As
+        <math|<around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-R\>>,+|\<rangle\>>> is
+        a sub group of <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>> it
+        follows that<math|> <math|-q<rprime|'>\<in\>\<bbb-Q\><rsub|\<bbb-R\>>>
+        hence if we take <math|q=-q<rprime|'>> then we have\ 
+
+        <\equation*>
+          x\<less\>q\<less\>y<text| where >q\<in\>\<bbb-Q\><rsub|\<bbb-R\>>
+        </equation*>
+      </description>
+
+      <item>Finally we prove the case for the irrational numbers. By
+      [theorem: <reference|real irrational numbers>]
+      <math|\<bbb-R\>\\\<bbb-Q\><rsub|\<bbb-R\>>\<neq\>\<varnothing\>> so
+      there exist a <math|z\<in\>\<bbb-R\>\\\<bbb-Q\><rsub|\<bbb-R\>>>, then
+      from <math|x\<less\>y> we have that <math|x+z\<less\>y+z>. Using (1)
+      there exist a <math|r\<in\>\<bbb-Q\><rsub|\<bbb-R\>>> such that
+      <math|x+z\<less\>r\<less\>y+z> or <math|x\<less\>r-q\<less\>y>. Take
+      <math|q=r-z> then we have <math|x\<less\>q\<less\>y>. Assume that
+      <math|q\<in\>\<bbb-Q\><rsub|\<bbb-R\>>> then as
+      <math|z=r-q,r\<in\>\<bbb-Q\><rsub|\<bbb-R\>>> and
+      <math|<around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-R\>>,+|\<rangle\>>> is a
+      sub group of <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>> we have
+      that <math|z\<in\>\<bbb-Q\><rsub|\<bbb-R\>>> contradicting
+      <math|z\<in\>\<bbb-R\>\\\<bbb-Q\><rsub|\<bbb-R\>>>. So we must have
+      that <math|q\<in\>\<bbb-R\>\\\<bbb-Q\><rsub|\<bbb-R\>>> and we conclude
+      that\ 
+
+      <\equation*>
+        x\<less\>q\<less\>y<text| where <math|x\<in\>\<bbb-Q\><rsub|\<bbb-R\>>>>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  In the following theorems we have to be carefull because we are going to
+  mix <math|\<bbb-N\><rsub|0>> and <math|\<bbb-N\><rsub|0,\<bbb-R\>>>.
+  <math|\<bbb-N\><rsub|0>> will be used for powers as we can then use
+  recursion and induction, however <math|\<bbb-N\><rsub|0,\<bbb-R\>>> will be
+  used when working in <math|\<bbb-R\>>. To avoid execesive notation we use
+  the following convention:
+
+  <\convention>
+    If <math|n\<in\>\<bbb-N\><rsub|0>> then if we want to use <math|n> in the
+    context of <math|\<bbb-N\><rsub|0,\<bbb-R\>>> we write
+    <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>> as
+    <math|n>. Likewise if <math|n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> and we
+    want to use <math|n> in the context of <math|\<bbb-N\><rsub|0>> we write
+    <math|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|n|)>>
+    as <math|n>. This causes no problems with multiplication, summation and
+    order as we have proved by [theorem: <reference|real NR properties>] that
+
+    <\equation*>
+      i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,+|\<rangle\>><text|
+      and >i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\><rsub|>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<cdot\>|\<rangle\>><text|
+      are group isomorphisms>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<leqslant\>|\<rangle\>><text|
+      is a order isomorphism>
+    </equation*>
+  </convention>
+
+  <\theorem>
+    <label|real n\<less\>2^n><math|\<forall\>n\<in\>\<bbb-N\><rsub|0>> we
+    have that <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>\<less\>2<rsup|n>>
+    or using our convention\ 
+
+    <\equation*>
+      n\<less\>2<rsup|n>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    This is proved by induction so let <math|S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>\<less\>2<rsup|n>|}>>
+    then we have\ 
+
+    <\description>
+      <item*|<math|0\<in\>S>>As <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>=i<rsub|\<bbb-N\><rsub|0>><around*|(|0|)>=0\<less\>1=2<rsup|0>>
+      we have that <math|0\<in\>S>
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>For <math|n+1> we have
+      the following cases to consider:
+
+      <\description>
+        <item*|<math|n+1=1>>Then <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n+1|)>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>*<around*|(|1|)>=1\<less\>2=2<rsup|1>=2<rsup|n+1>>
+        proving that in this case <math|n+1\<in\>S>
+
+        <item*|<math|1\<less\>n+1>>Then by [theorem: <reference|natural
+        numbers n\<less\>m=\<gtr\>s(n)\<less\>=m>] we have
+        <math|1+1\<leqslant\>n+1> so that <math|1\<leqslant\>n>, adding
+        <math|n> to both sides gives then
+        <math|n+1\<leqslant\>n+n=<around*|(|1+1|)>\<cdot\>n=2\<cdot\>n>, so
+        that
+
+        <\equation*>
+          i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n+1|)>\<leqslant\>i<rsub|\<bbb-N\><rsub|o>\<rightarrow\>\<bbb-R\>><around*|(|2\<cdot\>n|)>=i<rsub|\<bbb-N\><rsub|0>><around*|(|2|)>\<cdot\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>=2\<cdot\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>
+        </equation*>
+
+        further as <math|n\<in\>S> we have
+        <math|i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>\<less\>2<rsup|n>> so
+        that <math|2\<cdot\>i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>\<less\>2\<cdot\>2<rsup|n>=2<rsup|n+1>>,
+        hence we have <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n+1|)>\<less\>2<rsup|n+1>>,
+        proving that <math|n+1\<in\>S>.
+      </description>
+    </description>
+  </proof>
+
+  <\corollary>
+    <label|real a\<less\>2^n><math|\<forall\>x\<in\>\<bbb-R\>> there exists a
+    <math|n\<in\>\<bbb-N\><rsub|0>> such that <math|x\<less\>2<rsup|n>>
+  </corollary>
+
+  <\proof>
+    Let <math|x\<in\>\<bbb-R\>> then by [corollary: <reference|real
+    Archimedean property consequence (1)>] thre exist a
+    <math|m\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> such that <math|x\<less\>m>,
+    using [theorem: <reference|real n\<less\>2^n>] for
+    <math|n=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|m|)>>
+    we have <math|i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>\<less\>2<rsup|n>>
+    or as <math|i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>=i<rsub|\<bbb-N\><rsub|0>><around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(||)>|)>=m>
+    that <math|m\<less\>2<rsup|n>> so we have <math|x\<less\>2<rsup|n>.>
+  </proof>
+
+  <\lemma>
+    <label|real (x^n-1)\<gtr\>=n.(x-1)>Let <math|x\<in\>\<bbb-R\>> with
+    <math|1\<less\>x> then <math|\<forall\>n\<in\>\<bbb-N\><rsub|0>> we have
+
+    <\equation*>
+      i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>\<cdot\><around*|(|x-1|)>\<leqslant\>x<rsup|n>-1
+    </equation*>
+
+    or using our convention
+
+    <\equation*>
+      n\<cdot\><around*|(|x-1|)>\<leqslant\>x<rsup|n>-1
+    </equation*>
+  </lemma>
+
+  <\proof>
+    We prove this by induction, so let <math|S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>\<cdot\><around*|(|x-1|)>\<leqslant\>x<rsup|n>-1|}>>
+    then we have:
+
+    <\description>
+      <item*|<math|0\<in\>S>>Then <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|0|)>=0\<cdot\><around*|(|x-1|)>=0\<leqslant\>0=1-1=x<rsup|0>-1=x<rsup|n>-1>
+      proving that <math|0\<in\>S>.
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Then as <math|n\<in\>S>
+      we have <math|><math|i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>\<cdot\><around*|(|x-1|)>\<leqslant\>x<rsup|n>-1>
+      which as <math|0\<less\>x> prove that\ 
+
+      <\equation>
+        <label|eq 9.116.041>x\<cdot\>i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>\<cdot\><around*|(|x-1|)>\<leqslant\>x\<cdot\><around*|(|x<rsup|n>-1|)>
+      </equation>
+
+      As <math|1\<less\>x> we have that <math|0\<less\>x-1\<Rightarrowlim\><rsub|0\<leqslant\>n>0\<less\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>\<cdot\><around*|(|x-1|)>>
+      so that
+
+      <\equation*>
+        i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>\<cdot\><around*|(|x-1|)>=1\<cdot\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>\<cdot\><around*|(|x-1|)>\<less\>x\<cdot\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>\<cdot\><around*|(|x-1|)>
+      </equation*>
+
+      which combined with [eq: <reference|eq 9.116.041>] proves that\ 
+
+      <\equation>
+        <label|eq 9.117.041>i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>\<cdot\><around*|(|x-1|)>\<leqslant\>x\<cdot\><around*|(|x<rsup|n>-1|)>
+      </equation>
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x<rsup|n+1>-1>|<cell|=>|<cell|x\<cdot\>x<rsup|n>-1>>|<row|<cell|>|<cell|=>|<cell|x\<cdot\>x<rsup|n>-x+x-1>>|<row|<cell|>|<cell|=>|<cell|x\<cdot\><around*|(|x<rsup|n>-1|)>+<around*|(|x-1|)>>>|<row|<cell|>|<cell|\<geqslant\><rsub|<text|[eq:
+        <reference|eq 9.117.041>]>>>|<cell|i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>\<cdot\><around*|(|x-1|)>+<around*|(|x-1|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>+1|)>\<cdot\><around*|(|x-1|)>>>|<row|<cell|>|<cell|=>|<cell|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n+1|)>\<cdot\><around*|(|x-1|)>>>>>
+      </eqnarray*>
+
+      proving that <math|n+1\<in\>S>.
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|real x^n\<gtr\>n if x\<gtr\>1 (R)>If
+    <math|m\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> and <math|x\<in\>\<bbb-R\>>
+    with <math|1\<less\>x> then <math|\<exists\>n\<in\>\<bbb-N\><rsub|0><rsub|>>
+    such that <math|m\<less\>x<rsup|n>>
+  </theorem>
+
+  <\proof>
+    For <math|m\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> we have either:
+
+    <\description>
+      <item*|<math|m=1>>Then <math|m=0\<less\>1=x<rsup|0>> proving the
+      theorem in this case.
+
+      <item*|<math|m=1>>Then <math|m=1\<less\>x=x<rsup|1>> proving the
+      theorem in this case.
+
+      <item*|<math|1\<less\>m>>Then <math|0\<less\>m-1> and as
+      <math|0\<less\>x-1\<Rightarrow\><around*|(|x-1|)><rsup|-1>> so that
+      <math|<around*|(|m-1|)>/<around*|(|x-1|)>\<gtr\>0>. By [corollary:
+      <reference|real Archimedean property consequence (1)>] there exist a
+      <math|n<rprime|'>\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> such that
+      <math|<around*|(|m-1|)>/<around*|(|x-1|)>\<less\>n<rprime|'>>. As
+      <math|0\<less\>x-1> we have <math|m-1\<less\>n<rprime|'>\<cdot\><around*|(|x-1|)>>,
+      take <math|n=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|n<rprime|'>|)>>
+      then by [lemma: <reference|real (x^n-1)\<gtr\>=n.(x-1)>]
+      <math|n<rprime|'>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>\<leqslant\><around*|(|x<rsup|n>-1|)>>,
+      hence <math|m-1\<leqslant\>x<rsup|n>-1> or \ <math|m\<less\>x<rsup|n>>,
+      proving the theorem in this case.
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|real n\<less\>m and 0\<less\>x\<less\>1 then x^n\<less\>x^m>If
+    <math|x\<in\>\<bbb-R\>> with <math|0\<less\>x\<less\>1> and
+    <math|n,m\<in\>\<bbb-N\><rsub|0>> such that <math|n\<less\>m> then
+    <math|x<rsup|m>\<less\>x<rsup|n>>
+  </theorem>
+
+  <\proof>
+    We prove this by induction, so take <math|S<rsub|m>=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|x<rsup|m>\<leqslant\>x<rsup|m+n>|}>>
+  </proof>
+
+  To be able to use recursion and induction arguments we have to extend
+  mathematical induction and recursion using
+  <math|\<bbb-N\><rsub|0,\<bbb-R\>>> instead of <math|\<bbb-N\><rsub|0>>.
+  First we hangle induction and then recursion.
+
+  <\definition>
+    Let <math|n,m\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> then we define\ 
+
+    <\equation*>
+      <around*|{|n,\<ldots\>,m|}>=<around*|{|i\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>\|n\<leqslant\>i\<leqslant\>m|}>
+    </equation*>
+
+    <\equation*>
+      <around*|{|n,,\<ldots\>,\<infty\>|}>=<around*|{|i\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>\|n\<leqslant\>i|}>
+    </equation*>
+  </definition>
+
+  <\theorem>
+    <label|real mathematical induction>Let <math|k\<in\>\<bbb-N\><rsub|0>>
+    and <math|S\<subseteq\><around*|{|k,\<ldots\>,\<infty\>|}>> such that\ 
+
+    <\enumerate>
+      <item><math|k\<in\>S>
+
+      <item>If <math|n\<in\>S> then <math|n+1\<in\>S>
+    </enumerate>
+
+    then <math|S=<around*|{|k,\<ldots\>,\<infty\>|}>>
+  </theorem>
+
+  <\proof>
+    Using [theorems: <reference|real NR properties>, <reference|order
+    isomorphism condition (2)>]] we have that\ 
+
+    <\equation>
+      <label|eq 9.118.042>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,+|\<rangle\>><text|
+      is a group isomorphisms and >i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|1|)>=1
+    </equation>
+
+    <\equation>
+      <label|eq 9.119.042>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<leqslant\>|\<rangle\>><text|
+      and ><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1>:<around*|\<langle\>|\<bbb-N\><rsub|0,R>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>><text|
+      are order isomorphisms>
+    </equation>
+
+    Define <math|T=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|S|)>>
+    and take <math|k<rprime|'>=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|k|)>>
+    then we have
+
+    <\description>
+      <item*|<math|k<rprime|'>\<in\>T>>As
+      <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|k<rprime|'>|)>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|k|)>|)>=k\<in\>S>
+      it follows that <math|k<rprime|'>\<in\>T>
+
+      <item*|<math|n\<in\>T\<Rightarrow\>n+1\<in\>T>>As
+      <math|n\<in\>T=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|S|)>>
+      we have that <math|n<rprime|'>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>\<in\>S>,
+      by the hypothesis we have then that <math|n<rprime|'>+1\<in\>S>. Hence
+
+      <\equation*>
+        i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n+1|)>\<equallim\><rsub|<text|[eq:
+        <reference|eq 9.118.042>]>>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>+i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|1|)>\<equallim\><rsub|<text|[eq:
+        <reference|eq 9.118.042>]>>n<rprime|'>+1\<in\>S
+      </equation*>
+
+      so that <math|n+1\<in\><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|S|)>=T>.
+    </description>
+
+    Using [theorem: <reference|mathematical induction>] it follows that
+    <math|T=<around*|{|k<rprime|'>,\<ldots\>\<infty\>|}>> so
+
+    <\equation>
+      <label|eq 9.120.042>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|<around*|{|k<rprime|'>,\<ldots\>,\<infty\>|}>|)>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|T|)>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|S|)>|)>\<equallim\><rsub|<text|[eq:
+      <reference|eq 9.118.042>] and [theorem: <reference|function preimage of
+      image>]>>S
+    </equation>
+
+    Now if <math|x\<in\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|<around*|{|k<rprime|'>,\<ldots\>,\<infty\>|}>|)>>
+    then <math|\<exists\>x<rprime|'>\<in\><around*|{|k<rprime|'>,\<ldots\>,\<infty\>|}>>
+    such that <math|x=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|x<rprime|'>|)>>,
+    as <math|x<rprime|'>\<in\><around*|{|k<rprime|'>,\<ldots\>,\<infty\>|}>>
+    we have that <math|k<rprime|'>\<leqslant\>x<rprime|'>>, hence by [eq:
+    <reference|eq 9.119.042>]
+
+    <\equation*>
+      k=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|k|)>|)>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|k<rprime|'>|)>\<leqslant\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|x<rprime|'>|)>=x
+    </equation*>
+
+    proving that <math|x\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> or\ 
+
+    <\equation>
+      <label|eq 9.121.042>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|<around*|{|k<rprime|'>,\<ldots\>,\<infty\>|}>|)>\<subseteq\><around*|{|k,\<ldots\>,\<infty\>|}>
+    </equation>
+
+    Further if <math|x\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> then
+    <math|k\<leqslant\>x>, using [eq: <reference|eq 9.119.042>] we have then
+    that <math|k<rprime|'>=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|k|)>\<leqslant\><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|x|)>>
+    so that <math|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|x|)>\<in\><around*|{|k<rprime|'>,\<ldots\>,\<infty\>|}>>
+    or <math|x=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|x|)>|)>\<in\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|<around*|{|k<rprime|'>,\<ldots\>,\<infty\>|}>|)>>.
+    Hence <math|<around*|{|k,\<ldots\>,\<infty\>|}>\<subseteq\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|<around*|{|k<rprime|'>,\<ldots\>,\<infty\>|}>|)>>
+    which by [eq: <reference|eq 9.121.042>] proves that
+
+    <\equation*>
+      i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|<around*|{|k<rprime|'>,\<ldots\>,\<infty\>|}>|)>=<around*|{|k,\<ldots\>,\<infty\>|}>.
+    </equation*>
+
+    Combining this with [eq: <reference|eq 9.120.042>] gives finally that\ 
+
+    <\equation*>
+      S=<around*|{|k,\<ldots\>,\<infty\>|}>
+    </equation*>
+  </proof>
+
+  Next we handle recursion defnitions\ 
+
+  <\theorem>
+    <label|real iteration>Let <math|A> be a set, <math|a\<in\>A> and
+    <math|f:A\<rightarrow\>A> a function then there exist a
+    <with|font-series|bold|unique> function\ 
+
+    <\equation*>
+      \<lambda\>:\<bbb-N\><rsub|0,\<bbb-R\>>\<rightarrow\>A
+    </equation*>
+
+    such that:
+
+    <\enumerate>
+      <item><math|\<lambda\><around*|(|0|)>=a>
+
+      <item><math|\<forall\>n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>><text| we have
+      <math|\<lambda\><around*|(|n+1|)>=f<around*|(|\<lambda\><around*|(|n|)>|)>>>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    Using [theorems: <reference|real NR properties>,<reference|group
+    isomorphism inverse>] we have that
+
+    <\equation>
+      <label|eq 9.122.042>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,R>,+|\<rangle\>><text|
+      and ><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1>:<around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>><text|
+      are group isomorphisms>
+    </equation>
+
+    and\ 
+
+    <\equation>
+      <label|eq 9.123.042>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|1|)>=1
+    </equation>
+
+    Now by [theorem: <reference|recursion final>] there exist a
+    <with|font-series|bold|unique> function
+    <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>A> such that
+
+    <\enumerate>
+      <item><math|\<beta\><around*|(|0|)>=a>
+
+      <item><math|\<forall\>n\<in\>\<bbb-N\><rsub|0><text| we have
+      >\<beta\><around*|(|n+1|)>=f<around*|(|\<beta\><around*|(|n|)>|)>>
+    </enumerate>
+
+    Define <math|\<lambda\>:\<bbb-N\><rsub|0,\<bbb-R\>>\<rightarrow\>A> by
+    <math|\<lambda\>=\<beta\>\<circ\><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1>>
+    then we have:
+
+    <\enumerate>
+      <item><math|\<lambda\><around*|(|0|)>=\<beta\>\<circ\><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|0|)>=\<beta\><around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|0|)>|)>=\<beta\><around*|(|0|)>=a>
+
+      <item>Let <math|n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> and take
+      <math|n<rprime|'>=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|n|)>>
+      then
+
+      <\equation*>
+        <around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|n+1|)>=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|n|)>+<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|1|)>\<equallim\><rsub|<text|[eq:
+        <reference|eq 9.123.042>]>><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|n|)>+1=n<rprime|'>+1
+      </equation*>
+
+      So that
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<gamma\><around*|(|n+1|)>>|<cell|=>|<cell|<around*|(|\<beta\>\<circ\><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1>|)><around*|(|n+1|)>>>|<row|<cell|>|<cell|=>|<cell|\<beta\><around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|n+1|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<beta\><around*|(|n<rprime|'>+1|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|\<beta\><around*|(|n<rprime|'>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|\<beta\><around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|n|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|\<lambda\><around*|(|n|)>|)>>>>>
+      </eqnarray*>
+
+      Hence we have proved the existence of
+      <math|\<lambda\>:\<bbb-N\><rsub|0,\<bbb-R\>>\<rightarrow\>A>.
+    </enumerate>
+
+    Next we prove uniquenes, so assume that there is another
+    <math|\<gamma\>:\<bbb-N\><rsub|0,\<bbb-R\>>\<rightarrow\>A> such that
+    <math|\<gamma\><around*|(|0|)>=a> and
+    <math|\<gamma\><around*|(|n+1|)>=f<around*|(|\<gamma\><around*|(|n|)>|)>>.
+    Then <math|<around*|(|\<gamma\>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)>:\<bbb-N\><rsub|0>\<rightarrow\>A>
+    is such that
+
+    <\equation*>
+      <around*|(|\<gamma\>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><around*|(|0|)>=\<gamma\><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|0|)>|)>=\<gamma\><around*|(|0|)>=a
+    </equation*>
+
+    and\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|\<gamma\>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><around*|(|n+1|)>>|<cell|=>|<cell|\<gamma\><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n+1|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<gamma\><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>+i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|1|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<gamma\><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>+1|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|\<gamma\><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|<around*|(|\<gamma\>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><around*|(|n|)>|)>>>>>
+    </eqnarray*>
+
+    As <math|\<beta\>> is unique we have by the above that
+    <math|\<beta\>=\<gamma\>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>>,
+    so that
+
+    <\equation*>
+      \<lambda\>=\<beta\>\<circ\><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1>=<around*|(|\<gamma\>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)>\<circ\><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1>=\<gamma\>\<circ\><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>\<circ\><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1>|)>=\<gamma\>\<circ\>id<rsub|\<bbb-N\><rsub|0,\<bbb-R\>>>=\<gamma\>
+    </equation*>
+
+    proving uniqueness.
+  </proof>
+
+  <\theorem>
+    <label|real recursion iteration><dueto|Iteration>Let <math|A> be a set
+    and <math|f:A\<rightarrow\>A> a function then
+    <math|\<forall\>n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> there exist a
+    function\ 
+
+    <\equation*>
+      <around*|(|f|)><rsup|n>:A\<rightarrow\>A
+    </equation*>
+
+    such that:
+
+    <\enumerate>
+      <item><math|<around*|(|f|)><rsup|0>=Id<rsub|A>>
+
+      <item><math|<around*|(|f|)><rsup|n+1>=f\<circ\><around*|(|f|)><rsup|n>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    Let <math|a\<in\>A> and use the recursion [theorem: <reference|real
+    recursion>] to find a function\ 
+
+    <\equation*>
+      \<lambda\><rsub|a>:\<bbb-N\><rsub|0,\<bbb-R\>>\<rightarrow\>A<text|
+      such that >\<lambda\><rsub|a><around*|(|0|)>=a<text| and
+      >\<forall\>n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>><text|
+      >\<lambda\><rsub|a><around*|(|s<around*|(|n|)>|)>=f<around*|(|\<lambda\><rsub|a><around*|(|n|)>|)>
+    </equation*>
+
+    Define now <math|>
+
+    <\equation*>
+      <around*|(|f|)><rsup|n>:A\<rightarrow\>A<text| where
+      ><around*|(|f<rsup|>|)><rsup|n><around*|(|a|)>=\<lambda\><rsub|a><around*|(|n|)>
+    </equation*>
+
+    Then we have\ 
+
+    <\enumerate>
+      <item><math|\<forall\>a\<in\>A> we have that
+      <math|<around*|(|f|)><rsup|0><around*|(|a|)>=\<lambda\><rsub|a><around*|(|0|)>=a>
+      so that
+
+      <\equation*>
+        <around*|(|f|)><rsup|0>=Id<rsub|A>
+      </equation*>
+
+      <item><math|\<forall\>a\<in\>A> we have that
+      <math|<around*|(|f|)><rsup|s<around*|(|n|)>><around*|(|a|)>=\<lambda\><rsub|a><around*|(|s<around*|(|n|)>|)>=f<around*|(|\<lambda\><rsub|a><around*|(|n|)>|)>=f<around*|(|<around*|(|f|)><rsup|n><around*|(|a|)>|)>=<around*|(|f\<circ\><around*|(|f|)><rsup|n>|)><around*|(|a|)>>
+      so that
+
+      <\equation*>
+        <around*|(|f|)><rsup|s<around*|(|n|)>>=f\<circ\><around*|(|f|)><rsup|n>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|recursion recursion step>Let <math|A> be a set, <math|a\<in\>A>
+    and <math|g:\<bbb-N\><rsub|0,\<bbb-R\>>\<times\>A\<rightarrow\>A> then
+    there exist a <with|font-series|bold|unique> function\ 
+
+    <\equation*>
+      \<gamma\>:\<bbb-N\><rsub|0,\<bbb-R\>>\<rightarrow\>A
+    </equation*>
+
+    such that:
+
+    <\enumerate>
+      <item><math|\<lambda\><around*|(|0|)>=a>
+
+      <item><math|\<forall\>n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>>
+      <math|\<lambda\><around*|(|n+1|)>=g<around*|(|n,\<lambda\><around*|(|n|)>|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    By [theorems: <reference|real NR properties>,<reference|group isomorphism
+    inverse>] we have that
+
+    <\equation>
+      <label|eq 9.124.042>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,R>,+|\<rangle\>><text|
+      and ><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1>:<around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>><text|
+      are group isomorphisms>
+    </equation>
+
+    and\ 
+
+    <\equation>
+      <label|eq 9.125.042>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|1|)>=1
+    </equation>
+
+    Define now\ 
+
+    <\equation*>
+      h:\<bbb-N\><rsub|0>\<times\>A\<rightarrow\>A<text| by
+      >h<around*|(|n,a|)>=g<around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><around*|(|n|)>,a|)>
+    </equation*>
+
+    Using [theorem: <reference|recursion step (2)>] there exist a
+    <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>A> such that\ 
+
+    <\enumerate>
+      <item><math|\<beta\><around*|(|0|)>=a>
+
+      <item><math|\<forall\>n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>><text| we have
+      >\<beta\><around*|(|n+1|)>=h<around*|(|n,\<beta\><around*|(|n|)>|)>>
+    </enumerate>
+
+    Define now
+
+    <\equation*>
+      \<lambda\>:\<bbb-N\><rsub|0,\<bbb-R\>>\<rightarrow\>A<text| by
+      >\<lambda\>=\<beta\>\<circ\><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1>
+    </equation*>
+
+    then we have:
+
+    <\enumerate>
+      <item><math|\<lambda\><around*|(|0|)>=\<beta\><around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|0|)>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|eq 9.124.042>]>>\<beta\><around*|(|0|)>=a>
+
+      <item>If <math|n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<lambda\><around*|(|n+1|)>>|<cell|=>|<cell|\<beta\><around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|n+1|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 9.124.042>]>>>|<cell|\<beta\><around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|n|)>+<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|1|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 9.125.042>]>>>|<cell|\<beta\><around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|n|)>+1|)>>>|<row|<cell|>|<cell|=>|<cell|h<around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|n|)>,\<beta\><around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|n|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|h<around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|n|)>,\<lambda\><around*|(|n|)>|)>>>|<row|<cell|>|<cell|=>|<cell|g<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|n|)>|)>,\<lambda\><around*|(|n|)>|)>>>|<row|<cell|>|<cell|=>|<cell|g<around*|(|,\<lambda\><around*|(|n|)>|)>>>>>
+      </eqnarray*>
+    </enumerate>
+
+    which proves existence. Now for uniqueness assume that there is a\ 
+
+    <\equation*>
+      \<gamma\>:\<bbb-N\><rsub|0,\<bbb-R\>>\<rightarrow\>A<text| such that
+      >\<beta\><around*|(|0|)>=a<text| and
+      >\<forall\>n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>><text| that
+      >\<beta\><around*|(|s<around*|(|n|)>|)>=g<around*|(|n,\<beta\><around*|(|n|)>|)>
+    </equation*>
+
+    Define now <math|S=<around*|{|n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>\|\<lambda\><around*|(|n|)>=\<gamma\><around*|(|n|)>|}>>
+    then we have:
+
+    <\description>
+      <item*|<math|0\<in\>S>>As <math|\<lambda\><around*|(|0|)>=a=\<gamma\><around*|(|0|)>>
+      it follows that <math|0\<in\>S>.
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>As\ 
+
+      <\equation*>
+        \<lambda\><around*|(|n+1|)>=g<around*|(|n,\<lambda\><around*|(|n|)>|)>\<equallim\><rsub|n\<in\>S>g<around*|(|n,\<gamma\><around*|(|n|)>|)>=\<gamma\><around*|(|n+1|)>
+      </equation*>
+
+      we have that <math|n+1\<in\>S>
+    </description>
+
+    Using mathematical induction [theorem: <reference|real mathematical
+    induction>] we have <math|S=\<bbb-N\><rsub|0,\<bbb-R\>>>, so
+    <math|\<forall\>n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> we have
+    <math|n\<in\>S> hence <math|\<lambda\><around*|(|n|)>=\<gamma\><around*|(|n|)>>
+    proving that\ 
+
+    <\equation*>
+      \<lambda\>=\<gamma\>
+    </equation*>
   </proof>
 
   \;
@@ -10681,6 +11433,10 @@
     <associate|auto-7|<tuple|absolute value|?>>
     <associate|auto-8|<tuple|<with|mode|<quote|math>|<around*|\||x|\|>>|?>>
     <associate|auto-9|<tuple|<with|mode|<quote|math>|m\|n>|?>>
+    <associate|eq 5.10.019|<tuple|9.124|?>>
+    <associate|eq 5.11.019|<tuple|9.125|?>>
+    <associate|eq 5.12.019|<tuple|9.126|?>>
+    <associate|eq 5.13.019|<tuple|9.127|?>>
     <associate|eq 7.1.022|<tuple|7.1|?>>
     <associate|eq 7.10.022|<tuple|7.10|?>>
     <associate|eq 7.11.022|<tuple|7.11|?>>
@@ -10746,7 +11502,6 @@
     <associate|eq 9.100.040|<tuple|9.100|?>>
     <associate|eq 9.101.040|<tuple|9.107|?>>
     <associate|eq 9.101.041|<tuple|9.101|?>>
-    <associate|eq 9.101.41|<tuple|9.101|?>>
     <associate|eq 9.102.040|<tuple|9.108|?>>
     <associate|eq 9.102.041|<tuple|9.102|?>>
     <associate|eq 9.103.040|<tuple|9.109|?>>
@@ -10757,7 +11512,22 @@
     <associate|eq 9.106.041|<tuple|9.106|?>>
     <associate|eq 9.11.029|<tuple|9.9|?>>
     <associate|eq 9.11.034|<tuple|9.11|?>>
+    <associate|eq 9.111.041|<tuple|9.111|?>>
+    <associate|eq 9.112.041|<tuple|9.112|?>>
+    <associate|eq 9.113.041|<tuple|9.113|?>>
+    <associate|eq 9.114.041|<tuple|9.114|?>>
+    <associate|eq 9.115.041|<tuple|9.115|?>>
+    <associate|eq 9.116.041|<tuple|9.116|?>>
+    <associate|eq 9.117.041|<tuple|9.117|?>>
+    <associate|eq 9.118.042|<tuple|9.118|?>>
+    <associate|eq 9.119.042|<tuple|9.119|?>>
     <associate|eq 9.12.029|<tuple|9.10|?>>
+    <associate|eq 9.120.042|<tuple|9.120|?>>
+    <associate|eq 9.121.042|<tuple|9.121|?>>
+    <associate|eq 9.122.042|<tuple|9.124|?>>
+    <associate|eq 9.123.042|<tuple|9.125|?>>
+    <associate|eq 9.124.042|<tuple|9.124|?>>
+    <associate|eq 9.125.042|<tuple|9.125|?>>
     <associate|eq 9.14.029|<tuple|9.12|?>>
     <associate|eq 9.16.030|<tuple|9.13|?>>
     <associate|eq 9.17.030|<tuple|9.14|?>>
@@ -10963,12 +11733,12 @@
     <associate|rational totally ordered|<tuple|8.31|?>>
     <associate|rational x-y|<tuple|8.9|?>>
     <associate|rational {0}|<tuple|8.21|?>>
+    <associate|real (x^n-1)\<gtr\>=n.(x-1)|<tuple|9.75|?>>
     <associate|real -(a.b)=(-a).b=(a.(-b)|<tuple|9.29|?>>
     <associate|real 0\<less\>1|<tuple|9.46|?>>
     <associate|real 0\<less\>=a,b and a+b=0 then a=0=b|<tuple|9.50|?>>
     <associate|real 1.a=a for positive numbers|<tuple|9.21|?>>
     <associate|real Archimedean property|<tuple|9.68|?>>
-    <associate|real Archimedean property consequence|<tuple|9.68|?>>
     <associate|real Archimedean property consequence (1)|<tuple|9.69|?>>
     <associate|real Archimedean property consequence (2)|<tuple|9.70|?>>
     <associate|real Dedekind's cut|<tuple|9.1|?>>
@@ -10983,11 +11753,13 @@
     <associate|real ZR properties|<tuple|9.60|?>>
     <associate|real a.(b+g) where b or g is negative|<tuple|9.30|?>>
     <associate|real a.b=b.a positive numbers|<tuple|9.22|?>>
+    <associate|real a\<less\>2^n|<tuple|9.74|?>>
     <associate|real a\<less\>a+1 and a-1\<less\>a|<tuple|9.49|?>>
     <associate|real a^-1|<tuple|9.31|?>>
     <associate|real a_r.a_s=a_r.s|<tuple|9.35|?>>
     <associate|real associativity positive numbers|<tuple|9.23|?>>
     <associate|real conditional complete|<tuple|9.54|?>>
+    <associate|real densitiy theorem|<tuple|9.71|?>>
     <associate|real distributivity|<tuple|9.24|?>>
     <associate|real division of real numbers in positive and negative
     numbers|<tuple|9.17|?>>
@@ -11001,8 +11773,13 @@
     <associate|real inv(a) is inverse element|<tuple|9.26|?>>
     <associate|real inverse of rational cut|<tuple|9.34|?>>
     <associate|real irrational numbers|<tuple|9.55|?>>
+    <associate|real iteration|<tuple|9.80|?>>
     <associate|real lemma for sum operator|<tuple|9.13|?>>
+    <associate|real mathematical induction|<tuple|9.79|?>>
     <associate|real multiplication operator|<tuple|9.28|?>>
+    <associate|real n\<less\>2^n|<tuple|9.73|?>>
+    <associate|real n\<less\>m and 0\<less\>x\<less\>1 then
+    x^n\<less\>x^m|<tuple|9.77|?>>
     <associate|real natural numbers, integers and rational
     numbers|<tuple|9.64|?>>
     <associate|real negastive cut of rational cut|<tuple|9.11|?>>
@@ -11023,13 +11800,17 @@
     <associate|real rational cut properties|<tuple|9.36|?>>
     <associate|real rational numbers specification|<tuple|9.65|?>>
     <associate|real real numbers|<tuple|9.2|?>>
+    <associate|real recursion|<tuple|9.81|?>>
+    <associate|real recursion iteration|<tuple|9.81|?>>
     <associate|real strict order relation definition|<tuple|9.43|?>>
     <associate|real sum is a operator|<tuple|9.14|?>>
     <associate|real sup(S+T) and inf(S+T)|<tuple|9.57|?>>
     <associate|real sup(S+s) inf(T+t)|<tuple|9.58|?>>
     <associate|real totally ordered|<tuple|9.47|?>>
     <associate|real x\<less\>y=\<gtr\>x+1\<less\>=y|<tuple|9.67|?>>
+    <associate|real x^n\<gtr\>n if x\<gtr\>1 (R)|<tuple|9.76|?>>
     <associate|reals the set of reals are non empty|<tuple|9.5|?>>
+    <associate|recursion recursion step|<tuple|9.82|?>>
     <associate|sign function|<tuple|8.20|?>>
   </collection>
 </references>
@@ -11074,6 +11855,8 @@
       <tuple|<tuple|<with|mode|<quote|math>|\<bbb-Z\><rsub|\<bbb-R\>>>>|<pageref|auto-35>>
 
       <tuple|<tuple|<with|mode|<quote|math>|\<bbb-N\><rsub|0,\<bbb-R\>>>>|<pageref|auto-36>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<bbb-N\><rsub|\<bbb-R\>>>>|<pageref|auto-37>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|7<space|2spc>The
