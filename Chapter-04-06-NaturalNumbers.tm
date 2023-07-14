@@ -8437,7 +8437,6 @@
     <associate|mapping of N to a finite set (1)|<tuple|6.45|164>>
     <associate|mapping of N to a finite set (2)|<tuple|6.46|165>>
     <associate|mathematical induction|<tuple|5.82|149>>
-    <associate|mathematical induction general|<tuple|5.83|?>>
     <associate|max element of a family|<tuple|6.48|167>>
     <associate|n\<less\>=m=\<gtr\>S_n\<less\>=S_m|<tuple|6.17|156>>
     <associate|natural numbers|<tuple|5.3|127>>

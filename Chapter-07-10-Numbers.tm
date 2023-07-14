@@ -632,127 +632,6 @@
     <math|n+<around*|(|<around*|(|-k|)>+k|)>=k> proving <math|n=k>.
   </proof>
 
-  We can use recursion [see: theorem <reference|recursion final>] to define
-  power in the set of integer
-
-  <\definition>
-    Let <math|z\<in\>\<bbb-Z\>> then <math|z<rsup|<around*|(|.|)>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>
-    <math|n\<rightarrow\>z<rsup|n>> is defined by\ 
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|z<rsup|0><rsup|><rsup|>>|<cell|=>|<cell|1>>|<row|<cell|z<rsup|n+1>>|<cell|=>|<cell|z\<cdot\>z<rsup|n>>>>>
-    </eqnarray*>
-  </definition>
-
-  <\theorem>
-    <label|integers z^n++m=z^n.z^m>If <math|n,m\<in\>\<bbb-N\><rsub|0>> and
-    <math|z\<in\>\<bbb-N\><rsub|0>> then <math|z<rsup|n+m>=z<rsup|n>\<cdot\>z<rsup|m>>
-  </theorem>
-
-  <\proof>
-    This is proved by induction, so let <math|z\<in\>\<bbb-Z\>,n\<in\>\<bbb-N\><rsub|0>>
-    and define\ 
-
-    <\equation*>
-      S<rsub|n,z>=<around*|{|m\<in\>\<bbb-N\><rsub|0>\|z<rsup|n+m>=z<rsup|n>\<cdot\>z<rsup|m>|}>
-    </equation*>
-
-    then we have:
-
-    <\description>
-      <item*|<math|0\<in\>S<rsub|n,z>>>Then
-      <math|z<rsup|n+0>=z<rsup|n>=z<rsup|n>\<cdot\>1=z<rsup|n>\<cdot\>z<rsup|0>>
-      proving that <math|0\<in\>S<rsub|n,z>>.
-
-      <item*|<math|m\<in\>S<rsub|n,z>\<Rightarrow\>m+1\<in\>S<rsub|n,z>>>Then\ 
-
-      <\eqnarray*>
-        <tformat|<table|<row|<cell|z<rsup|n+<around*|(|m+1|)>>>|<cell|=>|<cell|z<rsup|<around*|(|n+m|)>+1>>>|<row|<cell|>|<cell|=>|<cell|z\<cdot\>z<rsup|<around*|(|n+m|)>>>>|<row|<cell|>|<cell|=>|<cell|z<rsup|n+m>\<cdot\>z>>|<row|<cell|>|<cell|\<equallim\><rsub|m\<in\>S<rsub|n,z><rsub|>>>|<cell|<around*|(|z<rsup|n>\<cdot\>z<rsup|m>|)>\<cdot\>z>>|<row|<cell|>|<cell|=>|<cell|z<rsup|n>\<cdot\><around*|(|z<rsup|m>\<cdot\>z|)>>>|<row|<cell|>|<cell|=>|<cell|z<rsup|n>\<cdot\><around*|(|z\<cdot\>z<rsup|m>|)>>>|<row|<cell|>|<cell|=>|<cell|z<rsup|n>\<cdot\>z<rsup|m+1>>>>>
-      </eqnarray*>
-
-      proving that <math|m+1\<in\>S<rsub|n,z>>
-    </description>
-
-    Mathematical induction completes then the proof.
-  </proof>
-
-  <\theorem>
-    <label|integers properties>Let <math|n\<in\>\<bbb-N\><rsub|0>> then we
-    have
-
-    <\enumerate>
-      <item>If <math|n\<neq\>0> then <math|0<rsup|n>=0>
-
-      <item><math|1<rsup|n>=1>
-
-      <item><math|<around*|(|-1|)><rsup|n>=1\<vee\><around*|(|-1|)><rsup|n>=-1>
-
-      <item><math|<around*|(|-1|)><rsup|2\<cdot\>n>=1>
-
-      <item><math|<around*|(|-1|)><rsup|2\<cdot\>n+1>=-1>
-    </enumerate>
-  </theorem>
-
-  <\proof>
-    \ 
-
-    <\enumerate>
-      <item>If <math|n\<neq\>0> then <math|\<exists\>m\<in\>\<bbb-N\><rsub|0>>
-      such that <math|n=m+1> so that <math|0<rsup|n>=0<rsup|m+1>=0\<cdot\>0<rsup|m>\<equallim\><rsub|<text|[theorem:
-      <reference|integers absorbing element>]>>0>
-
-      <item>We proceed by induction, so let\ 
-
-      <\equation*>
-        S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|1<rsup|n>=1|}>
-      </equation*>
-
-      then we have:
-
-      <\description>
-        <item*|<math|0\<in\>S>><math|1<rsup|0>=1> by definition proving that
-        <math|0\<in\>S>
-
-        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>><math|1<rsup|n+1>=1\<cdot\>1<rsup|n>\<equallim\><rsub|n\<in\>S>1\<cdot\>1>
-        proving that <math|n+1\<in\>S>
-      </description>
-
-      <item>Again we use induction, so let\ 
-
-      <\equation*>
-        S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|<around*|(|-1|)><rsup|n>=1\<vee\><around*|(|-1|)><rsup|n>=-1|}>
-      </equation*>
-
-      then we have:
-
-      <\description>
-        <item*|<math|0\<in\>S>><math|<around*|(|-1|)><rsup|0>=1> proving that
-        <math|0\<in\>S>.
-
-        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>As <math|n\<in\>S> we
-        have either:
-
-        <\description>
-          <item*|<math|<around*|(|-1|)><rsup|n>=1>>Then
-          <math|<around*|(|-1|)><rsup|n+1>=<around*|(|-1|)>\<cdot\><around*|(|-1|)><rsup|n>=<around*|(|-1|)>\<cdot\>1=-1>
-          so the <math|n+1\<in\>S>
-
-          <item*|<math|<around*|(|-1|)><rsup|n>=-1>>Then
-          <math|<around*|(|-1|)><rsup|n+1>=<around*|(|-1|)>\<cdot\><around*|(|-1|)><rsup|n>=<around*|(|-1|)>\<cdot\><around*|(|-1|)>\<equallim\><rsub|<text|[theorem:
-          <reference|integers integral domain>]>>1> so that <math|n+1\<in\>S>
-        </description>
-      </description>
-
-      <item><math|<around*|(|-1|)><rsup|2\<cdot\>n>=<around*|(|-1|)><rsup|<around*|(|1+1|)>\<cdot\>n>=<around*|(|-1|)><rsup|n+n>\<equallim\><rsub|<text|[theorem:
-      <reference|integers z^n++m=z^n.z^m>]>><around*|(|-1|)><rsup|n>\<cdot\><around*|(|-1|)><rsup|n>\<equallim\><rsub|<text|[theorem:
-      <reference|integers integral domain>] and (3)>><rsup|>1>
-
-      <item><math|<around*|(|-1|)><rsup|2\<cdot\>n+1>=<around*|(|-1|)>\<cdot\><around*|(|-1|)><rsup|2\<cdot\>n>\<equallim\><rsub|<around*|(|4|)>><around*|(|-1|)>\<cdot\>1=-1>
-    </enumerate>
-
-    \;
-  </proof>
-
   <section|Order relation on the set of integers>
 
   First we define the set of non negative integers.
@@ -2918,126 +2797,6 @@
     </enumerate>
 
     \;
-  </proof>
-
-  Next we define power in the set of rational numbers.
-
-  <\definition>
-    <label|rational power>Let <math|q\<in\>\<bbb-Q\>> then
-    <math|q<rsup|<around*|(|.|)>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Q\>>
-    is defined by <math|n\<rightarrow\>q<rsup|n>> where
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|q<rsup|0>>|<cell|=>|<cell|1>>|<row|<cell|q<rsup|n+1>>|<cell|=>|<cell|q\<cdot\>q<rsup|n>>>>>
-    </eqnarray*>
-  </definition>
-
-  <\theorem>
-    <label|rational q^(n+m)=q^n.q^m>If <math|n,m\<in\>\<bbb-N\><rsub|0>> and
-    <math|q\<in\>\<bbb-Q\>> then <math|q<rsup|n+m>=q<rsup|n>\<cdot\>q<rsup|m>>
-  </theorem>
-
-  <\proof>
-    This is proved by induction, so let <math|q\<in\>\<bbb-Q\>,n\<in\>\<bbb-N\><rsub|0>>
-    and define\ 
-
-    <\equation*>
-      S<rsub|n,q>=<around*|{|m\<in\>\<bbb-N\><rsub|0>\|q<rsup|n+m>=q<rsup|n>\<cdot\>q<rsup|m>|}>
-    </equation*>
-
-    then we have:
-
-    <\description>
-      <item*|<math|0\<in\>S<rsub|n,q>>>Then
-      <math|q<rsup|n+0>=q<rsup|n>=q<rsup|n>\<cdot\>1=q<rsup|n>\<cdot\>q<rsup|0>>
-      proving that <math|0\<in\>S<rsub|n,q>>.
-
-      <item*|<math|m\<in\>S<rsub|n,q>\<Rightarrow\>m+1\<in\>S<rsub|n,q>>>Then\ 
-
-      <\eqnarray*>
-        <tformat|<table|<row|<cell|q<rsup|n+<around*|(|m+1|)>>>|<cell|=>|<cell|q<rsup|<around*|(|n+m|)>+1>>>|<row|<cell|>|<cell|=>|<cell|q\<cdot\>q<rsup|<around*|(|n+m|)>>>>|<row|<cell|>|<cell|=>|<cell|q<rsup|n+m>\<cdot\>q>>|<row|<cell|>|<cell|\<equallim\><rsub|m\<in\>S<rsub|n,q><rsub|>>>|<cell|<around*|(|q<rsup|n>\<cdot\>q<rsup|m>|)>\<cdot\>q>>|<row|<cell|>|<cell|=>|<cell|q<rsup|n>\<cdot\><around*|(|q<rsup|m>\<cdot\>q|)>>>|<row|<cell|>|<cell|=>|<cell|q<rsup|n>\<cdot\><around*|(|q\<cdot\>q<rsup|m>|)>>>|<row|<cell|>|<cell|=>|<cell|q<rsup|n>\<cdot\>q<rsup|m+1>>>>>
-      </eqnarray*>
-
-      proving that <math|m+1\<in\>S<rsub|n,q>>
-    </description>
-
-    Mathematical induction completes then the proof.
-  </proof>
-
-  <\theorem>
-    <label|ration power properties>Let <math|n\<in\>\<bbb-N\><rsub|0>> then
-    we have
-
-    <\enumerate>
-      <item>If <math|n\<neq\>0> then <math|0<rsup|n>=0>
-
-      <item><math|1<rsup|n>=1>
-
-      <item><math|<around*|(|-1|)><rsup|n>=1\<vee\><around*|(|-1|)><rsup|n>=-1>
-
-      <item><math|<around*|(|-1|)><rsup|2\<cdot\>n>=1>
-
-      <item><math|<around*|(|-1|)><rsup|2\<cdot\>n+1>=-1>
-    </enumerate>
-  </theorem>
-
-  <\proof>
-    \ 
-
-    <\enumerate>
-      <item>If <math|n\<neq\>0> then <math|\<exists\>m\<in\>\<bbb-N\><rsub|0>>
-      such that <math|n=m+1> so that <math|0<rsup|n>=0<rsup|m+1>=0\<cdot\>0<rsup|m>\<equallim\><rsub|<text|[theorem:
-      <reference|rational absorbing element>]]>>0>
-
-      <item>We proceed by induction, so let\ 
-
-      <\equation*>
-        S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|1<rsup|n>=1|}>
-      </equation*>
-
-      then we have:
-
-      <\description>
-        <item*|<math|0\<in\>S>><math|1<rsup|0>=1> by definition, proving that
-        <math|0\<in\>S>
-
-        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>><math|1<rsup|n+1>=1\<cdot\>1<rsup|n>\<equallim\><rsub|n\<in\>S>1\<cdot\>1=1>
-        proving that <math|n+1\<in\>S>
-      </description>
-
-      <item>Again we use induction, so let\ 
-
-      <\equation*>
-        S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|<around*|(|-1|)><rsup|n>=1\<vee\><around*|(|-1|)><rsup|n>=-1|}>
-      </equation*>
-
-      then we have:
-
-      <\description>
-        <item*|<math|0\<in\>S>><math|<around*|(|-1|)><rsup|0>=1> proving that
-        <math|0\<in\>S>.
-
-        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>As <math|n\<in\>S> we
-        have either:
-
-        <\description>
-          <item*|<math|<around*|(|-1|)><rsup|n>=1>>Then
-          <math|<around*|(|-1|)><rsup|n+1>=<around*|(|-1|)>\<cdot\><around*|(|-1|)><rsup|n>=<around*|(|-1|)>\<cdot\>1=-1>
-          so the <math|n+1\<in\>S>
-
-          <item*|<math|<around*|(|-1|)><rsup|n>=-1>>Then
-          <math|<around*|(|-1|)><rsup|n+1>=<around*|(|-1|)>\<cdot\><around*|(|-1|)><rsup|n>=<around*|(|-1|)>\<cdot\><around*|(|-1|)>\<equallim\><rsub|<text|[theorem:
-          <reference|rational (-q).(-r)>]>>1\<cdot\>1=1> so that
-          <math|n+1\<in\>S>
-        </description>
-      </description>
-
-      <item><math|<around*|(|-1|)><rsup|2\<cdot\>n>=<around*|(|-1|)><rsup|<around*|(|1+1|)>\<cdot\>n>=<around*|(|-1|)><rsup|n+n>\<equallim\><rsub|<text|[theorem:
-      <reference|rational q^(n+m)=q^n.q^m>]>><around*|(|-1|)><rsup|n>\<cdot\><around*|(|-1|)><rsup|n>\<equallim\><rsub|<text|[theorem:
-      <reference|rational (-q).(-r)>] and (3)>><rsup|>1>
-
-      <item><math|<around*|(|-1|)><rsup|2\<cdot\>n+1>=<around*|(|-1|)>\<cdot\><around*|(|-1|)><rsup|2\<cdot\>n>\<equallim\><rsub|<around*|(|4|)>><around*|(|-1|)>\<cdot\>1=-1>
-    </enumerate>
   </proof>
 
   <section|Order Relation>
@@ -8247,138 +8006,6 @@
     </enumerate>
   </proof>
 
-  <subsubsection|Power in <math|\<bbb-R\>>>
-
-  Next we define power in the set of real numbers.
-
-  <\definition>
-    <label|real power>Let <math|\<alpha\>\<in\>\<bbb-R\>> then
-    <math|\<alpha\><rsup|<around*|(|.|)>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>
-    is defined by <math|n\<rightarrow\>\<alpha\><rsup|n>> where
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|\<alpha\><rsup|0>>|<cell|=>|<cell|1>>|<row|<cell|\<alpha\><rsup|n+1>>|<cell|=>|<cell|\<alpha\>\<cdot\>\<alpha\><rsup|n>>>>>
-    </eqnarray*>
-  </definition>
-
-  <\theorem>
-    Let <math|\<alpha\>\<in\>\<bbb-R\>> we have
-    <math|\<alpha\><rsup|1>=\<alpha\>> and
-    <math|\<alpha\><rsup|2>=\<alpha\>\<cdot\>\<alpha\>>
-  </theorem>
-
-  <\proof>
-    We have <math|\<alpha\><rsup|1>=\<alpha\><rsup|0+1>=\<alpha\>\<cdot\>\<alpha\><rsup|0>=\<alpha\>\<cdot\>1=\<alpha\>>
-    and <math|\<alpha\><rsup|2>=\<alpha\><rsup|1+1>=\<alpha\>\<cdot\>\<alpha\><rsup|1>=\<alpha\>\<cdot\>\<alpha\>>
-  </proof>
-
-  <\theorem>
-    <label|real q^(n+m)=q^n.q^m>If <math|n,m\<in\>\<bbb-N\><rsub|0>> and
-    <math|\<alpha\>\<in\>\<bbb-R\>> then <math|\<alpha\><rsup|n+m>=\<alpha\><rsup|n>\<cdot\>\<alpha\><rsup|m>>
-  </theorem>
-
-  <\proof>
-    This is proved by induction, so let <math|\<alpha\>\<in\>\<bbb-R\>,n\<in\>\<bbb-N\><rsub|0>>
-    and define\ 
-
-    <\equation*>
-      S<rsub|n,\<alpha\>>=<around*|{|m\<in\>\<bbb-N\><rsub|0>\|\<alpha\><rsup|n+m>=\<alpha\><rsup|n>\<cdot\>\<alpha\><rsup|m>|}>
-    </equation*>
-
-    then we have:
-
-    <\description>
-      <item*|<math|0\<in\>S<rsub|n,\<alpha\>>>>Then
-      <math|\<alpha\><rsup|n+0>=\<alpha\><rsup|n>=\<alpha\><rsup|n>\<cdot\>1=\<alpha\><rsup|n>\<cdot\>\<alpha\><rsup|0>>
-      proving that <math|0\<in\>S<rsub|n,\<alpha\>>>.
-
-      <item*|<math|m\<in\>S<rsub|n,\<alpha\>>\<Rightarrow\>m+1\<in\>S<rsub|n,\<alpha\>>>>Then\ 
-
-      <\eqnarray*>
-        <tformat|<table|<row|<cell|\<alpha\><rsup|n+<around*|(|m+1|)>>>|<cell|=>|<cell|\<alpha\><rsup|<around*|(|n+m|)>+1>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\>\<alpha\><rsup|<around*|(|n+m|)>>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\><rsup|n+m>\<cdot\>\<alpha\>>>|<row|<cell|>|<cell|\<equallim\><rsub|m\<in\>S<rsub|n,\<alpha\>><rsub|>>>|<cell|<around*|(|\<alpha\><rsup|n>\<cdot\>\<alpha\><rsup|m>|)>\<cdot\>\<alpha\>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\><rsup|n>\<cdot\><around*|(|\<alpha\><rsup|m>\<cdot\>\<alpha\>|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\><rsup|n>\<cdot\><around*|(|\<alpha\>\<cdot\>\<alpha\><rsup|m>|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\><rsup|n>\<cdot\>\<alpha\><rsup|m+1>>>>>
-      </eqnarray*>
-
-      proving that <math|m+1\<in\>S<rsub|n,\<alpha\>>>
-    </description>
-
-    Mathematical induction completes then the proof.
-  </proof>
-
-  <\theorem>
-    <label|real power properties>Let <math|n\<in\>\<bbb-N\><rsub|0>> then we
-    have
-
-    <\enumerate>
-      <item>If <math|n\<neq\>0> then <math|0<rsup|n>=0>
-
-      <item><math|1<rsup|n>=1>
-
-      <item><math|<around*|(|-1|)><rsup|n>=1\<vee\><around*|(|-1|)><rsup|n>=-1>
-
-      <item><math|<around*|(|-1|)><rsup|2\<cdot\>n>=1>
-
-      <item><math|<around*|(|-1|)><rsup|2\<cdot\>n+1>=-1>
-    </enumerate>
-  </theorem>
-
-  <\proof>
-    \ 
-
-    <\enumerate>
-      <item>If <math|n\<neq\>0> then <math|\<exists\>m\<in\>\<bbb-N\><rsub|0>>
-      such that <math|n=m+1> so that <math|0<rsup|n>=0<rsup|m+1>=0\<cdot\>0<rsup|m>=0>
-
-      <item>We proceed by induction, so let\ 
-
-      <\equation*>
-        S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|1<rsup|n>=1|}>
-      </equation*>
-
-      then we have:
-
-      <\description>
-        <item*|<math|0\<in\>S>><math|1<rsup|0>=1> by definition, proving that
-        <math|0\<in\>S>
-
-        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>><math|1<rsup|n+1>=1\<cdot\>1<rsup|n>\<equallim\><rsub|n\<in\>S>1\<cdot\>1=1>
-        proving that <math|n+1\<in\>S>
-      </description>
-
-      <item>Again we use induction, so let\ 
-
-      <\equation*>
-        S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|<around*|(|-1|)><rsup|n>=1\<vee\><around*|(|-1|)><rsup|n>=-1|}>
-      </equation*>
-
-      then we have:
-
-      <\description>
-        <item*|<math|0\<in\>S>><math|<around*|(|-1|)><rsup|0>=1> proving that
-        <math|0\<in\>S>.
-
-        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>As <math|n\<in\>S> we
-        have either:
-
-        <\description>
-          <item*|<math|<around*|(|-1|)><rsup|n>=1>>Then
-          <math|<around*|(|-1|)><rsup|n+1>=<around*|(|-1|)>\<cdot\><around*|(|-1|)><rsup|n>=<around*|(|-1|)>\<cdot\>1=-1>
-          so the <math|n+1\<in\>S>
-
-          <item*|<math|<around*|(|-1|)><rsup|n>=-1>>Then
-          <math|<around*|(|-1|)><rsup|n+1>=<around*|(|-1|)>\<cdot\><around*|(|-1|)><rsup|n>=<around*|(|-1|)>\<cdot\><around*|(|-1|)>\<equallim\><rsub|<text|[theorem:
-          <reference|real -(a.b)=(-a).b=(a.(-b)>]>>1\<cdot\>1=1> so that
-          <math|n+1\<in\>S>
-        </description>
-      </description>
-
-      <item><math|<around*|(|-1|)><rsup|2\<cdot\>n>=<around*|(|-1|)><rsup|<around*|(|1+1|)>\<cdot\>n>=<around*|(|-1|)><rsup|n+n>\<equallim\><rsub|<text|[theorem:
-      <reference|real q^(n+m)=q^n.q^m>]>><around*|(|-1|)><rsup|n>\<cdot\><around*|(|-1|)><rsup|n>\<equallim\><rsub|<text|[theorem:
-      <reference|real -(a.b)=(-a).b=(a.(-b)>]] and (3)>><rsup|>1>
-
-      <item><math|<around*|(|-1|)><rsup|2\<cdot\>n+1>=<around*|(|-1|)>\<cdot\><around*|(|-1|)><rsup|2\<cdot\>n>\<equallim\><rsub|<around*|(|4|)>><around*|(|-1|)>\<cdot\>1=-1>
-    </enumerate>
-  </proof>
-
   <section|Order relation on <math|\<bbb-R\>>>
 
   <\theorem>
@@ -9699,7 +9326,7 @@
       </enumerate>
     </proof>
 
-    <subsection|Embeddings in <math|\<bbb-R\>>>
+    <section|Embeddings in <math|\<bbb-R\>>>
   </corollary>
 
   First remember that by [theorems: <reference|real field embedding
@@ -10477,7 +10104,7 @@
       <math|n-1\<less\>x\<leqslant\>n>
 
       <item>If <math|0\<less\>x> then <math|\<exists\>n\<in\>\<bbb-N\><rsub|\<bbb-R\>>>
-      such that <math|<frac|1|n>\<less\>x>
+      such that <math|0\<less\>1/n\<less\>x>
     </enumerate>
   </corollary>
 
@@ -10528,7 +10155,7 @@
       <reference|real natural numbers, integers and rational numbers>] we
       have that <math|0\<leqslant\>n> so we find that <math|0\<less\>n>.
       Applying then [theorem: <reference|real order properties>] we have
-      <math|0\<less\>n<rsup|-1>> which using \ [theorem: <reference|real
+      <math|0\<less\>n<rsup|-1>=1/n> which using \ [theorem: <reference|real
       order properties>] on <math|1\<less\>n\<cdot\>x> gives
       <math|1/n=1\<cdot\>n<rsup|-1>\<less\><around*|(|n\<cdot\>x|)>\<cdot\>n<rsup|-1>=x>.
     </enumerate>
@@ -10786,198 +10413,14 @@
     </enumerate>
   </proof>
 
-  In the following theorems we have to be carefull because we are going to
-  mix <math|\<bbb-N\><rsub|0>> and <math|\<bbb-N\><rsub|0,\<bbb-R\>>>.
-  <math|\<bbb-N\><rsub|0>> will be used for powers as we can then use
-  recursion and induction, however <math|\<bbb-N\><rsub|0,\<bbb-R\>>> will be
-  used when working in <math|\<bbb-R\>>. To avoid execesive notation we use
-  the following convention:
+  <section|Recursion and Induction in the set of real numbers>
 
-  <\convention>
-    If <math|n\<in\>\<bbb-N\><rsub|0>> then if we want to use <math|n> in the
-    context of <math|\<bbb-N\><rsub|0,\<bbb-R\>>> we write
-    <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>> as
-    <math|n>. Likewise if <math|n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> and we
-    want to use <math|n> in the context of <math|\<bbb-N\><rsub|0>> we write
-    <math|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|n|)>>
-    as <math|n>. This causes no problems with multiplication, summation and
-    order as we have proved by [theorem: <reference|real NR properties>] that
-
-    <\equation*>
-      i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,+|\<rangle\>><text|
-      and >i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\><rsub|>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<cdot\>|\<rangle\>><text|
-      are group isomorphisms>
-    </equation*>
-
-    and\ 
-
-    <\equation*>
-      i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<leqslant\>|\<rangle\>><text|
-      is a order isomorphism>
-    </equation*>
-  </convention>
-
-  <\theorem>
-    <label|real n\<less\>2^n><math|\<forall\>n\<in\>\<bbb-N\><rsub|0>> we
-    have that <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>\<less\>2<rsup|n>>
-    or using our convention\ 
-
-    <\equation*>
-      n\<less\>2<rsup|n>
-    </equation*>
-  </theorem>
-
-  <\proof>
-    This is proved by induction so let <math|S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>\<less\>2<rsup|n>|}>>
-    then we have\ 
-
-    <\description>
-      <item*|<math|0\<in\>S>>As <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>=i<rsub|\<bbb-N\><rsub|0>><around*|(|0|)>=0\<less\>1=2<rsup|0>>
-      we have that <math|0\<in\>S>
-
-      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>For <math|n+1> we have
-      the following cases to consider:
-
-      <\description>
-        <item*|<math|n+1=1>>Then <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n+1|)>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>*<around*|(|1|)>=1\<less\>2=2<rsup|1>=2<rsup|n+1>>
-        proving that in this case <math|n+1\<in\>S>
-
-        <item*|<math|1\<less\>n+1>>Then by [theorem: <reference|natural
-        numbers n\<less\>m=\<gtr\>s(n)\<less\>=m>] we have
-        <math|1+1\<leqslant\>n+1> so that <math|1\<leqslant\>n>, adding
-        <math|n> to both sides gives then
-        <math|n+1\<leqslant\>n+n=<around*|(|1+1|)>\<cdot\>n=2\<cdot\>n>, so
-        that
-
-        <\equation*>
-          i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n+1|)>\<leqslant\>i<rsub|\<bbb-N\><rsub|o>\<rightarrow\>\<bbb-R\>><around*|(|2\<cdot\>n|)>=i<rsub|\<bbb-N\><rsub|0>><around*|(|2|)>\<cdot\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>=2\<cdot\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>
-        </equation*>
-
-        further as <math|n\<in\>S> we have
-        <math|i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>\<less\>2<rsup|n>> so
-        that <math|2\<cdot\>i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>\<less\>2\<cdot\>2<rsup|n>=2<rsup|n+1>>,
-        hence we have <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n+1|)>\<less\>2<rsup|n+1>>,
-        proving that <math|n+1\<in\>S>.
-      </description>
-    </description>
-  </proof>
-
-  <\corollary>
-    <label|real a\<less\>2^n><math|\<forall\>x\<in\>\<bbb-R\>> there exists a
-    <math|n\<in\>\<bbb-N\><rsub|0>> such that <math|x\<less\>2<rsup|n>>
-  </corollary>
-
-  <\proof>
-    Let <math|x\<in\>\<bbb-R\>> then by [corollary: <reference|real
-    Archimedean property consequence (1)>] thre exist a
-    <math|m\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> such that <math|x\<less\>m>,
-    using [theorem: <reference|real n\<less\>2^n>] for
-    <math|n=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|m|)>>
-    we have <math|i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>\<less\>2<rsup|n>>
-    or as <math|i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>=i<rsub|\<bbb-N\><rsub|0>><around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(||)>|)>=m>
-    that <math|m\<less\>2<rsup|n>> so we have <math|x\<less\>2<rsup|n>.>
-  </proof>
-
-  <\lemma>
-    <label|real (x^n-1)\<gtr\>=n.(x-1)>Let <math|x\<in\>\<bbb-R\>> with
-    <math|1\<less\>x> then <math|\<forall\>n\<in\>\<bbb-N\><rsub|0>> we have
-
-    <\equation*>
-      i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>\<cdot\><around*|(|x-1|)>\<leqslant\>x<rsup|n>-1
-    </equation*>
-
-    or using our convention
-
-    <\equation*>
-      n\<cdot\><around*|(|x-1|)>\<leqslant\>x<rsup|n>-1
-    </equation*>
-  </lemma>
-
-  <\proof>
-    We prove this by induction, so let <math|S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>\<cdot\><around*|(|x-1|)>\<leqslant\>x<rsup|n>-1|}>>
-    then we have:
-
-    <\description>
-      <item*|<math|0\<in\>S>>Then <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|0|)>=0\<cdot\><around*|(|x-1|)>=0\<leqslant\>0=1-1=x<rsup|0>-1=x<rsup|n>-1>
-      proving that <math|0\<in\>S>.
-
-      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Then as <math|n\<in\>S>
-      we have <math|><math|i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>\<cdot\><around*|(|x-1|)>\<leqslant\>x<rsup|n>-1>
-      which as <math|0\<less\>x> prove that\ 
-
-      <\equation>
-        <label|eq 9.116.041>x\<cdot\>i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>\<cdot\><around*|(|x-1|)>\<leqslant\>x\<cdot\><around*|(|x<rsup|n>-1|)>
-      </equation>
-
-      As <math|1\<less\>x> we have that <math|0\<less\>x-1\<Rightarrowlim\><rsub|0\<leqslant\>n>0\<less\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>\<cdot\><around*|(|x-1|)>>
-      so that
-
-      <\equation*>
-        i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>\<cdot\><around*|(|x-1|)>=1\<cdot\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>\<cdot\><around*|(|x-1|)>\<less\>x\<cdot\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>\<cdot\><around*|(|x-1|)>
-      </equation*>
-
-      which combined with [eq: <reference|eq 9.116.041>] proves that\ 
-
-      <\equation>
-        <label|eq 9.117.041>i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>\<cdot\><around*|(|x-1|)>\<leqslant\>x\<cdot\><around*|(|x<rsup|n>-1|)>
-      </equation>
-
-      <\eqnarray*>
-        <tformat|<table|<row|<cell|x<rsup|n+1>-1>|<cell|=>|<cell|x\<cdot\>x<rsup|n>-1>>|<row|<cell|>|<cell|=>|<cell|x\<cdot\>x<rsup|n>-x+x-1>>|<row|<cell|>|<cell|=>|<cell|x\<cdot\><around*|(|x<rsup|n>-1|)>+<around*|(|x-1|)>>>|<row|<cell|>|<cell|\<geqslant\><rsub|<text|[eq:
-        <reference|eq 9.117.041>]>>>|<cell|i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>\<cdot\><around*|(|x-1|)>+<around*|(|x-1|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>+1|)>\<cdot\><around*|(|x-1|)>>>|<row|<cell|>|<cell|=>|<cell|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n+1|)>\<cdot\><around*|(|x-1|)>>>>>
-      </eqnarray*>
-
-      proving that <math|n+1\<in\>S>.
-    </description>
-  </proof>
-
-  <\theorem>
-    <label|real x^n\<gtr\>n if x\<gtr\>1 (R)>If
-    <math|m\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> and <math|x\<in\>\<bbb-R\>>
-    with <math|1\<less\>x> then <math|\<exists\>n\<in\>\<bbb-N\><rsub|0><rsub|>>
-    such that <math|m\<less\>x<rsup|n>>
-  </theorem>
-
-  <\proof>
-    For <math|m\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> we have either:
-
-    <\description>
-      <item*|<math|m=1>>Then <math|m=0\<less\>1=x<rsup|0>> proving the
-      theorem in this case.
-
-      <item*|<math|m=1>>Then <math|m=1\<less\>x=x<rsup|1>> proving the
-      theorem in this case.
-
-      <item*|<math|1\<less\>m>>Then <math|0\<less\>m-1> and as
-      <math|0\<less\>x-1\<Rightarrow\><around*|(|x-1|)><rsup|-1>> so that
-      <math|<around*|(|m-1|)>/<around*|(|x-1|)>\<gtr\>0>. By [corollary:
-      <reference|real Archimedean property consequence (1)>] there exist a
-      <math|n<rprime|'>\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> such that
-      <math|<around*|(|m-1|)>/<around*|(|x-1|)>\<less\>n<rprime|'>>. As
-      <math|0\<less\>x-1> we have <math|m-1\<less\>n<rprime|'>\<cdot\><around*|(|x-1|)>>,
-      take <math|n=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>|)><rsup|-1><around*|(|n<rprime|'>|)>>
-      then by [lemma: <reference|real (x^n-1)\<gtr\>=n.(x-1)>]
-      <math|n<rprime|'>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>\<leqslant\><around*|(|x<rsup|n>-1|)>>,
-      hence <math|m-1\<leqslant\>x<rsup|n>-1> or \ <math|m\<less\>x<rsup|n>>,
-      proving the theorem in this case.
-    </description>
-  </proof>
-
-  <\theorem>
-    <label|real n\<less\>m and 0\<less\>x\<less\>1 then x^n\<less\>x^m>If
-    <math|x\<in\>\<bbb-R\>> with <math|0\<less\>x\<less\>1> and
-    <math|n,m\<in\>\<bbb-N\><rsub|0>> such that <math|n\<less\>m> then
-    <math|x<rsup|m>\<less\>x<rsup|n>>
-  </theorem>
-
-  <\proof>
-    We prove this by induction, so take <math|S<rsub|m>=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|x<rsup|m>\<leqslant\>x<rsup|m+n>|}>>
-  </proof>
+  <subsection|Extending Mathematical induction and recursion>
 
   To be able to use recursion and induction arguments we have to extend
   mathematical induction and recursion using
   <math|\<bbb-N\><rsub|0,\<bbb-R\>>> instead of <math|\<bbb-N\><rsub|0>>.
-  First we hangle induction and then recursion.
+  First we handle induction and then recursion.
 
   <\definition>
     Let <math|n,m\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> then we define\ 
@@ -11087,10 +10530,10 @@
     </equation*>
   </proof>
 
-  Next we handle recursion defnitions\ 
+  Next we handle recursive defnitions\ 
 
   <\theorem>
-    <label|real iteration>Let <math|A> be a set, <math|a\<in\>A> and
+    <label|real recursion>Let <math|A> be a set, <math|a\<in\>A> and
     <math|f:A\<rightarrow\>A> a function then there exist a
     <with|font-series|bold|unique> function\ 
 
@@ -11248,9 +10691,9 @@
   </proof>
 
   <\theorem>
-    <label|recursion recursion step>Let <math|A> be a set, <math|a\<in\>A>
-    and <math|g:\<bbb-N\><rsub|0,\<bbb-R\>>\<times\>A\<rightarrow\>A> then
-    there exist a <with|font-series|bold|unique> function\ 
+    <label|real recursion step>Let <math|A> be a set, <math|a\<in\>A> and
+    <math|g:\<bbb-N\><rsub|0,\<bbb-R\>>\<times\>A\<rightarrow\>A> then there
+    exist a <with|font-series|bold|unique> function\ 
 
     <\equation*>
       \<gamma\>:\<bbb-N\><rsub|0,\<bbb-R\>>\<rightarrow\>A
@@ -11357,6 +10800,520 @@
     </equation*>
   </proof>
 
+  <\corollary>
+    <label|real recursion step (2)>Let <math|A> be a set, <math|a\<in\>A> and
+    <math|g:\<bbb-N\><rsub|0,\<bbb-R\>>\<times\>A\<rightarrow\>A> then there
+    exist a <with|font-series|bold|unique> function\ 
+
+    <\equation*>
+      \<lambda\>:\<bbb-N\><rsub|0,\<bbb-R\>>\<rightarrow\>A
+    </equation*>
+
+    such that:
+
+    <\enumerate>
+      <item><math|\<lambda\><around*|(|0|)>=a>
+
+      <item><math|\<forall\>n\<in\><around*|{|1,\<ldots\>,\<infty\>|}>>
+      <math|\<lambda\><around*|(|n|)>=g<around*|(|n-1,\<lambda\><around*|(|n-1|)>|)>>
+    </enumerate>
+  </corollary>
+
+  <\proof>
+    Using [theorem: <reference|real recursion step>] there exists a
+    <with|font-series|bold|unique> <math|\<lambda\>:\<bbb-N\><rsub|0,\<bbb-R\>>\<rightarrow\>A>
+    such that\ 
+
+    <\equation*>
+      \<lambda\><around*|(|0|)>=a<text| and
+      >\<forall\>n\<in\>\<bbb-N\><rsub|0><text|
+      >\<lambda\><around*|(|n+1|)>=g<around*|(|n,\<lambda\><around*|(|n|)>|)>
+    </equation*>
+
+    Let <math|n\<in\><around*|{|1,\<ldots\>,\<infty\>|}>> then
+    <math|1\<leqslant\>n> so that <math|n-1\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>>
+    such that <math|n=<around*|(|n-1|)>+1>, hence
+    <math|\<lambda\><around*|(|n|)>=\<lambda\><around*|(|<around*|(|n-1|)>+1|)>=g<around*|(|n-1,\<lambda\><around*|(|n-1|)>|)>>.
+  </proof>
+
+  The two previous theorems gives a way of defining functions by recursions
+  as is expressed in the following two definitions.
+
+  <\definition>
+    <label|real definition by recursion (1)>Let <math|A> be a set,
+    <math|a\<in\>A> then we can define a function as follows:
+
+    <\equation*>
+      f:\<bbb-N\><rsub|0,\<bbb-R\>>\<rightarrow\>A
+    </equation*>
+
+    \ is defined by:
+
+    <\enumerate>
+      <item><math|f<around*|(|0|)>=a>
+
+      <item><math|f<around*|(|n+1|)>=G<around*|(|n,\<lambda\><around*|(|n|)>|)>>
+    </enumerate>
+
+    where <math|G<around*|(|n,\<lambda\><around*|(|n|)>|)>> is a expression
+    of two parameters. The above is equivalent with the function defined by
+    [theorem: <reference|real recursion step>] where <math|a\<in\>A> and
+    <math|g:\<bbb-N\><rsub|0,\<bbb-R\>>\<times\>A\<rightarrow\>A> is defined
+    by <math|g<around*|(|n,x|)>=G<around*|(|n,x|)>>.
+  </definition>
+
+  Another way to define a recursive function is based on [corollary:
+  <reference|real recursion step (2)>]\ 
+
+  <\definition>
+    <label|real definition by recursion (2)>Let <math|A> be a set,
+    <math|a\<in\>A> then we define <math|f:\<bbb-N\><rsub|0,\<bbb-R\>>\<rightarrow\>A>
+    as follows
+
+    <\equation*>
+      f<around*|(|n|)>=<choice|<tformat|<table|<row|<cell|a<text| if
+      >n=0>>|<row|<cell|G<around*|(|n-1,f<around*|(|n-1|)>|)><text| if
+      >n\<in\><around*|{|1,\<ldots\>\<infty\>|}>>>>>>
+    </equation*>
+
+    Which is equivalent with the function defined by [theorem:
+    <reference|recursion step form (3)>] where <math|a\<in\>A> and
+    <math|g:\<bbb-N\><rsub|0,\<bbb-R\>>\<times\>A\<rightarrow\>A> is defined
+    by <math|g<around*|(|n,x|)>=G<around*|(|n,x|)>>.
+  </definition>
+
+  We apply this to define power operation in <math|\<bbb-R\>>
+
+  <subsection|Power in <math|\<bbb-R\>>>
+
+  Next we define power in the set of real numbers.
+
+  <\definition>
+    <label|real power>Let <math|\<alpha\>\<in\>\<bbb-R\>> then
+    <math|\<alpha\><rsup|<around*|(|.|)>>:\<bbb-N\><rsub|0,\<bbb-R\>>\<rightarrow\>\<bbb-R\>>
+    is defined by <math|n\<rightarrow\>\<alpha\><rsup|n>> where
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<alpha\><rsup|0>>|<cell|=>|<cell|1>>|<row|<cell|\<alpha\><rsup|n+1>>|<cell|=>|<cell|\<alpha\>\<cdot\>\<alpha\><rsup|n>>>>>
+    </eqnarray*>
+  </definition>
+
+  <\theorem>
+    <label|real power properties (1)>Let <math|n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>>
+    then we have\ 
+
+    <\enumerate>
+      <item>If <math|m\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> then
+      <math|m<rsup|n>\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>>
+
+      <item>If <math|z\<in\>\<bbb-Z\><rsub|\<bbb-R\>>> then
+      <math|z<rsup|n>\<in\>\<bbb-Z\><rsub|\<bbb-R\>>>
+
+      <item>If <math|q\<in\>\<bbb-Q\>> then
+      <math|q<rsup|n>\<in\>\<bbb-Q\><rsub|\<bbb-R\>>>
+
+      <item>If <math|\<alpha\>\<in\>\<bbb-R\><rsup|+>> then
+      <math|\<alpha\><rsup|n>\<in\>\<bbb-R\><rsup|+>> [in other words if
+      <math|0\<less\>\<alpha\>> then <math|0\<less\>\<alpha\><rsup|n>>]
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    This is easely proved by induction.\ 
+
+    <\enumerate>
+      <item>Take <math|S<rsub|m>=<around*|{|n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>\|m<rsup|n>\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>|}>>
+      then we have
+
+      <\description>
+        <item*|<math|0\<in\>S<rsub|m>>>As
+        <math|m<rsup|0>=1\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> we have that
+        <math|0\<in\>S<rsub|m>>
+
+        <item*|<math|n\<in\>S<rsub|m>\<Rightarrow\>n+1\<in\>S<rsub|m>>>Then
+        <math|m<rsup|n+1>=m\<cdot\>m<rsup|n>>. As <math|n\<in\>S<rsub|m>> we
+        have that <math|m<rsup|n>\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> and by
+        the hypothese <math|m\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>>, so, as
+        <math|<around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<cdot\>|\<rangle\>>>
+        is a sub group of <math|<around*|\<langle\>|\<bbb-R\>,\<cdot\>|\<rangle\>>>,
+        we have that <math|m\<cdot\>m<rsup|n>\<in\>S<rsub|m>>. Hence
+        <math|n+1\<in\>S<rsub|m>.>
+      </description>
+
+      <item>Take <math|S<rsub|z>=<around*|{|n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>\|z<rsup|n>\<in\>\<bbb-Z\>|}>>
+      then we have
+
+      <\description>
+        <item*|<math|0\<in\>S<rsub|z>>>As
+        <math|m<rsup|0>=1\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>\<subseteq\>\<bbb-Z\><rsub|\<bbb-R\>>>
+        we have that <math|0\<in\>S<rsub|z>>
+
+        <item*|<math|n\<in\>S<rsub|z>\<Rightarrow\>n+1\<in\>S<rsub|z>>>Then
+        <math|z<rsup|n+1>=z\<cdot\>z<rsup|n>>. As <math|n\<in\>S<rsub|z>> we
+        have that <math|z<rsup|n>\<in\>\<bbb-Z\><rsub|\<bbb-R\>>> and by the
+        hypothese <math|z\<in\>\<bbb-Z\><rsub|\<bbb-R\>>>, so, as
+        <math|<around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,\<cdot\>|\<rangle\>>>
+        is a sub group of <math|<around*|\<langle\>|\<bbb-R\>,\<cdot\>|\<rangle\>>>,
+        we have that <math|z\<cdot\>z<rsup|n>\<in\>S<rsub|z>>. Hence
+        <math|n+1\<in\>S<rsub|z>.>
+      </description>
+
+      <item>Take <math|S<rsub|q>=<around*|{|n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>\|q<rsup|n>\<in\>\<bbb-Q\><rsub|\<bbb-R\>>|}>>
+      then we have
+
+      <\description>
+        <item*|<math|0\<in\>S<rsub|q>>>As
+        <math|q<rsup|0>=1\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>\<subseteq\>\<bbb-Q\><rsub|\<bbb-R\>>>
+        we have that <math|0\<in\>S<rsub|q>>
+
+        <item*|<math|n\<in\>S<rsub|q>\<Rightarrow\>n+1\<in\>S<rsub|q>>>Then
+        <math|q<rsup|n+1>=q\<cdot\>q<rsup|n>>. As <math|n\<in\>S<rsub|q>> we
+        have that <math|q<rsup|n>\<in\>\<bbb-Q\><rsub|\<bbb-R\>>> and by the
+        hypothese <math|q\<in\>\<bbb-Q\><rsub|\<bbb-R\>>>, so, as
+        <math|<around*|\<langle\>|\<bbb-Q\>,\<cdot\>|\<rangle\>>> is a sub
+        group of <math|<around*|\<langle\>|\<bbb-R\>,\<cdot\>|\<rangle\>>>,
+        we have that <math|q\<cdot\>q<rsup|n>\<in\>S<rsub|q>>. Hence
+        <math|n+1\<in\>S<rsub|q>.>
+      </description>
+
+      <item>Take <math|S<rsub|\<alpha\>>=<around*|{|n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>\|\<alpha\><rsup|n>\<in\>\<bbb-R\><rsup|+>|}>>
+      then we have:
+
+      <\description>
+        <item*|<math|0\<in\>S<rsub|\<alpha\>>>>As
+        <math|\<alpha\><rsup|0>=1\<in\>\<bbb-R\><rsup|+>> it follows that
+        <math|0\<in\>S<rsub|\<alpha\>>>.
+
+        <item*|<math|n\<in\>S<rsub|\<alpha\>>\<rightarrow\>n+1\<in\>S<rsub|\<alpha\>>>>As
+        <math|n\<in\>S<rsub|\<alpha\>>> we have that
+        <math|0\<less\>\<alpha\><rsup|n>> so that, as
+        <math|0\<less\>\<alpha\>> we have that
+        <math|0\<less\>\<alpha\>\<cdot\>\<alpha\><rsup|n>=\<alpha\><rsup|n+1>>
+        proving that <math|n+1\<in\>S<rsub|\<alpha\>>.>
+      </description>
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    Let <math|\<alpha\>\<in\>\<bbb-R\>> we have
+    <math|\<alpha\><rsup|1>=\<alpha\>> and
+    <math|\<alpha\><rsup|2>=\<alpha\>\<cdot\>\<alpha\>>
+  </theorem>
+
+  <\proof>
+    We have <math|\<alpha\><rsup|1>=\<alpha\><rsup|0+1>=\<alpha\>\<cdot\>\<alpha\><rsup|0>=\<alpha\>\<cdot\>1=\<alpha\>>
+    and <math|\<alpha\><rsup|2>=\<alpha\><rsup|1+1>=\<alpha\>\<cdot\>\<alpha\><rsup|1>=\<alpha\>\<cdot\>\<alpha\>>
+  </proof>
+
+  <\theorem>
+    <label|real q^(n+m)=q^n.q^m>If <math|n,m\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>>
+    and <math|\<alpha\>\<in\>\<bbb-R\>> then
+    <math|\<alpha\><rsup|n+m>=\<alpha\><rsup|n>\<cdot\>\<alpha\><rsup|m>>
+  </theorem>
+
+  <\proof>
+    This is proved by induction, so let <math|\<alpha\>\<in\>\<bbb-R\>,n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>>
+    and define\ 
+
+    <\equation*>
+      S<rsub|n,\<alpha\>>=<around*|{|m\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>\|\<alpha\><rsup|n+m>=\<alpha\><rsup|n>\<cdot\>\<alpha\><rsup|m>|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|0\<in\>S<rsub|n,\<alpha\>>>>Then
+      <math|\<alpha\><rsup|n+0>=\<alpha\><rsup|n>=\<alpha\><rsup|n>\<cdot\>1=\<alpha\><rsup|n>\<cdot\>\<alpha\><rsup|0>>
+      proving that <math|0\<in\>S<rsub|n,\<alpha\>>>.
+
+      <item*|<math|m\<in\>S<rsub|n,\<alpha\>>\<Rightarrow\>m+1\<in\>S<rsub|n,\<alpha\>>>>Then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<alpha\><rsup|n+<around*|(|m+1|)>>>|<cell|=>|<cell|\<alpha\><rsup|<around*|(|n+m|)>+1>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\>\<alpha\><rsup|<around*|(|n+m|)>>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\><rsup|n+m>\<cdot\>\<alpha\>>>|<row|<cell|>|<cell|\<equallim\><rsub|m\<in\>S<rsub|n,\<alpha\>><rsub|>>>|<cell|<around*|(|\<alpha\><rsup|n>\<cdot\>\<alpha\><rsup|m>|)>\<cdot\>\<alpha\>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\><rsup|n>\<cdot\><around*|(|\<alpha\><rsup|m>\<cdot\>\<alpha\>|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\><rsup|n>\<cdot\><around*|(|\<alpha\>\<cdot\>\<alpha\><rsup|m>|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\><rsup|n>\<cdot\>\<alpha\><rsup|m+1>>>>>
+      </eqnarray*>
+
+      proving that <math|m+1\<in\>S<rsub|n,\<alpha\>>>
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|real power of inverse>Let <math|x\<in\>\<bbb-R\>\\<around*|{|0|}>>
+    then <math|<around*|(|x<rsup|-1>|)><rsup|n>=<around*|(|x<rsup|n>|)><rsup|-1>>
+    or in other words <math|<around*|(|1/x|)><rsup|n>=1/x<rsup|n>>
+  </theorem>
+
+  <\proof>
+    Theorem we prove this by induction, take
+    <math|S=<around*|{|n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>\|<around*|(|x<rsup|-1>|)><rsup|n>=<around*|(|x<rsup|n>|)><rsup|-1>|}>>
+    then we have:
+
+    <\description>
+      <item*|<math|0\<in\>S>>As <math|<around*|(|1/x|)><rsup|0>=1=<around*|(|1|)><rsup|-1>=<around*|(|x<rsup|0>|)>>
+      proving that <math|0\<in\>S>.
+
+      <item*|<math|n\<in\>S\<rightarrow\>n+1\<in\>S>>We have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|x<rsup|-1>|)><rsup|n+1>>|<cell|=>|<cell|<around*|(|x<rsup|-1>|)>\<cdot\><around*|(|x<rsup|-1>|)><rsup|n>>>|<row|<cell|>|<cell|\<equallim\><rsub|n\<in\>S>>|<cell|<around*|(|x<rsup|-1>|)>\<cdot\><around*|(|x<rsup|n>|)><rsup|-1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|field inverse of product>]>>>|<cell|<around*|(|x\<cdot\>x<rsup|n>|)><rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x<rsup|n+1>|)><rsup|-1>>>>>
+      </eqnarray*>
+
+      proving that <math|n+1\<in\>S>.
+    </description>
+
+    \;
+  </proof>
+
+  <\theorem>
+    <label|real power properties>Let <math|n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>>
+    then we have
+
+    <\enumerate>
+      <item>If <math|n\<neq\>0> then <math|0<rsup|n>=0> [note that by
+      definition <math|0<rsup|0>=1>]
+
+      <item><math|1<rsup|n>=1>
+
+      <item><math|<around*|(|-1|)><rsup|n>=1\<vee\><around*|(|-1|)><rsup|n>=-1>
+
+      <item><math|<around*|(|-1|)><rsup|2\<cdot\>n>=1>
+
+      <item><math|<around*|(|-1|)><rsup|2\<cdot\>n+1>=-1>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|n\<neq\>0> then <math|\<exists\>m\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>>
+      such that <math|n=m+1> so that <math|0<rsup|n>=0<rsup|m+1>=0\<cdot\>0<rsup|m>=0>
+
+      <item>We proceed by induction, so let\ 
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>\|1<rsup|n>=1|}>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|0\<in\>S>><math|1<rsup|0>=1> by definition, proving that
+        <math|0\<in\>S>
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>><math|1<rsup|n+1>=1\<cdot\>1<rsup|n>\<equallim\><rsub|n\<in\>S>1\<cdot\>1=1>
+        proving that <math|n+1\<in\>S>
+      </description>
+
+      <item>Again we use induction, so let\ 
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>\|<around*|(|-1|)><rsup|n>=1\<vee\><around*|(|-1|)><rsup|n>=-1|}>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|0\<in\>S>><math|<around*|(|-1|)><rsup|0>=1> proving that
+        <math|0\<in\>S>.
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>As <math|n\<in\>S> we
+        have either:
+
+        <\description>
+          <item*|<math|<around*|(|-1|)><rsup|n>=1>>Then
+          <math|<around*|(|-1|)><rsup|n+1>=<around*|(|-1|)>\<cdot\><around*|(|-1|)><rsup|n>=<around*|(|-1|)>\<cdot\>1=-1>
+          so the <math|n+1\<in\>S>
+
+          <item*|<math|<around*|(|-1|)><rsup|n>=-1>>Then
+          <math|<around*|(|-1|)><rsup|n+1>=<around*|(|-1|)>\<cdot\><around*|(|-1|)><rsup|n>=<around*|(|-1|)>\<cdot\><around*|(|-1|)>\<equallim\><rsub|<text|[theorem:
+          <reference|real -(a.b)=(-a).b=(a.(-b)>]>>1\<cdot\>1=1> so that
+          <math|n+1\<in\>S>
+        </description>
+      </description>
+
+      <item><math|<around*|(|-1|)><rsup|2\<cdot\>n>=<around*|(|-1|)><rsup|<around*|(|1+1|)>\<cdot\>n>=<around*|(|-1|)><rsup|n+n>\<equallim\><rsub|<text|[theorem:
+      <reference|real q^(n+m)=q^n.q^m>]>><around*|(|-1|)><rsup|n>\<cdot\><around*|(|-1|)><rsup|n>\<equallim\><rsub|<text|[theorem:
+      <reference|real -(a.b)=(-a).b=(a.(-b)>]] and (3)>><rsup|>1>
+
+      <item><math|<around*|(|-1|)><rsup|2\<cdot\>n+1>=<around*|(|-1|)>\<cdot\><around*|(|-1|)><rsup|2\<cdot\>n>\<equallim\><rsub|<around*|(|4|)>><around*|(|-1|)>\<cdot\>1=-1>
+    </enumerate>
+  </proof>
+
+  The following theorems will play a important role in the calculation of
+  limits.
+
+  <\theorem>
+    <label|real n\<less\>2^n><math|\<forall\>n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>>
+    we have that <math|n\<less\>2<rsup|n>>\ 
+  </theorem>
+
+  <\proof>
+    This is proved by induction so let <math|S=<around*|{|n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>\|n\<less\>2<rsup|n>|}>>
+    then we have\ 
+
+    <\description>
+      <item*|<math|0\<in\>S>>As <math|n=0\<less\>1=2<rsup|0>> we have that
+      <math|0\<in\>S>
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>For <math|n+1> we have
+      the following cases to consider:
+
+      <\description>
+        <item*|<math|n+1=1>>Then <math|n+1=1\<less\>2=2<rsup|1>=2<rsup|n+1>>
+        proving that in this case <math|n+1\<in\>S>
+
+        <item*|<math|1\<less\>n+1>>Then by [theorem: <reference|real
+        x\<less\>y=\<gtr\>x+1\<less\>=y>] we have <math|1+1\<leqslant\>n+1>
+        so that <math|1\<leqslant\>n>, adding <math|n> to both sides gives
+        then <math|n+1\<leqslant\>n+n=<around*|(|1+1|)>\<cdot\>n=2\<cdot\>n>.
+        Further as <math|n\<in\>S> we have <math|n\<less\>2<rsup|n>> so that
+        <math|2\<cdot\>n\<less\>2\<cdot\>2<rsup|n>=2<rsup|n+1>>, hence we
+        have <math|n+1\<less\>2<rsup|n+1>>, proving that <math|n+1\<in\>S>.
+      </description>
+    </description>
+  </proof>
+
+  <\corollary>
+    <label|real a\<less\>2^n><math|\<forall\>x\<in\>\<bbb-R\>> there exists a
+    <math|n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> such that
+    <math|x\<less\>2<rsup|n>>
+  </corollary>
+
+  <\proof>
+    Let <math|x\<in\>\<bbb-R\>> then by [corollary: <reference|real
+    Archimedean property consequence (1)>] there exist a
+    <math|n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> such that <math|x\<less\>n>,
+    using [theorem: <reference|real n\<less\>2^n>] <math|n\<less\>2<rsup|n>>
+    so we have <math|x\<less\>2<rsup|n>.>
+  </proof>
+
+  <\lemma>
+    <label|real (x^n-1)\<gtr\>=n.(x-1)>Let <math|x\<in\>\<bbb-R\>> with
+    <math|1\<less\>x> then <math|\<forall\>n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>>
+    we have
+
+    <\equation*>
+      n\<cdot\><around*|(|x-1|)>\<leqslant\>x<rsup|n>-1
+    </equation*>
+  </lemma>
+
+  <\proof>
+    We prove this by induction, so let <math|S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|n\<cdot\><around*|(|x-1|)>\<leqslant\>x<rsup|n>-1|}>>
+    then we have:
+
+    <\description>
+      <item*|<math|0\<in\>S>>Then <math|n\<cdot\><around*|(|x-1|)>=0\<cdot\><around*|(|x-1|)>=0\<leqslant\>0=1-1=x<rsup|0>-1=x<rsup|n>-1>
+      proving that <math|0\<in\>S>.
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Then as <math|n\<in\>S>
+      we have <math|><math|n\<cdot\><around*|(|x-1|)>\<leqslant\>x<rsup|n>-1>
+      which as <math|0\<less\>x> prove that\ 
+
+      <\equation>
+        <label|eq 9.116.041>x\<cdot\>n\<cdot\><around*|(|x-1|)>\<leqslant\>x\<cdot\><around*|(|x<rsup|n>-1|)>
+      </equation>
+
+      As <math|1\<less\>x> we have that <math|0\<less\>x-1\<Rightarrowlim\><rsub|0\<leqslant\>n>0\<less\>n\<cdot\><around*|(|x-1|)>>
+      so that
+
+      <\equation*>
+        n\<cdot\><around*|(|x-1|)>=1\<cdot\>n\<cdot\><around*|(|x-1|)>\<less\>x\<cdot\>n\<cdot\><around*|(|x-1|)>
+      </equation*>
+
+      which combined with [eq: <reference|eq 9.116.041>] proves that\ 
+
+      <\equation>
+        <label|eq 9.117.041>n\<cdot\><around*|(|x-1|)>\<leqslant\>x\<cdot\><around*|(|x<rsup|n>-1|)>
+      </equation>
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x<rsup|n+1>-1>|<cell|=>|<cell|x\<cdot\>x<rsup|n>-1>>|<row|<cell|>|<cell|=>|<cell|x\<cdot\>x<rsup|n>-x+x-1>>|<row|<cell|>|<cell|=>|<cell|x\<cdot\><around*|(|x<rsup|n>-1|)>+<around*|(|x-1|)>>>|<row|<cell|>|<cell|\<geqslant\><rsub|<text|[eq:
+        <reference|eq 9.117.041>]>>>|<cell|n\<cdot\><around*|(|x-1|)>+<around*|(|x-1|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|n+1|)>\<cdot\><around*|(|x-1|)>>>>>
+      </eqnarray*>
+
+      proving that <math|n+1\<in\>S>.
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|real x^n\<gtr\>n if x\<gtr\>1 (R)>If
+    <math|m\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> and <math|x\<in\>\<bbb-R\>>
+    with <math|1\<less\>x> then <math|\<exists\>n\<in\>\<bbb-N\><rsub|0><rsub|>,\<bbb-R\>>
+    such that <math|m\<less\>x<rsup|n>>
+  </theorem>
+
+  <\proof>
+    For <math|m\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> we have either:
+
+    <\description>
+      <item*|<math|m=1>>Then <math|m=0\<less\>1=x<rsup|0>> proving the
+      theorem in this case.
+
+      <item*|<math|m=1>>Then <math|m=1\<less\>x=x<rsup|1>> proving the
+      theorem in this case.
+
+      <item*|<math|1\<less\>m>>Then <math|0\<less\>m-1> and as
+      <math|0\<less\>x-1\<Rightarrow\><around*|(|x-1|)><rsup|-1>> so that
+      <math|<around*|(|m-1|)>/<around*|(|x-1|)>\<gtr\>0>. By [corollary:
+      <reference|real Archimedean property consequence (1)>] there exist a
+      <math|n<rprime|'>\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> such that
+      <math|<around*|(|m-1|)>/<around*|(|x-1|)>\<less\>n>. As
+      <math|0\<less\>x-1> we have <math|m-1\<less\>n\<cdot\><around*|(|x-1|)>>,
+      by [lemma: <reference|real (x^n-1)\<gtr\>=n.(x-1)>]
+      <math|n\<cdot\><around*|(|x-1|)>\<leqslant\><around*|(|x<rsup|n>-1|)>>,
+      hence <math|m-1\<leqslant\>x<rsup|n>-1> or \ <math|m\<less\>x<rsup|n>>,
+      proving the theorem in this case.
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|real n\<less\>m and 0\<less\>x\<less\>1 then x^n\<less\>x^m>If
+    <math|x\<in\>\<bbb-R\>> with <math|0\<less\>x\<less\>1> and
+    <math|n,m\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> such that <math|n\<less\>m>
+    then <math|x<rsup|m>\<less\>x<rsup|n>>
+  </theorem>
+
+  <\proof>
+    We prove this by induction, let <math|m\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>>
+    and take <math|S<rsub|m>=<around*|{|n\<in\><around*|{|1,\<ldots\>,\<infty\>|}>\|x<rsup|m+n>\<less\>x<rsup|m>|}>>
+    then we have:\ 
+
+    <\description>
+      <item*|<math|1\<in\>S<rsub|m>>>As <math|0\<less\>x> we have by
+      [theorem: <reference|real power properties (1)>] that
+      <math|0\<less\>x<rsup|m>>, hence from <math|x\<less\>1> we have that
+      <math|x<rsup|m+1>=x\<cdot\>x<rsup|m>\<less\>1\<cdot\>x<rsup|m>=x<rsup|m>>,
+      proving that <math|1\<in\>S<rsub|m>>.
+
+      <item*|<math|n\<in\>S<rsub|m>\<Rightarrow\>n+1\<in\>S<rsub|m>>>As
+      <math|x\<less\>1> and by [theorem: <reference|real power properties
+      (1)>] <math|0\<less\>x<rsup|m+n>> we have that
+      <math|x<rsup|m+<around*|(|n+1|)>>=x\<cdot\>x<rsup|m+n>\<less\>x<rsup|m+n>\<Rightarrowlim\><rsub|n\<in\>S<rsub|m>\<Rightarrow\>x<rsup|m+n>\<less\>x<rsup|m>>x<rsup|m+<around*|(|n+1|)>>\<less\>x<rsup|m>>
+      proving that <math|n+1\<in\>S<rsub|m>>.
+    </description>
+
+    Using Mathematical induction [see theorem: <reference|real mathematical
+    induction>] we have that <math|S<rsub|m>=<around*|{|1,\<ldots\>,\<infty\>|}><rsub|>>.So
+    take <math|n,m\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> with <math|n\<less\>m>
+    then <math|k=m-n\<gtr\>0\<Rightarrow\>k\<geqslant\>1> so that
+    <math|k\<in\><around*|{|1,\<ldots\>,\<infty\>|}>=S<rsub|n>> hence
+    <math|x<rsup|m>=x<rsup|n+k>\<less\>x<rsup|n><rsup|> completing the
+    proof.>
+  </proof>
+
+  <\theorem>
+    <label|real 0\<less\>x\<less\>1 then 0\<less\>x^n\<less\>e>Let
+    <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> and <math|x\<in\>\<bbb-R\>>
+    such that <math|0\<less\>x\<less\>1> then
+    <math|\<exists\>n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> such that
+    <math|0\<less\>x<rsup|n>\<less\>\<varepsilon\>>
+  </theorem>
+
+  <\proof>
+    TODO.
+  </proof>
+
   \;
 
   \;
@@ -11395,7 +11352,7 @@
 
 <\references>
   <\collection>
-    <associate|NQ is conditional complete|<tuple|8.48|?>>
+    <associate|NQ is conditional complete|<tuple|8.45|?>>
     <associate|auto-1|<tuple|7|?>>
     <associate|auto-10|<tuple|quotient|?>>
     <associate|auto-11|<tuple|<with|mode|<quote|math>|<frac|m|n>>|?>>
@@ -11421,22 +11378,23 @@
     <associate|auto-3|<tuple|integers|?>>
     <associate|auto-30|<tuple|<with|mode|<quote|math>|\<bbb-R\><rsup|+>>|?>>
     <associate|auto-31|<tuple|<with|mode|<quote|math>|\<bbb-R\><rsup|->>|?>>
-    <associate|auto-32|<tuple|9.1.2.3|?>>
-    <associate|auto-33|<tuple|9.2|?>>
-    <associate|auto-34|<tuple|9.2.1|?>>
-    <associate|auto-35|<tuple|<with|mode|<quote|math>|\<bbb-Z\><rsub|\<bbb-R\>>>|?>>
-    <associate|auto-36|<tuple|<with|mode|<quote|math>|\<bbb-N\><rsub|0,\<bbb-R\>>>|?>>
-    <associate|auto-37|<tuple|<with|mode|<quote|math>|\<bbb-N\><rsub|\<bbb-R\>>>|?>>
+    <associate|auto-32|<tuple|9.2|?>>
+    <associate|auto-33|<tuple|9.3|?>>
+    <associate|auto-34|<tuple|<with|mode|<quote|math>|\<bbb-Z\><rsub|\<bbb-R\>>>|?>>
+    <associate|auto-35|<tuple|<with|mode|<quote|math>|\<bbb-N\><rsub|0,\<bbb-R\>>>|?>>
+    <associate|auto-36|<tuple|<with|mode|<quote|math>|\<bbb-N\><rsub|\<bbb-R\>>>|?>>
+    <associate|auto-37|<tuple|9.4|?>>
+    <associate|auto-38|<tuple|9.4.1|?>>
+    <associate|auto-39|<tuple|9.4.2|?>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>>|?>>
     <associate|auto-5|<tuple|7.2|?>>
     <associate|auto-6|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>>|?>>
     <associate|auto-7|<tuple|absolute value|?>>
     <associate|auto-8|<tuple|<with|mode|<quote|math>|<around*|\||x|\|>>|?>>
     <associate|auto-9|<tuple|<with|mode|<quote|math>|m\|n>|?>>
-    <associate|eq 5.10.019|<tuple|9.124|?>>
-    <associate|eq 5.11.019|<tuple|9.125|?>>
-    <associate|eq 5.12.019|<tuple|9.126|?>>
-    <associate|eq 5.13.019|<tuple|9.127|?>>
+    <associate|definition by recursion (1)|<tuple|9.74|?>>
+    <associate|definition by recursion (2)|<tuple|9.75|?>>
+    <associate|eq 5.17.019|<tuple|9.124|?>>
     <associate|eq 7.1.022|<tuple|7.1|?>>
     <associate|eq 7.10.022|<tuple|7.10|?>>
     <associate|eq 7.11.022|<tuple|7.11|?>>
@@ -11517,17 +11475,18 @@
     <associate|eq 9.113.041|<tuple|9.113|?>>
     <associate|eq 9.114.041|<tuple|9.114|?>>
     <associate|eq 9.115.041|<tuple|9.115|?>>
-    <associate|eq 9.116.041|<tuple|9.116|?>>
-    <associate|eq 9.117.041|<tuple|9.117|?>>
-    <associate|eq 9.118.042|<tuple|9.118|?>>
-    <associate|eq 9.119.042|<tuple|9.119|?>>
+    <associate|eq 9.116.041|<tuple|9.124|?>>
+    <associate|eq 9.117.041|<tuple|9.125|?>>
+    <associate|eq 9.118.042|<tuple|9.116|?>>
+    <associate|eq 9.119.042|<tuple|9.117|?>>
     <associate|eq 9.12.029|<tuple|9.10|?>>
-    <associate|eq 9.120.042|<tuple|9.120|?>>
-    <associate|eq 9.121.042|<tuple|9.121|?>>
-    <associate|eq 9.122.042|<tuple|9.124|?>>
-    <associate|eq 9.123.042|<tuple|9.125|?>>
-    <associate|eq 9.124.042|<tuple|9.124|?>>
-    <associate|eq 9.125.042|<tuple|9.125|?>>
+    <associate|eq 9.120.042|<tuple|9.118|?>>
+    <associate|eq 9.121.042|<tuple|9.119|?>>
+    <associate|eq 9.122.042|<tuple|9.120|?>>
+    <associate|eq 9.123.042|<tuple|9.121|?>>
+    <associate|eq 9.124.042|<tuple|9.122|?>>
+    <associate|eq 9.124.043|<tuple|9.124|?>>
+    <associate|eq 9.125.042|<tuple|9.123|?>>
     <associate|eq 9.14.029|<tuple|9.12|?>>
     <associate|eq 9.16.030|<tuple|9.13|?>>
     <associate|eq 9.17.030|<tuple|9.14|?>>
@@ -11621,197 +11580,207 @@
     <associate|eq 9.97.040|<tuple|9.97|?>>
     <associate|eq 9.98.040|<tuple|9.98|?>>
     <associate|eq 9.99.040|<tuple|9.99|?>>
-    <associate|integeres order|<tuple|7.28|?>>
+    <associate|integeres order|<tuple|7.25|?>>
     <associate|integers|<tuple|7.2|?>>
     <associate|integers (-1).n|<tuple|7.16|?>>
     <associate|integers (-n).(-m)=n.m|<tuple|7.17|?>>
     <associate|integers -(n,m)=(-n),(-m)|<tuple|7.18|?>>
-    <associate|integers 0\<less\>1 and 0\<less\>2|<tuple|7.33|?>>
-    <associate|integers 0\<less\>=n.n|<tuple|7.37|?>>
+    <associate|integers 0\<less\>1 and 0\<less\>2|<tuple|7.30|?>>
+    <associate|integers 0\<less\>=n.n|<tuple|7.34|?>>
     <associate|integers 0\<less\>n and 0\<less\>m then
-    0\<less\>n.m|<tuple|7.35|?>>
+    0\<less\>n.m|<tuple|7.32|?>>
     <associate|integers 1+1=2|<tuple|7.12|?>>
-    <associate|integers Archimedean|<tuple|7.39|?>>
-    <associate|integers absolute value|<tuple|7.43|?>>
+    <associate|integers Archimedean|<tuple|7.36|?>>
+    <associate|integers absolute value|<tuple|7.40|?>>
     <associate|integers absorbing element|<tuple|7.15|?>>
-    <associate|integers are conditional complete|<tuple|7.41|?>>
-    <associate|integers common divisor|<tuple|7.54|?>>
+    <associate|integers are conditional complete|<tuple|7.38|?>>
+    <associate|integers common divisor|<tuple|7.51|?>>
     <associate|integers condition for 0|<tuple|7.13|?>>
-    <associate|integers denumerability|<tuple|7.62|?>>
+    <associate|integers denumerability|<tuple|7.59|?>>
     <associate|integers difference|<tuple|7.8|?>>
-    <associate|integers divide relation|<tuple|7.48|?>>
-    <associate|integers division|<tuple|7.47|?>>
-    <associate|integers divisor 1|<tuple|7.50|?>>
-    <associate|integers divisors |<tuple|7.51|?>>
-    <associate|integers divisors properties|<tuple|7.55|?>>
+    <associate|integers divide relation|<tuple|7.45|?>>
+    <associate|integers division|<tuple|7.44|?>>
+    <associate|integers divisor 1|<tuple|7.47|?>>
+    <associate|integers divisors |<tuple|7.48|?>>
+    <associate|integers divisors properties|<tuple|7.52|?>>
     <associate|integers equivalence relation|<tuple|7.1|?>>
-    <associate|integers even condition|<tuple|7.61|?>>
-    <associate|integers even odd|<tuple|7.59|?>>
-    <associate|integers even odd equivalences|<tuple|7.60|?>>
-    <associate|integers gcd existence|<tuple|7.56|?>>
-    <associate|integers gcd properties|<tuple|7.58|?>>
-    <associate|integers greatest common divisor|<tuple|7.57|?>>
+    <associate|integers even condition|<tuple|7.58|?>>
+    <associate|integers even odd|<tuple|7.56|?>>
+    <associate|integers even odd equivalences|<tuple|7.57|?>>
+    <associate|integers gcd existence|<tuple|7.53|?>>
+    <associate|integers gcd properties|<tuple|7.55|?>>
+    <associate|integers greatest common divisor|<tuple|7.54|?>>
     <associate|integers integers forms a group|<tuple|7.7|?>>
     <associate|integers integral domain|<tuple|7.11|?>>
     <associate|integers multiplication|<tuple|7.10|?>>
     <associate|integers multiplication equivalence|<tuple|7.9|?>>
     <associate|integers n.r=k.r=\<gtr\>n=k|<tuple|7.19|?>>
     <associate|integers neutral element|<tuple|7.6|?>>
-    <associate|integers non negative|<tuple|7.23|?>>
-    <associate|integers non positive numbers|<tuple|7.25|?>>
-    <associate|integers order and multiplication|<tuple|7.36|?>>
-    <associate|integers order preserving bijection|<tuple|7.38|?>>
-    <associate|integers positive and negative|<tuple|7.27|?>>
-    <associate|integers positive condition|<tuple|7.31|?>>
-    <associate|integers positive integeres are well ordered|<tuple|7.40|?>>
+    <associate|integers non negative|<tuple|7.20|?>>
+    <associate|integers non positive numbers|<tuple|7.22|?>>
+    <associate|integers order and multiplication|<tuple|7.33|?>>
+    <associate|integers order preserving bijection|<tuple|7.35|?>>
+    <associate|integers positive and negative|<tuple|7.24|?>>
+    <associate|integers positive condition|<tuple|7.28|?>>
+    <associate|integers positive integeres are well ordered|<tuple|7.37|?>>
     <associate|integers properties|<tuple|7.22|?>>
-    <associate|integers properties (1)|<tuple|7.24|?>>
-    <associate|integers properties (2)|<tuple|7.34|?>>
-    <associate|integers quotient|<tuple|7.53|?>>
-    <associate|integers quotient theorem|<tuple|7.52|?>>
-    <associate|integers strict positive numbers|<tuple|7.32|?>>
+    <associate|integers properties (1)|<tuple|7.21|?>>
+    <associate|integers properties (2)|<tuple|7.31|?>>
+    <associate|integers quotient|<tuple|7.50|?>>
+    <associate|integers quotient theorem|<tuple|7.49|?>>
+    <associate|integers strict positive numbers|<tuple|7.29|?>>
     <associate|integers sum uniqueness|<tuple|7.4|?>>
-    <associate|integers sup is max|<tuple|7.42|?>>
+    <associate|integers sup is max|<tuple|7.39|?>>
     <associate|integers without 0|<tuple|8.2|?>>
-    <associate|integers x\<less\>=y\<less\>=\<gtr\>-y\<less\>=x|<tuple|7.30|?>>
-    <associate|integers x\<less\>=\|x\||<tuple|7.45|?>>
+    <associate|integers x\<less\>=y\<less\>=\<gtr\>-y\<less\>=x|<tuple|7.27|?>>
+    <associate|integers x\<less\>=\|x\||<tuple|7.42|?>>
     <associate|integers z=-z=\<gtr\>z=0|<tuple|7.14|?>>
     <associate|integers z^n++m=z^n.z^m|<tuple|7.21|?>>
-    <associate|integers {x\|-\<less\>=x}|<tuple|7.29|?>>
-    <associate|integers \|x.y\|=\|x\|.\|y\||<tuple|7.44|?>>
-    <associate|integers \|x\|\<less\>=\<gtr\>x=0|<tuple|7.46|?>>
+    <associate|integers {x\|-\<less\>=x}|<tuple|7.26|?>>
+    <associate|integers \|x.y\|=\|x\|.\|y\||<tuple|7.41|?>>
+    <associate|integers \|x\|\<less\>=\<gtr\>x=0|<tuple|7.43|?>>
     <associate|integers ~([n,m])~([n+k,m+k)]|<tuple|7.3|?>>
     <associate|ration power properties|<tuple|8.19|?>>
     <associate|rational (-q).(-r)|<tuple|8.16|?>>
-    <associate|rational 0\<less\>1|<tuple|8.33|?>>
-    <associate|rational 0\<less\>=q and 0\<less\>=q=\<gtr\>0\<less\>=q+r|<tuple|8.29|?>>
-    <associate|rational 0\<less\>=q property|<tuple|8.25|?>>
+    <associate|rational 0\<less\>1|<tuple|8.30|?>>
+    <associate|rational 0\<less\>=q and 0\<less\>=q=\<gtr\>0\<less\>=q+r|<tuple|8.26|?>>
+    <associate|rational 0\<less\>=q property|<tuple|8.22|?>>
     <associate|rational 0\<less\>q and 0\<less\>r =\<gtr\>
-    0\<less\>q,r|<tuple|8.36|?>>
-    <associate|rational 0\<less\>q-\<gtr\>0\<less\>q^-1|<tuple|8.38|?>>
-    <associate|rational 0\<less\>q=\<gtr\>q=n/m|<tuple|8.32|?>>
+    0\<less\>q,r|<tuple|8.33|?>>
+    <associate|rational 0\<less\>q-\<gtr\>0\<less\>q^-1|<tuple|8.35|?>>
+    <associate|rational 0\<less\>q=\<gtr\>q=n/m|<tuple|8.29|?>>
     <associate|rational 1+1=2|<tuple|8.13|?>>
-    <associate|rational Archimedean|<tuple|8.45|?>>
-    <associate|rational NQ is denumerable|<tuple|8.51|?>>
-    <associate|rational NQ is well-ordered|<tuple|8.47|?>>
-    <associate|rational NQ properties (1)|<tuple|8.44|?>>
-    <associate|rational Q is denumerable|<tuple|8.53|?>>
-    <associate|rational ZQ is denumerable|<tuple|8.52|?>>
+    <associate|rational Archimedean|<tuple|8.42|?>>
+    <associate|rational NQ is denumerable|<tuple|8.48|?>>
+    <associate|rational NQ is well-ordered|<tuple|8.44|?>>
+    <associate|rational NQ properties (1)|<tuple|8.41|?>>
+    <associate|rational Q is denumerable|<tuple|8.50|?>>
+    <associate|rational ZQ is denumerable|<tuple|8.49|?>>
     <associate|rational absorbing element|<tuple|8.15|?>>
-    <associate|rational alternative definition|<tuple|8.42|?>>
-    <associate|rational densitiy|<tuple|8.46|?>>
-    <associate|rational embedded integers|<tuple|8.40|?>>
+    <associate|rational alternative definition|<tuple|8.39|?>>
+    <associate|rational densitiy|<tuple|8.43|?>>
+    <associate|rational embedded integers|<tuple|8.37|?>>
     <associate|rational equivalence relation|<tuple|8.3|?>>
     <associate|rational field|<tuple|8.12|?>>
     <associate|rational group|<tuple|8.8|?>>
-    <associate|rational n/m and n\<less\>m or m\<less\>n|<tuple|8.35|?>>
+    <associate|rational n/m and n\<less\>m or m\<less\>n|<tuple|8.32|?>>
     <associate|rational n/m=n.k/m.k|<tuple|8.5|?>>
-    <associate|rational natural numbers|<tuple|8.43|?>>
-    <associate|rational non negative rationals|<tuple|8.22|?>>
+    <associate|rational natural numbers|<tuple|8.40|?>>
+    <associate|rational non negative rationals|<tuple|8.19|?>>
     <associate|rational non negative rationals from a
-    semi-group|<tuple|8.23|?>>
+    semi-group|<tuple|8.20|?>>
     <associate|rational numbers|<tuple|8.4|?>>
-    <associate|rational order relation (1)|<tuple|8.24|?>>
+    <associate|rational order relation (1)|<tuple|8.21|?>>
     <associate|rational power|<tuple|8.17|?>>
     <associate|rational product|<tuple|8.11|?>>
     <associate|rational product (1)|<tuple|8.10|?>>
-    <associate|rational properties of 0, 1 and inverse|<tuple|8.39|?>>
-    <associate|rational q\<less\>=0 and 0\<less\>=q then q=0|<tuple|8.27|?>>
-    <associate|rational q\<less\>=r =\<gtr\> -r\<less\>=-q|<tuple|8.30|?>>
-    <associate|rational q\<less\>=r=\<gtr\>q+s\<less\>=r+s|<tuple|8.28|?>>
-    <associate|rational q\<less\>q+1 and q-1\<less\>q|<tuple|8.34|?>>
-    <associate|rational q\<less\>r\<less\>=\<gtr\>0\<less\>r+(-q)|<tuple|8.26|?>>
+    <associate|rational properties of 0, 1 and inverse|<tuple|8.36|?>>
+    <associate|rational q\<less\>=0 and 0\<less\>=q then q=0|<tuple|8.24|?>>
+    <associate|rational q\<less\>=r =\<gtr\> -r\<less\>=-q|<tuple|8.27|?>>
+    <associate|rational q\<less\>=r=\<gtr\>q+s\<less\>=r+s|<tuple|8.25|?>>
+    <associate|rational q\<less\>q+1 and q-1\<less\>q|<tuple|8.31|?>>
+    <associate|rational q\<less\>r\<less\>=\<gtr\>0\<less\>r+(-q)|<tuple|8.23|?>>
     <associate|rational q=r\<less\>=\<gtr\>q.s=r.s|<tuple|8.14|?>>
     <associate|rational q^(n+m)=q^n.q^m|<tuple|8.18|?>>
-    <associate|rational r\<less\>=q and multiplying by s|<tuple|8.37|?>>
+    <associate|rational r\<less\>=q and multiplying by s|<tuple|8.34|?>>
     <associate|rational rational numbers are not conditional
-    complete|<tuple|8.50|?>>
-    <associate|rational square root of 2 does not exist|<tuple|8.49|?>>
-    <associate|rational sub-ring|<tuple|8.41|?>>
+    complete|<tuple|8.47|?>>
+    <associate|rational square root of 2 does not exist|<tuple|8.46|?>>
+    <associate|rational sub-ring|<tuple|8.38|?>>
     <associate|rational sum operator|<tuple|8.7|?>>
     <associate|rational sum operator (1)|<tuple|8.6|?>>
-    <associate|rational totally ordered|<tuple|8.31|?>>
+    <associate|rational totally ordered|<tuple|8.28|?>>
     <associate|rational x-y|<tuple|8.9|?>>
-    <associate|rational {0}|<tuple|8.21|?>>
-    <associate|real (x^n-1)\<gtr\>=n.(x-1)|<tuple|9.75|?>>
+    <associate|rational {0}|<tuple|8.18|?>>
+    <associate|real (x^n-1)\<gtr\>=n.(x-1)|<tuple|9.84|?>>
     <associate|real -(a.b)=(-a).b=(a.(-b)|<tuple|9.29|?>>
-    <associate|real 0\<less\>1|<tuple|9.46|?>>
-    <associate|real 0\<less\>=a,b and a+b=0 then a=0=b|<tuple|9.50|?>>
+    <associate|real 0\<less\>1|<tuple|9.42|?>>
+    <associate|real 0\<less\>=a,b and a+b=0 then a=0=b|<tuple|9.46|?>>
+    <associate|real 0\<less\>x =\<gtr\> 0\<less\>x^n|<tuple|9.85|?>>
+    <associate|real 0\<less\>x then 0\<less\>x^n|<tuple|9.85|?>>
+    <associate|real 0\<less\>x\<less\>1 then
+    0\<less\>x^n\<less\>e|<tuple|9.87|?>>
     <associate|real 1.a=a for positive numbers|<tuple|9.21|?>>
-    <associate|real Archimedean property|<tuple|9.68|?>>
-    <associate|real Archimedean property consequence (1)|<tuple|9.69|?>>
-    <associate|real Archimedean property consequence (2)|<tuple|9.70|?>>
+    <associate|real Archimedean property|<tuple|9.64|?>>
+    <associate|real Archimedean property consequence (1)|<tuple|9.65|?>>
+    <associate|real Archimedean property consequence (2)|<tuple|9.66|?>>
     <associate|real Dedekind's cut|<tuple|9.1|?>>
-    <associate|real NR|<tuple|9.61|?>>
-    <associate|real NR properties|<tuple|9.63|?>>
+    <associate|real NR|<tuple|9.57|?>>
+    <associate|real NR properties|<tuple|9.59|?>>
     <associate|real QR|<tuple|9.6|?>>
     <associate|real QR bijection|<tuple|9.7|?>>
     <associate|real QR is denumerable|<tuple|9.8|?>>
-    <associate|real QR is not conditional complete|<tuple|9.53|?>>
+    <associate|real QR is not conditional complete|<tuple|9.49|?>>
     <associate|real RxR|<tuple|9.27|?>>
-    <associate|real ZQ|<tuple|9.59|?>>
-    <associate|real ZR properties|<tuple|9.60|?>>
+    <associate|real ZQ|<tuple|9.55|?>>
+    <associate|real ZR properties|<tuple|9.56|?>>
     <associate|real a.(b+g) where b or g is negative|<tuple|9.30|?>>
     <associate|real a.b=b.a positive numbers|<tuple|9.22|?>>
-    <associate|real a\<less\>2^n|<tuple|9.74|?>>
-    <associate|real a\<less\>a+1 and a-1\<less\>a|<tuple|9.49|?>>
+    <associate|real a\<less\>2^n|<tuple|9.83|?>>
+    <associate|real a\<less\>a+1 and a-1\<less\>a|<tuple|9.45|?>>
     <associate|real a^-1|<tuple|9.31|?>>
     <associate|real a_r.a_s=a_r.s|<tuple|9.35|?>>
     <associate|real associativity positive numbers|<tuple|9.23|?>>
-    <associate|real conditional complete|<tuple|9.54|?>>
-    <associate|real densitiy theorem|<tuple|9.71|?>>
+    <associate|real conditional complete|<tuple|9.50|?>>
+    <associate|real definition by recursion (1)|<tuple|9.74|?>>
+    <associate|real definition by recursion (2)|<tuple|9.75|?>>
+    <associate|real densitiy theorem|<tuple|9.67|?>>
     <associate|real distributivity|<tuple|9.24|?>>
     <associate|real division of real numbers in positive and negative
     numbers|<tuple|9.17|?>>
-    <associate|real embedding of Q and order|<tuple|9.52|?>>
+    <associate|real embedding of Q and order|<tuple|9.48|?>>
     <associate|real field|<tuple|9.32|?>>
     <associate|real field embedding Q|<tuple|9.37|?>>
     <associate|real gap theorem|<tuple|9.9|?>>
     <associate|real group|<tuple|9.15|?>>
-    <associate|real inf or sup of -S|<tuple|9.56|?>>
+    <associate|real inf or sup of -S|<tuple|9.52|?>>
     <associate|real inv|<tuple|9.25|?>>
     <associate|real inv(a) is inverse element|<tuple|9.26|?>>
     <associate|real inverse of rational cut|<tuple|9.34|?>>
-    <associate|real irrational numbers|<tuple|9.55|?>>
-    <associate|real iteration|<tuple|9.80|?>>
+    <associate|real irrational numbers|<tuple|9.51|?>>
     <associate|real lemma for sum operator|<tuple|9.13|?>>
-    <associate|real mathematical induction|<tuple|9.79|?>>
+    <associate|real mathematical induction|<tuple|9.69|?>>
     <associate|real multiplication operator|<tuple|9.28|?>>
-    <associate|real n\<less\>2^n|<tuple|9.73|?>>
+    <associate|real n\<less\>2^n|<tuple|9.82|?>>
     <associate|real n\<less\>m and 0\<less\>x\<less\>1 then
-    x^n\<less\>x^m|<tuple|9.77|?>>
+    x^n\<less\>x^m|<tuple|9.86|?>>
     <associate|real natural numbers, integers and rational
-    numbers|<tuple|9.64|?>>
+    numbers|<tuple|9.60|?>>
     <associate|real negastive cut of rational cut|<tuple|9.11|?>>
     <associate|real negative cut|<tuple|9.10|?>>
     <associate|real notation for division|<tuple|9.33|?>>
-    <associate|real order properties|<tuple|9.48|?>>
-    <associate|real order relation (1)|<tuple|9.44|?>>
-    <associate|real order relation eauivalences|<tuple|9.45|?>>
+    <associate|real order properties|<tuple|9.44|?>>
+    <associate|real order relation (1)|<tuple|9.40|?>>
+    <associate|real order relation eauivalences|<tuple|9.41|?>>
     <associate|real positive negative numbers|<tuple|9.16|?>>
-    <associate|real power|<tuple|9.38|?>>
-    <associate|real power properties|<tuple|9.41|?>>
+    <associate|real power|<tuple|9.76|?>>
+    <associate|real power of inverse|<tuple|9.80|?>>
+    <associate|real power properties|<tuple|9.81|?>>
+    <associate|real power properties (1)|<tuple|9.77|?>>
     <associate|real product is internal|<tuple|9.20|?>>
-    <associate|real properties positive numbers|<tuple|9.42|?>>
+    <associate|real properties positive numbers|<tuple|9.38|?>>
     <associate|real property to determine membership of a cut|<tuple|9.3|?>>
-    <associate|real q^(n+m)=q^n.q^m|<tuple|9.40|?>>
-    <associate|real r\<less\>s=\<gtr\>a_r\<less\>a_s|<tuple|9.51|?>>
+    <associate|real q^(n+m)=q^n.q^m|<tuple|9.79|?>>
+    <associate|real r\<less\>s=\<gtr\>a_r\<less\>a_s|<tuple|9.47|?>>
     <associate|real rational cut|<tuple|9.4|?>>
     <associate|real rational cut properties|<tuple|9.36|?>>
-    <associate|real rational numbers specification|<tuple|9.65|?>>
+    <associate|real rational numbers specification|<tuple|9.61|?>>
     <associate|real real numbers|<tuple|9.2|?>>
-    <associate|real recursion|<tuple|9.81|?>>
-    <associate|real recursion iteration|<tuple|9.81|?>>
-    <associate|real strict order relation definition|<tuple|9.43|?>>
+    <associate|real recursion|<tuple|9.70|?>>
+    <associate|real recursion iteration|<tuple|9.71|?>>
+    <associate|real recursion step|<tuple|9.72|?>>
+    <associate|real recursion step (2)|<tuple|9.73|?>>
+    <associate|real strict order relation definition|<tuple|9.39|?>>
     <associate|real sum is a operator|<tuple|9.14|?>>
-    <associate|real sup(S+T) and inf(S+T)|<tuple|9.57|?>>
-    <associate|real sup(S+s) inf(T+t)|<tuple|9.58|?>>
-    <associate|real totally ordered|<tuple|9.47|?>>
-    <associate|real x\<less\>y=\<gtr\>x+1\<less\>=y|<tuple|9.67|?>>
-    <associate|real x^n\<gtr\>n if x\<gtr\>1 (R)|<tuple|9.76|?>>
+    <associate|real sup(S+T) and inf(S+T)|<tuple|9.53|?>>
+    <associate|real sup(S+s) inf(T+t)|<tuple|9.54|?>>
+    <associate|real totally ordered|<tuple|9.43|?>>
+    <associate|real x\<less\>y=\<gtr\>x+1\<less\>=y|<tuple|9.63|?>>
+    <associate|real x^n\<gtr\>n if x\<gtr\>1 (R)|<tuple|9.85|?>>
     <associate|reals the set of reals are non empty|<tuple|9.5|?>>
-    <associate|recursion recursion step|<tuple|9.82|?>>
-    <associate|sign function|<tuple|8.20|?>>
+    <associate|recursion recursion step|<tuple|9.72|?>>
+    <associate|recursion step form (3)|<tuple|9.73|?>>
+    <associate|sign function|<tuple|8.17|?>>
   </collection>
 </references>
 
