@@ -11311,7 +11311,277 @@
   </theorem>
 
   <\proof>
-    TODO.
+    As <math|0\<less\>\<varepsilon\>> we have by [theorem: <reference|real
+    Archimedean property consequence (1)>] that
+    <math|\<exists\>m\<in\>\<bbb-N\><rsub|\<bbb-R\>>> such that
+    <math|0\<less\>1/m\<less\>\<varepsilon\>>, hence using [theorem:
+    <reference|real order properties>] <math|0\<less\>1/\<varepsilon\>\<less\>m>.
+    As <math|0\<less\>x\<less\>1> we have by [theorem: <reference|real order
+    properties> <math|1=1/1\<less\>1/x>, so using the previous theorem
+    [theorem: <reference|real x^n\<gtr\>n if x\<gtr\>1 (R)>] there exist a
+    <math|n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> such that
+    <math|m\<less\><around*|(|1/x|)><rsup|n>\<equallim\><rsub|<text|[theorem:
+    <reference|real power of inverse>]>>1/x<rsup|n>>. Hence we have
+    <math|0\<less\>1/\<varepsilon\>\<less\>1/x<rsup|n>> which by [theorem:
+    <reference|real order properties>] gives
+    <math|0\<less\>x<rsup|n>\<less\>\<varepsilon\>>.
+  </proof>
+
+  <section|The square root>
+
+  <\theorem>
+    <label|real square operator is a bijection>The function
+
+    <\equation*>
+      <around*|(|.|)><rsup|2>:\<bbb-R\><rsup|+><rsub|0>\<rightarrow\>\<bbb-R\><rsup|+><rsub|0><text|
+      defined by ><around*|(|.|)><rsup|2><around*|(|x|)>=x<rsup|2>=x\<cdot\>x
+    </equation*>
+
+    is a bijection.
+  </theorem>
+
+  <\proof>
+    We have\ 
+
+    <\description>
+      <item*|injectivity>Let <math|x,y\<in\>\<bbb-R\><rsup|+><rsub|0>\<equallim\><rsub|<text|[theorem:
+      <reference|real order properties>]>><around*|{|x\<in\>\<bbb-R\>\<wedge\>0\<leqslant\>x|}>>
+      be such that <math|x<rsup|2>=y<rsup|2>> then we have the following
+      possibilities:
+
+      <\description>
+        <item*|<math|x=0>>Assume that <math|y\<neq\>0> then <math|0\<less\>y>
+        so that by [theorem: <reference|real order properties>]
+        <math|0\<less\>y\<cdot\>y=y<rsup|2>=x<rsup|2>=x\<cdot\>x=0> leading
+        to the contradiction <math|0\<less\>0>. Hence we have <math|y=0> so
+        that <math|x=y>.
+
+        <item*|<math|y=0>>Assume that <math|x\<neq\>0> then <math|0\<less\>y>
+        so that by [theorem: <reference|real order properties>]
+        <math|0\<less\>x\<cdot\>x=x<rsup|2>=y<rsup|2>=y\<cdot\>y=0> leading
+        to the contradiction <math|0\<less\>0>. Hence we have <math|x=0> so
+        that <math|x=y>.
+
+        <item*|<math|0\<less\>x\<wedge\>0\<less\>y>>Assume that
+        <math|x\<neq\>y> then we have either:
+
+        <\description>
+          <item*|<math|x\<less\>y>>Then by [theorem: <reference|real order
+          properties>] we have <math|x\<cdot\>y\<less\>y\<cdot\>y=y<rsup|2>>
+          and <math|x<rsup|2>=x\<cdot\>x\<less\>y\<cdot\>x=x\<cdot\>y><space|1em>so
+          that <math|x<rsup|2>\<neq\>y<rsup|2>> contradicting
+          <math|x<rsup|2>=y<rsup|2>.>
+
+          <item*|<math|y\<less\>x>>Then by [theorem: <reference|real order
+          properties>] we have <math|y\<cdot\>x\<less\>x\<cdot\>x=x<rsup|2>>
+          and <math|y<rsup|2>=y\<cdot\>y\<less\>x\<cdot\>y=y\<cdot\>x> so
+          that <math|x<rsup|2>\<neq\>y<rsup|2>> contradicting
+          <math|x<rsup|2>=y<rsup|2>.>
+        </description>
+      </description>
+
+      <item*|surjectivity>Given <math|y\<in\>\<bbb-R\><rsup|+><rsub|0>=<around*|{|x\<in\>\<bbb-R\>\|0\<leqslant\>x|}>>
+      then <math|0\<leqslant\>y> and we have the folowing possibilities to
+      consider:
+
+      <\description>
+        <item*|<math|y=0>>Then <math|0<rsup|0>=0\<cdot\>0=0=y>, hence if
+        <math|x=0> we have <math|y=x<rsup|2>>
+
+        <item*|<math|y=1>>Then <math|1<rsup|2>=1\<cdot\>1=1=y>, hence if
+        <math|x=1> we have <math|y=x<rsup|2>>
+
+        <item*|<math|0\<less\>y\<wedge\>y\<neq\>1>>Take then
+        <math|S<rsub|y>=<around*|{|t\<in\>\<bbb-R\>\|0\<leqslant\>t\<wedge\>t<rsup|2>\<leqslant\>y|}>>.
+        As <math|0<rsup|2>=0\<less\>y> we have <math|0\<in\>S<rsub|y>> hence
+
+        <\equation>
+          <label|eq 9.126.044>\<varnothing\>=S<rsub|y>
+        </equation>
+
+        As <math|y\<neq\>1> we have either:
+
+        <\description>
+          <item*|<math|y\<less\>1>>Assume that
+          <math|\<exists\>t\<in\>S<rsub|y>> such that <math|1\<less\>t> then
+          by [theorem: <reference|real order properties>] we have
+          <math|t\<less\>t\<cdot\>t=t<rsup|2>>, as <math|t\<in\>S<rsub|y>> we
+          have <math|t<rsup|2>\<leqslant\>y\<less\>1> so that
+          <math|t\<less\>1> contradicting <math|1\<less\>t>. Hence we have
+          <math|\<forall\>t\<in\>S<rsub|y>> that <math|t\<leqslant\>1>
+          proving that <math|S<rsub|y>> is bounded above.
+
+          <item*|<math|1\<less\>y>>Assume that
+          <math|\<exists\>t\<in\>S<rsub|y>> such that <math|y\<less\>t> then
+          as <math|1\<less\>y> we have <math|1\<less\>t> so that
+          <math|t\<less\>t\<cdot\>t=t<rsup|2>\<leqslant\>y> contradicting the
+          assumption <math|y\<less\>t>. So the assumption is wrong and we
+          have <math|\<forall\>t\<in\>S<rsub|Y>> that <math|t\<leqslant\>y>
+          proving that <math|S<rsub|y>> is bounded above.
+        </description>
+
+        So in all cases we have that\ 
+
+        <\equation>
+          <label|eq 9.127.044>S<rsub|u><text| is bounded above>
+        </equation>
+
+        As <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>> is
+        conditonaly complete [see theorem: <reference|real conditional
+        complete>] we have thanks to [eqs: <reference|eq 9.126.044>,
+        <reference|eq 9.127.044>] that\ 
+
+        <\equation>
+          <label|eq 9.128.044>s<rsub|y>=sup<around*|(|S<rsub|y>|)><text|
+          exist>
+        </equation>
+
+        For <math|y\<neq\>1> we consider again the following possibilities:
+
+        <\description>
+          <item*|<math|y\<less\>1>>As <math|0\<less\>y> we have by [theorem:
+          <reference|real order properties>] that
+          <math|y<rsup|2>=y\<cdot\>y\<less\>1\<cdot\>y=y> so that
+          <math|y\<in\>S<rsub|y>> so <math|y\<leqslant\>s<rsub|y>\<Rightarrowlim\><rsub|o\<less\>y>0\<less\>s<rsub|y>>.
+
+          <item*|<math|1\<less\>y>>Then <math|0\<less\>t> and
+          <math|1<rsup|2>=1\<less\>y> so that <math|1\<in\>S<rsub|y>>, hence
+          <math|1\<leqslant\>s<rsub|y>> proving that
+          <math|0\<less\>s<rsub|y>>.
+        </description>
+
+        So we have that\ 
+
+        <\equation>
+          <label|eq 9.129.044>0\<less\>s<rsub|y>
+        </equation>
+
+        Let <math|\<varepsilon\>\<in\>\<bbb-R\>> such that
+        <math|0\<less\>\<varepsilon\>\<less\>s<rsub|y>>. Then
+        <math|0\<less\>s<rsub|y>-\<varepsilon\>\<less\>s<rsub|y>\<less\>s<rsub|y>+\<varepsilon\><rsub|>>,
+        so that by [theorem: <reference|real order properties>]
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|>|<cell|<around*|(|s<rsub|y>-\<varepsilon\>|)><rsup|2>=<around*|(|s<rsub|y>-\<varepsilon\>|)>\<cdot\><around*|(|s<rsub|y>-\<varepsilon\>|)>\<less\>s<rsub|y>\<cdot\><around*|(|s<rsub|y>-\<varepsilon\>|)>>|<cell|>>|<row|<cell|>|<cell|<around*|(|s<rsub|y>-\<varepsilon\>|)>\<cdot\>s<rsub|y>\<less\>s<rsub|y>\<cdot\>s<rsub|y>=s<rsub|y><rsup|2>>|<cell|>>|<row|<cell|>|<cell|s<rsub|y>\<cdot\><around*|(|s<rsub|y>+\<varepsilon\>|)>\<less\><around*|(|s<rsub|y>+\<varepsilon\>|)>\<cdot\><around*|(|s<rsub|y>+\<varepsilon\>|)>=<around*|(|s<rsub|y>+\<varepsilon\>|)><rsup|2>>|<cell|>>|<row|<cell|>|<cell|s<rsub|y><rsup|2>=s<rsub|y>\<cdot\>s<rsub|y>\<less\><around*|(|s<rsub|y>+\<varepsilon\>|)>\<cdot\>s<rsub|y>>|<cell|>>>>
+        </eqnarray*>
+
+        \ So that\ 
+
+        <\equation>
+          <label|eq 9.130.44><around*|(|s<rsub|y>-\<varepsilon\>|)><rsup|2>\<less\>s<rsub|y><rsup|2>\<less\><around*|(|s<rsub|y>+\<varepsilon\>|)><rsup|2>
+        </equation>
+
+        As <math|s<rsub|y>> is a upper bound of <math|S<rsub|y>> and
+        <math|s<rsub|y>\<less\>s<rsub|y>+\<varepsilon\>> we must have that
+        <math|s<rsub|y>+\<varepsilon\>\<nin\>S<rsub|y>>, which, as
+        <math|0\<less\>s<rsub|y>\<less\>s<rsub|y>+\<varepsilon\>> proves that
+
+        <\equation>
+          <label|eq 9.131.044>y\<less\><around*|(|s<rsub|y>+\<varepsilon\>|)><rsup|2>
+        </equation>
+
+        As <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>> is
+        totally ordered and <math|s<rsub|y>-\<varepsilon\>\<less\>s<rsub|y>>
+        we have by [theorem: <reference|order sup, inf property>] that
+        <math|\<exists\>f\<in\>S<rsub|y>> such that
+        <math|s<rsub|y>-\<varepsilon\>\<less\>f>. As
+        <math|0\<less\>s<rsub|y>-\<varepsilon\>> we have by [theorem:
+        <reference|real order properties>] that
+        <math|<around*|(|s<rsub|y>-\<varepsilon\>|)>\<cdot\>f\<less\>f\<cdot\>f>=f^2
+        and <math|<around*|(|s<rsub|y>-\<varepsilon\>|)><rsup|2>=<around*|(|s<rsub|y>-\<varepsilon\>|)>\<cdot\><around*|(|s<rsub|y>-\<varepsilon\>|)>\<less\>f\<cdot\><around*|(|s<rsub|y>-\<varepsilon\>|)>>
+        so that <math|<around*|(|s<rsub|y>-\<varepsilon\>|)><rsup|2>\<less\>f<rsup|2>.
+        As f\<in\>S<rsub|y>> it follows that <math|f<rsup|2>\<leqslant\>y> so
+        that
+
+        <\equation>
+          <label|eq 9.132.044><around*|(|s<rsub|y>-\<varepsilon\>|)><rsup|2>\<less\>y
+        </equation>
+
+        Using [theorem: <reference|real order properties>] on [eqs:
+        <reference|eq 9.131.044>, <reference|eq 9.132.044>] we have that\ 
+
+        <\equation>
+          <label|eq 9.133.044>-<around*|(|s<rsub|y>+\<varepsilon\>|)><rsup|2>\<less\>-y\<less\>-<around*|(|s<rsub|y>-\<varepsilon\>|)><rsup|2>
+        </equation>
+
+        Adding [eq: <reference|eq 9.130.044>] to [eq: <reference|eq
+        9.133.044>] gives
+
+        <\equation>
+          <label|eq 9.134.044><around*|(|s<rsub|y>-\<varepsilon\>|)><rsup|2>-<around*|(|s<rsub|y>+\<varepsilon\>|)><rsup|2>\<less\>s<rsup|2><rsub|y>-y\<less\><around*|(|s<rsub|y>+\<varepsilon\>|)><rsup|2>-<around*|(|s<rsub|y>-\<varepsilon\>|)><rsup|2>
+        </equation>
+
+        Now
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|s<rsub|y>-\<varepsilon\>|)><rsup|2>-<around*|(|s<rsub|y>+\<varepsilon\>|)><rsup|2>>|<cell|=>|<cell|s<rsub|y><rsup|2>-2\<cdot\>\<varepsilon\>\<cdot\>s<rsub|y>+\<varepsilon\><rsup|2>-<around*|(|s<rsub|y><rsup|2>+2\<cdot\>\<varepsilon\>\<ast\>s<rsub|y>+\<varepsilon\><rsup|2>|)>>>|<row|<cell|>|<cell|=>|<cell|-4\<cdot\>\<varepsilon\>\<cdot\>s<rsub|y>>>>>
+        </eqnarray*>
+
+        which combined with [eq: <reference|eq 9.134.044>] gives\ 
+
+        <\equation>
+          <label|eq 9.135.044>\<forall\>\<varepsilon\>\<in\>\<bbb-R\><text|
+          with >0\<less\>\<varepsilon\>\<less\>s<rsub|y><text| we have
+          >-4\<cdot\>\<varepsilon\>\<cdot\>s<rsup|2><rsub|y>\<less\>s<rsup|2><rsub|y>-y\<less\>4\<cdot\>\<varepsilon\>\<cdot\>s<rsub|y><text|>
+        </equation>
+
+        or using [theorem: <reference|real order properties>]\ 
+
+        <\equation>
+          <label|eq 9.136.044>\<forall\>\<varepsilon\>\<in\>\<bbb-R\><text|
+          with >0\<less\>\<varepsilon\>\<less\>s<rsub|y><text| we have
+          >-4\<cdot\>\<varepsilon\>\<cdot\>s<rsup|2><rsub|y>\<less\>y-s<rsup|2><rsub|y>\<less\>4\<cdot\>\<varepsilon\>\<cdot\>s<rsub|y><text|>
+        </equation>
+
+        Now as <math|0\<less\>s<rsub|y>> we have by [theorem: <reference|real
+        Archimedean property>] a <math|\<varepsilon\><rsub|0>\<in\>\<bbb-R\>>
+        such that\ 
+
+        <\equation>
+          <label|eq 9.137.044>0\<less\>\<varepsilon\><rsub|0>\<less\>s<rsub|y>
+        </equation>
+
+        For <math|s<rsub|y><rsup|2>-y> we can have now the following
+        possibilities:
+
+        <\description>
+          <item*|<math|s<rsup|2><rsub|y>-y\<less\>0>>Take then
+          <math|\<delta\>=y-s<rsup|2><rsub|y>> then
+          <math|0\<less\>\<delta\>>. Take
+          <math|\<varepsilon\>=min<around*|(|\<delta\>/<around*|(|4\<cdot\>s<rsub|y>|)>,\<varepsilon\><rsub|0>|)>>
+          then we have as <math|0\<less\>4,s<rsub|y>,\<varepsilon\><rsub|0>>
+          by [theorem: <reference|real order properties>] that
+          <math|0\<less\>\<delta\>> and <math|\<varepsilon\>\<leqslant\>\<varepsilon\><rsub|0>\<less\>s<rsub|y>>
+          so we have by [eq: <reference|eq 9.136.044>] that
+          <math|\<delta\>=y-s<rsup|2><rsub|y>\<less\>4\<cdot\>\<varepsilon\>\<cdot\>s<rsub|y>>.
+          As <math|4\<cdot\>\<varepsilon\>\<cdot\>s<rsub|y>\<leqslant\><around*|(|\<delta\>/<around*|(|4\<cdot\>s<rsub|y>|)>|)>\<cdot\>4\<cdot\>s<rsub|y>=\<delta\>>
+          giving the contradiction <math|\<delta\>\<less\>\<delta\>>. So this
+          case does not occur.
+
+          <item*|<math|0\<less\>s<rsup|2><rsub|y>-y>>Take then
+          <math|\<delta\>=s<rsup|2><rsub|y>-y> then
+          <math|0\<less\>\<delta\>>. Take
+          <math|\<varepsilon\>=min<around*|(|\<delta\>/<around*|(|4\<cdot\>s<rsub|y>|)>,\<varepsilon\><rsub|0>|)>>
+          then we have as <math|0\<less\>4,s<rsub|y>,\<varepsilon\><rsub|0>>
+          by [theorem: <reference|real order properties>] that
+          <math|0\<less\>\<delta\>> and <math|\<varepsilon\>\<leqslant\>\<varepsilon\><rsub|0>\<less\>s<rsub|y>>
+          so we have by [eq: <reference|eq 9.135.044>] that
+          <math|\<delta\>=s<rsup|2><rsub|y>-y\<less\>4\<cdot\>\<varepsilon\>\<cdot\>s<rsub|y>>.
+          As <math|4\<cdot\>\<varepsilon\>\<cdot\>s<rsub|y>\<leqslant\><around*|(|\<delta\>/<around*|(|4\<cdot\>s<rsub|y>|)>|)>\<cdot\>4\<cdot\>s<rsub|y>=\<delta\>>
+          giving the contradiction <math|\<delta\>\<less\>\<delta\>>. So this
+          case does not occur.
+
+          <item*|<math|s<rsup|2><rsub|y>-y=0>>Then <math|y=s<rsup|2><rsub|y>>
+        </description>
+
+        So the only valid case is where <math|y=s<rsub|y><rsup|2>>, so if we
+        take <math|x=s<rsub|y>> then <math|x<rsup|2>=y>.
+      </description>
+
+      In all cases we have found a <math|x\<in\>\<bbb-R\>> such that
+      <math|y=x<rsup|2>=<around*|(|.|)><rsup|2><around*|(|x|)>> which proves
+      surjectivity.
+    </description>
   </proof>
 
   \;
@@ -11387,14 +11657,12 @@
     <associate|auto-38|<tuple|9.4.1|?>>
     <associate|auto-39|<tuple|9.4.2|?>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>>|?>>
+    <associate|auto-40|<tuple|9.5|?>>
     <associate|auto-5|<tuple|7.2|?>>
     <associate|auto-6|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>>|?>>
     <associate|auto-7|<tuple|absolute value|?>>
     <associate|auto-8|<tuple|<with|mode|<quote|math>|<around*|\||x|\|>>|?>>
     <associate|auto-9|<tuple|<with|mode|<quote|math>|m\|n>|?>>
-    <associate|definition by recursion (1)|<tuple|9.74|?>>
-    <associate|definition by recursion (2)|<tuple|9.75|?>>
-    <associate|eq 5.17.019|<tuple|9.124|?>>
     <associate|eq 7.1.022|<tuple|7.1|?>>
     <associate|eq 7.10.022|<tuple|7.10|?>>
     <associate|eq 7.11.022|<tuple|7.11|?>>
@@ -11485,8 +11753,21 @@
     <associate|eq 9.122.042|<tuple|9.120|?>>
     <associate|eq 9.123.042|<tuple|9.121|?>>
     <associate|eq 9.124.042|<tuple|9.122|?>>
-    <associate|eq 9.124.043|<tuple|9.124|?>>
     <associate|eq 9.125.042|<tuple|9.123|?>>
+    <associate|eq 9.126.044|<tuple|9.126|?>>
+    <associate|eq 9.127.044|<tuple|9.127|?>>
+    <associate|eq 9.128.044|<tuple|9.128|?>>
+    <associate|eq 9.129.044|<tuple|9.129|?>>
+    <associate|eq 9.130.044|<tuple|9.131|?>>
+    <associate|eq 9.130.44|<tuple|9.130|?>>
+    <associate|eq 9.131.044|<tuple|9.131|?>>
+    <associate|eq 9.132.044|<tuple|9.132|?>>
+    <associate|eq 9.133.044|<tuple|9.133|?>>
+    <associate|eq 9.134.044|<tuple|9.134|?>>
+    <associate|eq 9.135.044|<tuple|9.135|?>>
+    <associate|eq 9.136.044|<tuple|9.136|?>>
+    <associate|eq 9.137.044|<tuple|9.137|?>>
+    <associate|eq 9.138.044|<tuple|9.136|?>>
     <associate|eq 9.14.029|<tuple|9.12|?>>
     <associate|eq 9.16.030|<tuple|9.13|?>>
     <associate|eq 9.17.030|<tuple|9.14|?>>
@@ -11623,7 +11904,6 @@
     <associate|integers positive and negative|<tuple|7.24|?>>
     <associate|integers positive condition|<tuple|7.28|?>>
     <associate|integers positive integeres are well ordered|<tuple|7.37|?>>
-    <associate|integers properties|<tuple|7.22|?>>
     <associate|integers properties (1)|<tuple|7.21|?>>
     <associate|integers properties (2)|<tuple|7.31|?>>
     <associate|integers quotient|<tuple|7.50|?>>
@@ -11635,12 +11915,10 @@
     <associate|integers x\<less\>=y\<less\>=\<gtr\>-y\<less\>=x|<tuple|7.27|?>>
     <associate|integers x\<less\>=\|x\||<tuple|7.42|?>>
     <associate|integers z=-z=\<gtr\>z=0|<tuple|7.14|?>>
-    <associate|integers z^n++m=z^n.z^m|<tuple|7.21|?>>
     <associate|integers {x\|-\<less\>=x}|<tuple|7.26|?>>
     <associate|integers \|x.y\|=\|x\|.\|y\||<tuple|7.41|?>>
     <associate|integers \|x\|\<less\>=\<gtr\>x=0|<tuple|7.43|?>>
     <associate|integers ~([n,m])~([n+k,m+k)]|<tuple|7.3|?>>
-    <associate|ration power properties|<tuple|8.19|?>>
     <associate|rational (-q).(-r)|<tuple|8.16|?>>
     <associate|rational 0\<less\>1|<tuple|8.30|?>>
     <associate|rational 0\<less\>=q and 0\<less\>=q=\<gtr\>0\<less\>=q+r|<tuple|8.26|?>>
@@ -11671,7 +11949,6 @@
     semi-group|<tuple|8.20|?>>
     <associate|rational numbers|<tuple|8.4|?>>
     <associate|rational order relation (1)|<tuple|8.21|?>>
-    <associate|rational power|<tuple|8.17|?>>
     <associate|rational product|<tuple|8.11|?>>
     <associate|rational product (1)|<tuple|8.10|?>>
     <associate|rational properties of 0, 1 and inverse|<tuple|8.36|?>>
@@ -11681,7 +11958,6 @@
     <associate|rational q\<less\>q+1 and q-1\<less\>q|<tuple|8.31|?>>
     <associate|rational q\<less\>r\<less\>=\<gtr\>0\<less\>r+(-q)|<tuple|8.23|?>>
     <associate|rational q=r\<less\>=\<gtr\>q.s=r.s|<tuple|8.14|?>>
-    <associate|rational q^(n+m)=q^n.q^m|<tuple|8.18|?>>
     <associate|rational r\<less\>=q and multiplying by s|<tuple|8.34|?>>
     <associate|rational rational numbers are not conditional
     complete|<tuple|8.47|?>>
@@ -11696,8 +11972,6 @@
     <associate|real -(a.b)=(-a).b=(a.(-b)|<tuple|9.29|?>>
     <associate|real 0\<less\>1|<tuple|9.42|?>>
     <associate|real 0\<less\>=a,b and a+b=0 then a=0=b|<tuple|9.46|?>>
-    <associate|real 0\<less\>x =\<gtr\> 0\<less\>x^n|<tuple|9.85|?>>
-    <associate|real 0\<less\>x then 0\<less\>x^n|<tuple|9.85|?>>
     <associate|real 0\<less\>x\<less\>1 then
     0\<less\>x^n\<less\>e|<tuple|9.87|?>>
     <associate|real 1.a=a for positive numbers|<tuple|9.21|?>>
@@ -11770,6 +12044,7 @@
     <associate|real recursion iteration|<tuple|9.71|?>>
     <associate|real recursion step|<tuple|9.72|?>>
     <associate|real recursion step (2)|<tuple|9.73|?>>
+    <associate|real square operator is a bijection|<tuple|9.88|?>>
     <associate|real strict order relation definition|<tuple|9.39|?>>
     <associate|real sum is a operator|<tuple|9.14|?>>
     <associate|real sup(S+T) and inf(S+T)|<tuple|9.53|?>>
@@ -11778,8 +12053,6 @@
     <associate|real x\<less\>y=\<gtr\>x+1\<less\>=y|<tuple|9.63|?>>
     <associate|real x^n\<gtr\>n if x\<gtr\>1 (R)|<tuple|9.85|?>>
     <associate|reals the set of reals are non empty|<tuple|9.5|?>>
-    <associate|recursion recursion step|<tuple|9.72|?>>
-    <associate|recursion step form (3)|<tuple|9.73|?>>
     <associate|sign function|<tuple|8.17|?>>
   </collection>
 </references>
@@ -11821,11 +12094,11 @@
 
       <tuple|<tuple|<with|mode|<quote|math>|\<bbb-R\><rsup|->>>|<pageref|auto-31>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<bbb-Z\><rsub|\<bbb-R\>>>>|<pageref|auto-35>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<bbb-Z\><rsub|\<bbb-R\>>>>|<pageref|auto-34>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<bbb-N\><rsub|0,\<bbb-R\>>>>|<pageref|auto-36>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<bbb-N\><rsub|0,\<bbb-R\>>>>|<pageref|auto-35>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<bbb-N\><rsub|\<bbb-R\>>>>|<pageref|auto-37>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<bbb-N\><rsub|\<bbb-R\>>>>|<pageref|auto-36>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|7<space|2spc>The
@@ -11883,17 +12156,28 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-29>>
 
-      <with|par-left|<quote|2tab>|9.1.2.3<space|2spc>Power in
-      <with|mode|<quote|math>|\<bbb-R\>> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-32>>
-
       9.2<space|2spc>Order relation on <with|mode|<quote|math>|\<bbb-R\>>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-32>
+
+      9.3<space|2spc>Embeddings in <with|mode|<quote|math>|\<bbb-R\>>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-33>
 
-      <with|par-left|<quote|1tab>|9.2.1<space|2spc>Embeddings in
+      9.4<space|2spc>Recursion and Induction in the set of real numbers
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-37>
+
+      <with|par-left|<quote|1tab>|9.4.1<space|2spc>Extending Mathematical
+      induction and recursion <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-38>>
+
+      <with|par-left|<quote|1tab>|9.4.2<space|2spc>Power in
       <with|mode|<quote|math>|\<bbb-R\>> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-34>>
+      <no-break><pageref|auto-39>>
+
+      9.5<space|2spc> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-40>
     </associate>
   </collection>
 </auxiliary>
