@@ -11468,7 +11468,7 @@
         \ So that\ 
 
         <\equation>
-          <label|eq 9.130.44><around*|(|s<rsub|y>-\<varepsilon\>|)><rsup|2>\<less\>s<rsub|y><rsup|2>\<less\><around*|(|s<rsub|y>+\<varepsilon\>|)><rsup|2>
+          <label|eq 9.130.044><around*|(|s<rsub|y>-\<varepsilon\>|)><rsup|2>\<less\>s<rsub|y><rsup|2>\<less\><around*|(|s<rsub|y>+\<varepsilon\>|)><rsup|2>
         </equation>
 
         As <math|s<rsub|y>> is a upper bound of <math|S<rsub|y>> and
@@ -11584,6 +11584,77 @@
     </description>
   </proof>
 
+  <\definition>
+    <label|real square root><label|real square
+    root><index|<math|<sqrt|x>>><dueto|Square Root>Using the previous theorem
+    [theorem: <reference|real square operator is a bijection>] we have htat\ 
+
+    <\equation*>
+      <around*|(|.|)><rsup|2>:\<bbb-R\><rsub|0><rsup|+>\<rightarrow\>\<bbb-R\><rsub|0><rsup|+><text|
+      defined by ><around*|(|.|)><rsup|2><around*|(|x|)>=x\<cdot\>x
+    </equation*>
+
+    is a bijection so that we have a inverse bijction
+
+    <\equation*>
+      <around*|(|<around*|(|.|)><rsup|-1>|)>:\<bbb-R\><rsub|0><rsup|+>\<rightarrow\>\<bbb-R\><rsub|0><rsup|+>
+    </equation*>
+
+    this inverse is called the square root mapping and noted by\ 
+
+    <\equation*>
+      <sqrt|.>:\<bbb-R\><rsub|0><rsup|+>\<rightarrow\>\<bbb-R\><rsub|0><rsup|+>
+      <text| where ><sqrt|.>=<around*|(|<around*|(|.|)><rsup|2>|)><rsup|-1>
+    </equation*>
+
+    Hence if <math|x\<in\>\<bbb-R\><rsub|0><rsup|+<rsub|>>> then
+    <math|<sqrt|<around*|(|x<rsup|2>|)>>=x> and
+    <math|<around*|(|<sqrt|x>|)><rsup|2>=x>
+  </definition>
+
+  <\note>
+    The requirement that <math|x\<in\>\<bbb-R\><rsub|0><rsup|+>> in the above
+    is requered for if <math|<around*|(|.|)><rsup|2>:\<bbb-R\>\<rightarrow\>\<bbb-R\>>
+    is not injective as we have for example
+    <math|<around*|(|1|)><rsup|2>-1=<around*|(|-1|)><rsup|2>>
+  </note>
+
+  <\note>
+    <label|real square root of 2 is irational>As
+    <math|2\<in\>\<bbb-R\><rsub|0><rsup|+>> <math|<sqrt|2>> exist however
+    <math|<sqrt|2>\<nin\>\<bbb-Q\><rsub|\<bbb-R\>>> so that
+    <math|<sqrt|2>\<in\>\<bbb-R\>\\\<bbb-Q\><rsub|\<bbb-R\>>> or
+    <math|<sqrt|2>> is a irational number.
+  </note>
+
+  <\proof>
+    Asume that <math|<sqrt|2>\<in\>\<bbb-Q\><rsub|\<bbb-R\>>>, as by
+    [theorem: <reference|real ZR properties>]
+    <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Q\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>>
+    is a ring isomorphism there exist a <math|q\<in\>\<bbb-Q\>> such that
+    <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|q|)>=<sqrt|2>>,
+    hence:
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|q\<cdot\>q|)>>|<cell|=>|<cell|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|q|)>\<cdot\>i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|q|)>>>|<row|<cell|>|<cell|=>|<cell|<sqrt|2>\<cdot\><sqrt|2>>>|<row|<cell|>|<cell|=>|<cell|2>>|<row|<cell|>|<cell|=>|<cell|1+1>>|<row|<cell|>|<cell|=>|<cell|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|1|)>+i<rsub|\<bbb-Q\><rsub|\<bbb-R\>>><around*|(|1|)>>>|<row|<cell|>|<cell|=>|<cell|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|1+1|)>>>|<row|<cell|>|<cell|=>|<cell|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|2|)>>>>>
+    </eqnarray*>
+
+    so that by injectivity we have that <math|q\<cdot\>q=2> which by
+    [theorem: <reference|rational square root of 2 does not exist>] is
+    impossible.
+  </proof>
+
+  <\theorem>
+    <label|real square root is strictly increasing><math|<sqrt|.>:\<bbb-R\><rsup|+><rsub|0>\<rightarrow\>\<bbb-R\><rsub|0><rsup|+>>
+    is strictly increasing
+  </theorem>
+
+  <\proof>
+    If\ 
+  </proof>
+
+  \;
+
   \;
 
   \;
@@ -11658,6 +11729,7 @@
     <associate|auto-39|<tuple|9.4.2|?>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>>|?>>
     <associate|auto-40|<tuple|9.5|?>>
+    <associate|auto-41|<tuple|<with|mode|<quote|math>|<sqrt|x>>|?>>
     <associate|auto-5|<tuple|7.2|?>>
     <associate|auto-6|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>>|?>>
     <associate|auto-7|<tuple|absolute value|?>>
@@ -11758,7 +11830,7 @@
     <associate|eq 9.127.044|<tuple|9.127|?>>
     <associate|eq 9.128.044|<tuple|9.128|?>>
     <associate|eq 9.129.044|<tuple|9.129|?>>
-    <associate|eq 9.130.044|<tuple|9.131|?>>
+    <associate|eq 9.130.044|<tuple|9.130|?>>
     <associate|eq 9.130.44|<tuple|9.130|?>>
     <associate|eq 9.131.044|<tuple|9.131|?>>
     <associate|eq 9.132.044|<tuple|9.132|?>>
@@ -11767,7 +11839,6 @@
     <associate|eq 9.135.044|<tuple|9.135|?>>
     <associate|eq 9.136.044|<tuple|9.136|?>>
     <associate|eq 9.137.044|<tuple|9.137|?>>
-    <associate|eq 9.138.044|<tuple|9.136|?>>
     <associate|eq 9.14.029|<tuple|9.12|?>>
     <associate|eq 9.16.030|<tuple|9.13|?>>
     <associate|eq 9.17.030|<tuple|9.14|?>>
@@ -12045,6 +12116,9 @@
     <associate|real recursion step|<tuple|9.72|?>>
     <associate|real recursion step (2)|<tuple|9.73|?>>
     <associate|real square operator is a bijection|<tuple|9.88|?>>
+    <associate|real square root|<tuple|9.89|?>>
+    <associate|real square root is strictly increasing|<tuple|9.92|?>>
+    <associate|real square root of 2 is irational|<tuple|9.91|?>>
     <associate|real strict order relation definition|<tuple|9.39|?>>
     <associate|real sum is a operator|<tuple|9.14|?>>
     <associate|real sup(S+T) and inf(S+T)|<tuple|9.53|?>>
@@ -12176,7 +12250,7 @@
       <with|mode|<quote|math>|\<bbb-R\>> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-39>>
 
-      9.5<space|2spc> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      9.5<space|2spc>The square root <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-40>
     </associate>
   </collection>
