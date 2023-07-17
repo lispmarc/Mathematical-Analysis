@@ -11608,8 +11608,8 @@
     </equation*>
 
     Hence if <math|x\<in\>\<bbb-R\><rsub|0><rsup|+<rsub|>>> then
-    <math|<sqrt|<around*|(|x<rsup|2>|)>>=x> and
-    <math|<around*|(|<sqrt|x>|)><rsup|2>=x>
+    <math|<sqrt|<around*|(|x<rsup|2>|)>>=<around*|(|<sqrt|.>\<circ\><around*|(|.|)><rsup|2>|)><around*|(|x|)>=i<rsub|\<bbb-R\><rsub|0><rsup|2>><around*|(|x|)>=x>
+    and <math|<around*|(|<sqrt|x>|)><rsup|2>=<around*|(|<around*|(|.|)><rsup|2>\<circ\><sqrt|.>|)><around*|(|x|)>=i<rsub|\<bbb-R\><rsub|0><rsup|+>><around*|(|x|)>>
   </definition>
 
   <\note>
@@ -11650,8 +11650,356 @@
   </theorem>
 
   <\proof>
-    If\ 
+    We prove this by contradiction. Let <math|x,y\<in\>\<bbb-R\><rsup|+><rsub|0>>
+    be such that <math|x\<less\>y> and assume that
+    <math|<sqrt|y>\<leqslant\><sqrt|x>>, then as
+    <math|<sqrt|x>,<sqrt|y>\<in\>\<bbb-R\><rsup|+><rsub|0>> we can use
+    [theorem: <reference|real order properties>] getting
+    <math|y=<sqrt|y>\<cdot\><sqrt|y>\<leqslant\><sqrt|x>\<cdot\><sqrt|y>> and
+    <math|<sqrt|y>\<cdot\><sqrt|x>\<leqslant\><sqrt|x>\<cdot\><sqrt|x>=x>, so
+    <math|y\<leqslant\>x> contradicting <math|x\<less\>y>. Hence we must have
+    that <math|<sqrt|x>\<less\><sqrt|y>>.
   </proof>
+
+  <\theorem>
+    <label|eq real square root properties (1)>If <math|x\<in\>\<bbb-R\>> and
+    <math|a\<in\>\<bbb-R\><rsup|+><rsub|0>> then we have\ 
+
+    <\enumerate>
+      <item><math|x<rsup|2>=a\<Leftrightarrow\>x=<sqrt|a>\<vee\>x=-<sqrt|y>>
+
+      <item><math|x<rsup|2>\<leqslant\>a\<Leftrightarrow\>-<sqrt|a>\<leqslant\>x\<leqslant\><sqrt|a>>
+
+      <item><math|x<rsup|2>\<less\>a\<Leftrightarrow\>-<sqrt|a>\<less\>x\<less\><sqrt|a>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>\ 
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>For <math|x> we have either:
+
+        <\description>
+          <item*|<math|0\<leqslant\>x>>Then <math|>by [definition:
+          <reference|real square root>] we have
+          <math|x=<sqrt|x<rsup|2>>=<sqrt|a>>
+
+          <item*|<math|x\<less\>0>>Then <math|0\<less\>-x> and
+          <math|<around*|(|-x|)><rsup|2>=x<rsup|2>=a> so that by [definition:
+          <reference|real square root>] that
+          <math|-x=<sqrt|<around*|(|-x|)><rsup|2>>=<sqrt|a>> giving
+          <math|x-<sqrt|a>>
+        </description>
+
+        <item*|<math|\<Leftarrow\>>>If <math|x=<sqrt|a>> then
+        <math|x<rsup|2>=<around*|(|<sqrt|a>|)><rsup|2>=a> and if
+        <math|x=-<sqrt|a>> we have <math|x<rsup|2>=<around*|(|-<sqrt|a>|)><rsup|2>=<around*|(|<sqrt|a>|)><rsup|2>=a>
+      </description>
+
+      <item>\ 
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>For <math|x> we have either\ 
+
+        <\description>
+          <item*|<math|0\<leqslant\>x>>As <math|0\<leqslant\><sqrt|a>> it
+          follows that <math|-<sqrt|a>\<leqslant\>0\<leqslant\>x>. Further
+          assume that <math|><sqrt|a>\<less\>x then by [theorem:
+          <reference|real order properties>] and
+          <math|0\<leqslant\><sqrt|a>,x> we have
+          <math|a=<around*|(|<sqrt|a>|)><rsup|2>\<less\>x<rsup|2>>
+          contradicting <math|x<rsup|2>\<leqslant\>a>, so we must have
+          <math|x\<leqslant\><sqrt|a>>. So
+          <math|-<sqrt|a>\<leqslant\>x\<leqslant\><sqrt|a>.>
+
+          <item*|<math|x\<less\>0>>Then as
+          <math|0\<leqslant\><sqrt|a>\<Rightarrow\>-<sqrt|a>\<leqslant\>0> we
+          have <math|x\<less\><sqrt|a>>. Further assume that
+          <math|<sqrt|a>\<less\>-x> we have by [theorem: <reference|real
+          order properties>] and <math|0\<leqslant\><sqrt|a>,-x> that
+          <math|a=<around*|(|<sqrt|a>|)><rsup|2>\<less\><around*|(|-x|)><rsup|2>=x<rsup|2>>
+          contradicting <math|x<rsup|2>\<leqslant\>a>, hence
+          <math|-x\<leqslant\><sqrt|a>> or <math|-<sqrt|a>\<leqslant\>x>. So
+          <math|-<sqrt|a>\<leqslant\>x\<less\><sqrt|a>\<Rightarrow\>-<sqrt|a>\<leqslant\>x\<leqslant\><sqrt|a>>.
+        </description>
+
+        <item*|<math|\<Leftarrow\>>>For <math|x> we have either\ 
+
+        <\description>
+          <item*|<math|0\<leqslant\>x>>Then from <math|x\<leqslant\><sqrt|a>>
+          and <math|0\<leqslant\><sqrt|a>> we have by [theorem:
+          <reference|real order properties>] that
+          <math|x<rsup|2>\<leqslant\><around*|(|<sqrt|a>|)><rsup|2>=a>.
+
+          <item*|<math|x\<less\>0>>Then from
+          <math|-<sqrt|a>\<leqslant\>x\<Rightarrow\>-x\<leqslant\><sqrt|a>>
+          and <math|0\<leqslant\><sqrt|a>,-x> we have by [theorem:
+          <reference|real order properties>] that
+          <math|x<rsup|2>=<around*|(|-x|)><rsup|2>\<leqslant\><around*|(|<sqrt|a>|)><rsup|2>=a>.
+        </description>
+      </description>
+
+      <item>\ 
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>If <math|x=<sqrt|a>> or
+        <math|x=-<sqrt|a>> then by (1) <math|x<rsup|2>=a> contradicting
+        <math|x<rsup|2>\<less\>a> hence we must have that
+        <math|x\<neq\><sqrt|a>> and <math|x\<neq\>-<sqrt|a>>. Using (2) we
+        have that <math|-<sqrt|a>\<leqslant\>x\<leqslant\><sqrt|a>> so that
+        <math|-<sqrt|a>\<less\>x\<less\><sqrt|a>.>
+
+        <item*|<math|\<Leftarrow\>>>As <math|-<sqrt|a>\<less\>x\<less\><sqrt|a>>
+        we have <math|x\<neq\><sqrt|a>> and <math|x\<neq\>-<sqrt|a>> so that
+        by (1) <math|x<rsup|2>\<neq\>a>, further by <math|<around*|(|2|)>> we
+        have <math|x<rsup|2>\<leqslant\>a> so that <math|x<rsup|2>\<less\>a>.
+      </description>
+    </enumerate>
+  </proof>
+
+  <\note>
+    By [theorem: <reference|real properties positive numbers>] we have
+    <math|\<forall\>x,y\<in\>\<bbb-R\><rsup|+><rsub|0>> that
+    <math|x\<cdot\>y\<in\>\<bbb-R\><rsup|+>> and
+    <math|x+y\<in\>\<bbb-R\><rsup|+>> so that the following two theorems make
+    sense.
+  </note>
+
+  <\theorem>
+    <label|real square root of product>If
+    <math|x,y\<in\>\<bbb-R\><rsup|+><rsub|0>> then
+    <math|<sqrt|x\<cdot\>y>=<sqrt|x>\<cdot\><sqrt|y>>\ 
+  </theorem>
+
+  <\proof>
+    As <math|<around*|(|<sqrt|x\<cdot\>y>|)><rsup|2>=x\<cdot\>y=<around*|(|<sqrt|x>|)><rsup|2>\<cdot\><around*|(|<sqrt|y>|)><rsup|2>=<around*|(|<sqrt|x>\<cdot\><sqrt|y>|)><rsup|2>>
+    we have by the fact that <math|<around*|(|.|)><rsup|2>:\<bbb-R\><rsup|+><rsub|0>\<rightarrow\>\<bbb-R\><rsup|+><rsub|0>>
+    is a bijection and thus injective so we have
+    <math|<sqrt|x\<cdot\>y>=<sqrt|x>\<cdot\><sqrt|y>>
+  </proof>
+
+  <\theorem>
+    <label|real square root norm>Let <math|x,y\<in\>\<bbb-R\><rsup|+><rsub|0>>
+    then <math|<sqrt|x+y>\<leqslant\><sqrt|x>+<sqrt|y>>
+  </theorem>
+
+  <\proof>
+    We prove this by contradiction, so assume that
+    <math|<sqrt|x>+<sqrt|y>\<less\><sqrt|x+y>>. Then by [theorem:
+    <reference|real order properties>] we have that
+    <math|<around*|(|<sqrt|x>+<sqrt|y>|)><rsup|2>\<less\><around*|(|<sqrt|x+y>|)><rsup|2>=x+y>.
+    Now
+
+    <\equation*>
+      <around*|(|<sqrt|x>+<sqrt|y>|)><rsup|2>=<around*|(|<sqrt|x>|)><rsup|2>+<around*|(|<sqrt|y>|)><rsup|2>+2\<cdot\><sqrt|x>\<cdot\><sqrt|y>=x+y+2\<cdot\><sqrt|x>\<cdot\><sqrt|y>
+    </equation*>
+
+    so that we have that <math|x+y+2\<cdot\><sqrt|x>\<cdot\><sqrt|y>\<less\>x+y>
+    or <math|2\<cdot\><sqrt|x>\<cdot\><sqrt|y>\<less\>0> giving\ 
+
+    <\equation*>
+      <sqrt|x>\<cdot\><sqrt|y>\<less\>0
+    </equation*>
+
+    As <math|0\<leqslant\><sqrt|x>> and <math|0\<leqslant\><sqrt|y>> we have
+    by \ [theorem: <reference|real properties positive numbers>] that
+    <math|0\<leqslant\><sqrt|x>\<cdot\><sqrt|y>> contradicting the above. So
+    we must have that <math|<sqrt|x+y>\<leqslant\><sqrt|x>+<sqrt|y>>
+  </proof>
+
+  Note that <math|<sqrt|.>:\<bbb-R\><rsup|+><rsub|0>\<rightarrow\>\<bbb-R\><rsup|+><rsub|0>>
+  is a bijection between non negative real numbers, one reason for this is
+  that the square root of non negative numbers is not defined. For example
+  for <math|<sqrt|-1>> we must have by [theorem: <reference|real order
+  properties>] that <math|0\<leqslant\><around*|(|<sqrt|-1>|)><rsup|2>=-1> a
+  contradiction. This will be solved by extending the real numbers to the
+  complex numbers.
+
+  <chapter|The complex numbers>
+
+  <section|Definition and arithmetics>
+
+  <\definition>
+    <label|complex numbers>The space <math|\<bbb-C\>> of complex numbers
+    together with two operators <math|+:\<bbb-C\>\<times\>\<bbb-C\>\<rightarrow\>\<bbb-C\>>
+    and <math|\<cdot\>:\<bbb-C\>\<times\>\<bbb-C\>\<rightarrow\>\<bbb-C\>> is
+    is defined as follows
+
+    <\enumerate>
+      <item><math|\<bbb-C\>=\<bbb-R\>\<times\>\<bbb-R\>=<around*|{|<around*|(|x,y|)>\|x,y\<in\>\<bbb-R\>|}>>
+
+      <item><math|+:\<bbb-C\>\<times\>\<bbb-C\>\<rightarrow\>\<bbb-C\>> where
+      <math|<around*|(|x,y|)>+<around*|(|x<rprime|'>,y<rprime|'>|)>=<around*|(|x+x<rprime|'>,y+y<rprime|'>|)>>
+
+      <item><math|\<cdot\>:\<bbb-C\>\<times\>\<bbb-C\>\<rightarrow\>\<bbb-C\>>
+      where <math|<around*|(|x,y|)>\<cdot\><around*|(|x<rprime|'>,y<rprime|'>|)>=<around*|(|x\<cdot\>x<rprime|'>-y\<cdot\>y<rprime|'>,x\<cdot\>y<rprime|'>+x<rprime|'>\<cdot\>y|)>>
+    </enumerate>
+  </definition>
+
+  Just as <math|<around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>> is a
+  field we have that <math|<around*|\<langle\>|\<bbb-C\>,+,\<cdot\>|\<rangle\>>>
+  is a field.
+
+  <\theorem>
+    <label|complex field><math|<around*|\<langle\>|\<bbb-C\>,+,\<cdot\>|\<rangle\>>>
+    is a field where\ 
+
+    <\enumerate>
+      <item>The additive neutral element is <math|<around*|(|0,0|)>>\ 
+
+      <item>Then multiplicative neutral element is <math|<around*|(|1,0|)>>\ 
+
+      <item>The additive inverse element of
+      <math|<around*|(|x,y|)>=<around*|(|-x,-y|)>>
+
+      <item>The multiplicative inverse element for
+      <math|<around*|(|x,y|)>\<neq\><around*|(|0,0|)>> is
+
+      <\equation*>
+        <around*|(|x/<around*|(|x<rsup|2>+y<rsup|2>|)>,-y/<around*|(|x<rsup|2>+y<rsup|2>|)>|)>
+      </equation*>
+    </enumerate>
+
+    As usual we use the following notation convention based on context:
+
+    <\enumerate>
+      <item>The additive neutral element is noted as <math|0>
+
+      <item>The multiplicative neutral element is noted as <math|1>
+
+      <item>The additve inverse of <math|z\<in\>\<bbb-C\>> is noted as
+      <math|-z>
+
+      <item>The multiplicative inverse of
+      <math|x\<in\>\<bbb-C\>\\<around*|{|0|}>> is noted as <math|<rsup|-1>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    First we prove that <math|<around*|\<langle\>|\<bbb-C\>,+|\<rangle\>>> is
+    a Abelian group:
+
+    <\description>
+      <item*|associativity>If <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y<rprime|'>|)>,<around*|(|x<rprime|''>,y<rprime|''>|)>\<in\>\<bbb-C\>>
+      then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|x,y|)>+<around*|(|<around*|(|x<rprime|'>,y<rprime|'>|)>+<around*|(|x<rprime|''>,y<rprime|''>|)>|)>>|<cell|=>|<cell|<around*|(|x,y|)>+<around*|(|x<rprime|'>+x<rprime|''>,y<rprime|'>+y<rprime|''>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x+<around*|(|x<rprime|'>+x<rprime|''>|)>,y+<around*|(|y<rprime|'>+y<rprime|''>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|x+x<rprime|'>|)>+x<rprime|''>,<around*|(|y+y<rprime|'>|)>+y<rprime|''>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x+x<rprime|'>,y+y<rprime|'>|)>+<around*|(|x<rprime|''>,y<rprime|''>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|x,y|)>+<around*|(|x<rprime|'>,y<rprime|'>|)>|)>+<around*|(|x<rprime|''>,y<rprime|''>|)>>>>>
+      </eqnarray*>
+
+      <item*|commutativiy>If <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y<rprime|'>|)>\<in\>\<bbb-C\>>
+      then
+
+      <\equation*>
+        <around*|(|x,y|)>+<around*|(|x<rprime|'>,y<rprime|'>|)>=<around*|(|x+x<rprime|'>,y+y<rprime|'>|)>=<around*|(|x<rprime|'>+x,y<rprime|'>+y|)>=<around*|(|x<rprime|'>,y<rprime|'>|)>+<around*|(|x,y|)>
+      </equation*>
+
+      <item*|neutral element>If <math|<around*|(|x,y|)>\<in\>\<bbb-C\>> then
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|x,y|)>+<around*|(|0,0|)>>|<cell|\<equallim\><rsub|<text|commutativity>>>|<cell|<around*|(|0,0|)>+<around*|(|x,y|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|0+x,0+y|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x,y|)>>>>>
+      </eqnarray*>
+
+      <item*|inverse element>If <math|<around*|(|x,y|)>\<in\>\<bbb-C\>> then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|x,y|)>+<around*|(|-x,-y|)>>|<cell|=>|<cell|<around*|(|-x,-y|)>+<around*|(|x,y|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|-x|)>+x,<around*|(|-y|)>+y|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|0,0|)>>>>>
+      </eqnarray*>
+    </description>
+
+    Next we prove the rest of the axioms for a field for the multiplaction
+
+    <\description>
+      <item*|associativity>If <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y<rprime|'>|)>,<around*|(|x<rprime|''>,y<rprime|''>|)>\<in\>\<bbb-C\>>
+      then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|x,y|)>\<cdot\><around*|(|<around*|(|x<rprime|'>,y<rprime|'>|)>\<cdot\><around*|(|x<rprime|''>,y<rprime|''>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|x,y|)>\<cdot\><around*|(|x<rprime|'>\<cdot\>x<rprime|''>-y<rprime|'>\<cdot\>y<rprime|''>,x<rprime|'>\<cdot\>y<rprime|''>+x<rprime|''>\<cdot\>y<rprime|'>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|x\<cdot\><around*|(|x<rprime|'>\<cdot\>x<rprime|''>-y<rprime|'>\<cdot\>y<rprime|''>|)>-y\<cdot\><around*|(|x<rprime|'>\<cdot\>y<rprime|''>+x<rprime|''>\<cdot\>y<rprime|'>|)>,x\<cdot\><around*|(|x<rprime|'>\<cdot\>y<rprime|''>+x<rprime|''>\<cdot\>y<rprime|'>|)>|)>+y\<cdot\><around*|(|x<rprime|'>\<cdot\>x<rprime|''>-y<rprime|'>\<cdot\>y<rprime|''>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|x\<cdot\><around*|(|x<rprime|'>\<cdot\>x<rprime|''>|)>-x\<cdot\><around*|(|y<rprime|'>\<cdot\>y<rprime|''>|)>-y\<cdot\><around*|(|x<rprime|'>\<cdot\>y<rprime|''>|)>-y\<cdot\><around*|(|x<rprime|''>\<cdot\>y<rprime|'>|)>,x\<cdot\><around*|(|x<rprime|'>\<cdot\>y<rprime|''>|)>+x\<cdot\><around*|(|x<rprime|''>\<cdot\>y<rprime|'>|)>+y\<cdot\><around*|(|x<rprime|'>\<cdot\>x<rprime|''>|)>-y\<cdot\><around*|(|y<rprime|'>\<cdot\>y<rprime|''>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<wide*|<around*|(|x\<cdot\>x<rprime|'>|)>\<cdot\>x<rprime|''>|\<wide-underbrace\>><rsub|1>-<wide*|<around*|(|x\<cdot\>y<rprime|'>|)>\<cdot\>y<rprime|''>|\<wide-underbrace\>><rsub|2><wide*|-<around*|(|y\<cdot\>x<rprime|'>|)>\<cdot\>y<rprime|''>|\<wide-underbrace\>><rsub|2><wide*|-<around*|(|y\<cdot\>y<rprime|'>|)>\<cdot\>x<rprime|''>|\<wide-underbrace\>><rsub|1>,<wide*|<around*|(|x\<cdot\>x<rprime|'>|)>\<cdot\>y<rprime|''>|\<wide-underbrace\>><rsub|3>+<wide*|<around*|(|x\<cdot\>y<rprime|'>|)>\<cdot\>x<rprime|''>+<around*|(|y\<cdot\>x<rprime|'>|)>\<cdot\>x<rprime|''>|\<wide-underbrace\>><rsub|4><wide*|-<around*|(|y\<cdot\>y<rprime|'>|)>\<cdot\>y<rprime|''>|\<wide-underbrace\>><rsub|3>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<wide*|<around*|(|x\<cdot\>x<rprime|'>-y\<cdot\>y<rprime|'>|)>\<cdot\>x<rprime|''>|\<wide-underbrace\>><rsub|1><wide*|-<around*|(|x\<cdot\>y<rprime|'>+y\<cdot\>y<rprime|'>|)>\<cdot\>y<rprime|''>|\<wide-underbrace\>><rsub|2>,<wide*|<around*|(|x\<cdot\>x<rprime|'>-y\<cdot\>y<rprime|'>|)>\<cdot\>y<rprime|''>|\<wide-underbrace\>><rsub|3>+<wide*|<around*|(|x\<cdot\>y<rprime|'>+y\<cdot\>x<rprime|'>|)>\<cdot\>x<rprime|''>|\<wide-underbrace\>><rsub|4>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|x\<cdot\>x<rprime|'>-y\<cdot\>y<rprime|'>,x\<cdot\>y<rprime|'>+y\<cdot\>y<rprime|'>,<around*|(|x<rprime|''>,y<rprime|''>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<around*|(|x,y|)>\<cdot\><around*|(|x<rprime|'>,y<rprime|'>|)>|)>\<cdot\><around*|(|x<rprime|''>,y<rprime|''>|)>>|<cell|=>|<cell|>>>>
+      </eqnarray*>
+
+      <item*|commutativity>If <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y<rprime|'>|)>\<in\>\<bbb-C\>>
+      then\ 
+
+      <\equation*>
+        <around*|(|x,y|)>\<cdot\><around*|(|x<rprime|'>,y<rprime|'>|)>=<around*|(|x\<cdot\>x<rprime|'>-y\<cdot\>y<rprime|'>,x\<cdot\>y<rprime|'>+x<rprime|'>\<cdot\>y|)>=<around*|(|x<rprime|'>\<cdot\>x-y<rprime|'>\<cdot\>y,y<rprime|'>\<cdot\>x+y\<cdot\>x<rprime|'>|)>=<around*|(|x<rprime|'>,y<rprime|'>|)>\<cdot\><around*|(|x,y|)>
+      </equation*>
+
+      <item*|neutral element>If <math|<around*|(|x,y|)>\<in\>\<bbb-C\>> then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|x,y|)>\<cdot\><around*|(|1,0|)>>|<cell|\<equallim\><rsub|<text|commutativity>>>|<cell|<around*|(|1,0|)>\<cdot\><around*|(|x,y|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|1\<cdot\>x+0\<cdot\>y,1\<cdot\>y+0\<cdot\>x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x,y|)>>>>>
+      </eqnarray*>
+
+      <item*|inverse element>Let <math|<around*|(|x,y|)>\<in\>\<bbb-C\>\\<around*|{|<around*|(|0,0|)>|}>>
+      then <math|x\<neq\>0\<vee\>y\<neq\>0> so that by [theorem:
+      <reference|real order properties>] <math|0\<less\>x<rsup|2>\<vee\>0\<less\>y<rsup|2>>
+      we have that <math|> <math|0\<less\>x<rsup|2>+y<rsup|2>> so that
+      <math|><math|<around*|(|x<rsup|2>+y<rsup|2>|)>\<neq\>0> hence
+      <math|<around*|(|x/<around*|(|x<rsup|2>+y<rsup|2>|)>,-y/<around*|(|x<rsup|2>+y<rsup|2>|)>|)>>
+      is well defined. Now\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|x,y|)>\<cdot\><around*|(|x/<around*|(|x<rsup|2>+y<rsup|2>|)>,-y/<around*|(|x<rsup|2>+y<rsup|2>|)>|)>>|<cell|\<equallim\><rsub|<text|commutativity>>>|<cell|>>|<row|<cell|<around*|(|x/<around*|(|x<rsup|2>+y<rsup|2>|)>,-y/<around*|(|x<rsup|2>+y<rsup|2>|)>|)>\<cdot\><around*|(|x,y|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|x<rsup|2>/<around*|(|x<rsup|2>+y<rsup|2>|)>+y<rsup|2>/<around*|(|x<rsup|2><rsub|>+y<rsup|2>|)>,x\<cdot\>y/<around*|(|x<rsup|2>+y<rsup|2><rsup|>|)>+<around*|(|-y|)>\<cdot\>x/<around*|(|x<rsup|2>+y<rsup|2>|)>|)>>|<cell|=>|<cell|*>>|<row|<cell|<around*|(|<around*|(|x<rsup|2>+y<rsup|2>|)>/<around*|(|x<rsup|2>+y<rsup|2>|)>,<around*|(|x\<cdot\>y-y\<cdot\>x|)>/<around*|(|x<rsup|2>+y<rsup|2>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|1,0|)>>|<cell|=>|<cell|>>>>
+      </eqnarray*>
+
+      <item*|distributivity>If <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y<rprime|'>|)>,<around*|(|x<rprime|''>,y<rprime|''>|)>\<in\>\<bbb-C\>>
+      then
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|x,y|)>\<cdot\><around*|(|<around*|(|x<rprime|'>,y<rprime|'>|)>+<around*|(|x<rprime|''>,y<rprime|''>|)>|)>>|<cell|=>|<cell|<around*|(|x,y|)>\<cdot\><around*|(|x<rprime|'>+x<rprime|''>,y<rprime|'>+y<rprime|''>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x\<cdot\><around*|(|x<rprime|'>+x<rprime|''>|)>-y\<cdot\><around*|(|y<rprime|'>+y<rprime|''>|)>,x\<cdot\><around*|(|y<rprime|'>+y<rprime|''>|)>+y\<cdot\><around*|(|x<rprime|'>+x<rprime|''>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x\<cdot\>x<rprime|'>+x\<cdot\>x<rprime|''>-y\<cdot\>y<rprime|'>-y\<cdot\>y<rprime|''>,x\<cdot\>y<rprime|'>+x\<cdot\>y<rprime|''>+y\<cdot\>x<rprime|'>+y\<cdot\>x<rprime|''>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|x\<cdot\>x<rprime|'>-y\<cdot\>y<rprime|'>|)>+<around*|(|x\<cdot\>x<rprime|''>-y\<cdot\>y<rprime|''>|)>,<around*|(|x\<cdot\>y<rprime|'>+y\<cdot\>x<rprime|'>|)>+<around*|(|x\<cdot\>y<rprime|''>+y\<cdot\>x<rprime|''>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x\<cdot\>x<rprime|'>-y\<cdot\>y<rprime|'>,x\<cdot\>y<rprime|'>+y\<cdot\>x<rprime|'>|)>+<around*|(|x\<cdot\>x<rprime|''>-y\<cdot\>y<rprime|''>,x\<cdot\>y<rprime|''>+y\<cdot\>x<rprime|''>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x,y|)>\<cdot\><around*|(|x<rprime|'>,y<rprime|'>|)>+<around*|(|x,y|)>\<cdot\><around*|(|x<rprime|''>,y<rprime|''>|)>>>>>
+      </eqnarray*>
+    </description>
+  </proof>
+
+  Just as with the integers, rationals and real numbers we introduce the
+  following shorthand notation.
+
+  <\notation>
+    If <math|x,y\<in\>\<bbb-C\>> then we have the following notation
+    conventions:
+
+    <\enumerate>
+      <item><math|x+<around*|(|-|)>> is noted as <math|x-y>
+
+      <item>If <math|y\<in\>\<bbb-C\>\\<around*|{|0|}>> then
+      <math|x\<cdot\>y<rsup|-1>> is noted as <math|x/y> and <math|y<rsup|-1>>
+      is noted as <math|1/y>
+    </enumerate>
+  </notation>
+
+  A important operation on the set of real numbers is the complex
+  conjugation.
+
+  <\definition>
+    <label|complex complement>If <math|z\<in\>\<bbb-C\>> then
+    <math|<wide|z|\<wide-bar\>>=<around*|(|y,x|)>> where
+    <math|z=<around*|(|x,y|)>>
+  </definition>
+
+  <section|Embedding of <math|\<bbb-R\>> in <math|\<bbb-C\>>>
+
+  <\definition>
+    We define <math|\<bbb-R\><rsub|\<bbb-C\>>,\<bbb-Q\><rsub|\<bbb-C\>>,\<bbb-Z\><rsub|\<bbb-C\>>,\<bbb-N\><rsub|\<bbb-C\>>>
+    as follows
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|\<bbb-R\><rsub|\<bbb-C\>>=<around*|{|<around*|(|x,0|)>\|x\<in\>\<bbb-R\>|}>>|<cell|>>|<row|<cell|>|<cell|\<bbb-Q\><rsub|\<bbb-C\>>=<around*|{|<around*|(|x,0|)>\|x\<in\>\<bbb-Q\><rsub|\<bbb-R\>>|}>>|<cell|>>|<row|<cell|>|<cell|\<bbb-Z\><rsub|\<bbb-C\>>=<around*|{|<around*|(|x,0|)>\|x\<in\>\<bbb-Z\><rsub|\<bbb-R\>>|}>>|<cell|>>|<row|<cell|>|<cell|\<bbb-N\><rsub|\<bbb-C\>>=<around*|{|<around*|(|x,0|)>\|x\<in\>\<bbb-N\><rsub|\<bbb-R\>>|}>>|<cell|>>>>
+    </eqnarray*>
+  </definition>
+
+  It turns out that <math|\<bbb-R\><rsub|\<bbb-C\>>,\<bbb-Q\><rsub|\<bbb-C\>>,\<bbb-Z\><rsub|\<bbb-C\>>,\<bbb-N\><rsub|\<bbb-C\>>>
+  are embeddings of <math|\<bbb-R\>,\<bbb-Q\>,\<bbb-Z\>> and <math|\<bbb-N\>>
+  in <math|\<bbb-C\>>,
+
+  \;
+
+  <\theorem>
+    We have that\ 
+  </theorem>
 
   \;
 
@@ -11730,11 +12078,17 @@
     <associate|auto-4|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>>|?>>
     <associate|auto-40|<tuple|9.5|?>>
     <associate|auto-41|<tuple|<with|mode|<quote|math>|<sqrt|x>>|?>>
+    <associate|auto-42|<tuple|10|?>>
+    <associate|auto-43|<tuple|10.1|?>>
+    <associate|auto-44|<tuple|10.2|?>>
     <associate|auto-5|<tuple|7.2|?>>
     <associate|auto-6|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>>|?>>
     <associate|auto-7|<tuple|absolute value|?>>
     <associate|auto-8|<tuple|<with|mode|<quote|math>|<around*|\||x|\|>>|?>>
     <associate|auto-9|<tuple|<with|mode|<quote|math>|m\|n>|?>>
+    <associate|complex complement|<tuple|10.4|?>>
+    <associate|complex field|<tuple|10.2|?>>
+    <associate|complex numbers|<tuple|10.1|?>>
     <associate|eq 7.1.022|<tuple|7.1|?>>
     <associate|eq 7.10.022|<tuple|7.10|?>>
     <associate|eq 7.11.022|<tuple|7.11|?>>
@@ -11831,7 +12185,6 @@
     <associate|eq 9.128.044|<tuple|9.128|?>>
     <associate|eq 9.129.044|<tuple|9.129|?>>
     <associate|eq 9.130.044|<tuple|9.130|?>>
-    <associate|eq 9.130.44|<tuple|9.130|?>>
     <associate|eq 9.131.044|<tuple|9.131|?>>
     <associate|eq 9.132.044|<tuple|9.132|?>>
     <associate|eq 9.133.044|<tuple|9.133|?>>
@@ -11932,6 +12285,7 @@
     <associate|eq 9.97.040|<tuple|9.97|?>>
     <associate|eq 9.98.040|<tuple|9.98|?>>
     <associate|eq 9.99.040|<tuple|9.99|?>>
+    <associate|eq real square root properties (1)|<tuple|9.93|?>>
     <associate|integeres order|<tuple|7.25|?>>
     <associate|integers|<tuple|7.2|?>>
     <associate|integers (-1).n|<tuple|7.16|?>>
@@ -12118,7 +12472,9 @@
     <associate|real square operator is a bijection|<tuple|9.88|?>>
     <associate|real square root|<tuple|9.89|?>>
     <associate|real square root is strictly increasing|<tuple|9.92|?>>
+    <associate|real square root norm|<tuple|9.96|?>>
     <associate|real square root of 2 is irational|<tuple|9.91|?>>
+    <associate|real square root of product|<tuple|9.95|?>>
     <associate|real strict order relation definition|<tuple|9.39|?>>
     <associate|real sum is a operator|<tuple|9.14|?>>
     <associate|real sup(S+T) and inf(S+T)|<tuple|9.53|?>>
@@ -12173,6 +12529,8 @@
       <tuple|<tuple|<with|mode|<quote|math>|\<bbb-N\><rsub|0,\<bbb-R\>>>>|<pageref|auto-35>>
 
       <tuple|<tuple|<with|mode|<quote|math>|\<bbb-N\><rsub|\<bbb-R\>>>>|<pageref|auto-36>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|<sqrt|x>>>|<pageref|auto-41>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|7<space|2spc>The
@@ -12252,6 +12610,14 @@
 
       9.5<space|2spc>The square root <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-40>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|10<space|2spc>The
+      complex numbers> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-42><vspace|0.5fn>
+
+      10.1<space|2spc>Definition and arithmetics
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-43>
     </associate>
   </collection>
 </auxiliary>

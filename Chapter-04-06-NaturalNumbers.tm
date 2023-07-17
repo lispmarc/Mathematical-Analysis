@@ -1502,6 +1502,32 @@
     </description>
   </proof>
 
+  <\theorem>
+    <label|field x.y=0\<less\>=\<gtr\>x=0 or y=0>If
+    <math|<around*|\<langle\>|F,\<oplus\>,\<odot\>|\<rangle\>>> is a field
+    and <math|x,y\<in\>F> then <math|x\<cdot\>y=0\<Leftrightarrow\>x=0\<vee\>y=0>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>If <math|x\<cdot\>y=0> then for <math|x>
+      we have either\ 
+
+      <\description>
+        <item*|<math|x=0>>Then clearly <math|0\<vee\>y=0> is true.
+
+        <item*|<math|x\<neq\>0>>Then <math|0=x<rsup|-1>\<cdot\>0=x<rsup|-1>\<cdot\><around*|(|x\<cdot\>y|)>=<around*|(|x<rsup|-1>\<cdot\>x|)>\<cdot\>y=1\<cdot\>y=y>
+        so that <math|y=0> or <math|x=0\<vee\>y=0> is true.
+      </description>
+
+      <item*|<math|\<Leftarrow\>>>If <math|x=0> or <math|y=0> we have by
+      [theorem: <reference|ring absorbing element>] and the fact that a field
+      is a ring that <math|x\<cdot\>y=0>
+    </description>
+  </proof>
+
   <\definition>
     <label|field subfield><index|subfield>If
     <math|<around*|\<langle\>|F,\<oplus\>,\<odot\>|\<rangle\>>> is a field
@@ -8384,17 +8410,18 @@
     <associate|extract maximum element of a family|<tuple|6.47|165>>
     <associate|field|<tuple|4.43|120>>
     <associate|field field homeomorphism is a ring
-    isomomorphism|<tuple|4.53|122>>
-    <associate|field homeomorphism|<tuple|4.51|122>>
-    <associate|field homeomorphism composition|<tuple|4.58|124>>
-    <associate|field homeomorphism to a sub field|<tuple|4.55|122>>
+    isomomorphism|<tuple|4.54|122>>
+    <associate|field homeomorphism|<tuple|4.52|122>>
+    <associate|field homeomorphism composition|<tuple|4.59|124>>
+    <associate|field homeomorphism to a sub field|<tuple|4.56|122>>
     <associate|field inverse is unique|<tuple|4.44|120>>
     <associate|field inverse of inverse|<tuple|4.45|120>>
     <associate|field inverse of product|<tuple|4.47|121>>
-    <associate|field isomorphism|<tuple|4.54|122>>
-    <associate|field isomorphism and neutral element|<tuple|4.57|123>>
-    <associate|field subfield|<tuple|4.49|121>>
-    <associate|field subfield is a field|<tuple|4.50|121>>
+    <associate|field isomorphism|<tuple|4.55|122>>
+    <associate|field isomorphism and neutral element|<tuple|4.58|123>>
+    <associate|field subfield|<tuple|4.50|121>>
+    <associate|field subfield is a field|<tuple|4.51|121>>
+    <associate|field x.y=0\<less\>=\<gtr\>x=0 or y=0|<tuple|4.49|?>>
     <associate|field x=y\<less\>=\<gtr\>x.z=y.z if
     z\<less\>\<gtr\>0|<tuple|4.48|121>>
     <associate|field x^-1=y^-1=\<gtr\>x=y|<tuple|4.46|121>>
@@ -8432,7 +8459,7 @@
     <associate|infinite condition (1)|<tuple|6.34|160>>
     <associate|infinite set|<tuple|6.21|157>>
     <associate|inverse of a field isomorphism is a field
-    isomorphism|<tuple|4.56|122>>
+    isomorphism|<tuple|4.57|122>>
     <associate|iteration final|<tuple|5.84|150>>
     <associate|mapping of N to a finite set (1)|<tuple|6.45|164>>
     <associate|mapping of N to a finite set (2)|<tuple|6.46|165>>
