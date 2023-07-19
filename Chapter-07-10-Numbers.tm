@@ -393,8 +393,6 @@
         <math|n,m\<in\>\<bbb-Z\>> is such that
         <math|n\<cdot\>m=0\<Rightarrow\>n=0\<vee\>m=0>
       </description>
-
-      <item>Additional we have also that <math|<around*|(|-1|)>\<cdot\><around*|(|-1|)>=1>
     </enumerate>
   </theorem>
 
@@ -495,14 +493,6 @@
         then <math|m=0> or <math|n=0> proving that
         <math|n\<cdot\>m=0\<Rightarrow\>n=0\<vee\>m=0>.
       </description>
-
-      <item>As <math|1=\<sim\><around*|[|<around*|(|1,0|)>|]>> we have by
-      [theorem: <reference|integers integers forms a group>] that
-      <math|-1=\<sim\><around*|[|<around*|(|0,1|)>|]>> so that
-
-      <\equation*>
-        <around*|(|-1|)>\<cdot\><around*|(|-1|)>=\<sim\><around*|[|<around*|(|0,1|)>|]>\<cdot\>\<sim\><around*|[|<around*|(|0,1|)>|]>=\<sim\><around*|[|<around*|(|0\<cdot\>0+1\<cdot\>1,1\<cdot\>0+0\<cdot\>1|)>|]>=\<sim\><around*|[|<around*|(|1,0|)>|]>=1
-      </equation*>
     </enumerate>
   </proof>
 
@@ -549,69 +539,6 @@
   </proof>
 
   <\theorem>
-    <label|integers absorbing element><dueto|Absorbing element>If
-    <math|z\<in\>\<bbb-Z\>> then <math|0\<cdot\>n=0=n\<cdot\>0>
-  </theorem>
-
-  <\proof>
-    Let <math|z=\<sim\><around*|[|<around*|(|n,m|)>|]>> then\ 
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|n\<cdot\>0>|<cell|\<equallim\><rsub|<text|commutativity>>>|<cell|0\<cdot\>n>>|<row|<cell|>|<cell|=>|<cell|\<sim\><around*|[|<around*|(|0,0|)>|]>\<cdot\>\<sim\><around*|[|<around*|(|n,m|)>|]>>>|<row|<cell|>|<cell|=>|<cell|\<sim\><around*|[|<around*|(|0\<cdot\>n+0\<cdot\>m,0\<cdot\>n+0\<cdot\>m|)>|]>>>|<row|<cell|>|<cell|=>|<cell|\<sim\><around*|[|<around*|(|0,0|)>|]>>>|<row|<cell|>|<cell|=>|<cell|0>>>>
-    </eqnarray*>
-  </proof>
-
-  <\theorem>
-    <label|integers (-1).n>If <math|z\<in\>\<bbb-Z\>> then
-    <math|<around*|(|-1|)>\<cdot\>z=-z>
-  </theorem>
-
-  <\proof>
-    If <math|z=\<sim\><around*|[|<around*|(|n,m|)>|]>> then we have by
-    [theorem: <reference|integers integers forms a group>] that
-    <math|-z=\<sim\><around*|[|<around*|(|m,n|)>|]>>, further as
-    <math|1=\<sim\><around*|[|<around*|(|1,0|)>|]>> we have
-    <math|-1=\<sim\><around*|[|<around*|(|0,1|)>|]>>. Hence\ 
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|<around*|(|-1|)>\<cdot\>z>|<cell|=>|<cell|\<sim\><around*|[|<around*|(|0,1|)>|]>\<cdot\>\<sim\><around*|[|<around*|(|n,m|)>|]>>>|<row|<cell|>|<cell|=>|<cell|\<sim\><around*|[|<around*|(|0\<cdot\>n+1\<cdot\>m,1\<cdot\>n+0\<cdot\>m|)>|]>>>|<row|<cell|>|<cell|=>|<cell|\<sim\><around*|[|<around*|(|m,n|)>|]>>>|<row|<cell|>|<cell|=>|<cell|-z>>>>
-    </eqnarray*>
-  </proof>
-
-  <\corollary>
-    <label|integers (-n).(-m)=n.m>If <math|n,m\<in\>\<bbb-Z\>> then
-    <math|<around*|(|-n|)>\<cdot\><around*|(|-m|)>=n\<cdot\>m>
-  </corollary>
-
-  <\proof>
-    \ 
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|<around*|(|-n|)>\<cdot\><around*|(|-m|)>>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|integers (-1).n>]>>>|<cell|<around*|(|<around*|(|-1|)>\<cdot\>n|)>\<cdot\><around*|(|<around*|(|-1|)>\<cdot\>m|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|integers integral domain>]>>>|<cell|<around*|(|<around*|(|-1|)>\<cdot\><around*|(|-1|)>|)>\<cdot\><around*|(|n\<cdot\>m|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|integers integral domain>]>>>|<cell|1\<cdot\><around*|(|n\<cdot\>m|)>>>|<row|<cell|>|<cell|=>|<cell|n\<cdot\>m>>>>
-    </eqnarray*>
-  </proof>
-
-  <\theorem>
-    <label|integers -(n,m)=(-n),(-m)>If <math|n,m\<in\>\<bbb-Z\>> then
-    <math|-<around*|(|n\<cdot\>m|)>=<around*|(|-n|)>\<cdot\>m=n\<cdot\><around*|(|-m|)>>
-  </theorem>
-
-  <\proof>
-    \ 
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|-<around*|(|n\<cdot\>m|)>>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|integers (-1).n>]>>>|<cell|<around*|(|-1|)>\<cdot\><around*|(|n\<cdot\>m|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|associativity>>>|<cell|<around*|(|<around*|(|-1|)>\<cdot\>n|)>\<cdot\>m>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|integers (-1).n>]>>>|<cell|<around*|(|-n|)>\<cdot\>m>>|<row|<cell|-<around*|(|n,m|)>>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|integers (-1).n>]>>>|<cell|<around*|(|-1|)>\<cdot\><around*|(|n\<cdot\>m|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|commutativity>>>|<cell|<around*|(|n\<cdot\>m|)>\<cdot\><around*|(|-1|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|associativity>>>|<cell|n\<cdot\><around*|(|m\<cdot\><around*|(|-1|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|commutativity>>>|<cell|n\<cdot\><around*|(|<around*|(|-1|)>\<cdot\>m|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|integers (-1).n>]>>>|<cell|n\<cdot\><around*|(|-m|)>>>>>
-    </eqnarray*>
-  </proof>
-
-  <\theorem>
     <label|integers n.r=k.r=\<gtr\>n=k>Let <math|n,k,r\<in\>\<bbb-Z\>> with
     <math|r\<neq\>0> then <math|n\<cdot\>r=k\<cdot\>r> implies <math|n=k>.
   </theorem>
@@ -621,7 +548,7 @@
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|n\<cdot\>r=k\<cdot\>r>|<cell|\<Rightarrow\>>|<cell|n\<cdot\>r+<around*|(|-<around*|(|k\<cdot\>r|)>|)>=<around*|(|k\<cdot\>r|)>+<around*|(|-<around*|(|k\<cdot\>r|)>|)>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|n\<cdot\>r+<around*|(|-<around*|(|k\<cdot\>r|)>|)>=0>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|[theorem:
-      <reference|integers -(n,m)=(-n),(-m)>]>>>|<cell|n\<cdot\>r+<around*|(|-k|)>\<cdot\>r=0>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|<around*|(|n+<around*|(|-k|)>|)>\<cdot\>r=0>>>>
+      <reference|ring 0 1 and ->]>>>|<cell|n\<cdot\>r+<around*|(|-k|)>\<cdot\>r=0>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|<around*|(|n+<around*|(|-k|)>|)>\<cdot\>r=0>>>>
     </eqnarray*>
 
     As by [theorem: <reference|integers integral domain>]
@@ -1293,7 +1220,7 @@
 
         <\eqnarray*>
           <tformat|<table|<row|<cell|0>|<cell|\<less\>>|<cell|<around*|(|m+<around*|(|-n|)>|)>\<cdot\>k>>|<row|<cell|>|<cell|=>|<cell|m\<cdot\>k+<around*|(|-n|)>\<cdot\>k>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-          <reference|integers -(n,m)=(-n),(-m)>]>>>|<cell|m\<cdot\>k+<around*|(|-<around*|(|n\<cdot\>k|)>|)>>>>>
+          <reference|ring 0 1 and ->]>>>|<cell|m\<cdot\>k+<around*|(|-<around*|(|n\<cdot\>k|)>|)>>>>>
         </eqnarray*>
 
         which by [theorem: <reference|integers properties (2)>] proves that
@@ -1330,7 +1257,7 @@
           n\<cdot\><around*|(|-k|)>\<less\>m\<cdot\><around*|(|-k|)>
         </equation*>
 
-        Using [theorem: <reference|integers -(n,m)=(-n),(-m)>] we have that
+        Using [theorem: <reference|ring 0 1 and ->] we have that
         <math|-<around*|(|n\<cdot\>k|)>=n\<cdot\><around*|(|-k|)>> and
         <math|-<around*|(|m\<cdot\>k|)>=m\<cdot\><around*|(|-k|)>> so that by
         the above we have <math|-<around*|(|n\<cdot\>k|)>\<less\>-<around*|(|m\<cdot\>k|)>>.
@@ -1346,7 +1273,7 @@
         Using [theorem: <reference|integers
         x\<less\>=y\<less\>=\<gtr\>-y\<less\>=x>] we have that
         <math|-<around*|(|n\<cdot\>k|)>\<less\>-<around*|(|m\<cdot\>k|)>>
-        giving by [theorem: <reference|integers -(n,m)=(-n),(-m)>] that
+        giving by [theorem: <reference|ring 0 1 and ->] that
 
         <\equation>
           <label|eq 7.10.022>n\<cdot\><around*|(|-k|)>\<less\>m\<cdot\><around*|(|-k|)>
@@ -1635,7 +1562,7 @@
 
       <\equation*>
         <around*|\||x|\|>\<cdot\><around*|\||y|\|>=x\<cdot\><around*|(|-y|)>\<equallim\><rsub|<text|[theorem:
-        <reference|integers -(n,m)=(-n),(-m)>]>>-<around*|(|x\<cdot\>y|)>=<around*|\||x\<cdot\>y|\|>.
+        <reference|ring 0 1 and ->]>>-<around*|(|x\<cdot\>y|)>=<around*|\||x\<cdot\>y|\|>.
       </equation*>
 
       <item*|<math|x\<less\>0\<wedge\>0\<leqslant\>y>>Then
@@ -1646,7 +1573,7 @@
 
       <\equation*>
         <around*|\||x|\|>\<cdot\><around*|\||y|\|>=<around*|(|-x|)>\<cdot\>y\<equallim\><rsub|<text|[theorem:
-        <reference|integers -(n,m)=(-n),(-m)>]>>-<around*|(|x,y|)>=<around*|\||x\<cdot\>y|\|>
+        <reference|ring 0 1 and ->]>>-<around*|(|x,y|)>=<around*|\||x\<cdot\>y|\|>
       </equation*>
 
       <item*|<math|x\<less\>0\<wedge\>y\<less\>0>>Then
@@ -1657,7 +1584,7 @@
 
       <\equation*>
         <around*|\||x|\|>\<cdot\><around*|\||y|\|>=<around*|(|-x|)>\<cdot\><around*|(|-y|)>\<equallim\><rsub|<text|[theorem:
-        <reference|integers -(n,m)=(-n),(-m)>]>>-<around*|(|-<around*|(|x\<cdot\>y|)>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|ring 0 1 and ->]>>-<around*|(|-<around*|(|x\<cdot\>y|)>|)>\<equallim\><rsub|<text|[theorem:
         <reference|group group inverse of
         inverse>]>>x\<cdot\>y<around*|\||=x\<cdot\>y|\|>
       </equation*>
@@ -2516,8 +2443,8 @@
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|<frac|a|b>+<frac|0|1>>|<cell|\<equallim\><rsub|<text|commutativity>>>|<cell|<frac|a\<cdot\>1+b\<cdot\>0|b\<cdot\>1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|integers integral domain>] and [theorem:
-        <reference|integers absorbing element>]>>>|<cell|<frac|a|b>>>>>
+        <reference|integers integral domain>] and [theorem: <reference|ring 0
+        1 and ->]>>>|<cell|<frac|a|b>>>>>
       </eqnarray*>
 
       <item*|inverse element> Let <math|<frac|a|b>\<in\>\<bbb-Q\>> then we
@@ -2727,78 +2654,6 @@
     \;
   </proof>
 
-  <\theorem>
-    <label|rational absorbing element>If <math|q\<in\>\<bbb-Q\>> then
-
-    <\enumerate>
-      <item><math|q\<cdot\>0=0\<cdot\>q=0>
-
-      <item><math|<around*|(|-1|)>\<cdot\>q=-q>
-    </enumerate>
-  </theorem>
-
-  <\proof>
-    \ Let <math|<frac|a|b>\<in\>\<bbb-Q\>> then
-
-    <\enumerate>
-      <item> <math|<frac|0|1>\<cdot\><frac|a|b><math|\<Rightarrowlim\><rsub|<text|[theorem:
-      <reference|rational field>]>>><frac|a|b>\<cdot\><frac|0|1>=<frac|a\<cdot\>0|b\<cdot\>1>=<frac|0|b>\<equallim\><rsub|b\<neq\>0\<wedge\><text|[theorem:
-      <reference|rational n/m=n.k/m.k>]>><frac|0|1>=0>
-
-      <item>As <math|1=<frac|1|1>> we have that <math|-1=<frac|-1|1>> hence
-      <math|-1\<cdot\><frac|a|b>=<frac|-1|1>\<cdot\><frac|a|b>=<frac|-1\<cdot\>a|1\<cdot\>b>\<equallim\><rsub|<text|[theorem:
-      <reference|integers (-1).n>]>><frac|-a|b>>
-    </enumerate>
-  </proof>
-
-  <\theorem>
-    <label|rational (-q).(-r)>If <math|q,r\<in\>\<bbb-Q\>> then
-
-    <\enumerate>
-      <item><math|-<around*|(|q\<cdot\>r|)>=<around*|(|-q|)>\<cdot\>r=q\<cdot\><around*|(|-r|)>>
-
-      <item><math|<around*|(|-q|)>\<cdot\><around*|(|-r|)>=q\<cdot\>r>
-
-      <item><math|-<around*|(|q+r|)>=<around*|(|-q|)>+<around*|(|-r|)>>
-    </enumerate>
-  </theorem>
-
-  <\proof>
-    \ 
-
-    <\enumerate>
-      <item> We have\ 
-
-      <\eqnarray*>
-        <tformat|<table|<row|<cell|-<around*|(|q\<cdot\>r|)>>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|rational absorbing element>]>>>|<cell|<around*|(|-1|)>\<cdot\><around*|(|q\<cdot\>r|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[heorem:
-        <reference|rational field>]>>>|<cell|<around*|(|<around*|(|-1|)>\<cdot\>q|)>\<cdot\>r>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|rational absorbing element>]>>>|<cell|<around*|(|-q|)>\<cdot\>r>>|<row|<cell|-<around*|(|q\<cdot\>r|)>>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|rational absorbing element>]>>>|<cell|<around*|(|-1|)>\<cdot\><around*|(|q\<cdot\>r|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[heorem:
-        <reference|rational field>]>>>|<cell|q\<cdot\><around*|(|<around*|(|-1|)>\<cdot\>r|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|rational absorbing element>]>>>|<cell|q\<cdot\><around*|(|-r|)>>>>>
-      </eqnarray*>
-
-      <item>Let <math|q=<frac|a|b>> and <math|r=<frac|n|m>> then\ 
-
-      <\equation*>
-        <around*|(|-q|)>\<cdot\><around*|(|-r|)>=<frac|-a|b>\<cdot\><frac|-n|m>=<frac|<around*|(|-a|)>\<cdot\><around*|(|-n|)>|b\<cdot\>m>\<equallim\><rsub|<text|[theorem:
-        <reference|integers (-n).(-m)=n.m>]>><frac|a\<cdot\>n|b\<cdot\>m>=<frac|a|b>\<cdot\><frac|n|m>=q\<cdot\>r
-      </equation*>
-
-      <item>We have\ 
-
-      <\equation*>
-        -<around*|(|q+r|)>\<equallim\><rsub|<text|[theorem:
-        <reference|rational absorbing element>]>><around*|(|-1|)>\<cdot\><around*|(|q+r|)>\<equallim\><rsub|<text|[heorem:
-        <reference|rational field>]>><around*|(|-1|)>\<cdot\>q+<around*|(|-1|)>\<cdot\>r\<equallim\><rsub|<text|[theorem:
-        <reference|rational absorbing element>]>><around*|(|-q|)>+<around*|(|-r|)>
-      </equation*>
-    </enumerate>
-
-    \;
-  </proof>
-
   <section|Order Relation>
 
   <\definition>
@@ -2939,7 +2794,7 @@
 
     <\equation*>
       <around*|(|-n|)>\<cdot\>m\<equallim\><rsub|<text|[theorem:
-      <reference|integers -(n,m)=(-n),(-m)>]>>-<around*|(|n\<cdot\>m|)>=-<around*|(|-<around*|(|k|)>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|ring 0 1 and ->]>>-<around*|(|n\<cdot\>m|)>=-<around*|(|-<around*|(|k|)>|)>\<equallim\><rsub|<text|[theorem:
       <reference|group group inverse of inverse>]>>k\<in\>\<bbb-Z\><rsup|+><rsub|0>,
     </equation*>
 
@@ -3137,7 +2992,7 @@
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|<around*|(|r+s|)>+<around*|(|-<around*|(|q+s|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|rational (-q).(-r)>]>>>|<cell|<around*|(|r+s|)>+<around*|(|<around*|(|-q|)>+<around*|(|-s|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|ring 0 1 and ->]>>>|<cell|<around*|(|r+s|)>+<around*|(|<around*|(|-q|)>+<around*|(|-s|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|rational group>]>>>|<cell|r+<around*|(|-q|)>\<in\>\<bbb-Q\><rsup|+><rsub|0>>>>>
       </eqnarray*>
 
@@ -3264,7 +3119,7 @@
 
         <\equation*>
           -<around*|(|r+<around*|(|-q|)>|)>\<equallim\><rsub|<text|[theorem:
-          <reference|rational (-q).(-r)>]>><around*|(|-r|)>+<around*|(|-<around*|(|-q|)>|)>=q+<around*|(|-r|)>
+          <reference|ring 0 1 and ->]>><around*|(|-r|)>+<around*|(|-<around*|(|-q|)>|)>=q+<around*|(|-r|)>
         </equation*>
 
         so that <math|q+<around*|(|-r|)>\<in\>\<bbb-Q\><rsup|+><rsub|0>> or
@@ -3454,16 +3309,16 @@
         <item>As <math|n\<less\>m> we have by [theorem: <reference|integers
         x\<less\>=y\<less\>=\<gtr\>-y\<less\>=x>] that <math|-m\<less\>-n>,
         so by (2.b) it follows that <math|1\<less\><frac|-n|-m>>. Now
-        <math|<frac|-n|-m>\<equallim\><rsub|<text|[theorem:
-        <reference|integers (-1).n>[>><frac|n\<cdot\><around*|(|-1|)>|m\<cdot\><around*|(|-1|)>>\<equallim\><rsub|<text|[theorem:
+        <math|<frac|-n|-m>\<equallim\><rsub|<text|[theorem: <reference|ring 0
+        1 and ->[>><frac|n\<cdot\><around*|(|-1|)>|m\<cdot\><around*|(|-1|)>>\<equallim\><rsub|<text|[theorem:
         <reference|rational n/m=n.k/m.k>]>><frac|n|m>> so that we have
         <math|1\<less\><frac|n|m>>.
 
         <item>As <math|m\<less\>n> we have by [theorem: <reference|integers
         x\<less\>=y\<less\>=\<gtr\>-y\<less\>=x>] that <math|-n\<less\>-m>,
         so by (2.a) it follows that <math|<frac|-n|-m>\<less\>1>. Now
-        <math|<frac|-n|-m>\<equallim\><rsub|<text|[theorem:
-        <reference|integers (-1).n>[>><frac|n\<cdot\><around*|(|-1|)>|m\<cdot\><around*|(|-1|)>>\<equallim\><rsub|<text|[theorem:
+        <math|<frac|-n|-m>\<equallim\><rsub|<text|[theorem: <reference|ring 0
+        1 and ->[>><frac|n\<cdot\><around*|(|-1|)>|m\<cdot\><around*|(|-1|)>>\<equallim\><rsub|<text|[theorem:
         <reference|rational n/m=n.k/m.k>]>><frac|n|m>> so that we have
         <math|<frac|n|m>\<less\>1>.
 
@@ -3525,7 +3380,7 @@
       use [theorem: <reference|rational 0\<less\>q and 0\<less\>r =\<gtr\>
       0\<less\>q,r>] giving <math|0\<less\><around*|(|r+<around*|(|-q|)>|)>\<cdot\>s\<equallim\><rsub|<text|[theorem:
       <reference|rational field>]>>r\<cdot\>s+<around*|(|-q|)>\<cdot\>s\<equallim\><rsub|<text|[theorem:
-      <reference|rational (-q).(-r)>]>>r\<cdot\>s+<around*|(|-<around*|(|q\<cdot\>s|)>|)>>,
+      <reference|ring 0 1 and ->]>>r\<cdot\>s+<around*|(|-<around*|(|q\<cdot\>s|)>|)>>,
       hence by \ [theorem: <reference|rational
       q\<less\>r\<less\>=\<gtr\>0\<less\>r+(-q)>]\ 
 
@@ -3538,7 +3393,7 @@
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|q\<less\>r>|<cell|\<Leftrightarrowlim\><rsub|<text|(1)>>>|<cell|q\<cdot\><around*|(|-s|)>\<less\>r\<cdot\><around*|(|-s|)>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<text|[theorem:
-        <reference|rational (-q).(-r)>]>>>|<cell|-<around*|(|q\<cdot\>s|)>\<less\>-<around*|(|r\<cdot\>s|)>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<text|[theorem:
+        <reference|ring 0 1 and ->]>>>|<cell|-<around*|(|q\<cdot\>s|)>\<less\>-<around*|(|r\<cdot\>s|)>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<text|[theorem:
         <reference|rational q\<less\>=r =\<gtr\>
         -r\<less\>=-q>]>>>|<cell|r\<cdot\>s\<less\>q\<cdot\>s>>>>
       </eqnarray*>
@@ -4474,7 +4329,7 @@
       </equation>
 
       As <math|0\<less\><frac|1|n>\<Rightarrowlim\><rsub|<text|[theorem:
-      <reference|rational (-q).(-r)>]>><frac|-1|n>\<less\>0> so that
+      <reference|ring 0 1 and ->]>><frac|-1|n>\<less\>0> so that
       <math|u+<frac|-1|n>\<less\>u>, as <math|u=sup<around*|(|A|)>> and
       <math|<around*|\<langle\>|\<bbb-Q\>,\<leqslant\>|\<rangle\>>> is
       totally ordered we have by [theorem: <reference|order sup, inf
@@ -4650,10 +4505,10 @@
   element in <math|<around*|\<langle\>|\<bbb-Q\>,+|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-R\>>>|<cell|q+r>|<cell|sum
   in <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-R\>>>|<cell|<math|q\<cdot\>r>>|<cell|product
   in <math|<around*|\<langle\>|\<bbb-R\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-R\>>>|<cell|<math|q\<leqslant\>r>>|<cell|order
-  in <math|<around*|\<langle\>|\<bbb-R\>\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-R\>>>|<cell|<math|q\<less\>r>>|<cell|strict
+  in <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-R\>>>|<cell|<math|q\<less\>r>>|<cell|strict
   order in <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|q,e\<in\>\<bbb-R\>>>|<cell|<math|q-r>>|<cell|subtraction
   in <math|<around*|\<langle\>|\<bbb-R\>,-|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-R\>>>|<cell|<math|q/r>>|<cell|division
-  in <math|<around*|\<langle\>|\<bbb-R\>\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-R\>>>|<cell|<math|q+0>
+  in <math|<around*|\<langle\>|\<bbb-R\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-R\>>>|<cell|<math|q+0>
   or <math|0+q>>|<cell|neutral element in
   <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-R\>>>|<cell|<math|q\<cdot\>1<text|
   or >1\<cdot\>q>>|<cell|neutral element in
@@ -7020,7 +6875,7 @@
     As by [theorem: <reference|real division of real numbers in positive and
     negative numbers>] <math|\<bbb-R\>\\<around*|{|0|}>=\<bbb-R\><rsup|+><big|cup>\<bbb-R\><rsup|->>
     and <math|\<bbb-R\><rsup|+><big|cap>\<bbb-R\><rsup|->=\<varnothing\>>
-    <math|\<alpha\><rsup|-1>> is we;; defined.
+    <math|\<alpha\><rsup|-1>> is well defined.
   </proof>
 
   <\theorem>
@@ -7881,7 +7736,7 @@
         <\eqnarray*>
           <tformat|<table|<row|<cell|\<alpha\><rsub|r>\<cdot\>\<alpha\><rsub|s>>|<cell|=>|<cell|-<around*|(|\<alpha\><rsub|r>\<odot\><around*|(|-\<alpha\><rsub|s>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|2|)>>>|<cell|-<around*|(|\<alpha\><rsub|r>\<odot\>\<alpha\><rsub|-s>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
           <reference|real a_r.a_s=a_r.s>]>>>|<cell|-\<alpha\><rsub|r\<cdot\><around*|(|-s|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-          <reference|rational (-q).(-r)>>>>|<cell|-\<alpha\><rsub|-<around*|(|r\<cdot\>s|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|2|)>>>|<cell|\<alpha\><rsub|-<around*|(|-<around*|(|r\<cdot\>s|)>|)>>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\><rsub|r\<cdot\>s>>>>>
+          <reference|ring 0 1 and ->>>>|<cell|-\<alpha\><rsub|-<around*|(|r\<cdot\>s|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|2|)>>>|<cell|\<alpha\><rsub|-<around*|(|-<around*|(|r\<cdot\>s|)>|)>>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\><rsub|r\<cdot\>s>>>>>
         </eqnarray*>
 
         <item*|<math|\<alpha\><rsub|r>\<in\>\<bbb-R\><rsup|->\<wedge\>\<alpha\><rsub|s>\<in\>\<bbb-R\><rsup|+>>>Then\ 
@@ -7889,7 +7744,7 @@
         <\eqnarray*>
           <tformat|<table|<row|<cell|\<alpha\><rsub|r>\<cdot\>\<alpha\><rsub|s>>|<cell|=>|<cell|-<around*|(|<around*|(|-\<alpha\><rsub|r>|)>\<odot\>\<alpha\><rsub|s>|)>>>|<row|<cell|>|<cell|\<equallim\>>|<cell|-<around*|(|\<alpha\><rsub|-r>\<odot\>\<alpha\><rsub|s>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
           <reference|real a_r.a_s=a_r.s>]>>>|<cell|-<around*|(|\<alpha\><rsub|<around*|(|-r|)>\<cdot\>s>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-          <reference|rational (-q).(-r)>>>>|<cell|-<around*|(|\<alpha\><rsub|-<around*|(|r\<cdot\>s|)>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|2|)>>>|<cell|\<alpha\><rsub|-<around*|(|-<around*|(|r\<cdot\>s|)>|)>>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\><rsub|r\<cdot\>s>>>>>
+          <reference|ring 0 1 and ->>>>|<cell|-<around*|(|\<alpha\><rsub|-<around*|(|r\<cdot\>s|)>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|2|)>>>|<cell|\<alpha\><rsub|-<around*|(|-<around*|(|r\<cdot\>s|)>|)>>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\><rsub|r\<cdot\>s>>>>>
         </eqnarray*>
 
         <item*|<math|\<alpha\><rsub|r>\<in\>\<bbb-R\><rsup|->\<wedge\>\<alpha\><rsub|s>\<in\>\<bbb-R\><rsup|->>>Then
@@ -7897,7 +7752,7 @@
         <\eqnarray*>
           <tformat|<table|<row|<cell|\<alpha\><rsub|r>\<cdot\>\<alpha\><rsub|s>>|<cell|=>|<cell|<around*|(|-\<alpha\><rsub|r>|)>\<odot\><around*|(|-\<alpha\><rsub|s>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|2|)>>>|<cell|\<alpha\><rsub|-r>\<odot\>\<alpha\><rsub|-s>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
           <reference|real a_r.a_s=a_r.s>]>>>|<cell|\<alpha\><rsub|<around*|(|-r|)>\<cdot\><around*|(|-s|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-          <reference|rational (-q).(-r)>>>>|<cell|\<alpha\><rsub|r\<cdot\>s>>>>>
+          <reference|ring 0 1 and ->]>>>|<cell|\<alpha\><rsub|r\<cdot\>s>>>>>
         </eqnarray*>
 
         <item*|<math|<around*|(|\<alpha\><rsub|r>,\<alpha\><rsub|s>|)>\<in\><around*|(|<around*|{|0|}>\<times\>\<bbb-R\>|)><big|cup><around*|(|\<bbb-R\>\<times\><around*|{|0|}>|)>>>Then
@@ -11983,6 +11838,67 @@
   <section|Embedding of <math|\<bbb-N\><rsub|0>,\<bbb-Z\>,\<bbb-Q\><text| and
   >\<bbb-R\>> in <math|\<bbb-C\>>>
 
+  Note that to avoid having to use different symbols for neutral elements,
+  inverse elements, sum, product etc. we use contxt to derive the maining of
+  the different symbols.\ 
+
+  \;
+
+  <block|<tformat|<table|<row|<cell|Context>|<cell|Expression>|<cell|Operator>>|<row|<cell|<math|n,m\<in\>\<bbb-N\><rsub|0>>>|<cell|n+m>|<cell|sum
+  in <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|n\<cdot\>m>>|<cell|product
+  in <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|n\<leqslant\>m>>|<cell|order
+  in <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|n\<less\>m>>|<cell|strict
+  order in <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|n-m>>|<cell|subtraction
+  in <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>>>>|<row|<cell|<math|n\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|n+0>
+  or <math|0+n>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>>>>|<row|<cell|<math|n\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|n\<cdot\>1<text|
+  or >1\<cdot\>n>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|n\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|-n>>|<cell|inverse
+  element in <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-Z\>>>|<cell|n+m>|<cell|sum
+  in <math|<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-Z\>>>|<cell|<math|n\<cdot\>m>>|<cell|product
+  in <math|<around*|\<langle\>|\<bbb-Z\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-Z\>>>|<cell|<math|n\<leqslant\>m>>|<cell|order
+  in <math|<around*|\<langle\>|\<bbb-Z\>\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-Z\>>>|<cell|<math|n\<less\>m>>|<cell|strict
+  order in <math|<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-Z\>>>|<cell|<math|n-m>>|<cell|subtraction
+  in <math|<around*|\<langle\>|\<bbb-Z\>,-|\<rangle\>>>>>|<row|<cell|<math|n\<in\>\<bbb-Z\>>>|<cell|<math|n+0>
+  or <math|0+n>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>>>>|<row|<cell|<math|n\<in\>\<bbb-Z\>>>|<cell|<math|n\<cdot\>1<text|
+  or >1\<cdot\>n>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-Z\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|n\<in\>\<bbb-Z\>>>|<cell|<math|-n>>|<cell|inverse
+  element in <math|<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-Q\>>>|<cell|q+r>|<cell|sum
+  in <math|<around*|\<langle\>|\<bbb-Q\>,+|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-Q\>>>|<cell|<math|q\<cdot\>r>>|<cell|product
+  in <math|<around*|\<langle\>|\<bbb-Q\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-Q\>>>|<cell|<math|q\<leqslant\>r>>|<cell|order
+  in <math|<around*|\<langle\>|\<bbb-Q\>\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-Q\>>>|<cell|<math|q\<less\>r>>|<cell|strict
+  order in <math|<around*|\<langle\>|\<bbb-Q\>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|q,e\<in\>\<bbb-Q\>>>|<cell|<math|q-r>>|<cell|subtraction
+  in <math|<around*|\<langle\>|\<bbb-Q\>,-|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-Q\>>>|<cell|<math|q/r>>|<cell|division
+  in <math|<around*|\<langle\>|\<bbb-Q\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-Q\>>>|<cell|<math|q+0>
+  or <math|0+q>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-Q\>,+|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-Q\>>>|<cell|<math|q\<cdot\>1<text|
+  or >1\<cdot\>q>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-Q\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-Q\>>>|<cell|<math|-q>>|<cell|inverse
+  element in <math|<around*|\<langle\>|\<bbb-Q\>,+|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-R\>>>|<cell|q+r>|<cell|sum
+  in <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-R\>>>|<cell|<math|q\<cdot\>r>>|<cell|product
+  in <math|<around*|\<langle\>|\<bbb-R\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-R\>>>|<cell|<math|q\<leqslant\>r>>|<cell|order
+  in <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-R\>>>|<cell|<math|q\<less\>r>>|<cell|strict
+  order in <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|q,e\<in\>\<bbb-R\>>>|<cell|<math|q-r>>|<cell|subtraction
+  in <math|<around*|\<langle\>|\<bbb-R\>,-|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-R\>>>|<cell|<math|q/r>>|<cell|division
+  in <math|<around*|\<langle\>|\<bbb-R\>\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-R\>>>|<cell|<math|q+0>
+  or <math|0+q>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-R\>>>|<cell|<math|q\<cdot\>1<text|
+  or >1\<cdot\>q>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-R\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-R\>>>|<cell|<math|-q>>|<cell|inverse
+  element in <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>>>>|<row|<cell|>|<cell|>|<cell|>>|<row|<cell|<math|q,r\<in\>\<bbb-C\>>>|<cell|q+r>|<cell|sum
+  in <math|<around*|\<langle\>|\<bbb-C\>,+|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-C\>>>|<cell|<math|q\<cdot\>r>>|<cell|product
+  in <math|<around*|\<langle\>|\<bbb-C\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-C\>>>|<cell|<math|q\<leqslant\>r>>|<cell|order
+  in <math|<around*|\<langle\>|\<bbb-C\>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-C\>>>|<cell|<math|q\<less\>r>>|<cell|strict
+  order in <math|<around*|\<langle\>|\<bbb-C\>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|q,e\<in\>\<bbb-C\>>>|<cell|<math|q-r>>|<cell|subtraction
+  in <math|<around*|\<langle\>|\<bbb-C\>,-|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-C\>>>|<cell|<math|q/r>>|<cell|division
+  in <math|<around*|\<langle\>|\<bbb-C\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-C\>>>|<cell|<math|q+0>
+  or <math|0+q>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-C\>,+|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-C\>>>|<cell|<math|q\<cdot\>1<text|
+  or >1\<cdot\>q>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-C\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-C\>>>|<cell|<math|-q>>|<cell|inverse
+  element in <math|<around*|\<langle\>|\<bbb-C\>,+|\<rangle\>>>>>>>>
+
   <subsection|Embeddings>
 
   <\definition>
@@ -11999,7 +11915,7 @@
   in <math|\<bbb-C\>>,
 
   <\theorem>
-    We have that\ 
+    <label|complex embedding>We have that\ 
 
     <\enumerate>
       <item>If <math|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>:\<bbb-R\>\<rightarrow\>\<bbb-C\>>
@@ -12357,7 +12273,7 @@
   we have also a special notation for <math|<around*|(|0,1|)>>.
 
   <\definition>
-    <math|i\<in\>\<bbb-C\>> is defined as <math|i=-1>
+    <label|complex i^2=-1><math|i\<in\>\<bbb-C\>> is defined as <math|i=-1>
   </definition>
 
   <\theorem>
@@ -12405,7 +12321,28 @@
     </proof>
   </theorem>
 
-  \;
+  <\note>
+    Be carefull, in the above <math|x,y\<in\>\<bbb-R\><rsub|\<bbb-C\>>> not
+    <math|\<bbb-R\>>. However if <math|x,y\<in\>\<bbb-R\>> then
+    <math|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|x|)>,i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|y|)>\<in\>\<bbb-R\><rsub|\<bbb-C\>>>
+    then we have for <math|z=<around*|(|x,y|)>> that
+
+    <\equation*>
+      z=<around*|(|x,y|)>=<around*|(|x,0|)>+<around*|(|0,y|)>=<around*|(|x.0|)>+<around*|(|0,1|)>\<cdot\><around*|(|y,0|)>=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|x|)>+i\<cdot\>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|y|)>
+    </equation*>
+
+    some authors automatical identify <math|x> with
+    <math|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|x|)>> and
+    <math|y> with <math|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|y|)>>,
+    essentially identifying <math|\<bbb-R\>> with
+    <math|\<bbb-R\><rsub|\<bbb-C\>>>. In this chapter we do not do this
+    identification. A consequence of this is that we have to proof that
+    <math|\<bbb-R\><rsub|\<bbb-C\>>> has the same properties as
+    <math|\<bbb-R\>>, but this occurs to me the correct thing to do. We will
+    use however the fact that every <math|x\<in\>\<bbb-C\>> can be written
+    uniquely as <math|z=x+i\<cdot\>y> because it simplifies calculation if we
+    remember that <math|i\<cdot\>i=-1>.
+  </note>
 
   <subsection|Order relation>
 
@@ -12415,7 +12352,8 @@
   <math|\<bbb-C\>>. However we cannit guarantee that the order is compatible
   with the field operations. More specific if
   <math|<around*|\<langle\>|\<bbb-C\>,\<leqslant\>|\<rangle\>>> is totally
-  ordered such that <math|\<forall\>x,y,z\<in\>\<bbb-C\>> that\ 
+  ordered such that <math|\<forall\>x,y,z\<in\>\<bbb-C\>> that
+  <math|i<rsup|2>=i\<cdot\>i=-1>.
 
   <\enumerate>
     <item>If <math|x\<less\>y> then <math|x+z\<less\>y+z>
@@ -12428,9 +12366,125 @@
   either\ 
 
   <\description>
-    <item*|<math|0\<less\>i>>Then by (2) <math|0\<less\>i\<cdot\>i=<around*|(|0,1|)>\<cdot\><around*|(|0,1|)>=<around*|(|0\<cdot\>0-1\<cdot\>1,0\<cdot\>1+1\<cdot\>0|)>=<around*|(|-1,0|)>>
-    giving <math|0\<less\>>
+    <item*|<math|0\<less\>i>>Then by (2) <math|0\<less\>i\<cdot\>i=-1> so
+    that <math|0\<less\>-1>, hence by (1) we have
+    <math|1=0+1\<less\>1+<around*|(|-1|)>=0> or <math|1\<less\>0>. But then
+    by (2) we have <math|i=1\<cdot\>i\<less\>0\<cdot\>i=i> or
+    <math|i\<less\>0> contradicting <math|0\<gtr\>i>.
+
+    <item*|<math|i\<less\>0>>Then by (1) we have that
+    <math|0=i+<around*|(|-i|)>\<less\><around*|(|-i|)>> so that
+    <math|0\<less\>-i>. Hence using (2) we have that
+    <math|0\<less\><around*|(|-i|)>\<cdot\><around*|(|-i|)>\<equallim\><rsub|<text|[theorem:
+    <reference|ring 0 1 and ->]>>i\<cdot\>i=-1> or <math|0\<less\>-1> but
+    then by (2) <math|1=0+1\<less\><around*|(|-1|)>+1\<less\>0> or
+    <math|1\<less\>0>. But then by (2) we have
+    <math|-i=1\<cdot\><around*|(|-i|)>\<less\>0\<cdot\><around*|(|-i|)>=0> or
+    <math|-i\<less\>0> contradicting that we fond that <math|0\<less\>-i>.
   </description>
+
+  So although we can equip <math|\<bbb-C\>> with a total order, this order
+  can not satisfiy (1) and (2) and the main culprit is <math|i>. However we
+  can still have a order relation of the subfield
+  <math|\<bbb-R\><rsub|\<bbb-C\>>> that satisfies (1) and (2) as will be
+  showed in the following.
+
+  <\definition>
+    <label|complex RC order (1)>The relation
+    <math|\<leqslant\>\<subseteq\>\<bbb-R\><rsub|\<bbb-C\>>\<times\>\<bbb-R\><rsub|\<bbb-C\>>>
+    is defined by
+
+    <\equation*>
+      \<leqslant\>=<around*|{|<around*|(|<around*|(|x,0|)>,<around*|(|y,0|)>|)>\<in\>\<bbb-R\><rsub|\<bbb-C\>>\|x\<leqslant\>y|}>
+    </equation*>
+
+    Note: that in <math|x\<leqslant\>y> we use the order of
+    <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>>
+  </definition>
+
+  <\theorem>
+    <label|complex RC order (2)>Using the above order relation we have that
+
+    <\enumerate>
+      <item><math|<around*|\<langle\>|\<bbb-R\><rsub|\<bbb-C\>>,\<leqslant\>|\<rangle\>>>
+      is a totally ordered set
+
+      <item><math|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>:<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-R\><rsub|\<bbb-C\>>,\<leqslant\>|\<rangle\>>>
+      is a order isomorphism
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>We have\ 
+
+      <\description>
+        <item*|reflexivity>If <math|<around*|(|x,0|)>\<in\>\<bbb-R\><rsub|\<bbb-C\>>>
+        then as <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>>
+        is totally orded we have <math|x\<leqslant\>x> so that
+        <math|<around*|(|x,0|)>\<leqslant\><around*|(|x,0|)>>
+
+        \ <item*|anti symmetry>If <math|<around*|(|x,0|)>\<leqslant\><around*|(|y,0|)>\<wedge\><around*|(|y,0|)>\<leqslant\><around*|(|x,0|)>>
+        then <math|x\<leqslant\>y\<wedge\>y\<leqslant\>x> which, as
+        <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>> is
+        totally ordered, proves that <math|x=y> hence
+        <math|<around*|(|x,0|)>=<around*|(|y,0|)>>.
+
+        <item*|transitivity>If <math|<around*|(|x,0|)>\<leqslant\><around*|(|y,0|)>\<wedge\><around*|(|y,0|)>\<leqslant\>*<around*|(|z,0|)>>
+        then <math|x\<leqslant\>y\<wedge\>y\<leqslant\>z> which, \ as
+        <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>> is
+        totally ordered, proves that <math|x\<leqslant\>z>, hence
+        <math|<around*|(|x,0|)>\<leqslant\><around*|(|z,0|)>>
+
+        <item*|totally order>If <math|<around*|(|x,0|)>,<around*|(|y,0|)>\<in\>\<bbb-R\><rsub|\<bbb-C\>>>
+        then we have as <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>>
+        is totally ordered that either <math|x\<leqslant\>y\<Rightarrow\><around*|(|x,0|)>\<leqslant\><around*|(|y,0|)>>
+        or <math|y\<leqslant\>x\<Rightarrow\><around*|(|y,0|)>\<leqslant\><around*|(|x,0|)>>.
+      </description>
+
+      <item>First by [theorem:<reference|complex embedding>]
+      <math|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>:\<bbb-R\>\<rightarrow\>\<bbb-R\><rsub|\<bbb-C\>>>
+      is a bijection and second\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-R\><rsub|\<bbb-C\>>><around*|(|x|)>\<leqslant\>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|y|)>>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|x,0|)>\<leqslant\><around*|(|y,0|)>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|definition>>|<cell|x\<leqslant\>y>>>>
+      </eqnarray*>
+    </enumerate>
+  </proof>
+
+  We use now the above order isomorphism and field isomorphism to transfer
+  the properties of <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>>
+  and <math|<around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>> to
+  <math|<around*|\<langle\>|\<bbb-R\><rsub|\<bbb-C\>>,\<leqslant\>|\<rangle\>>>
+  and <math|<around*|\<langle\>|\<bbb-R\><rsub|\<bbb-C\>>,+,\<cdot\>|\<rangle\>>>.
+
+  <\definition>
+    We have the following definitions:\ 
+
+    <\enumerate>
+      <item><math|\<bbb-R\><rsup|+><rsub|\<bbb-C\>>=<around*|{|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>\|0\<less\>x|}>>
+
+      <item><math|\<bbb-R\><rsup|+><rsub|0,\<bbb-C\>>=<around*|{|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>\|0\<leqslant\>x|}>>
+
+      <item><math|\<bbb-R\><rsup|-><rsub|\<bbb-C\>>=<around*|{|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>\|x\<less\>0|}>>
+
+      <item><math|\<bbb-R\><rsup|-><rsub|0,\<bbb-C\>>=<around*|{|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>\|x\<leqslant\>0|}>>
+    </enumerate>
+  </definition>
+
+  <\theorem>
+    If <math|a,\<beta\>\<in\>\<bbb-R\><rsub|\<bbb-C\>>> then we have\ 
+  </theorem>
+
+  \;
+
+  \;
+
+  \;
+
+  \;
 
   \;
 
@@ -12474,7 +12528,7 @@
 
 <\references>
   <\collection>
-    <associate|NQ is conditional complete|<tuple|8.45|?>>
+    <associate|NQ is conditional complete|<tuple|8.43|?>>
     <associate|auto-1|<tuple|7|?>>
     <associate|auto-10|<tuple|quotient|?>>
     <associate|auto-11|<tuple|<with|mode|<quote|math>|<frac|m|n>>|?>>
@@ -12522,8 +12576,13 @@
     <associate|auto-8|<tuple|<with|mode|<quote|math>|<around*|\||x|\|>>|?>>
     <associate|auto-9|<tuple|<with|mode|<quote|math>|m\|n>|?>>
     <associate|compelx|<tuple|10.8|?>>
+    <associate|complex RC order|<tuple|10.11|?>>
+    <associate|complex RC order (1)|<tuple|10.10|?>>
+    <associate|complex RC order (2)|<tuple|10.11|?>>
     <associate|complex complement|<tuple|10.4|?>>
+    <associate|complex embedding|<tuple|10.6|?>>
     <associate|complex field|<tuple|10.2|?>>
+    <associate|complex i^2=-1|<tuple|10.7|?>>
     <associate|complex numbers|<tuple|10.1|?>>
     <associate|eq 10.1.045|<tuple|10.1|?>>
     <associate|eq 10.10.045|<tuple|10.10|?>>
@@ -12738,113 +12797,107 @@
     <associate|eq 9.98.040|<tuple|9.98|?>>
     <associate|eq 9.99.040|<tuple|9.99|?>>
     <associate|eq real square root properties (1)|<tuple|9.93|?>>
-    <associate|integeres order|<tuple|7.25|?>>
+    <associate|integeres order|<tuple|7.21|?>>
     <associate|integers|<tuple|7.2|?>>
-    <associate|integers (-1).n|<tuple|7.16|?>>
-    <associate|integers (-n).(-m)=n.m|<tuple|7.17|?>>
-    <associate|integers -(n,m)=(-n),(-m)|<tuple|7.18|?>>
-    <associate|integers 0\<less\>1 and 0\<less\>2|<tuple|7.30|?>>
-    <associate|integers 0\<less\>=n.n|<tuple|7.34|?>>
+    <associate|integers 0\<less\>1 and 0\<less\>2|<tuple|7.26|?>>
+    <associate|integers 0\<less\>=n.n|<tuple|7.30|?>>
     <associate|integers 0\<less\>n and 0\<less\>m then
-    0\<less\>n.m|<tuple|7.32|?>>
+    0\<less\>n.m|<tuple|7.28|?>>
     <associate|integers 1+1=2|<tuple|7.12|?>>
-    <associate|integers Archimedean|<tuple|7.36|?>>
-    <associate|integers absolute value|<tuple|7.40|?>>
-    <associate|integers absorbing element|<tuple|7.15|?>>
-    <associate|integers are conditional complete|<tuple|7.38|?>>
-    <associate|integers common divisor|<tuple|7.51|?>>
+    <associate|integers Archimedean|<tuple|7.32|?>>
+    <associate|integers absolute value|<tuple|7.36|?>>
+    <associate|integers are conditional complete|<tuple|7.34|?>>
+    <associate|integers common divisor|<tuple|7.47|?>>
     <associate|integers condition for 0|<tuple|7.13|?>>
-    <associate|integers denumerability|<tuple|7.59|?>>
+    <associate|integers denumerability|<tuple|7.55|?>>
     <associate|integers difference|<tuple|7.8|?>>
-    <associate|integers divide relation|<tuple|7.45|?>>
-    <associate|integers division|<tuple|7.44|?>>
-    <associate|integers divisor 1|<tuple|7.47|?>>
-    <associate|integers divisors |<tuple|7.48|?>>
-    <associate|integers divisors properties|<tuple|7.52|?>>
+    <associate|integers divide relation|<tuple|7.41|?>>
+    <associate|integers division|<tuple|7.40|?>>
+    <associate|integers divisor 1|<tuple|7.43|?>>
+    <associate|integers divisors |<tuple|7.44|?>>
+    <associate|integers divisors properties|<tuple|7.48|?>>
     <associate|integers equivalence relation|<tuple|7.1|?>>
-    <associate|integers even condition|<tuple|7.58|?>>
-    <associate|integers even odd|<tuple|7.56|?>>
-    <associate|integers even odd equivalences|<tuple|7.57|?>>
-    <associate|integers gcd existence|<tuple|7.53|?>>
-    <associate|integers gcd properties|<tuple|7.55|?>>
-    <associate|integers greatest common divisor|<tuple|7.54|?>>
+    <associate|integers even condition|<tuple|7.54|?>>
+    <associate|integers even odd|<tuple|7.52|?>>
+    <associate|integers even odd equivalences|<tuple|7.53|?>>
+    <associate|integers gcd existence|<tuple|7.49|?>>
+    <associate|integers gcd properties|<tuple|7.51|?>>
+    <associate|integers greatest common divisor|<tuple|7.50|?>>
     <associate|integers integers forms a group|<tuple|7.7|?>>
     <associate|integers integral domain|<tuple|7.11|?>>
     <associate|integers multiplication|<tuple|7.10|?>>
     <associate|integers multiplication equivalence|<tuple|7.9|?>>
-    <associate|integers n.r=k.r=\<gtr\>n=k|<tuple|7.19|?>>
+    <associate|integers n.r=k.r=\<gtr\>n=k|<tuple|7.15|?>>
     <associate|integers neutral element|<tuple|7.6|?>>
-    <associate|integers non negative|<tuple|7.20|?>>
-    <associate|integers non positive numbers|<tuple|7.22|?>>
-    <associate|integers order and multiplication|<tuple|7.33|?>>
-    <associate|integers order preserving bijection|<tuple|7.35|?>>
-    <associate|integers positive and negative|<tuple|7.24|?>>
-    <associate|integers positive condition|<tuple|7.28|?>>
-    <associate|integers positive integeres are well ordered|<tuple|7.37|?>>
-    <associate|integers properties (1)|<tuple|7.21|?>>
-    <associate|integers properties (2)|<tuple|7.31|?>>
-    <associate|integers quotient|<tuple|7.50|?>>
-    <associate|integers quotient theorem|<tuple|7.49|?>>
-    <associate|integers strict positive numbers|<tuple|7.29|?>>
+    <associate|integers non negative|<tuple|7.16|?>>
+    <associate|integers non positive numbers|<tuple|7.18|?>>
+    <associate|integers order and multiplication|<tuple|7.29|?>>
+    <associate|integers order preserving bijection|<tuple|7.31|?>>
+    <associate|integers positive and negative|<tuple|7.20|?>>
+    <associate|integers positive condition|<tuple|7.24|?>>
+    <associate|integers positive integeres are well ordered|<tuple|7.33|?>>
+    <associate|integers properties (1)|<tuple|7.17|?>>
+    <associate|integers properties (2)|<tuple|7.27|?>>
+    <associate|integers quotient|<tuple|7.46|?>>
+    <associate|integers quotient theorem|<tuple|7.45|?>>
+    <associate|integers strict positive numbers|<tuple|7.25|?>>
     <associate|integers sum uniqueness|<tuple|7.4|?>>
-    <associate|integers sup is max|<tuple|7.39|?>>
+    <associate|integers sup is max|<tuple|7.35|?>>
     <associate|integers without 0|<tuple|8.2|?>>
-    <associate|integers x\<less\>=y\<less\>=\<gtr\>-y\<less\>=x|<tuple|7.27|?>>
-    <associate|integers x\<less\>=\|x\||<tuple|7.42|?>>
+    <associate|integers x\<less\>=y\<less\>=\<gtr\>-y\<less\>=x|<tuple|7.23|?>>
+    <associate|integers x\<less\>=\|x\||<tuple|7.38|?>>
     <associate|integers z=-z=\<gtr\>z=0|<tuple|7.14|?>>
-    <associate|integers {x\|-\<less\>=x}|<tuple|7.26|?>>
-    <associate|integers \|x.y\|=\|x\|.\|y\||<tuple|7.41|?>>
-    <associate|integers \|x\|\<less\>=\<gtr\>x=0|<tuple|7.43|?>>
+    <associate|integers {x\|-\<less\>=x}|<tuple|7.22|?>>
+    <associate|integers \|x.y\|=\|x\|.\|y\||<tuple|7.37|?>>
+    <associate|integers \|x\|\<less\>=\<gtr\>x=0|<tuple|7.39|?>>
     <associate|integers ~([n,m])~([n+k,m+k)]|<tuple|7.3|?>>
-    <associate|rational (-q).(-r)|<tuple|8.16|?>>
-    <associate|rational 0\<less\>1|<tuple|8.30|?>>
-    <associate|rational 0\<less\>=q and 0\<less\>=q=\<gtr\>0\<less\>=q+r|<tuple|8.26|?>>
-    <associate|rational 0\<less\>=q property|<tuple|8.22|?>>
+    <associate|rational 0\<less\>1|<tuple|8.28|?>>
+    <associate|rational 0\<less\>=q and 0\<less\>=q=\<gtr\>0\<less\>=q+r|<tuple|8.24|?>>
+    <associate|rational 0\<less\>=q property|<tuple|8.20|?>>
     <associate|rational 0\<less\>q and 0\<less\>r =\<gtr\>
-    0\<less\>q,r|<tuple|8.33|?>>
-    <associate|rational 0\<less\>q-\<gtr\>0\<less\>q^-1|<tuple|8.35|?>>
-    <associate|rational 0\<less\>q=\<gtr\>q=n/m|<tuple|8.29|?>>
+    0\<less\>q,r|<tuple|8.31|?>>
+    <associate|rational 0\<less\>q-\<gtr\>0\<less\>q^-1|<tuple|8.33|?>>
+    <associate|rational 0\<less\>q=\<gtr\>q=n/m|<tuple|8.27|?>>
     <associate|rational 1+1=2|<tuple|8.13|?>>
-    <associate|rational Archimedean|<tuple|8.42|?>>
-    <associate|rational NQ is denumerable|<tuple|8.48|?>>
-    <associate|rational NQ is well-ordered|<tuple|8.44|?>>
-    <associate|rational NQ properties (1)|<tuple|8.41|?>>
-    <associate|rational Q is denumerable|<tuple|8.50|?>>
-    <associate|rational ZQ is denumerable|<tuple|8.49|?>>
-    <associate|rational absorbing element|<tuple|8.15|?>>
-    <associate|rational alternative definition|<tuple|8.39|?>>
-    <associate|rational densitiy|<tuple|8.43|?>>
-    <associate|rational embedded integers|<tuple|8.37|?>>
+    <associate|rational Archimedean|<tuple|8.40|?>>
+    <associate|rational NQ is denumerable|<tuple|8.46|?>>
+    <associate|rational NQ is well-ordered|<tuple|8.42|?>>
+    <associate|rational NQ properties (1)|<tuple|8.39|?>>
+    <associate|rational Q is denumerable|<tuple|8.48|?>>
+    <associate|rational ZQ is denumerable|<tuple|8.47|?>>
+    <associate|rational alternative definition|<tuple|8.37|?>>
+    <associate|rational densitiy|<tuple|8.41|?>>
+    <associate|rational embedded integers|<tuple|8.35|?>>
     <associate|rational equivalence relation|<tuple|8.3|?>>
     <associate|rational field|<tuple|8.12|?>>
     <associate|rational group|<tuple|8.8|?>>
-    <associate|rational n/m and n\<less\>m or m\<less\>n|<tuple|8.32|?>>
+    <associate|rational n/m and n\<less\>m or m\<less\>n|<tuple|8.30|?>>
     <associate|rational n/m=n.k/m.k|<tuple|8.5|?>>
-    <associate|rational natural numbers|<tuple|8.40|?>>
-    <associate|rational non negative rationals|<tuple|8.19|?>>
+    <associate|rational natural numbers|<tuple|8.38|?>>
+    <associate|rational non negative rationals|<tuple|8.17|?>>
     <associate|rational non negative rationals from a
-    semi-group|<tuple|8.20|?>>
+    semi-group|<tuple|8.18|?>>
     <associate|rational numbers|<tuple|8.4|?>>
-    <associate|rational order relation (1)|<tuple|8.21|?>>
+    <associate|rational order relation (1)|<tuple|8.19|?>>
     <associate|rational product|<tuple|8.11|?>>
     <associate|rational product (1)|<tuple|8.10|?>>
-    <associate|rational properties of 0, 1 and inverse|<tuple|8.36|?>>
-    <associate|rational q\<less\>=0 and 0\<less\>=q then q=0|<tuple|8.24|?>>
-    <associate|rational q\<less\>=r =\<gtr\> -r\<less\>=-q|<tuple|8.27|?>>
-    <associate|rational q\<less\>=r=\<gtr\>q+s\<less\>=r+s|<tuple|8.25|?>>
-    <associate|rational q\<less\>q+1 and q-1\<less\>q|<tuple|8.31|?>>
-    <associate|rational q\<less\>r\<less\>=\<gtr\>0\<less\>r+(-q)|<tuple|8.23|?>>
+    <associate|rational properties of 0, 1 and inverse|<tuple|8.34|?>>
+    <associate|rational q\<less\>=0 and 0\<less\>=q then q=0|<tuple|8.22|?>>
+    <associate|rational q\<less\>=r =\<gtr\> -r\<less\>=-q|<tuple|8.25|?>>
+    <associate|rational q\<less\>=r=\<gtr\>q+s\<less\>=r+s|<tuple|8.23|?>>
+    <associate|rational q\<less\>q+1 and q-1\<less\>q|<tuple|8.29|?>>
+    <associate|rational q\<less\>r\<less\>=\<gtr\>0\<less\>r+(-q)|<tuple|8.21|?>>
     <associate|rational q=r\<less\>=\<gtr\>q.s=r.s|<tuple|8.14|?>>
-    <associate|rational r\<less\>=q and multiplying by s|<tuple|8.34|?>>
+    <associate|rational r\<less\>=q and multiplying by s|<tuple|8.32|?>>
     <associate|rational rational numbers are not conditional
-    complete|<tuple|8.47|?>>
-    <associate|rational square root of 2 does not exist|<tuple|8.46|?>>
-    <associate|rational sub-ring|<tuple|8.38|?>>
+    complete|<tuple|8.45|?>>
+    <associate|rational square root of 2 does not exist|<tuple|8.44|?>>
+    <associate|rational sub-ring|<tuple|8.36|?>>
     <associate|rational sum operator|<tuple|8.7|?>>
     <associate|rational sum operator (1)|<tuple|8.6|?>>
-    <associate|rational totally ordered|<tuple|8.28|?>>
+    <associate|rational totally ordered|<tuple|8.26|?>>
     <associate|rational x-y|<tuple|8.9|?>>
-    <associate|rational {0}|<tuple|8.18|?>>
+    <associate|rational {0}|<tuple|8.16|?>>
     <associate|real (x^n-1)\<gtr\>=n.(x-1)|<tuple|9.84|?>>
     <associate|real -(a.b)=(-a).b=(a.(-b)|<tuple|9.29|?>>
     <associate|real 0\<less\>1|<tuple|9.42|?>>
@@ -12935,7 +12988,7 @@
     <associate|real x\<less\>y=\<gtr\>x+1\<less\>=y|<tuple|9.63|?>>
     <associate|real x^n\<gtr\>n if x\<gtr\>1 (R)|<tuple|9.85|?>>
     <associate|reals the set of reals are non empty|<tuple|9.5|?>>
-    <associate|sign function|<tuple|8.17|?>>
+    <associate|sign function|<tuple|8.15|?>>
   </collection>
 </references>
 
@@ -13071,9 +13124,18 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-43>
 
-      10.2<space|2spc>Embedding of <with|mode|<quote|math>|\<bbb-R\>> in
-      <with|mode|<quote|math>|\<bbb-C\>> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      10.2<space|2spc>Embedding of <with|mode|<quote|math>|\<bbb-N\><rsub|0>,\<bbb-Z\>,\<bbb-Q\><with|mode|<quote|text>|
+      and >\<bbb-R\>> in <with|mode|<quote|math>|\<bbb-C\>>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-44>
+
+      <with|par-left|<quote|1tab>|10.2.1<space|2spc>Embeddings
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-45>>
+
+      <with|par-left|<quote|1tab>|10.2.2<space|2spc>Order relation
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-46>>
     </associate>
   </collection>
 </auxiliary>
