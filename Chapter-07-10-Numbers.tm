@@ -857,8 +857,6 @@
     </description>
   </proof>
 
-  Using the order relation we have the following identity
-
   <\theorem>
     <label|integers {x\|-\<less\>=x}><math|\<bbb-Z\><rsup|+><rsub|0>=<around*|{|x\<in\>\<bbb-Z\>\|0\<leqslant\>x|}>>
     and <math|\<bbb-Z\><rsup|-><rsub|0>=<around*|{|x\<in\>\<bbb-Z\>\|x\<leqslant\>0|}>>
@@ -896,53 +894,6 @@
     <\equation*>
       \<bbb-Z\><rsup|-><rsub|0>=<around*|{|x\<in\>\<bbb-Z\>\|x\<leqslant\>0|}>
     </equation*>
-  </proof>
-
-  <\theorem>
-    <label|integers x\<less\>=y\<less\>=\<gtr\>-y\<less\>=x>If
-    <math|x,y\<in\>\<bbb-Z\>> then we have
-
-    <\enumerate>
-      <item><math|x\<leqslant\>y\<Leftrightarrow\>-y\<leqslant\>-x>
-
-      <item><math|x\<less\>y\<Leftrightarrow\>-y\<less\>-x>
-    </enumerate>
-  </theorem>
-
-  <\proof>
-    \ 
-
-    <\enumerate>
-      <item>\ 
-
-      <\description>
-        <item*|<math|\<Rightarrow\>>>If <math|x\<leqslant\>y> then
-        <math|y+<around*|(|-x|)>\<in\>\<bbb-Z\><rsup|+><rsub|0>>, further\ 
-
-        <\eqnarray*>
-          <tformat|<table|<row|<cell|<around*|(|-x|)>+<around*|(|-<around*|(|-y|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
-          <reference|group group inverse of
-          inverse>]>>>|<cell|<around*|(|-x|)>+y>>|<row|<cell|>|<cell|=>|<cell|y+<around*|(|-x|)>>>|<row|<cell|>|<cell|\<in\>>|<cell|\<bbb-Z\><rsup|+><rsub|0>>>>>
-        </eqnarray*>
-
-        proving that\ 
-
-        <\equation*>
-          -y\<leqslant\>-x
-        </equation*>
-
-        <item*|<math|\<Leftarrow\>>>If <math|-y\<leqslant\>-x> then we have
-        by the above that <math|-<around*|(|-x|)>\<leqslant\>-<around*|(|-y|)>\<Rightarrowlim\><rsub|<text|[theorem:
-        <reference|group group inverse of inverse>]>>x\<leqslant\>y>
-      </description>
-
-      <item>
-
-      <\eqnarray*>
-        <tformat|<table|<row|<cell|x\<less\>y>|<cell|\<Leftrightarrow\>>|<cell|x\<neq\>y\<wedge\>x\<leqslant\>y>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<neq\>y\<wedge\>-y\<leqslant\>-x>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<text|[theorem:
-        <reference|group -x=-y\<less\>=\<gtr\>x=y>]>>>|<cell|-x\<neq\>-y\<wedge\>-y\<leqslant\>-x>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|-y\<less\>-x>>>>
-      </eqnarray*>
-    </enumerate>
   </proof>
 
   <\theorem>
@@ -1022,6 +973,180 @@
     <math|n\<neq\>0> then <math|0\<less\>n>, hence by \ [theorem:
     <reference|integers positive condition>] we have that
     <math|0\<less\>\<sim\><around*|[|<around*|(|n,0|)>|]>>
+  </proof>
+
+  <\theorem>
+    <label|integers x\<less\>=y\<less\>=\<gtr\>-y\<less\>=x>If
+    <math|x,y\<in\>\<bbb-Z\>> then we have
+
+    <\enumerate>
+      <item><math|x\<leqslant\>y\<Leftrightarrow\>-y\<leqslant\>-x>
+
+      <item><math|x\<less\>y\<Leftrightarrow\>-y\<less\>-x>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>\ 
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>If <math|x\<leqslant\>y> then
+        <math|y+<around*|(|-x|)>\<in\>\<bbb-Z\><rsup|+><rsub|0>>, further\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|-x|)>+<around*|(|-<around*|(|-y|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|group group inverse of
+          inverse>]>>>|<cell|<around*|(|-x|)>+y>>|<row|<cell|>|<cell|=>|<cell|y+<around*|(|-x|)>>>|<row|<cell|>|<cell|\<in\>>|<cell|\<bbb-Z\><rsup|+><rsub|0>>>>>
+        </eqnarray*>
+
+        proving that\ 
+
+        <\equation*>
+          -y\<leqslant\>-x
+        </equation*>
+
+        <item*|<math|\<Leftarrow\>>>If <math|-y\<leqslant\>-x> then we have
+        by the above that <math|-<around*|(|-x|)>\<leqslant\>-<around*|(|-y|)>\<Rightarrowlim\><rsub|<text|[theorem:
+        <reference|group group inverse of inverse>]>>x\<leqslant\>y>
+      </description>
+
+      <item>
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<less\>y>|<cell|\<Leftrightarrow\>>|<cell|x\<neq\>y\<wedge\>x\<leqslant\>y>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<neq\>y\<wedge\>-y\<leqslant\>-x>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<text|[theorem:
+        <reference|group -x=-y\<less\>=\<gtr\>x=y>]>>>|<cell|-x\<neq\>-y\<wedge\>-y\<leqslant\>-x>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|-y\<less\>-x>>>>
+      </eqnarray*>
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|integers 0\<less\>n and 0\<less\>m then 0\<less\>n.m>If
+    <math|x,y\<in\>\<bbb-Z\>> and <math|0\<less\>x\<wedge\>0\<less\>y> then
+    <math|0\<less\>x\<cdot\>y>.
+  </theorem>
+
+  <\proof>
+    If <math|x=\<sim\><around*|[|<around*|(|n.m|)>|]>> and
+    <math|y=\<sim\><around*|[|<around*|(|r,s|)>|]>> then by [theorem:
+    <reference|integers positive condition>] we have <math|m\<less\>n> and
+    <math|s\<less\>r> so by [theorem: <reference|natural numbers n\<less\>m
+    then there exists a k such that m=n+k>] there exists
+    <math|k,l\<in\>\<bbb-N\><rsub|0>\\<around*|{|0|}>> such that <math|n=m+k>
+    and <math|r=s+l>. Hence\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|n\<cdot\>r+m\<cdot\>s>|<cell|=>|<cell|<around*|(|m+k|)>\<cdot\><around*|(|s+l|)>+m\<cdot\>s>>|<row|<cell|>|<cell|=>|<cell|<wide*|m\<cdot\>s|\<wide-underbrace\>><rsub|1>+<wide*|m\<cdot\>l|\<wide-underbrace\>><rsub|2>+<wide*|k\<cdot\>s|\<wide-underbrace\>><rsub|3>+k\<cdot\>l+<wide*|m\<cdot\>s|\<wide-underbrace\>><rsub|4>>>|<row|<cell|m\<cdot\>r+n\<cdot\>s>|<cell|=>|<cell|m\<cdot\><around*|(|s+l|)>+<around*|(|m+k|)>\<cdot\>s>>|<row|<cell|>|<cell|=>|<cell|<wide*|m\<cdot\>s|\<wide-underbrace\>><rsub|1>+<wide*|m\<cdot\>l|\<wide-underbrace\>><rsub|2>+<wide*|m\<cdot\>s|\<wide-underbrace\>><rsub|4>+<wide*|k\<cdot\>s|\<wide-underbrace\>><rsub|3>>>>>
+    </eqnarray*>
+
+    so that\ 
+
+    <\equation*>
+      n\<cdot\>r+m\<cdot\>s=m\<cdot\>r+n\<cdot\>s+k\<cdot\>l
+    </equation*>
+
+    As <math|0\<neq\>k\<Rightarrow\>0\<less\>k> and
+    <math|0\<neq\>l\<Rightarrow\>0\<less\>l> it follows from [theorem:
+    <reference|natural numbers n\<less\>m=\<gtr\>n.k\<less\>m.k>] that
+    <math|0\<less\>k\<cdot\>l> so that <math|k\<cdot\>l\<neq\>0>, using the
+    above together with [theorem: <reference|natural numbers
+    n\<less\>m\<less\>=\<gtr\>there exists a k such that m=k>] proves that\ 
+
+    <\equation>
+      <label|eq 7.8.022>m\<cdot\>r+n\<cdot\>s\<less\>n\<cdot\>r+m\<cdot\>s
+    </equation>
+
+    now\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|x\<cdot\>y>|<cell|=>|<cell|\<sim\><around*|[|<around*|(|n\<cdot\>r+m\<cdot\>s,m\<cdot\>r+n\<cdot\>s|)>|]>>>>>
+    </eqnarray*>
+
+    Combining the above with [eq: <reference|eq 7.8.022>] and [theorem:
+    <reference|integers positive condition> proves finally:
+
+    <\equation*>
+      0\<less\>x\<cdot\>y
+    </equation*>
+  </proof>
+
+  TODO rewrite this\ 
+
+  <\theorem>
+    <math|<around*|\<langle\>|\<bbb-Z\>,+,\<cdot\>,\<leqslant\>|\<rangle\>>>
+    is a ordered integral domain [definition: <reference|ring ordered ring>]
+  </theorem>
+
+  <\proof>
+    Using [theorem: <reference|integers integral domain>]
+    <math|<around*|\<langle\>|\<bbb-Z\>,+,\<cdot\>|\<rangle\>>> is a integral
+    domain and using [theorem: <reference|integeres order>] we have that
+    <math|<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>> is totaly
+    ordered. Next\ 
+
+    <\enumerate>
+      <item>For <math|n,m,k\<in\>\<bbb-Z\>> with <math|n\<leqslant\>m> we
+      have\ 
+
+      <\equation>
+        <label|eq 7.7.046>m+<around*|(|-n|)>\<in\>\<bbb-Z\><rsup|+><rsub|0>
+      </equation>
+
+      Further\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|m+k|)>+<around*|(|-<around*|(|n+k|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|group inverse of x.y>]>>>|<cell|<around*|(|m+k|)>+<around*|(|<around*|(|-n|)>+<around*|(|-k|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|commutatitivity>>>|<cell|<around*|(|m+k|)>+<around*|(|<around*|(|-k|)>+<around*|(|-n|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|associativity>>>|<cell|m+<around*|(|k+<around*|(|<around*|(|-k|)>+<around*|(|-n|)>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|associativity>>>|<cell|m+<around*|(|<around*|(|k+<around*|(|-k|)>|)>+<around*|(|-n|)>|)>>>|<row|<cell|>|<cell|=>|<cell|m+<around*|(|0+<around*|(|-n|)>|)>>>|<row|<cell|>|<cell|=>|<cell|m+<around*|(|-n|)>>>>>
+      </eqnarray*>
+
+      which by [eq: <reference|eq 7.7.046>] proves that
+      <math|<around*|(|m+k|)>+<around*|(|-<around*|(|n+k|)>|)>\<in\>\<bbb-Z\><rsup|+><rsub|0>>.
+      Hence\ 
+
+      <\equation*>
+        n+k\<leqslant\>m+k
+      </equation*>
+
+      <item>Let <math|n,m,k\<in\>\<bbb-Z\>> with <math|0\<leqslant\>k> and
+      <math|n\<leqslant\>m>, then for <math|n,m> we have either:
+
+      <\description>
+        <item*|<math|n=m>>Then clearly <math|n\<cdot\>k=m\<cdot\>k> hence
+        <math|n\<cdot\>k\<leqslant\>m\<cdot\>k>
+
+        <item*|<math|n\<less\>m>>Then for <math|0\<leqslant\>k> we have
+        either:\ 
+
+        <\description>
+          <item*|<math|k=0>>Then <math|n\<cdot\>k=n\<cdot\>0\<equallim\><rsub|<text|[theorem:
+          <reference|ring absorbing element>]>>0\<equallim\><rsub|<text|[theorem:
+          <reference|ring absorbing element>]>>m\<cdot\>k> proving that
+          <math|n\<cdot\>k\<leqslant\>m\<cdot\>k>
+
+          <item*|<math|0\<less\>k>>Then as <math|n\<less\>m> we have
+          <math|m+<around*|(|-n|)>\<in\>\<bbb-Z\><rsub|0><rsup|+>\<Rightarrowlim\><rsub|<text|[theorem:
+          <reference|integers {x\|-\<less\>=x}>]>>0\<leqslant\>m+<around*|(|-n|)>>
+          or as <math|n\<neq\>m> we have that <math|> TODO
+        </description>
+      </description>
+    </enumerate>
+
+    \ Further f
+
+    If additional <math|0\<leqslant\>k> then <math|>we have either:
+
+    <\description>
+      <item*|<math|k=0>>Then <math|n\<cdot\>k=n\<cdot\>0\<equallim\><rsub|<text|[theorem:
+      <reference|ring absorbing element>]>>0\<equallim\><rsub|<text|[theorem:
+      <reference|ring absorbing element>]>>m\<cdot\>k> proving that
+      <math|n\<cdot\>k\<leqslant\>m\<cdot\>k>
+
+      <item*|<math|0\<less\>k>>Then by [eq: <reference|eq 7.7.046>] and
+      [theorem: <reference|integers {x\|-\<less\>=x}>] we have that
+      <math|0\<leqslant\>m+<around*|(|-n|)>>
+    </description>
   </proof>
 
   <\example>
@@ -1138,55 +1263,7 @@
     </enumerate>
   </proof>
 
-  <\theorem>
-    <label|integers 0\<less\>n and 0\<less\>m then 0\<less\>n.m>If
-    <math|x,y\<in\>\<bbb-Z\>> and <math|0\<less\>x\<wedge\>0\<less\>y> then
-    <math|0\<less\>x\<cdot\>y>.
-  </theorem>
-
-  <\proof>
-    If <math|x=\<sim\><around*|[|<around*|(|n.m|)>|]>> and
-    <math|y=\<sim\><around*|[|<around*|(|r,s|)>|]>> then by [theorem:
-    <reference|integers positive condition>] we have <math|m\<less\>n> and
-    <math|s\<less\>r> so by [theorem: <reference|natural numbers n\<less\>m
-    then there exists a k such that m=n+k>] there exists
-    <math|k,l\<in\>\<bbb-N\><rsub|0>\\<around*|{|0|}>> such that <math|n=m+k>
-    and <math|r=s+l>. Hence\ 
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|n\<cdot\>r+m\<cdot\>s>|<cell|=>|<cell|<around*|(|m+k|)>\<cdot\><around*|(|s+l|)>+m\<cdot\>s>>|<row|<cell|>|<cell|=>|<cell|<wide*|m\<cdot\>s|\<wide-underbrace\>><rsub|1>+<wide*|m\<cdot\>l|\<wide-underbrace\>><rsub|2>+<wide*|k\<cdot\>s|\<wide-underbrace\>><rsub|3>+k\<cdot\>l+<wide*|m\<cdot\>s|\<wide-underbrace\>><rsub|4>>>|<row|<cell|m\<cdot\>r+n\<cdot\>s>|<cell|=>|<cell|m\<cdot\><around*|(|s+l|)>+<around*|(|m+k|)>\<cdot\>s>>|<row|<cell|>|<cell|=>|<cell|<wide*|m\<cdot\>s|\<wide-underbrace\>><rsub|1>+<wide*|m\<cdot\>l|\<wide-underbrace\>><rsub|2>+<wide*|m\<cdot\>s|\<wide-underbrace\>><rsub|4>+<wide*|k\<cdot\>s|\<wide-underbrace\>><rsub|3>>>>>
-    </eqnarray*>
-
-    so that\ 
-
-    <\equation*>
-      n\<cdot\>r+m\<cdot\>s=m\<cdot\>r+n\<cdot\>s+k\<cdot\>l
-    </equation*>
-
-    As <math|0\<neq\>k\<Rightarrow\>0\<less\>k> and
-    <math|0\<neq\>l\<Rightarrow\>0\<less\>l> it follows from [theorem:
-    <reference|natural numbers n\<less\>m=\<gtr\>n.k\<less\>m.k>] that
-    <math|0\<less\>k\<cdot\>l> so that <math|k\<cdot\>l\<neq\>0>, using the
-    above together with [theorem: <reference|natural numbers
-    n\<less\>m\<less\>=\<gtr\>there exists a k such that m=k>] proves that\ 
-
-    <\equation>
-      <label|eq 7.8.022>m\<cdot\>r+n\<cdot\>s\<less\>n\<cdot\>r+m\<cdot\>s
-    </equation>
-
-    now\ 
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|x\<cdot\>y>|<cell|=>|<cell|\<sim\><around*|[|<around*|(|n\<cdot\>r+m\<cdot\>s,m\<cdot\>r+n\<cdot\>s|)>|]>>>>>
-    </eqnarray*>
-
-    Combining the above with [eq: <reference|eq 7.8.022>] and [theorem:
-    <reference|integers positive condition> proves finally:
-
-    <\equation*>
-      0\<less\>x\<cdot\>y
-    </equation*>
-  </proof>
+  \;
 
   <\theorem>
     <label|integers order and multiplication>If <math|n,m,k\<in\>\<bbb-Z\>>
@@ -12520,7 +12597,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|6>
-    <associate|page-first|179>
+    <associate|page-first|181>
     <associate|section-nr|2>
     <associate|subsection-nr|4>
   </collection>
@@ -12576,7 +12653,6 @@
     <associate|auto-8|<tuple|<with|mode|<quote|math>|<around*|\||x|\|>>|?>>
     <associate|auto-9|<tuple|<with|mode|<quote|math>|m\|n>|?>>
     <associate|compelx|<tuple|10.8|?>>
-    <associate|complex RC order|<tuple|10.11|?>>
     <associate|complex RC order (1)|<tuple|10.10|?>>
     <associate|complex RC order (2)|<tuple|10.11|?>>
     <associate|complex complement|<tuple|10.4|?>>
@@ -12601,24 +12677,25 @@
     <associate|eq 10.8.045|<tuple|10.8|?>>
     <associate|eq 10.9.035|<tuple|10.9|?>>
     <associate|eq 7.1.022|<tuple|7.1|?>>
-    <associate|eq 7.10.022|<tuple|7.10|?>>
-    <associate|eq 7.11.022|<tuple|7.11|?>>
-    <associate|eq 7.12.022|<tuple|7.12|?>>
-    <associate|eq 7.13.022|<tuple|7.13|?>>
-    <associate|eq 7.16.022|<tuple|7.14|?>>
-    <associate|eq 7.17.022|<tuple|7.15|?>>
-    <associate|eq 7.18.022|<tuple|7.16|?>>
-    <associate|eq 7.18.027.1|<tuple|7.18|?>>
-    <associate|eq 7.19.022|<tuple|7.17|?>>
-    <associate|eq 7.19.027.1|<tuple|7.19|?>>
+    <associate|eq 7.10.022|<tuple|7.11|?>>
+    <associate|eq 7.11.022|<tuple|7.12|?>>
+    <associate|eq 7.12.022|<tuple|7.13|?>>
+    <associate|eq 7.13.022|<tuple|7.14|?>>
+    <associate|eq 7.16.022|<tuple|7.15|?>>
+    <associate|eq 7.17.022|<tuple|7.16|?>>
+    <associate|eq 7.18.022|<tuple|7.17|?>>
+    <associate|eq 7.18.027.1|<tuple|7.19|?>>
+    <associate|eq 7.19.022|<tuple|7.18|?>>
+    <associate|eq 7.19.027.1|<tuple|7.20|?>>
     <associate|eq 7.2.022|<tuple|7.2|?>>
     <associate|eq 7.3.022|<tuple|7.3|?>>
     <associate|eq 7.4.022|<tuple|7.4|?>>
     <associate|eq 7.5.022|<tuple|7.5|?>>
     <associate|eq 7.6.022|<tuple|7.6|?>>
     <associate|eq 7.7.022|<tuple|7.7|?>>
+    <associate|eq 7.7.046|<tuple|7.9|?>>
     <associate|eq 7.8.022|<tuple|7.8|?>>
-    <associate|eq 7.9.022|<tuple|7.9|?>>
+    <associate|eq 7.9.022|<tuple|7.10|?>>
     <associate|eq 8.1.023|<tuple|8.1|?>>
     <associate|eq 8.11.024|<tuple|8.11|?>>
     <associate|eq 8.12.024|<tuple|8.12|?>>
@@ -12799,30 +12876,30 @@
     <associate|eq real square root properties (1)|<tuple|9.93|?>>
     <associate|integeres order|<tuple|7.21|?>>
     <associate|integers|<tuple|7.2|?>>
-    <associate|integers 0\<less\>1 and 0\<less\>2|<tuple|7.26|?>>
-    <associate|integers 0\<less\>=n.n|<tuple|7.30|?>>
+    <associate|integers 0\<less\>1 and 0\<less\>2|<tuple|7.28|?>>
+    <associate|integers 0\<less\>=n.n|<tuple|7.31|?>>
     <associate|integers 0\<less\>n and 0\<less\>m then
-    0\<less\>n.m|<tuple|7.28|?>>
+    0\<less\>n.m|<tuple|7.26|?>>
     <associate|integers 1+1=2|<tuple|7.12|?>>
-    <associate|integers Archimedean|<tuple|7.32|?>>
-    <associate|integers absolute value|<tuple|7.36|?>>
-    <associate|integers are conditional complete|<tuple|7.34|?>>
-    <associate|integers common divisor|<tuple|7.47|?>>
+    <associate|integers Archimedean|<tuple|7.33|?>>
+    <associate|integers absolute value|<tuple|7.37|?>>
+    <associate|integers are conditional complete|<tuple|7.35|?>>
+    <associate|integers common divisor|<tuple|7.48|?>>
     <associate|integers condition for 0|<tuple|7.13|?>>
-    <associate|integers denumerability|<tuple|7.55|?>>
+    <associate|integers denumerability|<tuple|7.56|?>>
     <associate|integers difference|<tuple|7.8|?>>
-    <associate|integers divide relation|<tuple|7.41|?>>
-    <associate|integers division|<tuple|7.40|?>>
-    <associate|integers divisor 1|<tuple|7.43|?>>
-    <associate|integers divisors |<tuple|7.44|?>>
-    <associate|integers divisors properties|<tuple|7.48|?>>
+    <associate|integers divide relation|<tuple|7.42|?>>
+    <associate|integers division|<tuple|7.41|?>>
+    <associate|integers divisor 1|<tuple|7.44|?>>
+    <associate|integers divisors |<tuple|7.45|?>>
+    <associate|integers divisors properties|<tuple|7.49|?>>
     <associate|integers equivalence relation|<tuple|7.1|?>>
-    <associate|integers even condition|<tuple|7.54|?>>
-    <associate|integers even odd|<tuple|7.52|?>>
-    <associate|integers even odd equivalences|<tuple|7.53|?>>
-    <associate|integers gcd existence|<tuple|7.49|?>>
-    <associate|integers gcd properties|<tuple|7.51|?>>
-    <associate|integers greatest common divisor|<tuple|7.50|?>>
+    <associate|integers even condition|<tuple|7.55|?>>
+    <associate|integers even odd|<tuple|7.53|?>>
+    <associate|integers even odd equivalences|<tuple|7.54|?>>
+    <associate|integers gcd existence|<tuple|7.50|?>>
+    <associate|integers gcd properties|<tuple|7.52|?>>
+    <associate|integers greatest common divisor|<tuple|7.51|?>>
     <associate|integers integers forms a group|<tuple|7.7|?>>
     <associate|integers integral domain|<tuple|7.11|?>>
     <associate|integers multiplication|<tuple|7.10|?>>
@@ -12831,25 +12908,25 @@
     <associate|integers neutral element|<tuple|7.6|?>>
     <associate|integers non negative|<tuple|7.16|?>>
     <associate|integers non positive numbers|<tuple|7.18|?>>
-    <associate|integers order and multiplication|<tuple|7.29|?>>
-    <associate|integers order preserving bijection|<tuple|7.31|?>>
+    <associate|integers order and multiplication|<tuple|7.30|?>>
+    <associate|integers order preserving bijection|<tuple|7.32|?>>
     <associate|integers positive and negative|<tuple|7.20|?>>
-    <associate|integers positive condition|<tuple|7.24|?>>
-    <associate|integers positive integeres are well ordered|<tuple|7.33|?>>
+    <associate|integers positive condition|<tuple|7.23|?>>
+    <associate|integers positive integeres are well ordered|<tuple|7.34|?>>
     <associate|integers properties (1)|<tuple|7.17|?>>
-    <associate|integers properties (2)|<tuple|7.27|?>>
-    <associate|integers quotient|<tuple|7.46|?>>
-    <associate|integers quotient theorem|<tuple|7.45|?>>
-    <associate|integers strict positive numbers|<tuple|7.25|?>>
+    <associate|integers properties (2)|<tuple|7.29|?>>
+    <associate|integers quotient|<tuple|7.47|?>>
+    <associate|integers quotient theorem|<tuple|7.46|?>>
+    <associate|integers strict positive numbers|<tuple|7.24|?>>
     <associate|integers sum uniqueness|<tuple|7.4|?>>
-    <associate|integers sup is max|<tuple|7.35|?>>
+    <associate|integers sup is max|<tuple|7.36|?>>
     <associate|integers without 0|<tuple|8.2|?>>
-    <associate|integers x\<less\>=y\<less\>=\<gtr\>-y\<less\>=x|<tuple|7.23|?>>
-    <associate|integers x\<less\>=\|x\||<tuple|7.38|?>>
+    <associate|integers x\<less\>=y\<less\>=\<gtr\>-y\<less\>=x|<tuple|7.25|?>>
+    <associate|integers x\<less\>=\|x\||<tuple|7.39|?>>
     <associate|integers z=-z=\<gtr\>z=0|<tuple|7.14|?>>
     <associate|integers {x\|-\<less\>=x}|<tuple|7.22|?>>
-    <associate|integers \|x.y\|=\|x\|.\|y\||<tuple|7.37|?>>
-    <associate|integers \|x\|\<less\>=\<gtr\>x=0|<tuple|7.39|?>>
+    <associate|integers \|x.y\|=\|x\|.\|y\||<tuple|7.38|?>>
+    <associate|integers \|x\|\<less\>=\<gtr\>x=0|<tuple|7.40|?>>
     <associate|integers ~([n,m])~([n+k,m+k)]|<tuple|7.3|?>>
     <associate|rational 0\<less\>1|<tuple|8.28|?>>
     <associate|rational 0\<less\>=q and 0\<less\>=q=\<gtr\>0\<less\>=q+r|<tuple|8.24|?>>

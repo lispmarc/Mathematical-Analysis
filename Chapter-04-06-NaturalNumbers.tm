@@ -1375,6 +1375,8 @@
     \;
   </proof>
 
+  TODO use the classical axiomas for a ordered ring
+
   <\definition>
     <label|ring ordered ring><math|<around*|\<langle\>|R,\<oplus\>,\<odot\>,\<leqslant\>|\<rangle\>>>
     is a ordered ring if
@@ -1386,100 +1388,239 @@
       <item><math|<around*|\<langle\>|R,\<leqslant\>|\<rangle\>>> is totally
       ordered
 
-      <item><math|\<forall\>x,y,z\<in\>R> we have\ 
+      <item><math|\<forall\>x,y,z\<in\>R> with <math|x\<less\>y> we have
+      <math|x\<oplus\>z\<less\>y\<oplus\>z>
 
-      <\enumerate>
-        <item>If <math|x\<leqslant\>y> then <math|x+z\<leqslant\>y+z>
-
-        <item>If <math|x\<leqslant\>y> and <math|0\<leqslant\>z> then
-        <math|x\<odot\>z\<leqslant\>y\<odot\>z>
-      </enumerate>
+      <item><math|\<forall\>x,y\<in\>R> with <math|0\<less\>x> and
+      <math|0\<less\>y> we have <math|0\<less\>x\<odot\>y>
     </enumerate>
+
+    If in addition <math|<around*|\<langle\>|R,\<oplus\>,\<odot\>|\<rangle\>>>
+    is a integral domain then we say that
+    <math|<around*|\<langle\>|R,\<oplus\>,\<odot\>,\<leqslant\>|\<rangle\>>>
+    is a ordered integral domain.
   </definition>
 
-  TO DO check and proof rest + add similar to field and then corrext rationl,
-  integers and reals
-
   <\theorem>
-    If <math|<around*|\<langle\>|R,\<oplus\>,\<odot\>,\<leqslant\>|\<rangle\>>>
-    is a ordered ring then we have for <math|x,y,z\<in\>R>
+    <label|ring order properties>If <math|<around*|\<langle\>|R,\<oplus\>,\<odot\>,\<leqslant\>|\<rangle\>>>
+    is a ordered ring then we have :
 
     <\enumerate>
-      <item><math|x\<leqslant\>y\<Leftrightarrow\>x\<oplus\>z\<leqslant\>y\<oplus\>z>
+      <item><math|\<forall\>x,y,z\<in\>R> we have
+      <math|x\<less\>y\<Leftrightarrow\>x\<oplus\>z\<less\>y\<oplus\>z>
 
-      <item><math|x\<less\>y\<Leftrightarrow\>x\<oplus\>z>
+      <item><math|\<forall\>x,y,z\<in\>R> we have
+      <math|x\<leqslant\>y\<Leftrightarrow\>x\<oplus\>z\<leqslant\>y\<oplus\>z>
 
-      <item><math|x\<leqslant\>y\<Leftrightarrow\>-y\<leqslant\>-x>
+      <item><math|\<forall\>x,y\<in\>R> we have
+      <math|x\<less\>y\<Leftrightarrow\>0\<less\>y\<oplus\><around*|(|-x|)>>
 
-      <item><math|x\<less\>y\<Leftrightarrow\>-y\<less\>-x>
+      <item><math|\<forall\>x,y\<in\>R> we have
+      <math|x\<leqslant\>y\<Leftrightarrow\>0\<leqslant\>y\<oplus\><around*|(|-x|)>>
 
-      <item>If <math|0\<leqslant\>z> then
-      <math|x\<leqslant\>y\<Rightarrow\>x\<odot\>z\<leqslant\>y\<odot\>z>
+      <item><math|\<forall\>x,y\<in\>R> we have
+      <math|x\<less\>y\<Leftrightarrow\>-y\<less\>-x>
 
-      <item>If <math|z\<leqslant\>0> then
-      <math|x\<leqslant\>y\<Rightarrow\>y\<odot\>z\<leqslant\>x\<odot\>z>\ 
+      <item><math|\<forall\>x,y\<in\>R> we have
+      <math|x\<leqslant\>y\<Leftrightarrow\>-y\<leqslant\>-x>
+
+      <item><math|\<forall\>x,y,z\<in\>R> with <math|0\<less\>z> we have
+      <math|x\<less\>y\<Leftrightarrow\>x\<odot\>z\<less\>y\<odot\>z>
+
+      <item><math|\<forall\>x,y,z\<in\>R> with <math|0\<less\>z> we have
+      <math|x\<leqslant\>y\<Leftrightarrow\>x\<odot\>z\<leqslant\>y\<odot\>z>
+
+      <item><math|\<forall\>x,y,z\<in\>\<bbb-R\>> with <math|0\<leqslant\>z>
+      and <math|x\<leqslant\>y> we have <math|x\<odot\>\<leqslant\>y\<odot\>z>
+
+      <item><math|\<forall\>x,y,z\<in\>R> with <math|z\<less\>0> we have
+      <math|x\<less\>y\<Leftrightarrow\>y\<odot\>z\<less\>x\<odot\>z>
+
+      <item><math|\<forall\>x,y,z\<in\>R> with <math|z\<less\>0> we have
+      <math|x\<leqslant\>y\<Leftrightarrow\>y\<odot\>z\<leqslant\>x\<odot\>z>
+
+      <item><math|\<forall\>x,y,z\<in\>R> with <math|z\<leqslant\>0> and
+      <math|x\<leqslant\>y> we have <math|y\<odot\>z\<leqslant\>x\<odot\>z>
+
+      <item><math|\<forall\>x\<in\>R> we have
+      <math|0\<leqslant\>x\<cdot\>x\<equallim\><rsub|def>x<rsup|2>>
+
+      <item><math|0\<leqslant\>1>
     </enumerate>
-
-    If in addition <math|<around*|\<langle\>|F,\<oplus\>,\<odot\>|\<rangle\>>>
-    is a integral domsin we have additional for <math|x,y,z\<in\>\<bbb-F\>>
-    that\ 
-
-    <\enumerate-alpha>
-      <item>If <math|0\<less\>z> and <math|x\<less\>y> then
-      <math|x\<odot\>z\<less\>y\<odot\>z>
-
-      <item>If <math|z\<less\>0> and <math|x\<less\>y> then
-      <math|y\<odot\>z\<less\>x\<odot\>z>
-    </enumerate-alpha>
   </theorem>
 
   <\proof>
     \ 
 
     <\enumerate>
-      <item>
+      <item>\ 
 
       <\description>
-        <item*|<math|\<Rightarrow\>>>If <math|x\<leqslant\>z> then by the
-        definition of a ordered field we have
-        <math|x\<oplus\>z\<leqslant\>y\<oplus\>z>
+        <item*|<math|\<Rightarrow\>>>This follows directly from the
+        definition of a ordered ring.
 
         <item*|<math|\<Leftarrow\>>>If <math|x\<oplus\>z\<leqslant\>y\<oplus\>z>
-        then we have\ 
+        then from the defintion of a ordered ring we have
 
-        <\eqnarray*>
-          <tformat|<table|<row|<cell|x>|<cell|=>|<cell|x\<oplus\>0>>|<row|<cell|>|<cell|=>|<cell|x\<oplus\><around*|(|z\<oplus\><around*|(|-z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x\<oplus\>z|)>\<oplus\><around*|(|-z|)>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|(|y\<oplus\>z|)>\<oplus\><around*|(|-z|)>>>|<row|<cell|>|<cell|=>|<cell|y\<oplus\><around*|(|z\<oplus\><around*|(|-z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|y\<oplus\>0>>|<row|<cell|>|<cell|=>|<cell|y>>>>
-        </eqnarray*>
+        <\equation*>
+          x=x+<around*|(|z\<oplus\><around*|(|-z|)>|)>=<around*|(|x\<oplus\>z|)>\<oplus\><around*|(|-z|)>\<less\><around*|(|y\<oplus\>z|)>+<around*|(|-z|)>=y\<oplus\><around*|(|z\<oplus\><around*|(|-z|)>|)>=y
+        </equation*>
+
+        so that <math|x\<less\>y>
       </description>
 
-      <item>We have\ 
+      <item>\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|x\<less\>y>|<cell|\<Leftrightarrow\>>|<cell|x\<neq\>y\<wedge\>x\<leqslant\>y>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<around*|(|1|)>>>|<cell|x\<neq\>y\<wedge\>x\<oplus\>z\<leqslant\>y\<oplus\>z>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|x\<neq\>y\<Leftrightarrow\>x\<oplus\>z\<neq\>y\<oplus\>z>>|<cell|x\<oplus\>z\<neq\>y\<oplus\>z\<wedge\>x\<oplus\>z\<leqslant\>y\<oplus\>z>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<oplus\>z\<less\>y\<oplus\>z>>>>
+        <tformat|<table|<row|<cell|x\<leqslant\>y>|<cell|\<Leftrightarrow\>>|<cell|x=y\<vee\>x\<less\>y>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<around*|(|1|)>>>|<cell|x=y\<vee\>x\<oplus\>z\<less\>y\<oplus\>z>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|x=y\<Leftrightarrow\>x\<oplus\>z=y\<oplus\>z>>|<cell|x\<oplus\>z=y\<oplus\>z\<vee\>x\<oplus\>z\<less\>y\<oplus\>z>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<oplus\>z\<leqslant\>y\<oplus\>z>>>>
       </eqnarray*>
 
-      <item>We have\ 
+      <item>\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|x\<leqslant\>y>|<cell|\<Leftrightarrowlim\><rsub|<around*|(|1|)>>>|<cell|x\<oplus\><around*|(|-x|)>\<leqslant\>y\<oplus\><around*|(|-x|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|0\<leqslant\>y\<oplus\><around*|(|-x|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|0\<leqslant\><around*|(|-x|)>\<oplus\>y>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<around*|(|1|)>>>|<cell|0\<oplus\><around*|(|-y|)>\<leqslant\><around*|(|<around*|(|-x|)>\<oplus\>y|)>\<oplus\><around*|(|-y|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|-y\<leqslant\><around*|(|-x|)>\<oplus\><around*|(|y\<oplus\><around*|(|-y|)>|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|-y\<leqslant\>-x\<oplus\>0>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|-y\<leqslant\>-x>>>>
+        <tformat|<table|<row|<cell|x\<less\>y>|<cell|\<Leftrightarrowlim\><rsub|<around*|(|1|)>>>|<cell|x\<oplus\><around*|(|-x|)>\<less\>y\<oplus\><around*|(|-x|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|0\<less\>y\<oplus\><around*|(|-x|)>>>>>
       </eqnarray*>
 
-      <item>We have\ 
+      <item>\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|x\<less\>y>|<cell|\<Leftrightarrow\>>|<cell|x\<neq\>y\<wedge\>x\<leqslant\>y>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<around*|(|3|)>>>|<cell|x\<neq\>y\<wedge\>-y\<leqslant\>-x>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|x=y\<Leftrightarrow\>-x=-y>>|<cell|-x\<neq\>-y\<wedge\>-y\<leqslant\>-x>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|-y\<less\>-x>>>>
+        <tformat|<table|<row|<cell|x\<leqslant\>y>|<cell|\<Leftrightarrowlim\><rsub|<around*|(|2|)>>>|<cell|x\<oplus\><around*|(|-x|)>\<leqslant\>y\<oplus\><around*|(|-x|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|0\<leqslant\>y\<oplus\><around*|(|-x|)>>>>>
       </eqnarray*>
 
-      <item>This follows from the definition of a ordered ring.
+      <item>\ 
 
-      <item>If <math|z\<leqslant\>0> then by <math|>(3) we have
-      <math|0\<leqslant\>-z> hence we have by (5) that for
-      <math|x\<leqslant\>y> we have
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<less\>y>|<cell|\<Leftrightarrowlim\><rsub|<around*|(|3|)>>>|<cell|0\<less\>y\<oplus\><around*|(|-x|)>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<text|commutativity>>>|<cell|0\<less\><around*|(|-x|)>\<oplus\>y>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<around*|(|1|)>>>|<cell|0+<around*|(|-y|)>\<less\><around*|(|<around*|(|-x|)>\<oplus\>y|)>\<oplus\><around*|(|-y|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|-y\<less\>-x>>>>
+      </eqnarray*>
 
-      <\equation*>
-        x\<odot\><around*|(|-z|)>\<leqslant\>y\<odot\><around*|(|-z|)>\<Rightarrowlim\><rsub|<text|[theorem:
-        <reference|ring 0 1 and ->]>>-<around*|(|x\<odot\>z|)>\<leqslant\>-<around*|(|y\<odot\>z|)>\<Rightarrow\>y\<odot\>z\<leqslant\>x\<odot\>z
-      </equation*>
+      <item>\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<leqslant\>y>|<cell|\<Leftrightarrowlim\><rsub|<around*|(|4|)>>>|<cell|0\<less\>y\<oplus\><around*|(|-x|)>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<text|commutativity>>>|<cell|0\<less\><around*|(|-x|)>\<oplus\>y>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<around*|(|1|)>>>|<cell|0+<around*|(|-y|)>\<less\><around*|(|<around*|(|-x|)>\<oplus\>y|)>\<oplus\><around*|(|-y|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|-y\<less\>-x>>>>
+      </eqnarray*>
+
+      <item>Let <math|0\<less\>z> then we have\ 
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>As <math|x\<less\>y> we have by (3) that
+        <math|0\<less\>y\<oplus\><around*|(|-x|)>> so by the definition of a
+        ordered field that
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|0>|<cell|\<less\>>|<cell|<around*|(|y\<oplus\><around*|(|-x|)>|)>\<odot\>z>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|distributivity>>>|<cell|y\<odot\>z\<oplus\><around*|(|-x|)>\<odot\>z>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|ring 0 1 and ->]>>>|<cell|y\<odot\>z\<oplus\><around*|(|-<around*|(|x\<odot\>z|)>|)>>>>>
+        </eqnarray*>
+
+        which using (3) prove that <math|x\<odot\>z\<less\>y\<odot\>z>.
+
+        <item*|<math|\<Leftarrow\>>>Then <math|x\<odot\>z\<less\>y\<odot\>z>
+        and using the totally ordering we have for <math|x,y> either:
+
+        <\description>
+          <item*|<math|x=y>>Then <math|x\<odot\>z=y\<odot\>z> contradicting
+          <math|x\<odot\>z\<less\>y\<odot\>z> so this case never occurs.
+
+          <item*|<math|y\<less\>x>>Then by (3) we have
+          <math|0\<less\>x\<oplus\><around*|(|-y|)>> so that by the
+          definition of a ordered field we have\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|0>|<cell|\<less\>>|<cell|<around*|(|x\<oplus\><around*|(|-y|)>|)>\<odot\>z>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|distributivity>>>|<cell|x\<odot\>z\<oplus\><around*|(|-y|)>\<odot\>z>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+            <reference|ring 0 1 and ->]>>>|<cell|x\<odot\>z\<oplus\><around*|(|-<around*|(|y\<odot\>z|)>|)>>>>>
+          </eqnarray*>
+
+          which using (3) proves that <math|y\<odot\>z\<less\>x\<odot\>z>
+          contradicting <math|x\<odot\>z\<less\>y\<odot\>z>. So this case
+          does not occur.
+
+          <item*|<math|x\<less\>y>>the remaining case.
+        </description>
+
+        So the only remining case is <math|x\<less\>y>
+      </description>
+
+      <item>\ 
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>As <math|0\<less\>z> and
+        <math|x\<leqslant\>y> we have for <math|x,y> either:\ 
+
+        <\description>
+          <item*|<math|x=y>>Then <math|x\<odot\>z=y\<odot\>z> hence
+          <math|x\<odot\>z\<leqslant\>y\<odot\>z>
+
+          <item*|<math|x\<less\>y>>Then by (7) we have
+          <math|x\<odot\>z\<less\>y\<odot\>z> hence
+          <math|x\<odot\>z\<leqslant\>y\<odot\>z>
+        </description>
+
+        So in all cases we have <math|x\<odot\>z\<leqslant\>y\<odot\>z>.
+
+        <item*|<math|\<Leftarrow\>>>Assume that
+        <math|x\<odot\>z\<leqslant\>y\<odot\>z>. By totally ordering we have
+        for <math|x,y> either <math|x\<leqslant\>y> or <math|y\<less\>x>. If
+        <math|y\<less\>x> then by (7) we have
+        <math|y\<odot\>z\<less\>x\<odot\>z> contradicting
+        <math|x\<odot\>z\<leqslant\>y\<odot\>z> so we must have that
+        <math|x\<leqslant\>y>/
+      </description>
+
+      <item> Let <math|0\<leqslant\>z> and <math|x\<leqslant\>y> then we have
+      for <math|z> either:
+
+      <\description>
+        <item*|<math|z=0>>Then <math|x\<odot\>z=x\<odot\>0\<equallim\><rsub|<text|[theorem:
+        <reference|ring absorbing element>]>>0\<equallim\><rsub|<text|[theorem:
+        <reference|ring absorbing element>]>>y\<odot\>0=y\<odot\>z> so that
+        <math|x\<odot\>z\<leqslant\>y\<odot\>z>
+
+        <item*|<math|0\<less\>z>>Then by (8) we have
+        <math|x\<odot\>z\<less\>y\<odot\>z>
+      </description>
+
+      So in all cases we have <math|x\<odot\>z\<leqslant\>y\<odot\>z>
+
+      <item>As <math|z\<less\>0> we have by (5) that
+      <math|0\<less\><around*|(|-z|)>> so that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<less\>y>|<cell|\<Leftrightarrowlim\><rsub|<around*|(|7|)>>>|<cell|x\<odot\><around*|(|-z|)>\<less\>y\<odot\><around*|(|-z|)>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<text|[theorem:
+        <reference|ring 0 1 and ->]>>>|<cell|-<around*|(|x\<odot\>z|)>\<less\>-<around*|(|y\<odot\>z|)>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<around*|(|5|)>>>|<cell|y\<odot\>z\<less\>z\<odot\>z>>>>
+      </eqnarray*>
+
+      <item>As <math|z\<less\>0> we have by (5) that
+      <math|0\<less\><around*|(|-z|)>> so that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<leqslant\>y>|<cell|\<Leftrightarrowlim\><rsub|<around*|(|8|)>>>|<cell|x\<odot\><around*|(|-z|)>\<leqslant\>y\<odot\><around*|(|-z|)>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<text|[theorem:
+        <reference|ring 0 1 and ->]>>>|<cell|-<around*|(|x\<odot\>z|)>\<leqslant\>-<around*|(|y\<odot\>z|)>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<around*|(|6|)>>>|<cell|y\<odot\>z\<leqslant\>z\<odot\>z>>>>
+      </eqnarray*>
+
+      <item>As <math|z\<leqslant\>0> we have by (5) that
+      <math|0\<leqslant\>-z> so that by (9) we have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<leqslant\>y>|<cell|\<Rightarrowlim\><rsub|<around*|(|9|)>>>|<cell|x\<odot\><around*|(|-z|)>\<leqslant\>y\<odot\><around*|(|-z|)>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<text|[theorem:
+        <reference|ring 0 1 and ->]>>>|<cell|-<around*|(|x\<odot\>z|)>\<leqslant\>-<around*|(|y\<odot\>z|)>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<around*|(|6|)>>>|<cell|y\<odot\>z\<leqslant\>z\<odot\>z>>>>
+      </eqnarray*>
+
+      <item>If <math|x\<in\>\<bbb-R\>> then we have either:
+
+      <\description>
+        <item*|<math|0\<leqslant\>x>>Then we have by <math|<around*|(|9|)> >
+        that <math|0\<equallim\><rsub|<text|[theorem: <reference|ring
+        absorbing element>]>>0\<odot\>x\<leqslant\>x\<odot\>x> hence
+        <math|0\<leqslant\>x\<odot\>x>
+
+        <item*|<math|x\<less\>0>>Then we have by <math|<around*|(|9|)>>
+        \ <math|0\<equallim\><rsub|<text|[theorem: <reference|ring absorbing
+        element>]>>0\<odot\><around*|(|-x|)>\<leqslant\><around*|(|-x|)>\<odot\><around*|(|-x|)>\<equallim\><rsub|<text|[theorem:
+        <reference|ring 0 1 and ->]>>x\<odot\>x> hence
+        <math|0\<leqslant\>x\<odot\>x>
+      </description>
+
+      <item>Using <math|<around*|(|13|)>> we have
+      <math|0\<leqslant\>1\<odot\>1=1>
     </enumerate>
 
     \;
@@ -1608,19 +1749,28 @@
   <\theorem>
     <label|field x^-1=y^-1=\<gtr\>x=y>If <math|<around*|\<langle\>|F,\<oplus\>,\<odot\>|\<rangle\>>>
     is a field then <math|\<forall\>x,y\<in\>F\\<around*|{|0|}>> we have
-    <math|x<rsup|-1>=y<rsup|-1>\<Rightarrow\>x=y>
+    <math|x<rsup|-1>=y<rsup|-1>\<Leftrightarrow\>x=y>
   </theorem>
 
   <\proof>
-    \ 
+    \ We have\ 
 
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|x<rsup|-1>=y<rsup|-1>>|<cell|\<Rightarrow\>>|<cell|x<rsup|-1>\<odot\>y=y<rsup|-1>\<odot\>y>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|inverse
-      element>>>|<cell|x<rsup|-1>\<odot\>y=1>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x\<odot\><around*|(|x<rsup|-1>\<odot\>y|)>=x\<odot\>1>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|neutral
-      element>>>|<cell|x\<odot\><around*|(|x<rsup|-1>\<odot\>y|)>=x>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|associativity>>>|<cell|*<around*|(|x\<odot\>x<rsup|-1>|)>\<odot\>y=x>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|inverse
-      element>>>|<cell|1\<odot\>y=x>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|neutral
-      element>>>|<cell|y=x>>>>
-    </eqnarray*>
+    <\description>
+      <item*|<math|\<Rightarrow\>>>If <math|x=y> then trivially
+      <math|x<rsup|-1>=y<rsup|-1>>
+
+      <item*|<math|\<Leftarrow\>>>Then we have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x<rsup|-1>=y<rsup|-1>>|<cell|\<Rightarrow\>>|<cell|x<rsup|-1>\<odot\>y=y<rsup|-1>\<odot\>y>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|inverse
+        element>>>|<cell|x<rsup|-1>\<odot\>y=1>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x\<odot\><around*|(|x<rsup|-1>\<odot\>y|)>=x\<odot\>1>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|neutral
+        element>>>|<cell|x\<odot\><around*|(|x<rsup|-1>\<odot\>y|)>=x>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|associativity>>>|<cell|*<around*|(|x\<odot\>x<rsup|-1>|)>\<odot\>y=x>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|inverse
+        element>>>|<cell|1\<odot\>y=x>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|neutral
+        element>>>|<cell|y=x>>>>
+      </eqnarray*>
+    </description>
+
+    \;
   </proof>
 
   <\theorem>
@@ -1696,6 +1846,25 @@
       [theorem: <reference|ring absorbing element>] and the fact that a field
       is a ring that <math|x\<odot\>y=0>
     </description>
+  </proof>
+
+  <\corollary>
+    <label|field is integral domain>If <math|<around*|\<langle\>|F,\<oplus\>,\<odot\>|\<rangle\>>>
+    is a field then <math|<around*|\<langle\>|F,\<oplus\>,\<odot\>|\<rangle\>>>
+    is a integral domain
+  </corollary>
+
+  <\proof>
+    From the definition of a field [definition: <reference|field>] it follows
+    that <math|<around*|\<langle\>|F,\<oplus\>,\<odot\>|\<rangle\>>> is a
+    ring. Assume that <math|x\<in\>F> is a zero divisor [see <reference|ring
+    zero divisor> then <math|x\<neq\>0> and
+    <math|\<exists\>y\<in\>F\\<around*|{|0|}>> such that <math|x\<cdot\>y=0>.
+    However by [theorem: <reference|field x.y=0\<less\>=\<gtr\>x=0 or y=0>]
+    we have <math|x=0\<vee\>y=0> contradicting <math|x\<neq\>0\<neq\>y>. So
+    <math|F> does not have zero divisors proving that
+    <math|<around*|\<langle\>|F,\<oplus\>,\<odot\>|\<rangle\>>> is a integral
+    domain.
   </proof>
 
   <\definition>
@@ -2089,6 +2258,86 @@
       <math|g\<circ\>f:A\<rightarrow\>C> is a bijection which combined with
       (1) proves that <math|g\<circ\>f> is a field isomorphism.
     </enumerate>
+  </proof>
+
+  <\definition>
+    <label|field ordered field><math|<around*|\<langle\>|F,\<oplus\>,\<odot\>,\<leqslant\>|\<rangle\>>>
+    is a ordered field if
+
+    <\enumerate>
+      <item><math|<around*|\<langle\>|F,\<oplus\>,\<odot\>|\<rangle\>>> is a
+      field
+
+      <item><math|<around*|\<langle\>|F,\<leqslant\>|\<rangle\>>> is totally
+      ordered
+
+      <item><math|\<forall\>x,y,z\<in\>F> with <math|x\<leqslant\>y> we have
+      <math|x+z\<leqslant\>y+z>
+
+      <item><math|\<forall\>x,y\<in\>F> with <math|0\<less\>x> and
+      <math|0\<less\>y> we have <math|0\<less\>x\<odot\>y>
+    </enumerate>
+  </definition>
+
+  <\theorem>
+    <label|field order properties>If <math|<around*|\<langle\>|F,\<oplus\>,\<odot\>,\<leqslant\>|\<rangle\>>>
+    is a ordered ring then we have :
+
+    <\enumerate>
+      <item><math|\<forall\>x,y,z\<in\>F> we have
+      <math|x\<less\>y\<Leftrightarrow\>x\<oplus\>z\<less\>y\<oplus\>z>
+
+      <item><math|\<forall\>x,y,z\<in\>F> we have
+      <math|x\<leqslant\>y\<Leftrightarrow\>x\<oplus\>z\<leqslant\>y\<oplus\>z>
+
+      <item><math|\<forall\>x,y\<in\>F> we have
+      <math|x\<less\>y\<Leftrightarrow\>0\<less\>y\<oplus\><around*|(|-x|)>>
+
+      <item><math|\<forall\>x,y\<in\>F> we have
+      <math|x\<leqslant\>y\<Leftrightarrow\>0\<leqslant\>y\<oplus\><around*|(|-x|)>>
+
+      <item><math|\<forall\>x,y\<in\>F> we have
+      <math|x\<less\>y\<Leftrightarrow\>-y\<less\>-x>
+
+      <item><math|\<forall\>x,y\<in\>F> we have
+      <math|x\<leqslant\>y\<Leftrightarrow\>-y\<leqslant\>-x>
+
+      <item><math|\<forall\>x,y,z\<in\>F> with <math|0\<less\>z> we have
+      <math|x\<less\>y\<Leftrightarrow\>x\<odot\>z\<less\>y\<odot\>z>
+
+      <item><math|\<forall\>x,y,z\<in\>F> with <math|0\<less\>z> we have
+      <math|x\<leqslant\>y\<Leftrightarrow\>x\<odot\>z\<leqslant\>y\<odot\>z>
+
+      <item><math|\<forall\>x,y,z\<in\>F> with <math|0\<leqslant\>z> and
+      <math|x\<leqslant\>y> we have <math|x\<odot\>\<leqslant\>y\<odot\>z>
+
+      <item><math|\<forall\>x,y,z\<in\>F> with <math|z\<less\>0> we have
+      <math|x\<less\>y\<Leftrightarrow\>y\<odot\>z\<less\>x\<odot\>z>
+
+      <item><math|\<forall\>x,y,z\<in\>F> with <math|z\<less\>0> we have
+      <math|x\<leqslant\>y\<Leftrightarrow\>y\<odot\>z\<leqslant\>x\<odot\>z>
+
+      <item><math|\<forall\>x,y,z\<in\>F> with <math|z\<leqslant\>0> and
+      <math|x\<leqslant\>y> we have <math|y\<odot\>z\<leqslant\>x\<odot\>z>
+
+      <item><math|\<forall\>x\<in\>F> we have
+      <math|0\<leqslant\>x\<cdot\>x\<equallim\><rsub|def>x<rsup|2>>
+
+      <item><math|0\<leqslant\>1>
+
+      <item><math|\<forall\>x\<in\>R> with <math|0\<less\>x> we have
+      <math|0\<less\>x<rsup|-1>>
+
+      <item><math|\<forall\>x,y\<in\>R> we have
+      <math|0\<less\>x\<less\>y\<Leftrightarrow\>0\<less\>y<rsup|-1>\<less\>x<rsup|-1>>
+
+      <item><math|\<forall\>x,y\<in\>>R we have
+      <math|0\<less\>x\<leqslant\>y\<Leftrightarrow\>0\<less\>y<rsup|-1>\<leqslant\>x<rsup|-1>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    TODO proove this
   </proof>
 
   \;
@@ -8439,171 +8688,172 @@
     <associate|auto-22|<tuple|subring|119>>
     <associate|auto-23|<tuple|ring homeomorphism|120>>
     <associate|auto-24|<tuple|ring isomorphism|121>>
-    <associate|auto-25|<tuple|4.3|122>>
-    <associate|auto-26|<tuple|field|122>>
-    <associate|auto-27|<tuple|subfield|124>>
-    <associate|auto-28|<tuple|field homeomorphism|124>>
-    <associate|auto-29|<tuple|5|129>>
+    <associate|auto-25|<tuple|4.3|124>>
+    <associate|auto-26|<tuple|field|124>>
+    <associate|auto-27|<tuple|subfield|126>>
+    <associate|auto-28|<tuple|field homeomorphism|126>>
+    <associate|auto-29|<tuple|5|133>>
     <associate|auto-3|<tuple|4.1|111>>
-    <associate|auto-30|<tuple|5.1|129>>
-    <associate|auto-31|<tuple|mathematical induction|130>>
-    <associate|auto-32|<tuple|transitive set|130>>
-    <associate|auto-33|<tuple|5.2|132>>
-    <associate|auto-34|<tuple|recursion|132>>
-    <associate|auto-35|<tuple|iteration|135>>
-    <associate|auto-36|<tuple|5.3|138>>
-    <associate|auto-37|<tuple|addition of natural numbers|138>>
-    <associate|auto-38|<tuple|multiplication of natural numbers|140>>
-    <associate|auto-39|<tuple|absorbing element|140>>
+    <associate|auto-30|<tuple|5.1|133>>
+    <associate|auto-31|<tuple|mathematical induction|134>>
+    <associate|auto-32|<tuple|transitive set|134>>
+    <associate|auto-33|<tuple|5.2|136>>
+    <associate|auto-34|<tuple|recursion|136>>
+    <associate|auto-35|<tuple|iteration|139>>
+    <associate|auto-36|<tuple|5.3|142>>
+    <associate|auto-37|<tuple|addition of natural numbers|142>>
+    <associate|auto-38|<tuple|multiplication of natural numbers|144>>
+    <associate|auto-39|<tuple|absorbing element|144>>
     <associate|auto-4|<tuple|semi-group|111>>
-    <associate|auto-40|<tuple|5.4|143>>
-    <associate|auto-41|<tuple|5.5|151>>
-    <associate|auto-42|<tuple|6|155>>
-    <associate|auto-43|<tuple|6.1|155>>
-    <associate|auto-44|<tuple|equipotence|155>>
-    <associate|auto-45|<tuple|<with|mode|<quote|math>|\<approx\>>|155>>
-    <associate|auto-46|<tuple|equipotency|155>>
-    <associate|auto-47|<tuple|<with|mode|<quote|math>|\<preccurlyeq\>>|155>>
-    <associate|auto-48|<tuple|<with|mode|<quote|math>|\<prec\>>|155>>
-    <associate|auto-49|<tuple|6.2|157>>
+    <associate|auto-40|<tuple|5.4|147>>
+    <associate|auto-41|<tuple|5.5|155>>
+    <associate|auto-42|<tuple|6|159>>
+    <associate|auto-43|<tuple|6.1|159>>
+    <associate|auto-44|<tuple|equipotence|159>>
+    <associate|auto-45|<tuple|<with|mode|<quote|math>|\<approx\>>|159>>
+    <associate|auto-46|<tuple|equipotency|159>>
+    <associate|auto-47|<tuple|<with|mode|<quote|math>|\<preccurlyeq\>>|159>>
+    <associate|auto-48|<tuple|<with|mode|<quote|math>|\<prec\>>|159>>
+    <associate|auto-49|<tuple|6.2|161>>
     <associate|auto-5|<tuple|group|112>>
-    <associate|auto-50|<tuple|6.2.1|157>>
-    <associate|auto-51|<tuple|finite set|159>>
-    <associate|auto-52|<tuple|infinite set|159>>
-    <associate|auto-53|<tuple|denumerable set|159>>
-    <associate|auto-54|<tuple|infinite countable set|159>>
-    <associate|auto-55|<tuple|countable set|159>>
-    <associate|auto-56|<tuple|<with|mode|<quote|math>|#A>|164>>
-    <associate|auto-57|<tuple|6.2.2|167>>
-    <associate|auto-58|<tuple|6.2.3|172>>
-    <associate|auto-59|<tuple|6.2.4|176>>
+    <associate|auto-50|<tuple|6.2.1|161>>
+    <associate|auto-51|<tuple|finite set|162>>
+    <associate|auto-52|<tuple|infinite set|163>>
+    <associate|auto-53|<tuple|denumerable set|163>>
+    <associate|auto-54|<tuple|infinite countable set|163>>
+    <associate|auto-55|<tuple|countable set|163>>
+    <associate|auto-56|<tuple|<with|mode|<quote|math>|#A>|168>>
+    <associate|auto-57|<tuple|6.2.2|171>>
+    <associate|auto-58|<tuple|6.2.3|176>>
+    <associate|auto-59|<tuple|6.2.4|179>>
     <associate|auto-6|<tuple|sub-semi-group|113>>
     <associate|auto-7|<tuple|sup-group|113>>
     <associate|auto-8|<tuple|group isomorphism|115>>
     <associate|auto-9|<tuple|left action|117>>
-    <associate|cardinality of natural numbers|<tuple|6.36|164>>
-    <associate|cardinality of the empty set is 0|<tuple|6.37|164>>
+    <associate|cardinality of natural numbers|<tuple|6.36|168>>
+    <associate|cardinality of the empty set is 0|<tuple|6.37|168>>
     <associate|cardinality of union of two disjoint finite
-    sets|<tuple|6.39|165>>
-    <associate|countable AUB and AxB|<tuple|6.68|177>>
+    sets|<tuple|6.39|168>>
+    <associate|countable AUB and AxB|<tuple|6.68|181>>
     <associate|countable product of a finite family of countable sets is
-    countable (2)|<tuple|6.70|178>>
+    countable (2)|<tuple|6.70|182>>
     <associate|countable product of finite family of countable sets is
-    countable|<tuple|6.69|178>>
-    <associate|countable set|<tuple|6.23|159>>
-    <associate|countable set conditions (1)|<tuple|6.65|176>>
+    countable|<tuple|6.69|181>>
+    <associate|countable set|<tuple|6.23|163>>
+    <associate|countable set conditions (1)|<tuple|6.65|180>>
     <associate|countable subset of countable set is
-    countable|<tuple|6.64|176>>
+    countable|<tuple|6.64|179>>
     <associate|countable subset of denumerable set is
-    countable|<tuple|6.63|176>>
+    countable|<tuple|6.63|179>>
     <associate|countable union of a denumerable family of countable sets is
-    denumerable|<tuple|6.66|176>>
+    denumerable|<tuple|6.66|180>>
     <associate|countable union of a finite family of countable sets is
-    countable|<tuple|6.67|177>>
-    <associate|definition by recursion (1)|<tuple|5.87|152>>
-    <associate|definition by recursion (2)|<tuple|5.88|153>>
+    countable|<tuple|6.67|181>>
+    <associate|definition by recursion (1)|<tuple|5.87|157>>
+    <associate|definition by recursion (2)|<tuple|5.88|157>>
     <associate|denumerable every subset is finite
-    denumerable.|<tuple|6.55|172>>
+    denumerable.|<tuple|6.55|176>>
     <associate|denumerable is not subset of a natural
-    number|<tuple|6.26|160>>
-    <associate|denumerable product nxN is denumerable|<tuple|6.59|174>>
+    number|<tuple|6.26|164>>
+    <associate|denumerable product nxN is denumerable|<tuple|6.59|178>>
     <associate|denumerable product of denumerable sets is
-    denumerable|<tuple|6.58|174>>
+    denumerable|<tuple|6.58|178>>
     <associate|denumerable product of finite set and a denumerable set is
-    denurable|<tuple|6.60|174>>
+    denurable|<tuple|6.60|178>>
     <associate|denumerable product of two denumerable set is
-    denumerable|<tuple|6.56|172>>
-    <associate|denumerable set|<tuple|6.22|159>>
-    <associate|denumerable subsets of N_0|<tuple|6.54|172>>
+    denumerable|<tuple|6.56|176>>
+    <associate|denumerable set|<tuple|6.22|163>>
+    <associate|denumerable subsets of N_0|<tuple|6.54|176>>
     <associate|denumerable union of a denumerable family of denumerable sets
-    is denumerable|<tuple|6.62|175>>
+    is denumerable|<tuple|6.62|179>>
     <associate|denumerable union of a finite family of denumerable sets is
-    denumerable|<tuple|6.61|175>>
-    <associate|denumerable with one less element|<tuple|6.25|159>>
-    <associate|empty set is finite|<tuple|6.20|159>>
-    <associate|eq 5.1.019|<tuple|5.1|132>>
-    <associate|eq 5.10.019|<tuple|5.10|137>>
-    <associate|eq 5.11.019|<tuple|5.11|137>>
-    <associate|eq 5.12.019|<tuple|5.12|137>>
-    <associate|eq 5.13.019|<tuple|5.13|137>>
-    <associate|eq 5.14.019|<tuple|5.14|149>>
-    <associate|eq 5.15.019|<tuple|5.15|149>>
-    <associate|eq 5.16.019|<tuple|5.16|149>>
-    <associate|eq 5.17.019|<tuple|5.17|152>>
-    <associate|eq 5.2.019|<tuple|5.2|132>>
-    <associate|eq 5.3.019|<tuple|5.3|132>>
-    <associate|eq 5.4.019|<tuple|5.4|132>>
-    <associate|eq 5.5.019|<tuple|5.5|132>>
-    <associate|eq 5.6.019|<tuple|5.6|132>>
-    <associate|eq 5.7.019|<tuple|5.7|133>>
-    <associate|eq 5.8.019|<tuple|5.8|133>>
-    <associate|eq 5.9.019|<tuple|5.9|133>>
-    <associate|eq 6.10.019|<tuple|6.10|162>>
-    <associate|eq 6.11.019|<tuple|6.11|163>>
-    <associate|eq 6.12.022|<tuple|6.12|169>>
-    <associate|eq 6.13.022|<tuple|6.13|169>>
-    <associate|eq 6.14.022|<tuple|6.14|169>>
-    <associate|eq 6.15.022|<tuple|6.15|169>>
-    <associate|eq 6.17.020|<tuple|6.16|169>>
-    <associate|eq 6.18.020|<tuple|6.17|169>>
-    <associate|eq 6.18.022|<tuple|6.18|170>>
-    <associate|eq 6.19.022|<tuple|6.19|170>>
-    <associate|eq 6.2.019|<tuple|6.2|161>>
-    <associate|eq 6.20.022|<tuple|6.20|170>>
-    <associate|eq 6.21.022|<tuple|6.21|171>>
-    <associate|eq 6.22.022|<tuple|6.22|173>>
-    <associate|eq 6.23.022|<tuple|6.23|173>>
-    <associate|eq 6.24.022|<tuple|6.24|173>>
-    <associate|eq 6.25.022|<tuple|6.25|174>>
-    <associate|eq 6.3.019|<tuple|6.3|161>>
-    <associate|eq 6.4.019|<tuple|6.4|161>>
-    <associate|eq 6.5.019|<tuple|6.5|161>>
-    <associate|eq 6.6.019|<tuple|6.6|161>>
-    <associate|eq 6.7.019|<tuple|6.7|161>>
-    <associate|eq 6.8.019|<tuple|6.8|162>>
-    <associate|eq 6.9.019|<tuple|6.9|162>>
-    <associate|eq 7.1.019|<tuple|6.1|158>>
-    <associate|equipotence|<tuple|6.1|155>>
-    <associate|equipotence 2^A and P(A)|<tuple|6.14|157>>
-    <associate|equipotence \<less\>= condition|<tuple|6.6|155>>
-    <associate|equipotence \<less\>= definition|<tuple|6.3|155>>
-    <associate|equipotence A\<less\>=B condition (2)|<tuple|6.10|156>>
-    <associate|equipotence A^C~B^D|<tuple|6.13|157>>
-    <associate|equipotence AxC~BxD|<tuple|6.12|156>>
-    <associate|equipotence equivalence relation|<tuple|6.2|155>>
-    <associate|equipotence finite, denumerable , countable|<tuple|6.24|159>>
-    <associate|equipotence property (1)|<tuple|6.8|156>>
-    <associate|equipotence union|<tuple|6.11|156>>
-    <associate|every subset of a finite set is finite|<tuple|6.30|161>>
-    <associate|extract maximum element of a family|<tuple|6.47|167>>
-    <associate|field|<tuple|4.46|122>>
+    denumerable|<tuple|6.61|178>>
+    <associate|denumerable with one less element|<tuple|6.25|163>>
+    <associate|empty set is finite|<tuple|6.20|163>>
+    <associate|eq 5.1.019|<tuple|5.1|136>>
+    <associate|eq 5.10.019|<tuple|5.10|141>>
+    <associate|eq 5.11.019|<tuple|5.11|141>>
+    <associate|eq 5.12.019|<tuple|5.12|141>>
+    <associate|eq 5.13.019|<tuple|5.13|141>>
+    <associate|eq 5.14.019|<tuple|5.14|153>>
+    <associate|eq 5.15.019|<tuple|5.15|154>>
+    <associate|eq 5.16.019|<tuple|5.16|154>>
+    <associate|eq 5.17.019|<tuple|5.17|156>>
+    <associate|eq 5.2.019|<tuple|5.2|136>>
+    <associate|eq 5.3.019|<tuple|5.3|136>>
+    <associate|eq 5.4.019|<tuple|5.4|136>>
+    <associate|eq 5.5.019|<tuple|5.5|136>>
+    <associate|eq 5.6.019|<tuple|5.6|136>>
+    <associate|eq 5.7.019|<tuple|5.7|137>>
+    <associate|eq 5.8.019|<tuple|5.8|137>>
+    <associate|eq 5.9.019|<tuple|5.9|137>>
+    <associate|eq 6.10.019|<tuple|6.10|166>>
+    <associate|eq 6.11.019|<tuple|6.11|167>>
+    <associate|eq 6.12.022|<tuple|6.12|173>>
+    <associate|eq 6.13.022|<tuple|6.13|173>>
+    <associate|eq 6.14.022|<tuple|6.14|173>>
+    <associate|eq 6.15.022|<tuple|6.15|173>>
+    <associate|eq 6.17.020|<tuple|6.16|173>>
+    <associate|eq 6.18.020|<tuple|6.17|173>>
+    <associate|eq 6.18.022|<tuple|6.18|174>>
+    <associate|eq 6.19.022|<tuple|6.19|174>>
+    <associate|eq 6.2.019|<tuple|6.2|165>>
+    <associate|eq 6.20.022|<tuple|6.20|174>>
+    <associate|eq 6.21.022|<tuple|6.21|174>>
+    <associate|eq 6.22.022|<tuple|6.22|176>>
+    <associate|eq 6.23.022|<tuple|6.23|176>>
+    <associate|eq 6.24.022|<tuple|6.24|177>>
+    <associate|eq 6.25.022|<tuple|6.25|177>>
+    <associate|eq 6.3.019|<tuple|6.3|165>>
+    <associate|eq 6.4.019|<tuple|6.4|165>>
+    <associate|eq 6.5.019|<tuple|6.5|165>>
+    <associate|eq 6.6.019|<tuple|6.6|165>>
+    <associate|eq 6.7.019|<tuple|6.7|165>>
+    <associate|eq 6.8.019|<tuple|6.8|166>>
+    <associate|eq 6.9.019|<tuple|6.9|166>>
+    <associate|eq 7.1.019|<tuple|6.1|162>>
+    <associate|equipotence|<tuple|6.1|159>>
+    <associate|equipotence 2^A and P(A)|<tuple|6.14|161>>
+    <associate|equipotence \<less\>= condition|<tuple|6.6|159>>
+    <associate|equipotence \<less\>= definition|<tuple|6.3|159>>
+    <associate|equipotence A\<less\>=B condition (2)|<tuple|6.10|160>>
+    <associate|equipotence A^C~B^D|<tuple|6.13|161>>
+    <associate|equipotence AxC~BxD|<tuple|6.12|160>>
+    <associate|equipotence equivalence relation|<tuple|6.2|159>>
+    <associate|equipotence finite, denumerable , countable|<tuple|6.24|163>>
+    <associate|equipotence property (1)|<tuple|6.8|160>>
+    <associate|equipotence union|<tuple|6.11|160>>
+    <associate|every subset of a finite set is finite|<tuple|6.30|164>>
+    <associate|extract maximum element of a family|<tuple|6.47|171>>
+    <associate|field|<tuple|4.46|124>>
     <associate|field field homeomorphism is a ring
-    isomomorphism|<tuple|4.57|125>>
-    <associate|field field order|<tuple|4.61|?>>
-    <associate|field homeomorphism|<tuple|4.55|124>>
-    <associate|field homeomorphism composition|<tuple|4.62|127>>
-    <associate|field homeomorphism to a sub field|<tuple|4.59|125>>
-    <associate|field inverse is unique|<tuple|4.47|123>>
-    <associate|field inverse of inverse|<tuple|4.48|123>>
-    <associate|field inverse of product|<tuple|4.50|123>>
-    <associate|field isomorphism|<tuple|4.58|125>>
-    <associate|field isomorphism and neutral element|<tuple|4.61|126>>
-    <associate|field ordered field|<tuple|4.44|?>>
-    <associate|field subfield|<tuple|4.53|124>>
-    <associate|field subfield is a field|<tuple|4.54|124>>
-    <associate|field x.y=0\<less\>=\<gtr\>x=0 or y=0|<tuple|4.52|124>>
+    isomomorphism|<tuple|4.58|127>>
+    <associate|field homeomorphism|<tuple|4.56|126>>
+    <associate|field homeomorphism composition|<tuple|4.63|129>>
+    <associate|field homeomorphism to a sub field|<tuple|4.60|127>>
+    <associate|field inverse is unique|<tuple|4.47|125>>
+    <associate|field inverse of inverse|<tuple|4.48|125>>
+    <associate|field inverse of product|<tuple|4.50|125>>
+    <associate|field is integral domain|<tuple|4.53|126>>
+    <associate|field isomorphism|<tuple|4.59|127>>
+    <associate|field isomorphism and neutral element|<tuple|4.62|128>>
+    <associate|field order properties|<tuple|4.65|130>>
+    <associate|field ordered field|<tuple|4.64|130>>
+    <associate|field subfield|<tuple|4.54|126>>
+    <associate|field subfield is a field|<tuple|4.55|126>>
+    <associate|field x.y=0\<less\>=\<gtr\>x=0 or y=0|<tuple|4.52|126>>
     <associate|field x=y\<less\>=\<gtr\>x.z=y.z if
-    z\<less\>\<gtr\>0|<tuple|4.51|124>>
-    <associate|field x^-1=y^-1=\<gtr\>x=y|<tuple|4.49|123>>
+    z\<less\>\<gtr\>0|<tuple|4.51|126>>
+    <associate|field x^-1=y^-1=\<gtr\>x=y|<tuple|4.49|125>>
     <associate|finite ordered sets have a maximum and
-    minimum|<tuple|6.44|166>>
-    <associate|finite set|<tuple|6.19|159>>
-    <associate|finite union of finite sets is finite|<tuple|6.33|162>>
+    minimum|<tuple|6.44|170>>
+    <associate|finite set|<tuple|6.19|162>>
+    <associate|finite union of finite sets is finite|<tuple|6.33|166>>
     <associate|finite union of finite sets is finite
-    (lemma)|<tuple|6.32|161>>
-    <associate|function P(A) bijective with 2^A|<tuple|6.5|155>>
-    <associate|function injection and inverse surjection|<tuple|6.9|156>>
-    <associate|function no surjection between A and P(A)|<tuple|6.7|156>>
+    (lemma)|<tuple|6.32|165>>
+    <associate|function P(A) bijective with 2^A|<tuple|6.5|159>>
+    <associate|function injection and inverse surjection|<tuple|6.9|160>>
+    <associate|function no surjection between A and P(A)|<tuple|6.7|159>>
     <associate|group -x=-y\<less\>=\<gtr\>x=y|<tuple|4.10|113>>
     <associate|group abelian group/sub group|<tuple|4.11|113>>
     <associate|group cancelation|<tuple|4.6|112>>
@@ -8626,133 +8876,134 @@
     <associate|group semi-group inheritance|<tuple|4.14|113>>
     <associate|group semigroup properties|<tuple|4.3|111>>
     <associate|group sub-group|<tuple|4.13|113>>
-    <associate|infinite condition (1)|<tuple|6.34|162>>
-    <associate|infinite set|<tuple|6.21|159>>
+    <associate|infinite condition (1)|<tuple|6.34|166>>
+    <associate|infinite set|<tuple|6.21|163>>
     <associate|inverse of a field isomorphism is a field
-    isomorphism|<tuple|4.60|125>>
-    <associate|iteration final|<tuple|5.84|152>>
-    <associate|mapping of N to a finite set (1)|<tuple|6.45|167>>
-    <associate|mapping of N to a finite set (2)|<tuple|6.46|167>>
-    <associate|mathematical induction|<tuple|5.82|151>>
-    <associate|max element of a family|<tuple|6.48|169>>
-    <associate|n\<less\>=m=\<gtr\>S_n\<less\>=S_m|<tuple|6.17|158>>
-    <associate|natural numbers|<tuple|5.3|129>>
-    <associate|natural numbers (n+m)-k=(n-k)+m|<tuple|5.65|147>>
-    <associate|natural numbers (n+m)-n=m|<tuple|5.66|147>>
-    <associate|natural numbers 0|<tuple|5.7|129>>
-    <associate|natural numbers 0\<less\>=n|<tuple|5.46|143>>
-    <associate|natural numbers 1+1=2|<tuple|5.28|138>>
-    <associate|natural numbers \<less\> properties|<tuple|5.49|144>>
-    <associate|natural numbers Archimedean property|<tuple|5.77|149>>
-    <associate|natural numbers Peano|<tuple|5.17|131>>
-    <associate|natural numbers absorbing element|<tuple|5.36|140>>
-    <associate|natural numbers addition|<tuple|5.27|138>>
-    <associate|natural numbers additive semi-group|<tuple|5.34|139>>
-    <associate|natural numbers are infinite|<tuple|6.28|160>>
-    <associate|natural numbers are segments|<tuple|6.16|158>>
-    <associate|natural numbers are total ordered|<tuple|5.52|144>>
-    <associate|natural numbers are transitive|<tuple|5.14|130>>
-    <associate|natural numbers are well ordered|<tuple|5.51|144>>
-    <associate|natural numbers difference|<tuple|5.63|147>>
-    <associate|natural numbers distributivity|<tuple|5.39|141>>
-    <associate|natural numbers division|<tuple|5.78|150>>
+    isomorphism|<tuple|4.61|127>>
+    <associate|iteration final|<tuple|5.84|156>>
+    <associate|mapping of N to a finite set (1)|<tuple|6.45|170>>
+    <associate|mapping of N to a finite set (2)|<tuple|6.46|171>>
+    <associate|mathematical induction|<tuple|5.82|155>>
+    <associate|max element of a family|<tuple|6.48|173>>
+    <associate|n\<less\>=m=\<gtr\>S_n\<less\>=S_m|<tuple|6.17|162>>
+    <associate|natural numbers|<tuple|5.3|133>>
+    <associate|natural numbers (n+m)-k=(n-k)+m|<tuple|5.65|151>>
+    <associate|natural numbers (n+m)-n=m|<tuple|5.66|151>>
+    <associate|natural numbers 0|<tuple|5.7|133>>
+    <associate|natural numbers 0\<less\>=n|<tuple|5.46|147>>
+    <associate|natural numbers 1+1=2|<tuple|5.28|142>>
+    <associate|natural numbers \<less\> properties|<tuple|5.49|148>>
+    <associate|natural numbers Archimedean property|<tuple|5.77|153>>
+    <associate|natural numbers Peano|<tuple|5.17|135>>
+    <associate|natural numbers absorbing element|<tuple|5.36|144>>
+    <associate|natural numbers addition|<tuple|5.27|142>>
+    <associate|natural numbers additive semi-group|<tuple|5.34|143>>
+    <associate|natural numbers are infinite|<tuple|6.28|164>>
+    <associate|natural numbers are segments|<tuple|6.16|161>>
+    <associate|natural numbers are total ordered|<tuple|5.52|149>>
+    <associate|natural numbers are transitive|<tuple|5.14|134>>
+    <associate|natural numbers are well ordered|<tuple|5.51|148>>
+    <associate|natural numbers difference|<tuple|5.63|151>>
+    <associate|natural numbers distributivity|<tuple|5.39|145>>
+    <associate|natural numbers division|<tuple|5.78|154>>
     <associate|natural numbers every non zero number is a
-    successor|<tuple|5.18|131>>
-    <associate|natural numbers is a set|<tuple|5.4|129>>
-    <associate|natural numbers k\<less\>n condition|<tuple|5.48|143>>
-    <associate|natural numbers mathematical induction|<tuple|5.11|130>>
-    <associate|natural numbers multiplication|<tuple|5.35|140>>
-    <associate|natural numbers multiplication associativity|<tuple|5.41|142>>
-    <associate|natural numbers multiplication commutativity|<tuple|5.40|141>>
+    successor|<tuple|5.18|135>>
+    <associate|natural numbers is a set|<tuple|5.4|133>>
+    <associate|natural numbers k\<less\>n condition|<tuple|5.48|147>>
+    <associate|natural numbers mathematical induction|<tuple|5.11|134>>
+    <associate|natural numbers multiplication|<tuple|5.35|144>>
+    <associate|natural numbers multiplication associativity|<tuple|5.41|146>>
+    <associate|natural numbers multiplication commutativity|<tuple|5.40|145>>
     <associate|natural numbers multiplication neutral
-    element|<tuple|5.37|140>>
+    element|<tuple|5.37|144>>
     <associate|natural numbers multiplicative abelian
-    semi-group|<tuple|5.42|142>>
-    <associate|natural numbers n+0=n|<tuple|5.29|138>>
-    <associate|natural numbers n+k=0=\<gtr\>n=0|<tuple|5.57|145>>
-    <associate|natural numbers n+k=m+k\<less\>=\<gtr\>n=m|<tuple|5.43|142>>
-    <associate|natural numbers n+s(m)=s(n+m)|<tuple|5.31|139>>
-    <associate|natural numbers n.(m-1)=n.m-n|<tuple|5.68|147>>
-    <associate|natural numbers n.k=m.k=\<gtr\>n=m|<tuple|5.76|149>>
-    <associate|natural numbers n.s(m)=n+n.m|<tuple|5.38|141>>
-    <associate|natural numbers n\<less\>=i\<less\>=m=\<gtr\>0\<less\>=i-n\<less\>=m-n|<tuple|5.69|147>>
-    <associate|natural numbers n\<less\>=m\<less\>=\<gtr\>n-k\<less\>=m-k|<tuple|5.70|148>>
+    semi-group|<tuple|5.42|146>>
+    <associate|natural numbers n+0=n|<tuple|5.29|142>>
+    <associate|natural numbers n+k=0=\<gtr\>n=0|<tuple|5.57|150>>
+    <associate|natural numbers n+k=m+k\<less\>=\<gtr\>n=m|<tuple|5.43|146>>
+    <associate|natural numbers n+s(m)=s(n+m)|<tuple|5.31|143>>
+    <associate|natural numbers n.(m-1)=n.m-n|<tuple|5.68|151>>
+    <associate|natural numbers n.k=m.k=\<gtr\>n=m|<tuple|5.76|153>>
+    <associate|natural numbers n.s(m)=n+n.m|<tuple|5.38|145>>
+    <associate|natural numbers n\<less\>=i\<less\>=m=\<gtr\>0\<less\>=i-n\<less\>=m-n|<tuple|5.69|152>>
+    <associate|natural numbers n\<less\>=m\<less\>=\<gtr\>n-k\<less\>=m-k|<tuple|5.70|152>>
     <associate|natural numbers n\<less\>=m\<less\>=\<gtr\>there exists a k
-    such that m=k|<tuple|5.62|146>>
-    <associate|natural numbers n\<less\>=n+k|<tuple|5.56|145>>
-    <associate|natural numbers n\<less\>k\<less\>s(n)|<tuple|5.71|148>>
+    such that m=k|<tuple|5.62|150>>
+    <associate|natural numbers n\<less\>=n+k|<tuple|5.56|149>>
+    <associate|natural numbers n\<less\>k\<less\>s(n)|<tuple|5.71|152>>
     <associate|natural numbers n\<less\>m and r\<less\>s then
-    n+r\<less\>m+s|<tuple|5.73|148>>
+    n+r\<less\>m+s|<tuple|5.73|152>>
     <associate|natural numbers n\<less\>m then there exists a k such that
-    m=n+k|<tuple|5.60|146>>
-    <associate|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k|<tuple|5.55|145>>
+    m=n+k|<tuple|5.60|150>>
+    <associate|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k|<tuple|5.55|149>>
     <associate|natural numbers n\<less\>m\<less\>=\<gtr\>there exists a k
-    such that m=k|<tuple|5.61|146>>
-    <associate|natural numbers n\<less\>m=\<gtr\>n.k\<less\>m.k|<tuple|5.75|149>>
-    <associate|natural numbers n\<less\>m=\<gtr\>n\<less\>=m-1|<tuple|5.67|147>>
-    <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>=m|<tuple|5.50|144>>
-    <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>s(m)|<tuple|5.54|145>>
-    <associate|natural numbers n\<less\>s(m)=\<gtr\>s\<less\>=m|<tuple|5.58|146>>
-    <associate|natural numbers n\<less\>s(n)|<tuple|5.47|143>>
-    <associate|natural numbers n=/s(n)|<tuple|5.15|131>>
-    <associate|natural numbers order relation|<tuple|5.45|143>>
+    such that m=k|<tuple|5.61|150>>
+    <associate|natural numbers n\<less\>m=\<gtr\>n.k\<less\>m.k|<tuple|5.75|153>>
+    <associate|natural numbers n\<less\>m=\<gtr\>n\<less\>=m-1|<tuple|5.67|151>>
+    <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>=m|<tuple|5.50|148>>
+    <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>s(m)|<tuple|5.54|149>>
+    <associate|natural numbers n\<less\>s(m)=\<gtr\>s\<less\>=m|<tuple|5.58|150>>
+    <associate|natural numbers n\<less\>s(n)|<tuple|5.47|147>>
+    <associate|natural numbers n=/s(n)|<tuple|5.15|135>>
+    <associate|natural numbers order relation|<tuple|5.45|147>>
     <associate|natural numbers product of non zero numbers is non
-    zero|<tuple|5.74|148>>
-    <associate|natural numbers s(n) = n+1|<tuple|5.30|138>>
-    <associate|natural numbers s(n)=/0|<tuple|5.10|130>>
-    <associate|natural numbers successor|<tuple|5.5|129>>
-    <associate|natural numbers successor function|<tuple|5.6|129>>
+    zero|<tuple|5.74|153>>
+    <associate|natural numbers s(n) = n+1|<tuple|5.30|142>>
+    <associate|natural numbers s(n)=/0|<tuple|5.10|134>>
+    <associate|natural numbers successor|<tuple|5.5|133>>
+    <associate|natural numbers successor function|<tuple|5.6|133>>
     <associate|natural numbers successor function is
-    injective|<tuple|5.16|131>>
-    <associate|natural numbers successor properties|<tuple|5.12|130>>
-    <associate|natural numbers sum associativity|<tuple|5.32|139>>
-    <associate|natural numbers sum commutativity|<tuple|5.33|139>>
-    <associate|natural numbers sup property|<tuple|5.72|148>>
-    <associate|natural numbers transitive|<tuple|5.13|130>>
-    <associate|natural numbers x\<less\>=y or y\<less\>x|<tuple|5.53|145>>
+    injective|<tuple|5.16|135>>
+    <associate|natural numbers successor properties|<tuple|5.12|134>>
+    <associate|natural numbers sum associativity|<tuple|5.32|143>>
+    <associate|natural numbers sum commutativity|<tuple|5.33|143>>
+    <associate|natural numbers sup property|<tuple|5.72|152>>
+    <associate|natural numbers transitive|<tuple|5.13|134>>
+    <associate|natural numbers x\<less\>=y or y\<less\>x|<tuple|5.53|149>>
     <associate|operator|<tuple|4.1|111>>
-    <associate|ordering of a finite family|<tuple|6.49|169>>
-    <associate|ordering of a finite family (1)|<tuple|6.50|170>>
+    <associate|ordering of a finite family|<tuple|6.49|173>>
+    <associate|ordering of a finite family (1)|<tuple|6.50|174>>
     <associate|product of a finite family of finite sets is is
-    finite|<tuple|6.52|171>>
+    finite|<tuple|6.52|175>>
     <associate|product of a finite family of finite sets is is finite
-    (1)|<tuple|6.53|172>>
-    <associate|product of finite family of sets|<tuple|6.51|171>>
-    <associate|product of finite sets|<tuple|6.38|164>>
-    <associate|proposition 6.53.022|<tuple|6.57|173>>
-    <associate|recursion|<tuple|5.19|132>>
-    <associate|recursion final|<tuple|5.83|152>>
-    <associate|recursion injective function|<tuple|5.20|134>>
-    <associate|recursion iteration|<tuple|5.24|135>>
-    <associate|recursion iteration in a group|<tuple|5.25|136>>
-    <associate|recursion step (2)|<tuple|5.85|152>>
-    <associate|recursion step form (1)|<tuple|5.26|136>>
-    <associate|recursion step form (3)|<tuple|5.86|152>>
+    (1)|<tuple|6.53|175>>
+    <associate|product of finite family of sets|<tuple|6.51|175>>
+    <associate|product of finite sets|<tuple|6.38|168>>
+    <associate|proposition 6.53.022|<tuple|6.57|177>>
+    <associate|recursion|<tuple|5.19|136>>
+    <associate|recursion final|<tuple|5.83|156>>
+    <associate|recursion injective function|<tuple|5.20|138>>
+    <associate|recursion iteration|<tuple|5.24|139>>
+    <associate|recursion iteration in a group|<tuple|5.25|140>>
+    <associate|recursion step (2)|<tuple|5.85|156>>
+    <associate|recursion step form (1)|<tuple|5.26|140>>
+    <associate|recursion step form (3)|<tuple|5.86|156>>
     <associate|ring|<tuple|4.30|118>>
-    <associate|ring 0 1 and -|<tuple|4.36|120>>
+    <associate|ring 0 1 and -|<tuple|4.36|119>>
     <associate|ring absorbing element|<tuple|4.35|119>>
     <associate|ring homeomorphism|<tuple|4.37|120>>
-    <associate|ring homeomorphism composition|<tuple|4.43|122>>
+    <associate|ring homeomorphism composition|<tuple|4.43|121>>
     <associate|ring homeomorphism is group homeomorphism|<tuple|4.39|120>>
     <associate|ring homeomorphism to a sub ring|<tuple|4.40|120>>
     <associate|ring integral domain|<tuple|4.32|119>>
     <associate|ring isomorphism|<tuple|4.42|121>>
-    <associate|ring ordered ring|<tuple|4.44|?>>
+    <associate|ring order properties|<tuple|4.65|122>>
+    <associate|ring ordered ring|<tuple|4.44|122>>
     <associate|ring ring homeomorphism and neutral element|<tuple|4.41|121>>
     <associate|ring subring is a ring|<tuple|4.34|119>>
     <associate|ring zero divisor|<tuple|4.31|119>>
     <associate|semi-group|<tuple|4.2|111>>
-    <associate|set containing a denumerable set is infinite|<tuple|6.27|160>>
+    <associate|set containing a denumerable set is infinite|<tuple|6.27|164>>
     <associate|set is infinitie if it contains a infinite
-    subset|<tuple|6.29|160>>
-    <associate|set of finite family is finite|<tuple|6.42|166>>
+    subset|<tuple|6.29|164>>
+    <associate|set of finite family is finite|<tuple|6.42|170>>
     <associate|sub-semi-group|<tuple|4.12|113>>
     <associate|subring|<tuple|4.33|119>>
-    <associate|subset of finite sets|<tuple|6.40|165>>
+    <associate|subset of finite sets|<tuple|6.40|169>>
     <associate|surjection f:A-\<gtr\>B if A is finite then B is
-    finite|<tuple|6.41|166>>
-    <associate|union of two finite sets is finite|<tuple|6.31|161>>
-    <associate|{n,..,m} is bijective to S_(m-n)+1|<tuple|6.18|158>>
+    finite|<tuple|6.41|169>>
+    <associate|union of two finite sets is finite|<tuple|6.31|165>>
+    <associate|{n,..,m} is bijective to S_(m-n)+1|<tuple|6.18|162>>
   </collection>
 </references>
 
