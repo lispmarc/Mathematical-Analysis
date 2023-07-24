@@ -3864,6 +3864,11 @@
       are injective functions with <math|f<around*|(|A|)>\<subseteq\>C> then
       <math|g\<circ\>f:A\<rightarrow\>D> is a injective function.
 
+      <item>If <math|f:A\<rightarrow\>B> and <math|g:C\<rightarrow\>D> are
+      injective functions with <math|f<around*|(|A|)>\<subseteq\>C> then
+      <math|g\<circ\>f:A\<rightarrow\>g<around*|(|f<around*|(|A|)>|)>> is a
+      bijective function.
+
       <item>If <math|f:A\<rightarrow\>B> is a function and
       <math|g:C\<rightarrow\>D> a surjective function so that
       <math|f<around*|(|A|)>=C> then <math|g\<circ\>f:A\<rightarrow\>D> is a
@@ -3898,6 +3903,14 @@
       <\equation*>
         x=x<rprime|'>
       </equation*>
+
+      <item>Using (1) we have that <math|g\<circ\>f:A\<rightarrow\>D> is
+      injective so that by [theorem: <reference|function injectivity to
+      bijection>] <math|g\<circ\>f:A\<rightarrow\><around*|(|g\<circ\>f|)><around*|(|A|)>>
+      is a bijection. Further by [theorem: <reference|partial function image
+      preimage of compositions>] <math|<around*|(|g\<circ\>f|)><around*|(|A|)>=g<around*|(|f<around*|(|A|)>|)>>
+      so that <math|g\<circ\>f:A\<rightarrow\>g<around*|(|f<around*|(|A|)>|)>>
+      is a bijection.
 
       <item>Let <math|z\<in\>D> then as <math|g> is surjective there
       <math|\<exists\>y\<in\>C> such that <math|<around*|(|y,z|)>\<in\>g>. As
@@ -3940,8 +3953,8 @@
 
     <\enumerate>
       <item><math|If> <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>C>
-      are injective functions with then <math|g\<circ\>f:A\<rightarrow\>C> is
-      a injective function.
+      are injective functions then <math|g\<circ\>f:A\<rightarrow\>C> is a
+      injective function.
 
       <item>If <math|f:A\<rightarrow\>B> and <math|g:B\<rightarrow\>C> are
       surjective functions then <math|g\<circ\>f:A\<rightarrow\>C> is a
@@ -8604,7 +8617,7 @@
 
       <\equation*>
         g\<circ\>f:<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|C,\<leqslant\><rsub|C>|\<rangle\>><text|
-        is a order isomorphism>
+        is a order homeomorphism>
       </equation*>
 
       <item>If <math|D\<subseteq\>B> is equiped with the induced order from
@@ -8624,7 +8637,9 @@
         is stritly increasing>
       </equation*>
 
-      <item>If
+      <item>If <math|D\<subseteq\>B> is equiped with the induced order from
+      <math|<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>> [see
+      theorem: <reference|order partial order on sub class>] and
 
       <\equation*>
         f:<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|D,\<leqslant\><rsub|B>|\<rangle\>><text|
@@ -8635,7 +8650,15 @@
       then\ 
 
       <\equation*>
-        g\<circ\>f:<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|C,\<leqslant\><rsub|C>|\<rangle\>><text|
+        g\<circ\>f:<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|g<around*|(|f<around*|(|A|)>|)>,\<leqslant\><rsub|C>|\<rangle\>><text|
+        is a order isomorphism>
+      </equation*>
+
+      or as <math|D\<equallim\><rsub|f:a\<rightarrow\>D <text| is
+      bijective>>f<around*|(|A|)>>
+
+      <\equation*>
+        g\<circ\>f:<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|g<around*|(|D|)>,\<leqslant\><rsub|C>|\<rangle\>><text|
         is a order isomorphism>
       </equation*>
     </enumerate>
@@ -8653,8 +8676,11 @@
       <math|f<around*|(|x|)>\<less\><rsub|B>f<around*|(|y|)>> hence
       <math|<around*|(|g\<circ\>f|)><around*|(|x|)>=g<around*|(|f<around*|(|x|)>|)>\<less\><rsub|C>g<around*|(|f<around*|(|y|)>|)>=<around*|(|g\<circ\>f|)><around*|(||)>>.
 
-      <item>Let <math|x,y\<in\>A>. If <math|x\<leqslant\><rsub|A>y> then
-      <math|f<around*|(|x|)>\<leqslant\><rsub|B>f<around*|(|y|)>> hence
+      <item>Using [theorem: <reference|function composition injectivity,
+      surjectivity and bijectivity>] we have that
+      <math|g\<circ\>f:A\<rightarrow\>g<around*|(|D|)>=g<around*|(|f<around*|(|A|)>|)>>
+      is a bijection. Let <math|x,y\<in\>A>. If <math|x\<leqslant\><rsub|A>y>
+      then <math|f<around*|(|x|)>\<leqslant\><rsub|B>f<around*|(|y|)>> hence
       <math|<around*|(|g\<circ\>f|)><around*|(|x|)>=g<around*|(|f<around*|(|x|)>|)>\<leqslant\><rsub|C>g<around*|(|f<around*|(|y|)>|)>=<around*|(|g\<circ\>f|)><around*|(|y|)>>.
       Also if <math|<around*|(|g\<circ\>f|)><around*|(|x|)>\<leqslant\><rsub|C><around*|(|g\<circ\>f|)><around*|(|y|)>>
       then <math|g<around*|(|f<around*|(|x|)>|)>\<leqslant\><rsub|C>g<around*|(|f<around*|(|y|)>|)>>
@@ -13110,7 +13136,6 @@
     <associate|function surjection condition|<tuple|2.51|?>>
     <associate|function trivial bijection|<tuple|2.65|?>>
     <associate|function: A^B and sets|<tuple|2.35|?>>
-    <associate|order|<tuple|3.30|?>>
     <associate|order A isomorphism B|<tuple|3.49|?>>
     <associate|order a\<less\>=b\<less\>=c|<tuple|3.29|?>>
     <associate|order chain|<tuple|3.40|?>>
