@@ -8597,20 +8597,18 @@
     we have\ 
 
     <\enumerate>
-      <item><math|\<bbb-N\><rsub|0,\<bbb-R\>>> is a abelian sub-semi-group of
-      <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>>
+      <item><math|\<bbb-N\><rsub|0,\<bbb-R\>>> is a sub-semi-group of
+      <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>> and
+      <math|i<rsub|\<bbb-N\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,+|\<rangle\>>>
+      is a group isomorphism.\ 
 
       <item><math|\<bbb-N\><rsub|0,\<bbb-R\>>> is a sub-semi-group of
-      <math|<around*|\<langle\>|\<bbb-R\>,\<cdot\>|\<rangle\>>>
+      <math|<around*|\<langle\>|\<bbb-R\>,\<cdot\>|\<rangle\>>> and
+      <math|i<rsub|\<bbb-N\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<cdot\>|\<rangle\>>>
+      is a group isomorphism.
 
       <item><math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<leqslant\>|\<rangle\>>>
       is a order isomorphism
-
-      <item><math|i<rsub|\<bbb-N\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,+|\<rangle\>>>
-      is a group isomorphism\ 
-
-      <item><math|i<rsub|\<bbb-N\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<cdot\>|\<rangle\>>>
-      is a group isomorphism\ 
 
       <item><math|\<bbb-N\><rsub|0,\<bbb-R\>>> is denumerable
 
@@ -8619,124 +8617,114 @@
     </enumerate>
   </theorem>
 
-  TODO correct this proof
-
   <\proof>
-    Using \ [theorems: <reference|integers properties (1)>,
-    <reference|integers order preserving bijection> and <reference|real ZR
-    properties>] we have that\ 
-
-    <\equation*>
-      i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,+|\<rangle\>><text|
-      and >i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,\<cdot\>|\<rangle\>><text|
-      are group isomorphisms>
-    </equation*>
-
-    and
-
-    <\equation*>
-      i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,+|\<rangle\>><text|
-      and >i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Z\>,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,\<cdot\>|\<rangle\>><text|
-      are group isomorphisms>
-    </equation*>
-
-    and\ 
-
-    <\equation*>
-      i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,\<leqslant\>|\<rangle\>><text|
-      and >i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,\<leqslant\>|\<rangle\>><text|
-      are order isomorphisms>
-    </equation*>
-
-    Hence using [theorems: <reference|function composition injectivity,
-    surjectivity and bijectivity>, <reference|order composition of
-    functions>, <reference|group homeomorphism composition> and
-    <reference|integers properties (1)>] on the above we have for
-    <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>>
-    that\ 
-
-    <\equation*>
-      i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|\<bbb-Z\>>,+|\<rangle\>><text|
-      and >i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,\<cdot\>|\<rangle\>><text|
-      are group homeomorphism>
-    </equation*>
-
-    and\ 
-
-    <\equation*>
-      i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-N\><rsub|0>|)>|)>,\<leqslant\>|\<rangle\>><text|
-      is a order isomorphism>
-    </equation*>
-
-    or applying using [theorems: <reference|order homeomorphism extending>
-    and <reference|group homeomorphism to a sub group> we have that\ 
+    \ First note that by the definition of <math|\<bbb-N\><rsub|0,\<bbb-R\>>>
+    we have that\ 
 
     <\equation>
-      <label|eq 9.94.040>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-R\>,+|\<rangle\>><text|
-      and >i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-R\>,\<cdot\>|\<rangle\>><text|
-      are group homeomorphism><text|>
+      <label|eq 9.90.047>\<bbb-N\><rsub|0,\<bbb-R\>>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|i<rsub|\<bbb-N\><rsub|0>><around*|(|\<bbb-N\><rsub|0>|)>|)>
     </equation>
-
-    <\equation>
-      <label|eq 9.95.040>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>><text|
-      is a order isomorphism>
-    </equation>
-
-    So we have that\ 
 
     <\enumerate>
-      <item>As <math|\<bbb-N\><rsub|0,\<bbb-R\>>=<around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>|)><around*|(|\<bbb-N\><rsub|0>|)>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-N\><rsub|0>|)>>
-      we have by [theorem: <reference|group homeomorphism properties>] and
-      [eq: <reference|eq 9.94.040>] that\ 
+      <item> Using [theorems: <reference|integers properties (1)> and
+      <reference|real ZR properties>] we have that\ 
 
       <\equation*>
-        <around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,+|\<rangle\>><text|
-        is a semi group of <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>>>
+        i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,+|\<rangle\>><text|
+        and >i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,+|\<rangle\>><text|
+        are a group isomorphisms>
       </equation*>
 
-      which, as <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>> is abelian
-      by [theorem: <reference|real group>], proves by [theorem:
-      <reference|group semi-group inheritance>] that\ 
+      So using [theorem: <reference|group homeomorphism composition>] and
+      [theorem: \ <reference|integers properties (1)>] we have that\ 
 
       <\equation*>
-        <around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,+|\<rangle\>><text|
-        is a abelian semi group of <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>>>
+        i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>><around*|(|\<bbb-N\><rsub|0>|)>|)><text|
+        is a sub group of ><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,+|\<rangle\>>
       </equation*>
 
-      <item>As <math|\<bbb-N\><rsub|0,\<bbb-R\>>=<around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>|)><around*|(|\<bbb-N\><rsub|0>|)>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-N\><rsub|0>|)>>
-      we have by [theorem: <reference|group homeomorphism properties>] and
-      [eq: <reference|eq 9.94.040>] that\ 
+      and\ 
 
       <\equation*>
-        <around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<cdot\>|\<rangle\>><text|
-        is a semi group of <math|<around*|\<langle\>|\<bbb-R\>,\<cdot\>|\<rangle\>>>>
+        i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>:<around*|\<langle\>|\<bbb-N\><rsub|0,>+|\<rangle\>>\<rightarrow\><around*|\<langle\>|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>><around*|(|\<bbb-N\><rsub|0>|)>|)>,+|\<rangle\>><text|
+        is a group isomorphism>
       </equation*>
 
-      <item>As <math|\<bbb-N\><rsub|0,\<bbb-R\>>=<around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>|)><around*|(|\<bbb-N\><rsub|0>|)>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-N\><rsub|0>|)>>
-      we have by [theorem: <reference|function injectivity to bijection>] and
-      [eq: <reference|eq 9.95.040>] that\ 
+      Using [eq: <reference|eq 9.90.047>] and [theorems: <reference|group sub
+      sub group>, <reference|real ZR properties>] it follows that\ 
 
       <\equation*>
-        i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<leqslant\>|\<rangle\>><text|
+        \<bbb-N\><rsub|0,\<bbb-R\>><text| is a sub group of
+        ><around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>
+      </equation*>
+
+      and\ 
+
+      <\equation*>
+        i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>:<around*|\<langle\>|\<bbb-N\><rsub|0,>+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,+|\<rangle\>><text|
+        is a group isomorphism>
+      </equation*>
+
+      <item>Using [theorems: <reference|integers properties (1)> and
+      <reference|real ZR properties>] we have that\ 
+
+      <\equation*>
+        i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,\<cdot\>|\<rangle\>><text|
+        and >i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Z\>,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,\<cdot\>|\<rangle\>><text|
+        are a group isomorphisms>
+      </equation*>
+
+      So using [theorem: <reference|group homeomorphism composition>] and
+      [theorem: \ <reference|integers properties (1)>] we have that\ 
+
+      <\equation*>
+        i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>><around*|(|\<bbb-N\><rsub|0>|)>|)><text|
+        is a sub semi-group of ><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,\<cdot\>|\<rangle\>><text|
+        is a group isomorphism>
+      </equation*>
+
+      and\ 
+
+      <\equation*>
+        i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>:<around*|\<langle\>|\<bbb-N\><rsub|0,>\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>><around*|(|\<bbb-N\><rsub|0>|)>|)>,\<cdot\>|\<rangle\>><text|
+        is a group isomorphism>
+      </equation*>
+
+      Using [eq: <reference|eq 9.90.047>] and [theorems: <reference|group sub
+      sub group>, <reference|real ZR properties>] it follows that\ 
+
+      <\equation*>
+        \<bbb-N\><rsub|0,\<bbb-R\>><text| is a sub semi-group of
+        ><around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>
+      </equation*>
+
+      and\ 
+
+      <\equation*>
+        i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>:<around*|\<langle\>|\<bbb-N\><rsub|0,>\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<cdot\>|\<rangle\>><text|
+        is a group isomorphism>
+      </equation*>
+
+      <item>Using [theorems: <reference|integers order preserving bijection>
+      and <reference|real ZR properties>] we have that\ 
+
+      <\equation*>
+        i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsup|+><rsub|0>,\<leqslant\>|\<rangle\>><text|
+        and >i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>.\<leqslant\>|\<rangle\>>
+      </equation*>
+
+      so using [theorem: <reference|order composition of functions>
+
+      <\equation*>
+        i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>><around*|(|\<bbb-N\><rsub|0>|)>|)>,\<leqslant\>|\<rangle\>><text|
         is a order isomorphism>
       </equation*>
 
-      <item>As <math|\<bbb-N\><rsub|0,\<bbb-R\>>=<around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>|)><around*|(|\<bbb-N\><rsub|0>|)>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-N\><rsub|0>|)>>
-      we have by [theorem: <reference|function injectivity to bijection>] and
-      [eq: <reference|eq 9.94.040>] that\ 
+      Using [eq: <reference|eq 9.90.047>] it follows that\ 
 
       <\equation*>
-        i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,+|\<rangle\>><text|
-        is a group isomorphism>
-      </equation*>
-
-      <item>As <math|\<bbb-N\><rsub|0,\<bbb-R\>>=<around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>|)><around*|(|\<bbb-N\><rsub|0>|)>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-N\><rsub|0>|)>>
-      we have by [theorem: <reference|function injectivity to bijection>] and
-      [eq: <reference|eq 9.94.040>] that\ 
-
-      <\equation*>
-        i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<cdot\>|\<rangle\>><text|
-        is a group isomorphism>
+        i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<leqslant\>|\<rangle\>><text|
+        is a order isomorphism>
       </equation*>
 
       <item>Using (3) we have that <math|\<bbb-N\><rsub|0>\<approx\>\<bbb-N\><rsub|0,\<bbb-R\>>>
@@ -11246,22 +11234,20 @@
   are embeddings of <math|\<bbb-R\>,\<bbb-Q\>,\<bbb-Z\>> and <math|\<bbb-N\>>
   in <math|\<bbb-C\>>,
 
+  \;
+
   <\theorem>
     <label|complex embedding>We have that\ 
 
     <\enumerate>
-      <item>If <math|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>:\<bbb-R\>\<rightarrow\>\<bbb-C\>>
-      is defined by <math|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|x|)>=<around*|(|x,0|)>>
-      then\ 
-
-      <\equation*>
-        i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>:<around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-C\>,+,\<cdot\>|\<rangle\>><text|
-        is a <with|font-series|bold|injective> field homeomorphism>
-      </equation*>
-
       <item><math|\<bbb-R\><rsub|\<bbb-C\>>> is a subfield of
       <math|<around*|\<langle\>|\<bbb-C\>,+,\<cdot\>|\<rangle\>>> and
-      <math|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>:<around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-R\><rsub|\<bbb-C\>>,+,\<cdot\>|\<rangle\>>>
+
+      <\equation*>
+        i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>:<around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-R\><rsub|\<bbb-C\>>,+,\<cdot\>|\<rangle\>><text|
+        defined by >i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(||)>
+      </equation*>
+
       is a field isomorphism.
 
       <item><math|\<bbb-Q\><rsub|\<bbb-C\>>> is a subfield of
@@ -11312,7 +11298,19 @@
     \ 
 
     <\enumerate>
-      <item>Let <math|x,y\<in\>\<bbb-R\>> then we have\ 
+      <item>If <math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>> then
+      <math|\<exists\>x<rprime|'>\<in\>\<bbb-R\>> such that
+      <math|x=<around*|(|x<rprime|'>,0|)>=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|x<rprime|'>|)>\<in\>i<rsub|\<bbb-R\>><around*|(|\<bbb-R\>|)>>.
+      Also if <math|x\<in\>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|\<bbb-R\>|)>>
+      then <math|\<exists\>x<rprime|'>\<in\>\<bbb-R\>> such that
+      <math|x=i<rsub|\<bbb-R\>><around*|(|x<rprime|'>|)>=<around*|(|x<rprime|'>,0|)>\<in\>\<bbb-R\><rsub|\<bbb-C\>>>.
+      So we have that\ 
+
+      <\equation>
+        <label|eq 10.1.048>\<bbb-R\><rsub|\<bbb-C\>>=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|\<bbb-R\>|)>
+      </equation>
+
+      Let <math|x,y\<in\>\<bbb-R\>> then we have\ 
 
       <\equation*>
         i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|x+y|)>=<around*|(|x+y,0|)>=<around*|(|x,0|)>+<around*|(|y,0|)>=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|x|)>+i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|y|)>
@@ -11328,9 +11326,21 @@
 
       proving that\ 
 
-      <\equation*>
-        i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>:<around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-C\>,,+\<cdot\>|\<rangle\>>
+      <\equation>
+        <label|eq 10.2.048>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>:<around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-C\>,,+,\<cdot\>|\<rangle\>>
         <text|is a field homeomorphism>
+      </equation>
+
+      As <math|<around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>> is a
+      field we can use [theorem: <reference|field isomorphism and neutral
+      element>] together with the above proving that
+      <math|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|\<bbb-R\>|)>>
+      is a subfield of <math|<around*|\<langle\>|\<bbb-C\>,+,\<cdot\>|\<rangle\>>>.
+      Combining this with [eq: <reference|eq 10.1.048>] gives\ 
+
+      <\equation*>
+        \<bbb-R\><rsub|\<bbb-C\>><text| is a subfield of
+        ><around*|\<langle\>|\<bbb-C\>\<dotplus\>,\<cdot\>|\<rangle\>>
       </equation*>
 
       Further if <math|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|x|)>=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|y|)>>
@@ -11342,243 +11352,245 @@
         is injective>
       </equation*>
 
-      <item>If <math|x\<in\>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|\<bbb-R\>|)>>
-      then there exists a <math|x<rprime|'>\<in\>\<bbb-R\>> such that
-      <math|x=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|x<rprime|'>|)>=<around*|(|x<rprime|'>,0|)>\<in\>\<bbb-R\><rsub|\<bbb-C\>>>
-      so that\ 
+      so that <math|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>:\<bbb-R\>\<rightarrow\>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-R\>|)>\<equallim\><rsub|<text|[eq:
+      <reference|eq 10.1.048>]>>\<bbb-R\><rsub|\<bbb-C\>>> is a bijection.
+      Hence we have that\ 
 
       <\equation>
-        <label|eq 10.1.045>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|\<bbb-R\>|)>\<subseteq\>\<bbb-R\><rsub|\<bbb-C\>>
+        <label|eq 10.3.048>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>:<around*|\<langle\>|\<bbb-R\>\<dotplus\>,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-R\><rsub|\<bbb-C\>>,+,\<cdot\>|\<rangle\>><text|
+        is a field isomorphism>
       </equation>
-
-      If <math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>> then
-      <math|\<exists\>x<rprime|'>\<in\>\<bbb-R\>> such that
-      <math|x=<around*|(|x<rprime|'>,0|)>> which as
-      <math|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|x<rprime|'>|)>=<around*|(|x<rprime|'>,0|)>>
-      proves that <math|x\<in\>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|\<bbb-R\>|)>>,
-      hence <math|\<bbb-R\><rsub|\<bbb-C\>>\<subseteq\>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|\<bbb-R\>|)>>
-      which combined with [eq: <reference|eq 10.1.045>] proves\ 
-
-      <\equation>
-        <label|eq 10.2.045>\<bbb-R\><rsub|\<bbb-C\>>=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|\<bbb-R\>|)>
-      </equation>
-
-      As by (1) <math|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>:<around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-C\>,,+\<cdot\>|\<rangle\>>
-      <text|is a field homeomorphism> we have by> \ [theorem:
-      <reference|field isomorphism and neutral element>] that
-      <math|><math|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|\<bbb-R\>|)>>
-      is a subfield of <math|<around*|\<langle\>|\<bbb-C\>,+,\<cdot\>|\<rangle\>>>.
-      Using then [eq: <reference|eq 10.2.045>] we have that\ 
-
-      <\equation*>
-        \<bbb-R\><rsub|\<bbb-C\>><text| is a subfield of
-        ><around*|\<langle\>|\<bbb-C\>,+,\<cdot\>|\<rangle\>>
-      </equation*>
 
       <item>By [theorem: <reference|real field embedding Q>] we have that\ 
 
       <\equation>
-        <label|eq 10.3.045>\<bbb-Q\><rsub|\<bbb-R\>><text| is a subfield of
-        ><around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>><text| and
-        >i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Q\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-R\>>,+,\<cdot\>|\<rangle\>><text|
+        <label|eq 10.4.048><around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-R\>>,+,\<cdot\>|\<rangle\>><text|
+        is a subfield of ><around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>><text|
+        and >i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Q\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-R\>>,+,\<cdot\>|\<rangle\>><text|
         is a field isomorphism>
       </equation>
 
-      which, as by <math|<around*|(|1|)>>
-      <math|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>:<around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-C\>,,+\<cdot\>|\<rangle\>>
-      <text|is a <with|font-series|bold|injective> field homeomorphism>>,
-      proves by [theorem: <reference|field homeomorphism composition>] that\ 
+      Using then the above together with [eq: <reference|eq 10.3.048>] we
+      have by [theorem: <reference|field homeomorphism composition>] that\ 
 
       <\equation>
-        <label|eq 10.4.045>i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-C\>>=i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>:\<bbb-Q\>\<rightarrow\>\<bbb-C\><text|
-        is a <with|font-series|bold|injective >field homeomorphism>
+        <label|eq 10.5.048>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-Q\>|)>|)><text|
+        is a subfield of <math|<around*|\<langle\>|\<bbb-R\><rsub|\<bbb-C\>>,+,\<cdot\>|\<rangle\>>>>
       </equation>
 
-      If <math|x\<in\>i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-C\>><around*|(|\<bbb-Q\>|)>=<around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>|)><around*|(|\<bbb-Q\>|)>>
-      then there exist a <math|q\<in\>\<bbb-Q\>> such that
+      and
+
+      <\equation>
+        <label|eq 10.6.048>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>\<circ\>i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Q\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-Q\>|)>|)>,+,\<cdot\>|\<rangle\>><text|
+        is a field isomorphism>
+      </equation>
+
+      Now if <math|x\<in\>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-Q\>|)>|)>>
+      <math|\<exists\>x<rprime|'>\<in\>\<bbb-Q\>> such that
+      <math|x=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|x<rprime|'>|)>|)>=<around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|x<rprime|'>|)>,0|)>>,
+      using [eq: <reference|eq 10.4.048>] we have that
+      <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|x<rprime|'>|)>\<in\>\<bbb-Q\><rsub|\<bbb-R\>>>
+      so that <math|x\<in\>\<bbb-Q\><rsub|\<bbb-C\>>>. Also if
+      <math|x\<in\>\<bbb-Q\><rsub|\<bbb-C\>>> then there exist a
+      <math|x<rprime|'>\<in\>\<bbb-Q\><rsub|\<bbb-R\>>> such that
+      <math|x=<around*|(|x<rprime|'>,0|)>=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|x<rprime|'>|)>>,
+      using [eq: <reference|eq 10.4.048>] there exists a
+      <math|x<rprime|''>\<in\>\<bbb-Q\>> such that
+      <math|x<rprime|'>=i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|x<rprime|''>|)>>
+      so that <math|x=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>R><around*|(|x<rprime|''>|)>|)>\<in\>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-Q\>|)>|)>>.
+      Hence we have that\ 
 
       <\equation*>
-        x=<around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>\<circ\>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>|)><around*|(|q|)>=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|q|)>|)>=<around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|q|)>,0|)>
+        \<bbb-Q\><rsub|\<bbb-C\>>=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-Q\>|)>|)>
       </equation*>
 
-      which, as by [eq: <reference|eq 10.3.045>]
-      <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|q|)>\<in\>\<bbb-Q\>>,
-      proves that <math|x\<in\>\<bbb-Q\><rsub|\<bbb-C\>>>. Hence\ 
-
-      <\equation>
-        <label|eq 10.5.045>i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-Q\>|)>\<subseteq\>\<bbb-Q\><rsub|\<bbb-C\>>
-      </equation>
-
-      Further if <math|x\<in\>\<bbb-Q\><rsub|\<bbb-C\>>> then
-      <math|\<exists\>r\<in\>\<bbb-Q\><rsub|\<bbb-R\>>> such that
-      <math|x=<around*|(|r,0|)>>, as <math|r\<in\>\<bbb-Q\><rsub|\<bbb-R\>>>
-      there exist by [eq: <reference|eq 10.3.045>] a <math|q\<in\>\<bbb-Q\>>
-      such that <math|r=i<rsub|\<bbb-Q\>><around*|(|q|)>>. So
-      <math|x=<around*|(|i<rsub|\<bbb-Q\>><around*|(|q|)>,0|)>=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>><around*|(|q|)>|)>=i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-C\>><around*|(|q|)>>,
-      so <math|x\<in\>i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-C\>><around*|(|Q|)>>
-      or <math|\<bbb-Q\><rsub|\<bbb-C\>>\<subseteq\>i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-C\>><around*|(|\<bbb-Q\>|)>>.
-      Combining this with [eq: <reference|eq 10.5.045>] gives\ 
-
-      <\equation>
-        <label|eq 10.6.045>\<bbb-Q\><rsub|\<bbb-C\>>=i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-C\>><around*|(|\<bbb-Q\>|)>
-      </equation>
-
-      Using [eq: <reference|eq 10.4.045>], [theorem: <reference|field
-      isomorphism and neutral element>] we have that
-      <math|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-C\>><around*|(|\<bbb-Q\>|)>>
-      is a subfield of <math|<around*|\<langle\>|\<bbb-C\>,+,\<cdot\>|\<rangle\>>>.
-      Using then [eq: <reference|eq 10.6.045>] and [eq: <reference|eq
-      10.4.045>] we have
+      which combined with [eqs: <reference|eq 10.5.048>,<reference|eq
+      10.6.048>] proves that\ 
 
       <\equation*>
-        \<bbb-Q\><text| is a sub field of
-        <math|<around*|\<langle\>|\<bbb-C\>,+,\<cdot\>|\<rangle\>><text| and
-        >i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-C\>>:<around*|\<langle\>|\<bbb-Q\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Q\><rsub|C>,+,\<cdot\>|\<rangle\>><text|
-        is a field isomorphism.>>>
+        \<bbb-Q\><rsub|\<bbb-C\>><text| is a subfield of
+        <math|<around*|\<langle\>|\<bbb-C\>,+,\<cdot\>|\<rangle\>>>>
+      </equation*>
+
+      and\ 
+
+      <\equation*>
+        i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-C\>>=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>\<circ\>i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Q\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-C\>>,+,\<cdot\>|\<rangle\>><text|
+        is a field isomorphism>
       </equation*>
 
       <item>By [theorem: <reference|real ZR properties>] we have that\ 
 
       <\equation>
-        <label|eq 10.7.045>\<bbb-Z\><rsub|\<bbb-R\>><text| is a subring of
-        ><around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>><text| and
-        >i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-R\>><text|
+        <label|eq 10.7.048><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,+,\<cdot\>|\<rangle\>><text|
+        is a subring of ><around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>><text|
+        and >i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Z\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-R\>>,+,\<cdot\>|\<rangle\>><text|
+        is a field isomorphism>
+      </equation>
+
+      Using then the above together with [eq: <reference|eq 10.3.048>] we
+      have by [theorem: <reference|ring homeomorphism composition>] that\ 
+
+      <\equation>
+        <label|eq 10.8.048>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-Z\>|)>|)><text|
+        is a subring of <math|<around*|\<langle\>|\<bbb-R\><rsub|\<bbb-C\>>,+,\<cdot\>|\<rangle\>>>>
+      </equation>
+
+      and
+
+      <\equation>
+        <label|eq 10.9.048>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Z\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-Z\>|)>|)>,+,\<cdot\>|\<rangle\>><text|
         is a ring isomorphism>
       </equation>
 
-      which, as by (1) <math|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>:<around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-C\>,,+\<cdot\>|\<rangle\>>
-      <text|is a <with|font-series|bold|injective> field homeomorphism>>,
-      proves by [theorem: <reference|ring homeomorphism composition>] that
-
-      <\equation>
-        <label|eq 10.8.045>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-C\>>=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Z\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-C\>,+,\<cdot\>|\<rangle\>><text|
-        is <with|font-series|bold|injective >ring homeomorphism>
-      </equation>
-
-      If <math|x\<in\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-C\>><around*|(|\<bbb-Z\>|)>>
-      then <math|\<exists\>z\<in\>\<bbb-C\>> such that
-      <math|x=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|z|)>|)>=<around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|z|)>,0|)>>
-      which, as by [eq: <reference|eq 10.7.045>]
-      <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|z|)>\<in\>\<bbb-Z\><rsub|\<bbb-R\>>>
-      proves that <math|x\<in\>\<bbb-Z\><rsub|\<bbb-R\>>>. So\ 
-
-      <\equation>
-        <label|eq 10.9.035>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-C\>><around*|(|\<bbb-Z\>|)>\<subseteq\>\<bbb-R\><rsub|\<bbb-Z\>>
-      </equation>
-
-      Further if <math|x\<in\>\<bbb-Z\><rsub|\<bbb-C\>>> then
-      <math|\<exists\>r\<in\>\<bbb-Z\><rsub|\<bbb-R\>>> such that
-      <math|x=<around*|(|r,0|)>>, using [eq: <reference|eq 10.7.045>] there
-      exist a <math|z\<in\>\<bbb-Z\>> such that
-      <math|r=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|z|)>>, so
-      <math|x=<around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|z|)>,0|)>=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|z|)>|)>\<in\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-C\>><around*|(|\<bbb-Z\>|)>>.
-      Hence <math|\<bbb-Z\><rsub|\<bbb-C\>>\<subseteq\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-C\>><around*|(|\<bbb-Z\>|)>>
-      which combined with [eq: <reference|eq 10.9.035>] proves that\ 
-
-      <\equation>
-        <label|eq 10.10.045>\<bbb-Z\><rsub|\<bbb-C\>>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-C\>><around*|(|\<bbb-C\>|)>
-      </equation>
-
-      Using [eq: <reference|eq 10.8.045>] and [theorem: <reference|ring ring
-      homeomorphism and neutral element>] it follows that
-      <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-C\>><around*|(|\<bbb-C\>|)>>
-      is a subring of <math|<around*|\<langle\>|\<bbb-C\>,+,\<cdot\>|\<rangle\>>>.
-      Using then [eqs: <reference|eq 10.10.045>, <reference|eq 10.8.045>] we
-      have that\ 
+      Now if <math|x\<in\>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-Z\>|)>|)>>
+      <math|\<exists\>x<rprime|'>\<in\>\<bbb-Z\>> such that
+      <math|x=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|x<rprime|'>|)>|)>=<around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|x<rprime|'>|)>,0|)>>,
+      using [eq: <reference|eq 10.7.048>] we have that
+      <math|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|x<rprime|'>|)>\<in\>\<bbb-Z\><rsub|\<bbb-R\>>>
+      so that <math|x\<in\>\<bbb-Z\><rsub|\<bbb-C\>>>. Also if
+      <math|x\<in\>\<bbb-Z\><rsub|\<bbb-C\>>> then there exist a
+      <math|x<rprime|'>\<in\>\<bbb-Z\><rsub|\<bbb-R\>>> such that
+      <math|x=<around*|(|x<rprime|'>,0|)>=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|x<rprime|'>|)>>,
+      using [eq: <reference|eq 10.7.048>] there exists a
+      <math|x<rprime|''>\<in\>\<bbb-Z\>> such that
+      <math|x<rprime|'>=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|x<rprime|''>|)>>
+      so that <math|x=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>R><around*|(|x<rprime|''>|)>|)>\<in\>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-Z\>|)>|)>>.
+      Hence we have that\ 
 
       <\equation*>
-        \<bbb-Z\><rsub|\<bbb-C\>><text| is a subring of
-        ><around*|\<langle\>|\<bbb-C\>,+,\<cdot\>|\<rangle\>><text| and
-        >i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-C\>>:\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-C\>><text|
+        \<bbb-Z\><rsub|\<bbb-C\>>=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-Z\>|)>|)>
+      </equation*>
+
+      which combined with [eqs: <reference|eq 10.8.048>,<reference|eq
+      10.9.048>] proves that\ 
+
+      <\equation*>
+        \<bbb-Z\><rsub|\<bbb-C\>><text| is a subfield of
+        <math|<around*|\<langle\>|\<bbb-C\>,+,\<cdot\>|\<rangle\>>>>
+      </equation*>
+
+      and\ 
+
+      <\equation*>
+        i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-C\>>=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>\<circ\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-Z\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-C\>>,+,\<cdot\>|\<rangle\>><text|
         is a ring isomorphism>
       </equation*>
 
       <item>By [theorem: <reference|real NR properties>] we have that\ 
 
       <\equation>
-        <label|eq 10.11.045>\<bbb-N\><rsub|\<bbb-R\>><text| is a sub semi
-        group of ><around*|\<langle\>|\<bbb-C\>,+|\<rangle\>><text| and
-        >i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,+|\<rangle\>><text|
+        <label|eq 10.10.048><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,+|\<rangle\>><text|
+        is a sub seni-group of ><around*|\<langle\>|\<bbb-R\>,+|\<rangle\>><text|
+        and >i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,+|\<rangle\>><text|
         is a group isomorphism>
       </equation>
 
-      which, as by (1) <math|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>:<around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-C\>,+,\<cdot\>|\<rangle\>>
-      <text|is a <with|font-series|bold|injective> field homeomorphism>>,
-      proves by [theorem: <reference|group homeomorphism composition>] that\ 
+      Using then the above together with [eq: <reference|eq 10.3.048>] we
+      have by [theorem: <reference|ring homeomorphism composition>] that\ 
 
       <\equation>
-        <label|eq 10.12.045>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-C\>>\<dotplus\>|\<rangle\>>
-        is a <with|font-series|bold|injective> group homeomorphism
+        <label|eq 10.11.048>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-N\>+0\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-N\><rsub|0>|)>|)><text|
+        is a sub semi-group of <math|<around*|\<langle\>|\<bbb-R\><rsub|\<bbb-C\>>,+|\<rangle\>>>>
       </equation>
 
-      If <math|x\<in\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|\<bbb-N\><rsub|0>|)>>
-      then there exist a <math|n\<in\>\<bbb-N\><rsub|0>> such that
-      <math|x=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>|]>=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>,0|)>>
-      which, as by [eq: <reference|eq 10.11.045>]
-      <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>>
-      proves that <math|x\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>>. Hence\ 
+      and
 
       <\equation>
-        <label|eq 10.13.045>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|\<bbb-N\><rsub|0>|)>\<subseteq\>\<bbb-N\><rsub|0,\<bbb-C\>>
+        <label|eq 10.12.048>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-C\>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-N\><rsub|0><rsub|>|)>|)>,+|\<rangle\>><text|
+        is a group isomorphism>
       </equation>
 
-      If <math|x\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>> then there exist a
-      <math|r\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> such that
-      <math|x=<around*|(|r,0|)>>, using [eq: <reference|eq 10.11.045>] there
-      exist a <math|n\<in\>\<bbb-N\><rsub|0>> such that
-      <math|r=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>>,
-      hence <math|x=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>,0|)>=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|n|)>|)>\<in\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|\<bbb-N\><rsub|0>|)>>.
-      So <math|\<bbb-N\><rsub|0,\<bbb-C\>>\<subseteq\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-N\><rsub|0>|)>>
-      which combined with [eq: <reference|eq 10.13.045>] proves that\ 
-
-      <\equation>
-        <label|eq 10.14.045>\<bbb-N\><rsub|0,\<bbb-C\>>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|\<bbb-N\><rsub|0>|)>
-      </equation>
-
-      Using [eq: <reference|eq 10.12.045>] and [theorem: <reference|group
-      homeomorphism properties>] it follows that
-      <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|\<bbb-N\><rsub|0>|)>>
-      is a sub semigroup of <math|<around*|\<langle\>|\<bbb-C\>,+|\<rangle\>>>.
-      Using then [eqs: <reference|eq 10.14.045>, <reference|eq 10.11.045>] we
-      have\ 
+      Now if <math|x\<in\>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-N\><rsub|0>|)>|)>>
+      <math|\<exists\>x<rprime|'>\<in\>\<bbb-N\><rsub|0>> such that
+      <math|x=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|x<rprime|'>|)>|)>=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|x<rprime|'>|)>,0|)>>,
+      using [eq: <reference|eq 10.10.048>] we have that
+      <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|x<rprime|'>|)>\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>>
+      so that <math|x\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>>. Also if
+      <math|x\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>> then there exist a
+      <math|x<rprime|'>\<in\>\<bbb-C\><rsub|\<bbb-R\>>> such that
+      <math|x=<around*|(|x<rprime|'>,0|)>=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|x<rprime|'>|)>>,
+      using [eq: <reference|eq 10.10.048>] there exists a
+      <math|x<rprime|''>\<in\>\<bbb-N\><rsub|0>> such that
+      <math|x<rprime|'>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|x<rprime|''>|)>>
+      so that <math|x=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>R><around*|(|x<rprime|''>|)>|)>\<in\>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-N\><rsub|0>|)>|)>>.
+      Hence we have that\ 
 
       <\equation*>
-        \<bbb-N\><rsub|0,\<bbb-C\>><text| is a sub semigroup of
-        ><around*|\<langle\>|\<bbb-C\>,+|\<rangle\>><text| and
-        >i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>:<around*|\<langle\>|\<bbb-N\><rsub|0><rsub|,>+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,+|\<rangle\>><text|
+        \<bbb-N\><rsub|0,\<bbb-C\>>=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-N\><rsub|0>|)>|)>
+      </equation*>
+
+      which combined with [eqs: <reference|eq 10.11.048>,<reference|eq
+      10.12.048>] proves that\ 
+
+      <\equation*>
+        \<bbb-N\><rsub|0,\<bbb-C\>><text| is a subfield of
+        <math|<around*|\<langle\>|\<bbb-C\>,+|\<rangle\>>>>
+      </equation*>
+
+      and\ 
+
+      <\equation*>
+        i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-C\>>,+|\<rangle\>><text|
         is a group isomorphism>
       </equation*>
 
       <item>By [theorem: <reference|real NR properties>] we have that\ 
 
       <\equation>
-        <label|eq 10.15.045>\<bbb-N\><rsub|\<bbb-R\>><text| is a sub semi
-        group of ><around*|\<langle\>|\<bbb-C\>,\<cdot\>|\<rangle\>><text|
+        <label|eq 10.13.048><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<cdot\>|\<rangle\>><text|
+        is a sub seni-group of ><around*|\<langle\>|\<bbb-R\>,\<cdot\>|\<rangle\>><text|
         and >i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<cdot\>|\<rangle\>><text|
         is a group isomorphism>
       </equation>
 
-      which, as by (1) <math|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>:<around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-C\>,+,\<cdot\>|\<rangle\>>
-      <text|is a <with|font-series|bold|injective> field homeomorphism>>,
-      proves by [theorem: <reference|group homeomorphism composition>] that\ 
+      Using then the above together with [eq: <reference|eq 10.3.048>] we
+      have by [theorem: <reference|ring homeomorphism composition>] that\ 
 
       <\equation>
-        <label|eq 10.16.045>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-C\>>\<dotplus\>|\<rangle\>>
-        is a <with|font-series|bold|injective> group homeomorphism
+        <label|eq 10.14.048>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-N\>+0\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-N\><rsub|0>|)>|)><text|
+        is a sub semi-group of <math|<around*|\<langle\>|\<bbb-R\><rsub|\<bbb-C\>>,\<cdot\>|\<rangle\>>>>
       </equation>
 
-      Using [eq: <reference|eq 10.16.045>] and [theorem: <reference|group
-      homeomorphism properties>] it follows that
-      <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|\<bbb-N\><rsub|0>|)>>
-      is a sub semigroup of <math|<around*|\<langle\>|\<bbb-C\>,\<cdot\>|\<rangle\>>>.
-      Using then [eqs: <reference|eq 10.14.045> <reference|eq 10.16.045>] we
-      have that\ 
+      and
+
+      <\equation>
+        <label|eq 10.15.048>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-C\>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-N\><rsub|0><rsub|>|)>|)>,\<cdot\>|\<rangle\>><text|
+        is a group isomorphism>
+      </equation>
+
+      Now if <math|x\<in\>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-N\><rsub|0>|)>|)>>
+      <math|\<exists\>x<rprime|'>\<in\>\<bbb-N\><rsub|0>> such that
+      <math|x=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|x<rprime|'>|)>|)>=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|x<rprime|'>|)>,0|)>>,
+      using [eq: <reference|eq 10.13.048>] we have that
+      <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|x<rprime|'>|)>\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>>
+      so that <math|x\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>>. Also if
+      <math|x\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>> then there exist a
+      <math|x<rprime|'>\<in\>\<bbb-C\><rsub|\<bbb-R\>>> such that
+      <math|x=<around*|(|x<rprime|'>,0|)>=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|x<rprime|'>|)>>,
+      using [eq: <reference|eq 10.13.048>] there exists a
+      <math|x<rprime|''>\<in\>\<bbb-N\><rsub|0>> such that
+      <math|x<rprime|'>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|x<rprime|''>|)>>
+      so that <math|x=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>R><around*|(|x<rprime|''>|)>|)>\<in\>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-N\><rsub|0>|)>|)>>.
+      Hence we have that\ 
 
       <\equation*>
-        \<bbb-N\><rsub|0,\<bbb-C\>><text| is a sub semigroup of
-        <math|<around*|\<langle\>|\<bbb-C\>,\<cdot\>|\<rangle\>><text| and
-        <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<cdot\>|\<rangle\>><text|
-        is a group homeomorphism.>>>>>
+        \<bbb-N\><rsub|0,\<bbb-C\>>=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>><around*|(|\<bbb-N\><rsub|0>|)>|)>
+      </equation*>
+
+      which combined with [eqs: <reference|eq 10.14.048>,<reference|eq
+      10.15.048>] proves that\ 
+
+      <\equation*>
+        \<bbb-N\><rsub|0,\<bbb-C\>><text| is a subfield of
+        <math|<around*|\<langle\>|\<bbb-C\>,\<cdot\>|\<rangle\>>>>
+      </equation*>
+
+      and\ 
+
+      <\equation*>
+        i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-C\>>,\<cdot\>|\<rangle\>><text|
+        is a group isomorphism>
       </equation*>
 
       <item>By [theorem: <reference|real natural numbers, integers and
@@ -11595,8 +11607,6 @@
         \<bbb-N\><rsub|0,\<bbb-C\>>\<subseteq\>\<bbb-Z\><rsub|\<bbb-C\>>\<subseteq\>\<bbb-Q\><rsub|\<bbb-C\>>\<subseteq\>\<bbb-R\><rsub|\<bbb-C\>>\<subseteq\>\<bbb-C\>
       </equation*>
     </enumerate>
-
-    \;
   </proof>
 
   Note that the the additive neutral element <math|<around*|(|0,0|)>> is
@@ -12103,7 +12113,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|6>
-    <associate|page-first|183>
+    <associate|page-first|185>
     <associate|section-nr|2>
     <associate|subsection-nr|4>
   </collection>
@@ -12170,24 +12180,39 @@
     <associate|complex numbers|<tuple|10.1|?>>
     <associate|complex order isomorphisms|<tuple|10.12|?>>
     <associate|complex range|<tuple|10.17|?>>
-    <associate|eq 10.1.045|<tuple|10.1|?>>
-    <associate|eq 10.10.045|<tuple|10.10|?>>
-    <associate|eq 10.11.045|<tuple|10.11|?>>
-    <associate|eq 10.12.045|<tuple|10.12|?>>
-    <associate|eq 10.13.045|<tuple|10.13|?>>
-    <associate|eq 10.14.045|<tuple|10.14|?>>
-    <associate|eq 10.15.045|<tuple|10.15|?>>
-    <associate|eq 10.16.045|<tuple|10.16|?>>
-    <associate|eq 10.17.046|<tuple|10.17|?>>
-    <associate|eq 10.18.046|<tuple|10.18|?>>
-    <associate|eq 10.2.045|<tuple|10.2|?>>
-    <associate|eq 10.3.045|<tuple|10.3|?>>
-    <associate|eq 10.4.045|<tuple|10.4|?>>
-    <associate|eq 10.5.045|<tuple|10.5|?>>
-    <associate|eq 10.6.045|<tuple|10.6|?>>
-    <associate|eq 10.7.045|<tuple|10.7|?>>
-    <associate|eq 10.8.045|<tuple|10.8|?>>
-    <associate|eq 10.9.035|<tuple|10.9|?>>
+    <associate|eq 10.1.045|<tuple|10.16|?>>
+    <associate|eq 10.1.048|<tuple|10.1|?>>
+    <associate|eq 10.10.045|<tuple|10.25|?>>
+    <associate|eq 10.10.048|<tuple|10.10|?>>
+    <associate|eq 10.11.045|<tuple|10.26|?>>
+    <associate|eq 10.11.048|<tuple|10.11|?>>
+    <associate|eq 10.12.045|<tuple|10.27|?>>
+    <associate|eq 10.12.048|<tuple|10.12|?>>
+    <associate|eq 10.13.045|<tuple|10.28|?>>
+    <associate|eq 10.13.048|<tuple|10.13|?>>
+    <associate|eq 10.14.045|<tuple|10.29|?>>
+    <associate|eq 10.14.048|<tuple|10.14|?>>
+    <associate|eq 10.15.045|<tuple|10.30|?>>
+    <associate|eq 10.15.048|<tuple|10.15|?>>
+    <associate|eq 10.16.045|<tuple|10.31|?>>
+    <associate|eq 10.17.046|<tuple|10.16|?>>
+    <associate|eq 10.18.046|<tuple|10.17|?>>
+    <associate|eq 10.2.045|<tuple|10.17|?>>
+    <associate|eq 10.2.048|<tuple|10.2|?>>
+    <associate|eq 10.3.045|<tuple|10.18|?>>
+    <associate|eq 10.3.048|<tuple|10.3|?>>
+    <associate|eq 10.4.045|<tuple|10.19|?>>
+    <associate|eq 10.4.048|<tuple|10.4|?>>
+    <associate|eq 10.5.045|<tuple|10.20|?>>
+    <associate|eq 10.5.048|<tuple|10.5|?>>
+    <associate|eq 10.6.045|<tuple|10.21|?>>
+    <associate|eq 10.6.048|<tuple|10.6|?>>
+    <associate|eq 10.7.045|<tuple|10.22|?>>
+    <associate|eq 10.7.048|<tuple|10.7|?>>
+    <associate|eq 10.8.045|<tuple|10.23|?>>
+    <associate|eq 10.8.048|<tuple|10.8|?>>
+    <associate|eq 10.9.035|<tuple|10.24|?>>
+    <associate|eq 10.9.048|<tuple|10.9|?>>
     <associate|eq 7.1.022|<tuple|7.1|?>>
     <associate|eq 7.11.022|<tuple|7.10|?>>
     <associate|eq 7.12.022|<tuple|7.11|?>>
@@ -12250,49 +12275,49 @@
     <associate|eq 9.1.028|<tuple|9.1|?>>
     <associate|eq 9.10.029|<tuple|9.8|?>>
     <associate|eq 9.10.030|<tuple|9.7|?>>
-    <associate|eq 9.100.040|<tuple|9.96|?>>
-    <associate|eq 9.101.040|<tuple|9.103|?>>
-    <associate|eq 9.101.041|<tuple|9.97|?>>
-    <associate|eq 9.102.040|<tuple|9.104|?>>
-    <associate|eq 9.102.041|<tuple|9.98|?>>
-    <associate|eq 9.103.040|<tuple|9.105|?>>
-    <associate|eq 9.103.041|<tuple|9.99|?>>
-    <associate|eq 9.104.040|<tuple|9.106|?>>
-    <associate|eq 9.104.041|<tuple|9.100|?>>
-    <associate|eq 9.105.041|<tuple|9.101|?>>
-    <associate|eq 9.106.041|<tuple|9.102|?>>
+    <associate|eq 9.100.040|<tuple|9.95|?>>
+    <associate|eq 9.101.040|<tuple|9.102|?>>
+    <associate|eq 9.101.041|<tuple|9.96|?>>
+    <associate|eq 9.102.040|<tuple|9.103|?>>
+    <associate|eq 9.102.041|<tuple|9.97|?>>
+    <associate|eq 9.103.040|<tuple|9.104|?>>
+    <associate|eq 9.103.041|<tuple|9.98|?>>
+    <associate|eq 9.104.040|<tuple|9.105|?>>
+    <associate|eq 9.104.041|<tuple|9.99|?>>
+    <associate|eq 9.105.041|<tuple|9.100|?>>
+    <associate|eq 9.106.041|<tuple|9.101|?>>
     <associate|eq 9.11.029|<tuple|9.9|?>>
     <associate|eq 9.11.034|<tuple|9.11|?>>
-    <associate|eq 9.111.041|<tuple|9.107|?>>
-    <associate|eq 9.112.041|<tuple|9.108|?>>
-    <associate|eq 9.113.041|<tuple|9.109|?>>
-    <associate|eq 9.114.041|<tuple|9.110|?>>
-    <associate|eq 9.115.041|<tuple|9.111|?>>
-    <associate|eq 9.116.041|<tuple|9.122|?>>
-    <associate|eq 9.117.041|<tuple|9.123|?>>
-    <associate|eq 9.118.042|<tuple|9.112|?>>
-    <associate|eq 9.119.042|<tuple|9.113|?>>
+    <associate|eq 9.111.041|<tuple|9.106|?>>
+    <associate|eq 9.112.041|<tuple|9.107|?>>
+    <associate|eq 9.113.041|<tuple|9.108|?>>
+    <associate|eq 9.114.041|<tuple|9.109|?>>
+    <associate|eq 9.115.041|<tuple|9.110|?>>
+    <associate|eq 9.116.041|<tuple|9.121|?>>
+    <associate|eq 9.117.041|<tuple|9.122|?>>
+    <associate|eq 9.118.042|<tuple|9.111|?>>
+    <associate|eq 9.119.042|<tuple|9.112|?>>
     <associate|eq 9.12.029|<tuple|9.10|?>>
-    <associate|eq 9.120.042|<tuple|9.114|?>>
-    <associate|eq 9.121.042|<tuple|9.115|?>>
-    <associate|eq 9.122.042|<tuple|9.116|?>>
-    <associate|eq 9.123.042|<tuple|9.117|?>>
-    <associate|eq 9.124.042|<tuple|9.118|?>>
-    <associate|eq 9.125.042|<tuple|9.119|?>>
-    <associate|eq 9.125.046|<tuple|9.120|?>>
-    <associate|eq 9.126.044|<tuple|9.124|?>>
-    <associate|eq 9.126.046|<tuple|9.121|?>>
-    <associate|eq 9.127.044|<tuple|9.125|?>>
-    <associate|eq 9.128.044|<tuple|9.126|?>>
-    <associate|eq 9.129.044|<tuple|9.127|?>>
-    <associate|eq 9.130.044|<tuple|9.128|?>>
-    <associate|eq 9.131.044|<tuple|9.129|?>>
-    <associate|eq 9.132.044|<tuple|9.130|?>>
-    <associate|eq 9.133.044|<tuple|9.131|?>>
-    <associate|eq 9.134.044|<tuple|9.132|?>>
-    <associate|eq 9.135.044|<tuple|9.133|?>>
-    <associate|eq 9.136.044|<tuple|9.134|?>>
-    <associate|eq 9.137.044|<tuple|9.135|?>>
+    <associate|eq 9.120.042|<tuple|9.113|?>>
+    <associate|eq 9.121.042|<tuple|9.114|?>>
+    <associate|eq 9.122.042|<tuple|9.115|?>>
+    <associate|eq 9.123.042|<tuple|9.116|?>>
+    <associate|eq 9.124.042|<tuple|9.117|?>>
+    <associate|eq 9.125.042|<tuple|9.118|?>>
+    <associate|eq 9.125.046|<tuple|9.119|?>>
+    <associate|eq 9.126.044|<tuple|9.123|?>>
+    <associate|eq 9.126.046|<tuple|9.120|?>>
+    <associate|eq 9.127.044|<tuple|9.124|?>>
+    <associate|eq 9.128.044|<tuple|9.125|?>>
+    <associate|eq 9.129.044|<tuple|9.126|?>>
+    <associate|eq 9.130.044|<tuple|9.127|?>>
+    <associate|eq 9.131.044|<tuple|9.128|?>>
+    <associate|eq 9.132.044|<tuple|9.129|?>>
+    <associate|eq 9.133.044|<tuple|9.130|?>>
+    <associate|eq 9.134.044|<tuple|9.131|?>>
+    <associate|eq 9.135.044|<tuple|9.132|?>>
+    <associate|eq 9.136.044|<tuple|9.133|?>>
+    <associate|eq 9.137.044|<tuple|9.134|?>>
     <associate|eq 9.14.029|<tuple|9.12|?>>
     <associate|eq 9.16.030|<tuple|9.13|?>>
     <associate|eq 9.17.030|<tuple|9.14|?>>
@@ -12376,15 +12401,11 @@
     <associate|eq 9.89.036|<tuple|9.87|?>>
     <associate|eq 9.89.047|<tuple|9.89|?>>
     <associate|eq 9.90.036|<tuple|9.88|?>>
-    <associate|eq 9.91.040|<tuple|9.91|?>>
-    <associate|eq 9.92.040|<tuple|9.92|?>>
-    <associate|eq 9.93.40|<tuple|9.93|?>>
-    <associate|eq 9.94.040|<tuple|9.90|?>>
-    <associate|eq 9.95.040|<tuple|9.91|?>>
-    <associate|eq 9.96.040|<tuple|9.92|?>>
-    <associate|eq 9.97.040|<tuple|9.93|?>>
-    <associate|eq 9.98.040|<tuple|9.94|?>>
-    <associate|eq 9.99.040|<tuple|9.95|?>>
+    <associate|eq 9.90.047|<tuple|9.90|?>>
+    <associate|eq 9.96.040|<tuple|9.91|?>>
+    <associate|eq 9.97.040|<tuple|9.92|?>>
+    <associate|eq 9.98.040|<tuple|9.93|?>>
+    <associate|eq 9.99.040|<tuple|9.94|?>>
     <associate|eq real square root properties (1)|<tuple|9.95|?>>
     <associate|integeres order|<tuple|7.21|?>>
     <associate|integers|<tuple|7.2|?>>
