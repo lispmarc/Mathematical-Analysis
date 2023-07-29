@@ -1080,6 +1080,34 @@
   </proof>
 
   <\theorem>
+    <label|integers x\<less\>y=\<gtr\>x+1\<less\>=y>Let
+    <math|c,y\<in\>\<bbb-Z\>> with <math|x\<less\>y> then
+
+    <\enumerate>
+      <item><math|x+1\<leqslant\>y>
+
+      <item><math|x\<leqslant\>y+<around*|(|-1|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|x\<less\>y> then by [theorems <reference|integers
+      ordered ring>, <reference|ring order properties>]
+      <math|0\<less\>y+<around*|(|-x|)>>, using [theorem: <reference|integers
+      positive condition>] we have <math|1\<leqslant\>y+<around*|(|-x|)>> so
+      that using [theorem: <reference|integers positive condition>]
+      <math|x+1\<leqslant\><around*|(|y+<around*|(|-x|)>|)>+x=y>.
+
+      <item>By (1) <math|x+1\<leqslant\>y> so that by [theorem:
+      <reference|integers positive condition>]
+      <math|x=<around*|(|x+1|)>+<around*|(|-1|)>\<leqslant\>y+<around*|(|-1|)>>
+    </enumerate>
+  </proof>
+
+  <\theorem>
     <label|integers order preserving bijection>Define
     <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\><rsup|+><rsub|0>>
     by <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>><around*|(|n|)>=\<sim\><around*|[|<around*|(|n,0|)>|]>>
@@ -7944,7 +7972,7 @@
 
   We have seen in [theorem: <reference|rational rational numbers are not
   conditional complete>] that the rational numbers are not conditional
-  complete [causing <math|<around*|\<langle\>|\<bbb-R\><rsub|\<bbb-R\>>,\<leqslant\>|\<rangle\>>>
+  complete [causing <math|<around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-R\>>,\<leqslant\>|\<rangle\>>>
   to be not conditional complete], the prime reason that we construct the
   real numbers is that the real numbers are conditional complete.
 
@@ -8101,21 +8129,25 @@
 
   <\proof>
     By [theorem: <reference|real QR is not conditional complete>]
-    <math|<around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-R\>>,\<leqslant\>|\<rangle\>>>
-    is not conditional complete. Hence there exists a non empoty
-    <math|S\<subseteq\>\<bbb-Q\><rsub|\<bbb-R\>>> with a upper bound
-    <math|\<upsilon\>> such that <math|sup<around*|(|S|)>> does not exist in
-    <math|\<bbb-Q\><rsub|\<bbb-R\>>>. As <math|\<bbb-Q\><rsub|\<bbb-R\>>\<subseteq\>\<bbb-R\>>
-    we have <math|S\<subseteq\>\<bbb-R\>> so that <math|s=sup<around*|(|A|)>>
-    exist. If now <math|s\<in\>\<bbb-Q\><rsub|\<bbb-R\>>> then it would be a
-    upper bound of <math|S> and if <math|b\<in\>\<bbb-Q\><rsub|\<bbb-R\>>\<subseteq\>\<bbb-R\>>
-    of <math|S> is another upper bound of <math|S> it is also a upper bound
-    of <math|S> in <math|\<bbb-R\>> and thus <math|s\<leqslant\>b> so
-    <math|s> would be the supremum of <math|S> in
-    <math|\<bbb-Q\><rsub|\<bbb-R\>>> contradicting the fact that
-    <math|sup<around*|(|A|)>> does not exists in
-    <math|\<bbb-Q\><rsub|\<bbb-R\>>>. Hence
-    <math|s\<in\>\<bbb-R\>\\\<bbb-Q\><rsub|\<bbb-R\>>>.
+    \ <math|<around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-R\>>,\<leqslant\>|\<rangle\>>>
+    is not conditional complete. Hence there exists a non empty
+    <math|S\<subseteq\>\<bbb-Q\><rsub|\<bbb-R\>>> with a upper bound such
+    that <math|<around*|{|u\<in\>\<bbb-Q\><rsub|\<bbb-R\>>\|u<text| is a
+    upper bound of >S|}>> has no least element. As
+    <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>> is
+    conditional complete we have that <math|s=min<around*|(|<around*|{|u\<in\>\<bbb-R\>\|u<text|
+    is a upper bound of >S|}>|)>> exist. Assume now that
+    <math|s\<in\>\<bbb-Q\><rsub|\<bbb-R\>>> then if
+    <math|u\<in\><around*|{|u\<in\>\<bbb-Q\><rsub|\<bbb-R\>>\|u<text| is a
+    upper bound of >S|}>> \ we have, as <math|\<bbb-Q\><rsub|\<bbb-R\>>\<subseteq\>\<bbb-R\>>
+    we have that <math|u\<in\><around*|{|u\<in\>\<bbb-R\>\|u<text| is a upper
+    bound of >S|}>> sothat <math|u\<leqslant\>s>. Hence <math|s> is a least
+    element of <math|<around*|{|u\<in\>\<bbb-Q\><rsub|\<bbb-R\>>\|u<text| is
+    a upper bound of >S|}>> contradicting the fact that
+    <math|<around*|{|u\<in\>\<bbb-Q\><rsub|\<bbb-R\>>\|u<text| is a upper
+    bound of >S|}>> has no least element. So
+    <math|s\<nin\>\<bbb-Q\><rsub|\<bbb-R\>>> or
+    <math|\<bbb-R\>\\\<bbb-Q\><rsub|\<bbb-C\>>\<neq\>\<varnothing\>>.
   </proof>
 
   <\theorem>
@@ -8978,10 +9010,6 @@
       \<bbb-Q\><rsub|\<bbb-R\>>=<around*|{|x/y\|x\<in\>\<bbb-Z\><rsub|\<bbb-R\>>\<wedge\>y\<in\>\<bbb-Z\><rsub|\<bbb-R\>>\\<around*|{|0|}>|}>
     </equation*>
   </proof>
-
-  <\notation>
-    The above theorem allows us to write\ 
-  </notation>
 
   <\theorem>
     <label|real x\<less\>y=\<gtr\>x+1\<less\>=y>Let
@@ -11063,6 +11091,67 @@
 
   <chapter|The complex numbers>
 
+  Note that to avoid having to use different symbols for neutral elements,
+  inverse elements, sum, product etc. we use contxt to derive the maining of
+  the different symbols.\ 
+
+  \;
+
+  <block|<tformat|<table|<row|<cell|Context>|<cell|Expression>|<cell|Operator>>|<row|<cell|<math|n,m\<in\>\<bbb-N\><rsub|0>>>|<cell|n+m>|<cell|sum
+  in <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|n\<cdot\>m>>|<cell|product
+  in <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|n\<leqslant\>m>>|<cell|order
+  in <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|n\<less\>m>>|<cell|strict
+  order in <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|n-m>>|<cell|subtraction
+  in <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>>>>|<row|<cell|<math|n\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|n+0>
+  or <math|0+n>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>>>>|<row|<cell|<math|n\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|n\<cdot\>1<text|
+  or >1\<cdot\>n>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|n\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|-n>>|<cell|inverse
+  element in <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-Z\>>>|<cell|n+m>|<cell|sum
+  in <math|<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-Z\>>>|<cell|<math|n\<cdot\>m>>|<cell|product
+  in <math|<around*|\<langle\>|\<bbb-Z\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-Z\>>>|<cell|<math|n\<leqslant\>m>>|<cell|order
+  in <math|<around*|\<langle\>|\<bbb-Z\>\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-Z\>>>|<cell|<math|n\<less\>m>>|<cell|strict
+  order in <math|<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-Z\>>>|<cell|<math|n-m>>|<cell|subtraction
+  in <math|<around*|\<langle\>|\<bbb-Z\>,-|\<rangle\>>>>>|<row|<cell|<math|n\<in\>\<bbb-Z\>>>|<cell|<math|n+0>
+  or <math|0+n>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>>>>|<row|<cell|<math|n\<in\>\<bbb-Z\>>>|<cell|<math|n\<cdot\>1<text|
+  or >1\<cdot\>n>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-Z\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|n\<in\>\<bbb-Z\>>>|<cell|<math|-n>>|<cell|inverse
+  element in <math|<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-Q\>>>|<cell|q+r>|<cell|sum
+  in <math|<around*|\<langle\>|\<bbb-Q\>,+|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-Q\>>>|<cell|<math|q\<cdot\>r>>|<cell|product
+  in <math|<around*|\<langle\>|\<bbb-Q\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-Q\>>>|<cell|<math|q\<leqslant\>r>>|<cell|order
+  in <math|<around*|\<langle\>|\<bbb-Q\>\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-Q\>>>|<cell|<math|q\<less\>r>>|<cell|strict
+  order in <math|<around*|\<langle\>|\<bbb-Q\>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|q,e\<in\>\<bbb-Q\>>>|<cell|<math|q-r>>|<cell|subtraction
+  in <math|<around*|\<langle\>|\<bbb-Q\>,-|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-Q\>>>|<cell|<math|q/r>>|<cell|division
+  in <math|<around*|\<langle\>|\<bbb-Q\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-Q\>>>|<cell|<math|q+0>
+  or <math|0+q>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-Q\>,+|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-Q\>>>|<cell|<math|q\<cdot\>1<text|
+  or >1\<cdot\>q>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-Q\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-Q\>>>|<cell|<math|-q>>|<cell|inverse
+  element in <math|<around*|\<langle\>|\<bbb-Q\>,+|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-R\>>>|<cell|q+r>|<cell|sum
+  in <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-R\>>>|<cell|<math|q\<cdot\>r>>|<cell|product
+  in <math|<around*|\<langle\>|\<bbb-R\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-R\>>>|<cell|<math|q\<leqslant\>r>>|<cell|order
+  in <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-R\>>>|<cell|<math|q\<less\>r>>|<cell|strict
+  order in <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|q,e\<in\>\<bbb-R\>>>|<cell|<math|q-r>>|<cell|subtraction
+  in <math|<around*|\<langle\>|\<bbb-R\>,-|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-R\>>>|<cell|<math|q/r>>|<cell|division
+  in <math|<around*|\<langle\>|\<bbb-R\>\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-R\>>>|<cell|<math|q+0>
+  or <math|0+q>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-R\>>>|<cell|<math|q\<cdot\>1<text|
+  or >1\<cdot\>q>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-R\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-R\>>>|<cell|<math|-q>>|<cell|inverse
+  element in <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>>>>|<row|<cell|>|<cell|>|<cell|>>|<row|<cell|<math|q,r\<in\>\<bbb-C\>>>|<cell|q+r>|<cell|sum
+  in <math|<around*|\<langle\>|\<bbb-C\>,+|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-C\>>>|<cell|<math|q\<cdot\>r>>|<cell|product
+  in <math|<around*|\<langle\>|\<bbb-C\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-C\>>>|<cell|<math|q\<leqslant\>r>>|<cell|order
+  in <math|<around*|\<langle\>|\<bbb-C\>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-C\>>>|<cell|<math|q\<less\>r>>|<cell|strict
+  order in <math|<around*|\<langle\>|\<bbb-C\>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|q,e\<in\>\<bbb-C\>>>|<cell|<math|q-r>>|<cell|subtraction
+  in <math|<around*|\<langle\>|\<bbb-C\>,-|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-C\>>>|<cell|<math|q/r>>|<cell|division
+  in <math|<around*|\<langle\>|\<bbb-C\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-C\>>>|<cell|<math|q+0>
+  or <math|0+q>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-C\>,+|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-C\>>>|<cell|<math|q\<cdot\>1<text|
+  or >1\<cdot\>q>>|<cell|neutral element in
+  <math|<around*|\<langle\>|\<bbb-C\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-C\>>>|<cell|<math|-q>>|<cell|inverse
+  element in <math|<around*|\<langle\>|\<bbb-C\>,+|\<rangle\>>>>>>>>
+
   <section|Definition and arithmetics>
 
   <\definition>
@@ -11202,8 +11291,8 @@
   following shorthand notation.
 
   <\notation>
-    If <math|x,y\<in\>\<bbb-C\>> then we have the following notation
-    conventions:
+    <label|complex notation>If <math|x,y\<in\>\<bbb-C\>> then we have the
+    following notation conventions:
 
     <\enumerate>
       <item><math|x+<around*|(|-|)>> is noted as <math|x-y>
@@ -11225,67 +11314,6 @@
 
   <section|Embedding of <math|\<bbb-N\><rsub|0>,\<bbb-Z\>,\<bbb-Q\><text| and
   >\<bbb-R\>> in <math|\<bbb-C\>>>
-
-  Note that to avoid having to use different symbols for neutral elements,
-  inverse elements, sum, product etc. we use contxt to derive the maining of
-  the different symbols.\ 
-
-  \;
-
-  <block|<tformat|<table|<row|<cell|Context>|<cell|Expression>|<cell|Operator>>|<row|<cell|<math|n,m\<in\>\<bbb-N\><rsub|0>>>|<cell|n+m>|<cell|sum
-  in <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|n\<cdot\>m>>|<cell|product
-  in <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|n\<leqslant\>m>>|<cell|order
-  in <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|n\<less\>m>>|<cell|strict
-  order in <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|n-m>>|<cell|subtraction
-  in <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>>>>|<row|<cell|<math|n\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|n+0>
-  or <math|0+n>>|<cell|neutral element in
-  <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>>>>|<row|<cell|<math|n\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|n\<cdot\>1<text|
-  or >1\<cdot\>n>>|<cell|neutral element in
-  <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|n\<in\>\<bbb-N\><rsub|0>>>|<cell|<math|-n>>|<cell|inverse
-  element in <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,+|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-Z\>>>|<cell|n+m>|<cell|sum
-  in <math|<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-Z\>>>|<cell|<math|n\<cdot\>m>>|<cell|product
-  in <math|<around*|\<langle\>|\<bbb-Z\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-Z\>>>|<cell|<math|n\<leqslant\>m>>|<cell|order
-  in <math|<around*|\<langle\>|\<bbb-Z\>\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-Z\>>>|<cell|<math|n\<less\>m>>|<cell|strict
-  order in <math|<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|n,m\<in\>\<bbb-Z\>>>|<cell|<math|n-m>>|<cell|subtraction
-  in <math|<around*|\<langle\>|\<bbb-Z\>,-|\<rangle\>>>>>|<row|<cell|<math|n\<in\>\<bbb-Z\>>>|<cell|<math|n+0>
-  or <math|0+n>>|<cell|neutral element in
-  <math|<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>>>>|<row|<cell|<math|n\<in\>\<bbb-Z\>>>|<cell|<math|n\<cdot\>1<text|
-  or >1\<cdot\>n>>|<cell|neutral element in
-  <math|<around*|\<langle\>|\<bbb-Z\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|n\<in\>\<bbb-Z\>>>|<cell|<math|-n>>|<cell|inverse
-  element in <math|<around*|\<langle\>|\<bbb-Z\>,+|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-Q\>>>|<cell|q+r>|<cell|sum
-  in <math|<around*|\<langle\>|\<bbb-Q\>,+|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-Q\>>>|<cell|<math|q\<cdot\>r>>|<cell|product
-  in <math|<around*|\<langle\>|\<bbb-Q\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-Q\>>>|<cell|<math|q\<leqslant\>r>>|<cell|order
-  in <math|<around*|\<langle\>|\<bbb-Q\>\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-Q\>>>|<cell|<math|q\<less\>r>>|<cell|strict
-  order in <math|<around*|\<langle\>|\<bbb-Q\>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|q,e\<in\>\<bbb-Q\>>>|<cell|<math|q-r>>|<cell|subtraction
-  in <math|<around*|\<langle\>|\<bbb-Q\>,-|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-Q\>>>|<cell|<math|q/r>>|<cell|division
-  in <math|<around*|\<langle\>|\<bbb-Q\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-Q\>>>|<cell|<math|q+0>
-  or <math|0+q>>|<cell|neutral element in
-  <math|<around*|\<langle\>|\<bbb-Q\>,+|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-Q\>>>|<cell|<math|q\<cdot\>1<text|
-  or >1\<cdot\>q>>|<cell|neutral element in
-  <math|<around*|\<langle\>|\<bbb-Q\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-Q\>>>|<cell|<math|-q>>|<cell|inverse
-  element in <math|<around*|\<langle\>|\<bbb-Q\>,+|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-R\>>>|<cell|q+r>|<cell|sum
-  in <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-R\>>>|<cell|<math|q\<cdot\>r>>|<cell|product
-  in <math|<around*|\<langle\>|\<bbb-R\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-R\>>>|<cell|<math|q\<leqslant\>r>>|<cell|order
-  in <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-R\>>>|<cell|<math|q\<less\>r>>|<cell|strict
-  order in <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|q,e\<in\>\<bbb-R\>>>|<cell|<math|q-r>>|<cell|subtraction
-  in <math|<around*|\<langle\>|\<bbb-R\>,-|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-R\>>>|<cell|<math|q/r>>|<cell|division
-  in <math|<around*|\<langle\>|\<bbb-R\>\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-R\>>>|<cell|<math|q+0>
-  or <math|0+q>>|<cell|neutral element in
-  <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-R\>>>|<cell|<math|q\<cdot\>1<text|
-  or >1\<cdot\>q>>|<cell|neutral element in
-  <math|<around*|\<langle\>|\<bbb-R\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-R\>>>|<cell|<math|-q>>|<cell|inverse
-  element in <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>>>>|<row|<cell|>|<cell|>|<cell|>>|<row|<cell|<math|q,r\<in\>\<bbb-C\>>>|<cell|q+r>|<cell|sum
-  in <math|<around*|\<langle\>|\<bbb-C\>,+|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-C\>>>|<cell|<math|q\<cdot\>r>>|<cell|product
-  in <math|<around*|\<langle\>|\<bbb-C\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-C\>>>|<cell|<math|q\<leqslant\>r>>|<cell|order
-  in <math|<around*|\<langle\>|\<bbb-C\>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-C\>>>|<cell|<math|q\<less\>r>>|<cell|strict
-  order in <math|<around*|\<langle\>|\<bbb-C\>,\<leqslant\>|\<rangle\>>>>>|<row|<cell|<math|q,e\<in\>\<bbb-C\>>>|<cell|<math|q-r>>|<cell|subtraction
-  in <math|<around*|\<langle\>|\<bbb-C\>,-|\<rangle\>>>>>|<row|<cell|<math|q,r\<in\>\<bbb-C\>>>|<cell|<math|q/r>>|<cell|division
-  in <math|<around*|\<langle\>|\<bbb-C\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-C\>>>|<cell|<math|q+0>
-  or <math|0+q>>|<cell|neutral element in
-  <math|<around*|\<langle\>|\<bbb-C\>,+|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-C\>>>|<cell|<math|q\<cdot\>1<text|
-  or >1\<cdot\>q>>|<cell|neutral element in
-  <math|<around*|\<langle\>|\<bbb-C\>,\<cdot\>|\<rangle\>>>>>|<row|<cell|<math|q\<in\>\<bbb-C\>>>|<cell|<math|-q>>|<cell|inverse
-  element in <math|<around*|\<langle\>|\<bbb-C\>,+|\<rangle\>>>>>>>>
 
   <subsection|Embeddings>
 
@@ -11313,7 +11341,7 @@
 
       <\equation*>
         i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>:<around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-R\><rsub|\<bbb-C\>>,+,\<cdot\>|\<rangle\>><text|
-        defined by >i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(||)>
+        defined by >i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|r|)>=<around*|(|r,0|)>
       </equation*>
 
       is a field isomorphism.
@@ -11340,7 +11368,7 @@
 
       <item><math|\<bbb-N\><rsub|0,\<bbb-C\>>> is a sub semi-group of
       <math|<around*|\<langle\>|\<bbb-C\>,+|\<rangle\>>> and if we define
-      <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-Z\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>>
+      <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>>
       then\ 
 
       <\equation*>
@@ -11350,7 +11378,7 @@
 
       <item><math|\<bbb-N\><rsub|0,\<bbb-C\>>> is a sub semi-group of
       <math|<around*|\<langle\>|\<bbb-C\>,\<cdot\>|\<rangle\>>> and if we
-      define <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-Z\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>>
+      define <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>=i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>\<circ\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>>
       then\ 
 
       <\equation*>
@@ -11692,10 +11720,75 @@
     </enumerate>
   </proof>
 
+  <\theorem>
+    <label|complex rational numbers specification><math|\<bbb-Q\><rsub|\<bbb-C\>>=<around*|{|n/m\|n\<in\>\<bbb-Z\><rsub|\<bbb-C\>>\<wedge\>m\<in\>\<bbb-Z\><rsub|\<bbb-C\>>\\<around*|{|0|}>|}>>
+    where <math|n/m> is a shorthand for <math|n\<cdot\>m<rsup|-1>> [see
+    notation: <reference|complex notation>]
+  </theorem>
+
+  <\proof>
+    Let <math|x\<in\>\<bbb-Q\><rsub|\<bbb-C\>>> then by definition there
+    exists a <math|q\<in\>\<bbb-Q\><rsub|\<bbb-R\>>> such that
+    <math|x=<around*|(|q,0|)>\<equallim\><rsub|<text|[theorem:
+    <reference|complex embedding>]>>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|q|)>>.
+    Using then [theorem: <reference|real rational numbers specification>] we
+    have <math|q=n\<cdot\>m<rsup|-1>> where
+    <math|n\<in\>\<bbb-Z\><rsub|\<bbb-R\>>> and
+    <math|m\<in\>\<bbb-Z\><rsub|\<bbb-R\>>\\<around*|{|0|}>>. So we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|x>|<cell|=>|<cell|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|q|)>>>|<row|<cell|>|<cell|=>|<cell|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|n\<cdot\>m<rsup|-1>|)>>>|<row|<cell|>|<cell|=>|<cell|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|n|)>\<cdot\>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|m<rsup|-1>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|field isomorphism and neutral
+      element>]>>>|<cell|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|n|)>\<cdot\><around*|(|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|m|)>|)><rsup|-1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|complex embedding>]>>>|<cell|<around*|(|n,0|)>\<cdot\><around*|(|m,0|)><rsup|-1>>>>>
+    </eqnarray*>
+
+    which, as by definition of <math|\<bbb-Z\><rsub|\<bbb-C\>>>
+    <math|<around*|(|n,0|)>\<in\>\<bbb-Z\><rsub|\<bbb-C\>>> and
+    <math|<around*|(|m,0|)>\<in\>\<bbb-Z\><rsub|\<bbb-C\>>\\<around*|{|0|}>>,
+    proves that <math|x\<in\><around*|{|n/m\|n\<in\>\<bbb-Z\><rsub|\<bbb-C\>>\<wedge\>m\<in\>\<bbb-Z\><rsub|\<bbb-C\>>\\<around*|{|0|}>|}>>.
+    Hence\ 
+
+    <\equation>
+      <label|eq 10.16.050>\<bbb-Q\><rsub|\<bbb-C\>>\<subseteq\><around*|{|n/m\|n\<in\>\<bbb-Z\><rsub|\<bbb-C\>>\<wedge\>m\<in\>\<bbb-Z\><rsub|\<bbb-C\>>\\<around*|{|0|}>|}>
+    </equation>
+
+    If <math|x\<in\><around*|{|n/m\|n\<in\>\<bbb-Z\><rsub|\<bbb-C\>>\<wedge\>m\<in\>\<bbb-Z\><rsub|\<bbb-C\>>\\<around*|{|0|}>|}>>
+    then there exists <math|n\<in\>\<bbb-Z\><rsub|\<bbb-C\>>> and
+    <math|m\<in\>\<bbb-Z\><rsub|\<bbb-C\>>\\<around*|{|0|}>> such that
+    <math|x=n\<cdot\>m<rsup|-1>>. So there exists
+    <math|n<rprime|'>\<in\>\<bbb-Z\><rsub|\<bbb-R\>>> and
+    <math|m<rprime|'>\<in\>\<bbb-Z\><rsub|\<bbb-R\>>\\<around*|{|0|}>> such
+    that <math|n=<around*|(|n<rprime|'>,0|)>> and
+    <math|m=<around*|(|m<rprime|'>,0|)>>. Now by [theorem: <reference|real
+    rational numbers specification>] <math|n<rprime|'>\<cdot\>m<rprime|'><rsup|-1>\<in\>\<bbb-Q\><rsub|\<bbb-R\>>>
+    so that <math|<around*|(|n<rprime|'>\<cdot\>m<rprime|'><rsup|-1>,0|)>\<in\>\<bbb-Q\><rsub|\<bbb-C\>>>.
+    As\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|n<rprime|'>\<cdot\>m<rprime|'><rsup|-1>,0|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|complex embedding>]>>>|<cell|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|n<rprime|'>\<cdot\>m<rprime|'><rsup|-1>|)>>>|<row|<cell|>|<cell|=>|<cell|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|n<rprime|'>|)>\<cdot\>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|m<rprime|'><rsup|-1>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|field isomorphism and neutral
+      element>]>>>|<cell|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|n<rprime|'>|)>\<cdot\><around*|(|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|m<rprime|'>|)>|)><rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|n\<cdot\>m<rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|x>>>>
+    </eqnarray*>
+
+    proving that <math|x\<in\>\<bbb-Q\><rsub|\<bbb-C\>>>. Hence
+    <math|<around*|{|n/m\|n\<in\>\<bbb-Z\><rsub|\<bbb-C\>>\<wedge\>m\<in\>\<bbb-Z\><rsub|\<bbb-C\>>\\<around*|{|0|}>|}>\<subseteq\>\<bbb-Q\><rsub|\<bbb-C\>>>
+    which combined with [eq: <reference|eq 10.16.050>]\ 
+
+    <\equation*>
+      \<bbb-Q\><rsub|\<bbb-C\>>=<around*|{|n/m\|n\<in\>\<bbb-Z\><rsub|\<bbb-C\>>\<wedge\>m\<in\>\<bbb-Z\><rsub|\<bbb-C\>>\\<around*|{|0|}>|}>
+    </equation*>
+  </proof>
+
+  <subsection|Notation of complex numbers>
+
   Note that the the additive neutral element <math|<around*|(|0,0|)>> is
   noted as <math|0> and the multiplicative unit element
   <math|<around*|(|1,0|)>> is noted as <math|1>. In the following definition
   we have also a special notation for <math|<around*|(|0,1|)>>.
+
+  \;
 
   <\definition>
     <label|complex i^2=-1><math|i\<in\>\<bbb-C\>> is defined as <math|i=-1>
@@ -12010,8 +12103,21 @@
     </enumerate>
   </proof>
 
-  We use now the above order isomorphism and field isomorphism to transfer
-  the properties of <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>>
+  <\corollary>
+    <label|complex 0\<less\>1>We have <math|0,1\<in\>\<bbb-R\><rsub|\<bbb-C\>>>
+    with <math|0\<less\>1>
+  </corollary>
+
+  <\proof>
+    Using [theorem: <reference|complex embedding>]we have that
+    <math|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|0|)>=0> and
+    <math|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|1|)>=1> which as
+    in <math|\<bbb-R\>> <math|0\<less\>1> proves that
+    <math|i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|0|)>\<less\>i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>><around*|(|1|)>>
+  </proof>
+
+  We use now the order isomorphism and field isomorphism to transfer the
+  properties of <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>>
   and <math|<around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>> to
   <math|<around*|\<langle\>|\<bbb-R\><rsub|\<bbb-C\>>,\<leqslant\>|\<rangle\>>>
   and <math|<around*|\<langle\>|\<bbb-R\><rsub|\<bbb-C\>>,+,\<cdot\>|\<rangle\>>>.
@@ -12105,16 +12211,16 @@
 
     <\enumerate>
       <item><math|\<forall\>x,y,z\<in\>\<bbb-R\><rsub|\<bbb-C\>>> we have
-      <math|x\<less\>y\<Leftrightarrow\>x\<oplus\>z\<less\>y\<oplus\>z>
+      <math|x\<less\>y\<Leftrightarrow\>x+z\<less\>y+z>
 
       <item><math|\<forall\>x,y,z\<in\>\<bbb-R\><rsub|\<bbb-C\>>> we have
-      <math|x\<leqslant\>y\<Leftrightarrow\>x\<oplus\>z\<leqslant\>y\<oplus\>z>
+      <math|x\<leqslant\>y\<Leftrightarrow\>x+z\<leqslant\>y+z>
 
       <item><math|\<forall\>x,y\<in\>\<bbb-R\><rsub|\<bbb-C\>>> we have
-      <math|x\<less\>y\<Leftrightarrow\>0\<less\>y\<oplus\><around*|(|-x|)>>
+      <math|x\<less\>y\<Leftrightarrow\>0\<less\>y+<around*|(|-x|)>>
 
       <item><math|\<forall\>x,y\<in\>\<bbb-R\><rsub|\<bbb-C\>>> we have
-      <math|x\<leqslant\>y\<Leftrightarrow\>0\<leqslant\>y\<oplus\><around*|(|-x|)>>
+      <math|x\<leqslant\>y\<Leftrightarrow\>0\<leqslant\>y+<around*|(|-x|)>>
 
       <item><math|\<forall\>x,y\<in\>\<bbb-R\><rsub|\<bbb-C\>>> we have
       <math|x\<less\>y\<Leftrightarrow\>-y\<less\>-x>
@@ -12123,39 +12229,40 @@
       <math|x\<leqslant\>y\<Leftrightarrow\>-y\<leqslant\>-x>
 
       <item><math|\<forall\>x,y,z\<in\>\<bbb-R\><rsub|\<bbb-C\>>> with
-      <math|0\<less\>z> we have <math|x\<less\>y\<Leftrightarrow\>x\<odot\>z\<less\>y\<odot\>z>
+      <math|0\<less\>z> we have <math|x\<less\>y\<Leftrightarrow\>x\<cdot\>z\<less\>y\<cdot\>z>
 
       <item><math|\<forall\>x,y,z\<in\>\<bbb-R\><rsub|\<bbb-C\>>> with
-      <math|0\<less\>z> we have <math|x\<leqslant\>y\<Leftrightarrow\>x\<odot\>z\<leqslant\>y\<odot\>z>
+      <math|0\<less\>z> we have <math|x\<leqslant\>y\<Leftrightarrow\>x\<cdot\>z\<leqslant\>y\<cdot\>z>
 
       <item><math|\<forall\>x,y,z\<in\>\<bbb-R\><rsub|\<bbb-C\>>> with
       <math|0\<leqslant\>z> and <math|x\<leqslant\>y> we have
-      <math|x\<odot\>\<leqslant\>y\<odot\>z>
+      <math|x\<cdot\>\<leqslant\>y\<cdot\>z>
 
       <item><math|\<forall\>x,y,z\<in\>\<bbb-R\><rsub|\<bbb-C\>>> with
-      <math|z\<less\>0> we have <math|x\<less\>y\<Leftrightarrow\>y\<odot\>z\<less\>x\<odot\>z>
+      <math|z\<less\>0> we have <math|x\<less\>y\<Leftrightarrow\>y\<cdot\>z\<less\>x\<cdot\>z>
 
       <item><math|\<forall\>x,y,z\<in\>\<bbb-R\><rsub|\<bbb-C\>>> with
-      <math|z\<less\>0> we have <math|x\<leqslant\>y\<Leftrightarrow\>y\<odot\>z\<leqslant\>x\<odot\>z>
+      <math|z\<less\>0> we have <math|x\<leqslant\>y\<Leftrightarrow\>y\<cdot\>z\<leqslant\>x\<cdot\>z>
 
       <item><math|\<forall\>x,y,z\<in\>\<bbb-R\><rsub|\<bbb-C\>>> with
       <math|z\<leqslant\>0> and <math|x\<leqslant\>y> we have
-      <math|y\<odot\>z\<leqslant\>x\<odot\>z>
+      <math|y\<cdot\>z\<leqslant\>x\<cdot\>z>
 
       <item><math|\<forall\>x\<in\>\<bbb-R\><rsub|\<bbb-C\>>> we have
       <math|0\<leqslant\>x\<cdot\>x\<equallim\><rsub|def>x<rsup|2>>
 
-      <item><math|0\<leqslant\>1>
+      <item><math|0\<leqslant\>1> [actuall by [corollary: <reference|complex
+      0\<less\>1>] we have <math|0\<less\>1>]
 
       <item><math|\<forall\>x,y\<in\>\<bbb-R\><rsub|\<bbb-C\>>> with
       <math|0\<less\>x\<less\>y> we have that
-      <math|x<rsup|2>\<less\>y<rsup|2>> where <math|x<rsup|2>=x\<odot\>x> and
-      <math|y<rsup|2>=y\<odot\>y>
+      <math|x<rsup|2>\<less\>y<rsup|2>> where <math|x<rsup|2>=x\<cdot\>x> and
+      <math|y<rsup|2>=y\<cdot\>y>
 
       <item><math|\<forall\>x,y\<in\>\<bbb-R\><rsub|\<bbb-C\>>> with
       <math|0\<leqslant\>x\<leqslant\>y> we have that
-      <math|x<rsup|2>\<leqslant\>y<rsup|2>> where <math|x<rsup|2>=x\<odot\>x>
-      and <math|y<rsup|2>=y\<odot\>y>
+      <math|x<rsup|2>\<leqslant\>y<rsup|2>> where <math|x<rsup|2>=x\<cdot\>x>
+      and <math|y<rsup|2>=y\<cdot\>y>
 
       <item><math|\<forall\>x\<in\>\<bbb-R\><rsub|\<bbb-C\>>> with
       <math|0\<less\>x> we have <math|0\<less\>x<rsup|-1>>
@@ -12173,6 +12280,359 @@
       <math|0\<less\>x\<leqslant\>1> we have <math|1\<leqslant\>x<rsup|-1>>
     </enumerate>
   </theorem>
+
+  <\theorem>
+    <label|complex QC is not conditional complete><math|<around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-C\>>,\<leqslant\>|\<rangle\>>>
+    is not conditional complete.
+  </theorem>
+
+  <\proof>
+    Using [theorems: <reference|complex embedding> and <reference|order
+    isomorphism condition (2)>] we have that
+
+    <\equation*>
+      <around*|(|i<rsub|\<bbb-Q\>\<rightarrow\>\<bbb-C\>>|)><rsup|-1>:<around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-C\>>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Q\>,\<leqslant\>|\<rangle\>><text|
+      is a order isomorphism>
+    </equation*>
+
+    Assume that <math|<around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-C\>>,\<leqslant\>|\<rangle\>>>
+    is conditional complete then by the above and [theorem: <reference|order
+    isomorphism and conditional complete>]
+    <math|<around*|\<langle\>|\<bbb-Q\>,\<leqslant\>|\<rangle\>>> is
+    conditional complete, contradiction the fact that by [theorem:
+    <reference|rational rational numbers are not conditional complete>]
+    <math|<around*|\<langle\>|\<bbb-Q\>,\<leqslant\>|\<rangle\>>> is not
+    conditional complete. So the assumption is wrong and
+    <math|<around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-R\>>,\<leqslant\>|\<rangle\>>>
+    is not conditional complete.
+  </proof>
+
+  <\theorem>
+    <label|complex RC is conditional complete><math|<around*|\<langle\>|\<bbb-R\><rsub|\<bbb-C\>>,\<leqslant\>|\<rangle\>>>
+    is conditional complete [defnition: <reference|order conditional complete
+    order>] in other words\ 
+
+    <\equation*>
+      \<forall\>S\<subseteq\>\<bbb-R\><text| with
+      >S\<neq\>\<varnothing\><text| such that
+      <math|\<exists\>\<upsilon\>\<in\>\<bbb-R\><text| such that
+      <math|\<forall\>\<alpha\>\<in\>S<text| we have
+      >\<alpha\>\<leqslant\>\<upsilon\>>>> we have that
+      >sup<around*|(|S|)><text| exist>
+    </equation*>
+
+    Using [theorem: <reference|order conditional complete alternatives>] this
+    is equivalent with
+
+    <\equation*>
+      \<forall\>S\<subseteq\>\<bbb-R\><text| with
+      >S\<neq\>\<varnothing\><text| such that
+      <math|\<exists\>\<lambda\>\<in\>\<bbb-R\><text| such that
+      <math|\<forall\>\<alpha\>\<in\>S<text| we have
+      >\<lambda\>\<leqslant\>\<alpha\>>>> we have that
+      >inf<around*|(|S|)><text| exist>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Using [theorem: <reference|complex embedding>] we have that \ 
+
+    <\equation*>
+      i<rsub|\<bbb-R\>\<rightarrow\>\<bbb-C\>>:<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-R\><rsub|\<bbb-C\>>,\<leqslant\>|\<rangle\>><text|
+      is a order isomorphism>
+    </equation*>
+
+    and by [theorem: <reference|real conditional complete>]
+    \ <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>> is
+    conditional complete. Hence by [theorem: <reference|order isomorphism and
+    conditional complete>]\ 
+
+    <\equation*>
+      <around*|\<langle\>|\<bbb-R\><rsub|\<bbb-C\>>,\<leqslant\>|\<rangle\>><text|
+      is conditional complete>
+    </equation*>
+  </proof>
+
+  <\corollary>
+    <label|complex irrational numbers><dueto|Irrational numbers>
+    <math|\<bbb-Q\><rsub|\<bbb-C\>>\<subset\>\<bbb-R\><rsub|\<bbb-C\>>> so
+    that <math|\<bbb-R\><rsub|\<bbb-C\>>\\\<bbb-Q\><rsub|\<bbb-C\>>\<neq\>\<varnothing\>>.
+    The set <math|\<bbb-R\><rsub|\<bbb-C\>>\\\<bbb-Q\>> is called the set of
+    <with|font-series|bold|irrational numbers>.
+  </corollary>
+
+  <\proof>
+    By [theorem: <reference|complex QC is not conditional complete>]
+    <math|<around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-C\>>,\<leqslant\>|\<rangle\>>>
+    is not conditional complete. Hence there exists a non empty
+    <math|S\<subseteq\>\<bbb-Q\><rsub|\<bbb-C\>>> with a upper bound such
+    that <math|<around*|{|u\<in\>\<bbb-Q\><rsub|\<bbb-C\>>\|u<text| is a
+    upper bound of >S|}>> has no least element. As
+    <math|<around*|\<langle\>|\<bbb-R\><rsub|\<bbb-C\>>,\<leqslant\>|\<rangle\>>>
+    is conditional complete we have that <math|s=min<around*|(|<around*|{|u\<in\>\<bbb-R\><rsub|C>\|u<text|
+    is a upper bound of >S|}>|)>> exist. Assume now that
+    <math|s\<in\>\<bbb-Q\><rsub|\<bbb-C\>>> then if
+    <math|u\<in\><around*|{|u\<in\>\<bbb-Q\><rsub|\<bbb-C\>>\|u<text| is a
+    upper bound of >S|}>> \ we have, as <math|\<bbb-Q\><rsub|\<bbb-C\>>\<subseteq\>\<bbb-R\><rsub|\<bbb-C\>>>
+    we have that <math|u\<in\><around*|{|u\<in\>\<bbb-R\><rsub|\<bbb-C\>>\|u<text|
+    is a upper bound of >S|}>> sothat <math|u\<leqslant\>s>. Hence <math|s>
+    is a least element of <math|<around*|{|u\<in\>\<bbb-Q\><rsub|\<bbb-C\>>\|u<text|
+    is a upper bound of >S|}>> contradicting the fact that
+    <math|<around*|{|u\<in\>\<bbb-Q\><rsub|\<bbb-C\>>\|u<text| is a upper
+    bound of >S|}>> has no least element. So
+    <math|s\<nin\>\<bbb-Q\><rsub|\<bbb-C\>>> or
+    <math|\<bbb-R\><rsub|\<bbb-C\>>\\\<bbb-Q\><rsub|\<bbb-C\>>\<neq\>\<varnothing\>>.
+  </proof>
+
+  <\theorem>
+    <label|complex sup(S+T) and inf(S+T)>Let <math|S,T\<subseteq\>\<bbb-R\>>
+    with <math|S\<neq\>\<varnothing\>\<neq\>T> then for
+
+    <\equation*>
+      S+T=<around*|{|\<alpha\>+\<beta\>\|\<alpha\>\<in\>S\<wedge\>\<beta\>\<in\>T|}>
+    </equation*>
+
+    we have
+
+    <\enumerate>
+      <item>If <math|sup<around*|(|S|)>,sup<around*|(|T|)>> exists then
+      <math|sup<around*|(|S+T|)>> exist and
+      <math|sup<around*|(|S+T|)>=sup<around*|(|S|)>+sup<around*|(|T|)>>
+
+      <item>If <math|inf<around*|(|S|)>,inf<around*|(|T|)>> exists then
+      <math|inf<around*|(|S+T|)>> exist and
+      <math|inf<around*|(|S+T|)>=inf<around*|(|S|)>+sup<around*|(|T|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ First as <math|S\<neq\>\<varnothing\>\<neq\>T> there exists
+    <math|s\<in\>S> and <math|t\<in\>T> so that <math|s+t\<in\>S+T> hence\ 
+
+    <\equation*>
+      S+T\<neq\>\<varnothing\>
+    </equation*>
+
+    <\enumerate>
+      <item>Let <math|q\<in\>S+T> then <math|\<exists\>s\<in\>S> and
+      <math|\<exists\>t\<in\>T> such that <math|q=s+t>, as
+      <math|s\<leqslant\>sup<around*|(|S|)>> we have
+      <math|q=s+t\<leqslant\>sup<around*|(|S|)>+t>, further as
+      <math|t\<leqslant\>sup<around*|(|T|)>> it follows that
+      <math|sup<around*|(|S|)>+t\<leqslant\>sup<around*|(|S|)>+sup<around*|(|T|)>>
+      giving <math|q\<leqslant\>sup<around*|(|S|)>+sup<around*|(|T|)>>. So
+      <math|sup<around*|(|S|)>+sup<around*|(|T|)>> is a upper bound of
+      <math|S+T> which as <math|S+T\<neq\>\<varnothing\>> and
+      <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>> is
+      conditional complete [see theorem: <reference|complex RC is conditional
+      complete>] proves that\ 
+
+      <\equation>
+        <label|eq 10.19.050>sup<around*|(|S+T|)><text| exist and
+        >sup<around*|(|S+T|)>\<leqslant\>sup<around*|(|S|)>+sup<around*|(|T|)>
+      </equation>
+
+      Assume now that <math|sup<around*|(|S+T|)>\<less\>sup<around*|(|S|)>+sup<around*|(|T|)>>
+      then for <math|\<varepsilon\>=sup<around*|(|S|)>+sup<around*|(|T|)>-sup<around*|(|S+T|)>>
+      we have <math|0\<less\>\<varepsilon\>>. So
+      <math|-\<varepsilon\>\<less\>0> and as
+      <math|0\<less\>2\<Rightarrow\>0\<less\>2<rsup|-1>> we have that
+      <math|-<around*|(|\<varepsilon\>/2|)>\<less\>0>. So
+      <math|sup<around*|(|S|)>-\<varepsilon\>/2\<less\>sup<around*|(|S|)>>
+      and <math|sup<around*|(|T|)>-\<varepsilon\>/2\<less\>sup<around*|(|T|)>>.
+      As <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>> is
+      totally ordered we have by [theorem: <reference|order sup, inf
+      property>] that there exists <math|s\<in\>S> and <math|t\<in\>T> such
+      that <math|sup<around*|(|S|)>-\<varepsilon\>/2\<less\>s> and
+      <math|sup<around*|(|T|)>-\<varepsilon\>/2\<less\>t>. So\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|s+t>|<cell|\<gtr\>>|<cell|sup<around*|(|S|)>-\<varepsilon\>/2+sup<around*|(|T|)>-\<varepsilon\>/2>>|<row|<cell|>|<cell|=>|<cell|sup<around*|(|S|)>+sup<around*|(|T|)>-<around*|(|\<varepsilon\>+\<varepsilon\>|)>/2>>|<row|<cell|>|<cell|=>|<cell|sup<around*|(|S|)>+sup<around*|(|T|)>-\<varepsilon\>>>|<row|<cell|>|<cell|=>|<cell|sup<around*|(|S|)>+sup<around*|(|T|)>-sup<around*|(|S|)>-sup<around*|(|T|)>+sup<around*|(|S+T|)>>>|<row|<cell|>|<cell|=>|<cell|sup<around*|(|s+t|)><eq-number><label|eq
+        10.20.050>>>>>
+      </eqnarray*>
+
+      As <math|s+t\<in\>S+T> we have that
+      <math|s+t\<leqslant\>sup<around*|(|S|)>> contradicting [eq:
+      <reference|eq 10.20.050>], so the assumption is wrong and we must have
+      <math|sup<around*|(|S|)>+sup<around*|(|T|)>\<leqslant\>sup<around*|(|S+T|)>>
+      which combined with [eq: <reference|eq 10.19.050>] proves that\ 
+
+      <\equation*>
+        sup<around*|(|S+T|)>=sup<around*|(|S|)>+sup<around*|(|T|)>
+      </equation*>
+
+      <item>Let <math|q\<in\>S+T> then <math|\<exists\>s\<in\>S> and
+      <math|\<exists\>t\<in\>T> such that <math|q=s+t>, as
+      <math|inf<around*|(|S|)>\<leqslant\>s> we have
+      <math|inf<around*|(|S|)>+t\<leqslant\>s+t=q>, further as
+      <math|inf<around*|(|T|)>\<leqslant\>t> it follows that
+      <math|inf<around*|(|S|)>+inf<around*|(|T|)>\<leqslant\>inf<around*|(|T|)>+t>
+      giving <math|sup<around*|(|S|)>+sup<around*|(|T|)>\<leqslant\>q>. So
+      <math|inf<around*|(|S|)>+inf<around*|(|T|)>> is a lower bound of
+      <math|S+T> which as <math|S+T\<neq\>\<varnothing\>> and
+      <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>> is
+      conditional complete [see theorem: <reference|complex RC is conditional
+      complete>] proves that\ 
+
+      <\equation>
+        <label|eq 10.21.050>inf<around*|(|S+T|)><text| exist and
+        >inf<around*|(|S|)>+inf<around*|(|T|)>\<leqslant\>inf<around*|(|S+T|)>
+      </equation>
+
+      Assume now that <math|inf<around*|(|S|)>+inf<around*|(|T|)>\<less\>inf<around*|(|S+T|)>>
+      then for <math|\<varepsilon\>=inf<around*|(|S+T|)>-inf<around*|(|S|)>-inf<around*|(|T|)>>
+      we have <math|0\<less\>\<varepsilon\>>. As
+      <math|0\<less\>2\<Rightarrow\>0\<less\>2<rsup|-1>> we have that
+      <math|0\<less\>\<varepsilon\>/2>. So
+      <math|inf<around*|(|S|)>\<less\>inf<around*|(|S|)>+\<varepsilon\>/2>
+      and <math|inf<around*|(|T|)>\<less\>inf<around*|(|T|)>+\<varepsilon\>/2>.
+      As <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>> is
+      totally ordered we have by [theorem: <reference|order sup, inf
+      property>] that there exists <math|s\<in\>S> and <math|t\<in\>T> such
+      that <math|s\<less\>inf<around*|(|S|)>+\<varepsilon\>/2> and
+      <math|t\<less\>inf<around*|(|T|)>+\<varepsilon\>/2>. So\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|s+t>|<cell|\<less\>>|<cell|inf<around*|(|S|)>+\<varepsilon\>/2+inf<around*|(|T|)>+\<varepsilon\>/2>>|<row|<cell|>|<cell|=>|<cell|inf<around*|(|S|)>+inf<around*|(|T|)>+\<varepsilon\>>>|<row|<cell|>|<cell|=>|<cell|inf<around*|(|S|)>+inf<around*|(|T|)>+inf<around*|(|S+T|)>-inf<around*|(|S|)>-inf<around*|(|T|)>>>|<row|<cell|>|<cell|=>|<cell|inf<around*|(|S+T|)><eq-number><label|eq
+        10.22.050>>>>>
+      </eqnarray*>
+
+      As <math|s+t\<in\>S+T> we have that
+      <math|inf<around*|(|S+T|)>\<leqslant\>s+t> contradicting [eq:
+      <reference|eq 10.22.050>], so the assumption is wrong and we must have
+      <math|inf<around*|(|S+T|)>\<leqslant\>inf<around*|(|S|)>+inf<around*|(|T|)>>
+      which combined with [eq: <reference|eq 10.21.050>] proves that\ 
+
+      <\equation*>
+        inf<around*|(|S+T|)>=inf<around*|(|S|)>+inf<around*|(|T|)>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  <\corollary>
+    <label|complex sup(S+s) inf(T+t)>Let <math|S\<subseteq\>\<bbb-R\>> with
+    <math|S\<neq\>\<varnothing\>> and <math|\<alpha\>\<in\>\<bbb-R\>> then
+    for <math|S+\<alpha\>=<around*|{|s+\<alpha\>\|s\<in\>S|}>> we have that\ 
+
+    <\enumerate>
+      <item>If <math|sup<around*|(|S|)>> exists then
+      <math|sup<around*|(|S+\<alpha\>|)>> exists and
+      <math|sup<around*|(|S+\<alpha\>|)>=sup<around*|(|S|)>+\<alpha\>>
+
+      <item>If <math|inf<around*|(|S|)>> exists then
+      <math|inf<around*|(|S+\<alpha\>|)>> exists and
+      <math|inf<around*|(|S+\<alpha\>|)>=inf<around*|(|S|)>+\<alpha\>>
+    </enumerate>
+
+    <\proof>
+      First\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<in\>S+\<alpha\>>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>s\<in\>S<text|
+        such that >x=s+\<varepsilon\>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|t\<in\><around*|{|\<alpha\>|}>\<Leftrightarrow\>t=\<alpha\>>>|<cell|\<exists\>s\<in\>S\<wedge\>\<exists\>t\<in\><around*|{|\<alpha\>|}><text|
+        such that <math|x=s+t>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>S+<around*|{|\<alpha\>|}>>>>>
+      </eqnarray*>
+
+      hence we have\ 
+
+      <\equation*>
+        S+\<alpha\>=S+<around*|{|\<alpha\>|}>
+      </equation*>
+
+      Now we have\ 
+
+      <\enumerate>
+        <item>If <math|sup<around*|(|S|)>> exists then by [theorem
+        <reference|complex sup(S+T) and inf(S+T)>] that
+        <math|sup<around*|(|S+<around*|{|a|}>|)>> exist and
+        <math|sup<around*|(|S+<around*|{|\<alpha\>|}>|)>=sup<around*|(|S|)>+sup<around*|(|<around*|{|\<alpha\>|}>|)>>
+        which as <math|S+<around*|{|\<alpha\>|}>=S+\<alpha\>> and
+        <math|sup<around*|(|<around*|{|\<alpha\>|}>|)>=\<alpha\>> proves that\ 
+
+        <\equation*>
+          sup<around*|(|S+\<alpha\>|)><text| exist and
+          >sup<around*|(|S+\<alpha\>|)>=sup<around*|(|S|)>+\<alpha\>
+        </equation*>
+
+        <item>If <math|inf> exists then by [real <reference|complex sup(S+T)
+        and inf(S+T)>] that <math|inf<around*|(|S+<around*|{|a|}>|)>> exist
+        and <math|inf<around*|(|S+<around*|{|\<alpha\>|}>|)>=inf<around*|(|S|)>+inf<around*|(|<around*|{|\<alpha\>|}>|)>>
+        which as <math|S+<around*|{|\<alpha\>|}>=S+\<alpha\>> and
+        <math|inf<around*|(|<around*|{|\<alpha\>|}>|)>=\<alpha\>> proves that\ 
+
+        <\equation*>
+          inf<around*|(|S+\<alpha\>|)><text| exist and
+          >inf<around*|(|S+\<alpha\>|)>=inf<around*|(|S|)>+\<alpha\>
+        </equation*>
+      </enumerate>
+    </proof>
+  </corollary>
+
+  <\theorem>
+    <label|complex x\<less\>y=\<gtr\>x+1\<less\>=y>Let
+    <math|x,y\<in\>\<bbb-Z\><rsub|\<bbb-C\>>> with <math|x\<less\>y> then\ 
+
+    <\enumerate>
+      <item><math|x+1\<leqslant\>y>
+
+      <item><math|x\<leqslant\>y-1>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    By [theorems: <reference|complex embedding> and <reference|complex order
+    isomorphisms>] we have that\ 
+
+    <\equation>
+      <label|eq 10.23.050>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-C\>>:<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-C\>>,\<leqslant\>|\<rangle\>><text|
+      is a order isomorphism>
+    </equation>
+
+    <\equation>
+      <label|eq 10.24.050>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Z\><rsub|\<bbb-C\>>>:<around*|\<langle\>|\<bbb-Z\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-C\>>,+,\<cdot\>|\<rangle\>><text|
+      is a field isomorphism>
+    </equation>
+
+    Let <math|x,y\<in\>\<bbb-Z\><rsub|\<bbb-C\>>> then by [eq: <reference|eq
+    10.23.050>] there exists <math|x<rprime|'>,y<rprime|'>\<in\>\<bbb-Z\>>
+    such that\ 
+
+    <\equation>
+      <label|eq 10.25.050>x=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-C\>><around*|(|x<rprime|'>|)>\<wedge\>y=i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-C\>><around*|(|y<rprime|'>|)>\<wedge\>x<rprime|'>\<less\>y<rprime|'>
+    </equation>
+
+    <\enumerate>
+      <item>Using [theorem: <reference|integers
+      x\<less\>y=\<gtr\>x+1\<less\>=y>] we have that
+      <math|x<rprime|'>+1\<leqslant\>y<rprime|'>> so that
+
+      <\equation*>
+        x+1\<equallim\><rsub|<text|[eq: <reference|eq
+        10.24.050>]>>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-C\>><around*|(|x<rprime|'>|)>+i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-C\>><around*|(|1|)>\<equallim\>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-C\>><around*|(|x<rprime|'>+1|)>\<leqslant\><rsub|<text|[eq:
+        <reference|eq 10.23.050>]>>i<rsub|\<bbb-Z\>><around*|(|y<rprime|'>|)>=y
+      </equation*>
+
+      proving that
+
+      <\equation*>
+        x+1\<leqslant\>y
+      </equation*>
+
+      <item>As by (1) we have that <math|x+1\<leqslant\>y> hence
+      <math|x=<around*|(|x+1|)>+<around*|(|-1|)>\<leqslant\>y+<around*|(|-1|)>=y-1>
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|complex Archimedean property><dueto|Archimedean Property>If
+    <math|x,y\<in\>\<bbb-R\><rsub|\<bbb-C\>>> with <math|0\<less\>x> then
+    <math|\<exists\>n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>> such that
+    <math|y\<less\>n\<cdot\>x>
+  </theorem>
+
+  <\proof>
+    TODO
+  </proof>
 
   <subsection|Recursion and mathematical induction in <math|\<bbb-C\>>>
 
@@ -12711,11 +13171,196 @@
     by <math|g<around*|(|n,x|)>=G<around*|(|n,x|)>>.
   </definition>
 
+  <subsection|Power in <math|\<bbb-C\>>>
+
   We are ready now to define power in <math|\<bbb-C\>>
 
   <\definition>
-    \;
+    <label|complex power>Let <math|x\<in\>\<bbb-C\>> then
+    <math|x<rsup|<around*|(|.|)>>:\<bbb-N\><rsub|0,\<bbb-C\>>\<rightarrow\>\<bbb-R\>>
+    is defined by <math|n\<rightarrow\>x<rsup|<around*|(|.|)>><around*|(|n|)>=x<rsup|n>>
+    where\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|x<rsup|0>>|<cell|=>|<cell|1>>|<row|<cell|x<rsup|n+1>>|<cell|=>|<cell|x\<cdot\>x<rsup|n>>>>>
+    </eqnarray*>
   </definition>
+
+  <\note>
+    <label|complex x^0,z^1,z^2>Let <math|x\<in\>\<bbb-C\>> then
+    <math|x<rsup|0>=1>, <math|x<rsup|1>=x>, <math|x<rsup|2>=x\<cdot\>x>
+  </note>
+
+  <\proof>
+    <math|x<rsup|0>\<equallim\><rsub|def>1>,
+    <math|x<rsup|1>=x\<cdot\>x<rsup|0>=x\<cdot\>1=x> and
+    <math|x<rsup|2>=x\<cdot\>x<rsup|1>=x\<cdot\>x>
+  </proof>
+
+  <\theorem>
+    <label|complex power is internal>Let <math|n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>>
+    then we have\ 
+
+    <\enumerate>
+      <item>If <math|x\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>> then
+      <math|x<rsup|n>\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>>
+
+      <item>If <math|x\<in\>\<bbb-Z\><rsub|\<bbb-C\>>> then
+      <math|x<rsup|n>\<in\>\<bbb-Z\><rsub|\<bbb-C\>>>
+
+      <item>If <math|x\<in\>\<bbb-Q\><rsub|\<bbb-C\>>> then
+      <math|x<rsup|n>\<in\>\<bbb-Q\><rsub|\<bbb-C\>>>
+
+      <item>if <math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>> then <math|x<rsup|>>
+
+      <item>If <math|x\<in\>\<bbb-R\><rsup|+>> then
+      <math|x<rsup|n>\<in\>\<bbb-R\><rsup|+>> [in other words if
+      <math|0\<less\>x> then <math|0\<less\>x<rsup|n>>]
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    This is easely proved by induction [see: <reference|complex mathematical
+    induction>]
+
+    <\enumerate>
+      <item>Take <math|S<rsub|x>=<around*|{|n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>\|x<rsup|n>\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>|}>>
+      then we have\ 
+
+      <\description>
+        <item*|<math|0\<in\>S<rsub|x>>>As
+        <math|x<rsup|0>=1\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>> we have that
+        <math|0\<in\>S<rsub|x>>
+
+        <item*|<math|n\<in\>S<rsub|x>\<Rightarrow\>n+1\<in\>S<rsub|x>>>As
+        <math|n\<in\>S> we have <math|x<rsup|n>\<in\>\<bbb-N\><rsub|0.\<bbb-C\>>>
+        and by the hypothese <math|x\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>> so
+        using [theorem:<reference|complex embedding>]
+        <math|x<rsup|n+1>=x\<cdot\>x<rsup|n>\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>>
+        proving that <math|n+1\<in\>S<rsub|x>.> \ 
+      </description>
+
+      <item>Take <math|S<rsub|x>=<around*|{|n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>\|x<rsup|n>\<in\>\<bbb-Z\><rsub|\<bbb-C\>>|}>>
+      then we have\ 
+
+      <\description>
+        <item*|<math|0\<in\>S<rsub|x>>>As
+        <math|x<rsup|0>=1\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>\<subseteq\>\<bbb-Z\><rsub|\<bbb-C\>>>
+        we have that <math|0\<in\>S<rsub|x>>
+
+        <item*|<math|n\<in\>S<rsub|x>\<Rightarrow\>n+1\<in\>S<rsub|x>>>As
+        <math|n\<in\>S> we have <math|x<rsup|n>\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>>
+        and by the hypothese <math|x\<in\>\<bbb-Z\><rsub|\<bbb-C\>>> so using
+        [theorem:<reference|complex embedding>]
+        <math|x<rsup|n+1>=x\<cdot\>x<rsup|n>\<in\>\<bbb-Z\><rsub|\<bbb-C\>>>
+        proving that <math|n+1\<in\>S<rsub|x>.> \ 
+      </description>
+
+      <item>Take <math|S<rsub|x>=<around*|{|n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>\|x<rsup|n>\<in\>\<bbb-Q\><rsub|\<bbb-C\>>|}>>
+      then we have\ 
+
+      <\description>
+        <item*|<math|0\<in\>S<rsub|x>>>As
+        <math|x<rsup|0>=1\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>\<subseteq\>\<bbb-Q\><rsub|\<bbb-C\>>>
+        we have that <math|0\<in\>S<rsub|x>>
+
+        <item*|<math|n\<in\>S<rsub|x>\<Rightarrow\>n+1\<in\>S<rsub|x>>>As
+        <math|n\<in\>S> we have <math|x<rsup|n>\<in\>\<bbb-Q\><rsub|\<bbb-C\>>>
+        and by the hypothese <math|x\<in\>\<bbb-Q\><rsub|\<bbb-C\>>> so using
+        [theorem:<reference|complex embedding>]
+        <math|x<rsup|n+1>=x\<cdot\>x<rsup|n>\<in\>\<bbb-Q\><rsub|\<bbb-C\>>>
+        proving that <math|n+1\<in\>S<rsub|x>.> \ 
+      </description>
+
+      <item>Take <math|S<rsub|x>=<around*|{|n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>\|x<rsup|n>\<in\>\<bbb-R\><rsub|\<bbb-C\>>|}>>
+      then we have\ 
+
+      <\description>
+        <item*|<math|0\<in\>S<rsub|x>>>As
+        <math|x<rsup|0>=1\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>\<subseteq\>\<bbb-R\><rsub|\<bbb-C\>>>
+        we have that <math|0\<in\>S<rsub|x>>
+
+        <item*|<math|n\<in\>S<rsub|x>\<Rightarrow\>n+1\<in\>S<rsub|x>>>As
+        <math|n\<in\>S> we have <math|x<rsup|n>\<in\>\<bbb-R\><rsub|\<bbb-C\>>>
+        and by the hypothese <math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>> so using
+        [theorem:<reference|complex embedding>]
+        <math|x<rsup|n+1>=x\<cdot\>x<rsup|n>\<in\>\<bbb-R\><rsub|\<bbb-C\>>>
+        proving that <math|n+1\<in\>S<rsub|x>.> \ 
+      </description>
+
+      <item>Take <math|S<rsub|x>=<around*|{|n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>\|0\<less\>x<rsup|n>|}>>
+      then we have
+
+      <\description>
+        <item*|<math|0\<in\>S<rsub|x>>>Using [corollary: <reference|complex
+        0\<less\>1>] <math|0\<less\>1=x<rsup|0>> so that
+        <math|0\<in\>S<rsub|x>>.
+
+        <item*|<math|n\<in\>S<rsub|x>\<Rightarrow\>n+1\<in\>S<rsub|x>>>As
+        <math|0\<less\>x> and <math|n\<in\>S\<Rightarrow\>0\<less\>x<rsup|n>>
+        we hve by [theorem: <reference|complex RC order properties>] that
+        <math|0\<less\>x\<cdot\>x<rsup|n>=x<rsup|n+1>> proving that
+        <math|n+1\<in\>S<rsub|X>>
+      </description>
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|complex x^(m+n)=x^n.x^m>If <math|n,m\<in\>N<rsub|0,\<bbb-C\>>>
+    then <math|\<forall\>x\<in\>\<bbb-C\>> we have
+    <math|x<rsup|n+m>=x<rsup|n>\<cdot\>x<rsup|m>>
+  </theorem>
+
+  <\proof>
+    This is proved by induction, so let <math|x\<in\>\<bbb-C\>,n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>>
+    and define\ 
+
+    <\equation*>
+      S<rsub|n,x>=<around*|{|m\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>\|x<rsup|n+m>=x<rsup|n>\<cdot\>x<rsup|m>|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|0\<in\>S<rsub|n,x>>>Then
+      <math|x<rsup|n+0>=x<rsup|n>=x<rsup|n>\<cdot\>1=x<rsup|n>\<cdot\>x<rsup|0>>
+      proving that <math|0\<in\>S<rsub|n,x>>.
+
+      <item*|<math|m\<in\>S<rsub|n,x>\<Rightarrow\>m+1\<in\>S<rsub|n,x>>>Then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x<rsup|n+<around*|(|m+1|)>>>|<cell|=>|<cell|x<rsup|<around*|(|n+m|)>+1>>>|<row|<cell|>|<cell|=>|<cell|x\<cdot\>x<rsup|<around*|(|n+m|)>>>>|<row|<cell|>|<cell|=>|<cell|x<rsup|n+m>\<cdot\>x>>|<row|<cell|>|<cell|\<equallim\><rsub|m\<in\>S<rsub|n,x><rsub|>>>|<cell|<around*|(|x<rsup|n>\<cdot\>x<rsup|m>|)>\<cdot\>x>>|<row|<cell|>|<cell|=>|<cell|x<rsup|n>\<cdot\><around*|(|x<rsup|m>\<cdot\>x|)>>>|<row|<cell|>|<cell|=>|<cell|x<rsup|n>\<cdot\><around*|(|x\<cdot\>x<rsup|m>|)>>>|<row|<cell|>|<cell|=>|<cell|x<rsup|n>\<cdot\>x<rsup|m+1>>>>>
+      </eqnarray*>
+
+      proving that <math|m+1\<in\>S<rsub|n,x>>
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|complex power of inverse>Let <math|x\<in\>\<bbb-C\>\\<around*|{|0|}>>
+    then <math|<around*|(|x<rsup|-1>|)><rsup|n>=<around*|(|x<rsup|n>|)><rsup|-1>>
+    or in other words <math|<around*|(|1/x|)><rsup|n>=1/x<rsup|n>>
+  </theorem>
+
+  <\proof>
+    Theorem we prove this by induction, take
+    <math|S=<around*|{|n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>\|<around*|(|x<rsup|-1>|)><rsup|n>=<around*|(|x<rsup|n>|)><rsup|-1>|}>>
+    then we have:
+
+    <\description>
+      <item*|<math|0\<in\>S>>As <math|<around*|(|1/x|)><rsup|0>=1=<around*|(|1|)><rsup|-1>=<around*|(|x<rsup|0>|)>>
+      proving that <math|0\<in\>S>.
+
+      <item*|<math|n\<in\>S\<rightarrow\>n+1\<in\>S>>We have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|x<rsup|-1>|)><rsup|n+1>>|<cell|=>|<cell|<around*|(|x<rsup|-1>|)>\<cdot\><around*|(|x<rsup|-1>|)><rsup|n>>>|<row|<cell|>|<cell|\<equallim\><rsub|n\<in\>S>>|<cell|<around*|(|x<rsup|-1>|)>\<cdot\><around*|(|x<rsup|n>|)><rsup|-1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|field inverse of product>]>>>|<cell|<around*|(|x\<cdot\>x<rsup|n>|)><rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x<rsup|n+1>|)><rsup|-1>>>>>
+      </eqnarray*>
+
+      proving that <math|n+1\<in\>S>.
+    </description>
+  </proof>
 
   \;
 
@@ -12806,30 +13451,47 @@
     <associate|auto-45|<tuple|10.2.1|?>>
     <associate|auto-46|<tuple|10.2.2|?>>
     <associate|auto-47|<tuple|10.2.3|?>>
+    <associate|auto-48|<tuple|10.2.4|?>>
+    <associate|auto-49|<tuple|10.2.5|?>>
     <associate|auto-5|<tuple|7.2|?>>
+    <associate|auto-50|<tuple|10.3.2|?>>
     <associate|auto-6|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>>|?>>
     <associate|auto-7|<tuple|absolute value|?>>
     <associate|auto-8|<tuple|<with|mode|<quote|math>|<around*|\||x|\|>>|?>>
     <associate|auto-9|<tuple|<with|mode|<quote|math>|m\|n>|?>>
-    <associate|compelx|<tuple|10.8|?>>
-    <associate|comple recursion iteration|<tuple|10.20|?>>
-    <associate|complex RC order (1)|<tuple|10.10|?>>
-    <associate|complex RC order (2)|<tuple|10.11|?>>
-    <associate|complex RC order properties|<tuple|10.15|?>>
+    <associate|compelx|<tuple|10.9|?>>
+    <associate|comple recursion iteration|<tuple|10.29|?>>
+    <associate|complex 0\<less\>1|<tuple|10.15|?>>
+    <associate|complex Archimedean property|<tuple|10.24|?>>
+    <associate|complex QC is not conditional complete|<tuple|10.18|?>>
+    <associate|complex RC is conditional complete|<tuple|10.19|?>>
+    <associate|complex RC order (1)|<tuple|10.11|?>>
+    <associate|complex RC order (2)|<tuple|10.12|?>>
+    <associate|complex RC order properties|<tuple|10.17|?>>
     <associate|complex complement|<tuple|10.4|?>>
-    <associate|complex definition by recursion (1)|<tuple|10.23|?>>
-    <associate|complex definition by recursion (2)|<tuple|10.24|?>>
+    <associate|complex definition by recursion (1)|<tuple|10.32|?>>
+    <associate|complex definition by recursion (2)|<tuple|10.33|?>>
     <associate|complex embedding|<tuple|10.6|?>>
     <associate|complex field|<tuple|10.2|?>>
-    <associate|complex i^2=-1|<tuple|10.7|?>>
-    <associate|complex mathematical induction|<tuple|10.18|?>>
+    <associate|complex i^2=-1|<tuple|10.8|?>>
+    <associate|complex irrational numbers|<tuple|10.20|?>>
+    <associate|complex mathematical induction|<tuple|10.27|?>>
+    <associate|complex notation|<tuple|10.3|?>>
     <associate|complex numbers|<tuple|10.1|?>>
-    <associate|complex order isomorphisms|<tuple|10.13|?>>
-    <associate|complex range|<tuple|10.17|?>>
-    <associate|complex recursion|<tuple|10.19|?>>
-    <associate|complex recursion step|<tuple|10.21|?>>
-    <associate|complex recursion step (2)|<tuple|10.22|?>>
-    <associate|complex {n,..,m}|<tuple|10.17|?>>
+    <associate|complex order isomorphisms|<tuple|10.14|?>>
+    <associate|complex power|<tuple|10.34|?>>
+    <associate|complex power is internal|<tuple|10.36|?>>
+    <associate|complex power of inverse|<tuple|10.38|?>>
+    <associate|complex rational numbers specification|<tuple|10.7|?>>
+    <associate|complex recursion|<tuple|10.28|?>>
+    <associate|complex recursion step|<tuple|10.30|?>>
+    <associate|complex recursion step (2)|<tuple|10.31|?>>
+    <associate|complex sup(S+T) and inf(S+T)|<tuple|10.21|?>>
+    <associate|complex sup(S+s) inf(T+t)|<tuple|10.22|?>>
+    <associate|complex x\<less\>y=\<gtr\>x+1\<less\>=y|<tuple|10.23|?>>
+    <associate|complex x^(m+n)=x^n.x^m|<tuple|10.37|?>>
+    <associate|complex x^0,z^1,z^2|<tuple|10.35|?>>
+    <associate|complex {n,..,m}|<tuple|10.26|?>>
     <associate|eq 10.1.048|<tuple|10.1|?>>
     <associate|eq 10.10.048|<tuple|10.10|?>>
     <associate|eq 10.11.048|<tuple|10.11|?>>
@@ -12837,19 +13499,27 @@
     <associate|eq 10.13.048|<tuple|10.13|?>>
     <associate|eq 10.14.048|<tuple|10.14|?>>
     <associate|eq 10.15.048|<tuple|10.15|?>>
-    <associate|eq 10.17.046|<tuple|10.16|?>>
-    <associate|eq 10.18.046|<tuple|10.17|?>>
-    <associate|eq 10.18.049|<tuple|10.18|?>>
-    <associate|eq 10.19.049|<tuple|10.19|?>>
+    <associate|eq 10.16.050|<tuple|10.16|?>>
+    <associate|eq 10.17.046|<tuple|10.17|?>>
+    <associate|eq 10.18.046|<tuple|10.18|?>>
+    <associate|eq 10.18.049|<tuple|10.26|?>>
+    <associate|eq 10.19.049|<tuple|10.27|?>>
+    <associate|eq 10.19.050|<tuple|10.19|?>>
     <associate|eq 10.2.048|<tuple|10.2|?>>
-    <associate|eq 10.20.049|<tuple|10.20|?>>
-    <associate|eq 10.21.049|<tuple|10.21|?>>
-    <associate|eq 10.22.049|<tuple|10.22|?>>
-    <associate|eq 10.23.049|<tuple|10.23|?>>
-    <associate|eq 10.24.049|<tuple|10.24|?>>
-    <associate|eq 10.25.049|<tuple|10.25|?>>
-    <associate|eq 10.26.049|<tuple|10.26|?>>
-    <associate|eq 10.27.049|<tuple|10.27|?>>
+    <associate|eq 10.20.049|<tuple|10.28|?>>
+    <associate|eq 10.20.050|<tuple|10.20|?>>
+    <associate|eq 10.21.049|<tuple|10.29|?>>
+    <associate|eq 10.21.050|<tuple|10.21|?>>
+    <associate|eq 10.22.049|<tuple|10.30|?>>
+    <associate|eq 10.22.050|<tuple|10.22|?>>
+    <associate|eq 10.23.049|<tuple|10.31|?>>
+    <associate|eq 10.23.050|<tuple|10.23|?>>
+    <associate|eq 10.24.049|<tuple|10.32|?>>
+    <associate|eq 10.24.050|<tuple|10.24|?>>
+    <associate|eq 10.25.049|<tuple|10.33|?>>
+    <associate|eq 10.25.050|<tuple|10.25|?>>
+    <associate|eq 10.26.049|<tuple|10.34|?>>
+    <associate|eq 10.27.049|<tuple|10.35|?>>
     <associate|eq 10.3.048|<tuple|10.3|?>>
     <associate|eq 10.4.048|<tuple|10.4|?>>
     <associate|eq 10.5.048|<tuple|10.5|?>>
@@ -12942,15 +13612,14 @@
     <associate|eq 9.115.041|<tuple|9.110|?>>
     <associate|eq 9.116.041|<tuple|9.123|?>>
     <associate|eq 9.117.041|<tuple|9.124|?>>
-    <associate|eq 9.118.042|<tuple|10.21|?>>
-    <associate|eq 9.119.042|<tuple|10.22|?>>
+    <associate|eq 9.118.042|<tuple|9.114|?>>
+    <associate|eq 9.119.042|<tuple|9.115|?>>
     <associate|eq 9.12.029|<tuple|9.10|?>>
-    <associate|eq 9.120.042|<tuple|10.23|?>>
-    <associate|eq 9.121.042|<tuple|9.117|?>>
+    <associate|eq 9.120.042|<tuple|9.116|?>>
     <associate|eq 9.122.042|<tuple|9.117|?>>
-    <associate|eq 9.123.042|<tuple|10.25|?>>
-    <associate|eq 9.124.042|<tuple|10.26|?>>
-    <associate|eq 9.125.042|<tuple|10.27|?>>
+    <associate|eq 9.123.042|<tuple|9.118|?>>
+    <associate|eq 9.124.042|<tuple|9.119|?>>
+    <associate|eq 9.125.042|<tuple|9.120|?>>
     <associate|eq 9.125.046|<tuple|9.121|?>>
     <associate|eq 9.126.044|<tuple|9.125|?>>
     <associate|eq 9.126.046|<tuple|9.122|?>>
@@ -13043,42 +13712,42 @@
     <associate|eq 9.84.036|<tuple|9.82|?>>
     <associate|eq 9.85.036|<tuple|9.83|?>>
     <associate|eq 9.86.036|<tuple|9.84|?>>
-    <associate|eq 9.87.036|<tuple|9.85|?>>
-    <associate|eq 9.88.036|<tuple|9.86|?>>
-    <associate|eq 9.89.036|<tuple|9.87|?>>
+    <associate|eq 9.87.036|<tuple|10.19|?>>
+    <associate|eq 9.88.036|<tuple|10.20|?>>
+    <associate|eq 9.89.036|<tuple|10.21|?>>
     <associate|eq 9.89.047|<tuple|9.89|?>>
-    <associate|eq 9.90.036|<tuple|9.88|?>>
+    <associate|eq 9.90.036|<tuple|10.22|?>>
     <associate|eq 9.90.047|<tuple|9.90|?>>
     <associate|eq 9.96.040|<tuple|9.91|?>>
     <associate|eq 9.97.040|<tuple|9.92|?>>
     <associate|eq 9.98.040|<tuple|9.93|?>>
     <associate|eq 9.99.040|<tuple|9.94|?>>
-    <associate|eq real square root properties (1)|<tuple|9.96|?>>
+    <associate|eq real square root properties (1)|<tuple|9.95|?>>
     <associate|integeres order|<tuple|7.21|?>>
     <associate|integers|<tuple|7.2|?>>
     <associate|integers 0\<less\>1 and 0\<less\>2|<tuple|7.25|?>>
     <associate|integers 0\<less\>n and 0\<less\>m then
     0\<less\>n.m|<tuple|7.26|?>>
     <associate|integers 1+1=2|<tuple|7.12|?>>
-    <associate|integers Archimedean|<tuple|7.29|?>>
-    <associate|integers absolute value|<tuple|7.33|?>>
-    <associate|integers are conditional complete|<tuple|7.31|?>>
-    <associate|integers common divisor|<tuple|7.44|?>>
+    <associate|integers Archimedean|<tuple|7.30|?>>
+    <associate|integers absolute value|<tuple|7.34|?>>
+    <associate|integers are conditional complete|<tuple|7.32|?>>
+    <associate|integers common divisor|<tuple|7.45|?>>
     <associate|integers condition for 0|<tuple|7.13|?>>
-    <associate|integers denumerability|<tuple|7.52|?>>
+    <associate|integers denumerability|<tuple|7.53|?>>
     <associate|integers difference|<tuple|7.8|?>>
-    <associate|integers divide relation|<tuple|7.38|?>>
-    <associate|integers division|<tuple|7.37|?>>
-    <associate|integers divisor 1|<tuple|7.40|?>>
-    <associate|integers divisors |<tuple|7.41|?>>
-    <associate|integers divisors properties|<tuple|7.45|?>>
+    <associate|integers divide relation|<tuple|7.39|?>>
+    <associate|integers division|<tuple|7.38|?>>
+    <associate|integers divisor 1|<tuple|7.41|?>>
+    <associate|integers divisors |<tuple|7.42|?>>
+    <associate|integers divisors properties|<tuple|7.46|?>>
     <associate|integers equivalence relation|<tuple|7.1|?>>
-    <associate|integers even condition|<tuple|7.51|?>>
-    <associate|integers even odd|<tuple|7.49|?>>
-    <associate|integers even odd equivalences|<tuple|7.50|?>>
-    <associate|integers gcd existence|<tuple|7.46|?>>
-    <associate|integers gcd properties|<tuple|7.48|?>>
-    <associate|integers greatest common divisor|<tuple|7.47|?>>
+    <associate|integers even condition|<tuple|7.52|?>>
+    <associate|integers even odd|<tuple|7.50|?>>
+    <associate|integers even odd equivalences|<tuple|7.51|?>>
+    <associate|integers gcd existence|<tuple|7.47|?>>
+    <associate|integers gcd properties|<tuple|7.49|?>>
+    <associate|integers greatest common divisor|<tuple|7.48|?>>
     <associate|integers integers forms a group|<tuple|7.7|?>>
     <associate|integers integral domain|<tuple|7.11|?>>
     <associate|integers multiplication|<tuple|7.10|?>>
@@ -13087,23 +13756,24 @@
     <associate|integers neutral element|<tuple|7.6|?>>
     <associate|integers non negative|<tuple|7.16|?>>
     <associate|integers non positive numbers|<tuple|7.18|?>>
-    <associate|integers order preserving bijection|<tuple|7.28|?>>
+    <associate|integers order preserving bijection|<tuple|7.29|?>>
     <associate|integers ordered ring|<tuple|7.27|?>>
     <associate|integers positive and negative|<tuple|7.20|?>>
     <associate|integers positive condition|<tuple|7.23|?>>
-    <associate|integers positive integeres are well ordered|<tuple|7.30|?>>
+    <associate|integers positive integeres are well ordered|<tuple|7.31|?>>
     <associate|integers properties (1)|<tuple|7.17|?>>
-    <associate|integers quotient|<tuple|7.43|?>>
-    <associate|integers quotient theorem|<tuple|7.42|?>>
+    <associate|integers quotient|<tuple|7.44|?>>
+    <associate|integers quotient theorem|<tuple|7.43|?>>
     <associate|integers strict positive numbers|<tuple|7.24|?>>
     <associate|integers sum uniqueness|<tuple|7.4|?>>
-    <associate|integers sup is max|<tuple|7.32|?>>
+    <associate|integers sup is max|<tuple|7.33|?>>
     <associate|integers without 0|<tuple|8.2|?>>
-    <associate|integers x\<less\>=\|x\||<tuple|7.35|?>>
+    <associate|integers x\<less\>=\|x\||<tuple|7.36|?>>
+    <associate|integers x\<less\>y=\<gtr\>x+1\<less\>=y|<tuple|7.28|?>>
     <associate|integers z=-z=\<gtr\>z=0|<tuple|7.14|?>>
     <associate|integers {x\|-\<less\>=x}|<tuple|7.22|?>>
-    <associate|integers \|x.y\|=\|x\|.\|y\||<tuple|7.34|?>>
-    <associate|integers \|x\|\<less\>=\<gtr\>x=0|<tuple|7.36|?>>
+    <associate|integers \|x.y\|=\|x\|.\|y\||<tuple|7.35|?>>
+    <associate|integers \|x\|\<less\>=\<gtr\>x=0|<tuple|7.37|?>>
     <associate|integers ~([n,m])~([n+k,m+k)]|<tuple|7.3|?>>
     <associate|rational -(q^-1)=(-q)^-1|<tuple|8.31|?>>
     <associate|rational 0\<less\>1|<tuple|8.26|?>>
@@ -13149,16 +13819,16 @@
     <associate|rational totally ordered|<tuple|8.24|?>>
     <associate|rational x-y|<tuple|8.9|?>>
     <associate|rational {0}|<tuple|8.16|?>>
-    <associate|real (x^n-1)\<gtr\>=n.(x-1)|<tuple|9.87|?>>
+    <associate|real (x^n-1)\<gtr\>=n.(x-1)|<tuple|9.86|?>>
     <associate|real -(a.b)=(-a).b=(a.(-b)|<tuple|9.29|?>>
     <associate|real 0\<less\>1|<tuple|9.42|?>>
     <associate|real 0\<less\>=a,b and a+b=0 then a=0=b|<tuple|9.47|?>>
     <associate|real 0\<less\>x\<less\>1 then
-    0\<less\>x^n\<less\>e|<tuple|9.90|?>>
+    0\<less\>x^n\<less\>e|<tuple|9.89|?>>
     <associate|real 1.a=a for positive numbers|<tuple|9.21|?>>
-    <associate|real Archimedean property|<tuple|9.65|?>>
-    <associate|real Archimedean property consequence (1)|<tuple|9.66|?>>
-    <associate|real Archimedean property consequence (2)|<tuple|9.67|?>>
+    <associate|real Archimedean property|<tuple|9.64|?>>
+    <associate|real Archimedean property consequence (1)|<tuple|9.65|?>>
+    <associate|real Archimedean property consequence (2)|<tuple|9.66|?>>
     <associate|real Dedekind's cut|<tuple|9.1|?>>
     <associate|real NR|<tuple|9.58|?>>
     <associate|real NR properties|<tuple|9.60|?>>
@@ -13167,21 +13837,21 @@
     <associate|real QR is denumerable|<tuple|9.8|?>>
     <associate|real QR is not conditional complete|<tuple|9.50|?>>
     <associate|real R+ R-|<tuple|9.44|?>>
-    <associate|real RC ordered field|<tuple|10.14|?>>
+    <associate|real RC ordered field|<tuple|10.16|?>>
     <associate|real RxR|<tuple|9.27|?>>
     <associate|real ZQ|<tuple|9.56|?>>
     <associate|real ZR properties|<tuple|9.57|?>>
     <associate|real a.(b+g) where b or g is negative|<tuple|9.30|?>>
     <associate|real a.b=b.a positive numbers|<tuple|9.22|?>>
-    <associate|real a\<less\>2^n|<tuple|9.86|?>>
+    <associate|real a\<less\>2^n|<tuple|9.85|?>>
     <associate|real a\<less\>a+1 and a-1\<less\>a|<tuple|9.46|?>>
     <associate|real a^-1|<tuple|9.31|?>>
     <associate|real a_r.a_s=a_r.s|<tuple|9.35|?>>
     <associate|real associativity positive numbers|<tuple|9.23|?>>
     <associate|real conditional complete|<tuple|9.51|?>>
-    <associate|real definition by recursion (1)|<tuple|10.23|?>>
-    <associate|real definition by recursion (2)|<tuple|10.24|?>>
-    <associate|real densitiy theorem|<tuple|9.68|?>>
+    <associate|real definition by recursion (1)|<tuple|9.75|?>>
+    <associate|real definition by recursion (2)|<tuple|9.76|?>>
+    <associate|real densitiy theorem|<tuple|9.67|?>>
     <associate|real distributivity|<tuple|9.24|?>>
     <associate|real division of real numbers in positive and negative
     numbers|<tuple|9.17|?>>
@@ -13196,11 +13866,11 @@
     <associate|real inverse of rational cut|<tuple|9.34|?>>
     <associate|real irrational numbers|<tuple|9.52|?>>
     <associate|real lemma for sum operator|<tuple|9.13|?>>
-    <associate|real mathematical induction|<tuple|10.18|?>>
+    <associate|real mathematical induction|<tuple|9.70|?>>
     <associate|real multiplication operator|<tuple|9.28|?>>
-    <associate|real n\<less\>2^n|<tuple|9.85|?>>
+    <associate|real n\<less\>2^n|<tuple|9.84|?>>
     <associate|real n\<less\>m and 0\<less\>x\<less\>1 then
-    x^n\<less\>x^m|<tuple|9.89|?>>
+    x^n\<less\>x^m|<tuple|9.88|?>>
     <associate|real natural numbers, integers and rational
     numbers|<tuple|9.61|?>>
     <associate|real negastive cut of rational cut|<tuple|9.11|?>>
@@ -13210,38 +13880,38 @@
     <associate|real order relation eauivalences|<tuple|9.41|?>>
     <associate|real ordered field|<tuple|9.45|?>>
     <associate|real positive negative numbers|<tuple|9.16|?>>
-    <associate|real power|<tuple|9.78|?>>
-    <associate|real power and inequality|<tuple|9.80|?>>
-    <associate|real power of inverse|<tuple|9.83|?>>
-    <associate|real power properties|<tuple|9.84|?>>
-    <associate|real power properties (1)|<tuple|9.79|?>>
+    <associate|real power|<tuple|9.77|?>>
+    <associate|real power and inequality|<tuple|9.79|?>>
+    <associate|real power of inverse|<tuple|9.82|?>>
+    <associate|real power properties|<tuple|9.83|?>>
+    <associate|real power properties (1)|<tuple|9.78|?>>
     <associate|real product is internal|<tuple|9.20|?>>
     <associate|real properties positive numbers|<tuple|9.38|?>>
     <associate|real property to determine membership of a cut|<tuple|9.3|?>>
-    <associate|real q^(n+m)=q^n.q^m|<tuple|9.82|?>>
+    <associate|real q^(n+m)=q^n.q^m|<tuple|9.81|?>>
     <associate|real r\<less\>s=\<gtr\>a_r\<less\>a_s|<tuple|9.48|?>>
     <associate|real rational cut|<tuple|9.4|?>>
     <associate|real rational cut properties|<tuple|9.36|?>>
     <associate|real rational numbers specification|<tuple|9.62|?>>
     <associate|real real numbers|<tuple|9.2|?>>
-    <associate|real recursion|<tuple|10.19|?>>
-    <associate|real recursion iteration|<tuple|10.20|?>>
-    <associate|real recursion step|<tuple|10.21|?>>
-    <associate|real recursion step (2)|<tuple|10.22|?>>
-    <associate|real square operator is a bijection|<tuple|9.91|?>>
-    <associate|real square root|<tuple|9.92|?>>
-    <associate|real square root is strictly increasing|<tuple|9.95|?>>
-    <associate|real square root norm|<tuple|9.99|?>>
-    <associate|real square root of 2 is irational|<tuple|9.94|?>>
-    <associate|real square root of product|<tuple|9.98|?>>
+    <associate|real recursion|<tuple|9.71|?>>
+    <associate|real recursion iteration|<tuple|9.72|?>>
+    <associate|real recursion step|<tuple|9.73|?>>
+    <associate|real recursion step (2)|<tuple|9.74|?>>
+    <associate|real square operator is a bijection|<tuple|9.90|?>>
+    <associate|real square root|<tuple|9.91|?>>
+    <associate|real square root is strictly increasing|<tuple|9.94|?>>
+    <associate|real square root norm|<tuple|9.98|?>>
+    <associate|real square root of 2 is irational|<tuple|9.93|?>>
+    <associate|real square root of product|<tuple|9.97|?>>
     <associate|real strict order relation definition|<tuple|9.39|?>>
     <associate|real sum is a operator|<tuple|9.14|?>>
-    <associate|real sup(S+T) and inf(S+T)|<tuple|9.54|?>>
-    <associate|real sup(S+s) inf(T+t)|<tuple|9.55|?>>
+    <associate|real sup(S+T) and inf(S+T)|<tuple|10.21|?>>
+    <associate|real sup(S+s) inf(T+t)|<tuple|10.22|?>>
     <associate|real totally ordered|<tuple|9.43|?>>
-    <associate|real x\<less\>y=\<gtr\>x+1\<less\>=y|<tuple|9.64|?>>
-    <associate|real x^n\<gtr\>n if x\<gtr\>1 (R)|<tuple|9.88|?>>
-    <associate|real {n,..,m}|<tuple|10.17|?>>
+    <associate|real x\<less\>y=\<gtr\>x+1\<less\>=y|<tuple|9.63|?>>
+    <associate|real x^n\<gtr\>n if x\<gtr\>1 (R)|<tuple|9.87|?>>
+    <associate|real {n,..,m}|<tuple|9.69|?>>
     <associate|reals the set of reals are non empty|<tuple|9.5|?>>
     <associate|sign function|<tuple|8.15|?>>
   </collection>
@@ -13388,14 +14058,22 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-45>>
 
-      <with|par-left|<quote|1tab>|10.2.2<space|2spc>Order relation
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|10.2.2<space|2spc>Notation of complex
+      numbers <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-46>>
 
-      <with|par-left|<quote|1tab>|10.2.3<space|2spc>Recursion and
-      mathematical induction in <with|mode|<quote|math>|\<bbb-C\>>
+      <with|par-left|<quote|1tab>|10.2.3<space|2spc>Order relation
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-47>>
+
+      <with|par-left|<quote|1tab>|10.2.4<space|2spc>Recursion and
+      mathematical induction in <with|mode|<quote|math>|\<bbb-C\>>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-48>>
+
+      <with|par-left|<quote|1tab>|10.2.5<space|2spc>Power in
+      <with|mode|<quote|math>|\<bbb-C\>> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-49>>
     </associate>
   </collection>
 </auxiliary>
