@@ -8767,7 +8767,7 @@
       is well ordered, futher by <math|<around*|(|3|)>>
       <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-R\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<leqslant\>|\<rangle\>>>
       is a order isomorphism, hence by [theorem: <reference|order well
-      ordered and order isomorphism>] it follows that\ 
+      ordering and order isomorphism>] it follows that\ 
 
       <\equation*>
         <around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-R\>>,\<leqslant\>|\<rangle\>><text|
@@ -9094,7 +9094,7 @@
       <math|n\<cdot\>x\<leqslant\>y>. Define\ 
 
       <\equation*>
-        A=<around*|{|n\<cdot\>x\|n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>|}>=0
+        A=<around*|{|n\<cdot\>x\|n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>|}>
       </equation*>
 
       then <math|\<forall\>t\<in\>A> we have <math|t\<leqslant\>y> so that
@@ -9214,8 +9214,8 @@
     <math|x,y\<in\>\<bbb-R\>> then we have\ 
 
     <\enumerate>
-      <item>If <math|\<forall\>n\<in\>\<bbb-N\><rsub|\<bbb-R\>>> we have that
-      <math|x\<leqslant\>y+1/n> then <math|x\<leqslant\>y>
+      <item>If <math|\<forall\>n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> we have
+      that <math|x\<leqslant\>y+1/n> then <math|x\<leqslant\>y>
 
       <item>If <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> we have
       that <math|x\<leqslant\>y+\<varepsilon\>> then <math|x\<leqslant\>y>
@@ -9226,7 +9226,7 @@
       <math|x\<leqslant\>y>
 
       <item>Let <math|a\<in\>\<bbb-R\><rsup|+><rsub|0>> then if
-      <math|\<forall\>n\<in\>\<bbb-N\><rsub|\<bbb-R\>>> we have that
+      <math|\<forall\>n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> we have that
       <math|x\<leqslant\>y+a/n> then <math|x\<leqslant\>y>
     </enumerate>
   </corollary>
@@ -12281,6 +12281,31 @@
     </enumerate>
   </theorem>
 
+  <\corollary>
+    <label|complex x\<less\>x+1 and x-1\<less\>x>If
+    <math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>> then we have\ 
+
+    <\enumerate>
+      <item><math|x\<less\>x+1>
+
+      <item><math|x-1\<less\>x>
+    </enumerate>
+  </corollary>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>As <math|0\<less\>1> [see corollary: <reference|complex
+      0\<less\>1>] we have <math|z=0+x\<less\>1+x=x+1> [see theorem:
+      <reference|complex RC order properties>].
+
+      <item>From (1) we have <math|x\<less\>x+1> so that
+      <math|x-1=x+<around*|(|-1|)>\<less\><around*|(|x+1|)>+-1=x> [see
+      theorem: <reference|complex RC order properties>].
+    </enumerate>
+  </proof>
+
   <\theorem>
     <label|complex QC is not conditional complete><math|<around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-C\>>,\<leqslant\>|\<rangle\>>>
     is not conditional complete.
@@ -12351,6 +12376,29 @@
       <around*|\<langle\>|\<bbb-R\><rsub|\<bbb-C\>>,\<leqslant\>|\<rangle\>><text|
       is conditional complete>
     </equation*>
+  </proof>
+
+  <\theorem>
+    <label|complex NC is well ordered><math|<around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-C\>>,\<leqslant\>|\<rangle\>>>
+    is well ordered [definition: <reference|order well-rodered class>]
+  </theorem>
+
+  <\proof>
+    Using [theorem: <reference|complex order isomorphisms>] we have that
+
+    <\equation*>
+      i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>>:<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-C\>>,\<leqslant\>|\<rangle\>><text|
+      is a order isomorphism>
+    </equation*>
+
+    As by [theorems: <reference|natural numbers are well ordered>]
+    <math|<around*|\<langle\>|\<bbb-N\><rsub|0>,\<leqslant\>|\<rangle\>>> is
+    well ordered we have by the above and [theorem: <reference|order well
+    ordering and order isomorphism>] that
+    <math|<around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-C\>>,\<leqslant\>|\<rangle\>>>
+    is well ordered.
+
+    \;
   </proof>
 
   <\corollary>
@@ -12631,8 +12679,393 @@
   </theorem>
 
   <\proof>
-    TODO
+    For <math|y> we have either\ 
+
+    <\description>
+      <item*|<math|y\<leqslant\>0>>Then for <math|n=1> we have
+      <math|y\<leqslant\>0\<less\>x=1\<cdot\>x=n\<cdot\>x> proving that
+      <math|y\<less\>n\<cdot\>x>
+
+      <item*|<math|0\<less\>y>>We prove this by contradiction. Assume that
+      <math|\<forall\>n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>> we have
+      <math|n\<cdot\>x\<leqslant\>y>. Define\ 
+
+      <\equation*>
+        A=<around*|{|n\<cdot\>x\|n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>|}>
+      </equation*>
+
+      then <math|\<forall\>t\<in\>A> we have <math|t\<leqslant\>y> so that
+      <math|y<text| is a upper bound of <math|A>>>. By [theorem:
+      <reference|complex RC is conditional complete>]
+      <math|<around*|\<langle\>|\<bbb-R\><rsub|\<bbb-C\>>,\<leqslant\>|\<rangle\>>>
+      is conditional complete so that <math|sup<around*|(|A|)>> exists. As
+      <math|0\<less\>x> we have <math|-x\<less\>0> so that
+      <math|sup<around*|(|A|)>-x\<less\>sup<around*|(|A|)>>, given that by
+      [theorem: <reference|complex RC order (2)>]
+      <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>> is
+      totally ordered, we have by [theorem: <reference|order sup, inf
+      property>] that <math|\<exists\>t\<in\>A> such that
+      <math|sup<around*|(|A|)>-x\<less\>t>. Using the definition of <math|A>
+      we have then that <math|\<exists\>n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>>
+      such that <math|t=n\<cdot\>x> hence
+      <math|sup<around*|(|A|)>-x\<less\>n\<cdot\>x>, so that\ 
+
+      <\equation>
+        <label|eq 10.26.050>sup<around*|(|A|)>\<less\>n\<cdot\>x+x=<around*|(|n+1|)>\<cdot\>x
+      </equation>
+
+      As <math|n+1\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>> we have that
+      <math|<around*|(|n+1|)>\<cdot\>x\<in\>A> so that
+      <math|<around*|(|n+1|)>\<cdot\>x\<leqslant\>sup<around*|(|A|)>>
+      contradicting [eq: <reference|eq 10.26.050>]. So our assumption is
+      wrong hence\ 
+
+      <\equation*>
+        \<exists\>n\<in\>\<bbb-N\><rsub|0,\<bbb-R\>><text| such that
+        >y\<less\>n\<cdot\>x
+      </equation*>
+    </description>
   </proof>
+
+  <\corollary>
+    <label|complex Archimedean property consequence (1)>Let
+    <math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>> then we have\ 
+
+    <\enumerate>
+      <item><math|\<exists\>n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>> such that
+      <math|x\<less\>n>
+
+      <item><math|\<exists\>n\<in\>\<bbb-Z\><rsub|\<bbb-C\>>> such that
+      <math|n\<leqslant\>x\<less\>n+1>
+
+      <item><math|\<exists\>n\<in\>\<bbb-Z\><rsub|\<bbb-C\>>> such that
+      <math|n\<less\>x\<leqslant\>n+1>
+
+      <item><math|\<exists\>n\<in\>\<bbb-Z\><rsub|\<bbb-C\>><text| such that
+      <math|n-1\<leqslant\>x\<less\>n>>>
+
+      <item><math|\<exists\>n\<in\>\<bbb-Z\><rsub|\<bbb-C\>>> such that
+      <math|n-1\<less\>x\<leqslant\>n>
+
+      <item>If <math|0\<less\>x> then <math|\<exists\>n\<in\>\<bbb-N\><rsub|\<bbb-C\>>>
+      such that <math|0\<less\>1/n\<less\>x>
+    </enumerate>
+  </corollary>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>As <math|0\<less\>1> [see corollary: <reference|complex
+      0\<less\>1>]<space|1em>we have by the Archimedean property [see
+      theorem: <reference|complex Archimedean property>] that there exist a
+      <math|n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>> such that
+      <math|x\<less\>n\<cdot\>1=n>
+
+      <item>By (1) <math|A=<around*|{|n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>\|x\<less\>n|}>\<neq\>\<varnothing\>>
+      and by the well ordering of <math|<around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-C\>>,\<leqslant\>|\<rangle\>>>
+      [see theorem: <reference|complex NC is well ordered>] there exists a
+      least element <math|m\<in\>A>. As <math|m-1\<less\>m> [see corollary:
+      <reference|complex x\<less\>x+1 and x-1\<less\>x>] we have that
+      <math|m-1\<nin\>A> hence <math|m-1\<leqslant\>x> and as <math|m\<in\>A>
+      we have also <math|x\<less\>m>. Take <math|n=m-1> then
+      <math|n\<leqslant\>x\<less\>m=n+1>.
+
+      <item>Using (2) there exist a <math|m\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>>
+      such that <math|m\<leqslant\>x\<less\>m+1>. As <math|m\<leqslant\>x> we
+      have the following possibilities to consider:
+
+      <\description>
+        <item*|<math|m=x>>Take then <math|n=m-1> so that <math|n+1=m> then we
+        have <math|n\<less\>x\<leqslant\>n+1>
+
+        <item*|<math|m\<less\>x>>Take then <math|n=m> so that
+        <math|n\<less\>x\<leqslant\>n+1>
+      </description>
+
+      <item>Using (2) there exist a <math|m\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>>
+      such that <math|m\<leqslant\>x\<less\>m+1>, take then <math|n=m+1> so
+      that <math|m=n-1>, hence <math|n-1\<leqslant\>x\<less\>n>.
+
+      <item>Using (3) there exist a <math|m\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>>
+      such that <math|m\<less\>x\<leqslant\>m+1>, take then <math|n=m+1> so
+      that <math|m=n-1>, hence <math|n-1\<less\>x\<leqslant\>n>.
+
+      <item>Using the Archimedean Property [see theorem: <reference|complex
+      Archimedean property>] there exists a
+      <math|n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>> such that
+      <math|1\<less\>n\<cdot\>x>. If <math|n=0> we would have
+      <math|1\<less\>0> a contradiction so <math|0\<neq\>n>. Using [theorem:
+      <reference|real natural numbers, integers and rational numbers>] we
+      have that <math|0\<leqslant\>n> so we find that <math|0\<less\>n>.
+      Applying then [theorems: <reference|complex RC order properties>] we
+      have <math|0\<less\>n<rsup|-1>=1/n> which using [theorems:
+      <reference|complex RC order properties>] on <math|1\<less\>n\<cdot\>x>
+      gives <math|1/n=1\<cdot\>n<rsup|-1>\<less\><around*|(|n\<cdot\>x|)>\<cdot\>n<rsup|-1>=x>.
+    </enumerate>
+  </proof>
+
+  <\corollary>
+    <label|complex Archimedean property consequence (2)>Let
+    <math|x,y\<in\>\<bbb-R\><rsub|\<bbb-C\>>> then we have\ 
+
+    <\enumerate>
+      <item>If <math|\<forall\>n\<in\>\<bbb-N\><rsub|\<bbb-C\>>> we have that
+      <math|x\<leqslant\>y+1/n> then <math|x\<leqslant\>y>
+
+      <item>If <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsub|\<bbb-C\>><rsup|+>>
+      we have that <math|x\<leqslant\>y+\<varepsilon\>> then
+      <math|x\<leqslant\>y>
+
+      <item>Let <math|a\<in\>\<bbb-R\><rsup|+><rsub|0,\<bbb-C\>>> then if
+      <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsub|\<bbb-C\>><rsup|+>>
+      we have that <math|x\<leqslant\>y+\<varepsilon\>\<cdot\>a> then
+      <math|x\<leqslant\>y>
+
+      <item>Let <math|a\<in\>\<bbb-R\><rsup|+><rsub|0,\<bbb-C\>>> then if
+      <math|\<forall\>n\<in\>\<bbb-N\><rsub|\<bbb-C\>>> we have that
+      <math|x\<leqslant\>y+a/n> then <math|x\<leqslant\>y>
+    </enumerate>
+  </corollary>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Assume that <math|y\<less\>x> then we have <math|0\<less\>x-y> so
+      by [corollary: <reference|complex Archimedean property consequence
+      (1)>] there exist a <math|n\<in\>\<bbb-N\><rsub|\<bbb-C\>>> such that
+      <math|1/n\<less\>x-y>. As we also have that
+      <math|x\<leqslant\>y+1/n\<Rightarrow\>x-y\<leqslant\>1/n> we reach the
+      contradiction <math|1/n\<less\>1/n>. So the assumption is wrong and we
+      must have that\ 
+
+      <\equation*>
+        x\<leqslant\>y
+      </equation*>
+
+      <item>Assume that <math|y\<less\>x> then we have <math|0\<less\>x-y> so
+      by [corollary: <reference|complex Archimedean property consequence
+      (1)>] there exist a <math|n\<in\>\<bbb-N\><rsub|\<bbb-C\>>> such that
+      <math|1/n\<less\>x-y>. Take <math|\<varepsilon\>=1/n> then we have also
+      <math|x\<leqslant\>y+\<varepsilon\>\<Rightarrow\>x-y\<leqslant\>\<varepsilon\>=<frac|1|n>>
+      so we reach the contradiction <math|1/n\<less\>1/n>. So the assumption
+      is wrong and we must have that\ 
+
+      <\equation*>
+        x\<leqslant\>y
+      </equation*>
+
+      <item>As <math|a\<in\>\<bbb-R\><rsup|+><rsub|0,\<bbb-C\>>> we have two
+      possibilities to consider:
+
+      <\description>
+        <item*|<math|a=0>>Then if we take
+        <math|\<varepsilon\>=1\<in\>\<bbb-R\><rsub|\<bbb-C\>><rsup|+>> we
+        have from <math|x\<leqslant\>y+a\<cdot\>\<varepsilon\>=y+0.1=y> that
+        <math|x\<leqslant\>y>
+
+        <item*|<math|0\<less\>a>>Take <math|\<varepsilon\>\<in\>\<bbb-R\><rsub|\<bbb-C\>><rsup|+>>
+        then for <math|\<delta\>=\<varepsilon\>/a\<in\>\<bbb-R\><rsub|\<bbb-C\>><rsup|+>>
+        we have by the assumption that <math|x\<leqslant\>y+a\<cdot\>\<delta\>=y+<around*|(|\<varepsilon\>/a|)>\<cdot\>a=y+\<varepsilon\>>.
+        So we have <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsub|\<bbb-C\>><rsup|+>>
+        that <math|x\<leqslant\>y+\<varepsilon\>> which by (2) proves that
+
+        <\equation*>
+          x\<leqslant\>y
+        </equation*>
+      </description>
+
+      <item>As <math|a\<in\>\<bbb-R\><rsup|+><rsub|0,\<bbb-C\>>> we have two
+      possibilities to consider:
+
+      <\description>
+        <item*|<math|a=0>>Then if we take
+        <math|n=1\<in\>\<bbb-N\><rsub|\<bbb-C\>>> we have from
+        <math|x\<leqslant\>y+a/n=y+1/1\<cdot\>0=y> that <math|x\<leqslant\>y>
+
+        <item*|<math|0\<less\>a>>Take <math|n\<in\>\<bbb-N\><rsub|\<bbb-C\>>>
+        then
+
+        <\equation*>
+          0\<less\>n\<Rightarrowlim\><rsub|<text|[theorems:
+          <reference|complex RC order properties>]>>0\<less\>a\<cdot\>n\<Rightarrowlim\><rsub|<text|[theorems:
+          <reference|complex RC order properties>]>>0\<less\><around*|(|a\<cdot\>n|)><rsup|-1>=a<rsup|-1>\<cdot\>n<rsup|-1>
+        </equation*>
+
+        so that by [corollary: <reference|complex Archimedean property
+        consequence (1)>] there exists a <math|m\<in\>\<bbb-N\><rsub|\<bbb-R\>>>
+        such that <math|1/m>\<less\><math|a<rsup|-1>\<cdot\>n<rsup|-1>>. By
+        assumption we have now <math|x\<leqslant\>y+a/m=y+a\<cdot\><around*|(|a<rsup|-1>\<cdot\>n<rsup|-1>|)>=y+1/n>.
+        So we have <math|\<forall\>n\<in\>\<bbb-N\><rsub|\<bbb-R\>>> that
+        <math|x\<leqslant\>y+1/n> which by (1) implies that\ 
+
+        <\equation*>
+          x\<leqslant\>y
+        </equation*>
+      </description>
+    </enumerate>
+  </proof>
+
+  The next theorem shows how the embedded rational numbers are dense in the
+  set of real numbers.\ 
+
+  <\theorem>
+    <label|complex densitiy theorem><dueto|Density Theorem>If
+    <math|x\<in\>y\<in\>\<bbb-R\><rsub|\<bbb-C\>>> such that
+    <math|x\<less\>y> then we have
+
+    <\enumerate>
+      <item><math|\<exists\>q\<in\>\<bbb-Q\><rsub|\<bbb-C\>>> such that
+      <math|x\<less\>q\<less\>y>
+
+      <item><math|\<exists\>r\<in\>\<bbb-R\><rsub|\<bbb-C\>>\\\<bbb-Q\><rsub|\<bbb-C\>>>
+      such that <math|x\<less\>r\<less\>y>
+    </enumerate>
+
+    In other words if we have two different real numbers then we can always
+    find a rational number and a irationl number that lies between the two
+    real numbers.
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>We first prove the case for <math|0\<leqslant\>x>, then we have
+      either\ 
+
+      <\description>
+        <item*|<math|0\<less\>x>>From <math|x\<less\>y> we have that
+        <math|0\<less\>y-x> so that by [theorem: <reference|complex RC order
+        properties>] <math|0\<less\><around*|(|y-x|)><rsup|-1>>. Using
+        [corollary: <reference|complex Archimedean property consequence (1)>]
+        there exists a <math|n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>> such that
+        <math|0\<less\><around*|(|y-x|)><rsup|-1>\<less\>n>. As
+        <math|0\<less\>y-x> we have that <math|1=<around*|(|y-x|)><rsup|-1>\<cdot\><around*|(|y-x|)>\<less\>n\<cdot\><around*|(|y-x|)>>
+        so that
+
+        <\equation>
+          <label|eq 10.27.050>1+n\<cdot\>x\<less\>n\<cdot\>y
+        </equation>
+
+        and from <math|0\<less\><around*|(|y-x|)><rsup|-1>\<less\>n> that
+
+        <\equation>
+          <label|eq 10.28.050>0\<less\>n\<Rightarrowlim\><rsub|<text|[theorem:
+          <reference|complex RC order properties>]>>0\<less\>n<rsup|-1>=1/n
+        </equation>
+
+        Using [corollary: <reference|complex Archimedean property consequence
+        (1)>] there exist a <math|m\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> such
+        that
+
+        <\equation>
+          <label|eq 10.29.050>m-1\<leqslant\>n\<cdot\>x\<less\>m
+        </equation>
+
+        Multiplying by <math|n<rsup|-1>> gives then by \ [theorem:
+        <reference|complex RC order properties>] that
+        <math|x=<around*|(|n\<cdot\>x|)>\<cdot\>n<rsup|-1>\<less\>m\<cdot\>n<rsup|-1>=m/n>.
+        Take <math|q=m/n> then, as <math|n,m\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>\<subseteq\>\<bbb-Z\><rsub|\<bbb-C\>>>,
+        we have by [theorem: <reference|complex rational numbers
+        specification>] that <math|q\<in\>\<bbb-Q\><rsub|\<bbb-C\>>>. So we
+        have\ 
+
+        <\equation>
+          <label|eq 10.30.050>x\<less\>q\<in\>\<bbb-Q\><rsub|\<bbb-C\>>
+        </equation>
+
+        From [eq: <reference|eq 10.29.050>] we have that
+        <math|m\<leqslant\>n\<cdot\>x+1\<less\>n\<cdot\>y> [see eq:
+        <reference|eq 10.27.050>] so that <math|m\<less\>n\<cdot\>y> and by
+        multiplying both sides by <math|n<rsup|-1>> that
+        <math|q=m/n\<less\>y>. Combining this with [eq: <reference|eq
+        10.30.050>] gives finally
+
+        <\equation*>
+          x\<less\>q\<less\>y<text| where
+          <math|q\<in\>\<bbb-Q\><rsub|\<bbb-C\>>>>
+        </equation*>
+
+        <item*|<math|x=0>>Then <math|0\<less\>y> and by [corollary:
+        <reference|complex Archimedean property consequence (1)>] there
+        exists a <math|n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>> such that
+        <math|0\<less\>1/n\<less\>y>. As <math|1,n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>\<subseteq\>\<bbb-Z\><rsub|\<bbb-C\>>>
+        we have by [theorem: <reference|complex rational numbers
+        specification>] that <math|1/n\<in\>\<bbb-Q\><rsub|\<bbb-C\>>> hence
+        if we take <math|q=1/n> we have that\ 
+
+        <\equation*>
+          x\<less\>q\<less\>y<text| where
+          <math|q\<in\>\<bbb-Q\><rsub|\<bbb-C\>>>>
+        </equation*>
+      </description>
+
+      So we have proved that\ 
+
+      <\equation>
+        <label|eq 10.31.050>\<forall\>x,y\<in\>\<bbb-R\><rsub|\<bbb-C\>><text|
+        with <math|0\<leqslant\>x\<wedge\>x\<less\>y<text| there exist a
+        <math|q\<in\>\<bbb-Q\><rsub|\<bbb-C\>><text| such that
+        <math|x\<less\>q\<less\>y>>>>>>
+      </equation>
+
+      So the only case left to prove is where <math|x\<less\>0>. Then for
+      <math|y> we have either\ 
+
+      <\description>
+        <item*|<math|0\<less\>y>>Then if we tak
+        <math|q=0\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>\<subseteq\>\<bbb-Z\><rsub|\<bbb-C\>>\<subseteq\>\<bbb-Q\><rsub|\<bbb-C\>>>
+        so that\ 
+
+        <\equation*>
+          x\<less\>q\<less\>y<text| with >q\<in\>\<bbb-Q\><rsub|\<bbb-C\>>
+        </equation*>
+
+        <item*|<math|y\<leqslant\>0>>Then <math|x\<less\>y\<leqslant\>0> or
+        using [theorem: <reference|complex RC order properties>]
+        <math|0\<leqslant\>-y\<less\>-x>. Take <math|x<rprime|'>=-y> and
+        <math|y<rprime|'>=-x> then <math|0\<leqslant\>x<rprime|'>\<less\>y<rprime|'>>
+        and by [eq: <reference|eq 10.31.050>] there exists a
+        <math|q<rprime|'>\<in\>\<bbb-Q\><rsub|\<bbb-C\>>> such that
+        <math|x<rprime|'>\<less\>q<rprime|'>\<less\>y<rprime|'>>. So
+        <math|-y\<less\>q<rprime|'>\<less\>-x> or
+        <math|x\<less\>-q<rprime|'>\<less\>y>. As
+        <math|<around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-C\>>,+|\<rangle\>>> is
+        a sub group of <math|<around*|\<langle\>|\<bbb-C\>,+|\<rangle\>>> it
+        follows that<math|> <math|-q<rprime|'>\<in\>\<bbb-Q\><rsub|\<bbb-C\>>>
+        hence if we take <math|q=-q<rprime|'>> then we have\ 
+
+        <\equation*>
+          x\<less\>q\<less\>y<text| where >q\<in\>\<bbb-Q\><rsub|\<bbb-C\>>
+        </equation*>
+      </description>
+
+      <item>Finally we prove the case for the irrational numbers. By
+      [theorem: <reference|real irrational numbers>]
+      <math|\<bbb-R\>\\\<bbb-Q\><rsub|\<bbb-R\>>\<neq\>\<varnothing\>> so
+      there exist a <math|z\<in\>\<bbb-R\>\\\<bbb-Q\><rsub|\<bbb-R\>>>, then
+      from <math|x\<less\>y> we have that <math|x+z\<less\>y+z>. Using (1)
+      there exist a <math|r\<in\>\<bbb-Q\><rsub|\<bbb-R\>>> such that
+      <math|x+z\<less\>r\<less\>y+z> or <math|x\<less\>r-q\<less\>y>. Take
+      <math|q=r-z> then we have <math|x\<less\>q\<less\>y>. Assume that
+      <math|q\<in\>\<bbb-Q\><rsub|\<bbb-R\>>> then as
+      <math|z=r-q,r\<in\>\<bbb-Q\><rsub|\<bbb-R\>>> and
+      <math|<around*|\<langle\>|\<bbb-Q\><rsub|\<bbb-R\>>,+|\<rangle\>>> is a
+      sub group of <math|<around*|\<langle\>|\<bbb-R\>,+|\<rangle\>>> we have
+      that <math|z\<in\>\<bbb-Q\><rsub|\<bbb-R\>>> contradicting
+      <math|z\<in\>\<bbb-R\>\\\<bbb-Q\><rsub|\<bbb-R\>>>. So we must have
+      that <math|q\<in\>\<bbb-R\>\\\<bbb-Q\><rsub|\<bbb-R\>>> and we conclude
+      that\ 
+
+      <\equation*>
+        x\<less\>q\<less\>y<text| where <math|x\<in\>\<bbb-Q\><rsub|\<bbb-R\>>>>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  \;
 
   <subsection|Recursion and mathematical induction in <math|\<bbb-C\>>>
 
@@ -12922,7 +13355,7 @@
   </proof>
 
   <\theorem>
-    <label|comple recursion iteration><dueto|Iteration>Let <math|A> be a set
+    <label|complex recursion iteration><dueto|Iteration>Let <math|A> be a set
     and <math|f:A\<rightarrow\>A> a function then
     <math|\<forall\>n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>> there exist a
     function\ 
@@ -13362,13 +13795,380 @@
     </description>
   </proof>
 
-  \;
+  <\theorem>
+    <label|complex power properties>Let <math|n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>>
+    then we have
 
-  \;
+    <\enumerate>
+      <item>If <math|n\<neq\>0> then <math|0<rsup|n>=0> [note that by
+      definition <math|0<rsup|0>=1>]
 
-  \;
+      <item><math|1<rsup|n>=1>
 
-  \;
+      <item><math|<around*|(|-1|)><rsup|n>=1\<vee\><around*|(|-1|)><rsup|n>=-1>
+
+      <item><math|<around*|(|-1|)><rsup|2\<cdot\>n>=1>
+
+      <item><math|<around*|(|-1|)><rsup|2\<cdot\>n+1>=-1>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|n\<neq\>0> then <math|\<exists\>m\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>>
+      such that <math|n=m+1> so that <math|0<rsup|n>=0<rsup|m+1>=0\<cdot\>0<rsup|m>=0>
+
+      <item>We proceed by induction, so let\ 
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>\|1<rsup|n>=1|}>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|0\<in\>S>><math|1<rsup|0>=1> by definition, proving that
+        <math|0\<in\>S>
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>><math|1<rsup|n+1>=1\<cdot\>1<rsup|n>\<equallim\><rsub|n\<in\>S>1\<cdot\>1=1>
+        proving that <math|n+1\<in\>S>
+      </description>
+
+      <item>Again we use induction, so let\ 
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>\|<around*|(|-1|)><rsup|n>=1\<vee\><around*|(|-1|)><rsup|n>=-1|}>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|0\<in\>S>><math|<around*|(|-1|)><rsup|0>=1> proving that
+        <math|0\<in\>S>.
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>As <math|n\<in\>S> we
+        have either:
+
+        <\description>
+          <item*|<math|<around*|(|-1|)><rsup|n>=1>>Then
+          <math|<around*|(|-1|)><rsup|n+1>=<around*|(|-1|)>\<cdot\><around*|(|-1|)><rsup|n>=<around*|(|-1|)>\<cdot\>1=-1>
+          so the <math|n+1\<in\>S>
+
+          <item*|<math|<around*|(|-1|)><rsup|n>=-1>>Then
+          <math|<around*|(|-1|)><rsup|n+1>=<around*|(|-1|)>\<cdot\><around*|(|-1|)><rsup|n>=<around*|(|-1|)>\<cdot\><around*|(|-1|)>\<equallim\><rsub|<text|[theorem:
+          <reference|ring 0 1 and ->]>>1\<cdot\>1=1> so that
+          <math|n+1\<in\>S>
+        </description>
+      </description>
+
+      <item><math|<around*|(|-1|)><rsup|2\<cdot\>n>=<around*|(|-1|)><rsup|<around*|(|1+1|)>\<cdot\>n>=<around*|(|-1|)><rsup|n+n>\<equallim\><rsub|<text|[theorem:
+      <reference|complex x^(m+n)=x^n.x^m>]>><around*|(|-1|)><rsup|n>\<cdot\><around*|(|-1|)><rsup|n>\<equallim\><rsub|<text|[theorem:
+      <reference|ring 0 1 and ->] and (3)>><rsup|>1>
+
+      <item><math|<around*|(|-1|)><rsup|2\<cdot\>n+1>=<around*|(|-1|)>\<cdot\><around*|(|-1|)><rsup|2\<cdot\>n>\<equallim\><rsub|<around*|(|4|)>><around*|(|-1|)>\<cdot\>1=-1>
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|complex power and inequality>For <math|\<bbb-R\><rsub|\<bbb-C\>>>
+    we have\ 
+
+    <\enumerate>
+      <item><math|\<forall\>\<alpha\>\<in\>\<bbb-R\><rsub|\<bbb-C\>>> with
+      <math|0\<less\>\<zeta\>\<less\>1> and
+      <math|n\<in\><around*|{|1,\<ldots\>,\<infty\>|}>> that
+      <math|0\<less\>\<alpha\><rsup|n>\<less\>1>
+
+      <item><math|\<forall\>x\<in\>\<bbb-R\><rsub|\<bbb-C\>>> with<math|>
+      <math|0\<less\>\<alpha\>\<less\>1> and
+      <math|n\<in\><around*|{|2,\<ldots\>,\<infty\>|}>> that
+      <math|0\<less\>\<alpha\><rsup|n>\<less\>x>
+
+      <item><math|\<forall\>\<alpha\>,\<beta\>\<in\>\<bbb-C\>> such that
+      <math|1\<leqslant\>\<alpha\>> and <math|\<alpha\>\<in\>\<bbb-N\><rsub|\<bbb-C\>>>
+      we have:
+
+      <\enumerate>
+        <item>If <math|\<alpha\>\<less\>\<beta\>> then
+        <math|\<alpha\>\<less\>\<beta\><rsup|n>>
+
+        <item>If <math|\<alpha\>\<leqslant\>\<beta\>> then
+        <math|\<alpha\>\<less\>\<beta\><rsup|n>>
+      </enumerate>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>We proof this by induction on <math|n>. So let
+      <math|S=<around*|{|n\<in\><around*|{|1,\<ldots\>,\<infty\>|}>\|0\<less\>\<alpha\><rsup|n>\<less\>1|}>>
+      then we have:
+
+      <\description>
+        <item*|<math|1\<in\>S>>As <math|0\<less\>\<alpha\>\<less\>1> we have
+        by (7.a) that <math|0=0\<cdot\>\<alpha\>\<less\>\<alpha\><rsup|1>=\<alpha\>\<less\>1\<cdot\>\<alpha\>>
+        so \ that <math|0\<less\>\<alpha\><rsup|1>\<less\>\<alpha\>> proving
+        that <math|1\<in\>S>
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>As <math|n\<in\>S> we
+        have <math|0\<less\>\<alpha\><rsup|n>\<less\>1>, so using [theorem:
+        <reference|complex RC order properties>] we have that
+        <math|0=0\<cdot\>\<alpha\>\<less\>\<alpha\><rsup|n>\<cdot\>\<alpha\>\<less\>1\<cdot\>\<alpha\>=\<alpha\>\<less\>1>
+        or <math|0\<less\>\<alpha\><rsup|n+1>\<less\>1>. Hence
+        <math|n+1\<in\>\<b-S\>>
+      </description>
+
+      Proving that <math|S=<around*|{|1,\<ldots\>,\<infty\>|}>> or
+      <math|\<forall\>n\<in\><around*|{|1,\<ldots\>,\<infty\>|}>> we have
+      <math|0\<less\>\<alpha\><rsup|n>\<less\>1>
+
+      <item>As <math|n\<in\><around*|{|2,\<ldots\>,\<infty\>|}>> we have
+      <math|2\<leqslant\>n\<Rightarrow\>1=2+<around*|(|-1|)>\<leqslant\>n+<around*|(|-1|)>=n-1>
+      so that <math|<around*|(|n-1|)>\<in\><around*|{|2,\<ldots\>,\<infty\>|}>>.
+      Using <math|<around*|(|1|)>> we have
+      <math|0\<less\>\<alpha\><rsup|n-1>\<less\>1> which as
+      <math|0\<less\>\<alpha\>> gives by [theorem: <reference|complex RC
+      order properties>]
+
+      <\equation*>
+        0\<less\>0\<cdot\>\<alpha\>\<less\>\<alpha\><rsup|n-1>\<cdot\>\<alpha\>\<less\>1\<cdot\>\<alpha\>=\<alpha\>.
+      </equation*>
+
+      or as <math|\<alpha\><rsup|n-1>\<cdot\>\<alpha\>=\<alpha\><rsup|n>>
+      that <math|0\<less\>\<alpha\><rsup|n>\<less\>\<alpha\>>.
+
+      <item> Let <math|\<alpha\>,\<beta\>\<in\>\<bbb-R\><rsub|\<bbb-C\>>>
+      such that <math|1\<leqslant\>\<alpha\>> and
+      <math|n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>>
+
+      <\enumerate>
+        <item>If <math|\<alpha\>\<less\>\<beta\>> we have to prove that
+        <math|\<alpha\>\<less\>\<beta\><rsup|n>>. Let
+        <math|S=<around*|{|n\<in\><around*|{|1,\<ldots\>,n|}>\|\<alpha\>\<less\>\<beta\><rsup|n>|}>>
+        then we have:
+
+        <\description>
+          <item*|<math|1\<in\>S>>As <math|\<alpha\>\<less\>\<beta\>=\<beta\><rsup|1>>
+          we have that <math|1\<in\>S>
+
+          <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>As
+          <math|1\<leqslant\>\<alpha\>\<less\>\<beta\>\<Rightarrow\>1\<less\>\<beta\>>
+          we have by [theorem: <reference|complex RC order properties>] that
+
+          <\equation>
+            <label|eq 10.42.050>\<alpha\>=1\<cdot\>\<alpha\>\<less\>\<beta\>\<cdot\>\<alpha\>=\<alpha\>\<cdot\>\<beta\>
+          </equation>
+
+          As <math|n\<in\>S> we have that
+          <math|\<alpha\>\<less\>\<beta\><rsup|n>> which by [theorem:
+          <reference|complex RC order properties>] gives
+          <math|\<alpha\>\<cdot\>\<beta\>\<less\>\<beta\><rsup|n>\<cdot\>\<beta\>=\<beta\><rsup|n+1>>,
+          combining this with [eq: <reference|eq 10.42.050>] proves
+          <math|\<alpha\>\<less\>\<beta\><rsup|n+1>>. So <math|n+1\<in\>S>.\ 
+        </description>
+
+        So <math|S=<around*|{|1,\<ldots\>,n|}>=\<bbb-N\><rsub|\<bbb-C\>>>
+        hence <math|\<forall\>n\<in\>\<bbb-N\><rsub|\<bbb-C\>>> we have
+        <math|\<alpha\>\<less\>\<beta\><rsup|n>>.
+
+        <item>If <math|\<alpha\>\<leqslant\>\<beta\>> we have to prove that
+        <math|\<alpha\>\<leqslant\>\<beta\><rsup|n>>. Let
+        <math|S=<around*|{|n\<in\><around*|{|1,\<ldots\>,n|}>\|\<alpha\>\<leqslant\>\<beta\><rsup|n>|}>>
+        then we have:
+
+        <\description>
+          <item*|<math|1\<in\>S>>As <math|\<alpha\>\<leqslant\>\<beta\>=\<beta\><rsup|1>>
+          we have that <math|1\<in\>S>
+
+          <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>As
+          <math|1\<leqslant\>\<alpha\>\<leqslant\>\<beta\>\<Rightarrow\>1\<leqslant\>\<beta\>>
+          we have by [theorem: <reference|complex RC order properties>] that
+
+          <\equation>
+            <label|eq 10.43.050>\<alpha\>=1\<cdot\>\<alpha\>\<leqslant\>\<beta\>\<cdot\>\<alpha\>=\<alpha\>\<cdot\>\<beta\>
+          </equation>
+
+          As <math|n\<in\>S> we have that
+          <math|\<alpha\>\<leqslant\>\<beta\><rsup|n>> which by [theorem:
+          <reference|complex RC order properties>] gives
+          <math|\<alpha\>\<cdot\>\<beta\>\<leqslant\>\<beta\><rsup|n>\<cdot\>\<beta\>=\<beta\><rsup|n+1>>,
+          combining this with [eq: <reference|eq 10.43.050>] proves
+          <math|\<alpha\>\<leqslant\>\<beta\><rsup|n+1>>. So
+          <math|n+1\<in\>S>.
+        </description>
+
+        So <math|S=<around*|{|1,\<ldots\>,n|}>=\<bbb-N\>> hence
+        <math|\<forall\>n\<in\>\<bbb-N\>> we have
+        <math|\<alpha\>\<leqslant\>\<beta\><rsup|n>>.
+      </enumerate>
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|complex n\<less\>2^n><math|\<forall\>n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>>
+    we have that <math|n\<less\>2<rsup|n>>\ 
+  </theorem>
+
+  <\proof>
+    This is proved by induction so let <math|S=<around*|{|n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>\|n\<less\>2<rsup|n>|}>>
+    then we have\ 
+
+    <\description>
+      <item*|<math|0\<in\>S>>As <math|n=0\<less\>1=2<rsup|0>> we have that
+      <math|0\<in\>S>
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>For <math|n+1> we have
+      the following cases to consider:
+
+      <\description>
+        <item*|<math|n+1=1>>Then <math|n+1=1\<less\>2=2<rsup|1>=2<rsup|n+1>>
+        proving that in this case <math|n+1\<in\>S>
+
+        <item*|<math|1\<less\>n+1>>Then by [theorem: <reference|complex
+        x\<less\>y=\<gtr\>x+1\<less\>=y>] we have <math|1+1\<leqslant\>n+1>
+        so that <math|1\<leqslant\>n>, adding <math|n> to both sides gives
+        then <math|n+1\<leqslant\>n+n=<around*|(|1+1|)>\<cdot\>n=2\<cdot\>n>.
+        Further as <math|n\<in\>S> we have <math|n\<less\>2<rsup|n>> so that
+        <math|2\<cdot\>n\<less\>2\<cdot\>2<rsup|n>=2<rsup|n+1>>, hence we
+        have <math|n+1\<less\>2<rsup|n+1>>, proving that <math|n+1\<in\>S>.
+      </description>
+    </description>
+  </proof>
+
+  <\corollary>
+    <label|complex a\<less\>2^n><math|\<forall\>x\<in\>\<bbb-R\><rsub|\<bbb-C\>>>
+    there exists a <math|n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>> such that
+    <math|x\<less\>2<rsup|n>>
+  </corollary>
+
+  <\proof>
+    Let <math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>> then by [corollary:
+    <reference|complex Archimedean property consequence (1)>] there exist a
+    <math|n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>> such that <math|x\<less\>n>,
+    using [theorem: <reference|complex n\<less\>2^n>]
+    <math|n\<less\>2<rsup|n>> so we have <math|x\<less\>2<rsup|n>.>
+  </proof>
+
+  <\lemma>
+    <label|complex (x^n-1)\<gtr\>=n.(x-1)>Let
+    <math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>> with <math|1\<less\>x> then
+    <math|\<forall\>n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>> we have
+
+    <\equation*>
+      n\<cdot\><around*|(|x-1|)>\<leqslant\>x<rsup|n>-1
+    </equation*>
+  </lemma>
+
+  <\proof>
+    We prove this by induction, so let <math|S=<around*|{|n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>\|n\<cdot\><around*|(|x-1|)>\<leqslant\>x<rsup|n>-1|}>>
+    then we have:
+
+    <\description>
+      <item*|<math|0\<in\>S>>Then <math|n\<cdot\><around*|(|x-1|)>=0\<cdot\><around*|(|x-1|)>=0\<leqslant\>0=1-1=x<rsup|0>-1=x<rsup|n>-1>
+      proving that <math|0\<in\>S>.
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Then as <math|n\<in\>S>
+      we have <math|><math|n\<cdot\><around*|(|x-1|)>\<leqslant\>x<rsup|n>-1>
+      which as <math|0\<less\>x> prove that\ 
+
+      <\equation>
+        <label|eq 10.44.050>x\<cdot\>n\<cdot\><around*|(|x-1|)>\<leqslant\>x\<cdot\><around*|(|x<rsup|n>-1|)>
+      </equation>
+
+      As <math|1\<less\>x> we have that <math|0\<less\>x-1\<Rightarrowlim\><rsub|0\<leqslant\>n>0\<less\>n\<cdot\><around*|(|x-1|)>>
+      so that
+
+      <\equation*>
+        n\<cdot\><around*|(|x-1|)>=1\<cdot\>n\<cdot\><around*|(|x-1|)>\<less\>x\<cdot\>n\<cdot\><around*|(|x-1|)>
+      </equation*>
+
+      which combined with [eq: <reference|eq 9.116.041>] proves that\ 
+
+      <\equation>
+        <label|eq 10.45.050>n\<cdot\><around*|(|x-1|)>\<leqslant\>x\<cdot\><around*|(|x<rsup|n>-1|)>
+      </equation>
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x<rsup|n+1>-1>|<cell|=>|<cell|x\<cdot\>x<rsup|n>-1>>|<row|<cell|>|<cell|=>|<cell|x\<cdot\>x<rsup|n>-x+x-1>>|<row|<cell|>|<cell|=>|<cell|x\<cdot\><around*|(|x<rsup|n>-1|)>+<around*|(|x-1|)>>>|<row|<cell|>|<cell|\<geqslant\><rsub|<text|[eq:
+        <reference|eq 10.45.050>]>>>|<cell|n\<cdot\><around*|(|x-1|)>+<around*|(|x-1|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|n+1|)>\<cdot\><around*|(|x-1|)>>>>>
+      </eqnarray*>
+
+      proving that <math|n+1\<in\>S>.
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|complex x^n\<gtr\>n if x\<gtr\>1 (R)>If
+    <math|m\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>> and <math|x\<in\>\<bbb-C\>>
+    with <math|1\<less\>x> then <math|\<exists\>n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>><rsub|>>
+    such that <math|m\<less\>x<rsup|n>>
+  </theorem>
+
+  <\proof>
+    For <math|m\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>> we have either:
+
+    <\description>
+      <item*|<math|m=1>>Then <math|m=0\<less\>1=x<rsup|0>> proving the
+      theorem in this case.
+
+      <item*|<math|m=1>>Then <math|m=1\<less\>x=x<rsup|1>> proving the
+      theorem in this case.
+
+      <item*|<math|1\<less\>m>>Then <math|0\<less\>m-1> and as
+      <math|0\<less\>x-1\<Rightarrow\><around*|(|x-1|)><rsup|-1>> so that
+      <math|<around*|(|m-1|)>/<around*|(|x-1|)>\<gtr\>0>. By [corollary:
+      <reference|complex Archimedean property consequence (1)>] there exist a
+      <math|n<rprime|'>\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>> such that
+      <math|<around*|(|m-1|)>/<around*|(|x-1|)>\<less\>n>. As
+      <math|0\<less\>x-1> we have <math|m-1\<less\>n\<cdot\><around*|(|x-1|)>>,
+      by [lemma: <reference|real (x^n-1)\<gtr\>=n.(x-1)>]
+      <math|n\<cdot\><around*|(|x-1|)>\<leqslant\><around*|(|x<rsup|n>-1|)>>,
+      hence <math|m-1\<leqslant\>x<rsup|n>-1> or \ <math|m\<less\>x<rsup|n>>,
+      proving the theorem in this case.
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|complex n\<less\>m and 0\<less\>x\<less\>1 then x^n\<less\>x^m>If
+    <math|x\<in\>\<bbb-C\>> with <math|0\<less\>x\<less\>1> and
+    <math|n,m\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>> such that <math|n\<less\>m>
+    then <math|x<rsup|m>\<less\>x<rsup|n>>
+  </theorem>
+
+  <\proof>
+    We prove this by induction, let <math|m\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>>
+    and take <math|S<rsub|m>=<around*|{|n\<in\><around*|{|1,\<ldots\>,\<infty\>|}>\|x<rsup|m+n>\<less\>x<rsup|m>|}>>
+    then we have:\ 
+
+    <\description>
+      <item*|<math|1\<in\>S<rsub|m>>>As <math|0\<less\>x> we have by
+      [theorem: <reference|complex power is internal>] that
+      <math|0\<less\>x<rsup|m>>, hence from <math|x\<less\>1> we have that
+      <math|x<rsup|m+1>=x\<cdot\>x<rsup|m>\<less\>1\<cdot\>x<rsup|m>=x<rsup|m>>,
+      proving that <math|1\<in\>S<rsub|m>>.
+
+      <item*|<math|n\<in\>S<rsub|m>\<Rightarrow\>n+1\<in\>S<rsub|m>>>As
+      <math|x\<less\>1> and by [theorem: <reference|complex power is
+      internal>] <math|0\<less\>x<rsup|m+n>> we have that
+      <math|x<rsup|m+<around*|(|n+1|)>>=x\<cdot\>x<rsup|m+n>\<less\>x<rsup|m+n>\<Rightarrowlim\><rsub|n\<in\>S<rsub|m>\<Rightarrow\>x<rsup|m+n>\<less\>x<rsup|m>>x<rsup|m+<around*|(|n+1|)>>\<less\>x<rsup|m>>
+      proving that <math|n+1\<in\>S<rsub|m>>.
+    </description>
+
+    Using Mathematical induction [see theorem: <reference|complex
+    mathematical induction>] we have that
+    <math|S<rsub|m>=<around*|{|1,\<ldots\>,\<infty\>|}><rsub|>>.So take
+    <math|n,m\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> with <math|n\<less\>m> then
+    <math|k=m-n\<gtr\>0\<Rightarrow\>k\<geqslant\>1> so that
+    <math|k\<in\><around*|{|1,\<ldots\>,\<infty\>|}>=S<rsub|n>> hence
+    <math|x<rsup|m>=x<rsup|n+k>\<less\>x<rsup|n><rsup|> completing the
+    proof.>
+  </proof>
+
+  <subsection|The square root in <math|\<bbb-R\><rsub|\<bbb-C\>>>>
 
   \;
 
@@ -13454,44 +14254,59 @@
     <associate|auto-48|<tuple|10.2.4|?>>
     <associate|auto-49|<tuple|10.2.5|?>>
     <associate|auto-5|<tuple|7.2|?>>
-    <associate|auto-50|<tuple|10.3.2|?>>
+    <associate|auto-50|<tuple|10.2.6|?>>
     <associate|auto-6|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>>|?>>
     <associate|auto-7|<tuple|absolute value|?>>
     <associate|auto-8|<tuple|<with|mode|<quote|math>|<around*|\||x|\|>>|?>>
     <associate|auto-9|<tuple|<with|mode|<quote|math>|m\|n>|?>>
     <associate|compelx|<tuple|10.9|?>>
-    <associate|comple recursion iteration|<tuple|10.29|?>>
+    <associate|comple recursion iteration|<tuple|10.34|?>>
+    <associate|complex (x^n-1)\<gtr\>=n.(x-1)|<tuple|10.48|?>>
     <associate|complex 0\<less\>1|<tuple|10.15|?>>
-    <associate|complex Archimedean property|<tuple|10.24|?>>
-    <associate|complex QC is not conditional complete|<tuple|10.18|?>>
-    <associate|complex RC is conditional complete|<tuple|10.19|?>>
+    <associate|complex Archimedean property|<tuple|10.26|?>>
+    <associate|complex Archimedean property consequence (1)|<tuple|10.27|?>>
+    <associate|complex Archimedean property consequence (2)|<tuple|10.28|?>>
+    <associate|complex NC and ZC are well ordered|<tuple|10.20|?>>
+    <associate|complex NC is well ordered|<tuple|10.21|?>>
+    <associate|complex QC is not conditional complete|<tuple|10.19|?>>
+    <associate|complex RC is conditional complete|<tuple|10.20|?>>
     <associate|complex RC order (1)|<tuple|10.11|?>>
     <associate|complex RC order (2)|<tuple|10.12|?>>
     <associate|complex RC order properties|<tuple|10.17|?>>
+    <associate|complex a\<less\>2^n|<tuple|10.47|?>>
     <associate|complex complement|<tuple|10.4|?>>
-    <associate|complex definition by recursion (1)|<tuple|10.32|?>>
-    <associate|complex definition by recursion (2)|<tuple|10.33|?>>
+    <associate|complex definition by recursion (1)|<tuple|10.37|?>>
+    <associate|complex definition by recursion (2)|<tuple|10.38|?>>
+    <associate|complex densitiy theorem|<tuple|10.29|?>>
     <associate|complex embedding|<tuple|10.6|?>>
     <associate|complex field|<tuple|10.2|?>>
     <associate|complex i^2=-1|<tuple|10.8|?>>
-    <associate|complex irrational numbers|<tuple|10.20|?>>
-    <associate|complex mathematical induction|<tuple|10.27|?>>
+    <associate|complex irrational numbers|<tuple|10.22|?>>
+    <associate|complex mathematical induction|<tuple|10.32|?>>
+    <associate|complex n\<less\>2^n|<tuple|10.46|?>>
+    <associate|complex n\<less\>m and 0\<less\>x\<less\>1 then
+    x^n\<less\>x^m|<tuple|10.50|?>>
     <associate|complex notation|<tuple|10.3|?>>
     <associate|complex numbers|<tuple|10.1|?>>
     <associate|complex order isomorphisms|<tuple|10.14|?>>
-    <associate|complex power|<tuple|10.34|?>>
-    <associate|complex power is internal|<tuple|10.36|?>>
-    <associate|complex power of inverse|<tuple|10.38|?>>
+    <associate|complex power|<tuple|10.39|?>>
+    <associate|complex power and inequality|<tuple|10.45|?>>
+    <associate|complex power is internal|<tuple|10.41|?>>
+    <associate|complex power of inverse|<tuple|10.43|?>>
+    <associate|complex power properties|<tuple|10.44|?>>
     <associate|complex rational numbers specification|<tuple|10.7|?>>
-    <associate|complex recursion|<tuple|10.28|?>>
-    <associate|complex recursion step|<tuple|10.30|?>>
-    <associate|complex recursion step (2)|<tuple|10.31|?>>
-    <associate|complex sup(S+T) and inf(S+T)|<tuple|10.21|?>>
-    <associate|complex sup(S+s) inf(T+t)|<tuple|10.22|?>>
-    <associate|complex x\<less\>y=\<gtr\>x+1\<less\>=y|<tuple|10.23|?>>
-    <associate|complex x^(m+n)=x^n.x^m|<tuple|10.37|?>>
-    <associate|complex x^0,z^1,z^2|<tuple|10.35|?>>
-    <associate|complex {n,..,m}|<tuple|10.26|?>>
+    <associate|complex recursion|<tuple|10.33|?>>
+    <associate|complex recursion iteration|<tuple|10.34|?>>
+    <associate|complex recursion step|<tuple|10.35|?>>
+    <associate|complex recursion step (2)|<tuple|10.36|?>>
+    <associate|complex sup(S+T) and inf(S+T)|<tuple|10.23|?>>
+    <associate|complex sup(S+s) inf(T+t)|<tuple|10.24|?>>
+    <associate|complex x\<less\>x+1 and x-1\<less\>x|<tuple|10.18|?>>
+    <associate|complex x\<less\>y=\<gtr\>x+1\<less\>=y|<tuple|10.25|?>>
+    <associate|complex x^(m+n)=x^n.x^m|<tuple|10.42|?>>
+    <associate|complex x^0,z^1,z^2|<tuple|10.40|?>>
+    <associate|complex x^n\<gtr\>n if x\<gtr\>1 (R)|<tuple|10.49|?>>
+    <associate|complex {n,..,m}|<tuple|10.31|?>>
     <associate|eq 10.1.048|<tuple|10.1|?>>
     <associate|eq 10.10.048|<tuple|10.10|?>>
     <associate|eq 10.11.048|<tuple|10.11|?>>
@@ -13502,26 +14317,36 @@
     <associate|eq 10.16.050|<tuple|10.16|?>>
     <associate|eq 10.17.046|<tuple|10.17|?>>
     <associate|eq 10.18.046|<tuple|10.18|?>>
-    <associate|eq 10.18.049|<tuple|10.26|?>>
-    <associate|eq 10.19.049|<tuple|10.27|?>>
+    <associate|eq 10.18.049|<tuple|10.32|?>>
+    <associate|eq 10.19.049|<tuple|10.33|?>>
     <associate|eq 10.19.050|<tuple|10.19|?>>
     <associate|eq 10.2.048|<tuple|10.2|?>>
-    <associate|eq 10.20.049|<tuple|10.28|?>>
+    <associate|eq 10.20.049|<tuple|10.34|?>>
     <associate|eq 10.20.050|<tuple|10.20|?>>
-    <associate|eq 10.21.049|<tuple|10.29|?>>
+    <associate|eq 10.21.049|<tuple|10.35|?>>
     <associate|eq 10.21.050|<tuple|10.21|?>>
-    <associate|eq 10.22.049|<tuple|10.30|?>>
+    <associate|eq 10.22.049|<tuple|10.36|?>>
     <associate|eq 10.22.050|<tuple|10.22|?>>
-    <associate|eq 10.23.049|<tuple|10.31|?>>
+    <associate|eq 10.23.049|<tuple|10.37|?>>
     <associate|eq 10.23.050|<tuple|10.23|?>>
-    <associate|eq 10.24.049|<tuple|10.32|?>>
+    <associate|eq 10.24.049|<tuple|10.38|?>>
     <associate|eq 10.24.050|<tuple|10.24|?>>
-    <associate|eq 10.25.049|<tuple|10.33|?>>
+    <associate|eq 10.25.049|<tuple|10.39|?>>
     <associate|eq 10.25.050|<tuple|10.25|?>>
-    <associate|eq 10.26.049|<tuple|10.34|?>>
-    <associate|eq 10.27.049|<tuple|10.35|?>>
+    <associate|eq 10.26.049|<tuple|10.40|?>>
+    <associate|eq 10.26.050|<tuple|10.26|?>>
+    <associate|eq 10.27.049|<tuple|10.41|?>>
+    <associate|eq 10.27.050|<tuple|10.27|?>>
+    <associate|eq 10.28.050|<tuple|10.28|?>>
+    <associate|eq 10.29.050|<tuple|10.29|?>>
     <associate|eq 10.3.048|<tuple|10.3|?>>
+    <associate|eq 10.30.050|<tuple|10.30|?>>
+    <associate|eq 10.31.050|<tuple|10.31|?>>
     <associate|eq 10.4.048|<tuple|10.4|?>>
+    <associate|eq 10.42.050|<tuple|10.42|?>>
+    <associate|eq 10.43.050|<tuple|10.43|?>>
+    <associate|eq 10.44.050|<tuple|10.44|?>>
+    <associate|eq 10.45.050|<tuple|10.45|?>>
     <associate|eq 10.5.048|<tuple|10.5|?>>
     <associate|eq 10.6.048|<tuple|10.6|?>>
     <associate|eq 10.7.048|<tuple|10.7|?>>
@@ -13596,22 +14421,22 @@
     <associate|eq 9.102.041|<tuple|9.97|?>>
     <associate|eq 9.103.040|<tuple|9.104|?>>
     <associate|eq 9.103.041|<tuple|9.98|?>>
-    <associate|eq 9.104.040|<tuple|9.105|?>>
+    <associate|eq 9.104.040|<tuple|10.26|?>>
     <associate|eq 9.104.041|<tuple|9.99|?>>
     <associate|eq 9.105.041|<tuple|9.100|?>>
     <associate|eq 9.106.041|<tuple|9.101|?>>
     <associate|eq 9.11.029|<tuple|9.9|?>>
     <associate|eq 9.11.034|<tuple|9.11|?>>
-    <associate|eq 9.111.041|<tuple|9.106|?>>
+    <associate|eq 9.111.041|<tuple|10.27|?>>
     <associate|eq 9.111.048|<tuple|9.111|?>>
-    <associate|eq 9.112.041|<tuple|9.107|?>>
+    <associate|eq 9.112.041|<tuple|10.28|?>>
     <associate|eq 9.112.048|<tuple|9.112|?>>
-    <associate|eq 9.113.041|<tuple|9.108|?>>
+    <associate|eq 9.113.041|<tuple|10.29|?>>
     <associate|eq 9.113.048|<tuple|9.113|?>>
-    <associate|eq 9.114.041|<tuple|9.109|?>>
-    <associate|eq 9.115.041|<tuple|9.110|?>>
-    <associate|eq 9.116.041|<tuple|9.123|?>>
-    <associate|eq 9.117.041|<tuple|9.124|?>>
+    <associate|eq 9.114.041|<tuple|10.30|?>>
+    <associate|eq 9.115.041|<tuple|10.31|?>>
+    <associate|eq 9.116.041|<tuple|10.44|?>>
+    <associate|eq 9.117.041|<tuple|10.45|?>>
     <associate|eq 9.118.042|<tuple|9.114|?>>
     <associate|eq 9.119.042|<tuple|9.115|?>>
     <associate|eq 9.12.029|<tuple|9.10|?>>
@@ -13620,9 +14445,9 @@
     <associate|eq 9.123.042|<tuple|9.118|?>>
     <associate|eq 9.124.042|<tuple|9.119|?>>
     <associate|eq 9.125.042|<tuple|9.120|?>>
-    <associate|eq 9.125.046|<tuple|9.121|?>>
+    <associate|eq 9.125.046|<tuple|10.42|?>>
     <associate|eq 9.126.044|<tuple|9.125|?>>
-    <associate|eq 9.126.046|<tuple|9.122|?>>
+    <associate|eq 9.126.046|<tuple|10.43|?>>
     <associate|eq 9.127.044|<tuple|9.126|?>>
     <associate|eq 9.128.044|<tuple|9.127|?>>
     <associate|eq 9.129.044|<tuple|9.128|?>>
@@ -13712,11 +14537,11 @@
     <associate|eq 9.84.036|<tuple|9.82|?>>
     <associate|eq 9.85.036|<tuple|9.83|?>>
     <associate|eq 9.86.036|<tuple|9.84|?>>
-    <associate|eq 9.87.036|<tuple|10.19|?>>
-    <associate|eq 9.88.036|<tuple|10.20|?>>
-    <associate|eq 9.89.036|<tuple|10.21|?>>
+    <associate|eq 9.87.036|<tuple|9.85|?>>
+    <associate|eq 9.88.036|<tuple|9.86|?>>
+    <associate|eq 9.89.036|<tuple|9.87|?>>
     <associate|eq 9.89.047|<tuple|9.89|?>>
-    <associate|eq 9.90.036|<tuple|10.22|?>>
+    <associate|eq 9.90.036|<tuple|9.88|?>>
     <associate|eq 9.90.047|<tuple|9.90|?>>
     <associate|eq 9.96.040|<tuple|9.91|?>>
     <associate|eq 9.97.040|<tuple|9.92|?>>
@@ -13819,7 +14644,7 @@
     <associate|rational totally ordered|<tuple|8.24|?>>
     <associate|rational x-y|<tuple|8.9|?>>
     <associate|rational {0}|<tuple|8.16|?>>
-    <associate|real (x^n-1)\<gtr\>=n.(x-1)|<tuple|9.86|?>>
+    <associate|real (x^n-1)\<gtr\>=n.(x-1)|<tuple|10.48|?>>
     <associate|real -(a.b)=(-a).b=(a.(-b)|<tuple|9.29|?>>
     <associate|real 0\<less\>1|<tuple|9.42|?>>
     <associate|real 0\<less\>=a,b and a+b=0 then a=0=b|<tuple|9.47|?>>
@@ -13827,8 +14652,8 @@
     0\<less\>x^n\<less\>e|<tuple|9.89|?>>
     <associate|real 1.a=a for positive numbers|<tuple|9.21|?>>
     <associate|real Archimedean property|<tuple|9.64|?>>
-    <associate|real Archimedean property consequence (1)|<tuple|9.65|?>>
-    <associate|real Archimedean property consequence (2)|<tuple|9.66|?>>
+    <associate|real Archimedean property consequence (1)|<tuple|10.25|?>>
+    <associate|real Archimedean property consequence (2)|<tuple|10.28|?>>
     <associate|real Dedekind's cut|<tuple|9.1|?>>
     <associate|real NR|<tuple|9.58|?>>
     <associate|real NR properties|<tuple|9.60|?>>
@@ -13843,7 +14668,7 @@
     <associate|real ZR properties|<tuple|9.57|?>>
     <associate|real a.(b+g) where b or g is negative|<tuple|9.30|?>>
     <associate|real a.b=b.a positive numbers|<tuple|9.22|?>>
-    <associate|real a\<less\>2^n|<tuple|9.85|?>>
+    <associate|real a\<less\>2^n|<tuple|10.47|?>>
     <associate|real a\<less\>a+1 and a-1\<less\>a|<tuple|9.46|?>>
     <associate|real a^-1|<tuple|9.31|?>>
     <associate|real a_r.a_s=a_r.s|<tuple|9.35|?>>
@@ -13851,7 +14676,7 @@
     <associate|real conditional complete|<tuple|9.51|?>>
     <associate|real definition by recursion (1)|<tuple|9.75|?>>
     <associate|real definition by recursion (2)|<tuple|9.76|?>>
-    <associate|real densitiy theorem|<tuple|9.67|?>>
+    <associate|real densitiy theorem|<tuple|10.29|?>>
     <associate|real distributivity|<tuple|9.24|?>>
     <associate|real division of real numbers in positive and negative
     numbers|<tuple|9.17|?>>
@@ -13868,9 +14693,9 @@
     <associate|real lemma for sum operator|<tuple|9.13|?>>
     <associate|real mathematical induction|<tuple|9.70|?>>
     <associate|real multiplication operator|<tuple|9.28|?>>
-    <associate|real n\<less\>2^n|<tuple|9.84|?>>
+    <associate|real n\<less\>2^n|<tuple|10.46|?>>
     <associate|real n\<less\>m and 0\<less\>x\<less\>1 then
-    x^n\<less\>x^m|<tuple|9.88|?>>
+    x^n\<less\>x^m|<tuple|10.50|?>>
     <associate|real natural numbers, integers and rational
     numbers|<tuple|9.61|?>>
     <associate|real negastive cut of rational cut|<tuple|9.11|?>>
@@ -13881,9 +14706,9 @@
     <associate|real ordered field|<tuple|9.45|?>>
     <associate|real positive negative numbers|<tuple|9.16|?>>
     <associate|real power|<tuple|9.77|?>>
-    <associate|real power and inequality|<tuple|9.79|?>>
+    <associate|real power and inequality|<tuple|10.45|?>>
     <associate|real power of inverse|<tuple|9.82|?>>
-    <associate|real power properties|<tuple|9.83|?>>
+    <associate|real power properties|<tuple|10.44|?>>
     <associate|real power properties (1)|<tuple|9.78|?>>
     <associate|real product is internal|<tuple|9.20|?>>
     <associate|real properties positive numbers|<tuple|9.38|?>>
@@ -13906,11 +14731,11 @@
     <associate|real square root of product|<tuple|9.97|?>>
     <associate|real strict order relation definition|<tuple|9.39|?>>
     <associate|real sum is a operator|<tuple|9.14|?>>
-    <associate|real sup(S+T) and inf(S+T)|<tuple|10.21|?>>
-    <associate|real sup(S+s) inf(T+t)|<tuple|10.22|?>>
+    <associate|real sup(S+T) and inf(S+T)|<tuple|9.54|?>>
+    <associate|real sup(S+s) inf(T+t)|<tuple|9.55|?>>
     <associate|real totally ordered|<tuple|9.43|?>>
     <associate|real x\<less\>y=\<gtr\>x+1\<less\>=y|<tuple|9.63|?>>
-    <associate|real x^n\<gtr\>n if x\<gtr\>1 (R)|<tuple|9.87|?>>
+    <associate|real x^n\<gtr\>n if x\<gtr\>1 (R)|<tuple|10.49|?>>
     <associate|real {n,..,m}|<tuple|9.69|?>>
     <associate|reals the set of reals are non empty|<tuple|9.5|?>>
     <associate|sign function|<tuple|8.15|?>>
