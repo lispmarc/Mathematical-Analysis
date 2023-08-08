@@ -3749,7 +3749,7 @@
 
   <\proof>
     Let <math|a\<in\>A> and use the recursion [theorem:
-    <reference|recursion>] to find a function\ 
+    <reference|recursion>] to find a <with|font-series|bold|unique >function\ 
 
     <\equation*>
       \<lambda\><rsub|a>:\<bbb-N\><rsub|0>\<rightarrow\>A<text| such that
