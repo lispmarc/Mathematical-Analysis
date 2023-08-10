@@ -10970,7 +10970,102 @@
     <math|\<lambda\><around*|(|n|)>=\<lambda\><around*|(|<around*|(|n-1|)>+1|)>=g<around*|(|n-1,\<lambda\><around*|(|n-1|)>|)>>.
   </proof>
 
-  The two previous theorems gives a way of defining functions by recursions
+  <\theorem>
+    <label|complex recursion step form finite>Let <math|A> be a set,
+    <math|a\<in\>A>, <math|n\<in\>\<bbb-N\><rsub|0>> and
+    <math|g:<around*|{|0,\<ldots\>,n-1|}>\<times\>A\<rightarrow\>A> a
+    function then there exists a <with|font-series|bold|unique> function
+    <math|\<lambda\>:<around*|{|0,\<ldots\>,n|}>\<rightarrow\>A> satisfying\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<lambda\><around*|(|0|)>>|<cell|=>|<cell|a>>|<row|<cell|\<forall\>i\<in\><around*|{|0,\<ldots\>,n-1|}><text|
+      we have >\<lambda\><around*|(|i+1|)>>|<cell|=>|<cell|g<around*|(|i,\<lambda\><around*|(|i|)>|)>>>>>
+    </eqnarray*>
+  </theorem>
+
+  <\proof>
+    Define
+
+    <\equation*>
+      g<rprime|'>:\<bbb-N\><rsub|0>\<times\>A\<rightarrow\>A<text| by
+      >g<rprime|'><around*|(|i,x|)>=<choice|<tformat|<table|<row|<cell|g<around*|(|i,x|)><text|
+      if >i\<in\><around*|{|0,\<ldots\>,n-1|}>>>|<row|<cell|x<text| if
+      >i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>>>>>
+    </equation*>
+
+    then by [corollary: <reference|recursion step form (3)>] there exists a
+    <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>A> such that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<beta\><around*|(|0|)>>|<cell|=>|<cell|a<eq-number><label|eq
+      10.44.053>>>|<row|<cell|\<forall\>i\<in\>\<bbb-N\><rsub|0><text| we
+      have >\<beta\><around*|(|i+1|)>>|<cell|=>|<cell|g<rprime|'><around*|(|i,\<beta\><around*|(|i|)>|)><eq-number><label|eq
+      10.45.053>>>>>
+    </eqnarray*>
+
+    Define now <math|\<lambda\>:<around*|{|0,\<ldots\>,n|}>\<rightarrow\>A>
+    by <math|\<lambda\>=\<beta\><rsub|\|<around*|{|0,\<ldots\>,n|}>>> then we
+    have\ 
+
+    <\equation*>
+      \<lambda\><around*|(|0|)>=\<beta\><rsub|\|<around*|{|0,\<ldots\>,n|}>><around*|(|0|)>\<equallim\><rsub|0\<in\><around*|{|0,\<ldots\>,n|}>>\<beta\><around*|(|0|)>\<equallim\><rsub|<text|[theorem:
+      <reference|eq 10.44.053>]>>a
+    </equation*>
+
+    and <math|\<forall\>i\<in\><around*|{|0,\<ldots\>,n-1|}><text| we have >>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<lambda\><around*|(|i+1|)>>|<cell|=>|<cell|\<beta\><rsub|\|<around*|{|0,\<ldots\>,n|}>><around*|(|i+1|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|i+1\<in\><around*|{|0,\<ldots\>,n|}>>>|<cell|\<beta\><around*|(|i+1|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|eq 10.45.053>]>>>|<cell|g<rprime|'><around*|(|i,\<beta\><around*|(|i|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|i\<in\><around*|{|0,\<ldots\>,n-1|}>>>|<cell|g<rprime|'><around*|(|i,\<lambda\><around*|(|i|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|i\<in\><around*|{|0,\<ldots\>,n-1|}>>>|<cell|g<around*|(|i,\<lambda\><around*|(|i|)>|)>>>>>
+    </eqnarray*>
+
+    so that we found a function <math|\<lambda\>:<around*|{|0,\<ldots\>,n|}>\<rightarrow\>A>
+    such that
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<lambda\><around*|(|0|)>>|<cell|=>|<cell|a>>|<row|<cell|\<forall\>i\<in\><around*|{|0,\<ldots\>,n-1|}><text|
+      we have >\<lambda\><around*|(|i+1|)>>|<cell|=>|<cell|g<around*|(|i,\<lambda\><around*|(|i|)>|)>>>>>
+    </eqnarray*>
+
+    Next we must prove uniqueness so let <math|\<gamma\>:<around*|{|0,\<ldots\>,n|}>\<rightarrow\>A>
+    be such that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<gamma\><around*|(|0|)>>|<cell|=>|<cell|a>>|<row|<cell|\<forall\>i\<in\><around*|{|0,\<ldots\>,n-1|}><text|
+      we have >\<gamma\><around*|(|i+1|)>>|<cell|=>|<cell|g<around*|(|i,\<gamma\><around*|(|i|)>|)>>>>>
+    </eqnarray*>
+
+    and define <math|S=<around*|{|i\<in\>\<bbb-N\><rsub|0>\|i\<nin\><around*|{|0,\<ldots\>,n|}>\<vee\>\<lambda\><around*|(|i|)>=\<gamma\><around*|(|i|)>|}>>
+    then we have:
+
+    <\description>
+      <item*|<math|0\<in\>S>>As <math|\<lambda\><around*|(|0|)>=a=\<gamma\><around*|(|0|)>>
+      we have <math|0\<in\>S>
+
+      <item*|<math|i\<in\>S\<Rightarrow\>i+1\<in\>S>>then for <math|i+1> we
+      have either:
+
+      <\description>
+        <item*|<math|i+1\<in\><around*|{|0,\<ldots\>,n|}>>>Then
+        <math|\<lambda\><around*|(|i+1|)>=g<around*|(|i,\<lambda\><around*|(|i|)>|)>\<equallim\><rsub|i\<in\>S>g<around*|(|i,\<gamma\><around*|(|i|)>|)>=\<gamma\><around*|(|i+1|)>>
+        proving that <math|i+1\<in\>S>
+
+        <item*|<math|i+1\<nin\><around*|{|0,\<ldots\>,n|}>>>Then
+        <math|i+1\<in\>S>
+      </description>
+
+      so in all cases we have <math|i+1\<in\>S>.
+    </description>
+
+    By mathematical induction [theorem: <reference|mathematical induction>]
+    we have that <math|S=\<bbb-N\><rsub|0>>. If
+    <math|i\<in\><around*|{|0,\<ldots\>,n|}>\<subseteq\>\<bbb-N\><rsub|0>> we
+    have <math|i\<in\>S> which as <math|i\<in\><around*|{|0,\<ldots\>,n|}>>
+    gives <math|\<lambda\><around*|(|i|)>=\<gamma\><around*|(|i|)>> so that
+    <math|\<lambda\>=\<gamma\>>.
+  </proof>
+
+  The three previous theorems gives a way of defining functions by recursions
   as is expressed in the following two definitions.
 
   <\definition>
@@ -11011,9 +11106,32 @@
     </equation*>
 
     Which is equivalent with the function defined by [theorem:
-    <reference|recursion step form (3)>] where <math|a\<in\>A> and
+    <reference|complex recursion step (2)>] where <math|a\<in\>A> and
     <math|g:\<bbb-N\><rsub|0,\<bbb-C\>>\<times\>A\<rightarrow\>A> is defined
     by <math|g<around*|(|n,x|)>=G<around*|(|n,x|)>>.
+  </definition>
+
+  <\definition>
+    <label|complex definition recursion finite>Let <math|A> be a set,
+    <math|a\<in\>A>, <math|n\<in\>\<bbb-N\><rsub|0>> then we define the
+    function\ 
+
+    <\equation*>
+      \<lambda\>:<around*|{|0,\<ldots\>,n|}>\<rightarrow\>A
+    </equation*>
+
+    by\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<lambda\><around*|(|0|)>>|<cell|=>|<cell|a>>|<row|<cell|\<forall\>i\<in\><around*|{|0,\<ldots\>,n-1|}><text|
+      we have >\<lambda\><around*|(|i+1|)>>|<cell|=>|<cell|G<around*|(|i,\<lambda\><around*|(|i|)>|)>>>>>
+    </eqnarray*>
+
+    where \ <math|G<around*|(|n,\<lambda\><around*|(|n|)>|)>> is a expression
+    of two parameters. The above is equivalent with the function defined by
+    [theorem: <reference|complex recursion step form finite>] where
+    <math|a\<in\>A> and <math|g:<around*|{|0,\<ldots\>,n-1|}>\<times\>A\<rightarrow\>A>
+    is defined by <math|g<around*|(|n,x|)>=G<around*|(|n,x|)>>.
   </definition>
 
   <section|Power in <math|\<bbb-C\>>>
@@ -12706,13 +12824,12 @@
     <associate|auto-50|<tuple|10.5.2|?>>
     <associate|auto-51|<tuple|<with|mode|<quote|math>|<wide|z|\<wide-bar\>>>|?>>
     <associate|auto-52|<tuple|<with|mode|<quote|math>|<around*|\||z|\|>>|?>>
-    <associate|auto-53|<tuple|10.1|?>>
     <associate|auto-6|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>>|?>>
     <associate|auto-7|<tuple|absolute value|?>>
     <associate|auto-8|<tuple|<with|mode|<quote|math>|<around*|\||x|\|>>|?>>
     <associate|auto-9|<tuple|<with|mode|<quote|math>|m\|n>|?>>
-    <associate|compelx|<tuple|10.60|?>>
-    <associate|complex (x^n-1)\<gtr\>=n.(x-1)|<tuple|10.46|?>>
+    <associate|compelx|<tuple|10.62|?>>
+    <associate|complex (x^n-1)\<gtr\>=n.(x-1)|<tuple|10.48|?>>
     <associate|complex 0\<less\>1|<tuple|10.10|?>>
     <associate|complex Archimedean property|<tuple|10.24|?>>
     <associate|complex Archimedean property consequence (1)|<tuple|10.25|?>>
@@ -12724,54 +12841,56 @@
     <associate|complex RC order (1)|<tuple|10.7|?>>
     <associate|complex RC order (2)|<tuple|10.8|?>>
     <associate|complex RC order properties|<tuple|10.14|?>>
-    <associate|complex a\<less\>2^n|<tuple|10.45|?>>
-    <associate|complex conjugate|<tuple|10.64|?>>
-    <associate|complex conjugate properties|<tuple|10.65|?>>
-    <associate|complex definition by recursion (1)|<tuple|10.35|?>>
-    <associate|complex definition by recursion (2)|<tuple|10.36|?>>
+    <associate|complex a\<less\>2^n|<tuple|10.47|?>>
+    <associate|complex conjugate|<tuple|10.66|?>>
+    <associate|complex conjugate properties|<tuple|10.67|?>>
+    <associate|complex definition by recursion (1)|<tuple|10.36|?>>
+    <associate|complex definition by recursion (2)|<tuple|10.37|?>>
+    <associate|complex definition recursion finite|<tuple|10.38|?>>
     <associate|complex densitiy theorem|<tuple|10.27|?>>
     <associate|complex embedding|<tuple|10.5|?>>
     <associate|complex field|<tuple|10.2|?>>
-    <associate|complex i^2=-1|<tuple|10.59|?>>
+    <associate|complex i^2=-1|<tuple|10.61|?>>
     <associate|complex integers are conditional complete|<tuple|10.16|?>>
     <associate|complex irrational numbers|<tuple|10.20|?>>
     <associate|complex mathematical induction|<tuple|10.30|?>>
-    <associate|complex n\<less\>2^n|<tuple|10.44|?>>
+    <associate|complex n\<less\>2^n|<tuple|10.46|?>>
     <associate|complex n\<less\>m and 0\<less\>x\<less\>1 then
-    x^n\<less\>x^m|<tuple|10.48|?>>
-    <associate|complex norm|<tuple|10.66|?>>
-    <associate|complex norm properties|<tuple|10.67|?>>
+    x^n\<less\>x^m|<tuple|10.50|?>>
+    <associate|complex norm|<tuple|10.68|?>>
+    <associate|complex norm properties|<tuple|10.69|?>>
     <associate|complex notation|<tuple|10.3|?>>
     <associate|complex numbers|<tuple|10.1|?>>
     <associate|complex order isomorphisms|<tuple|10.9|?>>
-    <associate|complex power|<tuple|10.37|?>>
-    <associate|complex power and inequality|<tuple|10.43|?>>
-    <associate|complex power is internal|<tuple|10.39|?>>
-    <associate|complex power of inverse|<tuple|10.41|?>>
-    <associate|complex power properties|<tuple|10.42|?>>
+    <associate|complex power|<tuple|10.39|?>>
+    <associate|complex power and inequality|<tuple|10.45|?>>
+    <associate|complex power is internal|<tuple|10.41|?>>
+    <associate|complex power of inverse|<tuple|10.43|?>>
+    <associate|complex power properties|<tuple|10.44|?>>
     <associate|complex rational numbers specification|<tuple|10.6|?>>
-    <associate|complex real imaginair|<tuple|10.62|?>>
-    <associate|complex real. imaginair properties|<tuple|10.63|?>>
+    <associate|complex real imaginair|<tuple|10.64|?>>
+    <associate|complex real. imaginair properties|<tuple|10.65|?>>
     <associate|complex recursion|<tuple|10.31|?>>
     <associate|complex recursion iteration|<tuple|10.32|?>>
     <associate|complex recursion step|<tuple|10.33|?>>
     <associate|complex recursion step (2)|<tuple|10.34|?>>
-    <associate|complex root is strictly increasing|<tuple|10.54|?>>
-    <associate|complex sqrt x\<less\>sqrt x^2|<tuple|10.56|?>>
-    <associate|complex sqrt(0) and sqrt(1)|<tuple|10.52|?>>
-    <associate|complex square operator is a bijection|<tuple|10.49|?>>
-    <associate|complex square root|<tuple|10.50|?>>
-    <associate|complex square root norm|<tuple|10.58|?>>
-    <associate|complex square root of 2 is irational|<tuple|10.53|?>>
-    <associate|complex square root of product|<tuple|10.57|?>>
-    <associate|complex square root properties (1)|<tuple|10.55|?>>
+    <associate|complex recursion step form finite|<tuple|10.35|?>>
+    <associate|complex root is strictly increasing|<tuple|10.56|?>>
+    <associate|complex sqrt x\<less\>sqrt x^2|<tuple|10.58|?>>
+    <associate|complex sqrt(0) and sqrt(1)|<tuple|10.54|?>>
+    <associate|complex square operator is a bijection|<tuple|10.51|?>>
+    <associate|complex square root|<tuple|10.52|?>>
+    <associate|complex square root norm|<tuple|10.60|?>>
+    <associate|complex square root of 2 is irational|<tuple|10.55|?>>
+    <associate|complex square root of product|<tuple|10.59|?>>
+    <associate|complex square root properties (1)|<tuple|10.57|?>>
     <associate|complex sup(S+T) and inf(S+T)|<tuple|10.21|?>>
     <associate|complex sup(S+s) inf(T+t)|<tuple|10.22|?>>
     <associate|complex x\<less\>x+1 and x-1\<less\>x|<tuple|10.15|?>>
     <associate|complex x\<less\>y=\<gtr\>x+1\<less\>=y|<tuple|10.23|?>>
-    <associate|complex x^(m+n)=x^n.x^m|<tuple|10.40|?>>
-    <associate|complex x^0,z^1,z^2|<tuple|10.38|?>>
-    <associate|complex x^n\<gtr\>n if x\<gtr\>1 (R)|<tuple|10.47|?>>
+    <associate|complex x^(m+n)=x^n.x^m|<tuple|10.42|?>>
+    <associate|complex x^0,z^1,z^2|<tuple|10.40|?>>
+    <associate|complex x^n\<gtr\>n if x\<gtr\>1 (R)|<tuple|10.49|?>>
     <associate|complex {n,..,m}|<tuple|10.29|?>>
     <associate|eq 10.1.048|<tuple|10.1|?>>
     <associate|eq 10.10.048|<tuple|10.10|?>>
@@ -12811,28 +12930,32 @@
     <associate|eq 10.30.050|<tuple|10.33|?>>
     <associate|eq 10.31.050|<tuple|10.34|?>>
     <associate|eq 10.4.048|<tuple|10.4|?>>
-    <associate|eq 10.42.050|<tuple|10.44|?>>
-    <associate|eq 10.43.050|<tuple|10.45|?>>
-    <associate|eq 10.44.050|<tuple|10.46|?>>
-    <associate|eq 10.45.050|<tuple|10.47|?>>
-    <associate|eq 10.46.050|<tuple|10.48|?>>
-    <associate|eq 10.47.050|<tuple|10.49|?>>
-    <associate|eq 10.48|<tuple|10.50|?>>
-    <associate|eq 10.49.050|<tuple|10.51|?>>
+    <associate|eq 10.42.050|<tuple|10.46|?>>
+    <associate|eq 10.43.050|<tuple|10.47|?>>
+    <associate|eq 10.44.050|<tuple|10.48|?>>
+    <associate|eq 10.44.053|<tuple|10.44|?>>
+    <associate|eq 10.45.050|<tuple|10.49|?>>
+    <associate|eq 10.45.053|<tuple|10.45|?>>
+    <associate|eq 10.46.050|<tuple|10.50|?>>
+    <associate|eq 10.47.050|<tuple|10.51|?>>
+    <associate|eq 10.48|<tuple|10.52|?>>
+    <associate|eq 10.49.050|<tuple|10.53|?>>
     <associate|eq 10.5.048|<tuple|10.5|?>>
-    <associate|eq 10.50.050|<tuple|10.52|?>>
-    <associate|eq 10.51.050|<tuple|10.53|?>>
-    <associate|eq 10.52.050|<tuple|10.54|?>>
-    <associate|eq 10.53.050|<tuple|10.55|?>>
-    <associate|eq 10.54.050|<tuple|10.56|?>>
-    <associate|eq 10.55.050|<tuple|10.57|?>>
-    <associate|eq 10.56.050|<tuple|10.58|?>>
-    <associate|eq 10.57|<tuple|10.59|?>>
-    <associate|eq 10.58.051|<tuple|10.60|?>>
+    <associate|eq 10.50.050|<tuple|10.54|?>>
+    <associate|eq 10.51.050|<tuple|10.55|?>>
+    <associate|eq 10.52.050|<tuple|10.56|?>>
+    <associate|eq 10.53.050|<tuple|10.57|?>>
+    <associate|eq 10.54.050|<tuple|10.58|?>>
+    <associate|eq 10.55.050|<tuple|10.59|?>>
+    <associate|eq 10.56.050|<tuple|10.60|?>>
+    <associate|eq 10.57|<tuple|10.61|?>>
+    <associate|eq 10.58.051|<tuple|10.62|?>>
     <associate|eq 10.6.048|<tuple|10.6|?>>
     <associate|eq 10.7.048|<tuple|10.7|?>>
     <associate|eq 10.8.048|<tuple|10.8|?>>
     <associate|eq 10.9.048|<tuple|10.9|?>>
+    <associate|eq 5.18.053|<tuple|10.44|?>>
+    <associate|eq 5.19.053|<tuple|10.45|?>>
     <associate|eq 7.1.022|<tuple|7.1|?>>
     <associate|eq 7.11.022|<tuple|7.10|?>>
     <associate|eq 7.12.022|<tuple|7.11|?>>
@@ -13026,6 +13149,8 @@
     <associate|integers \|x.y\|=\|x\|.\|y\||<tuple|7.35|?>>
     <associate|integers \|x\|\<less\>=\<gtr\>x=0|<tuple|7.37|?>>
     <associate|integers ~([n,m])~([n+k,m+k)]|<tuple|7.3|?>>
+    <associate|natural numbers definition recursion finite|<tuple|10.38|?>>
+    <associate|natural numbers recursion step form finite|<tuple|10.37|?>>
     <associate|rational -(q^-1)=(-q)^-1|<tuple|8.30|?>>
     <associate|rational 0\<less\>1|<tuple|8.25|?>>
     <associate|rational 0\<less\>=q property|<tuple|8.20|?>>
@@ -13121,6 +13246,7 @@
     <associate|real rational cut properties|<tuple|9.36|?>>
     <associate|real rational numbers specification|<tuple|9.57|?>>
     <associate|real real numbers|<tuple|9.2|?>>
+    <associate|real recursion step form finite|<tuple|10.35|?>>
     <associate|real strict order relation definition|<tuple|9.39|?>>
     <associate|real sum is a operator|<tuple|9.14|?>>
     <associate|real totally ordered|<tuple|9.43|?>>

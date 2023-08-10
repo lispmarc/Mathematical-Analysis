@@ -5910,7 +5910,8 @@
 
   <\proof>
     Using [theorem: <reference|recursion step (2)>] there exists a
-    <math|\<lambda\>:\<bbb-N\><rsub|0>\<rightarrow\>A> such that\ 
+    <with|font-series|bold|unique> <math|\<lambda\>:\<bbb-N\><rsub|0>\<rightarrow\>A>
+    such that\ 
 
     <\equation>
       <label|eq 5.17.019>\<lambda\><around*|(|0|)>=a<text| and
@@ -5924,11 +5925,106 @@
     <math|n=<around*|(|n-1|)>+1>, hence <math|\<lambda\><around*|(|n|)>=\<lambda\><around*|(|<around*|(|n-1|)>+1|)>=g<around*|(|n-1,\<lambda\><around*|(|n-1|)>|)>>.
   </proof>
 
+  <\theorem>
+    <label|natural numbers recursion step form finite>Let <math|A> be a set,
+    <math|a\<in\>A>, <math|n\<in\>\<bbb-N\><rsub|0>> and
+    <math|g:<around*|{|0,\<ldots\>,n-1|}>\<times\>A\<rightarrow\>A> a
+    function then there exists a <with|font-series|bold|unique> function
+    <math|\<lambda\>:<around*|{|0,\<ldots\>,n|}>\<rightarrow\>A> satisfying\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<lambda\><around*|(|0|)>>|<cell|=>|<cell|a>>|<row|<cell|\<forall\>i\<in\><around*|{|0,\<ldots\>,n-1|}><text|
+      we have >\<lambda\><around*|(|i+1|)>>|<cell|=>|<cell|g<around*|(|i,\<lambda\><around*|(|i|)>|)>>>>>
+    </eqnarray*>
+  </theorem>
+
+  <\proof>
+    Define
+
+    <\equation*>
+      g<rprime|'>:\<bbb-N\><rsub|0>\<times\>A\<rightarrow\>A<text| by
+      >g<rprime|'><around*|(|i,x|)>=<choice|<tformat|<table|<row|<cell|g<around*|(|i,x|)><text|
+      if >i\<in\><around*|{|0,\<ldots\>,n-1|}>>>|<row|<cell|x<text| if
+      >i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>>>>>
+    </equation*>
+
+    then by [corollary: <reference|recursion step form (3)>] there exists a
+    <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>A> such that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<beta\><around*|(|0|)>>|<cell|=>|<cell|a<eq-number><label|eq
+      5.18.053>>>|<row|<cell|\<forall\>i\<in\>\<bbb-N\><rsub|0><text| we have
+      >\<beta\><around*|(|i+1|)>>|<cell|=>|<cell|g<rprime|'><around*|(|i,\<beta\><around*|(|i|)>|)><eq-number><label|eq
+      5.19.053>>>>>
+    </eqnarray*>
+
+    Define now <math|\<lambda\>:<around*|{|0,\<ldots\>,n|}>\<rightarrow\>A>
+    by <math|\<lambda\>=\<beta\><rsub|\|<around*|{|0,\<ldots\>,n|}>>> then we
+    have\ 
+
+    <\equation*>
+      \<lambda\><around*|(|0|)>=\<beta\><rsub|\|<around*|{|0,\<ldots\>,n|}>><around*|(|0|)>\<equallim\><rsub|0\<in\><around*|{|0,\<ldots\>,n|}>>\<beta\><around*|(|0|)>\<equallim\><rsub|<text|[theorem:
+      <reference|eq 5.18.053>>>a
+    </equation*>
+
+    and <math|\<forall\>i\<in\><around*|{|0,\<ldots\>,n-1|}><text| we have >>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<lambda\><around*|(|i+1|)>>|<cell|=>|<cell|\<beta\><rsub|\|<around*|{|0,\<ldots\>,n|}>><around*|(|i+1|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|i+1\<in\><around*|{|0,\<ldots\>,n|}>>>|<cell|\<beta\><around*|(|i+1|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|eq 5.19.053>]>>>|<cell|g<rprime|'><around*|(|i,\<beta\><around*|(|i|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|i\<in\><around*|{|0,\<ldots\>,n-1|}>>>|<cell|g<rprime|'><around*|(|i,\<lambda\><around*|(|i|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|i\<in\><around*|{|0,\<ldots\>,n-1|}>>>|<cell|g<around*|(|i,\<lambda\><around*|(|i|)>|)>>>>>
+    </eqnarray*>
+
+    so that we found a function <math|\<lambda\>:<around*|{|0,\<ldots\>,n|}>\<rightarrow\>A>
+    such that
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<lambda\><around*|(|0|)>>|<cell|=>|<cell|a>>|<row|<cell|\<forall\>i\<in\><around*|{|0,\<ldots\>,n-1|}><text|
+      we have >\<lambda\><around*|(|i+1|)>>|<cell|=>|<cell|g<around*|(|i,\<lambda\><around*|(|i|)>|)>>>>>
+    </eqnarray*>
+
+    Next we must prove uniqueness so let <math|\<gamma\>:<around*|{|0,\<ldots\>,n|}>\<rightarrow\>A>
+    be such that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<gamma\><around*|(|0|)>>|<cell|=>|<cell|a>>|<row|<cell|\<forall\>i\<in\><around*|{|0,\<ldots\>,n-1|}><text|
+      we have >\<gamma\><around*|(|i+1|)>>|<cell|=>|<cell|g<around*|(|i,\<gamma\><around*|(|i|)>|)>>>>>
+    </eqnarray*>
+
+    and define <math|S=<around*|{|i\<in\>\<bbb-N\><rsub|0>\|i\<nin\><around*|{|0,\<ldots\>,n|}>\<vee\>\<lambda\><around*|(|i|)>=\<gamma\><around*|(|i|)>|}>>
+    then we have:
+
+    <\description>
+      <item*|<math|0\<in\>S>>As <math|\<lambda\><around*|(|0|)>=a=\<gamma\><around*|(|0|)>>
+      we have <math|0\<in\>S>
+
+      <item*|<math|i\<in\>S\<Rightarrow\>i+1\<in\>S>>then for <math|i+1> we
+      have either:
+
+      <\description>
+        <item*|<math|i+1\<in\><around*|{|0,\<ldots\>,n|}>>>Then
+        <math|\<lambda\><around*|(|i+1|)>=g<around*|(|i,\<lambda\><around*|(|i|)>|)>\<equallim\><rsub|i\<in\>S>g<around*|(|i,\<gamma\><around*|(|i|)>|)>=\<gamma\><around*|(|i+1|)>>
+        proving that <math|i+1\<in\>S>
+
+        <item*|<math|i+1\<nin\><around*|{|0,\<ldots\>,n|}>>>Then
+        <math|i+1\<in\>S>
+      </description>
+
+      so in all cases we have <math|i+1\<in\>S>.
+    </description>
+
+    By mathematical induction [theorem: <reference|mathematical induction>]
+    we have that <math|S=\<bbb-N\><rsub|0>>. If
+    <math|i\<in\><around*|{|0,\<ldots\>,n|}>\<subseteq\>\<bbb-N\><rsub|0>> we
+    have <math|i\<in\>S> which as <math|i\<in\><around*|{|0,\<ldots\>,n|}>>
+    gives <math|\<lambda\><around*|(|i|)>=\<gamma\><around*|(|i|)>> so that
+    <math|\<lambda\>=\<gamma\>>.
+  </proof>
+
   In the above the function <math|\<lambda\>:\<bbb-N\><rsub|0>\<rightarrow\>A>
   is specified by saying what <math|a\<in\>A> is and what the function
   <math|g:N<rsub|0>\<times\>A\<rightarrow\>A> is. There exist a more
   intuitive way of specifying these requirement as is expressed in the
-  following definition.
+  following definitions.
 
   <\definition>
     <label|definition by recursion (1)>Let <math|A> be a set, <math|a\<in\>A>
@@ -5970,6 +6066,31 @@
     <reference|recursion step form (3)>] where <math|a\<in\>A> and
     <math|g:\<bbb-N\><rsub|0>\<times\>A\<rightarrow\>A> is defined by
     <math|g<around*|(|n,x|)>=G<around*|(|n,x|)>>.
+  </definition>
+
+  We can use the above to define functions by recursion.
+
+  <\definition>
+    <label|natural numbers definition recursion finite>Let <math|A> be a set,
+    <math|a\<in\>A>, <math|n\<in\>\<bbb-N\><rsub|0>> then we define the
+    function\ 
+
+    <\equation*>
+      \<lambda\>:<around*|{|0,\<ldots\>,n|}>\<rightarrow\>A
+    </equation*>
+
+    by\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<lambda\><around*|(|0|)>>|<cell|=>|<cell|a>>|<row|<cell|\<forall\>i\<in\><around*|{|0,\<ldots\>,n-1|}><text|
+      we have >\<lambda\><around*|(|i+1|)>>|<cell|=>|<cell|G<around*|(|i,\<lambda\><around*|(|i|)>|)>>>>>
+    </eqnarray*>
+
+    where \ <math|G<around*|(|n,\<lambda\><around*|(|n|)>|)>> is a expression
+    of two parameters. The above is equivalent with the function defined by
+    [theorem: <reference|natural numbers recursion step form finite>] where
+    <math|a\<in\>A> and <math|g:<around*|{|0,\<ldots\>,n-1|}>\<times\>A\<rightarrow\>A>
+    is defined by <math|g<around*|(|n,x|)>=G<around*|(|n,x|)>>.
   </definition>
 
   <\example>
@@ -9325,8 +9446,8 @@
     denumerable|<tuple|6.66|182>>
     <associate|countable union of a finite family of countable sets is
     countable|<tuple|6.67|183>>
-    <associate|definition by recursion (1)|<tuple|5.87|159>>
-    <associate|definition by recursion (2)|<tuple|5.88|159>>
+    <associate|definition by recursion (1)|<tuple|5.88|159>>
+    <associate|definition by recursion (2)|<tuple|5.89|159>>
     <associate|denumerable every subset is finite
     denumerable.|<tuple|6.55|178>>
     <associate|denumerable is not subset of a natural
@@ -9355,6 +9476,8 @@
     <associate|eq 5.15.019|<tuple|5.15|156>>
     <associate|eq 5.16.019|<tuple|5.16|156>>
     <associate|eq 5.17.019|<tuple|5.17|158>>
+    <associate|eq 5.18.053|<tuple|5.18|?>>
+    <associate|eq 5.19.053|<tuple|5.19|?>>
     <associate|eq 5.2.019|<tuple|5.2|138>>
     <associate|eq 5.3.019|<tuple|5.3|139>>
     <associate|eq 5.4.019|<tuple|5.4|139>>
@@ -9486,6 +9609,7 @@
     <associate|natural numbers are total ordered|<tuple|5.52|151>>
     <associate|natural numbers are transitive|<tuple|5.14|137>>
     <associate|natural numbers are well ordered|<tuple|5.51|150>>
+    <associate|natural numbers definition recursion finite|<tuple|5.90|?>>
     <associate|natural numbers difference|<tuple|5.63|153>>
     <associate|natural numbers distributivity|<tuple|5.39|147>>
     <associate|natural numbers division|<tuple|5.78|156>>
@@ -9531,6 +9655,8 @@
     <associate|natural numbers order relation|<tuple|5.45|149>>
     <associate|natural numbers product of non zero numbers is non
     zero|<tuple|5.74|155>>
+    <associate|natural numbers recursion step (4)|<tuple|5.87|?>>
+    <associate|natural numbers recursion step form finite|<tuple|5.87|?>>
     <associate|natural numbers s(n) = n+1|<tuple|5.30|144>>
     <associate|natural numbers s(n)=/0|<tuple|5.10|136>>
     <associate|natural numbers successor|<tuple|5.5|136>>
