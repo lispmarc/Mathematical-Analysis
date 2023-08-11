@@ -660,7 +660,7 @@
     we have
 
     <\equation*>
-      <big|sum><rsub|i=b<rsub|0>><rsup|e<rsub|n>>x<rsub|i>=<big|sum><rsub|i=0><rsup|n><around*|(|<big|sum><rsub|j=e<rsub|i>><rsup|b<rsub|i>>x<rsub|j>|)>
+      <big|sum><rsub|i=b<rsub|0>><rsup|e<rsub|n>>x<rsub|i>=<big|sum><rsub|i=0><rsup|n><around*|(|<big|sum><rsub|j=b<rsub|i>><rsup|e<rsub|i>>x<rsub|j>|)>
     </equation*>
   </theorem>
 
@@ -669,7 +669,7 @@
 
     <\equation*>
       S=<around*|{|n\<in\>\<bbb-N\>\|\<forall\><around*|{|<around*|(|b<rsub|i>,e<rsub|i>|)>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>><text|
-      satisfying (1),(2),>\<forall\><around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|b<rsub|0>,\<ldots\>,e<rsub|n>|}>>\<subset\>A\<vDash\><big|sum><rsub|i=b<rsub|0>><rsup|e<rsub|n>>x<rsub|i>=<big|sum><rsub|i=0><rsup|n><around*|(|<big|sum><rsub|j=e<rsub|i>><rsup|b<rsub|i>>x<rsub|j>|)>|}>
+      satisfying (1),(2),>\<forall\><around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|b<rsub|0>,\<ldots\>,e<rsub|n>|}>>\<subset\>A\<vDash\><big|sum><rsub|i=b<rsub|0>><rsup|e<rsub|n>>x<rsub|i>=<big|sum><rsub|i=0><rsup|n><around*|(|<big|sum><rsub|j=b<rsub|i>><rsup|e<rsub|i>>x<rsub|j>|)>|}>
     </equation*>
 
     then we have:
@@ -687,11 +687,369 @@
 
       proving that <math|1\<in\>S>
 
-      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+      <math|<around*|{|<around*|(|b<rsub|i>,e<rsub|i>|)>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n+1|}>>\<subseteq\>\<bbb-N\><rsub|0>\<times\>\<bbb-N\><rsub|0>>
+      with <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n+1|}>>
+      <math|b<rsub|i>\<leqslant\>e<rsub|i>>,
+      <math|\<forall\>i\<in\><around*|{|0,\<ldots\>,<around*|(|n+1|)>-1|}>=<around*|{|0,\<ldots\>,n|}>>
+      <math|e<rsub|i>+1=b<rsub|i+1><infix-and><around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n+1|}>>\<subseteq\>A>.
+      In particular we have <math|b<rsub|n>\<leqslant\>e<rsub|n>=b<rsub|n+1>-1\<leqslant\>e<rsub|n+1>-1>.
+      Further <math|\<forall\>i\<in\><around*|{|0,\<ldots\>,n|}>> we have
+      <math|b<rsub|i>\<leqslant\>e<rsub|i>\<less\>e<rsub|i>+1\<leqslant\>b<rsub|i+1>>
+      proving by [theorem: <reference|recursion order>] that
+      <math|b<rsub|0>\<leqslant\>b<rsub|n>\<leqslant\>e<rsub|n>> so that
+      <math|e<rsub|n>\<in\><around*|{|b<rsub|0>,\<ldots\>,e<rsub|n+1>-1|}>>.
+      Next\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|sum><rsub|j=b<rsub|0>><rsup|e<rsub|n+1>>x<rsub|j>>|<cell|\<equallim\><rsub|e<rsub|n>\<in\><around*|{|b<rsub|0>,\<ldots\>,e<rsub|n+1>-1|}><text|
+        [theorem: <reference|sum associativity
+        simple>]>>>|<cell|<big|sum><rsub|j=b<rsub|0>><rsup|e<rsub|n>>x<rsub|j>+<big|sum><rsup|e<rsub|n+1>><rsub|j\<in\>e<rsub|n>+1><rsup|>x<rsub|j>>>|<row|<cell|>|<cell|\<equallim\><rsub|e<rsub|n>+1=b<rsub|<rsub|n+1>>>>|<cell|<big|sum><rsub|j=b<rsub|0>><rsup|e<rsub|n>>x<rsub|j>+<big|sum><rsup|e<rsub|n+1>><rsub|j=b<rsub|n+1>><rsup|>x<rsub|j>>>|<row|<cell|>|<cell|\<equallim\><rsub|n\<in\>S>>|<cell|<big|sum><rsub|i=0><rsup|n><around*|(|<big|sum><rsub|j=b<rsub|i>><rsup|e<rsub|i>>x<rsub|j>|)><rsub|>+<big|sum><rsub|j=b<rsub|n+1>><rsup|e<rsub|n+1>>x<rsub|j>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=0><rsup|n+1><around*|(|<big|sum><rsub|j=b<rsub|i>><rsup|e<rsub|i>>x<rsub|j>|)>>>>>
+      </eqnarray*>
+
+      proving that <math|n+1\<in\>S>.
+    </description>
+  </proof>
+
+  <subsection|Commutativity>
+
+  We will now generalize commutativity to finite sum. First we must introduce
+  the concept of permutations.\ 
+
+  <\definition>
+    <label|permutation definition><index|permutation><index|<math|\<sigma\>>><index|<math|S<rsub|I>>><dueto|Permutation>If
+    <math|I> is a set then a bijection <math|\<sigma\>:I\<rightarrow\>I> is
+    called a <with|font-series|bold|permutation of <math|I>>. The set of all
+    the permutation graphs of <math|I> is noted as <math|S<rsub|I>> hence\ 
+
+    <\equation*>
+      S<rsub|I>=<around*|{|\<sigma\>\<in\>I<rsup|I>\|\<sigma\>:I\<rightarrow\>I<text|
+      is a bijection>|}>
+    </equation*>
+  </definition>
+
+  <\theorem>
+    <label|permutation group><math|Let I> be a set then
+    <math|<around*|\<langle\>|S<rsub|I>,\<circ\>|\<rangle\>>> is a group with
+    neutral element <math|Id<rsub|I>> and
+    <math|\<forall\>\<sigma\>\<in\>S<rsub|I>> <math|\<sigma\><rsup|-1>> as
+    inverse element.
+  </theorem>
+
+  <\proof>
+    As the composition of two bijections is a bijection [see theorem:
+    <reference|function composition injectivity, surjectivity and bijectivity
+    (1)>] we have that
+
+    <\equation*>
+      \<circ\>:S<rsub|I>\<times\>S<rsub|I>\<rightarrow\>S<rsub|I> is a
+      operator
+    </equation*>
+
+    Further we have:
+
+    <\description>
+      <item*|associativity>If <math|\<sigma\>,\<beta\>,\<gamma\>\<in\>\<cal-S\><rsub|I>>
+      then <math|<around*|(|\<sigma\>\<circ\>\<beta\>|)>\<circ\>\<gamma\>\<equallim\><rsub|<text|[function:
+      <reference|partial function associativity>]>>\<sigma\>\<circ\><around*|(|\<beta\>\<circ\>\<gamma\>|)>>
+
+      <item*|neutral element>As <math|Id<rsub|I>:I\<rightarrow\>I> is a
+      bijection [see: <reference|function identity map is a bijection>] we
+      have that <math|Id<rsub|I>\<in\>S<rsub|I>>. Further by [theorem:
+      <reference|function composition of Id function>] we have\ 
+
+      <\equation*>
+        \<sigma\>=\<sigma\>\<circ\>Id<rsub|i>=Id<rsub|I>\<circ\>\<sigma\>
+      </equation*>
+
+      <item*|inverse element>If <math|\<sigma\>\<in\>S<rsub|I>> then
+      <math|\<sigma\>:I\<rightarrow\>I> is a bijection, hence by [theorem:
+      <reference|function bijection and inverse>]
+      <math|\<sigma\><rsup|-1>:I\<rightarrow\>I> is a bijection so that
+      <math|\<sigma\><rsup|-1>\<in\>S<rsub|I>>. Hence
+      <math|\<sigma\>\<circ\>\<sigma\><rsup|-1>\<equallim\><rsub|<text|[theorem:
+      <reference|function bijection f,f-1>]>>Id<rsub|I>\<equallim\><rsub|<text|[theorem:
+      <reference|function bijection f,f-1>]>>\<sigma\><rsup|-1>\<circ\>\<sigma\>>
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|permutation on subset>Let <math|I> be a set and
+    <math|\<sigma\>\<in\>S<rsub|I>> then if <math|i\<in\>I> with
+    <math|\<sigma\><around*|(|i|)>=i> then
+    <math|\<sigma\><rsub|\|I\\<around*|{|i|}>>\<in\>S<rsub|I\\<around*|{|i|}>>>
+  </theorem>
+
+  <\proof>
+    For <math|\<sigma\><rsub|\|I\\<around*|{|i|}>>:I\\<around*|{|i|}>\<rightarrow\>I\\<around*|{|i|}>>
+    we have:
+
+    <\description>
+      <item*|injectivity>If <math|k,l\<in\>I\\<around*|{|i|}>> is such that
+      <math|\<sigma\><rsub|\|I\\<around*|{|i|}>><around*|(|k|)>=\<sigma\><rsub|\|I\\<around*|{|i|}>><around*|(|l|)>>
+      then <math|\<sigma\><around*|(|k|)>=\<sigma\><rsub|\|I\\<around*|{|i|}>><around*|(|k|)>=\<sigma\><rsub|\|I\\<around*|{|i|}>><around*|(|l|)>=\<sigma\><around*|(|l|)>>
+      which as <math|\<sigma\>> is a bijection proves that <math|k=l>.
+
+      <item*|surjectivity>If <math|k\<in\>I\\<around*|{|i|}>> then as
+      <math|\<sigma\>> is a bijection there exist <math|l\<in\>I> such that
+      <math|\<sigma\><around*|(|l|)>=k>. If <math|l=i> then
+      <math|k=\<sigma\><around*|(|i|)>=i> contradicting
+      <math|k\<in\>I\\<around*|{|i|}>>. Hence
+      <math|l\<in\>I\\<around*|{|i|}>> so that
+      <math|\<sigma\><rsub|\|I\\<around*|{|i|}>><around*|(|l|)>=\<sigma\><around*|(|l|)>=k>
+      proving surjectivity.
+    </description>
+  </proof>
+
+  We define now a special type of permutation a transposition
+
+  <\theorem>
+    <label|permutation transposition><index|<math|i\<leftrightarrowlim\><rsub|I>>j><dueto|transposition>Let
+    <math|I> be a set, <math|i,j\<in\>I> then for
+    <math|<around*|(|i\<leftrightarrowlim\><rsub|I>j|)>> defined by\ 
+
+    <\equation*>
+      <around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|k|)>=<choice|<tformat|<table|<row|<cell|k<text|
+      if >k\<in\>I\\<around*|{|i,j|}>>>|<row|<cell|i<text| if
+      >k=j>>|<row|<cell|j<text| if >k=i>>>>>
+    </equation*>
+
+    we have that\ 
+
+    <\equation*>
+      <around*|(|i\<leftrightarrowlim\><rsub|I>j|)>\<in\>S<rsub|I>
+    </equation*>
+
+    The premutation <math|<around*|(|i<long-arrow|\<rubber-leftrightarrow\>||I>j|)>>
+    is called a <with|font-series|bold|transposition> of <math|i> and
+    <math|j>
+  </theorem>
+
+  <\proof>
+    First note that if <math|i=j> then <math|<around*|(|i\<leftrightarrowlim\><rsub|I>j|)>=i=j=<around*|(|i\<leftrightarrowlim\><rsub|I>j|)>>
+    o this is indeed a function. Nexct we prove that it is a bijection.
+
+    <\description>
+      <item*|injectivity>If <math|<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|k|)>=<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|l|)>>
+      then for <math|k,l> we have either:
+
+      <\description>
+        <item*|<math|k=i\<wedge\>l=i>>Then trivially <math|k=i>
+
+        <item*|<math|k=i\<wedge\>l=j>>Then
+        <math|l=j=<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|k|)>=<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|l|)>=i=k>
+        so that <math|k=l>
+
+        <item*|<math|k=i\<wedge\>l\<neq\>i,j>>Then
+        <math|j=<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|k|)>=<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|l|)>=l\<neq\>i,j>
+        a contradiction so this case never occurs.
+
+        <item*|<math|k=j\<wedge\>l=i>>Then
+        <math|l=i=<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|k|)>=<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|l|)>=j=k>
+        so that <math|k=l>.
+
+        <item*|<math|k=j\<wedge\>l=j>>Then trivially <math|k=l>.
+
+        <item*|<math|k=j\<wedge\>l\<neq\>i,j>>Then
+        <math|i=<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|k|)>=<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|l|)>=l\<neq\>i,j>
+        a contradiction so this case never occurs.
+
+        <item*|<math|k\<neq\>i,j\<wedge\>l=i>>Then
+        <math|i,j\<neq\>k=<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|k|)>=<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|l|)>=j>
+        a contradiction so this case never occurs.
+
+        <item*|<math|k\<neq\>i,j\<wedge\>l=j>>Then
+        <math|i,j\<neq\>k=<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|k|)>=<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|l|)>=i>
+        a contradiction so this case never occurs.
+
+        <item*|<math|k\<neq\>i,j\<wedge\>l\<neq\>i,j>>Then
+        <math|k=<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|k|)>=<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|l|)>=l>
+        so that <math|k=l>
+      </description>
+
+      Hence in all valid cases we have <math|k=l> proving injectivity.
+
+      <item*|surjectivity>If <math|l\<in\>I> then we have either:
+
+      <\description>
+        <item*|<math|l=i>>Then for <math|k=j> we have
+        <math|><math|<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|k|)>=<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|j|)>=i=l>
+
+        <item*|<math|l=j>>Then for <math|k=i> we have
+        <math|<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|k|)>=<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|i|)>=j=l>
+
+        <item*|<math|l\<neq\>i,j>>Then for <math|k=l> we have
+        <math|<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|k|)>=<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|l|)>=l>
+      </description>
+
+      so in all cases we found a <math|k\<in\>I> such that
+      <math|<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|k|)>=l>.
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|permutation transposition properties>Let <math|I> be a set then we
+    have\ 
+
+    <\enumerate>
+      <item>If <math|<around*|(|i\<leftrightarrowlim\><rsub|I>i|)>=Id<rsub|I><around*|(|i|)>>
+
+      <item>If <math|i,j\<in\>I> then <math|<around*|(|i\<leftrightarrowlim\><rsub|I>j|)>\<circ\><around*|(|i\<leftrightarrowlim\><rsub|I>j|)>=Id<rsub|I>>
+
+      <item>If <math|J\<subseteq\>I> and <math|i,j\<in\>J> then
+      <math|<around*|(|i<long-arrow|\<rubber-leftrightarrow\>||J>j|)>=<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><rsub|\|J>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|k\<in\>I> then we have either:
+
+      <\description>
+        <item*|<math|k=i>>Then <math|<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|k|)>=j\<equallim\><rsub|i=j>i=k=Id<rsub|I><around*|(|k|)>>
+
+        <item*|<math|k=j>>Then <math|<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|k|)>=j\<equallim\><rsub|i=j>i=k=Id<rsub|I><around*|(|k|)>>
+
+        <item*|<math|k\<neq\>i,j>>Then <math|<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|k|)>=j\<equallim\><rsub|i=j>i=k=Id<rsub|I><around*|(|k|)>>
+      </description>
+
+      <item>If <math|k\<in\>I> then we have either:\ 
+
+      <\description>
+        <item*|<math|k=i>>Then <math|<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|<around*|(|i<long-arrow|\<rubber-leftrightarrow\>||I>j|)><around*|(|k|)>|)>=<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|j|)>=i=k>
+
+        <item*|<math|k=j>>Then <math|<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|<around*|(|i<long-arrow|\<rubber-leftrightarrow\>||I>j|)><around*|(|k|)>|)>=<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|i|)>=j=k>
+
+        <item*|<math|k\<neq\>i,j>>Then <math|<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|<around*|(|i<long-arrow|\<rubber-leftrightarrow\>||I>j|)><around*|(|k|)>|)>=k>
+      </description>
+
+      <item>If <math|k\<in\>J> then we have either:
+
+      <\description>
+        <item*|<math|k=i>>Then <math|<around*|(|i\<leftrightarrowlim\><rsub|J>j|)><around*|(|k|)>=j=<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|k|)>>
+
+        <item*|<math|k=j>>Then <math|<around*|(|i\<leftrightarrowlim\><rsub|J>j|)><around*|(|k|)>=i=<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|k|)>>
+
+        <item*|<math|k\<neq\>i,j>>Then <math|<around*|(|i\<leftrightarrowlim\><rsub|J>j|)><around*|(|k|)>=k=<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|k|)>>
+      </description>
+    </enumerate>
+  </proof>
+
+  <\lemma>
+    <label|permutation {0,..,n and transposition>Let
+    <math|n\<in\>\<bbb-N\><rsub|0>> and <math|\<sigma\>\<in\>S<rsub|<around*|{|0,\<ldots\>,n+1|}>>>
+    is such that <math|\<sigma\><around*|(|n+1|)>\<neq\>n+1> then for
+    <math|k=\<sigma\><rsup|-1><around*|(|n+1|)>> we have for
+    <math|\<gamma\><rsub|\<sigma\>>> defined by\ 
+
+    <\equation*>
+      \<gamma\><rsub|\<sigma\>>:<around*|{|0,\<ldots\>,n|}>\<rightarrow\><around*|{|0,\<ldots\>,n|}><text|
+      defined by >\<gamma\><rsub|\<sigma\>><around*|(|i|)>=<choice|<tformat|<table|<row|<cell|\<sigma\><around*|(|<around*|(|n\<leftrightarrowlim\><rsub|<around*|{|0,\<ldots\>n|}>>k|)><around*|(|i|)>|)><text|
+      if >i\<in\><around*|{|0,\<ldots\>,n-1|}>>>|<row|<cell|\<sigma\><around*|(|n+1|)><text|
+      if >i=n>>>>>
+    </equation*>
+
+    that\ 
+
+    <\equation*>
+      \<gamma\><rsub|\<sigma\>>\<in\>S<rsub|<around*|{|0,\<ldots\>,n|}>>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    First for <math|i\<in\><around*|[|0,\<ldots\>,n|]>> we have either:\ 
+
+    <\description>
+      <item*|<math|i\<in\><around*|{|0,\<ldots\>,n-1|}>>>Assume that
+      <math|<around*|(|<around*|(|n\<leftrightarrowlim\><rsub|<around*|{|0,\<ldots\>n|}>>k|)><around*|(|i|)>|)>=n+1>
+      then as <math|\<sigma\><around*|(|k|)>=n+1> we have as <math|\<sigma\>>
+      is injective that <math|><math|<around*|(|n\<leftrightarrowlim\><rsub|<around*|{|0,\<ldots\>n|}>>k|)><around*|(|i|)>=k=<around*|(|n\<leftrightarrowlim\><rsub|<around*|{|0,\<ldots\>n|}>>k|)><around*|(|n|)>>
+      so that <math|i=n> contradicting <math|i\<in\><around*|{|0,\<ldots\>,n-1|}>>.
+      So we must have that <math|\<sigma\><around*|(|<around*|(|n\<leftrightarrowlim\><rsub|<around*|{|0,\<ldots\>n|}>>k|)><around*|(|i|)>|)>\<neq\>n+1>
+      or <math|\<gamma\><rsub|\<sigma\>><around*|(|i|)>\<neq\>n+1\<Rightarrow\>\<gamma\><rsub|\<sigma\>><around*|(|i|)>\<in\><around*|{|0,\<ldots\>,n|}>>.
+
+      <item*|<math|i=n>>Then as <math|\<sigma\><around*|(|n+1|)>\<neq\>n+1>
+      we have that <math|\<sigma\><around*|(|n+1|)>\<in\><around*|{|0,\<ldots\>,n|}>>
+      or <math|\<gamma\><rsub|\<sigma\>><around*|(|i|)>\<in\><around*|{|0,\<ldots\>,n|}>>
     </description>
 
-    \;
+    So we have that\ 
+
+    <\equation*>
+      \<gamma\><rsub|\<sigma\>>:<around*|{|0,\<ldots\>,n|}>\<rightarrow\><around*|{|0,\<ldots\>,n|}>
+    </equation*>
+
+    Next we have to prove that it is a bijection,.\ 
+
+    <\description>
+      <item*|injectivity>Let <math|r,s\<in\><around*|{|0,\<ldots\>,n|}>> such
+      that <math|\<gamma\><rsub|\<sigma\>><around*|(|r|)>=\<gamma\><rsub|\<sigma\>><around*|(|s|)>>
+      then we have for <math|r,s> either:
+
+      <\description>
+        <item*|<math|r=n\<wedge\>s=n>>Then trivially <math|r=s>.
+
+        <item*|<math|r=n\<wedge\>s\<neq\>n>>Then
+        <math|\<sigma\><around*|(|n+1|)>=\<gamma\><rsub|\<sigma\>><around*|(|r|)>=\<gamma\><rsub|\<sigma\>><around*|(|s|)>=\<sigma\><around*|(|<around*|(|n\<leftrightarrowlim\><rsub|<around*|{|0,\<ldots\>n|}>>k|)><around*|(|n|)>|)>=\<sigma\><around*|(|n|)>>
+        giving the contradiction <math|n+1=n> so this case never occurs.
+
+        <item*|<math|r\<neq\>n\<wedge\>s=n>>Then
+        <math|\<sigma\><around*|(|n+1|)>=\<gamma\><rsub|\<sigma\>><around*|(|s|)>=\<gamma\><rsub|\<sigma\>><around*|(|r|)>=\<sigma\><around*|(|<around*|(|n\<leftrightarrowlim\><rsub|<around*|{|0,\<ldots\>n|}>>k|)><around*|(|n|)>|)>=\<sigma\><around*|(|n|)>>
+        giving the contradiction <math|n+1=n> so this case never occurs.
+
+        <item*|<math|r\<neq\>n\<wedge\>s\<neq\>n>>Then
+        <math|\<sigma\><around*|(|<around*|(|n\<leftrightarrowlim\><rsub|<around*|{|0,\<ldots\>n|}>>k|)><around*|(|r|)>|)>=\<gamma\><rsub|\<sigma\>><around*|(|r|)>=\<gamma\><rsub|\<sigma\>><around*|(|s|)>=\<sigma\><around*|(|<around*|(|n\<leftrightarrowlim\><rsub|<around*|{|0,\<ldots\>n|}>>k|)><around*|(|s|)>|)>>
+        so that <math|<around*|(|n\<leftrightarrowlim\><rsub|<around*|{|0,\<ldots\>n|}>>k|)><around*|(|r|)>=<around*|(|n\<leftrightarrowlim\><rsub|<around*|{|0,\<ldots\>n|}>>k|)><around*|(|s|)>>
+        or <math|r=s> [as <math|\<sigma\>> and
+        <math|<around*|(|n\<leftrightarrowlim\><rsub|<around*|{|0,\<ldots\>n|}>>k|)>>
+        are injections).
+      </description>
+
+      So in all valid cases we have <math|r=s> proving injectivity.
+
+      <item*|surjectivity>Let <math|r\<in\><around*|{|0,\<ldots\>,n|}>> then
+      by the surjectivity of <math|\<sigma\>> there exist a
+      <math|s\<in\><around*|{|0,\<ldots\>,n+1|}>> such that
+      <math|\<sigma\><around*|(|s|)>=r>. For <math|l> we have then either:
+
+      <\description>
+        <item*|<math|s=n+1>>Then for <math|n\<in\><around*|{|0,\<ldots\>,n|}>>
+        we have <math|\<gamma\><rsub|\<sigma\>><around*|(|n|)>=\<sigma\><around*|(|n+1|)>=\<sigma\><around*|(|s|)>=r>
+        so that <math|\<gamma\><rsub|\<sigma\>><around*|(|n|)>=r>.
+
+        <item*|<math|s=n>>If <math|k=n> then
+        <math|r=\<sigma\><around*|(|s|)>=\<sigma\><around*|(|n|)>=\<sigma\><around*|(|k|)>=n+1\<Rightarrow\>r=n+1>
+        contradicting <math|r\<in\><around*|{|0,\<ldots\>,n|}>>. So we must
+        have that <math|k\<neq\>n> or <math|k\<in\><around*|{|0,\<ldots\>,n-1|}>>,
+        hence
+
+        <\equation*>
+          \<gamma\><rsub|\<sigma\>><around*|(|k|)>=\<sigma\><around*|(|<around*|(|n\<leftrightarrowlim\><rsub|<around*|{|0,\<ldots\>n|}>>k|)><around*|(|k|)>|)>=\<sigma\><around*|(|n|)>=\<sigma\><around*|(|s|)>=r
+        </equation*>
+
+        proving that <math|\<gamma\><rsub|\<sigma\>><around*|(|k|)>=r>.
+
+        <item*|<math|s\<in\><around*|{|0,\<ldots\>,n-1|}>>>If <math|s=k> then
+        <math|r=\<sigma\><around*|(|s|)>=\<sigma\><around*|(|k|)>=n+1> so
+        that <math|r=n+1> contradicting <math|r\<in\><around*|{|0,\<ldots\>,n|}>>
+        so we must have that <math|s\<neq\>k,n>. Hence
+
+        <\equation*>
+          \<gamma\><rsub|\<sigma\>><around*|(|s|)>=\<sigma\><around*|(|<around*|(|n\<leftrightarrowlim\><rsub|<around*|{|0,\<ldots\>n|}>>k|)><around*|(|s|)>|)>=\<sigma\><around*|(|s|)>=r
+        </equation*>
+      </description>
+
+      So in all cases we found a <math|l\<in\><around*|{|0,\<ldots\>,n|}>>
+      such that <math|\<gamma\><rsub|\<sigma\>><around*|(|l|)>=r> proving
+      surjectivity.
+    </description>
   </proof>
+
+  \;
+
+  \ 
 
   \;
 
@@ -701,7 +1059,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|10>
-    <associate|page-first|301>
+    <associate|page-first|302>
     <associate|page-medium|paper>
     <associate|section-nr|5>
     <associate|subsection-nr|2>
@@ -711,30 +1069,41 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|11|303>>
+    <associate|auto-10|<tuple|<with|mode|<quote|math>|S<rsub|I>>|?>>
+    <associate|auto-11|<tuple|<with|mode|<quote|math>|i\<leftrightarrowlim\><rsub|I>>j|?>>
     <associate|auto-2|<tuple|11.1|303>>
     <associate|auto-3|<tuple|11.1.1|303>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|<big|sum><rsub|i=0><rsup|n>x<rsub|i>>|303>>
     <associate|auto-5|<tuple|<with|mode|<quote|math>|<big|prod><rsub|i=0><rsup|n>x<rsub|i>>|303>>
-    <associate|auto-6|<tuple|11.1.2|308>>
-    <associate|eq|<tuple|11.2|?>>
+    <associate|auto-6|<tuple|11.1.2|309>>
+    <associate|auto-7|<tuple|11.1.3|?>>
+    <associate|auto-8|<tuple|permutation|?>>
+    <associate|auto-9|<tuple|<with|mode|<quote|math>|\<sigma\>>|?>>
     <associate|eq 11.1.054|<tuple|11.1|307>>
-    <associate|eq 11.2.053|<tuple|11.2|?>>
+    <associate|eq 11.2.053|<tuple|11.2|310>>
+    <associate|permutation|<tuple|11.25|?>>
+    <associate|permutation definition|<tuple|11.21|?>>
+    <associate|permutation group|<tuple|11.22|?>>
+    <associate|permutation on subset|<tuple|11.23|?>>
+    <associate|permutation transposition|<tuple|11.24|?>>
+    <associate|permutation transposition properties|<tuple|11.25|?>>
+    <associate|permutation {0,..,n and transposition|<tuple|11.26|?>>
     <associate|product finite product|<tuple|11.2|303>>
     <associate|sum alternative definition|<tuple|11.4|304>>
     <associate|sum alternative definition (1)|<tuple|11.13|307>>
-    <associate|sum associativity|<tuple|11.20|?>>
-    <associate|sum associativity simple|<tuple|11.19|?>>
+    <associate|sum associativity|<tuple|11.20|310>>
+    <associate|sum associativity simple|<tuple|11.19|309>>
     <associate|sum finite sum|<tuple|11.1|303>>
     <associate|sum of differences|<tuple|11.9|306>>
-    <associate|sum of differences (1)|<tuple|11.18|307>>
-    <associate|sum of finite sums|<tuple|11.16|306>>
-    <associate|sum of finite sums (1)|<tuple|11.16|?>>
+    <associate|sum of differences (1)|<tuple|11.18|308>>
+    <associate|sum of finite sums|<tuple|11.8|306>>
+    <associate|sum of finite sums (1)|<tuple|11.16|308>>
     <associate|sum of inverses|<tuple|11.7|305>>
-    <associate|sum of inverses (1)|<tuple|11.17|307>>
+    <associate|sum of inverses (1)|<tuple|11.17|308>>
     <associate|sum of neutral element (1)|<tuple|11.14|307>>
     <associate|sum of neutral elements|<tuple|11.5|304>>
     <associate|sum of sums|<tuple|11.6|305>>
-    <associate|sum of sums (1)|<tuple|11.15|307>>
+    <associate|sum of sums (1)|<tuple|11.15|308>>
   </collection>
 </references>
 

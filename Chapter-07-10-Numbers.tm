@@ -10664,6 +10664,122 @@
     </equation*>
   </proof>
 
+  As a example of using recursion we have the following theorem.
+
+  <\theorem>
+    <label|recursion order>Let <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>>
+    be a partial ordered set then we have\ 
+
+    <\enumerate>
+      <item>If <math|n\<in\>\<bbb-N\><rsub|0>> and
+      <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>\<subseteq\>A>
+      a sequence such that <math|\<forall\>i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>
+      <math|x<rsub|i>\<leqslant\>x<rsub|i+1>> then
+      <math|\<forall\>k\<in\><around*|{|n,\<ldots\>,\<infty\>|}>> we have
+      <math|\<forall\>i\<in\><around*|{|0,\<ldots\>,k|}>> that
+      <math|x<rsub|i>\<leqslant\>x<rsub|k>>
+
+      <item>If <math|n,m\<in\>\<bbb-N\><rsub|0>> with <math|n\<leqslant\>m>
+      and <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|n,\<ldots\>,m|}>>\<subseteq\>A>
+      a finite family such that <math|\<forall\>i\<in\><around*|{|n,\<ldots\>,m-1|}>>
+      <math|x<rsub|i>\<leqslant\>x<rsub|i+1>> then
+      <math|\<forall\>k\<in\><around*|{|n,\<ldots\>,m|}>> we have
+      <math|\<forall\>i\<in\><around*|{|n,\<ldots\>,k|}>> we have
+      <math|x<rsub|i>\<leqslant\>x<rsub|k>>.
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>We prove this by induction, take\ 
+
+      <\equation*>
+        S=<around*|{|k\<in\><around*|{|n,\<ldots\>.,\<infty\>|}>\|\<forall\>i\<in\><around*|{|n,\<ldots\>,k|}><text|we
+        have >x<rsub|i>\<leqslant\>x<rsub|k>|}>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|n\<in\>S>>If <math|i\<in\><around*|{|n,\<ldots\>,n|}>>
+        then <math|i=n> so that <math|x<rsub|i>=x<rsub|n>\<leqslant\>x<rsub|n>>
+        proving that <math|n\<in\>S>.
+
+        <item*|<math|k\<in\>S\<Rightarrow\>k+1\<in\>S>>Let
+        <math|i\<in\><around*|{|n,\<ldots\>,k+1|}>> then for <math|i> we have
+        either:
+
+        <\description>
+          <item*|<math|i=k+1>>Then <math|x<rsub|i>=x<rsub|k+1>\<leqslant\>x<rsub|k+1>>
+
+          <item*|<math|i\<in\><around*|{|n,\<ldots\>,k|}>>>Then as
+          <math|k\<in\>S> we have <math|x<rsub|i>\<leqslant\>x<rsub|k>> and s
+          by the hypothesis <math|x<rsub|k>\<leqslant\>x<rsub|k+1>> it
+          follows that <math|x<rsub|i>\<leqslant\>x<rsub|k+1>>.
+        </description>
+
+        so in all cases we have <math|x<rsub|i>\<leqslant\>x<rsub|k+1>> which
+        proves that <math|k+1\<in\>S>
+      </description>
+
+      Mathematical induction [theorem: <reference|complex mathematical
+      induction>] proves then that <math|S=<around*|{|n,\<ldots\>,\<infty\>|}>>
+      so <math|\<forall\>k\<in\><around*|{|n,\<ldots\>,\<infty\>|}>> we have
+      <math|\<forall\>i\<in\><around*|{|n,\<ldots\>,k|}>> that
+      <math|x<rsub|i>\<leqslant\>x<rsub|k>>.
+
+      <item>This also proved by induction, take\ 
+
+      <\equation*>
+        S=<around*|{|k\<in\><around*|{|n,\<ldots\>,\<infty\>|}>\|k\<in\><around*|{|m+1,.,\<infty\>|}>\<vee\>\<forall\>i\<in\><around*|{|n,\<ldots\>,k|}><text|
+        we have >x<rsub|i>\<leqslant\>x<rsub|k>|}>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|n\<in\>S>>If <math|i\<in\><around*|{|n,\<ldots\>,n|}>>
+        then <math|i=n> and <math|x<rsub|i>=x<rsub|n>\<leqslant\>x<rsub|n>>
+        proving that <math|n\<in\>S>.
+
+        <item*|<math|k\<in\>S\<Rightarrow\>k+1\<in\>S>>For <math|k+1> we have
+        either:
+
+        <\description>
+          <item*|<math|k+1\<in\><around*|{|m+1,\<ldots\>,\<infty\>|}>>>Then
+          <math|k+1\<in\>S>
+
+          <item*|<math|k+1\<nin\><around*|{|m+1,\<ldots\>,\<infty\>|}>>>Then
+          <math|k\<less\>k+1\<less\>m+1> so that
+          <math|k\<nin\><around*|{|m+1,\<ldots\>,\<infty\>|}>>. For
+          <math|i\<in\><around*|{|n,\<ldots\>,k+1|}>> we have either:
+
+          <\description>
+            <item*|<math|i=k+1>>Then <math|x<rsub|i>=x<rsub|k+1>\<leqslant\>x<rsub|k+1>>
+
+            <item*|<math|i\<in\><around*|{|n,\<ldots\>,k|}>>>Then as
+            <math|k\<in\>S> and <math|k\<nin\><around*|{|m+1,\<ldots\>,\<infty\>|}>>
+            we must have that <math|x<rsub|i>\<leqslant\>x<rsub|k>> which as
+            by the hypothesis <math|x<rsub|k>\<leqslant\>x<rsub|k+1>> proves
+            that <math|x<rsub|i>\<leqslant\>x<rsub|k+1>>.
+          </description>
+
+          so in all cases we have <math|x<rsub|i>\<leqslant\>x<rsub|k+1>>
+          proving that <math|k+1\<in\>S>.
+        </description>
+      </description>
+
+      Using mathematical induction it follows then that
+      <math|S=<around*|{|n,\<ldots\>,\<infty\>|}>>. So if
+      <math|k\<in\><around*|{|n,\<ldots\>,m|}>> then <math|k\<in\>S> and
+      <math|k\<nin\><around*|{|m+1,\<ldots\>,\<infty\>|}>> so that
+      <math|\<forall\>i\<in\><around*|{|n,\<ldots\>,k|}>> we have
+      <math|x<rsub|i>\<leqslant\>x<rsub|k>>.
+    </enumerate>
+  </proof>
+
   We turn now to recursion.
 
   <\theorem>
@@ -11043,11 +11159,19 @@
       we have <math|0\<in\>S>
 
       <item*|<math|i\<in\>S\<Rightarrow\>i+1\<in\>S>>then for <math|i+1> we
-      have either:
+      have either: TODO
 
       <\description>
-        <item*|<math|i+1\<in\><around*|{|0,\<ldots\>,n|}>>>Then
-        <math|\<lambda\><around*|(|i+1|)>=g<around*|(|i,\<lambda\><around*|(|i|)>|)>\<equallim\><rsub|i\<in\>S>g<around*|(|i,\<gamma\><around*|(|i|)>|)>=\<gamma\><around*|(|i+1|)>>
+        <item*|<math|i+1\<in\><around*|{|0,\<ldots\>,n|}>>><item*|<math|i+1\<in\><around*|{|0,\<ldots\>,n|}>>>Then
+        <math|i+1\<leqslant\>n> so that <math|i\<less\>n> and as
+        <math|i\<in\>S> we have <math|0\<leqslant\>i>, so it follows that
+        <math|i\<in\><around*|{|0,\<ldots\>,n|}>>. Further
+
+        <\equation*>
+          \<lambda\><around*|(|i+1|)>=g<around*|(|i,\<lambda\><around*|(|i|)>|)>\<equallim\><rsub|i\<in\><around*|{|0,\<ldots\>,n|}><text|
+          and >i\<in\>S>g<around*|(|i,\<gamma\><around*|(|i|)>|)>=\<gamma\><around*|(|i+1|)>
+        </equation*>
+
         proving that <math|i+1\<in\>S>
 
         <item*|<math|i+1\<nin\><around*|{|0,\<ldots\>,n|}>>>Then
@@ -12766,7 +12890,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|6>
-    <associate|page-first|183>
+    <associate|page-first|185>
     <associate|project-flag|false>
     <associate|section-nr|2>
     <associate|subsection-nr|4>
@@ -12828,8 +12952,8 @@
     <associate|auto-7|<tuple|absolute value|?>>
     <associate|auto-8|<tuple|<with|mode|<quote|math>|<around*|\||x|\|>>|?>>
     <associate|auto-9|<tuple|<with|mode|<quote|math>|m\|n>|?>>
-    <associate|compelx|<tuple|10.62|?>>
-    <associate|complex (x^n-1)\<gtr\>=n.(x-1)|<tuple|10.48|?>>
+    <associate|compelx|<tuple|10.63|?>>
+    <associate|complex (x^n-1)\<gtr\>=n.(x-1)|<tuple|10.49|?>>
     <associate|complex 0\<less\>1|<tuple|10.10|?>>
     <associate|complex Archimedean property|<tuple|10.24|?>>
     <associate|complex Archimedean property consequence (1)|<tuple|10.25|?>>
@@ -12841,56 +12965,56 @@
     <associate|complex RC order (1)|<tuple|10.7|?>>
     <associate|complex RC order (2)|<tuple|10.8|?>>
     <associate|complex RC order properties|<tuple|10.14|?>>
-    <associate|complex a\<less\>2^n|<tuple|10.47|?>>
-    <associate|complex conjugate|<tuple|10.66|?>>
-    <associate|complex conjugate properties|<tuple|10.67|?>>
-    <associate|complex definition by recursion (1)|<tuple|10.36|?>>
-    <associate|complex definition by recursion (2)|<tuple|10.37|?>>
-    <associate|complex definition recursion finite|<tuple|10.38|?>>
+    <associate|complex a\<less\>2^n|<tuple|10.48|?>>
+    <associate|complex conjugate|<tuple|10.67|?>>
+    <associate|complex conjugate properties|<tuple|10.68|?>>
+    <associate|complex definition by recursion (1)|<tuple|10.37|?>>
+    <associate|complex definition by recursion (2)|<tuple|10.38|?>>
+    <associate|complex definition recursion finite|<tuple|10.39|?>>
     <associate|complex densitiy theorem|<tuple|10.27|?>>
     <associate|complex embedding|<tuple|10.5|?>>
     <associate|complex field|<tuple|10.2|?>>
-    <associate|complex i^2=-1|<tuple|10.61|?>>
+    <associate|complex i^2=-1|<tuple|10.62|?>>
     <associate|complex integers are conditional complete|<tuple|10.16|?>>
     <associate|complex irrational numbers|<tuple|10.20|?>>
     <associate|complex mathematical induction|<tuple|10.30|?>>
-    <associate|complex n\<less\>2^n|<tuple|10.46|?>>
+    <associate|complex n\<less\>2^n|<tuple|10.47|?>>
     <associate|complex n\<less\>m and 0\<less\>x\<less\>1 then
-    x^n\<less\>x^m|<tuple|10.50|?>>
-    <associate|complex norm|<tuple|10.68|?>>
-    <associate|complex norm properties|<tuple|10.69|?>>
+    x^n\<less\>x^m|<tuple|10.51|?>>
+    <associate|complex norm|<tuple|10.69|?>>
+    <associate|complex norm properties|<tuple|10.70|?>>
     <associate|complex notation|<tuple|10.3|?>>
     <associate|complex numbers|<tuple|10.1|?>>
     <associate|complex order isomorphisms|<tuple|10.9|?>>
-    <associate|complex power|<tuple|10.39|?>>
-    <associate|complex power and inequality|<tuple|10.45|?>>
-    <associate|complex power is internal|<tuple|10.41|?>>
-    <associate|complex power of inverse|<tuple|10.43|?>>
-    <associate|complex power properties|<tuple|10.44|?>>
+    <associate|complex power|<tuple|10.40|?>>
+    <associate|complex power and inequality|<tuple|10.46|?>>
+    <associate|complex power is internal|<tuple|10.42|?>>
+    <associate|complex power of inverse|<tuple|10.44|?>>
+    <associate|complex power properties|<tuple|10.45|?>>
     <associate|complex rational numbers specification|<tuple|10.6|?>>
-    <associate|complex real imaginair|<tuple|10.64|?>>
-    <associate|complex real. imaginair properties|<tuple|10.65|?>>
-    <associate|complex recursion|<tuple|10.31|?>>
-    <associate|complex recursion iteration|<tuple|10.32|?>>
-    <associate|complex recursion step|<tuple|10.33|?>>
-    <associate|complex recursion step (2)|<tuple|10.34|?>>
-    <associate|complex recursion step form finite|<tuple|10.35|?>>
-    <associate|complex root is strictly increasing|<tuple|10.56|?>>
-    <associate|complex sqrt x\<less\>sqrt x^2|<tuple|10.58|?>>
-    <associate|complex sqrt(0) and sqrt(1)|<tuple|10.54|?>>
-    <associate|complex square operator is a bijection|<tuple|10.51|?>>
-    <associate|complex square root|<tuple|10.52|?>>
-    <associate|complex square root norm|<tuple|10.60|?>>
-    <associate|complex square root of 2 is irational|<tuple|10.55|?>>
-    <associate|complex square root of product|<tuple|10.59|?>>
-    <associate|complex square root properties (1)|<tuple|10.57|?>>
+    <associate|complex real imaginair|<tuple|10.65|?>>
+    <associate|complex real. imaginair properties|<tuple|10.66|?>>
+    <associate|complex recursion|<tuple|10.32|?>>
+    <associate|complex recursion iteration|<tuple|10.33|?>>
+    <associate|complex recursion step|<tuple|10.34|?>>
+    <associate|complex recursion step (2)|<tuple|10.35|?>>
+    <associate|complex recursion step form finite|<tuple|10.36|?>>
+    <associate|complex root is strictly increasing|<tuple|10.57|?>>
+    <associate|complex sqrt x\<less\>sqrt x^2|<tuple|10.59|?>>
+    <associate|complex sqrt(0) and sqrt(1)|<tuple|10.55|?>>
+    <associate|complex square operator is a bijection|<tuple|10.52|?>>
+    <associate|complex square root|<tuple|10.53|?>>
+    <associate|complex square root norm|<tuple|10.61|?>>
+    <associate|complex square root of 2 is irational|<tuple|10.56|?>>
+    <associate|complex square root of product|<tuple|10.60|?>>
+    <associate|complex square root properties (1)|<tuple|10.58|?>>
     <associate|complex sup(S+T) and inf(S+T)|<tuple|10.21|?>>
     <associate|complex sup(S+s) inf(T+t)|<tuple|10.22|?>>
     <associate|complex x\<less\>x+1 and x-1\<less\>x|<tuple|10.15|?>>
     <associate|complex x\<less\>y=\<gtr\>x+1\<less\>=y|<tuple|10.23|?>>
-    <associate|complex x^(m+n)=x^n.x^m|<tuple|10.42|?>>
-    <associate|complex x^0,z^1,z^2|<tuple|10.40|?>>
-    <associate|complex x^n\<gtr\>n if x\<gtr\>1 (R)|<tuple|10.49|?>>
+    <associate|complex x^(m+n)=x^n.x^m|<tuple|10.43|?>>
+    <associate|complex x^0,z^1,z^2|<tuple|10.41|?>>
+    <associate|complex x^n\<gtr\>n if x\<gtr\>1 (R)|<tuple|10.50|?>>
     <associate|complex {n,..,m}|<tuple|10.29|?>>
     <associate|eq 10.1.048|<tuple|10.1|?>>
     <associate|eq 10.10.048|<tuple|10.10|?>>
@@ -12954,8 +13078,6 @@
     <associate|eq 10.7.048|<tuple|10.7|?>>
     <associate|eq 10.8.048|<tuple|10.8|?>>
     <associate|eq 10.9.048|<tuple|10.9|?>>
-    <associate|eq 5.18.053|<tuple|10.44|?>>
-    <associate|eq 5.19.053|<tuple|10.45|?>>
     <associate|eq 7.1.022|<tuple|7.1|?>>
     <associate|eq 7.11.022|<tuple|7.10|?>>
     <associate|eq 7.12.022|<tuple|7.11|?>>
@@ -13149,8 +13271,6 @@
     <associate|integers \|x.y\|=\|x\|.\|y\||<tuple|7.35|?>>
     <associate|integers \|x\|\<less\>=\<gtr\>x=0|<tuple|7.37|?>>
     <associate|integers ~([n,m])~([n+k,m+k)]|<tuple|7.3|?>>
-    <associate|natural numbers definition recursion finite|<tuple|10.38|?>>
-    <associate|natural numbers recursion step form finite|<tuple|10.37|?>>
     <associate|rational -(q^-1)=(-q)^-1|<tuple|8.30|?>>
     <associate|rational 0\<less\>1|<tuple|8.25|?>>
     <associate|rational 0\<less\>=q property|<tuple|8.20|?>>
@@ -13246,11 +13366,11 @@
     <associate|real rational cut properties|<tuple|9.36|?>>
     <associate|real rational numbers specification|<tuple|9.57|?>>
     <associate|real real numbers|<tuple|9.2|?>>
-    <associate|real recursion step form finite|<tuple|10.35|?>>
     <associate|real strict order relation definition|<tuple|9.39|?>>
     <associate|real sum is a operator|<tuple|9.14|?>>
     <associate|real totally ordered|<tuple|9.43|?>>
     <associate|reals the set of reals are non empty|<tuple|9.5|?>>
+    <associate|recursion order|<tuple|10.31|?>>
     <associate|sign function|<tuple|8.15|?>>
   </collection>
 </references>
