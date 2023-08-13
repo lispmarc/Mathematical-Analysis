@@ -5744,7 +5744,7 @@
   definitions.
 
   <\definition>
-    Let <math|n\<in\>\<bbb-N\><rsub|0>> then
+    <label|natural number {n,..}>Let <math|n\<in\>\<bbb-N\><rsub|0>> then
     <math|<around*|{|n,\<ldots\>\<infty\>|}>> is defined as\ 
 
     <\equation*>
@@ -5758,7 +5758,7 @@
   </note>
 
   <\definition>
-    Let <math|n,m\<in\>\<bbb-N\><rsub|0>> then
+    <label|natural number {n,..,m}>Let <math|n,m\<in\>\<bbb-N\><rsub|0>> then
     <math|<around*|{|n,\<ldots\>,m|}>> is defined as\ 
 
     <\equation*>
@@ -6494,7 +6494,7 @@
 
   <\theorem>
     <label|natural numbers are segments><math|\<forall\>n\<in\>\<bbb-N\><rsub|0>>
-    we have <math|n=S<rsub|n>>
+    we have <math|n=S<rsub|n>>.
   </theorem>
 
   <\proof>
@@ -6661,6 +6661,53 @@
     <math|\<varnothing\>:\<varnothing\>\<rightarrow\>\<varnothing\>> is a
     bijection by [example: <reference|function empty function bijection>], so
     as <math|0=\<varnothing\>> we have that <math|0\<approx\>\<varnothing\>>.
+  </proof>
+
+  <\theorem>
+    <label|finite set alternative definition>A set <math|A> is finite if and
+    only if <math|A=\<emptyset\>\<vee\>\<exists\>n,m\<in\>\<bbb-N\><rsub|0>>
+    with <math|n\<leqslant\>m> such that <math|<around*|{|n,\<ldots\>,m|}>\<approx\>A>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>If <math|A> is finite then by definition
+      there exist a <math|k\<in\>\<bbb-N\><rsub|0>> such that
+      <math|S<rsub|k>=k\<approx\>A> or there exists a bijection
+      <math|\<beta\>:S<rsub|k>\<rightarrow\>A>. For <math|k> we have either:\ 
+
+      <\description>
+        <item*|<math|k=0>>Then <math|A=\<beta\><around*|(|S<rsub|0>|)>=\<beta\><around*|(|\<varnothing\>|)>=\<varnothing\>>
+
+        <item*|<math|0\<less\>k>>Then <math|S<rsub|k>=<around*|{|x\<in\>\<bbb-N\><rsub|0>\|x\<less\>k|}>=<around*|{|0,\<ldots\>,k-1|}>>
+        so that for <math|n=0> and <math|m=k-1> we have
+        <math|<around*|{|n,\<ldots\>,m|}>\<approx\>A>
+      </description>
+
+      <item*|<math|\<Leftarrow\>>>If <math|A=\<emptyset\>> then by the above
+      example <math|A> is finite. Further if
+      <math|\<exists\>n,m\<in\>\<bbb-N\><rsub|0>> with <math|n\<leqslant\>m>
+      such that <math|<around*|{|n,\<ldots\>,m|}>\<approx\>A>, define a
+      function <math|\<beta\>:S<rsub|m-n+1>=<around*|{|i\<in\>\<bbb-N\><rsub|0>\|i\<less\>m-n+1|}>\<rightarrow\><around*|{|n.,\<ldots\>,m|}>>
+      by <math|\<beta\><around*|(|i|)>=i+n> then we have:
+
+      <\description>
+        <item*|injectivity>If <math|\<beta\><around*|(|i|)>=\<beta\><around*|(|j|)>>
+        then <math|i+n=j+n> so that <math|i=j>.
+
+        \ <item*|surjectivity>If <math|k\<in\><around*|{|n,\<ldots\>,m|}>>
+        then <math|n\<leqslant\>k\<wedge\>k\<leqslant\>m> so that
+        <math|0\<leqslant\>k-n\<leqslant\>m-n\<less\>m-n+1> so for
+        <math|l=k-n> we have <math|l\<in\><around*|{|i\<in\>\<bbb-N\><rsub|0>\|i\<less\>m-n+1|}>>
+        such that <math|\<beta\><around*|(|l|)>=l+n=k>.
+      </description>
+
+      So we have that <math|\<beta\>> is a bijection proving that
+      <math|m-n+1=S<rsub|m-n+1>\<approx\><around*|{|n,\<ldots\>,m|}>\<approx\>A>
+      proving that <math|A> is finite.
+    </description>
   </proof>
 
   <\definition>
@@ -7303,8 +7350,8 @@
   finite set.
 
   <\theorem>
-    If <math|n,m\<in\>\<bbb-N\><rsub|0>> such that <math|n\<approx\>m> then
-    <math|n=m>.
+    <label|finite uniqueness of size>If <math|n,m\<in\>\<bbb-N\><rsub|0>>
+    such that <math|n\<approx\>m> then <math|n=m>.
   </theorem>
 
   <\proof>
@@ -9418,7 +9465,7 @@
     <associate|auto-5|<tuple|group|110>>
     <associate|auto-50|<tuple|6.2|165>>
     <associate|auto-51|<tuple|6.2.1|165>>
-    <associate|auto-52|<tuple|finite set|166>>
+    <associate|auto-52|<tuple|finite set|167>>
     <associate|auto-53|<tuple|infinite set|167>>
     <associate|auto-54|<tuple|denumerable set|167>>
     <associate|auto-55|<tuple|infinite countable set|167>>
@@ -9431,55 +9478,55 @@
     <associate|auto-7|<tuple|sup-group|111>>
     <associate|auto-8|<tuple|group isomorphism|113>>
     <associate|auto-9|<tuple|left action|116>>
-    <associate|cardinality of natural numbers|<tuple|6.36|172>>
-    <associate|cardinality of the empty set is 0|<tuple|6.37|172>>
+    <associate|cardinality of natural numbers|<tuple|6.37|172>>
+    <associate|cardinality of the empty set is 0|<tuple|6.38|172>>
     <associate|cardinality of union of two disjoint finite
-    sets|<tuple|6.39|172>>
-    <associate|countable AUB and AxB|<tuple|6.68|185>>
+    sets|<tuple|6.40|173>>
+    <associate|countable AUB and AxB|<tuple|6.69|186>>
     <associate|countable product of a finite family of countable sets is
-    countable (2)|<tuple|6.70|186>>
+    countable (2)|<tuple|6.71|186>>
     <associate|countable product of finite family of countable sets is
-    countable|<tuple|6.69|186>>
-    <associate|countable set|<tuple|6.23|167>>
-    <associate|countable set conditions (1)|<tuple|6.65|184>>
+    countable|<tuple|6.70|186>>
+    <associate|countable set|<tuple|6.24|167>>
+    <associate|countable set conditions (1)|<tuple|6.66|184>>
     <associate|countable subset of countable set is
-    countable|<tuple|6.64|184>>
+    countable|<tuple|6.65|184>>
     <associate|countable subset of denumerable set is
-    countable|<tuple|6.63|184>>
+    countable|<tuple|6.64|184>>
     <associate|countable union of a denumerable family of countable sets is
-    denumerable|<tuple|6.66|184>>
+    denumerable|<tuple|6.67|185>>
     <associate|countable union of a finite family of countable sets is
-    countable|<tuple|6.67|185>>
+    countable|<tuple|6.68|185>>
     <associate|definition by recursion (1)|<tuple|5.88|160>>
     <associate|definition by recursion (2)|<tuple|5.89|160>>
     <associate|denumerable every subset is finite
-    denumerable.|<tuple|6.55|180>>
+    denumerable.|<tuple|6.56|180>>
     <associate|denumerable is not subset of a natural
-    number|<tuple|6.26|168>>
-    <associate|denumerable product nxN is denumerable|<tuple|6.59|182>>
+    number|<tuple|6.27|168>>
+    <associate|denumerable product nxN is denumerable|<tuple|6.60|182>>
     <associate|denumerable product of denumerable sets is
-    denumerable|<tuple|6.58|182>>
+    denumerable|<tuple|6.59|182>>
     <associate|denumerable product of finite set and a denumerable set is
-    denurable|<tuple|6.60|182>>
+    denurable|<tuple|6.61|182>>
     <associate|denumerable product of two denumerable set is
-    denumerable|<tuple|6.56|180>>
-    <associate|denumerable set|<tuple|6.22|167>>
-    <associate|denumerable subsets of N_0|<tuple|6.54|180>>
+    denumerable|<tuple|6.57|181>>
+    <associate|denumerable set|<tuple|6.23|167>>
+    <associate|denumerable subsets of N_0|<tuple|6.55|180>>
     <associate|denumerable union of a denumerable family of denumerable sets
-    is denumerable|<tuple|6.62|183>>
+    is denumerable|<tuple|6.63|183>>
     <associate|denumerable union of a finite family of denumerable sets is
-    denumerable|<tuple|6.61|183>>
-    <associate|denumerable with one less element|<tuple|6.25|167>>
+    denumerable|<tuple|6.62|183>>
+    <associate|denumerable with one less element|<tuple|6.26|167>>
     <associate|empty set is finite|<tuple|6.20|167>>
     <associate|eq 5.1.019|<tuple|5.1|138>>
     <associate|eq 5.10.019|<tuple|5.10|143>>
     <associate|eq 5.11.019|<tuple|5.11|143>>
     <associate|eq 5.12.019|<tuple|5.12|143>>
     <associate|eq 5.13.019|<tuple|5.13|143>>
-    <associate|eq 5.14.019|<tuple|5.14|156>>
+    <associate|eq 5.14.019|<tuple|5.14|155>>
     <associate|eq 5.15.019|<tuple|5.15|156>>
     <associate|eq 5.16.019|<tuple|5.16|156>>
-    <associate|eq 5.17.019|<tuple|5.17|159>>
+    <associate|eq 5.17.019|<tuple|5.17|158>>
     <associate|eq 5.18.053|<tuple|5.18|159>>
     <associate|eq 5.19.053|<tuple|5.19|159>>
     <associate|eq 5.2.019|<tuple|5.2|138>>
@@ -9490,19 +9537,19 @@
     <associate|eq 5.7.019|<tuple|5.7|140>>
     <associate|eq 5.8.019|<tuple|5.8|140>>
     <associate|eq 5.9.019|<tuple|5.9|140>>
-    <associate|eq 6.10.019|<tuple|6.10|170>>
+    <associate|eq 6.10.019|<tuple|6.10|171>>
     <associate|eq 6.11.019|<tuple|6.11|171>>
     <associate|eq 6.12.022|<tuple|6.12|177>>
     <associate|eq 6.13.022|<tuple|6.13|177>>
     <associate|eq 6.14.022|<tuple|6.14|177>>
     <associate|eq 6.15.022|<tuple|6.15|177>>
-    <associate|eq 6.17.020|<tuple|6.16|177>>
-    <associate|eq 6.18.020|<tuple|6.17|177>>
-    <associate|eq 6.18.022|<tuple|6.18|178>>
-    <associate|eq 6.19.022|<tuple|6.19|178>>
+    <associate|eq 6.17.020|<tuple|6.16|178>>
+    <associate|eq 6.18.020|<tuple|6.17|178>>
+    <associate|eq 6.18.022|<tuple|6.18|179>>
+    <associate|eq 6.19.022|<tuple|6.19|179>>
     <associate|eq 6.2.019|<tuple|6.2|169>>
-    <associate|eq 6.20.022|<tuple|6.20|178>>
-    <associate|eq 6.21.022|<tuple|6.21|178>>
+    <associate|eq 6.20.022|<tuple|6.20|179>>
+    <associate|eq 6.21.022|<tuple|6.21|179>>
     <associate|eq 6.22.022|<tuple|6.22|181>>
     <associate|eq 6.23.022|<tuple|6.23|181>>
     <associate|eq 6.24.022|<tuple|6.24|181>>
@@ -9511,9 +9558,9 @@
     <associate|eq 6.4.019|<tuple|6.4|169>>
     <associate|eq 6.5.019|<tuple|6.5|169>>
     <associate|eq 6.6.019|<tuple|6.6|169>>
-    <associate|eq 6.7.019|<tuple|6.7|169>>
+    <associate|eq 6.7.019|<tuple|6.7|170>>
     <associate|eq 6.8.019|<tuple|6.8|170>>
-    <associate|eq 6.9.019|<tuple|6.9|170>>
+    <associate|eq 6.9.019|<tuple|6.9|171>>
     <associate|eq 7.1.019|<tuple|6.1|166>>
     <associate|equipotence|<tuple|6.1|163>>
     <associate|equipotence 2^A and P(A)|<tuple|6.14|165>>
@@ -9523,11 +9570,11 @@
     <associate|equipotence A^C~B^D|<tuple|6.13|165>>
     <associate|equipotence AxC~BxD|<tuple|6.12|164>>
     <associate|equipotence equivalence relation|<tuple|6.2|163>>
-    <associate|equipotence finite, denumerable , countable|<tuple|6.24|167>>
+    <associate|equipotence finite, denumerable , countable|<tuple|6.25|167>>
     <associate|equipotence property (1)|<tuple|6.8|164>>
     <associate|equipotence union|<tuple|6.11|164>>
-    <associate|every subset of a finite set is finite|<tuple|6.30|168>>
-    <associate|extract maximum element of a family|<tuple|6.47|175>>
+    <associate|every subset of a finite set is finite|<tuple|6.31|169>>
+    <associate|extract maximum element of a family|<tuple|6.48|175>>
     <associate|field|<tuple|4.51|124>>
     <associate|field field homeomorphism is a ring
     isomomorphism|<tuple|4.65|127>>
@@ -9553,14 +9600,16 @@
     z\<less\>\<gtr\>0|<tuple|4.56|126>>
     <associate|field x^-1=y^-1=\<gtr\>x=y|<tuple|4.54|125>>
     <associate|finite ordered sets have a maximum and
-    minimum|<tuple|6.44|174>>
-    <associate|finite set|<tuple|6.19|166>>
-    <associate|finite union of finite sets is finite|<tuple|6.33|170>>
+    minimum|<tuple|6.45|174>>
+    <associate|finite set|<tuple|6.19|167>>
+    <associate|finite set alternative definition|<tuple|6.21|167>>
+    <associate|finite union of finite sets is finite|<tuple|6.34|170>>
     <associate|finite union of finite sets is finite
-    (lemma)|<tuple|6.32|169>>
+    (lemma)|<tuple|6.33|170>>
+    <associate|finite uniqueness of size|<tuple|6.36|?>>
     <associate|function P(A) bijective with 2^A|<tuple|6.5|163>>
     <associate|function injection and inverse surjection|<tuple|6.9|164>>
-    <associate|function no surjection between A and P(A)|<tuple|6.7|163>>
+    <associate|function no surjection between A and P(A)|<tuple|6.7|164>>
     <associate|group -x=-y\<less\>=\<gtr\>x=y|<tuple|4.10|111>>
     <associate|group abelian group/sub group|<tuple|4.11|111>>
     <associate|group cancelation|<tuple|4.6|110>>
@@ -9585,16 +9634,18 @@
     <associate|group sub sub group|<tuple|4.17|112>>
     <associate|group sub sub semi-group|<tuple|4.15|111>>
     <associate|group sub-group|<tuple|4.13|111>>
-    <associate|infinite condition (1)|<tuple|6.34|170>>
-    <associate|infinite set|<tuple|6.21|167>>
+    <associate|infinite condition (1)|<tuple|6.35|170>>
+    <associate|infinite set|<tuple|6.22|167>>
     <associate|inverse of a field isomorphism is a field
     isomorphism|<tuple|4.69|128>>
     <associate|iteration final|<tuple|5.84|158>>
-    <associate|mapping of N to a finite set (1)|<tuple|6.45|175>>
-    <associate|mapping of N to a finite set (2)|<tuple|6.46|175>>
+    <associate|mapping of N to a finite set (1)|<tuple|6.46|175>>
+    <associate|mapping of N to a finite set (2)|<tuple|6.47|175>>
     <associate|mathematical induction|<tuple|5.82|157>>
-    <associate|max element of a family|<tuple|6.48|177>>
+    <associate|max element of a family|<tuple|6.49|177>>
     <associate|n\<less\>=m=\<gtr\>S_n\<less\>=S_m|<tuple|6.17|166>>
+    <associate|natural number {n,..,m}|<tuple|5.81|157>>
+    <associate|natural number {n,..}|<tuple|5.79|157>>
     <associate|natural numbers|<tuple|5.3|136>>
     <associate|natural numbers (n+m)-k=(n-k)+m|<tuple|5.65|153>>
     <associate|natural numbers (n+m)-n=m|<tuple|5.66|153>>
@@ -9608,8 +9659,8 @@
     <associate|natural numbers absorbing element|<tuple|5.36|146>>
     <associate|natural numbers addition|<tuple|5.27|144>>
     <associate|natural numbers additive semi-group|<tuple|5.34|145>>
-    <associate|natural numbers are infinite|<tuple|6.28|168>>
-    <associate|natural numbers are segments|<tuple|6.16|165>>
+    <associate|natural numbers are infinite|<tuple|6.29|169>>
+    <associate|natural numbers are segments|<tuple|6.16|166>>
     <associate|natural numbers are total ordered|<tuple|5.52|151>>
     <associate|natural numbers are transitive|<tuple|5.14|137>>
     <associate|natural numbers are well ordered|<tuple|5.51|150>>
@@ -9673,15 +9724,15 @@
     <associate|natural numbers transitive|<tuple|5.13|137>>
     <associate|natural numbers x\<less\>=y or y\<less\>x|<tuple|5.53|151>>
     <associate|operator|<tuple|4.1|109>>
-    <associate|ordering of a finite family|<tuple|6.49|177>>
-    <associate|ordering of a finite family (1)|<tuple|6.50|178>>
+    <associate|ordering of a finite family|<tuple|6.50|178>>
+    <associate|ordering of a finite family (1)|<tuple|6.51|179>>
     <associate|product of a finite family of finite sets is is
-    finite|<tuple|6.52|179>>
+    finite|<tuple|6.53|180>>
     <associate|product of a finite family of finite sets is is finite
-    (1)|<tuple|6.53|180>>
-    <associate|product of finite family of sets|<tuple|6.51|179>>
-    <associate|product of finite sets|<tuple|6.38|172>>
-    <associate|proposition 6.53.022|<tuple|6.57|181>>
+    (1)|<tuple|6.54|180>>
+    <associate|product of finite family of sets|<tuple|6.52|179>>
+    <associate|product of finite sets|<tuple|6.39|172>>
+    <associate|proposition 6.53.022|<tuple|6.58|181>>
     <associate|recursion|<tuple|5.19|138>>
     <associate|recursion final|<tuple|5.83|158>>
     <associate|recursion injective function|<tuple|5.20|140>>
@@ -9709,16 +9760,16 @@
     <associate|ring subring subgroup|<tuple|4.36|117>>
     <associate|ring zero divisor|<tuple|4.33|117>>
     <associate|semi-group|<tuple|4.2|109>>
-    <associate|set containing a denumerable set is infinite|<tuple|6.27|168>>
+    <associate|set containing a denumerable set is infinite|<tuple|6.28|168>>
     <associate|set is infinitie if it contains a infinite
-    subset|<tuple|6.29|168>>
-    <associate|set of finite family is finite|<tuple|6.42|174>>
+    subset|<tuple|6.30|169>>
+    <associate|set of finite family is finite|<tuple|6.43|174>>
     <associate|sub-semi-group|<tuple|4.12|111>>
     <associate|subring|<tuple|4.35|117>>
-    <associate|subset of finite sets|<tuple|6.40|173>>
+    <associate|subset of finite sets|<tuple|6.41|173>>
     <associate|surjection f:A-\<gtr\>B if A is finite then B is
-    finite|<tuple|6.41|173>>
-    <associate|union of two finite sets is finite|<tuple|6.31|169>>
+    finite|<tuple|6.42|174>>
+    <associate|union of two finite sets is finite|<tuple|6.32|169>>
     <associate|{n,..,m} is bijective to S_(m-n)+1|<tuple|6.18|166>>
   </collection>
 </references>

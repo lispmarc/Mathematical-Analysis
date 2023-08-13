@@ -232,6 +232,46 @@
   </proof>
 
   <\theorem>
+    <label|sum ring product>Let <math|<around*|\<langle\>|R,+,\<cdot\>|\<rangle\>>>
+    be a ring, <math|\<alpha\>\<in\>R>, <math|n\<in\>\<bbb-N\><rsub|0>> and
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>\<subseteq\>A>
+    then we have\ 
+
+    <\equation*>
+      <big|sum><rsub|i=0><rsup|n><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>=\<alpha\>\<cdot\><big|sum><rsub|i=0><rsup|n>x<rsub|i>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    As usually the prove is by induction. So let\ 
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|\<forall\><around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>><text|
+      we have ><big|sum><rsub|i=0><rsup|n><around*|(|\<alpha\><rsub|i>\<cdot\>x<rsub|i>|)>=\<alpha\>\<cdot\><big|sum><rsub|i=0><rsup|n>x<rsub|i>|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|0\<in\>S>>As for <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,0|}>>>
+      <math|<big|sum><rsub|i=0><rsup|0><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>=\<alpha\>\<cdot\>x<rsub|0>=\<alpha\>\<cdot\><big|sum><rsub|i=0><rsup|0>x<rsub|i>>
+      we have that <math|0\<in\>S>
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+      <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n+1|}>>\<subseteq\>A>
+      then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|sum><rsub|i=0><rsup|n+1><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i=0><rsup|n><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>|)>+\<alpha\>\<cdot\>x<rsub|n+1>>>|<row|<cell|>|<cell|\<equallim\><rsub|n\<in\>S>>|<cell|\<alpha\>\<cdot\><big|sum><rsub|i=0><rsup|n>x<rsub|i>+\<alpha\>\<cdot\>x<rsub|n+1>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\><around*|(|<around*|(|<big|sum><rsup|n><rsub|i=0>x<rsub|i>|)>+x<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\><big|sum><rsub|i=0><rsup|n+1>x<rsub|i>>>>>
+      </eqnarray*>
+
+      proving that <math|n+1\<in\>S>.
+    </description>
+
+    \;
+  </proof>
+
+  <\theorem>
     <label|sum of finite sums>Let <math|<around*|\<langle\>|A,+|\<rangle\>>>
     be a Abelian semi-group, <math|n<rsub|1>,n<rsub|2>\<in\>\<bbb-N\><rsub|0>>
     and <math|<around*|{|x<rsub|i,j>|}><rsub|<around*|(|i,j|)>\<in\><around*|{|0,\<ldots\>,n<rsub|1>|}>\<times\><around*|{|0,\<ldots\>,n<rsub|2>|}>>\<subseteq\>A>
@@ -478,6 +518,26 @@
 
     <\equation*>
       <big|sum><rsub|i=n><rsup|m><around*|(|x<rsub|i>+y<rsub|i>|)>=<big|sum><rsub|i=0><rsup|m-n><around*|(|x<rsub|n+i>+y<rsub|n+i>|)>=<big|sum><rsub|i=0><rsup|m-n>x<rsub|i>+<big|sum><rsub|i=0><rsup|m-n>y<rsub|i>=<big|sum><rsub|i=n><rsup|m>x<rsub|i>+<big|sum>y<rsub|i><rsub|i=n><rsup|m>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|sum ring product (1)>Let <math|<around*|\<langle\>|R,+,\<cdot\>|\<rangle\>>>
+    be a ring, <math|\<alpha\>\<in\>R>, <math|n,m\<in\>\<bbb-N\><rsub|0>>
+    with <math|n\<leqslant\>m> and <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|n,\<ldots\>,m|}>>\<subseteq\>A>
+    then we have\ 
+
+    <\equation*>
+      <big|sum><rsub|i=n><rsup|m><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>=\<alpha\>\<cdot\><big|sum><rsub|i=n><rsup|m>x<rsub|i>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\equation*>
+      <big|sum><rsub|i=n><rsup|m><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>=<big|sum><rsup|m-n><rsub|i=0><around*|(|\<alpha\>\<cdot\>x<rsub|n+i>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|sum ring product>]>>\<alpha\>\<cdot\><big|sum><rsub|i=0><rsup|m-n>x<rsub|n+i>=\<alpha\>\<cdot\><big|sum><rsub|i=n><rsup|m>x<rsub|i>
     </equation*>
   </proof>
 
@@ -1047,20 +1107,1186 @@
     </description>
   </proof>
 
+  <\theorem>
+    <label|sum commutativity><dueto|Commutativity>Let
+    <math|<around*|\<langle\>|A,+|\<rangle\>>> be a Abelian semi-group,
+    <math|n\<in\>\<bbb-N\><rsub|0>>, <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>>
+    and <math|\<sigma\>\<in\>S<rsub|<around*|{|0,\<ldots\>,n|}>>> a
+    permutation then
+
+    <\equation*>
+      <big|sum><rsub|i=0><rsup|n>x<rsub|i>=<big|sum><rsub|i=0><rsup|n>x<rsub|\<sigma\><around*|(|i|)>>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    We prove this by induction so take\ 
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|\<forall\><around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>><text|
+      and >\<forall\>\<sigma\>\<in\>S<rsub|<around*|{|0,\<ldots\>,n|}>><text|
+      we have ><big|sum><rsub|i=0><rsup|n>x<rsub|i>=<big|sum><rsub|i=0><rsup|n>x<rsub|\<sigma\><around*|(|i|)>>|}>
+    </equation*>
+
+    then we have:\ 
+
+    <\description>
+      <item*|<math|0\<in\>S>>Let <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|0|}>>\<subseteq\>A>
+      and <math|\<sigma\>\<in\>S<rsub|<around*|{|0|}>>\<Rightarrow\>\<sigma\>=Id<rsub|<around*|{|0|}>>>
+      then we have
+
+      <\equation*>
+        <big|sum><rsub|i=0><rsup|0>x<rsub|i>=x<rsub|0>=x<rsub|Id<rsub|<around*|{|0|}>><around*|(|0|)>>=x<rsub|\<sigma\><around*|(|0|)>>=<big|sum><rsub|i=0><rsup|n>x<rsub|i>
+      </equation*>
+
+      proving that <math|0\<in\>S>.
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+      <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n+1|}>>>
+      and <math|\<sigma\>\<in\>S<rsub|<around*|{|0,\<ldots\>,n+1|}>>> then
+      for <math|n+1> we have either
+
+      <\description>
+        <item*|<math|n+1=1>>Then <math|S<rsub|<around*|{|0,\<ldots\>,n+1|}>>=S<rsub|<around*|{|0,1|}>>>
+        so that for \ <math|\<sigma\>> we have either:
+
+        <\description>
+          <item*|<math|\<sigma\><around*|(|1|)>=0>>Then as
+          <math|\<sigma\>:<around*|{|0,1|}>\<rightarrow\><around*|{|0,1|}>>
+          is a bijection we must have <math|\<sigma\><around*|(|0|)>=1>, so\ 
+
+          <\equation*>
+            <big|sum><rsub|i=0><rsup|1>x<rsub|i>=x<rsub|0>+x<rsub|1>=x<rsub|1>+x<rsub|0>=x<rsub|\<sigma\><around*|(|0|)>>+x<rsub|\<sigma\><around*|(|1|)>>=<big|sum><rsub|i=0><rsup|1>x<rsub|\<sigma\><around*|(|i|)>>
+          </equation*>
+
+          <item*|<math|\<sigma\><around*|(|1|)>=1>>Then as
+          <math|\<sigma\>:<around*|{|0,1|}>\<rightarrow\><around*|{|0,1|}>>
+          is a bijection we must have <math|\<sigma\><around*|(|0|)>=0>, so\ 
+
+          <\equation*>
+            <big|sum><rsub|i=0><rsup|1>x<rsub|i>=x<rsub|0>+x<rsub|1>=x<rsub|\<sigma\><around*|(|0|)>>+x<rsub|\<sigma\><around*|(|1|)>>=<big|sum><rsub|i=0><rsup|1>x<rsub|\<sigma\><around*|(|i|)>>
+          </equation*>
+        </description>
+
+        so in all cases <math|<big|sum><rsub|i=0><rsup|1>x<rsub|i>=<big|sum><rsub|i=0><rsup|1>x<rsub|\<sigma\><around*|(|i|)>>>
+        proving that <math|n+1\<in\>S>.
+
+        <item*|<math|1\<less\>n+1>>Now for <math|\<sigma\><around*|(|n+1|)>>
+        we have either:
+
+        <\description>
+          <item*|<math|\<sigma\><around*|(|n+1|)>=n+1>>Then by [theorem:
+          <reference|permutation on subset>] we have that
+          <math|\<sigma\><rsub|\|<around*|{|0,\<ldots\>,n|}>>\<in\>S<rsub|<around*|{|0,\<ldots\>,n|}>>>
+          which as <math|n\<in\>S> proves that\ 
+
+          <\equation>
+            <label|eq 11.3.053><big|sum><rsub|i=0><rsup|n>x<rsub|i>\<equallim\><rsub|n\<in\>S><big|sum><rsub|i=0><rsup|n>x<rsub|\<sigma\><around*|(|i|)>>
+          </equation>
+
+          So\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|<big|sum><rsub|i=0><rsup|n+1>x<rsub|i>>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i=0><rsup|n>x<rsub|i>|)>+x<rsub|n+1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+            <reference|eq 11.3.053>]>>>|<cell|<around*|(|<big|sum><rsub|i=0><rsup|n>x<rsub|\<sigma\><around*|(|i|)>>|)>+x<rsub|n+1>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i=0><rsup|n>x<rsub|\<sigma\><around*|(|i|)>>|)>+x<rsub|\<sigma\><around*|(|n+1|)>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=0><rsup|n+1>x<rsub|\<sigma\><around*|(|i|)>>>>>>
+          </eqnarray*>
+
+          proving that <math|n+1\<in\>S>.
+
+          <item*|<math|\<sigma\><around*|(|n+1|)>\<in\><around*|{|0,\<ldots\>,n|}>>>Take
+          then <math|k=\<sigma\><rsup|-1><around*|(|n+1|)>\<in\><around*|{|0,\<ldots\>,n|}>>
+          then we have by [lemma: <reference|permutation {0,..,n and
+          transposition>] that <math|\<gamma\><rsub|\<sigma\>>\<in\>S<rsub|<around*|{|0,\<ldots\>,n|}>>>
+          where\ 
+
+          <\equation>
+            <label|eq 11.4.053>\<gamma\><rsub|\<sigma\>><around*|(|i|)>=<choice|<tformat|<table|<row|<cell|\<sigma\><around*|(|<around*|(|n\<leftrightarrowlim\><rsub|<around*|{|0,\<ldots\>n|}>>k|)><around*|(|i|)>|)><text|
+            if >i\<in\><around*|{|0,\<ldots\>,n-1|}>>>|<row|<cell|\<sigma\><around*|(|n+1|)><text|
+            if >i=n>>>>>
+          </equation>
+
+          so as <math|n\<in\>S> we have that:\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|<big|sum><rsub|i=0><rsup|n>x<rsub|i>>|<cell|=>|<cell|<big|sum><rsub|i=0><rsup|n>x<rsub|\<gamma\><rsub|\<sigma\>><around*|(|i|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|1\<less\>n+1=0\<leqslant\>n-1>>|<cell|<big|sum><rsub|i=0><rsup|<around*|(|n-1|)>+1>x<rsub|\<gamma\><rsub|\<sigma\>><around*|(|i|)>>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i=0><rsup|n-1>x<rsub|\<gamma\>\<sigma\>><around*|(|i|)>|)>+x<rsub|\<gamma\><rsub|\<sigma\>><around*|(|n+1|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|<reference|eq
+            11.4.053>>>>|<cell|<around*|(|<big|sum><rsub|i=0><rsup|n-1>x<rsub|\<sigma\><around*|(|<around*|(|n\<leftrightarrowlim\><rsub|<around*|{|0,\<ldots\>,n|}>>k|)><around*|(|i|)>|)>>|)>+x<rsub|\<sigma\><around*|(|n+1|)>><eq-number><label|eq
+            11.5.053>>>>>
+          </eqnarray*>
+
+          Further as <math|<around*|(|n\<leftrightarrowlim\><rsub|<around*|{|0,\<ldots\>,n|}>>k|)>\<in\>S<rsub|<around*|{|0,\<ldots\>,n|}>>>
+          we have\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|<big|sum><rsub|i=><rsup|n+1>x<rsub|\<sigma\><around*|(|i|)>>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<big|sum><rsub|i=0><rsup|n>x<rsub|\<sigma\><around*|(|i|)>>|)>+x<rsub|\<sigma\><around*|(|n+1|)>>>|<cell|\<equallim\><rsub|<text|
+            >n\<in\>S>>|<cell|>>|<row|<cell|<around*|(|<big|sum><rsub|i=0><rsup|n>x<rsub|\<sigma\><around*|(|<around*|(|n\<leftrightarrowlim\><rsub|<around*|{|0,\<ldots\>,n|}>>|)><around*|(|i|)>|)>>|)>+x<rsub|\<sigma\><around*|(|n+1|)>>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<around*|(|<big|sum><rsub|i=0><rsup|n-1>x<rsub|\<sigma\><around*|(|<around*|(|n\<leftrightarrowlim\><rsub|<around*|{|0,\<ldots\>,n|}>>|)><around*|(|i|)>|)>>|)>+x<rsub|\<sigma\><around*|(|<around*|(|n\<leftrightarrowlim\><rsub|<around*|{|0,\<ldots\>,n|}>>k|)><around*|(|n|)>|)>><rsub|>|)>+x<rsub|\<sigma\><around*|(|n+1|)>>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<big|sum><rsub|i=0><rsup|n-1>x<rsub|\<sigma\><around*|(|<around*|(|n\<leftrightarrowlim\><rsub|<around*|{|0,\<ldots\>,n|}>>|)><around*|(|i|)>|)>>|)>+<around*|(|x<rsub|\<sigma\><around*|(|<around*|(|n\<leftrightarrowlim\><rsub|<around*|{|0,\<ldots\>,n|}>>k|)><around*|(|n|)>|)>><rsub|>+x<rsub|\<sigma\><around*|(|n+1|)>>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<big|sum><rsub|i=0><rsup|n-1>x<rsub|\<sigma\><around*|(|<around*|(|n\<leftrightarrowlim\><rsub|<around*|{|0,\<ldots\>,n|}>>|)><around*|(|i|)>|)>>|)>+<around*|(|x<rsub|\<sigma\><around*|(|n+1|)>>+x<rsub|\<sigma\><around*|(|<around*|(|n\<leftrightarrowlim\><rsub|<around*|{|0,\<ldots\>,n|}>>k|)><around*|(|n|)>|)>><rsub|>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<around*|(|<big|sum><rsub|i=0><rsup|n-1>x<rsub|\<sigma\><around*|(|<around*|(|n\<leftrightarrowlim\><rsub|<around*|{|0,\<ldots\>,n|}>>|)><around*|(|i|)>|)>>|)>+x<rsub|\<sigma\><around*|(|n+1|)>>|)>+x<rsub|\<sigma\><around*|(|<around*|(|n\<leftrightarrowlim\><rsub|<around*|{|0,\<ldots\>,n|}>>k|)><around*|(|n|)>|)>><rsub|>>|<cell|\<equallim\><rsub|<text|[eq:
+            <reference|eq 11.5.053>]>>>|<cell|>>|<row|<cell|<around*|(|<big|sum><rsub|i=0><rsup|n>x<rsub|i>|)>+x<rsub|\<sigma\><around*|(|<around*|(|n\<leftrightarrowlim\><rsub|<around*|{|0,\<ldots\>,n|}>>k|)><around*|(|n|)>|)>><rsub|>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<big|sum><rsub|i=0><rsup|n>x<rsub|i>|)>+x<rsub|\<sigma\><around*|(|k|)>>>|<cell|\<equallim\><rsub|k=\<sigma\><rsup|-1><around*|(|n+1|)>>>|<cell|>>|<row|<cell|<around*|(|<big|sum><rsub|i=0><rsup|n>x<rsub|i>|)>+x<rsub|n+1>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i=0><rsup|n+1>x<rsub|i>>|<cell|=>|<cell|<rsub|>>>>>
+          </eqnarray*>
+
+          proving that <math|n+1\<in\>S>.
+        </description>
+
+        proving that <math|n+1\<in\>S>.
+      </description>
+
+      So in all cases we have <math|n+1\<in\>S>.
+    </description>
+
+    Mathematical induction proves then that <math|S=\<bbb-N\><rsub|0>> and
+    the theorem.
+  </proof>
+
+  <subsection|Generalized sum>
+
+  Next we define the sum<space|1em>of elements over a finite index set.
+
+  <\definition>
+    Let <math|<around*|\<langle\>|A,+|\<rangle\>>> be a Abelian semi-group
+    with neutral element <math|0>, <math|I> a finite set and
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>> then we define
+    <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> as follows:\ 
+
+    <\enumerate>
+      <item>If <math|I=\<varnothing\>> then
+      <math|<big|sum><rsub|i\<in\>I>x<rsub|i>=0>
+
+      <item>If <math|I\<neq\>\<varnothing\>> then as <math|I> is finite there
+      exist a unique <math|n\<in\>\<bbb-N\>> [see theorem: <reference|finite
+      uniqueness of size>] such that <math|n\<approx\>I>, as
+      <math|S<rsub|n>=<around*|{|i\<in\>\<bbb-N\><rsub|0>\|i\<less\>n|}>=<around*|{|0,\<ldots\>,n-1|}>>
+      there exist a bijection <math|\<beta\>:<around*|{|0,\<ldots\>,n-1|}>\<rightarrow\>I>,
+      <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> is then defined by\ 
+
+      <\equation*>
+        <big|sum><rsub|i\<in\>I>x<rsub|i>=<big|sum><rsub|i=0><rsup|n-1>x<rsub|\<beta\><around*|(|i|)>>
+      </equation*>
+    </enumerate>
+  </definition>
+
+  <\proof>
+    We must for <math|<around*|(|2|)>> prove that
+    <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> is unique. So assume that
+    <math|\<gamma\>:<around*|{|0,\<ldots\>,n-1|}>\<rightarrow\>I> is another
+    bijection then <math|\<beta\><rsup|-1>\<circ\>\<gamma\>:<around*|{|0,\<ldots\>,n-1|}>\<rightarrow\><around*|{|0,\<ldots\>,n-1|}>>
+    is a bijection, hence <math|\<beta\><rsup|-1>\<circ\>\<gamma\>\<in\>S<rsub|<around*|{|0,\<ldots\>,n-1|}>>>
+    so that\ 
+
+    <\equation*>
+      <big|sum><rsub|i=0><rsup|n-1>x<rsub|\<beta\><around*|(|i|)>>\<equallim\><rsub|<text|[theorem:
+      <reference|sum commutativity>]>><big|sum><rsub|i=0><rsup|n-1>x<rsub|\<beta\><around*|(|\<beta\><rsup|-1><around*|(|\<gamma\><around*|(|i|)>|)>|)>>=<big|sum><rsub|i=0><rsup|n-1>x<rsub|\<gamma\><around*|(|i|)>>
+    </equation*>
+  </proof>
+
+  This new definition is equivalent with the previous definition as the
+  following theorem shows.
+
+  <\theorem>
+    <label|sum general equivalence>Let <math|<around*|\<langle\>|A,+|\<rangle\>>>
+    be a Abelian semi-group with neutral element <math|0>,
+    <math|n,m\<in\>\<bbb-N\><rsub|0>> with <math|n\<leqslant\>m> and
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|n,\<ldots\>,m|}>>>
+    then <math|<big|sum><rsub|i=n><rsup|m>x<rsub|i>=<big|sum><rsub|i\<in\><around*|{|n,\<ldots\>,m|}>>x<rsub|i>>
+  </theorem>
+
+  <\proof>
+    Define <math|\<sigma\>:<around*|{|0,\<ldots\>m-n|}>\<rightarrow\><around*|{|n,\<ldots\>,m|}>>
+    by <math|\<sigma\><around*|(|i|)>=n+i> then we have
+
+    <\description>
+      <item*|injectivity>If <math|\<sigma\><around*|(|i|)>=\<sigma\><around*|(|j|)>>
+      then <math|n+i=n+j> hence <math|i=j>.
+
+      <item*|surjectivity>If <math|j\<in\><around*|{|n,\<ldots\>,m|}>\<Rightarrow\>n\<leqslant\>j\<leqslant\>m\<Rightarrow\>0\<leqslant\>j-n\<leqslant\>m-n>
+      then for <math|i=j-n> we have <math|j=i+n=\<beta\><around*|(|i|)>> and
+      <math|0\<leqslant\>i\<leqslant\>m-n>
+    </description>
+
+    so that <math|\<sigma\>:<around*|{|0,\<ldots\>,m-n|}>\<rightarrow\><around*|{|n,\<ldots\>,m|}>>
+    is a bijection and by definition
+
+    <\equation*>
+      <big|sum><rsub|i\<in\>m-n>x<rsub|i>=<big|sum><rsub|i=0><rsup|m-n>x<rsub|\<sigma\><around*|(|i|)>>=<big|sum><rsub|i=0><rsup|m-n>x<rsub|n+i>\<equallim\><rsub|def><big|sum><rsub|i=n><rsup|m>x<rsub|i>
+    </equation*>
+
+    \;
+  </proof>
+
+  <\theorem>
+    <label|sum bijection on index>Let <math|<around*|\<langle\>|A,+|\<rangle\>>>
+    be a Abelian semi-group with neutral element <math|0>, <math|I> a finite
+    set, <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>> and
+    <math|\<sigma\>:J\<rightarrow\>I> a bijection then\ 
+
+    <\equation*>
+      <big|sum><rsub|i\<in\>I>x<rsub|i>=<big|sum><rsub|j\<in\>J>x<rsub|\<sigma\><around*|(|j|)>>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    For <math|I> we have either:
+
+    <\description>
+      <item*|<math|I=\<varnothing\>>>Then as
+      <math|\<sigma\>:J\<rightarrow\>I> is a bijection we have <math|J=0> so
+      that <math|<big|sum><rsub|i\<in\>I>x<rsub|i>=0=<big|sum><rsub|j\<in\>J>x<rsub|\<sigma\><around*|(|j|)>>>
+
+      <item*|<math|I\<neq\>\<varnothing\>>>Then there exists a
+      <math|n\<in\>\<bbb-N\>> such that <math|\<beta\>:<around*|{|0,\<ldots\>,n-1|}>\<rightarrow\>I>
+      such that\ 
+
+      <\equation*>
+        <big|sum><rsub|i\<in\>I>x<rsub|i>=<big|sum><rsub|i=0><rsup|n-1>x<rsub|\<beta\><around*|(|i|)>>
+      </equation*>
+
+      So <math|\<sigma\><rsup|-1>\<circ\>\<beta\>:<around*|{|0,\<ldots\>,n-1|}>\<rightarrow\>J>
+      is a bijection so that\ 
+
+      <\equation*>
+        <big|sum><rsub|j\<in\>J>x<rsub|\<sigma\><around*|(|j|)>>=<big|sum><rsub|i=0><rsup|n-1>x<rsub|\<sigma\><around*|(|\<sigma\><rsup|-1><around*|(|\<beta\><around*|(|i|)>|)>|)>>=<big|sum><rsub|i=0><rsup|n-1>x<rsub|\<beta\><around*|(|i|)>>=<big|sum><rsub|i\<in\>I>x<rsub|i>
+      </equation*>
+    </description>
+  </proof>
+
+  Using this more general defintion of a finite sum we can rewrite [theorems:
+  <reference|sum of neutral element (1)>, <reference|sum of sums>,
+  <reference|sum ring product>, <reference|sum of finite sums> and
+  <reference|sum of inverses>].
+
+  <\theorem>
+    <label|sum of neutral element (2)>Let
+    <math|<around*|\<langle\>|A,+|\<rangle\>>> be a Abelian semi-group with
+    neutral element <math|0>, <math|I> a finite set and
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>A> with
+    <math|\<forall\>i\<in\>I> <math|x<rsub|i>=0> then
+    <math|<big|sum><rsub|i\<in\>I>x<rsub|i>=0>.
+  </theorem>
+
+  <\proof>
+    For <math|I> we have either\ 
+
+    <\description>
+      <item*|<math|I=\<varnothing\>>>Then
+      <math|<big|sum><rsub|i\<in\>I>x<rsub|i>=\<varnothing\>>
+
+      <item*|<math|I\<neq\>\<varnothing\>>>Then there exists a
+      <math|n\<in\>\<bbb-N\>> and a bijection
+      <math|\<beta\>:<around*|{|0,\<ldots\>,n-1|}>\<rightarrow\>I> such that
+
+      <\equation*>
+        <big|sum><rsub|i\<in\>I>x<rsub|i>=<big|sum><rsub|i=0><rsup|n-1>x<rsub|\<beta\><around*|(|i|)>>
+      </equation*>
+
+      As <math|\<forall\>i\<in\><around*|{|0,\<ldots\>,n-1|}>>
+      \ <math|\<beta\><around*|(|i|)>\<in\>I> we have
+      <math|x<rsub|\<beta\><around*|(|i|)>>=0> so that by [theorem:
+      <reference|sum of neutral elements>]
+      <math|<big|sum><rsub|i=0><rsup|n-1>x<rsub|\<beta\><around*|(|i|)>>\<equallim\><rsub|<text|>>0>,
+      hence we conclude that\ 
+
+      <\equation*>
+        <big|sum><rsub|i\<in\>I>x<rsub|i>=0
+      </equation*>
+    </description>
+
+    \;
+  </proof>
+
+  <\theorem>
+    <label|sum of sums (2)>Let <math|<around*|\<langle\>|A,+|\<rangle\>>> be
+    a Abelian semi-group, <math|I> a finite set and
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>A,<text|
+    ><around*|{|y<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>A> then\ 
+
+    <\equation*>
+      <big|sum><rsub|i\<in\>I><around*|(|x<rsub|i>+y<rsub|i>|)>=<big|sum><rsub|i\<in\>I>x<rsub|i>+<big|sum><rsub|i\<in\>I>y<rsub|i>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    For <math|I> we have either:\ 
+
+    <\description>
+      <item*|<math|I=\<varnothing\>>>Then we have\ 
+
+      <\equation*>
+        <big|sum><rsub|i\<in\>I><around*|(|x<rsub|i>+y<rsub|i>|)>=0=0+0=<big|sum><rsub|i\<in\>I>x<rsub|i>+<big|sum><rsub|i\<in\>I>y<rsub|i>
+      </equation*>
+
+      <item*|<math|I\<neq\>\<varnothing\>>>Then there exists a
+      <math|n\<in\>\<bbb-N\>> and a bijection
+      <math|\<beta\>:<around*|{|0,\<ldots\>,n-1|}>\<rightarrow\>I> such that
+
+      <\equation*>
+        <big|sum><rsub|i\<in\>I><around*|(|x<rsub|i>+y<rsub|i>|)>=<big|sum><rsub|i=0><rsup|n-1><around*|(|x<rsub|\<beta\><around*|(|i|)>>+y<rsub|\<beta\><around*|(|i|)>>|)><text|,
+        ><big|sum><rsub|i\<in\>I>x<rsub|i>=<big|sum><rsub|i=0><rsup|n-1>x<rsub|\<beta\><around*|(|i|)>><text|
+        and ><big|sum><rsub|i\<in\>I>y<rsub|i>=<big|sum><rsub|i=0><rsup|n-1>y<rsub|\<beta\><around*|(|i|)>>
+      </equation*>
+
+      By [theorem: <reference|sum of sums>] we have that
+      <math|<big|sum><rsub|i=0><rsup|n-1><around*|(|x<rsub|\<beta\><around*|(|i|)>>+y<rsub|\<beta\><around*|(|i|)>>|)>=<big|sum><rsub|i=0><rsup|n-1>x<rsub|\<beta\><around*|(|i|)>>+<big|sum><rsub|i=0><rsup|n-1>y<rsub|\<beta\><around*|(|i|)>>>
+      proving that\ 
+
+      <\equation*>
+        <big|sum><rsub|i\<in\>I><around*|(|x<rsub|i>+y<rsub|i>|)>=<big|sum><rsub|i\<in\>I>x<rsub|i>+<big|sum><rsub|i\<in\>I>y<rsub|i>
+      </equation*>
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|sum ring product (2)>Let <math|<around*|\<langle\>|A,+|\<rangle\>>>
+    be a Abelian semi-group, <math|\<alpha\>\<in\>A>, <math|I> a finite set
+    and <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>A> then\ 
+
+    <\equation*>
+      <big|sum><rsub|i\<in\>I><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>=\<alpha\>\<cdot\><big|sum><rsub|i\<in\>I>x<rsub|i>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    For <math|I> we have either:
+
+    <\description>
+      <item*|<math|I=\<varnothing\>>>Then we have\ 
+
+      <\equation*>
+        <big|sum><rsub|i\<in\>I><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>=0=\<alpha\>\<cdot\>0=\<alpha\>\<cdot\><big|sum><rsub|i\<in\>I>x<rsub|i>
+      </equation*>
+
+      <item*|<math|I\<neq\>\<varnothing\>>>Then there exists a
+      <math|n\<in\>\<bbb-N\>> and a bijection
+      <math|\<beta\>:<around*|{|0,\<ldots\>,n-1|}>\<rightarrow\>I> such that
+
+      <\equation*>
+        <big|sum><rsub|i\<in\>I><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>=<big|sum><rsub|i=0><rsup|n-1><around*|(|\<alpha\>\<cdot\>x<rsub|\<beta\><around*|(|i|)>>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|sum ring product>]>>\<alpha\>\<cdot\><big|sum><rsub|i=0><rsup|n-1>x<rsub|\<beta\><around*|(|i|)>>=\<alpha\>\<cdot\><big|sum><rsub|i\<in\>I>x<rsub|i>
+      </equation*>
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|sum of inverses (2)>Let <math|<around*|\<langle\>|A,+|\<rangle\>>>
+    be a Abelian semi-group, <math|I> a finite set and
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>A> then\ 
+
+    <\equation*>
+      <big|sum><rsub|i\<in\>I><around*|(|-x<rsub|i>|)>=-<big|sum><rsub|i\<in\>I>x<rsub|i>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    For <math|I> we have either:
+
+    <\description>
+      <item*|<math|I=\<varnothing\>>>Then we have\ 
+
+      <\equation*>
+        <big|sum><rsub|i\<in\>I><around*|(|-x<rsub|i>|)>=0=-0=-<big|sum><rsub|i\<in\>I>x<rsub|i>
+      </equation*>
+
+      <item*|<math|I\<neq\>\<varnothing\>>>Then there exists a
+      <math|n\<in\>\<bbb-N\>> and a bijection
+      <math|\<beta\>:<around*|{|0,\<ldots\>,n-1|}>\<rightarrow\>I> such that
+
+      <\equation*>
+        <big|sum><rsub|i\<in\>I><around*|(|-x<rsub|i>|)>=<big|sum><rsub|i=0><rsup|n-1>-<around*|\<nobracket\>|x<rsub|\<beta\><around*|(|i|)>>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|sum of inverses>]>>-<big|sum><rsub|i=0><rsup|n-1>x<rsub|\<beta\><around*|(|i|)>>=-<big|sum><rsub|i\<in\>I>x<rsub|i>
+      </equation*>
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|sum of finite sums (2)>Let \ <math|<around*|\<langle\>|A,+|\<rangle\>>>
+    be a Abelian semi-group, <math|I,J> finite sets and
+    <math|<around*|{|x<rsub|i,j>|}><rsub|<around*|(|i,j|)>\<in\>I\<times\>J>\<subseteq\>A>
+    then\ 
+
+    <\equation*>
+      <big|sum><rsub|i\<in\>I><rsup|><around*|(|<big|sum><rsub|j=J><rsup|>x<rsub|i,j>|)>=<big|sum><rsub|j\<in\>I><rsup|><around*|(|<big|sum><rsub|i\<in\>I>x<rsub|i,j>|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    For <math|I,J> we have either:
+
+    <\description>
+      <item*|<math|I=\<varnothing\>>>Then we have\ 
+
+      <\equation*>
+        <big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>J>x<rsub|i,j>|)>=0\<equallim\><rsub|<text|[theorem:
+        <reference|sum of neutral element
+        (2)>]>><big|sum><rsub|j\<in\>J>0=<big|sum><rsub|j\<in\>J><around*|(|<big|sum><rsub|i\<in\>I>x<rsub|i,j>|)>
+      </equation*>
+
+      <item*|<math|J=\<varnothing\>>>Then we have
+
+      <\equation*>
+        <big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>J>x<rsub|i,j>|)>=<big|sum><rsub|i\<in\>I>0\<equallim\><rsub|<text|[theorem:
+        <reference|sum of neutral element
+        (2)>]>>0=<big|sum><rsub|j\<in\>J><around*|(|<big|sum><rsub|i\<in\>I>x<rsub|i,j>|)>
+      </equation*>
+
+      <item*|<math|I\<neq\>\<varnothing\>\<wedge\>J\<neq\>\<varnothing\>>>Then
+      there exists <math|n,m\<in\>\<bbb-N\>> and bijections
+
+      <\equation*>
+        \<alpha\>:<around*|{|0,\<ldots\>,n-1|}>\<rightarrow\>I<text|,
+        >\<beta\>:<around*|{|0,\<ldots\>,m-1|}>\<rightarrow\>J
+      </equation*>
+
+      such that\ 
+
+      <\equation>
+        <label|eq 11.6.053>\<forall\>j\<in\>J<text| we have
+        ><big|sum><rsub|i\<in\>I>x<rsub|i,j>=<big|sum><rsub|i=0><rsup|n-1>x<rsub|\<alpha\><around*|(|i|)>,j><text|
+        and >\<forall\>i\<in\>I<text| we have
+        ><big|sum><rsub|j\<in\>J>x<rsub|i,j>=<big|sum><rsub|j=0><rsup|m-1>x<rsub|i,\<beta\><around*|(|j|)>>
+      </equation>
+
+      so that
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>J>x<rsub|i,j>|)>>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 11.6.053>]>>>|<cell|<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j=0><rsup|m-1>x<rsub|i,\<beta\><around*|(|j|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=0><rsup|n-1><around*|(|<big|sum><rsub|j=0><rsup|m-1>x<rsub|\<alpha\><around*|(|i|)>,\<beta\><around*|(|j|)>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum of finite sums>]>>>|<cell|<big|sum><rsub|j=0><rsup|m-1><around*|(|<big|sum><rsub|i=0><rsup|n-1>x<rsub|\<alpha\><around*|(|i|)>,\<beta\><around*|(|j|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsup|><rsub|j\<in\>J><around*|(|<big|sum><rsup|n-1><rsub|i-0>x<rsub|\<alpha\><around*|(|i|)>,j>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 11.6.053>]>>>|<cell|<big|sum><rsub|j\<in\>J><around*|(|<big|sum><rsub|i\<in\>I>x<rsub|i,j>|)>>>>>
+      </eqnarray*>
+
+      \;
+    </description>
+  </proof>
+
+  We have the equivalent of [theorem: <reference|sum associativity simple>]
+
+  <\lemma>
+    <label|sum over two disjoint subsets>Let
+    <math|<around*|\<langle\>|A,+|\<rangle\>>> be a Abelian semi-group with
+    neutral element <math|0>, <math|I> a finite set such that
+    <math|I=M<big|cup>N> and <math|M<big|cap>N=\<varnothing\>> and
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>A> then we have\ 
+
+    <\equation*>
+      <big|sum><rsub|i\<in\>I>x<rsub|i>=<big|sum><rsub|i\<in\>M>x<rsub|i>+<big|sum><rsub|i\<in\>N>x<rsub|i>
+    </equation*>
+
+    \ 
+  </lemma>
+
+  <\proof>
+    As <math|I> is finite we have by [theorem: <reference|every subset of a
+    finite set is finite>] that <math|M,N> are finite and we have either:
+
+    <\description>
+      <item*|<math|M=\<varnothing\>>>Then <math|N=I> and\ 
+
+      <\equation*>
+        <big|sum><rsub|i\<in\>I>x<rsub|i>=<big|sum><rsub|i\<in\>N>x<rsub|i>=<big|sum><rsub|i\<in\>N>x<rsub|i>+0=<big|sum><rsub|i\<in\>N>x<rsub|i>+<big|sum><rsub|i\<in\>M>x<rsub|i>
+      </equation*>
+
+      <item*|<math|N=\<varnothing\>>>Then <math|M=I> and \ 
+
+      <\equation*>
+        <big|sum><rsub|i\<in\>I>x<rsub|i>=<big|sum><rsub|i\<in\>M>x<rsub|i>=0+<big|sum><rsub|i\<in\>M>x<rsub|i>=<big|sum><rsub|i\<in\>N>x<rsub|i>+<big|sum><rsub|i\<in\>M>x<rsub|i>
+      </equation*>
+
+      <item*|<math|M,N\<neq\>\<varnothing\>>>Then there exists
+      <math|n,m\<in\>\<bbb-N\>> such <math|\<alpha\>:<around*|{|0,\<ldots\>,n-1|}>\<rightarrow\>N>
+      and <math|\<beta\>:<around*|{|0,\<ldots\>,m-1|}>\<rightarrow\>M> are
+      bijections and\ 
+
+      <\equation>
+        <label|eq 11.7.053><big|sum><rsub|i\<in\>N>x<rsub|i>=<big|sum><rsub|i=0><rsup|n-1>x<rsub|\<alpha\><around*|(|i|)>><text|
+        and ><big|sum><rsub|i\<in\>M>x<rsub|i>=<big|sum><rsub|i=0><rsup|m-1>x<rsub|\<beta\><around*|(|i|)>>
+      </equation>
+
+      Define now
+
+      <\equation*>
+        \<gamma\>:<around*|{|0,\<ldots\>,n+m-1|}>\<rightarrow\>N<big|cup>M<text|
+        by >\<gamma\><around*|(|i|)>=<choice|<tformat|<table|<row|<cell|\<alpha\><around*|(|i|)><text|
+        where >i\<in\><around*|{|0,\<ldots\>,n-1|}>>>|<row|<cell|\<beta\><around*|(|i-n|)><text|
+        where >i\<in\><around*|{|n,\<ldots\>,n+m-1|}>>>>>>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|injectivity>If <math|\<gamma\><around*|(|i|)>=\<gamma\><around*|(|j|)>>
+        then for <math|i,j> we have either:
+
+        <\description>
+          <item*|<math|i\<in\><around*|{|0,\<ldots\>,n-1|}>\<wedge\>j\<in\><around*|{|0,\<ldots\>,n-1|}>>>Then
+          <math|\<alpha\><around*|(|i|)>=\<gamma\><around*|(|i|)>=\<gamma\><around*|(|j|)>=\<alpha\><around*|(|j|)>>
+          which as <math|\<alpha\>> is injective proves <math|i=j>.
+
+          <item*|<math|i\<in\><around*|{|0,\<ldots\>,n-1|}>\<wedge\>j\<in\><around*|{|n,\<ldots\>,n+m-1|}>>>Then
+          <math|\<alpha\><around*|(|i|)>=\<gamma\><around*|(|i|)>=\<gamma\><around*|(|j|)>=\<beta\><around*|(|j-n|)>>
+          so that <math|\<alpha\><around*|(|i|)>\<in\>N<big|cap>M>
+          contradicting <math|N<big|cap>M=\<varnothing\>>, so this case never
+          occurs.
+
+          <item*|<math|i\<in\><around*|{|n,\<ldots\>,n+m-1|}>\<wedge\>j\<in\><around*|{|0,\<ldots\>,n-1|}>>>Then
+          <math|\<beta\><around*|(|i-n|)>=\<gamma\><around*|(|i|)>=\<gamma\><around*|(|j|)>=\<alpha\><around*|(|j|)>>
+          so that <math|\<alpha\><around*|(|j|)>\<in\>N<big|cap>M>
+          contradicting <math|N<big|cap>M=\<varnothing\>>, so thiscase never
+          occurs.
+
+          <item*|<math|i\<in\><around*|{|n,\<ldots\>,n+m-1|}>\<wedge\>j\<in\><around*|{|n,\<ldots\>,n+m-1|}>>>Then
+          <math|\<beta\><around*|(|i-n|)>=\<gamma\><around*|(|i|)>=\<gamma\><around*|(|j|)>=\<beta\><around*|(|j-n|)>>
+          which as <math|\<beta\>> is injective gives <math|i=n=j-n> proving
+          <math|i=j>.
+        </description>
+
+        So in all valid cases we have <math|i=j> proving injectivity.
+
+        <item*|surjectivity>If <math|y\<in\>I=N<big|cup>M> then we have
+        either:
+
+        <\description>
+          <item*|<math|y\<in\>N>>Then as <math|\<alpha\>> is surjective there
+          exist a <math|i\<in\><around*|{|0,\<ldots\>,n-1|}>> such that
+          <math|y=\<alpha\><around*|(|i|)>> which as
+          <math|\<gamma\><around*|(|i|)>=\<alpha\><around*|(|i|)>> proves
+          that <math|\<gamma\><around*|(|i|)>=y>.
+
+          <item*|<math|y\<in\>M>>Then as <math|\<beta\>> is surjective there
+          exist a <math|i\<in\><around*|{|0,\<ldots\>,m-1|}>> such that
+          <math|y=\<beta\><around*|(|i|)>>. For <math|j=i+n> we have
+          <math|n\<leqslant\>i\<leqslant\>n+m-1> so that
+          <math|\<gamma\><around*|(|j|)>=\<beta\><around*|(|j-n|)>=\<beta\><around*|(|i|)>=y>
+        </description>
+      </description>
+
+      So <math|\<gamma\>:<around*|{|0,\<ldots\>,n+m-1|}>\<rightarrow\>N<big|cup>M=I>
+      is a surjection hence\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|sum><rsub|i\<in\>I>x<rsub|i>>|<cell|=>|<cell|<big|sum><rsub|i=0><rsup|n+m-1>x<rsub|\<gamma\><around*|(|i|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum associativity simple>]>>>|<cell|<big|sum><rsub|i=0><rsup|n-1>x<rsub|\<gamma\><around*|(|i|)>>+<big|sum><rsub|i=m><rsup|n+m-1>x<rsub|\<gamma\><around*|(|i|)>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=0><rsup|n-1>x<rsub|\<alpha\><around*|(|i|)>>+<big|sum><rsub|i=m><rsup|n+m-1>x<rsub|\<beta\><around*|(|i-n|)>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=0><rsup|n-1>x<rsub|\<alpha\><around*|(|i|)>>+<big|sum><rsub|i=0><rsup|m-1>x<rsub|\<beta\><around*|(|<around*|(|i+n|)>-n|)>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=0><rsup|n-1>x<rsub|\<alpha\><around*|(|i|)>>+<big|sum><rsub|i=0><rsup|m-1>x<rsub|\<beta\><around*|(|i|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|eq 11.7.053>]>>>|<cell|<big|sum><rsub|i\<in\>N>x<rsub|i>+<big|sum><rsub|i\<in\>M>x<rsub|i>>>>>
+      </eqnarray*>
+    </description>
+  </proof>
+
+  We have now the equivalence of [theorem: <reference|sum associativity>]\ 
+
+  <\theorem>
+    <label|sum over disjoint subsets>Let <math|<around*|\<langle\>|A,+|\<rangle\>>>
+    be a Abelian semi-group, <math|n\<in\>\<bbb-N\><rsub|0>>,
+    <math|<around*|{|I<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>> a
+    family of finite sets such that \ <math|\<forall\>i,j\<in\>I with
+    i\<neq\>j> <math|I<rsub|i><big|cap>I<rsub|j>=\<varnothing\>> then for
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><big|cup><rsub|j\<in\><around*|{|0,\<ldots\>,n|}>>I<rsub|j>>\<subseteq\>A>
+    we have\ 
+
+    <\equation*>
+      <big|sum><rsub|i\<in\><big|cup><rsub|j\<in\><around*|{|0,\<ldots\>,n|}>>I<rsub|j>>x<rsub|i>=<big|sum><rsub|i=0><rsup|n><around*|(|<big|sum><rsub|j\<in\>I<rsub|i>>x<rsub|j>|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ We prove this by induction, so take\ 
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|\<forall\><around*|{|I<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>><text|
+      pairwise disjoint family of sets, >\<forall\><around*|{|x<rsub|i>|}><rsub|i\<in\><big|cup><rsub|j\<in\><around*|{|0,\<ldots\>,n|}>>I<rsub|j>>\<subseteq\>A<text|
+      we have ><big|sum><rsub|i\<in\><big|cup><rsub|j\<in\><around*|{|0,\<ldots\>,n|}>>I<rsub|j>>x<rsub|i>=<big|sum><rsub|i=0><rsup|n><around*|(|<big|sum><rsub|j\<in\>I<rsub|i>>x<rsub|j>|)>|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|0\<in\>S>>Let <math|<around*|{|I<rsub|i>|}><rsub|i\<in\><around*|{|0|}>>>
+      be a pairwise disjoint family of sets, let
+      <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><big|cup><rsub|j\<in\><around*|{|0|}>>I<rsub|j>>\<subseteq\>A>
+      then <math|<big|sum><rsub|i\<in\><big|cup><rsub|j\<in\><around*|{|0|}>>I<rsub|j>>x<rsub|i>=<big|sum><rsub|i\<in\>I<rsub|0>>x<rsub|i>=<big|sum><rsub|i=0><rsup|0><around*|(|<big|sum><rsub|j\<in\>I<rsub|i>>x<rsub|j>|)>>
+      proving that <math|0\<in\>S>.
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+      <math|<around*|{|I<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n+1|}>>>
+      be a pairwise disjoint family of finite sets and
+      <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><big|cup><rsub|j\<in\><around*|{|0,\<ldots\>,n+1|}>>I<rsub|j>>>.
+      Take <math|J=<big|cup><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>I<rsub|i>>
+      then by [theorem: <reference|finite union of finite sets is finite>]
+      <math|J> is finite
+
+      <\equation*>
+        J<big|cap>I<rsub|n+1>=<around*|(|<big|cup><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>I<rsub|i>|)><big|cap>I<rsub|n+1>=<big|cup><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>><around*|(|I<rsub|i><big|cap>I<rsub|n+1>|)>=<big|cup><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>\<varnothing\>=\<varnothing\>
+      </equation*>
+
+      proving\ 
+
+      <\equation>
+        <label|eq 11.7.053><big|cup><rsub|j\<in\><around*|{|0,\<ldots\>,n+1|}>>I<rsub|j>=J<big|cup>I<rsub|n+1><text|,
+        <math|J,I<rsub|n+1>> are finite and
+        >J<big|cap>I<rsub|n+1>=\<varnothing\>
+      </equation>
+
+      So we have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|sum><rsub|i\<in\><big|cup><rsub|i\<in\><around*|{|0,\<ldots\>n|}>>I<rsub|i>>x<rsub|i>>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 11.7.053>] and [lemma: <reference|sum over two disjoint
+        subsets>]>>>|<cell|<big|sum><rsub|i\<in\>J>x<rsub|i>+<big|sum><rsub|i\<in\>I<rsub|n+1>>x<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><big|cup><rsub|j\<in\><around*|{|0,\<ldots\>,n|}>>I<rsub|j><rsub|>>x<rsub|i>+<big|sum><rsub|i\<in\>I<rsub|n+1>>x<rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|n\<in\>S>>|<cell|<big|sum><rsub|i=0><rsup|n><around*|(|<big|sum><rsub|j\<in\>I<rsub|i>>x<rsub|j>|)>+<big|sum><rsub|i\<in\>I<rsub|n+1>>x<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=0><rsup|n+1><around*|(|<big|sum><rsub|j\<in\>I<rsub|i>>x<rsub|i>|)>>>>>
+      </eqnarray*>
+    </description>
+  </proof>
+
+  <\corollary>
+    <label|sum over disjoint subsets (1)>Let
+    <math|<around*|\<langle\>|A,+|\<rangle\>>> be a Abelian group, <math|I> a
+    finite set, <math|<around*|{|I<rsub|i>|}><rsub|i\<in\>I>> a family of
+    finite sets, <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><big|cup><rsub|j\<in\>I>I<rsub|j>>>
+    then\ 
+
+    <\equation*>
+      <big|sum><rsub|i\<in\><big|cup><rsub|j\<in\>I>I<rsub|j>>x<rsub|i>=<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>I<rsub|i>>x<rsub|j>|)>
+    </equation*>
+  </corollary>
+
+  <\proof>
+    For <math|I> we have either:
+
+    <\description>
+      <item*|<math|I=\<varnothing\>>>Then
+      <math|<big|cup><rsub|j\<in\>I>I<rsub|j>=\<varnothing\>> so that\ 
+
+      <\equation*>
+        <big|sum><rsub|i\<in\><big|cup><rsub|j\<in\>I>I<rsub|j>>x<rsub|i>=<big|sum><rsub|i\<in\>\<varnothing\>>x<rsub|i>=0=<big|sum><rsub|i\<in\>\<varnothing\>><around*|(|<big|sum><rsub|j\<in\>I<rsub|j>>x<rsub|j>|)>
+      </equation*>
+
+      <item*|<math|I\<neq\>\<varnothing\>>>Then there exist a
+      <math|n\<in\>\<bbb-N\>> and a bijection
+      <math|\<beta\>:<around*|{|0,\<ldots\>,n-1|}>\<rightarrow\>I>. Using
+      [theorem: <reference|family union of family set and surjections>] we
+      have that\ 
+
+      <\equation*>
+        <big|cup><rsub|j\<in\>I>I<rsub|j>=<big|cup><rsub|j\<in\><around*|{|0,\<ldots\>,n-1|}>>I<rsub|\<beta\><around*|(|j|)>>
+      </equation*>
+
+      so that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|sum><rsub|i\<in\><big|cup><rsub|j\<in\>I>I<rsub|j>>x<rsub|i>>|<cell|=>|<cell|<big|sum><rsub|i\<in\><big|cup><rsub|j\<in\><around*|{|0,\<ldots\>,n-1|}>>I<rsub|\<beta\><around*|(|j|)>>>x<rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum over disjoint subsets>]>>>|<cell|<big|sum><rsub|i=0><rsup|n-1><around*|(|<big|sum><rsub|j\<in\>I<rsub|\<beta\><around*|(|i|)>>>x<rsub|j>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>I<rsub|i>>x<rsub|j><rsub|>|)>>>>>
+      </eqnarray*>
+    </description>
+
+    \;
+  </proof>
+
+  <\corollary>
+    <label|sum index is a product>Let <math|<around*|\<langle\>|A,+|\<rangle\>>>
+    be a Abelian semi-group, <math|I,J> finite sets and
+    <math|<around*|{|x<rsub|i,j>|}><rsub|<around*|(|i,j|)>\<in\>I\<times\>J>>
+    then\ 
+
+    <\equation*>
+      <big|sum><rsub|<around*|(|i,j|)>\<in\>I\<times\>J>x<rsub|i,j>=<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>J>x<rsub|i,j>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|sum of finite sums (2)>]>><big|sum><rsub|j\<in\>J><around*|(|<big|sum><rsub|i\<in\>I>x<rsub|i,j>|)>
+    </equation*>
+  </corollary>
+
+  <\proof>
+    Given <math|i\<in\>I> define <math|J<rsub|i>=<around*|{|i|}>\<times\>J>
+    then s <math|I=<big|cup><rsub|i\<in\>I><around*|{|i|}>> we have by
+    [theorem: <reference|family properties (3)>] that\ 
+
+    <\equation*>
+      I\<times\>J=<big|cup><rsub|i\<in\>I>J<rsub|i>
+    </equation*>
+
+    Further if <math|i,j\<in\>I> with <math|i\<neq\>j> then if
+    <math|x\<in\>J<rsub|i><big|cap>J<rsub|j>=<around*|(|<around*|{|i|}>\<times\>J|)><big|cap><around*|(|<around*|{|j|}>\<times\>J|)>>
+    then <math|\<exists\>k,l\<in\>J> such that
+    <math|<around*|(|i,k|)>=x=<around*|(|j,l|)>> giving <math|i=j>
+    contradicting <math|i\<neq\>j>. So\ 
+
+    <\equation*>
+      \<forall\>i,j\<in\>I<text| with >i\<neq\>j<text| we have
+      ><around*|{|i|}>\<times\>J<big|cap><around*|{|j|}>\<times\>J=\<varnothing\>
+    </equation*>
+
+    So we can apply [theorem: <reference|sum over disjoint subsets (1)>]
+    giving\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<big|sum><rsub|<around*|(|i,j|)>\<in\>I\<times\>J>x<rsub|i,j>>|<cell|=>|<cell|<big|sum><rsub|<around*|(|i,j|)>\<in\><big|cup><rsub|k\<in\>I>J<rsub|k>>x<rsub|i,j>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum over disjoint subsets
+      (1)>]>>>|<cell|<big|sum><rsub|k\<in\>I><around*|(|<big|sum><rsub|<around*|(|i,j|)>\<in\>J<rsub|k>>x<rsub|i,j>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|i,j|)>\<in\><around*|{|k|}>\<times\>J\<Leftrightarrow\>j=k>>|<cell|<big|sum><rsub|k\<in\>I><around*|(|<big|sum><rsub|<around*|(|k,j|)>\<in\>J<rsub|k>>x<rsub|k,j>|)><eq-number><label|eq
+      11.9.053>>>>>
+    </eqnarray*>
+
+    Given <math|k\<in\>I> define <math|\<beta\><rsub|k>:J\<rightarrow\>J<rsub|k>>
+    by <math|\<beta\><rsub|k><around*|(|j|)>=<around*|(|k,j|)>\<in\><around*|{|k|}>\<times\>J=J<rsub|k>>
+    then we have\ 
+
+    <\description>
+      <item*|injectivity>If <math|\<beta\><rsub|k><around*|(|i|)>=\<beta\><rsub|k><around*|(|j|)>>
+      then <math|<around*|(|k,i|)>=<around*|(|k,j|)>> giving <math|i=j>
+
+      <item*|surjectivity>If <math|<around*|(|k,j|)>\<in\><around*|{|k|}>\<times\>J>
+      then <math|\<beta\><rsub|k><around*|(|j|)>=<around*|(|k,j|)>>
+    </description>
+
+    so that <math|\<beta\><rsub|k>:K\<rightarrow\>J<rsub|k>> is a bijection,
+    hence by [theorem: <reference|sum bijection on index>]
+
+    <\equation*>
+      <big|sum><rsub|j\<in\>J>x<rsub|k,j=><big|sum><rsub|j\<in\>J>x<rsub|\<beta\><rsub|k><around*|(|j|)>>\<equallim\><rsub|<text|[theorem:
+      <reference|sum bijection on index>]>><big|sum><rsub|<around*|(|k,j|)>\<in\>J<rsub|k>>x<rsub|k,j><rsub|>
+    </equation*>
+
+    which combined with [eq: <reference|eq 11.9.053>] gives\ 
+
+    <\equation*>
+      <big|sum><rsub|<around*|(|i,j|)>\<in\>I\<times\>J>x<rsub|i,j>=<big|sum><rsub|k\<in\>I><around*|(|<big|sum><rsub|j\<in\>J>x<rsub|k,j>|)>
+    </equation*>
+
+    \;
+  </proof>
+
+  <section|Vector spaces >
+
+  <subsection|Definition>
+
+  <\definition>
+    <label|vector space><index|vector space>A vector space
+    <math|<around*|\<langle\>|V,\<oplus\>,\<odot\>|\<rangle\>>> over a field
+    <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> is a Abelian group
+    <math|<around*|\<langle\>|V,\<oplus\>|\<rangle\>>> together with a map
+    <math|\<odot\>:F\<times\>V\<rightarrow\>V> satisfying\ 
+
+    <\enumerate>
+      <item><math|\<forall\>\<alpha\>\<in\>F> and <math|\<forall\>x,y\<in\>V>
+      we have <math|\<alpha\>\<odot\><around*|(|x\<oplus\>y|)>=\<alpha\>\<odot\>x+\<alpha\>\<odot\>y>
+
+      <item><math|\<forall\>\<alpha\>,\<beta\>\<in\>F> and <math|x\<in\>V> we
+      have <math|<around*|(|\<alpha\>+\<beta\>|)>\<odot\>x=\<alpha\>\<odot\>x\<oplus\>\<beta\>\<odot\>y>
+
+      <item><math|\<forall\>\<alpha\>,\<beta\>\<in\>F> and <math|x\<in\>V> we
+      have <math|<around*|(|\<alpha\>\<cdot\>\<beta\>|)>\<odot\>x=\<alpha\>\<odot\><around*|(|\<beta\>\<odot\>x|)>>
+
+      <item>If <math|1> i the multiplicative neutral element of
+      <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> then
+      <math|1\<odot\>x=x>
+    </enumerate>
+
+    The map <math|\<odot\>> is called the scalar product and elements of
+    <math|V> are called vectors.\ 
+  </definition>
+
+  <\theorem>
+    <label|vector space properties (1)>Let
+    <math|<around*|\<langle\>|V,\<oplus\>,\<odot\>|\<rangle\>>> be a
+    vectorspace over the field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+    where\ 
+
+    <\enumerate-alpha>
+      <item><math|0<rsub|v>> is the neutral element of the Abelian group
+      <math|<around*|\<langle\>|V,\<oplus\>|\<rangle\>>>
+
+      <item><math|0<rsub|f>> is the additve neutral element of
+      <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+
+      <item><math|1> is the multiplicative neutral element of
+      <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+
+      <item>For <math|x\<in\>V> <math|-x> is the inverse of <math|x> in
+      <math|<around*|\<langle\>|V,\<oplus\>|\<rangle\>>>
+    </enumerate-alpha>
+
+    then we have\ 
+
+    <\enumerate>
+      <item>\<forall\><math|x\<in\>V> we have
+      <math|0<rsub|f>\<odot\>x=0<rsub|v>>
+
+      <item><math|\<forall\>x\<in\>V> we have
+      <math|<around*|(|-1|)>\<odot\>x=-x>
+
+      <item><math|\<forall\>\<alpha\>\<in\>F> we have
+      <math|\<alpha\>\<odot\>0<rsub|v>=0<rsub|v>>
+
+      <item>If for <math|\<alpha\>\<in\>F\\<around*|{|0<rsub|f>|}>> we have
+      if <math|x\<in\>V> with <math|\<alpha\>\<odot\>x=0<rsub|v>> then
+      <math|x=0<rsub|v>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|x\<in\>V> then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|0<rsub|v>>|<cell|=>|<cell|<around*|(|0<rsub|f>\<odot\>x|)>\<oplus\><around*|(|-<around*|(|0<rsub|f>\<odot\>x|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|0<rsub|f>=0<rsub|f>+0<rsub|f>>>|<cell|<around*|(|<around*|(|0<rsub|f>+0<rsub|f>|)>\<odot\>x|)>\<oplus\><around*|(|-<around*|(|0<rsub|f>\<odot\>x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|0<rsub|f>\<odot\>x|)>\<oplus\><around*|(|0<rsub|f>\<odot\>x|)>|)>\<oplus\><around*|(|-<around*|(|0<rsub|f>\<odot\>x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|0<rsub|f>\<odot\>x|)>\<oplus\><around*|(|<around*|(|0<rsub|f>\<odot\>x|)>\<oplus\><around*|(|-<around*|(|0<rsub|f>\<odot\>x|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|0<rsub|f>\<odot\>x|)>\<oplus\>0<rsub|v>>>|<row|<cell|>|<cell|=>|<cell|0<rsub|f>\<odot\>x>>>>
+      </eqnarray*>
+
+      <item>If <math|x\<in\>V> then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<oplus\><around*|(|<around*|(|-1|)>\<odot\>x|)>>|<cell|=>|<cell|<around*|(|1\<odot\>x|)>\<oplus\><around*|(|<around*|(|-1|)>\<odot\>x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|1+<around*|(|-1|)>|)>\<odot\>x>>|<row|<cell|>|<cell|=>|<cell|0<rsub|f>\<odot\>x>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|1|)>>>|<cell|0<rsub|v>>>>>
+      </eqnarray*>
+
+      so that by the definition of a inverse element we have\ 
+
+      <\equation*>
+        <around*|(|-1|)>\<odot\>x=-x
+      </equation*>
+
+      <item>If <math|\<alpha\>\<in\>F> then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<alpha\>\<odot\>0<rsub|v>>|<cell|\<equallim\><rsub|<around*|(|1|)>>>|<cell|\<alpha\>\<odot\><around*|(|0<rsub|f>\<odot\>0<rsub|v>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<alpha\>\<cdot\>0<rsub|f>|)>\<odot\>0<rsub|v>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|ring absorbing element>]>>>|<cell|0<rsub|f>\<odot\>0<rsub|v>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|1|)>>>|<cell|0<rsub|v>>>>>
+      </eqnarray*>
+
+      <item>Let <math|\<alpha\>\<in\>F\\<around*|{|0<rsub|f>|}>> and take
+      <math|x\<in\>V> such that <math|\<alpha\>\<odot\>x=0<rsub|v>>. As
+      <math|\<alpha\>\<neq\>0<rsub|f>> we have that <math|\<alpha\><rsup|-1>>
+      exist. So that\ 
+
+      <\equation*>
+        0<rsub|v>\<equallim\><rsub|<around*|(|3|)>>\<alpha\><rsup|-1>\<odot\>0<rsub|v>\<equallim\><rsub|<around*|(|1|)>>\<alpha\><rsup|-1>\<odot\><around*|(|\<alpha\>\<odot\>x|)>=<around*|(|\<alpha\><rsup|-1>\<cdot\>\<alpha\>|)>\<odot\>x=1\<odot\>x=x
+      </equation*>
+    </enumerate>
+  </proof>
+
+  Just as we have sub-groups, sub-rings and sub-fields we have sub-spaces of
+  a vector space.
+
+  <\definition>
+    <label|vector space subspace>Let <math|<around*|\<langle\>|V,\<oplus\>,\<odot\>|\<rangle\>>>
+    be a vector space over <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+    then <math|W\<subseteq\>V> is a sub-space of
+    <math|<around*|\<langle\>|V,\<oplus\>,\<odot\>|\<rangle\>>> if\ 
+
+    <\enumerate>
+      <item><math|W\<neq\>\<varnothing\>>
+
+      <item><math|\<forall\>\<alpha\>,\<beta\>\<in\>F> and <math|x,y\<in\>V>
+      we have that <math|<around*|(|\<alpha\>\<odot\>x|)>\<oplus\><around*|(|\<beta\>\<odot\>y|)>\<in\>W>
+    </enumerate>
+  </definition>
+
+  <\theorem>
+    Let <math|<around*|\<langle\>|V,\<oplus\>,\<odot\>|\<rangle\>>> be a
+    vector space over <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> and
+    <math|W\<subseteq\>V> a sub-space then
+    <math|<around*|\<langle\>|V,\<oplus\><rsub|\|W\<times\>W>,\<odot\><rsub|\|F\<odot\>W>|\<rangle\>>>
+    is a vector space over <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+  </theorem>
+
+  <\proof>
+    First we prove that <math|<around*|\<langle\>|W,\<oplus\><rsub|W\<times\>W>|\<rangle\>>>
+    is a Abelian group:.
+
+    <\description>
+      <item*|<math|\<oplus\><rsub|\|W\<times\>W><text| is a operator on
+      <math|W>>>>If <math|x,y\<in\>W> then
+      <math|x\<oplus\>y=<around*|(|1\<odot\>x|)>\<oplus\>y\<in\>W> so that
+      <math|\<oplus\><rsub|\|W\<times\>W>> is indeed a function between
+      <math|W\<times\>W> and <math|W>.
+
+      <item*|associativity>If <math|x,y,z\<in\>W> then\ 
+
+      <\equation*>
+        x\<oplus\><rsub|\|W\<times\>W><around*|(|y\<oplus\><rsub|\|W\<times\>W>z|)>\<equallim\><rsub|x,y,z\<in\>W>x\<oplus\><around*|(|y\<oplus\>z|)>=<around*|(|x\<oplus\>y|)>\<oplus\>z=<around*|(|x\<oplus\><rsub|\|W\<times\>W>y|)>\<oplus\><rsub|<around*|\||W\<times\>W|\|>>x
+      </equation*>
+
+      <item*|commutativity>If <math|x,y\<in\>W> then
+      <math|x\<oplus\><rsub|\|W\<times\>W>y=x\<oplus\>y=y\<oplus\>x=y\<oplus\><rsub|\|W\<times\>W>x>
+
+      <item*|neutral element>Then as <math|W\<neq\>\<varnothing\>> there
+      exist a <math|w\<in\>W> so that
+
+      <\equation*>
+        0<rsub|v>\<equallim\><rsub|<text|[theorem: <reference|vector space
+        properties (1)> (1)]>>0<rsub|f>\<odot\>w=<around*|(|0<rsub|f>+0<rsub|f>|)>\<odot\>w=0<rsub|f>\<odot\>w+0\<odot\>w\<in\>W
+      </equation*>
+
+      proving that <math|0<rsub|v>\<in\>W>. So <math|\<forall\>x\<in\>W> we
+      have
+
+      <\equation*>
+        x\<oplus\><rsub|\|W\<times\>W>0<rsub|v>\<equallim\><rsub|<text|commutatitivity>>0<rsub|v>\<oplus\><rsub|\|W\<times\>W>x=0<rsub|v>\<oplus\>x=x
+      </equation*>
+
+      <item*|inverse element>If <math|x\<in\>W> then
+      <math|-x\<equallim\><rsub|<text|[theorem: <reference|vector space
+      properties (1)> (2)]>><around*|(|<around*|(|-1|)>\<odot\>x|)>=<around*|(|<around*|(|-1|)>\<odot\>x|)>\<oplus\>0<rsub|v>\<in\>W>
+      so that <math|-x\<in\>W>. Hence <math|x\<oplus\><rsub|\|W\<times\>W><around*|(|-x|)>\<equallim\><rsub|<text|commutatitivity>><around*|(|-x|)>\<oplus\><rsub|\|W\<times\>W>x=<around*|(|-x|)>\<oplus\>x=0<rsub|v>>
+    </description>
+
+    Further we have:
+
+    <\enumerate>
+      <item>If <math|\<alpha\>\<in\>F> and <math|x\<in\>W> then
+      <math|\<alpha\>\<odot\>x=\<alpha\>\<odot\>x\<oplus\>0<rsub|v>\<in\>W>
+      so that <math|\<odot\><rsub|\|F\<times\>W>> is a function between
+      <math|F\<times\>W> and <math|W>.
+
+      <item>If <math|\<alpha\>\<in\>F> and <math|x,y\<in\>W> then
+      <math|\<alpha\>\<odot\><rsub|\|W\<times\>W><around*|(|x\<oplus\><rsub|\|W\<times\>W>y|)>=\<alpha\>\<odot\><around*|(|x\<oplus\>y|)>=\<alpha\>\<odot\>x\<oplus\>\<alpha\>\<odot\>y=\<alpha\>\<odot\><rsub|\|W\<times\>W>x\<oplus\><rsub|\|W\<times\>W>\<beta\>\<odot\><rsub|\|W\<times\>W>y>
+
+      <item>If <math|\<alpha\>,\<beta\>\<in\>F> and <math|x\<in\>W> then
+      <math|<around*|(|\<alpha\>+\<beta\>|)>\<odot\><rsub|\|W\<times\>W>x=<around*|(|\<alpha\>+\<beta\>|)>\<odot\>x=\<alpha\>\<odot\>x\<oplus\>\<beta\>\<odot\>x=\<alpha\>\<odot\><rsub|\|W\<times\>W>x\<oplus\><rsub|\|W\<times\>W>\<beta\>\<odot\><rsub|\|W\<times\>W>x>
+
+      <item>If <math|\<alpha\>,\<beta\>\<in\>F> and <math|x\<in\>W> then
+      <math|<around*|(|\<alpha\>\<cdot\>\<beta\>|)>\<odot\><rsub|\|W\<times\>W>x=<around*|(|\<alpha\>\<cdot\>\<beta\>|)>\<odot\>x=\<alpha\>\<odot\><around*|(|\<beta\>\<odot\>x|)>=\<alpha\>\<odot\><rsub|\|W\<times\>W><around*|(|\<beta\>\<odot\><rsub|\|W>x|)>>
+
+      <item>If <math|x\<in\>W> then <math|1\<odot\><rsub|\|F\<times\>W>x=1\<odot\>x=x>
+    </enumerate>
+  </proof>
+
+  <\note>
+    To avoid excesive use of subscripts we follow for the rest of this book
+    the convention that if <math|<around*|\<langle\>|V,\<oplus\>,\<odot\>|\<rangle\>>>
+    is a vector space over <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+    and <math|W\<in\>V> is a sub-space of
+    <math|<around*|\<langle\>|V,\<oplus\>,\<odot\>|\<rangle\>>> we use
+    <math|\<oplus\>> instead of <math|\<oplus\><rsub|\|W\<times\>W>> and
+    <math|\<odot\>> instead of \ <math|\<odot\><rsub|\|F\<times\>W>>. Using
+    this convention we have then that <math|<around*|\<langle\>|W,\<oplus\>,\<odot\>|\<rangle\>>>
+    is a vector space over <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>.
+  </note>
+
+  <subsection|Examples of vector spaces>
+
+  Every field is a vector spaces over itself.
+
+  <\theorem>
+    <label|vector space field>If <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+    is a field then <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> is a
+    vector space over it self
+  </theorem>
+
+  <\proof>
+    As <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> is a field we have
+    by definition of a field [see definition: <reference|field>] that
+    <math|<around*|\<langle\>|F,+|\<rangle\>>> is a Abelian group. Further
+    for the rest of the vector axioms we have:
+
+    <\enumerate>
+      <item><math|\<forall\>\<alpha\>,x,y\<in\>F> we have
+      <math|\<alpha\>\<cdot\><around*|(|x+y|)>\<equallim\><rsub|<text|distributivity>>\<alpha\>\<cdot\>x+\<alpha\>\<cdot\>y>
+
+      <item><math|\<forall\>\<alpha\>,\<beta\>,x\<in\>F> we have
+      <math|<around*|(|\<alpha\>+\<beta\>|)>\<cdot\>x\<equallim\><rsub|<text|distributivity>>\<alpha\>\<cdot\>x+\<beta\>\<cdot\>y>
+
+      <item><math|\<forall\>\<alpha\>,\<beta\>,x\<in\>F> we have
+      <math|<around*|(|\<alpha\>\<cdot\>\<beta\>|)>\<cdot\>x\<equallim\><rsub|<text|associativity>>\<alpha\>\<cdot\><around*|(|\<beta\>\<cdot\>x|)>>
+
+      <item><math|\<forall\>x\<in\>F> we have for the multiplicative neutral
+      element of <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> that
+      <math|1\<cdot\>x=x>
+    </enumerate>
+  </proof>
+
+  Using the above and the fact that <math|<around*|\<langle\>|\<bbb-Q\>,+,\<cdot\>|\<rangle\>>>,
+  <math|<around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>> and
+  <math|<around*|\<langle\>|\<bbb-C\>,+,\<cdot\>|\<rangle\>>> are fields [see
+  theorem: <reference|complex embedding>] we have:
+
+  <\example>
+    <label|vector space Q,R,C><math|<around*|\<langle\>|\<bbb-Q\>,+,\<cdot\>|\<rangle\>>>
+    is a vector space over <math|<around*|\<langle\>|\<bbb-Q\>,+,\<cdot\>|\<rangle\>>>,
+    <math|<around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>> is a vector
+    space over <math|<around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>>
+    and <math|<around*|\<langle\>|\<bbb-C\>,+,\<cdot\>|\<rangle\>>> is a
+    vector space over <math|<around*|\<langle\>|\<bbb-C\>,+,\<cdot\>|\<rangle\>>.>
+    </example>
+
+  Be aware thtat a vector space depends also on the field used, so for
+  example <math|\<bbb-C\>> can be used to define another vector space, as is
+  shown in the next example.
+
+  <\example>
+    <label|vector space C real><math|<around*|\<langle\>|\<bbb-C\>,+,\<cdot\>|\<rangle\>>>
+    is a vector space over <math|<around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>>
+  </example>
+
+  <\proof>
+    As <math|<around*|\<langle\>|\<bbb-C\>,+,\<cdot\>|\<rangle\>>> is a field
+    we have by definition of a field [see definition: <reference|field>] that
+    <math|<around*|\<langle\>|\<bbb-C\>,+|\<rangle\>>> is a Abelian group.
+    Further for the rest of the vector axioms we have as
+    <math|\<bbb-R\>\<subseteq\>\<bbb-C\>> that\ 
+
+    <\enumerate>
+      <item><math|\<forall\>\<alpha\>\<in\>\<bbb-R\>>,
+      <math|\<forall\>x,y\<in\>\<bbb-C\>> we have
+      <math|><math|\<alpha\>\<cdot\><around*|(|x+y|)>\<equallim\><rsub|<text|distributivity>>\<alpha\>\<cdot\>x+\<alpha\>\<cdot\>y>
+
+      <item><math|\<forall\>\<alpha\>,\<beta\>\<in\>\<bbb-R\>>,
+      <math|\<forall\>x\<in\>\<bbb-C\>> we have
+      <math|<around*|(|\<alpha\>+\<beta\>|)>\<cdot\>x=\<alpha\>\<cdot\>x+\<beta\>\<cdot\>x>
+
+      <item><math|\<forall\>\<alpha\>,\<beta\>\<in\>\<bbb-R\>>,
+      <math|\<forall\>x\<in\>\<bbb-C\>> we have
+      <math|<around*|(|\<alpha\>\<cdot\>\<beta\>|)>\<cdot\>x=\<alpha\>\<cdot\><around*|(|\<beta\>\<cdot\>x|)>>
+
+      <item>As <math|1\<in\>\<bbb-R\>\<subseteq\>\<bbb-C\>> we have
+      <math|\<forall\>x\<in\>\<bbb-C\>> <math|1\<cdot\>x>
+    </enumerate>
+  </proof>
+
+  <\definition>
+    <label|vector space complex/real><index|complex vector space><index|real
+    vector space>A vector space <math|<around*|\<langle\>|V,\<oplus\>,\<odot\>|\<rangle\>>>
+    over <math|<around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>> is
+    called a <with|font-series|bold|real> vector space and a vector space
+    <math|<around*|\<langle\>|V,\<oplus\>,\<odot\>|\<rangle\>>> over
+    <math|<around*|\<langle\>|\<bbb-C\>,+,\<cdot\>|\<rangle\>>> is called a
+    <with|font-series|bold|complex> vector space.\ 
+  </definition>
+
+  Next we use an existing vector space and pairwise addition and scalar
+  multiplication to define a function space. Later will use this to define
+  more special function spaces that are sub-spaces of this function space.
+
+  <\theorem>
+    <label|vector space function space><dueto|function>Let
+    <math|<around*|\<langle\>|V,\<oplus\>,\<odot\>|\<rangle\>>> be a vector
+    space over <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>, <math|X>
+    a set then and define for <math|V<rsup|X>=<around*|{|f\|f:X\<rightarrow\>V<text|
+    is a function>|}>> the following operations:
+
+    <\equation*>
+      \<boxplus\>:V<rsup|X>\<times\>V<rsup|X>\<rightarrow\>V<rsup|X><text|
+      defined by >f\<boxplus\>g where <around*|(|f\<boxplus\>g|)><around*|(|x|)>=f<around*|(|x|)>\<oplus\>g<around*|(|y|)><text|
+      [pairwise addition]>
+    </equation*>
+
+    <\equation*>
+      \<boxdot\>:F\<times\>V<rsup|X>\<rightarrow\>V<rsup|X><text| defined by
+      >\<alpha\>\<boxdot\>f<text| where ><around*|(|\<alpha\>\<boxdot\>f|)><around*|(|x|)>=\<alpha\>\<odot\>f<around*|(|x|)>
+    </equation*>
+
+    then\ 
+
+    <\equation*>
+      <around*|\<langle\>|V<rsup|X>,\<boxplus\>,\<boxdot\>|\<rangle\>><text|
+      is a vector space over ><around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>
+    </equation*>
+
+    where:\ 
+
+    <\enumerate-alpha>
+      <item><math|C<rsub|o>:X\<rightarrow\>V> is defined by
+      <math|C<rsub|0><around*|(|x|)>=e> [the constant function [see example:
+      <reference|function constant function>] is the additive neutral
+      element.
+
+      <item>If <math|f\<in\>V<rsup|X>> then <math|-f> defined by
+      <math|<around*|(|-f|)><around*|(|x|)>=-f<around*|(|x|)>> is the inverse
+      element of <math|f>
+    </enumerate-alpha>
+  </theorem>
+
+  <\proof>
+    First we prove that <math|<around*|\<langle\>|V<rsup|X>,\<boxplus\>,\<boxdot\>|\<rangle\>>>
+    is a Abelian group:\ 
+
+    <\description>
+      <item*|associativity>Let <math|f,g,h\<in\>V<rsup|X>> then
+      \ <math|\<forall\>x\<in\>X> we have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|f\<boxplus\><around*|(|g\<boxplus\>h|)>|)><around*|(|x|)>>|<cell|=>|<cell|f<around*|(|x|)>\<oplus\><around*|(|g\<boxplus\>h|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|x|)>\<oplus\><around*|(|g<around*|(|x|)>\<oplus\>h<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|f<around*|(|x|)>\<oplus\>g<around*|(|x|)>|)>\<oplus\>h<around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|f\<boxplus\>g|)><around*|(|x|)>\<oplus\>h<around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|f\<boxplus\>g|)>\<boxplus\>h|)><around*|(|x|)>>>>>
+      </eqnarray*>
+
+      proving that <math|f\<boxplus\><around*|(|g\<boxplus\>h|)>=<around*|(|f\<boxplus\>g|)>\<boxplus\>h>
+
+      <item*|commutatitivity>Let <math|f,g\<in\>V<rsup|X>> then
+      <math|\<forall\>x\<in\>X> we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|f\<boxplus\>g|)><around*|(|x|)>>|<cell|=>|<cell|f<around*|(|x|)>\<oplus\>g<around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|g<around*|(|x|)>\<oplus\>f<around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|g\<boxplus\>f|)><around*|(|x|)>>>>>
+      </eqnarray*>
+
+      so that\ 
+
+      <\equation*>
+        f\<boxplus\>g=g\<boxplus\>f
+      </equation*>
+
+      <item*|neutral element>Let <math|f\<in\>V<rsup|X>> then
+      <math|\<forall\>x\<in\>X> we have\ 
+
+      <\equation*>
+        <around*|(|f\<boxplus\>C<rsub|0>|)><around*|(|x|)>=f<around*|(|x|)>\<oplus\>C<rsub|0><around*|(|x|)>=f<around*|(|x|)>\<oplus\>0=f<around*|(|x|)>
+      </equation*>
+
+      so that\ 
+
+      <\equation*>
+        C<rsub|0>\<boxplus\>f\<equallim\><rsub|<text|commutatitivity>>f\<boxplus\>C<rsub|0>=f
+      </equation*>
+
+      <item*|inverse element>Let <math|f\<in\>V<rsup|X>> then
+      <math|\<forall\>x\<in\>X> we have
+
+      <\equation*>
+        <around*|(|f\<boxplus\><around*|(|-f|)>|)><around*|(|x|)>=f<around*|(|x|)>\<oplus\><around*|(|-f|)><around*|(|x|)>=f<around*|(|x|)>\<oplus\><around*|(|-<around*|(|f<around*|(|x|)>|)>|)>=0=C<rsub|9><around*|(|x|)>
+      </equation*>
+
+      so that <math|<around*|(|-f|)>+f\<equallim\><rsub|<text|commutatitivity>>f+<around*|(|-f|)>=C<rsub|0>>
+    </description>
+
+    For the remaining axioms of a cector space we have:
+
+    <\enumerate>
+      <item>If <math|\<alpha\>\<in\>F> and <math|f,g\<in\><rsup|X>> then
+      <math|\<forall\>x\<in\>X> we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|\<alpha\>\<boxdot\><around*|(|f\<boxplus\>g|)>|)><around*|(|x|)>>|<cell|=>|<cell|\<alpha\>\<odot\><around*|(|f\<boxplus\>g|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<odot\><around*|(|f<around*|(|x|)>\<oplus\>g<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<odot\>f<around*|(|x|)>\<oplus\>\<alpha\>\<odot\>g<around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<alpha\>\<boxdot\>f|)><around*|(|x|)>\<oplus\><around*|(|\<alpha\>\<boxdot\>g|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<alpha\>\<boxdot\>f\<boxplus\>\<alpha\>\<boxdot\>g|)><around*|(|x|)>>>>>
+      </eqnarray*>
+
+      proving that <math|\<alpha\>\<boxdot\><around*|(|f\<boxplus\>g|)>=\<alpha\>\<boxdot\>f\<boxplus\>\<alpha\>\<boxdot\>g>.
+
+      <item>If <math|\<alpha\>,\<beta\>\<in\>F> and <math|f\<in\>V<rsup|X>>
+      then <math|\<forall\>x\<in\>X> we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|<around*|(|\<alpha\>+\<beta\>|)>\<boxdot\>f|)><around*|(|x|)>>|<cell|=>|<cell|<around*|(|\<alpha\>+\<beta\>|)>\<odot\>f<around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<odot\>f<around*|(|x|)>+\<beta\>\<odot\>f<around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<alpha\>\<boxdot\>f|)><around*|(|x|)>\<oplus\><around*|(|\<beta\>\<boxdot\>f|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<alpha\>\<boxdot\>f\<boxplus\>\<beta\>\<boxdot\>f|)><around*|(|x|)>>>>>
+      </eqnarray*>
+
+      so that <math|<around*|(|\<alpha\>+\<beta\>|)>\<boxdot\>f=\<alpha\>\<boxdot\>f\<boxplus\>\<beta\>\<boxdot\>f>.
+
+      <item>If <math|\<alpha\>,\<beta\>\<in\>F> and <math|f\<in\>V<rsup|X>>
+      then <math|\<forall\>x\<in\>X> we have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|<around*|(|\<alpha\>\<cdot\>\<beta\>|)>\<boxdot\>f|)><around*|(|x|)>>|<cell|=>|<cell|<around*|(|\<alpha\>\<cdot\>\<beta\>|)>\<odot\>f<around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\><around*|(|\<beta\>\<cdot\>f<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\><around*|(|\<beta\>\<boxdot\>f|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<alpha\>\<boxdot\><around*|(|\<beta\>\<boxdot\>f|)>|)><around*|(|x|)>>>>>
+      </eqnarray*>
+
+      proving that <math|<around*|(|\<alpha\>\<cdot\>\<beta\>|)>\<boxdot\>f=\<alpha\>\<boxdot\><around*|(|\<beta\>\<boxdot\>f|)>>
+
+      <item>Let <math|f\<in\>V<rsup|X>> then we have
+      <math|\<forall\>x\<in\>X> that <math|<around*|(|1\<boxdot\>f|)><around*|(|x|)>=1\<odot\>f<around*|(|x|)>=f<around*|(|x|)>>
+      so that <math|1\<boxdot\>f=f>.
+    </enumerate>
+  </proof>
+
   \;
 
-  \ 
+  <subsection|Linear dependency>
 
-  \;
+  <section|Linear mappings>
 
-  \;
+  <section|Multilinear mappings>
+
+  <section|Deteminant Functions>
 </body>
 
 <\initial>
   <\collection>
     <associate|chapter-nr|10>
     <associate|page-first|302>
-    <associate|page-medium|paper>
+    <associate|page-medium|papyrus>
     <associate|section-nr|5>
     <associate|subsection-nr|2>
   </collection>
@@ -1069,41 +2295,79 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|11|303>>
-    <associate|auto-10|<tuple|<with|mode|<quote|math>|S<rsub|I>>|?>>
-    <associate|auto-11|<tuple|<with|mode|<quote|math>|i\<leftrightarrowlim\><rsub|I>>j|?>>
+    <associate|auto-10|<tuple|<with|mode|<quote|math>|S<rsub|I>>|312>>
+    <associate|auto-11|<tuple|<with|mode|<quote|math>|i\<leftrightarrowlim\><rsub|I>>j|312>>
+    <associate|auto-12|<tuple|11.1.4|316>>
+    <associate|auto-13|<tuple|11.2|?>>
+    <associate|auto-14|<tuple|11.2.1|?>>
+    <associate|auto-15|<tuple|vector space|?>>
+    <associate|auto-16|<tuple|11.2.2|?>>
+    <associate|auto-17|<tuple|complex vector space|?>>
+    <associate|auto-18|<tuple|real vector space|?>>
+    <associate|auto-19|<tuple|11.2.3|?>>
     <associate|auto-2|<tuple|11.1|303>>
+    <associate|auto-20|<tuple|11.3|?>>
+    <associate|auto-21|<tuple|11.4|?>>
+    <associate|auto-22|<tuple|11.5|?>>
     <associate|auto-3|<tuple|11.1.1|303>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|<big|sum><rsub|i=0><rsup|n>x<rsub|i>>|303>>
     <associate|auto-5|<tuple|<with|mode|<quote|math>|<big|prod><rsub|i=0><rsup|n>x<rsub|i>>|303>>
-    <associate|auto-6|<tuple|11.1.2|309>>
-    <associate|auto-7|<tuple|11.1.3|?>>
-    <associate|auto-8|<tuple|permutation|?>>
-    <associate|auto-9|<tuple|<with|mode|<quote|math>|\<sigma\>>|?>>
-    <associate|eq 11.1.054|<tuple|11.1|307>>
-    <associate|eq 11.2.053|<tuple|11.2|310>>
-    <associate|permutation|<tuple|11.25|?>>
-    <associate|permutation definition|<tuple|11.21|?>>
-    <associate|permutation group|<tuple|11.22|?>>
-    <associate|permutation on subset|<tuple|11.23|?>>
-    <associate|permutation transposition|<tuple|11.24|?>>
-    <associate|permutation transposition properties|<tuple|11.25|?>>
-    <associate|permutation {0,..,n and transposition|<tuple|11.26|?>>
+    <associate|auto-6|<tuple|11.1.2|310>>
+    <associate|auto-7|<tuple|11.1.3|312>>
+    <associate|auto-8|<tuple|permutation|312>>
+    <associate|auto-9|<tuple|<with|mode|<quote|math>|\<sigma\>>|312>>
+    <associate|eq 11.1.054|<tuple|11.1|308>>
+    <associate|eq 11.2.053|<tuple|11.2|311>>
+    <associate|eq 11.3.053|<tuple|11.3|315>>
+    <associate|eq 11.4.053|<tuple|11.4|315>>
+    <associate|eq 11.5.053|<tuple|11.5|316>>
+    <associate|eq 11.6.053|<tuple|11.7|318>>
+    <associate|eq 11.7.053|<tuple|11.7|?>>
+    <associate|eq 11.9.053|<tuple|11.9|?>>
+    <associate|permutation definition|<tuple|11.23|312>>
+    <associate|permutation group|<tuple|11.24|312>>
+    <associate|permutation on subset|<tuple|11.25|312>>
+    <associate|permutation transposition|<tuple|11.26|312>>
+    <associate|permutation transposition properties|<tuple|11.27|313>>
+    <associate|permutation {0,..,n and transposition|<tuple|11.28|314>>
     <associate|product finite product|<tuple|11.2|303>>
     <associate|sum alternative definition|<tuple|11.4|304>>
-    <associate|sum alternative definition (1)|<tuple|11.13|307>>
-    <associate|sum associativity|<tuple|11.20|310>>
-    <associate|sum associativity simple|<tuple|11.19|309>>
+    <associate|sum alternative definition (1)|<tuple|11.14|308>>
+    <associate|sum associativity|<tuple|11.22|311>>
+    <associate|sum associativity simple|<tuple|11.21|310>>
+    <associate|sum bijection on index|<tuple|11.32|?>>
+    <associate|sum commutativity|<tuple|11.29|315>>
     <associate|sum finite sum|<tuple|11.1|303>>
-    <associate|sum of differences|<tuple|11.9|306>>
-    <associate|sum of differences (1)|<tuple|11.18|308>>
-    <associate|sum of finite sums|<tuple|11.8|306>>
-    <associate|sum of finite sums (1)|<tuple|11.16|308>>
+    <associate|sum general equivalence|<tuple|11.31|317>>
+    <associate|sum index is a product|<tuple|11.41|?>>
+    <associate|sum of differences|<tuple|11.10|307>>
+    <associate|sum of differences (1)|<tuple|11.20|309>>
+    <associate|sum of finite sums|<tuple|11.9|306>>
+    <associate|sum of finite sums (1)|<tuple|11.18|309>>
+    <associate|sum of finite sums (2)|<tuple|11.37|?>>
     <associate|sum of inverses|<tuple|11.7|305>>
-    <associate|sum of inverses (1)|<tuple|11.17|308>>
-    <associate|sum of neutral element (1)|<tuple|11.14|307>>
+    <associate|sum of inverses (1)|<tuple|11.19|309>>
+    <associate|sum of inverses (2)|<tuple|11.36|?>>
+    <associate|sum of neutral element (1)|<tuple|11.15|308>>
+    <associate|sum of neutral element (2)|<tuple|11.33|?>>
     <associate|sum of neutral elements|<tuple|11.5|304>>
     <associate|sum of sums|<tuple|11.6|305>>
-    <associate|sum of sums (1)|<tuple|11.15|308>>
+    <associate|sum of sums (1)|<tuple|11.16|308>>
+    <associate|sum of sums (2)|<tuple|11.34|?>>
+    <associate|sum over disjoint subsets|<tuple|11.39|319>>
+    <associate|sum over disjoint subsets (1)|<tuple|11.40|?>>
+    <associate|sum over two disjoint subsets|<tuple|11.38|317>>
+    <associate|sum ring product|<tuple|11.8|306>>
+    <associate|sum ring product (1)|<tuple|11.17|308>>
+    <associate|sum ring product (2)|<tuple|11.35|?>>
+    <associate|vector space|<tuple|11.42|?>>
+    <associate|vector space C real|<tuple|11.49|?>>
+    <associate|vector space Q,R,C|<tuple|11.48|?>>
+    <associate|vector space complex/real|<tuple|11.50|?>>
+    <associate|vector space field|<tuple|11.47|?>>
+    <associate|vector space function space|<tuple|11.51|?>>
+    <associate|vector space properties (1)|<tuple|11.43|?>>
+    <associate|vector space subspace|<tuple|11.44|?>>
   </collection>
 </references>
 
@@ -1113,6 +2377,16 @@
       <tuple|<tuple|<with|mode|<quote|math>|<big|sum><rsub|i=0><rsup|n>x<rsub|i>>>|<pageref|auto-4>>
 
       <tuple|<tuple|<with|mode|<quote|math>|<big|prod><rsub|i=0><rsup|n>x<rsub|i>>>|<pageref|auto-5>>
+
+      <tuple|<tuple|permutation>|<pageref|auto-8>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<sigma\>>>|<pageref|auto-9>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|S<rsub|I>>>|<pageref|auto-10>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|i\<leftrightarrowlim\><rsub|I>>j>|<pageref|auto-11>>
+
+      <tuple|<tuple|vector space>|<pageref|auto-15>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|11<space|2spc>Linear
@@ -1129,6 +2403,36 @@
       <with|par-left|<quote|1tab>|11.1.2<space|2spc>Associativity
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-6>>
+
+      <with|par-left|<quote|1tab>|11.1.3<space|2spc>Commutativity
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-7>>
+
+      <with|par-left|<quote|1tab>|11.1.4<space|2spc>Generalized sum
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-12>>
+
+      11.2<space|2spc>Vector spaces \ <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-13>
+
+      <with|par-left|<quote|1tab>|11.2.1<space|2spc>Definition and examples
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-14>>
+
+      <with|par-left|<quote|1tab>|11.2.2<space|2spc>Linear dependency
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-16>>
+
+      11.3<space|2spc>Linear mappings <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-17>
+
+      11.4<space|2spc>Multilinear mappings
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-18>
+
+      11.5<space|2spc>Deteminant Functions
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-19>
     </associate>
   </collection>
 </auxiliary>
