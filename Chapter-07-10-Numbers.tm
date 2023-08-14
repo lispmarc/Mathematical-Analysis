@@ -12832,6 +12832,127 @@
     </enumerate>
   </proof>
 
+  TODO Check this
+
+  <subsection|Finite sets>
+
+  We define now a characterization of finite sets in terms of
+  <math|\<bbb-N\><rsub|0,\<bbb-C\>>>.
+
+  <\lemma>
+    <label|complex finite lemma>If <math|n\<in\>\<bbb-N\>> then
+    <math|<around*|{|0,\<ldots\>,n-1|}>> and
+    <math|<around*|{|0,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>-1|}>>
+    are bijective
+  </lemma>
+
+  <\proof>
+    First we have by [theorem: <reference|complex embedding>] that
+    <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0,\<bbb-C\>>>
+    is a bijection. Furhter we have by [theorem: <reference|complex
+    {n,..,m}>] that
+
+    <\equation*>
+      i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|<around*|{|0,\<ldots\>,n-1|}>|)>=<around*|{|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|0|)>,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>,\<bbb-C\>><around*|(|n-1|)>|}>=<around*|{|0,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>-1|}>
+    </equation*>
+
+    so that\ 
+
+    <\equation*>
+      <around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsub|\|<around*|{|0,\<ldots\>,n-1|}>>:<around*|{|0,\<ldots\>,n-1|}>\<rightarrow\><around*|{|0,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>-1|}>
+    </equation*>
+
+    \ is a bijection.
+  </proof>
+
+  <\theorem>
+    <label|complex finite set condition>We have the following
+    characterization of a finite sets\ 
+
+    <\equation*>
+      I<text| is finite<math|\<Leftrightarrow\>I> is empty or there exists a
+      <with|font-series|bold|unique> >k\<in\>\<bbb-N\><rsub|\<bbb-C\>><text|
+      and a bijection <math|\<beta\>:<around*|{|0,\<ldots\>,k-1|}>\<rightarrow\>I>>
+    </equation*>
+
+    <\proof>
+      \ 
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>By definition <math|I> is finite if
+        <math|\<exists\>n\<in\>\<bbb-N\><rsub|0>> such <math|n\<approx\>I>,
+        hence there exist a bijection <math|\<beta\>:n\<rightarrow\>I>. For
+        <math|n> we have as <math|0\<leqslant\>n> either:
+
+        <\description>
+          <item*|<math|n=0>>Then as <math|0\<equallim\><rsub|<text|[definition:
+          <reference|natural numbers examples>]>>\<varnothing\>> so that
+          <math|I=\<beta\><around*|(|\<emptyset\>|)>=\<emptyset\>>
+
+          <item*|<math|0\<less\>n>>Then as by [theorem: <reference|natural
+          numbers are segments>] <math|n=S<rsub|n>=<around*|{|i\<in\>\<bbb-N\><rsub|0>\|i\<less\>n|}>\<equallim\><rsub|<text|[theorem:
+          <reference|natural numbers n\<less\>m\<less\>=\<gtr\>n\<less\>=m-1>]>><around*|{|0,\<ldots\>,n-1|}>>
+
+          <\equation>
+            <label|eq 10.63.054>\<beta\>:<around*|{|0,\<ldots\>,n-1|}>\<rightarrow\>I<text|
+            is a bijection>
+          </equation>
+
+          Using [lemma: <reference|complex finite lemma>] there exist a
+          bijection <math|\<alpha\>:<around*|{|0,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>-1|}>\<rightarrow\><around*|{|0,\<ldots\>,n-1|}>>
+          so that if we choose <math|k=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>\<in\>\<bbb-N\><rsub|\<bbb-C\>>>
+          then\ 
+
+          <\equation*>
+            \<beta\>\<circ\>\<alpha\>:<around*|{|0,\<ldots\>,k-1|}>\<rightarrow\><around*|{|0,\<ldots\>,n-1|}>
+          </equation*>
+
+          is a bijection. This proves existence, now for uniqueness. Assume
+          that there is a <math|m\<in\>\<bbb-N\><rsub|\<bbb-C\>>> and a
+          bijection <math|\<gamma\>:<around*|{|0,\<ldots\>,m-1|}>\<rightarrow\>I>
+          then for <math|m<rprime|'>=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsup|-1><around*|(|m|)>\<in\>\<bbb-N\>>
+          we have by [lemma: <reference|complex finite lemma>] a bijection
+
+          <\equation*>
+            \<zeta\>:<around*|{|0,\<ldots\>,m<rprime|'>-1|}>\<rightarrow\><around*|{|0,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|m<rprime|'>|)>-1|}>=<around*|{|0,\<ldots\>,m-1|}>
+          </equation*>
+
+          Hence <math|\<zeta\>\<circ\>\<gamma\><rprime|'>:<around*|{|0,\<ldots\>,m<rprime|'>-1|}>\<rightarrow\>I>
+          is a bijeection, which as
+
+          <\equation*>
+            m<rprime|'>=S<rsub|m<rprime|'>>=<around*|{|i\<in\>\<bbb-N\><rsub|0>\|i\<less\>m<rprime|'>|}>\<equallim\><rsub|<text|[theorem:
+            <reference|natural numbers n\<less\>m\<less\>=\<gtr\>n\<less\>=m-1>]>><around*|{|0,\<ldots\>,m<rprime|'>-1|}>
+          </equation*>
+
+          proves that <math|m<rprime|'>\<approx\>I>. As also
+          <math|n\<approx\>I> we have by [theorem: <reference|finite
+          uniqueness of size>] that <math|n=m<rprime|'>> so that
+          <math|k=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|m<rprime|'>|)>=m>.
+          </description>
+
+        <item*|<math|\<Leftarrow\>>>If <math|I=\<varnothing\>> then by
+        [theorem: <reference|empty set is finite>] <math|I> is finite. On the
+        other hand if there exist a <math|k\<in\>\<bbb-N\><rsub|\<bbb-C\>>>
+        and a bijection <math|\<beta\>:<around*|{|0,\<ldots\>,k-1|}>\<rightarrow\>I>.
+        Then for <math|n=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsup|-1><around*|(|k|)>>
+        we have by [lemma: <reference|complex (x^n-1)\<gtr\>=n.(x-1)>] that
+        there i a bijiection
+
+        <\equation*>
+          \<alpha\>:<around*|{|0,\<ldots\>,n-1|}>\<rightarrow\><around*|{|0,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n-1|)>|}>=<around*|{|0,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>-1|}>=<around*|{|0,\<ldots\>,k-1|}>
+        </equation*>
+
+        As by [theorem: <reference|natural numbers are segments>]
+        <math|n=S<rsub|n>=<around*|{|i\<in\>\<bbb-N\><rsub|0>\|i\<less\>n|}>\<equallim\><rsub|<text|[theorem:
+        <reference|natural numbers n\<less\>m\<less\>=\<gtr\>n\<less\>=m-1>]>><around*|{|0,\<ldots\>,n-1|}>>
+        we have <math|n\<approx\>I> proving that <math|I> is finite.
+      </description>
+    </proof>
+  </theorem>
+
+  [see theorem: <reference|finite uniqueness of size>]
+
   Now we are finished with the tower of different types of numbers. From now
   on for the rest of this book we work only with
   <math|\<bbb-N\><rsub|0,\<bbb-C\>>>, <math|\<bbb-Z\><rsub|\<bbb-C\>>>,
@@ -12948,6 +13069,7 @@
     <associate|auto-50|<tuple|10.5.2|?>>
     <associate|auto-51|<tuple|<with|mode|<quote|math>|<wide|z|\<wide-bar\>>>|?>>
     <associate|auto-52|<tuple|<with|mode|<quote|math>|<around*|\||z|\|>>|?>>
+    <associate|auto-53|<tuple|10.5.3|?>>
     <associate|auto-6|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>>|?>>
     <associate|auto-7|<tuple|absolute value|?>>
     <associate|auto-8|<tuple|<with|mode|<quote|math>|<around*|\||x|\|>>|?>>
@@ -12974,6 +13096,8 @@
     <associate|complex densitiy theorem|<tuple|10.27|?>>
     <associate|complex embedding|<tuple|10.5|?>>
     <associate|complex field|<tuple|10.2|?>>
+    <associate|complex finite lemma|<tuple|10.71|?>>
+    <associate|complex finite set condition|<tuple|10.72|?>>
     <associate|complex i^2=-1|<tuple|10.62|?>>
     <associate|complex integers are conditional complete|<tuple|10.16|?>>
     <associate|complex irrational numbers|<tuple|10.20|?>>
@@ -13075,6 +13199,7 @@
     <associate|eq 10.57|<tuple|10.61|?>>
     <associate|eq 10.58.051|<tuple|10.62|?>>
     <associate|eq 10.6.048|<tuple|10.6|?>>
+    <associate|eq 10.63.054|<tuple|10.63|?>>
     <associate|eq 10.7.048|<tuple|10.7|?>>
     <associate|eq 10.8.048|<tuple|10.8|?>>
     <associate|eq 10.9.048|<tuple|10.9|?>>
@@ -13537,6 +13662,10 @@
       <with|par-left|<quote|1tab>|10.5.2<space|2spc>Norm on
       <with|mode|<quote|math>|\<bbb-C\>> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-50>>
+
+      <with|par-left|<quote|1tab>|10.5.3<space|2spc>Finite sets
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-53>>
     </associate>
   </collection>
 </auxiliary>

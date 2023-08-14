@@ -3013,7 +3013,8 @@
   counting.
 
   <\notation>
-    We define the numbers 0,1,2,3,<text-dots> as follows
+    <label|natural numbers examples>We define the numbers 0,1,2,3,<text-dots>
+    as follows
 
     <\enumerate>
       <item><math|0=\<varnothing\>>
@@ -5202,6 +5203,7 @@
 
   <\theorem>
     <label|natural numbers n\<less\>m=\<gtr\>n\<less\>=m-1>Let
+    <math|n\<in\>\<bbb-N\><rsub|0>> then we have Let
     <math|n,m\<in\>\<bbb-N\><rsub|0>> such that <math|n\<less\>m> then
     <math|n\<leqslant\>m-1>
   </theorem>
@@ -5217,6 +5219,25 @@
     numbers difference>] means that <math|n+l=m-1>. Further by [theorem:
     <reference|natural numbers n\<less\>=n+k>] we have
     <math|n\<leqslant\>n+l> so that \ <math|n\<leqslant\>m-1>.\ 
+  </proof>
+
+  <\corollary>
+    <label|natural numbers n\<less\>m\<less\>=\<gtr\>n\<less\>=m-1>Let
+    <math|n\<in\>\<bbb-N\><rsub|0>> and <math|m\<in\>\<bbb-N\>=\<bbb-N\><rsub|0>\\<around*|{|0|}>>
+    then <math|n\<less\>m\<Leftrightarrow\>n\<leqslant\>m-1>
+  </corollary>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>This follows from the previous theorem
+      [theorem: <reference|natural numbers n\<less\>m=\<gtr\>n\<less\>=m-1>]
+
+      <item*|<math|\<Leftarrow\>>>By [theorem: <reference|natural numbers
+      n\<less\>s(n)>] we have <math|<around*|(|m-1|)>\<less\><around*|(|m-1|)>+1=m>
+      we have from <math|n\<leqslant\>m-1> that <math|n\<less\>m>.
+    </description>
   </proof>
 
   <\theorem>
@@ -9384,6 +9405,151 @@
     countable.
   </proof>
 
+  <section|Finite product of sets>
+
+  We turn now our attention to the finite product of sets. Using the general
+  definition of a product of a family of sets as is discussed in [definition:
+  <reference|product>] we can define the finite product of sets.
+
+  <\definition>
+    <label|finite product of sets>If <math|n\<in\>\<bbb-N\>> and
+    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>B>
+    a finite family of sets then <math|<big|prod><rsub|i=1<rsup|>><rsup|n>A<rsub|i>>
+    is defined as
+
+    <\equation*>
+      <big|prod><rsub|i=1><rsup|n>A<rsub|i>=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i><text|
+      [see definition: <reference|product>]>
+    </equation*>
+
+    In other words
+
+    <\equation*>
+      <big|prod><rsub|i=1><rsup|n>A<rsub|i>\<equallim\><rsub|<text|[defintion:
+      <reference|product>]>><around*|{|f\|f\<in\><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)><rsup|<around*|{|1,\<ldots\>,n|}>><text|
+      where >\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text| we have
+      >f<around*|(|i|)>\<in\>A<rsub|i>|}>
+    </equation*>
+
+    So if <math|x\<in\><big|prod><rsub|i=1><rsup|n>A<rsub|i>> then
+    <math|x:<around*|{|1,\<ldots\>,n|}>\<rightarrow\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>>
+    is a function with <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|x<around*|(|i|)>\<in\>A<rsub|i>>. As <math|x<rsub|i>> is another
+    notation for <math|x<around*|(|i|)>> we can introduce a new notation for
+    <math|x\<in\><big|prod><rsub|i=1><rsup|n>A<rsub|i>>.
+
+    <\notation>
+      <math|x\<in\><big|prod><rsub|i=1><rsup|n>A<rsub|i>> is noted as
+      <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>> which is equivalent
+      with saying that <math|x:<around*|{|1,\<ldots\>,n|}>\<rightarrow\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>>
+      is a function with <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+      <math|x<rsub|i>=x<around*|(|i|)>\<in\>A<rsub|i>>. Using this new
+      notation we have the much shorter specification of
+      <math|<big|prod><rsub|i=1><rsup|n>A<rsub|i>>.\ 
+
+      <\equation*>
+        x\<in\><big|prod><rsub|i=1><rsup|n>A<rsub|i>\<Leftrightarrow\>x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)><text|
+        and >\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text| we have
+        >x<rsub|i>\<in\>A<rsub|i>
+      </equation*>
+    </notation>
+  </definition>
+
+  Using the above notation and definition we can also rephrase the projection
+  operators [see definition: <reference|product projection function>]
+
+  <\definition>
+    <label|finite product of sets projection operator>If
+    <math|n\<in\>\<bbb-N\>> and <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>B>
+    a finite family of sets then <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+
+    <\equation*>
+      \<pi\><rsub|i>:<big|prod><rsub|i=1><rsup|n>\<rightarrow\>A<rsub|i><text|
+      is defined by <math|\<pi\><rsub|i><around*|(|x|)>=\<pi\><rsub|i><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i>|)>=x<rsub|i>>>
+    </equation*>
+  </definition>
+
+  <\theorem>
+    If <math|n\<in\>\<bbb-N\>> and <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>B>
+    a finite family of sets then <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    we have that <math|\<pi\><rsub|i>:<big|prod><rsub|i=1><rsup|n>A<rsub|i>\<rightarrow\>A<rsub|i>>
+    is a surjection
+  </theorem>
+
+  <\proof>
+    This was proved in [theorem: <reference|product projection is
+    surjective>]
+  </proof>
+
+  Next we consider the special case where for
+  <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> <math|A<rsub|i>=A> [see
+  also theorem: <reference|product and power>]
+
+  <\definition>
+    <label|finite product of sets power>Let <math|n\<in\>\<bbb-N\>>, <math|A>
+    a set then <math|A<rsup|n>> is defined by
+
+    <\equation*>
+      A<rsup|n>=<big|prod><rsub|i=1><rsup|n>A<rsub|i><text| where
+      ><around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\><rsub|><around*|{|A|}><text|
+      is defined by >C<rsub|A>:<around*|{|1,\<ldots\>,n|}>\<rightarrow\><around*|{|A|}>
+    </equation*>
+
+    so that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|A<rsub|i>=C<rsub|A><around*|(|i|)>=A>. Usiing the above notation we
+    have then that\ 
+
+    <\equation*>
+      x\<in\>A<rsup|n>\<Leftrightarrow\>x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)><text|
+      and >\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text| we have
+      >x<rsub|i>\<in\>A
+    </equation*>
+  </definition>
+
+  <\theorem>
+    <label|finite product of sets power equivalence>Let
+    <math|n\<in\>\<bbb-N\>>, <math|A> a set then
+    <math|A<rsup|n>=A<rsup|<around*|{|1,\<ldots\>,n|}>>\<equallim\><rsub|def><around*|{|f\|f:<around*|{|1,\<ldots\>,n|}>\<rightarrow\>A<text|
+    is a function>|}>>
+  </theorem>
+
+  <\proof>
+    This follows from [theorem: <reference|product and power>]
+  </proof>
+
+  <\theorem>
+    <label|finite product of sets single set>If <math|A> is a set then
+
+    <\equation*>
+      \<beta\>:A\<rightarrow\>A<rsup|1><text| defined by
+      >\<beta\><around*|(|a|)>=<around*|{|<around*|(|1,a|)>|}>
+    </equation*>
+
+    is a bijection.\ 
+  </theorem>
+
+  <\proof>
+    If <math|a\<in\>A> then <math|<around*|(|1,a|)>\<subseteq\><around*|{|1|}>\<times\>A=<around*|{|1,\<ldots\>,1|}>\<times\>A>
+    so that <math|\<beta\><around*|(|a|)>:<around*|{|1,\<ldots\>,1|}>\<rightarrow\>A>
+    is indeed a function, proving that <math|\<beta\><around*|(|A|)>\<in\>A<rsup|1>>.
+    Further we have\ 
+
+    <\description>
+      <item*|injectivity>If <math|\<beta\><around*|(|a|)>=\<beta\><around*|(|b|)>>
+      then <math|<around*|{|<around*|(|1,a|)>|}>=<around*|{|<around*|(|1,b|)>|}>\<Rightarrow\><around*|(|1,a|)>=<around*|(|1,b|)>\<Rightarrow\>a=b>
+
+      <item*|surjectivity>If <math|f\<in\>A<rsup|1>=A<rsup|<around*|{|1|}>>>
+      then <math|f:<around*|{|1|}>\<rightarrow\>A> is a function, so that
+      <math|f\<subseteq\><around*|{|1|}>\<times\>A>, hence
+      <math|\<exists\>a\<in\>A> such that
+      <math|f=<around*|{|<around*|(|1,a|)>|}>=\<beta\><around*|(|a|)>>
+    </description>
+  </proof>
+
+  \;
+
+  \ 
+
   \;
 
   \;
@@ -9475,6 +9641,7 @@
     <associate|auto-59|<tuple|6.2.3|180>>
     <associate|auto-6|<tuple|sub-semi-group|111>>
     <associate|auto-60|<tuple|6.2.4|184>>
+    <associate|auto-61|<tuple|6.3|186>>
     <associate|auto-7|<tuple|sup-group|111>>
     <associate|auto-8|<tuple|group isomorphism|113>>
     <associate|auto-9|<tuple|left action|116>>
@@ -9497,8 +9664,8 @@
     denumerable|<tuple|6.67|185>>
     <associate|countable union of a finite family of countable sets is
     countable|<tuple|6.68|185>>
-    <associate|definition by recursion (1)|<tuple|5.88|160>>
-    <associate|definition by recursion (2)|<tuple|5.89|160>>
+    <associate|definition by recursion (1)|<tuple|5.89|160>>
+    <associate|definition by recursion (2)|<tuple|5.90|160>>
     <associate|denumerable every subset is finite
     denumerable.|<tuple|6.56|180>>
     <associate|denumerable is not subset of a natural
@@ -9601,12 +9768,17 @@
     <associate|field x^-1=y^-1=\<gtr\>x=y|<tuple|4.54|125>>
     <associate|finite ordered sets have a maximum and
     minimum|<tuple|6.45|174>>
+    <associate|finite product of sets|<tuple|6.72|187>>
+    <associate|finite product of sets power|<tuple|6.76|187>>
+    <associate|finite product of sets power equivalence|<tuple|6.77|187>>
+    <associate|finite product of sets projection operator|<tuple|6.74|187>>
+    <associate|finite product of sets single set|<tuple|6.78|187>>
     <associate|finite set|<tuple|6.19|167>>
     <associate|finite set alternative definition|<tuple|6.21|167>>
     <associate|finite union of finite sets is finite|<tuple|6.34|170>>
     <associate|finite union of finite sets is finite
     (lemma)|<tuple|6.33|170>>
-    <associate|finite uniqueness of size|<tuple|6.36|?>>
+    <associate|finite uniqueness of size|<tuple|6.36|172>>
     <associate|function P(A) bijective with 2^A|<tuple|6.5|163>>
     <associate|function injection and inverse surjection|<tuple|6.9|164>>
     <associate|function no surjection between A and P(A)|<tuple|6.7|164>>
@@ -9638,14 +9810,14 @@
     <associate|infinite set|<tuple|6.22|167>>
     <associate|inverse of a field isomorphism is a field
     isomorphism|<tuple|4.69|128>>
-    <associate|iteration final|<tuple|5.84|158>>
+    <associate|iteration final|<tuple|5.85|158>>
     <associate|mapping of N to a finite set (1)|<tuple|6.46|175>>
     <associate|mapping of N to a finite set (2)|<tuple|6.47|175>>
-    <associate|mathematical induction|<tuple|5.82|157>>
+    <associate|mathematical induction|<tuple|5.83|157>>
     <associate|max element of a family|<tuple|6.49|177>>
     <associate|n\<less\>=m=\<gtr\>S_n\<less\>=S_m|<tuple|6.17|166>>
-    <associate|natural number {n,..,m}|<tuple|5.81|157>>
-    <associate|natural number {n,..}|<tuple|5.79|157>>
+    <associate|natural number {n,..,m}|<tuple|5.82|157>>
+    <associate|natural number {n,..}|<tuple|5.80|157>>
     <associate|natural numbers|<tuple|5.3|136>>
     <associate|natural numbers (n+m)-k=(n-k)+m|<tuple|5.65|153>>
     <associate|natural numbers (n+m)-n=m|<tuple|5.66|153>>
@@ -9653,8 +9825,8 @@
     <associate|natural numbers 0\<less\>=n|<tuple|5.46|149>>
     <associate|natural numbers 1+1=2|<tuple|5.28|144>>
     <associate|natural numbers \<less\> properties|<tuple|5.49|150>>
-    <associate|natural numbers Archimedean property|<tuple|5.77|155>>
-    <associate|natural numbers N={0,..,}|<tuple|5.80|157>>
+    <associate|natural numbers Archimedean property|<tuple|5.78|155>>
+    <associate|natural numbers N={0,..,}|<tuple|5.81|157>>
     <associate|natural numbers Peano|<tuple|5.17|137>>
     <associate|natural numbers absorbing element|<tuple|5.36|146>>
     <associate|natural numbers addition|<tuple|5.27|144>>
@@ -9664,12 +9836,13 @@
     <associate|natural numbers are total ordered|<tuple|5.52|151>>
     <associate|natural numbers are transitive|<tuple|5.14|137>>
     <associate|natural numbers are well ordered|<tuple|5.51|150>>
-    <associate|natural numbers definition recursion finite|<tuple|5.90|160>>
+    <associate|natural numbers definition recursion finite|<tuple|5.91|160>>
     <associate|natural numbers difference|<tuple|5.63|153>>
     <associate|natural numbers distributivity|<tuple|5.39|147>>
-    <associate|natural numbers division|<tuple|5.78|156>>
+    <associate|natural numbers division|<tuple|5.79|156>>
     <associate|natural numbers every non zero number is a
     successor|<tuple|5.18|138>>
+    <associate|natural numbers examples|<tuple|5.8|136>>
     <associate|natural numbers is a set|<tuple|5.4|136>>
     <associate|natural numbers k\<less\>n condition|<tuple|5.48|149>>
     <associate|natural numbers mathematical induction|<tuple|5.11|136>>
@@ -9684,23 +9857,24 @@
     <associate|natural numbers n+k=0=\<gtr\>n=0|<tuple|5.57|152>>
     <associate|natural numbers n+k=m+k\<less\>=\<gtr\>n=m|<tuple|5.43|148>>
     <associate|natural numbers n+s(m)=s(n+m)|<tuple|5.31|145>>
-    <associate|natural numbers n.(m-1)=n.m-n|<tuple|5.68|153>>
-    <associate|natural numbers n.k=m.k=\<gtr\>n=m|<tuple|5.76|155>>
+    <associate|natural numbers n.(m-1)=n.m-n|<tuple|5.69|153>>
+    <associate|natural numbers n.k=m.k=\<gtr\>n=m|<tuple|5.77|155>>
     <associate|natural numbers n.s(m)=n+n.m|<tuple|5.38|147>>
-    <associate|natural numbers n\<less\>=i\<less\>=m=\<gtr\>0\<less\>=i-n\<less\>=m-n|<tuple|5.69|154>>
-    <associate|natural numbers n\<less\>=m\<less\>=\<gtr\>n-k\<less\>=m-k|<tuple|5.70|154>>
+    <associate|natural numbers n\<less\>=i\<less\>=m=\<gtr\>0\<less\>=i-n\<less\>=m-n|<tuple|5.70|154>>
+    <associate|natural numbers n\<less\>=m\<less\>=\<gtr\>n-k\<less\>=m-k|<tuple|5.71|154>>
     <associate|natural numbers n\<less\>=m\<less\>=\<gtr\>there exists a k
     such that m=k|<tuple|5.62|152>>
     <associate|natural numbers n\<less\>=n+k|<tuple|5.56|151>>
-    <associate|natural numbers n\<less\>k\<less\>s(n)|<tuple|5.71|154>>
+    <associate|natural numbers n\<less\>k\<less\>s(n)|<tuple|5.72|154>>
     <associate|natural numbers n\<less\>m and r\<less\>s then
-    n+r\<less\>m+s|<tuple|5.73|154>>
+    n+r\<less\>m+s|<tuple|5.74|154>>
     <associate|natural numbers n\<less\>m then there exists a k such that
     m=n+k|<tuple|5.60|152>>
     <associate|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k|<tuple|5.55|151>>
+    <associate|natural numbers n\<less\>m\<less\>=\<gtr\>n\<less\>=m-1|<tuple|5.68|?>>
     <associate|natural numbers n\<less\>m\<less\>=\<gtr\>there exists a k
     such that m=k|<tuple|5.61|152>>
-    <associate|natural numbers n\<less\>m=\<gtr\>n.k\<less\>m.k|<tuple|5.75|155>>
+    <associate|natural numbers n\<less\>m=\<gtr\>n.k\<less\>m.k|<tuple|5.76|155>>
     <associate|natural numbers n\<less\>m=\<gtr\>n\<less\>=m-1|<tuple|5.67|153>>
     <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>=m|<tuple|5.50|150>>
     <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>s(m)|<tuple|5.54|151>>
@@ -9709,8 +9883,8 @@
     <associate|natural numbers n=/s(n)|<tuple|5.15|137>>
     <associate|natural numbers order relation|<tuple|5.45|149>>
     <associate|natural numbers product of non zero numbers is non
-    zero|<tuple|5.74|155>>
-    <associate|natural numbers recursion step form finite|<tuple|5.87|159>>
+    zero|<tuple|5.75|155>>
+    <associate|natural numbers recursion step form finite|<tuple|5.88|159>>
     <associate|natural numbers s(n) = n+1|<tuple|5.30|144>>
     <associate|natural numbers s(n)=/0|<tuple|5.10|136>>
     <associate|natural numbers successor|<tuple|5.5|136>>
@@ -9720,7 +9894,7 @@
     <associate|natural numbers successor properties|<tuple|5.12|137>>
     <associate|natural numbers sum associativity|<tuple|5.32|145>>
     <associate|natural numbers sum commutativity|<tuple|5.33|145>>
-    <associate|natural numbers sup property|<tuple|5.72|154>>
+    <associate|natural numbers sup property|<tuple|5.73|154>>
     <associate|natural numbers transitive|<tuple|5.13|137>>
     <associate|natural numbers x\<less\>=y or y\<less\>x|<tuple|5.53|151>>
     <associate|operator|<tuple|4.1|109>>
@@ -9734,13 +9908,13 @@
     <associate|product of finite sets|<tuple|6.39|172>>
     <associate|proposition 6.53.022|<tuple|6.58|181>>
     <associate|recursion|<tuple|5.19|138>>
-    <associate|recursion final|<tuple|5.83|158>>
+    <associate|recursion final|<tuple|5.84|158>>
     <associate|recursion injective function|<tuple|5.20|140>>
     <associate|recursion iteration|<tuple|5.24|141>>
     <associate|recursion iteration in a group|<tuple|5.25|142>>
-    <associate|recursion step (2)|<tuple|5.85|158>>
+    <associate|recursion step (2)|<tuple|5.86|158>>
     <associate|recursion step form (1)|<tuple|5.26|143>>
-    <associate|recursion step form (3)|<tuple|5.86|158>>
+    <associate|recursion step form (3)|<tuple|5.87|158>>
     <associate|ring|<tuple|4.32|117>>
     <associate|ring 0 1 and -|<tuple|4.40|119>>
     <associate|ring absorbing element|<tuple|4.39|118>>
@@ -9929,6 +10103,10 @@
       <with|par-left|<quote|1tab>|6.2.4<space|2spc>Countable Sets
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-60>>
+
+      6.3<space|2spc>Finite product of sets
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-61>
     </associate>
   </collection>
 </auxiliary>

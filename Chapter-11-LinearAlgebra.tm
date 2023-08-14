@@ -1237,7 +1237,7 @@
 
   <subsection|Generalized sum>
 
-  Next we define the sum<space|1em>of elements over a finite index set.
+  Next we define the sum of elements over a finite index set.
 
   <\definition>
     Let <math|<around*|\<langle\>|A,+|\<rangle\>>> be a Abelian semi-group
@@ -1250,10 +1250,8 @@
       <math|<big|sum><rsub|i\<in\>I>x<rsub|i>=0>
 
       <item>If <math|I\<neq\>\<varnothing\>> then as <math|I> is finite there
-      exist a unique <math|n\<in\>\<bbb-N\>> [see theorem: <reference|finite
-      uniqueness of size>] such that <math|n\<approx\>I>, as
-      <math|S<rsub|n>=<around*|{|i\<in\>\<bbb-N\><rsub|0>\|i\<less\>n|}>=<around*|{|0,\<ldots\>,n-1|}>>
-      there exist a bijection <math|\<beta\>:<around*|{|0,\<ldots\>,n-1|}>\<rightarrow\>I>,
+      exist a <with|font-series|bold|unique> <math|n\<in\>\<bbb-N\>> and a
+      bijection <math|\<beta\>:<around*|{|0,\<ldots\>,n-1|}>\<rightarrow\>I>,
       <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> is then defined by\ 
 
       <\equation*>
@@ -1715,7 +1713,7 @@
       proving\ 
 
       <\equation>
-        <label|eq 11.7.053><big|cup><rsub|j\<in\><around*|{|0,\<ldots\>,n+1|}>>I<rsub|j>=J<big|cup>I<rsub|n+1><text|,
+        <label|eq 11.7.053.1><big|cup><rsub|j\<in\><around*|{|0,\<ldots\>,n+1|}>>I<rsub|j>=J<big|cup>I<rsub|n+1><text|,
         <math|J,I<rsub|n+1>> are finite and
         >J<big|cap>I<rsub|n+1>=\<varnothing\>
       </equation>
@@ -1724,8 +1722,8 @@
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|<big|sum><rsub|i\<in\><big|cup><rsub|i\<in\><around*|{|0,\<ldots\>n|}>>I<rsub|i>>x<rsub|i>>|<cell|\<equallim\><rsub|<text|[eq:
-        <reference|eq 11.7.053>] and [lemma: <reference|sum over two disjoint
-        subsets>]>>>|<cell|<big|sum><rsub|i\<in\>J>x<rsub|i>+<big|sum><rsub|i\<in\>I<rsub|n+1>>x<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><big|cup><rsub|j\<in\><around*|{|0,\<ldots\>,n|}>>I<rsub|j><rsub|>>x<rsub|i>+<big|sum><rsub|i\<in\>I<rsub|n+1>>x<rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|n\<in\>S>>|<cell|<big|sum><rsub|i=0><rsup|n><around*|(|<big|sum><rsub|j\<in\>I<rsub|i>>x<rsub|j>|)>+<big|sum><rsub|i\<in\>I<rsub|n+1>>x<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=0><rsup|n+1><around*|(|<big|sum><rsub|j\<in\>I<rsub|i>>x<rsub|i>|)>>>>>
+        <reference|eq 11.7.053.1>] and [lemma: <reference|sum over two
+        disjoint subsets>]>>>|<cell|<big|sum><rsub|i\<in\>J>x<rsub|i>+<big|sum><rsub|i\<in\>I<rsub|n+1>>x<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><big|cup><rsub|j\<in\><around*|{|0,\<ldots\>,n|}>>I<rsub|j><rsub|>>x<rsub|i>+<big|sum><rsub|i\<in\>I<rsub|n+1>>x<rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|n\<in\>S>>|<cell|<big|sum><rsub|i=0><rsup|n><around*|(|<big|sum><rsub|j\<in\>I<rsub|i>>x<rsub|j>|)>+<big|sum><rsub|i\<in\>I<rsub|n+1>>x<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=0><rsup|n+1><around*|(|<big|sum><rsub|j\<in\>I<rsub|i>>x<rsub|i>|)>>>>>
       </eqnarray*>
     </description>
   </proof>
@@ -1847,7 +1845,7 @@
 
   <section|Vector spaces >
 
-  <subsection|Definition>
+  <subsection|Definition >
 
   <\definition>
     <label|vector space><index|vector space>A vector space
@@ -2096,7 +2094,7 @@
     space over <math|<around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>>
     and <math|<around*|\<langle\>|\<bbb-C\>,+,\<cdot\>|\<rangle\>>> is a
     vector space over <math|<around*|\<langle\>|\<bbb-C\>,+,\<cdot\>|\<rangle\>>.>
-    </example>
+  </example>
 
   Be aware thtat a vector space depends also on the field used, so for
   example <math|\<bbb-C\>> can be used to define another vector space, as is
@@ -2139,7 +2137,12 @@
     called a <with|font-series|bold|real> vector space and a vector space
     <math|<around*|\<langle\>|V,\<oplus\>,\<odot\>|\<rangle\>>> over
     <math|<around*|\<langle\>|\<bbb-C\>,+,\<cdot\>|\<rangle\>>> is called a
-    <with|font-series|bold|complex> vector space.\ 
+    <with|font-series|bold|complex> vector space. If we want to refer to a
+    vector space <math|<around*|\<langle\>|V,\<oplus\>,\<odot\>|\<rangle\>>>
+    over either <math|<around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>>
+    or <math|<around*|\<langle\>|Rr,+,\<cdot\>|\<rangle\>>> then we say that
+    <math|<around*|\<langle\>|\<bbb-V\>,\<oplus\>,\<odot\>|\<rangle\>>> is a
+    vector space over <math|<around*|\<langle\>|\<bbb-K\>,+,\<cdot\>|\<rangle\>>>.
   </definition>
 
   Next we use an existing vector space and pairwise addition and scalar
@@ -2147,7 +2150,7 @@
   more special function spaces that are sub-spaces of this function space.
 
   <\theorem>
-    <label|vector space function space><dueto|function>Let
+    <label|vector space function space><dueto|function space>Let
     <math|<around*|\<langle\>|V,\<oplus\>,\<odot\>|\<rangle\>>> be a vector
     space over <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>, <math|X>
     a set then and define for <math|V<rsup|X>=<around*|{|f\|f:X\<rightarrow\>V<text|
@@ -2271,9 +2274,301 @@
     </enumerate>
   </proof>
 
+  Up to now I have used different operator symbols for addition and
+  multiplication. To simplify notation we use from now on always <math|+> for
+  addition and <math|\<cdot\>> for multiplication relaying on context to
+  figure out which operator is associated with the symbols <math|+> and
+  <math|\<cdot\>>. We alsso use <math|0> to denote the additve neutral
+  element and <math|-x to note the inverse of > <math|x>.
+
   \;
 
-  <subsection|Linear dependency>
+  Refering to the power of a set [see definition: <reference|finite product
+  of sets power>] we can\ 
+
+  <\theorem>
+    <label|vector space power>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
+    be a vector space over <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+    then <math|<around*|\<langle\>|V<rsup|n>,+,\<cdot\>|\<rangle\>>> is a
+    vector space over <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+    where\ 
+
+    <\equation*>
+      +:V<rsup|n>\<times\>V<rsup|n>\<rightarrow\>V<rsup|n><text| is defined
+      by ><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>+<around*|(|y<rsub|1>,\<ldots\>,y<rsub|n>|)>=<around*|(|x<rsub|1>+y<rsub|1>,\<ldots\>,x<rsub|n>+y<rsub|n>|)>
+    </equation*>
+
+    <\equation*>
+      \<cdot\>:F\<times\>V<rsup|n>\<rightarrow\>V<rsup|n><text| is defined by
+      <math|\<alpha\>\<cdot\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>=<around*|(|\<alpha\>\<cdot\>x<rsub|1>,\<ldots\>,\<alpha\>\<cdot\>x<rsub|n>|)>>>
+    </equation*>
+
+    <\equation*>
+      0=<wide*|<around*|(|0,\<ldots\>,0|)>|\<wide-underbrace\>><rsub|n>\<in\>V<rsup|n><text|
+      is the additive neutral element in >V<rsup|n>
+    </equation*>
+
+    <\equation*>
+      \<forall\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>V<rsup|n><text|
+      the additive negative is ><around*|(|-x<rsub|1>,\<ldots\>,-x<rsub|n>|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Note that using [theorem: <reference|finite product of sets power
+    equivalence>] we have that
+
+    <\equation*>
+      V<rsup|n>=V<rsup|<around*|{|1,\<ldots\>,n|}>>=<around*|{|f\|f:<around*|{|1,\<ldots\>,n|}>\<rightarrow\>V<text|
+      is a function>|}>
+    </equation*>
+
+    and <math|x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>> is equivalent
+    with <math|x:<around*|{|1,\<ldots\>,n|}>\<rightarrow\>V> is a function
+    where <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have
+    <math|x<around*|(|i|)>=x<rsub|i>>. So
+
+    <\equation*>
+      +:V<rsup|n>\<times\>V<rsup|n>\<rightarrow\>V<rsup|n><text| is defined
+      by ><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>+<around*|(|y<rsub|1>,\<ldots\>,y<rsub|n>|)>=<around*|(|x<rsub|1>+y<rsub|1>,\<ldots\>,x<rsub|n>+y<rsub|n>|)>
+    </equation*>
+
+    is equivalent with:
+
+    <\equation*>
+      +:V<rsup|n>\<times\>V<rsup|n>\<rightarrow\>V<rsup|n><text| is defined
+      by ><around*|(|x+y|)> where <around*|(|x+y|)><around*|(|i|)>=x<around*|(|i|)>+y<around*|(|i|)>
+    </equation*>
+
+    and
+
+    <\equation*>
+      \<cdot\>:F\<times\>V<rsup|n>\<rightarrow\>V<rsup|n><text| is defined by
+      <math|\<alpha\>\<cdot\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>=<around*|(|\<alpha\>\<cdot\>x<rsub|1>,\<ldots\>,\<alpha\>\<cdot\>x<rsub|n>|)>>>
+    </equation*>
+
+    \ is equivalent with:
+
+    <\equation*>
+      \<cdot\>:F\<times\>V<rsup|n>\<rightarrow\>V<rsup|n><text| is defined by
+      >\<alpha\>\<cdot\>x<text| where ><around*|(|\<alpha\>\<cdot\>x|)><around*|(|i|)>=\<alpha\>\<cdot\>x<around*|(|i|)>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      <around*|(|0,\<ldots\>,0|)>\<in\>V<rsup|n><text| is
+      <math|C<rsub|0>>><rsup|> where C<rsub|0><around*|(|i|)>=0
+    </equation*>
+
+    and finally\ 
+
+    <\equation*>
+      \<forall\><around*|(|x<rsub|1>,\<ldots\>,n|)>\<in\>V<rsup|n><text| the
+      additve negative is ><around*|(|-x<rsub|1>,\<ldots\>,-x<rsub|n>|)>
+    </equation*>
+
+    is equivalent with\ 
+
+    <\equation*>
+      \<forall\>x\<in\>V<rsup|n><text| the additve negative is >-x<text|
+      where <math|<around*|(|-x|)><around*|(|i|)>=-x<around*|(|i|)>>>
+    </equation*>
+
+    Combining these equivalent definitions with [theorem: <reference|vector
+    space function space>] proves then that
+    <math|<around*|\<langle\>|V<rsup|n>,+,\<cdot\>|\<rangle\>>> is a vector
+    space.
+  </proof>
+
+  Using [example: <reference|vector space Q,R,C>, <reference|vector space C
+  real>] and the above theorem [theorem: <reference|vector space power>] we
+  have then the following examples of vector spaces:
+
+  <\example>
+    \ Let <math|n\<in\>\<bbb-N\>> then
+
+    <\enumerate>
+      <item><math|<around*|\<langle\>|\<bbb-Q\><rsup|n>,+,\<cdot\>|\<rangle\>>>
+      is a vector space over <math|<around*|\<langle\>|Q,+,\<cdot\>|\<rangle\>>>
+
+      <item><math|<around*|\<langle\>|\<bbb-R\><rsup|n>,+,\<cdot\>|\<rangle\>>>
+      is a vector space over <math|<around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>>
+
+      <item><math|<around*|\<langle\>|\<bbb-C\>,+,\<cdot\>|\<rangle\>>> is a
+      vector space over <math|<around*|\<langle\>|\<bbb-C\>,+,\<cdot\>|\<rangle\>>>
+
+      <item><math|<around*|\<langle\>|\<bbb-C\>,+,\<cdot\>|\<rangle\>>> is a
+      vector space over <math|<around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>>
+    </enumerate>
+  </example>
+
+  <\remark>
+    <label|vector space product of vector spaces>Note that in the proof of
+    the previous theorem we use the fact that
+    <math|V<rsup|n>=<around*|{|f\|f:<around*|{|1,\<ldots\>,n|}>\<rightarrow\>V<text|
+    is a function>|}>>, however this is not standard practise. Most books
+    preferes to work with the notation <math|x\<in\>V<rsup|n>\<Leftrightarrow\>x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)><text|>>
+    such that <math|x<rsub|i>\<in\>V> <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>.
+    Likewise for <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>>
+    most books use the notation <math|x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>\<Leftrightarrow\>x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>
+    such that <math|x<rsub|i>\<in\>V<rsub|i>>
+    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>. This a standard that
+    we will follow for the rest of this book. If needed you can use
+    [definition: <reference|finite product of sets>] and [theorem:
+    <reference|finite product of sets power equivalence>] to understand the
+    original definitions.\ 
+  </remark>
+
+  <\definition>
+    <label|vector space set operations>Let
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a vector space
+    over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>,
+    <math|A,B\<subseteq\>V>, <math|G\<subseteq\>F,x\<in\>V> and
+    <math|\<alpha\>\<in\>F> then we have the following definitions:
+
+    <\enumerate>
+      <item><math|x+A=<around*|{|x+y\|y\<in\>A|}>\<equallim\><rsub|commutativity><around*|{|y+x<around*|\||y\<in\>A|\<nobracket\>>|}>=A+x>
+
+      <item><math|A+B=<around*|{|x+y\|x\<in\>A\<wedge\>y\<in\>B|}>>
+
+      <item><math|\<alpha\>\<cdot\>A=<around*|{|\<alpha\>\<cdot\>x\|x\<in\>A|}>>
+
+      <item><math|G\<cdot\>A=<around*|{|\<gamma\>\<cdot\>x\|\<gamma\>\<in\>F\<wedge\>x\<in\>A|}>>
+
+      <item><math|A-B=<around*|{|x-y\|x\<in\>A\<wedge\>y\<in\>B|}>>
+    </enumerate>
+  </definition>
+
+  <\theorem>
+    <label|vector space set propertie>If <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
+    is a vector space over <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+    then we have\ 
+
+    <\enumerate>
+      <item><math|\<forall\>A\<subseteq\>V,x\<in\>V> we have
+      <math|y\<in\>x+A\<Leftrightarrow\>y-x\<in\>A>
+
+      <item><math|\<forall\>A,B\<subseteq\>V,x\<in\>V> we have
+      <math|x+<around*|(|A<big|cup>B|)>=<around*|(|x+A|)><big|cup><around*|(|x+B|)>>
+
+      <item><math|\<forall\>A,B\<subseteq\>V,x\<in\>V> we have
+      <math|x+<around*|(|A<big|cap>B|)>=<around*|(|x+A|)><big|cap><around*|(|x+B|)>>
+
+      <item><math|\<forall\>A\<subseteq\>V,x,y\<in\>V> we have
+      <math|x+<around*|(|y+A|)>=<around*|(|x+y|)>+A>\ 
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \;
+
+    <\enumerate>
+      <item>If <math|y\<in\>x+A> there exists a <math|z\<in\>A> such that
+      <math|y=x+z\<Rightarrow\>y-x=z\<in\>A>. If
+      <math|y-x\<in\>A\<Rightarrow\>y=x+<around*|(|y-x|)>\<in\>x+A>.
+
+      <item>\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|y\<in\>x+<around*|(|A<big|cup>B|)>>|<cell|\<Leftrightarrowlim\><rsub|<around*|(|1|)>>>|<cell|y-x\<in\>A<big|cup>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|y-x\<in\>A|)>\<vee\><around*|(|y-x\<in\>B|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|y\<in\>x+A|)>\<vee\><around*|(|y\<in\>x+B|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><around*|(|x+A|)><big|cup><around*|(|x+B|)>>>>>
+      </eqnarray*>
+
+      <item>\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|y\<in\>x+<around*|(|A<big|cap>B|)>>|<cell|\<Leftrightarrowlim\><rsub|<around*|(|1|)>>>|<cell|y-x\<in\>A<big|cap>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|y-x\<in\>A|)>\<wedge\><around*|(|y-x\<in\>B|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|y\<in\>x+A|)>\<wedge\><around*|(|y\<in\>x+B|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><around*|(|x+A|)><big|cap><around*|(|x+B|)>>>>>
+      </eqnarray*>
+
+      <item>\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|z\<in\><around*|(|x+<around*|(|y+A|)>|)>>|<cell|\<Leftrightarrowlim\><rsub|<around*|(|1|)>>>|<cell|z-x\<in\>y+A>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<around*|(|1|)>>>|<cell|<around*|(|z-x|)>-y\<in\>A>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|z-<around*|(|x+y|)>|)>\<in\>A>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|z\<in\><around*|(|x+y|)>+A>>>>
+      </eqnarray*>
+    </enumerate>
+  </proof>
+
+  <subsection|Basis of a vector space>
+
+  As a vector space is also a Abelian group we can talk about finite sums.
+
+  <\theorem>
+    If <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> is a vector space
+    over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> then we
+    have:
+
+    <\enumerate>
+      <item>If <math|\<alpha\>\<in\>F>, <math|n,m\<in\>\<bbb-N\><rsub|0>>
+      with <math|n\<leqslant\>m> and <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|n,\<ldots\>,m|}>>\<subseteq\>V>
+      then <math|<big|sum><rsub|i=n><rsup|m><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>=\<alpha\>\<cdot\><big|sum><rsub|=n><rsup|m>x<rsub|i>>
+
+      <item>If <math|\<alpha\>\<in\>F>, <math|I> a finite set,
+      <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>V> then
+      <math|<big|sum><rsub|i\<in\>I><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>=\<alpha\>\<cdot\><big|sum><rsub|i\<in\>I>x<rsub|i>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>We use induction, so take:
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|\<forall\><around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>><text|
+        we have <math|<big|sum><rsub|i=0><rsup|n><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>=\<alpha\>\<cdot\><big|sum><rsub|i=0><rsup|n>x<rsub|i>>>|}>
+      </equation*>
+
+      then we have:\ 
+
+      <\description>
+        <item*|<math|0\<in\>S>>If <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|0|}>>>
+        then <math|<big|sum><rsub|i=0><rsup|0><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>=\<alpha\>\<cdot\>x<rsub|0>=\<alpha\>\<cdot\><big|sum><rsub|i=0><rsup|0>x<rsub|i>>
+        proving that <math|0\<in\>S>
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>TODO
+      </description>
+
+      <item>
+    </enumerate>
+
+    \;
+  </proof>
+
+  <\theorem>
+    If <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> is a vector space
+    over <math|<around*|\<langle\>|\<bbb-K\>,+,\<cdot\>|\<rangle\>>> where
+    <math|\<bbb-K\>=\<bbb-C\>> or <math|\<bbb-R\>> then we have:
+
+    <\enumerate>
+      <item><math|>If <math|n,m\<in\>\<bbb-N\><rsub|0>> with
+      <math|n\<leqslant\>m> and <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|n,\<ldots\>,m|}>>\<subseteq\>V>
+      is such that <math|\<forall\>i\<in\><around*|{|n,\<ldots\>,.m|}>>
+      <math|x<rsub|i>=x> then
+
+      <\equation*>
+        <big|sum><rsub|i=n><rsup|m>x<rsub|i>=<around*|(|m-n+1|)>\<cdot\>x
+      </equation*>
+
+      <item>If <math|I> is a finite set and
+      <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>V> is such that
+      <math|\<forall\>i\<in\>I> <math|x<rsub|i>=x> then
+
+      <\equation*>
+        <big|sum><rsub|i\<in\>I>x<rsub|i>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|I|)>|)>\<cdot\>x
+      </equation*>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>
+
+      <item>
+    </enumerate>
+  </proof>
 
   <section|Linear mappings>
 
@@ -2321,8 +2616,9 @@
     <associate|eq 11.3.053|<tuple|11.3|315>>
     <associate|eq 11.4.053|<tuple|11.4|315>>
     <associate|eq 11.5.053|<tuple|11.5|316>>
-    <associate|eq 11.6.053|<tuple|11.7|318>>
+    <associate|eq 11.6.053|<tuple|11.6|318>>
     <associate|eq 11.7.053|<tuple|11.7|?>>
+    <associate|eq 11.7.053.1|<tuple|11.8|?>>
     <associate|eq 11.9.053|<tuple|11.9|?>>
     <associate|permutation definition|<tuple|11.23|312>>
     <associate|permutation group|<tuple|11.24|312>>
@@ -2366,7 +2662,11 @@
     <associate|vector space complex/real|<tuple|11.50|?>>
     <associate|vector space field|<tuple|11.47|?>>
     <associate|vector space function space|<tuple|11.51|?>>
+    <associate|vector space power|<tuple|11.52|?>>
+    <associate|vector space product of vector spaces|<tuple|11.54|?>>
     <associate|vector space properties (1)|<tuple|11.43|?>>
+    <associate|vector space set operations|<tuple|11.55|?>>
+    <associate|vector space set propertie|<tuple|11.56|?>>
     <associate|vector space subspace|<tuple|11.44|?>>
   </collection>
 </references>
@@ -2387,6 +2687,10 @@
       <tuple|<tuple|<with|mode|<quote|math>|i\<leftrightarrowlim\><rsub|I>>j>|<pageref|auto-11>>
 
       <tuple|<tuple|vector space>|<pageref|auto-15>>
+
+      <tuple|<tuple|complex vector space>|<pageref|auto-17>>
+
+      <tuple|<tuple|real vector space>|<pageref|auto-18>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|11<space|2spc>Linear
@@ -2415,24 +2719,28 @@
       11.2<space|2spc>Vector spaces \ <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-13>
 
-      <with|par-left|<quote|1tab>|11.2.1<space|2spc>Definition and examples
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|11.2.1<space|2spc>Definition
+      \ <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-14>>
 
-      <with|par-left|<quote|1tab>|11.2.2<space|2spc>Linear dependency
+      <with|par-left|<quote|1tab>|11.2.2<space|2spc>Examples of vector spaces
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-16>>
 
+      <with|par-left|<quote|1tab>|11.2.3<space|2spc>Basis of a vector space
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-19>>
+
       11.3<space|2spc>Linear mappings <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-17>
+      <no-break><pageref|auto-20>
 
       11.4<space|2spc>Multilinear mappings
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-18>
+      <no-break><pageref|auto-21>
 
       11.5<space|2spc>Deteminant Functions
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-19>
+      <no-break><pageref|auto-22>
     </associate>
   </collection>
 </auxiliary>
