@@ -3097,7 +3097,7 @@
   <\example>
     <label|function identity function><index|identity
     function><index|<math|Id<rsub|A>>><dueto|Identity Function>Let <math|A>
-    be a class then <math|Id<rsub|A>:A\<rightarrow\>A> is defined by
+    be a class then <math|Id<rsub|A>:A\<rightarrow\>B> is defined by
 
     <\equation*>
       I<rsub|A>=<around*|{|z<mid|\|>z=<around*|(|x,x|)>\<wedge\>x\<in\>A|}>
@@ -5155,6 +5155,13 @@
       <math|f<around*|(|i|)>=E<around*|(|i|)>>>>
     </equation*>
   </definition>
+
+  <\example>
+    <label|family {x}xeA>Let <math|A,B> be classes then family
+    <math|<around*|{|<around*|(|Id<rsub|A>|)><rsub|a>|}><rsub|a\<in\>A>\<subseteq\>B>
+    defined by the function <math|Id<rsub|A>:A\<rightarrow\>B> is noted as
+    <math|<around*|{|x|}><rsub|x\<in\>A>>.
+  </example>
 
   We can now define the concept of a sub family
 
@@ -13063,35 +13070,36 @@
     <associate|equivalence relation partition alternative|<tuple|3.8|?>>
     <associate|equivalence relation subsets|<tuple|3.19|?>>
     <associate|family|<tuple|2.94|?>>
-    <associate|family and function composition|<tuple|2.100|?>>
-    <associate|family de Morgan|<tuple|2.121|?>>
+    <associate|family and function composition|<tuple|2.101|?>>
+    <associate|family de Morgan|<tuple|2.122|?>>
     <associate|family definition (1)|<tuple|2.96|?>>
-    <associate|family definition (2)|<tuple|2.97|?>>
-    <associate|family definition (3)|<tuple|2.98|?>>
-    <associate|family distributivity|<tuple|2.119|?>>
-    <associate|family image and preimage|<tuple|2.125|?>>
-    <associate|family index set is a product|<tuple|2.99|?>>
-    <associate|family intersection (2)|<tuple|2.112|?>>
-    <associate|family intersection is a set|<tuple|2.113|?>>
-    <associate|family intersection(1)|<tuple|2.111|?>>
-    <associate|family product and index transformation|<tuple|2.132|?>>
-    <associate|family properties (1)|<tuple|2.116|?>>
-    <associate|family properties (2)|<tuple|2.117|?>>
-    <associate|family properties (3)|<tuple|2.122|?>>
-    <associate|family range|<tuple|2.101|?>>
-    <associate|family range (1)|<tuple|2.102|?>>
-    <associate|family set|<tuple|2.103|?>>
-    <associate|family trivial|<tuple|2.114|?>>
-    <associate|family union (1)|<tuple|2.104|?>>
-    <associate|family union (2)|<tuple|2.107|?>>
-    <associate|family union condition set|<tuple|2.109|?>>
-    <associate|family union intersection and empty set|<tuple|2.123|?>>
-    <associate|family union intersection and inclusion|<tuple|2.118|?>>
-    <associate|family union of a empty set|<tuple|2.110|?>>
-    <associate|family union of family of families|<tuple|2.124|?>>
-    <associate|family union of family set and surjections|<tuple|2.108|?>>
-    <associate|family union of union of two families|<tuple|2.120|?>>
-    <associate|family union{A,B}|<tuple|2.115|?>>
+    <associate|family definition (2)|<tuple|2.98|?>>
+    <associate|family definition (3)|<tuple|2.99|?>>
+    <associate|family distributivity|<tuple|2.120|?>>
+    <associate|family image and preimage|<tuple|2.126|?>>
+    <associate|family index set is a product|<tuple|2.100|?>>
+    <associate|family intersection (2)|<tuple|2.113|?>>
+    <associate|family intersection is a set|<tuple|2.114|?>>
+    <associate|family intersection(1)|<tuple|2.112|?>>
+    <associate|family product and index transformation|<tuple|2.133|?>>
+    <associate|family properties (1)|<tuple|2.117|?>>
+    <associate|family properties (2)|<tuple|2.118|?>>
+    <associate|family properties (3)|<tuple|2.123|?>>
+    <associate|family range|<tuple|2.102|?>>
+    <associate|family range (1)|<tuple|2.103|?>>
+    <associate|family set|<tuple|2.104|?>>
+    <associate|family trivial|<tuple|2.115|?>>
+    <associate|family union (1)|<tuple|2.105|?>>
+    <associate|family union (2)|<tuple|2.108|?>>
+    <associate|family union condition set|<tuple|2.110|?>>
+    <associate|family union intersection and empty set|<tuple|2.124|?>>
+    <associate|family union intersection and inclusion|<tuple|2.119|?>>
+    <associate|family union of a empty set|<tuple|2.111|?>>
+    <associate|family union of family of families|<tuple|2.125|?>>
+    <associate|family union of family set and surjections|<tuple|2.109|?>>
+    <associate|family union of union of two families|<tuple|2.121|?>>
+    <associate|family union{A,B}|<tuple|2.116|?>>
+    <associate|family {x}xeA|<tuple|2.97|?>>
     <associate|function|<tuple|2.24|?>>
     <associate|function A^empty is empty|<tuple|2.32|?>>
     <associate|function B^A|<tuple|2.30|?>>
@@ -13243,18 +13251,18 @@
     <associate|partial functions image/preimage properties|<tuple|2.17|?>>
     <associate|parttial function graph|<tuple|2.6|?>>
     <associate|power set|<tuple|1.63|?>>
-    <associate|product|<tuple|2.126|?>>
-    <associate|product and intersection|<tuple|2.130|?>>
-    <associate|product and power|<tuple|2.131|?>>
-    <associate|product extension|<tuple|2.134|?>>
-    <associate|product inclusion|<tuple|2.129|?>>
-    <associate|product of family with one element|<tuple|2.127|?>>
-    <associate|product of family with two classes|<tuple|2.128|?>>
+    <associate|product|<tuple|2.127|?>>
+    <associate|product and intersection|<tuple|2.131|?>>
+    <associate|product and power|<tuple|2.132|?>>
+    <associate|product extension|<tuple|2.135|?>>
+    <associate|product inclusion|<tuple|2.130|?>>
+    <associate|product of family with one element|<tuple|2.128|?>>
+    <associate|product of family with two classes|<tuple|2.129|?>>
     <associate|product product is empty|<tuple|3.103|?>>
     <associate|product product is not empty|<tuple|3.102|?>>
-    <associate|product projection function|<tuple|2.135|?>>
+    <associate|product projection function|<tuple|2.136|?>>
     <associate|product projection is surjective|<tuple|3.101|?>>
-    <associate|product sub-product|<tuple|2.133|?>>
+    <associate|product sub-product|<tuple|2.134|?>>
     <associate|relation|<tuple|3.1|?>>
     <associate|relation properties|<tuple|3.4|?>>
     <associate|relation trivial|<tuple|3.3|?>>

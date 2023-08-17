@@ -12841,16 +12841,15 @@
 
   <\lemma>
     <label|complex finite lemma>If <math|n\<in\>\<bbb-N\>> then
-    <math|<around*|{|0,\<ldots\>,n-1|}>> and
-    <math|<around*|{|0,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>-1|}>>
-    are bijective
+    <math|<around*|{|0,\<ldots\>,n-1|}>\<approx\><around*|{|0,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>-1|}>>
   </lemma>
 
   <\proof>
     First we have by [theorem: <reference|complex embedding>] that
     <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-Z\>>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0,\<bbb-C\>>>
-    is a bijection. Furhter we have by [theorem: <reference|complex
-    {n,..,m}>] that
+    is a bijection, hence <math|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>>
+    is injective. Further we have by [theorem: <reference|complex {n,..,m}>]
+    that
 
     <\equation*>
       i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|<around*|{|0,\<ldots\>,n-1|}>|)>=<around*|{|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|0|)>,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>,\<bbb-C\>><around*|(|n-1|)>|}>=<around*|{|0,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>-1|}>
@@ -12872,86 +12871,196 @@
     <\equation*>
       I<text| is finite<math|\<Leftrightarrow\>I> is empty or there exists a
       <with|font-series|bold|unique> >k\<in\>\<bbb-N\><rsub|\<bbb-C\>><text|
-      and a bijection <math|\<beta\>:<around*|{|0,\<ldots\>,k-1|}>\<rightarrow\>I>>
+      such that <math|<around*|{|0,\<ldots\>,k-1|}>\<approx\>I>>
     </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>By definition <math|I> is finite if and
+      only <math|\<exists\>n\<in\>\<bbb-N\><rsub|0>> such
+      <math|n\<approx\>I>. For <math|n> we have as <math|0\<leqslant\>n>
+      either:
+
+      <\description>
+        <item*|<math|n=0>>Then as <math|0\<equallim\><rsub|<text|[definition:
+        <reference|natural numbers examples>]>>\<varnothing\>> it follows
+        that <math|I=\<beta\><around*|(|\<emptyset\>|)>=\<emptyset\>>
+
+        <item*|<math|0\<less\>n>>Then as <math|n\<equallim\><rsub|<text|[theorem:
+        <reference|natural numbers are segments>]>>S<rsub|n>=<around*|{|i\<in\>\<bbb-N\><rsub|0>\|i\<less\>n|}>\<equallim\><rsub|<text|[theorem:
+        <reference|natural numbers n\<less\>m\<less\>=\<gtr\>n\<less\>=m-1>]>><around*|{|0,\<ldots\>,n-1|}>>
+        we have
+
+        <\equation>
+          <label|eq 10.63.054><around*|{|0,\<ldots\>,n-1|}>\<approx\>I
+        </equation>
+
+        Using [lemma: <reference|complex finite lemma>] we have
+        <math|<around*|{|0,\<ldots\>,n-1|}>\<approx\><around*|{|0,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>-1|}>=<around*|{|0,\<ldots\>,k-1|}>>
+        where <math|k=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>\<in\>\<bbb-N\><rsub|\<bbb-C\>>>.
+        By [theorem: <reference|equipotence equivalence relation>] and [eq:
+        <reference|eq 10.63.054>] it follows then that
+
+        <\equation*>
+          <around*|{|0,\<ldots\>,k-1|}>\<approx\>I
+        </equation*>
+
+        This proves existence, now for uniqueness. Assume that there is a
+        <math|l\<in\>\<bbb-N\><rsub|\<bbb-C\>>> such that
+        <math|<around*|{|0,\<ldots\>,l-1|}>\<approx\>I>. Take
+        <math|m=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsup|-1><around*|(|l|)>\<in\>\<bbb-N\>>
+        then we have
+
+        <\equation*>
+          m\<equallim\><rsub|<text|[theorem: <reference|natural numbers are
+          segments>]>>S<rsub|m>=<around*|{|i\<in\>\<bbb-N\><rsub|0>\|i\<less\>m|}>\<equallim\><rsub|<text|[theorem:
+          <reference|natural numbers n\<less\>m\<less\>=\<gtr\>n\<less\>=m-1>]>><around*|{|0,\<ldots\>,m-1|}>
+        </equation*>
+
+        Using [lemma: <reference|complex finite lemma>] we have that
+        <math|<around*|{|0,\<ldots\>,m-1|}>\<approx\><around*|{|0,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|m|)>-1|}>=<around*|{|0,\<ldots\>,l-1|}>>
+        proving that <math|m\<approx\><around*|{|0,\<ldots\>,l-1|}>> which as
+        <math|<around*|{|0,\<ldots\>,l-1|}>\<approx\>I> proves by \ [theorem:
+        <reference|equipotence equivalence relation>] that
+        <math|m\<approx\>I>. So we have that
+        <math|n\<approx\>I\<wedge\>m\<approx\>I\<Rightarrow\>n\<approx\>m>
+        which by [theorem: <reference|finite uniqueness of size>] results in
+        <math|n=m>. Finally we have <math|k=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>\<equallim\><rsub|n=m>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|m|)>=l>
+        proving <math|k=l<infix-and>uniqueness.>
+      </description>
+
+      <item*|<math|\<Leftarrow\>>>If <math|I=\<varnothing\>> then by
+      [theorem: <reference|empty set is finite>] <math|I> is finite. On the
+      other hand assume there exist a <math|k\<in\>\<bbb-N\><rsub|\<bbb-C\>>>
+      such that <math|<around*|{|0,\<ldots\>,k-1|}>\<approx\>I>. Take
+      <math|n=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsup|-1><around*|(|k|)>\<in\>\<bbb-N\>>
+      then we have by [lemma: <reference|complex finite lemma>] that\ 
+
+      <\equation*>
+        <around*|{|0,\<ldots\>,n-1|}>\<approx\><around*|{|0,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>-1|}>=<around*|{|0,\<ldots\>,k-1|}>
+      </equation*>
+
+      As <math|n\<equallim\><rsub|<text|[theorem: <reference|natural numbers
+      are segments>]>>S<rsub|n>=<around*|{|i\<in\>\<bbb-N\><rsub|0>\|i\<less\>n|}>\<equallim\><rsub|<text|[theorem:
+      <reference|natural numbers n\<less\>m\<less\>=\<gtr\>n\<less\>=m-1>]>><around*|{|0,\<ldots\>,n-1|}>>
+      we have <math|n\<approx\><around*|{|0,\<ldots\>,k-1|}>> and as
+      <math|<around*|{|0,\<ldots\>,k-1|}>\<approx\>I> we have by [theorem:
+      <reference|equipotence equivalence relation>] <math|>that
+      <math|n\<approx\>I> proving that <math|I> is finite.
+    </description>
+  </proof>
+
+  We express now the cardinality of sets using
+  <math|\<bbb-N\><rsub|0,\<bbb-C\>>> instead of <math|\<bbb-N\><rsub|0>>
+
+  <\definition>
+    <label|complex cardinality><index|<math|card<around*|(|I|)>>>Let <math|I>
+    be a finite set then <math|card<around*|(|I|)>> is defined as follows\ 
+
+    <\equation*>
+      card<around*|(|I|)>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|I|)>|)>
+    </equation*>
+
+    where <math|#<around*|(|I|)>> is defined in [definition:
+    <reference|cardinality of natural numbers>]
+  </definition>
+
+  <\theorem>
+    <label|complex cardinality alternative>If <math|I> is a finite set then
+    we have that\ 
+
+    <\equation*>
+      card<around*|(|I|)>=<choice|<tformat|<table|<row|<cell|0<text| if
+      <math|I=\<varnothing\>>>>>|<row|<cell|k<text| where <math|k<text| is
+      the unique <math|k\<in\>\<bbb-N\><rsub|\<bbb-C\>><text| such that
+      ><around*|{|0,\<ldots\>,k-1|}>\<approx\>I<text| if
+      >I\<neq\>\<varnothing\>>>>>>>>>>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    For <math|I> finite we have either:
+
+    <\description>
+      <item*|<math|I=\<varnothing\>>>Then as
+      <math|card<around*|(|I|)>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|I|)>|)>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|\<varnothing\>|)>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|cardinality of the empty set is
+      0>]>>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|0|)>=0>
+
+      <item*|<math|I\<neq\>\<varnothing\>>>Then by [theorem:
+      <reference|cardinality of the empty set is 0>]
+      <math|#<around*|(|I|)>\<neq\>0> so that
+      <math|0\<less\>#<around*|(|I|)>>. Take <math|n=#<around*|(|I|)>> then
+      <math|n\<approx\>I>, further\ 
+
+      <\equation*>
+        n\<equallim\><rsub|<text|[theorem: <reference|natural numbers are
+        segments>]>>S<rsub|n>=<around*|{|i\<in\>\<bbb-N\><rsub|0>\|i\<less\>n|}>\<equallim\><rsub|<text|[theorem:
+        <reference|natural numbers n\<less\>m\<less\>=\<gtr\>n\<less\>=m-1>]>><around*|{|0,\<ldots\>,n-1|}>
+      </equation*>
+
+      Using [lemma: <reference|complex finite lemma>] we have
+
+      <\equation*>
+        <around*|{|0,\<ldots\>,n-1|}>\<approx\><around*|{|0,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>-1|}>=<around*|{|0,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|I|)>-1|)>|}>=<around*|{|0,\<ldots\>card<around*|(|I|)>-1|}>
+      </equation*>
+
+      proving that <math|I\<approx\><around*|{|0,\<ldots\>,card<around*|(|I|)>-1|}>>.
+    </description>
+  </proof>
+
+  <\corollary>
+    <label|complex cardinality of {0,..,n}>If
+    <math|n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>> then
+    <math|card<around*|(|<around*|{|0,\<ldots\>,n|}>|)>=n+1>
+  </corollary>
+
+  <\proof>
+    If <math|n\<in\>\<bbb-N\><rsub|0>> then
+    <math|\<varnothing\>\<neq\><around*|{|0,\<ldots\>,<around*|(|n+1|)>-1|}>=<around*|{|0,\<ldots\>,n|}>\<approx\><around*|{|0,\<ldots\>.,n|}>>
+    so that by [theorem: <reference|complex cardinality alternative>] we have
+    <math|card<around*|(|<around*|{|0,\<ldots\>,n|}>|)>=n+1>.
+  </proof>
+
+  <\theorem>
+    <label|complex cardinality properties>If <math|A,B> are finite sets then
+
+    <\enumerate>
+      <item><math|A\<times\>B> is finite and
+      <math|card<around*|(|A\<times\>B|)>=card<around*|(|A|)>\<cdot\>card<around*|(|B|)>>
+
+      <item><math|A<big|cup>B> is finite and
+      A<math|<big|cap>B=\<varnothing\>> then
+      <math|card<around*|(|A<big|cup>B|)>=card<around*|(|A|)>+card<around*|(|B|)>>
+    </enumerate>
 
     <\proof>
       \ 
 
-      <\description>
-        <item*|<math|\<Rightarrow\>>>By definition <math|I> is finite if
-        <math|\<exists\>n\<in\>\<bbb-N\><rsub|0>> such <math|n\<approx\>I>,
-        hence there exist a bijection <math|\<beta\>:n\<rightarrow\>I>. For
-        <math|n> we have as <math|0\<leqslant\>n> either:
+      <\enumerate>
+        <item>By [theorem: <reference|product of finite sets>] we have that
+        <math|A\<times\>B> is finite and <math|#<around*|(|A\<times\>B|)>=#<around*|(|A|)>\<cdot\>#<around*|(|B|)>>.
+        Further we have that
 
-        <\description>
-          <item*|<math|n=0>>Then as <math|0\<equallim\><rsub|<text|[definition:
-          <reference|natural numbers examples>]>>\<varnothing\>> so that
-          <math|I=\<beta\><around*|(|\<emptyset\>|)>=\<emptyset\>>
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|card<around*|(|A\<times\>B|)>>|<cell|=>|<cell|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|A\<times\>B|)>|)>>>|<row|<cell|>|<cell|=>|<cell|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|A|)>\<cdot\>#<around*|(|B|)>|)>>>|<row|<cell|>|<cell|=>|<cell|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|A|)>|)>\<cdot\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|B|)>|)>>>|<row|<cell|>|<cell|=>|<cell|card<around*|(|A|)>\<cdot\>card<around*|(|B|)>>>>>
+        </eqnarray*>
 
-          <item*|<math|0\<less\>n>>Then as by [theorem: <reference|natural
-          numbers are segments>] <math|n=S<rsub|n>=<around*|{|i\<in\>\<bbb-N\><rsub|0>\|i\<less\>n|}>\<equallim\><rsub|<text|[theorem:
-          <reference|natural numbers n\<less\>m\<less\>=\<gtr\>n\<less\>=m-1>]>><around*|{|0,\<ldots\>,n-1|}>>
+        <item>By [theorems: <reference|union of two finite sets is
+        finite>,<reference|cardinality of union of two disjoint finite sets>]
+        we have that <math|A<big|cup>B> is finite and
+        <math|#<around*|(|A<big|cup>B|)>=#<around*|(|A|)>+#<around*|(|B|)>>.
+        Further we have that\ 
 
-          <\equation>
-            <label|eq 10.63.054>\<beta\>:<around*|{|0,\<ldots\>,n-1|}>\<rightarrow\>I<text|
-            is a bijection>
-          </equation>
-
-          Using [lemma: <reference|complex finite lemma>] there exist a
-          bijection <math|\<alpha\>:<around*|{|0,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>-1|}>\<rightarrow\><around*|{|0,\<ldots\>,n-1|}>>
-          so that if we choose <math|k=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>\<in\>\<bbb-N\><rsub|\<bbb-C\>>>
-          then\ 
-
-          <\equation*>
-            \<beta\>\<circ\>\<alpha\>:<around*|{|0,\<ldots\>,k-1|}>\<rightarrow\><around*|{|0,\<ldots\>,n-1|}>
-          </equation*>
-
-          is a bijection. This proves existence, now for uniqueness. Assume
-          that there is a <math|m\<in\>\<bbb-N\><rsub|\<bbb-C\>>> and a
-          bijection <math|\<gamma\>:<around*|{|0,\<ldots\>,m-1|}>\<rightarrow\>I>
-          then for <math|m<rprime|'>=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsup|-1><around*|(|m|)>\<in\>\<bbb-N\>>
-          we have by [lemma: <reference|complex finite lemma>] a bijection
-
-          <\equation*>
-            \<zeta\>:<around*|{|0,\<ldots\>,m<rprime|'>-1|}>\<rightarrow\><around*|{|0,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|m<rprime|'>|)>-1|}>=<around*|{|0,\<ldots\>,m-1|}>
-          </equation*>
-
-          Hence <math|\<zeta\>\<circ\>\<gamma\><rprime|'>:<around*|{|0,\<ldots\>,m<rprime|'>-1|}>\<rightarrow\>I>
-          is a bijeection, which as
-
-          <\equation*>
-            m<rprime|'>=S<rsub|m<rprime|'>>=<around*|{|i\<in\>\<bbb-N\><rsub|0>\|i\<less\>m<rprime|'>|}>\<equallim\><rsub|<text|[theorem:
-            <reference|natural numbers n\<less\>m\<less\>=\<gtr\>n\<less\>=m-1>]>><around*|{|0,\<ldots\>,m<rprime|'>-1|}>
-          </equation*>
-
-          proves that <math|m<rprime|'>\<approx\>I>. As also
-          <math|n\<approx\>I> we have by [theorem: <reference|finite
-          uniqueness of size>] that <math|n=m<rprime|'>> so that
-          <math|k=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|m<rprime|'>|)>=m>.
-          </description>
-
-        <item*|<math|\<Leftarrow\>>>If <math|I=\<varnothing\>> then by
-        [theorem: <reference|empty set is finite>] <math|I> is finite. On the
-        other hand if there exist a <math|k\<in\>\<bbb-N\><rsub|\<bbb-C\>>>
-        and a bijection <math|\<beta\>:<around*|{|0,\<ldots\>,k-1|}>\<rightarrow\>I>.
-        Then for <math|n=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsup|-1><around*|(|k|)>>
-        we have by [lemma: <reference|complex (x^n-1)\<gtr\>=n.(x-1)>] that
-        there i a bijiection
-
-        <\equation*>
-          \<alpha\>:<around*|{|0,\<ldots\>,n-1|}>\<rightarrow\><around*|{|0,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n-1|)>|}>=<around*|{|0,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>-1|}>=<around*|{|0,\<ldots\>,k-1|}>
-        </equation*>
-
-        As by [theorem: <reference|natural numbers are segments>]
-        <math|n=S<rsub|n>=<around*|{|i\<in\>\<bbb-N\><rsub|0>\|i\<less\>n|}>\<equallim\><rsub|<text|[theorem:
-        <reference|natural numbers n\<less\>m\<less\>=\<gtr\>n\<less\>=m-1>]>><around*|{|0,\<ldots\>,n-1|}>>
-        we have <math|n\<approx\>I> proving that <math|I> is finite.
-      </description>
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|card<around*|(|A<big|cup>B|)>>|<cell|=>|<cell|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|A<big|cup>B|)>|)>>>|<row|<cell|>|<cell|=>|<cell|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|A|)>+#<around*|(|B|)>|)>>>|<row|<cell|>|<cell|=>|<cell|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|A|)>|)>+i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|B|)>|)>>>|<row|<cell|>|<cell|=>|<cell|card<around*|(|A|)>+card<around*|(|B|)>>>>>
+        </eqnarray*>
+      </enumerate>
     </proof>
   </theorem>
-
-  [see theorem: <reference|finite uniqueness of size>]
 
   Now we are finished with the tower of different types of numbers. From now
   on for the rest of this book we work only with
@@ -13011,10 +13120,10 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|6>
-    <associate|page-first|185>
+    <associate|page-first|187>
     <associate|project-flag|false>
-    <associate|section-nr|2>
-    <associate|subsection-nr|4>
+    <associate|section-nr|3>
+    <associate|subsection-nr|0>
   </collection>
 </initial>
 
@@ -13070,6 +13179,7 @@
     <associate|auto-51|<tuple|<with|mode|<quote|math>|<wide|z|\<wide-bar\>>>|?>>
     <associate|auto-52|<tuple|<with|mode|<quote|math>|<around*|\||z|\|>>|?>>
     <associate|auto-53|<tuple|10.5.3|?>>
+    <associate|auto-54|<tuple|<with|mode|<quote|math>|card<around*|(|I|)>>|?>>
     <associate|auto-6|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>>|?>>
     <associate|auto-7|<tuple|absolute value|?>>
     <associate|auto-8|<tuple|<with|mode|<quote|math>|<around*|\||x|\|>>|?>>
@@ -13088,6 +13198,10 @@
     <associate|complex RC order (2)|<tuple|10.8|?>>
     <associate|complex RC order properties|<tuple|10.14|?>>
     <associate|complex a\<less\>2^n|<tuple|10.48|?>>
+    <associate|complex cardinality|<tuple|10.73|?>>
+    <associate|complex cardinality alternative|<tuple|10.74|?>>
+    <associate|complex cardinality of {0,..,n}|<tuple|10.75|?>>
+    <associate|complex cardinality properties|<tuple|10.76|?>>
     <associate|complex conjugate|<tuple|10.67|?>>
     <associate|complex conjugate properties|<tuple|10.68|?>>
     <associate|complex definition by recursion (1)|<tuple|10.37|?>>
@@ -13552,6 +13666,8 @@
       <tuple|<tuple|<with|mode|<quote|math>|<wide|z|\<wide-bar\>>>>|<pageref|auto-51>>
 
       <tuple|<tuple|<with|mode|<quote|math>|<around*|\||z|\|>>>|<pageref|auto-52>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|card<around*|(|I|)>>>|<pageref|auto-54>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|7<space|2spc>The

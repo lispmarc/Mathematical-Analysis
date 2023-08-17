@@ -9690,10 +9690,10 @@
     <associate|eq 5.11.019|<tuple|5.11|143>>
     <associate|eq 5.12.019|<tuple|5.12|143>>
     <associate|eq 5.13.019|<tuple|5.13|143>>
-    <associate|eq 5.14.019|<tuple|5.14|155>>
+    <associate|eq 5.14.019|<tuple|5.14|156>>
     <associate|eq 5.15.019|<tuple|5.15|156>>
     <associate|eq 5.16.019|<tuple|5.16|156>>
-    <associate|eq 5.17.019|<tuple|5.17|158>>
+    <associate|eq 5.17.019|<tuple|5.17|159>>
     <associate|eq 5.18.053|<tuple|5.18|159>>
     <associate|eq 5.19.053|<tuple|5.19|159>>
     <associate|eq 5.2.019|<tuple|5.2|138>>
@@ -9857,7 +9857,7 @@
     <associate|natural numbers n+k=0=\<gtr\>n=0|<tuple|5.57|152>>
     <associate|natural numbers n+k=m+k\<less\>=\<gtr\>n=m|<tuple|5.43|148>>
     <associate|natural numbers n+s(m)=s(n+m)|<tuple|5.31|145>>
-    <associate|natural numbers n.(m-1)=n.m-n|<tuple|5.69|153>>
+    <associate|natural numbers n.(m-1)=n.m-n|<tuple|5.69|154>>
     <associate|natural numbers n.k=m.k=\<gtr\>n=m|<tuple|5.77|155>>
     <associate|natural numbers n.s(m)=n+n.m|<tuple|5.38|147>>
     <associate|natural numbers n\<less\>=i\<less\>=m=\<gtr\>0\<less\>=i-n\<less\>=m-n|<tuple|5.70|154>>
@@ -9871,7 +9871,7 @@
     <associate|natural numbers n\<less\>m then there exists a k such that
     m=n+k|<tuple|5.60|152>>
     <associate|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k|<tuple|5.55|151>>
-    <associate|natural numbers n\<less\>m\<less\>=\<gtr\>n\<less\>=m-1|<tuple|5.68|?>>
+    <associate|natural numbers n\<less\>m\<less\>=\<gtr\>n\<less\>=m-1|<tuple|5.68|153>>
     <associate|natural numbers n\<less\>m\<less\>=\<gtr\>there exists a k
     such that m=k|<tuple|5.61|152>>
     <associate|natural numbers n\<less\>m=\<gtr\>n.k\<less\>m.k|<tuple|5.76|155>>
