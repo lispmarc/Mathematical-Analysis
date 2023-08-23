@@ -12601,7 +12601,7 @@
     <\enumerate>
       <item><math|f<rsub|\|Z>:Z\<rightarrow\>Y<text| is a injection>>
 
-      <item><math|f<rsub|\|Z><around*|(|X|)>=f<around*|(|X|)>>
+      <item><math|f<rsub|\|Z><around*|(|Z|)>=f<around*|(|X|)>>
 
       <item><math|f<rsub|\|Z>:Z\<rightarrow\>f<around*|(|X|)>> is a bijection
     </enumerate>
