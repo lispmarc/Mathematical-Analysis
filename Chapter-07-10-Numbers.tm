@@ -12832,7 +12832,7 @@
     </enumerate>
   </proof>
 
-  TODO Check this
+  TODO check this
 
   <subsection|Finite sets>
 
@@ -12840,8 +12840,8 @@
   <math|\<bbb-N\><rsub|0,\<bbb-C\>>>.
 
   <\lemma>
-    <label|complex finite lemma>If <math|n\<in\>\<bbb-N\>> then
-    <math|<around*|{|0,\<ldots\>,n-1|}>\<approx\><around*|{|0,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>-1|}>>
+    <label|complex finite lemma>If <math|n\<in\>\<bbb-N\><rsub|0>> then
+    <math|<around*|{|1,\<ldots\>,n|}>\<approx\><around*|{|1,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>|}>>
   </lemma>
 
   <\proof>
@@ -12852,13 +12852,14 @@
     that
 
     <\equation*>
-      i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|<around*|{|0,\<ldots\>,n-1|}>|)>=<around*|{|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|0|)>,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>,\<bbb-C\>><around*|(|n-1|)>|}>=<around*|{|0,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>-1|}>
+      i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|<around*|{|1,\<ldots\>,n|}>|)>=<around*|{|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|1|)>,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>,\<rightarrow\>\<bbb-C\>><around*|(|n|)>|}>\<equallim\><rsub|<text|[theorem:
+      <reference|complex embedding>>><around*|{|1,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>|}>
     </equation*>
 
     so that\ 
 
     <\equation*>
-      <around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsub|\|<around*|{|0,\<ldots\>,n-1|}>>:<around*|{|0,\<ldots\>,n-1|}>\<rightarrow\><around*|{|0,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>-1|}>
+      <around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsub|\|<around*|{|1,\<ldots\>,n|}>>:<around*|{|1,\<ldots\>,n|}>\<rightarrow\><around*|{|1,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>><around*|(|n|)>|}>
     </equation*>
 
     \ is a bijection.
@@ -12866,95 +12867,70 @@
 
   <\theorem>
     <label|complex finite set condition>We have the following
-    characterization of a finite sets\ 
+    characterization of finite sets
 
-    <\equation*>
-      I<text| is finite<math|\<Leftrightarrow\>I> is empty or there exists a
-      <with|font-series|bold|unique> >k\<in\>\<bbb-N\><rsub|\<bbb-C\>><text|
-      such that <math|<around*|{|0,\<ldots\>,k-1|}>\<approx\>I>>
-    </equation*>
-  </theorem>
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|I<text| is finite
+      >>|<cell|\<Leftrightarrow\>>|<cell|<text|there exists a unique
+      <math|k\<in\>\<bbb-N\><rsub|\<bbb-C\>,0><text| such that
+      ><around*|{|1,\<ldots\>,k|}>\<approx\>I>>>>>>
+    </eqnarray*>
 
-  <\proof>
-    \ 
-
-    <\description>
-      <item*|<math|\<Rightarrow\>>>By definition <math|I> is finite if and
-      only <math|\<exists\>n\<in\>\<bbb-N\><rsub|0>> such
-      <math|n\<approx\>I>. For <math|n> we have as <math|0\<leqslant\>n>
-      either:
+    <\proof>
+      \ 
 
       <\description>
-        <item*|<math|n=0>>Then as <math|0\<equallim\><rsub|<text|[definition:
-        <reference|natural numbers examples>]>>\<varnothing\>> it follows
-        that <math|I=\<beta\><around*|(|\<emptyset\>|)>=\<emptyset\>>
-
-        <item*|<math|0\<less\>n>>Then as <math|n\<equallim\><rsub|<text|[theorem:
-        <reference|natural numbers are segments>]>>S<rsub|n>=<around*|{|i\<in\>\<bbb-N\><rsub|0>\|i\<less\>n|}>\<equallim\><rsub|<text|[theorem:
-        <reference|natural numbers n\<less\>m\<less\>=\<gtr\>n\<less\>=m-1>]>><around*|{|0,\<ldots\>,n-1|}>>
-        we have
-
-        <\equation>
-          <label|eq 10.63.054><around*|{|0,\<ldots\>,n-1|}>\<approx\>I
-        </equation>
-
-        Using [lemma: <reference|complex finite lemma>] we have
-        <math|<around*|{|0,\<ldots\>,n-1|}>\<approx\><around*|{|0,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>-1|}>=<around*|{|0,\<ldots\>,k-1|}>>
-        where <math|k=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>\<in\>\<bbb-N\><rsub|\<bbb-C\>>>.
-        By [theorem: <reference|equipotence equivalence relation>] and [eq:
-        <reference|eq 10.63.054>] it follows then that
+        <item*|<math|\<Rightarrow\>>>As <math|I> is finite we have by
+        [theorem: <reference|finite set alternative definition>] that
+        <math|\<exists\>n\<in\>\<bbb-N\><rsub|0>> such that
+        <math|<around*|{|1,\<ldots\>,n|}>\<approx\>I>. Hence if we take
+        <math|k=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>\<in\>\<bbb-N\><rsub|\<bbb-C\>,0>>
+        we have by [lemma: <reference|complex finite lemma>] that
 
         <\equation*>
-          <around*|{|0,\<ldots\>,k-1|}>\<approx\>I
+          <around*|{|1,\<ldots\>,n|}>\<approx\><around*|{|1,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>|}>=<around*|{|1,\<ldots\>,k|}>
         </equation*>
 
-        This proves existence, now for uniqueness. Assume that there is a
-        <math|l\<in\>\<bbb-N\><rsub|\<bbb-C\>>> such that
-        <math|<around*|{|0,\<ldots\>,l-1|}>\<approx\>I>. Take
-        <math|m=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsup|-1><around*|(|l|)>\<in\>\<bbb-N\>>
-        then we have
+        proving that
 
         <\equation*>
-          m\<equallim\><rsub|<text|[theorem: <reference|natural numbers are
-          segments>]>>S<rsub|m>=<around*|{|i\<in\>\<bbb-N\><rsub|0>\|i\<less\>m|}>\<equallim\><rsub|<text|[theorem:
-          <reference|natural numbers n\<less\>m\<less\>=\<gtr\>n\<less\>=m-1>]>><around*|{|0,\<ldots\>,m-1|}>
+          <around*|{|1,\<ldots\>,k|}>\<approx\>I
         </equation*>
 
-        Using [lemma: <reference|complex finite lemma>] we have that
-        <math|<around*|{|0,\<ldots\>,m-1|}>\<approx\><around*|{|0,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|m|)>-1|}>=<around*|{|0,\<ldots\>,l-1|}>>
-        proving that <math|m\<approx\><around*|{|0,\<ldots\>,l-1|}>> which as
-        <math|<around*|{|0,\<ldots\>,l-1|}>\<approx\>I> proves by \ [theorem:
-        <reference|equipotence equivalence relation>] that
-        <math|m\<approx\>I>. So we have that
-        <math|n\<approx\>I\<wedge\>m\<approx\>I\<Rightarrow\>n\<approx\>m>
-        which by [theorem: <reference|finite uniqueness of size>] results in
-        <math|n=m>. Finally we have <math|k=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>\<equallim\><rsub|n=m>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|m|)>=l>
-        proving <math|k=l<infix-and>uniqueness.>
+        Now for uniqueness, assume that there is another
+        <math|l\<in\>\<bbb-N\><rsub|\<bbb-C\>,0>> such that
+        <math|<around*|{|1,\<ldots\>,l|}>\<approx\>I>. Take then
+        <math|m=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsup|-1><around*|(|l|)>>
+        we have by [lemma: <reference|complex finite lemma>] that
+
+        <\equation*>
+          <around*|{|1,\<ldots\>,m|}>\<approx\><around*|{|1,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|m|)>|}>=<around*|{|1,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsup|-1><around*|(|l|)>|)>|}>=<around*|{|1,\<ldots\>,l|}>\<approx\>I
+        </equation*>
+
+        so that <math|<around*|{|1,\<ldots\>,n|}>\<approx\><around*|{|1,\<ldots\>,m|}>>,
+        which, as by [theorem: <reference|finite set alternate definition
+        lemma>] <math|<around*|{|1,\<ldots\>,n|}>\<approx\>n\<wedge\><around*|{|1,\<ldots\>,m|}>\<approx\>m>,
+        gives that <math|n\<approx\>m>. So that
+        <math|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsup|-1><around*|(|k|)>=n=m=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsup|-1><around*|(|l|)>>
+        giving as <math|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsup|-1>>
+        is a bijection that <math|k=l>.
+
+        <item*|<math|\<Leftarrow\>>>Let <math|k\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>>
+        be such that <math|I\<approx\><around*|{|1,\<ldots\>,k|}>> then if we
+        define <math|n\<in\>\<bbb-N\><rsub|0>> by
+        <math|n=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsup|-1><around*|(|k|)>>
+        we have by [lemma: <reference|complex finite lemma>] that
+
+        <\equation*>
+          <around*|{|1,\<ldots\>,n|}>\<approx\><around*|{|1,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>|}>=<around*|{|1,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsup|-1><around*|(|k|)>|)>|}>=<around*|{|1,\<ldots\>,k|}>\<approx\>I
+        </equation*>
+
+        proving that <math|<around*|{|1,\<ldots\>,n|}>\<approx\>I>, hence by
+        [theorem: <reference|finite set alternative definition>] <math|I> is
+        finite.
       </description>
-
-      <item*|<math|\<Leftarrow\>>>If <math|I=\<varnothing\>> then by
-      [theorem: <reference|empty set is finite>] <math|I> is finite. On the
-      other hand assume there exist a <math|k\<in\>\<bbb-N\><rsub|\<bbb-C\>>>
-      such that <math|<around*|{|0,\<ldots\>,k-1|}>\<approx\>I>. Take
-      <math|n=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsup|-1><around*|(|k|)>\<in\>\<bbb-N\>>
-      then we have by [lemma: <reference|complex finite lemma>] that\ 
-
-      <\equation*>
-        <around*|{|0,\<ldots\>,n-1|}>\<approx\><around*|{|0,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>-1|}>=<around*|{|0,\<ldots\>,k-1|}>
-      </equation*>
-
-      As <math|n\<equallim\><rsub|<text|[theorem: <reference|natural numbers
-      are segments>]>>S<rsub|n>=<around*|{|i\<in\>\<bbb-N\><rsub|0>\|i\<less\>n|}>\<equallim\><rsub|<text|[theorem:
-      <reference|natural numbers n\<less\>m\<less\>=\<gtr\>n\<less\>=m-1>]>><around*|{|0,\<ldots\>,n-1|}>>
-      we have <math|n\<approx\><around*|{|0,\<ldots\>,k-1|}>> and as
-      <math|<around*|{|0,\<ldots\>,k-1|}>\<approx\>I> we have by [theorem:
-      <reference|equipotence equivalence relation>] <math|>that
-      <math|n\<approx\>I> proving that <math|I> is finite.
-    </description>
-  </proof>
-
-  We express now the cardinality of sets using
-  <math|\<bbb-N\><rsub|0,\<bbb-C\>>> instead of <math|\<bbb-N\><rsub|0>>
+    </proof>
+  </theorem>
 
   <\definition>
     <label|complex cardinality><index|<math|card<around*|(|I|)>>>Let <math|I>
@@ -12973,56 +12949,31 @@
     we have that\ 
 
     <\equation*>
-      card<around*|(|I|)>=<choice|<tformat|<table|<row|<cell|0<text| if
-      <math|I=\<varnothing\>>>>>|<row|<cell|k<text| where <math|k<text| is
-      the unique <math|k\<in\>\<bbb-N\><rsub|\<bbb-C\>><text| such that
-      ><around*|{|0,\<ldots\>,k-1|}>\<approx\>I<text| if
-      >I\<neq\>\<varnothing\>>>>>>>>>>
+      card<around*|(|I|)><text| is the unique >k<text| such that
+      ><around*|{|1,\<ldots\>,k|}>\<approx\>I
     </equation*>
+
+    In particular if <math|I=\<varnothing\>> then
+    <math|card<around*|(|I|)>=0> [as <math|<around*|{|1,\<ldots\>,0|}>=\<varnothing\>>]
   </theorem>
 
   <\proof>
-    For <math|I> finite we have either:
+    By definition we have that <math|#<around*|(|I|)>=n> where
+    <math|n\<approx\>I> then
 
-    <\description>
-      <item*|<math|I=\<varnothing\>>>Then as
-      <math|card<around*|(|I|)>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|I|)>|)>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|\<varnothing\>|)>|)>\<equallim\><rsub|<text|[theorem:
-      <reference|cardinality of the empty set is
-      0>]>>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|0|)>=0>
+    <\equation*>
+      card<around*|(|I|)>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|I|)>|)>=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>
+    </equation*>
 
-      <item*|<math|I\<neq\>\<varnothing\>>>Then by [theorem:
-      <reference|cardinality of the empty set is 0>]
-      <math|#<around*|(|I|)>\<neq\>0> so that
-      <math|0\<less\>#<around*|(|I|)>>. Take <math|n=#<around*|(|I|)>> then
-      <math|n\<approx\>I>, further\ 
+    As by [theorem: <reference|finite set alternate definition lemma>] we
+    have that <math|<around*|{|1,\<ldots\>,n|}>\<approx\>n>, further by
+    [lemma: <reference|complex finite lemma>]\ 
 
-      <\equation*>
-        n\<equallim\><rsub|<text|[theorem: <reference|natural numbers are
-        segments>]>>S<rsub|n>=<around*|{|i\<in\>\<bbb-N\><rsub|0>\|i\<less\>n|}>\<equallim\><rsub|<text|[theorem:
-        <reference|natural numbers n\<less\>m\<less\>=\<gtr\>n\<less\>=m-1>]>><around*|{|0,\<ldots\>,n-1|}>
-      </equation*>
+    <\equation*>
+      <around*|{|1,\<ldots\>,n|}>\<approx\><around*|{|1,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>|}>=<around*|{|1,\<ldots\>,card<around*|(|I|)>|}>
+    </equation*>
 
-      Using [lemma: <reference|complex finite lemma>] we have
-
-      <\equation*>
-        <around*|{|0,\<ldots\>,n-1|}>\<approx\><around*|{|0,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>-1|}>=<around*|{|0,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|I|)>-1|)>|}>=<around*|{|0,\<ldots\>card<around*|(|I|)>-1|}>
-      </equation*>
-
-      proving that <math|I\<approx\><around*|{|0,\<ldots\>,card<around*|(|I|)>-1|}>>.
-    </description>
-  </proof>
-
-  <\corollary>
-    <label|complex cardinality of {0,..,n}>If
-    <math|n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>> then
-    <math|card<around*|(|<around*|{|0,\<ldots\>,n|}>|)>=n+1>
-  </corollary>
-
-  <\proof>
-    If <math|n\<in\>\<bbb-N\><rsub|0>> then
-    <math|\<varnothing\>\<neq\><around*|{|0,\<ldots\>,<around*|(|n+1|)>-1|}>=<around*|{|0,\<ldots\>,n|}>\<approx\><around*|{|0,\<ldots\>.,n|}>>
-    so that by [theorem: <reference|complex cardinality alternative>] we have
-    <math|card<around*|(|<around*|{|0,\<ldots\>,n|}>|)>=n+1>.
+    so that <math|I\<approx\><around*|{|1,\<ldots\>,card<around*|(|I|)>|}>>.
   </proof>
 
   <\theorem>
@@ -13062,6 +13013,285 @@
     </proof>
   </theorem>
 
+  <subsection|Extended real numbers>
+
+  Finally we define the set of extended real numbers which usefull if we have
+  to work with numbers that are bigger or lower then every real number. This
+  will be usefull later for limits, dimensions.\ 
+
+  <\lemma>
+    <label|extended reals eistence>There exists at least two different
+    elements that are not element of <math|\<bbb-R\><rsub|\<bbb-C\>>>\ 
+  </lemma>
+
+  <\proof>
+    Using [definitions: <reference|real Dedekind's cut>, <reference|real real
+    numbers>] it follows that <math|\<varnothing\>\<nin\>\<bbb-R\>> and
+    <math|\<bbb-Q\>\<nin\>\<bbb-R\>> and as <math|0\<in\>\<bbb-Q\>> we have
+    <math|\<varnothing\>\<neq\>\<bbb-Q\>> So that
+    <math|<around*|(|\<varnothing\>,0|)>\<nin\>\<bbb-R\><rsub|\<bbb-C\>>> and
+    <math|<around*|(|\<bbb-Q\>,0|)>\<nin\>\<bbb-R\><rsub|\<bbb-C\>>> and
+    <math|<around*|(|\<varnothing\>,0|)>\<neq\><around*|(|\<bbb-Q\>,0|)>>
+  </proof>
+
+  <\definition>
+    <label|extended reals>The set of extended real numbers
+    <math|<wide|\<bbb-R\>|\<wide-bar\>>> is defined as\ 
+
+    <\equation*>
+      <wide|\<bbb-R\>|\<wide-bar\>>=\<bbb-R\><rsub|\<bbb-C\>><big|cup><around*|{|\<infty\>,-\<infty\>|}>
+    </equation*>
+
+    where <math|\<infty\>,-\<infty\>\<nin\>\<bbb-R\><rsub|\<bbb-C\>>> and
+    <math|\<infty\>\<neq\>-\<infty\>><math|>
+  </definition>
+
+  <\definition>
+    <label|extended reals finite real number>A
+    <math|x\<in\><wide|\<bbb-R\>|\<wide-bar\>>> is a called a finite real
+    number if <math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>> so
+    <math|\<bbb-R\><rsub|\<bbb-C\>>> is the set of finite real numbers.
+  </definition>
+
+  <\definition>
+    <math|<wide|\<leqslant\>|\<wide-bar\>>\<in\><wide|\<bbb-R\>|\<wide-bar\>>\<times\><wide|\<bbb-R\>|\<wide-bar\>>>
+    is defined as follows
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|{|<around*|(|-\<infty\>,-\<infty\>|)>,<around*|(|-\<infty\>,\<infty\>|)>,<around*|(|\<infty\>,\<infty\>|)>|}>>|<cell|<big|cup>>|<cell|<around*|{|<around*|(|x,\<infty\>|)>\|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>|}>>>|<row|<cell|>|<cell|<big|cup>>|<cell|<around*|{|<around*|(|-\<infty\>,x|)>\|x\<in\>\<bbb-R\><rsub|C>|}>>>|<row|<cell|>|<cell|<big|cup>>|<cell|<around*|{|<around*|(|x,y|)>\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<times\>\<bbb-R\><rsub|\<bbb-C\>>\|x\<leqslant\>y|}>>>>>
+    </eqnarray*>
+  </definition>
+
+  <\note>
+    As <math|<around*|{|-\<infty\>,\<infty\>|}><big|cap>\<bbb-R\>=\<emptyset\>>
+    and <math|-\<infty\>\<neq\>\<infty\>> we have
+    <math|\<forall\>x\<in\>\<bbb-R\><rsub|\<bbb-C\>>> we have
+    <math|-\<infty\>\<less\>x> and <math|x\<less\>\<infty\>>
+  </note>
+
+  <\theorem>
+    <math|<around*|\<langle\>|<wide|\<bbb-R\>|\<wide-bar\>>,<wide|\<leqslant\>|\<wide-bar\>>|\<rangle\>>>
+    is fully ordered.
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|reflexitivity>The following cases occurs for
+      <math|x\<in\><wide|\<bbb-R\>|\<wide-bar\>>>
+
+      <\description>
+        <item*|<math|x=\<infty\>>>then by definition
+        <math|x<wide|\<leqslant\>|\<wide-bar\>>x>
+
+        <item*|<math|x=-\<infty\>>>then by definition
+        <math|x<wide|\<leqslant\>|\<wide-bar\>>x>
+
+        <item*|<math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>>>then as
+        <math|x\<leqslant\><rsub|\<bbb-R\>>x\<Rightarrow\>x<wide|\<leqslant\>|\<wide-bar\>>x>
+      </description>
+
+      proving reflexitivity.
+
+      <item*|anti-symmetry>Let <math|x,y\<in\><wide|\<bbb-R\>|\<wide-bar\>>>
+      with <math|x<wide|\<leqslant\>|\<wide-bar\>>y\<wedge\>y<wide|\<leqslant\>|\<wide-bar\>>x>
+      then the following cases must be considered for
+      <math|x,y\<in\><wide|\<bbb-R\>|\<wide-bar\>>>:\ 
+
+      <\description>
+        <item*|<math|x=\<infty\>\<wedge\>y=\<infty\>>>then <math|x=y>
+
+        <item*|<math|x=-\<infty\>\<wedge\>y=\<infty\>>>then as by the
+        definition <math|\<neg\><around*|(|y<wide|\<leqslant\>|\<wide-bar\>>x|)>>
+        this case will not apply.
+
+        <item*|<math|x\<in\>\<bbb-R\>\<wedge\>y=\<infty\>>>then as by
+        definition <math|y\<nleqslant\>x> this case does not apply
+
+        <item*|<math|x=\<infty\>\<wedge\>y=-\<infty\>>>then as by definition
+        \ <math|\<neg\><around*|(|x<wide|\<leqslant\>|\<wide-bar\>>y|)>> this
+        case does not apply
+
+        <item*|<math|x=-\<infty\>\<wedge\>y=-\<infty\>>>then <math|x=y>
+
+        <item*|<math|x\<in\>\<bbb-R\>\<wedge\>y=-\<infty\>>>then asby
+        definition <math|\<neg\><around*|(|x<wide|\<leqslant\>|\<wide-bar\>>y|)>>
+        the case does not apply
+
+        <item*|<math|x=\<infty\>\<wedge\>y\<in\>\<bbb-R\>>>then as by
+        definition <math|\<neg\><around*|(|x<wide|\<leqslant\>|\<wide-bar\>>y|)>>
+        this case does not apply
+
+        <item*|<math|x=-\<infty\>\<wedge\>y\<in\>\<bbb-R\>>>then as by
+        definiton <math|\<neg\><around*|(|y<wide|\<leqslant\>|\<wide-bar\>>x|)>>
+        this case does not apply
+
+        <item*|<math|x\<in\>\<bbb-R\>\<wedge\>y\<in\>\<bbb-R\>>>then by
+        defintion <math|x\<leqslant\>y> and <math|y\<leqslant\>x> from which
+        it follows that <math|x=y>
+      </description>
+
+      so in all the cases where <math|x<wide|\<leqslant\>|\<wide-bar\>>y\<wedge\>y<wide|\<leqslant\>|\<wide-bar\>>x>
+      we have <math|x=y>
+
+      <item*|transitivity>Let <math|x,y,z\<in\><wide|\<bbb-R\>|\<wide-bar\>>>
+      with <math|x<wide|\<leqslant\>|\<wide-bar\>>y\<wedge\>y<wide|\<leqslant\>|\<wide-bar\>>z>
+      then the following cases must be considered for
+      <math|x,y,z\<in\><wide|\<bbb-R\>|\<wide-bar\>>>:
+
+      <\description>
+        <item*|<math|x=\<infty\>\<wedge\>y=\<infty\>\<wedge\>z=\<infty\>>>then
+        <math|x<wide|\<leqslant\>|\<wide-bar\>>z>
+
+        <item*|<math|x=-\<infty\>\<wedge\>y=\<infty\>\<wedge\>z=\<infty\>>>then
+        <math|x<wide|\<leqslant\>|\<wide-bar\>>z>
+
+        <item*|<math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>y=\<infty\>\<wedge\>z=\<infty\>>>then
+        <math|x<wide|\<leqslant\>|\<wide-bar\>>z>
+
+        <item*|<math|x=\<infty\>\<wedge\>y=-\<infty\>\<wedge\>z=\<infty\>>>then
+        as <math|\<neg\><around*|(|x<wide|\<leqslant\>|\<wide-bar\>>y|)>>
+        this cases does not count
+
+        <item*|<math|x=-\<infty\>\<wedge\>y=-\<infty\>\<wedge\>z=\<infty\>>>then
+        <math|x<wide|\<leqslant\>|\<wide-bar\>>z>
+
+        <item*|<math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>y=-\<infty\>\<wedge\>z=\<infty\>>>then
+        as <math|\<neg\><around*|(|x<wide|\<leqslant\>|\<wide-bar\>>y|)>>
+        this case does not count
+
+        <item*|<math|x=\<infty\>\<wedge\>y\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>z=\<infty\>>>then
+        as <math|\<neg\><around*|(|x<wide|\<leqslant\>|\<wide-bar\>>y|)>>
+        this case does not count
+
+        <item*|<math|x=-\<infty\>\<wedge\>y\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>z=\<infty\>>>then
+        <math|x<wide|\<leqslant\>|\<wide-bar\>>z>
+
+        <item*|<math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>y\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>z=\<infty\>>>then
+        <math|x<wide|\<leqslant\>|\<wide-bar\>>z>
+
+        <item*|<math|x=\<infty\>\<wedge\>y=\<infty\>\<wedge\>z=-\<infty\>>>then
+        as <math|\<neg\><around*|(|y<wide|\<leqslant\>|\<wide-bar\>>x|)>>
+        this case does not count
+
+        <item*|<math|x=-\<infty\>\<wedge\>y=\<infty\>\<wedge\>z=-\<infty\>>>then
+        as <math|\<neg\><around*|(|y<wide|\<leqslant\>|\<wide-bar\>>x|)>>
+        this case does not count
+
+        <item*|<math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>y=\<infty\>\<wedge\>z=-\<infty\>>>then
+        as <math|\<neg\><around*|(|y<wide|\<leqslant\>|\<wide-bar\>>x|)>>
+        this case does not count
+
+        <item*|<math|x=\<infty\>\<wedge\>y=-\<infty\>\<wedge\>z=-\<infty\>>>then
+        as <math|\<neg\><around*|(|x<wide|\<leqslant\>|\<wide-bar\>>y|)>>
+        this case does not count
+
+        <item*|<math|x=-\<infty\>\<wedge\>y=-\<infty\>\<wedge\>z=-\<infty\>>>then
+        <math|x<wide|\<leqslant\>|\<wide-bar\>>z>
+
+        <item*|<math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>y=-\<infty\>\<wedge\>z=-\<infty\>>>then
+        as <math|\<neg\><around*|(|x<wide|\<leqslant\>|\<wide-bar\>>y|)>>
+        this case does not count
+
+        <item*|<math|x=\<infty\>\<wedge\>y\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>z=-\<infty\>>>then
+        as <math|\<neg\><around*|(|y<wide|\<leqslant\>|\<wide-bar\>>z|)>>
+        this case does not count
+
+        <item*|<math|x=-\<infty\>\<wedge\>y\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>z=-\<infty\>>>then
+        as <math|\<neg\><around*|(|y<wide|\<leqslant\>|\<wide-bar\>>z|)>>
+        this case does not count
+
+        <item*|<math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>y\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>z=-\<infty\>>>then
+        as <math|\<neg\><around*|(|y<wide|\<leqslant\>|\<wide-bar\>>z|)>>
+        this case does not count
+
+        <item*|<math|x=\<infty\>\<wedge\>y=\<infty\>\<wedge\>z\<in\>\<bbb-R\><rsub|\<bbb-C\>>>>then
+        as <math|\<neg\><around*|(|y<wide|\<leqslant\>|\<wide-bar\>>z|)>>
+        this case does not count
+
+        <item*|<math|x=-\<infty\>\<wedge\>y=\<infty\>\<wedge\>z\<in\>\<bbb-R\><rsub|\<bbb-C\>>>>then
+        as <math|\<neg\><around*|(|y<wide|\<leqslant\>|\<wide-bar\>>z|)>>
+        this case does not count
+
+        <item*|<math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>y=\<infty\>\<wedge\>z\<in\>\<bbb-R\><rsub|\<bbb-C\>>>>then
+        as \<neg\><around*|(|y<wide|\<leqslant\>|\<wide-bar\>>z|)> this case
+        does not count
+
+        <item*|<math|x=\<infty\>\<wedge\>y=-\<infty\>\<wedge\>z\<in\>\<bbb-R\><rsub|\<bbb-C\>>>>then
+        as <math|\<neg\><around*|(|x<wide|\<leqslant\>|\<wide-bar\>>y|)>>
+        this case does not count
+
+        <item*|<math|x-\<infty\>\<wedge\>y=-\<infty\>\<wedge\>z\<in\>\<bbb-R\><rsub|\<bbb-C\>>>>then
+        <math|x<wide|\<leqslant\>|\<wide-bar\>>z>
+
+        <item*|<math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>y=-\<infty\>\<wedge\>z\<in\>\<bbb-R\><rsub|\<bbb-C\>>>>then
+        as \<neg\><around*|(|x<wide|\<leqslant\>|\<wide-bar\>>y|)> this case
+        does not count
+
+        <item*|<math|x=\<infty\>\<wedge\>y\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>z\<in\>\<bbb-R\><rsub|\<bbb-C\>>>>then
+        as \<neg\><around*|(|x<wide|\<leqslant\>|\<wide-bar\>>y|)> this case
+        does not count
+
+        <item*|<math|x=-\<infty\>\<wedge\>y\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>z\<in\>\<bbb-R\><rsub|\<bbb-C\>>>>then
+        <math|x<wide|\<leqslant\>|\<wide-bar\>>z>
+
+        <item*|<math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>y\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>z\<in\>\<bbb-R\><rsub|\<bbb-C\>>>>then
+        <math|x<wide|\<leqslant\>|\<wide-bar\>>z>
+      </description>
+
+      so in all cases that count we have <math|x<wide|\<leqslant\>|\<wide-bar\>>z>
+
+      <item*|fully-ordered>The following cases must be considered for
+      <math|x,y\<in\><wide|\<bbb-R\>|\<wide-bar\>>>:\ 
+
+      <\description>
+        <item*|<math|x=\<infty\>\<wedge\>y=\<infty\>>>then
+        <math|x<wide|\<leqslant\>|\<wide-bar\>>y>
+
+        <item*|<math|x=-\<infty\>\<wedge\>x=\<infty\>>>then
+        <math|x<wide|\<leqslant\>|\<wide-bar\>>y>
+
+        <item*|<math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>y=\<infty\>>>then
+        <math|x<wide|\<leqslant\>|\<wide-bar\>>y>
+
+        <item*|<math|x=\<infty\>\<wedge\>y=-\<infty\>>>then
+        <math|y<wide|\<leqslant\>|\<wide-bar\>>x>
+
+        <item*|<math|x=-\<infty\>\<wedge\>y=-\<infty\>>>then
+        <math|x<wide|\<leqslant\>|\<wide-bar\>>y>
+
+        <item*|<math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>y=-\<infty\>>>then
+        <math|y<wide|\<leqslant\>|\<wide-bar\>>x>
+
+        <item*|<math|x=\<infty\>\<wedge\>y\<in\>\<bbb-R\><rsub|\<bbb-C\>>>>then
+        <math|y<wide|\<leqslant\>|\<wide-bar\>>x>
+
+        <item*|<math|x=-\<infty\>\<wedge\>y\<in\>\<bbb-R\><rsub|\<bbb-C\>>>>then
+        <math|x<wide|\<leqslant\>|\<wide-bar\>>y>
+
+        <item*|<math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>y<rsub|\<bbb-C\>>\<in\>\<bbb-R\>>>then
+        either <math|x\<leqslant\>y\<Rightarrow\>x<wide|\<leqslant\>|\<wide-bar\>>y>
+        or <math|y\<leqslant\>x\<Rightarrow\>y<wide|\<leqslant\>|\<wide-bar\>>x>
+      </description>
+
+      so in all possible cases we have either
+      <math|x<wide|\<leqslant\>|\<wide-bar\>>y> or
+      <math|y<wide|\<leqslant\>|\<wide-bar\>>x>
+    </description>
+  </proof>
+
+  <\notation>
+    From now on, to avoid excessive nottion, we use <math|\<leqslant\>> to
+    note <math|<wide|\<leqslant\>|\<wide-bar\>>>.
+  </notation>
+
+  \;
+
+  <subsection|Conventions >
+
+  \;
+
   Now we are finished with the tower of different types of numbers. From now
   on for the rest of this book we work only with
   <math|\<bbb-N\><rsub|0,\<bbb-C\>>>, <math|\<bbb-Z\><rsub|\<bbb-C\>>>,
@@ -13076,7 +13306,8 @@
     Number>|<cell|\<bbb-N\><rsub|0>>|<cell|\<bbb-N\><rsub|0,\<bbb-C\>>>>|<row|<cell|Positive
     Natural Numbers>|<cell|\<bbb-N\>>|<cell|\<bbb-N\><rsub|0,\<bbb-C\>>\\<around*|{|0|}>>>|<row|<cell|Integers>|<cell|\<bbb-Z\>>|<cell|\<bbb-Z\><rsub|\<bbb-C\>>>>|<row|<cell|Rational
     Numbers>|<cell|\<bbb-Q\>>|<cell|\<bbb-Q\><rsub|\<bbb-C\>>>>|<row|<cell|Real
-    Numbers>|<cell|\<bbb-R\>>|<cell|\<bbb-R\><rsub|\<bbb-C\>>>>|<row|<cell|Non
+    Numbers>|<cell|\<bbb-R\>>|<cell|\<bbb-R\><rsub|\<bbb-C\>>>>|<row|<cell|Extended
+    Real Numbers>|<cell|<wide|\<bbb-R\>|\<wide-bar\>>>|<cell|<wide|\<bbb-R\>|\<wide-bar\>>>>|<row|<cell|Non
     negative real numbers>|<cell|\<bbb-R\><rsup|+><rsub|0>>|<cell|<around*|{|x\<in\>\<bbb-R\>\|0\<leqslant\>x|}>>>|<row|<cell|Positive
     real numbers>|<cell|\<bbb-R\><rsup|+>>|<cell|<around*|{|x\<in\>\<bbb-R\>\|0\<less\>x|}>>>|<row|<cell|Non
     positve numbers>|<cell|\<bbb-R\><rsup|-><rsub|0>>|<cell|<around*|{|x\<in\>\<bbb-R\>\|x\<leqslant\>0|}>>>|<row|<cell|Negative
@@ -13120,7 +13351,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|6>
-    <associate|page-first|187>
+    <associate|page-first|189>
     <associate|project-flag|false>
     <associate|section-nr|3>
     <associate|subsection-nr|0>
@@ -13180,6 +13411,8 @@
     <associate|auto-52|<tuple|<with|mode|<quote|math>|<around*|\||z|\|>>|?>>
     <associate|auto-53|<tuple|10.5.3|?>>
     <associate|auto-54|<tuple|<with|mode|<quote|math>|card<around*|(|I|)>>|?>>
+    <associate|auto-55|<tuple|10.5.4|?>>
+    <associate|auto-56|<tuple|10.5.5|?>>
     <associate|auto-6|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>>|?>>
     <associate|auto-7|<tuple|absolute value|?>>
     <associate|auto-8|<tuple|<with|mode|<quote|math>|<around*|\||x|\|>>|?>>
@@ -13201,7 +13434,7 @@
     <associate|complex cardinality|<tuple|10.73|?>>
     <associate|complex cardinality alternative|<tuple|10.74|?>>
     <associate|complex cardinality of {0,..,n}|<tuple|10.75|?>>
-    <associate|complex cardinality properties|<tuple|10.76|?>>
+    <associate|complex cardinality properties|<tuple|10.75|?>>
     <associate|complex conjugate|<tuple|10.67|?>>
     <associate|complex conjugate properties|<tuple|10.68|?>>
     <associate|complex definition by recursion (1)|<tuple|10.37|?>>
@@ -13458,6 +13691,10 @@
     <associate|eq 9.82.036|<tuple|9.82|?>>
     <associate|eq 9.89.047|<tuple|9.83|?>>
     <associate|eq 9.90.047|<tuple|9.84|?>>
+    <associate|extended real|<tuple|10.77|?>>
+    <associate|extended reals|<tuple|10.77|?>>
+    <associate|extended reals eistence|<tuple|10.76|?>>
+    <associate|extended reals finite real number|<tuple|10.78|?>>
     <associate|integeres order|<tuple|7.21|?>>
     <associate|integers|<tuple|7.2|?>>
     <associate|integers 0\<less\>1 and 0\<less\>2|<tuple|7.25|?>>
