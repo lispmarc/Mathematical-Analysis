@@ -1858,6 +1858,110 @@
     \;
   </proof>
 
+  <\theorem>
+    <label|sum in A^n>Let <math|<around*|\<langle\>|A,+|\<rangle\>>> be a
+    Abelian semi-group, <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|\<langle\>|A<rsup|n>,+|\<rangle\>>> the semi-group based
+    on <math|<around*|\<langle\>|A,+|\<rangle\>>> [see theorem:
+    <reference|group finite power>] then we have:
+
+    <\enumerate>
+      <item>Let <math|k,l\<in\>\<bbb-N\><rsub|0>> with <math|k\<leqslant\>l>
+      and <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,l|}>>\<subseteq\>A<rsup|n>>
+      then <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have\ 
+
+      <\equation*>
+        <around*|(|<big|sum><rsub|j=k><rsup|l>x<rsub|j>|)><rsub|i>=<big|sum><rsub|j=k><rsup|l><around*|(|x<rsub|j>|)><rsub|i>
+      </equation*>
+
+      <item>Let <math|J> be a finite set and
+      <math|<around*|{|x<rsub|j>|}><rsub|j\<in\>J>\<subseteq\>A<rsup|n>> then
+      for <math|i\<in\><around*|{|1,\<ldots\>,n|}>> we have
+      <math|<around*|(|<big|sum><rsub|j\<in\>J>x<rsub|j>|)><rsub|i>=<big|sum><rsub|j\<in\>J><around*|(|x<rsub|j>|)><rsub|i>>.
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>We use induction to prove this fro \ the case
+      <math|<big|sum><rsub|j=0><rsup|l>x<rsub|j>>, so define
+
+      <\equation*>
+        S=<around*|{|l\<in\>\<bbb-N\><rsub|0>\|If
+        <around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,l|}>>\<subseteq\>A<rsup|n><text|
+        then ><around*|(|<big|sum><rsub|j=0><rsup|l>x<rsub|j>|)><rsub|i>=<big|sum><rsub|j=0><rsup|l><around*|(|x<rsub|j>|)><rsub|i>|}>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|0\<in\>S>>If <math|<around*|{|x<rsub|j>|}><rsub|j\<in\><around*|{|0|}>>\<subseteq\>A<rsup|n>>
+        then for <math|i\<in\><around*|{|1,\<ldots\>,n|}>> we have
+        <math|<around*|(|<big|sum><rsub|j=0><rsup|0>x<rsub|j>|)><rsub|i>=<around*|(|x<rsub|0>|)><rsub|i>=<big|sum><rsub|j=0><rsup|0><around*|(|x<rsub|j>|)><rsub|i>>
+        proving that <math|0\<in\>S>.
+
+        <item*|<math|l\<in\>S\<Rightarrow\>l+1\<in\>S>>Let
+        <math|<around*|{|x<rsub|j>|}><rsub|j\<in\><around*|{|0,\<ldots\>,l+1|}>>\<subseteq\>A<rsup|n>>
+        then we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|<big|sum><rsub|j=0><rsup|l+1>x<rsub|j>|)><rsub|i>>|<cell|=>|<cell|<around*|(|<around*|(|<big|sum><rsub|j=0><rsup|l>x<rsub|j>|)>+x<rsub|l+1>|)><rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|group finite power>]>>>|<cell|<around*|(|<big|sum><rsub|j=0><rsup|l>x<rsub|j>|)><rsub|i>+<around*|(|x<rsub|l+1>|)><rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|l\<in\>S>>|<cell|<around*|(|<big|sum><rsub|j=0><rsup|l><around*|(|x<rsub|j>|)><rsub|i>|)>+<around*|(|x<rsub|l+1>|)><rsub|j>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|j=0><rsup|l+1><around*|(|x<rsub|j>|)><rsub|i>>>>>
+        </eqnarray*>
+
+        proving that <math|l+1\<in\>S>.
+      </description>
+
+      By mathematical induction it follows then that\ 
+
+      <\equation>
+        <label|eq 11.10.064>\<forall\>l\<in\>\<bbb-N\><rsub|0><text| we have
+        for ><around*|{|x<rsub|j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,l|}>>\<subseteq\>A<rsup|n><text|
+        and <math|i\<in\><around*|{|1,\<ldots\>,n|}><text| that
+        ><around*|(|<big|sum><rsub|j=0><rsup|l>x<rsub|j>|)><rsub|i>=<big|sum><rsub|j=0><rsup|l><around*|(|x<rsub|j>|)><rsub|i>>>
+      </equation>
+
+      Let now <math|k,l\<in\>\<bbb-N\><rsub|0>> with <math|k\<leqslant\>l>
+      and <math|<around*|{|x<rsub|j>|}><rsub|j\<in\><around*|{|k,\<ldots\>,l|}>>\<subseteq\>A<rsup|n>>
+      then we have for <math|i\<in\><around*|{|1,\<ldots\>,n|}>>
+
+      <\equation*>
+        <around*|(|<big|sum><rsub|j=k><rsup|l>x<rsub|j>|)><rsub|i>=<around*|(|<big|sum><rsub|j=0><rsup|l-k>x<rsub|j+k>|)><rsub|i>\<equallim\><rsub|<text|[eq:
+        <reference|eq 11.10.064>]>><big|sum><rsub|j=0><rsup|l-k><around*|(|x<rsub|j+k>|)><rsub|i>=<big|sum><rsub|j=k><rsup|l><around*|(|x<rsub|j>|)><rsub|i>
+      </equation*>
+
+      <item>If <math|I> is a finite set, <math|i\<in\><around*|{|1,\<ldots\>,n|}>>
+      and <math|<around*|{|x<rsub|j>|}><rsub|j\<in\>I>\<subseteq\>I> then we
+      have for <math|I> either:
+
+      <\description>
+        <item*|<math|I=\<varnothing\>>>Then\ 
+
+        <\equation*>
+          <around*|(|<big|sum><rsub|j\<in\>I>x<rsub|j>|)><rsub|i>=<around*|(|<big|sum><rsub|j\<in\>\<varnothing\>>x<rsub|j>|)><rsub|i>=0<rsub|i>\<equallim\><rsub|<text|[theorem:
+          <reference|group finite power>]>><big|sum><rsub|j\<in\>\<varnothing\>><around*|(|x<rsub|j>|)><rsub|i>
+        </equation*>
+
+        <\equation*>
+          \;
+        </equation*>
+
+        <item*|<math|I\<neq\>\<varnothing\>>>Then there exists a
+        <math|l\<in\>\<bbb-N\><rsub|0>> and bijection
+        <math|\<beta\>:<around*|{|0,\<ldots\>,l|}>\<rightarrow\>I> then\ 
+
+        <\equation*>
+          <around*|(|<big|sum><rsub|j\<in\>I>x<rsub|j>|)><rsub|i>\<equallim\><rsub|def><around*|(|<big|sum><rsub|j=0><rsup|l>x<rsub|\<beta\><around*|(|j|)>>|)><rsub|i>\<equallim\><rsub|<text|[theorem:
+          <reference|eq 11.10.064>]>><big|sum><rsub|j=0><rsup|l><around*|(|x<rsub|\<beta\><around*|(|j|)>>|)><rsub|i>=<big|sum><rsub|j\<in\>I><around*|(|x<rsub|j>|)><rsub|i>
+        </equation*>
+      </description>
+    </enumerate>
+
+    \ 
+  </proof>
+
   <section|Vector spaces >
 
   <subsection|Definition >
@@ -2583,8 +2687,6 @@
       </eqnarray*>
     </enumerate>
   </proof>
-
-  TODO
 
   <\theorem>
     <label|vector spaces product of vector spaces>If
@@ -3617,6 +3719,47 @@
       <reference|eq 11.22.058>,<reference|eq 11.23.058>] and [theorem:
       <reference|sum over disjoint subsets
       (1)>]>>>|<cell|<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\><around*|{|supp<around*|(|<around*|{|x<rsub|k>|}><rsub|k\<in\>I<rsub|i>>|)>|}>>x<rsub|j>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|def>>|<cell|<big|sum><rsub|i\<in\>I><around*|(|<wide|<big|sum>|\<wide-bar\>><rsub|j\<in\>I<rsub|i>>x<rsub|j>|)>>>>>
+    </eqnarray*>
+  </proof>
+
+  <\theorem>
+    <label|sum in A^n (1)>Let <math|<around*|\<langle\>|A,+|\<rangle\>>> be a
+    Abelian semi-group, <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|\<langle\>|A<rsup|n>,+|\<rangle\>>> the semi-group based
+    on <math|<around*|\<langle\>|A,+|\<rangle\>>> [see theorem:
+    <reference|group finite power>] and <math|<around*|{|x<rsub|j>|}><rsub|j\<in\>I>\<subseteq\>A<rsup|n>>
+    a family with finite support then <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    we have
+
+    <\equation*>
+      <around*|(|<big|sum><rsub|j\<in\>I>x<rsub|j>|)><rsub|i>=<big|sum><rsub|j\<in\>I><around*|(|x<rsub|j>|)><rsub|i>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ Let <math|i\<in\><around*|{|1,\<ldots\>,n|}>> and take
+    <math|j\<in\>supp<around*|(|<around*|{|<around*|(|x<rsub|j>|)><rsub|i>|}><rsub|j\<in\>I>|)>>
+    then \ <math|<around*|(|x<rsub|j>|)><rsub|i>\<neq\>0> hence
+    <math|x<rsub|j>\<neq\>0> or <math|j\<in\>supp<around*|(|<around*|{|x<rsub|j>|}><rsub|j\<in\>I>|)>>
+    proving that
+
+    <\equation>
+      <label|eq 11.27.064>supp<around*|(|<around*|{|<around*|(|x<rsub|j>|)><rsub|i>|}><rsub|j\<in\>I>|)>\<subseteq\>supp<around*|(|<around*|{|x<rsub|j>|}><rsub|j\<in\>I>|)>
+    </equation>
+
+    which as <math|supp<around*|(|<around*|{|x<rsub|j>|}><rsub|j\<in\>I>|)>>
+    is finite proves that <math|supp<around*|(|<around*|{|<around*|(|x<rsub|j>|)><rsub|i>|}><rsub|j\<in\>I>|)>>
+    is finite, hence \ <math|<around*|{|<around*|(|x<rsub|j>|)><rsub|i>|}><rsub|j\<in\>I>>
+    has finite support so that <math|<big|sum><rsub|j\<in\>I><around*|(|x<rsub|j>|)><rsub|i>>
+    is well defined
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|<big|sum><rsub|j\<in\>I>x<rsub|j>|)><rsub|i>>|<cell|\<equallim\><rsub|def>>|<cell|<around*|(|<big|sum><rsub|j\<in\>supp<around*|(|<around*|{|x<rsub|j>|}><rsub|j\<in\>I>|)>>x<rsub|j>|)><rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum in A^n>]>>>|<cell|<big|sum><rsub|j\<in\>supp<around*|(|<around*|{|x<rsub|j>|}><rsub|j\<in\>I>|)>><around*|(|x<rsub|j>|)><rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|support over disjoint subsets>] and [eq: <reference|eq
+      11.27.064>]>>>|<cell|<big|sum><rsub|j\<in\>supp<around*|(|<around*|{|x<rsub|j>|}><rsub|j\<in\>I>|)>\\supp<around*|(|<around*|{|<around*|(|x<rsub|j>|)><rsub|i>|}><rsub|j\<in\>I>|)>><around*|(|x<rsub|j>|)><rsub|i>+<big|sum><rsub|j\<in\>supp<around*|(|<around*|{|<around*|(|x<rsub|j>|)><rsub|i>|}><rsub|j\<in\>I>|)>><around*|(|x<rsub|j>|)><rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|support of neutral element
+      (2)>]>>>|<cell|0+<big|sum><rsub|j\<in\>supp<around*|(|<around*|{|<around*|(|x<rsub|j>|)><rsub|i>|}><rsub|j\<in\>I>|)>><around*|(|x<rsub|j>|)><rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|def>>|<cell|<big|sum><rsub|j\<in\>I><around*|(|x<rsub|i>|)><rsub|i>>>>>
     </eqnarray*>
   </proof>
 
@@ -4825,8 +4968,6 @@
       <math|span<around*|(|<around*|{|w|}><rsub|w\<in\>W>|)>=span<around*|(|W|)>=V>
     </enumerate>
   </proof>
-
-  TODO
 
   <\theorem>
     <label|basis and bijection>Let <math|<around*|\<langle\>|V,+,*|\<rangle\>>>
@@ -6057,7 +6198,8 @@
 
   <\proof>
     First if <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1|}>>\<subseteq\>F>
-    is such that <math|<big|sum><rsub|i\<in\><around*|{|1|}>><around*|(|\<alpha\><rsub|i>\<cdot\>e<rsub|i>|)>=0>
+    [as <math|<around*|{|1|}>> it has finite support] is such that
+    <math|<big|sum><rsub|i\<in\><around*|{|1|}>><around*|(|\<alpha\><rsub|i>\<cdot\>e<rsub|i>|)>=0>
     then as <math|><math|<big|sum><rsub|i\<in\><around*|{|1|}>><around*|(|\<alpha\><rsub|i>\<cdot\>e<rsub|i>|)>=\<alpha\><rsub|1>\<cdot\>e<rsub|1>=\<alpha\><rsub|1>>
     it follows that <math|\<forall\>i\<in\><around*|{|1|}>> we have that
     <math|\<alpha\><rsub|i>=0> proving that\ 
@@ -6123,7 +6265,8 @@
 
   <\proof>
     Let <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,.2|}>>\<subseteq\>\<bbb-R\>>
-    be such that <math|<big|sum><rsub|i\<in\><around*|{|1,2|}>><around*|(|\<alpha\><rsub|i>\<cdot\>e<rsub|i>|)>=0>
+    [as <math|<around*|{|1,2|}>>i finite it has finite support] be such that
+    <math|<big|sum><rsub|i\<in\><around*|{|1,2|}>><around*|(|\<alpha\><rsub|i>\<cdot\>e<rsub|i>|)>=0>
     then we have\ 
 
     <\eqnarray*>
@@ -6194,7 +6337,8 @@
       <tformat|<table|<row|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|\<delta\><rsub|i,j>\<cdot\>\<alpha\><rsub|i>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
       <reference|support over disjoint subsets>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|j|}>><around*|(|\<delta\><rsub|i,j>\<cdot\>\<alpha\><rsub|i>|)>+<big|sum><rsub|i\<in\><around*|{|j|}>><around*|(|\<delta\><rsub|i,j>\<cdot\>\<alpha\><rsub|i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
       <reference|support over a singleton>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|j|}>><around*|(|\<delta\><rsub|i,j>\<cdot\>\<alpha\><rsub|i>|)>+\<delta\><rsub|j,j>\<cdot\>\<alpha\><rsub|j>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|j|}>><around*|(|\<delta\><rsub|i,j>\<cdot\>\<alpha\><rsub|i>|)>+\<alpha\><rsub|j>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|j|}>><around*|(|0\<cdot\>\<alpha\><rsub|i>|)>+\<alpha\><rsub|j>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|support of neutral element (2)>]>>>|<cell|\<Alpha\>-J>>>>
+      <reference|support of neutral element
+      (2)>]>>>|<cell|\<alpha\><rsub|j>>>>>
     </eqnarray*>
 
     \;
@@ -6207,7 +6351,7 @@
     > [see theorem: <reference|vector space power field>] define now
     <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F<rsup|n>>
     by <math|e<rsub|i>=<around*|(|<around*|(|e<rsub|i>|)><rsub|1>,\<ldots\>,<around*|(|e<rsub|i>|)><rsub|n>|)>>
-    wehre <math|<around*|(|e<rsub|i>|)><rsub|j>=\<delta\><rsub|i,j>> then
+    where <math|<around*|(|e<rsub|i>|)><rsub|j>=\<delta\><rsub|i,j>> then
 
     <\equation*>
       <around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><text|
@@ -6217,34 +6361,292 @@
   </theorem>
 
   <\proof>
-    \;
+    Let <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F>
+    be a family [as <math|<around*|{|1,\<ldots\>,n|}>> it has finite support]
+    such that <math|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|\<alpha\><rsub|i>\<cdot\>e<rsub|i>|)>=0=<around*|(|<wide*|0,\<ldots\>,0|\<wide-underbrace\>>|)>>
+    then we have for <math|j\<in\><around*|{|1,\<ldots\>,n|}>>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|0>|<cell|=>|<cell|<around*|(|<wide*|0,\<ldots\>,0|\<wide-underbrace\>>|)><rsub|j>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|\<alpha\><rsub|i>\<cdot\>e<rsub|i>|)>|)><rsub|j>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum in A^n (1)>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|\<alpha\><rsub|i>\<cdot\>e<rsub|i>|)><rsub|j>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|\<alpha\><rsub|i>\<cdot\><around*|(|e<rsub|i>|)><rsub|j>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|\<alpha\><rsub|i>\<cdot\>\<delta\><rsub|i,j>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|basis sum of delta>]>>>|<cell|\<alpha\><rsub|j>>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation*>
+      <around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><text|
+      is a linear independent>
+    </equation*>
+
+    Now if <math|x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>F<rsup|n>>
+    then for <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    we have that <math|\<forall\>j\<in\><around*|{|1,\<ldots\>,n|}>> that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|x<rsub|i>\<cdot\>e<rsub|i>|)>|)><rsub|j>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum in A^n (1)>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|x<rsub|i>\<cdot\>e<rsub|i>|)><rsub|j>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|x<rsub|i>\<cdot\><around*|(|e<rsub|i>|)><rsub|j>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|x<rsub|i>\<cdot\>\<delta\><rsub|i,j>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|basis sum of delta>]>>>|<cell|x<rsub|j>>>>>
+    </eqnarray*>
+
+    which proves that <math|x=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|x<rsub|i>\<cdot\>e<rsub|i>|)>>
+    hence\ 
+
+    <\equation*>
+      span<around*|(|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>|)>=F<rsup|n>
+    </equation*>
   </proof>
-
-  \;
-
-  \;
-
-  \;
-
-  \;
-
-  \;
-
-  \;
-
-  \;
-
-  \;
-
-  \;
-
-  \;
-
-  \;
 
   <section|Linear mappings >
 
-  \;
+  Similar to the concepts of group, ring, field homeomorphisms we have also
+  mappings that preserves th structure of vector spaces, these are called
+  linear mappings. Linear mappings are used later in Banach spaces, Hilbert
+  spaces, differential analysis and so on.
+
+  <\definition>
+    <label|linear mapping><index|linear mapping>If
+    <math|<around*|\<langle\>|X,+,\<cdot\>|\<rangle\>>> and
+    <math|<around*|\<langle\>|Y,+,\<cdot\>|\<rangle\>>> are vector spaces
+    over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> then a
+    mapping <math|L:X\<rightarrow\>Y> is a linear mapping iff\ 
+
+    <\enumerate>
+      <item><math|\<forall\>x,y\<in\>X> we have
+      <math|L<around*|(|x+y|)>=L<around*|(|x|)>+L<around*|(|y|)>>
+
+      <item><math|\<forall\>x\<in\>X>, <math|\<forall\>\<alpha\>\<in\>F> we
+      have that <math|L<around*|(|\<alpha\>\<cdot\>x|)>=\<alpha\>\<cdot\>L<around*|(|x|)>>
+    </enumerate>
+  </definition>
+
+  <\example>
+    Let <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+    be a field and <math|<around*|\<langle\>|F<rsup|n>,+,\<cdot\>|\<rangle\>>>
+    be the vector space over <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+    defined by [theorem: <reference|vector space power field>] then
+    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have that the
+    projection mapping
+
+    <\equation*>
+      \<pi\><rsub|i>:F<rsup|n>\<rightarrow\>F<text| >
+    </equation*>
+
+    is a linear mapping.
+  </example>
+
+  <\proof>
+    If <math|x,y\<in\>F<rsup|n>> and <math|\<alpha\>\<in\>F> then we have\ 
+
+    <\equation*>
+      \<pi\><rsub|i><around*|(|x+y|)>=<around*|(|x+y|)><rsub|i>\<equallim\><rsub|<text|[theorem:
+      <reference|vector space power field>]>>x<rsub|i>+y<rsub|i>=\<pi\><rsub|i><around*|(|x|)>+\<pi\><rsub|i><around*|(|y|)>
+    </equation*>
+
+    and
+
+    <\equation*>
+      \<pi\><rsub|i><around*|(|\<alpha\>\<cdot\>x|)>=\<alpha\>\<cdot\>x<rsub|i>=\<alpha\>\<cdot\>\<pi\><rsub|i><around*|(|x|)>
+    </equation*>
+  </proof>
+
+  <\lemma>
+    <label|linear mapping neutral element>If
+    <math|<around*|\<langle\>|X,+,\<cdot\>|\<rangle\>>> and
+    <math|<around*|\<langle\>|Y,+,\<cdot\>|\<rangle\>>> are vector spaces
+    over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> then
+    <math|L<around*|(|0|)>=0>
+  </lemma>
+
+  <\proof>
+    <math|L<around*|(|0|)>=L<around*|(|0\<cdot\>0|)>=0\<cdot\>L<around*|(|0|)>>
+  </proof>
+
+  <\theorem>
+    <label|linear mapping general sum>Let
+    <math|<around*|\<langle\>|X,+,\<cdot\>|\<rangle\>>> and
+    <math|<around*|\<langle\>|Y,+,\<cdot\>|\<rangle\>>> be vector spaces over
+    a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> then we have:
+
+    <\enumerate>
+      <item><math|\<forall\>k,l\<in\>\<bbb-N\><rsub|0>> with
+      <math|k\<leqslant\>l>, <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,l|}>>\<subseteq\>X>
+      and <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,l|}>>>
+      then we have\ 
+
+      <\equation*>
+        L<around*|(|<big|sum><rsub|i=k><rsup|l><around*|(|\<alpha\><rsub|i>\<cdot\>x<rsub|i>|)>|)>=<big|sum><rsub|i=k><rsup|l>\<alpha\><rsub|i>\<cdot\>L<around*|(|x<rsub|i>|)>
+      </equation*>
+
+      <item>If <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\>I>\<subseteq\>F>
+      is a family with finite support, <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>X>
+      then we have
+
+      <\equation*>
+        L<around*|(|<big|sum><rsub|i\<in\>I><around*|(|\<alpha\><rsub|i>\<cdot\>x<rsub|i>|)>|)>=<big|sum><rsub|i\<in\>I><around*|(|\<alpha\><rsub|i>\<cdot\>L<around*|(|x<rsub|i>|)>|)>
+      </equation*>
+
+      <item>If <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\>I>\<subseteq\>F>
+      is a family with finite support, <math|x\<in\>X> then\ 
+
+      <\equation*>
+        L<around*|(|<big|sum><rsub|i\<in\>I><around*|(|\<alpha\><rsub|i>\<cdot\>x<rsub|i>|)>|)>=<around*|(|<big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>|)>\<cdot\>L<around*|(|a|)>
+      </equation*>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>First we prove the special case <math|k=0> by induction, so
+      define\ 
+
+      <\equation*>
+        S=<around*|{|l\<in\>\<bbb-N\><rsub|0>\|<text|If
+        ><around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,l|}>>\<subseteq\>X,<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,l|}>>\<subseteq\>f<text|
+        then >L<around*|(|<big|sum><rsub|i=k><rsup|l><around*|(|\<alpha\><rsub|i>\<cdot\>x<rsub|i>|)>|)>=<big|sum><rsub|i=k><rsup|l>\<alpha\><rsub|i>\<cdot\>L<around*|(|x<rsub|i>|)>|}>
+      </equation*>
+
+      \ then we have:
+
+      <\description>
+        <item*|<math|0\<in\>S>>If <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|0|}>>\<subseteq\>X>,
+        <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|0|}>>\<subseteq\>F>
+        then we have\ 
+
+        <\equation*>
+          L<around*|(|<big|sum><rsub|i=0><rsup|0><around*|(|\<alpha\><rsub|i>\<cdot\>x<rsub|i>|)>|)>=L<around*|(|\<alpha\><rsub|0>\<cdot\>x<rsub|0>|)>=a<rsub|0>\<cdot\>L<around*|(|x<rsub|0>|)>=<big|sum><rsub|i=0><rsup|0><around*|(|\<alpha\><rsub|i>\<cdot\>x<rsub|i>|)>
+        </equation*>
+
+        proving that <math|0\<in\>S>.
+
+        <item*|<math|l\<in\>S\<Rightarrow\>l+1\<in\>S>>If
+        <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,l+1|}>>\<subseteq\>X>,
+        <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,l+1|}>>\<subseteq\>F>
+        then we have
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|L<around*|(|<big|sum><rsub|i=0><rsup|l+1><around*|(|\<alpha\><rsub|i>\<cdot\>x<rsub|i>|)>|)>>|<cell|=>|<cell|L<around*|(|<around*|(|<big|sum><rsub|i=0><rsup|l><around*|(|\<alpha\><rsub|i>\<cdot\>x<rsub|i>|)>|)>+\<alpha\><rsub|l+1>\<cdot\>x<rsub|l+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|<big|sum><rsub|i=0><rsup|l><around*|(|\<alpha\><rsub|i>\<cdot\>x<rsub|i>|)>|)>+L<around*|(|\<alpha\><rsub|l+1>\<cdot\>x<rsub|l+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|<big|sum><rsub|i=0><rsup|l><around*|(|\<alpha\><rsub|i>\<cdot\>x<rsub|i>|)>|)>+\<alpha\><rsub|l+1>\<cdot\>L<around*|(|x<rsub|l+1>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|l\<in\>S>>|<cell|<big|sum><rsub|i=0><rsup|l><around*|(|\<alpha\><rsub|i>\<cdot\>L<around*|(|x<rsub|i>|)>|)>+\<alpha\><rsub|l+1>\<cdot\>L<around*|(|x<rsub|l+1>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=0><rsup|l+1><around*|(|\<alpha\><rsub|i>\<cdot\>L<around*|(|x<rsub|i>|)>|)>>>>>
+        </eqnarray*>
+
+        proving that <math|l+1\<in\>S>.
+      </description>
+
+      Mathematical induction proves then that\ 
+
+      <\equation>
+        <label|eq 11.63.064>\<forall\>l\<in\>\<bbb-N\><rsub|0>,<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,l|}>>\<subseteq\>X,<text|><around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,l|}>>\<subseteq\>F\<vDash\>L<around*|(|<big|sum><rsub|i=0><rsup|l><around*|(|\<alpha\><rsub|i>\<cdot\>x<rsub|i>|)>|)>=<big|sum><rsub|i=0><rsup|l><around*|(|\<alpha\><rsub|i>\<cdot\>L<around*|(|x<rsub|i>|)>|)>
+      </equation>
+
+      Let now <math|k,l\<in\>\<bbb-N\><rsub|0>> with <math|k\<leqslant\>l>,
+      <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,l|}>>\<subseteq\>X<text|
+      and ><around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,l|}>>\<subseteq\>F>
+      then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|L<around*|(|<big|sum><rsub|i=k><rsup|l><around*|(|\<alpha\><rsub|i>\<cdot\>x<rsub|i>|)>|)>>|<cell|\<equallim\><rsub|def>>|<cell|L<around*|(|<big|sum><rsub|i=0><rsup|l-k><around*|(|\<alpha\><rsub|k+i>\<cdot\>x<rsub|k+i>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 11.63.064>]>>>|<cell|<big|sum><rsub|i=0><rsup|l-k><around*|(|\<alpha\><rsub|k+i>\<cdot\>L<around*|(|x<rsub|k+i>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=k><rsup|l><around*|(|\<alpha\><rsub|i>\<cdot\>L<around*|(|x<rsub|i>|)>|)>>>>>
+      </eqnarray*>
+
+      <item>Let now <math|I> a finite set and
+      <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>X,<text|><around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\>I>\<subseteq\>F>
+      then for <math|I> we have either:
+
+      <\description>
+        <item*|<math|I=\<varnothing\>>>Then\ 
+
+        <\equation*>
+          L<around*|(|<big|sum><rsub|i\<in\>I><around*|(|\<alpha\><rsub|i>\<cdot\>x<rsub|i>|)>|)>=L<around*|(|<big|sum><rsub|i\<in\>\<varnothing\>><around*|(|\<alpha\><rsub|i>\<cdot\>x<rsub|i>|)>|)>=0=<big|sum><rsub|i\<in\>\<varnothing\>><around*|(|\<alpha\><rsub|i>\<cdot\>L<around*|(|x<rsub|i>|)>|)>=<big|sum><rsub|i\<in\>I><around*|(|\<alpha\><rsub|i>\<cdot\>L<around*|(|x<rsub|i>|)>|)>
+        </equation*>
+
+        <item*|<math|I\<neq\>\<varnothing\>>>Then there exists a
+        <math|n\<in\>\<bbb-N\><rsub|0>> and a bijection
+        <math|\<beta\>:<around*|{|0,\<ldots\>,n|}>\<rightarrow\>I> we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|L<around*|(|<big|sum><rsub|i\<in\>I><around*|(|\<alpha\><rsub|i>\<cdot\>x<rsub|i>|)>|)>>|<cell|\<equallim\><rsub|def>>|<cell|L<around*|(|<big|sum><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>><around*|(|\<alpha\><rsub|\<beta\><around*|(|i|)>>\<cdot\>x<rsub|\<beta\><around*|(|i|)>>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 11.63.064>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>><around*|(|\<alpha\><rsub|\<beta\><around*|(|i|)>>\<cdot\>L<around*|(|x<rsub|\<beta\><around*|(|i|)>>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|def>>|<cell|<big|sum><rsub|i\<in\>I><around*|(|\<alpha\><rsub|i>\<cdot\>L<around*|(|x<rsub|i>|)>|)>>>>>
+        </eqnarray*>
+      </description>
+
+      proving that\ 
+
+      <\equation>
+        <label|eq 11.64.064><text|For >I<text|
+        finite,><around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>X,<text|><around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\>I>\<subseteq\>F<text|
+        we have >L<around*|(|<big|sum><rsub|i\<in\>I><around*|(|\<alpha\><rsub|i>\<cdot\>x<rsub|i>|)>|)>=<big|sum><rsub|i\<in\>I><around*|(|\<alpha\><rsub|i>\<cdot\>L<around*|(|x<rsub|i>|)>|)>
+      </equation>
+
+      If <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\>I>\<subseteq\>F>
+      is a family with finite support, <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>X>
+      then using [theorem: <reference|linear combination requirement>] we
+      have that
+
+      <\equation>
+        <label|eq 11.65.064>supp<around*|(|<around*|{|\<alpha\><rsub|i>\<cdot\>x<rsub|i>|}><rsub|i\<in\>I>|)>\<subseteq\>sup<around*|(|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\>I>|)><text|
+        and ><around*|{|\<alpha\><rsub|i>\<cdot\>x<rsub|i>|}><rsub|i\<in\>I><text|
+        has finite support>
+      </equation>
+
+      Hence <math|<big|sum><rsub|i\<in\>I><around*|(|\<alpha\><rsub|i>\<cdot\>x<rsub|i>|)>>
+      is well defined and further we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|L<around*|(|<big|sum><rsub|i\<in\>I><around*|(|\<alpha\><rsub|i>\<cdot\>x<rsub|i>|)>|)>>|<cell|\<equallim\><rsub|def>>|<cell|L<around*|(|<big|sum><rsub|i\<in\>supp<around*|(|<around*|{|\<alpha\><rsub|i>\<cdot\>x<rsub|i>|}><rsub|i\<in\>I>|)>><around*|(|\<alpha\><rsub|i>\<cdot\>x<rsub|i>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 11.64.064>]>>>|<cell|<big|sum><rsub|i\<in\>supp<around*|(|<around*|{|\<alpha\><rsub|i>\<cdot\>x<rsub|i>|}><rsub|i\<in\>I>|)>><around*|(|\<alpha\><rsub|i>\<cdot\>L<around*|(|x<rsub|i>|)>|)><eq-number><label|eq
+        11.66.064>>>>>
+      </eqnarray*>
+
+      Now if <math|i\<in\>supp<around*|(|<around*|{|\<alpha\><rsub|i>.L<around*|(|x<rsub|i>|)>|}><rsub|i\<in\>I>|)>>
+      then <math|\<alpha\><rsub|i>\<cdot\>L<around*|(|x<rsub|i>|)>\<neq\>0>,
+      if <math|\<alpha\><rsub|i>\<cdot\>x<rsub|i>=0> then
+
+      <\equation*>
+        0\<equallim\><rsub|<text|[theorem: <reference|linear mapping neutral
+        element>]>>L<around*|(|\<alpha\><rsub|i>\<cdot\>x<rsub|i>|)>=\<alpha\><rsub|i>\<cdot\>L<around*|(|x<rsub|i>|)>
+      </equation*>
+
+      contradicting <math|\<alpha\><rsub|i>\<cdot\>L<around*|(|x<rsub|i>|)>\<neq\>0>,
+      hence <math|\<alpha\><rsub|i>\<cdot\>x<rsub|i>\<neq\>0> or
+      <math|i\<in\>sup<around*|(|<around*|{|\<alpha\><rsub|i>\<cdot\>x<rsub|i>|}><rsub|i\<in\>I>|)>>
+      proving that\ 
+
+      <\equation>
+        <label|eq 11.67.064>supp<around*|(|<around*|{|\<alpha\><rsub|i>.L<around*|(|x<rsub|i>|)>|}><rsub|i\<in\>I>|)>\<subseteq\>supp<around*|(|<around*|{|\<alpha\><rsub|i>\<cdot\>x<rsub|i>|}><rsub|i\<in\>I>|)>
+      </equation>
+
+      or by \ <math|<around*|[|eq:<reference|eq 11.65.064>|]> that >
+      <math|<around*|{|\<alpha\><rsub|i>\<cdot\>L<around*|(|x<rsub|i>|)>|}><rsub|i\<in\>I>>
+      has finite support so that <math|<big|sum><rsub|i\<in\>I><around*|(|\<alpha\><rsub|i>\<cdot\>L<around*|(|x<rsub|i>|)>|)>>
+      is well defined. Further we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|sum><rsub|i\<in\>I><around*|(|\<alpha\><rsub|i>\<cdot\>L<around*|(|x<rsub|i>|)>|)>>|<cell|\<equallim\><rsub|def>>|<cell|>>|<row|<cell|<big|sum><rsub|i\<in\>supp<around*|(|<around*|{|\<alpha\><rsub|i>\<cdot\>L<around*|(|x<rsub|i>|)>|}><rsub|i\<in\>I>|)>><around*|(|\<alpha\><rsub|i>\<cdot\>L<around*|(|e<rsub|i>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<big|sum><rsub|i\<in\>supp<around*|(|<around*|{|\<alpha\><rsub|i>\<cdot\>L<around*|(|x<rsub|i>|)>|}><rsub|i\<in\>I>|)>><around*|(|\<alpha\><rsub|i>\<cdot\>L<around*|(|e<rsub|i>|)>|)>|)>+0>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|support of neutral element
+        (2)>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|i\<in\>supp<around*|(|<around*|{|\<alpha\><rsub|i>\<cdot\>L<around*|(|x<rsub|i>|)>|}><rsub|i\<in\>I>|)>><around*|(|\<alpha\><rsub|i>\<cdot\>L<around*|(|e<rsub|i>|)>|)>+<big|sum><rsub|i\<in\>supp<around*|(|<around*|{|\<alpha\><rsub|i>x<rsub|i>|}><rsub|i\<in\>I>|)>\\supp<around*|(|<around*|{|\<alpha\><rsub|i>\<cdot\>L<around*|(|x<rsub|i>|)>|}><rsub|i\<in\>I>|)>><around*|(|\<alpha\><rsub|i>\<cdot\>L<around*|(|e<rsub|i>|)>|)>>|<cell|\<equallim\><rsub|<text|theorem:
+        <reference|support over disjoint subsets>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|i\<in\>supp<around*|(|<around*|{|\<alpha\><rsub|i>x<rsub|i>|}><rsub|i\<in\>I>|)>><around*|(|\<alpha\><rsub|i>\<cdot\>L<around*|(|e<rsub|i>|)>|)>>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 11.67.064>]>>>|<cell|>>|<row|<cell|L<around*|(|<big|sum><rsub|i\<in\>I><around*|(|\<alpha\><rsub|i>\<cdot\>x<rsub|i>|)>|)>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      proving that\ 
+
+      <\equation*>
+        L<around*|(|<big|sum><rsub|i\<in\>I><around*|(|\<alpha\><rsub|i>\<cdot\>x<rsub|i>|)>|)>=<big|sum><rsub|i\<in\>I><around*|(|\<alpha\><rsub|i>\<cdot\>L<around*|(|x<rsub|i>|)>|)>
+      </equation*>
+
+      <item>Let <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\>I>\<subseteq\>F>
+      be a family with finite support, <math|x\<in\>X> then if we define
+      <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>> by <math|x<rsub|i>=x>
+      then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|L<around*|(|<big|sum><rsub|i\<in\>I><around*|(|\<alpha\><rsub|i>\<cdot\>x<rsub|i>|)>|)>>|<cell|\<equallim\><rsub|<around*|(|2|)>>>|<cell|<big|sum><rsub|i\<in\>I><around*|(|\<alpha\><rsub|i>\<cdot\>L<around*|(|x<rsub|i>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\>I><around*|(|\<alpha\><rsub|i>\<cdot\>L<around*|(|x|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theroem:
+        <reference|support space finite sum
+        (2)>]>>>|<cell|<around*|(|<big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>|)>\<cdot\>L<around*|(|x|)>>>>>
+      </eqnarray*>
+    </enumerate>
+  </proof>
 
   <section|Multilinear mappings>
 
@@ -6288,123 +6690,132 @@
     <associate|auto-3|<tuple|11.1.1|?>>
     <associate|auto-30|<tuple|11.2.3.4|?>>
     <associate|auto-31|<tuple|11.3|?>>
-    <associate|auto-32|<tuple|11.4|?>>
-    <associate|auto-33|<tuple|11.5|?>>
-    <associate|auto-34|<tuple|3|?>>
+    <associate|auto-32|<tuple|linear mapping|?>>
+    <associate|auto-33|<tuple|11.4|?>>
+    <associate|auto-34|<tuple|11.5|?>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|<big|sum><rsub|i=0><rsup|n>x<rsub|i>>|?>>
     <associate|auto-5|<tuple|<with|mode|<quote|math>|<big|prod><rsub|i=0><rsup|n>x<rsub|i>>|?>>
     <associate|auto-6|<tuple|11.1.2|?>>
     <associate|auto-7|<tuple|11.1.3|?>>
     <associate|auto-8|<tuple|permutation|?>>
     <associate|auto-9|<tuple|<with|mode|<quote|math>|\<sigma\>>|?>>
-    <associate|basis Kronecker delta|<tuple|11.129|?>>
-    <associate|basis and bijection|<tuple|11.111|?>>
-    <associate|basis condition|<tuple|11.110|?>>
-    <associate|basis coordinates|<tuple|11.114|?>>
-    <associate|basis dimensionality|<tuple|11.125|?>>
-    <associate|basis empty basis|<tuple|11.121|?>>
-    <associate|basis exist|<tuple|11.117|?>>
-    <associate|basis existence (1)|<tuple|11.116|?>>
-    <associate|basis extension|<tuple|11.115|?>>
-    <associate|basis finite|<tuple|11.122|?>>
-    <associate|basis finite/infinite|<tuple|11.109|?>>
-    <associate|basis infinite|<tuple|11.123|?>>
-    <associate|basis of a field|<tuple|11.126|?>>
-    <associate|basis of a vector space|<tuple|11.108|?>>
-    <associate|basis of non trivial vector space|<tuple|11.113|?>>
-    <associate|basis out of spanning family|<tuple|11.118|?>>
-    <associate|basis replacement lemma|<tuple|11.120|?>>
-    <associate|basis size|<tuple|11.124|?>>
-    <associate|basis sum of delta|<tuple|11.130|?>>
-    <associate|basis trivial space basis|<tuple|11.112|?>>
+    <associate|basis Kronecker delta|<tuple|11.131|?>>
+    <associate|basis and bijection|<tuple|11.113|?>>
+    <associate|basis condition|<tuple|11.112|?>>
+    <associate|basis coordinates|<tuple|11.116|?>>
+    <associate|basis dimensionality|<tuple|11.127|?>>
+    <associate|basis empty basis|<tuple|11.123|?>>
+    <associate|basis exist|<tuple|11.119|?>>
+    <associate|basis existence (1)|<tuple|11.118|?>>
+    <associate|basis extension|<tuple|11.117|?>>
+    <associate|basis finite|<tuple|11.124|?>>
+    <associate|basis finite/infinite|<tuple|11.111|?>>
+    <associate|basis infinite|<tuple|11.125|?>>
+    <associate|basis of a field|<tuple|11.128|?>>
+    <associate|basis of a vector space|<tuple|11.110|?>>
+    <associate|basis of non trivial vector space|<tuple|11.115|?>>
+    <associate|basis out of spanning family|<tuple|11.120|?>>
+    <associate|basis replacement lemma|<tuple|11.122|?>>
+    <associate|basis size|<tuple|11.126|?>>
+    <associate|basis sum of delta|<tuple|11.132|?>>
+    <associate|basis trivial space basis|<tuple|11.114|?>>
     <associate|eq 11.1.054|<tuple|11.1|?>>
-    <associate|eq 11.10.054|<tuple|11.10|?>>
-    <associate|eq 11.11.054|<tuple|11.12|?>>
-    <associate|eq 11.11.055|<tuple|11.11|?>>
-    <associate|eq 11.13.055|<tuple|11.13|?>>
-    <associate|eq 11.14.056|<tuple|11.26|?>>
-    <associate|eq 11.14.057|<tuple|11.14|?>>
-    <associate|eq 11.15.058|<tuple|11.17|?>>
-    <associate|eq 11.15.059|<tuple|11.15|?>>
-    <associate|eq 11.16.058|<tuple|11.18|?>>
-    <associate|eq 11.16.059|<tuple|11.16|?>>
-    <associate|eq 11.17.058|<tuple|11.19|?>>
-    <associate|eq 11.18.058|<tuple|11.20|?>>
-    <associate|eq 11.19.058|<tuple|11.21|?>>
+    <associate|eq 11.10.054|<tuple|11.11|?>>
+    <associate|eq 11.10.064|<tuple|11.10|?>>
+    <associate|eq 11.11.054|<tuple|11.13|?>>
+    <associate|eq 11.11.055|<tuple|11.12|?>>
+    <associate|eq 11.13.055|<tuple|11.14|?>>
+    <associate|eq 11.14.056|<tuple|11.28|?>>
+    <associate|eq 11.14.057|<tuple|11.15|?>>
+    <associate|eq 11.15.058|<tuple|11.18|?>>
+    <associate|eq 11.15.059|<tuple|11.16|?>>
+    <associate|eq 11.16.058|<tuple|11.19|?>>
+    <associate|eq 11.16.059|<tuple|11.17|?>>
+    <associate|eq 11.17.058|<tuple|11.20|?>>
+    <associate|eq 11.18.058|<tuple|11.21|?>>
+    <associate|eq 11.19.058|<tuple|11.22|?>>
     <associate|eq 11.2.053|<tuple|11.2|?>>
-    <associate|eq 11.20.058|<tuple|11.22|?>>
-    <associate|eq 11.21.058|<tuple|11.23|?>>
-    <associate|eq 11.22.058|<tuple|11.24|?>>
-    <associate|eq 11.23.058|<tuple|11.25|?>>
-    <associate|eq 11.27.060|<tuple|11.27|?>>
-    <associate|eq 11.28.060|<tuple|11.28|?>>
-    <associate|eq 11.29.060|<tuple|11.29|?>>
+    <associate|eq 11.20.058|<tuple|11.23|?>>
+    <associate|eq 11.21.058|<tuple|11.24|?>>
+    <associate|eq 11.22.058|<tuple|11.25|?>>
+    <associate|eq 11.23.058|<tuple|11.26|?>>
+    <associate|eq 11.27.060|<tuple|11.29|?>>
+    <associate|eq 11.27.064|<tuple|11.27|?>>
+    <associate|eq 11.28.060|<tuple|11.30|?>>
+    <associate|eq 11.29.060|<tuple|11.31|?>>
     <associate|eq 11.3.053|<tuple|11.3|?>>
-    <associate|eq 11.30.060|<tuple|11.30|?>>
-    <associate|eq 11.31.060|<tuple|11.31|?>>
-    <associate|eq 11.32.060|<tuple|11.32|?>>
-    <associate|eq 11.33.060|<tuple|11.33|?>>
-    <associate|eq 11.34.060|<tuple|11.34|?>>
-    <associate|eq 11.35.060|<tuple|11.35|?>>
-    <associate|eq 11.36.060|<tuple|11.36|?>>
-    <associate|eq 11.38.060|<tuple|11.38|?>>
-    <associate|eq 11.39.060|<tuple|11.39|?>>
+    <associate|eq 11.30.060|<tuple|11.32|?>>
+    <associate|eq 11.31.060|<tuple|11.33|?>>
+    <associate|eq 11.32.060|<tuple|11.34|?>>
+    <associate|eq 11.33.060|<tuple|11.35|?>>
+    <associate|eq 11.34.060|<tuple|11.36|?>>
+    <associate|eq 11.35.060|<tuple|11.37|?>>
+    <associate|eq 11.36.060|<tuple|11.38|?>>
+    <associate|eq 11.38.060|<tuple|11.40|?>>
+    <associate|eq 11.39.060|<tuple|11.41|?>>
     <associate|eq 11.4.053|<tuple|11.4|?>>
-    <associate|eq 11.40.060|<tuple|11.40|?>>
-    <associate|eq 11.41.060|<tuple|11.41|?>>
-    <associate|eq 11.42.060|<tuple|11.42|?>>
-    <associate|eq 11.43.060|<tuple|11.44|?>>
-    <associate|eq 11.43.060.1|<tuple|11.43|?>>
-    <associate|eq 11.44.060|<tuple|11.45|?>>
-    <associate|eq 11.46.060|<tuple|11.46|?>>
+    <associate|eq 11.40.060|<tuple|11.42|?>>
+    <associate|eq 11.41.060|<tuple|11.43|?>>
+    <associate|eq 11.42.060|<tuple|11.44|?>>
+    <associate|eq 11.43.060|<tuple|11.46|?>>
+    <associate|eq 11.43.060.1|<tuple|11.45|?>>
+    <associate|eq 11.44.060|<tuple|11.47|?>>
+    <associate|eq 11.46.060|<tuple|11.48|?>>
     <associate|eq 11.5.053|<tuple|11.5|?>>
-    <associate|eq 11.57.062|<tuple|11.47|?>>
-    <associate|eq 11.58.062|<tuple|11.48|?>>
-    <associate|eq 11.59.062|<tuple|11.49|?>>
-    <associate|eq 11.59.063|<tuple|11.59|?>>
+    <associate|eq 11.57.062|<tuple|11.49|?>>
+    <associate|eq 11.58.062|<tuple|11.50|?>>
+    <associate|eq 11.59.062|<tuple|11.51|?>>
+    <associate|eq 11.59.063|<tuple|11.61|?>>
     <associate|eq 11.6.053|<tuple|11.6|?>>
-    <associate|eq 11.60.062|<tuple|11.50|?>>
-    <associate|eq 11.60.063|<tuple|11.60|?>>
-    <associate|eq 11.61.062|<tuple|11.51|?>>
-    <associate|eq 11.62.062|<tuple|11.52|?>>
-    <associate|eq 11.63.062|<tuple|11.53|?>>
-    <associate|eq 11.64.062|<tuple|11.54|?>>
-    <associate|eq 11.65.062|<tuple|11.55|?>>
-    <associate|eq 11.66.062|<tuple|11.56|?>>
-    <associate|eq 11.67.062|<tuple|11.57|?>>
-    <associate|eq 11.68.062|<tuple|11.58|?>>
+    <associate|eq 11.60.062|<tuple|11.52|?>>
+    <associate|eq 11.60.063|<tuple|11.62|?>>
+    <associate|eq 11.61.062|<tuple|11.53|?>>
+    <associate|eq 11.62.062|<tuple|11.54|?>>
+    <associate|eq 11.63.062|<tuple|11.55|?>>
+    <associate|eq 11.63.064|<tuple|11.63|?>>
+    <associate|eq 11.64.062|<tuple|11.56|?>>
+    <associate|eq 11.64.064|<tuple|11.64|?>>
+    <associate|eq 11.65.062|<tuple|11.57|?>>
+    <associate|eq 11.65.064|<tuple|11.65|?>>
+    <associate|eq 11.66.062|<tuple|11.58|?>>
+    <associate|eq 11.66.064|<tuple|11.66|?>>
+    <associate|eq 11.67.062|<tuple|11.59|?>>
+    <associate|eq 11.67.064|<tuple|11.67|?>>
+    <associate|eq 11.68.062|<tuple|11.60|?>>
     <associate|eq 11.7.053|<tuple|11.7|?>>
     <associate|eq 11.7.053.1|<tuple|11.8|?>>
     <associate|eq 11.9.053|<tuple|11.9|?>>
-    <associate|finite support sum|<tuple|11.68|?>>
-    <associate|firstHeading|<tuple|11.127|?>>
-    <associate|linear bijection (in)dependency|<tuple|11.101|?>>
-    <associate|linear combination|<tuple|11.82|?>>
-    <associate|linear combination requirement|<tuple|11.81|?>>
-    <associate|linear dependency condition|<tuple|11.104|?>>
-    <associate|linear dependency of ordered basis|<tuple|11.119|?>>
-    <associate|linear dependent conditions|<tuple|11.100|?>>
-    <associate|linear dependent family|<tuple|11.96|?>>
-    <associate|linear dependent family alternative|<tuple|11.98|?>>
-    <associate|linear dependent set|<tuple|11.97|?>>
-    <associate|linear dependent set alternative|<tuple|11.99|?>>
-    <associate|linear extension of a family|<tuple|11.105|?>>
-    <associate|linear extension of a set|<tuple|11.106|?>>
-    <associate|linear imdependent set|<tuple|11.93|?>>
-    <associate|linear independency condition (1)|<tuple|11.103|?>>
-    <associate|linear independent family and bijection|<tuple|11.102|?>>
-    <associate|linear independent set alterantive|<tuple|11.95|?>>
-    <associate|linear independent vector|<tuple|11.92|?>>
-    <associate|linear span|<tuple|11.83|?>>
-    <associate|linear span empty set|<tuple|11.85|?>>
-    <associate|linear span equivalence|<tuple|11.84|?>>
-    <associate|linear span inclusion|<tuple|11.90|?>>
-    <associate|linear span is a vector space|<tuple|11.87|?>>
-    <associate|linear span minus linear compination is span|<tuple|11.91|?>>
-    <associate|linear span of a subspace|<tuple|11.88|?>>
-    <associate|linear span of span|<tuple|11.89|?>>
-    <associate|linear span subset|<tuple|11.86|?>>
-    <associate|linear sub family of independent family|<tuple|11.94|?>>
+    <associate|finite support sum|<tuple|11.69|?>>
+    <associate|linear bijection (in)dependency|<tuple|11.103|?>>
+    <associate|linear combination|<tuple|11.84|?>>
+    <associate|linear combination requirement|<tuple|11.83|?>>
+    <associate|linear dependency condition|<tuple|11.106|?>>
+    <associate|linear dependency of ordered basis|<tuple|11.121|?>>
+    <associate|linear dependent conditions|<tuple|11.102|?>>
+    <associate|linear dependent family|<tuple|11.98|?>>
+    <associate|linear dependent family alternative|<tuple|11.100|?>>
+    <associate|linear dependent set|<tuple|11.99|?>>
+    <associate|linear dependent set alternative|<tuple|11.101|?>>
+    <associate|linear extension of a family|<tuple|11.107|?>>
+    <associate|linear extension of a set|<tuple|11.108|?>>
+    <associate|linear imdependent set|<tuple|11.95|?>>
+    <associate|linear independency condition (1)|<tuple|11.105|?>>
+    <associate|linear independent family and bijection|<tuple|11.104|?>>
+    <associate|linear independent set alterantive|<tuple|11.97|?>>
+    <associate|linear independent vector|<tuple|11.94|?>>
+    <associate|linear mapping|<tuple|11.134|?>>
+    <associate|linear mapping general sum|<tuple|11.137|?>>
+    <associate|linear mapping neutral element|<tuple|11.136|?>>
+    <associate|linear span|<tuple|11.85|?>>
+    <associate|linear span empty set|<tuple|11.87|?>>
+    <associate|linear span equivalence|<tuple|11.86|?>>
+    <associate|linear span inclusion|<tuple|11.92|?>>
+    <associate|linear span is a vector space|<tuple|11.89|?>>
+    <associate|linear span minus linear compination is span|<tuple|11.93|?>>
+    <associate|linear span of a subspace|<tuple|11.90|?>>
+    <associate|linear span of span|<tuple|11.91|?>>
+    <associate|linear span subset|<tuple|11.88|?>>
+    <associate|linear sub family of independent family|<tuple|11.96|?>>
     <associate|permutation definition|<tuple|11.23|?>>
     <associate|permutation group|<tuple|11.24|?>>
     <associate|permutation on subset|<tuple|11.25|?>>
@@ -6421,6 +6832,8 @@
     <associate|sum finite sum|<tuple|11.1|?>>
     <associate|sum general equivalence|<tuple|11.32|?>>
     <associate|sum general single|<tuple|11.31|?>>
+    <associate|sum in A^n|<tuple|11.43|?>>
+    <associate|sum in A^n (1)|<tuple|11.81|?>>
     <associate|sum index is a product|<tuple|11.42|?>>
     <associate|sum of differences|<tuple|11.10|?>>
     <associate|sum of differences (1)|<tuple|11.20|?>>
@@ -6442,42 +6855,42 @@
     <associate|sum ring product|<tuple|11.8|?>>
     <associate|sum ring product (1)|<tuple|11.17|?>>
     <associate|sum ring product (2)|<tuple|11.36|?>>
-    <associate|support|<tuple|11.65|?>>
-    <associate|support bijection on index|<tuple|11.72|?>>
-    <associate|support eleminate zeroes|<tuple|11.71|?>>
-    <associate|support extension|<tuple|11.70|?>>
-    <associate|support finite|<tuple|11.67|?>>
-    <associate|support of inverses (2)|<tuple|11.75|?>>
-    <associate|support of neutral element (2)|<tuple|11.73|?>>
-    <associate|support of sums (2)|<tuple|11.74|?>>
-    <associate|support over a singleton|<tuple|11.69|?>>
-    <associate|support over disjoint subsets|<tuple|11.79|?>>
-    <associate|support ring product (2)|<tuple|11.76|?>>
-    <associate|support space finite sum (1)|<tuple|11.77|?>>
-    <associate|support space finite sum (2)|<tuple|11.78|?>>
-    <associate|support space finite sum (4)|<tuple|11.80|?>>
-    <associate|support support of subsets|<tuple|11.66|?>>
-    <associate|vector space|<tuple|11.43|?>>
-    <associate|vector space C real|<tuple|11.51|?>>
-    <associate|vector space F^n|<tuple|11.56|?>>
-    <associate|vector space Q,R,C|<tuple|11.50|?>>
-    <associate|vector space complex/real|<tuple|11.52|?>>
-    <associate|vector space field|<tuple|11.49|?>>
-    <associate|vector space finite sum (1)|<tuple|11.61|?>>
-    <associate|vector space finite sum (2)|<tuple|11.62|?>>
-    <associate|vector space finite sum (3)|<tuple|11.63|?>>
-    <associate|vector space finite sum (4)|<tuple|11.64|?>>
-    <associate|vector space function space|<tuple|11.53|?>>
-    <associate|vector space power|<tuple|11.54|?>>
-    <associate|vector space power field|<tuple|11.55|?>>
-    <associate|vector space product of vector spaces|<tuple|11.57|?>>
-    <associate|vector space properties (1)|<tuple|11.44|?>>
-    <associate|vector space set operations|<tuple|11.58|?>>
-    <associate|vector space set propertie|<tuple|11.59|?>>
-    <associate|vector space sub-space is a vector space|<tuple|11.46|?>>
-    <associate|vector space subspace|<tuple|11.45|?>>
-    <associate|vector space trivial|<tuple|11.48|?>>
-    <associate|vector spaces product of vector spaces|<tuple|11.60|?>>
+    <associate|support|<tuple|11.66|?>>
+    <associate|support bijection on index|<tuple|11.73|?>>
+    <associate|support eleminate zeroes|<tuple|11.72|?>>
+    <associate|support extension|<tuple|11.71|?>>
+    <associate|support finite|<tuple|11.68|?>>
+    <associate|support of inverses (2)|<tuple|11.76|?>>
+    <associate|support of neutral element (2)|<tuple|11.74|?>>
+    <associate|support of sums (2)|<tuple|11.75|?>>
+    <associate|support over a singleton|<tuple|11.70|?>>
+    <associate|support over disjoint subsets|<tuple|11.80|?>>
+    <associate|support ring product (2)|<tuple|11.77|?>>
+    <associate|support space finite sum (1)|<tuple|11.78|?>>
+    <associate|support space finite sum (2)|<tuple|11.79|?>>
+    <associate|support space finite sum (4)|<tuple|11.82|?>>
+    <associate|support support of subsets|<tuple|11.67|?>>
+    <associate|vector space|<tuple|11.44|?>>
+    <associate|vector space C real|<tuple|11.52|?>>
+    <associate|vector space F^n|<tuple|11.57|?>>
+    <associate|vector space Q,R,C|<tuple|11.51|?>>
+    <associate|vector space complex/real|<tuple|11.53|?>>
+    <associate|vector space field|<tuple|11.50|?>>
+    <associate|vector space finite sum (1)|<tuple|11.62|?>>
+    <associate|vector space finite sum (2)|<tuple|11.63|?>>
+    <associate|vector space finite sum (3)|<tuple|11.64|?>>
+    <associate|vector space finite sum (4)|<tuple|11.65|?>>
+    <associate|vector space function space|<tuple|11.54|?>>
+    <associate|vector space power|<tuple|11.55|?>>
+    <associate|vector space power field|<tuple|11.56|?>>
+    <associate|vector space product of vector spaces|<tuple|11.58|?>>
+    <associate|vector space properties (1)|<tuple|11.45|?>>
+    <associate|vector space set operations|<tuple|11.59|?>>
+    <associate|vector space set propertie|<tuple|11.60|?>>
+    <associate|vector space sub-space is a vector space|<tuple|11.47|?>>
+    <associate|vector space subspace|<tuple|11.46|?>>
+    <associate|vector space trivial|<tuple|11.49|?>>
+    <associate|vector spaces product of vector spaces|<tuple|11.61|?>>
   </collection>
 </references>
 
@@ -6515,6 +6928,8 @@
       <tuple|<tuple|linear depenedent family>|<pageref|auto-28>>
 
       <tuple|<tuple|linear dependent set>|<pageref|auto-29>>
+
+      <tuple|<tuple|linear mapping>|<pageref|auto-32>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|11<space|2spc>Linear
@@ -6576,11 +6991,11 @@
 
       11.4<space|2spc>Multilinear mappings
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-32>
+      <no-break><pageref|auto-33>
 
       11.5<space|2spc>Deteminant Functions
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-33>
+      <no-break><pageref|auto-34>
     </associate>
   </collection>
 </auxiliary>

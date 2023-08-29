@@ -2292,6 +2292,8 @@
         specific if <math|x=<frac|a|b>\<neq\>0> then
         <math|x<rsup|-1>=<frac|b|a>>.
       </description>
+
+      <item><math|0\<neq\>1>
     </enumerate>
   </theorem>
 
@@ -2348,6 +2350,10 @@
           <reference|rational n/m=n.k/m.k>]>>>|<cell|<frac|1|1>>>>>
         </eqnarray*>
       </description>
+
+      <item>If <math|<frac|0|1>=<frac|1|1> > then
+      <math|0\<cdot\>1=1\<cdot\>1> o that <math|0=1> which is impossible by
+      [theorem: <reference|natural numbers s(n)=/0>].
     </enumerate>
   </proof>
 
@@ -7015,6 +7021,17 @@
           </eqnarray*>
         </description>
       </description>
+
+      <item>Assume that <math|\<alpha\><rsub|0>=\<alpha\><rsub|1>> which by
+      [theorem: <reference|real QR bijection>] proves that in
+      <math|\<bbb-Q\>> we have <math|0=1>. However by [theorem:
+      <reference|rational field>] <math|<around*|\<langle\>|Q,+,\<cdot\>|\<rangle\>>>
+      is a field so that <math|0\<neq\>1> and we reach a contradiction. Hence
+      we must have that\ 
+
+      <\equation*>
+        0=\<alpha\><rsub|0>\<neq\>\<alpha\><rsub|1>=1
+      </equation*>
     </enumerate>
   </proof>
 
@@ -8445,7 +8462,7 @@
 
     <\equation>
       <label|eq 9.101.041>i<rsub|\<bbb-Z\>\<rightarrow\>\<bbb-Q\>>:<around*|\<langle\>|\<bbb-Z\>,+,\<cdot\>|\<rangle\>>\<rightarrow\><around*|\<langle\>|\<bbb-Z\><rsub|\<bbb-Q\>>,+,\<cdot\>|\<rangle\>><text|
-      is a field isomorphism>
+      is a ring isomorphism>
     </equation>
 
     <\equation>
@@ -8724,6 +8741,13 @@
         <tformat|<table|<row|<cell|<around*|(|x,y|)>\<cdot\><around*|(|<around*|(|x<rprime|'>,y<rprime|'>|)>+<around*|(|x<rprime|''>,y<rprime|''>|)>|)>>|<cell|=>|<cell|<around*|(|x,y|)>\<cdot\><around*|(|x<rprime|'>+x<rprime|''>,y<rprime|'>+y<rprime|''>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x\<cdot\><around*|(|x<rprime|'>+x<rprime|''>|)>-y\<cdot\><around*|(|y<rprime|'>+y<rprime|''>|)>,x\<cdot\><around*|(|y<rprime|'>+y<rprime|''>|)>+y\<cdot\><around*|(|x<rprime|'>+x<rprime|''>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x\<cdot\>x<rprime|'>+x\<cdot\>x<rprime|''>-y\<cdot\>y<rprime|'>-y\<cdot\>y<rprime|''>,x\<cdot\>y<rprime|'>+x\<cdot\>y<rprime|''>+y\<cdot\>x<rprime|'>+y\<cdot\>x<rprime|''>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|x\<cdot\>x<rprime|'>-y\<cdot\>y<rprime|'>|)>+<around*|(|x\<cdot\>x<rprime|''>-y\<cdot\>y<rprime|''>|)>,<around*|(|x\<cdot\>y<rprime|'>+y\<cdot\>x<rprime|'>|)>+<around*|(|x\<cdot\>y<rprime|''>+y\<cdot\>x<rprime|''>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x\<cdot\>x<rprime|'>-y\<cdot\>y<rprime|'>,x\<cdot\>y<rprime|'>+y\<cdot\>x<rprime|'>|)>+<around*|(|x\<cdot\>x<rprime|''>-y\<cdot\>y<rprime|''>,x\<cdot\>y<rprime|''>+y\<cdot\>x<rprime|''>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x,y|)>\<cdot\><around*|(|x<rprime|'>,y<rprime|'>|)>+<around*|(|x,y|)>\<cdot\><around*|(|x<rprime|''>,y<rprime|''>|)>>>>>
       </eqnarray*>
     </description>
+
+    Finally as in <math|\<bbb-R\>> we have that <math|1\<neq\>0> [see
+    theorem: <reference|real field>] we have that\ 
+
+    <\equation*>
+      0=<around*|(|0,0|)>\<neq\><around*|(|1,0|)>=1
+    </equation*>
   </proof>
 
   Just as with the integers, rationals and real numbers we introduce the
@@ -13351,7 +13375,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|6>
-    <associate|page-first|189>
+    <associate|page-first|191>
     <associate|project-flag|false>
     <associate|section-nr|3>
     <associate|subsection-nr|0>
@@ -13433,7 +13457,6 @@
     <associate|complex a\<less\>2^n|<tuple|10.48|?>>
     <associate|complex cardinality|<tuple|10.73|?>>
     <associate|complex cardinality alternative|<tuple|10.74|?>>
-    <associate|complex cardinality of {0,..,n}|<tuple|10.75|?>>
     <associate|complex cardinality properties|<tuple|10.75|?>>
     <associate|complex conjugate|<tuple|10.67|?>>
     <associate|complex conjugate properties|<tuple|10.68|?>>
@@ -13546,7 +13569,6 @@
     <associate|eq 10.57|<tuple|10.61|?>>
     <associate|eq 10.58.051|<tuple|10.62|?>>
     <associate|eq 10.6.048|<tuple|10.6|?>>
-    <associate|eq 10.63.054|<tuple|10.63|?>>
     <associate|eq 10.7.048|<tuple|10.7|?>>
     <associate|eq 10.8.048|<tuple|10.8|?>>
     <associate|eq 10.9.048|<tuple|10.9|?>>
@@ -13691,7 +13713,6 @@
     <associate|eq 9.82.036|<tuple|9.82|?>>
     <associate|eq 9.89.047|<tuple|9.83|?>>
     <associate|eq 9.90.047|<tuple|9.84|?>>
-    <associate|extended real|<tuple|10.77|?>>
     <associate|extended reals|<tuple|10.77|?>>
     <associate|extended reals eistence|<tuple|10.76|?>>
     <associate|extended reals finite real number|<tuple|10.78|?>>
@@ -14019,6 +14040,14 @@
       <with|par-left|<quote|1tab>|10.5.3<space|2spc>Finite sets
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-53>>
+
+      <with|par-left|<quote|1tab>|10.5.4<space|2spc>Extended real numbers
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-55>>
+
+      <with|par-left|<quote|1tab>|10.5.5<space|2spc>Conventions
+      \ <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-56>>
     </associate>
   </collection>
 </auxiliary>
