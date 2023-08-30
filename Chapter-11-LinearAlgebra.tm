@@ -2025,8 +2025,12 @@
       <math|\<alpha\>\<odot\>0<rsub|v>=0<rsub|v>>
 
       <item>If for <math|\<alpha\>\<in\>F\\<around*|{|0<rsub|f>|}>> we have
-      if <math|x\<in\>V> with <math|\<alpha\>\<odot\>x=0<rsub|v>> then
+      if <math|x\<in\>V> with <math|\<alpha\>\<odot\>x=0<rsub|v>> that
       <math|x=0<rsub|v>>
+
+      <item>If <math|x\<in\>V\\<around*|{|0|}>> then ee have if
+      <math|\<alpha\>\<in\>F> with <math|\<alpha\>\<cdot\>x=0> that
+      <math|\<alpha\>=0>.
     </enumerate>
   </theorem>
 
@@ -2067,6 +2071,12 @@
       <\equation*>
         0<rsub|v>\<equallim\><rsub|<around*|(|3|)>>\<alpha\><rsup|-1>\<odot\>0<rsub|v>\<equallim\><rsub|<around*|(|1|)>>\<alpha\><rsup|-1>\<odot\><around*|(|\<alpha\>\<odot\>x|)>=<around*|(|\<alpha\><rsup|-1>\<cdot\>\<alpha\>|)>\<odot\>x=1\<odot\>x=x
       </equation*>
+
+      <item>Let <math|x\<in\>V\\<around*|{|0|}>> and <math|\<alpha\>\<in\>F>
+      such that <math|\<alpha\>\<cdot\>x=0>. Assume that
+      <math|\<alpha\>\<neq\>0> then by (4) we have that <math|x=0>
+      contradicting <math|x\<in\>V\\<around*|{|0|}>>, so we must have that
+      <math|\<alpha\>=0>.
     </enumerate>
   </proof>
 
@@ -5065,8 +5075,8 @@
       <tformat|<table|<row|<cell|>|<cell|<around*|{|v<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>V<text|
       is a basis of <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>>>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|\<forall\>v\<in\>V
       there exist a <with|font-series|bold|unique>
-      <around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\>I>\<subseteq\>F\\<around*|{|0|}>
-      with finite support \ \ such that v=<big|sum><rsub|i\<in\>I><around*|(|\<alpha\><rsub|i>\<cdot\>v<rsub|i>|)>>|<cell|>>>>
+      <around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\>I>\<subseteq\>F with finite
+      support \ \ such that v=<big|sum><rsub|i\<in\>I><around*|(|\<alpha\><rsub|i>\<cdot\>v<rsub|i>|)>>|<cell|>>>>
     </eqnarray*>
 
     The <with|font-series|bold|unique> <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\>I>>
@@ -5446,11 +5456,30 @@
   </proof>
 
   <\corollary>
+    <label|basis extending a linear independent set to a basis>Let
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a vector space
+    over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> and let
+    <math|R\<subseteq\>V> be a linear independent set then there exists a
+    <math|B\<subseteq\>V> such that <math|R\<subseteq\>B> and
+    <math|<around*|{|b|}><rsub|b\<in\>B>> is a basis of
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
+  </corollary>
+
+  <\proof>
+    As by [theorem: <reference|linear span of a subspace>]
+    <math|V=span<around*|(|V|)>> and <math|R\<subseteq\>V> ther exists bu
+    [theorem: <reference|basis extension>] that there exists a <math|B> such
+    that <math|R\<subseteq\>B\<subseteq\>V> and
+    <math|<around*|{|b|}><rsub|b\<in\>B>> is a basis of
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>.
+  </proof>
+
+  <\corollary>
     <label|basis existence (1)>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
     be a vector space over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
     and let <math|W\<subseteq\>V> such that <math|span<around*|(|W|)>=V> then
     there exists a <math|B\<subseteq\>W> such that
-    <math|<around*|{|b|}><rsub|b\<in\>W>> is a basis of
+    <math|<around*|{|b|}><rsub|b\<in\>B>> is a basis of
     <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>.
   </corollary>
 
@@ -6257,7 +6286,7 @@
   <\theorem>
     The vector space <math|<around*|\<langle\>|\<bbb-C\>,+,\<cdot\>|\<rangle\>>>
     over <math|<around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>> [see
-    example: <reference|vector space C real>]has as basis
+    example: <reference|vector space C real>] has as basis
     <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,2|}>>> where
     <math|e<rsub|1>=1> and <math|e<rsub|2>=i> so that
     <math|dim<around*|(|\<bbb-C\>|)>=2>
@@ -6399,6 +6428,8 @@
 
   <section|Linear mappings >
 
+  <subsection|Definition and spaces of linear mappings>
+
   Similar to the concepts of group, ring, field homeomorphisms we have also
   mappings that preserves th structure of vector spaces, these are called
   linear mappings. Linear mappings are used later in Banach spaces, Hilbert
@@ -6448,6 +6479,254 @@
     <\equation*>
       \<pi\><rsub|i><around*|(|\<alpha\>\<cdot\>x|)>=\<alpha\>\<cdot\>x<rsub|i>=\<alpha\>\<cdot\>\<pi\><rsub|i><around*|(|x|)>
     </equation*>
+  </proof>
+
+  <\definition>
+    <label|linear mapping linear isomorphism>If
+    <math|<around*|\<langle\>|X,+,\<cdot\>|\<rangle\>>> and
+    <math|<around*|\<langle\>|Y,+,\<cdot\>|\<rangle\>>> are vector spaces
+    over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> then a
+    mapping <math|L:X\<rightarrow\>Y> is a linear isomorphism iff\ 
+
+    <\enumerate>
+      <item><math|L:X\<rightarrow\>Y> is a bijection
+
+      <item><math|L:X\<rightarrow\>Y> is a linear mapping
+    </enumerate>
+  </definition>
+
+  We can now consider the space of all linear mappings between two vector
+  spaces and show that this is also a vector space.
+
+  <\definition>
+    <label|linear mapping Hom(X,Y) definition><index|<math|Hom<around*|(|X,Y|)>>>Let
+    <math|<around*|\<langle\>|X,+,\<cdot\>|\<rangle\>>> and
+    <math|<around*|\<langle\>|Y,+,\<cdot\>|\<rangle\>>> be vector spaces over
+    the field <math|<around*|\<langle\>|F,*+,\<cdot\>|\<rangle\>>> then
+    <math|Hom<around*|(|X,Y|)>\<subseteq\>Y<rsup|X>> is defined as follows
+
+    <\equation*>
+      Hom<around*|(|X,Y|)>=<around*|{|f\<in\>Y<rsup|X>\|f<text| is
+      linear>|}>\<subseteq\>Y<rsup|X>
+    </equation*>
+
+    In other words <math|Hom<around*|(|X,Y|)>> is the set of all linear
+    mappings between <math|X> and <math|Y>
+  </definition>
+
+  In [theorem: <reference|vector space function space>] it is proved that
+  <math|<around*|\<langle\>|Y<rsup|X>,+,\<cdot\>|\<rangle\>>> i a vector
+  space where for <math|f,g\<in\>Y<rsup|X>>, <math|\<alpha\>\<in\>F>:
+
+  <\enumerate>
+    <item><math|f+g:X\<rightarrow\>Y> is defined by
+    <math|<around*|(|f+g|)><around*|(|x|)>=f<around*|(|x|)>+g<around*|(|x|)>>
+
+    <item><math|\<alpha\>\<cdot\>f:X\<rightarrow\>Y> is defined by
+    <math|<around*|(|\<alpha\>\<cdot\>f|)><around*|(|x|)>=\<alpha\>\<cdot\>f<around*|(|x|)>>
+
+    <item><math|C<rsub|0>=0:X\<rightarrow\>Y> is defined by
+    <math|0<around*|(|x|)>=0>
+
+    <item><math|<around*|(|-f|)>:X\<rightarrow\>Y> is defined by
+    <math|<around*|(|-f|)><around*|(|x|)>=-f<around*|(|x|)>>
+  </enumerate>
+
+  As <math|Hom<around*|(|X,Y|)>\<subseteq\>Y<rsup|X>> a natural question to
+  ask is if <math|Hom<around*|(|X,Y|)>> is a sub-space of
+  <math|<around*|\<langle\>|Y<rsup|X>,+,\<cdot\>|\<rangle\>>>, it turns out
+  that the question is true, as is shown in the next theorem.
+
+  <\theorem>
+    <label|linear mapping Hom(X,Y)>Let <math|<around*|\<langle\>|X,+,\<cdot\>|\<rangle\>>>
+    and <math|<around*|\<langle\>|Y,+,\<cdot\>|\<rangle\>>> be vector spaces
+    over the field <math|<around*|\<langle\>|F,*+,\<cdot\>|\<rangle\>>> then
+    <math|Hom<around*|(|X,Y|)>> is a sub-space of
+    <math|<around*|\<langle\>|Y<rsup|X>,+,\<cdot\>|\<rangle\>>>. Applying
+    then [theorem: <reference|vector space sub-space is a vector space>]
+    proves that <math|<around*|\<langle\>|Hom<around*|(|X,Y|)>,+,\<cdot\>|\<rangle\>>>
+    is vector space over the field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>.
+  </theorem>
+
+  <\proof>
+    Let <math|L<rsub|1>,L<rsub|2>\<in\>Hom<around*|(|X,Y|)>>,
+    <math|\<alpha\>,\<beta\>\<in\>F> then for <math|x,y\<in\>X> and
+    <math|\<gamma\>\<in\>F> we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|\<alpha\>\<cdot\>L<rsub|1>+\<beta\>\<cdot\>L<rsub|2>|)><around*|(|x+y|)>>|<cell|=>|<cell|<around*|(|\<alpha\>\<cdot\>L<rsub|1>|)><around*|(|x+y|)>+<around*|(|\<beta\>\<cdot\>L<rsub|2>|)><around*|(|x+y|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\>L<rsub|1><around*|(|x+y|)>+\<beta\>\<cdot\>L<rsub|2><around*|(|x+y|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\><around*|(|L<rsub|1><around*|(|x|)>+L<rsub|1><around*|(|y|)>|)>+\<beta\>\<cdot\><around*|(|L<rsub|2><around*|(|x|)>+L<rsub|2><around*|(|y|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\>L<rsub|1><around*|(|x|)>+\<alpha\>\<cdot\>L<rsub|1><around*|(|y|)>+\<beta\>\<cdot\>L<rsub|2><around*|(|x|)>+\<beta\>\<cdot\>L<rsub|2><around*|(|y|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\>L<rsub|1><around*|(|x|)>+\<beta\>\<cdot\>L<rsub|2><around*|(|x|)>+\<alpha\>\<cdot\>L<rsub|1><around*|(|y|)>+\<beta\>\<cdot\>L<rsub|2><around*|(|y|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<alpha\>\<cdot\>L<rsub|1>|)><around*|(|x|)>+<around*|(|\<beta\>\<cdot\>L<rsub|2>|)><around*|(|y|)>+<around*|(|\<alpha\>\<cdot\>L<rsub|1>|)><around*|(|y|)>+<around*|(|\<beta\>\<cdot\>L<rsub|2>|)><around*|(|y|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<alpha\>\<cdot\>L<rsub|1>+\<beta\>\<cdot\>L<rsub|2>|)><around*|(|x|)>+<around*|(|\<alpha\>\<cdot\>L<rsub|1>+\<beta\>\<cdot\>L<rsub|2>|)><around*|(|y|)>>>|<row|<cell|<around*|(|\<alpha\>\<cdot\>L<rsub|1>+\<beta\>\<cdot\>L<rsub|2>|)><around*|(|\<gamma\>\<cdot\>x|)>>|<cell|=>|<cell|<around*|(|\<alpha\>\<cdot\>L<rsub|1>|)><around*|(|\<gamma\>\<cdot\>x|)>+<around*|(|\<beta\>\<cdot\>L<rsub|2>|)><around*|(|\<gamma\>\<cdot\>x|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\>L<rsub|1><around*|(|\<gamma\>\<cdot\>x|)>+\<beta\>\<cdot\>L<rsub|2><around*|(|\<gamma\>\<cdot\>x|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\><around*|(|\<gamma\>\<cdot\>L<rsub|1><around*|(|x|)>|)>+\<beta\>\<cdot\><around*|(|\<gamma\>\<cdot\>L<rsub|2><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<gamma\>\<cdot\><around*|(|\<alpha\>\<cdot\>L<rsub|1><around*|(|x|)><rsub|>|)>+\<gamma\>\<cdot\><around*|(|\<beta\>\<cdot\>L<rsub|2><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<gamma\>\<cdot\><around*|(|<around*|(|\<alpha\>\<cdot\>L<rsub|1><around*|(|x|)>|)>|)>+\<gamma\>\<cdot\><around*|(|<around*|(|\<beta\>\<cdot\>L<rsub|2>|)><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<gamma\>\<cdot\><around*|(|<around*|(|\<alpha\>\<cdot\>L<rsub|1>|)><around*|(|x|)>+<around*|(|\<beta\>\<cdot\>L<rsub|2>|)><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<gamma\>\<cdot\><around*|(|\<alpha\>\<cdot\>L<rsub|1>+\<beta\>\<cdot\>L<rsub|2>|)><around*|(|x|)>>>|<row|<cell|0<around*|(|x+y|)>>|<cell|=>|<cell|0>>|<row|<cell|>|<cell|=>|<cell|0+0>>|<row|<cell|>|<cell|=>|<cell|0<around*|(|x|)>+0<around*|(|y|)>>>|<row|<cell|0<around*|(|\<gamma\>\<cdot\>x|)>>|<cell|=>|<cell|0>>|<row|<cell|>|<cell|=>|<cell|\<gamma\>\<cdot\>0>>|<row|<cell|>|<cell|=>|<cell|\<gamma\>\<cdot\>0<around*|(|x|)>>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation*>
+      \<alpha\>\<cdot\>L<rsub|1>+\<beta\>\<cdot\>L<rsub|2>\<in\>Hom<around*|(|X,Y|)><text|
+      and >0\<in\>Hom<around*|(|X,Y|)>\<Rightarrow\>Home<around*|(|X,Y|)>
+    </equation*>
+
+    hence by definition we have that <math|Hom<around*|(|X,Y|)>> is a
+    sub-space of <math|<around*|\<langle\>|Y<rsup|X>,+,\<cdot\>|\<rangle\>>>
+  </proof>
+
+  A special case of <math|Hom<around*|(|X,Y|)>> is the dual space of a vecor
+  space.
+
+  <\definition>
+    Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a vector space
+    over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> then the
+    dual space of <math|V> noted by <math|V<rsup|\<ast\>>> is defined by\ 
+
+    <\equation*>
+      V<rsup|\<ast\>>=Hom<around*|(|X,F|)>
+    </equation*>
+
+    hence <math|V<rsup|\<ast\>>> i the set of linear mappings between
+    <math|V> and <math|F>. Thanks to [theorem: <reference|linear mapping
+    Hom(X,Y)>] <math|<around*|\<langle\>|V<rsup|\<ast\>>,+,\<cdot\>|\<rangle\>>>
+    is a vector space over the field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>.
+  </definition>
+
+  <\definition>
+    <index|<math|GL<around*|(|V|)>>><label|linear mapping general linear
+    group><dueto|General Linear Group>Let
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a vector space
+    over the field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> then
+    the <with|font-series|bold|general linear group of <math|V>> noted by
+    <math|GL<around*|(|V|)>> is defined by\ 
+
+    <\equation*>
+      GL<around*|(|V|)>=<around*|{|L\<in\>Hom<around*|(|V,V|)>\|L<text| is a
+      bijection>|}>\<subseteq\>Hom<around*|(|V,V|)>
+    </equation*>
+
+    In othere words <math|GL<around*|(|V|)>> is the set of linear
+    isomorphisms between <math|V> and itself.
+  </definition>
+
+  <subsection|Properties of linear mappings>
+
+  <\theorem>
+    <label|linear mapping dual space unit mapping>Let
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a vector space
+    over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> and
+    <math|x\<in\>V> with <math|x\<neq\>0> then
+    <math|\<exists\>L\<in\>V<rsup|\<ast\>>> such that
+    <math|L<around*|(|x|)>=1>
+  </theorem>
+
+  <\proof>
+    Let <math|x\<in\>V> with <math|x\<neq\>0> then if
+    <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|x|}>>\<subseteq\>F>
+    such that <math|0=<big|sum><rsub|i\<in\><around*|{|x|}>><around*|(|\<alpha\><rsub|i>\<cdot\>i|)>=\<alpha\><rsub|x>\<cdot\>x>,
+    applying [theorem: <reference|vector space properties (1)> (5)] it
+    follows that <math|\<alpha\><rsub|x>=0> proving that\ 
+
+    <\equation*>
+      <around*|{|x|}><text| is linear independent>
+    </equation*>
+
+    Using [theorem: <reference|basis extending a linear independent set to a
+    basis>] there exists a set <math|B> such that
+    <math|<around*|{|x|}>\<subseteq\>B\<Rightarrow\>x\<in\>B> and
+    <math|<around*|{|b|}><rsub|b\<in\>B>> is a basis of
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>. If <math|y\<in\>V>
+    then there exists by [theorem: <reference|basis coordinates>] a
+    <with|font-series|bold|unique> <math|<around*|{|\<alpha\><rsup|<around*|(|y|)>><rsub|b>|}><rsub|b\<in\>B>>
+    with finite support such that
+
+    <\equation*>
+      y=<big|sum><rsub|b\<in\>B><around*|(|\<alpha\><rsup|<around*|(|y|)>><rsub|b>\<cdot\>b|)>
+    </equation*>
+
+    Define
+
+    <\equation*>
+      L:V\<rightarrow\>F<text| by >L<around*|(|y|)>=<big|sum><rsub|b\<in\>B>\<alpha\><rsup|<around*|(|y|)>><rsub|b>
+    </equation*>
+
+    If we define <math|<around*|{|\<alpha\><rsub|b>|}><rsub|b\<in\>B>> by
+    <math|\<alpha\><rsub|b>=<choice|<tformat|<table|<row|<cell|1<text| if
+    >b=x>>|<row|<cell|0<text| if >b\<in\>B\\<around*|{|x|}>>>>>>> then
+
+    <\equation*>
+      <big|sum><rsub|b\<in\>B><around*|(|\<alpha\><rsub|b>\<cdot\>b|)>\<equallim\><rsub|<text|[theorem:
+      <reference|support over disjoint subsets>]>><big|sum><rsub|b\<in\>B\\<around*|{|x|}>><around*|(|\<alpha\><rsub|b>\<cdot\>b|)>+<big|sum><rsub|b\<in\><around*|{|x|}>><around*|(|\<alpha\><rsub|b>\<cdot\>b|)>\<equallim\><rsub|<text|[theorems:
+      <reference|support of neutral element (2)>, <reference|support over a
+      singleton>]>>0+\<alpha\><rsub|x>\<cdot\>x=1\<ast\>x=x
+    </equation*>
+
+    so that <math|<around*|{|\<alpha\><rsup|<around*|(|x|)>><rsub|b>|}><rsub|b\<in\>B>=<around*|{|\<alpha\><rsub|b>|}><rsub|b\<in\>B>>.
+    Hence\ 
+
+    <\equation*>
+      L<around*|(|x|)>=<big|sum><rsub|b\<in\>B>\<alpha\><rsub|b>\<equallim\><rsub|<text|[theorem:
+      <reference|support over disjoint subsets>]>><big|sum><rsub|b\<in\>B\\<around*|{|x|}>>\<alpha\><rsub|b>+<big|sum><rsub|b\<in\><around*|{|x|}>>\<alpha\><rsub|b>\<equallim\><rsub|<text|[theorems:
+      <reference|support of neutral element (2)>, <reference|support over a
+      singleton>]>>\<alpha\><rsub|x>=1
+    </equation*>
+
+    proving that\ 
+
+    <\equation*>
+      L<around*|(|x|)>=1
+    </equation*>
+
+    Let <math|y,z\<in\>V> and <math|\<alpha\>\<in\>F> then
+    <math|y=<big|sum><rsub|b\<in\>B><around*|(|\<alpha\><rsup|<around*|(|y|)>><rsub|b>\<cdot\>b|)>>
+    and <math|z=<big|sum><rsub|b\<in\>B><around*|(|\<alpha\><rsup|<around*|(|z|)>><rsub|b>\<cdot\>b|)>>
+    then we have\ 
+
+    <\equation*>
+      y+z=<big|sum><rsub|b\<in\>B><around*|(|\<alpha\><rsup|<around*|(|y|)>><rsub|b>\<cdot\>b|)>+<big|sum><rsub|b\<in\>B><around*|(|\<alpha\><rsup|<around*|(|z|)>><rsub|b>\<cdot\>b|)>\<equallim\><rsub|<text|[theorem:
+      <reference|support of sums (2)>]>><big|sum><rsub|b\<in\>B><around*|(|\<alpha\><rsub|b><rsup|<around*|(|y|)>>\<cdot\>b+\<alpha\><rsup|<around*|(|z|)>><rsub|b>\<cdot\>b|)>=<big|sum><rsub|b\<in\>B><around*|(|<around*|(|\<alpha\><rsup|<around*|(|y|)>><rsub|b>+\<alpha\><rsup|<around*|(|z|)>><rsub|b>|)>\<cdot\>b|)>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      \<alpha\>\<cdot\>y=\<alpha\>\<cdot\><big|sum><rsub|b\<in\>B><around*|(|\<alpha\><rsup|<around*|(|y|)>><rsub|b>\<cdot\>b|)><math|\<equallim\><rsub|<text|[theorem:
+      <reference|support space finite sum
+      (1)>]>><big|sum><rsub|b\<in\>B><around*|(|\<alpha\>\<cdot\><around*|(|\<alpha\><rsup|<around*|(|y|)>><rsub|b>\<cdot\>b|)>|)>=<big|sum><rsub|b\<in\>B><around*|(|<around*|(|\<alpha\>\<cdot\>\<alpha\><rsup|<around*|(|y|)>><rsub|b>|)>\<cdot\>b|)>>
+    </equation*>
+
+    so that <math|<around*|{|\<alpha\><rsup|<around*|(|y+z|)>><rsub|b>|}><rsub|b\<in\>B>=<around*|{|\<alpha\><rsup|<around*|(|y|)>><rsub|b>+\<alpha\><rsup|<around*|(|z|)>><rsub|b>|}><rsub|b\<in\>B>>
+    and <math|<around*|{|\<alpha\><rsup|<around*|(|\<alpha\>\<cdot\>y|)>><rsub|b>|}><rsub|b\<in\>B>=<around*|{|\<alpha\>\<cdot\>\<alpha\><rsup|<around*|(|y|)>><rsub|b>|}><rsub|b\<in\>B>>,
+    hence \ 
+
+    <\equation*>
+      L<around*|(|y+z|)>=<big|sum><rsub|b\<in\>B><around*|(|\<alpha\><rsup|<around*|(|y|)>><rsub|b>+\<alpha\><rsup|<around*|(|z|)>><rsub|b>|)><rsub|b\<in\>B>=\<equallim\><rsub|<text|[theorem:
+      <reference|support of sums (2)>]>><big|sum><rsub|b\<in\>B>\<alpha\><rsup|<around*|(|y|)>><rsub|b><rsub|b\<in\>B>+<big|sum><rsub|b\<in\>B>\<alpha\><rsup|<around*|(|z|)>><rsub|b><rsub|b\<in\>B>=L<around*|(|y|)>+L<around*|(|z|)>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      L<around*|(|\<alpha\>\<cdot\>y|)>=<big|sum><rsub|b\<in\>B><around*|(|\<alpha\>\<cdot\>\<alpha\><rsup|<around*|(|y|)>><rsub|b>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|support space finite sum
+      (1)>]>>\<alpha\>\<cdot\><big|sum><rsub|b\<in\>B>\<alpha\><rsup|<around*|(|y|)>><rsub|b>=\<alpha\>\<cdot\>L<around*|(|y|)>
+    </equation*>
+
+    proving that\ 
+
+    <\equation*>
+      L<text| is linear or >L\<in\>Hom<around*|(|V,F|)>
+    </equation*>
+  </proof>
+
+  <\corollary>
+    <label|linear mapping way to test equality>Let
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a vector space
+    over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+    <math|x,y\<in\>X> such that <math|\<forall\>L\<in\>Hom<around*|(|V,F|)>>
+    we have <math|L<around*|(|x|)>=L<around*|(|y|)>> then <math|x=y>.
+  </corollary>
+
+  <\proof>
+    Assume that <math|x\<neq\>y> then <math|x-y\<neq\>0> then by [theorem:
+    <reference|linear mapping dual space unit mapping>] there exist a
+    <math|L\<in\>Hom<around*|(|V,F|)>> such that <math|L<around*|(|x-y|)>=1>
+    contradicting <math|L<around*|(|x-y|)>=L<around*|(|x|)>-L<around*|(|y|)>=0>.
+    So we must have that <math|x=y>.
   </proof>
 
   <\lemma>
@@ -6648,6 +6927,231 @@
     </enumerate>
   </proof>
 
+  <\example>
+    Consider the vector space <math|<around*|\<langle\>|\<bbb-C\>,+,\<cdot\>|\<rangle\>>>
+    then we have that\ 
+
+    <\enumerate>
+      <item><math|Img:\<bbb-C\>\<rightarrow\>\<bbb-R\>> defined by
+      <math|Img<around*|(|x+i\<cdot\>y|)>=y> is linear
+
+      <item><math|Re:\<bbb-C\>\<rightarrow\>\<bbb-R\>> defined by
+      <math|Re<around*|(|x+i\<cdot\>y|)>=x> is linear
+
+      <item>If <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<bbb-C\>>
+      is family with finite support then\ 
+
+      <\enumerate>
+        <item><math|Img<around*|(|<big|sum><rsub|i\<in\>I>x<rsub|i>|)>=<big|sum><rsub|i\<in\>I>Img<around*|(|x<rsub|i>|)>>
+
+        <item><math|re<around*|(|<big|sum><rsub|i\<in\>I>x<rsub|i>|)>=<big|sum><rsub|i\<in\>I>Re<around*|(|x<rsub|i>|)>>
+      </enumerate>
+    </enumerate>
+  </example>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>This follows from [theorem: <reference|complex real. imaginair
+      properties>].
+
+      <item>This follows from [theorem: <reference|complex real. imaginair
+      properties>].
+
+      <item>This follows from (1), (2) and [theorem: <reference|linear
+      mapping general sum>]
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|linear mapping inverse isomorphism>Let
+    <math|<around*|\<langle\>|X,+,\<cdot\>|\<rangle\>>> and
+    <math|<around*|\<langle\>|Y,+,\<cdot\>|\<rangle\>>> be vector spaces over
+    a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> and
+    \ <math|L:X\<rightarrow\>Y> a linear isomorphism then
+    <math|L<rsup|-1>:Y\<rightarrow\>X> is also a linear isomorphism.
+  </theorem>
+
+  <\proof>
+    Let <math|x,y\<in\>Y> then <math|L<rsup|-1><around*|(|x|)>,L<rsup|-1><around*|(|y|)>\<in\>X>
+    and we have
+
+    <\equation*>
+      L<around*|(|L<rsup|-1><around*|(|x|)>+L<rsup|-1><around*|(|y|)>|)>=L<around*|(|L<rsup|-1><around*|(|x|)>|)>+L<around*|(|L<rsup|-1><around*|(|y|)>|)>=x+y
+    </equation*>
+
+    so that\ 
+
+    <\equation*>
+      L<rsup|-1><around*|(|x+y|)>=L<rsup|-1><around*|(|x|)>+L<rsup|-1><around*|(|y|)>
+    </equation*>
+
+    Further if <math|\<alpha\>\<in\>F> then\ 
+
+    <\equation*>
+      L<around*|(|\<alpha\>\<cdot\>L<rsup|-1><around*|(|x|)>|)>=\<alpha\>\<cdot\>L<around*|(|L<rsup|-1><around*|(|x|)>|)>=\<alpha\>\<cdot\>x
+    </equation*>
+
+    so that\ 
+
+    <\equation*>
+      L<rsup|-1><around*|(|\<alpha\>\<cdot\>x|)>=\<alpha\>\<cdot\>L<rsup|-1><around*|(|x|)>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|linear mapping composition>Let
+    <math|<around*|\<langle\>|X,+,\<cdot\>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,+,\<cdot\>|\<rangle\>>> and
+    <math|<around*|\<langle\>|Z,+,\<cdot\>|\<rangle\>>> be vector spaces over
+    a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> then we have:
+
+    <\enumerate>
+      <item>If <math|L<rsub|1>\<in\>Hom<around*|(|X,Y|)>>,
+      <math|L<rsub|2>\<in\>Hom<around*|(|Y,Z|)>> then
+      <math|L<rsub|2>\<circ\>L<rsub|1>\<in\>Hom<around*|(|X,Z|)>>
+
+      <item>If <math|L<rsub|1>\<in\>Hom<around*|(|X,Y|)>>,
+      <math|L<rsub|2>\<in\>Hom<around*|(|Y,Z|)>> are isomorphisms then
+      <math|L<rsub|2>\<circ\>L<rsub|1>\<in\>Hom<around*|(|X,Z|)>> is a
+      isomorphism.
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|x,y\<in\>X> and <math|\<alpha\>\<in\>F> then we have:
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|L<rsub|2>\<circ\>L<rsub|1>|)><around*|(|x+y|)>>|<cell|=>|<cell|L<rsub|2><around*|(|L<rsub|1><around*|(|x+y|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L<rsub|2><around*|(|L<rsub|1><around*|(|x|)>+L<rsub|1><around*|(|y|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L<rsub|2><around*|(|L<rsub|1><around*|(|x|)>|)>+L<rsub|2><around*|(|L<rsub|1><around*|(|y|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|L<rsub|2>\<circ\>L<rsub|1>|)><around*|(|x|)>+<around*|(|L<rsub|2>\<circ\>L<rsub|1>|)><around*|(|y|)>>>|<row|<cell|<around*|(|L<rsub|2>\<circ\>L<rsub|1>|)><around*|(|\<alpha\>\<cdot\>x|)>>|<cell|=>|<cell|L<rsub|2><around*|(|L<rsub|1><around*|(|\<alpha\>\<cdot\>x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L<rsub|2><around*|(|\<alpha\>\<cdot\>L<rsub|1><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\><around*|(|L<rsub|2>\<circ\>L<rsub|1>|)><around*|(|x|)>>>>>
+      </eqnarray*>
+
+      <item>This follows from (1) and [theorem: <reference|function
+      composition injectivity, surjectivity and bijectivity (1)>]
+    </enumerate>
+  </proof>
+
+  Applying the above on <math|GL<around*|(|V|)>> gives\ 
+
+  <\theorem>
+    <label|linear mapping general linear group is a group>Let
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a vector space
+    over <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> then
+    <math|<around*|\<langle\>|GL<around*|(|V|)>,\<circ\>|\<rangle\>>> is a
+    group with neutral element <math|Id<rsub|V>> and for
+    <math|L\<in\>GL<around*|(|V|)>> for <math|L<rsup|-1>\<in\>GL<around*|(|V|)>>
+    is the inverse element.\ 
+  </theorem>
+
+  <\proof>
+    If <math|L<rsub|1>\<in\>GL<around*|(|V|)>> and
+    <math|L<rsub|2>\<in\>GL<around*|(|V|)>> then
+    <math|L<rsub|1>,L<rsub|2>\<in\>Hom<around*|(|V,V|)>> so that by [theorem:
+    <reference|linear mapping composition>] we have that
+    <math|L<rsub|2>\<circ\>L<rsub|1>:V\<rightarrow\>V> is alinear
+    isomorphism, hence <math|L<rsub|2>\<circ\>L<rsub|1>\<in\>GL<around*|(|V|)>>
+    so that
+
+    <\equation*>
+      \<circ\>:GL<around*|(|V|)>\<times\>GL<around*|(|V|)>\<rightarrow\>GL<around*|(|V|)><text|
+      is a operator>
+    </equation*>
+
+    futher we have\ 
+
+    <\description>
+      <item*|associativity>This follows from [theorem: <reference|partial
+      function associativity>]
+
+      <item*|neutral element>Let <math|x,y\<in\>V> and
+      <math|\<alpha\>\<in\>F> then we have that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|Id<rsub|V><around*|(|x+y|)>>|<cell|=>|<cell|x+y>>|<row|<cell|>|<cell|=>|<cell|Id<rsub|V><around*|(|x|)>+Id<rsub|V><around*|(|y|)>>>|<row|<cell|Id<rsub|V><around*|(|\<alpha\>\<cdot\>x|)>>|<cell|=>|<cell|\<alpha\>\<cdot\>x>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\>Id<rsub|V><around*|(|x|)>>>>>
+      </eqnarray*>
+
+      proving that\ 
+
+      <\equation*>
+        Id<rsub|V>\<in\>GL<around*|(|V|)>
+      </equation*>
+
+      Further if <math|L\<in\>GL<around*|(|V|)>> then\ 
+
+      <\equation*>
+        L\<circ\>Id<rsub|V>\<equallim\><rsub|<text|[theorem:
+        <reference|function composition of Id
+        function>]>>L\<equallim\><rsub|<text|[theorem: <reference|function
+        composition of Id function>]>>Id<rsub|V>\<circ\>L
+      </equation*>
+
+      <item*|inverse element>If <math|L\<in\>GL<around*|(|V|)>> then by
+      [theorem: <reference|linear mapping inverse isomorphism>]
+      <math|L<rsup|-1>\<in\>GL<around*|(|V|)>> so that\ 
+
+      <\equation*>
+        L\<circ\>L<rsup|-1>=Id<rsub|V>=L<rsup|-1>\<circ\>L
+      </equation*>
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|linear mapping general linear group faithfull action>Let
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a vector space
+    over <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> then for the
+    genral linear group <math|<around*|\<langle\>|GL<around*|(|V|)>,\<circ\>|\<rangle\>>>
+    we have for\ 
+
+    <\equation*>
+      \<vartriangleright\>:GL<around*|(|V|)>\<times\>V\<rightarrow\>V<text|
+      defined by >L\<vartriangleright\>x=L<around*|(|x|)>
+    </equation*>
+
+    that <math|\<vartriangleright\>> is a <with|font-series|bold|faitful left
+    action> [see definitions: <reference|group left (right action)>,
+    <reference|group faithful, transitive action (1)>]
+  </theorem>
+
+  <\proof>
+    First we prove that <math|\<vartriangleright\>> is a left action
+    [definition: <reference|group left (right action)>]\ 
+
+    <\enumerate>
+      <item><math|\<forall\>x\<in\>V> we have
+      <math|Id<rsub|V>\<vartriangleright\>x=Id<rsub|V><around*|(|x|)>=x>
+
+      <item>If <math|L<rsub|1>,L<rsub|2>\<in\>GL<around*|(|V|)>> then
+      <math|\<forall\>x\<in\>V> we have
+
+      <\equation*>
+        <around*|(|L<rsub|2>\<circ\>L<rsub|1>|)>\<vartriangleright\>x=<around*|(|L<rsub|2>\<circ\>L<rsub|1>|)><around*|(|x|)>=L<rsub|2><around*|(|L<rsub|1><around*|(|x|)>|)>=L<rsub|2><around*|(|L<rsub|1>\<vartriangleright\>x|)>=L<rsub|2>\<vartriangleright\><around*|(|L<rsub|1>\<vartriangleright\>x|)>
+      </equation*>
+    </enumerate>
+
+    Given <math|L\<in\>GL<around*|(|X|)>> define
+    <math|L<rsub|\<vartriangleright\>>:V\<rightarrow\>V> by
+    <math|L<rsub|\<vartriangleright\>><around*|(|x|)>=L\<vartriangleright\>x=L<around*|(|x|)>>
+    then we have:
+
+    <\enumerate>
+      <item>If <math|L<rsub|\<vartriangleright\>>=Id<rsub|V>> then
+      <math|\<forall\>x\<in\>V> we have <math|L<around*|(|x|)>=L<rsub|\<vartriangleright\>><around*|(|x|)>=Id<rsub|V><around*|(|x|)>=x>
+      proving that <math|L=Id<rsub|V>>
+
+      <item>If <math|L=Id<rsub|V>> then <math|\<forall\>x\<in\>V> we have
+      <math|x=L<around*|(|x|)>=L<rsub|\<vartriangleright\>><around*|(|x|)>>
+      proving that <math|L<rsub|\<vartriangleright\>>=Id<rsub|V>>
+    </enumerate>
+
+    hence using [definition: <reference|group faithful, transitive action
+    (1)>] <math|\<vartriangleright\>> is faithful.
+  </proof>
+
+  \;
+
   <section|Multilinear mappings>
 
   <section|Deteminant Functions>
@@ -6690,34 +7194,40 @@
     <associate|auto-3|<tuple|11.1.1|?>>
     <associate|auto-30|<tuple|11.2.3.4|?>>
     <associate|auto-31|<tuple|11.3|?>>
-    <associate|auto-32|<tuple|linear mapping|?>>
-    <associate|auto-33|<tuple|11.4|?>>
-    <associate|auto-34|<tuple|11.5|?>>
+    <associate|auto-32|<tuple|11.3.1|?>>
+    <associate|auto-33|<tuple|linear mapping|?>>
+    <associate|auto-34|<tuple|<with|mode|<quote|math>|Hom<around*|(|X,Y|)>>|?>>
+    <associate|auto-35|<tuple|<with|mode|<quote|math>|GL<around*|(|V|)>>|?>>
+    <associate|auto-36|<tuple|11.3.2|?>>
+    <associate|auto-37|<tuple|11.4|?>>
+    <associate|auto-38|<tuple|11.5|?>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|<big|sum><rsub|i=0><rsup|n>x<rsub|i>>|?>>
     <associate|auto-5|<tuple|<with|mode|<quote|math>|<big|prod><rsub|i=0><rsup|n>x<rsub|i>>|?>>
     <associate|auto-6|<tuple|11.1.2|?>>
     <associate|auto-7|<tuple|11.1.3|?>>
     <associate|auto-8|<tuple|permutation|?>>
     <associate|auto-9|<tuple|<with|mode|<quote|math>|\<sigma\>>|?>>
-    <associate|basis Kronecker delta|<tuple|11.131|?>>
+    <associate|basis Kronecker delta|<tuple|11.132|?>>
     <associate|basis and bijection|<tuple|11.113|?>>
     <associate|basis condition|<tuple|11.112|?>>
     <associate|basis coordinates|<tuple|11.116|?>>
-    <associate|basis dimensionality|<tuple|11.127|?>>
-    <associate|basis empty basis|<tuple|11.123|?>>
-    <associate|basis exist|<tuple|11.119|?>>
-    <associate|basis existence (1)|<tuple|11.118|?>>
+    <associate|basis dimensionality|<tuple|11.128|?>>
+    <associate|basis empty basis|<tuple|11.124|?>>
+    <associate|basis exist|<tuple|11.120|?>>
+    <associate|basis existence (1)|<tuple|11.119|?>>
+    <associate|basis extending a linear independent set to a
+    basis|<tuple|11.118|?>>
     <associate|basis extension|<tuple|11.117|?>>
-    <associate|basis finite|<tuple|11.124|?>>
+    <associate|basis finite|<tuple|11.125|?>>
     <associate|basis finite/infinite|<tuple|11.111|?>>
-    <associate|basis infinite|<tuple|11.125|?>>
-    <associate|basis of a field|<tuple|11.128|?>>
+    <associate|basis infinite|<tuple|11.126|?>>
+    <associate|basis of a field|<tuple|11.129|?>>
     <associate|basis of a vector space|<tuple|11.110|?>>
     <associate|basis of non trivial vector space|<tuple|11.115|?>>
-    <associate|basis out of spanning family|<tuple|11.120|?>>
-    <associate|basis replacement lemma|<tuple|11.122|?>>
-    <associate|basis size|<tuple|11.126|?>>
-    <associate|basis sum of delta|<tuple|11.132|?>>
+    <associate|basis out of spanning family|<tuple|11.121|?>>
+    <associate|basis replacement lemma|<tuple|11.123|?>>
+    <associate|basis size|<tuple|11.127|?>>
+    <associate|basis sum of delta|<tuple|11.133|?>>
     <associate|basis trivial space basis|<tuple|11.114|?>>
     <associate|eq 11.1.054|<tuple|11.1|?>>
     <associate|eq 11.10.054|<tuple|11.11|?>>
@@ -6790,7 +7300,7 @@
     <associate|linear combination|<tuple|11.84|?>>
     <associate|linear combination requirement|<tuple|11.83|?>>
     <associate|linear dependency condition|<tuple|11.106|?>>
-    <associate|linear dependency of ordered basis|<tuple|11.121|?>>
+    <associate|linear dependency of ordered basis|<tuple|11.122|?>>
     <associate|linear dependent conditions|<tuple|11.102|?>>
     <associate|linear dependent family|<tuple|11.98|?>>
     <associate|linear dependent family alternative|<tuple|11.100|?>>
@@ -6803,9 +7313,22 @@
     <associate|linear independent family and bijection|<tuple|11.104|?>>
     <associate|linear independent set alterantive|<tuple|11.97|?>>
     <associate|linear independent vector|<tuple|11.94|?>>
-    <associate|linear mapping|<tuple|11.134|?>>
-    <associate|linear mapping general sum|<tuple|11.137|?>>
-    <associate|linear mapping neutral element|<tuple|11.136|?>>
+    <associate|linear mapping|<tuple|11.135|?>>
+    <associate|linear mapping Hom(X,Y)|<tuple|11.139|?>>
+    <associate|linear mapping Hom(X,Y) definition|<tuple|11.138|?>>
+    <associate|linear mapping composition|<tuple|11.148|?>>
+    <associate|linear mapping dual space unit mapping|<tuple|11.142|?>>
+    <associate|linear mapping general linear
+    group|<tuple|<with|mode|<quote|math>|GL<around*|(|V|)>>|?>>
+    <associate|linear mapping general linear group faithfull
+    action|<tuple|11.150|?>>
+    <associate|linear mapping general linear group is a
+    group|<tuple|11.149|?>>
+    <associate|linear mapping general sum|<tuple|11.145|?>>
+    <associate|linear mapping inverse isomorphism|<tuple|11.147|?>>
+    <associate|linear mapping linear isomorphism|<tuple|11.137|?>>
+    <associate|linear mapping neutral element|<tuple|11.144|?>>
+    <associate|linear mapping way to test equality|<tuple|11.143|?>>
     <associate|linear span|<tuple|11.85|?>>
     <associate|linear span empty set|<tuple|11.87|?>>
     <associate|linear span equivalence|<tuple|11.86|?>>
@@ -6929,7 +7452,11 @@
 
       <tuple|<tuple|linear dependent set>|<pageref|auto-29>>
 
-      <tuple|<tuple|linear mapping>|<pageref|auto-32>>
+      <tuple|<tuple|linear mapping>|<pageref|auto-33>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|Hom<around*|(|X,Y|)>>>|<pageref|auto-34>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|GL<around*|(|V|)>>>|<pageref|auto-35>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|11<space|2spc>Linear
@@ -6989,13 +7516,21 @@
       11.3<space|2spc>Linear mappings \ <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-31>
 
+      <with|par-left|<quote|1tab>|11.3.1<space|2spc>Definition and spaces of
+      linear mappings <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-32>>
+
+      <with|par-left|<quote|1tab>|11.3.2<space|2spc>Properties of linear
+      mappings <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-36>>
+
       11.4<space|2spc>Multilinear mappings
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-33>
+      <no-break><pageref|auto-37>
 
       11.5<space|2spc>Deteminant Functions
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-34>
+      <no-break><pageref|auto-38>
     </associate>
   </collection>
 </auxiliary>
