@@ -4979,6 +4979,26 @@
     </enumerate>
   </proof>
 
+  <\corollary>
+    <label|basis condition (1)><label|basis condition (1)>Let
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a vector space
+    over <math|<around*|\<langle\>|F,+,*\<cdot\>|\<rangle\>>> and
+    <math|<around*|{|v<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>V> a basis for
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> then
+    <math|<around*|{|v|}><rsub|v\<in\><around*|{|v<rsub|i>\|i\<in\>I|}>>> is
+    a basis for <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>.
+  </corollary>
+
+  <\proof>
+    Using [theorem: <reference|linear independency condition (1)>]
+    <math|<around*|{|v<rsub|i>\|i\<in\>I|}>> is linear independent and using
+    [definition: <reference|linear span>]
+    <math|span<around*|(|<around*|{|v<rsub|i>\|i\<in\>I|}>|)>=span<around*|(|<around*|{|v<rsub|i>|}><rsub|i\<in\>I>|)>>
+    so by [theorem: <reference|basis condition>]
+    <math|<around*|{|v|}><rsub|v\<in\><around*|{|v<rsub|i>\|i\<in\>I|}>>> is
+    a basis for <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>.
+  </proof>
+
   <\theorem>
     <label|basis and bijection>Let <math|<around*|\<langle\>|V,+,*|\<rangle\>>>
     be a vector space over <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>,
@@ -5467,7 +5487,7 @@
 
   <\proof>
     As by [theorem: <reference|linear span of a subspace>]
-    <math|V=span<around*|(|V|)>> and <math|R\<subseteq\>V> ther exists bu
+    <math|V=span<around*|(|V|)>> and <math|R\<subseteq\>V> ther exists by
     [theorem: <reference|basis extension>] that there exists a <math|B> such
     that <math|R\<subseteq\>B\<subseteq\>V> and
     <math|<around*|{|b|}><rsub|b\<in\>B>> is a basis of
@@ -5543,8 +5563,8 @@
     <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a vector space
     over <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> and let
     <math|<around*|{|v<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>F> be family such
-    that <math|span<around*|(|<around*|{|v<rsub|i>|}><rsub|i\<in\>I>|)>> then
-    there exist a <math|J\<subseteq\>I> such that
+    that <math|span<around*|(|<around*|{|v<rsub|i>|}><rsub|i\<in\>I>|)>=V>
+    then there exist a <math|J\<subseteq\>I> such that
     <math|<around*|{|v<rsub|j>|}><rsub|j\<in\>J>\<subseteq\>F> is a basis of
     <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>. In other words,
     using [definition: <reference|linear extension of a family>] there exist
@@ -5629,7 +5649,7 @@
 
     <\equation*>
       I\<subseteq\>J<text| and ><around*|{|w<rsub|j>|}><rsub|j\<in\>J>\<subseteq\>V<text|
-      satisfiest >\<forall\>j\<in\>J<text| we have >w<rsub|j>=v<rsub|j><text|
+      satisfies >\<forall\>j\<in\>J<text| we have >w<rsub|j>=v<rsub|j><text|
       and ><around*|{|w<rsub|j>|}><rsub|j\<in\>J><text| is a basis for
       ><around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>
     </equation*>
@@ -6183,7 +6203,7 @@
 
   <\definition>
     <label|basis dimensionality>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
-    be a vectsor space over <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+    be a vector space over <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
     then\ 
 
     <\enumerate>
@@ -6204,12 +6224,77 @@
       dim<around*|(|V|)>=<choice|<tformat|<table|<row|<cell|\<infty\><text|
       if >V<text| is infinite dimesional>>>|<row|<cell|card<around*|(|I|)><text|
       where ><around*|{|v<rsub|i>|}><rsub|i\<in\>I><text| is a finite basis
-      of >V<text| is finite dimesional >>>>>>
+      of >V<text| if V is finite dimesional >>>>>>
     </equation*>
 
     [theorems: <reference|basis infinite>, <reference|basis finite>,
     <reference|basis size>] ensures that these definitions make sense.
   </definition>
+
+  <\theorem>
+    <label|basis finite dimensional>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
+    be a finite dimensional vector space over
+    <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> then there exists a
+    <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,dim<around*|(|V|)>|}>>\<subseteq\>V>
+    such that \ <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,dim<around*|(|V|)>|}>>>
+    is a basis of <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>.
+  </theorem>
+
+  <\proof>
+    As <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> is finite
+    dimensional there exist a basis <math|<around*|{|f<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>V>
+    such that <math|I> is finite. By [theorem: <reference|complex finite set
+    condition>] there exists a <math|n\<in\>\<bbb-N\><rsub|0>> and a
+    bijection <math|\<beta\>:<around*|{|1,\<ldots\>,n|}>\<rightarrow\>I>.
+    Using [theorem: <reference|basis and bijection>] it follows then that
+    <math|<around*|{|f<rsub|\<beta\><around*|(|i|)>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    is a basis for <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>, so if
+    we define <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    by <math|e<rsub|i>=f<rsub|\<beta\><around*|(|i|)>>> then
+    <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    is a basis of <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>.
+  </proof>
+
+  <\theorem>
+    <label|basis sub-space>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
+    be a vector space over the field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+    and <math|W\<subseteq\>V> a sub-space of
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> then
+    <math|dim<around*|(|W|)>\<leqslant\>dim<around*|(|V|)>> and if
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> is finite dimensional
+    then <math|W> is finite dimensional.
+  </theorem>
+
+  <\proof>
+    For <math|V> have two possibilities:
+
+    <\description>
+      <item*|<math|V> is infinite dimensional>Then trivial
+      <math|dim<around*|(|W|)>\<leqslant\>\<infty\>=dim<around*|(|V|)>>
+
+      <item*|<math|V<text| is finite dimensional>>>Let
+      <math|<around*|{|e<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>W> be a basis
+      for <math|<around*|\<langle\>|W,+,\<cdot\>|\<rangle\>>> then by
+      [corollary: <reference|basis condition (1)>]
+      <math|<around*|{|v|}><rsub|v\<in\><around*|{|v<rsub|i>\|i\<in\>I|}>>>
+      is a basis for <math|W>, further by [theorem: <reference|linear
+      independency condition (1)>] <math|<around*|{|v<rsub|i>\|i\<in\>I|}>>
+      is linear independent. Using [theorem: <reference|basis extending a
+      linear independent set to a basis>] there exist a <math|B\<subseteq\>V>
+      such that <math|<around*|{|e<rsub|i>\|i\<in\>I|}>\<subseteq\>B> and
+      <math|<around*|{|b|}><rsub|b\<in\>B>> is a basis for
+      <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>. As <math|V> is
+      finite dimensional, we have that <math|B> is finite, hence as
+      <math|<around*|{|v<rsub|i>\|i\<in\>I|}>\<subseteq\>B> we have by
+      [theorem: <reference|subset of finite sets>] that
+      <math|<around*|{|v<rsub|i><around*|\||i\<in\>I|\<nobracket\>>|}>> is
+      finite. Further by <math|>[theorem: <reference|complex finite subset>]
+      we have that <math|card<around*|(|<around*|{|v<rsub|i>\|i\<in\>I|}>|)>\<leqslant\>card<around*|(|B|)>=dim<around*|(|V|)>>,
+      which as <math|<around*|{|v|}><rsub|v\<in\><around*|{|v<rsub|i>\|i\<in\>I|}>>>
+      is a basis for <math|W> proves that <math|W> is finite dimesnional and
+      that <math|dim<around*|(|W|)>=card<around*|(|<around*|{|v<rsub|i>\|i\<in\>I|}>|)>\<leqslant\>dimV>.
+    </description>
+  </proof>
 
   Next we consider different trivial vector spaces and there bases
 
@@ -6426,9 +6511,11 @@
     </equation*>
   </proof>
 
+  \;
+
   <section|Linear mappings >
 
-  <subsection|Definition and spaces of linear mappings>
+  <subsection|Definition and properties>
 
   Similar to the concepts of group, ring, field homeomorphisms we have also
   mappings that preserves th structure of vector spaces, these are called
@@ -6603,8 +6690,6 @@
     isomorphisms between <math|V> and itself.
   </definition>
 
-  <subsection|Properties of linear mappings>
-
   <\theorem>
     <label|linear mapping dual space unit mapping>Let
     <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a vector space
@@ -6641,7 +6726,7 @@
     Define
 
     <\equation*>
-      L:V\<rightarrow\>F<text| by >L<around*|(|y|)>=<big|sum><rsub|b\<in\>B>\<alpha\><rsup|<around*|(|y|)>><rsub|b>
+      L:V\<rightarrow\>F<text| by >L<around*|(|y|)>=\<alpha\><rsup|<around*|(|y|)>><rsub|x>
     </equation*>
 
     If we define <math|<around*|{|\<alpha\><rsub|b>|}><rsub|b\<in\>B>> by
@@ -6659,10 +6744,7 @@
     Hence\ 
 
     <\equation*>
-      L<around*|(|x|)>=<big|sum><rsub|b\<in\>B>\<alpha\><rsub|b>\<equallim\><rsub|<text|[theorem:
-      <reference|support over disjoint subsets>]>><big|sum><rsub|b\<in\>B\\<around*|{|x|}>>\<alpha\><rsub|b>+<big|sum><rsub|b\<in\><around*|{|x|}>>\<alpha\><rsub|b>\<equallim\><rsub|<text|[theorems:
-      <reference|support of neutral element (2)>, <reference|support over a
-      singleton>]>>\<alpha\><rsub|x>=1
+      L<around*|(|x|)>=\<alpha\><rsup|<around*|(|x|)>><rsub|x>=\<alpha\><rsub|x>=1
     </equation*>
 
     proving that\ 
@@ -6694,16 +6776,13 @@
     hence \ 
 
     <\equation*>
-      L<around*|(|y+z|)>=<big|sum><rsub|b\<in\>B><around*|(|\<alpha\><rsup|<around*|(|y|)>><rsub|b>+\<alpha\><rsup|<around*|(|z|)>><rsub|b>|)><rsub|b\<in\>B>=\<equallim\><rsub|<text|[theorem:
-      <reference|support of sums (2)>]>><big|sum><rsub|b\<in\>B>\<alpha\><rsup|<around*|(|y|)>><rsub|b><rsub|b\<in\>B>+<big|sum><rsub|b\<in\>B>\<alpha\><rsup|<around*|(|z|)>><rsub|b><rsub|b\<in\>B>=L<around*|(|y|)>+L<around*|(|z|)>
+      L<around*|(|y+z|)>=\<alpha\><rsup|<around*|(|y+z|)>><rsub|x>=\<alpha\><rsup|<around*|(|y|)>><rsub|x>+\<alpha\><rsup|<around*|(|z|)>><rsub|x>=L<around*|(|y|)>+L<around*|(|z|)>
     </equation*>
 
     and\ 
 
     <\equation*>
-      L<around*|(|\<alpha\>\<cdot\>y|)>=<big|sum><rsub|b\<in\>B><around*|(|\<alpha\>\<cdot\>\<alpha\><rsup|<around*|(|y|)>><rsub|b>|)>\<equallim\><rsub|<text|[theorem:
-      <reference|support space finite sum
-      (1)>]>>\<alpha\>\<cdot\><big|sum><rsub|b\<in\>B>\<alpha\><rsup|<around*|(|y|)>><rsub|b>=\<alpha\>\<cdot\>L<around*|(|y|)>
+      L<around*|(|\<alpha\>\<cdot\>y|)>=\<alpha\><rsup|<around*|(|\<alpha\>\<cdot\>y|)>><rsub|x>=\<alpha\>\<cdot\>\<alpha\><rsup|<around*|(|y|)>><rsub|x>=\<alpha\>\<cdot\>L<around*|(|y|)>
     </equation*>
 
     proving that\ 
@@ -7150,6 +7229,274 @@
     (1)>] <math|\<vartriangleright\>> is faithful.
   </proof>
 
+  <subsection|Kernel and rank of linear mappings >
+
+  <\definition>
+    <label|linear mapping kernal><index|<math|ker<around*|(|L|)>>><index|<math|range<around*|(|L|)>>><dueto|kernal
+    of a linear map>Let <math|<around*|\<langle\>|X,+,\<cdot\>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,+,\<cdot\>|\<rangle\>>> be vector spaces over
+    the field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> and
+    <math|L\<in\>Hom<around*|(|X,Y|)>> then the kernel of <math|L> noted by
+    <math|ker<around*|(|L|)>> is defined by
+
+    <\equation*>
+      ker<around*|(|L|)>=<around*|{|x\<in\>X\|L<around*|(|x|)>=0|}>
+    </equation*>
+  </definition>
+
+  <\theorem>
+    <label|linearn mapping ker(L) is a sub-space>Let
+    <math|<around*|\<langle\>|X,+,\<cdot\>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,+,\<cdot\>|\<rangle\>>> be vector spaces over
+    the field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> and
+
+    \ <math|L\<in\>Hom<around*|(|X,Y|)>> then <math|ker<around*|(|L|)>> is a
+    sub-space of <math|X>.
+  </theorem>
+
+  <\proof>
+    First as <math|L<around*|(|0|)>\<equallim\><rsub|<text|[theorem:
+    <reference|linear mapping neutral element>]>>0> we have that\ 
+
+    <\equation*>
+      ker<around*|(|L|)>\<neq\>\<varnothing\>
+    </equation*>
+
+    Further if <math|x,y\<in\>ker<around*|(|L|)>> and <math|\<alpha\>\<in\>F>
+    then we have\ 
+
+    <\equation*>
+      L<around*|(|x+y|)>=L<around*|(|x|)>+L<around*|(|y|)>=0+0=0
+    </equation*>
+
+    and
+
+    <\equation*>
+      L<around*|(|\<alpha\>\<cdot\>x|)>=\<alpha\>\<cdot\>L<around*|(|x|)>=\<alpha\>\<cdot\>0=0
+    </equation*>
+
+    proving that\ 
+
+    <\equation*>
+      x+y\<in\>ker<around*|(|L|)><text| and
+      >\<alpha\>\<cdot\>x\<in\>ker<around*|(|L|)>
+    </equation*>
+  </proof>
+
+  The kernel of a linear mapping can be used as a indication if a linear map
+  is injective or not, this is expressed in the following theorem.
+
+  <\theorem>
+    <label|linear mapping ker(L) and injectivity>Let
+    <math|<around*|\<langle\>|X,+,\<cdot\>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,+,\<cdot\>|\<rangle\>>> be vector spaces over
+    the field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> and
+
+    \ <math|L\<in\>Hom<around*|(|X,Y|)>> then
+
+    <\equation*>
+      L<text| is injective >\<Leftrightarrow\><text|
+      >ker<around*|(|L|)>=<around*|{|0|}>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|x\<in\>ker<around*|(|L|)>> then
+      <math|L<around*|(|x|)>-L<around*|(|0|)>=0-0=0> so that
+      <math|L<around*|(|x|)>=L<around*|(|0|)>> or as <math|L> is injective
+      that <math|x=0>.
+
+      <item*|<math|\<Leftarrow\>>>Let <math|x,y\<in\>X> such that
+      <math|L<around*|(|x|)>=L<around*|(|y|)>> then
+      <math|L<around*|(|x-y|)>=L<around*|(|x|)>-L<around*|(|y|)>=0> so that
+
+      <\equation*>
+        x-y\<in\>ker<around*|(|L|)>=<around*|{|0|}>
+      </equation*>
+
+      hence <math|x-y=0> or <math|x=y>, proving that <math|L> is injective.
+    </description>
+  </proof>
+
+  The above gives a indication of injectivity, next we need a indication of
+  subjectivity, for this we introduce the concept of the rank of a linear
+  mapping. First we need the following theorem
+
+  <\theorem>
+    <label|linear mapping range is sub-space>Let
+    <math|<around*|\<langle\>|X,+,\<cdot\>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,+,\<cdot\>|\<rangle\>>> be vector spaces over
+    the field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> and
+
+    \ <math|L\<in\>Hom<around*|(|X,Y|)>> then
+    <math|range<around*|(|L|)>=L<around*|(|X|)>> is a sub-space of
+    <math|<around*|\<langle\>|Y,+,\<cdot\>|\<rangle\>>>.
+  </theorem>
+
+  <\proof>
+    Let <math|x,y\<in\>L<around*|(|X|)>\<subseteq\>Y> and
+    <math|\<alpha\>\<in\>F> then <math|\<exists\>x<rprime|'>,y<rprime|'>\<in\>X>
+    uch that <math|L<around*|(|x<rprime|'>|)>=x> and
+    <math|L<around*|(|y<rprime|'>|)>=y>. Then we have\ 
+
+    <\equation*>
+      L<around*|(|x<rprime|'>+y<rprime|'>|)>=L<around*|(|x<rprime|'>|)>+L<around*|(|y<rprime|'>|)>=x+y<text|
+      and >L<around*|(|\<alpha\>\<cdot\>x<rprime|'>|)>=\<alpha\>\<cdot\>L<around*|(|x<rprime|'>|)>=\<alpha\>\<cdot\>x
+    </equation*>
+
+    so that\ 
+
+    <\equation*>
+      x+y,\<alpha\>\<cdot\>x\<in\>L<around*|(|X|)>
+    </equation*>
+
+    as further <math|0=L<around*|(|0|)>\<Rightarrow\>0\<in\>L<around*|(|X|)>\<Rightarrow\>L<around*|(|X|)>\<neq\>0>
+    it follows that <math|L<around*|(|X|)>> is a sub-space of
+    <math|<around*|\<langle\>|Y,+,\<cdot\>|\<rangle\>>>
+  </proof>
+
+  The above ensures that the following is well defined
+
+  <\definition>
+    <label|linear mapping rank><dueto|rank>Let
+    <math|<around*|\<langle\>|X,+,\<cdot\>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,+,\<cdot\>|\<rangle\>>> be vector spaces over
+    the field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> and
+
+    \ <math|L\<in\>Hom<around*|(|X,Y|)>> then the rank of L noted as
+    <math|rank<around*|(|L|)>> is defined by\ 
+
+    <\equation*>
+      rank<around*|(|L|)>=dim<around*|(|L<around*|(|X|)>|)>=dim<around*|(|range<around*|(|L|)>|)>
+    </equation*>
+  </definition>
+
+  <\theorem>
+    <label|linear mapping range property>Let
+    <math|<around*|\<langle\>|X,+,\<cdot\>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,+,\<cdot\>|\<rangle\>>> be vector spaces over
+    the field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>, <math|X>
+    finite dimensional and <math|L\<in\>Hom<around*|(|X,Y|)>> then we have:
+
+    <\enumerate>
+      <item><math|L<around*|(|X|)>> is finite dimensional and
+      <math|rank<around*|(|L|)>\<leqslant\>dim<around*|(|X|)>>
+
+      <item><math|rank<around*|(|L|)>\<leqslant\>dim<around*|(|W|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>As <math|X> is finite dimensional we have by [theorem:
+      <reference|basis finite dimensional>] that there exist a basis
+      <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,dim<around*|(|X|)>|}>>>
+      for <math|<around*|\<langle\>|X,+,\<cdot\>|\<rangle\>>>. Let
+      <math|y\<in\>L<around*|(|X|)>> there exists a <math|x\<in\>X> such that
+      <math|L<around*|(|x|)>=y>, so there exists a
+      <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,dim<around*|(|X|)>|}>>\<subseteq\>F>
+      such that
+
+      <\equation*>
+        x=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,dim<around*|(|X|)>|}>><around*|(|\<alpha\><rsub|i>\<cdot\>e<rsub|i>|)>
+      </equation*>
+
+      then we have\ 
+
+      <\equation*>
+        y=L<around*|(|x|)>=L<around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,dim<around*|(|X|)>|}>><around*|(|\<alpha\><rsub|i>\<cdot\>e<rsub|i>|)>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|linear mapping general
+        sum>]>><big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,dim<around*|(|X|)>|}>><around*|(|\<alpha\><rsub|i>\<cdot\>L<around*|(|e<rsub|i>|)>|)>
+      </equation*>
+
+      Hence we have that <math|span<around*|(|<around*|{|L<around*|(|e<rsub|i>|)>|}><rsub|i\<in\><around*|{|1,\<ldots\>,dim<around*|(|X|)>|}>>|)>=L<around*|(|X|)>>,
+      using [theorem: <reference|basis out of spanning family>] it follows
+      that there exist a <math|J\<subseteq\><around*|{|1,\<ldots\>,dim<around*|(|X|)>|}>>
+      such that <math|<around*|{|L<around*|(|e<rsub|i>|)>|}><rsub|i\<in\>J>>
+      is a basis of <math|L<around*|(|X|)>>. Using [theorem:
+      <reference|complex finite subset>] it follows that <math|J> is finite
+      and <math|card<around*|(|J|)>\<leqslant\>card<around*|(|<around*|{|1,\<ldots\>,dim<around*|(|X|)>|}>|)>=dim<around*|(|X|)>>,
+      so as <math|><math|<around*|{|L<around*|(|e<rsub|i>|)>|}><rsub|i\<in\>J>>
+      is a basis of <math|L<around*|(|X|)>> we have that\ 
+
+      <\equation*>
+        L<around*|(|X|)><text| is finite and
+        >rank<around*|(|L|)>=dim<around*|(|L<around*|(|X|)>|)>=card<around*|(|J|)>\<leqslant\>dim<around*|(|X|)>
+      </equation*>
+
+      <item>By [theorem: <reference|linear mapping range is sub-space>]
+      <math|L<around*|(|X|)>> is a sub-space of
+      <math|<around*|\<langle\>|Y,+,\<cdot\>|\<rangle\>>> we have by
+      [theorem: <reference|basis sub-space>] that
+      <math|dim<around*|(|L<around*|(|X|)>|)>\<leqslant\>dim<around*|(|Y|)>>
+      so that <math|rank<around*|(|X|)>\<leqslant\>dim<around*|(|Y|)>>.
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|linear mapping surjectivity>Let
+    <math|<around*|\<langle\>|X,+,\<cdot\>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,+,\<cdot\>|\<rangle\>>> be vector spaces over
+    the field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>, <math|X>
+    finite dimensional and <math|L\<in\>Hom<around*|(|X,Y|)>> then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|L<text| is surjective
+      >>|<cell|\<Leftrightarrow\>>|<cell|<text| Y is finite dimensional and
+      >rank<around*|(|L|)>=dim<around*|(|Y|)>>>>>
+    </eqnarray*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>If <math|L> is surjective then
+      <math|L<around*|(|X|)>=Y> which, as by [theorem: <reference|linear
+      mapping range property>] <math|L<around*|(|X|)>> is finite dimensional,
+      means that <math|Y> is finite dimensional and
+      <math|rank<around*|(|L|)>=dim<around*|(|L<around*|(|X|)>|)>=Y>.
+
+      <item*|<math|\<Leftarrow\>>>If <math|Y> is finite dimensional then, as
+      by [theorem: <reference|linear mapping range is sub-space>]
+      <math|L<around*|(|X|)>> is a sub-space of
+      <math|<around*|\<langle\>|Y,+,\<cdot\>|\<rangle\>>>, we have by
+      [theorem: <reference|basis sub-space>] that
+
+      <\equation*>
+        L<around*|(|X|)><text| is finite dimensional>
+      </equation*>
+
+      Using [theorem: <reference|basis finite dimensional>] there exist a
+      basis <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,dim<around*|(|Y|)>|}>>\<subseteq\>Y>
+      of <math|<around*|\<langle\>|Y,+,\<cdot\>|\<rangle\>>>, using [theorem:
+      <reference|basis finite dimensional>] again together with
+      <math|dim<around*|(|L<around*|(|X|)>|)>=rank<around*|(|L|)>=dim<around*|(|Y|)>>
+      there exist a basis <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,dim<around*|(|Y|)>|}>>\<subseteq\>L<around*|(|X|)>\<subseteq\>Y>
+      of <math|<around*|\<langle\>|L<around*|(|X|)>,+,\<cdot\>|\<rangle\>>>
+      so that <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,dim<around*|(|Y|)>|}>>>
+      is linear independent, by [theorem: <reference|basis replacement
+      lemma>] we have then that <math|span<around*|(|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,dim<around*|(|Y|)>|}>>|)>=Y>.
+      As <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,dim<around*|(|Y|)>|}>>>
+      is a basis of <math|<around*|\<langle\>|L<around*|(|X|)>,+,\<cdot\>|\<rangle\>>>
+      we have that <math|span<around*|(|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,dim<around*|(|Y|)>|}>>|)>=L<around*|(|X|)>>
+      proving that <math|L<around*|(|X|)>=Y>, so <math|L> is surjective.
+    </description>
+  </proof>
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
   \;
 
   <section|Multilinear mappings>
@@ -7199,36 +7546,41 @@
     <associate|auto-34|<tuple|<with|mode|<quote|math>|Hom<around*|(|X,Y|)>>|?>>
     <associate|auto-35|<tuple|<with|mode|<quote|math>|GL<around*|(|V|)>>|?>>
     <associate|auto-36|<tuple|11.3.2|?>>
-    <associate|auto-37|<tuple|11.4|?>>
-    <associate|auto-38|<tuple|11.5|?>>
+    <associate|auto-37|<tuple|<with|mode|<quote|math>|ker<around*|(|L|)>>|?>>
+    <associate|auto-38|<tuple|<with|mode|<quote|math>|range<around*|(|L|)>>|?>>
+    <associate|auto-39|<tuple|11.4|?>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|<big|sum><rsub|i=0><rsup|n>x<rsub|i>>|?>>
+    <associate|auto-40|<tuple|11.5|?>>
     <associate|auto-5|<tuple|<with|mode|<quote|math>|<big|prod><rsub|i=0><rsup|n>x<rsub|i>>|?>>
     <associate|auto-6|<tuple|11.1.2|?>>
     <associate|auto-7|<tuple|11.1.3|?>>
     <associate|auto-8|<tuple|permutation|?>>
     <associate|auto-9|<tuple|<with|mode|<quote|math>|\<sigma\>>|?>>
-    <associate|basis Kronecker delta|<tuple|11.132|?>>
-    <associate|basis and bijection|<tuple|11.113|?>>
+    <associate|basis Kronecker delta|<tuple|11.135|?>>
+    <associate|basis and bijection|<tuple|11.114|?>>
     <associate|basis condition|<tuple|11.112|?>>
-    <associate|basis coordinates|<tuple|11.116|?>>
-    <associate|basis dimensionality|<tuple|11.128|?>>
-    <associate|basis empty basis|<tuple|11.124|?>>
-    <associate|basis exist|<tuple|11.120|?>>
-    <associate|basis existence (1)|<tuple|11.119|?>>
+    <associate|basis condition (1)|<tuple|11.113|?>>
+    <associate|basis coordinates|<tuple|11.117|?>>
+    <associate|basis dimensionality|<tuple|11.129|?>>
+    <associate|basis empty basis|<tuple|11.125|?>>
+    <associate|basis exist|<tuple|11.121|?>>
+    <associate|basis existence (1)|<tuple|11.120|?>>
     <associate|basis extending a linear independent set to a
-    basis|<tuple|11.118|?>>
-    <associate|basis extension|<tuple|11.117|?>>
-    <associate|basis finite|<tuple|11.125|?>>
+    basis|<tuple|11.119|?>>
+    <associate|basis extension|<tuple|11.118|?>>
+    <associate|basis finite|<tuple|11.126|?>>
+    <associate|basis finite dimensional|<tuple|11.130|?>>
     <associate|basis finite/infinite|<tuple|11.111|?>>
-    <associate|basis infinite|<tuple|11.126|?>>
-    <associate|basis of a field|<tuple|11.129|?>>
+    <associate|basis infinite|<tuple|11.127|?>>
+    <associate|basis of a field|<tuple|11.132|?>>
     <associate|basis of a vector space|<tuple|11.110|?>>
-    <associate|basis of non trivial vector space|<tuple|11.115|?>>
-    <associate|basis out of spanning family|<tuple|11.121|?>>
-    <associate|basis replacement lemma|<tuple|11.123|?>>
-    <associate|basis size|<tuple|11.127|?>>
-    <associate|basis sum of delta|<tuple|11.133|?>>
-    <associate|basis trivial space basis|<tuple|11.114|?>>
+    <associate|basis of non trivial vector space|<tuple|11.116|?>>
+    <associate|basis out of spanning family|<tuple|11.122|?>>
+    <associate|basis replacement lemma|<tuple|11.124|?>>
+    <associate|basis size|<tuple|11.128|?>>
+    <associate|basis sub-space|<tuple|11.131|?>>
+    <associate|basis sum of delta|<tuple|11.136|?>>
+    <associate|basis trivial space basis|<tuple|11.115|?>>
     <associate|eq 11.1.054|<tuple|11.1|?>>
     <associate|eq 11.10.054|<tuple|11.11|?>>
     <associate|eq 11.10.064|<tuple|11.10|?>>
@@ -7300,7 +7652,7 @@
     <associate|linear combination|<tuple|11.84|?>>
     <associate|linear combination requirement|<tuple|11.83|?>>
     <associate|linear dependency condition|<tuple|11.106|?>>
-    <associate|linear dependency of ordered basis|<tuple|11.122|?>>
+    <associate|linear dependency of ordered basis|<tuple|11.123|?>>
     <associate|linear dependent conditions|<tuple|11.102|?>>
     <associate|linear dependent family|<tuple|11.98|?>>
     <associate|linear dependent family alternative|<tuple|11.100|?>>
@@ -7313,22 +7665,29 @@
     <associate|linear independent family and bijection|<tuple|11.104|?>>
     <associate|linear independent set alterantive|<tuple|11.97|?>>
     <associate|linear independent vector|<tuple|11.94|?>>
-    <associate|linear mapping|<tuple|11.135|?>>
-    <associate|linear mapping Hom(X,Y)|<tuple|11.139|?>>
-    <associate|linear mapping Hom(X,Y) definition|<tuple|11.138|?>>
-    <associate|linear mapping composition|<tuple|11.148|?>>
-    <associate|linear mapping dual space unit mapping|<tuple|11.142|?>>
+    <associate|linear mapping|<tuple|11.138|?>>
+    <associate|linear mapping Hom(X,Y)|<tuple|11.142|?>>
+    <associate|linear mapping Hom(X,Y) definition|<tuple|11.141|?>>
+    <associate|linear mapping composition|<tuple|11.151|?>>
+    <associate|linear mapping dual space unit mapping|<tuple|11.145|?>>
     <associate|linear mapping general linear
     group|<tuple|<with|mode|<quote|math>|GL<around*|(|V|)>>|?>>
     <associate|linear mapping general linear group faithfull
-    action|<tuple|11.150|?>>
+    action|<tuple|11.153|?>>
     <associate|linear mapping general linear group is a
-    group|<tuple|11.149|?>>
-    <associate|linear mapping general sum|<tuple|11.145|?>>
-    <associate|linear mapping inverse isomorphism|<tuple|11.147|?>>
-    <associate|linear mapping linear isomorphism|<tuple|11.137|?>>
-    <associate|linear mapping neutral element|<tuple|11.144|?>>
-    <associate|linear mapping way to test equality|<tuple|11.143|?>>
+    group|<tuple|11.152|?>>
+    <associate|linear mapping general sum|<tuple|11.148|?>>
+    <associate|linear mapping inverse isomorphism|<tuple|11.150|?>>
+    <associate|linear mapping ker(L) and injectivity|<tuple|11.156|?>>
+    <associate|linear mapping kernal|<tuple|11.154|?>>
+    <associate|linear mapping linear isomorphism|<tuple|11.140|?>>
+    <associate|linear mapping neutral element|<tuple|11.147|?>>
+    <associate|linear mapping range is sub-space|<tuple|11.157|?>>
+    <associate|linear mapping range is subsape|<tuple|11.157|?>>
+    <associate|linear mapping range property|<tuple|11.159|?>>
+    <associate|linear mapping rank|<tuple|11.158|?>>
+    <associate|linear mapping surjectivity|<tuple|11.160|?>>
+    <associate|linear mapping way to test equality|<tuple|11.146|?>>
     <associate|linear span|<tuple|11.85|?>>
     <associate|linear span empty set|<tuple|11.87|?>>
     <associate|linear span equivalence|<tuple|11.86|?>>
@@ -7339,6 +7698,7 @@
     <associate|linear span of span|<tuple|11.91|?>>
     <associate|linear span subset|<tuple|11.88|?>>
     <associate|linear sub family of independent family|<tuple|11.96|?>>
+    <associate|linearn mapping ker(L) is a sub-space|<tuple|11.155|?>>
     <associate|permutation definition|<tuple|11.23|?>>
     <associate|permutation group|<tuple|11.24|?>>
     <associate|permutation on subset|<tuple|11.25|?>>
@@ -7457,6 +7817,10 @@
       <tuple|<tuple|<with|mode|<quote|math>|Hom<around*|(|X,Y|)>>>|<pageref|auto-34>>
 
       <tuple|<tuple|<with|mode|<quote|math>|GL<around*|(|V|)>>>|<pageref|auto-35>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|ker<around*|(|L|)>>>|<pageref|auto-37>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|range<around*|(|L|)>>>|<pageref|auto-38>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|11<space|2spc>Linear
@@ -7516,21 +7880,21 @@
       11.3<space|2spc>Linear mappings \ <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-31>
 
-      <with|par-left|<quote|1tab>|11.3.1<space|2spc>Definition and spaces of
-      linear mappings <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|11.3.1<space|2spc>Definition and properties
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-32>>
 
-      <with|par-left|<quote|1tab>|11.3.2<space|2spc>Properties of linear
-      mappings <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|11.3.2<space|2spc>Kernel and rank of linear
+      mappings \ <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-36>>
 
       11.4<space|2spc>Multilinear mappings
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-37>
+      <no-break><pageref|auto-39>
 
       11.5<space|2spc>Deteminant Functions
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-38>
+      <no-break><pageref|auto-40>
     </associate>
   </collection>
 </auxiliary>

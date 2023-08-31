@@ -12899,62 +12899,62 @@
       <math|k\<in\>\<bbb-N\><rsub|\<bbb-C\>,0><text| such that
       ><around*|{|1,\<ldots\>,k|}>\<approx\>I>>>>>>
     </eqnarray*>
-
-    <\proof>
-      \ 
-
-      <\description>
-        <item*|<math|\<Rightarrow\>>>As <math|I> is finite we have by
-        [theorem: <reference|finite set alternative definition>] that
-        <math|\<exists\>n\<in\>\<bbb-N\><rsub|0>> such that
-        <math|<around*|{|1,\<ldots\>,n|}>\<approx\>I>. Hence if we take
-        <math|k=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>\<in\>\<bbb-N\><rsub|\<bbb-C\>,0>>
-        we have by [lemma: <reference|complex finite lemma>] that
-
-        <\equation*>
-          <around*|{|1,\<ldots\>,n|}>\<approx\><around*|{|1,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>|}>=<around*|{|1,\<ldots\>,k|}>
-        </equation*>
-
-        proving that
-
-        <\equation*>
-          <around*|{|1,\<ldots\>,k|}>\<approx\>I
-        </equation*>
-
-        Now for uniqueness, assume that there is another
-        <math|l\<in\>\<bbb-N\><rsub|\<bbb-C\>,0>> such that
-        <math|<around*|{|1,\<ldots\>,l|}>\<approx\>I>. Take then
-        <math|m=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsup|-1><around*|(|l|)>>
-        we have by [lemma: <reference|complex finite lemma>] that
-
-        <\equation*>
-          <around*|{|1,\<ldots\>,m|}>\<approx\><around*|{|1,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|m|)>|}>=<around*|{|1,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsup|-1><around*|(|l|)>|)>|}>=<around*|{|1,\<ldots\>,l|}>\<approx\>I
-        </equation*>
-
-        so that <math|<around*|{|1,\<ldots\>,n|}>\<approx\><around*|{|1,\<ldots\>,m|}>>,
-        which, as by [theorem: <reference|finite set alternate definition
-        lemma>] <math|<around*|{|1,\<ldots\>,n|}>\<approx\>n\<wedge\><around*|{|1,\<ldots\>,m|}>\<approx\>m>,
-        gives that <math|n\<approx\>m>. So that
-        <math|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsup|-1><around*|(|k|)>=n=m=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsup|-1><around*|(|l|)>>
-        giving as <math|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsup|-1>>
-        is a bijection that <math|k=l>.
-
-        <item*|<math|\<Leftarrow\>>>Let <math|k\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>>
-        be such that <math|I\<approx\><around*|{|1,\<ldots\>,k|}>> then if we
-        define <math|n\<in\>\<bbb-N\><rsub|0>> by
-        <math|n=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsup|-1><around*|(|k|)>>
-        we have by [lemma: <reference|complex finite lemma>] that
-
-        <\equation*>
-          <around*|{|1,\<ldots\>,n|}>\<approx\><around*|{|1,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>|}>=<around*|{|1,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsup|-1><around*|(|k|)>|)>|}>=<around*|{|1,\<ldots\>,k|}>\<approx\>I
-        </equation*>
-
-        proving that <math|<around*|{|1,\<ldots\>,n|}>\<approx\>I>, hence by
-        [theorem: <reference|finite set alternative definition>] <math|I> is
-        finite.
-      </description>
-    </proof>
   </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>As <math|I> is finite we have by [theorem:
+      <reference|finite set alternative definition>] that
+      <math|\<exists\>n\<in\>\<bbb-N\><rsub|0>> such that
+      <math|<around*|{|1,\<ldots\>,n|}>\<approx\>I>. Hence if we take
+      <math|k=i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>\<in\>\<bbb-N\><rsub|\<bbb-C\>,0>>
+      we have by [lemma: <reference|complex finite lemma>] that
+
+      <\equation*>
+        <around*|{|1,\<ldots\>,n|}>\<approx\><around*|{|1,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>|}>=<around*|{|1,\<ldots\>,k|}>
+      </equation*>
+
+      proving that
+
+      <\equation*>
+        <around*|{|1,\<ldots\>,k|}>\<approx\>I
+      </equation*>
+
+      Now for uniqueness, assume that there is another
+      <math|l\<in\>\<bbb-N\><rsub|\<bbb-C\>,0>> such that
+      <math|<around*|{|1,\<ldots\>,l|}>\<approx\>I>. Take then
+      <math|m=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsup|-1><around*|(|l|)>>
+      we have by [lemma: <reference|complex finite lemma>] that
+
+      <\equation*>
+        <around*|{|1,\<ldots\>,m|}>\<approx\><around*|{|1,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|m|)>|}>=<around*|{|1,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsup|-1><around*|(|l|)>|)>|}>=<around*|{|1,\<ldots\>,l|}>\<approx\>I
+      </equation*>
+
+      so that <math|<around*|{|1,\<ldots\>,n|}>\<approx\><around*|{|1,\<ldots\>,m|}>>,
+      which, as by [theorem: <reference|finite set alternate definition
+      lemma>] <math|<around*|{|1,\<ldots\>,n|}>\<approx\>n\<wedge\><around*|{|1,\<ldots\>,m|}>\<approx\>m>,
+      gives that <math|n\<approx\>m>. So that
+      <math|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsup|-1><around*|(|k|)>=n=m=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsup|-1><around*|(|l|)>>
+      giving as <math|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsup|-1>>
+      is a bijection that <math|k=l>.
+
+      <item*|<math|\<Leftarrow\>>>Let <math|k\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>>
+      be such that <math|I\<approx\><around*|{|1,\<ldots\>,k|}>> then if we
+      define <math|n\<in\>\<bbb-N\><rsub|0>> by
+      <math|n=<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsup|-1><around*|(|k|)>>
+      we have by [lemma: <reference|complex finite lemma>] that
+
+      <\equation*>
+        <around*|{|1,\<ldots\>,n|}>\<approx\><around*|{|1,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|n|)>|}>=<around*|{|1,\<ldots\>,i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|<around*|(|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>>|)><rsup|-1><around*|(|k|)>|)>|}>=<around*|{|1,\<ldots\>,k|}>\<approx\>I
+      </equation*>
+
+      proving that <math|<around*|{|1,\<ldots\>,n|}>\<approx\>I>, hence by
+      [theorem: <reference|finite set alternative definition>] <math|I> is
+      finite.
+    </description>
+  </proof>
 
   <\definition>
     <label|complex cardinality><index|<math|card<around*|(|I|)>>>Let <math|I>
@@ -13001,6 +13001,19 @@
   </proof>
 
   <\theorem>
+    <label|complex finite subset>If <math|A,B> are sets such that <math|A> is
+    finite and <math|B\<subseteq\>A> then <math|B> is finite and
+    <math|card<around*|(|B|)>\<leqslant\>card<around*|(|A|)>>
+  </theorem>
+
+  <\proof>
+    Using [theorem: <reference|subset of finite sets>] it follows that
+    <math|B> is finite and <math|#<around*|(|B|)>\<leqslant\>#<around*|(|A|)>>,
+    so, as by [theorem: <reference|complex order isomorphisms>] is a order
+    isomorphism, we have <math|card<around*|(|B|)>=i<rsub|\<bbb-N\><rsub|9>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|B|)>|)>\<leqslant\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|A|)>|)>=card<around*|(|B|)>>.
+  </proof>
+
+  <\theorem>
     <label|complex cardinality properties>If <math|A,B> are finite sets then
 
     <\enumerate>
@@ -13044,7 +13057,7 @@
   will be usefull later for limits, dimensions.\ 
 
   <\lemma>
-    <label|extended reals eistence>There exists at least two different
+    <label|extended reals existence>There exists at least two different
     elements that are not element of <math|\<bbb-R\><rsub|\<bbb-C\>>>\ 
   </lemma>
 
@@ -13078,7 +13091,7 @@
   </definition>
 
   <\definition>
-    <math|<wide|\<leqslant\>|\<wide-bar\>>\<in\><wide|\<bbb-R\>|\<wide-bar\>>\<times\><wide|\<bbb-R\>|\<wide-bar\>>>
+    <label|extended reals order definition><math|<wide|\<leqslant\>|\<wide-bar\>>\<in\><wide|\<bbb-R\>|\<wide-bar\>>\<times\><wide|\<bbb-R\>|\<wide-bar\>>>
     is defined as follows
 
     <\eqnarray*>
@@ -13094,7 +13107,7 @@
   </note>
 
   <\theorem>
-    <math|<around*|\<langle\>|<wide|\<bbb-R\>|\<wide-bar\>>,<wide|\<leqslant\>|\<wide-bar\>>|\<rangle\>>>
+    <label|extended reals are fully ordered><math|<around*|\<langle\>|<wide|\<bbb-R\>|\<wide-bar\>>,<wide|\<leqslant\>|\<wide-bar\>>|\<rangle\>>>
     is fully ordered.
   </theorem>
 
@@ -13457,7 +13470,7 @@
     <associate|complex a\<less\>2^n|<tuple|10.48|?>>
     <associate|complex cardinality|<tuple|10.73|?>>
     <associate|complex cardinality alternative|<tuple|10.74|?>>
-    <associate|complex cardinality properties|<tuple|10.75|?>>
+    <associate|complex cardinality properties|<tuple|10.76|?>>
     <associate|complex conjugate|<tuple|10.67|?>>
     <associate|complex conjugate properties|<tuple|10.68|?>>
     <associate|complex definition by recursion (1)|<tuple|10.37|?>>
@@ -13468,6 +13481,7 @@
     <associate|complex field|<tuple|10.2|?>>
     <associate|complex finite lemma|<tuple|10.71|?>>
     <associate|complex finite set condition|<tuple|10.72|?>>
+    <associate|complex finite subset|<tuple|10.75|?>>
     <associate|complex i^2=-1|<tuple|10.62|?>>
     <associate|complex integers are conditional complete|<tuple|10.16|?>>
     <associate|complex irrational numbers|<tuple|10.20|?>>
@@ -13713,9 +13727,13 @@
     <associate|eq 9.82.036|<tuple|9.82|?>>
     <associate|eq 9.89.047|<tuple|9.83|?>>
     <associate|eq 9.90.047|<tuple|9.84|?>>
-    <associate|extended reals|<tuple|10.77|?>>
+    <associate|extended reals|<tuple|10.78|?>>
+    <associate|extended reals are fully ordered|<tuple|10.82|?>>
     <associate|extended reals eistence|<tuple|10.76|?>>
-    <associate|extended reals finite real number|<tuple|10.78|?>>
+    <associate|extended reals existence|<tuple|10.77|?>>
+    <associate|extended reals finite real number|<tuple|10.79|?>>
+    <associate|extended reals natural numbers|<tuple|10.82|?>>
+    <associate|extended reals order definition|<tuple|10.80|?>>
     <associate|integeres order|<tuple|7.21|?>>
     <associate|integers|<tuple|7.2|?>>
     <associate|integers 0\<less\>1 and 0\<less\>2|<tuple|7.25|?>>
