@@ -12856,8 +12856,6 @@
     </enumerate>
   </proof>
 
-  TODO check this
-
   <subsection|Finite sets>
 
   We define now a characterization of finite sets in terms of
@@ -12899,6 +12897,11 @@
       <math|k\<in\>\<bbb-N\><rsub|\<bbb-C\>,0><text| such that
       ><around*|{|1,\<ldots\>,k|}>\<approx\>I>>>>>>
     </eqnarray*>
+
+    Using the concepts of indexed sets [see definition: <reference|function
+    indexed set unique>] every finite set can be written as a
+    <with|font-series|bold|unique indexed set>
+    <math|I=<around*|{|x<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,k|}>|}>>.
   </theorem>
 
   <\proof>
@@ -13388,7 +13391,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|6>
-    <associate|page-first|191>
+    <associate|page-first|189>
     <associate|project-flag|false>
     <associate|section-nr|3>
     <associate|subsection-nr|0>
@@ -13729,10 +13732,8 @@
     <associate|eq 9.90.047|<tuple|9.84|?>>
     <associate|extended reals|<tuple|10.78|?>>
     <associate|extended reals are fully ordered|<tuple|10.82|?>>
-    <associate|extended reals eistence|<tuple|10.76|?>>
     <associate|extended reals existence|<tuple|10.77|?>>
     <associate|extended reals finite real number|<tuple|10.79|?>>
-    <associate|extended reals natural numbers|<tuple|10.82|?>>
     <associate|extended reals order definition|<tuple|10.80|?>>
     <associate|integeres order|<tuple|7.21|?>>
     <associate|integers|<tuple|7.2|?>>
