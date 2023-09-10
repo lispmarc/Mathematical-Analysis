@@ -5134,10 +5134,10 @@
   </definition>
 
   <\definition>
-    <label|function indexed set unique><dueto|unique indexed set>If
-    <math|A=<around*|{|f<rsub|i><around*|\||i\<in\>I|\<nobracket\>>|}>> is a
-    <with|font-series|bold|unique indexed set >if <math|f:I\<rightarrow\>A>
-    is a bijection. So\ 
+    <label|function indexed set unique><dueto|unique indexed
+    set><math|A=<around*|{|f<rsub|i><around*|\||i\<in\>I|\<nobracket\>>|}>>
+    is a <with|font-series|bold|unique indexed set >if
+    <math|f:I\<rightarrow\>A> is a bijection. So\ 
 
     <\equation*>
       x\<in\>A\<Leftrightarrow\>\<exists\>i\<in\>I<text| such that
