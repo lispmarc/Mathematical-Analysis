@@ -12976,7 +12976,8 @@
     we have that\ 
 
     <\equation*>
-      card<around*|(|I|)><text| is the unique >k<text| such that
+      card<around*|(|I|)><text| is the unique
+      >k\<in\>\<bbb-N\><rsub|0,\<bbb-C\>><text| such that
       ><around*|{|1,\<ldots\>,k|}>\<approx\>I
     </equation*>
 
@@ -13391,7 +13392,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|6>
-    <associate|page-first|189>
+    <associate|page-first|191>
     <associate|project-flag|false>
     <associate|section-nr|3>
     <associate|subsection-nr|0>

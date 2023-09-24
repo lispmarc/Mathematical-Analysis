@@ -728,7 +728,7 @@
     classes then we have\ 
 
     <\enumerate>
-      <item><math|A\\<around*|(|B<big|cup>C|)>=<around*|(|A\\B|)><big|cap><around*|(|A\\C|)>>
+      <item><math|A\\<around*|(|B<big|cup>C|)>=<around*|(|A\\B|)><big|cap><around*|(|A\\C|)>=<around*|(|A\\B|)>\\C>
 
       <item><math|A\\<around*|(|B<big|cap>C|)>=<around*|(|A\\B|)><big|cup><around*|(|A\\C|)>>
     </enumerate>
@@ -745,7 +745,10 @@
         difference>>>>|<cell|A<big|cap><around*|(|B<big|cup>C|)><rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|theorem:
         <reference|class de Morgan's law>>>>|<cell|A<big|cap><around*|(|B<rsup|c><big|cap>C<rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|associativity>>>|<cell|<around*|(|A<big|cap>B<rsup|c>|)><big|cap>C<rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|idem
         potency>>>|<cell|<around*|(|<around*|(|A<big|cap>A|)><big|cap>B<rsup|c>|)><big|cap>C<rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|associativity>>>|<cell|<around*|(|A<big|cap><around*|(|A<big|cap>B<rsup|c>|)>|)><big|cap>C<rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|commutativity>>>|<cell|<around*|(|<around*|(|A<big|cap>B<rsup|c>|)><big|cap>A|)><big|cap>C<rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|associativity>>>|<cell|<around*|(|A<big|cap>B<rsup|c>|)><big|cap><around*|(|A<big|cap>C<rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|theorem:<reference|class
-        difference>>>>|<cell|<around*|(|A\\B|)><big|cap><around*|(|A\\C|)>>>>>
+        difference>>>>|<cell|<around*|(|A\\B|)><big|cap><around*|(|A\\C|)>>>|<row|<cell|A\\<around*|(|B<big|cup>C|)>>|<cell|\<equallim\><rsub|<text|theorem:<reference|class
+        difference>>>>|<cell|A<big|cap><around*|(|B<big|cup>C|)><rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|theorem:
+        <reference|class de Morgan's law>>>>|<cell|A<big|cap><around*|(|B<rsup|c><big|cap>C<rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|associativity>>>|<cell|<around*|(|A<big|cap>B<rsup|c>|)><big|cap>C<rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|theorem:<reference|class
+        difference>>>>|<cell|<around*|(|A\\B|)>\\C>>>>
       </eqnarray*>
 
       <item>
