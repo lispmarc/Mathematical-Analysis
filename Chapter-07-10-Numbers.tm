@@ -13054,6 +13054,20 @@
     </proof>
   </theorem>
 
+  <\corollary>
+    <label|complex cardinality adding element>If <math|A> is a finite set and
+    <math|a\<nin\>A> then <math|card<around*|(|A<big|cup><around*|{|a|}>|)>=card<around*|(|A|)>+1>
+  </corollary>
+
+  <\proof>
+    As <math|A\<nin\>A> we have that <math|A<big|cap><around*|{|a|}>=\<varnothing\>>
+    so by [theorem: <reference|complex cardinality properties>] we have\ 
+
+    <\equation*>
+      card<around*|(|A<big|cup><around*|{|a|}>|)>=card<around*|(|A|)>+card<around*|(|<around*|{|a|}>|)>=card<around*|(|A|)>+1
+    </equation*>
+  </proof>
+
   <subsection|Extended real numbers>
 
   Finally we define the set of extended real numbers which usefull if we have
@@ -13392,7 +13406,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|6>
-    <associate|page-first|191>
+    <associate|page-first|193>
     <associate|project-flag|false>
     <associate|section-nr|3>
     <associate|subsection-nr|0>
@@ -13473,6 +13487,7 @@
     <associate|complex RC order properties|<tuple|10.14|?>>
     <associate|complex a\<less\>2^n|<tuple|10.48|?>>
     <associate|complex cardinality|<tuple|10.73|?>>
+    <associate|complex cardinality adding element|<tuple|10.77|?>>
     <associate|complex cardinality alternative|<tuple|10.74|?>>
     <associate|complex cardinality properties|<tuple|10.76|?>>
     <associate|complex conjugate|<tuple|10.67|?>>
@@ -13483,6 +13498,7 @@
     <associate|complex densitiy theorem|<tuple|10.27|?>>
     <associate|complex embedding|<tuple|10.5|?>>
     <associate|complex field|<tuple|10.2|?>>
+    <associate|complex finite adding a element|<tuple|10.77|?>>
     <associate|complex finite lemma|<tuple|10.71|?>>
     <associate|complex finite set condition|<tuple|10.72|?>>
     <associate|complex finite subset|<tuple|10.75|?>>
@@ -13731,11 +13747,11 @@
     <associate|eq 9.82.036|<tuple|9.82|?>>
     <associate|eq 9.89.047|<tuple|9.83|?>>
     <associate|eq 9.90.047|<tuple|9.84|?>>
-    <associate|extended reals|<tuple|10.78|?>>
-    <associate|extended reals are fully ordered|<tuple|10.82|?>>
-    <associate|extended reals existence|<tuple|10.77|?>>
-    <associate|extended reals finite real number|<tuple|10.79|?>>
-    <associate|extended reals order definition|<tuple|10.80|?>>
+    <associate|extended reals|<tuple|10.79|?>>
+    <associate|extended reals are fully ordered|<tuple|10.83|?>>
+    <associate|extended reals existence|<tuple|10.78|?>>
+    <associate|extended reals finite real number|<tuple|10.80|?>>
+    <associate|extended reals order definition|<tuple|10.81|?>>
     <associate|integeres order|<tuple|7.21|?>>
     <associate|integers|<tuple|7.2|?>>
     <associate|integers 0\<less\>1 and 0\<less\>2|<tuple|7.25|?>>
