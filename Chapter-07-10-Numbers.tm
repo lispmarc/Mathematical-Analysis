@@ -13068,6 +13068,25 @@
     </equation*>
   </proof>
 
+  <\corollary>
+    <label|complex cardinality equality and subset>If <math|A> is a finite
+    set and <math|B\<subseteq\>A> such that
+    <math|card<around*|(|B|)>=card<around*|(|A|)>> then <math|B=A>
+  </corollary>
+
+  <\proof>
+    Assume that <math|B\<neq\>A> then as <math|B\<subseteq\>A> there exist a
+    <math|a\<in\>A> such that <math|a\<nin\>B>. Hence
+    <math|B<big|cup><around*|{|a|}>\<subseteq\>A> so that
+    <math|card<around*|(|B<big|cup><around*|{|a|}>|)>\<leqslant\>card<around*|(|A|)>>,
+    further we have by [corollary: <reference|complex cardinality adding
+    element>] that <math|card<around*|(|B<big|cup><around*|{|a|}>|)>=card<around*|(|B|)>+1>
+    so that <math|card<around*|(|B|)>+1\<leqslant\>card<around*|(|A|)>> or
+    <math|card<around*|(|B|)>\<less\>card<around*|(|A|)>> contradicting
+    <math|card<around*|(|A|)>=card<around*|(|B|)>>. Hence we must have that
+    <math|A=B>.
+  </proof>
+
   <subsection|Extended real numbers>
 
   Finally we define the set of extended real numbers which usefull if we have
@@ -13406,7 +13425,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|6>
-    <associate|page-first|193>
+    <associate|page-first|195>
     <associate|project-flag|false>
     <associate|section-nr|3>
     <associate|subsection-nr|0>
@@ -13489,6 +13508,7 @@
     <associate|complex cardinality|<tuple|10.73|?>>
     <associate|complex cardinality adding element|<tuple|10.77|?>>
     <associate|complex cardinality alternative|<tuple|10.74|?>>
+    <associate|complex cardinality equality and subset|<tuple|10.78|?>>
     <associate|complex cardinality properties|<tuple|10.76|?>>
     <associate|complex conjugate|<tuple|10.67|?>>
     <associate|complex conjugate properties|<tuple|10.68|?>>
@@ -13498,9 +13518,9 @@
     <associate|complex densitiy theorem|<tuple|10.27|?>>
     <associate|complex embedding|<tuple|10.5|?>>
     <associate|complex field|<tuple|10.2|?>>
-    <associate|complex finite adding a element|<tuple|10.77|?>>
     <associate|complex finite lemma|<tuple|10.71|?>>
     <associate|complex finite set condition|<tuple|10.72|?>>
+    <associate|complex finite set subset and cardinality|<tuple|10.78|?>>
     <associate|complex finite subset|<tuple|10.75|?>>
     <associate|complex i^2=-1|<tuple|10.62|?>>
     <associate|complex integers are conditional complete|<tuple|10.16|?>>
@@ -13747,11 +13767,11 @@
     <associate|eq 9.82.036|<tuple|9.82|?>>
     <associate|eq 9.89.047|<tuple|9.83|?>>
     <associate|eq 9.90.047|<tuple|9.84|?>>
-    <associate|extended reals|<tuple|10.79|?>>
-    <associate|extended reals are fully ordered|<tuple|10.83|?>>
-    <associate|extended reals existence|<tuple|10.78|?>>
-    <associate|extended reals finite real number|<tuple|10.80|?>>
-    <associate|extended reals order definition|<tuple|10.81|?>>
+    <associate|extended reals|<tuple|10.80|?>>
+    <associate|extended reals are fully ordered|<tuple|10.84|?>>
+    <associate|extended reals existence|<tuple|10.79|?>>
+    <associate|extended reals finite real number|<tuple|10.81|?>>
+    <associate|extended reals order definition|<tuple|10.82|?>>
     <associate|integeres order|<tuple|7.21|?>>
     <associate|integers|<tuple|7.2|?>>
     <associate|integers 0\<less\>1 and 0\<less\>2|<tuple|7.25|?>>
