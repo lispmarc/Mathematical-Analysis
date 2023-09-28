@@ -3973,6 +3973,114 @@
     </description>
   </proof>
 
+  We have a simpler definition for finite sets of vectors.
+
+  <\theorem>
+    <label|linear independent finite set>Let
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a vector space
+    over the field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> and
+    <math|W\<subseteq\>V> a finite set, so by [theorem: <reference|linear
+    finite set (1)>] there exist as finite disjoint family
+    <math|<around*|{|w<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>W>
+    such that <math|<around*|{|w<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>=W>]
+    then\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|W<text| is linear
+      independent>>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|\<forall\>i\<in\><around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F<text|
+      with ><big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>w<rsub|i>=0<text|
+      we have >\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      >\<alpha\><rsub|i>=0>|<cell|>>>>
+    </eqnarray*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>This follows from [theorem:
+      <reference|linear independent set alternative>]\ 
+
+      <item*|<math|\<Leftarrow\>>>Let <math|<around*|{|u<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>W>
+      a finite disjoint family then by [theorem: <reference|linear finite
+      set>] we have\ 
+
+      <\equation>
+        <label|eq 11.31.086>u:<around*|{|1,\<ldots\>,m|}>\<rightarrow\><around*|{|u<rsub|i>\|<around*|{|1,\<ldots\>,m|}>|}><text|
+        and >u<rsup|-1>:<around*|{|u<rsub|i>\|<around*|{|1,\<ldots\>,m|}>|}>\<rightarrow\><around*|{|1,\<ldots\>,m|}><text|
+        are bijections>
+      </equation>
+
+      Furhter as <math|<around*|{|w<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>W=<around*|{|w<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>
+      we have by [theorem: <reference|linear finite set>] that\ 
+
+      <\equation>
+        <label|eq 11.32.086>w:<around*|{|1,\<ldots\>,n|}>\<rightarrow\>W<text|
+        is a bijection>
+      </equation>
+
+      Let <math|I=w<rsup|-1><around*|(|<around*|{|u<rsub|i>\|<around*|{|1,\<ldots\>,m|}>|}>|)>>
+      then as <math|w> is a injection we have that
+
+      <\equation>
+        <label|eq 11.33.086>w<rsub|\|I>:I\<rightarrow\>w<rsub|\|I><around*|(|I|)>=w<around*|(|<around*|{|u<rsub|i>\|<around*|{|1,\<ldots\>,m|}>|}>|)>=<around*|{|u<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,m|}>|}><text|
+        is a bijection>
+      </equation>
+
+      Using the composition of bijections it follows that\ 
+
+      <\equation>
+        <label|eq 11.34.086>\<gamma\>=u<rsup|-1>\<circ\>w<rsub|\|I>:I\<rightarrow\><around*|{|1,\<ldots\>,m|}><text|
+        is a bijection>
+      </equation>
+
+      Then <math|\<forall\>i\<in\>I> we have
+
+      <\equation>
+        <label|eq 11.35.086>u<rsub|\<gamma\><around*|(|i|)>>=u<around*|(|\<gamma\><around*|(|i|)>|)>=u<around*|(|u<rsup|-1><around*|(|w<around*|(|i|)>|)>|)>=w<around*|(|i|)>=w<rsub|i>.
+      </equation>
+
+      Let <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>F>
+      such that <math|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<alpha\><rsub|i>\<cdot\>u<rsub|i>=0>.
+      Define\ 
+
+      <\equation*>
+        <around*|{|\<beta\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F<text|
+        by >\<beta\><rsub|i>=<choice|<tformat|<table|<row|<cell|0<text| if
+        >i\<in\><around*|{|1,\<ldots\>,n|}>\\I>>|<row|<cell|\<alpha\><rsub|\<gamma\><around*|(|i|)>>
+        if i\<in\>I>>>>>
+      </equation*>
+
+      Then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<beta\><rsub|i>\<cdot\>w<rsub|i>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum over disjoint subsets>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>\\I>\<beta\><rsub|i>\<cdot\>w<rsub|i>+<big|sum><rsub|i\<in\>I>\<beta\><rsub|i>\<cdot\>w<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>\\I>0\<cdot\>w<rsub|i>+<big|sum><rsub|i\<in\>I>\<alpha\><rsub|\<gamma\><around*|(|i|)>>\<cdot\>w<rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum of neutral element
+        (2)>]>>>|<cell|<big|sum><rsub|i\<in\>I>\<alpha\><rsub|\<gamma\><around*|(|i|)>>\<cdot\>w<rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|eq 11.35.086>]>>>|<cell|<big|sum><rsub|i\<in\>I>\<alpha\><rsub|\<gamma\><around*|(|i|)>>\<cdot\>u<rsub|\<gamma\><around*|(|i|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum bijection on index>] and [eq: <reference|eq
+        11.34.086>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<alpha\><rsub|i>\<cdot\>u<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|0>>>>
+      </eqnarray*>
+
+      Using the above we have by the hypothesis we have
+      <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> that
+      <math|\<beta\><rsub|i>=0>. So if <math|i\<in\><around*|{|1,\<ldots\>,m|}>>
+      then <math|\<alpha\><rsub|i>=\<alpha\><rsub|\<gamma\><around*|(|\<gamma\><rsup|-1><around*|(|i|)>|)>>=\<beta\><rsub|<around*|(|\<gamma\><rsup|-1><around*|(|i|)>|)>>=0>
+      Hence <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,m|}>> we have
+      <math|\<alpha\><rsub|i>=0>. So we have proved that for every finite
+      disjoint family <math|<around*|{|u<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>W>
+      we have if <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>F>
+      satisfies \ <math|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<alpha\><rsub|i>\<cdot\>u<rsub|i>=0>
+      then <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,m|}>> we have
+      <math|\<alpha\><rsub|i>=0>, proving by definition that\ 
+
+      <\equation*>
+        W<text| is linear independent>
+      </equation*>
+    </description>
+  </proof>
+
   <\example>
     <label|linear independent empty set>Let
     <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a vector space
@@ -4680,12 +4788,579 @@
       <text|<math|\<forall\>v\<in\>V> their exists a \ finite
       <with|font-series|bold|distinct> family
       ><around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>B<text|
-      and a unique ><around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F<text|
+      and a <with|font-series|bold|unique>
+      ><around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F<text|
       such that >v=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>e<rsub|i>
     </equation*>
   </theorem>
 
   <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>As <math|span<around*|(|B|)>=V> and
+      <math|v\<in\>V> we have by [theorem: <reference|linear span elminate
+      zero factors>] there exists a finite distinct
+      <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|2,\<ldots\>,n|}>>\<subseteq\>B>
+      and a <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>n|}>>\<subseteq\>F>
+      such that\ 
+
+      <\equation*>
+        v=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>e<rsub|i>
+      </equation*>
+
+      This proves existance, now for uniqueness. Assume that
+      <math|<around*|{|\<beta\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F>
+      satisfies also
+
+      <\equation*>
+        v=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<beta\><rsub|i>\<cdot\>e<rsub|i>
+      </equation*>
+
+      Define then\ 
+
+      <\equation*>
+        <around*|{|\<gamma\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><text|
+        by >\<gamma\><rsub|i>=\<alpha\><rsub|i>-\<beta\><rsub|i>
+      </equation*>
+
+      then
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<gamma\><rsub|i>\<cdot\>e<rsub|i>>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|\<alpha\><rsub|i>-\<beta\><rsub|i>|)>\<cdot\>e<rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorems:
+        <reference|sum of sums>, <reference|sum of inverses
+        (2)>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>e<rsub|i>-<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<beta\><rsub|i>\<cdot\>e<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|v-v>>|<row|<cell|>|<cell|=>|<cell|0>>>>
+      </eqnarray*>
+
+      As <math|B> is linear independent we have
+      <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+      <math|\<alpha\><rsub|i>-\<beta\><rsub|i>=\<gamma\><rsub|i>=0> so that
+      <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+      <math|\<alpha\><rsub|i>=\<beta\><rsub|i>>, proving that
+      <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>.,n|}>>=<around*|{|\<beta\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>.
+
+      <item*|<math|\<Leftarrow\>>>If <math|v\<in\>V> then by the hypothesis
+      there exist a <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>B>
+      and <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F>
+      such that <math|v=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>e<rsub|i>>
+      proving that <math|v\<in\>span<around*|(|B|)>.> so
+      <math|V\<subseteq\>span<around*|(|B|)>\<subseteq\>V> proving that\ 
+
+      <\equation*>
+        V=span<around*|(|B|)>
+      </equation*>
+
+      Let <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>B>
+      be a finite family and define\ 
+
+      <\equation*>
+        <around*|{|\<beta\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F<text|
+        by >\<beta\><rsub|i>=0
+      </equation*>
+
+      then\ 
+
+      <\equation*>
+        <big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<beta\><rsub|i>\<cdot\>e<rsub|i>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>0\<cdot\>e<rsub|i>\<equallim\><rsub|<text|[theorem:
+        <reference|sum of neutral element (2)>]>>0
+      </equation*>
+
+      If now <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F>
+      is such that <math|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>e<rsub|i>=0>
+      we have by the hypothesis that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+      <math|\<alpha\><rsub|i>=\<beta\><rsub|i>=0>. Hence <math|B> is linear
+      dependent.
+    </description>
+  </proof>
+
+  If a basis is finite we have a more specific form of the above theorem.
+  First we need a little lemma.
+
+  <\theorem>
+    <label|basis finite alternative>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
+    be a vector space over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+    and <math|B\<subseteq\>V> such that <math|B> is finite so that by
+    [theorem: <reference|linear finite set (1)>] there exists a finite
+    distinct family <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>B>
+    such that\ 
+
+    <\equation*>
+      B=<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>\ 
+    </equation*>
+
+    Then we have
+
+    <\equation*>
+      B<text| is a basis of ><around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>
+    </equation*>
+
+    <\equation*>
+      \<Updownarrow\>
+    </equation*>
+
+    <\equation*>
+      <text|<math|\<forall\>v\<in\>V> their exists ><text|a
+      <with|font-series|bold|unique> ><around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F<text|
+      such that >v=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>e<rsub|i>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ Using [theorem: <reference|linear finite set>] we have that
+
+    <\equation>
+      <label|eq 11.47.085>e:<around*|{|1,\<ldots\>,n|}>\<rightarrow\><around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}><text|
+      is a bijection >
+    </equation>
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|v\<in\>V> then as
+      <math|span<around*|(|B|)>=V> there exists by [theorem:<reference|linear
+      span elminate zero factors>] there exists a disjoint family
+      <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>\<subseteq\>B>
+      and <math|<around*|{|\<beta\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+      such that <math|v=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>\<beta\><rsub|i>\<cdot\>f<rsub|i>>.\ 
+
+      and
+
+      <\equation*>
+        f:<around*|{|1,\<ldots\>,k|}>\<rightarrow\><around*|{|f<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,k|}>|}>\<subseteq\><around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}><rsub|>
+        <text|is a bijection>
+      </equation*>
+
+      Let <math|I=e<rsup|-1><around*|(|<around*|{|f<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,k|}>|}>|)>=e<rsup|-1><around*|(|f<around*|(|<around*|{|1,\<ldots\>,k|}>|)>|)>>
+      then <math|e<rsub|\|I><around*|(|I|)>=e<around*|(|e<rsup|-1><around*|(|<around*|{|f<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,k|}>|}>|)>|)>=<around*|{|f<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,k|}>|}>>
+      so that\ 
+
+      <\equation*>
+        e<rsub|\|I>:I\<rightarrow\><around*|{|f<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,k|}>|}><text|
+        is a bijection >
+      </equation*>
+
+      then\ 
+
+      <\equation>
+        <label|eq 11.48.085>\<gamma\>=f<rsup|-1>\<circ\>e<rsub|\|I>:I\<rightarrow\><around*|{|1,\<ldots\>,k|}><text|
+        is a bijection>
+      </equation>
+
+      Further for <math|i\<in\>I> we have\ 
+
+      <\equation*>
+        f<rsub|\<gamma\><around*|(|i|)>>=f<around*|(|\<gamma\><around*|(|i|)>|)>=f<around*|(|f<rsup|-1><around*|(|e<rsub|\|I><around*|(|i|)>|)>|)>=e<rsub|\|I><around*|(|i|)>=e<around*|(|i|)>=e<rsub|i>
+      </equation*>
+
+      <\equation*>
+        <around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F<text|
+        by ><choice|<tformat|<table|<row|<cell|\<alpha\><rsub|i>=\<beta\><rsub|f<rsup|-1><around*|(|e<around*|(|i|)>|)>><text|
+        if >i\<in\>I>>|<row|<cell|0<text| if
+        >i\<in\><around*|{|1,\<ldots\>,n|}>\\I>>>>>
+      </equation*>
+
+      Then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>e<rsub|i>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum over disjoint subsets>]>>>|<cell|<big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>\<cdot\>e<rsub|i>+<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>\\I>\<alpha\><rsub|i>\<cdot\>e<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\>I>\<beta\><rsub|\<gamma\><around*|(|i|)>>\<cdot\>f<rsub|\<gamma\><around*|(|i|)>>+<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>\\I>0\<cdot\>e<rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum of neutral element
+        (2)>]>>>|<cell|<big|sum><rsub|i\<in\>I>\<beta\><rsub|\<gamma\><around*|(|i|)>>\<cdot\>f<rsub|\<gamma\><around*|(|i|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum bijection on index>] and [eq: <reference|eq
+        11.48.085>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>\<beta\><rsub|i>\<cdot\>f<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|v>>>>
+      </eqnarray*>
+
+      proving existence. Now for uniqueness, let
+      <math|<around*|{|\<lambda\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F>
+      be another family such that <math|v=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<lambda\><rsub|i>\<cdot\>e<rsub|i>>.
+      Define\ 
+
+      <\equation*>
+        <around*|{|\<zeta\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F<text|
+        by >\<zeta\><rsub|i>=\<alpha\><rsub|i>-\<lambda\><rsub|i>
+      </equation*>
+
+      then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<zeta\><rsub|i>\<cdot\>e<rsub|i>>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|\<alpha\><rsub|i>-\<lambda\><rsub|i>|)>\<cdot\>e<rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorems:
+        <reference|sum of sums>, <reference|sum of inverses
+        (2)>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>e<rsub|i>-<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<lambda\><rsub|i>\<cdot\>e<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|v-v>>|<row|<cell|>|<cell|=>|<cell|0>>>>
+      </eqnarray*>
+
+      As <math|B> is linear dependent we have that
+      <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+      <math|\<alpha\><rsub|i>-\<lambda\><rsub|i>=\<zeta\><rsub|i>=0> so that
+      <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have
+      <math|\<alpha\><rsub|i>=\<lambda\><rsub|i>>. Hence
+      <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>=<around*|{|\<lambda\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+      proving uniqueness.
+
+      <item*|<math|\<Leftarrow\>>>By the hypothesis we we have if
+      <math|v\<in\>V> that there exists a unique
+      <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+      such that\ 
+
+      <\equation*>
+        v=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>e<rsub|i>
+      </equation*>
+
+      proving that <math|v\<in\>span<around*|(|B|)>> hence
+      <math|V\<subseteq\>span<around*|(|B|)>\<subseteq\>V>proving that\ 
+
+      <\equation*>
+        span<around*|(|B|)>=V
+      </equation*>
+
+      Next we have to prove that <math|B> is linear independent. Let
+      <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F>
+      be such that <math|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>e<rsub|i>=0>.
+      Define <math|<around*|{|\<beta\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F>
+      by <math|\<beta\><rsub|i>=0> then we have
+
+      <\equation*>
+        <big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<beta\><rsub|i>\<cdot\>e<rsub|i>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>0\<cdot\>e<rsub|i>\<equallim\><rsub|<text|[theorem:
+        <reference|sum of neutral element (2)>]
+        >>0=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>e<rsub|i><rsub|<text|>>
+      </equation*>
+
+      so that by the hypothesis we have <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+      that <math|\<alpha\><rsub|i>=\<beta\><rsub|i>=0>. Hence by [thoerem:
+      <reference|linear independent finite set>] it follows that\ 
+
+      <\equation*>
+        B<text| is linear indepenedent>
+      </equation*>
+    </description>
+  </proof>
+
+  Up to now we are not certain that every vector space has a basis. We will
+  now use the Axiom of Choice to prove this.
+
+  <\theorem>
+    <label|basis existance (1)>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
+    be a vector space over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>,
+    <math|R\<subseteq\>W\<subseteq\>V> such that\ 
+
+    <\enumerate>
+      <item><math|R> is linear independent
+
+      <item><math|span<around*|(|W|)>=V>
+    </enumerate>
+
+    then there exists a basis <math|B> of
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> such that
+    <math|R\<subseteq\>B\<subseteq\>W>
+  </theorem>
+
+  <\proof>
+    Define the set of linear independent sets between <math|R> and <math|B>
+
+    <\equation>
+      <label|eq 11.54.086>\<cal-A\>=<around*|{|X\<subseteq\>V\|R\<subseteq\>X\<subseteq\>W<text|
+      and >X<text| is linear independent>|}>
+    </equation>
+
+    then we have, as <math|R> is linear independent and
+    <math|R\<subseteq\>R\<subseteq\>W,> we have that\ 
+
+    <\equation>
+      <label|eq 11.56.086>R\<in\>\<cal-A\>
+    </equation>
+
+    Using \ [example: <reference|order inclusion is a order>] we can order
+    <math|\<cal-A\>> by the inclusion operator, in other words
+
+    <\equation>
+      <around*|\<langle\>|<label|eq 11.56.086>\<cal-A\>,\<subseteq\>|\<rangle\>><text|
+      is a partial ordered set>
+    </equation>
+
+    Let <math|\<cal-C\>\<subseteq\>\<cal-A\>> be a non empty chain \ chain
+    [see definition: <reference|order chain>]. If <math|X\<in\>\<cal-C\>>
+    then <math|X\<in\>\<cal-A\>> so that <math|R\<subseteq\>X\<subseteq\>W>
+    hence \ <math|R\<subseteq\><big|cup><rsub|X\<in\>\<cal-C\>>X\<subseteq\>W>
+    hence
+
+    <\equation>
+      <label|eq 11.57.086>R\<subseteq\>B<rsub|\<cal-C\>>\<subseteq\>W
+      <text|and >\<forall\>X\<in\>\<cal-C\><text| we have
+      >X\<subseteq\>B<rsub|\<cal-C\>><text| where
+      >B<rsub|\<cal-C\>>=<big|cup><rsub|X\<in\>\<cal-C\>>X
+    </equation>
+
+    We use now mathematical induction on the size of finite sets to proof
+    that\ 
+
+    <\equation>
+      <label|eq 11.58.086>\<forall\>A\<subseteq\>B<rsub|\<cal-C\><text|>><text|
+      such that >A<text| is finite there >\<exists\>X\<in\>\<cal-C\><text|
+      such that >A\<subseteq\>X
+    </equation>
+
+    <\proof>
+      Define\ 
+
+      <\equation*>
+        \<cal-S\>=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|<text|If
+        >A\<subseteq\>B<rsub|\<cal-C\>><text| with
+        ><around*|{|1,\<ldots\>,n|}>\<approx\>A<text| then
+        >\<exists\>X\<in\>\<cal-C\><text| such that >A\<subseteq\>X|}>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|0\<in\>\<cal-S\>>>If
+        <math|A\<subseteq\>B<rsub|\<cal-C\>>> with
+        <math|A\<approx\>0=\<varnothing\>> then by [hteorem:
+        <reference|complex finite set condition>] there exist a bijection
+
+        <\equation*>
+          \<beta\>:<around*|{|1,\<ldots\>,0|}>=\<varnothing\>\<rightarrow\>A,
+        </equation*>
+
+        hence <math|A=\<beta\><around*|(|\<varnothing\>|)>> proving that
+        <math|A=\<varnothing\>>. As <math|\<cal-C\>\<neq\>\<varnothing\>>
+        there exists a <math|X\<in\>\<cal-C\>> and trivially
+        <math|A=\<varnothing\>\<subseteq\>X>. Hence <math|0\<in\>\<cal-S\>>.
+
+        <item*|<math|n\<in\>\<cal-S\>\<Rightarrow\>n+1\<in\>\<cal-S\>>>Let
+        <math|A\<subseteq\>B<rsub|\<cal-C\>>> with
+        <math|<around*|{|1,\<ldots\>,n+1|}>\<approx\>A> then there exist a
+        bijection
+
+        <\equation*>
+          \<beta\>:<around*|{|1,\<ldots\>,n+1|}>\<rightarrow\>A.
+        </equation*>
+
+        Take <math|A<rprime|'>=A\\<around*|{|\<beta\><around*|(|n+1|)>|}>>
+        and consider <math|\<beta\><rsub|\|<around*|{|1,\<ldots\>,n|}>>:<around*|{|1,\<ldots\>,n|}>\<rightarrow\>A<rprime|'>>
+        then we have:
+
+        <\description>
+          <item*|injectivity>If <math|\<beta\><rsub|\|<around*|{|1,\<ldots\>,n|}>><around*|(|k|)>=\<beta\><rsub|\|<around*|{|1,\<ldots\>,n|}>><around*|(|l|)>>
+          then <math|\<beta\><around*|(|k|)>=\<beta\><around*|(|l|)>> which
+          as <math|\<beta\>> is a bijection proves that <math|k=l>
+
+          <item*|surjectivity>If <math|y\<in\>A<rprime|'>> then
+          <math|y\<in\>A> and <math|y\<neq\>\<beta\><around*|(|n+1|)>>. As
+          <math|\<beta\>> is a bijection there exists a
+          <math|i\<in\><around*|{|1,\<ldots\>,n+1|}>> such that
+          <math|\<beta\><around*|(|i|)>=y>. If <math|i=n+1> then
+          <math|y=\<beta\><around*|(|i|)>=\<beta\><around*|(|n+1|)>>
+          contradicting <math|y\<neq\>\<beta\><around*|(|n+1|)>>, so
+          <math|i\<in\><around*|{|0,\<ldots\>,n|}>>, hence
+          <math|y=\<beta\><around*|(|i|)>=\<beta\><rsub|\|<around*|{|1,\<ldots\>,n|}>><around*|(|i|)>>.
+        </description>
+
+        proving that <math|><math|\<beta\><rsub|\|<around*|{|1,\<ldots\>,n|}>>:<around*|{|1,\<ldots\>,n|}>\<rightarrow\>A<rprime|'>>
+        is a bijection hence <math|<around*|{|1,\<ldots\>,n|}>\<approx\>A<rprime|'>>.
+        As <math|n\<in\>S> there exist a <math|X<rprime|'>\<in\>\<cal-C\>>
+        such that <math|A<rprime|'>\<subseteq\>X<rprime|'>>. Further as
+        <math|\<beta\><around*|(|n+1|)>\<in\>A\<subseteq\>B<rsub|\<cal-C\>>=<big|cup><rsub|X\<in\>\<cal-C\>>X>
+        there exists a <math|X\<in\>\<cal-C\>> such that
+        <math|\<beta\><around*|(|n+1|)>\<in\>X>. Now as <math|\<cal-C\>> is a
+        chain we have either:
+
+        <\description>
+          <item*|<math|X<rprime|'>\<subseteq\>X>>Then as
+          <math|A\\<around*|{|\<beta\><around*|(|n+1|)>|}>=A<rprime|'>\<subseteq\>X<rprime|'>\<subseteq\>X>
+          and <math|\<beta\><around*|(|n+1|)>\<in\>X> we have that
+          <math|A\<subseteq\>X> proving that <math|n+1\<in\>S>
+
+          <item*|<math|X\<subseteq\>X<rprime|'>>>Then as
+          <math|A\\<around*|{|\<beta\><around*|(|n+1|)>|}>=A<rprime|'>\<subseteq\>X<rprime|'>>
+          and <math|\<beta\><around*|(|n+1|)>\<in\>X\<subseteq\>X<rprime|'>>
+          we have that <math|A\<subseteq\>X<rprime|'>> proving that
+          <math|n+1\<in\>S>
+        </description>
+
+        so in both cases we have that <math|n+1\<in\>S>. \ 
+      </description>
+
+      By mathematical induction it follows that <math|S=\<bbb-N\><rsub|0>>.
+      So if <math|A\<subseteq\>B<rsub|\<cal-C\>>> such that <math|A> is
+      finite we have by [theorem: <reference|complex finite set condition>] a
+      <math|n\<in\>\<bbb-N\><rsub|0>> such that
+      <math|<around*|{|1,\<ldots\>,n|}>\<approx\>A>. Hence as <math|n\<in\>S>
+      there exists a <math|X\<in\>\<cal-C\>> such that <math|A\<subseteq\>X>.
+    </proof>
+
+    We prove now that <math|B<rsub|\<cal-C\>>> is linear independent. Let
+    <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>B<rsub|\<cal-C\>>>
+    be a finite disjoint family then by [theorem: <reference|linear finite
+    set>] <math|<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>
+    is finite and as <math|<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>\<subseteq\>B<rsub|\<cal-C\>>>
+    we have by [eq: <reference|eq 11.58.086>] that\ 
+
+    <\equation>
+      <label|eq 11.29.086>\<exists\>Y\<in\>\<cal-C\><text| such that
+      ><around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>\<subseteq\>Y<text|
+      hence ><around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>Y
+    </equation>
+
+    As <math|Y\<in\>\<cal-C\>\<subseteq\>\<cal-A\>> we have by [eq:
+    <reference|eq 11.54.086>] that
+
+    <\equation>
+      R\<subseteq\>Y\<subseteq\>W<text| and >Y<text| is linear independent>
+    </equation>
+
+    So if <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F>
+    such that <math|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>e<rsub|i>>
+    we have by definition of linear independency that
+    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|\<alpha\><rsub|i>=0>. As \ <math|><math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>B<rsub|\<cal-C\>>>
+    was choosen arbitrary it follows that\ 
+
+    <\equation>
+      <label|eq 11.61.086>B<rsub|\<cal-C\>><text| is linear independent>
+    </equation>
+
+    Combining this with [eqs: <reference|eq 11.54.086>, <reference|eq
+    11.58.086>] it follows that\ 
+
+    <\equation*>
+      B<rsub|\<cal-C\>>\<in\>\<cal-A\>
+    </equation*>
+
+    So for every non-empty chain <math|\<cal-C\>\<subseteq\>\<cal-A\>> we
+    have found a <math|B<rsub|\<cal-C\>>\<in\>\<cal-A\>> such that
+    <math|\<forall\>X\<in\>\<cal-C\>> we have
+    <math|X\<subseteq\><big|cup><rsub|X\<in\>\<cal-C\>>X=B<rsub|\<cal-C\>>>
+    hence <math|\<cal-C\>> has a upper bound <math|B<rsub|\<cal-C\>>>.
+    Further as by [eq: <reference|eq 11.56.086>] <math|R\<in\>\<cal-A\>> we
+    have for the empty chain [<math|\<cal-C\>=\<varnothing\>>] that
+    <math|\<forall\>X\<in\>\<varnothing\>> <math|X\<subseteq\>R> is satisfied
+    vacously, hence <math|R> is a upper bound of the empty chain.. So we have
+    that
+
+    <\equation*>
+      <\text>
+        Every chain <math|\<cal-C\>> in <math|\<cal-A\><text| has a upper
+        bound in >\<cal-A\>>
+      </text>
+    </equation*>
+
+    So by Zorn's lemma [see theorem: <reference|choice Zorn's lemma>] there
+    exists a maximal element in <math|\<cal-A\>>, in other words\ 
+
+    <\equation>
+      <label|eq 11.62.086>\<exists\>M\<in\>\<cal-A\><text| such that
+      >\<forall\>X<text| we have >X\<subseteq\>M
+    </equation>
+
+    and as <math|M\<in\>\<cal-A\>> we have
+
+    <\equation>
+      <label|eq 11.63.086>R\<subseteq\>M\<subseteq\>W<text| and >M<text| is
+      linear independent>
+    </equation>
+
+    Let now <math|w\<in\>W> then we have either:
+
+    <\description>
+      <item*|<math|w\<in\>M>>As by [theorem: <reference|linear span contains
+      set>] <math|M\<subseteq\>span<around*|(|M|)>> it follows that
+      <math|w\<in\>span<around*|(|M|)>>.
+
+      <item*|<math|w\<nin\>M>>Assume that <math|M<big|cup><around*|{|w|}>> is
+      linear independent then as <math|R\<subseteq\>M\<subseteq\>M<big|cup><around*|{|w|}>\<subset\>W>
+      it follows that <math|M<big|cup><around*|{|w|}>\<in\>\<cal-A\>>. Using
+      [eq: <reference|eq 11.62.086>] it follows that
+      <math|M<big|cup><around*|{|w|}>\<subseteq\>M> so that <math|w\<in\>M>
+      contradicting <math|w\<nin\>M>. Hence we have that\ 
+
+      <\equation*>
+        M<big|cup><around*|{|w|}><text| is linear dependent>
+      </equation*>
+
+      Hence there exists a finite distinct family
+      <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>M<big|cup><around*|{|w|}>>
+      and a <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F>
+      not all zero such that <math|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>f<rsub|i>=0>.
+      If <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>f<rsub|i>\<neq\>w>
+      then <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>M>
+      so that <math|M> is linear dependent contradicting [eq: <reference|eq
+      11.63.086>]. Hence <math|\<exists\>k\<in\><around*|{|1,\<ldots\>,n|}>>
+      such that <math|f<rsub|k>=w>. As <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+      is distinct we have <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>>
+      that <math|f<rsub|i>\<in\>M>. Define now\ 
+
+      <\equation*>
+        <around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>\<subseteq\>M<text|
+        by >e<rsub|i>=<choice|<tformat|<table|<row|<cell|f<rsub|i><text| if
+        >i\<in\><around*|{|1,\<ldots\>,k-1|}>>>|<row|<cell|f<rsub|i+1><text|
+        if >i\<in\><around*|{|k,\<ldots\>,n-1|}>>>>>>
+      </equation*>
+
+      and\ 
+
+      <\equation*>
+        <around*|{|\<beta\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>><text|
+        by >\<beta\><rsub|i>=<choice|<tformat|<table|<row|<cell|\<alpha\><rsub|i><text|
+        if >i\<in\><around*|{|1,\<ldots\>,k-1|}>>>|<row|<cell|\<alpha\><rsub|i+1><text|
+        if >i\<in\><around*|{|k,\<ldots\>,n-1|}>>>>>>
+      </equation*>
+
+      further we have also that\ 
+
+      <\equation*>
+        \<tau\>:<around*|{|k,\<ldots\>,n-1|}>\<rightarrow\><around*|{|k+1,\<ldots\>,n|}>
+        by \<tau\><around*|(|i|)>=i+1<text| is a bijection>
+      </equation*>
+
+      then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|0>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>f<rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum over disjoint subsets>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<alpha\><rsub|i>\<cdot\>f<rsub|i>+<big|sum><rsub|i\<in\>k>\<alpha\><rsub|i>\<cdot\>f<rsub|i>+<big|sum><rsub|i\<in\><around*|{|k+1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>f<rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum general single>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<alpha\><rsub|i>\<cdot\>f<rsub|i>+\<alpha\><rsub|k>\<cdot\>f<rsub|k>+<big|sum><rsub|i\<in\><around*|{|k+1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>f<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<alpha\><rsub|i>\<cdot\>f<rsub|i>+\<alpha\><rsub|k>\<cdot\>f<rsub|k>+<big|sum><rsub|i\<in\><around*|{|k+1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>f<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<beta\><rsub|i>\<cdot\>e<rsub|i>+\<alpha\><rsub|k>\<cdot\>f<rsub|k>+<big|sum><rsub|i\<in\><around*|{|k+1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>f<rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum bijection on index>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<beta\><rsub|i>\<cdot\>e<rsub|i>+\<alpha\><rsub|k>\<cdot\>f<rsub|k>+<big|sum><rsub|i\<in\><around*|{|k,\<ldots\>,n-1|}>>\<alpha\><rsub|\<tau\><around*|(|i|)>>\<cdot\>f<rsub|\<tau\><around*|(|i|)>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<beta\><rsub|i>\<cdot\>e<rsub|i>+\<alpha\><rsub|k>\<cdot\>f<rsub|k>+<big|sum><rsub|i\<in\><around*|{|k,\<ldots\>,n-1|}>>\<alpha\><rsub|i+1>\<cdot\>f<rsub|i+1>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<beta\><rsub|i>\<cdot\>e<rsub|i>+\<alpha\><rsub|k>\<cdot\>f<rsub|k>+<big|sum><rsub|i\<in\><around*|{|k,\<ldots\>,n-1|}>>\<beta\><rsub|i>\<cdot\>e<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>\<beta\><rsub|i>\<cdot\>e<rsub|i>+\<alpha\><rsub|k>\<cdot\>f<rsub|k>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum over disjoint subsets>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>\<beta\><rsub|i>\<cdot\>e<rsub|i>+\<alpha\><rsub|k>\<cdot\>w<eq-number><label|eq
+        11.64.086>>>>>
+      </eqnarray*>
+
+      Assume <math|\<alpha\><rsub|k>=0> then we have <math|>that
+      <math|\<exists\>i\<in\><around*|{|1,\<ldots\>,n-1|}>> such that
+      <math|\<beta\><rsub|i>\<neq\>0> [otherwise we have
+      <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> that
+      <math|\<alpha\><rsub|i>=<choice|<tformat|<table|<row|<cell|\<beta\><rsub|i>=0<text|
+      if >i\<in\><around*|{|1,\<ldots\>,k-1|}>>>|<row|<cell|0<text| if
+      >i\<in\><around*|{|k|}>>>|<row|<cell|\<beta\><rsub|i-1><text|=0 if
+      >i\<in\><around*|{|k+1,\<ldots\>,n|}>>>>>>> contradicting that
+      <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+      is not all zeroes. Further from [eq: <reference|eq 11.64.086>] we have
+      that <math|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>\<beta\><rsub|i>\<cdot\>e<rsub|i>=0>
+      which, as <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>\<subseteq\>M>
+      proves that <math|M> is linear dependent, contradicting [eq:
+      <reference|eq 11.63.086>]. Hnece we must have that
+      <math|\<alpha\><rsub|k>\<neq\>0>. Then by [eq: <reference|eq
+      11.64.086>] it follows that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|w>|<cell|=>|<cell|<around*|(|\<alpha\><rsub|k>|)><rsup|-1>\<cdot\><around*|(|-<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>\<beta\><rsub|i>\<cdot\>e<rsub|i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorems:
+        <reference|vector space finite sum (1)>, <reference|sum of inverses
+        (2)>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>><around*|(|\<alpha\><rsub|k>|)><rsup|-1>\<cdot\><around*|(|\<beta\><rsub|i>\<cdot\>e<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>><around*|(|<around*|(|\<alpha\><rsub|k>|)><rsup|-1>\<cdot\>\<beta\><rsub|i>|)>\<cdot\>e<rsub|i>>>>>
+      </eqnarray*>
+
+      So if we define \ <math|<around*|{|\<gamma\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F<text|
+      by >\<gamma\><rsub|i>=<around*|(|\<alpha\><rsub|k>|)><rsup|-1>\<cdot\>\<beta\><rsub|i>>
+      we have <math|w=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>\<gamma\><rsub|i>\<cdot\>e<rsub|i>>
+      proving that\ 
+
+      <\equation*>
+        w\<in\>span<around*|(|M|)>
+      </equation*>
+    </description>
+
+    So in all cases we have <math|w\<in\>span<around*|(|M|)>> proving that
+
+    <\equation*>
+      W\<subseteq\>span<around*|(|M|)>
+    </equation*>
+
+    TODO finish this
+
     \;
   </proof>
 
@@ -4707,7 +5382,7 @@
 
   <section|Multilinear mappings>
 
-  <section|Deteminant Functions>
+  <section|Deteminant Functions>b
 </body>
 
 <\initial>
@@ -4752,8 +5427,10 @@
     <associate|auto-7|<tuple|11.1.3|?>>
     <associate|auto-8|<tuple|permutation|?>>
     <associate|auto-9|<tuple|<with|mode|<quote|math>|\<sigma\>>|?>>
-    <associate|basis|<tuple|11.93|?>>
-    <associate|basis alternative|<tuple|11.94|?>>
+    <associate|basis|<tuple|11.94|?>>
+    <associate|basis alternative|<tuple|11.95|?>>
+    <associate|basis existance (1)|<tuple|11.97|?>>
+    <associate|basis finite alternative|<tuple|11.96|?>>
     <associate|disjoint family|<tuple|disjoint family|?>>
     <associate|disjoint family property|<tuple|11.69|?>>
     <associate|eq 11.1.054|<tuple|11.1|?>>
@@ -4768,57 +5445,82 @@
     <associate|eq 11.16.081|<tuple|11.16|?>>
     <associate|eq 11.17.080|<tuple|11.28|?>>
     <associate|eq 11.17.081|<tuple|11.17|?>>
+    <associate|eq 11.18.080|<tuple|11.36|?>>
     <associate|eq 11.18.081|<tuple|11.18|?>>
+    <associate|eq 11.19.080|<tuple|11.37|?>>
     <associate|eq 11.19.081|<tuple|11.19|?>>
     <associate|eq 11.2.053|<tuple|11.2|?>>
     <associate|eq 11.20.081|<tuple|11.20|?>>
+    <associate|eq 11.20\<point\>080|<tuple|11.38|?>>
+    <associate|eq 11.21.080|<tuple|11.39|?>>
     <associate|eq 11.21.081|<tuple|11.21|?>>
+    <associate|eq 11.22.080|<tuple|11.40|?>>
     <associate|eq 11.22.081|<tuple|11.22|?>>
-    <associate|eq 11.23.080|<tuple|11.31|?>>
+    <associate|eq 11.23.080|<tuple|11.36|?>>
     <associate|eq 11.23.081|<tuple|11.23|?>>
-    <associate|eq 11.24.080|<tuple|11.32|?>>
+    <associate|eq 11.24.080|<tuple|11.37|?>>
     <associate|eq 11.24.081|<tuple|11.24|?>>
-    <associate|eq 11.25.080|<tuple|11.33|?>>
+    <associate|eq 11.25.080|<tuple|11.38|?>>
     <associate|eq 11.25.081|<tuple|11.25|?>>
+    <associate|eq 11.29.086|<tuple|11.59|?>>
     <associate|eq 11.3.053|<tuple|11.3|?>>
+    <associate|eq 11.31.086|<tuple|11.31|?>>
+    <associate|eq 11.32.086|<tuple|11.32|?>>
+    <associate|eq 11.33.086|<tuple|11.33|?>>
+    <associate|eq 11.34.086|<tuple|11.34|?>>
+    <associate|eq 11.35.086|<tuple|11.35|?>>
     <associate|eq 11.36.084|<tuple|11.29|?>>
     <associate|eq 11.37.084|<tuple|11.30|?>>
     <associate|eq 11.4.053|<tuple|11.4|?>>
-    <associate|eq 11.46.083|<tuple|11.34|?>>
-    <associate|eq 11.47.083|<tuple|11.35|?>>
-    <associate|eq 11.48.083|<tuple|11.36|?>>
-    <associate|eq 11.49.083|<tuple|11.37|?>>
+    <associate|eq 11.46.083|<tuple|11.39|?>>
+    <associate|eq 11.47.083|<tuple|11.40|?>>
+    <associate|eq 11.47.085|<tuple|11.52|?>>
+    <associate|eq 11.48.076|<tuple|11.62|?>>
+    <associate|eq 11.48.083|<tuple|11.41|?>>
+    <associate|eq 11.48.085|<tuple|11.53|?>>
+    <associate|eq 11.49.076|<tuple|11.63|?>>
+    <associate|eq 11.49.083|<tuple|11.42|?>>
     <associate|eq 11.5.053|<tuple|11.5|?>>
-    <associate|eq 11.50.083|<tuple|11.38|?>>
-    <associate|eq 11.51.083|<tuple|11.39|?>>
-    <associate|eq 11.52.083|<tuple|11.40|?>>
-    <associate|eq 11.53.083|<tuple|11.41|?>>
-    <associate|eq 11.53.084|<tuple|11.46|?>>
-    <associate|eq 11.54.083|<tuple|11.42|?>>
-    <associate|eq 11.55.083|<tuple|11.43|?>>
-    <associate|eq 11.57.084|<tuple|11.45|?>>
-    <associate|eq 11.58.084|<tuple|11.44|?>>
+    <associate|eq 11.50.083|<tuple|11.43|?>>
+    <associate|eq 11.51.083|<tuple|11.44|?>>
+    <associate|eq 11.52.083|<tuple|11.45|?>>
+    <associate|eq 11.53.083|<tuple|11.46|?>>
+    <associate|eq 11.53.084|<tuple|11.51|?>>
+    <associate|eq 11.54.083|<tuple|11.47|?>>
+    <associate|eq 11.54.086|<tuple|11.54|?>>
+    <associate|eq 11.55.083|<tuple|11.48|?>>
+    <associate|eq 11.56.086|<tuple|11.56|?>>
+    <associate|eq 11.57.084|<tuple|11.50|?>>
+    <associate|eq 11.57.086|<tuple|11.57|?>>
+    <associate|eq 11.58.084|<tuple|11.49|?>>
+    <associate|eq 11.58.086|<tuple|11.58|?>>
     <associate|eq 11.6.053|<tuple|11.6|?>>
+    <associate|eq 11.61.086|<tuple|11.61|?>>
+    <associate|eq 11.62.086|<tuple|11.62|?>>
+    <associate|eq 11.63.086|<tuple|11.63|?>>
+    <associate|eq 11.64.086|<tuple|11.64|?>>
+    <associate|eq 11.65.086|<tuple|11.65|?>>
     <associate|eq 11.7.053|<tuple|11.7|?>>
     <associate|eq 11.7.053.1|<tuple|11.8|?>>
     <associate|eq 11.9.053|<tuple|11.9|?>>
-    <associate|linear (in)dependency properties (1)|<tuple|11.89|?>>
-    <associate|linear Steinitz (1)|<tuple|11.91|?>>
-    <associate|linear Steinitz (2)|<tuple|11.92|?>>
-    <associate|linear Steinitz lemma|<tuple|11.90|?>>
+    <associate|linear (in)dependency properties (1)|<tuple|11.90|?>>
+    <associate|linear Steinitz (1)|<tuple|11.92|?>>
+    <associate|linear Steinitz (2)|<tuple|11.93|?>>
+    <associate|linear Steinitz lemma|<tuple|11.91|?>>
     <associate|linear combination|<tuple|11.67|?>>
     <associate|linear combination distinct|<tuple|11.70|?>>
     <associate|linear dependent set|<tuple|11.82|?>>
-    <associate|linear dependent set alternative condition|<tuple|11.88|?>>
+    <associate|linear dependent set alternative condition|<tuple|11.89|?>>
     <associate|linear dependent set containing neutral
-    element|<tuple|11.87|?>>
+    element|<tuple|11.88|?>>
     <associate|linear disjoint family|<tuple|11.68|?>>
     <associate|linear finite set|<tuple|11.80|?>>
     <associate|linear finite set (1)|<tuple|11.81|?>>
-    <associate|linear independent empty set|<tuple|11.85|?>>
+    <associate|linear independent empty set|<tuple|11.86|?>>
+    <associate|linear independent finite set|<tuple|11.85|?>>
     <associate|linear independent set|<tuple|11.83|?>>
     <associate|linear independent set alternative|<tuple|11.84|?>>
-    <associate|linear independent singleton|<tuple|11.86|?>>
+    <associate|linear independent singleton|<tuple|11.87|?>>
     <associate|linear span|<tuple|11.71|?>>
     <associate|linear span contains set|<tuple|11.73|?>>
     <associate|linear span elminate zero factors|<tuple|11.72|?>>

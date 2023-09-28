@@ -5160,6 +5160,10 @@
     <math|A=<around*|{|Id<rsub|X><around*|(|i|)>\|i\<in\>I|}>>.
   </example>
 
+  \;
+
+  TODO rewrite the stuff about families in terms of function graphs
+
   <section|Families>
 
   <subsection|Family>
@@ -12817,7 +12821,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|0>
-    <associate|page-first|7>
+    <associate|page-first|9>
     <associate|page-medium|papyrus>
     <associate|project-flag|false>
     <associate|section-nr|0>
