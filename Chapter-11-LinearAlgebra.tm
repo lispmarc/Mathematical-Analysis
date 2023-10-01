@@ -3158,6 +3158,956 @@
     </enumerate>
   </proof>
 
+  ***************************************************************************
+
+  Rewrite this using finite sums
+
+  ***************************************************************************
+
+  TODO
+
+  <subsection|Linear (in)dependency>
+
+  <subsubsection|Span of a set>
+
+  <\definition>
+    <label|linear combination>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
+    be a vector space over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+    and <math|W\<subseteq\>V> then <math|v\<in\>V> is a linear combination of
+    <math|W> if there exists a finite set <math|I\<subseteq\>W> and a
+    <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\>I>\<subseteq\>F> such
+    that\ 
+
+    <\equation*>
+      v=<big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>\<cdot\>i
+    </equation*>
+  </definition>
+
+  In the above the index set is not ordered, it will be usefull for induction
+  arguments later, to use as index sets, sets of the form
+  <math|<around*|{|1,\<ldots\>,n|}>> [if <math|n=0> then
+  <math|<around*|{|1,\<ldots\>,n|}>=\<varnothing\>>] and families
+  <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>V>
+  instead of a finite set of vectors. We have to be careful, for there could
+  be <math|i,j\<in\><around*|{|1,\<ldots\>,n|}>> with <math|i\<neq\>j> such
+  that <math|v<rsub|i>=v<rsub|j>> resulting in extra terms in the sum. To
+  solve this we introduce that concept of ordered families and disjoint
+  families.\ 
+
+  <\definition>
+    <label|linear family finite><dueto|Ordered Family>A family of the form
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>X>
+    where <math|n\<in\>\<bbb-N\><rsub|0>> is called a
+    <with|font-series|bold|ordered family>.
+  </definition>
+
+  <\example>
+    If <math|n=0> then <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>X>
+    is a ordered family where
+
+    <\equation*>
+      <around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>X=<around*|{|\<varnothing\><rsub|i>|}><rsub|i\<in\>\<varnothing\>>\<subseteq\>X
+    </equation*>
+  </example>
+
+  <\proof>
+    If <math|n=0> then <math|<around*|{|1,\<ldots\>,n|}>=<around*|{|1,\<ldots\>,0|}>=\<varnothing\>>
+    and we have by [example: <reference|family empty family>] that\ 
+
+    <\equation*>
+      <around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>X=<around*|{|\<varnothing\><rsub|i>|}><rsub|i\<in\>\<varnothing\>>\<subseteq\>X
+    </equation*>
+
+    \;
+  </proof>
+
+  Remember that a family <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>X>
+  is actually the same as the function <math|x:I\<rightarrow\>X> [see
+  definition: <reference|family>]. Then we have the concept of disjoint
+  families where the defining function is a injection.\ 
+
+  <\definition>
+    <label|linear family disjoint><dueto|Disjoint Family>A family
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>X> is
+    <with|font-series|bold|disjoint> if <math|x:I\<rightarrow\>X> is a
+    injection or equivalently, as <math|x<rsub|i>\<equallim\><rsub|notation>x<around*|(|i|)>>,
+    \ <math|\<forall\>i,j\<in\>I> with <math|x<rsub|i>=x<rsub|j>> we have
+    <math|i=j>.
+  </definition>
+
+  <\theorem>
+    <label|linear ordered family is finite>If
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>X>
+    is a ordered family then <math|<around*|{|x<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>
+    is finite.
+  </theorem>
+
+  <\proof>
+    As <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>X>
+    is actully the function <math|x:<around*|{|1,\<ldots\>,n|}>\<rightarrow\>X>
+    we have that\ 
+
+    <\equation*>
+      x:<around*|{|1,\<ldots\>,n|}>\<rightarrow\>x<around*|(|<around*|{|1,\<ldots\>,n|}>|)>=<around*|{|x<around*|(|i|)>\|i\<in\>I|}>=<around*|{|x<rsub|i>\|i\<in\>I|}><text|
+      is a surjection>
+    </equation*>
+
+    So by [theorem: <reference|surjection f:A-\<gtr\>B if A is finite then B
+    is finite>] <math|<around*|{|x<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>
+    is finite.
+  </proof>
+
+  We have the following characterization of a finite set in terms of
+  families.
+
+  <\theorem>
+    <label|linear finite set>Let <math|X> be a set then\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|X<text| is
+      finite>>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|<text|There
+      exists a distinct ordered family ><around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>X<text|
+      such that >X=<around*|{|x<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>|<cell|>>>>
+    </eqnarray*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>If <math|X> is finite we have by [theorem:
+      <reference|complex finite set condition>] that there exists a
+      <math|k\<in\>\<bbb-N\><rsub|0>> and a bijection
+
+      <\equation*>
+        x:<around*|{|1,\<ldots\>,k|}>\<rightarrow\>X
+      </equation*>
+
+      so that <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>\<subseteq\>X>
+      is a ordered <with|font-series|bold|disjoint> family. Further by
+      surjectivity we have <math|<around*|{|x<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,k|}>|}>=x<around*|(|<around*|{|1,\<ldots\>,k|}>|)>=X>.
+
+      <item*|<math|\<Leftarrow\>>>This follows from [theorem:
+      <reference|linear ordered family is finite>]
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|linear combination (1)>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
+    be a vector space over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>,
+    <math|W\<subseteq\>V> a finite set and <math|v\<in\>V> such that there
+    exists a ordered family [not necessary distinct]
+    <math|<around*|{|w<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>W>
+    and a <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F>
+    such that
+
+    <\equation*>
+      v=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>w<rsub|i>
+    </equation*>
+
+    then there exists a <math|<around*|{|\<beta\><rsub|w>|}><rsub|w\<in\><around*|{|w<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>\<subseteq\>F>
+    such that\ 
+
+    <\equation*>
+      v=<big|sum><rsub|w\<in\><around*|{|w<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>\<beta\><rsub|w>\<cdot\>w
+    </equation*>
+  </theorem>
+
+  <\proof>
+    By [theorem: <reference|linear ordered family is finite>] we have that\ 
+
+    <\equation>
+      <label|eq 11.15.090><around*|{|w<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}><text|
+      is finite>
+    </equation>
+
+    Let <math|w\<in\><around*|{|w<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>
+    and define <math|I<rsub|w>=<around*|{|i\<in\><around*|{|1,\<ldots\>,n|}>\|w<rsub|i>=w|}>>.
+    Then if <math|j\<in\><around*|{|1,\<ldots\>,n|}>> we have
+    <math|w<rsub|j>\<in\><around*|{|w<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>
+    so that for <math|w=w<rsub|j>> we have <math|j\<in\>I<rsub|w>> proving
+    that <math|<around*|{|1,\<ldots\>,n|}>\<subseteq\><big|cup><rsub|w\<in\><around*|{|w<rsub|i0\|i\<in\><around*|{|1,\<ldots\>,n|}>>|}>>I<rsub|w>>.
+    Further as <math|I<rsub|w>\<subseteq\><around*|{|1,\<ldots\>,n|}>> it
+    follows that <math|<big|cup><rsub|w\<in\><around*|{|w<rsub|i0\|i\<in\><around*|{|1,\<ldots\>,n|}>>|}>>I<rsub|w>\<subseteq\><around*|{|1,\<ldots\>,n|}>>.
+    Hence we have\ 
+
+    <\equation>
+      <label|eq 11.16.090><around*|{|1,\<ldots\>,n|}>=<big|cup><rsub|w\<in\><around*|{|w<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>I<rsub|w>
+    </equation>
+
+    Let <math|w,u\<in\><around*|{|w<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>
+    with <math|w\<neq\>vu>. If <math|k\<in\>I<rsub|w><big|cap>I<rsub|u>> then
+    <math|w=w<rsub|k>=u> contradicting <math|w\<neq\>u>, hence we have\ 
+
+    <\equation>
+      <label|eq 11.17.090>\<forall\>w,u\<in\><around*|{|w<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}><text|
+      with >w\<neq\>u<text| we have >I<rsub|w><big|cap>I<rsub|u>=\<varnothing\>
+    </equation>
+
+    Define now\ 
+
+    <\equation>
+      <label|eq 11.18.090><around*|{|\<beta\><rsub|w>|}><rsub|w\<in\><around*|{|w<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>\<subseteq\>F<text|
+      by >\<beta\><rsub|w>=<big|sum><rsub|i\<in\>I<rsub|w>>\<alpha\><rsub|i>
+    </equation>
+
+    Then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|v>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>w<rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum over disjoint subsets (1)>] and [eqs: <reference|eq
+      11.15.090>, <reference|eq 11.16.090>, <reference|eq
+      11.17.090>]>>>|<cell|<big|sum><rsub|w\<in\><around*|{|w<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>><around*|(|<big|sum><rsub|i\<in\>I<rsub|w>>\<alpha\><rsub|i>\<cdot\>w<rsub|i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|i\<in\>I<rsub|w>\<Rightarrow\>w<rsub|i>=w>>|<cell|<big|sum><rsub|w\<in\><around*|{|w<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>><around*|(|<big|sum><rsub|i\<in\>I<rsub|w>>\<alpha\><rsub|i>\<cdot\>w|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|vector space finite sum (2)>]>>>|<cell|<big|sum><rsub|w\<in\><around*|{|w<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>><around*|(|<around*|(|<big|sum><rsub|i\<in\>I<rsub|w>>\<alpha\><rsub|i>|)>\<cdot\>w|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|eq 11.18.090>]>>>|<cell|<big|sum><rsub|w\<in\><around*|{|w<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>\<beta\><rsub|w>\<cdot\>w>>>>
+    </eqnarray*>
+  </proof>
+
+  We have also a stronger opposite of the above theorem.
+
+  <\theorem>
+    <label|linear combination (2)>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
+    be a vector space over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>,
+    <math|W\<subseteq\>V> a finite set and <math|v\<in\>V> such that there
+    exists a <math|<around*|{|\<alpha\><rsub|u>|}><rsub|u\<in\>W>\<subseteq\>F>
+    such that\ 
+
+    <\equation*>
+      v=<big|sum><rsub|u\<in\>W>\<alpha\><rsub|u>\<cdot\>u
+    </equation*>
+
+    then there exists a ordered distinct family
+    <math|<around*|{|w<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>W>
+    satisfying <math|W=<around*|{|w<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>
+    where <math|n=card<around*|(|W|)>> and a
+    <math|<around*|{|\<beta\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F>
+    such that\ 
+
+    <\equation*>
+      <around*|{|\<beta\><rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>=<around*|{|\<alpha\><rsub|w>\|w\<in\>W|}><text|
+      and ><big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<beta\><rsub|i>\<cdot\>w<rsub|i>=<big|sum><rsub|w\<in\>W>\<alpha\><rsub|w>\<cdot\>w
+    </equation*>
+  </theorem>
+
+  <\proof>
+    As <math|W> is finite we have by [theorems: <reference|complex
+    cardinality alternative>] that for <math|n=card<around*|(|W|)>> there
+    exists a bijection\ 
+
+    <\equation*>
+      w:<around*|{|1,\<ldots\>,n|}>\<rightarrow\>W
+    </equation*>
+
+    defining the ordered distinct family <math|<around*|{|w<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>W>
+    such that
+
+    <\equation*>
+      W=w<around*|(|<around*|{|1,\<ldots\>,n|}>|)>=<around*|{|w<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>
+    </equation*>
+
+    Define then\ 
+
+    <\equation*>
+      <around*|{|\<beta\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F<text|
+      by >\<beta\><rsub|i>=\<alpha\><rsub|w<around*|(|i|)>>
+    </equation*>
+
+    If <math|x\<in\><around*|{|\<beta\><rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>
+    then there exists a <math|i\<in\><around*|{|1,\<ldots\>,n|}>> such that
+    <math|x=\<beta\><rsub|i>=\<alpha\><rsub|w<around*|(|i|)>>> proving that
+    <math|x\<in\><around*|{|\<alpha\><rsub|w>\|w\<in\>W|}>>. On the other
+    hand if <math|x\<in\><around*|{|\<alpha\><rsub|w>\|w\<in\>W|}>> then
+    there exists a <math|w\<in\>W> such that <math|x=\<alpha\><rsub|w>> then
+    we have by surjectivity a <math|i\<in\><around*|{|1,\<ldots\>,n|}>> such
+    that <math|w=w<around*|(|i|)>> hence <math|x=\<alpha\><rsub|w<around*|(|i|)>>=\<beta\><rsub|i>\<in\><around*|{|\<beta\><rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}><rsub|>>.
+    So we have\ 
+
+    <\equation*>
+      <around*|{|\<beta\><rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>=<around*|{|\<alpha\><rsub|w>\|w\<in\>W|}>
+    </equation*>
+
+    Further we have
+
+    \ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<beta\><rsub|i>\<cdot\>w<rsub|i>>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsub|w<around*|(|i|)>>\<cdot\>w<around*|(|i|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum bijection on index>]>>>|<cell|<big|sum><rsub|w\<in\>W>\<alpha\><rsub|w>\<cdot\>w>>>>
+    </eqnarray*>
+  </proof>
+
+  The set of all linear combinations of a set is called the span of the set.
+
+  <\definition>
+    <label|linear span>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
+    be a vector space over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+    and <math|W\<subseteq\>V> then\ 
+
+    <\equation*>
+      span<around*|(|W|)>=<around*|{|v\<in\>V\|\<exists\><around*|{|\<alpha\><rsub|w>|}><rsub|w\<in\>I>\<subseteq\>F<text|,
+      <math|I> finite and <math|I\<subseteq\>W> such that
+      >v=<big|sum><rsub|w\<in\>I>\<alpha\><rsub|w>\<cdot\>w<rsub|>|}>
+    </equation*>
+  </definition>
+
+  <\example>
+    <label|linear span of empty set>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
+    be a vector space over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+    then <math|span<around*|(|\<varnothing\>|)>=<around*|{|0|}>>
+  </example>
+
+  <\proof>
+    Let <math|v\<in\>span<around*|(|\<varnothing\>|)>> then there exists a
+    finite <math|I\<subseteq\>\<varnothing\>\<Rightarrow\>I=\<varnothing\>>
+    and a <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\>\<varnothing\>>\<subseteq\>F>
+    such that\ 
+
+    <\equation*>
+      v=<big|sum><rsub|w\<in\>\<varnothing\>>\<alpha\><rsub|w>\<cdot\>w\<equallim\><rsub|<text|[definition:
+      <reference|sum generalized sum>]>>0
+    </equation*>
+
+    proving that\ 
+
+    <\equation*>
+      span<around*|(|\<varnothing\>|)>=0
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|linear span equivalence 1>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
+    be a vector space over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+    and <math|W\<subseteq\>V> then\ 
+
+    <\equation*>
+      v\<in\>span<around*|(|W|)>
+    </equation*>
+
+    <\equation*>
+      \<Downarrow\>
+    </equation*>
+
+    <\equation*>
+      \<exists\><around*|{|w<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>W<text|
+      a distinct family and ><around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F\\<around*|{|0|}><text|
+      such that >v=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>w<rsub|i>
+    </equation*>
+  </theorem>
+
+  and we have\ 
+
+  <\equation*>
+    \<exists\><around*|{|w<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>W<text|
+    and ><around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F<text|
+    such that >v=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>w<rsub|i>
+  </equation*>
+
+  <\equation*>
+    \<Downarrow\>
+  </equation*>
+
+  <\equation*>
+    v\<in\>span<around*|(|W|)>
+  </equation*>
+
+  <\equation*>
+    \;
+  </equation*>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>As <math|v\<in\>span<around*|(|W|)>> then
+      there exists a finite <math|I\<subseteq\>W> and a
+      <math|<around*|{|\<beta\><rsub|w>|}><rsub|w\<in\>I>\<subseteq\>F> such
+      that <math|v=<big|sum><rsub|w\<in\>I>\<alpha\><rsub|w>\<cdot\>w>.
+      Define <math|J=<around*|{|w\<in\>I\|\<beta\><rsub|w>\<neq\>0|}>\<subseteq\>I>
+      then we have for <math|<around*|{|\<beta\><rsub|w>|}><rsub|w\<in\>J>\<subseteq\>F\\<around*|{|0|}>>
+      that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|v>|<cell|=>|<cell|<big|sum><rsub|w\<in\>I>\<beta\><rsub|w>\<cdot\>w>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum over disjoint subsets>]>>>|<cell|<big|sum><rsub|w\<in\>I\\J>\<beta\><rsub|w>\<cdot\>w+<big|sum><rsub|w\<in\>J>\<beta\><rsub|w>\<cdot\>w>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|w\<in\>I\\J>0\<cdot\>w+<big|sum><rsub|w\<in\>J>\<beta\><rsub|w>\<cdot\>w>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum of neutral element
+        (2)>]>>>|<cell|<big|sum><rsub|w\<in\>J>\<beta\><rsub|w>\<cdot\>w>>>>
+      </eqnarray*>
+
+      \ Using [theorem: <reference|linear combination (2)>] there exists a
+      ordered distinct family <math|<around*|{|w<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>J\<subseteq\>W>
+      and a <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F>
+      such that <math|0\<nin\><around*|{|\<beta\><rsub|w>\|w\<in\>J|}>=<around*|{|\<alpha\><rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>
+      so that <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F\\<around*|{|0|}>>
+      and <math|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>w<rsub|i>=<big|sum><rsub|w\<in\>I>\<beta\><rsub|w>\<cdot\>w=v>.\ 
+
+      <item*|<math|\<Leftarrow\>>>Assume that
+      <math|\<exists\><around*|{|w<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>W<text|
+      a distinct family and ><around*|{|\<beta\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F<text|
+      such that >v=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<beta\><rsub|i>\<cdot\>w<rsub|i>>.
+      Using [theorem: <reference|linear ordered family is finite>]
+      <math|I=<around*|{|w<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>> is
+      finite, <math|I\<subseteq\>W> and using [theorem: <reference|linear
+      combination (1)>] there exists a <math|<around*|{|\<alpha\><rsub|w>|}><rsub|w\<in\>I>\<subseteq\>F>
+      such that <math|v=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<beta\><rsub|i>\<cdot\>w<rsub|i>=<big|sum><rsub|w\<in\>I>\<alpha\><rsub|w>\<cdot\>w>
+      proving that <math|v\<in\>span<around*|(|W|)>>
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|linear span contains set>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
+    be a vector space over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+    and <math|W\<subseteq\>V> then\ 
+
+    <\equation*>
+      W\<subseteq\>span<around*|(|W|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Let <math|w\<in\>W> then <math|<around*|{|w|}>> is finite and
+    <math|<around*|{|w|}>\<subseteq\>W>. Define
+    <math|<around*|{|\<alpha\><rsub|u>|}><rsub|u\<in\><around*|{|w|}>>> by
+    <math|\<alpha\><rsub|u>=1> then\ 
+
+    <\equation*>
+      <big|sum><rsub|u\<in\><around*|{|w|}>>\<alpha\><rsub|u>\<cdot\>u\<equallim\><rsub|<text|[theorem:
+      <reference|sum general single>]>>\<alpha\><rsub|w>\<cdot\>w=1\<cdot\>w=w
+    </equation*>
+
+    \;
+  </proof>
+
+  <\theorem>
+    <label|linear span subsets>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
+    be a vector space over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+    and <math|U,W\<subseteq\>V> with <math|U\<subseteq\>W> then\ 
+
+    <\equation*>
+      span<around*|(|U|)>\<subseteq\>span<around*|(|W|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Let <math|v\<in\>span<around*|(|U|)>> then there exists a finite
+    <math|I\<subseteq\>U> and a <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\>I>\<subseteq\>F>
+    such that\ 
+
+    <math|v=<big|sum><rsub|w\<in\>I>\<alpha\><rsub|w>\<cdot\>w>. As
+    <math|U\<subseteq\>W> we have <math|I\<subseteq\>W> so that
+    <math|v\<in\>span<around*|(|W|)>>.
+  </proof>
+
+  <\theorem>
+    <label|linear span is a sub-space>Let
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a vector space
+    over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> and
+    <math|W\<subseteq\>V> then\ 
+
+    <\equation*>
+      span<around*|(|W|)><text| is a sub-space of
+      ><around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    As <math|\<varnothing\>\<subseteq\>W> we have
+    <math|<around*|{|0|}>\<equallim\><rsub|<text|[example: <reference|linear
+    span of empty set>]>>span<around*|(|\<varnothing\>|)>\<subseteq\><rsub|<text|[theorem:
+    <reference|linear span subsets>]>>span<around*|(|W|)>> proving that\ 
+
+    <\equation*>
+      0\<in\>W<text| hence >W\<neq\>\<varnothing\>
+    </equation*>
+
+    Let <math|x,y\<in\>span<around*|(|W|)>> and
+    <math|\<alpha\>,\<beta\>\<in\>F> then there exists finite
+    <math|I,J\<subseteq\>W> and <math|<around*|{|\<alpha\><rsub|w>|}><rsub|w\<in\>I>\<subseteq\>F>,
+    <math|<around*|{|\<beta\><rsub|w>|}><rsub|w\<in\>J>\<subseteq\>F> such
+    that\ 
+
+    <\equation*>
+      x=<big|sum><rsub|w\<in\>I>\<alpha\><rsub|w>\<cdot\>w<text| and
+      >y=<big|sum><rsub|w\<in\>J>\<beta\><rsub|w>\<cdot\>w
+    </equation*>
+
+    As <math|I,J>are finite we have by [theorem: <reference|union of two
+    finite sets is finite>] that <math|K=I<big|cup>J=<around*|(|I\\J|)><big|cup><around*|(|I<big|cap>J|)><big|cup><around*|(|J\\I|)>>
+    is finite. Define
+
+    <\equation*>
+      <around*|{|\<gamma\><rsub|w>|}><rsub|w\<in\>K>\<subseteq\>F<text| by
+      >\<gamma\><rsub|w>=<choice|<tformat|<table|<row|<cell|\<alpha\>\<cdot\>\<alpha\><rsub|w><text|
+      if >w\<in\>I\\J>>|<row|<cell|\<alpha\>\<cdot\>\<alpha\><rsub|w>+\<beta\>\<cdot\>\<beta\><rsub|w><text|
+      if >w\<in\>I<big|cap>J>>|<row|<cell|\<beta\>\<cdot\>\<beta\><rsub|w><text|
+      if >w\<in\>J\\I>>>>>
+    </equation*>
+
+    then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<big|sum><rsub|w\<in\>K>\<gamma\><rsub|w>\<cdot\>w>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum over disjoint subsets>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|w\<in\>I\\J>\<gamma\><rsub|w>\<cdot\>w+<big|sum><rsub|w\<in\>I<big|cap>J>\<gamma\><rsub|w>\<cdot\>w+<big|sum><rsub|w\<in\>J\\I>\<gamma\><rsub|w>\<cdot\>w>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|w\<in\>I\\J><around*|(|\<alpha\>\<cdot\>\<alpha\><rsub|w>|)>\<cdot\>w+<big|sum><rsub|w\<in\>I<big|cap>J><around*|(|\<alpha\>\<cdot\>\<alpha\><rsub|w>+\<beta\>\<cdot\>\<beta\><rsub|w>|)>\<cdot\>w+<big|sum><rsub|w\<in\>J\\I><around*|(|\<beta\>\<cdot\>\<beta\><rsub|w>|)>\<cdot\>w>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|w\<in\>I\\J>\<alpha\>\<cdot\><around*|(|\<alpha\><rsub|w>\<cdot\>w|)>+<big|sum><rsub|w\<in\>I<big|cap>J><around*|(|\<alpha\>\<cdot\><around*|(|\<alpha\><rsub|w>\<cdot\>w|)>+\<beta\>\<cdot\><around*|(|\<beta\><rsub|w>\<cdot\>w|)>|)>+<big|sum><rsub|w\<in\>J\\I>\<beta\>\<cdot\><around*|(|\<beta\><rsub|w>\<cdot\>w|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|vector space finite sum (1)>]>>>|<cell|>>|<row|<cell|\<alpha\>\<cdot\><big|sum><rsub|w\<in\>I\\J>\<alpha\><rsub|w>\<cdot\>w+<big|sum><rsub|w\<in\>I<big|cap>J><around*|(|\<alpha\>\<cdot\><around*|(|\<alpha\><rsub|w>\<cdot\>w|)>+\<beta\>\<cdot\><around*|(|\<beta\><rsub|w>\<cdot\>w|)>|)>+\<beta\>\<cdot\><big|sum><rsub|w\<in\>J\\I>\<beta\><rsub|w>\<cdot\>w>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum of sums (2)>]>>>|<cell|>>|<row|<cell|\<alpha\>\<cdot\><big|sum><rsub|w\<in\>I\\J>\<alpha\><rsub|w>\<cdot\>w+<big|sum><rsub|w\<in\>I<big|cap>J>\<alpha\>\<cdot\><around*|(|\<alpha\><rsub|w>\<cdot\>w|)>+<big|sum><rsub|i\<in\>I<big|cap>J>\<beta\>\<cdot\><around*|(|\<beta\><rsub|w>\<cdot\>w|)>+\<beta\>\<cdot\><big|sum><rsub|w\<in\>J\\I>\<beta\><rsub|w>\<cdot\>w>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|vector space finite sum (1)>]>>>|<cell|>>|<row|<cell|\<alpha\>\<cdot\><big|sum><rsub|w\<in\>I\\J>\<alpha\><rsub|w>\<cdot\>w+\<alpha\>\<cdot\><big|sum><rsub|w\<in\>I<big|cap>J>\<alpha\><rsub|w>\<cdot\>w+\<beta\>\<cdot\><big|sum><rsub|i\<in\>I<big|cap>J><around*|\<nobracket\>|\<beta\><rsub|w>\<cdot\>w|)>+\<beta\>\<cdot\><big|sum><rsub|w\<in\>J\\I>\<beta\><rsub|w>\<cdot\>w>|<cell|=>|<cell|>>|<row|<cell|\<alpha\>\<cdot\><around*|(|<big|sum><rsub|w\<in\>I\\J>\<alpha\><rsub|w>\<cdot\>w+<big|sum><rsub|w\<in\>I<big|cap>J>\<alpha\><rsub|w>\<cdot\>w|)>+\<beta\>\<cdot\><around*|(|<big|sum><rsub|w\<in\>J\\I>\<beta\><rsub|w>\<cdot\>w+<big|sum><rsub|i\<in\>I<big|cap>J><around*|\<nobracket\>|\<beta\><rsub|w>\<cdot\>w|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum over disjoint subsets>]>>>|<cell|>>|<row|<cell|\<alpha\>\<cdot\><big|sum><rsub|w\<in\>I>\<alpha\><rsub|w>\<cdot\>w+\<beta\>\<cdot\><big|sum><rsub|w\<in\>J>\<beta\><rsub|w>\<cdot\>w>|<cell|=>|<cell|>>|<row|<cell|\<alpha\>\<cdot\>x+\<beta\>\<cdot\>y>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation*>
+      \<alpha\>\<cdot\>x+\<beta\>\<cdot\>y\<in\>span<around*|(|W|)>
+    </equation*>
+
+    Hence by [definition: <reference|vector space subspace>] it follows that
+    <math|span<around*|(|W|)>> is a sub-space of
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>.
+  </proof>
+
+  <\theorem>
+    <label|linear span properties>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
+    be a vector space over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+    and <math|W\<subseteq\>V> as sub-space of <math|V> then
+
+    <\equation*>
+      W=span<around*|(|W|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Let <math|v\<in\>span<around*|(|W|)>> then there exists a finite
+    <math|I\<subseteq\>W> and <math|<around*|{|\<alpha\><rsub|w>|}><rsub|w\<in\>I>\<subseteq\>F>
+    such that
+
+    <\equation*>
+      v=<big|sum><rsub|w\<in\>I>\<alpha\><rsub|w>\<cdot\>w
+    </equation*>
+
+    As <math|W> is a sub-space we have <math|\<forall\>w\<in\>I> that
+    <math|\<alpha\><rsub|w>\<cdot\>w\<in\>w>, by [theorem: <reference|vector
+    space finite sum (4)>] it follows then that
+    <math|v=<big|sum><rsub|w\<in\>I>\<alpha\><rsub|w>\<cdot\>w\<in\>W>. Hence
+    <math|span<around*|(|W|)>\<subseteq\>W> which together with [theorem:
+    <reference|linear span contains set>] proves\ 
+
+    <\equation*>
+      W=span<around*|(|W|)>
+    </equation*>
+  </proof>
+
+  <\corollary>
+    <label|linear span of span>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
+    be a vector space over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+    and <math|W\<subseteq\>V> then\ 
+
+    <\equation*>
+      span<around*|(|W|)>=span<around*|(|span<around*|(|W|)>|)>
+    </equation*>
+  </corollary>
+
+  <\proof>
+    By [theorem: <reference|linear span is a sub-space>]
+    <math|span<around*|(|W|)>> is a sub-space of
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>, hence using
+    [theorem: <reference|linear span of span>] we have that\ 
+
+    <\equation*>
+      span<around*|(|W|)>=span<around*|(|span<around*|(|w|)>|)>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|linear span extending a set without changing its span>Let
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a vector space
+    over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>,
+    <math|W\<subseteq\>V> and <math|w\<in\>span<around*|(|W|)>> then\ 
+
+    <\equation*>
+      span<around*|(|W|)>=span<around*|(|W<big|cup><around*|{|w|}>|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    For <math|w\<in\>span<around*|(|W|)>> we have either:
+
+    <\description>
+      <item*|<math|w\<in\>W>>Then <math|W=W<big|cup><around*|{|w|}>> so that
+      <math|span<around*|(|W|)>=span<around*|(|W<big|cup><around*|{|w|}>|)>>
+
+      <item*|<math|w\<nin\>W>>Then as <math|w\<in\>span<around*|(|W|)>> there
+      exists a finite <math|I\<subseteq\>W> and a
+      <math|<around*|{|\<alpha\><rsub|u>|}><rsub|u\<in\>I>\<subseteq\>F> such
+      that\ 
+
+      <\equation>
+        <label|eq 11.19.090>w=<big|sum><rsub|u\<in\>I>\<alpha\><rsub|u>\<cdot\>u
+      </equation>
+
+      Let <math|v\<in\>span<around*|(|W<big|cup><around*|{|w|}>|)>> then
+      there exists a finite <math|J\<subseteq\>W<big|cup><around*|{|w|}>> and
+      <math|<around*|{|\<beta\><rsub|u>|}><rsub|u\<in\>J>\<subseteq\>F> such
+      that
+
+      <\equation>
+        <label|eq 11.20.090>v=<big|sum><rsub|u\<in\>J>\<beta\><rsub|u>\<cdot\>u
+      </equation>
+
+      For <math|J> we have either:\ 
+
+      <\description>
+        <item*|<math|w\<nin\>J>>Then <math|J\<subseteq\>W> so that
+        <math|v\<in\>span<around*|(|W|)>>
+
+        <item*|<math|w\<in\>J>>Take then the finite set
+        <math|K=<around*|(|I<big|cup>J|)>\\<around*|{|u|}>>then, as
+        <math|I,J\<subseteq\>W\<Rightarrow\>I<big|cup>J\<subseteq\>W,> we
+        have <math|K\<subseteq\>W>. Furhter
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|K>|<cell|=>|<cell|<around*|(|I<big|cup>J|)>\\<around*|{|w|}>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|I\\J|)><big|cup><around*|(|I<big|cap>J|)><big|cup><around*|(|J\\I|)>|)>\|<around*|{|w|}>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|I\\J|)>\\<around*|{|w|}>|)><big|cup><around*|(|<around*|(|I<big|cap>J|)>\\<around*|{|w|}>|)><big|cup><around*|(|<around*|(|J\\I|)>\\<around*|{|w|}>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|w\<nin\>W\<Rightarrow\>w\<nin\>I>>|<cell|<around*|(|I\\J|)><big|cup><around*|(|I<big|cap>J|)><big|cup><around*|(|<around*|(|J\\I|)>\\<around*|{|w|}>|)><eq-number><label|eq
+          11.21.090>>>>>
+        </eqnarray*>
+
+        and we have\ 
+
+        <\equation>
+          <label|eq 11.22.090><around*|(|I\\J|)><big|cap><around*|(|I<big|cap>J|)>=\<varnothing\>\<wedge\><around*|(|I\\J|)><big|cap><around*|(|<around*|(|J\\I|)>\\<around*|{|w|}>|)>=\<varnothing\>\<wedge\><around*|(|I<big|cap>J|)><big|cap><around*|(|<around*|(|J\\I|)>\\<around*|{|w|}>|)>=\<varnothing\>
+        </equation>
+
+        Define now\ 
+
+        <\equation*>
+          <around*|{|\<gamma\><rsub|u>|}><rsub|u\<in\>K>\<subseteq\>F<text|
+          by >\<gamma\><rsub|u>=<choice|<tformat|<table|<row|<cell|\<beta\><rsub|u><text|
+          if >u\<in\><around*|(|<around*|(|J\\I|)>\\<around*|{|w|}>|)>>>|<row|<cell|\<beta\><rsub|w>\<cdot\>\<alpha\><rsub|u>+\<beta\><rsub|u><text|
+          if >u\<in\>I<big|cap>J>>|<row|<cell|\<beta\><rsub|w>\<cdot\>\<alpha\><rsub|u><text|
+          if >u\<in\>I\\J>>>>>
+        </equation*>
+
+        then we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<big|sum><rsub|u\<in\>K>\<gamma\><rsub|u>\<cdot\>u>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|sum over disjoint subsets>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|u\<in\>I\\J>\<gamma\><rsub|u>\<cdot\>u+<big|sum><rsub|u\<in\>I<big|cap>J>\<gamma\><rsub|u>\<cdot\>u+<big|sum><rsub|u\<in\><around*|(|J\\I|)>\\<around*|{|u|}>>\<gamma\><rsub|u>\<cdot\>u>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|u\<in\>I\\J><around*|(|\<beta\><rsub|w>\<cdot\>\<alpha\><rsub|u>|)>\<cdot\>u+<big|sum><rsub|u\<in\>I<big|cap>J><around*|(|\<beta\><rsub|w>\<cdot\>\<alpha\><rsub|u>+\<beta\><rsub|u>|)>\<cdot\>u+<big|sum><rsub|u\<in\><around*|(|J\\I|)>\\<around*|{|w|}>>\<beta\><rsub|u>\<cdot\>u>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|u\<in\>I\\J>\<beta\><rsub|w>\<cdot\><around*|(|\<alpha\><rsub|u>\<cdot\>u|)>+<big|sum><rsub|u\<in\>I<big|cap>J><around*|(|\<beta\><rsub|w>\<cdot\><around*|(|u\<cdot\>\<alpha\><rsub|u>|)>+\<beta\><rsub|u>\<cdot\>u|)>+<big|sum><rsub|u\<in\><around*|(|J\\I|)>\\<around*|{|w|}>>\<beta\><rsub|u>\<cdot\>u>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|vector space finite sum
+          (1)>]>>>|<cell|>>|<row|<cell|\<beta\><rsub|w>\<cdot\><big|sum><rsub|u\<in\>I\\J>\<alpha\><rsub|u>\<cdot\>u+<big|sum><rsub|u\<in\>I<big|cap>J><around*|(|\<beta\><rsub|w>\<cdot\><around*|(|u\<cdot\>\<alpha\><rsub|u>|)>+\<beta\><rsub|u>\<cdot\>u|)>+<big|sum><rsub|u\<in\><around*|(|J\\I|)>\\<around*|{|w|}>>\<beta\><rsub|u>\<cdot\>u>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|sum of sums (2)>]>>>|<cell|>>|<row|<cell|\<beta\><rsub|w>\<cdot\><big|sum><rsub|u\<in\>I\\J>\<alpha\><rsub|u>\<cdot\>u+<big|sum><rsub|u\<in\>I<big|cap>J>\<beta\><rsub|w>\<cdot\><around*|(|u\<cdot\>\<alpha\><rsub|u>|)>+<big|sum><rsub|i\<in\>I<big|cap>J>\<beta\><rsub|u>\<cdot\>u+<big|sum><rsub|u\<in\><around*|(|J\\I|)>\\<around*|{|w|}>>\<beta\><rsub|u>\<cdot\>u>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|vector space finite sum
+          (1)>]>>>|<cell|>>|<row|<cell|\<beta\><rsub|w>\<cdot\><big|sum><rsub|u\<in\>I\\J>\<alpha\><rsub|u>\<cdot\>u+\<beta\><rsub|w>\<cdot\><big|sum><rsub|u\<in\>I<big|cap>J>u\<cdot\>\<alpha\><rsub|u>+<big|sum><rsub|i\<in\>I<big|cap>J>\<beta\><rsub|u>\<cdot\>u+<big|sum><rsub|u\<in\><around*|(|J\\I|)>\\<around*|{|w|}>>\<beta\><rsub|u>\<cdot\>u>|<cell|=>|<cell|>>|<row|<cell|\<beta\><rsub|w>\<cdot\><around*|(|<big|sum><rsub|u\<in\>I\\J>\<alpha\><rsub|u>\<cdot\>u+<big|sum><rsub|u\<in\>I<big|cap>J>u\<cdot\>\<alpha\><rsub|u>|)>+<big|sum><rsub|i\<in\>I<big|cap>J>\<beta\><rsub|u>\<cdot\>u+<big|sum><rsub|u\<in\><around*|(|J\\I|)>\\<around*|{|w|}>>\<beta\><rsub|u>\<cdot\>u>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|sum over disjoint subsets>]>>>|<cell|>>|<row|<cell|\<beta\><rsub|w>\<cdot\><big|sum><rsub|u\<in\>I>\<alpha\><rsub|u>\<cdot\>u+<big|sum><rsub|i\<in\>I<big|cap>J>\<beta\><rsub|u>\<cdot\>u+<big|sum><rsub|u\<in\><around*|(|J\\I|)>\\<around*|{|w|}>>\<beta\><rsub|u>\<cdot\>u>|<cell|\<equallim\><rsub|<around*|[|eq:<reference|eq
+          11.19.090>|]>>>|<cell|>>|<row|<cell|\<beta\><rsub|w>\<cdot\>w+<big|sum><rsub|i\<in\>I<big|cap>J>\<beta\><rsub|u>\<cdot\>u+<big|sum><rsub|u\<in\><around*|(|J\\I|)>\\<around*|{|w|}>>\<beta\><rsub|u>\<cdot\>u>|<cell|\<equallim\><rsub|w\<nin\>I<big|cap>J>>|<cell|>>|<row|<cell|\<beta\><rsub|w>\<cdot\>w+<big|sum><rsub|i\<in\><around*|(|I<big|cap>J|)>\\<around*|{|w|}>>\<beta\><rsub|u>\<cdot\>u+<big|sum><rsub|u\<in\><around*|(|J\\I|)>\\<around*|{|w|}>>\<beta\><rsub|u>\<cdot\>u>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|sum over disjoint subsets>]>>>|<cell|>>|<row|<cell|\<beta\><rsub|w>\<cdot\>w+<big|sum><rsub|i\<in\>J\\<around*|{|w|}>>\<beta\><rsub|u>\<cdot\>u>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|sum general single>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|i\<in\><around*|{|w|}>>\<beta\><rsub|u>\<cdot\>u+<big|sum><rsub|i\<in\>J\\<around*|{|w|}>>\<beta\><rsub|u>\<cdot\>u>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|sum over disjoint subsets>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|i\<in\>J>\<beta\><rsub|u>\<cdot\>u>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 11.20.090>]>>>|<cell|>>|<row|<cell|v>|<cell|>|<cell|>>>>
+        </eqnarray*>
+
+        proving, as <math|K\<subseteq\>W>, that
+        <math|v\<in\>span<around*|(|W|)>>.
+      </description>
+
+      So in all cases we have <math|v\<in\>span<around*|(|W|)>> proving that
+      <math|span<around*|(|W<big|cup><around*|{|w|}>|)>\<subseteq\>span<around*|(|W|)>>.
+      As further <math|W\<subseteq\>W<big|cup><around*|{|w|}>> we have by
+      [theorem: <reference|linear span subsets>] that
+      <math|span<around*|(|W|)>\<subseteq\>span<around*|(|W<big|cup><around*|{|w|}>|)>>
+      proving that <math|span<around*|(|W|)>=span<around*|(|W<big|cup><around*|{|w|}>|)>>.
+    </description>
+
+    So in all cases we have\ 
+
+    <\equation*>
+      span<around*|(|W|)>=span<around*|(|W<big|cup><around*|{|w|}>|)>
+    </equation*>
+
+    completing the proof.
+  </proof>
+
+  <subsubsection|Linear (in)dependent sets>
+
+  <\definition>
+    <label|linear dependent set><index|linear dependent set><dueto|Linear
+    Dependency>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a
+    vector space over the field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+    and <math|W\<subseteq\>V> then <math|W> <with|font-series|bold|is linear
+    dependent >if there exists a finite <math|I\<subseteq\>W> and a
+    <math|<around*|{|\<alpha\><rsub|w>|}><rsub|w\<in\>I>\<subseteq\>F>
+    satisfying <math|\<exists\>w\<in\>I> with
+    <math|\<alpha\><rsub|w>\<neq\>0> such that
+    <math|<big|sum><rsub|u\<in\>I>\<alpha\><rsub|u>\<cdot\>u=0>
+  </definition>
+
+  <\example>
+    <label|linear dependent set containing neutral element>Let
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a vector space
+    over the field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> and
+    <math|W\<subseteq\>V> such that <math|0\<in\>W> then <math|W> is linear
+    dependent.
+  </example>
+
+  <\proof>
+    Take <math|I=<around*|{|0|}>> and <math|<around*|{|\<alpha\><rsub|u>|}><rsub|u\<in\><around*|{|0|}>>>
+    by <math|\<alpha\><rsub|0>=1> then we have
+    <math|<big|sum><rsub|u\<in\><around*|{|0|}>>\<alpha\><rsub|u>\<cdot\>u\<equallim\><rsub|<text|[theorem:
+    <reference|sum general single>]>>\<alpha\><rsub|0>\<cdot\>0=0> proving
+    that <math|W> is linear dependent.
+  </proof>
+
+  <\theorem>
+    <label|linear independent set><index|linear independent set><dueto|Linear
+    Independence>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a
+    vector space over the field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+    and <math|W\<subseteq\>V> then <math|W> <with|font-series|bold|is linear
+    independent >if <math|W> is <with|font-series|bold|not linear dependent>.
+  </theorem>
+
+  We have the following equivalent definition of a linear independent set.
+
+  <\theorem>
+    <label|linear independent set alternative>Let
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a vector space
+    over the field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> and
+    <math|W\<subseteq\>V> then\ 
+
+    <\equation*>
+      W<text| is linear independent>
+    </equation*>
+
+    <\equation*>
+      \<Updownarrow\>
+    </equation*>
+
+    <\equation*>
+      <text|for every finite >I\<subseteq\>W<text| we have
+      >\<forall\><around*|{|\<alpha\><rsub|u>|}><rsub|u\<in\>I>\<subseteq\>F<text|
+      such that ><big|sum><rsub|u\<in\>I>\<alpha\><rsub|u>\<cdot\>u=0<text|
+      we have >\<forall\>u\<in\>I<text| >\<alpha\><rsub|u>=0
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>As <math|W> is independent we have by
+      definiton that <math|W> is not dependent. Hence for every finite
+      <math|I\<subseteq\>W> we have for every
+      <math|<around*|{|\<alpha\><rsub|u>|}><rsub|u\<in\>I>\<subseteq\>F>
+      satisfying <math|\<exists\>w\<in\>I> with
+      <math|\<alpha\><rsub|w>\<neq\>0> that
+      <math|<big|sum><rsub|u\<in\>I>\<alpha\><rsub|u>\<cdot\>u\<neq\>0>. So
+      if we have a finite <math|I\<subseteq\>W> that satisfies
+      <math|<big|sum><rsub|u\<in\>I>\<alpha\><rsub|u>\<cdot\>u=0> we must
+      have <math|\<forall\>u\<in\>I> that <math|\<alpha\><rsub|u>=0>
+      otherwise we reach the contradiction that
+      <math|<big|sum><rsub|u\<in\>I>\<alpha\><rsub|u>\<cdot\>u\<neq\>0>.
+
+      <item*|<math|\<Leftarrow\>>>Assume that <math|W> is linear dependent.
+      Then there exists a finite <math|I\<subseteq\>W> and a
+      <math|<around*|{|\<alpha\><rsub|u>|}><rsub|u\<in\>I>\<subseteq\>W>
+      satisfying <math|\<exists\>w\<in\>I> with
+      <math|\<alpha\><rsub|w>\<neq\>0> such that
+      <math|<big|sum><rsub|u\<in\>I>\<alpha\><rsub|u>\<cdot\>u=0>. Using the
+      hypothesis we have then that <math|\<forall\>u\<in\>I> that
+      <math|\<alpha\><rsub|u>=0> contradicting <math|\<alpha\><rsub|w>>. So
+      we must have that <math|W> is linear independent.
+    </description>
+  </proof>
+
+  \;
+
+  If <math|W> is finite then we have a simpler definition.
+
+  <\theorem>
+    <label|linear independent finite set>Let
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a vector space
+    over the field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> and
+    <math|W\<subseteq\>V> a <with|font-series|bold|finite> set then\ 
+
+    <\equation*>
+      W<text| is linear independent >
+    </equation*>
+
+    <\equation*>
+      \<Updownarrow\>
+    </equation*>
+
+    <\equation*>
+      \<forall\><around*|{|\<alpha\><rsub|u>|}><rsub|u\<in\>W>\<subseteq\>F<text|
+      such that ><big|sum><rsub|w\<in\>W>\<alpha\><rsub|u>\<cdot\>u=0<text|
+      we have >\<forall\>u\<in\>W<text| we have >\<alpha\><rsub|u>=0
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>As <math|W> is finite and
+      <math|W\<subseteq\>W> this follows from [theorem: <reference|linear
+      independent set alternative>].
+
+      <item*|<math|\<Leftarrow\>>>Let <math|I\<subseteq\>W> be a finite set
+      and <math|<around*|{|\<alpha\><rsub|u>|}><rsub|u\<in\>I>\<subseteq\>F>
+      saisfying <math|<big|sum><rsub|u\<in\>I>\<alpha\><rsub|u>\<cdot\>u=0>.
+      Define
+
+      <\equation*>
+        <around*|{|\<beta\><rsub|u>|}><rsub|u\<in\>W>\<subseteq\>F<text| by
+        >\<beta\><rsub|u>=<choice|<tformat|<table|<row|<cell|0<text| if
+        >u\<in\>W\\I>>|<row|<cell|\<alpha\><rsub|u><text| if >u\<in\>I>>>>>
+      </equation*>
+
+      then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|sum><rsub|u\<in\>W>\<beta\><rsub|u>\<cdot\>u>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum over disjoint subsets>]>>>|<cell|<big|sum><rsub|u\<in\>W\\I>\<beta\><rsub|u>\<cdot\>u+<big|sum><rsub|u\<in\>I>\<beta\><rsub|u>\<cdot\>u>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|u\<in\>W\\I>0\<cdot\>u+<big|sum><rsub|u\<in\>I>\<alpha\><rsub|u>\<cdot\>u>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum of neutral element
+        (2)>]>>>|<cell|<big|sum><rsub|u\<in\>I>\<alpha\><rsub|u>\<cdot\>u>>|<row|<cell|>|<cell|=>|<cell|0>>>>
+      </eqnarray*>
+
+      By the hypothesis we have then that <math|\<forall\>u\<in\>W>
+      \ <math|\<beta\><rsub|u>=0>, so if <math|u\<in\>I\<subseteq\>w> we have
+      <math|\<alpha\><rsub|u>=\<beta\><rsub|u>=0>. Hence we have that
+      <math|W> is linear independent.
+    </description>
+  </proof>
+
+  <\example>
+    <label|linear independent empty set>Let
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a vector space
+    over the field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> then
+    <math|\<varnothing\>> is linear independent.
+  </example>
+
+  <\proof>
+    Let <math|I\<subseteq\>\<varnothing\>>, <math|I> a finite set then
+    <math|I=\<varnothing\>> so that if <math|<around*|{|\<alpha\><rsub|u>|}><rsub|u\<in\>I>\<subseteq\>F>
+    with <math|<big|sum><rsub|u\<in\>\<varnothing\>>\<alpha\><rsub|u>\<cdot\>u>
+    we have that <math|\<alpha\><rsub|u>=0><space|1em>is satified vacuously.
+  </proof>
+
+  Linear dependent sets can also be described as sets where one of the vector
+  can be written as a linear combination of some other vectors, this is
+  proved in the next theorem.
+
+  <\theorem>
+    <label|linear dependent set alternative condition>Let
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a vector space
+    over the field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> and
+    <math|W\<subseteq\>V> then
+
+    <\equation*>
+      W<text| is linear dependent>
+    </equation*>
+
+    <\equation*>
+      \<Updownarrow\>
+    </equation*>
+
+    <\equation*>
+      \<exists\>w\<in\>W<text| so that there exists a finite
+      >I\<subseteq\>W\\<around*|{|w|}><text| and a
+      ><around*|{|\<alpha\><rsub|u>|}><rsub|u\<in\>I>\<subseteq\>F<text| such
+      that >w=<big|sum><rsub|u\<in\>I>\<alpha\><rsub|u>\<cdot\>u
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>As <math|W> is a linear dependent there
+      exists a finite <math|J\<subseteq\>W> and a
+      <math|<around*|{|\<beta\><rsub|u>|}><rsub|u\<in\>J>\<subseteq\>F>
+      satsifying that <math|\<exists\>w\<in\>J> with
+      <math|\<beta\><rsub|w>=0> so that <math|<big|sum><rsub|u\<in\>J>\<beta\><rsub|u>\<cdot\>u=0>.
+      So we have that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|0>|<cell|=>|<cell|<big|sum><rsub|u\<in\>J>\<beta\><rsub|u>\<cdot\>u>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum over disjoint subsets>]>>>|<cell|<big|sum><rsub|u\<in\>J\\<around*|{|w|}>>\<beta\><rsub|u>\<cdot\>u+<big|sum><rsub|u\<in\><around*|{|w|}>>\<beta\><rsub|u>\<cdot\>u>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum general single>]>>>|<cell|<big|sum><rsub|u\<in\>J\\<around*|{|w|}>>\<beta\><rsub|u>\<cdot\>u+\<beta\><rsub|w>\<cdot\>w>>>>
+      </eqnarray*>
+
+      proving as <math|\<beta\><rsub|w>\<neq\>0> that
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|w>|<cell|=>|<cell|<around*|(|\<beta\><rsub|w>|)><rsup|-1>\<cdot\><around*|(|-<big|sum><rsub|u\<in\>J\\<around*|{|w|}>>\<beta\><rsub|u>\<cdot\>u|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum of inverses (2)>]>>>|<cell|<around*|(|\<beta\><rsub|w>|)><rsup|-1>\<cdot\><big|sum><rsub|u\<in\>J\\<around*|{|w|}>>-<around*|(|\<beta\><rsub|u>\<cdot\>u|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<beta\><rsub|w>|)><rsup|-1>\<cdot\><big|sum><rsub|u\<in\>J\\<around*|{|w|}>><around*|(|-\<beta\><rsub|u>|)>\<cdot\>u>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|vector space finite sum
+        (1)>]>>>|<cell|<big|sum><rsub|u\<in\>J\\<around*|{|w|}>><around*|(|<around*|(|\<beta\><rsub|w>|)><rsup|-1><around*|(|<around*|(|-\<beta\><rsub|u>|)>\<cdot\>u|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|u\<in\>J\\<around*|{|w|}>><around*|(|<around*|(|\<beta\><rsub|w>|)><rsup|-1><around*|(|-\<beta\><rsub|u>|)>|)>\<cdot\>u>>>>
+      </eqnarray*>
+
+      So if we define <math|I=J\\<around*|{|w|}>> and
+      <math|<around*|{|\<alpha\><rsub|u>|}><rsub|u\<in\>I><text| by
+      >\<beta\><rsub|u>=<around*|(|\<beta\><rsub|w>|)><rsup|-1><around*|(|-\<beta\><rsub|u>|)>>
+      then <math|J\<subseteq\>W\\<around*|{|w|}>> and
+
+      <\equation*>
+        <big|sum><rsub|u\<in\>I>\<alpha\><rsub|u>\<cdot\>u=w
+      </equation*>
+
+      <item*|<math|\<Leftarrow\>>>By the hypothesis there exists a
+      <math|w\<in\>W>, a finite <math|I\<subseteq\>W\\<around*|{|w|}>> and a
+      <math|<around*|{|\<alpha\><rsub|u>|}><rsub|u\<in\>I>\<subseteq\>F> such
+      that
+
+      <\equation*>
+        w=<big|sum><rsub|u\<in\>I>\<alpha\><rsub|u>\<cdot\>u
+      </equation*>
+
+      Let <math|J=I<big|cup><around*|{|w|}>> then <math|J> is finite and
+      <math|J\<subseteq\>W> and define
+
+      <\equation*>
+        <around*|{|\<beta\><rsub|u>|}><rsub|u\<in\>J><text| by
+        >\<beta\><rsub|u>=<choice|<tformat|<table|<row|<cell|-1<text| if
+        u=w>>>|<row|<cell|\<alpha\><rsub|u><text| if >u\<in\>I>>>>>
+      </equation*>
+
+      then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|sum><rsub|u\<in\>J>\<beta\><rsub|u>\<cdot\>u>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum over disjoint subsets>]>>>|<cell|<big|sum><rsub|u\<in\>I>\<beta\><rsub|u>\<cdot\>u+<big|sum><rsub|u\<in\><around*|{|w|}>>\<beta\><rsub|u>\<cdot\>u>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|u\<in\>I>\<alpha\><rsub|u>\<cdot\>u+<big|sum><rsub|u\<in\><around*|{|w|}>>\<beta\><rsub|u>\<cdot\>u>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum general single>]>>>|<cell|<big|sum><rsub|u\<in\>I>\<alpha\><rsub|u>\<cdot\>u+\<beta\><rsub|w>\<cdot\>w>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|u\<in\>I>\<alpha\><rsub|u>\<cdot\>u+<around*|(|-1|)>\<cdot\>w>>|<row|<cell|>|<cell|=>|<cell|w+<around*|(|-w|)>>>|<row|<cell|>|<cell|=>|<cell|0>>>>
+      </eqnarray*>
+
+      which as <math|\<beta\><rsub|w>=-1\<neq\>0> proves that <math|W> is
+      linear dependent.
+    </description>
+  </proof>
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
+  ****************************************************************************
+
+  End of rewrite
+
+  ****************************************************************************
+
   \;
 
   <subsection|Linear (in)dependency>
@@ -4767,9 +5717,41 @@
     </enumerate>
   </definition>
 
+  <\note>
+    The basis that we define here is sometimes called a Hamel basis in books
+    about vector spaces.
+  </note>
+
+  <\example>
+    <label|basis of trivial vector space>Let
+    <math|<around*|\<langle\>|<around*|{|0|}>,+,\<cdot\>|\<rangle\>>> be the
+    trivial space over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+    then <math|\<varnothing\>> is the only basis for
+    <math|<around*|\<langle\>|<around*|{|0|}>,+,\<cdot\>|\<rangle\>>>
+  </example>
+
+  <\proof>
+    By [example: <reference|linear span of empty set>] we have
+    <math|span<around*|(|\<varnothing\>|)>=<around*|{|0|}>> and by [example:
+    <reference|linear independent empty set>] <math|\<varnothing\>> is linear
+    indepenendent, proving that\ 
+
+    <\equation*>
+      \<varnothing\><text| is a basis for
+      <math|<around*|\<langle\>|<around*|{|0|}>,+,\<cdot\>|\<rangle\>>>>
+    </equation*>
+
+    If <math|B> is another basis of <math|<around*|\<langle\>|<around*|{|0|}>,+,\<cdot\>|\<rangle\>>>
+    then <math|B\<subseteq\><around*|{|0|}>>. If <math|B=<around*|{|0|}>>
+    then <math|0\<in\>B> so that by [theorem: <reference|linear dependent set
+    containing neutral element>] <math|B> is linear dependent contradicting
+    linear independency, hence we must have that <math|B=\<varnothing\>>.
+
+    \;
+  </proof>
+
   A basis of a vector space allows us to write every vector of the vector
-  space in a unique way as a linear combination of vectors in then basis with
-  non zero coordinates,
+  space as a finite linear combination of vectors in the basis.
 
   <\theorem>
     <label|basis alternative>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
@@ -4873,8 +5855,10 @@
     </description>
   </proof>
 
-  If a basis is finite we have a more specific form of the above theorem.
-  First we need a little lemma.
+  If a basis is finite we have a more specific form of the above theorem. For
+  the finite case we can express every vector of the vector space as a
+  <with|font-series|bold|unique finite linear >combination of the basis
+  vectors.
 
   <\theorem>
     <label|basis finite alternative>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
@@ -5036,7 +6020,7 @@
   now use the Axiom of Choice to prove this.
 
   <\theorem>
-    <label|basis existance (1)>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
+    <label|basis existence (1)>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
     be a vector space over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>,
     <math|R\<subseteq\>W\<subseteq\>V> such that\ 
 
@@ -5063,7 +6047,7 @@
     <math|R\<subseteq\>R\<subseteq\>W,> we have that\ 
 
     <\equation>
-      <label|eq 11.56.086>R\<in\>\<cal-A\>
+      <label|eq 11.55.086>R\<in\>\<cal-A\>
     </equation>
 
     Using \ [example: <reference|order inclusion is a order>] we can order
@@ -5228,7 +6212,7 @@
     <math|\<forall\>X\<in\>\<cal-C\>> we have
     <math|X\<subseteq\><big|cup><rsub|X\<in\>\<cal-C\>>X=B<rsub|\<cal-C\>>>
     hence <math|\<cal-C\>> has a upper bound <math|B<rsub|\<cal-C\>>>.
-    Further as by [eq: <reference|eq 11.56.086>] <math|R\<in\>\<cal-A\>> we
+    Further as by [eq: <reference|eq 11.55.086>] <math|R\<in\>\<cal-A\>> we
     have for the empty chain [<math|\<cal-C\>=\<varnothing\>>] that
     <math|\<forall\>X\<in\>\<varnothing\>> <math|X\<subseteq\>R> is satisfied
     vacously, hence <math|R> is a upper bound of the empty chain.. So we have
@@ -5245,49 +6229,49 @@
     exists a maximal element in <math|\<cal-A\>>, in other words\ 
 
     <\equation>
-      <label|eq 11.62.086>\<exists\>M\<in\>\<cal-A\><text| such that
-      >\<forall\>X<text| we have >X\<subseteq\>M
+      <label|eq 11.62.086>\<exists\>B\<in\>\<cal-A\><text| such that
+      >\<forall\>X<text| we have >X\<subseteq\>B
     </equation>
 
-    and as <math|M\<in\>\<cal-A\>> we have
+    and as <math|B\<in\>\<cal-A\>> we have
 
     <\equation>
-      <label|eq 11.63.086>R\<subseteq\>M\<subseteq\>W<text| and >M<text| is
+      <label|eq 11.63.086>R\<subseteq\>B\<subseteq\>W<text| and >B<text| is
       linear independent>
     </equation>
 
     Let now <math|w\<in\>W> then we have either:
 
     <\description>
-      <item*|<math|w\<in\>M>>As by [theorem: <reference|linear span contains
-      set>] <math|M\<subseteq\>span<around*|(|M|)>> it follows that
-      <math|w\<in\>span<around*|(|M|)>>.
+      <item*|<math|w\<in\>B>>As by [theorem: <reference|linear span contains
+      set>] <math|B\<subseteq\>span<around*|(|B|)>> it follows that
+      <math|w\<in\>span<around*|(|B|)>>.
 
-      <item*|<math|w\<nin\>M>>Assume that <math|M<big|cup><around*|{|w|}>> is
-      linear independent then as <math|R\<subseteq\>M\<subseteq\>M<big|cup><around*|{|w|}>\<subset\>W>
-      it follows that <math|M<big|cup><around*|{|w|}>\<in\>\<cal-A\>>. Using
+      <item*|<math|w\<nin\>B>>Assume that <math|B<big|cup><around*|{|w|}>> is
+      linear independent then as <math|R\<subseteq\>B\<subseteq\>B<big|cup><around*|{|w|}>\<subset\>W>
+      it follows that <math|B<big|cup><around*|{|w|}>\<in\>\<cal-A\>>. Using
       [eq: <reference|eq 11.62.086>] it follows that
-      <math|M<big|cup><around*|{|w|}>\<subseteq\>M> so that <math|w\<in\>M>
-      contradicting <math|w\<nin\>M>. Hence we have that\ 
+      <math|B<big|cup><around*|{|w|}>\<subseteq\>B> so that <math|w\<in\>B>
+      contradicting <math|w\<nin\>B>. Hence we have that\ 
 
       <\equation*>
-        M<big|cup><around*|{|w|}><text| is linear dependent>
+        B<big|cup><around*|{|w|}><text| is linear dependent>
       </equation*>
 
       Hence there exists a finite distinct family
-      <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>M<big|cup><around*|{|w|}>>
+      <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>B<big|cup><around*|{|w|}>>
       and a <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F>
       not all zero such that <math|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>f<rsub|i>=0>.
       If <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>f<rsub|i>\<neq\>w>
-      then <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>M>
-      so that <math|M> is linear dependent contradicting [eq: <reference|eq
+      then <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>B>
+      so that <math|B> is linear dependent contradicting [eq: <reference|eq
       11.63.086>]. Hence <math|\<exists\>k\<in\><around*|{|1,\<ldots\>,n|}>>
       such that <math|f<rsub|k>=w>. As <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
       is distinct we have <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>>
-      that <math|f<rsub|i>\<in\>M>. Define now\ 
+      that <math|f<rsub|i>\<in\>B>. Define now\ 
 
       <\equation*>
-        <around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>\<subseteq\>M<text|
+        <around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>\<subseteq\>B<text|
         by >e<rsub|i>=<choice|<tformat|<table|<row|<cell|f<rsub|i><text| if
         >i\<in\><around*|{|1,\<ldots\>,k-1|}>>>|<row|<cell|f<rsub|i+1><text|
         if >i\<in\><around*|{|k,\<ldots\>,n-1|}>>>>>>
@@ -5331,8 +6315,8 @@
       <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
       is not all zeroes. Further from [eq: <reference|eq 11.64.086>] we have
       that <math|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>\<beta\><rsub|i>\<cdot\>e<rsub|i>=0>
-      which, as <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>\<subseteq\>M>
-      proves that <math|M> is linear dependent, contradicting [eq:
+      which, as <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>\<subseteq\>B>
+      proves that <math|B> is linear dependent, contradicting [eq:
       <reference|eq 11.63.086>]. Hnece we must have that
       <math|\<alpha\><rsub|k>\<neq\>0>. Then by [eq: <reference|eq
       11.64.086>] it follows that\ 
@@ -5349,20 +6333,209 @@
       proving that\ 
 
       <\equation*>
-        w\<in\>span<around*|(|M|)>
+        w\<in\>span<around*|(|B|)>
       </equation*>
     </description>
 
-    So in all cases we have <math|w\<in\>span<around*|(|M|)>> proving that
+    So in all cases we have <math|w\<in\>span<around*|(|B|)>> proving that
+    <math|W\<subseteq\>span<around*|(|B|)>>, hence\ 
 
     <\equation*>
-      W\<subseteq\>span<around*|(|M|)>
+      V=span<around*|(|W|)>\<subseteq\><rsub|<text|[theorem:
+      <reference|linear span subsets>]>>span<around*|(|span<around*|(|B|)>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|linear span of span>]>>span<around*|(|B|)>\<subseteq\>V
     </equation*>
 
-    TODO finish this
+    proving that\ 
 
-    \;
+    <\equation>
+      <label|eq 11.65.086>span<around*|(|B|)>=V
+    </equation>
+
+    By [eqs: <reference|eq 11.63.086>, <reference|eq 11.65.086>] we have that
+    <math|B> is a basis of <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
+    and <math|R\<subseteq\>B\<subseteq\>W> proving the theorem.
   </proof>
+
+  <\corollary>
+    <label|basis extending linear independent set>Let
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a vector space
+    over the field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> and
+    <math|R> a linear independent set then there exists a basis <math|B> of
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> such that
+    <math|R\<subseteq\>B>. In othere words a linear independent set of a
+    vector space can be extended to a basis of the vector space.
+  </corollary>
+
+  <\proof>
+    As <math|R> is linear independent, <math|R\<subseteq\>V> and
+    <math|span<around*|(|V|)>\<equallim\><rsub|<text|[theorem:
+    <reference|linear span properties>]>>V> we have by [theorem:
+    <reference|basis existence (1)>] that there exist a basis <math|B> of
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> with
+    <math|R\<subseteq\>B\<subseteq\>V>.
+  </proof>
+
+  <\corollary>
+    <label|basis reducing spanning set to a basis>Let
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a vector space
+    over the field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> and
+    <math|W\<subseteq\>V> such that <math|span<around*|(|W|)>=V> then there
+    exist a basis <math|B> of <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
+    such that <math|B\<subseteq\>W>. Inother words every spanning set of a
+    vector space can be reduced to a basis of the vector space.
+  </corollary>
+
+  <\proof>
+    For <math|V> we have either:
+
+    <\description>
+      <item*|<math|V=<around*|{|0|}>>>By [example: <reference|basis of
+      trivial vector space>] <math|\<varnothing\>> is a basis for <math|V>
+      and trivially <math|\<varnothing\>\<subseteq\>W>.
+
+      <item*|<math|V\<neq\><around*|{|0|}>>>Then there exist a
+      <math|v\<in\>V> with <math|v\<neq\>0>. As <math|V=span<around*|(|W|)>>
+      there exists a <math|<around*|{|\<alpha\><rsub|w>|}><rsub|w\<in\>W>\<subseteq\>F>
+      such that <math|v=<big|sum><rsub|w\<in\>W>\<alpha\><rsub|w>\<cdot\>w>.
+      If <math|W=\<varnothing\>> or <math|W=<around*|{|0|}>> then
+      <math|supp<around*|(|<around*|{|\<alpha\><rsub|w>\<cdot\>w|}><rsub|w\<in\>W>|)>=\<varnothing\>>
+      so that <math|v=<big|sum><rsub|w\<in\>W>\<alpha\><rsub|w>\<cdot\>w=0>
+      contradicting <math|v\<neq\>0>. So there exists a <math|w\<in\>W> with
+      <math|w\<neq\>0>. By [example: <reference|linear independent
+      singleton>] <math|R=<around*|{|w|}>> is linear independent and as
+      further <math|R=<around*|{|w|}>\<subseteq\>W> we have by [theorem:
+      <reference|basis existence (1)>] that there exist a basis <math|B> of
+      <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> such that
+      <math|R\<subseteq\>B\<subseteq\>W>.
+    </description>
+  </proof>
+
+  <\corollary>
+    <label|basis exist>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
+    be a vector space over the field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+    then there exist a basis <math|B\<subseteq\>V> of
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>.
+  </corollary>
+
+  <\proof>
+    As <math|span<around*|(|V|)>\<equallim\><rsub|<text|[theorem:
+    <reference|linear span properties>]>>V> we have by [corollary:
+    <reference|basis reducing spanning set to a basis>] that there exist a
+    basis <math|B> of <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>.
+  </proof>
+
+  <subsection|Dimension of a vector space>
+
+  <\lemma>
+    <label|basis finite dimensions>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
+    be a vector space over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+    that has a <with|font-series|bold|finite> basis <math|B\<subseteq\>V>
+    then every basis of <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
+    is <with|font-series|bold|finite>. Further for every basis <math|A> of
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> we have
+    <math|card<around*|(|B|)>=card<around*|(|A|)>>
+  </lemma>
+
+  <\proof>
+    As <math|B> is a basis we have that\ 
+
+    <\equation*>
+      span<around*|(|B|)>=V<text| and >B<text| is linear independent>
+    </equation*>
+
+    Let <math|A> be another basis of <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
+    then
+
+    <\equation*>
+      span<around*|(|A|)>=V<text| and >A<text| is linear independent>
+    </equation*>
+
+    By [corollary: <reference|linear Steinitz (2)>] it follows that <math|A>
+    is finite. Further as <math|A,B> are finite there exists by [theorem:
+    <reference|linear finite set (1)>] there exists finite distinct families
+    <math|<around*|{|a<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,card<around*|(|A|)>|}>>\<subseteq\>A\<subseteq\>V>
+    and <math|<around*|{|b<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,card<around*|(|B|)>|}>>\<subseteq\>A\<subseteq\>V>
+    such that <math|A=<around*|{|a<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,card<around*|(|A|)>|}>|}>>
+    and <math|B=<around*|{|b<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,card<around*|(|B|)>|}>|}>>.
+    Then as
+
+    <\equation*>
+      V=span<around*|(|<around*|{|a<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,card<around*|(|A|)>|}>|}>|)><text|
+      and ><around*|{|b<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,card<around*|(|B|)>|}>|}><text|
+      is linear indepenent>
+    </equation*>
+
+    we have by [corollary: <reference|linear Steinitz (1)>] that\ 
+
+    <\equation*>
+      card<around*|(|B|)>\<leqslant\>card<around*|(|A|)>
+    </equation*>
+
+    Likewise as\ 
+
+    <\equation*>
+      V=span<around*|(|<around*|{|b<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,card<around*|(|B|)>|}>|}>|)><text|
+      and ><around*|{|a<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,card<around*|(|A|)>|}>|}><text|
+      is linear indepenent>
+    </equation*>
+
+    we have by [corollary: <reference|linear Steinitz (1)>] that\ 
+
+    <\equation*>
+      card<around*|(|A|)>\<leqslant\>card<around*|(|B|)>
+    </equation*>
+
+    So that\ 
+
+    <\equation*>
+      card<around*|(|A|)>=card<around*|(|B|)>
+    </equation*>
+  </proof>
+
+  <\corollary>
+    <label|basis infinite dimensions>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
+    be a vector space over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+    that has a <with|font-series|bold|infinite> basis <math|B\<subseteq\>V>
+    then every basis of <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
+    is <with|font-series|bold|infinite>.
+  </corollary>
+
+  <\proof>
+    Assume that there exists a finite basis of
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> then by [lemma:
+    <reference|basis finite dimensions>] <math|B> is finite a contradiction.
+    So every basis of <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
+    must be infinite.
+  </proof>
+
+  The above lemma and corollary ensures that the following definition makes
+  sense.
+
+  <\definition>
+    <label|basis dimension>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
+    be a vector space over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+    then by [corollary: <reference|basis exist>] there exists a basis
+    <math|B> of <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>. The
+    dimension of <math|V> noted by <math|dim<around*|(|V|)>> is defined as
+    follows:\ 
+
+    <\equation*>
+      dim<around*|(|V|)>=<choice|<tformat|<table|<row|<cell|\<infty\><text|
+      if >B<text| is infinite>>>|<row|<cell|card<around*|(|B|)><text| if
+      >B<text| is finite>>>>>>
+    </equation*>
+
+    This definition is independent of the basis <math|B> choosen by [lemma:
+    <reference|basis finite dimensions>] and [corollary: <reference|basis
+    infinite dimensions>]
+  </definition>
+
+  \;
+
+  \;
+
+  \;
 
   \;
 
@@ -5412,125 +6585,147 @@
     <associate|auto-20|<tuple|11.3.1|?>>
     <associate|auto-21|<tuple|11.3.2|?>>
     <associate|auto-22|<tuple|11.3.2.1|?>>
-    <associate|auto-23|<tuple|disjoint family|?>>
-    <associate|auto-24|<tuple|<with|mode|<quote|math>|span<around*|(|W|)>>|?>>
-    <associate|auto-25|<tuple|11.3.2.2|?>>
+    <associate|auto-23|<tuple|11.3.2.2|?>>
+    <associate|auto-24|<tuple|linear dependent set|?>>
+    <associate|auto-25|<tuple|linear independent set|?>>
     <associate|auto-26|<tuple|11.3.3|?>>
-    <associate|auto-27|<tuple|basis of a vector space|?>>
-    <associate|auto-28|<tuple|11.4|?>>
-    <associate|auto-29|<tuple|11.5|?>>
+    <associate|auto-27|<tuple|11.3.3.1|?>>
+    <associate|auto-28|<tuple|disjoint family|?>>
+    <associate|auto-29|<tuple|<with|mode|<quote|math>|span<around*|(|W|)>>|?>>
     <associate|auto-3|<tuple|11.1.1|?>>
-    <associate|auto-30|<tuple|11.6|?>>
+    <associate|auto-30|<tuple|11.3.3.2|?>>
+    <associate|auto-31|<tuple|11.3.4|?>>
+    <associate|auto-32|<tuple|basis of a vector space|?>>
+    <associate|auto-33|<tuple|11.3.5|?>>
+    <associate|auto-34|<tuple|11.4|?>>
+    <associate|auto-35|<tuple|11.5|?>>
+    <associate|auto-36|<tuple|11.6|?>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|<big|sum><rsub|i=0><rsup|n>x<rsub|i>>|?>>
     <associate|auto-5|<tuple|<with|mode|<quote|math>|<big|prod><rsub|i=0><rsup|n>x<rsub|i>>|?>>
     <associate|auto-6|<tuple|11.1.2|?>>
     <associate|auto-7|<tuple|11.1.3|?>>
     <associate|auto-8|<tuple|permutation|?>>
     <associate|auto-9|<tuple|<with|mode|<quote|math>|\<sigma\>>|?>>
-    <associate|basis|<tuple|11.94|?>>
-    <associate|basis alternative|<tuple|11.95|?>>
-    <associate|basis existance (1)|<tuple|11.97|?>>
-    <associate|basis finite alternative|<tuple|11.96|?>>
+    <associate|basis|<tuple|11.118|?>>
+    <associate|basis alternative|<tuple|11.121|?>>
+    <associate|basis dimension|<tuple|11.129|?>>
+    <associate|basis exist|<tuple|11.126|?>>
+    <associate|basis existence (1)|<tuple|11.123|?>>
+    <associate|basis extending linear independent set|<tuple|11.124|?>>
+    <associate|basis finite alternative|<tuple|11.122|?>>
+    <associate|basis finite dimensions|<tuple|11.127|?>>
+    <associate|basis infinite dimensions|<tuple|11.128|?>>
+    <associate|basis of trivial vector space|<tuple|11.120|?>>
+    <associate|basis reducing spanning set to a basis|<tuple|11.125|?>>
     <associate|disjoint family|<tuple|disjoint family|?>>
-    <associate|disjoint family property|<tuple|11.69|?>>
+    <associate|disjoint family property|<tuple|11.93|?>>
     <associate|eq 11.1.054|<tuple|11.1|?>>
     <associate|eq 11.10.054|<tuple|11.11|?>>
     <associate|eq 11.10.064|<tuple|11.10|?>>
     <associate|eq 11.11.054|<tuple|11.13|?>>
     <associate|eq 11.11.055|<tuple|11.12|?>>
     <associate|eq 11.13.055|<tuple|11.14|?>>
-    <associate|eq 11.15.080|<tuple|11.26|?>>
-    <associate|eq 11.15.082|<tuple|11.15|?>>
-    <associate|eq 11.16.080|<tuple|11.27|?>>
-    <associate|eq 11.16.081|<tuple|11.16|?>>
-    <associate|eq 11.17.080|<tuple|11.28|?>>
-    <associate|eq 11.17.081|<tuple|11.17|?>>
-    <associate|eq 11.18.080|<tuple|11.36|?>>
-    <associate|eq 11.18.081|<tuple|11.18|?>>
-    <associate|eq 11.19.080|<tuple|11.37|?>>
-    <associate|eq 11.19.081|<tuple|11.19|?>>
+    <associate|eq 11.15.080|<tuple|11.34|?>>
+    <associate|eq 11.15.082|<tuple|11.23|?>>
+    <associate|eq 11.15.090|<tuple|11.15|?>>
+    <associate|eq 11.16.080|<tuple|11.35|?>>
+    <associate|eq 11.16.081|<tuple|11.24|?>>
+    <associate|eq 11.16.090|<tuple|11.16|?>>
+    <associate|eq 11.17.080|<tuple|11.36|?>>
+    <associate|eq 11.17.081|<tuple|11.25|?>>
+    <associate|eq 11.17.090|<tuple|11.17|?>>
+    <associate|eq 11.18.081|<tuple|11.26|?>>
+    <associate|eq 11.18.090|<tuple|11.18|?>>
+    <associate|eq 11.19.081|<tuple|11.27|?>>
+    <associate|eq 11.19.090|<tuple|11.19|?>>
     <associate|eq 11.2.053|<tuple|11.2|?>>
-    <associate|eq 11.20.081|<tuple|11.20|?>>
-    <associate|eq 11.20\<point\>080|<tuple|11.38|?>>
-    <associate|eq 11.21.080|<tuple|11.39|?>>
-    <associate|eq 11.21.081|<tuple|11.21|?>>
-    <associate|eq 11.22.080|<tuple|11.40|?>>
-    <associate|eq 11.22.081|<tuple|11.22|?>>
-    <associate|eq 11.23.080|<tuple|11.36|?>>
-    <associate|eq 11.23.081|<tuple|11.23|?>>
-    <associate|eq 11.24.080|<tuple|11.37|?>>
-    <associate|eq 11.24.081|<tuple|11.24|?>>
-    <associate|eq 11.25.080|<tuple|11.38|?>>
-    <associate|eq 11.25.081|<tuple|11.25|?>>
-    <associate|eq 11.29.086|<tuple|11.59|?>>
+    <associate|eq 11.20.081|<tuple|11.28|?>>
+    <associate|eq 11.20.090|<tuple|11.20|?>>
+    <associate|eq 11.21.081|<tuple|11.29|?>>
+    <associate|eq 11.21.090|<tuple|11.21|?>>
+    <associate|eq 11.22.081|<tuple|11.30|?>>
+    <associate|eq 11.22.090|<tuple|11.22|?>>
+    <associate|eq 11.23.080|<tuple|11.44|?>>
+    <associate|eq 11.23.081|<tuple|11.31|?>>
+    <associate|eq 11.24.080|<tuple|11.45|?>>
+    <associate|eq 11.24.081|<tuple|11.32|?>>
+    <associate|eq 11.25.080|<tuple|11.46|?>>
+    <associate|eq 11.25.081|<tuple|11.33|?>>
+    <associate|eq 11.29.086|<tuple|11.67|?>>
     <associate|eq 11.3.053|<tuple|11.3|?>>
-    <associate|eq 11.31.086|<tuple|11.31|?>>
-    <associate|eq 11.32.086|<tuple|11.32|?>>
-    <associate|eq 11.33.086|<tuple|11.33|?>>
-    <associate|eq 11.34.086|<tuple|11.34|?>>
-    <associate|eq 11.35.086|<tuple|11.35|?>>
-    <associate|eq 11.36.084|<tuple|11.29|?>>
-    <associate|eq 11.37.084|<tuple|11.30|?>>
+    <associate|eq 11.31.086|<tuple|11.39|?>>
+    <associate|eq 11.32.086|<tuple|11.40|?>>
+    <associate|eq 11.33.086|<tuple|11.41|?>>
+    <associate|eq 11.34.086|<tuple|11.42|?>>
+    <associate|eq 11.35.086|<tuple|11.43|?>>
+    <associate|eq 11.36.084|<tuple|11.37|?>>
+    <associate|eq 11.37.084|<tuple|11.38|?>>
     <associate|eq 11.4.053|<tuple|11.4|?>>
-    <associate|eq 11.46.083|<tuple|11.39|?>>
-    <associate|eq 11.47.083|<tuple|11.40|?>>
-    <associate|eq 11.47.085|<tuple|11.52|?>>
-    <associate|eq 11.48.076|<tuple|11.62|?>>
-    <associate|eq 11.48.083|<tuple|11.41|?>>
-    <associate|eq 11.48.085|<tuple|11.53|?>>
-    <associate|eq 11.49.076|<tuple|11.63|?>>
-    <associate|eq 11.49.083|<tuple|11.42|?>>
+    <associate|eq 11.46.083|<tuple|11.47|?>>
+    <associate|eq 11.47.083|<tuple|11.48|?>>
+    <associate|eq 11.47.085|<tuple|11.60|?>>
+    <associate|eq 11.48.083|<tuple|11.49|?>>
+    <associate|eq 11.48.085|<tuple|11.61|?>>
+    <associate|eq 11.49.083|<tuple|11.50|?>>
     <associate|eq 11.5.053|<tuple|11.5|?>>
-    <associate|eq 11.50.083|<tuple|11.43|?>>
-    <associate|eq 11.51.083|<tuple|11.44|?>>
-    <associate|eq 11.52.083|<tuple|11.45|?>>
-    <associate|eq 11.53.083|<tuple|11.46|?>>
-    <associate|eq 11.53.084|<tuple|11.51|?>>
-    <associate|eq 11.54.083|<tuple|11.47|?>>
-    <associate|eq 11.54.086|<tuple|11.54|?>>
-    <associate|eq 11.55.083|<tuple|11.48|?>>
-    <associate|eq 11.56.086|<tuple|11.56|?>>
-    <associate|eq 11.57.084|<tuple|11.50|?>>
-    <associate|eq 11.57.086|<tuple|11.57|?>>
-    <associate|eq 11.58.084|<tuple|11.49|?>>
-    <associate|eq 11.58.086|<tuple|11.58|?>>
+    <associate|eq 11.50.083|<tuple|11.51|?>>
+    <associate|eq 11.51.083|<tuple|11.52|?>>
+    <associate|eq 11.52.083|<tuple|11.53|?>>
+    <associate|eq 11.53.083|<tuple|11.54|?>>
+    <associate|eq 11.53.084|<tuple|11.59|?>>
+    <associate|eq 11.54.083|<tuple|11.55|?>>
+    <associate|eq 11.54.086|<tuple|11.62|?>>
+    <associate|eq 11.55.083|<tuple|11.56|?>>
+    <associate|eq 11.55.086|<tuple|11.63|?>>
+    <associate|eq 11.56.086|<tuple|11.64|?>>
+    <associate|eq 11.57.084|<tuple|11.58|?>>
+    <associate|eq 11.57.086|<tuple|11.65|?>>
+    <associate|eq 11.58.084|<tuple|11.57|?>>
+    <associate|eq 11.58.086|<tuple|11.66|?>>
     <associate|eq 11.6.053|<tuple|11.6|?>>
-    <associate|eq 11.61.086|<tuple|11.61|?>>
-    <associate|eq 11.62.086|<tuple|11.62|?>>
-    <associate|eq 11.63.086|<tuple|11.63|?>>
-    <associate|eq 11.64.086|<tuple|11.64|?>>
-    <associate|eq 11.65.086|<tuple|11.65|?>>
+    <associate|eq 11.61.086|<tuple|11.69|?>>
+    <associate|eq 11.62.086|<tuple|11.70|?>>
+    <associate|eq 11.63.086|<tuple|11.71|?>>
+    <associate|eq 11.64.086|<tuple|11.72|?>>
+    <associate|eq 11.65.086|<tuple|11.73|?>>
     <associate|eq 11.7.053|<tuple|11.7|?>>
     <associate|eq 11.7.053.1|<tuple|11.8|?>>
     <associate|eq 11.9.053|<tuple|11.9|?>>
-    <associate|linear (in)dependency properties (1)|<tuple|11.90|?>>
-    <associate|linear Steinitz (1)|<tuple|11.92|?>>
-    <associate|linear Steinitz (2)|<tuple|11.93|?>>
-    <associate|linear Steinitz lemma|<tuple|11.91|?>>
-    <associate|linear combination|<tuple|11.67|?>>
-    <associate|linear combination distinct|<tuple|11.70|?>>
-    <associate|linear dependent set|<tuple|11.82|?>>
-    <associate|linear dependent set alternative condition|<tuple|11.89|?>>
+    <associate|linear (in)dependency properties (1)|<tuple|11.114|?>>
+    <associate|linear Steinitz (1)|<tuple|11.116|?>>
+    <associate|linear Steinitz (2)|<tuple|11.117|?>>
+    <associate|linear Steinitz lemma|<tuple|11.115|?>>
+    <associate|linear combination|<tuple|11.91|?>>
+    <associate|linear combination (1)|<tuple|11.73|?>>
+    <associate|linear combination (2)|<tuple|11.74|?>>
+    <associate|linear combination distinct|<tuple|11.94|?>>
+    <associate|linear dependency|<tuple|11.84|?>>
+    <associate|linear dependent set|<tuple|11.106|?>>
+    <associate|linear dependent set alternative condition|<tuple|11.90|?>>
     <associate|linear dependent set containing neutral
-    element|<tuple|11.88|?>>
-    <associate|linear disjoint family|<tuple|11.68|?>>
-    <associate|linear finite set|<tuple|11.80|?>>
-    <associate|linear finite set (1)|<tuple|11.81|?>>
-    <associate|linear independent empty set|<tuple|11.86|?>>
-    <associate|linear independent finite set|<tuple|11.85|?>>
-    <associate|linear independent set|<tuple|11.83|?>>
-    <associate|linear independent set alternative|<tuple|11.84|?>>
-    <associate|linear independent singleton|<tuple|11.87|?>>
-    <associate|linear span|<tuple|11.71|?>>
-    <associate|linear span contains set|<tuple|11.73|?>>
-    <associate|linear span elminate zero factors|<tuple|11.72|?>>
+    element|<tuple|11.112|?>>
+    <associate|linear disjoint family|<tuple|11.92|?>>
+    <associate|linear family disjoint|<tuple|11.70|?>>
+    <associate|linear family finite|<tuple|11.68|?>>
+    <associate|linear finite set|<tuple|11.104|?>>
+    <associate|linear finite set (1)|<tuple|11.105|?>>
+    <associate|linear independent empty set|<tuple|11.110|?>>
+    <associate|linear independent finite set|<tuple|11.109|?>>
+    <associate|linear independent set|<tuple|11.107|?>>
+    <associate|linear independent set alternative|<tuple|11.108|?>>
+    <associate|linear independent singleton|<tuple|11.111|?>>
+    <associate|linear ordered family is finite|<tuple|11.71|?>>
+    <associate|linear span|<tuple|11.95|?>>
+    <associate|linear span contains set|<tuple|11.97|?>>
+    <associate|linear span elminate zero factors|<tuple|11.96|?>>
+    <associate|linear span equivalence 1|<tuple|11.77|?>>
     <associate|linear span extending a set without changing its
-    span|<tuple|11.79|?>>
-    <associate|linear span is a sub-space|<tuple|11.76|?>>
-    <associate|linear span of empty set|<tuple|11.75|?>>
-    <associate|linear span of span|<tuple|11.78|?>>
-    <associate|linear span properties|<tuple|11.77|?>>
-    <associate|linear span subsets|<tuple|11.74|?>>
+    span|<tuple|11.103|?>>
+    <associate|linear span is a sub-space|<tuple|11.100|?>>
+    <associate|linear span of empty set|<tuple|11.99|?>>
+    <associate|linear span of span|<tuple|11.102|?>>
+    <associate|linear span properties|<tuple|11.101|?>>
+    <associate|linear span subsets|<tuple|11.98|?>>
     <associate|permutation definition|<tuple|11.23|?>>
     <associate|permutation group|<tuple|11.24|?>>
     <associate|permutation on subset|<tuple|11.25|?>>
@@ -5615,11 +6810,11 @@
 
       <tuple|<tuple|real vector space>|<pageref|auto-18>>
 
-      <tuple|<tuple|disjoint family>|<pageref|auto-23>>
+      <tuple|<tuple|disjoint family>|<pageref|auto-25>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|span<around*|(|W|)>>>|<pageref|auto-24>>
+      <tuple|<tuple|<with|mode|<quote|math>|span<around*|(|W|)>>>|<pageref|auto-26>>
 
-      <tuple|<tuple|basis of a vector space>|<pageref|auto-27>>
+      <tuple|<tuple|basis of a vector space>|<pageref|auto-29>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|11<space|2spc>Linear
@@ -5672,24 +6867,36 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-22>>
 
-      <with|par-left|<quote|2tab>|11.3.2.2<space|2spc>Linear (in)dependent
-      sets <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-25>>
-
-      <with|par-left|<quote|1tab>|11.3.3<space|2spc>Basis of a vector space
+      <with|par-left|<quote|1tab>|11.3.3<space|2spc>Linear (in)dependency
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-26>>
+      <no-break><pageref|auto-23>>
+
+      <with|par-left|<quote|2tab>|11.3.3.1<space|2spc>Span of a set
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-24>>
+
+      <with|par-left|<quote|2tab>|11.3.3.2<space|2spc>Linear (in)dependent
+      sets <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-27>>
+
+      <with|par-left|<quote|1tab>|11.3.4<space|2spc>Basis of a vector space
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-28>>
+
+      <with|par-left|<quote|1tab>|11.3.5<space|2spc>Dimension of a vector
+      space <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-30>>
 
       11.4<space|2spc>Linear mappings <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-28>
+      <no-break><pageref|auto-31>
 
       11.5<space|2spc>Multilinear mappings
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-29>
+      <no-break><pageref|auto-32>
 
       11.6<space|2spc>Deteminant Functions
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-30>
+      <no-break><pageref|auto-33>
     </associate>
   </collection>
 </auxiliary>

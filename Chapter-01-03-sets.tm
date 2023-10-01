@@ -5160,10 +5160,6 @@
     <math|A=<around*|{|Id<rsub|X><around*|(|i|)>\|i\<in\>I|}>>.
   </example>
 
-  \;
-
-  TODO rewrite the stuff about families in terms of function graphs
-
   <section|Families>
 
   <subsection|Family>
@@ -5201,23 +5197,30 @@
     <with|font-series|bold|<math|<around*|{|x|}><rsub|i\<in\>I>\<subseteq\>B>>
     that the defining function is <math|<with|font-series|bold|x:I\<rightarrow\>B>>.
     However this is sometimes not feasible and in that case we state what the
-    defining function of <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>> is.
-    Another way of specifying the associated function of a family is using
-    [definition: <reference|function f(x)>] for a function as expressed in
-    the following definition.
+    defining function of <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>> is.\ 
   </note>
 
   <\example>
     <label|family empty family>The empty function
     <math|\<varnothing\>:\<varnothing\>\<rightarrow\>V> [see example:
     <reference|function empty function>] defines the family
-    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>\<varnothing\>>\<subseteq\>V>.
+    <math|<around*|{|\<varnothing\><rsub|i>|}><rsub|i\<in\>\<varnothing\>>\<subseteq\>V>.
+    Further if <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>\<varnothing\>>\<subseteq\>V>
+    is a family then <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>\<varnothing\>>\<subseteq\>V=<around*|{|\<varnothing\><rsub|i>|}><rsub|i\<in\>\<varnothing\>>\<subseteq\>V>
   </example>
+
+  <\proof>
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>\<varnothing\>>\<subseteq\>V>
+    is defined by the function <math|x:\<varnothing\>\<rightarrow\>V>, as
+    <math|x\<subseteq\>\<varnothing\>\<times\>V=\<varnothing\>> we have that
+    <math|x=\<varnothing\>> so that <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>\<varnothing\>>\<subseteq\>V=<around*|{|\<varnothing\><rsub|i>|}><rsub|i\<in\>\<varnothing\>>\<subseteq\>V>.
+  </proof>
 
   <\proposition>
     <label|family empty family condition>For the family
     <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<varnothing\>>
-    we hve <math|I=\<varnothing\>>
+    we have <math|I=\<varnothing\>> so that
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<varnothing\>=<around*|{|\<varnothing\><rsub|i>|}><rsub|i\<in\>\<varnothing\>>\<subseteq\>\<varnothing\>>
   </proposition>
 
   <\proof>
@@ -5228,22 +5231,6 @@
     <math|<around*|(|x,y|)>\<in\>f\<subseteq\>I\<times\>\<varnothing\>=\<varnothing\>>
     a contradiction, hence we must have <math|I=\<varnothing\>>.
   </proof>
-
-  <\definition>
-    <label|family definition (1)>Let <math|I,B> be classes then the family
-
-    <\equation*>
-      <with|font-series|bold|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B<text|
-      defined by <math|x<rsub|i>=E<around*|(|i|)><rsub|>>>>
-    </equation*>
-
-    is the family defined by the function\ 
-
-    <\equation*>
-      <with|font-series|bold|f:I\<rightarrow\>B<text| defined by
-      <math|f<around*|(|i|)>=E<around*|(|i|)>>>>
-    </equation*>
-  </definition>
 
   <\example>
     <label|family {x}xeA>Let <math|A,B> be classes then family
@@ -13162,38 +13149,39 @@
     <associate|equivalence relation partition alternative|<tuple|3.8|?>>
     <associate|equivalence relation subsets|<tuple|3.19|?>>
     <associate|family|<tuple|2.97|?>>
-    <associate|family and function composition|<tuple|2.106|?>>
-    <associate|family de Morgan|<tuple|2.127|?>>
+    <associate|family and function composition|<tuple|2.105|?>>
+    <associate|family de Morgan|<tuple|2.126|?>>
     <associate|family definition (1)|<tuple|2.101|?>>
-    <associate|family definition (2)|<tuple|2.103|?>>
-    <associate|family definition (3)|<tuple|2.104|?>>
-    <associate|family distributivity|<tuple|2.125|?>>
+    <associate|family definition (2)|<tuple|2.102|?>>
+    <associate|family definition (3)|<tuple|2.103|?>>
+    <associate|family distributivity|<tuple|2.124|?>>
     <associate|family empty family|<tuple|2.99|?>>
     <associate|family empty family condition|<tuple|2.100|?>>
-    <associate|family image and preimage|<tuple|2.131|?>>
-    <associate|family index set is a product|<tuple|2.105|?>>
-    <associate|family intersection (2)|<tuple|2.118|?>>
-    <associate|family intersection is a set|<tuple|2.119|?>>
-    <associate|family intersection(1)|<tuple|2.117|?>>
-    <associate|family product and index transformation|<tuple|2.138|?>>
-    <associate|family properties (1)|<tuple|2.122|?>>
-    <associate|family properties (2)|<tuple|2.123|?>>
-    <associate|family properties (3)|<tuple|2.128|?>>
-    <associate|family range|<tuple|2.107|?>>
-    <associate|family range (1)|<tuple|2.108|?>>
-    <associate|family set|<tuple|2.109|?>>
-    <associate|family trivial|<tuple|2.120|?>>
-    <associate|family union (1)|<tuple|2.110|?>>
-    <associate|family union (2)|<tuple|2.113|?>>
-    <associate|family union condition set|<tuple|2.115|?>>
-    <associate|family union intersection and empty set|<tuple|2.129|?>>
-    <associate|family union intersection and inclusion|<tuple|2.124|?>>
-    <associate|family union of a empty set|<tuple|2.116|?>>
-    <associate|family union of family of families|<tuple|2.130|?>>
-    <associate|family union of family set and surjections|<tuple|2.114|?>>
-    <associate|family union of union of two families|<tuple|2.126|?>>
-    <associate|family union{A,B}|<tuple|2.121|?>>
-    <associate|family {x}xeA|<tuple|2.102|?>>
+    <associate|family extending range|<tuple|2.100|?>>
+    <associate|family image and preimage|<tuple|2.130|?>>
+    <associate|family index set is a product|<tuple|2.104|?>>
+    <associate|family intersection (2)|<tuple|2.117|?>>
+    <associate|family intersection is a set|<tuple|2.118|?>>
+    <associate|family intersection(1)|<tuple|2.116|?>>
+    <associate|family product and index transformation|<tuple|2.137|?>>
+    <associate|family properties (1)|<tuple|2.121|?>>
+    <associate|family properties (2)|<tuple|2.122|?>>
+    <associate|family properties (3)|<tuple|2.127|?>>
+    <associate|family range|<tuple|2.106|?>>
+    <associate|family range (1)|<tuple|2.107|?>>
+    <associate|family set|<tuple|2.108|?>>
+    <associate|family trivial|<tuple|2.119|?>>
+    <associate|family union (1)|<tuple|2.109|?>>
+    <associate|family union (2)|<tuple|2.112|?>>
+    <associate|family union condition set|<tuple|2.114|?>>
+    <associate|family union intersection and empty set|<tuple|2.128|?>>
+    <associate|family union intersection and inclusion|<tuple|2.123|?>>
+    <associate|family union of a empty set|<tuple|2.115|?>>
+    <associate|family union of family of families|<tuple|2.129|?>>
+    <associate|family union of family set and surjections|<tuple|2.113|?>>
+    <associate|family union of union of two families|<tuple|2.125|?>>
+    <associate|family union{A,B}|<tuple|2.120|?>>
+    <associate|family {x}xeA|<tuple|2.101|?>>
     <associate|function|<tuple|2.24|?>>
     <associate|function A^empty is empty|<tuple|2.32|?>>
     <associate|function B^A|<tuple|2.30|?>>
@@ -13348,18 +13336,18 @@
     <associate|partial functions image/preimage properties|<tuple|2.17|?>>
     <associate|parttial function graph|<tuple|2.6|?>>
     <associate|power set|<tuple|1.63|?>>
-    <associate|product|<tuple|2.132|?>>
-    <associate|product and intersection|<tuple|2.136|?>>
-    <associate|product and power|<tuple|2.137|?>>
-    <associate|product extension|<tuple|2.140|?>>
-    <associate|product inclusion|<tuple|2.135|?>>
-    <associate|product of family with one element|<tuple|2.133|?>>
-    <associate|product of family with two classes|<tuple|2.134|?>>
+    <associate|product|<tuple|2.131|?>>
+    <associate|product and intersection|<tuple|2.135|?>>
+    <associate|product and power|<tuple|2.136|?>>
+    <associate|product extension|<tuple|2.139|?>>
+    <associate|product inclusion|<tuple|2.134|?>>
+    <associate|product of family with one element|<tuple|2.132|?>>
+    <associate|product of family with two classes|<tuple|2.133|?>>
     <associate|product product is empty|<tuple|3.103|?>>
     <associate|product product is not empty|<tuple|3.102|?>>
-    <associate|product projection function|<tuple|2.141|?>>
+    <associate|product projection function|<tuple|2.140|?>>
     <associate|product projection is surjective|<tuple|3.101|?>>
-    <associate|product sub-product|<tuple|2.139|?>>
+    <associate|product sub-product|<tuple|2.138|?>>
     <associate|relation|<tuple|3.1|?>>
     <associate|relation properties|<tuple|3.4|?>>
     <associate|relation trivial|<tuple|3.3|?>>
