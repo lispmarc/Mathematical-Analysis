@@ -12889,7 +12889,7 @@
 
   <\theorem>
     <label|complex finite set condition>We have the following
-    characterization of finite sets
+    characterization of finite sets then\ 
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|I<text| is finite
@@ -12897,11 +12897,6 @@
       <math|k\<in\>\<bbb-N\><rsub|\<bbb-C\>,0><text| such that
       ><around*|{|1,\<ldots\>,k|}>\<approx\>I>>>>>>
     </eqnarray*>
-
-    Using the concepts of indexed sets [see definition: <reference|function
-    indexed set unique>] every finite set can be written as a
-    <with|font-series|bold|unique indexed set>
-    <math|I=<around*|{|x<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,k|}>|}>>.
   </theorem>
 
   <\proof>
@@ -12956,6 +12951,84 @@
       proving that <math|<around*|{|1,\<ldots\>,n|}>\<approx\>I>, hence by
       [theorem: <reference|finite set alternative definition>] <math|I> is
       finite.
+    </description>
+  </proof>
+
+  <\corollary>
+    <label|complex finite set condition (1)>Let <math|I> be a non empty set
+    then\ 
+
+    <\equation*>
+      I<text| is finite >\<Leftrightarrow\><text| there exists a
+      <with|font-series|bold|unique> >k\<in\>\<bbb-N\><rsub|\<bbb-C\>><text|
+      such that ><around*|{|0,\<ldots\>,k-1|}>\<approx\>I
+    </equation*>
+  </corollary>
+
+  <\proof>
+    \ Let <math|k\<in\>\<bbb-N\><rsub|\<bbb-C\>>\<Rightarrow\>k-1\<in\>\<bbb-N\><rsub|\<bbb-C\>,0>>.
+    Define\ 
+
+    <\equation*>
+      \<tau\>:<around*|{|0,\<ldots\>,k-1|}>\<rightarrow\><around*|{|1,\<ldots\>,k|}><text|
+      by >\<tau\><around*|(|i|)>=i+1
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|injectivity>If <math|\<gamma\><around*|(|i|)>=\<gamma\><around*|(|j|)>>
+      then <math|i+1=j+1> hence <math|i=j>
+
+      <item*|surjectity>If <math|j\<in\><around*|{|1,\<ldots\>,k|}>> then
+      <math|1\<leqslant\>j\<leqslant\>k\<Rightarrow\>0\<leqslant\>j-1\<leqslant\>k-1>
+      proving that <math|j-1\<in\><around*|{|0,\<ldots\>,k-1|}>>. As
+      <math|\<gamma\><around*|(|j-1|)>=<around*|(|j-1|)>+1=j> surjectivity is
+      proved.
+    </description>
+
+    So we have that\ 
+
+    <\equation*>
+      <text|If >k\<in\>\<bbb-N\><rsub|\<bbb-C\>><text| then
+      ><around*|{|0,\<ldots\>,k-1|}>\<approx\><around*|{|1,\<ldots\>,k|}>
+    </equation*>
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>If <math|I> is finite there exists by
+      [theorem: <reference|complex finite set condition>] a
+      <math|k\<in\>\<bbb-N\><rsub|\<bbb-C\>,0>> such that
+      <math|<around*|{|1,\<ldots\>,k|}>\<approx\>I> hence there exists a
+      bijection
+
+      <\equation*>
+        \<alpha\>:<around*|{|1,\<ldots\>,k|}>\<rightarrow\>I.
+      </equation*>
+
+      If <math|k=0> then <math|<around*|{|1,\<ldots\>,k|}>=\<varnothing\>> so
+      that <math|I=\<alpha\><around*|(|\<varnothing\>|)>=\<varnothing\>>
+      contradicting <math|I\<neq\>\<varnothing\>>., hence
+      <math|k\<in\>\<bbb-N\><rsub|\<bbb-C\>>>. As
+      <math|<around*|{|0,\<ldots\>,k-1|}>\<approx\><around*|{|1,\<ldots\>,k|}>>
+      and <math|<around*|{|1,\<ldots\>,k|}>\<approx\>I> it follows that\ 
+
+      <\equation*>
+        <around*|{|0,\<ldots\>,k-1|}>\<approx\>I
+      </equation*>
+
+      As for uniqueness. If <math|l\<in\>\<bbb-N\><rsub|\<bbb-C\>>> such that
+      <math|<around*|{|0,\<ldots\>,l-1|}>\<approx\>I> then as
+      <math|<around*|{|0,\<ldots\>,l-1|}>\<approx\><around*|{|1,\<ldots\>,l|}>>
+      we have also <math|<around*|{|1,\<ldots\>,l|}>\<approx\>I>. Using the
+      previous theorem [theorem: <reference|complex finite set condition>] it
+      follows then that <math|k=l>.
+
+      <item*|<math|\<Leftarrow\>>>If <math|k\<in\>\<bbb-N\><rsub|\<bbb-C\>>>
+      such that <math|<around*|{|0,\<ldots\>,k-1|}>\<approx\>I> then as
+      <math|<around*|{|0,\<ldots\>,k-1|}>\<approx\><around*|{|1,\<ldots\>,k|}>>
+      it follows that <math|<around*|{|1,\<ldots\>,k|}>\<approx\>I>. Using
+      the previous theorem [theorem: <reference|complex finite set
+      condition>] it follows then that <math|I> is finite.
     </description>
   </proof>
 
@@ -13505,11 +13578,11 @@
     <associate|complex RC order (2)|<tuple|10.8|?>>
     <associate|complex RC order properties|<tuple|10.14|?>>
     <associate|complex a\<less\>2^n|<tuple|10.48|?>>
-    <associate|complex cardinality|<tuple|10.73|?>>
-    <associate|complex cardinality adding element|<tuple|10.77|?>>
-    <associate|complex cardinality alternative|<tuple|10.74|?>>
-    <associate|complex cardinality equality and subset|<tuple|10.78|?>>
-    <associate|complex cardinality properties|<tuple|10.76|?>>
+    <associate|complex cardinality|<tuple|10.74|?>>
+    <associate|complex cardinality adding element|<tuple|10.78|?>>
+    <associate|complex cardinality alternative|<tuple|10.75|?>>
+    <associate|complex cardinality equality and subset|<tuple|10.79|?>>
+    <associate|complex cardinality properties|<tuple|10.77|?>>
     <associate|complex conjugate|<tuple|10.67|?>>
     <associate|complex conjugate properties|<tuple|10.68|?>>
     <associate|complex definition by recursion (1)|<tuple|10.37|?>>
@@ -13520,8 +13593,8 @@
     <associate|complex field|<tuple|10.2|?>>
     <associate|complex finite lemma|<tuple|10.71|?>>
     <associate|complex finite set condition|<tuple|10.72|?>>
-    <associate|complex finite set subset and cardinality|<tuple|10.78|?>>
-    <associate|complex finite subset|<tuple|10.75|?>>
+    <associate|complex finite set condition (1)|<tuple|10.73|?>>
+    <associate|complex finite subset|<tuple|10.76|?>>
     <associate|complex i^2=-1|<tuple|10.62|?>>
     <associate|complex integers are conditional complete|<tuple|10.16|?>>
     <associate|complex irrational numbers|<tuple|10.20|?>>
@@ -13767,11 +13840,11 @@
     <associate|eq 9.82.036|<tuple|9.82|?>>
     <associate|eq 9.89.047|<tuple|9.83|?>>
     <associate|eq 9.90.047|<tuple|9.84|?>>
-    <associate|extended reals|<tuple|10.80|?>>
-    <associate|extended reals are fully ordered|<tuple|10.84|?>>
-    <associate|extended reals existence|<tuple|10.79|?>>
-    <associate|extended reals finite real number|<tuple|10.81|?>>
-    <associate|extended reals order definition|<tuple|10.82|?>>
+    <associate|extended reals|<tuple|10.81|?>>
+    <associate|extended reals are fully ordered|<tuple|10.85|?>>
+    <associate|extended reals existence|<tuple|10.80|?>>
+    <associate|extended reals finite real number|<tuple|10.82|?>>
+    <associate|extended reals order definition|<tuple|10.83|?>>
     <associate|integeres order|<tuple|7.21|?>>
     <associate|integers|<tuple|7.2|?>>
     <associate|integers 0\<less\>1 and 0\<less\>2|<tuple|7.25|?>>
