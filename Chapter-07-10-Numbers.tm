@@ -12393,7 +12393,7 @@
   </definition>
 
   <\theorem>
-    <label|compelx>For <math|i> we have\ 
+    <label|complex notation (0)>For <math|i> we have\ 
 
     <\enumerate>
       <item><math|i\<cdot\>i=-1>
@@ -12402,41 +12402,41 @@
       <with|font-series|bold|unique> <math|x,y\<in\>\<bbb-R\><rsub|\<bbb-C\>>>
       such that <math|z=x+i\<cdot\>y>
     </enumerate>
-
-    <\proof>
-      \ 
-
-      <\enumerate>
-        <item><math|i\<cdot\>i=<around*|(|0,1|)>\<cdot\><around*|(|0,1|)>=<around*|(|0\<cdot\>0-1\<cdot\>1,0\<cdot\>1+1\<cdot\>0|)>=<around*|(|-1,0|)>=-<around*|(|1,0|)>=-1>
-
-        <item>If <math|z\<in\>\<bbb-C\>> then
-        <math|\<exists\>x<rprime|'>,y<rprime|'>\<in\>\<bbb-R\>> such that
-        <math|z=<around*|(|x<rprime|'>,y<rprime|'>|)>>, define then
-        <math|x=<around*|(|x<rprime|'>,0|)>\<in\>\<bbb-R\><rsub|\<bbb-C\>>>
-        and <math|y=<around*|(|y<rprime|'>,0|)>\<in\>\<bbb-R\><rsub|\<bbb-C\>>>
-        then we have
-
-        <\eqnarray*>
-          <tformat|<table|<row|<cell|x+i\<cdot\>y>|<cell|=>|<cell|<around*|(|x<rprime|'>,0|)>+<around*|(|0,1|)>\<cdot\><around*|(|y<rprime|'>,0|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x<rprime|'>,0|)>+<around*|(|0\<cdot\>y<rprime|'>-1\<cdot\>0,0\<cdot\>0+1\<cdot\>y<rprime|'>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x<rprime|'>,0|)>+<around*|(|0,y<rprime|'>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x<rprime|'>,y<rprime|'>|)>>>|<row|<cell|>|<cell|=>|<cell|z>>>>
-        </eqnarray*>
-
-        Further if <math|u,v\<in\>\<bbb-R\><rsub|\<bbb-C\>>> such that
-        <math|z=u+i\<cdot\>v> then <math|\<exists\>u<rprime|'>,v<rprime|'>\<in\>\<bbb-R\>>
-        such that <math|u=<around*|(|u<rprime|'>,0|)>\<wedge\>v=<around*|(|v<rprime|'>,0|)>>
-        then we have\ 
-
-        <\eqnarray*>
-          <tformat|<table|<row|<cell|<around*|(|z<rprime|'>,y<rprime|'>|)>>|<cell|=>|<cell|z>>|<row|<cell|>|<cell|=>|<cell|u+i\<cdot\>v>>|<row|<cell|>|<cell|=>|<cell|<around*|(|u<rprime|'>,0|)>+<around*|(|0,1|)>\<cdot\><around*|(|v<rprime|'>,0|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|u<rprime|'>,0|)>+<around*|(|0\<cdot\>v<rprime|'>-1\<cdot\>0,0\<cdot\>0+1\<cdot\>v<rprime|'>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|u<rprime|'>,0|)>+<around*|(|0,v<rprime|'>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|u<rprime|'>,v<rprime|'>|)>>>>>
-        </eqnarray*>
-
-        so that <math|x<rprime|'>=u<rprime|'>> and
-        <math|y<rprime|'>=v<rprime|'>> hence
-        <math|x=<around*|(|x<rprime|'>,0|)>=<around*|(|u<rprime|'>,0|)>=u>
-        and <math|y=<around*|(|y<rprime|'>,0|)>=<around*|(|v<rprime|'>,0|)>=v>
-        proving uniqueness.
-      </enumerate>
-    </proof>
   </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item><math|i\<cdot\>i=<around*|(|0,1|)>\<cdot\><around*|(|0,1|)>=<around*|(|0\<cdot\>0-1\<cdot\>1,0\<cdot\>1+1\<cdot\>0|)>=<around*|(|-1,0|)>=-<around*|(|1,0|)>=-1>
+
+      <item>If <math|z\<in\>\<bbb-C\>> then
+      <math|\<exists\>x<rprime|'>,y<rprime|'>\<in\>\<bbb-R\>> such that
+      <math|z=<around*|(|x<rprime|'>,y<rprime|'>|)>>, define then
+      <math|x=<around*|(|x<rprime|'>,0|)>\<in\>\<bbb-R\><rsub|\<bbb-C\>>> and
+      <math|y=<around*|(|y<rprime|'>,0|)>\<in\>\<bbb-R\><rsub|\<bbb-C\>>>
+      then we have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x+i\<cdot\>y>|<cell|=>|<cell|<around*|(|x<rprime|'>,0|)>+<around*|(|0,1|)>\<cdot\><around*|(|y<rprime|'>,0|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x<rprime|'>,0|)>+<around*|(|0\<cdot\>y<rprime|'>-1\<cdot\>0,0\<cdot\>0+1\<cdot\>y<rprime|'>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x<rprime|'>,0|)>+<around*|(|0,y<rprime|'>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x<rprime|'>,y<rprime|'>|)>>>|<row|<cell|>|<cell|=>|<cell|z>>>>
+      </eqnarray*>
+
+      Further if <math|u,v\<in\>\<bbb-R\><rsub|\<bbb-C\>>> such that
+      <math|z=u+i\<cdot\>v> then <math|\<exists\>u<rprime|'>,v<rprime|'>\<in\>\<bbb-R\>>
+      such that <math|u=<around*|(|u<rprime|'>,0|)>\<wedge\>v=<around*|(|v<rprime|'>,0|)>>
+      then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|z<rprime|'>,y<rprime|'>|)>>|<cell|=>|<cell|z>>|<row|<cell|>|<cell|=>|<cell|u+i\<cdot\>v>>|<row|<cell|>|<cell|=>|<cell|<around*|(|u<rprime|'>,0|)>+<around*|(|0,1|)>\<cdot\><around*|(|v<rprime|'>,0|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|u<rprime|'>,0|)>+<around*|(|0\<cdot\>v<rprime|'>-1\<cdot\>0,0\<cdot\>0+1\<cdot\>v<rprime|'>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|u<rprime|'>,0|)>+<around*|(|0,v<rprime|'>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|u<rprime|'>,v<rprime|'>|)>>>>>
+      </eqnarray*>
+
+      so that <math|x<rprime|'>=u<rprime|'>> and
+      <math|y<rprime|'>=v<rprime|'>> hence
+      <math|x=<around*|(|x<rprime|'>,0|)>=<around*|(|u<rprime|'>,0|)>=u> and
+      <math|y=<around*|(|y<rprime|'>,0|)>=<around*|(|v<rprime|'>,0|)>=v>
+      proving uniqueness.
+    </enumerate>
+  </proof>
 
   <\note>
     We have now two ways to <with|font-series|bold|uniquely> represent
@@ -13564,7 +13564,6 @@
     <associate|auto-7|<tuple|absolute value|?>>
     <associate|auto-8|<tuple|<with|mode|<quote|math>|<around*|\||x|\|>>|?>>
     <associate|auto-9|<tuple|<with|mode|<quote|math>|m\|n>|?>>
-    <associate|compelx|<tuple|10.63|?>>
     <associate|complex (x^n-1)\<gtr\>=n.(x-1)|<tuple|10.49|?>>
     <associate|complex 0\<less\>1|<tuple|10.10|?>>
     <associate|complex Archimedean property|<tuple|10.24|?>>
@@ -13604,7 +13603,8 @@
     x^n\<less\>x^m|<tuple|10.51|?>>
     <associate|complex norm|<tuple|10.69|?>>
     <associate|complex norm properties|<tuple|10.70|?>>
-    <associate|complex notation|<tuple|10.3|?>>
+    <associate|complex notation|<tuple|10.63|?>>
+    <associate|complex notation (0)|<tuple|10.63|?>>
     <associate|complex numbers|<tuple|10.1|?>>
     <associate|complex order isomorphisms|<tuple|10.9|?>>
     <associate|complex power|<tuple|10.40|?>>
