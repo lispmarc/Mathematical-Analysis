@@ -9578,8 +9578,17 @@
     </equation*>
 
     so that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
-    <math|A<rsub|i>=C<rsub|A><around*|(|i|)>=A>. Usiing the above notation we
-    have then that\ 
+    <math|A<rsub|i>=C<rsub|A><around*|(|i|)>=A>. So as
+    <math|A=<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>> we
+    have that
+
+    <\equation*>
+      A<rsup|n>=<around*|{|f\|f\<in\>A<rsup|<around*|{|1,\<ldots\>,n|}>><text|
+      where >\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text| we have
+      >f<around*|(|i|)>\<in\>A|}>=A<rsup|<around*|{|1,\<ldots\>,n|}>>
+    </equation*>
+
+    \ Using [notation: <reference|finite power notation>] we can write also\ 
 
     <\equation*>
       x\<in\>A<rsup|n>\<Leftrightarrow\>x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)><text|
@@ -9968,7 +9977,7 @@
     <associate|group sub-group|<tuple|4.13|115>>
     <associate|infinite condition (1)|<tuple|6.36|175>>
     <associate|infinite set|<tuple|6.23|171>>
-    <associate|injection and infinite sets|<tuple|6.45|?>>
+    <associate|injection and infinite sets|<tuple|6.45|179>>
     <associate|inverse of a field isomorphism is a field
     isomorphism|<tuple|4.69|132>>
     <associate|iteration final|<tuple|5.85|163>>
