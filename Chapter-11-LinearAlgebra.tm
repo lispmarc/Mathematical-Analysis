@@ -2018,6 +2018,141 @@
     \ 
   </proof>
 
+  TODO
+
+  <\theorem>
+    <label|sum constant family>For the ring
+    <math|<around*|\<langle\>|\<bbb-R\>,\<cdot\>,+|\<rangle\>>> we have
+
+    <\enumerate>
+      <item>If <math|n\<in\>\<bbb-N\><rsub|0>> and
+      <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>\<subseteq\>\<bbb-R\>>
+      is defined by <math|\<alpha\><rsub|i>=\<alpha\>> then\ 
+
+      <\enumerate>
+        <item><math|<big|sum><rsub|i=0><rsup|n>\<alpha\><rsub|i>=<around*|(|n+1|)>\<cdot\>\<alpha\>>
+
+        <item><math|<big|prod><rsub|i=0><rsup|n>\<alpha\><rsub|i>=\<alpha\><rsup|<around*|(|n+1|)>>>
+      </enumerate>
+
+      <item>If <math|I> is a finite set then for
+      <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<bbb-R\>>
+      defined by <math|\<alpha\><rsub|i>=\<alpha\>> we have
+
+      <\enumerate>
+        <item><math|><math|<big|sum><rsub|i\<in\>I><rsup|>\<alpha\><rsub|i>=card<around*|(|I|)>\<cdot\>\<alpha\>>
+
+        <item><math|<big|prod><rsub|i\<in\>I><rsup|>\<alpha\><rsub|i>=\<alpha\><rsup|card<around*|(|I|)>>>
+      </enumerate>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>\ 
+
+      <\enumerate>
+        <item>We prove this by induction, so let\ 
+
+        <\equation*>
+          S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|If
+          <around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>><text|
+          is defined by >\<alpha\><rsub|i>=\<alpha\><text| then
+          ><big|sum><rsub|i=0><rsup|n>\<alpha\><rsub|i>=<around*|(|n+1|)>\<cdot\>\<alpha\>|}>
+        </equation*>
+
+        then we have:
+
+        <\description>
+          <item*|<math|0\<in\>S>>Then <math|<big|sum><rsub|i=0><rsup|0>\<alpha\><rsub|i>\<equallim\><rsub|<text|[theorem:
+          <reference|sum general single>]>>\<alpha\><rsub|0>=\<alpha\>=<around*|(|0+1|)>\<cdot\>\<alpha\>>
+          proving that <math|0\<in\>S>
+
+          <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+          <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>\<bbb-R\>>
+          be defined by <math|\<alpha\><rsub|i>=\<alpha\>>. Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|<big|sum><rsub|i=0><rsup|n+1>\<alpha\><rsub|i>>|<cell|=>|<cell|<big|sum><rsub|i=0><rsup|n>\<alpha\><rsub|i>+\<alpha\><rsub|n+1>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=0><rsup|n>\<alpha\><rsub|i>+\<alpha\>>>|<row|<cell|>|<cell|\<equallim\><rsub|n\<in\>S>>|<cell|<around*|(|n+1|)>\<cdot\>\<alpha\>+\<alpha\>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|n+1|)>+1|)>\<cdot\>\<alpha\>>>>>
+          </eqnarray*>
+
+          proving that <math|n+1\<in\>S>
+        </description>
+
+        <item>We prove this by induction, so let\ 
+
+        <\equation*>
+          S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|If
+          <around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>><text|
+          is defined by >\<alpha\><rsub|i>=\<alpha\><text| then
+          ><big|prod><rsub|i=0><rsup|n>\<alpha\><rsub|i>=<around*|(|n+1|)>\<cdot\>\<alpha\>|}>
+        </equation*>
+
+        then we have:
+
+        <\description>
+          <item*|<math|0\<in\>S>>Then <math|<big|prod><rsub|i=0><rsup|0>\<alpha\><rsub|i>\<equallim\><rsub|<text|[theorem:
+          <reference|sum general single>]>>\<alpha\><rsub|0>=\<alpha\>=\<alpha\><rsup|1>=\<alpha\><rsup|<around*|(|0+1|)>>>
+          proving that <math|0\<in\>S>
+
+          <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+          <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>\<bbb-R\>>
+          be defined by <math|\<alpha\><rsub|i>=\<alpha\>>. Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|<big|prod><rsub|i=0><rsup|n+1>\<alpha\><rsub|i>>|<cell|=>|<cell|<around*|(|<big|prod><rsub|i=0><rsup|n>\<alpha\><rsub|i>|)>\<cdot\>\<alpha\><rsub|n+1>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|prod><rsub|i=0><rsup|n>\<alpha\><rsub|i>|)>\<cdot\>\<alpha\>>>|<row|<cell|>|<cell|\<equallim\><rsub|n\<in\>S>>|<cell|\<alpha\><rsup|n+1>\<cdot\>\<alpha\>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\><rsup|<around*|(|n+1|)>+1>>>>>
+          </eqnarray*>
+
+          proving that <math|n+1\<in\>S>
+        </description>
+      </enumerate>
+
+      <item>\ 
+
+      <\enumerate>
+        <item>For <math|I> we have either:
+
+        <\description>
+          <item*|<math|I=\<varnothing\>>>Then
+          <math|<big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>=<big|sum><rsub|i\<in\>\<varnothing\>>\<alpha\><rsub|i>=0>
+
+          <item*|<math|I\<neq\>\<varnothing\>>>Then
+          <math|<around*|{|0,\<ldots\>,card<around*|(|I|)>-1|}>\<approx\><around*|{|1,\<ldots\>,card<around*|(|i|)>|}>>
+          so that there exists a bijection
+          <math|\<beta\>:<around*|{|0,\<ldots\>,card<around*|(|I|)>-1|}>\<rightarrow\>I>
+          so that\ 
+
+          <\equation*>
+            <big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>=<big|sum><rsub|0><rsup|card<around*|(|I|)>-1>\<alpha\><rsub|\<beta\><around*|(|i|)>>\<equallim\><rsub|<around*|(|1.a|)>><around*|(|card<around*|(|I|)>-1+1|)>\<cdot\>\<alpha\>=card<around*|(|I|)>\<cdot\>\<alpha\>
+          </equation*>
+        </description>
+
+        \ 
+
+        <item>For <math|I> we have either:
+
+        <\description>
+          <item*|<math|I=\<varnothing\>>>Then
+          <math|<big|prod><rsub|i\<in\>I>\<alpha\><rsub|i>=<big|prod><rsub|i\<in\>\<varnothing\>>\<alpha\><rsub|i>=1>
+
+          <item*|<math|I\<neq\>\<varnothing\>>>Then
+          <math|<around*|{|0,\<ldots\>,card<around*|(|I|)>-1|}>\<approx\><around*|{|1,\<ldots\>,card<around*|(|i|)>|}>>
+          so that there exists a bijection
+          <math|\<beta\>:<around*|{|0,\<ldots\>,card<around*|(|I|)>-1|}>\<rightarrow\>I>
+          so that\ 
+
+          <\equation*>
+            <big|prod><rsub|i\<in\>I>\<alpha\><rsub|i>=<big|prod><rsub|0><rsup|card<around*|(|I|)>-1>\<alpha\><rsub|\<beta\><around*|(|i|)>>\<equallim\><rsub|<around*|(|2.a|)>>\<alpha\><rsup|<around*|(|card<around*|(|I|)>-1+1|)>>=\<alpha\><rsup|card<around*|(|I|)>>
+          </equation*>
+        </description>
+      </enumerate>
+    </enumerate>
+
+    \;
+  </proof>
+
   <section|Vector spaces >
 
   <subsection|Definition >
@@ -7342,6 +7477,8 @@
     </enumerate>
   </proof>
 
+  <subsection| Transpositions>
+
   <\definition>
     <label|permutation transposition 1><dueto|Transposition>Let
     <math|n\<in\>\<bbb-N\>> and <math|i,j\<in\><around*|{|1,\<ldots\>,n|}>>
@@ -7931,9 +8068,422 @@
     proving the corollary.
   </proof>
 
-  \;
+  <subsection|Sign of a Permutation>
 
-  \;
+  In the following definition we will use the multiplicative abelian
+  semi-group <math|<around*|\<langle\>|\<bbb-Z\>,\<cdot\>|\<rangle\>>>, so we
+  use the symbol <math|<big|prod>> instead of <math|<big|sum>>. Further let
+  <math|n\<in\>\<bbb-N\><rsub|0>> then <math|<around*|{|<around*|(|i,j|)>\<in\><around*|{|1,\<ldots\>,n|}>\<times\><around*|{|1,\<ldots\>,n|}>\|i\<less\>j|}>\<subseteq\><around*|{|1,\<ldots\>,n|}>\<times\><around*|{|1,\<ldots\>,n|}>>
+  a finite set [see [theorems: <reference|complex finite set
+  condition>,<reference|complex cardinality properties>], so that by
+  [theorem: <reference|subset of finite sets>]
+  <math|<around*|{|<around*|(|i,j|)>\<in\><around*|{|1,\<ldots\>,n|}>\<times\><around*|{|1,\<ldots\>,n|}>\|i\<less\>j|}>>
+  is a finite set. Hence the following definition makes sense.
+
+  <\definition>
+    <label|permutation phi function>Let <math|n\<in\>\<bbb-N\><rsub|0>> then
+    we define\ 
+
+    <\equation*>
+      \<Phi\><rsub|n>:\<bbb-Z\><rsup|n>\<rightarrow\>\<bbb-Z\><text| by
+      >\<Phi\><rsub|n><around*|(|x|)>=<big|prod><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|i,j\<in\><around*|{|1,\<ldots\>,n|}>\<cdot\><around*|{|1,\<ldots\>,n|}>|)>\|i\<less\>j|}>><around*|(|x<rsub|i>-x<rsub|j>|)>
+    </equation*>
+  </definition>
+
+  <\example>
+    \ 
+
+    <\enumerate>
+      <item><math|\<Phi\><rsub|1><around*|(|x|)>=1>, as
+      <math|<around*|{|<around*|(|i,j|)>\<in\><around*|{|1|}>\<times\><around*|{|1|}>\|i\<less\>j|}>=\<varnothing\>>
+      we have <math|\<Phi\><rsub|1><around*|(|x|)>=<big|prod><rsub|<around*|(|i,j|)>\<in\>\<varnothing\>><around*|(|x<rsub|i>-x<rsub|j>|)>=1>
+      [the neutral element of <math|<around*|\<langle\>|\<bbb-Z\>,\<cdot\>|\<rangle\>>>]].
+
+      <item><math|\<Phi\><rsub|2><around*|(|x|)>=x<rsub|2>-x<rsub|1>>, as
+      <math|<around*|{|<around*|(|i,j|)>\<in\><around*|{|1,2|}>\<times\><around*|{|1,2|}>\|i\<less\>j|}>=<around*|{|<around*|(|1,2|)>|}>>
+      we have
+
+      <\equation*>
+        \<Phi\><rsub|2><around*|(|x|)>=<big|prod><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|1,2|)>|}>><around*|(|x<rsub|i>-x<rsub|j>|)>=x<rsub|1>-x<rsub|2>
+      </equation*>
+
+      <item><math|\<Phi\><rsub|3><around*|(|x|)>=<around*|(|x<rsub|1>-x<rsub|2>|)>\<cdot\><around*|(|x<rsub|1>-x<rsub|3>|)>\<cdot\><around*|(|x<rsub|2>-x<rsub|3>|)>>,
+      as
+
+      <\equation*>
+        <around*|{|<around*|(|i,j|)>\<in\><around*|{|1,2,3|}>\<times\><around*|{|1,2,3|}>\|i\<less\>j|}>=<around*|{|<around*|(|1,2|)>,<around*|(|1,3|)>,<around*|(|2,3|)>|}>
+      </equation*>
+
+      we have\ 
+
+      <\equation*>
+        \<Phi\><rsub|3><around*|(|x|)>=<big|prod><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|1,2|)>,<around*|(|1,3|)>,<around*|(|2,3|)>|}>><around*|(|x<rsub|i>-x<rsub|j>|)>=<around*|(|x<rsub|1>-x<rsub|2>|)>\<cdot\><around*|(|x<rsub|1>-x<rsub|3>|)>\<cdot\><around*|(|x<rsub|2>-x<rsub|3>|)>
+      </equation*>
+
+      <item><text-dots>
+    </enumerate>
+  </example>
+
+  <\theorem>
+    <label|permutation apply transposition on phi>Let
+    <math|n\<in\>\<bbb-N\><rsub|0>\\<around*|{|1|}>=<around*|{|2,\<ldots\>,\<infty\>|}>>
+    then if <math|k,l\<in\><around*|{|1,\<ldots\>,n|}>> with <math|k\<neq\>l>
+    we have for the strict transposition <math|<around*|(|k\<leftrightarrowlim\><rsub|n>l|)>>
+    that\ 
+
+    <\equation*>
+      <around*|(|k\<leftrightarrowlim\><rsub|n>l|)>\<Phi\><rsub|n>=<around*|(|-1|)>\<cdot\>\<Phi\><rsub|n>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    First we may alwasy assume that <math|k\<less\>l> [otherwise excange
+    <math|k> and <math|l>]. Define\ 
+
+    <\equation*>
+      I=<around*|{|<around*|(|i,j|)>\<in\><around*|{|1,\<ldots\>,n|}>\<times\><around*|{|1,\<ldots\>,n|}>\|i\<less\>j|}>
+    </equation*>
+
+    Then we have the following excluding possibilities:
+
+    <\description>
+      <item*|<math|i=k>>Then as <math|k\<less\>l> and <math|i\<less\>j> we
+      have for <math|j> either:
+
+      <\description>
+        <item*|<math|j\<less\>l>>Then <math|<around*|(|i,j|)>\<in\>J<rsub|0>>
+        where <math|J<rsub|0>=<around*|{|<around*|(|k,j|)>\<in\>I\|k\<less\>j\<less\>l|}>\<subseteq\>I>
+
+        <item*|<math|j=l>>Then <math|<around*|(|i,j|)>\<in\>J<rsub|1>> where
+        <math|J<rsub|1>=<around*|{|<around*|(|k,l|)>|}>\<subseteq\>I>
+
+        <item*|<math|l\<less\>j>>Then <math|<around*|(|i,j|)>\<in\>J<rsub|2>>
+        where <math|J<rsub|2>=<around*|{|<around*|(|k,j|)>\<in\>I\|l\<less\>j|}>\<subseteq\>I>
+      </description>
+
+      <item*|<math|i\<neq\>k>>Then we have for <math|j> either:
+
+      <\description>
+        <item*|<math|i=l>>Then as <math|i\<less\>j> we have
+        <math|<around*|(|i,j|)>\<in\>J<rsub|3>=<around*|{|<around*|(|l,j|)>\<in\>I\|l\<less\>j|}>\<subseteq\>I>
+      </description>
+
+      <\description>
+        <item*|<math|i\<neq\>l>>Then we have for <math|j> either:
+
+        <\description>
+          <item*|<math|j=k>>Then as <math|i\<less\>j\<Rightarrow\>i\<less\>k>
+          we have <math|<around*|(|i,j|)>\<in\>J<rsub|4>> where
+          <math|<around*|{|<around*|(|i,k|)>\<in\>I\|i\<less\>k|}>\<subseteq\>I>
+
+          <item*|<math|j=l>>Then as <math|i=k> we have either:
+
+          <\description>
+            <item*|<math|i\<less\>k>>Then
+            <math|<around*|(|i,j|)>\<in\>J<rsub|5>> where
+            <math|J<rsub|5>=<around*|{|<around*|(|i,l|)>\<in\>I\|i\<less\>k|}>\<subseteq\>I>
+
+            <item*|<math|k\<less\>i>>Then
+            <math|<around*|(|i,j|)>\<in\>J<rsub|6> where
+            J<rsub|6>=<around*|{|<around*|(|i,l|)>\<in\>I\|k\<less\>i\<less\>l|}>\<subseteq\>I>
+          </description>
+
+          <item*|<math|j\<neq\>l,k>>Then <math|<around*|(|i,j|)>\<in\>J<rsub|7>>
+          where <math|J<rsub|7>=<around*|{|<around*|(|i,j|)>\<in\>I\|i\<neq\>k,l\<wedge\>j\<neq\>k,l|}>\<subseteq\>I>
+        </description>
+      </description>
+    </description>
+
+    So\ 
+
+    <\equation*>
+      I=J<rsub|0><big|cup>J<rsub|1><big|cup>J<rsub|2><big|cup>J<rsub|3><big|cup>J<rsub|4><big|cup>J<rsub|5><big|cup>J<rsub|6><big|cup>J<rsub|7>
+    </equation*>
+
+    Further for the possible intersections of
+    <math|J<rsub|0>,J<rsub|1>,J<rsub|2>,J<rsub|3>,J<rsub|4>,J<rsub|5>,J<rsub|6>>
+    and <math|J<rsub|7>> [using commutativity] we have\ 
+
+    <\description>
+      <item*|<math|<around*|(|i,j|)>\<in\>J<rsub|0><big|cap>J<rsub|1>>>Then
+      <math|i=k\<less\>j\<less\>l\<wedge\>j=l> a contradiction.
+
+      <item*|<math|<around*|(|i,j|)>\<in\>J<rsub|0><big|cap>J<rsub|2>>>Then
+      <math|i=k\<less\>j\<less\>l\<wedge\>l\<less\>j> a contradiction.
+
+      <item*|<math|<around*|(|i,j|)>\<in\>J<rsub|0><big|cap>J<rsub|3>>>Then
+      <math|i=k\<less\>j\<less\>l\<wedge\>l\<less\>j> a contradiction.
+
+      <item*|<math|<around*|(|i,j|)>\<in\>J<rsub|0><big|cap>J<rsub|4>>>Then
+      <math|i=k\<less\>j\<less\>l\<wedge\>j=k> a contradiction.
+
+      <item*|<math|<around*|(|i,j|)>\<in\>J<rsub|0><big|cap>J<rsub|5>>>Then
+      <math|i=k\<less\>j\<less\>l\<wedge\>j=l> a contradiction.
+
+      <item*|<math|<around*|(|i,j|)>\<in\>J<rsub|0><big|cap>J<rsub|6>>>Then
+      <math|i=k\<less\>j\<less\>l\<wedge\>j=l> a contradiction.
+
+      <item*|<math|<around*|(|i,j|)>\<in\>J<rsub|0><big|cap>J<rsub|7>>>Then
+      <math|i=k\<less\>j\<less\>l\<wedge\>i\<neq\>k> a contradiction.
+
+      <item*|<math|<around*|(|i,j|)>\<in\>J<rsub|1><big|cap>J<rsub|2>>>Then
+      <math|i=k\<wedge\>j=l\<wedge\>l\<less\>j> a contradiction
+
+      <item*|<math|<around*|(|i,j|)>\<in\>J<rsub|1><big|cap>J<rsub|3>>>Then
+      <math|i=k\<wedge\>j=l\<wedge\>l\<less\>j> a contradiction.
+
+      <item*|<math|<around*|(|i,j|)>\<in\>J<rsub|1><big|cap>J<rsub|4>>>Then
+      <math|i=k\<wedge\>j=l\<wedge\>i\<less\>k> a contradiction.
+
+      <item*|<math|<around*|(|i,j|)>\<in\>J<rsub|1><big|cap>J<rsub|5>>>Then
+      <math|i=k\<wedge\>j=l\<wedge\>i\<less\>k> a contradiction.
+
+      <item*|<math|<around*|(|i,j|)>\<in\>J<rsub|1><big|cap>J<rsub|6>>>Then
+      <math|i=k\<wedge\>j=l\<wedge\>k\<less\>i> a contradiction
+
+      <item*|<math|<around*|(|i,j|)>\<in\>J<rsub|1><big|cap>J<rsub|7>>>Then
+      <math|i=k\<wedge\>j=l\<wedge\>i\<neq\>k> a contradiction.
+
+      <item*|<math|<around*|(|i,j|)>\<in\>J<rsub|2><big|cap>J<rsub|3>>>Then
+      <math|i=k\<wedge\>l\<less\>j\<wedge\>i=l> contradicting
+      <math|k\<less\>l>.
+
+      <item*|<math|<around*|(|i,j|)>\<in\>J<rsub|2><big|cap>J<rsub|4>>>Then
+      <math|i=k\<wedge\>l\<less\>j\<wedge\>j=k> contradicting
+      <math|i\<less\>j>.
+
+      <item*|<math|<around*|(|i,j|)>\<in\>J<rsub|2><big|cap>J<rsub|5>>>Then
+      <math|i=k\<wedge\>l\<less\>j\<wedge\>i\<less\>k> a contradiction.
+
+      <item*|<math|<around*|(|i,j|)>\<in\>J<rsub|2><big|cap>J<rsub|6>>>Then
+      <math|i=k\<wedge\>l\<less\>j\<wedge\>k\<less\>i> a contradiction.
+
+      <item*|<math|<around*|(|i,j|)>\<in\>J<rsub|2><big|cap>J<rsub|7>>>Then
+      <math|i=k\<wedge\>l\<less\>j\<wedge\>i\<neq\>k> a contradiction.\ 
+
+      <item*|<math|<around*|(|i,j|)>\<in\>J<rsub|3><big|cap>J<rsub|4>>>Then
+      <math|i=l\<wedge\>l\<less\>j\<wedge\>i\<less\>k> giving
+      <math|l\<less\>k> contradicting <math|k\<less\>l>.
+
+      <item*|<math|<around*|(|i,j|)>\<in\>J<rsub|3><big|cap>J<rsub|5>>>Then
+      <math|i=l\<wedge\>l\<less\>j\<wedge\>i\<less\>k> giving
+      <math|l\<less\>k> contradicting <math|k\<less\>l>.
+
+      <item*|<math|<around*|(|i,j|)>\<in\>J<rsub|3><big|cap>J<rsub|6>>>Then
+      <math|i=l\<wedge\>l\<less\>j\<wedge\>l=j> a contradicting.
+
+      <item*|<math|<around*|(|i,j|)>\<in\>J<rsub|3><big|cap>J<rsub|7>>>Then
+      <math|i=l\<wedge\>l\<less\>j\<wedge\>i\<neq\>k> a contradiction.
+
+      <item*|<math|<around*|(|i,j|)>\<in\>J<rsub|4><big|cap>J<rsub|5>>>Then
+      <math|i\<less\>k=j\<wedge\>j=l> contradicting <math|k\<less\>l>.
+
+      <item*|<math|<around*|(|i,j|)>\<in\>J<rsub|4><big|cap>J<rsub|6>>>Then
+      <math|i\<less\>k=j\<wedge\>j=l> contradicting <math|k\<less\>l>.
+
+      <item*|<math|<around*|(|i,j|)>\<in\>J<rsub|4><big|cap>J<rsub|7>>>Then
+      <math|i\<less\>k=j\<wedge\>j=l> contradicting <math|k\<less\>l>.
+
+      <item*|<math|<around*|(|i,j|)>\<in\>J<rsub|5><big|cap>J<rsub|6>>>Then
+      <math|i\<less\>k\<wedge\>j=l\<wedge\>k\<less\>i> a contradiction.
+
+      <item*|<math|<around*|(|i,j|)>\<in\>J<rsub|5><big|cap>J<rsub|7>>>Then
+      <math|i\<less\>k\<less\>i\<wedge\>j=l\<wedge\>j\<neq\>l> a
+      contradiction.
+
+      <item*|<math|<around*|(|i,j|)>\<in\>J<rsub|6><big|cap>J<rsub|7>>>Then
+      <math|k\<less\>i\<wedge\>j=l\<wedge\>j\<neq\>l> a contradiction.
+    </description>
+
+    So\ 
+
+    <\equation*>
+      I=<big|cup><rsub|i\<in\><around*|{|,\<ldots\>,7|}>>J<rsub|i><text| and
+      >\<forall\>i,j\<in\>I<text| with >i\<neq\>j<text| we have
+      >J<rsub|i><big|cap>J<rsub|j>=\<varnothing\>
+    </equation*>
+
+    So that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<Phi\><rsub|n><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|<big|prod><rsub|<around*|(|i,j|)>\<in\>I><around*|(|x<rsub|i>-x<rsub|j>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum over disjoint subsets>]>>>|<cell|<big|prod><rsub|m=0><rsup|7><around*|(|<big|prod><rsub|<around*|(|i,j|)>\<in\>J<rsub|m>><around*|(|x<rsub|i>-x<rsub|j>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|m=0><rsup|7>Q<rsub|m><eq-number><label|eq
+      11.081.94>>>>>
+    </eqnarray*>
+
+    where\ 
+
+    <\equation>
+      <label|eq 11.82.094>Q<rsub|m>=<big|prod><rsub|<around*|(|i,j|)>\<in\>J<rsub|m>><around*|(|x<rsub|i>-x<rsub|j>|)>
+    </equation>
+
+    and\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|<around*|(|k\<leftrightarrowlim\><rsub|n>l|)>\<Phi\><rsub|n>|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|<big|prod><rsub|<around*|(|i,j|)>\<in\>I><around*|(|x<rsub|<around*|(|k\<leftrightarrowlim\><rsub|n>l|)><around*|(|i|)>>-x<rsub|<around*|(|k\<leftrightarrowlim\><rsub|n>l|)><around*|(|j|)>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum over disjoint subsets>]>>>|<cell|<big|prod><rsub|m=0><rsup|7><around*|(|<big|prod><rsub|<around*|(|i,j|)>\<in\>J<rsub|m>><around*|(|x<rsub|<around*|(|k\<leftrightarrowlim\><rsub|n>l|)><around*|(|i|)>>-x<rsub|<around*|(|k\<leftrightarrowlim\><rsub|n>l|)><around*|(|j|)>>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|m=0><rsup|7>P<rsub|m><eq-number><label|eq
+      11.83.094>>>>>
+    </eqnarray*>
+
+    where\ 
+
+    <\equation>
+      <label|eq 11.84.094>P<rsub|m>=<big|prod><rsub|<around*|(|i,j|)>\<in\>J<rsub|m>><around*|(|x<rsub|<around*|(|k\<leftrightarrowlim\><rsub|n>l|)><around*|(|i|)>>-x<rsub|<around*|(|k\<leftrightarrowlim\><rsub|n>l|)><around*|(|j|)>>|)>
+    </equation>
+
+    Now we have:\ 
+
+    <\description>
+      <item*|<math|P<rsub|0>>>\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|P<rsub|0>>|<cell|=>|<cell|<big|prod><rsub|<around*|(|i,j|)>\<in\>J<rsub|0>><rsub|><around*|(|x<rsub|<around*|(|k\<leftrightarrowlim\><rsub|n>l|)><around*|(|i|)>>-x<rsub|<around*|(|k\<leftrightarrowlim\><rsub|n>l|)><around*|(|j|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,j|)>\<in\>I\|k\<less\>j\<less\>l|}>><around*|(|x<rsub|<around*|(|k\<leftrightarrowlim\><rsub|n>l|)><around*|(|i|)>>-x<rsub|<around*|(|k\<leftrightarrowlim\><rsub|n>l|)><around*|(|j|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,j|)>\<in\>I\|k\<less\>j\<less\>l|}>><around*|(|x<rsub|l>-x<rsub|j>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|<around*|(|i,j|)>\<in\>J<rsub|0>><around*|(|x<rsub|l>-x<rsub|j>|)><eq-number><label|eq
+        11.85.094>>>>>
+      </eqnarray*>
+
+      Define now\ 
+
+      <\equation*>
+        \<beta\>:J<rsub|7>=<around*|{|<around*|(|i,l|)>\<in\>I\|k\<less\>i\<less\>l|}>\<rightarrow\>J<rsub|0>=<around*|{|<around*|(|k,j|)>\<in\>I\|k\<less\>j\<less\>l|}><text|
+        by >\<beta\><around*|(|i,j|)>=<around*|(|k,i|)>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|injectivity>Let <math|<around*|(|i,j|)>,<around*|(|i<rprime|'>,j<rprime|'>|)>\<in\>J<rsub|7>>
+        with <math|\<beta\><around*|(|i,j|)>=\<beta\><around*|(|i<rprime|'>,j<rprime|'>|)>>
+        then <math|j=l=j<rprime|'>> and
+
+        \ <math|<around*|(|k,i|)>=<around*|(|k,i<rprime|'>|)>\<Rightarrow\>i=i<rprime|'>>
+        proving that <math|<around*|(|i,j|)>=<around*|(|i<rprime|'>,j<rprime|'>|)>>.
+
+        <item*|surjectivity>Let <math|<around*|(|r,s|)>\<in\>J<rsub|0>> then
+        <math|k=r> and <math|k\<less\>s\<less\>l> so that
+        <math|<around*|(|s,l|)>\<in\>J<rsub|7>>\ 
+
+        which, as <math|\<beta\><around*|(|s,l|)>=<around*|(|k,s|)>=<around*|(|r,s|)>>,
+        proves surjectiviy.
+      </description>
+
+      proving that\ 
+
+      <\equation*>
+        \<beta\>:J<rsub|7>\<rightarrow\>J<rsub|0><text| is a bijection>
+      </equation*>
+
+      Next\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|prod><rsub|<around*|(|i,j|)>\<in\>J<rsub|0>><around*|(|x<rsub|l>-x<rsub|j>|)>>|<cell|=>|<cell|<big|prod><rsub|<around*|(|i,j|)>\<in\>J<rsub|0>><around*|(|x<rsub|l>-x<rsub|<around*|(|i,j|)><rsub|2>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum bijection on index>]>>>|<cell|<big|prod><rsub|<around*|(|i,j|)>\<in\>J<rsub|7>><around*|(|x<rsub|l>-x<rsub|\<beta\><around*|(|i,j|)><rsub|2>>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|<around*|(|i,j|)>\<in\>J<rsub|7>><around*|(|x<rsub|l>-x<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|<around*|(|i,j|)>\<in\>J<rsub|7>><around*|(|<around*|(|-1|)>\<cdot\><around*|(|x<rsub|i>-x<rsub|l>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum of sums (2)>]>>>|<cell|<around*|(|<big|prod><rsub|<around*|(|i,j|)>\<in\>J<rsub|7>><around*|(|-1|)>|)>\<cdot\><big|prod><rsub|<around*|(|i,j|)>\<in\>J<rsub|7>><around*|(|x<rsub|i>-x<rsub|l>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum constant family>]>>>|<cell|<around*|(|-1|)><rsup|card<around*|(|J<rsub|7>|)>>\<cdot\><big|prod><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|i,l|)>\<in\>I\|k\<less\>i\<less\>l|}>><around*|(|x<rsub|i>-x<rsub|l>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|-1|)><rsup|card<around*|(|J<rsub|7>|)>>\<cdot\><big|prod><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|i,l|)>\<in\>I\|k\<less\>i\<less\>l|}>><around*|(|x<rsub|i>-x<rsub|j>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|-1|)><rsup|card<around*|(|j<rsub|7>|)>>\<cdot\><big|prod><rsub|<around*|(|i,j|)>\<in\>J<rsub|7>><around*|(|x<rsub|i>-x<rsub|l>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|-1|)><rsup|card<around*|(|j<rsub|7>|)>>\<cdot\>Q<rsub|7>>>>>
+      </eqnarray*>
+
+      combining the above with [eq: <reference|eq 11.85.094>] gives\ 
+
+      <\equation>
+        <label|eq 11.86.094>P<rsub|0>=<around*|(|-1|)><rsup|card<around*|(|j<rsub|7>|)>>\<cdot\>Q<rsub|7>
+      </equation>
+
+      <item*|<math|P<rsub|1>>>Then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|P<rsub|1>>|<cell|=>|<cell|<big|prod><rsub|<around*|(|i,j|)>\<in\>J<rsub|1>><around*|(|x<rsub|<around*|(|k\<leftrightarrowlim\><rsub|n>l|)><around*|(|i|)>>-x<rsub|<around*|(|k\<leftrightarrowlim\><rsub|n>l|)><around*|(|j|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>|}>><around*|(|x<rsub|<around*|(|k\<leftrightarrowlim\><rsub|n>l|)><around*|(|i|)>>-x<rsub|<around*|(|k\<leftrightarrowlim\><rsub|n>l|)><around*|(|j|)>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum general single>>>>|<cell|x<rsub|<around*|(|k\<leftrightarrowlim\><rsub|n>l|)><around*|(|k|)>>-x<rsub|<around*|(|k\<leftrightarrowlim\><rsub|n>l|)><around*|(|l|)>>>>|<row|<cell|>|<cell|=>|<cell|x<rsub|l>-x<rsub|k>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|-1|)>\<cdot\><around*|(|x<rsub|k>-x<rsub|l>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum general single>>>>|<cell|<around*|(|-1|)>\<cdot\><big|prod><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>|}>><around*|(|x<rsub|i>-x<rsub|j>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|-1|)>\<cdot\><big|prod><rsub|<around*|(|i,j|)>\<in\>J<rsub|1>><around*|(|x<rsub|i>-x<rsub|j>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|-1|)>\<cdot\>Q<rsub|1>>>>>
+      </eqnarray*>
+
+      proving that\ 
+
+      <\equation>
+        <label|eq 11.87.094>P<rsub|1>=<around*|(|-1|)>\<cdot\>Q<rsub|1>
+      </equation>
+
+      <item*|<math|P<rsub|2>>>Then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|P<rsub|3>>|<cell|=>|<cell|<big|prod><rsub|<around*|(|i,j|)>\<in\>J<rsub|2>><around*|(|x<rsub|<around*|(|k\<leftrightarrowlim\><rsub|n>l|)><around*|(|i|)>>-x<rsub|<around*|(|k\<leftrightarrowlim\><rsub|n>l|)><around*|(|j|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,j|)>\<in\>I\|l\<less\>j|}>><around*|(|x<rsub|<around*|(|k\<leftrightarrowlim\><rsub|n>l|)><around*|(|i|)>>-x<rsub|<around*|(|k\<leftrightarrowlim\><rsub|n>l|)><around*|(|j|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,j|)>\<in\>I\|l\<less\>j|}>><around*|(|x<rsub|l>-x<rsub|j>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|<around*|(|i,j|)>\<in\>J<rsub|2>><around*|(|x<rsub|l>-x<rsub|j>|)><eq-number><label|eq
+        11.88.094>>>>>
+      </eqnarray*>
+
+      Define\ 
+
+      <\equation*>
+        \<beta\>:J<rsub|3>=<around*|{|<around*|(|l,j|)>\<in\>I\|l\<less\>j|}>\<rightarrow\>J<rsub|2>=<around*|{|<around*|(|k,j|)>\<in\>I\|l\<less\>j|}><text|
+        by >\<beta\><around*|(|i,j|)>=<around*|(|k,j|)>
+      </equation*>
+
+      then we have:\ 
+
+      <\description>
+        <item*|injectivity>Let <math|<around*|(|i,j|)>,<around*|(|i<rprime|'>,j<rprime|'>|)>\<in\>J<rsub|3>>
+        with <math|\<beta\><around*|(|i,j|)>=\<beta\><around*|(|i<rprime|'>,j<rprime|'>|)>>
+        then <math|i=l=i<rprime|'>> and
+
+        \ <math|<around*|(|k,j|)>=<around*|(|k,j<rprime|'>|)>\<Rightarrow\>j=j<rprime|'>>
+        so that <math|<around*|(|i,j|)>=<around*|(|i<rprime|'>,j<rprime|'>|)>>.
+
+        <item*|surjectivity>Let <math|<around*|(|r,s|)>\<in\>J<rsub|2>> then
+        <math|r=k> and <math|l\<less\>s> so that
+        <math|<around*|(|l,s|)>\<in\>J<rsub|3>>\ 
+
+        which, as <math|\<beta\><around*|(|l,s|)>=<around*|(|k,s|)>=<around*|(|r,s|)>>,
+        proves surjectivity.
+      </description>
+
+      Hence\ 
+
+      <\equation*>
+        \<beta\>:J<rsub|3>\<rightarrow\>J<rsub|2><text| is a bijection>
+      </equation*>
+
+      Next\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|prod><rsub|<around*|(|i,j|)>\<in\>J<rsub|2>><around*|(|x<rsub|l>-x<rsub|j>|)>>|<cell|=>|<cell|<big|prod><rsub|<around*|(|i,j|)>\<in\>J<rsub|2>><around*|(|x<rsub|l>-x<rsub|<around*|(|i,j|)><rsub|2>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum bijection on index>]>>>|<cell|<big|prod><rsub|<around*|(|i,j|)>\<in\>J<rsub|3>><around*|(|x<rsub|l>-x<rsub|\<beta\><around*|(|i,j|)><rsub|2>>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|<around*|(|i,j|)>\<in\>J<rsub|3>><around*|(|x<rsub|l>-x<rsub|j>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|l,j|)>\<in\>I\|l\<less\>j|}>><around*|(|x<rsub|l>-x<rsub|j>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|l,j|)>\<in\>I\|l\<less\>j|}>><around*|(|x<rsub|i>-x<rsub|j>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|<around*|(|i,j|)>\<in\>J<rsub|3>><around*|(|x<rsub|i>-x<rsub|j>|)>>>|<row|<cell|>|<cell|=>|<cell|Q<rsub|3>>>>>
+      </eqnarray*>
+
+      which combined with [eq: <reference|eq 11.88.094>] proves that\ 
+
+      <\equation>
+        <label|eq 11.89.094>P<rsub|2>=Q<rsub|3>
+      </equation>
+
+      <item*|<math|P<rsub|3>>>Then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|P<rsub|3>>|<cell|=>|<cell|<big|prod><rsub|<around*|(|i,j|)>\<in\>J<rsub|3>><around*|(|x<rsub|<around*|(|k\<leftrightarrowlim\><rsub|n>l|)><around*|(|i|)>>-x<rsub|<around*|(|k\<leftrightarrowlim\><rsub|n>l|)><around*|(|j|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|l,j|)>\<in\>I\|l\<less\>j|}>><around*|(|x<rsub|<around*|(|k\<leftrightarrowlim\><rsub|n>l|)><around*|(|i|)>>-x<rsub|<around*|(|k\<leftrightarrowlim\><rsub|n>l|)><around*|(|j|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,j|)>\<in\>I\|l\<less\>j|}>><around*|(|x<rsub|k>-x<rsub|j>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|<around*|(|i,j|)>\<in\>J<rsub|3>><around*|(|x<rsub|k>-x<rsub|j>|)><eq-number><label|eq
+        11.88.094>>>>>
+      </eqnarray*>
+
+      Define\ 
+
+      <\equation*>
+        \<beta\>:J<rsub|2>=<around*|{|<around*|(|k,j|)>\<in\>I\|l\<less\>j|}>\<rightarrow\>J<rsub|3>=<around*|{|<around*|(|l,j|)>\<in\>I\|l\<less\>j|}>
+      </equation*>
+
+      then we have\ 
+
+      <\description>
+        <item*|injectivity>TODO
+
+        <item*|surjectity>TODO
+      </description>
+
+      <item*|<math|P<rsub|4>>>
+
+      <item*|<math|P<rsub|5>>>
+
+      <item*|<math|P<rsub|7>>>
+
+      <item*|<math|P<rsub|8>>>
+    </description>
+
+    \;
+  </proof>
 
   <section|Multilinear mappings>
 
@@ -7979,36 +8529,39 @@
     <associate|auto-31|<tuple|linear mapping|?>>
     <associate|auto-32|<tuple|<with|mode|<quote|math>|Hom<around*|(|X,Y|)>>|?>>
     <associate|auto-33|<tuple|11.5|?>>
-    <associate|auto-34|<tuple|11.6|?>>
-    <associate|auto-35|<tuple|11.7|?>>
+    <associate|auto-34|<tuple|11.5.1|?>>
+    <associate|auto-35|<tuple|11.5.2|?>>
+    <associate|auto-36|<tuple|11.6|?>>
+    <associate|auto-37|<tuple|11.7|?>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|<big|sum><rsub|i=0><rsup|n>x<rsub|i>>|?>>
     <associate|auto-5|<tuple|<with|mode|<quote|math>|<big|prod><rsub|i=0><rsup|n>x<rsub|i>>|?>>
     <associate|auto-6|<tuple|11.1.2|?>>
     <associate|auto-7|<tuple|11.1.3|?>>
     <associate|auto-8|<tuple|permutation|?>>
     <associate|auto-9|<tuple|<with|mode|<quote|math>|\<sigma\>>|?>>
-    <associate|basis|<tuple|11.100|?>>
-    <associate|basis F^n|<tuple|11.121|?>>
-    <associate|basis Kronecker delta|<tuple|11.119|?>>
-    <associate|basis alternative (1)|<tuple|11.103|?>>
-    <associate|basis dimension|<tuple|11.113|?>>
-    <associate|basis dimension of trivial space|<tuple|11.115|?>>
-    <associate|basis dimensionality|<tuple|11.112|?>>
-    <associate|basis exist|<tuple|11.109|?>>
-    <associate|basis existence (1)|<tuple|11.106|?>>
-    <associate|basis extending linear independent set|<tuple|11.107|?>>
-    <associate|basis finite alternative (1)|<tuple|11.104|?>>
-    <associate|basis finite alternative (2)|<tuple|11.105|?>>
-    <associate|basis finite dimensions|<tuple|11.110|?>>
-    <associate|basis infinite dimensions|<tuple|11.111|?>>
-    <associate|basis of a field|<tuple|11.116|?>>
-    <associate|basis of field examples|<tuple|11.117|?>>
-    <associate|basis of trivial vector space|<tuple|11.102|?>>
-    <associate|basis real complex vector space|<tuple|11.118|?>>
-    <associate|basis reducing spanning set to a basis|<tuple|11.108|?>>
-    <associate|basis sub-space|<tuple|11.114|?>>
-    <associate|basis sum of delta|<tuple|11.120|?>>
-    <associate|disjoint family property|<tuple|11.72|?>>
+    <associate|basis|<tuple|11.101|?>>
+    <associate|basis F^n|<tuple|11.122|?>>
+    <associate|basis Kronecker delta|<tuple|11.120|?>>
+    <associate|basis alternative (1)|<tuple|11.104|?>>
+    <associate|basis dimension|<tuple|11.114|?>>
+    <associate|basis dimension of trivial space|<tuple|11.116|?>>
+    <associate|basis dimensionality|<tuple|11.113|?>>
+    <associate|basis exist|<tuple|11.110|?>>
+    <associate|basis existence (1)|<tuple|11.107|?>>
+    <associate|basis extending linear independent set|<tuple|11.108|?>>
+    <associate|basis finite alternative (1)|<tuple|11.105|?>>
+    <associate|basis finite alternative (2)|<tuple|11.106|?>>
+    <associate|basis finite dimensions|<tuple|11.111|?>>
+    <associate|basis infinite dimensions|<tuple|11.112|?>>
+    <associate|basis of a field|<tuple|11.117|?>>
+    <associate|basis of field examples|<tuple|11.118|?>>
+    <associate|basis of trivial vector space|<tuple|11.103|?>>
+    <associate|basis real complex vector space|<tuple|11.119|?>>
+    <associate|basis reducing spanning set to a basis|<tuple|11.109|?>>
+    <associate|basis sub-space|<tuple|11.115|?>>
+    <associate|basis sum of delta|<tuple|11.121|?>>
+    <associate|disjoint family property|<tuple|11.73|?>>
+    <associate|eq 11.081.94|<tuple|11.81|?>>
     <associate|eq 11.1.054|<tuple|11.1|?>>
     <associate|eq 11.10.054|<tuple|11.11|?>>
     <associate|eq 11.10.064|<tuple|11.10|?>>
@@ -8087,92 +8640,99 @@
     <associate|eq 11.78.094|<tuple|11.78|?>>
     <associate|eq 11.79.094|<tuple|11.79|?>>
     <associate|eq 11.80.094|<tuple|11.80|?>>
+    <associate|eq 11.82.094|<tuple|11.82|?>>
+    <associate|eq 11.83.094|<tuple|11.83|?>>
+    <associate|eq 11.84.094|<tuple|11.84|?>>
+    <associate|eq 11.85.094|<tuple|11.85|?>>
+    <associate|eq 11.86.094|<tuple|11.86|?>>
+    <associate|eq 11.87.094|<tuple|11.87|?>>
+    <associate|eq 11.88.094|<tuple|11.90|?>>
+    <associate|eq 11.89.094|<tuple|11.89|?>>
     <associate|eq 11.9.053|<tuple|11.9|?>>
-    <associate|linear (in)dependency properties (1)|<tuple|11.96|?>>
-    <associate|linear Steinitz (1)|<tuple|11.98|?>>
-    <associate|linear Steinitz (2)|<tuple|11.99|?>>
-    <associate|linear Steinitz lemma|<tuple|11.97|?>>
-    <associate|linear ampping|<tuple|11.122|?>>
-    <associate|linear combination|<tuple|11.68|?>>
-    <associate|linear combination (1)|<tuple|11.75|?>>
-    <associate|linear combination (2)|<tuple|11.76|?>>
-    <associate|linear dependent set|<tuple|11.88|?>>
-    <associate|linear dependent set alternative condition|<tuple|11.95|?>>
+    <associate|linear (in)dependency properties (1)|<tuple|11.97|?>>
+    <associate|linear Steinitz (1)|<tuple|11.99|?>>
+    <associate|linear Steinitz (2)|<tuple|11.100|?>>
+    <associate|linear Steinitz lemma|<tuple|11.98|?>>
+    <associate|linear ampping|<tuple|11.123|?>>
+    <associate|linear combination|<tuple|11.69|?>>
+    <associate|linear combination (1)|<tuple|11.76|?>>
+    <associate|linear combination (2)|<tuple|11.77|?>>
+    <associate|linear dependent set|<tuple|11.89|?>>
+    <associate|linear dependent set alternative condition|<tuple|11.96|?>>
     <associate|linear dependent set containing neutral
-    element|<tuple|11.89|?>>
-    <associate|linear family disjoint|<tuple|11.71|?>>
-    <associate|linear family finite|<tuple|11.69|?>>
-    <associate|linear finite set|<tuple|11.74|?>>
-    <associate|linear independent empty set|<tuple|11.93|?>>
-    <associate|linear independent finite set|<tuple|11.92|?>>
-    <associate|linear independent set|<tuple|11.90|?>>
-    <associate|linear independent set alternative|<tuple|11.91|?>>
-    <associate|linear independent singleton|<tuple|11.94|?>>
-    <associate|linear mapping Hom(X,Y)|<tuple|11.130|?>>
-    <associate|linear mapping Hom(X,Y) definition|<tuple|11.127|?>>
-    <associate|linear mapping Img Re|<tuple|11.136|?>>
-    <associate|linear mapping L(x)=L(y)=\<gtr\>x=y|<tuple|11.134|?>>
-    <associate|linear mapping and finite sum|<tuple|11.135|?>>
-    <associate|linear mapping basis|<tuple|11.144|?>>
-    <associate|linear mapping composition|<tuple|11.128|?>>
-    <associate|linear mapping composition isomorphism|<tuple|11.129|?>>
-    <associate|linear mapping dimension theorem|<tuple|11.146|?>>
-    <associate|linear mapping dual space|<tuple|11.132|?>>
+    element|<tuple|11.90|?>>
+    <associate|linear family disjoint|<tuple|11.72|?>>
+    <associate|linear family finite|<tuple|11.70|?>>
+    <associate|linear finite set|<tuple|11.75|?>>
+    <associate|linear independent empty set|<tuple|11.94|?>>
+    <associate|linear independent finite set|<tuple|11.93|?>>
+    <associate|linear independent set|<tuple|11.91|?>>
+    <associate|linear independent set alternative|<tuple|11.92|?>>
+    <associate|linear independent singleton|<tuple|11.95|?>>
+    <associate|linear mapping Hom(X,Y)|<tuple|11.131|?>>
+    <associate|linear mapping Hom(X,Y) definition|<tuple|11.128|?>>
+    <associate|linear mapping Img Re|<tuple|11.137|?>>
+    <associate|linear mapping L(x)=L(y)=\<gtr\>x=y|<tuple|11.135|?>>
+    <associate|linear mapping and finite sum|<tuple|11.136|?>>
+    <associate|linear mapping basis|<tuple|11.145|?>>
+    <associate|linear mapping composition|<tuple|11.129|?>>
+    <associate|linear mapping composition isomorphism|<tuple|11.130|?>>
+    <associate|linear mapping dimension theorem|<tuple|11.147|?>>
+    <associate|linear mapping dual space|<tuple|11.133|?>>
     <associate|linear mapping existance of non-zero linear
-    mapping|<tuple|11.133|?>>
-    <associate|linear mapping independency|<tuple|11.143|?>>
-    <associate|linear mapping injectivity and kernel|<tuple|11.141|?>>
-    <associate|linear mapping inverse of a isomorphism|<tuple|11.126|?>>
-    <associate|linear mapping isomorphic spaces|<tuple|11.145|?>>
+    mapping|<tuple|11.134|?>>
+    <associate|linear mapping independency|<tuple|11.144|?>>
+    <associate|linear mapping injectivity and kernel|<tuple|11.142|?>>
+    <associate|linear mapping inverse of a isomorphism|<tuple|11.127|?>>
+    <associate|linear mapping isomorphic spaces|<tuple|11.146|?>>
     <associate|linear mapping kernal and range are
-    subspaces|<tuple|11.139|?>>
-    <associate|linear mapping kernel|<tuple|11.137|?>>
-    <associate|linear mapping linear isomorphism|<tuple|11.124|?>>
-    <associate|linear mapping of neutral element|<tuple|11.131|?>>
-    <associate|linear mapping projection map|<tuple|11.123|?>>
-    <associate|linear mapping range|<tuple|11.138|?>>
-    <associate|linear mapping rank|<tuple|11.140|?>>
-    <associate|linear mapping span|<tuple|11.142|?>>
-    <associate|linear ordered family is finite|<tuple|11.73|?>>
-    <associate|linear span|<tuple|11.77|?>>
-    <associate|linear span contains set|<tuple|11.82|?>>
-    <associate|linear span equivalence 0|<tuple|11.80|?>>
-    <associate|linear span equivalence 1|<tuple|11.81|?>>
+    subspaces|<tuple|11.140|?>>
+    <associate|linear mapping kernel|<tuple|11.138|?>>
+    <associate|linear mapping linear isomorphism|<tuple|11.125|?>>
+    <associate|linear mapping of neutral element|<tuple|11.132|?>>
+    <associate|linear mapping projection map|<tuple|11.124|?>>
+    <associate|linear mapping range|<tuple|11.139|?>>
+    <associate|linear mapping rank|<tuple|11.141|?>>
+    <associate|linear mapping span|<tuple|11.143|?>>
+    <associate|linear ordered family is finite|<tuple|11.74|?>>
+    <associate|linear span|<tuple|11.78|?>>
+    <associate|linear span contains set|<tuple|11.83|?>>
+    <associate|linear span equivalence 0|<tuple|11.81|?>>
+    <associate|linear span equivalence 1|<tuple|11.82|?>>
     <associate|linear span extending a set without changing its
-    span|<tuple|11.87|?>>
-    <associate|linear span is a sub-space|<tuple|11.84|?>>
-    <associate|linear span of empty set|<tuple|11.78|?>>
-    <associate|linear span of span|<tuple|11.86|?>>
-    <associate|linear span properties|<tuple|11.85|?>>
-    <associate|linear span subsets|<tuple|11.83|?>>
-    <associate|linear span({0})|<tuple|11.79|?>>
-    <associate|linerar mapping between R^2 and C|<tuple|11.125|?>>
-    <associate|permutation|<tuple|11.159|?>>
-    <associate|permutation Pn|<tuple|11.147|?>>
-    <associate|permutation Pn is a group|<tuple|11.149|?>>
-    <associate|permutation apply|<tuple|11.158|?>>
-    <associate|permutation apply and composition|<tuple|11.160|?>>
-    <associate|permutation apply identity|<tuple|11.159|?>>
-    <associate|permutation apply permutation on multiargument
-    function|<tuple|11.159|?>>
+    span|<tuple|11.88|?>>
+    <associate|linear span is a sub-space|<tuple|11.85|?>>
+    <associate|linear span of empty set|<tuple|11.79|?>>
+    <associate|linear span of span|<tuple|11.87|?>>
+    <associate|linear span properties|<tuple|11.86|?>>
+    <associate|linear span subsets|<tuple|11.84|?>>
+    <associate|linear span({0})|<tuple|11.80|?>>
+    <associate|linerar mapping between R^2 and C|<tuple|11.126|?>>
+    <associate|permutation Pn|<tuple|11.148|?>>
+    <associate|permutation Pn is a group|<tuple|11.150|?>>
+    <associate|permutation apply|<tuple|11.159|?>>
+    <associate|permutation apply and composition|<tuple|11.161|?>>
+    <associate|permutation apply identity|<tuple|11.160|?>>
+    <associate|permutation apply transposition on phi|<tuple|11.166|?>>
     <associate|permutation as a composition of disjoint
-    transpositions|<tuple|11.157|?>>
+    transpositions|<tuple|11.158|?>>
     <associate|permutation composition of a family of
-    permutations|<tuple|11.152|?>>
+    permutations|<tuple|11.153|?>>
     <associate|permutation definition|<tuple|11.24|?>>
-    <associate|permutation extension (1)|<tuple|11.155|?>>
-    <associate|permutation extension (2)|<tuple|11.156|?>>
+    <associate|permutation extension (1)|<tuple|11.156|?>>
+    <associate|permutation extension (2)|<tuple|11.157|?>>
     <associate|permutation group|<tuple|11.25|?>>
     <associate|permutation on subset|<tuple|11.26|?>>
-    <associate|permutation reverse|<tuple|11.148|?>>
-    <associate|permutation sum|<tuple|11.151|?>>
-    <associate|permutation transosition proeprties|<tuple|11.154|?>>
+    <associate|permutation phi function|<tuple|11.164|?>>
+    <associate|permutation reverse|<tuple|11.149|?>>
+    <associate|permutation sum|<tuple|11.152|?>>
+    <associate|permutation transosition proeprties|<tuple|11.155|?>>
     <associate|permutation transpistion symmetry
-    permutation|<tuple|11.162|?>>
+    permutation|<tuple|11.163|?>>
     <associate|permutation transposition|<tuple|11.27|?>>
-    <associate|permutation transposition 1|<tuple|11.153|?>>
+    <associate|permutation transposition 1|<tuple|11.154|?>>
     <associate|permutation transposition properties|<tuple|11.28|?>>
-    <associate|permutation transposition symmetry|<tuple|11.161|?>>
+    <associate|permutation transposition symmetry|<tuple|11.162|?>>
     <associate|permutation {0,..,n and transposition|<tuple|11.29|?>>
     <associate|product finite product|<tuple|11.2|?>>
     <associate|sum alternative definition|<tuple|11.4|?>>
@@ -8182,6 +8742,7 @@
     <associate|sum associativity simple|<tuple|11.22|?>>
     <associate|sum bijection on index|<tuple|11.34|?>>
     <associate|sum commutativity|<tuple|11.30|?>>
+    <associate|sum constant family|<tuple|11.45|?>>
     <associate|sum finite sum|<tuple|11.1|?>>
     <associate|sum general equivalence|<tuple|11.33|?>>
     <associate|sum general single|<tuple|11.32|?>>
@@ -8208,27 +8769,27 @@
     <associate|sum ring product|<tuple|11.8|?>>
     <associate|sum ring product (1)|<tuple|11.17|?>>
     <associate|sum ring product (2)|<tuple|11.37|?>>
-    <associate|vector space|<tuple|11.45|?>>
-    <associate|vector space C real|<tuple|11.54|?>>
-    <associate|vector space F^n|<tuple|11.59|?>>
-    <associate|vector space Q,R,C|<tuple|11.53|?>>
-    <associate|vector space complex/real|<tuple|11.55|?>>
-    <associate|vector space field|<tuple|11.52|?>>
-    <associate|vector space finite sum (1)|<tuple|11.64|?>>
-    <associate|vector space finite sum (2)|<tuple|11.65|?>>
-    <associate|vector space finite sum (3)|<tuple|11.66|?>>
-    <associate|vector space finite sum (4)|<tuple|11.67|?>>
-    <associate|vector space function space|<tuple|11.56|?>>
-    <associate|vector space power|<tuple|11.57|?>>
-    <associate|vector space power field|<tuple|11.58|?>>
-    <associate|vector space product of vector spaces|<tuple|11.60|?>>
-    <associate|vector space properties (1)|<tuple|11.47|?>>
-    <associate|vector space set operations|<tuple|11.61|?>>
-    <associate|vector space set propertie|<tuple|11.62|?>>
-    <associate|vector space sub-space is a vector space|<tuple|11.49|?>>
-    <associate|vector space subspace|<tuple|11.48|?>>
-    <associate|vector space trivial|<tuple|11.51|?>>
-    <associate|vector spaces product of vector spaces|<tuple|11.63|?>>
+    <associate|vector space|<tuple|11.46|?>>
+    <associate|vector space C real|<tuple|11.55|?>>
+    <associate|vector space F^n|<tuple|11.60|?>>
+    <associate|vector space Q,R,C|<tuple|11.54|?>>
+    <associate|vector space complex/real|<tuple|11.56|?>>
+    <associate|vector space field|<tuple|11.53|?>>
+    <associate|vector space finite sum (1)|<tuple|11.65|?>>
+    <associate|vector space finite sum (2)|<tuple|11.66|?>>
+    <associate|vector space finite sum (3)|<tuple|11.67|?>>
+    <associate|vector space finite sum (4)|<tuple|11.68|?>>
+    <associate|vector space function space|<tuple|11.57|?>>
+    <associate|vector space power|<tuple|11.58|?>>
+    <associate|vector space power field|<tuple|11.59|?>>
+    <associate|vector space product of vector spaces|<tuple|11.61|?>>
+    <associate|vector space properties (1)|<tuple|11.48|?>>
+    <associate|vector space set operations|<tuple|11.62|?>>
+    <associate|vector space set propertie|<tuple|11.63|?>>
+    <associate|vector space sub-space is a vector space|<tuple|11.50|?>>
+    <associate|vector space subspace|<tuple|11.49|?>>
+    <associate|vector space trivial|<tuple|11.52|?>>
+    <associate|vector spaces product of vector spaces|<tuple|11.64|?>>
   </collection>
 </references>
 
@@ -8336,13 +8897,21 @@
       11.5<space|2spc>Permutations <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-33>
 
+      <with|par-left|<quote|1tab>|11.5.1<space|2spc> Transpositions
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-34>>
+
+      <with|par-left|<quote|1tab>|11.5.2<space|2spc>Sign of a Permutation
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-35>>
+
       11.6<space|2spc>Multilinear mappings
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-34>
+      <no-break><pageref|auto-36>
 
       11.7<space|2spc>Deteminant Functions
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-35>
+      <no-break><pageref|auto-37>
     </associate>
   </collection>
 </auxiliary>
