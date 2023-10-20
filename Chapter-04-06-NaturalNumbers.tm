@@ -9546,7 +9546,7 @@
     a finite family of sets then <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
 
     <\equation*>
-      \<pi\><rsub|i>:<big|prod><rsub|i=1><rsup|n>\<rightarrow\>A<rsub|i><text|
+      \<pi\><rsub|i>:<big|prod><rsub|i=1><rsup|n>A<rsub|i>\<rightarrow\>A<rsub|i><text|
       is defined by <math|\<pi\><rsub|i><around*|(|x|)>=\<pi\><rsub|i><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i>|)>=x<rsub|i>>>
     </equation*>
   </definition>
