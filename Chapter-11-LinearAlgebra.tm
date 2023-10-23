@@ -6263,6 +6263,370 @@
     </equation*>
   </proof>
 
+  <subsection|Internal Direct Sum>
+
+  <\definition>
+    <label|vector space internal direct sum>Let
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a vector space
+    over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>,
+    <math|X,Y> subspaces of <math|V> then we say that <math|V> is the
+    <with|font-series|bold|internal direct> <with|font-series|bold|sum> of
+    <math|X> and <math|Y>, noted as
+
+    <\equation*>
+      V=X\<oplus\>Y
+    </equation*>
+
+    if
+
+    <\equation*>
+      V=<around*|{|x+y\|x\<in\>X\<wedge\>y\<in\>Y|}><text|and
+      >X<big|cap>Y=<around*|{|0|}>
+    </equation*>
+  </definition>
+
+  Later in this book we introduce a more general concept of the
+  <with|font-series|bold|direct sum of vector spaces>, enabling us to build
+  new vector spaces from existing vector spaces. The idea of a vector spaces
+  that is the <with|font-series|bold|internal direct sum of subspaces >is
+  that vectors in the vector space can be expressed as a
+  <with|font-series|bold|unique sum >of vectors in the sub-spaces. This is
+  expressed in the following theorem.
+
+  <\theorem>
+    <label|vector space internal direct sum decomposition>Let
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a vector space
+    over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>,
+    <math|X,Y> sub-spaces of <math|V> then
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|V=X\<oplus\>Y>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|\<forall\>v\<in\>V<text|
+      there exists <with|font-series|bold|unique
+      >><around*|(|x,y|)>\<in\>X\<times\>Y<text| such that >v=x+y>|<cell|>>>>
+    </eqnarray*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|v\<in\>V> then, as
+      <math|V=X\<oplus\>Y> we have <math|V=<around*|{|x+y\|x\<in\>X\<wedge\>y\<in\>Y|}>>
+      there exists a <math|x\<in\>X> and a <math|y\<in\>Y> [so that
+      <math|<around*|(|x,y|)>\<in\>X\<times\>Y>] such that <math|v=x+y>,
+      proving existance. Now for uniqueness assume that
+      <math|\<exists\><around*|(|x<rprime|'>,y<rprime|'>|)>\<in\>X\<times\>Y>
+      such that <math|v=x<rprime|'>+y<rprime|'>>, Then we have
+      <math|x+y=x<rprime|'>+y<rprime|'>> or
+      <math|x-x<rprime|'>=y-y<rprime|'>>. As <math|X> is a subspace we have
+      that <math|x-x<rprime|'>\<in\>X> hence <math|y-y<rprime|'>\<in\>X>,
+      likewise as <math|Y> is a sib-space we have <math|y-y<rprime|'>\<in\>Y>
+      proving that <math|y-y<rprime|'>\<in\>X<big|cap>Y=<around*|{|0|}>>. So
+      <math|x-x<rprime|'>=y-y<rprime|'>=0> proving that <math|x=x<rprime|'>>
+      and <math|y=y<rprime|'>> or <math|<around*|(|x,y|)>=<around*|(|x<rprime|'>,y<rprime|'>|)>>.
+
+      <item*|<math|\<Leftarrow\>>>By the hypothesis we have
+      <math|V=<around*|{|x+y\|x\<in\>X\<wedge\>y\<in\>Y|}>>. Let
+      <math|z\<in\>X<big|cap>Y\<subseteq\>V> then, as <math|X,Y> are
+      subspaces we have that <math|0\<in\>X,Y>, we have <math|z=z+0=0+z>
+      where <math|<around*|(|0,z|)>,<around*|(|z,0|)>\<in\>X\<times\>Y>.
+      Using the uniqueness hypothesis we have
+      <math|<around*|(|0,z|)>=<around*|(|z,0|)>> proving that <math|z=0>.
+    </description>
+  </proof>
+
+  <\example>
+    <label|vector space internal direct sum trivial example>Let
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a vector space
+    over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> then
+    <math|V=V\<oplus\>\<varnothing\>>
+  </example>
+
+  <\proof>
+    Clearly <math|V,\<varnothing\>> are sub-spaces of <math|V> and if
+    <math|v\<in\>V> we have that <math|v=0+v> so that
+
+    \ <math|V=<around*|{|x+y\|x\<in\><around*|{|0|}>\<wedge\>y\<in\>V|}>>.
+    Finally <math|<around*|{|0|}><big|cap>V=<around*|{|0|}>>
+  </proof>
+
+  So every vector space can be written as a trivial direct sum, however every
+  vector space containing a sub-space can be written as a direct sum of this
+  subspace and another sub-space even if the sub-space is different from
+  <math|<around*|{|0|}>>.
+
+  <\theorem>
+    <label|vector space internal sum existence>Let
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a vector space
+    over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> and
+    <math|X> a sub-space of <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
+    then there exists a subspace <math|Y> of <math|V> such that
+    <math|V=X\<oplus\>Y>.
+  </theorem>
+
+  <\proof>
+    As <math|X> is a sub-space, hence a vector space there exists by
+    [theorem: <reference|basis exist>] a basis <math|B<rsub|x>\<subseteq\>X>
+    for <math|<around*|\<langle\>|X,+,\<cdot\>|\<rangle\>>>. As
+    <math|X\<subseteq\>V\<Rightarrow\>B<rsub|X>\<subseteq\>V> and
+    <math|B<rsub|X>> is linear independent, there exists by [theorem:
+    <reference|basis extending linear independent set>] a basis <math|B> for
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> such that
+    <math|B<rsub|X>\<subseteq\>V>. We have now either:
+
+    <\description>
+      <item*|<math|B<rsub|X>=B>>Then <math|X=span<around*|(|B<rsub|X>|)>=span<around*|(|B|)>=V>
+      so that <math|X=V> and thus by [example: <reference|vector space
+      internal direct sum trivial example>] we have that for
+      <math|Y=<around*|{|0|}>> that\ 
+
+      <\equation*>
+        V=X\<oplus\>Y
+      </equation*>
+
+      <item*|<math|B<rsub|X>\<neq\>B>>Take
+      <math|Y=span<around*|(|B\\B<rsub|X>|)>> then by [theorem:
+      <reference|linear span is a sub-space>] <math|Y> is a sub-space of
+      <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>. Let
+      <math|v\<in\>V> then as <math|span<around*|(|B|)>=V> there exists a
+      finite set <math|I\<subseteq\>B> and
+      <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\>I>\<subseteq\>F> such
+      that
+
+      <\equation*>
+        v=<big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>\<cdot\>i\<equallim\><rsub|<text|[theorem:
+        <reference|sum over disjoint subsets>]>><big|sum><rsub|i\<in\>I<big|cap>B<rsub|X>>\<alpha\><rsub|i>\<cdot\>i+<big|sum><rsub|i\<in\>I\\B<rsub|X>>\<alpha\><rsub|i>\<cdot\>i=x+y
+      </equation*>
+
+      where <math|x=<big|sum><rsub|i\<in\>I\\B<rsub|x>>\<alpha\><rsub|i>\<cdot\>i\<in\>span<around*|(|I\\B<rsub|X>|)>>
+      and <math|y\<in\>span<around*|(|I<big|cap>B<rsub|X>|)>>. As
+      <math|I\\B<rsub|X>\<subseteq\>B\\B<rsub|x>> and
+      <math|I<big|cap>B<rsub|X>\<subseteq\>B<rsub|X>> we have by [theorem:
+      <reference|linear span subsets>] that
+      <math|span<around*|(|I\\B<rsub|X>|)>\<subseteq\>span<around*|(|B\\B<rsub|X>|)>=Y>
+      and <math|span<around*|(|I<big|cap>B<rsub|X>|)>\<subseteq\>span<around*|(|B<rsub|X>|)>=X>
+      so that <math|x\<in\>X> and <math|y\<in\>Y> proving that
+      <math|V\<subseteq\><around*|{|x+y\|x\<in\>X\<wedge\>y\<in\>Y|}>\<subseteq\>V>
+      hence\ 
+
+      <\equation*>
+        V=<around*|{|x+y\|x\<in\>X\<wedge\>y\<in\>Y|}>
+      </equation*>
+
+      As <math|X,Y> are vector spaces we have that <math|0\<in\>X<big|cap>Y>
+      so that <math|<around*|{|0|}>\<subseteq\>X<big|cap>Y>. Let
+      <math|z\<in\>X<big|cap>Y> then there exists finite sets
+      <math|I\<subseteq\>B<rsub|X>>, <math|J\<subseteq\>B\\B<rsub|X>> and
+      families <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\>I>\<subseteq\>F>,
+      <math|<around*|{|\<beta\><rsub|i>|}><rsub|i\<in\>J>\<subseteq\>F> such
+      that\ 
+
+      <\equation>
+        <label|eq 11.54.096><big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>\<cdot\>i=z=<big|sum><rsub|i\<in\>J>\<beta\><rsub|i>\<cdot\>i
+      </equation>
+
+      As <math|I<big|cap>J\<subseteq\>B<rsub|X><big|cap><around*|(|B\\B<rsub|X>|)>=\<varnothing\>>
+      we can define\ 
+
+      <\equation*>
+        <around*|{|\<gamma\><rsub|i>|}><rsub|i\<in\>I<big|cup>J><text| by
+        >\<gamma\><rsub|i>=<choice|<tformat|<table|<row|<cell|\<alpha\><rsub|i><text|
+        if >i\<in\>I>>|<row|<cell|-\<beta\><rsub|i><text| if >i\<in\>J>>>>>
+      </equation*>
+
+      then
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|sum><rsub|i\<in\>I<big|cup>J>\<gamma\><rsub|i>\<cdot\>i>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum over disjoint subsets>]>>>|<cell|<big|sum><rsub|i\<in\>I>\<gamma\><rsub|i>\<cdot\>i+<big|sum><rsub|i\<in\>J>\<gamma\><rsub|i>\<cdot\>i>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>\<cdot\>i+<big|sum><rsub|i\<in\>J><around*|(|-\<beta\>|)>\<cdot\>i>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum of inverses (2)>]>>>|<cell|<big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>\<cdot\>i-<big|sum><rsub|i\<in\>J>\<beta\><rsub|i>\<cdot\>i>>|<row|<cell|>|<cell|=>|<cell|0>>>>
+      </eqnarray*>
+
+      As <math|I<big|cup>J\<subseteq\>B<rsub|X><big|cup><around*|(|B\\B<rsub|X>|)>=B>
+      a linear independent set we have that
+      <math|\<forall\>i\<in\>I<big|cup>J> that <math|\<gamma\><rsub|i>=0>,
+      hence <math|\<forall\>i\<in\>I> we have
+      <math|\<alpha\><rsub|i>=\<gamma\><rsub|i>=0>, so
+      <math|z=<big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>\<cdot\>i=<big|sum><rsub|i\<in\>I>0\<cdot\>i\<equallim\><rsub|<text|[theorem:
+      <reference|sum of neutral element (2)>]>>=0>. So
+      <math|X<big|cap>Y\<subseteq\><around*|{|0|}>> proving as
+      <math|<around*|{|0|}>\<subseteq\>X<big|cap>Y> that\ 
+
+      <\equation*>
+        V=X\<oplus\>Y
+      </equation*>
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|vector space internal direct sum (function)>Let
+    <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a vector space
+    over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>,
+    <math|X,Y> a sub-spaces of <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,+,\<cdot\>|\<rangle\>>> then there exists
+    mappings\ 
+
+    <\equation*>
+      \<pi\><rsub|X>:V\<rightarrow\>X <text|and
+      >\<pi\><rsub|Y>:V\<rightarrow\>Y
+    </equation*>
+
+    such that:
+
+    <\enumerate>
+      <item><math|\<pi\><rsub|X>\<in\>Hom<around*|(|V,X|)>> and
+      <math|\<pi\><rsub|Y>\<in\>Hom<around*|(|V,X|)>>
+
+      <item><math|\<forall\>v\<in\>V> <math|v=\<pi\><rsub|X><around*|(|v|)>+\<pi\><rsub|Y><around*|(|v|)>>
+
+      <item><math|<around*|(|\<pi\><rsub|X>|)><rsub|\|X>=Id<rsub|X>>,
+      <math|<around*|(|\<pi\><rsub|X>|)><rsub|\|Y>=C<rsub|0>>,
+      <math|<around*|(|\<pi\><rsub|Y>|)><rsub|\|X>=C<rsub|0>> and
+      <math|<around*|(|\<pi\><rsub|Y>|)><rsub|\|Y>=Id<rsub|Y>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    Let <math|v\<in\>V=X\<oplus\>Y> then by [theorem: <reference|vector space
+    internal direct sum decomposition>] there exists
+    <with|font-series|bold|unique> <math|v<rsub|X>\<in\>X> amd
+    <math|v<rsub|Y>\<in\>Y> such that <math|v=v<rsub|1>+v<rsub|2>>. This
+    allows us to define <math|\<pi\><rsub|X>:V\<rightarrow\>X> and
+    <math|\<pi\><rsub|Y>:V\<rightarrow\>Y> by
+    <math|\<pi\><rsub|X><around*|(|v|)>=v<rsub|X>> and
+    <math|\<pi\><rsub|Y><around*|(|v|)>> so that
+
+    <\equation*>
+      v=\<pi\><rsub|X><around*|(|v|)>+\<pi\><rsub|Y><around*|(|v|)>
+    </equation*>
+
+    Let <math|x,y\<in\>V> and <math|\<alpha\>\<in\>F> then
+    <math|x=\<pi\><rsub|X><around*|(|x|)>+\<pi\><rsub|Y><around*|(|x|)>>,
+    <math|y=\<pi\><rsub|X><around*|(|y|)>+\<pi\><rsub|Y><around*|(|y|)>>. So\ 
+
+    <\equation*>
+      x+y=\<pi\><rsub|X><around*|(|x|)>+\<pi\><rsub|Y><around*|(|x|)>+\<pi\><rsub|X><around*|(|y|)>+\<pi\><rsub|Y><around*|(|y|)>=<wide*|<around*|(|\<pi\><rsub|X><around*|(|x|)>+\<pi\><rsub|X><around*|(|y|)>|)>|\<wide-underbrace\>><rsub|\<in\>X>+<wide*|<around*|(|\<pi\><rsub|Y><around*|(|x|)>+\<pi\><rsub|Y><around*|(|y|)>|)>|\<wide-underbrace\>><rsub|\<in\>Y>
+    </equation*>
+
+    which by definition proves\ 
+
+    <\equation*>
+      \<pi\><rsub|X><around*|(|x+y|)>=\<pi\><rsub|X><around*|(|x|)>+\<pi\><rsub|X><around*|(|y|)><text|
+      and >\<pi\><rsub|Y><around*|(|x+y|)>=\<pi\><rsub|Y><around*|(|x|)>+\<pi\><rsub|Y><around*|(|y|)>
+    </equation*>
+
+    Further
+
+    <\equation*>
+      \<alpha\>\<cdot\>x=\<alpha\>\<cdot\><around*|(|\<pi\><rsub|X><around*|(|x|)>+\<pi\><rsub|Y><around*|(|y|)>|)>=<wide*|\<alpha\>\<cdot\>\<pi\><rsub|X><around*|(|x|)>|\<wide-underbrace\>><rsub|\<in\>X>+<wide*|\<alpha\>\<cdot\>\<pi\><rsub|X><around*|(|x|)>|\<wide-underbrace\>><rsub|\<in\>Y>
+    </equation*>
+
+    which by definition proves\ 
+
+    <\equation*>
+      \<pi\><rsub|X><around*|(|\<alpha\>|)>=\<alpha\>\<cdot\>\<pi\><rsub|X><around*|(|x|)><text|
+      and >\<pi\><rsub|Y><around*|(|x\<cdot\>y|)>=\<alpha\>\<cdot\>\<pi\><rsub|Y><around*|(|x|)>
+    </equation*>
+
+    Hence we have\ 
+
+    <\equation*>
+      \<pi\><rsub|X>\<in\>Hom<around*|(|V,X|)><text| and
+      >\<pi\><rsub|Y>\<in\>Hom<around*|(|V,Y|)>
+    </equation*>
+
+    Finally if <math|v\<in\>X> then <math|v=v+0=\<pi\><rsub|X><around*|(|v|)>+\<pi\><rsub|Y><around*|(|v|)>>
+    and if <math|v\<in\>Y> then <math|v=0+v=\<pi\><rsub|X><around*|(|v|)>+\<pi\><rsub|Y><around*|(|v|)>>
+    so that\ 
+
+    <\equation*>
+      \<forall\>v\<in\>X<text| >v<rsub|X><around*|(|v|)>=v=Id<rsub|X><around*|(|v|)><text|,
+      >v<rsub|Y><around*|(|v|)>=0=C<rsub|0><around*|(|v|)><text| and
+      >\<forall\>v\<in\>Y<text| >v<rsub|X><around*|(|v|)>=0=C<rsub|0><around*|(|v|)><text|,
+      >v<rsub|Y><around*|(|v|)>=v=Id<rsub|Y><around*|(|v|)>
+    </equation*>
+
+    proving that\ 
+
+    <\equation*>
+      <around*|(|v<rsub|X>|)><rsub|\|X>=id<rsub|X>\<wedge\><around*|(|v<rsub|X>|)><rsub|\|Y>=C<rsub|0>\<wedge\><around*|(|v<rsub|Y>|)><rsub|\|Y>=Id<rsub|Y>\<wedge\><around*|(|v<rsub|Y>|)><rsub|\|X>=C<rsub|0>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|linear mapping extention>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
+    be a vector space over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>,
+    <math|X> a sub-space of <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Z,+,\<cdot\>|\<rangle\>>> a vector space over
+    the same field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> and
+    <math|L\<in\>Hom<around*|(|X,Z|)>> then there exists a
+    <math|K\<in\>Hom<around*|(|V,Z|)>> such that <math|K<rsub|\|X>=L>. In
+    other words <math|K> is a extension of <math|L>.
+  </theorem>
+
+  <\proof>
+    Using [theorem: <reference|vector space internal sum existence>] there
+    exists a sub-space <math|Y> of <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
+    such that\ 
+
+    <\equation*>
+      V=X\<oplus\>Y
+    </equation*>
+
+    Using [theorem: <reference|vector space internal direct sum (function)>]
+    there exists mappings\ 
+
+    <\equation*>
+      \<pi\><rsub|X>:V\<rightarrow\>X <text|and
+      >\<pi\><rsub|Y>:V\<rightarrow\>Y
+    </equation*>
+
+    such that:
+
+    <\enumerate>
+      <item><math|\<pi\><rsub|X>\<in\>Hom<around*|(|V,X|)>> and
+      <math|\<pi\><rsub|Y>\<in\>Hom<around*|(|V,X|)>>
+
+      <item><math|\<forall\>v\<in\>V> <math|v=\<pi\><rsub|X><around*|(|v|)>+\<pi\><rsub|Y><around*|(|v|)>>
+
+      <item><math|<around*|(|\<pi\><rsub|X>|)><rsub|\|X>=Id<rsub|X>>,
+      <math|<around*|(|\<pi\><rsub|X>|)><rsub|\|Y>=C<rsub|0>>,
+      <math|<around*|(|\<pi\><rsub|Y>|)><rsub|\|X>=C<rsub|0>> and
+      <math|<around*|(|\<pi\><rsub|Y>|)><rsub|\|Y>=Id<rsub|Y>>
+    </enumerate>
+
+    Define then\ 
+
+    <\equation*>
+      K:V\<rightarrow\>Z<text| by >K=L\<circ\>\<pi\><rsub|X>
+    </equation*>
+
+    then if <math|x,y\<in\>V> and <math|\<alpha\>> we have\ 
+
+    <\equation*>
+      K<around*|(|x+y|)>=L<around*|(|\<pi\><rsub|X><around*|(|x+y|)>|)>\<equallim\><rsub|<around*|(|1|)>>L<around*|(|\<pi\><rsub|X><around*|(|x|)>+\<pi\><rsub|X><around*|(|y|)>|)>=L<around*|(|\<pi\><rsub|X><around*|(|x|)>|)>+L<around*|(|\<pi\><rsub|X><around*|(|y|)>|)>=K<around*|(|x|)>+K<around*|(|y|)>
+    </equation*>
+
+    and
+
+    <\equation*>
+      K<around*|(|\<alpha\>\<cdot\>x|)>=L<around*|(|\<pi\><rsub|X><around*|(|\<alpha\>\<cdot\>x|)>|)>\<equallim\><rsub|<around*|(|1|)>>L<around*|(|\<alpha\>\<cdot\>\<pi\><rsub|X><around*|(|x|)>|)>=\<alpha\>\<cdot\>L<around*|(|\<pi\><rsub|X><around*|(|x|)>|)>=\<alpha\>\<cdot\>K<around*|(|x|)>
+    </equation*>
+
+    proving that\ 
+
+    <\equation*>
+      K\<in\>Hom<around*|(|V,Z|)>
+    </equation*>
+
+    Finally if <math|x\<in\>X> then <math|K<around*|(|x|)>=L<around*|(|\<pi\><rsub|X><around*|(|x|)>|)>\<equallim\><rsub|<around*|(|3|)>>L<around*|(|x|)>>
+    proving that\ 
+
+    <\equation*>
+      K<rsub|\|X>=L
+    </equation*>
+  </proof>
+
   <section|Linear mappings>
 
   <subsection|Linear mappings>
@@ -7648,12 +8012,12 @@
     then we have\ 
 
     <\enumerate>
-      <item>If <math|m=1> then <math|<around*|(|\<sigma\><rsub|1>\<circ\>\<cdots\>\<circ\>\<sigma\><rsub|1>|)>=\<sigma\><rsub|1>>
+      <item>If <math|m=1> then <math|\<sigma\><rsub|1>\<circ\>\<cdots\>\<circ\>\<sigma\><rsub|1>=\<sigma\><rsub|1>>
 
       <item>If <math|1\<less\>m> then\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<around*|(|\<sigma\><rsub|1>\<circ\>\<cdots\>\<circ\>\<sigma\><rsub|m>|)>>|<cell|=>|<cell|<around*|(|\<sigma\><rsub|1>\<circ\>\<cdots\>\<circ\>\<sigma\><rsub|m-1>|)>\<circ\>\<sigma\><rsub|m>>>|<row|<cell|>|<cell|=>|<cell|\<sigma\><rsub|1>\<circ\><around*|(|\<sigma\><rsub|2>\<circ\>\<cdots\>\<circ\>\<sigma\><rsub|m>|)>>>>>
+        <tformat|<table|<row|<cell|\<sigma\><rsub|1>\<circ\>\<cdots\>\<circ\>\<sigma\><rsub|m>>|<cell|=>|<cell|<around*|(|\<sigma\><rsub|1>\<circ\>\<cdots\>\<circ\>\<sigma\><rsub|m-1>|)>\<circ\>\<sigma\><rsub|m>>>|<row|<cell|>|<cell|=>|<cell|\<sigma\><rsub|1>\<circ\><around*|(|\<sigma\><rsub|2>\<circ\>\<cdots\>\<circ\>\<sigma\><rsub|m>|)>>>>>
       </eqnarray*>
     </enumerate>
   </theorem>
@@ -7665,16 +8029,16 @@
       <item>We have\ 
 
       <\equation*>
-        <around*|(|\<sigma\><rsub|1>\<circ\>\<cdots\>\<circ\>\<sigma\><rsub|1>|)>=<big|sum><rsub|i=1><rsup|1>\<sigma\><rsub|1>\<equallim\><rsub|<text|[theorem:
+        \<sigma\><rsub|1>\<circ\>\<cdots\>\<circ\>\<sigma\><rsub|1>=<big|sum><rsub|i=1><rsup|1>\<sigma\><rsub|1>\<equallim\><rsub|<text|[theorem:
         <reference|sum alternative definition (1)>]>>\<sigma\><rsub|1>
       </equation*>
 
       <item>If <math|1\<less\>m> then we have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<around*|(|\<sigma\><rsub|1>\<circ\>\<cdots\>\<circ\>\<sigma\><rsub|m>|)>>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|m>\<sigma\><rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <tformat|<table|<row|<cell|\<sigma\><rsub|1>\<circ\>\<cdots\>\<circ\>\<sigma\><rsub|m>>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|m>\<sigma\><rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|sum alternative definition
-        (1)>]>>>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|m-1>\<sigma\><rsub|i>|)>\<circ\>\<sigma\><rsub|m>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<sigma\><rsub|1>\<circ\>\<cdots\>\<circ\>\<sigma\><rsub|m-1>|)>\<circ\>\<sigma\><rsub|m>>>|<row|<cell|<around*|(|\<sigma\><rsub|1>\<circ\>\<cdots\>\<circ\>\<sigma\><rsub|m>|)>>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|m>\<sigma\><rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|def>>|<cell|<big|sum><rsub|i=0><rsup|m-1>\<sigma\><rsub|i+1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        (1)>]>>>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|m-1>\<sigma\><rsub|i>|)>\<circ\>\<sigma\><rsub|m>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<sigma\><rsub|1>\<circ\>\<cdots\>\<circ\>\<sigma\><rsub|m-1>|)>\<circ\>\<sigma\><rsub|m>>>|<row|<cell|\<sigma\><rsub|1>\<circ\>\<cdots\>\<circ\>\<sigma\><rsub|m>>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|m>\<sigma\><rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|def>>|<cell|<big|sum><rsub|i=0><rsup|m-1>\<sigma\><rsub|i+1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|sum alternative definition
         (2)>>>>|<cell|\<sigma\><rsub|0+1>\<circ\><big|sum><rsub|i=1><rsup|m-1>\<sigma\><rsub|i+1>>>|<row|<cell|>|<cell|\<equallim\><rsub|def>>|<cell|\<sigma\><rsub|1>\<circ\><big|sum><rsub|i=2><rsup|m>\<sigma\><rsub|i>>>|<row|<cell|>|<cell|=>|<cell|\<sigma\><rsub|1>\<circ\><around*|(|\<sigma\><rsub|2>\<circ\>\<cdots\>\<circ\>\<sigma\><rsub|m>|)>>>>>
       </eqnarray*>
@@ -7942,7 +8306,7 @@
     <math|i<rsub|k>\<neq\>j<rsub|k>> such that\ 
 
     <\equation*>
-      \<sigma\>=<around*|(|<around*|(|i<rsub|1>\<leftrightarrowlim\><rsub|n>j<rsub|1>|)>\<circ\>\<cdots\>\<circ\><around*|(|i<rsub|l>\<leftrightarrowlim\><rsub|n>j<rsub|l>|)>|)>
+      \<sigma\>=<around*|(|i<rsub|1>\<leftrightarrowlim\><rsub|n>j<rsub|1>|)>\<circ\>\<cdots\>\<circ\><around*|(|i<rsub|l>\<leftrightarrowlim\><rsub|n>j<rsub|l>|)>
     </equation*>
   </theorem>
 
@@ -7952,7 +8316,7 @@
     <\equation*>
       S=<around*|{|n\<in\><around*|{|2,\<ldots\>,\<infty\>|}>\|<text|If
       >\<sigma\>\<in\>P<rsub|n><text| then
-      <math|\<sigma\>=<around*|(|<around*|(|i<rsub|1>\<leftrightarrowlim\><rsub|n>j<rsub|1>|)>\<circ\>\<cdots\>\<circ\><around*|(|i<rsub|l>\<leftrightarrowlim\><rsub|n>j<rsub|l>|)>|)><text|
+      <math|\<sigma\>=<around*|(|i<rsub|1>\<leftrightarrowlim\><rsub|n>j<rsub|1>|)>\<circ\>\<cdots\>\<circ\><around*|(|i<rsub|l>\<leftrightarrowlim\><rsub|n>j<rsub|l>|)><text|
       where ><around*|{|<around*|(|i<rsub|k>\<leftrightarrowlim\><rsub|n>j<rsub|k>|)>|}><rsub|k\<in\><around*|{|1,\<ldots\>,l|}>>\<subseteq\>P<rsub|n>>
       satisfies >i<rsub|k>\<neq\>j<rsub|k>
       \<forall\>k\<in\><around*|{|1,\<ldots\>,l|}>|}>
@@ -7974,7 +8338,7 @@
         a family of <with|font-series|bold|strict> transpositions. Then\ 
 
         <\equation*>
-          <around*|(|<around*|(|i<rsub|1>\<leftrightarrowlim\><rsub|2>j<rsub|1>|)>\<circ\>\<cdots\>\<circ\><around*|(|i<rsub|2>\<leftrightarrowlim\><rsub|2>j<rsub|2>|)>|)>=<around*|(|1\<leftrightarrowlim\><rsub|2>2|)>\<circ\><around*|(|1\<leftrightarrowlim\><rsub|2>2|)>\<equallim\><rsub|<text|[theorem:
+          <around*|(|i<rsub|1>\<leftrightarrowlim\><rsub|2>j<rsub|1>|)>\<circ\>\<cdots\>\<circ\><around*|(|i<rsub|2>\<leftrightarrowlim\><rsub|2>j<rsub|2>|)>=<around*|(|1\<leftrightarrowlim\><rsub|2>2|)>\<circ\><around*|(|1\<leftrightarrowlim\><rsub|2>2|)>\<equallim\><rsub|<text|[theorem:
           <reference|permutation transosition
           proeprties>]>>Id<rsub|<around*|{|1,\<ldots\>,2|}>>=\<sigma\>
         </equation*>
@@ -7990,7 +8354,7 @@
         a family of strict transpositions. Then\ 
 
         <\equation*>
-          <around*|(|<around*|(|i<rsub|1>\<leftrightarrowlim\><rsub|2>j<rsub|1>|)>\<circ\>\<cdots\>\<circ\><around*|(|i<rsub|1>\<leftrightarrowlim\><rsub|2>j<rsub|1>|)>|)>=<around*|(|1\<leftrightarrowlim\><rsub|2>2|)>=\<sigma\>
+          <around*|(|i<rsub|1>\<leftrightarrowlim\><rsub|2>j<rsub|1>|)>\<circ\>\<cdots\>\<circ\><around*|(|i<rsub|1>\<leftrightarrowlim\><rsub|2>j<rsub|1>|)>=<around*|(|1\<leftrightarrowlim\><rsub|2>2|)>=\<sigma\>
         </equation*>
       </description>
 
@@ -8007,7 +8371,7 @@
         such that
 
         <\equation*>
-          \<sigma\><rsub|\|<around*|{|1,\<ldots\>,n|}>>=<around*|(|<around*|(|i<rsub|1>\<leftrightarrowlim\><rsub|n>j<rsub|1>|)><rsup|>\<circ\>\<cdots\>\<circ\><around*|(|i<rsub|l>\<leftrightarrowlim\><rsub|n>j<rsub|l>|)>|)>
+          \<sigma\><rsub|\|<around*|{|1,\<ldots\>,n|}>>=<around*|(|i<rsub|1>\<leftrightarrowlim\><rsub|n>j<rsub|1>|)><rsup|>\<circ\>\<cdots\>\<circ\><around*|(|i<rsub|l>\<leftrightarrowlim\><rsub|n>j<rsub|l>|)>
         </equation*>
 
         So that\ 
@@ -8019,7 +8383,7 @@
           <reference|permutation extension
           (1)>]>>>|<cell|<around*|(|<around*|(|i<rsub|1>\<leftrightarrowlim\><rsub|n>j<rsub|1>|)><rsup|\|<around*|{|1,\<ldots\>,n+1|}>>\<circ\>\<cdots\>\<circ\><around*|(|i<rsub|l>\<leftrightarrowlim\><rsub|n>j<rsub|l>|)><rsup|\|<around*|{|1,\<ldots\>,n+1|}>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
           <reference|permutation extension
-          (1)>]>>>|<cell|<around*|(|<around*|(|i<rsub|1>\<leftrightarrowlim\><rsub|n+1>j<rsub|1>|)><rsup|>\<circ\>\<cdots\>\<circ\><around*|(|i<rsub|l>\<leftrightarrowlim\><rsub|n+1>j<rsub|l>|)>|)>>>>>
+          (1)>]>>>|<cell|<around*|(|i<rsub|1>\<leftrightarrowlim\><rsub|n+1>j<rsub|1>|)><rsup|>\<circ\>\<cdots\>\<circ\><around*|(|i<rsub|l>\<leftrightarrowlim\><rsub|n+1>j<rsub|l>|)>>>>>
         </eqnarray*>
 
         proving that in this case <math|n+1\<in\>S>
@@ -8053,7 +8417,7 @@
           <reference|permutation extension
           (1)>]>>>|<cell|<around*|(|<around*|(|r<rsub|1>\<leftrightarrowlim\><rsub|n>s<rsub|1>|)><rsup|\|<around*|{|1,\<ldots\>,n+1|}>>\<circ\>\<cdots\>\<circ\><around*|(|r<rsub|l>\<leftrightarrowlim\><rsub|n>s<rsub|l>|)><rsup|\|<around*|{|1,\<ldots\>,n+1|}>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
           <reference|permutation extension
-          (1)>]>>>|<cell|<around*|(|<around*|(|r<rsub|1>\<leftrightarrowlim\><rsub|n+1>s<rsub|1>|)><rsup|>\<circ\>\<cdots\>\<circ\><around*|(|r<rsub|l>\<leftrightarrowlim\><rsub|n+1>s<rsub|l>|)>|)><eq-number><label|eq
+          (1)>]>>>|<cell|<around*|(|r<rsub|1>\<leftrightarrowlim\><rsub|n+1>s<rsub|1>|)><rsup|>\<circ\>\<cdots\>\<circ\><around*|(|r<rsub|l>\<leftrightarrowlim\><rsub|n+1>s<rsub|l>|)><eq-number><label|eq
           11.78.094>>>>>
         </eqnarray*>
 
@@ -8074,7 +8438,7 @@
           proeprties>]>>>|<cell|\<sigma\>\<circ\><around*|(|<around*|(|i\<leftrightarrowlim\><rsub|n+1>n+1|)>\<circ\><around*|(|i\<leftrightarrowlim\><rsub|n+1>n+1|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|associativity>>>|<cell|<around*|(|\<sigma\>\<circ\><around*|(|i\<leftrightarrowlim\><rsub|n+1>n+1|)>|)>\<circ\><around*|(|i\<leftrightarrowlim\><rsub|n+1>n+1|)>>>|<row|<cell|>|<cell|=>|<cell|\<rho\>\<circ\><around*|(|i\<leftrightarrowlim\><rsub|n+1>n+1|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
           <reference|eq 11.78.094>]>>>|<cell|<around*|(|<around*|(|r<rsub|1>\<leftrightarrowlim\><rsub|n+1>s<rsub|1>|)><rsup|>\<circ\>\<cdots\>\<circ\><around*|(|r<rsub|l>\<leftrightarrowlim\><rsub|n+1>s<rsub|l>|)>|)>\<circ\><around*|(|i\<leftrightarrowlim\><rsub|n+1>n+1|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|i<rsub|1>\<leftrightarrowlim\><rsub|n+1>j<rsub|1>|)><rsup|>\<circ\>\<cdots\>\<circ\><around*|(|i<rsub|l>\<leftrightarrowlim\><rsub|n+1>j<rsub|l>|)>|)>\<circ\><around*|(|i<rsub|n+1>\<leftrightarrowlim\><rsub|n+1>j<rsub|n+1>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
           <reference|permutation composition of a family of
-          permutations>]>>>|<cell|<around*|(|<around*|(|i<rsub|1>\<leftrightarrowlim\><rsub|n+1>j<rsub|1>|)><rsup|>\<circ\>\<cdots\>\<circ\><around*|(|i<rsub|l+1>\<leftrightarrowlim\><rsub|n+1>j<rsub|l+1>|)>|)>>>>>
+          permutations>]>>>|<cell|<around*|(|i<rsub|1>\<leftrightarrowlim\><rsub|n+1>j<rsub|1>|)><rsup|>\<circ\>\<cdots\>\<circ\><around*|(|i<rsub|l+1>\<leftrightarrowlim\><rsub|n+1>j<rsub|l+1>|)>>>>>
         </eqnarray*>
 
         proving that <math|n+1\<in\>S>
@@ -9025,7 +9389,7 @@
       <math|i<rsub|k>\<neq\>j<rsub|k>> such that\ 
 
       <\equation*>
-        \<sigma\>=<around*|(|<around*|(|i<rsub|1>\<leftrightarrowlim\><rsub|n>j<rsub|1>|)>\<circ\>\<cdots\>\<circ\><around*|(|i<rsub|m>\<leftrightarrowlim\><rsub|n>j<rsub|m>|)>|)>
+        \<sigma\>=<around*|(|i<rsub|1>\<leftrightarrowlim\><rsub|n>j<rsub|1>|)>\<circ\>\<cdots\>\<circ\><around*|(|i<rsub|m>\<leftrightarrowlim\><rsub|n>j<rsub|m>|)>
       </equation*>
 
       Hence by [theorem: <reference|permutation sign of composition of
@@ -9079,7 +9443,7 @@
     of <with|font-series|bold|strict> transpositions such that\ 
 
     <\equation*>
-      \<sigma\>=<around*|(|<around*|(|i<rsub|1>\<leftrightarrowlim\><rsub|n>j<rsub|1>|)>\<circ\>\<cdots\>\<circ\><around*|(|i<rsub|m>\<leftrightarrowlim\><rsub|n>j<rsub|m>|)>|)>
+      \<sigma\>=<around*|(|i<rsub|1>\<leftrightarrowlim\><rsub|n>j<rsub|1>|)>\<circ\>\<cdots\>\<circ\><around*|(|i<rsub|m>\<leftrightarrowlim\><rsub|n>j<rsub|m>|)>
     </equation*>
 
     so that
@@ -9102,7 +9466,8 @@
   </remark>
 
   <\theorem>
-    If <math|n\<in\>\<bbb-N\>> then we have\ 
+    <label|permutation sign properties>If <math|n\<in\>\<bbb-N\>> then we
+    have\ 
 
     <\enumerate>
       <item><math|\<forall\>\<sigma\>,\<tau\>\<in\>P<rsub|n>> that
@@ -9149,6 +9514,449 @@
       so that <math|sign<around*|(|\<sigma\>|)>=sign<around*|(|\<sigma\>|)>\<cdot\>1=<around*|(|sign<around*|(|\<sigma\>|)>\<cdot\>sign<around*|(|\<sigma\>|)>|)>\<cdot\>sign<around*|(|\<sigma\><rsup|-1>|)>\<equallim\><rsub|sing<around*|(|\<sigma\>|)>\<in\><around*|{|-1,1|}>>sign<around*|(|\<sigma\><rsup|-1>|)>>
     </enumerate>
   </proof>
+
+  The following permutation will be used in determinant functions later.
+
+  <\definition>
+    <label|permutation insert function>Let <math|n\<in\>\<bbb-N\>> and
+    <math|i,j\<in\><around*|{|1,\<ldots\>,n|}>> then we define\ 
+
+    <\equation*>
+      <around*|(|i\<rightsquigarrowlim\><rsub|n>j|)>:<around*|{|1,\<ldots\>,n|}>\<rightarrow\><around*|{|1,\<ldots\>,n|}>
+    </equation*>
+
+    as follows:
+
+    <\enumerate>
+      <item>If <math|i=j> then <math|><math|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)>:=Id<rsub|<around*|{|1,\<ldots\>,n|}>>>
+
+      <item>If <math|i\<less\>j> then for
+      <math|k\<in\><around*|{|1,\<ldots\>,n|}>> we have\ 
+
+      <\equation*>
+        <around*|(|i\<rightsquigarrowlim\><rsub|n>j|)>=<choice|<tformat|<table|<row|<cell|k<text|
+        if >1\<leqslant\>k\<less\>i>>|<row|<cell|k+1<text| if
+        >i\<leqslant\>k\<less\>j>>|<row|<cell|i<text| if
+        >k=j>>|<row|<cell|k<text| if >j\<less\>k\<leqslant\>n>>>>>
+      </equation*>
+
+      <item>If <math|j\<less\>i> then \ for
+      <math|k\<in\><around*|{|1,\<ldots\>,n|}>> we have\ 
+
+      <\equation*>
+        <around*|(|i\<rightsquigarrowlim\><rsub|n>j|)>=<choice|<tformat|<table|<row|<cell|k<text|
+        if >1\<leqslant\>k\<less\>j>>|<row|<cell|i<text| if
+        >k=j>>|<row|<cell|k-1<text| if >j\<less\>k\<leqslant\>i>>|<row|<cell|k<text|
+        if >i\<less\>k\<leqslant\>n>>>>>
+      </equation*>
+    </enumerate>
+  </definition>
+
+  \ Next we prove that <math|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)>>
+  is actual a permutation and decoompose it in a composition of
+  transpositions so that we can calculate its sign. First we need a little
+  lemma:
+
+  <\definition>
+    <label|permutation index function>Let <math|n\<in\>\<bbb-N\>>,
+    <math|i,j\<in\><around*|{|1,\<ldots\>,n|}>> then we define\ 
+
+    <\enumerate>
+      <item>If <math|i\<less\>j> then <math|\<theta\><rsup|i\<less\>j>:<around*|{|1,\<ldots\>,j-i|}>\<rightarrow\><around*|{|i+1,\<ldots\>,j|}>>
+      by <math|\<theta\><rsup|i\<less\>j><around*|(|l|)>=j-<around*|(|l-1|)>>
+
+      <item>If <math|j\<less\>i> then <math|\<theta\><rsup|i\<gtr\>j>:<around*|{|1,\<ldots\>,i-j|}>\<rightarrow\><around*|{|j,\<ldots\>,i-1|}>>
+      by <math|\<theta\><rsup|i\<gtr\>j><around*|(|l|)>=j+<around*|(|l-1|)>>
+    </enumerate>
+  </definition>
+
+  <\proof>
+    Of course we must prove that the range is correct.\ 
+
+    <\enumerate>
+      <item>We have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|l\<in\><around*|{|1,\<ldots\>,j-i|}>>|<cell|\<Leftrightarrow\>>|<cell|1\<leqslant\>l\<leqslant\>j-i>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|0\<leqslant\>l-1\<leqslant\>j-i-1>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|i-j+1\<leqslant\>-<around*|(|l-1|)>\<leqslant\>0>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|i+1\<leqslant\>j-<around*|(|l-1|)>\<leqslant\>j>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|i+1\<leqslant\>\<theta\><rsup|i\<less\>j><around*|(|l|)>\<leqslant\>j>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<theta\><rsup|i\<less\>j><around*|(|l|)>\<in\><around*|{|i+1,\<ldots\>,j|}>>>>>
+      </eqnarray*>
+
+      <item>We have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|l\<in\><around*|{|1,\<ldots\>,i-j|}>>|<cell|\<Leftrightarrow\>>|<cell|1\<leqslant\>l\<leqslant\>i-j>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|0\<leqslant\>l-1\<leqslant\>i-j-1>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|j\<leqslant\>j+<around*|(|l-1|)>\<leqslant\>i-1>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|j\<leqslant\>\<theta\><rsup|i\<gtr\>j><around*|(|l|)>\<leqslant\>i-1>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<theta\><rsup|i\<gtr\>j><around*|(|l|)>\<in\><around*|{|j,\<ldots\>,i-1|}>>>>>
+      </eqnarray*>
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    If <math|n\<in\>\<bbb-N\>> and <math|i,j\<in\><around*|{|1,\<ldots\>,n|}>>
+    then we have:
+
+    <\enumerate>
+      <item>If <math|i\<less\>j> then\ 
+
+      <\equation*>
+        <around*|(|i\<rightsquigarrowlim\><rsub|n>j|)>=<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(|1|)>\<circ\>\<cdots\>\<circ\><around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(|j-i|)>|)>|)>
+      </equation*>
+
+      <item>If <math|j\<less\>i> then\ 
+
+      <\equation*>
+        <around*|(|i\<rightsquigarrowlim\><rsub|n>j|)>=<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(|1|)>\<circ\>\<cdots\>\<circ\><around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(|i-j|\<nobracket\>>|)>|)>
+      </equation*>
+
+      <item><math|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)>\<in\>P<rsub|n>>\ 
+
+      <item><math|sign<around*|(|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)>|)>=<around*|(|-1|)><rsup|<around*|\||i-j|\|>>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|n\<in\>\<bbb-N\>>. We proceed now by induction on
+      <math|k=j-i>, so let\ 
+
+      <\equation*>
+        S<rsub|n>=<around*|{|k\<in\>\<bbb-N\>\|If
+        i,j\<in\><around*|{|1,\<ldots\>,n|}><text|with
+        >i\<less\>j\<wedge\>j-i=k<text| then
+        <math|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)>=<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(|1|)>\<circ\>\<cdots\>\<circ\><around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(|j-i|)>|)>|)>=<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(|1|)>\<circ\>\<cdots\>\<circ\><around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(|j-i|)>|)>|)>>>|}>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|1\<in\>S>>Let <math|i,j\<in\><around*|{|1,\<ldots\>,n|}>>
+        with <math|i\<less\>j\<wedge\>j-i=1>. Then
+        <math|\<theta\><rsup|i\<less\>j><around*|(|1|)>=j-<around*|(|1-1|)>=j=i+1>
+        and we have for <math|l\<in\><around*|{|1,\<ldots\>,n|}>> either:
+
+        <\description>
+          <item*|<math|1\<leqslant\>l\<less\>i>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)><around*|(|l|)>>|<cell|=>|<cell|l>>|<row|<cell|>|<cell|\<equallim\><rsub|l\<less\>i\<less\>i+1\<wedge\>l\<less\>i\<less\>j>>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>i+1|)><around*|(|l|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(|l|)>|)><around*|(|l|)>>>>>
+          </eqnarray*>
+
+          <item*|<math|i\<leqslant\>l\<less\>j>>Then
+          <math|i\<leqslant\>l\<less\>i+1> so that <math|l=i> and
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)><around*|(|l|)>>|<cell|=>|<cell|l+1>>|<row|<cell|>|<cell|\<equallim\><rsub|l=i>>|<cell|i+1>>|<row|<cell|>|<cell|=>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>i+1|)><around*|(|i|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|l=i>>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>i+1|)><around*|(|l|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(|l|)>|)><around*|(|l|)>>>>>
+          </eqnarray*>
+
+          <item*|<math|l=j>>Then <math|l=j=i+1> and
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)><around*|(|l|)>>|<cell|=>|<cell|i>>|<row|<cell|>|<cell|=>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>i+1|)><around*|(|i+1|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|l=i+1>>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>i+1|)><around*|(|l|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(|l|)>|)><around*|(|l|)>>>>>
+          </eqnarray*>
+
+          <item*|<math|j\<less\>l\<leqslant\>n>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)><around*|(|l|)>>|<cell|=>|<cell|l>>|<row|<cell|>|<cell|\<equallim\><rsub|i\<less\>j\<less\>l>>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>i+1|)><around*|(|l|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(|l|)>|)><around*|(|l|)>>>>>
+          </eqnarray*>
+        </description>
+
+        So we have in all cases <math|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)><around*|(|l|)>=<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(|l|)>|)><around*|(|l|)>>
+        so that\ 
+
+        <\equation*>
+          <around*|(|i\<rightsquigarrowlim\><rsub|n>j|)>=<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(|l|)>|)>=<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(|l|)>|)>\<circ\>\<cdots\>\<circ\><around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(|l|)>|)>
+        </equation*>
+
+        proving that <math|1\<in\>S<rsub|n>>.
+
+        <item*|<math|k\<in\>S\<Rightarrow\>k+1\<in\>S>>Let
+        <math|i,j\<in\><around*|{|1,\<ldots\>,n|}>> with <math|i\<less\>j>
+        and <math|j-i=k+1>. First we prove that\ 
+
+        <\equation>
+          <label|eq 11.101.097><around*|(|i\<rightsquigarrowlim\><rsub|n>j|)>=<around*|(|i\<leftrightarrowlim\><rsub|n>j|)>\<circ\><around*|(|i\<rightsquigarrowlim\><rsub|n>j-1|)>
+        </equation>
+
+        <\proof>
+          For <math|l\<in\><around*|{|1,\<ldots\>,n|}>> we have the following
+          cases to consider:
+
+          <\description>
+            <item*|<math|1\<leqslant\>l\<less\>i>>Then\ 
+
+            <\eqnarray*>
+              <tformat|<table|<row|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)><around*|(|<around*|(|i\<rightsquigarrowlim\><rsub|n>j-1|)><around*|(|l|)>|)>>|<cell|=>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)><around*|(|l|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|l\<neq\>i,j>>|<cell|l>>|<row|<cell|>|<cell|\<equallim\><rsub|l\<less\>i>>|<cell|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)><around*|(|l|)>>>>>
+            </eqnarray*>
+
+            <item*|<math|i\<leqslant\>l\<less\>j-1>>Then\ 
+
+            <\eqnarray*>
+              <tformat|<table|<row|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)><around*|(|<around*|(|i\<rightsquigarrowlim\><rsub|n>j-1|)><around*|(|l|)>|)>>|<cell|=>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)><around*|(|l+1|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|i\<less\>i+1\<leqslant\>l+1\<less\>j>>|<cell|l+1>>|<row|<cell|>|<cell|\<equallim\><rsub|i\<leqslant\>l+1\<less\>j>>|<cell|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)><around*|(|l|)>>>>>
+            </eqnarray*>
+
+            <item*|<math|l=j-1>>Then\ 
+
+            <\eqnarray*>
+              <tformat|<table|<row|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)><around*|(|<around*|(|i\<rightsquigarrowlim\><rsub|n>j-1|)><around*|(|l|)>|)>>|<cell|=>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)><around*|(|i|)>>>|<row|<cell|>|<cell|=>|<cell|j>>|<row|<cell|>|<cell|\<equallim\><rsub|i\<less\>j\<Rightarrow\>i\<leqslant\>j-1=l\<less\>j>>|<cell|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)><around*|(|j-1|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|l=j-1>>|<cell|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)><around*|(|l|)>>>>>
+            </eqnarray*>
+
+            <item*|<math|j-1\<less\>l\<leqslant\>n>>Then
+            <math|j\<leqslant\>l> so we have either:
+
+            <\description>
+              <item*|<math|j=l>> Then\ 
+
+              <\eqnarray*>
+                <tformat|<table|<row|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)><around*|(|<around*|(|i\<rightsquigarrowlim\><rsub|n>j-1|)><around*|(|l|)>|)>>|<cell|=>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)><around*|(|l|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|l=j>>|<cell|i>>|<row|<cell|>|<cell|\<equallim\><rsub|l=j>>|<cell|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)><around*|(|l|)>>>>>
+              </eqnarray*>
+
+              <item*|<math|j\<less\>l>>Then\ 
+
+              <\eqnarray*>
+                <tformat|<table|<row|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)><around*|(|<around*|(|i\<rightsquigarrowlim\><rsub|n>j-1|)><around*|(|l|)>|)>>|<cell|\<equallim\><rsub|j-1\<less\>j\<less\>l>>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)><around*|(|l|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|i\<less\>j\<less\>l\<Rightarrow\>i,j\<neq\>l>>|<cell|l>>|<row|<cell|>|<cell|\<equallim\><rsub|j\<less\>l\<leqslant\>n>>|<cell|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)><around*|(|l|)>>>>>
+              </eqnarray*>
+            </description>
+          </description>
+
+          So in all cases <math|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)><around*|(|<around*|(|i\<rightsquigarrowlim\><rsub|n>j-1|)><around*|(|l|)>|)>=<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)><around*|(|l|)>>
+          or <math|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)>=<around*|(|i\<leftrightarrowlim\><rsub|n>j|)>\<circ\><around*|(|i\<rightsquigarrowlim\><rsub|n>j-1|)>>
+          proving [eq: <reference|eq 11.101.097>].\ 
+        </proof>
+
+        As <math|\<theta\><rsup|i\<less\>j><around*|(|1|)>=j+<around*|(|1-1|)>=j>
+        we have by [eq: <reference|eq 11.101.097>] that\ 
+
+        <\equation>
+          <label|eq 11.102.097><around*|(|i\<rightsquigarrowlim\><rsub|n>j|)>=<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(|1|)>|)>\<circ\><around*|(|i\<rightsquigarrowlim\><rsub|n>j-1|)>
+        </equation>
+
+        Further as <math|<around*|(|j-1|)>-i=<around*|(|k+1|)>-1=k> we have
+        as <math|k\<in\>S<rsub|n>> that\ 
+
+        <\equation*>
+          <around*|(|i\<rightsquigarrowlim\><rsub|n>j-1|)>=<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j-1><around*|(|1|)>|)>\<circ\>\<cdots\>\<circ\><around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j-1><around*|(|j-1-i|)>|)>
+        </equation*>
+
+        Let <math|l\<in\><around*|{|1,\<ldots\>,j-i|}>> then
+        <math|\<theta\><rsup|i\<less\>j-1><around*|(|l|)>=j-1-<around*|(|l-1|)>=j-<around*|(|<around*|(|l+1|)>-1|)>=\<theta\><rsup|i\<less\>j><around*|(|l+1|)>>
+        we have that\ 
+
+        <\equation>
+          <label|eq 11.103.097><around*|(|i\<rightsquigarrowlim\><rsub|n>j-1|)>=<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(|2|)>|)>\<circ\>\<cdots\>\<circ\><around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j-1><around*|(|j-i|)>|)>
+        </equation>
+
+        Further\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)>>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 11.102.097>]>>>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(|1|)>|)>\<circ\><around*|(|i\<rightsquigarrowlim\><rsub|n>j-1|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(|1|)>|)>\<circ\><around*|(|<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(|2|)>|)>\<circ\>\<cdots\>\<circ\><around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j-1><around*|(|j-i|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(|1|)>|)>\<circ\><around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(|2|)>|)>\<circ\>\<cdots\>\<circ\><around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j-1><around*|(|j-i|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(|1|)>|)>\<circ\>\<cdots\>\<circ\><around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j-1><around*|(|j-i|)>|)>>>>>
+        </eqnarray*>
+
+        proving that <math|k+1\<in\>\<cal-S\><rsub|n>>.
+      </description>
+
+      <item>Let <math|n\<in\>\<bbb-N\>>. We proceed now by induction on
+      <math|k=j-i>, so let\ 
+
+      <\equation*>
+        S<rsub|n>=<around*|{|k\<in\>\<bbb-N\>\|If
+        i,j\<in\><around*|{|1,\<ldots\>,n|}><text|with
+        >j\<less\>i\<wedge\>i-j=k<text| then
+        <math|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)>=<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<gtr\>j><around*|(|1|)>\<circ\>\<cdots\>\<circ\><around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<gtr\>j><around*|(|i-j|)>|)>|)>=<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<gtr\>j><around*|(|1|)>\<circ\>\<cdots\>\<circ\><around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<gtr\>j><around*|(|i-j|)>|)>|)>>>|}>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|1\<in\>S>>Let <math|i,j\<in\><around*|{|1,\<ldots\>,n|}>>
+        with <math|j\<less\>i> and <math|i-j=1> so that <math|j=i-1>. Then
+
+        <\equation*>
+          \<theta\><rsup|i\<gtr\>j><around*|(|1|)>=j+<around*|(|1-1|)>=j=i-1<rsup|>
+        </equation*>
+
+        For <math|l\<in\><around*|{|1,\<ldots\>,n|}>> we have either:
+
+        <\description>
+          <item*|<math|1\<leqslant\>l\<less\>j>>Then we have\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)>>|<cell|\<equallim\>>|<cell|l>>|<row|<cell|>|<cell|\<equallim\><rsub|l\<less\>j\<less\>i\<Rightarrow\>l\<neq\>j,i-1>>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>i-1|)><around*|(|l|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<gtr\>j><around*|(|1|)>|)><around*|(|l|)>>>>>
+          </eqnarray*>
+
+          <item*|<math|l=j>>Then we have <math|l=j=i-1>
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)><around*|(|l|)>>|<cell|=>|<cell|i>>|<row|<cell|>|<cell|=>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>i-1|)><around*|(|i-1|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>i-1|)><around*|(|l|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<gtr\>j><around*|(|1|)>|)><around*|(|l|)>>>>>
+          </eqnarray*>
+
+          <item*|<math|j\<less\>l\<leqslant\>i>>Then we have
+          <math|i-1\<less\>l\<leqslant\>i> so that <math|l=i> and\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)><around*|(|l|)>>|<cell|=>|<cell|l-1>>|<row|<cell|>|<cell|\<equallim\><rsub|l=i>>|<cell|i-1>>|<row|<cell|>|<cell|=>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>i-1|)><around*|(|i|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|l=i>>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>i-1|)><around*|(|l|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<gtr\>j><around*|(|1|)>|)><around*|(|l|)>>>>>
+          </eqnarray*>
+
+          <item*|<math|i\<less\>l\<leqslant\>n>>Then we have\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)><around*|(|l|)>>|<cell|=>|<cell|l>>|<row|<cell|>|<cell|\<equallim\><rsub|j\<less\>i\<less\>l>>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>i-1|)><around*|(|l|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<gtr\>j><around*|(|1|)>|)><around*|(|l|)>>>>>
+          </eqnarray*>
+        </description>
+
+        So in all cases we have <math|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)><around*|(|l|)>=<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<gtr\>j><around*|(|1|)>|)><around*|(|l|)>>,
+        hence\ 
+
+        <\equation*>
+          <around*|(|i\<rightsquigarrowlim\><rsub|n>j|)>=<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<gtr\>j><around*|(|1|)>|)>=<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<gtr\>j><around*|(|1|)>|)>\<circ\>\<cdots\>\<circ\><around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<gtr\>j><around*|(|1|)>|)>
+        </equation*>
+
+        proving that <math|1\<in\>S<rsub|n>>
+
+        <item*|<math|k\<in\>S\<Rightarrow\>k+1\<in\>S>>Let
+        <math|i,j\<in\><around*|{|1,\<ldots\>,n|}>> with <math|j\<less\>i>
+        and <math|i-j=k+1>. First we prove that
+
+        <\equation>
+          <label|eq 11.104.097><around*|(|i\<rightsquigarrowlim\><rsub|n>j|)>=<around*|(|i\<leftrightarrowlim\><rsub|n>j|)>\<circ\><around*|(|i\<rightsquigarrowlim\><rsub|n>j+1|)>
+        </equation>
+
+        <\proof>
+          For <math|l\<in\><around*|{|1,\<ldots\>,n|}>> we have either:
+
+          <\description>
+            <item*|<math|1\<leqslant\>l\<less\>j>>Then\ 
+
+            <\eqnarray*>
+              <tformat|<table|<row|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)><around*|(|<around*|(|i\<rightsquigarrowlim\><rsub|n>j+1|)><around*|(|l|)>|)>>|<cell|\<equallim\><rsub|l\<less\>j\<less\>j+1>>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)><around*|(|l|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|l\<less\>j\<less\>i>>|<cell|l>>|<row|<cell|>|<cell|\<equallim\><rsub|l\<less\>j>>|<cell|<around*|(|i\<rightsquigarrowlim\><rsub|n>j<rsub|>|)><around*|(|l|)>>>>>
+            </eqnarray*>
+
+            <item*|<math|l=j>>Then\ 
+
+            <\eqnarray*>
+              <tformat|<table|<row|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)><around*|(|<around*|(|i\<rightsquigarrowlim\><rsub|n>j+1|)><around*|(|l|)>|)>>|<cell|\<equallim\><rsub|l=j\<less\>j+1>>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)><around*|(|l|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|l=j>>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)><around*|(|j|)>>>|<row|<cell|>|<cell|=>|<cell|i>>|<row|<cell|>|<cell|\<equallim\><rsub|l=j>>|<cell|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)><around*|(|l|)>>>>>
+            </eqnarray*>
+
+            <item*|<math|j\<less\>l\<leqslant\>i>>Then we have
+            <math|j+1\<leqslant\>l> so that either:
+
+            <\description>
+              <item*|<math|l=j+1>>Then\ 
+
+              <\eqnarray*>
+                <tformat|<table|<row|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)><around*|(|<around*|(|i\<rightsquigarrowlim\><rsub|n>j+1|)><around*|(|l|)>|)>>|<cell|=>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)><around*|(|i|)>>>|<row|<cell|>|<cell|=>|<cell|j>>|<row|<cell|>|<cell|\<equallim\><rsub|l=j+1>>|<cell|l-1>>|<row|<cell|>|<cell|\<equallim\><rsub|j\<less\>l\<leqslant\>i>>|<cell|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)><around*|(|l|)>>>>>
+              </eqnarray*>
+
+              <item*|<math|j+1\<less\>l>>Then
+
+              <\eqnarray*>
+                <tformat|<table|<row|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)><around*|(|<around*|(|i\<rightsquigarrowlim\><rsub|n>j+1|)><around*|(|l|)>|)>>|<cell|=>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)><around*|(|l-1|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|j\<less\>j+1\<leqslant\>l-1\<less\>l\<leqslant\>i>>|<cell|l-1>>|<row|<cell|>|<cell|\<equallim\><rsub|j\<less\>l\<leqslant\>i>>|<cell|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)><around*|(|l|)>>>>>
+              </eqnarray*>
+            </description>
+
+            <item*|<math|i\<less\>l\<leqslant\>n>>Then
+
+            <\eqnarray*>
+              <tformat|<table|<row|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)><around*|(|<around*|(|i\<rightsquigarrowlim\><rsub|n>j+1|)><around*|(|l|)>|)>>|<cell|\<equallim\><rsub|i\<less\>l\<less\>l+1>>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)><around*|(|l|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|j\<less\>i\<less\>l>>|<cell|l>>|<row|<cell|>|<cell|\<equallim\><rsub|i\<less\>l>>|<cell|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)><around*|(|l|)>>>>>
+            </eqnarray*>
+          </description>
+
+          So in all cases we have <math|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)><around*|(|<around*|(|i\<rightsquigarrowlim\><rsub|n>j+1|)><around*|(|l|)>|)>=<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)><around*|(|l|)>>,
+          hence <math|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)>=<around*|(|i\<leftrightarrowlim\><rsub|n>j|)>\<circ\><around*|(|i\<rightsquigarrowlim\><rsub|n>j+1|)>>,
+          proving that [eq: <reference|eq 11.104.097>].
+        </proof>
+
+        Now <math|\<theta\><rsup|i\<gtr\>j><around*|(|1|)>=j+<around*|(|1-1|)>=j>
+        which combined with [eq: <reference|eq 11.104.097>] gives
+
+        <\equation>
+          <label|eq 11.105.097><around*|(|i\<rightsquigarrowlim\><rsub|n>j|)>=<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<gtr\>j><around*|(|1|)>|)>\<circ\><around*|(|i\<rightsquigarrowlim\><rsub|n>j+1|)>
+        </equation>
+
+        Further as <math|i-<around*|(|j+1|)>=i-j-1=k+1-1=k\<in\>\<cal-S\><rsub|n>>
+        we have that\ 
+
+        <\equation*>
+          <around*|(|i\<rightsquigarrowlim\><rsub|n>j+1|)>=<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<gtr\>j+1><around*|(|1|)>|)>\<circ\>\<cdots\>\<circ\><around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<gtr\>j+1><around*|(|i-<around*|(|j+1|)>|)>|)>
+        </equation*>
+
+        Now if <math|l\<in\><around*|{|1,\<ldots\>,i-<around*|(|j+1|)>|}>>
+        then
+
+        <\equation*>
+          \<theta\><rsup|i\<gtr\>j+1><around*|(|l|)>=j+1+<around*|(|l-1|)>=j+<around*|(|<around*|(|l+1|)>-1|)>=\<theta\><rsup|i\<gtr\>j><around*|(|l+1|)>
+        </equation*>
+
+        so that\ 
+
+        <\equation>
+          <label|eq 11.106.097><around*|(|i\<rightsquigarrowlim\><rsub|n>j+1|)>=<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<gtr\>j><around*|(|2|)>|)>\<circ\>\<cdots\>\<circ\><around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<gtr\>j><around*|(|i-j|)>|)>
+        </equation>
+
+        Next\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)>>|<cell|=>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<gtr\>j><around*|(|1|)>|)>\<circ\><around*|(|i\<rightsquigarrowlim\><rsub|n>j+1|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 11.106.097>>>>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<gtr\>j><around*|(|1|)>|)>\<circ\><around*|(|<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<gtr\>j><around*|(|2|)>|)>\<circ\>\<cdots\>\<circ\><around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<gtr\>j><around*|(|i-j|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<gtr\>j><around*|(|1|)>|)>\<circ\><around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<gtr\>j><around*|(|2|)>|)>\<circ\>\<cdots\>\<circ\><around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<gtr\>j><around*|(|i-j|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<gtr\>j><around*|(|1|)>|)>\<circ\>\<cdots\>\<circ\><around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<gtr\>j><around*|(|i-j|)>|)>>>>>
+        </eqnarray*>
+
+        proving that <math|k+1\<in\>S<rsub|n>>.
+      </description>
+
+      <item>Let <math|i,j\<in\><around*|{|1,\<ldots\>,n|}>> then we have
+      either:
+
+      <\description>
+        <item*|<math|i=j>>Then <math|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)>\<equallim\><rsub|def>Id<rsub|1,\<ldots\>,n>\<in\>P<rsub|n>>
+
+        <item*|<math|i\<less\>j>>Then by (1)
+        <math|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)>=<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(|1|)>|)>\<circ\>\<cdots\>\<circ\><around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(|j-i|)>|)>\<in\>P<rsub|n>>
+
+        <item*|<math|j\<less\>i>>Then by (2)
+        <math|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)>=<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<gtr\>j><around*|(|1|)>|)>\<circ\>\<cdots\>\<circ\><around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<gtr\>j><around*|(|i-j|)>|)>\<in\>P<rsub|n>>
+      </description>
+
+      <item>Let <math|i,j\<in\><around*|{|1,\<ldots\>,n|}>> then we have
+      either:
+
+      <\description>
+        <item*|<math|i=j>>Then <math|<around*|\||i-j|\|>=0> and
+
+        <\equation*>
+          sign<around*|(|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)>|)>=sign<around*|(|Id<rsub|<around*|{|1,\<ldots\>,|}>>|)>\<equallim\><rsub|<text|[theorem:
+          <reference|permutation sign properties>]>>1=<around*|(|-1|)><rsup|0>=<around*|(|-1|)><rsup|<around*|\||i-j|\|>>
+        </equation*>
+
+        <item*|<math|i\<less\>j>>Then as <math|\<theta\><rsup|i\<less\>j><around*|(|<around*|{|1,\<ldots\>,j-i|}>|)>\<equallim\><rsub|<text|[definition:
+        <reference|permutation index function>]>><around*|{|i+1,\<ldots\>,j|}>>
+        so that <math|\<forall\>l\<in\><around*|{|1,\<ldots\>,j-i|}>> we have
+        that <math|i\<neq\>\<theta\><rsup|i\<less\>j><around*|(|l|)>>, so
+        <math|<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(||)>|)>>
+        is a strict transposition, hence\ 
+
+        <\equation*>
+          sign<around*|(|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)>|)>\<equallim\><rsub|<around*|(|1|)>>sign<around*|(|<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(|1|)>|)>\<circ\>\<cdots\>\<circ\><around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(|j-i|)>|)>|)>\<equallim\><rsub|<text|[theorem:
+          <reference|permutation sign calculation>]>><around*|(|-1|)><rsup|<around*|\||i-j|\|>><rsup|>
+        </equation*>
+
+        <item*|<math|j\<less\>i>>Then as <math|\<theta\><rsup|i\<less\>j><around*|(|<around*|{|1,\<ldots\>,i-j|}>|)>\<equallim\><rsub|<text|[definition:
+        <reference|permutation index function>]>><around*|{|j,\<ldots\>,i-1|}>>
+        so that <math|\<forall\>l\<in\><around*|{|1,\<ldots\>,i-j|}>> we have
+        that <math|i\<neq\>\<theta\><rsup|i\<less\>j><around*|(|l|)>>, so
+        <math|<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(||)>|)>>
+        is a strict transposition, hence
+
+        <\equation*>
+          sign<around*|(|<around*|(|i\<rightsquigarrowlim\><rsub|n>j|)>|)>\<equallim\><rsub|<around*|(|1|)>>sign<around*|(|<around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(|1|)>|)>\<circ\>\<cdots\>\<circ\><around*|(|i\<leftrightarrowlim\><rsub|n>\<theta\><rsup|i\<less\>j><around*|(|j-i|)>|)>|)>\<equallim\><rsub|<text|[theorem:
+          <reference|permutation sign calculation>]>><around*|(|-1|)><rsup|<around*|\||i-j|\|>><rsup|>
+        </equation*>
+      </description>
+    </enumerate>
+
+    \;
+  </proof>
+
+  \;
 
   <section|Multilinear mappings>
 
@@ -9520,7 +10328,139 @@
     </eqnarray*>
   </proof>
 
+  <\theorem>
+    Let <math|n\<in\>\<bbb-N\>>, <math|<around*|{|X<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    be \ family of vector spaces over a field <math|F>, <math|Z> a vector
+    space over the same field <math|F>, <math|<around*|{|Y<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a family such that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|Y<rsub|i>> is a sub-space of <math|X<rsub|i>> and
+    <math|L\<in\>Hom<around*|(|Y<rsub|1>,\<ldots\>,Y<rsub|n>,Z|)>> then their
+    exist a <math|K\<in\>Hom<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Z|)>>
+    such that <math|K<rsub|\|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>=L>.
+    In other words <math|K> is a multilinear mapping extending <math|L>.
+  </theorem>
+
+  <\proof>
+    Take <math|i\<in\><around*|{|1,\<ldots\>,n|}>>. As <math|Y<rsub|i>> is a
+    sub-space of <math|X<rsub|i>> there exists by [theorem: <reference|vector
+    space internal sum existence>] a sub-space <math|Z<rsub|i>> of
+    <math|X<rsub|i>> such that <math|X<rsub|i>=Y<rsub|i>\<oplus\>Z<rsub|i>>.
+    Using [theorem: <reference|vector space internal direct sum (function)>]
+    there exists <math|\<pi\><rsub|Y<rsub|i>>:X<rsub|i>\<rightarrow\>Y<rsub|i>>
+    such that <math|\<pi\><rsub|Y<rsub|i>>\<in\>Hom<around*|(|X<rsub|i>,Y<rsub|i>|)><rsub|>>
+    and <math|<around*|(|\<pi\><rsub|Y<rsub|i>>|)><rsub|\|Y<rsub|i>>=Id<rsub|Y<rsub|i>>>.
+    Define\ 
+
+    <\equation*>
+      K:<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>\<rightarrow\>Z<text|
+      by >K<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>=L<around*|(|\<pi\><rsub|Y<rsub|1>><around*|(|x<rsub|1>|)>,\<ldots\>,\<pi\><rsub|Y<rsub|n>><around*|(|x<rsub|n>|)>|)>
+    </equation*>
+
+    Let <math|i\<in\><around*|{|1,\<ldots\>,n|}>> <math|x,y\<in\>X<rsub|i>>
+    and <math|\<alpha\>\<in\>F> and <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>n|}>\\<around*|{|i|}>>X<rsub|i>>
+    then we have:
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|K<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,x+y,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|<around*|(|\<pi\><rsub|Y<rsub|1>><around*|(|x<rsub|1>|)>,\<ldots\>,\<pi\><rsub|Y<rsub|i-1>><around*|(|x<rsub|i-1>|)>,\<pi\><rsub|Y<rsub|i>><around*|(|x+y|)>,\<pi\><rsub|Y<rsub|i+1>><around*|(|x<rsub|i+1>|)>,\<ldots\>,\<pi\><rsub|Y<rsub|n>><around*|(|x<rsub|n>|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|<around*|(|\<pi\><rsub|Y<rsub|1>><around*|(|x<rsub|1>|)>,\<ldots\>,\<pi\><rsub|Y<rsub|i-1>><around*|(|x<rsub|i-1>|)>,\<pi\><rsub|Y<rsub|i>><around*|(|x|)>+\<pi\><rsub|Y<rsub|i>><around*|(|y|)>,\<pi\><rsub|Y<rsub|i+1>><around*|(|x<rsub|i+1>|)>,\<ldots\>,\<pi\><rsub|Y<rsub|n>><around*|(|x<rsub|n>|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|<around*|(|\<pi\><rsub|Y<rsub|1>><around*|(|x<rsub|1>|)>,\<ldots\>,\<pi\><rsub|Y<rsub|i-1>><around*|(|x<rsub|i-1>|)>,\<pi\><rsub|Y<rsub|i>><around*|(|x|)>,\<pi\><rsub|Y<rsub|i+1>><around*|(|x<rsub|i+1>|)>,\<ldots\>,\<pi\><rsub|Y<rsub|n>><around*|(|x<rsub|n>|)>|)>|)>+L<around*|(|<around*|(|\<pi\><rsub|Y<rsub|1>><around*|(|x<rsub|1>|)>,\<ldots\>,\<pi\><rsub|Y<rsub|i-1>><around*|(|x<rsub|i-1>|)>,\<pi\><rsub|Y<rsub|i>><around*|(|y|)>,\<pi\><rsub|Y<rsub|i+1>><around*|(|x<rsub|i+1>|)>,\<ldots\>,\<pi\><rsub|Y<rsub|n>><around*|(|x<rsub|n>|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|K<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,x,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>+K<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,y,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    and\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|K<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,\<alpha\>\<cdot\>x,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|<around*|(|\<pi\><rsub|Y<rsub|1>><around*|(|x<rsub|1>|)>,\<ldots\>,\<pi\><rsub|Y<rsub|i-1>><around*|(|x<rsub|i-1>|)>,\<pi\><rsub|Y<rsub|i>><around*|(|\<alpha\>\<cdot\>x|)>,\<pi\><rsub|Y<rsub|i+1>><around*|(|x<rsub|i+1>|)>,\<ldots\>,\<pi\><rsub|Y<rsub|n>><around*|(|x<rsub|n>|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|<around*|(|\<pi\><rsub|Y<rsub|1>><around*|(|x<rsub|1>|)>,\<ldots\>,\<pi\><rsub|Y<rsub|i-1>><around*|(|x<rsub|i-1>|)>,\<alpha\>\<cdot\>\<pi\><rsub|Y<rsub|i>><around*|(|x|)>,\<pi\><rsub|Y<rsub|i+1>><around*|(|x<rsub|i+1>|)>,\<ldots\>,\<pi\><rsub|Y<rsub|n>><around*|(|x<rsub|n>|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<alpha\>\<cdot\>L<around*|(|<around*|(|\<pi\><rsub|Y<rsub|1>><around*|(|x<rsub|1>|)>,\<ldots\>,\<pi\><rsub|Y<rsub|i-1>><around*|(|x<rsub|i-1>|)>,\<pi\><rsub|Y<rsub|i>><around*|(|x|)>,\<pi\><rsub|Y<rsub|i+1>><around*|(|x<rsub|i+1>|)>,\<ldots\>,\<pi\><rsub|Y<rsub|n>><around*|(|x<rsub|n>|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<alpha\>\<cdot\>K<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,x,x+1|)>,\<ldots\>,x<rsub|n>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation*>
+      K\<in\>Hom<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>
+    </equation*>
+
+    Finally we if <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>Y<rsub|i>>
+    so that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|x<rsub|i>\<in\>Y<rsub|i>> so that
+
+    <\equation*>
+      \<pi\><rsub|i><around*|(|x<rsub|i>|)>=<around*|(|\<pi\><rsub|i>|)><rsub|\|Y<rsub|i>>=Id<rsub|Y<rsub|i>><around*|(|x<rsub|i>|)>=x<rsub|i>
+    </equation*>
+
+    hence\ 
+
+    <\equation*>
+      K<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>=L<around*|(|\<pi\><rsub|Y<rsub|1>><around*|(|x<rsub|1>|)>,\<ldots\>,\<pi\><rsub|Yn><around*|(|x<rsub|n>|)>|)>=L<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>
+    </equation*>
+
+    proving that\ 
+
+    <\equation*>
+      K<rsub|\|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>Y<rsub|i>>=L
+    </equation*>
+  </proof>
+
   <section|Determinant Functions>
+
+  We will make extensive use of the signature of a permutation in defining
+  skew-symmetric functions. So it will be usefull to have the concept of
+  <math|-1> in a fiel and examine its relation with <math|-1\<in\>\<bbb-Z\>>.
+
+  <\definition>
+    If <math|F> is a field and <math|1> is the multiplicative unit then
+    <math|-1> is the additive inverse of <math|1>. Hence we have
+    <math|1+<around*|(|-1|)>=0=<around*|(|-1|)>+1>
+  </definition>
+
+  <\proposition>
+    If <math|V> is a vector space over a field <math|F> then
+    <math|\<forall\>x\<in\>X> we have <math|-x=<around*|(|-1|)>\<cdot\>x>
+  </proposition>
+
+  <\proof>
+    Let <math|x\<in\>X> then
+
+    <\equation*>
+      <around*|(|-1|)>\<cdot\>x+x=x+<around*|(|-1|)>\<cdot\>x=<around*|(|-1|)>\<cdot\>1.x=<around*|(|1+<around*|(|-1|)>|)>\<cdot\>x=0\<cdot\>x=0
+    </equation*>
+
+    so that <math|-x=<around*|(|-1|)>\<cdot\>x>
+  </proof>
+
+  Next we define the power in a field by recursion.
+
+  <\definition>
+    Let <math|F> be a field, <math|a\<in\>F> and
+    <math|n\<in\>\<bbb-N\><rsub|0>> then <math|>
+
+    <\equation*>
+      a<rsup|n>=<choice|<tformat|<table|<row|<cell|1<text| if
+      >n=0>>|<row|<cell|a\<cdot\>a<rsup|n-1><text| if >n\<in\>\<bbb-N\>>>>>>
+    </equation*>
+  </definition>
+
+  <\proposition>
+    Let <math|F> be a field, <math|a\<in\>F> and
+    <math|n,m\<in\>\<bbb-N\><rsub|0>> then
+    <math|a<rsup|n>\<cdot\>a<rsup|m>=a<rsup|n+m>>
+  </proposition>
+
+  <\proof>
+    We prove this by induction on <math|n>. So let\ 
+
+    <\equation*>
+      S<rsub|m>=<around*|{|n\<in\>\<bbb-N\>\|a<rsup|n>\<cdot\>a<rsup|m>=a<rsup|n+m>|}>
+    </equation*>
+
+    then we have:\ 
+
+    <\description>
+      <item*|<math|0\<in\>S<rsub|m>>>Then
+      <math|a<rsup|0>\<cdot\>a<rsup|m>=1\<cdot\>a<rsup|m>=a<rsup|m>=a<rsup|0+m>>
+      proving that <math|0\<in\>S<rsub|m>>
+
+      <item*|<math|n\<in\>S<rsub|m>\<Rightarrow\>n+1\<in\>S<rsub|m>>>
+    </description>
+
+    \;
+  </proof>
 </body>
 
 <\initial>
@@ -9556,22 +10496,20 @@
     <associate|auto-26|<tuple|11.3.3|?>>
     <associate|auto-27|<tuple|basis of a vector space|?>>
     <associate|auto-28|<tuple|11.3.4|?>>
-    <associate|auto-29|<tuple|11.4|?>>
+    <associate|auto-29|<tuple|11.3.5|?>>
     <associate|auto-3|<tuple|11.1.1|?>>
-    <associate|auto-30|<tuple|11.4.1|?>>
-    <associate|auto-31|<tuple|linear mapping|?>>
-    <associate|auto-32|<tuple|<with|mode|<quote|math>|Hom<around*|(|X,Y|)>>|?>>
-    <associate|auto-33|<tuple|11.5|?>>
-    <associate|auto-34|<tuple|11.5.1|?>>
-    <associate|auto-35|<tuple|11.5.2|?>>
-    <associate|auto-36|<tuple|<with|mode|<quote|math>|sign<around*|(|\<sigma\>|)>>|?>>
-    <associate|auto-37|<tuple|11.6|?>>
-    <associate|auto-38|<tuple|<with|mode|<quote|math>|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,a,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>|?>>
-    <associate|auto-39|<tuple|11.7|?>>
+    <associate|auto-30|<tuple|11.4|?>>
+    <associate|auto-31|<tuple|11.4.1|?>>
+    <associate|auto-32|<tuple|linear mapping|?>>
+    <associate|auto-33|<tuple|<with|mode|<quote|math>|Hom<around*|(|X,Y|)>>|?>>
+    <associate|auto-34|<tuple|11.5|?>>
+    <associate|auto-35|<tuple|11.5.1|?>>
+    <associate|auto-36|<tuple|11.5.2|?>>
+    <associate|auto-37|<tuple|<with|mode|<quote|math>|sign<around*|(|\<sigma\>|)>>|?>>
+    <associate|auto-38|<tuple|11.6|?>>
+    <associate|auto-39|<tuple|<with|mode|<quote|math>|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,a,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>|?>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|<big|sum><rsub|i=0><rsup|n>x<rsub|i>>|?>>
     <associate|auto-40|<tuple|11.7|?>>
-    <associate|auto-41|<tuple|11.7|?>>
-    <associate|auto-42|<tuple|11.7|?>>
     <associate|auto-5|<tuple|<with|mode|<quote|math>|<big|prod><rsub|i=0><rsup|n>x<rsub|i>>|?>>
     <associate|auto-6|<tuple|11.1.2|?>>
     <associate|auto-7|<tuple|11.1.3|?>>
@@ -9599,11 +10537,20 @@
     <associate|basis sub-space|<tuple|11.117|?>>
     <associate|basis sum of delta|<tuple|11.123|?>>
     <associate|disjoint family property|<tuple|11.75|?>>
-    <associate|eq 11.081.94|<tuple|11.81|?>>
+    <associate|eq 11.081.94|<tuple|11.82|?>>
     <associate|eq 11.1.054|<tuple|11.1|?>>
     <associate|eq 11.10.054|<tuple|11.11|?>>
     <associate|eq 11.10.064|<tuple|11.10|?>>
-    <associate|eq 11.100.095|<tuple|11.100|?>>
+    <associate|eq 11.100.095|<tuple|11.107|?>>
+    <associate|eq 11.101.096|<tuple|11.106|?>>
+    <associate|eq 11.101.097|<tuple|11.101|?>>
+    <associate|eq 11.101.97|<tuple|11.101|?>>
+    <associate|eq 11.102.097|<tuple|11.102|?>>
+    <associate|eq 11.103.077|<tuple|11.102|?>>
+    <associate|eq 11.103.097|<tuple|11.103|?>>
+    <associate|eq 11.104.097|<tuple|11.104|?>>
+    <associate|eq 11.105.097|<tuple|11.105|?>>
+    <associate|eq 11.106.097|<tuple|11.106|?>>
     <associate|eq 11.11.054|<tuple|11.13|?>>
     <associate|eq 11.11.055|<tuple|11.12|?>>
     <associate|eq 11.13.055|<tuple|11.14|?>>
@@ -9640,70 +10587,70 @@
     <associate|eq 11.52.090|<tuple|11.52|?>>
     <associate|eq 11.53.084|<tuple|11.38|?>>
     <associate|eq 11.54.086|<tuple|11.40|?>>
-    <associate|eq 11.54.092|<tuple|11.54|?>>
+    <associate|eq 11.54.092|<tuple|11.55|?>>
+    <associate|eq 11.54.096|<tuple|11.54|?>>
     <associate|eq 11.55.086|<tuple|11.41|?>>
-    <associate|eq 11.55.092|<tuple|11.55|?>>
+    <associate|eq 11.55.092|<tuple|11.56|?>>
     <associate|eq 11.56.086|<tuple|11.42|?>>
-    <associate|eq 11.56.092|<tuple|11.56|?>>
+    <associate|eq 11.56.092|<tuple|11.57|?>>
     <associate|eq 11.57.084|<tuple|11.37|?>>
     <associate|eq 11.57.086|<tuple|11.43|?>>
-    <associate|eq 11.57.093|<tuple|11.57|?>>
+    <associate|eq 11.57.093|<tuple|11.58|?>>
     <associate|eq 11.58.086|<tuple|11.44|?>>
-    <associate|eq 11.58.093|<tuple|11.58|?>>
-    <associate|eq 11.59.093|<tuple|11.59|?>>
+    <associate|eq 11.58.093|<tuple|11.59|?>>
+    <associate|eq 11.59.093|<tuple|11.60|?>>
     <associate|eq 11.6.053|<tuple|11.6|?>>
-    <associate|eq 11.60.093|<tuple|11.60|?>>
+    <associate|eq 11.60.093|<tuple|11.61|?>>
     <associate|eq 11.61.086|<tuple|11.47|?>>
-    <associate|eq 11.61.093|<tuple|11.61|?>>
+    <associate|eq 11.61.093|<tuple|11.62|?>>
     <associate|eq 11.62.086|<tuple|11.48|?>>
-    <associate|eq 11.62.093|<tuple|11.62|?>>
+    <associate|eq 11.62.093|<tuple|11.63|?>>
     <associate|eq 11.63.086|<tuple|11.49|?>>
-    <associate|eq 11.63.093|<tuple|11.63|?>>
-    <associate|eq 11.64.093|<tuple|11.64|?>>
+    <associate|eq 11.63.093|<tuple|11.64|?>>
+    <associate|eq 11.64.093|<tuple|11.65|?>>
     <associate|eq 11.65.086|<tuple|11.53|?>>
-    <associate|eq 11.65.093|<tuple|11.65|?>>
-    <associate|eq 11.66.093|<tuple|11.66|?>>
-    <associate|eq 11.67.093|<tuple|11.67|?>>
-    <associate|eq 11.68.093|<tuple|11.68|?>>
-    <associate|eq 11.69.093|<tuple|11.69|?>>
+    <associate|eq 11.65.093|<tuple|11.66|?>>
+    <associate|eq 11.66.093|<tuple|11.67|?>>
+    <associate|eq 11.67.093|<tuple|11.68|?>>
+    <associate|eq 11.68.093|<tuple|11.69|?>>
+    <associate|eq 11.69.093|<tuple|11.70|?>>
     <associate|eq 11.7.053|<tuple|11.7|?>>
     <associate|eq 11.7.053.1|<tuple|11.8|?>>
-    <associate|eq 11.70.093|<tuple|11.71|?>>
-    <associate|eq 11.70.094|<tuple|11.70|?>>
-    <associate|eq 11.71.093|<tuple|11.72|?>>
-    <associate|eq 11.72.093|<tuple|11.73|?>>
-    <associate|eq 11.73.093|<tuple|11.74|?>>
-    <associate|eq 11.74.093|<tuple|11.75|?>>
-    <associate|eq 11.75.093|<tuple|11.76|?>>
-    <associate|eq 11.77.094|<tuple|11.77|?>>
-    <associate|eq 11.78.094|<tuple|11.78|?>>
-    <associate|eq 11.79.094|<tuple|11.79|?>>
-    <associate|eq 11.80.094|<tuple|11.80|?>>
-    <associate|eq 11.82.094|<tuple|11.82|?>>
-    <associate|eq 11.83.094|<tuple|11.83|?>>
-    <associate|eq 11.84.094|<tuple|11.84|?>>
-    <associate|eq 11.85.094|<tuple|11.85|?>>
-    <associate|eq 11.86.094|<tuple|11.86|?>>
-    <associate|eq 11.87.094|<tuple|11.87|?>>
-    <associate|eq 11.88.094|<tuple|11.88|?>>
-    <associate|eq 11.89.094|<tuple|11.89|?>>
+    <associate|eq 11.70.093|<tuple|11.72|?>>
+    <associate|eq 11.70.094|<tuple|11.71|?>>
+    <associate|eq 11.71.093|<tuple|11.73|?>>
+    <associate|eq 11.72.093|<tuple|11.74|?>>
+    <associate|eq 11.73.093|<tuple|11.75|?>>
+    <associate|eq 11.74.093|<tuple|11.76|?>>
+    <associate|eq 11.75.093|<tuple|11.77|?>>
+    <associate|eq 11.77.094|<tuple|11.78|?>>
+    <associate|eq 11.78.094|<tuple|11.79|?>>
+    <associate|eq 11.79.094|<tuple|11.80|?>>
+    <associate|eq 11.80.094|<tuple|11.81|?>>
+    <associate|eq 11.82.094|<tuple|11.83|?>>
+    <associate|eq 11.83.094|<tuple|11.84|?>>
+    <associate|eq 11.84.094|<tuple|11.85|?>>
+    <associate|eq 11.85.094|<tuple|11.86|?>>
+    <associate|eq 11.86.094|<tuple|11.87|?>>
+    <associate|eq 11.87.094|<tuple|11.88|?>>
+    <associate|eq 11.88.094|<tuple|11.89|?>>
+    <associate|eq 11.89.094|<tuple|11.90|?>>
     <associate|eq 11.9.053|<tuple|11.9|?>>
-    <associate|eq 11.90.094|<tuple|11.90|?>>
-    <associate|eq 11.91.094|<tuple|11.91|?>>
-    <associate|eq 11.92.094|<tuple|11.92|?>>
-    <associate|eq 11.93.094|<tuple|11.93|?>>
-    <associate|eq 11.94.094|<tuple|11.94|?>>
-    <associate|eq 11.95.094|<tuple|11.95|?>>
-    <associate|eq 11.96.094|<tuple|11.96|?>>
-    <associate|eq 11.97.094|<tuple|11.97|?>>
-    <associate|eq 11.98.094|<tuple|11.98|?>>
-    <associate|eq 11.99.094|<tuple|11.99|?>>
-    <associate|eq11.100.095|<tuple|11.100|?>>
+    <associate|eq 11.90.094|<tuple|11.91|?>>
+    <associate|eq 11.91.094|<tuple|11.92|?>>
+    <associate|eq 11.92.094|<tuple|11.93|?>>
+    <associate|eq 11.93.094|<tuple|11.94|?>>
+    <associate|eq 11.94.094|<tuple|11.95|?>>
+    <associate|eq 11.95.094|<tuple|11.96|?>>
+    <associate|eq 11.96.094|<tuple|11.97|?>>
+    <associate|eq 11.97.094|<tuple|11.98|?>>
+    <associate|eq 11.98.094|<tuple|11.99|?>>
+    <associate|eq 11.99.094|<tuple|11.100|?>>
     <associate|linear (in)dependency properties (1)|<tuple|11.99|?>>
     <associate|linear Steinitz (1)|<tuple|11.101|?>>
     <associate|linear Steinitz (2)|<tuple|11.102|?>>
     <associate|linear Steinitz lemma|<tuple|11.100|?>>
-    <associate|linear ampping|<tuple|11.125|?>>
+    <associate|linear ampping|<tuple|11.131|?>>
     <associate|linear combination|<tuple|11.71|?>>
     <associate|linear combination (1)|<tuple|11.78|?>>
     <associate|linear combination (2)|<tuple|11.79|?>>
@@ -9719,31 +10666,32 @@
     <associate|linear independent set|<tuple|11.93|?>>
     <associate|linear independent set alternative|<tuple|11.94|?>>
     <associate|linear independent singleton|<tuple|11.97|?>>
-    <associate|linear mapping Hom(X,Y)|<tuple|11.133|?>>
-    <associate|linear mapping Hom(X,Y) definition|<tuple|11.130|?>>
-    <associate|linear mapping Img Re|<tuple|11.139|?>>
-    <associate|linear mapping L(x)=L(y)=\<gtr\>x=y|<tuple|11.137|?>>
-    <associate|linear mapping and finite sum|<tuple|11.138|?>>
-    <associate|linear mapping basis|<tuple|11.147|?>>
-    <associate|linear mapping composition|<tuple|11.131|?>>
-    <associate|linear mapping composition isomorphism|<tuple|11.132|?>>
-    <associate|linear mapping dimension theorem|<tuple|11.149|?>>
-    <associate|linear mapping dual space|<tuple|11.135|?>>
+    <associate|linear mapping Hom(X,Y)|<tuple|11.139|?>>
+    <associate|linear mapping Hom(X,Y) definition|<tuple|11.136|?>>
+    <associate|linear mapping Img Re|<tuple|11.145|?>>
+    <associate|linear mapping L(x)=L(y)=\<gtr\>x=y|<tuple|11.143|?>>
+    <associate|linear mapping and finite sum|<tuple|11.144|?>>
+    <associate|linear mapping basis|<tuple|11.153|?>>
+    <associate|linear mapping composition|<tuple|11.137|?>>
+    <associate|linear mapping composition isomorphism|<tuple|11.138|?>>
+    <associate|linear mapping dimension theorem|<tuple|11.155|?>>
+    <associate|linear mapping dual space|<tuple|11.141|?>>
     <associate|linear mapping existance of non-zero linear
-    mapping|<tuple|11.136|?>>
-    <associate|linear mapping independency|<tuple|11.146|?>>
-    <associate|linear mapping injectivity and kernel|<tuple|11.144|?>>
-    <associate|linear mapping inverse of a isomorphism|<tuple|11.129|?>>
-    <associate|linear mapping isomorphic spaces|<tuple|11.148|?>>
+    mapping|<tuple|11.142|?>>
+    <associate|linear mapping extention|<tuple|11.130|?>>
+    <associate|linear mapping independency|<tuple|11.152|?>>
+    <associate|linear mapping injectivity and kernel|<tuple|11.150|?>>
+    <associate|linear mapping inverse of a isomorphism|<tuple|11.135|?>>
+    <associate|linear mapping isomorphic spaces|<tuple|11.154|?>>
     <associate|linear mapping kernal and range are
-    subspaces|<tuple|11.142|?>>
-    <associate|linear mapping kernel|<tuple|11.140|?>>
-    <associate|linear mapping linear isomorphism|<tuple|11.127|?>>
-    <associate|linear mapping of neutral element|<tuple|11.134|?>>
-    <associate|linear mapping projection map|<tuple|11.126|?>>
-    <associate|linear mapping range|<tuple|11.141|?>>
-    <associate|linear mapping rank|<tuple|11.143|?>>
-    <associate|linear mapping span|<tuple|11.145|?>>
+    subspaces|<tuple|11.148|?>>
+    <associate|linear mapping kernel|<tuple|11.146|?>>
+    <associate|linear mapping linear isomorphism|<tuple|11.133|?>>
+    <associate|linear mapping of neutral element|<tuple|11.140|?>>
+    <associate|linear mapping projection map|<tuple|11.132|?>>
+    <associate|linear mapping range|<tuple|11.147|?>>
+    <associate|linear mapping rank|<tuple|11.149|?>>
+    <associate|linear mapping span|<tuple|11.151|?>>
     <associate|linear ordered family is finite|<tuple|11.76|?>>
     <associate|linear span|<tuple|11.80|?>>
     <associate|linear span contains set|<tuple|11.85|?>>
@@ -9757,58 +10705,58 @@
     <associate|linear span properties|<tuple|11.88|?>>
     <associate|linear span subsets|<tuple|11.86|?>>
     <associate|linear span({0})|<tuple|11.82|?>>
-    <associate|linerar mapping between R^2 and C|<tuple|11.128|?>>
-    <associate|multi composition|<tuple|11.184|?>>
-    <associate|multi convention (2)|<tuple|11.177|?>>
-    <associate|multi function argument reduction|<tuple|11.179|?>>
-    <associate|multi function of many arguments (1)|<tuple|11.179|?>>
-    <associate|multi induction argument|<tuple|11.178|?>>
-    <associate|multi multilinear mappin one argument is 0|<tuple|11.186|?>>
-    <associate|multi multilinear mapping|<tuple|11.177|?>>
-    <associate|multi multilinear mapping and linear mapping|<tuple|11.180|?>>
+    <associate|linerar mapping between R^2 and C|<tuple|11.134|?>>
+    <associate|multi composition|<tuple|11.193|?>>
+    <associate|multi function of many arguments (1)|<tuple|11.188|?>>
+    <associate|multi induction argument|<tuple|11.187|?>>
+    <associate|multi multilinear mappin one argument is 0|<tuple|11.195|?>>
+    <associate|multi multilinear mapping|<tuple|11.186|?>>
+    <associate|multi multilinear mapping and linear mapping|<tuple|11.189|?>>
     <associate|multi multilinear mapping and product of
-    scalars|<tuple|11.185|?>>
-    <associate|multi product multilinearity|<tuple|11.181|?>>
-    <associate|multi tuple convention (2)|<tuple|11.177|?>>
-    <associate|multi tuple substituting|<tuple|11.179|?>>
-    <associate|multi tuple substituting (1)|<tuple|11.179|?>>
-    <associate|multi tuple substitution|<tuple|11.179|?>>
-    <associate|multi tupple convention (1)|<tuple|11.176|?>>
-    <associate|multi zero function|<tuple|11.181|?>>
-    <associate|multilinear field product|<tuple|11.182|?>>
-    <associate|multilinear mapping sub-space|<tuple|11.183|?>>
-    <associate|permutation Pn|<tuple|11.150|?>>
-    <associate|permutation Pn is a group|<tuple|11.152|?>>
-    <associate|permutation apply|<tuple|11.161|?>>
-    <associate|permutation apply and composition|<tuple|11.163|?>>
-    <associate|permutation apply and field|<tuple|11.164|?>>
-    <associate|permutation apply identity|<tuple|11.162|?>>
-    <associate|permutation apply transposition on phi|<tuple|11.170|?>>
+    scalars|<tuple|11.194|?>>
+    <associate|multi tupple convention (1)|<tuple|11.185|?>>
+    <associate|multi zero function|<tuple|11.190|?>>
+    <associate|multilinear field product|<tuple|11.191|?>>
+    <associate|multilinear mapping sub-space|<tuple|11.192|?>>
+    <associate|permutation Pn|<tuple|11.156|?>>
+    <associate|permutation Pn is a group|<tuple|11.158|?>>
+    <associate|permutation apply|<tuple|11.167|?>>
+    <associate|permutation apply and composition|<tuple|11.169|?>>
+    <associate|permutation apply and field|<tuple|11.170|?>>
+    <associate|permutation apply identity|<tuple|11.168|?>>
+    <associate|permutation apply transposition on phi|<tuple|11.176|?>>
     <associate|permutation as a composition of disjoint
-    transpositions|<tuple|11.160|?>>
+    transpositions|<tuple|11.166|?>>
     <associate|permutation composition of a family of
-    permutations|<tuple|11.155|?>>
+    permutations|<tuple|11.161|?>>
     <associate|permutation definition|<tuple|11.24|?>>
-    <associate|permutation existence of sign|<tuple|11.172|?>>
-    <associate|permutation extension (1)|<tuple|11.158|?>>
-    <associate|permutation extension (2)|<tuple|11.159|?>>
+    <associate|permutation existence of sign|<tuple|11.178|?>>
+    <associate|permutation extension (1)|<tuple|11.164|?>>
+    <associate|permutation extension (2)|<tuple|11.165|?>>
     <associate|permutation group|<tuple|11.25|?>>
+    <associate|permutation index calculation|<tuple|11.184|?>>
+    <associate|permutation index function|<tuple|11.183|?>>
+    <associate|permutation index function property|<tuple|11.184|?>>
+    <associate|permutation insert function|<tuple|11.182|?>>
+    <associate|permutation insert operation|<tuple|11.185|?>>
+    <associate|permutation insert operation meaning|<tuple|11.185|?>>
     <associate|permutation on subset|<tuple|11.26|?>>
-    <associate|permutation phi function|<tuple|11.167|?>>
-    <associate|permutation phi function is not zero|<tuple|11.169|?>>
-    <associate|permutation reverse|<tuple|11.151|?>>
-    <associate|permutation sign|<tuple|11.173|?>>
-    <associate|permutation sign calculation|<tuple|11.174|?>>
+    <associate|permutation phi function|<tuple|11.173|?>>
+    <associate|permutation phi function is not zero|<tuple|11.175|?>>
+    <associate|permutation reverse|<tuple|11.157|?>>
+    <associate|permutation sign|<tuple|11.179|?>>
+    <associate|permutation sign calculation|<tuple|11.180|?>>
     <associate|permutation sign of composition of
-    transpositions|<tuple|11.171|?>>
-    <associate|permutation sum|<tuple|11.154|?>>
-    <associate|permutation transosition proeprties|<tuple|11.157|?>>
+    transpositions|<tuple|11.177|?>>
+    <associate|permutation sign properties|<tuple|11.181|?>>
+    <associate|permutation sum|<tuple|11.160|?>>
+    <associate|permutation transosition proeprties|<tuple|11.163|?>>
     <associate|permutation transpistion symmetry
-    permutation|<tuple|11.166|?>>
+    permutation|<tuple|11.172|?>>
     <associate|permutation transposition|<tuple|11.27|?>>
-    <associate|permutation transposition 1|<tuple|11.156|?>>
+    <associate|permutation transposition 1|<tuple|11.162|?>>
     <associate|permutation transposition properties|<tuple|11.28|?>>
-    <associate|permutation transposition symmetry|<tuple|11.165|?>>
+    <associate|permutation transposition symmetry|<tuple|11.171|?>>
     <associate|permutation {0,..,n and transposition|<tuple|11.29|?>>
     <associate|product finite product|<tuple|11.2|?>>
     <associate|sum alternative definition|<tuple|11.4|?>>
@@ -9820,7 +10768,6 @@
     <associate|sum commutativity|<tuple|11.30|?>>
     <associate|sum constant family|<tuple|11.45|?>>
     <associate|sum field multilinearity|<tuple|11.46|?>>
-    <associate|sum field product|<tuple|11.46|?>>
     <associate|sum finite sum|<tuple|11.1|?>>
     <associate|sum general equivalence|<tuple|11.33|?>>
     <associate|sum general single|<tuple|11.32|?>>
@@ -9859,6 +10806,13 @@
     <associate|vector space finite sum (3)|<tuple|11.69|?>>
     <associate|vector space finite sum (4)|<tuple|11.70|?>>
     <associate|vector space function space|<tuple|11.59|?>>
+    <associate|vector space internal direct sum|<tuple|11.125|?>>
+    <associate|vector space internal direct sum (function)|<tuple|11.129|?>>
+    <associate|vector space internal direct sum
+    decomposition|<tuple|11.126|?>>
+    <associate|vector space internal direct sum trivial
+    example|<tuple|11.127|?>>
+    <associate|vector space internal sum existence|<tuple|11.128|?>>
     <associate|vector space power|<tuple|11.60|?>>
     <associate|vector space power field|<tuple|11.61|?>>
     <associate|vector space product of vector spaces|<tuple|11.63|?>>
@@ -9899,19 +10853,13 @@
 
       <tuple|<tuple|basis of a vector space>|<pageref|auto-27>>
 
-      <tuple|<tuple|linear mapping>|<pageref|auto-31>>
+      <tuple|<tuple|linear mapping>|<pageref|auto-32>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|Hom<around*|(|X,Y|)>>>|<pageref|auto-32>>
+      <tuple|<tuple|<with|mode|<quote|math>|Hom<around*|(|X,Y|)>>>|<pageref|auto-33>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|sign<around*|(|\<sigma\>|)>>>|<pageref|auto-36>>
+      <tuple|<tuple|<with|mode|<quote|math>|sign<around*|(|\<sigma\>|)>>>|<pageref|auto-37>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,a,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>>|<pageref|auto-38>>
-
-      <tuple|<tuple|<with|mode|<quote|math>|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>>|<pageref|auto-39>>
-
-      <tuple|<tuple|<with|mode|<quote|math>|\<cal-I\><rsub|y\<rightarrow\>i>>>|<pageref|auto-40>>
-
-      <tuple|<tuple|<with|mode|<quote|math>|f<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,\<ast\>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>>|<pageref|auto-41>>
+      <tuple|<tuple|<with|mode|<quote|math>|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,a,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>>|<pageref|auto-39>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|11<space|2spc>Linear
@@ -9976,31 +10924,35 @@
       space <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-28>>
 
+      <with|par-left|<quote|1tab>|11.3.5<space|2spc>Internal Direct Sum
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-29>>
+
       11.4<space|2spc>Linear mappings <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-29>
+      <no-break><pageref|auto-30>
 
       <with|par-left|<quote|1tab>|11.4.1<space|2spc>Linear mappings
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-30>>
+      <no-break><pageref|auto-31>>
 
       11.5<space|2spc>Permutations <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-33>
+      <no-break><pageref|auto-34>
 
       <with|par-left|<quote|1tab>|11.5.1<space|2spc>Transpositions
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-34>>
+      <no-break><pageref|auto-35>>
 
       <with|par-left|<quote|1tab>|11.5.2<space|2spc>Sign of a Permutation
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-35>>
+      <no-break><pageref|auto-36>>
 
       11.6<space|2spc>Multilinear mappings
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-37>
+      <no-break><pageref|auto-38>
 
       11.7<space|2spc>Determinant Functions
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-42>
+      <no-break><pageref|auto-40>
     </associate>
   </collection>
 </auxiliary>
