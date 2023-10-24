@@ -10026,6 +10026,28 @@
     </equation*>
   </definition>
 
+  A special case of the above is where <math|<around*|{|X<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+  satisfies <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have that
+  <math|X<rsub|i>=X> so that <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>=X<rsup|n>>.
+  This leads to the definition of <math|n>-linear functions.\ 
+
+  <\definition>
+    <label|multi n-llinear function>Let <math|n\<in\>\<bbb-N\>> and
+    <math|X,Y> vector spaces over a field <math|F> then a multilinear mapping\ 
+
+    <\equation*>
+      L:X<rsup|n>\<rightarrow\>Y
+    </equation*>
+
+    is called a <with|font-series|bold|<math|n>-linear mapping>. Further set
+    of graphs of <math|n>-linear mappings is noted as
+    <math|Hom<around*|(|X<rsup|n>;Y|)>> so\ 
+
+    <\equation*>
+      Hom<around*|(|X<rsup|n>;Y|)>=Hom<around*|(|<wide*|X,\<ldots\>,X|\<wide-underbrace\>><rsub|n>;Y|)>
+    </equation*>
+  </definition>
+
   To be able to use induction in proofs about multilinear mappings we have
   the following theorem.
 
@@ -10404,14 +10426,44 @@
   <math|-1> in a fiel and examine its relation with <math|-1\<in\>\<bbb-Z\>>.
 
   <\definition>
-    If <math|F> is a field and <math|1> is the multiplicative unit then
-    <math|-1> is the additive inverse of <math|1>. Hence we have
+    <label|field -1>If <math|F> is a field and <math|1> is the multiplicative
+    unit then <math|-1> is the additive inverse of <math|1>. Hence we have
     <math|1+<around*|(|-1|)>=0=<around*|(|-1|)>+1>
   </definition>
 
   <\proposition>
-    If <math|V> is a vector space over a field <math|F> then
-    <math|\<forall\>x\<in\>X> we have <math|-x=<around*|(|-1|)>\<cdot\>x>
+    <label|field (-1).(-1)>If <math|F> is a field then
+    <math|<around*|(|-1|)>\<cdot\><around*|(|-1|)>=1>
+  </proposition>
+
+  <\proof>
+    <math|0=<around*|(|-1|)>\<cdot\>0=<around*|(|-1|)>\<cdot\><around*|(|<around*|(|-1|)>+1|)>=<around*|(|-1|)>\<cdot\><around*|(|-1|)>+<around*|(|-1|)>\<cdot\>1=<around*|(|-1|)>\<cdot\><around*|(|-1|)>+<around*|(|-1|)>>
+    so that
+
+    <\equation*>
+      1=0+1=<around*|(|<around*|(|-1|)>\<cdot\><around*|(|-1|)>+<around*|(|-1|)>|)>+1=<around*|(|-1|)>\<cdot\><around*|(|-1|)>
+    </equation*>
+  </proof>
+
+  <\proposition>
+    <label|field (-1).f=-f>If <math|F> is a field then
+    <math|\<forall\>f\<in\>F> we have <math|<around*|(|-1|)>\<cdot\>f=-f>
+  </proposition>
+
+  <\proof>
+    As we have\ 
+
+    <\equation*>
+      f+<around*|(|-1|)>\<cdot\>f=<around*|(|-1|)>\<cdot\>f+f=<around*|(|-1|)>\<cdot\>f+1\<cdot\>f=<around*|(|<around*|(|-1|)>+1|)>\<cdot\>f=0\<cdot\>f=0
+    </equation*>
+
+    \;
+  </proof>
+
+  <\proposition>
+    <label|field (-1).x=-x>If <math|V> is a vector space over a field
+    <math|F> then <math|\<forall\>x\<in\>X> we have
+    <math|-x=<around*|(|-1|)>\<cdot\>x>
   </proposition>
 
   <\proof>
@@ -10427,7 +10479,7 @@
   Next we define the power in a field by recursion.
 
   <\definition>
-    Let <math|F> be a field, <math|a\<in\>F> and
+    <label|field power>Let <math|F> be a field, <math|a\<in\>F> and
     <math|n\<in\>\<bbb-N\><rsub|0>> then <math|>
 
     <\equation*>
@@ -10437,7 +10489,7 @@
   </definition>
 
   <\proposition>
-    Let <math|F> be a field, <math|a\<in\>F> and
+    <label|field power property>Let <math|F> be a field, <math|a\<in\>F> and
     <math|n,m\<in\>\<bbb-N\><rsub|0>> then
     <math|a<rsup|n>\<cdot\>a<rsup|m>=a<rsup|n+m>>
   </proposition>
@@ -10454,13 +10506,193 @@
     <\description>
       <item*|<math|0\<in\>S<rsub|m>>>Then
       <math|a<rsup|0>\<cdot\>a<rsup|m>=1\<cdot\>a<rsup|m>=a<rsup|m>=a<rsup|0+m>>
-      proving that <math|0\<in\>S<rsub|m>>
+      proving that <math|0\<in\>S<rsub|m>>.
 
-      <item*|<math|n\<in\>S<rsub|m>\<Rightarrow\>n+1\<in\>S<rsub|m>>>
+      <item*|<math|n\<in\>S<rsub|m>\<Rightarrow\>n+1\<in\>S<rsub|m>>>We have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|a<rsup|n+1>\<cdot\>a<rsup|m>>|<cell|=>|<cell|<around*|(|a\<cdot\>a<rsup|n>|)>\<cdot\>a<rsup|m>>>|<row|<cell|>|<cell|=>|<cell|a\<cdot\><around*|(|a<rsup|n>\<cdot\>a<rsup|m>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|m\<in\>S>>|<cell|a\<cdot\>a<rsup|n+m>>>|<row|<cell|>|<cell|=>|<cell|a<rsup|<around*|(|n+m|)>+1>>>|<row|<cell|>|<cell|=>|<cell|a<rsup|<around*|(|n+1|)>+m>>>>>
+      </eqnarray*>
+
+      proving that <math|n+1\<in\>\<cal-S\><rsub|m>>
     </description>
-
-    \;
   </proof>
+
+  <\proposition>
+    <label|field power of 1 or -1>Let <math|F> be a field then for
+    <math|n\<in\>\<bbb-N\><rsub|0>> we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|1<rsup|n>>|<cell|=>|<cell|1>>|<row|<cell|<around*|(|-1|)><rsup|n>>|<cell|=>|<cell|-1<text|
+      or >1>>|<row|<cell|<around*|(|-1|)><rsup|n>>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|-1<text|
+      if >n<text| is odd>>>|<row|<cell|1<text| if >m<text| is even>>>>>>>>>>
+    </eqnarray*>
+
+    Further if <math|n\<in\>\<bbb-N\>> then <math|0<rsup|n>=0>
+  </proposition>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>We use induction to prove this, so let\ 
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|1<rsup|n>=1<rsup|>|}>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|0\<in\>S>>As <math|1<rsup|0>=1> by definition we have
+        <math|0\<in\>S>
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>As
+        <math|1<rsup|n+1>=1\<cdot\>1<rsup|n>\<equallim\><rsub|n\<in\>S>1\<cdot\>1=1>
+        proving that <math|n+1\<in\>S>
+      </description>
+
+      <item>Again we use induction, so let
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|<around*|(|-1|)><rsup|n>\<in\><around*|{|-1,1|}>|}>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|0\<in\>S>>By definition
+        <math|<around*|(|-1|)><rsup|0>=1> proving that <math|0\<in\>S>
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>As <math|n\<in\>S> we
+        have either:
+
+        <\description>
+          <item*|<math|<around*|(|-1|)><rsup|n>=1>>Then
+          <math|<around*|(|-1|)><rsup|n+1>=<around*|(|-1|)>\<cdot\><around*|(|-1|)><rsup|n>=<around*|(|-1|)>\<cdot\>1=-1>
+
+          <item*|<math|<around*|(|-1|)><rsup|n>=-1>>Then
+          <math|<around*|(|-1|)><rsup|n+1>=<around*|(|-1|)>\<cdot\><around*|(|-1|)><rsup|n>=<around*|(|-1|)>\<cdot\><around*|(|-1|)>\<equallim\><rsub|<text|[proposition:
+          <reference|field (-1).(-1)>]>>1>
+        </description>
+
+        proving that <math|n+1\<in\>S>.
+      </description>
+
+      <item>If <math|n> is even then there exists a
+      <math|m\<in\>\<bbb-N\><rsub|0>> such that <math|n=2\<cdot\>m=m+m>. Now
+      for <math|<around*|(|-1|)><rsup|m>> we have by (2) either:
+
+      <\description>
+        <item*|<math|<around*|(|-1|)><rsup|m>=1>>Then
+        <math|<around*|(|-1|)><rsup|n>=<around*|(|-1|)><rsup|m+m>\<equallim\><rsub|<text|[theorem:
+        <reference|field power property>]>><rsup|><around*|(|-1|)><rsup|m>\<cdot\><around*|(|-1|)><rsup|m>=1\<cdot\>1=1>
+
+        <item*|<math|<around*|(|-1|)><rsup|m>=1>>Then <math|>
+
+        <\equation*>
+          <around*|(|-1|)><rsup|n>=<around*|(|-1|)><rsup|m+m>\<equallim\><rsub|<text|[theorem:
+          <reference|field power property>]>><rsup|><around*|(|-1|)><rsup|m>\<cdot\><around*|(|-1|)><rsup|m>=<around*|(|-1|)>\<cdot\><around*|(|-1|)>\<equallim\><rsub|<text|[theorem:
+          <reference|field (-1).(-1)>]>>1
+        </equation*>
+      </description>
+
+      hence\ 
+
+      <\equation*>
+        <around*|(|-1|)><rsup|n>=1
+      </equation*>
+
+      <item>If <math|n> is odd then there exist a
+      <math|m\<in\>\<bbb-N\><rsub|0>> such that <math|n=2\<cdot\>m+1> then we
+      have\ 
+
+      <\equation*>
+        <around*|(|-1|)><rsup|n>=<around*|(|-1|)><rsup|2\<cdot\>m+1>=<around*|(|-1|)>\<cdot\><around*|(|-1|)><rsup|2\<cdot\>m>\<equallim\><rsub|<around*|(|3|)>><around*|(|-1|)>\<cdot\>1=-1
+      </equation*>
+
+      <item>If <math|n\<in\>\<bbb-N\>> then <math|n-1\<in\>\<bbb-N\><rsub|0>>
+      so that\ 
+
+      <\equation*>
+        0<rsup|n>=0<rsup|<around*|(|n-1|)>+1>=0\<cdot\>0<rsup|n-1>=0
+      </equation*>
+    </enumerate>
+  </proof>
+
+  All the above work is done so that we can define a mapping of
+  <math|<around*|{|1,-1|}>> to <math|F> which we will use in the definition
+  of skew symmtric multlinear mappings.\ 
+
+  <\definition>
+    <label|field {-1,1}xF>Let <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
+    be a field then we define
+
+    <\equation*>
+      \<odot\>:<around*|{|1,-1|}>\<times\>F\<rightarrow\>F<text| by
+      z>\<odot\>f=<choice|<tformat|<table|<row|<cell|f<text| if
+      z>=1>>|<row|<cell|-f<text| if >x=-1>>>>>
+    </equation*>
+  </definition>
+
+  <\theorem>
+    <label|field (-1)^n.f>Let <math|n\<in\>\<bbb-N\><rsub|0>> then
+
+    <\equation*>
+      \<forall\>f\<in\>F we have <wide*|<around*|(|-1|)><rsup|n>|\<wide-underbrace\>><rsub|\<in\><around*|{|1,-1|}>\<subseteq\>\<bbb-Z\>>\<odot\>f=<wide*|<around*|(|-1|)><rsup|n>|\<wide-underbrace\>><rsub|\<in\><around*|{|1,-1|}>\<in\>F>\<cdot\>f<rsup|>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    We use induction to prove this, so let <math|f\<in\>F> and define
+
+    <\equation*>
+      S<rsub|f>=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|<around*|(|-1|)><rsup|n>\<odot\>f=<around*|(|-1|)><rsup|n>\<cdot\>f|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|0\<in\>S>>As <math|<around*|(|-1|)><rsup|0>\<odot\>f=1\<odot\>f\<equallim\><rsub|def>f=1\<cdot\>f\<equallim\><rsub|<text|[definition:
+      <reference|field power>>><around*|(|-1|)><rsup|0>\<cdot\>f> proving
+      that <math|0\<in\>S>
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let <math|n\<in\>S> then
+      we have either:
+
+      <\description>
+        <item*|<math|n<text| is even>>>Then <math|n+1> is odd
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|-1|)><rsup|n+1>\<odot\>f>|<cell|=>|<cell|<around*|(|-1|)>\<odot\>f>>|<row|<cell|>|<cell|\<equallim\><rsub|def>>|<cell|-f>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|field (-1).f=-f>]>>>|<cell|<around*|(|-1|)>\<cdot\>f>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|field power of 1 or -1>]>>>|<cell|<around*|(|-1|)><rsup|n+1>\<cdot\>f>>>>
+        </eqnarray*>
+
+        proving that <math|n+1\<in\>S> in this case.
+
+        <item*|<math|n<text| is odd>>>Then <math|n+1> is even
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|-1|)><rsup|n+1>\<odot\>f>|<cell|=>|<cell|1\<odot\>f>>|<row|<cell|>|<cell|\<equallim\><rsub|def>>|<cell|f>>|<row|<cell|>|<cell|\<equallim\>>|<cell|1\<cdot\>f>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|field power of 1 or -1>]>>>|<cell|<around*|(|-1|)><rsup|n+1>\<cdot\>f>>>>
+        </eqnarray*>
+
+        proving that <math|n+1\<in\>S>
+      </description>
+    </description>
+  </proof>
+
+  From now on, to avoid excessive notation we use <math|.> instead of
+  <math|\<odot\>> and rely on context to figure out which operator is used.
+  More specific if <math|\<sigma\>\<in\>P<rsub|n>> then
+  <math|sign<around*|(|\<sigma\>|)>\<in\><around*|{|-1,1|}>\<subseteq\>\<bbb-Z\>>
+  so that if <math|f\<in\>V> <math|sign<around*|(|\<sigma\>|)>\<cdot\>f> is
+  actually <math|sign<around*|(|\<alpha\>|)>\<odot\>f>.\ 
+
+  <\definition>
+    \;
+  </definition>
 </body>
 
 <\initial>
@@ -10542,11 +10774,8 @@
     <associate|eq 11.10.054|<tuple|11.11|?>>
     <associate|eq 11.10.064|<tuple|11.10|?>>
     <associate|eq 11.100.095|<tuple|11.107|?>>
-    <associate|eq 11.101.096|<tuple|11.106|?>>
     <associate|eq 11.101.097|<tuple|11.101|?>>
-    <associate|eq 11.101.97|<tuple|11.101|?>>
     <associate|eq 11.102.097|<tuple|11.102|?>>
-    <associate|eq 11.103.077|<tuple|11.102|?>>
     <associate|eq 11.103.097|<tuple|11.103|?>>
     <associate|eq 11.104.097|<tuple|11.104|?>>
     <associate|eq 11.105.097|<tuple|11.105|?>>
@@ -10646,6 +10875,18 @@
     <associate|eq 11.97.094|<tuple|11.98|?>>
     <associate|eq 11.98.094|<tuple|11.99|?>>
     <associate|eq 11.99.094|<tuple|11.100|?>>
+    <associate|field (-1).(-1)|<tuple|11.199|?>>
+    <associate|field (-1).f=-f|<tuple|11.200|?>>
+    <associate|field (-1).x|<tuple|11.200|?>>
+    <associate|field (-1).x (1)|<tuple|11.200|?>>
+    <associate|field (-1).x=-x|<tuple|11.201|?>>
+    <associate|field (-1)^n.f|<tuple|11.206|?>>
+    <associate|field -1|<tuple|11.198|?>>
+    <associate|field power|<tuple|11.202|?>>
+    <associate|field power of 1 or -1|<tuple|11.204|?>>
+    <associate|field power property|<tuple|11.203|?>>
+    <associate|field property|<tuple|11.201|?>>
+    <associate|field {-1,1}xF|<tuple|11.205|?>>
     <associate|linear (in)dependency properties (1)|<tuple|11.99|?>>
     <associate|linear Steinitz (1)|<tuple|11.101|?>>
     <associate|linear Steinitz (2)|<tuple|11.102|?>>
@@ -10706,18 +10947,19 @@
     <associate|linear span subsets|<tuple|11.86|?>>
     <associate|linear span({0})|<tuple|11.82|?>>
     <associate|linerar mapping between R^2 and C|<tuple|11.134|?>>
-    <associate|multi composition|<tuple|11.193|?>>
-    <associate|multi function of many arguments (1)|<tuple|11.188|?>>
-    <associate|multi induction argument|<tuple|11.187|?>>
-    <associate|multi multilinear mappin one argument is 0|<tuple|11.195|?>>
+    <associate|multi composition|<tuple|11.194|?>>
+    <associate|multi function of many arguments (1)|<tuple|11.189|?>>
+    <associate|multi induction argument|<tuple|11.188|?>>
+    <associate|multi multilinear mappin one argument is 0|<tuple|11.196|?>>
     <associate|multi multilinear mapping|<tuple|11.186|?>>
-    <associate|multi multilinear mapping and linear mapping|<tuple|11.189|?>>
+    <associate|multi multilinear mapping and linear mapping|<tuple|11.190|?>>
     <associate|multi multilinear mapping and product of
-    scalars|<tuple|11.194|?>>
+    scalars|<tuple|11.195|?>>
+    <associate|multi n-llinear function|<tuple|11.187|?>>
     <associate|multi tupple convention (1)|<tuple|11.185|?>>
-    <associate|multi zero function|<tuple|11.190|?>>
-    <associate|multilinear field product|<tuple|11.191|?>>
-    <associate|multilinear mapping sub-space|<tuple|11.192|?>>
+    <associate|multi zero function|<tuple|11.191|?>>
+    <associate|multilinear field product|<tuple|11.192|?>>
+    <associate|multilinear mapping sub-space|<tuple|11.193|?>>
     <associate|permutation Pn|<tuple|11.156|?>>
     <associate|permutation Pn is a group|<tuple|11.158|?>>
     <associate|permutation apply|<tuple|11.167|?>>
@@ -10734,12 +10976,8 @@
     <associate|permutation extension (1)|<tuple|11.164|?>>
     <associate|permutation extension (2)|<tuple|11.165|?>>
     <associate|permutation group|<tuple|11.25|?>>
-    <associate|permutation index calculation|<tuple|11.184|?>>
     <associate|permutation index function|<tuple|11.183|?>>
-    <associate|permutation index function property|<tuple|11.184|?>>
     <associate|permutation insert function|<tuple|11.182|?>>
-    <associate|permutation insert operation|<tuple|11.185|?>>
-    <associate|permutation insert operation meaning|<tuple|11.185|?>>
     <associate|permutation on subset|<tuple|11.26|?>>
     <associate|permutation phi function|<tuple|11.173|?>>
     <associate|permutation phi function is not zero|<tuple|11.175|?>>
