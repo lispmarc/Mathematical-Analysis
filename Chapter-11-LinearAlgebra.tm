@@ -7965,6 +7965,242 @@
     proving bijectivity, hence <math|\<rho\><rsub|n>\<in\>P<rsub|n>>.
   </proof>
 
+  Next we will prove that <math|P<rsub|n>> is a finite set, first we show how
+  we can extend a permutation in <math|P<rsub|n>> to a permutation in
+  <math|P<rsub|n+1>>.\ 
+
+  \;
+
+  TODO check this lemma
+
+  <\lemma>
+    <label|permutation extending a permutation (1)>Let
+    <math|n\<in\>\<bbb-N\>>, <math|i\<in\><around*|{|1,\<ldots\>,n+1|}>> and
+    <math|\<sigma\>\<in\>P<rsub|n>> then define
+
+    <\equation*>
+      \<sigma\><rsup|<around*|[|i|]>>:<around*|{|1,\<ldots\>,n+1|}>\<rightarrow\><around*|{|1,\<ldots\>,n+1|}>
+    </equation*>
+
+    by
+
+    <\enumerate>
+      <item>If <math|i=n+1> then\ 
+
+      <\equation*>
+        \<sigma\><rsup|<around*|[|i|]>><around*|(|j|)>=<choice|<tformat|<table|<row|<cell|n+1<text|
+        if >j=n+1>>|<row|<cell|\<sigma\><around*|(|j|)><text| if
+        >j\<in\><around*|{|1,\<ldots\>,n|}>>>>>>
+      </equation*>
+
+      <item>If <math|i\<in\><around*|{|1,\<ldots\>,n|}>> take
+      <math|k=\<sigma\><rsup|-1><around*|(|i|)>> [hence
+      <math|\<sigma\><around*|(|k|)>=i>]\ 
+
+      <\equation*>
+        \<sigma\><rsup|<around*|[|i|]>><around*|(|j|)>=<choice|<tformat|<table|<row|<cell|i<text|
+        if j=n+1>>>|<row|<cell|n+1<text| if
+        >j=k>>|<row|<cell|\<sigma\><around*|(|j|)><text| if
+        >j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>>>>>>
+      </equation*>
+    </enumerate>
+
+    then we have that\ 
+
+    <\equation*>
+      \<sigma\><rsup|<around*|[|i|]>>\<in\>P<rsub|n+1><text| and
+      >\<sigma\><rsup|<around*|[|i|]>><around*|(|n+1|)>=i
+    </equation*>
+  </lemma>
+
+  <\proof>
+    For <math|i\<in\><around*|{|1,\<ldots\>,n+1|}>> we have either:
+
+    <\description>
+      <item*|<math|i=n+1>>Then by definition\ 
+
+      <\equation*>
+        \<sigma\><rsup|<around*|[|n+1|]>><around*|(|i|)>=n+1
+      </equation*>
+
+      Further we have\ 
+
+      <\description>
+        <item*|injectivity>If <math|><math|\<sigma\><rsup|<around*|[|n+1|]>><around*|(|k|)>=\<sigma\><rsup|<around*|[|n+1|]>><around*|(|l|)>>
+        then we have for <math|k> either:
+
+        <\description>
+          <item*|<math|k\<in\><around*|{|1,\<ldots\>,n|}>>>Then
+          <math|><math|\<sigma\><rsup|<around*|[|n+1|]>><around*|(|k|)>=\<sigma\><around*|(|k|)>\<in\><around*|{|1,\<ldots\>,n|}>>
+          so that <math|n+1\<neq\>\<sigma\><rsup|<around*|[|n+1|]>><around*|(|k|)>=\<sigma\><rsup|<around*|[|n+1|]>><around*|(|l|)>>,
+          hence <math|> <math|><math|\<sigma\><rsup|<around*|[|n+1|]>><around*|(|l|)>\<in\><around*|{|1,\<ldots\>,n|}>>
+          so that <math|l\<in\><around*|{|1,\<ldots\>,n|}>> [as
+          <math|\<sigma\><rsup|<around*|[|n+1|]>><around*|(|n+1|)>=n+1\<nin\><around*|{|1,\<ldots\>,n|}>>].
+          So <math|\<sigma\><around*|(|k|)>=\<sigma\><rsup|<around*|[|n+1|]>><around*|(|k|)>=\<sigma\><rsup|<around*|[|n+1|]>><around*|(|l|)>=\<sigma\><around*|(|l|)>>
+          which as <math|\<sigma\>> is a bijection proves that <math|k=l>.
+
+          <item*|<math|k=n+1>>If <math|l\<in\><around*|{|1,\<ldots\>,n|}>>
+          then <math|><math|\<sigma\><rsup|<around*|[|n+1|]>><around*|(|l|)>=\<sigma\><around*|(|l|)>\<in\><around*|{|1,\<ldots\>,n|}>>
+          so that <math|\<sigma\><rsup|<around*|[|n+1|]>><around*|(|l|)>\<neq\>n+1=\<sigma\><rsup|<around*|[|n+1|]>><around*|(|k|)>>
+          a contradicting <math|\<sigma\><rsup|<around*|[|n+1|]>><around*|(|k|)>=\<sigma\><rsup|<around*|[|n+1|]>><around*|(|l|)>>,
+          hence <math|k=n+1=l>.
+        </description>
+
+        <item*|surjectity>If <math|j\<in\><around*|{|1,\<ldots\>,n+1|}>> then
+        we have either:
+
+        <\description>
+          <item*|<math|j=n+1>>Then <math|n+1\<in\><around*|{|1,\<ldots\>,n+1|}>>
+          and <math|\<sigma\><rsup|<around*|[|n+1|]>><around*|(|n+1|)>=n+1=j<rsup|>>
+
+          <item*|<math|j\<in\><around*|{|1,\<ldots\>,n|}>>>Then as
+          <math|\<sigma\>:<around*|{|1,\<ldots\>,n|}>\<rightarrow\><around*|{|1,\<ldots\>,n|}>>
+          is a bijection we have a <math|k\<in\><around*|{|1,\<ldots\>,n|}>\<subseteq\><around*|{|1,\<ldots\>,n+1|}>>
+          such that <math|j=\<sigma\><around*|(|k|)>=\<sigma\><rsup|<around*|[|i|]>><around*|(|k|)>>
+        </description>
+      </description>
+
+      Hence <math|><math|\<sigma\><rsup|<around*|[|n+1|]>>:<around*|{|1,\<ldots\>,n+1|}>\<rightarrow\><around*|{|1,\<ldots\>,n+1|}>>
+      is a bijection or\ 
+
+      <\equation*>
+        \<sigma\><rsup|<around*|[|n+1|]>>\<in\>P<rsub|n+1>
+      </equation*>
+
+      <item*|<math|i\<in\><around*|{|1,\<ldots\>,n|}>>>Let
+      <math|k=\<sigma\><rsup|-1><around*|[|i|]>\<Rightarrow\>k\<in\><around*|{|1,\<ldots\>,n|}>\<wedge\>\<sigma\><around*|(|k|)>=i>
+      then we have for <math|\<sigma\><rsup|<around*|[|i|]>>:<around*|{|1,\<ldots\>,n+1|}>\<rightarrow\><around*|{|1,\<ldots\>,n+1|}>>
+      that\ 
+
+      <\description>
+        <item*|injectivity>If \ <math|><math|\<sigma\><rsup|<around*|[|n+1|]>><around*|(|r|)>=\<sigma\><rsup|<around*|[|n+1|]>><around*|(|s|)>>
+        then we have to consider the following cases for <math|r,s>:
+
+        <\description>
+          <item*|<math|r=n+1\<wedge\>s=n+1>>Then <math|r=s>
+
+          <item*|<math|r=k\<wedge\>s=n+1>>Then
+          <math|n+1=\<sigma\><rsup|<around*|[|i|]>><around*|(|k|)>=\<sigma\><rsup|<around*|[|i|]>><around*|(|s|)>=\<sigma\><rsup|<around*|[|i|]>><around*|(|n+1|)>=i\<in\><around*|{|1,\<ldots\>,n|}>>
+          leading to the contradiction <math|n+1\<leqslant\>n>, so this case
+          does not occur.
+
+          <item*|<math|r\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>\<wedge\>s=n+1>>Then
+
+          <\equation*>
+            \<sigma\><around*|(|k|)>=i=\<sigma\><rsup|<around*|[|i|]>><around*|(|n+1|)>=\<sigma\><rsup|<around*|[|i|]>><around*|(|s|)>=\<sigma\><rsup|<around*|[|i|]>><around*|[|r|]>=\<sigma\><around*|[|r|]>
+          </equation*>
+
+          so that, as <math|\<sigma\>> is injective, <math|r=k> contradicting
+          <math|r\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>>. So this
+          case does not occur.\ 
+
+          <item*|<math|r=n+1\<wedge\>s=k>>Then
+
+          <\equation*>
+            n+1=\<sigma\><rsup|<around*|[|i|]>><around*|(|k|)>=\<sigma\><rsup|<around*|[|i|]>><around*|(|s|)>=\<sigma\><rsup|<around*|[|i|]>><around*|(|r|)>=\<sigma\><rsup|<around*|[|i|]>><around*|(|n+1|)>=i\<in\><around*|{|1,\<ldots\>,n|}>
+          </equation*>
+
+          leading to the contradiction <math|n+1\<leqslant\>n>. So this case
+          does not occur.\ 
+
+          <item*|<math|r=k\<wedge\>s=k>>Then <math|r=s>
+
+          <item*|<math|r\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>\<wedge\>s=k>>Then
+
+          <\equation*>
+            n+1=\<sigma\><rsup|<around*|[|i|]>><around*|[|k|]>=\<sigma\><rsup|<around*|[|i|]>><around*|(|s|)>=\<sigma\><rsup|<around*|[|i|]>><around*|(|r|)>=\<sigma\><around*|(|r|)>\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>
+          </equation*>
+
+          leading to the contradiction <math|n+1\<leqslant\>n>. Hence this
+          case does not occur.
+
+          <item*|<math|r=n+1\<wedge\>s\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>>>Then
+
+          <\equation*>
+            \<sigma\><around*|(|k|)>=i=\<sigma\><rsup|<around*|[|i|]>><around*|(|n+1|)>=\<sigma\><rsup|<around*|[|i|]>><around*|(|r|)>=\<sigma\><rsup|<around*|[|i|]>><around*|(|s|)>=\<sigma\><around*|(|s|)>,
+          </equation*>
+
+          which, as <math|\<sigma\>> is injective, proves that <math|k=s>
+          contradicting <math|s\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>>.
+          Hence this case does not occur. <math|>
+
+          <item*|<math|r=k\<wedge\>s\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>>>Then
+
+          <\equation*>
+            n+1=\<sigma\><rsup|<around*|[|i|]>><around*|(|k|)>=\<sigma\><rsup|<around*|[|i|]>><around*|(|r|)>=\<sigma\><rsup|<around*|[|i|]>><around*|(|s|)>=\<sigma\><around*|(|s|)>\<in\><around*|{|1,\<ldots\>,n|}>
+          </equation*>
+
+          leading to the contradiction <math|n+1>, hence this case does not
+          apply.
+
+          <item*|<math|r\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>\<wedge\>s\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>>>Then
+          <math|\<sigma\><around*|(|r|)>=\<sigma\><rsup|<around*|[|i|]>><around*|(|r|)>=\<sigma\><rsup|<around*|[|i|]>><around*|(|s|)>=\<sigma\><around*|(|s|)>>,
+          which as <math|\<sigma\>> is injective proves that <math|r=s>.
+        </description>
+
+        So in all valid cases we have <math|r=s> proving injectivity.
+
+        <item*|surjectity>Let <math|j\<in\><around*|{|1,\<ldots\>,n+1|}>>
+        then we have either:
+
+        <\description>
+          <item*|<math|j=n+1>>Then <math|\<sigma\><rsup|<around*|[|i|]>><around*|(|k|)>=n+1=j>
+
+          <item*|<math|j=i>>Then <math|\<sigma\><rsup|<around*|[|i|]>><around*|(|n+1|)>=i=j>
+
+          <item*|<math|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>>Then
+          as <math|\<sigma\>:<around*|{|1,\<ldots\>,n|}>\<rightarrow\><around*|{|1,\<ldots\>,n|}>>
+          is a bijection there exists<space|1em><math|l\<in\><around*|{|1,\<ldots\>,n|}>>
+          such that <math|\<sigma\><around*|(|l|)>=j>. If <math|l=k> then
+          <math|j=\<sigma\><around*|(|l|)>=\<sigma\><around*|(|k|)>=i>
+          contradicting <math|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>.
+          So we must have that <math|l\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>>,
+          hence <math|\<sigma\><rsup|<around*|[|i|]>><around*|(|l|)>=\<sigma\><around*|(|l|)>=j>
+        </description>
+
+        proving surjectivity.
+      </description>
+
+      Hence <math|\<sigma\><rsup|<around*|[|i|]>>:<around*|{|1,\<ldots\>,n+1|}>\<rightarrow\><around*|{|1,\<ldots\>,n+1|}>>
+      is surjective or\ 
+
+      <\equation*>
+        \<sigma\><rsup|<around*|[|i|]>>\<in\>P<rsub|n+1>
+      </equation*>
+    </description>
+  </proof>
+
+  TODO
+
+  <\definition>
+    <label|faculity>Let <math|fac:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\>>
+    is defined by\ 
+
+    <\equation*>
+      fac<around*|(|n|)>=<choice|<tformat|<table|<row|<cell|1<text| if
+      >m=0>>|<row|<cell|n\<cdot\>fac<around*|(|n-1|)><text| if
+      >n\<in\>\<bbb-N\>>>>>>
+    </equation*>
+
+    We will use the common convention and write <math|n!> for
+    <math|fac<around*|(|n|)>>.
+  </definition>
+
+  <\theorem>
+    <label|permutation Pn is finite>Let <math|n\<in\>\<bbb-N\>> then
+    <math|P<rsub|n>> is finite and <math|card<around*|(|P<rsub|n>|)>=n!>
+  </theorem>
+
+  <\proof>
+    we prove this by induction, so let TODO
+
+    <\equation*>
+      S=<around*|{|n\<in\>|}>
+    </equation*>
+
+    \;
+  </proof>
+
   <\theorem>
     <label|permutation Pn is a group>Let <math|n\<in\>\<bbb-N\>> then
     <math|<around*|\<langle\>|P<rsub|n>,\<circ\>|\<rangle\>>> is a group
@@ -9991,6 +10227,46 @@
     </equation*>
   </definition>
 
+  <\proposition>
+    <label|multi tupple convention and permutations>Let
+    <math|n\<in\>\<bbb-N\>>, <math|<around*|{|X<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a family of sets, <math|\<sigma\>\<in\>P<rsub|n>>,
+    <math|i\<in\><around*|{|1,\<ldots\>,n|}>> and
+    <math|x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+    if <math|x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,a,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>
+    then
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|x\<circ\>\<sigma\>>|<cell|=>|<cell|<around*|(|<around*|(|x\<circ\>\<sigma\>|)><rsub|1>,\<ldots\>,<around*|(|x\<circ\>\<sigma\>|)><rsub|\<sigma\><rsup|-1><around*|(|i|)>-1>,a,<around*|(|x\<circ\>\<sigma\>|)><rsub|\<sigma\><rsup|-1><around*|(|i|)>+1>,\<ldots\>,<around*|(|x\<circ\>\<sigma\>|)><rsub|n>|)>>>>>
+    </eqnarray*>
+  </proposition>
+
+  <\proof>
+    <math|>Let <math|i\<in\><around*|{|1,\<ldots\>n|}>>. As
+    <math|x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,a,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>
+    we have that <math|x<around*|(|i|)>=x<rsub|i>=a>. As
+
+    <\equation*>
+      <around*|(|x\<circ\>\<sigma\>|)><rsub|\<sigma\><rsup|-1><around*|(|i|)>>=x<around*|(|\<sigma\><around*|(|\<sigma\><rsup|-1><around*|(|i|)>|)>|)>=x<around*|(|i|)>=a
+    </equation*>
+
+    we have by definition that\ 
+
+    <\equation*>
+      x\<circ\>\<sigma\>=<around*|(|<around*|(|x\<circ\>\<sigma\>|)><rsub|1>,\<ldots\>,<around*|(|x\<circ\>\<sigma\>|)><rsub|\<sigma\><rsup|-1><around*|(|i|)>-1>,a,<around*|(|x\<circ\>\<sigma\>|)><rsub|\<sigma\><rsup|-1><around*|(|i|)>+1>,\<ldots\>,<around*|(|x\<circ\>\<sigma\>|)><rsub|n>|)>
+    </equation*>
+  </proof>
+
+  <\proof>
+    For <math|i\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>> we have
+    <math|x<rsub|\<sigma\><around*|(|i|)>>=x<around*|(|\<sigma\><around*|(|i|)>|)>=<around*|(|x\<circ\>\<sigma\>|)><around*|(|i|)>=<around*|(|x\<circ\>\<sigma\>|)><rsub|i>>
+    and <math|a=>
+  </proof>
+
+  <\note>
+    \;
+  </note>
+
   <\definition>
     <label|multi multilinear mapping>Let <math|n\<in\>\<bbb-N\>>,
     <math|i\<in\><around*|{|1,\<ldots\>,n|}>>,<math|<around*|{|X<rsub|j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>>
@@ -10002,7 +10278,7 @@
 
     <\enumerate>
       <item><math|\<forall\>x,y\<in\>X<rsub|i>> and
-      <math|\<forall\>><math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,x+y,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X>\ 
+      <math|\<forall\>><math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,x+y,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>>\ 
 
       <\equation*>
         L<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,x+y,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>=L<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,x,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>+L<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,y,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>
@@ -10032,8 +10308,9 @@
   This leads to the definition of <math|n>-linear functions.\ 
 
   <\definition>
-    <label|multi n-llinear function>Let <math|n\<in\>\<bbb-N\>> and
-    <math|X,Y> vector spaces over a field <math|F> then a multilinear mapping\ 
+    <label|multi n-linear function><index|n-linear mapping>Let
+    <math|n\<in\>\<bbb-N\>> and <math|X,Y> vector spaces over a field
+    <math|F> then a multilinear mapping\ 
 
     <\equation*>
       L:X<rsup|n>\<rightarrow\>Y
@@ -10691,8 +10968,156 @@
   actually <math|sign<around*|(|\<alpha\>|)>\<odot\>f>.\ 
 
   <\definition>
-    \;
+    <label|determinant symmetric>Let <math|X,Y> be vector spaces over a field
+    <math|F>, <math|m\<in\>\<bbb-N\>> then a <math|n>-linear mapping
+    <math|L\<in\>Hom<around*|(|X<rsup|n>;Y|)>> [see definition:
+    <reference|multi n-linear function>] is <with|font-series|bold|symmetric>
+    if <math|\<forall\>\<sigma\>\<in\>P<rsub|n>> we have
+
+    <\equation*>
+      \<sigma\>L=L
+    </equation*>
+
+    [see definition: <reference|permutation apply>].
   </definition>
+
+  More usefull than symmetric <math|n>-linear mappings are skew-linear
+  mappings.
+
+  <\definition>
+    <label|determinant skew-symmetric>Let <math|X,Y> be vector spaces over a
+    field <math|F>, <math|n\<in\>\<bbb-N\>> then a <math|n>-linear mapping
+    <math|L\<in\>Hom<around*|(|X<rsup|n>;Y|)>> [see definition:
+    <reference|multi n-linear function>] is
+    <with|font-series|bold|skew-symmetric> if
+    <math|\<forall\>\<sigma\>\<in\>P<rsub|n>> we have
+
+    <\equation*>
+      \<sigma\>L=sign<around*|(|\<sigma\>|)>\<cdot\>L
+    </equation*>
+
+    [see definition: <reference|permutation apply>].
+  </definition>
+
+  A trivial example of a mapping that is at the same time symmetric and
+  skew-symmetric.\ 
+
+  <\example>
+    <label|determinant skew-symmetric/symmetric n-linear function>Let
+    <math|X,Y> be vector space over a field <math|F> then if
+    <math|L\<in\>Hom<around*|(|X<rsup|1>;Y|)>> <math|L> is symmetric and
+    skew-symmetric.
+  </example>
+
+  <\proof>
+    If <math|\<sigma\>\<in\>P<rsub|1>> then
+    <math|\<sigma\>=Id<rsub|<around*|{|1|}>>> so that
+    <math|sign<around*|(|\<sigma\>|)>=1> and
+    <math|\<sigma\>L<around*|(|x|)>=L<around*|(|x\<circ\>\<sigma\>|)>=L>
+    proving that
+
+    <\equation*>
+      \<sigma\>L=L=1\<cdot\>L=sign<around*|(|\<sigma\>|)>\<cdot\>L
+    </equation*>
+  </proof>
+
+  If <math|L\<in\>Hom<around*|(|X<rsup|n>;Y|)>> is symmetric then
+  <math|\<sigma\>L=L\<in\>Hom<around*|(|X<rsup|n>;Y|)>> and if <math|L> is
+  skew-symmetric we have <math|\<sigma\>L=sign<around*|(|\<sigma\>|)>\<cdot\>L\<in\>Hom<around*|(|X;Y|)>>.
+  Actually this is a general result valid for every <math|n>-linear mapping.
+
+  <\theorem>
+    <label|determinant permutation applied on n-linear function>Let
+    <math|X,Y> be vector spaces over a field <math|F>,
+    <math|n\<in\>\<bbb-N\>> and <math|L\<in\>Hom<around*|(|X<rsup|n>;Y|)>> a
+    <math|n>-linear mapping then
+
+    <\equation*>
+      \<forall\>\<sigma\>\<in\>P<rsub|n><text| we have
+      >\<sigma\>L\<in\>Hom<around*|(|X<rsup|n>;Y|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Let <math|i\<in\><around*|{|1,\<ldots\>,|}>>, <math|\<alpha\>\<in\>F> and
+    <math|x,y\<in\>X<rsub|i>>. Then if
+
+    <\equation*>
+      z=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,x+y,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|n>
+    </equation*>
+
+    <\equation*>
+      t=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,\<alpha\>\<cdot\>x,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>\<in\>x<rsup|n>
+    </equation*>
+
+    <\equation*>
+      u=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,x,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|n>
+    </equation*>
+
+    <\equation*>
+      v=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,y,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|n>
+    </equation*>
+
+    Let <math|k=\<sigma\><rsup|-1><around*|(|i|)>> then if <math|j\<neq\>k>
+    we must have <math|\<sigma\><around*|(|j|)>\<neq\>i> [otherwise if
+    <math|\<sigma\><around*|(|j|)>=i> we have as <math|\<sigma\>> is
+    bijective that <math|j=\<sigma\><rsup|-1><around*|(|i|)>=k> a
+    contradiction]. So <math|\<forall\>j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>>
+    we have:
+
+    <\equation>
+      <label|eq 11.108.097><around*|(|z\<circ\>\<sigma\>|)><rsub|j>=z<around*|(|\<sigma\><around*|(|j|)>|)>=u<around*|(|\<sigma\><around*|(|j|)>|)>=<around*|(|x\<circ\>\<sigma\>|)><rsub|j>
+    </equation>
+
+    <\equation>
+      <label|eq 11.109.097><around*|(|z\<circ\>\<sigma\>|)><rsub|j>=z<around*|(|\<sigma\><around*|(|j|)>|)>=v<around*|(|\<sigma\><around*|(|j|)>|)>=<around*|(|v\<circ\>\<sigma\>|)><rsub|j>
+    </equation>
+
+    <\equation>
+      <label|eq 11.110.097><around*|(|z\<circ\>\<sigma\>|)><rsub|j>=z<around*|(|\<sigma\><around*|(|j|)>|)>=t<around*|(|\<sigma\><around*|(|j|)>|)>=<around*|(|v\<circ\>\<sigma\>|)><rsub|j>
+    </equation>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|\<sigma\>L|)><around*|(|z|)>>|<cell|=>|<cell|L<around*|(|z\<circ\>\<sigma\>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|multi tupple convention and
+      permutations>]>>>|<cell|L<around*|(|<around*|(|z\<circ\>\<sigma\>|)><rsub|1>,\<ldots\>,<around*|(|z\<circ\>\<sigma\>|)><rsub|\<sigma\><rsup|-1><around*|(|i|)>-1>,x+y,<around*|(|z\<circ\>\<sigma\>|)><rsub|\<sigma\><rsup|-1><around*|(|i|)>+1>,\<ldots\>,<around*|(|z\<circ\>\<sigma\>|)><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|<around*|(|z\<circ\>\<sigma\>|)><rsub|1>,\<ldots\>,<around*|(|z\<circ\>\<sigma\>|)><rsub|\<sigma\><rsup|-1><around*|(|i|)>-1>,x,<around*|(|z\<circ\>\<sigma\>|)><rsub|\<sigma\><rsup|-1><around*|(|i|)>+1>,\<ldots\>,<around*|(|z\<circ\>\<sigma\>|)><rsub|n>|)>+L<around*|(|<around*|(|z\<circ\>\<sigma\>|)><rsub|1>,\<ldots\>,<around*|(|z\<circ\>\<sigma\>|)><rsub|\<sigma\><rsup|-1><around*|(|i|)>-1>,y,<around*|(|z\<circ\>\<sigma\>|)><rsub|\<sigma\><rsup|-1><around*|(|i|)>+1>,\<ldots\>,<around*|(|z\<circ\>\<sigma\>|)><rsub|n>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eqs:
+      <reference|eq 11.108.097>,<reference|eq
+      11.109.097>]>>>|<cell|L<around*|(|<around*|(|u\<circ\>\<sigma\>|)><rsub|1>,\<ldots\>,<around*|(|u\<circ\>\<sigma\>|)><rsub|\<sigma\><rsup|-1><around*|(|i|)>-1>,x,<around*|(|u\<circ\>\<sigma\>|)><rsub|\<sigma\><rsup|-1><around*|(|i|)>+1>,\<ldots\>,<around*|(|u\<circ\>\<sigma\>|)><rsub|n>|)>+L<around*|(|<around*|(|v\<circ\>\<sigma\>|)><rsub|1>,\<ldots\>,<around*|(|v\<circ\>\<sigma\>|)><rsub|\<sigma\><rsup|-1><around*|(|i|)>-1>,y,<around*|(|v\<circ\>\<sigma\>|)><rsub|\<sigma\><rsup|-1><around*|(|i|)>+1>,\<ldots\>,<around*|(|v\<circ\>\<sigma\>|)><rsub|n>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|multi tupple convention and
+      permutations>]>>>|<cell|L<around*|(|u\<circ\>\<sigma\>|)>+L<around*|(|v\<circ\>\<sigma\>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<sigma\>L|)><around*|(|u|)>+<around*|(|\<sigma\>L|)><around*|(|v|)>>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation*>
+      <around*|(|\<sigma\>L|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,x+y,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>=<around*|(|\<sigma\>L|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,x,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>+<around*|(|\<sigma\>L|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,y,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>
+    </equation*>
+
+    Further we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|\<sigma\>L|)><around*|(|t|)>>|<cell|=>|<cell|L<around*|(|t\<circ\>\<sigma\>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|multi tupple convention and
+      permutations>]>>>|<cell|L<around*|(|<around*|(|t\<circ\>\<sigma\>|)><rsub|1>,\<ldots\>,<around*|(|t\<circ\>\<sigma\>|)><rsub|\<sigma\><rsup|-1><around*|(|i|)>-1>,\<alpha\>\<cdot\>x,<around*|(|t\<circ\>\<sigma\>|)><rsub|\<sigma\><rsup|-1><around*|(|i|)>+1>,\<ldots\>,<around*|(|t\<circ\>\<sigma\>|)><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\>L<around*|(|<around*|(|t\<circ\>\<sigma\>|)><rsub|1>,\<ldots\>,<around*|(|t\<circ\>\<sigma\>|)><rsub|\<sigma\><rsup|-1><around*|(|i|)>-1>,x,<around*|(|t\<circ\>\<sigma\>|)><rsub|\<sigma\><rsup|-1><around*|(|i|)>+1>,\<ldots\>,<around*|(|t\<circ\>\<sigma\>|)><rsub|n>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|eq 11.110.097>]>>>|<cell|\<alpha\>\<cdot\>L<around*|(|<around*|(|u\<circ\>\<sigma\>|)><rsub|1>,\<ldots\>,<around*|(|u\<circ\>\<sigma\>|)><rsub|\<sigma\><rsup|-1><around*|(|i|)>-1>,x,<around*|(|u\<circ\>\<sigma\>|)><rsub|\<sigma\><rsup|-1><around*|(|i|)>+1>,\<ldots\>,<around*|(|u\<circ\>\<sigma\>|)><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\>L<around*|(|u\<circ\>\<sigma\>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<sigma\>L|)><around*|(|u|)>>>>>
+    </eqnarray*>
+
+    <\equation*>
+      <around*|(|\<sigma\>L|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,\<alpha\>\<cdot\>x,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>=\<alpha\>\<cdot\><around*|(|\<sigma\>L|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,x,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>
+    </equation*>
+
+    Hence <math|\<sigma\>L> is multilinear or
+    <math|\<sigma\>L\<in\>Hom<around*|(|X<rsup|n>;Y|)>>.
+  </proof>
+
+  The next theorem shows we can construct a new skew-symmetric from a
+  skew-symmetric <math|n>-linear mapping.
+
+  <\theorem>
+    \;
+  </theorem>
+
+  \;
 </body>
 
 <\initial>
@@ -10741,7 +11166,8 @@
     <associate|auto-38|<tuple|11.6|?>>
     <associate|auto-39|<tuple|<with|mode|<quote|math>|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,a,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>|?>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|<big|sum><rsub|i=0><rsup|n>x<rsub|i>>|?>>
-    <associate|auto-40|<tuple|11.7|?>>
+    <associate|auto-40|<tuple|n-linear mapping|?>>
+    <associate|auto-41|<tuple|11.7|?>>
     <associate|auto-5|<tuple|<with|mode|<quote|math>|<big|prod><rsub|i=0><rsup|n>x<rsub|i>>|?>>
     <associate|auto-6|<tuple|11.1.2|?>>
     <associate|auto-7|<tuple|11.1.3|?>>
@@ -10768,6 +11194,12 @@
     <associate|basis reducing spanning set to a basis|<tuple|11.111|?>>
     <associate|basis sub-space|<tuple|11.117|?>>
     <associate|basis sum of delta|<tuple|11.123|?>>
+    <associate|determinant permutation applied on n-linear
+    function|<tuple|11.215|?>>
+    <associate|determinant skew-symmetric|<tuple|11.213|?>>
+    <associate|determinant skew-symmetric/symmetric n-linear
+    function|<tuple|11.214|?>>
+    <associate|determinant symmetric|<tuple|11.212|?>>
     <associate|disjoint family property|<tuple|11.75|?>>
     <associate|eq 11.081.94|<tuple|11.82|?>>
     <associate|eq 11.1.054|<tuple|11.1|?>>
@@ -10780,8 +11212,12 @@
     <associate|eq 11.104.097|<tuple|11.104|?>>
     <associate|eq 11.105.097|<tuple|11.105|?>>
     <associate|eq 11.106.097|<tuple|11.106|?>>
+    <associate|eq 11.108.097|<tuple|11.108|?>>
+    <associate|eq 11.108.97|<tuple|11.108|?>>
+    <associate|eq 11.109.097|<tuple|11.109|?>>
     <associate|eq 11.11.054|<tuple|11.13|?>>
     <associate|eq 11.11.055|<tuple|11.12|?>>
+    <associate|eq 11.110.097|<tuple|11.110|?>>
     <associate|eq 11.13.055|<tuple|11.14|?>>
     <associate|eq 11.15.090|<tuple|11.15|?>>
     <associate|eq 11.16.090|<tuple|11.16|?>>
@@ -10875,18 +11311,16 @@
     <associate|eq 11.97.094|<tuple|11.98|?>>
     <associate|eq 11.98.094|<tuple|11.99|?>>
     <associate|eq 11.99.094|<tuple|11.100|?>>
-    <associate|field (-1).(-1)|<tuple|11.199|?>>
-    <associate|field (-1).f=-f|<tuple|11.200|?>>
-    <associate|field (-1).x|<tuple|11.200|?>>
-    <associate|field (-1).x (1)|<tuple|11.200|?>>
-    <associate|field (-1).x=-x|<tuple|11.201|?>>
-    <associate|field (-1)^n.f|<tuple|11.206|?>>
-    <associate|field -1|<tuple|11.198|?>>
-    <associate|field power|<tuple|11.202|?>>
-    <associate|field power of 1 or -1|<tuple|11.204|?>>
-    <associate|field power property|<tuple|11.203|?>>
-    <associate|field property|<tuple|11.201|?>>
-    <associate|field {-1,1}xF|<tuple|11.205|?>>
+    <associate|faculity|<tuple|11.159|?>>
+    <associate|field (-1).(-1)|<tuple|11.204|?>>
+    <associate|field (-1).f=-f|<tuple|11.205|?>>
+    <associate|field (-1).x=-x|<tuple|11.206|?>>
+    <associate|field (-1)^n.f|<tuple|11.211|?>>
+    <associate|field -1|<tuple|11.203|?>>
+    <associate|field power|<tuple|11.207|?>>
+    <associate|field power of 1 or -1|<tuple|11.209|?>>
+    <associate|field power property|<tuple|11.208|?>>
+    <associate|field {-1,1}xF|<tuple|11.210|?>>
     <associate|linear (in)dependency properties (1)|<tuple|11.99|?>>
     <associate|linear Steinitz (1)|<tuple|11.101|?>>
     <associate|linear Steinitz (2)|<tuple|11.102|?>>
@@ -10947,54 +11381,57 @@
     <associate|linear span subsets|<tuple|11.86|?>>
     <associate|linear span({0})|<tuple|11.82|?>>
     <associate|linerar mapping between R^2 and C|<tuple|11.134|?>>
-    <associate|multi composition|<tuple|11.194|?>>
-    <associate|multi function of many arguments (1)|<tuple|11.189|?>>
-    <associate|multi induction argument|<tuple|11.188|?>>
-    <associate|multi multilinear mappin one argument is 0|<tuple|11.196|?>>
-    <associate|multi multilinear mapping|<tuple|11.186|?>>
-    <associate|multi multilinear mapping and linear mapping|<tuple|11.190|?>>
+    <associate|multi composition|<tuple|11.199|?>>
+    <associate|multi function of many arguments (1)|<tuple|11.194|?>>
+    <associate|multi induction argument|<tuple|11.193|?>>
+    <associate|multi multilinear mappin one argument is 0|<tuple|11.201|?>>
+    <associate|multi multilinear mapping|<tuple|11.191|?>>
+    <associate|multi multilinear mapping and linear mapping|<tuple|11.195|?>>
     <associate|multi multilinear mapping and product of
-    scalars|<tuple|11.195|?>>
-    <associate|multi n-llinear function|<tuple|11.187|?>>
-    <associate|multi tupple convention (1)|<tuple|11.185|?>>
-    <associate|multi zero function|<tuple|11.191|?>>
-    <associate|multilinear field product|<tuple|11.192|?>>
-    <associate|multilinear mapping sub-space|<tuple|11.193|?>>
+    scalars|<tuple|11.200|?>>
+    <associate|multi n-linear function|<tuple|11.192|?>>
+    <associate|multi tupple convention (1)|<tuple|11.188|?>>
+    <associate|multi tupple convention and permutations|<tuple|11.189|?>>
+    <associate|multi zero function|<tuple|11.196|?>>
+    <associate|multilinear field product|<tuple|11.197|?>>
+    <associate|multilinear mapping sub-space|<tuple|11.198|?>>
     <associate|permutation Pn|<tuple|11.156|?>>
-    <associate|permutation Pn is a group|<tuple|11.158|?>>
-    <associate|permutation apply|<tuple|11.167|?>>
-    <associate|permutation apply and composition|<tuple|11.169|?>>
-    <associate|permutation apply and field|<tuple|11.170|?>>
-    <associate|permutation apply identity|<tuple|11.168|?>>
-    <associate|permutation apply transposition on phi|<tuple|11.176|?>>
+    <associate|permutation Pn is a group|<tuple|11.161|?>>
+    <associate|permutation Pn is finite|<tuple|11.160|?>>
+    <associate|permutation apply|<tuple|11.170|?>>
+    <associate|permutation apply and composition|<tuple|11.172|?>>
+    <associate|permutation apply and field|<tuple|11.173|?>>
+    <associate|permutation apply identity|<tuple|11.171|?>>
+    <associate|permutation apply transposition on phi|<tuple|11.179|?>>
     <associate|permutation as a composition of disjoint
-    transpositions|<tuple|11.166|?>>
+    transpositions|<tuple|11.169|?>>
     <associate|permutation composition of a family of
-    permutations|<tuple|11.161|?>>
+    permutations|<tuple|11.164|?>>
     <associate|permutation definition|<tuple|11.24|?>>
-    <associate|permutation existence of sign|<tuple|11.178|?>>
-    <associate|permutation extension (1)|<tuple|11.164|?>>
-    <associate|permutation extension (2)|<tuple|11.165|?>>
+    <associate|permutation existence of sign|<tuple|11.181|?>>
+    <associate|permutation extending a permutation (1)|<tuple|11.158|?>>
+    <associate|permutation extension (1)|<tuple|11.167|?>>
+    <associate|permutation extension (2)|<tuple|11.168|?>>
     <associate|permutation group|<tuple|11.25|?>>
-    <associate|permutation index function|<tuple|11.183|?>>
-    <associate|permutation insert function|<tuple|11.182|?>>
+    <associate|permutation index function|<tuple|11.186|?>>
+    <associate|permutation insert function|<tuple|11.185|?>>
     <associate|permutation on subset|<tuple|11.26|?>>
-    <associate|permutation phi function|<tuple|11.173|?>>
-    <associate|permutation phi function is not zero|<tuple|11.175|?>>
+    <associate|permutation phi function|<tuple|11.176|?>>
+    <associate|permutation phi function is not zero|<tuple|11.178|?>>
     <associate|permutation reverse|<tuple|11.157|?>>
-    <associate|permutation sign|<tuple|11.179|?>>
-    <associate|permutation sign calculation|<tuple|11.180|?>>
+    <associate|permutation sign|<tuple|11.182|?>>
+    <associate|permutation sign calculation|<tuple|11.183|?>>
     <associate|permutation sign of composition of
-    transpositions|<tuple|11.177|?>>
-    <associate|permutation sign properties|<tuple|11.181|?>>
-    <associate|permutation sum|<tuple|11.160|?>>
-    <associate|permutation transosition proeprties|<tuple|11.163|?>>
+    transpositions|<tuple|11.180|?>>
+    <associate|permutation sign properties|<tuple|11.184|?>>
+    <associate|permutation sum|<tuple|11.163|?>>
+    <associate|permutation transosition proeprties|<tuple|11.166|?>>
     <associate|permutation transpistion symmetry
-    permutation|<tuple|11.172|?>>
+    permutation|<tuple|11.175|?>>
     <associate|permutation transposition|<tuple|11.27|?>>
-    <associate|permutation transposition 1|<tuple|11.162|?>>
+    <associate|permutation transposition 1|<tuple|11.165|?>>
     <associate|permutation transposition properties|<tuple|11.28|?>>
-    <associate|permutation transposition symmetry|<tuple|11.171|?>>
+    <associate|permutation transposition symmetry|<tuple|11.174|?>>
     <associate|permutation {0,..,n and transposition|<tuple|11.29|?>>
     <associate|product finite product|<tuple|11.2|?>>
     <associate|sum alternative definition|<tuple|11.4|?>>
@@ -11098,6 +11535,8 @@
       <tuple|<tuple|<with|mode|<quote|math>|sign<around*|(|\<sigma\>|)>>>|<pageref|auto-37>>
 
       <tuple|<tuple|<with|mode|<quote|math>|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,a,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>>|<pageref|auto-39>>
+
+      <tuple|<tuple|n-linear mapping>|<pageref|auto-40>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|11<space|2spc>Linear
@@ -11190,7 +11629,7 @@
 
       11.7<space|2spc>Determinant Functions
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-40>
+      <no-break><pageref|auto-41>
     </associate>
   </collection>
 </auxiliary>
