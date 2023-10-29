@@ -11183,7 +11183,7 @@
       we have <math|0\<in\>S>
 
       <item*|<math|i\<in\>S\<Rightarrow\>i+1\<in\>S>>then for <math|i+1> we
-      have either: TODO
+      have either:\ 
 
       <\description>
         <item*|<math|i+1\<in\><around*|{|0,\<ldots\>,n|}>>><item*|<math|i+1\<in\><around*|{|0,\<ldots\>,n|}>>>Then
@@ -11280,6 +11280,51 @@
     [theorem: <reference|complex recursion step form finite>] where
     <math|a\<in\>A> and <math|g:<around*|{|0,\<ldots\>,n-1|}>\<times\>A\<rightarrow\>A>
     is defined by <math|g<around*|(|n,x|)>=G<around*|(|n,x|)>>.
+  </definition>
+
+  As a application of recursion we show how we can define a product of a
+  natural number and a element of a field by repeating addition.
+
+  <\definition>
+    Let <math|<around*|\<langle\>|F,\<oplus\>,\<odot\>|\<rangle\>>> be a
+    field with additive neutral element <math|e> then we define
+
+    <\equation*>
+      \<ast\>:\<bbb-N\><rsub|0,\<bbb-C\>>\<times\>F\<rightarrow\>F<text|
+      where >n\<ast\>f=f<rsub|\<ast\>><around*|(|n|)>
+    </equation*>
+
+    where <math|f<rsub|\<ast\>>:F\<rightarrow\>F> is defined by\ 
+
+    <\equation*>
+      f<rsub|\<ast\>><around*|(|0|)>=e
+    </equation*>
+
+    <\equation*>
+      f<rsub|\<ast\>><around*|(|n+1|)>=f\<oplus\>f<rsub|\<ast\>><around*|(|n|)>
+    </equation*>
+  </definition>
+
+  <\example>
+    Let <math|<around*|\<langle\>|F,\<oplus\>,\<odot\>|\<rangle\>>> be a
+    field with additive neutral element <math|e> then\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|0\<ast\>f>|<cell|=>|<cell|f<rsub|\<ast\>><around*|(|0|)>=e>>|<row|<cell|1\<ast\>f>|<cell|=>|<cell|f<rsub|\<ast\>><around*|(|1|)>=f\<oplus\>f<rsub|\<ast\>><around*|(|0|)>=f\<oplus\>e=f>>|<row|<cell|2\<cdot\>f>|<cell|=>|<cell|f<rsub|\<ast\>><around*|(|2|)>=f\<oplus\>f<rsub|\<ast\>><around*|(|1|)>=f\<oplus\>f>>|<row|<cell|3\<cdot\>f>|<cell|=>|<cell|f<rsub|\<ast\>><around*|(|3|)>=f\<oplus\>f<rsub|\<ast\>><around*|(|2|)>=f\<oplus\>f\<oplus\>f>>|<row|<cell|>|<cell|\<ldots\>>|<cell|>>|<row|<cell|n\<cdot\>f>|<cell|=>|<cell|<wide*|f\<oplus\>\<cdots\>\<oplus\>f|\<wide-underbrace\>><rsub|n>>>>>
+    </eqnarray*>
+  </example>
+
+  The above allows us to define a field of characteristics zero, which we
+  will use if talk about determinant functions.
+
+  <\definition>
+    <label|field with characteristics zero>Let
+    <math|<around*|\<langle\>|F,\<oplus\>,\<odot\>|\<rangle\>>> be a field
+    with additive neutral element <math|e> and multiplicative unit <math|u>
+    then <math|<around*|\<langle\>|F,\<oplus\>,\<odot\>|\<rangle\>>> is of
+    <with|font-series|bold|characteristics zero> if
+    <math|\<forall\>n\<in\>\<bbb-N\><rsub|\<bbb-C\>>> we have
+    <math|n\<ast\>u\<neq\>e>
   </definition>
 
   <section|Power in <math|\<bbb-C\>>>
@@ -13160,6 +13205,20 @@
     <math|A=B>.
   </proof>
 
+  <\theorem>
+    <label|complex cardinality and finite family>Let <math|I> be a finite
+    set, <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>X> then
+    <math|<around*|{|x<rsub|i>\|i\<in\>I|}>> is finite and
+
+    <\equation*>
+      card<around*|(|<around*|{|x<rsub|i>\|i\<in\>I|}>|)>\<leqslant\>card<around*|(|I|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    This follows from [theorem: <reference|set of finite family is finite>].
+  </proof>
+
   <subsection|Extended real numbers>
 
   Finally we define the set of extended real numbers which usefull if we have
@@ -13564,7 +13623,8 @@
     <associate|auto-7|<tuple|absolute value|?>>
     <associate|auto-8|<tuple|<with|mode|<quote|math>|<around*|\||x|\|>>|?>>
     <associate|auto-9|<tuple|<with|mode|<quote|math>|m\|n>|?>>
-    <associate|complex (x^n-1)\<gtr\>=n.(x-1)|<tuple|10.49|?>>
+    <associate|cardinality and finite family|<tuple|10.83|?>>
+    <associate|complex (x^n-1)\<gtr\>=n.(x-1)|<tuple|10.52|?>>
     <associate|complex 0\<less\>1|<tuple|10.10|?>>
     <associate|complex Archimedean property|<tuple|10.24|?>>
     <associate|complex Archimedean property consequence (1)|<tuple|10.25|?>>
@@ -13576,66 +13636,67 @@
     <associate|complex RC order (1)|<tuple|10.7|?>>
     <associate|complex RC order (2)|<tuple|10.8|?>>
     <associate|complex RC order properties|<tuple|10.14|?>>
-    <associate|complex a\<less\>2^n|<tuple|10.48|?>>
-    <associate|complex cardinality|<tuple|10.74|?>>
-    <associate|complex cardinality adding element|<tuple|10.78|?>>
-    <associate|complex cardinality alternative|<tuple|10.75|?>>
-    <associate|complex cardinality equality and subset|<tuple|10.79|?>>
-    <associate|complex cardinality properties|<tuple|10.77|?>>
-    <associate|complex conjugate|<tuple|10.67|?>>
-    <associate|complex conjugate properties|<tuple|10.68|?>>
+    <associate|complex a\<less\>2^n|<tuple|10.51|?>>
+    <associate|complex cardinality|<tuple|10.77|?>>
+    <associate|complex cardinality adding element|<tuple|10.81|?>>
+    <associate|complex cardinality alternative|<tuple|10.78|?>>
+    <associate|complex cardinality and finite family|<tuple|10.83|?>>
+    <associate|complex cardinality equality and subset|<tuple|10.82|?>>
+    <associate|complex cardinality properties|<tuple|10.80|?>>
+    <associate|complex conjugate|<tuple|10.70|?>>
+    <associate|complex conjugate properties|<tuple|10.71|?>>
     <associate|complex definition by recursion (1)|<tuple|10.37|?>>
     <associate|complex definition by recursion (2)|<tuple|10.38|?>>
     <associate|complex definition recursion finite|<tuple|10.39|?>>
     <associate|complex densitiy theorem|<tuple|10.27|?>>
     <associate|complex embedding|<tuple|10.5|?>>
     <associate|complex field|<tuple|10.2|?>>
-    <associate|complex finite lemma|<tuple|10.71|?>>
-    <associate|complex finite set condition|<tuple|10.72|?>>
-    <associate|complex finite set condition (1)|<tuple|10.73|?>>
-    <associate|complex finite subset|<tuple|10.76|?>>
-    <associate|complex i^2=-1|<tuple|10.62|?>>
+    <associate|complex finite lemma|<tuple|10.74|?>>
+    <associate|complex finite set condition|<tuple|10.75|?>>
+    <associate|complex finite set condition (1)|<tuple|10.76|?>>
+    <associate|complex finite subset|<tuple|10.79|?>>
+    <associate|complex i^2=-1|<tuple|10.65|?>>
     <associate|complex integers are conditional complete|<tuple|10.16|?>>
     <associate|complex irrational numbers|<tuple|10.20|?>>
     <associate|complex mathematical induction|<tuple|10.30|?>>
-    <associate|complex n\<less\>2^n|<tuple|10.47|?>>
+    <associate|complex n\<less\>2^n|<tuple|10.50|?>>
     <associate|complex n\<less\>m and 0\<less\>x\<less\>1 then
-    x^n\<less\>x^m|<tuple|10.51|?>>
-    <associate|complex norm|<tuple|10.69|?>>
-    <associate|complex norm properties|<tuple|10.70|?>>
-    <associate|complex notation|<tuple|10.63|?>>
-    <associate|complex notation (0)|<tuple|10.63|?>>
+    x^n\<less\>x^m|<tuple|10.54|?>>
+    <associate|complex norm|<tuple|10.72|?>>
+    <associate|complex norm properties|<tuple|10.73|?>>
+    <associate|complex notation|<tuple|10.3|?>>
+    <associate|complex notation (0)|<tuple|10.66|?>>
     <associate|complex numbers|<tuple|10.1|?>>
     <associate|complex order isomorphisms|<tuple|10.9|?>>
-    <associate|complex power|<tuple|10.40|?>>
-    <associate|complex power and inequality|<tuple|10.46|?>>
-    <associate|complex power is internal|<tuple|10.42|?>>
-    <associate|complex power of inverse|<tuple|10.44|?>>
-    <associate|complex power properties|<tuple|10.45|?>>
+    <associate|complex power|<tuple|10.43|?>>
+    <associate|complex power and inequality|<tuple|10.49|?>>
+    <associate|complex power is internal|<tuple|10.45|?>>
+    <associate|complex power of inverse|<tuple|10.47|?>>
+    <associate|complex power properties|<tuple|10.48|?>>
     <associate|complex rational numbers specification|<tuple|10.6|?>>
-    <associate|complex real imaginair|<tuple|10.65|?>>
-    <associate|complex real. imaginair properties|<tuple|10.66|?>>
+    <associate|complex real imaginair|<tuple|10.68|?>>
+    <associate|complex real. imaginair properties|<tuple|10.69|?>>
     <associate|complex recursion|<tuple|10.32|?>>
     <associate|complex recursion iteration|<tuple|10.33|?>>
     <associate|complex recursion step|<tuple|10.34|?>>
     <associate|complex recursion step (2)|<tuple|10.35|?>>
     <associate|complex recursion step form finite|<tuple|10.36|?>>
-    <associate|complex root is strictly increasing|<tuple|10.57|?>>
-    <associate|complex sqrt x\<less\>sqrt x^2|<tuple|10.59|?>>
-    <associate|complex sqrt(0) and sqrt(1)|<tuple|10.55|?>>
-    <associate|complex square operator is a bijection|<tuple|10.52|?>>
-    <associate|complex square root|<tuple|10.53|?>>
-    <associate|complex square root norm|<tuple|10.61|?>>
-    <associate|complex square root of 2 is irational|<tuple|10.56|?>>
-    <associate|complex square root of product|<tuple|10.60|?>>
-    <associate|complex square root properties (1)|<tuple|10.58|?>>
+    <associate|complex root is strictly increasing|<tuple|10.60|?>>
+    <associate|complex sqrt x\<less\>sqrt x^2|<tuple|10.62|?>>
+    <associate|complex sqrt(0) and sqrt(1)|<tuple|10.58|?>>
+    <associate|complex square operator is a bijection|<tuple|10.55|?>>
+    <associate|complex square root|<tuple|10.56|?>>
+    <associate|complex square root norm|<tuple|10.64|?>>
+    <associate|complex square root of 2 is irational|<tuple|10.59|?>>
+    <associate|complex square root of product|<tuple|10.63|?>>
+    <associate|complex square root properties (1)|<tuple|10.61|?>>
     <associate|complex sup(S+T) and inf(S+T)|<tuple|10.21|?>>
     <associate|complex sup(S+s) inf(T+t)|<tuple|10.22|?>>
     <associate|complex x\<less\>x+1 and x-1\<less\>x|<tuple|10.15|?>>
     <associate|complex x\<less\>y=\<gtr\>x+1\<less\>=y|<tuple|10.23|?>>
-    <associate|complex x^(m+n)=x^n.x^m|<tuple|10.43|?>>
-    <associate|complex x^0,z^1,z^2|<tuple|10.41|?>>
-    <associate|complex x^n\<gtr\>n if x\<gtr\>1 (R)|<tuple|10.50|?>>
+    <associate|complex x^(m+n)=x^n.x^m|<tuple|10.46|?>>
+    <associate|complex x^0,z^1,z^2|<tuple|10.44|?>>
+    <associate|complex x^n\<gtr\>n if x\<gtr\>1 (R)|<tuple|10.53|?>>
     <associate|complex {n,..,m}|<tuple|10.29|?>>
     <associate|eq 10.1.048|<tuple|10.1|?>>
     <associate|eq 10.10.048|<tuple|10.10|?>>
@@ -13840,11 +13901,12 @@
     <associate|eq 9.82.036|<tuple|9.82|?>>
     <associate|eq 9.89.047|<tuple|9.83|?>>
     <associate|eq 9.90.047|<tuple|9.84|?>>
-    <associate|extended reals|<tuple|10.81|?>>
-    <associate|extended reals are fully ordered|<tuple|10.85|?>>
-    <associate|extended reals existence|<tuple|10.80|?>>
-    <associate|extended reals finite real number|<tuple|10.82|?>>
-    <associate|extended reals order definition|<tuple|10.83|?>>
+    <associate|extended reals|<tuple|10.85|?>>
+    <associate|extended reals are fully ordered|<tuple|10.89|?>>
+    <associate|extended reals existence|<tuple|10.84|?>>
+    <associate|extended reals finite real number|<tuple|10.86|?>>
+    <associate|extended reals order definition|<tuple|10.87|?>>
+    <associate|field with characteristics zero|<tuple|10.42|?>>
     <associate|integeres order|<tuple|7.21|?>>
     <associate|integers|<tuple|7.2|?>>
     <associate|integers 0\<less\>1 and 0\<less\>2|<tuple|7.25|?>>

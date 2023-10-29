@@ -7792,7 +7792,7 @@
     <label|set of finite family is finite>Let <math|I> be a finite set and
     <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>X> a finite
     family of elements in <math|X> then <math|<around*|{|x<rsub|i>\|i\<in\>I|}>>
-    is finite.
+    is finite and <math|#<around*|(|<around*|{|x<rsub|i>\|i\<in\>I|}>|)>\<leqslant\>#I>
   </theorem>
 
   <\proof>
@@ -7805,7 +7805,7 @@
     surjection, so by the previous corollary [corollary:
     <reference|surjection f:A-\<gtr\>B if A is finite then B is finite>] we
     have as <math|I> is finite that <math|<around*|{|x<rsub|i>\|i\<in\>I|}>>
-    is finite.
+    is finite and <math|#<around*|(|<around*|{|x<rsub|i>\|i\<in\>I|}>|)>\<leqslant\>#I>.
   </proof>
 
   <\theorem>
