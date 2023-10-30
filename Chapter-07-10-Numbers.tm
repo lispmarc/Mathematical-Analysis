@@ -13124,15 +13124,31 @@
 
   <\theorem>
     <label|complex finite subset>If <math|A,B> are sets such that <math|A> is
-    finite and <math|B\<subseteq\>A> then <math|B> is finite and
-    <math|card<around*|(|B|)>\<leqslant\>card<around*|(|A|)>>
+    finite then\ 
+
+    <\enumerate>
+      <item>If <math|B\<subseteq\>A> then <math|B> is finite and
+      <math|card<around*|(|B|)>\<leqslant\>card<around*|(|A|)>>
+
+      <item>If <math|B\<subseteq\>A> then <math|B> is finite and
+      <math|card<around*|(|B|)>\<less\>card<around*|(|A|)>>
+    </enumerate>
   </theorem>
 
   <\proof>
-    Using [theorem: <reference|subset of finite sets>] it follows that
-    <math|B> is finite and <math|#<around*|(|B|)>\<leqslant\>#<around*|(|A|)>>,
-    so, as by [theorem: <reference|complex order isomorphisms>] is a order
-    isomorphism, we have <math|card<around*|(|B|)>=i<rsub|\<bbb-N\><rsub|9>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|B|)>|)>\<leqslant\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|A|)>|)>=card<around*|(|B|)>>.
+    \ 
+
+    <\enumerate>
+      <item>Using [theorem: <reference|subset of finite sets>] it follows
+      that <math|B> is finite and <math|#<around*|(|B|)>\<leqslant\>#<around*|(|A|)>>,
+      so, as by [theorem: <reference|complex order isomorphisms>] is a order
+      isomorphism, we have <math|card<around*|(|B|)>=i<rsub|\<bbb-N\><rsub|9>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|B|)>|)>\<leqslant\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|A|)>|)>=card<around*|(|B|)>>.
+
+      <item>Using [theorem: <reference|subset of finite sets>] it follows
+      that <math|B> is finite and <math|#<around*|(|B|)>\<less\>#<around*|(|A|)>>,
+      so, as by [theorem: <reference|complex order isomorphisms>] is a order
+      isomorphism, we have <math|card<around*|(|B|)>=i<rsub|\<bbb-N\><rsub|9>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|B|)>|)>\<less\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|A|)>|)>=card<around*|(|B|)>>
+    </enumerate>
   </proof>
 
   <\theorem>
@@ -13146,31 +13162,31 @@
       A<math|<big|cap>B=\<varnothing\>> then
       <math|card<around*|(|A<big|cup>B|)>=card<around*|(|A|)>+card<around*|(|B|)>>
     </enumerate>
-
-    <\proof>
-      \ 
-
-      <\enumerate>
-        <item>By [theorem: <reference|product of finite sets>] we have that
-        <math|A\<times\>B> is finite and <math|#<around*|(|A\<times\>B|)>=#<around*|(|A|)>\<cdot\>#<around*|(|B|)>>.
-        Further we have that
-
-        <\eqnarray*>
-          <tformat|<table|<row|<cell|card<around*|(|A\<times\>B|)>>|<cell|=>|<cell|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|A\<times\>B|)>|)>>>|<row|<cell|>|<cell|=>|<cell|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|A|)>\<cdot\>#<around*|(|B|)>|)>>>|<row|<cell|>|<cell|=>|<cell|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|A|)>|)>\<cdot\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|B|)>|)>>>|<row|<cell|>|<cell|=>|<cell|card<around*|(|A|)>\<cdot\>card<around*|(|B|)>>>>>
-        </eqnarray*>
-
-        <item>By [theorems: <reference|union of two finite sets is
-        finite>,<reference|cardinality of union of two disjoint finite sets>]
-        we have that <math|A<big|cup>B> is finite and
-        <math|#<around*|(|A<big|cup>B|)>=#<around*|(|A|)>+#<around*|(|B|)>>.
-        Further we have that\ 
-
-        <\eqnarray*>
-          <tformat|<table|<row|<cell|card<around*|(|A<big|cup>B|)>>|<cell|=>|<cell|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|A<big|cup>B|)>|)>>>|<row|<cell|>|<cell|=>|<cell|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|A|)>+#<around*|(|B|)>|)>>>|<row|<cell|>|<cell|=>|<cell|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|A|)>|)>+i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|B|)>|)>>>|<row|<cell|>|<cell|=>|<cell|card<around*|(|A|)>+card<around*|(|B|)>>>>>
-        </eqnarray*>
-      </enumerate>
-    </proof>
   </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>By [theorem: <reference|product of finite sets>] we have that
+      <math|A\<times\>B> is finite and <math|#<around*|(|A\<times\>B|)>=#<around*|(|A|)>\<cdot\>#<around*|(|B|)>>.
+      Further we have that
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|card<around*|(|A\<times\>B|)>>|<cell|=>|<cell|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|A\<times\>B|)>|)>>>|<row|<cell|>|<cell|=>|<cell|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|A|)>\<cdot\>#<around*|(|B|)>|)>>>|<row|<cell|>|<cell|=>|<cell|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|A|)>|)>\<cdot\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|B|)>|)>>>|<row|<cell|>|<cell|=>|<cell|card<around*|(|A|)>\<cdot\>card<around*|(|B|)>>>>>
+      </eqnarray*>
+
+      <item>By [theorems: <reference|union of two finite sets is
+      finite>,<reference|cardinality of union of two disjoint finite sets>]
+      we have that <math|A<big|cup>B> is finite and
+      <math|#<around*|(|A<big|cup>B|)>=#<around*|(|A|)>+#<around*|(|B|)>>.
+      Further we have that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|card<around*|(|A<big|cup>B|)>>|<cell|=>|<cell|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|A<big|cup>B|)>|)>>>|<row|<cell|>|<cell|=>|<cell|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|A|)>+#<around*|(|B|)>|)>>>|<row|<cell|>|<cell|=>|<cell|i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|A|)>|)>+i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|B|)>|)>>>|<row|<cell|>|<cell|=>|<cell|card<around*|(|A|)>+card<around*|(|B|)>>>>>
+      </eqnarray*>
+    </enumerate>
+  </proof>
 
   <\corollary>
     <label|complex cardinality adding element>If <math|A> is a finite set and
@@ -13623,7 +13639,6 @@
     <associate|auto-7|<tuple|absolute value|?>>
     <associate|auto-8|<tuple|<with|mode|<quote|math>|<around*|\||x|\|>>|?>>
     <associate|auto-9|<tuple|<with|mode|<quote|math>|m\|n>|?>>
-    <associate|cardinality and finite family|<tuple|10.83|?>>
     <associate|complex (x^n-1)\<gtr\>=n.(x-1)|<tuple|10.52|?>>
     <associate|complex 0\<less\>1|<tuple|10.10|?>>
     <associate|complex Archimedean property|<tuple|10.24|?>>
