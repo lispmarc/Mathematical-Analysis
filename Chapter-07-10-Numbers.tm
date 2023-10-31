@@ -13669,6 +13669,7 @@
     <associate|complex finite lemma|<tuple|10.74|?>>
     <associate|complex finite set condition|<tuple|10.75|?>>
     <associate|complex finite set condition (1)|<tuple|10.76|?>>
+    <associate|complex finite sets and functions|<tuple|10.80|?>>
     <associate|complex finite subset|<tuple|10.79|?>>
     <associate|complex i^2=-1|<tuple|10.65|?>>
     <associate|complex integers are conditional complete|<tuple|10.16|?>>
