@@ -8099,7 +8099,7 @@
     a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>,
     <math|W\<subseteq\>X> and <math|L\<in\>Hom<around*|(|X,Y|)>> a injective
     linear mapping then if <math|W> is linear independent then
-    <math|L<around*|(|W|)>> is linear independent.
+    <math|L<around*|(|W|)>> is linear independent.\ 
   </theorem>
 
   <\proof>
@@ -10798,7 +10798,7 @@
       <math|k\<in\><around*|{|1,\<ldots\>,n|}>> we have\ 
 
       <\equation*>
-        <around*|(|i\<rightsquigarrowlim\><rsub|n>j|)>=<choice|<tformat|<table|<row|<cell|k<text|
+        <around*|(|i\<rightsquigarrowlim\><rsub|n>j|)><around*|(|1|)>=<choice|<tformat|<table|<row|<cell|k<text|
         if >1\<leqslant\>k\<less\>i>>|<row|<cell|k+1<text| if
         >i\<leqslant\>k\<less\>j>>|<row|<cell|i<text| if
         >k=j>>|<row|<cell|k<text| if >j\<less\>k\<leqslant\>n>>>>>
@@ -10808,7 +10808,7 @@
       <math|k\<in\><around*|{|1,\<ldots\>,n|}>> we have\ 
 
       <\equation*>
-        <around*|(|i\<rightsquigarrowlim\><rsub|n>j|)>=<choice|<tformat|<table|<row|<cell|k<text|
+        <around*|(|i\<rightsquigarrowlim\><rsub|n>j|)><around*|(|k|)>=<choice|<tformat|<table|<row|<cell|k<text|
         if >1\<leqslant\>k\<less\>j>>|<row|<cell|i<text| if
         >k=j>>|<row|<cell|k-1<text| if >j\<less\>k\<leqslant\>i>>|<row|<cell|k<text|
         if >i\<less\>k\<leqslant\>n>>>>>
@@ -13455,7 +13455,7 @@
 
     <\equation*>
       <wide*|\<Delta\>|\<wide-squnderbrace\>>:X\<times\>X<rsup|n>\<rightarrow\>X<text|
-      where ><wide*|\<Delta\>|\<wide-squnderbrace\>><around*|(|y,<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>|)>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|-1|)><rsup|i-1>\<cdot\>\<Delta\><around*|(|y,x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>\<cdot\>y
+      where ><wide*|\<Delta\>|\<wide-squnderbrace\>><around*|(|y,<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>|)>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|-1|)><rsup|i-1>\<cdot\>\<Delta\><around*|(|y,x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>\<cdot\>x<rsub|i>
     </equation*>
 
     where <math|<around*|(|y,x<rsub|2>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>
@@ -14176,7 +14176,7 @@
 
         <\equation>
           <label|eq 11.161.103>A=<around*|(|x<rsub|j>,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)>\<circ\><around*|(|1\<rightsquigarrowlim\><rsub|n>j|)>
-          </equation>
+        </equation>
 
         then we have the following cases to consider:
 
@@ -14313,6 +14313,733 @@
     </equation*>
   </proof>
 
+  We show no how given a determinant function and a linear mapping we can
+  create a new determinant function.
+
+  <\definition>
+    <label|determinant function and linear
+    mapping><index|<math|\<Delta\><rsub|L>>>Let <math|n\<in\>\<bbb-N\>>,
+    <math|X> a vector space over a field <math|F> such that
+    <math|dom<around*|(|X|)>=n>,
+
+    \ <math|\<Delta\>\<in\>Hom<around*|(|X<rsup|n>;F|)>> a non trivial
+    determinant function and <math|L\<in\>Hom<around*|(|X,X|)>> [a linear
+    transformation] then we define\ 
+
+    <\equation*>
+      \<Delta\><rsub|L>:X<rsup|n>\<rightarrow\>F<text| by
+      >\<Delta\><rsub|L><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>=\<Delta\><around*|(|L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|1>|)>|)>
+    </equation*>
+  </definition>
+
+  It turns out that <math|\<Delta\><rsub|L>> is also a determinant function.
+
+  <\theorem>
+    <label|determinant function and linear mapping (1)>Let
+    <math|n\<in\>\<bbb-N\>>, <math|X> a vector space over a field <math|F>
+    with characteristic zero such that <math|dom<around*|(|X|)>=n>,
+    <math|\<Delta\>\<in\>Hom<around*|(|X<rsup|n>;F|)>> a non trivial
+    determinant function and <math|L\<in\>Hom<around*|(|X,X|)>> then\ 
+
+    <\equation*>
+      \<Delta\><rsub|L><text| is a detrminant function>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    First we proof that <math|\<Delta\><rsub|L>> is n-linear. Let
+    <math|i\<in\><around*|{|1,\<ldots\>,n|}>>, <math|\<alpha\>\<in\>F> and
+    <math|u,v\<in\>X> then we have:
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<Delta\><rsub|L><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,u+v,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|\<Delta\><around*|(|L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|i-1>|)>,L<around*|(|u+v|)>,L<around*|(|x<rsub|i+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<Delta\><around*|(|L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|i-1>|)>,L<around*|(|u|)>+L<around*|(|v|)>,L<around*|(|x<rsub|i+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<Delta\><around*|(|L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|i-1>|)>,L<around*|(|u|)>,L<around*|(|x<rsub|i+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>+\<Delta\><around*|(|L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|i-1>|)>,L<around*|(|v|)>,L<around*|(|x<rsub|i+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<Delta\><rsub|L><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,u,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>+\<Delta\><rsub|L><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,v,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    and
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<Delta\><rsub|L><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,\<alpha\>\<cdot\>u,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|L<around*|(|L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|i-1>|)>,L<around*|(|\<alpha\>\<cdot\>u|)>,L<around*|(|x<rsub|i+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|i-1>|)>,\<alpha\>\<cdot\>L<around*|(|u|)>,L<around*|(|x<rsub|i+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\>L<around*|(|L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|i-1>|)>,L<around*|(|u|)>,L<around*|(|x<rsub|i+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\>L<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,u,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation*>
+      \<Delta\><rsub|L>\<in\>Hom<around*|(|X<rsup|n>,F|)><text| or
+      >\<Delta\><rsub|L><text| is >n<text|-linear>
+    </equation*>
+
+    As for skew-symmetry. Let <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|n>>
+    such that <math|\<exists\>i,j\<in\><around*|{|1,\<ldots\>,n|}>> with
+    <math|i\<neq\>j> and <math|x<rsub|i>=x<rsub|j>> then
+    <math|L<around*|(|x<rsub|i>|)>=L<around*|(|x<rsub|j>|)>>, hence\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<Delta\><rsub|L><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|\<Delta\><around*|(|L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|determinant key-symmetric condition>]>>>|<cell|0>>>>
+    </eqnarray*>
+
+    which by [theorem: <reference|determinant key-symmetric condition>]
+    proves that\ 
+
+    <\equation*>
+      \<Delta\><rsub|L><text| is skew-symmetric>
+    </equation*>
+  </proof>
+
+  <\note>
+    It is not true that <math|\<Delta\><rsub|L>> is a non trivial determinant
+    function if <math|D> is non trivial determinant function. For example if
+    <math|L=C<rsub|0>:X\<rightarrow\>X> defined by
+    <math|C<rsub|0><around*|(|x|)>=0> then if
+    <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|n>> we have
+    <math|\<Delta\><rsub|L><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>=\<Delta\><around*|(|L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>=L<around*|(|0,\<ldots\>,0|)>=0>
+    even if <math|\<Delta\>> is non trivial.
+  </note>
+
+  <\theorem>
+    <label|determinant definition (condition)>Let <math|n\<in\>\<bbb-N\>>,
+    <math|X> a vector space over a field <math|F> such that
+    <math|dim<around*|(|X|)>=n> and <math|L\<in\>Hom<around*|(|X,X|)>> then
+    there exist a <math|\<alpha\>\<in\>F> such that for
+    <with|font-series|bold|every> non trivial determinant function
+    <math|\<Delta\>\<in\>Hom<around*|(|X<rsup|n>;F|)>> we have\ 
+
+    <\equation*>
+      \<Delta\><rsub|L>=\<alpha\>\<cdot\>\<Delta\>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Using [theorem: <reference|determinant mapping existence of non trivial>]
+    there exist a non trivial determinant function <math|\<Delta\>>. For
+    <math|\<Delta\><rsub|L>> we have two possibilities:
+
+    <\description>
+      <item*|<math|\<Delta\><rsub|L>=C<rsub|0>>>Then if we take
+      <math|\<alpha\>=0> we have that\ 
+
+      <\equation*>
+        \<Delta\><rsub|L>=C<rsub|0>=0\<cdot\>\<Delta\>
+      </equation*>
+
+      <item*|<math|\<Delta\><rsub|L>\<neq\>C<rsub|0>>>Then by \ [theorem:
+      <reference|determinant function and linear mapping (1)>]
+      <math|\<Delta\><rsub|L>> is also a determinant function we have by
+      [theorem: <reference|determinant non zero determinant mappings are
+      multiples of each other>] that there exists a <math|\<alpha\>\<in\>F>
+      such that\ 
+
+      <\equation>
+        <label|eq 11.165.103>\<Delta\><rsub|L>=\<alpha\>\<cdot\>\<Delta\>
+      </equation>
+    </description>
+
+    So in all cases there exists a <math|\<alpha\>\<in\>F> such that
+    <math|\<Delta\><rsub|L>=\<alpha\>\<cdot\>\<Delta\>> proving existence.
+    Assume that <math|\<Delta\><rprime|'>> is another non trivial determant
+    function then by \ [theorem: <reference|determinant non zero determinant
+    mappings are multiples of each other>] there exist a
+    <math|\<lambda\>\<in\>F> such that
+
+    <\equation*>
+      \<Delta\><rprime|'>=\<lambda\>\<cdot\>\<Delta\>.
+    </equation*>
+
+    Let <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|n>>
+    then
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<Delta\><rprime|'><rsub|L><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|\<Delta\><rprime|'><around*|(|L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<lambda\>\<cdot\>\<Delta\><around*|(|L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<lambda\>\<cdot\>\<Delta\><rsub|L><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>>>>
+    </eqnarray*>
+
+    So\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<Delta\><rprime|'><rsub|L>>|<cell|=>|<cell|\<lambda\>\<cdot\>\<Delta\><rsub|L>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 11.165.103>]>>>|<cell|\<lambda\>\<cdot\><around*|(|\<alpha\>\<cdot\>\<Delta\>|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\><around*|(|\<lambda\>\<cdot\>\<Delta\>|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\>\<Delta\><rprime|'>>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation*>
+      \<Delta\><rprime|'><rsub|L>=\<alpha\>\<cdot\>\<Delta\><rsub|L>
+    </equation*>
+  </proof>
+
+  The above theorem ensures that the following definition of the dertminant
+  of a linear function makes sense.
+
+  <\definition>
+    <label|derminant definition><index|<math|det<around*|(|L|)>>>Let
+    <math|n\<in\>\<bbb-N\>>, <math|X> a vector space over a field <math|F>
+    with characteristic zero such that <math|dim<around*|(|X|)>=n> and
+    <math|L\<in\>Hom<around*|(|X,X|)>> then we define\ 
+
+    <\equation*>
+      det:Hom<around*|(|X<rsup|n>;Y|)>\<rightarrow\>F<text| by
+      >det<around*|(|L|)>=\<alpha\><text| where for every determinant
+      function >\<Delta\><text| we have >\<Delta\><rsub|L>=\<alpha\>\<cdot\>\<Delta\>
+    </equation*>
+
+    In other words <math|det<around*|(|L|)>> is the scalar such that for
+    every non trivial determinant function <math|\<Delta\>> we have
+
+    <\equation*>
+      \<Delta\><rsub|L>=det<around*|(|L|)>\<cdot\>\<Delta\>
+    </equation*>
+  </definition>
+
+  <\example>
+    <label|determinant identity function>Let <math|n\<in\>\<bbb-N\>>,
+    <math|X> a vector space over a field <math|F> with characteristic zero
+    such that <math|dim<around*|(|X|)>=n> and <math|\<lambda\>\<in\>F> then
+    we have for
+
+    <\equation*>
+      \<lambda\>\<cdot\>Id<rsub|X>:X\<rightarrow\>X<text| defined by
+      ><around*|(|\<lambda\>\<cdot\>Id<rsub|X>|)><rsub|><around*|(|x|)>=\<lambda\>\<cdot\>x
+    </equation*>
+
+    then we have\ 
+
+    <\equation*>
+      det<around*|(|\<lambda\>\<cdot\>Id<rsub|X>|)>=\<lambda\><rsup|n>
+    </equation*>
+
+    or in the case of <math|\<lambda\>=1> that\ 
+
+    <\equation*>
+      det<around*|(|Id<rsub|X>|)>=1
+    </equation*>
+  </example>
+
+  <\proof>
+    Let <math|\<Delta\>> be a non trivial detirminant function then\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<Delta\><rsub|\<lambda\>\<cdot\>Id<rsub|X>><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|\<Delta\><around*|(|\<lambda\>\<cdot\>Id<rsub|X><around*|(|x<rsub|1>|)>,\<ldots\>,\<lambda\>\<cdot\>Id<rsub|X><around*|(|x<rsub|n>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<Delta\><around*|(|\<lambda\>\<cdot\>x<rsub|1>,\<ldots\>,\<lambda\>\<cdot\>x<rsub|n>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|multi multilinear mapping and product of
+      scalars>]>>>|<cell|\<lambda\><rsup|n>\<cdot\>D<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>>>>
+    </eqnarray*>
+
+    proving that \ <math|\<Delta\><rsub|\<lambda\>\<cdot\>Id<rsub|X>>=\<lambda\><rsup|n>\<cdot\>\<Delta\>>,
+    hence\ 
+
+    <\equation*>
+      det<around*|(|\<lambda\>\<cdot\>Id<rsub|x>|)>=\<lambda\><rsup|n>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|determinant det(L) properties>Let <math|n\<in\>\<bbb-N\>>,
+    <math|X> a vector space over a field <math|F> with characteristic zero
+    such that <math|dim<around*|(|X|)>=n> then we have:
+
+    <\enumerate>
+      <item><math|det<around*|(|Id<rsub|X>|)>=1>
+
+      <item>Let <math|L\<in\>Hom<around*|(|X,X|)>> then <math|L> is injective
+      <math|\<Leftrightarrow\>> <math|det<around*|(|L|)>\<neq\>0>\ 
+
+      <item>If <math|L<rsub|1>,L<rsub|2>\<in\>Hom<around*|(|X,X|)>> then
+      <math|det<around*|(|L<rsub|1>\<circ\>L<rsub|2>|)>=det<around*|(|L<rsub|1>|)>\<cdot\>det<around*|(|L<rsub|2>|)>>
+
+      <item>If <math|L\<in\>Hom<around*|(|X,X|)>> is a linear isomorphism
+      then <math|det*<around*|(|L<rsup|-1>|)>=<around*|(|det<around*|(|L|)>|)><rsup|-1>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|n>>
+      and <math|\<Delta\>> a non trivial determinant function then we have\ 
+
+      <\equation*>
+        \<Delta\><rsub|Id<rsub|X>><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>=\<Delta\><around*|(|Id<rsub|X><around*|(|x<rsub|1>|)>,\<ldots\>,Id<rsub|X><around*|(|x<rsub|n>|)>|)>=\<Delta\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>
+      </equation*>
+
+      proving that <math|\<Delta\><rsub|Id<rsub|X>>=\<Delta\>=1\<cdot\>\<Delta\>>.
+      So that <math|det<around*|(|Id|)>=1>.
+
+      <item> Let <math|<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>
+      be a basis for <math|X>
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>As <math|L> is injective, it follows
+        from [theorem: <reference|linear mapping independency>] that
+        <math|L<around*|(|<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>=<around*|{|L<around*|(|e<rsub|i>|)>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>
+        is linear independnet. Using [theorem: <reference|basis finite
+        independent family of dim(X) size leads to a basis>] it follows then
+        that\ 
+
+        <\equation*>
+          <around*|{|L<around*|(|e<rsub|i>|)>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}><text|
+          is a basis for >X
+        </equation*>
+
+        Using [theorem: <reference|determinant mapping existence of non
+        trivial>] there exist then a non trivial determinant function
+        <math|\<Delta\>> such that
+
+        <\equation*>
+          \<Delta\><around*|(|L<around*|(|e<rsub|1>|)>,\<ldots\>,L<around*|(|e<rsub|n>|)>|)>=1
+        </equation*>
+
+        So\ 
+
+        <\equation*>
+          1=\<Delta\><around*|(|L<around*|(|e<rsub|1>|)>,\<ldots\>,L<around*|(|e<rsub|n>|)>|)>=\<Delta\><rsub|L><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>=det<around*|(|L|)>\<cdot\>\<Delta\><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>
+        </equation*>
+
+        If now <math|det<around*|(|L|)>=0> then we have <math|1=0> so we must
+        have that\ 
+
+        <\equation*>
+          det<around*|(|L|)>\<neq\>0
+        </equation*>
+
+        <item*|<math|\<Leftarrow\>>>Using [theorem: <reference|linear mapping
+        independency>] there exist a non trivial determinant function
+        <math|\<Delta\>> such that\ 
+
+        <\equation*>
+          \<Delta\><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>=1
+        </equation*>
+
+        then\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|\<Delta\><around*|(|L<around*|(|e<rsub|1>|)>,\<ldots\>,L<around*|(|e<rsub|n>|)>|)>>|<cell|=>|<cell|\<Delta\><rsub|L><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|det<around*|(|L|)>\<cdot\>\<Delta\><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|det<around*|(|L|)>>>>>
+        </eqnarray*>
+
+        Assume that <math|<around*|{|L<around*|(|e<rsub|i>|)>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>X>
+        is linear dependent then it follows from [theorem:
+        <reference|determinant key-symmetric condition>] that <math|>
+        <math|\<Delta\><around*|(|L<around*|(|e<rsub|1>|)>,\<ldots\>,L<around*|(|e<rsub|n>|)>|)>=0>,
+        so that <math|det<around*|(|L|)>=0>, contradicting
+        <math|det<around*|(|L|)>\<neq\>0>. Hence we have that
+        <math|<around*|{|L<around*|(|e<rsub|i>|)>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+        is linear independent. Let <math|x\<in\>ker<around*|(|L|)>> then
+        <math|L<around*|(|x|)>>=0 and as <math|<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>
+        is a basis we have that <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F>
+        such that <math|x=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>e<rsub|i>>
+        so that\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|0>|<cell|=>|<cell|L<around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>e<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>L<around*|(|e<rsub|i>|)>>>>>
+        </eqnarray*>
+
+        which as <math|<around*|{|L<around*|(|e<rsub|i>|)>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+        is linear independent proves that
+        <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+        <math|\<alpha\><rsub|i=0>>. So that
+        <math|x=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsub|i\<cdot\>e<rsub|i>>=0>.
+        Hence we have that <math|ker<around*|(|L|)>=<around*|{|0|}>> which by
+        [theorem: <reference|linear mapping injectivity and kernel>] proves
+        that\ 
+
+        <\equation*>
+          L<text| is injective >
+        </equation*>
+      </description>
+
+      <item>First we have if <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|n>>
+      amd <math|\<Delta\>> a non trivial determinant function:
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<Delta\><rsub|L<rsub|1>\<circ\>L<rsub|2>><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|\<Delta\><around*|(|<around*|(|L<rsub|1>\<circ\>L<rsub|2>|)><around*|(|x<rsub|1>|)>,\<ldots\>,<around*|(|L<rsub|1>\<circ\>L<rsub|2>|)><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<Delta\><around*|(|L<rsub|1><around*|(|L<rsub|2><around*|(|x|)>|)>,\<ldots\>,L<rsub|1><around*|(|L<rsub|2><around*|(|x|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<Delta\><rsub|L<rsub|1>><around*|(|L<rsub|2><around*|(|x<rsub|1>|)>,\<ldots\>,L<rsub|2><around*|(|x<rsub|n>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|det<around*|(|L<rsub|1>|)>\<cdot\>\<Delta\><around*|(|L<rsub|2><around*|(|x<rsub|1>|)>,\<ldots\>,L<rsub|2><around*|(|x<rsub|n>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|det<around*|(|L<rsub|1>|)>\<cdot\>\<Delta\><rsub|L<rsub|2>><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|det<around*|(|L<rsub|1>|)>\<cdot\><around*|(|det<around*|(|L<rsub|2>|)>\<cdot\>\<Delta\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|det<around*|(|L<rsub|1>|)>\<cdot\>det<around*|(|L<rsub|2>|)>|)>\<cdot\>\<Delta\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>>>>
+      </eqnarray*>
+
+      so that <math|\<Delta\><rsub|L<rsub|1>\<circ\>L<rsub|2>>=<around*|(|det<around*|(|L<rsub|1>|)>\<cdot\>det<around*|(|L<rsub|2>|)>|)>\<cdot\>\<Delta\>>
+      proving that\ 
+
+      <\equation*>
+        det<around*|(|\<Delta\><rsub|L<rsub|1>\<circ\>L<rsub|2>>|)>=det<around*|(|L<rsub|1>|)>\<cdot\>det<around*|(|L<rsub|2>|)>
+      </equation*>
+
+      <item>As <math|L> is a linear isomorphism we have that
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|1>|<cell|\<equallim\><rsub|<around*|(|1|)>>>|<cell|det<around*|(|Id<rsub|X>|)>>>|<row|<cell|>|<cell|=>|<cell|det<around*|(|L\<circ\>L<rsup|-1>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|3|)>>>|<cell|det<around*|(|L|)>\<cdot\>det<around*|(|L<rsup|-1>|)>>>>>
+      </eqnarray*>
+
+      which as by (2) <math|det<around*|(|L|)>\<neq\>0> proves that\ 
+
+      <\equation*>
+        det<around*|(|L<rsup|-1>|)>=<around*|(|det<around*|(|L|)>|)><rsup|-1>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  <\definition>
+    <label|determinant delta upperscore><index|<math|<wide|\<Delta\>L|\<wide-sqoverbrace\>>>>Let
+    <math|n\<in\>\<bbb-N\>>, <math|X> a vector space over a field <math|F>
+    with characteristic zero such that <math|dim<around*|(|X|)>=n>,
+    <math|\<Delta\>> a non trivial determinant function and
+    <math|L\<in\>Hom<around*|(|X,X|)>> then we define
+
+    <\equation*>
+      <wide|\<Delta\>L|\<wide-sqoverbrace\>>:X<rsup|n>\<rightarrow\>Hom<around*|(|X,X|)><text|
+      where ><wide|\<Delta\>L|\<wide-sqoverbrace\>><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>:X\<rightarrow\>X<text|
+      is defined by >
+    </equation*>
+
+    <\equation*>
+      <wide|\<Delta\>L|\<wide-sqoverbrace\>><around*|(|x<rsub|1,\<ldots\>,x<rsub|n>>|)><around*|(|x|)>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|-1|)><rsup|i>\<cdot\>\<Delta\><around*|(|x,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|i-1>|)>,L<around*|(|x<rsub|i+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>\<cdot\>x<rsub|i>
+    </equation*>
+  </definition>
+
+  <\proof>
+    Of course we must prove that <math|<wide|\<Delta\>L|\<wide-sqoverbrace\>><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>Hom<around*|(|X,X|)>>.
+    So let <math|\<alpha\>\<in\>F>, <math|u,v\<in\>X> then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<wide|\<Delta\>L|\<wide-sqoverbrace\>><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)><around*|(|u+v|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|-1|)><rsup|i>\<cdot\>\<Delta\><around*|(|u+v,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|i-1>|)>,L<around*|(|x<rsub|i+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>\<cdot\>x<rsub|i>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|-1|)><rsup|i>\<cdot\><around*|(|\<Delta\><around*|(|u,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|i-1>|)>,L<around*|(|x<rsub|i+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>+\<Delta\><around*|(|v,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|i-1>|)>,L<around*|(|x<rsub|i+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum of sums (2)>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|-1|)><rsup|i>\<cdot\>\<Delta\><around*|(|u,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|i-1>|)>,L<around*|(|x<rsub|i+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>\<cdot\>x<rsub|i>+<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|-1|)><rsup|i>\<cdot\>\<Delta\><around*|(|v,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|i-1>|)>,L<around*|(|x<rsub|i+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>\<cdot\>x<rsub|i>>|<cell|=>|<cell|>>|<row|<cell|<wide|\<Delta\>L|\<wide-sqoverbrace\>><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)><around*|(|u|)>+<wide|\<Delta\>L|\<wide-sqoverbrace\>><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)><around*|(|v|)>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    and
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<wide|\<Delta\>L|\<wide-sqoverbrace\>><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)><around*|(|\<alpha\>\<cdot\>u|)>>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|-1|)><rsup|i>\<cdot\>\<Delta\><around*|(|\<alpha\>\<cdot\>u,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|i-1>|)>,L<around*|(|x<rsub|i+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>\<cdot\>x<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|-1|)><rsup|i>\<cdot\>\<alpha\>\<cdot\>\<Delta\><around*|(|u,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|i-1>|)>,L<around*|(|x<rsub|i+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>\<cdot\>x<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\><big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|-1|)><rsup|i>\<cdot\>\<Delta\><around*|(|u,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|i-1>|)>,L<around*|(|x<rsub|i+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>\<cdot\>x<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\><wide|\<Delta\>L|\<wide-sqoverbrace\>><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)><around*|(|u|)>>>>>
+    </eqnarray*>
+  </proof>
+
+  <\example>
+    \ <label|determinant delta upperscore examples>
+
+    <\enumerate>
+      <item>If <math|n=1> then <math|<wide|\<Delta\>|\<breve\>><rsub|L><around*|(|x<rsub|1>|)><around*|(|x|)>=<around*|(|-1|)><rsup|1-1>\<cdot\>\<Delta\><around*|(|x|)>\<cdot\>x<rsub|1>=\<Delta\><around*|(|x|)>\<cdot\>x<rsub|1>>
+
+      <item>If <math|n=2> then <math|<wide|\<Delta\>|\<breve\>><rsub|L><around*|(|x<rsub|1>,x<rsub|2>|)>=<around*|(|-1|)><rsup|1-1>\<cdot\>\<Delta\><around*|(|x,L<around*|(|x<rsub|2>|)>|)>\<cdot\>x<rsub|1>+<around*|(|-1|)><rsup|2-1>\<cdot\>\<Delta\><around*|(|x,L<around*|(|x<rsub|1>|)>|)>\<cdot\>x<rsub|2>=\<Delta\><around*|(|x,L<around*|(|x<rsub|2>|)>|)>\<cdot\>x<rsub|1>-\<Delta\><around*|(|x,L<around*|(|x<rsub|1>|)>|)>\<cdot\>x<rsub|2>>
+    </enumerate>
+  </example>
+
+  <\lemma>
+    <label|determinant lemma 11.261>Let <math|n\<in\>\<bbb-N\>>, <math|X> a
+    set, <math|x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|n>>,
+    <math|i,j\<in\><around*|{|1,\<ldots\>,n|}>> such that <math|i\<neq\>j>
+    and <math|x<rsub|i>=x<rsub|j>> and <math|t\<in\>X> then we have\ 
+
+    <\enumerate>
+      <item>If <math|j\<less\>i> then\ 
+
+      <\equation*>
+        <around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)>\<circ\><around*|(|i\<rightsquigarrowlim\><rsub|n>j+1|)>=<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>
+      </equation*>
+
+      <item>If <math|i\<less\>j> then\ 
+
+      <\equation*>
+        <around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)>\<circ\><around*|(|i+1\<rightsquigarrowlim\><rsub|n>j|)>=<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>
+      </equation*>
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    \ \ 
+
+    <\enumerate>
+      <item>Let <math|j\<less\>i>. Define\ 
+
+      <\equation>
+        <label|eq 11.166.103>A=<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)>\<circ\><around*|(|i\<rightsquigarrowlim\><rsub|n>j+1|)>
+      </equation>
+
+      then we have as <math|j+1\<leqslant\>i> the following cases to consider
+      for <math|i>:
+
+      <\description>
+        <item*|<math|j+1=i>>Then by [definition: <reference|permutation
+        insert function>] we have that <math|><math|<around*|(|i\<rightsquigarrowlim\><rsub|n>j+1|)>=Id<rsub|<around*|{|1,\<ldots\>,n|}>>>
+        so that\ 
+
+        <\equation>
+          <label|eq 11167.103>A=<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)>
+        </equation>
+
+        Now for <math|k\<in\><around*|{|1,\<ldots\>,n|}>> we have either
+        (motivated by [definition: <reference|determinant (y,x1,..,xi-1...)>]
+        the following possible cases
+
+        <\description>
+          <item*|<math|k=1>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|A<rsub|k>>|<cell|\<equallim\><rsub|<text|[eq:
+            <reference|eq 11.137.103>]>>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>\<wedge\>k=1><rsub|<text|>>>|<cell|t>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>\<wedge\>k=1><rsub|<text|>>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>>>
+          </eqnarray*>
+
+          <item*|<math|2\<leqslant\>k\<less\>j>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|A<rsub|k>>|<cell|\<equallim\><rsub|<text|[eq:
+            <reference|eq 11.137.103>]>>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>\<wedge\>2\<leqslant\>k\<less\>j><rsub|<text|>>>|<cell|x<rsub|k-1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>\<wedge\>2\<less\>k\<less\>j=i-1\<less\>i><rsub|<text|>>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>>>
+          </eqnarray*>
+
+          <item*|<math|k=j+1>>Then
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|A<rsub|k>>|<cell|\<equallim\><rsub|<text|[eq:
+            <reference|eq 11.137.103>]>>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>j+1=k><rsub|<text|>>>|<cell|x<rsub|k>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>i=j+1=k><rsub|<text|>>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>>>
+          </eqnarray*>
+
+          <item*|<math|j+1\<less\>k>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|A<rsub|k>>|<cell|\<equallim\><rsub|<text|[eq:
+            <reference|eq 11.137.103>]>>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>j+1\<less\>k><rsub|<text|>>>|<cell|x<rsub|k>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>i=j+1\<less\>k\<Rightarrow\>i+1\<leqslant\>k>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>>>
+          </eqnarray*>
+        </description>
+
+        <item*|<math|j+1\<less\>i>>Then we have motivated by \ [definition:
+        <reference|permutation insert function>] the following possible cases
+        for <math|k>:
+
+        <\description>
+          <item*|<math|k=1>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|A<rsub|k>>|<cell|=>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)><rsub|<around*|(|i\<rightsquigarrowlim\><rsub|n>j+1|)><around*|(|k|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|permutation insert
+            function>]>\<wedge\>k=1\<less\>j+1>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>\<wedge\>k=1><rsub|<text|>>>|<cell|t>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>\<wedge\>k=1><rsub|<text|>>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>>>
+          </eqnarray*>
+
+          <item*|<math|k\<neq\>1\<wedge\>k\<less\>j+1>>Then
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|A<rsub|k>>|<cell|\<equallim\>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)><rsub|<around*|(|i\<rightsquigarrowlim\><rsub|n>j+1|)><around*|(|k|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|permutation insert
+            function>]>\<wedge\>k=1\<less\>j+1>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>\<wedge\>1\<less\>k\<less\>j+1\<Rightarrow\>1\<less\>k\<leqslant\>j><rsub|<text|>>>|<cell|x<rsub|k-1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>\<wedge\>1\<less\>k\<less\>j+1=i><rsub|<text|>>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>>>
+          </eqnarray*>
+
+          <item*|<math|k\<neq\>1\<wedge\>k=j+1>>Then
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|A<rsub|k>>|<cell|=>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)><rsub|<around*|(|i\<rightsquigarrowlim\><rsub|n>j+1|)><around*|(|k|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|permutation insert
+            function>]>\<wedge\>k=j+1>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)><rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>\<wedge\>j+1=k><rsub|<text|>>>|<cell|x<rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|x<rsub|i>=x<rsub|j>>>|<cell|x<rsub|j>>>|<row|<cell|>|<cell|=>|<cell|x<rsub|<around*|(|j+1|)>-1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>\<wedge\>1\<less\>j+1\<less\>i><rsub|<text|>>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)><rsub|j+1>>>|<row|<cell|>|<cell|\<equallim\><rsub|k=j+1>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>>>
+          </eqnarray*>
+
+          <item*|<math|k\<neq\>1\<wedge\>j+1\<less\>k\<leqslant\>i>>Then
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|A<rsub|k>>|<cell|=>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)><rsub|<around*|(|i\<rightsquigarrowlim\><rsub|n>j+1|)><around*|(|k|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|permutation insert
+            function>]>\<wedge\>j+1\<less\>k\<leqslant\>i>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)><rsub|k-1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>\<wedge\>1\<less\>k\<leqslant\>i><rsub|<text|>>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>>>
+          </eqnarray*>
+
+          <item*|<math|k\<neq\>1\<wedge\>i\<less\>k>>Then
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|A<rsub|k>>|<cell|=>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)><rsub|<around*|(|i\<rightsquigarrowlim\><rsub|n>j+1|)><around*|(|k|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|permutation insert
+            function>]>\<wedge\>i\<less\>k\<leqslant\>n>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>\<wedge\>j+1\<less\>i\<less\>k><rsub|<text|>>>|<cell|x<rsub|k>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>\<wedge\>i\<less\>k\<Rightarrow\>i+1\<leqslant\>k>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>>>
+          </eqnarray*>
+        </description>
+
+        So in all possible cases we have\ 
+
+        <\equation*>
+          <around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)><rsub|<around*|(|i\<rightsquigarrowlim\><rsub|n>j+1|)><around*|(|k|)>>=<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)><rsub|k>
+        </equation*>
+
+        proving that we have\ 
+
+        <\equation*>
+          <around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)>\<circ\><around*|(|i\<rightsquigarrowlim\><rsub|n>j+1|)>=<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>
+        </equation*>
+      </description>
+
+      <item>Let <math|i\<less\>j>. Define\ 
+
+      <\equation>
+        <label|eq 11.168.103>B=<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)>\<circ\><around*|(|i+1\<rightsquigarrowlim\><rsub|n>j|)>
+      </equation>
+
+      then we have as <math|i+1\<leqslant\>j> the following cases to consider
+      for <math|j>:
+
+      <\description>
+        <item*|<math|i+1=j>>Then by [definition: <reference|permutation
+        insert function>] we have that <math|><math|<around*|(|i\<rightsquigarrowlim\><rsub|n>j+1|)>=Id<rsub|<around*|{|1,\<ldots\>,n|}>>>
+        so that\ 
+
+        <\equation>
+          <label|eq 11.169.103>B=<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)>
+        </equation>
+
+        Now for <math|k\<in\><around*|{|1,\<ldots\>,n|}>> we have either
+        (motivated by [definition: <reference|determinant (y,x1,..,xi-1...)>]
+        following cases:
+
+        <\description>
+          <item*|<math|k=1>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|B<rsub|k>>|<cell|\<equallim\><rsub|<text|[eq:
+            <reference|eq 11.169.103>]>>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>\<wedge\>k=1><rsub|<text|>>>|<cell|t>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>\<wedge\>k=1><rsub|<text|>>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>>>
+          </eqnarray*>
+
+          <item*|<math|1\<less\>k\<leqslant\>i>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|B<rsub|k>>|<cell|\<equallim\><rsub|<text|[eq:
+            <reference|eq 11.169.103>]>>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>\<wedge\>1\<less\>k\<leqslant\>i\<less\>i+1=j><rsub|<text|>>>|<cell|x<rsub|k-1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>\<wedge\>1\<less\>k\<leqslant\>i><rsub|<text|>>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>>>
+          </eqnarray*>
+
+          <item*|<math|k=i+1>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|B<rsub|k>>|<cell|\<equallim\><rsub|<text|[eq:
+            <reference|eq 11.169.103>]>>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>\<wedge\>1\<less\>k=i+1=j><rsub|<text|>>>|<cell|x<rsub|k-1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>\<wedge\>k=i+1><rsub|<text|>>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>>>
+          </eqnarray*>
+
+          <item*|<math|i+1\<less\>k>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|B<rsub|k>>|<cell|\<equallim\><rsub|<text|[eq:
+            <reference|eq 11.169.103>]>>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>\<wedge\>j=i+1\<less\>k\<Rightarrow\>j+1\<leqslant\>k><rsub|<text|>>>|<cell|x<rsub|k>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>\<wedge\>i+1\<less\>k><rsub|<text|>>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>>>
+          </eqnarray*>
+        </description>
+
+        <item*|<math|i+1\<less\>j>>Then we have motivated by \ [definition:
+        <reference|permutation insert function>] the following possible cases
+        for <math|k>:
+
+        <\description>
+          <item*|<math|k=1>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|B<rsub|k>>|<cell|=>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)><rsub|<around*|(|i+1\<rightsquigarrowlim\><rsub|n>j|)><around*|(|k|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+            <reference|permutation insert
+            function>]>\<wedge\>1=k\<less\>i+1>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>\<wedge\>k=1><rsub|<text|>>>|<cell|t>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>\<wedge\>k=1><rsub|<text|>>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>>>
+          </eqnarray*>
+
+          <item*|<math|k\<neq\>1\<wedge\>k\<less\>i+1>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|B<rsub|k>>|<cell|=>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)><rsub|<around*|(|i+1\<rightsquigarrowlim\><rsub|n>j|)><around*|(|k|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|permutation insert
+            function>]>\<wedge\>1\<less\>k\<less\>i+1>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>\<wedge\>1\<less\>k\<less\>i+1=j>>|<cell|x<rsub|k-1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>\<wedge\>1\<less\>k\<less\>i+1\<Rightarrow\>1\<less\>k\<leftarrow\>i>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>>>
+          </eqnarray*>
+
+          <item*|<math|k\<neq\>1\<wedge\>i+1\<leqslant\>k\<less\>j>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|B<rsub|k>>|<cell|=>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)><rsub|<around*|(|i+1\<rightsquigarrowlim\><rsub|n>j|)><around*|(|k|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|permutation insert
+            function>]>\<wedge\>i+1\<leqslant\>k\<less\>j>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)><rsub|k+1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>\<wedge\>1\<less\>k\<less\>j>>|<cell|x<rsub|<around*|(|k+1|)>-1>>>|<row|<cell|>|<cell|=>|<cell|x<rsub|k>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>\<wedge\>i+1\<leqslant\>k>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>>>
+          </eqnarray*>
+
+          <item*|<math|k\<neq\>1\<wedge\>k=j>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|B<rsub|k>>|<cell|=>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)><rsub|<around*|(|i+1\<rightsquigarrowlim\><rsub|n>j|)><around*|(|k|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|permutation insert
+            function>]>\<wedge\>k=j>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)><rsub|i+1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>\<wedge\>1\<less\>i+1\<less\>j>>|<cell|x<rsub|<around*|(|i+1|)>-1>>>|<row|<cell|>|<cell|=>|<cell|x<rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|x<rsub|i>=x<rsub|j>>>|<cell|x<rsub|j>>>|<row|<cell|>|<cell|\<equallim\><rsub|j=k>>|<cell|x<rsub|k>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>\<wedge\>i\<less\>i+1\<less\>j=k>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>>>
+          </eqnarray*>
+
+          <item*|<math|k\<neq\>1\<wedge\>j\<less\>k>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|B<rsub|k>>|<cell|=>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)><rsub|<around*|(|i+1\<rightsquigarrowlim\><rsub|n>j|)><around*|(|k|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|permutation insert
+            function>]>\<wedge\>j\<less\>k>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>\<wedge\>j\<less\>k\<rightarrow\>j+1\<leqslant\>k>>|<cell|x<rsub|k>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+            <reference|determinant (y,x1,..,xi-1...)>]>\<wedge\>i+1\<less\>j\<less\>k>>|<cell|<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)><rsub|k>>>>>
+          </eqnarray*>
+        </description>
+
+        So in all possible cases we have\ 
+
+        <\equation*>
+          <around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)><rsub|<around*|(|i+1\<rightsquigarrowlim\><rsub|n>j|)><around*|(|k|)>>=<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)><rsub|k>
+        </equation*>
+
+        proving that we have\ 
+
+        <\equation*>
+          <around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|j-1>,x<rsub|j+1>,\<ldots\>,x<rsub|n>|)>\<circ\><around*|(|i+1\<rightsquigarrowlim\><rsub|n>j|)>=<around*|(|t,x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>
+        </equation*>
+      </description>
+    </enumerate>
+  </proof>
+
+  The above lemma wil be used to prove the following theorem that will be
+  used to define the adjoint of a linear transformation.
+
+  <\theorem>
+    <label|determinant delta upperscore property>Let <math|n\<in\>\<bbb-N\>>,
+    <math|X> a vector space over a field of characteristic zero with
+    <math|dim<around*|(|X|)>=n>, <math|\<Delta\>> a non trivial determinant
+    function,<math|L\<in\>Hom<around*|(|X,X|)>> then\ 
+
+    <\equation*>
+      <wide|\<Delta\>L|\<wide-sqoverbrace\>>\<in\>Hom<around*|(|X<rsup|n>;Y|)><text|
+      and ><wide|\<Delta\>L|\<wide-sqoverbrace\>><text| is skew-symmetrc>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    First we prove that <math|<wide|\<Delta\>L|\<wide-sqoverbrace\>>> is
+    <math|n>-linear. So let <math|u,v\<in\>X> and <math|\<alpha\>\<in\>F> and
+    <math|i\<in\><around*|{|1,\<ldots\>,n|}>> then for
+    <math|j\<in\><around*|{|1,\<ldots\>,n|}>> we have the following possible
+    cases:
+
+    <\description>
+      <item*|<math|j=i>>
+
+      <item*|<math|j\<less\>i>>
+
+      <item*|<math|i\<less\>j>>
+    </description>
+  </proof>
+
+  \;
+
+  \;
+
   \;
 
   \;
@@ -14379,6 +15106,9 @@
     <associate|auto-40|<tuple|n-linear mapping|?>>
     <associate|auto-41|<tuple|11.7|?>>
     <associate|auto-42|<tuple|determinant mapping|?>>
+    <associate|auto-43|<tuple|<with|mode|<quote|math>|\<Delta\><rsub|L>>|?>>
+    <associate|auto-44|<tuple|<with|mode|<quote|math>|det<around*|(|L|)>>|?>>
+    <associate|auto-45|<tuple|<with|mode|<quote|math>|<wide|\<Delta\>L|\<wide-sqoverbrace\>>>|?>>
     <associate|auto-5|<tuple|<with|mode|<quote|math>|<big|prod><rsub|i=0><rsup|n>x<rsub|i>>|?>>
     <associate|auto-6|<tuple|11.1.2|?>>
     <associate|auto-7|<tuple|11.1.3|?>>
@@ -14410,15 +15140,25 @@
     <associate|basis sub-space|<tuple|11.132|?>>
     <associate|basis sum of delta|<tuple|11.138|?>>
     <associate|basis sum of delta (1)|<tuple|11.139|?>>
+    <associate|derminant definition|<tuple|11.256|?>>
     <associate|determinant (y,(x..))|<tuple|11.250|?>>
     <associate|determinant (y,x1,..,xi-1...)|<tuple|11.248|?>>
     <associate|determinant construct of skew symmetric
     mapping|<tuple|11.236|?>>
+    <associate|determinant definition (condition)|<tuple|11.255|?>>
+    <associate|determinant delta upperscore|<tuple|11.259|?>>
+    <associate|determinant delta upperscore examples|<tuple|11.260|?>>
+    <associate|determinant delta upperscore property|<tuple|11.262|?>>
+    <associate|determinant det(L) properties|<tuple|11.258|?>>
     <associate|determinant determinant underscore|<tuple|11.248|?>>
     <associate|determinant determinant underscore (1)|<tuple|11.249|?>>
     <associate|determinant determinant underscore
     equivalence|<tuple|11.251|?>>
+    <associate|determinant function and linear mapping|<tuple|11.252|?>>
+    <associate|determinant function and linear mapping (1)|<tuple|11.253|?>>
+    <associate|determinant identity function|<tuple|11.257|?>>
     <associate|determinant key-symmetric condition|<tuple|11.238|?>>
+    <associate|determinant lemma 11.261|<tuple|11.261|?>>
     <associate|determinant mapping|<tuple|11.243|?>>
     <associate|determinant mapping existence of non trivial|<tuple|11.245|?>>
     <associate|determinant non zero determinant mappings are multiples of
@@ -14506,6 +15246,9 @@
     <associate|eq 11.163.103|<tuple|11.163|?>>
     <associate|eq 11.164.103|<tuple|11.164|?>>
     <associate|eq 11.165.103|<tuple|11.165|?>>
+    <associate|eq 11.166.103|<tuple|11.166|?>>
+    <associate|eq 11.168.103|<tuple|11.168|?>>
+    <associate|eq 11.169.103|<tuple|11.169|?>>
     <associate|eq 11.17.090|<tuple|11.17|?>>
     <associate|eq 11.18.090|<tuple|11.18|?>>
     <associate|eq 11.19.090|<tuple|11.19|?>>
@@ -14602,6 +15345,8 @@
     <associate|eq 11.97.094|<tuple|11.103|?>>
     <associate|eq 11.98.094|<tuple|11.104|?>>
     <associate|eq 11.99.094|<tuple|11.105|?>>
+    <associate|eq 11167.103|<tuple|11.167|?>>
+    <associate|examples 10.225|<tuple|11.260|?>>
     <associate|faculity|<tuple|11.174|?>>
     <associate|field (-1).(-1)|<tuple|11.223|?>>
     <associate|field (-1).f=-f|<tuple|11.224|?>>
@@ -14850,6 +15595,10 @@
       <tuple|<tuple|n-linear mapping>|<pageref|auto-40>>
 
       <tuple|<tuple|determinant mapping>|<pageref|auto-42>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<Delta\><rsub|L>>>|<pageref|auto-43>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|det<around*|(|L|)>>>|<pageref|auto-44>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|11<space|2spc>Linear
