@@ -5115,7 +5115,7 @@
 
   <\example>
     <label|linear dependent family alternative example><label|linear
-    dependent family alternative example>Let
+    dependent family alternative example 1>Let
     <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a vector space
     over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> and
     <math|<around*|{|x<rsub|1>|}><rsub|i\<in\><around*|{|1,2|}>>> a linear
@@ -12105,7 +12105,8 @@
 
   We will make extensive use of the signature of a permutation in defining
   skew-symmetric functions. So it will be usefull to have the concept of
-  <math|-1> in a fiel and examine its relation with <math|-1\<in\>\<bbb-Z\>>.
+  <math|-1> in a field and examine its relation with
+  <math|-1\<in\>\<bbb-Z\>>.
 
   <\definition>
     <label|field -1>If <math|F> is a field and <math|1> is the multiplicative
@@ -15066,7 +15067,7 @@
     function,<math|L\<in\>Hom<around*|(|X,X|)>> then\ 
 
     <\equation*>
-      <wide|\<Delta\>L|\<wide-sqoverbrace\>>\<in\>Hom<around*|(|X<rsup|n>;Y|)><text|
+      <wide|\<Delta\>L|\<wide-sqoverbrace\>>\<in\>Hom<around*|(|X<rsup|n>;Hom<around*|(|X,X|)>|)><text|
       and ><wide|\<Delta\>L|\<wide-sqoverbrace\>><text| is skew-symmetrc>
     </equation*>
   </theorem>
@@ -15109,7 +15110,7 @@
         <\eqnarray*>
           <tformat|<table|<row|<cell|<around*|(|t,L<around*|(|y<rsub|1>|)>,\<ldots\>,L<around*|(|y<rsub|i-1>|)>,L<around*|(|y<rsub|i+1>|)>,\<ldots\>,L<around*|(|y<rsub|n>|)>|)><rsub|k>>|<cell|\<equallim\><rsub|<text|[definition:
           <reference|determinant (y,x1,..,xi-1...)>]>>>|<cell|L<around*|(|y<rsub|k-1>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|k-1\<neq\>i\<wedge\><text|[eq:
-          <reference|eq 11.170.103>]>>>|<cell|L<around*|(|x<rsub|k-1>|)>>>>>
+          <reference|eq 11.170.105>]>>>|<cell|L<around*|(|x<rsub|k-1>|)>>>>>
         </eqnarray*>
 
         <item*|<math|i+1\<leqslant\>k\<leqslant\>n>>Then
@@ -15118,7 +15119,7 @@
         <\eqnarray*>
           <tformat|<table|<row|<cell|<around*|(|t,L<around*|(|y<rsub|1>|)>,\<ldots\>,L<around*|(|y<rsub|i-1>|)>,L<around*|(|y<rsub|i+1>|)>,\<ldots\>,L<around*|(|y<rsub|n>|)>|)><rsub|k>>|<cell|\<equallim\><rsub|<text|[definition:
           <reference|determinant (y,x1,..,xi-1...)>]>>>|<cell|L<around*|(|y<rsub|k>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|k\<neq\>i\<wedge\><text|[eq:
-          <reference|eq 11.170.103>]>>>|<cell|L<around*|(|x<rsub|k>|)>>>>>
+          <reference|eq 11.170.105>]>>>|<cell|L<around*|(|x<rsub|k>|)>>>>>
         </eqnarray*>
       </description>
 
@@ -15207,17 +15208,207 @@
     hence
 
     <\equation*>
-      <wide|\<Delta\>L|\<wide-sqoverbrace\>>\<in\>Hom<around*|(|X<rsup|n>;X|)>
+      <wide|\<Delta\>L|\<wide-sqoverbrace\>>\<in\>Hom<around*|(|X<rsup|n>;Hom<around*|(|X,X|)>|)>
     </equation*>
 
     Next we prove skew-symmetry. Let <math|t\<in\>X> and
     <math|x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|n>> such
     that <math|\<exists\><around*|(|k,l|)>\<in\><around*|{|1,\<ldots\>,n|}>>
     satisfying <math|k\<neq\>l> and <math|x<rsub|k>=x<rsub|l>>. We may always
-    assume that <math|k\<less\>l> [otherwise exchange]
+    assume that <math|k\<less\>l> [otherwise exchange <math|k> and <math|l>].
+    Consider for <math|j> the following two cases
+
+    <\description>
+      <item*|<math|j\<neq\>k\<wedge\>j\<neq\>l>>Then we have thw following
+      subcases:
+
+      <\description>
+        <item*|<math|j\<less\>k\<less\>l>>Then we have
+        <math|j+1\<leqslant\>k> and <math|j+1\<leqslant\>l> hence
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|j-1>|)>,L<around*|(|x<rsub|j+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)><rsub|k>>|<cell|\<equallim\><rsub|<text|[definition:
+          <reference|determinant (y,x1,..,xi-1...)>]>><rsub|<text|>>>|<cell|>>|<row|<cell|L<around*|(|x<rsub|k>|)>>|<cell|\<equallim\><rsub|x<rsub|k>=x<rsub|l>>>|<cell|>>|<row|<cell|L<around*|(|x<rsub|l>|)>>|<cell|\<equallim\><rsub|<text|[definition:
+          <reference|determinant (y,x1,..,xi-1...)>]>><rsub|<text|>>>|<cell|>>|<row|<cell|<around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|j-1>|)>,L<around*|(|x<rsub|j+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)><rsub|l>>|<cell|>|<cell|>>>>
+        </eqnarray*>
+
+        which as <math|k\<neq\>l> proves by [theorem: <reference|determinant
+        key-symmetric condition>] that\ 
+
+        <\equation*>
+          \<Delta\><around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|j-1>|)>,L<around*|(|x<rsub|j+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>=0
+        </equation*>
+
+        <item*|<math|k\<less\>j\<less\>l>>Then we have
+        <math|1\<less\>k+1\<leqslant\>j> and \ <math|j+1\<leqslant\>l> so
+        that
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|j-1>|)>,L<around*|(|x<rsub|j+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)><rsub|k+1>>|<cell|\<equallim\><rsub|<text|[definition:
+          <reference|determinant (y,x1,..,xi-1...)>]>><rsub|<text|>>>|<cell|>>|<row|<cell|L<around*|(|x<rsub|<around*|(|k+1|)>-1>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x<rsub|k>|)>>|<cell|\<equallim\><rsub|x<rsub|k>=x<rsub|l>>>|<cell|>>|<row|<cell|L<around*|(|x<rsub|l>|)>>|<cell|\<equallim\><rsub|<text|[definition:
+          <reference|determinant (y,x1,..,xi-1...)>]>><rsub|<text|>>>|<cell|>>|<row|<cell|<around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|j-1>|)>,L<around*|(|x<rsub|j+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)><rsub|l>>|<cell|>|<cell|>>>>
+        </eqnarray*>
+
+        which as <math|k\<neq\>l\<Rightarrow\>k+1\<neq\>l+1> proves by
+        [theorem: <reference|determinant key-symmetric condition>] that\ 
+
+        <\equation*>
+          \<Delta\><around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|j-1>|)>,L<around*|(|x<rsub|j+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>=0
+        </equation*>
+
+        <item*|<math|k\<less\>l\<less\>j>>Then we have
+        <math|1\<less\>k+1\<leqslant\>j> and <math|1\<less\>l+1\<leqslant\>j>
+        so that
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|j-1>|)>,L<around*|(|x<rsub|j+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)><rsub|k+1>>|<cell|\<equallim\><rsub|<text|[definition:
+          <reference|determinant (y,x1,..,xi-1...)>]>><rsub|<text|>>>|<cell|>>|<row|<cell|L<around*|(|x<rsub|<around*|(|k+1|)>-1>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x<rsub|k>|)>>|<cell|\<equallim\><rsub|x<rsub|k>=x<rsub|l>>>|<cell|>>|<row|<cell|L<around*|(|x<rsub|l>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x<rsub|<around*|(|l+1|)>-1>|)>>|<cell|\<equallim\><rsub|<text|[definition:
+          <reference|determinant (y,x1,..,xi-1...)>]>><rsub|<text|>>>|<cell|>>|<row|<cell|<around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|j-1>|)>,L<around*|(|x<rsub|j+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)><rsub|k+1>>|<cell|>|<cell|>>>>
+        </eqnarray*>
+
+        which as <math|k\<neq\>l\<Rightarrow\>k+1\<neq\>l+1> proves by
+        [theorem: <reference|determinant key-symmetric condition>] that\ 
+
+        <\equation*>
+          \<Delta\><around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|j-1>|)>,L<around*|(|x<rsub|j+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>=0
+        </equation*>
+      </description>
+
+      So in all cases we have\ 
+
+      <\equation>
+        <label|eq 11.174.105>\<Delta\><around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|j-1>|)>,L<around*|(|x<rsub|j+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>=0
+      </equation>
+
+      <item*|<math|j=k>>For <math|j=k\<less\>l> we have by [lemma:
+      <reference|determinant lemma 11.261>] and
+      <math|L<around*|(|x<rsub|k>|)>=L<around*|(||)>> that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|k-1>|)>,L<around*|(|x<rsub|k+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>\<circ\><around*|(|k\<rightsquigarrowlim\><rsub|n>l+1|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|l-1>|)>,L<around*|(|x<rsub|l+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      so that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<Delta\><around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|l-1>|)>,L<around*|(|x<rsub|l+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<Delta\><around*|(|<around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|k-1>|)>,L<around*|(|x<rsub|k+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>\<circ\><around*|(|k\<rightsquigarrowlim\><rsub|n>l+1|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<around*|(|k\<rightsquigarrowlim\><rsub|n>l+1|)>\<Delta\>|)><around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|k-1>|)>,L<around*|(|x<rsub|k+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|sign<around*|(|<around*|(|k\<rightsquigarrowlim\><rsub|n>l+1|)>|)>\<cdot\>\<Delta\><around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|k-1>|)>,L<around*|(|x<rsub|k+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|permutation insert funtion
+        property>]>>>|<cell|>>|<row|<cell|<around*|(|-1|)><rsup|l+1-k>\<cdot\>\<Delta\><around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|k-1>|)>,L<around*|(|x<rsub|k+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      So after multiplying both sides by <math|<around*|(|-1|)><rsup|l+1-k>>
+      and the fact that <math|<around*|(|-1|)><rsup|l+1-k>\<cdot\><around*|(|-1|)><rsup|l+1-k>=1>
+      it follows that:
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<Delta\><around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|k-1>|)>,L<around*|(|x<rsub|k+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|-1|)><rsup|l+1-k>\<cdot\>\<Delta\><around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|l-1>|)>,L<around*|(|x<rsub|l+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>>|<cell|>|<cell|<eq-number><label|eq
+        11.175.105>>>>>
+      </eqnarray*>
+    </description>
+
+    Now\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<wide|\<Delta\>L|\<wide-sqoverbrace\>><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)><around*|(|t|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|-1|)><rsup|j>\<cdot\>\<Delta\><around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|j-1>|)>,L<around*|(|x<rsub|j+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>\<cdot\>x<rsub|j>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum over disjoint subsets>]>>>|<cell|>>|<row|<cell|A+B+C>|<cell|>|<cell|<eq-number><label|eq
+      11.176.105>>>>>
+    </eqnarray*>
+
+    where\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|A>|<cell|=>|<cell|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k.l|}>><around*|(|-1|)><rsup|j>\<cdot\>\<Delta\><around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|j-1>|)>,L<around*|(|x<rsub|j+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>\<cdot\>x<rsub|j>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|eq 11.174.105>]>>>|<cell|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k.l|}>><around*|(|-1|)><rsup|j>\<cdot\>0\<cdot\>x<rsub|j>>>|<row|<cell|>|<cell|=>|<cell|0>>|<row|<cell|B>|<cell|=>|<cell|<big|sum><rsub|j\<in\><around*|{|k|}>><around*|(|-1|)><rsup|j>\<cdot\>\<Delta\><around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|j-1>|)>,L<around*|(|x<rsub|j+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>\<cdot\>x<rsub|j>>>|<row|<cell|>|<cell|>|<cell|<around*|(|-1|)><rsup|k>\<cdot\>\<Delta\><around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|k-1>|)>,L<around*|(|x<rsub|k+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>\<cdot\>x<rsub|k>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 11.175.105>]>>>|<cell|<around*|(|-1|)><rsup|k>\<cdot\><around*|(|-1|)><rsup|l+1-k>\<cdot\>\<Delta\><around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|l-1>|)>,L<around*|(|x<rsub|l+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>\<cdot\>x<rsub|k>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|-1|)><rsup|l+1>\<cdot\>\<Delta\><around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|l-1>|)>,L<around*|(|x<rsub|l+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>\<cdot\>x<rsub|k>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|-1|)>\<cdot\><around*|(|-1|)><rsup|l>\<cdot\>\<Delta\><around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|l-1>|)>,L<around*|(|x<rsub|l+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>\<cdot\>x<rsub|k>>>|<row|<cell|>|<cell|\<equallim\><rsub|x<rsub|k>=x<rsub|l>>>|<cell|<around*|(|-1|)>\<cdot\><around*|(|-1|)><rsup|l>\<cdot\>\<Delta\><around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|l-1>|)>,L<around*|(|x<rsub|l+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>\<cdot\>x<rsub|l>>>|<row|<cell|C>|<cell|=>|<cell|<big|sum><rsub|j\<in\><around*|{|l|}>><around*|(|-1|)><rsup|j>\<cdot\>\<Delta\><around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|j-1>|)>,L<around*|(|x<rsub|j+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>\<cdot\>x<rsub|j>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|-1|)><rsup|l>\<cdot\>\<Delta\><around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|l-1>|)>,L<around*|(|x<rsub|l+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>\<cdot\>x<rsub|l>>>|<row|<cell|>|<cell|=>|<cell|-B>>>>
+    </eqnarray*>
+
+    so that using [eq: <reference|eq 11.176.105>]
+    <math|<wide|\<Delta\>L|\<wide-sqoverbrace\>><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)><around*|(|t|)>=0>,
+    which, as <math|t\<in\>X> was choosen arbitrary, that
+    <math|<wide|\<Delta\>L|\<wide-sqoverbrace\>><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>=C<rsub|0>>
+    [the neutral element in <math|Hom<around*|(|X,X|)>>]<space|1em>proving
+    that\ 
+
+    <\equation*>
+      <wide|\<Delta\>L|\<wide-sqoverbrace\>><text| is skew-symmetric>
+    </equation*>
   </proof>
 
-  \;
+  The above theorem allows us to define the adjoint of a linear map.
+
+  <\definition>
+    <label|determinant adjoint><index|adjoint><index|<math|adjoint<around*|(|L|)>>>Let
+    <math|n\<in\>\<bbb-N\>>, <math|X> a vector space over a field <math|F>
+    with characteristic zero such that <math|dim<around*|(|X|)>=n>,
+    <math|L\<in\>Hom<around*|(|X,X|)>> a linear transformation. then there
+    exists a function <with|font-series|bold|adjoint>
+
+    <\equation*>
+      adjoint:L\<rightarrow\>Hom<around*|(|X,X|)><text|>\ 
+    </equation*>
+
+    where <math|adjoint<around*|(|L|)>\<in\>Hom<around*|(|X,X|)>> is such
+    that \ for every non trivial deteminant function <math|\<Delta\>> we have
+    <math|\<forall\>x\<in\>X<rsup|n>> that
+
+    <\equation*>
+      <wide|\<Delta\>L|\<wide-sqoverbrace\>><around*|(|x|)>=\<Delta\><around*|(|x|)>\<cdot\>adjoint<around*|(|L|)>
+    </equation*>
+  </definition>
+
+  <\proof>
+    Of course we must prove that for every <math|L> there exists only one
+    <math|adjoint<around*|(|L|)>\<in\>Hom<around*|(|X,X|)>> such that <math|>
+    <math|<wide|\<Delta\>L|\<wide-sqoverbrace\>><around*|(|x|)>=\<Delta\><around*|(|x|)>\<cdot\>adjoint<around*|(|L|)>>.
+    First, as by the previous theorem [theorem: <reference|determinant delta
+    upperscore property>] <math|<wide|\<Delta\>L|\<wide-sqoverbrace\>>> is a
+    skew-symmetric <math|n>-linear map, we can use [theorem:
+    <reference|determinant skew symetric functions and determinant function>]
+    to get a <with|font-series|bold|unique>
+    <math|y\<in\>Hom<around*|(|X,X|)>> such that
+    <math|\<forall\>x\<in\>X<rsup|n>> that\ 
+
+    <\equation*>
+      <wide|\<Delta\>L|\<wide-sqoverbrace\>><around*|(|x|)>=\<Delta\><around*|(|x|)>\<cdot\>y
+    </equation*>
+
+    This proves existence, next we have to prove that there exist only one.
+    So let <math|\<Delta\><rprime|'>> another non trivial determinant
+    function and <math|y<rprime|'>\<in\>Hom<around*|(|X,X|)>> such that
+    <math|\<forall\>x\<in\>X<rsup|n>> we have
+
+    <\equation*>
+      <wide|\<Delta\><rprime|'>L|\<wide-sqoverbrace\>><around*|(|x|)>=\<Delta\><around*|(|x|)>\<cdot\>y<rprime|'>
+    </equation*>
+
+    Using [theorem: <reference|determinant non zero determinant mappings are
+    multiples of each other>] there exists a <math|\<lambda\>\<in\>F> such
+    that\ 
+
+    <\equation*>
+      \<Delta\><rprime|'>=\<lambda\>\<cdot\>\<Delta\>
+    </equation*>
+
+    Then we have <math|\<forall\>x\<in\>X<rsup|n>,t\<in\>X> that
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|\<Delta\><rprime|'><around*|(|x|)>\<cdot\>y<rprime|'>|)><around*|(|t|)>>|<cell|=>|<cell|<wide|\<Delta\><rprime|'>L|\<wide-sqoverbrace\>><around*|(|x|)><around*|(|t|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|-1|)><rsup|j>\<cdot\>\<Delta\><rprime|'><around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|j-1>|)>,L<around*|(|x<rsub|j+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>\<cdot\>x<rsub|j>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|-1|)><rsup|j>\<cdot\>\<lambda\>\<cdot\>\<Delta\><around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|j-1>|)>,L<around*|(|x<rsub|j+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>\<cdot\>x<rsub|j>>>|<row|<cell|>|<cell|=>|<cell|\<lambda\>\<cdot\><big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|-1|)><rsup|j>\<cdot\>\<Delta\><around*|(|t,L<around*|(|x<rsub|1>|)>,\<ldots\>,L<around*|(|x<rsub|j-1>|)>,L<around*|(|x<rsub|j+1>|)>,\<ldots\>,L<around*|(|x<rsub|n>|)>|)>\<cdot\>x<rsub|j>>>|<row|<cell|>|<cell|=>|<cell|\<lambda\>\<cdot\><wide|\<Delta\>L|\<wide-sqoverbrace\>><around*|(|x|)><around*|(|t|)>>>|<row|<cell|>|<cell|=>|<cell|\<lambda\>\<cdot\><around*|(|\<Delta\><around*|(|x|)>\<cdot\>y|)><around*|(|t|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<Delta\><rprime|'><around*|(|x|)>\<cdot\>y|)><around*|(|t|)>>>>>
+    </eqnarray*>
+
+    which, as is arbitrary choosen, proves that\ 
+
+    <\equation*>
+      \<forall\>x\<in\>X<rsup|n> we have \<Delta\><rprime|'><around*|(|x|)>\<cdot\>y<rprime|'>=\<Delta\><rprime|'><around*|(|x|)>\<cdot\>y
+    </equation*>
+
+    As <math|\<Delta\><rprime|'>> is non thrivial there exists a
+    <math|x\<in\>X> such that <math|\<Delta\><rprime|'><around*|(|x|)>\<neq\>0>
+    which combined with the above proves that\ 
+
+    <\equation*>
+      y=y<rprime|'>
+    </equation*>
+  </proof>
 
   \;
 
@@ -15290,6 +15481,8 @@
     <associate|auto-43|<tuple|<with|mode|<quote|math>|\<Delta\><rsub|L>>|?>>
     <associate|auto-44|<tuple|<with|mode|<quote|math>|det<around*|(|L|)>>|?>>
     <associate|auto-45|<tuple|<with|mode|<quote|math>|<wide|\<Delta\>L|\<wide-sqoverbrace\>>>|?>>
+    <associate|auto-46|<tuple|adjoint|?>>
+    <associate|auto-47|<tuple|<with|mode|<quote|math>|adjoint<around*|(|L|)>>|?>>
     <associate|auto-5|<tuple|<with|mode|<quote|math>|<big|prod><rsub|i=0><rsup|n>x<rsub|i>>|?>>
     <associate|auto-6|<tuple|11.1.2|?>>
     <associate|auto-7|<tuple|11.1.3|?>>
@@ -15324,6 +15517,7 @@
     <associate|derminant definition|<tuple|11.258|?>>
     <associate|determinant (y,(x..))|<tuple|11.252|?>>
     <associate|determinant (y,x1,..,xi-1...)|<tuple|11.250|?>>
+    <associate|determinant adjoint|<tuple|11.265|?>>
     <associate|determinant construct of skew symmetric
     mapping|<tuple|11.238|?>>
     <associate|determinant definition (condition)|<tuple|11.257|?>>
@@ -15370,11 +15564,8 @@
     <associate|eq 11.104.097|<tuple|11.109|?>>
     <associate|eq 11.105.097|<tuple|11.110|?>>
     <associate|eq 11.106.097|<tuple|11.111|?>>
-    <associate|eq 11.108.097|<tuple|11.122|?>>
-    <associate|eq 11.109.097|<tuple|11.123|?>>
     <associate|eq 11.11.054|<tuple|11.13|?>>
     <associate|eq 11.11.055|<tuple|11.12|?>>
-    <associate|eq 11.110.097|<tuple|11.124|?>>
     <associate|eq 11.113.101|<tuple|11.113|?>>
     <associate|eq 11.114.101|<tuple|<with|mode|<quote|math>|m\<in\>S<rsub|n>\<Rightarrow\>m+1\<in\>S<rsub|n>>|?>>
     <associate|eq 11.115.101|<tuple|11.115|?>>
@@ -15434,13 +15625,13 @@
     <associate|eq 11.169.103|<tuple|11.168|?>>
     <associate|eq 11.169.105|<tuple|11.169|?>>
     <associate|eq 11.17.090|<tuple|11.17|?>>
-    <associate|eq 11.170.103|<tuple|11.170|?>>
     <associate|eq 11.170.105|<tuple|11.170|?>>
-    <associate|eq 11.171.103|<tuple|11.171|?>>
     <associate|eq 11.171.105|<tuple|11.171|?>>
-    <associate|eq 11.172.103|<tuple|11.170|?>>
     <associate|eq 11.173.105|<tuple|11.173|?>>
     <associate|eq 11.174.103|<tuple|11.172|?>>
+    <associate|eq 11.174.105|<tuple|11.174|?>>
+    <associate|eq 11.175.105|<tuple|11.175|?>>
+    <associate|eq 11.176.105|<tuple|11.176|?>>
     <associate|eq 11.18.090|<tuple|11.18|?>>
     <associate|eq 11.19.090|<tuple|11.19|?>>
     <associate|eq 11.2.053|<tuple|11.2|?>>
@@ -15560,6 +15751,8 @@
     <associate|linear dependent family|<tuple|11.100|?>>
     <associate|linear dependent family alternative|<tuple|11.110|?>>
     <associate|linear dependent family alternative example|<tuple|11.111|?>>
+    <associate|linear dependent family alternative example
+    1|<tuple|11.111|?>>
     <associate|linear dependent family condition|<tuple|11.106|?>>
     <associate|linear dependent family set|<tuple|11.104|?>>
     <associate|linear dependent set|<tuple|11.92|?>>
@@ -15626,7 +15819,7 @@
     <associate|multi function of many arguments (1)|<tuple|11.216|?>>
     <associate|multi induction argument|<tuple|11.215|?>>
     <associate|multi multilinear mappin one argument is 0|<tuple|11.211|?>>
-    <associate|multi multilinear mapping|<tuple|11.212|?>>
+    <associate|multi multilinear mapping|<tuple|11.210|?>>
     <associate|multi multilinear mapping alternative|<tuple|11.212|?>>
     <associate|multi multilinear mapping and linear mapping|<tuple|11.217|?>>
     <associate|multi multilinear mapping and product of
