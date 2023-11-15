@@ -5327,7 +5327,7 @@
     <math|<around*|{|x<rsub|i>\|i\<in\>I|}>> by\ 
 
     <\equation*>
-      <around*|{|x<rsub|i>\|i\<in\>I|}>=range<around*|(|f|)>
+      <around*|{|x<rsub|i>\|i\<in\>I|}>=range<around*|(|f|)>=f<around*|(|I|)>
     </equation*>
   </definition>
 
@@ -12772,7 +12772,7 @@
   [theorem: <reference|family intersection (2)>] without explicit referring
   to them. This to avoid excessive notation and difference of notation
   between this text and standard mathematical practice. Another
-  simplification of natation that we introduce is the following.
+  simplification of notation that we introduce is the following.
 
   <\notation>
     If <math|f:A\<times\>B\<rightarrow\>C> is a function then
@@ -13151,13 +13151,11 @@
     <associate|family|<tuple|2.97|?>>
     <associate|family and function composition|<tuple|2.105|?>>
     <associate|family de Morgan|<tuple|2.126|?>>
-    <associate|family definition (1)|<tuple|2.101|?>>
     <associate|family definition (2)|<tuple|2.102|?>>
     <associate|family definition (3)|<tuple|2.103|?>>
     <associate|family distributivity|<tuple|2.124|?>>
     <associate|family empty family|<tuple|2.99|?>>
     <associate|family empty family condition|<tuple|2.100|?>>
-    <associate|family extending range|<tuple|2.100|?>>
     <associate|family image and preimage|<tuple|2.130|?>>
     <associate|family index set is a product|<tuple|2.104|?>>
     <associate|family intersection (2)|<tuple|2.117|?>>
