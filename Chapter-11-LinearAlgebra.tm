@@ -13143,18 +13143,18 @@
     a distinct ordered family such that <math|<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>
     is a basis for <math|X> and <math|L\<in\>Hom<around*|(|X<rsup|n>;Y|)>>
     such that <math|L> is skew-symmetric then <math|\<forall\>x\<in\>X> we
-    have
+    have:\ 
+
+    <\equation*>
+      L<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>=<big|sum><rsub|\<sigma\>\<in\>P<rsub|n>><around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>\<alpha\><rsup|\<sigma\><around*|(|j|)>><rsub|j>|)>\<cdot\><around*|(|\<sigma\>L|)><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>
+    </equation*>
+
+    where <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|<around*|{|\<alpha\><rsup|i><rsub|j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>>
+    is the <with|font-series|bold|unique family> satisfying
+    <math|x<rsub|i>=<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsup|j><rsub|i>\<cdot\>e<rsub|j>>
+    [which exists by [theorem: <reference|basis finite alternative (2)>]
   </theorem>
-
-  <\equation*>
-    L<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>=<big|sum><rsub|\<sigma\>\<in\>P<rsub|n>><around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>\<alpha\><rsup|\<sigma\><around*|(|j|)>><rsub|j>|)>\<cdot\><around*|(|\<sigma\>L|)><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>
-  </equation*>
-
-  where <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
-  <math|<around*|{|\<alpha\><rsup|i><rsub|j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>>
-  is the <with|font-series|bold|unique family> satisfying
-  <math|x<rsub|i>=<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsup|j><rsub|i>\<cdot\>e<rsub|j>>
-  [which exists by [theorem: <reference|basis finite alternative (2)>]
 
   <\proof>
     As <math|P<rsub|n>=<around*|{|\<sigma\>\<in\><around*|{|1,\<ldots\>,n|}><rsup|<around*|{|1,\<ldots\>,n|}>>\|\<sigma\>:<around*|{|1,\<ldots\>,n|}>\<rightarrow\><around*|{|1,\<ldots\>,n|}><text|
@@ -16553,7 +16553,7 @@
   <\theorem>
     <label|matrix linear map application>Let <math|n,m\<in\>\<bbb-N\>>,
     <math|X,Y> finite dimensional vector spaces over a field <math|F> with
-    basis <math|<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>,<math|<around*|{|f<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,m|}>|}>>
+    bases <math|<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>,<math|<around*|{|f<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,m|}>|}>>
     defined by distinct families <math|E=<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>X>,
     <math|F=<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>Y>
     <math|>and <math|L\<in\>Hom<around*|(|X,Y|)>> then we have:
@@ -16981,7 +16981,7 @@
   <math|\<cal-M\><rsub|m,n><around*|(|F|)>> is not a vector space).
 
   <\theorem>
-    <label|matrix mapping linear map to a matrix is a bijection>et
+    <label|matrix mapping linear map to a matrix is a bijection>Let
     <math|n,m\<in\>\<bbb-N\>>, <math|X,Y> finite dimensional vector spaces
     over a field <math|F> with basis <math|<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>,<math|<around*|{|f<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,m|}>|}>>
     defined by distinct families <math|E=<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>X>,
@@ -17102,9 +17102,479 @@
     </description>
   </proof>
 
+  <\example>
+    <label|matrix linear map F^n F^m>Let <math|F> be a filed,
+    <math|n,m\<in\>\<bbb-N\>> and <math|F > a field and
+    <math|E=<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>\<subseteq\>F<rsup|n>>,
+    <math|F=<around*|{|f<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,m|}>|}>\<subseteq\>F<rsup|m>>
+    defined by <math|<around*|(|e<rsub|i>|)><rsub|j>=\<delta\><rsup|n><rsub|i,j>>
+    and <math|<around*|{|f<rsub|i>|}><rsub|j>=\<delta\><rsup|m><rsub|i,j>>
+    the canonical bases for the vector spaces <math|F<rsup|n>>,
+    <math|F<rsup|m>> over <math|F> then for
+    <math|M\<in\>\<cal-M\><rsub|m,n><around*|(|F|)>> we have for
+    <math|x\<in\>F<rsup|n>> that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,m|}>>
+
+    <\equation*>
+      <around*|(|\<cal-M\><around*|(|E,F|)><rsup|-1><around*|(|M|)><around*|(|x|)>|)><rsub|i><rsub|>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>M<rsub|i,j>\<cdot\>x<rsub|j>
+    </equation*>
+
+    or if we define <math|X=<matrix|<tformat|<table|<row|<cell|x<rsub|1>>>|<row|<cell|\<vdots\>>>|<row|<cell|x<rsub|n>>>>>>>
+    then\ 
+
+    <\equation*>
+      \<cal-M\><around*|(|E,F|)><rsup|-1><around*|(|M|)><around*|(|x|)>=M\<cdot\>X
+    </equation*>
+  </example>
+
+  <\proof>
+    Let <math|x\<in\>F<rsup|n>> <math|x<rsub|i>=<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>\<delta\><rsup|n><rsub|i,j>\<cdot\>x<rsub|i>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i>\<cdot\>e<rsub|i>>
+    so that for <math|k\<in\><around*|{|1,\<ldots\>,m|}>>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|\<cal-M\><around*|(|E,F|)><rsup|-1><around*|(|M|)><around*|(|x|)>|)><rsub|k>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|matrix mapping linear map to a matrix is a
+      bijection>]>>>|<cell|<around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>M<rsub|i,j>\<cdot\>x<rsub|j>|)>\<cdot\>f<rsub|i>|)><rsub|k>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum in A^n>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>M<rsub|i,j>\<cdot\>x<rsub|j>|)>\<cdot\><around*|(|f<rsub|i>|)><rsub|k>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>M<rsub|i,j>\<cdot\>x<rsub|j>|)>\<cdot\>\<delta\><rsup|m><rsub|i,k>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>M<rsub|k,j>\<cdot\>x<rsub|j>>>>>
+    </eqnarray*>
+  </proof>
+
+  We have the following relation between the composition of linear mappings
+  and the product of matrices.
+
+  <\theorem>
+    <label|matrix composition>Let <math|n,m,r\<in\>\<bbb-N\>>, <math|X,Y,Z>
+    finite dimensional vector spaces over a field <math|F> with basis
+    <math|<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>,<math|<around*|{|f<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,m|}>|}>>,<math|<around*|{|g<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,r|}>|}>>
+    defined by distinct families <math|E=<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>X>,
+    <math|F=<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>Y>,
+    <math|G=<around*|{|g<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    then we have for <math|L<rsub|1>\<in\>Hom<around*|(|X,Y|)>> and
+    <math|L<rsub|2>\<in\>Hom<around*|(|Y,Z|)>> that\ 
+
+    <\equation*>
+      \<cal-M\><around*|(|L<rsub|2>\<circ\>L<rsub|1>;E,G|)>=\<cal-M\><around*|(|L<rsub|2>;F,G|)>\<cdot\>\<cal-M\><around*|(|L<rsub|1>;E,F|)>
+    </equation*>
+
+    or in other words
+
+    <\equation*>
+      \<cal-M\><around*|(|E,G|)><around*|(|L<rsub|2>\<circ\>L<rsub|1>|)>=\<cal-M\><around*|(|F,G|)><around*|(|L<rsub|2>|)>\<cdot\>\<cal-M\><around*|(|E,F|)><around*|(|L<rsub|1>|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Let <math|i\<in\><around*|{|1,\<ldots\>,n|}>> then we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,r|}>>\<cal-M\><around*|(|L<rsub|2>\<circ\>L<rsub|1>;E,G|)><rsub|k,i>\<cdot\>g<rsub|k>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|L<rsub|2>\<circ\>L<rsub|1>|)><around*|(|e<rsub|i>|)>>|<cell|=>|<cell|>>|<row|<cell|L<rsub|2><around*|(|L<rsub|1><around*|(|e<rsub|i>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|L<rsub|2><around*|(|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>\<cal-M\><around*|(|L<rsub|1>;F,G|)><rsub|j,i>\<cdot\>f<rsub|j>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|linear mapping and finite
+      sum>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>\<cal-M\><around*|(|L<rsub|1>;F,G|)><rsub|j,i>\<cdot\>L<rsub|2><around*|(|f<rsub|j>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>\<cal-M\><around*|(|L<rsub|1>;F,G|)><rsub|j,i>\<cdot\><around*|(|<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,r|}>>\<cal-M\><around*|(|L<rsub|2>;F,G|)><rsub|k,j>\<cdot\>g<rsub|k>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|vector space finite sum (1)>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,r|}>>\<cal-M\><around*|(|L<rsub|1>;F,G|)><rsub|j,i>\<cdot\><around*|(|\<cal-M\><around*|(|L<rsub|2>;F,G|)><rsub|k,j>\<cdot\>g<rsub|k>|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum of finite sums (2)>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,r|}>><around*|(|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|\<cal-M\><around*|(|L<rsub|2>;F,G|)><rsub|k,j>\<cdot\>\<cal-M\><around*|(|L<rsub|1>;F,G|)><rsub|j,i>|)>\<cdot\>g<rsub|k>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|vector space finite sum (1)>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,r|}>><around*|(|<around*|(|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|\<cal-M\><around*|(|L<rsub|2>;F,G|)><rsub|k,j>\<cdot\>\<cal-M\><around*|(|L<rsub|1>;F,G|)><rsub|j,i>|)>|)>\<cdot\>g<rsub|k>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,r|}>><around*|(|\<cal-M\><around*|(|L<rsub|2>;F.G|)>\<cdot\>\<cal-M\><around*|(|L<rsub|1>;E,F|)>|)><rsub|k,i>\<cdot\>g<rsub|k>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    By the uniqueness of the expansion in a basis it follow then that
+    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> and
+    <math|\<forall\>k\<in\><around*|{|1,\<ldots\>r|}>> that\ 
+
+    <\equation*>
+      \<cal-M\><around*|(|L<rsub|2>\<circ\>L<rsub|1>;E,G|)><rsub|k,i>=<around*|(|\<cal-M\><around*|(|L<rsub|2>;F.G|)>\<cdot\>\<cal-M\><around*|(|L<rsub|1>;E,F|)>|)><rsub|k,i>
+    </equation*>
+
+    proving\ 
+
+    <\equation*>
+      \<cal-M\><around*|(|L<rsub|2>\<circ\>L<rsub|1>;E,G|)>=<around*|(|\<cal-M\><around*|(|L<rsub|2>;F.G|)>\<cdot\>\<cal-M\><around*|(|L<rsub|1>;E,F|)>|)>
+    </equation*>
+  </proof>
+
+  <subsection|Inverse, Determinant and Adjoint of matrices>
+
+  For linear transformations we have the inverse of a linear transformation
+  based on the composition operator <math|\<circ\>>. Not every linear
+  transformation has a inverse but we can use the determinant of a linear
+  transformation to check if a linear transformation is invertable. Finally
+  we can use the determinant and the adjoint of a linear transformation to
+  calculate the inverse of a invertible linear transformation. Having just
+  proved that the composition of linear mappings can be translated in the
+  product of their associated matrices, it seems reasonable to define the
+  inverse of a matrix in terms of the product of matrices and introduce the
+  concept of the determinant and adjoint of matrices. It will also turn out
+  that the determinant and adjoint of a linear transformation are related to
+  the determinant and adjoint of a linear mapping.
+
+  <\definition>
+    <label|matrix inverse><index|inverse of a
+    matrix><index|<math|M<rsup|-1>>>Let <math|n\<in\>\<bbb-N\>>, <math|F> a
+    field and <math|M\<in\>\<cal-M\><rsub|n,n><around*|(|F|)>> then
+    <math|N\<in\>\<cal-M\><rsub|n,n><around*|(|F|)>> is a
+    <with|font-series|bold|inverse> of <math|M> if\ 
+
+    <\equation*>
+      N\<cdot\>M=E=M\<cdot\>N
+    </equation*>
+  </definition>
+
+  It turns out that a matrix can have only one inverse.
+
+  <\theorem>
+    <label|matrix inverse is unique>Let <math|n\<in\>\<bbb-N\>>, <math|F> a
+    field and <math|M\<in\>\<cal-M\><rsub|n,n>> then if <math|N<rsub|1>> and
+    <math|N<rsub|2>> are inverses of <math|M> we have that
+    <math|N<rsub|1>=N<rsub|2>>
+  </theorem>
+
+  <\proof>
+    Let <math|N<rsub|1>,N<rsub|2>> inverses of <math|M> then we have\ 
+
+    <\equation*>
+      N<rsub|1>=N<rsub|1>\<cdot\>E=N<rsub|1>\<cdot\><around*|(|M\<cdot\>N<rsub|2>|)>=<around*|(|N<rsub|1>\<cdot\>M|)>\<cdot\>N<rsub|2>=E\<cdot\>N<rsub|2>=N<rsub|2>
+    </equation*>
+  </proof>
+
+  The above leads to the following definition
+
+  <\definition>
+    <label|matrix invertable matrix>Let <math|n\<in\>\<bbb-N\>> and <math|F>
+    a field then <math|M\<in\>\<cal-M\><rsub|n,n><around*|(|F|)>> is
+    <with|font-series|bold|invertable> if there exist a
+    <math|N\<in\>\<cal-M\><rsub|n,n><around*|(|F|)>> that is the inverse of
+    <math|M>. This <with|font-series|bold|unique> inverse is noted as
+    <math|M<rsup|-1>>, so we have that\ 
+
+    <\equation*>
+      M<rsup|-1>\<cdot\>M=E=M\<cdot\>M<rsup|-1>
+    </equation*>
+  </definition>
+
+  The inverse of a inverse is the invertable matrix itself.
+
+  <\theorem>
+    <label|matrix inverse of inverse>Let <math|n\<in\>\<bbb-N\>>, <math|F> a
+    field and <math|M\<in\>\<cal-M\><rsub|n,n><around*|(|F|)>> a invertable
+    matrix then <math|M<rsup|-1>> is also invertable and
+    <math|<around*|(|M<rsup|-1>|)><rsup|-1>=M>
+  </theorem>
+
+  <\proof>
+    This can be proved by a easy calculation:
+
+    <\equation*>
+      M<rsup|-1>\<cdot\>M=E=M\<cdot\>M<rsup|-1>
+    </equation*>
+
+    hence <math|M> is the inverse of <math|M<rsup|-1>>, so that
+    <math|<around*|(|M<rsup|-1>|)><rsup|-1>=M>.
+  </proof>
+
+  <\theorem>
+    <label|matrix inverse matrix inverse linear transformation>Let
+    <math|n\<in\>\<bbb-N\>>, <math|X> be a vector space over a field,
+    <math|<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>
+    defined by a distinct family <math|F=<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>X>
+    and <math|L\<in\>Hom<around*|(|X,X|)>> then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|L<text| has a inverse
+      >L<rsup|-1><text| [or equivalenty by [theorem: <reference|function
+      bijection condition (2)>] L is a isomorphism]]>>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|\<cal-M\><around*|(|L;F,F|)><text|
+      is invertable>>|<cell|>>>>
+    </eqnarray*>
+
+    Further if <math|L<rsup|-1>> exists then\ 
+
+    <\equation*>
+      \<cal-M\><around*|(|L<rsup|-1>;F,F|)>=\<cal-M\><around*|(|L,F,F|)><rsup|-1>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>We have for <math|L<rsup|-1>> that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|E>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|matrix mapping is linear>
+        (4)]>>>|<cell|\<cal-M\><around*|[|Id<rsub|X>;F,F|]>>>|<row|<cell|>|<cell|=>|<cell|\<cal-M\><around*|[|L\<circ\>L<rsup|-1>;F,F|]>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|matrix composition>]>>>|<cell|\<cal-M\><around*|(|L;F,F|)>\<cdot\>\<cal-M\><around*|(|L<rsup|-1>;F,F|)>>>|<row|<cell|E>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|matrix mapping is linear>
+        (4)]>>>|<cell|\<cal-M\><around*|[|Id<rsub|X>;F,F|]>>>|<row|<cell|>|<cell|=>|<cell|\<cal-M\><around*|[|L<rsup|-1>\<circ\>L<rsup|>;F,F|]>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|matrix composition>]>>>|<cell|\<cal-M\><around*|(|L<rsup|-1>;F,F|)>\<cdot\>\<cal-M\><around*|(|L;F,F|)>>>>>
+      </eqnarray*>
+
+      proving that <math|\<cal-M\><around*|(|L;F,F|)>> has a inverse and that\ 
+
+      <\equation*>
+        \<cal-M\><around*|(|L;F,F|)><rsup|-1>=\<cal-M\><around*|(|L<rsup|-1>;F,F|)>
+      </equation*>
+
+      <item*|<math|\<Leftarrow\>>>Define <math|K\<equallim\><rsub|<text|[theorem:
+      <reference|matrix mapping linear map to a matrix is a
+      bijection>]>>\<cal-M\><around*|(|F,F|)><rsup|-1><around*|(|\<cal-M\><around*|(|L;F,F|)><rsup|-1>|)>>
+      then we have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|K\<circ\>L>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|matrix mapping linear map to a matrix is a
+        bijection>]>>>|<cell|>>|<row|<cell|\<cal-M\><around*|(|F,F|)><rsup|-1><around*|(|\<cal-M\><around*|(|F,F|)><around*|(|K\<circ\>L|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:<reference|matrix
+        composition>]>>>|<cell|>>|<row|<cell|\<cal-M\><around*|(|F,F|)><rsup|-1><around*|(|\<cal-M\><around*|(|F,F|)><around*|(|K|)>\<cdot\>\<cal-M\><around*|(|F,F|)><around*|(|L|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<cal-M\><around*|(|F,F|)><rsup|-1><around*|(|\<cal-M\><around*|(|F,F|)><around*|(|\<cal-M\><around*|(|F,F|)><rsup|-1><around*|(|\<cal-M\><around*|(|L;F,F|)><rsup|-1>|)>|)>\<cdot\>\<cal-M\><around*|(|F,F|)><around*|(|L|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<cal-M\><around*|(|F,F|)><rsup|-1><around*|(|\<cal-M\><around*|(|L;F,F|)><rsup|-1>\<cdot\>\<cal-M\><around*|(|F,F|)><around*|(|L|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<cal-M\><around*|(|F,F|)><rsup|-1><around*|(|\<cal-M\><around*|(|L;F,F|)><rsup|-1>\<cdot\>\<cal-M\><around*|(|L;F,F|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<cal-M\><around*|(|F,F|)><rsup|-1><around*|(|E|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|matrix mapping is linear>]>>>|<cell|>>|<row|<cell|Id<rsub|X>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      and\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|L\<circ\>K>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|matrix mapping linear map to a matrix is a
+        bijection>]>>>|<cell|>>|<row|<cell|\<cal-M\><around*|(|F,F|)><rsup|-1><around*|(|\<cal-M\><around*|(|F,F|)><around*|(|L\<circ\>K|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:<reference|matrix
+        composition>]>>>|<cell|>>|<row|<cell|\<cal-M\><around*|(|F,F|)><rsup|-1><around*|(|\<cal-M\><around*|(|F,F|)><around*|(|L|)>\<cdot\>\<cal-M\><around*|(|F,F|)><around*|(|K|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<cal-M\><around*|(|F,F|)><rsup|-1><around*|(|\<cal-M\><around*|(|F,F|)><around*|(|L|)>\<cdot\>\<cal-M\><around*|(|F,F|)><around*|(|\<cal-M\><around*|(|F,F|)><rsup|-1><around*|(|\<cal-M\><around*|(|L;F,F|)><rsup|-1>|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<cal-M\><around*|(|F,F|)><rsup|-1><around*|(|\<cal-M\><around*|(|F,F|)><around*|(|L|)>\<cdot\>\<cal-M\><around*|(|L;F,F|)><rsup|-1>\<cdot\>|)>>|<cell|=>|<cell|>>|<row|<cell|\<cal-M\><around*|(|F,F|)><rsup|-1><around*|(|\<cal-M\><around*|(|L;F,F|)>\<cdot\>\<cal-M\><around*|(|L;F,F|)><rsup|-1>|)>>|<cell|=>|<cell|>>|<row|<cell|\<cal-M\><around*|(|F,F|)><rsup|-1><around*|(|E|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|matrix mapping is linear>]>>>|<cell|>>|<row|<cell|Id<rsub|X>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      which proves that <math|K\<circ\>L=Id<rsub|X>=L\<circ\>K> so that\ 
+
+      <\equation*>
+        L<text| is invertable with inverse
+        >K=\<cal-M\><around*|(|F,F|)><rsup|-1><around*|(|\<cal-M\><around*|(|F,F|)><around*|(|L|)>|)>
+      </equation*>
+    </description>
+  </proof>
+
+  We are now ready to define the determinant of a matrix.
+
+  <\definition>
+    <label|matrix determinant><index|<math|det<around*|(|M|)>>><dueto|Determinant>Let
+    <math|n\<in\>\<bbb-N\>>m <math|F> a field and
+    <math|M\<in\>\<cal-M\><rsub|n,n><around*|(|F|)>> a square matrix then\ 
+  </definition>
+
+  <\equation*>
+    det<around*|(|M|)>=<big|sum><rsub|\<sigma\>\<in\>P<rsub|n>>sign<around*|(|\<sigma\>|)>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>M<rsub|i,\<sigma\><around*|(|i|)>>|)>
+  </equation*>
+
+  Another notation for the determinant is <math|<around*|\||M|\|>> so using
+  this notation we have\ 
+
+  <\equation*>
+    <around*|\||M|\|>=<big|sum><rsub|\<sigma\>\<in\>P<rsub|n>>sign<around*|(|\<sigma\>|)>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>M<rsub|i,\<sigma\><around*|(|i|)>>|)>
+  </equation*>
+
+  <\example>
+    <label|matrix determinant example 1>If <math|n=1> then
+    <math|M\<in\>\<cal-M\><rsub|1,1><around*|(|F|)>> is of the form
+    <math|<matrix|<tformat|<table|<row|<cell|M<rsub|1,1>>>>>>> and
+    <math|P<rsub|1>=<around*|{|Id<rsub|<around*|{|1|}>>|}>> so that\ 
+
+    <\equation*>
+      det<around*|(|M|)>=<big|sum><rsub|\<sigma\>\<in\><around*|{|Id<rsub|<around*|{|1|}>>|}>>sing<around*|(|\<sigma\>|)>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1|}>>M<rsub|i,\<sigma\><around*|(|i|)>>|)>=sign<around*|(|Id<rsub|<around*|{|1|}>>|)><around*|(|<big|prod><rsub|i\<in\><around*|{|1|}>>M<rsub|i,Id<rsub|<around*|{|1|}>><around*|(|i|)>>|)>=M<rsub|11>
+    </equation*>
+  </example>
+
+  <\definition>
+    <index|disgonal matrix><label|matrix diagonal><dueto|diagonal matrix>Let
+    <math|n,m\<in\>\<bbb-N\>> and <math|F> a field then
+    <math|M\<in\>\<cal-M\><rsub|n,m>> is a <with|font-series|bold|diagonal
+    matrix> if <math|\<forall\><around*|(|i,j|)>\<in\><around*|{|1,\<ldots\>,n|}>\<cdot\><around*|{|1,\<ldots\>,m|}>>
+    <math|M<rsub|i,j>=\<delta\><rsub|i,j>\<cdot\>M<rsub|i,i>>
+  </definition>
+
+  One nice property for diagonal square matrices is that the determinant is
+  easy to calculate.
+
+  <\theorem>
+    <label|matrix determinant of a diagonal matrix>Let
+    <math|n\<in\>\<bbb-N\>>, <math|F> a field,
+    <math|M\<in\>\<cal-M\><rsub|n,n><around*|(|F|)>> a diagonal matrix then\ 
+
+    <\equation*>
+      det<around*|(|M|)>=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>M<rsub|i,i>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    First if <math|\<sigma\>\<in\>P<rsub|n>> is such that
+    <math|\<sigma\>\<neq\>Id<rsub|<around*|{|1,\<ldots\>,n|}>>> then
+    <math|\<exists\>k\<in\><around*|{|1,\<ldots\>,n|}>> such that
+    <math|k\<neq\>\<sigma\><around*|(|k|)>>. Then
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>M<rsub|i,\<sigma\><around*|(|i|)>>>|<cell|=>|<cell|<around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>>M<rsub|i,j>|)>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|k|}>>M<rsub|i\<sigma\><around*|(|i|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>>M<rsub|i,j>|)>\<cdot\>M<rsub|k,\<sigma\><around*|(|k|)>>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>>M<rsub|i,j>|)>\<cdot\>M<rsub|k,k>\<cdot\>\<delta\><rsub|k,\<sigma\><around*|(|k|)>>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>>M<rsub|i,j>|)>\<cdot\>M<rsub|k,k>\<cdot\>0>>|<row|<cell|>|<cell|=>|<cell|0>>>>
+    </eqnarray*>
+
+    So that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|det<around*|(|M|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|\<sigma\>\<in\>P<rsub|n>><around*|(|sign<around*|(|\<sigma\>|)>\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>M<rsub|i,\<sigma\><around*|(|i|)>>|)>>|<cell|>|<cell|>>|<row|<cell|<big|sum><rsub|\<sigma\>\<in\>P<rsub|n>\\<around*|{|Id<rsub|<around*|{|1,\<ldots\>,n|}>>|}>><around*|(|sign<around*|(|\<sigma\>|)>\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>M<rsub|i,\<sigma\><around*|(|i|)>>|)>+<big|sum><rsub|\<sigma\>\<in\><around*|{|Id<rsub|<around*|{|1,\<ldots\>,n|}>>|}>><around*|(|sign<around*|(|\<sigma\>|)>\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>M<rsub|i,\<sigma\><around*|(|i|)>>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|\<sigma\>\<in\>P<rsub|n>\\<around*|{|Id<rsub|<around*|{|1,\<ldots\>,n|}>>|}>>sign<around*|(|\<sigma\>|)>\<cdot\>0+<big|sum><rsub|\<sigma\>\<in\><around*|{|Id<rsub|<around*|{|1,\<ldots\>,n|}>>|}>>sign<around*|(|\<sigma\>|)>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>M<rsub|i,\<sigma\><around*|(|i|)>>|)>>|<cell|=>|<cell|>>|<row|<cell|sign<around*|(|Id<rsub|<around*|{|1,\<ldots\>,n|}>>|)>\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>M<rsub|i,Id<rsub|<around*|{|1,\<ldots\>,n|}>><around*|(|i|)>>>|<cell|=>|<cell|>>|<row|<cell|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>M<rsub|i,i>>|<cell|=>|<cell|>>>>
+    </eqnarray*>
+  </proof>
+
+  The determinant is invariant under the transpose operation on a matrix.
+
+  <\theorem>
+    <label|matrix determinant of transpose>Let <math|n\<in\>\<bbb-N\>>,
+    <math|F> a field and <math|M\<in\>\<cal-M\><rsub|n,n><around*|(|F|)>>
+    then\ 
+
+    <\equation*>
+      det<around*|(|M|)>=det<around*|(|M<rsup|T>|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    First define <math|<around*|(|.|)><rsup|-1>:P<rsub|n>\<rightarrow\>P<rsub|n>>
+    by <math|<around*|(|.|)><rsup|-1><around*|(|\<sigma\>|)>=\<sigma\><rsup|-1>>
+    then we have:
+
+    <\description>
+      <item*|injectivity>If <math|<around*|(|.|)><rsup|-1><around*|(|\<sigma\>|)>=<around*|(|.|)><rsup|-1><around*|(|\<rho\>|)>>
+      then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<sigma\><rsup|-1>=\<rho\><rsup|-1>>|<cell|\<Rightarrow\>>|<cell|\<sigma\>\<circ\>\<sigma\><rsup|-1>=\<sigma\>\<circ\>\<rho\><rsup|-1>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|Id<rsub|<around*|{|1,\<ldots\>,n|}>>=\<sigma\>\<circ\>\<rho\><rsup|-1>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|Id<rsub|<around*|{|1,\<ldots\>,n|}>>\<circ\>\<rho\>=<around*|(|\<sigma\>\<circ\>\<rho\><rsup|-1>|)>\<circ\>\<rho\>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|\<rho\>=\<sigma\>>>>>
+      </eqnarray*>
+
+      <item*|surjectivity>If <math|\<sigma\>\<in\>P<rsub|n>> then
+      <math|<around*|(|.|)><rsup|-1><around*|(|\<sigma\><rsup|-1>|)>=<around*|(|\<sigma\><rsup|-1>|)><rsup|-1>=\<sigma\>>
+    </description>
+
+    so that<space|1em>
+
+    <\equation*>
+      <around*|(|.|)><rsup|-1>:P<rsub|n>\<rightarrow\>P<rsub|n><text| is a
+      bijection>
+    </equation*>
+
+    First note that <math|<around*|\<langle\>|F,\<cdot\>|\<rangle\>>> is a
+    abelian semi group\ 
+
+    <\equation>
+      <label|eq 11.194.108><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>M<rsub|\<sigma\><around*|(|i|)>,i>=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>M<rsub|\<sigma\><around*|(|i|)>,\<sigma\><around*|(|\<sigma\><rsup|-1><around*|(|i|)>|)>>\<equallim\><rsub|<text|[theorem:
+      <reference|sum bijection on index>]>><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>M<rsub|i,\<sigma\><rsup|-1><around*|(|i|)>>
+    </equation>
+
+    So that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|det<around*|(|M<rsup|T>|)>>|<cell|=>|<cell|<big|sum><rsub|\<sigma\>\<in\>P<rsub|n>>sign<around*|(|\<sigma\>|)>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|M<rsup|T>|)><rsub|i,\<sigma\><around*|(|i|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|\<sigma\>\<in\>P<rsub|n>>sign<around*|(|\<sigma\>|)>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>M<rsub|\<sigma\><around*|(|i|)>,i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 11.194.108>]>>>|<cell|<big|sum><rsub|\<sigma\>\<in\>P<rsub|n>>sign<around*|(|\<sigma\>|)>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>M<rsub|i,\<sigma\><rsup|-1><around*|(|i|)>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|permutation sign properties>]>>>|<cell|<big|sum><rsub|\<sigma\>\<in\>P<rsub|n>>sign<around*|(|\<sigma\><rsup|-1>|)>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>M<rsub|i,\<sigma\><rsup|-1><around*|(|i|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|\<sigma\>\<in\>P<rsub|n>>sign<around*|(|<around*|(|.|)><rsup|-1><around*|(|\<sigma\>|)>|)>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>M<rsub|i,<around*|(|.|)><rsup|-1><around*|(|\<sigma\>|)><around*|(|i|)>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 11.194.108> and theorem: <reference|sum bijection on
+      index>]>>>|<cell|<big|sum><rsub|\<sigma\>\<in\>P<rsub|n>>sign<around*|(|\<sigma\>|)>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>M<rsub|i,\<sigma\><around*|(|i|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|det<around*|(|M|)>>>>>
+    </eqnarray*>
+  </proof>
+
+  <\theorem>
+    <label|determinant of matrix and linear transformation>Let
+    <math|n\<in\>\<bbb-N\>>, <math|X> a vector space over a field <math|F>
+    with characteristic zero with basis <math|E=<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>\<subseteq\>X>
+    defined by the distinct family <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>X>
+    and <math|L\<in\>Hom<around*|(|X,X|)>> then we have:
+
+    <\equation*>
+      det<around*|(|L|)>=det<around*|(|\<cal-M\><around*|(|L;E,E|)>|)>=det<around*|(|\<cal-M\><around*|(|E,E|)><around*|(|L|)>|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Using [theorem: <reference|determinant mapping existence of non trivial>]
+    there exists a determinant function <math|\<Delta\>> such that
+    <math|\<Delta\><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>=1>. Then we
+    have\ 
+
+    <\equation>
+      <label|eq 11.195.108>\<Delta\><rsub|L><around*|(|e<rsub|>,\<ldots\>,e<rsub|n>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|determinant definition>]>>det<around*|(|L|)>\<cdot\>\<Delta\><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>=det<around*|(|L|)>
+    </equation>
+
+    Let <math|M=\<cal-M\><around*|(|L,E,E|)>> then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|det<around*|(|L|)>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 11.195.108>]>>>|<cell|\<Delta\><rsub|L><around*|(|e<rsub|>,\<ldots\>,e<rsub|n>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|def>>|<cell|\<Delta\><around*|(|L<around*|(|e<rsub|1>|)>,\<ldots\>,L<around*|(|e<rsub|n>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<Delta\><around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>M<rsub|i,1>\<cdot\>e<rsub|1>,\<ldots\>,<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>M<rsub|i,n>\<cdot\>e<rsub|n>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|determinant skew-symmetric mapping and
+      basis>]>>>|<cell|<big|sum><rsub|\<sigma\>\<in\>P<rsub|n>><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>M<rsub|\<sigma\><around*|(|i|)>,i>|)>\<cdot\><around*|(|\<sigma\>\<Delta\>|)><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|\<Delta\><text|
+      is skew-symmetry>>>|<cell|<big|sum><rsub|\<sigma\>\<in\>P<rsub|n>><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>M<rsub|\<sigma\><around*|(|i|)>,i>|)>\<cdot\><around*|(|sign<around*|(|\<sigma\>|)>\<cdot\>\<Delta\><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|\<sigma\>\<in\>P<rsub|n>>sign<around*|(|\<sigma\>|)>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>M<rsub|\<sigma\><around*|(|i|)>,i>|)>>>|<row|<cell|>|<cell|=>|<cell|det<around*|(|M<rsup|T>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|matrix determinant of transpose>]>>>|<cell|det<around*|(|M|)>>>>>
+    </eqnarray*>
+  </proof>
+
+  We use now the above theorem to prove the following:
+
+  <\theorem>
+    <label|matrix determinant propertie>Let <math|n\<in\>\<bbb-N\>>, <math|F>
+    is a field of characteristic zero then we have:
+
+    <\enumerate>
+      <item>If <math|M<rsub|1>,M<rsub|2>\<in\>\<cal-M\><rsub|n,n><around*|(|F|)>>
+      then <math|det<around*|(|M<rsub|1>\<cdot\>M<rsub|2>|)>=det<around*|(|M<rsub|1>|)>\<cdot\>det<around*|(|M<rsub|2>|)>>
+
+      <item><math|det<around*|(|E|)>=1>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ Let <math|F<rsup|n>> be the vector space over <math|F> with the
+    canonical basis <math|E=<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>
+    define by <math|F=<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F<rsup|n>>
+    where <math|<around*|{|e<rsub|i>|}><rsub|k>=\<delta\><rsub|i,k>> for
+    <math|k\<in\><around*|{|1,\<ldots\>,n|}>> [see: theorem: <reference|basis
+    F^n>].
+
+    <\enumerate>
+      <item>Take then <math|L<rsub|1>=\<cal-M\><around*|[|F,F|]><rsup|-1><around*|(|M<rsub|1>|)>>
+      and <math|L<rsub|2>=\<cal-M\><around*|(|F,F|)><rsup|-1><around*|(|M<rsub|2>|)>>
+      then we have:
+
+      <\equation>
+        <label|eq 11.196.108>\<cal-M\><around*|(|F,F|)><around*|(|L<rsub|1>|)>=M<rsub|1><text|
+        and >\<cal-M\><around*|(|F,F|)><around*|(|L<rsub|2>|)>=M<rsub|2>
+      </equation>
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<cal-M\><around*|(|F,F|)><around*|(|L<rsub|1>\<circ\>L<rsub|2>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|matrix composition>]>>>|<cell|\<cal-M\><around*|(|F,F|)><around*|(|L<rsub|1>|)>\<cdot\>\<cal-M\><around*|(|F,F|)><around*|(|L<rsub|2>|)>>>|<row|<cell|>|<cell|=>|<cell|\<cal-M\><around*|(|F,F|)><around*|(|\<cal-M\><around*|[|F,F|]><rsup|-1><around*|(|M<rsub|1>|)>|)>\<cdot\>\<cal-M\><around*|(|F,F|)><around*|(|\<cal-M\><around*|[|F,F|]><rsup|-1><around*|(|M<rsub|2>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|M<rsub|1>\<cdot\>M<rsub|2><eq-number><label|eq
+        11.197.108>>>>>
+      </eqnarray*>
+
+      hence:
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|det<around*|(|M<rsub|1>\<cdot\>M<rsub|2>|)>>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 11.197.108>]>>>|<cell|det<around*|(|\<cal-M\><around*|(|F,F|)><around*|(|L<rsub|1>\<circ\>L<rsub|2>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|determinant of matrix and linear
+        transformation>]>>>|<cell|det<around*|(|L<rsub|1>\<circ\>L<rsub|2>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|determinant det(L) properties>]>>>|<cell|det<around*|(|L<rsub|1>|)>\<cdot\>det<around*|(|L<rsub|2>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 11.196.108>]>>>|<cell|det<around*|(|M<rsub|1>|)>\<cdot\>det<around*|(|M<rsub|2>|)>>>>>
+      </eqnarray*>
+
+      <item>As <math|\<cal-M\><around*|(|F,F|)><around*|(|Id<rsub|F<rsup|n>>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|matrix mapping is linear>]>>E> we have\ 
+
+      <\equation*>
+        det<around*|(|E|)>=det<around*|(|\<cal-M\><around*|(|F,F|)><around*|(|Id|)>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|determinant of matrix and linear
+        transformation>]>>det<around*|(|Id<rsub|F<rsup|n>>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|determinant det(L) properties>]>>1
+      </equation*>
+    </enumerate>
+  </proof>
+
   \;
 
   \;
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
+  \ 
 
   \;
 
@@ -17181,7 +17651,12 @@
     <associate|auto-53|<tuple|<with|mode|<quote|math>|M<rsup|T>>|?>>
     <associate|auto-54|<tuple|<with|mode|<quote|math>|rank<around*|(|M|)>>|?>>
     <associate|auto-55|<tuple|11.8.2|?>>
+    <associate|auto-56|<tuple|11.8.3|?>>
+    <associate|auto-57|<tuple|inverse of a matrix|?>>
+    <associate|auto-58|<tuple|<with|mode|<quote|math>|M<rsup|-1>>|?>>
+    <associate|auto-59|<tuple|<with|mode|<quote|math>|det<around*|(|M|)>>|?>>
     <associate|auto-6|<tuple|11.1.2|?>>
+    <associate|auto-60|<tuple|disgonal matrix|?>>
     <associate|auto-7|<tuple|11.1.3|?>>
     <associate|auto-8|<tuple|permutation|?>>
     <associate|auto-9|<tuple|<with|mode|<quote|math>|\<sigma\>>|?>>
@@ -17241,6 +17716,8 @@
     <associate|determinant mapping existence of non trivial|<tuple|11.252|?>>
     <associate|determinant non zero determinant mappings are multiples of
     each other|<tuple|11.254|?>>
+    <associate|determinant of matrix and linear
+    transformation|<tuple|11.303|?>>
     <associate|determinant permutation applied on n-linear
     function|<tuple|11.241|?>>
     <associate|determinant skew symetric functions and determinant
@@ -17314,7 +17791,6 @@
     <associate|eq 11.155.103|<tuple|11.156|?>>
     <associate|eq 11.156.103|<tuple|11.157|?>>
     <associate|eq 11.157.103|<tuple|11.158|?>>
-    <associate|eq 11.157.107|<tuple|11.187|?>>
     <associate|eq 11.158.103|<tuple|11.159|?>>
     <associate|eq 11.159.103|<tuple|11.160|?>>
     <associate|eq 11.16.090|<tuple|11.16|?>>
@@ -17353,6 +17829,10 @@
     <associate|eq 11.191.107|<tuple|11.191|?>>
     <associate|eq 11.192.107|<tuple|11.192|?>>
     <associate|eq 11.193.107|<tuple|11.193|?>>
+    <associate|eq 11.194.108|<tuple|11.194|?>>
+    <associate|eq 11.195.108|<tuple|11.195|?>>
+    <associate|eq 11.196.108|<tuple|11.196|?>>
+    <associate|eq 11.197.108|<tuple|11.197|?>>
     <associate|eq 11.2.053|<tuple|11.2|?>>
     <associate|eq 11.20.090|<tuple|11.22|?>>
     <associate|eq 11.20.107|<tuple|11.20|?>>
@@ -17539,8 +18019,23 @@
     <associate|linear span({0})|<tuple|11.85|?>>
     <associate|linerar mapping between R^2 and C|<tuple|11.156|?>>
     <associate|matrix column rank is row rank|<tuple|11.284|?>>
+    <associate|matrix composition|<tuple|11.292|?>>
     <associate|matrix definition|<tuple|11.274|?>>
+    <associate|matrix det(E)|<tuple|11.300|?>>
+    <associate|matrix determinant|<tuple|11.298|?>>
+    <associate|matrix determinant example 1|<tuple|11.299|?>>
+    <associate|matrix determinant of a diagonal matrix|<tuple|11.301|?>>
+    <associate|matrix determinant of transpose|<tuple|11.302|?>>
+    <associate|matrix determinant propertie|<tuple|11.304|?>>
+    <associate|matrix diagonal|<tuple|disgonal matrix|?>>
     <associate|matrix identity|<tuple|11.275|?>>
+    <associate|matrix inverse|<tuple|11.293|?>>
+    <associate|matrix inverse is unique|<tuple|11.294|?>>
+    <associate|matrix inverse matrix inverse linear
+    transformation|<tuple|11.297|?>>
+    <associate|matrix inverse of inverse|<tuple|11.296|?>>
+    <associate|matrix invertable matrix|<tuple|11.295|?>>
+    <associate|matrix linear map F^n F^m|<tuple|11.291|?>>
     <associate|matrix linear map application|<tuple|11.288|?>>
     <associate|matrix linear mapping|<tuple|11.286|?>>
     <associate|matrix mapping is linear|<tuple|11.289|?>>
@@ -17843,6 +18338,10 @@
       <with|par-left|<quote|1tab>|11.8.2<space|2spc>Matrices and linear
       mappings <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-55>>
+
+      <with|par-left|<quote|1tab>|11.8.3<space|2spc>Inverse, Determinant and
+      Adjoint of matrices <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-56>>
     </associate>
   </collection>
 </auxiliary>

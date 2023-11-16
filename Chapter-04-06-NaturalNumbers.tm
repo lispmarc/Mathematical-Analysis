@@ -1715,7 +1715,7 @@
       <\description>
         <item*|<math|\<Rightarrow\>>>As <math|x\<less\>y> we have by (3) that
         <math|0\<less\>y\<oplus\><around*|(|-x|)>> so by the definition of a
-        ordered field that
+        ordered ring that
 
         <\eqnarray*>
           <tformat|<table|<row|<cell|0>|<cell|\<less\>>|<cell|<around*|(|y\<oplus\><around*|(|-x|)>|)>\<odot\>z>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|distributivity>>>|<cell|y\<odot\>z\<oplus\><around*|(|-x|)>\<odot\>z>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
