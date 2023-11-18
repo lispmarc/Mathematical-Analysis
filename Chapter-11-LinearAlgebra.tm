@@ -18023,16 +18023,16 @@
 
   <\definition>
     <label|matrix [+]>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>=<around*|{|2,\<ldots\>,\<infty\>|}>>,
-    <math|F> a field and <math|i,j\<in\><around*|{|1,\<ldots\>,n|}>> then we
-    define:
+    <math|F> a field and <math|i,j\<in\><around*|{|1,\<ldots\>,n-1|}>> then
+    we define:
 
     <\equation*>
       <around*|[|i\<boxplus\>j|]>:\<cal-M\><rsub|n,n><around*|(|F|)>\<rightarrow\>\<cal-M\><rsub|n-1,n-1><around*|(|F|)><text|
       where <math|<around*|(|<around*|[|i\<boxplus\>j|]><around*|(|M|)>|)><rsub|k,l>=<choice|<tformat|<table|<row|<cell|M<rsub|k,l><text|
       if >1\<leqslant\>k\<less\>i\<wedge\>1\<leqslant\>l\<less\>j>>|<row|<cell|M<rsub|k+1,l><text|
-      if >i\<leqslant\>k\<leqslant\>n\<wedge\>1\<leqslant\>l\<less\>j>>|<row|<cell|M<rsub|k,l+1><text|
-      if >1\<leqslant\>k\<less\>i\<wedge\>j\<leqslant\>l\<leqslant\>n>>|<row|<cell|M<rsub|k+1,l+1><text|
-      if >i\<leqslant\>k\<leqslant\>n\<wedge\>j\<leqslant\>l\<leqslant\>n>>>>>>>
+      if >i\<leqslant\>k\<leqslant\>n-1\<wedge\>1\<leqslant\>l\<less\>j>>|<row|<cell|M<rsub|k,l+1><text|
+      if >1\<leqslant\>k\<less\>i\<wedge\>j\<leqslant\>l\<leqslant\>n-1>>|<row|<cell|M<rsub|k+1,l+1><text|
+      if >i\<leqslant\>k\<leqslant\>n-1\<wedge\>j\<leqslant\>l\<leqslant\>n-1>>>>>>>
     </equation*>
 
     In other words <math|<around*|[|i\<boxplus\>j|]><around*|(|M|)>> is the
@@ -18049,8 +18049,9 @@
   </example>
 
   <\lemma>
-    <label|matrix [+] and transpose>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>
-    , <math|F> a field, <math|i,j\<in\><around*|{|1,\<ldots\>,n|}>> and
+    <label|matrix [+] and transpose (1)>Let
+    <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>> , <math|F> a field,
+    <math|i,j\<in\><around*|{|1,\<ldots\>,n|}>> and
     <math|M\<in\>\<cal-M\><rsub|n,n><around*|(|F|)>> then\ 
 
     <\equation*>
@@ -18071,8 +18072,100 @@
     <label|matrix where first row and colum are unit>Let
     <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>> and
     <math|M\<in\>M<rsub|n,n><around*|(|F|)>> such that
-    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>\ 
+    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+
+    <\equation*>
+      row<around*|(|M,1|)><rsub|i>=\<delta\><rsub|i,1>=col<around*|(|M,1|)><rsub|i>
+    </equation*>
+
+    then\ 
+
+    <\equation*>
+      det<around*|(|M|)>=det<around*|(|<around*|[|1\<boxplus\>1|]><around*|(|M|)>|)>
+    </equation*>
   </lemma>
+
+  <\proof>
+    Let <math|<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>> be
+    the canonical basis of <math|F<rsup|n>. >As
+    <math|\<forall\>j\<in\><around*|{|1,\<ldots\>,n|}>> we have
+
+    \ <math|row<around*|(|M,1|)><rsub|i>=\<delta\><rsub|i,1>=<around*|(|e<rsub|1>|)><rsub|i>>
+    it follows that\ 
+
+    <\equation*>
+      row<around*|(|M,1|)>=e<rsub|1>
+    </equation*>
+
+    Further for <math|i\<in\><around*|{|2,\<ldots\>,n|}>> we have
+
+    <\equation*>
+      row<around*|(|M,i|)><rsub|1>=M<rsub|i,1>=col<around*|(|M,1|)><rsub|i>=\<delta\><rsub|1,i>\<equallim\><rsub|i\<neq\>1>0=<around*|(|<around*|[|+0|]><around*|(|row<around*|(|<around*|[|1\<boxplus\>1|]><around*|(|M|)>,i|)>|)>|)><rsub|1>
+    </equation*>
+
+    and if <math|j\<in\><around*|{|2,\<ldots\>,n-1|}>> we have\ 
+
+    <\equation*>
+      row<around*|(|M,i|)><rsub|j>=M<rsub|i,j>=<around*|(|<around*|[|1\<boxplus\>1|]><around*|(|M|)>|)><rsub|i-1,j-1>=<around*|(|<around*|[|+0|]><around*|(|row<around*|(|<around*|[|1\<boxplus\>1|]><around*|(|M|)>,i|)>|)>|)><rsub|j>
+    </equation*>
+
+    proving that for <math|i\<in\><around*|{|2,\<ldots\>,n|}>> that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|det<around*|(|M|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|matrix determinant and delta>]>>>|<cell|\<Delta\><around*|(|row<around*|(|M,1|)>,\<ldots\>,row<around*|(|M,n|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<Delta\><around*|(|e<rsub|1>,row<around*|(|M,2|)>,\<ldots\>,row<around*|(|M,n|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<Delta\><around*|(|e<rsub|1>,<around*|[|+0|]><around*|(|row<around*|(|<around*|[|1\<boxplus\>1|]>|)><around*|(|M|)>,1|)>,\<ldots\>,<around*|[|+0|]><around*|(|row<around*|(|<around*|[|1\<boxplus\>1|]><around*|(|M|)>,n-1|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<Delta\><rsup|-><around*|(|row<around*|(|<around*|[|1\<boxplus\>1|]><around*|(|M|)>,1|)>,\<ldots\>,row<around*|(|<around*|[|1\<boxplus\>|]><around*|(|M|)>,n-1|)>|)><eq-number><label|eq
+      11.203.108>>>>>
+    </eqnarray*>
+
+    As <math|\<Delta\>> is a detrminant function with
+    <math|\<Delta\><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>> we have by
+    [theorem: <reference|matrix delta minus>] that\ 
+
+    <\equation*>
+      \<Delta\><rsup|-><text| is a matrix function and
+      >\<Delta\><rsup|-><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n-1>|)>=1
+    </equation*>
+
+    which as <math|<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n-1|}>|}>>
+    is the canoncial basis of <math|F<rsup|n-1>> proves by [theorem:
+    <reference|matrix determinant and delta>] that\ 
+
+    <\equation*>
+      \<Delta\><rsup|-><around*|(|row<around*|(|<around*|[|1\<boxplus\>1|]><around*|(|M|)>,1|)>,\<ldots\>,row<around*|(|<around*|[|1\<boxplus\>|]><around*|(|M|)>,n-1|)>|)>=det<around*|(|<around*|[|1\<boxplus\>1|]><around*|(|M|)>|)>
+    </equation*>
+
+    which combined with [eq: <reference|eq 11.203.108>] proves that\ 
+
+    <\equation*>
+      det<around*|(|M|)>=det<around*|(|<around*|[|1\<boxplus\>1|]><around*|(|M|)>|)>
+    </equation*>
+  </proof>
+
+  We extend now the above lemma to a more general case
+
+  <\theorem>
+    <label|matrix [+] and transpose (2)>Let
+    <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>, <math|F> a field with
+    characteristic zero and <math|M\<in\>\<cal-M\><rsub|n,n><around*|(|F|)>>
+    satisfying <math|\<exists\>j\<in\><around*|{|1,\<ldots\>,n|}>> such that
+    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have
+    <math|row<around*|(|M,1|)><rsub|i>=\<delta\><rsub|i,j>> and
+    <math|col<around*|(|M,j|)><rsub|i>=\<delta\><rsub|i,1>> then\ 
+
+    <\equation*>
+      det<around*|(|M|)>=<around*|(|-1|)><rsup|1+j>\<cdot\>det<around*|(|<around*|[|1\<boxplus\>j|]><around*|(|M|)>|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    For <math|j> we have the following cases:\ 
+
+    <\description>
+      <item*|<math|j=1>>
+
+      <item*|<math|j\<in\><around*|{|2,\<ldots\>,n|}>>>
+    </description>
+  </proof>
 
   \;
 
@@ -18181,7 +18274,6 @@
     <associate|basis extending linear independent set|<tuple|11.125|?>>
     <associate|basis finite alternative (1)|<tuple|11.122|?>>
     <associate|basis finite alternative (2)|<tuple|11.123|?>>
-    <associate|basis finite dimensional set|<tuple|11.134|?>>
     <associate|basis finite dimensional spanning set|<tuple|11.134|?>>
     <associate|basis finite dimensional vector space is a linear independent
     family|<tuple|11.132|?>>
@@ -18352,6 +18444,7 @@
     <associate|eq 11.200.108|<tuple|11.200|?>>
     <associate|eq 11.201.108|<tuple|11.201|?>>
     <associate|eq 11.202.108|<tuple|11.202|?>>
+    <associate|eq 11.203.108|<tuple|11.203|?>>
     <associate|eq 11.21.090|<tuple|11.23|?>>
     <associate|eq 11.22.090|<tuple|11.24|?>>
     <associate|eq 11.23.090|<tuple|11.25|?>>
@@ -18536,6 +18629,8 @@
     <associate|linerar mapping between R^2 and C|<tuple|11.157|?>>
     <associate|matrix [+]|<tuple|11.313|?>>
     <associate|matrix [+] and transpose|<tuple|11.315|?>>
+    <associate|matrix [+] and transpose (1)|<tuple|11.315|?>>
+    <associate|matrix [+] and transpose (2)|<tuple|11.317|?>>
     <associate|matrix [+a](x)|<tuple|11.311|?>>
     <associate|matrix column rank is row rank|<tuple|11.285|?>>
     <associate|matrix composition|<tuple|11.293|?>>
@@ -18767,6 +18862,8 @@
       <tuple|<tuple|<with|mode|<quote|math>|det<around*|(|M|)>>>|<pageref|auto-59>>
 
       <tuple|<tuple|disgonal matrix>|<pageref|auto-60>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|<around*|[|+a|]>>>|<pageref|auto-61>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|11<space|2spc>Linear
