@@ -36,36 +36,17 @@
     \ 
   </definition>
 
-  In the above definition we use the <math|<big|sum>>and talk about a finite
-  sum because we interpret the <math|<around*|\<langle\>|A,+|\<rangle\>>> as
-  a additive semi-group. However sometimes we want to work with
-  multiplicative semi-groups [for example in a ring/field we have additive
-  and multiplicative semi-groups]. In this cases we talk about finite
-  products and use then the <math|<big|prod>> symbol. Independent of the
-  symbol used all statements about finite sums are also applicable for finite
-  products. So we have the following definition for multiplicative groups.
-
-  <\definition>
-    <label|product finite product><index|<math|<big|prod><rsub|i=0><rsup|n>x<rsub|i>>><dueto|Finite
-    Product>Let <math|<around*|\<langle\>|A,\<cdot\>|\<rangle\>>> be a
-    semi-group, <math|n\<in\>\<bbb-N\><rsub|0>> and
-    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>\<subseteq\>A>
-    z finite family of elements of <math|A> then
-
-    <\equation*>
-      <big|prod><rsub|i=0><rsup|<around*|(|.|)>>x<rsub|i>:<around*|{|0,\<ldots\>,n|}>\<rightarrow\>A
-    </equation*>
-
-    is recursively defined [see definition: <reference|complex recursion step
-    form finite>] by\ 
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|<big|prod><rsub|i=0><rsup|0>x<rsub|i>>|<cell|=>|<cell|x<rsub|0>>>|<row|<cell|\<forall\>i\<in\><around*|{|0,\<ldots\>,n-1|}><text|
-      ><big|prod><rsub|i=0><rsup|i+1>x<rsub|i>>|<cell|=>|<cell|<around*|(|<big|prod><rsub|i=0><rsup|i>x<rsub|i>|)>\<cdot\>x<rsub|i+1>>>>>
-    </eqnarray*>
-
-    \ 
-  </definition>
+  <\remark>
+    <label|product finite product>We typical use the <math|<big|sum>> symbol
+    in this text to represent a finite sum in a group or semi-group. However
+    somtimes we want to deal with finite products instead of finite sums. In
+    that case we use the <math|<big|prod>>symbol. So all the theorems,
+    lemmas, proposition in this text are valid if we replace <math|<big|sum>>
+    by <math|<big|prod>>. In a ring for example we have a addition operator
+    and a multiplicative operator so we use <math|<big|sum>> for addition and
+    <math|<big|prod>> and for the composiiton operator <math|\<circ\>> we
+    typical use <math|<big|prod>.>
+  </remark>
 
   <\example>
     Let <math|<around*|{|2<rsup|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,3|}>>>
@@ -4643,8 +4624,8 @@
     <\equation*>
       <text|for every finite >I\<subseteq\>W<text| we have
       >\<forall\><around*|{|\<alpha\><rsub|u>|}><rsub|u\<in\>I>\<subseteq\>F<text|
-      such that ><big|sum><rsub|u\<in\>I>\<alpha\><rsub|u>\<cdot\>u=0<text|
-      we have >\<forall\>u\<in\>I<text| >\<alpha\><rsub|u>=0
+      if ><big|sum><rsub|u\<in\>I>\<alpha\><rsub|u>\<cdot\>u=0<text| then
+      >\<forall\>u\<in\>I<text| >\<alpha\><rsub|u>=0
     </equation*>
   </theorem>
 
@@ -4657,7 +4638,7 @@
       <math|I\<subseteq\>W> we have for every
       <math|<around*|{|\<alpha\><rsub|u>|}><rsub|u\<in\>I>\<subseteq\>F>
       satisfying <math|\<exists\>w\<in\>I> with
-      <math|\<alpha\><rsub|w>\<neq\>0> such that
+      <math|\<alpha\><rsub|w>\<neq\>0> that
       <math|<big|sum><rsub|u\<in\>I>\<alpha\><rsub|u>\<cdot\>u\<neq\>0>. So
       if we have a finite <math|I\<subseteq\>W> that satisfies
       <math|<big|sum><rsub|u\<in\>I>\<alpha\><rsub|u>\<cdot\>u=0> we must
@@ -7569,6 +7550,17 @@
       <item><math|\<forall\>x\<in\>X>, <math|\<forall\>\<alpha\>\<in\>F> we
       have that <math|L<around*|(|\<alpha\>\<cdot\>x|)>=\<alpha\>\<cdot\>L<around*|(|x|)>>
     </enumerate>
+
+    The set of graphs of linear mappings is <math|Hom<around*|(|X,Y|)>> so
+    that\ 
+
+    <\equation*>
+      Hom*<around*|(|X,Y|)>=<around*|{|L\<in\>Y<rsup|X>\|L:X\<rightarrow\>Y<text|
+      is a linear mapping>|}>
+    </equation*>
+
+    If <math|L\<in\>Hom<around*|(|X,X|)>> then <math|L:X\<rightarrow\>Y> is
+    called a <with|font-series|bold|linear transformaton>.
   </definition>
 
   <\theorem>
@@ -7584,7 +7576,7 @@
     <math|L<around*|(|0|)>=L<around*|(|0\<cdot\>0|)>=0\<cdot\>L<around*|(|0|)>=0>
   </proof>
 
-  A equivalenet definition for a linear mapping is the following theorem:
+  A equivalent definition for a linear mapping is the following theorem:
 
   <\theorem>
     <label|linear mapping equivalence>If <math|<around*|\<langle\>|X,+,\<cdot\>|\<rangle\>>>
@@ -8604,6 +8596,20 @@
   </proof>
 
   <\corollary>
+    <label|linear mapping injective transformation>Let
+    <math|<around*|\<langle\>|X,+,\<cdot\>|\<rangle\>>> be a finite
+    dimensional vector space over a filed
+    <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> and
+    <math|L\<in\>Hom<around*|(|X,X|)>> a injective linear transformation then
+    <math|L:X\<rightarrow\>X> is a linear isomorphism.
+  </corollary>
+
+  <\proof>
+    As clearly <math|dim<around*|(|X|)>=dim<around*|(|X|)>> this follows from
+    the previous theorem.
+  </proof>
+
+  <\corollary>
     <label|linear mapping isomorphic spaces>Let
     <math|<around*|\<langle\>|X,+,\<cdot\>|\<rangle\>>> and
     <math|<around*|\<langle\>|Y,+,\<cdot\>|\<rangle\>>> be vector spaces over
@@ -9578,10 +9584,10 @@
     is defined by\ 
 
     <\equation*>
-      <around*|(|\<sigma\><rsub|1>\<circ\>\<cdots\>\<circ\>\<sigma\><rsub|n>|)>=<big|sum><rsub|i=1><rsup|n>\<sigma\><rsub|i>
+      <around*|(|\<sigma\><rsub|1>\<circ\>\<cdots\>\<circ\>\<sigma\><rsub|n>|)>=<big|prod><rsub|i=1><rsup|n>\<sigma\><rsub|i>
     </equation*>
 
-    (using <math|\<circ\>> for summation).
+    (using <math|\<circ\>> for product).
   </definition>
 
   <\theorem>
@@ -9607,18 +9613,18 @@
       <item>We have\ 
 
       <\equation*>
-        \<sigma\><rsub|1>\<circ\>\<cdots\>\<circ\>\<sigma\><rsub|1>=<big|sum><rsub|i=1><rsup|1>\<sigma\><rsub|1>\<equallim\><rsub|<text|[theorem:
+        \<sigma\><rsub|1>\<circ\>\<cdots\>\<circ\>\<sigma\><rsub|1>=<big|prod><rsub|i=1><rsup|1>\<sigma\><rsub|1>\<equallim\><rsub|<text|[theorem:
         <reference|sum alternative definition (1)>]>>\<sigma\><rsub|1>
       </equation*>
 
       <item>If <math|1\<less\>m> then we have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|\<sigma\><rsub|1>\<circ\>\<cdots\>\<circ\>\<sigma\><rsub|m>>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|m>\<sigma\><rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <tformat|<table|<row|<cell|\<sigma\><rsub|1>\<circ\>\<cdots\>\<circ\>\<sigma\><rsub|m>>|<cell|=>|<cell|<big|prod><rsub|i=1><rsup|m>\<sigma\><rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|sum alternative definition
-        (1)>]>>>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|m-1>\<sigma\><rsub|i>|)>\<circ\>\<sigma\><rsub|m>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<sigma\><rsub|1>\<circ\>\<cdots\>\<circ\>\<sigma\><rsub|m-1>|)>\<circ\>\<sigma\><rsub|m>>>|<row|<cell|\<sigma\><rsub|1>\<circ\>\<cdots\>\<circ\>\<sigma\><rsub|m>>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|m>\<sigma\><rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|def>>|<cell|<big|sum><rsub|i=0><rsup|m-1>\<sigma\><rsub|i+1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        (1)>]>>>|<cell|<around*|(|<big|prod><rsub|i=1><rsup|m-1>\<sigma\><rsub|i>|)>\<circ\>\<sigma\><rsub|m>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<sigma\><rsub|1>\<circ\>\<cdots\>\<circ\>\<sigma\><rsub|m-1>|)>\<circ\>\<sigma\><rsub|m>>>|<row|<cell|\<sigma\><rsub|1>\<circ\>\<cdots\>\<circ\>\<sigma\><rsub|m>>|<cell|=>|<cell|<big|prod><rsub|i=1><rsup|m>\<sigma\><rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|def>>|<cell|<big|prod><rsub|i=0><rsup|m-1>\<sigma\><rsub|i+1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|sum alternative definition
-        (2)>>>>|<cell|\<sigma\><rsub|0+1>\<circ\><big|sum><rsub|i=1><rsup|m-1>\<sigma\><rsub|i+1>>>|<row|<cell|>|<cell|\<equallim\><rsub|def>>|<cell|\<sigma\><rsub|1>\<circ\><big|sum><rsub|i=2><rsup|m>\<sigma\><rsub|i>>>|<row|<cell|>|<cell|=>|<cell|\<sigma\><rsub|1>\<circ\><around*|(|\<sigma\><rsub|2>\<circ\>\<cdots\>\<circ\>\<sigma\><rsub|m>|)>>>>>
+        (2)>>>>|<cell|\<sigma\><rsub|0+1>\<circ\><big|prod><rsub|i=1><rsup|m-1>\<sigma\><rsub|i+1>>>|<row|<cell|>|<cell|\<equallim\><rsub|def>>|<cell|\<sigma\><rsub|1>\<circ\><big|prod><rsub|i=2><rsup|m>\<sigma\><rsub|i>>>|<row|<cell|>|<cell|=>|<cell|\<sigma\><rsub|1>\<circ\><around*|(|\<sigma\><rsub|2>\<circ\>\<cdots\>\<circ\>\<sigma\><rsub|m>|)>>>>>
       </eqnarray*>
     </enumerate>
   </proof>
@@ -14920,7 +14926,7 @@
     </equation*>
   </proof>
 
-  The above theorem ensures that the following definition of the dertminant
+  The above theorem ensures that the following definition of the determinant
   of a linear function makes sense.
 
   <\definition>
@@ -14942,6 +14948,32 @@
       \<Delta\><rsub|L>=det<around*|(|L|)>\<cdot\>\<Delta\>
     </equation*>
   </definition>
+
+  <\theorem>
+    <label|determinant definition alternative>Let <math|n\<in\>\<bbb-N\>>,
+    <math|X> a vector space over a field <math|F> with characteristic zero
+    such that <math|dim<around*|(|X|)>=n>,
+    <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>X>
+    defining the basis <math|<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>
+    for <math|X> and <math|L\<in\>Hom<around*|(|X,X|)>> then\ 
+
+    <\equation*>
+      det<around*|(|L|)>=\<Delta\><rsub|L><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>=\<Delta\><around*|(|L<around*|(|e<rsub|1>|)>,\<ldots\>,L<around*|(|e<rsub|n>|)>|)>
+    </equation*>
+
+    where <math|\<Delta\>:X<rsup|n>\<rightarrow\>F> is the determinant
+    function such that <math|\<Delta\><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>>
+    [see <reference|determinant mapping existence of non trivial> for
+    existance]
+  </theorem>
+
+  <\proof>
+    This follows from\ 
+
+    <\equation*>
+      \<Delta\><around*|(|L<around*|(|e<rsub|1>|)>,\<ldots\>,L<around*|(|e<rsub|n>|)>|)>=\<Delta\><rsub|L><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>\<equallim\><rsub|def>det<around*|(|L|)>\<cdot\>\<Delta\><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>=det<around*|(|L|)>\<cdot\>1=det<around*|(|L|)>
+    </equation*>
+  </proof>
 
   <\example>
     <label|determinant identity function>Let <math|n\<in\>\<bbb-N\>>,
@@ -14968,7 +15000,7 @@
   </example>
 
   <\proof>
-    Let <math|\<Delta\>> be a non trivial detirminant function then\ 
+    Let <math|\<Delta\>> be a non trivial determinant function then\ 
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|\<Delta\><rsub|\<lambda\>\<cdot\>Id<rsub|X>><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|\<Delta\><around*|(|\<lambda\>\<cdot\>Id<rsub|X><around*|(|x<rsub|1>|)>,\<ldots\>,\<lambda\>\<cdot\>Id<rsub|X><around*|(|x<rsub|n>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<Delta\><around*|(|\<lambda\>\<cdot\>x<rsub|1>,\<ldots\>,\<lambda\>\<cdot\>x<rsub|n>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
@@ -16020,7 +16052,7 @@
   <\definition>
     <label|matrix definition><index|matrix>Let <math|F> be a field,
     <math|n,m\<in\>\<bbb-N\>> then a <math|n\<times\>m>
-    <with|font-series|bold|matric> in <math|F> is the graph of a mapping from
+    <with|font-series|bold|matrix> in <math|F> is the graph of a mapping from
     <math|<around*|{|1,\<ldots\>,n|}>\<times\><around*|{|1,\<ldots\>,m|}>> to
     <math|F>. The set of all <math|n\<times\>m> matrices is called
     <math|\<cal-M\><rsub|n,m><around*|(|F|)>> or <math|\<cal-M\><rsub|n,m>>
@@ -16626,8 +16658,41 @@
 
   <subsection|Matrices and linear mappings>
 
+  First note that a linear mapping between finite dimensional spaces is
+  uniquely determined by its values on the basis vectors of the domain.
+
+  <\theorem>
+    <label|linear mapping and basis vectors>Let <math|n,m\<in\>\<bbb-N\>>,
+    <math|X,Y> finite dimensional vector spaces over a field <math|F> with
+    basis <math|<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>,<math|<around*|{|f<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,m|}>|}>>
+    defined by distinct families <math|E=<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>X>,
+    <math|F=<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>Y>
+    <math|>then if <math|L<rsub|1>,L<rsub|2>\<in\>Hom<around*|(|X,Y|)>> such
+    that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|L<rsub|1><around*|(|e<rsub|i>|)>=L<rsub|2><around*|(|e<rsub|i>|)>>
+    then <math|L<rsub|1>=L<rsub|2>>.
+  </theorem>
+
+  <\proof>
+    Let <math|x\<in\>X> then there exists a unique family
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F>
+    such that
+
+    <\equation*>
+      x=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i>
+    </equation*>
+
+    Then\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|L<rsub|1><around*|(|x|)>>|<cell|=>|<cell|L<rsub|1><around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i>\<cdot\>L<rsub|1><around*|(|e<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i>\<cdot\>L<rsub|2><around*|(|e<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|L<rsub|2><around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>x|)>>>|<row|<cell|>|<cell|=>|<cell|L<rsub|2><around*|(|x|)>>>>>
+    </eqnarray*>
+
+    proving that <math|L<rsub|1>=L<rsub|2>>.
+  </proof>
+
   We show now how to associate a matrix with a linear mapping between finite
-  dimensional spaces.
+  dimensional spaces.\ 
 
   <\definition>
     <label|matrix linear mapping>Let <math|n,m\<in\>\<bbb-N\>>, <math|X,Y>
@@ -19723,14 +19788,90 @@
     </equation*>
   </proof>
 
-  <section|Expansion of linear transformation in elementary transformations>
+  <section|Expansion of nonsingular linear transformation in elementary
+  transformations>
 
-  In this section we wil prove that every linear transformation can be
-  written as the composition of three types of 'elementary' transformations.
+  \;
 
   <\definition>
-    <label|linear elementary transformation>Let <math|n\<in\>\<bbb-N\>>,
+    <label|nonsingular transformation>Let <math|n\<in\>\<bbb-N\>>, <math|X> a
+    finite dimensional vector space with <math|dim<around*|(|X|)>=n> then a
+    linear transformation <math|L\<in\>Hom<around*|(|X,X|)>> is nonsingular
+    if <math|det<around*|(|L|)>\<neq\>0>. Using [theorem:
+    <reference|determinant det(L) properties>] this is equivalent with saying
+    that <math|L:X\<rightarrow\>X> is a linear isomorphism. The set of
+    nonsingular transformations is noted as <math|GL<around*|(|X|)>> so\ 
+
+    <\equation*>
+      GL<around*|(|X|)>=<around*|{|L\<in\>Hom<around*|(|X,X|)>\|det<around*|(|L|)>\<neq\>0|}>
+    </equation*>
+  </definition>
+
+  We show now that <math|GL<around*|(|X|)>> together with the composition
+  forms a group
+
+  <\theorem>
+    <label|nonsingular transformation group>Let <math|n\<in\>\<bbb-N\>>,
     <math|X> a finite dimensional vector space with
+    <math|dim<around*|(|X|)>=n> then
+
+    <math|<around*|\<langle\>|GL<around*|(|X|)>,\<circ\>|\<rangle\>>> is a
+    group with neutral element <math|Id<rsub|X>> and for every <math|L>
+    <math|L<rsup|-1>> as inverse.
+  </theorem>
+
+  <\proof>
+    First if <math|L<rsub|1>,L<rsub|2>\<in\>GL<around*|(|X|)>> then
+    <math|det<around*|(|L<rsub|1>\<circ\>L<rsub|2>|)>\<equallim\><rsub|<text|[theorem:
+    <reference|determinant det(L) properties>]>>det<around*|(|L<rsub|1>|)>\<cdot\>det<around*|(|L<rsub|2>|)>>
+    so that <math|L<rsub|1>\<circ\>L<rsub|2>\<in\>GL<around*|(|X|)>> so that
+    <math|\<circ\>> is a operator on <math|GL<around*|(|X|)>>. Further we
+    have:
+
+    <\description>
+      <item*|associativity>If <math|L<rsub|1>,L<rsub|2>,L<rsub|3>\<in\>GL<around*|(|X|)>>
+      then\ 
+
+      <\equation*>
+        <around*|(|L<rsub|1>\<circ\>L<rsub|2>|)>\<circ\>L<rsub|3>\<equallim\><rsub|<text|[function:
+        <reference|partial function associativity>]>>L<rsub|1>\<circ\><around*|(|L<rsub|2>\<circ\>L<rsub|3>|)>
+      </equation*>
+
+      <item*|neutral element>As <math|det<around*|(|Id<rsub|X>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|determinant det(L) properties>]>>1\<neq\>0> we have that
+      <math|Id<rsub|X>\<in\>GL<around*|(|X|)>>, further by [theorem:
+      <reference|function composition of Id function>] we have that
+      <math|\<forall\>L\<in\>GL<around*|(|X|)>> we have
+      <math|Id<rsub|X>\<circ\>L=L=L\<circ\>Id<rsub|X>>
+
+      <item*|inverse element>If <math|L\<in\>GL<around*|(|X|)>> then
+      <math|det<around*|(|L<rsup|-1>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|determinant det(L) properties>]>><around*|(|det<around*|(|L|)>|)><rsup|-1>\<neq\>0>
+      so that <math|L<rsup|-1>\<in\>GL<around*|(|X|)>>, further
+      <math|L\<circ\>L<rsup|-1>\<equallim\><rsub|<text|[theorem:
+      <reference|function bijection f,f-1>]>>Id<rsub|X>=\<equallim\><rsub|<text|[theorem:
+      <reference|function bijection f,f-1>]>>L<rsup|-1>\<circ\>L>
+    </description>
+  </proof>
+
+  <\definition>
+    Let <math|n\<in\>\<bbb-N\>>, <math|X> a finite dimensional vector space
+    with <math|dim<around*|(|X|)>=n> and <math|<around*|{|L<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>GL<around*|(|X|)>>
+    then
+
+    <\equation*>
+      L<rsub|1>\<circ\>\<cdots\>\<circ\>L<rsub|n>=<big|prod><rsub|i=1><rsup|m>L<rsub|i>
+    </equation*>
+
+    [see remark: <reference|product finite product>]
+  </definition>
+
+  We will now introduce a special class of nonsingular operators called
+  elementary transformations.
+
+  <\definition>
+    <label|nonsingular transformations elementary predefinition>Let
+    <math|n\<in\>\<bbb-N\>>, <math|X> a finite dimensional vector space with
     <math|dim<around*|(|X|)>=n> over a field <math|F> and
     <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>X>
     a distinct family such that <math|E=<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>
@@ -19777,7 +19918,8 @@
         if >k=i>>>>>
       </equation*>
 
-      <item>Let <math|i,j\<in\><around*|{|1,\<ldots\>,n|}>> and define\ 
+      <item>Let <math|i,j\<in\><around*|{|1,\<ldots\>,n|}>> with
+      <math|i\<neq\>j> and define\ 
 
       <\equation*>
         N<rsup|n><rsub|<around*|[|i,j|]>>\<in\>\<cal-M\><rsub|n,n><around*|(|F|)><text|
@@ -19863,12 +20005,483 @@
         if k=i>>>>>>
       </equation*>
     </enumerate>
-
-    We call <math|\<alpha\><rsup|n><rsub|<around*|[|i,\<alpha\>|]>>>,
-    <math|\<tau\><rsup|n><rsub|<around*|[|imj|]>>> and
-    <math|\<beta\><rsup|n><rsub|<around*|[|i,j,\<alpha\>|]>>>
-    <with|font-series|bold|elementary transformations>.
   </definition>
+
+  The above thransformations have the following properties
+
+  <\theorem>
+    <label|nonsingular transformations elementary properties>Let
+    <math|n\<in\>\<bbb-N\>>, <math|X> a finite dimensional vector space with
+    <math|dim<around*|(|X|)>=n> over a field <math|F> with characteristic
+    zero then we have:
+
+    <\enumerate>
+      <item><math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>,
+      <math|\<forall\>\<alpha\>\<in\>F> we have
+      <math|det<around*|(|\<sigma\><rsup|n><rsub|<around*|[|i,\<alpha\>|]>>|)>=\<alpha\>>.
+      Hence by [theorem: <reference|determinant det(L) properties>]\ 
+
+      <\equation*>
+        \<sigma\><rsup|n><rsub|<around*|[|i,\<alpha\>|]>><text| is a linear
+        isomorphism >\<Leftrightarrow\><text| >\<alpha\>\<neq\>0
+      </equation*>
+
+      <item><math|\<forall\>i,j\<in\><around*|{|1,\<ldots\>,n|}>> with
+      <math|i\<neq\>j> we have
+
+      <\equation*>
+        det<around*|(|\<tau\><rsup|n><rsub|<around*|[|i,j|]>>|)>=-1
+      </equation*>
+
+      so that by [theorem: <reference|determinant det(L) properties>]
+      <math|\<tau\><rsup|n><rsub|<around*|[|i,j|]>>> is a linear isomorphism.
+
+      <item><math|\<forall\>i,j\<in\><around*|{|1,\<ldots\>,n|}>> with
+      <math|i\<neq\>j> and <math|\<forall\>\<alpha\>\<in\>F> we have that
+      <math|det<around*|(|\<beta\><rsup|n><rsub|<around*|[|i,j,\<alpha\>|]>>|)>=1>
+      so that by [theorem: <reference|determinant det(L) properties>]
+      <math|\<beta\><rsup|n><rsub|<around*|[|i,j,\<alpha\>|]>>> is a linear
+      isomorphism.
+
+      <item><math|\<forall\>i,j\<in\><around*|{|1,\<ldots\>,n|}>> with
+      <math|i\<neq\>j> we have <math|\<tau\><rsup|n><rsub|<around*|[|i,j|]>>\<circ\>\<tau\><rsup|n><rsub|<around*|[|i,j|]>>=Id<rsub|<around*|{|1,\<ldots\>,n|}>>>
+      so that <math|<around*|(|\<tau\><rsup|n><rsub|<around*|[|i,j|]>>|)><rsup|-1>=\<tau\><rsup|n><rsub|<around*|[|i,j|]>>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ Let <math|<around*|{|e<rsub|k>|}><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>X>
+    be a disjoint family such that <math|<around*|{|e<rsub|k>\|k\<in\><around*|{|1,\<ldots\>,n|}>|}>>
+    is a basis for <math|X> and let \ <math|\<Delta\>:X<rsup|n>\<rightarrow\>F>
+    be the determinant function such that
+    <math|\<Delta\><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>=1> [see
+    theorem: <reference|determinant mapping existence of non trivial>] then
+    we have:
+
+    <\enumerate>
+      <item>
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|det<around*|(|\<alpha\><rsup|n><rsub|<around*|[|i,\<alpha\>|]>>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|determinant definition
+        alternative>]>>>|<cell|\<Delta\><around*|(|\<alpha\><rsup|n><rsub|<around*|[|i,\<alpha\>|]>><around*|(|e<rsub|1>|)>,\<ldots\>,\<alpha\><rsup|n><rsub|<around*|[|i,\<alpha\>|]>><around*|(|e<rsub|n>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<Delta\><around*|(|\<alpha\><rsup|n><rsub|<around*|[|i,\<alpha\>|]>><around*|(|e<rsub|1>|)>,\<ldots\>,\<alpha\><rsup|n><rsub|<around*|[|i,\<alpha\>|]>><around*|(|e<rsub|i-1>|)>,\<alpha\><rsup|n><rsub|<around*|[|i,\<alpha\>|]>><around*|(|e<rsub|1>|)>,\<alpha\><rsup|n><rsub|<around*|[|i,\<alpha\>|]>><around*|(|e<rsub|i+1>|)>\<ldots\>,\<alpha\><rsup|n><rsub|<around*|[|i,\<alpha\>|]>><around*|(|e<rsub|n>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+        <reference|elementary transformation>]>>>|<cell|\<Delta\><around*|(|e<rsub|1>,\<ldots\>,e<rsub|i-1>,\<alpha\>\<cdot\>e<rsub|i>,e<rsub|i+1>,\<ldots\>,e<rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\>\<Delta\><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\>1>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>>>>>
+      </eqnarray*>
+
+      <item>Let <math|k\<in\><around*|{|1,\<ldots\>,n|}>> then\ 
+
+      <\equation*>
+        \<tau\><rsup|n><rsub|<around*|[|i,j|]>><around*|(|e<rsub|k>|)>\<equallim\><rsub|<text|[definition:
+        <reference|elementary transformation>]>><choice|<tformat|<table|<row|<cell|e<rsub|i><text|
+        if >k=j>>|<row|<cell|e<rsub|j><text| if
+        >k=i>>|<row|<cell|e<rsub|k><text| if
+        >k\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i,j|}>>>>>>=e<rsub|<around*|{|i\<leftrightarrowlim\>j<rsub|n>|}><around*|(|k|)>>
+      </equation*>
+
+      so that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|det<around*|(|\<tau\><rsup|n><rsub|<around*|[|i,j|]>>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|determinant definition
+        alternative>]>>>|<cell|\<Delta\><around*|(|\<tau\><rsup|n><rsub|<around*|[|i,j|]>><around*|(|e<rsub|1>|)>,\<ldots\>,\<tau\><rsup|n><rsub|<around*|[|i,j|]>><around*|(|e<rsub|n>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<Delta\><around*|(|e<rsub|<around*|(|i\<leftrightarrowlim\><rsub|nn>j|)><around*|(|1|)>>,\<ldots\>,e<rsub|<around*|{|i\<leftrightarrowlim\><rsub|n>j|}><around*|(|n|)>><rsub|>|)>>>|<row|<cell|>|<cell|=>|<cell|sign<around*|(|i\<leftrightarrowlim\><rsub|n>j|)>\<cdot\>\<Delta\><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|i\<neq\>j\<wedge\><text|[theorem:<reference|permutation
+        sign properties>]>>>|<cell|-1\<cdot\>\<Delta\><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|-1>>>>
+      </eqnarray*>
+
+      <item>We have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|det<around*|(|\<beta\><rsup|n><rsub|<around*|[|i,j,\<alpha\>|]>>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|determinant definition
+        alternative>]>>>|<cell|\<Delta\>>>|<row|<cell|<around*|(|\<beta\><rsup|n><rsub|<around*|[|i,j,\<alpha\>|]>><around*|(|e<rsub|1>|)>,\<ldots\>,\<beta\><rsup|n><rsub|<around*|[|i,j,\<alpha\>|]>><around*|(|e<rsub|n>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<Delta\><around*|(|\<beta\><rsup|n><rsub|<around*|[|i,j,\<alpha\>|]>><around*|(|e<rsub|1>|)>\<ldots\>,\<beta\><rsup|n><rsub|<around*|[|i,j,\<alpha\>|]>><around*|(|e<rsub|i-1>|)>,\<beta\><rsup|n><rsub|<around*|[|i,j,\<alpha\>|]>><around*|(|e<rsub|i>|)>,\<beta\><rsup|n><rsub|<around*|[|i,j,\<alpha\>|]>><around*|(|e<rsub|i+1>|)>,\<ldots\>,\<beta\><rsup|n><rsub|<around*|[|i,j,\<alpha\>|]>><around*|(|e<rsub|n>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<Delta\><around*|(|e<rsub|1>,\<ldots\>,e<rsub|i-1>,e<rsub|i>+\<alpha\>\<cdot\>e<rsub|j>,e<rsub|i-1>,\<ldots\>,e<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|\<Delta\><around*|(|e<rsub|1>,\<ldots\>,e<rsub|i-1>,e<rsub|i>,e<rsub|i-1>,\<ldots\>,e<rsub|n>|)>+\<Delta\><around*|(|e<rsub|1>,\<ldots\>,e<rsub|i-1>,\<alpha\>\<cdot\>e<rsub|j>,e<rsub|i-1>,\<ldots\>,e<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|\<Delta\><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>+\<alpha\>\<cdot\>\<Delta\><around*|(|e<rsub|1>,\<ldots\>,e<rsub|i-1>,e<rsub|j>,e<rsub|i-1>,\<ldots\>,e<rsub|n>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|determinant key-symmetric
+        condition>]>>>|<cell|>>|<row|<cell|1+\<alpha\>\<cdot\>0>|<cell|>|<cell|>>|<row|<cell|1>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      <item>Let <math|k\<in\><around*|{|1,\<ldots\>,n|}>> then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<tau\><rsup|n><rsub|<around*|[|i,j|]>><around*|(|\<tau\><rsup|n><rsub|<around*|[|i,j|]>><around*|(|e<rsub|k>|)>|)>>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|\<tau\><rsup|n><rsub|<around*|[|i,j|]>><around*|(|e<rsub|j>|)><text|
+        if >k=i>>|<row|<cell|\<tau\><rsup|n><rsub|<around*|[|i,j|]>><around*|(|e<rsub|i>|)><text|
+        if >k=j>>|<row|<cell|\<tau\><rsup|n><rsub|<around*|[|i,j|]>><around*|(|e<rsub|k>|)><text|
+        if >k\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i,j|}>>>>>>>>|<row|<cell|>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|e<rsub|i><text|
+        if >k=i>>|<row|<cell|e<rsub|j><text| if
+        >k=j>>|<row|<cell|e<rsub|k><text| if
+        >k\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i,j|}>>>>>>>>|<row|<cell|>|<cell|=>|<cell|e<rsub|k>>>>>
+      </eqnarray*>
+
+      Let <math|x\<in\>X> then there exists a
+      <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F>
+      such that <math|x=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i>\<cdot\>e<rsub|i>>
+      so that\ 
+
+      <\equation*>
+        <around*|(|\<tau\><rsup|n><rsub|<around*|[|i,j|]>>\<circ\>\<tau\><rsup|n><rsub|<around*|[|i,j|]>>|)><around*|(|x|)>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i>\<cdot\><around*|(|\<tau\><rsup|n><rsub|<around*|[|i,j|]>>\<circ\>\<tau\><rsup|n><rsub|<around*|[|i,j|]>>|)><around*|(|e<rsub|i>|)>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i>\<cdot\>e<rsub|i>=x
+      </equation*>
+
+      proving that\ 
+
+      <\equation*>
+        \<tau\><rsup|n><rsub|<around*|[|i,j|]>>\<circ\>\<tau\><rsup|n><rsub|<around*|[|i,j|]>>=Id<rsub|<around*|{|1,\<ldots\>,n|}>>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  We are now ready to define elementary transformations:
+
+  <\definition>
+    <label|nonsingular elementary transformations>Let
+    <math|n\<in\>\<bbb-N\>>, <math|X> a finite dimensional vector space with
+    <math|dim<around*|(|X|)>=n> over a field <math|F> with characteristic
+    zero then a nonsingular transformation <math|T\<in\>GL<around*|(|X|)>> is
+    elementary if <math|T> is either of the form
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|T>|<cell|=>|<cell|Id<rsub|X>>>|<row|<cell|T>|<cell|=>|<cell|\<sigma\><rsup|n><rsub|<around*|[|i,\<alpha\>|]>><text|
+      where >i\<in\><around*|{|1,\<ldots\>,n|}>\<wedge\>\<alpha\>\<in\>F\\<around*|{|0|}>>>|<row|<cell|T>|<cell|=>|<cell|\<tau\><rsup|n><rsub|<around*|[|i,j|]>><text|
+      where >i,j\<in\><around*|{|1,\<ldots\>,n|}><text| with
+      >i\<neq\>j>>|<row|<cell|T>|<cell|=>|<cell|\<beta\><rsup|n><rsub|<around*|[|i,j,\<alpha\>|]>><text|
+      where >i,j\<in\><around*|{|1,\<ldots\>,n|}><text| with >i\<neq\>j<text|
+      and >\<alpha\>\<in\>F\\<around*|{|0|}>>>>>
+    </eqnarray*>
+
+    We say that a linear transformation <math|L\<in\>Hom<around*|(|X,Y|)>> is
+    composited of elementary transformations if there exists a family
+    <math|<around*|{|T<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>GL<around*|(|X|)>>,
+    <math|m\<in\>\<bbb-N\>> satisfying <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|T<rsub|i>> is a elementary transformation such that\ 
+
+    <\equation*>
+      L=T<rsub|1>\<circ\>\<cdots\>\<circ\>\<circ\>T<rsub|n>\<equallim\><rsub|def>
+    </equation*>
+  </definition>
+
+  We have the following trivial lemma about transformations that are
+  compositions of elementary transformations.
+
+  <\lemma>
+    <label|nonsingular transformation composition>Let
+    <math|n\<in\>\<bbb-N\>>, <math|X> a finite dimensional vector space with
+    <math|dim<around*|(|X|)>=n> over a field <math|F> with characteristic
+    zero then we have:
+
+    <\enumerate>
+      <item>If <math|T\<in\>GL<around*|(|X|)>> is a elementary transformation
+      and <math|L\<in\>GL<around*|(|X|)>> is
+      <with|font-series|medium|composed of elementary transformations> then
+      <math|L\<circ\>T> and <math|T\<circ\>L> are composed of linear
+      transformations
+
+      <item>If <math|L<rsub|1>,L<rsub|2>\<in\>GL<around*|(|X|)>> are composed
+      of elementary transformations then <math|L<rsub|1>\<circ\>L<rsub|2>> is
+      composed of elementary transformations.
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>This follows from [theorems: <reference|sum alternative
+      definition (1)>, <reference|sum alternative definition (2)>]
+
+      <item>If <math|L<rsub|1>,L<rsub|2>> are composed of elementary
+      transformations then there exists <math|k,l\<in\>\<bbb-N\>> and
+      families of elementary transformations
+      <math|<around*|{|T<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>\<subseteq\>GL<around*|(|X|)>>,
+      <math|<around*|{|S<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,l|}>>\<subseteq\>GL<around*|(|X|)>>
+      such that\ 
+
+      <\equation*>
+        L<rsub|1>=<big|prod><rsub|i=1><rsup|k>T<rsub|i><text| and
+        >L<rsub|2>=<big|prod><rsub|i=1><rsup|l>S<rsub|i>
+      </equation*>
+
+      Define then the family <math|<around*|{|E<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k+l|}>>\<subseteq\>GL<around*|(|X|)>>
+      by
+
+      <\equation*>
+        \<forall\>i\<in\><around*|{|1,\<ldots\>,k+l|}><text|
+        >E<rsub|i>=<choice|<tformat|<table|<row|<cell|T<rsub|i><text| if
+        >i\<in\><around*|{|1,\<ldots\>,k|}>>>|<row|<cell|S<rsub|i-n><text| if
+        >i\<in\><around*|{|l+1,\<ldots\>,k+l|}>>>>>>
+      </equation*>
+
+      then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|L<rsub|1>\<circ\>L<rsub|2>>|<cell|=>|<cell|<big|prod><rsub|i=1<rsup|>><rsup|k>T<rsub|i>\<circ\><big|prod><rsub|i=1><rsup|l>S<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|i=1<rsup|>><rsup|k>T<rsub|i>\<circ\><big|prod><rsub|i=1><rsup|l>S<rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|def>>|<cell|<big|prod><rsub|i=1<rsup|>><rsup|k>T<rsub|i>\<circ\><big|prod><rsub|i=k+1><rsup|k+l>S<rsub|i-k>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|i=1<rsup|>><rsup|k>E<rsub|i>\<circ\><big|prod><rsub|i=k+1><rsup|k+l>E<rsub|i-k>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum associativity simple>]>>>|<cell|<big|prod><rsub|i=1><rsup|k+l>E<rsub|i>>>>>
+      </eqnarray*>
+
+      proving that <math|L<rsub|1>\<circ\>L<rsub|2>> is composed of
+      elementary transpositions.
+    </enumerate>
+  </proof>
+
+  To use mathematical induction on the dimension of a vector space we
+  introduce the following definition.
+
+  <\definition>
+    <label|elementary transformation L(n)>Let <math|n\<in\>\<bbb-N\>>,
+    <math|X> a finite dimensional vectorspace over a field <math|F> with
+    basis <math|E=<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n+1|}>|}>>
+    where <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>X>
+    is a distinct family, <math|Y=span<around*|(|<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>>
+    a <math|n>-dimensional vector space with basis
+    <math|F=<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n-1|}>|}>>
+    and <math|L\<in\>Hom<around*|(|Y,Y|)>> then we define
+    <math|M<rsub|<around*|[|n,L|]>>\<in\>\<cal-M\><rsub|n+1,n+1><around*|(|F|)><text|
+    by >>
+
+    <\equation*>
+      \<forall\>k,l\<in\><around*|{|1,\<ldots\>,n+1|}><text| we have
+      ><around*|(|M<rsub|<around*|[|n+1,L|]>>|)><rsub|k,l>=<choice|<tformat|<table|<row|<cell|\<cal-M\><around*|(|L;F,F|)><rsub|k,l><text|
+      if ><around*|(|k,l|)>\<in\><around*|{|1,\<ldots\>,n|}>\<times\><around*|{|1,\<ldots\>,n|}>*>>|<row|<cell|\<delta\><rsub|k,l><text|
+      if >k=n+1\<vee\>l=n+1>>>>>\ 
+    </equation*>
+
+    and define <math|L<rsup|<around*|[|n|]>>\<in\>Hom<around*|(|X,X|)>> by\ 
+
+    <\equation*>
+      L<rsup|<around*|[|n+1|]>>=\<cal-M\><around*|(|E,E|)><rsup|-1><around*|(|M<rsub|<around*|[|n+1,L|]>>|)>
+    </equation*>
+
+    then we have <math|\<forall\>k\<in\><around*|{|1,\<ldots\>,n|}>> that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|L<rsup|<around*|[|n+1|]>><around*|(|e<rsub|k>|)>>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>><around*|(|M<rsub|<around*|[|n+1,L|]>>|)><rsub|i,k>\<cdot\>e<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|M<rsub|<around*|[|n+1,L|]>>|)><rsub|i,k>\<cdot\>e<rsub|i>+<big|sum><rsub|i\<in\><around*|{|n+1|}>><around*|(|M<rsub|<around*|[|n+1,L|]>>|)><rsub|i,k>\<cdot\>e<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|M<rsub|<around*|[|n+1,L|]>>|)><rsub|i,k>\<cdot\>e<rsub|i>+<around*|(|M<rsub|<around*|[|n+1,L|]>>|)><rsub|n+1,k>\<cdot\>e<rsub|n+1>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<cal-M\><around*|(|L;F,F|)><rsub|i,k>\<cdot\>e<rsub|i>+\<delta\><rsub|n+1,k>\<cdot\>e<rsub|n+1>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|e<rsub|k>|)>+\<delta\><rsub|n+1,k>\<cdot\>e<rsub|n+1>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|e<rsub|k>|)>+0>>|<row|<cell|>|<cell|\<equallim\><rsub|k\<neq\>n>>|<cell|L<around*|(|e<rsub|k>|)>>>>>
+    </eqnarray*>
+
+    and\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|L<rsup|<around*|[|n+1|]>><around*|(|e<rsub|n+1>|)>>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>><around*|(|M<rsub|<around*|[|n+1,L|]>>|)><rsub|i,n>\<cdot\>e<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<delta\><rsub|i,n+1>\<cdot\>e<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|e<rsub|n+1>>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation*>
+      \<forall\>k\<in\><around*|{|1,\<ldots\>,n|}><text| we have
+      >L<rsup|<around*|[|n+1|]>><around*|(|e<rsub|k>|)>=<choice|<tformat|<table|<row|<cell|L<around*|(|e<rsub|k>|)><text|
+      if >k\<in\><around*|{|1,\<ldots\>,n|}>>>|<row|<cell|e<rsub|n+1><text|
+      if >k=n+1>>>>>
+    </equation*>
+  </definition>
+
+  <\lemma>
+    <label|nonsingular tranaformations extend a elementary transformation>Let
+    <math|n\<in\>\<bbb-N\>>, <math|X> a finite dimensional vectorspace over a
+    field <math|F> with basis <math|E=<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n+1|}>|}>>
+    where <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>X>
+    is a distinct family, <math|Y=span<around*|(|<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>>
+    a <math|n>-dimensional vector space with basis
+    <math|F=<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n-1|}>|}>>
+    then we have:
+
+    <\enumerate>
+      <item><math|<around*|(|Id<rsub|Y>|)><rsup|<around*|[|n+1|]>>=Id<rsub|X>>
+
+      <item><math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> and
+      <math|\<alpha\>\<in\>F\\<around*|{|0|}>> we have
+      <math|<around*|(|\<sigma\><rsup|n><rsub|<around*|[|i,\<alpha\>|]>>|)><rsup|<around*|[|n+1|]>>=\<sigma\><rsup|n+1><rsub|<around*|[|i,\<alpha\>|]>>>
+
+      <item><math|\<forall\>i,j\<in\><around*|{|1,\<ldots\>,n|}>> with
+      <math|i\<neq\>j> then <math|<around*|(|\<tau\><rsup|n><rsub|<around*|[|i,j|]>>|)><rsup|<around*|[|n+1|]>>=\<tau\><rsup|n+1><rsub|<around*|[|i,j|]>>>
+
+      <item><math|\<forall\>i,j\<in\><around*|{|1,\<ldots\>,n|}>> with
+      <math|i\<neq\>j> and <math|\<alpha\>\<in\>F\\<around*|{|0|}>> then
+      <math|<around*|(|\<beta\><rsup|n><rsub|<around*|[|i,j,\<alpha\>|]>>|)><rsup|<around*|[|n+1|]>>=\<beta\><rsup|n+1><rsub|<around*|[|i,j,\<alpha\>|]>>>
+    </enumerate>
+
+    in other words if <math|T> is a elementary tranformation in <math|Y> then
+    <math|T<rsup|<around*|[|n+1|]>>> is a elementary transformation in
+    <math|X>.
+  </lemma>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|k\<in\><around*|{|1,\<ldots\>,n+1|}>> then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|Id<rsub|X>|)><rsup|<around*|[|n+1|]>><around*|(|e<rsub|k>|)>>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|Id<rsub|X><around*|(|e<rsub|k>|)><text|
+        if >k\<in\><around*|{|1,\<ldots\>,n|}>>>|<row|<cell|e<rsub|n+1><text|
+        if >k=n+1>>>>>>>|<row|<cell|>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|e<rsub|k><text|
+        if >k\<in\><around*|{|1,\<ldots\>,n|}>>>|<row|<cell|e<rsub|n+1><text|
+        if >k=n+1>>>>>>>|<row|<cell|>|<cell|=>|<cell|e<rsub|k>>>|<row|<cell|>|<cell|=>|<cell|Id<rsub|Y><around*|(|e<rsub|k>|)>>>>>
+      </eqnarray*>
+
+      so that by [theorem: <reference|linear mapping and basis vectors>]
+      <math|<around*|(|Id<rsub|X>|)><rsup|<around*|[|n+1|]>>=Id<rsub|Y>>.
+
+      <item>Let <math|k\<in\><around*|{|1,\<ldots\>,n+1|}>> then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|\<sigma\><rsup|n><rsub|<around*|[|i,\<alpha\>|]>>|)><rsup|<around*|[|n+1|]>><around*|(|e<rsub|k>|)>>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|\<sigma\><rsup|n><rsub|<around*|[|i,\<alpha\>|]>><around*|(|e<rsub|k>|)><text|
+        if >k\<in\><around*|{|1,\<ldots\>,n|}>>>|<row|<cell|e<rsub|n+1><text|
+        if >k=n+1>>>>>>>|<row|<cell|>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|\<alpha\>\<cdot\>e<rsub|i><text|
+        if >k\<in\><around*|{|1,\<ldots\>,n|}>\<wedge\>k=i>>|<row|<cell|e<rsub|k><text|
+        if >k\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>>|<row|<cell|e<rsub|n+1><text|
+        if >k=n+1>>>>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>\<subseteq\><around*|{|1,\<ldots\>,n+1|}>\\<around*|{|i|}>>>|<cell|<choice|<tformat|<table|<row|<cell|\<sigma\><rsup|n+1><rsub|<around*|[|i,\<alpha\>|]>><around*|(|e<rsub|k>|)><text|
+        if >k\<in\><around*|{|1,\<ldots\>,n|}>>>|<row|<cell|\<sigma\><rsup|n+1><rsub|<around*|[|i,\<alpha\>|]>><around*|(|e<rsub|k>|)><text|
+        if >k\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>>|<row|<cell|e<rsub|n+1><text|
+        if >k=n+1>>>>>>>|<row|<cell|>|<cell|\<equallim\><rsub|i\<neq\>n+1>>|<cell|<choice|<tformat|<table|<row|<cell|\<sigma\><rsup|n+1><rsub|<around*|[|i,\<alpha\>|]>><around*|(|e<rsub|k>|)><text|
+        if >k\<in\><around*|{|1,\<ldots\>,n|}>>>|<row|<cell|\<sigma\><rsup|n+1><rsub|<around*|[|i,\<alpha\>|]>><around*|(|e<rsub|k>|)><text|
+        if >k\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>>|<row|<cell|\<sigma\><rsup|n+1><rsub|<around*|[|i,\<alpha\>|]>><around*|(|e<rsub|k>|)><text|
+        if >k=n+1>>>>>>>|<row|<cell|>|<cell|=>|<cell|\<sigma\><rsup|n+1><rsub|<around*|[|i,\<alpha\>|]>><around*|(|e<rsub|k>|)>>>>>
+      </eqnarray*>
+
+      so that by [theorem: <reference|linear mapping and basis vectors>]
+      <math|\<sigma\><rsup|n><rsub|<around*|[|i,\<alpha\>|]>>=\<sigma\><rsup|n+1><rsub|<around*|[|i,\<alpha\>|]>>>.
+
+      <item>Let <math|k\<in\><around*|{|1,\<ldots\>,n+1|}>> then
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|\<tau\><rsup|n><rsub|<around*|[|i,j|]>>|)><rsup|<around*|[|n+1|]>><around*|(|e<rsub|k>|)>>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|\<tau\><rsup|n><rsub|<around*|[|i,j|]>><around*|(|e<rsub|k>|)><text|
+        if >k\<in\><around*|{|1,\<ldots\>,n|}>>>|<row|<cell|e<rsub|n+1><text|
+        if >k=n+1>>>>>>>|<row|<cell|>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|e<rsub|i><text|
+        if >k\<in\><around*|{|1,\<ldots\>,n|}>\<wedge\>k=j>>|<row|<cell|e<rsub|j><text|
+        if >k\<in\><around*|{|1,\<ldots\>,n|}>\<wedge\>k=i>>|<row|<cell|e<rsub|k><text|
+        if >k\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i,j|}>>>|<row|<cell|e<rsub|n+1><text|
+        if >k=n+1>>>>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|{|1,\<ldots\>,n|}>\\<around*|{|i,j|}>\<subseteq\><around*|{|1,\<ldots\>,n+1|}>\\<around*|{|i,j|}>>>|<cell|<choice|<tformat|<table|<row|<cell|\<tau\><rsup|n+1><rsub|<around*|[|i,j|]>><around*|(|e<rsub|k>|)><text|
+        if >k\<in\><around*|{|1,\<ldots\>,n|}>\<wedge\>k=j>>|<row|<cell|\<tau\><rsup|n+1><rsub|<around*|[|i,j|]>><around*|(|e<rsub|k>|)><text|
+        if >k\<in\><around*|{|1,\<ldots\>,n|}>\<wedge\>k=i>>|<row|<cell|\<tau\><rsup|n+1><rsub|<around*|[|i,j|]>><around*|(|e<rsub|k>|)><text|
+        if >k\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i,j|}>>>|<row|<cell|e<rsub|n+1><text|
+        if >k=n+1>>>>>>>|<row|<cell|>|<cell|\<equallim\><rsub|i,j\<neq\>n<rsub|+1>>>|<cell|<choice|<tformat|<table|<row|<cell|\<tau\><rsup|n+1><rsub|<around*|[|i,j|]>><around*|(|e<rsub|k>|)><text|
+        if >k\<in\><around*|{|1,\<ldots\>,n|}>\<wedge\>k=j>>|<row|<cell|\<tau\><rsup|n+1><rsub|<around*|[|i,j|]>><around*|(|e<rsub|k>|)><text|
+        if >k\<in\><around*|{|1,\<ldots\>,n|}>\<wedge\>k=i>>|<row|<cell|\<tau\><rsup|n+1><rsub|<around*|[|i,j|]>><around*|(|e<rsub|k>|)><text|
+        if >k\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i,j|}>>>|<row|<cell|\<tau\><rsup|n+1><rsub|<around*|[|i,j|]>><around*|(|e<rsub|k>|)><text|
+        if >k=n+1>>>>>>>|<row|<cell|>|<cell|=>|<cell|\<tau\><rsup|n+1><rsub|<around*|[|i,j|]>><around*|(|e<rsub|k>|)>>>>>
+      </eqnarray*>
+
+      proving by [theorem: <reference|linear mapping and basis vectors>]
+      <math|\<tau\><rsup|n><rsub|<around*|[|i,j|]>>=\<tau\><rsup|n+1><rsub|<around*|[|i,j|]>>>.
+
+      <item>Let <math|k\<in\><around*|{|1,\<ldots\>,n+1|}>> then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|\<beta\><rsup|n><rsub|<around*|[|i,j,\<alpha\>|]>>|)><rsup|<around*|[|n+1|]>><around*|(|e<rsub|k>|)>>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|\<beta\><rsup|n><rsub|<around*|[|i,j,\<alpha\>|]>><around*|(|x<rsub|k>|)><text|
+        if >k\<in\><around*|{|1,\<ldots\>n|}><rsup|>>>|<row|<cell|e<rsub|n+1><text|
+        if >k=n+1>>>>>>>|<row|<cell|>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|e<rsub|i>+\<alpha\>\<cdot\>e<rsub|j><text|
+        if >k\<in\><around*|{|1,\<ldots\>,n|}>\<wedge\>k=i>>|<row|<cell|e<rsub|k><text|
+        if >k\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>>|<row|<cell|e<rsub|n+1><text|
+        if >k=n+1>>>>>>>|<row|<cell|>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|\<beta\><rsup|n+1><rsub|<around*|[|i,j,\<alpha\>|]>><around*|(|e<rsub|k>|)><text|
+        if >k\<in\><around*|{|1,\<ldots\>,n|}>\<wedge\>k=i>>|<row|<cell|e<rsub|k><text|
+        if >k\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>>|<row|<cell|e<rsub|n+1><text|
+        if >k=n+1>>>>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>\<subseteq\><around*|{|1,\<ldots\>,n+1|}>\\<around*|{|i|}>>>|<cell|<choice|<tformat|<table|<row|<cell|\<beta\><rsup|n+1><rsub|<around*|[|i,j,\<alpha\>|]>><around*|(|e<rsub|k>|)><text|
+        if >k\<in\><around*|{|1,\<ldots\>,n|}>\<wedge\>k=i>>|<row|<cell|\<beta\><rsup|n+1><rsub|<around*|[|i,j,\<alpha\>|]>><around*|(|e<rsub|k>|)><text|
+        if >k\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>>|<row|<cell|e<rsub|n+1><text|
+        if >k=n+1>>>>>>>|<row|<cell|>|<cell|\<equallim\><rsub|i\<neq\>n+1>>|<cell|<choice|<tformat|<table|<row|<cell|\<beta\><rsup|n+1><rsub|<around*|[|i,j,\<alpha\>|]>><around*|(|e<rsub|k>|)><text|
+        if >k\<in\><around*|{|1,\<ldots\>,n|}>\<wedge\>k=i>>|<row|<cell|\<beta\><rsup|n+1><rsub|<around*|[|i,j,\<alpha\>|]>><around*|(|e<rsub|k>|)><text|
+        if >k\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>>|<row|<cell|\<beta\><rsup|n+1><rsub|<around*|[|i,j,\<alpha\>|]>><around*|(|e<rsub|k>|)><text|
+        if >k=n+1>>>>>>>|<row|<cell|>|<cell|=>|<cell|\<beta\><rsup|n+1><rsub|<around*|[|i,j,\<alpha\>|]>><around*|(|e<rsub|k>|)>>>>>
+      </eqnarray*>
+
+      proving by [theorem: <reference|linear mapping and basis vectors>]
+      <math|\<beta\><rsup|n><rsub|<around*|[|i,j,\<alpha\>|]>>=\<beta\><rsup|n+1><rsub|<around*|[|i,j,\<alpha\>|]>>>.
+    </enumerate>
+  </proof>
+
+  The above about extending a elementary transformation to a higher dimension
+  also applies to nonsingular transformations that are composed of elementary
+  transformation.
+
+  <\lemma>
+    Let <math|n\<in\>\<bbb-N\>>, <math|X> a finite dimensional vectorspace
+    over a field <math|F> with basis <math|E=<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n+1|}>|}>>
+    where <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>X>
+    is a distinct family, <math|Y=span<around*|(|<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>>
+    a <math|n>-dimensional vector space with basis
+    <math|F=<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n-1|}>|}>>
+    then if <math|K,L<rsub|>\<in\>GL<around*|(|Y|)>> we have that\ 
+
+    <\equation*>
+      <around*|(|K\<circ\>L|)><rsup|<around*|[|n+1|]>>=K<rsup|<around*|[|n+1|]>>\<circ\>L<rsup|<around*|[|n+1|]>>
+    </equation*>
+
+    <\proof>
+      Let <math|k\<in\><around*|{|1,\<ldots\>,n+1|}>> then we have either:\ 
+
+      <\description>
+        <item*|<math|k\<in\><around*|{|1,\<ldots\>,n|}>>>Then\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|K\<circ\>L|)><rsup|<around*|[|n+1|]>><around*|(|e<rsub|k>|)>>|<cell|=>|<cell|<around*|(|K\<circ\>L|)><around*|(|e<rsub|k>|)>>>|<row|<cell|>|<cell|=>|<cell|K<around*|(|L<around*|(|e<rsub|k>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|K<around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<cal-M\><around*|(|L;F,F|)><rsub|i,k>\<cdot\>e<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<cal-M\><around*|(|L;F,F|)><rsub|i,k>\<cdot\>K<around*|(|e<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<cal-M\><around*|(|L;F,F|)><rsub|i,k>\<cdot\>K<rsup|<around*|[|n+1|]>><around*|(|e<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|K<rsup|<around*|[|n+1|]>><around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<cal-M\><around*|(|L;F,F|)><rsub|i,k>\<cdot\>e<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|K<rsup|<around*|[|n+1|]>><around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<cal-M\><around*|(|L;F,F|)><rsub|i,k>\<cdot\>e<rsub|i>+0\<cdot\>e<rsub|n+1>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|k\<neq\>n+1>>|<cell|K<rsup|<around*|[|n+1|]>><around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<cal-M\><around*|(|L;F,F|)><rsub|i,k>\<cdot\>e<rsub|i>+\<delta\><rsub|n+1,k>\<cdot\>e<rsub|n+1>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[see:
+          <reference|elementary transformation
+          L(n)>[>>>|<cell|K<rsup|<around*|[|n+1|]>><around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|M<rsub|<around*|[|n+1,L|]>><rsub|i,k>|)>\<cdot\>e<rsub|i>+<around*|(|M<rsub|<around*|[|n+1,L|]>>|)><rsub|n+1,k>\<cdot\>e<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|K<rsup|<around*|[|n+1|]>><around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>><around*|(|M<rsub|<around*|[|n+1,L|]>><rsub|i,k>|)>\<cdot\>e<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|K<rsup|<around*|[|n+1|]>><around*|(|L<rsup|<around*|[|n+1|]>><around*|(|e<rsub|k>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|K<rsup|<around*|[|n+1|]>>\<circ\>L<rsup|<around*|[|n+1|]>>|)><around*|(|e<rsub|k>|)>>>>>
+        </eqnarray*>
+
+        <item*|<math|k=n+1>>Then
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|K\<circ\>L|)><rsup|<around*|[|n+1|]>><around*|(|e<rsub|k>|)>>|<cell|=>|<cell|e<rsub|n+1>>>|<row|<cell|>|<cell|=>|<cell|L<rsup|<around*|[|n+1|]>><around*|(|e<rsub|k>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|L<rsup|<around*|[|n+1|]>><around*|(|e<rsub|k>|)>=e<rsub|n+1>>>|<cell|K<rsup|<around*|[|n+1|]>><around*|(|L<rsup|<around*|[|n+1|]>><around*|(|e<rsub|k>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|K<rsup|<around*|[|n+1|]>>\<circ\>L<rsup|<around*|[|n+1|]>>|)><around*|(|e<rsub|k>|)>>>>>
+        </eqnarray*>
+      </description>
+
+      So we have <math|\<forall\>k\<in\><around*|{|1,\<ldots\>,n+1|}>> that
+      <math|<around*|(|K\<circ\>L|)><rsup|<around*|[|n+1|]>><around*|(|e<rsub|k>|)>=<around*|(|K<rsup|<around*|[|n+1|]>>\<circ\>L<rsup|<around*|[|n+1|]>>|)><around*|(|e<rsub|k>|)>>
+      which by \ [theorem: <reference|linear mapping and basis vectors>]
+      proves that\ 
+
+      <\equation*>
+        <around*|(|K\<circ\>L|)><rsup|<around*|[|n+1|]>>=K<rsup|<around*|[|n+1|]>>\<circ\>L<rsup|<around*|[|n+1|]>>
+      </equation*>
+    </proof>
+  </lemma>
+
+  <\lemma>
+    Let <math|n\<in\>\<bbb-N\>>, <math|X> a finite dimensional vectorspace
+    over a field <math|F> with basis <math|E=<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n+1|}>|}>>
+    where <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>X>
+    is a distinct family, <math|Y=span<around*|(|<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>>
+    a <math|n>-dimensional vector space with basis
+    <math|F=<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n-1|}>|}>>
+    then if <math|m\<in\>\<bbb-N\>,<around*|{|L<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>GL<around*|(|Y|)>>
+    we have that
+
+    <\equation*>
+      <around*|(|<big|prod><rsub|i=1><rsup|m>L<rsub|i>|)><rsup|<around*|[|n+1|]>>=<big|prod><rsub|i=1><rsup|m><around*|(|L<rsub|i>|)><rsup|<around*|[|n+1|]>>
+    </equation*>
+
+    or in other words\ 
+
+    <\equation*>
+      <around*|(|L<rsub|1>\<circ\>,\<ldots\>,\<circ\>L<rsub|m>|)><rsup|<around*|[|n+1|]>>=<around*|(|<around*|(|L<rsub|1>|)><rsup|<around*|[|n+1|]>>\<circ\>,\<ldots\>,\<circ\><around*|(|L<rsub|m>|)><rsup|<around*|[|n+1|]>>|)>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    We prove this by induction, so let\ 
+
+    <\equation*>
+      S=<around*|{|m\<in\>\<bbb-N\>\|If <around*|{|L<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>GL<around*|(|Y|)><text|
+      then ><around*|(|<big|prod><rsub|i=1><rsup|m>L<rsub|i>|)><rsup|<around*|[|n+1|]>>=<big|prod><rsub|i=1><rsup|m><around*|(|L<rsub|i>|)><rsup|<around*|[|n+1|]>>|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|1\<in\>S>>Let <math|<around*|{|L<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,1|}>>\<subseteq\>GL<around*|(|Y|)>>
+      then <math|<around*|(|<big|prod><rsub|i=1><rsup|1>L<rsub|i>|)><rsup|<around*|[|n+1|]>>=<around*|(|L<rsub|1>|)><rsup|<around*|[|n+1|]>>=<big|prod><rsub|i=1><rsup|1><around*|(|L<rsub|i>|)><rsup|<around*|[|n+1|]>>>
+
+      <item*|<math|m\<in\>S\<Rightarrow\>m+1\<in\>S>>Let
+      <math|<around*|{|L<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>GL<around*|(|X|)>>
+      then we have <math|\<forall\>k\<in\><around*|{|1,\<ldots\>,n|}>>
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|<big|prod><rsub|i=1><rsup|n+1>L<rsub|i>|)><rsup|<around*|[|n+1|]>>>|<cell|=>|<cell|>>>>
+      </eqnarray*>
+    </description>
+
+    \;
+  </proof>
+
+  \;
+
+  \;
+
+  \;
 
   \;
 
@@ -19913,70 +20526,70 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|11|?>>
-    <associate|auto-10|<tuple|<with|mode|<quote|math>|S<rsub|I>>|?>>
-    <associate|auto-11|<tuple|<with|mode|<quote|math>|i\<leftrightarrowlim\><rsub|I>>j|?>>
-    <associate|auto-12|<tuple|11.1.4|?>>
-    <associate|auto-13|<tuple|11.2|?>>
-    <associate|auto-14|<tuple|11.2.1|?>>
-    <associate|auto-15|<tuple|vector space|?>>
-    <associate|auto-16|<tuple|11.2.2|?>>
-    <associate|auto-17|<tuple|complex vector space|?>>
-    <associate|auto-18|<tuple|real vector space|?>>
-    <associate|auto-19|<tuple|11.3|?>>
+    <associate|auto-10|<tuple|<with|mode|<quote|math>|i\<leftrightarrowlim\><rsub|I>>j|?>>
+    <associate|auto-11|<tuple|11.1.4|?>>
+    <associate|auto-12|<tuple|11.2|?>>
+    <associate|auto-13|<tuple|11.2.1|?>>
+    <associate|auto-14|<tuple|vector space|?>>
+    <associate|auto-15|<tuple|11.2.2|?>>
+    <associate|auto-16|<tuple|complex vector space|?>>
+    <associate|auto-17|<tuple|real vector space|?>>
+    <associate|auto-18|<tuple|11.3|?>>
+    <associate|auto-19|<tuple|11.3.1|?>>
     <associate|auto-2|<tuple|11.1|?>>
-    <associate|auto-20|<tuple|11.3.1|?>>
-    <associate|auto-21|<tuple|11.3.2|?>>
-    <associate|auto-22|<tuple|11.3.2.1|?>>
-    <associate|auto-23|<tuple|11.3.2.2|?>>
-    <associate|auto-24|<tuple|linear dependent set|?>>
-    <associate|auto-25|<tuple|linear independent set|?>>
-    <associate|auto-26|<tuple|11.3.3|?>>
-    <associate|auto-27|<tuple|basis of a vector space|?>>
-    <associate|auto-28|<tuple|11.3.4|?>>
-    <associate|auto-29|<tuple|11.3.5|?>>
+    <associate|auto-20|<tuple|11.3.2|?>>
+    <associate|auto-21|<tuple|11.3.2.1|?>>
+    <associate|auto-22|<tuple|11.3.2.2|?>>
+    <associate|auto-23|<tuple|linear dependent set|?>>
+    <associate|auto-24|<tuple|linear independent set|?>>
+    <associate|auto-25|<tuple|11.3.3|?>>
+    <associate|auto-26|<tuple|basis of a vector space|?>>
+    <associate|auto-27|<tuple|11.3.4|?>>
+    <associate|auto-28|<tuple|11.3.5|?>>
+    <associate|auto-29|<tuple|11.4|?>>
     <associate|auto-3|<tuple|11.1.1|?>>
-    <associate|auto-30|<tuple|11.4|?>>
-    <associate|auto-31|<tuple|11.4.1|?>>
-    <associate|auto-32|<tuple|linear mapping|?>>
-    <associate|auto-33|<tuple|<with|mode|<quote|math>|Hom<around*|(|X,Y|)>>|?>>
-    <associate|auto-34|<tuple|11.5|?>>
-    <associate|auto-35|<tuple|11.5.1|?>>
-    <associate|auto-36|<tuple|11.5.2|?>>
-    <associate|auto-37|<tuple|<with|mode|<quote|math>|sign<around*|(|\<sigma\>|)>>|?>>
-    <associate|auto-38|<tuple|11.6|?>>
-    <associate|auto-39|<tuple|<with|mode|<quote|math>|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,a,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>|?>>
+    <associate|auto-30|<tuple|11.4.1|?>>
+    <associate|auto-31|<tuple|linear mapping|?>>
+    <associate|auto-32|<tuple|<with|mode|<quote|math>|Hom<around*|(|X,Y|)>>|?>>
+    <associate|auto-33|<tuple|11.5|?>>
+    <associate|auto-34|<tuple|11.5.1|?>>
+    <associate|auto-35|<tuple|11.5.2|?>>
+    <associate|auto-36|<tuple|<with|mode|<quote|math>|sign<around*|(|\<sigma\>|)>>|?>>
+    <associate|auto-37|<tuple|11.6|?>>
+    <associate|auto-38|<tuple|<with|mode|<quote|math>|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,a,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>|?>>
+    <associate|auto-39|<tuple|n-linear mapping|?>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|<big|sum><rsub|i=0><rsup|n>x<rsub|i>>|?>>
-    <associate|auto-40|<tuple|n-linear mapping|?>>
-    <associate|auto-41|<tuple|11.7|?>>
-    <associate|auto-42|<tuple|determinant mapping|?>>
-    <associate|auto-43|<tuple|<with|mode|<quote|math>|\<Delta\><rsub|L>>|?>>
-    <associate|auto-44|<tuple|<with|mode|<quote|math>|det<around*|(|L|)>>|?>>
-    <associate|auto-45|<tuple|<with|mode|<quote|math>|<wide|\<Delta\>L|\<wide-sqoverbrace\>>>|?>>
-    <associate|auto-46|<tuple|adjoint|?>>
-    <associate|auto-47|<tuple|<with|mode|<quote|math>|adjoint<around*|(|L|)>>|?>>
-    <associate|auto-48|<tuple|11.8|?>>
-    <associate|auto-49|<tuple|11.8.1|?>>
-    <associate|auto-5|<tuple|<with|mode|<quote|math>|<big|prod><rsub|i=0><rsup|n>x<rsub|i>>|?>>
-    <associate|auto-50|<tuple|matrix|?>>
-    <associate|auto-51|<tuple|<with|mode|<quote|math>|E>|?>>
-    <associate|auto-52|<tuple|transpose|?>>
-    <associate|auto-53|<tuple|<with|mode|<quote|math>|M<rsup|T>>|?>>
-    <associate|auto-54|<tuple|<with|mode|<quote|math>|rank<around*|(|M|)>>|?>>
-    <associate|auto-55|<tuple|11.8.2|?>>
-    <associate|auto-56|<tuple|11.8.3|?>>
-    <associate|auto-57|<tuple|inverse of a matrix|?>>
-    <associate|auto-58|<tuple|<with|mode|<quote|math>|M<rsup|-1>>|?>>
-    <associate|auto-59|<tuple|<with|mode|<quote|math>|det<around*|(|M|)>>|?>>
-    <associate|auto-6|<tuple|11.1.2|?>>
-    <associate|auto-60|<tuple|disgonal matrix|?>>
-    <associate|auto-61|<tuple|<with|mode|<quote|math>|<around*|[|+a|]>>|?>>
-    <associate|auto-62|<tuple|<with|mode|<quote|math>|<around*|[|\<less\>m|]><around*|(|M|)>>|?>>
-    <associate|auto-63|<tuple|<with|mode|<quote|math>|<around*|[|\<gtr\>m|]><around*|(|M|)>>|?>>
-    <associate|auto-64|<tuple|<with|mode|<quote|math>|adjoint<around*|(|M|)>>|?>>
+    <associate|auto-40|<tuple|11.7|?>>
+    <associate|auto-41|<tuple|determinant mapping|?>>
+    <associate|auto-42|<tuple|<with|mode|<quote|math>|\<Delta\><rsub|L>>|?>>
+    <associate|auto-43|<tuple|<with|mode|<quote|math>|det<around*|(|L|)>>|?>>
+    <associate|auto-44|<tuple|<with|mode|<quote|math>|<wide|\<Delta\>L|\<wide-sqoverbrace\>>>|?>>
+    <associate|auto-45|<tuple|adjoint|?>>
+    <associate|auto-46|<tuple|<with|mode|<quote|math>|adjoint<around*|(|L|)>>|?>>
+    <associate|auto-47|<tuple|11.8|?>>
+    <associate|auto-48|<tuple|11.8.1|?>>
+    <associate|auto-49|<tuple|matrix|?>>
+    <associate|auto-5|<tuple|11.1.2|?>>
+    <associate|auto-50|<tuple|<with|mode|<quote|math>|E>|?>>
+    <associate|auto-51|<tuple|transpose|?>>
+    <associate|auto-52|<tuple|<with|mode|<quote|math>|M<rsup|T>>|?>>
+    <associate|auto-53|<tuple|<with|mode|<quote|math>|rank<around*|(|M|)>>|?>>
+    <associate|auto-54|<tuple|11.8.2|?>>
+    <associate|auto-55|<tuple|11.8.3|?>>
+    <associate|auto-56|<tuple|inverse of a matrix|?>>
+    <associate|auto-57|<tuple|<with|mode|<quote|math>|M<rsup|-1>>|?>>
+    <associate|auto-58|<tuple|<with|mode|<quote|math>|det<around*|(|M|)>>|?>>
+    <associate|auto-59|<tuple|disgonal matrix|?>>
+    <associate|auto-6|<tuple|11.1.3|?>>
+    <associate|auto-60|<tuple|<with|mode|<quote|math>|<around*|[|+a|]>>|?>>
+    <associate|auto-61|<tuple|<with|mode|<quote|math>|<around*|[|\<less\>m|]><around*|(|M|)>>|?>>
+    <associate|auto-62|<tuple|<with|mode|<quote|math>|<around*|[|\<gtr\>m|]><around*|(|M|)>>|?>>
+    <associate|auto-63|<tuple|<with|mode|<quote|math>|adjoint<around*|(|M|)>>|?>>
+    <associate|auto-64|<tuple|11.9|?>>
     <associate|auto-65|<tuple|11.9|?>>
-    <associate|auto-7|<tuple|11.1.3|?>>
-    <associate|auto-8|<tuple|permutation|?>>
-    <associate|auto-9|<tuple|<with|mode|<quote|math>|\<sigma\>>|?>>
+    <associate|auto-7|<tuple|permutation|?>>
+    <associate|auto-8|<tuple|<with|mode|<quote|math>|\<sigma\>>|?>>
+    <associate|auto-9|<tuple|<with|mode|<quote|math>|S<rsub|I>>|?>>
     <associate|basis|<tuple|11.118|?>>
     <associate|basis F^n|<tuple|11.145|?>>
     <associate|basis Kronecker delta|<tuple|11.142|?>>
@@ -20006,53 +20619,57 @@
     <associate|basis sub-space|<tuple|11.135|?>>
     <associate|basis sum of delta|<tuple|11.143|?>>
     <associate|basis sum of delta (1)|<tuple|11.144|?>>
-    <associate|determinant (y,(x..))|<tuple|11.259|?>>
-    <associate|determinant (y,x1,..,xi-1...)|<tuple|11.256|?>>
-    <associate|determinant adjoint|<tuple|11.272|?>>
+    <associate|determinant (y,(x..))|<tuple|11.260|?>>
+    <associate|determinant (y,x1,..,xi-1...)|<tuple|11.257|?>>
+    <associate|determinant adjoint|<tuple|11.274|?>>
     <associate|determinant adjoint in a one dimensional
-    space|<tuple|11.273|?>>
-    <associate|determinant adjoint properties|<tuple|11.274|?>>
+    space|<tuple|11.275|?>>
+    <associate|determinant adjoint properties|<tuple|11.276|?>>
     <associate|determinant construct of skew symmetric
-    mapping|<tuple|11.244|?>>
-    <associate|determinant definition|<tuple|11.265|?>>
-    <associate|determinant definition (condition)|<tuple|11.264|?>>
-    <associate|determinant delta upperscore|<tuple|11.269|?>>
-    <associate|determinant delta upperscore property|<tuple|11.271|?>>
-    <associate|determinant det(L) properties|<tuple|11.268|?>>
-    <associate|determinant determinant insert|<tuple|11.257|?>>
-    <associate|determinant determinant underscore|<tuple|11.256|?>>
-    <associate|determinant determinant underscore (1)|<tuple|11.258|?>>
+    mapping|<tuple|11.245|?>>
+    <associate|determinant definition|<tuple|11.266|?>>
+    <associate|determinant definition (condition)|<tuple|11.265|?>>
+    <associate|determinant definition alternative|<tuple|11.267|?>>
+    <associate|determinant delta upperscore|<tuple|11.271|?>>
+    <associate|determinant delta upperscore property|<tuple|11.273|?>>
+    <associate|determinant det(L) properties|<tuple|11.270|?>>
+    <associate|determinant determinant insert|<tuple|11.258|?>>
+    <associate|determinant determinant underscore|<tuple|11.257|?>>
+    <associate|determinant determinant underscore (1)|<tuple|11.259|?>>
     <associate|determinant determinant underscore
-    equivalence|<tuple|11.260|?>>
-    <associate|determinant function and linear mapping|<tuple|11.261|?>>
-    <associate|determinant function and linear mapping (1)|<tuple|11.262|?>>
-    <associate|determinant identity function|<tuple|11.266|?>>
-    <associate|determinant in one dimensional space|<tuple|11.267|?>>
-    <associate|determinant inverse of linear mapping|<tuple|11.275|?>>
-    <associate|determinant key-symmetric condition|<tuple|11.246|?>>
-    <associate|determinant lemma 11.261|<tuple|11.270|?>>
-    <associate|determinant mapping|<tuple|11.251|?>>
-    <associate|determinant mapping existence of non trivial|<tuple|11.253|?>>
+    equivalence|<tuple|11.261|?>>
+    <associate|determinant function and linear mapping|<tuple|11.262|?>>
+    <associate|determinant function and linear mapping (1)|<tuple|11.263|?>>
+    <associate|determinant identity function|<tuple|11.268|?>>
+    <associate|determinant in one dimensional space|<tuple|11.269|?>>
+    <associate|determinant inverse of linear mapping|<tuple|11.277|?>>
+    <associate|determinant key-symmetric condition|<tuple|11.247|?>>
+    <associate|determinant lemma 11.261|<tuple|11.272|?>>
+    <associate|determinant mapping|<tuple|11.252|?>>
+    <associate|determinant mapping existence of non trivial|<tuple|11.254|?>>
     <associate|determinant non zero determinant mappings are multiples of
-    each other|<tuple|11.255|?>>
-    <associate|determinant of a matrix with unit cross|<tuple|11.321|?>>
+    each other|<tuple|11.256|?>>
+    <associate|determinant of a matrix with unit cross|<tuple|11.324|?>>
     <associate|determinant of matrix and linear
-    transformation|<tuple|11.305|?>>
+    transformation|<tuple|11.308|?>>
     <associate|determinant permutation applied on n-linear
-    function|<tuple|11.242|?>>
+    function|<tuple|11.243|?>>
     <associate|determinant skew symetric functions and determinant
-    function|<tuple|11.254|?>>
+    function|<tuple|11.255|?>>
     <associate|determinant skew symmetric mappings is only determined by
-    values on the basis (1)|<tuple|11.249|?>>
+    values on the basis (1)|<tuple|11.250|?>>
     <associate|determinant skew symmetric mappings is only determined by
-    values on the basis (2)|<tuple|11.250|?>>
-    <associate|determinant skew-symmetric|<tuple|11.240|?>>
-    <associate|determinant skew-symmetric mapping and basis|<tuple|11.248|?>>
-    <associate|determinant skew-symmetric property (1)|<tuple|11.247|?>>
+    values on the basis (2)|<tuple|11.251|?>>
+    <associate|determinant skew-symmetric|<tuple|11.241|?>>
+    <associate|determinant skew-symmetric mapping and basis|<tuple|11.249|?>>
+    <associate|determinant skew-symmetric property (1)|<tuple|11.248|?>>
     <associate|determinant skew-symmetric/symmetric n-linear
-    function|<tuple|11.241|?>>
-    <associate|determinant symmetric|<tuple|11.239|?>>
+    function|<tuple|11.242|?>>
+    <associate|determinant symmetric|<tuple|11.240|?>>
     <associate|disjoint family property|<tuple|11.76|?>>
+    <associate|elementary transformation|<tuple|11.339|?>>
+    <associate|elementary transformation L(n)|<tuple|11.344|?>>
+    <associate|elementary transformation isomorphisms|<tuple|11.340|?>>
     <associate|eq 11.081.94|<tuple|11.89|?>>
     <associate|eq 11.1.054|<tuple|11.1|?>>
     <associate|eq 11.10.054|<tuple|11.11|?>>
@@ -20191,6 +20808,7 @@
     <associate|eq 11.228.109|<tuple|11.228|?>>
     <associate|eq 11.229.109|<tuple|11.229|?>>
     <associate|eq 11.23.090|<tuple|11.25|?>>
+    <associate|eq 11.230.109|<tuple|11.230|?>>
     <associate|eq 11.24.090|<tuple|11.26|?>>
     <associate|eq 11.25.090|<tuple|11.27|?>>
     <associate|eq 11.26.090|<tuple|11.28|?>>
@@ -20280,16 +20898,16 @@
     <associate|eq 11.98.094|<tuple|11.106|?>>
     <associate|eq 11.99.094|<tuple|11.107|?>>
     <associate|eq 11167.103|<tuple|11.168|?>>
-    <associate|faculity|<tuple|11.181|?>>
-    <associate|field (-1).(-1)|<tuple|11.231|?>>
-    <associate|field (-1).f=-f|<tuple|11.232|?>>
-    <associate|field (-1).x=-x|<tuple|11.233|?>>
-    <associate|field (-1)^n.f|<tuple|11.238|?>>
-    <associate|field -1|<tuple|11.230|?>>
-    <associate|field power|<tuple|11.234|?>>
-    <associate|field power of 1 or -1|<tuple|11.236|?>>
-    <associate|field power property|<tuple|11.235|?>>
-    <associate|field {-1,1}xF|<tuple|11.237|?>>
+    <associate|faculity|<tuple|11.182|?>>
+    <associate|field (-1).(-1)|<tuple|11.232|?>>
+    <associate|field (-1).f=-f|<tuple|11.233|?>>
+    <associate|field (-1).x=-x|<tuple|11.234|?>>
+    <associate|field (-1)^n.f|<tuple|11.239|?>>
+    <associate|field -1|<tuple|11.231|?>>
+    <associate|field power|<tuple|11.235|?>>
+    <associate|field power of 1 or -1|<tuple|11.237|?>>
+    <associate|field power property|<tuple|11.236|?>>
+    <associate|field {-1,1}xF|<tuple|11.238|?>>
     <associate|linear (in)dependency properties (1)|<tuple|11.114|?>>
     <associate|linear Steinitz (1)|<tuple|11.116|?>>
     <associate|linear Steinitz (2)|<tuple|11.117|?>>
@@ -20311,7 +20929,6 @@
     <associate|linear dependent set alternative condition|<tuple|11.101|?>>
     <associate|linear dependent set containing neutral
     element|<tuple|11.95|?>>
-    <associate|linear elementary transformation|<tuple|11.334|?>>
     <associate|linear family disjoint|<tuple|11.74|?>>
     <associate|linear family finite|<tuple|11.72|?>>
     <associate|linear finite set|<tuple|11.79|?>>
@@ -20330,21 +20947,23 @@
     <associate|linear mapping Hom(X,Y) definition|<tuple|11.159|?>>
     <associate|linear mapping Img Re|<tuple|11.167|?>>
     <associate|linear mapping L(x)=L(y)=\<gtr\>x=y|<tuple|11.165|?>>
+    <associate|linear mapping and basis vectors|<tuple|11.290|?>>
     <associate|linear mapping and finite sum|<tuple|11.166|?>>
     <associate|linear mapping basis|<tuple|11.175|?>>
     <associate|linear mapping composition|<tuple|11.160|?>>
     <associate|linear mapping composition isomorphism|<tuple|11.161|?>>
-    <associate|linear mapping dimension theorem|<tuple|11.178|?>>
+    <associate|linear mapping dimension theorem|<tuple|11.179|?>>
     <associate|linear mapping dual space|<tuple|11.163|?>>
     <associate|linear mapping equivalence|<tuple|11.154|?>>
     <associate|linear mapping existance of non-zero linear
     mapping|<tuple|11.164|?>>
     <associate|linear mapping extention|<tuple|11.151|?>>
     <associate|linear mapping independency|<tuple|11.174|?>>
+    <associate|linear mapping injective transformation|<tuple|11.177|?>>
     <associate|linear mapping injectivity and kernel|<tuple|11.172|?>>
     <associate|linear mapping injectivity and surjectivity|<tuple|11.176|?>>
     <associate|linear mapping inverse of a isomorphism|<tuple|11.158|?>>
-    <associate|linear mapping isomorphic spaces|<tuple|11.177|?>>
+    <associate|linear mapping isomorphic spaces|<tuple|11.178|?>>
     <associate|linear mapping kernal and range are
     subspaces|<tuple|11.170|?>>
     <associate|linear mapping kernel|<tuple|11.168|?>>
@@ -20371,119 +20990,131 @@
     <associate|linear span subsets|<tuple|11.89|?>>
     <associate|linear span({0})|<tuple|11.85|?>>
     <associate|linerar mapping between R^2 and C|<tuple|11.157|?>>
-    <associate|matrix (+)|<tuple|11.322|?>>
-    <associate|matrix [+]|<tuple|11.314|?>>
-    <associate|matrix [+] and transpose (1)|<tuple|11.316|?>>
-    <associate|matrix [+] and transpose (2)|<tuple|11.320|?>>
-    <associate|matrix [+a](x)|<tuple|11.312|?>>
-    <associate|matrix adjoint|<tuple|11.324|?>>
+    <associate|matrix (+)|<tuple|11.325|?>>
+    <associate|matrix [+]|<tuple|11.317|?>>
+    <associate|matrix [+] and transpose (1)|<tuple|11.319|?>>
+    <associate|matrix [+] and transpose (2)|<tuple|11.323|?>>
+    <associate|matrix [+a](x)|<tuple|11.315|?>>
+    <associate|matrix adjoint|<tuple|11.327|?>>
     <associate|matrix adjoint and det of the matrix of a linear
-    transformation|<tuple|11.326|?>>
-    <associate|matrix adjoint matrix linear transformation|<tuple|11.325|?>>
-    <associate|matrix cofactor|<tuple|11.329|?>>
-    <associate|matrix column rank is row rank|<tuple|11.286|?>>
-    <associate|matrix composition|<tuple|11.294|?>>
-    <associate|matrix definition|<tuple|11.276|?>>
-    <associate|matrix delta minus|<tuple|11.313|?>>
-    <associate|matrix determinant|<tuple|11.300|?>>
-    <associate|matrix determinant and adjoint properties|<tuple|11.327|?>>
-    <associate|matrix determinant and delta|<tuple|11.307|?>>
-    <associate|matrix determinant example 1|<tuple|11.301|?>>
-    <associate|matrix determinant of a diagonal matrix|<tuple|11.303|?>>
-    <associate|matrix determinant of transpose|<tuple|11.304|?>>
+    transformation|<tuple|11.329|?>>
+    <associate|matrix adjoint matrix linear transformation|<tuple|11.328|?>>
+    <associate|matrix cofactor|<tuple|11.332|?>>
+    <associate|matrix column rank is row rank|<tuple|11.288|?>>
+    <associate|matrix composition|<tuple|11.297|?>>
+    <associate|matrix definition|<tuple|11.278|?>>
+    <associate|matrix delta minus|<tuple|11.316|?>>
+    <associate|matrix determinant|<tuple|11.303|?>>
+    <associate|matrix determinant and adjoint properties|<tuple|11.330|?>>
+    <associate|matrix determinant and delta|<tuple|11.310|?>>
+    <associate|matrix determinant example 1|<tuple|11.304|?>>
+    <associate|matrix determinant of a diagonal matrix|<tuple|11.306|?>>
+    <associate|matrix determinant of transpose|<tuple|11.307|?>>
     <associate|matrix determinant permutation rows or
-    columns|<tuple|11.309|?>>
-    <associate|matrix determinant propertie|<tuple|11.306|?>>
+    columns|<tuple|11.312|?>>
+    <associate|matrix determinant propertie|<tuple|11.309|?>>
     <associate|matrix diagonal|<tuple|disgonal matrix|?>>
-    <associate|matrix dterminant is zero|<tuple|11.310|?>>
-    <associate|matrix dterminant shortcut|<tuple|11.332|?>>
-    <associate|matrix identity|<tuple|11.277|?>>
-    <associate|matrix inverse|<tuple|11.295|?>>
-    <associate|matrix inverse is unique|<tuple|11.296|?>>
+    <associate|matrix dterminant is zero|<tuple|11.313|?>>
+    <associate|matrix dterminant shortcut|<tuple|11.335|?>>
+    <associate|matrix identity|<tuple|11.279|?>>
+    <associate|matrix inverse|<tuple|11.298|?>>
+    <associate|matrix inverse is unique|<tuple|11.299|?>>
     <associate|matrix inverse matrix inverse linear
-    transformation|<tuple|11.299|?>>
-    <associate|matrix inverse of inverse|<tuple|11.298|?>>
-    <associate|matrix invertability condition|<tuple|11.333|?>>
-    <associate|matrix invertable matrix|<tuple|11.297|?>>
-    <associate|matrix linear map F^n F^m|<tuple|11.293|?>>
-    <associate|matrix linear map application|<tuple|11.290|?>>
-    <associate|matrix linear mapping|<tuple|11.288|?>>
-    <associate|matrix mapping is linear|<tuple|11.291|?>>
+    transformation|<tuple|11.302|?>>
+    <associate|matrix inverse of inverse|<tuple|11.301|?>>
+    <associate|matrix invertability condition|<tuple|11.336|?>>
+    <associate|matrix invertable matrix|<tuple|11.300|?>>
+    <associate|matrix linear map F^n F^m|<tuple|11.296|?>>
+    <associate|matrix linear map application|<tuple|11.293|?>>
+    <associate|matrix linear mapping|<tuple|11.291|?>>
+    <associate|matrix mapping is linear|<tuple|11.294|?>>
     <associate|matrix mapping linear map to a matrix is a
-    bijection|<tuple|11.292|?>>
-    <associate|matrix null|<tuple|11.278|?>>
-    <associate|matrix operations|<tuple|11.279|?>>
-    <associate|matrix permutation|<tuple|11.308|?>>
-    <associate|matrix rank|<tuple|11.287|?>>
+    bijection|<tuple|11.295|?>>
+    <associate|matrix null|<tuple|11.280|?>>
+    <associate|matrix operations|<tuple|11.281|?>>
+    <associate|matrix permutation|<tuple|11.311|?>>
+    <associate|matrix rank|<tuple|11.289|?>>
     <associate|matrix remove rwows or columns after a specified
-    position|<tuple|11.317|?>>
-    <associate|matrix rows and columns|<tuple|11.285|?>>
-    <associate|matrix semigroup|<tuple|11.282|?>>
-    <associate|matrix transpose|<tuple|11.284|?>>
-    <associate|matrix vector space|<tuple|11.281|?>>
-    <associate|matrix where first row and colum are unit|<tuple|11.319|?>>
-    <associate|matrix[\<less\>m] and [\<gtr\>m]|<tuple|11.318|?>>
-    <associate|multi composition|<tuple|11.226|?>>
-    <associate|multi function of many arguments (1)|<tuple|11.222|?>>
-    <associate|multi induction argument|<tuple|11.221|?>>
-    <associate|multi multilinear mappin one argument is 0|<tuple|11.217|?>>
-    <associate|multi multilinear mapping|<tuple|11.216|?>>
-    <associate|multi multilinear mapping alternative|<tuple|11.218|?>>
-    <associate|multi multilinear mapping and linear mapping|<tuple|11.223|?>>
+    position|<tuple|11.320|?>>
+    <associate|matrix rows and columns|<tuple|11.287|?>>
+    <associate|matrix semigroup|<tuple|11.284|?>>
+    <associate|matrix transpose|<tuple|11.286|?>>
+    <associate|matrix vector space|<tuple|11.283|?>>
+    <associate|matrix where first row and colum are unit|<tuple|11.322|?>>
+    <associate|matrix[\<less\>m] and [\<gtr\>m]|<tuple|11.321|?>>
+    <associate|multi composition|<tuple|11.227|?>>
+    <associate|multi function of many arguments (1)|<tuple|11.223|?>>
+    <associate|multi induction argument|<tuple|11.222|?>>
+    <associate|multi multilinear mappin one argument is 0|<tuple|11.218|?>>
+    <associate|multi multilinear mapping|<tuple|11.217|?>>
+    <associate|multi multilinear mapping alternative|<tuple|11.219|?>>
+    <associate|multi multilinear mapping and linear mapping|<tuple|11.224|?>>
     <associate|multi multilinear mapping and product of
-    scalars|<tuple|11.227|?>>
+    scalars|<tuple|11.228|?>>
     <associate|multi multilinear mapping in a finite dimensional
-    space|<tuple|11.229|?>>
-    <associate|multi n-linear function|<tuple|11.219|?>>
-    <associate|multi product of scalars is multilinear|<tuple|11.220|?>>
-    <associate|multi tupple convention (1)|<tuple|11.214|?>>
-    <associate|multi tupple convention and permutations|<tuple|11.215|?>>
-    <associate|multi zero function|<tuple|11.224|?>>
-    <associate|multilinear mapping sub-space|<tuple|11.225|?>>
-    <associate|permutation Pn|<tuple|11.179|?>>
-    <associate|permutation Pn is a group|<tuple|11.185|?>>
-    <associate|permutation Pn is finite|<tuple|11.184|?>>
-    <associate|permutation apply|<tuple|11.194|?>>
-    <associate|permutation apply and composition|<tuple|11.197|?>>
-    <associate|permutation apply and field|<tuple|11.198|?>>
-    <associate|permutation apply identity|<tuple|11.196|?>>
-    <associate|permutation apply in vector space|<tuple|11.195|?>>
-    <associate|permutation apply transposition on phi|<tuple|11.204|?>>
+    space|<tuple|11.230|?>>
+    <associate|multi n-linear function|<tuple|11.220|?>>
+    <associate|multi product of scalars is multilinear|<tuple|11.221|?>>
+    <associate|multi tupple convention (1)|<tuple|11.215|?>>
+    <associate|multi tupple convention and permutations|<tuple|11.216|?>>
+    <associate|multi zero function|<tuple|11.225|?>>
+    <associate|multilinear mapping sub-space|<tuple|11.226|?>>
+    <associate|nonsingular elementary transformations|<tuple|11.342|?>>
+    <associate|nonsingular tranaformations extend a elementary
+    transformation|<tuple|11.345|?>>
+    <associate|nonsingular transformation|<tuple|11.337|?>>
+    <associate|nonsingular transformation composition|<tuple|11.343|?>>
+    <associate|nonsingular transformation group|<tuple|11.338|?>>
+    <associate|nonsingular transformations elementary
+    predefinition|<tuple|11.340|?>>
+    <associate|nonsingular transformations elementary
+    properties|<tuple|11.341|?>>
+    <associate|nonsingular transformations predefinition|<tuple|11.339|?>>
+    <associate|permutation Pn|<tuple|11.180|?>>
+    <associate|permutation Pn is a group|<tuple|11.186|?>>
+    <associate|permutation Pn is finite|<tuple|11.185|?>>
+    <associate|permutation apply|<tuple|11.195|?>>
+    <associate|permutation apply and composition|<tuple|11.198|?>>
+    <associate|permutation apply and field|<tuple|11.199|?>>
+    <associate|permutation apply identity|<tuple|11.197|?>>
+    <associate|permutation apply in vector space|<tuple|11.196|?>>
+    <associate|permutation apply transposition on phi|<tuple|11.205|?>>
     <associate|permutation as a composition of disjoint
-    transpositions|<tuple|11.193|?>>
-    <associate|permutation bijection|<tuple|11.243|?>>
+    transpositions|<tuple|11.194|?>>
+    <associate|permutation bijection|<tuple|11.244|?>>
     <associate|permutation composition of a family of
-    permutations|<tuple|11.188|?>>
+    permutations|<tuple|11.189|?>>
     <associate|permutation definition|<tuple|11.24|?>>
-    <associate|permutation existence of sign|<tuple|11.206|?>>
-    <associate|permutation extending a permutation (1)|<tuple|11.182|?>>
-    <associate|permutation extending a permutation (2)|<tuple|11.183|?>>
-    <associate|permutation extension (1)|<tuple|11.191|?>>
-    <associate|permutation extension (2)|<tuple|11.192|?>>
+    <associate|permutation existence of sign|<tuple|11.207|?>>
+    <associate|permutation extending a permutation (1)|<tuple|11.183|?>>
+    <associate|permutation extending a permutation (2)|<tuple|11.184|?>>
+    <associate|permutation extension (1)|<tuple|11.192|?>>
+    <associate|permutation extension (2)|<tuple|11.193|?>>
     <associate|permutation group|<tuple|11.25|?>>
-    <associate|permutation index function|<tuple|11.212|?>>
-    <associate|permutation insert function|<tuple|11.210|?>>
-    <associate|permutation insert funtion property|<tuple|11.213|?>>
+    <associate|permutation index function|<tuple|11.213|?>>
+    <associate|permutation insert function|<tuple|11.211|?>>
+    <associate|permutation insert funtion property|<tuple|11.214|?>>
     <associate|permutation on subset|<tuple|11.26|?>>
-    <associate|permutation phi function|<tuple|11.201|?>>
-    <associate|permutation phi function is not zero|<tuple|11.203|?>>
-    <associate|permutation reverse|<tuple|11.180|?>>
-    <associate|permutation sign|<tuple|11.207|?>>
-    <associate|permutation sign calculation|<tuple|11.208|?>>
+    <associate|permutation phi function|<tuple|11.202|?>>
+    <associate|permutation phi function is not zero|<tuple|11.204|?>>
+    <associate|permutation reverse|<tuple|11.181|?>>
+    <associate|permutation sign|<tuple|11.208|?>>
+    <associate|permutation sign calculation|<tuple|11.209|?>>
     <associate|permutation sign of composition of
-    transpositions|<tuple|11.205|?>>
-    <associate|permutation sign properties|<tuple|11.209|?>>
-    <associate|permutation sum|<tuple|11.187|?>>
-    <associate|permutation transosition proeprties|<tuple|11.190|?>>
+    transpositions|<tuple|11.206|?>>
+    <associate|permutation sign properties|<tuple|11.210|?>>
+    <associate|permutation sum|<tuple|11.188|?>>
+    <associate|permutation transosition proeprties|<tuple|11.191|?>>
     <associate|permutation transpistion symmetry
-    permutation|<tuple|11.200|?>>
+    permutation|<tuple|11.201|?>>
     <associate|permutation transposition|<tuple|11.27|?>>
-    <associate|permutation transposition 1|<tuple|11.189|?>>
+    <associate|permutation transposition 1|<tuple|11.190|?>>
     <associate|permutation transposition properties|<tuple|11.28|?>>
-    <associate|permutation transposition symmetry|<tuple|11.199|?>>
+    <associate|permutation transposition symmetry|<tuple|11.200|?>>
     <associate|permutation {0,..,n and transposition|<tuple|11.29|?>>
     <associate|product finite product|<tuple|11.2|?>>
-    <associate|rank|<tuple|11.287|?>>
+    <associate|rank|<tuple|11.289|?>>
+    <associate|regular transformation|<tuple|11.336|?>>
     <associate|sum alternative definition|<tuple|11.4|?>>
     <associate|sum alternative definition (1)|<tuple|11.14|?>>
     <associate|sum alternative definition (2)|<tuple|11.21|?>>
@@ -20733,6 +21364,10 @@
       <with|par-left|<quote|1tab>|11.8.3<space|2spc>Inverse, Determinant and
       Adjoint of matrices <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-56>>
+
+      11.9<space|2spc>Expansion of injective linear transformation in
+      elementary transformations <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-65>
     </associate>
   </collection>
 </auxiliary>
