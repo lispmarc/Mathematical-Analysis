@@ -1783,7 +1783,7 @@
   </proof>
 
   <\definition>
-    <label|integers even odd><index|event integers><index|odd integers>A
+    <label|integers even odd><index|even integers><index|odd integers>A
     <math|z\<in\>\<bbb-Z\>> is <with|font-series|bold|even> if <math|2\|z>
     and <with|font-series|bold|odd> is <math|z> is not even.
   </definition>
@@ -13586,7 +13586,7 @@
     <associate|auto-1|<tuple|7|?>>
     <associate|auto-10|<tuple|quotient|?>>
     <associate|auto-11|<tuple|<with|mode|<quote|math>|<frac|m|n>>|?>>
-    <associate|auto-12|<tuple|event integers|?>>
+    <associate|auto-12|<tuple|even integers|?>>
     <associate|auto-13|<tuple|odd integers|?>>
     <associate|auto-14|<tuple|7.3|?>>
     <associate|auto-15|<tuple|8|?>>
@@ -13669,7 +13669,6 @@
     <associate|complex finite lemma|<tuple|10.74|?>>
     <associate|complex finite set condition|<tuple|10.75|?>>
     <associate|complex finite set condition (1)|<tuple|10.76|?>>
-    <associate|complex finite sets and functions|<tuple|10.80|?>>
     <associate|complex finite subset|<tuple|10.79|?>>
     <associate|complex i^2=-1|<tuple|10.65|?>>
     <associate|complex integers are conditional complete|<tuple|10.16|?>>
