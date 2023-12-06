@@ -13130,7 +13130,7 @@
       <item>If <math|B\<subseteq\>A> then <math|B> is finite and
       <math|card<around*|(|B|)>\<leqslant\>card<around*|(|A|)>>
 
-      <item>If <math|B\<subseteq\>A> then <math|B> is finite and
+      <item>If <math|B\<subset\>A> then <math|B> is finite and
       <math|card<around*|(|B|)>\<less\>card<around*|(|A|)>>
     </enumerate>
   </theorem>
@@ -14097,7 +14097,7 @@
 
       <tuple|<tuple|<with|mode|<quote|math>|<frac|m|n>>>|<pageref|auto-11>>
 
-      <tuple|<tuple|event integers>|<pageref|auto-12>>
+      <tuple|<tuple|even integers>|<pageref|auto-12>>
 
       <tuple|<tuple|odd integers>|<pageref|auto-13>>
 

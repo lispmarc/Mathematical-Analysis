@@ -424,7 +424,7 @@
   <section|Class operations>
 
   <\theorem>
-    <label|class intersection, union, inclusion>Let <math|A,B> are classes
+    <label|class intersection, union, inclusion>Let <math|A,B,C> are classes
     then we have\ 
 
     <\enumerate>
@@ -437,6 +437,8 @@
       <item><math|A<big|cap>B\<subseteq\>B>
 
       <item><math|A\\B\<subseteq\>A>
+
+      <item><math|<around*|(|A<big|cup>B|)>\\C=<around*|(|A\\C|)><big|cup><around*|(|B\\C|)>>
 
       <item>If <math|C> is a class such that <math|A\<subseteq\>C> and
       <math|B\<subseteq\>C> then <math|A<big|cup>B\<subseteq\>C>
@@ -475,6 +477,15 @@
       <item>If <math|x\<in\>A\\B> then <math|x\<in\>A\<wedge\>x\<nin\>B> so
       that <math|A\\B\<subseteq\>A>
 
+      <item>We have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|A<big|cup>B|)>\\C>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class difference>]>>>|<cell|<around*|(|A<big|cup>B|)><big|cap>C<rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class class commutative,idempotent,associative,distributivity>]>>>|<cell|<around*|(|A<big|cap>C<rsup|c>|)><big|cup><around*|(|B<big|cap>C<rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class difference>]>>>|<cell|<around*|(|A\\C|)><big|cup><around*|(|B\\C|)>>>>>
+      </eqnarray*>
+
       <item>If <math|x\<in\>A<big|cup>B> then
       <math|x\<in\>A\<Rightarrowlim\><rsub|A\<subseteq\>C>x\<in\>C> or
       <math|x\<in\>B\<Rightarrowlim\><rsub|B\<subseteq\>C>x\<in\>C> proving
@@ -492,6 +503,8 @@
       <math|x\<in\>B\<Rightarrowlim\><rsub|B\<subseteq\>D>x\<in\>D> hence
       <math|x\<in\>C<big|cap>D>.
     </enumerate>
+
+    \;
   </proof>
 
   <\theorem>
