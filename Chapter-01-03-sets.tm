@@ -5216,10 +5216,11 @@
   <\example>
     <label|family empty family>The empty function
     <math|\<varnothing\>:\<varnothing\>\<rightarrow\>V> [see example:
-    <reference|function empty function>] defines the family
+    <reference|function empty function>] defines a family that is noted as
     <math|<around*|{|\<varnothing\><rsub|i>|}><rsub|i\<in\>\<varnothing\>>\<subseteq\>V>.
     Further if <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>\<varnothing\>>\<subseteq\>V>
-    is a family then <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>\<varnothing\>>\<subseteq\>V=<around*|{|\<varnothing\><rsub|i>|}><rsub|i\<in\>\<varnothing\>>\<subseteq\>V>
+    is a family where the index set is empty then
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>\<varnothing\>>\<subseteq\>V=<around*|{|\<varnothing\><rsub|i>|}><rsub|i\<in\>\<varnothing\>>\<subseteq\>V>
   </example>
 
   <\proof>
