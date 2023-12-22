@@ -3846,61 +3846,6 @@
     </equation*>
   </definition>
 
-  <\lemma>
-    <label|finite distinct set and subset>Let
-    <math|n\<in\>\<bbb-N\><rsub|0>>, <math|A=<around*|{|x<rsub|1>,\<ldots\>,x<rsub|n>|}>>
-    and <math|B\<subseteq\>A> then there exists a bijection
-
-    <\equation*>
-      \<beta\>:<around*|{|1,\<ldots\>,card<around*|(|Y|)>|}>\<rightarrow\>J\<subseteq\><around*|{|1,\<ldots\>,n|}>
-    </equation*>
-
-    such that\ 
-
-    <\equation*>
-      B=<around*|{|x<rsub|\<beta\><around*|(|1|)>>,\<ldots\>,x<rsub|\<beta\><around*|(|m|)>>|}>
-    </equation*>
-  </lemma>
-
-  <\proof>
-    From <math|A=<around*|{|x<rsub|1>,\<ldots\>,x<rsub|n>|}>> it follows that
-    we have a bijection <math|x:<around*|{|1,\<ldots\>,n|}>\<rightarrow\>A>.
-    Take
-
-    <\equation*>
-      J=x<rsup|-1><around*|(|Y|)>\<subseteq\><around*|{|1,\<ldots\>,n|}>
-    </equation*>
-
-    then\ 
-
-    <\equation*>
-      x<rsub|\|J>:J\<rightarrow\><around*|(|x<rsub|\|J>|)><around*|(|J|)>=x<around*|(|J|)>\<equallim\><rsub|x<text|
-      is bijectiive>>Y is a bijection
-    </equation*>
-
-    By [theorem: <reference|complex finite subset>] <math|J> is finite with
-    <math|card<around*|(|Y|)>=card<around*|(|J|)>\<leqslant\>card<around*|(|<around*|{|1,\<ldots\>,n|}>|)>=n>
-    so there exist a bijection
-
-    <\equation*>
-      \<beta\>:<around*|{|1,\<ldots\>,card<around*|(|Y|)>|}>\<rightarrow\>J
-    </equation*>
-
-    hence as <math|x<around*|(|J|)>=J\<subseteq\><around*|{|1,\<ldots\>,n|}>>,
-    we have the bijection\ 
-
-    <\equation*>
-      x\<circ\>\<beta\>:J\<rightarrow\>Y
-    </equation*>
-
-    Hence using [definition: <reference|finite distinct set index bijection>]
-    it follows that\ 
-
-    <\equation*>
-      Y=<around*|{|x<rsub|\<beta\><around*|(|1|)>>,\<ldots\>,x<rsub|\<beta\><around*|(|n|)>>|}>
-    </equation*>
-  </proof>
-
   <subsubsection|Span of a set>
 
   <\definition>
@@ -3934,6 +3879,93 @@
     So by [theorem: <reference|surjection f:A-\<gtr\>B if A is finite then B
     is finite>] <math|<around*|{|x<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>
     is finite and <math|card<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>\<leqslant\>n>.
+  </proof>
+
+  <\theorem>
+    <label|linear ordered family and subset>Let <math|X> be a set,
+    <math|n\<in\>\<bbb-N\>>, <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>X>
+    and <math|Y\<subseteq\><around*|{|x<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>
+    then there exist a bijection\ 
+
+    <\equation*>
+      \<beta\>:<around*|{|1,\<ldots\>,card<around*|(|Y|)>|}>\<rightarrow\>J\<subseteq\><around*|{|1,\<ldots\>,n|}>
+    </equation*>
+
+    such that\ 
+
+    <\equation*>
+      Y=<around*|{|x<rsub|\<beta\><around*|(|1|)>>,\<ldots\>,x<rsub|\<beta\><around*|(|card<around*|(|Y|)>|)>>|}>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Let <math|x:<around*|{|1,\<ldots\>,n|}>\<rightarrow\>X> be the function
+    defining the family <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>.
+    Using a consequence of the Axiom of Choice [see theorem:
+    <reference|choice function to injection/bijection>] there exists a
+    <math|I\<subseteq\><around*|{|1,\<ldots\>,n|}>> such that\ 
+
+    <\equation*>
+      x<rsub|\|I>:I\<rightarrow\>x<around*|(|<around*|{|1,\<ldots\>,n|}>|)>=<around*|{|x<rsub|>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}><text|
+      is a bijection >
+    </equation*>
+
+    Let <math|J=<around*|(|x<rsub|\|I>|)><rsup|-1><around*|(|Y|)>\<subseteq\>I>
+    then for\ 
+
+    <\equation*>
+      x<rsub|\|J>\<equallim\><rsub|<text|[theorem: <reference|function
+      restricted function properties>]>><around*|(|x<rsub|\|I>|)><rsub|\|J>:J\<rightarrow\>Y<text|>
+    </equation*>
+
+    we have:
+
+    <\description>
+      <item*|injectivity>Let <math|i,j\<in\>J> such that
+      <math|x<rsub|\|J><around*|(|i|)>=x<rsub|\|J><around*|(|j|)>> then
+      <math|x<around*|(|i|)>=x<around*|(|j|)>> and as <math|J\<subseteq\>I>
+      we have <math|x<rsub|\|I><around*|(|i|)>=x<rsub|\|I><around*|(|j|)>>.
+      So by injectivity of \ x<math|<rsub|\|I>> it follows that <math|i=j>.
+
+      <item*|surjectivity>Let <math|y\<in\>Y> then, as
+      <math|x<rsub|\|I>:I\<rightarrow\><around*|{|x<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>
+      is a bijection and <math|Y\<subseteq\><around*|{|x<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>,
+      there exists a <math|i\<in\>I> such that
+      <math|y=x<rsub|\|I><around*|(|i|)>=x<around*|(|i|)>>. As
+      <math|y\<in\>Y> we have <math|i\<in\><around*|(|x<rsub|\|I>|)><rsup|-1><around*|(|Y|)>=J>
+      hence <math|y=x<around*|(|i|)>\<equallim\><rsub|i\<in\>J>x<rsub|\|J><around*|(|i|)>>.
+    </description>
+
+    From the above we conclude that\ 
+
+    <\equation*>
+      x<rsub|\|J>:J\<rightarrow\>Y<text| is a bijection>
+    </equation*>
+
+    As <math|Y> is finite [using theorems: <reference|complex finite subset>,
+    <reference|linear ordered family is finite>] we have that <math|J> is
+    finite with <math|card<around*|(|J|)>=card<around*|(|Y|)>>. Hence there
+    exists a bijection
+
+    <\equation*>
+      \<beta\>:<around*|{|1,\<ldots\>,card<around*|(|Y|)>|}>\<rightarrow\>J
+    </equation*>
+
+    As the composition of two bijections is again a bijection we have that\ 
+
+    <\equation*>
+      x<rsub|\|J>\<circ\>\<beta\>:<around*|{|1,\<ldots\>,card<around*|(|Y|)>|}>\<rightarrow\>Y<text|
+      is a bijection>
+    </equation*>
+
+    so that <math|Y=<around*|{|<around*|(|x<rsub|\|J>\<circ\>\<beta\>|)><rsub|1>,\<ldots\>,<around*|(|x<rsub|\|J>\<circ\>\<beta\>|)><rsub|card<around*|(|Y|)>><rsub|>|}>>.
+    As <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,card<around*|(|Y|)>|}>>
+    we have <math|<around*|(|x<rsub|\|J>\<circ\>\<beta\>|)><rsub|i>=x<around*|(|\<beta\><around*|(|i|)>|)>=x<rsub|\<beta\><around*|(|i|)>>>
+    we have
+
+    <\equation*>
+      Y=<around*|{|x<rsub|\<beta\><around*|(|1|)>>,\<ldots\>,x<rsub|\<beta\><around*|(|card<around*|(|Y|)>|)>><rsub|>|}>
+    </equation*>
   </proof>
 
   <\definition>
@@ -7142,7 +7174,9 @@
       is a bijection].
 
       <item><math|<around*|{|v<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>
-      is a basis of <math|V>
+      is a basis of <math|V>\ 
+
+      <item><math|dim<around*|(|V|)>=n>
     </enumerate>
   </corollary>
 
@@ -7201,6 +7235,11 @@
         <around*|{|v<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}><text| is
         a basis for >V
       </equation*>
+
+      <item>From <math|<around*|(|1|)>> it follows that
+      <math|card<around*|(|<around*|{|v<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>=n>
+      and from (2) that <math|<around*|{|v<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>
+      is a basis of <math|v> hence <math|dim<around*|(|V|)>=n>.
     </enumerate>
   </proof>
 
@@ -17810,6 +17849,8 @@
   We show now how the matrix of a linear mapping can be used to calculate the
   result of applying the linear mapping.
 
+  TODO check this again
+
   <\theorem>
     <label|matrix linear map application>Let <math|n,m\<in\>\<bbb-N\>>,
     <math|X,Y> finite dimensional vector spaces over a field <math|F> with
@@ -17935,15 +17976,13 @@
         rank<around*|(|L|)>\<equallim\><rsub|def>dim<around*|(|L<around*|(|X|)>|)>=card<around*|(|B|)>
       </equation*>
 
-      TODO By [theorem: <reference|linear ordered family and subset>] it
-      follows that there exist a bijection
-      <math|\<beta\>:<around*|{|1,\<ldots\>,rank<around*|(|L|)>|}>\<rightarrow\>J\<subseteq\><around*|{|1,\<ldots\>,n|}><text|
+      By [theorem: <reference|linear ordered family and subset>] there exist
+      a bijection <math|\<beta\>:<around*|{|1,\<ldots\>,rank<around*|(|L|)>|}>\<rightarrow\>J\<subseteq\><around*|{|1,\<ldots\>,n|}><text|
       such that >>
 
       <\equation>
-        <label|eq 11.187.107><around*|{|L<around*|(|e<rsub|\<beta\><around*|(|i|)>>|)>|}><rsub|i\<in\><around*|{|1,\<ldots\>,rank<around*|(|L|)>|}>>\<subseteq\>L<around*|(|X|)><text|
-        is a distinct family and >B=<around*|{|L<around*|(|e<rsub|\<beta\><around*|(|i|)>>|)>\|i\<in\><around*|{|1,\<ldots\>,rank<around*|(|L|)>|}>|}><text|
-        is a basis for >L<around*|(|X|)>
+        <label|eq 11.187.107>B=<around*|{|L<around*|(|e<rsub|\<beta\><around*|(|1|)>>,\<ldots\>,L<around*|(|e<rsub|\<beta\><around*|(|rank<around*|(|L|)>|)>>|)>|)>|}>
+        where B is a basis of L<around*|(|X|)>
       </equation>
 
       Define now
@@ -17977,16 +18016,15 @@
       </eqnarray*>
 
       Consider now the sum <math|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<lambda\><rsub|i>\<cdot\>L<around*|(|e<rsub|i>|)>>,
-      then we have that
+      then we have by [theorem: <reference|linear span (1)>] that
 
       <\equation*>
         <big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<lambda\><rsub|i>\<cdot\>L<around*|(|e<rsub|i>|)>\<in\>span<around*|(|<around*|{|L<around*|(|e<rsub|i>|)>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>\<equallim\><rsub|<text|[eq:
         <reference|eq 11.186.108>]>>L<around*|(|X|)>
       </equation*>
 
-      By the above, [eq: <reference|eq 11.187.107>]
-      <math|<around*|{|L<around*|(|e<rsub|\<beta\><around*|(|i|)>>|)>\|i\<in\><around*|{|1,\<ldots\>,rank<around*|(|L|)>|}>|}>>
-      and [theorem: <reference|basis finite alternative (2)>] there exist a
+      By the above, [eq: <reference|eq 11.187.107>] and [theorem:
+      <reference|basis finite alternative (2)>] there exist a
       <math|<around*|{|\<gamma\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,rank<around*|(|L|)>|}>>\<subseteq\>F>
       such that\ 
 
@@ -17997,11 +18035,11 @@
         (1)>]>>>|<cell|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,rank<around*|(|L|)>|}>><around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<gamma\><rsub|j>\<cdot\><around*|(|M<rsub|i,\<beta\><around*|(|j|)>>\<cdot\>f<rsub|i><rsub|>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|sum of finite sums (2)>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,rank<around*|(|L|)>|}>>\<gamma\><rsub|j>\<cdot\><around*|(|M<rsub|i,\<beta\><around*|(|j|)>>\<cdot\>f<rsub|i><rsub|>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,rank<around*|(|L|)>|}>><around*|(|\<gamma\><rsub|j>\<cdot\>M<rsub|i,\<beta\><around*|(|j|)>>|)>\<cdot\>f<rsub|i><rsub|>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|vector space finite sum
-        (1)>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,rank<around*|(|L|)>|}>><around*|\<nobracket\>|\<gamma\><rsub|j>\<cdot\>M<rsub|i,\<beta\><around*|(|j|)>>|)>|\<nobracket\>>\<cdot\>f<rsub|i><rsub|>>>|<row|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<lambda\><rsub|i>\<cdot\>L<around*|(|e<rsub|i>|)>>|<cell|\<equallim\><rsub|<text|[definition:
+        (1)>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,rank<around*|(|L|)>|}>>\<gamma\><rsub|j>\<cdot\>M<rsub|i,\<beta\><around*|(|j|)>>|)>\<cdot\>f<rsub|i><rsub|>>>|<row|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<lambda\><rsub|i>\<cdot\>L<around*|(|e<rsub|i>|)>>|<cell|\<equallim\><rsub|<text|[definition:
         <reference|matrix linear mapping>]>>>|<cell|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>\<lambda\><rsub|j>\<cdot\><around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<cal-M\><around*|(|L;E,F|)><rsub|i,j>\<cdot\>f<rsub|i><rsub|>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>\<lambda\><rsub|j>\<cdot\><around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>M<rsub|i,j>\<cdot\>f<rsub|i><rsub|>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|vector space finite sum
         (1)>]>>>|<cell|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<lambda\><rsub|j>\<cdot\><around*|(|M<rsub|i,j>\<cdot\>f<rsub|i><rsub|>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|sum of finite sums (2)>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>\<lambda\><rsub|j>\<cdot\><around*|(|M<rsub|i,j>\<cdot\>f<rsub|i><rsub|>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>\<lambda\><rsub|j>\<cdot\><around*|(|M<rsub|i,j>\<cdot\>f<rsub|i><rsub|>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|\<lambda\><rsub|j>\<cdot\>M<rsub|i,j>|)>\<cdot\>f<rsub|i><rsub|>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum of finite sums (2)>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>\<lambda\><rsub|j>\<cdot\><around*|(|M<rsub|i,j>\<cdot\>f<rsub|i><rsub|>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|\<lambda\><rsub|j>\<cdot\>M<rsub|i,j>|)>\<cdot\>f<rsub|i><rsub|>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|vector space finite sum
         (1)>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>\<lambda\><rsub|j>\<cdot\>M<rsub|i,j>|)>\<cdot\>f<rsub|i>>>>>
       </eqnarray*>
@@ -18010,7 +18048,8 @@
       from the above that
 
       <\equation*>
-        <big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,rank<around*|(|L|)>|}>>\<gamma\><rsub|j>\<cdot\>M<rsub|i,\<beta\><around*|(|j|)>>=<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>\<lambda\><rsub|j>\<cdot\>M<rsub|i,j>
+        \<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text| we have
+        ><big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,rank<around*|(|L|)>|}>>\<gamma\><rsub|j>\<cdot\>M<rsub|i,\<beta\><around*|(|j|)>>=<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>\<lambda\><rsub|j>\<cdot\>M<rsub|i,j>
       </equation*>
 
       and substituting this in [eq: <reference|eq 11.189.107>] proves that
@@ -18069,14 +18108,9 @@
       </eqnarray*>
 
       Now by [eq: <reference|eq 11.187.107>]
-      \ <math|<around*|{|L<around*|(|e<rsub|\<beta\><around*|(|i|)>>|)>\|i\<in\><around*|{|1,\<ldots\>,rank<around*|(|L|)>|}>|}>>
-      is a basis, hence linear independent, and
-      <math|<around*|{|L<around*|(|e<rsub|\<beta\><around*|(|i|)>>|)>|}><rsub|i\<in\><around*|{|1,\<ldots\>,rank<around*|(|L|)>|}>>>
-      is distinct, so that by [theorem: <reference|linear independent
-      distinct family set equivalences>] <math|<around*|{|L<around*|(|e<rsub|\<beta\><around*|(|i|)>>|)>|}><rsub|i\<in\><around*|{|1,\<ldots\>,rank<around*|(|L|)>|}>>>
-      is linear independent. Hence applying [theorem: <reference|linear
-      independent family alternative>] on [eq: <reference|eq 11.192.107>]
-      results in\ 
+      \ <math|<around*|{|L<around*|(|e<rsub|\<beta\><around*|(|1|)>>|)>,\<ldots\>,L<around*|(|e<rsub|\<beta\><around*|(|rank<around*|(|L|)>|)>>|)>|}>>
+      is a basis, hence linear independent, so by [theorem: <reference|linear
+      independent finite set>]
 
       <\equation*>
         \<forall\>i\<in\><around*|{|1,\<ldots\>,m|}><text| we have
@@ -18092,22 +18126,27 @@
         is linear independent>
       </equation*>
 
-      Combining this with [eq: <reference|eq 11.190.107>] proves that\ 
+      Combining this with [eq: <reference|eq 11.190.107>] proves that
 
       <\equation*>
         <around*|{|col<around*|(|M,\<beta\><around*|(|i|)>|)>\|i\<in\><around*|{|1,\<ldots\>,rank<around*|(|L|)>|}>|}><text|
         is a basis for >span<around*|(|cols<around*|(|M|)>|)>
       </equation*>
 
-      Finally we have that\ 
+      which by [theorem: <reference|linear independent family and basis>]
+      \ proves that\ 
 
       <\equation*>
-        rank<around*|(|M|)>\<equallim\><rsub|def>dim<around*|(|cols<around*|(|M|)>|)>=card<around*|(|<around*|{|col<around*|(|M,\<beta\><around*|(|i|)>|)>\|i\<in\><around*|{|1,\<ldots\>,rank<around*|(|L|)>|}>|}>|)>\<equallim\><rsub|<text|[theorem:
-        <reference|linear independent family is
-        distinct>]>>rank<around*|(|L|)>
+        dim<around*|(|span<around*|(|cols<around*|(|M|)>|)>|)>=rank<around*|(|L|)>
       </equation*>
 
-      proving that\ 
+      So\ 
+
+      <\equation*>
+        rank<around*|(|M|)>\<equallim\><rsub|def>dim<around*|(|span<around*|(|cols<around*|(|M|)>|)>|)>=rank<around*|(|L|)>
+      </equation*>
+
+      proving, as <math|M=\<cal-M\><around*|(|L;E,F|)>>, that
 
       <\equation*>
         rank<around*|(|\<cal-M\><around*|(|L;E,F|)>|)>=rank<around*|(|L|)>
@@ -18116,27 +18155,25 @@
   </proof>
 
   Next we show that the mapping that associate a matrix with a linear mapping
-  is 'linear', be aware that <math|<around*|\<langle\>|\<cal-M\><rsub|n,m><around*|(|L|)>,+,\<cdot\>|\<rangle\>>>
-  is not a vector space so we can not talk about linear mappings between
-  vector spaces.
+  is linear.
 
   <\theorem>
     <label|matrix mapping is linear>Let <math|n,m\<in\>\<bbb-N\>>, <math|X,Y>
-    finite dimensional vector spaces over a field <math|F> with basis
+    finite dimensional vector spaces over a field <math|\<cal-F\>> with basis
     <math|<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>,<math|<around*|{|f<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,m|}>|}>>
     defined by distinct families <math|E=<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>X>,
     <math|F=<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>Y>
     then\ 
 
     <\equation*>
-      \<cal-M\><around*|(|E,F|)>:Hom<around*|(|X,Y|)>\<rightarrow\>\<cal-M\><rsub|m,n><around*|(|F|)><text|
+      \<cal-M\><around*|(|E,F|)>:Hom<around*|(|X,Y|)>\<rightarrow\>\<cal-M\><rsub|m,n><around*|(|\<cal-F\>|)><text|
       defined by >\<cal-M\><around*|(|E,F|)><around*|(|L|)>=M<around*|(|L;E,F|)>
     </equation*>
 
     satisfies:
 
     <\enumerate>
-      <item><math|\<forall\>\<alpha\>\<in\>F> and
+      <item><math|\<forall\>\<alpha\>\<in\>\<cal-F\>> and
       <math|L\<in\>Hom<around*|(|X,Y|)>> we have
       <math|\<cal-M\><around*|(|E,F|)><around*|(|\<alpha\>\<cdot\>L|)>=\<alpha\>\<cdot\>\<cal-M\><around*|(|E,F|)><around*|(|L|)>>
 
@@ -18149,6 +18186,12 @@
       aware the last <math|E> is the identity matrix and the first two
       <math|E>'s specifies the basis in <math|X>]
     </enumerate>
+
+    in other words\ 
+
+    <\equation*>
+      \<cal-M\><around*|(|E,G|)>\<in\>Hom<around*|(|Hom<around*|(|X,Y|)>,\<cal-M\><rsub|m,n><around*|(|F|)>|)>
+    </equation*>
   </theorem>
 
   <\proof>
@@ -22612,7 +22655,6 @@
     <associate|basis of trivial vector space|<tuple|11.121|?>>
     <associate|basis real complex vector space|<tuple|11.142|?>>
     <associate|basis reducing spanning set to a basis|<tuple|11.128|?>>
-    <associate|basis span|<tuple|11.135|?>>
     <associate|basis span finite family|<tuple|11.135|?>>
     <associate|basis sub-space|<tuple|11.139|?>>
     <associate|basis sum of delta|<tuple|11.144|?>>
@@ -22975,7 +23017,7 @@
     <associate|linear dependent set alternative condition|<tuple|11.100|?>>
     <associate|linear dependent set containing neutral
     element|<tuple|11.99|?>>
-    <associate|linear family finite|<tuple|11.81|?>>
+    <associate|linear family finite|<tuple|11.80|?>>
     <associate|linear independent empty set|<tuple|11.105|?>>
     <associate|linear independent family|<tuple|11.116|?>>
     <associate|linear independent family alternative|<tuple|11.117|?>>
@@ -23018,7 +23060,8 @@
     <associate|linear mapping rank|<tuple|11.168|?>>
     <associate|linear mapping semi-group|<tuple|11.158|?>>
     <associate|linear mapping span|<tuple|11.170|?>>
-    <associate|linear ordered family is finite|<tuple|11.82|?>>
+    <associate|linear ordered family and subset|<tuple|11.82|?>>
+    <associate|linear ordered family is finite|<tuple|11.81|?>>
     <associate|linear span|<tuple|11.85|?>>
     <associate|linear span (1)|<tuple|11.86|?>>
     <associate|linear span contains set|<tuple|11.92|?>>
