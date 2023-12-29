@@ -6468,6 +6468,22 @@
     <math|\<forall\>i\<in\>I> <math|f<rsub|i>=f<around*|(|i|)>\<in\>A<rsub|i>>.
   </definition>
 
+  <\theorem>
+    <label|product of a empty set is empty>Let
+    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B> be such that
+    <math|\<exists\>i<rsub|0>\<in\>I> with
+    <math|A<rsub|i<rsub|0>>=\<varnothing\>> then
+    <math|<big|prod><rsub|i\<in\>I>A<rsub|i>=\<varnothing\>>
+  </theorem>
+
+  <\proof>
+    Let <math|x\<in\><big|prod><rsub|i\<in\>I>A<rsub|i>> then we have that
+    <math|x:I\<rightarrow\><big|cup><rsub|i>A<rsub|i>> is a function such
+    that <math|x<around*|(|i<rsub|0>|)>\<in\>A<rsub|i<rsub|0>>>,
+    contradicting <math|A<rsub|i<rsub|0>>=\<varnothing\>>. Hence we must have
+    that <math|<big|prod><rsub|i\<in\>I>A<rsub|i>=\<varnothing\>>.
+  </proof>
+
   The following shows that the product of a family of only one class is
   \<#2018\>almost\<#2018\> that class itself.
 
@@ -13175,7 +13191,7 @@
     <associate|family intersection (2)|<tuple|2.117|?>>
     <associate|family intersection is a set|<tuple|2.118|?>>
     <associate|family intersection(1)|<tuple|2.116|?>>
-    <associate|family product and index transformation|<tuple|2.137|?>>
+    <associate|family product and index transformation|<tuple|2.138|?>>
     <associate|family properties (1)|<tuple|2.121|?>>
     <associate|family properties (2)|<tuple|2.122|?>>
     <associate|family properties (3)|<tuple|2.127|?>>
@@ -13349,17 +13365,18 @@
     <associate|parttial function graph|<tuple|2.6|?>>
     <associate|power set|<tuple|1.63|?>>
     <associate|product|<tuple|2.131|?>>
-    <associate|product and intersection|<tuple|2.135|?>>
-    <associate|product and power|<tuple|2.136|?>>
-    <associate|product extension|<tuple|2.139|?>>
-    <associate|product inclusion|<tuple|2.134|?>>
-    <associate|product of family with one element|<tuple|2.132|?>>
-    <associate|product of family with two classes|<tuple|2.133|?>>
+    <associate|product and intersection|<tuple|2.136|?>>
+    <associate|product and power|<tuple|2.137|?>>
+    <associate|product extension|<tuple|2.140|?>>
+    <associate|product inclusion|<tuple|2.135|?>>
+    <associate|product of a empty set is empty|<tuple|2.132|?>>
+    <associate|product of family with one element|<tuple|2.133|?>>
+    <associate|product of family with two classes|<tuple|2.134|?>>
     <associate|product product is empty|<tuple|3.103|?>>
     <associate|product product is not empty|<tuple|3.102|?>>
-    <associate|product projection function|<tuple|2.140|?>>
+    <associate|product projection function|<tuple|2.141|?>>
     <associate|product projection is surjective|<tuple|3.101|?>>
-    <associate|product sub-product|<tuple|2.138|?>>
+    <associate|product sub-product|<tuple|2.139|?>>
     <associate|relation|<tuple|3.1|?>>
     <associate|relation properties|<tuple|3.4|?>>
     <associate|relation trivial|<tuple|3.3|?>>

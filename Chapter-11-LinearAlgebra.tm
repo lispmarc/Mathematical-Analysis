@@ -4164,7 +4164,7 @@
         11.19.123>]>>>|<cell|<big|sum><rsub|w\<in\><around*|{|w<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>><around*|(|<big|sum><rsub|i\<in\>I<rsub|w>>\<alpha\><rsub|i>\<cdot\>w<rsub|i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|i\<in\>I<rsub|w>\<Rightarrow\>w<rsub|i>=w>>|<cell|<big|sum><rsub|w\<in\><around*|{|w<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>><around*|(|<big|sum><rsub|i\<in\>I<rsub|w>>\<alpha\><rsub|i>\<cdot\>w|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|vector space finite sum
         (2)>]>>>|<cell|<big|sum><rsub|w\<in\><around*|{|w<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>><around*|(|<around*|(|<big|sum><rsub|i\<in\>I<rsub|w>>\<alpha\><rsub|i>|)>\<cdot\>w|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|eq 11.18.090>]>>>|<cell|<big|sum><rsub|w\<in\><around*|{|w<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>\<beta\><rsub|w>\<cdot\>w>>>>
+        <reference|eq 11.20.123>]>>>|<cell|<big|sum><rsub|w\<in\><around*|{|w<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>\<beta\><rsub|w>\<cdot\>w>>>>
       </eqnarray*>
 
       <item>Let <math|w:<around*|{|1,\<ldots\>,n|}>\<rightarrow\>V> be the
@@ -16893,8 +16893,8 @@
       </equation>
     </description>
 
-    By [eqs: <reference|eq 11.196.122>, <reference|eq 11.199.123>
-    and<reference|eq 11.198.122>] we have that\ 
+    By [eqs: <reference|eq 11.196.122>, <reference|eq 11.196.122>
+    and<reference|eq 11.199.123>] we have that\ 
 
     <\equation*>
       \<forall\>j\<in\><around*|{|1,\<ldots\>,n|}><text|
@@ -23470,7 +23470,7 @@
     <associate|sum associativity|<tuple|11.24|?>>
     <associate|sum associativity simple|<tuple|11.23|?>>
     <associate|sum bijection on index|<tuple|11.35|?>>
-    <associate|sum change start index|<tuple|11.14|?>>
+    <associate|sum change start index|<tuple|11.12|?>>
     <associate|sum change start index (1)|<tuple|11.14|?>>
     <associate|sum commutativity|<tuple|11.31|?>>
     <associate|sum constant family|<tuple|11.46|?>>
