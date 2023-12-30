@@ -1135,8 +1135,8 @@
 
           <item*|<math|s\<neq\>k>>Then <math|\<sigma\><around*|(|n+1|)>=\<gamma\><rsub|\<sigma\>><around*|(|r|)>=\<gamma\><rsub|\<sigma\>><around*|(|s|)>=\<sigma\><around*|(|<around*|(|n\<leftrightarrowlim\><rsub|<around*|{|0,\<ldots\>n|}>>k|)><around*|(|s|)>|)>=\<sigma\><around*|(|s|)>>
           so that <math|s=n+1> contradicting
-          <math|s\<in\><around*|{|1,\<ldots\>,n|}>,> hence this case doest
-          not occur.
+          <math|s\<in\><around*|{|1,\<ldots\>,n|}>,> hence this case does not
+          occur.
         </description>
 
         <item*|<math|r\<neq\>n\<wedge\>s=n>>Then we have for <math|r> either:
@@ -1148,8 +1148,8 @@
 
           <item*|<math|r\<neq\>k>>Then <math|\<sigma\><around*|(|n+1|)>=\<gamma\><rsub|\<sigma\>><around*|(|s|)>=\<gamma\><rsub|\<sigma\>><around*|(|r|)>=\<sigma\><around*|(|<around*|(|n\<leftrightarrowlim\><rsub|<around*|{|0,\<ldots\>n|}>>k|)><around*|(|r|)>|)>=\<sigma\><around*|(|r|)>>
           so that <math|n+1=r> contradicting
-          <math|r\<in\><around*|{|1,\<ldots\>,n|}>,> hence this case doest
-          not occur.
+          <math|r\<in\><around*|{|1,\<ldots\>,n|}>,> hence this case does not
+          occur.
         </description>
 
         <item*|<math|r\<neq\>n\<wedge\>s\<neq\>n>>Then
@@ -3632,8 +3632,8 @@
   <math|n\<in\>\<bbb-N\><rsub|0>> and a bijection between
   <math|<around*|{|1,\<ldots\>,n|}>> and the finite set. To further develop
   the theory of dependent, independent sets in a vector space we have to work
-  with these finite sums/products and it will usefull to introduce a notation
-  that expresses this relation between the finite set,
+  with these finite sums/products and it will be usefully to introduce a
+  notation that expresses this relation between the finite set,
   <math|<around*|{|1,\<ldots\>,n|}>> and the bijection.
 
   <\definition>
@@ -3699,10 +3699,10 @@
 
     <\remark>
       If in a context we have defined <math|A=<around*|{|x<rsub|1>,\<ldots\>,x<rsub|n>|}>>
-      or equivalenty the bijection <math|x<around*|{|<around*|{|1,\<ldots\>,n|}>|}>\<rightarrow\>A>
+      or equivalently the bijection <math|x<around*|{|<around*|{|1,\<ldots\>,n|}>|}>\<rightarrow\>A>
       then we will identify the set <math|A> with
       <math|<around*|{|x<rsub|1>,\<ldots\>,x<rsub|n>|}>>. We will do this
-      also if we are not realy interested in the exact details of either
+      also if we are not really interested in the exact details of either
       <math|A> or <math|x>. Rephrasing the above theorem using this remark we
       have for <math|n\<in\>\<bbb-N\><rsub|0>> and
       <math|<around*|{|x<rsub|1>,\<ldots\>,x<rsub|n>|}>> that:
@@ -3753,7 +3753,7 @@
         >n=card<around*|(|A|)>
       </equation*>
 
-      Note that the represention <math|A=<around*|{|x<rsub|1>,\<ldots\>,x<rsub|n>|}>>
+      Note that the representation <math|A=<around*|{|x<rsub|1>,\<ldots\>,x<rsub|n>|}>>
       is not unique as there could be many bijections between
       <math|<around*|{|1,\<ldots\>,n|}>> and <math|A>
     </theorem>
@@ -4001,9 +4001,9 @@
     </equation*>
   </definition>
 
-  For finite sets (that can always be reprsented as a finite distinct sets)
-  we have a simpler definition of a linear combination in terms of the finite
-  distinct representation of a finite set.
+  For finite sets (that can always be representation as a finite distinct
+  sets) we have a simpler definition of a linear combination in terms of the
+  finite distinct representation of a finite set.
 
   <\theorem>
     <label|linear combination (1)>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
@@ -4481,7 +4481,7 @@
     </equation*>
   </proof>
 
-  The coeficients in a span of a set can be assumed to be different from the
+  The coefficients in a span of a set can be assumed to be different from the
   neutral element as is show in the next theorem.
 
   <\theorem>
@@ -5017,7 +5017,7 @@
       such that <math|u=<big|sum><rsub|w\<in\>W\\<around*|{|u|}>>\<alpha\><rsub|q>\<cdot\>w>
 
       <item><math|\<exists\><around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F>
-      satifying <math|\<exists\>i\<in\><around*|{|1,\<ldots\>,n|}>> with
+      satisfying <math|\<exists\>i\<in\><around*|{|1,\<ldots\>,n|}>> with
       <math|\<alpha\><rsub|i>\<neq\>0> such that
       <math|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>w<rsub|i>=0>.
 
@@ -5135,7 +5135,7 @@
 
       <item*|<math|4\<Rightarrow\>2>>By the hypothesis there exist a
       <math|<around*|{|\<beta\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F>
-      satifying <math|\<exists\>i<rsub|0>\<in\><around*|{|1,\<ldots\>,n|}>>
+      satisfying <math|\<exists\>i<rsub|0>\<in\><around*|{|1,\<ldots\>,n|}>>
       with <math|\<beta\><rsub|i<rsub|0>>\<neq\>0> such that
       <math|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<beta\><rsub|i>\<cdot\>w<rsub|i>=0>.
       Using [theorem: <reference|linear combination (1)>] there exist a
@@ -5162,7 +5162,7 @@
 
       <item*|<math|4\<Rightarrow\>5>>By the hypothesis there exist a
       <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F>
-      satifying <math|\<exists\>k\<in\><around*|{|1,\<ldots\>,n|}>> with
+      satisfying <math|\<exists\>k\<in\><around*|{|1,\<ldots\>,n|}>> with
       <math|\<alpha\><rsub|k>\<neq\>0> such that
       <math|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>w<rsub|i>=0>.
       Then we have
@@ -5261,7 +5261,7 @@
       <item*|<math|\<Rightarrow\>>>As <math|W> is independent we have by
       definition that <math|W> is not dependent. Let
       <math|<around*|{|\<alpha\><rsub|>|}><rsub|u\<in\>I>\<subseteq\>W>,
-      <math|I> a finite subset of <math|W> that satisifes
+      <math|I> a finite subset of <math|W> that satisfies
       <math|<big|sum><rsub|u\<in\>I>\<alpha\><rsub|u>\<cdot\>u=0>. Assume
       that <math|\<exists\>u\<in\>W> with <math|\<alpha\><rsub|u>\<neq\>0>
       then by definition <math|W> is linear dependent and we have a
@@ -5819,7 +5819,7 @@
     <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|)>> is linear dependent
     which contradicts the hypothesis that
     <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> is linear independent.
-    So the assumtion <math|m\<less\>n> leads to a contradiction, hence
+    So the assumption <math|m\<less\>n> leads to a contradiction, hence
     <math|n\<leqslant\>m=card<around*|(|T|)>>.
   </proof>
 
@@ -5993,7 +5993,7 @@
 
   The following theorem shows the relation between linear dependency of a
   family <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>V>
-  and the linear dependcy of its associated set
+  and the linear dependency of its associated set
   <math|<around*|{|x<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>.
 
   <\theorem>
@@ -6165,7 +6165,7 @@
 
   The following theorem shows the relation between linear independency of a
   family <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>V>
-  and the linear independcy of its associated set
+  and the linear independency of its associated set
   <math|<around*|{|x<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>.
 
   <\theorem>
@@ -6210,7 +6210,7 @@
     combination of the Hamel basis. So we don't have to bother with infinite
     sums and convergence of these sums, although the basis itself does not
     have to be finite. There are other concepts of basis in a vector space
-    that work with infinite sums (for example fourier series) but these are
+    that work with infinite sums (for example Fourier series) but these are
     not covered in this section.
   </note>
 
@@ -7145,7 +7145,7 @@
       n\<leqslant\>card<around*|(|B|)>=m
     </equation*>
 
-    From <math|V=span<around*|(|A|)>> and the linear independece of <math|B>
+    From <math|V=span<around*|(|A|)>> and the linear independency of <math|B>
     it follows from [corollary: <reference|linear Steinitz (1)>] that\ 
 
     <\equation*>
@@ -7277,7 +7277,7 @@
 
   In a finite dimensional vector space we have that every linear independent
   set with the same number of elements as the dimension of the vector space
-  is automatical a basis of the vector space.
+  is automatically a basis of the vector space.
 
   <\theorem>
     <label|basis finite dimensional vector space is a linear independent
@@ -7343,7 +7343,7 @@
       then we have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsub|k>\<cdot\>v<rsub|k><rsub|>>|<cell|\<equallim\><rsub|<text|]theroem:
+        <tformat|<table|<row|<cell|<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsub|k>\<cdot\>v<rsub|k><rsub|>>|<cell|\<equallim\><rsub|<text|]theorem:
         <reference|sum over disjoint subsets>]>>>|<cell|<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i,j|}>>\<alpha\><rsub|k>\<cdot\>v<rsub|k><rsub|>+<big|sum><rsub|k\<in\><around*|{|i|}>>\<alpha\><rsub|k>\<cdot\>v<rsub|k><rsub|>+<big|sum><rsub|k\<in\><around*|{|j|}>>\<alpha\><rsub|k>\<cdot\>v<rsub|k><rsub|>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|sum general single>]>>>|<cell|<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i,j|}>>\<alpha\><rsub|k>\<cdot\>v<rsub|k><rsub|>+\<alpha\><rsub|i>\<cdot\>v<rsub|i>+\<alpha\><rsub|j>\<cdot\>v<rsub|j>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i,j|}>>0\<cdot\>v<rsub|k><rsub|>+1\<cdot\>v<rsub|i>+<around*|(|-1|)>\<cdot\>v<rsub|j>>>|<row|<cell|>|<cell|=>|<cell|v<rsub|i>-v<rsub|j>>>|<row|<cell|>|<cell|=>|<cell|v<around*|(|i|)>-v<around*|(|j|)>>>|<row|<cell|>|<cell|=>|<cell|0>>>>
       </eqnarray*>
@@ -8049,7 +8049,7 @@
     \ 
 
     <\enumerate>
-      <item>Let <math|x\<in\>X> then we haveL
+      <item>Let <math|x\<in\>X> then we have
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|<around*|(|L\<circ\><around*|(|L<rsub|1>+L<rsub|2>|)>|)><around*|(|x|)>>|<cell|=>|<cell|L<around*|(|<around*|(|L<rsub|1>+L<rsub|2>|)><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|L<rsub|1><around*|(|x|)>+L<rsub|2><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|L<rsub|1><around*|(|x|)>|)>+L<around*|(|L<rsub|2><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|L\<circ\>L<rsub|1>|)><around*|(|x|)>+<around*|(|L\<circ\>L<rsub|2>|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|L\<circ\>L<rsub|1>+L\<circ\>L<rsub|2>|)><around*|(|x|)>>>>>
@@ -8550,7 +8550,7 @@
     <math|<around*|\<langle\>|X,+,\<cdot\>|\<rangle\>>> and
     <math|<around*|\<langle\>|Y,+,\<cdot\>|\<rangle\>>> be vector spaces over
     a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> and
-    <math|L\<in\>Hom<around*|(|X,Y|)>> then the r<with|font-series|bold|ank
+    <math|L\<in\>Hom<around*|(|X,Y|)>> then the r<with|font-series|bold|ink
     of <math|L>> noted as <math|rank<around*|(|L|)>> is defined by\ 
 
     <\equation*>
@@ -9236,7 +9236,7 @@
       </equation*>
     </description>
 
-    So in all cases wef have proved that\ 
+    So in all cases we have proved that\ 
 
     <\equation*>
       dim<around*|(|X|)>=rank<around*|(|L|)>+dim<around*|(|ker<around*|(|L|)>|)>
@@ -10775,8 +10775,8 @@
     completing the proof.
   </proof>
 
-  Permutations are typically used to permutate the arguments of functions
-  with several arguments. Remember that <math|X<rsup|n>> is defined as
+  Permutations are typically used to permute the arguments of functions with
+  several arguments. Remember that <math|X<rsup|n>> is defined as
   <math|X<rsup|n>\<equallim\><rsub|<text|[definition: <reference|finite
   product of sets power>]>>A<rsup|<around*|{|1,\<ldots\>,n|}>>> so that the
   following definition makes sense.
@@ -13991,7 +13991,7 @@
         <math|X=span<around*|(|B|)>>. Assume that
         <math|<around*|{|x<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>> is
         linear independent then using Steinitz lemma [see lemma:
-        <reference|linear Steinitz (1)>] togehter with [eq: <reference|eq
+        <reference|linear Steinitz (1)>] together with [eq: <reference|eq
         11.141.121>] we have that <math|n\<leqslant\>card<around*|(|B|)>>
         which, as <math|card<around*|(|B|)>\<less\>n>, leads to the
         contradiction <math|n\<less\>n>. Hence we must have that
@@ -15721,7 +15721,7 @@
       </equation*>
     </description>
 
-    Sofor <math|L> there exist a <math|\<alpha\>\<in\>F> such that
+    So for <math|L> there exist a <math|\<alpha\>\<in\>F> such that
 
     <\equation>
       <label|eq 11.185.122>\<Delta\><rsub|L>=\<alpha\>\<cdot\>\<Delta\>
@@ -16458,7 +16458,7 @@
       <label|eq 11.193.122>A<rsub|j><around*|(|t,y|)>=\<Delta\><around*|(|y<rsup|j>|)>\<cdot\>y<rsub|j>\<wedge\>A<rsub|j><around*|(|t,r|)>=\<Delta\><around*|(|r<rsup|j>|)>\<cdot\>r<rsub|j>\<wedge\>A<rsub|j><around*|(|t,s|)>=\<Delta\><around*|(|s<rsup|j>|)>\<cdot\>s<rsub|j>
     </equation>
 
-    Consider the following possibile cases for
+    Consider the following possible cases for
     <math|j\<in\><around*|{|1,\<ldots\>,n|}>>:
 
     <\description>
@@ -16910,7 +16910,7 @@
       <reference|sum of sums (2)>]>>>|<cell|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|-1|)><rsup|j-1>\<cdot\>A<rsub|j><around*|(|t,r|)>+\<alpha\>\<cdot\><big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|-1|)><rsup|j-1>\<cdot\>A<rsub|j><around*|(|t,s|)>>>|<row|<cell|>|<cell|=>|<cell|<wide|\<Delta\>L|\<wide-sqoverbrace\>><around*|(|r|)><around*|(|t|)>+\<alpha\>\<cdot\><wide|\<Delta\>L|\<wide-sqoverbrace\>><around*|(|s|)><around*|(|t|)>>>>>
     </eqnarray*>
 
-    proving, as <math|t\<in\>X> was choosen arbitry, that
+    proving, as <math|t\<in\>X> was chosen arbitrary, that
     <math|<wide|\<Delta\>L|\<wide-sqoverbrace\>><around*|(|y|)>=<wide|\<Delta\>L|\<wide-sqoverbrace\>><around*|(|r|)>+\<alpha\>\<cdot\><wide|\<Delta\>L|\<wide-sqoverbrace\>><around*|(|s|)>>
     or
 
@@ -17078,7 +17078,7 @@
     Of course w must prove that given a <math|L\<in\>Hom<around*|(|X,X|)>>
     there exist a <math|y\<in\>Hom<around*|(|X,X|)>> such that
     <math|<wide|\<Delta\>L|\<wide-sqoverbrace\>><around*|(|x|)>=\<Delta\><around*|(|x|)>\<cdot\>adjoint<around*|(|L|)>>
-    and that <math|y> is indpendent of the choosen <math|\<Delta\>>.\ 
+    and that <math|y> is independent of the chosen <math|\<Delta\>>.\ 
 
     <\description>
       <item*|existence>Let <math|L\<in\>Hom<around*|(|X,X|)>> then by the
@@ -17217,7 +17217,7 @@
       <item>Let <math|x\<in\>X> then we have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<around*|(|adjoint<around*|(|L|)>\<circ\>L|)><around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|adjoint<around*|(|L|)><around*|(|L<around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|1\<cdot\>adjoint<around*|(|L|)>|)><around*|(|L<around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|\<Delta\><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>\<cdot\>adjoint<around*|(|L|)>|)><around*|(|L<around*|(|x|)>|)>>|<cell|\<equallim\><rsub|<text|[definiition:
+        <tformat|<table|<row|<cell|<around*|(|adjoint<around*|(|L|)>\<circ\>L|)><around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|adjoint<around*|(|L|)><around*|(|L<around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|1\<cdot\>adjoint<around*|(|L|)>|)><around*|(|L<around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|\<Delta\><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>\<cdot\>adjoint<around*|(|L|)>|)><around*|(|L<around*|(|x|)>|)>>|<cell|\<equallim\><rsub|<text|[definition:
         <reference|determinant adjoint>]>>>|<cell|>>|<row|<cell|<wide|\<Delta\>L|\<wide-sqoverbrace\>><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)><around*|(|L<around*|(|x|)>|)>>|<cell|\<equallim\><rsub|<text|[definition:
         <reference|determinant delta upperscore>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|-1|)><rsup|i-1>\<cdot\>\<Delta\><around*|(|L<around*|(|x|)>,L<around*|(|e<rsub|1>|)>,\<ldots\>,L<around*|(|e<rsub|i-1>|)>,L<around*|(|e<rsub|i+1>|)>,\<ldots\>,L<around*|(|e<rsub|n>|)>|)>\<cdot\>e<rsub|i>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|-1|)><rsup|i-1>\<cdot\>\<Delta\><rsub|L><around*|(|x,e<rsub|1>,\<ldots\>,e<rsub|i-1>,e<rsub|i+1>,\<ldots\>,e<rsub|n>|)>\<cdot\>e<rsub|i>>|<cell|\<equallim\><rsub|<text|[theor.,
         def: <reference|determinant function and linear mapping
@@ -17433,7 +17433,7 @@
       is defined by <math|\<forall\><around*|(|i,j|)>\<in\><around*|{|1,\<ldots\>,n|}>\<times\><around*|{|1,\<ldots\>,m|}>>
       <math|E<rsub|i,j>=\<delta\><rsub|i,j>>
 
-      <item><dueto|additve inverse>If <math|M\<in\>\<cal-M\><rsub|n,m><around*|(|F|)>>
+      <item><dueto|additive inverse>If <math|M\<in\>\<cal-M\><rsub|n,m><around*|(|F|)>>
       then <math|-M> is defined by <math|\<forall\><around*|(|i,j|)>\<in\><around*|{|1,\<ldots\>,n|}>\<times\><around*|{|1,\<ldots\>,m|}>>
       <math|<around*|(|-M|)><rsub|i,j>=-M<rsub|i,j>>
     </enumerate>
@@ -20730,8 +20730,8 @@
   <\definition>
     <label|matrix cofactor>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
     <math|F> a field with characteristic zero and
-    <math|M\<in\>\<cal-M\><rsub|n,n><around*|(|F|)>> then the cofactor matrix
-    noted by \ <math|cofactor<around*|(|M|)>> is defined by\ 
+    <math|M\<in\>\<cal-M\><rsub|n,n><around*|(|F|)>> then the co-factor
+    matrix noted by \ <math|cofactor<around*|(|M|)>> is defined by\ 
 
     <\equation*>
       cofactor<around*|(|M|)>\<in\>\<cal-M\><rsub|n,n><around*|(|M|)><text|
@@ -21464,7 +21464,7 @@
       <\eqnarray*>
         <tformat|<table|<row|<cell|det<around*|(|\<tau\><rsup|n><rsub|<around*|[|i,j|]>>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|determinant definition
-        alternative>]>>>|<cell|\<Delta\><around*|(|\<tau\><rsup|n><rsub|<around*|[|i,j|]>><around*|(|e<rsub|1>|)>,\<ldots\>,\<tau\><rsup|n><rsub|<around*|[|i,j|]>><around*|(|e<rsub|n>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<Delta\><around*|(|e<rsub|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)><around*|(|1|)>>,\<ldots\>,e<rsub|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)><around*|(|n|)>><rsub|>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)>\<Delta\>|)><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theprem:
+        alternative>]>>>|<cell|\<Delta\><around*|(|\<tau\><rsup|n><rsub|<around*|[|i,j|]>><around*|(|e<rsub|1>|)>,\<ldots\>,\<tau\><rsup|n><rsub|<around*|[|i,j|]>><around*|(|e<rsub|n>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<Delta\><around*|(|e<rsub|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)><around*|(|1|)>>,\<ldots\>,e<rsub|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)><around*|(|n|)>><rsub|>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)>\<Delta\>|)><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|determinant skew-symmetric>]>>>|<cell|sign<around*|(|i\<leftrightarrowlim\><rsub|n>j|)>\<cdot\>\<Delta\><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|i\<neq\>j\<wedge\><text|[theorem:<reference|permutation
         sign properties>]>>>|<cell|<around*|(|-1|)>\<cdot\>\<Delta\><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|-1>>>>
       </eqnarray*>
@@ -21878,7 +21878,7 @@
       </equation*>
 
       Define then the family <math|<around*|{|E<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k+l|}>>\<subseteq\>GL<around*|(|X|)>>
-      by TODO
+      by
 
       <\equation*>
         \<forall\>i\<in\><around*|{|1,\<ldots\>,k+l|}><text|
