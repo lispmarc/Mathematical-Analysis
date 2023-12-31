@@ -7,7 +7,7 @@
 <\body>
   <assign|chapter-nr|11>
 
-  <chapter|Direct Sum>
+  <chapter|Internal Direct Sum>
 
   The purpose of this chapter is the extend the concept of direct sums
   introduced in [definition: \ <reference|vector space internal direct sum>].
@@ -405,12 +405,12 @@
   direct sum>].\ 
 
   <\definition>
-    <label|direct sum><dueto|Direct Sum>If <math|V> is a vector space over a
-    field, <math|<around*|{|V<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|V|)>>
+    <label|direct sum><dueto|Internal Direct Sum>If <math|V> is a vector
+    space over a field, <math|<around*|{|V<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|V|)>>
     such that <math|\<forall\>i\<in\>I> <math|V<rsub|i>> is a subspace of
     <math|V> then <math|V> is the direct sum of
     <math|<around*|{|V<rsub|i>|}><rsub|i\<in\>I>> noted as
-    <math|V=<big|sum><rsup|\<oplus\>><rsub|i\<in\>I>V<rsub|i>> if\ 
+    <math|V=<big|oplus><rsub|i\<in\>I>V<rsub|i>> if\ 
 
     <\equation*>
       V=<around*|{|v\<in\>V\|<with|font-series|bold|\<exists\>!><around*|{|v<rsub|i>|}><rsub|i\<in\>I>\<subset\>V<text|
@@ -418,9 +418,9 @@
       that >v=<big|sum><rsub|i\<in\>I>v<rsub|i><rsub|>|}>\<subseteq\>V
     </equation*>
 
-    In other words <math|V=<big|sum><rsup|\<oplus\>><rsub|i\<in\>I>V<rsub|i>>
-    if every <math|v\<in\>V> can be written as a
-    <with|font-series|bold|unique> sum of vector in <math|V<rsub|i>>
+    In other words <math|V=<big|oplus><rsub|i\<in\>I>V<rsub|i>> if every
+    <math|v\<in\>V> can be written as a <with|font-series|bold|unique> sum of
+    vector in <math|V<rsub|i>>
   </definition>
 
   <\example>
@@ -442,7 +442,7 @@
     <label|direct sum of two subspaces>If <math|V> is a vector space and
     <math|V<rsub|1>,V<rsub|2>> are subspaces such that
     V=<math|V<rsub|1>\<oplus\>V<rsub|2>> [see definition: <reference|vector
-    space internal direct sum>] then <math|V=<big|sum><rsup|\<oplus\>><rsub|i\<in\><around*|{|1,.2|}>>V<rsub|i>>
+    space internal direct sum>] then <math|V=<big|oplus><rsub|i\<in\><around*|{|1,.2|}>>V<rsub|i>>
   </example>
 
   <\proof>
@@ -460,7 +460,7 @@
     <math|V> then\ 
 
     <\equation*>
-      V=<big|sum><rsub|i\<in\>I><rsup|\<oplus\>>V<rsub|i>
+      V=<big|oplus><rsub|i\<in\>I>V<rsub|i>
     </equation*>
 
     <\equation*>
@@ -478,8 +478,8 @@
 
     <\description>
       <item*|<math|\<Rightarrow\>>>If <math|v\<in\>V> then as
-      <math|V=<big|sum><rsup|\<oplus\>><rsub|i\<in\>I>V<rsub|i>> there exist
-      a <with|font-series|bold|unique ><math|<around*|{|v<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>V>
+      <math|V=<big|oplus><rsub|i\<in\>I>V<rsub|i>> there exist a
+      <with|font-series|bold|unique ><math|<around*|{|v<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>V>
       with <math|\<forall\>i\<in\>I> <math|v<rsub|i>\<in\>V<rsub|i>> and
       <math|v=<big|sum><rsub|i\<in\>I>v<rsub|i>> so that
       <math|v\<in\><big|sum><rsub|i\<in\>I>V<rsub|i>>. Hence
@@ -521,10 +521,9 @@
       <math|u<rsub|i>=0> then <math|\<forall\>i\<in\>I>
       <math|u<rsub|i>=0\<in\>V<rsub|i>> [as <math|V<rsub|i>> is a subspace of
       <math|V>] and <math|0=<big|sum><rsub|i\<in\>I>u<rsub|i>=0>. Hence as
-      <math|V=<big|sum><rsup|\<oplus\>><rsub|i\<in\>I>V<rsub|i>> we have by
-      uniqueness that <math|\<forall\>i\<in\>I> <math|w<rsub|i>=u<rsub|i>=0>,
-      more in particular <math|-v=w<rsub|k>=0> so that <math|v=0>. Hence we
-      have\ 
+      <math|V=<big|oplus><rsub|i\<in\>I>V<rsub|i>> we have by uniqueness that
+      <math|\<forall\>i\<in\>I> <math|w<rsub|i>=u<rsub|i>=0>, more in
+      particular <math|-v=w<rsub|k>=0> so that <math|v=0>. Hence we have\ 
 
       <\equation*>
         V<rsub|k><big|cap><big|sum><rsub|i\<in\>I\\<around*|{|k|}>>V<rsub|i>=<around*|{|0|}>
@@ -566,6 +565,95 @@
     </description>
   </proof>
 
+  <\theorem>
+    <label|direct sum and bijection>If <math|V> is a vector space over a
+    field, <math|I> finite, <math|<around*|{|V<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|V|)>>
+    a finite family of sub spaces of <math|V> and
+    <math|\<sigma\>:J\<rightarrow\>I> a bijection such that
+    <math|V=<big|oplus><rsub|i\<in\>J>V<rsub|\<sigma\><around*|(|i|)>>> then
+    <math|V=<big|oplus><rsub|i\<in\>I>V<rsub|i>>
+  </theorem>
+
+  <\proof>
+    As <math|V=<big|oplus><rsub|i\<in\>J>V+\<sigma\><around*|(|i|)>> we have
+    by [theorem: <reference|direct sum conditions>] that
+
+    <\equation>
+      <label|eq 12.5.125>V=<big|sum><rsub|i\<in\>J>V<rsub|\<sigma\><around*|(|i|)>>
+    </equation>
+
+    and\ 
+
+    <\equation>
+      <label|eq 12.6.125>\<forall\>k\<in\>I<text| we have
+      >V<rsub|\<sigma\><around*|(|k|)>><big|cap><big|sum><rsub|i\<in\>I\\<around*|{|k|}>>V<rsub|\<sigma\><around*|(|i|)>>=<around*|{|0|}>
+    </equation>
+
+    Now using [theorem: <reference|direct sum of sets properties>] we have
+    that <math|<big|sum><rsub|i\<in\>J>V<rsub|\<sigma\><around*|(|i|)>>=<big|sum><rsub|i\<in\>I>V<rsub|i>>
+    so that [eq: <reference|eq 12.5.125>] becomes\ 
+
+    <\equation>
+      <label|eq 12.7.125>V=<big|sum><rsub|i\<in\>I>V<rsub|i>
+    </equation>
+
+    Let <math|l\<in\>I> and take <math|k=\<sigma\><rsup|-1><around*|(|l|)>\<in\>J>
+    so that <math|l=\<sigma\><around*|(|k|)>>. Let
+    <math|i\<in\>\<sigma\><around*|(|J\\<around*|{|k|}>|)>> then
+    <math|\<exists\>j\<in\>J> with <math|j\<neq\>k> such that
+    <math|i=\<sigma\><around*|(|j|)>>. Assume that <math|i=l> then
+    <math|\<sigma\><around*|(|j|)>=i=l=\<sigma\><around*|(|k|)>\<Rightarrowlim\><rsub|\<sigma\><text|
+    is injective>>j=k> contradicting <math|j\<neq\>k>, hence <math|i\<neq\>l>
+    so that <math|i\<in\>\<sigma\><around*|(|J|)>\\<around*|{|l|}>>, proving
+    that
+
+    <\equation*>
+      \<sigma\><around*|(|J\\<around*|{|k|}>|)>\<subseteq\>\<sigma\><around*|(|J|)>\\<around*|{|l|}>
+    </equation*>
+
+    On the other hand if <math|i\<in\>\<sigma\><around*|(|J|)>\\<around*|{|l|}>>
+    then <math|\<exists\>j\<in\>J> such that
+    <math|i=\<sigma\><around*|(|j|)>> and <math|i\<neq\>l>, assume that
+    <math|j=k> then <math|i=\<sigma\><around*|(|j|)>=\<sigma\><around*|(|k|)>=l>
+    contradicting <math|i\<neq\>l>, hence <math|j\<neq\>k> so that
+    <math|i\<in\>\<sigma\><around*|(|J\\<around*|{|k|}>|)>>, proving that
+
+    <\equation*>
+      \<sigma\><around*|(|J|)>\\<around*|{|l|}>\<subseteq\>\<sigma\><around*|(|J\\<around*|{|k|}>|)>
+    </equation*>
+
+    As <math|\<sigma\>:J\<rightarrow\>I> is a bijection we have that
+    <math|\<sigma\><around*|(|J|)>=I> so that
+    <math|><math|\<sigma\><around*|(|J\\<around*|{|k|}>|)>=I\\<around*|{|l|}>>
+    hence\ 
+
+    <\equation*>
+      \<sigma\><rsub|\|J\\<around*|{|k|}>>:J\\<around*|{|k|}>\<rightarrow\>\<sigma\><around*|(|J\\<around*|{|k|}>|)>=I\\<around*|{|l|}><text|
+      is a bijection>
+    </equation*>
+
+    Applying then [theorem: <reference|direct sum of sets properties>] we
+    have that
+
+    <\equation*>
+      <big|sum><rsub|i\<in\>J\\<around*|{|k|}>>V<rsub|\<sigma\><around*|(|i|)>>=<big|sum><rsub|i\<in\>I\\<around*|{|k|}>>V<rsub|i>
+    </equation*>
+
+    so that
+
+    <\equation*>
+      V<rsub|l><big|cap><big|sum><rsub|i\<in\>I\\<around*|{|k|}>>V<rsub|i>=V<rsub|\<sigma\><around*|(|k|)>><big|cap><big|sum><rsub|i\<in\>J\\<around*|{|k|}>>V<rsub|\<sigma\><around*|(|i|)>>\<equallim\><rsub|<text|[eq:
+      <reference|eq 12.6.125>]>><around*|{|0|}>
+    </equation*>
+
+    Combining this with [eq: <reference|eq 12.7.125>] proves, using [theorem:
+    <reference|direct sum conditions>], that\ 
+
+    <\equation*>
+      V=<big|oplus><rsub|i\<in\>I>V<rsub|i>
+    </equation*>
+  </proof>
+
   \;
 
   \;
@@ -586,8 +674,10 @@
   <\collection>
     <associate|auto-1|<tuple|12|?>>
     <associate|auto-2|<tuple|13|?>>
-    <associate|direct sum|<tuple|12.7|?>>
+    <associate|direct sum|<tuple|12.5|?>>
+    <associate|direct sum and bijection|<tuple|12.9|?>>
     <associate|direct sum conditions|<tuple|12.8|?>>
+    <associate|direct sum induction|<tuple|12.10|?>>
     <associate|direct sum of sets|<tuple|12.2|?>>
     <associate|direct sum of sets properties|<tuple|12.3|?>>
     <associate|direct sum of subspaces|<tuple|12.4|?>>
@@ -598,14 +688,18 @@
     <associate|eq 12.2.124|<tuple|12.2|?>>
     <associate|eq 12.3.124|<tuple|12.4|?>>
     <associate|eq 12.3.125|<tuple|12.3|?>>
+    <associate|eq 12.5.125|<tuple|12.5|?>>
+    <associate|eq 12.6.125|<tuple|12.6|?>>
+    <associate|eq 12.7.125|<tuple|12.7|?>>
+    <associate|eq 12.8.125|<tuple|12.8|?>>
   </collection>
 </references>
 
 <\auxiliary>
   <\collection>
     <\associate|toc>
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|12<space|2spc>Direct
-      Sum> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|12<space|2spc>Internal
+      Direct Sum> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|13<space|2spc>Tensor
