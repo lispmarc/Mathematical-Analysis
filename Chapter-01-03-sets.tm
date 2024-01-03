@@ -12697,6 +12697,19 @@
     so that <math|x\<sim\>m> hence <math|x\<leqslant\>m>.
   </proof>
 
+  From this point on we will gradually start to use the simpler notations for
+  functions and families that are mentioned in the references [definition:
+  <reference|function f(x)>], [theorem: <reference|function equality (2)>],
+  [theorem: <reference|function alternative for composition>], [theorem:
+  <reference|function injectivity, surjectivity>], [theorem:
+  <reference|function simple definition>], [notation: <reference|function
+  simple definition notation>], [theorem: <reference|family union (2)>] and
+  [theorem: <reference|family intersection (2)>] without explicit referring
+  to them. This to avoid excessive notation and difference of notation
+  between this text and standard mathematical practice.
+
+  \;
+
   As a interesting application of the Axiom of Choice we prove that every
   function can be restricted to a injection or bijection.
 
@@ -12792,23 +12805,58 @@
     </enumerate>
   </proof>
 
-  From this point on we will gradually start to use the simpler notations for
-  functions and families that are mentioned in the references [definition:
-  <reference|function f(x)>], [theorem: <reference|function equality (2)>],
-  [theorem: <reference|function alternative for composition>], [theorem:
-  <reference|function injectivity, surjectivity>], [theorem:
-  <reference|function simple definition>], [notation: <reference|function
-  simple definition notation>], [theorem: <reference|family union (2)>] and
-  [theorem: <reference|family intersection (2)>] without explicit referring
-  to them. This to avoid excessive notation and difference of notation
-  between this text and standard mathematical practice. Another
-  simplification of notation that we introduce is the following.
+  Another application of the Axiom of Choice is the following.
 
-  <\notation>
-    If <math|f:A\<times\>B\<rightarrow\>C> is a function then
-    <math|f<around*|(|<around*|(|x,y|)>|)>> is noted as
-    <math|f<around*|(|x,y|)>>
-  </notation>
+  <\theorem>
+    <label|choice family on preimage>Let <math|I,X,Y> be sets,
+    <math|f:X\<rightarrow\>Y> a function and
+    <math|<around*|{|y<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>f<around*|(|X|)>>
+    then <math|\<exists\><around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>X>
+    such that <math|\<forall\>i\<in\>I> we have
+    <math|f<around*|(|x<rsub|i>|)>=y<rsub|i>>
+  </theorem>
+
+  <\proof>
+    Define\ 
+
+    <\equation*>
+      <around*|{|A<rsub|i>|}><rsub|i\<in\>I><text| by
+      >A<rsub|i>=f<rsup|-1><around*|(|<around*|{|y<rsub|i>|}>|)>\<subseteq\>X
+    </equation*>
+
+    Let <math|i\<in\>I> then, as <math|y<rsub|i>\<in\>f<around*|(|X|)>>,
+    there exist a <math|x\<in\>X> such that
+    <math|f<around*|(|x|)>=y<rsub|i>>, hence
+    <math|x\<in\>f<rsup|-1><around*|(|<around*|{|y<rsub|i>|}>|)>=A<rsub|i>>.
+    This proves that\ 
+
+    <\equation*>
+      \<forall\>i\<in\>I<text| >A<rsub|i>\<neq\>\<varnothing\>
+    </equation*>
+
+    Using the Axiom of Choice [axiom: <reference|choice axiom of choice
+    equivalences (1)>(3)] there exist a function\ 
+
+    <\equation*>
+      x:I\<rightarrow\><big|cup><rsub|i\<in\>I>A<rsub|i><text| such that
+      >\<forall\>i\<in\>I<text| we have >x<around*|(|i|)>\<in\>A<rsub|i>
+    </equation*>
+
+    If <math|i\<in\>I> we have that that <math|x<around*|(|i|)>\<in\>A<rsub|i>>
+    so that <math|f<around*|(|x<around*|(|i|)>|)>\<in\><around*|{|y<rsub|i>|}>\<Rightarrow\>f<around*|(|x<rsub|i>|)>=y<rsub|i>>,
+    this together with the fact that we can extend the function
+    <math|x:I\<rightarrow\><big|cup><rsub|i\<in\>I>A<rsub|i>> to
+    <math|f:I\<rightarrow\>X> proves that we have found a function\ 
+
+    <\equation*>
+      x:I\<rightarrow\>X<text| such that >\<forall\>i\<in\>I<text| we have
+      >f<around*|(|x<rsub|i>|)>=y<rsub|i>
+    </equation*>
+
+    This function defines then the family
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>X> satisfying
+    <math|\<forall\>i\<in\>I> <math|f<around*|(|x<rsub|i>|)>=y<rsub|i>>.
+  </proof>
 
   \;
 
@@ -12984,6 +13032,7 @@
     <associate|choice axiom of choice equivalences (1)|<tuple|3.100|?>>
     <associate|choice choice function|<tuple|3.97|?>>
     <associate|choice existence of successor|<tuple|3.104|?>>
+    <associate|choice family on preimage|<tuple|3.126|?>>
     <associate|choice function to injection/bijection|<tuple|3.125|?>>
     <associate|choice intersection of p-sewuences|<tuple|3.107|?>>
     <associate|choice lemma p-sequence|<tuple|3.105|?>>
@@ -13163,6 +13212,7 @@
     <associate|eq 3.70.019|<tuple|3.71|?>>
     <associate|eq 3.71.019|<tuple|3.72|?>>
     <associate|eq 3.72.019|<tuple|3.73|?>>
+    <associate|eq 3.74.127|<tuple|3.74|?>>
     <associate|eq 3.8.011|<tuple|3.8|?>>
     <associate|eq 3.9.011|<tuple|3.9|?>>
     <associate|equivalence relation|<tuple|3.5|?>>
