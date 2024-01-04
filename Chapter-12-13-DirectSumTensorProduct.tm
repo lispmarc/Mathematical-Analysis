@@ -888,8 +888,8 @@
     <label|tensor product><dueto|Tensor Product>Let <math|n\<in\>\<bbb-N\>>,
     <math|<around*|{|V<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>> a
     finite family of vector spaces over a field <math|F> then a
-    <with|font-series|bold|tensor product> of
-    <math|<around*|{|V<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    <with|font-series|bold|tensor product> <with|font-series|bold|of
+    <math|<around*|{|V<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>>
     is a pair <math|<around*|\<langle\>|P,\<nu\>|\<rangle\>>> where\ 
 
     <\enumerate>
@@ -1095,13 +1095,11 @@
     </equation*>
   </proof>
 
-  TODO check this\ 
-
-  Next we must prove that given a finite family of vector spaces we can
-  construct a tensor product, that then wil et <with|font-series|bold|the>
-  tensor product. First we show how we can given a set and a field
-  <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> we can create a vector
-  space that has this set as a 'basis'.
+  Next we must prove that given a finite family of vector spaces, we can
+  construct a tensor product. First we show how, given a set and a field
+  <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>, we can create a vector
+  space that has this set as a 'basis' and the operators are based on the
+  operators of the field.
 
   <\definition>
     <label|vector space free predefinition><index|<math|F<around*|(|X,F|)>>>Let
@@ -1114,14 +1112,9 @@
     </equation*>
 
     In other words <math|\<cal-F\><around*|(|X,F|)>> is the set of graphs of
-    functions from <math|X> to <math|F> such that is non zero for a finite
-    number of elements in <math|F>.\ 
+    functions from <math|X> to <math|F> such that the function is non zero
+    for a finite number of elements in <math|F>.\ 
   </definition>
-
-  We define now the functions from <math|X> to <math|F> that will become the
-  addition operator, scalar multiplication in
-  <math|\<cal-F\><around*|(|X,F|)>> and the function to embed <math|X> in
-  <math|\<cal-F\><around*|(|X,F|)>>.
 
   <\definition>
     <label|vector space free operations>Let <math|X> be a non empty set and a
@@ -1148,16 +1141,16 @@
     [see the above definition] is a vector space over the field
     <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> where the neutral
     element is <math|C<rsub|0>>. This vector space is called the
-    <with|font-series|bold|free vector space over a set>.\ 
+    <with|font-series|bold|free vector space over a X>.\ 
   </theorem>
 
   <\proof>
-    Let <math|f,g\<in\>\<cal-F\><around*|(|X,F|)>>, if
+    Let <math|f,g\<in\>\<cal-F\><around*|(|X,F|)>>. If
     <math|x\<in\><around*|(|f+g|)><rsup|-1><around*|(|F\\<around*|{|0|}>|)>>
     then we have <math|<around*|(|f+g|)><around*|(|x|)>\<in\>F\\<around*|{|0|}>>
-    so that <math|f<around*|(|x|)>+g<around*|(|x|)>\<neq\>0>. Then we must
-    have <math|f<around*|(|x|)>\<neq\>0\<vee\>g<around*|(|x|)>\<neq\>0>
-    [otherwise <math|<around*|(|f+g|)><around*|(|x|)>=f<around*|(|x|)>+g<around*|(|x|)>=0>],
+    so that <math|f<around*|(|x|)>+g<around*|(|x|)>\<neq\>0>. So we must have
+    <math|f<around*|(|x|)>\<neq\>0\<vee\>g<around*|(|x|)>\<neq\>0> [otherwise
+    <math|<around*|(|f+g|)><around*|(|x|)>=f<around*|(|x|)>+g<around*|(|x|)>=0>],
     hence <math|x\<in\>f<rsup|-1><around*|(|F\\<around*|{|0|}>|)><big|cup>g<rsup|-1><around*|(|F\\<around*|{|0|}>|)>>,
     proving that
 
@@ -1170,21 +1163,21 @@
     are finite hence using [theorems: <reference|complex finite subset>,
     <reference|union of two finite sets is finite>] we have that
     <math|<around*|(|f+g|)><rsup|-1><around*|(|F\\<around*|{|0|}>|)>> is a
-    finite set so that <math|f+g\<in\>\<cal-F\><around*|(|X,F|)>>\ 
+    finite set so that <math|f+g\<in\>\<cal-F\><around*|(|X,F|)>> and
 
     <\equation*>
       +:\<cal-F\><around*|(|X,F|)>\<times\>\<cal-F\><around*|(|X,F|)>\<rightarrow\>\<cal-F\><around*|(|X,F|)><text|
       is well defined>
     </equation*>
 
-    Let <math|\<alpha\>\<in\>F> and <math|f\<in\>\<cal-F\><around*|(|X,F|)>>,
-    if <math|x\<in\><around*|(|\<alpha\>\<cdot\>f|)><rsup|-1><around*|(|F\\<around*|{|0|}>|)>>
+    Let <math|\<alpha\>\<in\>F> and <math|f\<in\>\<cal-F\><around*|(|X,F|)>>.
+    If <math|x\<in\><around*|(|\<alpha\>\<cdot\>f|)><rsup|-1><around*|(|F\\<around*|{|0|}>|)>>
     then <math|\<alpha\>\<cdot\>f<around*|(|x|)>\<in\>F\\<around*|{|0|}>> so
     that <math|\<alpha\>\<cdot\>f<around*|(|x|)>\<neq\>0> hence we must have
     that <math|f<around*|(|x|)>\<neq\>0> or
-    <math|x\<in\>f<rsup|-1><around*|(|F\\<around*|{|0|}>|)>>. Hence
+    <math|x\<in\>f<rsup|-1><around*|(|F\\<around*|{|0|}>|)>> proving
     <math|<around*|(|\<alpha\>\<cdot\>f|)><rsup|-1><around*|(|F\\<around*|{|0|}>|)>\<subseteq\>f<rsup|-1><around*|(|F\\<around*|{|0|}>|)>>
-    a finite set, so by [theorems: <reference|complex finite subset>]
+    [a finite set], so by [theorems: <reference|complex finite subset>]
     <math|><math|f<rsup|-1><around*|(|F\\<around*|{|0|}>|)>> is finite or
     <math|\<alpha\>\<cdot\>f\<in\>\<cal-F\><around*|(|X,F|)>>, proving that\ 
 
@@ -1196,7 +1189,7 @@
     Further for <math|C<rsub|0>:X\<rightarrow\>F> defined by
     <math|C<rsub|0><around*|(|x|)>=0> we have trivially that
     <math|<around*|(|C<rsub|0>|)><rsup|-1><around*|(|F\\<around*|{|0|}>|)>=\<varnothing\>>
-    aa finite set hence\ 
+    [which is finite] hence\ 
 
     <\equation*>
       C<rsub|0>\<in\>\<cal-F\><around*|(|X,F|)>
@@ -1251,7 +1244,7 @@
         then <math|<around*|(|-f|)><around*|(|x|)>\<neq\>0\<Rightarrow\>-f<around*|(|x|)>\<neq\>0\<Rightarrow\>f<around*|(|x|)>\<neq\>0>,
         proving that <math|x\<in\>f<rsup|-1><around*|(|F\\<around*|{|0|}>|)>>.
         Hence <math|><math|<around*|(|-f|)><rsup|-1><around*|(|F\\<around*|{|0|}>|)>\<subseteq\>f<rsup|-1><around*|(|F\\<around*|{|0|}>|)>>
-        a finite set, proving that <math|<around*|(|-f|)><rsup|-1><around*|(|F\\<around*|{|0|}>|)>>
+        [a finite set], proving that <math|<around*|(|-f|)><rsup|-1><around*|(|F\\<around*|{|0|}>|)>>
         is finite so that <math|-f\<in\>\<cal-F\><around*|(|X,F|)>>. Next
         <math|\<forall\>x\<in\>X> we have\ 
 
@@ -1260,7 +1253,7 @@
         </eqnarray*>
 
         proving that <math|<around*|(|-f|)>+f\<equallim\><rsub|commutativity>f+<around*|(|-f|)>=C<rsub|0>>
-        </description>
+      </description>
 
       <item>Additional vector space axioms:
 
@@ -1298,13 +1291,22 @@
         <\equation*>
           <around*|(|\<alpha\>\<cdot\>\<beta\>|)>\<cdot\>f=\<alpha\>\<cdot\><around*|(|\<beta\>\<cdot\>f|)>
         </equation*>
+
+        <item>If <math|<math|f\<in\>\<cal-F\><around*|(|X,Y|)>>> then
+        <math|\<forall\>x\<in\>X> we have\ 
+
+        <\equation*>
+          <around*|(|1\<cdot\>f|)><around*|(|x|)>=1\<cdot\>f<around*|(|x|)>=f<around*|(|x|)>
+        </equation*>
+
+        proving that <math|1\<cdot\>f=f>
       </enumerate>
     </enumerate>
   </proof>
 
   We prove now that <math|<around*|{|\<delta\><rsub|a>\|a\<in\>X|}>> is a
-  basis for for and that <math|X> can be embedded in
-  <math|\<cal-F\><around*|(|X,F|)>> via the injection
+  basis for for <math|\<cal-F\><around*|(|X,F|)>> and that <math|X> can be
+  embedded in <math|\<cal-F\><around*|(|X,F|)>> using the injection
   <math|\<delta\>:X\<rightarrow\>\<cal-F\><around*|(|X,F|)>>.
 
   <\theorem>
@@ -1317,8 +1319,8 @@
       injection, hence <math|X> is embedded in
       <math|\<cal-F\><around*|(|X,F|)>>
 
-      <item><math|<around*|{|\<delta\><rsub|a>\|a\<in\>X|}>> is a basis of
-      <math|X>
+      <item><math|\<delta\><around*|(|X|)>=<around*|{|\<delta\><around*|(|a|)>\|a\<in\>X|}>=<around*|{|\<delta\><rsub|a>\|a\<in\>X|}>>
+      is a basis of <math|X>
     </enumerate>
   </theorem>
 
@@ -1329,17 +1331,17 @@
       <item>First we must ensure that <math|\<forall\>a\<in\>X>
       <math|\<delta\><rsub|a>\<in\>\<cal-F\><around*|(|X,F|)>>, so let
       <math|x\<in\><around*|(|\<delta\><rsub|a>|)><rsup|-1><around*|(|F\\<around*|{|0|}>|)>>
-      then we must have that <math|<around*|(|\<delta\><rsub|a>|)><around*|(|x|)>\<neq\>0>,
-      as <math|<around*|(|\<delta\><rsub|a>|)><around*|(|x|)>=<choice|<tformat|<table|<row|<cell|1<text|
+      then we must have that <math|<around*|(|\<delta\><rsub|a>|)><around*|(|x|)>\<neq\>0>.
+      As <math|<around*|(|\<delta\><rsub|a>|)><around*|(|x|)>=<choice|<tformat|<table|<row|<cell|1<text|
       if >x=a>>|<row|<cell|0<text| if >x\<in\>X\\<around*|{|a|}>>>>>>>, we
-      must have that <math|x=a> hence <math|><math|<around*|(|\<delta\><rsub|a>|)><rsup|-1><around*|(|F\\<around*|{|0|}>|)>\<subseteq\><around*|{|a|}>>
-      a finite set. So\ 
+      must have that <math|x=a>, hence <math|><math|<around*|(|\<delta\><rsub|a>|)><rsup|-1><around*|(|F\\<around*|{|0|}>|)>\<subseteq\><around*|{|a|}>>
+      a finite set. Hence
 
       <\equation*>
         \<forall\>a\<in\>X<text| we have >\<delta\><rsub|a>\<in\>\<cal-F\><around*|(|X,F|)>
       </equation*>
 
-      So the following is well defined
+      So the following function is well defined
 
       <\equation*>
         \<delta\>:X\<rightarrow\>\<cal-F\><around*|(|X,F|)><text| >where
@@ -1347,12 +1349,12 @@
       </equation*>
 
       If now <math|\<delta\><around*|(|a|)>=\<delta\><around*|(|b|)>> then
-      <math|\<delta\><rsub|a>=\<delta\><rsub|b><rsub|>> and assume that
+      <math|\<delta\><rsub|a>=\<delta\><rsub|b><rsub|>>, assume that
       <math|a\<neq\>b> then <math|\<delta\><rsub|a><around*|(|b|)>\<equallim\><rsub|b\<in\>X\\<around*|{|a|}>>0>
       and <math|\<delta\><rsub|b><around*|(|b|)>=1>, as <math|1\<neq\>0> in a
-      field we have that <math|\<delta\><rsub|a><around*|(|b|)>\<neq\>\<delta\><rsub|b><around*|(|b|)>>
+      field, we have <math|\<delta\><rsub|a><around*|(|b|)>\<neq\>\<delta\><rsub|b><around*|(|b|)>>
       contradicting <math|\<delta\><rsub|a>=\<delta\><rsub|b>>, hence
-      <math|a=b>. So\ 
+      <math|a=b>. So we have proved that
 
       <\equation*>
         \<delta\><text| is injective>
@@ -1367,11 +1369,12 @@
       Let <math|I\<subseteq\>B>, <math|I> finite and
       <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\>B>\<subseteq\>F> such
       that <math|<big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>\<cdot\>i=0>. Let
-      <math|j\<in\>I> then <math|\<exists\>a\<in\>X> such that
-      <math|j=\<delta\><around*|(|a|)>>. If <math|i\<in\>I\\<around*|{|j|}>>
-      then <math|\<exists\>b\<in\>X> such that
-      <math|i=\<delta\><around*|(|b|)>> and as <math|i\<neq\>j> we must have
-      <math|a\<neq\>b> hence <math|i<around*|(|a|)>=\<delta\><around*|(|b|)><around*|(|a|)>=\<delta\><rsub|b><around*|(|a|)>=0>.
+      <math|j\<in\>I\<subseteq\>B> then <math|\<exists\>a\<in\>X> such that
+      <math|j=\<delta\><around*|(|a|)>>. If
+      <math|i\<in\>I\\<around*|{|j|}>\<subseteq\>B> then
+      <math|\<exists\>b\<in\>X> such that <math|i=\<delta\><around*|(|b|)>>
+      and as <math|i\<neq\>j> we must have <math|a\<neq\>b> hence
+      <math|i<around*|(|a|)>=\<delta\><around*|(|b|)><around*|(|a|)>=\<delta\><rsub|b><around*|(|a|)>=0>.
       So we have\ 
 
       <\eqnarray*>
@@ -1381,10 +1384,10 @@
       So we have proved that\ 
 
       <\equation*>
-        \<forall\>i\<in\>I<text| >\<alpha\><rsub|i>=0
+        \<forall\>j\<in\>I<text| >\<alpha\><rsub|j>=0
       </equation*>
 
-      hence\ 
+      from which it follows that
 
       <\equation>
         <label|eq 13.9.127>B<text| is linear independent>
@@ -1396,10 +1399,11 @@
 
       <\description>
         <item*|<math|f<rsup|-1><around*|(|F\\<around*|{|0|}>|)>=\<varnothing\>>>Then
-        <math|f=C<rsub|0>> and as <math|X> is non empty a <math|a\<in\>X> and
-        <math|0\<in\>F> such that <math|f=0\<cdot\>\<delta\><rsub|a>>. Hence
-        if we define <math|I=<around*|{|\<delta\><rsub|a>|}>\<subseteq\>B>
-        and <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|\<delta\><rsub|a>|}>>\<subseteq\>F>
+        <math|f=C<rsub|0>> and, as <math|X> is non empty, there exist a
+        <math|a\<in\>X>. Take <math|0\<in\>F> then we can write <math|f> as
+        <math|f=C<rsub|0>=0\<cdot\>\<delta\><rsub|a>>. Hence if we define
+        <math|I=<around*|{|\<delta\><rsub|a>|}>\<subseteq\>B> and
+        <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|\<delta\><rsub|a>|}>>\<subseteq\>F>
         by <math|\<alpha\><rsub|\<delta\><rsub|a>>=0> we have that
         <math|f=0\<cdot\>\<delta\><rsub|a>=<big|sum><rsub|i\<in\><around*|{|\<delta\><rsub|a>|}>>\<alpha\><rsub|i>\<cdot\>i>.
         Hence
@@ -1409,11 +1413,9 @@
         </equation*>
 
         <item*|<math|f<rsup|-1><around*|(|F\\<around*|{|0|}>|)>\<neq\>\<varnothing\>>>Then
-        <math|\<exists\>a\<in\>X> such that <math|f<around*|(|a<rsub|0>|)>=0>
-        and <math|a<rsub|0>\<nin\>f<rsup|-1><around*|(|F\\<around*|{|0|}>|)>>
-        \ As <math|f<rsup|-1><around*|(|F\\<around*|{|0|}>|)>\<subseteq\>X>
-        is finite we have that \ <math|I=<around*|{|\<delta\><rsub|a>\|a\<in\>f<rsup|-1><around*|(|F\\<around*|{|0|}>|)>|}><big|cup><around*|{|\<delta\><rsub|a<rsub|0>>|}>>
-        is finite. As <math|\<delta\>> is injective we have that\ 
+        <math|I=<around*|{|\<delta\><rsub|a>\|a\<in\>f<rsup|-1><around*|(|F\\<around*|{|0|}>|)>|}>\<subseteq\>B>
+        is finite [see theorem: <reference|image of a finite set>] . As
+        <math|\<delta\>> is injective we have that\ 
 
         <\equation*>
           \<delta\>:f<rsup|-1><around*|(|F\\<around*|{|0|}>|)>\<rightarrow\>\<delta\><around*|(|f<rsup|-1><around*|(|F\\<around*|{|0|}>|)>|)>=<around*|{|\<delta\><rsub|a>\|a\<in\>f<rsup|-1><around*|(|F\\<around*|{|0|}>|)>|}><text|
@@ -1424,55 +1426,47 @@
 
         <\equation*>
           <around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\>I><text| by
-          >\<alpha\><rsub|i>=<choice|<tformat|<table|<row|<cell|0<text| if
-          >i=\<delta\><rsub|a<rsub|0>>>>|<row|<cell|f<around*|(|\<delta\><rsup|-1><around*|(|i|)>|)><text|
-          if <math|i\<in\>I\\<around*|{|\<delta\><rsub|a<rsub|0>>|}>>>>>>>>
+          >\<alpha\><rsub|i>=f<around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>
         </equation*>
 
         \ \ then we have for <math|x\<in\>X> either
 
         <\description>
-          <item*|<math|f<around*|(|x|)>=0>>Let
-          <math|i\<in\>I\\<around*|{|\<delta\><rsub|a<rsub|0>>|}>> we have
-          that <math|\<exists\>a\<in\>f<rsup|-1><around*|(|F\\<around*|{|0|}>|)>>
+          <item*|<math|f<around*|(|x|)>=0>>Let <math|i\<in\>I> then
+          \ <math|\<exists\>a\<in\>f<rsup|-1><around*|(|F\\<around*|{|0|}>|)>>
           such that <math|i=\<delta\><rsub|a>>, as
           <math|f<around*|(|a|)>\<neq\>0> we can not have that <math|a=x>
           [because then <math|f<around*|(|a|)>=f<around*|(|x|)>=0>], hence
           <math|\<delta\><rsub|a><around*|(|x|)>=0>. In other words
 
           <\equation*>
-            \<forall\>i\<in\>I\\<around*|{|\<delta\><rsub|a<rsub|0>>|}> we
-            have i<around*|(|x|)>=0
+            \<forall\>i\<in\>I we have i<around*|(|x|)>=0
           </equation*>
 
           So
 
           <\eqnarray*>
-            <tformat|<table|<row|<cell|<around*|(|<big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>\<cdot\>i|)><around*|(|x|)>>|<cell|=>|<cell|<big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>\<cdot\>i<around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\>I\\<around*|{|\<delta\><rsub|a<rsub|0>>|}>>\<alpha\><rsub|i>\<cdot\>i<around*|(|x|)>+<big|sum><rsub|i\<in\><around*|{|a<rsub|0>|}>>\<alpha\><rsub|i>*\<cdot\>i<around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\>I\\<around*|{|a<rsub|0>|}>>\<alpha\><rsub|i>\<cdot\>i<around*|(|x|)>+\<alpha\><rsub|a<rsub|0>>\<cdot\>i<around*|(|\<delta\><rsub|a<rsub|0>>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\>I\\<around*|{|\<delta\><rsub|a<rsub|0>>|}>>\<alpha\><rsub|i>\<cdot\>0+0\<cdot\>i<around*|(|\<delta\><rsub|a<rsub|0>>|)>>>|<row|<cell|>|<cell|=>|<cell|0>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|x|)>>>>>
+            <tformat|<table|<row|<cell|<around*|(|<big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>\<cdot\>i|)><around*|(|x|)>>|<cell|=>|<cell|<big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>\<cdot\>i<around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>\<cdot\>0>>|<row|<cell|>|<cell|=>|<cell|0>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|x|)>>>>>
           </eqnarray*>
 
-          <item*|<math|f<around*|(|x|)>\<neq\>0>>Then as
-          <math|f<around*|(|a<rsub|0>|)>=0> we have that
-          <math|x\<neq\>a<rsub|0>> so that
-          <math|\<delta\><rsub|a<rsub|0>><around*|(|x|)>=0>. Further as
+          <item*|<math|f<around*|(|x|)>\<neq\>0>>As
           <math|f<around*|(|x|)>\<neq\>0> we have that
           <math|x\<in\>f<rsup|-1><around*|(|F\\<around*|{|0|}>|)>> so that
-          <math|\<delta\><rsub|x>\<in\>I\\<around*|{|\<delta\><rsub|a<rsub|0>>|}>>.
-          Let <math|i\<in\>I\\<around*|{|\<delta\><rsub|a<rsub|0>>,\<delta\><rsub|x>|}>>
-          then <math|\<exists\>a\<in\>f<rsup|-1><around*|(|F\\<around*|{|0|}>|)>>
-          with <math|a\<neq\>a<rsub|0>,x> such that
-          <math|i=\<delta\><rsub|a>>, hence
+          <math|\<delta\><rsub|x>\<in\>I>. Let
+          <math|i\<in\>I\\<around*|{|\<delta\><rsub|x>|}>> then
+          <math|\<exists\>a\<in\>f<rsup|-1><around*|(|F\\<around*|{|0|}>|)>>
+          with <math|a\<neq\>x> such that <math|i=\<delta\><rsub|a>>, hence
           <math|i<around*|(|x|)>=\<delta\><rsub|a><around*|(|x|)>\<equallim\><rsub|x\<neq\>a>0>.
           So
 
           <\eqnarray*>
-            <tformat|<table|<row|<cell|<around*|(|<big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>\<cdot\>i|)><around*|(|x|)>>|<cell|=>|<cell|<big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>\<cdot\>i<around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\>I\\<around*|{|\<delta\><rsub|a<rsub|0>>,\<delta\><rsub|x>|}>>\<alpha\><rsub|i>\<cdot\>i<around*|(|x|)>+<big|sum><rsub|i\<in\>I\\<around*|{|\<delta\><rsub|a<rsub|0>>|}>>\<alpha\><rsub|i>\<cdot\>i<around*|(|x|)>+<big|sum><rsub|i\<in\>I\\<around*|{|\<delta\><rsub|x>|}>>\<alpha\><rsub|i>\<cdot\>i<around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\>I\\<around*|{|\<delta\><rsub|a<rsub|0>>,\<delta\><rsub|x>|}>>\<alpha\><rsub|i>\<cdot\>i<around*|(|x|)>+\<alpha\><rsub|\<delta\><rsub|\<alpha\><rsub|0>>>\<cdot\>\<delta\><rsub|a<rsub|0>><around*|(|x|)>+\<alpha\><rsub|\<delta\><around*|(|x|)>>\<cdot\>\<delta\><rsub|x><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\>I\\<around*|{|\<delta\><rsub|a<rsub|0>>,\<delta\><rsub|x>|}>>\<alpha\><rsub|i>\<cdot\>0+\<alpha\><rsub|\<delta\><rsub|\<alpha\><rsub|0>>>\<cdot\>0+f<around*|(|\<delta\><rsup|-1><around*|(|\<delta\><rsub|x>|)>|)>\<cdot\>\<delta\><rsub|x><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|\<delta\><rsup|-1><around*|(|\<delta\><rsub|x>|)>|)>\<cdot\>\<delta\><rsub|x><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|x|)>\<cdot\>1>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|x|)>>>>>
+            <tformat|<table|<row|<cell|<around*|(|<big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>\<cdot\>i|)><around*|(|x|)>>|<cell|=>|<cell|<big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>\<cdot\>i<around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\>I\\<around*|{|\<delta\><rsub|x>|}>>\<alpha\><rsub|i>\<cdot\>i<around*|(|x|)>+<big|sum><rsub|i\<in\>I\\<around*|{|\<delta\><rsub|x>|}>>\<alpha\><rsub|i>\<cdot\>i<around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\>I\\<around*|{|\<delta\><rsub|a<rsub|0>>,\<delta\><rsub|x>|}>>\<alpha\><rsub|i>\<cdot\>i<around*|(|x|)>+\<alpha\><rsub|\<delta\><around*|(|x|)>>\<cdot\>\<delta\><rsub|x><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\>I\\<around*|{|\<delta\><rsub|a<rsub|0>>,\<delta\><rsub|x>|}>>\<alpha\><rsub|i>\<cdot\>0+f<around*|(|\<delta\><rsup|-1><around*|(|\<delta\><rsub|x>|)>|)>\<cdot\>\<delta\><rsub|x><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|\<delta\><rsup|-1><around*|(|\<delta\><rsub|x>|)>|)>\<cdot\>\<delta\><rsub|x><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|x|)>\<cdot\>1>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|x|)>>>>>
           </eqnarray*>
         </description>
 
         So in all cases we have <math|<around*|(|<big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>\<cdot\>i|)><around*|(|x|)>=f<around*|(|x|)>>
         proving that <math|f=<big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>\<cdot\>i>,
-        proving as <math|I\<subseteq\>B> that\ 
+        so, as <math|I\<subseteq\>B>, we have\ 
 
         <\equation*>
           f\<in\>span<around*|(|B|)>
@@ -1493,6 +1487,265 @@
     </enumerate>
   </proof>
 
+  <\definition>
+    <label|tensor null space>Let <math|n\<in\>\<bbb-N\>,<around*|{|V<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a family of vector spaces over a field <math|F> and
+    <math|<around*|\<langle\>|\<cal-F\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,|}>>V<rsub|i>|)>,+,\<cdot\>|\<rangle\>>>
+    the free vector space over <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>>
+    then
+
+    <\equation*>
+      \<cal-N\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>,F|)>\<subseteq\>\<cal-F\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,|}>>V<rsub|i>|)>
+    </equation*>
+
+    is defined by\ 
+
+    <\equation*>
+      \<cal-N\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>,F|)>=<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<cal-N\><rsub|i>
+    </equation*>
+
+    where\ 
+
+    <\equation*>
+      \<cal-N\><rsub|i>=<around*|{|\<delta\><rsub|<around*|[|i\<rightarrow\>x+\<alpha\>\<cdot\>y|]>>-\<delta\><rsub|<around*|[|i\<rightarrow\>x|]>>-\<alpha\>\<cdot\>\<delta\><rsub|<around*|[|i\<rightarrow\>y|]>x>\|x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>V<rsub|i><text|,
+      >x,y\<in\>V<rsub|i><text|, >\<alpha\>\<in\>F|}>
+    </equation*>
+
+    \ and for <math|i\<in\><around*|{|1,\<ldots\>,n|}>>,
+    <math|x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>V<rsub|i>>
+    and <math|y\<in\>V<rsub|i>> we have
+
+    <\equation*>
+      \<forall\>k\<in\><around*|{|1,\<ldots\>,n|}><text| we have
+      ><around*|(|<around*|[|i\<rightarrow\>y|]>x|)><rsub|k>=<choice|<tformat|<table|<row|<cell|y<text|
+      if >k=i>>|<row|<cell|x<rsub|i><text| if
+      >k\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>>>>>
+    </equation*>
+
+    in other words\ 
+
+    <\equation*>
+      <around*|[|i\<rightarrow\>y|]>x=<around*|{|x<rsub|1>,\<ldots\>,x<rsub|i-1>,y,x<rsub|i+1>,\<ldots\>,x<rsub|n>|}>
+    </equation*>
+
+    <\equation*>
+      \;
+    </equation*>
+  </definition>
+
+  <\definition>
+    <label|tensor tensor product of spaces>Let
+    <math|n\<in\>\<bbb-N\>,<around*|{|V<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a family of vector spaces over a field <math|F> nd
+    <math|<around*|\<langle\>|\<cal-F\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,|}>>V<rsub|i>|)>,+,\<cdot\>|\<rangle\>>>
+    the free vector space over <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>>
+    then <math|V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|n>> is the factor
+    space [see theorem: <reference|vector space factor space>] defined by\ 
+
+    <\equation*>
+      V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|n>=\<cal-F\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,|}>>V<rsub|i>|)>/span<around*|(|\<cal-N\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>,F|)>|)>
+    </equation*>
+
+    giving the vector space
+
+    <\equation*>
+      <around*|\<langle\>|V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|n>,+,\<cdot\>|\<rangle\>>=<around*|\<langle\>|\<cal-F\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,|}>>V<rsub|i>|)>/span<around*|(|\<cal-N\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>,F|)>|)>,+,\<cdot\>|\<rangle\>>
+    </equation*>
+
+    over the field <math|F>
+
+    <\note>
+      In the above definition we must use the span of
+      <math|\<cal-N\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>,F|)>>
+      because <math|\<cal-N\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>,F|)>>
+      is not a sub-space of <math|\<cal-F\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,|}>>V<rsub|i>|)>>.
+    </note>
+  </definition>
+
+  <\definition>
+    <label|tensor product of vectors>Let <math|n\<in\>\<bbb-N\>,<around*|{|V<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a family of vector spaces over a field <math|F> then we define\ 
+
+    <\equation*>
+      \<otimes\>:<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|1<inactive|<hybrid|i>>>\<rightarrow\>V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|n>
+      by\<otimes\>=\<pi\>\<circ\>\<delta\>
+    </equation*>
+
+    where:\ 
+
+    <\enumerate>
+      <item><math|\<delta\>:<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>\<rightarrow\>\<cal-F\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,|}>>V<rsub|i>|)>>
+      is defined in [theorem: <reference|vector space free basis and
+      embedding>] by\ 
+
+      <\equation*>
+        \<delta\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>=\<delta\><rsub|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>><text|
+        and >\<delta\><rsub|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>><around*|(|r<rsub|1>,\<ldots\>,r<rsub|n>|)>=<choice|<tformat|<table|<row|<cell|1<text|
+        if ><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>=<around*|(|r<rsub|1>,\<ldots\>,r<rsub|n>|)>>>|<row|<cell|0<text|
+        if ><around*|(|\<Pi\><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>|)>\\<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>>>>>
+      </equation*>
+
+      <item><math|\<pi\>:\<cal-F\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,|}>>V<rsub|i>|)>\<rightarrow\>\<cal-F\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,|}>>V<rsub|i>|)>/span<around*|(|\<cal-N\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>,F|)>|)>>
+      is defined in [theorem: <reference|vector space factor space
+      projection>] by\ 
+
+      <\equation*>
+        \<pi\><around*|(|x|)>=<around*|{|y\|x-y\<in\>span<around*|(|\<cal-N\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>,F|)>|)>|}>
+      </equation*>
+    </enumerate>
+
+    If <math|<around*|(|v<rsub|1>,\<ldots\>,v<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>>
+    then we note <math|\<otimes\><around*|(|v<rsub|1>,\<ldots\>,v<rsub|n>|)>>
+    as <math|v<rsub|1>\<otimes\>\<cdots\>\<otimes\>v<rsub|n>> and call this
+    the tensor product of the vectors <math|v<rsub|1>,\<ldots\>,v<rsub|n>>.\ 
+  </definition>
+
+  <\note>
+    We use the word <with|font-series|bold|tensor product> for two different
+    things. Given a family <math|<around*|{|V<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    of vector spaces then we have a tensor product of
+    <math|<around*|{|V<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    [see definition: <reference|tensor product>] or the tensor product of
+    vectors in the above definition.\ 
+  </note>
+
+  We are now ready to prove that for every family
+  <math|<around*|{|V<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+  there exists a tensor product of <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>>.
+
+  <\theorem>
+    <label|tensor product of spaces existence>Let
+    <math|n\<in\>\<bbb-N\>,<around*|{|V<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a family of vector spaces over a field <math|F> then\ 
+
+    <\equation*>
+      <around*|\<langle\>|V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|n>,\<otimes\>|\<rangle\>>
+    </equation*>
+
+    is a tensor product [see definition: <reference|tensor product>] of
+    <math|<around*|{|V<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>.
+    Using [definition: <reference|tensor product>] we muse prove that:
+
+    <\enumerate>
+      <item><math|V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|n>> is a
+      vector space over <math|F>
+
+      <item><math|\<otimes\>\<in\>Hom<around*|(|v<rsub|1>,\<ldots\>,V<rsub|n>;V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|n>|)>>
+
+      <item><math|span<around*|(|\<otimes\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>|)>|)>=V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|n>>
+
+      <item><dueto|Universal factorization property>If <math|U> is a vector
+      space over <math|F> and <math|\<varphi\>\<in\>Hom<around*|(|V<rsub|1>,\<ldots\>,V<rsub|n>;U|)>>
+      then there exist a <math|h\<in\>Hom<around*|(|V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|n>,U|)>>
+      such that <math|\<varphi\>=h\<circ\>\<otimes\>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>By [definition: <reference|tensor tensor product of spaces>]
+      <math|<around*|\<langle\>|V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|n>,+,\<cdot\>|\<rangle\>>>
+      is a vector space over the field <math|F>
+
+      <item>Let <math|i\<in\><around*|{|1,\<ldots\>,n|}>>,
+      <math|\<alpha\>\<in\>F>, <math|x,y\<in\>V<rsub|i>> and
+      <math|v\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>V<rsub|i>>
+      \ and take\ 
+
+      <\equation*>
+        <around*|(|v<rsub|1>,\<ldots\>,v<rsub|i-1>,x+\<alpha\>\<cdot\>y,v<rsub|i+1>,\<ldots\>,v<rsub|n>|)>=<around*|[|i\<rightarrow\>x+\<alpha\>\<cdot\>y|]>v
+      </equation*>
+
+      <\equation*>
+        <around*|(|v<rsub|1>,\<ldots\>,v<rsub|i-1>,x,v<rsub|i+1>,\<ldots\>,v<rsub|n>|)>=<around*|[|i\<rightarrow\>x|]>v
+      </equation*>
+
+      <\equation*>
+        <around*|(|v<rsub|1>,\<ldots\>,v<rsub|i-1>,y,v<rsub|i+1>,\<ldots\>,v<rsub|n>|)>=<around*|[|i\<rightarrow\>y|]>v
+      </equation*>
+
+      then
+
+      <\equation*>
+        \<delta\><rsub|<around*|[|i\<rightarrow\>x+\<alpha\>\<cdot\>y|]>v>-\<delta\><rsub|<around*|[|i\<rightarrow\>x|]>v>-\<alpha\>\<cdot\>\<delta\><rsub|<around*|[|i\<rightarrow\>y|]>v>\<in\>\<cal-N\><around*|[|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>,F|]>\<subseteq\>span<around*|(|\<cal-N\><around*|[|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>,F|]>|)>
+      </equation*>
+
+      so that by [theorem: <reference|vector space factor space projection>]\ 
+
+      <\equation>
+        <label|eq 13.10.127>\<pi\><around*|(|\<delta\><rsub|<around*|[|i\<rightarrow\>x+\<alpha\>\<cdot\>y|]>v>-\<delta\><rsub|<around*|[|i\<rightarrow\>x|]>v>-\<alpha\>\<cdot\>\<delta\><rsub|<around*|[|i\<rightarrow\>y|]>v>|)>=0
+      </equation>
+
+      As by [theorem: <reference|vector space factor space projection>]
+      <math|\<pi\>> is linear we have that\ 
+
+      <\equation*>
+        0=\<pi\><around*|(|\<delta\><rsub|<around*|[|i\<rightarrow\>x+\<alpha\>\<cdot\>y|]>v>-\<delta\><rsub|<around*|[|i\<rightarrow\>x|]>v>-\<alpha\>\<cdot\>\<delta\><rsub|<around*|[|i\<rightarrow\>y|]>v>|)>=\<pi\><around*|(|\<delta\><rsub|<around*|[|i\<rightarrow\>x+\<alpha\>\<cdot\>y|]>v>|)>-\<pi\><around*|(|\<delta\><rsub|<around*|[|i\<rightarrow\>x|]>v>|)>-\<alpha\>\<cdot\>\<pi\><around*|(|\<delta\><rsub|<around*|[|i\<rightarrow\>y|]>v>|)>
+      </equation*>
+
+      proving that\ 
+
+      <\equation*>
+        \<pi\><around*|(|\<delta\><rsub|<around*|[|i\<rightarrow\>x+\<alpha\>\<cdot\>y|]>v>|)>=\<pi\><around*|(|\<delta\><rsub|<around*|[|i\<rightarrow\>x|]>v>|)>+\<alpha\>\<cdot\>\<pi\><around*|(|\<delta\><rsub|<around*|[|i\<rightarrow\>y|]>v>|)>
+      </equation*>
+
+      hence\ 
+
+      <\equation*>
+        \<pi\><around*|(|\<delta\><around*|(|<around*|[|i\<rightarrow\>x+\<alpha\>\<cdot\>y|]>v|)>|)>=\<pi\><around*|(|\<delta\><around*|(|<around*|[|i\<rightarrow\>x|]>v|)>|)>+\<alpha\>\<cdot\>\<pi\><around*|(|\<delta\><around*|(|<around*|[|y|]>v|)>|)>
+      </equation*>
+
+      whci as <math|\<otimes\>=\<pi\>\<circ\>\<delta\>> gives\ 
+
+      <\equation*>
+        \<otimes\>*<around*|(|<around*|[|i\<rightarrow\>x+\<alpha\>\<cdot\>y|]>v|)>=\<otimes\><around*|(|<around*|[|i\<rightarrow\>x|]>v|)>+\<alpha\>\<cdot\>\<otimes\><around*|(|<around*|[|i\<rightarrow\>y|]>v|)>
+      </equation*>
+
+      or\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|v<rsub|1>,\<ldots\>,v<rsub|i-1>,x+\<alpha\>\<cdot\>y,v<rsub|i+1>\<ldots\>v<rsub|n>|)>>|<cell|=>|<cell|<around*|(|v<rsub|1>,\<ldots\>,v<rsub|i-1>,x,v<rsub|i+1>\<ldots\>v<rsub|n>|)>+\<alpha\>\<cdot\><around*|(|v<rsub|1>,\<ldots\>,v<rsub|i-1>,y,v<rsub|i+1>\<ldots\>v<rsub|n>|)>>>>>
+      </eqnarray*>
+
+      proving by [theprem: <reference|multi multilinear mapping alternative>]
+      that\ 
+
+      <\equation*>
+        \<otimes\><text| is multilinear>
+      </equation*>
+
+      <item>As <math|\<otimes\>:<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>\<rightarrow\>V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|n>>
+      we have already that <math|\<otimes\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>|)>\<subseteq\>V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|n>>,
+      so that by [theorems: <reference|linear span subsets>,
+      <reference|linear span properties>] that\ 
+
+      <\equation*>
+        span<around*|(|\<otimes\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>|)>|)>\<subseteq\>V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|n>
+      </equation*>
+
+      For the opposite inclusion, let <math|x\<in\>V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|n>>
+      then as <math|\<pi\>> is a surjection [see theorem: <reference|vector
+      space factor space projection>] there exists a
+      <math|y\<in\>\<cal-F\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,|}>>V<rsub|i>|)>>
+      such that <math|x=\<pi\><around*|(|y|)>>. As by [theorem:
+      <reference|vector space free basis and embedding>]
+      <math|\<delta\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>|)>>
+      is a basis of <math|\<cal-F\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,|}>>V<rsub|i>|)>>\ 
+
+      \ 
+    </enumerate>
+
+    \;
+  </proof>
+
+  \;
+
+  \;
+
+  \;
+
   \;
 
   \;
@@ -1501,7 +1754,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|11>
-    <associate|page-first|565>
+    <associate|page-first|561>
     <associate|section-nr|9>
     <associate|subsection-nr|0>
   </collection>
@@ -1535,6 +1788,8 @@
     <associate|eq 12.6.127|<tuple|12.6|?>>
     <associate|eq 12.7.125|<tuple|12.9|?>>
     <associate|eq 13.1.127|<tuple|13.1|?>>
+    <associate|eq 13.10.127|<tuple|13.10|?>>
+    <associate|eq 13.11.127|<tuple|13.10|?>>
     <associate|eq 13.2.127|<tuple|13.2|?>>
     <associate|eq 13.3.127|<tuple|13.3|?>>
     <associate|eq 13.4.127|<tuple|13.4|?>>
@@ -1543,8 +1798,12 @@
     <associate|eq 13.7.127|<tuple|13.7|?>>
     <associate|eq 13.8.127|<tuple|13.8|?>>
     <associate|eq 13.9.127|<tuple|13.9|?>>
+    <associate|tensor null space|<tuple|13.7|?>>
     <associate|tensor product|<tuple|13.1|?>>
+    <associate|tensor product of spaces existence|<tuple|13.12|?>>
+    <associate|tensor product of vectors|<tuple|13.10|?>>
     <associate|tensor product uniqueness|<tuple|13.2|?>>
+    <associate|tensor tensor product of spaces|<tuple|13.8|?>>
     <associate|vector space free|<tuple|13.5|?>>
     <associate|vector space free basis and embedding|<tuple|13.6|?>>
     <associate|vector space free operations|<tuple|13.4|?>>
@@ -1554,6 +1813,11 @@
 
 <\auxiliary>
   <\collection>
+    <\associate|idx>
+      <tuple|<tuple|<with|mode|<quote|math>|F<around*|(|X,F|)>>>|<pageref|auto-3>>
+
+      <tuple|<tuple|free vector space over a set>|<pageref|auto-4>>
+    </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|12<space|2spc>Internal
       Direct Sum> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
