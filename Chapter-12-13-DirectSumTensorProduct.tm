@@ -1317,7 +1317,12 @@
       <item><math|\<delta\>:X\<rightarrow\>\<cal-F\><around*|(|X,F|)>>
       defined by <math|\<delta\><around*|(|a|)>=\<delta\><rsub|a>> is a
       injection, hence <math|X> is embedded in
-      <math|\<cal-F\><around*|(|X,F|)>>
+      <math|\<cal-F\><around*|(|X,F|)>> and\ 
+
+      <\equation*>
+        \<delta\>:X\<rightarrow\>\<delta\><around*|(|X|)><text| is a
+        bijection>
+      </equation*>
 
       <item><math|\<delta\><around*|(|X|)>=<around*|{|\<delta\><around*|(|a|)>\|a\<in\>X|}>=<around*|{|\<delta\><rsub|a>\|a\<in\>X|}>>
       is a basis of <math|X>
@@ -1507,7 +1512,7 @@
     where\ 
 
     <\equation*>
-      \<cal-N\><rsub|i>=<around*|{|\<delta\><rsub|<around*|[|i\<rightarrow\>x+\<alpha\>\<cdot\>y|]>>-\<delta\><rsub|<around*|[|i\<rightarrow\>x|]>>-\<alpha\>\<cdot\>\<delta\><rsub|<around*|[|i\<rightarrow\>y|]>x>\|x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>V<rsub|i><text|,
+      \<cal-N\><rsub|i>=<around*|{|\<delta\><rsub|<around*|[|i\<rightarrow\>x+\<alpha\>\<cdot\>y|]>>-\<delta\><rsub|<around*|[|i\<rightarrow\>x|]>>-\<alpha\>\<cdot\>\<delta\><rsub|<around*|[|i\<rightarrow\>y|]>x>\|v\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>V<rsub|i><text|,
       >x,y\<in\>V<rsub|i><text|, >\<alpha\>\<in\>F|}>
     </equation*>
 
@@ -1567,7 +1572,7 @@
     a family of vector spaces over a field <math|F> then we define\ 
 
     <\equation*>
-      \<otimes\>:<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|1<inactive|<hybrid|i>>>\<rightarrow\>V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|n>
+      \<otimes\>:<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>\<rightarrow\>V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|n>
       by\<otimes\>=\<pi\>\<circ\>\<delta\>
     </equation*>
 
@@ -1608,6 +1613,72 @@
     [see definition: <reference|tensor product>] or the tensor product of
     vectors in the above definition.\ 
   </note>
+
+  The following theorem will be needed to prove the universal factorization
+  property of a tensor product.
+
+  <\theorem>
+    <label|tensor universal property><dueto|Universal property>Let <math|X,Z>
+    be vector spaces over a field <math|F>, <math|Y> a sub-space of <math|X>
+    and <math|L\<in\>Hom<around*|(|X,Z|)>> such that
+    <math|Y\<subseteq\>ker<around*|(|L|)>> then there exist a
+    <with|font-series|bold|unique> <math|h\<in\>Hom<around*|(|X/Y,Z|)>> such
+    that <math|L=h\<circ\>\<pi\><rsub|Y>>. Here <math|X/Y> and
+    <math|\<pi\><rsub|Y>> are defined in [theorems: <reference|vector space
+    factor space>, <reference|vector space factor space projection>].
+  </theorem>
+
+  <\proof>
+    Let <math|x,y\<in\>X> such that <math|\<sim\><rsub|Y><around*|[|x|]>=\<sim\><rsub|Y><around*|[|y|]>>
+    then <math|x-y\<in\>Y> hence, as <math|Y\<subseteq\>ker<around*|(|L|)>>
+    we have <math|L<around*|(|x-y|)>=0>, so, as <math|L> is linear,
+    <math|L<around*|(|x|)>-L<around*|(|y|)>=0\<Rightarrow\>L<around*|(|x|)>=L<around*|(|y|)>>.
+    This allows use to define the function
+
+    <\equation*>
+      h:X/Y\<rightarrow\>Z<text| where >h<around*|(|\<sim\><around*|[|x|]>|)>=L<around*|(|x|)>
+    </equation*>
+
+    Let <math|\<sim\><rsub|Y><around*|[|x|]>,\<sim\><rsub|Y><around*|[|y|]>\<in\>X/Y>
+    and <math|\<alpha\>\<in\>F> then\ 
+
+    <\equation*>
+      h<around*|(|\<sim\><rsub|Y><around*|[|x|]>+\<sim\><rsub|Y><around*|[|y|]>|)>=h<around*|(|\<sim\><rsub|Y><around*|[|x+y|]>|)>=L<around*|(|x+y|)>=L<around*|(|x|)>+L<around*|(|y|)>=h<around*|(|\<sim\><rsub|Y><around*|[|x|]>|)>+h<around*|(|\<sim\><rsub|Y><around*|[|y|]>|)>
+    </equation*>
+
+    and
+
+    <\equation*>
+      h<around*|(|\<alpha\>\<cdot\>\<sim\><rsub|Y><around*|[|x|]>|)>=h<around*|(|\<sim\><rsub|Y><around*|[|\<alpha\>\<cdot\>x|]>|)>=L<around*|(|\<alpha\>\<cdot\>x|)>=\<alpha\>\<cdot\>L<around*|(|x|)>=\<alpha\>\<cdot\>h<around*|(|\<sim\><rsub|Y><around*|[|x|]>|)>
+    </equation*>
+
+    proving that\ 
+
+    <\equation*>
+      h\<in\>Hom<around*|(|X/Y,Z|)>
+    </equation*>
+
+    Further let <math|x\<in\>X> then <math|<around*|(|h\<circ\>\<pi\><rsub|Y>|)><around*|(|x|)>=h<around*|(|\<pi\><rsub|Y><around*|(|x|)>|)>=h<around*|(|\<sim\><rsub|Y><around*|[|x|]>|)>=L<around*|(|x|)>>
+    so that\ 
+
+    <\equation*>
+      L=h\<circ\>\<pi\><rsub|Y>
+    </equation*>
+
+    Finally if <math|k\<in\>Hom<around*|(|X/Y,Z|)>> is such that
+    <math|L=k\<circ\>\<pi\><rsub|Y>> then if
+    <math|\<sim\><rsub|Y><around*|[|x|]>\<in\>X/Y> we have\ 
+
+    <\equation*>
+      h<around*|(|\<sim\><rsub|Y><around*|[|x|]>|)>=L<around*|(|x|)>=k<around*|(|\<pi\><rsub|Y><around*|(|x|)>|)>=k<around*|(|\<sim\><rsub|Y><around*|[|x|]>|)>
+    </equation*>
+
+    so that\ 
+
+    <\equation*>
+      h=k
+    </equation*>
+  </proof>
 
   We are now ready to prove that for every family
   <math|<around*|{|V<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
@@ -1697,7 +1768,7 @@
         \<pi\><around*|(|\<delta\><around*|(|<around*|[|i\<rightarrow\>x+\<alpha\>\<cdot\>y|]>v|)>|)>=\<pi\><around*|(|\<delta\><around*|(|<around*|[|i\<rightarrow\>x|]>v|)>|)>+\<alpha\>\<cdot\>\<pi\><around*|(|\<delta\><around*|(|<around*|[|y|]>v|)>|)>
       </equation*>
 
-      whci as <math|\<otimes\>=\<pi\>\<circ\>\<delta\>> gives\ 
+      which as <math|\<otimes\>=\<pi\>\<circ\>\<delta\>> gives\ 
 
       <\equation*>
         \<otimes\>*<around*|(|<around*|[|i\<rightarrow\>x+\<alpha\>\<cdot\>y|]>v|)>=\<otimes\><around*|(|<around*|[|i\<rightarrow\>x|]>v|)>+\<alpha\>\<cdot\>\<otimes\><around*|(|<around*|[|i\<rightarrow\>y|]>v|)>
@@ -1721,23 +1792,204 @@
       so that by [theorems: <reference|linear span subsets>,
       <reference|linear span properties>] that\ 
 
-      <\equation*>
-        span<around*|(|\<otimes\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>|)>|)>\<subseteq\>V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|n>
-      </equation*>
+      <\equation>
+        <label|eq 13.11.127>span<around*|(|\<otimes\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>|)>|)>\<subseteq\>V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|n>
+      </equation>
 
       For the opposite inclusion, let <math|x\<in\>V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|n>>
       then as <math|\<pi\>> is a surjection [see theorem: <reference|vector
       space factor space projection>] there exists a
       <math|y\<in\>\<cal-F\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,|}>>V<rsub|i>|)>>
-      such that <math|x=\<pi\><around*|(|y|)>>. As by [theorem:
-      <reference|vector space free basis and embedding>]
-      <math|\<delta\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>|)>>
-      is a basis of <math|\<cal-F\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,|}>>V<rsub|i>|)>>\ 
+      such that <math|x=\<pi\><around*|(|y|)>>. By [theorem:
+      <reference|vector space free basis and embedding>] the set
+      <math|<around*|{|\<delta\><around*|(|a|)>\|a\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|>|}>>
+      is a basis of <math|\<cal-F\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,|}>>V<rsub|i>|)>>,
+      hence there exist a finite <math|I\<subseteq\><around*|{|\<delta\><around*|(|a|)>\|a\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|>|}>>
+      and <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\>I>\<subseteq\>F>
+      such that <math|y=<big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>\<cdot\>i>.
+      So\ 
 
-      \ 
+      <\equation>
+        <label|eq 13.12.127>x=\<pi\><around*|(|y|)>=\<pi\><around*|(|<big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>\<cdot\>i|)>\<equallim\><rsub|linearity
+        of \<pi\>><big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>\<cdot\>\<pi\><around*|(|i|)>
+      </equation>
+
+      Now if <math|i\<in\>I\<subseteq\><around*|{|\<delta\><around*|(|a|)>\|a\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|>|}>>
+      then <math|\<exists\>a\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>>
+      such that <math|i=\<delta\><around*|(|a|)>>, hence
+      <math|\<pi\><around*|(|i|)>=\<pi\><around*|(|\<delta\><around*|(|a|)>|)>=\<otimes\><around*|(|a|)>\<in\>\<otimes\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,|}>>|)>>.
+      Hence by [eq: <reference|eq 13.12.127>] it follows that
+      <math|x\<in\>span<around*|(|\<otimes\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>|)>|)>>.
+      So we conclude that <math|V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|n>\<subseteq\>span<around*|(|\<otimes\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>|)>|)>>,
+      which combined with [eq: <reference|eq 13.11.127>] gives
+
+      <\equation*>
+        span<around*|(|\<otimes\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>|)>|)>=V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|n>
+      </equation*>
+
+      <item>Using \ [theorem: <reference|vector space free basis and
+      embedding>] we have that\ 
+
+      <\equation*>
+        \<delta\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>|)>=<around*|{|\<delta\><around*|(|a|)>\|a\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>|}><text|
+        is a basis for >\<cal-F\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,|}>>V<rsub|i>|)>
+      </equation*>
+
+      and
+
+      <\equation*>
+        \<delta\>:<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>\<rightarrow\>\<delta\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>|)>=<around*|{|\<delta\><around*|(|a|)>\|a\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>|}><text|
+        is a bijection>
+      </equation*>
+
+      Let <math|x\<in\>\<cal-F\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>|)>>
+      then there exist a finite <math|I\<subseteq\><around*|{|\<delta\><around*|(|a|)>\|a\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>|}>>
+      and a <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\>I>\<subseteq\>F>
+      such that <math|x=<big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>\<cdot\>i>.
+      Assume that there exists another finite
+      <math|J\<subseteq\><around*|{|\<delta\><around*|(|a|)>\|a\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>|}>>
+      and <math|<around*|{|\<beta\><rsub|i>|}><rsub|i\<in\>J>\<subseteq\>J>
+      such that <math|x=<big|sum><rsub|i\<in\>J>\<beta\><rsub|j>\<cdot\>i>.
+      Then by [theorem: <reference|basis alternative (3)>] we have\ 
+
+      <\equation>
+        <label|eq 13.13.128>\<forall\>i\<in\>I\\J<text| that
+        >\<alpha\><rsub|i>=0<text|, >\<forall\>J\\I<text| that
+        >\<beta\><rsub|i>=0<text| and >\<forall\>i\<in\>I<big|cap>J<text|
+        that >\<alpha\><rsub|i>=\<beta\><rsub|i>
+      </equation>
+
+      Hence\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>>|<cell|=>|<cell|<big|sum><rsub|i\<in\>I\\J>\<alpha\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>+<big|sum><rsub|i\<in\>I<big|cap>J>\<alpha\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 13.13.128>]>>>|<cell|<big|sum><rsub|i\<in\>I\\J>0\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>+<big|sum><rsub|i\<in\>I<big|cap>J>\<beta\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 13.13.128>]>>>|<cell|<big|sum><rsub|i\<in\>I\\J>\<beta\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>+<big|sum><rsub|i\<in\>I<big|cap>J>\<beta\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\>I>\<beta\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>>>>>
+      </eqnarray*>
+
+      The above ensures that the following function is well defined\ 
+
+      <\equation*>
+        \<gamma\>:\<cal-F\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,|}>>V<rsub|i>|)>\<rightarrow\>U<text|
+        by >\<gamma\><around*|(|x|)>=<big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)><text|where
+        >x=<big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>\<cdot\>i<text|, >I<text|
+        is finite>
+      </equation*>
+
+      If <math|x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,|}>>V<rsub|i>>
+      then if we define <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|\<delta\><around*|(|x|)>|}>>\<subseteq\>F>
+      by <math|\<alpha\><rsub|\<delta\><around*|(|x|)>>=1> then
+
+      <\equation*>
+        <big|sum><rsub|i\<in\><around*|{|\<delta\><around*|(|x|)>|}>>\<alpha\><rsub|i>\<cdot\>i=\<alpha\><rsub|\<delta\><around*|(|x|)>>\<cdot\>\<delta\><around*|(|x|)>=1\<cdot\>\<delta\><around*|(|x|)>=1
+      </equation*>
+
+      so that\ 
+
+      <\equation*>
+        <around*|(|\<gamma\>\<circ\>\<delta\>|)><around*|(|x|)>=\<gamma\><around*|(|\<delta\><around*|(|x|)>|)>=<big|sum><rsub|i\<in\><around*|{|\<delta\><around*|(|x|)>|}>>\<alpha\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>=\<alpha\><rsub|\<delta\><around*|(|x|)>>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|\<delta\><around*|(|x|)>|)>|)>=1\<cdot\>\<varphi\><around*|(|x|)>=\<varphi\><around*|(|x|)>
+      </equation*>
+
+      proving that\ 
+
+      <\equation>
+        <label|eq 13.14.127>\<gamma\>\<circ\>\<delta\>=\<varphi\>
+      </equation>
+
+      Let <math|x,y\<in\>\<cal-F\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,|}>>V<rsub|i>,F|)>>
+      and <math|\<alpha\>\<in\>F> then there exists
+      <math|I,J\<subseteq\><around*|{|\<delta\><around*|(|a|)>\|a\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>|}>>,
+      <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\>I>\<subseteq\>F> and
+      <math|<around*|{|\<beta\><rsub|i>|}><rsub|i\<in\>J>\<subseteq\>F> such
+      that <math|x=<big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>\<cdot\>i> and
+      <math|y=<big|sum><rsub|i\<in\>J>\<beta\><rsub|i>\<cdot\>i>. Define then\ 
+
+      <\equation*>
+        <around*|{|\<gamma\><rsub|i>|}><rsub|i\<in\>I>\<subseteq\>F<text| by
+        >\<gamma\><rsub|i>=<choice|<tformat|<table|<row|<cell|\<alpha\><rsub|i><text|
+        if >i\<in\>I\\J>>|<row|<cell|\<alpha\>\<cdot\>\<beta\><rsub|i><text|
+        if >j\<in\>J\\I>>|<row|<cell|\<alpha\><rsub|i>+\<alpha\>\<cdot\>\<beta\><rsub|i><text|
+        if >i\<in\>I<big|cap>J>>>>>
+      </equation*>
+
+      then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|sum><rsub|i\<in\>I<big|cup>J>\<gamma\><rsub|i>\<cdot\>i>|<cell|=>|<cell|<big|sum><rsub|i\<in\>I\\J>\<gamma\><rsub|i>\<cdot\>i+<big|sum><rsub|i\<in\>J\\I>\<gamma\><rsub|i>\<cdot\>i+<big|sum><rsub|i\<in\>I<big|cap>J>\<gamma\><rsub|i>\<cdot\>i>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\>I\\J>\<alpha\><rsub|i>\<cdot\>i+<big|sum><rsub|i\<in\>J\\I>\<alpha\>\<cdot\>\<beta\><rsub|i>\<cdot\>i+<big|sum><rsub|i\<in\>I<big|cap>J><around*|(|\<alpha\><rsub|i>+\<alpha\>\<cdot\>\<beta\><rsub|i>|)>\<cdot\>i>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\>I\\J>\<alpha\><rsub|i>\<cdot\>i+\<alpha\>\<cdot\><big|sum><rsub|i\<in\>J\\I>\<beta\><rsub|i>\<cdot\>i+<big|sum><rsub|i\<in\>I<big|cap>J>\<alpha\><rsub|i>\<cdot\>i+\<alpha\>\<cdot\><big|sum><rsub|i\<in\>I<big|cap>J>\<beta\><rsub|i>\<cdot\>i>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i\<in\>I\\J>\<alpha\><rsub|i>\<cdot\>i+<big|sum><rsub|i\<in\>I<big|cap>J>\<alpha\><rsub|i>\<cdot\>i|)>+\<alpha\>\<cdot\><around*|(|<big|sum><rsub|i\<in\>J\\I>\<beta\><rsub|i>\<cdot\>i+<big|sum><rsub|i\<in\>I<big|cap>J>\<beta\><rsub|i>\<cdot\>i|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\>I<big|cup>J>\<alpha\><rsub|i>\<cdot\>i+<big|sum><rsub|i\<in\>I<big|cup>J>\<beta\><rsub|i>\<cdot\>i>>|<row|<cell|>|<cell|=>|<cell|x+\<alpha\>\<cdot\>y>>>>
+      </eqnarray*>
+
+      so that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<gamma\><around*|(|x+\<alpha\>\<cdot\>y|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i\<in\>I<big|cup>J>\<gamma\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>>|<cell|>|<cell|>>|<row|<cell|<big|sum><rsub|i\<in\>I\\J>\<gamma\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>+<big|sum><rsub|i\<in\>J\\I>\<gamma\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>+<big|sum><rsub|i\<in\>I<big|cap>J>\<gamma\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i\<in\>I\\J>\<alpha\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>+<big|sum><rsub|i\<in\>J\\I>\<alpha\>\<cdot\>\<beta\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>+<big|sum><rsub|i\<in\>I<big|cap>J><around*|(|\<alpha\><rsub|i>+\<alpha\>\<cdot\>\<beta\><rsub|i>|)>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<wide*|<big|sum><rsub|i\<in\>I\\J>\<alpha\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>|\<wide-underbrace\>><rsub|<around*|(|1|)>>+<wide*|\<alpha\>\<cdot\><big|sum><rsub|i\<in\>J\\I>\<beta\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>|\<wide-underbrace\>><rsub|<around*|(|2|)>>+<wide*|<big|sum><rsub|i\<in\>I<big|cap>J>\<alpha\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>|\<wide-underbrace\>><rsub|<around*|(|1|)>>+<wide*|\<alpha\>\<cdot\><big|sum><rsub|i\<in\>I<big|cap>J>\<beta\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>|\<wide-underbrace\>><rsub|<around*|(|2|)>>>|<cell|=>|<cell|>>|<row|<cell|<wide*|<big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>|\<wide-underbrace\>><rsub|<around*|(|1|)>>+<wide*|\<alpha\>\<cdot\><big|sum><rsub|i\<in\>I>\<beta\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>|\<wide-underbrace\>><rsub|<around*|(|2|)>>>|<cell|=>|<cell|>>|<row|<cell|\<gamma\><around*|(|x|)>+\<alpha\>\<cdot\>\<gamma\><around*|(|y|)>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      proving that <math|\<gamma\>> is linear.\ 
+
+      <\equation>
+        <label|eq 13.15.128>\<gamma\>\<in\>Hom<around*|(|\<cal-F\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>,F|)>,U|)>
+      </equation>
+
+      Let <math|x\<in\>\<cal-N\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>,F|)>\<subseteq\>\<cal-F\><around*|(|<big|prod><rsub|i\<in\>I>V<rsub|i>,F|)>>
+      then by [definition: <reference|tensor null space>] there exist a
+      \ <math|i\<in\><around*|{|1,\<ldots\>,n|}>>,
+      <math|v\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>V<rsub|i>>,
+      <math|x,y\<in\>V<rsub|i>> and <math|\<alpha\>\<in\>F> such that\ 
+
+      <\equation*>
+        x=\<delta\><rsub|<around*|[|i\<rightarrow\>x+\<alpha\>\<cdot\>y|]>v>-\<delta\><rsub|<around*|[|i\<rightarrow\>x|]>v>-\<alpha\>\<cdot\>\<delta\><rsub|<around*|[|i\<rightarrow\>y|]>v>
+      </equation*>
+
+      Then as <math|\<varphi\>\<in\>Hom<around*|(|V<rsub|1>,\<ldots\>,V<rsub|n>;U|)>>
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<gamma\><around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|\<gamma\><around*|(|\<delta\><rsub|<around*|[|i\<rightarrow\>x+\<alpha\>\<cdot\>y|]>v>-\<delta\><rsub|<around*|[|i\<rightarrow\>x|]>v>-\<alpha\>\<cdot\>\<delta\><rsub|<around*|[|i\<rightarrow\>y|]>v>|)>>|<cell|>|<cell|>>|<row|<cell|\<gamma\><around*|(|\<delta\><rsub|<around*|[|i\<rightarrow\>x+\<alpha\>\<cdot\>y|]>v>|)>-\<gamma\><around*|(|\<delta\><rsub|<around*|[|i\<rightarrow\>x|]>v>|)>-\<alpha\>\<cdot\>\<gamma\><around*|(|\<delta\><rsub|<around*|[|i\<rightarrow\>y|]>v>|)>>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 13.15.128>]>>>|<cell|>>|<row|<cell|\<gamma\><around*|(|\<delta\><around*|(|<around*|[|i\<rightarrow\>x+\<alpha\>\<cdot\>y|]>v|)>|)>-\<gamma\><around*|(|\<delta\><around*|(|<around*|[|i\<rightarrow\>x|]>v|)>|)>-\<alpha\>\<cdot\>\<gamma\><around*|(|\<delta\><around*|(|<around*|[|i\<rightarrow\>y|]>v|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<varphi\><around*|(|<around*|[|i\<rightarrow\>x+\<alpha\>\<cdot\>y|]>v|)>-\<varphi\><around*|(|<around*|[|i\<rightarrow\>x|]>v|)>-\<alpha\>\<cdot\>\<varphi\><around*|(|<around*|[|i\<rightarrow\>y|]>v|)>>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 13.14.127>]>>>|<cell|>>|<row|<cell|\<varphi\><around*|(|v<rsub|1>,\<ldots\>,v<rsub|i-1>,x+\<alpha\>\<cdot\>y,v<rsub|i+1>,\<ldots\>,v<rsub|n>|)>-\<varphi\><around*|(|v<rsub|1>,\<ldots\>,v<rsub|i-1>,x,v<rsub|i+1>,\<ldots\>,v<rsub|n>|)>-\<alpha\>\<cdot\>\<varphi\><around*|(|v<rsub|1>,\<ldots\>,v<rsub|i-1>,y,v<rsub|i+1>,\<ldots\>,v<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|0>|<cell|=>|<cell|>>>>
+      </eqnarray*>
+
+      so that <math|\<cal-N\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>,F|)>\<subseteq\>ker<around*|(|\<gamma\>|)>>.
+      By [theorem: <reference|linear mapping kernal and range are subspaces>]
+      <math|ker<around*|(|\<gamma\>|)>> is a sub-space, hence using
+      [theorems: <reference|linear span subsets>, <reference|linear span
+      properties>] we have\ 
+
+      <\equation>
+        <label|eq 13.16.128>span<around*|(|\<cal-N\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>,F|)>|)>\<subseteq\>ker<around*|(|\<gamma\>|)>
+      </equation>
+
+      Finally [eqs: <reference|eq 13.15.128> and <reference|eq 13.16.128>]
+      allows us to apply \ [theorem: <reference|tensor universal property>]
+      to find a
+
+      <\equation*>
+        h\<in\>Hom<around*|(|\<cal-F\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>,|)>/span<around*|(|\<cal-N\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>,F|)>|)>,U|)>
+      </equation*>
+
+      such that\ 
+
+      <\equation*>
+        \<gamma\>=h\<circ\>\<pi\>
+      </equation*>
+
+      Or as <math|\<cal-F\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>,|)>/span<around*|(|\<cal-N\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>,F|)>|)>\<equallim\><rsub|def>V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|n>>
+      we have\ 
+
+      <\equation*>
+        \<exists\>h\<in\>Hom<around*|(|V<rsub|1>\<otimes\>\<ldots\>\<otimes\>V<rsub|n>,U|)><text|
+        with >\<gamma\>=h\<circ\>\<pi\>
+      </equation*>
+
+      Using then [eq: <reference|eq 13.14.127>] we have that
+      <math|\<varphi\>=\<gamma\>\<circ\>\<delta\>=<around*|(|h\<circ\>\<pi\>|)>\<circ\>\<delta\>=h\<circ\><around*|(|\<pi\>\<circ\>\<rho\>|)>\<equallim\><rsub|<text|[definition:
+      <reference|tensor product of vectors>]>>h\<circ\>\<otimes\><rsub|<text|>>>
+      giving:
+
+      <\equation*>
+        \<varphi\>=h\<circ\>\<otimes\><text| where
+        <math|h\<in\>Hom<around*|(|V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|n>,U|)>>>
+      </equation*>
     </enumerate>
-
-    \;
   </proof>
 
   \;
@@ -1754,7 +2006,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|11>
-    <associate|page-first|561>
+    <associate|page-first|566>
     <associate|section-nr|9>
     <associate|subsection-nr|0>
   </collection>
@@ -1789,7 +2041,14 @@
     <associate|eq 12.7.125|<tuple|12.9|?>>
     <associate|eq 13.1.127|<tuple|13.1|?>>
     <associate|eq 13.10.127|<tuple|13.10|?>>
-    <associate|eq 13.11.127|<tuple|13.10|?>>
+    <associate|eq 13.11.127|<tuple|13.11|?>>
+    <associate|eq 13.12.127|<tuple|13.12|?>>
+    <associate|eq 13.13.127|<tuple|13.14|?>>
+    <associate|eq 13.13.128|<tuple|13.13|?>>
+    <associate|eq 13.14.127|<tuple|13.14|?>>
+    <associate|eq 13.14.128|<tuple|13.14|?>>
+    <associate|eq 13.15.128|<tuple|13.15|?>>
+    <associate|eq 13.16.128|<tuple|13.16|?>>
     <associate|eq 13.2.127|<tuple|13.2|?>>
     <associate|eq 13.3.127|<tuple|13.3|?>>
     <associate|eq 13.4.127|<tuple|13.4|?>>
@@ -1800,10 +2059,11 @@
     <associate|eq 13.9.127|<tuple|13.9|?>>
     <associate|tensor null space|<tuple|13.7|?>>
     <associate|tensor product|<tuple|13.1|?>>
-    <associate|tensor product of spaces existence|<tuple|13.12|?>>
+    <associate|tensor product of spaces existence|<tuple|13.13|?>>
     <associate|tensor product of vectors|<tuple|13.10|?>>
     <associate|tensor product uniqueness|<tuple|13.2|?>>
     <associate|tensor tensor product of spaces|<tuple|13.8|?>>
+    <associate|tensor universal property|<tuple|13.12|?>>
     <associate|vector space free|<tuple|13.5|?>>
     <associate|vector space free basis and embedding|<tuple|13.6|?>>
     <associate|vector space free operations|<tuple|13.4|?>>
