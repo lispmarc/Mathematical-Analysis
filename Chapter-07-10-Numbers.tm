@@ -13203,6 +13203,31 @@
   </proof>
 
   <\corollary>
+    <label|complex cardinality removing a element>If <math|A> is a finite set
+    and <math|a\<in\>A> then <math|card<around*|(|A\\<around*|{|a|}>|)>=card<around*|(|A|)>-1>
+  </corollary>
+
+  <\proof>
+    As <math|a\<nin\>A\\<around*|{|a|}>> and
+    <math|A=<around*|(|A\\<around*|{|a|}>|)><big|cup><around*|{|a|}>=A> we
+    have that
+
+    <\equation*>
+      card<around*|(|A|)>\<equallim\><rsub|<text|[corollary:
+      <reference|complex cardinality adding
+      element>]>>card<around*|(|A\\<around*|{|a|}>|)>+1
+    </equation*>
+
+    so that\ 
+
+    <\equation*>
+      card<around*|(|A\\<around*|{|a|}>|)>=card<around*|(|A|)>-1
+    </equation*>
+
+    \;
+  </proof>
+
+  <\corollary>
     <label|complex cardinality equality and subset>If <math|A> is a finite
     set and <math|B\<subseteq\>A> such that
     <math|card<around*|(|B|)>=card<around*|(|A|)>> then <math|B=A>
@@ -13655,9 +13680,10 @@
     <associate|complex cardinality|<tuple|10.77|?>>
     <associate|complex cardinality adding element|<tuple|10.81|?>>
     <associate|complex cardinality alternative|<tuple|10.78|?>>
-    <associate|complex cardinality and finite family|<tuple|10.83|?>>
-    <associate|complex cardinality equality and subset|<tuple|10.82|?>>
+    <associate|complex cardinality and finite family|<tuple|10.84|?>>
+    <associate|complex cardinality equality and subset|<tuple|10.83|?>>
     <associate|complex cardinality properties|<tuple|10.80|?>>
+    <associate|complex cardinality removing a element|<tuple|10.82|?>>
     <associate|complex conjugate|<tuple|10.70|?>>
     <associate|complex conjugate properties|<tuple|10.71|?>>
     <associate|complex definition by recursion (1)|<tuple|10.37|?>>
@@ -13916,11 +13942,11 @@
     <associate|eq 9.82.036|<tuple|9.82|?>>
     <associate|eq 9.89.047|<tuple|9.83|?>>
     <associate|eq 9.90.047|<tuple|9.84|?>>
-    <associate|extended reals|<tuple|10.85|?>>
-    <associate|extended reals are fully ordered|<tuple|10.89|?>>
-    <associate|extended reals existence|<tuple|10.84|?>>
-    <associate|extended reals finite real number|<tuple|10.86|?>>
-    <associate|extended reals order definition|<tuple|10.87|?>>
+    <associate|extended reals|<tuple|10.86|?>>
+    <associate|extended reals are fully ordered|<tuple|10.90|?>>
+    <associate|extended reals existence|<tuple|10.85|?>>
+    <associate|extended reals finite real number|<tuple|10.87|?>>
+    <associate|extended reals order definition|<tuple|10.88|?>>
     <associate|field with characteristics zero|<tuple|10.42|?>>
     <associate|integeres order|<tuple|7.21|?>>
     <associate|integers|<tuple|7.2|?>>
