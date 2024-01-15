@@ -13692,6 +13692,7 @@
     <associate|complex densitiy theorem|<tuple|10.27|?>>
     <associate|complex embedding|<tuple|10.5|?>>
     <associate|complex field|<tuple|10.2|?>>
+    <associate|complex finite family of finite sets|<tuple|10.85|?>>
     <associate|complex finite lemma|<tuple|10.74|?>>
     <associate|complex finite set condition|<tuple|10.75|?>>
     <associate|complex finite set condition (1)|<tuple|10.76|?>>

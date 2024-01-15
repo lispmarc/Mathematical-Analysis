@@ -9577,6 +9577,64 @@
     surjective>]
   </proof>
 
+  The following theorem will be useful in induction arguments.
+
+  <\theorem>
+    <label|finite product of sets bijection>Let <math|n\<in\>\<bbb-N\>> abd
+    <math|<around*|{|X<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>B>
+    a finite family of sets then <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>X<rsub|i>>
+    is bijective with <math|<around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>|)>\<times\>X<rsub|n+1>>
+  </theorem>
+
+  <\proof>
+    Define\ 
+
+    <\equation*>
+      \<beta\>:<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>X<rsub|i>\<rightarrow\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>|)>\<times\>X<rsub|n+1><text|
+      by >\<beta\><around*|(|x|)>=<around*|(|x<rsub|\|<around*|{|1,\<ldots\>,n|}>>,x<around*|(|n+1|)>|)>
+    </equation*>
+
+    \ then we have:
+
+    <\description>
+      <item*|injectiviy>If <math|\<beta\><around*|(|x|)>=\<beta\><around*|(|y|)>>
+      then <math|<around*|(|x<rsub|\|<around*|{|1,\<ldots\>,n|}>>,x<around*|(|n+1|)>|)>=<around*|(|y<rsub|\|<around*|{|1,\<ldots\>,n|}>>,y<around*|(|n+1|)>|)>>,
+      hence <math|x<rsub|\|<around*|{|1,\<ldots\>,n|}>>=y<rsub|\|<around*|{|1,\<ldots\>,n|}>>>
+      and <math|x<around*|(|n+1|)>=y<around*|(|n+1|)>> or
+      <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+
+      <\equation*>
+        x<around*|(|i|)>=x<rsub|\|<around*|{|1,\<ldots\>,n|}>><around*|(|x|)>=y<rsub|\|<around*|{|1,\<ldots\>,n|}>><around*|(|i|)>=y<around*|(|i|)>\<wedge\>x<around*|(|n+1|)>=y<around*|(|n+1|)>
+      </equation*>
+
+      proving that <math|x=y>.
+
+      <item*|surjectivity>If <math|z\<in\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>|)>\<times\>X<rsub|n+1>>
+      then <math|z=<around*|(|z<rsub|1>,z<rsub|2>|)>> where
+      <math|z<rsub|1>\<in\><big|prod><rsub|I\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+      and <math|z<rsub|2>\<in\>X<rsub|n+1>>. Define the function
+
+      <\equation*>
+        x:<around*|{|1,\<ldots\>,n+1|}>\<rightarrow\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i><text|
+        by >x<around*|(|i|)>=<choice|<tformat|<table|<row|<cell|z<rsub|2>\<in\>X<rsub|n+1><text|
+        if >i=n+1>>|<row|<cell|z<rsub|1><around*|(|i|)>\<in\>X<rsub|i><text|
+        if >i\<in\><around*|{|1,\<ldots\>,n|}>>>>>>\<in\>X<rsub|i>
+      </equation*>
+
+      then <math|x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>.
+      Further <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+      <math|x<rsub|\|<around*|{|1,\<ldots\>,n|}>><around*|(|i|)>=x<around*|(|i|)>=z<around*|(|i|)>>
+      proving that <math|x<rsub|\|<around*|{|1,\<ldots\>,n|}>>=z<rsub|1>> so
+      that\ 
+
+      <\equation*>
+        \<beta\><around*|(|x|)>=<around*|(|x<rsub|\|<around*|{|1,\<ldots\>,n|}>>,x<around*|(|n+1|)>|)>=<around*|(|z<rsub|1>,z<rsub|2>|)>=z
+      </equation*>
+
+      proving surjectivity.\ 
+    </description>
+  </proof>
+
   Next we consider the special case where for
   <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> <math|A<rsub|i>=A> [see
   also theorem: <reference|product and power>]
@@ -9833,7 +9891,7 @@
     <associate|countable product of finite family of countable sets is
     countable|<tuple|6.72|190>>
     <associate|countable set|<tuple|6.25|172>>
-    <associate|countable set conditions (1)|<tuple|6.68|188>>
+    <associate|countable set conditions (1)|<tuple|6.68|189>>
     <associate|countable subset of countable set is
     countable|<tuple|6.67|188>>
     <associate|countable subset of denumerable set is
@@ -9841,7 +9899,7 @@
     <associate|countable union of a denumerable family of countable sets is
     denumerable|<tuple|6.69|189>>
     <associate|countable union of a finite family of countable sets is
-    countable|<tuple|6.70|189>>
+    countable|<tuple|6.70|190>>
     <associate|definition by recursion (1)|<tuple|5.89|164>>
     <associate|definition by recursion (2)|<tuple|5.90|165>>
     <associate|denumerable every subset is finite
@@ -9884,7 +9942,7 @@
     <associate|eq 5.9.019|<tuple|5.9|144>>
     <associate|eq 6.10.019|<tuple|6.11|175>>
     <associate|eq 6.11.019|<tuple|6.12|176>>
-    <associate|eq 6.12.022|<tuple|6.13|181>>
+    <associate|eq 6.12.022|<tuple|6.13|182>>
     <associate|eq 6.13.022|<tuple|6.14|182>>
     <associate|eq 6.14.022|<tuple|6.15|182>>
     <associate|eq 6.15.022|<tuple|6.16|182>>
@@ -9949,10 +10007,11 @@
     minimum|<tuple|6.47|179>>
     <associate|finite power notation|<tuple|6.75|191>>
     <associate|finite product of sets|<tuple|6.74|191>>
-    <associate|finite product of sets power|<tuple|6.78|192>>
-    <associate|finite product of sets power equivalence|<tuple|6.79|192>>
+    <associate|finite product of sets bijection|<tuple|6.78|?>>
+    <associate|finite product of sets power|<tuple|6.79|192>>
+    <associate|finite product of sets power equivalence|<tuple|6.80|192>>
     <associate|finite product of sets projection operator|<tuple|6.76|191>>
-    <associate|finite product of sets single set|<tuple|6.80|192>>
+    <associate|finite product of sets single set|<tuple|6.81|192>>
     <associate|finite set|<tuple|6.19|171>>
     <associate|finite set alternate definition lemma|<tuple|6.21|171>>
     <associate|finite set alternative definition|<tuple|6.22|171>>
@@ -9970,7 +10029,7 @@
     <associate|group example set of functions|<tuple|4.4|113>>
     <associate|group faithful, transitive action (1)|<tuple|4.30|120>>
     <associate|group faithful, transitive action (2)|<tuple|4.31|121>>
-    <associate|group finite power|<tuple|6.81|192>>
+    <associate|group finite power|<tuple|6.82|192>>
     <associate|group group|<tuple|4.5|114>>
     <associate|group group inheritance|<tuple|4.16|116>>
     <associate|group group inverse of inverse|<tuple|4.9|114>>
@@ -9989,7 +10048,7 @@
     <associate|group sub sub group|<tuple|4.17|116>>
     <associate|group sub sub semi-group|<tuple|4.15|115>>
     <associate|group sub-group|<tuple|4.13|115>>
-    <associate|image of a finite set|<tuple|6.44|?>>
+    <associate|image of a finite set|<tuple|6.44|178>>
     <associate|infinite condition (1)|<tuple|6.36|175>>
     <associate|infinite set|<tuple|6.23|171>>
     <associate|injection and infinite sets|<tuple|6.46|179>>
@@ -9999,7 +10058,7 @@
     <associate|mapping of N to a finite set (1)|<tuple|6.48|179>>
     <associate|mapping of N to a finite set (2)|<tuple|6.49|180>>
     <associate|mathematical induction|<tuple|5.83|162>>
-    <associate|max element of a family|<tuple|6.51|181>>
+    <associate|max element of a family|<tuple|6.51|182>>
     <associate|n\<less\>=m=\<gtr\>S_n\<less\>=S_m|<tuple|6.17|170>>
     <associate|natural number {n,..,m}|<tuple|5.82|162>>
     <associate|natural number {n,..}|<tuple|5.80|162>>
@@ -10122,7 +10181,7 @@
     <associate|set containing a denumerable set is infinite|<tuple|6.29|173>>
     <associate|set is infinitie if it contains a infinite
     subset|<tuple|6.31|173>>
-    <associate|set of finite family is finite|<tuple|6.45|178>>
+    <associate|set of finite family is finite|<tuple|6.45|179>>
     <associate|sub-semi-group|<tuple|4.12|115>>
     <associate|subring|<tuple|4.35|121>>
     <associate|subset of finite sets|<tuple|6.42|178>>

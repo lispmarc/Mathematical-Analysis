@@ -400,7 +400,7 @@
     noted as <math|V=<big|oplus><rsub|i\<in\>I>V<rsub|i>> is defined by
 
     <\equation*>
-      <big|oplus><rsub|i\<in\>I>=<around*|{|v\<in\>V\|<with|font-series|bold|\<exists\>!><around*|{|v<rsub|i>|}><rsub|i\<in\>I>\<subset\>V<text|
+      <big|oplus><rsub|i\<in\>I>V<rsub|i>=<around*|{|v\<in\>V\|<with|font-series|bold|\<exists\>!><around*|{|v<rsub|i>|}><rsub|i\<in\>I>\<subset\>V<text|
       with >\<forall\>i\<in\>I<text| >v<rsub|i>\<in\>V<rsub|i><text| such
       that >v=<big|sum><rsub|i\<in\>I>v<rsub|i><rsub|>|}>\<subseteq\>V
     </equation*>
@@ -785,6 +785,40 @@
         V=<around*|(|<big|oplus><rsub|i\<in\>I\\<around*|{|k|}>>V<rsub|i>|)>\<oplus\>V<rsub|k>
       </equation*>
     </enumerate>
+
+    \;
+  </proof>
+
+  The following exsmple shows that the direct interal sum defined in this
+  section is indeed a extension of the internal direct sum in [definition:
+  <reference|vector space internal direct sum>].
+
+  <\example>
+    <label|direct sum of two vector spaces>Let
+    <math|<around*|{|V<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,2|}>>\<subseteq\>\<cal-P\><around*|(|V|)>>
+    be a family of two sub-spaces of a vector space over a field <math|F>
+    then\ 
+
+    <\equation*>
+      V=<big|oplus><rsub|i\<in\><around*|{|1,2|}>>V<rsub|i>
+    </equation*>
+
+    then\ 
+
+    <\equation*>
+      V=V<rsub|1>\<oplus\>V<rsub|2>
+    </equation*>
+  </example>
+
+  <\proof>
+    If <math|V=<big|oplus><rsub|i\<in\><around*|{|1,2|}>>V<rsub|i>> then we
+    have\ 
+
+    <\equation*>
+      V\<equallim\><rsub|<text|[theorem: <reference|direct sum induction
+      argument>]>><around*|(|<big|oplus><rsub|i\<in\><around*|{|1|}>>V<rsub|i>|)>\<oplus\>V<rsub|2>\<equallim\><rsub|<text|[example:
+      <reference|direct sum singleton>]>>V<rsub|1>\<oplus\>V<rsub|2>
+    </equation*>
 
     \;
   </proof>
@@ -2237,7 +2271,7 @@
   theorem.
 
   <\theorem>
-    <label|tensor sub soaces>Let <math|n\<in\>\<bbb-N\>>,
+    <label|tensor sub spaces>Let <math|n\<in\>\<bbb-N\>>,
     <math|<around*|{|V<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>> a
     family of vector spaces over a field <math|F>,
     <math|<around*|{|W<rsub|i>|)><rsub|i\<in\><around*|{|1,\<ldots\>n|}>>> a
@@ -2252,24 +2286,38 @@
     then\ 
 
     <\equation*>
+      W<rsub|1>\<otimes\>\<cdots\>\<otimes\>W<rsub|n><text| is a sub-space of
+      >V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|n><text| hence a vector
+      space>
+    </equation*>
+
+    and
+
+    <\equation*>
       <around*|\<langle\>|W<rsub|1>\<otimes\>\<cdots\>\<otimes\>W<rsub|n>,\<otimes\><rsub|\|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>W<rsub|i>>|\<rangle\>>
     </equation*>
 
-    is a tensor product of <math|W<rsub|1>,\<ldots\>,W<rsub|n>>. Further we
-    have
-
-    <\equation*>
-      W<rsub|1>\<otimes\>\<cdots\>\<otimes\>W<rsub|n>\<subseteq\>V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|n>
-    </equation*>
-
-    <\note>
-      By [theorem: <reference|product inclusion>]
-      <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>W<rsub|i>\<subseteq\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>>
-      so the above makes sense.
-    </note>
+    is a tensor product of <math|W<rsub|1>,\<ldots\>,W<rsub|n>>.\ 
   </theorem>
 
   <\proof>
+    By [theorem: <reference|product inclusion>]
+    <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>W<rsub|i>\<subseteq\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>>
+    so that
+
+    <\equation*>
+      \<otimes\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>W<rsub|i>|)>\<subseteq\>\<otimes\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>|)>\<subseteq\>span<around*|(|\<otimes\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>|)>|)>=V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|n>
+    </equation*>
+
+    so that by [theorems: <reference|linear span is a sub-space>,
+    <reference|vector space sub-space is a vector space>]\ 
+
+    <\equation*>
+      W<rsub|1>\<otimes\>\<cdots\>\<otimes\>W<rsub|n>=span<around*|(|\<otimes\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>W<rsub|i>|)>|)><text|
+      is a vector space that is a sub-space of
+      >V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|n>
+    </equation*>
+
     If <math|i\<in\><around*|{|1,\<ldots\>,n|}>>,
     <math|x\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>W<rsub|i>>,
     <math|u,v\<in\>X<rsub|i>> and <math|\<alpha\>\<in\>F > then we have as
@@ -2911,7 +2959,7 @@
     and combining this with [eq: <reference|eq 13.45.129>] gives\ 
 
     <\equation>
-      <label|eq 13.46\<point\>129>V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|n+1>=span<around*|(|\<otimes\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,2|}>>W<rsub|i>|)>|)>
+      <label|eq 13.46.129>V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|n+1>=span<around*|(|\<otimes\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,2|}>>W<rsub|i>|)>|)>
     </equation>
 
     Let <math|\<theta\>\<in\>Hom<around*|(|W<rsub|1>,W<rsub|2>;U|)>=Hom<around*|(|V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|n>,V<rsub|n+1>;U|)>>
@@ -2959,6 +3007,815 @@
     </equation*>
   </proof>
 
+  <\lemma>
+    <label|tensor finite family of finite sets>Let
+    <math|n\<in\>\<bbb-N\><rsub|\<bbb-C\>>>,
+    <math|<around*|{|X<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>> a
+    finite family of finite sets then <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+    is finite and <math|card<around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>|)>=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>card<around*|(|X<rsub|i>|)>>
+  </lemma>
+
+  <\proof>
+    We use induction to proof this, so let\ 
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\>\|If <around*|{|X<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><text|
+      is a family of finite sets then <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>
+      <text| is finite and> card<around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>|)>=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>card<around*|(|X<rsub|i>|)>>>|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|1\<in\>S>>Let <math|<around*|{|X<rsub|i>|}><rsub|i\<in\><around*|{|1|}>>>
+      is such that <math|X<rsub|1>> is finite. By [example:
+      <reference|product of family with one element>] we have that
+      <math|<big|prod><rsub|i\<in\><around*|{|1|}>>X<rsub|i>> is bijective
+      with <math|X<rsub|1>>, hence <math|<big|prod><rsub|i\<in\><around*|{|1|}>>X<rsub|i>>
+      is finite and <math|card<around*|(|<big|prod><rsub|i\<in\><around*|{|1|}>>X<rsub|i>|)>=card<around*|(|X<rsub|1>|)>=<big|prod><rsub|i\<in\><around*|{|1|}>>card<around*|(|X<rsub|i>|)>>.
+      so <math|1\<in\>S>\ 
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+      <math|<around*|{|X<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>>
+      be family of finite sets. As <math|n\<in\>S> we have that\ 
+
+      <\equation>
+        <label|eq 13.50.129><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i><text|
+        is finite and >card<around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>|)>=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>card<around*|(|X<rsub|i>|)>
+      </equation>
+
+      Using [theorem: <reference|complex cardinality properties>] and the
+      fact that <math|X<rsub|n+1>> is finite we have that\ 
+
+      <\equation*>
+        <around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>|)>\<times\>X<rsub|n+1><text|
+        is >finite<text| and >card<around*|(|<around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>|)>\<times\>X<rsub|n+1>|)>=card<around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>|)>\<cdot\>card<around*|(|X<rsub|n+1>|)>\<equallim\><rsub|<text|[eq:
+        <reference|eq 13.50.129>]>><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>card<around*|(|X<rsub|i>|)>
+      </equation*>
+
+      By [theorem: <reference|finite product of sets bijection>]
+      <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>X> is
+      bijective with <math|<around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>|)>\<times\>X<rsub|n+1>><math|>
+      so that <math|<around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>|)>\<times\>X<rsub|n+1>>
+      is finite and <math|card<around*|(|<around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>|)>\<times\>X<rsub|n+1>|)>=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>card<around*|(|X<rsub|i>|)>>
+      proving that <math|n+1\<in\>S>.
+    </description>
+  </proof>
+
+  We introduce now the concept of a multi-index\ 
+
+  <\definition>
+    <label|tensor multi-index>Let <math|k\<in\>\<bbb-N\>,<around*|{|n<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>\<subseteq\>\<bbb-N\>>
+    be finite family of natural numbers then set of multi-indexes named
+    <math|\<Gamma\><around*|(|n<rsub|1>,\<ldots\>,n<rsub|k>|)>> is defined by
+
+    <\equation*>
+      \<Gamma\><around*|(|n<rsub|1>,\<ldots\>,n<rsub|k>|)>=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>><around*|{|1,\<ldots\>,n<rsub|i>|}>
+    </equation*>
+
+    Using the previous lemma [lemma: <reference|tensor finite family of
+    finite sets>] we have thant that\ 
+
+    <\equation*>
+      card<around*|(|\<Gamma\><around*|(|n<rsub|1>,\<ldots\>,n<rsub|k>|)>|)>=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>n<rsub|i>
+    </equation*>
+  </definition>
+
+  <\example>
+    <math|\<Gamma\><around*|(|2,3|)>=<around*|{|<around*|(|1,1|)>,<around*|(|1,2|)>,<around*|(|1,3|)>,<around*|(|2,1|)>,<around*|(|2,2|)>,<around*|(|2,3|)>|}>>
+  </example>
+
+  <\theorem>
+    <label|tensor multilinear mapping sum>Let <math|k\<in\>\<bbb-N\>>,
+    <math|<around*|{|V<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>>
+    be a finite family of vector space over a field <math|F>, <math|V> a
+    vector space over the same field, <math|\<varphi\>\<in\>Hom<around*|(|V<rsub|1>,\<ldots\>,V<rsub|k>;V|)>>
+    a multilinear mapping, <math|<around*|{|n<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>\<subseteq\>\<bbb-N\>>
+    and <math|<around*|{|w<rsub|i,j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|i>|}>><rsub|>\<subseteq\>V<rsub|i>>,
+    <math|i\<in\><around*|{|1,\<ldots\>,k|}>> then\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<varphi\><around*|(|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|1>|}>>w<rsub|1,j>,\<ldots\>,<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|k>|}>>w<rsub|k,j>|)>>|<cell|=>|<cell|<big|sum><rsub|\<gamma\>\<in\>\<Gamma\><around*|(|n<rsub|1>,\<ldots\>,n<rsub|k>|)>>\<varphi\><around*|(|w<rsub|1,\<gamma\><around*|(|1|)>>,\<ldots\>,w<rsub|k,\<gamma\><around*|(|k|)>>|)>>>>>
+    </eqnarray*>
+  </theorem>
+
+  <\proof>
+    We prove this by induction on <math|k>, so let\ 
+
+    <\equation*>
+      S=<around*|{|k\<in\>\<bbb-N\>\|<text|If
+      >\<varphi\>\<in\>Hom<around*|(|V<rsub|1>,\<ldots\>,V<rsub|k>;V|)>,<around*|{|n<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>\<subseteq\>N,i\<in\><around*|{|1,\<ldots\>,m|}>,<around*|{|w<rsub|i,j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|i>|}>><text|
+      then >\<varphi\><around*|(|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|1>|}>>w<rsub|1,j>,\<ldots\>,<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|k>|}>>w<rsub|k,j>|)>=<big|sum><rsub|\<gamma\>\<in\>\<Gamma\><around*|(|n<rsub|1>,\<ldots\>,n<rsub|k>|)>>\<varphi\><around*|(|w<rsub|1,\<gamma\><around*|(|1|)>>,\<ldots\>,w<rsub|k,\<gamma\><around*|(|k|)>>|)>|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|1\<in\>S>>Define <math|\<tau\>:<around*|{|1,\<ldots\>,n<rsub|1>|}>\<rightarrow\>\<Gamma\><around*|(|n<rsub|1>,\<ldots\>,n<rsub|1>|)>=<big|prod><rsub|i\<in\><around*|{|1|}>><around*|{|1,\<ldots\>,n<rsub|i>|}>>
+      where <math|\<tau\><around*|(|i|)>> is defined by
+      <math|\<tau\><around*|(|i|)><rsub|1>=\<tau\><around*|(|i|)><around*|(|1|)>=i>
+      then we have:\ 
+
+      <\description>
+        <item*|injectivity>If <math|\<tau\><around*|(|i|)>=\<tau\><around*|(|j|)>>
+        then <math|i=\<tau\><around*|(|i|)><around*|(|1|)>=\<tau\><around*|(|j|)><around*|(|1|)>=j>
+
+        <item*|surjectivity>If <math|\<gamma\>\<in\>\<Gamma\><around*|(|n<rsub|1>,\<ldots\>,n<rsub|1>|)>>
+        then <math|\<gamma\>:<around*|{|1|}>\<rightarrow\><around*|{|1,\<ldots\>,n<rsub|1>|}>>.
+        Take <math|i=\<gamma\><around*|(|1|)>\<in\><around*|{|1,\<ldots\>,n<rsub|1>|}>>
+        then <math|\<forall\>j\<in\><around*|{|1|}>> we have
+        <math|\<tau\><around*|(|i|)><around*|(|j|)>=i=\<gamma\><around*|(|1|)>=\<gamma\><around*|(|j|)>>
+        proving that <math|\<tau\><around*|(|i|)>=\<gamma\>>.
+      </description>
+
+      proving that
+
+      <\equation*>
+        \<tau\>:<around*|{|1,\<ldots\>,n<rsub|1>|}>\<rightarrow\>\<Gamma\><around*|(|n<rsub|1>,\<ldots\>,n<rsub|1>|)><text|
+        is a bijection>
+      </equation*>
+
+      Let <math|<around*|{|w<rsub|1,j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|1>|}>>\<subseteq\>V<rsub|1>>
+      and <math|\<varphi\>\<in\>Hom<around*|(|V<rsub|1>,\<ldots\>,V<rsub|1>;V|)>>
+      then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<varphi\><around*|(|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|1><rsub|>|}>>w<rsub|1,j>|)>>|<cell|\<equallim\><rsub|\<varphi\><text|
+        is multilinear>>>|<cell|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|1>|}>>\<varphi\><around*|(|w<rsub|1,j>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|1>|}>>\<varphi\><around*|(|w<rsub|1,\<tau\><around*|(|j|)><around*|(|1|)>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum bijection on index>]>>>|<cell|<big|sum><rsub|\<gamma\>\<in\>\<Gamma\><around*|(|n<rsub|1>,\<ldots\>,n<rsub|1>|)>>\<varphi\><around*|(|w<rsub|1,\<gamma\><around*|(|1|)>>|)>>>>>
+      </eqnarray*>
+
+      proving that <math|1\<in\>S>.
+
+      <item*|<math|k\<in\>S\<Rightarrow\>k+1\<in\>S>>Let
+      <math|\<varphi\>\<in\>Hom<around*|(|V<rsub|1>,\<ldots\>,V<rsub|k+1>;V|)>>,
+      <math|<around*|{|n<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k+1|}>>\<subseteq\>\<bbb-N\>>,
+      <math|<around*|{|w<rsub|i,j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|i>|}>>>
+      where <math|i\<in\><around*|{|1,\<ldots\>,k+1|}>>. Define\ 
+
+      <\equation*>
+        \<psi\>:<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>V<rsub|i>\<rightarrow\>V<text|
+        by >\<psi\><around*|(|v<rsub|1>,\<ldots\>,v<rsub|k>,<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|k+1>|}>>w<rsub|k+1,j>|)>
+      </equation*>
+
+      then trivially <math|\<psi\>\<in\>Hom<around*|(|V<rsub|1>,\<ldots\>,V<rsub|k>;V|)>>.
+      Then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<varphi\><around*|(|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|1>|}>>w<rsub|1,j>,\<ldots\>,<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|k+1>|}>>w<rsub|k+1,j>|)>>|<cell|=>|<cell|>>|<row|<cell|\<psi\><around*|(|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|1>|}>>w<rsub|1,j>,\<ldots\>,<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|k>|}>>w<rsub|k,j>|)>>|<cell|\<equallim\><rsub|k\<in\>S>>|<cell|>>|<row|<cell|<big|sum><rsub|\<gamma\>\<in\>\<Gamma\><around*|(|n<rsub|1>,\<ldots\>,n<rsub|k>|)>>\<psi\><around*|(|w<rsub|1,\<gamma\><around*|(|1|)>>,\<ldots\>,w<rsub|k,\<gamma\><around*|(|k|)>>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|\<gamma\>\<in\>\<Gamma\><around*|(|n<rsub|1>,\<ldots\>,n<rsub|k>|)>>\<varphi\><around*|(|w<rsub|1,\<gamma\><around*|(|1|)>>,\<ldots\>,w<rsub|k,\<gamma\><around*|(|k|)>>,<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|k+1>|}>>w<rsub|k+1,j>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|\<gamma\>\<in\>\<Gamma\><around*|(|n<rsub|1>,\<ldots\>,n<rsub|k+1>|)>><around*|(|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|k+1>|}>>\<varphi\><around*|(|w<rsub|1,\<gamma\><around*|(|1|)>>,\<ldots\>,w<rsub|k,\<gamma\><around*|(|k|)>>,w<rsub|k+1,j>|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum index is a product>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|<around*|(|\<gamma\>,j|)>\<in\>\<Gamma\><around*|(|n<rsub|1>,\<ldots\>,n<rsub|k>|)>\<times\><around*|{|1,\<ldots\>,n<rsub|k+1>|}>>\<varphi\><around*|(|w<rsub|1,\<gamma\><around*|(|1|)>>,\<ldots\>,w<rsub|k,\<gamma\><around*|(|k|)>>,w<rsub|k+1,j>|)>>|<cell|>|<cell|<eq-number><label|eq
+        13.51.129>>>>>
+      </eqnarray*>
+
+      Define now\ 
+
+      <\equation*>
+        \<chi\>:\<Gamma\><around*|(|n<rsub|1>,\<ldots\>,n<rsub|k>|)>\<times\><around*|{|1,\<ldots\>,n<rsub|k+1>|}>\<rightarrow\>\<Gamma\><around*|(|n<rsub|1>,\<ldots\>,n<rsub|k+1>|)>
+      </equation*>
+
+      where\ 
+
+      <\equation*>
+        \<chi\><around*|(|\<gamma\>,i|)><text| is defined by
+        >\<chi\><around*|(|\<gamma\>,i|)><around*|(|j|)>=<choice|<tformat|<table|<row|<cell|i<text|
+        if >j=k+1>>|<row|<cell|\<gamma\><around*|(|j|)><text| if
+        >j\<in\><around*|{|1,\<ldots\>,k|}>>>>>>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|injectivity>If <math|\<chi\><around*|(|\<gamma\>,r|)>=\<chi\><around*|(|\<zeta\>,s|)>>
+        then <math|\<forall\>j\<in\><around*|{|1,\<ldots\>,k|}>> we have
+
+        <\equation*>
+          \<gamma\><around*|(|j|)>=\<chi\><around*|(|\<gamma\>,r|)><around*|(|j|)>=\<chi\><around*|(|\<zeta\>,s|)><around*|(|j|)>=\<zeta\><around*|(|j|)>
+        </equation*>
+
+        proving that <math|\<gamma\>=\<zeta\>>. Further
+        <math|><math|r=\<chi\><around*|(|\<gamma\>,r|)><around*|(|k+1|)>=\<chi\><around*|(|\<zeta\>,s|)><around*|(|k+1|)>=s>
+        so that we have that <math|<around*|(|\<gamma\>,r|)>=<around*|(|\<zeta\>,s|)>>.
+
+        <item*|surjectivity>If <math|\<gamma\>\<in\>\<Gamma\><around*|(|n<rsub|1>,\<ldots\>,n<rsub|k+1>|)>>
+        take then <math|\<zeta\>=\<gamma\><rsub|\|<around*|{|1,\<ldots\>,k|}>>>
+        and <math|r=\<gamma\><around*|(|k+1|)>> then we have
+        <math|\<chi\><around*|(|\<zeta\>,r|)><around*|(|j|)>=<choice|<tformat|<table|<row|<cell|r<text|
+        if >j=k+1>>|<row|<cell|\<zeta\><around*|(|j|)><text| if
+        >j\<in\><around*|{|1,\<ldots\>,k|}>>>>>>=<choice|<tformat|<table|<row|<cell|\<gamma\><around*|(|k+1|)><text|
+        if >j\<in\>k+1>>|<row|<cell|\<gamma\><around*|(|j|)><text| if
+        >j\<in\><around*|{|1,\<ldots\>,k|}>>>>>>=\<gamma\><around*|(|j|)>>.
+        Hence <math|\<chi\><around*|(|\<zeta\>,r|)>=\<gamma\>> proving
+        surjectivity.
+      </description>
+
+      Hence <math|\<chi\>:\<Gamma\><around*|(|n<rsub|1>,\<ldots\>,n<rsub|k>|)>\<times\><around*|{|1,\<ldots\>,n<rsub|k+1>|}>\<rightarrow\>\<Gamma\><around*|(|n<rsub|1>,\<ldots\>,n<rsub|k+1>|)>>
+      is a bijection. So\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|sum><rsub|<around*|(|\<gamma\>,j|)>\<in\>\<Gamma\><around*|(|n<rsub|1>,\<ldots\>,n<rsub|k>|)>\<times\><around*|{|1,\<ldots\>,n<rsub|k+1>|}>>\<varphi\><around*|(|w<rsub|1,\<gamma\><around*|(|1|)>>,\<ldots\>,w<rsub|k,\<gamma\><around*|(|k|)>>,w<rsub|k+1,j>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|<around*|(|\<gamma\>,j|)>\<in\>\<Gamma\><around*|(|n<rsub|1>,\<ldots\>,n<rsub|k>|)>\<times\><around*|{|1,\<ldots\>,n<rsub|k+1>|}>>\<varphi\><around*|(|w<rsub|1,\<chi\><around*|(|\<gamma\>,j|)><around*|(|1|)>>,\<ldots\>,w<rsub|k,\<chi\><around*|(|\<gamma\>,j|)><around*|(|k|)>>,w<rsub|k+1,\<chi\><around*|(|\<gamma\>,j|)><around*|(|k+1|)>>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum bijection on index>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|\<gamma\>\<in\>\<Gamma\><around*|(|n<rsub|1>,\<ldots\>,n<rsub|k+1>|)>>\<varphi\><around*|(|w<rsub|1,\<gamma\><around*|(|1|)>>,\<ldots\>,w<rsub|k+1,\<gamma\><around*|(|k+1|)>>|)>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      which combined with [eq: <reference|eq 13.51.129>] gives\ 
+
+      <\equation*>
+        \<varphi\><around*|(|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|1>|}>>w<rsub|1,j>,\<ldots\>,<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|k+1>|}>>w<rsub|k+1,j>|)>=<big|sum><rsub|\<gamma\>\<in\>\<Gamma\><around*|(|n<rsub|1>,\<ldots\>,n<rsub|k+1>|)>>\<varphi\><around*|(|w<rsub|1,\<gamma\><around*|(|1|)>>,\<ldots\>,w<rsub|k+1,\<gamma\><around*|(|k+1|)>>|)>
+      </equation*>
+
+      proving that <math|k+1\<in\>S>.
+    </description>
+  </proof>
+
+  <\lemma>
+    <label|tensor product and sum of vector space>Let
+    <math|k\<in\>\<bbb-N\>>, <math|<around*|{|V<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>>
+    a finite family of vector spaces over a field,
+    <math|<around*|{|n<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>\<subseteq\>\<bbb-N\>>,
+    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|<around*|{|W<rsub|i,j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|i>|}>>>
+    a family such that\ 
+
+    <\equation*>
+      \<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|,
+      <math|\<forall\>j\<in\><around*|{|1,\<ldots\>,n<rsub|i>|}><text|
+      >W<rsub|i,j><text| is a sub-space of >V<rsub|i>>>
+    </equation*>
+
+    and
+
+    <\equation*>
+      V<rsub|i>=<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|i>|}>>V<rsub|i><text|
+      [see definition ><reference|direct sum of sets><text|]>
+    </equation*>
+
+    and a tensor product <math|<around*|\<langle\>|V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|k>,\<otimes\>|\<rangle\>>>
+    of <math|V<rsub|1>,\<ldots\>,V<rsub|n>> then we have\ 
+
+    <\equation*>
+      V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|k>=<big|sum><rsub|\<gamma\>\<in\>\<Gamma\><around*|(|n<rsub|1>,\<ldots\>,n<rsub|k>|)>>W<rsub|1,\<gamma\><around*|(|1|)>>\<otimes\>\<cdots\>\<otimes\>W<rsub|k,\<gamma\><around*|(|k|)>>
+    </equation*>
+
+    where <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,k|}>>
+    <math|<around*|\<langle\>|W<rsub|1,\<gamma\><around*|(|1|)>>\<otimes\>\<cdots\>\<otimes\>W<rsub|k,\<gamma\><around*|(|k|)>>,\<otimes\><rsub|\|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,k|}>>W<rsub|i,\<gamma\><around*|(|i|)>>>|\<rangle\>>>
+    is defined in [theorem: <reference|tensor sub spaces>]
+  </lemma>
+
+  <\proof>
+    Let <math|v=<around*|(|v<rsub|1>,\<ldots\>,v<rsub|k>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>V<rsub|i>>
+    then by the hypothesis we have <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,k|}>>
+    that there exist a <math|<around*|{|w<rsub|i,j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|i>|}>>\<subseteq\>W<rsub|i>>
+    such that <math|v<rsub|i>=<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|i>|}>>w<rsub|i,j>>.
+    As <math|\<otimes\>> is multilinear we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<otimes\><around*|(|v<rsub|1>,\<ldots\>,v<rsub|k><rsub|>|)>>|<cell|=>|<cell|\<otimes\><around*|(|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|1>|}>>w<rsub|1,j>,\<ldots\>,<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|k>|}>>w<rsub|k,j>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|tensor multilinear mapping
+      sum>]>>>|<cell|<big|sum><rsub|\<gamma\>\<in\>\<Gamma\>n<rsub|1>,\<ldots\>,n<rsub|k>>\<otimes\><around*|(|w<rsub|1,\<gamma\><around*|(|1|)>>,\<ldots\>,w<rsub|k,\<gamma\><around*|(|k|)>>|)><eq-number><label|eq
+      13.52.130>>>>>
+    </eqnarray*>
+
+    As <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,k|}>>,
+    <math|\<forall\>j\<in\><around*|{|1,\<ldots\>,n<rsub|i>|}>> we have
+    <math|w<rsub|i,\<gamma\><around*|(|i|)>>\<in\>W<rsub|i,\<gamma\><around*|(|i|)>>>
+    we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<otimes\><around*|(|w<rsub|1,\<gamma\><around*|(|1|)>>,\<ldots\>,w<rsub|k,\<gamma\><around*|(|k|)>>|)>>|<cell|\<in\>>|<cell|\<otimes\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>W<rsub|i,\<gamma\><around*|(|i|)>>|)>>>|<row|<cell|>|<cell|\<subseteq\>>|<cell|span<around*|(|\<otimes\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>W<rsub|i,\<gamma\><around*|(|i|)>>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|tensor sub spaces>]>>>|<cell|W<rsub|1,\<gamma\><around*|(|1|)>>\<otimes\>\<cdots\>\<otimes\>W<rsub|k,\<gamma\><around*|(|k|)>>>>>>
+    </eqnarray*>
+
+    So using the above, [eq: <reference|eq 13.52.130>] and the definition of
+    the sum of sets <math|<text| [see definition ><reference|direct sum of
+    sets><text|]>> it follows that\ 
+
+    <\equation*>
+      \<otimes\><around*|(|v<rsub|1>,\<ldots\>,v<rsub|k><rsub|>|)>\<in\><big|sum><rsub|\<gamma\>\<in\>\<Gamma\><around*|(|n<rsub|1>,\<ldots\>,n<rsub|k>|)>>W<rsub|1,\<gamma\><around*|(|1|)>>\<otimes\>\<cdots\>\<otimes\>W<rsub|k,\<gamma\><around*|(|k|)>>
+    </equation*>
+
+    or\ 
+
+    <\equation*>
+      \<otimes\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>V<rsub|i>|)>\<subseteq\><big|sum><rsub|\<gamma\>\<in\>\<Gamma\><around*|(|n<rsub|1>,\<ldots\>,n<rsub|k>|)>>W<rsub|1,\<gamma\><around*|(|1|)>>\<otimes\>\<cdots\>\<otimes\>W<rsub|k,\<gamma\><around*|(|k|)>>
+    </equation*>
+
+    which using \ [theorem: <reference|linear span subsets>] gives\ 
+
+    <\equation*>
+      V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|k>=span<around*|(|\<otimes\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>V<rsub|i>|)>|)>\<subseteq\>span<around*|(|<big|sum><rsub|\<gamma\>\<in\>\<Gamma\><around*|(|n<rsub|1>,\<ldots\>,n<rsub|k>|)>>W<rsub|1,\<gamma\><around*|(|1|)>>\<otimes\>\<cdots\>\<otimes\>W<rsub|k,\<gamma\><around*|(|k|)>>|)>
+    </equation*>
+
+    By \ [theorem: <reference|tensor sub spaces>]
+    <math|W<rsub|1,\<gamma\><around*|(|1|)>>\<otimes\>\<cdots\>\<otimes\>W<rsub|k,\<gamma\><around*|(|k|)>>>
+    is a sub-space of <math|V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|k>>
+    so that by [theorem: <reference|direct sum of subspaces>]
+    <math|<big|sum><rsub|\<gamma\>\<in\>\<Gamma\><around*|(|n<rsub|1>,\<ldots\>,n<rsub|k>|)>>W<rsub|1,\<gamma\><around*|(|1|)>>\<otimes\>\<cdots\>\<otimes\>W<rsub|k,\<gamma\><around*|(|k|)>>>
+    is a sub-space of <math|V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|n>>.
+    Hence by [theorems: <reference|linear span subsets>, <reference|linear
+    span properties>]
+
+    <\equation*>
+      <big|sum><rsub|\<gamma\>\<in\>\<Gamma\><around*|(|n<rsub|1>,\<ldots\>,n<rsub|k>|)>>W<rsub|1,\<gamma\><around*|(|1|)>>\<otimes\>\<cdots\>\<otimes\>W<rsub|k,\<gamma\><around*|(|k|)>>=span<around*|(|<big|sum><rsub|\<gamma\>\<in\>\<Gamma\><around*|(|n<rsub|1>,\<ldots\>,n<rsub|k>|)>>W<rsub|1,\<gamma\><around*|(|1|)>>\<otimes\>\<cdots\>\<otimes\>W<rsub|k,\<gamma\><around*|(|k|)>>|)>\<subseteq\>V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|k>
+    </equation*>
+
+    Combining the last two results proves then that\ 
+
+    <\equation*>
+      <big|sum><rsub|\<gamma\>\<in\>\<Gamma\><around*|(|n<rsub|1>,\<ldots\>,n<rsub|k>|)>>W<rsub|1,\<gamma\><around*|(|1|)>>\<otimes\>\<cdots\>\<otimes\>W<rsub|k,\<gamma\><around*|(|k|)>>=V<rsub|1>\<otimes\>\<cdots\>\<otimes\>V<rsub|k>
+    </equation*>
+
+    \;
+  </proof>
+
+  <\lemma>
+    <label|tensor product and direct sum of two vector spaces>Let
+    <math|<around*|{|V<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,2|}>>>
+    be a family of two vector spaces over a field then we have\ 
+
+    <\enumerate>
+      <item>If <math|V<rsub|1>=W<rsub|1>\<oplus\>W<rsub|2>>
+      [<math|W<rsub|1>,W<rsub|2>> sub-spaces of <math|V<rsub|1>>] and
+      <math|<around*|\<langle\>|V<rsub|1>\<otimes\>V<rsub|2>,\<otimes\>|\<rangle\>>>
+      is a tensor product of <math|V<rsub|1>> and <math|V<rsub|2>> then we
+      have that\ 
+
+      <\equation*>
+        V<rsub|1>\<otimes\>V<rsub|2>=<around*|(|W<rsub|1>\<otimes\>V<rsub|2>|)>\<oplus\><around*|(|W<rsub|2>\<otimes\>V<rsub|2>|)>
+      </equation*>
+
+      where <math|W<rsub|1>\<otimes\>V<rsub|2>=span<around*|(|\<otimes\><around*|(|W<rsub|1>\<times\>V<rsub|2>|)>|)>>
+      and <math|W<rsub|2>\<otimes\>V<rsub|2>=span<around*|(|\<otimes\><around*|(|W<rsub|2>\<otimes\>V<rsub|2>|)>|)>>
+      are defined in [theorem: <reference|tensor sub spaces>] so that
+      <math|<around*|\<langle\>|W<rsub|1>\<otimes\>V<rsub|2>,\<otimes\><rsub|\|W<rsub|1>\<times\>V<rsub|2>>|\<rangle\>>>
+      and <math|<around*|\<langle\>|W<rsub|2>\<otimes\>V<rsub|2>,\<otimes\><rsub|\|W<rsub|2>\<times\>V<rsub|2>>|\<rangle\>>>
+      are tensor products.
+
+      <item>If <math|V<rsub|2>=W<rsub|1>\<oplus\>W<rsub|2>>
+      [<math|W<rsub|1>,W<rsub|2>> sub-spaces of <math|><math|V<rsub|2>>] and
+      <math|<around*|\<langle\>|V<rsub|1>\<otimes\>V<rsub|2>,\<otimes\>|\<rangle\>>>
+      is a tensor product of <math|V<rsub|1>> and <math|V<rsub|2>> then we
+      have that\ 
+
+      <\equation*>
+        V<rsub|1>\<otimes\>V<rsub|2>=<around*|(|V<rsub|1>\<otimes\>W<rsub|1>|)>\<oplus\><around*|(|V<rsub|2>\<otimes\>W<rsub|2>|)>
+      </equation*>
+
+      where <math|V<rsub|1>\<otimes\>W<rsub|1>=span<around*|(|\<otimes\><around*|(|V<rsub|1>\<times\>W<rsub|1>|)>|)>>
+      and <math|V<rsub|1>\<otimes\>W<rsub|2>=span<around*|(|\<otimes\><around*|(|V<rsub|1>\<otimes\>W<rsub|2>|)>|)>>
+      are defined in [theorem: <reference|tensor sub spaces>] so that
+      <math|<around*|\<langle\>|V<rsub|1>\<otimes\>W<rsub|1>,\<otimes\><rsub|\|V<rsub|1>\<times\>W<rsub|1>>|\<rangle\>>>
+      and <math|<around*|\<langle\>|V<rsub|1>\<otimes\>W<rsub|2>,\<otimes\><rsub|\|V\<times\>W<rsub|2>>|\<rangle\>>>
+      are tensor products.
+    </enumerate>
+
+    Here we abused notation a little bit, if
+    <math|<around*|{|X<rsub|i>|}><rsub|i\<in\><around*|{|1,2|}>>> is a family
+    of sets then <math|X<rsub|1>\<times\>X<rsub|2>> is not the cartesian
+    product of sets but <math|<big|prod><rsub|i\<in\><around*|{|1,.2|}>>X<rsub|i>>
+    [see definition: <reference|product> and example <reference|product of
+    family with two classes>]
+  </lemma>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|v=<around*|(|v<rsub|1>,v<rsub|2>|)>\<in\>V<rsub|1>\<times\>V<rsub|2>>
+      then as <math|V<rsub|1>=W<rsub|1>\<oplus\>W<rsub|2>> there exists
+      <with|font-series|bold|unique> <math|w<rsub|1>\<in\>W<rsub|1>>,
+      <math|w<rsub|2>\<in\>W<rsub|2>> such that
+      <math|v<rsub|1>=w<rsub|1>+w<rsub|2>>. Hence
+      <math|\<otimes\><around*|(|v|)>=\<otimes\><around*|(|w<rsub|1>+w<rsub|2>,v<rsub|2>|)>=\<otimes\><around*|(|w<rsub|1>,v<rsub|2>|)>+\<otimes\><around*|(|w<rsub|2>,v<rsub|2>|)>>
+      where
+
+      <\equation*>
+        \<otimes\><around*|(|w<rsub|1>,v<rsub|2>|)>\<in\>\<otimes\><around*|(|W<rsub|1>\<times\>V<rsub|2>|)>\<subseteq\>span<around*|(|\<otimes\><around*|(|W<rsub|1>\<times\>V<rsub|2>|)>|)>=W<rsub|1>\<otimes\>V<rsub|2>
+      </equation*>
+
+      and
+
+      <\equation*>
+        \<otimes\><around*|(|w<rsub|2>,v<rsub|2>|)>\<in\>\<otimes\><around*|(|W<rsub|2>\<times\>V<rsub|2>|)>\<subseteq\>span<around*|(|\<otimes\><around*|(|W<rsub|2>\<times\>V<rsub|2>|)>|)>=W<rsub|2>\<otimes\>V<rsub|2>
+      </equation*>
+
+      hence <math|\<otimes\><around*|(|v|)>\<in\>W<rsub|1>\<otimes\>V<rsub|2>+W<rsub|2>\<otimes\>V<rsub|2>>.
+      So <math|\<otimes\>*<around*|(|V<rsub|1>\<times\>V<rsub|2>|)>\<subseteq\>W<rsub|1>\<otimes\>V<rsub|2>+W<rsub|2>\<otimes\>V<rsub|2>>
+      which using \ [theorem: <reference|linear span subsets>] gives\ 
+
+      <\equation>
+        <label|eq 13.53.129>V<rsub|1>\<otimes\>V<rsub|2>=span<around*|(|\<otimes\><around*|(|V<rsub|1>\<times\>V<rsub|2>|)>|)>\<subseteq\>span<around*|(|W<rsub|1>\<otimes\>V<rsub|2>+W<rsub|2>\<otimes\>V<rsub|2>|)>
+      </equation>
+
+      As <math|><math|W<rsub|1>\<otimes\>V<rsub|2>> and
+      <math|W<rsub|2>\<otimes\>V<rsub|2>> are sub spaces of
+      <math|V<rsub|1>\<otimes\>V<rsub|2>> [see theorem: <reference|tensor sub
+      spaces>] we have by [theorem: <reference|direct sum of subspaces>] that
+      <math|W<rsub|1>\<otimes\>V<rsub|2>+W<rsub|2>\<otimes\>V<rsub|2>> is a
+      sub-space of <math|V<rsub|1>\<otimes\>V<rsub|2>>, hence using
+      [theorems: <reference|linear span subsets>, <reference|linear span
+      properties>] we have\ 
+
+      <\equation*>
+        W<rsub|1>\<otimes\>V<rsub|2>+W<rsub|2>\<otimes\>V<rsub|2>=span<around*|(|W<rsub|1>\<otimes\>V<rsub|2>+W<rsub|2>\<otimes\>V<rsub|2>|)>\<subseteq\>V<rsub|1>\<otimes\>V<rsub|2>
+      </equation*>
+
+      combining this wit [eq: <reference|eq 13.53.129>] gives then
+
+      <\equation>
+        <label|eq 13.54.129>W<rsub|1>\<otimes\>V<rsub|2>+W<rsub|2>\<otimes\>V<rsub|2>=V<rsub|1>\<otimes\>V<rsub|2>
+      </equation>
+
+      Assume now that there exist a <math|x\<in\><around*|(|W<rsub|1>\<otimes\>V<rsub|2>|)><big|cap><around*|(|W<rsub|2>\<otimes\>V<rsub|2>|)>>
+      with <math|x\<neq\>0>. Using [theorem: <reference|tensor product linear
+      independency>] there exists <math|<around*|{|w<rsub|1,i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k<rsub|x>|}>>\<subseteq\>W<rsub|1>>,
+      <math|<around*|{|v<rsub|1,i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k<rsub|x>|}>>\<subseteq\>V<rsub|2>>,
+      <math|<around*|{|w<rsub|2,i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,l<rsub|x>|}>>\<subseteq\>W<rsub|2>>,
+      <math|<around*|{|v<rsub|2,i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,l<rsub|x>|}>>\<subseteq\>V<rsub|2>>
+      such that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k<rsub|x>|}>>w<rsub|1,i>\<otimes\>v<rsub|1,i><eq-number><label|eq
+        13.55.130>>>|<row|<cell|x>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,l<rsub|x>|}>>w<rsub|2,i>\<otimes\>v<rsub|2,i><eq-number><label|eq
+        13.56.130>>>>>
+      </eqnarray*>
+
+      and <math|<around*|{|w<rsub|1,i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k<rsub|x>|}>>\<subseteq\>W<rsub|1>>,
+      <math|<around*|{|v<rsub|1,i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k<rsub|x>|}>>\<subseteq\>V<rsub|2>>,
+      <math|<around*|{|w<rsub|2,i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,l<rsub|x>|}>>\<subseteq\>W<rsub|2>>,
+      <math|<around*|{|v<rsub|2,i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,l<rsub|x>|}>>\<subseteq\>V<rsub|2>>
+      are linear independent. Using [theorem: <reference|linear mapping for
+      independent set>] there exist a <math|L\<in\>Hom<around*|(|V<rsub|2>,F|)>>
+      such that <math|L<around*|(|v<rsub|1,1>|)>=1> and
+      <math|\<forall\>i\<in\><around*|{|2,\<ldots\>,k<rsub|x>|}>>
+      <math|L<around*|(|v<rsub|1,i>|)>=0>. Let now
+      <math|K\<in\>Hom<around*|(|V<rsub|1>,F|)>> then\ 
+
+      <\equation*>
+        K\<cdot\>L:V<rsub|1>\<times\>V<rsub|2>\<rightarrow\>F<text| by
+        ><around*|(|K\<cdot\>L|)><around*|(|v<rsub|1>,v<rsub|2>|)>=K<around*|(|v<rsub|1>|)>\<cdot\>L<around*|(|v<rsub|2>|)>
+      </equation*>
+
+      then from the linearity of <math|K,L> it follows that
+      <math|K\<cdot\>L\<in\>Hom<around*|(|V<rsub|1>,V<rsub|2>;F|)>>. As
+      <math|<around*|\<langle\>|V<rsub|1>\<otimes\>V<rsub|2>,\<otimes\>|\<rangle\>>>
+      is a tensor product of <math|V<rsub|1>>, <math|V<rsub|2>> there exist a
+      <math|h\<in\>Hom<around*|(|V<rsub|1>\<otimes\>V<rsub|2>,F|)>> such that\ 
+
+      <\equation>
+        <label|eq 13.57.130>K\<cdot\>L=h\<circ\>\<otimes\>
+      </equation>
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|h<around*|(|x|)>>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 13.55.130>]>>>|<cell|h<around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k<rsub|x>|}>>w<rsub|1,i>\<otimes\>v<rsub|1,i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|h<text|
+        is linear>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k<rsub|x>|}>>h<around*|(|w<rsub|1,i>\<otimes\>v<rsub|1,i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k<rsub|x>|}>>h<around*|(|\<otimes\><around*|(|w<rsub|1,i>,v<rsub|1,i>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 13.57.130>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k<rsub|x>|}>><around*|(|K\<cdot\>L|)><around*|(|w<rsub|1,i>,v<rsub|1,i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k<rsub|x>|}>>K<around*|(|w<rsub|1,i>|)>\<cdot\>L<around*|(|v<rsub|1,i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum over disjoint subsets>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|2,\<ldots\>,k<rsub|x>|}>>K<around*|(|w<rsub|1,i>|)>\<cdot\>L<around*|(|v<rsub|1,i>|)>+<big|sum><rsub|i\<in\><around*|{|1|}>>K<around*|(|w<rsub|1,i>|)>\<cdot\>L<around*|(|v<rsub|1,i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum general single>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|2,\<ldots\>,k<rsub|x>|}>>K<around*|(|w<rsub|1,i>|)>\<cdot\>L<around*|(|v<rsub|1,i>|)>+K<around*|(|w<rsub|1,1>|)>\<cdot\>L<around*|(|v<rsub|1,1>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|2,\<ldots\>,k<rsub|x>|}>>0\<cdot\>L<around*|(|v<rsub|1,i>|)>+K<around*|(|w<rsub|1,1>|)>\<cdot\>1>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum of neutral element
+        (2)>]>>>|<cell|K<around*|(|w<rsub|1,1>|)>>>>>
+      </eqnarray*>
+
+      but we have also\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|h<around*|(|x|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|eq 13.56.130>]>>>|<cell|h<around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,l<rsub|x>|}>>w<rsub|2,i>\<otimes\>v<rsub|2,i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,l<rsub|x>|}>>h<around*|(|w<rsub|2,i>\<otimes\>v<rsub|2,i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,l<rsub|x>|}>>h<around*|(|\<otimes\><around*|(|w<rsub|2,i>,v<rsub|2,i>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 13.57.130>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,l<rsub|x>|}>><around*|(|K\<cdot\>L|)><around*|(|<around*|(|w<rsub|2,i>,v<rsub|2,i>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,l<rsub|x>|}>>K<around*|(|w<rsub|2,i>|)>\<cdot\>L<around*|(|v<rsub|2,i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,l<rsub|x>|}>>L<around*|(|v<rsub|2,i>|)>\<cdot\>K<around*|(|w<rsub|2,i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|K<text|
+        is linear>>>|<cell|K<around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,l<rsub|x>|}>>L<around*|(|v<rsub|2,i>|)>\<cdot\>w<rsub|2,i>|)>>>>>
+      </eqnarray*>
+
+      so we have\ 
+
+      <\equation>
+        <label|eq 13.58.130>\<forall\>K\<in\>Hom<around*|(|V<rsub|1>,F|)><text|
+        we have >K<around*|(|w<rsub|1,1>|)>=K<around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,l<rsub|x>|}>>L<around*|(|v<rsub|2,i>|)>\<cdot\>w<rsub|2,i>|)>
+      </equation>
+
+      So we can apply [theorem: <reference|linear mapping
+      L(x)=L(y)=\<gtr\>x=y>] giving that <math|w<rsub|1,1>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,l<rsub|x>|}>>L<around*|(|v<rsub|2,i>|)>\<cdot\>w<rsub|2,i>>.
+      As <math|w<rsub|1,1>\<in\>W<rsub|1>> and
+      <math|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,l<rsub|x>|}>>L<around*|(|v<rsub|2,i>|)>\<cdot\>w<rsub|2,i>\<in\>W<rsub|2>>
+      [as <math|W<rsub|2>> is a sub-space of <math|V<rsub|1>>] it follows
+      that
+
+      <\equation*>
+        w<rsub|1,1>\<in\>W<rsub|1><big|cap>W<rsub|2>\<equallim\><rsub|V<rsub|1>=W<rsub|1>\<oplus\>W<rsub|2>><rsub|>=<around*|{|0|}>
+      </equation*>
+
+      proving that <math|w<rsub|1,1>=0>. However this means by [theorem:
+      <reference|linear dependent family condition>] that
+      <math|<around*|{|w<rsub|1,i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k<rsub|x>|}>>>
+      is linear dependent contradicting the fact that
+      <math|<around*|{|w<rsub|1,i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k<rsub|x>|}>>>
+      is linear independent. Hence the assumption <math|x\<neq\>0> is wrong
+      and we must have that <math|x=0> or
+      <math|<around*|(|W<rsub|1>\<otimes\>V<rsub|2>|)><big|cap><around*|(|W<rsub|2>\<otimes\>V<rsub|2>|)>\<subseteq\><around*|{|0|}>>.
+      This together with fact that by <math|W<rsub|1>\<otimes\>V<rsub|2>>,
+      <math|W<rsub|2>\<otimes\>V<rsub|2>> are vector spaces so that
+      <math|0\<in\><around*|(|W<rsub|1>\<otimes\>V<rsub|2>|)><big|cap><around*|(|W<rsub|2>\<otimes\>V<rsub|2>|)>>
+      proves that\ 
+
+      <\equation*>
+        <around*|(|W<rsub|1>\<otimes\>V<rsub|2>|)><big|cap><around*|(|W<rsub|2>\<otimes\>V<rsub|2>|)>=<around*|{|0|}>
+      </equation*>
+
+      which together with [eq: <reference|eq 13.53.129>] proves that\ 
+
+      <\equation*>
+        V<rsub|1>\<otimes\>V<rsub|2>=<around*|(|W<rsub|1>\<otimes\>V<rsub|2>|)>\<oplus\><around*|(|W<rsub|2>\<otimes\>V<rsub|2>|)>
+      </equation*>
+
+      <item>The proof is simular to the proof of (1). If
+      <math|v=<around*|(|v<rsub|1>,v<rsub|2>|)>\<in\>V<rsub|1>\<times\>V<rsub|2>>
+      then as <math|V<rsub|2>=W<rsub|1>\<oplus\>W<rsub|2>> there exists
+      <with|font-series|bold|unique> <math|w<rsub|1>\<in\>W<rsub|1>>,
+      <math|w<rsub|2>\<in\>W<rsub|2>> such that
+      <math|v<rsub|2>=w<rsub|1>+w<rsub|2>>. Hence
+      <math|\<otimes\><around*|(|v|)>=\<otimes\><around*|(|v<rsub|1>,w<rsub|1>+w<rsub|2>|)>=\<otimes\><around*|(|v<rsub|1>,w<rsub|1>|)>+\<otimes\><around*|(|v<rsub|1>,w<rsub|2>|)>>
+      where
+
+      <\equation*>
+        \<otimes\><around*|(|v<rsub|1>,w<rsub|1>|)>\<in\>\<otimes\><around*|(|V<rsub|1>\<times\>W<rsub|1>|)>\<subseteq\>span<around*|(|\<otimes\><around*|(|V<rsub|1>\<times\>W<rsub|1>|)>|)>=V<rsub|1>\<otimes\>W<rsub|1>
+      </equation*>
+
+      and
+
+      <\equation*>
+        \<otimes\><around*|(|v<rsub|1>,w<rsub|2>|)>\<in\>\<otimes\><around*|(|V<rsub|1>\<times\>W<rsub|2>|)>\<subseteq\>span<around*|(|\<otimes\><around*|(|V<rsub|1>\<times\>W<rsub|2>|)>|)>=V<rsub|1>\<otimes\>W<rsub|2>
+      </equation*>
+
+      hence <math|\<otimes\><around*|(|v|)>\<in\>V<rsub|1>\<otimes\>W<rsub|1>+V<rsub|1>\<otimes\>W<rsub|2>>.
+      So <math|\<otimes\>*<around*|(|V<rsub|1>\<times\>V<rsub|2>|)>\<subseteq\>V<rsub|1>\<otimes\>W<rsub|1>+V<rsub|1>\<otimes\>W<rsub|2>>
+      which using \ [theorem: <reference|linear span subsets>] gives\ 
+
+      <\equation>
+        <label|eq 13.59.130>V<rsub|1>\<otimes\>V<rsub|2>=span<around*|(|\<otimes\><around*|(|V<rsub|1>\<times\>V<rsub|2>|)>|)>\<subseteq\>span<around*|(|V<rsub|1>\<otimes\>W<rsub|1>+V<rsub|1>\<otimes\>W<rsub|2>|)>
+      </equation>
+
+      As <math|><math|V<rsub|1>\<otimes\>W<rsub|1>> and
+      <math|V<rsub|1>\<otimes\>W<rsub|2>> are sub spaces of
+      <math|V<rsub|1>\<otimes\>V<rsub|2>> [see theorem: <reference|tensor sub
+      spaces>] we have by [theorem: <reference|direct sum of subspaces>] that
+      <math|V<rsub|1>\<otimes\>W<rsub|1>+V<rsub|1>\<otimes\>W<rsub|2>> is a
+      sub-space of <math|V<rsub|1>\<otimes\>V<rsub|2>>, hence using
+      [theorems: <reference|linear span subsets>, <reference|linear span
+      properties>] we have\ 
+
+      <\equation*>
+        V<rsub|1>\<otimes\>W<rsub|1>+V<rsub|1>\<otimes\>W<rsub|2>=span<around*|(|V<rsub|1>\<otimes\>W<rsub|1>+V<rsub|1>\<otimes\>W<rsub|2>|)>\<subseteq\>V<rsub|1>\<otimes\>V<rsub|2>
+      </equation*>
+
+      combining this with [eq: <reference|eq 13.59.130>] gives then
+
+      <\equation>
+        <label|eq 13.60.130>W<rsub|1>\<otimes\>V<rsub|2>+W<rsub|2>\<otimes\>V<rsub|2>=V<rsub|1>\<otimes\>V<rsub|2>
+      </equation>
+
+      Assume now that there exist a <math|x\<in\><around*|(|V<rsub|1>\<otimes\>W<rsub|1>|)><big|cap><around*|(|V<rsub|1>\<otimes\>W<rsub|2>|)>>
+      with <math|x\<neq\>0>. Using [theorem: <reference|tensor product linear
+      independency>] there exists <math|<around*|{|v<rsub|1,i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k<rsub|x>|}>>\<subseteq\>V<rsub|1>>,
+      <math|<around*|{|w<rsub|1,i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k<rsub|x>|}>>\<subseteq\>W<rsub|1>>,
+      <math|<around*|{|v<rsub|2,i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,l<rsub|x>|}>>\<subseteq\>V<rsub|1>>,
+      <math|<around*|{|W<rsub|2,i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,l<rsub|x>|}>>\<subseteq\>W<rsub|2>>
+      such that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k<rsub|x>|}>>v<rsub|1,i>\<otimes\>w<rsub|1,i><eq-number><label|eq
+        13.61.130>>>|<row|<cell|x>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,l<rsub|x>|}>>v<rsub|2,i>\<otimes\>w<rsub|2,i><eq-number><label|eq
+        13.62.130>>>>>
+      </eqnarray*>
+
+      and <math|<around*|{|v<rsub|1,i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k<rsub|x>|}>>\<subseteq\>V<rsub|1>>,
+      <math|<around*|{|w<rsub|1,i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k<rsub|x>|}>>\<subseteq\>W<rsub|1>>,
+      <math|<around*|{|v<rsub|2,i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,l<rsub|x>|}>>\<subseteq\>V<rsub|1>>,
+      <math|<around*|{|w<rsub|2,i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,l<rsub|x>|}>>\<subseteq\>W<rsub|2>>
+      are linear independent. Using [theorem: <reference|linear mapping for
+      independent set>] there exist a <math|L\<in\>Hom<around*|(|V<rsub|1>,F|)>>
+      such that <math|L<around*|(|v<rsub|1,1>|)>=1> and
+      <math|\<forall\>i\<in\><around*|{|2,\<ldots\>,k<rsub|x>|}>>
+      <math|L<around*|(|v<rsub|1,i>|)>=0>. Let now
+      <math|K\<in\>Hom<around*|(|V<rsub|2>,F|)>> then\ 
+
+      <\equation*>
+        L\<cdot\>K:V<rsub|1>\<times\>V<rsub|2>\<rightarrow\>F<text| by
+        ><around*|(|L\<cdot\>K|)><around*|(|v<rsub|1>,v<rsub|2>|)>=L<around*|(|v<rsub|1>|)>\<cdot\>K<around*|(|v<rsub|2>|)>
+      </equation*>
+
+      then from the linearity of <math|L,K> it follows that
+      <math|L\<cdot\>K\<in\>Hom<around*|(|V<rsub|1>,V<rsub|2>;F|)>>. As
+      <math|<around*|\<langle\>|V<rsub|1>\<otimes\>V<rsub|2>,\<otimes\>|\<rangle\>>>
+      is a tensor product of <math|V<rsub|1>>, <math|V<rsub|2>> there exist a
+      <math|h\<in\>Hom<around*|(|V<rsub|1>\<otimes\>V<rsub|2>,F|)>> such that\ 
+
+      <\equation>
+        <label|eq 13.63.130>L\<cdot\>K=h\<circ\>\<otimes\>
+      </equation>
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|h<around*|(|x|)>>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 13.61.130>]>>>|<cell|h<around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k<rsub|x>|}>>v<rsub|1,i>\<otimes\>w<rsub|1,i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|h<text|
+        is linear>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k<rsub|x>|}>>h<around*|(|v<rsub|1,i>\<otimes\>w<rsub|1,i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k<rsub|x>|}>>h<around*|(|\<otimes\><around*|(|v<rsub|1,i>,w<rsub|1,i>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 13.63.130>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k<rsub|x>|}>><around*|(|L\<cdot\>K|)><around*|(|v<rsub|1,i>,w<rsub|1,i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k<rsub|x>|}>>L<around*|(|v<rsub|1,i>|)>\<cdot\>K<around*|(|w<rsub|1,i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum over disjoint subsets>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|2,\<ldots\>,k<rsub|x>|}>>L<around*|(|v<rsub|1,i>|)>\<cdot\>K<around*|(|w<rsub|1,i>|)>+<big|sum><rsub|i\<in\><around*|{|1|}>>L<around*|(|v<rsub|1,i>|)>\<cdot\>K<around*|(|w<rsub|1,i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum general single>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|2,\<ldots\>,k<rsub|x>|}>>L<around*|(|v<rsub|1,i>|)>\<cdot\>K<around*|(|w<rsub|1,i>|)>+L<around*|(|v<rsub|1,1>|)>\<cdot\>K<around*|(|w<rsub|1,1>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|2,\<ldots\>,k<rsub|x>|}>>0\<cdot\>L<around*|(|v<rsub|1,i>|)>+K<around*|(|w<rsub|1,1>|)>\<cdot\>1>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum of neutral element
+        (2)>]>>>|<cell|K<around*|(|w<rsub|1,1>|)>>>>>
+      </eqnarray*>
+
+      but we have also\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|h<around*|(|x|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|eq 13.62.130>]>>>|<cell|h<around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,l<rsub|x>|}>>v<rsub|2,i>\<otimes\>w<rsub|2,i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,l<rsub|x>|}>>h<around*|(|v<rsub|2,i>\<otimes\>w<rsub|2,i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,l<rsub|x>|}>>h<around*|(|\<otimes\><around*|(|v<rsub|2,i>,w<rsub|2,i>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 13.63.130>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,l<rsub|x>|}>><around*|(|L\<cdot\>K|)><around*|(|<around*|(|v<rsub|2,i>,w<rsub|2,i>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,l<rsub|x>|}>>L<around*|(|v<rsub|2,i>|)>\<cdot\>L<around*|(|w<rsub|2,i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,l<rsub|x>|}>>L<around*|(|v<rsub|2,i>|)>\<cdot\>K<around*|(|w<rsub|2,i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|K<text|
+        is linear>>>|<cell|K<around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,l<rsub|x>|}>>L<around*|(|v<rsub|2,i>|)>\<cdot\>w<rsub|2,i>|)>>>>>
+      </eqnarray*>
+
+      so we have\ 
+
+      <\equation>
+        <label|eq 13.64.130>\<forall\>K\<in\>Hom<around*|(|V<rsub|1>,F|)><text|
+        we have >K<around*|(|w<rsub|1,1>|)>=K<around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,l<rsub|x>|}>>L<around*|(|v<rsub|2,i>|)>\<cdot\>w<rsub|2,i>|)>
+      </equation>
+
+      So we can apply [theorem: <reference|linear mapping
+      L(x)=L(y)=\<gtr\>x=y>] giving that <math|w<rsub|1,1>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,l<rsub|x>|}>>L<around*|(|v<rsub|2,i>|)>\<cdot\>w<rsub|2,i>>.
+      As <math|w<rsub|1,1>\<in\>W<rsub|1>> and
+      <math|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,l<rsub|x>|}>>L<around*|(|v<rsub|2,i>|)>\<cdot\>w<rsub|2,i>\<in\>W<rsub|2>>
+      [as <math|W<rsub|2>> is a sub-space of <math|V<rsub|1>>] it follows
+      that
+
+      <\equation*>
+        w<rsub|1,1>\<in\>W<rsub|1><big|cap>W<rsub|2>\<equallim\><rsub|V<rsub|1>=W<rsub|1>\<oplus\>W<rsub|2>><rsub|>=<around*|{|0|}>
+      </equation*>
+
+      proving that <math|w<rsub|1,1>=0>. However this means by [theorem:
+      <reference|linear dependent family condition>] that
+      <math|<around*|{|w<rsub|1,i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k<rsub|x>|}>>>
+      is linear dependent contradicting the fact that
+      <math|<around*|{|w<rsub|1,i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k<rsub|x>|}>>>
+      is linear independent. Hence the assumption <math|x\<neq\>0> is wrong
+      and we must have that <math|x=0> or
+      <math|<around*|(|V<rsub|1>\<otimes\>W<rsub|1>|)><big|cap><around*|(|V<rsub|1>\<otimes\>W<rsub|2>|)>\<subseteq\><around*|{|0|}>>.
+      This together with fact that by <math|V<rsub|1>\<otimes\>W<rsub|1>>,
+      <math|V<rsub|1>\<otimes\>W<rsub|2>> are vector spaces so that
+      <math|0\<in\><around*|(|V<rsub|1>\<otimes\>W<rsub|1>|)><big|cap><around*|(|V<rsub|1>\<otimes\>W<rsub|2>|)>>
+      proves that\ 
+
+      <\equation*>
+        <around*|(|V<rsub|1>\<otimes\>W<rsub|1>|)><big|cap><around*|(|V<rsub|1>\<otimes\>W<rsub|2>|)>=<around*|{|0|}>
+      </equation*>
+
+      which together with [eq: <reference|eq 13.53.129>] proves that\ 
+
+      <\equation*>
+        V<rsub|1>\<otimes\>V<rsub|2>=<around*|(|V<rsub|1>\<otimes\>W<rsub|1>|)>\<oplus\><around*|(|V<rsub|1>\<otimes\>W<rsub|2>|)>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  We extend the above lemma to a direct internal sum of more then two
+  sub-spaces.
+
+  \;
+
+  <\lemma>
+    Let <math|n\<in\>\<bbb-N\>>, <math|<around*|{|V<rsub|i>|}><rsub|i\<in\><around*|{|1,2|}>>>
+    be vector spaces over a field <math|F> then\ 
+
+    <\enumerate>
+      <item>If <math|V<rsub|1>=<big|oplus><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>W<rsub|i>>
+      then if <math|<around*|\<langle\>|V<rsub|1>\<otimes\>V<rsub|2>,\<otimes\>|\<rangle\>>>
+      is a tensor product of <math|V<rsub|1>>, <math|V<rsub|2>> we have\ 
+
+      <\equation*>
+        V<rsub|1>\<otimes\>V<rsub|2>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><rsup|\<oplus\>>W<rsub|i>\<otimes\>V<rsub|2>
+      </equation*>
+
+      where <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+      <math|W<rsub|i>\<otimes\>V<rsub|2>=span<around*|(|\<otimes\><around*|(|W<rsub|i>\<times\>V<rsub|2>|)>|)>>
+      so that <math|<around*|\<langle\>|W<rsub|i>\<otimes\>V<rsub|2>,\<otimes\><rsub|\|W<rsub|i>\<times\>V<rsub|2>>|\<rangle\>>>
+      is a tensor product of \ <math|W<rsub|i>,V<rsub|2>> [see theorem:
+      <reference|tensor sub spaces>]
+
+      <item>If <math|V<rsub|2>=<big|oplus><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>W<rsub|i>>
+      then if <math|<around*|\<langle\>|V<rsub|1>\<otimes\>V<rsub|2>,\<otimes\>|\<rangle\>>>
+      is a tensor product of <math|V<rsub|1>>, <math|V<rsub|2>> we have\ 
+
+      <\equation*>
+        V<rsub|1>\<otimes\>V<rsub|2>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><rsup|\<oplus\>>V<rsub|1>\<otimes\>W<rsub|i>
+      </equation*>
+
+      where <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+      <math|V<rsub|1>\<otimes\>V<rsub|2>=span<around*|(|\<otimes\><around*|(|V<rsub|1>\<times\>W<rsub|i>|)>|)>>
+      so that <math|<around*|\<langle\>|V<rsub|1>\<otimes\>W<rsub|i>,\<otimes\><rsub|\|V<rsub|1>\<times\>W<rsub|i>>|\<rangle\>>>
+      is a tensor product of \ <math|V,W<rsub|i>> [see theorem:
+      <reference|tensor sub spaces>]
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>We proceed by mathematical induction, so let\ 
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\>\|<text|If <math|V<rsub|1>,V<rsub|2>>
+        are vector spaces over a field >F<text| such that
+        >V<rsub|1>=<big|oplus><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>W<rsub|i><text|
+        then >V<rsub|1>\<otimes\>V<rsub|2>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><rsup|\<oplus\>>W<rsub|i>\<otimes\>V<rsub|2>|}>
+      </equation*>
+
+      then we have that:\ 
+
+      <\description>
+        <item*|<math|1\<in\>S>>Then if <math|V<rsub|1>=<big|sum><rsub|i\<in\><around*|{|1|}>><rsup|\<oplus\>>W<rsub|i>>
+        we have by [example: <reference|direct sum singleton>] that
+        <math|V<rsub|1>=W<rsub|1>> and\ 
+
+        <\equation*>
+          V<rsub|1>\<otimes\>V<rsub|2>=W<rsub|1>\<otimes\>V<rsub|2>\<equallim\><rsub|<text|[example:
+          <reference|direct sum singleton>]>><big|sum><rsub|i\<in\><around*|{|1|}>><rsup|\<oplus\>>W<rsub|i>\<otimes\>V<rsub|2>
+        </equation*>
+
+        proving that <math|1\<in\>S>.
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>If
+        <math|V<rsub|1>=<big|oplus><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>W<rsub|i>>
+        then we have by [theorem: <reference|direct sum induction argument>]
+        that
+
+        <\equation*>
+          V<rsub|1>=<around*|(|<big|oplus><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>W<rsub|i>|)>\<oplus\>W<rsub|n+1>
+        </equation*>
+
+        and using [lemma: <reference|tensor product and direct sum of two
+        vector spaces>] it follows that
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|V<rsub|1>\<otimes\>V<rsub|2>>|<cell|\<equallim\><rsub|<text|[lemma:
+          <reference|tensor product and direct sum of two vector
+          spaces>]>>>|<cell|<around*|(|<around*|(|<big|oplus><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>W<rsub|i>|)>\<otimes\>V<rsub|2>|)>\<oplus\><around*|(|W<rsub|n+1>\<otimes\>V<rsub|2>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|n\<in\>S>>|<cell|<around*|(|<big|oplus><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>W<rsub|i>\<otimes\>V<rsub|2>|)>\<oplus\><around*|(|W<rsub|n+1>\<otimes\>V<rsub|2>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|direct sum induction
+          argument>]>>>|<cell|<big|oplus><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>W<rsub|i>\<otimes\>V<rsub|2>>>>>
+        </eqnarray*>
+
+        proving that <math|n+1\<in\>S>
+      </description>
+
+      <item>We proceed by mathematical induction, so let\ 
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\>\|<text|If <math|V<rsub|1>,V<rsub|2>>
+        are vector spaces over a field >F<text| such that
+        >V<rsub|2>=<big|oplus><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>W<rsub|i><text|
+        then >V<rsub|1>\<otimes\>V<rsub|2>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><rsup|\<oplus\>>V<rsub|1>\<otimes\>W<rsub|i>|}>
+      </equation*>
+
+      then we have that:\ 
+
+      <\description>
+        <item*|<math|1\<in\>S>>Then if <math|V<rsub|2>=<big|sum><rsub|i\<in\><around*|{|1|}>><rsup|\<oplus\>>W<rsub|i>>
+        we have by [example: <reference|direct sum singleton>] that
+        <math|V<rsub|2>=W<rsub|1>> and\ 
+
+        <\equation*>
+          V<rsub|1>\<otimes\>V<rsub|2>=V<rsub|1>\<otimes\>W<rsub|1>\<equallim\><rsub|<text|[example:
+          <reference|direct sum singleton>]>><big|sum><rsub|i\<in\><around*|{|1|}>><rsup|\<oplus\>>V<rsub|1>\<otimes\>W<rsub|i>
+        </equation*>
+
+        proving that <math|1\<in\>S>.
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>If
+        <math|V<rsub|2>=<big|oplus><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>W<rsub|i>>
+        then we have by [theorem: <reference|direct sum induction argument>]
+        that
+
+        <\equation*>
+          V<rsub|2>=<around*|(|<big|oplus><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>W<rsub|i>|)>\<oplus\>W<rsub|n+1>
+        </equation*>
+
+        and using [lemma: <reference|tensor product and direct sum of two
+        vector spaces>] it follows that
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|V<rsub|1>\<otimes\>V<rsub|2>>|<cell|\<equallim\><rsub|<text|[lemma:
+          <reference|tensor product and direct sum of two vector
+          spaces>]>>>|<cell|<around*|(|V<rsub|1>\<otimes\><around*|(|<big|oplus><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>W<rsub|i>|)>|)>\<oplus\><around*|(|V<rsub|1>\<otimes\>W<rsub|n+1>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|n\<in\>S>>|<cell|<around*|(|V<rsub|1>\<otimes\><around*|(|<big|oplus><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>W<rsub|i>|)>|)>\<oplus\><around*|(|V<rsub|1>\<otimes\>W<rsub|n+1>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|direct sum induction
+          argument>]>>>|<cell|<big|oplus><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>V<rsub|1>\<otimes\>W<rsub|i>>>>>
+        </eqnarray*>
+
+        proving that <math|n+1\<in\>S>
+      </description>
+    </enumerate>
+  </proof>
+
+  \;
+
+  \;
+
   \;
 
   \;
@@ -2999,11 +3856,12 @@
     <associate|direct sum and bijection|<tuple|12.8|?>>
     <associate|direct sum conditions|<tuple|12.6|?>>
     <associate|direct sum decomposition|<tuple|12.7|?>>
-    <associate|direct sum dimension|<tuple|12.10|?>>
+    <associate|direct sum dimension|<tuple|12.11|?>>
     <associate|direct sum induction argument|<tuple|12.9|?>>
     <associate|direct sum of sets|<tuple|12.1|?>>
     <associate|direct sum of sets properties|<tuple|12.2|?>>
     <associate|direct sum of subspaces|<tuple|12.3|?>>
+    <associate|direct sum of two vector spaces|<tuple|12.10|?>>
     <associate|direct sum singleton|<tuple|12.5|?>>
     <associate|eq 12.1.1224|<tuple|12.1|?>>
     <associate|eq 12.10.127|<tuple|12.10|?>>
@@ -3057,26 +3915,46 @@
     <associate|eq 13.44.129|<tuple|13.44|?>>
     <associate|eq 13.45.129|<tuple|13.45|?>>
     <associate|eq 13.46.129|<tuple|13.46|?>>
-    <associate|eq 13.46\<point\>129|<tuple|13.46|?>>
     <associate|eq 13.47.129|<tuple|13.47|?>>
     <associate|eq 13.48.129|<tuple|13.48|?>>
     <associate|eq 13.49.129|<tuple|13.49|?>>
     <associate|eq 13.5.127|<tuple|13.15|?>>
+    <associate|eq 13.50.129|<tuple|13.50|?>>
+    <associate|eq 13.51.129|<tuple|13.51|?>>
+    <associate|eq 13.52.130|<tuple|13.52|?>>
+    <associate|eq 13.53.129|<tuple|13.53|?>>
+    <associate|eq 13.54.129|<tuple|13.54|?>>
+    <associate|eq 13.55.130|<tuple|13.55|?>>
+    <associate|eq 13.56.130|<tuple|13.56|?>>
+    <associate|eq 13.57.130|<tuple|13.57|?>>
+    <associate|eq 13.58.130|<tuple|13.58|?>>
+    <associate|eq 13.59.130|<tuple|13.59|?>>
     <associate|eq 13.6.127|<tuple|13.16|?>>
+    <associate|eq 13.60.130|<tuple|13.60|?>>
+    <associate|eq 13.61.130|<tuple|13.61|?>>
+    <associate|eq 13.62.130|<tuple|13.62|?>>
+    <associate|eq 13.63.130|<tuple|13.63|?>>
+    <associate|eq 13.64.130|<tuple|13.64|?>>
     <associate|eq 13.7.127|<tuple|13.17|?>>
     <associate|eq 13.8.127|<tuple|13.18|?>>
     <associate|eq 13.9.127|<tuple|13.3|?>>
+    <associate|tensor finite family of finite sets|<tuple|13.23|?>>
+    <associate|tensor multi-index|<tuple|13.24|?>>
+    <associate|tensor multilinear mapping sum|<tuple|13.26|?>>
     <associate|tensor null space|<tuple|13.7|?>>
     <associate|tensor product|<tuple|13.1|?>>
-    <associate|tensor product induction argument|<tuple|13.22|?>>
-    <associate|tensor product linear independency|<tuple|13.21|?>>
+    <associate|tensor product and direct sum of two vector
+    spaces|<tuple|13.28|?>>
+    <associate|tensor product and sum of vector space|<tuple|13.27|?>>
+    <associate|tensor product induction argument|<tuple|13.21|?>>
+    <associate|tensor product linear independency|<tuple|13.20|?>>
     <associate|tensor product of spaces existence|<tuple|13.13|?>>
     <associate|tensor product of vectors|<tuple|13.10|?>>
     <associate|tensor product unique representation|<tuple|13.2|?>>
     <associate|tensor product uniqueness|<tuple|13.15|?>>
     <associate|tensor product uniqueness and existance|<tuple|13.16|?>>
     <associate|tensor product zero|<tuple|13.18|?>>
-    <associate|tensor sub soaces|<tuple|13.19|?>>
+    <associate|tensor sub spaces|<tuple|13.19|?>>
     <associate|tensor tensor product of spaces|<tuple|13.8|?>>
     <associate|tensor universal property|<tuple|13.12|?>>
     <associate|vector space free|<tuple|13.5|?>>
