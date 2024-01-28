@@ -9577,10 +9577,114 @@
     surjective>]
   </proof>
 
+  If we have only two sets involed we use the following notation to
+  distinguish the product of sets from the cartesian product.
+
+  <\definition>
+    <label|finite product of two sets>Let <math|A,B> two sets then for the
+    family <math|<around*|{|X<rsub|i>|}><rsub|i\<in\><around*|{|1,2|}>>\<subseteq\>A<big|cup>B>
+    where <math|X<rsub|1>=A\<wedge\>X<rsub|2>=B> we have\ 
+
+    <\equation*>
+      A\<cdot\>B=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,2|}>>X<rsub|i>=<big|prod><rsub|i\<in\><around*|{|1,2|}>>X<rsub|i>
+    </equation*>
+
+    so\ 
+
+    <\equation*>
+      A\<cdot\>B=<around*|{|f\|f\<in\><around*|(|A<big|cup>B|)><rsup|<around*|{|1,2|}>><text|
+      where >f<around*|(|1|)>\<in\>A\<wedge\>f<around*|(|2|)>\<in\>B|}>
+    </equation*>
+
+    We use the notation <math|A\<cdot\>B> to make a distinction with the
+    cartesian product <math|A\<times\>B>, of course by [theorem:
+    <reference|product of family with two classes>] we have that
+    <math|A\<cdot\>B> and <math|A\<times\>B> are bijective.
+  </definition>
+
+  <\theorem>
+    <label|finite product properties>Let <math|A,B,C>,D be sets then we have\ 
+
+    <\enumerate>
+      <item><math|<around*|(|A\<cdot\>B|)><big|cap><around*|(|C\<cdot\>D|)>=<around*|(|A<big|cap>C|)>\<cdot\><around*|(|B<big|cap>D|)>>
+
+      <item>If <math|A\<subseteq\>B> then
+      <math|A\<cdot\>C\<subseteq\>B\<cdot\>C>
+
+      <item>If <math|B\<subseteq\>C> then
+      <math|A\<cdot\>B\<subseteq\>A\<cdot\>C>
+
+      <item><math|A\<cdot\><around*|(|B<big|cup>C|)>=<around*|(|A\<cdot\>B|)><big|cup><around*|(|A\<cdot\>C|)>>
+
+      <item><math|<around*|(|A<big|cup>B|)>\<cdot\>C=<around*|(|A\<cdot\>C|)><big|cup><around*|(|B\<cdot\>C|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>This follows from the definition of <math|\<cdot\>> and [theorem:
+      <reference|product and intersection>]
+
+      <item>This follows from the definition of <math|\<cdot\>>
+      <math|C\<subseteq\>C> and [theorem: <reference|product inclusion>]\ 
+
+      <item>This follows from the definition of <math|\<cdot\>>
+      <math|A\<subseteq\>A> and [theorem: <reference|product inclusion>]\ 
+
+      <item>As <math|B,C\<subseteq\>B<big|cup>C> we have by (3) that
+      <math|A\<cdot\>B\<subseteq\>A\<cdot\><around*|(|B<big|cup>C|)>> and
+      <math|A\<cdot\>C\<subseteq\>A\<cdot\><around*|(|B<big|cup>C|)>> so that\ 
+
+      <\equation>
+        <label|eq 6.27.130><around*|(|A\<cdot\>B|)><big|cup><around*|(|A\<cdot\>C|)>\<subseteq\>A\<cdot\><around*|(|B<big|cup>C|)>
+      </equation>
+
+      For the opposite inclusion let <math|x\<in\>A\<cdot\><around*|(|B<big|cup>C|)>>
+      then <math|x:<around*|{|1,2|}>\<rightarrow\>A<big|cup><around*|(|B<big|cup>C|)>>
+      is a function so that <math|x<around*|(|1|)>\<in\>A\<wedge\>x<around*|(|2|)>\<in\>B<big|cup>C>,
+      so that either <math|x<around*|(|1|)>\<in\>A\<wedge\>x<around*|(|2|)>\<in\>B>
+      or <math|x<around*|(|1|)>\<in\>A\<wedge\>x<around*|(|2|)>\<in\>C>
+      proving that <math|x\<in\>A\<cdot\>B> or <math|x\<in\>A\<cdot\>C>,
+      hence <math|x\<in\><around*|(|A\<cdot\>B|)><big|cup><around*|(|A\<cdot\>C|)>>,
+      This proves that <math|A\<cdot\><around*|(|B<big|cup>C|)>\<subseteq\><around*|(|A\<cdot\>B|)><big|cup><around*|(|A\<cdot\>C|)>>
+      which combined with [eq: <reference|eq 6.27.130>] results in\ 
+
+      <\equation*>
+        A\<cdot\><around*|(|B<big|cup>C|)>=<around*|(|A\<cdot\>B|)><big|cup><around*|(|A\<cdot\>C|)>
+      </equation*>
+
+      <item>As <math|A,B\<subseteq\>A<big|cup>B> we have by (2) that
+      <math|A\<cdot\>C\<subseteq\><around*|(|A<big|cup>B|)>\<cdot\>C> and
+      <math|B\<cdot\>C\<subseteq\><around*|(|A<big|cup>B|)>\<cdot\>C> so that\ 
+
+      <\equation>
+        <label|eq 6.28.130><around*|(|A\<cdot\>C|)><big|cup><around*|(|B\<cdot\>C|)>\<subseteq\><around*|(|A<big|cup>B|)>\<cdot\>C
+      </equation>
+
+      For the opposite inclusion let <math|x\<in\><around*|(|A<big|cup>B|)>\<cdot\>C>
+      then <math|x:<around*|{|1,2|}>\<rightarrow\><around*|(|A<big|cup>B|)><big|cup>C>
+      is a function so that <math|x<around*|(|1|)>\<in\><around*|(|A<big|cup>B|)>\<wedge\>x<around*|(|2|)>\<in\>C>,
+      so that either <math|x<around*|(|1|)>\<in\>A\<wedge\>x<around*|(|2|)>\<in\>C>
+      or <math|x<around*|(|1|)>\<in\>B\<wedge\>x<around*|(|2|)>\<in\>C>
+      proving that <math|x\<in\>A\<cdot\>C> or <math|x\<in\>B\<cdot\>C>,
+      hence <math|x\<in\><around*|(|A\<cdot\>C|)><big|cup><around*|(|B\<cdot\>C|)>>,
+      This proves that <math|<around*|(|A<big|cup>B|)>\<cdot\>C\<subseteq\><around*|(|A\<cdot\>C|)><big|cup><around*|(|B\<cdot\>C|)>>
+      which combined with [eq: <reference|eq 6.28.130>] results in\ 
+
+      <\equation*>
+        <around*|(|A<big|cup>B|)>\<cdot\>C=<around*|(|A\<cdot\>C|)><big|cup><around*|(|B\<cdot\>C|)>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  \;
+
   The following theorem will be useful in induction arguments.
 
   <\theorem>
-    <label|finite product of sets bijection>Let <math|n\<in\>\<bbb-N\>> abd
+    <label|finite product of sets bijection>Let <math|n\<in\>\<bbb-N\>> and
     <math|<around*|{|X<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>B>
     a finite family of sets then <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>X<rsub|i>>
     is bijective with <math|<around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>|)>\<times\>X<rsub|n+1>>
@@ -9958,6 +10062,8 @@
     <associate|eq 6.23.022|<tuple|6.24|185>>
     <associate|eq 6.24.022|<tuple|6.25|186>>
     <associate|eq 6.25.022|<tuple|6.26|186>>
+    <associate|eq 6.27.130|<tuple|6.27|?>>
+    <associate|eq 6.28.130|<tuple|6.28|?>>
     <associate|eq 6.3.019|<tuple|6.4|173>>
     <associate|eq 6.4.019|<tuple|6.5|174>>
     <associate|eq 6.5.019|<tuple|6.6|174>>
@@ -10007,11 +10113,13 @@
     minimum|<tuple|6.47|179>>
     <associate|finite power notation|<tuple|6.75|191>>
     <associate|finite product of sets|<tuple|6.74|191>>
-    <associate|finite product of sets bijection|<tuple|6.78|?>>
-    <associate|finite product of sets power|<tuple|6.79|192>>
-    <associate|finite product of sets power equivalence|<tuple|6.80|192>>
+    <associate|finite product of sets bijection|<tuple|6.80|192>>
+    <associate|finite product of sets power|<tuple|6.81|192>>
+    <associate|finite product of sets power equivalence|<tuple|6.82|192>>
     <associate|finite product of sets projection operator|<tuple|6.76|191>>
-    <associate|finite product of sets single set|<tuple|6.81|192>>
+    <associate|finite product of sets single set|<tuple|6.83|192>>
+    <associate|finite product of two sets|<tuple|6.78|?>>
+    <associate|finite product properties|<tuple|6.79|?>>
     <associate|finite set|<tuple|6.19|171>>
     <associate|finite set alternate definition lemma|<tuple|6.21|171>>
     <associate|finite set alternative definition|<tuple|6.22|171>>
@@ -10029,7 +10137,7 @@
     <associate|group example set of functions|<tuple|4.4|113>>
     <associate|group faithful, transitive action (1)|<tuple|4.30|120>>
     <associate|group faithful, transitive action (2)|<tuple|4.31|121>>
-    <associate|group finite power|<tuple|6.82|192>>
+    <associate|group finite power|<tuple|6.84|193>>
     <associate|group group|<tuple|4.5|114>>
     <associate|group group inheritance|<tuple|4.16|116>>
     <associate|group group inverse of inverse|<tuple|4.9|114>>

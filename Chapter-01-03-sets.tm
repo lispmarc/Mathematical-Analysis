@@ -13212,7 +13212,6 @@
     <associate|eq 3.70.019|<tuple|3.71|?>>
     <associate|eq 3.71.019|<tuple|3.72|?>>
     <associate|eq 3.72.019|<tuple|3.73|?>>
-    <associate|eq 3.74.127|<tuple|3.74|?>>
     <associate|eq 3.8.011|<tuple|3.8|?>>
     <associate|eq 3.9.011|<tuple|3.9|?>>
     <associate|equivalence relation|<tuple|3.5|?>>
