@@ -1,6 +1,6 @@
 <TeXmacs|2.1.2>
 
-<project|Book.tm>
+<project|FullBook.tm>
 
 <style|<tuple|book|preview-ref>>
 
@@ -13099,8 +13099,11 @@
       ><around*|{|1,\<ldots\>,k|}>\<approx\>I
     </equation*>
 
-    In particular if <math|I=\<varnothing\>> then
-    <math|card<around*|(|I|)>=0> [as <math|<around*|{|1,\<ldots\>,0|}>=\<varnothing\>>]
+    In particular\ 
+
+    <\equation*>
+      I=\<varnothing\>\<Leftrightarrow\>card<around*|(|I|)>=0
+    </equation*>
   </theorem>
 
   <\proof>
@@ -13120,6 +13123,13 @@
     </equation*>
 
     so that <math|I\<approx\><around*|{|1,\<ldots\>,card<around*|(|I|)>|}>>.
+    Finally we have\ 
+
+    <\equation*>
+      I=\<varnothing\>\<Leftrightarrowlim\><rsub|<text|[theorem:
+      <reference|cardinality of the empty set is
+      0>]>>#<around*|(|I|)>=0\<Leftrightarrow\>i<rsub|\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-C\>><around*|(|#<around*|(|I|)>|)>=0\<Leftrightarrow\>card<around*|(|I|)>=0
+    </equation*>
   </proof>
 
   <\theorem>

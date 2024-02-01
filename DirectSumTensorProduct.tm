@@ -1,6 +1,6 @@
 <TeXmacs|2.1.2>
 
-<project|Book.tm>
+<project|FullBook.tm>
 
 <style|<tuple|book|preview-ref|smart-ref>>
 

@@ -1,6 +1,6 @@
 <TeXmacs|2.1.2>
 
-<project|Book.tm>
+<project|FullBook.tm>
 
 <style|<tuple|book|preview-ref>>
 
@@ -4501,6 +4501,10 @@
 
       <item>If <math|f:A\<rightarrow\>B> is injective then
       <math|f<rsub|\|C>:C\<rightarrow\>B> is injective
+
+      <item>If <math|f:A\<rightarrow\>B> is bijective and <math|x\<in\>A>
+      then <math|f<rsub|\|A\\<around*|{|a|}>>:A\\<around*|{|a|}>\<rightarrow\>B\\<around*|{|b|}>>
+      where <math|<around*|(|a,b|)>\<in\>f> is a bijection.
     </enumerate>
   </theorem>
 
@@ -4585,9 +4589,45 @@
       then as <math|f<rsub|\|C>\<subseteq\>f> we have
       <math|*<around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>f> which as
       <math|f> is injective proves <math|y=y<rprime|'>>
-    </enumerate>
 
-    \;
+      <item>Let <math|<around*|(|x,y|)>\<in\>f<rsub|\|A\\<around*|{|a|}>>=f<big|cap><around*|(|<around*|(|A\\<around*|{|a|}>|)>\<times\>B|)>>
+      then <math|<around*|(|x,y|)>\<in\>f> and <math|x\<neq\>a>. Assume that
+      <math|y=b> then <math|<around*|(|x,b|)>\<in\>f> and as
+      <math|<around*|(|a,b|)>\<in\>f> we must have by injectivity of <math|f>
+      that <math|x=a> contradicting <math|x\<neq\>a>, hence we have that
+      <math|y\<in\>B\\<around*|{|b|}>>. So we have that
+      <math|f<rsub|\|A\\<around*|{|a|}>>\<subseteq\><around*|(|A\\<around*|{|a|}>|)>\<times\><around*|(|<around*|(|B\\<around*|{|b|}>|)>|)>>
+      and\ 
+
+      <\equation*>
+        f<rsub|\|A\\<around*|{|a|}>>:A\\<around*|{|a|}>\<rightarrow\>B\\<around*|{|b|}><text|
+        is a function>
+      </equation*>
+
+      If <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>f<rsub|\|A\\<around*|{|a|}>>>
+      then <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>f\<Rightarrowlim\><rsub|f<text|
+      is injective>>x=x<rprime|'>> proving that
+      <math|f<rsub|\|A\\<around*|{|a|}>>> is injective. So\ 
+
+      <\equation*>
+        f<rsub|\|A\\<around*|{|a|}>><text| is injective>
+      </equation*>
+
+      Finally if <math|y\<in\>B\\<around*|{|b|}>> then as
+      <math|f:A\<rightarrow\>B> is a bijection hence surjective, there exist
+      a <math|x\<in\>A> such that <math|<around*|(|x,y|)>\<in\>f>. Assume
+      that <math|x=a> then <math|<around*|(|a,y|)>\<in\>f> which as
+      <math|<around*|(|a,b|)>\<in\>f> gives <math|y=b> contradicting
+      <math|y\<in\>B\\<around*|{|b|}>>. Hence we must have
+      <math|x\<in\>A\\<around*|{|a|}>> so that
+      <math|<around*|(|x,y|)>\<in\>f<big|cap><around*|(|<around*|(|A\\<around*|{|a|}>|)>\<times\>B|)>=f<rsub|\|A\\<around*|{|a|}>>>
+      proving that\ 
+
+      <\equation*>
+        f:A\\<around*|{|a|}>\<rightarrow\>B\\<around*|{|b|}><text| is
+        surjective>
+      </equation*>
+    </enumerate>
   </proof>
 
   <\theorem>
@@ -13239,6 +13279,7 @@
     <associate|family index set is a product|<tuple|2.104|?>>
     <associate|family intersection (2)|<tuple|2.117|?>>
     <associate|family intersection is a set|<tuple|2.118|?>>
+    <associate|family intersection of empty family|<tuple|2.118|?>>
     <associate|family intersection(1)|<tuple|2.116|?>>
     <associate|family product and index transformation|<tuple|2.138|?>>
     <associate|family properties (1)|<tuple|2.121|?>>

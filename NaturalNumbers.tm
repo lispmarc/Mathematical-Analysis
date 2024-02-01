@@ -1,6 +1,6 @@
 <TeXmacs|2.1.2>
 
-<project|Book.tm>
+<project|FullBook.tm>
 
 <style|<tuple|book|preview-ref>>
 
@@ -9953,14 +9953,14 @@
     <associate|auto-33|<tuple|transitive set|141>>
     <associate|auto-34|<tuple|5.2|142>>
     <associate|auto-35|<tuple|recursion|142>>
-    <associate|auto-36|<tuple|iteration|146>>
+    <associate|auto-36|<tuple|iteration|145>>
     <associate|auto-37|<tuple|5.3|148>>
     <associate|auto-38|<tuple|addition of natural numbers|148>>
     <associate|auto-39|<tuple|multiplication of natural numbers|150>>
     <associate|auto-4|<tuple|semi-group|113>>
     <associate|auto-40|<tuple|absorbing element|150>>
     <associate|auto-41|<tuple|5.4|153>>
-    <associate|auto-42|<tuple|5.5|162>>
+    <associate|auto-42|<tuple|5.5|161>>
     <associate|auto-43|<tuple|6|167>>
     <associate|auto-44|<tuple|6.1|167>>
     <associate|auto-45|<tuple|equipotence|167>>
@@ -9971,14 +9971,14 @@
     <associate|auto-5|<tuple|group|114>>
     <associate|auto-50|<tuple|6.2|169>>
     <associate|auto-51|<tuple|6.2.1|169>>
-    <associate|auto-52|<tuple|finite set|171>>
+    <associate|auto-52|<tuple|finite set|170>>
     <associate|auto-53|<tuple|infinite set|171>>
     <associate|auto-54|<tuple|denumerable set|171>>
     <associate|auto-55|<tuple|infinite countable set|171>>
-    <associate|auto-56|<tuple|countable set|172>>
+    <associate|auto-56|<tuple|countable set|171>>
     <associate|auto-57|<tuple|<with|mode|<quote|math>|#A>|176>>
     <associate|auto-58|<tuple|6.2.2|180>>
-    <associate|auto-59|<tuple|6.2.3|185>>
+    <associate|auto-59|<tuple|6.2.3|184>>
     <associate|auto-6|<tuple|sub-semi-group|115>>
     <associate|auto-60|<tuple|6.2.4|188>>
     <associate|auto-61|<tuple|6.3|191>>
@@ -9994,8 +9994,8 @@
     countable (2)|<tuple|6.73|191>>
     <associate|countable product of finite family of countable sets is
     countable|<tuple|6.72|190>>
-    <associate|countable set|<tuple|6.25|172>>
-    <associate|countable set conditions (1)|<tuple|6.68|189>>
+    <associate|countable set|<tuple|6.25|171>>
+    <associate|countable set conditions (1)|<tuple|6.68|188>>
     <associate|countable subset of countable set is
     countable|<tuple|6.67|188>>
     <associate|countable subset of denumerable set is
@@ -10003,40 +10003,40 @@
     <associate|countable union of a denumerable family of countable sets is
     denumerable|<tuple|6.69|189>>
     <associate|countable union of a finite family of countable sets is
-    countable|<tuple|6.70|190>>
+    countable|<tuple|6.70|189>>
     <associate|definition by recursion (1)|<tuple|5.89|164>>
-    <associate|definition by recursion (2)|<tuple|5.90|165>>
+    <associate|definition by recursion (2)|<tuple|5.90|164>>
     <associate|denumerable every subset is finite
     denumerable.|<tuple|6.58|185>>
     <associate|denumerable is not subset of a natural
     number|<tuple|6.28|172>>
     <associate|denumerable product nxN is denumerable|<tuple|6.62|187>>
     <associate|denumerable product of denumerable sets is
-    denumerable|<tuple|6.61|187>>
+    denumerable|<tuple|6.61|186>>
     <associate|denumerable product of finite set and a denumerable set is
     denurable|<tuple|6.63|187>>
     <associate|denumerable product of two denumerable set is
     denumerable|<tuple|6.59|185>>
     <associate|denumerable set|<tuple|6.24|171>>
-    <associate|denumerable subsets of N_0|<tuple|6.57|185>>
+    <associate|denumerable subsets of N_0|<tuple|6.57|184>>
     <associate|denumerable union of a denumerable family of denumerable sets
     is denumerable|<tuple|6.65|188>>
     <associate|denumerable union of a finite family of denumerable sets is
     denumerable|<tuple|6.64|187>>
     <associate|denumerable with one less element|<tuple|6.27|172>>
-    <associate|empty set is finite|<tuple|6.20|171>>
-    <associate|eq 5.1.019|<tuple|5.1|143>>
+    <associate|empty set is finite|<tuple|6.20|170>>
+    <associate|eq 5.1.019|<tuple|5.1|142>>
     <associate|eq 5.10.019|<tuple|5.10|147>>
     <associate|eq 5.11.019|<tuple|5.11|147>>
-    <associate|eq 5.12.019|<tuple|5.12|148>>
-    <associate|eq 5.13.019|<tuple|5.13|148>>
+    <associate|eq 5.12.019|<tuple|5.12|147>>
+    <associate|eq 5.13.019|<tuple|5.13|147>>
     <associate|eq 5.14.019|<tuple|5.14|160>>
     <associate|eq 5.15.019|<tuple|5.15|160>>
     <associate|eq 5.16.019|<tuple|5.16|160>>
     <associate|eq 5.17.019|<tuple|5.17|163>>
-    <associate|eq 5.18.053|<tuple|5.18|164>>
-    <associate|eq 5.19.053|<tuple|5.19|164>>
-    <associate|eq 5.2.019|<tuple|5.2|143>>
+    <associate|eq 5.18.053|<tuple|5.18|163>>
+    <associate|eq 5.19.053|<tuple|5.19|163>>
+    <associate|eq 5.2.019|<tuple|5.2|142>>
     <associate|eq 5.3.019|<tuple|5.3|143>>
     <associate|eq 5.4.019|<tuple|5.4|143>>
     <associate|eq 5.5.019|<tuple|5.5|143>>
@@ -10046,9 +10046,9 @@
     <associate|eq 5.9.019|<tuple|5.9|144>>
     <associate|eq 6.10.019|<tuple|6.11|175>>
     <associate|eq 6.11.019|<tuple|6.12|176>>
-    <associate|eq 6.12.022|<tuple|6.13|182>>
-    <associate|eq 6.13.022|<tuple|6.14|182>>
-    <associate|eq 6.14.022|<tuple|6.15|182>>
+    <associate|eq 6.12.022|<tuple|6.13|181>>
+    <associate|eq 6.13.022|<tuple|6.14|181>>
+    <associate|eq 6.14.022|<tuple|6.15|181>>
     <associate|eq 6.15.022|<tuple|6.16|182>>
     <associate|eq 6.17.020|<tuple|6.17|182>>
     <associate|eq 6.18.020|<tuple|6.18|182>>
@@ -10062,14 +10062,14 @@
     <associate|eq 6.23.022|<tuple|6.24|185>>
     <associate|eq 6.24.022|<tuple|6.25|186>>
     <associate|eq 6.25.022|<tuple|6.26|186>>
-    <associate|eq 6.27.130|<tuple|6.27|?>>
-    <associate|eq 6.28.130|<tuple|6.28|?>>
+    <associate|eq 6.27.130|<tuple|6.27|192>>
+    <associate|eq 6.28.130|<tuple|6.28|192>>
     <associate|eq 6.3.019|<tuple|6.4|173>>
     <associate|eq 6.4.019|<tuple|6.5|174>>
     <associate|eq 6.5.019|<tuple|6.6|174>>
     <associate|eq 6.6.019|<tuple|6.7|174>>
     <associate|eq 6.7.019|<tuple|6.8|174>>
-    <associate|eq 6.8.019|<tuple|6.9|175>>
+    <associate|eq 6.8.019|<tuple|6.9|174>>
     <associate|eq 6.9.019|<tuple|6.10|175>>
     <associate|eq 7.1.019|<tuple|6.1|170>>
     <associate|equipotence|<tuple|6.1|167>>
@@ -10080,7 +10080,7 @@
     <associate|equipotence A^C~B^D|<tuple|6.13|169>>
     <associate|equipotence AxC~BxD|<tuple|6.12|168>>
     <associate|equipotence equivalence relation|<tuple|6.2|167>>
-    <associate|equipotence finite, denumerable , countable|<tuple|6.26|172>>
+    <associate|equipotence finite, denumerable , countable|<tuple|6.26|171>>
     <associate|equipotence property (1)|<tuple|6.8|168>>
     <associate|equipotence union|<tuple|6.11|168>>
     <associate|every subset of a finite set is finite|<tuple|6.32|173>>
@@ -10114,13 +10114,13 @@
     <associate|finite power notation|<tuple|6.75|191>>
     <associate|finite product of sets|<tuple|6.74|191>>
     <associate|finite product of sets bijection|<tuple|6.80|192>>
-    <associate|finite product of sets power|<tuple|6.81|192>>
-    <associate|finite product of sets power equivalence|<tuple|6.82|192>>
+    <associate|finite product of sets power|<tuple|6.81|193>>
+    <associate|finite product of sets power equivalence|<tuple|6.82|193>>
     <associate|finite product of sets projection operator|<tuple|6.76|191>>
-    <associate|finite product of sets single set|<tuple|6.83|192>>
-    <associate|finite product of two sets|<tuple|6.78|?>>
-    <associate|finite product properties|<tuple|6.79|?>>
-    <associate|finite set|<tuple|6.19|171>>
+    <associate|finite product of sets single set|<tuple|6.83|193>>
+    <associate|finite product of two sets|<tuple|6.78|191>>
+    <associate|finite product properties|<tuple|6.79|192>>
+    <associate|finite set|<tuple|6.19|170>>
     <associate|finite set alternate definition lemma|<tuple|6.21|171>>
     <associate|finite set alternative definition|<tuple|6.22|171>>
     <associate|finite union of finite sets is finite|<tuple|6.35|174>>
@@ -10129,7 +10129,7 @@
     <associate|finite uniqueness of size|<tuple|6.37|176>>
     <associate|function P(A) bijective with 2^A|<tuple|6.5|167>>
     <associate|function injection and inverse surjection|<tuple|6.9|168>>
-    <associate|function no surjection between A and P(A)|<tuple|6.7|168>>
+    <associate|function no surjection between A and P(A)|<tuple|6.7|167>>
     <associate|group -x=-y\<less\>=\<gtr\>x=y|<tuple|4.10|115>>
     <associate|group abelian group/sub group|<tuple|4.11|115>>
     <associate|group cancelation|<tuple|4.6|114>>
@@ -10159,85 +10159,85 @@
     <associate|image of a finite set|<tuple|6.44|178>>
     <associate|infinite condition (1)|<tuple|6.36|175>>
     <associate|infinite set|<tuple|6.23|171>>
-    <associate|injection and infinite sets|<tuple|6.46|179>>
+    <associate|injection and infinite sets|<tuple|6.46|178>>
     <associate|inverse of a field isomorphism is a field
     isomorphism|<tuple|4.69|132>>
-    <associate|iteration final|<tuple|5.85|163>>
+    <associate|iteration final|<tuple|5.85|162>>
     <associate|mapping of N to a finite set (1)|<tuple|6.48|179>>
     <associate|mapping of N to a finite set (2)|<tuple|6.49|180>>
-    <associate|mathematical induction|<tuple|5.83|162>>
-    <associate|max element of a family|<tuple|6.51|182>>
+    <associate|mathematical induction|<tuple|5.83|161>>
+    <associate|max element of a family|<tuple|6.51|181>>
     <associate|n\<less\>=m=\<gtr\>S_n\<less\>=S_m|<tuple|6.17|170>>
-    <associate|natural number {n,..,m}|<tuple|5.82|162>>
-    <associate|natural number {n,..}|<tuple|5.80|162>>
+    <associate|natural number {n,..,m}|<tuple|5.82|161>>
+    <associate|natural number {n,..}|<tuple|5.80|161>>
     <associate|natural numbers|<tuple|5.3|140>>
-    <associate|natural numbers (n+m)-k=(n-k)+m|<tuple|5.65|158>>
-    <associate|natural numbers (n+m)-n=m|<tuple|5.66|158>>
+    <associate|natural numbers (n+m)-k=(n-k)+m|<tuple|5.65|157>>
+    <associate|natural numbers (n+m)-n=m|<tuple|5.66|157>>
     <associate|natural numbers 0|<tuple|5.7|140>>
-    <associate|natural numbers 0\<less\>=n|<tuple|5.46|154>>
+    <associate|natural numbers 0\<less\>=n|<tuple|5.46|153>>
     <associate|natural numbers 1+1=2|<tuple|5.28|148>>
     <associate|natural numbers \<less\> properties|<tuple|5.49|154>>
-    <associate|natural numbers Archimedean property|<tuple|5.78|160>>
-    <associate|natural numbers N={0,..,}|<tuple|5.81|162>>
-    <associate|natural numbers Peano|<tuple|5.17|142>>
+    <associate|natural numbers Archimedean property|<tuple|5.78|159>>
+    <associate|natural numbers N={0,..,}|<tuple|5.81|161>>
+    <associate|natural numbers Peano|<tuple|5.17|141>>
     <associate|natural numbers absorbing element|<tuple|5.36|150>>
     <associate|natural numbers addition|<tuple|5.27|148>>
-    <associate|natural numbers additive semi-group|<tuple|5.34|150>>
+    <associate|natural numbers additive semi-group|<tuple|5.34|149>>
     <associate|natural numbers are infinite|<tuple|6.30|173>>
-    <associate|natural numbers are segments|<tuple|6.16|170>>
+    <associate|natural numbers are segments|<tuple|6.16|169>>
     <associate|natural numbers are total ordered|<tuple|5.52|155>>
     <associate|natural numbers are transitive|<tuple|5.14|141>>
-    <associate|natural numbers are well ordered|<tuple|5.51|155>>
-    <associate|natural numbers definition recursion finite|<tuple|5.91|165>>
+    <associate|natural numbers are well ordered|<tuple|5.51|154>>
+    <associate|natural numbers definition recursion finite|<tuple|5.91|164>>
     <associate|natural numbers difference|<tuple|5.63|157>>
     <associate|natural numbers distributivity|<tuple|5.39|151>>
-    <associate|natural numbers division|<tuple|5.79|161>>
+    <associate|natural numbers division|<tuple|5.79|160>>
     <associate|natural numbers every non zero number is a
     successor|<tuple|5.18|142>>
     <associate|natural numbers examples|<tuple|5.8|140>>
     <associate|natural numbers is a set|<tuple|5.4|140>>
-    <associate|natural numbers k\<less\>n condition|<tuple|5.48|154>>
+    <associate|natural numbers k\<less\>n condition|<tuple|5.48|153>>
     <associate|natural numbers mathematical induction|<tuple|5.11|140>>
     <associate|natural numbers multiplication|<tuple|5.35|150>>
     <associate|natural numbers multiplication associativity|<tuple|5.41|152>>
-    <associate|natural numbers multiplication commutativity|<tuple|5.40|152>>
+    <associate|natural numbers multiplication commutativity|<tuple|5.40|151>>
     <associate|natural numbers multiplication neutral
-    element|<tuple|5.37|151>>
+    element|<tuple|5.37|150>>
     <associate|natural numbers multiplicative abelian
-    semi-group|<tuple|5.42|153>>
-    <associate|natural numbers n+0=n|<tuple|5.29|149>>
+    semi-group|<tuple|5.42|152>>
+    <associate|natural numbers n+0=n|<tuple|5.29|148>>
     <associate|natural numbers n+k=0=\<gtr\>n=0|<tuple|5.57|156>>
-    <associate|natural numbers n+k=m+k\<less\>=\<gtr\>n=m|<tuple|5.43|153>>
+    <associate|natural numbers n+k=m+k\<less\>=\<gtr\>n=m|<tuple|5.43|152>>
     <associate|natural numbers n+s(m)=s(n+m)|<tuple|5.31|149>>
     <associate|natural numbers n.(m-1)=n.m-n|<tuple|5.69|158>>
-    <associate|natural numbers n.k=m.k=\<gtr\>n=m|<tuple|5.77|160>>
+    <associate|natural numbers n.k=m.k=\<gtr\>n=m|<tuple|5.77|159>>
     <associate|natural numbers n.s(m)=n+n.m|<tuple|5.38|151>>
     <associate|natural numbers n\<less\>=i\<less\>=m=\<gtr\>0\<less\>=i-n\<less\>=m-n|<tuple|5.70|158>>
-    <associate|natural numbers n\<less\>=m\<less\>=\<gtr\>n-k\<less\>=m-k|<tuple|5.71|159>>
+    <associate|natural numbers n\<less\>=m\<less\>=\<gtr\>n-k\<less\>=m-k|<tuple|5.71|158>>
     <associate|natural numbers n\<less\>=m\<less\>=\<gtr\>there exists a k
-    such that m=k|<tuple|5.62|157>>
-    <associate|natural numbers n\<less\>=n+k|<tuple|5.56|156>>
-    <associate|natural numbers n\<less\>k\<less\>s(n)|<tuple|5.72|159>>
+    such that m=k|<tuple|5.62|156>>
+    <associate|natural numbers n\<less\>=n+k|<tuple|5.56|155>>
+    <associate|natural numbers n\<less\>k\<less\>s(n)|<tuple|5.72|158>>
     <associate|natural numbers n\<less\>m and r\<less\>s then
-    n+r\<less\>m+s|<tuple|5.74|159>>
+    n+r\<less\>m+s|<tuple|5.74|158>>
     <associate|natural numbers n\<less\>m then there exists a k such that
     m=n+k|<tuple|5.60|156>>
-    <associate|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k|<tuple|5.55|156>>
-    <associate|natural numbers n\<less\>m\<less\>=\<gtr\>n\<less\>=m-1|<tuple|5.68|158>>
+    <associate|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k|<tuple|5.55|155>>
+    <associate|natural numbers n\<less\>m\<less\>=\<gtr\>n\<less\>=m-1|<tuple|5.68|157>>
     <associate|natural numbers n\<less\>m\<less\>=\<gtr\>there exists a k
-    such that m=k|<tuple|5.61|157>>
-    <associate|natural numbers n\<less\>m=\<gtr\>n.k\<less\>m.k|<tuple|5.76|160>>
-    <associate|natural numbers n\<less\>m=\<gtr\>n\<less\>=m-1|<tuple|5.67|158>>
-    <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>=m|<tuple|5.50|155>>
+    such that m=k|<tuple|5.61|156>>
+    <associate|natural numbers n\<less\>m=\<gtr\>n.k\<less\>m.k|<tuple|5.76|159>>
+    <associate|natural numbers n\<less\>m=\<gtr\>n\<less\>=m-1|<tuple|5.67|157>>
+    <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>=m|<tuple|5.50|154>>
     <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>s(m)|<tuple|5.54|155>>
     <associate|natural numbers n\<less\>s(m)=\<gtr\>s\<less\>=m|<tuple|5.58|156>>
-    <associate|natural numbers n\<less\>s(n)|<tuple|5.47|154>>
+    <associate|natural numbers n\<less\>s(n)|<tuple|5.47|153>>
     <associate|natural numbers n=/s(n)|<tuple|5.15|141>>
     <associate|natural numbers order relation|<tuple|5.45|153>>
     <associate|natural numbers product of non zero numbers is non
     zero|<tuple|5.75|159>>
     <associate|natural numbers recursion step form finite|<tuple|5.88|163>>
-    <associate|natural numbers s(n) = n+1|<tuple|5.30|149>>
+    <associate|natural numbers s(n) = n+1|<tuple|5.30|148>>
     <associate|natural numbers s(n)=/0|<tuple|5.10|140>>
     <associate|natural numbers successor|<tuple|5.5|140>>
     <associate|natural numbers successor function|<tuple|5.6|140>>
@@ -10245,8 +10245,8 @@
     injective|<tuple|5.16|141>>
     <associate|natural numbers successor properties|<tuple|5.12|141>>
     <associate|natural numbers sum associativity|<tuple|5.32|149>>
-    <associate|natural numbers sum commutativity|<tuple|5.33|150>>
-    <associate|natural numbers sup property|<tuple|5.73|159>>
+    <associate|natural numbers sum commutativity|<tuple|5.33|149>>
+    <associate|natural numbers sup property|<tuple|5.73|158>>
     <associate|natural numbers transitive|<tuple|5.13|141>>
     <associate|natural numbers x\<less\>=y or y\<less\>x|<tuple|5.53|155>>
     <associate|operator|<tuple|4.1|113>>
@@ -10256,17 +10256,17 @@
     finite|<tuple|6.55|184>>
     <associate|product of a finite family of finite sets is is finite
     (1)|<tuple|6.56|184>>
-    <associate|product of finite family of sets|<tuple|6.54|184>>
-    <associate|product of finite sets|<tuple|6.40|177>>
-    <associate|proposition 6.53.022|<tuple|6.60|186>>
+    <associate|product of finite family of sets|<tuple|6.54|183>>
+    <associate|product of finite sets|<tuple|6.40|176>>
+    <associate|proposition 6.53.022|<tuple|6.60|185>>
     <associate|recursion|<tuple|5.19|142>>
-    <associate|recursion final|<tuple|5.84|163>>
+    <associate|recursion final|<tuple|5.84|162>>
     <associate|recursion injective function|<tuple|5.20|144>>
-    <associate|recursion iteration|<tuple|5.24|146>>
+    <associate|recursion iteration|<tuple|5.24|145>>
     <associate|recursion iteration in a group|<tuple|5.25|146>>
-    <associate|recursion step (2)|<tuple|5.86|163>>
+    <associate|recursion step (2)|<tuple|5.86|162>>
     <associate|recursion step form (1)|<tuple|5.26|147>>
-    <associate|recursion step form (3)|<tuple|5.87|163>>
+    <associate|recursion step form (3)|<tuple|5.87|162>>
     <associate|ring|<tuple|4.32|121>>
     <associate|ring 0 1 and -|<tuple|4.40|123>>
     <associate|ring absorbing element|<tuple|4.39|122>>
@@ -10289,7 +10289,7 @@
     <associate|set containing a denumerable set is infinite|<tuple|6.29|173>>
     <associate|set is infinitie if it contains a infinite
     subset|<tuple|6.31|173>>
-    <associate|set of finite family is finite|<tuple|6.45|179>>
+    <associate|set of finite family is finite|<tuple|6.45|178>>
     <associate|sub-semi-group|<tuple|4.12|115>>
     <associate|subring|<tuple|4.35|121>>
     <associate|subset of finite sets|<tuple|6.42|178>>

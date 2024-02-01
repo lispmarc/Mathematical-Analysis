@@ -1,6 +1,6 @@
 <TeXmacs|2.1.2>
 
-<project|Book.tm>
+<project|FullBook.tm>
 
 <style|<tuple|book|preview-ref>>
 
@@ -895,24 +895,14 @@
   </theorem>
 
   <\proof>
-    For <math|\<sigma\><rsub|\|I\\<around*|{|i|}>>:I\\<around*|{|i|}>\<rightarrow\>I\\<around*|{|i|}>>
-    we have:
+    As <math|\<sigma\>:I\<rightarrow\>I> is a bijection we have by [theorem:
+    <reference|function restricted function properties> (6)] that
 
-    <\description>
-      <item*|injectivity>If <math|k,l\<in\>I\\<around*|{|i|}>> is such that
-      <math|\<sigma\><rsub|\|I\\<around*|{|i|}>><around*|(|k|)>=\<sigma\><rsub|\|I\\<around*|{|i|}>><around*|(|l|)>>
-      then <math|\<sigma\><around*|(|k|)>=\<sigma\><rsub|\|I\\<around*|{|i|}>><around*|(|k|)>=\<sigma\><rsub|\|I\\<around*|{|i|}>><around*|(|l|)>=\<sigma\><around*|(|l|)>>
-      which as <math|\<sigma\>> is a bijection proves that <math|k=l>.
+    <\equation*>
+      \<sigma\><rsub|\|I\\<around*|{|i|}>>:I\\<around*|{|i|}>\<rightarrow\>I\\<around*|{|\<sigma\><around*|(|i|)>|}>\<equallim\><rsub|\<sigma\><around*|(|i|)>=i>I\\<around*|{|i|}>
+    </equation*>
 
-      <item*|surjectivity>If <math|k\<in\>I\\<around*|{|i|}>> then as
-      <math|\<sigma\>> is a bijection there exist <math|l\<in\>I> such that
-      <math|\<sigma\><around*|(|l|)>=k>. If <math|l=i> then
-      <math|k=\<sigma\><around*|(|i|)>=i> contradicting
-      <math|k\<in\>I\\<around*|{|i|}>>. Hence
-      <math|l\<in\>I\\<around*|{|i|}>> so that
-      <math|\<sigma\><rsub|\|I\\<around*|{|i|}>><around*|(|l|)>=\<sigma\><around*|(|l|)>=k>
-      proving surjectivity.
-    </description>
+    is a bijection.
   </proof>
 
   We define now a special type of permutation a transposition
@@ -23650,7 +23640,7 @@
   <\collection>
     <associate|chapter-nr|10>
     <associate|item-nr|4>
-    <associate|page-first|318>
+    <associate|page-first|317>
     <associate|page-medium|papyrus>
     <associate|section-nr|5>
     <associate|subsection-nr|5>
