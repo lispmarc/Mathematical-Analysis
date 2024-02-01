@@ -1064,7 +1064,7 @@
     <associate|auto-293|<tuple|<with|mode|<quote|math>|F<around*|(|X,F|)>>|588|Chapter-12-13-DirectSumTensorProduct.tm>>
     <associate|auto-294|<tuple|free vector space over a
     set|588|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|auto-295|<tuple|<with|mode|<quote|math>|n\<in\>S\<Rightarrow\>n+1\<in\>S>|621>>
+    <associate|auto-295|<tuple|2|635>>
     <associate|auto-3|<tuple|axiom of extent|10|Chapter-01-03-sets.tm>>
     <associate|auto-30|<tuple|<with|mode|<quote|math>|B<rsup|A>>|34|Chapter-01-03-sets.tm>>
     <associate|auto-31|<tuple|identity function|37|Chapter-01-03-sets.tm>>
@@ -1859,83 +1859,113 @@
     <associate|eq 13.1.129|<tuple|13.1|587|Chapter-12-13-DirectSumTensorProduct.tm>>
     <associate|eq 13.10.127|<tuple|13.4|594|Chapter-12-13-DirectSumTensorProduct.tm>>
     <associate|eq 13.11.127|<tuple|13.5|594|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.12.127|<tuple|13.6|594|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.110.144|<tuple|13.110|630|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.111.144|<tuple|13.111|632|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.112.144|<tuple|13.112|633|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.12.127|<tuple|13.6|595|Chapter-12-13-DirectSumTensorProduct.tm>>
     <associate|eq 13.13.128|<tuple|13.7|595|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.14.127|<tuple|13.8|595|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.14.127|<tuple|13.8|596|Chapter-12-13-DirectSumTensorProduct.tm>>
     <associate|eq 13.15.128|<tuple|13.9|596|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.16.128|<tuple|13.10|596|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.19.135|<tuple|13.19|599|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.19129|<tuple|13.22|601|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.16.128|<tuple|13.10|597|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.19.135|<tuple|13.19|600|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.19129|<tuple|13.32|602|Chapter-12-13-DirectSumTensorProduct.tm>>
     <associate|eq 13.2.127|<tuple|13.12|597|Chapter-12-13-DirectSumTensorProduct.tm>>
     <associate|eq 13.2.129|<tuple|13.2|587|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.20.129|<tuple|13.23|601|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.20.135|<tuple|13.20|599|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.21.129|<tuple|13.24|601|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.21.135|<tuple|13.21|599|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.22.129|<tuple|13.25|603|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.23.129|<tuple|13.26|603|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.24.129|<tuple|13.27|603|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.25.129|<tuple|13.28|604|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.26.129|<tuple|13.29|604|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.27.129|<tuple|13.30|604|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.28.129|<tuple|13.31|604|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.29.129|<tuple|13.32|604|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.3.127|<tuple|13.13|597|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.30.129|<tuple|13.33|604|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.31.129|<tuple|13.34|604|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.32.129|<tuple|13.35|605|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.33.129|<tuple|13.36|605|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.34.129|<tuple|13.37|605|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.35.129|<tuple|13.38|605|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.36.129|<tuple|13.39|606|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.37.129|<tuple|13.40|606|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.38.129|<tuple|13.41|606|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.39.129|<tuple|13.42|606|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.4.127|<tuple|13.14|597|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.40.129|<tuple|13.43|606|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.41.129|<tuple|13.44|607|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.42.129|<tuple|13.45|607|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.43.129|<tuple|13.46|607|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.44.129|<tuple|13.47|607|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.45.129|<tuple|13.48|607|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.46.129|<tuple|13.49|608|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.47.129|<tuple|13.50|608|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.48.129|<tuple|13.51|608|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.49.129|<tuple|13.52|608|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.5.127|<tuple|13.15|597|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.50.129|<tuple|13.53|609|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.51.129|<tuple|13.54|610|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.52.130|<tuple|13.55|611|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.53.129|<tuple|13.56|612|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.54.129|<tuple|13.57|612|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.55.130|<tuple|13.58|613|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.56.130|<tuple|13.59|613|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.56.133|<tuple|13.68|616|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.57.130|<tuple|13.60|613|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.58.130|<tuple|13.61|614|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.59.130|<tuple|13.62|614|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.20.129|<tuple|13.33|602|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.20.135|<tuple|13.20|600|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.21.129|<tuple|13.34|603|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.21.135|<tuple|13.21|600|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.22.129|<tuple|13.47|610|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.22.137|<tuple|13.23|600|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.22.139|<tuple|13.22|600|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.23.129|<tuple|13.48|610|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.23.137|<tuple|13.24|601|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.24.129|<tuple|13.49|610|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.24.137|<tuple|13.25|601|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.25.129|<tuple|13.50|611|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.25.137|<tuple|13.27|601|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.25.138|<tuple|13.26|601|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.26.129|<tuple|13.51|611|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.26.137|<tuple|13.29|601|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.27.129|<tuple|13.52|611|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.27.137|<tuple|13.30|601|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.28.129|<tuple|13.53|611|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.29.129|<tuple|13.54|611|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.3.127|<tuple|13.13|598|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.30.129|<tuple|13.55|611|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.30.138|<tuple|13.31|601|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.31.129|<tuple|13.56|611|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.32.129|<tuple|13.57|612|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.33.129|<tuple|13.58|612|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.34.129|<tuple|13.59|612|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.35.129|<tuple|13.60|612|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.35.140|<tuple|13.36|608|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.35.143|<tuple|13.35|608|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.36.129|<tuple|13.61|613|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.36.140|<tuple|13.41|609|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.36.141|<tuple|13.40|609|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.36.142|<tuple|13.37|608|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.37.129|<tuple|13.62|613|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.37.140|<tuple|13.42|610|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.38.129|<tuple|13.63|613|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.38.140|<tuple|13.44|610|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.38.143|<tuple|13.38|609|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.39.129|<tuple|13.64|613|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.39.140|<tuple|13.45|610|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.39.143|<tuple|13.39|609|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.4.127|<tuple|13.14|598|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.40.129|<tuple|13.65|613|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.41.129|<tuple|13.66|614|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.41.140|<tuple|13.46|610|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.42.129|<tuple|13.67|614|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.43.129|<tuple|13.68|614|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.43.144|<tuple|13.43|610|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.44.129|<tuple|13.69|614|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.45.129|<tuple|13.70|614|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.46.129|<tuple|13.71|615|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.47.129|<tuple|13.72|615|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.48.129|<tuple|13.73|615|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.49.129|<tuple|13.74|615|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.5.127|<tuple|13.15|598|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.50.129|<tuple|13.75|616|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.51.129|<tuple|13.76|617|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.52.130|<tuple|13.77|618|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.53.129|<tuple|13.78|620|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.54.129|<tuple|13.79|620|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.55.130|<tuple|13.80|620|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.56.130|<tuple|13.81|620|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.56.133|<tuple|13.90|624|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.57.130|<tuple|13.82|620|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.58.130|<tuple|13.83|621|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.59.130|<tuple|13.84|621|Chapter-12-13-DirectSumTensorProduct.tm>>
     <associate|eq 13.6.127|<tuple|13.16|598|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.60.130|<tuple|13.63|614|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.61.130|<tuple|13.64|614|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.62.130|<tuple|13.65|614|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.63.130|<tuple|13.66|615|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.64.130|<tuple|13.67|615|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.65.130|<tuple|13.74|618|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.66.130|<tuple|13.75|618|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.66.133|<tuple|13.69|616|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.67\<point\>133|<tuple|13.70|617|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.68.133|<tuple|13.71|617|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.69.133|<tuple|13.72|617|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.7.127|<tuple|13.17|598|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.70\<point\>133|<tuple|13.73|617|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.73.133|<tuple|13.76|618|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.74.133|<tuple|13.77|618|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.75.133|<tuple|13.78|618|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.76.133|<tuple|13.79|618|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.77.133|<tuple|13.80|619|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.78.133|<tuple|13.81|619|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.8.127|<tuple|13.18|598|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|eq 13.9.127|<tuple|13.3|590|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.60.130|<tuple|13.85|621|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.61.130|<tuple|13.86|622|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.62.130|<tuple|13.87|622|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.63.130|<tuple|13.88|622|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.64.130|<tuple|13.89|623|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.65.130|<tuple|13.96|626|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.66.130|<tuple|13.97|626|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.66.133|<tuple|13.91|624|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.67\<point\>133|<tuple|13.92|624|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.68.133|<tuple|13.93|624|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.69.133|<tuple|13.94|624|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.7.127|<tuple|13.17|599|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.70\<point\>133|<tuple|13.95|624|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.73.133|<tuple|13.98|627|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.74.133|<tuple|13.99|627|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.75.133|<tuple|13.100|627|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.76.133|<tuple|13.101|627|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.77.133|<tuple|13.102|627|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.78.133|<tuple|13.103|628|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.8.127|<tuple|13.18|599|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.9.127|<tuple|13.3|591|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.92.138|<tuple|13.104|629|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.93.138|<tuple|13.105|629|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.94.138|<tuple|13.106|629|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.95.138|<tuple|13.107|629|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.96.138|<tuple|13.108|630|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|eq 13.97.138|<tuple|13.109|630|Chapter-12-13-DirectSumTensorProduct.tm>>
     <associate|eq 2.1.001|<tuple|2.2|27|Chapter-01-03-sets.tm>>
     <associate|eq 2.1.001.1|<tuple|2.1|27|Chapter-01-03-sets.tm>>
     <associate|eq 2.10.001|<tuple|2.10|31|Chapter-01-03-sets.tm>>
@@ -2640,9 +2670,9 @@
     <associate|linear mapping inverse of a
     isomorphism|<tuple|11.163|398|Chapter-11-LinearAlgebra.tm>>
     <associate|linear mapping isomorphic spaces|<tuple|11.185|409|Chapter-11-LinearAlgebra.tm>>
-    <associate|linear mapping kernal and range are
-    subspaces|<tuple|11.177|405|Chapter-11-LinearAlgebra.tm>>
     <associate|linear mapping kernel|<tuple|11.175|405|Chapter-11-LinearAlgebra.tm>>
+    <associate|linear mapping kernel and range are
+    subspaces|<tuple|11.177|405|Chapter-11-LinearAlgebra.tm>>
     <associate|linear mapping linear isomorphism|<tuple|11.161|397|Chapter-11-LinearAlgebra.tm>>
     <associate|linear mapping of neutral element|<tuple|11.157|396|Chapter-11-LinearAlgebra.tm>>
     <associate|linear mapping projection map|<tuple|11.160|397|Chapter-11-LinearAlgebra.tm>>
@@ -3285,32 +3315,49 @@
     <associate|surjection f:A-\<gtr\>B if A is finite then B is
     finite|<tuple|6.43|178|Chapter-04-06-NaturalNumbers.tm>>
     <associate|tensor finite family of finite
-    sets|<tuple|13.24|608|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|tensor multi-index|<tuple|13.25|609|Chapter-12-13-DirectSumTensorProduct.tm>>
+    sets|<tuple|13.29|616|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|tensor multi-index|<tuple|13.30|616|Chapter-12-13-DirectSumTensorProduct.tm>>
     <associate|tensor multilinear mapping
-    sum|<tuple|13.27|609|Chapter-12-13-DirectSumTensorProduct.tm>>
+    sum|<tuple|13.32|616|Chapter-12-13-DirectSumTensorProduct.tm>>
     <associate|tensor null space|<tuple|13.7|592|Chapter-12-13-DirectSumTensorProduct.tm>>
     <associate|tensor product|<tuple|13.1|587|Chapter-12-13-DirectSumTensorProduct.tm>>
     <associate|tensor product and direct sum of two vector
-    spaces|<tuple|13.29|612|Chapter-12-13-DirectSumTensorProduct.tm>>
+    spaces|<tuple|13.34|619|Chapter-12-13-DirectSumTensorProduct.tm>>
     <associate|tensor product and sum of vector
-    space|<tuple|13.28|611|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|tensor product induction argument|<tuple|13.22|603|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|tensor product linear independency|<tuple|13.21|601|Chapter-12-13-DirectSumTensorProduct.tm>>
+    space|<tuple|13.33|618|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|tensor product basis|<tuple|13.40|633|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|tensor product components|<tuple|13.41|634|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|tensor product convention|<tuple|13.19|603|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|tensor product induction argument|<tuple|13.27|610|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|tensor product induction argument
+    (2)|<tuple|13.28|615|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|tensor product induction argument
+    (3)|<tuple|13.26|607|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|tensor product linear independency|<tuple|13.25|605|Chapter-12-13-DirectSumTensorProduct.tm>>
     <associate|tensor product of direct sum and a vector
-    space|<tuple|13.30|616|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|tensor product of direct sums|<tuple|13.32|619|Chapter-12-13-DirectSumTensorProduct.tm>>
+    space|<tuple|13.35|623|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|tensor product of direct sum and a vector space
+    (2)|<tuple|13.36|625|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|tensor product of direct sums|<tuple|13.38|628|Chapter-12-13-DirectSumTensorProduct.tm>>
     <associate|tensor product of spaces existence|<tuple|13.13|593|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|tensor product of spaces existence
+    (1)|<tuple|13.20|604|Chapter-12-13-DirectSumTensorProduct.tm>>
     <associate|tensor product of two direct
-    sums|<tuple|13.31|617|Chapter-12-13-DirectSumTensorProduct.tm>>
+    sums|<tuple|13.37|626|Chapter-12-13-DirectSumTensorProduct.tm>>
     <associate|tensor product of vectors|<tuple|13.10|592|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|tensor product one dimensional
+    spaces|<tuple|13.39|630|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|tensor product p-q-tensors|<tuple|13.42|634|Chapter-12-13-DirectSumTensorProduct.tm>>
     <associate|tensor product singleton|<tuple|13.17|599|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|tensor product singleton (1)|<tuple|13.22|604|Chapter-12-13-DirectSumTensorProduct.tm>>
     <associate|tensor product unique representation|<tuple|13.2|587|Chapter-12-13-DirectSumTensorProduct.tm>>
     <associate|tensor product uniqueness|<tuple|13.15|597|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|tensor product uniqueness (1)|<tuple|13.21|604|Chapter-12-13-DirectSumTensorProduct.tm>>
     <associate|tensor product uniqueness and
-    existance|<tuple|13.16|598|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|tensor product zero|<tuple|13.19|600|Chapter-12-13-DirectSumTensorProduct.tm>>
-    <associate|tensor sub spaces|<tuple|13.20|600|Chapter-12-13-DirectSumTensorProduct.tm>>
+    existance|<tuple|13.16|599|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|tensor product zero|<tuple|13.24|605|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|tensor sub spaces|<tuple|13.18|602|Chapter-12-13-DirectSumTensorProduct.tm>>
+    <associate|tensor sub spaces (1)|<tuple|13.23|605|Chapter-12-13-DirectSumTensorProduct.tm>>
     <associate|tensor tensor product of spaces|<tuple|13.8|592|Chapter-12-13-DirectSumTensorProduct.tm>>
     <associate|tensor universal property|<tuple|13.12|593|Chapter-12-13-DirectSumTensorProduct.tm>>
     <associate|totally ordered class|<tuple|3.39|81|Chapter-01-03-sets.tm>>

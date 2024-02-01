@@ -5,7 +5,7 @@
 <style|<tuple|book|preview-ref>>
 
 <\body>
-  <assign|chapter-nr|0><chapter|Elements of set theory>
+  <chapter|Elements of set theory>
 
   <section|Basic concepts about classes and sets>
 

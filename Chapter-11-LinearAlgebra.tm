@@ -5,7 +5,7 @@
 <style|<tuple|book|preview-ref>>
 
 <\body>
-  <assign|chapter-nr|10>
+  \;
 
   <chapter|Linear Algebra>
 
@@ -24160,8 +24160,6 @@
     <associate|linear mapping injectivity and surjectivity|<tuple|11.183|?>>
     <associate|linear mapping inverse of a isomorphism|<tuple|11.163|?>>
     <associate|linear mapping isomorphic spaces|<tuple|11.185|?>>
-    <associate|linear mapping kernal and range are
-    subspaces|<tuple|11.177|?>>
     <associate|linear mapping kernel|<tuple|11.175|?>>
     <associate|linear mapping kernel and range are
     subspaces|<tuple|11.177|?>>
