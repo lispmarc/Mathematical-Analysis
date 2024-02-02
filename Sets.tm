@@ -515,6 +515,8 @@
       <item><math|A\<subseteq\>B> if and only if <math|A<big|cup>B=B>
 
       <item><math|A\<subseteq\>B> if and only if <math|A<big|cap>B=A>
+
+      <item><math|A\\<around*|(|A\\B|)>=B>
     </enumerate>
   </theorem>
 
@@ -548,7 +550,27 @@
         <math|x\<in\>A\<Rightarrow\>x\<in\>A<big|cap>B\<Rightarrow\><around*|(|x\<in\>A\<wedge\>x\<in\>B|)>\<Rightarrow\>x\<in\>B>
         so <math|A\<subseteq\>B>.
       </description>
+
+      <item>We have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|A\\<around*|(|A\\B|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class difference>]>>>|<cell|A<big|cap><around*|(|A\\B|)><rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class difference>]>>>|<cell|A<big|cap><around*|(|A<big|cap>B<rsup|c>|)><rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class de Morgan's law>]>>>|<cell|A<big|cap><around*|(|A<rsup|c><big|cup><around*|(|B<rsup|c>|)><rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class complement of comploment>]>>>|<cell|A<big|cap><around*|(|A<rsup|c><big|cup>B|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class class commutative,idempotent,associative,distributivity>]>>>|<cell|<around*|(|A<big|cap>A<rsup|c>|)><big|cup><around*|(|A<big|cap>B|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class difference>]>>>|<cell|<around*|(|A\\A|)><big|cup><around*|(|A<big|cap>B|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theoremc:
+        <reference|class universal and empotyset
+        properties>]>>>|<cell|\<varnothing\><big|cup><around*|(|A<big|cap>B|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theoremc:
+        <reference|class universal and empotyset
+        properties>]>>>|<cell|A<big|cap>B>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class inclusion and union and
+        intersection>]>>>|<cell|B>>>>
+      </eqnarray*>
     </enumerate>
+
+    \;
   </proof>
 
   <\theorem>
@@ -13089,6 +13111,7 @@
     <associate|class complement of comploment|<tuple|1.28|?>>
     <associate|class de Morgan's law|<tuple|1.29|?>>
     <associate|class difference|<tuple|1.24|?>>
+    <associate|class difference of difference|<tuple|1.25|?>>
     <associate|class empty set|<tuple|1.18|?>>
     <associate|class empty set definition|<tuple|1.16|?>>
     <associate|class empty set is unique|<tuple|1.19|?>>
@@ -13279,7 +13302,6 @@
     <associate|family index set is a product|<tuple|2.104|?>>
     <associate|family intersection (2)|<tuple|2.117|?>>
     <associate|family intersection is a set|<tuple|2.118|?>>
-    <associate|family intersection of empty family|<tuple|2.118|?>>
     <associate|family intersection(1)|<tuple|2.116|?>>
     <associate|family product and index transformation|<tuple|2.138|?>>
     <associate|family properties (1)|<tuple|2.121|?>>

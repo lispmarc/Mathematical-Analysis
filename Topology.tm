@@ -74,7 +74,7 @@
 
   <\example>
     <label|topology coarse>If <math|X> is a set then
-    <math|<around*|\<langle\>|X,<around*|{|X,<around*|{|\<varnothing\>|}>|}>|\<rangle\>>>
+    <math|<around*|\<langle\>|X,<around*|{|X,\<varnothing\>|}>|\<rangle\>>>
     is a topological space
   </example>
 
@@ -353,10 +353,375 @@
   </theorem>
 
   <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|V\<in\>\<cal-T\><rsub|Y>> then
+      there exist a <math|U\<in\>\<cal-T\>> such that <math|V=U<big|cap>Y>,
+      as <math|Y,U\<in\>\<cal-T\>> we have that
+      <math|V=U<big|cap>Y\<in\>\<cal-T\>> proving that
+      <math|\<cal-T\><rsub|Y>\<subseteq\>\<cal-T\>>.
+
+      <item*|<math|\<Leftarrow\>>>As <math|\<cal-T\><rsub|Y>> is a topology
+      on <math|Y> we have that <math|Y\<in\>\<cal-T\><rsub|Y>> hence using
+      <math|\<cal-T\><rsub|Y>\<subseteq\>\<cal-T\>> we have
+      <math|Y\<in\>\<cal-T\>> proving that <math|Y> is open.
+    </description>
+  </proof>
+
+  <\definition>
+    <label|topology interior of a set><index|interior><index|<math|A<rsup|\<circ\>>>><dueto|Interior>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
+    and <math|A\<subseteq\>X> then the <with|font-series|bold|interior> of
+    <math|A> noted as <math|A<rsup|\<circ\>>> is defined by\ 
+
+    <\equation*>
+      A<rsup|0>=<big|cup><rsub|U\<in\><around*|{|V\<in\>\<cal-T\>\|V\<subseteq\>A|}>>U
+    </equation*>
+
+    <\note>
+      If <math|U\<in\><around*|{|V\<in\>\<cal-T\>\|V\<subseteq\>A|}>> then
+      <math|U\<in\>\<cal-T\>> and <math|U\<subseteq\>A> so that
+      <math|A<rsup|\<circ\>>\<in\>\<cal-T\>> and
+      <math|A<rsup|0>\<subseteq\>A>.
+    </note>
+  </definition>
+
+  It turns out that the interior of a set is the biggest open subset of this
+  set.
+
+  <\theorem>
+    <label|topology biggest open subset>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
+    and <math|A\<subseteq\>X> then if <math|U> is a open set such that
+    <math|U\<subseteq\>A> then <math|U\<subseteq\>A<rsup|\<circ\>>>.
+  </theorem>
+
+  <\proof>
+    If <math|U> is open and <math|U\<subseteq\>A> then
+    <math|U\<in\><around*|{|V\<in\>\<cal-T\>\|V\<subseteq\>A|}>> so that
+    <math|U\<subseteq\><big|cup><rsub|V\<in\><around*|{|V\<in\>\<cal-T\>\|V\<subseteq\>A|}>>V=A<rsup|\<circ\>>>
+  </proof>
+
+  <\theorem>
+    <label|topology open set and interior>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
+    and <math|U\<subseteq\>X> then\ 
+
+    <\equation*>
+      U<text| is open >\<Leftrightarrow\><text| >U=U<rsup|\<circ\>>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>If <math|U> is open then as
+      <math|U\<subseteq\>U> we have by the previous theorem [theorem:
+      <reference|topology biggest open subset>] that
+      <math|U\<subseteq\>U<rsup|\<circ\>>> and by [definition:
+      <reference|topology interior of a set>]
+      <math|U<rsup|\<circ\>>\<subseteq\>U> Hence\ 
+
+      <\equation*>
+        U=U<rsup|\<circ\>>
+      </equation*>
+
+      <item*|<math|\<Leftarrow\>>>As by \ [definition: <reference|topology
+      interior of a set>] <math|U<rsup|\<circ\>>> is open it follows from
+      <math|U=U<rsup|\<circ\>>> that <math|U> is open.
+    </description>
+
     \;
   </proof>
 
-  \ 
+  <subsection|Closed Sets>
+
+  <\definition>
+    <label|topology closed set><index|closed
+    set><index|<math|\<cal-T\><rsup|\<cal-C\>>>>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
+    then the set of closed sets noted by <math|\<cal-T\><rsup|\<cal-C\>>> is
+    defined by\ 
+
+    <\equation*>
+      \<cal-T\><rsup|\<cal-C\>>=<around*|{|A\<in\>\<cal-P\><around*|(|X|)>\|X\\A\<in\>\<cal-T\>|}>\<subseteq\>\<cal-P\><around*|(|X|)>
+    </equation*>
+
+    A element of <math|\<cal-T\><rsup|\<cal-C\>>> is called a
+    <with|font-series|bold|closed> set.
+  </definition>
+
+  <\example>
+    Let <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological
+    space then <math|\<varnothing\>> and <math|X> are open en closed sets
+  </example>
+
+  <\proof>
+    By definition of a topology <math|\<varnothing\>,X> are open sets.
+    Further, as <math|X\\\<varnothing\>=X\<in\>\<cal-T\>> and
+    <math|X\\X=\<varnothing\>\<in\>\<cal-T\>> we have that
+    <math|\<varnothing\>> and <math|X> are also closed sets.
+  </proof>
+
+  <\example>
+    Take the topological space <math|<around*|\<langle\>|<around*|{|1,2,3|}>,<around*|{|\<varnothing\>,<around*|{|1,2,3|}>|}>|\<rangle\>>>
+    [see example: <reference|topology coarse>] then
+    <math|<around*|{|1|}>,<around*|{|2|}>,<around*|{|3|}>,<around*|{|1,2|}>,<around*|{|1,3|}>,<around*|{|2,3|}>>
+    <math|>are neither open or closed.
+  </example>
+
+  <\proof>
+    Using the topology <math|\<cal-T\>=<around*|{|\<varnothing\>,<around*|{|1,2,3|}>|}>>
+    it is clear that <math|\<cal-T\>> does not contains
+    <math|<around*|{|1|}>,<around*|{|2|}>,<around*|{|3|}>,<around*|{|1,2|}>,<around*|{|1,3|}>,<around*|{|2,3|}>>
+    hence <math|<around*|{|1|}>,<around*|{|2|}>,<around*|{|3|}>,<around*|{|1,2|}>,<around*|{|1,3|}>,<around*|{|2,3|}>>
+    are not open. Furher we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|{|1,2,3|}>\\<around*|{|1|}>>|<cell|=>|<cell|<around*|{|2,3|}>\<nin\>\<cal-T\>>>|<row|<cell|<around*|{|1,2,3|}>\\<around*|{|2|}>>|<cell|=>|<cell|<around*|{|1,3|}>\<nin\>\<cal-T\>>>|<row|<cell|<around*|{|1,2,3|}>\\<around*|{|3|}>>|<cell|=>|<cell|<around*|{|1,2|}>\<nin\>\<cal-T\>>>|<row|<cell|<around*|{|1,2,3|}>\\<around*|{|1,2|}>>|<cell|=>|<cell|<around*|{|3|}>\<nin\>\<cal-T\>>>|<row|<cell|<around*|{|1,2,3|}>\\<around*|{|1,3|}>>|<cell|=>|<cell|<around*|{|2|}>\<nin\>\<cal-T\>>>|<row|<cell|<around*|{|1,2,3|}>\\<around*|{|2,3|}>>|<cell|=>|<cell|<around*|{|1|}>\<nin\>\<cal-T\>>>>>
+    </eqnarray*>
+
+    so that <math|<around*|{|1|}>,<around*|{|2|}>,<around*|{|3|}>,<around*|{|1,2|}>,<around*|{|1,3|}>,<around*|{|2,3|}>>
+    are not closed.
+  </proof>
+
+  The above two example shows that we can have sets that are open and closed,
+  sets that are only open, sets that are only closed and sets that are
+  neither open or closed. So open and closed are not exclusive properties.
+  However they are complementary as the following theorem shows.
+
+  <\theorem>
+    <label|topology and complement closed sets>Let <math|X> be a set and
+    <math|\<cal-T\>\<subseteq\>\<cal-P\><around*|(|X|)>> and
+    <math|\<cal-T\><rsup|\<cal-C\>>=<around*|{|A\<in\>\<cal-P\><around*|(|X|)>\|X\\A\<in\>\<cal-T\>|}>>
+    then\ 
+
+    <\theorem>
+      <label|closed set properties>Let <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>>
+      be a topological space then the set of closed sets
+      <math|\<cal-T\><rsup|\<cal-C\>>> satisfies the following:
+
+      <\enumerate>
+        <item><math|\<emptyset\>\<in\>\<cal-T\><rsup|\<cal-C\>>>
+
+        <item><math|X\<in\>\<cal-T\><rsup|\<cal-C\>>>
+
+        <item>If <math|A,B\<in\>\<cal-T\><rsup|\<cal-C\>>> then
+        <math|A<big|cup>B\<in\>\<cal-T\><rsup|\<cal-C\>>>
+
+        <item>If <math|I> is finite and <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-T\><rsup|\<cal-C\>>>
+        is a finite family of closed sets then
+        <math|<big|cup><rsub|i\<in\>I>A<rsub|i>\<in\>\<cal-T\><rsup|\<cal-C\>>>
+
+        <item>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>> is a family in
+        <math|\<cal-T\><rsup|\<cal-C\>>> (a family of closed sets) then
+        <math|<big|cap><rsub|i\<in\>I>A<rsub|i>\<in\>\<cal-T\><rsup|\<cal-C\>>>
+      </enumerate>
+    </theorem>
+
+    Furthermore when <math|\<cal-C\>\<subseteq\>\<cal-P\><around*|(|X|)>> is
+    a set of subsets of <math|X> satisfying 1,2,3 and 5 of the above then
+    <math|\<cal-T\>=<around*|{|X\\A\|A\<in\>\<cal-C\>|}>> is a topology on
+    <math|X> with the set of closed sets <math|\<cal-T\><rsup|\<cal-C\>>=\<cal-C\>>.
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item><math|X\\\<emptyset\>=X\<in\>\<cal-T\>\<Rightarrow\>\<emptyset\>\<in\>\<cal-T\><rsup|\<cal-C\>>>
+
+      <item><math|X\\X=\<emptyset\>\<in\>\<cal-T\>\<Rightarrow\>X\<in\>\<cal-T\><rsup|\<cal-C\>>>
+
+      <item>If <math|A,B\<in\>\<cal-T\><rsup|\<cal-C\>>> then
+      <math|X\\<around*|(|A<big|cup>B|)>\<equallim\><rsub|<with|mode|text|[theorem:
+      <reference|class set difference and union ,
+      intersection>]>><around*|(|X\\A|)><big|cap><around*|(|X\\B|)>\<in\>\<cal-T\>>
+      [as <math|X\\A,X\\B\<in\>\<cal-T\>> and the definition of a topology].
+
+      <item>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-T\><rsup|\<cal-C\>>>
+      then <math|\<forall\>i\<in\>I> we have that <math|X\\A<rsub|i>> is
+      open. As <math|I> is finite we have by [theorem: <reference|topology
+      finite intersection>] that <math|<big|cap><rsub|i\<in\>I><around*|(|X\\A<rsub|i>|)>>
+      is open, hence <math|X\\<around*|(|<big|cap><rsub|i\<in\>I><around*|(|X\\A<rsub|i>|)>|)>>
+      is closed. Finally
+
+      <\equation*>
+        X\\<around*|(|<big|cap><rsub|i\<in\>I><around*|(|X\\A<rsub|i>|)>|)>\<equallim\><rsub|<with|mode|text|[theorem:
+        <reference|family de Morgan>]>><big|cup><rsub|i\<in\>I><around*|(|X\\<around*|(|X\\A<rsub|i>|)>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|class inclusion and union and
+        intersection>]>><big|cup><rsub|i\<in\>I>A<rsub|i>
+      </equation*>
+
+      <item>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>> is a family in
+      <math|\<cal-T\><rsup|\<cal-C\>>> then
+      <math|X\\<around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)>\<equallim\><rsub|<with|mode|text|[theorem:
+      <reference|family de Morgan>]>><big|cup><rsub|i\<in\>I><around*|(|X\\A<rsub|i>|)>\<in\>\<cal-T\>>
+      [as <math|\<forall\>i\<in\>I> we have
+      <math|X\\A<rsub|i>\<in\>\<cal-T\>>].
+    </enumerate>
+
+    Assume now that <math|\<cal-C\>\<subseteq\>\<cal-P\><around*|(|X|)>>
+    fulfills 1,2,3 and 5 and define <math|\<cal-T\>=<around*|{|U\<in\>\<cal-P\><around*|(|X|)>\|X\\U\<in\>\<cal-C\>|}>>
+    then\ 
+
+    <\enumerate>
+      <item><math|\<emptyset\>=X\\X\<Rightarrow\>\<emptyset\>\<in\>\<cal-T\>>
+
+      <item><math|X=X\\\<emptyset\>\<Rightarrow\>X\<in\>\<cal-T\>>
+
+      <item>If <math|U,V\<in\>\<cal-T\>> then
+      <math|\<exists\>A,B\<in\>\<cal-C\>> such that <math|U=X\\A>,
+      <math|V=X\\B> and
+
+      <\equation*>
+        U<big|cap>V=<around*|(|X\\A|)><big|cap><around*|(|X\\B|)>\<equallim\><rsub|<text|[theorem:<reference|class
+        set difference and union , intersection>]>>X\\<around*|(|A<big|cup>B|)>\<in\>\<cal-T\>
+      </equation*>
+
+      [as <math|A<big|cup>B\<in\>\<cal-C\>>].
+
+      <item>If <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>> is a family in
+      <math|\<cal-T\>> then <math|\<forall\>i\<in\>I> there exists
+      <math|A<rsub|i>\<in\>\<cal-C\>> such that <math|U<rsub|i>=X\\A<rsub|i>>
+      and thus <math|<big|cup><rsub|i\<in\>I>U<rsub|i>=<big|cup><rsub|i\<in\>I><around*|(|X\\A<rsub|i>|)>\<equallim\><rsub|<text|[theorem:<reference|class
+      set difference and union , intersection>]>>X\\<around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)>>
+    </enumerate>
+
+    proving that\ 
+
+    <\equation*>
+      \<cal-T\><text| is a topology on >X
+    </equation*>
+
+    If <math|A\<in\>\<cal-T\><rsup|\<cal-C\>>> then
+    <math|X\\A\<in\>\<cal-T\>> so <math|X\\<around*|(|X\\A|)>\<in\>\<cal-C\>>
+    which as <math|A\<equallim\><rsub|<text|[theorem: <reference|class
+    inclusion and union and intersection>]>>X\\<around*|(|X\\A|)>> proves
+    that <math|A\<in\>\<cal-C\>>, hence\ 
+
+    <\equation*>
+      \<cal-T\><rsup|\<cal-C\>>\<subseteq\>\<cal-C\>
+    </equation*>
+
+    Further if <math|A\<in\>\<cal-C\>> then <math|X\\A\<in\>\<cal-T\>> so
+    <math|A\<in\>\<cal-T\><rsup|\<cal-C\>>> proving that
+    <math|\<cal-C\>\<subseteq\>\<cal-T\><rsup|\<cal-C\>>> which combined with
+    the above proves that\ 
+
+    <\equation*>
+      \<cal-T\><rsup|\<cal-C\>>=\<cal-C\>
+    </equation*>
+  </proof>
+
+  Just as we have defined the interior of a set as the largest open set
+  containing in the set we can define the clusure of a set as the smalled
+  closed set containing the set.
+
+  <\definition>
+    <label|topology closure of a set><dueto|Closure of a Set>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
+    and <math|A\<subseteq\>X> then the <with|font-series|bold|closure> of
+    <math|A> noted by <math|<wide|A|\<wide-bar\>>> is defined by\ 
+
+    <\equation*>
+      <wide|A|\<wide-bar\>>=<big|cap><rsub|C\<in\><around*|{|C\<in\>\<cal-T\><rsup|\<cal-C\>>\|A\<subseteq\>C|}>>C
+    </equation*>
+
+    <\note>
+      If <math|C\<in\><around*|{|C\<in\>\<cal-T\><rsup|\<cal-C\>>\|A\<subseteq\>C|}>>
+      then <math|A\<subseteq\>C> and <math|C\<in\>\<cal-T\><rsup|\<cal-C\>>>
+      then we have by [theorems: <reference|family properties
+      (1)>,<reference|topology and complement closed sets>] that
+      <math|A\<subseteq\><wide|A|\<wide-bar\>>> and
+      <math|<wide|A|\<wide-bar\>>\<in\>\<cal-T\><rsup|\<cal-C\>>> [or
+      <math|<wide|A|\<wide-bar\>>> is closed].
+    </note>
+  </definition>
+
+  <\theorem>
+    <label|topology closure of a set alternative>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
+    and <math|A\<subseteq\>X> then if <math|C> is closed set such that
+    <math|A\<subseteq\>C> it follows that
+    <math|<wide|A|\<wide-bar\>>\<subseteq\>C>.
+  </theorem>
+
+  <\proof>
+    If <math|C> is closed set such that <math|A\<subseteq\>C> then
+    <math|C\<in\><around*|{|C\<in\>\<cal-T\><rsup|\<cal-C\>>\|A\<subseteq\>C|}>>
+    so that <math|<big|cap><rsub|B\<in\><around*|{|C\<in\>\<cal-T\><rsup|\<cal-C\>>\|A\<subseteq\>C|}>>B\<subseteq\>C>
+  </proof>
+
+  It turns out that a closed set is a set that is equal to its closure.
+
+  <\theorem>
+    <label|topology closed set and closure>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
+    and <math|A\<subseteq\>X> then\ 
+
+    <\equation*>
+      A<text| is closed >\<Leftrightarrow\><text| >A=<wide|A|\<wide-bar\>>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>If <math|A> is closed then
+      as<math|A\<subseteq\>A> we have by the previous theorem [theorem:
+      <reference|topology closure of a set alternative>] that
+      <math|<wide|A|\<wide-bar\>>\<subseteq\>A> and by [definition:
+      <reference|topology closure of a set>]
+      <math|A\<subseteq\><wide|A|\<wide-bar\>>>. Hence\ 
+
+      <\equation*>
+        A=<wide|A|\<wide-bar\>>
+      </equation*>
+
+      <item*|<math|\<Leftarrow\>>>As by \ [definition: <reference|topology
+      closure of a set>] <math|<wide|A|\<wide-bar\>>> is closed it follows
+      from <math|A=<wide|A|\<wide-bar\>>> that <math|A> is closed.
+    </description>
+  </proof>
+
+  <\definition>
+    <label|topology limit point><index|limit point><index|accumulation
+    point><index|<math|A<rprime|'>>>If <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>>
+    is a topological space and <math|A\<subseteq\>X> then <math|x\<in\>X> is
+    a <with|font-series|bold|limit point >or
+    <with|font-series|bold|accumulation point >of <math|A> if
+    <math|\<forall\>U\<in\>\<cal-T\>> with <math|x\<in\>U> we have
+    <math|<around*|(|A\\<around*|{|x|}>|)><big|cap>U\<neq\>\<varnothing\>>.
+    The set of all limit points of <math|A> is called the
+    <with|font-series|bold|derived> set of <math|A> and noted by
+    <math|A<rprime|'>> so that\ 
+
+    <\equation*>
+      A<rprime|'>=<around*|{|x\<in\>X\|x<text| is a limit point of >A|}>
+    </equation*>
+  </definition>
+
+  <\theorem>
+    <label|topology closure is union of a set and its limit points>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
+    and <math|A\<subseteq\>X> then\ 
+
+    <\equation*>
+      <wide|A|\<wide-bar\>>=A<big|cup>A<rprime|'>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \;
+  </proof>
+
+  \;
+
+  \;
 </body>
 
 <\initial>
@@ -372,16 +737,40 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|14|635>>
+    <associate|auto-10|<tuple|<with|mode|<quote|math>|A<rprime|'>>|?>>
     <associate|auto-2|<tuple|14.1|635>>
+    <associate|auto-3|<tuple|interior|?>>
+    <associate|auto-4|<tuple|<with|mode|<quote|math>|A<rsup|\<circ\>>>|?>>
+    <associate|auto-5|<tuple|14.1.1|?>>
+    <associate|auto-6|<tuple|closed set|?>>
+    <associate|auto-7|<tuple|<with|mode|<quote|math>|\<cal-T\><rsup|\<cal-C\>>>|?>>
+    <associate|auto-8|<tuple|limit point|?>>
+    <associate|auto-9|<tuple|accumulation point|?>>
+    <associate|closed set properties|<tuple|14.19|?>>
+    <associate|topology|<tuple|14.22|?>>
+    <associate|topology and complement closed sets|<tuple|14.18|?>>
+    <associate|topology biggest open subset|<tuple|14.13|?>>
+    <associate|topology closed set|<tuple|14.15|?>>
+    <associate|topology closed set and closure|<tuple|14.23|?>>
+    <associate|topology closed set condition|<tuple|14.15|?>>
+    <associate|topology closure is union of a set and its limit
+    points|<tuple|14.25|?>>
+    <associate|topology closure of a set|<tuple|14.20|?>>
+    <associate|topology closure of a set alternative|<tuple|14.22|?>>
+    <associate|topology closure of a set atlernative|<tuple|14.21|?>>
     <associate|topology coarse|<tuple|14.3|635>>
-    <associate|topology discrete|<tuple|14.4|635>>
+    <associate|topology complements of a set of sets|<tuple|14.14|?>>
+    <associate|topology discrete|<tuple|14.4|636>>
     <associate|topology empty set|<tuple|14.2|635>>
-    <associate|topology finite intersection|<tuple|14.6|?>>
-    <associate|topology open set condition|<tuple|14.7|?>>
+    <associate|topology finite intersection|<tuple|14.6|636>>
+    <associate|topology interior of a set|<tuple|14.11|?>>
+    <associate|topology limit point|<tuple|14.24|?>>
+    <associate|topology open set and interior|<tuple|14.14|?>>
+    <associate|topology open set condition|<tuple|14.7|636>>
     <associate|topology space|<tuple|14.1|635>>
-    <associate|topology subspace topology|<tuple|14.8|?>>
-    <associate|topology subspace topology open subset|<tuple|14.10|?>>
-    <associate|topology subsubspace topology|<tuple|14.9|?>>
+    <associate|topology subspace topology|<tuple|14.8|637>>
+    <associate|topology subspace topology open subset|<tuple|14.10|637>>
+    <associate|topology subsubspace topology|<tuple|14.9|637>>
   </collection>
 </references>
 
