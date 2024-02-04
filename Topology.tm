@@ -146,12 +146,25 @@
     </enumerate>
   </proof>
 
-  <\note>
-    The last two examples shows that given a set <math|X> there could exist
-    two different topologies toplogies on <math|X>. In these examples we have
-    that <math|<around*|{|\<varnothing\>,X|}>> and
-    <math|\<cal-P\><around*|(|X|)>> are topologies on <math|X>.
-  </note>
+  The last two examples shows that given a set <math|X> there could exist two
+  different topologies toplogies on <math|X>. In these examples we have that
+  <math|<around*|{|\<varnothing\>,X|}>> and <math|\<cal-P\><around*|(|X|)>>
+  are topologies on <math|X>. So it make sense to compare topologies on a set
+  as is done in the next definition.
+
+  <\definition>
+    <label|topology finer topology>Let <math|X> be a set and
+    <math|\<cal-T\><rsub|1>>, <math|\<cal-T\><rsub|2>> two topologies on
+    <math|X> then we say that <math|\<cal-T\><rsub|1>>
+    <with|font-series|bold|is finer then ><math|\<cal-T\><rsub|2>> iff
+    <math|\<cal-T\><rsub|2>\<subseteq\>\<cal-T\><rsub|1>>. In other words
+    <math|\<cal-T\><rsub|1>> is finer then <math|\<cal-T\><rsub|2>> if every
+    open set in <math|\<cal-T\><rsub|2>> is also a open set n
+    <math|\<cal-T\><rsub|2>>. Clearly if <math|\<cal-T\><rsub|1>> is finer
+    then <math|\<cal-T\><rsub|2>> and <math|\<cal-T\><rsub|2>> is finer then
+    <math|\<cal-T\><rsub|1>> then we have
+    <math|\<cal-T\><rsub|1>=\<cal-T\><rsub|2>>.
+  </definition>
 
   By using mathematical induction we have that every finite intersection of
   open sets is open.
@@ -243,7 +256,7 @@
       is not empty. Using the Axiom of Choice [theorem: <reference|choice
       Axiom of choice consequences>] there exist a function
       <math|V:U\<rightarrow\><big|cup><rsub|x\<in\>U>\<cal-A\><rsub|x>> such
-      that <math|\<forall\>x\<in\>U> <math|V<around*|(|x|)>\<in\>\<cal-A\><rsub|x>\<Rightarrow\>V<rsub|x>\<in\>\<cal-T\>\<wedge\>x\<in\>V<rsub|x>\<subseteq\>U>.
+      that <math|\<forall\>x\<in\>U> <math|V<around*|(|x|)>\<in\>\<cal-A\><rsub|x>\<Rightarrow\>V<around*|(|x|)>\<in\>\<cal-T\>\<wedge\>x\<in\>V<around*|(|x|)>\<subseteq\>U>.
       This defines a family <math|<around*|{|V<rsub|x>|}><rsub|x\<in\>U>\<subseteq\>\<cal-T\>>.
       As <math|\<forall\>x\<in\>U> <math|V<rsub|x>\<subseteq\>U> we have by
       [theorem: <reference|family properties (1)>] that
@@ -256,11 +269,9 @@
         U=<big|cup><rsub|x\<in\>U>V<rsub|x>\<in\>\<cal-T\><text| >
       </equation*>
     </description>
-
-    \;
   </proof>
 
-  Given a topology on a set then we can induct a topology on a subset of this
+  Given a topology on a set then we can induce a topology on a subset of this
   set.
 
   <\definition>
@@ -716,10 +727,741 @@
   </theorem>
 
   <\proof>
-    \;
+    Let <math|x\<in\><wide|A|\<wide-bar\>>> then we have either:
+
+    <\description>
+      <item*|<math|x\<in\>A>>Then trivially
+      <math|x\<in\>A<big|cup>A<rprime|'>>
+
+      <item*|<math|x\<nin\>A>>Assume that <math|x\<nin\>A<rprime|'>> then
+      there exist a <math|U\<in\>\<cal-T\>> with <math|x\<in\>U> such that
+      <math|<around*|(|A\\<around*|{|x|}>|)><big|cap>U=\<varnothing\>>. As
+      <math|x\<nin\>A> we have that <math|A\\<around*|{|x|}>=A> hence
+      <math|A<big|cap>U=\<varnothing\>>. So <math|\<forall\>a\<in\>A> we have
+      that <math|a\<nin\>U\<Rightarrow\>a\<in\>X\\U> proving that
+      <math|A\<subseteq\>X\\U> which, as <math|X\\U> is closed, gives by
+      [theorem: <reference|topology closure of a set alternative>] that
+      <math|<wide|A|\<wide-bar\>>\<subseteq\>X\\U>. So as
+      <math|x\<in\><wide|A|\<wide-bar\>>> results in <math|x\<nin\>U>
+      contradicting <math|x\<in\>U>. Hence the assumption is wrong and we
+      must have that <math|x\<in\>A<rprime|'>\<subseteq\>A<big|cup>A<rprime|'>>.
+    </description>
+
+    As in all cases we have <math|x\<in\>A<big|cup>A<rprime|'>> proving that\ 
+
+    <\equation>
+      <label|eq 14.1.145><wide|A|\<wide-bar\>>\<subseteq\>A<big|cup>A<rprime|'>
+    </equation>
+
+    Let <math|x\<in\>A<big|cup>A<rprime|'>> then we have either:
+
+    <\description>
+      <item*|<math|x\<in\>A>>Then, as by [definition: <reference|topology
+      closure of a set>] <math|A\<subseteq\><wide|A|\<wide-bar\>>>, we have
+      <math|x\<in\><wide|A|\<wide-bar\>>>.
+
+      <item*|<math|x\<nin\>A>>Then we must have that
+      <math|x\<in\>A<rprime|'>> and <math|A\\<around*|{|x|}>=A>. Assume that
+      <math|x\<nin\><wide|A|\<wide-bar\>>> then
+      <math|x\<in\>X\\<wide|A|\<wide-bar\>>> a open set, so as
+      <math|x\<in\>A<rprime|'>> we have by [definition: <reference|topology
+      limit point>] we have
+
+      <\equation*>
+        \<varnothing\>\<neq\><around*|(|A\\<around*|{|x|}>|)><big|cap><around*|(|X\\<wide|A|\<wide-bar\>>|)>\<equallim\><rsub|A\\<around*|{|x|}>=A>A<big|cap><around*|(|X\\<wide|A|\<wide-bar\>>|)>\<subseteq\><wide|A|\<wide-bar\>><big|cap><around*|(|X\\<wide|A|\<wide-bar\>>|)>=\<varnothing\>
+      </equation*>
+
+      a contradiction. Hence we must have that
+      <math|x\<in\><wide|A|\<wide-bar\>>>.
+    </description>
+
+    As in all cases <math|x\<in\><wide|A|\<wide-bar\>>> it follows that
+    <math|A<big|cup>A<rprime|'>\<subseteq\><wide|A|\<wide-bar\>>> which
+    combined with [eq: <reference|eq 14.1.145>] proves
+
+    <\equation*>
+      <wide|A|\<wide-bar\>>=A<big|cup>A<rprime|'>
+    </equation*>
   </proof>
 
-  \;
+  <\corollary>
+    <label|topology closure alterantive definition>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
+    and <math|A\<subseteq\>X> then we have\ 
+
+    <\equation*>
+      <wide|A|\<wide-bar\>>=<around*|{|x\<in\>X\|\<forall\>U\<in\>\<cal-T\><text|
+      with >x\<in\>U<text| we have >A<big|cap>U\<neq\>\<varnothing\>|}>
+    </equation*>
+  </corollary>
+
+  <\proof>
+    Let <math|x\<in\><wide|A|\<wide-bar\>>> then we have either:\ 
+
+    <\description>
+      <item*|<math|x\<in\>A>>Then if <math|U\<in\>\<cal-T\>> with
+      <math|x\<in\>U> we have <math|x\<in\>A<big|cap>U\<Rightarrow\>A<big|cap>U\<neq\>\<varnothing\>>.
+      Hence\ 
+
+      <\equation*>
+        x\<in\><around*|{|x\<in\>X\|\<forall\>U\<in\>\<cal-T\><text| with
+        >x\<in\>U<text| we have >A<big|cap>U\<neq\>\<varnothing\>|}>
+      </equation*>
+
+      <item*|<math|x\<nin\>A>>As <math|<wide|A|\<wide-bar\>>\<equallim\><rsub|<text|[theorem:
+      <reference|topology closure is union of a set and its limit
+      points>]>>A<big|cup>A<rprime|'>> we must have that
+      <math|x\<in\>A<rprime|'>>, then <math|\<forall\>U\<in\>\<cal-T\>> with
+      <math|x\<in\>U> we have by [definition: <reference|topology limit
+      point>] that <math|\<varnothing\>\<neq\><around*|(|A\\<around*|{|x|}>|)><big|cap>U\<subseteq\>A<big|cap>U>.
+      Hence\ 
+
+      <\equation*>
+        x\<in\><around*|{|x\<in\>X\|\<forall\>U\<in\>\<cal-T\><text| with
+        >x\<in\>U<text| we have >A<big|cap>U\<neq\>\<varnothing\>|}>
+      </equation*>
+    </description>
+
+    So we have that\ 
+
+    <\equation>
+      <label|eq 14.2.145><wide|A|\<wide-bar\>>\<subseteq\><around*|{|x\<in\>X\|\<forall\>U\<in\>\<cal-T\><text|
+      with >x\<in\>U<text| we have >A<big|cap>U\<neq\>\<varnothing\>|}>
+    </equation>
+
+    Let <math|x\<in\><around*|{|x\<in\>X\|\<forall\>U\<in\>\<cal-T\><text|
+    with >x\<in\>U<text| we have >A<big|cap>U\<neq\>\<varnothing\>|}>>.
+    Assume that <math|x\<nin\><wide|A|\<wide-bar\>>> then
+    <math|x\<in\>X\\<wide|A|\<wide-bar\>>\<in\>\<cal-T\>> hence
+    <math|\<varnothing\>\<neq\>A<big|cap><around*|(|X\\<wide|A|\<wide-bar\>>|)>\<subseteq\><wide|A|\<wide-bar\>><big|cap><around*|(|X\\<wide|A|\<wide-bar\>>|)>=\<varnothing\>>
+    a contradiction. So we must have that <math|x\<in\><wide|A|\<wide-bar\>>>
+    proving that <math|<around*|{|x\<in\>X\|\<forall\>U\<in\>\<cal-T\><text|
+    with >x\<in\>U<text| we have >A<big|cap>U\<neq\>\<varnothing\>|}>\<subseteq\><wide|A|\<wide-bar\>>>
+    whcih combined with <math|>[eq: <reference|eq 14.2.145>] proves\ 
+
+    <\equation*>
+      <wide|A|\<wide-bar\>>=<around*|{|x\<in\>X\|\<forall\>U\<in\>\<cal-T\><text|
+      with >x\<in\>U<text| we have >A<big|cap>U\<neq\>\<varnothing\>|}>
+    </equation*>
+  </proof>
+
+  <\corollary>
+    <label|topology closed set condition>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
+    and <math|A\<subseteq\>X> then
+
+    <\equation*>
+      A<text| is closed >\<Leftrightarrow\><text|
+      >A=<around*|{|x\<in\>X\|\<forall\>U\<in\>\<cal-T\><text| with
+      >x\<in\>U<text| we have >A<big|cap>U\<neq\>\<varnothing\>|}>
+    </equation*>
+  </corollary>
+
+  <\proof>
+    This follows from [theorem: <reference|topology closed set and closure>]
+    and the previous theorem [theorem: <reference|topology closure
+    alterantive definition>].
+  </proof>
+
+  <subsection|Basis of a topological space>
+
+  When dealing with a vector space we can prove many statements by limiting
+  ourselves to a basis of a vector space because every vector can be written
+  as a linear combination of the basis vectors. It turns out that we can do
+  something similar with topological spaces.
+
+  <\definition>
+    <label|topology basis>Let <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>>
+    be a topological space then <math|\<cal-B\>\<subseteq\>\<cal-P\><around*|(|X|)>>
+    is a <with|font-series|bold|basis for ><math|\<cal-T\>> if
+    <math|\<cal-B\>\<subseteq\>\<cal-T\>> and
+    <math|\<forall\>U\<in\>\<cal-T\>> there exists a
+    <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-B\>> such
+    that <math|U=<big|cup><rsub|i\<in\>I>B<rsub|i>>. In other words
+    <math|\<cal-B\>> is a basis for <math|\<cal-T\>> if every open set is the
+    union of the open sets in <math|\<cal-B\>>.
+  </definition>
+
+  Given a basis of a topology it is easy to construct a basis of a
+  subtopology.
+
+  <\theorem>
+    <label|topology basis of a subspace topology>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological
+    space, <math|\<cal-B\>> a basis for <math|\<cal-T\>> and
+    <math|A\<subseteq\>X> then\ 
+
+    <\equation*>
+      \<cal-B\><rsub|A>=<around*|{|B<big|cap>A\|B\<in\>\<cal-B\>|}><text| is
+      a basis for >\<cal-T\><rsub|A>=<around*|{|U<big|cap>A\|U\<in\>\<cal-T\>|}>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    If <math|B\<in\>\<cal-B\><rsub|A>> then there exist a
+    <math|B<rprime|'>\<in\>\<cal-B\>> such that
+    <math|B=B<rprime|'><big|cap>A>, hence, as
+    <math|\<cal-B\>\<subseteq\>\<cal-T\>>, we have that
+    <math|B\<in\>\<cal-T\><rsub|A>> proving that\ 
+
+    <\equation*>
+      \<cal-B\><rsub|A>\<subseteq\>\<cal-T\><rsub|A>
+    </equation*>
+
+    If <math|U\<in\>\<cal-T\><rsub|A>> then there exists a
+    <math|U<rprime|'>\<in\>\<cal-T\>> such that
+    <math|U=U<rprime|'><big|cap>A>. As <math|\<cal-B\>> is a basis of
+    <math|\<cal-T\>> there exist a <math|<around*|{|B<rprime|'><rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-B\>>
+    such that<math|> <math|U<rprime|'>=<big|cup><rsub|i\<in\>I>B<rprime|'><rsub|i>>.
+    Then
+
+    <\equation*>
+      U=U<rprime|'><big|cap>A=<around*|(|<big|cup><rsub|i\<in\>I>B<rprime|'><rsub|i>|)><big|cap>A\<equallim\><rsub|<text|[theorem:
+      <reference|family distributivity>]>><big|cup><rsub|i\<in\>I><around*|(|B<rprime|'><rsub|i><big|cap>A|)>
+    </equation*>
+
+    where <math|<around*|{|B<rprime|'><rsub|i><big|cap>A|}><rsub|i\<in\>I>\<subseteq\>\<cal-B\><rsub|A>>.
+  </proof>
+
+  <\theorem>
+    <label|topology basis alternative definition>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
+    and let <math|\<cal-B\>\<subseteq\>\<cal-T\>> then\ 
+
+    <\equation*>
+      \<cal-B\><text| is a basis for<verbatim| >>\<cal-T\><text|
+      >\<Leftrightarrow\><text| >\<forall\>U\<in\>\<cal-T\><text| we have
+      >\<forall\>x\<in\>U<text| there exist a >B\<in\>\<cal-B\><text| such
+      that >x\<in\>B\<subseteq\>U
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|U\<in\>\<cal-T\>> then, as
+      <math|\<cal-B\>> is a basis for <math|\<cal-T\>>, there exist a
+      <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-B\>> such
+      that <math|U=<big|cup><rsub|i\<in\>I>B<rsub|i>>. If <math|x\<in\>U>
+      then there exist a <math|i\<in\>I> such that
+      <math|x\<in\>B<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>I>B=U>.
+
+      <item*|<math|\<Leftarrow\>>>If <math|U\<in\>\<cal-T\>> then
+      <math|\<forall\>x\<in\>U> there exists a <math|B\<in\>\<cal-B\>> such
+      that <math|x\<in\>B\<subseteq\>U> or <math|\<forall\>x\<in\>U> we have
+      <math|\<cal-A\><rsub|x>=<around*|{|B\<in\>\<cal-B\>\|x\<in\>B\<subseteq\>U|}>\<neq\>\<varnothing\>>.
+      Using the Axiom of Choice [theorem: <reference|choice Axiom of choice
+      consequences>] there exist a function
+      <math|B:U\<rightarrow\><big|cup><rsub|x\<in\>U>\<cal-A\><rsub|x>> such
+      that <math|\<forall\>x\<in\>U> <math|B<around*|(|x|)>\<in\>\<cal-A\><rsub|x>\<Rightarrow\>B<around*|(|x|)>\<in\>\<cal-B\>>
+      and <math|x\<in\>B<around*|(|x|)>\<subseteq\>U>. This defines a family
+      <math|<around*|{|B<rsub|x>|}><rsub|x\<in\>U>\<subseteq\>\<cal-B\>>. As
+      <math|\<forall\>x\<in\>U> <math|B<rsub|x>\<subseteq\>U> we have
+      <math|<big|cup><rsub|x\<in\>U>B<rsub|x>\<subseteq\>U>, further if
+      <math|x\<in\>U> then <math|x\<in\>B<rsub|x>\<in\>\<cal-B\>> so that
+      <math|x\<in\><big|cup><rsub|y\<in\>U>B<rsub|y>>. Hence\ 
+
+      <\equation*>
+        U=<big|cup><rsub|x\<in\>U>B<rsub|x><text| where
+        ><around*|{|B<rsub|x>|}><rsub|x\<in\>U>\<subseteq\>\<cal-B\>
+      </equation*>
+    </description>
+  </proof>
+
+  <\corollary>
+    <label|topology closed set and a basis>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological
+    space, <math|\<cal-B\>> a basis for <math|\<cal-T\>> and
+    <math|A\<subseteq\>X> then\ 
+
+    <\equation*>
+      A<text| is closed >\<Leftrightarrow\><text|
+      >\<forall\>x\<in\>X\\A<text| there exists a >B\<in\>\<cal-B\><text|
+      such that >x\<in\>B\<subseteq\>X\\A
+    </equation*>
+  </corollary>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>As <math|A> is closed we have by
+      definition <math|X\\A\<in\>\<cal-T\>>. Hence if <math|x\<in\>X\\A> we
+      have by the previous theorem [theorem: <reference|topology basis
+      alternative definition>] a <math|B\<in\>\<cal-B\>> such that
+      <math|x\<in\>B\<subseteq\>X\\A>.
+
+      <item*|<math|\<Leftarrow\>>>If <math|x\<in\>X\\A> then
+      <math|\<exists\>B\<in\>\<cal-B\>> such that
+      <math|x\<in\>B\<subseteq\>X\\A> so by the previous theorem [theorem:
+      <reference|topology basis alternative definition>] <math|X\\A> is open,
+      hence <math|A> is closed.
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|topology basis properties>Let <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>>
+    be a topological space and <math|B> a basis for <math|\<cal-T\>> then:
+
+    <\enumerate>
+      <item><math|\<forall\>x\<in\>X> there exist a <math|B\<in\>\<cal-B\>>
+      such that <math|x\<in\>B>.
+
+      <item><math|\<forall\>B<rsub|1>,B<rsub|2>\<in\>\<cal-B\>> then
+      <math|\<forall\>x\<in\>B<rsub|1><big|cap>B<rsub|2>> then
+      <math|\<exists\>B\<in\>\<cal-B\>> such that
+      <math|x\<in\>B\<subseteq\>B<rsub|1><big|cap>B<rsub|2>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>As <math|X\<in\>\<cal-T\>> there exist a
+      <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-B\>> such
+      that <math|X=<big|cup><rsub|i\<in\>I>B<rsub|i>> hence if
+      <math|x\<in\>X> there exist a <math|i\<in\>I> such that
+      <math|x\<in\>B<rsub|i>\<in\>\<cal-B\>>.
+
+      <item>If <math|x\<in\>B<rsub|1><big|cap>B<rsub|2>> then as
+      <math|B<rsub|1>>, <math|B<rsub|2>\<in\>\<cal-B\>\<subseteq\>\<cal-T\>>
+      we have that <math|B<rsub|1><big|cap>B<rsub|2>\<in\>\<cal-T\>>, hence
+      as <math|\<cal-B\>> is a basis for <math|\<cal-T\>> there exist a
+      <math|<around*|{|C<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-B\>> such
+      that <math|B<rsub|1><big|cap>B<rsub|2>=<big|cup><rsub|i\<in\>I>C<rsub|i>>.
+      So if <math|x\<in\>B<rsub|1><big|cap>B<rsub|2>> there exists a
+      <math|i\<in\>I> such that <math|x\<in\>C<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>I>C<rsub|i>=B<rsub|1><big|cap>B<rsub|2>>.
+    </enumerate>
+  </proof>
+
+  The above show the necessary condition that a basis must satisfies, the
+  following shows that any set of subset fullfilling the above conditions can
+  be the basis of a topology.
+
+  <\theorem>
+    <label|topology basis generating>Let <math|X> be a set,
+    <math|\<cal-B\>\<subseteq\>\<cal-P\><around*|(|X|)>> a set of subsets of
+    <math|X> satisfying:
+
+    <\enumerate>
+      <item><math|\<forall\>x\<in\>X> there exist a <math|B\<in\>\<cal-B\>>
+      such that <math|x\<in\>B>
+
+      <item><math|\<forall\>B<rsub|1>,B<rsub|2>\<in\>\<cal-B\>> we have
+      <math|\<forall\>x\<in\>B<rsub|1><big|cap>B<rsub|2>> there exist a
+      <math|B\<in\>\<cal-B\>> such that <math|x\<in\>B\<subseteq\>B<rsub|1><big|cap>B<rsub|2>>
+    </enumerate>
+
+    then\ 
+
+    <\equation*>
+      \<cal-T\><around*|[|\<cal-B\>|]>=<around*|{|U\<in\>\<cal-P\><around*|(|X|)>\|\<forall\>x\<in\>U<text|
+      there exist a >B\<in\>\<cal-B\><text| such that
+      >x\<in\>B\<subseteq\>U|}>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      \<cal-B\><text| is a basis for >\<cal-T\><around*|[|\<cal-B\>|]>
+    </equation*>
+
+    We call <math|\<cal-B\>> the <with|font-series|bold|generating basis >for
+    <math|\<cal-T\><around*|[|\<cal-B\>|]>> and
+    <math|\<cal-T\><around*|[|\<cal-B\>|]>> the
+    <with|font-series|bold|topology generated by> <math|\<cal-B\>>.
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate-alpha>
+      <item><math|\<forall\>x\<in\>\<varnothing\>> we have vacuously that
+      there exist a <math|B\<in\>\<cal-B\>> such that
+      <math|x\<in\>B\<subseteq\>\<varnothing\>>, hence
+      <math|\<varnothing\>\<in\>\<cal-T\><around*|[|\<cal-B\>|]>>.
+
+      <item>Let <math|x\<in\>X> then by (1) there exists a
+      <math|B\<in\>\<cal-B\>\<subseteq\>\<cal-P\><around*|(|X|)>> such that
+      <math|x\<in\>B\<subseteq\>X> hence <math|X\<in\>\<cal-T\><around*|[|\<cal-B\>|]>>.
+
+      <item>Let <math|U<rsub|1>,U<rsub|2>\<in\>\<cal-T\><around*|[|\<cal-B\>|]>>,
+      if <math|x\<in\>U<rsub|1><big|cap>U<rsub|2>> then
+      <math|x\<in\>U<rsub|1>\<wedge\>x\<in\>U<rsub|2>>, so there exists
+      <math|B<rsub|1>,B<rsub|2>\<in\>\<cal-B\>> such that
+      <math|x\<in\>B<rsub|1>\<subseteq\>U<rsub|1>> and
+      <math|x\<in\>B<rsub|2>\<subseteq\>U<rsub|2>>, so
+      <math|x\<in\>B<rsub|1><big|cap>B<rsub|2>\<subseteq\>U<rsub|1><big|cap>U<rsub|2>>.
+
+      <item>Let <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-T\><around*|[|\<cal-B\>|]>>,
+      if <math|x\<in\><big|cup><rsub|i\<in\>I>U<rsub|i>> then there exist a
+      <math|i\<in\>I> such that <math|x\<in\>U<rsub|i>>, hence there exist a
+      <math|B\<in\>\<cal-B\>> such that <math|x\<in\>B\<subseteq\>U<rsub|i>>
+      which, as <math|U<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>I>U<rsub|i>>
+      proves that <math|<big|cup><rsub|i\<in\>I>U<rsub|i>\<in\>\<cal-T\><around*|[|\<cal-B\>|]>>
+    </enumerate-alpha>
+
+    From (a),(b),(c) and (d) it follows that\ 
+
+    <\equation*>
+      \<cal-T\><around*|[|\<cal-B\>|]><text| is a topology on >X
+    </equation*>
+
+    If <math|B\<in\>\<cal-B\>> then <math|\<forall\>x\<in\>B> we have
+    <math|x\<in\>B\<subseteq\>B> which proves that
+    <math|B\<in\>\<cal-T\><around*|[|\<cal-B\>|]>>, hence\ 
+
+    <\equation*>
+      \<cal-B\>\<subseteq\>\<cal-T\><around*|[|\<cal-B\>|]>
+    </equation*>
+
+    Further if <math|U\<in\>\<cal-T\><around*|[|\<cal-B\>|]>> then if
+    <math|x\<in\>U> there exist by definition of
+    <math|\<cal-T\><around*|[|\<cal-B\>|]>> a <math|B\<in\>\<cal-B\>> such
+    that <math|x\<in\>B\<subseteq\>U>. By [theorem: <reference|topology basis
+    alternative definition>] it follows that\ 
+
+    <\equation*>
+      \<cal-B\><text| is a basis of >\<cal-T\><around*|[|\<cal-B\>|]>
+    </equation*>
+  </proof>
+
+  The above theorem shows how a subset of <math|\<cal-P\><around*|(|X|)>>
+  satisfying condition (1) and (2) can be used to generate a topology on
+  <math|X>. What about a general subset of <math|\<cal-P\><around*|(|X|)>>
+  (without any conditions), can we construct a topology from it. It tuns out
+  that the answer is yes. Given a <math|S\<subseteq\>\<cal-P\><around*|(|X|)>>
+  we can create a <math|\<cal-B\>\<subseteq\>\<cal-P\><around*|(|X|)>> that
+  satisfies (1) and (2) and then generate a topology from <math|\<cal-B\>>.
+
+  <\theorem>
+    <label|topology subbasis>Let <math|X> be a set and
+    <math|\<cal-S\>\<subseteq\>\<cal-P\><around*|(|X|)>> then if we define
+    <math|\<cal-B\><around*|[|\<cal-S\>|]>> by\ 
+
+    <\equation*>
+      \<cal-B\><around*|[|\<cal-S\>|]>=<around*|{|B\<in\>\<cal-P\><around*|(|X|)>\|\<exists\><around*|{|S<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-S\><text|,
+      >I<text| finite and >I\<neq\>\<varnothing\><text| such that
+      >B=<big|cap><rsub|i\<in\>I>S<rsub|i>|}><big|cup><around*|{|X|}>
+    </equation*>
+
+    we have that:
+
+    <\enumerate>
+      <item><math|\<forall\>x\<in\>X> there exist a
+      <math|B\<in\>\<cal-B\><around*|[|\<cal-S\>|]>> such that
+      <math|x\<in\>B>
+
+      <item><math|\<forall\>B<rsub|1>,B<rsub|2>\<in\>\<cal-B\><around*|[|\<cal-S\>|]>>
+      we have <math|\<forall\>x\<in\>B<rsub|1><big|cap>B<rsub|2>> there exist
+      a <math|B\<in\>\<cal-B\><around*|[|\<cal-S\>|]>> such that
+      <math|x\<in\>B\<subseteq\>B<rsub|1><big|cap>B<rsub|2>>
+    </enumerate>
+
+    hence by [theorem: <reference|topology basis generating>] we have that\ 
+
+    <\equation*>
+      \<cal-T\><around*|[|\<cal-B\><around*|[|\<cal-S\>|]>|]>=<around*|{|U\<in\>\<cal-P\><around*|(|X|)>\|\<forall\>x\<in\>U<text|
+      there exist a >B\<in\>\<cal-B\><around*|[|\<cal-S\>|]><text| such that
+      >x\<in\>B\<subseteq\>U|}>
+    </equation*>
+
+    is a topology on <math|X>. This topology is called the
+    <with|font-series|bold|topology generated by the subbasis
+    <math|\<cal-S\>>.>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>As <math|><math|\<cal-B\><around*|[|\<cal-S\>|]>=<around*|{|B\<in\>\<cal-P\><around*|(|X|)>\|\<exists\><around*|{|S<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-S\><text|,
+      >I<text| finite and >I\<neq\>\<varnothing\><text| such that
+      >B<around*|[|\<cal-S\>|]>=<big|cap><rsub|i\<in\>I>S<rsub|i>|}><big|cup><around*|{|X|}>>
+      we have that <math|X\<in\>\<cal-B\><around*|[|\<cal-S\>|]>>. Hence\ 
+
+      <\equation*>
+        \<forall\>x\<in\>X<text| we have >x\<in\>X\<subseteq\>X<text| where
+        <math|X\<in\>\<cal-B\><around*|[|\<cal-S\>|]>>>
+      </equation*>
+
+      <item>Let <math|x\<in\>B<rsub|1><big|cap>B<rsub|2>> where
+      <math|B<rsub|1>,B<rsub|2>\<in\>\<cal-B\><around*|[|\<cal-S\>|]>> then
+      there exists finite non empty families
+      <math|<around*|{|S<rsub|i>|}><rsub|i\<in\>I<rsub|1>>\<subseteq\>\<cal-S\>>,
+      <math|<around*|{|T<rsub|i>|}><rsub|i\<in\>I<rsub|2>>\<subseteq\>\<cal-S\>>
+      such that <math|B<rsub|1>=<big|cap><rsub|i\<in\>I<rsub|1>>S<rsub|1>>
+      and <math|B<rsub|2>=<big|cap><rsub|i\<in\>I<rsub|2>>T<rsub|i>>. Define\ 
+
+      <\equation*>
+        <around*|{|R<rsub|i>|}><rsub|i\<in\><around*|(|I<rsub|1>\<times\><around*|{|0|}>|)><big|cup><around*|(|I<rsub|2>\<times\><around*|{|1|}>|)>>\<subseteq\>\<cal-S\><text|
+        by >R<rsub|<around*|(|i,j|)>>=<choice|<tformat|<table|<row|<cell|S<rsub|i><text|
+        if >j=0>>|<row|<cell|T<rsub|i><text| if >j=1>>>>>
+      </equation*>
+
+      then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<in\><big|cap><rsub|i\<in\><around*|(|I<rsub|1>\<times\><around*|{|0|}>|)><big|cup><around*|(|I<rsub|2>\<times\><around*|{|1|}>|)>>R<rsub|i>>|<cell|\<Leftrightarrow\>>|<cell|\<forall\><around*|(|i,j|)>\<in\><around*|(|I<rsub|1>\<times\><around*|{|0|}>|)><big|cup><around*|(|I<rsub|2>\<times\><around*|{|1|}>|)>
+        we have x\<in\>R<rsub|<around*|(|i,j|)>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|[|\<forall\><around*|(|i,j|)>\<in\>I<rsub|1>\<times\><around*|{|0|}>
+        we have x\<in\>R<rsub|<around*|(|i,j|)>>|]>\<wedge\><around*|[|\<forall\><around*|(|i,j|)>\<in\>I<rsub|2>\<times\><around*|{|1|}>
+        we have x\<in\>R<rsub|<around*|(|i,j|)>>|]>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|[|\<forall\>i\<in\>I<rsub|1>
+        we have x\<in\>R<rsub|<around*|(|i,0|)>>|]>\<wedge\><around*|[|\<forall\>i\<in\>I<rsub|2>
+        we have x\<in\>R<rsub|<around*|(|i,1|)>>|]>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|[|\<forall\>i\<in\>I<rsub|1>
+        we have x\<in\>S<rsub|i>|]>\<wedge\><around*|[|\<forall\>i\<in\>I<rsub|2>
+        we have x\<in\>T<rsub|i>|]>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><big|cap><rsub|i\<in\>I<rsub|1>>S<rsub|i>\<wedge\>x\<in\><big|cap><rsub|i\<in\>I<rsub|2>>T<rsub|i>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>B<rsub|1><big|cap>B<rsub|2>>>>>
+      </eqnarray*>
+
+      This proves that <math|B<rsub|1><big|cap>B<rsub|2>=<big|cap><rsub|i\<in\><around*|(|I<rsub|1>\<times\><around*|{|0|}>|)><big|cup><around*|(|I<rsub|2>\<times\><around*|{|1|}>|)>>R<rsub|i>\<in\>\<cal-B\>>
+      and thus we have found a <math|B=B<rsub|1><big|cap>B<rsub|2>\<in\>\<cal-B\>>
+      such that <math|x\<in\>B\<subseteq\>B<rsub|1><big|cap>B<rsub|2>>. \ 
+    </enumerate>
+  </proof>
+
+  Given a family of a topological spaces we can generate a topology for the
+  products of the spaces. It turns out that we have two choices, the box
+  topology and the product topology. In the finite case these topologies are
+  the same.
+
+  <\definition>
+    <label|topology box><index|box topology>Let <math|I> be a non empty set,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,\<cal-T\><rsub|i>|\<rangle\>>|}><rsub|i\<in\>I>>
+    be a family of of topological spaces then the <with|font-series|bold|box
+    topology >noted by <math|\<cal-T\><rsub|box>> is the topology on
+    <math|<big|prod><rsub|i\<in\>I>X<rsub|i>> generated by the basis
+
+    <\equation*>
+      \<cal-A\>=<around*|{|<big|prod><rsub|i\<in\>I>U<rsub|i>\|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)><text|
+      is a family such that >\<forall\>i\<in\>I<text|
+      >U<rsub|i>\<in\>\<cal-T\><rsub|i>|}>
+    </equation*>
+
+    or
+
+    <\equation*>
+      \<cal-T\><rsub|box>=\<cal-T\><around*|[|\<cal-A\>|]>
+    </equation*>
+  </definition>
+
+  <\proof>
+    Of course we must ensure that <math|\<cal-A\>> satisfies the conditions
+    specified in [theorem: <reference|topology basis generating>]. First if
+    <math|B\<in\>\<cal-A\>> then there exist a
+    <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)>>
+    satisfying <math|\<forall\>i\<in\>I> we have
+    <math|U<rsub|i>\<in\>\<cal-T\><rsub|i>\<subseteq\>\<cal-P\><around*|(|X<rsub|i>|)>\<Rightarrow\>U<rsub|i>\<subseteq\>X<rsub|i>>
+    suhc that <math|B=<big|prod><rsub|i\<in\>I>U<rsub|i>>. Hence using
+    ]theorem: <reference|product inclusion>] we have that
+    <math|B=<big|prod><rsub|i\<in\>I>U<rsub|i>\<subseteq\><big|prod><rsub|i\<in\>I>X<rsub|i>>,
+    proving that <math|B\<in\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)>>
+    or
+
+    <\equation*>
+      \<cal-A\>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)>
+    </equation*>
+
+    Further we have\ 
+
+    <\enumerate>
+      <item>As <math|\<forall\>i\<in\>I> we have
+      <math|<big|prod><rsub|i\<in\>I>X<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>I>X<rsub|i>\<Rightarrow\><big|prod><rsub|i\<in\>I>X<rsub|i>\<in\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)>>
+      and <math|\<forall\>i\<in\>I> <math|X<rsub|i>\<in\>\<cal-T\><rsub|i>>
+      it follows that
+
+      <\equation*>
+        <big|prod><rsub|i\<in\>I>X<rsub|i>\<in\>\<cal-A\>
+      </equation*>
+
+      Hence <math|\<forall\>x\<in\><big|prod><rsub|i\<in\>I>X<rsub|i>> we
+      have that for <math|B=<big|prod><rsub|i\<in\>I>X<rsub|i>\<in\>\<cal-A\>>
+      that <math|x\<in\>B\<in\>\<cal-A\>>.
+
+      <item>Let <math|B<rsub|1>,B<rsub|2>\<in\>\<cal-A\>> then there exist
+      <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>,<around*|{|V<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)>>
+      satisfying <math|\<forall\>i\<in\>I>
+      <math|U<rsub|i>,V<rsub|i>\<in\>\<cal-T\><rsub|i>> such that
+      <math|B<rsub|1>=<big|prod><rsub|i\<in\>I>U<rsub|i>> and
+      <math|B<rsub|2>=<big|prod><rsub|i\<in\>I>V<rsub|i>> then
+      <math|\<forall\>i\<in\>I> we have <math|U<rsub|i><big|cap>V<rsub|i>\<in\>\<cal-T\><rsub|i>>
+      so that\ 
+
+      <\equation*>
+        B<rsub|1><big|cap>B<rsub|2>=<around*|(|<big|prod><rsub|i\<in\>I>U<rsub|i>|)><big|cap><around*|(|<big|prod><rsub|i\<in\>I>V<rsub|i>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|product and intersection>]>><big|prod><rsub|i\<in\>I><around*|(|U<rsub|i><big|cap>V<rsub|i>|)>\<in\>\<cal-A\>
+      </equation*>
+
+      hence <math|\<forall\>x\<in\>B<rsub|1><big|cap>B<rsub|2>> we have
+      <math|x\<in\>B<rsub|1><big|cap>B<rsub|2>\<subseteq\>B<rsub|1><big|cap>B<rsub|2>>
+      where <math|B<rsub|1><big|cap>B<rsub|2>\<in\>\<cal-A\>>.
+    </enumerate>
+
+    By [theorem: <reference|topology basis generating>] it follows that
+    <math|\<cal-T\><around*|[|\<cal-A\>|]>> is a topolgy on
+    <math|<big|prod><rsub|i\<in\>I>X<rsub|i>>.
+  </proof>
+
+  We can construct the box topology based on the bases of
+  <math|\<cal-T\><rsub|i>>.
+
+  <\theorem>
+    <label|topology box topology and bases>Let <math|I> be a non empty set,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,\<cal-T\><rsub|i>|\<rangle\>>|}><rsub|i\<in\>I>>
+    be a family of of topological spaces witht <math|\<forall\>i\<in\>I>
+    <math|\<cal-B\><rsub|i>> a basis for <math|\<cal-T\><rsub|i>> then\ 
+
+    <\equation*>
+      \<cal-B\>=<around*|{|<big|prod><rsub|i\<in\>I>B<rsub|i>\|<around*|{|B<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)><text|
+      is a family such that >\<forall\>i\<in\>I<text|
+      >B<rsub|i>\<in\>\<cal-B\><rsub|i>|}>
+    </equation*>
+
+    is a basis of <math|\<cal-T\><rsub|box>> or\ 
+
+    <\equation*>
+      \<cal-T\><rsub|box>=\<cal-T\><around*|[|\<cal-B\>|]>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Using [theorem: <reference|topology box>] we have\ 
+
+    <\equation*>
+      \<cal-T\><rsub|box>=\<cal-T\><around*|[|\<cal-A\>|]><text| where
+      >\<cal-A\>=<around*|{|<big|prod><rsub|i\<in\>I>U<rsub|i>\|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)><text|
+      is a family such that >\<forall\>i\<in\>I<text|
+      >U<rsub|i>\<in\>\<cal-T\><rsub|i>|}>
+    </equation*>
+
+    So if <math|U\<in\>\<cal-T\><rsub|box>> and
+    <math|x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>U> there exist a
+    <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)>>
+    satisfying <math|\<forall\>i\<in\>I> <math|U<rsub|i>\<in\>\<cal-T\><rsub|i>>
+    such that
+
+    <\equation*>
+      x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\>I>U<rsub|i>\<subseteq\>U\<Rightarrow\>\<forall\>i\<in\>I<text|
+      we have >x<rsub|i>\<in\>U<rsub|i>
+    </equation*>
+
+    Let <math|i\<in\>I> then as <math|\<cal-B\><rsub|i>> is a basis of
+    <math|\<cal-T\><rsub|i>> there exist by [theorem: <reference|topology
+    basis alternative definition>] a <math|B\<in\>\<cal-B\><rsub|i>> such
+    that <math|x<rsub|i>\<in\>B\<subseteq\>U<rsub|i>>. So if we define
+    <math|\<cal-A\><rsub|i>=<around*|{|B\<in\>\<cal-B\><rsub|i>\|x<rsub|i>\<in\>B\<subseteq\>U<rsub|i>|}>>
+    then <math|\<cal-A\><rsub|i>\<neq\>\<varnothing\>>, using the Axiom of
+    Choice [see theorem: <reference|choice Axiom of choice consequences>]
+    there exist a function <math|B:I\<rightarrow\><big|cup><rsub|i\<in\>I>\<cal-B\><rsub|i>>
+    such that <math|\<forall\>i\<in\>I> <math|B<rsub|i>\<in\>\<cal-B\><rsub|i>>.
+    This defines a family <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>I>> such
+    that <math|\<forall\>i\<in\>I> <math|x<rsub|i>\<in\>B<rsub|i>\<subseteq\>U<rsub|i>>
+    and thus by [theorem: <reference|product inclusion>]
+    <math|x\<in\><big|prod><rsub|i\<in\>I>B<rsub|i>\<subseteq\><big|prod><rsub|i\<in\>I>U<rsub|i>=U>where
+    <math|<big|prod><rsub|i\<in\>I>B<rsub|i>\<in\>\<cal-B\>>. So by
+    <math|>[theorem: <reference|topology basis alternative definition>]
+    <math|\<cal-B\>> is a basis of <math|\<cal-T\><rsub|box>>.
+  </proof>
+
+  The second topology that we can define on a product of sets is the product
+  topology.
+
+  <\definition>
+    <label|topology product>Let <math|I> be a non empty set,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,\<cal-T\><rsub|i>|\<rangle\>>|}><rsub|i\<in\>I>>
+    be a family of topological spaces then the product topology
+    <math|\<cal-T\><rsub|product>> on <math|<big|prod><rsub|i\<in\>I>X<rsub|i>>
+    is defined by the subbase\ 
+
+    <\equation*>
+      \<cal-S\>=<around*|{|\<pi\><rsub|i><rsup|-1><around*|(|V|)>\|i\<in\>I\<wedge\>V\<in\>\<cal-T\><rsub|i>|}>
+    </equation*>
+
+    where <math|\<forall\>i\<in\>I>
+
+    <\equation*>
+      \<pi\><rsub|i>:<big|prod><rsub|j\<in\>I>X<rsub|j>\<rightarrow\>X<rsub|i><text|
+      is the projection map defined by >\<pi\><rsub|i><around*|(|x|)>=x<rsub|i>
+    </equation*>
+
+    or in other terms
+
+    <\equation*>
+      \<cal-T\><rsub|product>=\<cal-T\><around*|[|\<cal-B\><around*|[|\<cal-S\>|]>|]>
+    </equation*>
+
+    [see theorem: <reference|topology subbasis>].
+  </definition>
+
+  <\theorem>
+    <label|topology product alternative definition>Let <math|I> be a non
+    empty set, <math|<around*|{|<around*|\<langle\>|X<rsub|i>,\<cal-T\><rsub|i>|\<rangle\>>|}><rsub|i\<in\>I>>
+    be a family of topological spaces then if we define
+
+    <\equation*>
+      \<cal-B\>=<around*|{|<big|prod><rsub|i\<in\>I>U<rsub|i>\|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)><text|
+      such that there exist a finite >J\<subseteq\>I<text| with
+      >\<forall\>i\<in\>I<text| >U<rsub|i>\<in\>\<cal-T\><rsub|i><text| and
+      >\<forall\>i\<in\>I\\J<text| >U<rsub|i>=X<rsub|i>|}>
+    </equation*>
+
+    we have\ 
+
+    <\equation*>
+      \<cal-B\>=\<cal-B\><around*|[|\<cal-S\>|]>
+    </equation*>
+
+    where [see theorem: <reference|topology subbasis>]\ 
+
+    <\equation*>
+      \<cal-B\><around*|[|\<cal-S\>|]>=<around*|{|B\<in\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)>\|\<exists\><around*|{|S<rsub|i>|}><rsub|i\<in\>J>\<subseteq\>\<cal-S\><text|,
+      >J<text| finite and >J\<neq\>\<varnothing\><text| such that
+      >B=<big|cap><rsub|i\<in\>J>S<rsub|i>|}><big|cup><around*|{|<big|prod><rsub|i\<in\>I>X<rsub|i>|}>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      \<cal-S\>=<around*|{|\<pi\><rsub|i><rsup|-1><around*|(|V|)>\|i\<in\>I\<wedge\>V\<in\>\<cal-T\><rsub|i>|}>
+    </equation*>
+
+    So\ 
+
+    <\equation*>
+      \<cal-T\><rsub|product>\<equallim\><rsub|<text|definition>>\<cal-T\><around*|[|\<cal-B\><around*|[|\<cal-S\>|]>|]>=\<cal-B\>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Let <math|B\<in\>\<cal-B\><around*|[|\<cal-S\>|]>>. Then we have either:
+
+    <\description>
+      <item*|<math|B=<big|prod><rsub|i\<in\>I>X<rsub|i>>>Take
+      <math|J=\<varnothing\>> then <math|J> is finite and
+      <math|\<forall\>I=I\\\<varnothing\>> that <math|X<rsub|i>=X<rsub|i>> so
+      that <math|<big|prod><rsub|i\<in\>I>X<rsub|i>\<in\>\<cal-B\>>, hence
+      <math|B\<in\>\<cal-B\>>
+
+      <item*|<math|B\<neq\><big|prod><rsub|i\<in\>I>X<rsub|i>>>Then there
+      must exist a <math|<around*|{|S<rsub|i>|}><rsub|i\<in\>J>\<subseteq\>\<cal-S\>>,
+      <math|\<varnothing\>\<neq\>J> finite such that
+      <math|B=<big|cap><rsub|i\<in\>J>S<rsub|i>>. As
+      <math|\<forall\>i\<in\>J> we have <math|S<rsub|i>\<in\>\<cal-S\>> so
+      that <math|\<exists\>k<rsub|i>\<in\>I> and a
+      <math|U<rsub|k<rsub|i>>\<in\>\<cal-T\><rsub|k<rsub|i>>> such that
+      <math|S<rsub|i>=\<pi\><rsub|k<rsub|i>><rsup|-1><around*|(|U<rsub|k<rsub|i>>|)>>.
+      Define\ 
+
+      <\equation*>
+        <text|>\<forall\>j\<in\>J <around*|{|B<rsub|k<rsub|i>,k>|}><rsub|k\<in\>I>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)><text|
+        by >B<rsub|k<rsub|i>,k>=<choice|<tformat|<table|<row|<cell|U<rsub|i><text|
+        if >k<rsub|i>=k>>|<row|<cell|X<rsub|k><text| if
+        >k\<in\>I\\<around*|{|k<rsub|i>|}>>>>>>
+      </equation*>
+    </description>
+
+    \;
+  </proof>
 
   \;
 </body>
@@ -737,37 +1479,51 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|14|635>>
-    <associate|auto-10|<tuple|<with|mode|<quote|math>|A<rprime|'>>|?>>
+    <associate|auto-10|<tuple|<with|mode|<quote|math>|A<rprime|'>>|640>>
+    <associate|auto-11|<tuple|14.1.2|641>>
+    <associate|auto-12|<tuple|box topology|?>>
     <associate|auto-2|<tuple|14.1|635>>
-    <associate|auto-3|<tuple|interior|?>>
-    <associate|auto-4|<tuple|<with|mode|<quote|math>|A<rsup|\<circ\>>>|?>>
-    <associate|auto-5|<tuple|14.1.1|?>>
-    <associate|auto-6|<tuple|closed set|?>>
-    <associate|auto-7|<tuple|<with|mode|<quote|math>|\<cal-T\><rsup|\<cal-C\>>>|?>>
-    <associate|auto-8|<tuple|limit point|?>>
-    <associate|auto-9|<tuple|accumulation point|?>>
-    <associate|closed set properties|<tuple|14.19|?>>
-    <associate|topology|<tuple|14.22|?>>
-    <associate|topology and complement closed sets|<tuple|14.18|?>>
-    <associate|topology biggest open subset|<tuple|14.13|?>>
-    <associate|topology closed set|<tuple|14.15|?>>
-    <associate|topology closed set and closure|<tuple|14.23|?>>
-    <associate|topology closed set condition|<tuple|14.15|?>>
+    <associate|auto-3|<tuple|interior|638>>
+    <associate|auto-4|<tuple|<with|mode|<quote|math>|A<rsup|\<circ\>>>|638>>
+    <associate|auto-5|<tuple|14.1.1|638>>
+    <associate|auto-6|<tuple|closed set|638>>
+    <associate|auto-7|<tuple|<with|mode|<quote|math>|\<cal-T\><rsup|\<cal-C\>>>|638>>
+    <associate|auto-8|<tuple|limit point|640>>
+    <associate|auto-9|<tuple|accumulation point|640>>
+    <associate|closed set properties|<tuple|14.19|639>>
+    <associate|eq 14.1.145|<tuple|14.1|640>>
+    <associate|eq 14.2.145|<tuple|14.2|641>>
+    <associate|topology and complement closed sets|<tuple|14.18|639>>
+    <associate|topology basis|<tuple|14.28|641>>
+    <associate|topology basis alternative definition|<tuple|14.30|642>>
+    <associate|topology basis generating|<tuple|14.33|642>>
+    <associate|topology basis of a subspace topology|<tuple|14.29|641>>
+    <associate|topology basis properties|<tuple|14.32|642>>
+    <associate|topology biggest open subset|<tuple|14.13|638>>
+    <associate|topology box|<tuple|14.35|?>>
+    <associate|topology box topology and bases|<tuple|14.36|?>>
+    <associate|topology closed set|<tuple|14.15|638>>
+    <associate|topology closed set and a basis|<tuple|14.31|642>>
+    <associate|topology closed set and closure|<tuple|14.23|640>>
+    <associate|topology closed set condition|<tuple|14.27|641>>
+    <associate|topology closure alterantive definition|<tuple|14.26|641>>
     <associate|topology closure is union of a set and its limit
-    points|<tuple|14.25|?>>
-    <associate|topology closure of a set|<tuple|14.20|?>>
-    <associate|topology closure of a set alternative|<tuple|14.22|?>>
-    <associate|topology closure of a set atlernative|<tuple|14.21|?>>
+    points|<tuple|14.25|640>>
+    <associate|topology closure of a set|<tuple|14.20|640>>
+    <associate|topology closure of a set alternative|<tuple|14.22|640>>
     <associate|topology coarse|<tuple|14.3|635>>
-    <associate|topology complements of a set of sets|<tuple|14.14|?>>
-    <associate|topology discrete|<tuple|14.4|636>>
+    <associate|topology discrete|<tuple|14.4|635>>
     <associate|topology empty set|<tuple|14.2|635>>
+    <associate|topology finer topology|<tuple|14.5|636>>
     <associate|topology finite intersection|<tuple|14.6|636>>
-    <associate|topology interior of a set|<tuple|14.11|?>>
-    <associate|topology limit point|<tuple|14.24|?>>
-    <associate|topology open set and interior|<tuple|14.14|?>>
+    <associate|topology interior of a set|<tuple|14.11|638>>
+    <associate|topology limit point|<tuple|14.24|640>>
+    <associate|topology open set and interior|<tuple|14.14|638>>
     <associate|topology open set condition|<tuple|14.7|636>>
+    <associate|topology product|<tuple|14.37|?>>
+    <associate|topology product alternative definition|<tuple|14.38|?>>
     <associate|topology space|<tuple|14.1|635>>
+    <associate|topology subbasis|<tuple|14.34|?>>
     <associate|topology subspace topology|<tuple|14.8|637>>
     <associate|topology subspace topology open subset|<tuple|14.10|637>>
     <associate|topology subsubspace topology|<tuple|14.9|637>>
@@ -776,6 +1532,21 @@
 
 <\auxiliary>
   <\collection>
+    <\associate|idx>
+      <tuple|<tuple|interior>|<pageref|auto-3>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|A<rsup|\<circ\>>>>|<pageref|auto-4>>
+
+      <tuple|<tuple|closed set>|<pageref|auto-6>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-T\><rsup|\<cal-C\>>>>|<pageref|auto-7>>
+
+      <tuple|<tuple|limit point>|<pageref|auto-8>>
+
+      <tuple|<tuple|accumulation point>|<pageref|auto-9>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|A<rprime|'>>>|<pageref|auto-10>>
+    </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|14<space|2spc>Topology>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
@@ -783,6 +1554,14 @@
 
       14.1<space|2spc>Topological spaces <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2>
+
+      <with|par-left|<quote|1tab>|14.1.1<space|2spc>Closed Sets
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-5>>
+
+      <with|par-left|<quote|1tab>|14.1.2<space|2spc>Basis of a topological
+      space <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-11>>
     </associate>
   </collection>
 </auxiliary>

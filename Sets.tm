@@ -5275,6 +5275,17 @@
     defining function of <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>> is.\ 
   </note>
 
+  <\note>
+    In most cases we use the notation <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B>
+    to indicate three parts of a function namely <math|x:I\<rightarrow\>B>
+    where <math|x> is the graph of a function, <math|I> is the domain and
+    <math|B> is the target of the function. In some cases we are not
+    interested in the target of the function [we can always assume then that
+    the target is the universal class <math|\<cal-U\>>] in this case we just
+    use the notation <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>> for the
+    family.
+  </note>
+
   <\example>
     <label|family empty family>The empty function
     <math|\<varnothing\>:\<varnothing\>\<rightarrow\>V> [see example:
@@ -11386,38 +11397,13 @@
 
   We can rephrase the above theorem in another way.
 
-  <\corollary>
-    <label|product product is empty>Let <math|<around*|{|A|}><rsub|i\<in\>I>\<subseteq\>\<cal-A\>>
-    be a family of sets where <math|I,\<cal-A\>> are sets then we have\ 
+  <\theorem>
+    Let <math|I> be a set, <math|B> a set and <math|\<forall\>i\<in\>I> there
+    exist a <math|A<rsub|i>\<subseteq\>A<rsub|i>>
+  </theorem>
 
-    <\equation*>
-      <big|prod><rsub|i\<in\>I>A<rsub|i>=\<varnothing\>\<Leftrightarrow\>\<exists\>i\<in\>I<text|
-      such that >A<rsub|i>=\<varnothing\>
-    </equation*>
-  </corollary>
-
-  <\proof>
-    \ We proceed by contradiction to prove this
-
-    <\description>
-      <item*|<math|\<Rightarrow\>>>Assume that <math|\<forall\>i\<in\>I> we
-      have that <math|A<rsub|i>\<neq\>\<varnothing\>> then by [theorem:
-      <reference|product product is not empty>]
-      <math|<big|prod><rsub|i\<in\>I>A<rsub|i>\<neq\>\<varnothing\>>
-      contradicting <math|<big|prod><rsub|i\<in\>I>A<rsub|i>=\<varnothing\>>.
-      So the assumption is false or <math|\<exists\>i\<in\>I> such that
-      <math|A<rsub|i>=\<varnothing\>>.
-
-      <item*|<math|\<Leftarrow\>>>Assume that
-      <math|><math|<big|prod><rsub|i\<in\>I>A<rsub|i>\<neq\>0> then by
-      [theorem: <reference|product product is not empty>] we have
-      <math|\<forall\>i\<in\>I> that <math|A<rsub|i>\<neq\>\<varnothing\>>
-      contradicting <math|\<exists\>i\<in\>I> such that <math|A<rsub|i>=0>.
-      Hence we must have <math|<big|prod><rsub|i\<in\>I>A<rsub|i>=\<varnothing\>>.
-    </description>
-  </proof>
-
-  The Axiom of Choice has also import consequences for partial ordered sets.\ 
+  The Axiom of Choice has also important consequences for partial ordered
+  sets.\ 
 
   <\theorem>
     <label|choice existence of successor>Let
@@ -12655,8 +12641,6 @@
       <item*|Well-Ordering Theorem>For every set there exists a order
       relation making <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>>
       well-ordered.
-
-      \ \ 
     </description>
   </theorem>
 
@@ -12943,6 +12927,8 @@
   \;
 
   \;
+
+  \;
 </body>
 
 <\initial>
@@ -13111,7 +13097,6 @@
     <associate|class complement of comploment|<tuple|1.28|?>>
     <associate|class de Morgan's law|<tuple|1.29|?>>
     <associate|class difference|<tuple|1.24|?>>
-    <associate|class difference of difference|<tuple|1.25|?>>
     <associate|class empty set|<tuple|1.18|?>>
     <associate|class empty set definition|<tuple|1.16|?>>
     <associate|class empty set is unique|<tuple|1.19|?>>
@@ -13291,37 +13276,37 @@
     <associate|equivalence relation partition alternative|<tuple|3.8|?>>
     <associate|equivalence relation subsets|<tuple|3.19|?>>
     <associate|family|<tuple|2.97|?>>
-    <associate|family and function composition|<tuple|2.105|?>>
-    <associate|family de Morgan|<tuple|2.126|?>>
-    <associate|family definition (2)|<tuple|2.102|?>>
-    <associate|family definition (3)|<tuple|2.103|?>>
-    <associate|family distributivity|<tuple|2.124|?>>
-    <associate|family empty family|<tuple|2.99|?>>
-    <associate|family empty family condition|<tuple|2.100|?>>
-    <associate|family image and preimage|<tuple|2.130|?>>
-    <associate|family index set is a product|<tuple|2.104|?>>
-    <associate|family intersection (2)|<tuple|2.117|?>>
-    <associate|family intersection is a set|<tuple|2.118|?>>
-    <associate|family intersection(1)|<tuple|2.116|?>>
-    <associate|family product and index transformation|<tuple|2.138|?>>
-    <associate|family properties (1)|<tuple|2.121|?>>
-    <associate|family properties (2)|<tuple|2.122|?>>
-    <associate|family properties (3)|<tuple|2.127|?>>
-    <associate|family range|<tuple|2.106|?>>
-    <associate|family range (1)|<tuple|2.107|?>>
-    <associate|family set|<tuple|2.108|?>>
-    <associate|family trivial|<tuple|2.119|?>>
-    <associate|family union (1)|<tuple|2.109|?>>
-    <associate|family union (2)|<tuple|2.112|?>>
-    <associate|family union condition set|<tuple|2.114|?>>
-    <associate|family union intersection and empty set|<tuple|2.128|?>>
-    <associate|family union intersection and inclusion|<tuple|2.123|?>>
-    <associate|family union of a empty set|<tuple|2.115|?>>
-    <associate|family union of family of families|<tuple|2.129|?>>
-    <associate|family union of family set and surjections|<tuple|2.113|?>>
-    <associate|family union of union of two families|<tuple|2.125|?>>
-    <associate|family union{A,B}|<tuple|2.120|?>>
-    <associate|family {x}xeA|<tuple|2.101|?>>
+    <associate|family and function composition|<tuple|2.106|?>>
+    <associate|family de Morgan|<tuple|2.127|?>>
+    <associate|family definition (2)|<tuple|2.103|?>>
+    <associate|family definition (3)|<tuple|2.104|?>>
+    <associate|family distributivity|<tuple|2.125|?>>
+    <associate|family empty family|<tuple|2.100|?>>
+    <associate|family empty family condition|<tuple|2.101|?>>
+    <associate|family image and preimage|<tuple|2.131|?>>
+    <associate|family index set is a product|<tuple|2.105|?>>
+    <associate|family intersection (2)|<tuple|2.118|?>>
+    <associate|family intersection is a set|<tuple|2.119|?>>
+    <associate|family intersection(1)|<tuple|2.117|?>>
+    <associate|family product and index transformation|<tuple|2.139|?>>
+    <associate|family properties (1)|<tuple|2.122|?>>
+    <associate|family properties (2)|<tuple|2.123|?>>
+    <associate|family properties (3)|<tuple|2.128|?>>
+    <associate|family range|<tuple|2.107|?>>
+    <associate|family range (1)|<tuple|2.108|?>>
+    <associate|family set|<tuple|2.109|?>>
+    <associate|family trivial|<tuple|2.120|?>>
+    <associate|family union (1)|<tuple|2.110|?>>
+    <associate|family union (2)|<tuple|2.113|?>>
+    <associate|family union condition set|<tuple|2.115|?>>
+    <associate|family union intersection and empty set|<tuple|2.129|?>>
+    <associate|family union intersection and inclusion|<tuple|2.124|?>>
+    <associate|family union of a empty set|<tuple|2.116|?>>
+    <associate|family union of family of families|<tuple|2.130|?>>
+    <associate|family union of family set and surjections|<tuple|2.114|?>>
+    <associate|family union of union of two families|<tuple|2.126|?>>
+    <associate|family union{A,B}|<tuple|2.121|?>>
+    <associate|family {x}xeA|<tuple|2.102|?>>
     <associate|function|<tuple|2.24|?>>
     <associate|function A^empty is empty|<tuple|2.32|?>>
     <associate|function B^A|<tuple|2.30|?>>
@@ -13476,19 +13461,19 @@
     <associate|partial functions image/preimage properties|<tuple|2.17|?>>
     <associate|parttial function graph|<tuple|2.6|?>>
     <associate|power set|<tuple|1.63|?>>
-    <associate|product|<tuple|2.131|?>>
-    <associate|product and intersection|<tuple|2.136|?>>
-    <associate|product and power|<tuple|2.137|?>>
-    <associate|product extension|<tuple|2.140|?>>
-    <associate|product inclusion|<tuple|2.135|?>>
-    <associate|product of a empty set is empty|<tuple|2.132|?>>
-    <associate|product of family with one element|<tuple|2.133|?>>
-    <associate|product of family with two classes|<tuple|2.134|?>>
+    <associate|product|<tuple|2.132|?>>
+    <associate|product and intersection|<tuple|2.137|?>>
+    <associate|product and power|<tuple|2.138|?>>
+    <associate|product extension|<tuple|2.141|?>>
+    <associate|product inclusion|<tuple|2.136|?>>
+    <associate|product of a empty set is empty|<tuple|2.133|?>>
+    <associate|product of family with one element|<tuple|2.134|?>>
+    <associate|product of family with two classes|<tuple|2.135|?>>
     <associate|product product is empty|<tuple|3.103|?>>
     <associate|product product is not empty|<tuple|3.102|?>>
-    <associate|product projection function|<tuple|2.141|?>>
+    <associate|product projection function|<tuple|2.142|?>>
     <associate|product projection is surjective|<tuple|3.101|?>>
-    <associate|product sub-product|<tuple|2.139|?>>
+    <associate|product sub-product|<tuple|2.140|?>>
     <associate|relation|<tuple|3.1|?>>
     <associate|relation properties|<tuple|3.4|?>>
     <associate|relation trivial|<tuple|3.3|?>>
