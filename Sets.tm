@@ -6866,6 +6866,50 @@
     </equation*>
   </proof>
 
+  We can easily generalize the above theorem.
+
+  <\theorem>
+    <label|product intersection of a product>Let <math|I>, <math|J> be sets
+    and <math|<around*|{|<around*|{|A<rsub|i,j>|}><rsub|j\<in\>J>|}><rsub|i\<in\>I>>
+    be a family of sets then\ 
+
+    <\equation*>
+      <big|cap><rsub|i\<in\>I><around*|(|<big|prod><rsub|j\<in\>J>A<rsub|i,j>|)>=<big|prod><rsub|j\<in\>J><around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i,j>|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    As <math|\<forall\>i\<in\>I,j\<in\>I> we have
+    <math|<big|cap><rsub|i\<in\>I>A<rsub|i,j>\<subseteq\>A<rsub|i,j>> it
+    follows from [theorem: <reference|product inclusion>] that
+    <math|<big|prod><rsub|j\<in\>J><around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i,j>|)>\<subseteq\><big|prod><rsub|j\<in\>J>A<rsub|i,j>>.
+    Hence by [theorem: <reference|family properties (1)>]\ 
+
+    <\equation>
+      <label|eq 2.57.146><big|prod><rsub|j\<in\>J><around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i,j>|)>\<subseteq\><big|cap><rsub|i\<in\>I><around*|(|<big|prod><rsub|j\<in\>J>A<rsub|i,j>|)>
+    </equation>
+
+    If <math|x\<in\><big|cap><rsub|i\<in\>I><around*|(|<big|prod><rsub|j\<in\>J>A<rsub|i,j>|)>>
+    then <math|\<forall\>i\<in\>I> <math|x\<in\><big|prod><rsub|j\<in\>J>A<rsub|i,j>>
+    hence <math|x:J\<rightarrow\>A<rsub|i,j>> is a function such that
+    <math|\<forall\>j\<in\>J> we have <math|x<around*|(|j|)>\<in\>A<rsub|i,j>>.
+    Hence <math|x<around*|(|j|)>\<in\><big|cap><rsub|i\<in\>I>A<rsub|i,j>>
+    <math|\<forall\>j\<in\>J> so that <math|x\<in\><big|prod><rsub|j\<in\>J><around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i,j>|)>>,
+    so
+
+    <\equation*>
+      <big|cap><rsub|i\<in\>I><around*|(|<big|prod><rsub|j\<in\>J>A<rsub|i,j>|)>\<subseteq\><big|prod><rsub|j\<in\>J><around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i,j>|)>
+    </equation*>
+
+    which combined with [eq: <reference|eq 2.57.146>] gives\ 
+
+    <\equation*>
+      <big|cap><rsub|i\<in\>I><around*|(|<big|prod><rsub|j\<in\>J>A<rsub|i,j>|)>=<big|prod><rsub|j\<in\>J><around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i,j>|)>
+    </equation*>
+
+    \;
+  </proof>
+
   \;
 
   The following theorem is a motivation for the notation <math|A<rsup|B>> for
@@ -13175,18 +13219,19 @@
     <associate|eq 2.44.006|<tuple|2.53|?>>
     <associate|eq 2.44.007|<tuple|2.51|?>>
     <associate|eq 2.45.006|<tuple|2.54|?>>
-    <associate|eq 2.48.007|<tuple|2.57|?>>
+    <associate|eq 2.48.007|<tuple|2.58|?>>
     <associate|eq 2.48.008|<tuple|2.55|?>>
-    <associate|eq 2.49.007|<tuple|2.58|?>>
+    <associate|eq 2.49.007|<tuple|2.59|?>>
     <associate|eq 2.5.001.2|<tuple|2.5|?>>
-    <associate|eq 2.50.007|<tuple|2.59|?>>
-    <associate|eq 2.51.007|<tuple|2.64|?>>
+    <associate|eq 2.50.007|<tuple|2.60|?>>
+    <associate|eq 2.51.007|<tuple|2.65|?>>
     <associate|eq 2.51.010|<tuple|2.56|?>>
-    <associate|eq 2.59.018|<tuple|2.62|?>>
-    <associate|eq 2.59.022|<tuple|2.60|?>>
+    <associate|eq 2.57.146|<tuple|2.57|?>>
+    <associate|eq 2.59.018|<tuple|2.63|?>>
+    <associate|eq 2.59.022|<tuple|2.61|?>>
     <associate|eq 2.6.001|<tuple|2.6|?>>
-    <associate|eq 2.60.018|<tuple|2.63|?>>
-    <associate|eq 2.60.022|<tuple|2.61|?>>
+    <associate|eq 2.60.018|<tuple|2.64|?>>
+    <associate|eq 2.60.022|<tuple|2.62|?>>
     <associate|eq 2.7.001|<tuple|2.7|?>>
     <associate|eq 2.8.001|<tuple|2.8|?>>
     <associate|eq 2.9.001|<tuple|2.9|?>>
@@ -13288,7 +13333,7 @@
     <associate|family intersection (2)|<tuple|2.118|?>>
     <associate|family intersection is a set|<tuple|2.119|?>>
     <associate|family intersection(1)|<tuple|2.117|?>>
-    <associate|family product and index transformation|<tuple|2.139|?>>
+    <associate|family product and index transformation|<tuple|2.140|?>>
     <associate|family properties (1)|<tuple|2.122|?>>
     <associate|family properties (2)|<tuple|2.123|?>>
     <associate|family properties (3)|<tuple|2.128|?>>
@@ -13463,17 +13508,17 @@
     <associate|power set|<tuple|1.63|?>>
     <associate|product|<tuple|2.132|?>>
     <associate|product and intersection|<tuple|2.137|?>>
-    <associate|product and power|<tuple|2.138|?>>
-    <associate|product extension|<tuple|2.141|?>>
+    <associate|product and power|<tuple|2.139|?>>
+    <associate|product extension|<tuple|2.142|?>>
     <associate|product inclusion|<tuple|2.136|?>>
+    <associate|product intersection of a product|<tuple|2.138|?>>
     <associate|product of a empty set is empty|<tuple|2.133|?>>
     <associate|product of family with one element|<tuple|2.134|?>>
     <associate|product of family with two classes|<tuple|2.135|?>>
-    <associate|product product is empty|<tuple|3.103|?>>
     <associate|product product is not empty|<tuple|3.102|?>>
-    <associate|product projection function|<tuple|2.142|?>>
+    <associate|product projection function|<tuple|2.143|?>>
     <associate|product projection is surjective|<tuple|3.101|?>>
-    <associate|product sub-product|<tuple|2.140|?>>
+    <associate|product sub-product|<tuple|2.141|?>>
     <associate|relation|<tuple|3.1|?>>
     <associate|relation properties|<tuple|3.4|?>>
     <associate|relation trivial|<tuple|3.3|?>>

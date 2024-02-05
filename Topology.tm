@@ -969,6 +969,25 @@
     </description>
   </proof>
 
+  <\theorem>
+    <label|topology basis and super basis>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological
+    space, <math|B> a basis for <math|\<cal-T\>> and
+    <math|\<cal-B\><rprime|'>> such that <math|\<cal-B\>\<subseteq\>\<cal-A\>\<subseteq\>\<cal-T\>>
+    then <math|\<cal-A\>> is a basis of \ <math|\<cal-T\>>
+  </theorem>
+
+  <\proof>
+    Let <math|U\<in\>\<cal-T\>> and <math|x\<in\>U> then as <math|\<cal-B\>>
+    is a basis of <math|\<cal-T\>> there exist a <math|B\<in\>\<cal-B\>> such
+    that <math|x\<in\>B\<subseteq\>U>. As
+    <math|\<cal-B\>\<subseteq\>\<cal-A\>> we have that
+    <math|B\<in\>\<cal-A\>> proving by [theorem: <reference|topology basis
+    alternative definition>] and the fact that
+    <math|\<cal-A\>\<subseteq\>\<cal-T\>> that <math|\<cal-A\>> is a basis
+    for <math|\<cal-T\>>.
+  </proof>
+
   <\corollary>
     <label|topology closed set and a basis>Let
     <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological
@@ -1158,6 +1177,8 @@
       we have <math|\<forall\>x\<in\>B<rsub|1><big|cap>B<rsub|2>> there exist
       a <math|B\<in\>\<cal-B\><around*|[|\<cal-S\>|]>> such that
       <math|x\<in\>B\<subseteq\>B<rsub|1><big|cap>B<rsub|2>>
+
+      <item><math|\<cal-S\>\<subseteq\>\<cal-B\><around*|[|\<cal-S\>|]>>
     </enumerate>
 
     hence by [theorem: <reference|topology basis generating>] we have that\ 
@@ -1217,6 +1238,11 @@
       This proves that <math|B<rsub|1><big|cap>B<rsub|2>=<big|cap><rsub|i\<in\><around*|(|I<rsub|1>\<times\><around*|{|0|}>|)><big|cup><around*|(|I<rsub|2>\<times\><around*|{|1|}>|)>>R<rsub|i>\<in\>\<cal-B\>>
       and thus we have found a <math|B=B<rsub|1><big|cap>B<rsub|2>\<in\>\<cal-B\>>
       such that <math|x\<in\>B\<subseteq\>B<rsub|1><big|cap>B<rsub|2>>. \ 
+
+      <item>If <math|B\<in\>\<cal-S\>> define
+      <math|<around*|{|S<rsub|i>|}><rsub|i\<in\><around*|{|1|}>>\<subseteq\>\<cal-S\>>
+      with <math|S<rsub|1>=B> then <math|B=S<rsub|1>=<big|cap><rsub|i\<in\><around*|{|1|}>>S<rsub|i>>
+      so that <math|B\<in\>\<cal-B\><around*|[|\<cal-S\>|]>>.
     </enumerate>
   </proof>
 
@@ -1401,7 +1427,7 @@
     <\equation*>
       \<cal-B\>=<around*|{|<big|prod><rsub|i\<in\>I>U<rsub|i>\|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)><text|
       such that there exist a finite >J\<subseteq\>I<text| with
-      >\<forall\>i\<in\>I<text| >U<rsub|i>\<in\>\<cal-T\><rsub|i><text| and
+      >\<forall\>i\<in\>J<text| >U<rsub|i>\<in\>\<cal-T\><rsub|i><text| and
       >\<forall\>i\<in\>I\\J<text| >U<rsub|i>=X<rsub|i>|}>
     </equation*>
 
@@ -1445,25 +1471,309 @@
       <item*|<math|B\<neq\><big|prod><rsub|i\<in\>I>X<rsub|i>>>Then there
       must exist a <math|<around*|{|S<rsub|i>|}><rsub|i\<in\>J>\<subseteq\>\<cal-S\>>,
       <math|\<varnothing\>\<neq\>J> finite such that
-      <math|B=<big|cap><rsub|i\<in\>J>S<rsub|i>>. As
-      <math|\<forall\>i\<in\>J> we have <math|S<rsub|i>\<in\>\<cal-S\>> so
-      that <math|\<exists\>k<rsub|i>\<in\>I> and a
+      <math|B=<big|cap><rsub|i\<in\>J>S<rsub|i>>. Let <math|i\<in\>J> then as
+      <math|S<rsub|i>\<in\>\<cal-S\>> we have
+      <math|\<exists\>k<rsub|i>\<in\>I> and a
       <math|U<rsub|k<rsub|i>>\<in\>\<cal-T\><rsub|k<rsub|i>>> such that
       <math|S<rsub|i>=\<pi\><rsub|k<rsub|i>><rsup|-1><around*|(|U<rsub|k<rsub|i>>|)>>.
       Define\ 
 
       <\equation*>
-        <text|>\<forall\>j\<in\>J <around*|{|B<rsub|k<rsub|i>,k>|}><rsub|k\<in\>I>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)><text|
-        by >B<rsub|k<rsub|i>,k>=<choice|<tformat|<table|<row|<cell|U<rsub|i><text|
-        if >k<rsub|i>=k>>|<row|<cell|X<rsub|k><text| if
-        >k\<in\>I\\<around*|{|k<rsub|i>|}>>>>>>
+        <text|>\<forall\>i\<in\>J <around*|{|B<rsub|k<rsub|i>,k>|}><rsub|k\<in\>I>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)><text|
+        by >B<rsub|k<rsub|i>,k>=<choice|<tformat|<table|<row|<cell|U<rsub|k<rsub|i>>\<in\>\<cal-T\><rsub|k><text|
+        if >k<rsub|i>=k>>|<row|<cell|X<rsub|k>\<in\>\<cal-T\><rsub|k><text|
+        if >k\<in\>I\\<around*|{|k<rsub|i>|}>>>>>>\<in\>\<cal-T\><rsub|k>
       </equation*>
+
+      Let <math|x\<in\>S<rsub|i>=\<pi\><rsup|-1><rsub|k<rsub|i>><around*|(|U<rsub|k<rsub|i>>|)>>
+      then <math|\<forall\>k\<in\>I> we have either:
+
+      <\description>
+        <item*|<math|k=k<rsub|i>>>Then <math|\<pi\><rsub|k><around*|(|x|)>=\<pi\><rsub|k<rsub|i>><around*|(|x|)>\<in\>U<rsub|k<rsub|i>>=B<rsub|k<rsub|i>,k>>
+
+        <item*|<math|k\<in\>I\\<around*|{|k<rsub|i>|}>>>Then
+        <math|\<pi\><rsub|k><around*|(|x|)>\<in\>X<rsub|k>=B<rsub|k<rsub|i>,k>>
+      </description>
+
+      proving that\ 
+
+      <\equation>
+        <label|eq 14.3.146>S<rsub|i>\<subseteq\><big|prod><rsub|k\<in\>I>B<rsub|k<rsub|i>,k>
+      </equation>
+
+      Further if <math|x\<in\><big|prod><rsub|k\<in\>I>B<rsub|k<rsub|i>,k>>
+      then <math|\<pi\><rsub|k<rsub|i>><around*|(|x|)>\<in\>B<rsub|k<rsub|i>,k<rsub|i>>=U<rsub|k<rsub|i>>>
+      so that <math|x\<in\>\<pi\><rsub|k<rsub|i>><rsup|-1><around*|(|U<rsub|k<rsub|i>>|)>=S<rsub|i>>,
+      hence <math|<big|prod><rsub|k\<in\>I>B<rsub|k<rsub|i>,k>\<subseteq\>\<cal-S\><rsub|i>>.
+      Combining this with [eq: <reference|eq 14.3.146>] gives
+
+      <\equation*>
+        S<rsub|i>=<big|prod><rsub|k\<in\>I>B<rsub|k<rsub|i>,k>
+      </equation*>
+
+      Then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|B>|<cell|=>|<cell|<big|cap><rsub|i\<in\>J>S<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<big|cap><rsub|i\<in\>J><around*|(|<big|prod><rsub|k\<in\>I>B<rsub|k<rsub|i>,k>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|product intersection of a
+        product>]]>>>|<cell|<big|prod><rsub|k\<in\>I><around*|(|<big|cap><rsub|i\<in\>J>B<rsub|k<rsub|i>,k>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|k\<in\>I>C<rsub|k><eq-number><label|eq
+        14.4.146>>>>>
+      </eqnarray*>
+
+      where <math|<around*|{|C<rsub|k>|}><rsub|k\<in\>I><text| is defined by
+      >C<rsub|k>=<big|cap><rsub|i\<in\>J>B<rsub|k<rsub|i>,k>>. Let
+      <math|k\<in\>I> then as <math|\<varnothing\>\<neq\>J> is finite and
+      <math|B<rsub|k<rsub|i>,k>\<in\>\<cal-T\><rsub|k>> it follows by
+      [theorem: <reference|topology finite intersection>] <math|>that
+      <math|C<rsub|k>\<in\>\<cal-T\><rsub|k>>, hence\ 
+
+      <\equation>
+        <label|eq 14.5.146>\<forall\>k\<in\>I<text| we have
+        <math|C<rsub|k>\<in\>\<cal-T\><rsub|k>>>
+      </equation>
+
+      Define <math|K=<around*|{|k<rsub|i>\|i\<in\>J|}>\<subseteq\>I> which is
+      finite as <math|J> is finite [see theorem: <reference|surjection
+      f:A-\<gtr\>B if A is finite then B is finite>], if <math|k\<in\>I\\K>
+      then <math|\<forall\>i\<in\>J> we have <math|k\<neq\>k<rsub|i>> so that
+      <math|B<rsub|k<rsub|i>,k>=X<rsub|k>> hence
+      <math|C<rsub|k>=<big|cap><rsub|i\<in\>J>X<rsub|k>=X<rsub|k>>. To
+      conlude we have\ 
+
+      <\equation*>
+        B=<big|prod><rsub|k\<in\>I>C<rsub|k><text| and
+        >\<forall\>k\<in\>A<text| <math|C<rsub|k>\<in\>\<cal-T\><rsub|k><text|
+        and >\<forall\>k\<in\>I\\A<text| >C<rsub|k>=X<rsub|k><text| where
+        >A<text| is finite and non empty>>>
+      </equation*>
+
+      So by definition of <math|\<cal-B\>> we have \ <math|B\<in\>\<cal-B\>>.
     </description>
 
-    \;
+    As in all cases <math|B\<in\>\<cal-B\>> we conclude that\ 
+
+    <\equation>
+      <label|eq 14.6.146>\<cal-B\><around*|(|\<cal-S\>|)>\<subseteq\>\<cal-B\>
+    </equation>
+
+    Let <math|B\<in\>\<cal-B\>>. Then <math|B=<big|prod><rsub|i\<in\>I>U<rsub|i>>
+    where <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)>>
+    is a family such that there exist a finite non empty
+    <math|J\<subseteq\>I> such that <math|\<forall\>i\<in\>J>
+    <math|U<rsub|i>\<in\>\<cal-T\><rsub|i>> and <math|\<forall\>i\<in\>I\\J>
+    <math|U<rsub|i>=X<rsub|i>>. Define\ 
+
+    <\equation*>
+      <around*|{|U<rsub|i,j>|}><rsub|<around*|(|i,j|)>\<in\>I\<times\>J>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)><text|
+      by >U<rsub|i,j>=<choice|<tformat|<table|<row|<cell|U<rsub|i><text| if
+      >i=j>>|<row|<cell|X<rsub|i><text| if
+      ><around*|(|i,j|)>\<in\>I\<times\>J\\<around*|{|<around*|(|i,j|)>\<in\>I\<times\>J\|i\<neq\>j|}>>>>>>
+    </equation*>
+
+    Let <math|i\<in\>I>. If <math|x\<in\>U<rsub|i>> then
+    <math|\<forall\>j\<in\>J> we have either <math|i=j> then
+    <math|x\<in\>U<rsub|i>=U<rsub|i,j><rsub|>> or <math|i\<neq\>j> so that
+    <math|x\<in\>X<rsub|i>=U<rsub|i,j>> proving that
+    <math|x\<in\><big|cap><rsub|j\<in\>J>U<rsub|i,j>>. Hence\ 
+
+    <\equation>
+      <label|eq 14.7.146>U<rsub|i>\<subseteq\><big|cap><rsub|j\<in\>J>U<rsub|i,j>
+    </equation>
+
+    If <math|x\<in\><big|cap><rsub|j\<in\>J>U<rsub|i,j>> then
+    <math|\<forall\>j\<in\>J> <math|x\<in\>U<rsub|i,j>>. \ If
+    <math|i\<in\>I\\J> we have <math|\<forall\>j\<in\>J> that
+    <math|i\<neq\>j> so that <math|x\<in\>U<rsub|i,j>=X<rsub|i>=U<rsub|i>>,
+    if <math|i\<in\>J> then \ <math|x\<in\>U<rsub|i,i>=U<rsub|i>>. Hence
+    <math|<big|cap><rsub|j\<in\>J>U<rsub|i,j>\<subseteq\>U<rsub|i>> which by
+    [eq: <reference|eq 14.7.146>] proves that
+    <math|U<rsub|i>=<big|cap><rsub|j\<in\>J>U<rsub|i,j>>. Hence\ 
+
+    <\equation>
+      <label|eq 14.8.146>\<forall\>i\<in\>I<text| we have
+      >U<rsub|i>=<big|cap><rsub|j\<in\>J>U<rsub|i,j>
+    </equation>
+
+    Next
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|B>|<cell|=>|<cell|<big|prod><rsub|i\<in\>I>U<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|i\<in\>I><around*|(|<big|cap><rsub|j\<in\>J>U<rsub|i,j>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|product intersection of a
+      product>]]>>>|<cell|<big|cap><rsub|j\<in\>J><around*|(|<big|prod><rsub|i\<in\>I>U<rsub|i,j>|)><eq-number><label|eq
+      14.9.146>>>>>
+    </eqnarray*>
+
+    Let <math|j\<in\>J>. If <math|x\<in\><big|prod><rsub|i\<in\>I>U<rsub|i,j>>
+    then <math|\<pi\><rsub|j><around*|(|x|)>\<in\>U<rsub|j,j>=U<rsub|j>> so
+    that <math|x\<in\>\<pi\><rsub|j><rsup|-1><around*|(|U<rsub|j>|)>> proving
+    that
+
+    <\equation>
+      <label|eq 14.10.146><big|prod><rsub|i\<in\>I>U<rsub|i,j>\<subseteq\>\<pi\><rsub|j><rsup|-1><around*|(|U<rsub|j>|)>
+    </equation>
+
+    Let <math|x\<in\>\<pi\><rsub|j><rsup|-1><around*|(|U<rsub|j>|)>> then for
+    <math|i\<in\>I> we have either:\ 
+
+    <\description>
+      <item*|<math|i=j>>Then <math|\<pi\><rsub|i><around*|(|x|)>\<equallim\><rsub|i=j>\<pi\><rsub|j><around*|(|x|)>\<in\>U<rsub|j>=U<rsub|j,j>=U<rsub|i,j>>
+
+      <item*|<math|i\<neq\>j>>Then <math|\<pi\><rsub|i><around*|(|x|)>\<in\>X<rsub|i>\<equallim\><rsub|i\<neq\>j>U<rsub|i,j>>
+    </description>
+
+    so that in all cases <math|\<pi\><rsub|i><around*|(|x|)>\<in\>U<rsub|i,j>>
+    proving that <math|x\<in\><big|prod><rsub|i\<in\>I>U<rsub|i,j>>. Hence
+    <math|><math|\<pi\><rsub|j><rsup|-1><around*|(|U<rsub|j>|)>\<subseteq\><big|prod><rsub|i\<in\>I>U<rsub|i,j>>
+    which combined with [eq: <reference|eq 14.10.146>] proves that\ 
+
+    <\equation*>
+      <big|prod><rsub|i\<in\>I>U<rsub|i,j>=\<pi\><rsup|-1><rsub|j><around*|(|U<rsub|j>|)>
+    </equation*>
+
+    Substituting this in [eq: <reference|eq 14.9.146>] gives\ 
+
+    <\equation*>
+      B=<big|cap><rsub|j\<in\>J>\<pi\><rsup|-1><rsub|j><around*|(|U<rsub|j>|)><text|
+      where >\<pi\><rsup|-1><rsub|j><around*|(|U<rsub|j>|)>\<in\>\<cal-S\><text|
+      and >j<text| is finite and non empty>
+    </equation*>
+
+    proving that <math|B\<in\>\<cal-B\><around*|[|\<cal-S\>|]>>. Hence
+    <math|\<cal-B\>\<subseteq\>\<cal-B\><around*|[|S|]>> which combined with
+    [eq: <reference|eq 14.6.146>] gives
+
+    <\equation*>
+      \<cal-B\>=\<cal-B\><around*|[|\<cal-S\>|]>
+    </equation*>
   </proof>
 
-  \;
+  <\corollary>
+    <label|topology basis of the product topology>Let <math|I> be a non empty
+    set, <math|<around*|{|<around*|\<langle\>|X<rsub|i>,\<cal-T\><rsub|i>|\<rangle\>>|}><rsub|i\<in\>I>>
+    be a family of topological spaces then\ 
+
+    <\equation*>
+      \<cal-B\>=<around*|{|<big|cap><rsub|i\<in\>J>\<pi\><rsup|-1><rsub|i><around*|(|U<rsub|i>|)>\|<around*|{|U<rsub|i>|}><rsub|i\<in\>J>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)><text|
+      where J is finite non empty and >\<forall\>j\<in\>U<rsub|j>\<in\>\<cal-T\><rsub|j>|}>
+    </equation*>
+
+    is basis for the product topology <math|\<cal-T\><rsub|product>> on
+    <math|<big|prod><rsub|i\<in\>I>X<rsub|i>>.
+  </corollary>
+
+  <\proof>
+    Using the definition of the product topology [definition:
+    <reference|topology product>] we have\ 
+
+    <\equation*>
+      \<cal-T\><rsub|product>=\<cal-B\><around*|[|\<cal-S\>|]><text| where
+      >\<cal-S\>=<around*|{|\<pi\><rsup|-1><rsub|i><around*|(|V|)>\|i\<in\>I\<wedge\>V\<in\>\<cal-T\><rsub|i>|}>
+    </equation*>
+
+    Let <math|B\<in\>\<cal-B\>> then there exist a finite non empty <math|J>
+    and <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>J>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)>>
+    satisfying <math|\<forall\>j\<in\>J> <math|U<rsub|j>\<in\>\<cal-T\><rsub|j>>
+    such that <math|<big|cap><rsub|i\<in\>J>\<pi\><rsub|i><rsup|-1><around*|(|U<rsub|i>|)>>.
+    If <math|i\<in\>J> then <math|\<pi\><rsub|i><rsup|-1><around*|(|U<rsub|i>|)>\<in\>\<cal-S\>\<subseteq\>\<cal-B\><around*|[|\<cal-S\>|]>\<subseteq\>\<cal-T\><rsub|product>>
+    so that <math|><math|\<pi\><rsub|i><rsup|-1><around*|(|U<rsub|i>|)>\<in\>\<cal-T\><rsub|product>>.
+    As <math|J> is finite non empty it follows from [theorem:
+    <reference|topology finite intersection>] that
+    <math|B=<big|cap><rsub|i\<in\>J>\<pi\><rsup|-1><rsub|i><around*|(|U<rsub|i>|)>\<in\>\<cal-T\><rsub|product>>.
+    Hence we have\ 
+
+    <\equation>
+      <label|eq 14.11.146>\<cal-B\>\<subseteq\>\<cal-T\><rsub|product>
+    </equation>
+
+    Using [theorem: <reference|topology product alternative definition>] we
+    have that\ 
+
+    <\equation*>
+      \<cal-A\>=<around*|{|<big|prod><rsub|i\<in\>I>U<rsub|i>\|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)><text|
+      such that there exist a finite non empty >J\<subseteq\>I<text| with
+      >\<forall\>i\<in\>J<text| >U<rsub|i>\<in\>\<cal-T\><rsub|i><text| and
+      >\<forall\>i\<in\>I\\J<text| >U<rsub|i>=X<rsub|i>|}><text| is a basis
+      for the product topology >\<cal-T\><rsub|product><text| on
+      ><big|prod><rsub|i\<in\>I>X<rsub|i>
+    </equation*>
+
+    If <math|B\<in\>\<cal-A\>> then <math|B=<big|prod><rsub|i\<in\>I>U<rsub|i>>
+    where <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)>>
+    and there exist a finite non empty <math|J\<subseteq\>I> such that
+    <math|\<forall\>i\<in\>J> <math|U<rsub|i>\<in\>\<cal-T\><rsub|i>> and
+    <math|\<forall\>I\\J> we have <math|U<rsub|i>=X<rsub|i>>. Then we have:
+
+    <\enumerate>
+      <item>If <math|x\<in\><big|prod><rsub|i\<in\>I>U<rsub|i>> then
+      <math|\<forall\>i\<in\>J> we have that
+      <math|\<pi\><rsub|i><around*|(|x|)>\<in\>U<rsub|i>> or
+      <math|x\<in\>\<pi\><rsub|i><rsup|-1><around*|(|U<rsub|i>|)>> proving
+      that <math|x\<in\><big|cap><rsub|i\<in\>J>\<pi\><rsup|-1><rsub|i><around*|(|U<rsub|i>|)>>
+      proving that\ 
+
+      <\equation*>
+        <big|prod><rsub|i\<in\>I>U<rsub|i>\<subseteq\><big|cap><rsub|i\<in\>I>\<pi\><rsup|-1><rsub|i><around*|(|U<rsub|i>|)>
+      </equation*>
+
+      <item>If <math|x\<in\><big|cap><rsub|i\<in\>J>\<pi\><rsup|-1><rsub|i><around*|(|U<rsub|i>|)>>
+      then <math|\<forall\>i\<in\>I> we have either:
+
+      <\description>
+        <item*|<math|i\<in\>J>>Then <math|x\<in\>\<pi\><rsup|-1><rsub|i><around*|(|U<rsub|i>|)>>
+        so that <math|\<pi\><rsub|i><around*|(|x|)>\<in\>U<rsub|i>>
+
+        <item*|<math|i\<in\>I\\J>>Then <math|U<rsub|i>=X<rsub|i>> and
+        <math|\<pi\><rsub|i><around*|(|x|)>\<in\>X<rsub|i>=U<rsub|i>>
+      </description>
+
+      so that <math|x\<in\><big|prod><rsub|i\<in\>I>U<rsub|i>>. Hence we have\ 
+
+      <\equation*>
+        <big|cap><rsub|i\<in\>I>\<pi\><rsub|i><rsup|-1><around*|(|U<rsub|i>|)>\<subseteq\><big|prod><rsub|i\<in\>I>U<rsub|i>
+      </equation*>
+    </enumerate>
+
+    hence\ 
+
+    <\equation*>
+      B=<big|prod><rsub|i\<in\>I>U<rsub|i>=<big|cap><rsub|i\<in\>I>\<pi\><rsup|-1><rsub|i><around*|(|U<rsub|i>|)>
+    </equation*>
+
+    proving that <math|B\<in\>\<cal-B\>>. Hence we have that
+    <math|\<cal-A\>\<subseteq\>\<cal-B\>\<subseteq\>\<cal-T\><rsub|product>>
+    which as <math|\<cal-A\>> is a basis for <math|\<cal-T\><rsub|product >>
+    proves by [theorem: <reference|topology basis and super basis>] that
+    <math|\<cal-B\>> is a basis for <math|\<cal-T\><rsub|product>>.
+  </proof>
+
+  Using the above corollary it is easy to prove that in the finite case the
+  box topology is equivalent with the product topology.
+
+  <\theorem>
+    <label|topology product topology and box topology are the same in the
+    finite case>Let <math|<around*|{|<around*|\<langle\>|X<rsub|i>,\<cal-T\><rsub|i>|\<rangle\>>|}><rsub|i\<in\>I>>
+    be a family of topological spaces then\ 
+
+    <\enumerate>
+      <item><math|\<cal-T\><rsub|product>\<subseteq\>\<cal-T\><rsub|box>> [in
+      other words the box topology is finer then the product topology]
+
+      <item>If <math|I> is finite then <math|\<cal-T\><rsub|box>=\<cal-T\><rsub|product>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    Consider the bases <math|\<cal-B\><rsub|product>>,
+    <math|\<cal-B\><rsub|box>> for the product and box topologies [see:
+    <reference|topology box> and <reference|topology product alternative
+    definition>] \ 
+
+    <\enumerate>
+      <item>
+
+      <item>
+    </enumerate>
+  </proof>
 </body>
 
 <\initial>
@@ -1481,49 +1791,64 @@
     <associate|auto-1|<tuple|14|635>>
     <associate|auto-10|<tuple|<with|mode|<quote|math>|A<rprime|'>>|640>>
     <associate|auto-11|<tuple|14.1.2|641>>
-    <associate|auto-12|<tuple|box topology|?>>
+    <associate|auto-12|<tuple|box topology|644>>
     <associate|auto-2|<tuple|14.1|635>>
-    <associate|auto-3|<tuple|interior|638>>
-    <associate|auto-4|<tuple|<with|mode|<quote|math>|A<rsup|\<circ\>>>|638>>
+    <associate|auto-3|<tuple|interior|637>>
+    <associate|auto-4|<tuple|<with|mode|<quote|math>|A<rsup|\<circ\>>>|637>>
     <associate|auto-5|<tuple|14.1.1|638>>
     <associate|auto-6|<tuple|closed set|638>>
     <associate|auto-7|<tuple|<with|mode|<quote|math>|\<cal-T\><rsup|\<cal-C\>>>|638>>
     <associate|auto-8|<tuple|limit point|640>>
     <associate|auto-9|<tuple|accumulation point|640>>
-    <associate|closed set properties|<tuple|14.19|639>>
+    <associate|closed set properties|<tuple|14.19|638>>
     <associate|eq 14.1.145|<tuple|14.1|640>>
+    <associate|eq 14.10.146|<tuple|14.10|?>>
+    <associate|eq 14.11|<tuple|14.11|?>>
+    <associate|eq 14.11.146|<tuple|14.11|?>>
     <associate|eq 14.2.145|<tuple|14.2|641>>
-    <associate|topology and complement closed sets|<tuple|14.18|639>>
+    <associate|eq 14.3.146|<tuple|14.3|646>>
+    <associate|eq 14.4.146|<tuple|14.4|?>>
+    <associate|eq 14.5.146|<tuple|14.5|?>>
+    <associate|eq 14.6.146|<tuple|14.6|?>>
+    <associate|eq 14.7.146|<tuple|14.7|?>>
+    <associate|eq 14.8.146|<tuple|14.8|?>>
+    <associate|eq 14.9.146|<tuple|14.9|?>>
+    <associate|topology|<tuple|14.39|?>>
+    <associate|topology and complement closed sets|<tuple|14.18|638>>
     <associate|topology basis|<tuple|14.28|641>>
-    <associate|topology basis alternative definition|<tuple|14.30|642>>
-    <associate|topology basis generating|<tuple|14.33|642>>
+    <associate|topology basis alternative definition|<tuple|14.30|641>>
+    <associate|topology basis and super basis|<tuple|14.31|?>>
+    <associate|topology basis generating|<tuple|14.34|642>>
     <associate|topology basis of a subspace topology|<tuple|14.29|641>>
-    <associate|topology basis properties|<tuple|14.32|642>>
+    <associate|topology basis of the product topology|<tuple|14.40|?>>
+    <associate|topology basis properties|<tuple|14.33|642>>
     <associate|topology biggest open subset|<tuple|14.13|638>>
-    <associate|topology box|<tuple|14.35|?>>
-    <associate|topology box topology and bases|<tuple|14.36|?>>
+    <associate|topology box|<tuple|14.36|644>>
+    <associate|topology box topology and bases|<tuple|14.37|644>>
     <associate|topology closed set|<tuple|14.15|638>>
-    <associate|topology closed set and a basis|<tuple|14.31|642>>
+    <associate|topology closed set and a basis|<tuple|14.32|642>>
     <associate|topology closed set and closure|<tuple|14.23|640>>
     <associate|topology closed set condition|<tuple|14.27|641>>
-    <associate|topology closure alterantive definition|<tuple|14.26|641>>
+    <associate|topology closure alterantive definition|<tuple|14.26|640>>
     <associate|topology closure is union of a set and its limit
     points|<tuple|14.25|640>>
-    <associate|topology closure of a set|<tuple|14.20|640>>
+    <associate|topology closure of a set|<tuple|14.20|639>>
     <associate|topology closure of a set alternative|<tuple|14.22|640>>
     <associate|topology coarse|<tuple|14.3|635>>
     <associate|topology discrete|<tuple|14.4|635>>
     <associate|topology empty set|<tuple|14.2|635>>
     <associate|topology finer topology|<tuple|14.5|636>>
     <associate|topology finite intersection|<tuple|14.6|636>>
-    <associate|topology interior of a set|<tuple|14.11|638>>
+    <associate|topology interior of a set|<tuple|14.11|637>>
     <associate|topology limit point|<tuple|14.24|640>>
     <associate|topology open set and interior|<tuple|14.14|638>>
     <associate|topology open set condition|<tuple|14.7|636>>
-    <associate|topology product|<tuple|14.37|?>>
-    <associate|topology product alternative definition|<tuple|14.38|?>>
+    <associate|topology product|<tuple|14.38|645>>
+    <associate|topology product alternative definition|<tuple|14.39|645>>
+    <associate|topology product topology and box topology are the same in the
+    finite case|<tuple|14.41|?>>
     <associate|topology space|<tuple|14.1|635>>
-    <associate|topology subbasis|<tuple|14.34|?>>
+    <associate|topology subbasis|<tuple|14.35|643>>
     <associate|topology subspace topology|<tuple|14.8|637>>
     <associate|topology subspace topology open subset|<tuple|14.10|637>>
     <associate|topology subsubspace topology|<tuple|14.9|637>>
@@ -1546,6 +1871,8 @@
       <tuple|<tuple|accumulation point>|<pageref|auto-9>>
 
       <tuple|<tuple|<with|mode|<quote|math>|A<rprime|'>>>|<pageref|auto-10>>
+
+      <tuple|<tuple|box topology>|<pageref|auto-12>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|14<space|2spc>Topology>
