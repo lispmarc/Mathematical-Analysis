@@ -7,7 +7,7 @@
 <\body>
   \;
 
-  <chapter|Internal Direct Sum>
+  TODO check next<chapter|Internal Direct Sum>
 
   We will now extend the sum of two subsets of a vector space \ [see
   definition: <reference|vector space sum of sub-spaces>] to a sum of a
@@ -6162,7 +6162,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|11>
-    <associate|page-first|572>
+    <associate|page-first|574>
     <associate|section-nr|9>
     <associate|subsection-nr|0>
   </collection>

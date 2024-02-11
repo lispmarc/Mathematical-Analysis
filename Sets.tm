@@ -5,7 +5,7 @@
 <style|<tuple|book|preview-ref>>
 
 <\body>
-  <chapter|Elements of set theory>
+  TODO check next<chapter|Elements of set theory>
 
   <section|Basic concepts about classes and sets>
 
@@ -11341,6 +11341,57 @@
     </description>
   </proof>
 
+  TODO
+
+  <\theorem>
+    <label|choice function generating>Let <math|A,B> be sets such that
+    <math|\<forall\>a\<in\>A> there exist a <math|b\<in\>B> satisfying
+    <math|P<around*|(|a,b|)>> [where <math|P<around*|(|a,b|)>> is a
+    predicate] then there exist a function <math|f:A\<rightarrow\>B> such
+    that <math|\<forall\>a\<in\>A> <math|P<around*|(|a,f<around*|(|a|)>|)>>.
+    Furthermore as a function defines a family you can also say that there is
+    a family <math|<around*|{|f<rsub|a>|}><rsub|a\<in\>A>\<subseteq\>B> such
+    that <math|\<forall\>a\<in\>A> <math|P<around*|(|a,f<rsub|a>|)>>.
+  </theorem>
+
+  <\proof>
+    Let <math|a\<in\>A> then by the hypothesis the set
+    <math|<around*|{|b\<in\>B\|P<around*|(|a,b|)>|}>> is non empty. This
+    allows us to define the function
+
+    <\equation*>
+      \<cal-A\>:A\<rightarrow\>\<cal-P\><rprime|'><around*|(|B|)><text| by
+      >\<cal-A\><around*|(|a|)>=<around*|{|b\<in\>B\|P<around*|(|a,b|)>|}>\<subseteq\>B
+    </equation*>
+
+    defining the family\ 
+
+    <\equation*>
+      <around*|{|\<cal-A\><rsub|a>|}><rsub|a\<in\>A>\<subseteq\>\<cal-P\><rprime|'><around*|(|B|)>
+    </equation*>
+
+    Applying then [theorem: <reference|choice axiom of choice equivalences
+    (1)> (3)] there exist a function\ 
+
+    <\equation*>
+      f:A\<rightarrow\><big|cup><rsub|a\<in\>A>\<cal-A\><rsub|a>
+    </equation*>
+
+    such that <math|\<forall\>a\<in\>A> we have
+    <math|f<around*|(|a|)>\<in\>\<cal-A\><rsub|a>> so that
+    <math|f<around*|(|a|)>> satisfies <math|P<around*|(|a,f<around*|(|a|)>|)>>.
+    Further as <math|\<forall\>a\<in\>A> <math|\<cal-A\><rsub|a>\<subseteq\>B>
+    we have that <math|<big|cup><rsub|a\<in\>A>\<cal-A\><rsub|a>\<subseteq\>B>,
+    hence we have that\ 
+
+    <\equation*>
+      f:A\<rightarrow\>B
+    </equation*>
+
+    is a function such that <math|\<forall\>a\<in\>A>
+    <math|P<around*|(|a,f<around*|(|a|)>|)>>.
+  </proof>
+
   As a application of the Axiom of Choice we have the following theorems
   about the product of a family of sets. First we prove that the projection
   function is surjective.
@@ -13112,30 +13163,31 @@
     <associate|cartesian product of the empty set|<tuple|1.46|?>>
     <associate|cartesian product properties (1)|<tuple|1.49|?>>
     <associate|cartesian product with enpty set|<tuple|1.47|?>>
-    <associate|choice Axiom of choice consequences|<tuple|3.123|?>>
-    <associate|choice Hausdorff maximal principle|<tuple|3.114|?>>
-    <associate|choice Hausdorff's Maximal Principle|<tuple|3.115|?>>
-    <associate|choice Hausdorff's implies Zorn's|<tuple|3.117|?>>
+    <associate|choice Axiom of choice consequences|<tuple|3.124|?>>
+    <associate|choice Hausdorff maximal principle|<tuple|3.115|?>>
+    <associate|choice Hausdorff's Maximal Principle|<tuple|3.116|?>>
+    <associate|choice Hausdorff's implies Zorn's|<tuple|3.118|?>>
     <associate|choice P'(A)|<tuple|3.95|?>>
     <associate|choice P'(A) is a set|<tuple|3.96|?>>
-    <associate|choice Zorn implies welll ordering|<tuple|3.118|?>>
-    <associate|choice Zorn's lemma|<tuple|3.116|?>>
-    <associate|choice Zorn's lemma for pre-order|<tuple|3.124|?>>
+    <associate|choice Zorn implies welll ordering|<tuple|3.119|?>>
+    <associate|choice Zorn's lemma|<tuple|3.117|?>>
+    <associate|choice Zorn's lemma for pre-order|<tuple|3.125|?>>
     <associate|choice axiom of choice equivalences (1)|<tuple|3.100|?>>
     <associate|choice choice function|<tuple|3.97|?>>
-    <associate|choice existence of successor|<tuple|3.104|?>>
-    <associate|choice family on preimage|<tuple|3.126|?>>
-    <associate|choice function to injection/bijection|<tuple|3.125|?>>
-    <associate|choice intersection of p-sewuences|<tuple|3.107|?>>
-    <associate|choice lemma p-sequence|<tuple|3.105|?>>
-    <associate|choice lemma p-sequence generation|<tuple|3.110|?>>
-    <associate|choice lemma properties of select|<tuple|3.111|?>>
-    <associate|choice lemma property of select elements|<tuple|3.109|?>>
+    <associate|choice existence of successor|<tuple|3.105|?>>
+    <associate|choice family on preimage|<tuple|3.127|?>>
+    <associate|choice function generating|<tuple|3.101|?>>
+    <associate|choice function to injection/bijection|<tuple|3.126|?>>
+    <associate|choice intersection of p-sewuences|<tuple|3.108|?>>
+    <associate|choice lemma p-sequence|<tuple|3.106|?>>
+    <associate|choice lemma p-sequence generation|<tuple|3.111|?>>
+    <associate|choice lemma properties of select|<tuple|3.112|?>>
+    <associate|choice lemma property of select elements|<tuple|3.110|?>>
     <associate|choice lemma select elements froms a
-    p-sewuence|<tuple|3.112|?>>
-    <associate|choice lemma upper bound of chain|<tuple|3.120|?>>
-    <associate|choice lemma well ordering lemma (1)|<tuple|3.119|?>>
-    <associate|choice well-order implies Axiom of Choice|<tuple|3.121|?>>
+    p-sewuence|<tuple|3.113|?>>
+    <associate|choice lemma upper bound of chain|<tuple|3.121|?>>
+    <associate|choice lemma well ordering lemma (1)|<tuple|3.120|?>>
+    <associate|choice well-order implies Axiom of Choice|<tuple|3.122|?>>
     <associate|class absorption laws|<tuple|1.27|?>>
     <associate|class class commutative,idempotent,associative,distributivity|<tuple|1.30|?>>
     <associate|class complement of comploment|<tuple|1.28|?>>
@@ -13515,9 +13567,9 @@
     <associate|product of a empty set is empty|<tuple|2.133|?>>
     <associate|product of family with one element|<tuple|2.134|?>>
     <associate|product of family with two classes|<tuple|2.135|?>>
-    <associate|product product is not empty|<tuple|3.102|?>>
+    <associate|product product is not empty|<tuple|3.103|?>>
     <associate|product projection function|<tuple|2.143|?>>
-    <associate|product projection is surjective|<tuple|3.101|?>>
+    <associate|product projection is surjective|<tuple|3.102|?>>
     <associate|product sub-product|<tuple|2.141|?>>
     <associate|relation|<tuple|3.1|?>>
     <associate|relation properties|<tuple|3.4|?>>

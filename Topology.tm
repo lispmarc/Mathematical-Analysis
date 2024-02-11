@@ -254,14 +254,12 @@
       </description>
 
       <item*|<math|\<Leftarrow\>>>By the hypothesis we have that
-      <math|\<forall\>x\<in\>U> that <math|\<cal-A\><rsub|x>=<around*|{|V\<in\>\<cal-T\>\|x\<in\>V\<subseteq\>U|}>>
-      is not empty. Using the Axiom of Choice [theorem: <reference|choice
-      Axiom of choice consequences>] there exist a function
-      <math|V:U\<rightarrow\><big|cup><rsub|x\<in\>U>\<cal-A\><rsub|x>> such
-      that <math|\<forall\>x\<in\>U> <math|V<around*|(|x|)>\<in\>\<cal-A\><rsub|x>\<Rightarrow\>V<around*|(|x|)>\<in\>\<cal-T\>\<wedge\>x\<in\>V<around*|(|x|)>\<subseteq\>U>.
-      This defines a family <math|<around*|{|V<rsub|x>|}><rsub|x\<in\>U>\<subseteq\>\<cal-T\>>.
-      As <math|\<forall\>x\<in\>U> <math|V<rsub|x>\<subseteq\>U> we have by
-      [theorem: <reference|family properties (1)>] that
+      <math|\<forall\>x\<in\>X> there exist a <math|V\<in\>\<cal-T\>> such
+      that <math|x\<in\>V<rsub|>\<subseteq\>U> defining by [theorem:
+      <reference|choice function generating>] a family
+      <math|<around*|{|V<rsub|x>|}><rsub|x\<in\>U>\<subseteq\>\<cal-T\>> such
+      that <math|\<forall\>x\<in\>U> <math|x\<in\>V<rsub|x>\<subseteq\>U>. By
+      [theorem: <reference|family properties (1)>] it follows that
       <math|<big|cup><rsub|x\<in\>U>V<rsub|x>\<subseteq\>U>. Further if
       <math|x\<in\>U> then <math|x\<in\>V<rsub|x>\<subseteq\><big|cup><rsub|\<in\>U>V<rsub|x>>
       proving that <math|U\<subseteq\><big|cup><rsub|x\<in\>U>V<rsub|x>>.
@@ -950,15 +948,13 @@
       <math|x\<in\>B<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>I>B=U>.
 
       <item*|<math|\<Leftarrow\>>>If <math|U\<in\>\<cal-T\>> then
-      <math|\<forall\>x\<in\>U> there exists a <math|B\<in\>\<cal-B\>> such
-      that <math|x\<in\>B\<subseteq\>U> or <math|\<forall\>x\<in\>U> we have
-      <math|\<cal-A\><rsub|x>=<around*|{|B\<in\>\<cal-B\>\|x\<in\>B\<subseteq\>U|}>\<neq\>\<varnothing\>>.
-      Using the Axiom of Choice [theorem: <reference|choice Axiom of choice
-      consequences>] there exist a function
-      <math|B:U\<rightarrow\><big|cup><rsub|x\<in\>U>\<cal-A\><rsub|x>> such
-      that <math|\<forall\>x\<in\>U> <math|B<around*|(|x|)>\<in\>\<cal-A\><rsub|x>\<Rightarrow\>B<around*|(|x|)>\<in\>\<cal-B\>>
-      and <math|x\<in\>B<around*|(|x|)>\<subseteq\>U>. This defines a family
-      <math|<around*|{|B<rsub|x>|}><rsub|x\<in\>U>\<subseteq\>\<cal-B\>>. As
+      <math|\<forall\>x\<in\>U> there exists a
+      <math|B\<in\>\<cal-B\>\<subseteq\>\<cal-T\>> such that
+      <math|x\<in\>B\<subseteq\>U>, hence using [theorem: <reference|choice
+      function generating>] there exist a
+      <math|<around*|{|B<rsub|x>|}><rsub|x\<in\>U>\<subseteq\>\<cal-B\>> such
+      that <math|\<forall\>x\<in\>B<rsub|x>>
+      <math|x\<in\>\<cal-B\><rsub|x>\<subseteq\>U>. As
       <math|\<forall\>x\<in\>U> <math|B<rsub|x>\<subseteq\>U> we have
       <math|<big|cup><rsub|x\<in\>U>B<rsub|x>\<subseteq\>U>, further if
       <math|x\<in\>U> then <math|x\<in\>B<rsub|x>\<in\>\<cal-B\>> so that
@@ -2212,7 +2208,7 @@
 
   <\theorem>
     <label|metric topology>Let <math|<around*|\<langle\>|X,d|\<rangle\>>> be
-    a metric space then if we define <math|\<cal-B\><rsub|d>> by\ 
+    a pseudo metric space then if we define <math|\<cal-B\><rsub|d>> by\ 
 
     <\equation*>
       \<cal-B\><rsub|d>=<around*|{|B<rsub|d><around*|(|x,\<varepsilon\>|)>\|x\<in\>X\<wedge\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>|}>
@@ -2269,7 +2265,7 @@
 
   <\corollary>
     <label|metric topology (1)>Let <math|<around*|\<langle\>|X,d|\<rangle\>>>
-    be a metric space that\ 
+    be a pseudo metric space that\ 
 
     <\equation*>
       U\<in\>\<cal-T\><rsub|d>\<Leftrightarrow\>\<forall\>x\<in\>U<text|
@@ -2331,6 +2327,436 @@
     is closed.
   </proof>
 
+  If we have a metric space <math|<around*|\<langle\>|X.d|\<rangle\>>> with
+  the metric topology <math|\<cal-T\><rsub|d>> then the subspace topology has
+  a very simple form as is show in the next theorem:
+
+  \;
+
+  <\theorem>
+    <label|metrix subtopology>Let <math|<around*|\<langle\>|X,d|\<rangle\>>>
+    be a pseudo metric space with the metrix toplogy <math|\<cal-T\><rsub|d>>
+    and <math|A\<subseteq\>X> then for the restricted function
+    <math|d<rsub|\|A\<times\>A>:A\<times\>A\<rightarrow\>R> we have\ 
+
+    <\enumerate>
+      <item><math|<around*|\<langle\>|A,d<rsub|\|A\<times\>A>|\<rangle\>>> is
+      a pseudo metric space.
+
+      <item>If <math|<around*|\<langle\>|X,d|\<rangle\>>> is a metric space
+      then <math|<around*|\<langle\>|A,d<rsub|\|A\<times\>A>|\<rangle\>>> is
+      a metric space.
+
+      <item><math|\<cal-T\><rsub|d<rsub|\|A\<times\>A>>=<around*|(|\<cal-T\><rsub|d>|)><rsub|A>>
+      [the induced subspace topology on <math|A> is the metric topology of
+      the restriced metric topology].
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>We have:
+
+      <\enumerate>
+        <item><math|\<forall\>x\<in\>A> \ <math|d<rsub|\|A\<times\>A><around*|(|x,x|)>=d<around*|(|x,x|)>=0>
+
+        <item><math|\<forall\>x,y\<in\>A>
+        \ <math|d<rsub|\|A\<times\>A><around*|(|x,y|)>=d<around*|(|x,y|)>=d<around*|(|y,x|)>=d<rsub|<mid|\|>A\<times\>A><around*|(|y,x|)>>
+
+        <item><math|\<forall\>x,y,z\<in\>A><space|1em><math|d<rsub|\|A\<times\>A><around*|(|x,z|)>=d<around*|(|x,z|)>\<leqslant\>d<around*|(|x,y|)>+d<around*|(|y,z|)>=d<rsub|\|A\<times\>A><around*|(|x,y|)>+d<rsub|\|A\<times\>A><around*|(|y,z|)>>
+      </enumerate>
+
+      <item>Let <math|x,y\<in\>A> such that
+      <math|d<rsub|\|A\<times\>A><around*|(|x,y|)>=0> then
+      <math|d<around*|(|x,y|)>=0> hence <math|x=y>.
+
+      <item>Let <math|x\<in\>A> and <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+      then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|y\<in\>B<rsub|d<rsub|\|A\<times\>A>><around*|(|x,\<varepsilon\>|)>>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>A\<wedge\>d<rsub|\|A\<times\>A><around*|(|x,y|)>\<less\>\<varepsilon\>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>A\<wedge\>d<around*|(|x,y|)>\<less\>\<varepsilon\>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|A\<subseteq\>X>>|<cell|y\<in\>A\<wedge\>x\<in\>X\<wedge\>d<around*|(|x,y|)>\<less\>\<varepsilon\>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>A\<wedge\>x\<in\>B<rsub|d><around*|(|x,y|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>B<rsub|d><around*|(|x,y|)><big|cap>A>>>>
+      </eqnarray*>
+
+      proving that\ 
+
+      <\equation>
+        <label|eq 14.13.146>B<rsub|d<rsub|\|A\<times\>A>><around*|(|x,\<varepsilon\>|)>=B<rsub|d><around*|(|x,\<varepsilon\>|)><big|cap>A
+      </equation>
+
+      Let <math|U\<in\><around*|(|\<cal-T\><rsub|d>|)><rsub|\|A>> then there
+      exist a <math|V\<in\>\<cal-T\><rsub|d>> such that <math|U=V<big|cap>A>.
+      Let <math|x\<in\>U> then <math|x\<in\>V> so that that by [corollary:
+      <reference|metric topology (1)>] there exist a
+      <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|x\<in\>B<rsub|d><around*|(|x,\<varepsilon\>|)>\<subseteq\>V>,
+      hence <math|x\<in\>B<rsub|d><around*|(|x,\<varepsilon\>|)><big|cap>A\<subseteq\>V<big|cap>A=U>
+      or using [eq: <reference|eq 14.13.146>]
+      <math|x\<in\>B<rsub|d<rsub|\|A\<times\>A>><around*|(|x,\<varepsilon\>|)>\<subseteq\>U>.
+      So using [corollary: <reference|metric topology (1)>] again it follows
+      that <math|U\<in\>\<cal-T\><rsub|d<rsub|\|A\<times\>A>>> giving\ 
+
+      <\equation>
+        <label|eq 14.14.146><around*|(|\<cal-T\><rsub|d>|)><rsub|A>\<subseteq\>\<cal-T\><rsub|d<rsub|\|A\<times\>A>>
+      </equation>
+
+      Let <math|U\<in\>\<cal-T\><rsub|d<rsub|\|A\<times\>A>>> and
+      <math|x\<in\>U> then by [corollary: <reference|metric topology (1)>]
+      there exist a <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|x\<in\>B<rsub|d<rsub|\|A\<times\>A>><around*|(|x,\<varepsilon\>|)>\<subseteq\>U\<Rightarrowlim\><rsub|<text|[eq:
+      <reference|eq 14.13.146>]>>x\<in\>B<rsub|d><around*|(|x,\<varepsilon\>|)><big|cap>A\<subseteq\>U>,
+      hence there exists [see theprem: <reference|choice function
+      generating>] a <math|<around*|{|\<varepsilon\><rsub|x>|}><rsub|x\<in\>U>\<subseteq\>\<bbb-R\><rsup|+>>
+      such that <math|x\<in\>B<rsub|d><around*|(|x,\<varepsilon\><rsub|x>|)><big|cap>A\<subseteq\><big|cup><rsub|x\<in\>U><around*|(|B<rsub|d><around*|(|x,\<varepsilon\><rsub|x>|)><big|cap>A|)>>.
+      So
+
+      <\equation*>
+        U\<subseteq\><big|cup><rsub|x\<in\>U><around*|(|B<rsub|d><around*|(|x,\<varepsilon\><rsub|x>|)><big|cap>A|)>\<subseteq\>U\<Rightarrow\>U=<big|cup><rsub|x\<in\>U><around*|(|B<rsub|d><around*|(|x,\<varepsilon\><rsub|x>|)><big|cap>A|)>
+      </equation*>
+
+      which, as <math|><math|B<rsub|d><around*|(|x,\<varepsilon\><rsub|x>|)><big|cap>A\<in\><around*|(|\<cal-T\><rsub|d>|)><rsub|A>>,
+      proves that <math|U\<in\><around*|(|\<cal-T\><rsub|d>|)><rsub|A>> or
+      <math|><math|\<cal-T\><rsub|d<rsub|\|A\<times\>A>>\<subseteq\>\<cal-T\><rsub|d<rsub|\|A\<times\>A>>>.
+      Combining this with [eq: <reference|eq 14.14.146>] result in
+
+      <\equation*>
+        <around*|(|\<cal-T\><rsub|d>|)><rsub|A>=\<cal-T\><rsub|d<rsub|\|A\<times\>A>>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  <\definition>
+    <label|metric equivalent metrics><index|equivalent pseudo metrics>Two
+    pseudo metrics <math|d<rsub|1>>, <math|d<rsub|2>> on a set <math|X> are
+    equivalent if <math|\<cal-T\><rsub|d<rsub|1>>=\<cal-T\><rsub|d<rsub|2>>>.
+    In other words two pseudo metrics are equivalent iff there generated
+    topologies are the same.
+  </definition>
+
+  <\theorem>
+    <label|metric equivalent metrics condition>Let <math|d<rsub|1>>,
+    <math|d<rsub|2>> be two pseudo metrics on a set <math|X> then
+
+    <\equation*>
+      \<cal-T\><rsub|d<rsub|2>><text| is a finer then
+      >\<cal-T\><rsub|d<rsub|1>>
+    </equation*>
+
+    <\equation*>
+      \<Updownarrow\>
+    </equation*>
+
+    <\equation*>
+      \<forall\>x\<in\>X<text|, >\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text|
+      there exist s >\<delta\>\<in\>\<bbb-R\><rsup|+><text| such that
+      >x\<in\>B<rsub|d<rsub|2>><around*|(|x,\<delta\>|)>\<subseteq\>B<rsub|d<rsub|1>><around*|(|x,\<varepsilon\>|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>If <math|x\<in\>X> and
+      <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> we have for
+      <math|B<rsub|d<rsub|1>><around*|(|x,\<varepsilon\>|)>\<in\>\<cal-B\><rsub|d<rsub|1>>>
+      by [theorem: <reference|topology finer and basis>] that there exist a
+      <math|y\<in\>X> and a <math|\<delta\><rprime|'>\<in\>\<bbb-R\><rsup|+>>
+      such that <math|x\<in\>B<rsub|d<rsub|2>><around*|(|y,\<delta\><rprime|'>|)>\<subseteq\>B<rsub|d<rsub|1>><around*|(|x,\<varepsilon\>|)>>.
+      Using [theorem: <reference|metric refinement of a ball>] there exist a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|x\<in\>B<rsub|d<rsub|2>><around*|(|x,\<delta\>|)>\<subseteq\>B<rsub|d<rsub|2>><around*|(|y,\<delta\><rprime|'>|)>\<subseteq\>B<rsub|d<rsub|1>><around*|(|x,\<varepsilon\>|)>>.
+
+      <item*|<math|\<Leftarrow\>>>Let <math|B\<in\>\<cal-B\><rsub|d<rsub|1>>>
+      then <math|\<exists\>x\<in\>X>, <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+      such that <math|B=B<rsub|d<rsub|1>><around*|(|x,\<varepsilon\>|)>>,
+      using the hypothesis there exists a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|x\<in\>B<rsub|d<rsub|2>><around*|(|x,\<delta\>|)>\<subseteq\>B<rsub|d<rsub|1>><around*|(|x,\<varepsilon\>|)>>.
+      As <math|B<rsub|d<rsub|2>><around*|(|x,\<varepsilon\>|)>\<in\>\<cal-B\><rsub|d<rsub|2>>>
+      it follows from [theorem: <reference|topology finer and basis>] that
+      <math|\<cal-T\><rsub|d<rsub|2>>> is finer then
+      <math|\<cal-T\><rsub|d<rsub|1>>>.
+    </description>
+  </proof>
+
+  <\definition>
+    <label|metric isometry><index|isometry>Let
+    <math|<around*|\<langle\>|X,d<rsub|X>|\<rangle\>>> and
+    <math|<around*|\<langle\>|Y,d<rsub|Y>|\<rangle\>>> be two pseudo metric
+    spaces then a function\ 
+
+    <\equation*>
+      \<varphi\>:X\<rightarrow\>Y
+    </equation*>
+
+    is a isomettry iff
+
+    <\enumerate>
+      <item><math|\<varphi\>:X\<rightarrow\>Y> is a bijection
+
+      <item><math|\<forall\>x,y\<in\>X> we have
+      <math|d<rsub|Y><around*|(|\<varphi\><around*|(|x|)>,\<varphi\><around*|(|y|)>|)>=d<rsub|X><around*|(|x,y|)>>
+    </enumerate>
+  </definition>
+
+  <\theorem>
+    <label|metric isometry and its inverse>Let
+    <math|<around*|\<langle\>|X,d<rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,d<rsub|Y>|\<rangle\>>> be two pseudo metric
+    spaces and <math|\<varphi\>:X\<rightarrow\>Y> a isometry then\ 
+
+    <\equation*>
+      \<varphi\><rsup|-1>:Y\<rightarrow\>X
+    </equation*>
+
+    is a isometry.
+  </theorem>
+
+  <\proof>
+    Because of [theorem: <reference|function bijection and inverse>] we have
+    that <math|\<varphi\><rsup|-1>:Y\<rightarrow\>X> is a function. Further
+    if <math|x,y\<in\>Y> then <math|d<rsub|Y><around*|(|x,y|)>=d<rsub|Y><around*|(|\<varphi\><around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>,\<varphi\><around*|(|\<varphi\><rsup|-1><around*|(|y|)>|)>|)>\<equallim\><rsub|d<rsub|X><text|
+    is a isometry>>d<rsub|X><around*|(|\<varphi\><rsup|-1><around*|(|x|)>,d<rsub|x><around*|(|\<varphi\><rsup|-1><around*|(|y|)>|)>|)>>.
+  </proof>
+
+  <\theorem>
+    <label|metric composition of isometries>Let
+    <math|<around*|\<langle\>|X,d<rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,d<rsub|Y>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Z,d<rsub|Z>|\<rangle\>>> amd
+    <math|\<varphi\>:X\<rightarrow\>Y>, <math|\<psi\>:Y\<rightarrow\>Z>
+    isometries then\ 
+
+    <\equation*>
+      \<psi\>\<circ\>\<varphi\>:X\<rightarrow\>Z<text| is a isometry>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    By [theorem: <reference|function composition injectivity, surjectivity
+    and bijectivity (1)>] <math|\<psi\>\<circ\>\<varphi\>:X\<rightarrow\>Z>
+    is a bijection, further\ 
+
+    <\equation*>
+      d<rsub|Z><around*|(|<around*|(|\<psi\>\<circ\>\<varphi\>|)><around*|(|x|)>,<around*|(|\<psi\>\<circ\>\<varphi\>|)><around*|(|y|)>|)>=d<rsub|Z><around*|(|\<psi\><around*|(|\<varphi\><around*|(|x|)>|)>,\<psi\><around*|(|\<varphi\><around*|(|y|)>|)>|)>=d<rsub|Y><around*|(|\<varphi\><around*|(|x|)>,\<varphi\><around*|(|y|)>|)>=d<rsub|X><around*|(|x,y|)>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|metric ball image preimage>Let
+    <math|<around*|\<langle\>|X,d<rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,d<rsub|Y>|\<rangle\>>> be two metric spaces
+    and <math|\<varphi\>:X\<rightarrow\>Y> a isometry then we have:
+
+    <\enumerate>
+      <item><math|\<forall\>x\<in\>X>, <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+      we have <math|\<varphi\><around*|(|B<rsub|d<rsub|X>><around*|(|x,\<varepsilon\>|)>|)>=B<rsub|d<rsub|Y>><around*|(|\<varphi\><around*|(|x|)>,\<varepsilon\>|)>>
+
+      <item><math|\<forall\>x\<in\>Y>, <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+      we have <math|\<varphi\><rsup|-1><around*|(|B<rsub|d<rsub|Y>><around*|(|y,\<varepsilon\>|)>|)>=B<rsub|d<rsub|X>><around*|(|\<varphi\><rsup|-1><around*|(|y|)>,\<varepsilon\>|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|y\<in\>\<varphi\><around*|(|B<rsub|d<rsub|X>><around*|(|x,\<varepsilon\>|)>|)>>
+      then there exist a <math|z\<in\>B<rsub|d<rsub|X>><around*|(|x,\<varepsilon\>|)>>
+      such that <math|y=\<varphi\><around*|(|z|)>>, hence
+      <math|d<rsub|X><around*|(|x,z|)>\<less\>\<varepsilon\>> or as
+      <math|\<varphi\>> is a isometry <math|d<rsub|Y><around*|(|\<varphi\><around*|(|x|)>,y|)>=d<rsub|Y><around*|(|\<varphi\><around*|(|x|)>,\<varphi\><around*|(|z|)>|)>=d<rsub|X><around*|(|x,z|)>\<less\>\<varepsilon\>>,
+      proving that <math|y\<in\>B<rsub|d<rsub|Y>><around*|(|\<varphi\><around*|(|x|)>,\<varepsilon\>|)>>.
+      On the other hand if <math|y\<in\>B<rsub|d<rsub|Y>><around*|(|\<varphi\><around*|(|x|)>,\<varepsilon\>|)>>
+      then <math|d<rsub|Y><around*|(|\<varphi\><around*|(|x|)>,y|)>\<less\>\<varepsilon\>>,
+      hence <math|><math|d<rsub|X><around*|(|x,\<varphi\><rsup|-1><around*|(|y|)>|)>=d<rsub|Y><around*|(|\<varphi\><around*|(|x|)>,\<varphi\><around*|(|\<varphi\><rsup|-1><around*|(|y|)>|)>|)>\<less\>\<varepsilon\>>
+      so that <math|\<varphi\><rsup|-1><around*|(|y|)>\<in\>B<rsub|d<rsub|X>><around*|(|x,\<varepsilon\>|)>>.
+
+      <item>As <math|\<psi\>=\<varphi\><rsup|-1>:Y\<rightarrow\>X> is also a
+      isometry we have\ 
+
+      <\equation*>
+        B<rsub|d<rsub|X>><around*|(|\<varphi\><rsup|-1><around*|(|y|)>,\<varepsilon\>|)>=B<rsub|d<rsub|X>><around*|(|\<psi\><around*|(|y|)>,\<varepsilon\>|)>=\<psi\><around*|(|B<rsub|d<rsub|Y>><around*|(|y,\<varepsilon\>|)>|)>=\<varphi\><rsup|-1><around*|(|B<rsub|d<rsub|Y>><around*|(|y,\<varepsilon\>|)>|)>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|metrix isometry and topologies>Let
+    <math|<around*|\<langle\>|X,d<rsub|x>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,d<rsub|Y>|\<rangle\>>> be two pseudo metrix
+    spaces and <math|\<varphi\>:X\<rightarrow\>Y> a isometry. Then\ 
+
+    <\enumerate>
+      <item><math|\<cal-T\><rsub|d<rsub|X>>=<around*|{|\<varphi\><rsup|-1><around*|(|V|)>\|V\<in\>\<cal-T\><rsub|d<rsub|Y>>|}>=<around*|{|U\<subseteq\>X\|\<varphi\><around*|(|U|)>\<in\>\<cal-T\><rsub|d<rsub|Y>>|}>>
+
+      <item><math|\<cal-T\><rsub|d<rsub|Y>>=<around*|{|\<varphi\><around*|(|U|)>\|U\<in\>\<cal-T\><rsub|d<rsub|X>>|}>=<around*|{|V\<subseteq\>Y\|\<varphi\><rsup|-1><around*|(|V|)>\<in\>\<cal-T\><rsub|d<rsub|X>>|}>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|U\<in\><around*|{|\<varphi\><rsup|-1><around*|(|V|)>\|V\<in\>\<cal-T\><rsub|d<rsub|Y>>|}>>
+      then there exist a <math|V\<in\>\<cal-T\><rsub|d<rsub|Y>>> such that
+      <math|U=\<varphi\><rsup|-1><around*|(|V|)>>, hence
+      <math|\<varphi\><around*|(|U|)>=V\<in\>\<cal-T\><rsub|d<rsub|Y>>>
+      proving that\ 
+
+      <\equation>
+        <label|eq 14.15.146><around*|{|\<varphi\><rsup|-1><around*|(|V|)>\|V\<in\>\<cal-T\><rsub|d<rsub|Y>>|}>\<subseteq\><around*|{|U\<subseteq\>X\|\<varphi\><around*|(|U|)>\<in\>\<cal-T\><rsub|d<rsub|Y>>|}>
+      </equation>
+
+      If <math|U\<in\><around*|{|U\<subseteq\>X\|\<varphi\><around*|(|U|)>\<in\>\<cal-T\><rsub|d<rsub|Y>>|}>>
+      then <math|\<varphi\><around*|(|U|)>\<in\>\<cal-T\><rsub|d<rsub|Y>>>
+      so, as <math|U=\<varphi\><rsup|-1><around*|(|\<varphi\><around*|(|U|)>|)>>,
+      we have <math|U\<in\><around*|{|\<varphi\><rsup|-1><around*|(|V|)>\|V\<in\>\<cal-T\><rsub|d<rsub|Y>>|}>>,
+      proving that <math|<around*|{|U\<subseteq\>X\|\<varphi\><around*|(|U|)>\<in\>\<cal-T\><rsub|d<rsub|Y>>|}>>.
+      Combining this with [eq: <reference|eq 14.15.146>] proves that\ 
+
+      <\equation>
+        <label|eq 14.16.146><around*|{|\<varphi\><rsup|-1><around*|(|V|)>\|V\<in\>\<cal-T\><rsub|d<rsub|Y>>|}>=<around*|{|U\<subseteq\>X\|\<varphi\><around*|(|U|)>\<in\>\<cal-T\><rsub|d<rsub|Y>>|}>
+      </equation>
+
+      Let <math|U\<in\>\<cal-T\><rsub|d<rsub|X>>> and take
+      <math|y\<in\>\<varphi\><around*|(|U|)>> then <math|\<exists\>x\<in\>U>
+      such that <math|y=\<varphi\><around*|(|x|)>>. Using [theorem:
+      <reference|metric topology (1)>] there exist a
+      <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|x\<in\>B<rsub|d<rsub|X>><around*|(|x,\<varepsilon\>|)>\<subseteq\>U>
+      hence
+
+      <\equation*>
+        y=\<varphi\><around*|(|x|)>\<in\>\<varphi\><around*|(|B<rsub|d<rsub|X>><around*|(|x,\<varepsilon\>|)>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|metric ball image preimage>]>>B<rsub|d<rsub|Y>><around*|(|\<varphi\><around*|(|x|)>,\<varepsilon\>|)>\<subseteq\>\<varphi\><around*|(|U|)>
+      </equation*>
+
+      Hence using [theorem: <reference|metric topology (1)>] it follows that
+      <math|\<varphi\><around*|(|U|)>\<in\>\<cal-T\><rsub|d<rsub|Y>>> hence
+      <math|U\<in\><around*|{|U\<subseteq\>X\|\<varphi\><around*|(|U|)>\<in\>\<cal-T\><rsub|d<rsub|Y>>|}>>
+      proving that\ 
+
+      <\equation>
+        <label|eq 14.17.146>\<cal-T\><rsub|d<rsub|X>>\<subseteq\><around*|{|U\<subseteq\>X\|\<varphi\><around*|(|U|)>\<in\>\<cal-T\><rsub|d<rsub|Y>>|}>
+      </equation>
+
+      Let <math|U\<in\><around*|{|\<varphi\><rsup|-1><around*|(|V|)>\|V\<in\>\<cal-T\><rsub|d<rsub|Y>>|}>>
+      and <math|x\<in\>U> then there exist a
+      <math|V\<in\>\<cal-T\><rsub|d<rsub|Y>>> such that
+      <math|x\<in\>U=\<varphi\><rsup|-1><around*|(|V|)>\<Rightarrow\>\<varphi\><around*|(|x|)>\<in\>V>.
+      As <math|\<varphi\><around*|(|V|)>> is open there exist by [theorem:
+      <reference|metric topology (1)>] a <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+      such that <math|\<varphi\><around*|(|x|)>\<in\>B<rsub|d<rsub|<rsub|Y>>><around*|(|\<varphi\><around*|(|x|)>,\<varepsilon\>|)>\<subseteq\>\<varphi\><around*|(|V|)>>.
+      Hence\ 
+
+      \;
+
+      <\equation*>
+        x=\<varphi\><rsup|-1><around*|(|\<varphi\><around*|(|x|)>|)>\<in\>\<varphi\><rsup|-1><around*|(|B<rsub|d<rsub|Y>><around*|(|\<varphi\><around*|(|x|)>,\<varepsilon\>|)>|)>=B<rsub|d<rsub|X>><around*|(|\<varphi\><rsup|-1><around*|(|\<varphi\><around*|(|x|)>|)>,\<varepsilon\>|)>=B<rsub|d<rsub|X>><around*|(|x,\<varepsilon\>|)>\<subseteq\>\<varphi\><rsup|-1><around*|(|\<varphi\><around*|(|x|)>|)>=V
+      </equation*>
+
+      proving by [theorem: <reference|metric topology (1)>] that
+      <math|U\<in\>\<cal-T\><rsub|d<rsub|X>>>. Hence
+      <math|<around*|{|\<varphi\><rsup|-1><around*|(|V|)>\|V\<in\>\<cal-T\><rsub|d<rsub|Y>>|}>\<subseteq\>\<cal-T\><rsub|d<rsub|X>>>
+      so that by [eqs: <reference|eq 14.16.146> and <reference|eq 14.17.146>]
+      we have\ 
+
+      <\equation*>
+        \<cal-T\><rsub|d<rsub|X>>\<subseteq\><around*|{|U\<subseteq\>X\|\<varphi\><around*|(|U|)>\<in\>\<cal-T\><rsub|d<rsub|Y>>|}>=<around*|{|\<varphi\><rsup|-1><around*|(|V|)>\|V\<in\>\<cal-T\><rsub|d<rsub|Y>>|}>\<subseteq\>\<cal-T\><rsub|d<rsub|X>>
+      </equation*>
+
+      or
+
+      <\equation*>
+        \<cal-T\><rsub|d<rsub|X>>=<around*|{|U\<subseteq\>X\|\<varphi\><around*|(|U|)>\<in\>\<cal-T\><rsub|d<rsub|Y>>|}>=<around*|{|\<varphi\><rsup|-1><around*|(|V|)>\|V\<in\>\<cal-T\><rsub|d<rsub|Y>>|}>
+      </equation*>
+
+      <item>As <math|\<psi\>:Y\<rightarrow\>X> where
+      <math|\<psi\>=\<varphi\><rsup|-1>> is a isometry it follows from (1)
+      that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<cal-T\><rsub|d<rsub|Y>>>|<cell|=>|<cell|<around*|{|U\<subseteq\>Y\|\<psi\><around*|(|U|)>\<in\>\<cal-T\><rsub|d<rsub|X>>|}>>>|<row|<cell|>|<cell|=>|<cell|<around*|{|U\<subseteq\>Y\|\<varphi\><rsup|-1><around*|(|U|)>\<in\>\<cal-T\><rsub|d<rsub|X>>|}>>>|<row|<cell|\<cal-T\><rsub|d<rsub|Y>>>|<cell|=>|<cell|<around*|{|\<psi\><rsup|-1><around*|(|V|)>\|V\<in\>\<cal-T\><rsub|d<rsub|X>>|}>>>|<row|<cell|>|<cell|=>|<cell|<around*|{|\<varphi\><around*|(|V|)>\|V\<in\>\<cal-T\><rsub|d<rsub|X>>|}>>>>>
+      </eqnarray*>
+
+      hence\ 
+
+      <\equation*>
+        \<cal-T\><rsub|d<rsub|Y>>=<around*|{|U\<subseteq\>Y\|\<varphi\><rsup|-1><around*|(|U|)>\<in\>\<cal-T\><rsub|d<rsub|X>>|}>=<around*|{|\<varphi\><around*|(|V|)>\|V\<in\>\<cal-T\><rsub|d<rsub|X>>|}>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  <\definition>
+    <label|metric bounded set><index|bounded set><index|diameter of a bounded
+    set><index|<math|diam<around*|(|A|)>>>Let
+    <math|<around*|\<langle\>|X,d|\<rangle\>>> be a pseudo metrix space and
+    <math|A\<subseteq\>X> then <math|A><with|font-series|bold| is bounded> if
+
+    <\equation*>
+      \<exists\>M\<in\>\<bbb-R\><text| such that >\<forall\>x,y\<in\>A<text|
+      we have >d<around*|(|x,y|)>\<leqslant\>M
+    </equation*>
+
+    If <math|A> is bounded and non empty then, as
+    <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>> is
+    conditional complete [see theorem: <reference|complex RC is conditional
+    complete>],
+
+    <\equation*>
+      sup<around*|(|<around*|{|d<around*|(|x,y|)>\|x,y\<in\>A|}>|)>
+    </equation*>
+
+    exists for a bounded set, the <with|font-series|bold|diameter of
+    <math|A>> noted as <math|diam<around*|(|A|)>> is then defined by\ 
+
+    <\equation*>
+      diam<around*|(|A|)>=sup<around*|(|<around*|{|d<around*|(|x,y|)>\|x,y\<in\>A|}>|)>
+    </equation*>
+  </definition>
+
+  <\theorem>
+    <label|metric bounded set inclusion>Let
+    <math|<around*|\<langle\>|X,d|\<rangle\>>> and <math|U\<subseteq\>X> a
+    bounded set then every subset of <math|U> is also bounded.
+  </theorem>
+
+  <\proof>
+    As <math|U> is bounded there exist a <math|M\<in\>\<bbb-R\><rsup|+>> such
+    that <math|\<forall\>x,y\<in\>U> we have
+    <math|d<around*|(|x,y|)>\<leqslant\>M>. Let <math|V\<subseteq\>U> then
+    <math|\<forall\>x,y\<in\>V> we have as <math|V\<subseteq\>U> that
+    <math|x,y\<in\>U> hence <math|d<around*|(|x,y|)>\<leqslant\>M>, proving
+    that <math|V> is bounded.
+  </proof>
+
+  <\theorem>
+    <label|metric closed open balls are bounded>Let
+    <math|<around*|\<langle\>|X,d|\<rangle\>>> be a pseudo metric space then
+    <math|\<forall\>x\<in\>X>, <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+    we have that\ 
+
+    <\equation*>
+      B<rsub|d><around*|(|x,\<varepsilon\>|)><text| and
+      ><wide|B<rsub|d><around*|(|x\<comma\>\<varepsilon\>|)>|\<wide-bar\>><text|
+      are bounded>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Let <math|y,z\<in\><wide|B<rsub|d><around*|(|x,\<varepsilon\>|)>|\<wide-bar\>>>
+    then <math|d<around*|(|y,z|)>\<leqslant\>d<around*|(|y,x|)>+d<around*|(|x,z|)>\<leqslant\>\<varepsilon\>+\<varepsilon\>=2\<cdot\>\<varepsilon\>>
+    proving that <math|<wide|B<rsub|d><around*|(|x,\<varepsilon\>|)>|\<wide-bar\>>>
+    is bounded. Further as <math|B<rsub|d><around*|(|x,\<varepsilon\>|)>\<subseteq\><wide|B<rsub|d><around*|(|x,\<varepsilon\>|)>|\<wide-bar\>>>
+    it follows from [theorem: <reference|metric bounded set inclusion>] that
+    <math|B<rsub|d><around*|(|x,\<varepsilon\>|)>> is also bounded.
+  </proof>
+
+  \;
+
   \;
 
   \;
@@ -2356,17 +2782,22 @@
     <associate|auto-10|<tuple|<with|mode|<quote|math>|A<rprime|'>>|642>>
     <associate|auto-11|<tuple|14.1.2|643>>
     <associate|auto-12|<tuple|box topology|646>>
-    <associate|auto-13|<tuple|14.1.3|?>>
-    <associate|auto-14|<tuple|dense set|?>>
-    <associate|auto-15|<tuple|14.2|?>>
-    <associate|auto-16|<tuple|pseudo metric space|?>>
-    <associate|auto-17|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|X,d|\<rangle\>>>|?>>
-    <associate|auto-18|<tuple|metric space|?>>
-    <associate|auto-19|<tuple|open ball|?>>
+    <associate|auto-13|<tuple|14.1.3|651>>
+    <associate|auto-14|<tuple|dense set|651>>
+    <associate|auto-15|<tuple|14.2|652>>
+    <associate|auto-16|<tuple|pseudo metric space|652>>
+    <associate|auto-17|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|X,d|\<rangle\>>>|652>>
+    <associate|auto-18|<tuple|metric space|652>>
+    <associate|auto-19|<tuple|open ball|653>>
     <associate|auto-2|<tuple|14.1|637>>
-    <associate|auto-20|<tuple|<with|mode|<quote|math>|B<rsub|d><around*|(|x,\<varepsilon\>|)>>|?>>
-    <associate|auto-21|<tuple|closed ball|?>>
-    <associate|auto-22|<tuple|<with|mode|<quote|math>|<wide|B<rsub|d><around*|(|x,\<varepsilon\>|)>|\<wide-bar\>>>|?>>
+    <associate|auto-20|<tuple|<with|mode|<quote|math>|B<rsub|d><around*|(|x,\<varepsilon\>|)>>|653>>
+    <associate|auto-21|<tuple|closed ball|653>>
+    <associate|auto-22|<tuple|<with|mode|<quote|math>|<wide|B<rsub|d><around*|(|x,\<varepsilon\>|)>|\<wide-bar\>>>|653>>
+    <associate|auto-23|<tuple|equivalent pseudo metrics|?>>
+    <associate|auto-24|<tuple|isometry|?>>
+    <associate|auto-25|<tuple|bounded set|?>>
+    <associate|auto-26|<tuple|diameter of a bounded set|?>>
+    <associate|auto-27|<tuple|<with|mode|<quote|math>|diam<around*|(|A|)>>|?>>
     <associate|auto-3|<tuple|interior|640>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|A<rsup|\<circ\>>>|640>>
     <associate|auto-5|<tuple|14.1.1|640>>
@@ -2377,35 +2808,51 @@
     <associate|closed set properties|<tuple|14.19|641>>
     <associate|eq 14.1.145|<tuple|14.1|642>>
     <associate|eq 14.10.146|<tuple|14.10|649>>
-    <associate|eq 14.11.146|<tuple|14.11|649>>
-    <associate|eq 14.12.146|<tuple|14.12|?>>
+    <associate|eq 14.11.146|<tuple|14.11|650>>
+    <associate|eq 14.12.146|<tuple|14.12|651>>
+    <associate|eq 14.13.146|<tuple|14.13|655>>
+    <associate|eq 14.14.146|<tuple|14.14|655>>
+    <associate|eq 14.15.146|<tuple|14.15|?>>
+    <associate|eq 14.16.146|<tuple|14.16|?>>
+    <associate|eq 14.17.146|<tuple|14.17|?>>
     <associate|eq 14.2.145|<tuple|14.2|643>>
     <associate|eq 14.3.146|<tuple|14.3|648>>
     <associate|eq 14.4.146|<tuple|14.4|648>>
-    <associate|eq 14.5.146|<tuple|14.5|648>>
-    <associate|eq 14.6.146|<tuple|14.6|648>>
+    <associate|eq 14.5.146|<tuple|14.5|649>>
+    <associate|eq 14.6.146|<tuple|14.6|649>>
     <associate|eq 14.7.146|<tuple|14.7|649>>
     <associate|eq 14.8.146|<tuple|14.8|649>>
     <associate|eq 14.9.146|<tuple|14.9|649>>
-    <associate|metric closed ball|<tuple|14.51|?>>
-    <associate|metric closed balls are closed|<tuple|14.56|?>>
-    <associate|metric open ball|<tuple|14.50|?>>
-    <associate|metric open ball and intersection|<tuple|14.52|?>>
-    <associate|metric pseudo metric space|<tuple|14.47|?>>
-    <associate|metric refinement of a ball|<tuple|14.53|?>>
-    <associate|metric space|<tuple|14.49|?>>
-    <associate|metric space metric is positive|<tuple|14.49|?>>
-    <associate|metric topology|<tuple|14.54|?>>
-    <associate|metric topology (1)|<tuple|14.55|?>>
-    <associate|pseudo metric space|<tuple|14.47|?>>
+    <associate|metric ball image preimage|<tuple|14.63|?>>
+    <associate|metric bounded set|<tuple|14.65|?>>
+    <associate|metric bounded set inclusion|<tuple|14.66|?>>
+    <associate|metric closed ball|<tuple|14.51|653>>
+    <associate|metric closed balls are closed|<tuple|14.56|654>>
+    <associate|metric closed open balls are bounded|<tuple|14.67|?>>
+    <associate|metric composition of isometries|<tuple|14.62|?>>
+    <associate|metric equivalent metrics|<tuple|14.58|?>>
+    <associate|metric equivalent metrics condition|<tuple|14.59|?>>
+    <associate|metric isometry|<tuple|14.60|?>>
+    <associate|metric isometry and its inverse|<tuple|14.61|?>>
+    <associate|metric open ball|<tuple|14.50|653>>
+    <associate|metric open ball and intersection|<tuple|14.52|653>>
+    <associate|metric pseudo metric space|<tuple|14.47|652>>
+    <associate|metric refinement of a ball|<tuple|14.53|653>>
+    <associate|metric space|<tuple|14.48|652>>
+    <associate|metric space metric is positive|<tuple|14.49|652>>
+    <associate|metric topology|<tuple|14.54|653>>
+    <associate|metric topology (1)|<tuple|14.55|654>>
+    <associate|metrix ball image preimage|<tuple|14.63|?>>
+    <associate|metrix isometry and topologies|<tuple|14.64|?>>
+    <associate|metrix subtopology|<tuple|14.57|654>>
     <associate|topology and complement closed sets|<tuple|14.18|641>>
     <associate|topology basis|<tuple|14.28|643>>
     <associate|topology basis alternative definition|<tuple|14.30|644>>
     <associate|topology basis and super basis|<tuple|14.31|644>>
     <associate|topology basis generating|<tuple|14.35|645>>
     <associate|topology basis of a subspace topology|<tuple|14.29|643>>
-    <associate|topology basis of the product topology|<tuple|14.41|649>>
-    <associate|topology basis properties|<tuple|14.34|644>>
+    <associate|topology basis of the product topology|<tuple|14.41|650>>
+    <associate|topology basis properties|<tuple|14.34|645>>
     <associate|topology biggest open subset|<tuple|14.13|640>>
     <associate|topology box|<tuple|14.37|646>>
     <associate|topology box topology and bases|<tuple|14.38|647>>
@@ -2419,14 +2866,15 @@
     <associate|topology closure of a set|<tuple|14.20|642>>
     <associate|topology closure of a set alternative|<tuple|14.22|642>>
     <associate|topology coarse|<tuple|14.3|637>>
-    <associate|topology dense set|<tuple|14.43|?>>
-    <associate|topology dense set alternative|<tuple|14.44|?>>
-    <associate|topology dense set alternative (1)|<tuple|14.45|?>>
-    <associate|topology dense set alternative (2)|<tuple|14.46|?>>
-    <associate|topology dense set property|<tuple|14.46|?>>
+    <associate|topology dense set|<tuple|14.43|651>>
+    <associate|topology dense set alternative|<tuple|14.44|651>>
+    <associate|topology dense set alternative (1)|<tuple|14.45|651>>
+    <associate|topology dense set property|<tuple|14.46|652>>
     <associate|topology discrete|<tuple|14.4|638>>
     <associate|topology empty set|<tuple|14.2|637>>
-    <associate|topology finer and basis|<tuple|14.32|?>>
+    <associate|topology equivalent metrics|<tuple|14.58|?>>
+    <associate|topology equivalent metrics condition|<tuple|14.59|?>>
+    <associate|topology finer and basis|<tuple|14.32|644>>
     <associate|topology finer topology|<tuple|14.5|638>>
     <associate|topology finite intersection|<tuple|14.6|638>>
     <associate|topology interior of a set|<tuple|14.11|640>>
@@ -2434,7 +2882,7 @@
     <associate|topology open set and interior|<tuple|14.14|640>>
     <associate|topology open set condition|<tuple|14.7|638>>
     <associate|topology product|<tuple|14.39|647>>
-    <associate|topology product alternative definition|<tuple|14.40|647>>
+    <associate|topology product alternative definition|<tuple|14.40|648>>
     <associate|topology product topology and box topology are the same in the
     finite case|<tuple|14.42|650>>
     <associate|topology space|<tuple|14.1|637>>
@@ -2463,6 +2911,22 @@
       <tuple|<tuple|<with|mode|<quote|math>|A<rprime|'>>>|<pageref|auto-10>>
 
       <tuple|<tuple|box topology>|<pageref|auto-12>>
+
+      <tuple|<tuple|dense set>|<pageref|auto-14>>
+
+      <tuple|<tuple|pseudo metric space>|<pageref|auto-16>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|X,d|\<rangle\>>>>|<pageref|auto-17>>
+
+      <tuple|<tuple|metric space>|<pageref|auto-18>>
+
+      <tuple|<tuple|open ball>|<pageref|auto-19>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|B<rsub|d><around*|(|x,\<varepsilon\>|)>>>|<pageref|auto-20>>
+
+      <tuple|<tuple|closed ball>|<pageref|auto-21>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|<wide|B<rsub|d><around*|(|x,\<varepsilon\>|)>|\<wide-bar\>>>>|<pageref|auto-22>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|14<space|2spc>Topology>
@@ -2479,6 +2943,13 @@
       <with|par-left|<quote|1tab>|14.1.2<space|2spc>Basis of a topological
       space <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-11>>
+
+      <with|par-left|<quote|1tab>|14.1.3<space|2spc>Dense sets
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-13>>
+
+      14.2<space|2spc>Metric spaces <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-15>
     </associate>
   </collection>
 </auxiliary>
