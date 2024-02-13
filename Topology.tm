@@ -2586,7 +2586,7 @@
   <\theorem>
     <label|metrix isometry and topologies>Let
     <math|<around*|\<langle\>|X,d<rsub|x>|\<rangle\>>>,
-    <math|<around*|\<langle\>|Y,d<rsub|Y>|\<rangle\>>> be two pseudo metrix
+    <math|<around*|\<langle\>|Y,d<rsub|Y>|\<rangle\>>> be two pseudo metric
     spaces and <math|\<varphi\>:X\<rightarrow\>Y> a isometry. Then\ 
 
     <\enumerate>
@@ -2720,8 +2720,9 @@
 
   <\theorem>
     <label|metric bounded set inclusion>Let
-    <math|<around*|\<langle\>|X,d|\<rangle\>>> and <math|U\<subseteq\>X> a
-    bounded set then every subset of <math|U> is also bounded.
+    <math|<around*|\<langle\>|X,d|\<rangle\>>> a pseudo metric space and
+    <math|U\<subseteq\>X> a bounded set then every subset of <math|U> is also
+    bounded.
   </theorem>
 
   <\proof>
@@ -2755,6 +2756,545 @@
     <math|B<rsub|d><around*|(|x,\<varepsilon\>|)>> is also bounded.
   </proof>
 
+  <\theorem>
+    <label|metric product topology>Let <math|<around*|{|<around*|\<langle\>|X<rsub|i>,d<rsub|i>|\<rangle\>>|}><rsub|i\<in\>I>>
+    be a <with|font-series|bold|finite> family of pseudo metric spaces then
+    for
+
+    <\equation*>
+      d:<around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)>\<times\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)>\<rightarrow\>\<bbb-R\><text|
+      defined by >d<around*|(|x,y|)>=max<around*|(|<around*|{|d<rsub|i><around*|(|\<pi\><rsub|i><around*|(|x|)>,\<pi\><rsub|i><around*|(|y|)>|)>\|i\<in\>I|}>|)>
+    </equation*>
+
+    where <math|\<forall\>i\<in\>I>
+
+    <\equation*>
+      \<pi\><rsub|i>:<big|prod><rsub|j\<in\>I>X<rsub|j>\<rightarrow\>X<rsub|i><text|
+      is defined by >\<pi\><rsub|i><around*|(|x|)>=x<around*|(|i|)>\<equallim\><rsub|note>x<rsub|i><text|
+      is the projection mapping>
+    </equation*>
+
+    we have:\ 
+
+    <\enumerate>
+      <item><math|<around*|\<langle\>|<big|prod><rsub|i\<in\>I>X<rsub|i>,d|\<rangle\>>>
+      is a pseudo metric space.
+
+      <item>If <math|\<forall\>i\<in\>I> <math|<around*|\<langle\>|X<rsub|i>,d<rsub|i>|\<rangle\>>>
+      is a metric space then <math|<around*|\<langle\>|<big|prod><rsub|i\<in\>I>X<rsub|i>,d|\<rangle\>>>
+      is a metric space
+
+      <item><math|\<cal-T\><rsub|d>=\<cal-T\><rsub|box>=\<cal-T\><rsub|product>>
+      [the metric topology is equal to the box and product topology of
+      <math|<big|prod><rsub|i\<in\>I>X<rsub|i>>.
+    </enumerate>
+
+    <\note>
+      As <math|I> is finite by <math|max<around*|(|<around*|{|d<rsub|i><around*|(|\<pi\><rsub|i><around*|(|x|)>,\<pi\><rsub|i><around*|(|y|)>|)>\|i\<in\>I|}>|)>>
+      exist by [theorem: <reference|finite ordered sets have a maximum and
+      minimum>].
+    </note>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|x,y,z\<in\><big|prod><rsub|i\<in\>I>X<rsub|i>> then
+
+      <\enumerate>
+        <item><math|d<around*|(|x,x|)>=max<around*|(|<around*|{|d<rsub|i><around*|(|\<pi\><rsub|i><around*|(|x|)>,\<pi\><rsub|i><around*|(|x|)>|)>\|i\<in\>I|}>|)>=max<around*|(|<around*|{|0|}>|)>=0>
+
+        <item><math|d<around*|(|x,y|)>=max<around*|(|<around*|{|d<rsub|i><around*|(|\<pi\><rsub|i><around*|(|x|)>.\<pi\><rsub|i><around*|(|y|)>|)>|}>\|i\<in\>I|)>=max<around*|(|<around*|{|d<rsub|i><around*|(|\<pi\><rsub|i><around*|(|y|)>.\<pi\><rsub|i><around*|(|x|)>|)>\|i\<in\>I|}>|)>=d<around*|(|y,x|)>>
+
+        <item>We have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|d<around*|(|x,z|)>>|<cell|=>|<cell|max<around*|(|<around*|{|d<rsub|i><around*|(|\<pi\><rsub|i><around*|(|x|)>,\<pi\><rsub|i><around*|(|z|)>|)>\|i\<in\>I|}>|)>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[theorem:
+          <reference|order maximum of class with bigger
+          elements>]>>>|<cell|max<around*|(|<around*|{|d<rsub|i><around*|(|\<pi\><rsub|i><around*|(|x|)>,\<pi\><rsub|i><around*|(|y|)>|)>+d<around*|(|\<pi\><rsub|i><around*|(|y|)>,\<pi\><rsub|i><around*|(|z|)>|)>\|i\<in\>I|}>|)>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[theorem:
+          <reference|order maximum of class with bigger
+          elements>]>>>|<cell|max<around*|(|<around*|{|max<around*|(|<around*|{|d<rsub|i><around*|(|\<pi\><rsub|i><around*|(|x|)>,\<pi\><rsub|i><around*|(|y|)>|)>\|i\<in\>I|}>|)>+d<around*|(|\<pi\><rsub|i><around*|(|y|)>,\<pi\><rsub|i><around*|(|z|)>|)>\|i\<in\>I|}>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|complex max(S+s), min(S+s)>]>>>|<cell|max<around*|(|<around*|{|d<rsub|i><around*|(|\<pi\><rsub|i><around*|(|x|)>,\<pi\><rsub|i><around*|(|y|)>|)>\|i\<in\>I|}>|)>+max<around*|(|<around*|{|d<around*|(|\<pi\><rsub|i><around*|(|y|)>,\<pi\><rsub|i><around*|(|z|)>|)>\|i\<in\>I|}>|)>>>|<row|<cell|>|<cell|=>|<cell|d<around*|(|x,y|)>+d<around*|(|y,z|)>>>>>
+        </eqnarray*>
+      </enumerate>
+
+      <item>Let <math|d<around*|(|x,y|)>=0> then as <math|\<forall\>i\<in\>I>
+      we have\ 
+
+      <\equation*>
+        0\<leqslant\>d<rsub|i><around*|(|\<pi\><rsub|i><around*|(|x|)>,\<pi\><rsub|i><around*|(|y|)>|)>\<leqslant\>max<around*|(|<around*|{|d<rsub|i><around*|(|\<pi\><rsub|i><around*|(|x|)>,\<pi\><rsub|i><around*|(|y|)>|)>\|i\<in\>I|}>=|\<nobracket\>>d<around*|(|x,y|)>=0
+      </equation*>
+
+      hence <math|d<rsub|i><around*|(|\<pi\><rsub|i><around*|(|x|)>,\<pi\><rsub|i><around*|(|y|)>|)>=0>,
+      giving, as <math|d<rsub|i>> is a metric, that
+      <math|\<pi\><rsub|i><around*|(|x|)>=\<pi\><rsub|i><around*|(|y|)>\<Rightarrow\>x<around*|(|i|)>=y<around*|(|i|)>>
+      proving that <math|x=y>.
+
+      <item>As <math|I> is finite we have by [theorem: <reference|topology
+      product topology and box topology are the same in the finite case>]
+      that\ 
+
+      <\equation>
+        <label|eq 14.18.146>\<cal-T\><rsub|box>=\<cal-T\><rsub|product>
+      </equation>
+
+      The bases of <math|\<cal-T\><rsub|d>> and <math|\<cal-T\><rsub|box>>
+      are [see definitions: <reference|metric topology>, <reference|topology
+      box topology and bases>]
+
+      <\equation*>
+        \<cal-B\><rsub|d>=<around*|{|B<rsub|d><around*|(|x,\<varepsilon\>|)>\|x\<in\>X\<wedge\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>|}>
+      </equation*>
+
+      and\ 
+
+      <\equation*>
+        \<cal-B\><rsub|box>=<around*|{|<big|prod><rsub|i\<in\>I>B<rsub|i>\|<around*|{|B<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)><text|
+        such that >\<forall\>i\<in\>I B<rsub|i>\<in\>\<cal-B\><rsub|d<rsub|i>>|}>
+      </equation*>
+
+      Let <math|x\<in\><big|prod><rsub|i\<in\>I>X<rsub|i>> and
+      <math|B\<in\>\<cal-B\><rsub|d>> such that <math|x\<in\>B>. Then there
+      exists a <math|y\<in\>X>, <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+      such that <math|x\<in\>B=B<rsub|d><around*|(|y,\<varepsilon\>|)>> or
+      using [theorem: <reference|metric refinement of a ball>] there exist a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that\ 
+
+      <\equation*>
+        x\<in\>B<rsub|d><around*|(|x,\<delta\>|)>\<subseteq\>B<rsub|d><around*|(|y,\<varepsilon\>|)>=B
+      </equation*>
+
+      Take <math|<big|prod><rsub|i\<in\>I>B<rsub|d<rsub|i>><around*|(|\<pi\><rsub|i><around*|(|x|)>,\<delta\>|)>\<in\>\<cal-B\><rsub|box>>
+      then, as <math|\<forall\>i\<in\>I> we have
+      <math|d<rsub|i><around*|(|\<pi\><rsub|i><around*|(|x|)>,\<pi\><rsub|i><around*|(|x<rsub|i>|)>|)>=0\<less\>\<delta\>>,
+      it follows that <math|\<pi\><rsub|i><around*|(|x|)>\<in\>B<rsub|d<rsub|i>>*<around*|(|\<pi\><rsub|i><around*|(|x|)>,\<delta\>|)>>,
+      proving\ 
+
+      <\equation*>
+        x\<in\><big|prod><rsub|i\<in\>I>B<rsub|d<rsub|i>><around*|(|\<pi\><rsub|i><around*|(|x|)>,\<delta\>|)>
+      </equation*>
+
+      Let <math|z\<in\><big|prod><rsub|i\<in\>I>B<rsub|d<rsub|i>><around*|(|\<pi\><rsub|i><around*|(|x|)>,\<delta\>|)>>
+      then <math|\<forall\>i\<in\>I> we have
+      <math|\<pi\><rsub|i><around*|(|z|)>\<in\>B<rsub|d<rsub|i>><around*|(|\<pi\><rsub|i><around*|(|x|)>,\<delta\>|)>>
+      so that <math|d<rsub|i><around*|(|\<pi\><rsub|i><around*|(|x|)>,\<pi\><rsub|i><around*|(|z|)>|)>\<less\>\<delta\>>.
+      Hence <math|d<around*|(|x,z|)>=max<around*|(|<around*|{|d<rsub|i><around*|(|\<pi\><rsub|i><around*|(|x|)>,\<pi\><rsub|i><around*|(|z|)>|)>\|i\<in\>I|}>|)>\<less\>\<delta\>>
+      which proves that <math|z\<in\>B<rsub|d><around*|(|x,\<delta\>|)>>,
+      giving
+
+      <\equation*>
+        <big|prod><rsub|i\<in\>I>B<rsub|d<rsub|i>><around*|(|\<pi\><rsub|i><around*|(|x|)>,\<delta\>|)>\<subseteq\>B<rsub|d><around*|(|x,\<delta\>|)>\<subseteq\>B
+      </equation*>
+
+      So if we take <math|B<rprime|'>=<big|prod><rsub|i\<in\>I>B<rsub|d<rsub|i>><around*|(|\<pi\><rsub|i><around*|(|x|)>,\<delta\>|)>\<in\>\<cal-B\><rsub|box>>
+      then we have
+
+      <\equation>
+        <label|eq 14.19.146>\<forall\>x\<in\><big|prod><rsub|i\<in\>I>X<rsub|i><text|
+        and >\<forall\>B\<in\>\<cal-B\><rsub|d><text| there exist a
+        >B<rprime|'>\<in\>\<cal-B\><rsub|box><text| such that
+        >x\<in\>B<rprime|'>\<subseteq\>B
+      </equation>
+
+      Let <math|x\<in\><big|prod><rsub|i\<in\>I>X<rsub|i>> and
+      <math|B\<in\>\<cal-B\><rsub|box>> such that <math|x\<in\>B>. Then
+      <math|B=<big|prod><rsub|i\<in\>I>B<rsub|i>> where
+      <math|\<forall\>i\<in\>I> <math|B<rsub|i>\<in\>\<cal-B\><rsub|d<rsub|i>>>,
+      so that <math|\<pi\><rsub|i><around*|(|x|)>\<in\>B<rsub|i>\<in\>\<cal-B\><rsub|d<rsub|i>>\<subseteq\>\<cal-T\><rsub|d<rsub|i>>>
+      hence by [theorem: <reference|metric topology (1)>] there exist a
+      <math|\<delta\><rsub|i>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|\<pi\><rsub|i><around*|(|x|)>\<in\>B<rsub|d<rsub|i>><around*|(|\<pi\><rsub|i><around*|(|x|)>|)>\<subseteq\>B<rsub|i>>.
+      Let <math|\<delta\>=min<around*|(|<around*|{|\<delta\><rsub|i>\|i\<in\>I|}>|)>\<in\>\<bbb-R\><rsup|+>>
+      [as <math|\<forall\>i\<in\>I> <math|0\<less\>\<delta\><rsub|i>>] then
+      for <math|z\<in\>B<rsub|d><around*|(|x,\<delta\>|)>> we have
+      <math|\<forall\>i\<in\>I> that <math|d<rsub|i><around*|(|\<pi\><rsub|i><around*|(|x|)>,\<pi\><rsub|i><around*|(|z|)>|)>\<leqslant\>max<around*|(|<around*|{|d<rsub|i><around*|(|\<pi\><rsub|i><around*|(|x|)>,\<pi\><rsub|i><around*|(|z|)>|)>|}>|)>=d<around*|(|x,z|)>\<less\>\<delta\>\<less\>\<delta\><rsub|i>>
+      so that <math|\<pi\><rsub|i><around*|(|z|)>\<in\>B<rsub|d<rsub|i>><around*|(|\<pi\><rsub|i><around*|(|x|)>|)>\<subseteq\>B<rsub|i>>.
+      Hence <math|z\<in\><big|prod><rsub|i\<in\>I>B<rsub|i>> proving that
+      <math|x\<in\>B<rsub|d><around*|(|x,\<delta\>|)>\<subseteq\><big|prod><rsub|i\<in\>I>B=B>.
+      So if we take <math|B<rprime|'>=B<rsub|d><around*|(|x,\<delta\>|)>\<in\>\<cal-B\><rsub|d>>
+      then we have:
+
+      <\equation>
+        <label|eq 14.20.146>\<forall\>x\<in\><big|prod><rsub|i\<in\>I>X<rsub|i><text|
+        and >\<forall\>B\<in\>\<cal-B\><rsub|box><text| there exist a
+        >B<rprime|'>\<in\>\<cal-B\><rsub|d><text| such that
+        >x\<in\>B<rprime|'>\<subseteq\>B
+      </equation>
+
+      Combining now [eqs: <reference|eq 14.19.146>, <reference|eq 14.20.146>]
+      with [theorem: <reference|topology finer and basis>] that\ 
+
+      <\equation*>
+        \<cal-T\><rsub|d>=\<cal-T\><rsub|box>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  For metric spaces we have a simple test to determine if a set is dense in a
+  topological space.
+
+  <\theorem>
+    <label|metric dense set>Let <math|<around*|\<langle\>|X,d|\<rangle\>>> a
+    pseudo metric space and <math|A\<subseteq\>X> then we have\ 
+
+    <\equation*>
+      A<text| is dense in >X<text| [using the metric topology
+      >\<cal-T\><rsub|d><text|]>
+    </equation*>
+
+    <\equation*>
+      \<Updownarrow\>
+    </equation*>
+
+    <\equation*>
+      \<forall\>x\<in\>X<text| we have >\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text|
+      there exist a >a\<in\>A<text| such that
+      >d<around*|(|x,a|)>\<less\>\<varepsilon\>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|x\<in\>X> then
+      <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|x\<in\>B<rsub|d><around*|(|x,\<varepsilon\>|)>> we have by
+      [theorem: <reference|topology dense set alternative (1)>] that
+      <math|\<exists\>a\<in\>A> such that
+      <math|a\<in\>B<rsub|d><around*|(|x,\<varepsilon\>|)>>, hence
+      <math|d<around*|(|x,a|)>\<less\>\<varepsilon\>>.
+
+      <item*|<math|\<Leftarrow\>>>Let <math|x\<in\>X> then if
+      <math|B\<in\>\<cal-B\><rsub|d>> such that <math|x\<in\>B>. As
+      <math|B\<in\>\<cal-B\><rsub|d>> there exists a <math|y\<in\>X> and a
+      <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|x\<in\>B=B<rsub|d><around*|(|y,\<varepsilon\>|)>>. By [theorem:
+      <reference|metric refinement of a ball>] there exist a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|x\<in\>B<rsub|d><around*|(|x,\<delta\>|)>\<subseteq\>B<rsub|d><around*|(|y,\<varepsilon\>|)>>.
+      By the hypotheses there exist a <math|a\<in\>A> such that
+      <math|d<around*|(|x,a|)>\<less\>\<delta\>> or
+      <math|a\<in\>B<rsub|d><around*|(|x,\<delta\>|)>\<subseteq\>B<rsub|d><around*|(|y,\<varepsilon\>|)>=B>.
+      So
+
+      <\equation*>
+        \<forall\>x\<in\>X<text| we have >\<forall\>B\<in\>\<cal-B\><rsub|d>
+        with x\<in\>B<text| there exist a >a\<in\>A<text| such that >a\<in\>B
+      </equation*>
+
+      Finally by [theorem: <reference|topology dense set alternative (1)>]
+      <math|A> is dense in <math|X>.
+    </description>
+  </proof>
+
+  <section|Normed space>
+
+  <\definition>
+    <label|normed pseudo norm><index|pseudo normed
+    space><index|<math|<around*|\<\|\|\>||\<\|\|\>>>><dueto|Pseudo Norm>A
+    pseudo normed space noted as <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    is a real [or complex] vector space <math|X> together with a function
+    <math|<around*|\<\|\|\>||\<\|\|\>>:X\<rightarrow\>\<bbb-R\>> called the
+    norm such that\ 
+
+    <\enumerate>
+      <item><math|\<forall\>x\<in\>X> we have
+      <math|0\<leqslant\><around*|\<\|\|\>|x|\<\|\|\>>>
+
+      <item><math|\<forall\>x\<in\>X>, <math|\<forall\>\<alpha\>\<in\>\<bbb-R\>>
+      [or <math|\<alpha\>\<in\>\<bbb-C\>>] we have
+      <math|<around*|\<\|\|\>|\<alpha\>\<cdot\>x|\<\|\|\>>=<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>>>
+
+      <item><math|\<forall\>x,y\<in\>X> we have
+      <math|<around*|\<\|\|\>|x+y|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x|\<\|\|\>>+<around*|\<\|\|\>|y|\<\|\|\>>>
+    </enumerate>
+  </definition>
+
+  <\definition>
+    <label|normed norm><dueto|Norm>A pseudo normed space
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> is
+    a normed space if we have also\ 
+
+    <\equation*>
+      \<forall\>x\<in\>X<text| with ><around*|\<\|\|\>|x|\<\|\|\>>=0<text| we
+      have >x=0
+    </equation*>
+  </definition>
+
+  <\theorem>
+    <label|normed norm of zero>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a pseudo normed space then <math|<around*|\<\|\|\>|0|\<\|\|\>>=0>
+  </theorem>
+
+  <\proof>
+    We have <math|<around*|\<\|\|\>|0|\<\|\|\>>=<around*|\<\|\|\>|0\<cdot\>0|\<\|\|\>>=<around*|\||0|\|>\<cdot\><around*|\<\|\|\>|0|\<\|\|\>>=0\<cdot\><around*|\<\|\|\>|0|\<\|\|\>>=0>
+  </proof>
+
+  <\theorem>
+    <label|normded triangle inequality>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
+    a pseudo normed space and <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>X>,
+    <math|I> finite then\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|<big|sum><rsub|i\<in\>I>x<rsub|i>|\<\|\|\>>\<leqslant\><big|sum><rsub|i\<in\>I><around*|\<\|\|\>|x<rsub|I>|\<\|\|\>>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    We first prove this for <math|I=<around*|{|1,\<ldots\>,n|}>>, so let
+
+    <\equation*>
+      \<cal-S\>=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|\<forall\><around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>X<text|
+      we have ><around*|\<\|\|\>|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i>|\<\|\|\>>\<leqslant\><big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x<rsub|I>|\<\|\|\>>|}>
+    </equation*>
+
+    then we have:\ 
+
+    <\description>
+      <item*|<math|0\<in\>S>>As <math|<around*|{|1,\<ldots\>,0|}>=\<varnothing\>>
+      we have
+
+      <\equation*>
+        <around*|\<\|\|\>|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,0|}>>x<rsub|i>|\<\|\|\>>=<around*|\<\|\|\>|<big|sum><rsub|i\<in\>\<varnothing\>>x<rsub|i>|\<\|\|\>>=<around*|\<\|\|\>|0|\<\|\|\>>=0=<big|sum><rsub|i\<in\>\<varnothing\>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,0|}>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>
+      </equation*>
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+      <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+|}>>\<subseteq\>X>
+      then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>x<rsub|i>|\<\|\|\>>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum over disjoint subsets>]>>>|<cell|<around*|\<\|\|\>|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i>+<big|sum><rsub|i\<in\><around*|{|n+1|}>>x<rsub|i>|\<\|\|\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum general single>]>>>|<cell|<around*|\<\|\|\>|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i>+x<rsub|n+1>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i>|\<\|\|\>>+<around*|\<\|\|\>|x<rsub|n+1>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\><rsub|n\<in\>S>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>+<around*|\<\|\|\>|x<rsub|n+1>|\<\|\|\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum general single>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>+<big|sum><rsub|i\<in\><around*|{|n+1|}>><around*|\<\|\|\>|x<rsub|n+1>|\<\|\|\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum over disjoint subsets>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>>>>>
+      </eqnarray*>
+
+      proving that <math|n+1\<in\>S>.
+    </description>
+
+    So mathematical induction proves that\ 
+
+    <\equation>
+      <label|eq 14.21.146>\<forall\>n\<in\>\<bbb-N\><rsub|0><text| we have if
+      ><around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>X<text|
+      that ><around*|\<\|\|\>|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i>|\<\|\|\>>\<leqslant\><big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>
+    </equation>
+
+    Let now <math|I> be a finite set and <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>X>
+    then there exist a bijection <math|\<beta\>:<around*|{|1,\<ldots\>,n|}>\<rightarrow\>I>
+    so that we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|<big|sum><rsub|i\<in\>I>x<rsub|i>|\<\|\|\>>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum bijection on index>]>>>|<cell|<around*|\<\|\|\>|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[eq:
+      <reference|eq 14.21.146>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum bijection on index>]>>>|<cell|<big|sum><rsub|i\<in\>I><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>>>>>
+    </eqnarray*>
+  </proof>
+
+  <\theorem>
+    <label|normed absolute value norm differences>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
+    a pseudo normed space then <math|\<forall\>x,y\<in\>X> we have\ 
+
+    <\equation*>
+      <around*|\||<around*|\<\|\|\>|x|\<\|\|\>>-<around*|\<\|\|\>|y|\<\|\|\>>|\|>\<leqslant\><around*|\<\|\|\>|x+y|\<\|\|\>>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    We have <math|<around*|\<\|\|\>|x|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x+y-y|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x+y|\<\|\|\>>+<around*|\<\|\|\>|y|\<\|\|\>>>
+    and <math|<around*|\<\|\|\>|y|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|y+x-x|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x+y|\<\|\|\>>+<around*|\<\|\|\>|x|\<\|\|\>>>
+    so that
+
+    <\equation*>
+      <around*|\<\|\|\>|x|\<\|\|\>>-<around*|\<\|\|\>|y|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x+y|\<\|\|\>><text|
+      and ><around*|\<\|\|\>|y|\<\|\|\>>-<around*|\<\|\|\>|x|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x+y|\<\|\|\>>
+    </equation*>
+
+    For <math|<around*|\<\|\|\>|x|\<\|\|\>>-<around*|\<\|\|\>|y|\<\|\|\>>> we
+    have either\ 
+
+    <\description>
+      <item*|<math|0\<leqslant\><around*|\<\|\|\>|x|\<\|\|\>>-<around*|\<\|\|\>|y|\<\|\|\>>>>Then
+      <math|<around*|\||<around*|\<\|\|\>|x|\<\|\|\>>-<around*|\<\|\|\>|y|\<\|\|\>>|\|>=<around*|\<\|\|\>|x|\<\|\|\>>-<around*|\<\|\|\>|y|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x+y|\<\|\|\>>>
+
+      <item*|<math|<around*|\<\|\|\>|x|\<\|\|\>>-<around*|\<\|\|\>|y|\<\|\|\>>\<less\>0>>Then
+      <math|<around*|\||<around*|\<\|\|\>|x|\<\|\|\>>-<around*|\<\|\|\>|y|\<\|\|\>>|\|>=<around*|\<\|\|\>|y|\<\|\|\>>-<around*|\<\|\|\>|x|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x+y|\<\|\|\>>>
+    </description>
+  </proof>
+
+  The purpose of normed spaces is that they can be used to define a metric.
+
+  <\theorem>
+    Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a pseudo normed space and define
+
+    <\equation*>
+      d<rsub|<around*|\<\|\|\>||\<\|\|\>>>:X\<times\>X\<rightarrow\>X<text|
+      by >d<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,y|)>=<around*|\<\|\|\>|x-y|\<\|\|\>>
+    </equation*>
+
+    then\ 
+
+    <\equation*>
+      <around*|\<langle\>|X,d<rsub|<around*|\<\|\|\>||\<\|\|\>>>|\<rangle\>><text|
+      is a pseudo metric space>
+    </equation*>
+
+    Further if <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    is a normed space then <math|<around*|\<langle\>|X,d<rsub|<around*|\<\|\|\>||\<\|\|\>>>|\<rangle\>>>
+    is a metric space.
+  </theorem>
+
+  <\proof>
+    If <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    is a pseudo metric space then we have for <math|x,y,z\<in\>X>
+
+    <\enumerate>
+      <item><math|d<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,y|)>=<around*|\<\|\|\>|x-y|\<\|\|\>>\<geqslant\>0>
+
+      <item><math|d<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,y|)>=<around*|\<\|\|\>|x-y|\<\|\|\>>=<around*|\<\|\|\>|<around*|(|-1|)>\<cdot\><around*|(|y-x|)>|\<\|\|\>>=<around*|\||-1|\|>\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>>=d<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|y,x|)>>
+
+      <item><math|d<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,z|)>=<around*|\<\|\|\>|x-z|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x-y+y-z|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x-y|\<\|\|\>>+<around*|\<\|\|\>|y-z|\<\|\|\>>=d<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,y|)>+d<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|y,z|)>>
+    </enumerate>
+
+    If in addition <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    is a normed space then we have if <math|d<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,y|)>=0>
+    that <math|<around*|\<\|\|\>|x-y|\<\|\|\>>=0> or as
+    <math|<around*|\<\|\|\>||\<\|\|\>>> is a norm that <math|x=y>, hence
+    <math|d<rsub|<around*|\<\|\|\>||\<\|\|\>>>> is a metric.
+  </proof>
+
+  As a pseudo metric defines a topology and a pseudo norm defines a pseudo
+  metric a pseudo norm can be used to define a topology.
+
+  <\definition>
+    <label|normed ball>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be pseudo normed space, <math|x\<in\>X> and
+    <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then the open ball
+    <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,\<varepsilon\>|)>>
+    in the pseudo normed space is defined by\ 
+
+    <\equation*>
+      B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,\<varepsilon\>|)>=<around*|{|y\<in\>X\|<around*|\<\|\|\>|x-y|\<\|\|\>>\<less\>\<varepsilon\>|}>
+      </equation*>
+
+    the set of all open balls in the pseudo normed space is noted by
+    <math|\<cal-B\><rsub|<around*|\<\|\|\>||\<\|\|\>>>> hence\ 
+
+    <\equation*>
+      \<cal-B\><rsub|<around*|\<\|\|\>||\<\|\|\>>>=<around*|{|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,\<varepsilon\>|)>\|x\<in\>X\<wedge\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>|}>
+    </equation*>
+
+    <\note>
+      As <math|d<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,y|)>=<around*|\<\|\|\>|x-y|\<\|\|\>>>
+      we have that\ 
+
+      <\equation*>
+        B<rsub|d<rsub|<around*|\<\|\|\>||\<\|\|\>>>><around*|(|x,\<varepsilon\>|)>=<around*|{|y\<in\>X\|d<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,y|)>\<less\>\<varepsilon\>|}>=<around*|{|y\<in\>X\|<around*|\<\|\|\>|x-y|\<\|\|\>>\<less\>\<varepsilon\>|}>=B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,\<varepsilon\>|)>
+      </equation*>
+
+      and further\ 
+
+      <\equation*>
+        \<cal-B\><rsub|d<rsub|<around*|\<\|\|\>||\<\|\|\>>>>=<around*|{|B<rsub|d<rsub|<around*|\<\|\|\>||\<\|\|\>>>><around*|(|x,\<varepsilon\>|)>\|x\<in\>X\<wedge\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>|}>=<around*|{|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,\<varepsilon\>|)>\|x\<in\>X\<wedge\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>|}>=\<cal-B\><rsub|<around*|\<\|\|\>||\<\|\|\>>>
+      </equation*>
+    </note>
+  </definition>
+
+  <\definition>
+    <label|normed topology>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a pseudo normed space then the norm topology
+    <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>> on <math|X> is
+    defined by\ 
+
+    <\equation*>
+      \<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>=\<cal-T\><rsub|d<rsub|<around*|\<\|\|\>||\<\|\|\>>>>
+    </equation*>
+
+    where\ 
+
+    <\equation*>
+      d<rsub|<around*|\<\|\|\>||\<\|\|\>>>:X\<times\>X\<rightarrow\>X<text|
+      is defined by >d<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,y|)>=<around*|\<\|\|\>|x-y|\<\|\|\>>
+    </equation*>
+
+    So\ 
+
+    <\equation*>
+      \<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>=\<cal-T\><around*|[|\<cal-B\><rsub|d<rsub|\<\|\|\>>>|]>
+    </equation*>
+
+    where\ 
+
+    <\equation*>
+      \<cal-B\><rsub|d<rsub|<around*|\<\|\|\>||\<\|\|\>>>>=<around*|{|B<rsub|d<rsub|<around*|\<\|\|\>||\<\|\|\>>>><around*|(|x,\<varepsilon\>|)>\|x\<in\>X\<wedge\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>|}>=<around*|{|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,\<varepsilon\>|)>\|x\<in\>X\<wedge\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>|}>\<equallim\><rsub|def>\<cal-B\><rsub|<around*|\<\|\|\>||\<\|\|\>>>
+    </equation*>
+  </definition>
+
+  <\theorem>
+    <label|normed dense set>Let <math|<around*|\<langle\>|X,d|\<rangle\>>> a
+    pseudo normed space and <math|A\<subseteq\>X> then we have\ 
+
+    <\equation*>
+      A<text| is dense in >X<text| [using the norm topology
+      >\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>><text|]>
+    </equation*>
+
+    <\equation*>
+      \<Updownarrow\>
+    </equation*>
+
+    <\equation*>
+      \<forall\>x\<in\>X<text| we have >\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text|
+      there exist a >a\<in\>A<text| such that
+      ><around*|\<\|\|\>|x-a|\<\|\|\>>\<less\>\<varepsilon\>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|x\<in\>X> then
+      <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|x\<in\>B<rsub|d<rsub|<around*|\<\|\|\>||\<\|\|\>>>><around*|(|x,\<varepsilon\>|)>>
+      we have by [theorem: <reference|topology dense set alternative (1)>]
+      that <math|\<exists\>a\<in\>A> such that
+      <math|a\<in\>B<rsub|d<rsub|<around*|\<\|\|\>||\<\|\|\>>>><around*|(|x,\<varepsilon\>|)>>,
+      hence <math|<around*|\<\|\|\>|x-a|\<\|\|\>>\<less\>\<varepsilon\>>.
+
+      <item*|<math|\<Leftarrow\>>>Let <math|x\<in\>X> then if
+      <math|B\<in\>\<cal-B\><rsub|d<rsub|<around*|\<\|\|\>||\<\|\|\>>>>> such
+      that <math|x\<in\>B>. As <math|B\<in\>\<cal-B\><rsub|d<rsub|<around*|\<\|\|\>||\<\|\|\>>>>>
+      there exists a <math|y\<in\>X> and a
+      <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|x\<in\>B=B<rsub|d<rsub|<around*|\<\|\|\>||\<\|\|\>>>><around*|(|y,\<varepsilon\>|)>>.
+      By [theorem: <reference|metric refinement of a ball>] there exist a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|x\<in\>B<rsub|d<rsub|<around*|\<\|\|\>||\<\|\|\>>>><around*|(|x,\<delta\>|)>\<subseteq\>B<rsub|d<rsub|<around*|\<\|\|\>||\<\|\|\>>>><around*|(|y,\<varepsilon\>|)>>.
+      By the hypotheses there exist a <math|a\<in\>A> such that
+      <math|<around*|\<\|\|\>|x-y|\<\|\|\>>\<less\>\<delta\>> or
+      <math|a\<in\>B<rsub|d<rsub|<around*|\<\|\|\>||\<\|\|\>>>><around*|(|x,\<delta\>|)>\<subseteq\>B<rsub|d<rsub|<around*|\<\|\|\>||\<\|\|\>>>><around*|(|y,\<varepsilon\>|)>=B>.
+      So
+
+      <\equation*>
+        \<forall\>x\<in\>X<text| we have >\<forall\>B\<in\>\<cal-B\><rsub|d<rsub|<around*|\<\|\|\>||\<\|\|\>>>>
+        with x\<in\>B<text| there exist a >a\<in\>A<text| such that >a\<in\>B
+      </equation*>
+
+      Finally by [theorem: <reference|topology dense set alternative (1)>]
+      <math|A> is dense in <math|X>.
+    </description>
+  </proof>
+
+  \;
+
   \;
 
   \;
@@ -2769,7 +3309,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|13>
-    <associate|page-first|637>
+    <associate|page-first|639>
     <associate|page-medium|paper>
     <associate|section-nr|0>
     <associate|subsection-nr|0>
@@ -2778,118 +3318,133 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|14|637>>
-    <associate|auto-10|<tuple|<with|mode|<quote|math>|A<rprime|'>>|642>>
-    <associate|auto-11|<tuple|14.1.2|643>>
-    <associate|auto-12|<tuple|box topology|646>>
-    <associate|auto-13|<tuple|14.1.3|651>>
-    <associate|auto-14|<tuple|dense set|651>>
-    <associate|auto-15|<tuple|14.2|652>>
-    <associate|auto-16|<tuple|pseudo metric space|652>>
-    <associate|auto-17|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|X,d|\<rangle\>>>|652>>
-    <associate|auto-18|<tuple|metric space|652>>
-    <associate|auto-19|<tuple|open ball|653>>
-    <associate|auto-2|<tuple|14.1|637>>
-    <associate|auto-20|<tuple|<with|mode|<quote|math>|B<rsub|d><around*|(|x,\<varepsilon\>|)>>|653>>
-    <associate|auto-21|<tuple|closed ball|653>>
-    <associate|auto-22|<tuple|<with|mode|<quote|math>|<wide|B<rsub|d><around*|(|x,\<varepsilon\>|)>|\<wide-bar\>>>|653>>
-    <associate|auto-23|<tuple|equivalent pseudo metrics|?>>
-    <associate|auto-24|<tuple|isometry|?>>
-    <associate|auto-25|<tuple|bounded set|?>>
-    <associate|auto-26|<tuple|diameter of a bounded set|?>>
-    <associate|auto-27|<tuple|<with|mode|<quote|math>|diam<around*|(|A|)>>|?>>
-    <associate|auto-3|<tuple|interior|640>>
-    <associate|auto-4|<tuple|<with|mode|<quote|math>|A<rsup|\<circ\>>>|640>>
-    <associate|auto-5|<tuple|14.1.1|640>>
-    <associate|auto-6|<tuple|closed set|640>>
-    <associate|auto-7|<tuple|<with|mode|<quote|math>|\<cal-T\><rsup|\<cal-C\>>>|640>>
-    <associate|auto-8|<tuple|limit point|642>>
-    <associate|auto-9|<tuple|accumulation point|642>>
-    <associate|closed set properties|<tuple|14.19|641>>
-    <associate|eq 14.1.145|<tuple|14.1|642>>
-    <associate|eq 14.10.146|<tuple|14.10|649>>
-    <associate|eq 14.11.146|<tuple|14.11|650>>
-    <associate|eq 14.12.146|<tuple|14.12|651>>
-    <associate|eq 14.13.146|<tuple|14.13|655>>
-    <associate|eq 14.14.146|<tuple|14.14|655>>
-    <associate|eq 14.15.146|<tuple|14.15|?>>
-    <associate|eq 14.16.146|<tuple|14.16|?>>
-    <associate|eq 14.17.146|<tuple|14.17|?>>
-    <associate|eq 14.2.145|<tuple|14.2|643>>
-    <associate|eq 14.3.146|<tuple|14.3|648>>
-    <associate|eq 14.4.146|<tuple|14.4|648>>
-    <associate|eq 14.5.146|<tuple|14.5|649>>
-    <associate|eq 14.6.146|<tuple|14.6|649>>
-    <associate|eq 14.7.146|<tuple|14.7|649>>
-    <associate|eq 14.8.146|<tuple|14.8|649>>
-    <associate|eq 14.9.146|<tuple|14.9|649>>
-    <associate|metric ball image preimage|<tuple|14.63|?>>
-    <associate|metric bounded set|<tuple|14.65|?>>
-    <associate|metric bounded set inclusion|<tuple|14.66|?>>
-    <associate|metric closed ball|<tuple|14.51|653>>
-    <associate|metric closed balls are closed|<tuple|14.56|654>>
-    <associate|metric closed open balls are bounded|<tuple|14.67|?>>
-    <associate|metric composition of isometries|<tuple|14.62|?>>
-    <associate|metric equivalent metrics|<tuple|14.58|?>>
-    <associate|metric equivalent metrics condition|<tuple|14.59|?>>
-    <associate|metric isometry|<tuple|14.60|?>>
-    <associate|metric isometry and its inverse|<tuple|14.61|?>>
-    <associate|metric open ball|<tuple|14.50|653>>
-    <associate|metric open ball and intersection|<tuple|14.52|653>>
-    <associate|metric pseudo metric space|<tuple|14.47|652>>
-    <associate|metric refinement of a ball|<tuple|14.53|653>>
-    <associate|metric space|<tuple|14.48|652>>
-    <associate|metric space metric is positive|<tuple|14.49|652>>
-    <associate|metric topology|<tuple|14.54|653>>
-    <associate|metric topology (1)|<tuple|14.55|654>>
-    <associate|metrix ball image preimage|<tuple|14.63|?>>
-    <associate|metrix isometry and topologies|<tuple|14.64|?>>
-    <associate|metrix subtopology|<tuple|14.57|654>>
-    <associate|topology and complement closed sets|<tuple|14.18|641>>
-    <associate|topology basis|<tuple|14.28|643>>
-    <associate|topology basis alternative definition|<tuple|14.30|644>>
-    <associate|topology basis and super basis|<tuple|14.31|644>>
-    <associate|topology basis generating|<tuple|14.35|645>>
-    <associate|topology basis of a subspace topology|<tuple|14.29|643>>
-    <associate|topology basis of the product topology|<tuple|14.41|650>>
-    <associate|topology basis properties|<tuple|14.34|645>>
-    <associate|topology biggest open subset|<tuple|14.13|640>>
-    <associate|topology box|<tuple|14.37|646>>
-    <associate|topology box topology and bases|<tuple|14.38|647>>
-    <associate|topology closed set|<tuple|14.15|640>>
-    <associate|topology closed set and a basis|<tuple|14.33|644>>
-    <associate|topology closed set and closure|<tuple|14.23|642>>
-    <associate|topology closed set condition|<tuple|14.27|643>>
-    <associate|topology closure alterantive definition|<tuple|14.26|643>>
+    <associate|auto-1|<tuple|14|639>>
+    <associate|auto-10|<tuple|<with|mode|<quote|math>|A<rprime|'>>|644>>
+    <associate|auto-11|<tuple|14.1.2|645>>
+    <associate|auto-12|<tuple|box topology|648>>
+    <associate|auto-13|<tuple|14.1.3|653>>
+    <associate|auto-14|<tuple|dense set|653>>
+    <associate|auto-15|<tuple|14.2|654>>
+    <associate|auto-16|<tuple|pseudo metric space|654>>
+    <associate|auto-17|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|X,d|\<rangle\>>>|654>>
+    <associate|auto-18|<tuple|metric space|654>>
+    <associate|auto-19|<tuple|open ball|655>>
+    <associate|auto-2|<tuple|14.1|639>>
+    <associate|auto-20|<tuple|<with|mode|<quote|math>|B<rsub|d><around*|(|x,\<varepsilon\>|)>>|655>>
+    <associate|auto-21|<tuple|closed ball|655>>
+    <associate|auto-22|<tuple|<with|mode|<quote|math>|<wide|B<rsub|d><around*|(|x,\<varepsilon\>|)>|\<wide-bar\>>>|655>>
+    <associate|auto-23|<tuple|equivalent pseudo metrics|657>>
+    <associate|auto-24|<tuple|isometry|657>>
+    <associate|auto-25|<tuple|bounded set|659>>
+    <associate|auto-26|<tuple|diameter of a bounded set|659>>
+    <associate|auto-27|<tuple|<with|mode|<quote|math>|diam<around*|(|A|)>>|659>>
+    <associate|auto-28|<tuple|14.3|661>>
+    <associate|auto-29|<tuple|pseudo normed space|661>>
+    <associate|auto-3|<tuple|interior|642>>
+    <associate|auto-30|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>||\<\|\|\>>>|661>>
+    <associate|auto-4|<tuple|<with|mode|<quote|math>|A<rsup|\<circ\>>>|642>>
+    <associate|auto-5|<tuple|14.1.1|642>>
+    <associate|auto-6|<tuple|closed set|642>>
+    <associate|auto-7|<tuple|<with|mode|<quote|math>|\<cal-T\><rsup|\<cal-C\>>>|642>>
+    <associate|auto-8|<tuple|limit point|644>>
+    <associate|auto-9|<tuple|accumulation point|644>>
+    <associate|closed set properties|<tuple|14.19|643>>
+    <associate|eq 14.1.145|<tuple|14.1|644>>
+    <associate|eq 14.10.146|<tuple|14.10|651>>
+    <associate|eq 14.11.146|<tuple|14.11|652>>
+    <associate|eq 14.12.146|<tuple|14.12|653>>
+    <associate|eq 14.13.146|<tuple|14.13|657>>
+    <associate|eq 14.14.146|<tuple|14.14|657>>
+    <associate|eq 14.15.146|<tuple|14.15|658>>
+    <associate|eq 14.16.146|<tuple|14.16|658>>
+    <associate|eq 14.17.146|<tuple|14.17|658>>
+    <associate|eq 14.18.146|<tuple|14.18|660>>
+    <associate|eq 14.19.146|<tuple|14.19|660>>
+    <associate|eq 14.2.145|<tuple|14.2|645>>
+    <associate|eq 14.20.146|<tuple|14.20|660>>
+    <associate|eq 14.21.146|<tuple|14.21|?>>
+    <associate|eq 14.3.146|<tuple|14.3|650>>
+    <associate|eq 14.4.146|<tuple|14.4|650>>
+    <associate|eq 14.5.146|<tuple|14.5|651>>
+    <associate|eq 14.6.146|<tuple|14.6|651>>
+    <associate|eq 14.7.146|<tuple|14.7|651>>
+    <associate|eq 14.8.146|<tuple|14.8|651>>
+    <associate|eq 14.9.146|<tuple|14.9|651>>
+    <associate|metric ball image preimage|<tuple|14.63|658>>
+    <associate|metric bounded set|<tuple|14.65|659>>
+    <associate|metric bounded set inclusion|<tuple|14.66|659>>
+    <associate|metric closed ball|<tuple|14.51|655>>
+    <associate|metric closed balls are closed|<tuple|14.56|656>>
+    <associate|metric closed open balls are bounded|<tuple|14.67|659>>
+    <associate|metric composition of isometries|<tuple|14.62|658>>
+    <associate|metric dense set|<tuple|14.79|?>>
+    <associate|metric equivalent metrics|<tuple|14.58|657>>
+    <associate|metric equivalent metrics condition|<tuple|14.59|657>>
+    <associate|metric isometry|<tuple|14.60|657>>
+    <associate|metric isometry and its inverse|<tuple|14.61|657>>
+    <associate|metric open ball|<tuple|14.50|655>>
+    <associate|metric open ball and intersection|<tuple|14.52|655>>
+    <associate|metric product topology|<tuple|14.68|659>>
+    <associate|metric pseudo metric space|<tuple|14.47|654>>
+    <associate|metric refinement of a ball|<tuple|14.53|655>>
+    <associate|metric space|<tuple|14.48|654>>
+    <associate|metric space metric is positive|<tuple|14.49|654>>
+    <associate|metric topology|<tuple|14.54|655>>
+    <associate|metric topology (1)|<tuple|14.55|656>>
+    <associate|metrix isometry and topologies|<tuple|14.64|658>>
+    <associate|metrix subtopology|<tuple|14.57|656>>
+    <associate|normded triangle inequality|<tuple|14.74|?>>
+    <associate|normed|<tuple|14.74|?>>
+    <associate|normed absolute value norm differences|<tuple|14.75|?>>
+    <associate|normed ball|<tuple|14.77|?>>
+    <associate|normed dense set|<tuple|14.80|?>>
+    <associate|normed norm|<tuple|14.72|661>>
+    <associate|normed norm of zero|<tuple|14.73|661>>
+    <associate|normed pseudo norm|<tuple|14.71|661>>
+    <associate|normed topology|<tuple|14.79|?>>
+    <associate|topology and complement closed sets|<tuple|14.18|643>>
+    <associate|topology basis|<tuple|14.28|645>>
+    <associate|topology basis alternative definition|<tuple|14.30|646>>
+    <associate|topology basis and super basis|<tuple|14.31|646>>
+    <associate|topology basis generating|<tuple|14.35|647>>
+    <associate|topology basis of a subspace topology|<tuple|14.29|645>>
+    <associate|topology basis of the product topology|<tuple|14.41|652>>
+    <associate|topology basis properties|<tuple|14.34|647>>
+    <associate|topology biggest open subset|<tuple|14.13|642>>
+    <associate|topology box|<tuple|14.37|648>>
+    <associate|topology box topology and bases|<tuple|14.38|649>>
+    <associate|topology closed set|<tuple|14.15|642>>
+    <associate|topology closed set and a basis|<tuple|14.33|646>>
+    <associate|topology closed set and closure|<tuple|14.23|644>>
+    <associate|topology closed set condition|<tuple|14.27|645>>
+    <associate|topology closure alterantive definition|<tuple|14.26|645>>
     <associate|topology closure is union of a set and its limit
-    points|<tuple|14.25|642>>
-    <associate|topology closure of a set|<tuple|14.20|642>>
-    <associate|topology closure of a set alternative|<tuple|14.22|642>>
-    <associate|topology coarse|<tuple|14.3|637>>
-    <associate|topology dense set|<tuple|14.43|651>>
-    <associate|topology dense set alternative|<tuple|14.44|651>>
-    <associate|topology dense set alternative (1)|<tuple|14.45|651>>
-    <associate|topology dense set property|<tuple|14.46|652>>
-    <associate|topology discrete|<tuple|14.4|638>>
-    <associate|topology empty set|<tuple|14.2|637>>
-    <associate|topology equivalent metrics|<tuple|14.58|?>>
-    <associate|topology equivalent metrics condition|<tuple|14.59|?>>
-    <associate|topology finer and basis|<tuple|14.32|644>>
-    <associate|topology finer topology|<tuple|14.5|638>>
-    <associate|topology finite intersection|<tuple|14.6|638>>
-    <associate|topology interior of a set|<tuple|14.11|640>>
-    <associate|topology limit point|<tuple|14.24|642>>
-    <associate|topology open set and interior|<tuple|14.14|640>>
-    <associate|topology open set condition|<tuple|14.7|638>>
-    <associate|topology product|<tuple|14.39|647>>
-    <associate|topology product alternative definition|<tuple|14.40|648>>
+    points|<tuple|14.25|644>>
+    <associate|topology closure of a set|<tuple|14.20|644>>
+    <associate|topology closure of a set alternative|<tuple|14.22|644>>
+    <associate|topology coarse|<tuple|14.3|639>>
+    <associate|topology dense set|<tuple|14.43|653>>
+    <associate|topology dense set alternative|<tuple|14.44|653>>
+    <associate|topology dense set alternative (1)|<tuple|14.45|653>>
+    <associate|topology dense set property|<tuple|14.46|654>>
+    <associate|topology discrete|<tuple|14.4|640>>
+    <associate|topology empty set|<tuple|14.2|639>>
+    <associate|topology finer and basis|<tuple|14.32|646>>
+    <associate|topology finer topology|<tuple|14.5|640>>
+    <associate|topology finite intersection|<tuple|14.6|640>>
+    <associate|topology interior of a set|<tuple|14.11|642>>
+    <associate|topology limit point|<tuple|14.24|644>>
+    <associate|topology open set and interior|<tuple|14.14|642>>
+    <associate|topology open set condition|<tuple|14.7|640>>
+    <associate|topology product|<tuple|14.39|649>>
+    <associate|topology product alternative definition|<tuple|14.40|650>>
     <associate|topology product topology and box topology are the same in the
-    finite case|<tuple|14.42|650>>
-    <associate|topology space|<tuple|14.1|637>>
-    <associate|topology subbasis|<tuple|14.36|645>>
-    <associate|topology subspace topology|<tuple|14.8|639>>
-    <associate|topology subspace topology open subset|<tuple|14.10|639>>
-    <associate|topology subsubspace topology|<tuple|14.9|639>>
+    finite case|<tuple|14.42|652>>
+    <associate|topology space|<tuple|14.1|639>>
+    <associate|topology subbasis|<tuple|14.36|647>>
+    <associate|topology subspace topology|<tuple|14.8|641>>
+    <associate|topology subspace topology open subset|<tuple|14.10|641>>
+    <associate|topology subsubspace topology|<tuple|14.9|641>>
   </collection>
 </references>
 
@@ -2927,6 +3482,20 @@
       <tuple|<tuple|closed ball>|<pageref|auto-21>>
 
       <tuple|<tuple|<with|mode|<quote|math>|<wide|B<rsub|d><around*|(|x,\<varepsilon\>|)>|\<wide-bar\>>>>|<pageref|auto-22>>
+
+      <tuple|<tuple|equivalent pseudo metrics>|<pageref|auto-23>>
+
+      <tuple|<tuple|isometry>|<pageref|auto-24>>
+
+      <tuple|<tuple|bounded set>|<pageref|auto-25>>
+
+      <tuple|<tuple|diameter of a bounded set>|<pageref|auto-26>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|diam<around*|(|A|)>>>|<pageref|auto-27>>
+
+      <tuple|<tuple|pseudo normed space>|<pageref|auto-29>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>||\<\|\|\>>>>|<pageref|auto-30>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|14<space|2spc>Topology>
@@ -2950,6 +3519,9 @@
 
       14.2<space|2spc>Metric spaces <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-15>
+
+      14.3<space|2spc>Normed space <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-28>
     </associate>
   </collection>
 </auxiliary>
