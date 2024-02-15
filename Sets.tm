@@ -7698,7 +7698,7 @@
 
   <\definition>
     <label|equivalence relation A/R><index|<math|A/R>>Let <math|A> be a set
-    and <math|R> a relation then <math|A/R> is defined by\ 
+    and <math|R> a equivalence relation then <math|A/R> is defined by\ 
 
     <\equation*>
       A/R=<around*|{|R<around*|[|x|]>\|x\<in\>A|}>
@@ -7722,6 +7722,46 @@
       R/X<text| is a set>
     </equation*>
   </note>
+
+  <\theorem>
+    <label|equivalence relation defines a partition (1)>Let <math|A> be a set
+    and <math|R> a equivalence relation then\ 
+
+    <\equation*>
+      A=<big|cup><rsub|I\<in\>A/R>I<text| and <math|\<forall\>I,J\<in\>A/R>
+      with >I\<neq\>J<text| we have >I<big|cap>J=\<varnothing\>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    If <math|x\<in\>A> then by [theorem: <reference|equivalence relation
+    R[x]=R[y]>] \ <math|x\<in\>R<around*|[|x|]>\<in\>A/R> so that
+    <math|x\<in\><big|cup><rsub|I\<in\>A/R>I> hence\ 
+
+    <\equation*>
+      A\<subseteq\><big|cup><rsub|I\<in\>A/R>I
+    </equation*>
+
+    Further, as <math|\<forall\>I\<in\>A/R> we have that
+    <math|\<exists\>x\<in\>A> such that <math|I=R<around*|[|x|]>\<subseteq\>A>,
+    it follows that <math|<big|cup><rsub|I\<in\>A/R>I\<subseteq\>A> which
+    combined with the above gives\ 
+
+    <\equation*>
+      A=<big|cup><rsub|I\<in\>A/R>I
+    </equation*>
+
+    Further if <math|I,J\<in\>A/R> with <math|I\<neq\>J> then
+    <math|\<exists\>x,y\<in\>A> such that <math|I=R<around*|[|x|]>> and
+    <math|J=R<around*|[|y|]>>. If <math|z\<in\>R<around*|[|x|]><big|cap>R<around*|[|y|]>>
+    then by [theorem: <reference|equivalence relation R[x]=R[y]>] we have
+    <math|R<around*|[|x|]>=R<around*|[|z|]>=R<around*|[|y|]>> so that
+    <math|I=J> contradicting <math|I\<neq\>J>. Hence we must have that\ 
+
+    <\equation*>
+      I<big|cap>J=\<varnothing\>
+    </equation*>
+  </proof>
 
   <subsection|Functions and equivalence relations>
 
@@ -13002,9 +13042,8 @@
   <section|Generalized Intervals>
 
   <\definition>
-    <label|interval generalized interval>Let
-    <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>> be a partial
-    ordered class then if <math|a,b\<in\>A> we define
+    <label|interval interval>Let <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>>
+    be a partial ordered class then if <math|a,b\<in\>A> we define
 
     <\enumerate>
       <item><math|<around*|[|a,b|]>=<around*|{|x\<in\>A\|a\<leqslant\>x\<wedge\>x\<leqslant\>b|}>>
@@ -13025,6 +13064,8 @@
 
       <item><math|<around*|]|-\<infty\>,\<infty\>|[>=A>
     </enumerate>
+
+    these are the intervals in <math|A>
   </definition>
 
   <\theorem>
@@ -13092,33 +13133,30 @@
 
   We have the following equivalent conditions for a generalized interval.
 
-  TODO Check the rest and change the labels
-
   \;
 
   <\theorem>
-    Let <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>> be a partial
+    <label|interval generalized interval condition>Let
+    <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>> be a partial
     ordered class that is conditional complete and <math|I\<subseteq\>A> then
-    the following are equivalent\ 
+    then\ 
 
-    <\enumerate>
-      <item><math|I> is a generalized interval
-
-      <item><math|\<forall\>x,y\<in\>I> we have that
-      <math|<around*|]|x,y|[>\<subseteq\>I>
-    </enumerate>
+    <\equation*>
+      I<text| is a generalized interval >\<Leftrightarrow\><text|
+      >\<forall\>x,y\<in\>I<text| we have ><around*|]|x,y|[>\<subseteq\>I
+    </equation*>
   </theorem>
 
   <\proof>
     \ 
 
     <\description>
-      <item*|<math|1\<Rightarrow\>2>>Let <math|x,y\<in\>I> then if
+      <item*|<math|\<Rightarrow\>>>Let <math|x,y\<in\>I> then if
       <math|z\<in\><around*|]|x,y|[>> we have
       <math|x\<less\>z\<wedge\>z\<less\>y\<Rightarrow\>x\<leqslant\>z\<wedge\>z\<leqslant\>y\<Rightarrow\>z\<in\><around*|[|x,y|]>\<subseteq\>I>
       proving that <math|<around*|]|x,y|[>\<subseteq\>I>
 
-      <item*|<math|2\<Rightarrow\>1>>Let <math|x,y\<in\>I> then if
+      <item*|<math|\<Leftarrow\>>>Let <math|x,y\<in\>I> then if
       <math|z\<in\><around*|[|x,y|]>> we have either\ 
 
       <\description>
@@ -13143,16 +13181,15 @@
   </proof>
 
   <\theorem>
-    <label|generalized intervals and intervals>Let
-    <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>> be a fully ordered
-    class that is conditional complete and
+    <label|interval and inf or sup>Let <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>>
+    be a fully ordered class that is conditional complete and
     <math|\<emptyset\>\<neq\>I\<subseteq\>A> a generalized interval then we
     have either
 
     <\enumerate>
-      <item>If <math|I> is bounded below and above (so that by conditional
+      <item>If <math|I> is bounded below and above [so that by conditional
       completeness <math|inf<around*|(|I|)>> and <math|sup<around*|(|I|)>>
-      exists) we have:
+      exists] we have:
 
       <\enumerate>
         <item>If <math|inf<around*|(|I|)>\<in\>I\<wedge\>sup<around*|(|I|)>\<in\>I>
@@ -13168,8 +13205,8 @@
         then <math|I=<around*|]|inf<around*|(|I|)>,sup<around*|(|I|)>|[>>
       </enumerate>
 
-      <item>If <math|I> is bounded below and not bounded above (so that by
-      conditional completeness <math|inf<around*|(|I|)>> exists) we have\ 
+      <item>If <math|I> is bounded below and not bounded above [so that by
+      conditional completeness <math|inf<around*|(|I|)>> exists] we have\ 
 
       <\enumerate>
         <item>If <math|inf<around*|(|I|)>\<in\>I> then
@@ -13179,8 +13216,8 @@
         <math|I=<around*|]|inf<around*|(|I|)>,\<infty\>|[>>
       </enumerate>
 
-      <item>If <math|I> is bounded above and not bounded below (so that by
-      conditional completeness <math|sup<around*|(|I|)>> exists) we have\ 
+      <item>If <math|I> is bounded above and not bounded below [so that by
+      conditional completeness <math|sup<around*|(|I|)>> exists] we have\ 
 
       <\enumerate>
         <item>If <math|sup<around*|(|I|)>\<in\>I> then
@@ -13197,29 +13234,13 @@
     In other words a generalized interval <math|I> has either one of the
     following forms\ 
 
-    <\itemize>
-      <item><math|<around*|[|inf<around*|(|I|)>,sup<around*|(|I|)>|]>>
-
-      <item><math|<around*|]|inf<around*|(|I|)>,sup<around*|(|I|)>|]>>
-
-      <item><math|<around*|[|inf<around*|(|I|)>,sup<around*|(|I|)>|[>>
-
-      <item><math|<around*|]|inf<around*|(|I|)>,sup<around*|(|I|)>|[>>
-
-      <item><math|<around*|]|inf<around*|(|I|)>,\<infty\>|]>>
-
-      <item><math|<around*|]|inf<around*|(|I|)>,\<infty\>|[>>
-
-      <item><math|<around*|]|-\<infty\>,sup<around*|(|I|)>|]>>
-
-      <item><math|<around*|]|-\<infty\>,sup<around*|(|I|)>|[>>
-
-      <item><math|<around*|[|inf<around*|(|I|)>,\<infty\>|[>>
-
-      <item><math|<around*|]|inf<around*|(|I|)>,\<infty\>|[>>
-
-      <item><math|A>
-    </itemize>
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|<around*|[|a,b|]>>|<cell|a,b\<in\>A<text|
+      and >a\<leqslant\>b>>|<row|<cell|>|<cell|<around*|]|a,b|]>>|<cell|a,b\<in\>A<text|
+      and >a\<less\>b>>|<row|<cell|>|<cell|<around*|[|a,b|[>>|<cell|a,b\<in\>A<text|
+      and >a\<less\>b>>|<row|<cell|>|<cell|<around*|]|a,b|[>>|<cell|a,b\<in\>A<text|
+      and >a\<less\>b>>|<row|<cell|>|<cell|<around*|[|a,\<infty\>|[>>|<cell|>>|<row|<cell|>|<cell|<around*|]|a,\<infty\>|[>>|<cell|>>|<row|<cell|>|<cell|<around*|]|-\<infty\>,a|]>>|<cell|>>|<row|<cell|>|<cell|<around*|]|-\<infty\>,a|[>>|<cell|>>|<row|<cell|>|<cell|<around*|]|-\<infty\>,\<infty\>|[>>|<cell|>>>>
+    </eqnarray*>
   </theorem>
 
   <\proof>
@@ -13230,16 +13251,17 @@
 
       <\enumerate>
         <item>Let <math|z\<in\>I> then using the definition of a supremum and
-        infinum and the fact that <math|inf<around*|(|I|)>\<in\>I\<wedge\>sup<around*|(|I|)>\<in\>I>
-        we have <math|inf<around*|(|I|)>\<leqslant\>z\<wedge\>z\<leqslant\>sup<around*|(|I|)>>
+        infinum as a upper and lowerbound that
+        \ <math|inf<around*|(|I|)>\<leqslant\>z\<wedge\>z\<leqslant\>sup<around*|(|I|)>>
         so that\ 
 
         <\equation>
           <label|eq 2.20.053>I\<subseteq\><around*|[|inf<around*|(|I|)>,sup<around*|(|I|)>|]>
         </equation>
 
-        As <math|I> is a generalized interval we have further that
-        <math|<around*|[|inf<around*|(|I|)>,sup<around*|(|I|)>|]>\<subseteq\>I>
+        As <math|I> is a generalized interval and
+        <math|sup<around*|(|I|)>\<in\>I\<wedge\>inf<around*|(|I|)>\<in\>I >we
+        have further that <math|<around*|[|inf<around*|(|I|)>,sup<around*|(|I|)>|]>\<subseteq\>I>
         which using <reference|eq 2.20.053> proves
 
         <\equation*>
@@ -13247,8 +13269,9 @@
         </equation*>
 
         <item>Let <math|z\<in\>I> then using the definition of a supremum and
-        infinum and the fact that <math|inf<around*|(|I|)>\<nin\>I\<wedge\>sup<around*|(|I|)>\<in\>I>
-        we have that <math|inf<around*|(|I|)>\<less\>z\<wedge\>z\<leqslant\>sup<around*|(|I|)>>
+        infinum as upper and lower bound and the fact that
+        <math|inf<around*|(|I|)>\<nin\>I> we have that
+        <math|inf<around*|(|I|)>\<less\>z\<wedge\>z\<leqslant\>sup<around*|(|I|)>>
         so that
 
         <\equation>
@@ -13257,20 +13280,21 @@
 
         If <math|z\<in\><around*|]|inf<around*|(|I|)>,sup<around*|(|I|)>|]>>
         we have <math|inf<around*|(|I|)>\<less\>z\<wedge\>z\<leqslant\>sup<around*|(|I|)>>.
-        Using <reference|property of inf and sup> there exists a
+        Using [theorem: <reference|order sup, inf property>] there exists a
         <math|x\<in\>I> such that <math|inf<around*|(|I|)>\<leqslant\>x\<less\>z>
         or <math|z\<in\><around*|[|x,sup*I|]>\<subseteq\>I> [as <math|I> is a
         generalized interval and <math|x,sup<around*|(|I|)>\<in\>I>]. This
         proves that <math|<around*|]|inf<around*|(|I|)>,sup<around*|(|I|)>|]>\<subseteq\>I>.
-        Combining this with <reference|eq 2.21.053> proves
+        Combining this with [eq: <reference|eq 2.21.053>] proves
 
         <\equation*>
           I=<around*|]|inf<around*|(|I|)>,sup<around*|(|I|)>|]>
         </equation*>
 
         <item>Let <math|z\<in\>I> then using the definition of a supremum and
-        infinum and the fact that <math|inf<around*|(|I|)>\<in\>I\<wedge\>sup<around*|(|I|)>\<nin\>I>
-        we have that <math|inf<around*|(|I|)>\<leqslant\>z\<wedge\>z\<less\>sup<around*|(|I|)>>
+        infinum as upper and lower bound and the fact that
+        <math|sup<around*|(|I|)>\<nin\>I> we have that
+        <math|inf<around*|(|I|)>\<leqslant\>z\<wedge\>z\<less\>sup<around*|(|I|)>>
         so that
 
         <\equation>
@@ -13279,20 +13303,21 @@
 
         If <math|z\<in\><around*|[|inf<around*|(|I|)>,sup<around*|(|I|)>|[>>
         we have <math|inf<around*|(|I|)>\<leqslant\>z\<wedge\>z\<less\>sup<around*|(|I|)>>.
-        Using <reference|property of inf and sup> there exists a
+        Using [theorem: <reference|order sup, inf property>] there exists a
         <math|y\<in\>I> such that <math|z\<less\>y\<leqslant\>sup<around*|(|I|)>>
         or <math|z\<in\><around*|[|inf<around*|(|I|)>,y|]>\<subseteq\>I> [as
         <math|I> is a generalized interval and
         <math|inf<around*|(|I|)>,y\<in\>I>]. This proves that
         <math|<around*|[|inf<around*|(|I|)>,sup<around*|(|I|)>|[>\<subseteq\>I>.
-        Combining this with <reference|eq 2.22.053> proves\ 
+        Combining this with [eq: <reference|eq 2.22.053>] proves\ 
 
         <\equation*>
           I=<around*|[|inf<around*|(|I|)>,sup<around*|(|I|)>|[>
         </equation*>
 
         <item>Let <math|z\<in\>I> then using the definition of a supremum and
-        infinum and the fact that <math|inf<around*|(|I|)>\<nin\>I\<wedge\>sup<around*|(|I|)>\<nin\>I>
+        infinum as upper and lower bound and the fact that
+        <math|inf<around*|(|I|)>\<nin\>I\<wedge\>sup<around*|(|I|)>\<nin\>I>
         we have that <math|inf<around*|(|I|)>\<less\>z\<wedge\>z\<less\>sup<around*|(|I|)>>
         so that
 
@@ -13302,12 +13327,12 @@
 
         If <math|z\<in\><around*|]|inf<around*|(|I|)>,sup<around*|(|I|)>|[>>
         we have <math|inf<around*|(|I|)>\<less\>z\<wedge\>z\<less\>sup<around*|(|I|)>>.
-        Using <reference|property of inf and sup> there exists
+        Using [theorem: <reference|order sup, inf property>] there exists
         <math|x,y\<in\>I> such that <math|inf<around*|(|I|)>\<leqslant\>x\<less\>z\<wedge\>z\<less\>y\<leqslant\>sup<around*|(|I|)>>
         or <math|z\<in\><around*|]|x,y|[>\<subseteq\>I> [as <math|I> is a
         generalized interval and <math|x,y\<in\>I>]. This proves that
         <math|<around*|]|inf<around*|(|I|)>,sup<around*|(|I|)>|[>\<subseteq\>I>.
-        Combining this with <reference|eq 2.23.053> gives\ 
+        Combining this with [eq: <reference|eq 2.23.053>] gives\ 
 
         <\equation*>
           I=<around*|]|inf<around*|(|I|)>,sup<around*|(|I|)>|[>
@@ -13317,9 +13342,9 @@
       <item><space|1em>
 
       <\enumerate>
-        <item>Let <math|z\<in\>I> then using the definition of the infinum
-        and the fact that <math|inf<around*|(|I|)>\<in\>I> we have that
-        <math|inf<around*|(|I|)>\<leqslant\>z> proving that\ 
+        <item>Let <math|z\<in\>I> then using the definition of the infinum as
+        a lower bound we have that <math|inf<around*|(|I|)>\<leqslant\>z>
+        proving that\ 
 
         <\equation>
           <label|eq 2.24.053>I\<subseteq\><around*|[|inf<around*|(|I|)>,\<infty\>|[>
@@ -13334,23 +13359,23 @@
         <math|I> is a generalized interval and
         <math|inf<around*|(|I|)>,x\<in\>I>]. So
         <math|<around*|[|inf<around*|(|I|)>,\<infty\>|[>\<subseteq\>I> and
-        combining this with <reference|eq 2.24.053> proves
+        combining this with [eq: <reference|eq 2.24.053>] proves
 
         <\equation*>
           I=<around*|[|inf<around*|(|I|)>,\<infty\>|[>
         </equation*>
 
-        <item>Let <math|z\<in\>I> then using the definition of the infinum
-        and the fact that <math|inf<around*|(|I|)>\<nin\>I> we have that
-        <math|inf<around*|(|I|)>\<less\>z> proving that
+        <item>Let <math|z\<in\>I> then using the definition of the infinum as
+        a lower bound and the fact that <math|inf<around*|(|I|)>\<nin\>I> we
+        have that <math|inf<around*|(|I|)>\<less\>z> proving that
 
         <\equation>
           <label|eq 2.25.053>I\<subseteq\><around*|]|inf<around*|(|I|)>,\<infty\>|[>
         </equation>
 
         If <math|z\<in\><around*|]|inf<around*|(|I|)>,\<infty\>|[>> then
-        <math|inf<around*|(|I|)>\<less\>z>. Using <reference|property of inf
-        and sup> there exists a <math|x\<in\>I> such that
+        <math|inf<around*|(|I|)>\<less\>z>. Using [theorem: <reference|order
+        sup, inf property>] there exists a <math|x\<in\>I> such that
         <math|inf<around*|(|I|)>\<leqslant\>x\<less\>z>. As <math|I> is not
         bounded above there exists a <math|y\<in\>I> such that
         <math|\<neg\><around*|(|y\<leqslant\>z|)>\<Rightarrowlim\><rsub|A
@@ -13358,7 +13383,7 @@
         <math|z\<in\><around*|]|x,y|[>\<subseteq\>I> [as <math|I> is a
         generalized interval and <math|x,y\<in\>I>]. So
         <math|<around*|]|inf<around*|(|I|)>,\<infty\>|[>\<subseteq\>I> and
-        combining this with <reference|eq 2.25.053> gives
+        combining this with [eq: <reference|eq 2.25.053>] gives
 
         <\equation*>
           I=<around*|]|inf<around*|(|I|)>,\<infty\>|[>
@@ -13369,8 +13394,8 @@
 
       <\enumerate>
         <item>Let <math|z\<in\>I> then using the definition of the supremum
-        and the fact that <math|sup<around*|(|I|)>\<in\>I> we have
-        <math|z\<leqslant\>sup<around*|(|I|)>> proving that\ 
+        as a upper bound we have <math|z\<leqslant\>sup<around*|(|I|)>>
+        proving that\ 
 
         <\equation>
           <label|eq 2.26.053>I\<subseteq\><around*|]|-\<infty\>,sup<around*|(|I|)>|]>
@@ -13385,23 +13410,23 @@
         <math|I> is a generalized interval and
         <math|x,sup<around*|(|I|)>\<in\>I>]. So
         <math|<around*|]|-\<infty\>,sup<around*|(|I|)>|]>\<subseteq\>I> which
-        combined with <reference|eq 2.26.053> gives\ 
+        combined with [eq: <reference|eq 2.26.053>] gives\ 
 
         <\equation*>
           I=<around*|]|-\<infty\>,sup<around*|(|I|)>|]>
         </equation*>
 
         <item>Let <math|z\<in\>I> then using the definition of the supremum
-        and the fact that <math|sup<around*|(|I|)>\<nin\>I> we have that
-        <math|z\<less\>sup<around*|(|I|)>> proving that\ 
+        as a upper bound and the fact that <math|sup<around*|(|I|)>\<nin\>I>
+        we have that <math|z\<less\>sup<around*|(|I|)>> proving that\ 
 
         <\equation>
           <label|eq 2.27.053>I\<subseteq\><around*|]|-\<infty\>,sup<around*|(|I|)>|[>
         </equation>
 
         If <math|z\<in\><around*|]|-\<infty\>,sup<around*|(|I|)>|[>> then
-        <math|z\<less\>sup<around*|(|I|)>>. Using <reference|property of inf
-        and sup> there exists a <math|y\<in\>I> such that
+        <math|z\<less\>sup<around*|(|I|)>>. Using [theorem: <reference|order
+        sup, inf property>] there exists a <math|y\<in\>I> such that
         <math|z\<less\>y\<leqslant\>sup<around*|(|I|)>>. As <math|I> us not
         bounded below there exists a <math|x\<in\>I> such that
         <math|\<neg\><around*|(|z\<leqslant\>x|)>\<Rightarrowlim\><rsub|A<text|
@@ -13409,7 +13434,7 @@
         <math|z\<in\><around*|]|x,y|[>\<subseteq\>I> [as <math|I> is a
         generalized interval and <math|x,y\<in\>I>]. So
         <math|<around*|]|-\<infty\>,sup<around*|(|I|)>|[>\<subseteq\>I> which
-        combined with <reference|eq 2.27.053> proves\ 
+        combined with [eq: <reference|eq 2.27.053>] proves\ 
 
         <\equation*>
           I=<around*|]|-\<infty\>,sup<around*|(|I|)>|[>
@@ -13433,27 +13458,29 @@
   We have also the opposite of the above theorem
 
   <\theorem>
-    <label|generalized intervals condition>Let
+    <label|interval generalized condition (1)>Let
     <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>> be a fully ordered
     class that is conditional complete then we have given <math|a,b\<in\>A>
     that\ 
 
     <\enumerate>
-      <item><math|<around*|[|a,b|]>> is a generalized set
+      <item><math|<around*|[|a,b|]>> is a generalized interval
 
-      <item><math|<around*|[|a,b|[>> is a generalized set
+      <item><math|<around*|[|a,b|[>> is a generalized interval
 
-      <item><math|<around*|]|a,b|]>> is a generalized set
+      <item><math|<around*|]|a,b|]>> is a generalized interval
 
-      <item><math|<around*|]|a,b|[>> is a generalized set
+      <item><math|<around*|]|a,b|[>> is a generalized interval
 
-      <item><math|<around*|[|a,\<infty\>|[>> is a generalized set
+      <item><math|<around*|[|a,\<infty\>|[>> is a generalized interval
 
-      <item><math|<around*|]|a,\<infty\>|[>> is a generalized set
+      <item><math|<around*|]|a,\<infty\>|[>> is a generalized interval
 
-      <item><math|<around*|]|-\<infty\>,a|]>> is a generalized set
+      <item><math|<around*|]|-\<infty\>,a|]>> is a generalized interval
 
-      <item><math|<around*|]|-\<infty\>,a|[>> is a generalized set
+      <item><math|<around*|]|-\<infty\>,a|[>> is a generalized interval
+
+      <item><math|A> is a generalized interval
     </enumerate>
   </theorem>
 
@@ -13512,8 +13539,9 @@
       <item>If <math|x,y\<in\><around*|[|a,\<infty\>|[>> and
       <math|z\<in\><around*|[|x,y|]>> we have
       <math|x\<leqslant\>z\<Rightarrowlim\><rsub|a\<leqslant\>x>a\<leqslant\>z>
-      proving that <math|z\<in\><around*|[|a,\<infty\>|[>> from which it
-      follows that
+      proving that <math|z\<in\><around*|[|a,\<infty\>|[>>. Hence
+      <math|<around*|[|x,y|]>\<subseteq\><around*|[|a,\<infty\>|[> >from
+      which it follows that
 
       <\equation*>
         <around*|[|a,\<infty\>|[><text| is a generalized interval>
@@ -13522,8 +13550,9 @@
       <item>If <math|x,y\<in\><around*|]|a,\<infty\>|[>> and
       <math|z\<in\><around*|[|x,y|]>> we have
       <math|x\<leqslant\>z\<Rightarrowlim\><rsub|a\<less\>x>a\<less\>z>
-      proving that <math|z\<in\><around*|]|a,\<infty\>|[>> from which it
-      follows that
+      proving that <math|z\<in\><around*|]|a,\<infty\>|[>>. Hence
+      <math|<around*|[|x,y|]>\<subseteq\><around*|]|a,\<infty\>|[>> from
+      which it follows that
 
       <\equation*>
         <around*|]|a,\<infty\>|[><text| is a generalized interval>
@@ -13532,8 +13561,9 @@
       <item>If <math|x,y\<in\><around*|]|-\<infty\>,a|]>> and
       <math|z\<in\><around*|[|x,y|]>> we have
       <math|z\<leqslant\>y\<Rightarrowlim\><rsub|y\<leqslant\>a>z\<leqslant\>a>
-      proving that <math|z\<in\><around*|]|-\<infty\>,a|]>> from which it
-      follows that\ 
+      proving that <math|z\<in\><around*|]|-\<infty\>,a|]>>. Hence
+      <math|<around*|[|x,y|]>\<subseteq\><around*|]|-\<infty\>,a|]>> from
+      which it follows that\ 
 
       <\equation*>
         <around*|]|-\<infty\>,a|]><text| is a generalized interval>
@@ -13542,14 +13572,21 @@
       <item>If <math|x,y\<in\><around*|]|-\<infty\>,a|[>> and
       <math|z\<in\><around*|[|x,y|]>> we have
       <math|z\<leqslant\>y\<Rightarrowlim\><rsub|y\<less\>a>z\<less\>a>
-      proving that <math|z\<in\><around*|]|-\<infty\>,a|[>> from which it
-      follows that\ 
+      proving that <math|z\<in\><around*|]|-\<infty\>,a|[>>. Hence
+      <math|<around*|[|x,y|]>\<subseteq\><around*|]|-\<infty\>,a|[>> from
+      which it follows that\ 
 
       <\equation*>
         <around*|]|-\<infty\>,a|[><text| is a generalized interval>
       </equation*>
+
+      <item>If <math|x,y\<in\>A> then trivially
+      <math|<around*|[|x,y|]>\<subseteq\>A> hence <math|A> is a generalized
+      interval.
     </enumerate>
   </proof>
+
+  \;
 
   <\theorem>
     <label|generalized intervals and boundaries>Let
@@ -13574,27 +13611,19 @@
       <math|a=b>
 
       <item><math|\<forall\>a,b,c,d> with
-      <math|<around*|[|a,b|]>\<neq\>\<emptyset\>> [so that by
-      <reference|condition for interval to be empty>
-      <math|a\<leqslant\>b\<wedge\>c\<leqslant\>d>] we have if
+      <math|<around*|[|a,b|]>\<neq\>\<emptyset\>> then we have if
       <math|<around*|[|a,b|]>=<around*|[|c,d|]>> then <math|a=c\<wedge\>b=d>
 
       <item><math|\<forall\>a,b,c,d> with
-      <math|<around*|]|a,b|]>\<neq\>\<emptyset\>> [so that by
-      <reference|condition for interval to be empty>
-      <math|a\<less\>b\<wedge\>c\<less\>d>] we have if
+      <math|<around*|]|a,b|]>\<neq\>\<emptyset\>> then we have if
       <math|<around*|]|a,b|]>=<around*|]|c,d|]>> then <math|a=c\<wedge\>b=d>
 
       <item><math|\<forall\>a,b,c,d> with
-      <math|<around*|[|a,b|[>\<neq\>\<emptyset\>> [so that by
-      <reference|condition for interval to be empty>
-      <math|a\<less\>b\<wedge\>c\<less\>d>] we have if
+      <math|<around*|[|a,b|[>\<neq\>\<emptyset\>> then we have if
       <math|<around*|[|a,b|[>=<around*|[|c,d|[>> then <math|a=c\<wedge\>b=d>
 
       <item><math|\<forall\>a,b,c,d> with
-      <math|<around*|]|a,b|[>\<neq\>\<emptyset\>> [so that by
-      <reference|condition for interval to be empty>
-      <math|a\<less\>b\<wedge\>c\<less\>d>] we have if
+      <math|<around*|]|a,b|[>\<neq\>\<emptyset\>> then we have if
       <math|<around*|]|a,b|[>=<around*|]|c,d|[>> then <math|a=c\<wedge\>b=d>
     </enumerate>
   </theorem>
@@ -13620,7 +13649,7 @@
         giving the contradiction <math|b\<less\>b>
       </description>
 
-      so the only valid conclusion is that <math|a=b>.
+      so the only valid conclusion is that <math|a=b>
 
       <item>As <math|a\<in\><around*|[|a,\<infty\>|[>=<around*|[|b,\<infty\>|[>>
       we have <math|b\<leqslant\>a>, further from
@@ -13641,159 +13670,120 @@
 
       so the only valid conclusion is that <math|a=b>
 
-      <item>As <math|a,b\<in\><around*|[|a,b|]>=<around*|[|c,d|]>> we have
-      that <math|c\<leqslant\>a\<wedge\>b\<leqslant\>d>, further from
-      <math|c,d\<in\><around*|[|c,d|]>=<around*|[|a,b|]>> it follows that
-      <math|a\<leqslant\>c\<wedge\>d\<leqslant\>b>, hence
-      <math|a=c\<wedge\>b=d>
+      <item>As <math|<around*|[|a,b|]>=<around*|[|c,d|]>\<neq\>\<varnothing\>>
+      it follows from [theorem: <reference|interval condition to be empty>]
+      that <math|a\<leqslant\>b> and <math|c\<leqslant\>d> so that
+      <math|a,b\<in\><around*|[|a,b|]>=<around*|[|c,d|]>\<Rightarrow\>c\<leqslant\>a\<wedge\>b\<leqslant\>d>
+      and <math|c,d\<in\><around*|[|c,d|]>=<around*|[|a,b|]>\<Rightarrow\>a\<leqslant\>c\<wedge\>d\<leqslant\>b>
+      proving that <math|a=c\<wedge\>b=d>.
 
-      <item>As <math|a\<less\>b> we have <math|b\<in\><around*|]|a,b|]>=<around*|]|c,d|]>\<Rightarrow\>c\<less\>b\<leqslant\>d\<Rightarrow\>c\<less\>d>
-      giving\ 
+      <item>As <math|<around*|]|a,b|]>=<around*|]|c,d|]>\<neq\>\<varnothing\>>
+      it follows from [theorem: <reference|interval condition to be empty>]
+      that <math|a\<less\>b\<wedge\>c\<less\>d> hence
+      <math|b\<in\><around*|]|a,b|]>\<wedge\>d\<in\><around*|]|c,d|]>>. From
+      <math|b\<in\><around*|]|a,b|]>=<around*|]|c,d|]>> we have
+      <math|b\<leqslant\>d> and from <math|d\<in\><around*|]|c,d|]>=<around*|]|a,b|]>>
+      we have <math|d\<leqslant\>b> hence we have\ 
 
-      <\equation>
-        <label|eq 2.21.052>a\<less\>b\<wedge\>c\<less\>d\<Rightarrow\>d\<in\><around*|]|c,d|]>
-      </equation>
+      <\equation*>
+        b=d
+      </equation*>
 
-      Further as <math|b\<in\><around*|]|a,b|]>=<around*|]|c,d|]>\<Rightarrow\>b\<leqslant\>d>
-      and <math|d\<in\><around*|]|c,d|]>=<around*|]|a,b|]>\<Rightarrow\>d\<leqslant\>b>
-      giving\ 
-
-      <\equation>
-        <label|eq 2.20.052>b=d
-      </equation>
-
-      \ For <math|a,b,c,d> we have either
-
-      <\description>
-        <item*|<math|a=c\<wedge\>b=d>>then (6) is proved
-
-        <item*|<math|a=c\<wedge\>b\<less\>d>>contradicting <math|b=d> [see
-        <reference|eq 2.20.052>].
-
-        <item*|<math|a=c\<wedge\>d\<less\>b>>contradicting <math|b=d> [see
-        <reference|eq 2.20.052>].
-
-        <item*|<math|a\<less\>c\<wedge\>b=d>>then
-        <math|a\<less\>c\<less\>d=b\<Rightarrow\>c\<in\><around*|]|a,b|]>=<around*|]|c,d|]>\<Rightarrow\>c\<less\>c>
-        a contradiction.
-
-        <item*|<math|a\<less\>c\<wedge\>b\<less\>d>>contradicting <math|b=d>
-        [see <reference|eq 2.20.052>].
-
-        <item*|<math|a\<less\>c\<wedge\>d\<less\>b>>contradicting <math|b=d>
-        [see <reference|eq 2.20.052>].
-
-        <item*|<math|c\<less\>a\<wedge\>b=d>>then
-        <math|c\<less\>a\<less\>b=d\<Rightarrow\>a\<in\><around*|]|c,d|]>=<around*|]|a,b|]>\<Rightarrow\>a\<less\>a>
-        a contradiction.
-
-        <item*|<math|c\<less\>a\<wedge\>b\<less\>d>>contradicting <math|b=d>
-        [see <reference|eq 2.20.052>].
-
-        <item*|<math|c\<less\>a\<wedge\>d\<less\>b>>contradicting <math|b=d>
-        [see <reference|eq 2.20.052>].
-      </description>
-
-      so the only valid case is that <math|a=b> and <math|c=d>.
-
-      <item>As <math|a\<less\>b> we have <math|a\<in\><around*|[|a,b|[>=<around*|[|c,d|[>\<Rightarrow\>c\<leqslant\>a\<less\>d>
-      giving\ 
+      Assume that <math|a\<less\>c> then as <math|c\<less\>d=b> we have
+      <math|c\<in\><around*|]|a,b|]>=<around*|]|c,d|]>> so that
+      <math|c\<less\>c> a contradiction, hence we must have\ 
 
       <\equation>
-        <label|eq 2.22.052>a\<less\>b\<wedge\>c\<less\>d\<Rightarrow\>c\<in\><around*|[|c,d|[>
+        <label|eq 3.82.146>c\<leqslant\>a
       </equation>
 
-      Further as <math|a\<in\><around*|[|a,b|[>=<around*|[|c,d|[>\<Rightarrow\>c\<leqslant\>a>
-      and <math|c\<in\><around*|[|c,d|[>=<around*|[|a,b|[>\<Rightarrow\>a\<leqslant\>c>
-      giving\ 
+      Assume that <math|c\<less\>a> then as <math|a\<less\>b=d> we have
+      <math|a\<in\><around*|]|c,d|]>=<around*|]|a,b|]>> so that
+      <math|a\<less\>a> a contradiction hence we must have <math|a\<leq\>c>
+      which combined with [eq: <reference|eq 3.82.146>] proves that\ 
+
+      <\equation*>
+        a=c
+      </equation*>
+
+      <item>As <math|<around*|[|a,b|[>=<around*|[|c,d|[>\<neq\>\<varnothing\>>
+      we have by [theorem: <reference|interval condition to be empty>] that
+      <math|a\<less\>b\<wedge\>c\<less\>d> so that
+      <math|a\<in\><around*|[|a,b|[>\<wedge\>c\<in\><around*|[|c,d|[>>. From
+      <math|a\<in\><around*|[|a,b|[>=<around*|[|c,d|[>> it follows that
+      <math|c\<leqslant\>a> and from <math|c\<in\><around*|[|c,d|[>=<around*|[|a,b|[>>
+      we have <math|a\<leqslant\>c> hence we have\ 
+
+      <\equation*>
+        a=c
+      </equation*>
+
+      Assume that <math|b\<less\>d> then as <math|c=a\<less\>b> we have
+      <math|b\<in\><around*|[|c,d|[>=<around*|[|a,b|[>> so that
+      <math|b\<less\>b> a contradiction, hence\ 
 
       <\equation>
-        <label|eq 2.23.052>a=c
+        <label|eq 3.83.146>b\<leqslant\>d
       </equation>
 
-      For <math|a,b,c,d> we have either
+      Assume that <math|d\<less\>b> then as <math|a=c\<less\>d\<less\>b> we
+      have <math|d\<in\><around*|[|a,b|[>=<around*|[|c,d|[>> so that
+      <math|d\<less\>d> a contradiction, hence <math|d\<leqslant\>b> which
+      combined with [eq: <reference|eq 3.83.146>] proves\ 
 
-      <\description>
-        <item*|<math|a=c\<wedge\>b=d>>then (7) is proved.
-
-        <item*|<math|a=c\<wedge\>b\<less\>d>>then
-        <math|c=a\<less\>b\<less\>d\<Rightarrow\>b\<in\><around*|[|c,d|[>=<around*|[|a,b|[>\<Rightarrow\>b\<less\>b>
-        a contradiction.
-
-        <item*|<math|a=c\<wedge\>d\<less\>b>>then
-        <math|a=c\<less\>d\<less\>b\<Rightarrow\>d\<in\><around*|[|a,b|[>=<around*|[|c,d|[>\<Rightarrow\>d\<less\>d>
-        a contradiction.
-
-        <item*|<math|a\<less\>c\<wedge\>b=d>>contradicting <math|a=c> [see
-        <reference|eq 2.23.052>]
-
-        <item*|<math|a\<less\>c\<wedge\>b\<less\>d>>contradicting <math|a=c>
-        [see <reference|eq 2.23.052>]
-
-        <item*|<math|a\<less\>c\<wedge\>d\<less\>b>>contradicting <math|a=c>
-        [see <reference|eq 2.23.052>]
-
-        <item*|<math|c\<less\>a\<wedge\>b=d>>contradicting <math|a=c> [see
-        <reference|eq 2.23.052>]
-
-        <item*|<math|c\<less\>a\<wedge\>b\<less\>d>>contradicting <math|a=c>
-        [see <reference|eq 2.23.052>]
-
-        <item*|<math|c\<less\>a\<wedge\>d\<less\>b>>contradicting <math|a=c>
-        [see <reference|eq 2.23.052>]
-      </description>
-
-      so the only valid case is that <math|a=b> and <math|c=d>.
+      <\equation*>
+        b=d
+      </equation*>
 
       <item>As <math|\<emptyset\>\<neq\><around*|]|a.b|[>=<around*|]|c,d|[>>
       there exists a <math|x\<in\>A> such that
       <math|x\<in\><around*|]|a,b|[>=<around*|]|c,d|[>> giving\ 
 
       <\equation>
-        <label|eq 2.25.052>a\<less\>x\<less\>b\<wedge\>c\<less\>x\<less\>d
+        <label|eq 3.84.146>a\<less\>x\<less\>b\<wedge\>c\<less\>x\<less\>d
       </equation>
 
-      For <math|a,b,c,d> we have either
+      Assume that <math|a\<less\>c> then by [eq: <reference|eq 3.84.146>]
+      <math|a\<less\>c\<less\>x\<less\>b> so that
+      <math|c\<in\><around*|]|a,b|[>=<around*|]|c,d|[>> leading to the
+      contradiction <math|c\<less\>c> hence\ 
 
-      <\description>
-        <item*|<math|a=c\<wedge\>b=d>>then (8) is proved
+      <\equation>
+        <label|eq 3.85.146>c\<leqslant\>a
+      </equation>
 
-        <item*|<math|a=c\<wedge\>b\<less\>d>>then
-        <math|c=a\<less\>x\<less\>b\<less\>d\<Rightarrow\>b\<in\><around*|]|c,d|[>=<around*|]|a,b|[>\<Rightarrow\>b\<less\>b>
-        a contradiction.
+      Assume that <math|c\<less\>a> then by [eq: <reference|eq 3.84.146>]
+      <math|c\<less\>a\<less\>x\<less\>d> so that
+      <math|a\<in\><around*|]|c,d|[>=<around*|]|a,b|[>> leading to the
+      contradiction <math|a\<less\>a> hence <math|a\<leqslant\>c> which
+      combined with [eq: <reference|eq 3.85.146>] gives
 
-        <item*|<math|a=c\<wedge\>d\<less\>b>>then
-        <math|a=c\<less\>x\<less\>d\<less\>b\<Rightarrow\>d\<in\><around*|]|a,b|[>=<around*|]|c,d|[>\<Rightarrow\>d\<less\>d>
-        a contradiction.
+      <\equation*>
+        a=c
+      </equation*>
 
-        <item*|<math|a\<less\>c\<wedge\>b=d>>then
-        <math|a\<less\>c\<less\>x\<less\>d=b\<Rightarrow\>c\<in\><around*|]|a,b|[>=<around*|]|c,d|[>\<Rightarrow\>c\<less\>c>
-        a contradiction.
+      Assume that <math|b\<less\>d> then by [eq: <reference|eq 3.84.146>]
+      <math|c\<less\>x\<less\>b\<less\>d> so that
+      <math|b\<in\><around*|]|c,d|[>=<around*|]|a,b|[>> leading to the
+      contradicton <math|b\<less\>b>, hence\ 
 
-        <item*|<math|a\<less\>c\<wedge\>b\<less\>d>>then
-        <math|c\<less\>x\<less\>b\<less\>d\<Rightarrow\>b\<in\><around*|]|c,d|[>=<around*|]|a,b|[>\<Rightarrow\>b\<less\>b>
-        a contradiction.
+      <\equation>
+        <label|eq 3.86.146>d\<leqslant\>b
+      </equation>
 
-        <item*|<math|a\<less\>c\<wedge\>d\<less\>b>>then
-        <math|a\<less\>x\<less\>d\<less\>b\<Rightarrow\>d\<in\><around*|]|a,b|[>=<around*|]|c,d|[>\<Rightarrow\>d\<less\>d>
-        a contradiction.
+      Assume that <math|d\<less\>b> then by \ [eq: <reference|eq 3.84.146>]
+      <math|a\<less\>x\<less\>d\<less\>b> so that
+      <math|d\<in\><around*|]|a,b|[>=<around*|]|c,d|[>> leading to the
+      contradiction <math|d\<less\>d> proving that <math|b\<leqslant\>d>.
+      Combining this with [eq: <reference|eq 3.86.146>] results in\ 
 
-        <item*|<math|c\<less\>a\<wedge\>b=d>>then
-        <math|c\<less\>a\<less\>x\<less\>b=d\<Rightarrow\>a\<in\><around*|]|c,d|[>=<around*|]|a,b|[>\<Rightarrow\>a\<less\>a>
-        a contradiction.
-
-        <item*|<math|c\<less\>a\<wedge\>b\<less\>d>>then
-        <math|c\<less\>a\<less\>x\<less\>b\<less\>d\<Rightarrow\>a\<in\><around*|]|c,d|[>=<around*|]|a,b|[>\<Rightarrow\>a\<less\>a>
-        a contradiction.
-
-        <item*|<math|c\<less\>a\<wedge\>d\<less\>b>>then
-        <math|c\<less\>a\<less\>x\<less\>d\<less\>b\<Rightarrow\>d\<in\><around*|]|a,b|[>=<around*|]|c,d|[>\<Rightarrow\>d\<less\>d>
-        a contradiction.
-      </description>
-
-      so the only valid case is that <math|a=b> and <math|c=d>.
+      <\equation*>
+        b=d
+      </equation*>
     </enumerate>
   </proof>
+
+  \;
 
   \;
 
@@ -13945,7 +13935,7 @@
     <associate|auto-97|<tuple|well-ordered class|?>>
     <associate|auto-98|<tuple|immediate successor|?>>
     <associate|auto-99|<tuple|section|?>>
-    <associate|axiom of choice|<tuple|3.98|?>>
+    <associate|axiom of choice|<tuple|3.99|?>>
     <associate|axiom of construction|<tuple|1.9|?>>
     <associate|axiom of extent|<tuple|1.5|2>>
     <associate|axiom of infinity|<tuple|1.52|?>>
@@ -13960,31 +13950,31 @@
     <associate|cartesian product of the empty set|<tuple|1.46|?>>
     <associate|cartesian product properties (1)|<tuple|1.49|?>>
     <associate|cartesian product with enpty set|<tuple|1.47|?>>
-    <associate|choice Axiom of choice consequences|<tuple|3.124|?>>
-    <associate|choice Hausdorff maximal principle|<tuple|3.115|?>>
-    <associate|choice Hausdorff's Maximal Principle|<tuple|3.116|?>>
-    <associate|choice Hausdorff's implies Zorn's|<tuple|3.118|?>>
-    <associate|choice P'(A)|<tuple|3.95|?>>
-    <associate|choice P'(A) is a set|<tuple|3.96|?>>
-    <associate|choice Zorn implies welll ordering|<tuple|3.119|?>>
-    <associate|choice Zorn's lemma|<tuple|3.117|?>>
-    <associate|choice Zorn's lemma for pre-order|<tuple|3.125|?>>
-    <associate|choice axiom of choice equivalences (1)|<tuple|3.100|?>>
-    <associate|choice choice function|<tuple|3.97|?>>
-    <associate|choice existence of successor|<tuple|3.105|?>>
-    <associate|choice family on preimage|<tuple|3.127|?>>
-    <associate|choice function generating|<tuple|3.101|?>>
-    <associate|choice function to injection/bijection|<tuple|3.126|?>>
-    <associate|choice intersection of p-sewuences|<tuple|3.108|?>>
-    <associate|choice lemma p-sequence|<tuple|3.106|?>>
-    <associate|choice lemma p-sequence generation|<tuple|3.111|?>>
-    <associate|choice lemma properties of select|<tuple|3.112|?>>
-    <associate|choice lemma property of select elements|<tuple|3.110|?>>
+    <associate|choice Axiom of choice consequences|<tuple|3.125|?>>
+    <associate|choice Hausdorff maximal principle|<tuple|3.116|?>>
+    <associate|choice Hausdorff's Maximal Principle|<tuple|3.117|?>>
+    <associate|choice Hausdorff's implies Zorn's|<tuple|3.119|?>>
+    <associate|choice P'(A)|<tuple|3.96|?>>
+    <associate|choice P'(A) is a set|<tuple|3.97|?>>
+    <associate|choice Zorn implies welll ordering|<tuple|3.120|?>>
+    <associate|choice Zorn's lemma|<tuple|3.118|?>>
+    <associate|choice Zorn's lemma for pre-order|<tuple|3.126|?>>
+    <associate|choice axiom of choice equivalences (1)|<tuple|3.101|?>>
+    <associate|choice choice function|<tuple|3.98|?>>
+    <associate|choice existence of successor|<tuple|3.106|?>>
+    <associate|choice family on preimage|<tuple|3.128|?>>
+    <associate|choice function generating|<tuple|3.102|?>>
+    <associate|choice function to injection/bijection|<tuple|3.127|?>>
+    <associate|choice intersection of p-sewuences|<tuple|3.109|?>>
+    <associate|choice lemma p-sequence|<tuple|3.107|?>>
+    <associate|choice lemma p-sequence generation|<tuple|3.112|?>>
+    <associate|choice lemma properties of select|<tuple|3.113|?>>
+    <associate|choice lemma property of select elements|<tuple|3.111|?>>
     <associate|choice lemma select elements froms a
-    p-sewuence|<tuple|3.113|?>>
-    <associate|choice lemma upper bound of chain|<tuple|3.121|?>>
-    <associate|choice lemma well ordering lemma (1)|<tuple|3.120|?>>
-    <associate|choice well-order implies Axiom of Choice|<tuple|3.122|?>>
+    p-sewuence|<tuple|3.114|?>>
+    <associate|choice lemma upper bound of chain|<tuple|3.122|?>>
+    <associate|choice lemma well ordering lemma (1)|<tuple|3.121|?>>
+    <associate|choice well-order implies Axiom of Choice|<tuple|3.123|?>>
     <associate|class absorption laws|<tuple|1.27|?>>
     <associate|class class commutative,idempotent,associative,distributivity|<tuple|1.30|?>>
     <associate|class complement of comploment|<tuple|1.28|?>>
@@ -14042,20 +14032,15 @@
     <associate|eq 2.19.002|<tuple|2.30|?>>
     <associate|eq 2.2.001|<tuple|2.4|?>>
     <associate|eq 2.20.002|<tuple|2.31|?>>
-    <associate|eq 2.20.052|<tuple|3.83|?>>
     <associate|eq 2.20.053|<tuple|3.74|?>>
     <associate|eq 2.21.002|<tuple|2.32|?>>
     <associate|eq 2.21.017|<tuple|2.22|?>>
-    <associate|eq 2.21.052|<tuple|3.82|?>>
     <associate|eq 2.21.053|<tuple|3.75|?>>
     <associate|eq 2.22.017|<tuple|2.23|?>>
-    <associate|eq 2.22.052|<tuple|3.84|?>>
     <associate|eq 2.22.053|<tuple|3.76|?>>
-    <associate|eq 2.23.052|<tuple|3.85|?>>
     <associate|eq 2.23.053|<tuple|3.77|?>>
     <associate|eq 2.24.053|<tuple|3.78|?>>
     <associate|eq 2.25.004|<tuple|2.34|?>>
-    <associate|eq 2.25.052|<tuple|3.86|?>>
     <associate|eq 2.25.053|<tuple|3.79|?>>
     <associate|eq 2.26.004|<tuple|2.35|?>>
     <associate|eq 2.26.053|<tuple|3.80|?>>
@@ -14168,20 +14153,26 @@
     <associate|eq 3.71.019|<tuple|3.72|?>>
     <associate|eq 3.72.019|<tuple|3.73|?>>
     <associate|eq 3.8.011|<tuple|3.8|?>>
+    <associate|eq 3.82.146|<tuple|3.82|?>>
+    <associate|eq 3.83.146|<tuple|3.83|?>>
+    <associate|eq 3.84.146|<tuple|3.84|?>>
+    <associate|eq 3.85.146|<tuple|3.85|?>>
+    <associate|eq 3.86.146|<tuple|3.86|?>>
     <associate|eq 3.9.011|<tuple|3.9|?>>
     <associate|equivalence relation|<tuple|3.5|?>>
     <associate|equivalence relation A/R|<tuple|3.16|?>>
     <associate|equivalence relation R[x]=R[y]|<tuple|3.11|?>>
-    <associate|equivalence relation canical function|<tuple|3.21|?>>
+    <associate|equivalence relation canical function|<tuple|3.22|?>>
     <associate|equivalence relation canonical decomposition of a
-    function|<tuple|3.22|?>>
+    function|<tuple|3.23|?>>
     <associate|equivalence relation class|<tuple|3.9|?>>
     <associate|equivalence relation defines a partition|<tuple|3.14|?>>
-    <associate|equivalence relation determined by a function|<tuple|3.20|?>>
-    <associate|equivalence relation function|<tuple|3.18|?>>
+    <associate|equivalence relation defines a partition (1)|<tuple|3.18|?>>
+    <associate|equivalence relation determined by a function|<tuple|3.21|?>>
+    <associate|equivalence relation function|<tuple|3.19|?>>
     <associate|equivalence relation partition|<tuple|3.6|?>>
     <associate|equivalence relation partition alternative|<tuple|3.8|?>>
-    <associate|equivalence relation subsets|<tuple|3.19|?>>
+    <associate|equivalence relation subsets|<tuple|3.20|?>>
     <associate|family|<tuple|2.97|?>>
     <associate|family and function composition|<tuple|2.106|?>>
     <associate|family de Morgan|<tuple|2.127|?>>
@@ -14275,85 +14266,86 @@
     <associate|function simple definition|<tuple|2.91|?>>
     <associate|function simple definition notation|<tuple|2.92|?>>
     <associate|function surjection and construction of inverse
-    function|<tuple|3.99|?>>
+    function|<tuple|3.100|?>>
     <associate|function surjection condition|<tuple|2.51|?>>
     <associate|function trivial bijection|<tuple|2.65|?>>
     <associate|function: A^B and sets|<tuple|2.35|?>>
-    <associate|generalized intervals and boundaries|<tuple|3.134|?>>
-    <associate|generalized intervals and intervals|<tuple|3.132|?>>
-    <associate|generalized intervals condition|<tuple|3.133|?>>
-    <associate|interval condition to be empty|<tuple|3.129|?>>
-    <associate|interval generalized interval|<tuple|3.130|?>>
-    <associate|interval generalized interval condition|<tuple|3.131|?>>
-    <associate|order A isomorphism B|<tuple|3.49|?>>
-    <associate|order a\<less\>=b\<less\>=c|<tuple|3.29|?>>
-    <associate|order chain|<tuple|3.40|?>>
-    <associate|order chain is a totally ordered class|<tuple|3.42|?>>
-    <associate|order comparable|<tuple|3.37|?>>
-    <associate|order comparable property|<tuple|3.38|?>>
-    <associate|order composition of functions|<tuple|3.51|?>>
-    <associate|order condition for isomorphism|<tuple|3.53|?>>
+    <associate|generalized intervals and boundaries|<tuple|3.135|?>>
+    <associate|interval and inf or sup|<tuple|3.133|?>>
+    <associate|interval condition to be empty|<tuple|3.130|?>>
+    <associate|interval generalized condition (1)|<tuple|3.134|?>>
+    <associate|interval generalized interval|<tuple|3.131|?>>
+    <associate|interval generalized interval condition|<tuple|3.132|?>>
+    <associate|interval interval|<tuple|3.129|?>>
+    <associate|order A isomorphism B|<tuple|3.50|?>>
+    <associate|order a\<less\>=b\<less\>=c|<tuple|3.30|?>>
+    <associate|order chain|<tuple|3.41|?>>
+    <associate|order chain is a totally ordered class|<tuple|3.43|?>>
+    <associate|order comparable|<tuple|3.38|?>>
+    <associate|order comparable property|<tuple|3.39|?>>
+    <associate|order composition of functions|<tuple|3.52|?>>
+    <associate|order condition for isomorphism|<tuple|3.54|?>>
     <associate|order condition for isomorphism in a totallu ordered
-    set|<tuple|3.56|?>>
-    <associate|order conditional complete alternatives|<tuple|3.75|?>>
-    <associate|order conditional complete order|<tuple|3.74|?>>
-    <associate|order empty set is a chain|<tuple|3.41|?>>
-    <associate|order eq order preorder to order|<tuple|3.33|?>>
-    <associate|order example inclusion order and sup, inf|<tuple|3.67|?>>
-    <associate|order greatest and lowest element are unique|<tuple|3.61|?>>
-    <associate|order greatest lowest element|<tuple|3.58|?>>
-    <associate|order homeomorphism extending|<tuple|3.50|?>>
-    <associate|order immediate successor|<tuple|3.82|?>>
-    <associate|order inclusion and greatest and least element|<tuple|3.69|?>>
-    <associate|order inclusion is a order|<tuple|3.32|?>>
-    <associate|order increasing, decreasing|<tuple|3.48|?>>
-    <associate|order initial segement|<tuple|3.45|?>>
-    <associate|order initial segement a\<less\>b|<tuple|3.92|?>>
-    <associate|order initial segement inclusion|<tuple|3.46|?>>
-    <associate|order intial sergment property|<tuple|3.47|?>>
-    <associate|order isomorphism and conditional complete|<tuple|3.77|?>>
-    <associate|order isomorphism condition (2)|<tuple|3.54|?>>
-    <associate|order isomorphism preservers sup and inf|<tuple|3.76|?>>
-    <associate|order isomorphism strictly|<tuple|3.52|?>>
-    <associate|order lexical order|<tuple|3.36|?>>
-    <associate|order lower upper bound and inclusion|<tuple|3.70|?>>
-    <associate|order lower upper bounds of empty set|<tuple|3.65|?>>
-    <associate|order maximal minimal element|<tuple|3.57|?>>
-    <associate|order maximum of class with bigger elements|<tuple|3.63|?>>
-    <associate|order min(A)\<less\>=max(A)|<tuple|3.62|?>>
-    <associate|order order relation|<tuple|3.26|?>>
-    <associate|order partial order on sub class|<tuple|3.34|?>>
-    <associate|order partial ordered class|<tuple|3.27|?>>
-    <associate|order preorder|<tuple|3.24|?>>
-    <associate|order preordered class|<tuple|3.25|?>>
-    <associate|order properties of the isomorph relation|<tuple|3.55|?>>
-    <associate|order section|<tuple|3.84|?>>
-    <associate|order section and well ordering|<tuple|3.85|?>>
-    <associate|order strict order|<tuple|3.31|?>>
-    <associate|order sup and inf and bigger elements|<tuple|3.72|?>>
-    <associate|order sup inf condition|<tuple|3.73|?>>
-    <associate|order sup, inf property|<tuple|3.68|?>>
-    <associate|order sup,inf and inclusion|<tuple|3.71|?>>
-    <associate|order supremum infinum|<tuple|3.66|?>>
-    <associate|order total/well-order inclusion|<tuple|3.80|?>>
-    <associate|order totally lexicol ordering|<tuple|3.44|?>>
-    <associate|order totally ordered subclass|<tuple|3.43|?>>
-    <associate|order transfinite induction|<tuple|3.86|?>>
-    <associate|order upport lower bound|<tuple|3.64|?>>
-    <associate|order well order and immediate successor|<tuple|3.83|?>>
+    set|<tuple|3.57|?>>
+    <associate|order conditional complete alternatives|<tuple|3.76|?>>
+    <associate|order conditional complete order|<tuple|3.75|?>>
+    <associate|order empty set is a chain|<tuple|3.42|?>>
+    <associate|order eq order preorder to order|<tuple|3.34|?>>
+    <associate|order example inclusion order and sup, inf|<tuple|3.68|?>>
+    <associate|order greatest and lowest element are unique|<tuple|3.62|?>>
+    <associate|order greatest lowest element|<tuple|3.59|?>>
+    <associate|order homeomorphism extending|<tuple|3.51|?>>
+    <associate|order immediate successor|<tuple|3.83|?>>
+    <associate|order inclusion and greatest and least element|<tuple|3.70|?>>
+    <associate|order inclusion is a order|<tuple|3.33|?>>
+    <associate|order increasing, decreasing|<tuple|3.49|?>>
+    <associate|order initial segement|<tuple|3.46|?>>
+    <associate|order initial segement a\<less\>b|<tuple|3.93|?>>
+    <associate|order initial segement inclusion|<tuple|3.47|?>>
+    <associate|order intial sergment property|<tuple|3.48|?>>
+    <associate|order isomorphism and conditional complete|<tuple|3.78|?>>
+    <associate|order isomorphism condition (2)|<tuple|3.55|?>>
+    <associate|order isomorphism preservers sup and inf|<tuple|3.77|?>>
+    <associate|order isomorphism strictly|<tuple|3.53|?>>
+    <associate|order lexical order|<tuple|3.37|?>>
+    <associate|order lower upper bound and inclusion|<tuple|3.71|?>>
+    <associate|order lower upper bounds of empty set|<tuple|3.66|?>>
+    <associate|order maximal minimal element|<tuple|3.58|?>>
+    <associate|order maximum of class with bigger elements|<tuple|3.64|?>>
+    <associate|order min(A)\<less\>=max(A)|<tuple|3.63|?>>
+    <associate|order order relation|<tuple|3.27|?>>
+    <associate|order partial order on sub class|<tuple|3.35|?>>
+    <associate|order partial ordered class|<tuple|3.28|?>>
+    <associate|order preorder|<tuple|3.25|?>>
+    <associate|order preordered class|<tuple|3.26|?>>
+    <associate|order properties of the isomorph relation|<tuple|3.56|?>>
+    <associate|order section|<tuple|3.85|?>>
+    <associate|order section and well ordering|<tuple|3.86|?>>
+    <associate|order strict order|<tuple|3.32|?>>
+    <associate|order sup and inf and bigger elements|<tuple|3.73|?>>
+    <associate|order sup inf condition|<tuple|3.74|?>>
+    <associate|order sup, inf property|<tuple|3.69|?>>
+    <associate|order sup,inf and inclusion|<tuple|3.72|?>>
+    <associate|order supremum infinum|<tuple|3.67|?>>
+    <associate|order total/well-order inclusion|<tuple|3.81|?>>
+    <associate|order totally lexicol ordering|<tuple|3.45|?>>
+    <associate|order totally ordered subclass|<tuple|3.44|?>>
+    <associate|order transfinite induction|<tuple|3.87|?>>
+    <associate|order upport lower bound|<tuple|3.65|?>>
+    <associate|order well order and immediate successor|<tuple|3.84|?>>
     <associate|order well order every subclass is isomorphic with A or a
-    iitial segement|<tuple|3.94|?>>
+    iitial segement|<tuple|3.95|?>>
     <associate|order well order implies conditional complete and totally
-    ordering|<tuple|3.81|?>>
-    <associate|order well ordered and order isomorphism|<tuple|3.87|?>>
-    <associate|order well ordered class and isomorphism|<tuple|3.88|?>>
+    ordering|<tuple|3.82|?>>
+    <associate|order well ordered and order isomorphism|<tuple|3.88|?>>
+    <associate|order well ordered class and isomorphism|<tuple|3.89|?>>
     <associate|order well ordered is not isomorph to a initial segment
-    |<tuple|3.89|?>>
-    <associate|order well ordered isomorphic property (3)|<tuple|3.91|?>>
-    <associate|order well ordered isomorphism property|<tuple|3.90|?>>
-    <associate|order well ordering and isomorphism (2)|<tuple|3.93|?>>
-    <associate|order well ordering and order isomorphism|<tuple|3.79|?>>
-    <associate|order well-rodered class|<tuple|3.78|?>>
+    |<tuple|3.90|?>>
+    <associate|order well ordered isomorphic property (3)|<tuple|3.92|?>>
+    <associate|order well ordered isomorphism property|<tuple|3.91|?>>
+    <associate|order well ordering and isomorphism (2)|<tuple|3.94|?>>
+    <associate|order well ordering and order isomorphism|<tuple|3.80|?>>
+    <associate|order well-rodered class|<tuple|3.79|?>>
     <associate|pair equality of pairs|<tuple|1.43|?>>
     <associate|pair of elements|<tuple|1.41|?>>
     <associate|partial function|<tuple|2.7|?>>
@@ -14383,9 +14375,9 @@
     <associate|product of a empty set is empty|<tuple|2.133|?>>
     <associate|product of family with one element|<tuple|2.134|?>>
     <associate|product of family with two classes|<tuple|2.135|?>>
-    <associate|product product is not empty|<tuple|3.103|?>>
+    <associate|product product is not empty|<tuple|3.104|?>>
     <associate|product projection function|<tuple|2.143|?>>
-    <associate|product projection is surjective|<tuple|3.102|?>>
+    <associate|product projection is surjective|<tuple|3.103|?>>
     <associate|product sub-product|<tuple|2.141|?>>
     <associate|relation|<tuple|3.1|?>>
     <associate|relation properties|<tuple|3.4|?>>
@@ -14398,7 +14390,7 @@
     <associate|set restriction of a set of sets|<tuple|1.65|?>>
     <associate|set successor set|<tuple|1.51|?>>
     <associate|set union of two sets is a set|<tuple|1.62|?>>
-    <associate|totally ordered class|<tuple|3.39|?>>
+    <associate|totally ordered class|<tuple|3.40|?>>
     <associate|universal class|<tuple|1.12|?>>
     <associate|universal class property|<tuple|1.13|?>>
   </collection>
@@ -14670,6 +14662,10 @@
 
       3.4<space|2spc>Axiom of choice <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-101>
+
+      3.5<space|2spc>Generalized Intervals
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-107>
     </associate>
   </collection>
 </auxiliary>

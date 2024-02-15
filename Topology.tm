@@ -7,6 +7,10 @@
 <\body>
   <chapter|Topology>
 
+  TODO for every reference to 'topology basis alternative definition'
+  \ <reference|topology basis alternative definition> check if we do not have
+  to refer to <reference|topology basis> [topology basis]
+
   <section|Topological spaces>
 
   <\definition>
@@ -1381,7 +1385,7 @@
   <\theorem>
     <label|topology box topology and bases>Let <math|I> be a non empty set,
     <math|<around*|{|<around*|\<langle\>|X<rsub|i>,\<cal-T\><rsub|i>|\<rangle\>>|}><rsub|i\<in\>I>>
-    be a family of of topological spaces witht <math|\<forall\>i\<in\>I>
+    be a family of of topological spaces with <math|\<forall\>i\<in\>I>
     <math|\<cal-B\><rsub|i>> a basis for <math|\<cal-T\><rsub|i>> then\ 
 
     <\equation*>
@@ -3182,7 +3186,7 @@
 
     <\equation*>
       B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,\<varepsilon\>|)>=<around*|{|y\<in\>X\|<around*|\<\|\|\>|x-y|\<\|\|\>>\<less\>\<varepsilon\>|}>
-      </equation*>
+    </equation*>
 
     the set of all open balls in the pseudo normed space is noted by
     <math|\<cal-B\><rsub|<around*|\<\|\|\>||\<\|\|\>>>> hence\ 
@@ -3236,6 +3240,782 @@
       \<cal-B\><rsub|d<rsub|<around*|\<\|\|\>||\<\|\|\>>>>=<around*|{|B<rsub|d<rsub|<around*|\<\|\|\>||\<\|\|\>>>><around*|(|x,\<varepsilon\>|)>\|x\<in\>X\<wedge\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>|}>=<around*|{|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,\<varepsilon\>|)>\|x\<in\>X\<wedge\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>|}>\<equallim\><rsub|def>\<cal-B\><rsub|<around*|\<\|\|\>||\<\|\|\>>>
     </equation*>
   </definition>
+
+  <\example>
+    <label|normed complex numbers><math|<around*|\<langle\>|\<bbb-C\>,\<\|\|\>|\<rangle\>>>
+    is a normed space where <math|<around*|\|||\|>> is the complex norm [see
+    definition: <reference|complex norm>]
+  </example>
+
+  <\proof>
+    This was proved in [theorem: <reference|complex norm properties>]\ 
+  </proof>
+
+  <\example>
+    <label|normed real numbers><math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>>
+    is a normed space where <math|<around*|\|||\|>> is defined by\ 
+
+    <\equation*>
+      <around*|\|||\|>:\<bbb-R\>\<times\>\<bbb-R\>\<rightarrow\>\<bbb-R\><text|
+      by ><around*|\||x|\|>=<choice|<tformat|<table|<row|<cell|x<text| if
+      >0\<leqslant\>x>>|<row|<cell|-x<text| if >x\<less\>0>>>>>
+    </equation*>
+
+    <\note>
+      If <math|0\<leqslant\>x> then <math|x=<around*|\||x|\|>\<Rightarrow\>x\<less\><around*|\||x|\|>>
+      and if <math|x\<less\>0> then <math|x\<less\>0\<leqslant\>-<around*|\||x|\|>>
+      so <math|\<forall\>x\<in\>X<text| we have >x\<less\><around*|\||x|\|>>.
+    </note>
+  </example>
+
+  <\proof>
+    We have:
+
+    <\enumerate>
+      <item>If <math|x\<in\>\<bbb-R\>> then we have either:\ 
+
+      <\description>
+        <item*|<math|0\<leqslant\>x>>Then
+        <math|0\<leqslant\>x=<around*|\||x|\|>>
+
+        <item*|<math|x\<less\>0>>Then <math|0\<less\>-x=<around*|\||x|\|>>
+      </description>
+
+      so in all cases we have <math|0\<leqslant\><around*|\||x|\|>>
+
+      <\with|par-mode|left>
+        <item>Let <math|\<alpha\>\<in\>\<bbb-R\>> and <math|x\<in\>\<bbb-R\>>
+        then we have either:
+
+        <\description>
+          <item*|<math|0\<leqslant\>\<alpha\>\<wedge\>0\<leqslant\>x>>Then
+          <math|0\<leqslant\>\<alpha\>\<cdot\>x> so that
+          <math|<around*|\||\<alpha\>\<cdot\>x|\|>=\<alpha\>\<cdot\>x=<around*|\||\<alpha\>|\|>\<cdot\><around*|\||x|\|>>.
+
+          <item*|<math|\<alpha\>\<less\>0\<wedge\>0\<leqslant\>x>>Then
+          <math|\<alpha\>\<cdot\>x\<leqslant\>0> so that
+          <math|<around*|\||\<alpha\>\<cdot\>x|\|>=-<around*|(|\<alpha\>\<cdot\>x|)>=<around*|(|-\<alpha\>|)>\<cdot\>x=<around*|\||\<alpha\>|\|>\<cdot\><around*|\||x|\|>>.
+
+          <item*|<math|0\<leqslant\>\<alpha\>\<wedge\>x\<less\>0>>Then
+          <math|\<alpha\>\<cdot\>x\<leqslant\>0> so that
+          <math|<around*|\||\<alpha\>\<cdot\>x|\|>=-<around*|(|\<alpha\>\<cdot\>x|)>=\<alpha\>\<cdot\><around*|(|-x|)>=<around*|\||\<alpha\>|\|>\<cdot\><around*|\||x|\|>>.
+
+          <item*|<math|\<alpha\>\<less\>0\<wedge\>x\<less\>0>>Then
+          <math|0\<less\>\<alpha\>\<cdot\>x> so that
+          <math|<around*|\||\<alpha\>\<cdot\>x|\|>=<around*|(|-\<alpha\>|)>\<cdot\><around*|(|-x|)>=<around*|\||\<alpha\>|\|>\<cdot\><around*|\||x|\|>>.
+        </description>
+
+        so in all cases we have\ 
+
+        <\equation*>
+          <around*|\||\<alpha\>\<cdot\>x|\|>=<around*|\||\<alpha\>|\|>\<cdot\><around*|\||x|\|>
+        </equation*>
+
+        <item>Let <math|x,y\<in\>\<bbb-R\>> then we have for <math|x+y>
+        either:
+
+        <\description>
+          <item*|<math|0\<leqslant\>x+y>>Then
+          <math|<around*|\||x+y|\|>=x+y\<leqslant\><around*|\||x|\|>+<around*|\||y|\|>>
+
+          <item*|<math|x+y\<less\>0>>Then
+          <math|<around*|\||x+y|\|>=-<around*|(|x+y|)>=<around*|(|-x|)>+<around*|(|-y|)>\<leqslant\><around*|\||-x|\|>+<around*|\||-y|\|>\<equallim\><rsub|<around*|(|2|)>><around*|\||-1|\|>\<cdot\><around*|\||x|\|>+<around*|\||-1|\|>\<cdot\><around*|\||y|\|>=<around*|\||x|\|>+<around*|\||y|\|>>,
+        </description>
+
+        so in all cases we have\ 
+
+        <\equation*>
+          <around*|\||x+y|\|>\<leqslant\><around*|\||x|\|>+<around*|\||y|\|>
+        </equation*>
+
+        <item>If <math|<around*|\||x|\|>=0> then we have for
+        <math|x\<in\>\<bbb-R\>> either:
+
+        <\description>
+          <item*|<math|0\<leqslant\>x>>Then <math|x=<around*|\||x|\|>=0>
+
+          <item*|<math|x\<less\>0>>Then <math|-x=<around*|\||x|\|>=0\<Rightarrow\>x=0>
+        </description>
+      </with>
+    </enumerate>
+  </proof>
+
+  For <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>> \ we have the
+  following equivalences for the basis of the normed topology based on the
+  absolute value norm.
+
+  <\theorem>
+    <label|normed basis of T\|\|>Given the normed space
+    <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>> we have for the
+    basis <math|\<cal-B\><rsub|<around*|\|||\|>>> of the normed topology
+    <math|\<cal-T\><rsub|<around*|\|||\|>>> that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<cal-B\><rsub|<around*|\|||\|>>>|<cell|\<equallim\><rsub|def>>|<cell|<around*|{|B<rsub|<around*|\|||\|>><around*|(|x,\<varepsilon\>|)>\|x\<in\>\<bbb-R\>\<wedge\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>|}>>>|<row|<cell|>|<cell|=>|<cell|<around*|{|<around*|]|x-\<varepsilon\>,x+\<varepsilon\>|[>\|x\<in\>\<bbb-R\>\<wedge\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>|}>>>|<row|<cell|>|<cell|=>|<cell|<around*|{|<around*|]|a,b|[>\|a,b\<in\>\<bbb-R\>\<wedge\>a\<less\>b|}>>>>>
+    </eqnarray*>
+  </theorem>
+
+  <\proof>
+    First we have for <math|x\<in\>\<bbb-R\>> and
+    <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|y\<in\>B<rsub|<around*|\|||\|>><around*|(|x,\<varepsilon\>|)>>|<cell|\<Leftrightarrow\>>|<cell|<around*|\||x-y|\|>\<less\>\<varepsilon\>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x-y\<less\>\<varepsilon\>\<wedge\>y-x\<less\>\<varepsilon\>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x-\<varepsilon\>\<less\>y\<wedge\>y\<less\>x+\<varepsilon\>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><around*|]|x-\<varepsilon\>,x+\<varepsilon\>|[>>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation*>
+      B<rsub|<around*|\|||\|>><around*|(|x,\<varepsilon\>|)>=<around*|]|x-\<varepsilon\>,x+\<varepsilon\>|[>
+    </equation*>
+
+    From this it follows that\ 
+
+    <\equation*>
+      <around*|{|B<rsub|<around*|\|||\|>><around*|(|x,\<varepsilon\>|)>\|x\<in\>\<bbb-R\>\<wedge\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>|}>=<around*|{|<around*|]|x-\<varepsilon\>,x+\<varepsilon\>|[>\|x\<in\>\<bbb-R\>\<wedge\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>|}>
+    </equation*>
+
+    If <math|B\<in\><around*|{|<around*|]|x-\<varepsilon\>,x+\<varepsilon\>|[>\|x\<in\>\<bbb-R\>\<wedge\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>|}>>
+    then there exist a <math|x\<in\>\<bbb-R\>> and a
+    <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> such that
+    <math|B=<around*|]|x-\<varepsilon\>,x+\<varepsilon\>|[>>, which, as
+    <math|x-\<varepsilon\>,x+\<varepsilon\>\<in\>\<bbb-R\>\<wedge\>x-\<varepsilon\>\<less\>x+\<varepsilon\>>,
+    proves that <math|B\<in\><around*|{|<around*|]|a,b|[>\|a,b\<in\>\<bbb-R\>\<wedge\>a\<less\>b|}>>.
+    Hence\ 
+
+    <\equation>
+      <label|eq 14.22.146><around*|{|<around*|]|x-\<varepsilon\>,x+\<varepsilon\>|[>\|x\<in\>\<bbb-R\>\<wedge\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>|}>\<subseteq\><around*|{|<around*|]|a,b|[>\|a,b\<in\>\<bbb-R\>\<wedge\>a\<less\>b|}>
+    </equation>
+
+    If <math|B\<in\><around*|{|<around*|]|a,b|[>\|a,b\<in\>\<bbb-R\>\<wedge\>a\<less\>b|}>>
+    then there exist a <math|a\<comma\>b\<in\>\<bbb-R\>> with
+    <math|a\<less\>b> such that <math|B=<around*|]|a,b|[>>. Take then
+    <math|\<varepsilon\>=<around*|(|b-a|)>/2> and <math|x=a+\<varepsilon\>>
+    then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|y\<in\><around*|]|x-\<varepsilon\>,x+\<varepsilon\>|[>>|<cell|\<Leftrightarrow\>>|<cell|x-\<varepsilon\>\<less\>y\<wedge\>y\<less\>x+\<varepsilon\>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|a+\<varepsilon\>|)>-\<varepsilon\>\<less\>y\<wedge\>y\<less\><around*|(|a+\<varepsilon\>|)>+\<varepsilon\>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|a\<less\>y\<wedge\>y\<less\>a+2\<cdot\>\<varepsilon\>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|a\<less\>y\<wedge\>y\<less\>a+b-a>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|a\<less\>y\<wedge\>y\<less\>b>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><around*|]|a,b|[>>>>>
+    </eqnarray*>
+
+    proving that <math|B=<around*|]|x-\<varepsilon\>,x+\<varepsilon\>|[>\<in\><around*|{|<around*|]|x-\<varepsilon\>,x+\<varepsilon\>|[>\|x\<in\>\<bbb-R\>\<wedge\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>|}>>.
+    Hence <math|<around*|{|<around*|]|a,b|[>\|a,b\<in\>\<bbb-R\>\<wedge\>a\<less\>b|}>\<subseteq\><around*|{|<around*|]|x-\<varepsilon\>,x+\<varepsilon\>|[>\|x\<in\>\<bbb-R\>\<wedge\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>|}>>,
+    combining this with [eq: <reference|eq 14.22.146>] results in\ 
+
+    <\equation*>
+      <around*|{|<around*|]|x-\<varepsilon\>,x+\<varepsilon\>|[>\|x\<in\>\<bbb-R\>\<wedge\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>|}>=<around*|{|<around*|]|a,b|[>\|a,b\<in\>\<bbb-R\>\<wedge\>a\<less\>b|}>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|normed generalized intervals that are open>Let
+    <math|<around*|\<langle\>|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|\<rangle\>>>
+    be the topological space generated by the norm <math|<around*|\|||\|>>,
+    <math|a,b\<in\>\<bbb-R\>> then for the generalized intervals [see
+    definition: <reference|interval generalized interval> and theorem:
+    <reference|interval and inf or sup>] are open in
+    <math|\<cal-T\><rsub|<around*|\|||\|>>>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|<around*|]|a,b|[>>|<cell|>>|<row|<cell|>|<cell|<around*|]|-\<infty\>,a|[>>|<cell|>>|<row|<cell|>|<cell|<around*|]|a,\<infty\>|[>>|<cell|>>|<row|<cell|>|<cell|<around*|]|-\<infty\>,\<infty\>|[>>|<cell|>>>>
+    </eqnarray*>
+
+    the following intervals are closed:
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|<around*|[|a,b|]>>|<cell|>>|<row|<cell|>|<cell|<around*|[|a,\<infty\>|[>>|<cell|>>|<row|<cell|>|<cell|<around*|]|-\<infty\>,a|]>>|<cell|>>>>
+    </eqnarray*>
+
+    and the following intervals are neither open or closed
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|<around*|[|a,b|[>>|<cell|<text|where
+      >a\<less\>b>>|<row|<cell|>|<cell|<around*|]|a,b|]>>|<cell|<text|where
+      >a\<less\>b>>>>
+    </eqnarray*>
+
+    Further if a generalized interval is open then it must be of the form\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|<around*|]|a,b|[>>|<cell|a,b\<in\>\<bbb-R\>>>|<row|<cell|>|<cell|<around*|]|-\<infty\>,a|[>>|<cell|a\<in\>\<bbb-R\>>>|<row|<cell|>|<cell|<around*|]|a,\<infty\>|[>>|<cell|a\<in\>\<bbb-R\>>>|<row|<cell|>|<cell|<around*|]|-\<infty\>,\<infty\>|[>>|<cell|>>>>
+    </eqnarray*>
+  </theorem>
+
+  <\proof>
+    Let <math|a,b\<in\>\<bbb-R\>> then we have:
+
+    <\description>
+      <item*|<math|<around*|]|a,b|[>\<in\>\<cal-T\><rsub|<around*|\|||\|>>>>For
+      <math|a,b> we have either:
+
+      <\description>
+        <item*|<math|a\<leqslant\>b>>Then by [theorem: <reference|normed
+        basis of T\|\|>] <math|<around*|]|a,b|[>\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<subseteq\>\<cal-T\><rsub|<around*|\|||\|>>>
+
+        <item*|<math|b\<leqslant\>a>>Then
+        <math|<around*|]|a,b|[>=\<varnothing\>\<in\>\<cal-T\><rsub|<around*|\|||\|>>>
+      </description>
+
+      <item*|<math|<around*|]|-\<infty\>,a|[>\<in\>\<cal-T\><rsub|<around*|\|||\|>>>>If
+      <math|x\<in\><around*|]|-\<infty\>,a|[>> then for
+      <math|<around*|]|x-\<varepsilon\>,a|[>\<in\>\<cal-B\><rsub|<around*|\|||\|>>>
+      we have <math|x\<in\><around*|]|x-\<varepsilon\>,a|[>\<subseteq\><around*|]|-\<infty\>,a|[>>
+      proving by [theorem: <reference|topology basis alternative definition>]
+      that <math|<around*|]|-\<infty\>,a|[>\<in\>\<cal-T\><rsub|<around*|\|||\|>>>.
+
+      <item*|<math|<around*|]|a,\<infty\>|[>>>If
+      <math|x\<in\><around*|]|a,\<infty\>|[>> then for
+      <math|<around*|]|a,x+\<varepsilon\>|[>\<in\>\<cal-B\><rsub|<around*|\|||\|>>>
+      we have <math|x\<in\><around*|]|a,x+\<varepsilon\>|[>\<subseteq\><around*|]|a,\<infty\>|[>>
+      proving by [theorem: <reference|topology basis alternative definition>]
+      that <math|<around*|]|-\<infty\>,a|[>\<in\>\<cal-T\><rsub|<around*|\|||\|>>>.
+
+      <item*|<math|<around*|]|-\<infty\>,\<infty\>|[>\<in\>\<cal-T\><rsub|<around*|\|||\|>>>><math|<around*|]|-\<infty\>,\<infty\>|[>=\<bbb-R\>\<in\>\<cal-T\><rsub|<around*|\|||\|>>>.
+
+      <item*|<math|<around*|[|a,b|]><text| is closed>>>We have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<in\>\<bbb-R\>\\<around*|[|a,b|]>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>\<bbb-R\>\<wedge\>\<neg\><around*|(|a\<leqslant\>x\<wedge\>x\<leqslant\>b|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>\<bbb-R\>\<wedge\><around*|(|x\<less\>a\<vee\>b\<less\>x|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|x\<in\>\<bbb-R\>\<wedge\>x\<less\>a|)>\<vee\><around*|(|x\<in\>\<bbb-R\>\<wedge\>b\<less\>x|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|]|-\<infty\>,a|[><big|cup><around*|]|b,\<infty\>|[>>>>>
+      </eqnarray*>
+
+      proving that <math|\<bbb-R\>\\<around*|[|a,b|]>=<around*|]|-\<infty\>,a|[><big|cup><around*|]|b,\<infty\>|[>\<in\>\<cal-T\><rsub|<around*|\|||\|>>>
+      hence <math|<around*|[|a,b|]>> is closed.
+
+      <item*|<math|<around*|[|a,\<infty\>|[><text| is closed>>>We have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<in\>\<bbb-R\>\\<around*|[|a,\<infty\>|[>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>\<bbb-R\>\<wedge\>\<neg\>*<around*|(|a\<leqslant\>x|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>\<bbb-R\>\<wedge\>x\<less\>a>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|]|-\<infty\>,a|[>>>>>
+      </eqnarray*>
+
+      proving that <math|\<bbb-R\>\\<around*|[|a,\<infty\>|[>=<around*|]|-\<infty\>,a|[>\<in\>\<cal-T\><rsub|<around*|\|||\|>>>
+      so that <math|<around*|[|a,\<infty\>|[>> is closed.
+
+      <item*|<math|<around*|]|-\<infty\>,a|]>> is closed>We have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<in\>\<bbb-R\>\\<around*|]|-\<infty\>,a|]>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>\<bbb-R\>\<wedge\>\<neg\><around*|(|x\<leqslant\>a|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>\<bbb-R\>\<wedge\>a\<less\>x>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|]|a,\<infty\>|[>>>>>
+      </eqnarray*>
+
+      proving that <math|\<bbb-R\>\\<around*|]|-\<infty\>,a|[>=<around*|]|a,\<infty\>|[>\<in\>\<cal-T\><rsub|<around*|\|||\|>>>
+      so that <math|<around*|]|-\<infty\>,a|]>> is closed.
+    </description>
+
+    Assume that <math|a\<less\>b> then we have\ 
+
+    <\description>
+      <item*|<math|<around*|[|a,b|[>> is neither open/closed>Assume that
+      <math|<around*|[|a,b|[>> is open then as <math|a\<leqslant\>a\<less\>b>
+      we have <math|a\<in\><around*|[|a,b|[>>, so by [theorem:
+      <reference|topology basis alternative definition>] there exist a
+      <math|<around*|]|x,y|[>\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<equallim\><rsub|<text|[theorem:
+      <reference|normed basis of T\|\|>]>><around*|{|<around*|]|x,y|[>\|x,y\<in\>\<bbb-R\>\<wedge\>x\<less\>y|}>>
+      such that <math|a\<in\><around*|]|x,y|[>\<subseteq\><around*|[|a,b|[>>.
+      Hence <math|x\<less\>a\<less\>y>, using [theorem: <reference|complex
+      densitiy theorem>] there exist a <math|z\<in\>\<bbb-R\>> such that
+      <math|x\<less\>z\<less\>a\<less\>y\<Rightarrow\>z\<in\><around*|]|x,y|[>\<subseteq\><around*|[|a,b|[>>
+      hence <math|a\<leqslant\>z> contradicting <math|z\<less\>a>, hence\ 
+
+      <\equation*>
+        <around*|[|a,b|[><text| is not open>
+      </equation*>
+
+      Assume that <math|\<bbb-R\>\\<around*|[|a,b|[>> is open then as
+      <math|b\<in\>\<bbb-R\>\\<around*|[|a,b|[>> we have by [theorem:
+      <reference|topology basis alternative definition>] that there exist a
+      <math|<around*|]|x,y|[>\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<equallim\><rsub|<text|[theorem:
+      <reference|normed basis of T\|\|>]>><around*|{|<around*|]|x,y|[>\|x,y\<in\>\<bbb-R\>\<wedge\>x\<less\>y|}>>
+      such that <math|b\<in\><around*|]|x,y|[>\<subseteq\>\<bbb-R\>\\<around*|[|a,b|[>>
+      so that <math|x\<less\>b\<less\>y>. As also <math|a\<less\>b> we have
+      that <math|x\<leqslant\>max<around*|(|a,x|)>\<less\>b\<less\>y>, using
+      [theorem: <reference|complex densitiy theorem>] there exists
+      <math|z\<in\>\<bbb-R\>> such that
+
+      <\equation>
+        <label|eq 14.23.146>x\<leqslant\>max<around*|(|a,x|)>\<less\>z\<less\>b\<less\>y
+      </equation>
+
+      so that <math|z\<in\><around*|]|x,y|[>\<subseteq\>\<bbb-R\>\\<around*|[|a,b|[>>.
+      Hence we have <math|z\<less\>a\<vee\>b\<leqslant\>z>, as
+      <math|a\<leqslant\>max<around*|(|a,x|)>\<less\>z> we can't have
+      <math|z\<less\>a> so we must have that <math|b\<leqslant\>z>
+      contradicting <math|z\<less\>b> [see eq: <reference|eq 14.23.146>]
+      hence the assumption is wrong and <math|\<bbb-R\>\\<around*|[|a,b|]>>
+      is not open proving that\ 
+
+      <\equation*>
+        <around*|[|a,b|[><text| is not closed>
+      </equation*>
+
+      <item*|<math|<around*|]|a,b|]>> is neither open/closed>Assume that
+      <math|<around*|]|a,b|]>> is open then as <math|a\<less\>b\<leqslant\>b>
+      we have <math|b\<in\><around*|[|a,b|[>>, so by [theorem:
+      <reference|topology basis alternative definition>] there exist a
+      <math|<around*|]|x,y|[>\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<equallim\><rsub|<text|[theorem:
+      <reference|normed basis of T\|\|>]>><around*|{|<around*|]|x,y|[>\|x,y\<in\>\<bbb-R\>\<wedge\>x\<less\>y|}>>
+      such that <math|b\<in\><around*|]|x,y|[>\<subseteq\><around*|]|a,b|]>>.
+      Hence <math|x\<less\>b\<less\>y>, using [theorem: <reference|complex
+      densitiy theorem>] there exist a <math|z\<in\>\<bbb-R\>> such that
+      <math|x\<less\>b\<less\>z\<less\>y\<Rightarrow\>z\<in\><around*|]|x,y|[>\<subseteq\><around*|]|a,b|]>>
+      giving <math|z\<leqslant\>b> contradicting <math|b\<less\>z>, hence\ 
+
+      <\equation*>
+        <around*|[|a,b|[><text| is not open>
+      </equation*>
+
+      Assume that <math|\<bbb-R\>\\<around*|]|a,b|]>> is open then as
+      <math|a\<in\>\<bbb-R\>\\<around*|]|a,b|]>> we have by [theorem:
+      <reference|topology basis alternative definition>] that there exist a
+      <math|<around*|]|x,y|[>\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<equallim\><rsub|<text|[theorem:
+      <reference|normed basis of T\|\|>]>><around*|{|<around*|]|x,y|[>\|x,y\<in\>\<bbb-R\>\<wedge\>x\<less\>y|}>>
+      such that <math|a\<in\><around*|]|x,y|[>\<subseteq\>\<bbb-R\>\\<around*|]|a,b|]>>
+      so that <math|x\<less\>a\<less\>y>. As also <math|a\<less\>b> we have
+      that <math|x\<less\>a\<less\>min<around*|(|b,y|)>\<leqslant\>y>, using
+      [theorem: <reference|complex densitiy theorem>] there exists a
+      <math|z\<in\>\<bbb-R\>> such that\ 
+
+      <\equation>
+        <label|eq 14.24.146>x\<less\>a\<less\>z\<less\>min<around*|(|b,y|)>\<leqslant\>y
+      </equation>
+
+      so that <math|z\<in\><around*|]|x,y|[>\<subseteq\>\<bbb-R\>\\<around*|]|a,b|]>>
+      hence we have <math|z\<leqslant\>a\<vee\>b\<less\>z>, as
+      <math|z\<less\>min<around*|(|b,y|)>\<less\>b> we can't have
+      <math|b\<less\>z> so we must have <math|z\<leqslant\>a> contradicting
+      <math|a\<less\>z> [see eq: <reference|eq 14.24.146>]. So the assumption
+      is wrong and <math|\<bbb-R\>\\<around*|]|a,b|]>> is not open proving
+      that\ 
+
+      <\equation*>
+        <around*|]|a,b|]><text| is not closed>
+      </equation*>
+    </description>
+  </proof>
+
+  <\corollary>
+    <label|normed open generalized intervals>Let
+    <math|<around*|\<langle\>|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|\<rangle\>>>
+    be the topological space generated by the norm <math|<around*|\|||\|>>
+    and <math|I> a open generalized interval then <math|I> is one of the
+    following sets\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|<around*|]|a,b|[>>|<cell|a,b\<in\>\<bbb-R\>>>|<row|<cell|>|<cell|<around*|]|-\<infty\>,a|[>>|<cell|a\<in\>\<bbb-R\>>>|<row|<cell|>|<cell|<around*|]|a,\<infty\>|[>>|<cell|a\<in\>\<bbb-R\>>>|<row|<cell|>|<cell|<around*|]|-\<infty\>,\<infty\>|[>>|<cell|>>>>
+    </eqnarray*>
+  </corollary>
+
+  <\proof>
+    Let <math|I> be a non empty generalized interval then by [theorem:
+    <reference|interval and inf or sup>] <math|I> is of the following forms,
+    where <math|a,b\<in\>\<bbb-R\>>
+
+    <\description>
+      <item*|<math|<around*|]|a,b|[>>>Then by the previous theorem [theorem:
+      <reference|normed generalized intervals that are open>]\ 
+
+      <\equation*>
+        I=<around*|]|a,b|[><text| is open>
+      </equation*>
+
+      <item*|<math|<around*|]|a,b|]>>>Then by the previous theorem [theorem:
+      <reference|normed generalized intervals that are open>]\ 
+
+      <\equation*>
+        I=<around*|]|a,b|[><text| is not open>
+      </equation*>
+
+      <item*|<math|<around*|[|a,b|[>>>Then by the previous theorem [theorem:
+      <reference|normed generalized intervals that are open>]\ 
+
+      <\equation*>
+        I=<around*|[|a,b|[><text| is not open>
+      </equation*>
+
+      <item*|<math|<around*|[|a,b|]>>>As <math|<around*|[|a,b|]>=I\<neq\>\<varnothing\>>
+      we must have <math|a\<leqslant\>b>. Assume that
+      <math|<around*|[|a,b|]>> is open then as
+      <math|a\<leqslant\>a\<less\>b\<leqslant\>b> we have
+      <math|a\<in\><around*|[|a,b|]>>, so by [theorem: <reference|topology
+      basis alternative definition>] there exist a
+      <math|<around*|]|x,y|[>\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<equallim\><rsub|<text|[theorem:
+      <reference|normed basis of T\|\|>]>><around*|{|<around*|]|x,y|[>\|x,y\<in\>\<bbb-R\>\<wedge\>x\<less\>y|}>>
+      such that <math|a\<in\><around*|]|x,y|[>\<subseteq\><around*|[|a,b|]>>,
+      hence <math|x\<less\>a\<less\>y> and using [theorem: <reference|complex
+      densitiy theorem>] there exists a <math|z\<in\>\<bbb-R\>> such that
+      <math|x\<less\>z\<less\>a\<less\>y>. So
+      <math|z\<in\><around*|]|x,y|[>\<subseteq\><around*|[|a,b|]>> resulting
+      in <math|a\<leqslant\>z> contradicting <math|z\<less\>a>. Hence the
+      assumption is wrong and we have that\ 
+
+      <\equation*>
+        I<text|>=<around*|[|a,b|]><text| is not open>
+      </equation*>
+
+      <item*|<math|<around*|[|a,\<infty\>|[>>>Assume that
+      <math|<around*|[|a,\<infty\>|[>> is open then as
+      <math|a\<in\><around*|[|a,\<infty\>|[>> there exist by [theorem:
+      <reference|topology basis alternative definition>] a
+      \ <math|<around*|]|x,y|[>\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<equallim\><rsub|<text|[theorem:
+      <reference|normed basis of T\|\|>]>><around*|{|<around*|]|x,y|[>\|x,y\<in\>\<bbb-R\>\<wedge\>x\<less\>y|}>>
+      such that <math|a\<in\><around*|]|x,y|[>\<subseteq\><around*|[|a,\<infty\>|[>>,
+      hence <math|x\<less\>a\<less\>y>. Using [theorem: <reference|complex
+      densitiy theorem>] there exist a <math|z\<in\>\<bbb-R\>> such that
+      <math|x\<less\>z\<less\>a\<less\>y> hence
+      <math|z\<in\><around*|]|x,y|[>\<subseteq\><around*|[|a,\<infty\>|[>>
+      giving <math|a\<leqslant\>z> which contradict <math|z\<less\>a>, hence
+      the assumption is wrong and\ 
+
+      <\equation*>
+        I=<around*|[|a,\<infty\>|[><text| is not open>
+      </equation*>
+
+      <item*|<math|<around*|]|a,\<infty\>|[>>>Then by the previous theorem
+      [theorem: <reference|normed generalized intervals that are open>]\ 
+
+      <\equation*>
+        I=<around*|]|a,\<infty\>|[><text| is open>
+      </equation*>
+
+      <item*|<math|<around*|]|-\<infty\>,a|]>>>Assume that
+      <math|<around*|]|-\<infty\>,a|]>> is open then as
+      <math|a\<in\><around*|]|-\<infty\>,a|]>> there exist by [theorem:
+      <reference|topology basis alternative definition>] a
+      \ <math|<around*|]|x,y|[>\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<equallim\><rsub|<text|[theorem:
+      <reference|normed basis of T\|\|>]>><around*|{|<around*|]|x,y|[>\|x,y\<in\>\<bbb-R\>\<wedge\>x\<less\>y|}>>
+      such that <math|a\<in\><around*|]|x,y|[>\<subseteq\><around*|]|-\<infty\>,a|]>>,
+      hence <math|x\<less\>a\<less\>y>. Using [theorem: <reference|complex
+      densitiy theorem>] there exist a <math|z\<in\>\<bbb-R\>> such that
+      <math|x\<less\>a\<less\>z\<less\>y> hence
+      <math|z\<in\><around*|]|x,y|[>\<subseteq\><around*|]|-\<infty\>,a|]>>
+      giving <math|z\<leqslant\>a> which contradict <math|a\<less\>z>, hence
+      the assumption is wrong and\ 
+
+      <\equation*>
+        I=<around*|]|-\<infty\>,a|]><text| is not open>
+      </equation*>
+
+      <item*|<math|<around*|]|-\<infty\>,a|[>>>Then by the previous theorem
+      [theorem: <reference|normed generalized intervals that are open>]\ 
+
+      <\equation*>
+        I=<around*|]|-\<infty\>,a|[><text| is open>
+      </equation*>
+
+      <item*|<math|<around*|]|-\<infty\>,\<infty\>|[>>>Then by the previous
+      theorem [theorem: <reference|normed generalized intervals that are
+      open>]\ 
+
+      <\equation*>
+        I=<around*|]|-\<infty\>,\<infty\>|[><text| is open>
+      </equation*>
+    </description>
+
+    So if <math|I> is <with|font-series|bold|open> generalized interval it is
+    either non empty then it must be of the forms\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|<around*|]|a,b|[>>|<cell|a,b\<in\>\<bbb-R\>>>|<row|<cell|>|<cell|<around*|]|a,\<infty\>|[>>|<cell|a\<in\>\<bbb-R\>>>|<row|<cell|>|<cell|<around*|]|-\<infty\>,a|[>>|<cell|a\<in\>\<bbb-R\>>>|<row|<cell|>|<cell|<around*|]|-\<infty\>,\<infty\>|[>>|<cell|>>>>
+    </eqnarray*>
+
+    or <math|I=\<varnothing\>> and then <math|I> is equal to
+    <math|<around*|]|1,1|[>>.
+  </proof>
+
+  We prove now that every open set in <math|<around*|\<langle\>|\<bbb-R\>.\<cal-T\><rsub|<around*|\|||\|>>|\<rangle\>>>
+  is a countable union of open intervals
+
+  <\theorem>
+    Given <math|<around*|\<langle\>|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|\<rangle\>>>
+    the set of reals endowed with the topology generated by the absolute
+    value norm and <math|U\<in\>\<cal-T\><rsub|<around*|\|||\|>>> a open set
+    then there exists a <math|<around*|{|I<rsub|i>|}><rsub|i\<in\>\<cal-I\>>\<subseteq\>\<cal-T\><rsub|<around*|\|||\|>>>
+    where <math|\<cal-I\>> is countable and <math|\<forall\>i\<in\>\<cal-I\>>
+    we have that <math|I<rsub|i>> is a open generalized interval such that\ 
+
+    <\equation*>
+      U=<big|cup><rsub|i\<in\>\<cal-I\>>I<rsub|i>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Define the relation <math|\<sim\>\<in\>U\<times\>U> by <math|x\<sim\>y>
+    iff <math|<around*|]|min<around*|(|x,y|)>,max<around*|(|x,y|)>|[>\<subseteq\>U>
+    then we have\ 
+
+    <\description>
+      <item*|reflexitivity><math|\<forall\>x\<in\>U>
+      <math|<around*|]|min<around*|(|x,x|)>,max<around*|(|x,x|)>|[>=<around*|]|x,x|[>=\<varnothing\>>
+      so that <math|x\<sim\>x>
+
+      <item*|symmetry>If <math|x\<sim\>y> then
+      <math|<around*|]|min<around*|(|x,y|)>,max<around*|(|x,y|)>|[>\<subseteq\>U>
+      so that
+
+      <\equation*>
+        <around*|]|min<around*|(|y,x|)>,max<around*|(|y,x|)>|[>=<around*|]|min<around*|(|x,y|)>,max<around*|(|x,y|)>|]>\<subseteq\>U
+      </equation*>
+
+      giving <math|y\<sim\>x>.
+
+      <item*|transitivity>If <math|x\<sim\>y> and <math|y\<sim\>z> then we
+      have
+
+      <\equation>
+        <label|eq 14.25.146><around*|]|min<around*|(|x,y|)>,max<around*|(|x,y|)>|[>\<subseteq\>U<text|
+        and ><around*|]|min<around*|(|y,z|)>,max<around*|(|y,z|)>|[>\<subseteq\>U
+      </equation>
+
+      now for <math|x,y,z\<in\>U> we have either:
+
+      <\description>
+        <item*|<math|x\<leqslant\>y\<leqslant\>z>>Then by [eq: <reference|eq
+        14.25.146>] we have <math|<around*|]|x,y|[>\<subseteq\>U\<wedge\><around*|]|y,z|[>\<subseteq\>U>
+        and as <math|y\<in\>U> we have that\ 
+
+        <\equation*>
+          <around*|]|min<around*|(|x,z|)>,max<around*|(|x,|)>|[>=<around*|]|x,z|[>=<around*|]|x,y|[><big|cup><around*|{|y|}><big|cup><around*|]|y,z|[>\<subseteq\>U
+        </equation*>
+
+        proving that <math|x\<sim\>z>.
+
+        <item*|<math|x\<leqslant\>z\<leqslant\>y>>Then by [eq: <reference|eq
+        14.25.146>] we have <math|<around*|]|x,y|[>\<subseteq\>U\<wedge\><around*|]|z,y|[>\<subseteq\>U>\ 
+
+        <\equation*>
+          <around*|]|min<around*|(|x,z|)>,max<around*|(|x,z|)>|[>=<around*|]|x,z|[>\<subseteq\><around*|]|x,y|[>\<subseteq\>U
+        </equation*>
+
+        proving that <math|x\<sim\>z>.
+
+        <item*|<math|y\<leqslant\>x\<leqslant\>z>>Then by [eq: <reference|eq
+        14.25.146>] we have <math|<around*|]|y,x|[>\<subseteq\>U\<wedge\><around*|]|y,z|[>\<subseteq\>U>
+
+        <\equation*>
+          <around*|]|min<around*|(|x,z|)>,max<around*|(|x,z|)>|[>=<around*|]|x,z|[>\<subseteq\><around*|]|y,z|[>\<subseteq\>U
+        </equation*>
+
+        proving that <math|x\<sim\>z>.
+
+        <item*|<math|y\<leqslant\>z\<leqslant\>x>>Then by [eq: <reference|eq
+        14.25.146>] we have <math|<around*|]|y,x|[>\<subseteq\>U\<wedge\><around*|]|y,z|[>\<subseteq\>U>
+
+        <\equation*>
+          <around*|]|min<around*|(|x,z|)>,max<around*|(|x,z|)>|[>=<around*|]|z,x|[>\<subseteq\><around*|]|y,x|[>\<subseteq\>U
+        </equation*>
+
+        proving that <math|x\<sim\>z>.
+
+        <item*|<math|z\<leqslant\>x\<leqslant\>y>>Then by [eq: <reference|eq
+        14.25.146>] we have <math|<around*|]|x,y|[>\<subseteq\>U\<wedge\><around*|]|z,y|[>\<subseteq\>U>
+
+        <\equation*>
+          <around*|]|min<around*|(|x,z|)>.max<around*|(|x,z|)>|[>=<around*|]|z,x|[>\<subseteq\><around*|]|z,y|[>\<subseteq\>U
+        </equation*>
+
+        proving that <math|x\<sim\>z>.
+
+        <item*|<math|z\<leqslant\>y\<leqslant\>x>>Then by [eq: <reference|eq
+        14.25.146>] we have <math|<around*|]|y,x|[>\<subseteq\>U\<wedge\><around*|]|z,y|[>\<subseteq\>U>
+        and as <math|y\<in\>U> we have that
+
+        <\equation*>
+          <around*|]|min<around*|(|x,z|)>,max<around*|(|x,z|)>|[>=<around*|]|z,x|[>=<around*|]|z,y|[><big|cup><around*|{|y|}><big|cup><around*|]|y,x|[>\<subseteq\>U
+        </equation*>
+
+        proving that <math|x\<sim\>z>.
+      </description>
+
+      So in all cases we have <math|x\<sim\>z>.
+    </description>
+
+    Hence we have that\ 
+
+    <\equation*>
+      \<sim\><text| is a equivalence relation >
+    </equation*>
+
+    Define then <math|\<cal-U\>=<around*|{|\<sim\><around*|[|x|]>\|x\<in\>U|}>=I/\<sim\>>
+    the set of equivalence classes defined by <math|\<sim\>> then we have
+    usimg [theorem: <reference|equivalence relation defines a partition (1)>]
+    that\ 
+
+    <\equation>
+      <label|eq 14.26.146>U=<big|cup><rsub|I\<in\>\<cal-U\>>I<text| and
+      >\<forall\>I,J\<in\>\<cal-U\> with I\<neq\>J<text| that
+      >I<big|cap>J=\<varnothing\>
+    </equation>
+
+    Let <math|I\<in\>\<cal-U\>> then there exist a <math|x\<in\>U> such that
+    <math|I=\<sim\><around*|[|x|]>>. Let <math|y\<in\>\<sim\><around*|[|x|]>\<subseteq\>U>
+    then by \ [theorem: <reference|topology basis alternative definition>]
+    there exist a <math|<around*|]|a,b|[>\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<equallim\><rsub|<text|[theorem:
+    <reference|normed basis of T\|\|>]>><around*|{|<around*|]|x,y|[>\|x,y\<in\>\<bbb-R\>\<wedge\>x\<less\>y|}>>
+    such that <math|y\<in\><around*|]|a,b|[>\<subseteq\>U> then
+    <math|\<forall\>z\<in\><around*|]|a,b|[>> we have either:\ 
+
+    <\description>
+      <item*|<math|y\<leqslant\>z>>Then <math|a\<less\>y\<leqslant\>z\<less\>b>
+      so that <math|<around*|]|min<around*|(|y,z|)>,max<around*|(|y,z|)>|[>=<around*|]|y,z|[>\<subseteq\><around*|]|a,b|[>\<subseteq\>U>
+
+      <item*|<math|z\<less\>y>>Then <math|a\<less\>z\<less\>y\<less\>b> so
+      that <math|<around*|]|min<around*|(|y,z|)>,max<around*|(|y,z|)>|[>=<around*|]|z,y|[>\<subseteq\>U>
+    </description>
+
+    proving that <math|y\<sim\>z>. From <math|y\<in\>\<sim\><around*|[|x|]>>
+    we have <math|y\<sim\>x> so by transitivity and symmetry that
+    <math|z\<sim\>x> hence <math|z\<in\>\<sim\><around*|[|x|]>=I> proving
+    that <math|<around*|]|a,b|[>\<subseteq\>I> or as
+    <math|y\<in\><around*|]|a,b|[>> that <math|y\<in\><around*|]|a,b|[>\<subseteq\>I>.
+    To summarize\ 
+
+    <\equation*>
+      \<forall\>y\<in\>I=\<sim\><around*|[|x|]><text| there exist a
+      <math|<around*|]|a,b|[>\<in\>\<cal-B\><rsub|<around*|\|||\|>>> such
+      that >y\<in\><around*|]|a,b|[>\<subseteq\>I
+    </equation*>
+
+    proving by [definition: <reference|topology basis>] that\ 
+
+    <\equation>
+      <label|eq 14.27.146>I=\<sim\><around*|[|x|]><text| is open>
+    </equation>
+
+    Let <math|r,s\<in\>I=\<sim\><around*|[|x|]>> with <math|r\<less\>s> then
+    <math|r\<sim\>x\<wedge\>s\<sim\>x> so that by symmetry and transitivity
+    we have <math|s\<sim\>r> so that <math|<around*|]|r,s|[>=<around*|]|min<around*|(|r,s|)>,max<around*|(|r,s|)>|[>\<subseteq\>U>.
+    If <math|t\<in\><around*|]|r,s|[>\<Rightarrow\>r\<less\>t\<less\>s> then
+
+    <\equation*>
+      <around*|]|min<around*|(|t,r|)>,max<around*|(|t,r|)>|[>=<around*|]|r,t|[>\<subseteq\><around*|]|r,s|[>\<subseteq\>U
+    </equation*>
+
+    proving that <math|t\<sim\>r>, as <math|r\<sim\>x> it follows that
+    <math|t\<sim\>x> so that <math|t\<in\>\<sim\><around*|[|x|]>>. Hence
+
+    <\equation*>
+      \<forall\>r,s\<in\>I<text| with >r\<less\>S
+      <around*|]|r,s|[>\<subseteq\>I
+    </equation*>
+
+    which by [definition: <reference|interval generalized interval>] proves
+    that
+
+    <\equation>
+      <label|eq 14.28.147>I<text| is a generalized interval>
+    </equation>
+
+    As by [eq: <reference|eq 14.27.146>] <math|I> is open it follows from
+    [corollary: <reference|normed open generalized intervals>] that\ 
+
+    <\equation*>
+      \<forall\>I\<in\>\<cal-U\><text| we have
+      >I=<around*|]|a,b|[><text|><text| or >I=<around*|]|a,\<infty\>|[><text|
+      or >I=<around*|]|-\<infty\>,a|[><text| or
+      >I=<around*|]|-\<infty\>,\<infty\>|[><text| where >a,b\<in\>\<bbb-R\>
+    </equation*>
+
+    Now if <math|I\<in\>\<cal-U\>> then <math|\<exists\>x\<in\>U> so that
+    <math|I=\<sim\><around*|[|x|]>\<neq\>\<varnothing\>> then we have by
+    above the following cases to consider:
+
+    <\description>
+      <item*|<math|I=<around*|]|a,b|[>>>Then as <math|I\<neq\>\<varnothing\>>
+      we have <math|a\<less\>b> so using the density of <math|\<bbb-Q\>> in
+      <math|\<bbb-R\>> [see theorem: <reference|complex densitiy theorem>]
+      there exist a <math|q\<in\>\<bbb-Q\>> such that
+      <math|a\<less\>q\<less\>b>, hence <math|q\<in\><around*|]|a,b|[>=I> so
+      that\ 
+
+      <\equation*>
+        \<bbb-Q\><big|cap>I\<neq\>\<varnothing\>
+      </equation*>
+
+      <item*|<math|I=<around*|]|-\<infty\>,a|[>>>Then as <math|a-1\<less\>a>
+      we have by the density of <math|\<bbb-Q\>> in <math|\<bbb-R\>> [see
+      theorem: <reference|complex densitiy theorem>] that there exist a
+      <math|q\<in\>\<bbb-Q\>> such that <math|a-1\<less\>q\<less\>a> hence
+      <math|q\<in\><around*|]|-\<infty\>,a|[>=I> proving\ 
+
+      <\equation*>
+        \<bbb-Q\><big|cap>I\<neq\>\<varnothing\>
+      </equation*>
+
+      <item*|<math|I=<around*|]|a,\<infty\>|[>>>Then as <math|a\<less\>a+1>
+      we have by the density of <math|\<bbb-Q\>> in <math|\<bbb-R\>> [see
+      theorem: <reference|complex densitiy theorem>] that there exist a
+      <math|q\<in\>\<bbb-Q\>> such that <math|a\<less\>q\<less\>a+1> hence
+      <math|q\<in\><around*|]|a,\<infty\>|[>=I> proving\ 
+
+      <\equation*>
+        \<bbb-Q\><big|cap>I\<neq\>\<varnothing\>
+      </equation*>
+
+      <item*|<math|I=<around*|]|-\<infty\>,\<infty\>|[>>>Then as
+      <math|0\<in\>\<bbb-Q\>\<subseteq\>\<bbb-R\>=<around*|]|-\<infty\>,\<infty\>|[>>
+      we have\ 
+
+      <\equation*>
+        \<bbb-Q\><big|cap>I\<neq\>\<varnothing\>
+      </equation*>
+    </description>
+
+    So we have\ 
+
+    <\equation*>
+      \<forall\>I\<in\>\<cal-U\><text| we have that
+      >\<bbb-Q\><big|cap>I\<neq\>\<varnothing\><text| so that
+      ><around*|{|\<bbb-Q\><big|cap>I|}><rsub|I\<in\>\<cal-U\>>\<subseteq\>\<cal-P\><around*|(|\<bbb-R\>|)><text|
+      is a family of non empty subsets of <math|\<bbb-R\>>>
+    </equation*>
+
+    Using a consequence of the Axiom of Choice [see theorem <reference|choice
+    axiom of choice equivalences (1)>] there exist a function\ 
+
+    <\equation*>
+      f:\<cal-U\>\<rightarrow\><big|cup><rsub|I\<in\>\<cal-U\>><around*|(|\<bbb-Q\><big|cap>I|)><text|
+      such that >f<around*|(|I|)>\<in\>\<bbb-Q\><big|cap>I
+    </equation*>
+
+    Let <math|I,J\<in\>\<cal-U\>> such that
+    <math|f<around*|(|I|)>=f<around*|(|J|)>>. As
+    <math|f<around*|(|I|)>\<in\>\<bbb-Q\><big|cap>I> and
+    <math|f<around*|(|J|)>\<in\>\<bbb-Q\><big|cap>J> we have as
+    <math|f<around*|(|I|)>=f<around*|(|J|)>> that
+    <math|f<around*|(|I|)>\<in\><around*|(|\<bbb-Q\><big|cap>I|)><big|cap><around*|(|\<bbb-Q\><big|cap>J|)>=\<bbb-Q\><big|cap><around*|(|I<big|cap>J|)>>
+    so that <math|I<big|cap>J\<neq\>\<varnothing\>>. So by [eq: <reference|eq
+    14.26.146>] we must have <math|I=J> which proves as
+    <math|><math|<big|cup><rsub|I\<in\>\<cal-U\>><around*|(|\<bbb-Q\><big|cap>I|)>\<subseteq\>\<bbb-Q\>>
+
+    <\equation*>
+      f:\<cal-U\>\<rightarrow\>\<bbb-Q\><text| is injective>
+    </equation*>
+
+    Now as by [theorem: <reference|complex embedding>] <math|\<bbb-Q\>> is
+    denumerable we have by [theorem: <reference|countable set conditions
+    (1)>] that
+
+    <\equation*>
+      \<cal-U\><text| is countable and by [eqs: <reference|eq 14.26.146>,
+      <reference|eq 14.27.146>,<reference|eq 14.28.147>]>
+      U=<big|cup><rsub|I\<in\>\<cal-U\>>I<text| and
+      >\<forall\>I\<in\>\<cal-U\><text| >I<text| is a open generalized
+      interval>
+    </equation*>
+  </proof>
+
+  <\corollary>
+    Given <math|<around*|\<langle\>|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|\<rangle\>>>
+    the set of reals endowed with the topology generated by the absolute
+    value norm and <math|U\<in\>\<cal-T\><rsub|<around*|\|||\|>>> a open set
+    then there exist a countable set <math|\<cal-I\>> and a family
+
+    <\equation*>
+      <around*|{|<around*|]|a<rsub|i>,b<rsub|i>|[>|}><rsub|i\<in\>\<cal-I\>>\<subseteq\>\<cal-T\><rsub|<around*|\|||\|>><text|
+      such that >U=<big|cup><rsub|i\<in\>\<cal-I\>><around*|]|a<rsub|i>,b<rsub|i>|[>
+    </equation*>
+  </corollary>
+
+  <\proof>
+    TODO
+  </proof>
 
   <\theorem>
     <label|normed dense set>Let <math|<around*|\<langle\>|X,d|\<rangle\>>> a
@@ -3304,12 +4084,18 @@
   \;
 
   \;
+
+  \;
+
+  \;
+
+  \;
 </body>
 
 <\initial>
   <\collection>
     <associate|chapter-nr|13>
-    <associate|page-first|639>
+    <associate|page-first|641>
     <associate|page-medium|paper>
     <associate|section-nr|0>
     <associate|subsection-nr|0>
@@ -3318,133 +4104,144 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|14|639>>
-    <associate|auto-10|<tuple|<with|mode|<quote|math>|A<rprime|'>>|644>>
-    <associate|auto-11|<tuple|14.1.2|645>>
-    <associate|auto-12|<tuple|box topology|648>>
-    <associate|auto-13|<tuple|14.1.3|653>>
-    <associate|auto-14|<tuple|dense set|653>>
-    <associate|auto-15|<tuple|14.2|654>>
-    <associate|auto-16|<tuple|pseudo metric space|654>>
-    <associate|auto-17|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|X,d|\<rangle\>>>|654>>
-    <associate|auto-18|<tuple|metric space|654>>
-    <associate|auto-19|<tuple|open ball|655>>
-    <associate|auto-2|<tuple|14.1|639>>
-    <associate|auto-20|<tuple|<with|mode|<quote|math>|B<rsub|d><around*|(|x,\<varepsilon\>|)>>|655>>
-    <associate|auto-21|<tuple|closed ball|655>>
-    <associate|auto-22|<tuple|<with|mode|<quote|math>|<wide|B<rsub|d><around*|(|x,\<varepsilon\>|)>|\<wide-bar\>>>|655>>
-    <associate|auto-23|<tuple|equivalent pseudo metrics|657>>
-    <associate|auto-24|<tuple|isometry|657>>
-    <associate|auto-25|<tuple|bounded set|659>>
-    <associate|auto-26|<tuple|diameter of a bounded set|659>>
-    <associate|auto-27|<tuple|<with|mode|<quote|math>|diam<around*|(|A|)>>|659>>
-    <associate|auto-28|<tuple|14.3|661>>
-    <associate|auto-29|<tuple|pseudo normed space|661>>
-    <associate|auto-3|<tuple|interior|642>>
-    <associate|auto-30|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>||\<\|\|\>>>|661>>
-    <associate|auto-4|<tuple|<with|mode|<quote|math>|A<rsup|\<circ\>>>|642>>
-    <associate|auto-5|<tuple|14.1.1|642>>
-    <associate|auto-6|<tuple|closed set|642>>
-    <associate|auto-7|<tuple|<with|mode|<quote|math>|\<cal-T\><rsup|\<cal-C\>>>|642>>
-    <associate|auto-8|<tuple|limit point|644>>
-    <associate|auto-9|<tuple|accumulation point|644>>
-    <associate|closed set properties|<tuple|14.19|643>>
-    <associate|eq 14.1.145|<tuple|14.1|644>>
-    <associate|eq 14.10.146|<tuple|14.10|651>>
-    <associate|eq 14.11.146|<tuple|14.11|652>>
-    <associate|eq 14.12.146|<tuple|14.12|653>>
-    <associate|eq 14.13.146|<tuple|14.13|657>>
-    <associate|eq 14.14.146|<tuple|14.14|657>>
-    <associate|eq 14.15.146|<tuple|14.15|658>>
-    <associate|eq 14.16.146|<tuple|14.16|658>>
-    <associate|eq 14.17.146|<tuple|14.17|658>>
-    <associate|eq 14.18.146|<tuple|14.18|660>>
-    <associate|eq 14.19.146|<tuple|14.19|660>>
-    <associate|eq 14.2.145|<tuple|14.2|645>>
-    <associate|eq 14.20.146|<tuple|14.20|660>>
-    <associate|eq 14.21.146|<tuple|14.21|?>>
-    <associate|eq 14.3.146|<tuple|14.3|650>>
-    <associate|eq 14.4.146|<tuple|14.4|650>>
-    <associate|eq 14.5.146|<tuple|14.5|651>>
-    <associate|eq 14.6.146|<tuple|14.6|651>>
-    <associate|eq 14.7.146|<tuple|14.7|651>>
-    <associate|eq 14.8.146|<tuple|14.8|651>>
-    <associate|eq 14.9.146|<tuple|14.9|651>>
-    <associate|metric ball image preimage|<tuple|14.63|658>>
-    <associate|metric bounded set|<tuple|14.65|659>>
-    <associate|metric bounded set inclusion|<tuple|14.66|659>>
-    <associate|metric closed ball|<tuple|14.51|655>>
-    <associate|metric closed balls are closed|<tuple|14.56|656>>
-    <associate|metric closed open balls are bounded|<tuple|14.67|659>>
-    <associate|metric composition of isometries|<tuple|14.62|658>>
-    <associate|metric dense set|<tuple|14.79|?>>
-    <associate|metric equivalent metrics|<tuple|14.58|657>>
-    <associate|metric equivalent metrics condition|<tuple|14.59|657>>
-    <associate|metric isometry|<tuple|14.60|657>>
-    <associate|metric isometry and its inverse|<tuple|14.61|657>>
-    <associate|metric open ball|<tuple|14.50|655>>
-    <associate|metric open ball and intersection|<tuple|14.52|655>>
-    <associate|metric product topology|<tuple|14.68|659>>
-    <associate|metric pseudo metric space|<tuple|14.47|654>>
-    <associate|metric refinement of a ball|<tuple|14.53|655>>
-    <associate|metric space|<tuple|14.48|654>>
-    <associate|metric space metric is positive|<tuple|14.49|654>>
-    <associate|metric topology|<tuple|14.54|655>>
-    <associate|metric topology (1)|<tuple|14.55|656>>
-    <associate|metrix isometry and topologies|<tuple|14.64|658>>
-    <associate|metrix subtopology|<tuple|14.57|656>>
-    <associate|normded triangle inequality|<tuple|14.74|?>>
-    <associate|normed|<tuple|14.74|?>>
-    <associate|normed absolute value norm differences|<tuple|14.75|?>>
-    <associate|normed ball|<tuple|14.77|?>>
-    <associate|normed dense set|<tuple|14.80|?>>
-    <associate|normed norm|<tuple|14.72|661>>
-    <associate|normed norm of zero|<tuple|14.73|661>>
-    <associate|normed pseudo norm|<tuple|14.71|661>>
-    <associate|normed topology|<tuple|14.79|?>>
-    <associate|topology and complement closed sets|<tuple|14.18|643>>
-    <associate|topology basis|<tuple|14.28|645>>
-    <associate|topology basis alternative definition|<tuple|14.30|646>>
-    <associate|topology basis and super basis|<tuple|14.31|646>>
-    <associate|topology basis generating|<tuple|14.35|647>>
-    <associate|topology basis of a subspace topology|<tuple|14.29|645>>
-    <associate|topology basis of the product topology|<tuple|14.41|652>>
-    <associate|topology basis properties|<tuple|14.34|647>>
-    <associate|topology biggest open subset|<tuple|14.13|642>>
-    <associate|topology box|<tuple|14.37|648>>
-    <associate|topology box topology and bases|<tuple|14.38|649>>
-    <associate|topology closed set|<tuple|14.15|642>>
-    <associate|topology closed set and a basis|<tuple|14.33|646>>
-    <associate|topology closed set and closure|<tuple|14.23|644>>
-    <associate|topology closed set condition|<tuple|14.27|645>>
-    <associate|topology closure alterantive definition|<tuple|14.26|645>>
+    <associate|auto-1|<tuple|14|641>>
+    <associate|auto-10|<tuple|<with|mode|<quote|math>|A<rprime|'>>|646>>
+    <associate|auto-11|<tuple|14.1.2|647>>
+    <associate|auto-12|<tuple|box topology|650>>
+    <associate|auto-13|<tuple|14.1.3|655>>
+    <associate|auto-14|<tuple|dense set|655>>
+    <associate|auto-15|<tuple|14.2|656>>
+    <associate|auto-16|<tuple|pseudo metric space|656>>
+    <associate|auto-17|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|X,d|\<rangle\>>>|656>>
+    <associate|auto-18|<tuple|metric space|656>>
+    <associate|auto-19|<tuple|open ball|657>>
+    <associate|auto-2|<tuple|14.1|641>>
+    <associate|auto-20|<tuple|<with|mode|<quote|math>|B<rsub|d><around*|(|x,\<varepsilon\>|)>>|657>>
+    <associate|auto-21|<tuple|closed ball|657>>
+    <associate|auto-22|<tuple|<with|mode|<quote|math>|<wide|B<rsub|d><around*|(|x,\<varepsilon\>|)>|\<wide-bar\>>>|657>>
+    <associate|auto-23|<tuple|equivalent pseudo metrics|659>>
+    <associate|auto-24|<tuple|isometry|659>>
+    <associate|auto-25|<tuple|bounded set|661>>
+    <associate|auto-26|<tuple|diameter of a bounded set|661>>
+    <associate|auto-27|<tuple|<with|mode|<quote|math>|diam<around*|(|A|)>>|661>>
+    <associate|auto-28|<tuple|14.3|663>>
+    <associate|auto-29|<tuple|pseudo normed space|663>>
+    <associate|auto-3|<tuple|interior|644>>
+    <associate|auto-30|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>||\<\|\|\>>>|663>>
+    <associate|auto-4|<tuple|<with|mode|<quote|math>|A<rsup|\<circ\>>>|644>>
+    <associate|auto-5|<tuple|14.1.1|644>>
+    <associate|auto-6|<tuple|closed set|644>>
+    <associate|auto-7|<tuple|<with|mode|<quote|math>|\<cal-T\><rsup|\<cal-C\>>>|644>>
+    <associate|auto-8|<tuple|limit point|646>>
+    <associate|auto-9|<tuple|accumulation point|646>>
+    <associate|closed set properties|<tuple|14.19|645>>
+    <associate|eq 14.1.145|<tuple|14.1|646>>
+    <associate|eq 14.10.146|<tuple|14.10|653>>
+    <associate|eq 14.11.146|<tuple|14.11|654>>
+    <associate|eq 14.12.146|<tuple|14.12|655>>
+    <associate|eq 14.13.146|<tuple|14.13|659>>
+    <associate|eq 14.14.146|<tuple|14.14|659>>
+    <associate|eq 14.15.146|<tuple|14.15|660>>
+    <associate|eq 14.16.146|<tuple|14.16|660>>
+    <associate|eq 14.17.146|<tuple|14.17|660>>
+    <associate|eq 14.18.146|<tuple|14.18|662>>
+    <associate|eq 14.19.146|<tuple|14.19|662>>
+    <associate|eq 14.2.145|<tuple|14.2|647>>
+    <associate|eq 14.20.146|<tuple|14.20|662>>
+    <associate|eq 14.21.146|<tuple|14.21|664>>
+    <associate|eq 14.22.146|<tuple|14.22|666>>
+    <associate|eq 14.23.146|<tuple|14.23|668>>
+    <associate|eq 14.24.146|<tuple|14.24|668>>
+    <associate|eq 14.25.146|<tuple|14.25|670>>
+    <associate|eq 14.26.146|<tuple|14.26|?>>
+    <associate|eq 14.27.146|<tuple|14.27|?>>
+    <associate|eq 14.28.147|<tuple|14.28|?>>
+    <associate|eq 14.3.146|<tuple|14.3|652>>
+    <associate|eq 14.4.146|<tuple|14.4|652>>
+    <associate|eq 14.5.146|<tuple|14.5|653>>
+    <associate|eq 14.6.146|<tuple|14.6|653>>
+    <associate|eq 14.7.146|<tuple|14.7|653>>
+    <associate|eq 14.8.146|<tuple|14.8|653>>
+    <associate|eq 14.9.146|<tuple|14.9|653>>
+    <associate|metric ball image preimage|<tuple|14.63|660>>
+    <associate|metric bounded set|<tuple|14.65|661>>
+    <associate|metric bounded set inclusion|<tuple|14.66|661>>
+    <associate|metric closed ball|<tuple|14.51|657>>
+    <associate|metric closed balls are closed|<tuple|14.56|658>>
+    <associate|metric closed open balls are bounded|<tuple|14.67|661>>
+    <associate|metric composition of isometries|<tuple|14.62|660>>
+    <associate|metric dense set|<tuple|14.70|663>>
+    <associate|metric equivalent metrics|<tuple|14.58|659>>
+    <associate|metric equivalent metrics condition|<tuple|14.59|659>>
+    <associate|metric isometry|<tuple|14.60|659>>
+    <associate|metric isometry and its inverse|<tuple|14.61|659>>
+    <associate|metric open ball|<tuple|14.50|657>>
+    <associate|metric open ball and intersection|<tuple|14.52|657>>
+    <associate|metric product topology|<tuple|14.68|661>>
+    <associate|metric pseudo metric space|<tuple|14.47|656>>
+    <associate|metric refinement of a ball|<tuple|14.53|657>>
+    <associate|metric space|<tuple|14.48|656>>
+    <associate|metric space metric is positive|<tuple|14.49|656>>
+    <associate|metric topology|<tuple|14.54|657>>
+    <associate|metric topology (1)|<tuple|14.55|658>>
+    <associate|metrix isometry and topologies|<tuple|14.64|660>>
+    <associate|metrix subtopology|<tuple|14.57|658>>
+    <associate|normded triangle inequality|<tuple|14.74|663>>
+    <associate|normed absolute value norm differences|<tuple|14.75|664>>
+    <associate|normed ball|<tuple|14.77|665>>
+    <associate|normed basis of T\|\||<tuple|14.83|666>>
+    <associate|normed complex numbers|<tuple|14.80|665>>
+    <associate|normed dense set|<tuple|14.88|670>>
+    <associate|normed generalized intervals that are open|<tuple|14.84|667>>
+    <associate|normed norm|<tuple|14.72|663>>
+    <associate|normed norm of zero|<tuple|14.73|663>>
+    <associate|normed open generalized intervals|<tuple|14.85|?>>
+    <associate|normed pseudo norm|<tuple|14.71|663>>
+    <associate|normed real numbers|<tuple|14.81|665>>
+    <associate|normed topology|<tuple|14.79|665>>
+    <associate|topology and complement closed sets|<tuple|14.18|645>>
+    <associate|topology basis|<tuple|14.28|647>>
+    <associate|topology basis alternative definition|<tuple|14.30|648>>
+    <associate|topology basis and super basis|<tuple|14.31|648>>
+    <associate|topology basis generating|<tuple|14.35|649>>
+    <associate|topology basis of a subspace topology|<tuple|14.29|647>>
+    <associate|topology basis of the product topology|<tuple|14.41|654>>
+    <associate|topology basis properties|<tuple|14.34|649>>
+    <associate|topology biggest open subset|<tuple|14.13|644>>
+    <associate|topology box|<tuple|14.37|650>>
+    <associate|topology box topology and bases|<tuple|14.38|651>>
+    <associate|topology closed set|<tuple|14.15|644>>
+    <associate|topology closed set and a basis|<tuple|14.33|648>>
+    <associate|topology closed set and closure|<tuple|14.23|646>>
+    <associate|topology closed set condition|<tuple|14.27|647>>
+    <associate|topology closure alterantive definition|<tuple|14.26|647>>
     <associate|topology closure is union of a set and its limit
-    points|<tuple|14.25|644>>
-    <associate|topology closure of a set|<tuple|14.20|644>>
-    <associate|topology closure of a set alternative|<tuple|14.22|644>>
-    <associate|topology coarse|<tuple|14.3|639>>
-    <associate|topology dense set|<tuple|14.43|653>>
-    <associate|topology dense set alternative|<tuple|14.44|653>>
-    <associate|topology dense set alternative (1)|<tuple|14.45|653>>
-    <associate|topology dense set property|<tuple|14.46|654>>
-    <associate|topology discrete|<tuple|14.4|640>>
-    <associate|topology empty set|<tuple|14.2|639>>
-    <associate|topology finer and basis|<tuple|14.32|646>>
-    <associate|topology finer topology|<tuple|14.5|640>>
-    <associate|topology finite intersection|<tuple|14.6|640>>
-    <associate|topology interior of a set|<tuple|14.11|642>>
-    <associate|topology limit point|<tuple|14.24|644>>
-    <associate|topology open set and interior|<tuple|14.14|642>>
-    <associate|topology open set condition|<tuple|14.7|640>>
-    <associate|topology product|<tuple|14.39|649>>
-    <associate|topology product alternative definition|<tuple|14.40|650>>
+    points|<tuple|14.25|646>>
+    <associate|topology closure of a set|<tuple|14.20|646>>
+    <associate|topology closure of a set alternative|<tuple|14.22|646>>
+    <associate|topology coarse|<tuple|14.3|641>>
+    <associate|topology dense set|<tuple|14.43|655>>
+    <associate|topology dense set alternative|<tuple|14.44|655>>
+    <associate|topology dense set alternative (1)|<tuple|14.45|655>>
+    <associate|topology dense set property|<tuple|14.46|656>>
+    <associate|topology discrete|<tuple|14.4|642>>
+    <associate|topology empty set|<tuple|14.2|641>>
+    <associate|topology finer and basis|<tuple|14.32|648>>
+    <associate|topology finer topology|<tuple|14.5|642>>
+    <associate|topology finite intersection|<tuple|14.6|642>>
+    <associate|topology interior of a set|<tuple|14.11|644>>
+    <associate|topology limit point|<tuple|14.24|646>>
+    <associate|topology open set and interior|<tuple|14.14|644>>
+    <associate|topology open set condition|<tuple|14.7|642>>
+    <associate|topology product|<tuple|14.39|651>>
+    <associate|topology product alternative definition|<tuple|14.40|652>>
     <associate|topology product topology and box topology are the same in the
-    finite case|<tuple|14.42|652>>
-    <associate|topology space|<tuple|14.1|639>>
-    <associate|topology subbasis|<tuple|14.36|647>>
-    <associate|topology subspace topology|<tuple|14.8|641>>
-    <associate|topology subspace topology open subset|<tuple|14.10|641>>
-    <associate|topology subsubspace topology|<tuple|14.9|641>>
+    finite case|<tuple|14.42|654>>
+    <associate|topology space|<tuple|14.1|641>>
+    <associate|topology subbasis|<tuple|14.36|649>>
+    <associate|topology subspace topology|<tuple|14.8|643>>
+    <associate|topology subspace topology open subset|<tuple|14.10|643>>
+    <associate|topology subsubspace topology|<tuple|14.9|643>>
   </collection>
 </references>
 
