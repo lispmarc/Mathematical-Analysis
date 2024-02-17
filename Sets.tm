@@ -6338,6 +6338,8 @@
     <\equation*>
       <big|cup><rsub|i\<in\>I>A<rsub|i>=<big|cup><rsub|<around*|(|i,j|)>\<in\>I\<times\>J>B<rsub|i,j>
     </equation*>
+
+    in othere words\ 
   </theorem>
 
   <\proof>

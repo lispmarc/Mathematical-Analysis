@@ -10308,6 +10308,9 @@
       <item><math|\<exists\>n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>> such that
       <math|x\<less\>n>
 
+      <item><math|\<exists\>n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>> such that
+      <math|-n\<less\>x>
+
       <item><math|\<exists\>n\<in\>\<bbb-Z\><rsub|\<bbb-C\>>> such that
       <math|n\<leqslant\>x\<less\>n+1>
 
@@ -10334,6 +10337,9 @@
       theorem: <reference|complex Archimedean property>] that there exist a
       <math|n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>> such that
       <math|x\<less\>n\<cdot\>1=n>
+
+      <item>By (1) there exists a <math|n\<in\>\<bbb-N\><rsub|0>> such that
+      <math|-x\<less\>n> hence <math|-n\<less\>-<around*|(|-x|)>=x>
 
       <item>By (1) <math|A=<around*|{|n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>\|x\<less\>n|}>\<neq\>\<varnothing\>>
       and by the well ordering of <math|<around*|\<langle\>|\<bbb-N\><rsub|0,\<bbb-C\>>,\<leqslant\>|\<rangle\>>>
@@ -13751,7 +13757,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|6>
-    <associate|page-first|197>
+    <associate|page-first|203>
     <associate|project-flag|false>
     <associate|section-nr|3>
     <associate|subsection-nr|0>

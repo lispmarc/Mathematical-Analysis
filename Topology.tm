@@ -9,7 +9,8 @@
 
   TODO for every reference to 'topology basis alternative definition'
   \ <reference|topology basis alternative definition> check if we do not have
-  to refer to <reference|topology basis> [topology basis]
+  to refer to <reference|topology basis and open sets> [topology basis and
+  open sets]
 
   <section|Topological spaces>
 
@@ -886,6 +887,51 @@
     union of the open sets in <math|\<cal-B\>>.
   </definition>
 
+  <\theorem>
+    <label|topology basis and open sets>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
+    and <math|\<cal-B\>> a basis for <math|\<cal-T\>> then\ 
+
+    <\equation*>
+      U\<in\>\<cal-T\><text| >\<Leftrightarrow\><text|
+      >\<forall\>x\<in\>U<text| there exist a >B\<in\>\<cal-B\><text| such
+      that >x\<in\>B\<subseteq\>U
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>As <math|U> is open and <math|\<cal-B\>>
+      is a basis there exist a <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-B\>>
+      such that <math|U=<big|cup><rsub|i\<in\>I>B<rsub|i>>. Hence if
+      <math|x\<in\>U> there exist a <math|i\<in\>I> such that
+      <math|x\<in\>B<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>I>B<rsub|i>=U>
+      which as <math|B<rsub|i>\<in\>\<cal-B\>> proves our assertion.\ 
+
+      <item*|<math|\<Leftarrow\>>>Assume that <math|\<forall\>x\<in\>I> there
+      exist a <math|B\<in\>\<cal-B\>> such that <math|x\<in\>B\<subseteq\>U>
+      then by a consequence of the Axiom of Choice [see theorem:
+      <reference|choice function generating>] there exist a
+      <math|<around*|{|B<rsub|x>|}><rsub|x\<in\>U>\<subseteq\>\<cal-B\>> such
+      that <math|\<forall\>x\<in\>U> <math|x\<in\>B<rsub|x>\<subseteq\>U>. As
+      <math|\<forall\>x\<in\>U> <math|B<rsub|x>\<subseteq\>U> we have
+      <math|<big|cup><rsub|x\<in\>U>B<rsub|x>\<subseteq\>U>, further if
+      <math|x\<in\>U> then <math|x\<in\>B<rsub|x>\<in\>\<cal-B\>> so that
+      <math|x\<in\><big|cup><rsub|y\<in\>U>B<rsub|y>>. Hence\ 
+
+      <\equation*>
+        U=<big|cup><rsub|x\<in\>U>B<rsub|x><text| where
+        ><around*|{|B<rsub|x>|}><rsub|x\<in\>U>\<subseteq\>\<cal-B\>
+      </equation*>
+
+      Finally as <math|\<forall\>x\<in\>U>
+      <math|B<rsub|x>\<in\>\<cal-B\>\<subseteq\>\<cal-T\>> it follows that
+      <math|U=<big|cup><rsub|x\<in\>U>B<rsub|x>\<in\>\<cal-T\>>,
+    </description>
+  </proof>
+
   Given a basis of a topology it is easy to construct a basis of a
   subtopology.
 
@@ -1019,19 +1065,19 @@
       <math|B\<in\>\<cal-B\><rsub|1>> such that <math|x\<in\>B>. As
       <math|B\<in\>\<cal-B\><rsub|1>\<subseteq\>\<cal-T\><rsub|1>\<subseteq\>\<cal-T\><rsub|2>\<Rightarrow\>B\<in\>\<b-T\><rsub|2>>
       and <math|\<cal-B\><rsub|2>> is a basis for <math|\<cal-T\><rsub|2>> we
-      have by [theorem: <reference|topology basis alternative definition>]
-      that there exist a <math|B<rprime|'>\<in\>\<cal-B\><rsub|2>> such that
+      have by [theorem: <reference|topology basis and open sets>] that there
+      exist a <math|B<rprime|'>\<in\>\<cal-B\><rsub|2>> such that
       <math|x\<in\>B<rprime|'>\<subseteq\>B>.
 
       <item*|<math|\<Leftarrow\>>>Let <math|U\<in\>\<cal-T\><rsub|1>> and
-      take <math|x\<in\>U> then by [theorem: <reference|topology basis
-      alternative definition>] and the fact that <math|\<cal-B\><rsub|1>> is
-      a basis for <math|\<cal-T\><rsub|1>> it follows that there exist a
+      take <math|x\<in\>U> then by [theorem: <reference|topology basis and
+      open sets>] and the fact that <math|\<cal-B\><rsub|1>> is a basis for
+      <math|\<cal-T\><rsub|1>> it follows that there exist a
       <math|B\<in\>\<b-B\><rsub|1>> such that <math|x\<in\>B\<subseteq\>U>.
       Using the hypothesis there exist a <math|B<rprime|'>\<in\>\<cal-B\><rsub|2>>
       such that <math|x\<in\>B<rprime|'>\<subseteq\>B\<subseteq\>U>. Applying
-      then \ [theorem: <reference|topology basis alternative definition>]
-      again proves that <math|U\<in\>\<cal-T\><rsub|2>>. Hence we have\ 
+      then \ [theorem: <reference|topology basis and open sets>] again proves
+      that <math|U\<in\>\<cal-T\><rsub|2>>. Hence we have\ 
 
       <\equation*>
         \<cal-T\><rsub|1>\<subseteq\>\<cal-T\><rsub|2>
@@ -1058,15 +1104,15 @@
     <\description>
       <item*|<math|\<Rightarrow\>>>As <math|A> is closed we have by
       definition <math|X\\A\<in\>\<cal-T\>>. Hence if <math|x\<in\>X\\A> we
-      have by the previous theorem [theorem: <reference|topology basis
-      alternative definition>] a <math|B\<in\>\<cal-B\>> such that
+      have by the previous theorem [theorem: <reference|topology basis and
+      open sets>] a <math|B\<in\>\<cal-B\>> such that
       <math|x\<in\>B\<subseteq\>X\\A>.
 
       <item*|<math|\<Leftarrow\>>>If <math|x\<in\>X\\A> then
       <math|\<exists\>B\<in\>\<cal-B\>> such that
       <math|x\<in\>B\<subseteq\>X\\A> so by the previous theorem [theorem:
-      <reference|topology basis alternative definition>] <math|X\\A> is open,
-      hence <math|A> is closed.
+      <reference|topology basis and open sets>] <math|X\\A> is open, hence
+      <math|A> is closed.
     </description>
   </proof>
 
@@ -1424,8 +1470,8 @@
 
     Let <math|i\<in\>I> then as <math|\<cal-B\><rsub|i>> is a basis of
     <math|\<cal-T\><rsub|i>> there exist by [theorem: <reference|topology
-    basis alternative definition>] a <math|B\<in\>\<cal-B\><rsub|i>> such
-    that <math|x<rsub|i>\<in\>B\<subseteq\>U<rsub|i>>. So if we define
+    basis and open sets>] a <math|B\<in\>\<cal-B\><rsub|i>> such that
+    <math|x<rsub|i>\<in\>B\<subseteq\>U<rsub|i>>. So if we define
     <math|\<cal-A\><rsub|i>=<around*|{|B\<in\>\<cal-B\><rsub|i>\|x<rsub|i>\<in\>B\<subseteq\>U<rsub|i>|}>>
     then <math|\<cal-A\><rsub|i>\<neq\>\<varnothing\>>, using the Axiom of
     Choice [see theorem: <reference|choice Axiom of choice consequences>]
@@ -1935,7 +1981,7 @@
     </description>
   </proof>
 
-  We cab rephrase the previous theorem in temrs of a basis of a topology.
+  We can rephrase the previous theorem in terms of a basis of a topology.
 
   <\theorem>
     <label|topology dense set alternative (1)>Let
@@ -1969,7 +2015,7 @@
       <item*|<math|\<Leftarrow\>>>Let <math|x\<in\>X> then if
       <math|U\<in\>\<cal-T\>> satisfies <math|x\<in\>U> we have, as
       <math|\<cal-B\>> is a basis for <math|\<cal-T\>>, by [theorem:
-      <reference|topology basis alternative definition>] that
+      <reference|topology basis and open sets>] that
       <math|x\<in\>B\<subseteq\>U>. Using the hypothesis there exist a
       <math|a\<in\>A> such that <math|a\<in\>B\<subseteq\>U>. Hence using the
       previous theorem [theorem: <reference|topology dense set alternative>]
@@ -2293,7 +2339,8 @@
       <item*|<math|\<Leftarrow\>>>If for every <math|x\<in\>U> there exists a
       <math|\<delta\>\<gtr\>0> such that <math|x\<in\>B<rsub|d><around*|(|x,\<delta\>|)>\<subseteq\>U>
       we have as <math|B<rsub|d><around*|(|x,\<delta\>|)>\<in\>\<cal-B\><rsub|d>>
-      that <math|U\<in\>\<cal-T\><rsub|d>>.
+      that <math|U\<in\>\<cal-T\><rsub|d>> [using theorem:
+      <reference|topology basis and open sets>].
     </description>
   </proof>
 
@@ -2338,7 +2385,7 @@
   \;
 
   <\theorem>
-    <label|metrix subtopology>Let <math|<around*|\<langle\>|X,d|\<rangle\>>>
+    <label|metric subtopology>Let <math|<around*|\<langle\>|X,d|\<rangle\>>>
     be a pseudo metric space with the metrix toplogy <math|\<cal-T\><rsub|d>>
     and <math|A\<subseteq\>X> then for the restricted function
     <math|d<rsub|\|A\<times\>A>:A\<times\>A\<rightarrow\>R> we have\ 
@@ -2721,6 +2768,16 @@
       diam<around*|(|A|)>=sup<around*|(|<around*|{|d<around*|(|x,y|)>\|x,y\<in\>A|}>|)>
     </equation*>
   </definition>
+
+  <\example>
+    Let <math|<around*|\<langle\>|X,d|\<rangle\>>> be a metric space then
+    <math|\<varnothing\>> is bounded
+  </example>
+
+  <\proof>
+    <math|\<forall\>x,y\<in\>\<varnothing\>> we have vacuously that
+    <math|d<around*|(|x,y|)>\<leqslant\>1>
+  </proof>
 
   <\theorem>
     <label|metric bounded set inclusion>Let
@@ -3243,8 +3300,8 @@
 
   <\example>
     <label|normed complex numbers><math|<around*|\<langle\>|\<bbb-C\>,\<\|\|\>|\<rangle\>>>
-    is a normed space where <math|<around*|\|||\|>> is the complex norm [see
-    definition: <reference|complex norm>]
+    is a complex \ normed space where <math|<around*|\|||\|>> is the complex
+    norm [see definition: <reference|complex norm>]
   </example>
 
   <\proof>
@@ -3253,7 +3310,7 @@
 
   <\example>
     <label|normed real numbers><math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>>
-    is a normed space where <math|<around*|\|||\|>> is defined by\ 
+    is a real normed space where <math|<around*|\|||\|>> is defined by\ 
 
     <\equation*>
       <around*|\|||\|>:\<bbb-R\>\<times\>\<bbb-R\>\<rightarrow\>\<bbb-R\><text|
@@ -3459,15 +3516,15 @@
       <math|x\<in\><around*|]|-\<infty\>,a|[>> then for
       <math|<around*|]|x-\<varepsilon\>,a|[>\<in\>\<cal-B\><rsub|<around*|\|||\|>>>
       we have <math|x\<in\><around*|]|x-\<varepsilon\>,a|[>\<subseteq\><around*|]|-\<infty\>,a|[>>
-      proving by [theorem: <reference|topology basis alternative definition>]
-      that <math|<around*|]|-\<infty\>,a|[>\<in\>\<cal-T\><rsub|<around*|\|||\|>>>.
+      proving by [theorem: <reference|topology basis and open sets>] that
+      <math|<around*|]|-\<infty\>,a|[>\<in\>\<cal-T\><rsub|<around*|\|||\|>>>.
 
       <item*|<math|<around*|]|a,\<infty\>|[>>>If
       <math|x\<in\><around*|]|a,\<infty\>|[>> then for
       <math|<around*|]|a,x+\<varepsilon\>|[>\<in\>\<cal-B\><rsub|<around*|\|||\|>>>
       we have <math|x\<in\><around*|]|a,x+\<varepsilon\>|[>\<subseteq\><around*|]|a,\<infty\>|[>>
-      proving by [theorem: <reference|topology basis alternative definition>]
-      that <math|<around*|]|-\<infty\>,a|[>\<in\>\<cal-T\><rsub|<around*|\|||\|>>>.
+      proving by [theorem: <reference|topology basis and open sets>] that
+      <math|<around*|]|-\<infty\>,a|[>\<in\>\<cal-T\><rsub|<around*|\|||\|>>>.
 
       <item*|<math|<around*|]|-\<infty\>,\<infty\>|[>\<in\>\<cal-T\><rsub|<around*|\|||\|>>>><math|<around*|]|-\<infty\>,\<infty\>|[>=\<bbb-R\>\<in\>\<cal-T\><rsub|<around*|\|||\|>>>.
 
@@ -3505,7 +3562,7 @@
       <item*|<math|<around*|[|a,b|[>> is neither open/closed>Assume that
       <math|<around*|[|a,b|[>> is open then as <math|a\<leqslant\>a\<less\>b>
       we have <math|a\<in\><around*|[|a,b|[>>, so by [theorem:
-      <reference|topology basis alternative definition>] there exist a
+      <reference|topology basis and open sets>] there exist a
       <math|<around*|]|x,y|[>\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<equallim\><rsub|<text|[theorem:
       <reference|normed basis of T\|\|>]>><around*|{|<around*|]|x,y|[>\|x,y\<in\>\<bbb-R\>\<wedge\>x\<less\>y|}>>
       such that <math|a\<in\><around*|]|x,y|[>\<subseteq\><around*|[|a,b|[>>.
@@ -3520,7 +3577,7 @@
 
       Assume that <math|\<bbb-R\>\\<around*|[|a,b|[>> is open then as
       <math|b\<in\>\<bbb-R\>\\<around*|[|a,b|[>> we have by [theorem:
-      <reference|topology basis alternative definition>] that there exist a
+      <reference|topology basis and open sets>] that there exist a
       <math|<around*|]|x,y|[>\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<equallim\><rsub|<text|[theorem:
       <reference|normed basis of T\|\|>]>><around*|{|<around*|]|x,y|[>\|x,y\<in\>\<bbb-R\>\<wedge\>x\<less\>y|}>>
       such that <math|b\<in\><around*|]|x,y|[>\<subseteq\>\<bbb-R\>\\<around*|[|a,b|[>>
@@ -3548,7 +3605,7 @@
       <item*|<math|<around*|]|a,b|]>> is neither open/closed>Assume that
       <math|<around*|]|a,b|]>> is open then as <math|a\<less\>b\<leqslant\>b>
       we have <math|b\<in\><around*|[|a,b|[>>, so by [theorem:
-      <reference|topology basis alternative definition>] there exist a
+      <reference|topology basis and open sets>] there exist a
       <math|<around*|]|x,y|[>\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<equallim\><rsub|<text|[theorem:
       <reference|normed basis of T\|\|>]>><around*|{|<around*|]|x,y|[>\|x,y\<in\>\<bbb-R\>\<wedge\>x\<less\>y|}>>
       such that <math|b\<in\><around*|]|x,y|[>\<subseteq\><around*|]|a,b|]>>.
@@ -3563,7 +3620,7 @@
 
       Assume that <math|\<bbb-R\>\\<around*|]|a,b|]>> is open then as
       <math|a\<in\>\<bbb-R\>\\<around*|]|a,b|]>> we have by [theorem:
-      <reference|topology basis alternative definition>] that there exist a
+      <reference|topology basis and open sets>] that there exist a
       <math|<around*|]|x,y|[>\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<equallim\><rsub|<text|[theorem:
       <reference|normed basis of T\|\|>]>><around*|{|<around*|]|x,y|[>\|x,y\<in\>\<bbb-R\>\<wedge\>x\<less\>y|}>>
       such that <math|a\<in\><around*|]|x,y|[>\<subseteq\>\<bbb-R\>\\<around*|]|a,b|]>>
@@ -3634,7 +3691,7 @@
       <math|<around*|[|a,b|]>> is open then as
       <math|a\<leqslant\>a\<less\>b\<leqslant\>b> we have
       <math|a\<in\><around*|[|a,b|]>>, so by [theorem: <reference|topology
-      basis alternative definition>] there exist a
+      basis and open sets>] there exist a
       <math|<around*|]|x,y|[>\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<equallim\><rsub|<text|[theorem:
       <reference|normed basis of T\|\|>]>><around*|{|<around*|]|x,y|[>\|x,y\<in\>\<bbb-R\>\<wedge\>x\<less\>y|}>>
       such that <math|a\<in\><around*|]|x,y|[>\<subseteq\><around*|[|a,b|]>>,
@@ -3652,7 +3709,7 @@
       <item*|<math|<around*|[|a,\<infty\>|[>>>Assume that
       <math|<around*|[|a,\<infty\>|[>> is open then as
       <math|a\<in\><around*|[|a,\<infty\>|[>> there exist by [theorem:
-      <reference|topology basis alternative definition>] a
+      <reference|topology basis and open sets>] a
       \ <math|<around*|]|x,y|[>\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<equallim\><rsub|<text|[theorem:
       <reference|normed basis of T\|\|>]>><around*|{|<around*|]|x,y|[>\|x,y\<in\>\<bbb-R\>\<wedge\>x\<less\>y|}>>
       such that <math|a\<in\><around*|]|x,y|[>\<subseteq\><around*|[|a,\<infty\>|[>>,
@@ -3677,7 +3734,7 @@
       <item*|<math|<around*|]|-\<infty\>,a|]>>>Assume that
       <math|<around*|]|-\<infty\>,a|]>> is open then as
       <math|a\<in\><around*|]|-\<infty\>,a|]>> there exist by [theorem:
-      <reference|topology basis alternative definition>] a
+      <reference|topology basis and open sets>] a
       \ <math|<around*|]|x,y|[>\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<equallim\><rsub|<text|[theorem:
       <reference|normed basis of T\|\|>]>><around*|{|<around*|]|x,y|[>\|x,y\<in\>\<bbb-R\>\<wedge\>x\<less\>y|}>>
       such that <math|a\<in\><around*|]|x,y|[>\<subseteq\><around*|]|-\<infty\>,a|]>>,
@@ -3723,15 +3780,16 @@
   is a countable union of open intervals
 
   <\theorem>
-    Given <math|<around*|\<langle\>|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|\<rangle\>>>
+    <label|normed open set as union of intervals>Given
+    <math|<around*|\<langle\>|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|\<rangle\>>>
     the set of reals endowed with the topology generated by the absolute
     value norm and <math|U\<in\>\<cal-T\><rsub|<around*|\|||\|>>> a open set
-    then there exists a <math|<around*|{|I<rsub|i>|}><rsub|i\<in\>\<cal-I\>>\<subseteq\>\<cal-T\><rsub|<around*|\|||\|>>>
-    where <math|\<cal-I\>> is countable and <math|\<forall\>i\<in\>\<cal-I\>>
-    we have that <math|I<rsub|i>> is a open generalized interval such that\ 
+    then there exists a <math|\<cal-U\>\<subseteq\>\<cal-T\><rsub|<around*|\|||\|>>>
+    where <math|\<cal-U\>> is countable and <math|\<forall\>I\<in\>\<cal-U\>>
+    we have that <math|I> is a open generalized interval such that\ 
 
     <\equation*>
-      U=<big|cup><rsub|i\<in\>\<cal-I\>>I<rsub|i>
+      U=<big|cup><rsub|I\<in\>\<cal-U\>>I
     </equation*>
   </theorem>
 
@@ -3845,8 +3903,8 @@
 
     Let <math|I\<in\>\<cal-U\>> then there exist a <math|x\<in\>U> such that
     <math|I=\<sim\><around*|[|x|]>>. Let <math|y\<in\>\<sim\><around*|[|x|]>\<subseteq\>U>
-    then by \ [theorem: <reference|topology basis alternative definition>]
-    there exist a <math|<around*|]|a,b|[>\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<equallim\><rsub|<text|[theorem:
+    then by \ [theorem: <reference|topology basis and open sets>] there exist
+    a <math|<around*|]|a,b|[>\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<equallim\><rsub|<text|[theorem:
     <reference|normed basis of T\|\|>]>><around*|{|<around*|]|x,y|[>\|x,y\<in\>\<bbb-R\>\<wedge\>x\<less\>y|}>>
     such that <math|y\<in\><around*|]|a,b|[>\<subseteq\>U> then
     <math|\<forall\>z\<in\><around*|]|a,b|[>> we have either:\ 
@@ -4014,8 +4072,453 @@
   </corollary>
 
   <\proof>
-    TODO
+    Using the previous theorem [theorem: <reference|normed open set as union
+    of intervals>] there exists a countable set
+    <math|\<cal-U\>\<subseteq\>\<cal-T\><rsub|<around*|\|||\|>>> such that
+    <math|\<forall\>I\<in\>\<cal-U\>> <math|I> is open generalized interval
+    and\ 
+
+    <\equation>
+      <label|eq 14.29.147>U=<big|cup><rsub|I\<in\>\<cal-U\>>I
+    </equation>
+
+    \ So let <math|I\<in\>\<cal-U\>> then by [corollary: <reference|normed
+    open generalized intervals>] <math|I> is either\ 
+
+    <\description>
+      <item*|<math|I=<around*|]|a,b|[>>>Define then
+      <math|\<cal-I\><rsub|I>=<around*|{|1|}>> and
+      <math|<around*|{|<around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>|}><rsub|i\<in\>\<cal-I\><rsub|I>>>
+      by <math|a<rsub|1>=A\<wedge\>b<rsub|1>=b> so that\ 
+
+      <\equation*>
+        \<cal-I\><rsub|i><text| is countable [because it is finite] and
+        <math|I=<big|cup><rsub|i\<in\>\<cal-I\><rsub|I>><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>>>
+      </equation*>
+
+      <item*|<math|I=<around*|]|-\<infty\>,a|[>>>Take
+      <math|\<cal-I\><rsub|I>=\<bbb-N\><rsub|0>> and
+      <math|<around*|{|<around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>|}><rsub|i\<in\>\<cal-I\><rsub|I>>=<around*|{|<around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>|}><rsub|i\<in\>\<bbb-N\><rsub|0>>>
+      by <math|a<rsub|<around*|(|I,i|)>>=-i\<wedge\>b<rsub|<around*|(|I,i|)>>=a>.
+      Then <math|\<forall\>i\<in\>\<cal-I\><rsub|I>> we have
+      <math|\<forall\>x\<in\><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>=<around*|]|-i,a|[>\<Rightarrow\>-i\<less\>x\<less\>a\<Rightarrow\>x\<in\><around*|]|-\<infty\>,a|[>>
+      proving that
+
+      <\equation>
+        <label|eq 14.29.146><big|cup><rsub|i\<in\>\<cal-I\><rsub|I>><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>\<subseteq\>I
+      </equation>
+
+      Further if <math|x\<in\>I> then <math|x\<less\>a> then by a consequence
+      of the Archimedean Property of the real numbers [see theorem:
+      <reference|complex Archimedean property consequence (1)>] there exist a
+      <math|n\<in\>\<bbb-N\><rsub|0>=\<cal-I\><rsub|I>> such that
+      <math|-n\<less\>x> hence <math|x\<in\><around*|]|-n,a|[>=<around*|]|a<rsub|n>,b<rsub|n>|[>\<subseteq\><big|cup><rsub|i\<in\>\<cal-I\><rsub|I>><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>>.
+      Proving that <math|I\<subseteq\><big|cup><rsub|i\<in\>\<cal-I\><rsub|I>><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>>
+      which combined with <reference|eq 14.29.146>] proves that\ 
+
+      <\equation*>
+        \<cal-I\><rsub|I><text| is countable and
+        >I=<big|cup><rsub|i\<in\>\<cal-I\><rsub|I>><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>
+      </equation*>
+
+      <item*|<math|I=<around*|]|a,\<infty\>|[>>>Take
+      <math|\<cal-I\><rsub|I>=\<bbb-N\><rsub|0>> and
+      <math|<around*|{|<around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>|}><rsub|i\<in\>\<cal-I\><rsub|I>>=<around*|{|<around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>|}><rsub|i\<in\>\<bbb-N\><rsub|0>>>
+      by <math|a<rsub|<around*|(|I,i|)>>=a\<wedge\>b<rsub|<around*|(|I,i|)>>=n>.
+      Then <math|\<forall\>i\<in\>\<cal-I\><rsub|I>> we have
+      <math|\<forall\>x\<in\><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>=<around*|]|a,i|[>\<Rightarrow\>a\<less\>x\<less\>i\<Rightarrow\>x\<in\><around*|]|a,\<infty\>|[>>
+      proving that
+
+      <\equation>
+        <label|eq 14.30.146><big|cup><rsub|i\<in\>\<cal-I\><rsub|I>><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>\<subseteq\>I
+      </equation>
+
+      Further if <math|x\<in\>I> then <math|a\<less\>x> then by a consequence
+      of the Archimedean Property of the real numbers [see theorem:
+      <reference|complex Archimedean property consequence (1)>] there exist a
+      <math|n\<in\>\<bbb-N\><rsub|0>=\<cal-I\><rsub|I>> such that
+      <math|x\<less\>n> hence <math|x\<in\><around*|]|a,n|[>=<around*|]|a<rsub|n>,b<rsub|n>|[>\<subseteq\><big|cup><rsub|i\<in\>\<cal-I\><rsub|I>><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>>.
+      Proving that <math|I\<subseteq\><big|cup><rsub|i\<in\>\<cal-I\><rsub|I>><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>>
+      which combined with <reference|eq 14.30.146>] proves that\ 
+
+      <\equation*>
+        \<cal-I\><rsub|I><text| is countable and
+        >I=<big|cup><rsub|i\<in\>\<cal-I\><rsub|I>><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>
+      </equation*>
+
+      <item*|<math|I=<around*|]|-\<infty\>,\<infty\>|[>>>Then
+      <math|I=\<bbb-R\>>. Take <math|\<cal-I\><rsub|I>=\<bbb-N\><rsub|0>> and
+      <math|<around*|{|<around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>|}><rsub|i\<in\>\<cal-I\><rsub|I>>=<around*|{|<around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>|}><rsub|i\<in\>\<bbb-N\><rsub|0>>>
+      by <math|a<rsub|<around*|(|I,i|)>>=-i\<wedge\>b<rsub|<around*|(|I,i|)>>=i>.
+      Then <math|\<forall\>i\<in\>\<cal-I\><rsub|I>> we have
+      <math|<around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>\<subseteq\>\<bbb-R\>=I>
+      so that\ 
+
+      <\equation>
+        <label|eq 14.31.146><big|cup><rsub|i\<in\>\<cal-I\><rsub|I>><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>\<subseteq\>I
+      </equation>
+
+      Further if <math|x\<in\>\<bbb-R\>> then by [theorem: <reference|complex
+      Archimedean property consequence (1)>] there exist a
+      <math|n\<in\>\<bbb-N\><rsub|0>=\<cal-I\><rsub|I>> such that
+      <math|<around*|\||x|\|>\<less\>n> hence
+      <math|x\<less\><around*|\||x|\|>\<less\>n> and
+      <math|-x\<less\><around*|\||x|\|>\<less\>n\<Rightarrow\>-n\<less\>x>
+      proving that <math|-n\<less\>x\<less\>n\<Rightarrow\>x\<in\><around*|]|-n,n|[>=<around*|]|a<rsub|n>,b<rsub|n>|[>\<subseteq\><big|cup><rsub|i\<in\>\<cal-I\><rsub|I>><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>>.
+      Hence <math|I\<subseteq\><big|cup><rsub|i\<in\>\<cal-I\><rsub|I>><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>>
+      which combined with [eq: <reference|eq 14.31.146>] proves that \ 
+
+      <\equation*>
+        \<cal-I\><rsub|I><text| is countable and
+        >I=<big|cup><rsub|i\<in\>\<cal-I\><rsub|I>><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>
+      </equation*>
+    </description>
+
+    So we have that\ 
+
+    <\equation>
+      <label|eq 14.32.146>\<forall\>I\<in\>\<cal-U\> <text| there exists a
+      countable >\<cal-I\><rsub|I><text| and >
+      <around*|{|<around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>|}><rsub|i\<in\>\<cal-I\><rsub|i>>\<subseteq\>\<cal-T\><rsub|<around*|\|||\|>><text|
+      so that >I=<big|cup><rsub|i\<in\>\<cal-I\><rsub|I>><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>
+    </equation>
+
+    Now we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|x\<in\><big|cup><rsub|r\<in\><big|cup><rsub|I\<in\>\<cal-U\>><around*|{|I|}>\<times\>\<cal-I\><rsub|I>><around*|]|a<rsub|r>,b<rsub|r>|[><rsub|>>|<cell|\<Rightarrow\>>|<cell|x\<in\><big|cup><rsub|r\<in\><big|cup><rsub|I\<in\>\<cal-U\>><around*|{|I|}>\<times\>\<cal-I\><rsub|I>><around*|]|a<rsub|<around*|(|r<rsub|1>,r<rsub|2>|)>>,b<rsub|<around*|(|r<rsub|1>,r<rsub|2>|)>>|[>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|\<exists\>r\<in\><big|cup><rsub|I\<in\>\<cal-U\>><around*|{|I|}>\<times\>\<cal-I\><rsub|I><text|
+      such that >x\<in\><around*|]|a<rsub|<around*|(|r<rsub|1>,r<rsub|2>|)>>,b<rsub|<around*|(|r<rsub|1>,r<rsub|2>|)>>|[>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|\<exists\>I\<in\>\<cal-U\><text|
+      such that >r\<in\><around*|{|I|}>\<times\>\<cal-T\><rsub|I><text| such
+      that >x\<in\><around*|]|a<rsub|<around*|(|r<rsub|1>,r<rsub|2>|)>>,b<rsub|<around*|(|r<rsub|1>,r<rsub|2>|)>>|[>>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|[eq:
+      <reference|eq 14.32.146>]>>>|<cell|x\<in\>I>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x\<in\><big|cup><rsub|I\<in\>\<cal-U\>>I>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation>
+      <label|eq 14.33.146><big|cup><rsub|r\<in\><big|cup><rsub|I\<in\>\<cal-U\>><around*|{|I|}>\<times\>\<cal-I\><rsub|I>><around*|]|a<rsub|r>,b<rsub|r>|[>\<subseteq\><big|cup><rsub|I\<in\>\<cal-U\>>I
+    </equation>
+
+    and
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|x\<in\><big|cup><rsub|I\<in\>\<cal-U\>>I>|<cell|\<Rightarrow\>>|<cell|\<exists\>I\<in\>\<cal-U\><text|
+      such that >x\<in\>I>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|<text|[eq:
+      <reference|eq 14.32.146>]>>>|<cell|\<exists\>i\<in\>\<cal-I\><rsub|I><text|
+      such that >x\<in\><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x\<in\><around*|]|a<rsub|<around*|(|r<rsub|1>,r<rsub|2>|)>>,b<rsub|<around*|(|r<rsub|1>,r<rsub|2>|)>>|[><text|
+      where <math|r=<around*|(|I,i|)>\<in\><around*|{|I|}>\<times\>\<cal-T\><rsub|I>>>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x\<in\><around*|]|a<rsub|r>,b<rsub|r>|[><text|
+      where <math|r=<around*|(|I,i|)>\<in\><around*|{|I|}>\<times\>\<cal-T\><rsub|I>>>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|x\<in\><big|cup><rsub|r\<in\><big|cup><rsub|I\<in\>\<cal-U\>><around*|{|I|}>\<times\>\<cal-I\><rsub|I>><around*|]|a<rsub|r>,b<rsub|r>|[>>>>>
+    </eqnarray*>
+
+    proving that <math|<big|cup><rsub|I\<in\>\<cal-U\>>I\<subseteq\><big|cup><rsub|r\<in\><big|cup><rsub|I\<in\>\<cal-U\>><around*|{|I|}>\<times\>\<cal-I\><rsub|I>><around*|]|a<rsub|r>,b<rsub|r>|[>>.
+    Combining this with [eqs: <reference|eq 14.29.147><reference|eq
+    14.33.146>] results in\ 
+
+    <\equation>
+      <label|eq 14.35.147>U=<big|cup><rsub|I\<in\>\<cal-U\>>I=<big|cup><rsub|r\<in\><big|cup><rsub|I\<in\>\<cal-U\>><around*|{|I|}>\<times\>\<cal-I\><rsub|I>><around*|]|a<rsub|r>,b<rsub|r>|[>
+    </equation>
+
+    Now using [theorem: <reference|countable AUB and AxB>] together with [eq:
+    <reference|eq 14.32.146>] we have <math|\<forall\>I\<in\>\<cal-U\>> that
+    <math|<around*|{|I|}>\<times\>\<cal-I\><rsub|I>> is countable. As
+    <math|\<cal-U\>> is countable it follows from [theorem:
+    <reference|countable union of a denumerable family of countable sets is
+    denumerable>] that <math|<big|cup><rsub|I\<in\>\<cal-U\>><around*|{|I|}>\<times\>\<cal-I\><rsub|I>>
+    is countable. Hence if we take <math|\<cal-I\>=<big|cup><rsub|I\<in\>\<cal-U\>><around*|{|I|}>\<times\>\<cal-I\><rsub|I>>
+    we have that\ 
+
+    <\equation*>
+      \<cal-I\><text| is countable and >U\<equallim\><rsub|<text|[eq:
+      <reference|eq 14.35.147>]>><big|cup><rsub|r\<in\>\<cal-I\>><around*|]|a<rsub|r>,b<rsub|r>|[>
+    </equation*>
   </proof>
+
+  The concept of a bounded set [see definition: <reference|metric bounded
+  set>] in a metric space becomes simpler if the metric space happens to be a
+  normed space.
+
+  <\theorem>
+    <label|normed bounded set>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a pseudo normed space, <math|A\<subseteq\>X> then
+
+    <\equation*>
+      A<text| is bounded >\<Leftrightarrow\><text|
+      >\<exists\>M\<in\>\<bbb-R\><text| such that >\<forall\>x\<in\>X<text|
+      we have ><around*|\<\|\|\>|x|\<\|\|\>>\<leqslant\>M
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>If <math|A> is a bounded set then we have
+      either:
+
+      <\description>
+        <item*|<math|A=\<varnothing\>>>Then <math|\<forall\>x\<in\>A> we have
+        vacuously that <math|<around*|\<\|\|\>|x|\<\|\|\>>\<leqslant\>1>
+
+        <item*|<math|A\<neq\>\<varnothing\>>>Then
+        <math|\<exists\>x<rsub|o>\<in\>A>. As <math|A> is bounded there exist
+        a <math|N\<in\>\<bbb-R\>> such that <math|\<forall\>x,y\<in\>A> we
+        have <math|<around*|\<\|\|\>|x-y|\<\|\|\>>=d<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,y|)>\<leqslant\>N>.
+        Take <math|M=N+<around*|\<\|\|\>|x<rsub|0>|\<\|\|\>>> then if
+        <math|z\<in\>A> we have <math|<around*|\<\|\|\>|z|\<\|\|\>>=<around*|\<\|\|\>|z-x<rsub|0>+x<rsub|0>|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|z-x<rsub|0>|\<\|\|\>>+<around*|\<\|\|\>|x<rsub|0>|\<\|\|\>>\<leqslant\>N+<around*|\<\|\|\>|x<rsub|0>|\<\|\|\>>=M>
+      </description>
+
+      <item*|<math|\<Leftarrow\>>>Let <math|\<bbb-N\>\<in\>\<bbb-R\>> such
+      that <math|\<forall\>x\<in\>A> we have
+      <math|<around*|\<\|\|\>|x|\<\|\|\>>\<leqslant\>N> and set
+      <math|M=2\<cdot\>N>. Then <math|\<forall\>x,y\<in\>A> we have
+      <math|d<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,y|)>=<around*|\<\|\|\>|x-y|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x|\<\|\|\>>+<around*|\<\|\|\>|y|\<\|\|\>>=N+N=2\<cdot\>N=M>
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|normed sub space topology>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a pseudo normed space with norm topology
+    <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>> and
+    <math|A\<subseteq\>X> then for <math|<around*|\<\|\|\>||\<\|\|\>><rsub|\|A>>
+    defined by\ 
+
+    <\equation*>
+      <around*|\<\|\|\>||\<\|\|\>><rsub|<around*|\||A|\|>>:A\<rightarrow\>\<bbb-R\><text|
+      defined by <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|\|A>=<around*|\<\|\|\>|x|\<\|\|\>>>>
+    </equation*>
+
+    then\ 
+
+    <\enumerate>
+      <item><math|<around*|\<langle\>|A,<around*|\<\|\|\>||\<\|\|\>><rsub|\|A>|\<rangle\>>>
+      is a pseudo normed space.
+
+      <item>If <math|<around*|\<langle\>|A,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+      is a normed space <math|<around*|\<langle\>|A,<around*|\<\|\|\>||\<\|\|\>><rsub|\|A>|\<rangle\>>>
+      is also a normed space
+
+      <item><math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|\|A>>=<around*|(|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>|)><rsub|A>>
+      the subspace topology on <math|A>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>We have:
+
+      <\enumerate>
+        <item><math|\<forall\>x\<in\>A> we have
+        <math|0\<leqslant\><around*|\<\|\|\>|x|\<\|\|\>>=<around*|\<\|\|\>|x|\<\|\|\>><rsub|\|A>>
+
+        <item><math|\<forall\>x\<in\>A> we have
+        <math|\<forall\>\<alpha\>\<in\>\<bbb-R\>> [or
+        <math|\<alpha\>\<in\>\<bbb-C\>>] that
+        <math|<around*|\<\|\|\>|\<alpha\>\<cdot\>x|\<\|\|\>><rsub|\|A>=<around*|\||\<alpha\>|\|><around*|\<\|\|\>|x|\<\|\|\>>=<around*|\||a|\|>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|\|A>>
+
+        <item><math|\<forall\>x,y\<in\>A> we have
+        <math|<around*|\<\|\|\>|x+y|\<\|\|\>><rsub|\|A>=<around*|\<\|\|\>|x+y|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x|\<\|\|\>>+<around*|\<\|\|\>|y|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x|\<\|\|\>><rsub|\|A>+<around*|\<\|\|\>|y|\<\|\|\>><rsub|\|A>>
+      </enumerate>
+
+      <item>Let <math|x\<in\>A> such that
+      <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|\|A>=0> then
+      <math|<around*|\<\|\|\>|x|\<\|\|\>>=0> hence as
+      <math|<around*|\<\|\|\>||\<\|\|\>>> is a norm we have <math|x=0>.
+
+      <item>Let <math|x,y\<in\>A> then <math|<around*|(|d<rsub|<around*|\<\|\|\>||\<\|\|\>>>|)><rsub|\|A\<times\>A><around*|(|x,y|)>=d<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,y|)>=<around*|\<\|\|\>|x-y|\<\|\|\>>=<around*|\<\|\|\>|x-y|\<\|\|\>><rsub|\|A>=d<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|\|A>><around*|(|x,y|)>>
+      proving that\ 
+
+      <\equation>
+        <label|eq 14.36.147><around*|(|d<rsub|<around*|\<\|\|\>||\<\|\|\>>>|)><rsub|\|A>=d<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|\|A>>
+      </equation>
+
+      So we have\ 
+
+      <\equation*>
+        \<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|\|A>>\<equallim\><rsub|def>\<cal-T\><rsub|d<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|\|A>>>\<equallim\><rsub|<text|[eq:
+        <reference|eq 14.36.147>]>>\<cal-T\><rsub|<around*|(|d<rsub|<around*|\<\|\|\>||\<\|\|\>>>|)><rsub|\|A\<times\>A>>\<equallim\><rsub|<text|[theorem:
+        <reference|metric subtopology>>><around*|(|\<cal-T\><rsub|d<rsub|<around*|\<\|\|\>||\<\|\|\>>>>|)><rsub|A>=<around*|(|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>|)><rsub|A>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|normed space set operations>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
+    a normed space over <math|\<bbb-K\>> [where <math|\<bbb-K\>=\<bbb-C\>> or
+    <math|\<bbb-R\>>, <math|M\<subseteq\>X> then
+    <math|\<forall\>\<alpha\>\<in\>\<bbb-K\>> with <math|\<alpha\>=0> and
+    <math|\<forall\>x\<in\>X> we have:
+
+    <\enumerate>
+      <item><math|<wide|\<alpha\>\<cdot\>M|\<wide-bar\>>=\<alpha\>\<cdot\><wide|M|\<wide-bar\>>>
+
+      <item>If <math|M> is closed in <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>>
+      then <math|\<alpha\>\<cdot\>M> is closed in
+      <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>>
+
+      <item>If <math|M> is open in <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>>
+      then <math|\<alpha\>\<cdot\>M> is open in
+      <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>>
+
+      <item>If <math|M> is open in <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>>
+      then <math|x+M> is open in <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>>
+
+      <item>If <math|M> is open in <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>>
+      and <math|A\<subseteq\>X> then <math|A+M> is open in
+      <math|\<cal-T\><rsub|M>>
+
+      <item><math|<wide|M|\<wide-bar\>>-<wide|M|\<wide-bar\>>=<wide|M-M|\<wide-bar\>>>
+    </enumerate>
+
+    See [definition: <reference|vector space set operations>] for the
+    definition of <math|\<alpha\>\<cdot\>M>, <math|x+M>, <math|A+M> and
+    <math|M-M>\ 
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|x\<in\><wide|\<alpha\>\<cdot\>M|\<wide-bar\>>> then as
+      <math|\<alpha\>\<neq\>0> we can define <math|z=1/\<alpha\>\<cdot\>x> so
+      that <math|x=\<alpha\>\<cdot\>z>. Assume that <math|U> is a open set
+      such that <math|z\<in\>U>. Then by [theorem: <reference|metric topology
+      (1)>] there exist a <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+
+      <\equation>
+        <label|eq 14.37.147>z\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|z,\<delta\>|)>\<subseteq\>U
+      </equation>
+
+      Further we have trivially <math|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,<around*|\||\<alpha\>|\|>\<cdot\>\<delta\>|)>>
+      which is open so by [theorem: <reference|topology closure alterantive
+      definition>] and <math|x\<in\><wide|\<alpha\>\<cdot\>M|\<wide-bar\>>>
+      we have that <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,<around*|\||\<alpha\>|\|>\<cdot\>\<delta\>|)><big|cap><around*|(|\<alpha\>\<cdot\>M|)>\<neq\>\<varnothing\>>,
+      hence there exist a <math|m\<in\>M> such that
+      <math|\<alpha\>\<cdot\>m\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,<around*|\||\<alpha\>|\|>\<cdot\>\<delta\>|)>>,
+      from which it follows that <math|<around*|\<\|\|\>|x-\<alpha\>*\<cdot\>m|\<\|\|\>>\<less\><around*|\||\<alpha\>|\|>\<cdot\>\<delta\>>
+      or as <math|x=\<alpha\>\<cdot\>z> that
+      <math|<around*|\||\<alpha\>|\|><around*|\<\|\|\>|z-m|\<\|\|\>>=<around*|\<\|\|\>|\<alpha\>\<cdot\>z-\<alpha\>\<cdot\>m|\<\|\|\>>=<around*|\<\|\|\>|x-\<alpha\>\<cdot\>m|\<\|\|\>>\<less\><around*|\||\<alpha\>|\|>\<cdot\>\<delta\>>
+      from which we concude, as <math|<around*|\||\<alpha\>|\|>\<neq\>0>,
+      that <math|<around*|\<\|\|\>|z-m|\<\|\|\>>\<leqslant\>\<delta\>> or
+      that <math|m\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|z,\<delta\>|)>\<subseteq\><rsub|<text|[eq:
+      <reference|eq 14.37.147>]>>U>. Hence
+      <math|U<big|cap>M\<neq\>\<varnothing\>> which, as <math|z\<in\>U>,
+      means by [theorem: <reference|topology closure alterantive definition>]
+      proves that <math|z\<in\><wide|M|\<wide-bar\>>> so that
+      <math|x=\<alpha\>\<cdot\>z\<in\>\<alpha\>\<cdot\><wide|M|\<wide-bar\>>>.
+      So it follows that\ 
+
+      <\equation>
+        <label|eq 14.38.147><wide|\<alpha\>\<cdot\>M|\<wide-bar\>>\<subseteq\>\<alpha\>\<cdot\><wide|M|\<wide-bar\>>
+      </equation>
+
+      For the opposite inclusion, assume that
+      <math|x\<in\>\<alpha\>\<cdot\><wide|M|\<wide-bar\>>>. If <math|U> is a
+      open set such that <math|x\<in\>U> then by [theorem: <reference|metric
+      topology (1)>] there exist a <math|\<delta\>\<in\>\<bbb-R\><rsup|+>>
+      such that
+
+      <\equation>
+        <label|eq 14.39.147>x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,\<delta\>|)>\<subseteq\>U
+      </equation>
+
+      As <math|x\<in\>\<alpha\>\<cdot\><wide|M|\<wide-bar\>>> there exist a
+      <math|z\<in\><wide|M|\<wide-bar\>>> such that
+      <math|x=\<alpha\>\<cdot\>z>, further we have trivially
+      <math|z\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|z,\<delta\>/<around*|\||\<alpha\>|\|>|)>>
+      which is a open set so that by [theorem: <reference|topology closure
+      alterantive definition>] and <math|z\<in\><wide|M|\<wide-bar\>>> we
+      have that <math|M<big|cap>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|z,\<delta\>/<around*|\||\<alpha\>|\|>|}>\<neq\>\<varnothing\>>,
+      hence there exist a <math|m\<in\>M> such that
+      <math|m\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|z,\<delta\>/<around*|\||\<alpha\>|\|>|}>\<Rightarrow\><around*|\<\|\|\>|z-m|\<\|\|\>>\<less\>\<delta\>/<around*|\||\<alpha\>|\|>>.
+      So <math|<around*|\<\|\|\>|x-\<alpha\>\<cdot\>m|\<\|\|\>>=<around*|\<\|\|\>|\<alpha\>\<cdot\>z-\<alpha\>\<cdot\>m|\<\|\|\>>=<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|z-m|\<\|\|\>>\<less\><around*|\||\<alpha\>|\|>\<cdot\><around*|(|\<delta\>/<around*|\||\<alpha\>|\|>|)>=\<delta\>>
+      proving that <math|\<alpha\>\<cdot\>m\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,\<delta\>|)>\<subseteq\>U>
+      hence, as <math|\<alpha\>\<cdot\>m\<in\>\<alpha\>\<cdot\>M> we have
+      that <math|U<big|cap><around*|(|a\<cdot\>M|)>\<neq\>\<varnothing\>>,
+      proving by [theprem: <reference|topology closure alterantive
+      definition>] that <math|x\<in\><wide|\<alpha\>\<cdot\>M|\<wide-bar\>>>.
+      So <math|\<alpha\>\<cdot\><wide|M|\<wide-bar\>>\<subseteq\><wide|\<alpha\>\<cdot\>M|\<wide-bar\>>>
+      whic combined with [eq: <reference|eq 14.38.147>] gives\ 
+
+      <\equation*>
+        <wide|\<alpha\>\<cdot\>M|\<wide-bar\>>=\<alpha\>\<cdot\><wide|M|\<wide-bar\>>
+      </equation*>
+
+      <item>If <math|A> is closed then by [theorem: <reference|topology
+      closed set and closure>] <math|A=<wide|A|\<wide-bar\>>>, hence
+      <math|\<alpha\>\<cdot\>A=\<alpha\>\<cdot\><wide|A|\<wide-bar\>>\<equallim\><rsub|<around*|(|1|)>><wide|\<alpha\>\<cdot\>A|\<wide-bar\>>>
+      proving by [theorem: <reference|topology closed set and closure>] that
+      <math|\<alpha\>\<cdot\>A> is closed.
+
+      <item>If <math|x\<in\>\<alpha\>\<cdot\>M> then
+      <math|x=\<alpha\>\<cdot\>m> where <math|m\<in\>M>. As <math|M> is open
+      there exists by [theorem: <reference|metric topology (1)>] a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|m\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|m,\<delta\>|)>\<subseteq\>M>.
+      If <math|z\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,<around*|\||\<alpha\>|\|>\<cdot\>\<delta\>|)>>
+      then <math|<around*|\<\|\|\>|z-x|\<\|\|\>>\<less\><around*|\||\<alpha\>|\|>\<cdot\>\<delta\>>
+      so that
+
+      <\equation*>
+        <around*|\<\|\|\>|m-<around*|(|1/\<alpha\>|)>\<cdot\>z|\<\|\|\>>=<around*|\<\|\|\>|<around*|(|1/\<alpha\>|)>\<cdot\>x-<around*|(|1/\<alpha\>|)>\<cdot\>z|\<\|\|\>>=<around*|(|1/<around*|\||\<alpha\>|\|>|)>\<cdot\><around*|\<\|\|\>|x-z|\<\|\|\>>\<less\><around*|(|1/<around*|\||\<alpha\>|\|>|)>\<cdot\><around*|\||\<alpha\>|\|>\<cdot\>\<delta\>=\<delta\>
+      </equation*>
+
+      proving that <math|<around*|(|1/\<alpha\>|)>\<cdot\>z\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|m,\<delta\>|)>\<subseteq\>M\<Rightarrow\>z\<in\>\<alpha\>\<cdot\>M>.
+      Hence <math|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,<around*|\||\<alpha\>|\|>\<cdot\>\<delta\>|)>\<subseteq\>\<alpha\>\<cdot\>M>
+      proving by [theorem: <reference|metric topology (1)>] \ that
+      <math|\<alpha\>\<cdot\>M> is open.
+
+      <item>Let <math|z\<in\>x+M> then <math|z-x\<in\>M> a open set, hence
+      there exist by [theorem: <reference|metric topology (1)>] a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+
+      <\equation*>
+        z-x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|z-x,\<delta\>|)>\<subseteq\>M
+      </equation*>
+
+      Take <math|y\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|z,\<delta\>|)>>
+      then <math|<around*|\<\|\|\>|z-y|\<\|\|\>>\<less\>\<delta\>\<Rightarrow\><around*|\<\|\|\>|<around*|(|y-x|)>-<around*|(|z-x|)>|\<\|\|\>>=<around*|\<\|\|\>|y-z|\<\|\|\>>=<around*|\<\|\|\>|z-y|\<\|\|\>>\<less\>\<delta\>>
+      proving that <math|y-x\<in\>\<cal-B\><rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|z-x,\<delta\>|)>\<subseteq\>M\<Rightarrow\>y\<in\>x+M>.
+      Hence <math|z\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|z,\<delta\>|)>\<subseteq\>x+M>
+      proving by [theorem: <reference|topology basis and open sets>] that
+      <math|x+M> is open\ 
+
+      <item>This follows from (4) as <math|A+M=<big|cup><rsub|x\<in\>A><around*|(|x+M|)>>
+      a union of open sets which is open by definition.
+
+      <item>If <math|x\<in\><wide|M|\<wide-bar\>>-<wide|M|\<wide-bar\>>> then
+      <math|x=y<rsub|1>-y<rsub|1>> where <math|y<rsub|1>,y<rsub|2>\<in\><wide|M|\<wide-bar\>>>.
+      Let <math|U> be a open set such that <math|x\<in\>U>. Then by [theorem:
+      <reference|metric topology (1)>] there exist a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+
+      <\equation>
+        x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,\<delta\>|)>\<subseteq\>U
+      </equation>
+
+      As <math|y<rsub|1>,y<rsub|2>> we have by the fact that
+      <math|y<rsub|1>\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|y<rsub|1>,\<delta\>/2|)>\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>>,
+      <math|y<rsub|2>\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|y<rsub|2>,\<delta\>/2|)>\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>>
+      by [theorem: <reference|topology closed set condition>] that there
+      exists a <math|z<rsub|1>\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|y<rsub|1>,\<delta\>/2|)><big|cap>M>
+      and a <math|z<rsub|2>\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|y<rsub|2>,\<delta\>/2|)><big|cap>M>.
+      Take <math|z=z<rsub|1>-z<rsub|2>\<in\>M-M> then
+
+      <\equation*>
+        <around*|\<\|\|\>|x-z|\<\|\|\>>=<around*|\<\|\|\>|<around*|(|y<rsub|1>-y<rsub|2>|)>-<around*|(|z<rsub|1>-z<rsub|2>|)>|\<\|\|\>>=<around*|\<\|\|\>|<around*|(|y<rsub|1>-z<rsub|1>|)>+<around*|(|z<rsub|2>-y<rsub|2>|)>|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|y<rsub|1>-z<rsub|1>|\<\|\|\>>+<around*|\<\|\|\>|y<rsub|2>-z<rsub|2>|\<\|\|\>>\<less\>\<delta\>
+      </equation*>
+
+      proving that <math|z\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,\<delta\>|)>>.
+      As <math|z\<in\>M-M> it follows that
+      <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,\<delta\>|)><big|cap><around*|(|M-M|)>\<neq\>\<varnothing\>>.
+      So applying [theorem: <reference|topology closure alterantive
+      definition>] proves then that <math|<wide|M-M|\<wide-bar\>>=<wide|M|\<wide-bar\>>-<wide|M|\<wide-bar\>>>,
+    </enumerate>
+  </proof>
+
+  \;
 
   <\theorem>
     <label|normed dense set>Let <math|<around*|\<langle\>|X,d|\<rangle\>>> a
@@ -4095,7 +4598,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|13>
-    <associate|page-first|641>
+    <associate|page-first|645>
     <associate|page-medium|paper>
     <associate|section-nr|0>
     <associate|subsection-nr|0>
@@ -4104,144 +4607,160 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|14|641>>
-    <associate|auto-10|<tuple|<with|mode|<quote|math>|A<rprime|'>>|646>>
-    <associate|auto-11|<tuple|14.1.2|647>>
-    <associate|auto-12|<tuple|box topology|650>>
-    <associate|auto-13|<tuple|14.1.3|655>>
-    <associate|auto-14|<tuple|dense set|655>>
-    <associate|auto-15|<tuple|14.2|656>>
-    <associate|auto-16|<tuple|pseudo metric space|656>>
-    <associate|auto-17|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|X,d|\<rangle\>>>|656>>
-    <associate|auto-18|<tuple|metric space|656>>
-    <associate|auto-19|<tuple|open ball|657>>
-    <associate|auto-2|<tuple|14.1|641>>
-    <associate|auto-20|<tuple|<with|mode|<quote|math>|B<rsub|d><around*|(|x,\<varepsilon\>|)>>|657>>
-    <associate|auto-21|<tuple|closed ball|657>>
-    <associate|auto-22|<tuple|<with|mode|<quote|math>|<wide|B<rsub|d><around*|(|x,\<varepsilon\>|)>|\<wide-bar\>>>|657>>
-    <associate|auto-23|<tuple|equivalent pseudo metrics|659>>
-    <associate|auto-24|<tuple|isometry|659>>
-    <associate|auto-25|<tuple|bounded set|661>>
-    <associate|auto-26|<tuple|diameter of a bounded set|661>>
-    <associate|auto-27|<tuple|<with|mode|<quote|math>|diam<around*|(|A|)>>|661>>
-    <associate|auto-28|<tuple|14.3|663>>
-    <associate|auto-29|<tuple|pseudo normed space|663>>
-    <associate|auto-3|<tuple|interior|644>>
-    <associate|auto-30|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>||\<\|\|\>>>|663>>
-    <associate|auto-4|<tuple|<with|mode|<quote|math>|A<rsup|\<circ\>>>|644>>
-    <associate|auto-5|<tuple|14.1.1|644>>
-    <associate|auto-6|<tuple|closed set|644>>
-    <associate|auto-7|<tuple|<with|mode|<quote|math>|\<cal-T\><rsup|\<cal-C\>>>|644>>
-    <associate|auto-8|<tuple|limit point|646>>
-    <associate|auto-9|<tuple|accumulation point|646>>
-    <associate|closed set properties|<tuple|14.19|645>>
-    <associate|eq 14.1.145|<tuple|14.1|646>>
-    <associate|eq 14.10.146|<tuple|14.10|653>>
-    <associate|eq 14.11.146|<tuple|14.11|654>>
-    <associate|eq 14.12.146|<tuple|14.12|655>>
-    <associate|eq 14.13.146|<tuple|14.13|659>>
-    <associate|eq 14.14.146|<tuple|14.14|659>>
-    <associate|eq 14.15.146|<tuple|14.15|660>>
-    <associate|eq 14.16.146|<tuple|14.16|660>>
-    <associate|eq 14.17.146|<tuple|14.17|660>>
-    <associate|eq 14.18.146|<tuple|14.18|662>>
-    <associate|eq 14.19.146|<tuple|14.19|662>>
-    <associate|eq 14.2.145|<tuple|14.2|647>>
-    <associate|eq 14.20.146|<tuple|14.20|662>>
-    <associate|eq 14.21.146|<tuple|14.21|664>>
-    <associate|eq 14.22.146|<tuple|14.22|666>>
-    <associate|eq 14.23.146|<tuple|14.23|668>>
-    <associate|eq 14.24.146|<tuple|14.24|668>>
-    <associate|eq 14.25.146|<tuple|14.25|670>>
-    <associate|eq 14.26.146|<tuple|14.26|?>>
-    <associate|eq 14.27.146|<tuple|14.27|?>>
-    <associate|eq 14.28.147|<tuple|14.28|?>>
-    <associate|eq 14.3.146|<tuple|14.3|652>>
-    <associate|eq 14.4.146|<tuple|14.4|652>>
-    <associate|eq 14.5.146|<tuple|14.5|653>>
-    <associate|eq 14.6.146|<tuple|14.6|653>>
-    <associate|eq 14.7.146|<tuple|14.7|653>>
-    <associate|eq 14.8.146|<tuple|14.8|653>>
-    <associate|eq 14.9.146|<tuple|14.9|653>>
-    <associate|metric ball image preimage|<tuple|14.63|660>>
-    <associate|metric bounded set|<tuple|14.65|661>>
-    <associate|metric bounded set inclusion|<tuple|14.66|661>>
-    <associate|metric closed ball|<tuple|14.51|657>>
-    <associate|metric closed balls are closed|<tuple|14.56|658>>
-    <associate|metric closed open balls are bounded|<tuple|14.67|661>>
-    <associate|metric composition of isometries|<tuple|14.62|660>>
-    <associate|metric dense set|<tuple|14.70|663>>
-    <associate|metric equivalent metrics|<tuple|14.58|659>>
-    <associate|metric equivalent metrics condition|<tuple|14.59|659>>
-    <associate|metric isometry|<tuple|14.60|659>>
-    <associate|metric isometry and its inverse|<tuple|14.61|659>>
-    <associate|metric open ball|<tuple|14.50|657>>
-    <associate|metric open ball and intersection|<tuple|14.52|657>>
-    <associate|metric product topology|<tuple|14.68|661>>
-    <associate|metric pseudo metric space|<tuple|14.47|656>>
-    <associate|metric refinement of a ball|<tuple|14.53|657>>
-    <associate|metric space|<tuple|14.48|656>>
-    <associate|metric space metric is positive|<tuple|14.49|656>>
-    <associate|metric topology|<tuple|14.54|657>>
-    <associate|metric topology (1)|<tuple|14.55|658>>
-    <associate|metrix isometry and topologies|<tuple|14.64|660>>
-    <associate|metrix subtopology|<tuple|14.57|658>>
-    <associate|normded triangle inequality|<tuple|14.74|663>>
-    <associate|normed absolute value norm differences|<tuple|14.75|664>>
-    <associate|normed ball|<tuple|14.77|665>>
-    <associate|normed basis of T\|\||<tuple|14.83|666>>
-    <associate|normed complex numbers|<tuple|14.80|665>>
-    <associate|normed dense set|<tuple|14.88|670>>
-    <associate|normed generalized intervals that are open|<tuple|14.84|667>>
-    <associate|normed norm|<tuple|14.72|663>>
-    <associate|normed norm of zero|<tuple|14.73|663>>
-    <associate|normed open generalized intervals|<tuple|14.85|?>>
-    <associate|normed pseudo norm|<tuple|14.71|663>>
-    <associate|normed real numbers|<tuple|14.81|665>>
-    <associate|normed topology|<tuple|14.79|665>>
-    <associate|topology and complement closed sets|<tuple|14.18|645>>
-    <associate|topology basis|<tuple|14.28|647>>
-    <associate|topology basis alternative definition|<tuple|14.30|648>>
-    <associate|topology basis and super basis|<tuple|14.31|648>>
-    <associate|topology basis generating|<tuple|14.35|649>>
-    <associate|topology basis of a subspace topology|<tuple|14.29|647>>
-    <associate|topology basis of the product topology|<tuple|14.41|654>>
-    <associate|topology basis properties|<tuple|14.34|649>>
-    <associate|topology biggest open subset|<tuple|14.13|644>>
-    <associate|topology box|<tuple|14.37|650>>
-    <associate|topology box topology and bases|<tuple|14.38|651>>
-    <associate|topology closed set|<tuple|14.15|644>>
-    <associate|topology closed set and a basis|<tuple|14.33|648>>
-    <associate|topology closed set and closure|<tuple|14.23|646>>
-    <associate|topology closed set condition|<tuple|14.27|647>>
-    <associate|topology closure alterantive definition|<tuple|14.26|647>>
+    <associate|auto-1|<tuple|14|645>>
+    <associate|auto-10|<tuple|<with|mode|<quote|math>|A<rprime|'>>|650>>
+    <associate|auto-11|<tuple|14.1.2|651>>
+    <associate|auto-12|<tuple|box topology|654>>
+    <associate|auto-13|<tuple|14.1.3|659>>
+    <associate|auto-14|<tuple|dense set|659>>
+    <associate|auto-15|<tuple|14.2|660>>
+    <associate|auto-16|<tuple|pseudo metric space|660>>
+    <associate|auto-17|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|X,d|\<rangle\>>>|660>>
+    <associate|auto-18|<tuple|metric space|660>>
+    <associate|auto-19|<tuple|open ball|661>>
+    <associate|auto-2|<tuple|14.1|645>>
+    <associate|auto-20|<tuple|<with|mode|<quote|math>|B<rsub|d><around*|(|x,\<varepsilon\>|)>>|661>>
+    <associate|auto-21|<tuple|closed ball|661>>
+    <associate|auto-22|<tuple|<with|mode|<quote|math>|<wide|B<rsub|d><around*|(|x,\<varepsilon\>|)>|\<wide-bar\>>>|661>>
+    <associate|auto-23|<tuple|equivalent pseudo metrics|663>>
+    <associate|auto-24|<tuple|isometry|663>>
+    <associate|auto-25|<tuple|bounded set|665>>
+    <associate|auto-26|<tuple|diameter of a bounded set|665>>
+    <associate|auto-27|<tuple|<with|mode|<quote|math>|diam<around*|(|A|)>>|665>>
+    <associate|auto-28|<tuple|14.3|667>>
+    <associate|auto-29|<tuple|pseudo normed space|667>>
+    <associate|auto-3|<tuple|interior|648>>
+    <associate|auto-30|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>||\<\|\|\>>>|667>>
+    <associate|auto-4|<tuple|<with|mode|<quote|math>|A<rsup|\<circ\>>>|648>>
+    <associate|auto-5|<tuple|14.1.1|648>>
+    <associate|auto-6|<tuple|closed set|648>>
+    <associate|auto-7|<tuple|<with|mode|<quote|math>|\<cal-T\><rsup|\<cal-C\>>>|648>>
+    <associate|auto-8|<tuple|limit point|650>>
+    <associate|auto-9|<tuple|accumulation point|650>>
+    <associate|closed set properties|<tuple|14.19|649>>
+    <associate|eq 14.1.145|<tuple|14.1|650>>
+    <associate|eq 14.10.146|<tuple|14.10|657>>
+    <associate|eq 14.11.146|<tuple|14.11|658>>
+    <associate|eq 14.12.146|<tuple|14.12|659>>
+    <associate|eq 14.13.146|<tuple|14.13|663>>
+    <associate|eq 14.14.146|<tuple|14.14|663>>
+    <associate|eq 14.15.146|<tuple|14.15|664>>
+    <associate|eq 14.16.146|<tuple|14.16|664>>
+    <associate|eq 14.17.146|<tuple|14.17|664>>
+    <associate|eq 14.18.146|<tuple|14.18|666>>
+    <associate|eq 14.19.146|<tuple|14.19|666>>
+    <associate|eq 14.2.145|<tuple|14.2|651>>
+    <associate|eq 14.20.146|<tuple|14.20|667>>
+    <associate|eq 14.21.146|<tuple|14.21|668>>
+    <associate|eq 14.22.146|<tuple|14.22|671>>
+    <associate|eq 14.23.146|<tuple|14.23|672>>
+    <associate|eq 14.24.146|<tuple|14.24|672>>
+    <associate|eq 14.25.146|<tuple|14.25|674>>
+    <associate|eq 14.26.146|<tuple|14.26|675>>
+    <associate|eq 14.27.146|<tuple|14.27|675>>
+    <associate|eq 14.28.147|<tuple|14.28|675>>
+    <associate|eq 14.29.146|<tuple|14.30|676>>
+    <associate|eq 14.29.147|<tuple|14.29|676>>
+    <associate|eq 14.3.146|<tuple|14.3|656>>
+    <associate|eq 14.30.146|<tuple|14.31|676>>
+    <associate|eq 14.31.146|<tuple|14.32|677>>
+    <associate|eq 14.32.146|<tuple|14.33|677>>
+    <associate|eq 14.33.146|<tuple|14.34|677>>
+    <associate|eq 14.35.147|<tuple|14.35|677>>
+    <associate|eq 14.36.147|<tuple|14.36|678>>
+    <associate|eq 14.37.147|<tuple|14.37|?>>
+    <associate|eq 14.38.147|<tuple|14.38|?>>
+    <associate|eq 14.39.147|<tuple|14.39|?>>
+    <associate|eq 14.4.146|<tuple|14.4|656>>
+    <associate|eq 14.5.146|<tuple|14.5|657>>
+    <associate|eq 14.6.146|<tuple|14.6|657>>
+    <associate|eq 14.7.146|<tuple|14.7|657>>
+    <associate|eq 14.8.146|<tuple|14.8|657>>
+    <associate|eq 14.9.146|<tuple|14.9|657>>
+    <associate|metric ball image preimage|<tuple|14.64|664>>
+    <associate|metric bounded set|<tuple|14.66|665>>
+    <associate|metric bounded set inclusion|<tuple|14.68|665>>
+    <associate|metric closed ball|<tuple|14.52|661>>
+    <associate|metric closed balls are closed|<tuple|14.57|662>>
+    <associate|metric closed open balls are bounded|<tuple|14.69|665>>
+    <associate|metric composition of isometries|<tuple|14.63|664>>
+    <associate|metric dense set|<tuple|14.72|667>>
+    <associate|metric equivalent metrics|<tuple|14.59|663>>
+    <associate|metric equivalent metrics condition|<tuple|14.60|663>>
+    <associate|metric isometry|<tuple|14.61|663>>
+    <associate|metric isometry and its inverse|<tuple|14.62|663>>
+    <associate|metric open ball|<tuple|14.51|661>>
+    <associate|metric open ball and intersection|<tuple|14.53|661>>
+    <associate|metric product topology|<tuple|14.70|665>>
+    <associate|metric pseudo metric space|<tuple|14.48|660>>
+    <associate|metric refinement of a ball|<tuple|14.54|661>>
+    <associate|metric space|<tuple|14.49|660>>
+    <associate|metric space metric is positive|<tuple|14.50|660>>
+    <associate|metric subtopology|<tuple|14.58|662>>
+    <associate|metric topology|<tuple|14.55|661>>
+    <associate|metric topology (1)|<tuple|14.56|662>>
+    <associate|metrix isometry and topologies|<tuple|14.65|664>>
+    <associate|normded triangle inequality|<tuple|14.76|667>>
+    <associate|normed absolute value norm differences|<tuple|14.77|668>>
+    <associate|normed ball|<tuple|14.79|669>>
+    <associate|normed basis of T\|\||<tuple|14.85|670>>
+    <associate|normed bounded set|<tuple|14.90|677>>
+    <associate|normed complex numbers|<tuple|14.82|669>>
+    <associate|normed dense set|<tuple|14.93|678>>
+    <associate|normed generalized intervals that are open|<tuple|14.86|671>>
+    <associate|normed norm|<tuple|14.74|667>>
+    <associate|normed norm of zero|<tuple|14.75|667>>
+    <associate|normed open generalized intervals|<tuple|14.87|673>>
+    <associate|normed open set as union of intervals|<tuple|14.88|674>>
+    <associate|normed pseudo norm|<tuple|14.73|667>>
+    <associate|normed real numbers|<tuple|14.83|669>>
+    <associate|normed space set operations|<tuple|14.92|?>>
+    <associate|normed sub space topology|<tuple|14.91|678>>
+    <associate|normed topology|<tuple|14.81|669>>
+    <associate|topology and complement closed sets|<tuple|14.18|649>>
+    <associate|topology basis|<tuple|14.28|651>>
+    <associate|topology basis alternative definition|<tuple|14.31|652>>
+    <associate|topology basis and open sets|<tuple|14.29|?>>
+    <associate|topology basis and super basis|<tuple|14.32|652>>
+    <associate|topology basis generating|<tuple|14.36|653>>
+    <associate|topology basis of a subspace topology|<tuple|14.30|651>>
+    <associate|topology basis of the product topology|<tuple|14.42|658>>
+    <associate|topology basis properties|<tuple|14.35|653>>
+    <associate|topology biggest open subset|<tuple|14.13|648>>
+    <associate|topology box|<tuple|14.38|654>>
+    <associate|topology box topology and bases|<tuple|14.39|655>>
+    <associate|topology closed set|<tuple|14.15|648>>
+    <associate|topology closed set and a basis|<tuple|14.34|652>>
+    <associate|topology closed set and closure|<tuple|14.23|650>>
+    <associate|topology closed set condition|<tuple|14.27|651>>
+    <associate|topology closure alterantive definition|<tuple|14.26|651>>
     <associate|topology closure is union of a set and its limit
-    points|<tuple|14.25|646>>
-    <associate|topology closure of a set|<tuple|14.20|646>>
-    <associate|topology closure of a set alternative|<tuple|14.22|646>>
-    <associate|topology coarse|<tuple|14.3|641>>
-    <associate|topology dense set|<tuple|14.43|655>>
-    <associate|topology dense set alternative|<tuple|14.44|655>>
-    <associate|topology dense set alternative (1)|<tuple|14.45|655>>
-    <associate|topology dense set property|<tuple|14.46|656>>
-    <associate|topology discrete|<tuple|14.4|642>>
-    <associate|topology empty set|<tuple|14.2|641>>
-    <associate|topology finer and basis|<tuple|14.32|648>>
-    <associate|topology finer topology|<tuple|14.5|642>>
-    <associate|topology finite intersection|<tuple|14.6|642>>
-    <associate|topology interior of a set|<tuple|14.11|644>>
-    <associate|topology limit point|<tuple|14.24|646>>
-    <associate|topology open set and interior|<tuple|14.14|644>>
-    <associate|topology open set condition|<tuple|14.7|642>>
-    <associate|topology product|<tuple|14.39|651>>
-    <associate|topology product alternative definition|<tuple|14.40|652>>
+    points|<tuple|14.25|650>>
+    <associate|topology closure of a set|<tuple|14.20|650>>
+    <associate|topology closure of a set alternative|<tuple|14.22|650>>
+    <associate|topology coarse|<tuple|14.3|645>>
+    <associate|topology dense set|<tuple|14.44|659>>
+    <associate|topology dense set alternative|<tuple|14.45|659>>
+    <associate|topology dense set alternative (1)|<tuple|14.46|659>>
+    <associate|topology dense set property|<tuple|14.47|660>>
+    <associate|topology discrete|<tuple|14.4|646>>
+    <associate|topology empty set|<tuple|14.2|645>>
+    <associate|topology finer and basis|<tuple|14.33|652>>
+    <associate|topology finer topology|<tuple|14.5|646>>
+    <associate|topology finite intersection|<tuple|14.6|646>>
+    <associate|topology interior of a set|<tuple|14.11|648>>
+    <associate|topology limit point|<tuple|14.24|650>>
+    <associate|topology open set and interior|<tuple|14.14|648>>
+    <associate|topology open set condition|<tuple|14.7|646>>
+    <associate|topology product|<tuple|14.40|655>>
+    <associate|topology product alternative definition|<tuple|14.41|656>>
     <associate|topology product topology and box topology are the same in the
-    finite case|<tuple|14.42|654>>
-    <associate|topology space|<tuple|14.1|641>>
-    <associate|topology subbasis|<tuple|14.36|649>>
-    <associate|topology subspace topology|<tuple|14.8|643>>
-    <associate|topology subspace topology open subset|<tuple|14.10|643>>
-    <associate|topology subsubspace topology|<tuple|14.9|643>>
+    finite case|<tuple|14.43|658>>
+    <associate|topology space|<tuple|14.1|645>>
+    <associate|topology subbasis|<tuple|14.37|653>>
+    <associate|topology subspace topology|<tuple|14.8|647>>
+    <associate|topology subspace topology open subset|<tuple|14.10|647>>
+    <associate|topology subsubspace topology|<tuple|14.9|647>>
   </collection>
 </references>
 
