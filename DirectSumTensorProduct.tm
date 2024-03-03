@@ -6126,8 +6126,6 @@
     <math|q>-covariant tensors or in short <math|p>-<math|q>-tensors.
   </definition>
 
-  Next we show we can create new tensor by contraction.
-
   \;
 
   \;
@@ -6162,7 +6160,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|11>
-    <associate|page-first|574>
+    <associate|page-first|581>
     <associate|section-nr|9>
     <associate|subsection-nr|0>
   </collection>

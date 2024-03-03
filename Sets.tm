@@ -516,7 +516,7 @@
 
       <item><math|A\<subseteq\>B> if and only if <math|A<big|cap>B=A>
 
-      <item><math|A\\<around*|(|A\\B|)>=B>
+      <item>If <math|B\<subseteq\>A> then <math|A\\<around*|(|A\\B|)>=B>
     </enumerate>
   </theorem>
 
@@ -2542,16 +2542,34 @@
 
   <\theorem>
     <label|function preimage of image (1)>If <math|f:A\<rightarrow\>B> is a
-    function then for <math|C\<subseteq\>A> we have
-    <math|C\<subseteq\>f<rsup|-1><around*|(|f<around*|(|C|)>|)>>.
+    function then for <math|C\<subseteq\>A> we have\ 
+
+    <\enumerate>
+      <item><math|C\<subseteq\>f<rsup|-1><around*|(|f<around*|(|C|)>|)>>
+
+      <item><math|f<around*|(|f<rsup|-1><around*|(|C|)>|)>\<subseteq\>C>
+    </enumerate>
   </theorem>
 
   <\proof>
-    If <math|x\<in\>C\<subseteq\>A> then as <math|A=dom<around*|(|f|)>> there
-    exist a <math|y> such that <math|<around*|(|x,y|)>\<in\>f> so that
-    <math|y\<in\>f<around*|(|C|)>>, which as <math|<around*|(|x,y|)>\<in\>f>
-    proves that <math|x\<in\>f<rsup|-1><around*|(|f<around*|(|C|)>|)>>. Hence
-    we have <math|C\<subseteq\>f<rsup|-1><around*|(|f<around*|(|C|)>|)>>.
+    \ 
+
+    <\enumerate>
+      <item>If <math|x\<in\>C\<subseteq\>A> then as
+      <math|A=dom<around*|(|f|)>> there exist a <math|y> such that
+      <math|<around*|(|x,y|)>\<in\>f> so that <math|y\<in\>f<around*|(|C|)>>,
+      which as <math|<around*|(|x,y|)>\<in\>f> proves that
+      <math|x\<in\>f<rsup|-1><around*|(|f<around*|(|C|)>|)>>. Hence we have
+      <math|C\<subseteq\>f<rsup|-1><around*|(|f<around*|(|C|)>|)>>
+
+      <item>If <math|y\<in\>f<around*|(|f<rsup|-1><around*|(|C|)>|)>> then
+      there exist a <math|x\<in\>f<rsup|-1><around*|(|C|)>> such that
+      <math|<around*|(|x,y|)>\<in\>f>. As
+      <math|x\<in\>f<rsup|-1><around*|(|C|)>> there exist a <math|c\<in\>C>
+      such that <math|<around*|(|x,c|)>\<in\>f>. Hence as
+      <math|<around*|(|x,y|)>,<around*|(|x,c|)>\<in\>f> we must have that
+      <math|y=c\<in\>C> proving that <math|f<around*|(|f<rsup|-1><around*|(|C|)>|)>\<subseteq\>C>.
+    </enumerate>
   </proof>
 
   <\proposition>
@@ -2840,7 +2858,9 @@
 
   <\proposition>
     <label|function range restriction>Let <math|f:A\<rightarrow\>B> be a
-    function then if <math|range<around*|(|f|)>\<subseteq\>C> we have that
+    function then if <math|f<around*|(|A|)>\<equallim\><rsub|<text|[theorem:
+    <reference|partial functions image/preimage
+    properties>]>>range<around*|(|f|)>\<subseteq\>C> we have that
     <math|f:A\<rightarrow\>C> is a function.
   </proposition>
 
@@ -3698,6 +3718,67 @@
   </proof>
 
   <\theorem>
+    <label|function inverse image preimage>If <math|f:A\<rightarrow\>B> is a
+    bijection then for <math|f<rsup|-1>:B\<rightarrow\>A> we have\ 
+
+    <\enumerate>
+      <item>If <math|C\<subseteq\>A> then
+      <math|<around*|(|f<rsup|-1>|)><around*|(|C|)>=f<rsup|-1><around*|(|C|)>>.
+
+      <item>If <math|C\<subseteq\>B> then
+      <math|<around*|(|f<rsup|-1>|)><rsup|-1><around*|(|C|)>=f<around*|(|C|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|y\<in\><around*|(|f<rsup|-1>|)><around*|(|C|)>> then
+      there exist a <math|x\<in\>C> such that
+      <math|<around*|(|x,y|)>\<in\>f<rsup|-1>>, hence
+      <math|<around*|(|y,x|)>\<in\>f> so that
+      <math|y\<in\>f<rsup|-1><around*|(|C|)>> proving\ 
+
+      <\equation*>
+        <around*|(|f<rsup|-1>|)><around*|(|C|)>\<subseteq\>f<rsup|-1><around*|(|C|)>
+      </equation*>
+
+      If <math|x\<in\>f<rsup|-1><around*|(|C|)>> then there exist a
+      <math|y\<in\>C> such that <math|<around*|(|x,y|)>\<in\>f> hence
+      <math|<around*|(|y,x|)>\<in\>f<rsup|-1>> proving that
+      <math|x\<in\><around*|(|f<rsup|-1>|)><around*|(|C|)>>, hence
+      <math|f<rsup|-1><around*|(|C|)>\<subseteq\><around*|(|f<rsup|-1>|)><around*|(|C|)>>.
+      Combining this with the above gives
+
+      <\equation*>
+        <around*|(|f<rsup|-1>|)><around*|(|C|)>=f<rsup|-1><around*|(|C|)>
+      </equation*>
+
+      <item>Let <math|x\<in\><around*|(|f<rsup|-1>|)><rsup|-1><around*|(|C|)>>
+      then there exist a <math|y\<in\>C> such that
+      <math|<around*|(|x,y|)>\<in\>f<rsup|-1>> hence
+      <math|<around*|(|y,x|)>\<in\>f> so that <math|x\<in\>f<around*|(|C|)>>
+      proving\ 
+
+      <\equation*>
+        <around*|(|f<rsup|-1>|)><rsup|-1><around*|(|C|)>\<subseteq\>f<around*|(|C|)>
+      </equation*>
+
+      If <math|x\<in\>f<around*|(|C|)>> then there exist a <math|y\<in\>C>
+      such that <math|<around*|(|y,x|)>\<in\>f> hence
+      <math|<around*|(|x,y|)>\<in\>f<rsup|-1>> proving that
+      \ <math|x\<in\><around*|(|f<rsup|-1>|)><rsup|-1><around*|(|C|)>>, hence
+      <math|f<around*|(|C|)>\<subseteq\><around*|(|f<rsup|-1>|)><rsup|-1><around*|(|C|)>>.
+      Combining this with the above gives\ 
+
+      <\equation*>
+        <around*|(|f<rsup|-1>|)><rsup|-1><around*|(|C|)>=f<around*|(|C|)>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  <\theorem>
     <label|function bijection f,f-1>If <math|f:A\<rightarrow\>B> is bijective
     then\ 
 
@@ -4523,10 +4604,6 @@
 
       <item>If <math|f:A\<rightarrow\>B> is injective then
       <math|f<rsub|\|C>:C\<rightarrow\>B> is injective
-
-      <item>If <math|f:A\<rightarrow\>B> is bijective and <math|x\<in\>A>
-      then <math|f<rsub|\|A\\<around*|{|a|}>>:A\\<around*|{|a|}>\<rightarrow\>B\\<around*|{|b|}>>
-      where <math|<around*|(|a,b|)>\<in\>f> is a bijection.
     </enumerate>
   </theorem>
 
@@ -4611,44 +4688,6 @@
       then as <math|f<rsub|\|C>\<subseteq\>f> we have
       <math|*<around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>f> which as
       <math|f> is injective proves <math|y=y<rprime|'>>
-
-      <item>Let <math|<around*|(|x,y|)>\<in\>f<rsub|\|A\\<around*|{|a|}>>=f<big|cap><around*|(|<around*|(|A\\<around*|{|a|}>|)>\<times\>B|)>>
-      then <math|<around*|(|x,y|)>\<in\>f> and <math|x\<neq\>a>. Assume that
-      <math|y=b> then <math|<around*|(|x,b|)>\<in\>f> and as
-      <math|<around*|(|a,b|)>\<in\>f> we must have by injectivity of <math|f>
-      that <math|x=a> contradicting <math|x\<neq\>a>, hence we have that
-      <math|y\<in\>B\\<around*|{|b|}>>. So we have that
-      <math|f<rsub|\|A\\<around*|{|a|}>>\<subseteq\><around*|(|A\\<around*|{|a|}>|)>\<times\><around*|(|<around*|(|B\\<around*|{|b|}>|)>|)>>
-      and\ 
-
-      <\equation*>
-        f<rsub|\|A\\<around*|{|a|}>>:A\\<around*|{|a|}>\<rightarrow\>B\\<around*|{|b|}><text|
-        is a function>
-      </equation*>
-
-      If <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>f<rsub|\|A\\<around*|{|a|}>>>
-      then <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>f\<Rightarrowlim\><rsub|f<text|
-      is injective>>x=x<rprime|'>> proving that
-      <math|f<rsub|\|A\\<around*|{|a|}>>> is injective. So\ 
-
-      <\equation*>
-        f<rsub|\|A\\<around*|{|a|}>><text| is injective>
-      </equation*>
-
-      Finally if <math|y\<in\>B\\<around*|{|b|}>> then as
-      <math|f:A\<rightarrow\>B> is a bijection hence surjective, there exist
-      a <math|x\<in\>A> such that <math|<around*|(|x,y|)>\<in\>f>. Assume
-      that <math|x=a> then <math|<around*|(|a,y|)>\<in\>f> which as
-      <math|<around*|(|a,b|)>\<in\>f> gives <math|y=b> contradicting
-      <math|y\<in\>B\\<around*|{|b|}>>. Hence we must have
-      <math|x\<in\>A\\<around*|{|a|}>> so that
-      <math|<around*|(|x,y|)>\<in\>f<big|cap><around*|(|<around*|(|A\\<around*|{|a|}>|)>\<times\>B|)>=f<rsub|\|A\\<around*|{|a|}>>>
-      proving that\ 
-
-      <\equation*>
-        f:A\\<around*|{|a|}>\<rightarrow\>B\\<around*|{|b|}><text| is
-        surjective>
-      </equation*>
     </enumerate>
   </proof>
 
@@ -4752,17 +4791,98 @@
 
   <\theorem>
     <label|function restriction of a function>Let <math|f:A\<rightarrow\>B>
-    and <math|C\<subseteq\>A> a sub-class of <math|A> then
-    <math|f<rsub|\|C>:C\<rightarrow\>B> is a function.
+    be a function and <math|C\<subseteq\>A> a sub-class of <math|A> then\ 
+
+    <\enumerate>
+      <item><math|f<rsub|\|C>:C\<rightarrow\>B> is a function
+
+      <item><math|f<rsub|\|C>:C\<rightarrow\>f<around*|(|C|)>> is a
+      surjective function
+
+      <item>If <math|f:A\<rightarrow\>B> is injective then
+      <math|f<rsub|\|C>:C\<rightarrow\>f<around*|(|C|)>> is a bijection
+    </enumerate>
   </theorem>
 
   <\proof>
-    Using [definition: <reference|function restriction of a graph>] we have
-    that <math|f<rsub|\|C>:C\<rightarrow\>B> is a partial function, as by
-    [theorem: <reference|function restricted function properties>]
-    <math|dom<around*|(|f<rsub|\|C>|)>=C<big|cap>dom<around*|(|f|)>\<equallim\><rsub|f<text|
-    is a function>>C<big|cap>A\<equallim\><rsub|C\<subseteq\>A>C>, it follows
-    that <math|f<rsub|\|C>:C\<rightarrow\>B> is a function.
+    \ 
+
+    <\enumerate>
+      <item>Using [definition: <reference|function restriction of a graph>]
+      we have that <math|f<rsub|\|C>:C\<rightarrow\>B> is a partial function,
+      as by [theorem: <reference|function restricted function properties>]
+      <math|dom<around*|(|f<rsub|\|C>|)>=C<big|cap>dom<around*|(|f|)>\<equallim\><rsub|f<text|
+      is a function>>C<big|cap>A\<equallim\><rsub|C\<subseteq\>A>C>, it
+      follows that <math|f<rsub|\|C>:C\<rightarrow\>B> is a function.
+
+      <item>Using [theorem: <reference|function range restriction>] we have
+      that <math|f<rsub|\|C>:C\<rightarrow\>f<around*|(|C|)>> is a function.
+      Further if <math|y\<in\>f<around*|(|C|)>> then there exist a
+      <math|x\<in\>C> such that <math|<around*|(|x,y|)>\<in\>f>. As
+      <math|x\<in\>C> we have that <math|<around*|(|x,y|)>\<in\>f<big|cap><around*|(|C\<times\>B|)>=f<rsub|\|C>>.
+      Hence <math|f:C\<rightarrow\>f<around*|(|C|)>> is a surjective
+      function.
+
+      <item>Let <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>f<rsub|\|C>>
+      then as <math|f<rsub|\|C>\<subseteq\>f> we have
+      <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>f> so that
+      <math|x=x<rprime|'>> proving that <math|f<rsub|\|C>:C\<rightarrow\>f<around*|(|C|)>>
+      is injective. As by (2) <math|f<rsub|\|C>:C\<rightarrow\>f<around*|(|C|)>>
+      is surjective it follows that
+
+      <\equation*>
+        f<rsub|\|C>:C\<rightarrow\>f<around*|(|C|)><text| is a bijection>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|function bijection removing element>Let <math|f:A\<rightarrow\>B>
+    be a bijection then f <math|a\<in\>A> then
+    <math|f<rsub|\|A\\<around*|{|a|}>>:A\\<around*|{|a|}>\<rightarrow\>B\\<around*|{|b|}>>
+    is a bijection [where <math|<around*|(|a,b|)>\<in\>f>] or in other words
+    <math|f<rsub|\|A\\<around*|{|a|}>>:A\\<around*|{|a|}>\<rightarrow\>B\\f<around*|(|a|)>>
+    is a bijection.
+  </theorem>
+
+  <\proof>
+    \ Let <math|<around*|(|x,y|)>\<in\>f<rsub|\|A\\<around*|{|a|}>>=f<big|cap><around*|(|<around*|(|A\\<around*|{|a|}>|)>\<times\>B|)>>
+    then <math|<around*|(|x,y|)>\<in\>f> and <math|x\<neq\>a>. Assume that
+    <math|y=b> then <math|<around*|(|x,b|)>\<in\>f> and as
+    <math|<around*|(|a,b|)>\<in\>f> we must have by injectivity of <math|f>
+    that <math|x=a> contradicting <math|x\<neq\>a>, hence we have that
+    <math|y\<in\>B\\<around*|{|b|}>>. So we have that
+    <math|f<rsub|\|A\\<around*|{|a|}>>\<subseteq\><around*|(|A\\<around*|{|a|}>|)>\<times\><around*|(|<around*|(|B\\<around*|{|b|}>|)>|)>>
+    and\ 
+
+    <\equation*>
+      f<rsub|\|A\\<around*|{|a|}>>:A\\<around*|{|a|}>\<rightarrow\>B\\<around*|{|b|}><text|
+      is a function>
+    </equation*>
+
+    If <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>f<rsub|\|A\\<around*|{|a|}>>>
+    then <math|<around*|(|x,y|)>,<around*|(|x<rprime|'>,y|)>\<in\>f\<Rightarrowlim\><rsub|f<text|
+    is injective>>x=x<rprime|'>> proving that
+    <math|f<rsub|\|A\\<around*|{|a|}>>> is injective. So\ 
+
+    <\equation*>
+      f<rsub|\|A\\<around*|{|a|}>><text| is injective>
+    </equation*>
+
+    Finally if <math|y\<in\>B\\<around*|{|b|}>> then as
+    <math|f:A\<rightarrow\>B> is a bijection hence surjective, there exist a
+    <math|x\<in\>A> such that <math|<around*|(|x,y|)>\<in\>f>. Assume that
+    <math|x=a> then <math|<around*|(|a,y|)>\<in\>f> which as
+    <math|<around*|(|a,b|)>\<in\>f> gives <math|y=b> contradicting
+    <math|y\<in\>B\\<around*|{|b|}>>. Hence we must have
+    <math|x\<in\>A\\<around*|{|a|}>> so that
+    <math|<around*|(|x,y|)>\<in\>f<big|cap><around*|(|<around*|(|A\\<around*|{|a|}>|)>\<times\>B|)>=f<rsub|\|A\\<around*|{|a|}>>>
+    proving that\ 
+
+    <\equation*>
+      f:A\\<around*|{|a|}>\<rightarrow\>B\\<around*|{|b|}><text| is
+      surjective>
+    </equation*>
   </proof>
 
   The following theorem will be used for manifolds later
@@ -14175,59 +14295,61 @@
     <associate|equivalence relation partition|<tuple|3.6|?>>
     <associate|equivalence relation partition alternative|<tuple|3.8|?>>
     <associate|equivalence relation subsets|<tuple|3.20|?>>
-    <associate|family|<tuple|2.97|?>>
-    <associate|family and function composition|<tuple|2.106|?>>
-    <associate|family de Morgan|<tuple|2.127|?>>
-    <associate|family definition (2)|<tuple|2.103|?>>
-    <associate|family definition (3)|<tuple|2.104|?>>
-    <associate|family distributivity|<tuple|2.125|?>>
-    <associate|family empty family|<tuple|2.100|?>>
-    <associate|family empty family condition|<tuple|2.101|?>>
-    <associate|family image and preimage|<tuple|2.131|?>>
-    <associate|family index set is a product|<tuple|2.105|?>>
-    <associate|family intersection (2)|<tuple|2.118|?>>
-    <associate|family intersection is a set|<tuple|2.119|?>>
-    <associate|family intersection(1)|<tuple|2.117|?>>
-    <associate|family product and index transformation|<tuple|2.140|?>>
-    <associate|family properties (1)|<tuple|2.122|?>>
-    <associate|family properties (2)|<tuple|2.123|?>>
-    <associate|family properties (3)|<tuple|2.128|?>>
-    <associate|family range|<tuple|2.107|?>>
-    <associate|family range (1)|<tuple|2.108|?>>
-    <associate|family set|<tuple|2.109|?>>
-    <associate|family trivial|<tuple|2.120|?>>
-    <associate|family union (1)|<tuple|2.110|?>>
-    <associate|family union (2)|<tuple|2.113|?>>
-    <associate|family union condition set|<tuple|2.115|?>>
-    <associate|family union intersection and empty set|<tuple|2.129|?>>
-    <associate|family union intersection and inclusion|<tuple|2.124|?>>
-    <associate|family union of a empty set|<tuple|2.116|?>>
-    <associate|family union of family of families|<tuple|2.130|?>>
-    <associate|family union of family set and surjections|<tuple|2.114|?>>
-    <associate|family union of union of two families|<tuple|2.126|?>>
-    <associate|family union{A,B}|<tuple|2.121|?>>
-    <associate|family {x}xeA|<tuple|2.102|?>>
+    <associate|family|<tuple|2.99|?>>
+    <associate|family and function composition|<tuple|2.108|?>>
+    <associate|family de Morgan|<tuple|2.129|?>>
+    <associate|family definition (2)|<tuple|2.105|?>>
+    <associate|family definition (3)|<tuple|2.106|?>>
+    <associate|family distributivity|<tuple|2.127|?>>
+    <associate|family empty family|<tuple|2.102|?>>
+    <associate|family empty family condition|<tuple|2.103|?>>
+    <associate|family image and preimage|<tuple|2.133|?>>
+    <associate|family index set is a product|<tuple|2.107|?>>
+    <associate|family intersection (2)|<tuple|2.120|?>>
+    <associate|family intersection is a set|<tuple|2.121|?>>
+    <associate|family intersection(1)|<tuple|2.119|?>>
+    <associate|family product and index transformation|<tuple|2.142|?>>
+    <associate|family properties (1)|<tuple|2.124|?>>
+    <associate|family properties (2)|<tuple|2.125|?>>
+    <associate|family properties (3)|<tuple|2.130|?>>
+    <associate|family range|<tuple|2.109|?>>
+    <associate|family range (1)|<tuple|2.110|?>>
+    <associate|family set|<tuple|2.111|?>>
+    <associate|family trivial|<tuple|2.122|?>>
+    <associate|family union (1)|<tuple|2.112|?>>
+    <associate|family union (2)|<tuple|2.115|?>>
+    <associate|family union condition set|<tuple|2.117|?>>
+    <associate|family union intersection and empty set|<tuple|2.131|?>>
+    <associate|family union intersection and inclusion|<tuple|2.126|?>>
+    <associate|family union of a empty set|<tuple|2.118|?>>
+    <associate|family union of family of families|<tuple|2.132|?>>
+    <associate|family union of family set and surjections|<tuple|2.116|?>>
+    <associate|family union of union of two families|<tuple|2.128|?>>
+    <associate|family union{A,B}|<tuple|2.123|?>>
+    <associate|family {x}xeA|<tuple|2.104|?>>
     <associate|function|<tuple|2.24|?>>
     <associate|function A^empty is empty|<tuple|2.32|?>>
     <associate|function B^A|<tuple|2.30|?>>
     <associate|function B^A and inclusion|<tuple|2.34|?>>
-    <associate|function P(A)=2^A|<tuple|2.76|?>>
+    <associate|function P(A)=2^A|<tuple|2.77|?>>
     <associate|function alternative for composition|<tuple|2.42|?>>
-    <associate|function and power|<tuple|2.75|?>>
+    <associate|function and power|<tuple|2.76|?>>
     <associate|function between {0,1} and {A,B}|<tuple|2.27|?>>
-    <associate|function bijection and inverse|<tuple|2.71|?>>
-    <associate|function bijection condition (2)|<tuple|2.70|?>>
-    <associate|function bijection f,f-1|<tuple|2.68|?>>
+    <associate|function bijection and inverse|<tuple|2.72|?>>
+    <associate|function bijection condition (2)|<tuple|2.71|?>>
+    <associate|function bijection f,f-1|<tuple|2.69|?>>
     <associate|function bijection has a inverse|<tuple|2.67|?>>
+    <associate|function bijection removing element|<tuple|2.89|?>>
+    <associate|function bijection restriction|<tuple|2.89|?>>
     <associate|function characteristics function|<tuple|2.46|?>>
-    <associate|function combining bijections|<tuple|2.80|?>>
-    <associate|function combining functions (1)|<tuple|2.78|?>>
-    <associate|function combining functions (2)|<tuple|2.79|?>>
-    <associate|function composition and restriction|<tuple|2.86|?>>
+    <associate|function combining bijections|<tuple|2.81|?>>
+    <associate|function combining functions (1)|<tuple|2.79|?>>
+    <associate|function combining functions (2)|<tuple|2.80|?>>
+    <associate|function composition and restriction|<tuple|2.87|?>>
     <associate|function composition injectivity, surjectivity and
-    bijectivity|<tuple|2.73|?>>
+    bijectivity|<tuple|2.74|?>>
     <associate|function composition injectivity, surjectivity and bijectivity
-    (1)|<tuple|2.74|?>>
+    (1)|<tuple|2.75|?>>
     <associate|function composition of Id function|<tuple|2.48|?>>
     <associate|function composition of functions is a
     fucntion|<tuple|2.28|?>>
@@ -14238,35 +14360,36 @@
     <associate|function equality (1)|<tuple|2.38|?>>
     <associate|function equality (2)|<tuple|2.41|?>>
     <associate|function extend target|<tuple|2.33|?>>
-    <associate|function extending funtion domain|<tuple|2.81|?>>
+    <associate|function extending funtion domain|<tuple|2.82|?>>
     <associate|function f(x)|<tuple|2.39|?>>
-    <associate|function function and intersection and union|<tuple|2.90|?>>
+    <associate|function function and intersection and union|<tuple|2.92|?>>
     <associate|function identity function|<tuple|2.47|?>>
     <associate|function identity map is a bijection|<tuple|2.64|?>>
     <associate|function image preimage|<tuple|2.49|?>>
     <associate|function image preimage alternative|<tuple|2.43|?>>
     <associate|function inclusion function|<tuple|2.53|?>>
-    <associate|function indexed set|<tuple|2.94|?>>
-    <associate|function indexed set example|<tuple|2.96|?>>
-    <associate|function indexed set unique|<tuple|2.95|?>>
+    <associate|function indexed set|<tuple|2.96|?>>
+    <associate|function indexed set example|<tuple|2.98|?>>
+    <associate|function indexed set unique|<tuple|2.97|?>>
     <associate|function injection condition|<tuple|2.60|?>>
     <associate|function injective inverse is a function|<tuple|2.59|?>>
     <associate|function injectivity to bijection|<tuple|2.66|?>>
     <associate|function injectivity, surjectivity|<tuple|2.52|?>>
-    <associate|function inverse and restriction|<tuple|2.85|?>>
-    <associate|function inverse function and f(x)|<tuple|2.69|?>>
-    <associate|function inverse of a bijection is unique|<tuple|2.72|?>>
+    <associate|function inverse and restriction|<tuple|2.86|?>>
+    <associate|function inverse function and f(x)|<tuple|2.70|?>>
+    <associate|function inverse image preimage|<tuple|2.68|?>>
+    <associate|function inverse of a bijection is unique|<tuple|2.73|?>>
     <associate|function power of intersection|<tuple|2.36|?>>
     <associate|function preimage of image|<tuple|2.55|?>>
     <associate|function preimage of image (1)|<tuple|2.25|?>>
-    <associate|function properties (1)|<tuple|2.89|?>>
+    <associate|function properties (1)|<tuple|2.91|?>>
     <associate|function range restriction|<tuple|2.37|?>>
-    <associate|function restricted function properties|<tuple|2.83|?>>
-    <associate|function restriction and domain|<tuple|2.84|?>>
-    <associate|function restriction of a function|<tuple|2.87|?>>
-    <associate|function restriction of a graph|<tuple|2.77|?>>
-    <associate|function simple definition|<tuple|2.91|?>>
-    <associate|function simple definition notation|<tuple|2.92|?>>
+    <associate|function restricted function properties|<tuple|2.84|?>>
+    <associate|function restriction and domain|<tuple|2.85|?>>
+    <associate|function restriction of a function|<tuple|2.88|?>>
+    <associate|function restriction of a graph|<tuple|2.78|?>>
+    <associate|function simple definition|<tuple|2.93|?>>
+    <associate|function simple definition notation|<tuple|2.94|?>>
     <associate|function surjection and construction of inverse
     function|<tuple|3.100|?>>
     <associate|function surjection condition|<tuple|2.51|?>>
@@ -14368,19 +14491,19 @@
     <associate|partial functions image/preimage properties|<tuple|2.17|?>>
     <associate|parttial function graph|<tuple|2.6|?>>
     <associate|power set|<tuple|1.63|?>>
-    <associate|product|<tuple|2.132|?>>
-    <associate|product and intersection|<tuple|2.137|?>>
-    <associate|product and power|<tuple|2.139|?>>
-    <associate|product extension|<tuple|2.142|?>>
-    <associate|product inclusion|<tuple|2.136|?>>
-    <associate|product intersection of a product|<tuple|2.138|?>>
-    <associate|product of a empty set is empty|<tuple|2.133|?>>
-    <associate|product of family with one element|<tuple|2.134|?>>
-    <associate|product of family with two classes|<tuple|2.135|?>>
+    <associate|product|<tuple|2.134|?>>
+    <associate|product and intersection|<tuple|2.139|?>>
+    <associate|product and power|<tuple|2.141|?>>
+    <associate|product extension|<tuple|2.144|?>>
+    <associate|product inclusion|<tuple|2.138|?>>
+    <associate|product intersection of a product|<tuple|2.140|?>>
+    <associate|product of a empty set is empty|<tuple|2.135|?>>
+    <associate|product of family with one element|<tuple|2.136|?>>
+    <associate|product of family with two classes|<tuple|2.137|?>>
     <associate|product product is not empty|<tuple|3.104|?>>
-    <associate|product projection function|<tuple|2.143|?>>
+    <associate|product projection function|<tuple|2.145|?>>
     <associate|product projection is surjective|<tuple|3.103|?>>
-    <associate|product sub-product|<tuple|2.141|?>>
+    <associate|product sub-product|<tuple|2.143|?>>
     <associate|relation|<tuple|3.1|?>>
     <associate|relation properties|<tuple|3.4|?>>
     <associate|relation trivial|<tuple|3.3|?>>
