@@ -3408,6 +3408,30 @@
     </equation*>
   </definition>
 
+  Using the above definition we have the equivalent version of [theorem:
+  <reference|metric topology (1)>].
+
+  <\theorem>
+    <label|normed space and open sets>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
+    be a psuedo normed space then we have\ 
+
+    <\equation*>
+      U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>><rsub|><text|
+      >\<Leftrightarrow\><text| >\<forall\>x\<in\>U<text|
+      >\<exists\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text| such that
+      >x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,\<varepsilon\>|)>\<subseteq\>U
+    </equation*>
+  </theorem>
+
+  <\proof>
+    This follows from [theorem: <reference|metric topology (1)>] and the fact
+    that <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>=\<cal-T\><rsub|d<rsub|<around*|\<\|\|\>||\<\|\|\>>>>>
+    and\ 
+
+    <math|><math|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,\<varepsilon\>|)>=B<rsub|d+<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,\<varepsilon\>|)>>.
+  </proof>
+
   <\example>
     <label|normed complex numbers><math|<around*|\<langle\>|\<bbb-C\>,\<\|\|\>|\<rangle\>>>
     is a complex \ normed space where <math|<around*|\|||\|>> is the complex
@@ -5851,7 +5875,7 @@
   <\corollary>
     <label|continuity scalar product (1)>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
-    a normed space over the field <math|\<bbb-K\>> then we have:
+    a pseudo normed space over the field <math|\<bbb-K\>> then we have:
 
     <\enumerate>
       <item><math|\<forall\>\<alpha\>\<in\>\<bbb-K\>> the function
@@ -5869,6 +5893,272 @@
   <\proof>
     \ This follows from [theorem: <reference|continuity function partial
     application>] and [theorem: <reference|continuity scalar product>].
+  </proof>
+
+  <\theorem>
+    <label|continuity of sum of continuous functions>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be pseudo normed spaces over the field <math|\<bbb-K\>> [where
+    <math|\<bbb-K\>=\<bbb-C\>> or <math|\<bbb-R\>>] then we have:
+
+    <\enumerate>
+      <item>If <math|f:X\<rightarrow\>Y>, <math|g:X\<rightarrow\>Y> are
+      continuous functions at <math|x\<in\>X> then\ 
+
+      <\equation*>
+        f+g:X\<rightarrow\>Y<text| where ><around*|(|f+g|)><around*|(|x|)>=f<around*|(|x|)>+g<around*|(|x|)>
+      </equation*>
+
+      is continous at <math|x>. So if <math|f,g> are continuous then
+      <math|f+g> is continuous.
+
+      <item>If <math|\<alpha\>\<in\>\<bbb-K\>> and <math|f:X\<rightarrow\>Y>
+      is a continuous function at <math|x> then\ 
+
+      <\equation*>
+        \<alpha\>\<cdot\>f:X\<rightarrow\>Y<text| where
+        ><around*|(|\<alpha\>\<cdot\>f|)><around*|(|x|)>=\<alpha\>\<cdot\>f<around*|(|x|)>
+      </equation*>
+
+      is continuous at <math|x>. So if <math|f> are continuous then
+      <math|\<alpha\>\<cdot\>f> is continuous.
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ We use the <math|\<varepsilon\>>-<math|\<delta\>>-definition of
+    continuity [see theorem: <reference|continuity in a normed space>] to
+    proof this theorem. So take <math|x\<in\>X> and
+    <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>.
+
+    <\enumerate>
+      <item>As <math|f,g> are continuous at <math|x> there exists
+      <math|\<delta\><rsub|1>,\<delta\><rsub|2>\<in\>\<bbb-R\><rsup|+>> such
+      that <math|\<forall\>x<rprime|'>\<in\>X> such that
+      <math|<around*|\<\|\|\>|x-x<rprime|'>|\<\|\|\>><rsub|X>\<less\>\<delta\><rsub|1>>
+      we have <math|<around*|\<\|\|\>|f<around*|(|x|)>-f<around*|(|x<rprime|'>|)>|\<\|\|\>><rsub|Y>\<less\><frac|\<varepsilon\>|2>>
+      and <math|\<forall\>x<rprime|'>\<in\>X> such that
+      <math|<around*|\<\|\|\>|x-x<rprime|'>|\<\|\|\>><rsub|X>\<less\>\<delta\><rsub|2>>
+      we have <math|<around*|\<\|\|\>|g<around*|(|x|)>-g<around*|(|x<rprime|'>|)>|\<\|\|\>><rsub|Y>\<less\><frac|\<varepsilon\>|2>>.
+      So if <math|<around*|\<\|\|\>|x-x<rprime|'>|\<\|\|\>><rsub|X>\<less\>\<delta\>>
+      then
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|<around*|(|f+g|)><around*|(|x|)>-<around*|(|f+g|)><around*|(|x<rprime|'>|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|<around*|\<\|\|\>|f<around*|(|x|)>+g<around*|(|x|)>-f<around*|(|x<rprime|'>|)>-g<around*|(|x<rprime|'>|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|f<around*|(|x|)>-f<around*|(|x<rprime|'>|)>|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|g<around*|(|x|)>-g<around*|(|x<rprime|'>|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|\<less\>>|<cell|<frac|\<varepsilon\>|2>+<frac|\<varepsilon\>|2>>>|<row|<cell|>|<cell|=>|<cell|\<varepsilon\>>>>>
+      </eqnarray*>
+
+      proving that <math|f+g> is continuous at <math|x>.
+
+      <item>As <math|f> is continuous at <math|x> there exist a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that if
+      <math|<around*|\<\|\|\>|x-x<rprime|'>|\<\|\|\>><rsub|X>\<less\>\<delta\>>
+      then\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|f<around*|(|x|)>-f<around*|(|x<rprime|'>|)>|\<\|\|\>><rsub|Y>\<leqslant\>\<varepsilon\>/<around*|(|<around*|\||\<alpha\>|\|>+1|)>
+      </equation*>
+
+      then we have\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|<around*|(|\<alpha\>\<cdot\>f|)><around*|(|x|)>-<around*|(|\<alpha\>\<cdot\>f|)><around*|(|x<rprime|'>|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|\<alpha\>\<cdot\><around*|(|f<around*|(|x|)>-f<around*|(|x<rprime|'>|)>|)>|\<\|\|\>><rsub|Y>=<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|f<around*|(|x|)>-f<around*|(|x<rprime|'>|)>|\<\|\|\>><rsub|Y>\<less\><around*|(|\<alpha\>\<cdot\>\<varepsilon\>|)>/<around*|(|<around*|\||\<alpha\>|\|>+1|)>\<less\>\<varepsilon\>
+      </equation*>
+
+      proving that <math|\<alpha\>\<cdot\>f> is continuous at <math|x>.
+    </enumerate>
+  </proof>
+
+  Using induction we can extend the above to a finite family of functions.
+
+  <\theorem>
+    <label|continuity of finite sum of continuous functions>Let
+    <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be pseudo normed spaces over <math|\<bbb-K\>> [where
+    <math|\<bbb-K\>=\<bbb-C\>> or <math|\<bbb-K\>=\<bbb-R\>>] and
+    <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-C\><around*|(|X,Y|)>>
+    a family of continuous functions then\ 
+
+    <\equation*>
+      <big|sum><rsub|i=1><rsup|n>f<rsub|i>:X\<rightarrow\>Y <text|defined by
+      ><around*|(|<big|sum><rsub|i=1><rsup|n>f<rsub|i>|)><around*|(|x|)>=<big|sum><rsub|i=1><rsup|n>f<rsub|i><around*|(|x|)>
+    </equation*>
+
+    is continuous.
+  </theorem>
+
+  <\proof>
+    Let\ 
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\>\|If <around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><text|
+      then ><big|sum><rsub|i=1><rsup|n>f<rsub|i>\<in\>\<cal-C\><around*|(|X,Y|)>|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|1\<in\>S>>If <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1|}>>\<subseteq\>\<cal-C\><around*|(|X,Y|)>>
+      then <math|\<forall\>x\<in\>X> we have
+      <math|<around*|(|<big|sum><rsub|i=1><rsup|1>f<rsub|i>|)><around*|(|x|)>=<big|sum><rsub|i=1><rsup|1>f<rsub|i><around*|(|x|)>=f<rsub|1><around*|(|x|)>>,
+      proving that <math|<big|sum><rsub|i=1><rsup|1>f<rsub|i>=f<rsub|1>\<in\>\<cal-C\><around*|(|X,Y|)>>.
+      Hence\ 
+
+      <\equation*>
+        1\<in\>S
+      </equation*>
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+      <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>\<cal-C\><around*|(|X,Y|)>>
+      then we have <math|\<forall\>x\<in\>X> that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|<big|sum><rsub|i=1><rsup|n+1>f<rsub|i>|)><around*|(|x|)>>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n+1>f<rsub|i><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|n>f<rsub|i><around*|(|x|)>|)>+f<rsub|n+1><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|n>f<rsub|i>|)><around*|(|x|)>+f<rsub|n+1><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|<big|sum><rsub|i=1><rsup|n>f<rsub|i>|)>+f<rsub|n+1>|)><around*|(|x|)>>>>>
+      </eqnarray*>
+
+      proving that <math|><math|<big|sum><rsub|i=1><rsup|n+1>f<rsub|i>=<around*|(|<big|sum><rsub|i=1><rsup|n>f<rsub|i>|)>+f<rsub|n+1>>.
+      As <math|n\<in\>S> <math|<big|sum><rsub|i=1><rsup|n>f<rsub|i>> is
+      continuous, so by the continuity of <math|f<rsub|n+1>> we have by
+      [theorem: <reference|continuity of sum of continuous functions>] that
+      <math|><math|<big|sum><rsub|i=1><rsup|n+1>f<rsub|i>> is continuous.
+      Hence <math|n+1\<in\>S>.
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|continuity product of continuous functions>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
+    a pseudo normed space over the field <math|\<bbb-K\>> [where
+    <math|\<bbb-K\>=\<bbb-C\>> or <math|\<bbb-K\>=\<bbb-R\>>] and
+    <math|f:X\<rightarrow\>\<bbb-K\>>, <math|g:X\<rightarrow\>\<bbb-K\>>
+    functions continuous at <math|x> then\ 
+
+    <\equation*>
+      f\<cdot\>g:X\<rightarrow\>\<bbb-K\><text| defined by
+      ><around*|(|f\<cdot\>g|)><around*|(|x|)>=f<around*|(|x|)>\<cdot\>g<around*|(|x|)>
+    </equation*>
+
+    is continuous at <math|x>. Hence if <math|f,g> are continuous functions
+    then <math|f\<cdot\>g> is a continuous function.
+  </theorem>
+
+  <\proof>
+    We use the <math|\<varepsilon\>>-<math|\<delta\>>-definition of
+    continuity [see theorem: <reference|continuity in a normed space>] to
+    proof this theorem. So take <math|x\<in\>X> and
+    <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. Then as <math|f> is
+    continuous at <math|x> there exist a <math|\<delta\><rsub|1>\<in\>\<bbb-R\><rsup|+>>
+    such that <math|\<forall\>x<rprime|'>\<in\>X> with
+    <math|<around*|\<\|\|\>|x-x<rprime|'>|\<\|\|\>>\<less\>\<varepsilon\>> we
+    have <math|<around*|\||f<around*|(|x|)>-f<around*|(|x<rprime|'>|)>|\|>\<less\>1>.
+    Then
+
+    <\equation>
+      <label|eq 14.47.148><around*|\||f<around*|(|x<rprime|'>|)>|\|>\<leqslant\><around*|\||f<around*|(|x<rprime|'>|)>-f<around*|(|x|)>+f<around*|(|x|)>|\|>\<leqslant\><around*|\||f<around*|(|x|)>|\|>+<around*|\||f<around*|(|x|)>-f<around*|(|x<rprime|'>|)>|\|>\<less\><around*|\||f<around*|(|x|)>|\|>+1
+    </equation>
+
+    Using continuity again there exist a <math|\<delta\><rsub|2>\<in\>\<bbb-R\><rsup|+>>
+    such that <math|\<forall\>x\<in\>X> with
+    <math|<around*|\<\|\|\>|x-x<rprime|'>|\<\|\|\>>\<less\>\<delta\><rsub|2>>
+    we have\ 
+
+    \;
+
+    <\equation>
+      <label|eq 14.48.148><around*|\||f<around*|(|x|)>-f<around*|(|x<rprime|'>|)>|\|>\<less\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\||g<around*|(|x|)>|\|>|)>>
+    </equation>
+
+    As <math|g> is also continuous at <math|x> there exists a
+    <math|\<delta\><rsub|2>\<in\>\<bbb-R\><rsup|+>> such that
+    <math|\<forall\>x<rprime|'>\<in\>X> with
+    <math|<around*|\<\|\|\>|x-x<rprime|'>|\<\|\|\>>\<less\>\<delta\><rsub|3>>
+
+    <\equation>
+      <label|eq 14.49.148><around*|\||g<around*|(|x|)>-g<around*|(|x<rprime|'>|)>|\|>\<less\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\||f<around*|(|x|)>|\|>|)>>
+    </equation>
+
+    Take <math|\<delta\>=min<around*|(|\<delta\><rsub|1>,\<delta\><rsub|2>,\<delta\><rsub|3>|)>\<in\>\<bbb-R\><rsup|+>>
+    then\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\||<around*|(|f\<cdot\>g|)><around*|(|x|)>-f<around*|(|x<rprime|'>|)>\<cdot\>g<around*|(|x<rprime|'>|)>|\|>>|<cell|=>|<cell|<around*|\||f<around*|(|x|)>\<cdot\>g<around*|(|x|)>-f<around*|(|x<rprime|'>|)>\<cdot\>g<around*|(|x<rprime|'>|)>|\|>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||f<around*|(|x|)>\<cdot\>g<around*|(|x|)>-f<around*|(|x<rprime|'>|)>\<cdot\>g<around*|(|x|)>+f<around*|(|x<rprime|'>|)>\<cdot\>g<around*|(|x|)>-f<around*|(|x<rprime|'>|)>\<cdot\>g<around*|(|x<rprime|'>|)>|\|>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\||f<around*|(|x|)>\<cdot\>g<around*|(|x|)>-f<around*|(|x<rprime|'>|)>\<cdot\>g<around*|(|x|)>|\|>+<around*|\||f<around*|(|x<rprime|'>|)>\<cdot\>g<around*|(|x|)>-f<around*|(|x<rprime|'>|)>\<cdot\>g<around*|(|x<rprime|'>|)>|\|>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||<around*|(|f<around*|(|x|)>-f<around*|(|x<rprime|'>|)>|)>\<cdot\>g<around*|(|x|)>|\|>+<around*|\||f<around*|(|x<rprime|'>|)>\<cdot\><around*|(|g<around*|(|x|)>-g<around*|(|x<rprime|'>|)>|)>|\|>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||g<around*|(|x|)>|\|>\<cdot\><around*|\||f<around*|(|x|)>-f<around*|(|x<rprime|'>|)>|\|>+<around*|\||f<around*|(|x<rprime|'>|)>|\|>\<cdot\><around*|\||g<around*|(|x|)>-g<around*|(|x<rprime|'>|)>|\|>>>|<row|<cell|>|<cell|\<less\><rsub|<text|[eq:
+      <reference|eq 14.47.148>]>>>|<cell|<around*|\||g<around*|(|x|)>|\|>\<cdot\><around*|\||f<around*|(|x|)>-f<around*|(|x<rprime|'>|)>|\|>+<around*|(|<around*|\||f<around*|(|x|)>|\|>+1|)>\<cdot\><around*|\||g<around*|(|x|)>-g<around*|(|x<rprime|'>|)>|\|>>>|<row|<cell|>|<cell|\<less\><rsub|<text|[eqs:
+      <reference|eq 14.48.148>,<reference|eq
+      14.49.148>]>>>|<cell|<around*|\||g<around*|(|x|)>|\|>\<cdot\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\||g<around*|(|x|)>|\|>|)>>+<around*|(|<around*|\||f<around*|(|x|)>|\|>+1|)>\<cdot\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\||f<around*|(|x|)>|\|>|)>>>>|<row|<cell|>|<cell|\<less\>>|<cell|<frac|\<varepsilon\>|2>+<frac|\<varepsilon\>|2>>>|<row|<cell|>|<cell|=>|<cell|\<varepsilon\>>>>>
+    </eqnarray*>
+
+    proving that <math|f\<cdot\>g> is continuous at <math|x>.
+  </proof>
+
+  Using mathematical induction we can then prove the following corollary
+
+  <\corollary>
+    <label|continuity power of continuous functions>Let
+    <math|n\<in\>\<bbb-N\><rsub|0>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    a pseudo normed space over the field <math|\<bbb-K\>> [where
+    <math|\<bbb-K\>=\<bbb-C\>> or <math|\<bbb-K\>=\<bbb-R\>>] and
+    <math|f:X\<rightarrow\>\<bbb-K\>> a function continuous at <math|x> then\ 
+
+    <\equation*>
+      f<rsup|n>:X\<rightarrow\>\<bbb-K\><text| defined by
+      >f<rsup|n><around*|(|x|)>=<around*|(|f<around*|(|x|)>|)><rsup|n>
+    </equation*>
+
+    is continuous at <math|x>. So if <math|f> is continuous then
+    <math|f<rsup|n>> is also continuous.
+  </corollary>
+
+  <\proof>
+    Take
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|f<rsup|n><text| is continuous at
+      >x|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|0\<in\>S>>As <math|\<forall\>x\<in\>X>
+      <math|<around*|(|f<rsup|0>|)><around*|(|x|)>=<around*|(|f<around*|(|x|)>|)><rsup|0>=1>
+      we have that <math|f<rsup|0>=\<cal-C\><rsub|1>> which is continuous by
+      [theorem: <reference|continuity constant function>]. Hence
+      <math|0\<in\>S>
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>As
+      <math|\<forall\>x\<in\>X> <math|f<rsup|n+1><around*|(|x|)>=<around*|(|f<around*|(|x|)>|)><rsup|n+1>=<around*|(|f<around*|(|x|)>|)><rsup|n>\<cdot\>f<around*|(|x|)>=<around*|(|f<rsup|n>\<cdot\>f|)><around*|(|x|)>>
+      we have that <math|f<rsup|n+1>=f<rsup|n>\<cdot\>f>. From
+      <math|n\<in\>S> we have that <math|f> is continuous at <math|x> so that
+      by the continuity of <math|f> at <math|x> and [theorem:
+      <reference|continuity product of continuous functions>]
+      <math|f<rsup|n+1>=f<rsup|n>\<cdot\>f> is continuous at <math|x>. Hence
+      <math|n+1\<in\>S>
+    </description>
+  </proof>
+
+  Using the identity function <math|Id<rsub|X>> in the above corollary proves
+  then that the power function itself is continuous.
+
+  <\corollary>
+    <label|continuity of power function>Let <math|n\<in\>\<bbb-N\><rsub|0>>
+    then for <math|\<bbb-K\>=\<bbb-C\>> or <math|\<bbb-K\>=\<bbb-R\>> we have
+    that the function
+
+    <\equation*>
+      \<cdot\><rsup|n>:\<bbb-K\>\<rightarrow\>\<bbb-K\><text| defined by
+      ><around*|(|.<rsup|n>|)><around*|(|x|)>=x<rsup|n>
+    </equation*>
+
+    is continuous.
+  </corollary>
+
+  <\proof>
+    <math|\<forall\>x\<in\>X> we have <math|<around*|(|.<rsup|n>|)><around*|(|x|)>=x<rsup|n>=<around*|(|Id<rsub|X><around*|(|x|)>|)><rsup|n>=<around*|(|Id<rsub|X>|)><rsup|n><around*|(|x|)>>
+    which proves that <math|\<cdot\><rsup|n>=<around*|(|Id<rsub|X>|)><rsup|n>>.
+    So we can apply [theorem: <reference|continuity identity function>] and
+    the previous corollary [corollary: <reference|continuity power of
+    continuous functions>].
   </proof>
 
   <subsection|Uniform and Lipschitz continuity>
@@ -5895,8 +6185,8 @@
     <label|continuity universal continuity implies continuity>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    be topological spaces and <math|f:X\<rightarrow\>Y> is uniform continue
-    on <math|X> then <math|f> is continuous.
+    be pseudo normed spaces and <math|f:X\<rightarrow\>Y> a uniform
+    continuous function then <math|f> is continuous.
   </theorem>
 
   <\proof>
@@ -6361,8 +6651,1277 @@
   </proof>
 
   <\theorem>
-    \;
+    <label|continuity induced topology>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological
+    space. <math|Y> a set and <math|f:X\<rightarrow\>Y> a bijection. Then we
+    have:\ 
+
+    <\enumerate>
+      <item><math|\<cal-T\><rsub|f,\<cal-T\>>=<around*|{|f<around*|(|U|)>\|U\<in\>\<cal-T\>|}>>
+      forms a topology on <math|Y>
+
+      <item><math|f:X\<rightarrow\>Y> is a homeomorphism using the topologies
+      <math|\<cal-T\>> and <math|\<cal-T\><rsub|f,\<cal-T\>>>
+
+      <item>If <math|g:X\<rightarrow\>Y> satisfies <math|f=g\<circ\>h> where
+      <math|h:X\<rightarrow\>X> is a homeomorphism using the topologies
+      <math|\<cal-T\>> and <math|\<cal-T\>> then <math|g> is a homeomorphism
+    </enumerate>
   </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>\ 
+
+      <\enumerate>
+        <item>As <math|f<around*|(|\<varnothing\>|)>=\<varnothing\>> it
+        follows that\ 
+
+        <\equation*>
+          \<varnothing\>\<in\>\<cal-T\><rsub|f,\<cal-T\>>
+        </equation*>
+
+        <item>As <math|f:X\<rightarrow\>Y> is a bijection we have
+        <math|f<around*|(|X|)>=Y> hence\ 
+
+        <\equation*>
+          Y\<in\>\<cal-T\><rsub|f,\<cal-T\>>
+        </equation*>
+
+        <item>If <math|<around*|{|V<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-T\><rsub|f,\<cal-T\>>>
+        then <math|\<forall\>i\<in\>I> there exist a <math|U\<in\>\<cal-T\>>
+        such that <math|f<around*|(|U|)>=V<rsub|i>>, hence by a consequence
+        of the Axiom of Choice [see theorem: <reference|choice function
+        generating>] there exist a <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-T\>>
+        such that <math|\<forall\>i\<in\>I>
+        <math|f<around*|(|U<rsub|i>|)>=V<rsub|i>>. Hence
+
+        <\equation*>
+          <big|cup><rsub|i\<in\>I>V<rsub|i>=<big|cup><rsub|i\<in\>I>f<around*|(|U<rsub|i>|)>\<equallim\><rsub|<text|[theorem:
+          <reference|family image and preimage>]>>f<around*|(|<big|cup><rsub|i\<in\>I>U<rsub|i>|)>
+        </equation*>
+
+        which, as <math|<big|cup><rsub|i\<in\>I>U<rsub|i>>, proves that\ 
+
+        <\equation*>
+          <big|cup><rsub|i\<in\>I>V<rsub|i>\<in\>\<cal-T\><rsub|f,\<cal-T\>>
+        </equation*>
+
+        <item>Let <math|V<rsub|1>,V<rsub|2>\<in\>\<cal-T\><rsub|f,\<cal-T\>>>
+        then <math|\<exists\>U<rsub|1>,U<rsub|2>\<in\>\<cal-T\>> such that
+        <math|V<rsub|1>=f<around*|(|U<rsub|1>|)>>,
+        <math|V<rsub|2>=f<around*|(|U<rsub|2>|)>> then\ 
+
+        <\equation*>
+          V<rsub|1><big|cap>V<rsub|2>=f<around*|(|U<rsub|1>|)><big|cap>f<around*|(|U<rsub|2>|)>\<equallim\><rsub|<text|[theorem:
+          <reference|function function and intersection and
+          union>]>>f<around*|(|U<rsub|1><big|cap>U<rsub|2>|)>
+        </equation*>
+
+        which, as <math|U<rsub|1><big|cap>U<rsub|2>\<in\>\<cal-T\>>, proves
+        that\ 
+
+        <\equation*>
+          V<rsub|1><big|cap>V<rsub|2>\<in\>\<cal-T\><rsub|f,\<cal-T\>>
+        </equation*>
+      </enumerate>
+
+      <item>If <math|U\<in\>\<cal-T\>> then by definition
+      <math|f<around*|(|U|)>\<in\>\<cal-T\><rsub|f,\<cal-T\>>> proving that\ 
+
+      <\equation*>
+        f<text| is open>
+      </equation*>
+
+      Further if <math|V\<in\>\<cal-T\><rsub|f,\<cal-T\>>> then there exist a
+      <math|U\<in\>\<cal-T\>> so that <math|V=f<around*|(|U|)>>, so
+
+      <\equation*>
+        f<rsup|-1><around*|(|V|)>=f<rsup|-1><around*|(|f<around*|(|U|)>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|function preimage of image>]>>U\<in\>\<cal-T\>
+      </equation*>
+
+      proving that\ 
+
+      <\equation*>
+        f<text| is continuous >
+      </equation*>
+
+      Hence as <math|f:X\<rightarrow\>Y> is a bijection we have that\ 
+
+      <\equation*>
+        f:X\<rightarrow\>Y<text| is s homeomorphism>
+      </equation*>
+
+      <item>First as as <math|h:X\<rightarrow\>X> is a homeomorphism we have
+      by [theorem: <reference|continuity inverse of a homeomorphism>] that
+      <math|h<rsup|-1>:X\<rightarrow\>X> is a homeomorphism. Further
+
+      <\equation>
+        <label|eq 14.50.147>g=g\<circ\>Id<rsub|X>=g\<circ\><around*|(|h\<circ\>h<rsup|-1>|)>=<around*|(|g\<circ\>h|)>\<circ\>h<rsup|-1>=f\<circ\>h<rsup|-1><text|
+        is a homeomorphism>
+      </equation>
+
+      so, as <math|f> and <math|h<rsup|-1>> are homeomorphism, we have by
+      [theorem: <reference|continuity homeomorphism composition>] that\ 
+
+      <\equation*>
+        g:X\<rightarrow\>Y<text| is a homeomorphism>
+      </equation*>
+
+      Next if <math|V\<in\>\<cal-T\><rsub|g,\<cal-T\>>> then there exist a
+      <math|U\<in\>\<cal-T\>> such that <math|V=g<around*|(|U|)>>, as\ 
+
+      <\equation>
+        <label|eq 14.51.147>g<around*|(|U|)>\<equallim\><rsub|<text|[theorem:
+        <reference|eq 14.50.147>]>><around*|(|f\<circ\>h<rsup|-1>|)><around*|(|U|)>=f<around*|(|<around*|(|h<rsup|-1>|)><around*|(|U|)>|)>\<in\>\<cal-T\><rsub|f,\<cal-T\>><text|
+        [as >h<rsup|-1><text| is open ><around*|(|h<rsup|-1>|)><around*|(|U|)>\<in\>\<cal-T\><text|]>
+      </equation>
+
+      So\ 
+
+      <\equation>
+        <label|eq 14.52.147>\<cal-T\><rsub|g,\<cal-T\>>\<subseteq\>\<cal-T\><rsub|f,\<cal-T\>>
+      </equation>
+
+      If <math|V\<in\>\<cal-T\><rsub|f,\<cal-T\>>> then there exist a
+      <math|U\<in\>\<cal-T\>> such that <math|V=f<around*|(|U|)>>, as\ 
+
+      <\equation*>
+        f<around*|(|U|)>=<around*|(|g\<circ\>h|)><around*|(|U|)>=g<around*|(|h<around*|(|U|)>|)>\<in\>\<cal-T\><rsub|g,\<cal-T\>><text|
+        [as >h<text| is open >h<around*|(|U|)>\<in\>\<cal-T\><text|]>
+      </equation*>
+
+      Proving that <math|\<cal-T\><rsub|f,\<cal-T\>>\<subseteq\>\<cal-T\><rsub|g,\<cal-T\>>>,
+      combined this with [eq: <reference|eq 14.52.147>] gives finally
+
+      <\equation*>
+        \<cal-T\><rsub|f,\<cal-T\>>=\<cal-T\><rsub|g,\<cal-T\>>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|continuity inverse induced topology>Let <math|X> be a set,
+    <math|<around*|\<langle\>|Y,\<cal-T\>|\<rangle\>>> a topological space
+    and <math|f:X\<rightarrow\>Y> a function then\ 
+
+    <\equation*>
+      \<cal-T\><rsup|-1><rsub|f,\<cal-T\>>=<around*|{|f<rsup|-1><around*|(|U|)>\|U\<in\>\<cal-T\>|}><text|
+      is a topology on >X
+    </equation*>
+
+    This topology is called the <with|font-series|bold|inverse induced
+    topology of <math|\<cal-T\>> by <math|f>>. Further
+    <math|f:X\<rightarrow\>Y> is continuous using the topologies
+    <math|><math|\<cal-T\><rsup|-1><rsub|f,\<cal-T\>>> and <math|\<cal-T\>>.
+  </theorem>
+
+  <\proof>
+    First we have\ 
+
+    <\enumerate>
+      <item>As <math|\<varnothing\>=f<rsup|-1><around*|(|\<varnothing\>|)>>
+      we have\ 
+
+      <\equation*>
+        \<varnothing\>\<in\>\<cal-T\><rsup|-1><rsub|f,\<cal-T\>>
+      </equation*>
+
+      <item>As <math|X=f<rsup|-1><around*|(|Y|)>> we have\ 
+
+      <\equation*>
+        X\<in\>\<cal-T\><rsup|-1><rsub|f,\<cal-T\>>
+      </equation*>
+
+      Let <math|<around*|{|V<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-T\><rsup|-1><rsub|f,\<cal-T\>>>
+      then <math|\<forall\>i\<in\>I> there exist a <math|U\<in\>\<cal-T\>>
+      such that <math|f<rsup|-1><around*|(|U|)>=V<rsub|i>>, hence by a
+      consequence of the Axiom of Choice [see theorem: <reference|choice
+      function generating>] there exist a
+      <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-T\>> such
+      that <math|\<forall\>i\<in\>I> <math|f<rsup|-1><around*|(|U<rsub|i>|)>=V<rsub|i>>.
+      Hence\ 
+
+      <\equation*>
+        <big|cup><rsub|i\<in\>I>V<rsub|i>=<big|cup><rsub|i\<in\>I>f<rsup|-1><around*|(|U<rsub|i>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|family image and preimage>]>>f<rsup|-1><around*|(|<big|cup><rsub|i\<in\>I>U<rsub|i>|)>\<in\>\<cal-T\><rsup|-1><rsub|f,\<cal-T\>><text|
+        [as ><big|cup><rsub|i\<in\>I>U<rsub|i>\<in\>\<cal-T\><text|]>
+      </equation*>
+
+      Finally if <math|V<rsub|1>,V<rsub|2>\<in\>\<cal-T\><rsub|f,\<cal-T\>><rsup|-1>>
+      then <math|\<exists\>U<rsub|1>,U<rsub|2>\<in\>\<cal-T\>> such that
+      <math|f<rsup|-1><around*|(|U<rsub|1>|)>=V<rsub|1>>,
+      <math|f<rsup|-1><around*|(|U<rsub|2>|)>=V<rsub|2>>. So\ 
+
+      <\equation*>
+        V<rsub|1><big|cap>V<rsub|2>=f<rsup|-1><around*|(|U<rsub|1>|)><big|cap>f<rsup|-1><around*|(|U<rsub|2>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|function function and intersection and
+        union>]>>f<rsup|-1><around*|(|U<rsub|1><big|cap>U<rsub|2>|)><text|
+        [as >U<rsub|1><big|cap>U<rsub|2>\<in\>\<cal-T\><text|]>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|continuity homeomorphism between K^n and finite dimensional
+    space>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
+    be a finite dimensional pseudo normed vector space over <math|\<bbb-K\>>
+    [where <math|\<bbb-K\>=\<bbb-C\>,\<bbb-R\>>] with
+    <math|dim<around*|(|X|)>=n> then we have given a basis
+    <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>>
+
+    <\enumerate>
+      <item><math|<around*|\<\|\|\>||\<\|\|\>><rsub|<around*|\<langle\>|E|\<rangle\>>>:\<bbb-K\><rsup|n>\<rightarrow\>\<bbb-R\>>
+      defined by <math|<around*|\<\|\|\>|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>|\<\|\|\>><rsub|<around*|\<langle\>|E|\<rangle\>>>=<around*|\<\|\|\>|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,.n|}>>x<rsub|i>\<cdot\>e<rsub|i>|\<\|\|\>><rsub|X>>
+      is a pseudo norm on <math|\<bbb-K\><rsup|n>>. Further if
+      <math|<around*|\<\|\|\>||\<\|\|\>><rsub|X>> is a norm then
+      <math|<around*|\<\|\|\>||\<\|\|\>><rsub|<around*|\<langle\>|E|\<rangle\>>>>
+      is a norm.
+
+      <item><math|\<varphi\>:\<bbb-K\><rsup|n>\<rightarrow\>X> defined by
+      <math|\<varphi\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,.n|}>>x<rsub|i>\<cdot\>e<rsub|i>>
+      is a isometry using the norms <math|<around*|\<\|\|\>||\<\|\|\>><rsub|<around*|\<langle\>|E|\<rangle\>>>>
+      and <math|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>
+    </enumerate>
+
+    Hence by [theorem: <reference|continuity isometry is a homeomorphism>]
+    <math|\<varphi\>> is a homeomorphism so that <math|\<bbb-K\><rsup|n>> is
+    homeomorphic with <math|X>.
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>To prove that <math|<around*|\<\|\|\>||\<\|\|\>><rsub|<around*|\<langle\>|E|\<rangle\>>>>
+      is a norm
+
+      <\enumerate>
+        <item><math|\<forall\>x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>\<bbb-K\><rsup|n>>
+        we have <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|<around*|\<langle\>|E|\<rangle\>>>=<around*|\<\|\|\>|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,.n|}>>x<rsub|i>\<cdot\>e<rsub|i>|\<\|\|\>><rsub|X>\<geqslant\>0>
+
+        <item>If <math|\<alpha\>\<in\>\<bbb-K\>>,
+        <math|x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>\<bbb-K\><rsup|n>>
+        we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<alpha\>\<cdot\>x|\<\|\|\>><rsub|<around*|\<langle\>|E|\<rangle\>>>>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|(|\<alpha\>\<cdot\>x<rsub|1>,\<ldots\>,\<alpha\><rsub|n>\<cdot\>x<rsub|n>|)>|\<\|\|\>><rsub|<around*|\<langle\>|E|\<rangle\>>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,.n|}>><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>\<cdot\>e<rsub|i>|\<\|\|\>><rsub|X>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,.n|}>>\<alpha\>\<cdot\><around*|(|x<rsub|i>\<cdot\>e<rsub|i>|)>|\<\|\|\>><rsub|X>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|\<alpha\>\<cdot\><big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,.n|}>>x<rsub|i>\<cdot\>e<rsub|i>|\<\|\|\>><rsub|X>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,.n|}>>x<rsub|i>\<cdot\>e<rsub|i>|\<\|\|\>><rsub|X>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|<around*|\<langle\>|E|\<rangle\>>>>>>>
+        </eqnarray*>
+
+        <item>Let <math|x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>,
+        <math|y=<around*|(|y<rsub|1>,\<ldots\>,y<rsub|n>|)>\<in\>\<bbb-K\><rsup|n>>
+        then we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|\<\|\|\>|x+y|\<\|\|\>><rsub|<around*|\<langle\>|E|\<rangle\>>>>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|(|x<rsub|1>+y<rsub|1>,\<ldots\>,x<rsub|n>+y<rsub|n>|)>|\<\|\|\>><rsub|<around*|\<langle\>|E|\<rangle\>>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,.n|}>><around*|(|x<rsub|i>+y<rsub|i>|)>|\<\|\|\>><rsub|X>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,.n|}>>x<rsub|i>+<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,.n|}>>y<rsub|i>|\<\|\|\>><rsub|X>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,.n|}>>x<rsub|i>|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,.n|}>>y<rsub|i>|\<\|\|\>><rsub|X>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|x|\<\|\|\>><rsub|<around*|\<langle\>|E|\<rangle\>>>+<around*|\<\|\|\>|y|\<\|\|\>><rsub|<around*|\<langle\>|E|\<rangle\>>>>>>>
+        </eqnarray*>
+      </enumerate>
+
+      Assume that <math|<around*|\<\|\|\>||\<\|\|\>><rsub|X>> is a norm. If
+      <math|x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>\<bbb-K\><rsup|n>>
+      satisfies <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|<around*|\<langle\>|E|\<rangle\>>>=0<rsub|>>
+      then <math|<around*|\<\|\|\>|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,.n|}>>x<rsub|i>\<cdot\>e<rsub|i>|\<\|\|\>><rsub|X>=0>.
+      So as, <math|<around*|\<\|\|\>||\<\|\|\>><rsub|X>> is a norm,
+      <math|0=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,.n|}>>x<rsub|i>\<cdot\>e<rsub|i>>.
+      As <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> is a basis we
+      have by [theorem: <reference|basis finite alternative (2)>] that
+      <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> <math|x<rsub|i>=0>
+      <math|>or <math|x=0>.
+
+      <item>For <math|\<varphi\>:\<bbb-K\><rsup|n>\<rightarrow\>X> we have:
+
+      <\description>
+        <item*|injectivity>Let <math|\<varphi\><around*|(|x|)>=\<varphi\><around*|(|y|)>>
+        then <math|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i>\<cdot\>e<rsub|i>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>y<rsub|i>\<cdot\>e<rsub|i>>,
+        hence, as <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> is a
+        basis we have by [theorem: <reference|basis finite alternative (2)>]
+        that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> that
+        <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+        <math|x<rsub|i>=y<rsub|i>>. Hence <math|x=y>
+
+        <item*|surjectivity>If <math|y\<in\>X> then by \ [theorem:
+        <reference|basis finite alternative (2)>] there exists a
+        <math|<around*|{|y<rsub|i>|}><rsub|i\<in\><around*|{|,\<ldots\>,\<ldots\>,n|}>>\<subseteq\>\<bbb-K\>>
+        such that <math|y=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>y<rsub|i>\<cdot\>e<rsub|i>>.
+        So if we take <math|x=<around*|(|y<rsub|1>,\<ldots\>,y<rsub|n>|)>>
+        then <math|\<varphi\><around*|(|x|)>=y>.
+      </description>
+
+      From the above it follows that\ 
+
+      <\equation*>
+        \<varphi\>:\<bbb-K\><rsup|n>\<rightarrow\>X<text| is a bijection>
+      </equation*>
+
+      Let <math|x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>,
+      <math|y=<around*|(|y<rsub|1>,\<ldots\>,y<rsub|n>|)>\<in\>\<bbb-K\><rsup|n>>
+      and <math|\<alpha\>\<in\>\<bbb-K\>> then we have\ 
+
+      <\equation*>
+        \<varphi\><around*|(|x+\<alpha\>\<cdot\>y|)>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|x<rsub|i>+\<alpha\>\<cdot\>y<rsub|i>|)>\<cdot\>e<rsub|i>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i>\<cdot\>e<rsub|i>+\<alpha\>\<cdot\><big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>y<rsub|i>\<cdot\>e<rsub|i>=\<varphi\><around*|(|x|)>+\<alpha\>\<cdot\>\<varphi\><around*|(|y|)>
+      </equation*>
+
+      proving that
+
+      <\equation*>
+        \<varphi\><text| is linear>
+      </equation*>
+
+      Finally if <math|x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>\<bbb-K\><rsup|n>>
+      then we have\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|\<varphi\>*<around*|(|x|)>|\<\|\|\>><rsub|X>=<around*|\<\|\|\>|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i>\<cdot\>e<rsub|i>|\<\|\|\>><rsub|X>=<around*|\<\|\|\>|x|\<\|\|\>><rsub|<around*|\<langle\>|E|\<rangle\>>>
+      </equation*>
+
+      proving that\ 
+
+      <\equation*>
+        \<varphi\>:\<bbb-K\><rsup|n>\<rightarrow\>X<text| is a linear
+        isometry>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  <section|Linear mappings and continuity>
+
+  In this chapter we assume that all the normed spaces are defined over the
+  field <math|\<bbb-K\>> where <math|\<bbb-K\>=\<bbb-C\>> or
+  <math|\<bbb-K\>=\<bbb-R\>>.\ 
+
+  <\definition>
+    <index|<math|L<around*|(|X,Y|)>>>Let <math|><math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces over <math|\<bbb-K\>> then the set of linear ontinuous
+    functions is noted as <math|L<around*|(|X,Y|)>>. So\ 
+
+    <\equation*>
+      L<around*|(|X,Y|)>=<around*|{|L\<in\>Hom<around*|(|X,Y|)>\|L:X\<rightarrow\>Y<text|
+      is continuous using the topologies >\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><text|
+      and >\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>>|}>
+    </equation*>
+  </definition>
+
+  <\example>
+    <label|continuity identity map is linear and continuous>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
+    a normed space then <math|Id<rsub|X>\<in\>L<around*|(|X,X|)>>
+  </example>
+
+  <\proof>
+    This follows from [theorem: <reference|linear mapping semi-group>] and
+    [example: <reference|continuity identity function>].\ 
+  </proof>
+
+  <\theorem>
+    <label|continuity L(X,Y) is a subspace of Hom(X,Y)>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
+    and <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces over <math|\<bbb-K\>> then <math|L<around*|(|X,Y|)>> is
+    a subspace of the vector space <math|Hom<around*|(|X,Y|)>> [see theorem:
+    <reference|linear mapping Hom(X,Y)>]. Hence by [theorem:
+    <reference|vector space sub-space is a vector space>]
+    <math|L<around*|(|X,Y|)>> is a vector space.
+  </theorem>
+
+  <\proof>
+    Let <math|L<rsub|1>,L<rsub|2>\<in\>L<around*|(|X,Y|)>> and
+    <math|\<alpha\>\<in\>\<bbb-K\>> then by [theorem: <reference|continuity
+    of sum of continuous functions>] <math|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>\<in\>L<around*|(|X,Y|)>>.
+    Further as <math|C<rsub|0>> is continuous [see theorem:
+    <reference|continuity constant function>] we have that
+    <math|C<rsub|0>\<in\>L<around*|(|X,Y|)>> hence
+    <math|L<around*|(|X,Y|)>=\<varnothing\>>.
+  </proof>
+
+  We examine now the conditions for a linear mapping to be continuous in the
+  normed topologies.
+
+  <\theorem>
+    <label|continuity linear mapping (1)>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces over <math|\<bbb-K\>> and
+    <math|L\<in\>Hom<around*|(|X,Y|)>> then we have the following
+    equivalences:\ 
+
+    <\enumerate>
+      <item><math|L> is continuous [in other words
+      <math|L\<in\>L<around*|(|X,Y|)>>]
+
+      <item><math|L> is continuous at <math|0\<in\>X>
+
+      <item><math|\<exists\>M\<in\>\<bbb-R\><rsub|0><rsup|+>> such that
+      <math|\<forall\>x\<in\>X> with <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>=1>
+      we have <math|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>M>
+
+      <item><math|\<exists\>M\<in\>\<bbb-R\><rsub|0><rsup|+>> such that
+      <math|\<forall\>x\<in\>X> we have <math|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>M\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|1\<Rightarrow\>2>>This follows from the definition.
+
+      <item*|<math|2\<Rightarrow\>3>>As <math|L> is continuous at <math|0> we
+      have by [theorem: <reference|continuity in a normed space>] there exist
+      a <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|\<forall\>x\<in\>X> satisfying
+      <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>=<around*|\<\|\|\>|x-0|\<\|\|\>><rsub|X>\<less\>\<delta\>>
+      we have <math|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|L<around*|(|x|)>-L<around*|(|0|)>|\<\|\|\>><rsub|Y>\<less\>1>.
+      As <math|0\<less\>\<delta\>> there exist by [theorem:
+      <reference|complex Archimedean property consequence (1)>] a
+      <math|\<delta\><rprime|'>\<in\>\<bbb-R\>> such that
+      <math|0\<less\>\<delta\><rprime|'>\<less\>\<delta\>>. If
+      <math|x\<in\>X> such that <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>=1>
+      then <math|<around*|\<\|\|\>|\<delta\><rprime|'>\<cdot\>x|\<\|\|\>><rsub|X>=<around*|\||\<delta\><rprime|'>|\|>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>=\<delta\><rprime|'>\<cdot\>1=\<delta\><rprime|'>\<less\>\<delta\>>
+      so that <math|\<delta\><rprime|'>\<cdot\><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|\<alpha\><rprime|'>\<cdot\>L<around*|(|x|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|L<around*|(|\<delta\><rprime|'>\<cdot\>x|)>|\<\|\|\>><rsub|Y>\<less\>1>,
+      hence <math|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<less\><frac|1|\<delta\><rprime|'>>>.
+      Hence if we take <math|M=<frac|1|\<delta\><rprime|'>>\<in\>\<bbb-R\><rsup|+>\<subseteq\>\<bbb-R\><rsup|+><rsub|0>>
+      then <math|\<forall\>x\<in\>X> with
+      <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>=1> we have
+      <math|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<less\>M\<Rightarrow\><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>M>
+
+      <item*|<math|3\<Rightarrow\>4>>Let <math|M\<in\>\<bbb-R\><rsup|+><rsub|0>>
+      such that <math|\<forall\>x\<in\>X> with
+      <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>=1> we have
+      <math|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>M>.
+      Let <math|x\<in\>X> then we have either:
+
+      <\description>
+        <item*|<math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>=0>>Then as
+        <math|<around*|\<\|\|\>||\<\|\|\>><rsub|X>> is a norm <math|x=0>
+        hence <math|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|X>=<around*|\<\|\|\>|L<around*|(|0|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|0|\<\|\|\>><rsub|Y>=0=M\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>
+
+        <item*|<math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>\<neq\>0>>Then we
+        have <math|<around*|\<\|\|\>|<frac|1|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>\<cdot\>x|\<\|\|\>><rsub|X>=<around*|\||<frac|1|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>|\|>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|x>=<frac|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>=1>
+        so that
+
+        <\equation*>
+          <frac|1|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>\<cdot\><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|<frac|1|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>\<cdot\>L<around*|(|x|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|L<around*|(|<frac|1|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>\<cdot\>x|)>|\<\|\|\>><rsub|Y>\<leqslant\>M
+        </equation*>
+      </description>
+
+      Hence\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>M\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>
+      </equation*>
+
+      <item*|<math|4\<Rightarrow\>1>>Let <math|M\<in\>\<bbb-R\><rsup|+><rsub|0>>
+      such that <math|\<forall\>x\<in\>X> we have
+      <math|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>M\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>.
+      Let <math|x\<in\>X> and <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+      then, if we take <math|\<delta\>=<frac|\<varepsilon\>|M+1>>, we have
+      for <math|y\<in\>X> with <math|<around*|\<\|\|\>|x-y|\<\|\|\>><rsub|X>\<less\>\<delta\>>
+      that\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|L<around*|(|x-y|)>|\<\|\|\>><rsub|Y>\<leqslant\>M\<cdot\><around*|\<\|\|\>|x-y|\<\|\|\>><rsub|X>\<leqslant\>M\<cdot\><frac|\<varepsilon\>|M+1>\<less\>\<varepsilon\>
+      </equation*>
+
+      So <math|L> is continuous at <math|x> and as <math|x\<in\>X> was chosen
+      arbitrary it follows that <math|f> is continuos.
+    </description>
+  </proof>
+
+  A consequence of the above is the following corollary.
+
+  <\corollary>
+    <label|continuity linear mapping between R^n>Let
+    <math|n,m\<in\>\<bbb-N\>> and <math|<around*|\<langle\>|\<bbb-K\><rsup|n>,<around*|\<\|\|\>||\<\|\|\>><rsub|n>|\<rangle\>>>,
+    <math|<around*|\<langle\>|\<bbb-K\><rsup|m>,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    where <math|<around*|\<\|\|\>||\<\|\|\>><rsub|m>> is the maximum norm
+    defined by <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|n>=max<around*|(|<around*|{|<around*|\||\<pi\><rsub|i><around*|(|x|)>|\|>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>>
+    and <math|<around*|\<\|\|\>||\<\|\|\>>> a norm on
+    <math|\<bbb-R\><rsup|m>> then every linear function
+    <math|L:\<bbb-K\><rsup|n>\<rightarrow\>\<bbb-K\><rsup|m>> is continuous.
+  </corollary>
+
+  <\proof>
+    Let <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    be the canonical basis of <math|\<bbb-K\><rsup|n>> [see <reference|basis
+    F^n>] then <math|\<forall\>x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>\<bbb-K\><rsup|n>>
+    we have <math|x=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i>\<cdot\>e<rsub|i>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<pi\><rsub|i><around*|(|x|)>\<cdot\>e<rsub|i>>
+    where <math|\<pi\><rsub|i><around*|(|x|)>=x<rsub|i>>. So that\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|m>=<around*|\<\|\|\>|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<pi\><rsub|i><around*|(|x|)>\<cdot\>L<around*|(|e<rsub|i>|)>|\<\|\|\>><rsub|m>\<leqslant\><big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\||\<pi\><rsub|i><around*|(|x|)>|\|>\<cdot\><around*|\<\|\|\>|L<around*|(|e<rsub|i>|)>|\<\|\|\>><rsub|m>\<leqslant\>M<rprime|'>\<cdot\><big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\||\<pi\><rsub|i><around*|(|x|)>|\|>
+    </equation*>
+
+    where <math|M<rprime|'>=max<around*|(|<around*|{|<around*|\<\|\|\>|L<around*|(|e<rsub|i>|)>|\<\|\|\>><rsub|m>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>>.
+    As <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have
+
+    <\equation*>
+      <around*|\||\<pi\><rsub|i><around*|(|x|)>|\|>\<leqslant\>max<around*|(|<around*|{|<around*|\||\<pi\><rsub|i><around*|(|x|)>|\|>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>=<around*|\<\|\|\>|x|\<\|\|\>><rsub|n>
+    </equation*>
+
+    it follows that <math|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\||\<pi\><rsub|i><around*|(|x|)>|\|>\<leqslant\><big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x|\<\|\|\>><rsub|m>=n\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|m>>.
+    So if <math|M=n\<cdot\>M<rprime|'>> then
+
+    <\equation*>
+      <around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|m>\<leqslant\>M\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|m>
+    </equation*>
+
+    By the previous theorem [theorem: <reference|continuity linear mapping
+    (1)>] it follows then that\ 
+
+    <\equation*>
+      L:\<bbb-K\><rsup|n>\<rightarrow\>\<bbb-K\><rsup|m><text| is continuous>
+    </equation*>
+  </proof>
+
+  <\corollary>
+    <label|continuity homemorphism between powers of R>Let
+    <math|n,m\<in\>\<bbb-N\>> and <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,<around*|\<\|\|\>||\<\|\|\>><rsub|n>|\<rangle\>>>
+    where <math|<around*|\<\|\|\>||\<\|\|\>><rsub|n>> is the maximum norm
+    then every linear isomorphism <math|L:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|n>>
+    is a homeomorphism\ 
+  </corollary>
+
+  <\proof>
+    This follows directly from the previous corollary [corollary:
+    <reference|continuity linear mapping between R^n>].
+  </proof>
+
+  <\theorem>
+    <label|continuity norm of continuous linear mapping (1)>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces and <math|L\<in\>L<around*|(|X,Y|)>> then for
+    <math|A<rsub|L.s>> and <math|A<rsub|L,r>> defined by\ 
+
+    <\equation*>
+      A<rsub|l,s>=<around*|{|M\<in\>\<bbb-R\><rsup|+><rsub|0>\|\<forall\>x\<in\>X<text|
+      with ><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>=1<text| we have
+      ><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>M|}>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      A<rsub|L,r>=<around*|{|M\<in\>\<bbb-R\><rsup|+><rsub|0>\|\<forall\>x\<in\>X<text|
+      we have ><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>M\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>|}>
+    </equation*>
+
+    we have\ 
+
+    <\enumerate>
+      <item><math|A<rsub|L,s>=A<rsub|L,r>>
+
+      <item><math|inf<around*|(|A<rsub|L,r>|)>> exist and
+      <math|0\<leqslant\>inf<around*|(|A<rsub|L,r>|)>> [or by (2)
+      <math|inf<around*|(|A<rsub|L,r>|)>> exist and
+      <math|0\<leqslant\>inf<around*|(|A<rsub|L,r>|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|M\<in\>A<rsub|L,s>> then <math|\<forall\>x\<in\>X> we
+      have either:
+
+      <\description>
+        <item*|<math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>=0>>Then as
+        <math|<around*|\<\|\|\>||\<\|\|\>><rsub|X>> is a norm <math|x=0> and
+        thus
+
+        <\equation*>
+          <around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|L<around*|(|0|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|0|\<\|\|\>><rsub|Y>=0\<leqslant\>M\<cdot\>0=M\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>
+        </equation*>
+
+        <item*|<math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>\<neq\>0>>Then
+        <math|<around*|\<\|\|\>|<frac|1|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>\<cdot\>x|\<\|\|\>><rsub|X>=<frac|1|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>=1>
+        so that as <math|M\<in\>A<rsub|L,s>> we have
+
+        <\equation*>
+          <frac|1|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>\<cdot\><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|<frac|1|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>\<cdot\>L<around*|(|x|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|L<around*|(|<frac|1|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>\<cdot\>x|)>|\<\|\|\>><rsub|Y>\<leqslant\>M
+        </equation*>
+
+        hence\ 
+
+        <\equation*>
+          <around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|X>\<leqslant\>M\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>
+        </equation*>
+      </description>
+
+      So as in all cases <math|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|X>\<leqslant\>M\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>
+      for <math|x\<in\>X> it follows that <math|M\<in\>A<rsub|L,r>> proving
+      that\ 
+
+      <\equation>
+        <label|eq 14.56.148>A<rsub|L,s>\<subseteq\>A<rsub|L,r>
+      </equation>
+
+      If <math|M\<in\>A<rsub|L,r>> then if <math|x\<in\>X> with
+      <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>=1> we have
+      <math|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|X>\<leqslant\>M\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>=M\<cdot\>1=M>
+      so that <math|M\<in\>A<rsub|L,s>>, hence
+      <math|A<rsub|L,r>\<subseteq\>A<rsub|L,s>>. Combining this with [eq:
+      <reference|eq 14.56.148>] proves that\ 
+
+      <\equation*>
+        A<rsub|L,s>=A<rsub|L,r>
+      </equation*>
+
+      <item>As <math|L\<in\>L<around*|(|X|)>> we have by [theorem:
+      <reference|continuity linear mapping (1)>] that there exist a
+      <math|M\<in\>\<bbb-R\><rsup|+><rsub|0>> such that
+      <math|\<forall\>x\<in\>X> with <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>=1>
+      <math|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>M>
+      proving that <math|M\<in\>A<rsub|L,r>>. Hence we have\ 
+
+      <\equation*>
+        A<rsub|L,r>\<neq\>\<varnothing\>
+      </equation*>
+
+      Further, as <math|A<rsub|L,r>\<subseteq\>\<bbb-R\><rsup|+><rsub|0>>, it
+      follows that <math|A<rsub|L,r>> is bounded below by <math|0>, so as
+      <math|\<bbb-R\>> is conditional complete [see theorem:
+      <reference|complex RC is conditional complete>] we have that\ 
+
+      <\equation*>
+        inf<around*|(|A<rsub|L,r>|)><text| exist and
+        >0\<leqslant\>inf<around*|(|A<rsub|L,r>|)>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  The above theorem allows the following definition.
+
+  <\definition>
+    <label|continuity operator norm><index|<math|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,Y|)>>>><dueto|Operator
+    Norm>Let , <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces and <math|L\<in\>L<around*|(|X,Y|)>> then the
+    <with|font-series|bold|operator norm>, noted as
+    <math|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,Y|)>>> is defined
+    by\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>=inf<around*|(|A<rsub|L,s>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|continuity norm of continuous linear mapping
+      (1)>]>>inf<around*|(|A<rsub|L,r>|)>
+    </equation*>
+  </definition>
+
+  By [theorem: <reference|continuity L(X,Y) is a subspace of Hom(X,Y)>]
+  <math|L<around*|(|X,Y|)>> is a vector space, we prove now that
+  <math|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,Y|)>><rsub|>> is a
+  norm on <math|L<around*|(|X,Y|)>>.
+
+  <\theorem>
+    <label|continuity operator norm (1)>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces over a field <math|\<bbb-K\>> then we have that:
+
+    <\enumerate>
+      <item><math|\<forall\>x\<in\>X> we have
+      <math|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|Y>>
+
+      <item><math|<around*|\<\|\|\>|C<rsub|0>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>=0>
+      where <math|C<rsub|0>:X\<rightarrow\>Y> is defined by
+      <math|C<rsub|0><around*|(|x|)>=0> [the neutral element in
+      <math|L<around*|(|X,Y|)>>
+
+      <item><math|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,Y|)>>> is a
+      norm on <math|L<around*|(|X,Y|)>> making
+      <math|<around*|\<langle\>|L<around*|(|X,Y|)>,<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,Y|)>>|\<rangle\>>>
+      a normed space.\ 
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \;
+
+    <\enumerate>
+      <item>Let <math|x\<in\>X> then we have either:
+
+      <\description>
+        <item*|<math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>=0>>Then
+
+        <\equation*>
+          <around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|L<around*|(|0|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|0|\<\|\|\>><rsub|Y>=0\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\>0=<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>
+        </equation*>
+
+        <item*|<math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>\<neq\>0>>Assume
+        that <math|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<less\><frac|1|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>\<cdot\><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>>
+        then, as <math|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>=inf<around*|(|A<rsub|L,r>|)>>,
+        there exist by [theorem: <reference|order sup, inf property>] a
+
+        <\equation*>
+          M\<in\>A<rsub|L,r>=<around*|{|M\<in\>\<bbb-R\><rsup|+><rsub|0>\|\<forall\>x\<in\>X<text|
+          we have ><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>M\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X><rsub|>|}>
+        </equation*>
+
+        such that <math|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<leqslant\>M\<less\><frac|1|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>\<cdot\><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>>
+        so that <math|M\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>\<less\><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>>
+        contradicting the fact that <math|M\<in\>A<rsub|L,r>\<Rightarrow\><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>M\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>.
+        So we must have that <math|<frac|1|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>\<cdot\><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>>
+        or\ 
+
+        <\equation*>
+          <around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>
+        </equation*>
+      </description>
+
+      So in all cases we have\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>
+      </equation*>
+
+      <item><math|\<forall\>x\<in\>X> we have
+      <math|<around*|\<\|\|\>|C<rsub|0><around*|(|x|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|0|\<\|\|\>><rsub|Y>=0\<leqslant\>0\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>
+      proving that <math|0\<in\>A<rsub|C<rsub|0>,r>>, hence
+
+      <\equation*>
+        0\<leqslant\>inf<around*|(|A<rsub|C<rsub|0,r>>|)>\<leqslant\>0
+      </equation*>
+
+      proving that\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|C<rsub|0>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>=inf<around*|(|A<rsub|C<rsub|0,r>>|)>=0
+      </equation*>
+
+      <item>Let <math|L\<in\>L<around*|(|X,Y|)>> then by [theorem:
+      <reference|continuity norm of continuous linear mapping (1)>] we have\ 
+
+      <\equation>
+        <label|eq 14.57.148>\<forall\>L\<in\>L<around*|(|X,Y|)><text| that
+        >0\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>
+      </equation>
+
+      Further if <math|L<rsub|1>,L<rsub|2>\<in\>L<around*|(|X,Y|)>> then for
+      <math|x\<in\>X> we have by (1) that\ 
+
+      <\equation>
+        <label|eq 14.58.148><around*|\<\|\|\>|L<rsub|1><around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X><text|
+        and ><around*|\<\|\|\>|L<rsub|2><around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\><around*|\<\|\|\>|L<rsub|2>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>
+      </equation>
+
+      Further
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|<around*|(|L<rsub|1>+L<rsub|2>|)><around*|(|x|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|<around*|\<\|\|\>|L<rsub|1><around*|(|x|)>+L<rsub|2><around*|(|x|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|L<rsub|1><around*|(|x|)>|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|L<rsub|2><around*|(|x|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[eq:
+        <reference|eq 14.58.148>]>>>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|L<rsub|2>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|x>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>+<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>|)>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>>>>
+      </eqnarray*>
+
+      proving that <math|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>+<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<in\>A<rsub|<around*|(|L<rsub|1>+L<rsub|2>|)>,r>>
+      so that
+
+      <\equation>
+        <label|eq 14.59.148><around*|\<\|\|\>|L<rsub|1>+L<rsub|2>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>=inf<around*|(|A<rsub|<around*|(|L<rsub|1>+L<rsub|2>|)>,r>|)>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>+<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>
+      </equation>
+
+      Let <math|\<alpha\>\<in\>\<bbb-K\>> and
+      <math|L\<in\>L<around*|(|X,Y|)>>. By (1) we have
+      <math|\<forall\>x\<in\>X> that <math|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>
+      then\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|<around*|(|\<alpha\>\<cdot\>L|)><around*|(|x|)>|\<\|\|\>><rsub|X>=<around*|\<\|\|\>|\<alpha\>\<cdot\>L<around*|(|x|)>|\<\|\|\>><rsub|X>=<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\><around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>
+      </equation*>
+
+      proving that <math|<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<in\>A<rsub|\<alpha\>\<cdot\>L,r>>.
+      Hence\ 
+
+      <\equation>
+        <label|eq 14.60.148><around*|\<\|\|\>|\<alpha\>\<cdot\>L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>=inf<around*|(|A<rsub|\<alpha\>\<cdot\>L,r>|)>\<leqslant\><around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>
+      </equation>
+
+      For the opposite inequality we have two cases for
+      <math|<around*|\||\<alpha\>|\|>> to consider:
+
+      <\description>
+        <item*|<math|<around*|\||\<alpha\>|\|>=0>>Then, as
+        <math|<around*|\|||\|>> is a norm in <math|\<bbb-K\>,> we have
+        <math|\<alpha\>=0> so that <math|\<alpha\>\<cdot\>L=C<rsub|0>>, hence
+
+        <\equation*>
+          <around*|\<\|\|\>|\<alpha\>\<cdot\>L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>=<around*|\<\|\|\>|C<rsub|0>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<equallim\><rsub|<around*|(|2|)>>0=<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>
+        </equation*>
+
+        or\ 
+
+        <\equation*>
+          <around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<leqslant\><around*|\<\|\|\>|\<alpha\>\<cdot\>L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>
+        </equation*>
+
+        <item*|<math|<around*|\||\<alpha\>|\|>\<neq\>0>>As
+        <math|\<forall\>x\<in\>X> we have
+        <math|<around*|\<\|\|\>|<around*|(|\<alpha\>\<cdot\>L|)><around*|(|x|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|\<alpha\>\<cdot\>L<around*|(|x|)>|\<\|\|\>><rsub|Y>=<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>>
+        so that <math|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>=<frac|<around*|\<\|\|\>|\<alpha\>\<cdot\>L<around*|(|x|)>|\<\|\|\>><rsub|Y>|<around*|\||\<alpha\>|\|>>\<leqslant\><frac|<around*|\<\|\|\>|\<alpha\>\<cdot\>L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>|<around*|\||a|\|>>>
+        proving that <math|<frac|<around*|\<\|\|\>|\<alpha\>\<cdot\>L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>|<around*|\||\<alpha\>|\|>>\<in\>A<rsub|L,r>>,
+        hence <math|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>=inf<around*|(|A<rsub|L,r>|)>\<leqslant\><frac|<around*|\<\|\|\>|\<alpha\>\<cdot\>L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>|<around*|\||\<alpha\>|\|>>>.
+        So
+
+        <\equation*>
+          <around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<leqslant\><around*|\<\|\|\>|\<alpha\>\<cdot\>L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>
+        </equation*>
+      </description>
+
+      So in all cases we have <math|<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<leqslant\><around*|\<\|\|\>|\<alpha\>\<cdot\>L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>>
+      which combined with [eq: <reference|eq 14.60.148>] results in\ 
+
+      <\equation>
+        <label|eq 14.61.148><around*|\<\|\|\>|\<alpha\>\<cdot\>L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>=<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>
+      </equation>
+
+      Using [eqs: <reference|eq 14.57.148>, <reference|eq 14.59.148> and
+      <reference|eq 14.61.148>] it follows that\ 
+
+      <\equation*>
+        <around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,Y|)>><text| is a
+        pseudo norm>
+      </equation*>
+
+      To prove that <math|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,Y|)>>>
+      is a norm let <math|L\<in\>L<around*|(|X,Y|)>> such that
+      <math|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>>. Assume
+      that <math|L\<neq\>C<rsub|o>> [the neutral element in
+      <math|L<around*|(|X,Y|)>>] then there exist a <math|x\<in\>X> such that
+      <math|L<around*|(|x|)>\<neq\>C<rsub|o><around*|(|x|)>=0>. As
+      <math|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>> is a norm we have
+      <math|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<neq\>0>,
+      but then as <math|0\<neq\><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\><rsub|<around*|(|1|)>><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>=0>
+      resulting in a contradiction. So the assumption is wrong and we must
+      have that <math|L=C<rsub|0>> which proves that\ 
+
+      <\equation*>
+        <around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,Y|)>><text| is a norm
+        on >L<around*|(|X,Y|)>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  Up to now the operator norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|XY|)>>>
+  is defined using a infinum, the following theorem shows that we can also
+  define the operator norm as a supremum.
+
+  <\theorem>
+    <label|continuity operator norm (2)>Let
+    <math|<around*|\<langle\>|X<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces over <math|\<bbb-K\>> where <math|X> is not trivial
+    [there exists a <math|x\<in\>X> with <math|x\<neq\>0>],
+    <math|L\<in\>L<around*|(|X,Y|)>> and define\ 
+
+    <\equation*>
+      A<rsub|L,t>=<around*|{|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\|x\<in\>X<text|
+      with ><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>=1|}>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      A<rsub|L,u>=<around*|{|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\|x\<in\>X<text|
+      with ><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>\<leqslant\>1|}>
+    </equation*>
+
+    then\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>=sup<around*|(|A<rsub|L,t>|)>=sup<around*|(|A<rsub|L,u>|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    If <math|M\<in\>A<rsub|L,t>> then <math|\<exists\>x\<in\>X> with
+    <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>=1> such that
+    <math|M=<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>> which as
+    <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>=1\<leqslant\>1> proves that
+    <math|M\<in\>A<rsub|L,u>>. Hence\ 
+
+    <\equation>
+      <label|eq 14.62.148>A<rsub|L,t>\<subseteq\>A<rsub|L,u>
+    </equation>
+
+    As <math|\<exists\>x<rsub|0>\<in\>X> with <math|x<rsub|0>\<neq\>0> we
+    have as <math|<around*|\<\|\|\>||\<\|\|\>><rsub|X>> is a norm that
+    <math|<around*|\<\|\|\>|<frac|1|<around*|\<\|\|\>|x<rsub|0>|\<\|\|\>>>\<cdot\>x|\<\|\|\>><rsub|X>=<frac|1|<around*|\<\|\|\>|x<rsub|0>|\<\|\|\>><rsub|X>>\<cdot\><around*|\<\|\|\>|x<rsub|0>|\<\|\|\>><rsub|X>=1\<leqslant\>1>
+    so that <math|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<in\>A<rsub|L,t>,A<rsub|L,u>>
+    proving that\ 
+
+    <\equation>
+      <label|eq 14.63.148>\<varnothing\>\<neq\>A<rsub|L.t>\<wedge\>\<varnothing\>=A<rsub|L,u>
+    </equation>
+
+    Now if <math|M\<in\>A<rsub|L,u>> then <math|\<exists\>x\<in\>X> with
+    <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>\<leqslant\>1> such that
+    <math|M=<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>>, using
+    [theorem: \ <reference|continuity operator norm (1)>] we have that
+    <math|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>>,
+    proving that <math|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>>
+    is a upper bound for <math|A<rsub|L,t>> and <math|A<rsub|L,u>>. Hence by
+    [theorem: <reference|complex RC is conditional complete>]
+    \ <math|sup<around*|(|A<rsub|L,t>|)><text|,
+    >sup<around*|(|A<rsub|L,u>|)>> exists and
+    <math|sup<around*|(|A<rsub|L,t>|)>,sup<around*|(|A<rsub|L,u>|)>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>>.
+    Further by by [eq: <reference|eq 14.62.148>] and [theorem:
+    <reference|order sup,inf and inclusion>] we have that
+    <math|sup<around*|(|A<rsub|L,t>|)>\<leqslant\>sup<around*|(|A<rsub|L,u>|)>>.
+    Summarized we have that\ 
+
+    <\equation*>
+      sup<around*|(|A<rsub|L,t>|)>\<leqslant\>sup<around*|(|A<rsub|L,u>|)>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>
+    </equation*>
+
+    Now <math|\<forall\>x\<in\>X> with <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>=1>
+    we have that <math|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<in\>A<rsub|L,t>>
+    so that <math|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>sup<around*|(|A<rsub|L,t>|)>>
+    so that <math|sup<around*|(|A<rsub|L,t>|)>\<in\>A<rsub|L,s>>. Hence
+    <math|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>=inf<around*|(|A<rsub|L,s>|)>\<leqslant\>sup<around*|(|A<rsub|L,t>|)>\<leqslant\>sup<around*|(|A<rsub|L,u>|)>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>>
+    proving that\ 
+
+    <\equation*>
+      sup<around*|(|A<rsub|L,t>|)>=sup<around*|(|A<rsub|L,u>|)>=<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>
+    </equation*>
+  </proof>
+
+  To summarize the the above theorems about <math|L<around*|(|X,Y|)>> we have
+  \ 
+
+  <\theorem>
+    <label|continuity norm on L(X,Y)>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces over the field <math|\<bbb-K\>> then
+
+    <\equation*>
+      <around*|\<langle\>|L<around*|(|X,Y|)>,<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,Y|)>>|\<rangle\>>
+    </equation*>
+
+    is a normed space over <math|\<bbb-K\>> where\ 
+
+    <\equation*>
+      \<forall\>L\<in\>L<around*|(|X,Y|)><text| we have
+      ><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>=inf<around*|(|A<rsub|L,s>|)>=inf<around*|(|A<rsub|L,r>|)>=sup<around*|(|A<rsub|L,t>|)>=sup<around*|(|A<rsub|L,u>|)>
+    </equation*>
+
+    and\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|A<rsub|L,s>>|<cell|=>|<cell|<around*|{|M\<in\>\<bbb-R\><rsup|+><rsub|0>\|\<forall\>x\<in\>X<text|
+      with ><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>=1<text| we have
+      ><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>M|}>>>|<row|<cell|A<rsub|L,r>>|<cell|=>|<cell|<around*|{|M\<in\>\<bbb-R\><rsup|+><rsub|0>\|\<forall\>x\<in\>X<text|
+      we have ><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>M\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>|}>>>|<row|<cell|A<rsub|L,t>>|<cell|=>|<cell|<around*|{|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\|x\<in\>X<text|
+      with ><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>=1|}>>>|<row|<cell|A<rsub|L,u>>|<cell|=>|<cell|<around*|{|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\|x\<in\>X<text|
+      with ><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>\<leqslant\>1|}>>>>>
+    </eqnarray*>
+  </theorem>
+
+  <\proof>
+    This follows from [theorems: <reference|continuity L(X,Y) is a subspace
+    of Hom(X,Y)>, <reference|continuity operator norm (1)>,
+    <reference|continuity operator norm (2)>]
+  </proof>
+
+  <\example>
+    <label|continuity norm of projection operator>Let
+    <math|n\<in\>\<bbb-N\>>, <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    be a family of normed spaces and \ <math|<around*|\<langle\>|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    the product space with the maximum norm [see theorem: <reference|normed
+    maximum norm>] then\ 
+
+    <\equation*>
+      \<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      >\<pi\><rsub|i>\<in\>L<around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>,X<rsub|i>|)><text|
+      and ><around*|\<\|\|\>|\<pi\><rsub|i>|\<\|\|\>><rsub|L<around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>,X<rsub|i>|)>>\<leqslant\>1
+    </equation*>
+  </example>
+
+  <\proof>
+    By [theorem: <reference|linear mapping projection mapping>] we have\ 
+
+    <\equation*>
+      \<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      >\<pi\><rsub|i>:<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>\<rightarrow\>X<rsub|i><text|
+      is a linear mapping>
+    </equation*>
+
+    Further if <math|x\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+    then\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|\<pi\><rsub|i><around*|(|x|)>|\<\|\|\>><rsub|i>\<leqslant\>max<around*|(|<around*|{|<around*|\<\|\|\>|\<pi\><rsub|i><around*|(|x|)>|\<\|\|\>>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>=<around*|\<\|\|\>|x|\<\|\|\>><rsub|max>\<leqslant\>1\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|max>
+    </equation*>
+
+    so that by [theorem: <reference|continuity linear mapping (1)>]
+    <math|\<pi\><rsub|i>> is continuous. Further <math|1\<in\>A<rsub|L,r>> so
+    that <math|<around*|\<\|\|\>|\<pi\><rsub|i>|\<\|\|\>><rsub|L<around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>,X<rsub|i>|)>>\<leqslant\>1>.
+    Hence we have\ 
+
+    <\equation*>
+      \<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      >\<pi\><rsub|i>\<in\>L<around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>,X<rsub|i>|)><text|
+      and ><around*|\<\|\|\>|\<pi\><rsub|i>|\<\|\|\>><rsub|L<around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>,X<rsub|i>|)>>\<leqslant\>1
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|continuity composition of continuous linear mapping>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    and <math|<around*|\<langle\>|Z,<around*|\<\|\|\>||\<\|\|\>><rsub|Z>|\<rangle\>>>
+    be normed spaces over <math|\<bbb-K\>>,
+    <math|L<rsub|1>\<in\>L<around*|(|X,Y|)>>,
+    <math|L<rsub|2>\<in\>L<around*|(|Y,Z|)>> then
+    <math|L<rsub|2>\<circ\>L<rsub|1>\<in\>L<around*|(|X,Z|)>> and
+    <math|<around*|\<\|\|\>|L<rsub|2>\<circ\>L<rsub|1>|\<\|\|\>><rsub|L<around*|(|X,Z|)>>\<leqslant\><around*|\<\|\|\>|L<rsub|1>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><around*|\<\|\|\>|L<rsub|2>|\<\|\|\>><rsub|L<around*|(|Y,Z|)>>>
+  </theorem>
+
+  <\proof>
+    By [theorems: <reference|linear mapping composition> and
+    <reference|continuity composition>] it follows that\ 
+
+    <\equation*>
+      L<rsub|2>\<circ\>L<rsub|1>\<in\>L<around*|(|X,Z|)>
+    </equation*>
+
+    Further <math|\<forall\>x\<in\>X> we have\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|<around*|(|L<rsub|2>\<circ\>L<rsub|1>|)><around*|(|x|)>|\<\|\|\>><rsub|Z>=<around*|\<\|\|\>|L<rsub|2><around*|(|L<rsub|1><around*|(|x|)>|)>|\<\|\|\>><rsub|Z>\<leqslant\><around*|\<\|\|\>|L<rsub|2>|\<\|\|\>><rsub|L<around*|(|Y,Z|)>>\<cdot\><around*|\<\|\|\>|L<rsub|1><around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\><around*|\<\|\|\>|L<rsub|1>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><around*|\<\|\|\>|L<rsub|2>|\<\|\|\>><rsub|L<around*|(|Y,Z|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>
+    </equation*>
+
+    Hence <math|<around*|\<\|\|\>|L<rsub|1>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><around*|\<\|\|\>|L<rsub|2>|\<\|\|\>><rsub|L<around*|(|Y,Z|)>>\<in\>A<rsub|L<rsub|2>\<circ\>L<rsub|1>,r>>
+    so that\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|L<rsub|2>\<circ\>L<rsub|1>|\<\|\|\>><rsub|L<around*|(|X,Z|)>>=inf<around*|(|A<rsub|L<rsub|2>\<circ\>L<rsub|1>,r>|)>\<leqslant\><around*|\<\|\|\>|L<rsub|1>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><around*|\<\|\|\>|L<rsub|2>|\<\|\|\>><rsub|L<around*|(|Y,Z|)>>
+    </equation*>
+  </proof>
+
+  For open linear mappings we have:
+
+  <\theorem>
+    <label|continuity open linear mapping>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces over <math|\<bbb-K\>> then for a linear mapping
+
+    <\equation*>
+      L:X\<rightarrow\>Y
+    </equation*>
+
+    we have\ 
+
+    <\equation*>
+      L<text| is open >\<Leftrightarrow\><text|
+      >\<exists\>\<delta\>\<in\>\<bbb-R\><rsup|+><text| such that
+      >B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>><around*|(|0,\<delta\>|)>\<subseteq\>L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,1|)>|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>As <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,1|)>\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>>
+      and <math|L> is open it follows that
+      <math|L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,1|)>|)>\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>>>,
+      further <math|0\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,1|)>\<Rightarrow\>0=L<around*|(|0|)>\<in\>L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,1|)>|)>>.
+      So by [theorem: <reference|normed space and open sets>] there exist a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+
+      <\equation*>
+        0\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>><around*|(|0,\<delta\>|)>\<subseteq\>L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,1|)>|)>.
+      </equation*>
+
+      <item*|<math|\<Leftarrow\>>>Let <math|U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>>
+      and let <math|y\<in\>L<around*|(|U|)>> then there exist a
+      <math|x\<in\>U> such that <math|y=L<around*|(|x|)>>, by \ [theorem:
+      <reference|normed space and open sets>] there exists a
+      <math|\<delta\><rprime|'>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\><rprime|'>|)>\<subseteq\>U\<Rightarrow\>L<around*|(|x|)>\<in\>L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\><rprime|'>|)>|)>\<subseteq\>L<around*|(|U|)>>.
+      By the hypothesis there exist a <math|\<delta\><rprime|''>\<in\>\<bbb-R\><rsup|+>>
+      such that <math|0\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>><around*|(|0,\<delta\><rprime|''>|)>\<subseteq\>L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,1|)>|)>>.
+      Then we have for <math|\<delta\>=\<delta\><rprime|''>\<cdot\>\<delta\><rprime|'>>
+      that
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|z\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>><around*|(|y,\<delta\>|)>>|<cell|\<Rightarrow\>>|<cell|z\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>><around*|(|y,\<delta\><rprime|''>\<cdot\>\<delta\><rprime|'>|)>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|z\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>><around*|(|L<around*|(|x|)>,\<delta\><rprime|''>\<cdot\>\<delta\><rprime|'>|)>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|<around*|\<\|\|\>|z-L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<less\>\<delta\><rprime|''>\<cdot\>\<delta\><rprime|'>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|<frac|1|\<delta\><rprime|'>>\<cdot\><around*|\<\|\|\>|z-L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<less\>\<delta\><rprime|''>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|<around*|\<\|\|\>|<frac|1|\<delta\><rprime|'>>\<cdot\><around*|(|z-L<around*|(|x|)>|)>|\<\|\|\>><rsub|Y>\<less\>\<delta\><rprime|''>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|<frac|1|\<delta\><rprime|'>>\<cdot\><around*|(|z-L<around*|(|x|)>|)>\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>><around*|(|0,\<delta\><rprime|''>|)>\<subseteq\>L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,1|)>|)>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|\<exists\>x<rsub|0>\<in\>X<text|
+        such that <math|<around*|\<\|\|\>|x<rsub|0>|\<\|\|\>><rsub|X>\<less\>1<text|
+        and >L<around*|(|x<rsub|0>|)>=<frac|1|\<delta\><rprime|'>>\<cdot\><around*|(|z-L<around*|(|x|)>|)>>>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|z=\<delta\><rprime|'>\<cdot\>L<around*|(|x<rsub|0>|)>+L<around*|(|x|)>\<wedge\><around*|\<\|\|\>|x<rsub|0>|\<\|\|\>><rsub|X>\<less\>1>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|z=L<around*|(|\<delta\><rprime|'>\<cdot\>x<rsub|o>+x|)>\<wedge\><around*|\<\|\|\>|x<rsub|0>|\<\|\|\>><rsub|X>\<less\>1>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|z=L<around*|(|\<delta\><rprime|'>\<cdot\>x<rsub|o>+x|)>\<wedge\><around*|\<\|\|\>|\<delta\><rprime|'>\<cdot\>x<rsub|0>|\<\|\|\>><rsub|X>\<less\>\<delta\><rprime|'>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|z=L<around*|(|\<delta\><rprime|'>\<cdot\>x<rsub|o>+x|)>\<wedge\><around*|\<\|\|\>|<around*|(|\<delta\><rprime|'>\<cdot\>x<rsub|0>+x|)>-x|\<\|\|\>><rsub|X>\<less\>\<delta\><rprime|'>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|z=L<around*|(|\<delta\><rprime|'>\<cdot\>x<rsub|o>+x|)>\<wedge\>\<delta\><rprime|'>\<cdot\>x<rsub|0>+x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\><rprime|'>|)>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|z\<in\>L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\><rprime|'>|)>|)>\<subseteq\>L<around*|(|U|)>>>>>
+      </eqnarray*>
+
+      proving that <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>><around*|(|y,\<delta\>|)>\<subseteq\>L<around*|(|U|)>>.
+      In other words\ 
+
+      <\equation*>
+        \<forall\>y\<in\>L<around*|(|U|)><text| there exist a
+        >\<delta\>\<in\>\<bbb-R\><rsup|+><text| such that
+        >y\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>><around*|(|y,\<delta\>|)>\<subseteq\>L<around*|(|U|)>
+      </equation*>
+
+      So by [theorem: <reference|normed space and open sets>] it follows that
+      <math|L<around*|(|U|)>\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>>>
+      proving that <math|L> is open.
+    </description>
+  </proof>
+
+  <section|Multilinear mappings and continuity>
+
+  <\theorem>
+    <label|continuity multilinear mapping (1)>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>|\<rangle\>>|}>>
+    a family of normed vector spaces over the field <math|\<bbb-K\>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    a normed vector space over <math|\<bbb-K\>> and
+    <math|L\<in\>Hom<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>> then we
+    have the following equivalences:\ 
+
+    <\enumerate>
+      <item><math|L> is continuous [using the product topology on
+      <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+      [see theorem: <reference|normed maximum norm>] and the topology
+      <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>>> on
+      <math|Y>].
+
+      <item><math|L> is continuous at <math|0>
+
+      <item><math|\<exists\>M\<in\>\<bbb-R\><rsup|+>> such that
+      <math|\<forall\>x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+      satisfying <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> that
+      <math|<around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>=1> then
+      <math|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>M>,
+
+      <item><math|\<exists\>M\<in\>\<bbb-R\><rsup|+>> such that
+      <math|\<forall\>x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+      we have <math|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>M\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>>.
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    First by [theorem: <reference|normed maximum norm>] we have
+    <math|\<cal-T\><rsub|product>=\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|max>>>
+    where\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|x|\<\|\|\>><rsub|max>=max<around*|(|<around*|{|<around*|\<\|\|\>|\<pi\><rsub|i><around*|(|x|)>|\<\|\|\>><rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>=max<around*|(|<around*|{|<around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>
+    </equation*>
+
+    Secondly we have:
+
+    <\description>
+      <item*|<math|1\<Rightarrow\>2>>This is trivial.
+
+      <item*|<math|2\<Rightarrow\>3>>Using [theorem: <reference|continuity in
+      a normed space>] there exist a <math|\<delta\>\<in\>\<bbb-R\><rsup|+>>
+      such that <math|\<forall\>y\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+      with <math|<around*|\<\|\|\>|y|\<\|\|\>><rsub|max>\<less\>\<delta\>> we
+      have <math|<around*|\<\|\|\>|L<around*|(|y|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|L<around*|(|y|)>-L<around*|(|0|)>|\<\|\|\>><rsub|Y>\<less\>1>.
+      Let <math|x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+      with<next-line> <math|<around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>=1>
+      then <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|max>=max<around*|(|<around*|{|<around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>=1>
+      so <math|<around*|\<\|\|\>|<frac|\<delta\>|2>\<cdot\>x|\<\|\|\>><rsub|max>=<frac|\<delta\>|2>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|max>=<frac|\<delta\>|2>\<less\>\<delta\>>
+      and we must have that <math|<around*|\<\|\|\>|L<around*|(|<frac|\<delta\>|2>\<cdot\>x|)>|\<\|\|\>><rsub|Y>\<less\>1>.
+      So if we take <math|M=<frac|2|\<delta\>>> then
+
+      <\equation*>
+        <frac|1|M>\<cdot\><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|<frac|1|M>\<cdot\>L<around*|(|x|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|L<around*|(|<frac|1|M>\<cdot\>x|)>|\<\|\|\>><rsub|Y>\<less\>1
+      </equation*>
+
+      proving that\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<less\>M
+      </equation*>
+
+      <item*|<math|3\<Rightarrow\>4>>Let <math|M\<in\>\<bbb-R\><rsup|+>> such
+      that <math|\<forall\>y\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+      satisfying <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+      <math|<around*|\<\|\|\>|y<rsub|i>|\<\|\|\>><rsub|i>=1> we have
+      <math|<around*|\<\|\|\>|L<around*|(|y|)>|\<\|\|\>><rsub|Y>\<leqslant\>M>.
+      Then given <math|x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>>
+      we have two cases possible:
+
+      <\description>
+        <item*|<math|\<exists\>i\<in\><around*|{|1,\<ldots\>,n|}>> with
+        <math|x<rsub|i>=0>>Then by [theorem: <reference|multi multilinear
+        mappin one argument is 0>] <math|L<around*|(|x|)>=0> so that
+
+        <\equation*>
+          <around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|0|\<\|\|\>><rsub|Y>=0\<leqslant\>0=M\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>
+        </equation*>
+
+        <item*|<math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have
+        <math|x<rsub|i>\<neq\>0>>Define then
+        <math|y\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+        by <math|y<rsub|i>=<frac|1|<around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>>\<cdot\>x<rsub|i>>
+        then
+
+        <\equation*>
+          <around*|\<\|\|\>|y<rsub|i>|\<\|\|\>><rsub|i>=<around*|\<\|\|\>|<frac|1|<around*|\<\|\|\>|x|\<\|\|\>><rsub|i>>\<cdot\>x<rsub|i>|\<\|\|\>><rsub|i>=<frac|1|<around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>>\<cdot\><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>=1.
+        </equation*>
+
+        Further\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<frac|1|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>>\<cdot\><around*|\<\|\|\>|L<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<frac|1|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>>\<cdot\>L<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>|\<\|\|\>><rsub|Y>>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|multi multilinear mapping and product of
+          scalars>]>>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|L<around*|(|<frac|1|<around*|\<\|\|\>|x|\<\|\|\>><rsub|1>>\<cdot\>x<rsub|1>,\<ldots\>,<frac|1|<around*|\<\|\|\>|x<rsub|n>|\<\|\|\>><rsub|n>>\<cdot\>x<rsub|n>|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|L<around*|(|y<rsub|1>,\<ldots\>,y<rsub|n>|)>|\<\|\|\>><rsub|Y>>|<cell|\<leqslant\>>|<cell|M>>>>
+        </eqnarray*>
+
+        so that\ 
+
+        <\equation*>
+          <around*|\<\|\|\>|L<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>|\<\|\|\>><rsub|Y>\<leqslant\>M\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>
+        </equation*>
+      </description>
+
+      <item*|<math|4\<Rightarrow\>1>>By the hypothesis there exist a
+      <math|M\<in\>\<bbb-R\><rsup|+>> such that\ 
+
+      <\equation*>
+        \<forall\>x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i><text|
+        we have ><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>M\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>
+      </equation*>
+
+      Let <math|x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+      and <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> take then
+      <math|\<delta\>=min<around*|(|1,<frac|\<varepsilon\>|M>|)>> then we
+      have if <math|<around*|\<\|\|\>|x-y|\<\|\|\>><rsub|max>\<less\>\<delta\>>
+      that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+      <math|<around*|\<\|\|\>|x<rsub|i>-y<rsub|i>|\<\|\|\>><rsub|i>\<less\>\<delta\>>
+      so that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|L<around*|(|x|)>-L<around*|(|y|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|<around*|\<\|\|\>|L<around*|(|x-y|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|=>|<cell|M\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x<rsub|i>-y<rsub|i>|\<\|\|\>><rsub|i>>>|<row|<cell|>|<cell|=>|<cell|M\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>><around*|\<\|\|\>|x<rsub|i>-y<rsub|i>|\<\|\|\>><rsub|i>|)>\<cdot\><around*|\<\|\|\>|x<rsub|n>-y<rsub|i>|\<\|\|\>><rsub|n>>>|<row|<cell|>|<cell|\<less\>>|<cell|M*\<cdot\>1\<cdot\><around*|\<\|\|\>|x<rsub|n>|\<\|\|\>><rsub|n>>>|<row|<cell|>|<cell|\<less\>>|<cell|M\<cdot\><frac|\<varepsilon\>|M>>>|<row|<cell|>|<cell|=>|<cell|\<varepsilon\>>>>>
+      </eqnarray*>
+
+      proving that <math|L> is continuous at <math|x>. As
+      <math|x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+      was chosen arbitrary it follows that <math|L> is continuous.
+    </description>
+  </proof>
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
+  \;
 
   \;
 
@@ -6392,7 +7951,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|13>
-    <associate|page-first|647>
+    <associate|page-first|645>
     <associate|page-medium|paper>
     <associate|section-nr|0>
     <associate|subsection-nr|0>
@@ -6401,233 +7960,282 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|14|647>>
-    <associate|auto-10|<tuple|<with|mode|<quote|math>|A<rprime|'>>|652>>
-    <associate|auto-11|<tuple|14.1.2|653>>
-    <associate|auto-12|<tuple|box topology|657>>
-    <associate|auto-13|<tuple|14.1.3|661>>
-    <associate|auto-14|<tuple|dense set|661>>
-    <associate|auto-15|<tuple|14.2|662>>
-    <associate|auto-16|<tuple|pseudo metric space|662>>
-    <associate|auto-17|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|X,d|\<rangle\>>>|662>>
-    <associate|auto-18|<tuple|metric space|662>>
-    <associate|auto-19|<tuple|open ball|663>>
-    <associate|auto-2|<tuple|14.1|647>>
-    <associate|auto-20|<tuple|<with|mode|<quote|math>|B<rsub|d><around*|(|x,\<varepsilon\>|)>>|663>>
-    <associate|auto-21|<tuple|closed ball|663>>
-    <associate|auto-22|<tuple|<with|mode|<quote|math>|<wide|B<rsub|d><around*|(|x,\<varepsilon\>|)>|\<wide-bar\>>>|663>>
-    <associate|auto-23|<tuple|equivalent pseudo metrics|665>>
-    <associate|auto-24|<tuple|isometry|666>>
-    <associate|auto-25|<tuple|bounded set|667>>
-    <associate|auto-26|<tuple|diameter of a bounded set|667>>
-    <associate|auto-27|<tuple|<with|mode|<quote|math>|diam<around*|(|A|)>>|667>>
-    <associate|auto-28|<tuple|14.3|669>>
-    <associate|auto-29|<tuple|pseudo normed space|669>>
-    <associate|auto-3|<tuple|interior|650>>
-    <associate|auto-30|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>||\<\|\|\>>>|669>>
-    <associate|auto-31|<tuple|equivalent norms|684>>
-    <associate|auto-32|<tuple|liner isometry|685>>
-    <associate|auto-33|<tuple|14.4|685>>
-    <associate|auto-34|<tuple|14.4.1|685>>
-    <associate|auto-35|<tuple|continuity at a point|685>>
-    <associate|auto-36|<tuple|continous function|686>>
-    <associate|auto-37|<tuple|open function|688>>
+    <associate|auto-1|<tuple|14|645>>
+    <associate|auto-10|<tuple|<with|mode|<quote|math>|A<rprime|'>>|650>>
+    <associate|auto-11|<tuple|14.1.2|651>>
+    <associate|auto-12|<tuple|box topology|655>>
+    <associate|auto-13|<tuple|14.1.3|659>>
+    <associate|auto-14|<tuple|dense set|659>>
+    <associate|auto-15|<tuple|14.2|660>>
+    <associate|auto-16|<tuple|pseudo metric space|660>>
+    <associate|auto-17|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|X,d|\<rangle\>>>|660>>
+    <associate|auto-18|<tuple|metric space|660>>
+    <associate|auto-19|<tuple|open ball|661>>
+    <associate|auto-2|<tuple|14.1|645>>
+    <associate|auto-20|<tuple|<with|mode|<quote|math>|B<rsub|d><around*|(|x,\<varepsilon\>|)>>|661>>
+    <associate|auto-21|<tuple|closed ball|661>>
+    <associate|auto-22|<tuple|<with|mode|<quote|math>|<wide|B<rsub|d><around*|(|x,\<varepsilon\>|)>|\<wide-bar\>>>|661>>
+    <associate|auto-23|<tuple|equivalent pseudo metrics|663>>
+    <associate|auto-24|<tuple|isometry|664>>
+    <associate|auto-25|<tuple|bounded set|665>>
+    <associate|auto-26|<tuple|diameter of a bounded set|665>>
+    <associate|auto-27|<tuple|<with|mode|<quote|math>|diam<around*|(|A|)>>|665>>
+    <associate|auto-28|<tuple|14.3|667>>
+    <associate|auto-29|<tuple|pseudo normed space|667>>
+    <associate|auto-3|<tuple|interior|648>>
+    <associate|auto-30|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>||\<\|\|\>>>|667>>
+    <associate|auto-31|<tuple|equivalent norms|681>>
+    <associate|auto-32|<tuple|liner isometry|683>>
+    <associate|auto-33|<tuple|14.4|683>>
+    <associate|auto-34|<tuple|14.4.1|683>>
+    <associate|auto-35|<tuple|continuity at a point|683>>
+    <associate|auto-36|<tuple|continous function|684>>
+    <associate|auto-37|<tuple|open function|686>>
     <associate|auto-38|<tuple|14.4.2|691>>
-    <associate|auto-39|<tuple|uniform continuity|691>>
-    <associate|auto-4|<tuple|<with|mode|<quote|math>|A<rsup|\<circ\>>>|650>>
-    <associate|auto-40|<tuple|Lipschitz condition|692>>
+    <associate|auto-39|<tuple|uniform continuity|692>>
+    <associate|auto-4|<tuple|<with|mode|<quote|math>|A<rsup|\<circ\>>>|648>>
+    <associate|auto-40|<tuple|Lipschitz condition|693>>
     <associate|auto-41|<tuple|distance function|693>>
     <associate|auto-42|<tuple|<with|mode|<quote|math>|\<delta\><rsub|S>>|693>>
-    <associate|auto-43|<tuple|14.4.3|693>>
-    <associate|auto-5|<tuple|14.1.1|650>>
-    <associate|auto-6|<tuple|closed set|650>>
-    <associate|auto-7|<tuple|<with|mode|<quote|math>|\<cal-T\><rsup|\<cal-C\>>>|650>>
-    <associate|auto-8|<tuple|limit point|652>>
-    <associate|auto-9|<tuple|accumulation point|652>>
-    <associate|closed set properties|<tuple|14.19|651>>
-    <associate|continuity|<tuple|14.128|691>>
-    <associate|continuity Lispschitz condition|<tuple|14.132|692>>
+    <associate|auto-43|<tuple|14.4.3|694>>
+    <associate|auto-44|<tuple|14.5|698>>
+    <associate|auto-45|<tuple|<with|mode|<quote|math>|L<around*|(|X,Y|)>>|698>>
+    <associate|auto-46|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,Y|)>>>|700>>
+    <associate|auto-47|<tuple|14.6|?>>
+    <associate|auto-5|<tuple|14.1.1|648>>
+    <associate|auto-6|<tuple|closed set|648>>
+    <associate|auto-7|<tuple|<with|mode|<quote|math>|\<cal-T\><rsup|\<cal-C\>>>|648>>
+    <associate|auto-8|<tuple|limit point|650>>
+    <associate|auto-9|<tuple|accumulation point|650>>
+    <associate|closed set properties|<tuple|14.19|649>>
+    <associate|continuity|<tuple|14.134|692>>
+    <associate|continuity L(X,Y) is a subspace of
+    Hom(X,Y)|<tuple|14.154|698>>
+    <associate|continuity Lispschitz condition|<tuple|14.138|693>>
     <associate|continuity Lispschitz implies uniform
-    continuity|<tuple|14.133|692>>
-    <associate|continuity and basis|<tuple|14.109|685>>
-    <associate|continuity and subspace topology (1)|<tuple|14.115|687>>
-    <associate|continuity and subspace topology (2)|<tuple|14.116|687>>
-    <associate|continuity at a point|<tuple|14.107|685>>
-    <associate|continuity composition|<tuple|14.119|688>>
-    <associate|continuity constant function|<tuple|14.113|686>>
-    <associate|continuity continuous function|<tuple|14.112|686>>
-    <associate|continuity continuous function (1)|<tuple|14.114|687>>
-    <associate|continuity distance function is Lipschitz|<tuple|14.136|693>>
-    <associate|continuity equivalences|<tuple|14.117|688>>
-    <associate|continuity function partial application|<tuple|14.122|690>>
-    <associate|continuity homeomorphism|<tuple|14.137|693>>
-    <associate|continuity homeomorphism (1)|<tuple|14.138|693>>
-    <associate|continuity homeomorphism and restriction|<tuple|14.141|694>>
-    <associate|continuity homeomorphism composition|<tuple|14.140|694>>
-    <associate|continuity identity function|<tuple|14.127|691>>
-    <associate|continuity in a metric space|<tuple|14.110|686>>
-    <associate|continuity in a normed space|<tuple|14.111|686>>
-    <associate|continuity inverse of a homeomorphism|<tuple|14.139|694>>
-    <associate|continuity isometry is a homeomorphism|<tuple|14.142|?>>
-    <associate|continuity of sum|<tuple|14.130|692>>
-    <associate|continuity of sum (1)|<tuple|14.131|692>>
-    <associate|continuity open function|<tuple|14.118|688>>
+    continuity|<tuple|14.139|693>>
+    <associate|continuity and basis|<tuple|14.110|683>>
+    <associate|continuity and subspace topology (1)|<tuple|14.116|685>>
+    <associate|continuity and subspace topology (2)|<tuple|14.117|685>>
+    <associate|continuity at a point|<tuple|14.108|683>>
+    <associate|continuity composition|<tuple|14.120|686>>
+    <associate|continuity composition of continuous linear
+    mapping|<tuple|14.164|703>>
+    <associate|continuity constant function|<tuple|14.114|684>>
+    <associate|continuity continuous function|<tuple|14.113|684>>
+    <associate|continuity continuous function (1)|<tuple|14.115|685>>
+    <associate|continuity distance function is Lipschitz|<tuple|14.142|693>>
+    <associate|continuity equivalences|<tuple|14.118|686>>
+    <associate|continuity function partial application|<tuple|14.123|688>>
+    <associate|continuity homemorphism between powers of
+    R|<tuple|14.157|699>>
+    <associate|continuity homeomorphism|<tuple|14.143|694>>
+    <associate|continuity homeomorphism (1)|<tuple|14.144|694>>
+    <associate|continuity homeomorphism and restriction|<tuple|14.147|694>>
+    <associate|continuity homeomorphism between K^n and finite dimensional
+    space|<tuple|14.151|697>>
+    <associate|continuity homeomorphism composition|<tuple|14.146|694>>
+    <associate|continuity identity function|<tuple|14.133|692>>
+    <associate|continuity identity map is linear and
+    continuous|<tuple|14.153|698>>
+    <associate|continuity in a metric space|<tuple|14.111|684>>
+    <associate|continuity in a normed space|<tuple|14.112|684>>
+    <associate|continuity induced topology|<tuple|14.149|695>>
+    <associate|continuity inverse induced topology|<tuple|14.150|696>>
+    <associate|continuity inverse of a homeomorphism|<tuple|14.145|694>>
+    <associate|continuity isometry is a homeomorphism|<tuple|14.148|695>>
+    <associate|continuity linear mapping (1)|<tuple|14.155|698>>
+    <associate|continuity linear mapping between R^n|<tuple|14.156|699>>
+    <associate|continuity multilinear mapping (1)|<tuple|14.166|?>>
+    <associate|continuity norm of continuous linear mapping
+    (1)|<tuple|14.158|699>>
+    <associate|continuity norm of projection operator|<tuple|14.163|703>>
+    <associate|continuity norm on L(X,Y)|<tuple|14.162|702>>
+    <associate|continuity of finite sum of continuous
+    functions|<tuple|14.127|690>>
+    <associate|continuity of power function|<tuple|14.130|691>>
+    <associate|continuity of sum|<tuple|14.136|692>>
+    <associate|continuity of sum (1)|<tuple|14.137|693>>
+    <associate|continuity of sum of continuous functions|<tuple|14.126|689>>
+    <associate|continuity open function|<tuple|14.119|686>>
+    <associate|continuity open linear mapping|<tuple|14.165|703>>
+    <associate|continuity operator norm|<tuple|14.159|700>>
+    <associate|continuity operator norm (1)|<tuple|14.160|700>>
+    <associate|continuity operator norm (2)|<tuple|14.161|702>>
+    <associate|continuity power of continuous functions|<tuple|14.129|691>>
     <associate|continuity product and continuous
-    functions|<tuple|14.121|689>>
+    functions|<tuple|14.122|687>>
+    <associate|continuity product of continuous functions|<tuple|14.128|690>>
     <associate|continuity projection map is open and
-    continuous|<tuple|14.120|689>>
-    <associate|continuity real and complex part|<tuple|14.129|692>>
-    <associate|continuity scalar product|<tuple|14.123|690>>
-    <associate|continuity scalar product (1)|<tuple|14.124|691>>
-    <associate|continuity uniform continuity|<tuple|14.125|691>>
+    continuous|<tuple|14.121|687>>
+    <associate|continuity real and complex part|<tuple|14.135|692>>
+    <associate|continuity scalar product|<tuple|14.124|688>>
+    <associate|continuity scalar product (1)|<tuple|14.125|689>>
+    <associate|continuity uniform continuity|<tuple|14.131|692>>
     <associate|continuity universal continuity implies
-    continuity|<tuple|14.126|691>>
-    <associate|eq 14.1.145|<tuple|14.1|652>>
-    <associate|eq 14.10.146|<tuple|14.10|659>>
-    <associate|eq 14.11.146|<tuple|14.11|660>>
-    <associate|eq 14.12.146|<tuple|14.12|661>>
-    <associate|eq 14.13.146|<tuple|14.13|665>>
-    <associate|eq 14.14.146|<tuple|14.14|665>>
-    <associate|eq 14.15.146|<tuple|14.15|666>>
-    <associate|eq 14.16.146|<tuple|14.16|666>>
-    <associate|eq 14.17.146|<tuple|14.17|667>>
-    <associate|eq 14.18.146|<tuple|14.18|668>>
-    <associate|eq 14.19.146|<tuple|14.19|669>>
-    <associate|eq 14.2.145|<tuple|14.2|653>>
-    <associate|eq 14.20.146|<tuple|14.20|669>>
-    <associate|eq 14.21.146|<tuple|14.21|671>>
-    <associate|eq 14.22.146|<tuple|14.22|674>>
-    <associate|eq 14.23.146|<tuple|14.23|675>>
-    <associate|eq 14.24.146|<tuple|14.24|676>>
-    <associate|eq 14.25.146|<tuple|14.25|677>>
-    <associate|eq 14.26.146|<tuple|14.26|678>>
-    <associate|eq 14.27.146|<tuple|14.27|678>>
-    <associate|eq 14.28.147|<tuple|14.28|678>>
-    <associate|eq 14.29.146|<tuple|14.30|679>>
-    <associate|eq 14.29.147|<tuple|14.29|679>>
-    <associate|eq 14.3.146|<tuple|14.3|658>>
-    <associate|eq 14.30.146|<tuple|14.31|679>>
-    <associate|eq 14.31.146|<tuple|14.32|680>>
-    <associate|eq 14.32.146|<tuple|14.33|680>>
-    <associate|eq 14.33.146|<tuple|14.34|680>>
-    <associate|eq 14.35.147|<tuple|14.35|680>>
-    <associate|eq 14.36.147|<tuple|14.36|681>>
-    <associate|eq 14.37.147|<tuple|14.37|682>>
-    <associate|eq 14.38.147|<tuple|14.38|682>>
-    <associate|eq 14.39.147|<tuple|14.39|682>>
-    <associate|eq 14.4.146|<tuple|14.4|659>>
-    <associate|eq 14.41.147|<tuple|14.41|683>>
-    <associate|eq 14.43.147|<tuple|14.43|688>>
-    <associate|eq 14.44.147|<tuple|14.44|689>>
-    <associate|eq 14.45.147|<tuple|14.45|690>>
-    <associate|eq 14.46.147|<tuple|14.46|690>>
-    <associate|eq 14.47.147|<tuple|14.47|?>>
-    <associate|eq 14.48.147|<tuple|14.48|?>>
-    <associate|eq 14.49.147|<tuple|14.49|?>>
-    <associate|eq 14.5.146|<tuple|14.5|659>>
-    <associate|eq 14.6.146|<tuple|14.6|659>>
-    <associate|eq 14.7.146|<tuple|14.7|659>>
-    <associate|eq 14.8.146|<tuple|14.8|659>>
-    <associate|eq 14.9.146|<tuple|14.9|659>>
-    <associate|metric ball image preimage|<tuple|14.66|666>>
-    <associate|metric bounded set|<tuple|14.68|667>>
-    <associate|metric bounded set inclusion|<tuple|14.70|667>>
-    <associate|metric closed ball|<tuple|14.54|663>>
-    <associate|metric closed balls are closed|<tuple|14.59|664>>
-    <associate|metric closed open balls are bounded|<tuple|14.71|667>>
-    <associate|metric composition of isometries|<tuple|14.65|666>>
-    <associate|metric dense set|<tuple|14.74|669>>
-    <associate|metric equivalent metrics|<tuple|14.61|665>>
-    <associate|metric equivalent metrics condition|<tuple|14.62|665>>
-    <associate|metric isometry|<tuple|14.63|666>>
-    <associate|metric isometry and its inverse|<tuple|14.64|666>>
-    <associate|metric isometry and topologies|<tuple|14.67|666>>
-    <associate|metric open ball|<tuple|14.53|663>>
-    <associate|metric open ball and intersection|<tuple|14.55|663>>
-    <associate|metric product topology|<tuple|14.72|668>>
-    <associate|metric pseudo metric space|<tuple|14.50|662>>
-    <associate|metric refinement of a ball|<tuple|14.56|663>>
-    <associate|metric space|<tuple|14.51|662>>
-    <associate|metric space metric is positive|<tuple|14.52|663>>
-    <associate|metric subtopology|<tuple|14.60|664>>
-    <associate|metric topology|<tuple|14.57|663>>
-    <associate|metric topology (1)|<tuple|14.58|664>>
-    <associate|normded triangle inequality|<tuple|14.79|671>>
-    <associate|normed absolute value norm differences|<tuple|14.80|671>>
+    continuity|<tuple|14.132|692>>
+    <associate|eq 14.1.145|<tuple|14.1|650>>
+    <associate|eq 14.10.146|<tuple|14.10|657>>
+    <associate|eq 14.11.146|<tuple|14.11|658>>
+    <associate|eq 14.12.146|<tuple|14.12|659>>
+    <associate|eq 14.13.146|<tuple|14.13|663>>
+    <associate|eq 14.14.146|<tuple|14.14|663>>
+    <associate|eq 14.15.146|<tuple|14.15|664>>
+    <associate|eq 14.16.146|<tuple|14.16|664>>
+    <associate|eq 14.17.146|<tuple|14.17|665>>
+    <associate|eq 14.18.146|<tuple|14.18|666>>
+    <associate|eq 14.19.146|<tuple|14.19|667>>
+    <associate|eq 14.2.145|<tuple|14.2|651>>
+    <associate|eq 14.20.146|<tuple|14.20|667>>
+    <associate|eq 14.21.146|<tuple|14.21|669>>
+    <associate|eq 14.22.146|<tuple|14.22|672>>
+    <associate|eq 14.23.146|<tuple|14.23|673>>
+    <associate|eq 14.24.146|<tuple|14.24|674>>
+    <associate|eq 14.25.146|<tuple|14.25|675>>
+    <associate|eq 14.26.146|<tuple|14.26|676>>
+    <associate|eq 14.27.146|<tuple|14.27|676>>
+    <associate|eq 14.28.147|<tuple|14.28|676>>
+    <associate|eq 14.29.146|<tuple|14.30|677>>
+    <associate|eq 14.29.147|<tuple|14.29|677>>
+    <associate|eq 14.3.146|<tuple|14.3|656>>
+    <associate|eq 14.30.146|<tuple|14.31|677>>
+    <associate|eq 14.31.146|<tuple|14.32|678>>
+    <associate|eq 14.32.146|<tuple|14.33|678>>
+    <associate|eq 14.33.146|<tuple|14.34|678>>
+    <associate|eq 14.35.147|<tuple|14.35|678>>
+    <associate|eq 14.36.147|<tuple|14.36|679>>
+    <associate|eq 14.37.147|<tuple|14.37|680>>
+    <associate|eq 14.38.147|<tuple|14.38|680>>
+    <associate|eq 14.39.147|<tuple|14.39|680>>
+    <associate|eq 14.4.146|<tuple|14.4|657>>
+    <associate|eq 14.41.147|<tuple|14.41|681>>
+    <associate|eq 14.43.147|<tuple|14.43|686>>
+    <associate|eq 14.44.147|<tuple|14.44|687>>
+    <associate|eq 14.45.147|<tuple|14.45|688>>
+    <associate|eq 14.46.147|<tuple|14.46|688>>
+    <associate|eq 14.47.147|<tuple|14.50|694>>
+    <associate|eq 14.47.148|<tuple|14.47|690>>
+    <associate|eq 14.48.147|<tuple|14.51|694>>
+    <associate|eq 14.48.148|<tuple|14.48|691>>
+    <associate|eq 14.49.147|<tuple|14.52|695>>
+    <associate|eq 14.49.148|<tuple|14.49|691>>
+    <associate|eq 14.5.146|<tuple|14.5|657>>
+    <associate|eq 14.50.147|<tuple|14.53|696>>
+    <associate|eq 14.51.147|<tuple|14.54|696>>
+    <associate|eq 14.52.147|<tuple|14.55|696>>
+    <associate|eq 14.56.148|<tuple|14.56|700>>
+    <associate|eq 14.57.148|<tuple|14.57|701>>
+    <associate|eq 14.58.148|<tuple|14.58|701>>
+    <associate|eq 14.59.148|<tuple|14.59|701>>
+    <associate|eq 14.6.146|<tuple|14.6|657>>
+    <associate|eq 14.60.148|<tuple|14.60|701>>
+    <associate|eq 14.61.148|<tuple|14.61|702>>
+    <associate|eq 14.62.148|<tuple|14.62|702>>
+    <associate|eq 14.63.148|<tuple|14.63|702>>
+    <associate|eq 14.64.148|<tuple|14.64|?>>
+    <associate|eq 14.7.146|<tuple|14.7|657>>
+    <associate|eq 14.8.146|<tuple|14.8|657>>
+    <associate|eq 14.9.146|<tuple|14.9|657>>
+    <associate|metric ball image preimage|<tuple|14.66|664>>
+    <associate|metric bounded set|<tuple|14.68|665>>
+    <associate|metric bounded set inclusion|<tuple|14.70|665>>
+    <associate|metric closed ball|<tuple|14.54|661>>
+    <associate|metric closed balls are closed|<tuple|14.59|662>>
+    <associate|metric closed open balls are bounded|<tuple|14.71|665>>
+    <associate|metric composition of isometries|<tuple|14.65|664>>
+    <associate|metric dense set|<tuple|14.74|667>>
+    <associate|metric equivalent metrics|<tuple|14.61|663>>
+    <associate|metric equivalent metrics condition|<tuple|14.62|663>>
+    <associate|metric isometry|<tuple|14.63|664>>
+    <associate|metric isometry and its inverse|<tuple|14.64|664>>
+    <associate|metric isometry and topologies|<tuple|14.67|664>>
+    <associate|metric open ball|<tuple|14.53|661>>
+    <associate|metric open ball and intersection|<tuple|14.55|661>>
+    <associate|metric product topology|<tuple|14.72|666>>
+    <associate|metric pseudo metric space|<tuple|14.50|660>>
+    <associate|metric refinement of a ball|<tuple|14.56|661>>
+    <associate|metric space|<tuple|14.51|660>>
+    <associate|metric space metric is positive|<tuple|14.52|661>>
+    <associate|metric subtopology|<tuple|14.60|662>>
+    <associate|metric topology|<tuple|14.57|661>>
+    <associate|metric topology (1)|<tuple|14.58|662>>
+    <associate|normded triangle inequality|<tuple|14.79|669>>
+    <associate|normed absolute value norm differences|<tuple|14.80|669>>
     <associate|normed all norms in the set of complex numbers are
-    equivalent|<tuple|14.102|684>>
+    equivalent|<tuple|14.103|682>>
     <associate|normed all norms in the set of real numbers are
-    equivalent|<tuple|14.101|684>>
-    <associate|normed ball|<tuple|14.82|672>>
-    <associate|normed basis of T\|\||<tuple|14.88|673>>
-    <associate|normed bounded set|<tuple|14.93|681>>
-    <associate|normed complex numbers|<tuple|14.85|672>>
-    <associate|normed dense set|<tuple|14.96|683>>
-    <associate|normed distinct function|<tuple|14.134|693>>
-    <associate|normed equivalent forms|<tuple|14.98|684>>
-    <associate|normed finer topologies|<tuple|14.97|683>>
-    <associate|normed generalized intervals that are open|<tuple|14.89|674>>
-    <associate|normed isometry|<tuple|14.105|685>>
-    <associate|normed isometry and inverse|<tuple|14.104|?>>
-    <associate|normed isometry composition|<tuple|14.106|685>>
-    <associate|normed linear isometry|<tuple|14.103|685>>
-    <associate|normed maximum norm|<tuple|14.77|670>>
-    <associate|normed norm|<tuple|14.76|670>>
-    <associate|normed norm equivalence|<tuple|14.99|684>>
-    <associate|normed norm equivalence condition|<tuple|14.100|684>>
-    <associate|normed norm of zero|<tuple|14.78|670>>
-    <associate|normed open generalized intervals|<tuple|14.90|676>>
-    <associate|normed open set as union of intervals|<tuple|14.91|677>>
-    <associate|normed pseudo norm|<tuple|14.75|669>>
-    <associate|normed real numbers|<tuple|14.86|673>>
-    <associate|normed space set operations|<tuple|14.95|681>>
-    <associate|normed sub space topology|<tuple|14.94|681>>
-    <associate|normed topology|<tuple|14.84|672>>
-    <associate|topology and complement closed sets|<tuple|14.18|651>>
-    <associate|topology basis|<tuple|14.29|653>>
-    <associate|topology basis alternative definition|<tuple|14.32|654>>
-    <associate|topology basis and open sets|<tuple|14.30|653>>
-    <associate|topology basis and super basis|<tuple|14.33|654>>
-    <associate|topology basis generating|<tuple|14.37|655>>
-    <associate|topology basis of a subspace topology|<tuple|14.31|654>>
-    <associate|topology basis of the product topology|<tuple|14.44|660>>
-    <associate|topology basis properties|<tuple|14.36|655>>
-    <associate|topology biggest open subset|<tuple|14.13|650>>
-    <associate|topology box|<tuple|14.39|657>>
-    <associate|topology box topology and bases|<tuple|14.40|657>>
-    <associate|topology closed set|<tuple|14.15|650>>
-    <associate|topology closed set and a basis|<tuple|14.35|655>>
-    <associate|topology closed set and closure|<tuple|14.23|652>>
-    <associate|topology closed set condition|<tuple|14.27|653>>
-    <associate|topology closure alterantive definition|<tuple|14.26|653>>
-    <associate|topology closure inclusion|<tuple|14.28|653>>
+    equivalent|<tuple|14.102|682>>
+    <associate|normed ball|<tuple|14.82|670>>
+    <associate|normed basis of T\|\||<tuple|14.89|671>>
+    <associate|normed bounded set|<tuple|14.94|679>>
+    <associate|normed complex numbers|<tuple|14.86|670>>
+    <associate|normed dense set|<tuple|14.97|681>>
+    <associate|normed distinct function|<tuple|14.140|693>>
+    <associate|normed equivalent forms|<tuple|14.99|681>>
+    <associate|normed finer topologies|<tuple|14.98|681>>
+    <associate|normed generalized intervals that are open|<tuple|14.90|672>>
+    <associate|normed isometry|<tuple|14.106|683>>
+    <associate|normed isometry and inverse|<tuple|14.105|683>>
+    <associate|normed isometry composition|<tuple|14.107|683>>
+    <associate|normed linear isometry|<tuple|14.104|683>>
+    <associate|normed maximum norm|<tuple|14.77|668>>
+    <associate|normed norm|<tuple|14.76|668>>
+    <associate|normed norm equivalence|<tuple|14.100|682>>
+    <associate|normed norm equivalence condition|<tuple|14.101|682>>
+    <associate|normed norm of zero|<tuple|14.78|668>>
+    <associate|normed open generalized intervals|<tuple|14.91|674>>
+    <associate|normed open set as union of intervals|<tuple|14.92|675>>
+    <associate|normed pseudo norm|<tuple|14.75|667>>
+    <associate|normed real numbers|<tuple|14.87|671>>
+    <associate|normed space and open sets|<tuple|14.85|?>>
+    <associate|normed space set operations|<tuple|14.96|679>>
+    <associate|normed sub space topology|<tuple|14.95|679>>
+    <associate|normed topology|<tuple|14.84|670>>
+    <associate|topology and complement closed sets|<tuple|14.18|649>>
+    <associate|topology basis|<tuple|14.29|651>>
+    <associate|topology basis alternative definition|<tuple|14.32|652>>
+    <associate|topology basis and open sets|<tuple|14.30|651>>
+    <associate|topology basis and super basis|<tuple|14.33|652>>
+    <associate|topology basis generating|<tuple|14.37|653>>
+    <associate|topology basis of a subspace topology|<tuple|14.31|652>>
+    <associate|topology basis of the product topology|<tuple|14.44|658>>
+    <associate|topology basis properties|<tuple|14.36|653>>
+    <associate|topology biggest open subset|<tuple|14.13|648>>
+    <associate|topology box|<tuple|14.39|655>>
+    <associate|topology box topology and bases|<tuple|14.40|655>>
+    <associate|topology closed set|<tuple|14.15|648>>
+    <associate|topology closed set and a basis|<tuple|14.35|653>>
+    <associate|topology closed set and closure|<tuple|14.23|650>>
+    <associate|topology closed set condition|<tuple|14.27|651>>
+    <associate|topology closure alterantive definition|<tuple|14.26|651>>
+    <associate|topology closure inclusion|<tuple|14.28|651>>
     <associate|topology closure is union of a set and its limit
-    points|<tuple|14.25|652>>
-    <associate|topology closure of a set|<tuple|14.20|652>>
-    <associate|topology closure of a set alternative|<tuple|14.22|652>>
-    <associate|topology coarse|<tuple|14.3|647>>
-    <associate|topology dense set|<tuple|14.46|661>>
-    <associate|topology dense set alternative|<tuple|14.47|661>>
-    <associate|topology dense set alternative (1)|<tuple|14.48|662>>
-    <associate|topology dense set property|<tuple|14.49|662>>
-    <associate|topology discrete|<tuple|14.4|648>>
-    <associate|topology empty set|<tuple|14.2|647>>
-    <associate|topology finer and basis|<tuple|14.34|654>>
-    <associate|topology finer topology|<tuple|14.5|648>>
-    <associate|topology finite intersection|<tuple|14.6|648>>
-    <associate|topology interior of a set|<tuple|14.11|650>>
-    <associate|topology limit point|<tuple|14.24|652>>
-    <associate|topology open set and interior|<tuple|14.14|650>>
-    <associate|topology open set condition|<tuple|14.7|648>>
-    <associate|topology product|<tuple|14.41|658>>
-    <associate|topology product alternative definition|<tuple|14.43|658>>
+    points|<tuple|14.25|650>>
+    <associate|topology closure of a set|<tuple|14.20|650>>
+    <associate|topology closure of a set alternative|<tuple|14.22|650>>
+    <associate|topology coarse|<tuple|14.3|645>>
+    <associate|topology dense set|<tuple|14.46|659>>
+    <associate|topology dense set alternative|<tuple|14.47|659>>
+    <associate|topology dense set alternative (1)|<tuple|14.48|660>>
+    <associate|topology dense set property|<tuple|14.49|660>>
+    <associate|topology discrete|<tuple|14.4|646>>
+    <associate|topology empty set|<tuple|14.2|645>>
+    <associate|topology finer and basis|<tuple|14.34|652>>
+    <associate|topology finer topology|<tuple|14.5|646>>
+    <associate|topology finite intersection|<tuple|14.6|646>>
+    <associate|topology interior of a set|<tuple|14.11|648>>
+    <associate|topology limit point|<tuple|14.24|650>>
+    <associate|topology open set and interior|<tuple|14.14|648>>
+    <associate|topology open set condition|<tuple|14.7|646>>
+    <associate|topology product|<tuple|14.41|656>>
+    <associate|topology product alternative definition|<tuple|14.43|656>>
     <associate|topology product topology and box topology are the same in the
-    finite case|<tuple|14.45|661>>
-    <associate|topology space|<tuple|14.1|647>>
-    <associate|topology subbasis|<tuple|14.38|656>>
-    <associate|topology subspace topology|<tuple|14.8|649>>
-    <associate|topology subspace topology open subset|<tuple|14.10|649>>
-    <associate|topology subsubspace topology|<tuple|14.9|649>>
+    finite case|<tuple|14.45|659>>
+    <associate|topology space|<tuple|14.1|645>>
+    <associate|topology subbasis|<tuple|14.38|654>>
+    <associate|topology subspace topology|<tuple|14.8|647>>
+    <associate|topology subspace topology open subset|<tuple|14.10|647>>
+    <associate|topology subsubspace topology|<tuple|14.9|647>>
   </collection>
 </references>
 
@@ -6697,6 +8305,10 @@
       <tuple|<tuple|distance function>|<pageref|auto-41>>
 
       <tuple|<tuple|<with|mode|<quote|math>|\<delta\><rsub|S>>>|<pageref|auto-42>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|L<around*|(|X,Y|)>>>|<pageref|auto-45>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,Y|)>>>>|<pageref|auto-46>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|14<space|2spc>Topology>
@@ -6739,6 +8351,10 @@
       <with|par-left|<quote|1tab>|14.4.3<space|2spc>Homemorphism
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-43>>
+
+      14.5<space|2spc>Linear mappings and continuity
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-44>
     </associate>
   </collection>
 </auxiliary>

@@ -8106,7 +8106,12 @@
 
     defining <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>>. Then
     <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> is a basis for
-    <math|F<rsup|n>> so that <math|dim<around*|(|F<rsup|n>|)>=n>.
+    <math|F<rsup|n>> so that <math|dim<around*|(|F<rsup|n>|)>=n>. Further\ 
+
+    <\equation*>
+      \<forall\>x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>F<rsup|n><text|
+      we have >x=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i>\<cdot\>e<rsub|i>
+    </equation*>
   </theorem>
 
   <\proof>
