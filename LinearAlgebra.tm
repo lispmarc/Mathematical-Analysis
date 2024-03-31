@@ -13546,10 +13546,10 @@
 
     is called a <with|font-series|bold|<math|n>-linear mapping>. The set of
     graphs of <math|n>-linear mappings is noted as
-    <math|Hom<around*|(|X<rsup|n>;Y|)>> so\ 
+    <math|Hom<rsup|n><around*|(|X;Y|)>> so\ 
 
     <\equation*>
-      Hom<around*|(|X<rsup|n>;Y|)>=Hom<around*|(|<wide*|X,\<ldots\>,X|\<wide-underbrace\>><rsub|n>;Y|)>
+      Hom<rsup|n><around*|(|X;Y|)>=Hom<around*|(|<wide*|X,\<ldots\>,X|\<wide-underbrace\>><rsub|n>;Y|)>
     </equation*>
   </definition>
 
@@ -13862,7 +13862,7 @@
     <math|n\<in\>\<bbb-N\>>, <math|X> a finite dimensional vector space over
     a field <math|F> with basis <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>>,
     <math|Y> a vector space over <math|F> and
-    <math|L\<in\>Hom<around*|(|X<rsup|n>;Y|)>> then <math|\<forall\>x\<in\>X>
+    <math|L\<in\>Hom<rsup|n><around*|(|X;Y|)>> then <math|\<forall\>x\<in\>X>
     we have\ 
 
     <\equation*>
@@ -14415,7 +14415,7 @@
   <\definition>
     <label|determinant symmetric>Let <math|X,Y> be vector spaces over a field
     <math|F>, <math|m\<in\>\<bbb-N\>> then a <math|n>-linear mapping
-    <math|L\<in\>Hom<around*|(|X<rsup|n>;Y|)>> [see definition:
+    <math|L\<in\>Hom<rsup|n><around*|(|X;Y|)>> [see definition:
     <reference|multi n-linear function>] is <with|font-series|bold|symmetric>
     if <math|\<forall\>\<sigma\>\<in\>P<rsub|n>> we have
 
@@ -14432,7 +14432,7 @@
   <\definition>
     <label|determinant skew-symmetric>Let <math|X,Y> be vector spaces over a
     field <math|F>, <math|n\<in\>\<bbb-N\>> then a <math|n>-linear mapping
-    <math|L\<in\>Hom<around*|(|X<rsup|n>;Y|)>> [see definition:
+    <math|L\<in\>Hom<rsup|n><around*|(|X;Y|)>> [see definition:
     <reference|multi n-linear function>] is
     <with|font-series|bold|skew-symmetric> if
     <math|\<forall\>\<sigma\>\<in\>P<rsub|n>> we have
@@ -14450,7 +14450,7 @@
   <\example>
     <label|determinant skew-symmetric/symmetric n-linear function>Let
     <math|X,Y> be vector space over a field <math|F> then if
-    <math|L\<in\>Hom<around*|(|X<rsup|1>;Y|)>> <math|L> is symmetric and
+    <math|L\<in\>Hom<rsup|1><around*|(|X;Y|)>> <math|L> is symmetric and
     skew-symmetric.
   </example>
 
@@ -14466,20 +14466,20 @@
     </equation*>
   </proof>
 
-  If <math|L\<in\>Hom<around*|(|X<rsup|n>;Y|)>> is symmetric then
-  <math|\<sigma\>L=L\<in\>Hom<around*|(|X<rsup|n>;Y|)>> and if <math|L> is
-  skew-symmetric we have <math|\<sigma\>L=sign<around*|(|\<sigma\>|)>\<cdot\>L\<in\>Hom<around*|(|X<rsup|n>;Y|)>>.
+  If <math|L\<in\>Hom<rsup|n><around*|(|X;Y|)>> is symmetric then
+  <math|\<sigma\>L=L\<in\>Hom<rsup|n><around*|(|X;Y|)>> and if <math|L> is
+  skew-symmetric we have <math|\<sigma\>L=sign<around*|(|\<sigma\>|)>\<cdot\>L\<in\>Hom<rsup|n><around*|(|X;Y|)>>.
   Actually this is a general result valid for every <math|n>-linear mapping.
 
   <\theorem>
     <label|determinant permutation applied on n-linear function>Let
     <math|X,Y> be vector spaces over a field <math|F>,
-    <math|n\<in\>\<bbb-N\>> and <math|L\<in\>Hom<around*|(|X<rsup|n>;Y|)>> a
+    <math|n\<in\>\<bbb-N\>> and <math|L\<in\>Hom<rsup|n><around*|(|X;Y|)>> a
     <math|n>-linear mapping then
 
     <\equation*>
       \<forall\>\<sigma\>\<in\>P<rsub|n><text| we have
-      >\<sigma\>L\<in\>Hom<around*|(|X<rsup|n>;Y|)>
+      >\<sigma\>L\<in\>Hom<rsup|n><around*|(|X;Y|)>
     </equation*>
   </theorem>
 
@@ -14562,7 +14562,7 @@
   <\theorem>
     <label|determinant construct of skew symmetric mapping>Let
     <math|n\<in\>\<bbb-N\>>, <math|X,Y> be vector spaces over a field
-    <math|F> and a <math|L\<in\>Hom<around*|(|X<rsup|n>;Y|)>> a
+    <math|F> and a <math|L\<in\>Hom<rsup|n><around*|(|X;Y|)>> a
     <math|n>-linear mapping then\ 
 
     <\equation*>
@@ -14574,7 +14574,7 @@
     <\note>
       The sum is well defined as <math|P<rsub|n>> is finite,
       <math|\<forall\>\<sigma\>\<in\>P<rsub|n>>
-      <math|\<sigma\>L\<in\>Hom<around*|(|X<rsup|n>;Y|)>\<Rightarrow\>sign<around*|(|\<sigma\>|)>\<cdot\>\<sigma\>L\<in\>Hom<around*|(|X<rsup|n>;Y|)>\<subseteq\>Y<rsup|x<rsup|n>>>
+      <math|\<sigma\>L\<in\>Hom<rsup|n><around*|(|X;Y|)>\<Rightarrow\>sign<around*|(|\<sigma\>|)>\<cdot\>\<sigma\>L\<in\>Hom<rsup|n><around*|(|X;Y|)>\<subseteq\>Y<rsup|x<rsup|n>>>
       and <math|Y<rsup|X<rsup|n>>> is a vector space [see theorems:
       <reference|permutation Pn is finite>, <reference|determinant
       permutation applied on n-linear function> and <reference|multilinear
@@ -14585,11 +14585,11 @@
   <\proof>
     Using [theorem: <reference|determinant permutation applied on n-linear
     function>] \ we have <math|\<forall\>\<sigma\>\<in\>P<rsub|n>> that
-    <math|sign<around*|(|\<sigma\>|)>\<cdot\>\<sigma\>L\<in\>Hom<around*|(|X<rsup|n>;Y|)>>
+    <math|sign<around*|(|\<sigma\>|)>\<cdot\>\<sigma\>L\<in\>Hom<rsup|n><around*|(|X;Y|)>>
     so that by [theorem: <reference|vector space finite sum (4)>]
 
     <\equation*>
-      <big|sum><rsub|\<sigma\>\<in\>P<rsub|n>>sign<around*|(|\<sigma\>|)>\<cdot\>\<sigma\>L\<in\>Hom<around*|(|X<rsup|n>;Y|)><text|
+      <big|sum><rsub|\<sigma\>\<in\>P<rsub|n>>sign<around*|(|\<sigma\>|)>\<cdot\>\<sigma\>L\<in\>Hom<rsup|n><around*|(|X;Y|)><text|
       or ><big|sum><rsub|\<sigma\>\<in\>P<rsub|n>>sign<around*|(|\<sigma\>|)>\<cdot\>\<sigma\>L<text|
       is >n<text|-linear>
     </equation*>
@@ -14616,7 +14616,7 @@
     <label|determinant skew-symmetric condition>Let <math|X,Y> be vector
     spaces over a field <math|F> with characteristic zero [see definition:
     <reference|field with characteristics zero>], <math|n\<in\>\<bbb-N\>> and
-    <math|L\<in\>Hom<around*|(|X<rsup|n>;Y|)>> then the following are
+    <math|L\<in\>Hom<rsup|n><around*|(|X;Y|)>> then the following are
     equivalent:
 
     <\enumerate>
@@ -14804,7 +14804,7 @@
     <label|determinant skew-symmetric condition (1)>Let <math|X,Y> be vector
     spaces over a field <math|F> with characteristic zero [see definition:
     <reference|field with characteristics zero>], <math|n\<in\>\<bbb-N\>> and
-    <math|L\<in\>Hom<around*|(|X<rsup|n>;Y|)>> a skew-symmetric
+    <math|L\<in\>Hom<rsup|n><around*|(|X;Y|)>> a skew-symmetric
     <math|n>-linear mapping then if <math|x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|n>>
     is such that <math|<around*|{|x<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>
     is a linear dependent set then <math|L<around*|(|x|)>=0>
@@ -14875,8 +14875,8 @@
       <item*|<math|n=1>>Then, as <math|dim<around*|(|X|)>\<less\>n>, it
       follows that <math|dim<around*|(|X|)>=0> so that by [example:
       <reference|basis dimension of trivial space>] <math|X=<around*|{|0|}>>.
-      Hence if <math|L\<in\>Hom<around*|(|X<rsup|0>;Y|)>> we have for
-      <math|x\<in\>X<rsup|0>> that <math|x=<around*|(|0|)>> so that
+      Hence if <math|L\<in\>Hom<rsup|1><around*|(|X;Y|)>> we have for
+      <math|x\<in\>X<rsup|1>> that <math|x=<around*|(|0|)>> so that
       <math|L<around*|(|x|)>=L<around*|(|0|)>\<equallim\><rsub|<text|[theorem:
       <reference|multi multilinear mappin one argument is 0>]>>0> proving the
       theorem.
@@ -14932,7 +14932,7 @@
     <label|determinant skew-symmetric mapping and basis>Let
     <math|n\<in\>\<bbb-N\>>, <math|X,Y> vector spaces over the field
     <math|F>, <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>\<subseteq\>X>
-    a basis for <math|X> and <math|L\<in\>Hom<around*|(|X<rsup|n>;Y|)>> such
+    a basis for <math|X> and <math|L\<in\>Hom<rsup|n><around*|(|X;Y|)>> such
     that <math|L> is skew-symmetric then <math|\<forall\>x\<in\>X> we have:\ 
 
     <\equation*>
@@ -15010,7 +15010,7 @@
     <label|determinant skew symmetric mappings is only determined by values
     on the basis (1)>Let <math|n\<in\>\<bbb-N\>>, <math|X,Y> vector spaces
     over the field <math|F>, <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>\<subseteq\>X>
-    a basis for <math|X> and <math|L\<in\>Hom<around*|(|X<rsup|n>;Y|)>> a
+    a basis for <math|X> and <math|L\<in\>Hom<rsup|n><around*|(|X;Y|)>> a
     <math|L> a skew-symmetric <math|n>-linear mapping then
     <math|\<forall\>x\<in\>X> we have
   </corollary>
@@ -15049,7 +15049,7 @@
     a basis for <math|X> then we have:
 
     <\enumerate>
-      <item>If <math|L<rsub|1>,L<rsub|2>\<in\>Hom<around*|(|X<rsup|n>;Y|)>>
+      <item>If <math|L<rsub|1>,L<rsub|2>\<in\>Hom<rsup|n><around*|(|X;Y|)>>
       are skew-symmetric n-linear mappings such that
 
       <\equation*>
@@ -15062,7 +15062,7 @@
         L<rsub|1>=L<rsub|2>
       </equation*>
 
-      <item>If <math|L\<in\>Hom<around*|(|X<rsup|n>;Y|)>> is a skew-symmetric
+      <item>If <math|L\<in\>Hom<rsup|n><around*|(|X;Y|)>> is a skew-symmetric
       n-linear mapping such that <math|L<around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>=0>
       then\ 
 
@@ -15122,7 +15122,7 @@
     <label|determinant mapping><index|determinant mapping><dueto|determinant
     function>Let <math|n\<in\>\<bbb-N\>>, <math|X> a <math|n>-dimensional
     vector space over a field with characteristic zero then a skew-symmetric
-    mapping <math|\<Delta\>\<in\>Hom<around*|(|X<rsup|n>;F|)>> is called a
+    mapping <math|\<Delta\>\<in\>Hom<rsup|n><around*|(|X;F|)>> is called a
     <with|font-series|bold|determinant function> or
     <with|font-series|bold|determinant mapping>.
   </definition>
@@ -15152,7 +15152,7 @@
     So\ 
 
     <\equation*>
-      C<rsub|0>\<in\>Hom<around*|(|X<rsup|n>;Y|)>
+      C<rsub|0>\<in\>Hom<rsup|n><around*|(|X;Y|)>
     </equation*>
 
     Further if <math|\<sigma\>\<in\>P<rsub|n>> then for <math|x\<in\>X> we
@@ -15271,7 +15271,7 @@
     So we have that\ 
 
     <\equation*>
-      \<Psi\>\<in\>Hom<around*|(|X<rsup|n>;F|)><text| or >\<Psi\><text| is
+      \<Psi\>\<in\>Hom<rsup|n><around*|(|X;F|)><text| or >\<Psi\><text| is
       >n<text|-linear>
     </equation*>
 
@@ -15342,7 +15342,7 @@
     <math|n\<in\>\<bbb-N\>>, <math|X> a vector space over a field <math|F> of
     characteristic zero, <math|Y> a vector space over the same field F and
     <math|\<Delta\>> a non zero determinant function. Then for every
-    skew-symmetric <math|L\<in\>Hom<around*|(|X<rsup|n>;Y|)>> there exist a
+    skew-symmetric <math|L\<in\>Hom<rsup|n><around*|(|X;Y|)>> there exist a
     <with|font-series|bold|unique ><math|y\<in\>Y> such that\ 
 
     <\equation*>
@@ -15398,7 +15398,7 @@
     Now\ 
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|\<Delta\><around*|(|h<rsub|1>,\<ldots\>,h<rsub|n>|)>>|<cell|=>|<cell|\<Delta\><around*|(|\<Delta\><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)><rsup|-1>\<cdot\>e<rsub|1>,e<rsub|2>,\<ldots\>,e<rsub|n>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|\<Delta\>\<in\>Hom<around*|(|X<rsup|n>;Y|)>>>|<cell|\<Delta\><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)><rsup|-1>\<cdot\>\<Delta\><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|1<eq-number><label|eq
+      <tformat|<table|<row|<cell|\<Delta\><around*|(|h<rsub|1>,\<ldots\>,h<rsub|n>|)>>|<cell|=>|<cell|\<Delta\><around*|(|\<Delta\><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)><rsup|-1>\<cdot\>e<rsub|1>,e<rsub|2>,\<ldots\>,e<rsub|n>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|\<Delta\>\<in\>Hom<rsup|n><around*|(|X;Y|)>>>|<cell|\<Delta\><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)><rsup|-1>\<cdot\>\<Delta\><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|1<eq-number><label|eq
       11.135.102>>>>>
     </eqnarray*>
 
@@ -15431,7 +15431,7 @@
     which proves that\ 
 
     <\equation*>
-      K\<in\>Hom<around*|(|X<rsup|n>;Y|)>
+      K\<in\>Hom<rsup|n><around*|(|X;Y|)>
     </equation*>
 
     Further if <math|\<sigma\>\<in\>P<rsub|n>> then if
@@ -15599,7 +15599,7 @@
     <label|determinant determinant underscore (1)>Let
     <math|n\<in\>\<bbb-N\>>, <math|X> a <math|n>-dimensional vector space
     over a field <math|F> with characteristic zero and
-    <math|\<Delta\>\<in\>Hom<around*|(|X<rsup|n>;F|)>> a determinant function
+    <math|\<Delta\>\<in\>Hom<rsup|n><around*|(|X;F|)>> a determinant function
     then we define:
 
     <\equation*>
@@ -15897,7 +15897,7 @@
     <math|n\<in\>\<bbb-N\>>, <math|X> a finite dimensional vector space over
     a field of characteristic zero with <math|dim<around*|(|X|)>=n>,
     <math|y\<in\>X>, <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|n>>
-    and <math|\<Delta\>\<in\>Hom<around*|(|X<rsup|n>;F|)>> a determinant
+    and <math|\<Delta\>\<in\>Hom<rsup|n><around*|(|X;F|)>> a determinant
     function then\ 
 
     <\equation*>
@@ -16519,7 +16519,7 @@
     <math|X> a vector space over a field <math|F> such that
     <math|dom<around*|(|X|)>=n>,
 
-    \ <math|\<Delta\>\<in\>Hom<around*|(|X<rsup|n>;F|)>> a non trivial
+    \ <math|\<Delta\>\<in\>Hom<rsup|n><around*|(|X;F|)>> a non trivial
     determinant function and <math|L\<in\>Hom<around*|(|X,X|)>> [a linear
     transformation] then we define\ 
 
@@ -16535,7 +16535,7 @@
     <label|determinant function and linear mapping (1)>Let
     <math|n\<in\>\<bbb-N\>>, <math|X> a vector space over a field <math|F>
     with characteristic zero such that <math|dom<around*|(|X|)>=n>,
-    <math|\<Delta\>\<in\>Hom<around*|(|X<rsup|n>;F|)>> a non trivial
+    <math|\<Delta\>\<in\>Hom<rsup|n><around*|(|X;F|)>> a non trivial
     determinant function and <math|L\<in\>Hom<around*|(|X,X|)>> then\ 
 
     <\equation*>
@@ -16561,7 +16561,7 @@
     proving that\ 
 
     <\equation*>
-      \<Delta\><rsub|L>\<in\>Hom<around*|(|X<rsup|n>;F|)><text| or
+      \<Delta\><rsub|L>\<in\>Hom<rsup|n><around*|(|X;F|)><text| or
       >\<Delta\><rsub|L><text| is >n<text|-linear>
     </equation*>
 
@@ -16599,7 +16599,7 @@
     <math|dim<around*|(|X|)>=n> and <math|L\<in\>Hom<around*|(|X,X|)>> then
     there exist a <math|\<alpha\>\<in\>F> such that for
     <with|font-series|bold|every> non trivial determinant function
-    <math|\<Delta\>\<in\>Hom<around*|(|X<rsup|n>;F|)>> we have\ 
+    <math|\<Delta\>\<in\>Hom<rsup|n><around*|(|X;F|)>> we have\ 
 
     <\equation*>
       \<Delta\><rsub|L>=\<alpha\>\<cdot\>\<Delta\>
@@ -16678,7 +16678,7 @@
     <math|L\<in\>Hom<around*|(|X,X|)>> then we define the function
 
     <\equation*>
-      det:Hom<around*|(|X<rsup|n>;Y|)>\<rightarrow\>F
+      det:Hom<rsup|n><around*|(|X;Y|)>\<rightarrow\>F
     </equation*>
 
     where <math|det<around*|(|L|)>\<in\>F> \ is the scalar such that for
@@ -17328,7 +17328,7 @@
     function, <math|L\<in\>Hom<around*|(|X,X|)>> then\ 
 
     <\equation*>
-      <wide|\<Delta\>L|\<wide-sqoverbrace\>>\<in\>Hom<around*|(|X<rsup|n>;Hom<around*|(|X,X|)>|)><text|
+      <wide|\<Delta\>L|\<wide-sqoverbrace\>>\<in\>Hom<rsup|n><around*|(|X;Hom<around*|(|X,X|)>|)><text|
       and ><wide|\<Delta\>L|\<wide-sqoverbrace\>><text| is skew-symmetric>
     </equation*>
   </theorem>
@@ -17830,7 +17830,7 @@
     This finally proves that\ 
 
     <\equation*>
-      <wide|\<Delta\>L|\<wide-sqoverbrace\>>\<in\>Hom<around*|(|X<rsup|n>;Hom<around*|(|X,X|)>|)>
+      <wide|\<Delta\>L|\<wide-sqoverbrace\>>\<in\>Hom<rsup|n><around*|(|X;Hom<around*|(|X,X|)>|)>
     </equation*>
 
     Next we have to prove that <math|<wide|\<Delta\>L|\<wide-sqoverbrace\>>>
@@ -17995,7 +17995,7 @@
       property>]\ 
 
       <\equation*>
-        <wide|\<Delta\>L|\<wide-sqoverbrace\>>\<in\>Hom<around*|(|X<rsup|n>;Hom<around*|(|X,X|)>|)>
+        <wide|\<Delta\>L|\<wide-sqoverbrace\>>\<in\>Hom<rsup|n><around*|(|X;Hom<around*|(|X,X|)>|)>
       </equation*>
 
       is a skew-symmetric <math|n>-linear mapping. Using [theorem:
@@ -24385,8 +24385,6 @@
     <associate|permutation {0,..,n and transposition|<tuple|11.30|?>>
     <associate|product finite product|<tuple|11.2|?>>
     <associate|product of family of elements with a zero in|<tuple|11.49|?>>
-    <associate|product of family of elements with a zero in
-    it|<tuple|11.49|?>>
     <associate|rank|<tuple|11.312|?>>
     <associate|sum alternative definition|<tuple|11.4|?>>
     <associate|sum alternative definition (1)|<tuple|11.15|?>>
