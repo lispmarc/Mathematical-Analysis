@@ -2342,7 +2342,7 @@
     <\equation*>
       U\<in\>\<cal-T\><rsub|d>\<Leftrightarrow\>\<forall\>x\<in\>U<text|
       there exist a >\<varepsilon\>\<in\>\<bbb-R\><rsup|+> such that
-      x\<in\>B<rsub|d><around*|(|x,\<varepsilon\>|)>\<in\>U
+      x\<in\>B<rsub|d><around*|(|x,\<varepsilon\>|)>\<subseteq\>U
     </equation*>
   </corollary>
 
@@ -3181,7 +3181,7 @@
     <math|I> finite then
 
     <\equation*>
-      <around*|\<\|\|\>||\<\|\|\>><rsub|max>:<big|prod><rsub|i\<in\>I>X<rsub|i>*\<times\><big|prod><rsub|i\<in\>I>X<rsub|i>\<rightarrow\>\<bbb-R\><text|
+      <around*|\<\|\|\>||\<\|\|\>><rsub|max>:<big|prod><rsub|i\<in\>I>X<rsub|i>*\<rightarrow\>\<bbb-R\><text|
       defined by ><around*|\<\|\|\>|x|\<\|\|\>><rsub|max>=max<around*|(|<around*|{|<around*|\<\|\|\>|\<pi\><rsub|i><around*|(|x|)>|\<\|\|\>><rsub|i>\|i\<in\>I|}>|)>
     </equation*>
 
@@ -5995,8 +5995,8 @@
     <math|<around*|\<\|\|\>|\<cdot\><around*|(|\<alpha\>,x|)>-\<cdot\><around*|(|\<beta\>,y|)>|\<\|\|\>>\<less\>\<varepsilon\>>.
     Applying then [theorem: <reference|continuity in a normed space>] proves
     that <math|\<cdot\>> is contuous at <math|<around*|(|\<alpha\>,x|)>\<in\>\<bbb-K\>\<times\>X>
-    which as <math|<around*|(|\<alpha\>\<cdot\>x|)>> was choosen arbitrary
-    proves continuity.
+    which as <math|<around*|(|\<alpha\>,x|)>> was choosen arbitrary proves
+    continuity.
   </proof>
 
   <\corollary>
@@ -7734,8 +7734,6 @@
   To summarize the the above theorems about <math|L<around*|(|X,Y|)>> we have
   \ 
 
-  TODO
-
   <\theorem>
     <label|continuity norm on L(X,Y)>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
@@ -7913,6 +7911,72 @@
       proving that <math|L> is open.
     </description>
   </proof>
+
+  <section|Topological Vector space>
+
+  <\definition>
+    <label|topological vector space><index|topological vector space>A\ 
+
+    <\definition>
+      <index|topological vector space>A topological vector space is a vector
+      space <math|<around*|\<langle\>|X,+,\<cdot\>|\<rangle\>>> over
+      <math|\<bbb-K\>> together with a topology <math|\<cal-T\>> \ on
+      <math|X> such that\ 
+
+      <\enumerate>
+        <item><math|+:X\<times\>X\<rightarrow\>X> defined by
+        <math|<around*|(|x,y|)>\<rightarrow\>+<around*|(|x,y|)>=x+y> is
+        continuous
+
+        <item><math|\<cdot\>:\<bbb-K\>\<times\>X\<rightarrow\>X> defined by
+        <math|<around*|(|\<alpha\>,x|)>\<rightarrow\>\<cdot\><around*|(|\<alpha\>,x|)>=\<alpha\>\<cdot\>x>
+        is continuous
+      </enumerate>
+
+      Here we use the product topology on <math|X\<times\>X> based on the
+      topology <math|\<cal-T\>> of <math|X> and the product topology on
+      <math|\<bbb-K\>\<times\>X> based on the absolute norm topology
+      <math|\<cal-T\><rsub|<around*|\|||\|>>> of <math|\<bbb-K\>> and the
+      topology <math|\<cal-T\>> of <math|X>.
+    </definition>
+
+    \;
+
+    <\example>
+      If <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+      is a normed space over <math|\<bbb-K\>> then
+      <math|<around*|\<langle\>|X,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>|\<rangle\>>>
+      is a topolgical vector space.
+    </example>
+
+    <\proof>
+      This follows from [theorems: <reference|continuity scalar product> and
+      <reference|continuity of sum>]\ 
+    </proof>
+  </definition>
+
+  <\definition>
+    <label|toplinear isomorphism><index|toplinear isomorphism>Let <math|X,Y>
+    be topological vector spaces then a \ is a
+    <with|font-series|bold|toplinear isomorphism> is a function
+    <math|L:X\<rightarrow\>Y> satisfying
+
+    <\enumerate>
+      <item><math|L> is a linear isomorphism, meaning that
+
+      <\enumerate>
+        <item><math|L> is a bijection
+
+        <item><math|L<around*|(|x+y|)>=L<around*|(|x|)>+L<around*|(|y|)>>
+
+        <item><math|L<around*|(|\<alpha\>\<cdot\>x|)>=\<alpha\>\<cdot\>L<around*|(|x|)>>
+      </enumerate>
+
+      <item><math|L> and <math|L<rsup|-1>> are continuous
+    </enumerate>
+
+    In other words a toplinear isomorphism is linear homeomorphism.
+  </definition>
 
   <section|Multilinear mappings and continuity>
 
@@ -9440,11 +9504,22 @@
   <section|Separation>
 
   <\definition>
-    <label|separation Hausdorff>A topological space
-    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> is
+    <label|separation Hausdorff><index|Hausdorff topological space>A
+    topological space <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> is
     <with|font-series|bold|Hausdorff> if <math|\<forall\>x,y\<in\>X> with
     <math|x\<neq\>y> there exists <math|U,V\<in\>\<cal-T\>> such that
     <math|x\<in\>U>, <math|y\<in\>V> and <math|U<big|cap>V=\<varnothing\>>.
+    In other words a toplogical space is <with|font-series|bold|Hausdorff> if
+    two different points can be separated by disjoint open sets.
+  </definition>
+
+  It turns out that all metric and normed spaces are Hausdorff
+
+  <\theorem>
+    <label|separation metric spaces are Hausdorff>If
+    <math|<around*|\<langle\>|X,d|\<rangle\>>> is a metric space then
+    <math|<around*|\<langle\>|X,\<cal-T\><rsub|d>|\<rangle\>>> is Hausdorff
+    [using the metric topology <math|\<cal-T\><rsub|d>>]\ 
 
     <\note>
       If <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
@@ -9452,14 +9527,6 @@
       <reference|normed topology>]>><around*|\<langle\>|X,\<cal-T\><rsub|d<rsub|<around*|\<\|\|\>||\<\|\|\>>>>|\<rangle\>>>
       so that every normed space is also Hausdorff.
     </note>
-  </definition>
-
-  It turns out that all metric and normed spaces are Hausdorff
-
-  <\theorem>
-    <label|separation>If <math|<around*|\<langle\>|X,d|\<rangle\>>> is a
-    metric space then <math|<around*|\<langle\>|X,\<cal-T\><rsub|d>|\<rangle\>>>
-    is Hausdorff [using the metric topology <math|\<cal-T\><rsub|d>>]\ 
   </theorem>
 
   <\proof>
@@ -9486,7 +9553,7 @@
     </equation*>
   </proof>
 
-  One benefit of a normed spaces is that every finite set is closed in a
+  One benefit of a Hausdorff spaces is that every finite set is closed in a
   Hausdorff space.
 
   <\theorem>
@@ -9526,6 +9593,319 @@
       <reference|closed set properties>] that <math|A> is closed.
     </description>
   </proof>
+
+  <\definition>
+    <label|separation regular topological space><index|regular topological
+    space>A topological space <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>>
+    is <with|font-series|bold|regular> if for every closed set <math|A> and
+    <math|x\<in\>X\\A> there exists <math|U,V\<in\>\<cal-T\>> such that
+    <math|x\<in\>U>, <math|A\<subseteq\>V> and
+    <math|U<big|cap>V=\<varnothing\>>. In other words a topological space is
+    <with|font-series|bold|regular> if every closed set and a point outside
+    the closed set can be separated by disjoint open sets.
+  </definition>
+
+  All metric and normed spaces are not only Hausdorff but also regular.
+
+  <\theorem>
+    <label|separation metric spaces are regular>If
+    <math|<around*|\<langle\>|X,d|\<rangle\>>> is a metric space then
+    <math|<around*|\<langle\>|X,\<cal-T\><rsub|d>|\<rangle\>>> is regular
+    [using the metric topology <math|\<cal-T\><rsub|d>>]\ 
+
+    <\note>
+      If <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+      is a normed space then <math|<around*|\<langle\>|X,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>|\<rangle\>>\<equallim\><rsub|<text|[definition:
+      <reference|normed topology>]>><around*|\<langle\>|X,\<cal-T\><rsub|d<rsub|<around*|\<\|\|\>||\<\|\|\>>>>|\<rangle\>>>
+      so that every normed space is also regular.
+    </note>
+  </theorem>
+
+  <\proof>
+    Let <math|A> be a closed set and <math|x\<nin\>A> then as
+    <math|x\<in\>X\\A> (which is open) there exists a <math|U> open with
+    <math|x\<in\>U\<subseteq\>X\\A> so that <math|x\<in\>U> and
+    <math|U<big|cap>A=\<varnothing\>>. As <math|x\<in\>U> a open set there
+    exist by [theorem: <reference|metric topology (1)>] a
+    <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+
+    <\equation*>
+      x\<in\>B<rsub|d><around*|(|x,\<delta\>|)>\<subseteq\>U\<Rightarrowlim\><rsub|U\<subseteq\>X\\A>B<rsub|d><around*|(|x,\<delta\>|)><big|cap>A=\<varnothing\>.
+    </equation*>
+
+    Given <math|a\<in\>A> assume that
+
+    <\equation*>
+      z\<in\>B<rsub|d><around*|(|x,<frac|\<delta\>|2>|)><big|cap>B<rsub|d><around*|(|a,<frac|\<delta\>|2>|)>
+    </equation*>
+
+    then <math|d<around*|(|x,z|)>\<less\><frac|\<delta\>|2>\<wedge\>d<around*|(|a,z|)>\<less\><frac|\<delta\>|2>>
+    so that <math|d<around*|(|x,a|)>\<leqslant\>d<around*|(|x,z|)>+d<around*|(|z,a|)>\<less\><frac|\<delta\>|2>+<frac|\<delta\>|2>=\<delta\>>
+    proving that <math|a\<in\>B<rsub|d><around*|(|x,\<delta\>|)>>
+    contradicting <math|B<rsub|d><around*|(|x,\<delta\>|)><big|cap>A=\<varnothing\>>.
+    Hence we must have that\ 
+
+    <\equation>
+      <label|eq 14.108.150>B<rsub|d><around*|(|x,<frac|\<delta\>|2>|)><big|cap>B<rsub|d><around*|(|a,<frac|\<delta\>|2>|)>=\<varnothing\>
+    </equation>
+
+    Take <math|V=<big|cup><rsub|a\<in\>A>B<rsub|d>*<around*|(|a,<frac|\<delta\>|2>|)>>
+    a open set and <math|U=B<rsub|d><around*|(|x,<frac|\<delta\>|2>|)>> then
+    we have\ 
+
+    <\equation*>
+      A\<subseteq\>V\<wedge\>x\<in\>B<rsub|d><around*|(|x,<frac|\<delta\>|2>|)>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      V<big|cap>U=<around*|(|<big|cup><rsub|a\<in\>A>B<rsub|d><around*|(|a,<frac|\<delta\>|2>|)>|)><big|cap>B<rsub|d><around*|(|x,<frac|\<delta\>|2>|)>=<big|cup><rsub|a\<in\>A><around*|(|B<rsub|d><around*|(|a,<frac|\<delta\>|2>|)><big|cap>B<rsub|d><around*|(|x,<frac|\<delta\>|2>|)>|)>\<equallim\><rsub|<text|[eq:
+      <reference|eq 14.108.150>]>>\<varnothing\>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|separation regularity and non empty open sets>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a regular
+    topological space, <math|U> a open set, <math|x\<in\>U> then there exist
+    a <math|V\<in\>\<cal-T\>> such that <math|x\<in\>V> and
+    <math|<wide|V|\<wide-bar\>>\<subseteq\>U>.
+  </theorem>
+
+  <\proof>
+    Take <math|x\<in\>U> then as <math|X\\U> is a closed set and
+    <math|x\<in\>U\<equallim\><rsub|<text|[theorem: <reference|class
+    inclusion and union and intersection>]>>X\\<around*|(|X\\U|)>> there
+    exist a <math|V,W\<in\>\<cal-T\>> such that <math|x\<in\>V>,
+    <math|X\\U\<subseteq\>W> and <math|V<big|cap>W=\<varnothing\>\<Rightarrow\>V\<subseteq\>X\\W\<Rightarrowlim\><rsub|<text|[theorem:
+    <reference|topology closure of a set alternative>]>><wide|V|\<wide-bar\>>\<subseteq\>X\\W>.
+    As <math|X\\U\<subseteq\>W> we have <math|X\\W\<subseteq\>X\\<around*|(|X\\U|)>\<equallim\><rsub|<text|[theorem:
+    <reference|class inclusion and union and intersection>]>>U>. Hence we
+    have <math|<wide|V|\<wide-bar\>>\<subseteq\>U>.
+  </proof>
+
+  <\definition>
+    <label|separation normal topological space><index|normal topological
+    space>A topological space <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>>
+    is normal if for every pair of distinct closed sets <math|A,B> there
+    exist <math|U,V\<in\>\<cal-T\>> such that <math|A\<subseteq\>U>,
+    <math|B\<subseteq\>V> and <math|U<big|cap>V>. In other words a
+    topological space is normed if every disjoint pair of closed sets can be
+    separated by a disjoint pair of open sets.
+  </definition>
+
+  <\theorem>
+    <label|separation conditions>Let <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>>
+    be a topological space then we have:
+
+    <\enumerate>
+      <item>If <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> is a normal
+      space such that <math|\<forall\>x\<in\>X> <math|<around*|{|x|}>> is
+      closed then <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> is
+      regular
+
+      <item>If <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> is a
+      regular space such that <math|\<forall\>x\<in\>X>
+      <math|<around*|{|x|}>> is closed then
+      <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> is Hausdorff.
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|A> be a closed set and <math|x\<in\>X\\A> then by the
+      hypothesis <math|<around*|{|x|}>> is closed, so by normality there
+      exists <math|U,V\<in\>\<cal-T\>> such that <math|A\<subseteq\>U>,
+      <math|x\<in\><around*|{|x|}>\<subseteq\>V> and
+      <math|U<big|cap>V=\<varnothing\>>. Hence
+      <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> is regular.
+
+      <item>Let <math|x,y\<in\>X> such that <math|x\<neq\>y> then
+      <math|<around*|{|x|}>> and <math|<around*|{|y|}>> are closed and
+      <math|<around*|{|x|}><big|cap><around*|{|y|}>=\<varnothing\>> so that
+      by normality there exists <math|U,V\<in\>\<cal-T\>> such that
+      <math|x\<in\><around*|{|x|}>\<subseteq\>U>,
+      <math|y\<in\><around*|{|y|}>\<subseteq\>V> and
+      <math|U<big|cap>V=\<varnothing\>>. Hence
+      <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> is Hausdorff.
+    </enumerate>
+  </proof>
+
+  <\definition>
+    <label|separation neighbors><index|neighborhood><index|open
+    neighborhood>Let <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a
+    topolical space and <math|x\<in\>X> then <math|A\<subseteq\>X> is a
+    <with|font-series|bold|neighborhood of x> iff there exist a open set
+    <math|U\<in\>\<cal-T\>> such that <math|x\<in\>U\<subseteq\>A>. If
+    <math|A> itself is open then <math|A> is called a
+    <with|font-series|bold|open neighborhood of ><math|x>.
+  </definition>
+
+  <\definition>
+    <label|separation fundamental system of neighborhoods of
+    x><index|fundamental system of neighborhoods>Let
+    <math|<around*|\<langle\>|X,T|\<rangle\>>> be a topological space,
+    <math|x\<in\>X> then a <with|font-series|bold|fundamental system of
+    neighborhoods of <math|x>> is a set <math|\<cal-N\>> of
+    <with|font-series|bold|neighborhoods of ><math|x> such that for every
+    neighborhood <math|A> of <math|x> there exist a <math|N\<in\>\<cal-N\>>
+    such that <math|x\<in\>N\<subseteq\>A>.
+  </definition>
+
+  <\definition>
+    <label|separation first countable topological space><index|first
+    countable topological space>A topological space
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> is
+    <with|font-series|bold|first countable> if every element of <math|X> has
+    a countable fundamental system of neighborhoods.
+  </definition>
+
+  <\theorem>
+    <label|separation a metric space is first countable>If
+    <math|<around*|\<langle\>|X,d|\<rangle\>>> is a metric space then
+    <math|<around*|\<langle\>|X,\<cal-T\><rsub|d>|\<rangle\>>> is first
+    countable [using the metric topology <math|\<cal-T\><rsub|d>>]\ 
+
+    <\note>
+      If <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+      is a normed space then <math|<around*|\<langle\>|X,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>|\<rangle\>>\<equallim\><rsub|<text|[definition:
+      <reference|normed topology>]>><around*|\<langle\>|X,\<cal-T\><rsub|d<rsub|<around*|\<\|\|\>||\<\|\|\>>>>|\<rangle\>>>
+      so that every normed space is also first countable.
+    </note>
+  </theorem>
+
+  <\proof>
+    Given <math|x\<in\>X> define <math|\<cal-N\><rsub|x>=<around*|{|B<rsub|d><around*|(|x,<frac|1|n>|)>\|n\<in\>\<bbb-N\>|}>>
+    which is countable [see theorem: <reference|countable set conditions
+    (1)>]. If <math|A> is a neighborhood of <math|x> then there exist a
+    <math|U\<in\>\<cal-T\>> such that <math|x\<in\>U\<subseteq\>A>. Using
+    [theorem: <reference|metric topology (1)>] there exist a
+    <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+    <math|x\<in\>B<rsub|d><around*|(|x,\<delta\>|)>\<subseteq\>U>. As
+    <math|0\<less\>\<delta\>> there exist a <math|n\<in\>\<bbb-N\>> such that
+    <math|0\<less\><frac|1|n>\<less\>\<delta\>> [see theorem:
+    <reference|complex Archimedean property consequence (1)>] hence we have
+    that <math|x\<in\>B<rsub|d><around*|(|x,<frac|1|n>|)>\<subseteq\>B<rsub|d><around*|(|x,\<delta\>|)>\<subseteq\>U\<subseteq\>A>
+    which as <math|B<rsub|d><around*|(|x,<frac|1|n>|)>\<in\>\<cal-N\><rsub|x>>
+    proves first countability. <math|>
+  </proof>
+
+  <\definition>
+    <label|separation second countable topological space><index|second
+    countable topological space>A topological space
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> is
+    <with|font-series|bold|second countable> if <math|\<cal-T\>> has a
+    countable basis.
+  </definition>
+
+  <\theorem>
+    <label|separation second countability implies first countability>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a second countable
+    topological space then <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>>
+    is first countable.
+  </theorem>
+
+  <\proof>
+    Let <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a second
+    countable topological space and let <math|\<cal-B\>\<subseteq\>\<cal-T\>>
+    be the countable basis of <math|\<cal-T\>> then if <math|x\<in\>X> and
+    <math|A> a neighborhood of <math|x> then there exists a
+    <math|U\<in\>\<cal-T\>> \ such that <math|x\<in\>U\<subseteq\>A>. As
+    <math|\<cal-B\>> is a basis there exists a <math|B\<in\>\<cal-B\>> such
+    that <math|x\<in\>B\<subseteq\>U\<subseteq\>A> [see theorem:
+    <reference|topology basis alternative definition>]. So <math|\<cal-B\>>
+    is a fundamentally system of neighborhoods of every element of <math|x>.
+  </proof>
+
+  <section|Compact Spaces>
+
+  <\definition>
+    <label|compact space><index|compact space>A topological space
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> is
+    <with|font-series|bold|compact> if for every
+    <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-T\>>
+    satisfying <math|X=<big|cup><rsub|i\<in\>I>U<rsub|i>> there exist a
+    finite <math|J\<subseteq\>I> such that
+    <math|X=<big|cup><rsub|i\<in\>J>U<rsub|i>>. In other words a topological
+    space is compact if every covering of the space by a family of open sets
+    contains a finite subfamily of sets that covers the space.
+  </definition>
+
+  In addition to compact topological spaces we have also compact subsets of a
+  topological space.
+
+  <\definition>
+    <label|compact set><index|compact set>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
+    and <math|C\<subseteq\>X> then <math|C> is a
+    <with|font-series|bold|compact set >if
+    <math|<around*|\<langle\>|X,\<cal-T\><rsub|\|C>|\<rangle\>>> is a
+    <with|font-series|bold|compact topological space >where
+    <math|\<cal-T\><rsub|\|C>=<around*|{|U<big|cap>C\|U\<in\>\<cal-T\>|}>> is
+    the subspace topology on <math|C> [see definition: <reference|topology
+    subspace topology>].
+  </definition>
+
+  A alternative definition of r a compact set is given in the following
+  theorem.
+
+  <\theorem>
+    <label|compact set alternative definition>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
+    and <math|C\<subseteq\>X> then\ 
+
+    <\equation*>
+      C<text| is compact>
+    </equation*>
+
+    <\equation*>
+      \<Updownarrow\>
+    </equation*>
+
+    <\equation*>
+      <text|For every ><around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-T\><text|
+      satifying >C\<subseteq\><big|cup><rsub|i\<in\>I>U<rsub|i><text| there
+      exist a finite >J\<subseteq\>I<text| such that
+      >C\<subseteq\><big|cup><rsub|i\<in\>J>U<rsub|i>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>If <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>>
+      is a collection of open sets such that
+      <math|C\<subseteq\><big|cup><rsub|i\<in\>I>U<rsub|i>> then
+      <math|C=<big|cup><rsub|i\<in\>I><around*|(|C<big|cap>U<rsub|i>|)>>
+      where <math|\<forall\>i\<in\>I> we have that
+      <math|U<rsub|i><big|cap>C\<in\>\<cal-T\><rsub|C>> so that by the fact
+      that <math|<around*|\<langle\>|C,\<cal-T\><rsub|C>|\<rangle\>>> is
+      compact there exists a finite <math|J\<subseteq\>I> such that
+      <math|C=<big|cup><rsub|i\<in\>J><around*|(|U<rsub|i><big|cap>C|)>\<Rightarrow\>C\<subseteq\><big|cup><rsub|i\<in\>J>U<rsub|i>>
+
+      <item*|<math|\<Leftarrow\>>>Assume that
+      <math|<around*|{|V<rsub|i>|}><rsub|i\<in\>I>> is a collection of open
+      sets in <math|\<cal-T\><rsub|C>> such that
+      <math|C=<big|cup><rsub|i\<in\>I>V<rsub|i>> then by the definition of
+      the subspace topology we have <math|\<forall\>i\<in\>I> there exists a
+      <math|U<rsub|i>> such that <math|V<rsub|i>=U<rsub|i><big|cap>C> so that
+      <math|C=<big|cup><rsub|i\<in\>I><around*|(|U<rsub|i><big|cap>C|)>\<subseteq\><big|cup><rsub|i\<in\>I>U<rsub|i>>
+      hence by the hypothesis there exists a finite <math|J\<subseteq\>I>
+      such that <math|C\<subseteq\><big|cup><rsub|i\<in\>J>U<rsub|i>\<Rightarrow\>C=<big|cup><rsub|i\<in\>J><around*|(|U<rsub|i><big|cap>C|)>=<big|cup><rsub|i\<in\>J>V<rsub|i>>
+      proving that <math|<around*|\<langle\>|C,\<cal-T\><rsub|C>|\<rangle\>>>
+      is a compact topological space.
+    </description>
+  </proof>
+
+  \;
+
+  \;
+
+  \;
 
   \;
 
@@ -9586,24 +9966,43 @@
     <associate|auto-45|<tuple|<with|mode|<quote|math>|L<around*|(|X,Y|)>>|698>>
     <associate|auto-46|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,Y|)>>>|701>>
     <associate|auto-47|<tuple|14.6|705>>
-    <associate|auto-48|<tuple|operator norm of multlinear mapping|709>>
-    <associate|auto-49|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>|709>>
+    <associate|auto-48|<tuple|topological vector space|709>>
+    <associate|auto-49|<tuple|topological vector space|709>>
     <associate|auto-5|<tuple|14.1.1|648>>
-    <associate|auto-50|<tuple|<with|mode|<quote|math>|L<around*|(|X<rsup|n>;Y|)>>|712>>
-    <associate|auto-51|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsup|n>;Y|)>>>|712>>
-    <associate|auto-52|<tuple|14.7|?>>
+    <associate|auto-50|<tuple|toplinear isomorphism|712>>
+    <associate|auto-51|<tuple|14.7|712>>
+    <associate|auto-52|<tuple|operator norm of multlinear mapping|720>>
+    <associate|auto-53|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>|?>>
+    <associate|auto-54|<tuple|<with|mode|<quote|math>|L<around*|(|X<rsup|n>;Y|)>>|?>>
+    <associate|auto-55|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsup|n>;Y|)>>>|?>>
+    <associate|auto-56|<tuple|14.8|?>>
+    <associate|auto-57|<tuple|Hausdorff topological space|?>>
+    <associate|auto-58|<tuple|regular topological space|?>>
+    <associate|auto-59|<tuple|normal topological space|?>>
     <associate|auto-6|<tuple|closed set|648>>
+    <associate|auto-60|<tuple|neighborhood|?>>
+    <associate|auto-61|<tuple|open neighborhood|?>>
+    <associate|auto-62|<tuple|fundamental system of neighborhoods|?>>
+    <associate|auto-63|<tuple|first countable topological space|?>>
+    <associate|auto-64|<tuple|second countable topological space|?>>
+    <associate|auto-65|<tuple|14.9|?>>
+    <associate|auto-66|<tuple|compact space|?>>
+    <associate|auto-67|<tuple|compact set|?>>
     <associate|auto-7|<tuple|<with|mode|<quote|math>|\<cal-T\><rsup|\<cal-C\>>>|648>>
     <associate|auto-8|<tuple|limit point|650>>
     <associate|auto-9|<tuple|accumulation point|650>>
     <associate|closed set properties|<tuple|14.19|649>>
+    <associate|compact set|<tuple|14.202|?>>
+    <associate|compact set alternative definition|<tuple|14.203|?>>
+    <associate|compact space|<tuple|14.201|?>>
+    <associate|compact subset|<tuple|14.202|?>>
     <associate|continuity|<tuple|14.137|692>>
-    <associate|continuity K^n|<tuple|14.170|706>>
+    <associate|continuity K^n|<tuple|14.174|706>>
     <associate|continuity L(X,L(Y,Z)) is isometric with
-    L(X,Y;Z)|<tuple|14.178|713>>
+    L(X,Y;Z)|<tuple|14.182|713>>
     <associate|continuity L(X,Y) is a subspace of
     Hom(X,Y)|<tuple|14.157|699>>
-    <associate|continuity L^n(X;Y)|<tuple|14.175|?>>
+    <associate|continuity L^n(X;Y)|<tuple|14.179|712>>
     <associate|continuity Lispschitz condition|<tuple|14.141|693>>
     <associate|continuity Lispschitz implies uniform
     continuity|<tuple|14.142|693>>
@@ -9612,11 +10011,11 @@
     <associate|continuity and subspace topology (2)|<tuple|14.120|686>>
     <associate|continuity at a point|<tuple|14.111|684>>
     <associate|continuity composition|<tuple|14.123|687>>
-    <associate|continuity composition is multilinear|<tuple|14.177|713>>
+    <associate|continuity composition is multilinear|<tuple|14.181|713>>
     <associate|continuity composition of continuous linear
     mapping|<tuple|14.167|704>>
     <associate|continuity composition of multilinear and linear
-    mapping|<tuple|14.176|712>>
+    mapping|<tuple|14.180|712>>
     <associate|continuity constant function|<tuple|14.117|685>>
     <associate|continuity continuous function|<tuple|14.116|685>>
     <associate|continuity continuous function (1)|<tuple|14.118|685>>
@@ -9642,10 +10041,10 @@
     <associate|continuity isometry is a homeomorphism|<tuple|14.151|695>>
     <associate|continuity linear mapping (1)|<tuple|14.158|699>>
     <associate|continuity linear mapping between R^n|<tuple|14.159|699>>
-    <associate|continuity multilinear mapping (1)|<tuple|14.169|705>>
-    <associate|continuity multilinear mapping (2) norm|<tuple|14.172|708>>
+    <associate|continuity multilinear mapping (1)|<tuple|14.173|705>>
+    <associate|continuity multilinear mapping (2) norm|<tuple|14.176|708>>
     <associate|continuity multilinear mappings vector
-    space|<tuple|14.171|708>>
+    space|<tuple|14.175|708>>
     <associate|continuity norm of continuous linear mapping
     (1)|<tuple|14.161|700>>
     <associate|continuity norm of projection operator|<tuple|14.166|703>>
@@ -9662,9 +10061,9 @@
     <associate|continuity operator norm (1)|<tuple|14.163|701>>
     <associate|continuity operator norm (2)|<tuple|14.164|702>>
     <associate|continuity operator norm of multilinear
-    mappings|<tuple|14.173|709>>
+    mappings|<tuple|14.177|709>>
     <associate|continuity operator norm of multilinear mappings
-    (1)|<tuple|14.174|710>>
+    (1)|<tuple|14.178|710>>
     <associate|continuity power of continuous functions|<tuple|14.132|691>>
     <associate|continuity product and continuous
     functions|<tuple|14.125|688>>
@@ -9674,19 +10073,21 @@
     <associate|continuity real and complex part|<tuple|14.138|692>>
     <associate|continuity scalar product|<tuple|14.127|689>>
     <associate|continuity scalar product (1)|<tuple|14.128|690>>
+    <associate|continuity sum|<tuple|14.129|?>>
     <associate|continuity uniform continuity|<tuple|14.134|692>>
     <associate|continuity universal continuity implies
     continuity|<tuple|14.135|692>>
     <associate|eq 14.1.145|<tuple|14.1|650>>
     <associate|eq 14.10.146|<tuple|14.10|657>>
-    <associate|eq 14.100.150|<tuple|14.100|?>>
-    <associate|eq 14.101.150|<tuple|14.101|?>>
-    <associate|eq 14.102.150|<tuple|14.102|?>>
-    <associate|eq 14.103.150|<tuple|14.103|?>>
-    <associate|eq 14.104.150|<tuple|14.104|?>>
-    <associate|eq 14.105.150|<tuple|14.105|?>>
-    <associate|eq 14.106.150|<tuple|14.106|?>>
-    <associate|eq 14.107.150|<tuple|14.107|?>>
+    <associate|eq 14.100.150|<tuple|14.100|719>>
+    <associate|eq 14.101.150|<tuple|14.101|719>>
+    <associate|eq 14.102.150|<tuple|14.102|719>>
+    <associate|eq 14.103.150|<tuple|14.103|719>>
+    <associate|eq 14.104.150|<tuple|14.104|719>>
+    <associate|eq 14.105.150|<tuple|14.105|719>>
+    <associate|eq 14.106.150|<tuple|14.106|720>>
+    <associate|eq 14.107.150|<tuple|14.107|720>>
+    <associate|eq 14.108.150|<tuple|14.108|?>>
     <associate|eq 14.11.146|<tuple|14.11|658>>
     <associate|eq 14.12.146|<tuple|14.12|659>>
     <associate|eq 14.13.146|<tuple|14.13|663>>
@@ -9753,7 +10154,7 @@
     <associate|eq 14.70.148|<tuple|14.70|711>>
     <associate|eq 14.71.148|<tuple|14.71|711>>
     <associate|eq 14.72.148|<tuple|14.72|711>>
-    <associate|eq 14.73.148|<tuple|14.73|712>>
+    <associate|eq 14.73.148|<tuple|14.73|711>>
     <associate|eq 14.74.148|<tuple|14.74|712>>
     <associate|eq 14.75.149|<tuple|14.75|714>>
     <associate|eq 14.76.149|<tuple|14.76|714>>
@@ -9773,15 +10174,17 @@
     <associate|eq 14.89.150|<tuple|14.89|716>>
     <associate|eq 14.9.146|<tuple|14.9|657>>
     <associate|eq 14.90.150|<tuple|14.90|716>>
-    <associate|eq 14.91.150|<tuple|14.91|?>>
-    <associate|eq 14.92.150|<tuple|14.92|?>>
-    <associate|eq 14.93.150|<tuple|14.93|?>>
-    <associate|eq 14.94.150|<tuple|14.94|?>>
-    <associate|eq 14.95.150|<tuple|14.95|?>>
-    <associate|eq 14.96.150|<tuple|14.96|?>>
-    <associate|eq 14.97.150|<tuple|14.97|?>>
-    <associate|eq 14.98.150|<tuple|14.98|?>>
-    <associate|eq 14.99.150|<tuple|14.99|?>>
+    <associate|eq 14.91.150|<tuple|14.91|717>>
+    <associate|eq 14.92.150|<tuple|14.92|717>>
+    <associate|eq 14.93.150|<tuple|14.93|717>>
+    <associate|eq 14.94.150|<tuple|14.94|717>>
+    <associate|eq 14.95.150|<tuple|14.95|717>>
+    <associate|eq 14.96.150|<tuple|14.96|718>>
+    <associate|eq 14.97.150|<tuple|14.97|718>>
+    <associate|eq 14.98.150|<tuple|14.98|718>>
+    <associate|eq 14.99.150|<tuple|14.99|718>>
+    <associate|example of continuous mappings in a topological vector
+    space|<tuple|14.173|?>>
     <associate|metric ball image preimage|<tuple|14.67|664>>
     <associate|metric bounded set|<tuple|14.69|665>>
     <associate|metric bounded set inclusion|<tuple|14.71|666>>
@@ -9840,10 +10243,31 @@
     <associate|normed space set operations|<tuple|14.97|679>>
     <associate|normed sub space topology|<tuple|14.96|679>>
     <associate|normed topology|<tuple|14.85|670>>
-    <associate|separation|<tuple|14.182|?>>
-    <associate|separation Hausdorff|<tuple|14.180|?>>
+    <associate|separation|<tuple|14.181|720>>
+    <associate|separation Hausdorff|<tuple|14.184|720>>
     <associate|separation Hausdorff every finite set is
-    closed|<tuple|14.183|?>>
+    closed|<tuple|14.187|720>>
+    <associate|separation a metric space is first countable|<tuple|14.197|?>>
+    <associate|separation conditions|<tuple|14.193|?>>
+    <associate|separation first countable topological space|<tuple|14.196|?>>
+    <associate|separation fundamental system of neighborhoods of
+    x|<tuple|14.195|?>>
+    <associate|separation metric spaces are Hausdorff|<tuple|14.185|?>>
+    <associate|separation metric spaces are regular|<tuple|14.189|?>>
+    <associate|separation neighbors|<tuple|14.194|?>>
+    <associate|separation normal topological space|<tuple|14.192|?>>
+    <associate|separation regular topological space|<tuple|14.188|?>>
+    <associate|separation regularity and non empty open
+    sets|<tuple|14.191|?>>
+    <associate|separation second countability|<tuple|14.195|?>>
+    <associate|separation second countability implies first
+    countability|<tuple|14.200|?>>
+    <associate|separation second countable topological
+    space|<tuple|14.199|?>>
+    <associate|toplinear isomorphism|<tuple|14.172|?>>
+    <associate|topological vector space|<tuple|14.169|?>>
+    <associate|topological vector space continuous
+    functions|<tuple|14.173|?>>
     <associate|topology and complement closed sets|<tuple|14.18|649>>
     <associate|topology basis|<tuple|14.29|651>>
     <associate|topology basis alternative definition|<tuple|14.32|652>>
@@ -10020,6 +10444,9 @@
       14.6<space|2spc>Multilinear mappings and continuity
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-47>
+
+      14.7<space|2spc>Separation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-52>
     </associate>
   </collection>
 </auxiliary>
