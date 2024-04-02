@@ -2856,7 +2856,8 @@
   </definition>
 
   <\example>
-    Let <math|<around*|\<langle\>|X,d|\<rangle\>>> be a metric space then
+    <label|metric empty set is bounded>Let
+    <math|<around*|\<langle\>|X,d|\<rangle\>>> be a metric space then
     <math|\<varnothing\>> is bounded
   </example>
 
@@ -9841,7 +9842,7 @@
     <label|compact set><index|compact set>Let
     <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
     and <math|C\<subseteq\>X> then <math|C> is a
-    <with|font-series|bold|compact set >if
+    <with|font-series|bold|compact subset >if
     <math|<around*|\<langle\>|X,\<cal-T\><rsub|\|C>|\<rangle\>>> is a
     <with|font-series|bold|compact topological space >where
     <math|\<cal-T\><rsub|\|C>=<around*|{|U<big|cap>C\|U\<in\>\<cal-T\>|}>> is
@@ -9900,6 +9901,217 @@
       is a compact topological space.
     </description>
   </proof>
+
+  <\example>
+    <label|compact empty set>If <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>>
+    is a topological space then <math|\<varnothing\>> is a compact set
+  </example>
+
+  <\proof>
+    If <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>> is a non empty family of
+    open sets covering <math|\<emptyset\>> then we have for <math|I> either
+
+    <\description>
+      <item*|<math|I=\<emptyset\>>>then <math|J=\<emptyset\>=I> is finite so
+      <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>J>> is a finite covering of
+      <math|\<emptyset\>>
+
+      <item*|<math|I\<neq\>\<emptyset\>>>then <math|\<exists\>i\<in\>I> so if
+      we take <math|J=<around*|{|i|}>\<subseteq\>I> then <math|J> is finite
+      and <math|\<emptyset\>\<subseteq\>E<rsub|i>=<big|cup><rsub|j\<in\><around*|{|i|}>>U<rsub|i>>
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|compact finite union of compact sets>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological
+    space, <math|n\<in\>\<bbb-N\>> and <math|<around*|{|C<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of compact subsets of <math|X> then
+    <math|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>C<rsub|i>> is a
+    compact subset.
+  </theorem>
+
+  <\proof>
+    Let <math|<big|cup><rsub|i\<in\>I>U<rsub|i>> is a open cover of
+    <math|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>C<rsub|i>> then
+    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have
+    <math|C<rsub|i>\<subseteq\><big|cup><rsub|j\<in\>I>U<rsub|j>\<Rightarrowlim\><rsub|<text|[theorem:
+    <reference|compact set alternative definition>]>>\<exists\>finite
+    I<rsub|i>\<subseteq\>I\<vdash\>C<rsub|i>\<subseteq\><big|cup><rsub|j\<in\>I<rsub|i>>U<rsub|j>>
+    so that
+
+    <\equation*>
+      <big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>C<rsub|i>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|<big|cup><rsub|j\<in\>I<rsub|i>>U<rsub|j>|)>
+    </equation*>
+
+    If now <math|x\<in\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,.n|}>><around*|(|<big|cup><rsub|j\<in\>I<rsub|i>>U<rsub|i>|)>>
+    then there exists a <math|i\<in\><around*|{|1,\<ldots\>,n|}>> such that
+    <math|x\<in\><big|cup><rsub|j\<in\>I<rsub|i>>U<rsub|j>>, hence there
+    exists a <math|j\<in\>I<rsub|i>\<subseteq\><big|cup><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|k>>
+    with <math|x\<in\>U<rsub|j>>, proving that
+    <math|x\<in\><big|cup><rsub|j\<in\><big|cup><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|k>>U<rsub|j>>.
+    So we have\ 
+
+    <\equation*>
+      <big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,.n|}>><around*|(|<big|cup><rsub|j\<in\>I<rsub|i>>U<rsub|i>|)>\<subseteq\><big|cup><rsub|j\<in\><big|cup><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|k>>U<rsub|j>
+    </equation*>
+
+    hence\ 
+
+    <\equation*>
+      <big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>C<rsub|i>\<subseteq\><big|cup><rsub|j\<in\><big|cup><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|k>>U<rsub|j>
+    </equation*>
+
+    where <math|<big|cup><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|k>\<subseteq\>I>
+    and by [theorem: <reference|finite union of finite sets is finite>]
+    <math|><math|<big|cup><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|k>>
+    is finite.\ 
+  </proof>
+
+  <\theorem>
+    <label|compact subspace equivalences>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topolocial space,
+    <math|A\<subseteq\>X> and <math|C\<subseteq\>A> then\ 
+
+    <\equation*>
+      C<text| is compact in <math|<around*|\<langle\>|A,\<cal-T\><rsub|\|A>|\<rangle\>>>
+      >\<Leftrightarrow\><text| >C<text| is compact in
+      ><around*|\<langle\>|X,\<cal-T\>|\<rangle\>>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>If <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-T\>>
+      satisfies <math|C\<subseteq\><big|cup><rsub|i\<in\>I>U<rsub|i>> then
+      <math|C\<equallim\><rsub|C\<subseteq\>A>C<big|cap>A=<big|cup><rsub|i\<in\>I><around*|(|U<rsub|i><big|cap>A|)>>
+      where <math|\<forall\>i\<in\>I> <math|U<rsub|i><big|cap>A\<in\>\<cal-T\><rsub|\|A>>.
+      As <math|C> is compact in <math|<around*|\<langle\>|A,\<cal-T\><rsub|\|A>|\<rangle\>>>,
+      it follows from [theorem: <reference|compact set alternative
+      definition>] that there exist a finite <math|J\<subseteq\>I> so that
+      <math|C\<subseteq\><big|cup><rsub|i\<in\>J><around*|(|U<rsub|i><big|cap>A|)>\<subseteq\><big|cup><rsub|i\<in\>J>U<rsub|i>>
+      proving by [theorem: <reference|compact set alternative definition>]
+      that <math|C> is compact in <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>>.
+
+      <item*|<math|\<Leftarrow\>>>If <math|<around*|{|V<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-T\><rsub|\|A>>
+      satisfies <math|C\<subseteq\><big|cup><rsub|i\<in\>I>V<rsub|i>> then
+      <math|\<forall\>i\<in\>I> we have that
+      <math|\<exists\>U<rsub|i>\<in\>\<cal-T\>> such that
+      <math|V<rsub|i>=U<rsub|i><big|cap>A\<subseteq\>U<rsub|i>>. Hence
+      <math|C\<subseteq\><big|cup><rsub|i\<in\>I>U<rsub|i>> which as <math|C>
+      is compact in <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> proves
+      by [theorem: <reference|compact set alternative definition>] that there
+      exist a <math|J\<subseteq\>I> such that
+      <math|C\<subseteq\><big|cup><rsub|i\<in\>J>U<rsub|i>>. So
+
+      <\equation*>
+        C=C<big|cap>A\<subseteq\><around*|(|<big|cup><rsub|i\<in\>J>U<rsub|i>|)>=<big|cup><rsub|i\<in\>J><around*|(|U<rsub|i><big|cap>A|)>=<big|cup><rsub|i\<in\>J>V<rsub|i>
+      </equation*>
+
+      proving by \ [theorem: <reference|compact set alternative definition>]
+      that <math|C> is compact in <math|<around*|\<langle\>|A,\<cal-T\><rsub|\|A>|\<rangle\>>>
+    </description>
+  </proof>
+
+  In metric [or normed spaces] every compact set must be bounded.
+
+  <\theorem>
+    <label|compact and bounded>Let <math|<around*|\<langle\>|X,d|\<rangle\>>>
+    be a pseudo metric space and <math|C\<subseteq\>X> a compact subset then
+    <math|C> is bounded.
+  </theorem>
+
+  <\proof>
+    Let <math|C> be a compact subset of <math|X> and take
+    <math|<around*|{|B<rsub|d><around*|(|c,1|)>|}><rsub|c\<in\>C>\<subseteq\>\<cal-T\><rsub|d>>
+    then <math|C\<subseteq\><big|cup><rsub|i\<in\>C>B<rsub|d><around*|(|c,1|)>>.
+    As <math|C> is compact in <math|<around*|\<langle\>|X,\<cal-T\><rsub|d>|\<rangle\>>>
+    we have by \ [theorem: <reference|compact set alternative definition>]
+    that there exist a finite set <math|J\<subseteq\>C> such that
+
+    <\equation>
+      <label|eq 14.109.150>C\<subseteq\><big|cup><rsub|c\<in\>J>B<rsub|d><around*|(|c,1|)>
+    </equation>
+
+    We have now two cases for <math|J>:\ 
+
+    <\description>
+      <item*|<math|J=\<varnothing\>>>Then
+      <math|C\<subseteq\><big|cup><rsub|c\<in\>J>B<rsub|d><around*|(|c,1|)>=\<varnothing\>>
+      hence by [example: <reference|metric empty set is bounded>]
+      <math|C=\<varnothing\>> is bounded
+
+      <item*|<math|J\<neq\>\<varnothing\>>>Then
+      <math|<around*|{|d<around*|(|c,t|)>\|<around*|(|c,t|)>\<in\>J\<times\>J|}>\<neq\>\<varnothing\>>
+      and by [theorems: <reference|product of finite sets>, <reference|set of
+      finite family is finite>] <math|<around*|{|d<around*|(|c,t|)>\|<around*|(|c,t|)>\<in\>J\<times\>J|}>>
+      is finite so that by [theorem: <reference|finite ordered sets have a
+      maximum and minimum>] <math|N=max<around*|(|<around*|{|d<around*|(|c,t|)>\|<around*|(|c,t|)>\<in\>J\<times\>J|}>|)>>
+      exists. Take then
+
+      <\equation*>
+        M=N+2
+      </equation*>
+
+      Let <math|x,y\<in\>C> then by [eq: <reference|eq 14.109.150>] there
+      exists <math|c<rsub|x>,c<rsub|y>\<in\>J> such that
+      <math|x\<in\>B<rsub|d><around*|(|c<rsub|x>,1|)>>,
+      <math|y\<in\>B<rsub|d><around*|(|c<rsub|y>,1|)>>, hence\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|d<around*|(|x,y|)>>|<cell|\<leqslant\>>|<cell|d<around*|(|x,c<rsub|x>|)>+d<around*|(|c<rsub|x>,y|)>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|d<around*|(|x,c<rsub|x>|)>+d<around*|(|c<rsub|x>,c<rsub|y>|)>+d<around*|(|c<rsub|y>,y|)>>>|<row|<cell|>|<cell|\<less\>>|<cell|1+N+1>>|<row|<cell|>|<cell|=>|<cell|M>>>>
+      </eqnarray*>
+
+      proving that <math|C> is bounded.
+    </description>
+  </proof>
+
+  <\corollary>
+    <label|compact and bounded (1)>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a pseudo normed space and <math|C\<subseteq\>X> a compact subset then
+    there exist a <math|M\<in\>\<bbb-R\><rsup|+>> such that
+    \ <math|\<forall\>c\<in\>C> we have <math|<around*|\<\|\|\>|c|\<\|\|\>>\<leqslant\>M>
+  </corollary>
+
+  <\proof>
+    \ This follows from the previous theorem [theorem: <reference|compact and
+    bounded>] and [theorem: <reference|normed bounded set>]
+  </proof>
+
+  Continuous maps preserves compactness.
+
+  <\theorem>
+    <label|compact and continuous functions>Let
+    <math|<around*|\<langle\>|X,\<cal-T\><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,\<cal-T\><rsub|Y>|\<rangle\>>> be topological
+    spaces, <math|f:X\<rightarrow\>Y> a continuous function and <math|C> a
+    compact set in <math|<around*|\<langle\>|X,\<cal-T\><rsub|X>|\<rangle\>>>
+    then <math|f<around*|(|C|)>> is compact in
+    <math|<around*|\<langle\>|Y,\<cal-T\><rsub|Y>|\<rangle\>>>.
+  </theorem>
+
+  <\proof>
+    Let <math|<around*|{|V<rsub|i>|}><rsub|i\<in\>I>> be a family of open
+    sets in <math|Y> so that <math|f<around*|(|C|)>\<subseteq\><big|cup><rsub|i\<in\>I>V<rsub|i>>
+    then <math|\<forall\>x\<in\>C> we have
+    <math|f<around*|(|x|)>\<in\>f<around*|(|C|)><big|cup><rsub|i\<in\>I>V<rsub|i>>
+    and thus <math|\<exists\>i\<in\>I> such that
+    <math|f<around*|(|x|)>\<in\>V<rsub|i>>. By continuity of <math|f> there
+    exists a <math|U<rsub|i>> open in <math|X> with <math|x\<in\>U<rsub|i>>
+    and <math|f<around*|(|x|)>\<in\>f<around*|(|U<rsub|i>|)>\<subseteq\>V<rsub|i>>,
+    hence <math|C\<subseteq\><big|cup><rsub|i\<in\>I>U<rsub|i>>. By
+    compactness of <math|C> there exist a finite <math|J\<subseteq\>I> with
+    <math|C\<subseteq\><big|cup><rsub|i\<in\>J>U<rsub|i>\<Rightarrowlim\><rsub|<with|mode|text|<reference|properties
+    of image and preimage>>>f<around*|(|C|)>\<subseteq\>f<around*|(|<big|cup><rsub|i\<in\>J>U<rsub|i>|)>\<equallim\><rsub|<with|mode|text|<reference|image
+    (preimage) of union , intersections>>><big|cup><rsub|i\<in\>J>f<around*|(|U<rsub|i>|)>\<subseteq\><big|cup><rsub|i\<in\>J>V<rsub|i>>
+    \ proving that <math|f<around*|(|C|)>> is compact.
+  </proof>
+
+  \;
+
+  \;
 
   \;
 
@@ -9966,43 +10178,48 @@
     <associate|auto-45|<tuple|<with|mode|<quote|math>|L<around*|(|X,Y|)>>|698>>
     <associate|auto-46|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,Y|)>>>|701>>
     <associate|auto-47|<tuple|14.6|705>>
-    <associate|auto-48|<tuple|topological vector space|709>>
-    <associate|auto-49|<tuple|topological vector space|709>>
+    <associate|auto-48|<tuple|topological vector space|705>>
+    <associate|auto-49|<tuple|topological vector space|705>>
     <associate|auto-5|<tuple|14.1.1|648>>
-    <associate|auto-50|<tuple|toplinear isomorphism|712>>
-    <associate|auto-51|<tuple|14.7|712>>
-    <associate|auto-52|<tuple|operator norm of multlinear mapping|720>>
-    <associate|auto-53|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>|?>>
-    <associate|auto-54|<tuple|<with|mode|<quote|math>|L<around*|(|X<rsup|n>;Y|)>>|?>>
-    <associate|auto-55|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsup|n>;Y|)>>>|?>>
-    <associate|auto-56|<tuple|14.8|?>>
-    <associate|auto-57|<tuple|Hausdorff topological space|?>>
-    <associate|auto-58|<tuple|regular topological space|?>>
-    <associate|auto-59|<tuple|normal topological space|?>>
+    <associate|auto-50|<tuple|toplinear isomorphism|705>>
+    <associate|auto-51|<tuple|14.7|705>>
+    <associate|auto-52|<tuple|operator norm of multlinear mapping|710>>
+    <associate|auto-53|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>|710>>
+    <associate|auto-54|<tuple|<with|mode|<quote|math>|L<around*|(|X<rsup|n>;Y|)>>|713>>
+    <associate|auto-55|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsup|n>;Y|)>>>|713>>
+    <associate|auto-56|<tuple|14.8|721>>
+    <associate|auto-57|<tuple|Hausdorff topological space|721>>
+    <associate|auto-58|<tuple|regular topological space|721>>
+    <associate|auto-59|<tuple|normal topological space|722>>
     <associate|auto-6|<tuple|closed set|648>>
-    <associate|auto-60|<tuple|neighborhood|?>>
-    <associate|auto-61|<tuple|open neighborhood|?>>
-    <associate|auto-62|<tuple|fundamental system of neighborhoods|?>>
-    <associate|auto-63|<tuple|first countable topological space|?>>
-    <associate|auto-64|<tuple|second countable topological space|?>>
-    <associate|auto-65|<tuple|14.9|?>>
-    <associate|auto-66|<tuple|compact space|?>>
-    <associate|auto-67|<tuple|compact set|?>>
+    <associate|auto-60|<tuple|neighborhood|722>>
+    <associate|auto-61|<tuple|open neighborhood|722>>
+    <associate|auto-62|<tuple|fundamental system of neighborhoods|722>>
+    <associate|auto-63|<tuple|first countable topological space|722>>
+    <associate|auto-64|<tuple|second countable topological space|723>>
+    <associate|auto-65|<tuple|14.9|723>>
+    <associate|auto-66|<tuple|compact space|723>>
+    <associate|auto-67|<tuple|compact set|723>>
     <associate|auto-7|<tuple|<with|mode|<quote|math>|\<cal-T\><rsup|\<cal-C\>>>|648>>
     <associate|auto-8|<tuple|limit point|650>>
     <associate|auto-9|<tuple|accumulation point|650>>
     <associate|closed set properties|<tuple|14.19|649>>
-    <associate|compact set|<tuple|14.202|?>>
-    <associate|compact set alternative definition|<tuple|14.203|?>>
-    <associate|compact space|<tuple|14.201|?>>
-    <associate|compact subset|<tuple|14.202|?>>
+    <associate|compact and bounded|<tuple|14.207|?>>
+    <associate|compact and bounded (1)|<tuple|14.208|?>>
+    <associate|compact and continuous functions|<tuple|14.209|?>>
+    <associate|compact empty set|<tuple|14.204|?>>
+    <associate|compact finite union of compact sets|<tuple|14.205|?>>
+    <associate|compact set|<tuple|14.202|723>>
+    <associate|compact set alternative definition|<tuple|14.203|723>>
+    <associate|compact space|<tuple|14.201|723>>
+    <associate|compact subspace equivalences|<tuple|14.206|?>>
     <associate|continuity|<tuple|14.137|692>>
-    <associate|continuity K^n|<tuple|14.174|706>>
+    <associate|continuity K^n|<tuple|14.174|707>>
     <associate|continuity L(X,L(Y,Z)) is isometric with
-    L(X,Y;Z)|<tuple|14.182|713>>
+    L(X,Y;Z)|<tuple|14.182|714>>
     <associate|continuity L(X,Y) is a subspace of
     Hom(X,Y)|<tuple|14.157|699>>
-    <associate|continuity L^n(X;Y)|<tuple|14.179|712>>
+    <associate|continuity L^n(X;Y)|<tuple|14.179|713>>
     <associate|continuity Lispschitz condition|<tuple|14.141|693>>
     <associate|continuity Lispschitz implies uniform
     continuity|<tuple|14.142|693>>
@@ -10015,7 +10232,7 @@
     <associate|continuity composition of continuous linear
     mapping|<tuple|14.167|704>>
     <associate|continuity composition of multilinear and linear
-    mapping|<tuple|14.180|712>>
+    mapping|<tuple|14.180|713>>
     <associate|continuity constant function|<tuple|14.117|685>>
     <associate|continuity continuous function|<tuple|14.116|685>>
     <associate|continuity continuous function (1)|<tuple|14.118|685>>
@@ -10042,7 +10259,7 @@
     <associate|continuity linear mapping (1)|<tuple|14.158|699>>
     <associate|continuity linear mapping between R^n|<tuple|14.159|699>>
     <associate|continuity multilinear mapping (1)|<tuple|14.173|705>>
-    <associate|continuity multilinear mapping (2) norm|<tuple|14.176|708>>
+    <associate|continuity multilinear mapping (2) norm|<tuple|14.176|709>>
     <associate|continuity multilinear mappings vector
     space|<tuple|14.175|708>>
     <associate|continuity norm of continuous linear mapping
@@ -10061,7 +10278,7 @@
     <associate|continuity operator norm (1)|<tuple|14.163|701>>
     <associate|continuity operator norm (2)|<tuple|14.164|702>>
     <associate|continuity operator norm of multilinear
-    mappings|<tuple|14.177|709>>
+    mappings|<tuple|14.177|710>>
     <associate|continuity operator norm of multilinear mappings
     (1)|<tuple|14.178|710>>
     <associate|continuity power of continuous functions|<tuple|14.132|691>>
@@ -10073,7 +10290,6 @@
     <associate|continuity real and complex part|<tuple|14.138|692>>
     <associate|continuity scalar product|<tuple|14.127|689>>
     <associate|continuity scalar product (1)|<tuple|14.128|690>>
-    <associate|continuity sum|<tuple|14.129|?>>
     <associate|continuity uniform continuity|<tuple|14.134|692>>
     <associate|continuity universal continuity implies
     continuity|<tuple|14.135|692>>
@@ -10081,13 +10297,14 @@
     <associate|eq 14.10.146|<tuple|14.10|657>>
     <associate|eq 14.100.150|<tuple|14.100|719>>
     <associate|eq 14.101.150|<tuple|14.101|719>>
-    <associate|eq 14.102.150|<tuple|14.102|719>>
-    <associate|eq 14.103.150|<tuple|14.103|719>>
-    <associate|eq 14.104.150|<tuple|14.104|719>>
-    <associate|eq 14.105.150|<tuple|14.105|719>>
+    <associate|eq 14.102.150|<tuple|14.102|720>>
+    <associate|eq 14.103.150|<tuple|14.103|720>>
+    <associate|eq 14.104.150|<tuple|14.104|720>>
+    <associate|eq 14.105.150|<tuple|14.105|720>>
     <associate|eq 14.106.150|<tuple|14.106|720>>
-    <associate|eq 14.107.150|<tuple|14.107|720>>
-    <associate|eq 14.108.150|<tuple|14.108|?>>
+    <associate|eq 14.107.150|<tuple|14.107|721>>
+    <associate|eq 14.108.150|<tuple|14.108|722>>
+    <associate|eq 14.109.150|<tuple|14.109|?>>
     <associate|eq 14.11.146|<tuple|14.11|658>>
     <associate|eq 14.12.146|<tuple|14.12|659>>
     <associate|eq 14.13.146|<tuple|14.13|663>>
@@ -10137,7 +10354,7 @@
     <associate|eq 14.52.147|<tuple|14.55|696>>
     <associate|eq 14.56.148|<tuple|14.56|700>>
     <associate|eq 14.57.148|<tuple|14.57|701>>
-    <associate|eq 14.58.148|<tuple|14.58|701>>
+    <associate|eq 14.58.148|<tuple|14.58|702>>
     <associate|eq 14.59.148|<tuple|14.59|702>>
     <associate|eq 14.6.146|<tuple|14.6|657>>
     <associate|eq 14.60.148|<tuple|14.60|702>>
@@ -10147,44 +10364,42 @@
     <associate|eq 14.64.148|<tuple|14.64|708>>
     <associate|eq 14.65.148|<tuple|14.65|708>>
     <associate|eq 14.66.148|<tuple|14.66|708>>
-    <associate|eq 14.67.148|<tuple|14.67|708>>
-    <associate|eq 14.68.148|<tuple|14.68|709>>
+    <associate|eq 14.67.148|<tuple|14.67|709>>
+    <associate|eq 14.68.148|<tuple|14.68|710>>
     <associate|eq 14.69.148|<tuple|14.69|711>>
     <associate|eq 14.7.146|<tuple|14.7|657>>
-    <associate|eq 14.70.148|<tuple|14.70|711>>
-    <associate|eq 14.71.148|<tuple|14.71|711>>
-    <associate|eq 14.72.148|<tuple|14.72|711>>
-    <associate|eq 14.73.148|<tuple|14.73|711>>
+    <associate|eq 14.70.148|<tuple|14.70|712>>
+    <associate|eq 14.71.148|<tuple|14.71|712>>
+    <associate|eq 14.72.148|<tuple|14.72|712>>
+    <associate|eq 14.73.148|<tuple|14.73|712>>
     <associate|eq 14.74.148|<tuple|14.74|712>>
     <associate|eq 14.75.149|<tuple|14.75|714>>
     <associate|eq 14.76.149|<tuple|14.76|714>>
-    <associate|eq 14.77.149|<tuple|14.77|714>>
-    <associate|eq 14.78.149|<tuple|14.78|714>>
-    <associate|eq 14.79.149|<tuple|14.79|714>>
+    <associate|eq 14.77.149|<tuple|14.77|715>>
+    <associate|eq 14.78.149|<tuple|14.78|715>>
+    <associate|eq 14.79.149|<tuple|14.79|715>>
     <associate|eq 14.8.146|<tuple|14.8|657>>
-    <associate|eq 14.80.149|<tuple|14.80|714>>
-    <associate|eq 14.81.150|<tuple|14.81|714>>
+    <associate|eq 14.80.149|<tuple|14.80|715>>
+    <associate|eq 14.81.150|<tuple|14.81|715>>
     <associate|eq 14.82.149|<tuple|14.82|715>>
     <associate|eq 14.83.150|<tuple|14.83|715>>
     <associate|eq 14.84.149|<tuple|14.84|715>>
-    <associate|eq 14.85.150|<tuple|14.85|715>>
-    <associate|eq 14.86.150|<tuple|14.86|715>>
-    <associate|eq 14.87.150|<tuple|14.87|715>>
+    <associate|eq 14.85.150|<tuple|14.85|716>>
+    <associate|eq 14.86.150|<tuple|14.86|716>>
+    <associate|eq 14.87.150|<tuple|14.87|716>>
     <associate|eq 14.88.150|<tuple|14.88|716>>
     <associate|eq 14.89.150|<tuple|14.89|716>>
     <associate|eq 14.9.146|<tuple|14.9|657>>
-    <associate|eq 14.90.150|<tuple|14.90|716>>
+    <associate|eq 14.90.150|<tuple|14.90|717>>
     <associate|eq 14.91.150|<tuple|14.91|717>>
-    <associate|eq 14.92.150|<tuple|14.92|717>>
-    <associate|eq 14.93.150|<tuple|14.93|717>>
-    <associate|eq 14.94.150|<tuple|14.94|717>>
-    <associate|eq 14.95.150|<tuple|14.95|717>>
+    <associate|eq 14.92.150|<tuple|14.92|718>>
+    <associate|eq 14.93.150|<tuple|14.93|718>>
+    <associate|eq 14.94.150|<tuple|14.94|718>>
+    <associate|eq 14.95.150|<tuple|14.95|718>>
     <associate|eq 14.96.150|<tuple|14.96|718>>
-    <associate|eq 14.97.150|<tuple|14.97|718>>
-    <associate|eq 14.98.150|<tuple|14.98|718>>
-    <associate|eq 14.99.150|<tuple|14.99|718>>
-    <associate|example of continuous mappings in a topological vector
-    space|<tuple|14.173|?>>
+    <associate|eq 14.97.150|<tuple|14.97|719>>
+    <associate|eq 14.98.150|<tuple|14.98|719>>
+    <associate|eq 14.99.150|<tuple|14.99|719>>
     <associate|metric ball image preimage|<tuple|14.67|664>>
     <associate|metric bounded set|<tuple|14.69|665>>
     <associate|metric bounded set inclusion|<tuple|14.71|666>>
@@ -10193,6 +10408,7 @@
     <associate|metric closed open balls are bounded|<tuple|14.72|666>>
     <associate|metric composition of isometries|<tuple|14.66|664>>
     <associate|metric dense set|<tuple|14.75|667>>
+    <associate|metric empty set is bounded|<tuple|14.70|?>>
     <associate|metric equivalent metrics|<tuple|14.61|663>>
     <associate|metric equivalent metrics condition|<tuple|14.62|663>>
     <associate|metric isometry|<tuple|14.63|663>>
@@ -10243,31 +10459,29 @@
     <associate|normed space set operations|<tuple|14.97|679>>
     <associate|normed sub space topology|<tuple|14.96|679>>
     <associate|normed topology|<tuple|14.85|670>>
-    <associate|separation|<tuple|14.181|720>>
-    <associate|separation Hausdorff|<tuple|14.184|720>>
+    <associate|separation Hausdorff|<tuple|14.184|721>>
     <associate|separation Hausdorff every finite set is
-    closed|<tuple|14.187|720>>
-    <associate|separation a metric space is first countable|<tuple|14.197|?>>
-    <associate|separation conditions|<tuple|14.193|?>>
-    <associate|separation first countable topological space|<tuple|14.196|?>>
+    closed|<tuple|14.187|721>>
+    <associate|separation a metric space is first
+    countable|<tuple|14.197|722>>
+    <associate|separation conditions|<tuple|14.193|722>>
+    <associate|separation first countable topological
+    space|<tuple|14.196|722>>
     <associate|separation fundamental system of neighborhoods of
-    x|<tuple|14.195|?>>
-    <associate|separation metric spaces are Hausdorff|<tuple|14.185|?>>
-    <associate|separation metric spaces are regular|<tuple|14.189|?>>
-    <associate|separation neighbors|<tuple|14.194|?>>
-    <associate|separation normal topological space|<tuple|14.192|?>>
-    <associate|separation regular topological space|<tuple|14.188|?>>
+    x|<tuple|14.195|722>>
+    <associate|separation metric spaces are Hausdorff|<tuple|14.185|721>>
+    <associate|separation metric spaces are regular|<tuple|14.189|721>>
+    <associate|separation neighbors|<tuple|14.194|722>>
+    <associate|separation normal topological space|<tuple|14.192|722>>
+    <associate|separation regular topological space|<tuple|14.188|721>>
     <associate|separation regularity and non empty open
-    sets|<tuple|14.191|?>>
-    <associate|separation second countability|<tuple|14.195|?>>
+    sets|<tuple|14.191|722>>
     <associate|separation second countability implies first
-    countability|<tuple|14.200|?>>
+    countability|<tuple|14.200|723>>
     <associate|separation second countable topological
-    space|<tuple|14.199|?>>
-    <associate|toplinear isomorphism|<tuple|14.172|?>>
-    <associate|topological vector space|<tuple|14.169|?>>
-    <associate|topological vector space continuous
-    functions|<tuple|14.173|?>>
+    space|<tuple|14.199|723>>
+    <associate|toplinear isomorphism|<tuple|14.172|705>>
+    <associate|topological vector space|<tuple|14.169|705>>
     <associate|topology and complement closed sets|<tuple|14.18|649>>
     <associate|topology basis|<tuple|14.29|651>>
     <associate|topology basis alternative definition|<tuple|14.32|652>>
@@ -10387,13 +10601,39 @@
 
       <tuple|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,Y|)>>>>|<pageref|auto-46>>
 
-      <tuple|<tuple|operator norm of multlinear mapping>|<pageref|auto-48>>
+      <tuple|<tuple|topological vector space>|<pageref|auto-48>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>>|<pageref|auto-49>>
+      <tuple|<tuple|topological vector space>|<pageref|auto-49>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|L<around*|(|X<rsup|n>;Y|)>>>|<pageref|auto-50>>
+      <tuple|<tuple|toplinear isomorphism>|<pageref|auto-50>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsup|n>;Y|)>>>>|<pageref|auto-51>>
+      <tuple|<tuple|operator norm of multlinear mapping>|<pageref|auto-52>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>>|<pageref|auto-53>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|L<around*|(|X<rsup|n>;Y|)>>>|<pageref|auto-54>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsup|n>;Y|)>>>>|<pageref|auto-55>>
+
+      <tuple|<tuple|Hausdorff topological space>|<pageref|auto-57>>
+
+      <tuple|<tuple|regular topological space>|<pageref|auto-58>>
+
+      <tuple|<tuple|normal topological space>|<pageref|auto-59>>
+
+      <tuple|<tuple|neighborhood>|<pageref|auto-60>>
+
+      <tuple|<tuple|open neighborhood>|<pageref|auto-61>>
+
+      <tuple|<tuple|fundamental system of neighborhoods>|<pageref|auto-62>>
+
+      <tuple|<tuple|first countable topological space>|<pageref|auto-63>>
+
+      <tuple|<tuple|second countable topological space>|<pageref|auto-64>>
+
+      <tuple|<tuple|compact space>|<pageref|auto-66>>
+
+      <tuple|<tuple|compact set>|<pageref|auto-67>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|14<space|2spc>Topology>
@@ -10441,12 +10681,19 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-44>
 
-      14.6<space|2spc>Multilinear mappings and continuity
+      14.6<space|2spc>Topological Vector space
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-47>
 
-      14.7<space|2spc>Separation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-52>
+      14.7<space|2spc>Multilinear mappings and continuity
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-51>
+
+      14.8<space|2spc>Separation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-56>
+
+      14.9<space|2spc>Compact Spaces <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-65>
     </associate>
   </collection>
 </auxiliary>
