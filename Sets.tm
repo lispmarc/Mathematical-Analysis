@@ -1778,6 +1778,31 @@
     </equation*>
   </proof>
 
+  We show now that given a set we can find a element that is not in the set.
+
+  <\theorem>
+    <label|set extending set with new element>Let <math|S> be a set then
+    there exists a element <math|x> such that <math|x\<nin\>X>
+  </theorem>
+
+  <\proof>
+    Use the axiom of construction [axiom: <reference|axiom of construction>]
+    to define <math|T=<around*|{|x\<in\>S\|x\<nin\>x|}>> which as
+    <math|T\<subseteq\>S> is a set by [axiom: <reference|axiom of subsets>]
+    is a set. Assume now that <math|T\<in\>S> then we have either:
+
+    <\description>
+      <item*|<math|T\<in\>T>>Then we have <math|T\<nin\>T> contradicting
+      <math|T\<in\>T>.
+
+      <item*|<math|T\<nin\>T>>Then we have by definition of <math|T> that
+      <math|T\<in\>T> contradicting <math|T\<nin\>T>
+    </description>
+
+    As in all cases we have a contradiction the assumption is wrong and we
+    must have <math|T\<nin\>S>.
+  </proof>
+
   <chapter|Partial Functions and Functions>
 
   <section|Pairs and Triples>
@@ -14340,7 +14365,6 @@
     <associate|function bijection f,f-1|<tuple|2.69|?>>
     <associate|function bijection has a inverse|<tuple|2.67|?>>
     <associate|function bijection removing element|<tuple|2.89|?>>
-    <associate|function bijection restriction|<tuple|2.89|?>>
     <associate|function characteristics function|<tuple|2.46|?>>
     <associate|function combining bijections|<tuple|2.81|?>>
     <associate|function combining functions (1)|<tuple|2.79|?>>
@@ -14511,6 +14535,7 @@
     <associate|set A*B is subset of P(P(AUB))|<tuple|1.66|?>>
     <associate|set element proper class|<tuple|1.50|?>>
     <associate|set emptyset is not set of empty set|<tuple|2.2|?>>
+    <associate|set extending set with new element|<tuple|1.68|?>>
     <associate|set intersection of two sets is aset|<tuple|1.55|?>>
     <associate|set restriction of a set of sets|<tuple|1.65|?>>
     <associate|set successor set|<tuple|1.51|?>>
