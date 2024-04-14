@@ -10875,7 +10875,7 @@
     </equation*>
   </proof>
 
-  As a example of using recursion we have the following theorem.
+  As a example of using induction we have the following theorem.
 
   <\theorem>
     <label|recursion order>Let <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>>

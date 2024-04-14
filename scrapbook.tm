@@ -1,4 +1,4 @@
-<TeXmacs|2.1.2>
+<TeXmacs|2.1.4>
 
 <style|generic>
 
@@ -207,6 +207,130 @@
 
     \;
   </proof>
+
+  <\lemma>
+    Let <math|<around*|{|<around*|(|a<rsub|i>,b<rsub|i>|)>|}><rsub|i\<in\>\<bbb-N\><rsub|0>>\<subseteq\>\<bbb-R\>\<times\>\<bbb-R\>>
+    satifying <math|\<forall\>i\<in\>\<bbb-N\><rsub|0>>
+    <math|a<rsub|i>\<leqslant\>b<rsub|i>> and
+    <math|<around*|[|a<rsub|i+1>,b<rsub|i+1>|]>\<subseteq\><around*|[|a<rsub|i>,b<rsub|i>|]>>
+    then\ 
+
+    <\enumerate-numeric>
+      <item><math|\<exists\>a,b\<in\>\<bbb-R\>> with <math|a\<leqslant\>b>
+      such that <math|<around*|[|a,b|]>=<big|cap><rsub|i\<in\>\<bbb-N\>><around*|[|a<rsub|i>,b<rsub|i>|]>>.
+
+      <item>If <math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|b<rsub|i>-a<rsub|i>|)>=0>
+      then there exist a <math|a\<in\>\<bbb-R\>> such that
+      <math|<big|cap><rsub|i\<in\>\<bbb-N\><rsub|0>><around*|[|a<rsub|i>,b<rsub|i>|]>=<around*|{|a|}>>
+    </enumerate-numeric>
+  </lemma>
+
+  <\proof>
+    As <math|\<forall\>i\<in\>\<bbb-N\><rsub|0>> we have that
+    <math|<around*|[|a<rsub|i+1>,b<rsub|i+1>|]>\<subseteq\><around*|[|a<rsub|i>,b<rsub|i>|]>>
+    it follows that <math|a<rsub|i>\<leqslant\>a<rsub|i+1>\<wedge\>b<rsub|i+1>\<leqslant\>b<rsub|i>>
+    so that <math|<around*|{|a<rsub|i>|}><rsub|i\<in\>\<bbb-N\><rsub|0>>> is
+    a increasing sequence and <math|<around*|{|b<rsub|i>|}><rsub|i\<in\>\<bbb-N\><rsub|0>>>
+    is decreasing sequence. Hence by [theorem: <reference|sequence increasing
+    decreasing consequence>] we have that\ 
+
+    <\equation>
+      <label|eq 14.110.151><text|If >n,m\<in\>\<bbb-N\><rsub|0><text| with
+      >n\<leqslant\>m<text| then >a<rsub|n>\<leqslant\>a<rsub|m>\<leqslant\>b<rsub|m>\<leqslant\>b<rsub|n>
+    </equation>
+
+    We have now\ 
+
+    <\enumerate>
+      <item>From [eq: <reference|eq 14.110.151>] it follows that
+      <math|\<forall\>n\<in\>\<bbb-N\><rsub|0>>
+      <math|a<rsub|0>\<leqslant\>a<rsub|n>\<leqslant\>b<rsub|n>\<leqslant\>b<rsub|0>>
+      so that <math|A=<around*|{|a<rsub|n>\|n\<in\>\<bbb-N\><rsub|0>|}>> is
+      bounded above by <math|b<rsub|0>> and
+      <math|B=<around*|{|b<rsub|n>\|n\<in\>\<bbb-N\><rsub|0>|}>> is bounded
+      below by <math|a<rsub|0>>. As <math|\<bbb-R\>> is conditional complete
+      [see theorem: <reference|complex RC is conditional complete>]
+      <math|a=sup<around*|(|A|)>> and <math|b=inf<around*|(|B|)>> exist and
+
+      <\equation>
+        <label|eq 14.111.151>a=sup<around*|(|A|)>\<leqslant\>b<rsub|0><text|
+        and >a<rsub|0>\<leqslant\>inf<around*|(|B|)>=b<text|>
+      </equation>
+
+      As <math|sup<around*|(|A|)>> is a upper bound of <math|A> and
+      <math|inf<around*|(|B|)>> is a lower bound of <math|B> we have
+
+      <\equation*>
+        \<forall\>i\<in\>\<bbb-N\><rsub|0><text| we have
+        >a<rsub|i>\<leqslant\>a<text| and >b\<leqslant\>b<rsub|i><text| hence
+        ><around*|[|a,b|]>\<subseteq\><around*|[|a<rsub|i>,b<rsub|i>|]>
+      </equation*>
+
+      so that\ 
+
+      <\equation>
+        <label|eq 14.112.151><around*|[|a,b|]>\<subseteq\><big|cap><rsub|i\<in\>\<bbb-N\><rsub|0>><around*|[|a<rsub|i>,b<rsub|i>|]>
+      </equation>
+
+      For the opposite inclusion, let <math|x\<in\><big|cap><rsub|i\<in\>\<bbb-N\><rsub|0>><around*|[|a<rsub|i>,b<rsub|i>|]>>
+      then <math|\<forall\>i\<in\>\<bbb-N\><rsub|0>> we have
+      <math|a<rsub|i>\<leqslant\>x\<leqslant\>b<rsub|i>> so that <math|x> is
+      a upper bound of <math|A> and <math|x> is a lower bound of <math|B> so
+      that <math|a=sup<around*|(|A|)>\<leqslant\>x\<wedge\>x\<leqslant\>inf<around*|(|B|)>=b>
+      proving that <math|x\<in\><around*|[|a,b|]>>, hence
+      \ <math|<big|cap><rsub|i\<in\>\<bbb-N\><rsub|0>><around*|[|a<rsub|i>,b<rsub|i>|]>\<subseteq\><around*|[|a,b|]>>
+      which together wit [eq: <reference|eq 14.112.151>] results in\ 
+
+      <\equation*>
+        <around*|[|a,b|]>=<big|cap><rsub|i\<in\>\<bbb-N\><rsub|0>><around*|[|a<rsub|i>,b<rsub|i>|]>
+      </equation*>
+
+      <item>Assume that <math|a\<less\>b> then
+      <math|\<forall\>i\<in\>\<bbb-N\><rsub|0>> we have
+      <math|a<rsub|i>\<less\>a\<less\>b\<leqslant\>b<rsub|i>> so that
+      <math|0\<less\>b-a\<less\>b<rsub|i>-a<rsub|i>>. As
+      <math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|b<rsub|i>-a<rsub|i>|)>=0>
+      there exist a <math|N\<in\>\<bbb-N\><rsub|0>> such that
+      <math|b<rsub|N>-a<rsub|N>=<around*|\||b<rsub|N>-a<rsub|N>|\|>\<less\>b-a>
+      a contradiction. Hence we must have
+
+      <\equation>
+        <label|eq 14.113.151>b\<leqslant\>a
+      </equation>
+
+      Assume that <math|b\<less\>a> then as <math|b=inf<around*|(|B|)>> there
+      exist a <math|i\<in\>\<bbb-N\><rsub|0>> such that
+      <math|b\<leqslant\>b<rsub|i>\<less\>a>, further as
+      <math|a=sup<around*|(|A|)>> there exist a
+      <math|j\<in\>\<bbb-N\><rsub|0>> such that
+      <math|b\<leqslant\>b<rsub|i>\<less\>a<rsub|j>\<leqslant\>a>. For
+      <math|i,j> we have now the following possibilities to consider:\ 
+
+      <\description>
+        <item*|<math|i\<leqslant\>j>>Then we have
+        <math|b<rsub|j>\<leqslant\>b<rsub|i>\<less\>a<rsub|j>> contradicting
+        <math|a<rsub|j>\<leqslant\>b<rsub|j.>>
+
+        <item*|<math|j\<less\>i>>Then we have
+        <math|b<rsub|i>\<less\>a<rsub|j>\<leqslant\>a<rsub|i>> contradicting
+        <math|a<rsub|i>\<leqslant\>b<rsub|i>>.
+      </description>
+
+      As in all cases we reach a contradiction the assumption must be false,
+      hence <math|a\<leqslant\>b> which together with [eq: <reference|eq
+      14.113.151>] proves that <math|a=b>, hence
+      <math|<around*|[|a,b|]>=<around*|{|a|}>>, combining this with [eq:
+      <reference|eq 14.113.151>] gives finally:\ 
+
+      <\equation*>
+        <big|cap><rsub|i\<in\>\<bbb-N\><rsub|0>><around*|[|a<rsub|i>,b<rsub|i>|]>=<around*|{|a|}>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  \;
+
+  \;
 </body>
 
 <\initial>
@@ -217,11 +341,15 @@
 
 <\references>
   <\collection>
-    <associate|eq 12.10.131|<tuple|1|1|../../.Xmacs/texts/scratch/no_name_6.tm>>
-    <associate|eq 12.11.131|<tuple|2|1|../../.Xmacs/texts/scratch/no_name_6.tm>>
-    <associate|eq 12.12.131|<tuple|3|1|../../.Xmacs/texts/scratch/no_name_6.tm>>
-    <associate|eq 12.13.131|<tuple|4|2|../../.Xmacs/texts/scratch/no_name_6.tm>>
-    <associate|eq 12.14.131|<tuple|5|2|../../.Xmacs/texts/scratch/no_name_6.tm>>
-    <associate|eq 12.15.131|<tuple|6|2|../../.Xmacs/texts/scratch/no_name_6.tm>>
+    <associate|eq 12.10.131|<tuple|1|1>>
+    <associate|eq 12.11.131|<tuple|2|1>>
+    <associate|eq 12.12.131|<tuple|3|1>>
+    <associate|eq 12.13.131|<tuple|4|2>>
+    <associate|eq 12.14.131|<tuple|5|2>>
+    <associate|eq 12.15.131|<tuple|6|2>>
+    <associate|eq 14.110.151|<tuple|7|?>>
+    <associate|eq 14.111.151|<tuple|8|?>>
+    <associate|eq 14.112.151|<tuple|9|?>>
+    <associate|eq 14.113.151|<tuple|10|?>>
   </collection>
 </references>

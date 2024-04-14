@@ -1,11 +1,11 @@
-<TeXmacs|2.1.2>
+<TeXmacs|2.1.4>
 
 <project|FullBook.tm>
 
 <style|<tuple|book|preview-ref>>
 
 <\body>
-  TODO check next<chapter|Elements of set theory>
+  <chapter|Elements of set theory>
 
   <section|Basic concepts about classes and sets>
 
@@ -508,13 +508,15 @@
   </proof>
 
   <\theorem>
-    <label|class inclusion and union and intersection>If <math|A,B> are
-    classes then we have\ 
+    <label|class inclusion and union and intersection>If <math|A,B>, <math|C>
+    are classes then we have\ 
 
     <\enumerate>
       <item><math|A\<subseteq\>B> if and only if <math|A<big|cup>B=B>
 
       <item><math|A\<subseteq\>B> if and only if <math|A<big|cap>B=A>
+
+      <item>If <math|A\<subseteq\>B> then <math|C\\B\<subseteq\>C\\A>
 
       <item>If <math|B\<subseteq\>A> then <math|A\\<around*|(|A\\B|)>=B>
     </enumerate>
@@ -550,6 +552,11 @@
         <math|x\<in\>A\<Rightarrow\>x\<in\>A<big|cap>B\<Rightarrow\><around*|(|x\<in\>A\<wedge\>x\<in\>B|)>\<Rightarrow\>x\<in\>B>
         so <math|A\<subseteq\>B>.
       </description>
+
+      <item>If <math|x\<in\>C\\B> then <math|x\<in\>C> and <math|x\<nin\>B>.
+      If <math|x\<in\>A> then as <math|A\<subseteq\>B> we would have
+      <math|x\<in\>B> contradicting <math|x\<nin\>B> hence <math|x\<nin\>A>
+      proving that <math|x\<in\>C\\A>.
 
       <item>We have
 
