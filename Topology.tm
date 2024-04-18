@@ -10787,10 +10787,9 @@
     <label|filter base neighborhood filter base><index|neighborhood filter
     base>Let <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a
     topological space, <math|x\<in\>X> then
-    <math|\<frak-U\><around*|(|x|)>=<around*|{|U<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>>\<subseteq\>\<cal-P\><around*|(|X|)><rsub|>>
-    where <math|U<rsub|\<alpha\>>=\<alpha\>> [a family of open sets
-    containing <math|x>] is called a <with|font-series|bold|neighborhood
-    filter base of ><math|x>.
+    <math|\<frak-U\><around*|(|x|)>=<around*|{|U|}><rsub|U\<in\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>>\<subseteq\>\<cal-P\><around*|(|X|)><rsub|>>
+    [a family of open sets containing <math|x>] is called a
+    <with|font-series|bold|neighborhood filter base of ><math|x>.
   </definition>
 
   The name used in the above definition suggest that
@@ -10809,19 +10808,20 @@
     <math|\<frak-U\><around*|(|x|)>> is a non empty family. Further we have\ 
 
     <\enumerate>
-      <item>If <math|\<alpha\>\<in\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>>
-      then <math|x\<in\>\<alpha\>=U<rsub|\<alpha\>>> hence
-      <math|U<rsub|\<alpha\>>\<neq\>\<varnothing\>>,
+      <item>If <math|U\<in\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>> then
+      <math|x\<in\>U> hence <math|U\<neq\>\<varnothing\>>,
 
-      <item>If <math|\<alpha\>,\<beta\>\<in\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>>
-      then <math|x\<in\>\<alpha\><big|cap>\<beta\>\<in\>\<cal-T\>> so that
-      <math|\<gamma\>=\<alpha\><big|cap>\<beta\>\<in\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>>
-      and\ 
+      <item>If <math|U,V\<in\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>> then
+      <math|x\<in\>U<big|cap>V\<in\>\<cal-T\>> so that for
+      <math|W\<in\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>>
 
       <\equation*>
-        U<rsub|\<gamma\>>=\<gamma\>\<subseteq\>\<alpha\><big|cap>\<beta\>=A<rsub|\<alpha\>><big|cap>A<rsub|\<beta\>>
+        W\<subseteq\>U<big|cap>V
       </equation*>
     </enumerate>
+
+    proving by [definiton: <reference|filter base>]
+    <math|\<frak-U\><around*|(|x|)>> is a filter base in <math|X>.
   </proof>
 
   <\theorem>
@@ -10997,22 +10997,34 @@
       base union and intersection>] and [defnition: <reference|filter base
       neighborhood filter base>] we have that
       <math|\<frak-W\>=\<frak-U\><around*|(|x|)><big|cap>\<frak-U\><around*|(|y|)>>
-      is a filter base in <math|X> where <math|\<frak-U\><around*|(|x|)>=<around*|{|A<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>>>
-      is defined by <math|A<rsub|\<alpha\>>=a> and
-      <math|\<frak-U\><around*|(|y|)>=<around*|{|B<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\><around*|{|U\<in\>\<cal-T\>\|y\<in\>Y|}>>>.
+      is a filter base in <math|X> where
+
+      <\equation*>
+        \<frak-U\><around*|(|x|)>=<around*|{|U|}><rsub|U\<in\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>><text|
+        and >\<frak-U\><around*|(|y|)>=<around*|{|U|}><rsub|U\<in\><around*|{|U\<in\>\<cal-T\>|}>>
+      </equation*>
+
       If <math|U\<in\>\<cal-T\>> with <math|x\<in\>U> then as
       <math|y\<in\>X\<in\>\<cal-T\>> we have that
       <math|<around*|(|U,X|)>\<in\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>\<times\><around*|{|V\<in\>\<cal-T\>\|y\<in\>V|}>>
-      so that <math|A<rsub|U><big|cap>B<rsub|X>=U<big|cap>X=U\<subseteq\>U>
-      proving that <math|\<frak-W\>\<rightarrow\>x>. Further if
-      <math|V\<in\>\<cal-T\>> with <math|y\<in\>V> then as
+      so that <math|U<big|cap>X=U\<subseteq\>U> proving that
+
+      <\equation*>
+        \<frak-W\>\<rightarrow\>x
+      </equation*>
+
+      Further if <math|V\<in\>\<cal-T\>> with <math|y\<in\>V> then as
       <math|x\<in\>X\<in\>\<cal-T\>> we have that
       <math|<around*|(|X,V|)>\<in\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>\<times\><around*|{|V\<in\>\<cal-T\>\|y\<in\>V|}>>
-      so that <math|A<rsub|X><big|cap>B<rsub|V>=X<big|cap>V=V\<subseteq\>V>
-      proving that <math|\<frak-W\>\<rightarrow\>y>. By the hypothese it
-      follows then that <math|x=y> contradiction <math|x\<neq\>y>. So the
-      assumption that <math|\<cal-T\>> is not Hausdorff is wrong proving that
-      <math|\<cal-T\>> is Hausdorff.
+      so that <math|X<big|cap>V=V\<subseteq\>V> proving that
+
+      <\equation*>
+        \<frak-W\>\<rightarrow\>y
+      </equation*>
+
+      By the hypothese it follows then that <math|x=y> contradiction
+      <math|x\<neq\>y>. So the assumption that <math|\<cal-T\>> is not
+      Hausdorff is wrong proving that <math|\<cal-T\>> is Hausdorff.
     </description>
   </proof>
 
@@ -11058,11 +11070,10 @@
 
   <\proof>
     By [definition: <reference|filter base neighborhood filter base>]
-    <math|\<frak-U\><around*|(|x|)>=<around*|{|A<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>>>
-    where <math|A<rsub|\<alpha\>>=\<alpha\>>. So if <math|U\<in\>\<cal-T\>>
-    with <math|x\<in\>U> then <math|U\<in\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>>
-    and <math|A<rsub|U>=U\<subseteq\>U> proving that
-    <math|><math|\<frak-U\><around*|(|x|)>\<rightarrow\>x>.
+    <math|\<frak-U\><around*|(|x|)>=<around*|{|U|}><rsub|U\<in\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>>>.
+    So if <math|U\<in\>\<cal-T\>> with <math|x\<in\>U> then
+    <math|U\<in\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>> and
+    <math|U\<subseteq\>U> proving that <math|><math|\<frak-U\><around*|(|x|)>\<rightarrow\>x>.
   </proof>
 
   <\definition>
@@ -11130,6 +11141,9 @@
       <math|\<frak-U\><rsub|1>\<gg\>\<frak-U\><rsub|2>> and
       <math|\<frak-U\><rsub|2>\<gg\>\<frak-U\><rsub|3>> then
       <math|\<frak-U\><rsub|1>\<gg\>\<frak-U\><rsub|2>>
+
+      <item>If <math|\<frak-U\>> is a filter base in <math|X> then
+      <math|\<frak-U\>\<gg\>\<frak-U\>>
     </enumerate>
   </theorem>
 
@@ -11155,17 +11169,15 @@
       <math|\<forall\>\<beta\>\<in\>J> and <math|\<forall\>\<alpha\>\<in\>I>
       we have that <math|A<rsub|\<alpha\>><big|cap>B<rsub|\<beta\>>\<neq\>\<varnothing\>>.\ 
 
-      <item>We have <math|\<frak-U\><around*|(|x|)>=<around*|{|B<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>>\<subseteq\>\<cal-P\><around*|(|X|)>>
-      where <math|B<rsub|\<alpha\>>=\<alpha\>>
+      <item>By definition <math|\<frak-U\><around*|(|x|)>=<around*|{|U|}><rsub|U\<in\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>>\<subseteq\>\<cal-P\><around*|(|X|)>>
+      and\ 
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|\<frak-U\>\<rightarrow\>x>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>U\<in\>\<cal-T\><text|
         with >x\<in\>U<text| >\<exists\>\<alpha\>\<in\>I<text| such that
         >A<rsub|\<alpha\>>\<subseteq\>U>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>U\<in\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}><text|
         >\<exists\>\<alpha\>\<in\>I<text| such that
-        <math|A<rsub|\<alpha\>>\<subseteq\>U>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>U\<in\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}><text|
-        >\<exists\>\<alpha\>\<in\>I<text| such that
-        <math|A<rsub|\<alpha\>>\<subseteq\>B<rsub|U>>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<frak-U\>\<geqslant\>\<frak-U\><around*|(|x|)>>>>>
+        <math|A<rsub|\<alpha\>>\<subseteq\>U>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<frak-U\>\<geqslant\>\<frak-U\><around*|(|x|)>>>>>
       </eqnarray*>
 
       <item>Let <math|\<gamma\>\<in\>K> then as
@@ -11175,6 +11187,11 @@
       <math|\<alpha\>\<in\>I> such that <math|A<rsub|\<alpha\>>\<subseteq\>B<rsub|\<beta\>>>.
       Hence <math|A<rsub|\<alpha\>>\<subseteq\>C<rsub|\<gamma\>>> proving
       that <math|\<frak-U\><rsub|1>\<geqslant\>\<frak-U\><rsub|3>>.
+
+      <item>If <math|\<frak-U\>=<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|X|)>>
+      is a filter base in <math|X> then <math|\<forall\>i\<in\>I> we have
+      <math|A<rsub|i>=A<rsub|i>\<Rightarrow\>A<rsub|i>\<subseteq\>A<rsub|i>>,
+      hence <math|\<frak-U\>\<gg\>\<frak-U\>>.
     </enumerate>
   </proof>
 
@@ -11319,7 +11336,645 @@
     </description>
   </proof>
 
-  \;
+  <\theorem>
+    <label|filter base mapping>Let <math|f:X\<rightarrow\>Y> be a function
+    between sets <math|X> and <math|Y>. If
+    <math|\<frak-U\>=<around*|{|A<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>I>\<subseteq\>\<cal-P\><around*|(|X|)>>
+    is a filter base in <math|X> then if we define
+    <math|f<around*|[|\<frak-U\>|]>> by\ 
+
+    <\equation*>
+      f<around*|[|\<frak-U\>|]>=<around*|{|f<around*|(|A<rsub|\<alpha\>>|)>|}><rsub|\<alpha\>\<in\>I>\<subseteq\>\<cal-P\><around*|(|Y|)>
+    </equation*>
+
+    we have that\ 
+
+    <\equation*>
+      f<around*|[|\<frak-U\>|]><text| is a filter base in >Y
+    </equation*>
+  </theorem>
+
+  <\proof>
+    As <math|\<frak-U\>> is a filter base we have
+    <math|I\<neq\>\<varnothing\>> and\ 
+
+    <\enumerate>
+      <item><math|\<forall\>\<alpha\>\<in\>I>
+      <math|A<rsub|\<alpha\>>\<neq\>\<varnothing\>> so that
+
+      <\equation*>
+        f<around*|(|A<rsub|\<alpha\>>|)>\<neq\>\<varnothing\>
+      </equation*>
+
+      <item>If <math|\<alpha\>,\<beta\>\<in\>I> then there exist a
+      <math|\<gamma\>\<in\>I> such that <math|A<rsub|\<gamma\>>\<subseteq\>A<rsub|\<alpha\>><big|cap>A<rsub|\<beta\>>>
+      so that using [theorem: <reference|function function and intersection
+      and union>]
+
+      <\equation*>
+        f<around*|(|A<rsub|\<gamma\>>|)>\<subseteq\>f<around*|(|A<rsub|\<alpha\>><big|cap>A<rsub|\<beta\>>|)>\<subseteq\>f<around*|(|A<rsub|\<alpha\>>|)><big|cap>f<around*|(|A<rsub|\<beta\>>|)>
+      </equation*>
+    </enumerate>
+
+    proving that <math|><math|f<around*|[|\<frak-U\>|]>=<around*|{|f<around*|(|A<rsub|\<alpha\>>|)>|}><rsub|\<alpha\>\<in\>I>\<subseteq\>\<cal-P\><around*|(|Y|)>>
+    is a filter base of <math|Y>.
+  </proof>
+
+  Filter bases allows us to have a equivalent definition of a continuous
+  function.
+
+  <\theorem>
+    <label|filter base and continuity at a point>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,\<cal-S\>|\<rangle\>>> be topological spaces
+    and <math|f:X\<rightarrow\>Y> is a function then\ 
+
+    <\equation*>
+      f<text| is continuous at >x<text| >\<Leftrightarrow\><text|
+      >f<around*|[|\<frak-U\><around*|(|x|)>|]>\<rightarrow\>f<around*|(|x|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ First note that <math|\<frak-U\><around*|(|x|)>=<around*|{|U|}><rsub|U\<in\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>>\<subseteq\>\<cal-P\><around*|(|X|)>>
+    so that
+
+    <\equation*>
+      f<around*|[|\<frak-U\><around*|(|x|)>|]>=<around*|{|f<around*|(|U|)>|}><rsub|U\<in\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>><rsub|>
+    </equation*>
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|V\<in\>\<cal-S\>> such that
+      <math|f<around*|(|x|)>\<in\>V> then as <math|f> is continuous there
+      exist a <math|U\<in\>T> with <math|x\<in\>U> such that
+      <math|f<around*|(|U|)>\<subseteq\>V>. In other words
+      <math|\<exists\>U\<in\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>> such
+      that <math|f<around*|(|U|)>\<subseteq\>V> which by [definition:
+      <reference|filter base converging and acummulating>] proves that\ 
+
+      <\equation*>
+        f<around*|[|\<frak-U\><around*|(|x|)>|]>\<rightarrow\>f<around*|(|x|)>
+      </equation*>
+
+      <item*|<math|\<Leftarrow\>>>Let <math|V\<in\>\<cal-S\>> with
+      <math|f<around*|(|x|)>\<in\>V> then as
+      <math|f<around*|[|\<frak-U\><around*|(|x|)>|]>\<rightarrow\>f<around*|(|x|)>>
+      there exist a <math|U\<in\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>>
+      such that\ 
+
+      <\equation*>
+        f<around*|(|U|)>\<subseteq\>V
+      </equation*>
+
+      proving that <math|f> is continuous at <math|x>.
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|filter base and continuity>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,\<cal-S\>|\<rangle\>>> be topological spaces
+    and <math|f:X\<rightarrow\>Y> a function then\ 
+
+    <\equation*>
+      f<text| is continuous on >X<text| >\<Leftrightarrow\><text|
+      >\<forall\>x\<in\>X<text| and for every filter base
+      <math|\<frak-U\><text| in >X<text| with
+      >\<frak-U\>\<rightarrow\>X<text| we have
+      >f<around*|[|\<frak-U\>|]>\<rightarrow\>f<around*|(|x|)>>>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|x\<in\>X> and
+      \ <math|\<frak-U\>=<around*|{|A<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>I>\<subseteq\>\<cal-P\><around*|(|X|)>>
+      such that <math|\<frak-U\>\<rightarrow\>x> then by [theorem:
+      <reference|filter base and properties of subordinate and inclusion>]
+      <math|\<frak-U\>\<gg\>\<frak-U\><around*|(|x|)>>. So if
+      <math|U\<in\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>> by [definition:
+      <reference|filter base subordinate>] there exist a
+      <math|\<alpha\>\<in\>I> such that <math|A<rsub|\<alpha\>>\<subseteq\>U>,
+      hence <math|f<around*|(|A<rsub|\<alpha\>>|)>\<subseteq\>f<around*|(|U|)>>.
+      So by [definiton: <reference|filter base subordinate>]\ 
+
+      <\equation>
+        <label|eq 14.121.152>f<around*|[|\<frak-U\>|]>\<gg\>f<around*|[|\<frak-U\><around*|(|x|)>|]>
+      </equation>
+
+      As <math|f> is continuous, hence continuous at <math|x> hence by the
+      previous theorem [theorem: <reference|filter base and continuity at a
+      point>] that\ 
+
+      <\equation>
+        <label|eq 14.122.152>f<around*|[|\<frak-U\><around*|(|x|)>|]>\<rightarrow\>f<around*|(|x|)>
+      </equation>
+
+      Using [theorem: <reference|filter base convergence properties>]
+      together with [eqs: <reference|eq 14.121.152>, <reference|eq
+      14.122.152>] proves that\ 
+
+      <\equation>
+        <label|eq 14.123.152>f<around*|[|\<frak-U\>|]>\<rightarrow\>f<around*|(|x|)>
+      </equation>
+
+      <item*|<math|\<Leftarrow\>>>Take <math|A\<subseteq\>X> and let
+      <math|y\<in\>f<around*|(|<wide|A|\<wide-bar\>>|)>> then
+      <math|\<exists\>x\<in\><wide|A|\<wide-bar\>>> such that
+      <math|y=f<around*|(|x|)>>. Using [theorem: <reference|filter base
+      closure and on relation>] there exist a filter base
+      <math|\<frak-U\>=<around*|{|A<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>I>\<subseteq\>\<cal-P\><around*|(|X|)>>
+      <with|font-series|bold|on> <math|A> such that
+      <math|\<frak-U\>\<rightarrow\>x>. As <math|\<frak-U\>> is a filter base
+      <with|font-series|bold|on> <math|A> we have that
+      <math|\<forall\>\<alpha\>\<in\>I> <math|A<rsub|\<alpha\>>\<subseteq\>A>
+      so that <math|f<around*|(|A<rsub|\<alpha\>>|)>\<subseteq\>f<around*|(|A|)>>
+      proving that <math|f<around*|[|\<frak-U\>|]>> is
+      <with|font-series|bold|on> <math|f<around*|(|A|)>>. This together with
+      <math|f<around*|[|\<frak-U\>|]>\<rightarrow\>f<around*|(|x|)>> [see eq:
+      <reference|eq 14.123.152>] gives by [theorem: <reference|filter base
+      closure and on relation>] that <math|f<around*|(|x|)>\<in\><wide|f<around*|(|A|)>|\<wide-bar\>>>
+      proving that\ 
+
+      <\equation*>
+        f<around*|(|<wide|A|\<wide-bar\>>|)>\<subseteq\><wide|f<around*|(|A|)>|\<wide-bar\>>
+      </equation*>
+
+      Finally using [theorem: <reference|continuity equivalences>] on the
+      above proves that <math|f> is continuous.
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|filter base projection operator>Let
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,\<cal-T\><rsub|i>|\<rangle\>>|}><rsub|i\<in\>I>>
+    be a family of topological spaces, \ <math|<around*|\<langle\>|X,\<cal-T\><rsub|product>|\<rangle\>>>
+    the topological space defined by <math|X=<big|prod><rsub|i\<in\>I>X<rsub|i>>
+    together with the product topology <math|\<cal-T\><rsub|product >> [see
+    theorem: <reference|topology product>], <math|x\<in\>X> and
+    <math|\<frak-U\>=<around*|{|A<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>J>\<subseteq\><big|prod><rsub|i\<in\>I>X<rsub|i>>
+    a filter base in <math|X> and <math|x\<in\>X> then\ 
+
+    <\equation*>
+      \<frak-U\>\<rightarrow\>x<text| >\<Leftrightarrow\><text|
+      >\<forall\>i\<in\>I<text| we have for
+      >\<pi\><rsub|i>:X\<rightarrow\>X<rsub|i><text| the projection function
+      that >\<pi\><rsub|i><around*|[|\<frak-U\>|]>\<rightarrow\>\<pi\><rsub|i><around*|(|x|)>=x<rsub|i>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|i\<in\>I> as
+      <math|\<frak-U\>\<rightarrow\>x> we have, as
+      <math|\<pi\><rsub|i>:<big|prod><rsub|i\<in\>I>X<rsub|i>\<rightarrow\>X<rsub|i>>
+      is continuous [see theorem: <reference|continuity projection map is
+      open and continuous>], by the previous theorem [theorem:
+      <reference|filter base and continuity>] that
+      <math|\<pi\><rsub|i><around*|[|\<frak-U\>|]>\<rightarrow\>\<pi\><rsub|i><around*|(|x|)>=x<rsub|i>>.\ 
+
+      <item*|<math|\<Leftarrow\>>>Let <math|x\<in\><big|prod><rsub|i\<in\>I>X<rsub|i>>
+      and <math|U\<in\>\<cal-T\><rsub|product>> such that <math|x\<in\>U>. By
+      the definition of the product topology [see theorem:
+      <reference|topology product>] there exist a finite <math|J> and
+      <math|<around*|{|S<rsub|i>|}><rsub|i\<in\>J>\<subseteq\><around*|{|\<pi\><rsub|i><rsup|-1><around*|(|V|)>\|i\<in\>I\<wedge\>U\<in\>\<cal-T\><rsub|i>|}>>
+      such that
+
+      <\equation>
+        <label|eq 14.124.153>x\<in\><big|cap><rsub|j\<in\>J>S<rsub|j>\<subseteq\>U
+      </equation>
+
+      Let <math|j\<in\>J> then <math|\<exists\>i<rsub|j>\<in\>I> and a
+      <math|U<rsub|j>\<in\>\<cal-T\><rsub|i<rsub|j>>> such that
+      <math|S<rsub|j>=\<pi\><rsup|-1><rsub|i<rsub|j>><around*|(|U<rsub|j>|)>>,
+      so that <math|\<pi\><rsub|i<rsub|j>><around*|(|S<rsub|j>|)>\<subseteq\>U<rsub|j>>,
+      hence <math|\<pi\><rsub|i<rsub|j>><around*|(|x|)>\<in\>\<pi\><rsub|i<rsub|j>><around*|(|S<rsub|j>|)>\<subseteq\>U<rsub|j>\<in\>\<cal-T\><rsub|i<rsub|j>>>.
+      \ By the hypothese <math|\<pi\><rsub|i<rsub|j>><around*|[|\<frak-U\>|]>\<rightarrow\>\<pi\><rsub|i<rsub|j>><around*|(|x|)>>
+      so there exist a <math|\<alpha\><rsub|j>\<in\>I> such that
+      <math|\<pi\><rsub|i<rsub|j>><around*|(|A<rsub|\<alpha\><rsub|j>>|)>\<subseteq\>U<rsub|j>>
+      hence <math|A<rsub|\<alpha\><rsub|j>>\<subseteq\>\<pi\><rsub|i<rsub|j>><rsup|-1><around*|(|U<rsub|j>|)>=S<rsub|j>>.
+      So <math|<big|cap><rsub|j\<in\>J>A<rsub|\<alpha\><rsub|j>>\<subseteq\><big|cap><rsub|j\<in\>J>S<rsub|j>\<subseteq\>U>.
+      As <math|J> is finite it follows from [theorem: <reference|filter base
+      finite intersection>] that <math|\<exists\>\<gamma\>\<in\>I> such that
+
+      <\equation*>
+        A<rsub|\<gamma\>>\<subseteq\><big|cap><rsub|j\<in\>J>A<rsub|\<alpha\><rsub|j>>\<subseteq\>U
+      </equation*>
+
+      proving that\ 
+
+      <\equation*>
+        \<frak-U\>\<rightarrow\>x
+      </equation*>
+    </description>
+  </proof>
+
+  <\definition>
+    <label|filter base maximum filter base><index|ultra filter><index|maximum
+    filter base>Let <math|X> a set then a filter base <math|\<frak-U\>> in
+    <math|X> is called <with|font-series|bold|maximal> or a
+    <with|font-series|bold|ultra filter >if for every filter base
+    <math|\<frak-W\>> in <math|X> with <math|\<frak-W\>\<gg\>\<frak-U\>> we
+    have that <math|\<frak-U\>\<gg\>\<frak-W\>>.
+  </definition>
+
+  <\theorem>
+    <label|filter base maximal condition>Let <math|X> a set then and
+    <math|\<frak-U\>=<around*|{|A<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>I>\<subseteq\>\<cal-P\><around*|(|X|)>>
+    a filter base in <math|X> then\ 
+
+    <\equation*>
+      \<frak-U\><text| is maximal >
+    </equation*>
+
+    <\equation*>
+      \<Updownarrow\>
+    </equation*>
+
+    <\equation*>
+      \<forall\>A\<subseteq\>X<text| we have
+      ><around*|(|\<exists\>\<beta\>\<in\>I<text| with
+      >A<rsub|\<beta\>>\<subseteq\>A\<wedge\>\<forall\>\<alpha\>\<in\>I<text|
+      <math|A<rsub|\<alpha\>>\<nsubseteq\>X\\A>
+      >|)>\<vee\><around*|(|\<forall\>\<alpha\>\<in\>I
+      A<rsub|\<alpha\>>\<nsubseteq\>A\<wedge\>\<exists\>\<beta\>\<in\>I with
+      A<rsub|\<beta\>>\<subseteq\>X\\A|)>
+    </equation*>
+
+    In other words\ 
+
+    <\equation*>
+      \<frak-U\><text| is maximal >\<Leftrightarrow\><text|
+      >\<forall\>A\<subseteq\>X<text| one and only one of the sets
+      >A,X\\A<text| contains a member of >\<frak-U\>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|A\<subseteq\>X> and assume that
+      there exist <math|\<alpha\>\<comma\>\<beta\>\<in\>I> such that
+      <math|A<rsub|\<alpha\>>\<subseteq\>A> and
+      <math|A<rsub|\<beta\>>\<subseteq\>X\\A> then
+      <math|A<rsub|\<alpha\>><big|cap>A<rsub|\<beta\>>\<subseteq\>X<big|cap><around*|(|X\\A|)>=\<varnothing\>>
+      proving that <math|A<rsub|\<alpha\>><big|cap>A<rsub|\<beta\>>=\<varnothing\>>.
+      By definition of a filter base there exist a <math|\<gamma\>\<in\>I>
+      such that <math|\<varnothing\>\<neq\>A<rsub|\<gamma\>>\<subseteq\>A<rsub|\<alpha\>><big|cap>A<rsub|\<beta\>>=\<varnothing\>>
+      leading to the contradiction <math|\<varnothing\>\<neq\>\<varnothing\>>.
+      Hence\ 
+
+      <\equation>
+        <label|eq 14.124.152>\<neg\><around*|(|\<exists\>\<alpha\>,\<beta\>\<in\>I<text|
+        such that >A<rsub|\<alpha\>>\<subseteq\>A\<wedge\>A<rsub|\<beta\>>\<subseteq\>X\\A|)>
+      </equation>
+
+      We have now two possibilities to consider for <math|A\<subseteq\>X>:
+
+      <\description>
+        <item*|<math|\<forall\>\<alpha\>\<in\>I
+        A<rsub|\<alpha\>>\<nsubseteq\>A>>Then
+        <math|\<forall\>\<alpha\>\<in\>I> there exist a
+        <math|x\<in\>A<rsub|\<alpha\>>> so that <math|x\<nin\>A>, hence
+        <math|<around*|(|X\\A|)><big|cap>A<rsub|\<alpha\>>\<neq\>\<varnothing\>>.
+        Further if <math|\<alpha\>,\<beta\>\<in\>I> then as <math|\<frak-U\>>
+        is a filter base there exist a <math|\<gamma\>\<in\>I> such that
+        <math|A<rsub|\<gamma\>>\<subseteq\>A<rsub|\<alpha\>><big|cap>A<rsub|\<beta\>>>
+        so that <math|<around*|(|X\\A|)><big|cap>A<rsub|\<gamma\>>\<subseteq\><around*|(|X\\A|)><big|cap><around*|(|A<rsub|\<alpha\>><big|cap>A<rsub|\<beta\>>|)>=<around*|(|<around*|(|X\\A|)><big|cap>A<rsub|\<alpha\>>|)><big|cap><around*|(|<around*|(|A\\A|)><big|cap>A<rsub|\<beta\>>|)>>.
+        Hence we have \ that
+
+        <\equation*>
+          \<frak-W\>=<around*|{|<around*|(|X\\A|)><big|cap>A<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>I>\<subseteq\>\<cal-P\><around*|(|X|)><text|
+          is a filter base in X>
+        </equation*>
+
+        Further as <math|\<forall\>\<alpha\>\<in\>I>
+        <math|<around*|(|X\\A|)><big|cap>A<rsub|\<alpha\>>> we have by
+        [definition: <reference|filter base subordinate>] that
+        <math|\<frak-W\>\<gg\>\<frak-U\>>, as <math|\<frak-U\>> is maximal it
+        follows that <math|\<frak-U\>\<gg\>\<frak-W\>>. Hence
+        <math|\<forall\>\<alpha\>\<in\>I> there exist a
+        <math|\<beta\>\<in\>I> such that <math|A<rsub|\<beta\>>\<subseteq\><around*|(|X\\A|)><big|cap>A<rsub|\<alpha\>>\<subseteq\>X\\A>.
+        So in this case we have proved that\ 
+
+        <\equation*>
+          \<forall\>\<alpha\>\<in\>I<text|
+          >A<rsub|\<alpha\>>\<nsubseteq\>A\<wedge\>\<exists\>\<beta\>\<in\>I<text|
+          with >A<rsub|\<beta\>>\<subseteq\>X\\A
+        </equation*>
+
+        <item*|<math|\<exists\>\<beta\>\<in\>I> with
+        <math|A<rsub|\<beta\>>\<subseteq\>A>>Then by [eq: <reference|eq
+        14.124.152>] we must have that <math|\<forall\>\<alpha\>\<in\>I> that
+        <math|A<rsub|\<alpha\>>\<nsubseteq\>X\\A> proving that in this case\ 
+
+        <\equation*>
+          \<exists\>\<beta\>\<in\>I<text| with
+          >A<rsub|\<beta\>>\<subseteq\>A\<wedge\>\<forall\>\<alpha\>\<in\>I<text|
+          >A<rsub|\<alpha\>>\<nsubseteq\>X\\A
+        </equation*>
+      </description>
+
+      <item*|<math|\<Leftarrow\>>>Let <math|\<frak-U\>=<around*|{|A<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>I>\<subseteq\>\<cal-P\><around*|(|X|)>>
+      be a filter bases such that
+
+      <\equation>
+        <label|eq 14.125.152>\<forall\>A\<subseteq\>X<text| one and only one
+        of the two sets <math|A,X\\A<text| contains a member of >\<frak-U\>>>
+      </equation>
+
+      \ Let then \ <math|\<frak-W\>=<around*|{|B<rsub|\<beta\>>|}><rsub|\<beta\>\<in\>J>>
+      such that <math|\<frak-W\>\<gg\>\<frak-U\>>. If <math|\<beta\>\<in\>J>
+      then for <math|B<rsub|\<beta\>>> we have by [eq: <reference|eq
+      14.125.152>] that there exist a <math|\<alpha\>\<in\>I> such that
+      either <math|A<rsub|\<alpha\>>\<subseteq\>B<rsub|\<beta\>>> or
+      <math|A<rsub|\<alpha\>>\<subseteq\>X\\B<rsub|\<beta\>>>. The last case
+      would mean that <math|A<rsub|\<alpha\>><big|cap>B<rsub|\<beta\>>=\<varnothing\>>
+      contradicting [theorem: <reference|filter base and properties of
+      subordinate and inclusion> (2)], so we must have that
+      <math|A<rsub|\<alpha\>>\<subseteq\>B<rsub|\<beta\>>> proving that
+      <math|\<frak-U\>\<gg\>\<frak-W\>> and thus maximality of
+      <math|\<frak-U\>>.
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|filter base pre-order>Let <math|X> be a set,
+    <math|\<frak-U\>=<around*|{|A<rsub|\<alpha\>>|}><rsub|\<alpha\>\<ni\>I>\<subseteq\>\<cal-P\><around*|(|X|)>>
+    a filter base in <math|X> then there exist a maximal filter base
+    <math|\<frak-W\>> in <math|X> such that <math|\<frak-W\>\<gg\>\<frak-U\>>
+  </theorem>
+
+  <\proof>
+    We use a extension of Zorn's lemma [see theorem: <reference|choice Zorn's
+    lemma for pre-order>] in this proof. To use this we must first define a
+    pre-order [see definition: <reference|order preorder>]. Let
+
+    <\equation*>
+      \<cal-A\>=<around*|{|\<frak-W\>\|\<frak-W\><text| is a filter base in
+      >X<text| with >\<frak-W\>\<gg\>\<frak-U\>|}>
+    </equation*>
+
+    Using \ [theorem: <reference|filter base and properties of subordinate
+    and inclusion>] we have that <math|\<frak-U\>\<gg\>\<frak-U\>> so that\ 
+
+    <\equation*>
+      \<frak-U\>\<in\>\<cal-A\><text| hence >\<cal-A\>\<neq\>\<varnothing\>
+    </equation*>
+
+    Define now the following relation <math|\<leqslant\>> on <math|\<cal-A\>>\ 
+
+    <\equation*>
+      \<leqslant\>\<subseteq\>\<cal-A\>\<times\>\<cal-A\><text| by
+      >\<frak-V\>\<leqslant\>\<frak-W\> <text|iff >\<frak-W\>\<gg\>\<frak-V\>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|reflexitivity>Let <math|\<frak-W\>\<in\>\<cal-A\>> then by then
+      by [theorem: <reference|filter base and properties of subordinate and
+      inclusion>] we have <math|\<frak-W\>\<leqslant\>\<frak-W\>>. \ 
+
+      <item*|transitivity>Assume that <math|\<frak-W\><rsub|1>\<leqslant\>\<frak-W\><rsub|2>\<wedge\>\<frak-W\><rsub|2>\<leqslant\>\<frak-W\><rsub|3>>
+      then <math|\<frak-W\><rsub|2>\<gg\>\<frak-W\><rsub|1>\<wedge\>\<frak-W\><rsub|3>\<gg\>\<frak-W\><rsub|2>>
+      then by [theorem: <reference|filter base and properties of subordinate
+      and inclusion>] we have <math|\<frak-W\><rsub|3>\<gg\>\<frak-W\><rsub|1>>
+      so that <math|\<frak-W\><rsub|1>\<leqslant\>\<frak-W\><rsub|3>>.\ 
+    </description>
+
+    Hence we have that\ 
+
+    <\equation*>
+      <around*|\<langle\>|\<cal-A\>,\<leqslant\>|\<rangle\>><text| is a
+      pre-ordered set>
+    </equation*>
+
+    Let <math|\<cal-C\>\<subseteq\>\<cal-A\>> be any
+    <with|font-series|bold|chain> in <math|<around*|\<langle\>|\<cal-A\>,\<leqslant\>|\<rangle\>>>
+    then we must consider two cases for <math|\<cal-C\>>
+
+    <\description>
+      <item*|<math|\<cal-C\>=\<varnothing\>>>Then we have
+      <math|\<forall\>\<frak-C\>\<in\>\<cal-C\>> that
+      <math|\<frak-C\>\<leqslant\>\<frak-U\>> is satified vacuously proving
+      that <math|\<frak-U\>> is a upper bound of <math|\<cal-C\>>.
+
+      <item*|<math|\<cal-C\>\<neq\>\<varnothing\>>>Given
+      <math|\<frak-C\>=<around*|{|C<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>J>\<in\>\<cal-C\>>
+      define <math|S<rsub|\<frak-C\>>=<around*|{|C<rsub|\<alpha\>>\|\<alpha\>\<in\>J|}>>
+      and define then\ 
+
+      <\equation>
+        <label|eq 14.127.153>\<bbb-B\>=<big|cup><rsub|\<frak-C\>\<in\>\<cal-C\>>S<rsub|\<frak-C\>><text|
+        and >\<frak-B\>=<around*|{|B|}><rsub|B\<in\>\<bbb-B\>>\<subseteq\>\<cal-P\><around*|(|X|)>
+      </equation>
+
+      them we have\ 
+
+      <\equation>
+        <label|eq 14.128.153>\<forall\>\<frak-C\>=<around*|{|C<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>J>\<in\>\<cal-C\><text|
+        we have >\<forall\>\<alpha\>\<in\>J<text| that
+        <math|C<rsub|\<alpha\>>\<in\>\<bbb-B\>>>
+      </equation>
+
+      then we have:\ 
+
+      <\enumerate>
+        <item><math|\<forall\>B\<in\>\<bbb-B\>> there exist a
+        <math|\<frak-C\>=<around*|{|C<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>J>\<in\>\<cal-C\>>
+        such that <math|B\<in\>S<rsub|\<frak-C\>>>, hence
+        <math|\<exists\>\<alpha\>\<in\>J> such that
+        <math|A=C<rsub|\<alpha\>>\<neq\>\<varnothing\>> [as <math|\<frak-C\>>
+        is a filter base]. Hence we have\ 
+
+        <\equation>
+          <label|eq 11.129.153>\<forall\>B\<in\>\<bbb-B\><text| that
+          >B\<neq\>\<varnothing\>
+        </equation>
+
+        <item>Let <math|B<rsub|1>,B<rsub|2>\<in\>\<bbb-B\>> then there exists
+        <math|\<frak-C\><rsub|1>=<around*|{|C<rsup|1><rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>J<rsub|1>>\<in\>\<cal-C\>>,
+        <math|\<frak-C\><rsub|2>=<around*|{|C<rsup|2><rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>J<rsub|2>>\<in\>\<cal-C\>>
+        such that <math|\<exists\>\<gamma\><rsub|1>\<in\>J<rsub|1>>,
+        <math|\<exists\>\<gamma\><rsub|2>\<in\>J<rsub|2>> such that
+        <math|B<rsub|1>=C<rsup|1><rsub|\<gamma\><rsub|1>>>,
+        <math|B<rsub|2>=C<rsup|2><rsub|\<gamma\><rsub|2>>>. Now as
+        <math|\<cal-C\>> is a chain we have the following possible cases:
+
+        <\description>
+          <item*|<math|\<frak-C\><rsub|1>\<leqslant\>\<frak-C\><rsub|2>>>Then
+          <math|\<frak-C\><rsub|2>\<gg\>\<frak-C\><rsub|1>>, hence there
+          exist a <math|\<gamma\>\<in\>J<rsub|2>> such that
+          <math|C<rsup|2><rsub|\<gamma\>>\<subseteq\>C<rsup|1><rsub|\<gamma\><rsub|1>>=B<rsub|1>>.
+          As <math|\<frak-C\><rsub|2>> is a filter base there exist a
+          <math|\<beta\>\<in\>J<rsub|2>> such that
+          <math|C<rsup|2><rsub|\<beta\>>\<subseteq\>C<rsup|2><rsub|\<gamma\>><big|cap>C<rsup|2><rsub|\<gamma\><rsub|2>>\<subseteq\>B<rsub|1><big|cap>B<rsub|2>>.
+          Take <math|B<rsub|3>=C<rsup|2><rsub|\<beta\>>\<in\>\<bbb-B\>> then
+          <math|B<rsub|3>\<subseteq\>B<rsub|1><big|cap>B<rsub|2>>.
+
+          <item*|<math|\<frak-C\><rsub|2>\<leqslant\>\<frak-C\><rsub|1>>>Then
+          <math|\<frak-C\><rsub|1>\<gg\>\<frak-C\><rsub|2>>, hence there
+          exist a <math|\<gamma\>\<in\>J<rsub|1>> such that
+          <math|C<rsup|1><rsub|\<gamma\>>\<subseteq\>C<rsup|2><rsub|\<gamma\><rsub|1>>=B<rsub|2>>.
+          As <math|\<frak-C\><rsub|1>> is a filter base there exist a
+          <math|\<beta\>\<in\>J<rsub|1>> such that
+          <math|C<rsup|1><rsub|\<beta\>>\<subseteq\>C<rsup|1><rsub|\<gamma\>><big|cap>C<rsup|1><rsub|\<gamma\><rsub|1>>\<subseteq\>B<rsub|1><big|cap>B<rsub|2>>.
+          Take <math|B<rsub|3>=C<rsup|1><rsub|\<beta\>>\<in\>\<bbb-B\>> then
+          <math|B<rsub|3>\<subseteq\>B<rsub|1><big|cap>B<rsub|2>>.
+        </description>
+
+        So in all cases we have\ 
+
+        <\equation>
+          <label|eq 14.130.153>\<forall\>B<rsub|1>,B<rsub|2>\<in\>\<bbb-B\><text|
+          there exist a <math|B<rsub|3>\<in\>\<bbb-B\>> such that
+          >B<rsub|3>\<subseteq\>B<rsub|1><big|cap>B<rsub|2>
+        </equation>
+      </enumerate>
+
+      Combining [eqs: <reference|eq 14.127.153>, <reference|eq 14.129.153>
+      and <reference|eq 14.130.153>] proves that\ 
+
+      <\equation*>
+        \<frak-B\><text| is a filter base>
+      </equation*>
+
+      As <math|\<cal-C\>\<neq\>\<varnothing\>> there exist a
+      <math|\<frak-C\>=<around*|{|C<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>J>\<in\>\<cal-C\>\<subseteq\>\<cal-A\>>
+      so that <math|\<frak-C\>\<gg\>\<frak-U\>>, hence if
+      <math|\<alpha\>\<in\>I> then there exist a <math|\<gamma\>\<in\>J> such
+      that <math|C<rsub|\<gamma\>>\<subseteq\>A<rsub|\<alpha\>>>. By [eq:
+      <reference|eq 14.128.153>] we have that
+      <math|C<rsub|\<gamma\>>\<in\>\<bbb-B\>> proving that
+      <math|\<frak-B\>\<gg\>\<frak-U\>>, hence
+
+      <\equation*>
+        \<frak-B\>\<in\>\<cal-A\>
+      </equation*>
+
+      Further if <math|\<frak-V\>=<around*|{|D<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>K>\<in\>\<cal-C\>>
+      then <math|\<forall\>\<alpha\>\<in\>K>
+      <math|D<rsub|\<alpha\>>\<subseteq\>D<rsub|\<alpha\>>> hence, as
+      <math|>by [eq: <reference|eq 14.128.153>]
+      <math|D<rsub|\<alpha\>>\<in\>\<bbb-B\>> we have that
+      <math|\<frak-B\>\<gg\>\<frak-C\>> proving that
+      <math|\<frak-C\>\<leqslant\>\<frak-B\>>. Hence\ 
+
+      <\equation*>
+        \<frak-B\><text| is a upper bound of <math|\<frak-C\>>>
+      </equation*>
+    </description>
+
+    So in all cases we have that <math|\<frak-C\>> has a upper bound. Hence
+    we have proved that every chain in <math|\<cal-A\>> has a upper bound. So
+    we can use a variant of Zorn's lemma [theorem: <reference|choice Zorn's
+    lemma for pre-order>] there exist a <math|\<frak-M\>\<in\>\<cal-A\>> such
+    that <math|\<forall\>\<frak-N\>\<in\>\<cal-A\>> with
+    <math|\<frak-M\>\<leqslant\>\<frak-N\>> then
+    <math|\<frak-N\>\<leqslant\>\<frak-M\>>. Hence\ 
+
+    <\equation>
+      <label|eq 14.131.153>\<forall\>\<frak-V\>\<in\>\<cal-A\><text| with
+      >\<frak-N\>\<gg\>\<frak-M\><text| we have
+      >\<frak-M\>\<gg\>\<frak-N\><text| and as
+      >\<frak-M\>\<in\>\<cal-A\><text| we have also
+      >\<frak-M\>\<gg\>\<frak-U\>
+    </equation>
+
+    Now if <math|\<frak-O\>> is a filter base in <math|X> with
+    <math|\<frak-O\>\<gg\>\<frak-W\>> we have as
+    <math|\<frak-W\>\<geqslant\>\<frak-U\>> by [theorem: <reference|filter
+    base and properties of subordinate and inclusion>] that
+    <math|\<frak-O\>\<gg\>\<frak-U\>> so that
+    <math|\<frak-O\>\<in\>\<cal-A\>>, hence by [eq: <reference|eq
+    14.131.153>] it follows that <math|\<frak-M\>\<gg\>\<frak-O\>>. Hence\ 
+
+    <\equation*>
+      \<frak-M\><text| is a ultra filter or maximal filter base with
+      >\<frak-M\>\<gg\>\<frak-U\>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|filter bases maximal filter base and convergence>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
+    and <math|\<frak-U\>=<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|X|)>>
+    a maximal filter then <math|\<forall\>x\<in\>X>
+
+    <\equation*>
+      \<frak-U\>\<succ\>x<text| >\<Leftrightarrow\><text|
+      >\<frak-U\>\<rightarrow\>x
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|U\<in\>\<cal-T\>> with
+      <math|x\<in\>U>. Using [theorem: <reference|filter base maximal
+      condition>] there exist a <math|\<alpha\>\<in\>I> such that either
+      <math|A<rsub|\<alpha\>>\<subseteq\>U> or
+      <math|A<rsub|\<alpha\>>\<subseteq\>X\\U>. Now as
+      <math|\<frak-U\>\<succ\>x> we must have that
+      <math|A<rsub|\<alpha\>><big|cap>U\<neq\>\<varnothing\>> contradicting
+      <math|A<rsub|\<alpha\>>\<subseteq\>X\\A> hence we must have that
+      <math|A<rsub|\<alpha\>>\<subseteq\>U>, so
+      <math|\<frak-U\>\<rightarrow\>x>.
+
+      <item*|<math|\<Leftarrow\>>>This follows from [theorem:
+      <reference|filter base convergence properties>].
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|filter base function preserves maximality>Let <math|X,Y> be sets
+    and <math|f:X\<rightarrow\>Y> a function then if
+    <math|\<frak-U\>=<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|X|)>>
+    is a maximal filter base in <math|X> then
+    <math|f<around*|[|\<frak-U\>|]>> is a maximal filter base in <math|Y>.
+  </theorem>
+
+  <\proof>
+    Using [theorem: <reference|filter base mapping>] then
+    <math|f<around*|[|\<frak-U\>|]>=<around*|{|f<around*|(|A<rsub|i>|)>|}><rsub|i\<in\>I>>
+    is a filter base in <math|Y>. To prove maximality we use [theorem:
+    <reference|filter base maximal condition>]. So let <math|A\<subseteq\>Y>
+    and consider <math|f<rsup|-1><around*|(|A|)>> then by the maximality of
+    <math|\<frak-U\>> we have either:
+
+    <\description>
+      <item*|<math|\<exists\>\<beta\>\<in\>I<text| with
+      >A<rsub|\<beta\>>\<subseteq\>f<rsup|-1><around*|(|A|)>\<wedge\>\<forall\>\<alpha\>\<in\>I<text|
+      >A<rsub|\<alpha\>>\<nsubseteq\>X\\f<rsup|-1><around*|(|A|)>>>Then
+      <math|f<around*|(|A<rsub|\<beta\>>|)>\<subseteq\>A> and
+      <math|\<forall\>\<alpha\>\<in\>I> there exist a
+      <math|x\<in\>A<rsub|\<alpha\>>> such that
+      <math|x\<nin\>X\\f<rsup|-1><around*|(|A|)>\<Rightarrow\>x\<in\>f<rsup|-1><around*|(|A|)>\<Rightarrow\>f<around*|(|x|)>\<in\>A>
+      so that <math|f<around*|(|A<rsub|\<alpha\>>|)>\<nsubseteq\>X\\A>.
+
+      <item*|<math|\<forall\>\<alpha\>\<in\>I<text|
+      >A<rsub|\<alpha\>>\<nsubseteq\>f<rsup|-1><around*|(|A|)>\<wedge\>\<exists\>\<beta\>\<in\>I<text|
+      with >A<rsub|\<beta\>>\<subseteq\>X\\f<rsup|-1><around*|(|A|)>>>Then
+      <math|\<forall\>\<alpha\>> we have that
+      <math|\<exists\>x\<in\>A<rsub|\<alpha\>>> such that
+      <math|x\<nin\>f<rsup|-1><around*|(|A|)>\<Rightarrow\>f<around*|(|x|)>\<nin\>A>
+      proving that <math|f<around*|(|A<rsub|\<alpha\>>|)>\<nsubseteq\>A>.
+      Further <math|\<forall\>x\<in\>A<rsub|\<beta\>>> we have
+      <math|x\<in\>X\\f<rsup|-1><around*|(|A|)>\<Rightarrow\>x\<nin\>f<rsup|-1><around*|(|A|)>\<Rightarrow\>f<around*|(|x|)>\<nin\>A>
+      proving that <math|f<around*|(|A<rsub|\<alpha\>>|)>\<subseteq\>A>.
+    </description>
+
+    Using [theorem: <reference|filter base maximal condition>] it follows
+    then that <math|f<around*|[|\<frak-U\>|]>> is a maximal filter base in
+    <math|Y>.
+  </proof>
 
   <section|Convergence>\ 
 
@@ -12370,14 +13025,16 @@
     <associate|auto-78|<tuple|<with|mode|<quote|math>|\<frak-U\>\<ll\>\<frak-W\>>|?>>
     <associate|auto-79|<tuple|<with|mode|<quote|math>|\<frak-U\>\<sqsubseteq\>\<frak-W\>>|?>>
     <associate|auto-8|<tuple|limit point|648>>
-    <associate|auto-80|<tuple|14.10|?>>
-    <associate|auto-81|<tuple|14.10.1|?>>
-    <associate|auto-82|<tuple|14.10.2|?>>
-    <associate|auto-83|<tuple|14.11|?>>
-    <associate|auto-84|<tuple|Cauchy sequence|?>>
-    <associate|auto-85|<tuple|Cauchy sequence|?>>
-    <associate|auto-86|<tuple|complete space|?>>
-    <associate|auto-87|<tuple|Banach space|?>>
+    <associate|auto-80|<tuple|ultra filter|?>>
+    <associate|auto-81|<tuple|maximum filter base|?>>
+    <associate|auto-82|<tuple|14.10|?>>
+    <associate|auto-83|<tuple|14.10.1|?>>
+    <associate|auto-84|<tuple|14.10.2|?>>
+    <associate|auto-85|<tuple|14.11|?>>
+    <associate|auto-86|<tuple|Cauchy sequence|?>>
+    <associate|auto-87|<tuple|Cauchy sequence|?>>
+    <associate|auto-88|<tuple|complete space|?>>
+    <associate|auto-89|<tuple|Banach space|?>>
     <associate|auto-9|<tuple|accumulation point|648>>
     <associate|closed set properties|<tuple|14.19|647>>
     <associate|compact Hausdorff space is regular and
@@ -12401,7 +13058,7 @@
     <associate|compact singleton|<tuple|14.207|728>>
     <associate|compact space|<tuple|14.202|727>>
     <associate|compact subspace equivalences|<tuple|14.209|728>>
-    <associate|complete space|<tuple|14.260|732>>
+    <associate|complete space|<tuple|14.269|732>>
     <associate|continuity|<tuple|14.138|690>>
     <associate|continuity K^n|<tuple|14.175|705>>
     <associate|continuity L(X,L(Y,Z)) is isometric with
@@ -12482,6 +13139,8 @@
     <associate|continuity uniform continuity|<tuple|14.135|690>>
     <associate|continuity universal continuity implies
     continuity|<tuple|14.136|690>>
+    <associate|eq 11.128.153|<tuple|14.129|?>>
+    <associate|eq 11.129.153|<tuple|14.129|?>>
     <associate|eq 14.1.145|<tuple|14.1|648>>
     <associate|eq 14.10.146|<tuple|14.10|655>>
     <associate|eq 14.100.150|<tuple|14.100|717>>
@@ -12507,7 +13166,18 @@
     <associate|eq 14.119.152|<tuple|14.119|?>>
     <associate|eq 14.12.146|<tuple|14.12|657>>
     <associate|eq 14.120.152|<tuple|14.120|?>>
+    <associate|eq 14.121.152|<tuple|14.121|?>>
+    <associate|eq 14.122.152|<tuple|14.122|?>>
+    <associate|eq 14.123.152|<tuple|14.123|?>>
+    <associate|eq 14.124.152|<tuple|14.125|?>>
+    <associate|eq 14.124.153|<tuple|14.124|?>>
+    <associate|eq 14.125.152|<tuple|14.126|?>>
+    <associate|eq 14.127.153|<tuple|14.127|?>>
+    <associate|eq 14.128.153|<tuple|14.128|?>>
+    <associate|eq 14.129.153|<tuple|14.130|?>>
     <associate|eq 14.13.146|<tuple|14.13|661>>
+    <associate|eq 14.130.153|<tuple|14.130|?>>
+    <associate|eq 14.131.153|<tuple|14.131|?>>
     <associate|eq 14.14.146|<tuple|14.14|661>>
     <associate|eq 14.15.146|<tuple|14.15|663>>
     <associate|eq 14.16.146|<tuple|14.16|663>>
@@ -12602,6 +13272,8 @@
     <associate|eq 14.99.150|<tuple|14.99|717>>
     <associate|filter base|<tuple|14.221|?>>
     <associate|filter base accumulating alternative|<tuple|14.230|?>>
+    <associate|filter base and continuity|<tuple|14.240|?>>
+    <associate|filter base and continuity at a point|<tuple|14.239|?>>
     <associate|filter base and properties of subordinate and
     inclusion|<tuple|14.234|?>>
     <associate|filter base closure and on relation|<tuple|14.237|?>>
@@ -12610,28 +13282,34 @@
     <associate|filter base converging and acummulating|<tuple|14.228|?>>
     <associate|filter base finite intersection|<tuple|14.222|?>>
     <associate|filter base finite intersection property|<tuple|14.227|?>>
+    <associate|filter base function preserves maximality|<tuple|14.246|?>>
     <associate|filter base inclusion|<tuple|14.233|?>>
+    <associate|filter base mapping|<tuple|14.238|?>>
+    <associate|filter base maximal condition|<tuple|14.243|?>>
+    <associate|filter base maximum filter base|<tuple|14.242|?>>
     <associate|filter base neighborhood filter and
     converging|<tuple|14.231|?>>
     <associate|filter base neighborhood filter base|<tuple|14.224|?>>
     <associate|filter base neighborhood filter base is a filter
     base|<tuple|14.225|?>>
     <associate|filter base on a subset|<tuple|14.236|?>>
-    <associate|filter base product and intersection|<tuple|14.226|?>>
+    <associate|filter base pre-order|<tuple|14.244|?>>
+    <associate|filter base projection operator|<tuple|14.241|?>>
     <associate|filter base subordinate|<tuple|14.232|?>>
     <associate|filter base trivial|<tuple|14.223|?>>
     <associate|filter base union and intersection|<tuple|14.226|?>>
-    <associate|filter basison relation|<tuple|14.236|?>>
-    <associate|limit (a+n)/(b+n)|<tuple|14.250|725>>
-    <associate|limit 1/(a+i)|<tuple|14.249|724>>
-    <associate|limit a.x_n|<tuple|14.253|726>>
-    <associate|limit and continuity|<tuple|14.254|726>>
-    <associate|limit and continuity in metric space|<tuple|14.255|726>>
-    <associate|limit b^n|<tuple|14.248|724>>
-    <associate|limit constant sequence|<tuple|14.247|724>>
-    <associate|limit convergent sequence is bounded|<tuple|14.256|727>>
-    <associate|limit x_n+a|<tuple|14.251|725>>
-    <associate|limit x_n+y_n|<tuple|14.252|725>>
+    <associate|filter bases maximal filter base and
+    convergence|<tuple|14.245|?>>
+    <associate|limit (a+n)/(b+n)|<tuple|14.259|725>>
+    <associate|limit 1/(a+i)|<tuple|14.258|724>>
+    <associate|limit a.x_n|<tuple|14.262|726>>
+    <associate|limit and continuity|<tuple|14.263|726>>
+    <associate|limit and continuity in metric space|<tuple|14.264|726>>
+    <associate|limit b^n|<tuple|14.257|724>>
+    <associate|limit constant sequence|<tuple|14.256|724>>
+    <associate|limit convergent sequence is bounded|<tuple|14.265|727>>
+    <associate|limit x_n+a|<tuple|14.260|725>>
+    <associate|limit x_n+y_n|<tuple|14.261|725>>
     <associate|metric ball image preimage|<tuple|14.67|662>>
     <associate|metric bounded set|<tuple|14.69|663>>
     <associate|metric bounded set inclusion|<tuple|14.71|664>>
@@ -12713,16 +13391,16 @@
     countability|<tuple|14.201|721>>
     <associate|separation second countable topological
     space|<tuple|14.200|721>>
-    <associate|sequence|<tuple|14.238|721>>
-    <associate|sequence Cauchy metric|<tuple|14.257|732>>
-    <associate|sequence Cauchy normed|<tuple|14.258|732>>
-    <associate|sequence convergence|<tuple|14.241|722>>
-    <associate|sequence convergence in metric space|<tuple|14.245|723>>
-    <associate|sequence increasing decreasing|<tuple|14.239|721>>
-    <associate|sequence increasing decreasing consequence|<tuple|14.240|721>>
-    <associate|sequence limit|<tuple|14.243|723>>
-    <associate|sequence limit definition|<tuple|14.244|723>>
-    <associate|sequence limit start value|<tuple|14.242|722>>
+    <associate|sequence|<tuple|14.247|721>>
+    <associate|sequence Cauchy metric|<tuple|14.266|732>>
+    <associate|sequence Cauchy normed|<tuple|14.267|732>>
+    <associate|sequence convergence|<tuple|14.250|722>>
+    <associate|sequence convergence in metric space|<tuple|14.254|723>>
+    <associate|sequence increasing decreasing|<tuple|14.248|721>>
+    <associate|sequence increasing decreasing consequence|<tuple|14.249|721>>
+    <associate|sequence limit|<tuple|14.252|723>>
+    <associate|sequence limit definition|<tuple|14.253|723>>
+    <associate|sequence limit start value|<tuple|14.251|722>>
     <associate|toplinear isomorphism|<tuple|14.173|703>>
     <associate|topological vector space|<tuple|14.170|703>>
     <associate|topology and complement closed sets|<tuple|14.18|647>>
@@ -12884,13 +13562,33 @@
 
       <tuple|<tuple|neighborhood filter base>|<pageref|auto-71>>
 
-      <tuple|<tuple|Cauchy sequence>|<pageref|auto-76>>
+      <tuple|<tuple|converging to a point>|<pageref|auto-72>>
 
-      <tuple|<tuple|Cauchy sequence>|<pageref|auto-77>>
+      <tuple|<tuple|accumaling at a point>|<pageref|auto-73>>
 
-      <tuple|<tuple|complete space>|<pageref|auto-78>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<frak-U\>\<rightarrow\>x>>|<pageref|auto-74>>
 
-      <tuple|<tuple|Banach space>|<pageref|auto-79>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<frak-U\>\<succ\>x>>|<pageref|auto-75>>
+
+      <tuple|<tuple|subordinate filter bases>|<pageref|auto-76>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<frak-W\>\<geqslant\>\<frak-U\>>>|<pageref|auto-77>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<frak-U\>\<ll\>\<frak-W\>>>|<pageref|auto-78>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<frak-U\>\<sqsubseteq\>\<frak-W\>>>|<pageref|auto-79>>
+
+      <tuple|<tuple|ultra filter>|<pageref|auto-80>>
+
+      <tuple|<tuple|maximum filter base>|<pageref|auto-81>>
+
+      <tuple|<tuple|Cauchy sequence>|<pageref|auto-86>>
+
+      <tuple|<tuple|Cauchy sequence>|<pageref|auto-87>>
+
+      <tuple|<tuple|complete space>|<pageref|auto-88>>
+
+      <tuple|<tuple|Banach space>|<pageref|auto-89>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|14<space|2spc>Topology>
@@ -12957,18 +13655,18 @@
       <no-break><pageref|auto-69>>
 
       14.10<space|2spc>Convergence <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-72>
+      <no-break><pageref|auto-82>
 
       <with|par-left|<quote|1tab>|14.10.1<space|2spc>Sequences and limit
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-73>>
+      <no-break><pageref|auto-83>>
 
       <with|par-left|<quote|1tab>|14.10.2<space|2spc>Properties of the limit
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-74>>
+      <no-break><pageref|auto-84>>
 
       14.11<space|2spc>Complete spaces <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-75>
+      <no-break><pageref|auto-85>
     </associate>
   </collection>
 </auxiliary>

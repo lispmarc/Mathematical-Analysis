@@ -11535,8 +11535,6 @@
     </description>
   </proof>
 
-  TODO
-
   <\theorem>
     <label|choice function generating>Let <math|A,B> be sets such that
     <math|\<forall\>a\<in\>A> there exist a <math|b\<in\>B> satisfying
@@ -12933,8 +12931,8 @@
     </description>
   </theorem>
 
-  There is a kind of extension of Zorn's lemma to pre-ordered sets if change
-  the definition of maximal element slightly.
+  There is a kind of extension of Zorn's lemma to pre-ordered sets if we
+  change the definition of maximal element slightly.
 
   <\theorem>
     <label|choice Zorn's lemma for pre-order>Let
