@@ -14351,6 +14351,8 @@
     <associate|family union condition set|<tuple|2.117|?>>
     <associate|family union intersection and empty set|<tuple|2.131|?>>
     <associate|family union intersection and inclusion|<tuple|2.126|?>>
+    <associate|family union intersection of two families with different index
+    sets|<tuple|2.128|?>>
     <associate|family union of a empty set|<tuple|2.118|?>>
     <associate|family union of family of families|<tuple|2.132|?>>
     <associate|family union of family set and surjections|<tuple|2.116|?>>

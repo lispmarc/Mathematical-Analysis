@@ -1937,7 +1937,7 @@
       combining this with [eq: <reference|eq 14.12.146>] gives\ 
 
       <\equation*>
-        \<cal-B\><rsub|produc>=\<cal-B\><rsub|box>
+        \<cal-B\><rsub|product>=\<cal-B\><rsub|box>
       </equation*>
 
       hence\ 
@@ -1946,6 +1946,79 @@
         \<cal-T\><rsub|box>=\<cal-B\><around*|[|\<cal-B\><rsub|box>|]>=\<cal-B\><around*|[|\<cal-B\><rsub|product>|]>=\<cal-T\><rsub|product>
       </equation*>
     </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|topology product topology of subspace topologies>Let
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,\<cal-T\><rsub|i>|\<rangle\>>|}><rsub|i\<in\>I>>
+    be a family of topological spaces and let <math|\<forall\>i\<in\>I>
+    <math|A<rsub|i>\<subseteq\>X<rsub|i>> be equiped with the subspace
+    topology <math|<around*|(|\<cal-T\><rsub|i>|)><rsub|\|A<rsub|i>>> then
+    the subspace topology <math|<around*|(|\<cal-T\><rsub|product>|)><rsub|\|<big|prod><rsub|i\<in\>I>A<rsub|i>>>
+    is the product topology of <math|<around*|{|<around*|\<langle\>|A<rsub|i>,<around*|(|\<cal-T\><rsub|i>|)><rsub|\|A<rsub|i>>|\<rangle\>>|}><rsub|i\<in\>I>>
+  </theorem>
+
+  <\proof>
+    Let <math|\<cal-B\><rsub|product >> be the basis of
+    <math|\<cal-T\><rsub|product>> then by [theorem: <reference|topology
+    basis of a subspace topology>]\ 
+
+    <\equation*>
+      <around*|(|\<cal-B\><rsub|product>|)><rsub|\|<big|prod><rsub|i\<in\>I>A<rsub|i>>=<around*|{|B<big|cap><big|prod><rsub|i\<in\>I>A<rsub|i>\|B\<in\>\<cal-B\><rsub|product>|}><text|
+      is a basis for ><around*|(|\<cal-T\><rsub|product>|)><rsub|\|<big|prod><rsub|i\<in\>I>A<rsub|i>>
+    </equation*>
+
+    further let <math|\<cal-T\><rsup|product>> be the product topology of
+    <math|<around*|{|<around*|\<langle\>|A<rsub|i>,<around*|(|\<cal-T\><rsub|i>|)><rsub|\|A<rsub|i>>|\<rangle\>>|}><rsub|i\<in\>I>>
+    and <math|\<cal-B\><rsup|product>> de basis van
+    <math|\<cal-T\><rsup|product>>.
+
+    <\enumerate>
+      <item>If <math|B\<in\><around*|(|\<cal-B\><rsub|product>|)><rsub|\|<big|prod><rsub|i\<in\>I>A<rsub|i>>>
+      then by [definition: <reference|topology product alternative
+      definition>] then <math|B=<around*|(|<big|prod><rsub|i\<in\>I>U<rsub|i>|)><big|cap><around*|(|<big|prod><rsub|i\<in\>I>A<rsub|i>|)>>
+      where <math|U<rsub|i>=X<rsub|i>> except for a finite subset <math|J> of
+      <math|I> where <math|U<rsub|i>\<in\>\<cal-T\><rsub|>>. Hence
+      <math|B=<big|prod><rsub|i\<in\>I><around*|(|U<rsub|i><big|cap>A<rsub|i>|)>>
+      where for <math|i\<in\>I\\J> <math|U<rsub|i><big|cap>A<rsub|i>=X<rsub|i><big|cap>A<rsub|i>=A<rsub|i>>
+      and for <math|i\<in\>J> then <math|U<rsub|i><big|cap>A<rsub|i>\<in\><around*|(|\<cal-T\><rsub|i>|)><rsub|\|A<rsub|i>>>.
+      So by [definition: <reference|topology product alternative definition>]
+      it follows that <math|B\<in\>\<cal-B\><rsup|product >> the basis of
+      <math|\<cal-T\><rsup|product>> be the product topology of
+      <math|<around*|{|<around*|\<langle\>|A<rsub|i>,<around*|(|\<cal-T\><rsub|i>|)><rsub|\|A<rsub|i>>|\<rangle\>>|}><rsub|i\<in\>I>>.
+      Hence we have\ 
+
+      <\equation*>
+        <around*|(|\<cal-B\><rsub|product>|)><rsub|\|<big|prod><rsub|i\<in\>I>A<rsub|i>>\<subseteq\>\<cal-B\><rsup|product>
+      </equation*>
+
+      <item>If <math|B\<in\>\<cal-B\><rsup|product>> then by [definition:
+      <reference|topology product alternative definition>]
+      <math|B=<big|prod><rsub|i\<in\>I>U<rsub|i>> where
+      <math|U<rsub|i>=A<rsub|i>=X<rsub|i><big|cap>A<rsub|i>> except for a
+      finite <math|J\<subseteq\>I> where <math|U<rsub|i>\<in\><around*|(|\<cal-T\><rsub|i>|)><rsub|A<rsub|i>>\<Rightarrow\>U<rsub|i>=W<rsub|i><big|cap>A<rsub|i>>
+      where <math|W<rsub|i>\<in\>\<cal-T\><rsub|i>>. Then if we define
+      <math|<around*|{|W<rsub|i>|}><rsub|i\<in\>I>> by
+      <math|W<rsub|i>=<choice|<tformat|<table|<row|<cell|X<rsub|i><text| if
+      >i\<in\>I\\J>>|<row|<cell|W<rsub|i><text| if >i\<in\>J>>>>>>then
+      <math|B=<big|prod><rsub|i\<in\>I><around*|(|W<rsub|i><big|cap>A<rsub|i>|)>=<around*|(|<big|prod><rsub|i\<in\>I>W<rsub|i>|)><big|cap><around*|(|<big|prod><rsub|i\<in\>I>A<rsub|i>|)>>.
+      By [definition: <reference|topology product alternative definition>]
+      <math|<around*|(|<big|prod><rsub|i\<in\>I>W<rsub|i>|)>\<in\>\<cal-B\><rsub|product>>
+      so that <math|B\<in\><around*|(|\<cal-B\><rsub|product>|)><rsub|\|<big|prod><rsub|i\<in\>I>A<rsub|i>>>.
+      Hence we have\ 
+
+      <\equation*>
+        \<cal-B\><rsup|product>\<subseteq\><around*|(|\<cal-B\><rsub|product>|)><rsub|\|<big|prod><rsub|i\<in\>I>A<rsub|i>>
+      </equation*>
+    </enumerate>
+
+    Using the above it follows that <math|<around*|(|\<cal-B\><rsub|product>|)><rsub|\|<big|prod><rsub|i\<in\>I>A<rsub|i>>=\<cal-B\><rsup|product>>
+    proving that\ 
+
+    <\equation*>
+      <around*|(|\<cal-T\><rsub|product>|)><rsub|\|<big|prod><rsub|i\<in\>I>A<rsub|i>>=\<cal-T\><rsup|product
+      ><text| the product topology of ><around*|{|<around*|\<langle\>|A<rsub|i>,\<cal-T\><rsub|i>|\<rangle\>>|}><rsub|i\<in\>I>
+    </equation*>
   </proof>
 
   <subsection|Dense sets>
@@ -10677,7 +10750,9 @@
     Completing the proof that <math|C> is a compact class.\ 
   </proof>
 
-  <subsection|Product of Compact set>
+  <subsection|Product of Compact sets>
+
+  <subsubsection|Filter bases>
 
   The purpose of this section is to prove that the product of compact sets is
   compact, this is know as Tychonoff's theorem. The best way to do this is to
@@ -11704,7 +11779,7 @@
   </proof>
 
   <\theorem>
-    <label|filter base pre-order>Let <math|X> be a set,
+    <label|filter base maximal existence>Let <math|X> be a set,
     <math|\<frak-U\>=<around*|{|A<rsub|\<alpha\>>|}><rsub|\<alpha\>\<ni\>I>\<subseteq\>\<cal-P\><around*|(|X|)>>
     a filter base in <math|X> then there exist a maximal filter base
     <math|\<frak-W\>> in <math|X> such that <math|\<frak-W\>\<gg\>\<frak-U\>>
@@ -11794,7 +11869,7 @@
         is a filter base]. Hence we have\ 
 
         <\equation>
-          <label|eq 11.129.153>\<forall\>B\<in\>\<bbb-B\><text| that
+          <label|eq 14.129.153>\<forall\>B\<in\>\<bbb-B\><text| that
           >B\<neq\>\<varnothing\>
         </equation>
 
@@ -11902,7 +11977,7 @@
   </proof>
 
   <\theorem>
-    <label|filter bases maximal filter base and convergence>Let
+    <label|filter base maximal filter base and convergence>Let
     <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
     and <math|\<frak-U\>=<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|X|)>>
     a maximal filter then <math|\<forall\>x\<in\>X>
@@ -11975,6 +12050,377 @@
     then that <math|f<around*|[|\<frak-U\>|]>> is a maximal filter base in
     <math|Y>.
   </proof>
+
+  <subsubsection|Tychonoff's theorem>
+
+  All this hard work is to prove Tychonoffs theorem on the product of compact
+  spaces. The following theorem creates the relation between compactness and
+  filter bases.
+
+  \;
+
+  <\theorem>
+    <label|filter base and compactness>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
+    then the following are equivalent
+
+    <\enumerate>
+      <item><math|X> is compact
+
+      <item>If <math|<around*|{|A<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>I>\<subseteq\>\<cal-T\><rsup|c>>
+      is a family of closed sets in <math|X> satisfying
+      <math|<big|cap><rsub|\<alpha\>\<in\>I>A<rsub|\<alpha\>>=\<varnothing\>>
+      then there exist a finite <math|J\<subseteq\>I> such that
+      <math|<big|cap><rsub|\<alpha\>\<in\>J>A<rsub|\<alpha\>>=\<varnothing\>>.
+
+      <item>If <math|<around*|{|A<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>I>\<subseteq\>\<cal-T\><rsup|c>>
+      is a family of closed sets in <math|X> such that
+      <math|\<forall\>J\<subseteq\>I> <math|J> finite we have
+      <math|<big|cap><rsub|\<alpha\>\<in\>J>A<rsub|\<alpha\>>\<neq\>\<varnothing\>>
+      then <math|<big|cap><rsub|\<alpha\>\<in\>I>A<rsub|\<alpha\>>\<neq\>\<varnothing\>>.
+
+      <item>If <math|\<frak-U\>> is a filter base in <math|X> then there
+      exist a <math|x\<in\>X> such that <math|\<frak-U\>\<succ\>x>
+
+      <item>If <math|\<frak-U\>> is a maximal filter base in <math|X> then
+      there exist a <math|x\<in\>X> such that
+      <math|\<frak-U\>\<rightarrow\>x>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|1\<Rightarrow\>2>>Let <math|><math|<around*|{|A<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>I>\<subseteq\>\<cal-T\><rsup|c>>
+      be a family of closed sets in <math|X> such that
+      <math|<big|cap><rsub|\<alpha\>\<in\>I>A<rsub|\<alpha\>>=\<varnothing\>>
+      then\ 
+
+      <\equation*>
+        X=X\\\<varnothing\>=X\\<around*|(|<big|cap><rsub|\<alpha\>\<in\>I>A<rsub|\<alpha\>>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|family de Morgan>]>><big|cup><rsub|\<alpha\>\<in\>I><around*|(|X\\A<rsub|\<alpha\>>|)>
+      </equation*>
+
+      As <math|\<forall\>\<alpha\>\<in\>I>
+      <math|X\\A<rsub|\<alpha\>>\<in\>\<cal-T\>> and <math|X> is compact then
+      there exist a finite <math|J\<subseteq\>I> such that
+
+      <\equation*>
+        X\<subseteq\><big|cup><rsub|\<alpha\>\<in\>J><around*|(|X\\A<rsub|\<alpha\>>|)>\<subseteq\>X\<Rightarrow\>X=<big|cup><rsub|\<alpha\>\<in\>J><around*|(|X\\A<rsub|\<alpha\>>|)>
+      </equation*>
+
+      hence\ 
+
+      <\equation*>
+        \<varnothing\>=X\\X=X\\<around*|(|<big|cup><rsub|\<alpha\>\<in\>J><around*|(|X\\A<rsub|\<alpha\>>|)>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|family de Morgan>]>><big|cap><rsub|\<alpha\>\<in\>J><around*|(|X\\<around*|(|X\\A<rsub|\<alpha\>>|)>|)>=<big|cap><rsub|\<alpha\>\<in\>J>A<rsub|\<alpha\>>
+      </equation*>
+
+      <item*|<math|2\<Rightarrow\>1>>Let <math|<around*|{|U<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>I>\<subseteq\>\<cal-T\>>
+      be a family of open sets such that <math|X=<big|cup><rsub|\<alpha\>\<in\>I>U<rsub|\<alpha\>>>
+      then\ 
+
+      <\equation*>
+        \<varnothing\>=X\\X=X\\<around*|(|<big|cup><rsub|\<alpha\>\<in\>I>U<rsub|\<alpha\>>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|family de Morgan>]>><big|cap><rsub|\<alpha\>\<in\>I><around*|(|X\\U<rsub|\<alpha\>>|)>
+      </equation*>
+
+      As <math|\<forall\>\<alpha\>\<in\>I> we have that
+      <math|X\\U<rsub|\<alpha\>>> is closed we have by the hypothesis that
+      there exist a finite <math|J\<subseteq\>I> such that
+      <math|<big|cap><rsub|\<alpha\>\<in\>J><around*|(|X\\U<rsub|\<alpha\>>|)>=\<varnothing\>>.
+      Hence we have\ 
+
+      <\equation*>
+        X=X\\\<varnothing\>=X\\<around*|(|<big|cap><rsub|\<alpha\>\<in\>J><around*|(|X\\U<rsub|\<alpha\>>|)>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|family de Morgan>]>><big|cup><rsub|\<alpha\>\<in\>J><around*|(|X\\<around*|(|X\\U<rsub|\<alpha\>>|)>|)>=<big|cup><rsub|\<alpha\>\<in\>J>U<rsub|\<alpha\>>
+      </equation*>
+
+      proving that <math|X> is compact.
+
+      <item*|<math|2\<Rightarrow\>3>>Let <math|<around*|{|A<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>I>\<subseteq\>\<cal-T\><rsup|c>>
+      be a family of closed sets in <math|X> such that
+      <math|\<forall\>J\<subseteq\>I> <math|J> finite we have
+      <math|<big|cap><rsub|\<alpha\>\<in\>J>A<rsub|\<alpha\>>\<neq\>\<varnothing\>>.
+      Assume that <math|<big|cap><rsub|\<alpha\>\<in\>I>A<rsub|\<alpha\>>=\<varnothing\>>
+      then by (2) there exist a finite <math|J\<subseteq\>I> such that
+      <math|<big|cap><rsub|\<alpha\>\<in\>J>A<rsub|\<alpha\>>=\<varnothing\>>
+      contradiction the fact that <math|<big|cap><rsub|\<alpha\>\<in\>J>A<rsub|\<alpha\>>\<neq\>\<varnothing\>>.
+      Hence we must have that
+
+      <\equation*>
+        <big|cap><rsub|\<alpha\>\<in\>I>A<rsub|\<alpha\>>\<neq\>\<varnothing\>
+      </equation*>
+
+      <item*|<math|3\<Rightarrow\>2>>Let <math|><math|<around*|{|A<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>I>\<subseteq\>\<cal-T\><rsup|c>>
+      be a family of closed sets in <math|X> such that
+      <math|<big|cap><rsub|\<alpha\>\<in\>I>A<rsub|\<alpha\>>=\<varnothing\>>.
+      Assume that <math|\<forall\>J\<subseteq\>I> finite we have
+      <math|<big|cap><rsub|\<alpha\>\<in\>J>A<rsub|\<alpha\>>\<neq\>\<varnothing\>>
+      then by (3) <math|<big|cap><rsub|\<alpha\>\<in\>I>A<rsub|\<alpha\>>\<neq\>\<varnothing\>>
+      contradicting <math|<big|cap><rsub|\<alpha\>\<in\>I>A<rsub|\<alpha\>>=\<varnothing\>>.
+      Hence there must exist a finite <math|J\<subseteq\>I> such that
+      <math|<big|cap><rsub|\<alpha\>\<in\>J>A<rsub|\<alpha\>>=\<varnothing\>>,
+      proving (3).
+
+      <item*|<math|3\<Rightarrow\>4>>Let <math|\<frak-U\>=<around*|{|A<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>I>\<subseteq\>\<cal-P\><around*|(|X|)>>
+      be a filter base, then for every finite <math|J\<subseteq\>I> we have
+      by [theorem: <reference|filter base finite intersection>] that there
+      exist a <math|\<gamma\>\<in\>I> such that
+      <math|\<varnothing\>\<neq\>A<rsub|\<gamma\>>\<subseteq\><big|cap><rsub|\<alpha\>\<in\>J>A<rsub|\<alpha\>>>
+      proving that <math|\<varnothing\>\<neq\><big|cap><rsub|\<alpha\>\<in\>J>A<rsub|\<alpha\>>>
+      hence, as <math|\<forall\>\<alpha\>\<in\>J> we have
+      <math|A<rsub|\<alpha\>>\<subseteq\><wide|A<rsub|\<alpha\>>|\<wide-bar\>>>,
+      <math|\<varnothing\>\<neq\><big|cap><rsub|\<alpha\>\<in\>J><wide|A<rsub|\<alpha\>>|\<wide-bar\>>>.
+      Using (3) it follows then that <math|\<varnothing\>\<neq\><big|cap><rsub|\<alpha\>\<in\>I><wide|A<rsub|\<alpha\>>|\<wide-bar\>>>,
+      hence there exist a <math|x\<in\>X> such that
+      <math|x\<in\><big|cap><rsub|\<alpha\>\<in\>I><wide|A<rsub|a>|\<wide-bar\>>>.
+      Applying [theorem: <reference|filter base accumulating alternative>]
+      proves that\ 
+
+      <\equation*>
+        \<frak-U\>\<succ\>x
+      </equation*>
+
+      <item*|<math|4\<Rightarrow\>5>>Let <math|\<frak-U\>> be a maximal
+      filter base then by (3) there exist a <math|x\<in\>X> such that
+      <math|\<frak-U\>\<succ\>x>, by [theorem: <reference|filter base maximal
+      filter base and convergence>] we have then that\ 
+
+      <\equation*>
+        \<frak-U\>\<rightarrow\>x
+      </equation*>
+
+      <item*|<math|5\<Rightarrow\>3>>Let <math|<around*|{|F<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>I>\<subseteq\>\<cal-T\><rsup|c>>
+      a family of closed sets in <math|X> such that for every finite
+      <math|J\<subseteq\>I> we have <math|<big|cap><rsub|\<alpha\>\<in\>J>F<rsub|\<alpha\>>\<neq\>\<varnothing\>>.
+      Take <math|K=<around*|{|<big|cap><rsub|\<alpha\>\<in\>J>F<rsub|\<alpha\>>\|J\<subseteq\>I<text|,
+      >J<text| finite>|}>> and define the family\ 
+
+      <\equation*>
+        \<frak-U\>=<around*|{|A|}><rsub|A\<in\>K>\<subseteq\>\<cal-P\><around*|(|X|)>
+      </equation*>
+
+      We prove now that <math|\<frak-U\>> is a filter base. First if
+      <math|A\<in\>K> then there exist a finite <math|J\<subseteq\>I> such
+      that <math|A=<big|cap><rsub|\<alpha\>\<in\>K>F<rsub|\<alpha\>>>, as
+      <math|<big|cap><rsub|\<alpha\>\<in\>K>F<rsub|\<alpha\>>\<neq\>\<varnothing\>>
+      it follows that <math|A\<neq\>\<varnothing\>>. So we have proves that\ 
+
+      <\equation>
+        <label|eq 14.132.153>\<forall\>A\<in\>K<text| we have
+        >A\<neq\>\<varnothing\>
+      </equation>
+
+      Second let <math|A<rsub|1>,A<rsub|2>\<in\>K> then there exist finite
+      <math|J<rsub|1>,J<rsub|2>\<subseteq\>I> such that
+      <math|A<rsub|1>=<big|cap><rsub|\<alpha\>\<in\>J<rsub|1>>F<rsub|\<alpha\>>>,
+      <math|A<rsub|2>=<big|cap><rsub|\<beta\>\<in\>J<rsub|2>>F<rsub|\<beta\>>>.
+      If <math|x\<in\>A<rsub|1><big|cap>A<rsub|2>=<around*|(|<big|cap><rsub|\<alpha\>\<in\>J<rsub|1>>F<rsub|\<alpha\>>|)><big|cap><around*|(|<big|cap><rsub|\<beta\>\<in\>J<rsub|2>>F<rsub|\<beta\>>|)>>
+      then if <math|\<gamma\>\<in\>J<rsub|1><big|cup>J<rsub|2>> we have
+      either of both <math|\<gamma\>\<in\>J<rsub|1>\<Rightarrow\>x\<in\>A<rsub|\<gamma\>>>
+      or <math|\<gamma\>\<in\>J<rsub|2>\<Rightarrow\>x\<in\>A<rsub|\<gamma\>>>
+      so that <math|x\<in\><big|cap><rsub|\<gamma\>\<in\>J<rsub|1><big|cup>J<rsub|2>>F<rsub|\<gamma\>>>,
+      hence\ 
+
+      <\equation>
+        <label|eq 14.133.153>A<rsub|1><big|cap>A<rsub|2>\<subseteq\><big|cap><rsub|\<gamma\>\<in\>J<rsub|1><big|cup>J<rsub|2>>F<rsub|\<gamma\>>
+      </equation>
+
+      If <math|x\<in\><big|cap><rsub|\<gamma\>\<in\>J<rsub|1><big|cup>J<rsub|2>>F<rsub|\<gamma\>>>
+      then <math|\<forall\>\<alpha\>\<in\>J<rsub|1>> we have
+      <math|\<alpha\>\<in\>J<rsub|1><big|cup>J<rsub|2>> so that
+      <math|x\<in\>F<rsub|\<alpha\>>>, hence
+      <math|x\<in\><big|cap><rsub|\<alpha\>\<in\>J<rsub|1>>F<rsub|\<alpha\>>=A<rsub|1>>
+      and <math|\<forall\>\<beta\>\<in\>J<rsub|2> >we have
+      <math|\<beta\>\<in\>J<rsub|1><big|cup>J<rsub|2>> so that
+      <math|x\<in\>F<rsub|\<beta\>>>, hence
+      <math|x\<in\><big|cap><rsub|\<alpha\>\<in\>J<rsub|2>>F<rsub|\<beta\>>=A<rsub|2>>.
+      So <math|x\<in\>A<rsub|1><big|cap>A<rsub|2>> proving that
+      <math|><math|<big|cap><rsub|\<gamma\>\<in\>J<rsub|1><big|cup>J<rsub|2>>F<rsub|\<gamma\>>\<subseteq\>A<rsub|1><big|cap>A<rsub|2>>,
+      combining this with [eq: <reference|eq 14.133.153>] proves that\ 
+
+      <\equation*>
+        A<rsub|1><big|cap>A<rsub|2>=<big|cap><rsub|\<gamma\>\<in\>J<rsub|1><big|cup>J<rsub|2>>F<rsub|\<gamma\>>
+      </equation*>
+
+      As <math|J<rsub|1><big|cup>J<rsub|2>> is finite it follows that
+      <math|A<rsub|3>=<big|cap><rsub|\<gamma\>\<in\>J<rsub|1><big|cup>J<rsub|2>>F<rsub|\<gamma\>>\<in\>K>.
+      So we have proved that\ 
+
+      <\equation>
+        <label|eq 14.134.153>\<forall\>A<rsub|1>,A<rsub|2>\<in\>K<text| that
+        <math|A<rsub|3>=A<rsub|1><big|cap>A<rsub|2>\<in\>K>>
+      </equation>
+
+      From [eqs: <reference|eq 14.132.153>, <reference|eq 14.134.153>] it
+      follows that\ 
+
+      <\equation*>
+        \<frak-U\>=<around*|{|A|}><rsub|A\<in\>K>\<subseteq\>\<cal-P\><around*|(|X|)><text|
+        is a filter base in >X
+      </equation*>
+
+      Using [theorem: <reference|filter base maximal existence>] there exist
+      a maximal filter base <math|\<frak-M\>> in <math|X> such that
+      <math|\<frak-M\>\<gg\>\<frak-U\>>. By (5) there exist a <math|x\<in\>X>
+      such that <math|\<frak-M\>\<rightarrow\>x>, using [theorem:
+      <reference|filter base convergence properties>] it follows that
+      <math|\<frak-M\>\<succ\>x>, finally as
+      <math|\<frak-M\>\<gg\>\<frak-U\>> it follows from [theorem:
+      <reference|filter base convergence properties>] that\ 
+
+      <\equation*>
+        \<frak-U\>\<succ\>x
+      </equation*>
+
+      By [theorem: <reference|filter base accumulating alternative>] we have
+      then <math|x\<in\><big|cap><rsub|A\<in\>K><wide|A|\<wide-bar\>>> hence
+      <math|\<forall\>A\<in\>K> we have <math|x\<in\><wide|A|\<wide-bar\>>>.
+      For every <math|\<alpha\>\<in\>I> <math|<around*|{|\<alpha\>|}>\<subseteq\>I>
+      and <math|<around*|{|\<alpha\>|}>> is finite so that
+      <math|F<rsub|\<alpha\>>=<big|cap><rsub|\<alpha\>\<in\><around*|{|a|}>>F<rsub|a>\<in\>K>,
+      hence <math|x\<in\><wide|F<rsub|\<alpha\>>|\<wide-bar\>>\<equallim\><rsub|F<rsub|\<alpha\>><text|
+      is closed>>F<rsub|a>>. So we have proved that\ 
+
+      <\equation*>
+        x\<in\><big|cap><rsub|\<alpha\>\<in\>I>F<rsub|\<alpha\>>\<Rightarrow\><big|cap><rsub|\<alpha\>\<in\>I>F<rsub|\<alpha\>>\<neq\>\<varnothing\>
+      </equation*>
+    </description>
+  </proof>
+
+  We are now ready for Tychonoff's theorem.
+
+  <\theorem>
+    <label|compact Tychonoff's><index|Tychonoff's theorem>Let
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,\<cal-T\><rsub|i>|\<rangle\>>|}><rsub|i\<in\>I><rsub|>>
+    be a family of non empty topological spaces then for the topoligical
+    space <math|<around*|\<langle\>|<big|prod><rsub|i\<in\>I>X<rsub|i>,\<cal-T\><rsub|product>|\<rangle\>>>
+    based on the product topology we have\ 
+
+    <\equation*>
+      <big|prod><rsub|i\<in\>I>X<rsub|i><text| is compact
+      >\<Leftrightarrow\><text| >\<forall\>i\<in\>I<text| >X<rsub|i><text| is
+      compact>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|i\<in\>I> then by [theorem:
+      <reference|continuity projection map is open and continuous>]
+      <math|\<pi\><rsub|i>:<big|prod><rsub|i\<in\>I>X<rsub|i>\<rightarrow\>X<rsub|i>>
+      is continuous, hence using [theorem: <reference|compact and continuous
+      functions>] it follows that <math|\<pi\><rsub|i><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)>>
+      is compact. Further as <math|\<forall\>i\<in\>I>
+      <math|X<rsub|i>\<neq\>\<varnothing\>> we have by [theorem:
+      <reference|product projection is surjective>]
+      <math|\<pi\><rsub|i>:<big|prod><rsub|i\<in\>I>X<rsub|i>\<rightarrow\>X<rsub|i>>
+      is surjective so that \ <math|\<pi\><rsub|i><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)>=X<rsub|i>>.
+      Hence we have that <math|X<rsub|i>> is compact.
+
+      <item*|<math|\<Leftarrow\>>>Let <math|\<frak-U\>> be a maximal filter
+      base in <math|<big|prod><rsub|i\<in\>I>X<rsub|i>>. Given
+      <math|i\<in\>I> we have by [theorem: <reference|filter base function
+      preserves maximality>] that <math|\<pi\><rsub|i><around*|[|\<frak-U\>|]>>
+      is a maximal filter base in <math|X<rsub|i>>, as
+      <math|X<rsub|i><rsub|>> is compact it follows from [theorem:
+      <reference|filter base and compactness> (5)] that
+      <math|\<exists\>x<rsub|i>\<in\>X<rsub|i>> such that
+      <math|\<pi\><rsub|i><around*|[|\<frak-U\>|]>\<rightarrow\>x<rsub|i>>.
+      This defines a <math|x\<in\><big|prod><rsub|i\<in\>I>X<rsub|i>> so that
+      <math|\<pi\><rsub|i><around*|[|\<frak-U\>|]>\<rightarrow\>x<rsub|i>=\<pi\><rsub|i><around*|(|x|)>>.
+      Using [theorem: <reference|filter base projection operator>] it follows
+      that <math|\<frak-U\>\<rightarrow\>x> so by [theorem: <reference|filter
+      base and compactness> (5)] again we have that
+      <math|<big|prod><rsub|i\<in\>I>X<rsub|i>> is compact.
+    </description>
+  </proof>
+
+  <\corollary>
+    <label|compact Tychonoff's (1)>Let <math|<around*|{|<around*|\<langle\>|X<rsub|i>,\<cal-T\><rsub|i>|\<rangle\>>|}><rsub|i\<in\>I>>
+    be a family of topological spaces then if <math|\<forall\>i\<in\>I> we
+    have <math|\<varnothing\>\<neq\>C<rsub|i>\<subseteq\>X<rsub|i>> we have
+    that\ 
+
+    <\equation*>
+      <big|prod><rsub|i\<in\>I>C<rsub|i><text| is compact
+      >\<Leftrightarrow\><text| >\<forall\>i\<in\>I<text| >C<rsub|i> \ is
+      compact
+    </equation*>
+  </corollary>
+
+  <\proof>
+    Note that the subspace topology of <math|<big|prod><rsub|i\<in\>I>C<rsub|i>>
+    is equal to the product topology of the subspace topologies [see theorem
+    <reference|topology product topology of subspace topologies>]. As by
+    definition a subset is compact is if it is compact in the subspace
+    topology we can use Tychonoff's [theorem: <reference|compact
+    Tychonoff's>] to prove this theorem.
+  </proof>
+
+  <subsubsection|Consequences of Tychonoff's Theorem>
+
+  <\theorem>
+    <label|compact rectangles are compact>Let
+    <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<cal-T\><rsub|<around*|\|||\|><rsub|max>>|\<rangle\>>>
+    be the topological space of the real tupple's where the norm
+    <math|<around*|\|||\|><rsub|max>> is defined by
+    <math|<around*|\||x|\|>=max<around*|(|<around*|{|<around*|\||\<pi\><rsub|i><around*|(|x|)>|\|>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>>
+    then <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i>,b<rsub|i>|]>>
+    is compact where <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|a<rsub|i>\<leqslant\>b<rsub|i>>.
+  </theorem>
+
+  <\proof>
+    First using [theorem: <reference|normed maximum norm>] we have that
+    <math|\<cal-T\><rsub|<around*|\|||\|><rsub|max>>> is the product topology
+    based on the product of the normed spaces
+    <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>>. Now by
+    [theorem: <reference|compact Heine Borel (1)>] we have that
+    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> that
+    <math|<around*|[|a<rsub|i>,b<rsub|i>|]>> is compact, so using Tychonoff's
+    theorem [theorem: <reference|compact Tychonoff's (1)>] it follows that
+    <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i>,b<rsub|i>|]>>
+    is compact.
+  </proof>
+
+  <\theorem>
+    <label|compact Heine-Borel (1)>Let <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<cal-T\><rsub|<around*|\|||\|><rsub|max>>|\<rangle\>>
+    >be the topological space of the real tupple's based on the maximum norm
+    and <math|C\<subseteq\>\<bbb-R\><rsup|n>> then we have\ 
+
+    <\equation*>
+      C<text| is compact >\<Leftrightarrow\><text| >C<text| is bounded and
+      closed>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Using [theorem: <reference|compact and
+      bounded>] <math|C> is bounded, further by [theorem:
+      <reference|separation metric spaces are Hausdorff>]
+      <math|><math|\<cal-T\><rsub|<around*|\|||\|><rsub|max>>> is Hausdorff,
+      so using [theorem: <reference|compact set is closed in a Hausdorff
+      space>] <math|C> is closed.
+
+      <item*|<math|\<Leftarrow\>>>If <math|C> is empty then <math|C> is
+      compact by [example: <reference|compact empty set>] so we may assume
+      that <math|C\<neq\>0>.\ 
+    </description>
+  </proof>
+
+  \;
+
+  TODO
+
+  \;
 
   <section|Convergence>\ 
 
@@ -13014,132 +13460,139 @@
     <associate|auto-68|<tuple|compact class|727>>
     <associate|auto-69|<tuple|14.9.1|727>>
     <associate|auto-7|<tuple|<with|mode|<quote|math>|\<cal-T\><rsup|\<cal-C\>>>|646>>
-    <associate|auto-70|<tuple|filter base|727>>
-    <associate|auto-71|<tuple|neighborhood filter base|732>>
-    <associate|auto-72|<tuple|converging to a point|732>>
-    <associate|auto-73|<tuple|accumaling at a point|732>>
-    <associate|auto-74|<tuple|<with|mode|<quote|math>|\<frak-U\>\<rightarrow\>x>|732>>
-    <associate|auto-75|<tuple|<with|mode|<quote|math>|\<frak-U\>\<succ\>x>|732>>
-    <associate|auto-76|<tuple|subordinate filter bases|?>>
-    <associate|auto-77|<tuple|<with|mode|<quote|math>|\<frak-W\>\<geqslant\>\<frak-U\>>|?>>
-    <associate|auto-78|<tuple|<with|mode|<quote|math>|\<frak-U\>\<ll\>\<frak-W\>>|?>>
-    <associate|auto-79|<tuple|<with|mode|<quote|math>|\<frak-U\>\<sqsubseteq\>\<frak-W\>>|?>>
+    <associate|auto-70|<tuple|14.9.1.1|727>>
+    <associate|auto-71|<tuple|filter base|732>>
+    <associate|auto-72|<tuple|neighborhood filter base|732>>
+    <associate|auto-73|<tuple|converging to a point|732>>
+    <associate|auto-74|<tuple|accumaling at a point|732>>
+    <associate|auto-75|<tuple|<with|mode|<quote|math>|\<frak-U\>\<rightarrow\>x>|732>>
+    <associate|auto-76|<tuple|<with|mode|<quote|math>|\<frak-U\>\<succ\>x>|?>>
+    <associate|auto-77|<tuple|subordinate filter bases|?>>
+    <associate|auto-78|<tuple|<with|mode|<quote|math>|\<frak-W\>\<geqslant\>\<frak-U\>>|?>>
+    <associate|auto-79|<tuple|<with|mode|<quote|math>|\<frak-U\>\<ll\>\<frak-W\>>|?>>
     <associate|auto-8|<tuple|limit point|648>>
-    <associate|auto-80|<tuple|ultra filter|?>>
-    <associate|auto-81|<tuple|maximum filter base|?>>
-    <associate|auto-82|<tuple|14.10|?>>
-    <associate|auto-83|<tuple|14.10.1|?>>
-    <associate|auto-84|<tuple|14.10.2|?>>
-    <associate|auto-85|<tuple|14.11|?>>
-    <associate|auto-86|<tuple|Cauchy sequence|?>>
-    <associate|auto-87|<tuple|Cauchy sequence|?>>
-    <associate|auto-88|<tuple|complete space|?>>
-    <associate|auto-89|<tuple|Banach space|?>>
+    <associate|auto-80|<tuple|<with|mode|<quote|math>|\<frak-U\>\<sqsubseteq\>\<frak-W\>>|?>>
+    <associate|auto-81|<tuple|ultra filter|?>>
+    <associate|auto-82|<tuple|maximum filter base|?>>
+    <associate|auto-83|<tuple|14.9.1.2|?>>
+    <associate|auto-84|<tuple|Tychonoff's theorem|?>>
+    <associate|auto-85|<tuple|14.9.1.3|?>>
+    <associate|auto-86|<tuple|14.10|?>>
+    <associate|auto-87|<tuple|14.10.1|?>>
+    <associate|auto-88|<tuple|14.10.2|?>>
+    <associate|auto-89|<tuple|14.11|?>>
     <associate|auto-9|<tuple|accumulation point|648>>
+    <associate|auto-90|<tuple|Cauchy sequence|?>>
+    <associate|auto-91|<tuple|Cauchy sequence|?>>
+    <associate|auto-92|<tuple|complete space|?>>
+    <associate|auto-93|<tuple|Banach space|?>>
     <associate|closed set properties|<tuple|14.19|647>>
     <associate|compact Hausdorff space is regular and
-    compact|<tuple|14.218|?>>
-    <associate|compact Heine Borel (1)|<tuple|14.215|731>>
-    <associate|compact and basis|<tuple|14.205|730>>
-    <associate|compact and bounded|<tuple|14.210|729>>
-    <associate|compact and bounded (1)|<tuple|14.211|729>>
-    <associate|compact and continuous functions|<tuple|14.212|729>>
-    <associate|compact class|<tuple|14.219|?>>
-    <associate|compact class and sets of compact sets|<tuple|14.220|?>>
-    <associate|compact closed bounded sets in R are compact|<tuple|14.216|?>>
-    <associate|compact empty set|<tuple|14.206|728>>
+    compact|<tuple|14.219|?>>
+    <associate|compact Heine Borel (1)|<tuple|14.216|731>>
+    <associate|compact Heine-Borel (1)|<tuple|14.252|?>>
+    <associate|compact Tychonoff's|<tuple|14.249|?>>
+    <associate|compact Tychonoff's (1)|<tuple|14.250|?>>
+    <associate|compact and basis|<tuple|14.206|730>>
+    <associate|compact and bounded|<tuple|14.211|729>>
+    <associate|compact and bounded (1)|<tuple|14.212|729>>
+    <associate|compact and continuous functions|<tuple|14.213|729>>
+    <associate|compact class|<tuple|14.220|?>>
+    <associate|compact class and sets of compact sets|<tuple|14.221|?>>
+    <associate|compact closed bounded sets in R are compact|<tuple|14.217|?>>
+    <associate|compact empty set|<tuple|14.207|728>>
     <associate|compact every closed subset of a compact set is
-    compact|<tuple|14.214|730>>
-    <associate|compact extreme value theorem|<tuple|14.217|?>>
-    <associate|compact finite union of compact sets|<tuple|14.208|728>>
-    <associate|compact set|<tuple|14.203|727>>
-    <associate|compact set alternative definition|<tuple|14.204|727>>
-    <associate|compact set is closed in a Hausdorff space|<tuple|14.213|729>>
-    <associate|compact singleton|<tuple|14.207|728>>
-    <associate|compact space|<tuple|14.202|727>>
-    <associate|compact subspace equivalences|<tuple|14.209|728>>
-    <associate|complete space|<tuple|14.269|732>>
-    <associate|continuity|<tuple|14.138|690>>
-    <associate|continuity K^n|<tuple|14.175|705>>
+    compact|<tuple|14.215|730>>
+    <associate|compact extreme value theorem|<tuple|14.218|?>>
+    <associate|compact finite union of compact sets|<tuple|14.209|728>>
+    <associate|compact rectangles are compact|<tuple|14.251|?>>
+    <associate|compact set|<tuple|14.204|727>>
+    <associate|compact set alternative definition|<tuple|14.205|727>>
+    <associate|compact set is closed in a Hausdorff space|<tuple|14.214|729>>
+    <associate|compact singleton|<tuple|14.208|728>>
+    <associate|compact space|<tuple|14.203|727>>
+    <associate|compact subspace equivalences|<tuple|14.210|728>>
+    <associate|complete space|<tuple|14.275|732>>
+    <associate|continuity|<tuple|14.139|690>>
+    <associate|continuity K^n|<tuple|14.176|705>>
     <associate|continuity L(X,L(Y,Z)) is isometric with
-    L(X,Y;Z)|<tuple|14.183|712>>
+    L(X,Y;Z)|<tuple|14.184|712>>
     <associate|continuity L(X,Y) is a subspace of
-    Hom(X,Y)|<tuple|14.158|697>>
-    <associate|continuity L^n(X;Y)|<tuple|14.180|711>>
-    <associate|continuity Lispschitz condition|<tuple|14.142|691>>
+    Hom(X,Y)|<tuple|14.159|697>>
+    <associate|continuity L^n(X;Y)|<tuple|14.181|711>>
+    <associate|continuity Lispschitz condition|<tuple|14.143|691>>
     <associate|continuity Lispschitz implies uniform
-    continuity|<tuple|14.143|691>>
-    <associate|continuity and basis|<tuple|14.114|682>>
-    <associate|continuity and subspace topology (1)|<tuple|14.120|684>>
-    <associate|continuity and subspace topology (2)|<tuple|14.121|684>>
-    <associate|continuity at a point|<tuple|14.112|682>>
-    <associate|continuity composition|<tuple|14.124|685>>
-    <associate|continuity composition is multilinear|<tuple|14.182|711>>
+    continuity|<tuple|14.144|691>>
+    <associate|continuity and basis|<tuple|14.115|682>>
+    <associate|continuity and subspace topology (1)|<tuple|14.121|684>>
+    <associate|continuity and subspace topology (2)|<tuple|14.122|684>>
+    <associate|continuity at a point|<tuple|14.113|682>>
+    <associate|continuity composition|<tuple|14.125|685>>
+    <associate|continuity composition is multilinear|<tuple|14.183|711>>
     <associate|continuity composition of continuous linear
-    mapping|<tuple|14.168|702>>
+    mapping|<tuple|14.169|702>>
     <associate|continuity composition of multilinear and linear
-    mapping|<tuple|14.181|711>>
-    <associate|continuity constant function|<tuple|14.118|683>>
-    <associate|continuity continuous function|<tuple|14.117|683>>
-    <associate|continuity continuous function (1)|<tuple|14.119|683>>
-    <associate|continuity distance function is Lipschitz|<tuple|14.146|692>>
-    <associate|continuity equivalences|<tuple|14.122|684>>
-    <associate|continuity function partial application|<tuple|14.127|686>>
+    mapping|<tuple|14.182|711>>
+    <associate|continuity constant function|<tuple|14.119|683>>
+    <associate|continuity continuous function|<tuple|14.118|683>>
+    <associate|continuity continuous function (1)|<tuple|14.120|683>>
+    <associate|continuity distance function is Lipschitz|<tuple|14.147|692>>
+    <associate|continuity equivalences|<tuple|14.123|684>>
+    <associate|continuity function partial application|<tuple|14.128|686>>
     <associate|continuity homemorphism between powers of
-    R|<tuple|14.161|698>>
-    <associate|continuity homeomorphism|<tuple|14.147|692>>
-    <associate|continuity homeomorphism (1)|<tuple|14.148|692>>
-    <associate|continuity homeomorphism and restriction|<tuple|14.151|693>>
+    R|<tuple|14.162|698>>
+    <associate|continuity homeomorphism|<tuple|14.148|692>>
+    <associate|continuity homeomorphism (1)|<tuple|14.149|692>>
+    <associate|continuity homeomorphism and restriction|<tuple|14.152|693>>
     <associate|continuity homeomorphism between K^n and finite dimensional
-    space|<tuple|14.155|695>>
-    <associate|continuity homeomorphism composition|<tuple|14.150|693>>
-    <associate|continuity identity function|<tuple|14.137|690>>
+    space|<tuple|14.156|695>>
+    <associate|continuity homeomorphism composition|<tuple|14.151|693>>
+    <associate|continuity identity function|<tuple|14.138|690>>
     <associate|continuity identity map is linear and
-    continuous|<tuple|14.157|697>>
-    <associate|continuity in a metric space|<tuple|14.115|682>>
-    <associate|continuity in a normed space|<tuple|14.116|683>>
-    <associate|continuity induced topology|<tuple|14.153|693>>
-    <associate|continuity inverse induced topology|<tuple|14.154|695>>
-    <associate|continuity inverse of a homeomorphism|<tuple|14.149|692>>
-    <associate|continuity isometry is a homeomorphism|<tuple|14.152|693>>
-    <associate|continuity linear mapping (1)|<tuple|14.159|697>>
-    <associate|continuity linear mapping between R^n|<tuple|14.160|697>>
-    <associate|continuity multilinear mapping (1)|<tuple|14.174|703>>
-    <associate|continuity multilinear mapping (2) norm|<tuple|14.177|707>>
+    continuous|<tuple|14.158|697>>
+    <associate|continuity in a metric space|<tuple|14.116|682>>
+    <associate|continuity in a normed space|<tuple|14.117|683>>
+    <associate|continuity induced topology|<tuple|14.154|693>>
+    <associate|continuity inverse induced topology|<tuple|14.155|695>>
+    <associate|continuity inverse of a homeomorphism|<tuple|14.150|692>>
+    <associate|continuity isometry is a homeomorphism|<tuple|14.153|693>>
+    <associate|continuity linear mapping (1)|<tuple|14.160|697>>
+    <associate|continuity linear mapping between R^n|<tuple|14.161|697>>
+    <associate|continuity multilinear mapping (1)|<tuple|14.175|703>>
+    <associate|continuity multilinear mapping (2) norm|<tuple|14.178|707>>
     <associate|continuity multilinear mappings vector
-    space|<tuple|14.176|706>>
+    space|<tuple|14.177|706>>
     <associate|continuity norm of continuous linear mapping
-    (1)|<tuple|14.162|698>>
-    <associate|continuity norm of projection operator|<tuple|14.167|701>>
-    <associate|continuity norm on L(X,Y)|<tuple|14.166|701>>
+    (1)|<tuple|14.163|698>>
+    <associate|continuity norm of projection operator|<tuple|14.168|701>>
+    <associate|continuity norm on L(X,Y)|<tuple|14.167|701>>
     <associate|continuity of finite sum of continuous
-    functions|<tuple|14.131|688>>
-    <associate|continuity of power function|<tuple|14.134|690>>
-    <associate|continuity of sum|<tuple|14.140|691>>
-    <associate|continuity of sum (1)|<tuple|14.141|691>>
-    <associate|continuity of sum of continuous functions|<tuple|14.130|688>>
-    <associate|continuity open function|<tuple|14.123|685>>
-    <associate|continuity open linear mapping|<tuple|14.169|702>>
-    <associate|continuity operator norm|<tuple|14.163|699>>
-    <associate|continuity operator norm (1)|<tuple|14.164|699>>
-    <associate|continuity operator norm (2)|<tuple|14.165|700>>
+    functions|<tuple|14.132|688>>
+    <associate|continuity of power function|<tuple|14.135|690>>
+    <associate|continuity of sum|<tuple|14.141|691>>
+    <associate|continuity of sum (1)|<tuple|14.142|691>>
+    <associate|continuity of sum of continuous functions|<tuple|14.131|688>>
+    <associate|continuity open function|<tuple|14.124|685>>
+    <associate|continuity open linear mapping|<tuple|14.170|702>>
+    <associate|continuity operator norm|<tuple|14.164|699>>
+    <associate|continuity operator norm (1)|<tuple|14.165|699>>
+    <associate|continuity operator norm (2)|<tuple|14.166|700>>
     <associate|continuity operator norm of multilinear
-    mappings|<tuple|14.178|708>>
+    mappings|<tuple|14.179|708>>
     <associate|continuity operator norm of multilinear mappings
-    (1)|<tuple|14.179|708>>
-    <associate|continuity power of continuous functions|<tuple|14.133|689>>
+    (1)|<tuple|14.180|708>>
+    <associate|continuity power of continuous functions|<tuple|14.134|689>>
     <associate|continuity product and continuous
-    functions|<tuple|14.126|686>>
-    <associate|continuity product of continuous functions|<tuple|14.132|689>>
+    functions|<tuple|14.127|686>>
+    <associate|continuity product of continuous functions|<tuple|14.133|689>>
     <associate|continuity projection map is open and
-    continuous|<tuple|14.125|685>>
-    <associate|continuity real and complex part|<tuple|14.139|690>>
-    <associate|continuity scalar product|<tuple|14.128|687>>
-    <associate|continuity scalar product (1)|<tuple|14.129|688>>
-    <associate|continuity uniform continuity|<tuple|14.135|690>>
+    continuous|<tuple|14.126|685>>
+    <associate|continuity real and complex part|<tuple|14.140|690>>
+    <associate|continuity scalar product|<tuple|14.129|687>>
+    <associate|continuity scalar product (1)|<tuple|14.130|688>>
+    <associate|continuity uniform continuity|<tuple|14.136|690>>
     <associate|continuity universal continuity implies
-    continuity|<tuple|14.136|690>>
-    <associate|eq 11.128.153|<tuple|14.129|?>>
+    continuity|<tuple|14.137|690>>
     <associate|eq 11.129.153|<tuple|14.129|?>>
     <associate|eq 14.1.145|<tuple|14.1|648>>
     <associate|eq 14.10.146|<tuple|14.10|655>>
@@ -13174,10 +13627,13 @@
     <associate|eq 14.125.152|<tuple|14.126|?>>
     <associate|eq 14.127.153|<tuple|14.127|?>>
     <associate|eq 14.128.153|<tuple|14.128|?>>
-    <associate|eq 14.129.153|<tuple|14.130|?>>
+    <associate|eq 14.129.153|<tuple|14.129|?>>
     <associate|eq 14.13.146|<tuple|14.13|661>>
     <associate|eq 14.130.153|<tuple|14.130|?>>
     <associate|eq 14.131.153|<tuple|14.131|?>>
+    <associate|eq 14.132.153|<tuple|14.132|?>>
+    <associate|eq 14.133.153|<tuple|14.133|?>>
+    <associate|eq 14.134.153|<tuple|14.134|?>>
     <associate|eq 14.14.146|<tuple|14.14|661>>
     <associate|eq 14.15.146|<tuple|14.15|663>>
     <associate|eq 14.16.146|<tuple|14.16|663>>
@@ -13270,139 +13726,143 @@
     <associate|eq 14.97.150|<tuple|14.97|717>>
     <associate|eq 14.98.150|<tuple|14.98|717>>
     <associate|eq 14.99.150|<tuple|14.99|717>>
-    <associate|filter base|<tuple|14.221|?>>
-    <associate|filter base accumulating alternative|<tuple|14.230|?>>
-    <associate|filter base and continuity|<tuple|14.240|?>>
-    <associate|filter base and continuity at a point|<tuple|14.239|?>>
+    <associate|filter base|<tuple|14.222|?>>
+    <associate|filter base accumulating alternative|<tuple|14.231|?>>
+    <associate|filter base and compactness|<tuple|14.248|?>>
+    <associate|filter base and continuity|<tuple|14.241|?>>
+    <associate|filter base and continuity at a point|<tuple|14.240|?>>
     <associate|filter base and properties of subordinate and
-    inclusion|<tuple|14.234|?>>
-    <associate|filter base closure and on relation|<tuple|14.237|?>>
-    <associate|filter base convergence and Hausdorf|<tuple|14.229|?>>
-    <associate|filter base convergence properties|<tuple|14.235|?>>
-    <associate|filter base converging and acummulating|<tuple|14.228|?>>
-    <associate|filter base finite intersection|<tuple|14.222|?>>
-    <associate|filter base finite intersection property|<tuple|14.227|?>>
-    <associate|filter base function preserves maximality|<tuple|14.246|?>>
-    <associate|filter base inclusion|<tuple|14.233|?>>
-    <associate|filter base mapping|<tuple|14.238|?>>
-    <associate|filter base maximal condition|<tuple|14.243|?>>
-    <associate|filter base maximum filter base|<tuple|14.242|?>>
+    inclusion|<tuple|14.235|?>>
+    <associate|filter base closure and on relation|<tuple|14.238|?>>
+    <associate|filter base convergence and Hausdorf|<tuple|14.230|?>>
+    <associate|filter base convergence properties|<tuple|14.236|?>>
+    <associate|filter base converging and acummulating|<tuple|14.229|?>>
+    <associate|filter base finite intersection|<tuple|14.223|?>>
+    <associate|filter base finite intersection property|<tuple|14.228|?>>
+    <associate|filter base function preserves maximality|<tuple|14.247|?>>
+    <associate|filter base inclusion|<tuple|14.234|?>>
+    <associate|filter base mapping|<tuple|14.239|?>>
+    <associate|filter base maximal condition|<tuple|14.244|?>>
+    <associate|filter base maximal existence|<tuple|14.245|?>>
+    <associate|filter base maximal filter base and
+    convergence|<tuple|14.246|?>>
+    <associate|filter base maximum filter base|<tuple|14.243|?>>
     <associate|filter base neighborhood filter and
-    converging|<tuple|14.231|?>>
-    <associate|filter base neighborhood filter base|<tuple|14.224|?>>
+    converging|<tuple|14.232|?>>
+    <associate|filter base neighborhood filter base|<tuple|14.225|?>>
     <associate|filter base neighborhood filter base is a filter
-    base|<tuple|14.225|?>>
-    <associate|filter base on a subset|<tuple|14.236|?>>
+    base|<tuple|14.226|?>>
+    <associate|filter base on a subset|<tuple|14.237|?>>
     <associate|filter base pre-order|<tuple|14.244|?>>
-    <associate|filter base projection operator|<tuple|14.241|?>>
-    <associate|filter base subordinate|<tuple|14.232|?>>
-    <associate|filter base trivial|<tuple|14.223|?>>
-    <associate|filter base union and intersection|<tuple|14.226|?>>
+    <associate|filter base projection operator|<tuple|14.242|?>>
+    <associate|filter base subordinate|<tuple|14.233|?>>
+    <associate|filter base trivial|<tuple|14.224|?>>
+    <associate|filter base union and intersection|<tuple|14.227|?>>
     <associate|filter bases maximal filter base and
     convergence|<tuple|14.245|?>>
-    <associate|limit (a+n)/(b+n)|<tuple|14.259|725>>
-    <associate|limit 1/(a+i)|<tuple|14.258|724>>
-    <associate|limit a.x_n|<tuple|14.262|726>>
-    <associate|limit and continuity|<tuple|14.263|726>>
-    <associate|limit and continuity in metric space|<tuple|14.264|726>>
-    <associate|limit b^n|<tuple|14.257|724>>
-    <associate|limit constant sequence|<tuple|14.256|724>>
-    <associate|limit convergent sequence is bounded|<tuple|14.265|727>>
-    <associate|limit x_n+a|<tuple|14.260|725>>
-    <associate|limit x_n+y_n|<tuple|14.261|725>>
-    <associate|metric ball image preimage|<tuple|14.67|662>>
-    <associate|metric bounded set|<tuple|14.69|663>>
-    <associate|metric bounded set inclusion|<tuple|14.71|664>>
-    <associate|metric closed ball|<tuple|14.54|659>>
-    <associate|metric closed balls are closed|<tuple|14.59|660>>
-    <associate|metric closed open balls are bounded|<tuple|14.72|664>>
-    <associate|metric composition of isometries|<tuple|14.66|662>>
-    <associate|metric dense set|<tuple|14.75|665>>
-    <associate|metric empty set is bounded|<tuple|14.70|663>>
-    <associate|metric equivalent metrics|<tuple|14.61|661>>
-    <associate|metric equivalent metrics condition|<tuple|14.62|661>>
-    <associate|metric isometry|<tuple|14.63|661>>
-    <associate|metric isometry and its inverse|<tuple|14.65|662>>
-    <associate|metric isometry and topologies|<tuple|14.68|663>>
-    <associate|metric isometry is injective|<tuple|14.64|662>>
-    <associate|metric open ball|<tuple|14.53|659>>
-    <associate|metric open ball and intersection|<tuple|14.55|659>>
-    <associate|metric product topology|<tuple|14.73|664>>
-    <associate|metric pseudo metric space|<tuple|14.50|658>>
-    <associate|metric refinement of a ball|<tuple|14.56|659>>
-    <associate|metric space|<tuple|14.51|658>>
-    <associate|metric space metric is positive|<tuple|14.52|659>>
-    <associate|metric subtopology|<tuple|14.60|660>>
-    <associate|metric topology|<tuple|14.57|659>>
-    <associate|metric topology (1)|<tuple|14.58|660>>
-    <associate|normded triangle inequality|<tuple|14.80|667>>
-    <associate|normed absolute value norm differences|<tuple|14.81|668>>
+    <associate|limit (a+n)/(b+n)|<tuple|14.265|725>>
+    <associate|limit 1/(a+i)|<tuple|14.264|724>>
+    <associate|limit a.x_n|<tuple|14.268|726>>
+    <associate|limit and continuity|<tuple|14.269|726>>
+    <associate|limit and continuity in metric space|<tuple|14.270|726>>
+    <associate|limit b^n|<tuple|14.263|724>>
+    <associate|limit constant sequence|<tuple|14.262|724>>
+    <associate|limit convergent sequence is bounded|<tuple|14.271|727>>
+    <associate|limit x_n+a|<tuple|14.266|725>>
+    <associate|limit x_n+y_n|<tuple|14.267|725>>
+    <associate|metric ball image preimage|<tuple|14.68|662>>
+    <associate|metric bounded set|<tuple|14.70|663>>
+    <associate|metric bounded set inclusion|<tuple|14.72|664>>
+    <associate|metric closed ball|<tuple|14.55|659>>
+    <associate|metric closed balls are closed|<tuple|14.60|660>>
+    <associate|metric closed open balls are bounded|<tuple|14.73|664>>
+    <associate|metric composition of isometries|<tuple|14.67|662>>
+    <associate|metric dense set|<tuple|14.76|665>>
+    <associate|metric empty set is bounded|<tuple|14.71|663>>
+    <associate|metric equivalent metrics|<tuple|14.62|661>>
+    <associate|metric equivalent metrics condition|<tuple|14.63|661>>
+    <associate|metric isometry|<tuple|14.64|661>>
+    <associate|metric isometry and its inverse|<tuple|14.66|662>>
+    <associate|metric isometry and topologies|<tuple|14.69|663>>
+    <associate|metric isometry is injective|<tuple|14.65|662>>
+    <associate|metric open ball|<tuple|14.54|659>>
+    <associate|metric open ball and intersection|<tuple|14.56|659>>
+    <associate|metric product topology|<tuple|14.74|664>>
+    <associate|metric pseudo metric space|<tuple|14.51|658>>
+    <associate|metric refinement of a ball|<tuple|14.57|659>>
+    <associate|metric space|<tuple|14.52|658>>
+    <associate|metric space metric is positive|<tuple|14.53|659>>
+    <associate|metric subtopology|<tuple|14.61|660>>
+    <associate|metric topology|<tuple|14.58|659>>
+    <associate|metric topology (1)|<tuple|14.59|660>>
+    <associate|normded triangle inequality|<tuple|14.81|667>>
+    <associate|normed absolute value norm differences|<tuple|14.82|668>>
     <associate|normed all norms in the set of complex numbers are
-    equivalent|<tuple|14.105|680>>
+    equivalent|<tuple|14.106|680>>
     <associate|normed all norms in the set of real numbers are
-    equivalent|<tuple|14.104|680>>
-    <associate|normed ball|<tuple|14.83|668>>
-    <associate|normed basis of T\|\||<tuple|14.90|670>>
-    <associate|normed bounded set|<tuple|14.96|677>>
-    <associate|normed complex numbers|<tuple|14.87|669>>
-    <associate|normed dense set|<tuple|14.99|679>>
-    <associate|normed distinct function|<tuple|14.144|691>>
-    <associate|normed equivalent forms|<tuple|14.101|680>>
-    <associate|normed finer topologies|<tuple|14.100|679>>
-    <associate|normed generalized intervals that are open|<tuple|14.91|670>>
-    <associate|normed isometry|<tuple|14.110|681>>
-    <associate|normed isometry and composition|<tuple|14.109|681>>
-    <associate|normed isometry and inverse|<tuple|14.108|681>>
-    <associate|normed isometry composition|<tuple|14.111|682>>
-    <associate|normed isometry is injective|<tuple|14.107|681>>
-    <associate|normed linear isometry|<tuple|14.106|681>>
-    <associate|normed maximum norm|<tuple|14.78|666>>
-    <associate|normed norm|<tuple|14.77|666>>
-    <associate|normed norm equivalence|<tuple|14.102|680>>
-    <associate|normed norm equivalence condition|<tuple|14.103|680>>
-    <associate|normed norm of zero|<tuple|14.79|667>>
-    <associate|normed open generalized intervals|<tuple|14.92|672>>
-    <associate|normed open set as union of intervals|<tuple|14.93|673>>
-    <associate|normed pseudo norm|<tuple|14.76|666>>
-    <associate|normed real numbers|<tuple|14.88|669>>
-    <associate|normed space and open sets|<tuple|14.86|669>>
-    <associate|normed space set operations|<tuple|14.98|677>>
-    <associate|normed sub space topology|<tuple|14.97|677>>
-    <associate|normed sup(S) and inf(S)|<tuple|14.95|?>>
-    <associate|normed topology|<tuple|14.85|668>>
-    <associate|separation Hausdorff|<tuple|14.185|719>>
+    equivalent|<tuple|14.105|680>>
+    <associate|normed ball|<tuple|14.84|668>>
+    <associate|normed basis of T\|\||<tuple|14.91|670>>
+    <associate|normed bounded set|<tuple|14.97|677>>
+    <associate|normed complex numbers|<tuple|14.88|669>>
+    <associate|normed dense set|<tuple|14.100|679>>
+    <associate|normed distinct function|<tuple|14.145|691>>
+    <associate|normed equivalent forms|<tuple|14.102|680>>
+    <associate|normed finer topologies|<tuple|14.101|679>>
+    <associate|normed generalized intervals that are open|<tuple|14.92|670>>
+    <associate|normed isometry|<tuple|14.111|681>>
+    <associate|normed isometry and composition|<tuple|14.110|681>>
+    <associate|normed isometry and inverse|<tuple|14.109|681>>
+    <associate|normed isometry composition|<tuple|14.112|682>>
+    <associate|normed isometry is injective|<tuple|14.108|681>>
+    <associate|normed linear isometry|<tuple|14.107|681>>
+    <associate|normed maximum norm|<tuple|14.79|666>>
+    <associate|normed norm|<tuple|14.78|666>>
+    <associate|normed norm equivalence|<tuple|14.103|680>>
+    <associate|normed norm equivalence condition|<tuple|14.104|680>>
+    <associate|normed norm of zero|<tuple|14.80|667>>
+    <associate|normed open generalized intervals|<tuple|14.93|672>>
+    <associate|normed open set as union of intervals|<tuple|14.94|673>>
+    <associate|normed pseudo norm|<tuple|14.77|666>>
+    <associate|normed real numbers|<tuple|14.89|669>>
+    <associate|normed space and open sets|<tuple|14.87|669>>
+    <associate|normed space set operations|<tuple|14.99|677>>
+    <associate|normed sub space topology|<tuple|14.98|677>>
+    <associate|normed sup(S) and inf(S)|<tuple|14.96|?>>
+    <associate|normed topology|<tuple|14.86|668>>
+    <associate|separation Hausdorff|<tuple|14.186|719>>
     <associate|separation Hausdorff every finite set is
-    closed|<tuple|14.188|719>>
+    closed|<tuple|14.189|719>>
     <associate|separation a metric space is first
-    countable|<tuple|14.198|721>>
-    <associate|separation conditions|<tuple|14.194|720>>
+    countable|<tuple|14.199|721>>
+    <associate|separation conditions|<tuple|14.195|720>>
     <associate|separation first countable topological
-    space|<tuple|14.197|721>>
+    space|<tuple|14.198|721>>
     <associate|separation fundamental system of neighborhoods of
-    x|<tuple|14.196|721>>
-    <associate|separation metric spaces are Hausdorff|<tuple|14.186|719>>
-    <associate|separation metric spaces are regular|<tuple|14.190|719>>
-    <associate|separation neighbors|<tuple|14.195|720>>
-    <associate|separation normal topological space|<tuple|14.193|720>>
-    <associate|separation regular topological space|<tuple|14.189|719>>
+    x|<tuple|14.197|721>>
+    <associate|separation metric spaces are Hausdorff|<tuple|14.187|719>>
+    <associate|separation metric spaces are regular|<tuple|14.191|719>>
+    <associate|separation neighbors|<tuple|14.196|720>>
+    <associate|separation normal topological space|<tuple|14.194|720>>
+    <associate|separation regular topological space|<tuple|14.190|719>>
     <associate|separation regularity and non empty open
-    sets|<tuple|14.192|720>>
+    sets|<tuple|14.193|720>>
     <associate|separation second countability implies first
-    countability|<tuple|14.201|721>>
+    countability|<tuple|14.202|721>>
     <associate|separation second countable topological
-    space|<tuple|14.200|721>>
-    <associate|sequence|<tuple|14.247|721>>
-    <associate|sequence Cauchy metric|<tuple|14.266|732>>
-    <associate|sequence Cauchy normed|<tuple|14.267|732>>
-    <associate|sequence convergence|<tuple|14.250|722>>
-    <associate|sequence convergence in metric space|<tuple|14.254|723>>
-    <associate|sequence increasing decreasing|<tuple|14.248|721>>
-    <associate|sequence increasing decreasing consequence|<tuple|14.249|721>>
-    <associate|sequence limit|<tuple|14.252|723>>
-    <associate|sequence limit definition|<tuple|14.253|723>>
-    <associate|sequence limit start value|<tuple|14.251|722>>
-    <associate|toplinear isomorphism|<tuple|14.173|703>>
-    <associate|topological vector space|<tuple|14.170|703>>
+    space|<tuple|14.201|721>>
+    <associate|sequence|<tuple|14.253|721>>
+    <associate|sequence Cauchy metric|<tuple|14.272|732>>
+    <associate|sequence Cauchy normed|<tuple|14.273|732>>
+    <associate|sequence convergence|<tuple|14.256|722>>
+    <associate|sequence convergence in metric space|<tuple|14.260|723>>
+    <associate|sequence increasing decreasing|<tuple|14.254|721>>
+    <associate|sequence increasing decreasing consequence|<tuple|14.255|721>>
+    <associate|sequence limit|<tuple|14.258|723>>
+    <associate|sequence limit definition|<tuple|14.259|723>>
+    <associate|sequence limit start value|<tuple|14.257|722>>
+    <associate|toplinear isomorphism|<tuple|14.174|703>>
+    <associate|topological vector space|<tuple|14.171|703>>
     <associate|topology and complement closed sets|<tuple|14.18|647>>
     <associate|topology basis|<tuple|14.29|649>>
     <associate|topology basis alternative definition|<tuple|14.32|650>>
@@ -13426,10 +13886,10 @@
     <associate|topology closure of a set|<tuple|14.20|648>>
     <associate|topology closure of a set alternative|<tuple|14.22|648>>
     <associate|topology coarse|<tuple|14.3|643>>
-    <associate|topology dense set|<tuple|14.46|657>>
-    <associate|topology dense set alternative|<tuple|14.47|657>>
-    <associate|topology dense set alternative (1)|<tuple|14.48|658>>
-    <associate|topology dense set property|<tuple|14.49|658>>
+    <associate|topology dense set|<tuple|14.47|657>>
+    <associate|topology dense set alternative|<tuple|14.48|657>>
+    <associate|topology dense set alternative (1)|<tuple|14.49|658>>
+    <associate|topology dense set property|<tuple|14.50|658>>
     <associate|topology discrete|<tuple|14.4|644>>
     <associate|topology empty set|<tuple|14.2|643>>
     <associate|topology finer and basis|<tuple|14.34|650>>
@@ -13443,6 +13903,8 @@
     <associate|topology product alternative definition|<tuple|14.43|654>>
     <associate|topology product topology and box topology are the same in the
     finite case|<tuple|14.45|657>>
+    <associate|topology product topology of subspace
+    topologies|<tuple|14.46|?>>
     <associate|topology space|<tuple|14.1|643>>
     <associate|topology subbasis|<tuple|14.38|652>>
     <associate|topology subspace topology|<tuple|14.8|645>>
