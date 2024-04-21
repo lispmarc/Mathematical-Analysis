@@ -2652,7 +2652,7 @@
 
     If between two pseudo metric spaces there exist a
     <with|font-series|bold|isometric isomorphism> then we say that these
-    pseudo metric spaces are i<with|font-series|bold|isometric>. We note this
+    pseudo metric spaces are <with|font-series|bold|isometric>. We note this
     relation as \ 
 
     <\equation*>
@@ -7187,7 +7187,8 @@
 
       <item><math|\<varphi\>:\<bbb-K\><rsup|n>\<rightarrow\>X> defined by
       <math|\<varphi\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,.n|}>>x<rsub|i>\<cdot\>e<rsub|i>>
-      is a isometry using the norms <math|<around*|\<\|\|\>||\<\|\|\>><rsub|<around*|\<langle\>|E|\<rangle\>>>>
+      is a linear isometric isomorphism using the norms
+      <math|<around*|\<\|\|\>||\<\|\|\>><rsub|<around*|\<langle\>|E|\<rangle\>>>>
       and <math|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>
     </enumerate>
 
@@ -7284,8 +7285,8 @@
       proving that\ 
 
       <\equation*>
-        \<varphi\>:\<bbb-K\><rsup|n>\<rightarrow\>X<text| is a linear
-        isometry>
+        \<varphi\>:\<bbb-K\><rsup|n>\<rightarrow\>X<text| is a isometric
+        isomorphism>
       </equation*>
     </enumerate>
   </proof>
@@ -12666,7 +12667,406 @@
     <math|\<bbb-R\><rsup|n>> are equivalent.
   </proof>
 
-  \;
+  <\corollary>
+    <label|normed norm on finite dimensional spaces are equivalent>Let
+    <math|X> be a finite dimensional vector space over <math|\<bbb-R\>> then
+    all norms on <math|X> are equivalent
+  </corollary>
+
+  <\proof>
+    Let <math|<around*|\<\|\|\>||\<\|\|\>><rsub|1>>,
+    <math|<around*|\<\|\|\>||\<\|\|\>><rsub|2>> two norms on <math|X> then by
+    [theorem: <reference|continuity homeomorphism between K^n and finite
+    dimensional space>] there exist two norms
+    <math|<around*|\<\|\|\>||\<\|\|\>><rsub|<around*|(|1|)>>> and
+    <math|<around*|\<\|\|\>||\<\|\|\>><rsub|<around*|(|2|)>>> on
+    <math|\<bbb-R\><rsup|n>> and a <with|font-series|bold|isometric>
+    isomorphism
+
+    <\equation*>
+      \<varphi\>:\<bbb-R\><rsup|n>\<rightarrow\>X<text| so that >
+      \<forall\>x\<in\>\<bbb-R\><rsup|n><text| we have
+      ><around*|\<\|\|\>|\<varphi\><around*|(|x|)>|\<\|\|\>><rsub|1>=<around*|\<\|\|\>|x|\<\|\|\>><rsub|<around*|(|1|)>>\<wedge\><around*|\<\|\|\>|\<varphi\><around*|(|x|)>|\<\|\|\>><rsub|2>=<around*|\<\|\|\>|x|\<\|\|\>><rsub|<around*|(|2|)>>
+    </equation*>
+
+    \;
+
+    By the previous theorem [theorem: <reference|normed equivalent norms in
+    R^n>] <math|<around*|\<\|\|\>||\<\|\|\>><rsub|<around*|(|1|)>>> and
+    <math|<around*|\<\|\|\>||\<\|\|\>><rsub|<around*|(|2|)>>> are equivalent,
+    hence by [theorem: <reference|normed norm equivalence condition>] there
+    exists <math|M<rsub|1>,M<rsub|2>\<in\>\<bbb-R\><rsup|+>> such that\ 
+
+    <\equation*>
+      \<forall\>x\<in\>\<bbb-R\><rsup|n><text| we have
+      >M<rsub|1>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|<around*|(|1|)>>\<leqslant\><around*|\<\|\|\>|x|\<\|\|\>><rsub|<around*|(|2|)>>\<leqslant\>M<rsub|2>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|<around*|(|1|)>>
+    </equation*>
+
+    Let <math|x\<in\>X> then <math|x=\<varphi\><around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>>
+    so that
+
+    <\equation*>
+      <around*|\<\|\|\>|x|\<\|\|\>><rsub|1>=<around*|\<\|\|\>|\<varphi\><around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>|\<\|\|\>><rsub|1>=<around*|\<\|\|\>|\<varphi\><rsup|-1><around*|(|x|)>|\<\|\|\>><rsub|<around*|(|1|)>><text|
+      and ><around*|\<\|\|\>|x|\<\|\|\>><rsub|2>=<around*|\<\|\|\>|\<varphi\><around*|(|\<varphi\><rsup|-1><around*|(|x|)>|)>|\<\|\|\>><rsub|2>=<around*|\<\|\|\>|\<varphi\><rsup|-1><around*|(|x|)>|\<\|\|\>><rsub|<around*|(|2|)>><rsub|>
+    </equation*>
+
+    hence we have\ 
+
+    <\equation*>
+      M<rsub|1>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|1>=M<rsub|1>\<cdot\><around*|\<\|\|\>|\<varphi\><rsup|-1><around*|(|x|)>|\<\|\|\>><rsub|<around*|(|1|)>>\<leqslant\><around*|\<\|\|\>|\<varphi\><rsup|-1><around*|(|x|)>|\<\|\|\>><rsub|<around*|(|2|)>>=<around*|\<\|\|\>|x|\<\|\|\>><rsub|2>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|x|\<\|\|\>><rsub|2>=<around*|\<\|\|\>|\<varphi\><rsup|-1><around*|(|x|)>|\<\|\|\>><rsub|<around*|(|2|)>>\<leqslant\>M<rsub|2>\<cdot\><around*|\<\|\|\>|\<varphi\><rsup|-1><around*|(|x|)>|\<\|\|\>><rsub|<around*|(|1|)>>=M<rsub|2>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|1>
+    </equation*>
+
+    giving
+
+    <\equation*>
+      M<rsub|1>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|1>\<leqslant\><around*|\<\|\|\>|x|\<\|\|\>><rsub|2>\<leqslant\>M<rsub|2>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|1>
+    </equation*>
+
+    proving by [theorem: <reference|normed norm equivalence condition>] that
+    <math|<around*|\<\|\|\>||\<\|\|\>><rsub|1>> and
+    <math|<around*|\<\|\|\>||\<\|\|\>><rsub|2>> are equivalent.
+  </proof>
+
+  <\theorem>
+    <label|compact isometric isomorphism>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
+    a normed space over <math|\<bbb-R\>>, <math|n\<in\>\<bbb-N\>>,
+    <math|L:\<bbb-R\><rsup|n>\<rightarrow\>X> a isomorphism and
+    <math|C\<subseteq\>X> then\ 
+
+    <\equation*>
+      C<text| is compact >\<Leftrightarrow\><text| >C<text| is closed and
+      bounded>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Define
+
+    <\equation*>
+      <around*|\<\|\|\>||\<\|\|\>><rsup|\<ast\>>:\<bbb-R\><rsup|n>\<rightarrow\>X<text|
+      by ><around*|\<\|\|\>|x|\<\|\|\>><rsup|\<ast\>>=<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>>
+    </equation*>
+
+    then we have\ 
+
+    <\enumerate>
+      <item>If <math|x\<in\>\<bbb-R\><rsup|n>> then
+      <math|0\<leqslant\><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>>=<around*|\<\|\|\>|x|\<\|\|\>><rsup|\<ast\>>>
+
+      <item>If <math|\<alpha\>\<in\>\<bbb-R\>>,
+      <math|x\<in\>\<bbb-R\><rsup|n>> then\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|\<alpha\>\<cdot\>x|\<\|\|\>><rsup|\<ast\>>=<around*|\<\|\|\>|L<around*|(|\<alpha\>\<cdot\>x|)>|\<\|\|\>>=<around*|\<\|\|\>|\<alpha\>\<cdot\>L<around*|(|x|)>|\<\|\|\>>=<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>>=<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|\<ast\>>
+      </equation*>
+
+      <item>If <math|x,y\<in\>\<bbb-R\><rsup|n>> then\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|x+y|\<\|\|\>><rsup|\<ast\>>=<around*|\<\|\|\>|L<around*|(|x+y|)>|\<\|\|\>>=<around*|\<\|\|\>|L<around*|(|x|)>+L<around*|(|y|)>|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>>+<around*|\<\|\|\>|L<around*|(|y|)>|\<\|\|\>>=<around*|\<\|\|\>|x|\<\|\|\>><rsup|\<ast\>>+<around*|\<\|\|\>|y|\<\|\|\>><rsup|\<ast\>>
+      </equation*>
+
+      <item>If <math|<around*|\<\|\|\>|x|\<\|\|\>><rsup|\<ast\>>=0> then
+      <math|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>>=0> which as
+      <math|<around*|\<\|\|\>||\<\|\|\>>> is a norm means that
+      <math|L<around*|(|x|)>=0>, hence as <math|L> is a isomorphism it
+      follows that <math|x=0>.
+    </enumerate>
+
+    So we have proved that\ 
+
+    <\equation>
+      <label|eq 14.140.153><around*|\<\|\|\>||\<\|\|\>><rsup|\<ast\>><text|
+      is a norm on >\<bbb-R\><rsup|n><text| and >L<text| is a isometric
+      isomorphism between ><around*|\<langle\>|\<bbb-R\><rsup|n>,<around*|\<\|\|\>||\<\|\|\>><rsup|\<ast\>>|\<rangle\>><text|
+      and ><around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>
+    </equation>
+
+    Using [theorem: <reference|continuity isometry is a homeomorphism>] it
+    follows that\ 
+
+    <\equation*>
+      L:\<bbb-R\><rsup|n>\<rightarrow\>X<text| is a homeomorphism using the
+      topologies >\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsup|\<ast\>>><text|
+      on >\<bbb-R\><rsup|n><text| and >\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><text|>><text|
+      on >X
+    </equation*>
+
+    As by [theorem: <reference|normed equivalent norms in R^n>] all norms are
+    equivalent we have that <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>=\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsup|\<ast\>>>>
+    where <math|<around*|\<\|\|\>||\<\|\|\>><rsub|n>> is the maximum norm on
+    <math|\<bbb-R\><rsup|n>>. Hence we have that\ 
+
+    <\equation>
+      <label|eq 14.141.153>L:\<bbb-R\><rsup|n>\<rightarrow\>X<text| is a
+      homeomorphism using the topologies >\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>><text|
+      on >\<bbb-R\><rsup|n><text| and >\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><text|>><text|
+      on >X
+    </equation>
+
+    Further as <math|<around*|\<\|\|\>||\<\|\|\>><rsup|\<ast\>>> and
+    <math|<around*|\<\|\|\>||\<\|\|\>><rsub|n>> are equivalent there exist by
+    [theorem: <reference|normed norm equivalence condition>] a
+    <math|N<rsub|1>,N<rsub|2>\<in\>\<bbb-R\><rsup|+>> such that\ 
+
+    <\equation>
+      <label|eq 14.142.153>\<forall\>x\<in\>\<bbb-R\><rsup|n><text|
+      ><around*|\<\|\|\>|x|\<\|\|\>><rsup|\<ast\>>\<leqslant\>N<rsub|1>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|n><text|
+      and ><around*|\<\|\|\>|x|\<\|\|\>><rsub|n>\<leqslant\>N<rsub|2>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|\<star\>>
+    </equation>
+
+    Assume now that <math|C> is compact. Then by
+    <math|K=L<rsup|-1>:X\<rightarrow\>\<bbb-R\><rsup|n>> is a continuous
+    mapping between <math|<around*|\<langle\>|X,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>|\<rangle\>>>
+    and <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>|\<rangle\>>>.
+    Using [theorem: <reference|compact and continuous functions>] it follows
+    that <math|K<around*|(|C|)>> is compact in
+    <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>|\<rangle\>>>,
+    hence using Heine-Borel [see theorem: <reference|compact Heine-Borel
+    (1)>] we have that\ 
+
+    <\equation*>
+      K<around*|(|C|)><text| is closed and bounded in
+      ><around*|\<langle\>|\<bbb-R\><rsup|n>,<around*|\<\|\|\>||\<\|\|\>><rsub|n>|\<rangle\>>
+    </equation*>
+
+    As <math|K> is continuous it follows from [theorem: <reference|continuity
+    equivalences>] we have that <math|K<rsup|-1><around*|(|K<around*|(|C|)>|)>>
+    is closed, which as <math|K=L<rsup|-1>> is a bijection proves by
+    [theorem: <reference|function preimage of image>] that
+    <math|K<rsup|-1><around*|(|K<around*|(|C|)>|)>=C> hence we have that\ 
+
+    <\equation*>
+      C<text| is closed in ><around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>
+    </equation*>
+
+    Further as <math|K<around*|(|C|)>> is bounded there exist a
+    <math|M\<in\>\<bbb-R\><rsup|+>> such that
+    <math|\<forall\>x,y\<in\>K<around*|(|C|)>> we have
+    <math|<around*|\<\|\|\>|x-y|\<\|\|\>><rsub|n>\<leqslant\>M>. Let
+    <math|x,y\<in\>C> then\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|x-y|\<\|\|\>>=<around*|\<\|\|\>|L<around*|(|L<rsup|-1><around*|(|x-y|)>|)>|\<\|\|\>>=<around*|\<\|\|\>|L<around*|(|K<around*|(|x-y|)>|)>|\<\|\|\>>=<around*|\<\|\|\>|K<around*|(|x-y|)>|\<\|\|\>><rsup|\<ast\>>\<leqslant\><rsub|<text|[eq:
+      <reference|eq 14.142.153>]>>N<rsub|1>\<cdot\><around*|\<\|\|\>|K<around*|(|x-y|)>|\<\|\|\>><rsub|n>
+    </equation*>
+
+    as <math|K<around*|(|x|)>,K<around*|(|y|)>\<in\>K<around*|(|C|)>> we have
+    <math|<around*|\<\|\|\>|K<around*|(|x-y|)>|\<\|\|\>><rsub|n>=<around*|\<\|\|\>|K<around*|(|x|)>-K<around*|(|y|)>|\<\|\|\>><rsub|n>\<leqslant\>M>,
+    hence <math|<around*|\<\|\|\>|x-y|\<\|\|\>>\<leqslant\>N<rsub|1>\<cdot\>M>.
+    So we have proved that
+
+    <\equation*>
+      C<text| is bounded in <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>>
+    </equation*>
+
+    Summarized we have proved that\ 
+
+    <\equation>
+      <label|eq 14.143.153>C<text| is compact >\<Rightarrow\><text| >C<text|
+      is closed and bounded>
+    </equation>
+
+    For the opposite implication assume that <math|C> is closed and bounded.
+    As by [eq: <reference|eq 14.141.153>] <math|L> is a continuous map
+    between <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>|\<rangle\>>>
+    and <math|<around*|\<langle\>|X,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>|\<rangle\>>>
+    it follows from [theorem: <reference|continuity equivalences>] that\ 
+
+    <\equation>
+      <label|eq 14.144.153>L<rsup|-1><around*|(|C|)><text| is closed in
+      >\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>
+    </equation>
+
+    Further as <math|C> is bounded there exist a
+    <math|M\<in\>\<bbb-R\><rsup|+>> such that <math|\<forall\>x,y\<in\>C> we
+    have <math|<around*|\<\|\|\>|x-y|\<\|\|\>>\<leqslant\>M>. Now if
+    <math|x,y\<in\>L<rsup|-1><around*|(|C|)>> then as
+    <math|L<around*|(|x|)>,L<around*|(|y|)>\<in\>C> we have\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|x-y|\<\|\|\>><rsub|n>\<leqslant\><rsub|<text|[eq:
+      <reference|eq 14.142.153>]>>N<rsub|2>\<cdot\><around*|\<\|\|\>|x-y|\<\|\|\>><rsup|\<ast\>>=N<rsub|2>\<cdot\><around*|\<\|\|\>|L<around*|(|x-y|)>|\<\|\|\>>=N<rsub|2>\<cdot\><around*|\<\|\|\>|L<around*|(|x|)>-L<around*|(|y|)>|\<\|\|\>>\<leqslant\>N<rsub|2>\<cdot\>M
+    </equation*>
+
+    proving that\ 
+
+    <\equation>
+      <label|eq 14.145.153>L<rsup|-1><around*|(|C|)><text| is bounded in
+      <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,<around*|\<\|\|\>||\<\|\|\>><rsub|n>|\<rangle\>>>>
+    </equation>
+
+    Using Heine-Borel [see theorem: <reference|compact Heine-Borel (1)>] on
+    [eqs: <reference|eq 14.144.153>, <reference|eq 14.145.153>] proves that
+    <math|L<rsup|-1><around*|(|C|)>> is compact in
+    <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>>. As by [eq:
+    <reference|eq 14.141.153>] <math|L:\<bbb-R\><rsup|n>\<rightarrow\>X> is
+    continuous [using <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>>
+    and <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>> on
+    <math|\<bbb-R\><rsup|n>> and <math|X>] it follows by [theorem:
+    <reference|compact and continuous functions>] that
+    <math|C\<equallim\><rsub|<text|[theorem: <reference|function preimage of
+    image>]>>L<around*|(|L<rsup|-1><around*|(|C|)>|)>> is compact. Hence we
+    have proved that\ 
+
+    <\equation>
+      <label|eq 14.146.153>C<text| is closed and bounded
+      >\<Rightarrow\><text| >C is compact
+    </equation>
+
+    Combining [eqs: <reference|eq 14.143.153>, <reference|eq 14.146.153>]
+    proves that\ 
+
+    <\equation*>
+      C<text| is compact >\<Leftrightarrow\><text| >C<text| is closed and
+      bounded>
+    </equation*>
+  </proof>
+
+  A application of the above theorem is the following
+
+  <\corollary>
+    <label|compact Heine-Borel complex>Let
+    <math|<around*|\<langle\>|\<bbb-C\>,\<\|\|\>|\<rangle\>>> be the complex
+    space equiped with th absolute value norm <math|<around*|\|||\|>> and
+    <math|C\<subseteq\>\<bbb-C\>> then\ 
+
+    <\equation*>
+      C<text| is compact >\<Leftrightarrow\><text| >C<text| is closed and
+      bounded>
+    </equation*>
+  </corollary>
+
+  <\proof>
+    Using [example: <reference|linerar mapping between R^2 and C>] there
+    exist a isomorphism between <math|\<bbb-R\><rsup|2><infix-and>\<bbb-C\>>,
+    hence applying the previous theorem [see <reference|compact isometric
+    isomorphism>] proves the theorem.
+  </proof>
+
+  More general we have\ 
+
+  <\theorem>
+    <label|compact Heine-Borel general form>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
+    a finite dimensional normed space over <math|\<bbb-R\>> and
+    <math|C\<subseteq\>X> then
+
+    <\equation*>
+      C<text| is compact >\<Leftrightarrow\><text| >C<text| is closed and
+      bounded>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Using [theorem: <reference|continuity homeomorphism between K^n and
+    finite dimensional space>] there exist a isomorphism between <math|X> and
+    <math|\<bbb-R\><rsup|n>> where <math|n=dim<around*|(|X|)>>, hence
+    applying the previous theorem [see <reference|compact isometric
+    isomorphism>] proves the theorem.
+  </proof>
+
+  <\theorem>
+    <label|normed linear mappings between finite dimensional spaces are
+    continuous>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    are finite dimensional spaces over <math|\<bbb-R\>> then
+
+    <\equation*>
+      Hom<around*|(|X,Y|)>=L<around*|(|X,Y|)>
+    </equation*>
+
+    in other words every linear mapping is continuous.
+  </theorem>
+
+  <\proof>
+    Using [theorem: <reference|continuity homeomorphism between K^n and
+    finite dimensional space>] there exist linear isomorphisms
+    <math|\<varphi\><rsub|1>:\<bbb-R\><rsup|n>\<rightarrow\>X>,
+    <math|\<varphi\><rsub|2>:\<bbb-R\><rsup|m>\<rightarrow\>Y> and norms
+    <math|<around*|\<\|\|\>||\<\|\|\>><rsub|1>>,
+    <math|<around*|\<\|\|\>||\<\|\|\>><rsub|2>> on <math|\<bbb-R\><rsup|n>>,
+    <math|\<bbb-R\><rsup|m>> such that\ 
+
+    <\equation>
+      <label|eq 14.147.153>\<varphi\><rsub|1>:\<bbb-R\><rsup|n>\<rightarrow\>X<text|
+      is a homeomorphism using the norms ><around*|\<\|\|\>||\<\|\|\>><rsub|1>,<around*|\<\|\|\>||\<\|\|\>><rsub|X><text|
+      on >\<bbb-R\><rsup|n>,X
+    </equation>
+
+    <\equation>
+      <label|eq 14.148.153>\<varphi\><rsub|2>:\<bbb-R\><rsup|n>\<rightarrow\>X<text|
+      is a homeomorphism using the norms ><around*|\<\|\|\>||\<\|\|\>><rsub|2>,<around*|\<\|\|\>||\<\|\|\>><rsub|Y><text|
+      on >\<bbb-R\><rsup|n>,X
+    </equation>
+
+    Let <math|L\<in\>Hom<around*|(|X,Y|)>> and define
+    <math|L<rprime|'>=\<varphi\><rsub|2><rsup|-1>\<circ\>L\<circ\>\<varphi\><rsub|1>:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|m>>
+    then <math|L<rprime|'>> is a \ linear isomorphism. Using [theorem:
+    <reference|continuity homemorphism between powers of R>] it follows that\ 
+
+    <\equation*>
+      L<rprime|'>:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|m><text| is
+      continuous using the maximum norms ><around*|\<\|\|\>||\<\|\|\>><rsub|n>,<around*|\<\|\|\>||\<\|\|\>><rsub|m><text|
+      on >\<bbb-R\><rsup|n>,\<bbb-R\><rsup|m>
+    </equation*>
+
+    Using [theorem: <reference|normed equivalent norms in R^n>] we have that
+    <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|1>>=\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>>
+    and <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|2>>=\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>>>
+    so that\ 
+
+    <\equation*>
+      L<rprime|'>:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|m><text| is
+      continuous using the norms ><around*|\<\|\|\>||\<\|\|\>><rsub|1>,<around*|\<\|\|\>||\<\|\|\>><rsub|2><text|
+      on >\<bbb-R\><rsup|n>,\<bbb-R\><rsup|m>
+    </equation*>
+
+    Using [eqs: <reference|eq 14.147.153>, <reference|eq 14.148.153>] we have
+    that\ 
+
+    <\equation*>
+      \<varphi\><rsub|1><rsup|-1>:X\<rightarrow\>\<bbb-R\><rsup|n><text| is
+      continuous using the norms ><around*|\<\|\|\>||\<\|\|\>><rsub|X>,<around*|\<\|\|\>||\<\|\|\>><rsub|1><text|
+      on >X,\<bbb-R\><rsup|n>
+    </equation*>
+
+    <\equation*>
+      \<varphi\><rsub|2>:\<bbb-R\><rsup|m>\<rightarrow\>Y<text| is continuous
+      using the norms <math|<around*|\<\|\|\>||\<\|\|\>><rsub|2>,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>>
+      on >\<bbb-R\><rsup|m>,Y
+    </equation*>
+
+    Hence as the composition of continuous function is continuous w have that\ 
+
+    <\equation*>
+      \<varphi\><rsub|2>\<circ\>L<rprime|'>\<circ\>\<varphi\><rsub|1><rsup|-1>:X\<rightarrow\>Y<text|
+      is continuous using the norms ><around*|\<\|\|\>||\<\|\|\>><rsub|X>,<around*|\<\|\|\>||\<\|\|\>><rsub|Y><text|
+      on >X,Y
+    </equation*>
+
+    as
+
+    <\equation*>
+      \<varphi\><rsub|2>\<circ\>L<rprime|'>\<circ\>\<varphi\><rsub|1><rsup|-1>=\<varphi\><rsub|2>\<circ\><around*|(|\<varphi\><rsub|2><rsup|-1>\<circ\>L\<circ\>\<varphi\><rsub|1>|)>\<circ\>\<varphi\><rsub|1><rsup|-1>=<around*|(|\<varphi\><rsub|2>\<circ\>\<varphi\><rsup|-1><rsub|2>|)>\<circ\>L\<circ\><around*|(|\<varphi\><rsub|1>\<circ\>\<varphi\><rsup|-1><rsub|1>|)>=Id<rsub|Y>\<circ\>L\<circ\>Id<rsub|X>=L
+    </equation*>
+
+    it follows that <math|L:X\<rightarrow\>Y> is continuous proving that
+    <math|Hom<around*|(|X,Y|)>\<subseteq\>L<around*|(|X,Y|)>>. As by
+    definition <math|L<around*|(|X,Y|)>=<around*|{|L\<in\>Hom<around*|(|X,Y|)>\|L:X\<rightarrow\>Y<text|
+    is continuous>|}>\<subseteq\>Hom<around*|(|X,Y|)>> we conclude that\ 
+
+    <\equation*>
+      Hom<around*|(|X,Y|)>=L<around*|(|X,Y|)>
+    </equation*>
+  </proof>
 
   <section|Convergence>\ 
 
@@ -13736,6 +14136,8 @@
     compact|<tuple|14.221|?>>
     <associate|compact Heine Borel (1)|<tuple|14.217|731>>
     <associate|compact Heine-Borel (1)|<tuple|14.254|?>>
+    <associate|compact Heine-Borel complex|<tuple|14.258|?>>
+    <associate|compact Heine-Borel general form|<tuple|14.259|?>>
     <associate|compact Tychonoff's|<tuple|14.251|?>>
     <associate|compact Tychonoff's (1)|<tuple|14.252|?>>
     <associate|compact and basis|<tuple|14.207|730>>
@@ -13752,6 +14154,7 @@
     <associate|compact finite union of compact sets|<tuple|14.210|728>>
     <associate|compact image of a cmpact set by a continuous
     function|<tuple|14.219|?>>
+    <associate|compact isometric isomorphism|<tuple|14.257|?>>
     <associate|compact rectangles are compact|<tuple|14.253|?>>
     <associate|compact set|<tuple|14.205|727>>
     <associate|compact set alternative definition|<tuple|14.206|727>>
@@ -13759,7 +14162,7 @@
     <associate|compact singleton|<tuple|14.209|728>>
     <associate|compact space|<tuple|14.204|727>>
     <associate|compact subspace equivalences|<tuple|14.211|728>>
-    <associate|complete space|<tuple|14.278|732>>
+    <associate|complete space|<tuple|14.283|732>>
     <associate|continuity K^n|<tuple|14.177|705>>
     <associate|continuity L(X,L(Y,Z)) is isometric with
     L(X,Y;Z)|<tuple|14.185|712>>
@@ -13887,6 +14290,15 @@
     <associate|eq 14.138.153|<tuple|14.138|?>>
     <associate|eq 14.139.153|<tuple|14.139|?>>
     <associate|eq 14.14.146|<tuple|14.14|661>>
+    <associate|eq 14.140.153|<tuple|14.140|?>>
+    <associate|eq 14.141.153|<tuple|14.141|?>>
+    <associate|eq 14.142.153|<tuple|14.142|?>>
+    <associate|eq 14.143.153|<tuple|14.143|?>>
+    <associate|eq 14.144.153|<tuple|14.144|?>>
+    <associate|eq 14.145.153|<tuple|14.145|?>>
+    <associate|eq 14.146.153|<tuple|14.146|?>>
+    <associate|eq 14.147.153|<tuple|14.147|?>>
+    <associate|eq 14.148.153|<tuple|14.148|?>>
     <associate|eq 14.15.146|<tuple|14.15|663>>
     <associate|eq 14.16.146|<tuple|14.16|663>>
     <associate|eq 14.17.146|<tuple|14.17|663>>
@@ -13916,6 +14328,7 @@
     <associate|eq 14.39.147|<tuple|14.39|678>>
     <associate|eq 14.4.146|<tuple|14.4|655>>
     <associate|eq 14.41.147|<tuple|14.41|679>>
+    <associate|eq 14.42.153|<tuple|14.142|?>>
     <associate|eq 14.43.147|<tuple|14.43|684>>
     <associate|eq 14.44.147|<tuple|14.44|685>>
     <associate|eq 14.45.147|<tuple|14.45|686>>
@@ -14009,16 +14422,16 @@
     <associate|filter base subordinate|<tuple|14.235|?>>
     <associate|filter base trivial|<tuple|14.226|?>>
     <associate|filter base union and intersection|<tuple|14.229|?>>
-    <associate|limit (a+n)/(b+n)|<tuple|14.268|725>>
-    <associate|limit 1/(a+i)|<tuple|14.267|724>>
-    <associate|limit a.x_n|<tuple|14.271|726>>
-    <associate|limit and continuity|<tuple|14.272|726>>
-    <associate|limit and continuity in metric space|<tuple|14.273|726>>
-    <associate|limit b^n|<tuple|14.266|724>>
-    <associate|limit constant sequence|<tuple|14.265|724>>
-    <associate|limit convergent sequence is bounded|<tuple|14.274|727>>
-    <associate|limit x_n+a|<tuple|14.269|725>>
-    <associate|limit x_n+y_n|<tuple|14.270|725>>
+    <associate|limit (a+n)/(b+n)|<tuple|14.273|725>>
+    <associate|limit 1/(a+i)|<tuple|14.272|724>>
+    <associate|limit a.x_n|<tuple|14.276|726>>
+    <associate|limit and continuity|<tuple|14.277|726>>
+    <associate|limit and continuity in metric space|<tuple|14.278|726>>
+    <associate|limit b^n|<tuple|14.271|724>>
+    <associate|limit constant sequence|<tuple|14.270|724>>
+    <associate|limit convergent sequence is bounded|<tuple|14.279|727>>
+    <associate|limit x_n+a|<tuple|14.274|725>>
+    <associate|limit x_n+y_n|<tuple|14.275|725>>
     <associate|metric ball image preimage|<tuple|14.68|662>>
     <associate|metric bounded set|<tuple|14.70|663>>
     <associate|metric bounded set inclusion|<tuple|14.72|664>>
@@ -14059,6 +14472,8 @@
     <associate|normed equivalent norms|<tuple|14.102|?>>
     <associate|normed equivalent norms in R^n|<tuple|14.255|?>>
     <associate|normed finer topologies|<tuple|14.101|679>>
+    <associate|normed finite dimensional normed spaces are isomorphic and
+    homeomorphic|<tuple|14.261|?>>
     <associate|normed generalized intervals that are open|<tuple|14.92|670>>
     <associate|normed isometry|<tuple|14.111|681>>
     <associate|normed isometry and composition|<tuple|14.110|681>>
@@ -14066,11 +14481,15 @@
     <associate|normed isometry composition|<tuple|14.112|682>>
     <associate|normed isometry is injective|<tuple|14.108|681>>
     <associate|normed linear isometry|<tuple|14.107|681>>
+    <associate|normed linear mappings between finite dimensional spaces are
+    continuous|<tuple|14.260|?>>
     <associate|normed maximum norm|<tuple|14.79|666>>
     <associate|normed norm|<tuple|14.78|666>>
     <associate|normed norm equivalence|<tuple|14.103|680>>
     <associate|normed norm equivalence condition|<tuple|14.104|680>>
     <associate|normed norm of zero|<tuple|14.80|667>>
+    <associate|normed norm on finite dimensional spaces are
+    equivalent|<tuple|14.256|?>>
     <associate|normed open generalized intervals|<tuple|14.93|672>>
     <associate|normed open set as union of intervals|<tuple|14.94|673>>
     <associate|normed pseudo norm|<tuple|14.77|666>>
@@ -14101,18 +14520,16 @@
     countability|<tuple|14.203|721>>
     <associate|separation second countable topological
     space|<tuple|14.202|721>>
-    <associate|sequence|<tuple|14.256|721>>
-    <associate|sequence Cauchy metric|<tuple|14.275|732>>
-    <associate|sequence Cauchy normed|<tuple|14.276|732>>
-    <associate|sequence convergence|<tuple|14.259|722>>
-    <associate|sequence convergence in metric space|<tuple|14.263|723>>
-    <associate|sequence increasing decreasing|<tuple|14.257|721>>
-    <associate|sequence increasing decreasing consequence|<tuple|14.258|721>>
-    <associate|sequence limit|<tuple|14.261|723>>
-    <associate|sequence limit definition|<tuple|14.262|723>>
-    <associate|sequence limit start value|<tuple|14.260|722>>
-    <associate|ssssssssseparation Hausdorff every finite set is
-    closed|<tuple|14.190|?>>
+    <associate|sequence|<tuple|14.261|721>>
+    <associate|sequence Cauchy metric|<tuple|14.280|732>>
+    <associate|sequence Cauchy normed|<tuple|14.281|732>>
+    <associate|sequence convergence|<tuple|14.264|722>>
+    <associate|sequence convergence in metric space|<tuple|14.268|723>>
+    <associate|sequence increasing decreasing|<tuple|14.262|721>>
+    <associate|sequence increasing decreasing consequence|<tuple|14.263|721>>
+    <associate|sequence limit|<tuple|14.266|723>>
+    <associate|sequence limit definition|<tuple|14.267|723>>
+    <associate|sequence limit start value|<tuple|14.265|722>>
     <associate|toplinear isomorphism|<tuple|14.175|703>>
     <associate|topological vector space|<tuple|14.172|703>>
     <associate|topology and complement closed sets|<tuple|14.18|647>>
