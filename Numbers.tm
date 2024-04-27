@@ -12719,24 +12719,31 @@
   <\corollary>
     <label|complex sqrt x\<less\>sqrt x^2>If
     <math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>> then
-    <math|x\<leqslant\><sqrt|x<rsup|2>>>
+    <math|x\<leqslant\><around*|\||x|\|>=<sqrt|x<rsup|2>>>
   </corollary>
 
   <\proof>
-    <math|Using >[theorem: <reference|complex RC order properties>] we have
-    that <math|0\<leqslant\>x<rsup|2>=x<rsup|2>>, so by [theorem:
-    <reference|complex square root properties (1)>] we have either:
+    For <math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>> we have either:\ 
 
     <\description>
-      <item*|<math|x=<sqrt|x<rsup|2>>>>Then trivial
-      <math|x\<leqslant\><sqrt|x<rsup|2>>>
+      <item*|<math|0\<leqslant\>x>>Then <math|<around*|\||x|\|>=x> so that
+      <math|<around*|\||x|\|><rsup|2>=x<rsup|2>>
 
-      <item*|<math|x=-<sqrt|x<rsup|2>>>>Then
-      <math|0\<leqslant\><sqrt|x<rsup|2>>=-x> so that by [theorem:
-      <reference|complex RC order properties>] <math|x\<leqslant\>-0=0> which
-      as <math|0\<leqslant\><sqrt|x<rsup|2>> proves that
-      x\<leqslant\><sqrt|x<rsup|2>>.>
+      <item*|<math|x\<less\>0>>Then <math|<around*|\||x|\|>=-x> so that
+      <math|<around*|\||x|\|><rsup|2>=<around*|(|-x|)>\<cdot\><around*|(|-x|)>=<around*|(|-1|)>\<cdot\><around*|(|-1|)>\<cdot\>x\<cdot\>x=x<rsup|2>>
     </description>
+
+    so that
+
+    <\equation*>
+      <around*|\||x<rsup|2>|\|>=x<rsup|2>
+    </equation*>
+
+    As <math|<around*|\||x|\|>\<in\>\<bbb-R\><rsup|+><rsub|0,C>> we have that
+
+    <\equation*>
+      <around*|\||x|\|>=<sqrt|<around*|\||x|\|><rsup|2>>=<sqrt|x<rsup|2>>
+    </equation*>
   </proof>
 
   <\theorem>
