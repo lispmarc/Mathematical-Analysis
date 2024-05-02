@@ -9921,7 +9921,7 @@
       <reference|complex RC is conditional complete>] we have that
 
       <\equation>
-        <label|eq 10.22.155>sup<around*|(|-S|)><text| exist and
+        <label|eq 10.23.155>sup<around*|(|-S|)><text| exist and
         >sup<around*|(|-S|)>\<leqslant\>-inf<around*|(|S|)>
       </equation>
 
@@ -9932,7 +9932,7 @@
       which, as <math|-s\<in\>-S\<Rightarrow\>-s\<leqslant\>sup<around*|(|-S|)>>,
       results in the contradiction <math|-s\<less\>-s>. Hence we must have
       that <math|-inf<around*|(|S|)>\<leqslant\>sup<around*|(|-S|)>> which
-      combined with [eq: <reference|eq 10.22.155>] gives\ 
+      combined with [eq: <reference|eq 10.23.155>] gives\ 
 
       <\equation*>
         sup<around*|(|-S|)>=-inf<around*|(|S|)>
@@ -14247,10 +14247,11 @@
     <associate|eq 10.21.050|<tuple|10.28|?>>
     <associate|eq 10.22.050|<tuple|10.29|?>>
     <associate|eq 10.22.153|<tuple|10.24|?>>
-    <associate|eq 10.22.155|<tuple|10.23|?>>
+    <associate|eq 10.22.155|<tuple|10.22|?>>
     <associate|eq 10.23.049|<tuple|10.47|?>>
     <associate|eq 10.23.050|<tuple|10.34|?>>
     <associate|eq 10.23.153|<tuple|10.25|?>>
+    <associate|eq 10.23.155|<tuple|10.23|?>>
     <associate|eq 10.24.049|<tuple|10.48|?>>
     <associate|eq 10.24.050|<tuple|10.35|?>>
     <associate|eq 10.25.049|<tuple|10.49|?>>

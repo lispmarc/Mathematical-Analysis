@@ -14654,7 +14654,7 @@
       exists and
 
       <\equation>
-        <label|eq 14.151.155>\<forall\>n\<in\>\<bbb-N\><rsub|0>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>
+        <label|eq 14.151.156>\<forall\>n\<in\>\<bbb-N\><rsub|0>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>
         sup<around*|(|<around*|{|-x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>=-inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>
       </equation>
 
@@ -14665,7 +14665,7 @@
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|<below|lim|n\<rightarrow\>\<infty\>>inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>>|<cell|\<equallim\><rsub|<text|[eq:
-        <reference|eq 14.151.153>]>>>|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|-sup<around*|(|<around*|{|-x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|\<nobracket\>>|\<nobracket\>>|\<nobracket\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|eq 14.151.156>]>>>|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|-sup<around*|(|<around*|{|-x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|\<nobracket\>>|\<nobracket\>>|\<nobracket\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|limit a.x_n>]>>>|<cell|-<below|lim|n\<rightarrow\>\<infty\>><around*|(|sup<around*|(|<around*|{|-x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|def><rsub|>>|<cell|-<below|lim
         sup|n\<rightarrow\>\<infty\>> <around*|(|-x<rsub|n>|)>>>>>
       </eqnarray*>
@@ -14674,7 +14674,7 @@
       exists we have
 
       <\equation>
-        <label|eq 14.152.155>\<forall\>n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>
+        <label|eq 14.152.156>\<forall\>n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>
         sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>
         exists
       </equation>
@@ -16300,7 +16300,7 @@
       >\<Leftrightarrow\><text| >\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text|
       >\<exists\>N\<in\><around*|{|k,\<ldots\>,\<infty\>|}><text| such that
       >\<forall\>n,m\<geqslant\>N<text| with <math|n\<leqslant\>m> we have
-      <math|<around*|\<\|\|\>|<big|sum><rsub|i=n><rsup|m>x<rsub|i>|\<\|\|\>>>>
+      <math|<around*|\<\|\|\>|<big|sum><rsub|i=n><rsup|m>x<rsub|i>|\<\|\|\>>\<less\>\<varepsilon\>>>
     </equation*>
   </theorem>
 
@@ -16336,7 +16336,707 @@
     </description>
   </proof>
 
-  \;
+  <\theorem>
+    <label|series translation start>Let <math|k,l\<in\>\<bbb-N\><rsub|0>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
+    normed space and <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k+l,\<ldots\>,\<infty\>|}>>\<subseteq\>X>
+    a sequence in <math|X> then we have\ 
+
+    <\equation*>
+      <big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i+l><text| converges
+      >\<Leftrightarrow\><text| ><big|sum><rsub|i=k+l><rsup|\<infty\>>x<rsub|i><text|
+      converges>
+    </equation*>
+
+    Further if <math|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i+l>> or
+    <math|<big|sum><rsub|i=k+l><rsup|\<infty\>>x<rsub|i>> converges then\ 
+
+    <\equation*>
+      <big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i+l>=<big|sum><rsub|i=k+l><rsup|\<infty\>>x<rsub|i>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>.
+      As <math|><math|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i+l>>
+      converges there exist a <math|x\<in\>X> such that there exist a
+      <math|N<rprime|'>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
+      <math|\<forall\>n\<geqslant\>N<rprime|'>> we have that
+      <math|<around*|\<\|\|\>|<big|sum><rsub|i=k><rsup|n>x<rsub|i+l>-x|\<\|\|\>>\<less\>\<varepsilon\>>.
+      Hence if we take <math|N=N<rprime|'>+l\<in\><around*|{|k+l,\<ldots\>,\<infty\>|}>>
+      then if <math|n\<geqslant\>N> we have that
+      <math|n\<geqslant\>N<rprime|'>+l\<Rightarrow\>n-l\<geqslant\>N<rprime|'>>
+      so that
+
+      <\equation*>
+        <around*|\<\|\|\>|<big|sum><rsub|i=k+l><rsup|n>x<rsub|i>-x|\<\|\|\>>=<around*|\<\|\|\>|<big|sum><rsup|><rsub|i=k><rsup|n-l>x<rsub|i+l>|\<\|\|\>>\<less\>\<varepsilon\>.
+      </equation*>
+
+      This proves that <math|<big|sum><rsub|i=k+l><rsup|\<infty\>>x<rsub|i>>
+      converges and\ 
+
+      <\equation*>
+        <big|sum><rsub|i=k+l><rsup|\<infty\>>x<rsub|i>=x=<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i+l>
+      </equation*>
+
+      <item*|<math|\<Leftarrow\>>>Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>.
+      As <math|<big|sum><rsub|i=k+l><rsup|\<infty\>>x<rsub|i>> converges
+      there exist a <math|x\<in\>X> and a
+      <math|N<rprime|'>\<in\><around*|{|k+l,\<ldots\>,\<infty\>|}>> such that
+      <math|\<forall\>n\<geqslant\>N<rprime|'>> we have
+      <math|<around*|\<\|\|\>|<big|sum><rsub|i=k+l><rsup|n>x<rsub|i>-x|\<\|\|\>>\<less\>\<varepsilon\>>.
+      Take <math|N=N<rprime|'>-l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
+      then <math|\<forall\>n\<geqslant\>N> we have
+      <math|n+l\<geqslant\>N<rprime|'>> so that
+
+      <\equation*>
+        <around*|\<\|\|\>|<big|sum><rsub|i=k><rsup|n>x<rsub|i+l>-x|\<\|\|\>>=<around*|\<\|\|\>|<big|sum><rsup|n+l><rsub|i=k+l><rsup|>x<rsub|i>-x|\<\|\|\>>=\<less\>\<varepsilon\>
+      </equation*>
+
+      proving that <math|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i+l>>
+      converges to <math|x> and that
+
+      <\equation*>
+        <big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i+l>=x=<big|sum><rsub|i=k+l><rsup|\<infty\>>x<rsub|i>
+      </equation*>
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|series partition series>Let <math|k\<in\>\<bbb-N\><rsub|0>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
+    normed space, <math|m\<in\><around*|{|k+1,\<ldots\>,\<infty\>|}>> and
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,n|}>>\<subseteq\>X>
+    then\ 
+
+    <\equation*>
+      <big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i><text| converges
+      >\<Leftrightarrow\><text| ><big|sum><rsub|i=m><rsup|\<infty\>>x<rsub|i><text|
+      converges >
+    </equation*>
+
+    Further if <math|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>> or
+    <math|<big|sum><rsub|i=m><rsup|\<infty\>>x<rsub|i>> converges then\ 
+
+    <\equation*>
+      <big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>=<big|sum><rsub|i=k><rsup|m-1>x<rsub|i>+<big|sum><rsub|i=m><rsup|\<infty\>>x<rsub|i>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>.
+      As <math|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>> converges there
+      exist a <math|x\<in\>X> and a <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
+      such that <math|\<forall\>n\<geqslant\>N> we have
+      <math|<around*|\<\|\|\>|<big|sum><rsub|i=k><rsup|n>x<rsub|i>-x|\<\|\|\>>\<less\>\<varepsilon\>>,
+      hence we have for <math|n\<geqslant\>max<around*|(|m,N|)>> that
+
+      <\equation*>
+        <around*|\<\|\|\>|<big|sum><rsub|i=m><rsup|n>x<rsub|i>-<around*|(|x-<big|sum><rsub|i=k><rsup|m-1>x<rsub|i>|)>|\<\|\|\>>=<around*|\<\|\|\>|<big|sum><rsub|i=m><rsup|n>x<rsub|i>+<big|sum><rsub|i=k><rsup|m-1>x<rsub|i>-x|\<\|\|\>>\<equallim\><rsub|<text|[theorem:
+        <reference|sum associativity simple>]>><around*|\<\|\|\>|<big|sum><rsub|i=k><rsup|n>x<rsub|i>-x<rsub|>|\<\|\|\>>\<less\>\<varepsilon\>
+      </equation*>
+
+      proving that <math|<big|sum><rsub|i=m><rsup|\<infty\>>x<rsub|i>>
+      converges and that <math|<big|sum><rsub|i=m><rsup|\<infty\>>x<rsub|i>=x-<big|sum><rsub|i=k><rsup|m-1>x<rsub|i>=<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>-<big|sum><rsub|i=k><rsup|m-1>x<rsub|i>>.
+      Hence\ 
+
+      <\equation*>
+        <big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>=<big|sum><rsub|i=k><rsup|m-1>x<rsub|i>+<big|sum><rsub|i=m><rsup|\<infty\>>x<rsub|i>
+      </equation*>
+
+      <item*|<math|\<Leftarrow\>>>Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>.
+      As <math|<big|sum><rsub|i=m><rsup|\<infty\>>x<rsub|i>> converges there
+      exist a <math|x\<in\>X> and a <math|N\<in\><around*|{|m,\<ldots\>,\<infty\>|}>>
+      such that <math|\<forall\>n\<geqslant\>N> we have
+      <math|<around*|\<\|\|\>|<big|sum><rsub|i=m><rsup|n>x<rsub|i>-x|\<\|\|\>>\<less\>\<varepsilon\>>.
+      Then we have\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|<big|sum><rsub|i=k><rsup|n>x<rsub|i>-<around*|(|<big|sum><rsub|i=k><rsup|m-1>x<rsub|i>+x|)>|\<\|\|\>>=<around*|\<\|\|\>|<big|sum><rsub|i=k><rsup|n>x<rsub|i>-<big|sum><rsub|i=k><rsup|m-1>x<rsub|i>-x|\<\|\|\>>=<around*|\<\|\|\>|<big|sum><rsub|i=m><rsup|n>x<rsub|i>-x|\<\|\|\>>\<less\>\<varepsilon\>
+      </equation*>
+
+      proving that <math|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>>
+      converges and that\ 
+
+      <\equation*>
+        <big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>=<big|sum><rsub|i=k><rsup|m-1>x<rsub|i>+x=<big|sum><rsub|i=k><rsup|m-1>x<rsub|i>+<big|sum><rsub|i=m><rsup|\<infty\>>x<rsub|i>
+      </equation*>
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|series converging of upper series>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
+    a normed space and <math|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>> a
+    convergent space [so that by [theorem: <reference|series partition
+    series>] <math|\<forall\>m\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
+    <math|<big|sum><rsub|i=m><rsup|\<infty\>>x<rsub|i>> converges and thus
+    exist] \ then\ 
+
+    <\equation*>
+      <below|lim|m\<rightarrow\>\<infty\>><around*|(|<big|sum><rsub|i=m><rsup|\<infty\>>x<rsub|i>|)>=0
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. As
+    <math|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>> converges there exist
+    a <math|N\<in\><around*|{|,\<ldots\>,\<infty\>|}>> so that
+    <math|\<forall\>n\<geqslant\>N> we have
+    <math|<around*|\<\|\|\>|<big|sum><rsub|i=1><rsup|n>x<rsub|i>-x|\<\|\|\>>\<less\>\<varepsilon\>>
+    where <math|x=<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>>. Let
+    <math|m\<geqslant\>N+1\<Rightarrow\>m-1\<geqslant\>N> then
+
+    <\equation*>
+      <around*|\<\|\|\>|<big|sum><rsub|i=m><rsup|\<infty\>>x<rsub|i><rsub|>-0|\<\|\|\>>=<around*|\<\|\|\>|<big|sum><rsub|i=m><rsup|\<infty\>>x<rsub|i><rsub|>|\<\|\|\>>\<equallim\><rsub|<text|[theorem:
+      <reference|series partition series>]>><around*|\<\|\|\>|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>-<big|sum><rsub|i=k><rsup|m-1>x<rsub|>|\<\|\|\>>=<around*|\<\|\|\>|<big|sum><rsub|i=k><rsup|m-1>x<rsub|i>-x|\<\|\|\>>\<less\>\<varepsilon\>
+    </equation*>
+
+    proving that <math|<around*|{|<big|sum><rsub|i=m><rsup|\<infty\>>x<rsub|i>|}><rsub|m\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
+    converges to <math|0>, Hence\ 
+
+    <\equation*>
+      <below|lim|m\<rightarrow\>\<infty\>><around*|(|<big|sum><rsub|i=m><rsup|\<infty\>>x<rsub|i>|)>=0
+    </equation*>
+  </proof>
+
+  The sum and scalar product of series is a serie.
+
+  <\theorem>
+    <label|serie sum and scalar product>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
+    a normed space then we have:
+
+    <\enumerate>
+      <item>If <math|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>> and
+      <math|<big|sum><rsub|i=k><rsup|\<infty\>>y<rsub|i>> are convergent
+      series then <math|<big|sum><rsub|i=k><rsup|\<infty\>><around*|(|x<rsub|i>+y<rsub|i>|)>>
+      is convergent and\ 
+
+      <\equation*>
+        <big|sum><rsub|i=k><rsup|\<infty\>><around*|(|x<rsub|i>+y<rsub|i>|)>=<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>+<big|sum><rsub|i=k><rsup|\<infty\>>y<rsub|i>
+      </equation*>
+
+      <item>If <math|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>> is
+      convergent and <math|\<alpha\>\<in\>\<bbb-K\>> then
+      <math|<big|sum><rsub|i=k><rsup|\<infty\>><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>>
+      is convergent and
+
+      <\equation*>
+        <big|sum><rsub|i=k><rsup|\<infty\>><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>=\<alpha\>\<cdot\><big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>
+      </equation*>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>As <math|><math|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>> and
+      <math|<big|sum><rsub|i=k><rsup|\<infty\>>y<rsub|i>> are convergent\ 
+
+      <\equation*>
+        <below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i><text|
+        and ><below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=k><rsup|n>y<rsub|i><text|
+        exists >
+      </equation*>
+
+      Hence using [theorem: <reference|limit x_n+y_n>]
+      \ <math|<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=k><rsup|\<infty\>><around*|(|x<rsub|i>+y<rsub|i>|)>=<below|lim|n\<rightarrow\>\<infty\>><around*|(|<big|sum><rsub|i=k><rsup|n>x<rsub|i>+<big|sum><rsub|i=k><rsup|n>y<rsub|i>|)>>
+      exists and is equal to <math|<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=k><rsup|n>x<rsub|i>+<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=k><rsup|n>y<rsub|i>>.
+      Hence by definition <math|<big|sum><rsub|i=k><rsup|\<infty\>><around*|(|x<rsub|i>+y<rsub|i>|)>>
+      is convergent and\ 
+
+      <\equation*>
+        <big|sum><rsub|i=k><rsup|\<infty\>><around*|(|x<rsub|i>+y<rsub|i>|)>=<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>+<big|sum><rsub|i=k><rsup|\<infty\>>y<rsub|i>
+      </equation*>
+
+      <item>As <math|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>> is
+      convergen <math|<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=k><rsup|n>x<rsub|i>>
+      so that by [theorem: <reference|limit a.x_n>]
+      <math|<below|lim|n\<rightarrow\>\<infty\>><around*|(|<big|sum><rsub|i=k><rsup|n>\<alpha\>\<cdot\>x<rsub|i>|)>=<below|lim|n\<rightarrow\>\<infty\>>\<alpha\>\<cdot\><around*|(|<big|sum><rsub|i=k><rsup|n>x<rsub|i>|)>>
+      exist and is equal to <math|\<alpha\>\<cdot\><below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=k><rsup|n>x<rsub|i>>.
+      Hence by definition <math|<big|sum><rsub|i=k><rsup|\<infty\>><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>>
+      is convergent and
+
+      <\equation*>
+        <big|sum><rsub|i=k><rsup|\<infty\>><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>=\<alpha\>\<cdot\><big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  <\corollary>
+    <label|series of complex numbers>Let <math|<around*|\<langle\>|\<bbb-C\>,<around*|\|||\|>|\<rangle\>>>
+    be the normed space of complex numbers with the norm
+    <math|<around*|\|||\|>> and <math|<around*|{|z<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>\<bbb-C\>>
+    then
+
+    <\equation*>
+      <big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i><text| converges
+      >\<Leftrightarrow\><text| ><big|sum><rsub|i=k><rsup|\<infty\>>Img<around*|(|z<rsub|i>|)><text|
+      and ><big|sum><rsub|i=k><rsup|\<infty\>>Re<around*|(|z<rsub|i>|)><text|
+      converges>
+    </equation*>
+
+    \ Further if <math|<big|sum><rsub|i=k><rsup|\<infty\>>z<rsub|i>>
+    converges then
+
+    <\equation*>
+      Img<around*|(|<big|sum><rsub|i=k><rsup|\<infty\>>z<rsub|i>|)>=<big|sum><rsub|i=k><rsup|\<infty\>>Img<around*|(|z<rsub|i>|)><text|
+      and >Re<around*|(|<big|sum><rsub|i=k><rsup|\<infty\>>z<rsub|i>|)>=<big|sum><rsub|i=k><rsup|\<infty\>>Re<around*|(|z<rsub|i>|)>
+    </equation*>
+
+    so that\ 
+
+    <\equation*>
+      <big|sum><rsub|i=k><rsup|\<infty\>>z<rsub|i>=<big|sum><rsub|i=k><rsup|\<infty\>>Re<around*|(|z<rsub|i>|)>+i\<cdot\><big|sum><rsub|i=k><rsup|\<infty\>>Img<around*|(|z<rsub|i>|)>
+    </equation*>
+  </corollary>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Assume that
+      <math|<big|sum><rsub|i=k><rsup|\<infty\>>z<rsub|i>> converges to
+      <math|z> then given <math|\<varepsilon\>\<gtr\>0> there exists a
+      <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
+      <math|\<forall\>n\<in\><around*|{|N,\<ldots\>,\<infty\>|}>>
+      <math|<around*|\||<big|sum><rsub|i=k><rsup|n>z<rsub|i>-z|\|>\<less\>\<varepsilon\>>.
+      Now
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\||<around*|(|<big|sum><rsub|i=k><rsup|n>Re<around*|(|z<rsub|i>|)>|)>-Re<around*|(|z|)>|\|>>|<cell|=>|<cell|<around*|\||Re<around*|(|<big|sum><rsub|i=k><rsup|n>z<rsub|i>-z|)>|\|>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[theorem:
+        <reference|complex norm properties>]>>>|<cell|<around*|\||<big|sum><rsub|i=k><rsup|\<infty\>>z<rsub|i>-z|\|>>>|<row|<cell|>|<cell|\<less\>>|<cell|\<varepsilon\>>>>>
+      </eqnarray*>
+
+      proving that\ 
+
+      <\equation*>
+        <big|sum><rsub|i=k><rsup|\<infty\>>Re<around*|(|z<rsub|i>|)><text|
+        converges to >Re<around*|(|z|)>=Re<around*|(|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>|)>
+      </equation*>
+
+      Similar\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\||<around*|(|<big|sum><rsub|i=k><rsup|n>Img<around*|(|z<rsub|i>|)>|)>-Img<around*|(|z|)>|\|>>|<cell|=>|<cell|<around*|\||Img<around*|(|<big|sum><rsub|i=k><rsup|n>z<rsub|i>-z|)>|\|>>>|<row|<cell|>|<cell|<math|\<leqslant\><rsub|<text|[theorem:
+        <reference|complex norm properties>]>>>>|<cell|<around*|\||<big|sum><rsub|i=k><rsup|\<infty\>>z<rsub|i>-z|\|>>>|<row|<cell|>|<cell|\<less\>>|<cell|\<varepsilon\>>>>>
+      </eqnarray*>
+
+      proving that\ 
+
+      <\equation*>
+        <big|sum><rsub|i=k><rsup|\<infty\>>Img<around*|(|z<rsub|i>|)><text|
+        converges to >Img<around*|(|z|)>=Img<around*|(|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>|)>
+      </equation*>
+
+      <item*|<math|\<Leftarrow\>>>Assume that
+      <math|<big|sum><rsub|i=k><rsup|\<infty\>>Re<around*|(|z<rsub|i>|)>> and
+      <math|<big|sum><rsub|i=k><rsup|\<infty\>>Img<around*|(|z<rsub|i>|)>>
+      converges. As <math|\<forall\>i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
+      \ <math|z<rsub|i>=Re<around*|(|z<rsub|i>|)>+i\<cdot\>Img<around*|(|z<rsub|i>|)>>
+      it follows from the previous theorem [see theorem: <reference|serie sum
+      and scalar product>]] that <math|<big|sum><rsub|i=k><rsup|\<infty\>>z<rsub|i>>
+      converges.
+    </description>
+  </proof>
+
+  <subsubsection|Series of non negative numbers>
+
+  Series are in general not commutative, however series of non negative real
+  numbers (and later absolute convergent series) are commutative. First we
+  look at some equivalences of convergence of series of non negative real
+  numbers
+
+  <\theorem>
+    <label|series non negative numbers equivalences>Let
+    <math|k\<in\>\<bbb-N\><rsub|0>>, <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\><around*|[|0,\<infty\>|[>>
+    be a sequence of non negative real numbers then we have the following
+    equivalences:
+
+    <\enumerate>
+      <item><math|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>=x> [in other
+      words <math|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>> converges to
+      <math|x>]
+
+      <item><math|sup<around*|(|<around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>>
+      exists and <math|x=sup<around*|(|<around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>>
+
+      <item><math|sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|<around*|{|k,\<ldots\>,\<infty\>|}>|)>\<wedge\>K<text|
+      is finite >|}>|)>> exists and
+
+      <\equation*>
+        x=sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|<around*|{|k,\<ldots\>,\<infty\>|}>|)>\<wedge\>K<text|
+        is finite >|}>|)>
+      </equation*>
+
+      <item><math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there
+      exist a <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
+      <math|\<forall\>m\<in\>\<bbb-N\>> and <math|n\<geqslant\>N> we have
+      <math|<big|sum><rsub|i=n+1><rsup|n+m>x<rsub|i>\<less\>\<varepsilon\>>
+
+      <item><math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there
+      exist a finite <math|K\<subseteq\><around*|{|k,\<ldots\>,\<infty\>|}>>
+      such that <math|\<forall\>H\<subseteq\><around*|{|k,\<ldots\>,\<infty\>|}>>
+      with <math|H> finite and <math|K<big|cap>H=\<varnothing\>> we have
+      <math|<big|sum><rsub|i\<in\>H>x<rsub|i>\<less\>\<varepsilon\>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    First if <math|s\<in\><around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>>
+    then <math|\<exists\>n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> so that\ 
+
+    <\equation*>
+      s=<big|sum><rsub|i=k><rsup|n>x<rsub|i>\<equallim\><rsub|<text|[theorem:
+      <reference|sum general equivalence>]>><big|sum><rsub|i\<in\><around*|{|k,\<ldots\>,n|}>>x<rsub|i>\<in\><around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<subseteq\><around*|{|k,\<ldots\>,\<infty\>|}>\<wedge\>K<text|
+      is finite>|}>
+    </equation*>
+
+    proving that\ 
+
+    <\equation>
+      <label|eq 14.171.156><around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>\<subseteq\><around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<subseteq\><around*|{|k,\<ldots\>,\<infty\>|}>\<wedge\>K<text|
+      is finite>|}>
+    </equation>
+
+    Next\ 
+
+    <\description>
+      <item*|<math|1\<Leftrightarrow\>2>>Let
+      <math|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> then
+      <math|<big|sum><rsub|i=k><rsup|n>x<rsub|i>\<leqslant\><big|sum><rsub|i=k><rsup|n>x<rsub|i>+x<rsub|n+1>=<big|sum><rsub|i=k><rsup|n+1>x<rsub|i>>,
+      hence <math|<around*|{|<big|sum><rsub|i=k><rsup|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
+      is a increasing sequence. Hence\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i><text|
+        exists and ><big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>=x>|<cell|\<Leftrightarrowlim\><rsub|defiinition>>|<cell|>>|<row|<cell|<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=k><rsup|n>x<rsub|i><text|
+        exists ><below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=k><rsup|n>x<rsub|i>=x>|<cell|\<Leftrightarrowlim\><rsub|<text|[theorem:
+        <reference|limit increasing descending
+        sequences>]>>>|<cell|>>|<row|<cell|sup<around*|(|<around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)><text|
+        and >sup<around*|(|<around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>=x>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      <item*|<math|2\<Rightarrow\>3>>Let <math|s\<in\>sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|<around*|{|k,\<ldots\>,\<infty\>|}>|)>\<wedge\>K<text|
+      is finite >|}>|)>> then there exists a finite
+      <math|K\<subseteq\><around*|{|k,\<ldots\>,\<infty\>|}>> so that
+      <math|s=<big|sum><rsub|i\<in\>K>x<rsub|i>>. Take
+      <math|n=max<around*|(|K|)>> then <math|K\<subseteq\><around*|{|k,\<ldots\>,m|}>>
+      so that
+
+      <\equation*>
+        <big|sum><rsub|i\<in\>K>x<rsub|i>\<leqslant\><big|sum><rsub|i\<in\>K>x<rsub|i>+<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>\\K>x<rsub|i>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>x<rsub|i>=<big|sum><rsub|i=k>x<rsub|i>\<leqslant\>sup<around*|(|<around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>
+      </equation*>
+
+      hence <math|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|<around*|{|k,\<ldots\>,\<infty\>|}>|)>\<wedge\>K<text|
+      is finite >|}>> is bounded above by
+      <math|sup<around*|(|<around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>>
+      so that by [theorem: <reference|complex RC is conditional complete>]\ 
+
+      <\equation>
+        <label|eq 14.172.156>sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|<around*|{|k,\<ldots\>,\<infty\>|}>|)>\<wedge\>K<text|
+        is finite >|}>|)><text| exists >
+      </equation>
+
+      and
+
+      <\equation>
+        <label|eq 14.173.156>sup<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|<around*|{|k,\<ldots\>,\<infty\>|}>|)>\<wedge\>K<text|
+        is finite >|}>\<leqslant\>sup<around*|(|<around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>
+      </equation>
+
+      Combining [eq: <reference|eq 14.171.156>] with [theorem:
+      <reference|order sup,inf and inclusion>] gives\ 
+
+      <\equation*>
+        sup<around*|(|<around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>\<leqslant\>sup<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|<around*|{|k,\<ldots\>,\<infty\>|}>|)>\<wedge\>K<text|
+        is finite >|}>
+      </equation*>
+
+      which combined with [eq: <reference|eq 14.173.156>] proves that\ 
+
+      <\equation*>
+        sup<around*|(|<around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>=sup<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|<around*|{|k,\<ldots\>,\<infty\>|}>|)>\<wedge\>K<text|
+        is finite >|}>
+      </equation*>
+
+      <item*|<math|3\<Rightarrow\>2>>Let <math|s\<in\><around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>>
+      then from [eq: <reference|eq 14.171.156>]
+      <math|s\<in\><around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|<around*|{|k,\<ldots\>,\<infty\>|}>|)>\<wedge\>K<text|
+      is finite>|}>> so that <math|s\<leqslant\>sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|<around*|{|k,\<ldots\>,\<infty\>|}>|)>\<wedge\>K<text|
+      is finite>|}>|)>> hence by [theorem: <reference|complex RC is
+      conditional complete>]\ 
+
+      <\equation*>
+        sup<around*|(|<around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)><text|
+        exists>
+      </equation*>
+
+      further as <math|<around*|{|<big|sum><rsub|i=k><rsup|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
+      is a increasing we have by [theorem: <reference|limit increasing
+      descending sequences>] that\ 
+
+      <\equation*>
+        sup<around*|(|<around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>\<equallim\><below|lim|n\<rightarrow\>\<infty\>><rsub|<text|>><big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>=<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>
+      </equation*>
+
+      <item*|<math|1\<Rightarrow\>4>>As <math|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>>
+      converges <math|<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=k><rsup|n>x<rsub|i>>
+      exists so that by [theorem: <reference|complete convergence implies
+      Cauchy>] <math|<around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
+      is Cauchy. Hence given <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+      there exist a <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such
+      that <math|\<forall\>n,m\<geqslant\>N> we have
+      <math|<around*|\||<big|sum><rsub|i=k><rsup|n>x<rsub|i>-<big|sum><rsub|i=k><rsup|m>x<rsub|i>|\|>\<less\>\<varepsilon\>>.
+      So if <math|m\<in\>\<bbb-N\>> and <math|n\<geqslant\>N> then we have
+      <math|N+m,n\<geqslant\>N> hence\ 
+
+      <\equation*>
+        <big|sum><rsup|n+m><rsub|i=n+1>x<rsub|i>=<around*|\||<big|sum><rsup|n+m><rsub|i=n+1>x<rsub|i>|\|>=<around*|\||<big|sum><rsup|n+m><rsub|i=k>x<rsub|i>-<big|sum><rsub|i=k><rsup|n>x<rsub|i>|\|>\<less\>\<varepsilon\>
+      </equation*>
+
+      <item*|<math|4\<Rightarrow\>1>>Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+      then by the hypothesis there exist a
+      <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
+      <math|\<forall\>m\<in\>\<bbb-N\>> and <math|\<forall\>n\<geqslant\>m>
+      that <math|<big|sum><rsub|i=n+1><rsup|n+m>x<rsub|i>\<less\>\<varepsilon\>>.
+      Take <math|r,s\<geqslant\>N> then without loosing generality we my
+      assume that <math|s\<leqslant\>r>. If <math|r=s> then
+      <math|<around*|\||<big|sum><rsub|i=k><rsup|r>x<rsub|i>-<big|sum><rsub|i=k><rsup|s>x<rsub|i>|\|>=0\<less\>\<varepsilon\>>
+      and if <math|s\<less\>r> then\ 
+
+      <\equation*>
+        <around*|\||<big|sum><rsub|i=k><rsup|r>x<rsub|i>-<big|sum><rsub|i=k><rsup|s>x<rsub|i>|\|>=<around*|\||<big|sum><rsub|i=s+1><rsup|r>x<rsub|i>|\|>=<big|sum><rsub|i=s+1><rsup|r>x<rsub|i>=<big|sum><rsub|i=s+1><rsup|<around*|(|r-s|)>+s>x<rsub|i>\<less\><rsub|0\<less\>r-s>\<varepsilon\>
+      </equation*>
+
+      proving that <math|<around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
+      is a Cauchy sequence. As by [theorem: <reference|complete set of real
+      numbers>] <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>> is
+      a Banach space hence complete it follows that
+      <math|<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=k><rsup|n>x<rsub|i>>
+      exists or that\ 
+
+      <\equation*>
+        <big|sum><rsub|i=1><rsup|\<infty\>>x<rsub|i><text| converges>
+      </equation*>
+
+      <item*|<math|4\<Rightarrow\>5>>Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+      then by the hypothesis there exist a
+      <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
+      <math|\<forall\>m\<in\>\<bbb-N\>> and <math|\<forall\>n\<geqslant\>m>
+      that <math|<big|sum><rsub|i=n+1><rsup|n+m>x<rsub|i>\<less\>\<varepsilon\>>.
+      Take <math|K=<around*|{|k,\<ldots\>,N|}>> then if
+      <math|H\<subseteq\><around*|{|k,\<ldots\>,\<infty\>|}>> is finite and
+      <math|K<big|cap>H=\<varnothing\>> we must have that
+      <math|H\<subseteq\><around*|{|N+1,\<ldots\>,\<infty\>|}>>. We must now
+      consider two cases for <math|H>:\ 
+
+      <\description>
+        <item*|<math|H=\<varnothing\>>>Then
+        <math|<big|sum><rsub|i\<in\>H>x<rsub|i>=0\<less\>\<varepsilon\>>
+
+        <item*|<math|H\<neq\>\<varnothing\>>>Then
+        <math|N\<less\>min<around*|(|H|)>\<leqslant\>max<around*|(|H|)>> so
+        that <math|m=max<around*|(|H|)>-N\<gtr\>0> and
+
+        <\equation*>
+          H\<subseteq\><around*|{|N+1,\<ldots\>,max<around*|(|H|)>|}>=<around*|{|N+1,\<ldots\>,N+m|}>
+        </equation*>
+
+        so that\ 
+
+        <\equation*>
+          <big|sum><rsub|i\<in\>H>x<rsub|i>\<leqslant\><big|sum><rsub|i\<in\>H>x<rsub|i>+<big|sum><rsub|i\<in\><around*|{|N+1,\<ldots\>,N+m|}>\\H>x<rsub|i>=<big|sum><rsub|i\<in\><around*|{|N+1,\<ldots\>,N+m|}>>x<rsub|i>\<less\>\<varepsilon\>
+        </equation*>
+      </description>
+
+      \ 
+
+      <item*|<math|5\<Rightarrow\>4>>Let <math|\<varepsilon\>\<gtr\>0> then
+      there exists a finite <math|K\<subseteq\><around*|{|k,\<ldots\>,\<infty\>|}>>
+      such that <math|\<forall\>H\<subseteq\><around*|{|k,\<ldots\>,\<infty\>|}>>
+      with <math|H> finite and <math|K<big|cap>H=\<emptyset\>> we have
+      <math|<big|sum><rsub|k\<in\>H>x<rsub|i>\<less\>\<varepsilon\>>. Take
+      <math|K<rprime|'>=K<big|cup><around*|{|k|}>> then
+      <math|K<rprime|'>\<neq\>\<varnothing\>> so that
+      <math|N=max<around*|(|K<rprime|'>|)>> exists. Then
+      <math|\<forall\>n\<geqslant\>N> and <math|m\<in\>\<bbb-N\>> we have
+
+      <\equation*>
+        K<big|cap><around*|{|n+1,\<ldots\>,n+m|}>\<subseteq\>K<rprime|'><big|cap><around*|{|n+1,\<ldots\>,n+m|}>\<equallim\><rsub|max<around*|(|K<rprime|'>|)>\<leqslant\>N\<leqslant\>n\<less\>n+1>\<varnothing\>
+      </equation*>
+
+      hence for <math|H=<around*|{|n+1,\<ldots\>,n+m|}>> we have
+      <math|K<big|cap>H=\<varnothing\>> so tha t
+
+      <\equation*>
+        <big|sum><rsub|i=n+1><rsup|n+m>x<rsub|i>=<big|sum><rsub|i\<in\><around*|{|n+1,\<ldots\>,n+m|}>>x<rsub|i>=<big|sum><rsub|i\<in\>H>x<rsub|i>\<less\>\<varepsilon\>
+      </equation*>
+    </description>
+  </proof>
+
+  <\corollary>
+    <label|series non negative numbers strict positive term>Let
+    <math|k\<in\>\<bbb-N\><rsub|0>>, <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\><around*|[|0,\<infty\>|[>>
+    be a sequence of non negative real numbers such that
+    <math|\<exists\>l\<in\><around*|{|k,\<ldots\>,n|}>> such that
+    <math|0\<less\>x<rsub|l>> then if <math|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>>
+    converges we have <math|0\<less\><big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>>.
+  </corollary>
+
+  <\proof>
+    By the previous theorem [theorem: <reference|series non negative numbers
+    equivalences>] it follows that <math|sup<around*|(|<around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|\<nobracket\>>>
+    exists and <math|sup<around*|(|<around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|\<nobracket\>>=<big|sum><rsub|i=k><rsup|n>x<rsub|i>>.
+    As <math|0\<less\>x<rsub|l>\<leqslant\>sup<around*|(|<around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|\<nobracket\>>>
+    it follows that <math|0\<less\><big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>>.
+  </proof>
+
+  We are now ready to prove commutativity of series of positive numbers.
+
+  <\theorem>
+    <label|series non negative numbers commutativity>Let
+    <math|k\<in\>\<bbb-N\><rsub|0>>, <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\><around*|[|0,\<infty\>|[>>
+    be a sequence of non negative real numbers and
+    <math|\<beta\>:<around*|{|k,\<ldots\>,\<infty\>|}>\<rightarrow\><around*|{|k,\<ldots\>,\<infty\>|}>>
+    a bijection then we have\ 
+
+    <\equation*>
+      <big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i><text| converges
+      >\<Leftrightarrow\><text| ><big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>><text|
+      converges>
+    </equation*>
+
+    Further if <math|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>> converges
+    then <math|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>>=<math|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>>
+  </theorem>
+
+  <\proof>
+    Let <math|s\<in\><around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|<around*|{|k,\<ldots\>,\<infty\>|}>|)>\<wedge\>K<text|
+    is finite>|}>> then there exist a finite
+    <math|K\<subseteq\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
+    <math|s=<big|sum><rsub|i\<in\>K>x<rsub|i>>. Take
+    <math|L=\<beta\><rsup|-1><around*|(|K|)>> then as
+    <math|\<beta\>:<around*|{|k,\<ldots\>,\<infty\>|}>\<rightarrow\><around*|{|k,\<ldots\>,\<infty\>|}>>
+    is a bijection
+
+    <\equation*>
+      \<beta\><rsub|\|L>:L\<rightarrow\>\<beta\><around*|(|L|)>=\<beta\><around*|(|\<beta\><rsup|-1><around*|(|K|)>|)>=K<text|
+      is a bijection>
+    </equation*>
+
+    Hence
+
+    <\equation*>
+      s=<big|sum><rsub|i\<in\>K>x<rsub|i>\<equallim\><rsub|<text|[theorem:
+      <reference|sum bijection on index>]>><big|sum><rsub|i\<in\>L>x<rsub|\<beta\><rsub|\|L><around*|(|i|)>>=<big|sum><rsub|i\<in\>L>x<rsub|\<beta\><around*|(|i|)>>
+    </equation*>
+
+    As <math|K> is finite <math|L> must be finite [otherwise as
+    <math|\<beta\>> is a bijection <math|K=\<beta\><around*|(|\<beta\><rsup|-1><around*|(|K|)>|)>=\<beta\><around*|(|L|)>>
+    is inifinite], hence <math|s=<big|sum><rsub|i\<in\>L>x<rsub|\<beta\><around*|(|i|)>>\<in\><around*|{|<big|sum><rsub|i\<in\>K>x<rsub|\<beta\><around*|(|i|)>>\|K\<in\>\<cal-P\><around*|(|<around*|{|k,\<ldots\>,\<infty\>|}>|)>\<wedge\>K<text|
+    is finite>|}>> proving that\ 
+
+    <\equation>
+      <label|eq 14.174.156><around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|<around*|{|k,\<ldots\>,\<infty\>|}>|)>\<wedge\>K<text|
+      is finite>|}>\<subseteq\><around*|{|<big|sum><rsub|i\<in\>K>x<rsub|\<beta\><around*|(|i|)>>\|K\<in\>\<cal-P\><around*|(|<around*|{|k,\<ldots\>,\<infty\>|}>|)>\<wedge\>K<text|
+      is finite>|}>
+    </equation>
+
+    Let <math|s\<in\><around*|{|<big|sum><rsub|i\<in\>K>x<rsub|\<beta\><around*|(|i|)>>\|K\<in\>\<cal-P\><around*|(|<around*|{|k,\<ldots\>,\<infty\>|}>|)>\<wedge\>K<text|
+    is finite>|}>> then there exist a finite
+    <math|K\<subseteq\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
+    <math|s=<big|sum><rsub|i\<in\>K>x<rsub|\<beta\><around*|(|i|)>>>. As
+    <math|\<beta\>:<around*|{|k,\<ldots\>,\<infty\>|}>\<rightarrow\><around*|{|k,\<ldots\>,\<infty\>|}>>
+    we have that <math|\<beta\><rsub|\|K>:K\<rightarrow\>\<beta\><around*|(|K|)>>
+    is a bijection. Hence we have\ 
+
+    <\equation*>
+      s=<big|sum><rsub|i\<in\>K>x<rsub|\<beta\><around*|(|i|)>>=<big|sum><rsub|i\<in\>K>x<rsub|\<beta\><rsub|\|K><around*|(|i|)>>\<equallim\><rsub|<text|[theorem:
+      <reference|sum bijection on index>]>><big|sum><rsub|i\<in\>\<beta\><around*|(|K|)>>x<rsub|i>
+    </equation*>
+
+    Which as <math|\<beta\><around*|(|K|)>> is finite [for <math|K> is finite
+    and <math|\<beta\>> is a bijection] means that
+    <math|s=<big|sum><rsub|i\<in\>\<beta\><around*|(|K|)>>x<rsub|i>\<in\><around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|<around*|{|k,\<ldots\>,\<infty\>|}>|)>\<wedge\>K<text|
+    is finite>|}>>. So that\ 
+
+    <\equation*>
+      <around*|{|<big|sum><rsub|i\<in\>K>x<rsub|\<beta\><around*|(|i|)>>\|K\<in\>\<cal-P\><around*|(|<around*|{|k,\<ldots\>,\<infty\>|}>|)>\<wedge\>K<text|
+      is finite>|}>\<subseteq\><around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|<around*|{|k,\<ldots\>,\<infty\>|}>|)>\<wedge\>K<text|
+      is finite>|}>
+    </equation*>
+
+    which combined with [eq; <reference|eq 14.174.156>] prove that\ 
+
+    <\equation>
+      <label|eq 14.175.156><around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|<around*|{|k,\<ldots\>,\<infty\>|}>|)>\<wedge\>K<text|
+      is finite>|}>=<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|\<beta\><around*|(|i|)>>\|K\<in\>\<cal-P\><around*|(|<around*|{|k,\<ldots\>,\<infty\>|}>|)>\<wedge\>K<text|
+      is finite>|}>
+    </equation>
+
+    Now we have:\ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>As <math|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>>
+      converges it follows from [theorem: <reference|series non negative
+      numbers equivalences>] that
+
+      <\equation*>
+        sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|<around*|{|k,\<ldots\>,\<infty\>|}>|)>\<wedge\>K<text|
+        is finite>|}>|)><text| exists >
+      </equation*>
+
+      so that by [eq: <reference|eq 14.175.156>]
+      <math|sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|\<beta\><around*|(|i|)>>\|K\<in\>\<cal-P\><around*|(|<around*|{|k,\<ldots\>,\<infty\>|}>|)>\<wedge\>K<text|
+      is finite>|}>|)>> exists, hence using [theorem: <reference|series non
+      negative numbers equivalences>] again it follows that
+
+      <\equation*>
+        <big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>><text|
+        converges >
+      </equation*>
+
+      Further we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|series non negative numbers
+        equivalences>]>>>|<cell|sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|<around*|{|k,\<ldots\>,\<infty\>|}>|)>\<wedge\>K<text|
+        is finite>|}>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 14.175.156>]>>>|<cell|sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|\<beta\><around*|(|i|)>>\|K\<in\>\<cal-P\><around*|(|<around*|{|k,\<ldots\>,\<infty\>|}>|)>\<wedge\>K<text|
+        is finite>|}>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|series non negative numbers
+        equivalences>]>>>|<cell|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>>>>>
+      </eqnarray*>
+
+      <item*|<math|\<Leftarrow\>>>As <math|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>>
+      converges it follows from [theorem: <reference|series non negative
+      numbers equivalences>] that
+
+      <\equation*>
+        sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|\<beta\><around*|(|i|)>>\|K\<in\>\<cal-P\><around*|(|<around*|{|k,\<ldots\>,\<infty\>|}>|)>\<wedge\>K<text|
+        is finite>|}>|)><text| exists >
+      </equation*>
+
+      so that by [eq: <reference|eq 14.175.156>]
+      <math|sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|<around*|{|k,\<ldots\>,\<infty\>|}>|)>\<wedge\>K<text|
+      is finite>|}>|)>> exists, hence using [theorem: <reference|series non
+      negative numbers equivalences>] again it follows that
+
+      <\equation*>
+        <big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i><text| converges >
+      </equation*>
+    </description>
+  </proof>
 
   \;
 
@@ -16346,7 +17046,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|13>
-    <associate|page-first|643>
+    <associate|page-first|645>
     <associate|page-medium|papyrus>
     <associate|section-nr|0>
     <associate|subsection-nr|0>
@@ -16360,6 +17060,7 @@
     <associate|auto-100|<tuple|bounded uniform convergence|?>>
     <associate|auto-101|<tuple|14.11.3|?>>
     <associate|auto-102|<tuple|series|?>>
+    <associate|auto-103|<tuple|14.11.3.1|?>>
     <associate|auto-11|<tuple|14.1.2|?>>
     <associate|auto-12|<tuple|box topology|?>>
     <associate|auto-13|<tuple|14.1.3|?>>
@@ -16664,8 +17365,10 @@
     <associate|eq 14.151.153|<tuple|14.169|?>>
     <associate|eq 14.151.154|<tuple|14.158|?>>
     <associate|eq 14.151.155|<tuple|14.156|?>>
+    <associate|eq 14.151.156|<tuple|14.151|?>>
     <associate|eq 14.152.153|<tuple|14.170|?>>
     <associate|eq 14.152.155|<tuple|14.157|?>>
+    <associate|eq 14.152.156|<tuple|14.152|?>>
     <associate|eq 14.153.155|<tuple|14.153|?>>
     <associate|eq 14.154.155|<tuple|14.159|?>>
     <associate|eq 14.154.156|<tuple|14.154|?>>
@@ -16678,6 +17381,11 @@
     <associate|eq 14.160.155|<tuple|14.165|?>>
     <associate|eq 14.161.155|<tuple|14.166|?>>
     <associate|eq 14.17.146|<tuple|14.17|?>>
+    <associate|eq 14.171.156|<tuple|14.171|?>>
+    <associate|eq 14.172.156|<tuple|14.172|?>>
+    <associate|eq 14.173.156|<tuple|14.173|?>>
+    <associate|eq 14.174.156|<tuple|14.174|?>>
+    <associate|eq 14.175.156|<tuple|14.175|?>>
     <associate|eq 14.18.146|<tuple|14.18|?>>
     <associate|eq 14.19.146|<tuple|14.19|?>>
     <associate|eq 14.2.145|<tuple|14.2|?>>
@@ -16913,11 +17621,20 @@
     <associate|sequence limit|<tuple|14.268|?>>
     <associate|sequence limit definition|<tuple|14.269|?>>
     <associate|sequence limit start value|<tuple|14.267|?>>
+    <associate|serie sum and scalar product|<tuple|14.330|?>>
     <associate|series|<tuple|14.321|?>>
     <associate|series convergence condition in a Banach
     space|<tuple|14.326|?>>
+    <associate|series converging of upper series|<tuple|14.329|?>>
+    <associate|series non negative numbers commutativity|<tuple|14.334|?>>
+    <associate|series non negative numbers equivalences|<tuple|14.332|?>>
+    <associate|series non negative numbers strict positive
+    term|<tuple|14.333|?>>
+    <associate|series of complex numbers|<tuple|14.331|?>>
+    <associate|series partition series|<tuple|14.328|?>>
     <associate|series power series in R|<tuple|14.324|?>>
     <associate|series terms converges to zero|<tuple|14.325|?>>
+    <associate|series translation start|<tuple|14.327|?>>
     <associate|sum of powers lemma|<tuple|14.323|?>>
     <associate|toplinear isomorphism|<tuple|14.175|?>>
     <associate|topological vector space|<tuple|14.172|?>>
