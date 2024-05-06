@@ -1,4 +1,4 @@
-<TeXmacs|2.1.2>
+<TeXmacs|2.1.4>
 
 <project|FullBook.tm>
 
@@ -9312,6 +9312,8 @@
     Using [theorem: <reference|countable set conditions (1)>] it follows that
     <math|<big|cup><rsub|i\<in\>I>A<rsub|i>> is countable.
   </proof>
+
+  TODO replace next theorem by a part of Theorem 5.73 in old text
 
   <\theorem>
     <label|countable union of a finite family of countable sets is

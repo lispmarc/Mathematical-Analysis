@@ -17038,7 +17038,696 @@
     </description>
   </proof>
 
+  Just as commutativity in finite sums allows us to define a more general
+  form of a sum over elements of a finite set [see definition: <reference|sum
+  generalized sum>] it we can use the above theorem to define a infinite sum
+  over a countable set of non negative numbers.
+
+  <\theorem>
+    <label|series non negative numbers denumerable sum>Let <math|I> be a
+    denumerable set [see definition: <reference|denumerable set>],
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\><around*|[|0,\<infty\>|[>>
+    a denumerable family of non negative numbers then if there exist a
+    <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>I> such that there exist a
+    <math|x\<in\>\<bbb-R\>> such that <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>=x>
+    then for every bijection <math|\<alpha\>:\<bbb-N\><rsub|0>\<rightarrow\>I>
+    we have that <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<alpha\><around*|(|i|)>>=x>
+  </theorem>
+
+  <\proof>
+    As <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>I> is a bijection we
+    have that <math|\<beta\><rsup|-1>:I\<rightarrow\>\<bbb-N\><rsub|0>> is a
+    bijection so that <math|\<beta\><rsup|-1>\<circ\>\<alpha\>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0>>.
+    Hence, as <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>=x>,
+    it follows from [theorem: <reference|series non negative numbers
+    commutativity>] that \ <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|<around*|(|\<beta\><rsup|-1>\<circ\>\<alpha\>|)><around*|(|x|)>|)>>=x>.
+    As <math|<rsub|>\<forall\>i\<in\>\<bbb-N\><rsub|0>> we have
+    <math|x<rsub|\<beta\><around*|(|<around*|(|\<beta\><rsup|-1>\<circ\>\<alpha\>|)><around*|(|i|)>|)>>=x<rsub|\<beta\><around*|(|\<beta\><rsup|-1><around*|(|\<alpha\><around*|(|i|)>|)>|)>>=x<rsub|\<alpha\><around*|(|i|)>>>
+    it follows that <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<alpha\><around*|(|i|)>>=x>.
+  </proof>
+
+  The above theorem ensures that the following definition makes set
+
+  <\definition>
+    <label|sum of a countable set>Let <math|I> be a denumerable set [see
+    definition: <reference|denumerable set>],
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\><around*|[|0,\<infty\>|[>>
+    a denumerable family of non negative numbers then we say that\ 
+
+    <\equation*>
+      <big|sum><rsub|i\<in\>I><rsup|>x<rsub|i><text| converges> to \ x<text|
+      or ><big|sum><rsub|i\<in\>I>x<rsub|i>=x
+    </equation*>
+
+    if there exist a bijection <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>\<infty\>>
+    and a <math|x\<in\>\<bbb-R\>> such that
+    <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>>
+    converges to <math|x>.\ 
+  </definition>
+
+  As a countable family is either a finite family or a denumerable family of
+  non negative real number we can combine definitions [definition:
+  <reference|sum generalized sum>] and [definition: <reference|series non
+  negative numbers denumerable sum>] to define the sum of a countable family
+  of non negative real numbers.
+
+  <\definition>
+    <label|series non negative numbers countable sums>Let <math|I> be a
+    countable set [so by [definition: <reference|countable set>] <math|I> is
+    finite or denumerable] and <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\><around*|[|0,\<infty\>|[>>
+    then we say that <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> converges if
+    either
+
+    <\equation*>
+      I<text| is finite and then ><big|sum><rsub|i\<in\>I>x<rsub|i>=<big|sum><rsub|i=0><rsup|n>x<rsub|\<beta\><around*|(|i|)>><text|
+      where >\<beta\>:<around*|{|0,\<ldots\>,n|}>\<rightarrow\>I<text| is a
+      bijection [see definition: <reference|sum generalized sum>]>
+    </equation*>
+
+    <\equation*>
+      <text|or>
+    </equation*>
+
+    <\equation*>
+      I<text| is denumerable and there exist a >x\<in\>\<bbb-R\><text| such
+      that ><big|sum><rsub|i\<in\>I>x<rsub|i>=x <text|[see definition:
+      <reference|series non negative numbers denumerable sum>]>
+    </equation*>
+
+    <\note>
+      TIn the finite case <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> is
+      guaranteed to be defined, however in the infinite case convergence is
+      needed to ensure that <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> exist.
+    </note>
+  </definition>
+
+  <\example>
+    If <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>\<varnothing\>>\<subseteq\><around*|[|0,\<infty\>|[>>
+    then <math|<big|sum><rsub|i\<in\>\<varnothing\>>x<rsub|i>> converges to
+    <math|0>
+  </example>
+
+  <\proof>
+    As <math|\<varnothing\>> is finite this follows from [definition:
+    <reference|sum generalized sum>]
+  </proof>
+
   \;
+
+  <\theorem>
+    <label|series non negative numbers countable sums inclusion>Let
+    <math|I,J> be countable sets, <math|I\<subseteq\>J> and
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>J>\<subseteq\><around*|[|0,\<infty\>|[>>
+    such that <math|<big|sum><rsub|i\<in\>J>x<rsub|i>> converges then
+    <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> converges and
+    <math|<big|sum><rsub|i\<in\>I>x<rsub|i>\<leqslant\><big|sum><rsub|i\<in\>J>x<rsub|i>>
+  </theorem>
+
+  <\proof>
+    For <math|J> we have either:\ 
+
+    <\description>
+      <item*|<math|J> is finite>Then as <math|I\<subseteq\>J> is finite
+      <math|I> is also finite and so that
+      <math|<big|sum><rsub|i\<in\>I>x<rsub|i>,<big|sum><rsub|i\<in\>J>x<rsub|i>>
+      are defined by [theorem: <reference|sum generalized sum>] hence
+
+      <\equation*>
+        <big|sum><rsub|i\<in\>I>x<rsub|i>\<leqslant\><big|sum><rsub|i\<in\>I>x<rsub|i>+<big|sum><rsub|i\<in\>J\\I>x<rsub|i>\<equallim\><rsub|<text|[theorem:
+        <reference|sum over disjoint subsets>]>><big|sum><rsub|i\<in\>J>x<rsub|i>
+      </equation*>
+
+      <item*|<math|J<text| is denumerable>>>By definition there exist a
+      bijection <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>J> such that
+      <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>>
+      converges to a real number <math|x> and
+      <math|<big|sum><rsub|i\<in\>J>x<rsub|i>=x=<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>>.
+      For <math|I> we have now either:
+
+      <\description>
+        <item*|<math|I<text| is finite>>>As
+        <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>J> is a bijection and
+        <math|I> is finite we have that <math|\<beta\><rsup|-1><around*|(|I|)><rsub|>\<equallim\><rsub|<text|[theorem:
+        <reference|function inverse image
+        preimage>]>><around*|(|\<beta\><rsup|-1>|)><around*|(|I|)>> is finite
+        [see theorem: <reference|image of a finite set>] so that
+        <math|\<beta\><rsub|\|\<beta\><rsup|-1><around*|(|I|)>>:\<beta\><rsup|-1><around*|(|I|)>\<rightarrow\>\<beta\><around*|(|\<beta\><rsup|-1><around*|(|I|)>|)>=I>
+        is a bijection. Hence we have\ 
+
+        <\equation*>
+          <big|sum><rsub|i\<in\>I>x<rsub|i>\<equallim\><rsub|<text|[theorem:
+          <reference|sum bijection on index>]>><big|sum><rsub|i\<in\>\<beta\><rsup|-1><around*|(|I|)>>x<rsub|\<beta\><rsub|\|\<beta\><rsup|-1><around*|(|I|)>><around*|(|i|)>>=<big|sum><rsub|i\<in\>\<beta\><rsup|-1><around*|(|I|)>>x<rsub|\<beta\><around*|(|i|)>>
+        </equation*>
+
+        As <math|<big|sum><rsub|i\<in\>\<beta\><rsup|-1><around*|(|I|)>>x<rsub|\<beta\><around*|(|i|)>>\<in\>sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|\<beta\><around*|(|i|)>>\|K\<in\>\<cal-P\><around*|(|\<bbb-N\><rsub|0>|)>\<wedge\>K<text|
+        is finite>|}>|)>> we have that\ 
+
+        <\equation*>
+          <big|sum><rsub|i\<in\>I>x<rsub|i>\<leqslant\>sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|\<beta\><around*|(|i|)>>\|K\<subseteq\>\<cal-P\><around*|(|\<bbb-N\><rsub|0>|)>\<wedge\>K<text|
+          is finite>|}>|)>\<equallim\><rsub|<text|[theorem: <reference|series
+          non negative numbers equivalences>]>><big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>=<big|sum><rsub|i\<in\>J>x<rsub|i>
+        </equation*>
+
+        hence\ 
+
+        <\equation*>
+          <big|sum><rsub|i\<in\>I>x<rsub|i>\<leqslant\><big|sum><rsub|i\<in\>J>x<rsub|i>
+        </equation*>
+
+        \ 
+
+        <item*|<math|I> is denumerable>Then there exist a a bijection
+        <math|\<alpha\>:\<bbb-N\><rsub|0>\<rightarrow\>I\<subseteq\>J>. Take
+        a finite <math|K\<subseteq\>\<bbb-N\><rsub|0>> then
+        <math|\<alpha\><around*|(|K|)>> is finite and
+        <math|\<alpha\><around*|(|K|)>\<subseteq\>J> so that
+        <math|\<beta\><rsup|-1><around*|(|\<alpha\><around*|(|K|)>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|function inverse image
+        preimage>]>><around*|(|\<beta\><rsup|-1>|)><around*|(|\<alpha\><around*|(|K|)>|)>>
+        is finite [see theorem: <reference|image of a finite set>]. Define
+        then the following bijections:\ 
+
+        <\equation*>
+          \<alpha\><rsub|\|K>:K\<rightarrow\>\<alpha\><around*|(|K|)><text|
+          and >\<beta\><rsub|\|\<beta\><rsup|-1><around*|(|\<alpha\><around*|(|K|)>|)>>:\<beta\><rsup|-1><around*|(|\<alpha\><around*|(|K|)>|)>\<rightarrow\>\<beta\><around*|(|\<beta\><rsup|-1><around*|(|\<alpha\><around*|(|K|)>|)>|)>=\<alpha\><around*|(|K|)>
+        </equation*>
+
+        Then we have
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<big|sum><rsub|i\<in\>K>x<rsub|\<alpha\><around*|(|i|)>>>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|sum bijection on index>]>>>|<cell|<big|sum><rsub|i\<in\>\<alpha\><around*|(|K|)>>x<rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|sum bijection on index>]>>>|<cell|<big|sum><rsub|i\<in\>\<beta\><rsup|-1><around*|(|\<alpha\><around*|(|K|)>|)>>x<rsub|\<beta\><around*|(|i|)>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>L>x<rsub|\<beta\><around*|(|i|)>>\|L\<in\>\<cal-P\><around*|(|\<bbb-N\><rsub|0>|)>\<wedge\>L<text|
+          is finite>|}>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|series non negative numbers
+          equivalences>]>>>|<cell|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\>J>x<rsub|i>>>>>
+        </eqnarray*>
+
+        Hence <math|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|\<alpha\><around*|(|i|)>>\|K\<in\>\<cal-P\><around*|(|\<bbb-N\><rsub|0>|)>\<wedge\>K<text|
+        is finite>|}>> is bounded above by
+        <math|<big|sum><rsub|i\<in\>J>x<rsub|i>> and trivially non empty. So
+        by [theorem: <reference|complex RC is conditional complete>]
+        <math|sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|\<alpha\><around*|(|i|)>>\|K\<in\>\<cal-P\><around*|(|\<bbb-N\><rsub|0>|)>\<wedge\>K<text|
+        is finite>|}>|)>> exist and \ <math|sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|\<alpha\><around*|(|i|)>>\|K\<in\>\<cal-P\><around*|(|\<bbb-N\><rsub|0>|)>\<wedge\>K<text|
+        is finite>|}>|)>\<leqslant\><big|sum><rsub|i\<in\>J>x<rsub|i>>. So
+        using [theorem: <reference|series non negative numbers equivalences>]
+        it follows that <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<alpha\><around*|(|i|)>>>
+        exist and <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<alpha\><around*|(|i|)>>\<leqslant\><big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<alpha\><around*|(|i|)>>>.
+        Finally using [definition: <reference|series non negative numbers
+        denumerable sum>] we have that <math|<big|sum><rsub|i\<in\>I>x<rsub|i>=<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<alpha\><around*|(|i|)>>>
+        so that\ 
+
+        <\equation*>
+          <big|sum><rsub|i\<in\>I>x<rsub|i>\<leqslant\><big|sum><rsub|i\<in\>J>x<rsub|i>
+        </equation*>
+      </description>
+    </description>
+  </proof>
+
+  For countable families we have also the following equivalent definition of
+  convergence.
+
+  <\theorem>
+    <label|series non negative numbers countable sum equivalent
+    definition>Let <math|I> be a countable set and
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\><around*|[|0,\<infty\>|[>>
+    a countable family of non negative real numbers then
+
+    <\equation*>
+      <big|sum><rsub|i\<in\>I>x<rsub|i><text| converges
+      >\<Leftrightarrow\><text| >sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|I|)>\<wedge\>K<text|
+      is finite>|}>|)><text| exist>
+    </equation*>
+
+    Further if <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> converges then\ 
+
+    <\equation*>
+      <big|sum><rsub|i\<in\>I>x<rsub|i>=<text|
+      >sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|I|)>\<wedge\>K<text|
+      is finite>|}>|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    As <math|I> is countable we have two possibilities to consider:
+
+    <\description>
+      <item*|<math|I> is finite>Then we have if <math|K\<subseteq\>I> is
+      finite we have by [theorem: <reference|series non negative numbers
+      countable sums inclusion>] that <math|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|I|)>\<wedge\>K<text|
+      is finite>|}>> is bounded above by <math|<big|sum><rsub|i\<in\>I>x<rsub|i>>,
+      hence by [theorem: <reference|complex RC is conditional complete>]
+      <math|sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|I|)>\<wedge\>K<text|
+      is finite>|}>|)>> exist and <math|sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|I|)>\<wedge\>K<text|
+      is finite>|}>|)>\<leqslant\><big|sum><rsub|i\<in\>I>x<rsub|i>>. Hence
+      as <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> converges by definition as
+      <math|I> is finite we have\ 
+
+      <\equation*>
+        <big|sum><rsub|i\<in\>I>x<rsub|i><text| converges
+        >\<Leftrightarrow\><text| >sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|I|)>\<wedge\>K<text|
+        is finite>|}>|)><text| exist>
+      </equation*>
+
+      \ As <math|I> is finite we have clearly
+      <math|<big|sum><rsub|i\<in\>I>x<rsub|i>\<in\><around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|I|)>\<wedge\>K<text|
+      is finite>|}>> it follows that\ 
+
+      <\equation*>
+        <big|sum><rsub|i\<in\>I>x<rsub|i>=sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|I|)>\<wedge\>K<text|
+        is finite>|}>|)>
+      </equation*>
+
+      \ 
+
+      <item*|<math|I> is denumerable>Then there exist a bijection
+      <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>I>.
+      <item*|<math|\<Rightarrow\>>>Let <math|s\<in\><around*|{|<big|sum><rsub|i\<in\>K>x<rsub|\<beta\><around*|(|i|)>>\|K\<in\>\<cal-P\><around*|(|\<bbb-N\><rsub|0>|)>\<wedge\>K<text|
+      is finite>|}>> then there exist a finite
+      <math|K\<subseteq\>\<bbb-N\><rsub|0>> such that
+      <math|s=<big|sum><rsub|i\<in\>K>x<rsub|\<beta\><around*|(|i|)>>>. As
+      <math|\<beta\><rsub|\|K>:K\<rightarrow\>\<beta\><around*|(|K|)>> is a
+      bijection we have\ 
+
+      <\equation*>
+        s=<big|sum><rsub|i\<in\>K>x<rsub|\<beta\><around*|(|i|)>>=<big|sum><rsub|i\<in\>K>x<rsub|\<beta\><rsub|\|K><around*|(|i|)>>\<equallim\><rsub|<text|[theorem:
+        <reference|sum bijection on index>]>><big|sum><rsub|i\<in\>\<beta\><around*|(|K|)>>x<rsub|i>
+      </equation*>
+
+      which as <math|\<beta\><around*|(|K|)>> is finite [see theorem:
+      <reference|image of a finite set>] proves that
+      <math|s\<in\><around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|I|)>\<wedge\>K<text|
+      is finite>|}>> hence\ 
+
+      <\equation>
+        <label|eq 14.176.156><around*|{|<big|sum><rsub|i\<in\>K>x<rsub|\<beta\><around*|(|i|)>>\|K\<in\>\<cal-P\><around*|(|\<bbb-N\><rsub|0>|)>\<wedge\>K<text|
+        is finite>|}>\<subseteq\><around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|I|)>\<wedge\>K<text|
+        is finite>|}>
+      </equation>
+
+      Let <math|s\<in\><around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|I|)>\<wedge\>K<text|
+      is finite>|}>> then there exist a finite <math|K\<subseteq\>I> such
+      that <math|s=<big|sum><rsub|i\<in\>K>x<rsub|i>>. As
+      <math|\<beta\><rsub|\|\<beta\><rsup|-1><around*|(|K|)>>:\<beta\><rsup|-1><around*|(|K|)>\<rightarrow\>\<beta\><around*|(|\<beta\><rsup|-1><around*|(|K|)>|)>=K>
+      is a bijection we have\ 
+
+      <\equation*>
+        s=<big|sum><rsub|i\<in\>K>x<rsub|i>\<equallim\><rsub|<text|[theorem:
+        <reference|sum bijection on index>]>><big|sum><rsub|i\<in\>\<beta\><rsup|-1><around*|(|K|)>>x<rsub|\<beta\><rsub|\|\<beta\><rsup|-1><around*|(|K|)>><around*|(|i|)>>=<big|sum><rsub|i\<in\>\<beta\><rsup|-1><around*|(|K|)>>x<rsub|\<beta\><around*|(|i|)>>
+      </equation*>
+
+      which as <math|><math|\<beta\><rsup|-1><around*|(|K|)>\<equallim\><rsub|<text|[theorem:
+      <reference|function inverse image preimage>]>><around*|(|\<beta\><rsup|-1>|)><around*|(|K|)>>
+      is finite by [theorem: <reference|image of a finite set>] proves that
+      <math|s\<in\><around*|{|<big|sum><rsub|i\<in\>K>x<rsub|\<beta\><around*|(|i|)>>\|K\<in\>\<cal-P\><around*|(|\<bbb-N\><rsub|0>|)>\<wedge\>K<text|
+      is finite>|}>>. Hence
+
+      <\equation*>
+        <around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|I|)>\<wedge\>K<text|
+        is finite>|}>\<subseteq\><around*|{|<big|sum><rsub|i\<in\>K>x<rsub|\<beta\><around*|(|i|)>>\|K\<in\>\<cal-P\><around*|(|\<bbb-N\><rsub|0>|)>\<wedge\>K<text|
+        is finite>|}>
+      </equation*>
+
+      which combined with [eq: <reference|eq 14.176.156>] proves that\ 
+
+      <\equation>
+        <label|eq 14.177.156><around*|{|<big|sum><rsub|i\<in\>K>x<rsub|\<beta\><around*|(|i|)>>\|K\<in\>\<cal-P\><around*|(|\<bbb-N\><rsub|0>|)>\<wedge\>K<text|
+        is finite>|}>=<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|I|)>\<wedge\>K<text|
+        is finite>|}>
+      </equation>
+
+      Finally we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|sum><rsub|i\<in\>I>x<rsub|i><text|
+        converges to >x>|<cell|\<Leftrightarrowlim\><rsub|<text|[definition:
+        <reference|series non negative numbers denumerable
+        sum>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>><text|
+        converges to >x>|<cell|\<Leftrightarrowlim\><rsub|<text|[theorem:
+        <reference|series non negative numbers
+        equivalences>]>>>|<cell|>>|<row|<cell|sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|\<beta\><around*|(|i|)>>\|K\<in\>\<cal-P\><around*|(|\<bbb-N\><rsub|0>|)>\<wedge\>K<text|
+        is finite>|}>|)><text| exists and is equal to
+        >x>|<cell|\<Leftrightarrowlim\><rsub|<text|[eq: <reference|eq
+        14.177.156>]>>>|<cell|>>|<row|<cell|sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|I|)>\<wedge\>K<text|
+        is finite>|}>|)><text| exists and is equal to >x>|<cell|>|<cell|>>>>
+      </eqnarray*>
+    </description>
+  </proof>
+
+  A trivial example of the use of the above theorem is the following
+
+  <\example>
+    <label|series of all zeroes>Let <math|I> be a countable set and
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\><around*|[|0,\<infty\>|[>>
+    such that <math|\<forall\>i\<in\>I> <math|x<rsub|i>=0> then
+    <math|<big|sum><rsub|i=\<in\>I>x<rsub|i>> converges to <math|0>.
+  </example>
+
+  <\proof>
+    If <math|K\<subseteq\>I> finite then we have as <math|\<forall\>i\<in\>K>
+    <math|x<rsub|i>=0> that <math|<big|sum><rsub|i\<in\>K>x<rsub|i>\<equallim\>0>
+    so that <math|sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<subseteq\>I\<wedge\>K
+    is finite|}>|)>=0> which by the previous theorem proves the example.
+  </proof>
+
+  <\lemma>
+    <label|lemma 14.342.156>Let <math|n\<in\>\<bbb-N\><rsub|0>> and
+    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>\<subseteq\>\<cal-P\><around*|(|\<bbb-R\>|)>\\<around*|{|\<varnothing\>|}>>
+    a family of non empty sets of non negative numbers then if there exist a
+    <math|s\<in\>\<bbb-R\>> such that <math|\<forall\><around*|(|x<rsub|0>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>A<rsub|i>>
+    <math|<big|sum><rsub|i=0><rsup|n>x<rsub|i>\<leqslant\>s> it follows that
+    <math|\<forall\>i\<in\><around*|{|0,\<ldots\>,n|}>>
+    <math|sup<around*|(|A<rsub|i>|)>> exist and
+    <math|<big|sum><rsub|i=0><rsup|n>sup<around*|(|A<rsub|i>|)>\<leqslant\>s>
+  </lemma>
+
+  <\proof>
+    We prove this by induction so let\ 
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|<text|If
+      ><around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>\<subseteq\>\<cal-P\><around*|(|\<bbb-R\>|)>\\<around*|{|\<varnothing\>|}><text|
+      satisfies that for a >s\<in\>\<bbb-R\><text| with
+      >\<forall\>x\<in\><big|prod><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>A<rsub|i><text|
+      we have ><big|sum><rsub|i=0><rsup|n>x<rsub|i>\<leqslant\>s<text| then
+      we have that >\<forall\>i\<in\><around*|{|0,\<ldots\>,n|}><text|
+      >sup<around*|(|A<rsub|i>|)><text| exist and
+      ><big|sum><rsub|i=0><rsup|n>sup<around*|(|A<rsub|i>|)>\<leqslant\>s|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|0\<in\>S>>Let <math|y\<in\>A<rsub|0>> then
+      <math|y=<around*|(|x|)>\<in\><big|prod><rsub|i\<in\><around*|{|0|}>>A<rsub|i>>
+      so that <math|x=<big|sum><rsub|i=0><rsup|0>y<rsub|0>\<leqslant\>s>
+      proving that <math|A<rsub|0>> is bounded above by <math|s>, hence, as
+      also <math|A<rsub|0>\<neq\>\<varnothing\>>, it follows from the
+      conditional completeness of <math|\<bbb-R\>> [see theorem:
+      <reference|complex RC is conditional complete>] that
+      <math|sup<around*|(|A<rsub|0>|)>> exists and
+      <math|sup<around*|(|A<rsub|0>|)>\<leqslant\>s\<Rightarrow\><big|sum><rsub|i=0><rsup|0>sup<around*|(|A<rsub|i>|)>=sup<around*|(|A<rsub|0>|)>\<leqslant\>s>.
+      Hence <math|0\<in\>S>.
+
+      <item*|<math|n\<in\>A\<Rightarrow\>n+1\<in\>S>>Let
+      <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n+1|}>>\<subseteq\>\<cal-P\><around*|(|<around*|[|0,\<infty\>|[>|)>\\<around*|{|\<varnothing\>|}>>
+      and let <math|s\<in\>\<bbb-R\>> such that
+      <math|\<forall\>x\<in\><big|prod><rsub|i\<in\><around*|{|0,\<ldots\>,n+1|}>>A<rsub|i>>
+      we have <math|<big|sum><rsub|i=0><rsup|n+1>x<rsub|i>\<leqslant\>s>. Let
+      <math|u\<in\>A<rsub|n+1>> we have <math|\<forall\>x\<in\><big|prod><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>A<rsub|i>>
+      that <math|y=<around*|(|x<rsub|0>,\<ldots\>,x<rsub|n>,u|)>\<in\><big|prod><rsub|i\<in\><around*|{|0,\<ldots\>,n+1|}>>A<rsub|i>>
+      so that <math|u+<big|sum><rsub|i=0><rsup|n>x<rsub|i>=<big|sum><rsub|i=0><rsup|n+1>y<rsub|i>\<leqslant\>s>,
+      hence
+
+      <\equation*>
+        \<forall\>x\<in\><big|prod><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>A<rsub|i><text|
+        we have ><big|sum><rsub|i=0><rsup|n>x<rsub|i>\<leqslant\>s-u
+      </equation*>
+
+      So as <math|n\<in\>S> we have that\ 
+
+      <\equation>
+        <label|eq 14.178.156>\<forall\>i\<in\><around*|{|0,\<ldots\>,n|}><text|
+        >sup<around*|(|A<rsub|i>|)><text| exist and
+        ><big|sum><rsub|i=0><rsup|n>sup<around*|(|A<rsub|i>|)>\<leqslant\>s-u
+      </equation>
+
+      From the above it follows that for <math|u\<in\>A<rsub|n+1>>
+      <math|u\<leqslant\>s-<big|sum><rsub|i=0><rsup|n>sup<around*|(|A<rsub|>|)>>
+      proving that <math|A<rsub|n+1>> is bounded above by
+      <math|s-<big|sum><rsub|i=0><rsup|n>sup<around*|(|A<rsub|i>|)>>, as
+      further <math|\<varnothing\>\<neq\>A<rsub|n+1>> it follows form
+      [theorem: <reference|complex RC is conditional complete>] that
+
+      <\equation>
+        <label|eq 14.179.156>sup<around*|(|A<rsub|n+1>|)><text| exist and
+        >sup<around*|(|A<rsub|n+1>|)>\<leqslant\>s-<big|sum><rsub|i=0><rsup|n>sup<around*|(|A<rsub|i>|)>
+      </equation>
+
+      So by [eqs: <reference|eq 14.178.156>, <reference|eq 14.179.156>] we
+      have
+
+      <\equation*>
+        \<forall\>i\<in\><around*|{|0,\<ldots\>,n+1|}><text|
+        >sup<around*|(|A<rsub|i>|)><text| exist and
+        ><big|sum><rsub|i=0><rsup|n+1>sup<around*|(|A<rsub|i>|)>=sup<around*|(|A<rsub|n+1>|)>+<big|sum><rsub|i=0><rsup|n>sup<around*|(|A<rsub|i>|)>\<leqslant\>s
+      </equation*>
+
+      proving that <math|n+1\<in\>S>.
+    </description>
+  </proof>
+
+  <\lemma>
+    <label|lemma 14.344.156>Let <math|I> be a countable set,
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\><around*|[|0,\<infty\>|[>>
+    such that <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> converges,
+    <math|n\<in\>\<bbb-N\><rsub|0>> and <math|<around*|{|N<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>\<subseteq\>\<cal-P\><around*|(|I|)>>
+    such that <math|\<forall\>i,j\<in\><around*|{|0,\<ldots\>,n|}>> with
+    <math|i\<neq\>j> we have <math|N<rsub|i><big|cap>N<rsub|j>=\<varnothing\>>
+    and <math|I=<big|cup><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>N<rsub|i>>
+    then <math|\<forall\>i\<in\><around*|{|0,\<ldots\>,n|}>> we have that
+
+    <\equation*>
+      <big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|i><text| converges>
+    </equation*>
+
+    and
+
+    <\equation*>
+      <big|sum><rsub|i\<in\>I>x<rsub|i>=<big|sum><rsub|i=0><rsup|n><around*|(|<big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j>|)>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    As <math|\<forall\>i\<in\><around*|{|0,\<ldots\>,n|}>>
+    <math|N<rsub|i>\<subseteq\>I> and <math|<big|sum><rsub|i\<in\>I>x<rsub|i>>
+    converges it follows from [theorem: <reference|series non negative
+    numbers countable sums inclusion>] that\ 
+
+    <\equation>
+      <label|eq 14.180.156>\<forall\>i\<in\><around*|{|0,\<ldots\>,n|}><text|
+      ><big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j><text| converges>
+    </equation>
+
+    As <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> converges it follows from
+    [theorem: <reference|series non negative numbers countable sum equivalent
+    definition>] that sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<subseteq\>I\<wedge\>K
+    finite|}>|)> exist and\ 
+
+    <\equation>
+      <label|eq 14.181.156><big|sum><rsub|i\<in\>I>x<rsub|i>=sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<subseteq\>I\<wedge\>K
+      finite|}>|)>
+    </equation>
+
+    Let <math|\<varepsilon\>\<in\>I> then
+    <math|<big|sum><rsub|i\<in\>I>x<rsub|i>-\<varepsilon\>\<less\>sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<subseteq\>I\<wedge\>K
+    finite|}>|)>> there exist a finite <math|K\<subseteq\>I> such that
+    <math|<big|sum><rsub|i\<in\>I>x<rsub|i>-\<varepsilon\>\<less\><big|sum><rsub|i\<in\>K>x<rsub|i>>
+    then\ 
+
+    <\equation>
+      <label|eq 14.182.156><big|sum><rsub|i\<in\>I>x<rsub|i>\<less\><big|sum><rsub|i\<in\>K>x<rsub|i>+\<varepsilon\>
+    </equation>
+
+    Now given <math|i\<in\><around*|{|0,\<ldots\>,n|}>> we have that
+    <math|N<rsub|i><big|cap>K> is finite and as
+    <math|N<rsub|i><big|cap>K\<subseteq\>N<rsub|i>> it follows from
+    \ [theorem: <reference|series non negative numbers countable sums
+    inclusion>] that\ 
+
+    <\equation>
+      <label|eq 14.183.156><big|sum><rsub|j\<in\>N<rsub|i><big|cap>K>x<rsub|j>\<leqslant\><big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j>
+    </equation>
+
+    <\equation*>
+      K=I<big|cap>K=<around*|(|<big|cup><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>N<rsub|i>|)><big|cap>K=<big|cup><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>><around*|(|N<rsub|i><big|cap>K|)>
+    </equation*>
+
+    and <math|\<forall\>i,j\<in\><around*|{|0,\<ldots\>,n|}>> with
+    <math|i\<neq\>j> we have\ 
+
+    <\equation*>
+      <around*|(|N<rsub|i><big|cap>K|)><big|cap><around*|(|N<rsub|j><big|cap>K|)>=<around*|(|N<rsub|i><big|cap>N<rsub|j>|)><big|cap>K=\<varnothing\><big|cap>K=\<varnothing\>
+    </equation*>
+
+    so using [theorem: <reference|sum over disjoint subsets>] we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<big|sum><rsub|i\<in\>K>x<rsub|i>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum over disjoint subsets>]>>>|<cell|<big|sum><rsub|i=0><rsup|n><around*|(|<big|sum><rsub|j\<in\>N<rsub|i><big|cap>K>x<rsub|j>|)>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[eq:
+      <reference|eq 14.183.156>]>>>|<cell|<big|sum><rsub|i=0><rsup|n><around*|(|<big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j>|)>>>>>
+    </eqnarray*>
+
+    Combining the above with [eq: <reference|eq 14.182.156>] results in
+    <math|<big|sum><rsub|i\<in\>I>x<rsub|i>\<less\><big|sum><rsub|i=0><rsup|n><around*|(|<big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j>|)>+\<varepsilon\>>
+    which as <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> was choosen
+    arbitray allows us to use [theorem: <reference|complex Archimedean
+    property consequence (2)>] giving\ 
+
+    <\equation>
+      <label|eq 14.184.156><big|sum><rsub|i\<in\>I>x<rsub|i>\<leqslant\><big|sum><rsub|i=0><rsup|n><around*|(|<big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j>|)>
+    </equation>
+
+    Take now <math|s\<in\><big|prod><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>><around*|{|<big|sum><rsub|j\<in\>K>x<rsub|j>\|K\<subseteq\>N<rsub|i>\<wedge\>K<text|
+    finite>|}>> then there exist a family of finite sets
+    <math|<around*|{|K<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>>
+    with <math|\<forall\>i\<in\><around*|{|0,\<ldots\>,n|}>>
+    <math|K<rsub|i>\<subseteq\>N<rsub|i>> [so the sets are finite and
+    pairwise disjoint] and <math|s<rsub|i>=<big|sum><rsub|j\<in\>K>x<rsub|j>>.
+    Hence\ 
+
+    <\equation>
+      <label|eq 14.185.156><big|sum><rsub|i=0><rsup|n>s<rsub|i>=<big|sum><rsub|i=0><rsup|n><around*|(|<big|sum><rsub|j\<in\>K>x<rsub|j>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|sum over disjoint subsets>]>><big|sum><rsub|j\<in\><big|cup><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>K<rsub|i>>x<rsub|i>
+    </equation>
+
+    As <math|<big|cup><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>K<rsub|i>\<subseteq\><big|cup><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>N<rsub|i>=I>
+    we have by [theorem: <reference|series non negative numbers countable
+    sums inclusion>] as <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> is
+    convergent that <math|><math|<big|sum><rsub|j\<in\><big|cup><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>K<rsub|i>>x<rsub|i>>
+    converges and <math|<big|sum><rsub|j\<in\><big|cup><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>K<rsub|i>>x<rsub|i>\<leqslant\><big|sum><rsub|i\<in\>I>x<rsub|i>>,
+    hence by [eq: <reference|eq 14.185.156>]\ 
+
+    <\equation*>
+      <big|sum><rsub|i=0><rsup|n>s<rsub|i>\<leqslant\><big|sum><rsub|i\<in\>I>x<rsub|i>
+    </equation*>
+
+    So we can use the previous lemma [lemma: <reference|lemma 14.342.156>]
+    proving that\ 
+
+    <\equation*>
+      \<forall\>i\<in\><around*|{|0,\<ldots\>,n|}><text|
+      >sup<around*|(|<big|sum><rsub|j\<in\>K>x<rsub|j>\|K\<subseteq\>N<rsub|i>\<wedge\>K<text|
+      finite>|)><text| exist and ><big|sum><rsub|i=0><rsup|n>sup<around*|(|<big|sum><rsub|j\<in\>K>x<rsub|j>\|K\<subseteq\>N<rsub|i>\<wedge\>K<text|
+      finite>|)>\<leqslant\><big|sum><rsub|i\<in\>I>x<rsub|i>
+    </equation*>
+
+    Using [theorem: <reference|series non negative numbers countable sum
+    equivalent definition>] we have <math|\<forall\>i\<in\><around*|{|0,\<ldots\>,n|}>>
+    <math|<big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j>=sup<around*|(|<big|sum><rsub|j\<in\>K>x<rsub|j>\|K\<subseteq\>N<rsub|i>\<wedge\>K<text|
+    finite>|)>> which combined with the above proves that\ 
+
+    <\equation*>
+      <big|sum><rsub|i=0><rsup|n><around*|(|<big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j>|)>\<leqslant\><big|sum><rsub|i\<in\>I>x<rsub|i>
+    </equation*>
+
+    which combined with [eq: <reference|eq 14.184.156>] proves\ 
+
+    <\equation*>
+      <big|sum><rsub|i\<in\>I>x<rsub|i>=<big|sum><rsub|i=0><rsup|n><around*|(|<big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j>|)>
+    </equation*>
+  </proof>
+
+  <\lemma>
+    <label|lemma 14.345.156>Let <math|I> be a countable set,
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\><around*|[|0,\<infty\>|[>>
+    such that <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> converges,
+    <math|<around*|{|N<rsub|i>|}><rsub|i\<in\>\<bbb-N\><rsub|0>>\<subseteq\>\<cal-P\><around*|(|I|)>>
+    be such that <math|\<forall\>i,j\<in\>\<bbb-N\><rsub|0>> with
+    <math|i\<neq\>j> <math|N<rsub|i><big|cap>N<rsub|j>=\<varnothing\>> and
+    <math|I=<big|cup><rsub|i\<in\>\<bbb-N\>>N<rsub|i>> then we have that\ 
+
+    <\equation*>
+      \<forall\>i\<in\>\<bbb-N\><rsub|0><text|
+      ><big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j><text| converges>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      <big|sum><rsub|i=0><rsup|\<infty\>><around*|(|<big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j>|)><text|
+      converges and ><big|sum><rsub|i=0><rsup|\<infty\>><around*|(|<big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j>|)>=<big|sum><rsub|i\<in\>I>x<rsub|i>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    First as <math|\<forall\>i\<in\>\<bbb-N\><rsub|0>>
+    <math|N<rsub|i>\<subseteq\>I> we have by [theorem: <reference|series non
+    negative numbers countable sums inclusion>] that\ 
+
+    <\equation>
+      <label|eq 14.186.156>\<forall\>i\<in\>\<bbb-N\><rsub|0><text|
+      ><big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j><text| converges>
+    </equation>
+
+    Let <math|n\<in\>\<bbb-N\><rsub|0>> and define
+    <math|K<rsub|n>=<big|cup><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>N<rsub|i>\<subseteq\>I>
+    then by [theorem: <reference|series non negative numbers countable sums
+    inclusion>] again we have that\ 
+
+    <\equation>
+      <label|eq 14.187.156>\<forall\>n\<in\>\<bbb-N\><rsub|0><text|
+      ><big|sum><rsub|i\<in\>K<rsub|n>>x<rsub|i><text| converges and
+      ><big|sum><rsub|i\<in\>K<rsub|n>>x<rsub|i>\<leqslant\><big|sum><rsub|i\<in\>I>x<rsub|i>
+    </equation>
+
+    Further as <math|I> is countable it follows by [theorem:
+    <reference|countable subset of countable set is countable>] that
+    <math|\<forall\>n\<in\>\<bbb-N\><rsub|0>> <math|K<rsub|n>> is countable
+    and as <math|<around*|{|N<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>>
+    is pairwise disjoint it follows from the previous lemma [lemma:
+    <reference|lemma 14.344.156>] that\ 
+
+    <\equation*>
+      <big|sum><rsub|i=0><rsup|n><around*|(|<big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j>|)>\<equallim\><rsub|<text|[lemma:
+      <reference|lemma 14.344.156>]>><big|sum><rsub|i\<in\>K<rsub|n>>x<rsub|i>\<leqslant\><rsub|<text|[eq:
+      <reference|eq 14.187.156>]>><big|sum><rsub|i\<in\>I>x<rsub|i>
+    </equation*>
+
+    as this is true for every <math|n\<in\>\<bbb-N\><rsub|o>> we have by
+    [theorem <reference|complex RC is conditional complete>] that
+    <math|sup<around*|(|<around*|{|<big|sum><rsub|i=0><rsup|n><around*|(|<big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j>|)>\|n\<in\>\<bbb-N\><rsub|0>|}>|)>>
+    exist and\ 
+
+    <\equation*>
+      sup<around*|(|<around*|{|<big|sum><rsub|i=0><rsup|n><around*|(|<big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j>|)>\|n\<in\>\<bbb-N\><rsub|0>|}>|)>\<leqslant\><big|sum><rsub|i\<in\>I>x<rsub|i>
+    </equation*>
+
+    Using then [theorem: <reference|series non negative numbers
+    equivalences>] we have that\ 
+
+    <\equation>
+      <label|eq 14.188.156><big|sum><rsub|i=0><rsup|\<infty\>><around*|(|<big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j>|)><text|
+      converges and ><big|sum><rsub|i=0><rsup|\<infty\>><around*|(|<big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j>|)>\<leqslant\><big|sum><rsub|i\<in\>I>x<rsub|i>
+    </equation>
+
+    For the opposite equality, let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+    then as
+
+    <\equation*>
+      <big|sum><rsub|i\<in\>I>x<rsub|i>\<equallim\><rsub|<text|[theorem:
+      <reference|series non negative numbers countable sum equivalent
+      definition>]>>sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<subseteq\>I\<wedge\>K<text|
+      is finite>|}>|)>
+    </equation*>
+
+    there exist a finite <math|K\<subseteq\>I> such that
+    <math|<big|sum><rsub|i\<in\>I>x<rsub|i>-\<varepsilon\>\<less\><big|sum><rsub|i\<in\>K>x<rsub|i>>
+    or\ 
+
+    <\equation>
+      <label|eq 14.189.156><big|sum><rsub|i\<in\>I>x<rsub|i>\<less\><big|sum><rsub|i\<in\>K>x<rsub|i>+\<varepsilon\>
+    </equation>
+
+    Take now <math|J=<around*|{|i\<in\>\<bbb-N\><rsub|0>\|K<big|cap>N<rsub|i>\<neq\>\<varnothing\>|}>\<subseteq\>\<bbb-N\><rsub|0>>
+    so that by [theorem: <reference|countable subset of countable set is
+    countable>] <math|J> is countable. If <math|x\<in\>K> then as
+    <math|K=K<big|cap>I=K<big|cap><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\><rsub|0>>N<rsub|i>|)>=<big|cup><rsub|i\<in\>\<bbb-N\><rsub|0>><around*|(|K<big|cap>N<rsub|i>|)>>
+    there exist a <math|i\<in\>\<bbb-N\><rsub|0>> such that
+    <math|x\<in\>K<big|cap>N<rsub|i>\<Rightarrow\>K<big|cap>N<rsub|i>\<neq\>\<varnothing\>>
+    hence <math|i\<in\>J> proving that <math|x\<in\><big|cup><rsub|i\<in\>J><around*|(|K<big|cap>N<rsub|i>|)>>.
+    Hence <math|K\<subseteq\><big|cup><rsub|i\<in\>J><around*|(|K<big|cap>N<rsub|i>|)>>
+    which as trivially <math|<big|cup><rsub|i\<in\>J><around*|(|K<big|cap>N<rsub|i>|)>\<subseteq\>K>
+    proves that\ 
+
+    <\equation>
+      <label|eq 14.190.156>K=<big|cup><rsub|i\<in\>J><around*|(|K<big|cap>N<rsub|i>|)>
+    </equation>
+
+    Assume that <math|J> is not finite then as
+    <math|<around*|{|K<big|cap>N<rsub|i>|}><rsub|i\<in\>J>> is a family of
+    pairwise disjoint non empty sets if follows from [theorem:\ 
+  </proof>
 
   \;
 </body>
@@ -17386,8 +18075,23 @@
     <associate|eq 14.173.156|<tuple|14.173|?>>
     <associate|eq 14.174.156|<tuple|14.174|?>>
     <associate|eq 14.175.156|<tuple|14.175|?>>
+    <associate|eq 14.176.156|<tuple|14.176|?>>
+    <associate|eq 14.177.156|<tuple|14.177|?>>
+    <associate|eq 14.178.156|<tuple|14.178|?>>
+    <associate|eq 14.179.156|<tuple|14.179|?>>
     <associate|eq 14.18.146|<tuple|14.18|?>>
+    <associate|eq 14.180.156|<tuple|14.180|?>>
+    <associate|eq 14.181.156|<tuple|14.181|?>>
+    <associate|eq 14.182.156|<tuple|14.182|?>>
+    <associate|eq 14.183.156|<tuple|14.183|?>>
+    <associate|eq 14.184.156|<tuple|14.184|?>>
+    <associate|eq 14.185.156|<tuple|14.185|?>>
+    <associate|eq 14.186.156|<tuple|14.186|?>>
+    <associate|eq 14.187.156|<tuple|14.187|?>>
+    <associate|eq 14.188.156|<tuple|14.188|?>>
+    <associate|eq 14.189.156|<tuple|14.189|?>>
     <associate|eq 14.19.146|<tuple|14.19|?>>
+    <associate|eq 14.190.156|<tuple|14.190|?>>
     <associate|eq 14.2.145|<tuple|14.2|?>>
     <associate|eq 14.20.146|<tuple|14.20|?>>
     <associate|eq 14.21.146|<tuple|14.21|?>>
@@ -17505,6 +18209,10 @@
     <associate|filter base subordinate|<tuple|14.237|?>>
     <associate|filter base trivial|<tuple|14.228|?>>
     <associate|filter base union and intersection|<tuple|14.231|?>>
+    <associate|lemma 14.342.156|<tuple|14.343|?>>
+    <associate|lemma 14.343.156|<tuple|14.344|?>>
+    <associate|lemma 14.344.156|<tuple|14.344|?>>
+    <associate|lemma 14.345.156|<tuple|14.345|?>>
     <associate|limit (a+n)/(b+n)|<tuple|14.275|?>>
     <associate|limit 1/(a+i)|<tuple|14.274|?>>
     <associate|limit a.x_n|<tuple|14.278|?>>
@@ -17627,14 +18335,22 @@
     space|<tuple|14.326|?>>
     <associate|series converging of upper series|<tuple|14.329|?>>
     <associate|series non negative numbers commutativity|<tuple|14.334|?>>
+    <associate|series non negative numbers countable sum equivalent
+    definition|<tuple|14.341|?>>
+    <associate|series non negative numbers countable sums|<tuple|14.337|?>>
+    <associate|series non negative numbers countable sums
+    inclusion|<tuple|14.340|?>>
+    <associate|series non negative numbers denumerable sum|<tuple|14.335|?>>
     <associate|series non negative numbers equivalences|<tuple|14.332|?>>
     <associate|series non negative numbers strict positive
     term|<tuple|14.333|?>>
+    <associate|series of all zeroes|<tuple|14.342|?>>
     <associate|series of complex numbers|<tuple|14.331|?>>
     <associate|series partition series|<tuple|14.328|?>>
     <associate|series power series in R|<tuple|14.324|?>>
     <associate|series terms converges to zero|<tuple|14.325|?>>
     <associate|series translation start|<tuple|14.327|?>>
+    <associate|sum of a countable set|<tuple|14.336|?>>
     <associate|sum of powers lemma|<tuple|14.323|?>>
     <associate|toplinear isomorphism|<tuple|14.175|?>>
     <associate|topological vector space|<tuple|14.172|?>>
@@ -17947,6 +18663,10 @@
       <with|par-left|<quote|1tab>|14.11.3<space|2spc>Series
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-101>>
+
+      <with|par-left|<quote|2tab>|14.11.3.1<space|2spc>Series of non negative
+      numbers <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-103>>
     </associate>
   </collection>
 </auxiliary>

@@ -330,7 +330,93 @@
 
   \;
 
-  \;
+  <\lemma>
+    <label|series lemma 14.342>Let <math|n\<in\>\<bbb-N\><rsub|0>> and
+    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>\<subseteq\>\<cal-P\><around*|(|\<bbb-R\>|)>\\<around*|{|\<varnothing\>|}>>
+    a finite family of non empty subsets of <math|\<bbb-R\>> such that
+    <math|\<exists\>s\<in\>\<bbb-R\>> such that
+    <math|\<forall\><around*|(|x<rsub|0>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>A<rsub|i>>
+    we have <math|<big|sum><rsub|i=0><rsup|n>x<rsub|i>\<leqslant\>s> then it
+    follows that <math|\<forall\>i\<in\><around*|{|0,\<ldots\>,n|}>>
+    <math|sup<around*|(|A<rsub|i>|)>> exists and
+    <math|<big|sum><rsub|i=0><rsup|n>sup<around*|(|A<rsub|i>|)>\<leqslant\>s>
+  </lemma>
+
+  <\proof>
+    We prove this by induction so let\ 
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|If
+      <around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>\<subseteq\>\<cal-P\><around*|(|\<bbb-R\>|)>\\<around*|{|\<varnothing\>|}><text|
+      satifies >\<exists\>s\<in\>\<bbb-R\><text| such that
+      >\<forall\>x\<in\><big|prod><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>A<rsub|i><text|
+      we have ><big|sum><rsub|i=0><rsup|n>x<rsub|i>\<leqslant\>s<text| then
+      >\<forall\>i\<in\><around*|{|0,\<ldots\>,n|}><text|
+      >sup<around*|(|A<rsub|i>|)><text| exist and
+      ><big|sum><rsub|i=0><rsup|n>x<rsub|i>\<leqslant\>s|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|0\<in\>S>>Let <math|y\<in\>A<rsub|0>> then
+      <math|y=<around*|(|x|)>\<in\><big|prod><rsub|i\<in\><around*|{|0|}>>A<rsub|i>>
+      so that <math|x=<big|sum><rsub|i=0><rsup|0>y<rsub|0>\<leqslant\>s>
+      proving that <math|A<rsub|0>> is bounded above by <math|s>, hence, as
+      also <math|A<rsub|0>\<neq\>\<varnothing\>>, it follows from the
+      conditional completeness of <math|\<bbb-R\>> [see theorem:
+      <reference|complex RC is conditional complete>] that
+      <math|sup<around*|(|A<rsub|0>|)>> exists and
+      <math|sup<around*|(|A<rsub|0>|)>\<leqslant\>s\<Rightarrow\><big|sum><rsub|i=0><rsup|0>sup<around*|(|A<rsub|i>|)>\<leqslant\>s>.
+      Hence <math|0\<in\>S>.
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+      <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n+1|}>>\<subseteq\>\<cal-P\><around*|(|\<bbb-R\>|)>\\<around*|{|\<varnothing\>|}>>
+      be such that <math|\<exists\>s\<in\>\<bbb-R\>> such that
+      <math|\<forall\>x\<in\><big|prod><rsub|i\<in\><around*|{|0,\<ldots\>,n+1|}>>A<rsub|i>>
+      we have <math|<big|sum><rsub|i=0><rsup|n+1>x<rsub|i>\<leqslant\>s>. As
+      <math|\<forall\>i\<in\><around*|{|0,\<ldots\>,n+1|}>>
+      <math|A<rsub|i>\<neq\>\<varnothing\>>
+      <math|<big|prod><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>A<rsub|i>\<neq\>\<varnothing\>>,
+      hence there exist a <math|y\<in\><big|prod><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>A<rsub|i>>.
+      Then <math|\<forall\>z\<in\>A<rsub|n+1>> we have that
+      <math|u=<around*|(|y<rsub|0>,\<ldots\>,y<rsub|n>,z|)>\<in\><big|prod><rsub|i=0><rsup|n+1>A<rsub|i>>
+      so that <math|z+<big|sum><rsub|i=0><rsup|n>y<rsub|i>=<big|sum><rsub|i=0><rsup|n+1>u<rsub|i>\<leqslant\>s>
+      or <math|z\<leqslant\>s-<big|sum><rsub|i=0><rsup|n>y<rsub|i>>. So
+      <math|A<rsub|n+1>> is bounded above by
+      <math|s-<big|sum><rsub|i=0><rsup|n>y<rsub|i>> which, as
+      <math|A<rsub|n+1>\<neq\>\<varnothing\>>, proves by [theorem:
+      <reference|complex RC is conditional complete>] that\ 
+
+      <\equation*>
+        sup<around*|(|A<rsub|n+1>|)><text| exist and
+        >sup<around*|(|A<rsub|n+1>|)>\<leqslant\>s-<big|sum><rsub|i=0><rsup|n>y<rsub|i>
+      </equation*>
+
+      As <math|A<rsub|n+1>\<neq\>\<varnothing\>> there exist a
+      <math|w\<in\>A<rsub|n+1>>. Take <math|v\<in\><big|prod><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>A<rsub|i>>
+      then <math|r=<around*|(|v<rsub|0>,\<ldots\>,v<rsub|n>,w|)>\<in\><big|prod><rsub|i\<in\><around*|{|0,\<ldots\>,n+1|}>>A<rsub|i>>
+      so that <math|w+<big|sum><rsub|i=0><rsup|n>v<rsub|i>=<big|sum><rsub|i=0><rsup|n+1>r<rsub|i>\<leqslant\>s>
+      proving that
+
+      <\equation*>
+        <big|sum><rsub|i=0><rsup|n>v<rsub|i>\<leqslant\>s-w
+      </equation*>
+
+      Hence, as <math|n\<in\>S>, we have that
+
+      <\equation*>
+        \<forall\>i\<in\><around*|{|0,\<ldots\>,n|}><text|
+        >sup<around*|(|A<rsub|i>|)><text| exist and
+        ><big|sum><rsub|i=0><rsup|n>sup<around*|(|A<rsub|i>|)>\<leqslant\>s-w
+      </equation*>
+
+      So <math|<big|sum><rsub|i=0><rsup|n+1>sup<around*|(|A<rsub|i>|)>=<big|sum><rsub|i=0><rsup|n>sup<around*|(|A<rsub|i>|)>+sup<around*|(|A<rsub|n+1>|)>\<leqslant\>s-w+sup<around*|(|A<rsub|n+1>|)>>,
+      as further <math|w\<leqslant\>sup<around*|(|A<rsub|n+1>|)>\<Rightarrow\>-sup<around*|(||)>>
+    </description>
+
+    \ 
+  </proof>
 </body>
 
 <\initial>
@@ -347,9 +433,10 @@
     <associate|eq 12.13.131|<tuple|4|2>>
     <associate|eq 12.14.131|<tuple|5|2>>
     <associate|eq 12.15.131|<tuple|6|2>>
-    <associate|eq 14.110.151|<tuple|7|?>>
-    <associate|eq 14.111.151|<tuple|8|?>>
-    <associate|eq 14.112.151|<tuple|9|?>>
-    <associate|eq 14.113.151|<tuple|10|?>>
+    <associate|eq 14.110.151|<tuple|7|2>>
+    <associate|eq 14.111.151|<tuple|8|3>>
+    <associate|eq 14.112.151|<tuple|9|3>>
+    <associate|eq 14.113.151|<tuple|10|3>>
+    <associate|series lemma 14.342|<tuple|3|?>>
   </collection>
 </references>
