@@ -417,6 +417,97 @@
 
     \ 
   </proof>
+
+  \;
+
+  <\theorem>
+    <label|countable union of a finite family of countable sets is
+    countable>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>> is such that
+    <math|I\<neq\>\<varnothing\>\<wedge\>I> is finite and
+    <math|\<forall\>i\<in\>I> <math|A<rsub|i>> is countable then
+    <math|<big|cup><rsub|i\<in\>I>A<rsub|i>> is countable. In other words the
+    union of a finite family of countable sets is countable. If in addition
+    <math|\<forall\>i\<in\>I> <math|A<rsub|i>\<neq\>\<varnothing\>> and
+    <math|\<forall\>i,j\<in\>\<bbb-N\><rsub|0>> with <math|i\<neq\>j>
+    <math|A<rsub|i><big|cap>A<rsub|j>=\<varnothing\>> then
+    <math|<big|cup><rsub|i\<in\>I>A<rsub|i>> is denumerable.
+  </theorem>
+
+  <\proof>
+    As <math|I> is finite and non empty there exist
+    <math|n<rsub|0>\<in\>\<bbb-N\><rsub|0>\\<around*|{|0|}>> and a bijection
+    <math|\<beta\>:n<rsub|0>\<rightarrow\>I>. Further as
+    <math|\<forall\>i\<in\>I> <math|A<rsub|i>> is countable there exist a
+    surjection <math|\<alpha\><rsub|i>:\<bbb-N\><rsub|0>\<rightarrow\>A<rsub|i>>
+    [see theorem: <reference|countable set conditions (1)>].] Define now the
+    function\ 
+
+    <\equation*>
+      g:n<rsub|0>\<times\>\<bbb-N\><rsub|0>\<rightarrow\><big|cup><rsub|i\<in\>I>A<rsub|i><text|
+      by >g<around*|(|n,m|)>=\<alpha\><rsub|\<beta\><around*|(|n|)>><around*|(|m|)>
+    </equation*>
+
+    Now if <math|y\<in\><big|cup><rsub|i\<in\>I>A<rsub|i>> there exist a
+    <math|l\<in\>I> such that <math|y\<in\>A<rsub|l>>, as <math|\<beta\>> is
+    bijective there exists a <math|n\<in\>n<rsub|0>> such that
+    <math|\<beta\><around*|(|n|)>=l>. As <math|\<alpha\><rsub|l>:\<bbb-N\><rsub|0>\<rightarrow\>A<rsub|l>>
+    is a surjection there exist a <math|m\<in\>\<bbb-N\><rsub|0>> such that
+    <math|\<alpha\><rsub|l><around*|(|m|)>=y>. So
+
+    <\equation*>
+      g<around*|(|n,m|)>=\<alpha\><rsub|\<beta\><around*|(|n|)>><around*|(|m|)>=\<alpha\><rsub|l><around*|(|m|)>=y
+    </equation*>
+
+    which proves that\ 
+
+    <\equation*>
+      g:n<rsub|0>\<times\>\<bbb-N\><rsub|0>\<rightarrow\><big|cup><rsub|i\<in\>I>A<rsub|i><text|
+      is surjective>
+    </equation*>
+
+    Now by [theorem: <reference|denumerable product nxN is denumerable>]
+    there exist a bijection <math|\<gamma\>:\<bbb-N\><rsub|0>\<rightarrow\>n<rsub|0>\<times\>\<bbb-N\><rsub|0>>
+    so that\ 
+
+    <\equation*>
+      g\<circ\>\<gamma\>:\<bbb-N\><rsub|0>\<rightarrow\><big|cup><rsub|i\<in\>I>A<rsub|i><text|
+      is surjective>
+    </equation*>
+
+    Using [theorem: <reference|countable set conditions (1)>] it follows that
+
+    <\equation*>
+      <big|cup><rsub|i\<in\>I>A<rsub|i><text| is countable>
+    </equation*>
+
+    Further if <math|\<forall\>i\<in\>I> <math|A<rsub|i>\<neq\>\<varnothing\>>
+    and <math|\<forall\>i,j\<in\>\<bbb-N\><rsub|0>> with <math|i\<neq\>j>
+    <math|A<rsub|i><big|cap>A<rsub|j>=\<varnothing\>> then we can use a
+    consequence of the axiom of choice [see theorem: <reference|choice Axiom
+    of choice consequences>] to find a function\ 
+
+    <\equation*>
+      \<cal-C\>:I\<rightarrow\><big|cup><rsub|i\<in\>I>A<rsub|i><text| such
+      that >\<forall\>i\<in\>I<text| >\<cal-C\><around*|(|i|)>\<in\>A<rsub|i>
+    </equation*>
+
+    If <math|\<cal-C\><around*|(|i|)>=\<cal-C\><around*|(|j|)>> then
+    <math|\<cal-C\><around*|(|i|)>\<in\>A<rsub|i>> and
+    <math|\<cal-C\><around*|(|i|)>=C<around*|(|j|)>\<in\>A<rsub|j>> so that
+    <math|\<cal-C\><around*|(|i|)>\<in\>A<rsub|i><big|cap>A<rsub|j>\<Rightarrow\>A<rsub|i><big|cap>A<rsub|j>\<neq\>\<varnothing\>>.
+    hence we must have <math|i=j> [if <math|i\<neq\>j> then
+    <math|A<rsub|i><big|cap>A<rsub|j>=\<varnothing\>>]. So
+    <math|\<cal-C\>:I\<rightarrow\><big|cup><rsub|i\<in\>I>A<rsub|i>> is a
+    injection and <math|\<cal-C\>:I\<rightarrow\>\<cal-C\><around*|(|I|)>> is
+    a bijection or <math|I\<approx\>\<cal-C\><around*|(|I|)>>, as <math|I> is
+    countable it follows from [theorem: <reference|equipotence finite,
+    denumerable , countable>] that <math|\<cal-C\><around*|(|I|)>> is
+    denumerable. As <math|\<cal-C\><around*|(|I|)>\<subseteq\><big|cup><rsub|i\<in\>I>A<rsub|i>>
+    we have by [theorem: <reference|set containing a denumerable set is
+    infinite>] that <math|<big|cup><rsub|i\<in\>I>A<rsub|i>> is not finite,
+    so as <math|<big|cup><rsub|i\<in\>I>A<rsub|i>> is countable we have
+    <math|<big|cup><rsub|i\<in\>I>A<rsub|i>> is denumerable.
+  </proof>
 </body>
 
 <\initial>
@@ -427,16 +518,18 @@
 
 <\references>
   <\collection>
+    <associate|countable union of a finite family of countable sets is
+    countable|<tuple|4|?>>
     <associate|eq 12.10.131|<tuple|1|1>>
     <associate|eq 12.11.131|<tuple|2|1>>
     <associate|eq 12.12.131|<tuple|3|1>>
     <associate|eq 12.13.131|<tuple|4|2>>
     <associate|eq 12.14.131|<tuple|5|2>>
     <associate|eq 12.15.131|<tuple|6|2>>
-    <associate|eq 14.110.151|<tuple|7|2>>
+    <associate|eq 14.110.151|<tuple|7|3>>
     <associate|eq 14.111.151|<tuple|8|3>>
     <associate|eq 14.112.151|<tuple|9|3>>
     <associate|eq 14.113.151|<tuple|10|3>>
-    <associate|series lemma 14.342|<tuple|3|?>>
+    <associate|series lemma 14.342|<tuple|3|3>>
   </collection>
 </references>
