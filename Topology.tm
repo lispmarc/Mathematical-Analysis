@@ -10,35 +10,27 @@
   <section|Topological spaces>
 
   <\definition>
-    <label|topology space><dueto|Topological Space>A topological space
-    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> is a pair where\ 
+    <label|topology space><dueto|Topological Space>Let <math|X> be a set then
+    <math|\<cal-T\>\<subseteq\>\<cal-P\><around*|(|X|)>> is a
+    <with|font-series|bold|topology> on <math|X> if\ 
 
     <\enumerate>
-      <item><math|X> is a set
+      <item><math|X\<in\>\<cal-T\>>
 
-      <item><math|\<cal-T\>\<subseteq\>\<cal-P\><around*|(|X|)>> is a set of
-      subsets of <math|X> satisfying:
+      <item><math|\<varnothing\>\<in\>\<cal-T\>>
 
-      <\enumerate>
-        <item><math|X\<in\>\<cal-T\>>
+      <item><math|\<forall\>U,V\<in\>\<cal-T\>> we have
+      <math|U<big|cap>V\<in\>\<cal-T\>>
 
-        <item><math|\<varnothing\>\<in\>\<cal-T\>>
-
-        <item><math|\<forall\>U,V\<in\>\<cal-T\>> we have
-        <math|U<big|cap>V\<in\>\<cal-T\>>
-
-        <item>If <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-T\>>
-        is a family of sets in <math|\<cal-T\>> then
-        <math|<big|cup><rsub|i\<in\>I>U<rsub|i>\<in\>\<cal-T\>>
-      </enumerate>
+      <item>If <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-T\>>
+      is a family of sets in <math|\<cal-T\>> then
+      <math|<big|cup><rsub|i\<in\>I>U<rsub|i>\<in\>\<cal-T\>>
     </enumerate>
 
-    Elements of <math|\<cal-T\>> are called open sets and every
-    <math|\<cal-C\>\<subseteq\>\<cal-P\><around*|(|X|)>> satisfying (2) is
-    called a <with|font-series|bold|topology> on <math|X>.
+    Elements of <math|\<cal-T\>> are called open sets and the pair
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> is called a
+    topological space.
   </definition>
-
-  \;
 
   <\example>
     <label|topology empty set><math|<around*|\<langle\>|\<varnothing\>,<around*|{|\<varnothing\>|}>|\<rangle\>>>
@@ -46,31 +38,23 @@
   </example>
 
   <\proof>
-    We have for <math|X=\<varnothing\>> and
-    <math|\<cal-T\>=<around*|{|\<varnothing\>|}>>
+    As <math|\<varnothing\>\<subseteq\>\<varnothing\>> we have that
+    <math|\<varnothing\>\<in\>\<cal-P\><around*|(|\<varnothing\>|)>> hence
+    <math|\<cal-T\>=<around*|{|\<varnothing\>|}>\<subseteq\>\<cal-P\><around*|(|\<varnothing\>|)>>.
+    Further\ 
 
     <\enumerate>
-      <item><math|X> is a set.
+      <item><math|X=\<varnothing\>\<in\><around*|{|\<varnothing\>|}>=\<cal-T\>>
 
-      <item>As <math|\<varnothing\>\<subseteq\>\<varnothing\>> we have that
-      <math|\<varnothing\>\<in\>\<cal-P\><around*|(|\<varnothing\>|)>> hence
-      <math|\<cal-T\>=<around*|{|\<varnothing\>|}>\<subseteq\>\<cal-P\><around*|(|\<varnothing\>|)>>.
-      Further\ 
+      <item><math|\<varnothing\>\<in\><around*|{|\<varnothing\>|}>=\<cal-T\>>
 
-      <\enumerate>
-        <item><math|X=\<varnothing\>\<in\><around*|{|\<varnothing\>|}>=\<cal-T\>>
+      <item>If <math|U,V\<in\>\<cal-T\>=<around*|{|\<varnothing\>|}>> then
+      <math|U=\<varnothing\>=V> so that <math|U<big|cap>V=\<varnothing\>\<in\><around*|{|\<varnothing\>|}>=\<cal-T\>>
 
-        <item><math|\<varnothing\>\<in\><around*|{|\<varnothing\>|}>=\<cal-T\>>
-
-        <item>If <math|U,V\<in\>\<cal-T\>=<around*|{|\<varnothing\>|}>> then
-        <math|U=\<varnothing\>=V> so that
-        <math|U<big|cap>V=\<varnothing\>\<in\><around*|{|\<varnothing\>|}>=\<cal-T\>>
-
-        <item>If <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-T\>=<around*|{|\<varnothing\>|}>>
-        then we have <math|\<forall\>i\<in\>I> that
-        <math|U<rsub|i>=\<varnothing\>> hence
-        <math|<big|cup><rsub|i\<in\>I>U<rsub|i>=<around*|{|\<varnothing\>|}>=\<cal-T\>>
-      </enumerate>
+      <item>If <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-T\>=<around*|{|\<varnothing\>|}>>
+      then we have <math|\<forall\>i\<in\>I> that
+      <math|U<rsub|i>=\<varnothing\>> hence
+      <math|<big|cup><rsub|i\<in\>I>U<rsub|i>=\<varnothing\>\<in\><around*|{|\<varnothing\>|}>=\<cal-T\>>
     </enumerate>
   </proof>
 
@@ -81,12 +65,12 @@
   </example>
 
   <\proof>
-    For <math|\<cal-T\>=<around*|{|X,<around*|{|0|}>|}>> we have:\ 
+    For <math|\<cal-T\>=<around*|{|X,\<varnothing\>|}>> we have:\ 
 
     <\enumerate>
-      <item><math|X\<in\><around*|{|X,<around*|{|\<varnothing\>|}>|}>=\<cal-T\>>
+      <item><math|X\<in\><around*|{|X,\<varnothing\>|}>=\<cal-T\>>
 
-      <item><math|\<varnothing\>\<in\><around*|{|X,<around*|{|0|}>|}>=\<cal-T\>>
+      <item><math|\<varnothing\>\<in\><around*|{|X,\<varnothing\>|}>=\<cal-T\>>
 
       <item>If <math|U,V\<in\>\<cal-T\>=<around*|{|X,<around*|{|0|}>|}>> then
       we have either:
@@ -109,10 +93,10 @@
       then we have either:
 
       <\description>
-        <item*|<math|\<forall\>i\<in\>I\<vDash\>U<rsub|i>=\<varnothing\>>>Then
-        <math|<big|cup><rsub|i\<in\>I>U<rsub|i>=\<varnothing\>\<in\><around*|{|\<varnothing\>,X|}>=\<cal-T\>>
+        <item*|<math|\<forall\>i\<in\>I<text| we have
+        >U<rsub|i>=\<varnothing\>>>Then <math|<big|cup><rsub|i\<in\>I>U<rsub|i>=\<varnothing\>\<in\><around*|{|\<varnothing\>,X|}>=\<cal-T\>>
 
-        <item*|<math|\<exists\>i\<in\>I\<vDash\>U<rsub|i>=X>>Then
+        <item*|<math|\<exists\>i\<in\>I<text| with >U<rsub|i>=X>>Then
         <math|<big|cup><rsub|i\<in\>I>U<rsub|i>=X\<in\><around*|{|\<varnothing\>,X|}>=\<cal-T\>>
       </description>
     </enumerate>
@@ -122,7 +106,7 @@
     <label|topology discrete><dueto|Discrete Topology>If <math|X> is a set
     then <math|<around*|\<langle\>|X,\<cal-P\><around*|(|X|)>|\<rangle\>>> is
     a topological space. <math|\<cal-P\><around*|(|X|)>> is called the
-    discrete topology on <math|X>.
+    <with|font-series|bold|discrete topology> on <math|X>.
   </example>
 
   <\proof>
@@ -141,18 +125,18 @@
       that <math|U<big|cap>V\<in\>\<cal-P\><around*|(|X|)>>
 
       <item>If <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-T\>=\<cal-P\><around*|(|X|)>>
-      then <math|\<forall\>i\<in\>I> <math|U<rsub|i>\<in\>\<cal-P\><around*|(|X|)>\<Rightarrow\>U<rsub|i>\<subseteq\>X>,hence
-      by [theorem: <reference|family properties (1)>]
+      then <math|\<forall\>i\<in\>I> <math|U<rsub|i>\<in\>\<cal-P\><around*|(|X|)>\<Rightarrow\>U<rsub|i>\<subseteq\>X>,
+      hence by [theorem: <reference|family properties (1)>]
       <math|<big|cup><rsub|i\<in\>I>U<rsub|i>\<subseteq\>X> proving that
       <math|<big|cup><rsub|i\<in\>I>U<rsub|i>\<in\>\<cal-P\><around*|(|X|)>=\<cal-T\>>
     </enumerate>
   </proof>
 
   The last two examples shows that given a set <math|X> there could exist two
-  different topologies topologies on <math|X>. In these examples we have that
+  different topologies topologies on <math|X>. In the examples both
   <math|<around*|{|\<varnothing\>,X|}>> and <math|\<cal-P\><around*|(|X|)>>
-  are topologies on <math|X>. So it make sense to compare topologies on a set
-  as is done in the next definition.
+  are topologies on <math|X>. So if we say that a set in <math|X> is open we
+  have to specify which topology is used.\ 
 
   <\definition>
     <label|topology finer topology>Let <math|X> be a set and
@@ -161,19 +145,18 @@
     <with|font-series|bold|is finer then ><math|\<cal-T\><rsub|2>> iff
     <math|\<cal-T\><rsub|2>\<subseteq\>\<cal-T\><rsub|1>>. In other words
     <math|\<cal-T\><rsub|1>> is finer then <math|\<cal-T\><rsub|2>> if every
-    open set in <math|\<cal-T\><rsub|2>> is also a open set n
+    open set in <math|\<cal-T\><rsub|2>> is also a open set in
     <math|\<cal-T\><rsub|2>>. Clearly if <math|\<cal-T\><rsub|1>> is finer
     then <math|\<cal-T\><rsub|2>> and <math|\<cal-T\><rsub|2>> is finer then
-    <math|\<cal-T\><rsub|1>> then we have
-    <math|\<cal-T\><rsub|1>=\<cal-T\><rsub|2>>.
+    <math|\<cal-T\><rsub|1>> then <math|\<cal-T\><rsub|1>=\<cal-T\><rsub|2>>.
   </definition>
 
-  By using mathematical induction we have that every finite intersection of
-  open sets is open.
+  Using mathematical induction it follows that every
+  <with|font-series|bold|finite> intersection of open sets is open.
 
   <\theorem>
     <label|topology finite intersection>Let
-    <math|<around*|\<langle\>|C,\<cal-T\>|\<rangle\>>> be a topological
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological
     space, <math|I\<neq\>\<varnothing\>> a finite set and
     <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-T\>> a
     finite family of open sets then <math|<big|cap><rsub|i\<in\>I>U<rsub|i>\<in\>\<cal-T\>>
@@ -192,11 +175,9 @@
     then we have:
 
     <\description>
-      <item*|<math|1\<in\>S>>Then <math|I=<around*|{|i|}>> and
-      <math|x\<in\><big|cap><rsub|j\<in\><around*|{|i|}>>U<rsub|j>\<Leftrightarrow\>\<forall\>j\<in\><around*|{|i|}><text|
-      >x\<in\>U<rsub|j>\<Leftrightarrow\>x\<in\>U<rsub|i>> proving that
-      <math|<big|cap><rsub|j\<in\><around*|{|i|}>>U<rsub|j>=U<rsub|i>\<in\>T>
-      proving that <math|1\<in\>S>
+      <item*|<math|1\<in\>S>>Then <math|I=<around*|{|i|}>> so that
+      <math|<big|cap><rsub|j\<in\><around*|{|i|}>>U<rsub|j>=U<rsub|i>\<in\>\<cal-T\>>
+      proving that <math|1\<in\>S>.
 
       <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let <math|I> be a finite
       set with <math|card<around*|(|I|)>=n+1> then there exists a bijection\ 
@@ -212,8 +193,8 @@
         is a bijection>
       </equation*>
 
-      hence <math|card<around*|(|I\\<around*|{|n+1|}>|)>=n>. As
-      <math|n\<in\>S> it follows that <math|<big|cap><rsub|i\<in\>I\\<around*|{|n+1|}>>U<rsub|i>\<in\>\<cal-T\>>,
+      or <math|card<around*|(|I\\<around*|{|n+1|}>|)>=n>. As <math|n\<in\>S>
+      it follows that <math|<big|cap><rsub|i\<in\>I\\<around*|{|n+1|}>>U<rsub|i>\<in\>\<cal-T\>>,
       hence, as <math|U<rsub|n+1>\<in\>\<cal-T\>>, we have\ 
 
       <\equation*>
@@ -227,7 +208,7 @@
   <\theorem>
     <label|topology open set condition>Let
     <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
-    then we have\ 
+    then we have for <math|U\<subseteq\>X>
 
     <\equation*>
       U\<in\>\<cal-T\>\<Leftrightarrow\>\<forall\>x\<in\>U<text| there exist
@@ -244,7 +225,7 @@
 
       <\description>
         <item*|<math|U=\<varnothing\>>>Then
-        <math|\<forall\>x\<in\>U=\<varnothing\>> we vacuously that there
+        <math|\<forall\>x\<in\>U=\<varnothing\>> we have vacuously that there
         exist a <math|V\<in\>\<cal-T\>> such that
         <math|x\<in\>V\<subseteq\>U>.
 
@@ -254,13 +235,13 @@
 
       <item*|<math|\<Leftarrow\>>>By the hypothesis we have that
       <math|\<forall\>x\<in\>X> there exist a <math|V\<in\>\<cal-T\>> such
-      that <math|x\<in\>V<rsub|>\<subseteq\>U> defining by [theorem:
+      that <math|x\<in\>V<rsub|>\<subseteq\>U> this defines by [theorem:
       <reference|choice function generating>] a family
       <math|<around*|{|V<rsub|x>|}><rsub|x\<in\>U>\<subseteq\>\<cal-T\>> such
       that <math|\<forall\>x\<in\>U> <math|x\<in\>V<rsub|x>\<subseteq\>U>. By
       [theorem: <reference|family properties (1)>] it follows that
       <math|<big|cup><rsub|x\<in\>U>V<rsub|x>\<subseteq\>U>. Further if
-      <math|x\<in\>U> then <math|x\<in\>V<rsub|x>\<subseteq\><big|cup><rsub|\<in\>U>V<rsub|x>>
+      <math|x\<in\>U> then <math|x\<in\>V<rsub|x>\<subseteq\><big|cup><rsub|\<in\>U>V<rsub|x>>,
       proving that <math|U\<subseteq\><big|cup><rsub|x\<in\>U>V<rsub|x>>.
       Hence\ 
 
@@ -292,9 +273,8 @@
     topology on <math|Y>.\ 
 
     <\enumerate>
-      <item>As <math|Y\<subseteq\>X> we have
-      <math|Y=X<big|cap>Y\<in\>\<cal-T\><rsub|\|Y>> because
-      <math|X\<in\>\<cal-T\>>.
+      <item>As <math|Y\<subseteq\>X> and <math|X\<in\>\<cal-T\>> it follows
+      that <math|Y=X<big|cap>Y\<in\>\<cal-T\><rsub|\|Y>>.\ 
 
       <item><math|\<varnothing\>=\<varnothing\><big|cap>Y\<in\>\<cal-T\><rsub|\|Y>>
       because <math|\<varnothing\>\<in\>\<cal-T\>>.
@@ -322,7 +302,7 @@
     </enumerate>
   </proof>
 
-  The subspace topology of a subspace topology is again a subspace topology
+  The subspace topology of a subspace topology is again a subspace topology.
 
   <\theorem>
     <label|topology subsubspace topology>Let
@@ -340,7 +320,7 @@
       such that V=W<big|cap>Y>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|U=<around*|(|W<big|cap>Y|)><big|cap>Z=W<big|cap><around*|(|Z<big|cap>Y|)>>>|<row|<cell|>|<cell|\<Rightarrowlim\><rsub|Z\<subseteq\>Y>>|<cell|U=W<big|cap>Z>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|U\<in\>\<cal-T\><rsub|\|Z>>>>>
     </eqnarray*>
 
-    Also we have\ 
+    Second we have\ 
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|U\<in\>\<cal-T\><rsub|\|Z>>|<cell|\<Rightarrow\>>|<cell|\<exists\>W\<in\>\<cal-T\>
@@ -349,7 +329,8 @@
   </proof>
 
   A subspace topology is in general not a subset of the topology that induced
-  it, however if the subset defining the subspace topology is open this true.
+  it, however if the subset defining the subspace topology is open this is
+  the case.
 
   <\theorem>
     <label|topology subspace topology open subset>Let
@@ -379,6 +360,9 @@
     </description>
   </proof>
 
+  Given a subset of a topological space we can find the largest open set that
+  is containt in the set, this is the idea of the interior of a set.
+
   <\definition>
     <label|topology interior of a set><index|interior><index|<math|A<rsup|\<circ\>>>><dueto|Interior>Let
     <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
@@ -392,8 +376,8 @@
     <\note>
       If <math|U\<in\><around*|{|V\<in\>\<cal-T\>\|V\<subseteq\>A|}>> then
       <math|U\<in\>\<cal-T\>> and <math|U\<subseteq\>A> so that
-      <math|A<rsup|\<circ\>>\<in\>\<cal-T\>> and
-      <math|A<rsup|0>\<subseteq\>A>.
+      <math|A<rsup|\<circ\>>=<big|cup><rsub|U\<in\><around*|{|V\<in\>\<cal-T\>\|V\<subseteq\>A|}>>U\<in\>\<cal-T\>>
+      and <math|A<rsup|0>\<subseteq\>A>.
     </note>
   </definition>
 
@@ -402,8 +386,8 @@
 
   <\theorem>
     <label|topology biggest open subset>Let
-    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
-    and <math|A\<subseteq\>X> then if <math|U> is a open set such that
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological
+    space, <math|A\<subseteq\>X> and <math|U> a open set such that
     <math|U\<subseteq\>A> then <math|U\<subseteq\>A<rsup|\<circ\>>>.
   </theorem>
 
@@ -427,8 +411,8 @@
     \ 
 
     <\description>
-      <item*|<math|\<Rightarrow\>>>If <math|U> is open then as
-      <math|U\<subseteq\>U> we have by the previous theorem [theorem:
+      <item*|<math|\<Rightarrow\>>>If <math|U> is open then, as
+      <math|U\<subseteq\>U>, we have by the previous theorem [theorem:
       <reference|topology biggest open subset>] that
       <math|U\<subseteq\>U<rsup|\<circ\>>> and by [definition:
       <reference|topology interior of a set>]
@@ -442,8 +426,6 @@
       interior of a set>] <math|U<rsup|\<circ\>>> is open it follows from
       <math|U=U<rsup|\<circ\>>> that <math|U> is open.
     </description>
-
-    \;
   </proof>
 
   <subsection|Closed Sets>
@@ -475,6 +457,11 @@
     <math|\<varnothing\>> and <math|X> are also closed sets.
   </proof>
 
+  The above example shows that a set can be at the same time open and closed.
+  You could also have open sets that are not closed and closed sets that are
+  not open. The following example shows that you can also have sets that are
+  neither open or closed.
+
   <\example>
     Take the topological space <math|<around*|\<langle\>|<around*|{|1,2,3|}>,<around*|{|\<varnothing\>,<around*|{|1,2,3|}>|}>|\<rangle\>>>
     [see example: <reference|topology coarse>] then
@@ -505,40 +492,73 @@
   <\theorem>
     <label|topology and complement closed sets>Let <math|X> be a set and
     <math|\<cal-T\>\<subseteq\>\<cal-P\><around*|(|X|)>> and
-    <math|\<cal-T\><rsup|\<cal-C\>>=<around*|{|A\<in\>\<cal-P\><around*|(|X|)>\|X\\A\<in\>\<cal-T\>|}>>
-    then\ 
 
-    <\theorem>
-      <label|closed set properties>Let <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>>
-      be a topological space then the set of closed sets
-      <math|\<cal-T\><rsup|\<cal-C\>>> satisfies the following:
+    <\equation*>
+      \<cal-T\><rsup|\<cal-C\>>=<around*|{|A\<in\>\<cal-P\><around*|(|X|)>\|X\\A\<in\>\<cal-T\>|}>
+    </equation*>
 
-      <\enumerate>
-        <item><math|\<emptyset\>\<in\>\<cal-T\><rsup|\<cal-C\>>>
+    then
 
-        <item><math|X\<in\>\<cal-T\><rsup|\<cal-C\>>>
-
-        <item>If <math|U\<in\>\<cal-T\>> then
-        <math|X\\U\<in\>\<cal-T\><rsup|\<cal-C\>>>
-
-        <item>If <math|A,B\<in\>\<cal-T\><rsup|\<cal-C\>>> then
-        <math|A<big|cup>B\<in\>\<cal-T\><rsup|\<cal-C\>>>
-
-        <item>If <math|I> is finite and <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-T\><rsup|\<cal-C\>>>
-        is a finite family of closed sets then
-        <math|<big|cup><rsub|i\<in\>I>A<rsub|i>\<in\>\<cal-T\><rsup|\<cal-C\>>>
-
-        <item>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>> is a family in
-        <math|\<cal-T\><rsup|\<cal-C\>>> (a family of closed sets) then
-        <math|<big|cap><rsub|i\<in\>I>A<rsub|i>\<in\>\<cal-T\><rsup|\<cal-C\>>>
-      </enumerate>
-    </theorem>
-
-    Furthermore when <math|\<cal-C\>\<subseteq\>\<cal-P\><around*|(|X|)>> is
-    a set of subsets of <math|X> satisfying 1,2,3 and 5 of the above then
-    <math|\<cal-T\>=<around*|{|X\\A\|A\<in\>\<cal-C\>|}>> is a topology on
-    <math|X> with the set of closed sets <math|\<cal-T\><rsup|\<cal-C\>>=\<cal-C\>>.
+    <\equation*>
+      \<cal-T\>=<around*|{|A\<in\>\<cal-P\><around*|(|X|)>\|X\\A\<in\>\<cal-T\><rsup|\<cal-C\>>|}>
+    </equation*>
   </theorem>
+
+  <\proof>
+    If <math|A\<in\><around*|{|A\<in\>\<cal-P\><around*|(|X|)>\|X\\A\<in\>\<cal-T\><rsup|\<cal-C\>>|}>>
+    then <math|A\<in\>\<cal-P\><around*|(|X|)>\<Rightarrow\>A\<subseteq\>X>
+    and <math|X\\A\<in\>\<cal-T\><rsup|\<cal-C\>>> so that
+    <math|A\<equallim\><rsub|<text|[theorem: <reference|class inclusion and
+    union and intersection>]>>X\\<around*|(|X\\A|)>\<in\>\<cal-T\>> proving\ 
+
+    <\equation>
+      <label|eq 14.1.162><around*|{|A\<in\>\<cal-P\><around*|(|X|)>\|X\\A\<in\>\<cal-T\><rsup|\<cal-C\>>|}>\<subseteq\>\<cal-T\>
+    </equation>
+
+    If <math|A\<in\>\<cal-T\>> then as <math|\<cal-T\>\<subseteq\>\<cal-P\><around*|(|X|)>>
+    we have <math|X\\<around*|(|X\\A|)>\<equallim\><rsub|<text|[theorem:
+    <reference|class inclusion and union and
+    intersection>]>>A\<in\>\<cal-T\>> so that
+    <math|X\\A\<in\>\<cal-T\><rsup|\<cal-C\>>> proving that
+    <math|A\<in\><around*|{|A\<in\>\<cal-P\><around*|(|X|)>\|X\\A\<in\>\<cal-T\><rsup|\<cal-C\>>|}>>.
+    Hence \ <math|\<cal-T\>\<subseteq\><around*|{|A\<in\>\<cal-P\><around*|(|X|)>\|X\\A\<in\>\<cal-T\><rsup|\<cal-C\>>|}>>
+    which combined with [eq: <reference|eq 14.1.162>] proves that\ 
+
+    <\equation*>
+      \<cal-T\>=<around*|{|A\<in\>\<cal-P\><around*|(|X|)>\|X\\A\<in\>\<cal-T\><rsup|\<cal-C\>>|}>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|closed set properties>Let <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>>
+    be a topological space then the set of closed sets
+    <math|\<cal-T\><rsup|\<cal-C\>>> satisfies the following:
+
+    <\enumerate>
+      <item><math|\<emptyset\>\<in\>\<cal-T\><rsup|\<cal-C\>>>
+
+      <item><math|X\<in\>\<cal-T\><rsup|\<cal-C\>>>
+
+      <item>If <math|U\<in\>\<cal-T\>> then
+      <math|X\\U\<in\>\<cal-T\><rsup|\<cal-C\>>>
+
+      <item>If <math|A,B\<in\>\<cal-T\><rsup|\<cal-C\>>> then
+      <math|A<big|cup>B\<in\>\<cal-T\><rsup|\<cal-C\>>>
+
+      <item>If <math|I> is finite and <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-T\><rsup|\<cal-C\>>>
+      is a finite family of closed sets then
+      <math|<big|cup><rsub|i\<in\>I>A<rsub|i>\<in\>\<cal-T\><rsup|\<cal-C\>>>
+
+      <item>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>> is a family in
+      <math|\<cal-T\><rsup|\<cal-C\>>> (a family of closed sets) then
+      <math|<big|cap><rsub|i\<in\>I>A<rsub|i>\<in\>\<cal-T\><rsup|\<cal-C\>>>
+    </enumerate>
+  </theorem>
+
+  Furthermore when <math|\<cal-C\>\<subseteq\>\<cal-P\><around*|(|X|)>> is a
+  set of subsets of <math|X> satisfying 1,2,3 and 5 of the above then
+  <math|\<cal-T\>=<around*|{|X\\A\|A\<in\>\<cal-C\>|}>> is a topology on
+  <math|X> with the set of closed sets <math|\<cal-T\><rsup|\<cal-C\>>=\<cal-C\>>.\ 
 
   <\proof>
     \ 
@@ -548,16 +568,15 @@
 
       <item><math|X\\X=\<emptyset\>\<in\>\<cal-T\>\<Rightarrow\>X\<in\>\<cal-T\><rsup|\<cal-C\>>>
 
-      <item>If <math|U\<in\>\<cal-T\><rsup|\<cal-C\>>> then
-      <math|<around*|(|X\\<around*|(|X\\U|)>|)>\<equallim\><rsub|<text|[theorem:
-      <reference|class inclusion and union and
-      intersection>]>\<wedge\>U\<subseteq\>X>U\<in\>\<cal-T\><rsup|\<cal-C\>>>
+      <item>This follows from [theorem: <reference|topology and complement
+      closed sets>].
 
       <item>If <math|A,B\<in\>\<cal-T\><rsup|\<cal-C\>>> then
       <math|X\\<around*|(|A<big|cup>B|)>\<equallim\><rsub|<with|mode|text|[theorem:
       <reference|class set difference and union ,
       intersection>]>><around*|(|X\\A|)><big|cap><around*|(|X\\B|)>\<in\>\<cal-T\>>
-      [as <math|X\\A,X\\B\<in\>\<cal-T\>> and the definition of a topology].
+      [as <math|X\\A,X\\B\<in\>\<cal-T\>>] so that
+      <math|A<big|cup>B\<in\>\<cal-T\><rsup|\<cal-C\>>>.
 
       <item>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-T\><rsup|\<cal-C\>>>
       then <math|\<forall\>i\<in\>I> we have that <math|X\\A<rsub|i>> is
@@ -591,27 +610,25 @@
       <item><math|X=X\\\<emptyset\>\<Rightarrow\>X\<in\>\<cal-T\>>
 
       <item>If <math|U,V\<in\>\<cal-T\>> then
-      <math|\<exists\>A,B\<in\>\<cal-C\>> such that <math|U=X\\A>,
-      <math|V=X\\B> and
+      <math|X\\U\<in\>\<cal-C\>\<wedge\>X\\V\<in\>\<cal-C\>> so that by (4)
+      <math|<around*|(|X\\U|)><big|cup><around*|(|X\\V|)>\<in\>\<cal-C\>>. As
+      by [theorem:<reference|class set difference and union , intersection>]
+      <math|X\\<around*|(|U<big|cap>V|)>=<around*|(|X\\U|)><big|cup><around*|(|X\\V|)>>
+      it follows that <math|U<big|cap>V\<in\>\<cal-T\>>.
 
-      <\equation*>
-        U<big|cap>V=<around*|(|X\\A|)><big|cap><around*|(|X\\B|)>\<equallim\><rsub|<text|[theorem:<reference|class
-        set difference and union , intersection>]>>X\\<around*|(|A<big|cup>B|)>\<in\>\<cal-T\>
-      </equation*>
-
-      [as <math|A<big|cup>B\<in\>\<cal-C\>>].
-
-      <item>If <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>> is a family in
-      <math|\<cal-T\>> then <math|\<forall\>i\<in\>I> there exists
-      <math|A<rsub|i>\<in\>\<cal-C\>> such that <math|U<rsub|i>=X\\A<rsub|i>>
-      and thus <math|<big|cup><rsub|i\<in\>I>U<rsub|i>=<big|cup><rsub|i\<in\>I><around*|(|X\\A<rsub|i>|)>\<equallim\><rsub|<text|[theorem:<reference|class
-      set difference and union , intersection>]>>X\\<around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)>>
+      <item>If <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-T\>>
+      then <math|\<forall\>i\<in\>I> we have
+      <math|X\\U<rsub|i>\<in\>\<cal-C\>> so that by (6)
+      <math|<big|cap><rsub|i\<in\>I><around*|(|X\\U<rsub|i>|)>\<in\>\<cal-C\>>.
+      As by <math|<with|mode|text|[theorem: <reference|family de Morgan>]>>
+      <math|X\\<around*|(|<big|cup><rsub|i\<in\>I>U<rsub|i>|)>=<big|cap><rsub|i\<in\>I><around*|(|X\\U<rsub|i>|)>>
+      it follows that <math|<big|cup><rsub|i\<in\>I>U<rsub|i>\<in\>\<cal-T\>>.
     </enumerate>
 
-    proving that\ 
+    From the above it follows then that\ 
 
     <\equation*>
-      \<cal-T\><text| is a topology on >X
+      \<cal-T\><text| is a topology>
     </equation*>
 
     If <math|A\<in\>\<cal-T\><rsup|\<cal-C\>>> then
@@ -651,13 +668,23 @@
     <\note>
       If <math|C\<in\><around*|{|C\<in\>\<cal-T\><rsup|\<cal-C\>>\|A\<subseteq\>C|}>>
       then <math|A\<subseteq\>C> and <math|C\<in\>\<cal-T\><rsup|\<cal-C\>>>
-      then we have by [theorems: <reference|family properties
-      (1)>,<reference|topology and complement closed sets>] that
-      <math|A\<subseteq\><wide|A|\<wide-bar\>>> and
-      <math|<wide|A|\<wide-bar\>>\<in\>\<cal-T\><rsup|\<cal-C\>>> [or
-      <math|<wide|A|\<wide-bar\>>> is closed].
+      hence by [theorem: <reference|family properties (1)>] we have\ 
+
+      <\equation*>
+        A\<subseteq\><wide|A|\<wide-bar\>>
+      </equation*>
+
+      further by [theorem: <reference|closed set properties>] we have that\ 
+
+      <\equation*>
+        <wide|A|\<wide-bar\>>\<in\>\<cal-T\><rsup|\<cal-C\>><text| or
+        ><wide|A|\<wide-bar\>><text| is closed>
+      </equation*>
     </note>
   </definition>
+
+  Next we show that the closure of a set is the smallest closed set
+  containing the set.
 
   <\theorem>
     <label|topology closure of a set alternative>Let
@@ -689,8 +716,8 @@
     \ 
 
     <\description>
-      <item*|<math|\<Rightarrow\>>>If <math|A> is closed then
-      as<math|A\<subseteq\>A> we have by the previous theorem [theorem:
+      <item*|<math|\<Rightarrow\>>>If <math|A> is closed then as
+      <math|A\<subseteq\>A> we have by the previous theorem [theorem:
       <reference|topology closure of a set alternative>] that
       <math|<wide|A|\<wide-bar\>>\<subseteq\>A> and by [definition:
       <reference|topology closure of a set>]
@@ -716,7 +743,7 @@
     <math|<around*|(|A\\<around*|{|x|}>|)><big|cap>U\<neq\>\<varnothing\>>.
     The set of all limit points of <math|A> is called the
     <with|font-series|bold|derived> set of <math|A> and noted by
-    <math|A<rprime|'>> so that\ 
+    <math|A<rprime|'>> hence
 
     <\equation*>
       A<rprime|'>=<around*|{|x\<in\>X\|x<text| is a limit point of >A|}>
@@ -748,13 +775,14 @@
       that <math|a\<nin\>U\<Rightarrow\>a\<in\>X\\U> proving that
       <math|A\<subseteq\>X\\U> which, as <math|X\\U> is closed, gives by
       [theorem: <reference|topology closure of a set alternative>] that
-      <math|<wide|A|\<wide-bar\>>\<subseteq\>X\\U>. So as
-      <math|x\<in\><wide|A|\<wide-bar\>>> results in <math|x\<nin\>U>
-      contradicting <math|x\<in\>U>. Hence the assumption is wrong and we
-      must have that <math|x\<in\>A<rprime|'>\<subseteq\>A<big|cup>A<rprime|'>>.
+      <math|<wide|A|\<wide-bar\>>\<subseteq\>X\\U>. Hence if
+      <math|x\<in\><wide|A|\<wide-bar\>>> we have <math|x\<nin\>U>
+      contradicting <math|x\<in\>U>. So the assumption is wrong and we must
+      have that <math|x\<in\>A<rprime|'>\<subseteq\>A<big|cup>A<rprime|'>>.
     </description>
 
-    As in all cases we have <math|x\<in\>A<big|cup>A<rprime|'>> proving that\ 
+    As in all cases we have <math|x\<in\>A<big|cup>A<rprime|'>> it follows
+    that\ 
 
     <\equation>
       <label|eq 14.1.145><wide|A|\<wide-bar\>>\<subseteq\>A<big|cup>A<rprime|'>
@@ -767,12 +795,13 @@
       closure of a set>] <math|A\<subseteq\><wide|A|\<wide-bar\>>>, we have
       <math|x\<in\><wide|A|\<wide-bar\>>>.
 
-      <item*|<math|x\<nin\>A>>Then we must have that
-      <math|x\<in\>A<rprime|'>> and <math|A\\<around*|{|x|}>=A>. Assume that
+      <item*|<math|x\<nin\>A>>Then <math|A\\<around*|{|x|}>=A> and as
+      <math|x\<in\>A<big|cup>XA<rprime|'>> we must have
+      <math|x\<in\>A<rprime|'>><math|>. Assume that
       <math|x\<nin\><wide|A|\<wide-bar\>>> then
       <math|x\<in\>X\\<wide|A|\<wide-bar\>>> a open set, so as
       <math|x\<in\>A<rprime|'>> we have by [definition: <reference|topology
-      limit point>] we have
+      limit point>] that
 
       <\equation*>
         \<varnothing\>\<neq\><around*|(|A\\<around*|{|x|}>|)><big|cap><around*|(|X\\<wide|A|\<wide-bar\>>|)>\<equallim\><rsub|A\\<around*|{|x|}>=A>A<big|cap><around*|(|X\\<wide|A|\<wide-bar\>>|)>\<subseteq\><wide|A|\<wide-bar\>><big|cap><around*|(|X\\<wide|A|\<wide-bar\>>|)>=\<varnothing\>
@@ -843,7 +872,7 @@
     <math|\<varnothing\>\<neq\>A<big|cap><around*|(|X\\<wide|A|\<wide-bar\>>|)>\<subseteq\><wide|A|\<wide-bar\>><big|cap><around*|(|X\\<wide|A|\<wide-bar\>>|)>=\<varnothing\>>
     a contradiction. So we must have that <math|x\<in\><wide|A|\<wide-bar\>>>
     proving that <math|<around*|{|x\<in\>X\|\<forall\>U\<in\>\<cal-T\><text|
-    with >x\<in\>U<text| we have >A<big|cap>U\<neq\>\<varnothing\>|}>\<subseteq\><wide|A|\<wide-bar\>>>
+    with >x\<in\>U<text| we have >A<big|cap>U\<neq\>\<varnothing\>|}>\<subseteq\><wide|A|\<wide-bar\>>>,
     which combined with <math|>[eq: <reference|eq 14.2.145>] proves\ 
 
     <\equation*>
@@ -905,8 +934,9 @@
     <math|\<forall\>U\<in\>\<cal-T\>> there exists a
     <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-B\>> such
     that <math|U=<big|cup><rsub|i\<in\>I>B<rsub|i>>. In other words
-    <math|\<cal-B\>> is a basis for <math|\<cal-T\>> if every open set is the
-    union of the open sets in <math|\<cal-B\>>.
+    <math|\<cal-B\>> is a basis for <math|\<cal-T\>> if <math|\<cal-B\>>
+    consist of open sets and every open set is the union of sets in
+    <math|\<cal-B\>>.
   </definition>
 
   <\theorem>
@@ -932,16 +962,22 @@
       <math|x\<in\>B<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>I>B<rsub|i>=U>
       which as <math|B<rsub|i>\<in\>\<cal-B\>> proves our assertion.\ 
 
-      <item*|<math|\<Leftarrow\>>>Assume that <math|\<forall\>x\<in\>I> there
+      <item*|<math|\<Leftarrow\>>>Assume that <math|\<forall\>x\<in\>U> there
       exist a <math|B\<in\>\<cal-B\>> such that <math|x\<in\>B\<subseteq\>U>
       then by a consequence of the Axiom of Choice [see theorem:
       <reference|choice function generating>] there exist a
       <math|<around*|{|B<rsub|x>|}><rsub|x\<in\>U>\<subseteq\>\<cal-B\>> such
-      that <math|\<forall\>x\<in\>U> <math|x\<in\>B<rsub|x>\<subseteq\>U>. As
-      <math|\<forall\>x\<in\>U> <math|B<rsub|x>\<subseteq\>U> we have
+      that
+
+      <\equation*>
+        \<forall\>x\<in\>U<text| we have<space|1em>>x\<in\>B<rsub|x>\<subseteq\>U
+      </equation*>
+
+      Hence using [theorem: <reference|family properties (1)>] it follow that
       <math|<big|cup><rsub|x\<in\>U>B<rsub|x>\<subseteq\>U>, further if
-      <math|x\<in\>U> then <math|x\<in\>B<rsub|x>\<in\>\<cal-B\>> so that
-      <math|x\<in\><big|cup><rsub|y\<in\>U>B<rsub|y>>. Hence\ 
+      <math|x\<in\>U> then <math|x\<in\>B<rsub|x>> so that
+      <math|x\<in\><big|cup><rsub|y\<in\>U>B<rsub|y>>, proving that
+      <math|U\<subseteq\><big|cup><rsub|y\<in\>U>B<rsub|y>>. Hence\ 
 
       <\equation*>
         U=<big|cup><rsub|x\<in\>U>B<rsub|x><text| where
@@ -949,8 +985,8 @@
       </equation*>
 
       Finally as <math|\<forall\>x\<in\>U>
-      <math|B<rsub|x>\<in\>\<cal-B\>\<subseteq\>\<cal-T\>> it follows that
-      <math|U=<big|cup><rsub|x\<in\>U>B<rsub|x>\<in\>\<cal-T\>>,
+      <math|B<rsub|x>\<in\>\<cal-B\>\<subseteq\>\<cal-T\>\<Rightarrow\>B<rsub|x>\<in\>\<cal-T\>>
+      it follows that <math|U=<big|cup><rsub|x\<in\>U>B<rsub|x>\<in\>\<cal-T\>>,
     </description>
   </proof>
 
@@ -973,8 +1009,8 @@
     If <math|B\<in\>\<cal-B\><rsub|A>> then there exist a
     <math|B<rprime|'>\<in\>\<cal-B\>> such that
     <math|B=B<rprime|'><big|cap>A>, hence, as
-    <math|\<cal-B\>\<subseteq\>\<cal-T\>>, we have that
-    <math|B\<in\>\<cal-T\><rsub|\|A>> proving that\ 
+    <math|\<cal-B\>\<subseteq\>\<cal-T\>\<Rightarrow\>B<rprime|'>\<in\>\<cal-T\>>,
+    we have that <math|B\<in\>\<cal-T\><rsub|\|A>> proving that\ 
 
     <\equation*>
       \<cal-B\><rsub|\|A>\<subseteq\>\<cal-T\><rsub|\|A>
@@ -1003,8 +1039,8 @@
     <\equation*>
       \<cal-B\><text| is a basis for<verbatim| >>\<cal-T\><text|
       >\<Leftrightarrow\><text| >\<forall\>U\<in\>\<cal-T\><text| we have
-      >\<forall\>x\<in\>U<text| there exist a >B\<in\>\<cal-B\><text| such
-      that >x\<in\>B\<subseteq\>U
+      >\<forall\>x\<in\>U<text| that there exist a >B\<in\>\<cal-B\><text|
+      such that >x\<in\>B\<subseteq\>U
     </equation*>
   </theorem>
 
@@ -1013,11 +1049,10 @@
 
     <\description>
       <item*|<math|\<Rightarrow\>>>Let <math|U\<in\>\<cal-T\>> then, as
-      <math|\<cal-B\>> is a basis for <math|\<cal-T\>>, there exist a
-      <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-B\>> such
-      that <math|U=<big|cup><rsub|i\<in\>I>B<rsub|i>>. If <math|x\<in\>U>
-      then there exist a <math|i\<in\>I> such that
-      <math|x\<in\>B<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>I>B=U>.
+      <math|\<cal-B\>> is a basis for <math|\<cal-T\>> we have by [theorem:
+      <reference|topology basis and open sets>] that
+      <math|\<forall\>x\<in\>U> there exist a <math|B\<in\>\<cal-B\>> such
+      that <math|x\<in\>B\<subseteq\>U>.
 
       <item*|<math|\<Leftarrow\>>>If <math|U\<in\>\<cal-T\>> then
       <math|\<forall\>x\<in\>U> there exists a
@@ -1036,21 +1071,24 @@
         U=<big|cup><rsub|x\<in\>U>B<rsub|x><text| where
         ><around*|{|B<rsub|x>|}><rsub|x\<in\>U>\<subseteq\>\<cal-B\>
       </equation*>
+
+      Proving that <math|\<cal-B\>> is a basis for <math|\<cal-T\>>.
     </description>
   </proof>
 
-  <\theorem>
+  <\corollary>
     <label|topology basis and super basis>Let
     <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological
-    space, <math|B> a basis for <math|\<cal-T\>> and
-    <math|\<cal-B\><rprime|'>> such that <math|\<cal-B\>\<subseteq\>\<cal-A\>\<subseteq\>\<cal-T\>>
-    then <math|\<cal-A\>> is a basis of \ <math|\<cal-T\>>
-  </theorem>
+    space, <math|\<cal-B\>> a basis for <math|\<cal-T\>> and <math|\<cal-A\>>
+    such that <math|\<cal-B\>\<subseteq\>\<cal-A\>\<subseteq\>\<cal-T\>> then
+    <math|\<cal-A\>> is a basis of \ <math|\<cal-T\>>
+  </corollary>
 
   <\proof>
     Let <math|U\<in\>\<cal-T\>> and <math|x\<in\>U> then as <math|\<cal-B\>>
-    is a basis of <math|\<cal-T\>> there exist a <math|B\<in\>\<cal-B\>> such
-    that <math|x\<in\>B\<subseteq\>U>. As
+    is a basis of <math|\<cal-T\>> there exist by [theorem:
+    <reference|topology basis alternative definition>] a
+    <math|B\<in\>\<cal-B\>> such that <math|x\<in\>B\<subseteq\>U>. As
     <math|\<cal-B\>\<subseteq\>\<cal-A\>> we have that
     <math|B\<in\>\<cal-A\>> proving by [theorem: <reference|topology basis
     alternative definition>] and the fact that
@@ -1085,7 +1123,7 @@
     <\description>
       <item*|<math|\<Rightarrow\>>>Let <math|x\<in\>X> and take
       <math|B\<in\>\<cal-B\><rsub|1>> such that <math|x\<in\>B>. As
-      <math|B\<in\>\<cal-B\><rsub|1>\<subseteq\>\<cal-T\><rsub|1>\<subseteq\>\<cal-T\><rsub|2>\<Rightarrow\>B\<in\>\<b-T\><rsub|2>>
+      <math|B\<in\>\<cal-B\><rsub|1>\<subseteq\>\<cal-T\><rsub|1>\<subseteq\>\<cal-T\><rsub|2>\<Rightarrow\>B\<in\>\<cal-T\><rsub|2>>
       and <math|\<cal-B\><rsub|2>> is a basis for <math|\<cal-T\><rsub|2>> we
       have by [theorem: <reference|topology basis and open sets>] that there
       exist a <math|B<rprime|'>\<in\>\<cal-B\><rsub|2>> such that
@@ -1095,14 +1133,15 @@
       take <math|x\<in\>U> then by [theorem: <reference|topology basis and
       open sets>] and the fact that <math|\<cal-B\><rsub|1>> is a basis for
       <math|\<cal-T\><rsub|1>> it follows that there exist a
-      <math|B\<in\>\<b-B\><rsub|1>> such that <math|x\<in\>B\<subseteq\>U>.
+      <math|B\<in\>\<cal-B\><rsub|1>> such that <math|x\<in\>B\<subseteq\>U>.
       Using the hypothesis there exist a <math|B<rprime|'>\<in\>\<cal-B\><rsub|2>>
       such that <math|x\<in\>B<rprime|'>\<subseteq\>B\<subseteq\>U>. Applying
       then \ [theorem: <reference|topology basis and open sets>] again proves
-      that <math|U\<in\>\<cal-T\><rsub|2>>. Hence we have\ 
+      that <math|U\<in\>\<cal-T\><rsub|2>>. Hence we have
+      \ <math|\<cal-T\><rsub|1>\<subseteq\>\<cal-T\><rsub|2>> or\ 
 
       <\equation*>
-        \<cal-T\><rsub|1>\<subseteq\>\<cal-T\><rsub|2>
+        \<cal-T\><rsub|2><text| is finer then >\<cal-T\><rsub|1>
       </equation*>
     </description>
   </proof>
@@ -1146,8 +1185,8 @@
       <item><math|\<forall\>x\<in\>X> there exist a <math|B\<in\>\<cal-B\>>
       such that <math|x\<in\>B>.
 
-      <item><math|\<forall\>B<rsub|1>,B<rsub|2>\<in\>\<cal-B\>> then
-      <math|\<forall\>x\<in\>B<rsub|1><big|cap>B<rsub|2>> then
+      <item><math|\<forall\>B<rsub|1>,B<rsub|2>\<in\>\<cal-B\>> we have
+      <math|\<forall\>x\<in\>B<rsub|1><big|cap>B<rsub|2>> that
       <math|\<exists\>B\<in\>\<cal-B\>> such that
       <math|x\<in\>B\<subseteq\>B<rsub|1><big|cap>B<rsub|2>>
     </enumerate>
@@ -1157,24 +1196,21 @@
     \ 
 
     <\enumerate>
-      <item>As <math|X\<in\>\<cal-T\>> there exist a
-      <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-B\>> such
-      that <math|X=<big|cup><rsub|i\<in\>I>B<rsub|i>> hence if
-      <math|x\<in\>X> there exist a <math|i\<in\>I> such that
-      <math|x\<in\>B<rsub|i>\<in\>\<cal-B\>>.
+      <item>As <math|X\<in\>\<cal-T\>> it follows from [theorem:
+      <reference|topology basis and open sets>] that for <math|x\<in\>X>
+      there exist a <math|B\<in\>\<cal-B\>> such that
+      <math|x\<in\>B\<in\>\<cal-B\>>.
 
       <item>If <math|x\<in\>B<rsub|1><big|cap>B<rsub|2>> then as
       <math|B<rsub|1>>, <math|B<rsub|2>\<in\>\<cal-B\>\<subseteq\>\<cal-T\>>
       we have that <math|B<rsub|1><big|cap>B<rsub|2>\<in\>\<cal-T\>>, hence
-      as <math|\<cal-B\>> is a basis for <math|\<cal-T\>> there exist a
-      <math|<around*|{|C<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-B\>> such
-      that <math|B<rsub|1><big|cap>B<rsub|2>=<big|cup><rsub|i\<in\>I>C<rsub|i>>.
-      So if <math|x\<in\>B<rsub|1><big|cap>B<rsub|2>> there exists a
-      <math|i\<in\>I> such that <math|x\<in\>C<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>I>C<rsub|i>=B<rsub|1><big|cap>B<rsub|2>>.
+      as <math|\<cal-B\>> is a basis for <math|\<cal-T\>> there exist by
+      [theorem: <reference|topology basis and open sets>] a
+      <math|B\<in\>\<cal-B\>> such that <math|x\<in\>B\<subseteq\>B<rsub|1><big|cap>B<rsub|2>>.
     </enumerate>
   </proof>
 
-  The above show the necessary condition that a basis must satisfies, the
+  The above show the necessary conditions that a basis must satisfies, the
   following shows that any set of subset fulfilling the above conditions can
   be the basis of a topology.
 
@@ -1188,7 +1224,7 @@
       such that <math|x\<in\>B>
 
       <item><math|\<forall\>B<rsub|1>,B<rsub|2>\<in\>\<cal-B\>> we have
-      <math|\<forall\>x\<in\>B<rsub|1><big|cap>B<rsub|2>> there exist a
+      <math|\<forall\>x\<in\>B<rsub|1><big|cap>B<rsub|2>> that there exist a
       <math|B\<in\>\<cal-B\>> such that <math|x\<in\>B\<subseteq\>B<rsub|1><big|cap>B<rsub|2>>
     </enumerate>
 
@@ -1197,7 +1233,7 @@
     <\equation*>
       \<cal-T\><around*|[|\<cal-B\>|]>=<around*|{|U\<in\>\<cal-P\><around*|(|X|)>\|\<forall\>x\<in\>U<text|
       there exist a >B\<in\>\<cal-B\><text| such that
-      >x\<in\>B\<subseteq\>U|}>
+      >x\<in\>B\<subseteq\>U|}><text| is a topology>
     </equation*>
 
     and\ 
@@ -1225,13 +1261,16 @@
       <math|B\<in\>\<cal-B\>\<subseteq\>\<cal-P\><around*|(|X|)>> such that
       <math|x\<in\>B\<subseteq\>X> hence <math|X\<in\>\<cal-T\><around*|[|\<cal-B\>|]>>.
 
-      <item>Let <math|U<rsub|1>,U<rsub|2>\<in\>\<cal-T\><around*|[|\<cal-B\>|]>>,
-      if <math|x\<in\>U<rsub|1><big|cap>U<rsub|2>> then
+      <item>Let <math|U<rsub|1>,U<rsub|2>\<in\>\<cal-T\><around*|[|\<cal-B\>|]>>.
+      If <math|x\<in\>U<rsub|1><big|cap>U<rsub|2>> then
       <math|x\<in\>U<rsub|1>\<wedge\>x\<in\>U<rsub|2>>, so there exists
       <math|B<rsub|1>,B<rsub|2>\<in\>\<cal-B\>> such that
       <math|x\<in\>B<rsub|1>\<subseteq\>U<rsub|1>> and
       <math|x\<in\>B<rsub|2>\<subseteq\>U<rsub|2>>, so
       <math|x\<in\>B<rsub|1><big|cap>B<rsub|2>\<subseteq\>U<rsub|1><big|cap>U<rsub|2>>.
+      By (2) there exist a <math|B\<in\>\<cal-B\>> such that
+      <math|x\<in\>B\<subseteq\>B<rsub|1><big|cap>B<rsub|2>\<subseteq\>U<rsub|1><big|cap>U<rsub|2>>
+      proving that <math|U<rsub|1><big|cap>U<rsub|2>\<in\>\<cal-T\><around*|[|\<cal-B\>|]>>
 
       <item>Let <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-T\><around*|[|\<cal-B\>|]>>,
       if <math|x\<in\><big|cup><rsub|i\<in\>I>U<rsub|i>> then there exist a
@@ -1344,14 +1383,14 @@
       then we have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|x\<in\><big|cap><rsub|i\<in\><around*|(|I<rsub|1>\<times\><around*|{|0|}>|)><big|cup><around*|(|I<rsub|2>\<times\><around*|{|1|}>|)>>R<rsub|i>>|<cell|\<Leftrightarrow\>>|<cell|\<forall\><around*|(|i,j|)>\<in\><around*|(|I<rsub|1>\<times\><around*|{|0|}>|)><big|cup><around*|(|I<rsub|2>\<times\><around*|{|1|}>|)>
-        we have x\<in\>R<rsub|<around*|(|i,j|)>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|[|\<forall\><around*|(|i,j|)>\<in\>I<rsub|1>\<times\><around*|{|0|}>
-        we have x\<in\>R<rsub|<around*|(|i,j|)>>|]>\<wedge\><around*|[|\<forall\><around*|(|i,j|)>\<in\>I<rsub|2>\<times\><around*|{|1|}>
-        we have x\<in\>R<rsub|<around*|(|i,j|)>>|]>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|[|\<forall\>i\<in\>I<rsub|1>
-        we have x\<in\>R<rsub|<around*|(|i,0|)>>|]>\<wedge\><around*|[|\<forall\>i\<in\>I<rsub|2>
-        we have x\<in\>R<rsub|<around*|(|i,1|)>>|]>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|[|\<forall\>i\<in\>I<rsub|1>
-        we have x\<in\>S<rsub|i>|]>\<wedge\><around*|[|\<forall\>i\<in\>I<rsub|2>
-        we have x\<in\>T<rsub|i>|]>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><big|cap><rsub|i\<in\>I<rsub|1>>S<rsub|i>\<wedge\>x\<in\><big|cap><rsub|i\<in\>I<rsub|2>>T<rsub|i>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>B<rsub|1><big|cap>B<rsub|2>>>>>
+        <tformat|<table|<row|<cell|y\<in\><big|cap><rsub|i\<in\><around*|(|I<rsub|1>\<times\><around*|{|0|}>|)><big|cup><around*|(|I<rsub|2>\<times\><around*|{|1|}>|)>>R<rsub|i>>|<cell|\<Leftrightarrow\>>|<cell|\<forall\><around*|(|i,j|)>\<in\><around*|(|I<rsub|1>\<times\><around*|{|0|}>|)><big|cup><around*|(|I<rsub|2>\<times\><around*|{|1|}>|)>
+        we have y\<in\>R<rsub|<around*|(|i,j|)>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|[|\<forall\><around*|(|i,j|)>\<in\>I<rsub|1>\<times\><around*|{|0|}>
+        we have y\<in\>R<rsub|<around*|(|i,j|)>>|]>\<wedge\><around*|[|\<forall\><around*|(|i,j|)>\<in\>I<rsub|2>\<times\><around*|{|1|}>
+        we have y\<in\>R<rsub|<around*|(|i,j|)>>|]>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|[|\<forall\>i\<in\>I<rsub|1>
+        we have y\<in\>R<rsub|<around*|(|i,0|)>>|]>\<wedge\><around*|[|\<forall\>i\<in\>I<rsub|2>
+        we have y\<in\>R<rsub|<around*|(|i,1|)>>|]>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|[|\<forall\>i\<in\>I<rsub|1>
+        we have y\<in\>S<rsub|i>|]>\<wedge\><around*|[|\<forall\>i\<in\>I<rsub|2>
+        we have y\<in\>T<rsub|i>|]>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><big|cap><rsub|i\<in\>I<rsub|1>>S<rsub|i>\<wedge\>y\<in\><big|cap><rsub|i\<in\>I<rsub|2>>T<rsub|i>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>B<rsub|1><big|cap>B<rsub|2>>>>>
       </eqnarray*>
 
       This proves that <math|B<rsub|1><big|cap>B<rsub|2>=<big|cap><rsub|i\<in\><around*|(|I<rsub|1>\<times\><around*|{|0|}>|)><big|cup><around*|(|I<rsub|2>\<times\><around*|{|1|}>|)>>R<rsub|i>\<in\>\<cal-B\>>
@@ -1366,9 +1405,9 @@
   </proof>
 
   Given a family of a topological spaces we can generate a topology for the
-  products of the spaces. It turns out that we have two choices, the box
-  topology and the product topology. In the finite case these topologies are
-  the same.
+  products of the spaces. It turns out that we have two trivial choices: the
+  box topology and the product topology. In the finite case these topologies
+  are the same.
 
   <\definition>
     <label|topology box><index|box topology>Let <math|I> be a non empty set,
@@ -1378,7 +1417,7 @@
     <math|<big|prod><rsub|i\<in\>I>X<rsub|i>> generated by the basis
 
     <\equation*>
-      \<cal-A\>=<around*|{|<big|prod><rsub|i\<in\>I>U<rsub|i>\|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)><text|
+      \<cal-A\>=<around*|{|<big|prod><rsub|i\<in\>I>U<rsub|i>\|<around*|{|U<rsub|i>|}><rsub|i\<in\>I><text|
       is a family such that >\<forall\>i\<in\>I<text|
       >U<rsub|i>\<in\>\<cal-T\><rsub|i>|}>
     </equation*>
@@ -1394,9 +1433,8 @@
     Of course we must ensure that <math|\<cal-A\>> satisfies the conditions
     specified in [theorem: <reference|topology basis generating>]. First if
     <math|B\<in\>\<cal-A\>> then there exist a
-    <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)>>
-    satisfying <math|\<forall\>i\<in\>I> we have
-    <math|U<rsub|i>\<in\>\<cal-T\><rsub|i>\<subseteq\>\<cal-P\><around*|(|X<rsub|i>|)>\<Rightarrow\>U<rsub|i>\<subseteq\>X<rsub|i>>
+    <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>> satisfying
+    <math|\<forall\>i\<in\>I> we have <math|U<rsub|i>\<in\>\<cal-T\><rsub|i>\<subseteq\>\<cal-P\><around*|(|X<rsub|i>|)>\<Rightarrow\>U<rsub|i>\<subseteq\>X<rsub|i>>
     such that <math|B=<big|prod><rsub|i\<in\>I>U<rsub|i>>. Hence using
     ]theorem: <reference|product inclusion>] we have that
     <math|B=<big|prod><rsub|i\<in\>I>U<rsub|i>\<subseteq\><big|prod><rsub|i\<in\>I>X<rsub|i>>,
@@ -1407,11 +1445,10 @@
       \<cal-A\>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)>
     </equation*>
 
-    Further we have\ 
+    Further we have:
 
     <\enumerate>
-      <item>As <math|\<forall\>i\<in\>I> we have
-      <math|<big|prod><rsub|i\<in\>I>X<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>I>X<rsub|i>\<Rightarrow\><big|prod><rsub|i\<in\>I>X<rsub|i>\<in\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)>>
+      <item>As <math|\<forall\>i\<in\>I> \ <math|<big|prod><rsub|i\<in\>I>X<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>I>X<rsub|i>\<Rightarrow\><big|prod><rsub|i\<in\>I>X<rsub|i>\<in\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)>>
       and <math|\<forall\>i\<in\>I> <math|X<rsub|i>\<in\>\<cal-T\><rsub|i>>
       it follows that
 
@@ -1420,11 +1457,11 @@
       </equation*>
 
       Hence <math|\<forall\>x\<in\><big|prod><rsub|i\<in\>I>X<rsub|i>> we
-      have that for <math|B=<big|prod><rsub|i\<in\>I>X<rsub|i>\<in\>\<cal-A\>>
+      have for <math|B=<big|prod><rsub|i\<in\>I>X<rsub|i>\<in\>\<cal-A\>>
       that <math|x\<in\>B\<in\>\<cal-A\>>.
 
       <item>Let <math|B<rsub|1>,B<rsub|2>\<in\>\<cal-A\>> then there exist
-      <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>,<around*|{|V<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)>>
+      <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>,<around*|{|V<rsub|i>|}><rsub|i\<in\>I>>
       satisfying <math|\<forall\>i\<in\>I>
       <math|U<rsub|i>,V<rsub|i>\<in\>\<cal-T\><rsub|i>> such that
       <math|B<rsub|1>=<big|prod><rsub|i\<in\>I>U<rsub|i>> and
@@ -1457,7 +1494,7 @@
     <math|\<cal-B\><rsub|i>> a basis for <math|\<cal-T\><rsub|i>> then\ 
 
     <\equation*>
-      \<cal-B\>=<around*|{|<big|prod><rsub|i\<in\>I>B<rsub|i>\|<around*|{|B<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)><text|
+      \<cal-B\>=<around*|{|<big|prod><rsub|i\<in\>I>B<rsub|i>\|<around*|{|B<rsub|i>|}><rsub|i\<in\>I><text|
       is a family such that >\<forall\>i\<in\>I<text|
       >B<rsub|i>\<in\>\<cal-B\><rsub|i>|}>
     </equation*>
@@ -1474,31 +1511,31 @@
 
     <\equation*>
       \<cal-T\><rsub|box>=\<cal-T\><around*|[|\<cal-A\>|]><text| where
-      >\<cal-A\>=<around*|{|<big|prod><rsub|i\<in\>I>U<rsub|i>\|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)><text|
+      >\<cal-A\>=<around*|{|<big|prod><rsub|i\<in\>I>U<rsub|i>\|<around*|{|U<rsub|i>|}><rsub|i\<in\>I><text|
       is a family such that >\<forall\>i\<in\>I<text|
       >U<rsub|i>\<in\>\<cal-T\><rsub|i>|}>
     </equation*>
 
-    So if <math|U\<in\>\<cal-T\><rsub|box>> and
-    <math|x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>U> there exist a
-    <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)>>
-    satisfying <math|\<forall\>i\<in\>I> <math|U<rsub|i>\<in\>\<cal-T\><rsub|i>>
-    such that
+    So if <math|U\<in\>\<cal-T\><rsub|box>> and <math|x\<in\>U> then by
+    [theorem: <reference|topology basis generating>] there exist a
+    <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>> satisfying
+    <math|\<forall\>i\<in\>I> <math|U<rsub|i>\<in\>\<cal-T\><rsub|i>> such
+    that
 
     <\equation*>
-      x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\>I>U<rsub|i>\<subseteq\>U\<Rightarrow\>\<forall\>i\<in\>I<text|
-      we have >x<rsub|i>\<in\>U<rsub|i>
+      x\<in\><big|prod><rsub|i\<in\>I>U<rsub|i>\<subseteq\>U<text| hence
+      >\<forall\>i\<in\>I<text| we have >x<rsub|i>\<in\>U<rsub|i>
     </equation*>
 
     Let <math|i\<in\>I> then as <math|\<cal-B\><rsub|i>> is a basis of
     <math|\<cal-T\><rsub|i>> there exist by [theorem: <reference|topology
     basis and open sets>] a <math|B\<in\>\<cal-B\><rsub|i>> such that
     <math|x<rsub|i>\<in\>B\<subseteq\>U<rsub|i>>. So if we define
-    <math|\<cal-A\><rsub|i>=<around*|{|B\<in\>\<cal-B\><rsub|i>\|x<rsub|i>\<in\>B\<subseteq\>U<rsub|i>|}>>
-    then <math|\<cal-A\><rsub|i>\<neq\>\<varnothing\>>, using the Axiom of
+    <math|\<cal-A\><rsub|i>=<around*|{|B\<in\>\<cal-B\><rsub|i>\|x<rsub|i>\<in\>B\<subseteq\>U<rsub|i>|}>\<subseteq\>\<cal-B\><rsub|i>>
+    then <math|\<cal-A\><rsub|i>\<neq\>\<varnothing\>>. Using the Axiom of
     Choice [see theorem: <reference|choice Axiom of choice consequences>]
-    there exist a function <math|B:I\<rightarrow\><big|cup><rsub|i\<in\>I>\<cal-B\><rsub|i>>
-    such that <math|\<forall\>i\<in\>I> <math|B<rsub|i>\<in\>\<cal-B\><rsub|i>>.
+    there exist a function <math|B:I\<rightarrow\><big|cup><rsub|i\<in\>I>\<cal-A\><rsub|i>>
+    such that <math|\<forall\>i\<in\>I> <math|B<rsub|i>\<in\>\<cal-A\><rsub|i>\<subseteq\>\<cal-B\><rsub|i>>.
     This defines a family <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>I>> such
     that <math|\<forall\>i\<in\>I> <math|x<rsub|i>\<in\>B<rsub|i>\<subseteq\>U<rsub|i>>
     and thus by [theorem: <reference|product inclusion>]
@@ -1516,7 +1553,7 @@
     <math|<around*|{|<around*|\<langle\>|X<rsub|i>,\<cal-T\><rsub|i>|\<rangle\>>|}><rsub|i\<in\>I>>
     be a family of topological spaces then the product topology
     <math|\<cal-T\><rsub|product>> on <math|<big|prod><rsub|i\<in\>I>X<rsub|i>>
-    is defined by the sub-base\ 
+    is defined by the subbase\ 
 
     <\equation*>
       \<cal-S\>=<around*|{|\<pi\><rsub|i><rsup|-1><around*|(|V|)>\|i\<in\>I\<wedge\>V\<in\>\<cal-T\><rsub|i>|}>
@@ -1544,7 +1581,7 @@
       [theorem: <reference|topology subbasis>]\ 
 
       <\equation*>
-        \<cal-B\><around*|[|S|]>=<around*|{|B\<in\>\<cal-P\><around*|(|X|)>\|\<exists\><around*|{|S<rsub|i>|}><rsub|i\<in\>J>\<subseteq\>\<cal-S\><text|,
+        \<cal-B\><around*|[|S|]>=<around*|{|B\<in\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)>\|\<exists\><around*|{|S<rsub|i>|}><rsub|i\<in\>J>\<subseteq\>\<cal-S\><text|,
         >J<text| finite and >J\<neq\>\<varnothing\><text| such that
         >B=<big|cap><rsub|i\<in\>J>S<rsub|i>|}>
       </equation*>
@@ -1557,7 +1594,7 @@
     be a family of topological spaces then if we define
 
     <\equation*>
-      \<cal-B\>=<around*|{|<big|prod><rsub|i\<in\>I>U<rsub|i>\|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)><text|
+      \<cal-B\>=<around*|{|<big|prod><rsub|i\<in\>I>U<rsub|i>\|<around*|{|U<rsub|i>|}><rsub|i\<in\>I><text|
       is such that there exist a finite >J\<subseteq\>I<text| with
       >\<forall\>i\<in\>J<text| >U<rsub|i>\<in\>\<cal-T\><rsub|i><text| and
       >\<forall\>i\<in\>I\\J<text| >U<rsub|i>=X<rsub|i>|}>
@@ -1586,12 +1623,13 @@
     So\ 
 
     <\equation*>
-      \<cal-T\><rsub|product>\<equallim\><rsub|<text|definition>>\<cal-T\><around*|[|\<cal-B\><around*|[|\<cal-S\>|]>|]>=\<cal-B\>
+      \<cal-T\><rsub|product>\<equallim\><rsub|<text|definition>>\<cal-T\><around*|[|\<cal-B\><around*|[|\<cal-S\>|]>|]>=\<cal-T\><around*|[|\<cal-B\>|]>
     </equation*>
   </theorem>
 
   <\proof>
-    Then there must exist a <math|<around*|{|S<rsub|i>|}><rsub|i\<in\>J>\<subseteq\>\<cal-S\>>,
+    Let <math|B\<in\>\<cal-B\><around*|[|S|]>>. Then there must exist a
+    <math|<around*|{|S<rsub|i>|}><rsub|i\<in\>J>\<subseteq\>\<cal-S\>>,
     <math|\<varnothing\>\<neq\>J> finite such that
     <math|B=<big|cap><rsub|i\<in\>J>S<rsub|i>>. Let <math|i\<in\>J> then as
     <math|S<rsub|i>\<in\>\<cal-S\>> we have <math|\<exists\>k<rsub|i>\<in\>I>
@@ -1600,7 +1638,7 @@
     Define\ 
 
     <\equation*>
-      <text|>\<forall\>i\<in\>J <around*|{|B<rsub|k<rsub|i>,k>|}><rsub|k\<in\>I>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)><text|
+      <text|>\<forall\>i\<in\>J <around*|{|B<rsub|k<rsub|i>,k>|}><rsub|k\<in\>I><text|
       by >B<rsub|k<rsub|i>,k>=<choice|<tformat|<table|<row|<cell|U<rsub|k<rsub|i>>\<in\>\<cal-T\><rsub|k><text|
       if >k<rsub|i>=k>>|<row|<cell|X<rsub|k>\<in\>\<cal-T\><rsub|k><text| if
       >k\<in\>I\\<around*|{|k<rsub|i>|}>>>>>>\<in\>\<cal-T\><rsub|k>
@@ -1637,7 +1675,7 @@
     <\eqnarray*>
       <tformat|<table|<row|<cell|B>|<cell|=>|<cell|<big|cap><rsub|i\<in\>J>S<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<big|cap><rsub|i\<in\>J><around*|(|<big|prod><rsub|k\<in\>I>B<rsub|k<rsub|i>,k>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
       <reference|product intersection of a
-      product>]]>>>|<cell|<big|prod><rsub|k\<in\>I><around*|(|<big|cap><rsub|i\<in\>J>B<rsub|k<rsub|i>,k>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|k\<in\>I>C<rsub|k><eq-number><label|eq
+      product>]>>>|<cell|<big|prod><rsub|k\<in\>I><around*|(|<big|cap><rsub|i\<in\>J>B<rsub|k<rsub|i>,k>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|k\<in\>I>C<rsub|k><eq-number><label|eq
       14.4.146>>>>>
     </eqnarray*>
 
@@ -1655,17 +1693,18 @@
 
     Define <math|K=<around*|{|k<rsub|i>\|i\<in\>J|}>\<subseteq\>I> which is
     finite as <math|J> is finite [see theorem: <reference|surjection
-    f:A-\<gtr\>B if A is finite then B is finite>], if <math|k\<in\>I\\K>
-    then <math|\<forall\>i\<in\>J> we have <math|k\<neq\>k<rsub|i>> so that
-    <math|B<rsub|k<rsub|i>,k>=X<rsub|k>> hence
-    <math|C<rsub|k>=<big|cap><rsub|i\<in\>J>X<rsub|k>=X<rsub|k>>. To conclude
-    we have\ 
+    f:A-\<gtr\>B if A is finite then B is finite>], further as
+    <math|J\<neq\>\<varnothing\>> <math|K\<neq\>\<varnothing\>>. If
+    <math|k\<in\>I\\K> then <math|\<forall\>i\<in\>J> we have
+    <math|k\<neq\>k<rsub|i>> so that <math|B<rsub|k<rsub|i>,k>=X<rsub|k>>
+    hence <math|C<rsub|k>=<big|cap><rsub|i\<in\>J>X<rsub|k>=X<rsub|k>>. To
+    conclude we have\ 
 
     <\equation*>
       B=<big|prod><rsub|k\<in\>I>C<rsub|k><text| and
-      >\<forall\>k\<in\>A<text| <math|C<rsub|k>\<in\>\<cal-T\><rsub|k><text|
-      and >\<forall\>k\<in\>I\\A<text| >C<rsub|k>=X<rsub|k><text| where
-      >A<text| is finite and non empty>>>
+      >\<forall\>k\<in\>I<text| <math|C<rsub|k>\<in\>\<cal-T\><rsub|k><text|
+      and >\<forall\>k\<in\>I\\K<text| >C<rsub|k>=X<rsub|k><text| where
+      >K<text| is finite and non empty>>>
     </equation*>
 
     So by definition of <math|\<cal-B\>> we have \ <math|B\<in\>\<cal-B\>>.
@@ -1676,18 +1715,24 @@
     </equation>
 
     Let <math|B\<in\>\<cal-B\>>. Then <math|B=<big|prod><rsub|i\<in\>I>U<rsub|i>>
-    where <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)>>
-    is a family such that there exist a finite non empty
-    <math|J\<subseteq\>I> such that <math|\<forall\>i\<in\>J>
-    <math|U<rsub|i>\<in\>\<cal-T\><rsub|i>> and <math|\<forall\>i\<in\>I\\J>
-    <math|U<rsub|i>=X<rsub|i>>. Define\ 
+    where <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>> is a family such that
+    there exist a finite non empty <math|J\<subseteq\>I> such that
 
-    <\equation*>
-      <around*|{|U<rsub|i,j>|}><rsub|<around*|(|i,j|)>\<in\>I\<times\>J>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)><text|
+    <\equation>
+      <label|eq 14.8.163>\<forall\>i\<in\>J<text|
+      >U<rsub|i>\<in\>\<cal-T\><rsub|i><text| and
+      >\<forall\>i\<in\>I\\J<text| we have >U<rsub|i>=X<rsub|i>
+    </equation>
+
+    Define\ 
+
+    <\equation>
+      <label|eq 14.9.164><around*|{|U<rsub|i,j>|}><rsub|<around*|(|i,j|)>\<in\>I\<times\>J><text|
       by >U<rsub|i,j>=<choice|<tformat|<table|<row|<cell|U<rsub|i><text| if
       >i=j>>|<row|<cell|X<rsub|i><text| if
-      ><around*|(|i,j|)>\<in\>I\<times\>J\\<around*|{|<around*|(|i,j|)>\<in\>I\<times\>J\|i\<neq\>j|}>>>>>>
-    </equation*>
+      ><around*|(|i,j|)>\<in\>I\<times\>J\\<around*|{|<around*|(|i,j|)>\<in\>I\<times\>J\|i=j|}>>>>>>=<choice|<tformat|<table|<row|<cell|U<rsub|i><text|
+      if >i=j>>|<row|<cell|X<rsub|i><text| if >i\<neq\>j>>>>>
+    </equation>
 
     Let <math|i\<in\>I>. If <math|x\<in\>U<rsub|i>> then
     <math|\<forall\>j\<in\>J> we have either <math|i=j> then
@@ -1700,13 +1745,23 @@
     </equation>
 
     If <math|x\<in\><big|cap><rsub|j\<in\>J>U<rsub|i,j>> then
-    <math|\<forall\>j\<in\>J> <math|x\<in\>U<rsub|i,j>>. \ If
-    <math|i\<in\>I\\J> we have <math|\<forall\>j\<in\>J> that
-    <math|i\<neq\>j> so that <math|x\<in\>U<rsub|i,j>=X<rsub|i>=U<rsub|i>>,
-    if <math|i\<in\>J> then \ <math|x\<in\>U<rsub|i,i>=U<rsub|i>>. Hence
-    <math|<big|cap><rsub|j\<in\>J>U<rsub|i,j>\<subseteq\>U<rsub|i>> which by
-    [eq: <reference|eq 14.7.146>] proves that
-    <math|U<rsub|i>=<big|cap><rsub|j\<in\>J>U<rsub|i,j>>. Hence\ 
+    <math|\<forall\>j\<in\>J> <math|x\<in\>U<rsub|i,j>>. For <math|i> we have
+    either:
+
+    <\description>
+      <item*|<math|i\<in\>I\\J>>Then <math|\<forall\>j\<in\>J> we have
+      <math|i\<neq\>j> so that <math|x\<in\>U<rsub|i,j>\<equallim\><rsub|<text|[eq:
+      <reference|eq 14.9.164>]>>X<rsub|i>\<equallim\><rsub|<text|[eq:
+      <reference|eq 14.8.163>]>>U<rsub|i>>
+
+      <item*|<math|i\<in\>J>>As <math|x\<in\><big|cap><rsub|j\<in\>J>U<rsub|i,j>>
+      we have <math|x\<in\>U<rsub|i,i>\<equallim\><rsub|<text|[eq:
+      <reference|eq 14.9.164>]>>U<rsub|i>>
+    </description>
+
+    Hence <math|<big|cap><rsub|j\<in\>J>U<rsub|i,j>\<subseteq\>U<rsub|i>>
+    which by [eq: <reference|eq 14.7.146>] proves that
+    <math|U<rsub|i>=<big|cap><rsub|j\<in\>J>U<rsub|i,j>>. Summarized
 
     <\equation>
       <label|eq 14.8.146>\<forall\>i\<in\>I<text| we have
@@ -1716,16 +1771,17 @@
     Next
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|B>|<cell|=>|<cell|<big|prod><rsub|i\<in\>I>U<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|i\<in\>I><around*|(|<big|cap><rsub|j\<in\>J>U<rsub|i,j>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <tformat|<table|<row|<cell|B>|<cell|=>|<cell|<big|prod><rsub|i\<in\>I>U<rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 14.8.146>]>>>|<cell|<big|prod><rsub|i\<in\>I><around*|(|<big|cap><rsub|j\<in\>J>U<rsub|i,j>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
       <reference|product intersection of a
       product>]]>>>|<cell|<big|cap><rsub|j\<in\>J><around*|(|<big|prod><rsub|i\<in\>I>U<rsub|i,j>|)><eq-number><label|eq
       14.9.146>>>>>
     </eqnarray*>
 
     Let <math|j\<in\>J>. If <math|x\<in\><big|prod><rsub|i\<in\>I>U<rsub|i,j>>
-    then <math|\<pi\><rsub|j><around*|(|x|)>\<in\>U<rsub|j,j>=U<rsub|j>> so
-    that <math|x\<in\>\<pi\><rsub|j><rsup|-1><around*|(|U<rsub|j>|)>> proving
-    that
+    then <math|\<pi\><rsub|j><around*|(|x|)>\<in\>U<rsub|j,j>\<equallim\><rsub|<text|[eq:
+    <reference|eq 14.9.164>]>>U<rsub|j>> so that
+    <math|x\<in\>\<pi\><rsub|j><rsup|-1><around*|(|U<rsub|j>|)>> proving that
 
     <\equation>
       <label|eq 14.10.146><big|prod><rsub|i\<in\>I>U<rsub|i,j>\<subseteq\>\<pi\><rsub|j><rsup|-1><around*|(|U<rsub|j>|)>
@@ -1735,9 +1791,11 @@
     <math|i\<in\>I> we have either:\ 
 
     <\description>
-      <item*|<math|i=j>>Then <math|\<pi\><rsub|i><around*|(|x|)>\<equallim\><rsub|i=j>\<pi\><rsub|j><around*|(|x|)>\<in\>U<rsub|j>=U<rsub|j,j>=U<rsub|i,j>>
+      <item*|<math|i=j>>Then <math|\<pi\><rsub|i><around*|(|x|)>\<equallim\><rsub|i=j>\<pi\><rsub|j><around*|(|x|)>\<in\>U<rsub|j>\<equallim\><rsub|<text|[eq:
+      <reference|eq 14.9.164>]>>U<rsub|j,j>=U<rsub|i,j>>
 
-      <item*|<math|i\<neq\>j>>Then <math|\<pi\><rsub|i><around*|(|x|)>\<in\>X<rsub|i>\<equallim\><rsub|i\<neq\>j>U<rsub|i,j>>
+      <item*|<math|i\<neq\>j>>Then <math|\<pi\><rsub|i><around*|(|x|)>\<in\>X<rsub|i>\<equallim\><rsub|<text|[eq:
+      <reference|eq 14.9.164>]>>U<rsub|i,j>>
     </description>
 
     so that in all cases <math|\<pi\><rsub|i><around*|(|x|)>\<in\>U<rsub|i,j>>
@@ -1752,18 +1810,21 @@
     Substituting this in [eq: <reference|eq 14.9.146>] gives\ 
 
     <\equation*>
-      B=<big|cap><rsub|j\<in\>J>\<pi\><rsup|-1><rsub|j><around*|(|U<rsub|j>|)><text|
-      where >\<pi\><rsup|-1><rsub|j><around*|(|U<rsub|j>|)>\<in\>\<cal-S\><text|
-      and >j<text| is finite and non empty>
+      B=<big|cap><rsub|j\<in\>J>\<pi\><rsup|-1><rsub|j><around*|(|U<rsub|j>|)>
     </equation*>
 
-    proving that <math|B\<in\>\<cal-B\><around*|[|\<cal-S\>|]>>. Hence
+    Further <math|\<forall\>j\<in\>J> <math|U<rsub|j>\<in\>\<cal-T\><rsub|j>>
+    so that by definition of <math|S> <math|\<pi\><rsup|-1><rsub|j><around*|(|U<rsub|j>|)>\<in\>S>
+    which together with the above and the fact that <math|J> is finite proves
+    that <math|B\<in\>\<cal-B\><around*|[|\<cal-S\>|]>>. Hence
     <math|\<cal-B\>\<subseteq\>\<cal-B\><around*|[|S|]>> which combined with
     [eq: <reference|eq 14.6.146>] gives
 
     <\equation*>
       \<cal-B\>=\<cal-B\><around*|[|\<cal-S\>|]>
     </equation*>
+
+    proving the theorem.
   </proof>
 
   <\corollary>
@@ -1772,8 +1833,9 @@
     be a family of topological spaces then\ 
 
     <\equation*>
-      \<cal-B\>=<around*|{|<big|cap><rsub|i\<in\>J>\<pi\><rsup|-1><rsub|i><around*|(|U<rsub|i>|)>\|<around*|{|U<rsub|i>|}><rsub|i\<in\>J>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)><text|
-      where J is finite non empty and >\<forall\>j\<in\>U<rsub|j>\<in\>\<cal-T\><rsub|j>|}>
+      \<cal-B\>=<around*|{|<big|cap><rsub|i\<in\>J>\<pi\><rsup|-1><rsub|i><around*|(|U<rsub|i>|)>\|<around*|{|U<rsub|i>|}><rsub|i\<in\>J><text|
+      is a familu such that J is finite non empty and
+      >\<forall\>j\<in\>U<rsub|j>\<in\>\<cal-T\><rsub|j>|}>
     </equation*>
 
     is basis for the product topology <math|\<cal-T\><rsub|product>> on
@@ -1785,14 +1847,14 @@
     <reference|topology product>] we have\ 
 
     <\equation*>
-      \<cal-T\><rsub|product>=\<cal-B\><around*|[|\<cal-S\>|]><text| where
-      >\<cal-S\>=<around*|{|\<pi\><rsup|-1><rsub|i><around*|(|V|)>\|i\<in\>I\<wedge\>V\<in\>\<cal-T\><rsub|i>|}>
+      \<cal-T\><rsub|product>=\<cal-T\><around*|[|\<cal-B\><around*|[|\<cal-S\>|]>|]><text|
+      where >\<cal-S\>=<around*|{|\<pi\><rsup|-1><rsub|i><around*|(|V|)>\|i\<in\>I\<wedge\>V\<in\>\<cal-T\><rsub|i>|}>
     </equation*>
 
     Let <math|B\<in\>\<cal-B\>> then there exist a finite non empty <math|J>
-    and <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>J>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)>>
-    satisfying <math|\<forall\>j\<in\>J> <math|U<rsub|j>\<in\>\<cal-T\><rsub|j>>
-    such that <math|<big|cap><rsub|i\<in\>J>\<pi\><rsub|i><rsup|-1><around*|(|U<rsub|i>|)>>.
+    and <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>J>> satisfying
+    <math|\<forall\>j\<in\>J> <math|U<rsub|j>\<in\>\<cal-T\><rsub|j>> such
+    that <math|B=<big|cap><rsub|i\<in\>J>\<pi\><rsub|i><rsup|-1><around*|(|U<rsub|i>|)>>.
     If <math|i\<in\>J> then <math|\<pi\><rsub|i><rsup|-1><around*|(|U<rsub|i>|)>\<in\>\<cal-S\>\<subseteq\>\<cal-B\><around*|[|\<cal-S\>|]>\<subseteq\>\<cal-T\><rsub|product>>
     so that <math|><math|\<pi\><rsub|i><rsup|-1><around*|(|U<rsub|i>|)>\<in\>\<cal-T\><rsub|product>>.
     As <math|J> is finite non empty it follows from [theorem:
@@ -1808,7 +1870,7 @@
     have that\ 
 
     <\equation*>
-      \<cal-A\>=<around*|{|<big|prod><rsub|i\<in\>I>U<rsub|i>\|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)><text|
+      \<cal-A\>=<around*|{|<big|prod><rsub|i\<in\>I>U<rsub|i>\|<around*|{|U<rsub|i>|}><rsub|i\<in\>I><text|
       such that there exist a finite non empty >J\<subseteq\>I<text| with
       >\<forall\>i\<in\>J<text| >U<rsub|i>\<in\>\<cal-T\><rsub|i><text| and
       >\<forall\>i\<in\>I\\J<text| >U<rsub|i>=X<rsub|i>|}><text| is a basis
@@ -1817,24 +1879,24 @@
     </equation*>
 
     If <math|B\<in\>\<cal-A\>> then <math|B=<big|prod><rsub|i\<in\>I>U<rsub|i>>
-    where <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)>>
-    and there exist a finite non empty <math|J\<subseteq\>I> such that
+    where for <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>> there exist a
+    finite non empty <math|J\<subseteq\>I> such that
     <math|\<forall\>i\<in\>J> <math|U<rsub|i>\<in\>\<cal-T\><rsub|i>> and
     <math|\<forall\>I\\J> we have <math|U<rsub|i>=X<rsub|i>>. Then we have:
 
     <\enumerate>
       <item>If <math|x\<in\><big|prod><rsub|i\<in\>I>U<rsub|i>> then
-      <math|\<forall\>i\<in\>J> we have that
+      <math|\<forall\>i\<in\>I> we have that
       <math|\<pi\><rsub|i><around*|(|x|)>\<in\>U<rsub|i>> or
       <math|x\<in\>\<pi\><rsub|i><rsup|-1><around*|(|U<rsub|i>|)>> proving
-      that <math|x\<in\><big|cap><rsub|i\<in\>J>\<pi\><rsup|-1><rsub|i><around*|(|U<rsub|i>|)>>
+      that <math|x\<in\><big|cap><rsub|i\<in\>I>\<pi\><rsup|-1><rsub|i><around*|(|U<rsub|i>|)>>
       proving that\ 
 
       <\equation*>
         <big|prod><rsub|i\<in\>I>U<rsub|i>\<subseteq\><big|cap><rsub|i\<in\>I>\<pi\><rsup|-1><rsub|i><around*|(|U<rsub|i>|)>
       </equation*>
 
-      <item>If <math|x\<in\><big|cap><rsub|i\<in\>J>\<pi\><rsup|-1><rsub|i><around*|(|U<rsub|i>|)>>
+      <item>If <math|x\<in\><big|cap><rsub|i\<in\>I>\<pi\><rsup|-1><rsub|i><around*|(|U<rsub|i>|)>>
       then <math|\<forall\>i\<in\>I> we have either:
 
       <\description>
@@ -1888,13 +1950,13 @@
     definition>]\ 
 
     <\equation*>
-      \<cal-B\><rsub|box>=<around*|{|<big|prod><rsub|i\<in\>I>U<rsub|i>\|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)><text|
+      \<cal-B\><rsub|box>=<around*|{|<big|prod><rsub|i\<in\>I>U<rsub|i>\|<around*|{|U<rsub|i>|}><rsub|i\<in\>I><text|
       is a family such that >\<forall\>i\<in\>I<text|
       >U<rsub|i>\<in\>\<cal-T\><rsub|i>|}>
     </equation*>
 
     <\equation*>
-      \<cal-B\><rsub|topology>=<around*|{|<big|prod><rsub|i\<in\>I>U<rsub|i>\|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)><text|
+      \<cal-B\><rsub|product>=<around*|{|<big|prod><rsub|i\<in\>I>U<rsub|i>\|<around*|{|U<rsub|i>|}><rsub|i\<in\>I><text|
       is such that there exist a finite >J\<subseteq\>I<text| with
       >\<forall\>i\<in\>J<text| >U<rsub|i>\<in\>\<cal-T\><rsub|i><text| and
       >\<forall\>i\<in\>I\\J<text| >U<rsub|i>=X<rsub|i>|}>
@@ -1903,8 +1965,8 @@
     <\enumerate>
       <item>Let <math|B\<in\>\<cal-B\><rsub|product>> then
       <math|B=<big|prod><rsub|i\<in\>I>U<rsub|i>> where
-      <math|><math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)>>
-      is such that <math|> there exist a finite <math|J\<subseteq\>I> with
+      <math|><math|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>> is such that
+      <math|> there exist a finite <math|J\<subseteq\>I> with
       <math|\<forall\>i\<in\>J<text| >U<rsub|i>\<in\>\<cal-T\><rsub|i><text|
       and >\<forall\>i\<in\>I\\J<text| >U<rsub|i>=X<rsub|i>>. As
       <math|\<forall\>i\<in\>I\\J> <math|U<rsub|i>=X<rsub|i>\<in\>\<cal-T\><rsub|i>>
@@ -1917,7 +1979,7 @@
         >\<subseteq\>\<cal-B\><rsub|box>
       </equation>
 
-      If <math|x\<in\>X> and <math|B\<in\>\<cal-B\><rsub|product>> such that
+      If <math|x\<in\>X> and <math|B\<in\>\<cal-B\><rsub|product>> satisfies
       <math|x\<in\>B> then as <math|\<cal-B\><rsub|product
       >\<subseteq\>\<cal-B\><rsub|box>> we have also
       <math|B\<in\>\<cal-B\><rsub|box>> hence <math|x\<in\>B\<subseteq\>B>
@@ -1928,7 +1990,7 @@
 
       <item>Assume that <math|I> is finite. Take
       <math|B\<in\>\<cal-B\><rsub|box>> then
-      <math|B=<big|prod><rsub|i\<in\>I>U<rsub|i>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)><text|>>
+      <math|B=<big|prod><rsub|i\<in\>I>U<rsub|i>\<subseteq\><big|prod><rsub|i\<in\>I>X<rsub|i><text|>>
       is such that <math|\<forall\>i\<in\>I>
       <math|U<rsub|i>\<in\>\<cal-T\><rsub|i>> which as <math|I> is finite and
       <math|I\\I=\<varnothing\>> means that
@@ -1955,7 +2017,8 @@
     <math|A<rsub|i>\<subseteq\>X<rsub|i>> be equipped with the subspace
     topology <math|<around*|(|\<cal-T\><rsub|i>|)><rsub|\|A<rsub|i>>> then
     the subspace topology <math|<around*|(|\<cal-T\><rsub|product>|)><rsub|\|<big|prod><rsub|i\<in\>I>A<rsub|i>>>
-    is the product topology of <math|<around*|{|<around*|\<langle\>|A<rsub|i>,<around*|(|\<cal-T\><rsub|i>|)><rsub|\|A<rsub|i>>|\<rangle\>>|}><rsub|i\<in\>I>>
+    for <math|<big|prod><rsub|i\<in\>I>A<rsub|i>> is the product topology of
+    <math|<around*|{|<around*|\<langle\>|A<rsub|i>,<around*|(|\<cal-T\><rsub|i>|)><rsub|\|A<rsub|i>>|\<rangle\>>|}><rsub|i\<in\>I>>.
   </theorem>
 
   <\proof>
@@ -1976,16 +2039,16 @@
     <\enumerate>
       <item>If <math|B\<in\><around*|(|\<cal-B\><rsub|product>|)><rsub|\|<big|prod><rsub|i\<in\>I>A<rsub|i>>>
       then by [definition: <reference|topology product alternative
-      definition>] then <math|B=<around*|(|<big|prod><rsub|i\<in\>I>U<rsub|i>|)><big|cap><around*|(|<big|prod><rsub|i\<in\>I>A<rsub|i>|)>>
+      definition>] \ <math|B=<around*|(|<big|prod><rsub|i\<in\>I>U<rsub|i>|)><big|cap><around*|(|<big|prod><rsub|i\<in\>I>A<rsub|i>|)>>
       where <math|U<rsub|i>=X<rsub|i>> except for a finite subset <math|J> of
       <math|I> where <math|U<rsub|i>\<in\>\<cal-T\><rsub|>>. Hence
       <math|B=<big|prod><rsub|i\<in\>I><around*|(|U<rsub|i><big|cap>A<rsub|i>|)>>
       where for <math|i\<in\>I\\J> <math|U<rsub|i><big|cap>A<rsub|i>=X<rsub|i><big|cap>A<rsub|i>=A<rsub|i>>
-      and for <math|i\<in\>J> then <math|U<rsub|i><big|cap>A<rsub|i>\<in\><around*|(|\<cal-T\><rsub|i>|)><rsub|\|A<rsub|i>>>.
+      and for <math|i\<in\>J> \ <math|U<rsub|i><big|cap>A<rsub|i>\<in\><around*|(|\<cal-T\><rsub|i>|)><rsub|\|A<rsub|i>>>.
       So by [definition: <reference|topology product alternative definition>]
       it follows that <math|B\<in\>\<cal-B\><rsup|product >> the basis of
-      <math|\<cal-T\><rsup|product>> be the product topology of
-      <math|<around*|{|<around*|\<langle\>|A<rsub|i>,<around*|(|\<cal-T\><rsub|i>|)><rsub|\|A<rsub|i>>|\<rangle\>>|}><rsub|i\<in\>I>>.
+      <math|\<cal-T\><rsup|product>> [the product topology of
+      <math|<around*|{|<around*|\<langle\>|A<rsub|i>,<around*|(|\<cal-T\><rsub|i>|)><rsub|\|A<rsub|i>>|\<rangle\>>|}><rsub|i\<in\>I>>].
       Hence we have\ 
 
       <\equation*>
@@ -1998,12 +2061,13 @@
       <math|U<rsub|i>=A<rsub|i>=X<rsub|i><big|cap>A<rsub|i>> except for a
       finite <math|J\<subseteq\>I> where <math|U<rsub|i>\<in\><around*|(|\<cal-T\><rsub|i>|)><rsub|A<rsub|i>>\<Rightarrow\>U<rsub|i>=W<rsub|i><big|cap>A<rsub|i>>
       where <math|W<rsub|i>\<in\>\<cal-T\><rsub|i>>. Then if we define
-      <math|<around*|{|W<rsub|i>|}><rsub|i\<in\>I>> by
-      <math|W<rsub|i>=<choice|<tformat|<table|<row|<cell|X<rsub|i><text| if
+      <math|<around*|{|V<rsub|i>|}><rsub|i\<in\>I>> by
+      <math|V<rsub|i>=<choice|<tformat|<table|<row|<cell|X<rsub|i><text| if
       >i\<in\>I\\J>>|<row|<cell|W<rsub|i><text| if >i\<in\>J>>>>>>then
-      <math|B=<big|prod><rsub|i\<in\>I><around*|(|W<rsub|i><big|cap>A<rsub|i>|)>=<around*|(|<big|prod><rsub|i\<in\>I>W<rsub|i>|)><big|cap><around*|(|<big|prod><rsub|i\<in\>I>A<rsub|i>|)>>.
+      <math|B=<big|prod><rsub|i\<in\>I><around*|(|V<rsub|i><big|cap>A<rsub|i>|)>\<equallim\><rsub|<text|]theorem:
+      <reference|product and intersection>]>><around*|(|<big|prod><rsub|i\<in\>I>V<rsub|i>|)><big|cap><around*|(|<big|prod><rsub|i\<in\>I>A<rsub|i>|)>>.
       By [definition: <reference|topology product alternative definition>]
-      <math|<around*|(|<big|prod><rsub|i\<in\>I>W<rsub|i>|)>\<in\>\<cal-B\><rsub|product>>
+      <math|<big|prod><rsub|i\<in\>I>V<rsub|i>\<in\>\<cal-B\><rsub|product>>
       so that <math|B\<in\><around*|(|\<cal-B\><rsub|product>|)><rsub|\|<big|prod><rsub|i\<in\>I>A<rsub|i>>>.
       Hence we have\ 
 
@@ -2012,7 +2076,7 @@
       </equation*>
     </enumerate>
 
-    Using the above it follows that <math|<around*|(|\<cal-B\><rsub|product>|)><rsub|\|<big|prod><rsub|i\<in\>I>A<rsub|i>>=\<cal-B\><rsup|product>>
+    Using (1) and (2) it follows that <math|<around*|(|\<cal-B\><rsub|product>|)><rsub|\|<big|prod><rsub|i\<in\>I>A<rsub|i>>=\<cal-B\><rsup|product>>
     proving that\ 
 
     <\equation*>
@@ -2020,6 +2084,8 @@
       ><text| the product topology of ><around*|{|<around*|\<langle\>|A<rsub|i>,\<cal-T\><rsub|i>|\<rangle\>>|}><rsub|i\<in\>I>
     </equation*>
   </proof>
+
+  TODO
 
   <subsection|Dense sets>
 
@@ -3335,7 +3401,7 @@
   </proof>
 
   <\theorem>
-    <label|normded triangle inequality>Let
+    <label|normed triangle inequality>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
     a pseudo normed space and <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>X>,
     <math|I> finite then\ 
@@ -6440,7 +6506,7 @@
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|<around*|\<\|\|\>|x|\<\|\|\>>>|<cell|=>|<cell|<around*|\<\|\|\>|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i>\<cdot\>e<rsub|i>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[theorem:
-      <reference|normded triangle inequality>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x<rsub|i>\<cdot\>e<rsub|i>|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\||x<rsub|i>|\|>\<cdot\><around*|\<\|\|\>|e<rsub|i>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>max<around*|{|<around*|\||x<rsub|i>|\|>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>\<cdot\><around*|\<\|\|\>|e<rsub|i>|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x|\<\|\|\>><rsub|n>\<cdot\><around*|\<\|\|\>|e<rsub|i>|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|x|\<\|\|\>><rsub|n>\<cdot\><big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|e<rsub|i>|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|x|\<\|\|\>><rsub|n>\<cdot\>A<text|
+      <reference|normed triangle inequality>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x<rsub|i>\<cdot\>e<rsub|i>|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\||x<rsub|i>|\|>\<cdot\><around*|\<\|\|\>|e<rsub|i>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>max<around*|{|<around*|\||x<rsub|i>|\|>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>\<cdot\><around*|\<\|\|\>|e<rsub|i>|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x|\<\|\|\>><rsub|n>\<cdot\><around*|\<\|\|\>|e<rsub|i>|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|x|\<\|\|\>><rsub|n>\<cdot\><big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|e<rsub|i>|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|x|\<\|\|\>><rsub|n>\<cdot\>A<text|
       where >A=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|e<rsub|i>|\<\|\|\>>>>>>
     </eqnarray*>
 
@@ -15052,10 +15118,6 @@
 
   \;
 
-  TODO
-
-  \;
-
   <section|Complete spaces>
 
   Next we define a necessary condition for a sequence to be convergent in a
@@ -17734,7 +17796,7 @@
     then <math|\<forall\>i\<in\><around*|{|0,\<ldots\>,n|}>> we have that
 
     <\equation*>
-      <big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|i><text| converges>
+      <big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j><text| converges>
     </equation*>
 
     and
@@ -18077,7 +18139,7 @@
 
     <\equation*>
       \<forall\>i\<in\>I<text| ><big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j><text|
-      converges and ><big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>=<big|sum><rsub|i\<in\>K>x<rsub|i>
+      converges and ><big|sum><rsub|i\<in\>K>x<rsub|i>=<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>
     </equation*>
   </theorem>
 
@@ -18179,8 +18241,6 @@
 
   <subsubsection|Absolute convergent series>
 
-  \;
-
   <\definition>
     <label|series absolute convergence><index|absolute
     convergence><dueto|Absolute Convergence>Let
@@ -18228,14 +18288,14 @@
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|<around*|\<\|\|\>|<big|sum><rsub|i=k><rsup|n>x<rsub|i>-<big|sum><rsub|i=k><rsup|m>x<rsub|i>|\<\|\|\>>>|<cell|=>|<cell|<around*|\<\|\|\>|<big|sum><rsub|i=k><rsup|m>x<rsub|i>-<big|sum><rsub|i=k><rsup|n>x<rsub|i>|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|<big|sum><rsub|i=n+1><rsup|m>x<rsub|i>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[theorem:
-        <reference|normded triangle inequality>]>>>|<cell|<big|sum><rsub|i=n+1><rsup|m><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<big|sum><rsub|i=n+1><rsup|m>s<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||<big|sum><rsub|i=n+1><rsup|m>s|\|>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||<big|sum><rsub|i=k><rsup|m>s<rsub|i>-<big|sum><rsub|i=k><rsup|n>s<rsub|i>|\|>>>|<row|<cell|>|<cell|\<less\>>|<cell|\<varepsilon\>>>>>
+        <reference|normed triangle inequality>]>>>|<cell|<big|sum><rsub|i=n+1><rsup|m><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<big|sum><rsub|i=n+1><rsup|m>s<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||<big|sum><rsub|i=n+1><rsup|m>s|\|>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||<big|sum><rsub|i=k><rsup|m>s<rsub|i>-<big|sum><rsub|i=k><rsup|n>s<rsub|i>|\|>>>|<row|<cell|>|<cell|\<less\>>|<cell|\<varepsilon\>>>>>
       </eqnarray*>
 
       <item*|<math|m\<less\>n>>
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|<around*|\<\|\|\>|<big|sum><rsub|i=k><rsup|n>x<rsub|i>-<big|sum><rsub|i=k><rsup|m>x<rsub|i>|\<\|\|\>>>|<cell|=>|<cell|<around*|\<\|\|\>|<big|sum><rsub|i=n+1><rsup|m>x<rsub|i>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[theorem:
-        <reference|normded triangle inequality>]>>>|<cell|<big|sum><rsub|i=n+1><rsup|m><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<big|sum><rsub|i=n+1><rsup|m>s<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||<big|sum><rsub|i=n+1><rsup|m>s|\|>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||<big|sum><rsub|i=k><rsup|m>s<rsub|i>-<big|sum><rsub|i=k><rsup|n>s<rsub|i>|\|>>>|<row|<cell|>|<cell|\<less\>>|<cell|\<varepsilon\>>>>>
+        <reference|normed triangle inequality>]>>>|<cell|<big|sum><rsub|i=n+1><rsup|m><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<big|sum><rsub|i=n+1><rsup|m>s<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||<big|sum><rsub|i=n+1><rsup|m>s|\|>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||<big|sum><rsub|i=k><rsup|m>s<rsub|i>-<big|sum><rsub|i=k><rsup|n>s<rsub|i>|\|>>>|<row|<cell|>|<cell|\<less\>>|<cell|\<varepsilon\>>>>>
       </eqnarray*>
     </description>
 
@@ -18735,6 +18795,71 @@
     </description>
   </proof>
 
+  Another way of expressing the concept of absolute convergence of countable
+  families is expressed in the following theorem.
+
+  <\theorem>
+    <label|series absolute convergence countable family>Let
+    <math|k\<in\>\<bbb-N\><rsub|0>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    a Banach space, <math|I> a countable set,
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>X> a countable
+    family in <math|X> then we have\ 
+
+    <\equation*>
+      <big|sum><rsub|i\<in\>I>x<rsub|i><text| is absolute convergent
+      >\<Leftrightarrow\><text| ><big|sum><rsub|i\<in\>I><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><text|
+      is convergent>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    As <math|I> is countable we must consider two possibilities:\ 
+
+    <\description>
+      <item*|<math|I> is finite>Then we have:
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>Using [definition: <reference|series non
+        negative numbers countable sums>] it follows that
+        <math|<big|sum><rsub|i\<in\>I><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>>
+        is convergent.
+
+        <item*|<math|\<Leftarrow\>>>Using [definition: <reference|series
+        absolute sum over a countable set>] it follows that
+        <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> is absolute convergent.
+      </description>
+
+      <item*|<math|I> is denumerable>Then we have:\ 
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>As <math|<big|sum><rsub|i\<in\>I>x<rsub|i>>
+        is absolute convergent there exist a bijection
+        <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>I> such that
+        <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|i>> is absolute
+        convergent. Hence <math|<big|sum><rsub|i=0><rsup|\<infty\>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>>
+        is convergent or using [definition: <reference|series non negative
+        numbers countable sums>]
+
+        <\equation*>
+          <big|sum><rsub|i\<in\>I><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><text|
+          is convergent>
+        </equation*>
+
+        <item*|<math|\<Leftarrow\>>>If <math|<big|sum><rsub|i\<in\>I><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>>
+        is convergent we have by [definition: <reference|series non negative
+        numbers countable sums>] that <math|<big|sum><rsub|i=0><rsup|\<infty\>><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>>
+        is convergent. Hence by [definition: <reference|series absolute sum
+        over a countable set>]\ 
+
+        <\equation*>
+          <big|sum><rsub|i\<in\>I>x<rsub|i><text| is absolute convergent>
+        </equation*>
+      </description>
+    </description>
+
+    \;
+  </proof>
+
   Using the above definition we can extend [theorem: <reference|sum bijection
   on index>] from finite sums to countable absolute convergent sums.
 
@@ -18782,6 +18907,146 @@
         <big|sum><rsub|i\<in\>I>x<rsub|\<beta\><around*|(|i|)>>=<big|sum><rsub|i\<in\>I>y<rsub|i><text|
         is absolute convergent and ><big|sum><rsub|i\<in\>I>x<rsub|\<beta\><around*|(|i|)>>=<big|sum><rsub|i\<in\>I>y<rsub|i>=<big|sum><rsub|i\<in\>J>x<rsub|i>
       </equation*>
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|series absolute convergence sum and scalar product>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
+    a Banach space and <math|I> a countable set then we have:
+
+    <\enumerate>
+      <item>If <math|\<alpha\>\<in\>\<bbb-K\>> and
+      <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> a absolute convergent series
+      then <math|<big|sum><rsub|i\<in\>I><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>>
+      is a absolute convergent series and
+      <math|<big|sum><rsub|i\<in\>I><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>=\<alpha\>\<cdot\><big|sum><rsub|i\<in\>I>x<rsub|i>>.
+
+      <item>If <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> and
+      <math|<big|sum><rsub|i\<in\>I>y<rsub|i>> are convergent series then
+      <math|<big|sum><rsub|i\<in\>I><around*|(|x<rsub|i>+y<rsub|i>|)>> is a
+      absolute convergent seires and <math|<big|sum><rsub|i\<in\>I><around*|(|x<rsub|i>+y<rsub|i>|)>=<big|sum><rsub|i\<in\>I>x<rsub|i>+<big|sum><rsub|i\<in\>I>y<rsub|i>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    As <math|I> is countable we have either:\ 
+
+    <\description>
+      <item*|<math|I> is finite>Then (1) follows from [theorem:
+      <reference|vector space finite sum (1)>] and (2) follows from [theorem:
+      <reference|sum of sums (2)>].
+
+      <item*|<math|I> is denumerable>Then we have:
+
+      <\enumerate>
+        <item>As <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> is absolute
+        convergent there exist by definition a bijection
+        <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>I> such that
+        <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>>
+        is absolute convergent, hence <math|<big|sum><rsub|i=0><rsup|\<infty\>><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>>
+        is convergent. Using [theorem: <reference|series absolute convergence
+        sum and scalar product>] it follows that\ 
+
+        <\equation*>
+          <big|sum><rsub|i=0><rsup|\<infty\>><around*|\<\|\|\>|\<alpha\>\<cdot\>x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>=<big|sum><rsub|i=0><rsup|\<infty\>><around*|(|<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>|)><text|
+          is a convergent series>
+        </equation*>
+
+        proving that <math|<big|sum><rsub|i=0><rsup|\<infty\>><around*|(|\<alpha\>\<cdot\>x<rsub|\<beta\><around*|(|i|)>>|)>>
+        is absolute convergent. Hence by [definition: <reference|series
+        absolute sum over a countable set>]\ 
+
+        <\equation*>
+          <big|sum><rsub|i\<in\>I><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)><text|
+          is absolute convergent>
+        </equation*>
+
+        Further using [theorem: <reference|series absolute convergence equals
+        convergence only in Banach space>]
+        <math|<big|sum><rsub|i\<in\>I><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>>
+        converges and we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<big|sum><rsub|i\<in\>I><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>>|<cell|\<equallim\><rsub|<text|[definition:
+          <reference|sum of a countable set>]>>>|<cell|<big|sum><rsub|i=0><rsup|\<infty\>><around*|(|\<alpha\>\<cdot\>x<rsub|\<beta\><around*|(|i|)>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|series absolute convergence sum and scalar
+          product>]>>>|<cell|\<alpha\>\<cdot\><big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+          <reference|sum of a countable set>]>>>|<cell|\<alpha\>\<cdot\><big|sum><rsub|i\<in\>I>x<rsub|i>>>>>
+        </eqnarray*>
+
+        or
+
+        <\equation*>
+          <big|sum><rsub|i\<in\>I><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>=\<alpha\>\<cdot\><big|sum><rsub|i\<in\>I>x<rsub|i>
+        </equation*>
+
+        <item>As <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> and
+        <math|<big|sum><rsub|i\<in\>I>y<rsub|i>> are absolute convergent
+        there exist bijections <math|\<alpha\>:\<bbb-N\><rsub|0>\<rightarrow\>I>
+        and <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>I> so that
+        <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<alpha\><around*|(|i|)>>>
+        and <math|<big|sum><rsub|i=0><rsup|\<infty\>>y<rsub|\<beta\><around*|(|i|)>>>
+        are absolute convergent, or \ As <math|\<alpha\><rsup|-1>\<circ\>\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0>>
+        is a bijection it follows from [theorem: <reference|series absolute
+        convergence commutativity>] that <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<alpha\><around*|(|<around*|(|\<alpha\><rsup|-1>\<circ\>\<beta\>|)><around*|(|i|)>|)>>>
+        is absolute convergent. As <math|\<forall\>i\<in\>\<bbb-N\><rsub|0>>
+        we have <math|x<rsub|\<alpha\><around*|(|<around*|(|\<alpha\><rsup|-1>\<circ\>\<beta\>|)><around*|(|i|)>|)>>=x<rsub|\<alpha\><around*|(|\<alpha\><rsup|-1><around*|(|\<beta\><around*|(|i|)>|)>|)>>=x<rsub|\<beta\><around*|(|i|)>>>
+        proves that\ 
+
+        <\equation*>
+          <big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>><text|
+          and ><big|sum><rsub|i=0><rsup|\<infty\>>y<rsub|\<beta\><around*|(|i|)>><text|
+          are absolute convergent>
+        </equation*>
+
+        Hence by definition\ 
+
+        <\equation*>
+          <big|sum><rsub|i=0><rsup|\<infty\>><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>><text|
+          and ><big|sum><rsub|i=0><rsup|\<infty\>><around*|\<\|\|\>|y<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>><text|
+          are convergent>
+        </equation*>
+
+        Using [theorem: <reference|series absolute convergence sum and scalar
+        product>] it follows that
+
+        <\equation*>
+          <big|sum><rsub|i=0><rsup|\<infty\>><around*|(|<around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>+<around*|\<\|\|\>|y<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>|)><text|
+          converges>
+        </equation*>
+
+        As <math|\<forall\>i\<in\>\<bbb-N\><rsub|0>>
+        <math|<around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>+y<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>+<around*|\<\|\|\>|y<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>>
+        we have by the above and the dominant convergence [theorem:
+        <reference|series dominant convergence>] that
+        \ <math|<big|sum><rsub|i=0><rsup|\<infty\>><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>+y<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>>
+        is convergent proving that\ 
+
+        <\equation*>
+          <big|sum><rsub|i=0><rsup|\<infty\>><around*|(|x<rsub|\<beta\><around*|(|i|)>>+y<rsub|\<beta\><around*|(|i|)>>|)><text|
+          is absolute convergent>
+        </equation*>
+
+        Further using [theorem: <reference|series absolute convergence equals
+        convergence only in Banach space>] we have then that
+        <math|<big|sum><rsub|i=0><rsup|\<infty\>><around*|(|x<rsub|\<beta\><around*|(|i|)>>+y<rsub|\<beta\><around*|(|i|)>>|)>>
+        is convergent and we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<big|sum><rsub|i\<in\>I><around*|(|x<rsub|i>+y<rsub|i>|)>>|<cell|\<equallim\><rsub|<text|[definition:
+          <reference|sum of a countable set>]>>>|<cell|<big|sum><rsub|i=0><rsup|\<infty\>><around*|(|x<rsub|\<beta\><around*|(|i|)>>+y<rsub|\<beta\><around*|(|i|)>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|series absolute convergence sum and scalar
+          product>]>>>|<cell|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>+<big|sum><rsub|i=0><rsup|\<infty\>>y<rsub|\<beta\><around*|(|i|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+          <reference|sum of a countable set>]>>>|<cell|<big|sum><rsub|i\<in\>I>x<rsub|i>+<big|sum><rsub|i\<in\>I>y<rsub|i>>>>>
+        </eqnarray*>
+
+        proving that\ 
+
+        <\equation*>
+          <big|sum><rsub|i\<in\>I><around*|(|x<rsub|i>+y<rsub|i>|)>=<big|sum><rsub|i\<in\>I>x<rsub|i>+<big|sum><rsub|i\<in\>I>y<rsub|i>
+        </equation*>
+      </enumerate>
     </description>
   </proof>
 
@@ -18883,15 +19148,888 @@
         </equation*>
 
         which by [theorem: <reference|series non negative numbers
-        equivalences>] proves that <math|<big|sum><rsub|i=0><rsup|\<infty\>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>>
-        TODO check this
+        equivalences>] proves that <math|<big|sum><rsub|i=0><rsup|\<infty\>><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>>
+        converges, hence using [definition: <reference|series absolute sum
+        over a countable set>] <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> is
+        absolute convergent.
       </description>
     </description>
+  </proof>
 
-    \;
+  We can now extend [theorem: <reference|series absolute convergence
+  equivalences>] to the case of absolute convergent series with a countable
+  index.
+
+  <\theorem>
+    <label|series absolute convergence of countable families condition>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
+    a Banach space, <math|I> a countable set then we have
+
+    <\equation*>
+      <big|sum><rsub|i\<in\>I>x<rsub|i><text| is absolute convergent>
+    </equation*>
+
+    <\equation*>
+      \<Updownarrow\>
+    </equation*>
+
+    <\equation*>
+      \<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text| there exist a
+      finite >H\<subseteq\>I<text| such that >\<forall\>K\<subseteq\>I<text|
+      with <math|K> finite and >K<big|cap>H=\<varnothing\><text| we have
+      ><big|sum><rsub|i\<in\>K><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\<less\>\<varepsilon\>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Take <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>.
+      As <math|I> is countable we must consider two cases:
+
+      <\description>
+        <item*|<math|I> is finite>Take <math|H=I> then if
+        <math|K\<subseteq\>I> with <math|K<big|cap>H=\<varnothing\>> then
+        <math|K=K<big|cap>I=K<big|cap>H=\<varnothing\>> so that
+        <math|<big|sum><rsub|i\<in\>K><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>=<big|sum><rsub|i\<in\>\<varnothing\>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\<equallim\><rsub|<text|[definition:
+        <reference|sum generalized sum>]>>0\<less\>\<varepsilon\>>
+
+        <item*|<math|I> is denumerable>As
+        <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> is absolute convergent there
+        exist a bijection <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>I>
+        such that <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>>
+        is absolute convergent. Using [theorem: <reference|series absolute
+        convergence equivalences>] there exist a finite
+        <math|H<rprime|'>\<subseteq\>\<bbb-N\><rsub|0>> such that
+        <math|\<forall\>K\<subseteq\>\<bbb-N\><rsub|0>> with
+        <math|K<big|cap>H<rprime|'>=\<varnothing\>> we have
+        <math|<big|sum><rsub|i\<in\>K><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>\<less\>\<varepsilon\>>.
+        Take <math|H=\<beta\><around*|(|H<rprime|'>|)>> then <math|H> is
+        finite and if <math|L\<subseteq\>I> with <math|L> finite and
+        <math|L<big|cap>H=\<varnothing\>>. Them we have
+        <math|\<varnothing\>=\<beta\><rsup|-1><around*|(|L<big|cap>H|)>\<equallim\><rsub|<text|[theorem:
+        <reference|function function and intersection and
+        union>]>>\<beta\><rsup|-1><around*|(|L|)><big|cap>\<beta\><rsup|-1><around*|(|H|)>=\<beta\><rsup|-1><around*|(|L|)><big|cap>H<rprime|'>>
+        so that\ 
+
+        <\equation*>
+          <big|sum><rsub|i\<in\>\<beta\><rsup|-1><around*|(|L|)>><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>\<less\>\<varepsilon\>
+        </equation*>
+
+        As <math|\<beta\><rsub|\|\<beta\><rsup|-1>>\<of\>\<beta\><rsup|-1><around*|(|L|)>\<rightarrow\>\<beta\><around*|(|\<beta\><rsup|-1><around*|(|L|)>|)>=L>
+        is a bijection we have by [theorem: <reference|sum bijection on
+        index>] that <math|<big|sum><rsub|i\<in\>\<beta\><rsup|-1><around*|(|L|)>><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>=<big|sum><rsub|i\<in\>L><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>>
+        so that\ 
+
+        <\equation*>
+          <big|sum><rsub|i\<in\>L><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\<less\>\<varepsilon\>
+        </equation*>
+      </description>
+
+      <item*|<math|\<Leftarrow\>>>As <math|I> is countable we must consider
+      two cases:
+
+      <\description>
+        <item*|<math|I> is finite>By definition we have that
+        <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> is absolute convergent.
+
+        <item*|<math|I> is denumerable>Then there exist a bijection
+        <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>I>. Let
+        <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then by the hypothesis
+        there exist a finite <math|H<rprime|'>\<subseteq\>I> such that
+        <math|\<forall\>K\<subseteq\>H> with <math|K> finite and
+        <math|K<big|cap>H=\<varnothing\>> we have
+        <math|<big|sum><rsub|i\<in\>K><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\<less\>\<varepsilon\>>.
+        Take <math|H=\<beta\><rsup|-1><around*|(|H<rprime|'>|)>\<subseteq\>\<bbb-N\><rsub|0>>
+        and let <math|L\<subseteq\>\<bbb-N\><rsub|0>> with <math|K> finite
+        and <math|L<big|cap>H=\<varnothing\>>. Then we have that
+
+        <\equation*>
+          \<varnothing\>=\<beta\><around*|(|L<big|cap>H|)>\<equallim\><rsub|\<beta\><text|
+          is a bijection and [theorem: <reference|function function and
+          intersection and union>]>>\<beta\><around*|(|L|)><big|cap>\<beta\><around*|(|H|)>=\<beta\><around*|(|K|)><big|cap>H<rprime|'>
+        </equation*>
+
+        so that\ 
+
+        <\equation*>
+          <big|sum><rsub|i\<in\>\<beta\><around*|(|L|)>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\<less\>\<varepsilon\>
+        </equation*>
+
+        As <math|\<beta\><rsub|\|L>:L\<rightarrow\>\<beta\><around*|(|L|)>>
+        is a bijection we have by [theorem: <reference|sum bijection on
+        index>] that <math|<big|sum><rsub|i\<in\>\<beta\><around*|(|L|)>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>=<big|sum><rsub|i\<in\>L><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>>
+        so that\ 
+
+        <\equation*>
+          <big|sum><rsub|i\<in\>L><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>\<less\>\<varepsilon\>
+        </equation*>
+
+        Using \ [theorem: <reference|series absolute convergence
+        equivalences>] it follows then that
+        <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>>
+        is absolute convergent. Hence by [definition: <reference|series
+        absolute sum over a countable set>] it follows that\ 
+
+        <\equation*>
+          <big|sum><rsub|i\<in\>I>x<rsub|i><text| is absolute convergent>
+        </equation*>
+      </description>
+    </description>
+  </proof>
+
+  We have now the following extension of the dominant convergent series.
+
+  <\theorem>
+    <label|series absolute convergence dominant convergence><dueto|Dominant
+    Convergence>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a Banach space, <math|I> a countabble set,
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>X> such that
+    there exist a <math|<around*|{|s<rsub|i>|}><rsub|i\<in\>I>\<subseteq\><around*|[|0,\<ldots\>,\<infty\>|[>>
+    such that <math|<big|sum><rsub|i\<in\>I>s<rsub|i>> is convergent and
+    <math|\<forall\>i\<in\>I> we have <math|<around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\<leqslant\>s<rsub|i>>
+    then <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> is absolute convergent and
+    <math|<around*|\<\|\|\>|<big|sum><rsub|i\<in\>I>x<rsub|i>|\<\|\|\>>\<leqslant\><big|sum><rsub|i\<in\>I>s<rsub|i>>
+  </theorem>
+
+  <\proof>
+    As <math|I> is countable we must consider two possibilities for <math|I>\ 
+
+    <\description>
+      <item*|<math|I> is finite>Then by definition
+      <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> is absolute convergent and\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|<big|sum><rsub|i\<in\>I>x<rsub|i>|\<\|\|\>>\<leqslant\><rsub|<text|[theorem:
+        <reference|normed triangle inequality>]>><big|sum><rsub|i\<in\>I><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\<leqslant\><rsub|<text|[theorem:
+        <reference|sum of real numbers and
+        inequality>]>><big|sum><rsub|i\<in\>I>s<rsub|i>
+      </equation*>
+
+      \ 
+
+      <item*|<math|I> is denumerable>Then as
+      <math|<big|sum><rsub|i\<in\>I>s<rsub|i>> is absolute convergent there
+      exist a bijection <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>I> such
+      that <math|<big|sum><rsub|i=0><rsup|\<infty\>><around*|\<\|\|\>|s<rsub|i>|\<\|\|\>>>
+      is absolute convergent, hence <math|<big|sum><rsub|i=0><rsup|\<infty\>><around*|\<\|\|\>|s<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>>
+      is convergent. As <math|\<forall\>i\<in\>\<bbb-N\><rsub|0>>
+      <math|<around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>\<leqslant\>s<rsub|\<beta\><around*|(|i|)>>>
+      it follows from [theorem: <reference|series absolute dominant
+      convergence>] that
+
+      <\equation*>
+        <big|sum><rsub|i=0><rsup|\<infty\>><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>><text|
+        converges>
+      </equation*>
+
+      and
+
+      <\equation*>
+        <big|sum><rsub|i=0><rsup|\<infty\>><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>\<leqslant\><big|sum><rsub|i=0><rsup|\<infty\>>s<rsub|\<beta\><around*|(|i|)>>.
+      </equation*>
+
+      So by [definition: <reference|series absolute sum over a countable
+      set>]
+
+      <\equation*>
+        <big|sum><rsub|i\<in\>I>x<rsub|i><text| is absolute convergent>
+      </equation*>
+
+      Further by [theorem: <reference|series absolute convergence equals
+      convergence only in Banach space>] <math|<big|sum><rsub|i\<in\>I>x<rsub|i>>
+      converges and\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|<big|sum><rsub|i\<in\>I>x<rsub|i>|\<\|\|\>>\<equallim\><rsub|<text|[defiition:
+        <reference|sum of a countable set>]>><around*|\<\|\|\>|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>\<leqslant\><big|sum><rsub|i=0><rsup|\<infty\>>s<rsub|\<beta\><around*|(|i|)>>\<equallim\><rsub|<text|[defiition:
+        <reference|sum of a countable set>]>><big|sum><rsub|i\<in\>I>x<rsub|i>
+      </equation*>
+    </description>
+  </proof>
+
+  We can also extend [lemma: <reference|lemma 14.356.158>] to the following
+  lemma:
+
+  <\lemma>
+    <label|lemma 14.364.159>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a Banach space, <math|I> a countable,
+    <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> a absolute convergent series
+    then <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there exist a
+    finite <math|K\<subseteq\>I> such that:
+
+    <\enumerate>
+      <item><math|\<forall\>L\<subseteq\>I> with <math|L> finite and
+      <math|K<big|cap>L=\<varnothing\>> we have
+      <math|<big|sum><rsub|i\<in\>L><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\<less\>\<varepsilon\>>
+
+      <item><math|\<forall\>H\<subseteq\>I> with <math|H> finite and
+      <math|K\<subseteq\>H> we have <math|<around*|\<\|\|\>|<big|sum><rsub|i\<in\>I>x<rsub|i>-<big|sum><rsub|i\<in\>H>x<rsub|i>|\<\|\|\>>\<less\>\<varepsilon\>>
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    As <math|I> is countable we have two cases to consider:
+
+    <\description>
+      <item*|<math|I> is finite>Take <math|K=I> then we have:
+
+      <\enumerate>
+        <item>If <math|L\<subseteq\>I> with <math|K<big|cap>L=\<varnothing\>>
+        then we have <math|L=I<big|cap>L\<equallim\><rsub|K=I>K<big|cap>L=\<varnothing\>>
+        so that\ 
+
+        <\equation*>
+          <big|sum><rsub|i\<in\>L><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>=<big|sum><rsub|i\<in\>\<varnothing\>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\<equallim\><rsub|<text|[definition:
+          <reference|sum generalized sum>]>>0\<less\>\<varepsilon\>
+        </equation*>
+
+        <item>If <math|H\<subseteq\>I> with <math|K\<subseteq\>H> then as
+        <math|K=I> we have <math|H=I=K> so that\ 
+
+        <\equation*>
+          <around*|\<\|\|\>|<big|sum><rsub|i\<in\>I>x<rsub|i>-<big|sum><rsub|i\<in\>H>x<rsub|i>|\<\|\|\>>=<around*|\<\|\|\>|<big|sum><rsub|i\<in\>I>x<rsub|i>-<big|sum><rsub|i\<in\>I>x<rsub|i>|\<\|\|\>>=<around*|\<\|\|\>|0|\<\|\|\>>=0\<less\>\<varepsilon\>
+        </equation*>
+      </enumerate>
+
+      <item*|<math|I> is denumerable>Then by definition there exist a
+      bijection <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>I> such that
+
+      <\equation>
+        <label|eq 14.211.159><big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>><text|
+        is absolute convergent>
+      </equation>
+
+      Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then using [lemma:
+      <reference|lemma 14.356.158>] there exists a
+      <math|K<rprime|'>\<subseteq\>\<bbb-N\><rsub|0>> such that\ 
+
+      <\equation>
+        <label|eq 14.212.159>\<forall\>L\<subseteq\>\<bbb-N\><rsub|0><text|
+        with >L<text| finite >K<rprime|'><big|cap>L=\<varnothing\><text| we
+        have ><around*|\<\|\|\>|<big|sum><rsub|i\<in\>L>x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>\<less\>\<varepsilon\>
+      </equation>
+
+      <\equation>
+        <label|eq 14.213.159>\<forall\>H\<subseteq\>\<bbb-N\><rsub|0><text|
+        with >H<text| finite and >K<rprime|'>\<subseteq\>H<text| then
+        ><around*|\<\|\|\>|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>-<big|sum><rsub|i\<in\>H>x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>\<less\>\<varepsilon\>
+      </equation>
+
+      Define <math|K=\<beta\><around*|(|K<rprime|'>|)>> then
+      <math|K\<subseteq\>I> and by [theorem: <reference|image of a finite
+      set>] <math|K> is finite. Then we have:\ 
+
+      <\enumerate>
+        <item>If <math|L\<subseteq\>I> with <math|L> finite and
+        <math|K<big|cap>L=\<varnothing\>> then we have
+        <math|\<beta\><rsup|-1><around*|(|L|)>\<subseteq\>\<beta\><rsup|-1><around*|(|I|)>=\<bbb-N\><rsub|0>>
+        and <math|\<beta\><rsup|-1><around*|(|K|)><big|cap>\<beta\><rsup|-1><around*|(|L|)>\<equallim\><rsub|<text|[theorem:
+        <reference|function function and intersection and
+        union>]>>\<beta\><rsup|-1><around*|(|K<big|cap>L|)>=\<beta\><rsup|-1><around*|(|\<varnothing\>|)>=\<varnothing\>>.
+        So using [eq: <reference|eq 14.212.159>] we have that
+        <math|<big|sum><rsub|i\<in\>\<beta\><rsup|-1><around*|(|L|)>><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>\<less\>\<varepsilon\>>.
+        As <math|\<beta\><rsub|\|\<beta\><rsup|-1><around*|(|L|)>>:\<beta\><rsup|-1><around*|(|L|)>\<rightarrow\>\<beta\><around*|(|\<beta\><rsup|-1><around*|(|L|)>|)>=L>
+        is a bijection we have by [theorem: <reference|sum bijection on
+        index>] that <math|<big|sum><rsub|i\<in\>L><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>=<big|sum><rsub|i\<in\>\<beta\><rsup|-1><around*|(|L|)>><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>>
+        proving
+
+        <\equation*>
+          <big|sum><rsub|i\<in\>L><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>\<less\>\<varepsilon\>
+        </equation*>
+
+        <item>If <math|H\<subseteq\>I> with <math|H> finite and
+        <math|K\<subseteq\>H> then as <math|\<beta\><rsup|-1>:I\<rightarrow\>\<bbb-N\><rsub|0>>
+        is a bijection we have that <math|\<beta\><rsup|-1><around*|(|H|)>=<around*|(|\<beta\><rsup|-1>|)><around*|(|H|)>>
+        is finite and <math|K<rprime|'>=\<beta\><rsup|-1><around*|(|\<beta\><around*|(|K<rprime|'>|)>|)>=\<beta\><rsup|-1><around*|(|K|)>\<subseteq\>\<beta\><rsup|-1><around*|(|H|)>>.
+        So using [eq: <reference|eq 14.213.159>] we have
+
+        <\equation>
+          <label|eq 14.214.159><around*|\<\|\|\>|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>-<big|sum><rsub|i\<in\>\<beta\><rsup|-1><around*|(|H|)>>x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>\<less\>\<varepsilon\>.
+        </equation>
+
+        As
+
+        <\equation*>
+          \<beta\><rsub|\|\<beta\><rsup|-1><around*|(|H|)>>:\<beta\><rsup|-1><around*|(|H|)>\<rightarrow\>\<beta\><around*|(|\<beta\><rsup|-1><around*|(|H|)>|)>=H<text|
+          is a bijection>
+        </equation*>
+
+        is a bijection we have by [theorem: <reference|sum bijection on
+        index>] that
+
+        <\equation>
+          <label|eq 14.215.159><big|sum><rsub|i\<in\>H>x<rsub|i>=<big|sum><rsub|i\<in\>\<beta\><rsup|-1><around*|(|H|)>>x<rsub|\<beta\><around*|(|i|)>>
+        </equation>
+
+        proving
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|\<\|\|\>|<big|sum><rsub|i\<in\>I>x<rsub|i>-<big|sum><rsub|i\<in\>H>x<rsub|i>|\<\|\|\>>>|<cell|\<equallim\><rsub|<text|[definition:
+          <reference|sum of a countable set>]>>>|<cell|<around*|\<\|\|\>|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>-<big|sum><rsub|i\<in\>H>x<rsub|i>|\<\|\|\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 14.215.159>]>>>|<cell|<around*|\<\|\|\>|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>-<big|sum><rsub|i\<in\>\<beta\><rsup|-1><around*|(|H|)>>x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>>>|<row|<cell|>|<cell|\<less\><rsub|<text|[eq:
+          <reference|eq 14.214.159>]>>>|<cell|\<varepsilon\>>>>>
+        </eqnarray*>
+
+        or summarized
+
+        <\equation*>
+          <around*|\<\|\|\>|<big|sum><rsub|i\<in\>I>x<rsub|i>-<big|sum><rsub|i\<in\>H>x<rsub|i>|\<\|\|\>>\<less\>\<varepsilon\>
+        </equation*>
+      </enumerate>
+    </description>
+  </proof>
+
+  Next we prove associativity of absolute convergence.
+
+  <\theorem>
+    <label|series absolute convergent countable associativity>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
+    a Banach space, <math|I,K> countable sets,
+    <math|<around*|{|K<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|K|)>>
+    a <with|font-series|bold|pairwise disjoint >family of subsets of <math|K>
+    such that <math|<big|cup><rsub|i\<in\>I>K<rsub|i>=K> and
+    <math|<big|sum><rsub|i\<in\>K>x<rsub|i>> a absolute convergent series
+    then we have:\ 
+
+    <\enumerate>
+      <item><math|\<forall\>i\<in\>I> <math|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>>
+      is absolute convergent.
+
+      <item><math|<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>>
+      is absolute convergent.
+
+      <item><math|<big|sum><rsub|i\<in\>K>x<rsub|i>=<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j>|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ As <math|<big|sum><rsub|i\<in\>K>x<rsub|i>> is absolute convergent it
+    follows from [theorem: <reference|series absolute convergence countable
+    family>] that\ 
+
+    <\equation*>
+      <big|sum><rsub|i\<in\>I><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><text| is
+      a convergent series of non negative numbers>
+    </equation*>
+
+    Using then the associativity of series of non negative numbers [see
+    theorem: <reference|series non negative numbers associativity>] it
+    follows that\ 
+
+    <\equation>
+      <label|eq 14.216.159>\<forall\>i\<in\>I<text|
+      ><big|sum><rsub|j\<in\>K<rsub|i>><around*|\<\|\|\>|x<rsub|j>|\<\|\|\>><text|
+      converges and ><big|sum><rsub|i\<in\>K><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>=<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>><around*|\<\|\|\>|x<rsub|j>|\<\|\|\>>|)>
+    </equation>
+
+    Using [theorem: <reference|series absolute convergence dominant
+    convergence>] on the above we have that
+
+    <\equation>
+      <label|eq 14.217.159>\<forall\>i\<in\>I<text| that
+      ><big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j><text| is absolute converges
+      and ><around*|\<\|\|\>|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|\<\|\|\>>\<leqslant\><big|sum><rsub|j\<in\>K<rsub|i>><around*|\<\|\|\>|x<rsub|j>|\<\|\|\>>
+    </equation>
+
+    Using dominant convergence [see theorem: <reference|series absolute
+    convergence dominant convergence>] on [eqs: <reference|eq 14.216.159>,
+    <reference|eq 14.217.159>] proves that\ 
+
+    <\equation>
+      <label|eq 14.218.159><big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)><text|
+      is absolute convergent>
+    </equation>
+
+    Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. \ As
+    <math|<big|sum><rsub|i\<in\>K>x<rsub|i>> is absolute convergent we have
+    by [lemma: <reference|lemma 14.364.159>] there exist a finite
+    <math|G\<subseteq\>K> such that\ 
+
+    <\equation>
+      <label|eq 14.219.161>\<forall\>H\<subseteq\>K<text| with >H<text|
+      finite and >G\<subseteq\>H<text| we have
+      ><around*|\<\|\|\>|<big|sum><rsub|i\<in\>K>x<rsub|i>-<big|sum><rsub|i\<in\>H>x<rsub|i>|\<\|\|\>>\<less\><frac|\<varepsilon\>|3>
+    </equation>
+
+    Define <math|J=<around*|{|i\<in\>I\|K<rsub|i><big|cap>G\<neq\>\<varnothing\>|}>\<subseteq\>I>.
+    If <math|x\<in\>G\<subseteq\>K=<big|cup><rsub|i\<in\>I>K<rsub|i>> then
+    there exist a <math|i\<in\>I> such that
+    <math|x\<in\>G<big|cap>K<rsub|i>\<Rightarrow\>G<big|cap>K<rsub|i>\<neq\>\<varnothing\>\<Rightarrow\>i\<in\>J>
+    so that <math|x\<in\><big|cup><rsub|j\<in\>J><around*|(|K<rsub|j><big|cap>G|)>>
+    proving that <math|G\<subseteq\><big|cup><rsub|j\<in\>J><around*|(|K<rsub|j><big|cap>G|)>\<subseteq\>G>
+    so that
+
+    <\equation>
+      <label|eq 14.219.160>G=<big|cup><rsub|j\<in\>J><around*|(|K<rsub|j><big|cap>G|)>
+    </equation>
+
+    Assume that <math|J> is not finite then as
+    <math|<around*|{|K<rsub|j><big|cap>G|}><rsub|j\<in\>J>> is a family of
+    pairwise disjoint non empty sets if follows from [theorem:
+    <reference|infinite family of pairwise disjoint non empty sets is
+    infinite>] that <math|G=<big|cup><rsub|i\<in\>J><around*|(|K<big|cap>N<rsub|i>|)>>
+    is infinite, contradicting the fact that <math|G> was finite. Hence\ 
+
+    <\equation>
+      <label|eq 14.220.159>J<text| is finite>
+    </equation>
+
+    As by [eq: <reference|eq 14.218.159>]
+    <math|<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)><text|>>
+    is absolute convergent we can use [lemma: <reference|lemma 14.364.159>]
+    again to find a finite <math|L\<subseteq\>I> such that
+    <math|\<forall\>H\<subseteq\>I> with <math|H> finite and
+    <math|L\<subseteq\>H> we have
+
+    <\equation*>
+      <around*|\<\|\|\>|<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>-<big|sum><rsub|i\<in\>H><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>|\<\|\|\>>\<less\><frac|\<varepsilon\>|3>
+    </equation*>
+
+    Take <math|M=J<big|cup>L> then using [eq: <reference|eq 14.220.159>]
+    <math|M> is finite, <math|M\<subseteq\>I> and <math|L\<subseteq\>H> so
+    that\ 
+
+    <\equation>
+      <label|eq 14.221.519><around*|\<\|\|\>|<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>-<big|sum><rsub|i\<in\>M><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>|\<\|\|\>>\<less\><frac|\<varepsilon\>|3>
+    </equation>
+
+    By [eq: <reference|eq 14.217.159>] <math|\<forall\>i\<in\>M\<subseteq\>I>
+    <math|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>> is absolute convergent
+    we have by [lemma: <reference|lemma 14.364.159>] that there exist a
+    finite <math|M<rsub|i>\<subseteq\>K<rsub|i>> such that
+
+    <\equation>
+      <label|eq 14.223.159.1>\<forall\>H\<subseteq\>K<rsub|i><text| with
+      >H<text| finite and >M<rsub|i>\<subseteq\>H<text| we have
+      ><around*|\<\|\|\>|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>-<big|sum><rsub|j\<in\>H>x<rsub|j>|\<\|\|\>>\<less\><frac|\<varepsilon\>|3\<cdot\>card<around*|(|M|)>>
+    </equation>
+
+    Now <math|\<forall\>i\<in\>M> define <math|N<rsub|i>=M<rsub|i><big|cup><around*|(|K<rsub|i><big|cap>G|)>>
+    a finite set then we have <math|N<rsub|i>\<subseteq\>K<rsub|i>> and
+    <math|M<rsub|i>\<subseteq\>N<rsub|i>> so that by the above [eq:
+    <reference|eq 14.222.159>] we have\ 
+
+    <\equation>
+      <label|eq 14.222.159>\<forall\>i\<in\>M<text| we have
+      ><around*|\<\|\|\>|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>-<big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j>|\<\|\|\>>\<less\><frac|\<varepsilon\>|3\<cdot\>card<around*|(|M|)>>
+    </equation>
+
+    Now we have\ 
+
+    <\equation*>
+      G\<equallim\><rsub|<text|[eq: <reference|eq
+      14.219.160>]>><big|cup><rsub|j\<in\>J><around*|(|K<rsub|j><big|cap>G|)>\<subseteq\><big|cup><rsub|j\<in\>J><around*|(|M<rsub|j><big|cup><around*|(|K<rsub|j><big|cap>G|)>|)>=<big|cup><rsub|j\<in\>M>N<rsub|j>\<subseteq\><rsub|N<rsub|j>\<subseteq\>K<rsub|j>><big|cup><rsub|j\<in\>M>K<rsub|j>\<subseteq\>K
+    </equation*>
+
+    So that by [eq: <reference|eq 14.219.161>] we have\ 
+
+    <\equation>
+      <label|eq 14.225.161><around*|\<\|\|\>|<big|sum><rsub|i\<in\>K>x<rsub|i>-<big|sum><rsub|i\<in\><big|cup><rsub|j\<in\>M>N<rsub|j>>x<rsub|i>|\<\|\|\>>\<less\><frac|\<varepsilon\>|3>
+    </equation>
+
+    Further\ 
+
+    <\equation>
+      <label|eq 14.226.161>\<forall\>i,j\<in\>M<text| with >i\<neq\>j<text|
+      swe have >N<rsub|i><big|cap>N<rsub|j>\<subseteq\>K<rsub|i><big|cap>K<rsub|j>=\<varnothing\>\<Rightarrow\>N<rsub|i><big|cap>N<rsub|j>=\<varnothing\>
+    </equation>
+
+    Now
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|<big|sum><rsub|i\<in\>K>x<rsub|i>-<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<big|sum><rsub|i\<in\>K>x<rsub|i>-<big|sum><rsub|i\<in\><big|cup><rsub|j\<in\>M>N<rsub|j>>x<rsub|i>+<big|sum><rsub|i\<in\><big|cup><rsub|j\<in\>M>Nj>x<rsub|i>-<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>|\<\|\|\>>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<big|sum><rsub|i\<in\>K>x<rsub|i>-<big|sum><rsub|i\<in\><big|cup><rsub|j\<in\>M>N<rsub|j>>x<rsub|i>|\<\|\|\>>+<around*|\<\|\|\>|<big|sum><rsub|i\<in\><big|cup><rsub|j\<in\>M>N<rsub|j>>x<rsub|i>-<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>|\<\|\|\>>>|<cell|\<less\><rsub|<text|[eq:
+      <reference|eq 14.225.161>>>>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|3>+<around*|\<\|\|\>|<big|sum><rsub|i\<in\><big|cup><rsub|j\<in\>M>N<rsub|j>>x<rsub|i>-<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>|\<\|\|\>>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 14.226.161>]>>>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|3>+<around*|\<\|\|\>|<big|sum><rsub|i\<in\>M><around*|(|<big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j>|)>-<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|3>+<around*|\<\|\|\>|<big|sum><rsub|i\<in\>M><around*|(|<big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j>|)>-<big|sum><rsub|i\<in\>M><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>+<big|sum><rsub|i\<in\>M><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>-<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>|\<\|\|\>>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|3>+<around*|\<\|\|\>|<big|sum><rsub|i\<in\>M><around*|(|<big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j>|)>-<big|sum><rsub|i\<in\>M><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>|\<\|\|\>>+<around*|\<\|\|\>|<big|sum><rsub|i\<in\>M><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>-<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>|\<\|\|\>>>|<cell|\<less\><rsub|<text|[eq:
+      <reference|eq 14.221.519>]>>>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|3>+<around*|\<\|\|\>|<big|sum><rsub|i\<in\>M><around*|(|<big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j>|)>-<big|sum><rsub|i\<in\>M><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>|\<\|\|\>>+<frac|\<varepsilon\>|3>>|<cell|=>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|3>+<around*|\<\|\|\>|<big|sum><rsub|i\<in\>M><around*|(|<big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j>|\<nobracket\>>-<around*|\<nobracket\>|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>|\<\|\|\>>+<frac|\<varepsilon\>|3>>|<cell|\<leqslant\><rsub|M<text|
+      is finite>>>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|3>+<big|sum><rsub|i\<in\>M><around*|\<\|\|\>|<big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j>-<big|sum><rsub|j\<in\>K<rsub|i>>|\<\|\|\>>+<frac|\<varepsilon\>|3>>|<cell|\<less\><rsub|<text|[eq:
+      <reference|eq 14.223.159.1>]>>>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|3>+<big|sum><rsub|i\<in\>M><frac|\<varepsilon\>|3\<cdot\>card<around*|(|M|)>>+<frac|\<varepsilon\>|3>>|<cell|=>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|3>+<frac|\<varepsilon\>|3>+<frac|\<varepsilon\>|3>>|<cell|=>|<cell|>>|<row|<cell|\<varepsilon\>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    So given <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> we have that
+    <math|0\<leqslant\><around*|\<\|\|\>|<big|sum><rsub|i\<in\>K>x<rsub|i>-<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>|\<\|\|\>>\<less\>\<varepsilon\>>
+    so that by [theorem: <reference|complex Archimedean property consequence
+    (2)>] <math|><math|<around*|\<\|\|\>|<big|sum><rsub|i\<in\>K>x<rsub|i>-<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>|\<\|\|\>>>
+    proving\ 
+
+    <\equation>
+      <label|eq 14.227\<point\>161><big|sum><rsub|i\<in\>K>x<rsub|i>=<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>
+    </equation>
+
+    Finally (1) is proved by [eq: <reference|eq 14.217.159>] , (2) by \ [eq:
+    <reference|eq 14.218.159>] and (3) by [eq: <reference|eq
+    14.227\<point\>161>].
+  </proof>
+
+  As a application of the above theorem we prove distributivity for absolute
+  convergent series in <math|\<bbb-R\>>.
+
+  <\theorem>
+    <label|series distributivity>Let <math|I,J> be countable sets,
+    <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>> the Banach
+    space of the real numbers [see theorem: <reference|complete set of real
+    numbers>] and <math|<big|sum><rsub|i\<in\>I>x<rsub|i>>,
+    <math|<big|sum><rsub|i\<in\>J>y<rsub|j>> absolute convergent series in
+    <math|\<bbb-R\>> then <math|<big|sum><rsub|<around*|(|i,j|)>\<in\>I\<times\>J><around*|(|x<rsub|i>,y<rsub|j>|)>>
+    is absolute convergent and
+
+    <\equation*>
+      <big|sum><rsub|<around*|(|i,j|)>\<in\>I\<times\>J><around*|(|x<rsub|i>,y<rsub|j>|)>=<around*|(|<big|sum><rsub|i\<in\>I>x<rsub|i>|)>\<cdot\><around*|(|<big|sum><rsub|i\<in\>J>y<rsub|j>|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    As <math|<big|sum><rsub|i\<in\>I>x<rsub|i>>,
+    <math|<big|sum><rsub|i\<in\>J>y<rsub|j>> are absolute convergent we have
+    by [theorem: <reference|series absolute convergence alternative
+    definition>] that
+
+    <\equation*>
+      s=sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>H><around*|\||x<rsub|i>|\|>\|H\<subseteq\>I\<wedge\>H<text|
+      is finite>|}>|)><text| and >t=sup<around*|(|<around*|{|<big|sum><rsub|\<iota\>H><around*|\||y<rsub|i>|\|>\|H\<subseteq\>J\<wedge\>H<text|
+      is finite>|}>|)><text| exists>
+    </equation*>
+
+    Let <math|H> be a finite subset of <math|I\<times\>J>. As
+    <math|\<pi\><rsub|1>:H\<rightarrow\>\<pi\><rsub|1><around*|(|H|)>> and
+    <math|\<pi\><rsub|2>:H\<rightarrow\>\<pi\><rsub|2><around*|(|H|)>> are
+    surjective we have that <math|\<pi\><rsub|1><around*|(|H|)>,\<pi\><rsub|2><around*|(|H|)>>
+    are finite [see theorem: <reference|surjection f:A-\<gtr\>B if A is
+    finite then B is finite>]. Further if
+    <math|<around*|(|i,j|)>\<in\>H\<subseteq\>I\<times\>J> then
+    <math|i=\<pi\><rsub|1><around*|(|<around*|(|i,j|)>|)>\<in\>\<pi\><rsub|1><around*|(|H|)>>
+    and <math|j=\<pi\><rsub|2><around*|(|<around*|(|i,j|)>|)>\<in\>\<pi\><rsub|2><around*|(|H|)>>
+    proving that <math|<around*|(|i,j|)>\<in\>\<pi\><rsub|1><around*|(|H|)>\<times\>\<pi\><rsub|2><around*|(|H|)>>
+    or\ 
+
+    <\equation*>
+      H\<subseteq\>\<pi\><rsub|1><around*|(|H|)>\<times\>\<pi\><rsub|2><around*|(|H|)>
+    </equation*>
+
+    Hence\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<big|sum><rsub|<around*|(|i,j|)>\<in\>H><around*|\||x<rsub|i>\<cdot\>y<rsub|j>|\|>>|<cell|=>|<cell|<big|sum><rsub|\<alpha\>\<in\>H><around*|(|<around*|\||x<rsub|i>|\|>\<cdot\><around*|\||y<rsub|j>|\|>|)>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<big|sum><rsub|<around*|(|i,j|)>\<in\><around*|(|\<pi\><rsub|1><around*|(|H|)>\<times\>\<pi\><rsub|2><around*|(|H|)>|)>\\H><around*|(|<around*|\||x<rsub|i>|\|>\<cdot\><around*|\||y<rsub|j>|\|>|)>+<big|sum><rsub|<around*|(|i,j|)>\<in\>H><around*|(|<around*|\||x<rsub|i>|\|>\<cdot\><around*|\||y<rsub|j>|\|>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum over disjoint subsets>]>>>|<cell|<big|sum><rsub|<around*|(|i,j|)>\<in\>\<pi\><rsub|1><around*|(|H|)>\<times\>\<pi\><rsub|2><around*|(|H|)>><around*|(|<around*|\||x<rsub|i>|\|>\<cdot\><around*|\||y<rsub|j>|\|>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[corollary:
+      <reference|sum distributivity>]>>>|<cell|<around*|(|<big|sum><rsub|i\<in\>\<pi\><rsub|1><around*|(|H|)>><around*|\||x<rsub|i>|\|>|)>\<cdot\><around*|(|<big|sum><rsub|i\<in\>\<pi\><rsub|2><around*|(|H|)>><around*|\||y<rsub|i>|\|>|)>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|s\<cdot\>t>>>>
+    </eqnarray*>
+
+    From the above it follows that <math|<around*|{|<big|sum><rsub|i\<in\>H><around*|\||x<rsub|i>\<cdot\>y<rsub|i>|\|>\|H\<subseteq\>I\<wedge\>H<text|
+    is finite>|}>> has the upper bound <math|s\<cdot\>t> so that by the
+    conditional completeness of <math|\<bbb-R\>> [see theorem:
+    <reference|complex RC is conditional complete>]
+    <math|sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>H><around*|\||x<rsub|i>\<cdot\>y<rsub|i>|\|>\|H\<subseteq\>I\<wedge\>H<text|
+    is finite>|}>|)>> exist. Hence using [theorem: <reference|series absolute
+    convergence alternative definition>]\ 
+
+    <\equation>
+      <label|eq 14.228.161><big|sum><rsub|<around*|(|i,j|)>\<in\>I\<times\>J><around*|(|x<rsub|i>\<cdot\>x<rsub|j>|)><text|
+      is absolute convergent>
+    </equation>
+
+    Next we prove that\ 
+
+    <\equation>
+      <label|eq 14.229.161>I\<times\>J=<big|cup><rsub|i\<in\>I><around*|(|<around*|{|i|}>\<times\>J|)><text|
+      and >\<forall\>i,j\<in\>I<text| with >i\<neq\>j<text| we have
+      ><around*|(|<around*|{|i|}>\<times\>J|)><big|cap><around*|(|<around*|{|j|}><big|cap>J|)>=\<varnothing\>
+    </equation>
+
+    <\proof>
+      As <math|\<forall\>i\<in\>I> we have
+      <math|<around*|{|i|}>\<times\>J\<subseteq\>I\<times\>J> it follows that
+      <math|<big|cup><rsub|i\<in\>I><around*|(|<around*|{|i|}>\<times\>J|)>\<subseteq\>I\<times\>J>,
+      further if <math|<around*|(|r,s|)>\<in\>I\<times\>J> we have
+      <math|r\<in\>I\<wedge\>s\<in\>J> so that
+      <math|<around*|(|r,s|)>\<in\><around*|{|r|}>\<times\>J\<subseteq\><big|cup><rsub|i\<in\>I><around*|(|<around*|{|i|}>\<times\>J|)>>
+      or <math|I\<times\>J\<subseteq\><big|cup><rsub|i\<in\>I><around*|(|<around*|{|i|}>\<times\>J|)>>.
+      Hence\ 
+
+      <\equation*>
+        I\<times\>J=<big|cup><rsub|i\<in\>I><around*|(|<around*|{|i|}>\<times\>J|)>
+      </equation*>
+
+      Further if <math|i,j\<in\>I> with <math|i\<neq\>j> then if
+      <math|<around*|(|r,s|)>\<in\><around*|(|<around*|{|i|}>\<times\>J|)><big|cap><around*|(|<around*|{|j|}><big|cap>J|)>>
+      then <math|r=i\<wedge\>r=j\<Rightarrow\>i=j> contradicting
+      <math|i\<neq\>j> so we have\ 
+
+      <\equation*>
+        <around*|(|<around*|{|i|}>\<times\>J|)><big|cap><around*|(|<around*|{|j|}><big|cap>J|)>=\<varnothing\><text|
+        >\<forall\>i,j\<in\>I<text| with >i\<neq\>j
+      </equation*>
+    </proof>
+
+    Let \ <math|i\<in\>I> and take <math|<around*|(|r,s|)>,<around*|(|r<rprime|'>,s<rprime|'>|)>\<in\><around*|{|i|}>\<times\>J>
+    such that <math|\<pi\><rsub|2><around*|(|<around*|(|r,s|)>|)>=\<pi\><rsub|2><around*|(|<around*|(|r<rprime|'>,s<rprime|'>|)>|)>>
+    then <math|r=i=r<rprime|'>> and <math|s=s<rprime|'>> so that
+    <math|<around*|(|r,s|)>=<around*|(|r<rprime|'>,s<rprime|'>|)>>. Further
+    if <math|j\<in\>J> then <math|<around*|(|i,j|)>\<in\><around*|{|i|}>\<times\>J>
+    and <math|\<pi\><rsub|2><around*|(|<around*|(|i,j|)>|)>=j>. So we have
+    that
+
+    <\equation>
+      <label|eq 14.230.161>\<forall\>i\<in\>I<text| we have that
+      >\<pi\><rsub|2>:<around*|{|i|}>\<times\>J\<rightarrow\>J<text| is a
+      bijection>
+    </equation>
+
+    Using the previous theorem [theorem: <reference|series absolute
+    convergent countable associativity>] on [eqs: <reference|eq 14.228.161>,
+    <reference|eq 14.229.161>]
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<big|sum><rsub|<around*|(|i,j|)>\<in\>I\<times\>J><around*|(|x<rsub|i>\<cdot\>y<rsub|j>|)>>|<cell|=>|<cell|<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|<around*|(|r,s|)>\<in\><around*|{|i|}>\<times\>J><around*|(|x<rsub|r>\<cdot\>y<rsub|s>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|r,s|)>\<in\><around*|{|i|}>\<times\>J\<Rightarrow\>x<rsub|r>=x<rsub|i>>>|<cell|<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|<around*|(|r,s|)>\<in\><around*|{|i|}>\<times\>J><around*|(|x<rsub|i>\<cdot\>y<rsub|\<pi\><rsub|2><around*|(|r,s|)>><rsub|>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|series absolute convergence sum and scalar
+      product>]>>>|<cell|<big|sum><rsub|i\<in\>I><around*|(|x<rsub|i>\<cdot\><big|sum><rsub|<around*|(|r,s|)>>y<rsub|\<pi\><rsub|2><around*|(|r,s|)>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|series absolute convergence commutativity countable
+      sums>]>\<wedge\><text|[eq: <reference|eq
+      14.230.161>]>>>|<cell|<big|sum><rsub|i\<in\>I><around*|(|x<rsub|i\<cdot\>><big|sum><rsub|j\<in\>J><rsub|>y<rsub|j>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|series absolute convergence sum and scalar
+      product>]>>>|<cell|<around*|(|<big|sum><rsub|i\<in\>I>x<rsub|i>|)>\<cdot\><around*|(|<big|sum><rsub|j\<in\>J>y<rsub|j>|)>>>>>
+    </eqnarray*>
+  </proof>
+
+  <subsection|Properties of complete space.>
+
+  <\definition>
+    <label|metric contraction>Let <math|<around*|\<langle\>|X,d|\<rangle\>>>
+    be a metric space then a function <math|f:X\<rightarrow\>X> is a
+    <with|font-series|bold|contraction> if there exist a
+    <math|\<lambda\>\<in\><around*|[|0,1|[>> such that
+    <math|\<forall\>x,y\<in\>X> we have <math|d<around*|(|f<around*|(|x|)>,f<around*|(|y|)>|)>\<leqslant\>\<lambda\>\<cdot\>d<around*|(|x,y|)>>
+  </definition>
+
+  <\theorem>
+    <label|metric contractions are continuous>Let
+    <math|<around*|\<langle\>|X,d|\<rangle\>>> be a metric space and
+    <math|f:X\<rightarrow\>X> be a contraction then <math|f> is continuous.
+  </theorem>
+
+  <\proof>
+    As <math|f:X\<rightarrow\>X> is a contraction there exist a
+    <math|\<lambda\>\<in\><around*|[|0,1|[>> such that
+
+    <\equation*>
+      \<forall\>x,y\<in\>X<text| >d<around*|(|f<around*|(|x|)>,f<around*|(|y|)>|)>\<leqslant\>\<lambda\>\<cdot\>d<around*|(|x,y|)>
+    </equation*>
+
+    Let <math|x\<in\>X> and <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> if
+    <math|y\<in\>X> is such that <math|d<around*|(|x,y|)>\<less\>\<varepsilon\>>
+    we have <math|d<around*|(|f<around*|(|x|)>,f<around*|(|y|)>|)>\<leqslant\>\<lambda\>\<cdot\>d<around*|(|x,y|)>\<less\>d<around*|(|x,y|)>\<less\>\<varepsilon\>>
+    which by [theorem: <reference|continuity in a metric space>] proves that
+    <math|f> is continuous at <math|x>. Hence as <math|x> was chosen
+    arbitrary <math|f:X\<rightarrow\>X> is continuous.\ 
+  </proof>
+
+  Contractions are special because they guarantee the existence of a fixed
+  point that is a point that is mapped on itself by the contraction, this is
+  proved in the Banach Fixed Point theorem.
+
+  <\theorem>
+    <label|metric Banach fixed point theorem>Let
+    <math|<around*|\<langle\>|X,d|\<rangle\>>> be a
+    <with|font-series|bold|complete> metric space and
+    <math|f:X\<rightarrow\>X> a contraction then there exists a
+    <with|font-series|bold|unique ><math|x<rsub|0>\<in\>X> such that
+    <math|f<around*|(|x<rsub|0>|)>=x<rsub|0>>. Further if we define for
+    <math|n\<in\>\<bbb-N\>> <math|f<rsup|<around*|(|n|)>>> recursively by\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|f<rsup|<around*|(|1|)>>>|<cell|=>|<cell|f>>|<row|<cell|f<rsup|<around*|(|n+1|)>>>|<cell|=>|<cell|f\<circ\>f<rsup|<around*|(|n|)>>>>>>
+    </eqnarray*>
+
+    then <math|\<forall\>x\<in\>X> we have\ 
+
+    <\equation*>
+      <below|lim|n\<rightarrow\>\<infty\>>f<rsup|<around*|(|n|)>><around*|(|x|)>=x<rsub|0>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    As <math|f:X\<rightarrow\>X> is a contraction there exist a
+    <math|\<lambda\>\<in\><around*|[|0,1|[>> such that
+
+    <\equation*>
+      \<forall\>x,y\<in\>X<text| >d<around*|(|f<around*|(|x|)>,f<around*|(|y|)>|)>\<leqslant\>\<lambda\>\<cdot\>d<around*|(|x,y|)>
+    </equation*>
+
+    As a metric space is non empty there exist a <math|x\<in\>X>. We prove
+    now by induction that\ 
+
+    <\equation>
+      <label|eq 14.234.164>\<forall\>n\<in\>\<bbb-N\><text| we have
+      >d<around*|(|f<rsup|<around*|(|n|)>><around*|(|x|)>,f<rsup|<around*|(|n+1|)>><around*|(|x|)>|)>\<leqslant\>\<lambda\><rsup|n>\<cdot\>d<around*|(|x,f<around*|(|x|)>|)>
+    </equation>
+
+    <\proof>
+      Define\ 
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\>\|d<around*|(|f<rsup|<around*|(|n|)>><around*|(|x|)>,f<rsup|<around*|(|n+1|)>><around*|(|x|)>|)>\<leqslant\>\<lambda\><rsup|n>\<cdot\>d<around*|(|x,f<around*|(|x|)>|)>|}>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|1\<in\>S>>As
+
+        <\equation*>
+          d<around*|(|f<rsup|<around*|(|1|)>><around*|(|x|)>,f<rsup|<around*|(|1+1|)>><around*|(|x|)>|)>=d<around*|(|f<around*|(|x|)>,<around*|(|f\<circ\>f|)><around*|(|x|)>|)>=d<around*|(|f<around*|(|x|)>,f<around*|(|f<around*|(|x|)>|)>|)>\<leqslant\>\<lambda\><rsup|>\<cdot\>d<around*|(|x,f<around*|(|x|)>|)>=\<lambda\><rsup|1>\<cdot\>d<around*|(|x,f<around*|(|x|)>|)>
+        </equation*>
+
+        it collows that <math|1\<in\>S>
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>We have
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|d<around*|(|f<rsup|<around*|(|n+1|)>><around*|(|x|)>,f<rsup|<around*|(|<around*|(|n+1|)>+1|)>><around*|(|x|)>|)>>|<cell|=>|<cell|d<around*|(|<around*|(|f\<circ\>f<rsup|<around*|(|n|)>>|)><around*|(|x|)>,<around*|(|f\<circ\>f<rsup|<around*|(|n+1|)>>|)><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|d<around*|(|f<around*|(|f<rsup|<around*|(|n|)>><around*|(|x|)>|)>,f<around*|(|f<rsup|<around*|(|n+1|)>><around*|(|x|)>|)>|)>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|\<lambda\>\<cdot\>d<around*|(|f<rsup|<around*|(|n|)>><around*|(|x|)>,f<rsup|<around*|(|n+1|)>><around*|(|x|)>|)>>>|<row|<cell|>|<cell|\<leqslant\><rsub|n\<in\>S>>|<cell|\<lambda\>\<cdot\>\<lambda\><rsup|n>\<cdot\>d<around*|(|x,f<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<lambda\><rsup|n+1>\<cdot\>d<around*|(|x,f<around*|(|x|)>|)>>>>>
+        </eqnarray*>
+
+        proving that <math|n+1\<in\>S>.
+      </description>
+
+      Mathematical induction proves [eq: <reference|eq 14.234.164>].
+    </proof>
+
+    Next we prove by induction that
+
+    <\equation>
+      <label|eq 14.235.164>\<forall\>n,k\<in\>\<bbb-N\><text| we have
+      >d<around*|(|f<rsup|<around*|(|n|)>><around*|(|x|)>,f<rsup|<around*|(|n+k|)>><around*|(|x|)>|)>\<leqslant\><around*|(|<big|sum><rsub|i=1><rsup|k>\<lambda\><rsup|n+<around*|(|i-1|)>>|)>\<cdot\>d<around*|(|x,f<around*|(|x|)>|)>
+    </equation>
+
+    <\proof>
+      Given <math|n\<in\>\<bbb-N\>> define
+
+      <\equation*>
+        T<rsub|n>=<around*|{|k\<in\>\<bbb-N\>\|d<around*|(|f<rsup|<around*|(|n|)>><around*|(|x|)>,f<rsup|<around*|(|n+k|)>><around*|(|x|)>|)>\<leqslant\><around*|(|<big|sum><rsub|i=1><rsup|k>\<lambda\><rsup|n+<around*|(|i-1|)>>|)>\<cdot\>d<around*|(|x,f<around*|(|x|)>|)>|}>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|1\<in\>T<rsub|n>>>We have by [eq: <reference|eq
+        14.234.164>] that
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|d<around*|(|f<rsup|<around*|(|n|)>><around*|(|x|)>,f<rsup|<around*|(|n+1|)>><around*|(|x|)>|)>>|<cell|\<leqslant\>>|<cell|\<lambda\><rsup|n>\<cdot\>d<around*|(|x,f<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<lambda\><rsup|n+<around*|(|1-1|)>>\<cdot\>d<around*|(|x,f<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|1>\<lambda\><rsup|n+<around*|(|i-1|)>>|)>\<cdot\>d<around*|(|x,f<around*|(|x|)>|)>>>>>
+        </eqnarray*>
+
+        proving that <math|1\<in\>T<rsub|n>>.
+
+        <item*|<math|k\<in\>T<rsub|n>\<Rightarrow\>k+1\<in\>T<rsub|n>>>Then
+        we have:
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|d<around*|(|f<rsup|<around*|(|n|)>><around*|(|x|)>,f<rsup|<around*|(|n+<around*|(|k+1|)>|)>><around*|(|x|)>|)>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|d<around*|(|f<rsup|<around*|(|n|)>><around*|(|x|)>,f<rsup|<around*|(|n+k|)>><around*|(|x|)>|)>+d<around*|(|f<rsup|<around*|(|n+k|)>><around*|(|x|)>,f<rsup|<around*|(|m+<around*|(|k+1|)>|)>><around*|(|x|)>|)>>|<cell|\<leqslant\><rsub|k\<in\>T<rsub|n>>>|<cell|>>|<row|<cell|<around*|(|<big|sum><rsub|i=1><rsup|k>\<lambda\><rsup|n+<around*|(|i-1|)>>|)>\<cdot\>d<around*|(|x,f<around*|(|x|)>|)>+d<around*|(|f<rsup|<around*|(|n+k|)>><around*|(|x|)>,f<rsup|<around*|(|n+<around*|(|k+1|)>|)>><around*|(|x|)>|)>>|<cell|\<leqslant\><rsub|<text|[eq:
+          <reference|eq 14.234.164>]>>>|<cell|>>|<row|<cell|<around*|(|<big|sum><rsub|i=1><rsup|k>\<lambda\><rsup|n+<around*|(|i-1|)>>|)>\<cdot\>d<around*|(|x,f<around*|(|x|)>|)>+\<lambda\><rsup|n+k>\<cdot\>d<around*|(|x,f<around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<big|sum><rsub|i=1><rsup|k>\<lambda\><rsup|n+<around*|(|i-1|)>>+\<lambda\><rsup|n+k>|)>\<cdot\>d<around*|(|x,f<around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<big|sum><rsub|i=1><rsup|k>\<lambda\><rsup|n+<around*|(|i-1|)>>+\<lambda\><rsup|n+<around*|(|<around*|(|k+1|)>-1|)>>|)>\<cdot\>d<around*|(|x,f<around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<big|sum><rsub|i=1><rsup|k+1>\<lambda\><rsup|n+<around*|(|i-1|)>>|)>\<cdot\>d<around*|(|f<around*|(|x|)>|)>>|<cell|>|<cell|>>>>
+        </eqnarray*>
+
+        proving that <math|k+1\<in\>T<rsub|n>>.
+      </description>
+
+      Mathematical induction proves [eq: <reference|eq 14.235.164>]
+    </proof>
+
+    As <math|\<lambda\>\<in\><around*|[|0,1|[>> we have that
+    <math|0\<leqslant\>\<lambda\>\<less\>1> we have for
+    <math|k\<in\>\<bbb-N\>> that
+
+    <\equation*>
+      <big|sum><rsub|i=1><rsup|k>\<lambda\><rsup|n+<around*|(|i-1|)>>\<equallim\><rsub|<text|[lemma:
+      <reference|sum of powers lemma>]>>\<lambda\><rsup|n>\<cdot\><frac|1-\<lambda\><rsup|k>|1-\<lambda\>>
+    </equation*>
+
+    which combined with [eq: <reference|eq 14.235.164>] proves that\ 
+
+    <\equation>
+      <label|eq 14.236.164>\<forall\>k,n\<in\>\<bbb-N\> that
+      d<around*|(|f<rsup|<around*|(|n|)>><around*|(|x|)>,f<rsup|<around*|(|n+k|)>><around*|(|x|)>|)>\<leqslant\>\<lambda\><rsup|n>\<cdot\><frac|1-\<lambda\><rsup|n>|1-\<lambda\>>\<cdot\>d<around*|(|x,f<around*|(|x|)>|)>
+    </equation>
+
+    Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then as
+    <math|0\<leqslant\>\<lambda\>\<less\>1> we have by [theorem:
+    <reference|limit b^n>] that there exist a <math|N\<in\>\<bbb-N\>> such
+    that <math|\<forall\>n\<geqslant\>N> <math|\<lambda\><rsup|n>=<around*|\||\<lambda\><rsup|n>-0|\|>\<less\><frac|\<varepsilon\>|<around*|(|<frac|1-\<lambda\><rsup|n>|1-\<lambda\>>|)>\<cdot\>d<around*|(|x,f<around*|(|x|)>|)>+1>>.
+    If <math|n,m\<geqslant\>N> then we may always assume that
+    <math|m\<geqslant\>n> so that\ 
+
+    <\equation*>
+      d<around*|(|f<rsup|<around*|(|n|)>><around*|(|x|)>,f<rsup|<around*|(|m|)>>|)>=d<around*|(|f<rsup|<around*|(|n|)>><around*|(|x|)>,f<rsup|<around*|(|n+<around*|(|m-n|)>|)>><around*|(|x|)>|)>\<less\><frac|\<varepsilon\>|<around*|(|<frac|1-\<lambda\><rsup|n>|1-\<lambda\>>|)>\<cdot\>d<around*|(|x,f<around*|(|x|)>|)>+1>\<less\>\<varepsilon\>
+    </equation*>
+
+    This proves that <math|<around*|{|f<rsup|<around*|(|n|)>><around*|(|x|)>|}><rsub|n\<in\><around*|{|1,\<ldots\>,\<infty\>|}>>>
+    is Cauchy, as <math|<around*|\<langle\>|X,d|\<rangle\>>> is complete it
+    follows that
+
+    <\equation>
+      <label|eq 14.237.164><below|lim|n\<rightarrow\>\<infty\>>f<rsup|<around*|(|n|)>><around*|(|x|)>=x<rsub|0><text|
+      exist>
+    </equation>
+
+    As by [theorem: <reference|metric contractions are continuous>]
+    <math|f:X\<rightarrow\>X> is continuous it follows from the above and
+    [theorem: <reference|limit and continuity in metric space>] we have that\ 
+
+    <\equation>
+      <label|eq 14.238.164><below|lim|n\<rightarrow\>\<infty\>>f<rsup|<around*|(|n+1|)>><around*|(|x|)>=<below|lim|n\<rightarrow\>\<infty\>>f<around*|(|f<rsup|<around*|(|n|)>><around*|(|x|)>|)>=f<around*|(|x<rsub|0>|)><text|>
+    </equation>
+
+    So given <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there exist by [eq:
+    <reference|eq 14.237.164>] a <math|N<rsub|1>\<in\>\<bbb-N\>> such that
+    <math|\<forall\>n\<geqslant\>N> we have
+
+    <\equation*>
+      d<around*|(|f<rsup|<around*|(|n|)>><around*|(|x|)>,x<rsub|0>|)>\<less\><frac|\<varepsilon\>|2>
+    </equation*>
+
+    and by [eq: <reference|eq 14.238.164>] there exist a
+    <math|N<rsub|2>\<in\>\<bbb-N\>> such that <math|\<forall\>n\<geqslant\>N>
+    we have\ 
+
+    <\equation*>
+      d<around*|(|f<rsup|<around*|(|n+1|)>><around*|(|x|)>,f<around*|(|x<rsub|0>|)>|)>\<less\><frac|\<varepsilon\>|2>
+    </equation*>
+
+    Hence if <math|n\<geqslant\>max<around*|(|N<rsub|1>,N<rsub|2>+1|)>> then
+    we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|d<around*|(|f<around*|(|x<rsub|0>|)>,x<rsub|0>|)>>|<cell|\<leqslant\>>|<cell|d<around*|(|f<around*|(|x<rsub|0>|)>,f<rsup|<around*|(|n|)>><around*|(|x|)>|)>+d<around*|(|f<rsup|n><around*|(|x|)>,x<rsub|0>|)>>>|<row|<cell|>|<cell|=>|<cell|d<around*|(|f<rsup|<around*|(|n|)>><around*|(|x|)>,f<around*|(|x<rsub|0>|)>|)>+d<around*|(|f<rsup|n><around*|(|x|)>,x<rsub|0>|)>>>|<row|<cell|>|<cell|\<less\><rsub|<text|[eq:
+      <reference|eq 14.237.164>]>>>|<cell|d<around*|(|f<rsup|<around*|(|n|)>><around*|(|x|)>,f<around*|(|x<rsub|0>|)>|)>+<frac|\<varepsilon\>|2>>>|<row|<cell|>|<cell|=>|<cell|d<around*|(|f<rsup|<around*|(|<around*|(|n-1|)>+1|)>><around*|(|x|)>,f<around*|(|x<rsub|0>|)>|)>+<frac|\<varepsilon\>|2>>>|<row|<cell|>|<cell|\<less\><rsub|n\<gtr\>N<rsub|2>+1\<Rightarrow\>n-1\<geqslant\>N<rsub|2>>>|<cell|<frac|\<varepsilon\>|2>+<frac|\<varepsilon\>|2>>>|<row|<cell|>|<cell|=>|<cell|\<varepsilon\>>>>>
+    </eqnarray*>
+
+    As <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> was chosen arbitrary we
+    can use [theorem: <reference|complex Archimedean property consequence
+    (2)>] on the above giving <math|d<around*|(|f<around*|(|x<rsub|0>|)>,x<rsub|0>|)>=0>,
+    hence\ 
+
+    <\equation*>
+      f<around*|(|x<rsub|0>|)>=x<rsub|0>
+    </equation*>
+
+    Finally to prove uniqueness, assume that there exist a
+    <math|x<rsub|1>\<in\>X> with <math|x<rsub|0>\<neq\>x<rsub|1>> such that
+    <math|f<around*|(|x<rsub|1>|)>=x<rsub|1>>. As <math|\<lambda\>\<less\>1>
+    and <math|0\<less\>d<around*|(|x<rsub|0>,x<rsub|1>|)>> it follows that
+    <math|\<lambda\>\<cdot\>d<around*|(|x<rsub|1>,x<rsub|0>|)>\<less\>1\<cdot\>d<around*|(|x<rsub|1>,x<rsub|0>|)>=d<around*|(|x<rsub|1>,x<rsub|o>|)>>,
+    further we have
+
+    <\equation*>
+      0\<less\>d<around*|(|x<rsub|1>,x<rsub|0>|)>=d<around*|(|f<around*|(|x<rsub|1>|)>,f<around*|(|x<rsub|0>|)>|)>\<leqslant\>\<lambda\>\<cdot\>d<around*|(|x<rsub|1>,x<rsub|0>|)>\<less\><rsub|>d<around*|(|x<rsub|1>,x<rsub|0>|)>
+    </equation*>
+
+    giving the contradiction <math|d<around*|(|x<rsub|1>,x<rsub|0>|)>\<less\>d<around*|(|x<rsub|1>,x<rsub|0>|)>>.
+    So our assumption must be wrong hence <math|x<rsub|0>> is unique.
   </proof>
 
   \;
+
+  \;
+
+  \ 
 
   \;
 
@@ -18907,7 +20045,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|13>
-    <associate|page-first|647>
+    <associate|page-first|649>
     <associate|page-medium|papyrus>
     <associate|section-nr|0>
     <associate|subsection-nr|0>
@@ -18926,6 +20064,7 @@
     <associate|auto-105|<tuple|absolute convergence|?>>
     <associate|auto-106|<tuple|dominant convergence|?>>
     <associate|auto-107|<tuple|sum over a countable set|?>>
+    <associate|auto-108|<tuple|14.11.4|?>>
     <associate|auto-11|<tuple|14.1.2|?>>
     <associate|auto-12|<tuple|box topology|?>>
     <associate|auto-13|<tuple|14.1.3|?>>
@@ -19165,214 +20304,242 @@
     <associate|continuity uniform continuity|<tuple|14.137|?>>
     <associate|continuity universal continuity implies
     continuity|<tuple|14.138|?>>
-    <associate|eq 14.1.145|<tuple|14.1|?>>
-    <associate|eq 14.10.146|<tuple|14.10|?>>
-    <associate|eq 14.100.150|<tuple|14.100|?>>
-    <associate|eq 14.101.150|<tuple|14.101|?>>
-    <associate|eq 14.102.150|<tuple|14.102|?>>
-    <associate|eq 14.103.150|<tuple|14.103|?>>
-    <associate|eq 14.104.150|<tuple|14.104|?>>
-    <associate|eq 14.105.150|<tuple|14.105|?>>
-    <associate|eq 14.106.150|<tuple|14.106|?>>
-    <associate|eq 14.107.150|<tuple|14.107|?>>
-    <associate|eq 14.108.150|<tuple|14.108|?>>
-    <associate|eq 14.109.150|<tuple|14.109|?>>
-    <associate|eq 14.11.146|<tuple|14.11|?>>
-    <associate|eq 14.112.152|<tuple|14.112|?>>
-    <associate|eq 14.113.152|<tuple|14.113|?>>
-    <associate|eq 14.114.151|<tuple|14.110|?>>
-    <associate|eq 14.114.152|<tuple|14.114|?>>
-    <associate|eq 14.115.151|<tuple|14.111|?>>
-    <associate|eq 14.115.152|<tuple|14.116|?>>
-    <associate|eq 14.115.154|<tuple|14.115|?>>
-    <associate|eq 14.116.152|<tuple|14.117|?>>
-    <associate|eq 14.117.152|<tuple|14.118|?>>
-    <associate|eq 14.118.152|<tuple|14.119|?>>
-    <associate|eq 14.119.152|<tuple|14.120|?>>
-    <associate|eq 14.12.146|<tuple|14.12|?>>
-    <associate|eq 14.120.152|<tuple|14.121|?>>
-    <associate|eq 14.121.152|<tuple|14.122|?>>
-    <associate|eq 14.122.152|<tuple|14.123|?>>
-    <associate|eq 14.123.152|<tuple|14.124|?>>
-    <associate|eq 14.124.152|<tuple|14.126|?>>
-    <associate|eq 14.124.153|<tuple|14.125|?>>
-    <associate|eq 14.125.152|<tuple|14.127|?>>
-    <associate|eq 14.127.153|<tuple|14.128|?>>
-    <associate|eq 14.128.153|<tuple|14.129|?>>
-    <associate|eq 14.129.153|<tuple|14.130|?>>
-    <associate|eq 14.13.146|<tuple|14.13|?>>
-    <associate|eq 14.130.153|<tuple|14.131|?>>
-    <associate|eq 14.131.153|<tuple|14.132|?>>
-    <associate|eq 14.132.153|<tuple|14.133|?>>
-    <associate|eq 14.133.153|<tuple|14.134|?>>
-    <associate|eq 14.134.153|<tuple|14.135|?>>
-    <associate|eq 14.135.153|<tuple|14.136|?>>
-    <associate|eq 14.136.153|<tuple|14.137|?>>
-    <associate|eq 14.137.153|<tuple|14.138|?>>
-    <associate|eq 14.138.153|<tuple|14.139|?>>
-    <associate|eq 14.139.153|<tuple|14.140|?>>
-    <associate|eq 14.14.146|<tuple|14.14|?>>
-    <associate|eq 14.140.153|<tuple|14.141|?>>
-    <associate|eq 14.141.153|<tuple|14.142|?>>
-    <associate|eq 14.142.153|<tuple|14.143|?>>
-    <associate|eq 14.143.153|<tuple|14.144|?>>
-    <associate|eq 14.144.153|<tuple|14.145|?>>
-    <associate|eq 14.145.153|<tuple|14.146|?>>
-    <associate|eq 14.146.153|<tuple|14.147|?>>
-    <associate|eq 14.147.153|<tuple|14.148|?>>
-    <associate|eq 14.148.153|<tuple|14.149|?>>
-    <associate|eq 14.149\<point\>153|<tuple|14.172|?>>
-    <associate|eq 14.15.146|<tuple|14.15|?>>
-    <associate|eq 14.150.153|<tuple|14.173|?>>
-    <associate|eq 14.150.154|<tuple|14.160|?>>
-    <associate|eq 14.150.155|<tuple|14.155|?>>
-    <associate|eq 14.150.158|<tuple|14.150|?>>
-    <associate|eq 14.151.153|<tuple|14.174|?>>
-    <associate|eq 14.151.154|<tuple|14.163|?>>
-    <associate|eq 14.151.155|<tuple|14.161|?>>
-    <associate|eq 14.151.156|<tuple|14.156|?>>
-    <associate|eq 14.151.158|<tuple|14.151|?>>
-    <associate|eq 14.152.153|<tuple|14.175|?>>
-    <associate|eq 14.152.155|<tuple|14.162|?>>
-    <associate|eq 14.152.156|<tuple|14.157|?>>
-    <associate|eq 14.152.158|<tuple|14.152|?>>
-    <associate|eq 14.153.155|<tuple|14.158|?>>
-    <associate|eq 14.153.158|<tuple|14.153|?>>
-    <associate|eq 14.154.155|<tuple|14.164|?>>
-    <associate|eq 14.154.156|<tuple|14.159|?>>
-    <associate|eq 14.154.158|<tuple|14.154|?>>
-    <associate|eq 14.155.155|<tuple|14.165|?>>
-    <associate|eq 14.156.155|<tuple|14.166|?>>
-    <associate|eq 14.157.155|<tuple|14.167|?>>
-    <associate|eq 14.158.155|<tuple|14.168|?>>
-    <associate|eq 14.159.155|<tuple|14.169|?>>
-    <associate|eq 14.16.146|<tuple|14.16|?>>
-    <associate|eq 14.160.155|<tuple|14.170|?>>
-    <associate|eq 14.161.155|<tuple|14.171|?>>
-    <associate|eq 14.17.146|<tuple|14.17|?>>
-    <associate|eq 14.171.156|<tuple|14.176|?>>
-    <associate|eq 14.172.156|<tuple|14.177|?>>
-    <associate|eq 14.173.156|<tuple|14.178|?>>
-    <associate|eq 14.174.156|<tuple|14.179|?>>
-    <associate|eq 14.175.156|<tuple|14.180|?>>
-    <associate|eq 14.176.156|<tuple|14.181|?>>
-    <associate|eq 14.177.156|<tuple|14.182|?>>
-    <associate|eq 14.178.156|<tuple|14.183|?>>
-    <associate|eq 14.179.156|<tuple|14.184|?>>
-    <associate|eq 14.18.146|<tuple|14.18|?>>
-    <associate|eq 14.180.156|<tuple|14.185|?>>
-    <associate|eq 14.181.156|<tuple|14.186|?>>
-    <associate|eq 14.182.156|<tuple|14.187|?>>
-    <associate|eq 14.183.156|<tuple|14.188|?>>
-    <associate|eq 14.184.156|<tuple|14.189|?>>
-    <associate|eq 14.185.156|<tuple|14.190|?>>
-    <associate|eq 14.186.156|<tuple|14.191|?>>
-    <associate|eq 14.187.156|<tuple|14.192|?>>
-    <associate|eq 14.188.156|<tuple|14.193|?>>
-    <associate|eq 14.189.156|<tuple|14.194|?>>
-    <associate|eq 14.19.146|<tuple|14.19|?>>
-    <associate|eq 14.190.156|<tuple|14.195|?>>
-    <associate|eq 14.191.156|<tuple|14.196|?>>
-    <associate|eq 14.192.156|<tuple|14.197|?>>
-    <associate|eq 14.193.156|<tuple|14.198|?>>
-    <associate|eq 14.199.156|<tuple|14.200|?>>
-    <associate|eq 14.199.157|<tuple|14.199|?>>
-    <associate|eq 14.2.145|<tuple|14.2|?>>
-    <associate|eq 14.20.146|<tuple|14.20|?>>
-    <associate|eq 14.200.156|<tuple|14.201|?>>
-    <associate|eq 14.201.156|<tuple|14.202|?>>
-    <associate|eq 14.203.158|<tuple|14.203|?>>
-    <associate|eq 14.204.158|<tuple|14.204|?>>
-    <associate|eq 14.205.158|<tuple|14.205|?>>
-    <associate|eq 14.206.158|<tuple|14.206|?>>
-    <associate|eq 14.207.158|<tuple|14.207|?>>
-    <associate|eq 14.208.158|<tuple|14.208|?>>
-    <associate|eq 14.209.528|<tuple|14.209|?>>
-    <associate|eq 14.21.146|<tuple|14.21|?>>
-    <associate|eq 14.210.158|<tuple|14.210|?>>
-    <associate|eq 14.22.146|<tuple|14.22|?>>
-    <associate|eq 14.23.146|<tuple|14.23|?>>
-    <associate|eq 14.24.146|<tuple|14.24|?>>
-    <associate|eq 14.25.146|<tuple|14.25|?>>
-    <associate|eq 14.26.146|<tuple|14.26|?>>
-    <associate|eq 14.27.146|<tuple|14.27|?>>
-    <associate|eq 14.28.147|<tuple|14.28|?>>
-    <associate|eq 14.29.146|<tuple|14.30|?>>
-    <associate|eq 14.29.147|<tuple|14.29|?>>
-    <associate|eq 14.3.146|<tuple|14.3|?>>
-    <associate|eq 14.30.146|<tuple|14.31|?>>
-    <associate|eq 14.31.146|<tuple|14.32|?>>
-    <associate|eq 14.32.146|<tuple|14.33|?>>
-    <associate|eq 14.33.146|<tuple|14.34|?>>
-    <associate|eq 14.35.147|<tuple|14.35|?>>
-    <associate|eq 14.36.147|<tuple|14.36|?>>
-    <associate|eq 14.37.147|<tuple|14.37|?>>
-    <associate|eq 14.38.147|<tuple|14.38|?>>
-    <associate|eq 14.39.147|<tuple|14.39|?>>
-    <associate|eq 14.4.146|<tuple|14.4|?>>
-    <associate|eq 14.41.147|<tuple|14.41|?>>
-    <associate|eq 14.43.147|<tuple|14.43|?>>
-    <associate|eq 14.44.147|<tuple|14.44|?>>
-    <associate|eq 14.45.147|<tuple|14.45|?>>
-    <associate|eq 14.46.147|<tuple|14.46|?>>
-    <associate|eq 14.47.147|<tuple|14.50|?>>
-    <associate|eq 14.47.148|<tuple|14.47|?>>
-    <associate|eq 14.48.147|<tuple|14.51|?>>
-    <associate|eq 14.48.148|<tuple|14.48|?>>
-    <associate|eq 14.49.147|<tuple|14.52|?>>
-    <associate|eq 14.49.148|<tuple|14.49|?>>
-    <associate|eq 14.5.146|<tuple|14.5|?>>
-    <associate|eq 14.50.147|<tuple|14.53|?>>
-    <associate|eq 14.51.147|<tuple|14.54|?>>
-    <associate|eq 14.52.147|<tuple|14.55|?>>
-    <associate|eq 14.56.148|<tuple|14.56|?>>
-    <associate|eq 14.57.148|<tuple|14.57|?>>
-    <associate|eq 14.58.148|<tuple|14.58|?>>
-    <associate|eq 14.59.148|<tuple|14.59|?>>
-    <associate|eq 14.6.146|<tuple|14.6|?>>
-    <associate|eq 14.60.148|<tuple|14.60|?>>
-    <associate|eq 14.61.148|<tuple|14.61|?>>
-    <associate|eq 14.62.148|<tuple|14.62|?>>
-    <associate|eq 14.63.148|<tuple|14.63|?>>
-    <associate|eq 14.64.148|<tuple|14.64|?>>
-    <associate|eq 14.65.148|<tuple|14.65|?>>
-    <associate|eq 14.66.148|<tuple|14.66|?>>
-    <associate|eq 14.67.148|<tuple|14.67|?>>
-    <associate|eq 14.68.148|<tuple|14.68|?>>
-    <associate|eq 14.69.148|<tuple|14.69|?>>
-    <associate|eq 14.7.146|<tuple|14.7|?>>
-    <associate|eq 14.70.148|<tuple|14.70|?>>
-    <associate|eq 14.71.148|<tuple|14.71|?>>
-    <associate|eq 14.72.148|<tuple|14.72|?>>
-    <associate|eq 14.73.148|<tuple|14.73|?>>
-    <associate|eq 14.74.148|<tuple|14.74|?>>
-    <associate|eq 14.75.149|<tuple|14.75|?>>
-    <associate|eq 14.76.149|<tuple|14.76|?>>
-    <associate|eq 14.77.149|<tuple|14.77|?>>
-    <associate|eq 14.78.149|<tuple|14.78|?>>
-    <associate|eq 14.79.149|<tuple|14.79|?>>
-    <associate|eq 14.8.146|<tuple|14.8|?>>
-    <associate|eq 14.80.149|<tuple|14.80|?>>
-    <associate|eq 14.81.150|<tuple|14.81|?>>
-    <associate|eq 14.82.149|<tuple|14.82|?>>
-    <associate|eq 14.83.150|<tuple|14.83|?>>
-    <associate|eq 14.84.149|<tuple|14.84|?>>
-    <associate|eq 14.85.150|<tuple|14.85|?>>
-    <associate|eq 14.86.150|<tuple|14.86|?>>
-    <associate|eq 14.87.150|<tuple|14.87|?>>
-    <associate|eq 14.88.150|<tuple|14.88|?>>
-    <associate|eq 14.89.150|<tuple|14.89|?>>
-    <associate|eq 14.9.146|<tuple|14.9|?>>
-    <associate|eq 14.90.150|<tuple|14.90|?>>
-    <associate|eq 14.91.150|<tuple|14.91|?>>
-    <associate|eq 14.92.150|<tuple|14.92|?>>
-    <associate|eq 14.93.150|<tuple|14.93|?>>
-    <associate|eq 14.94.150|<tuple|14.94|?>>
-    <associate|eq 14.95.150|<tuple|14.95|?>>
-    <associate|eq 14.96.150|<tuple|14.96|?>>
-    <associate|eq 14.97.150|<tuple|14.97|?>>
-    <associate|eq 14.98.150|<tuple|14.98|?>>
-    <associate|eq 14.99.150|<tuple|14.99|?>>
+    <associate|eq 14.1.145|<tuple|14.2|?>>
+    <associate|eq 14.1.162|<tuple|14.1|?>>
+    <associate|eq 14.10.146|<tuple|14.13|?>>
+    <associate|eq 14.100.150|<tuple|14.103|?>>
+    <associate|eq 14.101.150|<tuple|14.104|?>>
+    <associate|eq 14.102.150|<tuple|14.105|?>>
+    <associate|eq 14.103.150|<tuple|14.106|?>>
+    <associate|eq 14.104.150|<tuple|14.107|?>>
+    <associate|eq 14.105.150|<tuple|14.108|?>>
+    <associate|eq 14.106.150|<tuple|14.109|?>>
+    <associate|eq 14.107.150|<tuple|14.110|?>>
+    <associate|eq 14.108.150|<tuple|14.111|?>>
+    <associate|eq 14.109.150|<tuple|14.112|?>>
+    <associate|eq 14.11.146|<tuple|14.14|?>>
+    <associate|eq 14.112.152|<tuple|14.115|?>>
+    <associate|eq 14.113.152|<tuple|14.116|?>>
+    <associate|eq 14.114.151|<tuple|14.113|?>>
+    <associate|eq 14.114.152|<tuple|14.117|?>>
+    <associate|eq 14.115.151|<tuple|14.114|?>>
+    <associate|eq 14.115.152|<tuple|14.119|?>>
+    <associate|eq 14.115.154|<tuple|14.118|?>>
+    <associate|eq 14.116.152|<tuple|14.120|?>>
+    <associate|eq 14.117.152|<tuple|14.121|?>>
+    <associate|eq 14.118.152|<tuple|14.122|?>>
+    <associate|eq 14.119.152|<tuple|14.123|?>>
+    <associate|eq 14.12.146|<tuple|14.15|?>>
+    <associate|eq 14.120.152|<tuple|14.124|?>>
+    <associate|eq 14.121.152|<tuple|14.125|?>>
+    <associate|eq 14.122.152|<tuple|14.126|?>>
+    <associate|eq 14.123.152|<tuple|14.127|?>>
+    <associate|eq 14.124.152|<tuple|14.129|?>>
+    <associate|eq 14.124.153|<tuple|14.128|?>>
+    <associate|eq 14.125.152|<tuple|14.130|?>>
+    <associate|eq 14.127.153|<tuple|14.131|?>>
+    <associate|eq 14.128.153|<tuple|14.132|?>>
+    <associate|eq 14.129.153|<tuple|14.133|?>>
+    <associate|eq 14.13.146|<tuple|14.16|?>>
+    <associate|eq 14.130.153|<tuple|14.134|?>>
+    <associate|eq 14.131.153|<tuple|14.135|?>>
+    <associate|eq 14.132.153|<tuple|14.136|?>>
+    <associate|eq 14.133.153|<tuple|14.137|?>>
+    <associate|eq 14.134.153|<tuple|14.138|?>>
+    <associate|eq 14.135.153|<tuple|14.139|?>>
+    <associate|eq 14.136.153|<tuple|14.140|?>>
+    <associate|eq 14.137.153|<tuple|14.141|?>>
+    <associate|eq 14.138.153|<tuple|14.142|?>>
+    <associate|eq 14.139.153|<tuple|14.143|?>>
+    <associate|eq 14.14.146|<tuple|14.17|?>>
+    <associate|eq 14.140.153|<tuple|14.144|?>>
+    <associate|eq 14.141.153|<tuple|14.145|?>>
+    <associate|eq 14.142.153|<tuple|14.146|?>>
+    <associate|eq 14.143.153|<tuple|14.147|?>>
+    <associate|eq 14.144.153|<tuple|14.148|?>>
+    <associate|eq 14.145.153|<tuple|14.149|?>>
+    <associate|eq 14.146.153|<tuple|14.150|?>>
+    <associate|eq 14.147.153|<tuple|14.151|?>>
+    <associate|eq 14.148.153|<tuple|14.152|?>>
+    <associate|eq 14.149\<point\>153|<tuple|14.175|?>>
+    <associate|eq 14.15.146|<tuple|14.18|?>>
+    <associate|eq 14.150.153|<tuple|14.176|?>>
+    <associate|eq 14.150.154|<tuple|14.163|?>>
+    <associate|eq 14.150.155|<tuple|14.158|?>>
+    <associate|eq 14.150.158|<tuple|14.153|?>>
+    <associate|eq 14.151.153|<tuple|14.177|?>>
+    <associate|eq 14.151.154|<tuple|14.166|?>>
+    <associate|eq 14.151.155|<tuple|14.164|?>>
+    <associate|eq 14.151.156|<tuple|14.159|?>>
+    <associate|eq 14.151.158|<tuple|14.154|?>>
+    <associate|eq 14.152.153|<tuple|14.178|?>>
+    <associate|eq 14.152.155|<tuple|14.165|?>>
+    <associate|eq 14.152.156|<tuple|14.160|?>>
+    <associate|eq 14.152.158|<tuple|14.155|?>>
+    <associate|eq 14.153.155|<tuple|14.161|?>>
+    <associate|eq 14.153.158|<tuple|14.156|?>>
+    <associate|eq 14.154.155|<tuple|14.167|?>>
+    <associate|eq 14.154.156|<tuple|14.162|?>>
+    <associate|eq 14.154.158|<tuple|14.157|?>>
+    <associate|eq 14.155.155|<tuple|14.168|?>>
+    <associate|eq 14.156.155|<tuple|14.169|?>>
+    <associate|eq 14.157.155|<tuple|14.170|?>>
+    <associate|eq 14.158.155|<tuple|14.171|?>>
+    <associate|eq 14.159.155|<tuple|14.172|?>>
+    <associate|eq 14.16.146|<tuple|14.19|?>>
+    <associate|eq 14.160.155|<tuple|14.173|?>>
+    <associate|eq 14.161.155|<tuple|14.174|?>>
+    <associate|eq 14.17.146|<tuple|14.20|?>>
+    <associate|eq 14.171.156|<tuple|14.179|?>>
+    <associate|eq 14.172.156|<tuple|14.180|?>>
+    <associate|eq 14.173.156|<tuple|14.181|?>>
+    <associate|eq 14.174.156|<tuple|14.182|?>>
+    <associate|eq 14.175.156|<tuple|14.183|?>>
+    <associate|eq 14.176.156|<tuple|14.184|?>>
+    <associate|eq 14.177.156|<tuple|14.185|?>>
+    <associate|eq 14.178.156|<tuple|14.186|?>>
+    <associate|eq 14.179.156|<tuple|14.187|?>>
+    <associate|eq 14.18.146|<tuple|14.21|?>>
+    <associate|eq 14.180.156|<tuple|14.188|?>>
+    <associate|eq 14.181.156|<tuple|14.189|?>>
+    <associate|eq 14.182.156|<tuple|14.190|?>>
+    <associate|eq 14.183.156|<tuple|14.191|?>>
+    <associate|eq 14.184.156|<tuple|14.192|?>>
+    <associate|eq 14.185.156|<tuple|14.193|?>>
+    <associate|eq 14.186.156|<tuple|14.194|?>>
+    <associate|eq 14.187.156|<tuple|14.195|?>>
+    <associate|eq 14.188.156|<tuple|14.196|?>>
+    <associate|eq 14.189.156|<tuple|14.197|?>>
+    <associate|eq 14.19.146|<tuple|14.22|?>>
+    <associate|eq 14.190.156|<tuple|14.198|?>>
+    <associate|eq 14.191.156|<tuple|14.199|?>>
+    <associate|eq 14.192.156|<tuple|14.200|?>>
+    <associate|eq 14.193.156|<tuple|14.201|?>>
+    <associate|eq 14.199.156|<tuple|14.203|?>>
+    <associate|eq 14.199.157|<tuple|14.202|?>>
+    <associate|eq 14.2.145|<tuple|14.3|?>>
+    <associate|eq 14.20.146|<tuple|14.23|?>>
+    <associate|eq 14.200.156|<tuple|14.204|?>>
+    <associate|eq 14.201.156|<tuple|14.205|?>>
+    <associate|eq 14.203.158|<tuple|14.206|?>>
+    <associate|eq 14.204.158|<tuple|14.207|?>>
+    <associate|eq 14.205.158|<tuple|14.208|?>>
+    <associate|eq 14.206.158|<tuple|14.209|?>>
+    <associate|eq 14.207.158|<tuple|14.210|?>>
+    <associate|eq 14.208.158|<tuple|14.211|?>>
+    <associate|eq 14.209.528|<tuple|14.212|?>>
+    <associate|eq 14.21.146|<tuple|14.24|?>>
+    <associate|eq 14.210.158|<tuple|14.213|?>>
+    <associate|eq 14.211.159|<tuple|14.214|?>>
+    <associate|eq 14.212.159|<tuple|14.215|?>>
+    <associate|eq 14.213.159|<tuple|14.216|?>>
+    <associate|eq 14.214.159|<tuple|14.217|?>>
+    <associate|eq 14.215.159|<tuple|14.218|?>>
+    <associate|eq 14.216.159|<tuple|14.219|?>>
+    <associate|eq 14.217.159|<tuple|14.220|?>>
+    <associate|eq 14.218.159|<tuple|14.221|?>>
+    <associate|eq 14.219.160|<tuple|14.223|?>>
+    <associate|eq 14.219.161|<tuple|14.222|?>>
+    <associate|eq 14.22.146|<tuple|14.25|?>>
+    <associate|eq 14.220.159|<tuple|14.224|?>>
+    <associate|eq 14.221.519|<tuple|14.225|?>>
+    <associate|eq 14.222.159|<tuple|14.227|?>>
+    <associate|eq 14.223.159.1|<tuple|14.226|?>>
+    <associate|eq 14.225.161|<tuple|14.228|?>>
+    <associate|eq 14.226.161|<tuple|14.229|?>>
+    <associate|eq 14.227\<point\>161|<tuple|14.230|?>>
+    <associate|eq 14.228.161|<tuple|14.231|?>>
+    <associate|eq 14.229.161|<tuple|14.232|?>>
+    <associate|eq 14.23.146|<tuple|14.26|?>>
+    <associate|eq 14.230.161|<tuple|14.233|?>>
+    <associate|eq 14.234.164|<tuple|14.234|?>>
+    <associate|eq 14.235.164|<tuple|14.235|?>>
+    <associate|eq 14.236.164|<tuple|14.236|?>>
+    <associate|eq 14.237.164|<tuple|14.237|?>>
+    <associate|eq 14.238.164|<tuple|14.238|?>>
+    <associate|eq 14.24.146|<tuple|14.27|?>>
+    <associate|eq 14.25.146|<tuple|14.28|?>>
+    <associate|eq 14.26.146|<tuple|14.29|?>>
+    <associate|eq 14.27.146|<tuple|14.30|?>>
+    <associate|eq 14.28.147|<tuple|14.31|?>>
+    <associate|eq 14.29.146|<tuple|14.33|?>>
+    <associate|eq 14.29.147|<tuple|14.32|?>>
+    <associate|eq 14.3.146|<tuple|14.4|?>>
+    <associate|eq 14.30.146|<tuple|14.34|?>>
+    <associate|eq 14.31.146|<tuple|14.35|?>>
+    <associate|eq 14.32.146|<tuple|14.36|?>>
+    <associate|eq 14.33.146|<tuple|14.37|?>>
+    <associate|eq 14.35.147|<tuple|14.38|?>>
+    <associate|eq 14.36.147|<tuple|14.39|?>>
+    <associate|eq 14.37.147|<tuple|14.40|?>>
+    <associate|eq 14.38.147|<tuple|14.41|?>>
+    <associate|eq 14.39.147|<tuple|14.42|?>>
+    <associate|eq 14.4.146|<tuple|14.5|?>>
+    <associate|eq 14.41.147|<tuple|14.44|?>>
+    <associate|eq 14.43.147|<tuple|14.46|?>>
+    <associate|eq 14.44.147|<tuple|14.47|?>>
+    <associate|eq 14.45.147|<tuple|14.48|?>>
+    <associate|eq 14.46.147|<tuple|14.49|?>>
+    <associate|eq 14.47.147|<tuple|14.53|?>>
+    <associate|eq 14.47.148|<tuple|14.50|?>>
+    <associate|eq 14.48.147|<tuple|14.54|?>>
+    <associate|eq 14.48.148|<tuple|14.51|?>>
+    <associate|eq 14.49.147|<tuple|14.55|?>>
+    <associate|eq 14.49.148|<tuple|14.52|?>>
+    <associate|eq 14.5.146|<tuple|14.6|?>>
+    <associate|eq 14.50.147|<tuple|14.56|?>>
+    <associate|eq 14.51.147|<tuple|14.57|?>>
+    <associate|eq 14.52.147|<tuple|14.58|?>>
+    <associate|eq 14.56.148|<tuple|14.59|?>>
+    <associate|eq 14.57.148|<tuple|14.60|?>>
+    <associate|eq 14.58.148|<tuple|14.61|?>>
+    <associate|eq 14.59.148|<tuple|14.62|?>>
+    <associate|eq 14.6.146|<tuple|14.7|?>>
+    <associate|eq 14.60.148|<tuple|14.63|?>>
+    <associate|eq 14.61.148|<tuple|14.64|?>>
+    <associate|eq 14.62.148|<tuple|14.65|?>>
+    <associate|eq 14.63.148|<tuple|14.66|?>>
+    <associate|eq 14.64.148|<tuple|14.67|?>>
+    <associate|eq 14.65.148|<tuple|14.68|?>>
+    <associate|eq 14.66.148|<tuple|14.69|?>>
+    <associate|eq 14.67.148|<tuple|14.70|?>>
+    <associate|eq 14.68.148|<tuple|14.71|?>>
+    <associate|eq 14.69.148|<tuple|14.72|?>>
+    <associate|eq 14.7.146|<tuple|14.10|?>>
+    <associate|eq 14.70.148|<tuple|14.73|?>>
+    <associate|eq 14.71.148|<tuple|14.74|?>>
+    <associate|eq 14.72.148|<tuple|14.75|?>>
+    <associate|eq 14.73.148|<tuple|14.76|?>>
+    <associate|eq 14.74.148|<tuple|14.77|?>>
+    <associate|eq 14.75.149|<tuple|14.78|?>>
+    <associate|eq 14.76.149|<tuple|14.79|?>>
+    <associate|eq 14.77.149|<tuple|14.80|?>>
+    <associate|eq 14.78.149|<tuple|14.81|?>>
+    <associate|eq 14.79.149|<tuple|14.82|?>>
+    <associate|eq 14.8.146|<tuple|14.11|?>>
+    <associate|eq 14.8.163|<tuple|14.8|?>>
+    <associate|eq 14.80.149|<tuple|14.83|?>>
+    <associate|eq 14.81.150|<tuple|14.84|?>>
+    <associate|eq 14.82.149|<tuple|14.85|?>>
+    <associate|eq 14.83.150|<tuple|14.86|?>>
+    <associate|eq 14.84.149|<tuple|14.87|?>>
+    <associate|eq 14.85.150|<tuple|14.88|?>>
+    <associate|eq 14.86.150|<tuple|14.89|?>>
+    <associate|eq 14.87.150|<tuple|14.90|?>>
+    <associate|eq 14.88.150|<tuple|14.91|?>>
+    <associate|eq 14.89.150|<tuple|14.92|?>>
+    <associate|eq 14.9.146|<tuple|14.12|?>>
+    <associate|eq 14.9.164|<tuple|14.9|?>>
+    <associate|eq 14.90.150|<tuple|14.93|?>>
+    <associate|eq 14.91.150|<tuple|14.94|?>>
+    <associate|eq 14.92.150|<tuple|14.95|?>>
+    <associate|eq 14.93.150|<tuple|14.96|?>>
+    <associate|eq 14.94.150|<tuple|14.97|?>>
+    <associate|eq 14.95.150|<tuple|14.98|?>>
+    <associate|eq 14.96.150|<tuple|14.99|?>>
+    <associate|eq 14.97.150|<tuple|14.100|?>>
+    <associate|eq 14.98.150|<tuple|14.101|?>>
+    <associate|eq 14.99.150|<tuple|14.102|?>>
     <associate|filter base|<tuple|14.226|?>>
     <associate|filter base accumulating alternative|<tuple|14.235|?>>
     <associate|filter base and compactness|<tuple|14.252|?>>
@@ -19408,7 +20575,8 @@
     <associate|lemma 14.344.156|<tuple|14.347|?>>
     <associate|lemma 14.345.156|<tuple|14.348|?>>
     <associate|lemma 14.356.158|<tuple|14.356|?>>
-    <associate|lemma 14.360.158|<tuple|14.360|?>>
+    <associate|lemma 14.360.158|<tuple|14.362|?>>
+    <associate|lemma 14.364.159|<tuple|14.366|?>>
     <associate|limit (a+n)/(b+n)|<tuple|14.275|?>>
     <associate|limit 1/(a+i)|<tuple|14.274|?>>
     <associate|limit a.x_n|<tuple|14.278|?>>
@@ -19437,6 +20605,7 @@
     sequence|<tuple|14.284|?>>
     <associate|limit x_n+a|<tuple|14.276|?>>
     <associate|limit x_n+y_n|<tuple|14.277|?>>
+    <associate|metric Banach fixed point theorem|<tuple|14.371|?>>
     <associate|metric ball image preimage|<tuple|14.68|?>>
     <associate|metric bounded set|<tuple|14.70|?>>
     <associate|metric bounded set inclusion|<tuple|14.72|?>>
@@ -19444,6 +20613,8 @@
     <associate|metric closed balls are closed|<tuple|14.60|?>>
     <associate|metric closed open balls are bounded|<tuple|14.73|?>>
     <associate|metric composition of isometries|<tuple|14.67|?>>
+    <associate|metric contraction|<tuple|14.369|?>>
+    <associate|metric contractions are continuous|<tuple|14.370|?>>
     <associate|metric dense set|<tuple|14.76|?>>
     <associate|metric empty set is bounded|<tuple|14.71|?>>
     <associate|metric equivalent metrics|<tuple|14.62|?>>
@@ -19462,7 +20633,6 @@
     <associate|metric subtopology|<tuple|14.61|?>>
     <associate|metric topology|<tuple|14.58|?>>
     <associate|metric topology (1)|<tuple|14.59|?>>
-    <associate|normded triangle inequality|<tuple|14.81|?>>
     <associate|normed absolute value norm differences|<tuple|14.82|?>>
     <associate|normed all norms in the set of complex numbers are
     equivalent|<tuple|14.106|?>>
@@ -19502,6 +20672,7 @@
     <associate|normed sub space topology|<tuple|14.98|?>>
     <associate|normed sup(S) and inf(S)|<tuple|14.96|?>>
     <associate|normed topology|<tuple|14.86|?>>
+    <associate|normed triangle inequality|<tuple|14.81|?>>
     <associate|separation Hausdorff|<tuple|14.187|?>>
     <associate|separation Hausdorff every finite set is
     closed|<tuple|14.190|?>>
@@ -19533,20 +20704,30 @@
     <associate|series|<tuple|14.324|?>>
     <associate|series absolute convergence|<tuple|14.350|?>>
     <associate|series absolute convergence alternative
-    definition|<tuple|14.361|?>>
+    definition|<tuple|14.363|?>>
     <associate|series absolute convergence commutativity|<tuple|14.357|?>>
     <associate|series absolute convergence commutativity countable
-    sums|<tuple|14.359|?>>
+    sums|<tuple|14.360|?>>
+    <associate|series absolute convergence countable family|<tuple|14.359|?>>
+    <associate|series absolute convergence dominant
+    convergence|<tuple|14.365|?>>
     <associate|series absolute convergence equals convergence only in Banach
     space|<tuple|14.354|?>>
     <associate|series absolute convergence equivalences|<tuple|14.355|?>>
     <associate|series absolute convergence implies
     convergence|<tuple|14.352|?>>
+    <associate|series absolute convergence of countable families
+    condition|<tuple|14.364|?>>
+    <associate|series absolute convergence sum and scalar
+    product|<tuple|14.361|?>>
+    <associate|series absolute convergent countable
+    associativity|<tuple|14.367|?>>
     <associate|series absolute dominant convergence|<tuple|14.351|?>>
     <associate|series absolute sum over a countable set|<tuple|14.358|?>>
     <associate|series convergence condition in a Banach
     space|<tuple|14.329|?>>
     <associate|series converging of upper series|<tuple|14.332|?>>
+    <associate|series distributivity|<tuple|14.368|?>>
     <associate|series dominant convergence|<tuple|14.353|?>>
     <associate|series non negative numbers associativity|<tuple|14.349|?>>
     <associate|series non negative numbers commutativity|<tuple|14.337|?>>
@@ -19892,6 +21073,10 @@
       <with|par-left|<quote|2tab>|14.11.3.2<space|2spc>Absolute convergent
       series <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-104>>
+
+      <with|par-left|<quote|2tab>|14.11.3.3<space|2spc>Properties of complete
+      space. <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-108>>
     </associate>
   </collection>
 </auxiliary>
