@@ -6266,7 +6266,7 @@
 
       <item><math|<around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)><rsup|c>=<big|cup><rsub|i\<in\>I><around*|(|A<rsub|i>|)><rsup|c>>
 
-      <item>If <math|C> is a class then <math|C\\<around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>=<big|cap><rsub|i\<in\>I><around*|(|A<rsub|i>\\C|)>>
+      <item>If <math|C> is a class then <math|C\\<around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>=<big|cap><rsub|i\<in\>I><around*|(|C\\A<rsub|i>|)>>
 
       <item>If <math|C> is a class then <math|C\<setminus\><around*|(|<big|cap><rsub|i\<in\>I>A<rsub|i>|)>=<big|cup><rsub|i\<in\>I><around*|(|C\\A<rsub|i>|)>>
     </enumerate>
@@ -14351,8 +14351,6 @@
     <associate|family union condition set|<tuple|2.117|?>>
     <associate|family union intersection and empty set|<tuple|2.131|?>>
     <associate|family union intersection and inclusion|<tuple|2.126|?>>
-    <associate|family union intersection of two families with different index
-    sets|<tuple|2.128|?>>
     <associate|family union of a empty set|<tuple|2.118|?>>
     <associate|family union of family of families|<tuple|2.132|?>>
     <associate|family union of family set and surjections|<tuple|2.116|?>>

@@ -508,6 +508,248 @@
     so as <math|<big|cup><rsub|i\<in\>I>A<rsub|i>> is countable we have
     <math|<big|cup><rsub|i\<in\>I>A<rsub|i>> is denumerable.
   </proof>
+
+  \;
+
+  We can now use the Baire category theorem to prove the open mapping
+  theorem.
+
+  \;
+
+  <\theorem>
+    <label|complete open mapping theorem><index|open mapping
+    theorem><dueto|Open Mapping Theorem>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be Banach spaces and <math|L:X\<rightarrow\>Y> a
+    <with|font-series|bold|surjective continuous linear> function then
+    <math|L:X\<rightarrow\>Y> is a <with|font-series|bold|open> function.
+  </theorem>
+
+  <\proof>
+    For <math|L> we have tow possible cases:
+
+    <\description>
+      <item*|<math|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>=0>>Then
+      we have by [theorem: <reference|continuity operator norm (1)>]
+      <math|\<forall\>x\<in\>X> <math|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>>=0>
+      proving that <math|\<forall\>x\<in\>X>
+      <math|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>>=<around*|{|0|}>>, as
+      <math|L> is a surjection it follows that <math|Y=<around*|{|0|}>>. Let
+      <math|U> be a open set in <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
+      then <math|L<around*|(|U|)>=<around*|{|0|}>=Y> which is open in
+      <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>.
+      So it follows that in this case <math|L:X\<rightarrow\>Y> is a open
+      function.
+
+      <item*|<math|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<neq\>0>>We
+      split the proof in a set of smaller proofs.\ 
+
+      <\equation>
+        <label|eq 14.241.164>\<forall\>\<delta\>\<in\>\<bbb-R\><rsup|+><text|
+        there exist a >\<lambda\>\<in\>\<bbb-R\><rsup|+><text| such that
+        >B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>><around*|(|0,\<lambda\>|)>\<subseteq\><wide|L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\>|)>|)>|\<wide-bar\>>
+      </equation>
+
+      <\proof>
+        Let <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> and <math|x\<in\>X> then
+        using [theorem: <reference|complex Archimedean property consequence
+        (1)>] there exist a <math|n\<in\>\<bbb-N\>> such that
+        <math|<frac|2|\<delta\>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>\<leqslant\>n>,
+        hence <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>\<less\><frac|n\<cdot\>\<delta\>|2>>.
+        Let <math|y=<frac|x|n>> then <math|x=n\<cdot\>y> and
+
+        <\equation*>
+          <around*|\<\|\|\>|y|\<\|\|\>><rsub|X>=<around*|\<\|\|\>|<frac|x|n>|\<\|\|\>><rsub|X>=<frac|1|n>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>\<less\><frac|1|n>\<cdot\><frac|n\<cdot\>\<delta\>|2>=<frac|\<delta\>|2>
+        </equation*>
+
+        proving that <math|x\<in\>n\<cdot\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<delta\>|2>|)>>.
+        Hence we have\ 
+
+        <\equation>
+          <label|eq 14.242.164>X=<big|cup><rsub|n\<in\>\<bbb-N\>><around*|(|n\<cdot\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<delta\>|2>|)>|)>
+        </equation>
+
+        As <math|L> is surjective
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|Y>|<cell|=>|<cell|L<around*|(|X|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|<big|cup><rsub|n\<in\>\<bbb-N\>><around*|(|n\<cdot\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<delta\>|2>|)>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|family image and preimage>]>>>|<cell|<big|cup><rsub|n\<in\>\<bbb-N\>>L<around*|(|n\<cdot\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<delta\>|2>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|linear mapping sum of
+          sets>]>>>|<cell|<big|cup><rsub|n\<in\>\<bbb-N\>><around*|(|n\<cdot\>L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<delta\>|2>|)>|)>|)>>>|<row|<cell|>|<cell|\<subseteq\>>|<cell|<big|cup><rsub|n\<in\>\<bbb-N\>><wide|n\<cdot\>L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<delta\>|2>|)>|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|\<subseteq\>>|<cell|Y>>>>
+        </eqnarray*>
+
+        hence\ 
+
+        <\equation>
+          <label|eq 14.243.164>Y=<big|cup><rsub|n\<in\>\<bbb-N\>><wide|n\<cdot\>L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<delta\>|2>|)>|)>|\<wide-bar\>>
+        </equation>
+
+        Further <math|Y\<neq\>\<varnothing\>> [as <math|0\<in\>Y>] and
+        <math|Y=Y<rsup|\<circ\>>> [using [theorem: <reference|topology open
+        set and interior>] and the fact that <math|U> is open] so that by
+        [eq: <reference|eq 14.243.164>]\ 
+
+        <\equation>
+          <label|eq 14.246.165>\<varnothing\>\<neq\><around*|(|<big|cup><rsub|n\<in\>\<bbb-N\>><wide|n\<cdot\>L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<delta\>|2>|)>|)>|\<wide-bar\>>|)><rsup|\<circ\>>
+        </equation>
+
+        If <math|\<forall\>n\<in\>\<bbb-N\>>
+        <math|<around*|(|<wide|n\<cdot\>L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<delta\>|2>|)>|)>|\<wide-bar\>>|)><rsup|\<circ\>>=\<varnothing\>>
+        then we have, as by [theorem: <reference|complete Baire Category>]
+        <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>=<around*|\<langle\>|X,d<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>|\<rangle\>>>
+        is a Baire space, that <math|><math|<around*|(|<big|cup><rsub|n\<in\>\<bbb-N\>><wide|n\<cdot\>L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<delta\>|2>|)>|)>|\<wide-bar\>>|)>=\<varnothing\>>,
+        contradicting [eq: <reference|eq 14.246.165>]. Hence there exist a
+        <math|n\<in\>\<bbb-N\>> such that
+        <math|<around*|(|<wide|n\<cdot\>L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<delta\>|2>|)>|)>|\<wide-bar\>>|)><rsup|\<circ\>>\<neq\>\<varnothing\>>.
+        So there exist a <math|z\<in\><around*|(|<wide|n\<cdot\>L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<delta\>|2>|)>|)>|\<wide-bar\>>|)><rsup|\<circ\>>>and
+        as <math|<around*|(|<big|cup><rsub|n\<in\>\<bbb-N\>><wide|n\<cdot\>L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<delta\>|2>|)>|)>|\<wide-bar\>>|)><rsup|\<circ\>>>
+        is open there exist by [theorem: <reference|normed space and open
+        sets>] a <math|\<beta\>\<in\>\<bbb-R\><rsup|+>> such that\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|z\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>><around*|(|z,\<beta\>|)>>|<cell|\<subseteq\>>|<cell|<around*|(|<wide|n\<cdot\>L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<delta\>|2>|)>|)>|\<wide-bar\>>|)><rsup|\<circ\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|normed space set operations>]>>>|<cell|<around*|(|n\<cdot\><wide|L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<delta\>|2>|)>|)>|\<wide-bar\>>|)><rsup|\<circ\>>>>|<row|<cell|>|<cell|\<subseteq\>>|<cell|n\<cdot\><wide|L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<delta\>|2>|)>|)>|\<wide-bar\>>>>>>
+        </eqnarray*>
+
+        so that\ 
+
+        <\equation>
+          <label|eq 14.247.165><frac|1|n>\<cdot\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>><around*|(|z,\<beta\>|)>\<subseteq\><wide|L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<delta\>|2>|)>|)>|\<wide-bar\>>
+        </equation>
+
+        Let <math|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<delta\>|2>|)>-B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<delta\>|2>|)>>
+        then there exists <math|x<rsub|1>,x<rsub|2>\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<delta\>|2>|)>>
+        such that <math|x=x<rsub|1>-x<rsub|2>>, so
+        <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>=<around*|\<\|\|\>|x<rsub|1>-x<rsub|2>|\<\|\|\>><rsub|X>\<leqslant\><around*|\<\|\|\>|x<rsub|1>|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|x<rsub|2>|\<\|\|\>><rsub|X>\<less\><frac|\<delta\>|2>+<frac|\<delta\>|2>=\<delta\>>
+        or <math|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\>|)>>,
+        proving
+
+        <\equation>
+          <label|eq 14.248.165>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<delta\>|2>|)>-B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<delta\>|2>|)>\<subseteq\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\>|)>
+        </equation>
+
+        Hence\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<delta\>|2>|)>|)>-L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<delta\>|2>|)>|)>z>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|linear mapping sum of
+          sets>]>>>|<cell|L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<delta\>|2>|)>-B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<delta\>|2>|)>|)>>>|<row|<cell|>|<cell|\<subseteq\><rsub|<text|[eq:
+          <reference|eq 14.248.165>]>>>|<cell|L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\>|)>|)><eq-number><label|eq
+          14.249.165>>>>>
+        </eqnarray*>
+
+        If <math|y\<in\><big|cup><rsub|x\<in\><frac|1|n>\<cdot\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>><around*|(|z,\<beta\>|)>><around*|(|x-<frac|1|n>\<cdot\>B<rsub|Y><around*|(|z,\<beta\>|)>|)>>
+        then there exist a <math|x<rsub|1>\<in\><frac|1|n>*\<cdot\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>><around*|(|z,\<beta\>|)>>
+        and a <math|x<rsub|2>\<in\><frac|1|n>\<cdot\>B<rsub|Y><around*|(|z,\<beta\>|)>>
+        such that <math|y=x<rsub|1>-x<rsub|2>> or in other word
+        <math|y\<in\><frac|1|n>*\<cdot\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>><around*|(|z,\<beta\>|)>-<frac|1|n>\<cdot\>B<rsub|Y><around*|(|z,\<beta\>|)>>.
+        So <math|<big|cup><rsub|x\<in\><frac|1|n>\<cdot\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>><around*|(|z,\<beta\>|)>><around*|(|x-<frac|1|n>\<cdot\>B<rsub|Y><around*|(|z,\<beta\>|)>|)>\<subseteq\><frac|1|n>*\<cdot\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>><around*|(|z,\<beta\>|)>-<frac|1|n>\<cdot\>B<rsub|Y><around*|(|z,\<beta\>|)>>,
+        which combined with [eq: <reference|eq 14.249.165>] proves\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<big|cup><rsub|x\<in\><frac|1|n>\<cdot\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>><around*|(|z,\<beta\>|)>><around*|(|x-<frac|1|n>\<cdot\>B<rsub|Y><around*|(|z,\<beta\>|)>|)>>|<cell|\<subseteq\>>|<cell|<frac|1|n>*\<cdot\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>><around*|(|z,\<beta\>|)>-<frac|1|n>\<cdot\>B<rsub|Y><around*|(|z,\<beta\>|)>>>|<row|<cell|>|<cell|\<subseteq\><rsub|<text|[eq:
+          <reference|eq 14.247.165>]>>>|<cell|<wide|L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<delta\>|2>|)>|)>|\<wide-bar\>>-<wide|L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<delta\>|2>|)>|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|\<subseteq\><rsub|<text|[eq:
+          <reference|eq 14.249.165>]>>>|<cell|<wide|L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\>|)>|)>|\<wide-bar\>><eq-number><label|eq
+          14.250.165>>>>>
+        </eqnarray*>
+
+        Let <math|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>><around*|(|x,\<beta\>|)>>
+        then by [theorem: <reference|normed space set operations>]
+        <math|x-<frac|1|n>\<cdot\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>><around*|(|x,\<beta\>|)>>
+        is open, hence <math|<big|cup><rsub|x\<in\><frac|1|n>\<cdot\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>><around*|(|z,\<beta\>|)>><around*|(|x-<frac|1|n>\<cdot\>B<rsub|Y><around*|(|z,\<beta\>|)>|)>>
+        is open. As <math|0=z-z\<in\><big|cup><rsub|x\<in\><frac|1|n>\<cdot\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>><around*|(|z,\<beta\>|)>><around*|(|x-<frac|1|n>\<cdot\>B<rsub|Y><around*|(|z,\<beta\>|)>|)>>
+        there exist by [theorem: <reference|normed space and open sets>] a
+        <math|\<lambda\>\<in\>\<bbb-R\><rsup|+>> such that
+
+        <\equation*>
+          0\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>><around*|(|0,\<lambda\>|)>\<subseteq\><big|cup><rsub|x\<in\><frac|1|n>\<cdot\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>><around*|(|z,\<beta\>|)>><around*|(|x-<frac|1|n>\<cdot\>B<rsub|Y><around*|(|z,\<beta\>|)>|)>
+        </equation*>
+
+        which combined with [eq: <reference|eq 14.250.165>]\ 
+
+        <\equation*>
+          B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>><around*|(|0,\<lambda\>|)>\<subseteq\><wide|L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\>|)>|)>|\<wide-bar\>>
+        </equation*>
+
+        which proves [eq: <reference|eq 14.241.164>]
+      </proof>
+
+      Next we refine [eq: <reference|eq 14.241.164>] to show that\ 
+
+      <\equation>
+        <label|eq 14.251.165>If \<sigma\><rsub|0>\<in\>\<bbb-R\><rsup|+><text|
+        then there exist a >\<lambda\>\<in\>\<bbb-R\><rsup|+><text| such that
+        >B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>><around*|(|0,\<lambda\>|)>\<subseteq\>L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,2\<cdot\>\<sigma\><rsub|o>|)>|)>
+      </equation>
+
+      <\proof>
+        Using the Archimedean property of <math|\<bbb-R\>> [see theorem:
+        <reference|complex Archimedean property consequence (1)>] there exist
+        a <math|N\<in\>\<bbb-N\>> such that
+        <math|<frac|1|N>\<less\>\<sigma\><rsub|0>>. Define
+        <math|<around*|{|\<sigma\><rsub|n>|}><rsub|n\<in\>\<bbb-N\>>> by
+        <math|\<sigma\><rsub|n>=<around*|(|<frac|1|N+1>|)><rsup|n>> then by
+        [theorem: <reference|series power series in R>] we have that\ 
+
+        <\equation*>
+          <big|sum><rsub|n=1><rsup|\<infty\>>\<sigma\><rsub|n>=<big|sum><rsub|n=1><rsup|\<infty\>><around*|(|<frac|1|N+1>|)>=<frac|<frac|1|N+1>|1-<frac|1|N+1>>=<frac|<frac|1|N+1>|<frac|N+1-1|N+1>>=<frac|1|N>
+        </equation*>
+
+        proving that\ 
+
+        <\equation>
+          <label|eq 14.252.165><big|sum><rsub|n=1><rsup|\<infty\>>\<sigma\><rsub|n>=<frac|1|N>\<less\>\<sigma\><rsub|0>
+        </equation>
+
+        Now for all <math|n\<in\>\<bbb-N\><rsub|0>> we have by [eq:
+        <reference|eq 14.241.164>] that there exist a
+        <math|\<lambda\><rprime|'><rsub|n>\<in\>\<bbb-R\><rsup|+>> such that
+
+        <\equation*>
+          B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>><around*|(|0,\<lambda\><rprime|'><rsub|n>|)>\<subseteq\><wide|L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<sigma\><rsub|n>|)>|)>|\<wide-bar\>>
+        </equation*>
+
+        Define now <math|<around*|{|\<lambda\><rsub|n>|}><rsub|n\<in\>\<bbb-N\><rsub|0>>>
+        by <math|\<lambda\><rsub|n>=min<around*|(|\<lambda\><rprime|'><rsub|n>,<frac|1|n+1>|)>>
+        then we have\ 
+
+        <\equation>
+          <label|eq 14.253.165>\<forall\>n\<in\>\<bbb-N\><rsub|n><text|
+          >B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>><around*|(|0,\<lambda\><rsub|n>|)>\<subseteq\><wide|L<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<sigma\><rsub|n>|)>|)>|\<wide-bar\>><text|
+          and >\<lambda\><rsub|n>\<leqslant\><frac|1|n+1>
+        </equation>
+
+        Further using [example: <reference|limit 1/(a+i)>] and [theorem:
+        <reference|limit sequence limited by a convergent real sequence>] it
+        follows that\ 
+
+        <\equation>
+          <label|eq 14.254.165><below|lim|n\<rightarrow\>\<infty\>>\<lambda\><rsub|n>=0
+        </equation>
+
+        Let <math|y\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,\<sigma\><rsub|0>|)>><space|1em>We
+        use now recursion to define a
+
+        <\equation*>
+          <around*|{|x<rsub|n>|}><rsub|n\<in\>\<bbb-N\><rsub|0>>\<subseteq\>X<text|
+          such that> \<forall\>n\<in\>\<bbb-N\><rsub|0><text|
+          >x<rsub|n>\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<sigma\><rsub|n>|)><text|
+          and ><around*|\<\|\|\>|y-L<around*|(|<big|sum><rsub|i=0><rsup|n>x<rsub|n>|)>|\<\|\|\>><rsub|Y>\<less\>\<lambda\><rsub|n+1>
+        </equation*>
+
+        As <math|y\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>><around*|(|0,\<sigma\><rsub|0>|)>>\ 
+
+        \;
+
+        \;
+      </proof>
+
+      \ 
+    </description>
+
+    \;
+  </proof>
 </body>
 
 <\initial>
@@ -518,8 +760,10 @@
 
 <\references>
   <\collection>
+    <associate|auto-1|<tuple|open mapping theorem|?>>
+    <associate|complete open mapping theorem|<tuple|5|?>>
     <associate|countable union of a finite family of countable sets is
-    countable|<tuple|4|?>>
+    countable|<tuple|4|4>>
     <associate|eq 12.10.131|<tuple|1|1>>
     <associate|eq 12.11.131|<tuple|2|1>>
     <associate|eq 12.12.131|<tuple|3|1>>
@@ -530,6 +774,18 @@
     <associate|eq 14.111.151|<tuple|8|3>>
     <associate|eq 14.112.151|<tuple|9|3>>
     <associate|eq 14.113.151|<tuple|10|3>>
+    <associate|eq 14.241.164|<tuple|11|?>>
+    <associate|eq 14.242.164|<tuple|12|?>>
+    <associate|eq 14.243.164|<tuple|13|?>>
+    <associate|eq 14.246.165|<tuple|14|?>>
+    <associate|eq 14.247.165|<tuple|15|?>>
+    <associate|eq 14.248.165|<tuple|16|?>>
+    <associate|eq 14.249.165|<tuple|17|?>>
+    <associate|eq 14.250.165|<tuple|18|?>>
+    <associate|eq 14.251.165|<tuple|19|?>>
+    <associate|eq 14.252.165|<tuple|20|?>>
+    <associate|eq 14.253.165|<tuple|21|?>>
+    <associate|eq 14.254.165|<tuple|22|?>>
     <associate|series lemma 14.342|<tuple|3|3>>
   </collection>
 </references>
