@@ -440,6 +440,8 @@
 
       <item><math|<around*|(|A<big|cup>B|)>\\C=<around*|(|A\\C|)><big|cup><around*|(|B\\C|)>>
 
+      <item><math|<around*|(|A<big|cap>B|)>\\C=<around*|(|A\\C|)><big|cap>B=A<big|cap><around*|(|B\\C|)>>
+
       <item>If <math|C> is a class such that <math|A\<subseteq\>C> and
       <math|B\<subseteq\>C> then <math|A<big|cup>B\<subseteq\>C>
 
@@ -485,6 +487,14 @@
         <reference|class class commutative,idempotent,associative,distributivity>]>>>|<cell|<around*|(|A<big|cap>C<rsup|c>|)><big|cup><around*|(|B<big|cap>C<rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|class difference>]>>>|<cell|<around*|(|A\\C|)><big|cup><around*|(|B\\C|)>>>>>
       </eqnarray*>
+
+      <item>\ 
+
+      <\enumerate>
+        <item><math|<around*|(|A<big|cap>B|)>\\C=<around*|(|A<big|cap>B|)><big|cap>C<rsup|c>=A<big|cap><around*|(|B<big|cap>C<rsup|c>|)>=<around*|(|A<big|cap>C<rsup|c>|)><big|cap>B=<around*|(|A\\C|)><big|cap>B>
+
+        <item><math|<around*|(|A<big|cap>B|)>\\C=<around*|(|A<big|cap>B|)><big|cap>C<rsup|c>=A<big|cap><around*|(|B<big|cap>C<rsup|c>|)>=A<big|cap><around*|(|B\\C|)>>
+      </enumerate>
 
       <item>If <math|x\<in\>A<big|cup>B> then
       <math|x\<in\>A\<Rightarrowlim\><rsub|A\<subseteq\>C>x\<in\>C> or
