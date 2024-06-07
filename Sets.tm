@@ -1799,7 +1799,7 @@
 
   <\theorem>
     <label|set extending set with new element>Let <math|S> be a set then
-    there exists a element <math|x> such that <math|x\<nin\>X>
+    there exists a element <math|x> such that <math|x\<nin\>S>
   </theorem>
 
   <\proof>

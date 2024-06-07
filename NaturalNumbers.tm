@@ -9338,8 +9338,6 @@
     <math|<big|cup><rsub|i\<in\>I>A<rsub|i>> is countable.
   </proof>
 
-  TODO
-
   \;
 
   <\theorem>
@@ -9854,7 +9852,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|3>
-    <associate|page-first|121>
+    <associate|page-first|123>
     <associate|page-medium|paper>
     <associate|project-flag|false>
     <associate|section-nr|5>
@@ -9864,381 +9862,379 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|4|121>>
-    <associate|auto-10|<tuple|right action|128>>
-    <associate|auto-11|<tuple|<with|mode|<quote|math>|g\<vartriangleright\>x>|128>>
-    <associate|auto-12|<tuple|<with|mode|<quote|math>|x\<vartriangleleft\>g>|128>>
-    <associate|auto-13|<tuple|<with|mode|<quote|math>|g<rsub|\<vartriangleright\>>>|128>>
-    <associate|auto-14|<tuple|<with|mode|<quote|math>|g<rsub|\<vartriangleleft\>>>|128>>
-    <associate|auto-15|<tuple|faithful action|128>>
-    <associate|auto-16|<tuple|transitive action|128>>
-    <associate|auto-17|<tuple|faithful action|129>>
-    <associate|auto-18|<tuple|transitive action|129>>
-    <associate|auto-19|<tuple|4.2|129>>
-    <associate|auto-2|<tuple|operator|121>>
-    <associate|auto-20|<tuple|ring|129>>
-    <associate|auto-21|<tuple|zero divisor|129>>
-    <associate|auto-22|<tuple|subring|129>>
-    <associate|auto-23|<tuple|ring homeomorphism|131>>
-    <associate|auto-24|<tuple|ring isomorphism|132>>
-    <associate|auto-25|<tuple|4.3|136>>
-    <associate|auto-26|<tuple|field|136>>
-    <associate|auto-27|<tuple|subfield|138>>
-    <associate|auto-28|<tuple|field homeomorphism|139>>
-    <associate|auto-29|<tuple|5|147>>
-    <associate|auto-3|<tuple|4.1|121>>
-    <associate|auto-30|<tuple|5.1|147>>
-    <associate|auto-31|<tuple|5.1|147>>
-    <associate|auto-32|<tuple|mathematical induction|148>>
-    <associate|auto-33|<tuple|transitive set|149>>
-    <associate|auto-34|<tuple|5.2|150>>
-    <associate|auto-35|<tuple|recursion|150>>
-    <associate|auto-36|<tuple|iteration|154>>
-    <associate|auto-37|<tuple|5.3|156>>
-    <associate|auto-38|<tuple|addition of natural numbers|156>>
-    <associate|auto-39|<tuple|multiplication of natural numbers|158>>
-    <associate|auto-4|<tuple|semi-group|121>>
-    <associate|auto-40|<tuple|absorbing element|158>>
-    <associate|auto-41|<tuple|5.4|161>>
-    <associate|auto-42|<tuple|5.5|170>>
-    <associate|auto-43|<tuple|6|175>>
-    <associate|auto-44|<tuple|6.1|175>>
-    <associate|auto-45|<tuple|equipotence|175>>
-    <associate|auto-46|<tuple|<with|mode|<quote|math>|\<approx\>>|175>>
-    <associate|auto-47|<tuple|equipotency|175>>
-    <associate|auto-48|<tuple|<with|mode|<quote|math>|\<preccurlyeq\>>|175>>
-    <associate|auto-49|<tuple|<with|mode|<quote|math>|\<prec\>>|175>>
-    <associate|auto-5|<tuple|group|122>>
-    <associate|auto-50|<tuple|6.2|177>>
-    <associate|auto-51|<tuple|6.2.1|177>>
-    <associate|auto-52|<tuple|finite set|179>>
-    <associate|auto-53|<tuple|infinite set|179>>
-    <associate|auto-54|<tuple|denumerable set|179>>
-    <associate|auto-55|<tuple|infinite countable set|179>>
-    <associate|auto-56|<tuple|countable set|180>>
-    <associate|auto-57|<tuple|<with|mode|<quote|math>|#A>|184>>
-    <associate|auto-58|<tuple|6.2.2|188>>
-    <associate|auto-59|<tuple|6.2.3|193>>
-    <associate|auto-6|<tuple|sub-semi-group|123>>
-    <associate|auto-60|<tuple|6.2.4|196>>
-    <associate|auto-61|<tuple|6.3|198>>
-    <associate|auto-7|<tuple|sup-group|123>>
-    <associate|auto-8|<tuple|group isomorphism|125>>
-    <associate|auto-9|<tuple|left action|128>>
-    <associate|cardinality of natural numbers|<tuple|6.38|184>>
-    <associate|cardinality of the empty set is 0|<tuple|6.39|184>>
+    <associate|auto-1|<tuple|4|123>>
+    <associate|auto-10|<tuple|right action|130>>
+    <associate|auto-11|<tuple|<with|mode|<quote|math>|g\<vartriangleright\>x>|130>>
+    <associate|auto-12|<tuple|<with|mode|<quote|math>|x\<vartriangleleft\>g>|130>>
+    <associate|auto-13|<tuple|<with|mode|<quote|math>|g<rsub|\<vartriangleright\>>>|130>>
+    <associate|auto-14|<tuple|<with|mode|<quote|math>|g<rsub|\<vartriangleleft\>>>|130>>
+    <associate|auto-15|<tuple|faithful action|130>>
+    <associate|auto-16|<tuple|transitive action|130>>
+    <associate|auto-17|<tuple|faithful action|131>>
+    <associate|auto-18|<tuple|transitive action|131>>
+    <associate|auto-19|<tuple|4.2|131>>
+    <associate|auto-2|<tuple|operator|123>>
+    <associate|auto-20|<tuple|ring|131>>
+    <associate|auto-21|<tuple|zero divisor|131>>
+    <associate|auto-22|<tuple|subring|131>>
+    <associate|auto-23|<tuple|ring homeomorphism|133>>
+    <associate|auto-24|<tuple|ring isomorphism|134>>
+    <associate|auto-25|<tuple|4.3|138>>
+    <associate|auto-26|<tuple|field|138>>
+    <associate|auto-27|<tuple|subfield|140>>
+    <associate|auto-28|<tuple|field homeomorphism|141>>
+    <associate|auto-29|<tuple|5|149>>
+    <associate|auto-3|<tuple|4.1|123>>
+    <associate|auto-30|<tuple|5.1|149>>
+    <associate|auto-31|<tuple|5.1|149>>
+    <associate|auto-32|<tuple|mathematical induction|150>>
+    <associate|auto-33|<tuple|transitive set|151>>
+    <associate|auto-34|<tuple|5.2|152>>
+    <associate|auto-35|<tuple|recursion|152>>
+    <associate|auto-36|<tuple|iteration|156>>
+    <associate|auto-37|<tuple|5.3|158>>
+    <associate|auto-38|<tuple|addition of natural numbers|158>>
+    <associate|auto-39|<tuple|multiplication of natural numbers|160>>
+    <associate|auto-4|<tuple|semi-group|123>>
+    <associate|auto-40|<tuple|absorbing element|160>>
+    <associate|auto-41|<tuple|5.4|163>>
+    <associate|auto-42|<tuple|5.5|172>>
+    <associate|auto-43|<tuple|6|177>>
+    <associate|auto-44|<tuple|6.1|177>>
+    <associate|auto-45|<tuple|equipotence|177>>
+    <associate|auto-46|<tuple|<with|mode|<quote|math>|\<approx\>>|177>>
+    <associate|auto-47|<tuple|equipotency|177>>
+    <associate|auto-48|<tuple|<with|mode|<quote|math>|\<preccurlyeq\>>|177>>
+    <associate|auto-49|<tuple|<with|mode|<quote|math>|\<prec\>>|177>>
+    <associate|auto-5|<tuple|group|124>>
+    <associate|auto-50|<tuple|6.2|179>>
+    <associate|auto-51|<tuple|6.2.1|179>>
+    <associate|auto-52|<tuple|finite set|181>>
+    <associate|auto-53|<tuple|infinite set|181>>
+    <associate|auto-54|<tuple|denumerable set|181>>
+    <associate|auto-55|<tuple|infinite countable set|181>>
+    <associate|auto-56|<tuple|countable set|182>>
+    <associate|auto-57|<tuple|<with|mode|<quote|math>|#A>|186>>
+    <associate|auto-58|<tuple|6.2.2|190>>
+    <associate|auto-59|<tuple|6.2.3|195>>
+    <associate|auto-6|<tuple|sub-semi-group|125>>
+    <associate|auto-60|<tuple|6.2.4|199>>
+    <associate|auto-61|<tuple|6.3|201>>
+    <associate|auto-7|<tuple|sup-group|125>>
+    <associate|auto-8|<tuple|group isomorphism|127>>
+    <associate|auto-9|<tuple|left action|130>>
+    <associate|cardinality of natural numbers|<tuple|6.38|186>>
+    <associate|cardinality of the empty set is 0|<tuple|6.39|186>>
     <associate|cardinality of union of two disjoint finite
-    sets|<tuple|6.41|185>>
-    <associate|countable AUB and AxB|<tuple|6.71|198>>
+    sets|<tuple|6.41|187>>
+    <associate|countable AUB and AxB|<tuple|6.71|200>>
     <associate|countable product of a finite family of countable sets is
-    countable (2)|<tuple|6.73|198>>
+    countable (2)|<tuple|6.73|200>>
     <associate|countable product of finite family of countable sets is
-    countable|<tuple|6.72|198>>
-    <associate|countable set|<tuple|6.25|180>>
-    <associate|countable set conditions (1)|<tuple|6.69|197>>
+    countable|<tuple|6.72|200>>
+    <associate|countable set|<tuple|6.25|182>>
+    <associate|countable set conditions (1)|<tuple|6.69|199>>
     <associate|countable subset of countable set is
-    countable|<tuple|6.68|196>>
+    countable|<tuple|6.68|199>>
     <associate|countable subset of denumerable set is
-    countable|<tuple|6.67|196>>
+    countable|<tuple|6.67|199>>
     <associate|countable union of a denumerable family of countable sets is
-    denumerable|<tuple|6.70|197>>
-    <associate|definition by recursion (1)|<tuple|5.89|172>>
-    <associate|definition by recursion (2)|<tuple|5.90|173>>
+    denumerable|<tuple|6.70|199>>
+    <associate|definition by recursion (1)|<tuple|5.89|174>>
+    <associate|definition by recursion (2)|<tuple|5.90|175>>
     <associate|denumerable every subset is finite
-    denumerable.|<tuple|6.59|193>>
-    <associate|denumerable family of disjoint non empty sets has a
-    denumerable union|<tuple|6.47|198>>
+    denumerable.|<tuple|6.59|195>>
     <associate|denumerable is not subset of a natural
-    number|<tuple|6.28|180>>
-    <associate|denumerable product nxN is denumerable|<tuple|6.63|195>>
+    number|<tuple|6.28|182>>
+    <associate|denumerable product nxN is denumerable|<tuple|6.63|197>>
     <associate|denumerable product of denumerable sets is
-    denumerable|<tuple|6.62|195>>
+    denumerable|<tuple|6.62|197>>
     <associate|denumerable product of finite set and a denumerable set is
-    denurable|<tuple|6.64|195>>
+    denurable|<tuple|6.64|197>>
     <associate|denumerable product of two denumerable set is
-    denumerable|<tuple|6.60|193>>
-    <associate|denumerable set|<tuple|6.24|179>>
-    <associate|denumerable subsets of N_0|<tuple|6.58|193>>
+    denumerable|<tuple|6.60|195>>
+    <associate|denumerable set|<tuple|6.24|181>>
+    <associate|denumerable subsets of N_0|<tuple|6.58|195>>
     <associate|denumerable union of a denumerable family of denumerable sets
-    is denumerable|<tuple|6.66|196>>
+    is denumerable|<tuple|6.66|198>>
     <associate|denumerable union of a finite family of denumerable sets is
-    denumerable|<tuple|6.65|195>>
-    <associate|denumerable with one less element|<tuple|6.27|180>>
-    <associate|empty set is finite|<tuple|6.20|179>>
-    <associate|eq 5.1.019|<tuple|5.1|151>>
-    <associate|eq 5.10.019|<tuple|5.10|155>>
-    <associate|eq 5.11.019|<tuple|5.11|155>>
-    <associate|eq 5.12.019|<tuple|5.12|156>>
-    <associate|eq 5.13.019|<tuple|5.13|156>>
-    <associate|eq 5.14.019|<tuple|5.14|168>>
-    <associate|eq 5.15.019|<tuple|5.15|168>>
-    <associate|eq 5.16.019|<tuple|5.16|168>>
-    <associate|eq 5.17.019|<tuple|5.17|171>>
-    <associate|eq 5.18.053|<tuple|5.18|172>>
-    <associate|eq 5.19.053|<tuple|5.19|172>>
-    <associate|eq 5.2.019|<tuple|5.2|151>>
-    <associate|eq 5.3.019|<tuple|5.3|151>>
-    <associate|eq 5.4.019|<tuple|5.4|151>>
-    <associate|eq 5.5.019|<tuple|5.5|151>>
-    <associate|eq 5.6.019|<tuple|5.6|151>>
-    <associate|eq 5.7.019|<tuple|5.7|152>>
-    <associate|eq 5.8.019|<tuple|5.8|152>>
-    <associate|eq 5.9.019|<tuple|5.9|152>>
-    <associate|eq 6.10.019|<tuple|6.11|183>>
-    <associate|eq 6.11.019|<tuple|6.12|184>>
-    <associate|eq 6.12.022|<tuple|6.13|190>>
-    <associate|eq 6.13.022|<tuple|6.14|190>>
-    <associate|eq 6.14.022|<tuple|6.15|190>>
-    <associate|eq 6.15.022|<tuple|6.16|190>>
-    <associate|eq 6.17.020|<tuple|6.17|190>>
-    <associate|eq 6.18.020|<tuple|6.18|190>>
-    <associate|eq 6.18.022|<tuple|6.19|191>>
-    <associate|eq 6.19.022|<tuple|6.20|191>>
-    <associate|eq 6.2.019|<tuple|6.3|181>>
-    <associate|eq 6.2.063|<tuple|6.2|179>>
-    <associate|eq 6.20.022|<tuple|6.21|191>>
-    <associate|eq 6.21.022|<tuple|6.22|191>>
-    <associate|eq 6.22.022|<tuple|6.23|193>>
-    <associate|eq 6.23.022|<tuple|6.24|193>>
-    <associate|eq 6.24.022|<tuple|6.25|194>>
-    <associate|eq 6.25.022|<tuple|6.26|194>>
-    <associate|eq 6.27.130|<tuple|6.27|200>>
-    <associate|eq 6.28.130|<tuple|6.28|200>>
-    <associate|eq 6.3.019|<tuple|6.4|181>>
-    <associate|eq 6.4.019|<tuple|6.5|182>>
-    <associate|eq 6.5.019|<tuple|6.6|182>>
-    <associate|eq 6.6.019|<tuple|6.7|182>>
-    <associate|eq 6.7.019|<tuple|6.8|182>>
-    <associate|eq 6.8.019|<tuple|6.9|183>>
-    <associate|eq 6.9.019|<tuple|6.10|183>>
-    <associate|eq 7.1.019|<tuple|6.1|178>>
-    <associate|equipotence|<tuple|6.1|175>>
-    <associate|equipotence 2^A and P(A)|<tuple|6.14|177>>
-    <associate|equipotence \<less\>= condition|<tuple|6.6|175>>
-    <associate|equipotence \<less\>= definition|<tuple|6.3|175>>
-    <associate|equipotence A\<less\>=B condition (2)|<tuple|6.10|176>>
-    <associate|equipotence A^C~B^D|<tuple|6.13|177>>
-    <associate|equipotence AxC~BxD|<tuple|6.12|176>>
-    <associate|equipotence equivalence relation|<tuple|6.2|175>>
-    <associate|equipotence finite, denumerable , countable|<tuple|6.26|180>>
-    <associate|equipotence property (1)|<tuple|6.8|176>>
-    <associate|equipotence union|<tuple|6.11|176>>
-    <associate|every subset of a finite set is finite|<tuple|6.32|181>>
-    <associate|extract maximum element of a family|<tuple|6.51|188>>
-    <associate|field|<tuple|4.51|136>>
+    denumerable|<tuple|6.65|198>>
+    <associate|denumerable with one less element|<tuple|6.27|182>>
+    <associate|empty set is finite|<tuple|6.20|181>>
+    <associate|eq 5.1.019|<tuple|5.1|153>>
+    <associate|eq 5.10.019|<tuple|5.10|157>>
+    <associate|eq 5.11.019|<tuple|5.11|157>>
+    <associate|eq 5.12.019|<tuple|5.12|158>>
+    <associate|eq 5.13.019|<tuple|5.13|158>>
+    <associate|eq 5.14.019|<tuple|5.14|170>>
+    <associate|eq 5.15.019|<tuple|5.15|170>>
+    <associate|eq 5.16.019|<tuple|5.16|170>>
+    <associate|eq 5.17.019|<tuple|5.17|173>>
+    <associate|eq 5.18.053|<tuple|5.18|174>>
+    <associate|eq 5.19.053|<tuple|5.19|174>>
+    <associate|eq 5.2.019|<tuple|5.2|153>>
+    <associate|eq 5.3.019|<tuple|5.3|153>>
+    <associate|eq 5.4.019|<tuple|5.4|153>>
+    <associate|eq 5.5.019|<tuple|5.5|153>>
+    <associate|eq 5.6.019|<tuple|5.6|153>>
+    <associate|eq 5.7.019|<tuple|5.7|154>>
+    <associate|eq 5.8.019|<tuple|5.8|154>>
+    <associate|eq 5.9.019|<tuple|5.9|154>>
+    <associate|eq 6.10.019|<tuple|6.11|185>>
+    <associate|eq 6.11.019|<tuple|6.12|186>>
+    <associate|eq 6.12.022|<tuple|6.13|192>>
+    <associate|eq 6.13.022|<tuple|6.14|192>>
+    <associate|eq 6.14.022|<tuple|6.15|192>>
+    <associate|eq 6.15.022|<tuple|6.16|192>>
+    <associate|eq 6.17.020|<tuple|6.17|192>>
+    <associate|eq 6.18.020|<tuple|6.18|192>>
+    <associate|eq 6.18.022|<tuple|6.19|193>>
+    <associate|eq 6.19.022|<tuple|6.20|193>>
+    <associate|eq 6.2.019|<tuple|6.3|183>>
+    <associate|eq 6.2.063|<tuple|6.2|181>>
+    <associate|eq 6.20.022|<tuple|6.21|193>>
+    <associate|eq 6.21.022|<tuple|6.22|194>>
+    <associate|eq 6.22.022|<tuple|6.23|196>>
+    <associate|eq 6.23.022|<tuple|6.24|196>>
+    <associate|eq 6.24.022|<tuple|6.25|196>>
+    <associate|eq 6.25.022|<tuple|6.26|197>>
+    <associate|eq 6.27.130|<tuple|6.27|202>>
+    <associate|eq 6.28.130|<tuple|6.28|202>>
+    <associate|eq 6.3.019|<tuple|6.4|183>>
+    <associate|eq 6.4.019|<tuple|6.5|184>>
+    <associate|eq 6.5.019|<tuple|6.6|184>>
+    <associate|eq 6.6.019|<tuple|6.7|184>>
+    <associate|eq 6.7.019|<tuple|6.8|184>>
+    <associate|eq 6.8.019|<tuple|6.9|185>>
+    <associate|eq 6.9.019|<tuple|6.10|185>>
+    <associate|eq 7.1.019|<tuple|6.1|180>>
+    <associate|equipotence|<tuple|6.1|177>>
+    <associate|equipotence 2^A and P(A)|<tuple|6.14|179>>
+    <associate|equipotence \<less\>= condition|<tuple|6.6|177>>
+    <associate|equipotence \<less\>= definition|<tuple|6.3|177>>
+    <associate|equipotence A\<less\>=B condition (2)|<tuple|6.10|178>>
+    <associate|equipotence A^C~B^D|<tuple|6.13|179>>
+    <associate|equipotence AxC~BxD|<tuple|6.12|178>>
+    <associate|equipotence equivalence relation|<tuple|6.2|177>>
+    <associate|equipotence finite, denumerable , countable|<tuple|6.26|182>>
+    <associate|equipotence property (1)|<tuple|6.8|178>>
+    <associate|equipotence union|<tuple|6.11|178>>
+    <associate|every subset of a finite set is finite|<tuple|6.32|183>>
+    <associate|extract maximum element of a family|<tuple|6.51|190>>
+    <associate|field|<tuple|4.51|138>>
     <associate|field field homeomorphism is a ring
-    isomomorphism|<tuple|4.65|139>>
-    <associate|field homeomorphism|<tuple|4.63|139>>
-    <associate|field homeomorphism composition|<tuple|4.71|142>>
-    <associate|field homeomorphism to a sub field|<tuple|4.68|140>>
+    isomomorphism|<tuple|4.65|141>>
+    <associate|field homeomorphism|<tuple|4.63|141>>
+    <associate|field homeomorphism composition|<tuple|4.71|144>>
+    <associate|field homeomorphism to a sub field|<tuple|4.68|142>>
     <associate|field homeomorphism/isomorphism is a group
-    homeomorphism|<tuple|4.67|140>>
-    <associate|field inverse is unique|<tuple|4.52|137>>
-    <associate|field inverse of inverse|<tuple|4.53|137>>
-    <associate|field inverse of product|<tuple|4.55|138>>
-    <associate|field is integral domain|<tuple|4.58|138>>
-    <associate|field isomorphism|<tuple|4.66|140>>
-    <associate|field isomorphism and neutral element|<tuple|4.70|141>>
-    <associate|field order properties|<tuple|4.73|143>>
-    <associate|field ordered field|<tuple|4.72|143>>
-    <associate|field sub sub field|<tuple|4.62|139>>
-    <associate|field subfield|<tuple|4.59|138>>
-    <associate|field subfield is a field|<tuple|4.61|139>>
-    <associate|field subfield subgroup|<tuple|4.60|138>>
-    <associate|field x.y=0\<less\>=\<gtr\>x=0 or y=0|<tuple|4.57|138>>
+    homeomorphism|<tuple|4.67|142>>
+    <associate|field inverse is unique|<tuple|4.52|139>>
+    <associate|field inverse of inverse|<tuple|4.53|139>>
+    <associate|field inverse of product|<tuple|4.55|140>>
+    <associate|field is integral domain|<tuple|4.58|140>>
+    <associate|field isomorphism|<tuple|4.66|142>>
+    <associate|field isomorphism and neutral element|<tuple|4.70|143>>
+    <associate|field order properties|<tuple|4.73|145>>
+    <associate|field ordered field|<tuple|4.72|145>>
+    <associate|field sub sub field|<tuple|4.62|141>>
+    <associate|field subfield|<tuple|4.59|140>>
+    <associate|field subfield is a field|<tuple|4.61|141>>
+    <associate|field subfield subgroup|<tuple|4.60|140>>
+    <associate|field x.y=0\<less\>=\<gtr\>x=0 or y=0|<tuple|4.57|140>>
     <associate|field x=y\<less\>=\<gtr\>x.z=y.z if
-    z\<less\>\<gtr\>0|<tuple|4.56|138>>
-    <associate|field x^-1=y^-1=\<gtr\>x=y|<tuple|4.54|137>>
+    z\<less\>\<gtr\>0|<tuple|4.56|140>>
+    <associate|field x^-1=y^-1=\<gtr\>x=y|<tuple|4.54|139>>
     <associate|finite ordered sets have a maximum and
-    minimum|<tuple|6.48|187>>
-    <associate|finite power notation|<tuple|6.75|199>>
-    <associate|finite product of sets|<tuple|6.74|198>>
-    <associate|finite product of sets bijection|<tuple|6.80|200>>
-    <associate|finite product of sets power|<tuple|6.81|200>>
-    <associate|finite product of sets power equivalence|<tuple|6.82|201>>
-    <associate|finite product of sets projection operator|<tuple|6.76|199>>
-    <associate|finite product of sets single set|<tuple|6.83|201>>
-    <associate|finite product of two sets|<tuple|6.78|199>>
-    <associate|finite product properties|<tuple|6.79|199>>
-    <associate|finite set|<tuple|6.19|179>>
-    <associate|finite set alternate definition lemma|<tuple|6.21|179>>
-    <associate|finite set alternative definition|<tuple|6.22|179>>
-    <associate|finite union of finite sets is finite|<tuple|6.35|182>>
+    minimum|<tuple|6.48|189>>
+    <associate|finite power notation|<tuple|6.75|201>>
+    <associate|finite product of sets|<tuple|6.74|201>>
+    <associate|finite product of sets bijection|<tuple|6.80|202>>
+    <associate|finite product of sets power|<tuple|6.81|203>>
+    <associate|finite product of sets power equivalence|<tuple|6.82|203>>
+    <associate|finite product of sets projection operator|<tuple|6.76|201>>
+    <associate|finite product of sets single set|<tuple|6.83|203>>
+    <associate|finite product of two sets|<tuple|6.78|201>>
+    <associate|finite product properties|<tuple|6.79|201>>
+    <associate|finite set|<tuple|6.19|181>>
+    <associate|finite set alternate definition lemma|<tuple|6.21|181>>
+    <associate|finite set alternative definition|<tuple|6.22|181>>
+    <associate|finite union of finite sets is finite|<tuple|6.35|184>>
     <associate|finite union of finite sets is finite
-    (lemma)|<tuple|6.34|182>>
-    <associate|finite uniqueness of size|<tuple|6.37|184>>
-    <associate|function P(A) bijective with 2^A|<tuple|6.5|175>>
-    <associate|function injection and inverse surjection|<tuple|6.9|176>>
-    <associate|function no surjection between A and P(A)|<tuple|6.7|176>>
-    <associate|group -x=-y\<less\>=\<gtr\>x=y|<tuple|4.10|123>>
-    <associate|group abelian group/sub group|<tuple|4.11|123>>
-    <associate|group cancelation|<tuple|4.6|122>>
-    <associate|group example bijections|<tuple|4.18|124>>
-    <associate|group example set of functions|<tuple|4.4|121>>
-    <associate|group faithful, transitive action (1)|<tuple|4.30|128>>
-    <associate|group faithful, transitive action (2)|<tuple|4.31|129>>
-    <associate|group finite power|<tuple|6.84|201>>
-    <associate|group group|<tuple|4.5|122>>
-    <associate|group group inheritance|<tuple|4.16|124>>
-    <associate|group group inverse of inverse|<tuple|4.9|122>>
-    <associate|group homeomorphism|<tuple|4.19|124>>
-    <associate|group homeomorphism composition|<tuple|4.25|126>>
-    <associate|group homeomorphism properties|<tuple|4.22|125>>
-    <associate|group homeomorphism to a sub group|<tuple|4.21|125>>
-    <associate|group inverse element|<tuple|4.7|122>>
-    <associate|group inverse of x.y|<tuple|4.8|122>>
-    <associate|group isomorphism|<tuple|4.23|125>>
-    <associate|group isomorphism inverse|<tuple|4.24|126>>
-    <associate|group left (right action)|<tuple|4.27|128>>
-    <associate|group product of groups|<tuple|4.26|127>>
-    <associate|group semi-group inheritance|<tuple|4.14|123>>
-    <associate|group semigroup properties|<tuple|4.3|121>>
-    <associate|group sub sub group|<tuple|4.17|124>>
-    <associate|group sub sub semi-group|<tuple|4.15|123>>
-    <associate|group sub-group|<tuple|4.13|123>>
-    <associate|image of a finite set|<tuple|6.44|186>>
-    <associate|infinite condition (1)|<tuple|6.36|183>>
+    (lemma)|<tuple|6.34|184>>
+    <associate|finite uniqueness of size|<tuple|6.37|186>>
+    <associate|function P(A) bijective with 2^A|<tuple|6.5|177>>
+    <associate|function injection and inverse surjection|<tuple|6.9|178>>
+    <associate|function no surjection between A and P(A)|<tuple|6.7|178>>
+    <associate|group -x=-y\<less\>=\<gtr\>x=y|<tuple|4.10|125>>
+    <associate|group abelian group/sub group|<tuple|4.11|125>>
+    <associate|group cancelation|<tuple|4.6|124>>
+    <associate|group example bijections|<tuple|4.18|126>>
+    <associate|group example set of functions|<tuple|4.4|123>>
+    <associate|group faithful, transitive action (1)|<tuple|4.30|130>>
+    <associate|group faithful, transitive action (2)|<tuple|4.31|131>>
+    <associate|group finite power|<tuple|6.84|203>>
+    <associate|group group|<tuple|4.5|124>>
+    <associate|group group inheritance|<tuple|4.16|126>>
+    <associate|group group inverse of inverse|<tuple|4.9|124>>
+    <associate|group homeomorphism|<tuple|4.19|126>>
+    <associate|group homeomorphism composition|<tuple|4.25|128>>
+    <associate|group homeomorphism properties|<tuple|4.22|127>>
+    <associate|group homeomorphism to a sub group|<tuple|4.21|127>>
+    <associate|group inverse element|<tuple|4.7|124>>
+    <associate|group inverse of x.y|<tuple|4.8|124>>
+    <associate|group isomorphism|<tuple|4.23|127>>
+    <associate|group isomorphism inverse|<tuple|4.24|128>>
+    <associate|group left (right action)|<tuple|4.27|130>>
+    <associate|group product of groups|<tuple|4.26|129>>
+    <associate|group semi-group inheritance|<tuple|4.14|125>>
+    <associate|group semigroup properties|<tuple|4.3|123>>
+    <associate|group sub sub group|<tuple|4.17|126>>
+    <associate|group sub sub semi-group|<tuple|4.15|125>>
+    <associate|group sub-group|<tuple|4.13|125>>
+    <associate|image of a finite set|<tuple|6.44|188>>
+    <associate|infinite condition (1)|<tuple|6.36|185>>
     <associate|infinite family of pairwise disjoint non empty sets is
-    infinite|<tuple|6.47|?>>
-    <associate|infinite set|<tuple|6.23|179>>
-    <associate|injection and infinite sets|<tuple|6.46|187>>
+    infinite|<tuple|6.47|189>>
+    <associate|infinite set|<tuple|6.23|181>>
+    <associate|injection and infinite sets|<tuple|6.46|189>>
     <associate|inverse of a field isomorphism is a field
-    isomorphism|<tuple|4.69|140>>
-    <associate|iteration final|<tuple|5.85|171>>
-    <associate|mapping of N to a finite set (1)|<tuple|6.49|187>>
-    <associate|mapping of N to a finite set (2)|<tuple|6.50|188>>
-    <associate|mathematical induction|<tuple|5.83|170>>
-    <associate|max element of a family|<tuple|6.52|190>>
-    <associate|n\<less\>=m=\<gtr\>S_n\<less\>=S_m|<tuple|6.17|178>>
-    <associate|natural number {n,..,m}|<tuple|5.82|170>>
-    <associate|natural number {n,..}|<tuple|5.80|170>>
-    <associate|natural numbers|<tuple|5.3|148>>
-    <associate|natural numbers (n+m)-k=(n-k)+m|<tuple|5.65|166>>
-    <associate|natural numbers (n+m)-n=m|<tuple|5.66|166>>
-    <associate|natural numbers 0|<tuple|5.7|148>>
-    <associate|natural numbers 0\<less\>=n|<tuple|5.46|162>>
-    <associate|natural numbers 1+1=2|<tuple|5.28|156>>
-    <associate|natural numbers \<less\> properties|<tuple|5.49|162>>
-    <associate|natural numbers Archimedean property|<tuple|5.78|168>>
-    <associate|natural numbers N={0,..,}|<tuple|5.81|170>>
-    <associate|natural numbers Peano|<tuple|5.17|150>>
-    <associate|natural numbers absorbing element|<tuple|5.36|158>>
-    <associate|natural numbers addition|<tuple|5.27|156>>
-    <associate|natural numbers additive semi-group|<tuple|5.34|158>>
-    <associate|natural numbers are infinite|<tuple|6.30|181>>
-    <associate|natural numbers are segments|<tuple|6.16|178>>
-    <associate|natural numbers are total ordered|<tuple|5.52|163>>
-    <associate|natural numbers are transitive|<tuple|5.14|149>>
-    <associate|natural numbers are well ordered|<tuple|5.51|163>>
-    <associate|natural numbers definition recursion finite|<tuple|5.91|173>>
-    <associate|natural numbers difference|<tuple|5.63|165>>
-    <associate|natural numbers distributivity|<tuple|5.39|159>>
-    <associate|natural numbers division|<tuple|5.79|169>>
+    isomorphism|<tuple|4.69|142>>
+    <associate|iteration final|<tuple|5.85|173>>
+    <associate|mapping of N to a finite set (1)|<tuple|6.49|190>>
+    <associate|mapping of N to a finite set (2)|<tuple|6.50|190>>
+    <associate|mathematical induction|<tuple|5.83|172>>
+    <associate|max element of a family|<tuple|6.52|192>>
+    <associate|n\<less\>=m=\<gtr\>S_n\<less\>=S_m|<tuple|6.17|180>>
+    <associate|natural number {n,..,m}|<tuple|5.82|172>>
+    <associate|natural number {n,..}|<tuple|5.80|172>>
+    <associate|natural numbers|<tuple|5.3|150>>
+    <associate|natural numbers (n+m)-k=(n-k)+m|<tuple|5.65|168>>
+    <associate|natural numbers (n+m)-n=m|<tuple|5.66|168>>
+    <associate|natural numbers 0|<tuple|5.7|150>>
+    <associate|natural numbers 0\<less\>=n|<tuple|5.46|164>>
+    <associate|natural numbers 1+1=2|<tuple|5.28|158>>
+    <associate|natural numbers \<less\> properties|<tuple|5.49|164>>
+    <associate|natural numbers Archimedean property|<tuple|5.78|170>>
+    <associate|natural numbers N={0,..,}|<tuple|5.81|172>>
+    <associate|natural numbers Peano|<tuple|5.17|152>>
+    <associate|natural numbers absorbing element|<tuple|5.36|160>>
+    <associate|natural numbers addition|<tuple|5.27|158>>
+    <associate|natural numbers additive semi-group|<tuple|5.34|160>>
+    <associate|natural numbers are infinite|<tuple|6.30|183>>
+    <associate|natural numbers are segments|<tuple|6.16|180>>
+    <associate|natural numbers are total ordered|<tuple|5.52|165>>
+    <associate|natural numbers are transitive|<tuple|5.14|151>>
+    <associate|natural numbers are well ordered|<tuple|5.51|165>>
+    <associate|natural numbers definition recursion finite|<tuple|5.91|175>>
+    <associate|natural numbers difference|<tuple|5.63|167>>
+    <associate|natural numbers distributivity|<tuple|5.39|161>>
+    <associate|natural numbers division|<tuple|5.79|171>>
     <associate|natural numbers every non zero number is a
-    successor|<tuple|5.18|150>>
-    <associate|natural numbers examples|<tuple|5.8|148>>
-    <associate|natural numbers is a set|<tuple|5.4|148>>
-    <associate|natural numbers k\<less\>n condition|<tuple|5.48|162>>
-    <associate|natural numbers mathematical induction|<tuple|5.11|148>>
-    <associate|natural numbers multiplication|<tuple|5.35|158>>
-    <associate|natural numbers multiplication associativity|<tuple|5.41|160>>
-    <associate|natural numbers multiplication commutativity|<tuple|5.40|160>>
+    successor|<tuple|5.18|152>>
+    <associate|natural numbers examples|<tuple|5.8|150>>
+    <associate|natural numbers is a set|<tuple|5.4|150>>
+    <associate|natural numbers k\<less\>n condition|<tuple|5.48|164>>
+    <associate|natural numbers mathematical induction|<tuple|5.11|150>>
+    <associate|natural numbers multiplication|<tuple|5.35|160>>
+    <associate|natural numbers multiplication associativity|<tuple|5.41|162>>
+    <associate|natural numbers multiplication commutativity|<tuple|5.40|162>>
     <associate|natural numbers multiplication neutral
-    element|<tuple|5.37|159>>
+    element|<tuple|5.37|161>>
     <associate|natural numbers multiplicative abelian
-    semi-group|<tuple|5.42|161>>
-    <associate|natural numbers n+0=n|<tuple|5.29|157>>
-    <associate|natural numbers n+k=0=\<gtr\>n=0|<tuple|5.57|164>>
-    <associate|natural numbers n+k=m+k\<less\>=\<gtr\>n=m|<tuple|5.43|161>>
-    <associate|natural numbers n+s(m)=s(n+m)|<tuple|5.31|157>>
-    <associate|natural numbers n.(m-1)=n.m-n|<tuple|5.69|166>>
-    <associate|natural numbers n.k=m.k=\<gtr\>n=m|<tuple|5.77|168>>
-    <associate|natural numbers n.s(m)=n+n.m|<tuple|5.38|159>>
-    <associate|natural numbers n\<less\>=i\<less\>=m=\<gtr\>0\<less\>=i-n\<less\>=m-n|<tuple|5.70|166>>
-    <associate|natural numbers n\<less\>=m\<less\>=\<gtr\>n-k\<less\>=m-k|<tuple|5.71|167>>
+    semi-group|<tuple|5.42|163>>
+    <associate|natural numbers n+0=n|<tuple|5.29|159>>
+    <associate|natural numbers n+k=0=\<gtr\>n=0|<tuple|5.57|166>>
+    <associate|natural numbers n+k=m+k\<less\>=\<gtr\>n=m|<tuple|5.43|163>>
+    <associate|natural numbers n+s(m)=s(n+m)|<tuple|5.31|159>>
+    <associate|natural numbers n.(m-1)=n.m-n|<tuple|5.69|168>>
+    <associate|natural numbers n.k=m.k=\<gtr\>n=m|<tuple|5.77|170>>
+    <associate|natural numbers n.s(m)=n+n.m|<tuple|5.38|161>>
+    <associate|natural numbers n\<less\>=i\<less\>=m=\<gtr\>0\<less\>=i-n\<less\>=m-n|<tuple|5.70|168>>
+    <associate|natural numbers n\<less\>=m\<less\>=\<gtr\>n-k\<less\>=m-k|<tuple|5.71|169>>
     <associate|natural numbers n\<less\>=m\<less\>=\<gtr\>there exists a k
-    such that m=k|<tuple|5.62|165>>
-    <associate|natural numbers n\<less\>=n+k|<tuple|5.56|164>>
-    <associate|natural numbers n\<less\>k\<less\>s(n)|<tuple|5.72|167>>
+    such that m=k|<tuple|5.62|167>>
+    <associate|natural numbers n\<less\>=n+k|<tuple|5.56|166>>
+    <associate|natural numbers n\<less\>k\<less\>s(n)|<tuple|5.72|169>>
     <associate|natural numbers n\<less\>m and r\<less\>s then
-    n+r\<less\>m+s|<tuple|5.74|167>>
+    n+r\<less\>m+s|<tuple|5.74|169>>
     <associate|natural numbers n\<less\>m then there exists a k such that
-    m=n+k|<tuple|5.60|164>>
-    <associate|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k|<tuple|5.55|164>>
-    <associate|natural numbers n\<less\>m\<less\>=\<gtr\>n\<less\>=m-1|<tuple|5.68|166>>
+    m=n+k|<tuple|5.60|166>>
+    <associate|natural numbers n\<less\>m\<less\>=\<gtr\>n+k\<less\>m+k|<tuple|5.55|166>>
+    <associate|natural numbers n\<less\>m\<less\>=\<gtr\>n\<less\>=m-1|<tuple|5.68|168>>
     <associate|natural numbers n\<less\>m\<less\>=\<gtr\>there exists a k
-    such that m=k|<tuple|5.61|165>>
-    <associate|natural numbers n\<less\>m=\<gtr\>n.k\<less\>m.k|<tuple|5.76|168>>
-    <associate|natural numbers n\<less\>m=\<gtr\>n\<less\>=m-1|<tuple|5.67|166>>
-    <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>=m|<tuple|5.50|163>>
-    <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>s(m)|<tuple|5.54|163>>
-    <associate|natural numbers n\<less\>s(m)=\<gtr\>s\<less\>=m|<tuple|5.58|164>>
-    <associate|natural numbers n\<less\>s(n)|<tuple|5.47|162>>
-    <associate|natural numbers n=/s(n)|<tuple|5.15|149>>
-    <associate|natural numbers order relation|<tuple|5.45|161>>
+    such that m=k|<tuple|5.61|167>>
+    <associate|natural numbers n\<less\>m=\<gtr\>n.k\<less\>m.k|<tuple|5.76|170>>
+    <associate|natural numbers n\<less\>m=\<gtr\>n\<less\>=m-1|<tuple|5.67|168>>
+    <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>=m|<tuple|5.50|165>>
+    <associate|natural numbers n\<less\>m=\<gtr\>s(n)\<less\>s(m)|<tuple|5.54|165>>
+    <associate|natural numbers n\<less\>s(m)=\<gtr\>s\<less\>=m|<tuple|5.58|166>>
+    <associate|natural numbers n\<less\>s(n)|<tuple|5.47|164>>
+    <associate|natural numbers n=/s(n)|<tuple|5.15|151>>
+    <associate|natural numbers order relation|<tuple|5.45|163>>
     <associate|natural numbers product of non zero numbers is non
-    zero|<tuple|5.75|167>>
-    <associate|natural numbers recursion step form finite|<tuple|5.88|171>>
-    <associate|natural numbers s(n) = n+1|<tuple|5.30|157>>
-    <associate|natural numbers s(n)=/0|<tuple|5.10|148>>
-    <associate|natural numbers successor|<tuple|5.5|148>>
-    <associate|natural numbers successor function|<tuple|5.6|148>>
+    zero|<tuple|5.75|169>>
+    <associate|natural numbers recursion step form finite|<tuple|5.88|173>>
+    <associate|natural numbers s(n) = n+1|<tuple|5.30|159>>
+    <associate|natural numbers s(n)=/0|<tuple|5.10|150>>
+    <associate|natural numbers successor|<tuple|5.5|150>>
+    <associate|natural numbers successor function|<tuple|5.6|150>>
     <associate|natural numbers successor function is
-    injective|<tuple|5.16|149>>
-    <associate|natural numbers successor properties|<tuple|5.12|149>>
-    <associate|natural numbers sum associativity|<tuple|5.32|157>>
-    <associate|natural numbers sum commutativity|<tuple|5.33|158>>
-    <associate|natural numbers sup property|<tuple|5.73|167>>
-    <associate|natural numbers transitive|<tuple|5.13|149>>
-    <associate|natural numbers x\<less\>=y or y\<less\>x|<tuple|5.53|163>>
-    <associate|operator|<tuple|4.1|121>>
-    <associate|ordering of a finite family|<tuple|6.53|190>>
-    <associate|ordering of a finite family (1)|<tuple|6.54|191>>
+    injective|<tuple|5.16|151>>
+    <associate|natural numbers successor properties|<tuple|5.12|151>>
+    <associate|natural numbers sum associativity|<tuple|5.32|159>>
+    <associate|natural numbers sum commutativity|<tuple|5.33|160>>
+    <associate|natural numbers sup property|<tuple|5.73|169>>
+    <associate|natural numbers transitive|<tuple|5.13|151>>
+    <associate|natural numbers x\<less\>=y or y\<less\>x|<tuple|5.53|165>>
+    <associate|operator|<tuple|4.1|123>>
+    <associate|ordering of a finite family|<tuple|6.53|192>>
+    <associate|ordering of a finite family (1)|<tuple|6.54|193>>
     <associate|product of a finite family of finite sets is is
-    finite|<tuple|6.56|192>>
+    finite|<tuple|6.56|194>>
     <associate|product of a finite family of finite sets is is finite
-    (1)|<tuple|6.57|192>>
-    <associate|product of finite family of sets|<tuple|6.55|192>>
-    <associate|product of finite sets|<tuple|6.40|185>>
-    <associate|proposition 6.53.022|<tuple|6.61|194>>
-    <associate|recursion|<tuple|5.19|150>>
-    <associate|recursion final|<tuple|5.84|171>>
-    <associate|recursion injective function|<tuple|5.20|152>>
-    <associate|recursion iteration|<tuple|5.24|154>>
-    <associate|recursion iteration in a group|<tuple|5.25|154>>
-    <associate|recursion step (2)|<tuple|5.86|171>>
-    <associate|recursion step form (1)|<tuple|5.26|155>>
-    <associate|recursion step form (3)|<tuple|5.87|171>>
-    <associate|ring|<tuple|4.32|129>>
-    <associate|ring 0 1 and -|<tuple|4.40|131>>
-    <associate|ring absorbing element|<tuple|4.39|130>>
-    <associate|ring homeomorphism|<tuple|4.41|131>>
-    <associate|ring homeomorphism composition|<tuple|4.48|133>>
-    <associate|ring homeomorphism is group homeomorphism|<tuple|4.43|131>>
-    <associate|ring homeomorphism to a sub ring|<tuple|4.44|131>>
+    (1)|<tuple|6.57|195>>
+    <associate|product of finite family of sets|<tuple|6.55|194>>
+    <associate|product of finite sets|<tuple|6.40|187>>
+    <associate|proposition 6.53.022|<tuple|6.61|196>>
+    <associate|recursion|<tuple|5.19|152>>
+    <associate|recursion final|<tuple|5.84|173>>
+    <associate|recursion injective function|<tuple|5.20|154>>
+    <associate|recursion iteration|<tuple|5.24|156>>
+    <associate|recursion iteration in a group|<tuple|5.25|156>>
+    <associate|recursion step (2)|<tuple|5.86|173>>
+    <associate|recursion step form (1)|<tuple|5.26|157>>
+    <associate|recursion step form (3)|<tuple|5.87|173>>
+    <associate|ring|<tuple|4.32|131>>
+    <associate|ring 0 1 and -|<tuple|4.40|133>>
+    <associate|ring absorbing element|<tuple|4.39|132>>
+    <associate|ring homeomorphism|<tuple|4.41|133>>
+    <associate|ring homeomorphism composition|<tuple|4.48|135>>
+    <associate|ring homeomorphism is group homeomorphism|<tuple|4.43|133>>
+    <associate|ring homeomorphism to a sub ring|<tuple|4.44|133>>
     <associate|ring homeomorphism/isomorphism is a group
-    homeomorphism|<tuple|4.47|132>>
-    <associate|ring integral domain|<tuple|4.34|129>>
-    <associate|ring isomorphism|<tuple|4.46|132>>
-    <associate|ring order properties|<tuple|4.50|134>>
-    <associate|ring ordered ring|<tuple|4.49|133>>
-    <associate|ring ring homeomorphism and neutral element|<tuple|4.45|132>>
-    <associate|ring sub sub ring|<tuple|4.38|130>>
-    <associate|ring subring is a ring|<tuple|4.37|129>>
-    <associate|ring subring subgroup|<tuple|4.36|129>>
-    <associate|ring zero divisor|<tuple|4.33|129>>
-    <associate|semi-group|<tuple|4.2|121>>
-    <associate|set containing a denumerable set is infinite|<tuple|6.29|181>>
+    homeomorphism|<tuple|4.47|134>>
+    <associate|ring integral domain|<tuple|4.34|131>>
+    <associate|ring isomorphism|<tuple|4.46|134>>
+    <associate|ring order properties|<tuple|4.50|136>>
+    <associate|ring ordered ring|<tuple|4.49|135>>
+    <associate|ring ring homeomorphism and neutral element|<tuple|4.45|134>>
+    <associate|ring sub sub ring|<tuple|4.38|132>>
+    <associate|ring subring is a ring|<tuple|4.37|131>>
+    <associate|ring subring subgroup|<tuple|4.36|131>>
+    <associate|ring zero divisor|<tuple|4.33|131>>
+    <associate|semi-group|<tuple|4.2|123>>
+    <associate|set containing a denumerable set is infinite|<tuple|6.29|183>>
     <associate|set is infinitie if it contains a infinite
-    subset|<tuple|6.31|181>>
-    <associate|set of finite family is finite|<tuple|6.45|187>>
-    <associate|sub-semi-group|<tuple|4.12|123>>
-    <associate|subring|<tuple|4.35|129>>
-    <associate|subset of finite sets|<tuple|6.42|186>>
+    subset|<tuple|6.31|183>>
+    <associate|set of finite family is finite|<tuple|6.45|189>>
+    <associate|sub-semi-group|<tuple|4.12|125>>
+    <associate|subring|<tuple|4.35|131>>
+    <associate|subset of finite sets|<tuple|6.42|188>>
     <associate|surjection f:A-\<gtr\>B if A is finite then B is
-    finite|<tuple|6.43|186>>
-    <associate|union of two finite sets is finite|<tuple|6.33|181>>
-    <associate|{n,..,m} is bijective to S_(m-n)+1|<tuple|6.18|178>>
+    finite|<tuple|6.43|188>>
+    <associate|union of two finite sets is finite|<tuple|6.33|183>>
+    <associate|{n,..,m} is bijective to S_(m-n)+1|<tuple|6.18|180>>
   </collection>
 </references>
 
