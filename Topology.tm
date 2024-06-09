@@ -5805,8 +5805,6 @@
 
   TODO We skip the inner product for later
 
-  \;
-
   <section|Continuous functions>
 
   <subsection|Continuous and open functions>
@@ -12036,8 +12034,6 @@
     </equation*>
   </definition>
 
-  TODO
-
   <\theorem>
     <label|filter base and properties of subordinate and inclusion>Let
     <math|X> be a set then we have:
@@ -12072,7 +12068,7 @@
       are filter bases in <math|X> such that
       <math|\<frak-U\><rsub|1>\<gg\>\<frak-U\><rsub|2>> and
       <math|\<frak-U\><rsub|2>\<gg\>\<frak-U\><rsub|3>> then
-      <math|\<frak-U\><rsub|1>\<gg\>\<frak-U\><rsub|2>>
+      <math|\<frak-U\><rsub|1>\<gg\>\<frak-U\><rsub|3>>
 
       <item>If <math|\<frak-U\>> is a filter base in <math|X> then
       <math|\<frak-U\>\<gg\>\<frak-U\>>
@@ -12087,7 +12083,7 @@
       <math|\<frak-U\>\<sqsubseteq\>\<frak-W\>> there exist a
       <math|\<beta\>\<in\>J> such that <math|A<rsub|\<alpha\>>=B<rsub|\<beta\>>>
       so that <math|B<rsub|\<beta\>>\<subseteq\>A<rsub|\<alpha\>>> proving
-      that <math|\<frak-W\>\<gg\>\<frak-U\>>
+      that <math|\<frak-W\>\<gg\>\<frak-U\>>.
 
       <item>We proceed by contradiction. So assume that
       <math|\<exists\>\<beta\>\<in\>J> and <math|\<exists\>\<alpha\>\<in\>I>
@@ -12099,7 +12095,7 @@
       proving that <math|A<rsub|\<alpha\>><big|cap>B<rsub|\<beta\>>\<neq\>\<varnothing\>>
       a contradiction. Hence the assumption is wrong and we have
       <math|\<forall\>\<beta\>\<in\>J> and <math|\<forall\>\<alpha\>\<in\>I>
-      we have that <math|A<rsub|\<alpha\>><big|cap>B<rsub|\<beta\>>\<neq\>\<varnothing\>>.\ 
+      <math|A<rsub|\<alpha\>><big|cap>B<rsub|\<beta\>>\<neq\>\<varnothing\>>.\ 
 
       <item>By definition <math|\<frak-U\><around*|(|x|)>=<around*|{|U|}><rsub|U\<in\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>>\<subseteq\>\<cal-P\><around*|(|X|)>>
       and\ 
@@ -12109,7 +12105,7 @@
         with >x\<in\>U<text| >\<exists\>\<alpha\>\<in\>I<text| such that
         >A<rsub|\<alpha\>>\<subseteq\>U>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>U\<in\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}><text|
         >\<exists\>\<alpha\>\<in\>I<text| such that
-        <math|A<rsub|\<alpha\>>\<subseteq\>U>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<frak-U\>\<geqslant\>\<frak-U\><around*|(|x|)>>>>>
+        <math|A<rsub|\<alpha\>>\<subseteq\>U>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<frak-U\>\<gg\>\<frak-U\><around*|(|x|)>>>>>
       </eqnarray*>
 
       <item>Let <math|\<gamma\>\<in\>K> then as
@@ -12164,7 +12160,7 @@
       proving that <math|\<frak-U\>\<succ\>x>.
 
       <item>Assume that <math|x\<neq\>y> then as <math|X> is Hausdorff there
-      exist a <math|U,V\<in\>\<cal-T\>> with <math|x\<in\>U\<wedge\>y\<in\>V>
+      exists <math|U,V\<in\>\<cal-T\>> with <math|x\<in\>U\<wedge\>y\<in\>V>
       such that <math|<big|cup><big|cap>V=\<varnothing\>>. As
       <math|\<frak-U\>\<rightarrow\>x> there exist a <math|\<alpha\>\<in\>I>
       such that <math|A<rsub|\<alpha\>>\<subseteq\>U> so that
@@ -12190,11 +12186,11 @@
 
         <item>Let <math|U\<in\>\<cal-T\>> with <math|x\<in\>U> then as
         <math|\<frak-W\>\<succ\>x> we have \ <math|\<forall\>\<beta\>\<in\>J>
-        such that <math|U<big|cap>B<rsub|\<beta\>>\<neq\>\<varnothing\>>. Let
+        <math|U<big|cap>B<rsub|\<beta\>>\<neq\>\<varnothing\>>. Let
         <math|\<alpha\>\<in\>I> then as <math|\<frak-W\>\<gg\>\<frak-U\>>
         there exist a <math|\<gamma\>\<in\>J> such that
         <math|B<rsub|\<gamma\>>\<subseteq\>A<rsub|\<alpha\>>> hence
-        <math|\<varnothing\>=U<big|cap>B<rsub|\<gamma\>>\<subseteq\>U<big|cap>A<rsub|\<alpha\>>>
+        <math|\<varnothing\>\<neq\>U<big|cap>B<rsub|\<gamma\>>\<subseteq\>U<big|cap>A<rsub|\<alpha\>>>
         proving that <math|\<frak-A\>\<succ\>x>.
       </enumerate>
     </enumerate>
@@ -12230,39 +12226,40 @@
       <math|\<forall\>U\<in\>\<cal-T\>> with <math|x\<in\>U> we have
       <math|A<big|cap>U\<neq\>\<varnothing\>>. As
       <math|\<varnothing\>\<neq\>A<big|cap>U\<subseteq\>A\<Rightarrow\>A\<neq\>\<varnothing\>>
-      we have using [example: <reference|filter base trivial>] we have that
+      we have using [example: <reference|filter base trivial>] that
       <math|\<frak-U\>=<around*|{|A<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\><around*|{|A|}>>>
       where <math|A<rsub|\<alpha\>>=A> is a filter base in <math|X>, further
       by [theorem: <reference|filter base neighborhood filter base is a
-      filter base>] <math|\<frak-U\>*<around*|(|x|)>=<around*|{|B<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>>>
-      where <math|B<rsub|\<alpha\>>=\<alpha\>> is also a filter base in
-      <math|X>. Using [theorem: <reference|filter base union and
-      intersection>] it follows then that
-      <math|\<frak-W\>=<around*|{|A<rsub|\<alpha\>><big|cap>B<rsub|\<beta\>>|}><rsub|<around*|(|\<alpha\>,\<beta\>|)>\<in\><around*|{|A|}>\<times\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>>>
-      is a filter base in <math|X>. As <math|\<forall\><around*|(|\<alpha\>,\<beta\>|)>\<in\><around*|{|A|}>\<times\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>>
-      we have that <math|A<rsub|\<alpha\>><big|cap>B<rsub|\<beta\>>=A<big|cap>\<beta\>\<subseteq\>A>\ 
+      filter base>] <math|\<frak-U\>*<around*|(|x|)>=<around*|{|U|}><rsub|U\<in\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>>>
+      is also a filter base in <math|X>. Define
+      <math|\<frak-W\>=<around*|{|A<rsub|\<alpha\>><big|cap>U|}><rsub|<around*|(|\<alpha\>,U|)>\<in\><around*|{|A|}>\<times\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>>>.
+      As <math|\<forall\><around*|(|\<alpha\>,U|)>\<in\><around*|{|A|}>\<times\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>>
+      we have that <math|\<varnothing\>\<neq\>A<big|cap>U\<subseteq\>U> it
+      follows from [theorem: <reference|filter base union and intersection>]
+      that
 
       <\equation*>
-        \<frak-W\><text| is a filter base on >A
+        \<frak-W\><text| is a filter base <with|font-series|bold|on> >A
       </equation*>
 
       Further as <math|\<forall\>U\<in\>\<cal-T\>> with <math|x\<in\>U> we
       have that for <math|<around*|(|A,U|)>\<in\><around*|{|A|}>\<times\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>>
-      <math|A<rsub|A><big|cap>B<rsub|U>=A<big|cap>U\<subseteq\>U> it follows
-      that\ 
+      <math|A<big|cap>U\<subseteq\>U> it follows that\ 
 
       <\equation*>
         \<frak-W\>\<rightarrow\>x
       </equation*>
 
-      <item*|<math|\<Lleftarrow\>>>Let <math|\<frak-U\>=<around*|{|A<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>I>\<subseteq\>\<cal-P\><around*|(|X|)>>
-      be a filter base <with|font-series|bold|on> <math|A> with
+      <item*|<math|\<Lleftarrow\>>>By the hypothesis there exist a fileter
+      base \ <math|\<frak-U\>=<around*|{|A<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>I>\<subseteq\>\<cal-P\><around*|(|X|)>>
+      <with|font-series|bold|on> <math|A> with
       <math|\<frak-U\>\<rightarrow\>x>. Then if <math|U\<in\>\<cal-T\>> with
       <math|x\<in\>U> there exist a <math|\<alpha\>\<in\>I> such that
       <math|A<rsub|\<alpha\>>\<subseteq\>U> [because
       <math|\<frak-U\>\<rightarrow\>x>], further, as <math|\<frak-U\>> is a
-      filter base on <math|A>, <math|A<rsub|\<alpha\>>\<subseteq\>A>. So it
-      follows that <math|\<varnothing\>\<neq\>A<rsub|\<alpha\>>=A<rsub|\<alpha\>><big|cap>A\<subseteq\>U<big|cap>A>
+      filter base <with|font-series|bold|on> <math|A>,
+      <math|A<rsub|\<alpha\>>\<subseteq\>A>. So it follows that
+      <math|\<varnothing\>\<neq\>A<rsub|\<alpha\>>=A<rsub|\<alpha\>><big|cap>A\<subseteq\>U<big|cap>A>
       which by [theorem: <reference|topology closure alterantive definition>]
       proves that <math|x\<in\><wide|A|\<wide-bar\>>.>
     </description>
@@ -12325,6 +12322,13 @@
       f<text| is continuous at >x<text| >\<Leftrightarrow\><text|
       >f<around*|[|\<frak-U\><around*|(|x|)>|]>\<rightarrow\>f<around*|(|x|)>
     </equation*>
+
+    where
+
+    <\equation*>
+      f<around*|[|\<frak-U\><around*|(|x|)>|]>=<around*|{|f<around*|(|U|)>|}><rsub|U\<in\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>><rsub|><text|
+      is a filter base by [theorem: <reference|filter base mapping>]>
+    </equation*>
   </theorem>
 
   <\proof>
@@ -12337,8 +12341,8 @@
 
     <\description>
       <item*|<math|\<Rightarrow\>>>Let <math|V\<in\>\<cal-S\>> such that
-      <math|f<around*|(|x|)>\<in\>V> then as <math|f> is continuous there
-      exist a <math|U\<in\>T> with <math|x\<in\>U> such that
+      <math|f<around*|(|x|)>\<in\>V> then as <math|f> is continuous at
+      <math|x> there exist a <math|U\<in\>T> with <math|x\<in\>U> such that
       <math|f<around*|(|U|)>\<subseteq\>V>. In other words
       <math|\<exists\>U\<in\><around*|{|U\<in\>\<cal-T\>\|x\<in\>U|}>> such
       that <math|f<around*|(|U|)>\<subseteq\>V> which by [definition:
@@ -12372,7 +12376,7 @@
       f<text| is continuous on >X<text| >\<Leftrightarrow\><text|
       >\<forall\>x\<in\>X<text| and for every filter base
       <math|\<frak-U\><text| in >X<text| with
-      >\<frak-U\>\<rightarrow\>X<text| we have
+      >\<frak-U\>\<rightarrow\>x<text| we have
       >f<around*|[|\<frak-U\>|]>\<rightarrow\>f<around*|(|x|)>>>
     </equation*>
   </theorem>
@@ -12396,7 +12400,7 @@
         <label|eq 14.121.152>f<around*|[|\<frak-U\>|]>\<gg\>f<around*|[|\<frak-U\><around*|(|x|)>|]>
       </equation>
 
-      As <math|f> is continuous, hence continuous at <math|x> hence by the
+      As <math|f> is continuous, hence continuous at <math|x>, we have by the
       previous theorem [theorem: <reference|filter base and continuity at a
       point>] that\ 
 
@@ -12425,9 +12429,9 @@
       so that <math|f<around*|(|A<rsub|\<alpha\>>|)>\<subseteq\>f<around*|(|A|)>>
       proving that <math|f<around*|[|\<frak-U\>|]>> is
       <with|font-series|bold|on> <math|f<around*|(|A|)>>. This together with
-      <math|f<around*|[|\<frak-U\>|]>\<rightarrow\>f<around*|(|x|)>> [see eq:
-      <reference|eq 14.123.152>] gives by [theorem: <reference|filter base
-      closure and on relation>] that <math|f<around*|(|x|)>\<in\><wide|f<around*|(|A|)>|\<wide-bar\>>>
+      <math|f<around*|[|\<frak-U\>|]>\<rightarrow\>f<around*|(|x|)>> [by the
+      hypothesis] gives by [theorem: <reference|filter base closure and on
+      relation>] that <math|y=f<around*|(|x|)>\<in\><wide|f<around*|(|A|)>|\<wide-bar\>>>
       proving that\ 
 
       <\equation*>
@@ -12483,7 +12487,7 @@
       Let <math|j\<in\>J> then <math|\<exists\>i<rsub|j>\<in\>I> and a
       <math|U<rsub|j>\<in\>\<cal-T\><rsub|i<rsub|j>>> such that
       <math|S<rsub|j>=\<pi\><rsup|-1><rsub|i<rsub|j>><around*|(|U<rsub|j>|)>>,
-      so that <math|\<pi\><rsub|i<rsub|j>><around*|(|S<rsub|j>|)>\<subseteq\>U<rsub|j>>,
+      so <math|\<pi\><rsub|i<rsub|j>><around*|(|S<rsub|j>|)>\<subseteq\>U<rsub|j>>,
       hence <math|\<pi\><rsub|i<rsub|j>><around*|(|x|)>\<in\>\<pi\><rsub|i<rsub|j>><around*|(|S<rsub|j>|)>\<subseteq\>U<rsub|j>\<in\>\<cal-T\><rsub|i<rsub|j>>>.
       \ By the hypothesis <math|\<pi\><rsub|i<rsub|j>><around*|[|\<frak-U\>|]>\<rightarrow\>\<pi\><rsub|i<rsub|j>><around*|(|x|)>>
       so there exist a <math|\<alpha\><rsub|j>\<in\>I> such that
@@ -12541,8 +12545,8 @@
 
     <\equation*>
       \<frak-U\><text| is maximal >\<Leftrightarrow\><text|
-      >\<forall\>A\<subseteq\>X<text| one and only one of the sets
-      >A,X\\A<text| contains a member of >\<frak-U\>
+      >\<forall\>A\<subseteq\>X<text| only one of the sets >A,X\\A<text|
+      contains a member of >\<frak-U\>
     </equation*>
   </theorem>
 
@@ -12554,7 +12558,7 @@
       there exist <math|\<alpha\>\<comma\>\<beta\>\<in\>I> such that
       <math|A<rsub|\<alpha\>>\<subseteq\>A> and
       <math|A<rsub|\<beta\>>\<subseteq\>X\\A> then
-      <math|A<rsub|\<alpha\>><big|cap>A<rsub|\<beta\>>\<subseteq\>X<big|cap><around*|(|X\\A|)>=\<varnothing\>>
+      <math|A<rsub|\<alpha\>><big|cap>A<rsub|\<beta\>>\<subseteq\>A<big|cap><around*|(|X\\A|)>=\<varnothing\>>
       proving that <math|A<rsub|\<alpha\>><big|cap>A<rsub|\<beta\>>=\<varnothing\>>.
       By definition of a filter base there exist a <math|\<gamma\>\<in\>I>
       such that <math|\<varnothing\>\<neq\>A<rsub|\<gamma\>>\<subseteq\>A<rsub|\<alpha\>><big|cap>A<rsub|\<beta\>>=\<varnothing\>>
@@ -12586,8 +12590,8 @@
         </equation*>
 
         Further as <math|\<forall\>\<alpha\>\<in\>I>
-        <math|<around*|(|X\\A|)><big|cap>A<rsub|\<alpha\>>> we have by
-        [definition: <reference|filter base subordinate>] that
+        <math|<around*|(|X\\A|)><big|cap>A<rsub|\<alpha\>>\<subseteq\>A<rsub|\<alpha\>>>
+        we have by [definition: <reference|filter base subordinate>] that
         <math|\<frak-W\>\<gg\>\<frak-U\>>, as <math|\<frak-U\>> is maximal it
         follows that <math|\<frak-U\>\<gg\>\<frak-W\>>. Hence
         <math|\<forall\>\<alpha\>\<in\>I> there exist a
@@ -12637,7 +12641,7 @@
 
   <\theorem>
     <label|filter base maximal existence>Let <math|X> be a set,
-    <math|\<frak-U\>=<around*|{|A<rsub|\<alpha\>>|}><rsub|\<alpha\>\<ni\>I>\<subseteq\>\<cal-P\><around*|(|X|)>>
+    <math|\<frak-U\>=<around*|{|A<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>I>\<subseteq\>\<cal-P\><around*|(|X|)>>
     a filter base in <math|X> then there exist a maximal filter base
     <math|\<frak-W\>> in <math|X> such that <math|\<frak-W\>\<gg\>\<frak-U\>>
   </theorem>
@@ -12675,7 +12679,7 @@
 
       <item*|transitivity>Assume that <math|\<frak-W\><rsub|1>\<leqslant\>\<frak-W\><rsub|2>\<wedge\>\<frak-W\><rsub|2>\<leqslant\>\<frak-W\><rsub|3>>
       then <math|\<frak-W\><rsub|2>\<gg\>\<frak-W\><rsub|1>\<wedge\>\<frak-W\><rsub|3>\<gg\>\<frak-W\><rsub|2>>
-      then by [theorem: <reference|filter base and properties of subordinate
+      hence by [theorem: <reference|filter base and properties of subordinate
       and inclusion>] we have <math|\<frak-W\><rsub|3>\<gg\>\<frak-W\><rsub|1>>
       so that <math|\<frak-W\><rsub|1>\<leqslant\>\<frak-W\><rsub|3>>.\ 
     </description>
@@ -12699,15 +12703,16 @@
 
       <item*|<math|\<cal-C\>\<neq\>\<varnothing\>>>Given
       <math|\<frak-C\>=<around*|{|C<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>J>\<in\>\<cal-C\>>
-      define <math|S<rsub|\<frak-C\>>=<around*|{|C<rsub|\<alpha\>>\|\<alpha\>\<in\>J|}>>
-      and define then\ 
+      define <math|S<rsub|\<frak-C\>>=<around*|{|C<rsub|\<alpha\>>\|\<alpha\>\<in\>J|}>\<neq\>\<varnothing\>>
+      [as <math|J\<neq\>\<varnothing\>>] and define
 
       <\equation>
-        <label|eq 14.127.153>\<bbb-B\>=<big|cup><rsub|\<frak-C\>\<in\>\<cal-C\>>S<rsub|\<frak-C\>><text|
-        and >\<frak-B\>=<around*|{|B|}><rsub|B\<in\>\<bbb-B\>>\<subseteq\>\<cal-P\><around*|(|X|)>
+        <label|eq 14.127.153>\<bbb-B\>=<big|cup><rsub|\<frak-C\>\<in\>\<cal-C\>>S<rsub|\<frak-C\>>\<neq\>\<varnothing\><text|
+        [as <math|\<cal-C\>\<neq\>\<varnothing\>>] and
+        >\<frak-B\>=<around*|{|B|}><rsub|B\<in\>\<bbb-B\>>\<subseteq\>\<cal-P\><around*|(|X|)>
       </equation>
 
-      them we have\ 
+      then we have\ 
 
       <\equation>
         <label|eq 14.128.153>\<forall\>\<frak-C\>=<around*|{|C<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>J>\<in\>\<cal-C\><text|
@@ -12715,14 +12720,14 @@
         <math|C<rsub|\<alpha\>>\<in\>\<bbb-B\>>>
       </equation>
 
-      then we have:\ 
+      Next we have
 
       <\enumerate>
         <item><math|\<forall\>B\<in\>\<bbb-B\>> there exist a
         <math|\<frak-C\>=<around*|{|C<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>J>\<in\>\<cal-C\>>
         such that <math|B\<in\>S<rsub|\<frak-C\>>>, hence
         <math|\<exists\>\<alpha\>\<in\>J> such that
-        <math|A=C<rsub|\<alpha\>>\<neq\>\<varnothing\>> [as <math|\<frak-C\>>
+        <math|B=C<rsub|\<alpha\>>\<neq\>\<varnothing\>> [as <math|\<frak-C\>>
         is a filter base]. Hence we have\ 
 
         <\equation>
@@ -12734,7 +12739,7 @@
         <math|\<frak-C\><rsub|1>=<around*|{|C<rsup|1><rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>J<rsub|1>>\<in\>\<cal-C\>>,
         <math|\<frak-C\><rsub|2>=<around*|{|C<rsup|2><rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>J<rsub|2>>\<in\>\<cal-C\>>
         such that <math|\<exists\>\<gamma\><rsub|1>\<in\>J<rsub|1>>,
-        <math|\<exists\>\<gamma\><rsub|2>\<in\>J<rsub|2>> such that
+        <math|\<exists\>\<gamma\><rsub|2>\<in\>J<rsub|2>> with
         <math|B<rsub|1>=C<rsup|1><rsub|\<gamma\><rsub|1>>>,
         <math|B<rsub|2>=C<rsup|2><rsub|\<gamma\><rsub|2>>>. Now as
         <math|\<cal-C\>> is a chain we have the following possible cases:
@@ -12756,7 +12761,7 @@
           <math|C<rsup|1><rsub|\<gamma\>>\<subseteq\>C<rsup|2><rsub|\<gamma\><rsub|1>>=B<rsub|2>>.
           As <math|\<frak-C\><rsub|1>> is a filter base there exist a
           <math|\<beta\>\<in\>J<rsub|1>> such that
-          <math|C<rsup|1><rsub|\<beta\>>\<subseteq\>C<rsup|1><rsub|\<gamma\>><big|cap>C<rsup|1><rsub|\<gamma\><rsub|1>>\<subseteq\>B<rsub|1><big|cap>B<rsub|2>>.
+          <math|C<rsup|1><rsub|\<beta\>>\<subseteq\>C<rsup|1><rsub|\<gamma\><rsub|1>><big|cap>C<rsup|1><rsub|\<gamma\>>\<subseteq\>B<rsub|1><big|cap>B<rsub|2>>.
           Take <math|B<rsub|3>=C<rsup|1><rsub|\<beta\>>\<in\>\<bbb-B\>> then
           <math|B<rsub|3>\<subseteq\>B<rsub|1><big|cap>B<rsub|2>>.
         </description>
@@ -12794,25 +12799,26 @@
       then <math|\<forall\>\<alpha\>\<in\>K>
       <math|D<rsub|\<alpha\>>\<subseteq\>D<rsub|\<alpha\>>> hence, as
       <math|>by [eq: <reference|eq 14.128.153>]
-      <math|D<rsub|\<alpha\>>\<in\>\<bbb-B\>> we have that
-      <math|\<frak-B\>\<gg\>\<frak-C\>> proving that
-      <math|\<frak-C\>\<leqslant\>\<frak-B\>>. Hence\ 
+      <math|D<rsub|\<alpha\>>\<in\>\<bbb-B\>>, we have that
+      <math|\<frak-B\>\<gg\>\<frak-D\>> proving that
+      <math|\<frak-D\>\<leqslant\>\<frak-B\>>. Hence\ 
 
       <\equation*>
         \<frak-B\><text| is a upper bound of <math|\<frak-C\>>>
       </equation*>
     </description>
 
-    So in all cases we have that <math|\<frak-C\>> has a upper bound. Hence
-    we have proved that every chain in <math|\<cal-A\>> has a upper bound. So
-    we can use a variant of Zorn's lemma [theorem: <reference|choice Zorn's
-    lemma for pre-order>] there exist a <math|\<frak-M\>\<in\>\<cal-A\>> such
-    that <math|\<forall\>\<frak-N\>\<in\>\<cal-A\>> with
-    <math|\<frak-M\>\<leqslant\>\<frak-N\>> then
+    So in all cases we have that <math|\<frak-C\>> has a upper bound. In
+    other words we have proved that every chain in <math|\<cal-A\>> has a
+    upper bound. So using a variant of Zorn's lemma [theorem:
+    <reference|choice Zorn's lemma for pre-order>] there exist a
+    <math|\<frak-M\>\<in\>\<cal-A\>> such that
+    <math|\<forall\>\<frak-N\>\<in\>\<cal-A\>> with
+    <math|\<frak-M\>\<leqslant\>\<frak-N\>> we have
     <math|\<frak-N\>\<leqslant\>\<frak-M\>>. Hence\ 
 
     <\equation>
-      <label|eq 14.131.153>\<forall\>\<frak-V\>\<in\>\<cal-A\><text| with
+      <label|eq 14.131.153>\<forall\>\<frak-N\>\<in\>\<cal-A\><text| with
       >\<frak-N\>\<gg\>\<frak-M\><text| we have
       >\<frak-M\>\<gg\>\<frak-N\><text| and as
       >\<frak-M\>\<in\>\<cal-A\><text| we have also
@@ -12856,7 +12862,7 @@
       <math|A<rsub|\<alpha\>>\<subseteq\>X\\U>. Now as
       <math|\<frak-U\>\<succ\>x> we must have that
       <math|A<rsub|\<alpha\>><big|cap>U\<neq\>\<varnothing\>> contradicting
-      <math|A<rsub|\<alpha\>>\<subseteq\>X\\A> hence we must have that
+      <math|A<rsub|\<alpha\>>\<subseteq\>X\\U> hence we must have that
       <math|A<rsub|\<alpha\>>\<subseteq\>U>, so
       <math|\<frak-U\>\<rightarrow\>x>.
 
@@ -12874,7 +12880,7 @@
   </theorem>
 
   <\proof>
-    Using [theorem: <reference|filter base mapping>] then
+    Using [theorem: <reference|filter base mapping>]
     <math|f<around*|[|\<frak-U\>|]>=<around*|{|f<around*|(|A<rsub|i>|)>|}><rsub|i\<in\>I>>
     is a filter base in <math|Y>. To prove maximality we use [theorem:
     <reference|filter base maximal condition>]. So let <math|A\<subseteq\>Y>
@@ -12888,8 +12894,8 @@
       <math|f<around*|(|A<rsub|\<beta\>>|)>\<subseteq\>A> and
       <math|\<forall\>\<alpha\>\<in\>I> there exist a
       <math|x\<in\>A<rsub|\<alpha\>>> such that
-      <math|x\<nin\>X\\f<rsup|-1><around*|(|A|)>\<Rightarrow\>x\<in\>f<rsup|-1><around*|(|A|)>\<Rightarrow\>f<around*|(|x|)>\<in\>A>
-      so that <math|f<around*|(|A<rsub|\<alpha\>>|)>\<nsubseteq\>X\\A>.
+      <math|x\<nin\>X\\f<rsup|-1><around*|(|A|)>\<Rightarrow\>x\<in\>f<rsup|-1><around*|(|A|)>\<Rightarrow\>f<around*|(|x|)>\<in\>A\<Rightarrow\>f<around*|(|x|)>\<nin\>Y\\A>
+      so that <math|f<rsup|><around*|(|A<rsub|\<alpha\>>|)>\<nsubseteq\>Y\\A>.
 
       <item*|<math|\<forall\>\<alpha\>\<in\>I<text|
       >A<rsub|\<alpha\>>\<nsubseteq\>f<rsup|-1><around*|(|A|)>\<wedge\>\<exists\>\<beta\>\<in\>I<text|
@@ -12900,7 +12906,7 @@
       proving that <math|f<around*|(|A<rsub|\<alpha\>>|)>\<nsubseteq\>A>.
       Further <math|\<forall\>x\<in\>A<rsub|\<beta\>>> we have
       <math|x\<in\>X\\f<rsup|-1><around*|(|A|)>\<Rightarrow\>x\<nin\>f<rsup|-1><around*|(|A|)>\<Rightarrow\>f<around*|(|x|)>\<nin\>A>
-      proving that <math|f<around*|(|A<rsub|\<alpha\>>|)>\<subseteq\>A>.
+      proving that <math|f<around*|(|A<rsub|\<beta\>>|)>\<subseteq\>Y\\A>.
     </description>
 
     Using [theorem: <reference|filter base maximal condition>] it follows
@@ -12914,8 +12920,6 @@
   spaces. The following theorem creates the relation between compactness and
   filter bases.
 
-  \;
-
   <\theorem>
     <label|filter base and compactness>Let
     <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
@@ -12925,13 +12929,13 @@
       <item><math|X> is compact
 
       <item>If <math|<around*|{|A<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>I>\<subseteq\>\<cal-T\><rsup|c>>
-      is a family of closed sets in <math|X> satisfying
+      is a non empty family of closed sets in <math|X> satisfying
       <math|<big|cap><rsub|\<alpha\>\<in\>I>A<rsub|\<alpha\>>=\<varnothing\>>
       then there exist a non empty finite <math|J\<subseteq\>I> such that
       <math|<big|cap><rsub|\<alpha\>\<in\>J>A<rsub|\<alpha\>>=\<varnothing\>>.
 
       <item>If <math|<around*|{|A<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>I>\<subseteq\>\<cal-T\><rsup|c>>
-      is a family of closed sets in <math|X> such that
+      is a non empty family of closed sets in <math|X> such that
       <math|\<forall\>J\<subseteq\>I> <math|J> finite and non empty we have
       <math|<big|cap><rsub|\<alpha\>\<in\>J>A<rsub|\<alpha\>>\<neq\>\<varnothing\>>
       then <math|<big|cap><rsub|\<alpha\>\<in\>I>A<rsub|\<alpha\>>\<neq\>\<varnothing\>>.
@@ -12960,11 +12964,11 @@
       </equation*>
 
       As <math|\<forall\>\<alpha\>\<in\>I>
-      <math|X\\A<rsub|\<alpha\>>\<in\>\<cal-T\>> and <math|X> is compact then
+      <math|X\\A<rsub|\<alpha\>>\<in\>\<cal-T\>> and <math|X> is compact
       there exist a finite <math|J\<subseteq\>I> such that
 
       <\equation*>
-        X\<subseteq\><big|cup><rsub|\<alpha\>\<in\>J><around*|(|X\\A<rsub|\<alpha\>>|)>\<subseteq\>X\<Rightarrow\>X=<big|cup><rsub|\<alpha\>\<in\>J><around*|(|X\\A<rsub|\<alpha\>>|)>
+        X=<big|cup><rsub|\<alpha\>\<in\>J><around*|(|X\\A<rsub|\<alpha\>>|)>
       </equation*>
 
       hence\ 
@@ -13041,7 +13045,7 @@
       </equation*>
 
       <item*|<math|4\<Rightarrow\>5>>Let <math|\<frak-U\>> be a maximal
-      filter base then by (3) there exist a <math|x\<in\>X> such that
+      filter base then by (4) there exist a <math|x\<in\>X> such that
       <math|\<frak-U\>\<succ\>x>, by [theorem: <reference|filter base maximal
       filter base and convergence>] we have then that\ 
 
@@ -13054,16 +13058,26 @@
       empty <math|J\<subseteq\>I> we have
       <math|<big|cap><rsub|\<alpha\>\<in\>J>F<rsub|\<alpha\>>\<neq\>\<varnothing\>>.
       Take <math|K=<around*|{|<big|cap><rsub|\<alpha\>\<in\>J>F<rsub|\<alpha\>>\|J\<subseteq\>I<text|,
-      >J<text| finite> non empty|}>> and define the family\ 
+      >J<text| finite > non empty|}>> and define the family\ 
 
       <\equation*>
         \<frak-U\>=<around*|{|A|}><rsub|A\<in\>K>\<subseteq\>\<cal-P\><around*|(|X|)>
       </equation*>
 
-      We prove now that <math|\<frak-U\>> is a filter base. First if
-      <math|A\<in\>K> then there exist a finite <math|J\<subseteq\>I> such
-      that <math|A=<big|cap><rsub|\<alpha\>\<in\>K>F<rsub|\<alpha\>>>, as
-      <math|<big|cap><rsub|\<alpha\>\<in\>K>F<rsub|\<alpha\>>\<neq\>\<varnothing\>>
+      We prove now that <math|\<frak-U\>> is a filter base. First, as
+      <math|I\<neq\>\<varnothing\>> there exist a <math|i\<in\>I>, as
+      <math|<around*|{|i|}>> is finite and
+      <math|<around*|{|i|}>\<subseteq\>I> it follows that
+      <math|<big|cap><rsub|\<alpha\>\<in\><around*|{|i|}>>F<rsub|\<alpha\>>\<in\>K>
+      so that\ 
+
+      <\equation>
+        <label|eq 14.138.170>K\<neq\>\<varnothing\>
+      </equation>
+
+      Second, if <math|A\<in\>K> then there exist a finite
+      <math|J\<subseteq\>I> such that <math|A=<big|cap><rsub|\<alpha\>\<in\>K>F<rsub|\<alpha\>>>,
+      as <math|<big|cap><rsub|\<alpha\>\<in\>K>F<rsub|\<alpha\>>\<neq\>\<varnothing\>>
       it follows that <math|A\<neq\>\<varnothing\>>. So we have proves that\ 
 
       <\equation>
@@ -13071,14 +13085,14 @@
         >A\<neq\>\<varnothing\>
       </equation>
 
-      Second let <math|A<rsub|1>,A<rsub|2>\<in\>K> then there exist finite
+      Third, let <math|A<rsub|1>,A<rsub|2>\<in\>K> then there exist finite
       non empty <math|J<rsub|1>,J<rsub|2>\<subseteq\>I> such that
       <math|A<rsub|1>=<big|cap><rsub|\<alpha\>\<in\>J<rsub|1>>F<rsub|\<alpha\>>>,
       <math|A<rsub|2>=<big|cap><rsub|\<beta\>\<in\>J<rsub|2>>F<rsub|\<beta\>>>.
       If <math|x\<in\>A<rsub|1><big|cap>A<rsub|2>=<around*|(|<big|cap><rsub|\<alpha\>\<in\>J<rsub|1>>F<rsub|\<alpha\>>|)><big|cap><around*|(|<big|cap><rsub|\<beta\>\<in\>J<rsub|2>>F<rsub|\<beta\>>|)>>
       then if <math|\<gamma\>\<in\>J<rsub|1><big|cup>J<rsub|2>> we have
-      either of both <math|\<gamma\>\<in\>J<rsub|1>\<Rightarrow\>x\<in\>A<rsub|\<gamma\>>>
-      or <math|\<gamma\>\<in\>J<rsub|2>\<Rightarrow\>x\<in\>A<rsub|\<gamma\>>>
+      either or both <math|\<gamma\>\<in\>J<rsub|1>\<Rightarrow\>x\<in\>F<rsub|\<gamma\>>>
+      or <math|\<gamma\>\<in\>J<rsub|2>\<Rightarrow\>x\<in\>F<rsub|\<gamma\>>>
       so that <math|x\<in\><big|cap><rsub|\<gamma\>\<in\>J<rsub|1><big|cup>J<rsub|2>>F<rsub|\<gamma\>>>,
       hence\ 
 
@@ -13108,12 +13122,13 @@
       So we have proved that\ 
 
       <\equation>
-        <label|eq 14.134.153>\<forall\>A<rsub|1>,A<rsub|2>\<in\>K<text| that
+        <label|eq 14.134.153>\<forall\>A<rsub|1>,A<rsub|2>\<in\>K<text| there
+        exist a <math|A<rsub|3>\<in\>K> such that
         <math|A<rsub|3>=A<rsub|1><big|cap>A<rsub|2>\<in\>K>>
       </equation>
 
-      From [eqs: <reference|eq 14.132.153>, <reference|eq 14.134.153>] it
-      follows that\ 
+      From [eqs: <reference|eq 14.138.170>, <reference|eq 14.132.153>,
+      <reference|eq 14.134.153>] it follows that\ 
 
       <\equation*>
         \<frak-U\>=<around*|{|A|}><rsub|A\<in\>K>\<subseteq\>\<cal-P\><around*|(|X|)><text|
@@ -13220,26 +13235,39 @@
     Tychonoff's>] to prove this theorem.
   </proof>
 
+  <\note>
+    If in the above corollary there exist a <math|i\<in\>I> such that
+    <math|C<rsub|i>=\<varnothing\>> then <math|<big|prod><rsub|i\<in\>I>C<rsub|i>=\<varnothing\>>
+    hence by [example: <reference|compact empty set>] compact even if the
+    rest of the <math|C<rsub|i>>'s are not compact. Hence\ 
+  </note>
+
   <subsubsection|Consequences of Tychonoff's Theorem>
 
   <\theorem>
     <label|compact rectangles are compact>Let
     <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>|\<rangle\>>>
-    be the topological space of the real tuple's where the norm
+    be the topological space of tupples of real numbers where the norm
     <math|<around*|\<\|\|\>||\<\|\|\>><rsub|n>> is defined by
     <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|n>=max<around*|(|<around*|{|<around*|\||\<pi\><rsub|i><around*|(|x|)>|\|>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>>
-    then <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i>,b<rsub|i>|]>>
-    is compact where <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
-    <math|a<rsub|i>\<leqslant\>b<rsub|i>>.
+    then for <math|<around*|{|a<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-R\>>
+    and <math|<around*|{|b<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-R\>>
+    with <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|a<rsub|i>\<leqslant\>b<rsub|i>> we have that
+
+    <\equation*>
+      <big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i>,b<rsub|i>|]><text|
+      is compact>
+    </equation*>
   </theorem>
 
   <\proof>
     First using [theorem: <reference|normed maximum norm>] we have that
-    <math|\<cal-T\><rsub|<around*|\|||\|><rsub|n>>> is the product topology
-    based on the product of the normed spaces
-    <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>>. Now by
-    [theorem: <reference|compact Heine Borel (1)>] we have that
-    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> that
+    <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>> is the
+    product topology based on the product of the normed spaces
+    <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>>. Now by Heine
+    Borel for the real numbers [see theorem: <reference|compact Heine Borel
+    (1)>] we have that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
     <math|<around*|[|a<rsub|i>,b<rsub|i>|]>> is compact, so using Tychonoff's
     theorem [theorem: <reference|compact Tychonoff's (1)>] it follows that
     <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i>,b<rsub|i>|]>>
@@ -13249,8 +13277,8 @@
   <\theorem>
     <label|compact Heine-Borel (1)><dueto|Heine-Borel>Let
     <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>|\<rangle\>>
-    >be the topological space of the real tuple's based on the maximum norm
-    and <math|C\<subseteq\>\<bbb-R\><rsup|n>> then we have\ 
+    >be the topological space of the tupples of real numbers based on the
+    maximum norm and <math|C\<subseteq\>\<bbb-R\><rsup|n>> then we have\ 
 
     <\equation*>
       C<text| is compact >\<Leftrightarrow\><text| >C<text| is bounded and
@@ -13265,9 +13293,9 @@
       <item*|<math|\<Rightarrow\>>>Using [theorem: <reference|compact and
       bounded>] <math|C> is bounded, further by [theorem:
       <reference|separation metric spaces are Hausdorff>]
-      <math|><math|\<cal-T\><rsub|<around*|\|||\|><rsub|n>>> is Hausdorff, so
-      using [theorem: <reference|compact set is closed in a Hausdorff space>]
-      <math|C> is closed.
+      <math|><math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>> is
+      Hausdorff, so using [theorem: <reference|compact set is closed in a
+      Hausdorff space>] <math|C> is closed.
 
       <item*|<math|\<Leftarrow\>>>If <math|C> is empty then <math|C> is
       compact by [example: <reference|compact empty set>] so we may assume
@@ -13299,7 +13327,7 @@
   A important consequence of the Heine-Borel theorem is that all norms on
   <math|\<bbb-R\><rsup|n>> are equivalent [see definition: <reference|normed
   equivalent norms> and theorem: <reference|normed norm equivalence
-  condition>]
+  condition>].
 
   <\theorem>
     <label|normed equivalent norms in R^n>let <math|n\<in\>\<bbb-N\>> then
@@ -13319,7 +13347,7 @@
       and ><around*|\|||\|>
     </equation>
 
-    Further using [theorem: <reference|continuity norm is uniform
+    Further using [example: <reference|continuity norm is uniform
     continuous>] it follows that\ 
 
     <\equation>
@@ -13334,7 +13362,7 @@
       S=<around*|{|x\<in\>\<bbb-R\><rsup|n>\|<around*|\<\|\|\>|x|\<\|\|\>><rsub|n>=1|}>
     </equation*>
 
-    then
+    so that
 
     <\equation*>
       S=<around*|\<\|\|\>||\<\|\|\>><rsub|n><rsup|-1><around*|(|<around*|{|1|}>|)>
@@ -13344,7 +13372,7 @@
     [see theorem: <reference|separation metric spaces are Hausdorff>] we have
     by [theorem: <reference|separation Hausdorff every finite set is closed>]
     that <math|<around*|{|1|}>> is closed. Using the continuity of
-    <math|<around*|\<\|\|\>||\<\|\|\>><rsub|n>> [see: <reference|eq
+    <math|<around*|\<\|\|\>||\<\|\|\>><rsub|n>> [see eq: <reference|eq
     14.136.153>] it follows from [theorem: <reference|continuity
     equivalences>] that <math|<around*|\<\|\|\>||\<\|\|\>><rsub|n><rsup|-1><around*|(|<around*|{|1|}>|)>>
     is closed, hence\ 
@@ -13361,8 +13389,8 @@
     </equation>
 
     So [eqs: <reference|eq 14.137.153>, <reference|eq 14.138.153>] allows us
-    to use Heine-Borel [theorem: <reference|compact Heine-Borel (1)>] proving
-    that\ 
+    to use Heine-Borel [theorem: <reference|compact Heine-Borel (1)>] to
+    prove that\ 
 
     <\equation*>
       S<text| is compact>
@@ -13376,21 +13404,27 @@
     Define <math|M<rsub|1>=<around*|\<\|\|\>|x<rsub|1>|\<\|\|\>>> and
     <math|M<rsub|2>=<around*|\<\|\|\>|x<rsub|2>|\<\|\|\>>> then as
     <math|<around*|\<\|\|\>|x<rsub|1>|\<\|\|\>><rsub|n>=1\<Rightarrow\>x<rsub|1>\<neq\>0>
-    and <math|<around*|\<\|\|\>|x<rsub|2>|\<\|\|\>><rsub|n>=1\<Rightarrow\>x<rsub|2>\<neq\>0>,
-    hence we have\ 
+    and <math|<around*|\<\|\|\>|x<rsub|2>|\<\|\|\>><rsub|n>=1\<Rightarrow\>x<rsub|2>\<neq\>0>
+    we have\ 
 
     <\equation>
       <label|eq 14.139.153>\<exists\>\<alpha\>,\<beta\>\<in\>\<bbb-R\><rsup|+><text|
       such that >\<forall\>x\<in\>\<bbb-R\><rsup|n><text| with
       ><around*|\<\|\|\>|x|\<\|\|\>><rsub|n>=1<text| we have
-      >M<rsub|1>\<leqslant\><around*|\<\|\|\>|x|\<\|\|\>>\<leqslant\>M<rsub|2>
+      >M<rsub|1>\<leqslant\><around*|\<\|\|\>|x|\<\|\|\>>\<leqslant\>M<rsub|2><text|
+      where >M<rsub|1>,M<rsub|2>\<in\>\<bbb-R\><rsup|+>
     </equation>
 
     Let <math|x\<in\>X> then we have either\ 
 
     <\description>
       <item*|<math|x=0>>Then <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|n>=0=<around*|\<\|\|\>|x|\<\|\|\>>>
-      so that <math|M<rsub|1>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|n>\<leqslant\><around*|\<\|\|\>|x|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x|\<\|\|\>><rsub|n>>
+      so that <math|M<rsub|1>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|n>=0=<around*|\<\|\|\>|x|\<\|\|\>>=0=M<rsub|2>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|n>>
+      hence
+
+      <\equation*>
+        M<rsub|1>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|n>\<leqslant\><around*|\<\|\|\>|x|\<\|\|\>>\<leqslant\>M<rsub|2>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|n>
+      </equation*>
 
       <item*|<math|x\<neq\>0>>Then <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|n>\<neq\>0>
       so that <math|<around*|\<\|\|\>|<frac|1|<around*|\<\|\|\>|x|\<\|\|\>><rsub|n>>\<cdot\>x|\<\|\|\>><rsub|n>=<frac|1|<around*|\<\|\|\>|x|\<\|\|\>><rsub|n>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|n>=1>
@@ -13408,8 +13442,8 @@
     </description>
 
     so in all cases we have <math|M<rsub|1>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|n>\<leqslant\><around*|\<\|\|\>|x|\<\|\|\>>\<leqslant\>M<rsub|2>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|n>>.
-    Applying then [theorem: <reference|normed norm equivalence condition>] we
-    have that\ 
+    Applying then [theorem: <reference|normed norm equivalence condition>]
+    proves that
 
     <\equation*>
       <around*|\<\|\|\>||\<\|\|\>><rsub|n><text| and
@@ -13437,7 +13471,7 @@
     <math|<around*|\<\|\|\>||\<\|\|\>><rsub|<around*|(|1|)>>> and
     <math|<around*|\<\|\|\>||\<\|\|\>><rsub|<around*|(|2|)>>> on
     <math|\<bbb-R\><rsup|n>> and a <with|font-series|bold|isometric>
-    isomorphism
+    isomorphism (depending only on the basis chosen in <math|X>)
 
     <\equation*>
       \<varphi\>:\<bbb-R\><rsup|n>\<rightarrow\>X<text| so that >
@@ -13493,7 +13527,7 @@
     <label|compact isometric isomorphism>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
     a normed space over <math|\<bbb-R\>>, <math|n\<in\>\<bbb-N\>>,
-    <math|L:\<bbb-R\><rsup|n>\<rightarrow\>X> a isomorphism and
+    <math|L:\<bbb-R\><rsup|n>\<rightarrow\>X> a linear isomorphism and
     <math|C\<subseteq\>X> then\ 
 
     <\equation*>
@@ -13506,7 +13540,7 @@
     Define
 
     <\equation*>
-      <around*|\<\|\|\>||\<\|\|\>><rsup|\<ast\>>:\<bbb-R\><rsup|n>\<rightarrow\>X<text|
+      <around*|\<\|\|\>||\<\|\|\>><rsup|\<ast\>>:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><text|
       by ><around*|\<\|\|\>|x|\<\|\|\>><rsup|\<ast\>>=<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>>
     </equation*>
 
@@ -13540,8 +13574,8 @@
 
     <\equation>
       <label|eq 14.140.153><around*|\<\|\|\>||\<\|\|\>><rsup|\<ast\>><text|
-      is a norm on >\<bbb-R\><rsup|n><text| and >L<text| is a isometric
-      isomorphism between ><around*|\<langle\>|\<bbb-R\><rsup|n>,<around*|\<\|\|\>||\<\|\|\>><rsup|\<ast\>>|\<rangle\>><text|
+      is a norm on >\<bbb-R\><rsup|n><text| and >L<text| is a linear
+      isometric isomorphism between ><around*|\<langle\>|\<bbb-R\><rsup|n>,<around*|\<\|\|\>||\<\|\|\>><rsup|\<ast\>>|\<rangle\>><text|
       and ><around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>
     </equation>
 
@@ -13568,8 +13602,9 @@
     </equation>
 
     Further as <math|<around*|\<\|\|\>||\<\|\|\>><rsup|\<ast\>>> and
-    <math|<around*|\<\|\|\>||\<\|\|\>><rsub|n>> are equivalent there exist by
-    [theorem: <reference|normed norm equivalence condition>] a
+    <math|<around*|\<\|\|\>||\<\|\|\>><rsub|n>> are equivalent [see theorem:
+    <reference|normed equivalent norms in R^n>] there exist by [theorem:
+    <reference|normed norm equivalence condition>] a
     <math|N<rsub|1>,N<rsub|2>\<in\>\<bbb-R\><rsup|+>> such that\ 
 
     <\equation>
@@ -13578,11 +13613,11 @@
       and ><around*|\<\|\|\>|x|\<\|\|\>><rsub|n>\<leqslant\>N<rsub|2>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|\<star\>>
     </equation>
 
-    Assume now that <math|C> is compact. Then by
+    Assume now that <math|C\<subseteq\>X> is compact. Then, as
     <math|K=L<rsup|-1>:X\<rightarrow\>\<bbb-R\><rsup|n>> is a continuous
     mapping between <math|<around*|\<langle\>|X,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>|\<rangle\>>>
-    and <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>|\<rangle\>>>.
-    Using [theorem: <reference|compact and continuous functions>] it follows
+    and <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>|\<rangle\>>>,
+    we have using [theorem: <reference|compact and continuous functions>]
     that <math|K<around*|(|C|)>> is compact in
     <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>|\<rangle\>>>,
     hence using Heine-Borel [see theorem: <reference|compact Heine-Borel
@@ -13595,9 +13630,9 @@
 
     As <math|K> is continuous it follows from [theorem: <reference|continuity
     equivalences>] we have that <math|K<rsup|-1><around*|(|K<around*|(|C|)>|)>>
-    is closed, which as <math|K=L<rsup|-1>> is a bijection proves by
+    is closed, which as <math|K=L<rsup|-1>> is a bijection, proves by
     [theorem: <reference|function preimage of image>] that
-    <math|K<rsup|-1><around*|(|K<around*|(|C|)>|)>=C> hence we have that\ 
+    <math|K<rsup|-1><around*|(|K<around*|(|C|)>|)>=C>, hence we have that\ 
 
     <\equation*>
       C<text| is closed in ><around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>
@@ -13702,7 +13737,7 @@
 
   <\proof>
     Using [example: <reference|linerar mapping between R^2 and C>] there
-    exist a isomorphism between <math|\<bbb-R\><rsup|2><infix-and>\<bbb-C\>>,
+    exist a linear isomorphism between <math|\<bbb-R\><rsup|2><infix-and>\<bbb-C\>>,
     hence applying the previous theorem [see <reference|compact isometric
     isomorphism>] proves the theorem.
   </proof>
@@ -13733,7 +13768,7 @@
     <label|normed linear mappings between finite dimensional spaces are
     continuous>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    are finite dimensional spaces over <math|\<bbb-R\>> then
+    be finite dimensional spaces over <math|\<bbb-R\>> then
 
     <\equation*>
       Hom<around*|(|X,Y|)>=L<around*|(|X,Y|)>
@@ -13747,84 +13782,88 @@
     finite dimensional space>] there exist linear isomorphisms
     <math|\<varphi\><rsub|1>:\<bbb-R\><rsup|n>\<rightarrow\>X>,
     <math|\<varphi\><rsub|2>:\<bbb-R\><rsup|m>\<rightarrow\>Y> and norms
-    <math|<around*|\<\|\|\>||\<\|\|\>><rsub|1>>,
-    <math|<around*|\<\|\|\>||\<\|\|\>><rsub|2>> on <math|\<bbb-R\><rsup|n>>,
-    <math|\<bbb-R\><rsup|m>> such that\ 
+    <math|<around*|\<\|\|\>||\<\|\|\>><rsub|<around*|\<langle\>|n|\<rangle\>>>>,
+    <math|<around*|\<\|\|\>||\<\|\|\>><rsub|<around*|\<langle\>|m|\<rangle\>>>>
+    on <math|\<bbb-R\><rsup|n>>, <math|\<bbb-R\><rsup|m>> such that\ 
 
     <\equation>
       <label|eq 14.147.153>\<varphi\><rsub|1>:\<bbb-R\><rsup|n>\<rightarrow\>X<text|
-      is a homeomorphism using the norms ><around*|\<\|\|\>||\<\|\|\>><rsub|1>,<around*|\<\|\|\>||\<\|\|\>><rsub|X><text|
+      is a homeomorphism using the norms ><around*|\<\|\|\>||\<\|\|\>><rsub|<around*|\<langle\>|n|\<rangle\>>><rsub|>,<around*|\<\|\|\>||\<\|\|\>><rsub|X><text|
       on >\<bbb-R\><rsup|n>,X
     </equation>
 
     <\equation>
-      <label|eq 14.148.153>\<varphi\><rsub|2>:\<bbb-R\><rsup|n>\<rightarrow\>X<text|
-      is a homeomorphism using the norms ><around*|\<\|\|\>||\<\|\|\>><rsub|2>,<around*|\<\|\|\>||\<\|\|\>><rsub|Y><text|
-      on >\<bbb-R\><rsup|n>,X
+      <label|eq 14.148.153>\<varphi\><rsub|2>:\<bbb-R\><rsup|n>\<rightarrow\>Y<text|
+      is a homeomorphism using the norms ><around*|\<\|\|\>||\<\|\|\>><rsub|<around*|\<langle\>|m|\<rangle\>>>,<around*|\<\|\|\>||\<\|\|\>><rsub|Y><text|
+      on >\<bbb-R\><rsup|n>,Y
     </equation>
 
-    Let <math|L\<in\>Hom<around*|(|X,Y|)>> and define
-    <math|L<rprime|'>=\<varphi\><rsub|2><rsup|-1>\<circ\>L\<circ\>\<varphi\><rsub|1>:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|m>>
-    then <math|L<rprime|'>> is a \ linear isomorphism. Using [theorem:
-    <reference|continuity homemorphism between powers of R>] it follows that\ 
+    Let <math|L\<in\>Hom<around*|(|X,Y|)>> and define\ 
 
     <\equation*>
-      L<rprime|'>:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|m><text| is
-      continuous using the maximum norms ><around*|\<\|\|\>||\<\|\|\>><rsub|n>,<around*|\<\|\|\>||\<\|\|\>><rsub|m><text|
-      on >\<bbb-R\><rsup|n>,\<bbb-R\><rsup|m>
+      L<rprime|'>:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|m><text| by
+      >L<rprime|'>=\<varphi\><rsub|2><rsup|-1>\<circ\>L\<circ\>\<varphi\><rsub|1>
     </equation*>
 
-    Using [theorem: <reference|normed equivalent norms in R^n>] we have that
-    <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|1>>=\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>>
-    and <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|2>>=\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>>>
-    so that\ 
+    Then as <math|\<varphi\><rsub|1>>, <math|\<varphi\><rsup|-1><rsub|2>> and
+    <math|L> are linear mappings it follows from [theorem: <reference|linear
+    mapping composition>] that\ 
 
     <\equation*>
-      L<rprime|'>:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|m><text| is
-      continuous using the norms ><around*|\<\|\|\>||\<\|\|\>><rsub|1>,<around*|\<\|\|\>||\<\|\|\>><rsub|2><text|
-      on >\<bbb-R\><rsup|n>,\<bbb-R\><rsup|m>
+      L<rprime|'>:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|m><text| is a
+      linear mapping>
     </equation*>
 
-    Using [eqs: <reference|eq 14.147.153>, <reference|eq 14.148.153>] we have
-    that\ 
+    Using [theorem: <reference|continuity linear mapping between R^n>]\ 
 
     <\equation*>
-      \<varphi\><rsub|1><rsup|-1>:X\<rightarrow\>\<bbb-R\><rsup|n><text| is
-      continuous using the norms ><around*|\<\|\|\>||\<\|\|\>><rsub|X>,<around*|\<\|\|\>||\<\|\|\>><rsub|1><text|
-      on >X,\<bbb-R\><rsup|n>
+      L<rprime|'>:R<rsup|n>\<rightarrow\>R<rsup|m><text| is linear continuous
+      using the maximum norms ><around*|\<\|\|\>||\<\|\|\>><rsub|n><text|,
+      ><around*|\<\|\|\>||\<\|\|\>><rsub|m>
     </equation*>
 
+    As by [theorem: <reference|normed equivalent norms in R^n>] it follows
+    that <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|<around*|\<langle\>|n|\<rangle\>>>>=\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>><rsub|>>
+    and <math|T<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|<around*|\<langle\>|m|\<rangle\>>>>=\<cal-T\><rsub|m>>
+    proving that
+
+    <\equation>
+      <label|eq 14.156.170>L<rprime|'>:R<rsup|n>\<rightarrow\>R<rsup|m><text|
+      is linear continuous using the norms
+      ><around*|\<\|\|\>||\<\|\|\>><rsub|<around*|\<langle\>|n|\<rangle\>>><text|,
+      ><around*|\<\|\|\>||\<\|\|\>><rsub|<around*|\<langle\>|m|\<rangle\>>>
+    </equation>
+
+    Using [theorem: <reference|continuity composition of continuous linear
+    mapping>] on [eqs: <reference|eq 14.147.153>, <reference|eq 14.148.153>
+    and <reference|eq 14.156.170>] that
+
     <\equation*>
-      \<varphi\><rsub|2>:\<bbb-R\><rsup|m>\<rightarrow\>Y<text| is continuous
-      using the norms <math|<around*|\<\|\|\>||\<\|\|\>><rsub|2>,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>>
-      on >\<bbb-R\><rsup|m>,Y
+      \<varphi\><rsub|2>\<circ\>L<rprime|'>\<circ\>\<varphi\><rsub|1><rsup|-1>\<in\>L<around*|(|X,Y|)>
     </equation*>
 
-    Hence as the composition of continuous function is continuous w have that\ 
+    Finally, as <math|\<varphi\><rsub|2>\<circ\>L<rprime|'>\<circ\>\<varphi\><rsub|1><rsup|-1>=\<varphi\><rsub|2>\<circ\>\<varphi\><rsub|2><rsup|-1>\<circ\>L\<circ\>\<varphi\><rsub|1>\<circ\>\<varphi\><rsub|1><rsup|-1>=Id<rsub|Y>\<circ\>L\<circ\>Id<rsub|X>=L>,
+    it follows from the above that\ 
 
     <\equation*>
-      \<varphi\><rsub|2>\<circ\>L<rprime|'>\<circ\>\<varphi\><rsub|1><rsup|-1>:X\<rightarrow\>Y<text|
-      is continuous using the norms ><around*|\<\|\|\>||\<\|\|\>><rsub|X>,<around*|\<\|\|\>||\<\|\|\>><rsub|Y><text|
-      on >X,Y
-    </equation*>
-
-    as
-
-    <\equation*>
-      \<varphi\><rsub|2>\<circ\>L<rprime|'>\<circ\>\<varphi\><rsub|1><rsup|-1>=\<varphi\><rsub|2>\<circ\><around*|(|\<varphi\><rsub|2><rsup|-1>\<circ\>L\<circ\>\<varphi\><rsub|1>|)>\<circ\>\<varphi\><rsub|1><rsup|-1>=<around*|(|\<varphi\><rsub|2>\<circ\>\<varphi\><rsup|-1><rsub|2>|)>\<circ\>L\<circ\><around*|(|\<varphi\><rsub|1>\<circ\>\<varphi\><rsup|-1><rsub|1>|)>=Id<rsub|Y>\<circ\>L\<circ\>Id<rsub|X>=L
-    </equation*>
-
-    it follows that <math|L:X\<rightarrow\>Y> is continuous proving that
-    <math|Hom<around*|(|X,Y|)>\<subseteq\>L<around*|(|X,Y|)>>. As by
-    definition <math|L<around*|(|X,Y|)>=<around*|{|L\<in\>Hom<around*|(|X,Y|)>\|L:X\<rightarrow\>Y<text|
-    is continuous>|}>\<subseteq\>Hom<around*|(|X,Y|)>> we conclude that\ 
-
-    <\equation*>
-      Hom<around*|(|X,Y|)>=L<around*|(|X,Y|)>
+      L\<in\>L<around*|(|X,Y|)>
     </equation*>
   </proof>
 
   <section|Convergence>
+
+  <\convention>
+    For simplicity we use the following convention if
+    <math|N\<in\>\<bbb-N\><rsub|0>>\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<forall\>n\<geqslant\>N>|<cell|<text|is a
+      shorthand for >>|<cell|\<forall\>n\<in\>\<bbb-N\><rsub|0><text| with
+      >n\<geqslant\>N>>|<row|<cell|\<forall\>n\<gtr\>N>|<cell|<text|is a
+      shorthand for >>|<cell|\<forall\>n\<in\>\<bbb-N\><rsub|0><text| with
+      >n\<gtr\>N>>>>
+    </eqnarray*>
+  </convention>
 
   <subsection|Sequences and limit>
 
@@ -13879,22 +13918,22 @@
 
     <\enumerate>
       <item>If <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
-      is <with|font-series|bold|increasing >if
+      is <with|font-series|bold|increasing >then
       <math|\<forall\>n,m\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> with
       <math|n\<leqslant\>m> we have <math|x<rsub|n>\<leqslant\>x<rsub|m>>.
 
       <item>If <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
-      is <with|font-series|bold|strictly increasing >if
+      is <with|font-series|bold|strictly increasing >then
       <math|\<forall\>n,m\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> with
       <math|n\<less\>m> we have <math|x<rsub|n>\<less\>x<rsub|m>>.
 
       <item>If <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
-      is <with|font-series|bold|decreasing >if
+      is <with|font-series|bold|decreasing >then
       <math|\<forall\>n,m\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> with
       <math|n\<leqslant\>m> we have <math|x<rsub|m>\<leqslant\>x<rsub|n>>.
 
       <item>If <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
-      is <with|font-series|bold|strictly decreasing >if
+      is <with|font-series|bold|strictly decreasing >then
       <math|\<forall\>n,m\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> with
       <math|n\<less\>m> we have <math|x<rsub|m>\<less\>x<rsub|n>>.
     </enumerate>
@@ -13917,10 +13956,10 @@
         follows that <math|0\<in\>S<rsub|n>>
 
         <item*|<math|m\<in\>S<rsub|n>\<Rightarrow\>m+1\<in\>S<rsub|n>>>As
-        <math|m\<in\>S<rsub|n>> we have <math|x<rsub|n>\<leqslant\>x<rsub|m>>
-        which as <math|x<rsub|m>\<leqslant\>x<rsub|m+1>> proves that
-        <math|x<rsub|n>\<leqslant\>x<rsub|m+1>>, hence
-        <math|m+1\<in\>S<rsub|n>>.
+        <math|m\<in\>S<rsub|n>> we have <math|x<rsub|n>\<leqslant\>x<rsub|n+m>>
+        which as <math|x<rsub|n+m>\<leqslant\>x<rsub|<around*|(|n+m|)>+1>>
+        proves that <math|x<rsub|n>\<leqslant\>x<rsub|<around*|(|n+m|)>+1>>,
+        hence <math|m+1\<in\>S<rsub|n>>.
       </description>
 
       Using mathematical induction <math|S<rsub|n>=\<bbb-N\><rsub|0>> so if
@@ -13942,9 +13981,10 @@
         it follows that <math|1\<in\>S<rsub|n>>
 
         <item*|<math|m\<in\>S<rsub|n>\<Rightarrow\>m+1\<in\>S<rsub|n>>>As
-        <math|m\<in\>S<rsub|n>> we have <math|x<rsub|n>\<less\>x<rsub|m>>
-        which as <math|x<rsub|m>\<less\>x<rsub|m+1>> proves that
-        <math|x<rsub|n>\<less\>x<rsub|m+1>>, hence <math|m+1\<in\>S<rsub|n>>.
+        <math|m\<in\>S<rsub|n>> we have <math|x<rsub|n>\<less\>x<rsub|n+m>>
+        which as <math|x<rsub|n+m>\<less\>x<rsub|<around*|(|n+m|)>+1>> proves
+        that <math|x<rsub|n>\<less\>x<rsub|<around*|(|n+m|)>+1>>, hence
+        <math|m+1\<in\>S<rsub|n>>.
       </description>
 
       Using mathematical induction <math|S<rsub|n>=\<bbb-N\>> so if
@@ -13966,10 +14006,10 @@
         follows that <math|0\<in\>S<rsub|n>>
 
         <item*|<math|m\<in\>S<rsub|n>\<Rightarrow\>m+1\<in\>S<rsub|n>>>As
-        <math|m\<in\>S<rsub|n>> we have <math|x<rsub|m>\<leqslant\>x<rsub|n>>
-        which as <math|x<rsub|m+1>\<leqslant\>x<rsub|m>> proves that
-        <math|x<rsub|m+1>\<leqslant\>x<rsub|n>>, hence
-        <math|m+1\<in\>S<rsub|n>>.
+        <math|m\<in\>S<rsub|n>> we have <math|x<rsub|n+m>\<leqslant\>x<rsub|n>>
+        which as <math|x<rsub|<around*|(|n+m|)>+1>\<leqslant\>x<rsub|m>>
+        proves that <math|x<rsub|<around*|(|n+m|)>+1>\<leqslant\>x<rsub|n>>,
+        hence <math|m+1\<in\>S<rsub|n>>.
       </description>
 
       Using mathematical induction <math|S<rsub|n>=\<bbb-N\><rsub|0>> so if
@@ -13991,9 +14031,10 @@
         it follows that <math|0\<in\>S<rsub|n>>
 
         <item*|<math|m\<in\>S<rsub|n>\<Rightarrow\>m+1\<in\>S<rsub|n>>>As
-        <math|m\<in\>S<rsub|n>> we have <math|x<rsub|m>\<less\>x<rsub|n>>
-        which as <math|x<rsub|m+1>\<less\>x<rsub|m>> proves that
-        <math|x<rsub|m+1>\<less\>x<rsub|n>>, hence <math|m+1\<in\>S<rsub|n>>.
+        <math|m\<in\>S<rsub|n>> we have <math|x<rsub|n+m>\<less\>x<rsub|n>>
+        which as <math|x<rsub|<around*|(|n+m|)>+1>\<less\>x<rsub|m>> proves
+        that <math|x<rsub|<around*|(|n+m|)>+1>\<less\>x<rsub|n>>, hence
+        <math|m+1\<in\>S<rsub|n>>.
       </description>
 
       Using mathematical induction <math|S<rsub|n>=\<bbb-N\>> so if
@@ -14037,13 +14078,13 @@
     is <with|font-series|bold|convergent to <math|x>> if
     <math|\<forall\>U\<in\>\<cal-T\>> with <math|x\<in\>X> there exist a
     <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
-    <math|\<forall\>n\<in\>\<bbb-N\>> with <math|N\<leqslant\>n> we have
-    <math|x<rsub|n>\<in\>U>. We call <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
+    <math|\<forall\>n\<geqslant\>N> we have <math|x<rsub|n>\<in\>U>. We call
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
     a <with|font-series|bold|convergent sequence>.
   </definition>
 
-  We show now that convergence is of the start point of the domain of the
-  family.
+  We show now that convergence is independent of the start point of the
+  domain of the family.
 
   <\theorem>
     <label|sequence limit start value>Let
@@ -14074,24 +14115,23 @@
 
       <\description>
         <item*|<math|\<Rightarrow\>>>Let <math|U\<in\>\<cal-T\>> such that
-        <math|x\<in\>U> then as <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
-        converges to <math|x> there exist a
+        <math|x\<in\>U> then, as <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
+        converges to <math|x>, there exist a
         <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
-        <math|\<forall\>n\<in\>\<bbb-N\>> with <math|N\<leqslant\>n> we have
-        <math|x<rsub|n>\<in\>U>. Hence if we take
-        <math|M=max<around*|(|N,m|)>> then
+        <math|\<forall\>n\<geqslant\>N> we have <math|x<rsub|n>\<in\>U>.
+        Hence if we take <math|M=max<around*|(|N,m|)>> then
         <math|M\<in\><around*|{|m,\<ldots\>,\<infty\>|}>>and we have
-        <math|\<forall\>n\<in\>\<bbb-N\>> with <math|M\<leqslant\>n> that
-        <math|x<rsub|n>\<in\>U>. So <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|m,\<ldots\>,\<infty\>|}>>>
+        <math|\<forall\>n\<geqslant\>M> that <math|x<rsub|n>\<in\>U>. So
+        <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|m,\<ldots\>,\<infty\>|}>>>
         converges to <math|x>.
 
         <item*|<math|\<Leftarrow\>>>Let <math|U\<in\>\<cal-T\>> such that
         <math|x\<in\>U> then as <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|m,\<ldots\>,\<infty\>|}>>>
         converges to <math|x> there exist a
         <math|N\<in\><around*|{|m,\<ldots\>,\<infty\>|}>> such that
-        <math|\<forall\>n\<in\>\<bbb-N\>> with <math|N\<leqslant\>n> we have
-        <math|x<rsub|n>\<in\>U>. As <math|m\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
-        we have that <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> hence
+        <math|\<forall\>n\<geqslant\>M> we have <math|x<rsub|n>\<in\>U>. As
+        <math|m\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> we have that
+        <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> hence
         <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
         converges to <math|x>.
       </description>
@@ -14100,9 +14140,9 @@
       <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
       converges to <math|x> there exist a
       <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
-      <math|\<forall\>n\<in\>\<bbb-N\>> with <math|N\<leqslant\>n> we have
-      <math|x<rsub|n>\<in\>U>. As <math|N\<leqslant\>n\<leqslant\>n+m> we
-      have that <math|x<rsub|n+m>\<in\>U> proving that
+      <math|\<forall\>n\<geqslant\>N> we have <math|x<rsub|n>\<in\>U>. As
+      <math|N\<leqslant\>n\<leqslant\>n+m> we have that
+      <math|x<rsub|n+m>\<in\>U> proving that
       <math|<around*|{|x<rsub|n+m>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
       converges to <math|x>.
     </enumerate>
@@ -14114,7 +14154,7 @@
     <math|x,y\<in\>X> and <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>X>
     a sequence that is <with|font-series|bold|convergent
     <with|font-series|bold|to <math|x> and <math|y>>> then
-    <math|<with|font-series|bold|x=y>>.\ 
+    <math|<with|font-series|bold|x=y>>.
   </theorem>
 
   <\proof>
@@ -14122,12 +14162,15 @@
     exist a <math|U,V\<in\>\<cal-T\>> such that <math|x\<in\>U>,
     <math|y\<in\>V> and <math|U<big|cap>V=\<varnothing\>>. By the definition
     of convergence there exist a <math|N<rsub|x>,N<rsub|y>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
-    such that <math|\<forall\>n\<in\>\<bbb-N\>> with <math|N\<leqslant\>n>
-    <math|x<rsub|n>\<in\>U> and <math|\<forall\>n\<in\>\<bbb-N\>> with
-    <math|N\<leqslant\>n> we have <math|x<rsub|n>\<in\>V>. So for
-    <math|N=max<around*|(|N<rsub|x>,N<rsub|y>|)>> we have
-    <math|x<rsub|N>\<in\><big|cup><big|cap>V> contradicting
-    <math|U<big|cap>V=\<varnothing\>>.
+    such that <math|\<forall\>n\<geqslant\>N<rsub|x>> <math|x<rsub|n>\<in\>U>
+    and <math|\<forall\>n\<geqslant\>N<rsub|n>> we have
+    <math|x<rsub|n>\<in\>V>. So for <math|N=max<around*|(|N<rsub|x>,N<rsub|y>|)>>
+    we have <math|x<rsub|N>\<in\>U<big|cap>V> contradicting
+    <math|U<big|cap>V=\<varnothing\>>. Hence we must have\ 
+
+    <\equation*>
+      x=y
+    </equation*>
   </proof>
 
   <\definition>
@@ -14135,10 +14178,10 @@
     be a Hausdorff topological space, <math|k\<in\>\<bbb-N\><rsub|0>> and
     <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>X>
     a sequence that is convergent to the <with|font-series|bold|unique
-    ><math|x\<in\>X> then we note this as\ 
+    ><math|x\<in\>X> then we note this <math|x> as\ 
 
     <\equation*>
-      <below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>=x
+      <below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>
     </equation*>
 
     and say that <math|x> is the <with|font-series|bold|limit> of
@@ -14150,7 +14193,7 @@
     </equation*>
 
     then we mean that <math|<around*|{|x<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
-    is convergent to <math|x>.
+    is convergent to <math|x\<in\>X>.
   </definition>
 
   We have the following equivalent definition for the limit in a metric
@@ -14165,7 +14208,7 @@
     then\ 
 
     <\equation*>
-      <below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>=x<text| exists
+      <below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>=x<text|
       >\<Leftrightarrow\><text| >\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text|
       >\<exists\>N\<in\><around*|{|k,\<ldots\>,\<infty\>|}><text| such that
       >\<forall\>n\<in\>\<bbb-N\><text| with >N\<leqslant\>n<text|
@@ -14177,7 +14220,7 @@
     that\ 
 
     <\equation*>
-      <below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>=x<text| exists
+      <below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>=x<text|
       >\<Leftrightarrow\><text| >\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text|
       >\<exists\>N\<in\><around*|{|k,\<ldots\>,\<infty\>|}><text| such that
       >\<forall\>n\<in\>\<bbb-N\><text| with >N\<leqslant\>n<text|
@@ -14194,17 +14237,16 @@
       then as <math|x\<in\>B<rsub|d><around*|(|x,\<varepsilon\>|)>\<in\>\<cal-T\>>
       we have from <math|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>=x<text|>>
       that there exist a <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
-      such that <math|\<forall\>n\<in\>\<bbb-N\>> with <math|N\<leqslant\>n>
-      we have <math|x<rsub|n>\<in\>B<rsub|d><around*|(|x,\<varepsilon\>|)>>,
-      hence <math|d<around*|(|x,x<rsub|n>|)>\<less\>\<varepsilon\>>.
+      such that <math|\<forall\>n\<geqslant\>N><math|> we have
+      <math|x<rsub|n>\<in\>B<rsub|d><around*|(|x,\<varepsilon\>|)>>, hence
+      <math|d<around*|(|x,x<rsub|n>|)>\<less\>\<varepsilon\>>.
 
       <item*|<math|\<Leftarrow\>>>Let <math|U\<in\>\<cal-T\>> be such that
       <math|x\<in\>U> then by [theorem: <reference|metric topology (1)>]
       there exist a <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> such that
-      <math|x\<in\>B<rsub|d><around*|(|x,\<varepsilon\>|)>\<subseteq\>U>.
-      Then by the hypothesis there exist a
-      <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
-      <math|\<forall\>n\<in\>\<bbb-N\>> with <math|N\<leqslant\>n> we have
+      <math|x\<in\>B<rsub|d><around*|(|x,\<varepsilon\>|)>\<subseteq\>U>. By
+      the hypothesis there exist a <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
+      such that <math|\<forall\>n\<geqslant\>N> we have
       <math|d<around*|(|x,x<rsub|n>|)>\<less\>\<varepsilon\>>, hence
       <math|x\<in\>B<rsub|d><around*|(|x,\<varepsilon\>|)>\<subseteq\>U>,
       proving that <math|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>=x>.
@@ -14218,17 +14260,16 @@
       then as <math|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,\<varepsilon\>|)>\<in\>\<cal-T\>>
       we have from <math|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>=x<text|>>
       that there exist a <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
-      such that <math|\<forall\>n\<in\>\<bbb-N\>> with <math|N\<leqslant\>n>
-      we have <math|x<rsub|n>\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,\<varepsilon\>|)>>,
+      such that <math|\<forall\>n\<geqslant\>N> we have
+      <math|x<rsub|n>\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,\<varepsilon\>|)>>,
       hence <math|<around*|\<\|\|\>|x<rsub|n>-x|\<\|\|\>>\<less\>\<varepsilon\>>.
 
       <item*|<math|\<Leftarrow\>>>Let <math|U\<in\>\<cal-T\>> be such that
       <math|x\<in\>U> then by [theorem: <reference|normed space and open
       sets>] there exist a <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> such
       that <math|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,\<varepsilon\>|)>\<subseteq\>U>.
-      Then by the hypothesis there exist a
-      <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
-      <math|\<forall\>n\<in\>\<bbb-N\>> with <math|N\<leqslant\>n> we have
+      By the hypothesis there exist a <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
+      such that <math|\<forall\>n\<geqslant\>N> we have
       <math|<around*|\<\|\|\>|x<rsub|n>-x|\<\|\|\>>\<less\>\<varepsilon\>>,
       hence <math|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,\<varepsilon\>|)>\<subseteq\>U>,
       proving that <math|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>=x>.
@@ -14270,9 +14311,9 @@
 
     <\description>
       <item*|<math|\<Rightarrow\>>>Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
-      then as <math|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>=x> there
+      then, as <math|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>=x>, there
       exist a <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
-      <math|\<forall\>n\<in\>\<bbb-N\>> with <math|N\<leqslant\>n> we have
+      <math|\<forall\>n\<geqslant\>N> we have
       <math|d<around*|(|x,x<rsub|n>|)>\<less\>\<varepsilon\>>. Hence
       <math|<around*|\||d<around*|(|x,x<rsub|n>|)>-0|\|>=<around*|\||d<around*|(|x,x<rsub|n>|)>|\|>=d<around*|(|x,x<rsub|n>|)>\<less\>\<varepsilon\>>
       proving that <math|<around*|{|d<around*|(|x,x<rsub|n>|)>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
@@ -14283,11 +14324,11 @@
       </equation*>
 
       <item*|<math|\<Leftarrow\>>>Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
-      then we have\ 
+      then there exist a <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
+      such that <math|\<forall\>n\<geqslant\>N> we have
 
       <\equation*>
-        d<around*|(|x,x<rsub|n>|)>=<around*|\||d<around*|(|x,x<rsub|n>|)>|\|>=<around*|\||d<around*|(|x,x<rsub|n>|)>-0|\|>\<less\>\<varepsilon\><text|
-        [by the assumption]>
+        d<around*|(|x,x<rsub|n>|)>=<around*|\||d<around*|(|x,x<rsub|n>|)>|\|>=<around*|\||d<around*|(|x,x<rsub|n>|)>-0|\|>\<less\>\<varepsilon\><text|>
       </equation*>
 
       proving that\ 
@@ -14302,10 +14343,9 @@
 
     <\description>
       <item*|<math|\<Rightarrow\>>>Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
-      then as <math|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>=x> there
+      then, as <math|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>=x>, there
       exist a <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
-      <math|\<forall\>n\<in\>\<bbb-N\>> with <math|N\<leqslant\>n> we have
-      <math|<around*|\<\|\|\>|x<rsub|n>-x|\<\|\|\>>\<less\>\<varepsilon\>>.
+      <math|\<forall\>n\<geqslant\>N> <math|<around*|\<\|\|\>|x<rsub|n>-x|\<\|\|\>>\<less\>\<varepsilon\>>.
       Hence <math|<around*|\||<around*|\<\|\|\>|x<rsub|n>-x|\<\|\|\>>-0|\|>=<around*|\||<around*|\<\|\|\>|x<rsub|n>-x|\<\|\|\>>|\|>=<around*|\<\|\|\>|x<rsub|n>-x|\<\|\|\>>\<less\>\<varepsilon\>>
       proving that <math|<around*|{|<around*|\<\|\|\>|x<rsub|n>-x|\<\|\|\>>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
       converges to <math|0> or that\ 
@@ -14315,11 +14355,11 @@
       </equation*>
 
       <item*|<math|\<Leftarrow\>>>Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
-      then we have\ 
+      then there exist a <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
+      such that <math|\<forall\>n\<geqslant\>N> we have
 
       <\equation*>
-        <around*|\<\|\|\>|x<rsub|n>-x|\<\|\|\>>=<around*|\||<around*|\<\|\|\>|x<rsub|n>-x|\<\|\|\>>|\|>=<around*|\||<around*|\<\|\|\>|x<rsub|n>-x|\<\|\|\>>-0|\|>\<less\>\<varepsilon\><text|
-        [by the assumption]>
+        <around*|\<\|\|\>|x<rsub|n>-x|\<\|\|\>>=<around*|\||<around*|\<\|\|\>|x<rsub|n>-x|\<\|\|\>>|\|>=<around*|\||<around*|\<\|\|\>|x<rsub|n>-x|\<\|\|\>>-0|\|>\<less\>\<varepsilon\>
       </equation*>
 
       proving that\ 
@@ -14333,8 +14373,8 @@
   <\example>
     <label|limit constant sequence>If <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
     is a normed space, <math|k\<in\>\<bbb-N\><rsub|0>>, <math|x\<in\>X> then
-    if <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k|}>>\<subseteq\>X>
-    is defined by <math|x<rsub|i>=x> then
+    we have for <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k|}>>\<subseteq\>X>
+    defined by <math|x<rsub|i>=x> that
 
     <\equation*>
       <below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>=x
@@ -14343,8 +14383,7 @@
 
   <\proof>
     Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> and take <math|N=k> then
-    we have for <math|n\<in\>\<bbb-N\><rsub|0>> with <math|N\<leqslant\>n> we
-    have
+    we have <math|\<forall\>n\<geqslant\>N> that
 
     <\equation*>
       <around*|\<\|\|\>|x<rsub|n>-x|\<\|\|\>>=<around*|\<\|\|\>|x-x|\<\|\|\>>=0\<less\>\<varepsilon\>
@@ -14364,20 +14403,22 @@
 
     <\description>
       <item*|<math|b=0>>Then <math|\<forall\>n\<in\>\<bbb-N\>> we have
-      <math|b<rsup|n>=0> hence by [example: <reference|limit constant
-      sequence>] that <math|<below|lim|n\<rightarrow\>\<infty\>>b<rsup|n>=0>
+      <math|b<rsup|n>=0> so that by [example: <reference|limit constant
+      sequence>] \ <math|<below|lim|n\<rightarrow\>\<infty\>>b<rsup|n>=0>.
 
       <item*|<math|0\<less\>b>>Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
       then by [theorem: <reference|complex 0\<less\>x^n\<less\>e>] there
-      exist a <math|N\<in\>\<bbb-N\>> such that if <math|n\<geqslant\>N> we
-      have <math|0\<less\>b<rsup|n>\<less\>\<varepsilon\>> hence
-      <math|<around*|\||b<rsup|n>-0|\|>=<around*|\||b<rsup|n>|\|>=b<rsup|n>\<less\>\<varepsilon\>>.
+      exist a <math|N\<in\>\<bbb-N\>> such that
+      <math|\<forall\>n\<geqslant\>N> we have
+      <math|0\<less\>b<rsup|n>\<less\>\<varepsilon\>> hence
+      <math|<around*|\||b<rsup|n>-0|\|>=<around*|\||b<rsup|n>|\|>=b<rsup|n>\<less\>\<varepsilon\>>,
+      proving that <math|<below|lim|n\<rightarrow\>\<infty\>>b<rsup|n>=0>.
     </description>
   </proof>
 
   <\example>
     <label|limit 1/(a+i)>If <math|a\<in\>\<bbb-R\>>,
-    <math|k\<in\>\<bbb-N\><rsub|0>> such that <math|0\<less\>a+k> so that
+    <math|k\<in\>\<bbb-N\><rsub|0>> with <math|0\<less\>a+k> so that
     <math|<around*|{|<frac|1|a+n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>\<bbb-R\>>
     is well defined then\ 
 
@@ -14389,12 +14430,13 @@
       Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then by [theorem:
       <reference|complex Archimedean property consequence (1)>] there exist a
       <math|N\<in\>\<bbb-N\>> such that <math|max<around*|(|<frac|1|\<varepsilon\>>-a,-a|)>\<less\>N>
-      so if <math|N\<leqslant\>n> then <math|<frac|1|\<varepsilon\>>-a\<less\>N\<leqslant\>n\<Rightarrow\><frac|1|\<varepsilon\>>\<less\>n+a\<Rightarrow\><frac|1|a+n>\<less\>\<varepsilon\>>
+      so if <math|N\<leqslant\>n> then we have
+      <math|<frac|1|\<varepsilon\>>-a\<less\>N\<leqslant\>n\<Rightarrow\><frac|1|\<varepsilon\>>\<less\>n+a\<Rightarrow\><frac|1|a+n>\<less\>\<varepsilon\>>
       and <math|-a\<less\>n\<Rightarrow\>0\<less\>a+n>. Hence
-      <math|0\<less\><frac|1|a+n>\<less\>\<varepsilon\>> so that\ 
+      <math|0\<less\><frac|1|a+n>\<less\>\<varepsilon\>>, so that\ 
 
       <\equation*>
-        <around*|\||<frac|1|a+n>-\<varepsilon\>|\|>=<around*|\||<frac|1|a+n>|\|>=<frac|1|a+n>\<less\>\<varepsilon\>
+        <around*|\||<frac|1|a+n>-0|\|>=<around*|\||<frac|1|a+n>|\|>=<frac|1|a+n>\<less\>\<varepsilon\>
       </equation*>
 
       proving\ 
@@ -14405,8 +14447,8 @@
     </proof>
 
     <\example>
-      <label|limit (a+n)/(b+n)>Let <math|a,b\<in\>\<bbb-R\>>,
-      <math|k\<in\>\<bbb-N\><rsub|0>> such that <math|0\<less\>b+k> so that
+      <label|limit (a+n)/(b+n)>Let <math|k\<in\>\<bbb-N\><rsub|0>>,
+      <math|a,b\<in\>\<bbb-R\>> with <math|0\<less\>b+k> so that
       <math|<around*|{|<frac|a+n|b+n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
       is well defined then\ 
 
@@ -14419,16 +14461,17 @@
   <\proof>
     Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then by the Archimedan
     property of the real numbers [see theorem: <reference|complex Archimedean
-    property consequence (1)>] there exist a <math|N\<in\>M> such that
+    property consequence (1)>] there exist a
+    <math|M\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
     <math|<frac|<around*|\||a-b|\|>|\<varepsilon\>>-b\<less\>M>. Take
-    <math|N=max<around*|(|k,M|)>> then for <math|n\<in\>\<bbb-N\>> with
-    <math|N\<leqslant\>n> we have\ 
+    <math|N=max<around*|(|k,M|)>> then for <math|\<forall\>n\<geqslant\>N> we
+    have\ 
 
     <\equation*>
       <frac|<around*|\||a-b|\|>|\<varepsilon\>>-b\<less\>n\<Rightarrow\><frac|<around*|\||a-b|\|>|\<varepsilon\>>\<less\>n+b\<Rightarrowlim\><rsub|0\<less\>b+k\<less\>b+n><frac|<around*|\||a-b|\|>|b+n>\<less\>\<varepsilon\>\<Rightarrow\><around*|\||<frac|a-b|b+n>|\|>\<less\>\<varepsilon\>
     </equation*>
 
-    So we have\ 
+    Next
 
     <\equation*>
       <around*|\||<frac|a+n|b+n>-1|\|>=<around*|\||<frac|a+n-<around*|(|b+n|)>|b+n>|\|>=<around*|\||<frac|a-b|b+n>|\|>\<less\>\<varepsilon\>
@@ -14470,8 +14513,8 @@
   <\proof>
     As <math|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>=x> there exist a
     <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
-    <math|\<forall\>n\<in\>\<bbb-N\><rsub|0>> with <math|N\<leqslant\>n> we
-    have <math|<around*|\<\|\|\>|x<rsub|n>-x|\<\|\|\>>\<less\>\<varepsilon\>>.
+    <math|\<forall\>n\<geqslant\>N> we have
+    <math|<around*|\<\|\|\>|x<rsub|n>-x|\<\|\|\>>\<less\>\<varepsilon\>>.
     Hence we have\ 
 
     <\equation*>
@@ -14487,7 +14530,7 @@
 
   <\theorem>
     <label|limit x_n+y_n>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
-    be a normed space, <math|k,l\<in\>\<bbb-N\>> and
+    be a normed space, <math|k,l\<in\>\<bbb-N\><rsub|0>> and
     <math|<around*|{|x<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>X>,
     <math|<around*|{|y<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>Y>
     sequences such that\ 
@@ -14518,10 +14561,10 @@
     <math|N<rsub|y>\<in\><around*|{|l,\<ldots\>,\<infty\>|}>> such that
     <math|\<forall\>n\<geqslant\>N<rsub|1>> we have
     <math|<around*|\<\|\|\>|x<rsub|n>-x|\<\|\|\>>\<less\><frac|\<varepsilon\>|2>>
-    and <math|\<forall\>n\<in\>N<rsub|2>> then
+    and <math|\<forall\>n\<in\>N<rsub|2>> we have
     <math|<around*|\<\|\|\>|y<rsub|n>-y|\<\|\|\>>\<less\><frac|\<varepsilon\>|2>>.
-    Hence for <math|n\<in\>\<bbb-N\>> with
-    <math|max<around*|(|N<rsub|1>,N<rsub|2>|)>\<leqslant\>n> we have\ 
+    Hence if we take \ <math|N=max<around*|(|N<rsub|1>,N<rsub|2>|)>> then
+    <math|\<forall\>n\<geqslant\>N> we have\ 
 
     <\equation*>
       <around*|\<\|\|\>|<around*|(|x<rsub|n>+y<rsub|n>|)>-<around*|(|x+y|)>|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x<rsub|n>-x|\<\|\|\>>+<around*|\<\|\|\>|y<rsub|n>-y|\<\|\|\>>\<less\><frac|\<varepsilon\>|2>+<frac|\<varepsilon\>|2>=\<varepsilon\>
@@ -14536,9 +14579,9 @@
 
   <\theorem>
     <label|limit a.x_n>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
-    be a normed space over <math|\<bbb-K\>>, <math|k\<in\>\<bbb-N\><rsub|0>>
-    and <math|<around*|{|x<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>X>
-    a sequence such that
+    be a normed space, <math|k\<in\>\<bbb-N\><rsub|0>> and
+    <math|<around*|{|x<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>X>
+    a sequence \ such that
 
     <\equation*>
       <below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>=x
@@ -14564,8 +14607,8 @@
 
     <\description>
       <item*|<math|\<alpha\>=0>>Then <math|\<forall\>n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
-      we have <math|\<alpha\>\<cdot\>x<rsub|n>=0> then by [example:
-      <reference|limit constant sequence>] that\ 
+      we have <math|\<alpha\>\<cdot\>x<rsub|n>=0> so that by [example:
+      <reference|limit constant sequence>]
 
       <\equation*>
         <below|lim|n\<rightarrow\>\<infty\>><around*|(|\<alpha\>\<cdot\>x<rsub|n>|)>=0=0\<cdot\>x=\<alpha\>\<cdot\>x
@@ -14573,8 +14616,8 @@
 
       <item*|<math|\<alpha\>\<neq\>0>>As <math|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>=x>
       there exist a <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such
-      that <math|\<forall\>n\<in\>\<bbb-N\><rsub|0>> with
-      <math|N\<leqslant\>n> we have <math|<around*|\<\|\|\>|x<rsub|n>-x|\<\|\|\>>\<less\><frac|\<varepsilon\>|<around*|\||\<alpha\>|\|>>>.
+      that <math|\<forall\>n\<geqslant\>N> we have
+      <math|<around*|\<\|\|\>|x<rsub|n>-x|\<\|\|\>>\<less\><frac|\<varepsilon\>|<around*|\||\<alpha\>|\|>>>.
       Hence we have\ 
 
       <\equation*>
@@ -14662,13 +14705,13 @@
       <math|<around*|\||Re<around*|(|z<rsub|n>|)>-x|\|>\<less\><frac|\<varepsilon\>|2>>
       and <math|\<forall\>m\<geqslant\>N<rsub|2>>
       <math|<around*|\||Img<around*|(|z<rsub|n>|)>-y|\|>\<less\><frac|\<varepsilon\>|2>>.
-      Hence if take <math|z=x+i\<cdot\>y> and
+      Hence if we take <math|z=x+i\<cdot\>y> and
       <math|m\<geqslant\>max<around*|(|N<rsub|1>,N<rsub|2>|)>> then we have
       that\ 
 
       <\equation*>
         <around*|\||z<rsub|n>-z|\|><rsub|c>\<leqslant\><rsub|<text|[theorem:
-        <reference|complex norm properties>]>><around*|\||Re<around*|(|z<rsub|n>-z|)>|\|>+<around*|\||Img<around*|(|z<rsub|n>-z|)>|\|>=<around*|\||Re<around*|(|z<rsub|n>|)>-z|\|>+<around*|\||Img<around*|(|z<rsub|n>|)>-y|\|>\<less\><frac|\<varepsilon\>|2>+<frac|\<varepsilon\>|2>=\<varepsilon\>
+        <reference|complex norm properties>]>><around*|\||Re<around*|(|z<rsub|n>-z|)>|\|>+<around*|\||Img<around*|(|z<rsub|n>-z|)>|\|>=<around*|\||Re<around*|(|z<rsub|n>|)>-x|\|>+<around*|\||Img<around*|(|z<rsub|n>|)>-y|\|>\<less\><frac|\<varepsilon\>|2>+<frac|\<varepsilon\>|2>=\<varepsilon\>
       </equation*>
 
       proving that <math|><math|<around*|{|z<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
@@ -14788,13 +14831,13 @@
   <\theorem>
     <label|limit sequence limited by a convergent real sequence>Let
     <math|k\<in\>\<bbb-N\><rsub|0>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
-    a normed space over <math|\<bbb-K\>>,
-    <math|<around*|{|x<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>X>
+    a normed space, <math|<around*|{|x<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>X>
     a <with|font-series|bold|convergent> sequence in <math|X> and
     <math|<around*|{|s<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>\<bbb-R\>>
-    a convergent sequence such that <math|\<forall\>n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
-    we have <math|<around*|\<\|\|\>|x<rsub|n>|\<\|\|\>>\<leqslant\>s<rsub|n>>
-    then <math|<around*|\<\|\|\>|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>|\<\|\|\>>\<leqslant\><below|lim|n\<rightarrow\>\<infty\>>s<rsub|n>>
+    a <with|font-series|bold|convergent> sequence such that
+    <math|\<forall\>n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> we have
+    <math|<around*|\<\|\|\>|x<rsub|n>|\<\|\|\>>\<leqslant\>s<rsub|n>> then
+    <math|<around*|\<\|\|\>|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>|\<\|\|\>>\<leqslant\><below|lim|n\<rightarrow\>\<infty\>>s<rsub|n>>
   </theorem>
 
   <\proof>
@@ -14820,7 +14863,7 @@
     <math|N=max<around*|(|N<rsub|1>,N<rsub|2>|)>> then we have\ 
 
     <\equation*>
-      <around*|\<\|\|\>|x|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x-x<rsub|N>|\<\|\|\>>+<around*|\<\|\|\>|x<rsub|N>|\<\|\|\>>\<less\><frac|\<varepsilon\>|2>+<around*|\<\|\|\>|x<rsub|N>|\<\|\|\>>\<less\><frac|\<varepsilon\>|2>+s<rsub|N>\<leqslant\><frac|\<varepsilon\>|2>+<around*|\||s<rsub|N>|\|>\<leqslant\><frac|\<varepsilon\>|2>+<around*|\||s<rsub|N>-s|\|>+<around*|\||s|\|>\<less\><frac|\<varepsilon\>|2>+<frac|\<varepsilon\>|2>+<around*|\||s|\|>=\<varepsilon\>+s=<around*|\<\|\|\>|x|\<\|\|\>>
+      <around*|\<\|\|\>|x|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x-x<rsub|N>|\<\|\|\>>+<around*|\<\|\|\>|x<rsub|N>|\<\|\|\>>\<less\><frac|\<varepsilon\>|2>+<around*|\<\|\|\>|x<rsub|N>|\<\|\|\>>\<leqslant\><frac|\<varepsilon\>|2>+s<rsub|N>\<leqslant\><frac|\<varepsilon\>|2>+<around*|\||s<rsub|N>|\|>\<leqslant\><frac|\<varepsilon\>|2>+<around*|\||s<rsub|N>-s|\|>+<around*|\||s|\|>\<less\><frac|\<varepsilon\>|2>+<frac|\<varepsilon\>|2>+<around*|\||s|\|>=\<varepsilon\>+s=<around*|\<\|\|\>|x|\<\|\|\>>
     </equation*>
 
     leading to the contradiction <math|<around*|\<\|\|\>|x|\<\|\|\>>\<less\><around*|\<\|\|\>|x|\<\|\|\>>>.
@@ -14847,7 +14890,7 @@
     <math|<around*|\<\|\|\>|x<rsub|n>-x|\<\|\|\>>\<less\><frac|\<varepsilon\>|2>>
     and <math|\<forall\>m\<gtr\>N<rsub|2>>
     <math|<around*|\<\|\|\>|y<rsub|m>-y|\<\|\|\>>\<less\><frac|\<varepsilon\>|2>>.
-    Take <math|N=max<around*|(|N<rsub|1>,N<rsub|2>|)>> we have:
+    Take <math|N=max<around*|(|N<rsub|1>,N<rsub|2>|)>> then we have:
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|<around*|\<\|\|\>|x|\<\|\|\>>>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|x<rsub|N>-x|\<\|\|\>>+<around*|\<\|\|\>|x<rsub|N>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|x<rsub|N>-x|\<\|\|\>>+<around*|\<\|\|\>|y<rsub|N>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|x<rsub|N>-x|\<\|\|\>>+<around*|\<\|\|\>|y<rsub|N>-y|\<\|\|\>>+<around*|\<\|\|\>|y|\<\|\|\>>>>|<row|<cell|>|<cell|\<less\>>|<cell|<frac|\<varepsilon\>|2>+<frac|\<varepsilon\>|2>+<around*|\<\|\|\>|y|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|\<varepsilon\>+<around*|\<\|\|\>|y|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|x|\<\|\|\>>>>>>
@@ -14891,7 +14934,7 @@
     it follows that <math|<below|lim|n\<rightarrow\>\<infty\>><around*|(|y<rsub|n>-x<rsub|n>|)>=<below|lim|n\<rightarrow\>\<infty\>>y<rsub|n>-<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>>.
     From [theorem: <reference|limit of sequence of non negatieve real numbers
     is positive>] we have that <math|0\<leqslant\><below|lim|n\<rightarrow\>\<infty\>><around*|(|y<rsub|n>-x<rsub|n>|)>>
-    so that <math|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>\<leqslant\><below|lim|n-\<less\>\<infty\>>x<rsub|n>>
+    so that <math|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>\<leqslant\><below|lim|n-\<less\>\<infty\>>x<rsub|n>>.
   </proof>
 
   There is a relation between convergence and continuity of a function.
@@ -14910,14 +14953,13 @@
 
   <\proof>
     \ As <math|f> is continuous at <math|x> we have for
-    <math|V\<in\>\<cal-T\><rsub|U>> with <math|f<around*|(|x|)>\<in\>V> that
+    <math|V\<in\>\<cal-T\><rsub|Y>> with <math|f<around*|(|x|)>\<in\>V> that
     there exist a <math|U\<in\>\<cal-T\><rsub|X>> such that <math|x\<in\>U>
     and <math|f<around*|(|x|)>\<in\>f<around*|(|U|)>\<subseteq\>V>. If
     <math|<around*|{|x<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,n|}>>\<subseteq\>X>
     satisfies <math|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>=x> then
     there exist a <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
-    <math|\<forall\>n\<in\>\<bbb-N\><rsub|0>> with <math|N\<leqslant\>n> we
-    have <math|x<rsub|n>\<in\>U>, hence as
+    <math|\<forall\>n\<geqslant\>N> we have <math|x<rsub|n>\<in\>U>, hence as
     <math|f<around*|(|U|)>\<subseteq\>V> we have
     <math|f<around*|(|x<rsub|n>|)>\<in\>V>. So we have\ 
 
@@ -14932,10 +14974,8 @@
   <\theorem>
     <label|limit and continuity in metric space>If
     <math|<around*|\<langle\>|X,d<rsub|x>|\<rangle\>>> and
-    <math|<around*|\<langle\>|Y,d<rsub|Y>|\<rangle\>>> are metric spaces [or
-    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
-    and <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    are normed spaces], <math|f:X\<rightarrow\>Y> a function then we have\ 
+    <math|<around*|\<langle\>|Y,d<rsub|Y>|\<rangle\>>> are metric spaces,
+    <math|f:X\<rightarrow\>Y> a function then we have\ 
 
     <\equation*>
       f<text| is continuous at >x<text| >\<Leftrightarrow\><text|
@@ -14943,15 +14983,19 @@
       with ><below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>=x<text| we have
       ><below|lim|n\<rightarrow\>\<infty\>>f<around*|(|x<rsub|n>|)>=f<around*|(|x|)>
     </equation*>
+
+    <\note>
+      As a normed space is a metric space the theorem is also applicable to
+      normed spaces.
+    </note>
   </theorem>
 
   <\proof>
     \ 
 
     <\description>
-      <item*|<math|\<Rightarrow\>>>This follows from ]theorem:
-      <reference|sequence convergence in metric space>] and the previous
-      theorem [theorem: <reference|limit and continuity>].
+      <item*|<math|\<Rightarrow\>>>This follows from the previous theorem
+      [theorem: <reference|limit and continuity>].
 
       <item*|<math|\<Leftarrow\>>>Assume that <math|f> is not continuous at
       <math|x> then by [theorem: <reference|continuity in a metric space>]
@@ -14966,7 +15010,7 @@
       property [see theorem: <reference|complex Archimedean property>] there
       exist a <math|N\<in\>\<bbb-N\>> such that
       <math|<frac|1|N>\<less\>\<zeta\>>, hence
-      <math|\<forall\>n\<in\>\<bbb-N\>> with <math|N\<leqslant\>n> we have\ 
+      <math|\<forall\>n\<geqslant\>N> we have\ 
 
       <\equation*>
         d<rsub|X><around*|(|x,x<rsub|n>|)>\<less\><frac|1|n>\<leqslant\><frac|1|N>\<less\>\<zeta\>
@@ -14988,8 +15032,8 @@
       <math|d<rsub|Y><around*|(|f<around*|(|x|)>,f<around*|(|x<rsub|M>|)>|)>\<less\>\<varepsilon\>>
       contradicting the fact that <math|\<forall\>n\<in\>\<bbb-N\>>
       <math|\<varepsilon\>\<leqslant\>d<rsub|Y><around*|(|f<around*|(|x|)>,f<around*|(|x<rsub|n>|)>|)>>.
-      Hence the assumption is wrong and we must have that <math|f> is
-      continuous at <math|x>.
+      So the assumption is wrong and we must have that <math|f> is continuous
+      at <math|x>.
     </description>
   </proof>
 
@@ -15010,17 +15054,24 @@
     converges to <math|x> we have by the previous theorem [theorem:
     <reference|limit and continuity in metric space>] that
     <math|<below|lim|n\<rightarrow\>\<infty\>><around*|\<\|\|\>||\<\|\|\>><around*|(|x<rsub|n>|)>>
-    converges and <math|<below|lim|n\<rightarrow\>\<infty\>><around*|\<\|\|\>||\<\|\|\>><around*|(|x<rsub|n>|)>=<around*|\<\|\|\>||\<\|\|\>><around*|(|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>|)>>
-    or <math|<below|lim|n\<rightarrow\>\<infty\>><around*|\<\|\|\>|x<rsub|n>|\<\|\|\>>>
-    converges and <math|<below|lim|n\<rightarrow\>\<infty\>><around*|\<\|\|\>|x<rsub|n>|\<\|\|\>>=<around*|\<\|\|\>|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>|\<\|\|\>>>,
+    converges to <math|<around*|\<\|\|\>||\<\|\|\>><around*|(|x|)>=<around*|\<\|\|\>|x|\<\|\|\>>>.
+    In other words we have \ <math|<below|lim|n\<rightarrow\>\<infty\>><around*|\<\|\|\>|x<rsub|n>|\<\|\|\>>=<around*|\<\|\|\>|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>|\<\|\|\>>>,
   </proof>
 
   <subsection|Sequences of real numbers>
 
   In this section we always assume that we work with the normed space
-  <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>>. For the real
-  numbers there is a nice relation between the supremum and infinum and
-  increasing or decreasing sequences.
+  <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>>. The basic
+  property that sets <math|\<bbb-R\>> apart from other normed spaces is the
+  fact that <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\>|\<rangle\>>> is
+  conditional complete.
+
+  \;
+
+  For the real numbers there is a nice relation between the supremum and
+  infinum and increasing or decreasing sequences.
+
+  TODO
 
   <\theorem>
     <label|limit increasing descending sequences>Let
@@ -20457,7 +20508,7 @@
     </eqnarray*>
   </proof>
 
-  <subsection|Properties of complete space.>
+  <subsection|Properties of complete spaces.>
 
   <\definition>
     <label|metric contraction>Let <math|<around*|\<langle\>|X,d|\<rangle\>>>
@@ -22186,19 +22237,19 @@
     <associate|auto-97|<tuple|complete space|?>>
     <associate|auto-98|<tuple|Banach space|?>>
     <associate|auto-99|<tuple|14.11.1|?>>
-    <associate|bounded B(X,Y) is a normed space|<tuple|14.329|?>>
-    <associate|bounded function|<tuple|14.327|?>>
-    <associate|bounded function B(X,Y) is a vector space|<tuple|14.328|?>>
-    <associate|bounded uniform convergence and continuity|<tuple|14.332|?>>
+    <associate|bounded B(X,Y) is a normed space|<tuple|14.332|?>>
+    <associate|bounded function|<tuple|14.330|?>>
+    <associate|bounded function B(X,Y) is a vector space|<tuple|14.331|?>>
+    <associate|bounded uniform convergence and continuity|<tuple|14.335|?>>
     <associate|bounded uniform convergence is convergence in supremum
-    nrom|<tuple|14.333|?>>
+    nrom|<tuple|14.336|?>>
     <associate|closed set properties|<tuple|14.21|?>>
     <associate|compact Hausdorff space is regular and
     compact|<tuple|14.231|?>>
     <associate|compact Heine Borel (1)|<tuple|14.227|?>>
-    <associate|compact Heine-Borel (1)|<tuple|14.266|?>>
-    <associate|compact Heine-Borel complex|<tuple|14.270|?>>
-    <associate|compact Heine-Borel general form|<tuple|14.271|?>>
+    <associate|compact Heine-Borel (1)|<tuple|14.267|?>>
+    <associate|compact Heine-Borel complex|<tuple|14.271|?>>
+    <associate|compact Heine-Borel general form|<tuple|14.272|?>>
     <associate|compact Tychonoff's|<tuple|14.263|?>>
     <associate|compact Tychonoff's (1)|<tuple|14.264|?>>
     <associate|compact and basis|<tuple|14.217|?>>
@@ -22217,9 +22268,9 @@
     <associate|compact finite union of compact sets|<tuple|14.220|?>>
     <associate|compact image of a cmpact set by a continuous
     function|<tuple|14.229|?>>
-    <associate|compact isometric isomorphism|<tuple|14.269|?>>
+    <associate|compact isometric isomorphism|<tuple|14.270|?>>
     <associate|compact limit point compact|<tuple|14.232|?>>
-    <associate|compact rectangles are compact|<tuple|14.265|?>>
+    <associate|compact rectangles are compact|<tuple|14.266|?>>
     <associate|compact set|<tuple|14.214|?>>
     <associate|compact set alternative definition|<tuple|14.216|?>>
     <associate|compact set is closed in a Hausdorff space|<tuple|14.225|?>>
@@ -22227,44 +22278,44 @@
     <associate|compact space|<tuple|14.213|?>>
     <associate|compact space is compact subset|<tuple|14.215|?>>
     <associate|compact subspace equivalences|<tuple|14.221|?>>
-    <associate|complete Baire Category|<tuple|14.384|?>>
-    <associate|complete Cauchy metric|<tuple|14.308|?>>
-    <associate|complete Cauchy normed|<tuple|14.309|?>>
-    <associate|complete Cauchy sequence is bounded (2)|<tuple|14.311|?>>
-    <associate|complete L(X,Y) is Banach|<tuple|14.324|?>>
-    <associate|complete L(X1,..,Xn;Y) is Banach|<tuple|14.325|?>>
-    <associate|complete L^n(X;Y) is Banach|<tuple|14.326|?>>
-    <associate|complete R^n is complete|<tuple|14.321|?>>
+    <associate|complete Baire Category|<tuple|14.387|?>>
+    <associate|complete Cauchy metric|<tuple|14.311|?>>
+    <associate|complete Cauchy normed|<tuple|14.312|?>>
+    <associate|complete Cauchy sequence is bounded (2)|<tuple|14.314|?>>
+    <associate|complete L(X,Y) is Banach|<tuple|14.327|?>>
+    <associate|complete L(X1,..,Xn;Y) is Banach|<tuple|14.328|?>>
+    <associate|complete L^n(X;Y) is Banach|<tuple|14.329|?>>
+    <associate|complete R^n is complete|<tuple|14.324|?>>
     <associate|complete bounded functions to a complete space are
-    complete|<tuple|14.334|?>>
+    complete|<tuple|14.337|?>>
     <associate|complete closed subset of a complete space is
-    complete|<tuple|14.319|?>>
-    <associate|complete compact spaces are complete|<tuple|14.318|?>>
+    complete|<tuple|14.322|?>>
+    <associate|complete compact spaces are complete|<tuple|14.321|?>>
     <associate|complete continuous linear isomorphism is a
-    homeomorphism|<tuple|14.388|?>>
-    <associate|complete convergence implies Cauchy|<tuple|14.312|?>>
+    homeomorphism|<tuple|14.391|?>>
+    <associate|complete convergence implies Cauchy|<tuple|14.315|?>>
     <associate|complete every finite dimensional normed space is a Banach
-    space|<tuple|14.322|?>>
+    space|<tuple|14.325|?>>
     <associate|complete limit point of a Cauchy sequence is unique in a
-    metric space|<tuple|14.317|?>>
-    <associate|complete open mapping theorem|<tuple|14.387|?>>
-    <associate|complete product of Banach spaces|<tuple|14.315|?>>
-    <associate|complete sequence and limit point|<tuple|14.316|?>>
-    <associate|complete set of real numbers|<tuple|14.320|?>>
-    <associate|complete space|<tuple|14.314|?>>
-    <associate|complete the complex numbers are complete|<tuple|14.323|?>>
-    <associate|complete uniform convergion|<tuple|14.330|?>>
-    <associate|connected alternative definition|<tuple|14.392|?>>
-    <associate|connected closed interval is connected|<tuple|14.395|?>>
-    <associate|connected disconnected space|<tuple|14.390|?>>
-    <associate|connected generalized intervals|<tuple|14.396|?>>
+    metric space|<tuple|14.320|?>>
+    <associate|complete open mapping theorem|<tuple|14.390|?>>
+    <associate|complete product of Banach spaces|<tuple|14.318|?>>
+    <associate|complete sequence and limit point|<tuple|14.319|?>>
+    <associate|complete set of real numbers|<tuple|14.323|?>>
+    <associate|complete space|<tuple|14.317|?>>
+    <associate|complete the complex numbers are complete|<tuple|14.326|?>>
+    <associate|complete uniform convergion|<tuple|14.333|?>>
+    <associate|connected alternative definition|<tuple|14.395|?>>
+    <associate|connected closed interval is connected|<tuple|14.398|?>>
+    <associate|connected disconnected space|<tuple|14.393|?>>
+    <associate|connected generalized intervals|<tuple|14.399|?>>
     <associate|connected image by a real continuous function of a closed
-    interval is a closed interval|<tuple|14.397|?>>
+    interval is a closed interval|<tuple|14.400|?>>
     <associate|connected image of a connected set by a continuous function is
-    connected|<tuple|14.394|?>>
-    <associate|connected intermediate value theorem|<tuple|14.398|?>>
-    <associate|connected set|<tuple|14.393|?>>
-    <associate|connected space|<tuple|14.389|?>>
+    connected|<tuple|14.397|?>>
+    <associate|connected intermediate value theorem|<tuple|14.401|?>>
+    <associate|connected set|<tuple|14.396|?>>
+    <associate|connected space|<tuple|14.392|?>>
     <associate|continuity K^n|<tuple|14.184|?>>
     <associate|continuity L(X,L(Y,Z)) is isometric with
     L(X,Y;Z)|<tuple|14.193|?>>
@@ -22384,152 +22435,154 @@
     <associate|eq 14.13.146|<tuple|14.17|?>>
     <associate|eq 14.130.153|<tuple|14.136|?>>
     <associate|eq 14.131.153|<tuple|14.137|?>>
-    <associate|eq 14.132.153|<tuple|14.138|?>>
-    <associate|eq 14.133.153|<tuple|14.139|?>>
-    <associate|eq 14.134.153|<tuple|14.140|?>>
-    <associate|eq 14.135.153|<tuple|14.141|?>>
-    <associate|eq 14.136.153|<tuple|14.142|?>>
-    <associate|eq 14.137.153|<tuple|14.143|?>>
-    <associate|eq 14.138.153|<tuple|14.144|?>>
-    <associate|eq 14.139.153|<tuple|14.145|?>>
+    <associate|eq 14.132.153|<tuple|14.139|?>>
+    <associate|eq 14.133.153|<tuple|14.140|?>>
+    <associate|eq 14.134.153|<tuple|14.141|?>>
+    <associate|eq 14.135.153|<tuple|14.142|?>>
+    <associate|eq 14.136.153|<tuple|14.143|?>>
+    <associate|eq 14.137.153|<tuple|14.144|?>>
+    <associate|eq 14.138.153|<tuple|14.145|?>>
+    <associate|eq 14.138.170|<tuple|14.138|?>>
+    <associate|eq 14.139.153|<tuple|14.146|?>>
     <associate|eq 14.14.146|<tuple|14.18|?>>
-    <associate|eq 14.140.153|<tuple|14.146|?>>
-    <associate|eq 14.141.153|<tuple|14.147|?>>
-    <associate|eq 14.142.153|<tuple|14.148|?>>
-    <associate|eq 14.143.153|<tuple|14.149|?>>
-    <associate|eq 14.144.153|<tuple|14.150|?>>
-    <associate|eq 14.145.153|<tuple|14.151|?>>
-    <associate|eq 14.146.153|<tuple|14.152|?>>
-    <associate|eq 14.147.153|<tuple|14.153|?>>
-    <associate|eq 14.148.153|<tuple|14.154|?>>
-    <associate|eq 14.149\<point\>153|<tuple|14.177|?>>
+    <associate|eq 14.140.153|<tuple|14.147|?>>
+    <associate|eq 14.141.153|<tuple|14.148|?>>
+    <associate|eq 14.142.153|<tuple|14.149|?>>
+    <associate|eq 14.143.153|<tuple|14.150|?>>
+    <associate|eq 14.144.153|<tuple|14.151|?>>
+    <associate|eq 14.145.153|<tuple|14.152|?>>
+    <associate|eq 14.146.153|<tuple|14.153|?>>
+    <associate|eq 14.147.153|<tuple|14.154|?>>
+    <associate|eq 14.148.153|<tuple|14.155|?>>
+    <associate|eq 14.149\<point\>153|<tuple|14.179|?>>
     <associate|eq 14.15.146|<tuple|14.19|?>>
-    <associate|eq 14.150.153|<tuple|14.178|?>>
-    <associate|eq 14.150.154|<tuple|14.165|?>>
-    <associate|eq 14.150.155|<tuple|14.160|?>>
-    <associate|eq 14.150.158|<tuple|14.155|?>>
-    <associate|eq 14.151.153|<tuple|14.179|?>>
-    <associate|eq 14.151.154|<tuple|14.168|?>>
-    <associate|eq 14.151.155|<tuple|14.166|?>>
-    <associate|eq 14.151.156|<tuple|14.161|?>>
-    <associate|eq 14.151.158|<tuple|14.156|?>>
-    <associate|eq 14.152.153|<tuple|14.180|?>>
-    <associate|eq 14.152.155|<tuple|14.167|?>>
-    <associate|eq 14.152.156|<tuple|14.162|?>>
-    <associate|eq 14.152.158|<tuple|14.157|?>>
-    <associate|eq 14.153.155|<tuple|14.163|?>>
-    <associate|eq 14.153.158|<tuple|14.158|?>>
-    <associate|eq 14.154.155|<tuple|14.169|?>>
-    <associate|eq 14.154.156|<tuple|14.164|?>>
-    <associate|eq 14.154.158|<tuple|14.159|?>>
-    <associate|eq 14.155.155|<tuple|14.170|?>>
-    <associate|eq 14.156.155|<tuple|14.171|?>>
-    <associate|eq 14.157.155|<tuple|14.172|?>>
-    <associate|eq 14.158.155|<tuple|14.173|?>>
-    <associate|eq 14.159.155|<tuple|14.174|?>>
+    <associate|eq 14.150.153|<tuple|14.180|?>>
+    <associate|eq 14.150.154|<tuple|14.167|?>>
+    <associate|eq 14.150.155|<tuple|14.162|?>>
+    <associate|eq 14.150.158|<tuple|14.157|?>>
+    <associate|eq 14.151.153|<tuple|14.181|?>>
+    <associate|eq 14.151.154|<tuple|14.170|?>>
+    <associate|eq 14.151.155|<tuple|14.168|?>>
+    <associate|eq 14.151.156|<tuple|14.163|?>>
+    <associate|eq 14.151.158|<tuple|14.158|?>>
+    <associate|eq 14.152.153|<tuple|14.182|?>>
+    <associate|eq 14.152.155|<tuple|14.169|?>>
+    <associate|eq 14.152.156|<tuple|14.164|?>>
+    <associate|eq 14.152.158|<tuple|14.159|?>>
+    <associate|eq 14.153.155|<tuple|14.165|?>>
+    <associate|eq 14.153.158|<tuple|14.160|?>>
+    <associate|eq 14.154.155|<tuple|14.171|?>>
+    <associate|eq 14.154.156|<tuple|14.166|?>>
+    <associate|eq 14.154.158|<tuple|14.161|?>>
+    <associate|eq 14.155.155|<tuple|14.172|?>>
+    <associate|eq 14.156.155|<tuple|14.173|?>>
+    <associate|eq 14.156.170|<tuple|14.156|?>>
+    <associate|eq 14.157.155|<tuple|14.174|?>>
+    <associate|eq 14.158.155|<tuple|14.175|?>>
+    <associate|eq 14.159.155|<tuple|14.176|?>>
     <associate|eq 14.16.146|<tuple|14.20|?>>
-    <associate|eq 14.160.155|<tuple|14.175|?>>
-    <associate|eq 14.161.155|<tuple|14.176|?>>
+    <associate|eq 14.160.155|<tuple|14.177|?>>
+    <associate|eq 14.161.155|<tuple|14.178|?>>
     <associate|eq 14.17.146|<tuple|14.21|?>>
-    <associate|eq 14.171.156|<tuple|14.181|?>>
-    <associate|eq 14.172.156|<tuple|14.182|?>>
-    <associate|eq 14.173.156|<tuple|14.183|?>>
-    <associate|eq 14.174.156|<tuple|14.184|?>>
-    <associate|eq 14.175.156|<tuple|14.185|?>>
-    <associate|eq 14.176.156|<tuple|14.186|?>>
-    <associate|eq 14.177.156|<tuple|14.187|?>>
-    <associate|eq 14.178.156|<tuple|14.188|?>>
-    <associate|eq 14.179.156|<tuple|14.189|?>>
+    <associate|eq 14.171.156|<tuple|14.183|?>>
+    <associate|eq 14.172.156|<tuple|14.184|?>>
+    <associate|eq 14.173.156|<tuple|14.185|?>>
+    <associate|eq 14.174.156|<tuple|14.186|?>>
+    <associate|eq 14.175.156|<tuple|14.187|?>>
+    <associate|eq 14.176.156|<tuple|14.188|?>>
+    <associate|eq 14.177.156|<tuple|14.189|?>>
+    <associate|eq 14.178.156|<tuple|14.190|?>>
+    <associate|eq 14.179.156|<tuple|14.191|?>>
     <associate|eq 14.18.146|<tuple|14.22|?>>
-    <associate|eq 14.180.156|<tuple|14.190|?>>
-    <associate|eq 14.181.156|<tuple|14.191|?>>
-    <associate|eq 14.182.156|<tuple|14.192|?>>
-    <associate|eq 14.183.156|<tuple|14.193|?>>
-    <associate|eq 14.184.156|<tuple|14.194|?>>
-    <associate|eq 14.185.156|<tuple|14.195|?>>
-    <associate|eq 14.186.156|<tuple|14.196|?>>
-    <associate|eq 14.187.156|<tuple|14.197|?>>
-    <associate|eq 14.188.156|<tuple|14.198|?>>
-    <associate|eq 14.189.156|<tuple|14.199|?>>
+    <associate|eq 14.180.156|<tuple|14.192|?>>
+    <associate|eq 14.181.156|<tuple|14.193|?>>
+    <associate|eq 14.182.156|<tuple|14.194|?>>
+    <associate|eq 14.183.156|<tuple|14.195|?>>
+    <associate|eq 14.184.156|<tuple|14.196|?>>
+    <associate|eq 14.185.156|<tuple|14.197|?>>
+    <associate|eq 14.186.156|<tuple|14.198|?>>
+    <associate|eq 14.187.156|<tuple|14.199|?>>
+    <associate|eq 14.188.156|<tuple|14.200|?>>
+    <associate|eq 14.189.156|<tuple|14.201|?>>
     <associate|eq 14.19.146|<tuple|14.23|?>>
-    <associate|eq 14.190.156|<tuple|14.200|?>>
-    <associate|eq 14.191.156|<tuple|14.201|?>>
-    <associate|eq 14.192.156|<tuple|14.202|?>>
-    <associate|eq 14.193.156|<tuple|14.203|?>>
-    <associate|eq 14.199.156|<tuple|14.205|?>>
-    <associate|eq 14.199.157|<tuple|14.204|?>>
+    <associate|eq 14.190.156|<tuple|14.202|?>>
+    <associate|eq 14.191.156|<tuple|14.203|?>>
+    <associate|eq 14.192.156|<tuple|14.204|?>>
+    <associate|eq 14.193.156|<tuple|14.205|?>>
+    <associate|eq 14.199.156|<tuple|14.207|?>>
+    <associate|eq 14.199.157|<tuple|14.206|?>>
     <associate|eq 14.2.145|<tuple|14.4|?>>
     <associate|eq 14.20.146|<tuple|14.24|?>>
-    <associate|eq 14.200.156|<tuple|14.206|?>>
-    <associate|eq 14.201.156|<tuple|14.207|?>>
-    <associate|eq 14.203.158|<tuple|14.208|?>>
-    <associate|eq 14.204.158|<tuple|14.209|?>>
-    <associate|eq 14.205.158|<tuple|14.210|?>>
-    <associate|eq 14.206.158|<tuple|14.211|?>>
-    <associate|eq 14.207.158|<tuple|14.212|?>>
-    <associate|eq 14.208.158|<tuple|14.213|?>>
-    <associate|eq 14.209.528|<tuple|14.214|?>>
+    <associate|eq 14.200.156|<tuple|14.208|?>>
+    <associate|eq 14.201.156|<tuple|14.209|?>>
+    <associate|eq 14.203.158|<tuple|14.210|?>>
+    <associate|eq 14.204.158|<tuple|14.211|?>>
+    <associate|eq 14.205.158|<tuple|14.212|?>>
+    <associate|eq 14.206.158|<tuple|14.213|?>>
+    <associate|eq 14.207.158|<tuple|14.214|?>>
+    <associate|eq 14.208.158|<tuple|14.215|?>>
+    <associate|eq 14.209.528|<tuple|14.216|?>>
     <associate|eq 14.21.146|<tuple|14.25|?>>
-    <associate|eq 14.210.158|<tuple|14.215|?>>
-    <associate|eq 14.211.159|<tuple|14.216|?>>
-    <associate|eq 14.212.159|<tuple|14.217|?>>
-    <associate|eq 14.213.159|<tuple|14.218|?>>
-    <associate|eq 14.214.159|<tuple|14.219|?>>
-    <associate|eq 14.215.159|<tuple|14.220|?>>
-    <associate|eq 14.216.159|<tuple|14.221|?>>
-    <associate|eq 14.217.159|<tuple|14.222|?>>
-    <associate|eq 14.218.159|<tuple|14.223|?>>
-    <associate|eq 14.219.160|<tuple|14.225|?>>
-    <associate|eq 14.219.161|<tuple|14.224|?>>
+    <associate|eq 14.210.158|<tuple|14.217|?>>
+    <associate|eq 14.211.159|<tuple|14.218|?>>
+    <associate|eq 14.212.159|<tuple|14.219|?>>
+    <associate|eq 14.213.159|<tuple|14.220|?>>
+    <associate|eq 14.214.159|<tuple|14.221|?>>
+    <associate|eq 14.215.159|<tuple|14.222|?>>
+    <associate|eq 14.216.159|<tuple|14.223|?>>
+    <associate|eq 14.217.159|<tuple|14.224|?>>
+    <associate|eq 14.218.159|<tuple|14.225|?>>
+    <associate|eq 14.219.160|<tuple|14.227|?>>
+    <associate|eq 14.219.161|<tuple|14.226|?>>
     <associate|eq 14.22.146|<tuple|14.26|?>>
-    <associate|eq 14.220.159|<tuple|14.226|?>>
-    <associate|eq 14.221.519|<tuple|14.227|?>>
-    <associate|eq 14.222.159|<tuple|14.229|?>>
-    <associate|eq 14.223.159.1|<tuple|14.228|?>>
-    <associate|eq 14.225.161|<tuple|14.230|?>>
-    <associate|eq 14.226.161|<tuple|14.231|?>>
-    <associate|eq 14.227\<point\>161|<tuple|14.232|?>>
-    <associate|eq 14.228.161|<tuple|14.233|?>>
-    <associate|eq 14.229.161|<tuple|14.234|?>>
+    <associate|eq 14.220.159|<tuple|14.228|?>>
+    <associate|eq 14.221.519|<tuple|14.229|?>>
+    <associate|eq 14.222.159|<tuple|14.231|?>>
+    <associate|eq 14.223.159.1|<tuple|14.230|?>>
+    <associate|eq 14.225.161|<tuple|14.232|?>>
+    <associate|eq 14.226.161|<tuple|14.233|?>>
+    <associate|eq 14.227\<point\>161|<tuple|14.234|?>>
+    <associate|eq 14.228.161|<tuple|14.235|?>>
+    <associate|eq 14.229.161|<tuple|14.236|?>>
     <associate|eq 14.23.146|<tuple|14.27|?>>
-    <associate|eq 14.230.161|<tuple|14.235|?>>
-    <associate|eq 14.234.164|<tuple|14.236|?>>
-    <associate|eq 14.235.164|<tuple|14.237|?>>
-    <associate|eq 14.236.164|<tuple|14.238|?>>
-    <associate|eq 14.237.164|<tuple|14.239|?>>
-    <associate|eq 14.238.164|<tuple|14.240|?>>
-    <associate|eq 14.239.164|<tuple|14.242|?>>
-    <associate|eq 14.239.165|<tuple|14.241|?>>
+    <associate|eq 14.230.161|<tuple|14.237|?>>
+    <associate|eq 14.234.164|<tuple|14.238|?>>
+    <associate|eq 14.235.164|<tuple|14.239|?>>
+    <associate|eq 14.236.164|<tuple|14.240|?>>
+    <associate|eq 14.237.164|<tuple|14.241|?>>
+    <associate|eq 14.238.164|<tuple|14.242|?>>
+    <associate|eq 14.239.164|<tuple|14.244|?>>
+    <associate|eq 14.239.165|<tuple|14.243|?>>
     <associate|eq 14.24.146|<tuple|14.28|?>>
-    <associate|eq 14.240.164|<tuple|14.244|?>>
-    <associate|eq 14.243.166|<tuple|14.245|?>>
-    <associate|eq 14.244.166|<tuple|14.246|?>>
-    <associate|eq 14.245.166|<tuple|14.247|?>>
-    <associate|eq 14.246.166|<tuple|14.248|?>>
-    <associate|eq 14.247.166|<tuple|14.249|?>>
-    <associate|eq 14.248.166|<tuple|14.250|?>>
-    <associate|eq 14.249.166|<tuple|14.251|?>>
+    <associate|eq 14.240.164|<tuple|14.246|?>>
+    <associate|eq 14.243.166|<tuple|14.247|?>>
+    <associate|eq 14.244.166|<tuple|14.248|?>>
+    <associate|eq 14.245.166|<tuple|14.249|?>>
+    <associate|eq 14.246.166|<tuple|14.250|?>>
+    <associate|eq 14.247.166|<tuple|14.251|?>>
+    <associate|eq 14.248.166|<tuple|14.252|?>>
+    <associate|eq 14.249.166|<tuple|14.253|?>>
     <associate|eq 14.25.146|<tuple|14.29|?>>
-    <associate|eq 14.250.166|<tuple|14.252|?>>
-    <associate|eq 14.251.166|<tuple|14.253|?>>
-    <associate|eq 14.252.166|<tuple|14.254|?>>
-    <associate|eq 14.253.166|<tuple|14.255|?>>
-    <associate|eq 14.254.166|<tuple|14.256|?>>
-    <associate|eq 14.255.166|<tuple|14.257|?>>
-    <associate|eq 14.256.166|<tuple|14.258|?>>
-    <associate|eq 14.257.166|<tuple|14.259|?>>
-    <associate|eq 14.259.167|<tuple|14.260|?>>
+    <associate|eq 14.250.166|<tuple|14.254|?>>
+    <associate|eq 14.251.166|<tuple|14.255|?>>
+    <associate|eq 14.252.166|<tuple|14.256|?>>
+    <associate|eq 14.253.166|<tuple|14.257|?>>
+    <associate|eq 14.254.166|<tuple|14.258|?>>
+    <associate|eq 14.255.166|<tuple|14.259|?>>
+    <associate|eq 14.256.166|<tuple|14.260|?>>
+    <associate|eq 14.257.166|<tuple|14.261|?>>
+    <associate|eq 14.259.167|<tuple|14.262|?>>
     <associate|eq 14.26.146|<tuple|14.30|?>>
-    <associate|eq 14.260.167|<tuple|14.261|?>>
-    <associate|eq 14.261.167|<tuple|14.262|?>>
-    <associate|eq 14.262.167|<tuple|14.263|?>>
-    <associate|eq 14.263.167|<tuple|14.264|?>>
-    <associate|eq 14.264.167|<tuple|14.265|?>>
-    <associate|eq 14.265.167|<tuple|14.266|?>>
-    <associate|eq 14.266.167|<tuple|14.267|?>>
-    <associate|eq 14.267.167|<tuple|14.268|?>>
-    <associate|eq 14.268.167|<tuple|14.269|?>>
-    <associate|eq 14.269.167|<tuple|14.270|?>>
+    <associate|eq 14.260.167|<tuple|14.263|?>>
+    <associate|eq 14.261.167|<tuple|14.264|?>>
+    <associate|eq 14.262.167|<tuple|14.265|?>>
+    <associate|eq 14.263.167|<tuple|14.266|?>>
+    <associate|eq 14.264.167|<tuple|14.267|?>>
+    <associate|eq 14.265.167|<tuple|14.268|?>>
+    <associate|eq 14.266.167|<tuple|14.269|?>>
+    <associate|eq 14.267.167|<tuple|14.270|?>>
+    <associate|eq 14.268.167|<tuple|14.271|?>>
+    <associate|eq 14.269.167|<tuple|14.272|?>>
     <associate|eq 14.27.146|<tuple|14.31|?>>
     <associate|eq 14.28.147|<tuple|14.32|?>>
     <associate|eq 14.29.146|<tuple|14.34|?>>
@@ -22641,45 +22694,45 @@
     <associate|filter base subordinate|<tuple|14.247|?>>
     <associate|filter base trivial|<tuple|14.238|?>>
     <associate|filter base union and intersection|<tuple|14.241|?>>
-    <associate|lemma 14.342.156|<tuple|14.357|?>>
-    <associate|lemma 14.344.156|<tuple|14.358|?>>
-    <associate|lemma 14.345.156|<tuple|14.359|?>>
-    <associate|lemma 14.356.158|<tuple|14.367|?>>
-    <associate|lemma 14.360.158|<tuple|14.373|?>>
-    <associate|lemma 14.364.159|<tuple|14.377|?>>
-    <associate|lemma 14.376|<tuple|14.383|?>>
-    <associate|lemma 14.381.166|<tuple|14.385|?>>
-    <associate|lemma 14.382.166|<tuple|14.386|?>>
-    <associate|lemma 14.387.166|<tuple|14.391|?>>
-    <associate|limit (a+n)/(b+n)|<tuple|14.286|?>>
-    <associate|limit 1/(a+i)|<tuple|14.285|?>>
-    <associate|limit a.x_n|<tuple|14.289|?>>
-    <associate|limit and continuity|<tuple|14.298|?>>
-    <associate|limit and continuity in metric space|<tuple|14.299|?>>
-    <associate|limit and equivalent norms|<tuple|14.310|?>>
-    <associate|limit and lower or upper bound|<tuple|14.292|?>>
-    <associate|limit b^n|<tuple|14.284|?>>
-    <associate|limit complex conjugate|<tuple|14.291|?>>
-    <associate|limit complex numbers condition|<tuple|14.290|?>>
-    <associate|limit constant sequence|<tuple|14.283|?>>
-    <associate|limit convergence implies bounded|<tuple|14.293|?>>
-    <associate|limit increasing decreasing (1)|<tuple|14.302|?>>
-    <associate|limit increasing descending sequences|<tuple|14.301|?>>
+    <associate|lemma 14.342.156|<tuple|14.360|?>>
+    <associate|lemma 14.344.156|<tuple|14.361|?>>
+    <associate|lemma 14.345.156|<tuple|14.362|?>>
+    <associate|lemma 14.356.158|<tuple|14.370|?>>
+    <associate|lemma 14.360.158|<tuple|14.376|?>>
+    <associate|lemma 14.364.159|<tuple|14.380|?>>
+    <associate|lemma 14.376|<tuple|14.386|?>>
+    <associate|lemma 14.381.166|<tuple|14.388|?>>
+    <associate|lemma 14.382.166|<tuple|14.389|?>>
+    <associate|lemma 14.387.166|<tuple|14.394|?>>
+    <associate|limit (a+n)/(b+n)|<tuple|14.288|?>>
+    <associate|limit 1/(a+i)|<tuple|14.287|?>>
+    <associate|limit a.x_n|<tuple|14.291|?>>
+    <associate|limit and continuity|<tuple|14.300|?>>
+    <associate|limit and continuity in metric space|<tuple|14.301|?>>
+    <associate|limit and equivalent norms|<tuple|14.313|?>>
+    <associate|limit and lower or upper bound|<tuple|14.294|?>>
+    <associate|limit b^n|<tuple|14.286|?>>
+    <associate|limit complex conjugate|<tuple|14.293|?>>
+    <associate|limit complex numbers condition|<tuple|14.292|?>>
+    <associate|limit constant sequence|<tuple|14.285|?>>
+    <associate|limit convergence implies bounded|<tuple|14.295|?>>
+    <associate|limit increasing decreasing (1)|<tuple|14.305|?>>
+    <associate|limit increasing descending sequences|<tuple|14.304|?>>
     <associate|limit limit of sequence limited by another
-    sequence|<tuple|14.295|?>>
-    <associate|limit limsup liminf|<tuple|14.303|?>>
-    <associate|limit limsup liminf (equivalent definition)|<tuple|14.305|?>>
-    <associate|limit limsup liminf and limit|<tuple|14.306|?>>
-    <associate|limit limsup liminf inequality|<tuple|14.304|?>>
-    <associate|limit limsup liminf properties|<tuple|14.307|?>>
-    <associate|limit of norm is norm of limit|<tuple|14.300|?>>
+    sequence|<tuple|14.297|?>>
+    <associate|limit limsup liminf|<tuple|14.306|?>>
+    <associate|limit limsup liminf (equivalent definition)|<tuple|14.308|?>>
+    <associate|limit limsup liminf and limit|<tuple|14.309|?>>
+    <associate|limit limsup liminf inequality|<tuple|14.307|?>>
+    <associate|limit limsup liminf properties|<tuple|14.310|?>>
+    <associate|limit of norm is norm of limit|<tuple|14.303|?>>
     <associate|limit of sequence of non negatieve real numbers is
-    positive|<tuple|14.296|?>>
+    positive|<tuple|14.298|?>>
     <associate|limit sequence limited by a convergent real
-    sequence|<tuple|14.294|?>>
-    <associate|limit x_n+a|<tuple|14.287|?>>
-    <associate|limit x_n+y_n|<tuple|14.288|?>>
-    <associate|metric Banach fixed point theorem|<tuple|14.382|?>>
+    sequence|<tuple|14.296|?>>
+    <associate|limit x_n+a|<tuple|14.289|?>>
+    <associate|limit x_n+y_n|<tuple|14.290|?>>
+    <associate|metric Banach fixed point theorem|<tuple|14.385|?>>
     <associate|metric ball image preimage|<tuple|14.73|?>>
     <associate|metric bounded set|<tuple|14.75|?>>
     <associate|metric bounded set inclusion|<tuple|14.77|?>>
@@ -22687,8 +22740,8 @@
     <associate|metric closed balls are closed|<tuple|14.65|?>>
     <associate|metric closed open balls are bounded|<tuple|14.78|?>>
     <associate|metric composition of isometries|<tuple|14.72|?>>
-    <associate|metric contraction|<tuple|14.380|?>>
-    <associate|metric contractions are continuous|<tuple|14.381|?>>
+    <associate|metric contraction|<tuple|14.383|?>>
+    <associate|metric contractions are continuous|<tuple|14.384|?>>
     <associate|metric dense set|<tuple|14.81|?>>
     <associate|metric empty set is bounded|<tuple|14.76|?>>
     <associate|metric equivalent metrics|<tuple|14.67|?>>
@@ -22722,7 +22775,7 @@
     <associate|normed dense set|<tuple|14.108|?>>
     <associate|normed distinct function|<tuple|14.154|?>>
     <associate|normed equivalent norms|<tuple|14.110|?>>
-    <associate|normed equivalent norms in R^n|<tuple|14.267|?>>
+    <associate|normed equivalent norms in R^n|<tuple|14.268|?>>
     <associate|normed finer topologies|<tuple|14.109|?>>
     <associate|normed generalized intervals that are open|<tuple|14.99|?>>
     <associate|normed isometry|<tuple|14.119|?>>
@@ -22732,14 +22785,14 @@
     <associate|normed isometry is injective|<tuple|14.116|?>>
     <associate|normed linear isometry|<tuple|14.115|?>>
     <associate|normed linear mappings between finite dimensional spaces are
-    continuous|<tuple|14.272|?>>
+    continuous|<tuple|14.273|?>>
     <associate|normed maximum norm|<tuple|14.94|?>>
     <associate|normed norm|<tuple|14.85|?>>
     <associate|normed norm equivalence|<tuple|14.111|?>>
     <associate|normed norm equivalence condition|<tuple|14.112|?>>
     <associate|normed norm of zero|<tuple|14.84|?>>
     <associate|normed norm on finite dimensional spaces are
-    equivalent|<tuple|14.268|?>>
+    equivalent|<tuple|14.269|?>>
     <associate|normed open generalized intervals|<tuple|14.100|?>>
     <associate|normed open set as union of intervals|<tuple|14.101|?>>
     <associate|normed pseudo norm|<tuple|14.83|?>>
@@ -22772,63 +22825,63 @@
     countability|<tuple|14.212|?>>
     <associate|separation second countable topological
     space|<tuple|14.211|?>>
-    <associate|sequence|<tuple|14.273|?>>
-    <associate|sequence convergence|<tuple|14.277|?>>
-    <associate|sequence convergence in metric space|<tuple|14.281|?>>
-    <associate|sequence increasing decreasing|<tuple|14.274|?>>
-    <associate|sequence increasing decreasing consequence|<tuple|14.275|?>>
-    <associate|sequence increasing decreasing sets|<tuple|14.276|?>>
-    <associate|sequence limit|<tuple|14.279|?>>
-    <associate|sequence limit definition|<tuple|14.280|?>>
-    <associate|sequence limit start value|<tuple|14.278|?>>
-    <associate|serie sum and scalar product|<tuple|14.344|?>>
-    <associate|series|<tuple|14.335|?>>
-    <associate|series absolute convergence|<tuple|14.361|?>>
+    <associate|sequence|<tuple|14.275|?>>
+    <associate|sequence convergence|<tuple|14.279|?>>
+    <associate|sequence convergence in metric space|<tuple|14.283|?>>
+    <associate|sequence increasing decreasing|<tuple|14.276|?>>
+    <associate|sequence increasing decreasing consequence|<tuple|14.277|?>>
+    <associate|sequence increasing decreasing sets|<tuple|14.278|?>>
+    <associate|sequence limit|<tuple|14.281|?>>
+    <associate|sequence limit definition|<tuple|14.282|?>>
+    <associate|sequence limit start value|<tuple|14.280|?>>
+    <associate|serie sum and scalar product|<tuple|14.347|?>>
+    <associate|series|<tuple|14.338|?>>
+    <associate|series absolute convergence|<tuple|14.364|?>>
     <associate|series absolute convergence alternative
-    definition|<tuple|14.374|?>>
-    <associate|series absolute convergence commutativity|<tuple|14.368|?>>
+    definition|<tuple|14.377|?>>
+    <associate|series absolute convergence commutativity|<tuple|14.371|?>>
     <associate|series absolute convergence commutativity countable
-    sums|<tuple|14.371|?>>
-    <associate|series absolute convergence countable family|<tuple|14.370|?>>
+    sums|<tuple|14.374|?>>
+    <associate|series absolute convergence countable family|<tuple|14.373|?>>
     <associate|series absolute convergence dominant
-    convergence|<tuple|14.376|?>>
+    convergence|<tuple|14.379|?>>
     <associate|series absolute convergence equals convergence only in Banach
-    space|<tuple|14.365|?>>
-    <associate|series absolute convergence equivalences|<tuple|14.366|?>>
+    space|<tuple|14.368|?>>
+    <associate|series absolute convergence equivalences|<tuple|14.369|?>>
     <associate|series absolute convergence implies
-    convergence|<tuple|14.363|?>>
+    convergence|<tuple|14.366|?>>
     <associate|series absolute convergence of countable families
-    condition|<tuple|14.375|?>>
+    condition|<tuple|14.378|?>>
     <associate|series absolute convergence sum and scalar
-    product|<tuple|14.372|?>>
+    product|<tuple|14.375|?>>
     <associate|series absolute convergent countable
-    associativity|<tuple|14.378|?>>
-    <associate|series absolute dominant convergence|<tuple|14.362|?>>
-    <associate|series absolute sum over a countable set|<tuple|14.369|?>>
+    associativity|<tuple|14.381|?>>
+    <associate|series absolute dominant convergence|<tuple|14.365|?>>
+    <associate|series absolute sum over a countable set|<tuple|14.372|?>>
     <associate|series convergence condition in a Banach
-    space|<tuple|14.340|?>>
-    <associate|series converging of upper series|<tuple|14.343|?>>
-    <associate|series distributivity|<tuple|14.379|?>>
-    <associate|series dominant convergence|<tuple|14.364|?>>
-    <associate|series non negative numbers associativity|<tuple|14.360|?>>
-    <associate|series non negative numbers commutativity|<tuple|14.348|?>>
+    space|<tuple|14.343|?>>
+    <associate|series converging of upper series|<tuple|14.346|?>>
+    <associate|series distributivity|<tuple|14.382|?>>
+    <associate|series dominant convergence|<tuple|14.367|?>>
+    <associate|series non negative numbers associativity|<tuple|14.363|?>>
+    <associate|series non negative numbers commutativity|<tuple|14.351|?>>
     <associate|series non negative numbers countable sum equivalent
-    definition|<tuple|14.355|?>>
-    <associate|series non negative numbers countable sums|<tuple|14.351|?>>
+    definition|<tuple|14.358|?>>
+    <associate|series non negative numbers countable sums|<tuple|14.354|?>>
     <associate|series non negative numbers countable sums
-    inclusion|<tuple|14.354|?>>
-    <associate|series non negative numbers denumerable sum|<tuple|14.349|?>>
-    <associate|series non negative numbers equivalences|<tuple|14.346|?>>
+    inclusion|<tuple|14.357|?>>
+    <associate|series non negative numbers denumerable sum|<tuple|14.352|?>>
+    <associate|series non negative numbers equivalences|<tuple|14.349|?>>
     <associate|series non negative numbers strict positive
-    term|<tuple|14.347|?>>
-    <associate|series of all zeroes|<tuple|14.356|?>>
-    <associate|series of complex numbers|<tuple|14.345|?>>
-    <associate|series partition series|<tuple|14.342|?>>
-    <associate|series power series in R|<tuple|14.338|?>>
-    <associate|series terms converges to zero|<tuple|14.339|?>>
-    <associate|series translation start|<tuple|14.341|?>>
-    <associate|sum of a countable set|<tuple|14.350|?>>
-    <associate|sum of powers lemma|<tuple|14.337|?>>
+    term|<tuple|14.350|?>>
+    <associate|series of all zeroes|<tuple|14.359|?>>
+    <associate|series of complex numbers|<tuple|14.348|?>>
+    <associate|series partition series|<tuple|14.345|?>>
+    <associate|series power series in R|<tuple|14.341|?>>
+    <associate|series terms converges to zero|<tuple|14.342|?>>
+    <associate|series translation start|<tuple|14.344|?>>
+    <associate|sum of a countable set|<tuple|14.353|?>>
+    <associate|sum of powers lemma|<tuple|14.340|?>>
     <associate|toplinear isomorphism|<tuple|14.182|?>>
     <associate|topology Baire space|<tuple|14.53|?>>
     <associate|topology Baire space alternative definition|<tuple|14.55|?>>
@@ -22881,7 +22934,7 @@
     <associate|topology subspace topology|<tuple|14.8|?>>
     <associate|topology subspace topology open subset|<tuple|14.11|?>>
     <associate|topology subsubspace topology|<tuple|14.10|?>>
-    <associate|xn\<less\>yn=\<gtr\>limxn\<less\>limyn|<tuple|14.297|?>>
+    <associate|xn\<less\>yn=\<gtr\>limxn\<less\>limyn|<tuple|14.299|?>>
   </collection>
 </references>
 
@@ -23171,7 +23224,7 @@
       <no-break><pageref|auto-105>>
 
       <with|par-left|<quote|1tab>|14.11.4<space|2spc>Properties of complete
-      space. <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      spaces. <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-109>>
 
       14.12<space|2spc>Connected Sets <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
