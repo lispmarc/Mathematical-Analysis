@@ -15205,7 +15205,7 @@
       <math|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>\<leqslant\>M>.
 
       <item>If <math|<around*|{|x<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
-      is increasing and there exist a <math|M\<in\>\<bbb-R\>> and a
+      is decreasing and there exist a <math|M\<in\>\<bbb-R\>> and a
       <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
       <math|\<forall\>n\<geqslant\>N> <math|M\<leqslant\>x<rsub|n>> then
       <math|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>> exist and
@@ -15222,7 +15222,12 @@
       it follows from the conditional completeness of <math|\<bbb-R\>> [see
       theorem: <reference|complex RC is conditional complete>] that
       <math|sup<around*|(|<around*|{|x<rsub|n>\<in\><around*|{|N,\<ldots\>,\<infty\>|}>|}>|)>>
-      exist and <math|sup<around*|(|<around*|{|x<rsub|n>\|n\<in\><around*|{|N,\<ldots\>,\<infty\>|}>|}>|)>\<leqslant\>M>.
+      exist and
+
+      <\equation*>
+        sup<around*|(|<around*|{|x<rsub|n>\|n\<in\><around*|{|N,\<ldots\>,\<infty\>|}>|}>|)>\<leqslant\>M.
+      </equation*>
+
       Hence by [theorem: <reference|limit increasing descending sequences>]
       <math|<around*|{|x<rsub|n>|}><rsub|n\<in\><around*|{|N,\<ldots\>,\<infty\>|}>>>
       converges to <math|sup<around*|(|<around*|{|x<rsub|n>\<in\><around*|{|N,\<ldots\>,\<infty\>|}>|}>|)>>.
@@ -15241,7 +15246,12 @@
       it follows from the conditional completeness of <math|\<bbb-R\>> [see
       theorem: <reference|complex RC is conditional complete>] that
       <math|inf<around*|(|<around*|{|x<rsub|n>\<in\><around*|{|N,\<ldots\>,\<infty\>|}>|}>|)>>
-      exist and <math|M\<leqslant\>inf<around*|(|<around*|{|x<rsub|n>\|n\<in\><around*|{|N,\<ldots\>,\<infty\>|}>|}>|)>\<leqslant\>M>.
+      exist and
+
+      <\equation*>
+        M\<leqslant\>inf<around*|(|<around*|{|x<rsub|n>\|n\<in\><around*|{|N,\<ldots\>,\<infty\>|}>|}>|)>.
+      </equation*>
+
       Hence by [theorem: <reference|limit increasing descending sequences>]
       <math|<around*|{|x<rsub|n>|}><rsub|n\<in\><around*|{|N,\<ldots\>,\<infty\>|}>>>
       converges to <math|inf<around*|(|<around*|{|x<rsub|n>\<in\><around*|{|N,\<ldots\>,\<infty\>|}>|}>|)>>.
@@ -15256,6 +15266,8 @@
       </equation*>
     </enumerate>
   </proof>
+
+  We introduce now a extension of the concept of a limit.
 
   <\definition>
     <label|limit limsup liminf><index|<math|<below|lim
@@ -15416,8 +15428,8 @@
       <item> Assume that <math|\<forall\>n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
       <math|sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>>
       exist. Then <math|\<forall\>n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
-      we have as <math|<around*|{|x<rsub|i>\|i\<in\><around*|{|n+1,\<ldots\>,\<infty\>|}>|}>\<subseteq\><around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>>
-      then by [theorem: <reference|order sup,inf and inclusion>]
+      we have <math|<around*|{|x<rsub|i>\|i\<in\><around*|{|n+1,\<ldots\>,\<infty\>|}>|}>\<subseteq\><around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>>
+      so that by [theorem: <reference|order sup,inf and inclusion>]
 
       <\equation*>
         sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n+1,\<ldots\>,\<infty\>|}>|}>|)>\<leqslant\>sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>
@@ -15431,8 +15443,8 @@
       <item>Assume that <math|\<forall\>n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
       <math|inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>>
       exist. Then <math|\<forall\>n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
-      we have as <math|<around*|{|x<rsub|i>\|i\<in\><around*|{|n+1,\<ldots\>,\<infty\>|}>|}>\<subseteq\><around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>>
-      then by [theorem: <reference|order sup,inf and inclusion>]
+      we have \ <math|<around*|{|x<rsub|i>\|i\<in\><around*|{|n+1,\<ldots\>,\<infty\>|}>|}>\<subseteq\><around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>>
+      so that by [theorem: <reference|order sup,inf and inclusion>]
 
       <\equation*>
         inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>\<leqslant\>inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n+1,\<ldots\>,\<infty\>|}>|}>|)>
@@ -15450,14 +15462,14 @@
 
   <\theorem>
     <label|limit limsup liminf and limit>Let <math|k\<in\>\<bbb-N\><rsub|0>>,
-    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,n|}>>\<subseteq\>\<bbb-R\>>
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>\<bbb-R\>>
     then we have that\ 
 
     <\equation*>
       <below|lim|n\<rightarrow\>\<infty\>>x<rsub|n><text| exist
       >\<Leftrightarrow\><text| ><below|lim inf|n\<rightarrow\>\<infty\>>
-      x<rsub|n><text| exist and ><below|lim sup|n\<rightarrow\>\<infty\>>
-      x<rsub|n><text| and ><below|lim inf|n\<rightarrow\>\<infty\>>
+      x<rsub|n><text| and ><below|lim sup|n\<rightarrow\>\<infty\>>
+      x<rsub|n><text| exists and ><below|lim inf|n\<rightarrow\>\<infty\>>
       x<rsub|n>=<below|lim sup|n\<rightarrow\>\<infty\>> x<rsub|n>
     </equation*>
 
@@ -15603,14 +15615,14 @@
 
       <\equation>
         <label|eq 14.154.158>\<forall\>i\<geqslant\>M<text| we have
-        >x-\<varepsilon\>\<less\>x<rsub|i>
+        >x<rsub|i>\<less\>x+1
       </equation>
 
       Let <math|i\<geqslant\>max<around*|(|M,N|)>> then by [eqs:
       <reference|eq 14.153.158> and <reference|eq 14.154.158>] we have
       <math|x-\<varepsilon\>\<less\>x<rsub|i>\<less\>x+\<varepsilon\>\<Rightarrow\><around*|\||x<rsub|i>-x|\|>\<less\>\<varepsilon\>>
       which as <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> was chosen
-      arbitrary that\ 
+      arbitrary proves that\ 
 
       <\equation*>
         <below|lim|n\<rightarrow\>\<infty\>>x<rsub|n><text| exists and
@@ -15709,7 +15721,8 @@
       and further we have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<below|lim|n\<rightarrow\>\<infty\>>inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>>|<cell|\<equallim\><rsub|<text|[eq:
+        <tformat|<table|<row|<cell|<below|lim inf|n\<rightarrow\>\<infty\>>
+        x<rsub|n>>|<cell|=>|<cell|<below|lim|n\<rightarrow\>\<infty\>>inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
         <reference|eq 14.151.156>]>>>|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|-sup<around*|(|<around*|{|-x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|\<nobracket\>>|\<nobracket\>>|\<nobracket\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|limit a.x_n>]>>>|<cell|-<below|lim|n\<rightarrow\>\<infty\>><around*|(|sup<around*|(|<around*|{|-x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|def><rsub|>>|<cell|-<below|lim
         sup|n\<rightarrow\>\<infty\>> <around*|(|-x<rsub|n>|)>>>>>
@@ -15730,7 +15743,7 @@
 
       <\equation>
         <label|eq 14.153.155>\<forall\>n\<in\>\<bbb-N\><rsub|0>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>
-        sup<around*|(|<around*|{|-x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>=-inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>
+        inf<around*|(|<around*|{|-x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>=-sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>
       </equation>
 
       Again using the existence of <math|<below|<below|lim
@@ -15739,7 +15752,8 @@
       further we have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<below|lim|n\<rightarrow\>\<infty\>>sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>>|<cell|\<equallim\><rsub|<text|[eq:
+        <tformat|<table|<row|<cell|<below|lim sup|n\<rightarrow\>\<infty\>>
+        x<rsub|n>>|<cell|=>|<cell|<below|lim|n\<rightarrow\>\<infty\>>sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
         <reference|eq 14.153.155>]>>>|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|-inf<around*|(|<around*|{|-x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|\<nobracket\>>|\<nobracket\>>|\<nobracket\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|limit a.x_n>]>>>|<cell|-<below|lim|n\<rightarrow\>\<infty\>><around*|(|inf<around*|(|<around*|{|-x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|def><rsub|>>|<cell|-<below|lim
         inf|n\<rightarrow\>\<infty\>> <around*|(|-x<rsub|n>|)>>>>>
@@ -15788,35 +15802,60 @@
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|\<alpha\>\<cdot\><below|lim
-        inf|n\<rightarrow\>\<infty\>> x<rsub|n>>|<cell|=>|<cell|\<alpha\>\<cdot\><below|lim|n\<rightarrow\>\<infty\>>sup<around*|(|<around*|{|\<alpha\>\<cdot\>x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|limit a.x_n>]>>>|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|\<alpha\>\<cdot\>sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|sup<around*|(|<around*|{|\<alpha\>\<cdot\>x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<below|lim
-        sup|n\<rightarrow\>\<infty\>> <around*|(|\<alpha\>\<cdot\>x<rsub|n>|)>>>>>
+        inf|n\<rightarrow\>\<infty\>> x<rsub|n>>|<cell|=>|<cell|\<alpha\>\<cdot\><below|lim|n\<rightarrow\>\<infty\>>inf<around*|(|<around*|{|\<alpha\>\<cdot\>x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|limit a.x_n>]>>>|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|\<alpha\>\<cdot\>inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|inf<around*|(|<around*|{|\<alpha\>\<cdot\>x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<below|lim
+        inf|n\<rightarrow\>\<infty\>> <around*|(|\<alpha\>\<cdot\>x<rsub|n>|)>>>>>
       </eqnarray*>
 
       <item>As <math|<below|lim inf|n\<rightarrow\>\<infty\>> x<rsub|i>>
-      exists we have that <math|\<forall\>n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>.
+      exists we have\ 
+
+      <\equation*>
+        \<forall\>n\<in\><around*|{|k,\<ldots\>,\<infty\>|}><text|
+        >inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)><text|
+        exist>
+      </equation*>
+
       Using [theorem: <reference|complex sup(S+s) inf(T+t)>] we have that
-      <math|sup<around*|(|<around*|{|x<rsub|i>+x\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>>
-      exists and <math|sup<around*|(|<around*|{|x<rsub|i>+x\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>=sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>+x>.
+      <math|inf<around*|(|<around*|{|x<rsub|i>+x\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>>
+      exists and
+
+      <\equation*>
+        inf<around*|(|<around*|{|x<rsub|i>+x\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>=inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>+x
+      </equation*>
+
       Hence\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|sup<around*|(|<around*|{|x<rsub|i>+x\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>|)>>|<cell|=>|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>+x|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|limit x_n+a>]>>>|<cell|<below|lim|n\<rightarrow\>\<infty\>>sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>+x>>|<row|<cell|>|<cell|=>|<cell|<below|lim
-        sup|n\<rightarrow\>\<infty\>> x<rsub|i>+x>>>>
+        <tformat|<table|<row|<cell|<below|lim inf|n\<rightarrow\>\<infty\>>
+        x<rsub|n>>|<cell|=>|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|inf<around*|(|<around*|{|x<rsub|i>+x\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>+x|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|limit x_n+a>]>>>|<cell|<below|lim|n\<rightarrow\>\<infty\>>inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>+x>>|<row|<cell|>|<cell|=>|<cell|<below|lim
+        inf|n\<rightarrow\>\<infty\>> x<rsub|i>+x>>>>
       </eqnarray*>
 
-      <item>As <math|<below|lim inf|n\<rightarrow\>\<infty\>> x<rsub|i>>
-      exists we have that <math|\<forall\>n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>.
+      <item>As <math|<below|lim sup|n\<rightarrow\>\<infty\>> x<rsub|i>>
+      exists we have
+
+      <\equation*>
+        \<forall\>n\<in\><around*|{|k,\<ldots\>,\<infty\>|}><text|
+        >sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>
+      </equation*>
+
       Using [theorem: <reference|complex sup(S+s) inf(T+t)>] we have that
-      <math|inf<around*|(|<around*|{|x<rsub|i>+x\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>>
-      exists and <math|inf<around*|(|<around*|{|x<rsub|i>+x\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>=inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>+x>.
+      <math|sup<around*|(|<around*|{|x<rsub|i>+x\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>>
+      exists and
+
+      <\equation*>
+        sup<around*|(|<around*|{|x<rsub|i>+x\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>=sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>+x.
+      </equation*>
+
       Hence
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|inf<around*|(|<around*|{|x<rsub|i>+x\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>|)>>|<cell|=>|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>+x|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|limit x_n+a>]>>>|<cell|<below|lim|n\<rightarrow\>\<infty\>>inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>+x>>|<row|<cell|>|<cell|=>|<cell|<below|lim
-        inf|n\<rightarrow\>\<infty\>> x<rsub|i>+x>>>>
+        <tformat|<table|<row|<cell|<below|lim sup|n\<rightarrow\>\<infty\>>
+        x<rsub|n>>|<cell|=>|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|sup<around*|(|<around*|{|x<rsub|i>+x\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>+x|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|limit x_n+a>]>>>|<cell|<below|lim|n\<rightarrow\>\<infty\>>sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>+x>>|<row|<cell|>|<cell|=>|<cell|<below|lim
+        sup|n\<rightarrow\>\<infty\>> x<rsub|i>+x>>>>
       </eqnarray*>
     </enumerate>
   </proof>
@@ -15828,7 +15867,7 @@
 
   <\definition>
     <label|complete Cauchy metric><index|Cauchy sequence><dueto|Cauchy
-    condition>Let <math|<around*|\<langle\>|X,d|\<rangle\>>> be a metric
+    Condition>Let <math|<around*|\<langle\>|X,d|\<rangle\>>> be a metric
     space, <math|k\<in\>\<bbb-N\><rsub|0>> then a sequence
     <math|<around*|{|x<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>X>
     is <with|font-series|bold|Cauchy> if\ 
@@ -15885,8 +15924,9 @@
     First note that we only have to prove <math|\<Rightarrow\>> (as
     <math|\<Leftarrow\>> follows from applying the theorem in the opposite
     direction. Next as <math|<around*|\<\|\|\>||\<\|\|\>><rsub|1>> and
-    <math|<around*|\<\|\|\>||\<\|\|\>><rsub|2>> are equivalent there exists
-    <math|M<rsub|1>\<gtr\>0,M<rsub|2>\<gtr\>0> such that
+    <math|<around*|\<\|\|\>||\<\|\|\>><rsub|2>> are equivalent we have by
+    [theorem: <reference|normed norm equivalence condition>] there exists
+    <math|M<rsub|1>,M<rsub|2>\<in\>\<bbb-R\><rsup|+>> such that
     <math|\<forall\>x\<in\>X> we have <math|M<rsub|1>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|1>\<leqslant\><around*|\<\|\|\>|x|\<\|\|\>><rsub|2>\<leqslant\>M<rsub|2>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|1>>.
     We have then:
 
@@ -15895,15 +15935,15 @@
       <math|<around*|\<\|\|\>||\<\|\|\>><rsub|1>> there exists a
       <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
       <math|\<forall\>n\<geqslant\>N> we have
-      <math|<around*|\<\|\|\>|x-x<rsub|n>|\<\|\|\>>\<less\><frac|\<varepsilon\>|M<rsub|2>>>
+      <math|<around*|\<\|\|\>|x-x<rsub|n>|\<\|\|\>><rsub|1>\<less\><frac|\<varepsilon\>|M<rsub|2>>>
       so that <math|<around*|\<\|\|\>|x-x<rsub|n>|\<\|\|\>><rsub|2>\<leqslant\>M<rsub|2>\<cdot\><around*|\<\|\|\>|x-x<rsub|n>|\<\|\|\>><rsub|1>\<less\>M<rsub|2>\<cdot\><frac|\<varepsilon\>|M<rsub|2>>=\<varepsilon\>>
 
       <item>Let <math|\<varepsilon\>\<gtr\>0> then by the Cauchy property in
       <math|<around*|\<\|\|\>||\<\|\|\>><rsub|1>> there exists a
       <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
       <math|\<forall\>n,m\<geqslant\>N> we have
-      <math|<around*|\<\|\|\>|x<rsub|n>-x<rsub|m>|\<\|\|\>>\<less\><frac|\<varepsilon\>|M<rsub|2>>>
-      and thus <math|<around*|\<\|\|\>|x<rsub|n>-x<rsub|m>|\<\|\|\>><rsub|2>\<leqslant\>M<rsub|2>\<cdot\><around*|\<\|\|\>|x<rsub|n>-x<rsub|m>|\<\|\|\>><rsub|1>\<less\>M<rsub|2>\<cdot\><frac|e|M<rsub|2>>=\<varepsilon\>>
+      <math|<around*|\<\|\|\>|x<rsub|n>-x<rsub|m>|\<\|\|\>><rsub|1>\<less\><frac|\<varepsilon\>|M<rsub|2>>>
+      and thus <math|<around*|\<\|\|\>|x<rsub|n>-x<rsub|m>|\<\|\|\>><rsub|2>\<leqslant\>M<rsub|2>\<cdot\><around*|\<\|\|\>|x<rsub|n>-x<rsub|m>|\<\|\|\>><rsub|1>\<less\>M<rsub|2>\<cdot\><frac|\<varepsilon\>|M<rsub|2>>=\<varepsilon\>>
     </enumerate>
   </proof>
 
@@ -15923,7 +15963,7 @@
     As <math|1\<in\>\<bbb-R\><rsup|+>> then exist a
     <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
     <math|\<forall\>n,m\<in\>\<bbb-N\><rsub|0>> with <math|N\<leqslant\>n,m>
-    we have <math|<around*|\<\|\|\>|x<rsub|n>-x<rsub|m>|\<\|\|\>>\<leqslant\>1>.
+    we have <math|<around*|\<\|\|\>|x<rsub|n>-x<rsub|m>|\<\|\|\>>\<less\>1>.
     Let <math|M=max<around*|(|max<around*|(|<around*|{|<around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\|i\<in\><around*|{|k,\<ldots\>,N|}>|}>|)>,<around*|\<\|\|\>|x<rsub|N>|\<\|\|\>>+1|)>>
     then for <math|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> we have
     either:\ 
@@ -15955,7 +15995,7 @@
     be a sequence that converges to <math|x> then for
     <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there exist a
     <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
-    <math|\<forall\>n\<in\>\<bbb-N\>> with <math|N\<leqslant\>n> we have
+    <math|\<forall\>n\<geqslant\>N> we have
     <math|d<around*|(|x,x<rsub|n>|)>\<less\><frac|\<varepsilon\>|2>>. So if
     <math|n,m\<in\>\<bbb-N\>> with <math|n,m\<geqslant\>N> then we have\ 
 
@@ -15969,7 +16009,7 @@
     be a sequence that converges to <math|x> then for
     <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there exist a
     <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
-    <math|\<forall\>n\<in\>\<bbb-N\>> with <math|N\<leqslant\>n> we have
+    <math|\<forall\>n\<geqslant\>N> we have
     <math|<around*|\<\|\|\>|x<rsub|n>-x|\<\|\|\>>\<less\><frac|\<varepsilon\>|2>>.
     So if <math|n,m\<in\>\<bbb-N\>> with <math|n,m\<geqslant\>N> then we have\ 
 
@@ -16034,7 +16074,7 @@
     <label|complete product of Banach spaces>Let
     <math|n\<in\>\<bbb-N\>,<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
     a family of Banach spaces then if <math|<around*|\<\|\|\>||\<\|\|\>><rsub|max>>
-    is the maximum norm [see theorem: <reference|normed maximum norm>]
+    is the maximum norm [see theorem: <reference|normed maximum norm>] then
 
     <\equation*>
       <around*|\<langle\>|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>><text|
@@ -16049,20 +16089,22 @@
     be a Cauchy sequence. Take <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
     then there exists a <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
     such that <math|\<forall\>k,l\<geqslant\>N> we have
-    <math|max<around*|(|<around*|{|<around*|\<\|\|\>|\<pi\><rsub|i><around*|(|x<rsub|k>-x<rsub|l>|)>|\<\|\|\>><rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)><around*|\<\|\|\>|x<rsub|k>-x<rsub|l>|\<\|\|\>><rsub|max>\<less\>\<varepsilon\>>.
+    <math|max<around*|(|<around*|{|<around*|\<\|\|\>|\<pi\><rsub|i><around*|(|x<rsub|k>-x<rsub|l>|)>|\<\|\|\>><rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>=<around*|\<\|\|\>|x<rsub|k>-x<rsub|l>|\<\|\|\>><rsub|max>\<less\>\<varepsilon\>>.
     Hence <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have
     <math|<around*|\<\|\|\>|\<pi\><rsub|i><around*|(|x<rsub|k>|)>-\<pi\><rsub|i><around*|(|x<rsub|l>|)>|\<\|\|\>><rsub|i>=<around*|\<\|\|\>|\<pi\><rsub|i><around*|(|x<rsub|k>-x<rsub|l>|)>|\<\|\|\>><rsub|i>\<less\>\<varepsilon\>>
     which as <math|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>>
     is Banach proves that there exist a <math|y<rsub|i>\<in\>X<rsub|i>> such
     that <math|<below|lim|k\<rightarrow\>\<infty\>>\<pi\><rsub|i><around*|(|x<rsub|k>|)>=y<rsub|i>>.
-    In other words there exist a <math|N<rsub|i>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
-    such that <math|\<forall\>k\<geqslant\>N<rsub|i>> we have
+    In other words given <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there
+    exist a <math|N<rsub|i>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such
+    that <math|\<forall\>k\<geqslant\>N<rsub|i>> we have
     <math|<around*|\<\|\|\>|\<pi\><rsub|i><around*|(|x<rsub|k>|)>-y<rsub|i>|\<\|\|\>><rsub|i>\<less\>\<varepsilon\>>.
     Take <math|y=<around*|(|y<rsub|1>,\<ldots\>,y<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
-    we have that for <math|k\<geqslant\>max<around*|(|<around*|{|N<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>>
+    then we have that for <math|k\<geqslant\>max<around*|(|<around*|{|N<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>>
+    that
 
     <\equation*>
-      <around*|\<\|\|\>|x<rsub|k>-y|\<\|\|\>><rsub|max>=max<around*|(|<around*|{|\<pi\><rsub|i><around*|(|x<rsub|k>-y|)>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>=max<around*|(|<around*|{|\<pi\><rsub|i><around*|(|x<rsub|k>|)>-y\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>\<less\>\<varepsilon\>
+      <around*|\<\|\|\>|x<rsub|k>-y|\<\|\|\>><rsub|max>=max<around*|(|<around*|{|\<pi\><rsub|i><around*|(|x<rsub|k>-y|)>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>=max<around*|(|<around*|{|\<pi\><rsub|i><around*|(|x<rsub|k>|)>-y<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>\<less\>\<varepsilon\>
     </equation*>
 
     proving that <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
@@ -16112,10 +16154,10 @@
 
     Define <math|B<rsub|\<varepsilon\>>=<around*|{|d<around*|(|x,x<rsub|n>|)>\|n\<in\>A<rsub|\<varepsilon\>>|}>\<Rightarrowlim\><rsub|A<rsub|\<varepsilon\>>\<neq\>\<varnothing\>>B<rsub|\<varepsilon\>>\<neq\>\<varnothing\>>
     and <math|f:A<rsub|\<varepsilon\>>\<rightarrow\>B<rsub|\<varepsilon\>>>
-    by <math|f<around*|(|n|)>=d<around*|(|x,x<rsub|n>|)>> then <math|f> is a
-    surjection and as <math|A<rsub|\<varepsilon\>>> is assumed to be finite
-    it follows from [theorem: <reference|surjection f:A-\<gtr\>B if A is
-    finite then B is finite>] that\ 
+    by <math|f<around*|(|n|)>=d<around*|(|x,x<rsub|n>|)>> is a surjection, as
+    <math|A<rsub|\<varepsilon\>>> is assumed to be finite it follows from
+    [theorem: <reference|surjection f:A-\<gtr\>B if A is finite then B is
+    finite>] that\ 
 
     <\equation*>
       \<varnothing\>\<neq\>B<rsub|\<varepsilon\>>=<around*|{|d<around*|(|x,x<rsub|n>|)>\|n\<in\>A<rsub|\<varepsilon\>>|}><text|
@@ -16148,7 +16190,7 @@
     </equation*>
 
     hence <math|j\<in\>A<rsub|\<varepsilon\>>> so that
-    <math|d<around*|(|x,x<rsub|j>|)>\<in\>B<rsub|\<varepsilon\>>> so that as
+    <math|d<around*|(|x,x<rsub|j>|)>\<in\>B<rsub|\<varepsilon\>>>, as
     <math|\<delta\>=min<around*|(|B<rsub|\<varepsilon\>>|)>> we have
     <math|\<delta\>\<leqslant\>d<around*|(|x,x<rsub|j>|)>\<less\>\<delta\>>
     leading to the contradiction <math|\<delta\>\<less\>\<delta\>>. So the
@@ -16222,8 +16264,8 @@
     <\description>
       <item*|<math|S<text| is finite>>>Assume that
       <math|\<forall\>N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> there
-      exists <math|i,j\<geqslant\>N> with <math|x<rsub|i>\<neq\>x<rsub|j>>.
-      Define
+      exists <math|i<rsub|0>,j<rsub|0>\<geqslant\>N> with
+      <math|x<rsub|i>\<neq\>x<rsub|j>>. Define
 
       <\equation*>
         A=<around*|{|d<around*|(|x,y|)>\|<around*|(|x,y|)>\<in\>S\<times\>S\<wedge\>x\<neq\>y|}>\<subseteq\><around*|{|d<around*|(|x,y|)>\|<around*|(|x,y|)>\<in\>S|}>
@@ -16237,34 +16279,27 @@
       is finite and thus that <math|A> is finite. Further by the assumption
       there exist <math|i,j\<geqslant\>k> such that
       <math|x<rsub|i>\<neq\>x<rsub|j>> proving that
-      <math|x<rsub|i>,x<rsub|j>\<in\>A> and thus that
-      <math|A\<neq\>\<varnothing\>>.
-
-      which is finite as <math|S\<times\>S> is finite by [theorem:
-      <reference|product of finite sets>] and <math|f:> By the assumption
-      there exist <math|i,j\<geqslant\>k> such that
-      <math|x<rsub|i>\<neq\>x<rsub|j>> proving that
-      <math|x<rsub|i>,x<rsub|j>\<in\>A> and thus that
+      <math|d<around*|(|x<rsub|i>,x<rsub|j>|)>\<in\>A> and thus that
       <math|A\<neq\>\<varnothing\>>. So <math|\<varepsilon\>=min<around*|(|A|)>>
       exist and <math|0\<less\>\<varepsilon\>> [for if
       <math|d\<in\>A\<Rightarrow\>\<exists\>x,y\<in\>S> with
       <math|x\<neq\>y\<Rightarrow\>d=d<around*|(|x,y|)>\<gtr\>0>]. As
       <math|<around*|{|x<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
-      is Cauchy there exist a <math|N<rsub|1>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
+      is Cauchy there exist a <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
       such that <math|\<forall\>i,j\<geqslant\>N> we have
-      <math|d<around*|(|x<rsub|i>,x<rsub|j>|)>\<less\>\<varepsilon\>> however
-      by the assumption there exist a <math|i<rsub|0>,j<rsub|0>\<geqslant\>N>
-      such that <math|x<rsub|i<rsub|0>>\<neq\>x<rsub|j<rsub|0>>\<Rightarrow\>d<around*|(|x<rsub|i<rsub|0>>,x<rsub|j<rsub|0>>|)>\<in\>A>,
-      hence <math|\<varepsilon\>\<leqslant\>d<around*|(|x<rsub|i<rsub|0>>,y<rsub|i<rsub|0>>|)>\<less\>\<varepsilon\>>
+      <math|d<around*|(|x<rsub|i>,x<rsub|j>|)>\<less\>\<varepsilon\>>. By the
+      assumption there exist a <math|i<rsub|0>,j<rsub|0>\<geqslant\>N> such
+      that <math|x<rsub|i<rsub|0>>\<neq\>x<rsub|j<rsub|0>>\<Rightarrow\>d<around*|(|x<rsub|i<rsub|0>>,x<rsub|j<rsub|0>>|)>\<in\>A>,
+      hence <math|\<varepsilon\>=min<around*|(|S|)>\<leqslant\>d<around*|(|x<rsub|i<rsub|0>>,y<rsub|i<rsub|0>>|)>\<less\>\<varepsilon\>>
       a contradiction. So the assumption must be false meaning that\ 
 
       <\equation*>
         \<exists\>N\<in\><around*|{|k,\<ldots\>,\<infty\>|}><text| such that
         >\<forall\>i,j\<geqslant\>N<text|
-        >x<rsub|i>=x<rsub|j>\<Rightarrow\>d<around*|(|x<rsub|i>,x<rsub|j>|)>
+        >x<rsub|i>=x<rsub|j>\<Rightarrow\>d<around*|(|x<rsub|i>,x<rsub|j>|)>=0
       </equation*>
 
-      or taking <math|j=N> and <math|x=x<rsub|J>> we have that\ 
+      or taking <math|j=N> and <math|x=x<rsub|N>> we have that\ 
 
       <\equation*>
         \<forall\>i\<geqslant\>N<text| >d<around*|(|x<rsub|i>,x|)>=0
@@ -16323,8 +16358,8 @@
       >d<around*|(|x<rsub|n>,x|)>\<less\>\<varepsilon\>
     </equation>
 
-    \ Let <math|U\<in\>\<cal-T\><rsub|d>> such that <math|x\<in\>A> then
-    there exist a <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+    Let <math|U\<in\>\<cal-T\><rsub|d>> such that <math|x\<in\>A> then there
+    exist a <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
     <math|x\<in\>B<rsub|d><around*|(|x,\<delta\>|)>\<subseteq\>U>. By [eq:
     <reference|eq 14.154.156>] \ there exist a
     <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
@@ -16352,7 +16387,7 @@
   <\theorem>
     <label|complete set of real numbers>The normed space
     <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>> is a Banach
-    space
+    space.
   </theorem>
 
   <\proof>
@@ -16379,12 +16414,12 @@
     is Cauchy a <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
     <math|\<forall\>i,j\<geqslant\>N> we have
     <math|<around*|\||x<rsub|i>-x<rsub|j>|\|>\<less\>\<varepsilon\>\<Rightarrowlim\><rsub|<text|[eq:
-    <reference|eq 14.150.154>]>><around*|\||x<rsub|i>-x<rsub|j>|\|><rsub|\|<around*|[|-K,K|]>>>
+    <reference|eq 14.150.154>]>><around*|\||x<rsub|i>-x<rsub|j>|\|><rsub|\|<around*|[|-K,K|]>>\<less\>\<varepsilon\>>
     proving that <math|><math|<around*|{|x<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>.,\<infty\>|}>>>
-    is Cauchy in <math|<around*|\<langle\>|<around*|[|-K,K|]>,\<\|\|\><rsub|\|<around*|[|-K,K|]>>|\<rangle\>>>
+    is Cauchy in <math|<around*|\<langle\>|<around*|[|-K,K|]>,\<\|\|\><rsub|\|<around*|[|-K,K|]>>|\<rangle\>>>.
     Hence there exist a <math|x\<in\><around*|[|-K,K|]>> such that
     <math|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>=x> [using
-    <math|<around*|\|||\|><rsub|\|<around*|[|-K,K|]>>.> Hence given
+    <math|<around*|\|||\|><rsub|\|<around*|[|-K,K|]>>>]. Hence given
     <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there exist a
     <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
     <math|\<forall\>n\<geqslant\>N> <math|<around*|\||x<rsub|n>-x|\|><rsub|\|<around*|[|-K,K|]>>\<less\>\<varepsilon\>\<Rightarrowlim\><rsub|<text|[eq:
@@ -16401,7 +16436,7 @@
     <label|complete R^n is complete>Let <math|<around*|\<\|\|\>||\<\|\|\>>>
     be a norm on <math|\<bbb-R\><rsup|n>> then
     <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
-    is a Banach space
+    is a Banach space.
   </corollary>
 
   <\proof>
@@ -16441,6 +16476,8 @@
     proving that <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
     is a Banach space.
   </proof>
+
+  TODO
 
   <\corollary>
     <label|complete every finite dimensional normed space is a Banach
