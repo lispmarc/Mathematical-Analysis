@@ -15071,8 +15071,6 @@
   For the real numbers there is a nice relation between the supremum and
   infinum and increasing or decreasing sequences.
 
-  TODO
-
   <\theorem>
     <label|limit increasing descending sequences>Let
     <math|k\<in\>\<bbb-N\><rsub|0>> and <math|<around*|{|x<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>\<bbb-R\>>
@@ -16477,8 +16475,6 @@
     is a Banach space.
   </proof>
 
-  TODO
-
   <\corollary>
     <label|complete every finite dimensional normed space is a Banach
     space>Every finite dimensional normed vector space over <math|\<bbb-R\>>
@@ -16491,7 +16487,9 @@
     <reference|continuity homeomorphism between K^n and finite dimensional
     space>] there exist a norm <math|<around*|\<\|\|\>||\<\|\|\>>> on
     <math|\<bbb-R\><rsup|n>> and a linear isometric isomorphism
-    <math|\<varphi\>:X\<rightarrow\>\<bbb-R\><rsup|n>>. Let
+    <math|\<varphi\>:X\<rightarrow\>\<bbb-R\><rsup|n>> using the norms
+    <math|<around*|\<\|\|\>||\<\|\|\>><rsub|X>> and
+    <math|<around*|\<\|\|\>||\<\|\|\>>>. Let
     <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>X>
     be a Cauchy sequence in <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>.
     Then given <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there exist a
@@ -16526,14 +16524,14 @@
   <\proof>
     To avoid any confusion between the norm on <math|\<bbb-R\>> and
     <math|\<bbb-C\>> we use <math|<around*|\|||\|>> for the absolute value
-    norm on <math|<around*|\|||\|>> and <math|<around*|\|||\|><rsub|c>> for
-    the canonical norm on <math|\<bbb-C\>>. Let
+    norm on <math|\<bbb-R\>> and <math|<around*|\|||\|><rsub|c>> for the
+    canonical norm on <math|\<bbb-C\>>. Let
     <math|<around*|{|z<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>\<bbb-C\>>
     be a Cauchy sequence in <math|<around*|\<langle\>|\<bbb-C\>,\<\|\|\><rsub|c>|\<rangle\>>>
     then <math|\<forall\>n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> we have
     that <math|z<rsub|n>=x<rsub|n>+i\<cdot\>y<rsub|n>> where
     <math|x<rsub|n>,y<rsub|n>\<in\>\<bbb-R\>>. Now
-    <math|\<forall\>n,m\<in\><around*|{|,\<ldots\>,\<infty\>|}>> we have by
+    <math|\<forall\>n,m\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> we have by
     [theorem: <reference|complex norm properties> (3)] that\ 
 
     <\equation>
@@ -16581,7 +16579,7 @@
     <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there exist a
     <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
     <math|\<forall\>n,m\<geqslant\>N> we have
-    <math|<around*|\<\|\|\>|L<rsub|n>-L<rsub|m>|\<\|\|\>><rsub|LX,Y>\<less\><frac|\<varepsilon\>|<around*|\<\|\|\>|x|\<\|\|\>>+1>>.
+    <math|<around*|\<\|\|\>|L<rsub|n>-L<rsub|m>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<less\><frac|\<varepsilon\>|<around*|\<\|\|\>|x|\<\|\|\>>+1>>.
     Hence\ 
 
     <\equation*>
@@ -16631,7 +16629,7 @@
     As <math|><math|<around*|{|L<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
     is Cauchy there exist by [theorem: <reference|complete Cauchy sequence is
     bounded (2)>] a <math|K\<in\>\<bbb-R\><rsup|+>> such that
-    <math|\<forall\>n\<in\><around*|{|k,\<ldots\>,n|}>> we have
+    <math|\<forall\>n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> we have
     <math|<around*|\<\|\|\>|L<rsub|n>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<leqslant\>K>.
     Hence <math|\<forall\>n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> we have
     for <math|x\<in\>X>
@@ -16645,7 +16643,7 @@
     which by [theorem: <reference|limit and lower or upper bound>] proves
 
     <\equation>
-      <label|eq 14.157.155><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|<below|lim|n\<rightarrow\>\<infty\>>L<rsub|n><around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>K\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>.
+      <label|eq 14.157.155><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|<below|lim|n\<rightarrow\>\<infty\>>L<rsub|n><around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>K\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>
     </equation>
 
     Hence using [eq: <reference|eq 14.156.155>] and [theorem:
@@ -16764,7 +16762,7 @@
     As <math|><math|<around*|{|L<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
     is Cauchy there exist by [theorem: <reference|complete Cauchy sequence is
     bounded (2)>] a <math|K\<in\>\<bbb-R\><rsup|+>> such that
-    <math|\<forall\>i\<in\><around*|{|k,\<ldots\>,n|}>> we have
+    <math|\<forall\>i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> we have
     <math|<around*|\<\|\|\>|L<rsub|i>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<leqslant\>K>.
     Hence <math|\<forall\>i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> we have
     for <math|x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>>
@@ -16777,7 +16775,7 @@
     which by [theorem: <reference|limit and lower or upper bound>] proves\ 
 
     <\equation*>
-      <around*|\<\|\|\>|<below|lim|i\<rightarrow\>\<infty\>>L<rsub|i><around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>K\<cdot\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x<rsub|j>|\<\|\|\>><rsub|j>
+      <around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|<below|lim|i\<rightarrow\>\<infty\>>L<rsub|i><around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>K\<cdot\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x<rsub|j>|\<\|\|\>><rsub|j>
     </equation*>
 
     Hence using [eq: <reference|eq 14.160.155>] and [theorem:
@@ -16836,19 +16834,20 @@
     For <math|n\<in\>\<bbb-N\>> we have either
 
     <\description>
-      <item*|<math|1\<in\>S>>By [definition: <reference|continuity L^n(X;Y)>]
+      <item*|<math|n=1>>By [definition: <reference|continuity L^n(X;Y)>]
       <math|<around*|\<langle\>|L<rsup|1><around*|(|X;Y|)>,<around*|\<\|\|\>||\<\|\|\>><rsub|L<rsup|1><around*|(|X;Y|)>>|\<rangle\>>=<around*|\<langle\>|L<around*|(|X,Y|)>,<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,Y|)>>|\<rangle\>>>
-      which is Banach by the [theorem: <reference|complete L(X,Y) is Banach>]
+      which is Banach by the [theorem: <reference|complete L(X,Y) is
+      Banach>].
 
-      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Then by [definition:
-      <reference|continuity L^n(X;Y)>]
+      <item*|<math|1\<less\>n>>Then by [definition: <reference|continuity
+      L^n(X;Y)>]
 
       <\equation*>
         <around*|\<langle\>|L<rsup|n><around*|(|X;Y|)>,<around*|\<\|\|\>||\<\|\|\>><rsub|L<rsup|n><around*|(|X;Y|)>>|\<rangle\>>=<around*|\<langle\>|L<rsup|n><around*|(|<wide*|X,\<ldots\>,X|\<wide-underbrace\>><rsub|n>;Y|)>,<around*|\<\|\|\>||\<\|\|\>><rsub|L<rsup|n><around*|(|<wide*|X,\<ldots\>,X|\<wide-underbrace\>><rsub|n>;Y|)>><rsub|>|\<rangle\>>
       </equation*>
 
       which is Banach by [theorem: <reference|complete L(X1,..,Xn;Y) is
-      Banach>]\ 
+      Banach>].
     </description>
   </proof>
 
@@ -16936,7 +16935,7 @@
 
   <\proof>
     As <math|X\<neq\>0> there exist a <math|x\<in\>X> so that
-    <math|\<varnothing\>=<around*|{|<around*|\<\|\|\>|f<around*|(|y|)>|\<\|\|\>>\|y\<in\>X|}>>.
+    <math|\<varnothing\>\<neq\><around*|{|<around*|\<\|\|\>|f<around*|(|y|)>|\<\|\|\>>\|y\<in\>X|}>>.
     If <math|f\<in\>\<cal-B\><around*|(|X,Y|)>> then there exist a
     <math|M\<in\>\<bbb-R\><rsup|+>> such that <math|\<forall\>x\<in\>X> we
     have <math|<around*|\<\|\|\>|f<around*|(|x|)>|\<\|\|\>>\<leqslant\>M>,
@@ -16955,24 +16954,24 @@
       <math|\<forall\>\<alpha\>\<in\>F> then\ 
 
       <\equation*>
-        <around*|{|<around*|\<\|\|\>|<around*|(|\<alpha\>\<cdot\>f|)><around*|(|x|)>|\<\|\|\>>\|x\<in\>X|}>=<around*|{|<around*|\<\|\|\>|<around*|(|\<alpha\>\<cdot\>f|)><around*|(|x|)>|\<\|\|\>>\|x\<in\>X|}>=<around*|{|<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|f<around*|(|x|)>|\<\|\|\>>\|x\<in\>X|}>=<around*|\||\<alpha\>|\|>\<cdot\><around*|{|<around*|\<\|\|\>|f<around*|(|x|)>|\<\|\|\>>\|x\<in\>X|}>
+        <around*|{|<around*|\<\|\|\>|<around*|(|\<alpha\>\<cdot\>f|)><around*|(|y|)>|\<\|\|\>>\|y\<in\>X|}>=<around*|{|<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|f<around*|(|y|)>|\<\|\|\>>\|y\<in\>X|}>=<around*|\||\<alpha\>|\|>\<cdot\><around*|{|<around*|\<\|\|\>|f<around*|(|y|)>|\<\|\|\>>\|y\<in\>X|}>
       </equation*>
 
       so that\ 
 
       <\equation*>
-        <around*|\<\|\|\>|\<alpha\>\<cdot\>f|\<\|\|\>><rsub|\<infty\>>=sup<around*|(|<around*|\||\<alpha\>|\|>\<cdot\><around*|{|<around*|\<\|\|\>|f<around*|(|x|)>|\<\|\|\>>\|x\<in\>X|}>|)>\<equallim\><rsub|<text|[theorem:
-        <reference|complex sup(a.x) inf(a.x)>]>><around*|\||\<alpha\>|\|>\<cdot\>sup<around*|(|<around*|{|<around*|\<\|\|\>|f<around*|(|x|)>|\<\|\|\>>\|x\<in\>X|}>|)>=<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>
+        <around*|\<\|\|\>|\<alpha\>\<cdot\>f|\<\|\|\>><rsub|\<infty\>>=sup<around*|(|<around*|\||\<alpha\>|\|>\<cdot\><around*|{|<around*|\<\|\|\>|f<around*|(|y|)>|\<\|\|\>>\|y\<in\>X|}>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|complex sup(a.x) inf(a.x)>]>><around*|\||\<alpha\>|\|>\<cdot\>sup<around*|(|<around*|{|<around*|\<\|\|\>|f<around*|(|y|)>|\<\|\|\>>\|y\<in\>X|}>|)>=<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>
       </equation*>
 
       <item>If <math|f,g\<in\>\<cal-B\><around*|(|X,Y|)>> then\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<around*|\<\|\|\>|f+g|\<\|\|\>><rsub|\<infty\>>>|<cell|=>|<cell|sup<around*|(|<around*|{|<around*|\<\|\|\>|<around*|(|f+g|)><around*|(|x|)>|\<\|\|\>>\|x\<in\>X|}>|)>>>|<row|<cell|>|<cell|=>|<cell|sup<around*|(|<around*|{|<around*|\<\|\|\>|f<around*|(|x|)>+g<around*|(|x|)>|\<\|\|\>>\|x\<in\>X|}>|)>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[theorem:
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|f+g|\<\|\|\>><rsub|\<infty\>>>|<cell|=>|<cell|sup<around*|(|<around*|{|<around*|\<\|\|\>|<around*|(|f+g|)><around*|(|y|)>|\<\|\|\>>\|y\<in\>X|}>|)>>>|<row|<cell|>|<cell|=>|<cell|sup<around*|(|<around*|{|<around*|\<\|\|\>|f<around*|(|y|)>+g<around*|(|y|)>|\<\|\|\>>\|y\<in\>X|}>|)>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[theorem:
         <reference|order sup and inf and bigger
-        elements>]>>>|<cell|sup<around*|(|<around*|{|<around*|\<\|\|\>|f<around*|(|x|)>|\<\|\|\>>+<around*|\<\|\|\>|g<around*|(|x|)>|\<\|\|\>>\|x\<in\>X|}>|)>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[theorem:
+        elements>]>>>|<cell|sup<around*|(|<around*|{|<around*|\<\|\|\>|f<around*|(|y|)>|\<\|\|\>>+<around*|\<\|\|\>|g<around*|(|y|)>|\<\|\|\>>\|y\<in\>X|}>|)>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[theorem:
         <reference|order sup and inf and bigger
-        elements>]>>>|<cell|sup<around*|(|<around*|{|<around*|\<\|\|\>|f<around*|(|x|)>|\<\|\|\>>\|x\<in\>X|}>+<around*|{|<around*|\<\|\|\>|g<around*|(|x|)>|\<\|\|\>>\|x\<in\>X|}>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        elements>]>>>|<cell|sup<around*|(|<around*|{|<around*|\<\|\|\>|f<around*|(|y|)>|\<\|\|\>>\|y\<in\>X|}>+<around*|{|<around*|\<\|\|\>|g<around*|(|y|)>|\<\|\|\>>\|y\<in\>X|}>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|complex sup(S+T) and inf(S+T)>]>>>|<cell|sup<around*|(|<around*|{|<around*|\<\|\|\>|f<around*|(|x|)>|\<\|\|\>>\|x\<in\>X|}>|)>+sup<around*|(|<around*|{|<around*|\<\|\|\>|g<around*|(|x|)>|\<\|\|\>>\|x\<in\>X|}>|)>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>+<around*|\<\|\|\>|g|\<\|\|\>><rsub|\<infty\>>>>>>
       </eqnarray*>
 
@@ -17014,7 +17013,7 @@
     <label|bounded uniform convergence and continuity>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
     be a normed space, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    \ a normed space then if <math|<around*|{|f<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
+    \ a normed space then if <math|<around*|{|f<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>\<cal-B\><around*|(|X,Y|)>>
     is a sequence of continuous functions from <math|X> to <math|Y> uniformly
     converging to a function <math|f:X\<rightarrow\>Y> then <math|f> is
     continuous.
@@ -17027,7 +17026,7 @@
     <math|\<forall\>n\<geqslant\>N> we have
 
     <\equation*>
-      \<forall\>x\<in\>X<text| we have ><around*|\<\|\|\>|f<rsub|n><around*|(|x|)>-f<around*|(|x|)>|\<\|\|\>><rsub|Y>\<less\><frac|\<varepsilon\>|3>
+      \<forall\>x\<in\>X<text| \ ><around*|\<\|\|\>|f<rsub|n><around*|(|x|)>-f<around*|(|x|)>|\<\|\|\>><rsub|Y>\<less\><frac|\<varepsilon\>|3>
     </equation*>
 
     As <math|f<rsub|N>> is continuous we have that there exist a
@@ -17039,7 +17038,7 @@
       <around*|\<\|\|\>|f<rsub|N><around*|(|x|)>-f<rsub|N><around*|(|y|)>|\<\|\|\>><rsub|Y>\<less\><frac|\<varepsilon\>|3>
     </equation*>
 
-    Let <math|<around*|\<\|\|\>|x-y|\<\|\|\>><rsub|X>\<less\>\<delta\><rsub|n>>
+    Let <math|<around*|\<\|\|\>|x-y|\<\|\|\>><rsub|X>\<less\>\<delta\><rsub|N>>
     then we have\ 
 
     <\eqnarray*>
@@ -17057,7 +17056,7 @@
   <\theorem>
     <label|bounded uniform convergence is convergence in supremum nrom>Let
     <math|X\<neq\>\<varnothing\>> and <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
-    a normed space and <math|<around*|{|f<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>Y<rsup|X>>
+    a normed space and <math|<around*|{|f<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>\<cal-B\><around*|(|X,Y|)>>
     then\ 
 
     <\equation*>
@@ -17104,8 +17103,6 @@
     </description>
   </proof>
 
-  \;
-
   <\theorem>
     <label|complete bounded functions to a complete space are complete>Let
     <math|X\<neq\>\<varnothing\>> and <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
@@ -17120,7 +17117,11 @@
     <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then there exists a
     <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
     <math|\<forall\>n,m\<geqslant\>N> we have
-    <math|sup<around*|(|<around*|\<\|\|\>|f<rsub|n><around*|(|x|)>-f<rsub|m><around*|(|x|)>|\<\|\|\>>x\<in\>X|)>=<around*|\<\|\|\>|f<rsub|n><around*|(|x|)>-f<rsub|m><around*|(|x|)>|\<\|\|\>><rsub|\<infty\>>\<less\>\<infty\>>.
+
+    <\equation*>
+      sup<around*|(|<around*|\<\|\|\>|f<rsub|n><around*|(|x|)>-f<rsub|m><around*|(|x|)>|\<\|\|\>>x\<in\>X|)>=<around*|\<\|\|\>|f<rsub|n><around*|(|x|)>-f<rsub|m><around*|(|x|)>|\<\|\|\>><rsub|\<infty\>>\<less\>\<varepsilon\>
+    </equation*>
+
     Hence given <math|x\<in\>X> we have <math|<around*|\<\|\|\>|f<rsub|n><around*|(|x|)>-f<rsub|m><around*|(|x|)>|\<\|\|\>>\<leqslant\>sup<around*|(|<around*|\<\|\|\>|f<rsub|n><around*|(|x|)>-f<rsub|m><around*|(|x|)>|\<\|\|\>>x\<in\>X|)>\<less\>\<varepsilon\>>
     proving that <math|<around*|{|f<rsub|n><around*|(|x|)>|}><rsub|\<in\><around*|{|k,\<ldots\>\<infty\>|}>>>
     is a Cauchy sequence, hence as <math|Y> is complete there exist a unique
@@ -17159,8 +17160,8 @@
     <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
     <math|\<forall\>m\<geqslant\>N\<Rightarrow\>m,N\<geqslant\>N> we have
     <math|<around*|\<\|\|\>|f<rsub|m>-f<rsub|N>|\<\|\|\>><rsub|\<infty\>>\<less\>1>,
-    hence <math|<around*|\<\|\|\>|f<rsub|m>|\<\|\|\>><rsub|\<infty\>>\<leqslant\><around*|\<\|\|\>|f<rsub|N>|\<\|\|\>><rsub|\<infty\>>+<around*|\<\|\|\>|f<rsub|m>-f<rsub|N>|\<\|\|\>><rsub|\<infty\>>\<less\><around*|\<\|\|\>|f<rsub|N>|\<\|\|\>><rsub|\<infty\>>+1>,
-    summarized
+    hence <math|<around*|\<\|\|\>|f<rsub|m>|\<\|\|\>><rsub|\<infty\>>\<leqslant\><around*|\<\|\|\>|f<rsub|N>|\<\|\|\>><rsub|\<infty\>>+<around*|\<\|\|\>|f<rsub|m>-f<rsub|N>|\<\|\|\>><rsub|\<infty\>>\<less\><around*|\<\|\|\>|f<rsub|N>|\<\|\|\>><rsub|\<infty\>>+1>.
+    Summarized
 
     <\equation>
       <label|eq 14.151.153>\<exists\>N\<in\><around*|{|k,\<ldots\>,\<infty\>|}><text|
@@ -17180,7 +17181,7 @@
     where <math|M=2+<around*|\<\|\|\>|f<rsub|N>|\<\|\|\>><rsub|\<infty\>>>
     independent of <math|x>, proving that
     <math|<around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>=sup<around*|(|<around*|{|<around*|\<\|\|\>|f<around*|(|x|)>|\<\|\|\>>\|x\<in\>X|}>|)>\<leqslant\>M>.
-    Proving that <math|f> is bounded or\ 
+    Hence we conclude that <math|f> is bounded or\ 
 
     <\equation>
       <label|eq 14.152.153>f\<in\>\<cal-B\><around*|(|X,Y|)>
@@ -17340,8 +17341,9 @@
     exist we have that <math|<around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
     is Cauchy so there exist a <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
     such that <math|n,m\<geqslant\>\<bbb-N\>> we have that
-    <math|<around*|\<\|\|\>|<big|sum><rsub|i=k><rsup|n>x<rsub|i>-<big|sum><rsub|i=k><rsup|m>x<rsub|i>|\<\|\|\>>\<less\>\<varepsilon\>>,
-    in particular we have <math|<around*|\<\|\|\>|x<rsub|N>-0|\<\|\|\>>=<around*|\<\|\|\>|<big|sum><rsub|i=k><rsup|N+1>x<rsub|i>-<big|sum><rsub|i=k><rsup|N>|\<\|\|\>>\<less\>\<varepsilon\>>.
+    <math|<around*|\<\|\|\>|<big|sum><rsub|i=k><rsup|n>x<rsub|i>-<big|sum><rsub|i=k><rsup|m>x<rsub|i>|\<\|\|\>>\<less\>\<varepsilon\>>.
+    In particular we have <math|\<forall\>n\<geqslant\>N\<Rightarrow\>n+1\<geqslant\>N>
+    that <math|<around*|\<\|\|\>|x<rsub|n>-0|\<\|\|\>>=<around*|\<\|\|\>|x<rsub|n>|\<\|\|\>>=<around*|\<\|\|\>|<big|sum><rsub|i=k><rsup|n+1>x<rsub|i>-<big|sum><rsub|i=k><rsup|n>x<rsub|i>|\<\|\|\>>\<less\>\<varepsilon\>>.
     Hence\ 
 
     <\equation*>
@@ -17374,14 +17376,14 @@
       <item*|<math|\<Rightarrow\>>>If <math|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i><rsub|>
       converges we have that <below|lim|i\<rightarrow\>\<infty\>>s<rsub|i>>
       exists, take <math|\<varepsilon\>\<gtr\>0>, then using [theorem:
-      <reference|complete convergence implies Cauchy>] there exists a
+      <reference|complete convergence implies Cauchy>], there exists a
       <math|N<rprime|'>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
       <math|\<forall\>n,m\<geqslant\>N<rprime|'>> we have
       <math|<around*|\<\|\|\>|s<rsub|m>-s<rsub|n>|\<\|\|\>>\<less\>\<varepsilon\>>.
       Take <math|n,m\<geqslant\>N=N<rprime|'>+1> with <math|n\<leqslant\>m>
       then <math|N<rprime|'>\<leqslant\>n-1,m> and
       <math|<around*|\<\|\|\>|<big|sum><rsub|i=n><rsup|m>x<rsub|i>|\<\|\|\>>\<equallim\><rsub|<text|<reference|sum
-      associativity simple>>><around*|\<\|\|\>|<big|sum><rsub|i=k><rsup|m>x<rsub|i>-<big|sum><rsub|i=k><rsup|n-1>|\<\|\|\>>=<around*|\<\|\|\>|s<rsub|m>-s<rsub|n-1>|\<\|\|\>>\<less\>\<varepsilon\>>.
+      associativity simple>>><around*|\<\|\|\>|<big|sum><rsub|i=k><rsup|m>x<rsub|i>-<big|sum><rsub|i=k><rsup|n-1>x<rsub|i>|\<\|\|\>>=<around*|\<\|\|\>|s<rsub|m>-s<rsub|n-1>|\<\|\|\>>\<less\>\<varepsilon\>>.
 
       <item*|<math|\<Leftarrow\>>>Let <math|\<varepsilon\>\<gtr\>0> then
       there exists a <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such
@@ -17434,11 +17436,11 @@
       so that
 
       <\equation*>
-        <around*|\<\|\|\>|<big|sum><rsub|i=k+l><rsup|n>x<rsub|i>-x|\<\|\|\>>=<around*|\<\|\|\>|<big|sum><rsup|><rsub|i=k><rsup|n-l>x<rsub|i+l>|\<\|\|\>>\<less\>\<varepsilon\>.
+        <around*|\<\|\|\>|<big|sum><rsub|i=k+l><rsup|n>x<rsub|i>-x|\<\|\|\>>=<around*|\<\|\|\>|<big|sum><rsub|i=k><rsup|n-l>x<rsub|i+l>-x|\<\|\|\>>\<less\>\<varepsilon\>.
       </equation*>
 
       This proves that <math|<big|sum><rsub|i=k+l><rsup|\<infty\>>x<rsub|i>>
-      converges and\ 
+      converges to <math|x> or
 
       <\equation*>
         <big|sum><rsub|i=k+l><rsup|\<infty\>>x<rsub|i>=x=<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i+l>
@@ -17455,11 +17457,11 @@
       <math|n+l\<geqslant\>N<rprime|'>> so that
 
       <\equation*>
-        <around*|\<\|\|\>|<big|sum><rsub|i=k><rsup|n>x<rsub|i+l>-x|\<\|\|\>>=<around*|\<\|\|\>|<big|sum><rsup|n+l><rsub|i=k+l><rsup|>x<rsub|i>-x|\<\|\|\>>=\<less\>\<varepsilon\>
+        <around*|\<\|\|\>|<big|sum><rsub|i=k><rsup|n>x<rsub|i+l>-x|\<\|\|\>>=<around*|\<\|\|\>|<big|sum><rsup|n+l><rsub|i=k+l><rsup|>x<rsub|i>-x|\<\|\|\>>\<less\>\<varepsilon\>
       </equation*>
 
       proving that <math|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i+l>>
-      converges to <math|x> and that
+      converges to <math|x> or
 
       <\equation*>
         <big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i+l>=x=<big|sum><rsub|i=k+l><rsup|\<infty\>>x<rsub|i>
@@ -17621,8 +17623,8 @@
 
       <item>As <math|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>> is
       convergent <math|<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=k><rsup|n>x<rsub|i>>
-      so that by [theorem: <reference|limit a.x_n>]
-      <math|<below|lim|n\<rightarrow\>\<infty\>><around*|(|<big|sum><rsub|i=k><rsup|n>\<alpha\>\<cdot\>x<rsub|i>|)>=<below|lim|n\<rightarrow\>\<infty\>>\<alpha\>\<cdot\><around*|(|<big|sum><rsub|i=k><rsup|n>x<rsub|i>|)>>
+      exist, so that by [theorem: <reference|limit
+      a.x_n>]<math|<below|lim|n\<rightarrow\>\<infty\>><around*|(|<big|sum><rsub|i=k><rsup|n>\<alpha\>\<cdot\>x<rsub|i>|)>=<below|lim|n\<rightarrow\>\<infty\>>\<alpha\>\<cdot\><around*|(|<big|sum><rsub|i=k><rsup|n>x<rsub|i>|)>>
       exist and is equal to <math|\<alpha\>\<cdot\><below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=k><rsup|n>x<rsub|i>>.
       Hence by definition <math|<big|sum><rsub|i=k><rsup|\<infty\>><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>>
       is convergent and
@@ -17776,7 +17778,7 @@
       <math|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> then
       <math|<big|sum><rsub|i=k><rsup|n>x<rsub|i>\<leqslant\><big|sum><rsub|i=k><rsup|n>x<rsub|i>+x<rsub|n+1>=<big|sum><rsub|i=k><rsup|n+1>x<rsub|i>>,
       hence <math|<around*|{|<big|sum><rsub|i=k><rsup|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
-      is a increasing sequence. Hence\ 
+      is a increasing sequence. So\ 
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i><text|
@@ -17784,18 +17786,18 @@
         exists ><below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=k><rsup|n>x<rsub|i>=x>|<cell|\<Leftrightarrowlim\><rsub|<text|[theorem:
         <reference|limit increasing descending
         sequences>]>>>|<cell|>>|<row|<cell|sup<around*|(|<around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)><text|
-        and >sup<around*|(|<around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>=x>|<cell|>|<cell|>>>>
+        exist and >sup<around*|(|<around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>=x>|<cell|>|<cell|>>>>
       </eqnarray*>
 
-      <item*|<math|2\<Rightarrow\>3>>Let <math|s\<in\>sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|<around*|{|k,\<ldots\>,\<infty\>|}>|)>\<wedge\>K<text|
-      is finite >|}>|)>> then there exists a finite
+      <item*|<math|2\<Rightarrow\>3>>Let <math|s\<in\><around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|<around*|{|k,\<ldots\>,\<infty\>|}>|)>\<wedge\>K<text|
+      is finite >|}>> then there exists a finite
       <math|K\<subseteq\><around*|{|k,\<ldots\>,\<infty\>|}>> so that
       <math|s=<big|sum><rsub|i\<in\>K>x<rsub|i>>. Take
       <math|n=max<around*|(|K|)>> then <math|K\<subseteq\><around*|{|k,\<ldots\>,m|}>>
       so that
 
       <\equation*>
-        <big|sum><rsub|i\<in\>K>x<rsub|i>\<leqslant\><big|sum><rsub|i\<in\>K>x<rsub|i>+<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>\\K>x<rsub|i>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>x<rsub|i>=<big|sum><rsub|i=k>x<rsub|i>\<leqslant\>sup<around*|(|<around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>
+        <big|sum><rsub|i\<in\>K>x<rsub|i>\<leqslant\><big|sum><rsub|i\<in\>K>x<rsub|i>+<big|sum><rsub|i\<in\><around*|{|k,\<ldots\>,m|}>\\K>x<rsub|i>=<big|sum><rsub|i\<in\><around*|{|k,\<ldots\>,m|}>>x<rsub|i>=<big|sum><rsub|i=k><rsup|m>x<rsub|i>\<leqslant\>sup<around*|(|<around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>
       </equation*>
 
       hence <math|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|<around*|{|k,\<ldots\>,\<infty\>|}>|)>\<wedge\>K<text|
@@ -17826,8 +17828,8 @@
       which combined with [eq: <reference|eq 14.173.156>] proves that\ 
 
       <\equation*>
-        sup<around*|(|<around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>=sup<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|<around*|{|k,\<ldots\>,\<infty\>|}>|)>\<wedge\>K<text|
-        is finite >|}>
+        sup<around*|(|<around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>=sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|<around*|{|k,\<ldots\>,\<infty\>|}>|)>\<wedge\>K<text|
+        is finite >|}>|)>
       </equation*>
 
       <item*|<math|3\<Rightarrow\>2>>Let <math|s\<in\><around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>>
@@ -17842,12 +17844,12 @@
         exists>
       </equation*>
 
-      further as <math|<around*|{|<big|sum><rsub|i=k><rsup|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
-      is a increasing we have by [theorem: <reference|limit increasing
+      further as <math|<around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
+      is increasing we have by [theorem: <reference|limit increasing
       descending sequences>] that\ 
 
       <\equation*>
-        sup<around*|(|<around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>\<equallim\><below|lim|n\<rightarrow\>\<infty\>><rsub|<text|>><big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>=<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>
+        sup<around*|(|<around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>\<equallim\><below|lim|n\<rightarrow\>\<infty\>><rsub|<text|>><big|sum><rsub|i=k><rsup|n>x<rsub|i>=<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>
       </equation*>
 
       <item*|<math|1\<Rightarrow\>4>>As <math|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>>
@@ -17926,7 +17928,7 @@
       there exists a finite <math|K\<subseteq\><around*|{|k,\<ldots\>,\<infty\>|}>>
       such that <math|\<forall\>H\<subseteq\><around*|{|k,\<ldots\>,\<infty\>|}>>
       with <math|H> finite and <math|K<big|cap>H=\<emptyset\>> we have
-      <math|<big|sum><rsub|k\<in\>H>x<rsub|i>\<less\>\<varepsilon\>>. Take
+      <math|<big|sum><rsub|i\<in\>H>x<rsub|i>\<less\>\<varepsilon\>>. Take
       <math|K<rprime|'>=K<big|cup><around*|{|k|}>> then
       <math|K<rprime|'>\<neq\>\<varnothing\>> so that
       <math|N=max<around*|(|K<rprime|'>|)>> exists. Then
@@ -17949,7 +17951,7 @@
     <label|series non negative numbers strict positive term>Let
     <math|k\<in\>\<bbb-N\><rsub|0>>, <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\><around*|[|0,\<infty\>|[>>
     be a sequence of non negative real numbers such that
-    <math|\<exists\>l\<in\><around*|{|k,\<ldots\>,n|}>> such that
+    <math|\<exists\>l\<in\><around*|{|k,\<ldots\>,n|}>> with
     <math|0\<less\>x<rsub|l>> then if <math|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>>
     converges we have <math|0\<less\><big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>>.
   </corollary>
@@ -18102,25 +18104,25 @@
 
   Just as commutativity in finite sums allows us to define a more general
   form of a sum over elements of a finite set [see definition: <reference|sum
-  generalized sum>] it we can use the above theorem to define a infinite sum
+  generalized sum>] we can use the above theorem to define a infinite sum
   over a countable set of non negative numbers.
 
   <\theorem>
     <label|series non negative numbers denumerable sum>Let <math|I> be a
     denumerable set [see definition: <reference|denumerable set>],
     <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\><around*|[|0,\<infty\>|[>>
-    a denumerable family of non negative numbers then if there exist a
-    <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>I> such that there exist a
-    <math|x\<in\>\<bbb-R\>> such that <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>=x>
-    then for every bijection <math|\<alpha\>:\<bbb-N\><rsub|0>\<rightarrow\>I>
-    we have that <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<alpha\><around*|(|i|)>>=x>
+    a denumerable family of non negative numbers. If there exist a
+    <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>I> such that
+    <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>=x>
+    exist then for every bijection <math|\<alpha\>:\<bbb-N\><rsub|0>\<rightarrow\>I>
+    we have that <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<alpha\><around*|(|i|)>>=x>.
   </theorem>
 
   <\proof>
     As <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>I> is a bijection we
     have that <math|\<beta\><rsup|-1>:I\<rightarrow\>\<bbb-N\><rsub|0>> is a
-    bijection so that <math|\<beta\><rsup|-1>\<circ\>\<alpha\>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0>>.
-    Hence, as <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>=x>,
+    bijection so that <math|\<beta\><rsup|-1>\<circ\>\<alpha\>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0>>
+    is a bijection. Hence, as <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>=x>,
     it follows from [theorem: <reference|series non negative numbers
     commutativity>] that \ <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|<around*|(|\<beta\><rsup|-1>\<circ\>\<alpha\>|)><around*|(|x|)>|)>>=x>.
     As <math|<rsub|>\<forall\>i\<in\>\<bbb-N\><rsub|0>> we have
@@ -18141,7 +18143,7 @@
       or ><big|sum><rsub|i\<in\>I>x<rsub|i>=x
     </equation*>
 
-    if there exist a bijection <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>\<infty\>>
+    if there exists a bijection <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\><around*|[|0,\<infty\>|[>>
     and a <math|x\<in\>\<bbb-R\>> such that
     <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>>
     converges to <math|x>.\ 
@@ -18191,10 +18193,8 @@
 
   <\proof>
     As <math|\<varnothing\>> is finite this follows from [definition:
-    <reference|sum generalized sum>]
+    <reference|sum generalized sum>].
   </proof>
-
-  \;
 
   <\theorem>
     <label|series non negative numbers countable sums inclusion>Let
@@ -18202,16 +18202,15 @@
     <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>J>\<subseteq\><around*|[|0,\<infty\>|[>>
     such that <math|<big|sum><rsub|i\<in\>J>x<rsub|i>> converges then
     <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> converges and
-    <math|<big|sum><rsub|i\<in\>I>x<rsub|i>\<leqslant\><big|sum><rsub|i\<in\>J>x<rsub|i>>
+    <math|<big|sum><rsub|i\<in\>I>x<rsub|i>\<leqslant\><big|sum><rsub|i\<in\>J>x<rsub|i>>.
   </theorem>
 
   <\proof>
     For <math|J> we have either:\ 
 
     <\description>
-      <item*|<math|J> is finite>Then as <math|I\<subseteq\>J> is finite
-      <math|I> is also finite and so that
-      <math|<big|sum><rsub|i\<in\>I>x<rsub|i>,<big|sum><rsub|i\<in\>J>x<rsub|i>>
+      <item*|<math|J> is finite>Then as <math|I\<subseteq\>J> \ <math|I> is
+      also finite so that <math|<big|sum><rsub|i\<in\>I>x<rsub|i>,<big|sum><rsub|i\<in\>J>x<rsub|i>>
       are defined by [theorem: <reference|sum generalized sum>] hence
 
       <\equation*>
@@ -18241,7 +18240,7 @@
           <reference|sum bijection on index>]>><big|sum><rsub|i\<in\>\<beta\><rsup|-1><around*|(|I|)>>x<rsub|\<beta\><rsub|\|\<beta\><rsup|-1><around*|(|I|)>><around*|(|i|)>>=<big|sum><rsub|i\<in\>\<beta\><rsup|-1><around*|(|I|)>>x<rsub|\<beta\><around*|(|i|)>>
         </equation*>
 
-        As <math|<big|sum><rsub|i\<in\>\<beta\><rsup|-1><around*|(|I|)>>x<rsub|\<beta\><around*|(|i|)>>\<in\>sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|\<beta\><around*|(|i|)>>\|K\<in\>\<cal-P\><around*|(|\<bbb-N\><rsub|0>|)>\<wedge\>K<text|
+        As <math|<big|sum><rsub|i\<in\>I>x<rsub|i>=<big|sum><rsub|i\<in\>\<beta\><rsup|-1><around*|(|I|)>>x<rsub|\<beta\><around*|(|i|)>>\<in\>sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|\<beta\><around*|(|i|)>>\|K\<in\>\<cal-P\><around*|(|\<bbb-N\><rsub|0>|)>\<wedge\>K<text|
         is finite>|}>|)>> we have that\ 
 
         <\equation*>
@@ -18294,7 +18293,13 @@
         is finite>|}>|)>\<leqslant\><big|sum><rsub|i\<in\>J>x<rsub|i>>. So
         using [theorem: <reference|series non negative numbers equivalences>]
         it follows that <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<alpha\><around*|(|i|)>>>
-        exist and <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<alpha\><around*|(|i|)>>\<leqslant\><big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<alpha\><around*|(|i|)>>>.
+        exist and
+
+        <\equation*>
+          <big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<alpha\><around*|(|i|)>>=sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|\<alpha\><around*|(|i|)>>\|K\<in\>\<cal-P\><around*|(|\<bbb-N\><rsub|0>|)>\<wedge\>K<text|
+          is finite>|}>|)>\<leqslant\><big|sum><rsub|i\<in\>J>x<rsub|i>
+        </equation*>
+
         Finally using [definition: <reference|series non negative numbers
         denumerable sum>] we have that <math|<big|sum><rsub|i\<in\>I>x<rsub|i>=<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<alpha\><around*|(|i|)>>>
         so that\ 
@@ -18334,15 +18339,21 @@
     As <math|I> is countable we have two possibilities to consider:
 
     <\description>
-      <item*|<math|I> is finite>Then we have if <math|K\<subseteq\>I> is
-      finite we have by [theorem: <reference|series non negative numbers
-      countable sums inclusion>] that <math|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|I|)>\<wedge\>K<text|
-      is finite>|}>> is bounded above by <math|<big|sum><rsub|i\<in\>I>x<rsub|i>>,
-      hence by [theorem: <reference|complex RC is conditional complete>]
+      <item*|<math|I> is finite>Then for a finite <math|K\<subseteq\>I> we
+      have by [theorem: <reference|series non negative numbers countable sums
+      inclusion>] that <math|<big|sum><rsub|i\<in\>K>x<rsub|i>\<leqslant\><big|sum><rsub|i\<in\>I>x<rsub|i>>
+      so that <math|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|I|)>\<wedge\>K<text|
+      is finite>|}>> is bounded above by <math|<big|sum><rsub|i\<in\>I>x<rsub|i>>.
+      Hence by [theorem: <reference|complex RC is conditional complete>]
       <math|sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|I|)>\<wedge\>K<text|
-      is finite>|}>|)>> exist and <math|sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|I|)>\<wedge\>K<text|
-      is finite>|}>|)>\<leqslant\><big|sum><rsub|i\<in\>I>x<rsub|i>>. Hence
-      as <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> converges by definition as
+      is finite>|}>|)>> exist and
+
+      <\equation>
+        <label|eq 14.188.170>sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|I|)>\<wedge\>K<text|
+        is finite>|}>|)>\<leqslant\><big|sum><rsub|i\<in\>I>x<rsub|i>
+      </equation>
+
+      As <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> converges by definition if
       <math|I> is finite we have\ 
 
       <\equation*>
@@ -18351,9 +18362,16 @@
         is finite>|}>|)><text| exist>
       </equation*>
 
-      \ As <math|I> is finite we have clearly
+      As <math|I> is finite we have clearly
       <math|<big|sum><rsub|i\<in\>I>x<rsub|i>\<in\><around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|I|)>\<wedge\>K<text|
-      is finite>|}>> it follows that\ 
+      is finite>|}>> so that
+
+      <\equation*>
+        <big|sum><rsub|i\<in\>I>x<rsub|i>\<leqslant\>sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|I|)>\<wedge\>K<text|
+        is finite>|}>|)>
+      </equation*>
+
+      which combined with [eq: <reference|eq 14.188.170>] gives
 
       <\equation*>
         <big|sum><rsub|i\<in\>I>x<rsub|i>=sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|I|)>\<wedge\>K<text|
@@ -18363,8 +18381,8 @@
       \ 
 
       <item*|<math|I> is denumerable>Then there exist a bijection
-      <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>I>.
-      <item*|<math|\<Rightarrow\>>>Let <math|s\<in\><around*|{|<big|sum><rsub|i\<in\>K>x<rsub|\<beta\><around*|(|i|)>>\|K\<in\>\<cal-P\><around*|(|\<bbb-N\><rsub|0>|)>\<wedge\>K<text|
+      <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>I>. Let
+      <math|s\<in\><around*|{|<big|sum><rsub|i\<in\>K>x<rsub|\<beta\><around*|(|i|)>>\|K\<in\>\<cal-P\><around*|(|\<bbb-N\><rsub|0>|)>\<wedge\>K<text|
       is finite>|}>> then there exist a finite
       <math|K\<subseteq\>\<bbb-N\><rsub|0>> such that
       <math|s=<big|sum><rsub|i\<in\>K>x<rsub|\<beta\><around*|(|i|)>>>. As
@@ -18377,7 +18395,8 @@
       </equation*>
 
       which as <math|\<beta\><around*|(|K|)>> is finite [see theorem:
-      <reference|image of a finite set>] proves that
+      <reference|image of a finite set>] and
+      <math|\<beta\><around*|(|K|)>\<subseteq\>I> proves that
       <math|s\<in\><around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<in\>\<cal-P\><around*|(|I|)>\<wedge\>K<text|
       is finite>|}>> hence\ 
 
@@ -18400,8 +18419,9 @@
 
       which as <math|><math|\<beta\><rsup|-1><around*|(|K|)>\<equallim\><rsub|<text|[theorem:
       <reference|function inverse image preimage>]>><around*|(|\<beta\><rsup|-1>|)><around*|(|K|)>>
-      is finite by [theorem: <reference|image of a finite set>] proves that
-      <math|s\<in\><around*|{|<big|sum><rsub|i\<in\>K>x<rsub|\<beta\><around*|(|i|)>>\|K\<in\>\<cal-P\><around*|(|\<bbb-N\><rsub|0>|)>\<wedge\>K<text|
+      is finite by [theorem: <reference|image of a finite set>] and
+      <math|\<beta\><rsup|-1><around*|(|K|)>\<subseteq\>\<bbb-N\><rsub|0>>
+      proves that <math|s\<in\><around*|{|<big|sum><rsub|i\<in\>K>x<rsub|\<beta\><around*|(|i|)>>\|K\<in\>\<cal-P\><around*|(|\<bbb-N\><rsub|0>|)>\<wedge\>K<text|
       is finite>|}>>. Hence
 
       <\equation*>
@@ -18451,6 +18471,8 @@
     so that <math|sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>K>x<rsub|i>\|K\<subseteq\>I\<wedge\>K
     is finite|}>|)>=0> which by the previous theorem proves the example.
   </proof>
+
+  TODO
 
   <\lemma>
     <label|lemma 14.342.156>Let <math|n\<in\>\<bbb-N\><rsub|0>> and
@@ -22526,100 +22548,101 @@
     <associate|eq 14.173.156|<tuple|14.185|?>>
     <associate|eq 14.174.156|<tuple|14.186|?>>
     <associate|eq 14.175.156|<tuple|14.187|?>>
-    <associate|eq 14.176.156|<tuple|14.188|?>>
-    <associate|eq 14.177.156|<tuple|14.189|?>>
-    <associate|eq 14.178.156|<tuple|14.190|?>>
-    <associate|eq 14.179.156|<tuple|14.191|?>>
+    <associate|eq 14.176.156|<tuple|14.189|?>>
+    <associate|eq 14.177.156|<tuple|14.190|?>>
+    <associate|eq 14.178.156|<tuple|14.191|?>>
+    <associate|eq 14.179.156|<tuple|14.192|?>>
     <associate|eq 14.18.146|<tuple|14.22|?>>
-    <associate|eq 14.180.156|<tuple|14.192|?>>
-    <associate|eq 14.181.156|<tuple|14.193|?>>
-    <associate|eq 14.182.156|<tuple|14.194|?>>
-    <associate|eq 14.183.156|<tuple|14.195|?>>
-    <associate|eq 14.184.156|<tuple|14.196|?>>
-    <associate|eq 14.185.156|<tuple|14.197|?>>
-    <associate|eq 14.186.156|<tuple|14.198|?>>
-    <associate|eq 14.187.156|<tuple|14.199|?>>
-    <associate|eq 14.188.156|<tuple|14.200|?>>
-    <associate|eq 14.189.156|<tuple|14.201|?>>
+    <associate|eq 14.180.156|<tuple|14.193|?>>
+    <associate|eq 14.181.156|<tuple|14.194|?>>
+    <associate|eq 14.182.156|<tuple|14.195|?>>
+    <associate|eq 14.183.156|<tuple|14.196|?>>
+    <associate|eq 14.184.156|<tuple|14.197|?>>
+    <associate|eq 14.185.156|<tuple|14.198|?>>
+    <associate|eq 14.186.156|<tuple|14.199|?>>
+    <associate|eq 14.187.156|<tuple|14.200|?>>
+    <associate|eq 14.188.156|<tuple|14.201|?>>
+    <associate|eq 14.188.170|<tuple|14.188|?>>
+    <associate|eq 14.189.156|<tuple|14.202|?>>
     <associate|eq 14.19.146|<tuple|14.23|?>>
-    <associate|eq 14.190.156|<tuple|14.202|?>>
-    <associate|eq 14.191.156|<tuple|14.203|?>>
-    <associate|eq 14.192.156|<tuple|14.204|?>>
-    <associate|eq 14.193.156|<tuple|14.205|?>>
-    <associate|eq 14.199.156|<tuple|14.207|?>>
-    <associate|eq 14.199.157|<tuple|14.206|?>>
+    <associate|eq 14.190.156|<tuple|14.203|?>>
+    <associate|eq 14.191.156|<tuple|14.204|?>>
+    <associate|eq 14.192.156|<tuple|14.205|?>>
+    <associate|eq 14.193.156|<tuple|14.206|?>>
+    <associate|eq 14.199.156|<tuple|14.208|?>>
+    <associate|eq 14.199.157|<tuple|14.207|?>>
     <associate|eq 14.2.145|<tuple|14.4|?>>
     <associate|eq 14.20.146|<tuple|14.24|?>>
-    <associate|eq 14.200.156|<tuple|14.208|?>>
-    <associate|eq 14.201.156|<tuple|14.209|?>>
-    <associate|eq 14.203.158|<tuple|14.210|?>>
-    <associate|eq 14.204.158|<tuple|14.211|?>>
-    <associate|eq 14.205.158|<tuple|14.212|?>>
-    <associate|eq 14.206.158|<tuple|14.213|?>>
-    <associate|eq 14.207.158|<tuple|14.214|?>>
-    <associate|eq 14.208.158|<tuple|14.215|?>>
-    <associate|eq 14.209.528|<tuple|14.216|?>>
+    <associate|eq 14.200.156|<tuple|14.209|?>>
+    <associate|eq 14.201.156|<tuple|14.210|?>>
+    <associate|eq 14.203.158|<tuple|14.211|?>>
+    <associate|eq 14.204.158|<tuple|14.212|?>>
+    <associate|eq 14.205.158|<tuple|14.213|?>>
+    <associate|eq 14.206.158|<tuple|14.214|?>>
+    <associate|eq 14.207.158|<tuple|14.215|?>>
+    <associate|eq 14.208.158|<tuple|14.216|?>>
+    <associate|eq 14.209.528|<tuple|14.217|?>>
     <associate|eq 14.21.146|<tuple|14.25|?>>
-    <associate|eq 14.210.158|<tuple|14.217|?>>
-    <associate|eq 14.211.159|<tuple|14.218|?>>
-    <associate|eq 14.212.159|<tuple|14.219|?>>
-    <associate|eq 14.213.159|<tuple|14.220|?>>
-    <associate|eq 14.214.159|<tuple|14.221|?>>
-    <associate|eq 14.215.159|<tuple|14.222|?>>
-    <associate|eq 14.216.159|<tuple|14.223|?>>
-    <associate|eq 14.217.159|<tuple|14.224|?>>
-    <associate|eq 14.218.159|<tuple|14.225|?>>
-    <associate|eq 14.219.160|<tuple|14.227|?>>
-    <associate|eq 14.219.161|<tuple|14.226|?>>
+    <associate|eq 14.210.158|<tuple|14.218|?>>
+    <associate|eq 14.211.159|<tuple|14.219|?>>
+    <associate|eq 14.212.159|<tuple|14.220|?>>
+    <associate|eq 14.213.159|<tuple|14.221|?>>
+    <associate|eq 14.214.159|<tuple|14.222|?>>
+    <associate|eq 14.215.159|<tuple|14.223|?>>
+    <associate|eq 14.216.159|<tuple|14.224|?>>
+    <associate|eq 14.217.159|<tuple|14.225|?>>
+    <associate|eq 14.218.159|<tuple|14.226|?>>
+    <associate|eq 14.219.160|<tuple|14.228|?>>
+    <associate|eq 14.219.161|<tuple|14.227|?>>
     <associate|eq 14.22.146|<tuple|14.26|?>>
-    <associate|eq 14.220.159|<tuple|14.228|?>>
-    <associate|eq 14.221.519|<tuple|14.229|?>>
-    <associate|eq 14.222.159|<tuple|14.231|?>>
-    <associate|eq 14.223.159.1|<tuple|14.230|?>>
-    <associate|eq 14.225.161|<tuple|14.232|?>>
-    <associate|eq 14.226.161|<tuple|14.233|?>>
-    <associate|eq 14.227\<point\>161|<tuple|14.234|?>>
-    <associate|eq 14.228.161|<tuple|14.235|?>>
-    <associate|eq 14.229.161|<tuple|14.236|?>>
+    <associate|eq 14.220.159|<tuple|14.229|?>>
+    <associate|eq 14.221.519|<tuple|14.230|?>>
+    <associate|eq 14.222.159|<tuple|14.232|?>>
+    <associate|eq 14.223.159.1|<tuple|14.231|?>>
+    <associate|eq 14.225.161|<tuple|14.233|?>>
+    <associate|eq 14.226.161|<tuple|14.234|?>>
+    <associate|eq 14.227\<point\>161|<tuple|14.235|?>>
+    <associate|eq 14.228.161|<tuple|14.236|?>>
+    <associate|eq 14.229.161|<tuple|14.237|?>>
     <associate|eq 14.23.146|<tuple|14.27|?>>
-    <associate|eq 14.230.161|<tuple|14.237|?>>
-    <associate|eq 14.234.164|<tuple|14.238|?>>
-    <associate|eq 14.235.164|<tuple|14.239|?>>
-    <associate|eq 14.236.164|<tuple|14.240|?>>
-    <associate|eq 14.237.164|<tuple|14.241|?>>
-    <associate|eq 14.238.164|<tuple|14.242|?>>
-    <associate|eq 14.239.164|<tuple|14.244|?>>
-    <associate|eq 14.239.165|<tuple|14.243|?>>
+    <associate|eq 14.230.161|<tuple|14.238|?>>
+    <associate|eq 14.234.164|<tuple|14.239|?>>
+    <associate|eq 14.235.164|<tuple|14.240|?>>
+    <associate|eq 14.236.164|<tuple|14.241|?>>
+    <associate|eq 14.237.164|<tuple|14.242|?>>
+    <associate|eq 14.238.164|<tuple|14.243|?>>
+    <associate|eq 14.239.164|<tuple|14.245|?>>
+    <associate|eq 14.239.165|<tuple|14.244|?>>
     <associate|eq 14.24.146|<tuple|14.28|?>>
-    <associate|eq 14.240.164|<tuple|14.246|?>>
-    <associate|eq 14.243.166|<tuple|14.247|?>>
-    <associate|eq 14.244.166|<tuple|14.248|?>>
-    <associate|eq 14.245.166|<tuple|14.249|?>>
-    <associate|eq 14.246.166|<tuple|14.250|?>>
-    <associate|eq 14.247.166|<tuple|14.251|?>>
-    <associate|eq 14.248.166|<tuple|14.252|?>>
-    <associate|eq 14.249.166|<tuple|14.253|?>>
+    <associate|eq 14.240.164|<tuple|14.247|?>>
+    <associate|eq 14.243.166|<tuple|14.248|?>>
+    <associate|eq 14.244.166|<tuple|14.249|?>>
+    <associate|eq 14.245.166|<tuple|14.250|?>>
+    <associate|eq 14.246.166|<tuple|14.251|?>>
+    <associate|eq 14.247.166|<tuple|14.252|?>>
+    <associate|eq 14.248.166|<tuple|14.253|?>>
+    <associate|eq 14.249.166|<tuple|14.254|?>>
     <associate|eq 14.25.146|<tuple|14.29|?>>
-    <associate|eq 14.250.166|<tuple|14.254|?>>
-    <associate|eq 14.251.166|<tuple|14.255|?>>
-    <associate|eq 14.252.166|<tuple|14.256|?>>
-    <associate|eq 14.253.166|<tuple|14.257|?>>
-    <associate|eq 14.254.166|<tuple|14.258|?>>
-    <associate|eq 14.255.166|<tuple|14.259|?>>
-    <associate|eq 14.256.166|<tuple|14.260|?>>
-    <associate|eq 14.257.166|<tuple|14.261|?>>
-    <associate|eq 14.259.167|<tuple|14.262|?>>
+    <associate|eq 14.250.166|<tuple|14.255|?>>
+    <associate|eq 14.251.166|<tuple|14.256|?>>
+    <associate|eq 14.252.166|<tuple|14.257|?>>
+    <associate|eq 14.253.166|<tuple|14.258|?>>
+    <associate|eq 14.254.166|<tuple|14.259|?>>
+    <associate|eq 14.255.166|<tuple|14.260|?>>
+    <associate|eq 14.256.166|<tuple|14.261|?>>
+    <associate|eq 14.257.166|<tuple|14.262|?>>
+    <associate|eq 14.259.167|<tuple|14.263|?>>
     <associate|eq 14.26.146|<tuple|14.30|?>>
-    <associate|eq 14.260.167|<tuple|14.263|?>>
-    <associate|eq 14.261.167|<tuple|14.264|?>>
-    <associate|eq 14.262.167|<tuple|14.265|?>>
-    <associate|eq 14.263.167|<tuple|14.266|?>>
-    <associate|eq 14.264.167|<tuple|14.267|?>>
-    <associate|eq 14.265.167|<tuple|14.268|?>>
-    <associate|eq 14.266.167|<tuple|14.269|?>>
-    <associate|eq 14.267.167|<tuple|14.270|?>>
-    <associate|eq 14.268.167|<tuple|14.271|?>>
-    <associate|eq 14.269.167|<tuple|14.272|?>>
+    <associate|eq 14.260.167|<tuple|14.264|?>>
+    <associate|eq 14.261.167|<tuple|14.265|?>>
+    <associate|eq 14.262.167|<tuple|14.266|?>>
+    <associate|eq 14.263.167|<tuple|14.267|?>>
+    <associate|eq 14.264.167|<tuple|14.268|?>>
+    <associate|eq 14.265.167|<tuple|14.269|?>>
+    <associate|eq 14.266.167|<tuple|14.270|?>>
+    <associate|eq 14.267.167|<tuple|14.271|?>>
+    <associate|eq 14.268.167|<tuple|14.272|?>>
+    <associate|eq 14.269.167|<tuple|14.273|?>>
     <associate|eq 14.27.146|<tuple|14.31|?>>
     <associate|eq 14.28.147|<tuple|14.32|?>>
     <associate|eq 14.29.146|<tuple|14.34|?>>
