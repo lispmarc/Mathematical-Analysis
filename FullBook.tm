@@ -552,20 +552,20 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-399>>
 
-    <with|par-left|2tab|14.11.3.2<space|2spc>Absolute convergent series
+    <with|par-left|2tab|14.11.3.2<space|2spc>Absolute Convergent Series
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-400>>
 
-    <with|par-left|1tab|14.11.4<space|2spc>Properties of complete space.
+    <with|par-left|1tab|14.11.4<space|2spc>Properties of complete spaces.
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-404>>
+    <no-break><pageref|auto-403>>
 
     14.12<space|2spc>Connected Sets <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-407>
+    <no-break><pageref|auto-406>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|Index>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-411><vspace|0.5fn>
+    <no-break><pageref|auto-410><vspace|0.5fn>
   </table-of-contents>
 
   <include|Sets.tm>
@@ -579,6 +579,8 @@
   <include|DirectSumTensorProduct.tm>
 
   <include|Topology.tm>
+
+  <include|IntegrationBanach.tm>
 
   <\the-index|idx>
     <index+1|<with|mode|math|<around*|\<langle\>|A,B,C|\<rangle\>>>|<pageref|auto-23>>
@@ -743,7 +745,7 @@
 
     <index+1|<with|mode|math|B<rsup|A>>|<pageref|auto-30>>
 
-    <index+1|Baire Category theorem|<pageref|auto-405>>
+    <index+1|Baire Category theorem|<pageref|auto-404>>
 
     <index+1|Baire space|<pageref|auto-310>>
 
@@ -791,7 +793,7 @@
 
     <index+1|conditional completeness|<pageref|auto-95>>
 
-    <index+1|connected space|<pageref|auto-408>>
+    <index+1|connected space|<pageref|auto-407>>
 
     <index+1|continous function|<pageref|auto-332>>
 
@@ -819,7 +821,7 @@
 
     <index+1|diameter of a bounded set|<pageref|auto-322>>
 
-    <index+1|disconnected space|<pageref|auto-409>>
+    <index+1|disconnected space|<pageref|auto-408>>
 
     <index+1|disgonal matrix|<pageref|auto-286>>
 
@@ -911,7 +913,7 @@
 
     <index+1|interior|<pageref|auto-298>>
 
-    <index+1|intermediate value theorem|<pageref|auto-410>>
+    <index+1|intermediate value theorem|<pageref|auto-409>>
 
     <index+1|inverse of a matrix|<pageref|auto-283>>
 
@@ -987,7 +989,7 @@
 
     <index+1|open function|<pageref|auto-333>>
 
-    <index+1|open mapping theorem|<pageref|auto-406>>
+    <index+1|open mapping theorem|<pageref|auto-405>>
 
     <index+1|open neighborhood|<pageref|auto-357>>
 
@@ -1060,8 +1062,6 @@
     <index+1|sub-semi-group|<pageref|auto-113>>
 
     <index+1|successor set|<pageref|auto-14>>
-
-    <index+1|sum over a countable set|<pageref|auto-403>>
 
     <index+1|<with|mode|math|sup<around*|(|A|)>>|<pageref|auto-94>>
 
@@ -1353,30 +1353,30 @@
     <associate|auto-304|<tuple|accumulation point|657|Topology.tm>>
     <associate|auto-305|<tuple|<with|mode|<quote|math>|A<rprime|'>>|657|Topology.tm>>
     <associate|auto-306|<tuple|14.1.2|658|Topology.tm>>
-    <associate|auto-307|<tuple|box topology|662|Topology.tm>>
+    <associate|auto-307|<tuple|box topology|661|Topology.tm>>
     <associate|auto-308|<tuple|14.1.3|667|Topology.tm>>
     <associate|auto-309|<tuple|dense set|667|Topology.tm>>
     <associate|auto-31|<tuple|identity function|37|Sets.tm>>
-    <associate|auto-310|<tuple|Baire space|668|Topology.tm>>
-    <associate|auto-311|<tuple|14.2|669|Topology.tm>>
-    <associate|auto-312|<tuple|pseudo metric space|669|Topology.tm>>
-    <associate|auto-313|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|X,d|\<rangle\>>>|669|Topology.tm>>
+    <associate|auto-310|<tuple|Baire space|667|Topology.tm>>
+    <associate|auto-311|<tuple|14.2|668|Topology.tm>>
+    <associate|auto-312|<tuple|pseudo metric space|668|Topology.tm>>
+    <associate|auto-313|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|X,d|\<rangle\>>>|668|Topology.tm>>
     <associate|auto-314|<tuple|metric space|669|Topology.tm>>
     <associate|auto-315|<tuple|open ball|669|Topology.tm>>
     <associate|auto-316|<tuple|<with|mode|<quote|math>|B<rsub|d><around*|(|x,\<varepsilon\>|)>>|669|Topology.tm>>
     <associate|auto-317|<tuple|closed ball|669|Topology.tm>>
     <associate|auto-318|<tuple|<with|mode|<quote|math>|<wide|B<rsub|d><around*|(|x,\<varepsilon\>|)>|\<wide-bar\>>>|669|Topology.tm>>
-    <associate|auto-319|<tuple|equivalent pseudo metrics|672|Topology.tm>>
+    <associate|auto-319|<tuple|equivalent pseudo metrics|671|Topology.tm>>
     <associate|auto-32|<tuple|<with|mode|<quote|math>|Id<rsub|A>>|37|Sets.tm>>
     <associate|auto-320|<tuple|isometry|672|Topology.tm>>
     <associate|auto-321|<tuple|bounded set|674|Topology.tm>>
     <associate|auto-322|<tuple|diameter of a bounded set|674|Topology.tm>>
     <associate|auto-323|<tuple|<with|mode|<quote|math>|diam<around*|(|A|)>>|674|Topology.tm>>
-    <associate|auto-324|<tuple|14.3|677|Topology.tm>>
-    <associate|auto-325|<tuple|pseudo normed space|677|Topology.tm>>
-    <associate|auto-326|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>||\<\|\|\>>>|677|Topology.tm>>
-    <associate|auto-327|<tuple|equivalent norms|692|Topology.tm>>
-    <associate|auto-328|<tuple|liner isometry|693|Topology.tm>>
+    <associate|auto-324|<tuple|14.3|676|Topology.tm>>
+    <associate|auto-325|<tuple|pseudo normed space|676|Topology.tm>>
+    <associate|auto-326|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>||\<\|\|\>>>|676|Topology.tm>>
+    <associate|auto-327|<tuple|equivalent norms|693|Topology.tm>>
+    <associate|auto-328|<tuple|liner isometry|694|Topology.tm>>
     <associate|auto-329|<tuple|14.4|695|Topology.tm>>
     <associate|auto-33|<tuple|2.2.3|38|Sets.tm>>
     <associate|auto-330|<tuple|14.4.1|695|Topology.tm>>
@@ -1386,18 +1386,18 @@
     <associate|auto-334|<tuple|14.4.2|704|Topology.tm>>
     <associate|auto-335|<tuple|uniform continuity|704|Topology.tm>>
     <associate|auto-336|<tuple|Lipschitz condition|705|Topology.tm>>
-    <associate|auto-337|<tuple|distance function|705|Topology.tm>>
-    <associate|auto-338|<tuple|<with|mode|<quote|math>|\<delta\><rsub|S>>|705|Topology.tm>>
+    <associate|auto-337|<tuple|distance function|706|Topology.tm>>
+    <associate|auto-338|<tuple|<with|mode|<quote|math>|\<delta\><rsub|S>>|706|Topology.tm>>
     <associate|auto-339|<tuple|14.4.3|706|Topology.tm>>
     <associate|auto-34|<tuple|<with|mode|<quote|math>|i<rsub|B>>|38|Sets.tm>>
-    <associate|auto-340|<tuple|14.5|710|Topology.tm>>
-    <associate|auto-341|<tuple|<with|mode|<quote|math>|L<around*|(|X,Y|)>>|710|Topology.tm>>
+    <associate|auto-340|<tuple|14.5|711|Topology.tm>>
+    <associate|auto-341|<tuple|<with|mode|<quote|math>|L<around*|(|X,Y|)>>|711|Topology.tm>>
     <associate|auto-342|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,Y|)>>>|713|Topology.tm>>
     <associate|auto-343|<tuple|14.6|717|Topology.tm>>
     <associate|auto-344|<tuple|topological vector space|717|Topology.tm>>
     <associate|auto-345|<tuple|toplinear isomorphism|717|Topology.tm>>
-    <associate|auto-346|<tuple|14.7|717|Topology.tm>>
-    <associate|auto-347|<tuple|<with|mode|<quote|math>|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>|720|Topology.tm>>
+    <associate|auto-346|<tuple|14.7|718|Topology.tm>>
+    <associate|auto-347|<tuple|<with|mode|<quote|math>|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>|721|Topology.tm>>
     <associate|auto-348|<tuple|operator norm of multlinear
     mapping|722|Topology.tm>>
     <associate|auto-349|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>|722|Topology.tm>>
@@ -1406,8 +1406,8 @@
     <associate|auto-351|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsup|n>;Y|)>>>|725|Topology.tm>>
     <associate|auto-352|<tuple|14.8|733|Topology.tm>>
     <associate|auto-353|<tuple|Hausdorff topological space|733|Topology.tm>>
-    <associate|auto-354|<tuple|regular topological space|733|Topology.tm>>
-    <associate|auto-355|<tuple|normal topological space|734|Topology.tm>>
+    <associate|auto-354|<tuple|regular topological space|734|Topology.tm>>
+    <associate|auto-355|<tuple|normal topological space|735|Topology.tm>>
     <associate|auto-356|<tuple|neighborhood|735|Topology.tm>>
     <associate|auto-357|<tuple|open neighborhood|735|Topology.tm>>
     <associate|auto-358|<tuple|fundamental system of
@@ -1417,65 +1417,64 @@
     <associate|auto-36|<tuple|bijective|40|Sets.tm>>
     <associate|auto-360|<tuple|second countable topological
     space|735|Topology.tm>>
-    <associate|auto-361|<tuple|14.9|735|Topology.tm>>
-    <associate|auto-362|<tuple|compact space|735|Topology.tm>>
-    <associate|auto-363|<tuple|compact set|735|Topology.tm>>
-    <associate|auto-364|<tuple|limit point compactness|741|Topology.tm>>
+    <associate|auto-361|<tuple|14.9|736|Topology.tm>>
+    <associate|auto-362|<tuple|compact space|736|Topology.tm>>
+    <associate|auto-363|<tuple|compact set|736|Topology.tm>>
+    <associate|auto-364|<tuple|limit point compactness|742|Topology.tm>>
     <associate|auto-365|<tuple|compact class|742|Topology.tm>>
-    <associate|auto-366|<tuple|14.9.1|742|Topology.tm>>
+    <associate|auto-366|<tuple|14.9.1|743|Topology.tm>>
     <associate|auto-367|<tuple|14.9.1.1|743|Topology.tm>>
     <associate|auto-368|<tuple|filter base|743|Topology.tm>>
-    <associate|auto-369|<tuple|neighborhood filter base|743|Topology.tm>>
+    <associate|auto-369|<tuple|neighborhood filter base|744|Topology.tm>>
     <associate|auto-37|<tuple|2.2.4|45|Sets.tm>>
-    <associate|auto-370|<tuple|converging to a point|744|Topology.tm>>
-    <associate|auto-371|<tuple|accumaling at a point|744|Topology.tm>>
-    <associate|auto-372|<tuple|<with|mode|<quote|math>|\<frak-U\>\<rightarrow\>x>|744|Topology.tm>>
-    <associate|auto-373|<tuple|<with|mode|<quote|math>|\<frak-U\>\<succ\>x>|744|Topology.tm>>
-    <associate|auto-374|<tuple|subordinate filter bases|745|Topology.tm>>
-    <associate|auto-375|<tuple|<with|mode|<quote|math>|\<frak-W\>\<geqslant\>\<frak-U\>>|745|Topology.tm>>
-    <associate|auto-376|<tuple|<with|mode|<quote|math>|\<frak-U\>\<ll\>\<frak-W\>>|745|Topology.tm>>
-    <associate|auto-377|<tuple|<with|mode|<quote|math>|\<frak-U\>\<sqsubseteq\>\<frak-W\>>|745|Topology.tm>>
-    <associate|auto-378|<tuple|ultra filter|748|Topology.tm>>
-    <associate|auto-379|<tuple|maximum filter base|748|Topology.tm>>
+    <associate|auto-370|<tuple|converging to a point|745|Topology.tm>>
+    <associate|auto-371|<tuple|accumaling at a point|745|Topology.tm>>
+    <associate|auto-372|<tuple|<with|mode|<quote|math>|\<frak-U\>\<rightarrow\>x>|745|Topology.tm>>
+    <associate|auto-373|<tuple|<with|mode|<quote|math>|\<frak-U\>\<succ\>x>|745|Topology.tm>>
+    <associate|auto-374|<tuple|subordinate filter bases|746|Topology.tm>>
+    <associate|auto-375|<tuple|<with|mode|<quote|math>|\<frak-W\>\<geqslant\>\<frak-U\>>|746|Topology.tm>>
+    <associate|auto-376|<tuple|<with|mode|<quote|math>|\<frak-U\>\<ll\>\<frak-W\>>|746|Topology.tm>>
+    <associate|auto-377|<tuple|<with|mode|<quote|math>|\<frak-U\>\<sqsubseteq\>\<frak-W\>>|746|Topology.tm>>
+    <associate|auto-378|<tuple|ultra filter|749|Topology.tm>>
+    <associate|auto-379|<tuple|maximum filter base|749|Topology.tm>>
     <associate|auto-38|<tuple|<with|mode|<quote|math>|f<rsub|\|C>>|46|Sets.tm>>
     <associate|auto-380|<tuple|14.9.1.2|751|Topology.tm>>
     <associate|auto-381|<tuple|Tychonoff's theorem|753|Topology.tm>>
-    <associate|auto-382|<tuple|14.9.1.3|753|Topology.tm>>
-    <associate|auto-383|<tuple|14.10|757|Topology.tm>>
-    <associate|auto-384|<tuple|14.10.1|757|Topology.tm>>
-    <associate|auto-385|<tuple|14.10.2|762|Topology.tm>>
-    <associate|auto-386|<tuple|14.10.3|766|Topology.tm>>
+    <associate|auto-382|<tuple|14.9.1.3|754|Topology.tm>>
+    <associate|auto-383|<tuple|14.10|758|Topology.tm>>
+    <associate|auto-384|<tuple|14.10.1|758|Topology.tm>>
+    <associate|auto-385|<tuple|14.10.2|763|Topology.tm>>
+    <associate|auto-386|<tuple|14.10.3|767|Topology.tm>>
     <associate|auto-387|<tuple|<with|mode|<quote|math>|<below|lim
-    sup|n\<rightarrow\>\<infty\>> x<rsub|n>>|767|Topology.tm>>
+    sup|n\<rightarrow\>\<infty\>> x<rsub|n>>|768|Topology.tm>>
     <associate|auto-388|<tuple|<with|mode|<quote|math>|<below|lim
-    inf|n\<rightarrow\>\<infty\>> x<rsub|n>>|767|Topology.tm>>
-    <associate|auto-389|<tuple|14.11|771|Topology.tm>>
+    inf|n\<rightarrow\>\<infty\>> x<rsub|n>>|768|Topology.tm>>
+    <associate|auto-389|<tuple|14.11|773|Topology.tm>>
     <associate|auto-39|<tuple|2.2.5|51|Sets.tm>>
-    <associate|auto-390|<tuple|Cauchy sequence|771|Topology.tm>>
-    <associate|auto-391|<tuple|Cauchy sequence|772|Topology.tm>>
-    <associate|auto-392|<tuple|complete space|773|Topology.tm>>
-    <associate|auto-393|<tuple|Banach space|773|Topology.tm>>
-    <associate|auto-394|<tuple|14.11.1|774|Topology.tm>>
-    <associate|auto-395|<tuple|14.11.2|779|Topology.tm>>
-    <associate|auto-396|<tuple|bounded uniform convergence|780|Topology.tm>>
-    <associate|auto-397|<tuple|14.11.3|782|Topology.tm>>
-    <associate|auto-398|<tuple|series|782|Topology.tm>>
-    <associate|auto-399|<tuple|14.11.3.1|786|Topology.tm>>
+    <associate|auto-390|<tuple|Cauchy sequence|773|Topology.tm>>
+    <associate|auto-391|<tuple|Cauchy sequence|773|Topology.tm>>
+    <associate|auto-392|<tuple|complete space|774|Topology.tm>>
+    <associate|auto-393|<tuple|Banach space|774|Topology.tm>>
+    <associate|auto-394|<tuple|14.11.1|775|Topology.tm>>
+    <associate|auto-395|<tuple|14.11.2|780|Topology.tm>>
+    <associate|auto-396|<tuple|bounded uniform convergence|781|Topology.tm>>
+    <associate|auto-397|<tuple|14.11.3|783|Topology.tm>>
+    <associate|auto-398|<tuple|series|783|Topology.tm>>
+    <associate|auto-399|<tuple|14.11.3.1|788|Topology.tm>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|\<cal-U\>>|11|Sets.tm>>
     <associate|auto-40|<tuple|2.2.6|53|Sets.tm>>
-    <associate|auto-400|<tuple|14.11.3.2|798|Topology.tm>>
-    <associate|auto-401|<tuple|absolute convergence|798|Topology.tm>>
-    <associate|auto-402|<tuple|dominant convergence|798|Topology.tm>>
-    <associate|auto-403|<tuple|sum over a countable set|804|Topology.tm>>
-    <associate|auto-404|<tuple|14.11.4|813|Topology.tm>>
-    <associate|auto-405|<tuple|Baire Category theorem|816|Topology.tm>>
-    <associate|auto-406|<tuple|open mapping theorem|822|Topology.tm>>
-    <associate|auto-407|<tuple|14.12|822|Topology.tm>>
-    <associate|auto-408|<tuple|connected space|822|Topology.tm>>
-    <associate|auto-409|<tuple|disconnected space|822|Topology.tm>>
+    <associate|auto-400|<tuple|14.11.3.2|800|Topology.tm>>
+    <associate|auto-401|<tuple|absolute convergence|800|Topology.tm>>
+    <associate|auto-402|<tuple|dominant convergence|800|Topology.tm>>
+    <associate|auto-403|<tuple|14.11.4|806|Topology.tm>>
+    <associate|auto-404|<tuple|Baire Category theorem|810|Topology.tm>>
+    <associate|auto-405|<tuple|open mapping theorem|816|Topology.tm>>
+    <associate|auto-406|<tuple|14.12|816|Topology.tm>>
+    <associate|auto-407|<tuple|connected space|816|Topology.tm>>
+    <associate|auto-408|<tuple|disconnected space|816|Topology.tm>>
+    <associate|auto-409|<tuple|intermediate value theorem|820|Topology.tm>>
     <associate|auto-41|<tuple|2.3|54|Sets.tm>>
-    <associate|auto-410|<tuple|intermediate value theorem|826|Topology.tm>>
-    <associate|auto-411|<tuple|<with|mode|<quote|math>|f<around*|(|b|)>\<less\>y\<less\>f<around*|(|a|)>>|827>>
+    <associate|auto-410|<tuple|<with|mode|<quote|math>|f<around*|(|b|)>\<less\>y\<less\>f<around*|(|a|)>>|821>>
     <associate|auto-42|<tuple|2.3.1|54|Sets.tm>>
     <associate|auto-43|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>>|54|Sets.tm>>
     <associate|auto-44|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>\|i\<in\>I|}>>|55|Sets.tm>>
@@ -1583,14 +1582,14 @@
     <associate|bijection|<tuple|2.61|40|Sets.tm>>
     <associate|bijective classes|<tuple|2.62|40|Sets.tm>>
     <associate|bounded B(X,Y) is a normed
-    space|<tuple|14.329|779|Topology.tm>>
-    <associate|bounded function|<tuple|14.327|779|Topology.tm>>
+    space|<tuple|14.333|781|Topology.tm>>
+    <associate|bounded function|<tuple|14.331|780|Topology.tm>>
     <associate|bounded function B(X,Y) is a vector
-    space|<tuple|14.328|779|Topology.tm>>
+    space|<tuple|14.332|780|Topology.tm>>
     <associate|bounded uniform convergence and
-    continuity|<tuple|14.332|780|Topology.tm>>
+    continuity|<tuple|14.336|781|Topology.tm>>
     <associate|bounded uniform convergence is convergence in supremum
-    nrom|<tuple|14.333|780|Topology.tm>>
+    nrom|<tuple|14.337|782|Topology.tm>>
     <associate|cardinality of natural numbers|<tuple|6.38|186|NaturalNumbers.tm>>
     <associate|cardinality of the empty set is
     0|<tuple|6.39|186|NaturalNumbers.tm>>
@@ -1655,77 +1654,77 @@
     properties|<tuple|1.32|17|Sets.tm>>
     <associate|closed set properties|<tuple|14.21|655|Topology.tm>>
     <associate|compact Hausdorff space is regular and
-    compact|<tuple|14.231|741|Topology.tm>>
-    <associate|compact Heine Borel (1)|<tuple|14.227|739|Topology.tm>>
-    <associate|compact Heine-Borel (1)|<tuple|14.266|754|Topology.tm>>
-    <associate|compact Heine-Borel complex|<tuple|14.270|757|Topology.tm>>
+    compact|<tuple|14.232|741|Topology.tm>>
+    <associate|compact Heine Borel (1)|<tuple|14.228|739|Topology.tm>>
+    <associate|compact Heine-Borel (1)|<tuple|14.268|754|Topology.tm>>
+    <associate|compact Heine-Borel complex|<tuple|14.272|757|Topology.tm>>
     <associate|compact Heine-Borel general
-    form|<tuple|14.271|757|Topology.tm>>
-    <associate|compact Tychonoff's|<tuple|14.263|753|Topology.tm>>
-    <associate|compact Tychonoff's (1)|<tuple|14.264|753|Topology.tm>>
-    <associate|compact and basis|<tuple|14.217|736|Topology.tm>>
-    <associate|compact and bounded|<tuple|14.222|737|Topology.tm>>
-    <associate|compact and bounded (1)|<tuple|14.223|738|Topology.tm>>
-    <associate|compact and continuous functions|<tuple|14.224|738|Topology.tm>>
-    <associate|compact class|<tuple|14.234|742|Topology.tm>>
+    form|<tuple|14.273|757|Topology.tm>>
+    <associate|compact Tychonoff's|<tuple|14.264|753|Topology.tm>>
+    <associate|compact Tychonoff's (1)|<tuple|14.265|754|Topology.tm>>
+    <associate|compact and basis|<tuple|14.218|736|Topology.tm>>
+    <associate|compact and bounded|<tuple|14.223|738|Topology.tm>>
+    <associate|compact and bounded (1)|<tuple|14.224|738|Topology.tm>>
+    <associate|compact and continuous functions|<tuple|14.225|738|Topology.tm>>
+    <associate|compact class|<tuple|14.235|742|Topology.tm>>
     <associate|compact class and sets of compact
-    sets|<tuple|14.235|742|Topology.tm>>
+    sets|<tuple|14.236|742|Topology.tm>>
     <associate|compact closed bounded sets in R are
-    compact|<tuple|14.228|740|Topology.tm>>
+    compact|<tuple|14.229|741|Topology.tm>>
     <associate|compact compact implies limit point
-    compactness|<tuple|14.233|741|Topology.tm>>
-    <associate|compact empty set|<tuple|14.218|736|Topology.tm>>
+    compactness|<tuple|14.234|742|Topology.tm>>
+    <associate|compact empty set|<tuple|14.219|737|Topology.tm>>
     <associate|compact every closed subset of a compact set is
-    compact|<tuple|14.226|739|Topology.tm>>
-    <associate|compact extreme value theorem|<tuple|14.230|741|Topology.tm>>
+    compact|<tuple|14.227|739|Topology.tm>>
+    <associate|compact extreme value theorem|<tuple|14.231|741|Topology.tm>>
     <associate|compact finite union of compact
-    sets|<tuple|14.220|737|Topology.tm>>
+    sets|<tuple|14.221|737|Topology.tm>>
     <associate|compact image of a cmpact set by a continuous
-    function|<tuple|14.229|740|Topology.tm>>
-    <associate|compact isometric isomorphism|<tuple|14.269|755|Topology.tm>>
-    <associate|compact limit point compact|<tuple|14.232|741|Topology.tm>>
-    <associate|compact rectangles are compact|<tuple|14.265|753|Topology.tm>>
-    <associate|compact set|<tuple|14.214|735|Topology.tm>>
-    <associate|compact set alternative definition|<tuple|14.216|736|Topology.tm>>
+    function|<tuple|14.230|741|Topology.tm>>
+    <associate|compact isometric isomorphism|<tuple|14.271|756|Topology.tm>>
+    <associate|compact limit point compact|<tuple|14.233|742|Topology.tm>>
+    <associate|compact rectangles are compact|<tuple|14.267|754|Topology.tm>>
+    <associate|compact set|<tuple|14.215|736|Topology.tm>>
+    <associate|compact set alternative definition|<tuple|14.217|736|Topology.tm>>
     <associate|compact set is closed in a Hausdorff
-    space|<tuple|14.225|738|Topology.tm>>
-    <associate|compact singleton|<tuple|14.219|737|Topology.tm>>
-    <associate|compact space|<tuple|14.213|735|Topology.tm>>
-    <associate|compact space is compact subset|<tuple|14.215|736|Topology.tm>>
-    <associate|compact subspace equivalences|<tuple|14.221|737|Topology.tm>>
-    <associate|complete Baire Category|<tuple|14.384|816|Topology.tm>>
-    <associate|complete Cauchy metric|<tuple|14.308|771|Topology.tm>>
-    <associate|complete Cauchy normed|<tuple|14.309|772|Topology.tm>>
+    space|<tuple|14.226|739|Topology.tm>>
+    <associate|compact singleton|<tuple|14.220|737|Topology.tm>>
+    <associate|compact space|<tuple|14.214|736|Topology.tm>>
+    <associate|compact space is compact subset|<tuple|14.216|736|Topology.tm>>
+    <associate|compact subspace equivalences|<tuple|14.222|737|Topology.tm>>
+    <associate|complete Baire Category|<tuple|14.378|810|Topology.tm>>
+    <associate|complete Cauchy metric|<tuple|14.312|773|Topology.tm>>
+    <associate|complete Cauchy normed|<tuple|14.313|773|Topology.tm>>
     <associate|complete Cauchy sequence is bounded
-    (2)|<tuple|14.311|772|Topology.tm>>
-    <associate|complete L(X,Y) is Banach|<tuple|14.324|776|Topology.tm>>
-    <associate|complete L(X1,..,Xn;Y) is Banach|<tuple|14.325|777|Topology.tm>>
-    <associate|complete L^n(X;Y) is Banach|<tuple|14.326|779|Topology.tm>>
-    <associate|complete R^n is complete|<tuple|14.321|775|Topology.tm>>
+    (2)|<tuple|14.315|773|Topology.tm>>
+    <associate|complete L(X,Y) is Banach|<tuple|14.328|778|Topology.tm>>
+    <associate|complete L(X1,..,Xn;Y) is Banach|<tuple|14.329|779|Topology.tm>>
+    <associate|complete L^n(X;Y) is Banach|<tuple|14.330|780|Topology.tm>>
+    <associate|complete R^n is complete|<tuple|14.325|777|Topology.tm>>
     <associate|complete bounded functions to a complete space are
-    complete|<tuple|14.334|781|Topology.tm>>
+    complete|<tuple|14.338|782|Topology.tm>>
     <associate|complete closed subset of a complete space is
-    complete|<tuple|14.319|775|Topology.tm>>
-    <associate|complete compact spaces are
-    complete|<tuple|14.318|774|Topology.tm>>
-    <associate|complete continuous linear isomorphism is a
-    homeomorphism|<tuple|14.388|822|Topology.tm>>
-    <associate|complete convergence implies
-    Cauchy|<tuple|14.312|772|Topology.tm>>
-    <associate|complete every finite dimensional normed space is a Banach
-    space|<tuple|14.322|776|Topology.tm>>
-    <associate|complete limit point of a Cauchy sequence is unique in a
-    metric space|<tuple|14.317|774|Topology.tm>>
-    <associate|complete open mapping theorem|<tuple|14.387|822|Topology.tm>>
-    <associate|complete product of Banach
-    spaces|<tuple|14.315|773|Topology.tm>>
-    <associate|complete sequence and limit
-    point|<tuple|14.316|773|Topology.tm>>
-    <associate|complete set of real numbers|<tuple|14.320|775|Topology.tm>>
-    <associate|complete space|<tuple|14.314|773|Topology.tm>>
-    <associate|complete the complex numbers are
     complete|<tuple|14.323|776|Topology.tm>>
-    <associate|complete uniform convergion|<tuple|14.330|780|Topology.tm>>
+    <associate|complete compact spaces are
+    complete|<tuple|14.322|776|Topology.tm>>
+    <associate|complete continuous linear isomorphism is a
+    homeomorphism|<tuple|14.382|816|Topology.tm>>
+    <associate|complete convergence implies
+    Cauchy|<tuple|14.316|774|Topology.tm>>
+    <associate|complete every finite dimensional normed space is a Banach
+    space|<tuple|14.326|777|Topology.tm>>
+    <associate|complete limit point of a Cauchy sequence is unique in a
+    metric space|<tuple|14.321|775|Topology.tm>>
+    <associate|complete open mapping theorem|<tuple|14.381|816|Topology.tm>>
+    <associate|complete product of Banach
+    spaces|<tuple|14.319|774|Topology.tm>>
+    <associate|complete sequence and limit
+    point|<tuple|14.320|775|Topology.tm>>
+    <associate|complete set of real numbers|<tuple|14.324|776|Topology.tm>>
+    <associate|complete space|<tuple|14.318|774|Topology.tm>>
+    <associate|complete the complex numbers are
+    complete|<tuple|14.327|777|Topology.tm>>
+    <associate|complete uniform convergion|<tuple|14.334|781|Topology.tm>>
     <associate|complex (x^n-1)\<gtr\>=n.(x-1)|<tuple|10.57|316|Numbers.tm>>
     <associate|complex 0\<less\>1|<tuple|10.10|295|Numbers.tm>>
     <associate|complex 0\<less\>x^n\<less\>e|<tuple|10.60|317|Numbers.tm>>
@@ -1824,116 +1823,116 @@
     <associate|complex x^n\<gtr\>n if x\<gtr\>1
     (R)|<tuple|10.58|316|Numbers.tm>>
     <associate|complex {n,..,m}|<tuple|10.34|306|Numbers.tm>>
-    <associate|connected alternative definition|<tuple|14.392|822|Topology.tm>>
+    <associate|connected alternative definition|<tuple|14.386|816|Topology.tm>>
     <associate|connected closed interval is
-    connected|<tuple|14.395|823|Topology.tm>>
-    <associate|connected disconnected space|<tuple|14.390|822|Topology.tm>>
-    <associate|connected generalized intervals|<tuple|14.396|824|Topology.tm>>
+    connected|<tuple|14.389|817|Topology.tm>>
+    <associate|connected disconnected space|<tuple|14.384|816|Topology.tm>>
+    <associate|connected generalized intervals|<tuple|14.390|818|Topology.tm>>
     <associate|connected image by a real continuous function of a closed
-    interval is a closed interval|<tuple|14.397|825|Topology.tm>>
+    interval is a closed interval|<tuple|14.391|819|Topology.tm>>
     <associate|connected image of a connected set by a continuous function is
-    connected|<tuple|14.394|823|Topology.tm>>
+    connected|<tuple|14.388|817|Topology.tm>>
     <associate|connected intermediate value
-    theorem|<tuple|14.398|826|Topology.tm>>
-    <associate|connected set|<tuple|14.393|823|Topology.tm>>
-    <associate|connected space|<tuple|14.389|822|Topology.tm>>
-    <associate|continuity K^n|<tuple|14.184|719|Topology.tm>>
+    theorem|<tuple|14.392|820|Topology.tm>>
+    <associate|connected set|<tuple|14.387|817|Topology.tm>>
+    <associate|connected space|<tuple|14.383|816|Topology.tm>>
+    <associate|continuity K^n|<tuple|14.185|719|Topology.tm>>
     <associate|continuity L(X,L(Y,Z)) is isometric with
-    L(X,Y;Z)|<tuple|14.193|726|Topology.tm>>
+    L(X,Y;Z)|<tuple|14.194|726|Topology.tm>>
     <associate|continuity L(X,Y) is a subspace of
-    Hom(X,Y)|<tuple|14.168|711|Topology.tm>>
-    <associate|continuity L^n(X;Y)|<tuple|14.190|725|Topology.tm>>
-    <associate|continuity Lispschitz condition|<tuple|14.151|705|Topology.tm>>
+    Hom(X,Y)|<tuple|14.169|711|Topology.tm>>
+    <associate|continuity L^n(X;Y)|<tuple|14.191|725|Topology.tm>>
+    <associate|continuity Lispschitz condition|<tuple|14.152|705|Topology.tm>>
     <associate|continuity Lispschitz implies uniform
-    continuity|<tuple|14.152|705|Topology.tm>>
-    <associate|continuity and basis|<tuple|14.123|695|Topology.tm>>
+    continuity|<tuple|14.153|706|Topology.tm>>
+    <associate|continuity and basis|<tuple|14.124|695|Topology.tm>>
     <associate|continuity and subspace topology
-    (1)|<tuple|14.130|697|Topology.tm>>
+    (1)|<tuple|14.131|697|Topology.tm>>
     <associate|continuity and subspace topology
-    (2)|<tuple|14.131|697|Topology.tm>>
-    <associate|continuity at a point|<tuple|14.121|695|Topology.tm>>
-    <associate|continuity composition|<tuple|14.134|698|Topology.tm>>
-    <associate|continuity composition is multilinear|<tuple|14.192|725|Topology.tm>>
+    (2)|<tuple|14.132|697|Topology.tm>>
+    <associate|continuity at a point|<tuple|14.122|695|Topology.tm>>
+    <associate|continuity composition|<tuple|14.135|698|Topology.tm>>
+    <associate|continuity composition is multilinear|<tuple|14.193|726|Topology.tm>>
     <associate|continuity composition of continuous linear
-    mapping|<tuple|14.178|716|Topology.tm>>
+    mapping|<tuple|14.179|716|Topology.tm>>
     <associate|continuity composition of multilinear and linear
-    mapping|<tuple|14.191|725|Topology.tm>>
-    <associate|continuity constant function|<tuple|14.128|697|Topology.tm>>
-    <associate|continuity continuous function|<tuple|14.126|696|Topology.tm>>
+    mapping|<tuple|14.192|725|Topology.tm>>
+    <associate|continuity constant function|<tuple|14.129|697|Topology.tm>>
+    <associate|continuity continuous function|<tuple|14.127|696|Topology.tm>>
     <associate|continuity continuous function
-    (1)|<tuple|14.127|696|Topology.tm>>
+    (1)|<tuple|14.128|696|Topology.tm>>
     <associate|continuity distance function is
-    Lipschitz|<tuple|14.156|706|Topology.tm>>
-    <associate|continuity equivalences|<tuple|14.132|697|Topology.tm>>
+    Lipschitz|<tuple|14.157|706|Topology.tm>>
+    <associate|continuity equivalences|<tuple|14.133|698|Topology.tm>>
     <associate|continuity function partial
-    application|<tuple|14.137|700|Topology.tm>>
+    application|<tuple|14.138|700|Topology.tm>>
     <associate|continuity homemorphism between powers of
-    R|<tuple|14.171|712|Topology.tm>>
-    <associate|continuity homeomorphism|<tuple|14.157|706|Topology.tm>>
-    <associate|continuity homeomorphism (1)|<tuple|14.158|706|Topology.tm>>
+    R|<tuple|14.172|712|Topology.tm>>
+    <associate|continuity homeomorphism|<tuple|14.158|707|Topology.tm>>
+    <associate|continuity homeomorphism (1)|<tuple|14.159|707|Topology.tm>>
     <associate|continuity homeomorphism and
-    restriction|<tuple|14.161|707|Topology.tm>>
+    restriction|<tuple|14.162|707|Topology.tm>>
     <associate|continuity homeomorphism between K^n and finite dimensional
-    space|<tuple|14.165|709|Topology.tm>>
-    <associate|continuity homeomorphism composition|<tuple|14.160|707|Topology.tm>>
-    <associate|continuity identity function|<tuple|14.129|697|Topology.tm>>
+    space|<tuple|14.166|710|Topology.tm>>
+    <associate|continuity homeomorphism composition|<tuple|14.161|707|Topology.tm>>
+    <associate|continuity identity function|<tuple|14.130|697|Topology.tm>>
     <associate|continuity identity map is linear and
-    continuous|<tuple|14.167|711|Topology.tm>>
-    <associate|continuity in a metric space|<tuple|14.124|695|Topology.tm>>
-    <associate|continuity in a normed space|<tuple|14.125|696|Topology.tm>>
-    <associate|continuity induced topology|<tuple|14.163|707|Topology.tm>>
+    continuous|<tuple|14.168|711|Topology.tm>>
+    <associate|continuity in a metric space|<tuple|14.125|696|Topology.tm>>
+    <associate|continuity in a normed space|<tuple|14.126|696|Topology.tm>>
+    <associate|continuity induced topology|<tuple|14.164|708|Topology.tm>>
     <associate|continuity inverse induced
-    topology|<tuple|14.164|709|Topology.tm>>
-    <associate|continuity inverse of a homeomorphism|<tuple|14.159|706|Topology.tm>>
-    <associate|continuity isometry is a homeomorphism|<tuple|14.162|707|Topology.tm>>
-    <associate|continuity linear mapping (1)|<tuple|14.169|711|Topology.tm>>
+    topology|<tuple|14.165|709|Topology.tm>>
+    <associate|continuity inverse of a homeomorphism|<tuple|14.160|707|Topology.tm>>
+    <associate|continuity isometry is a homeomorphism|<tuple|14.163|708|Topology.tm>>
+    <associate|continuity linear mapping (1)|<tuple|14.170|711|Topology.tm>>
     <associate|continuity linear mapping between
-    R^n|<tuple|14.170|711|Topology.tm>>
+    R^n|<tuple|14.171|712|Topology.tm>>
     <associate|continuity multilinear mapping
-    (1)|<tuple|14.183|717|Topology.tm>>
+    (1)|<tuple|14.184|718|Topology.tm>>
     <associate|continuity multilinear mapping (2)
-    norm|<tuple|14.187|721|Topology.tm>>
+    norm|<tuple|14.188|721|Topology.tm>>
     <associate|continuity multilinear mappings vector
-    space|<tuple|14.186|720|Topology.tm>>
-    <associate|continuity norm is continuous|<tuple|14.145|703|Topology.tm>>
+    space|<tuple|14.187|721|Topology.tm>>
+    <associate|continuity norm is continuous|<tuple|14.146|704|Topology.tm>>
     <associate|continuity norm is uniform
-    continuous|<tuple|14.148|704|Topology.tm>>
+    continuous|<tuple|14.149|705|Topology.tm>>
     <associate|continuity norm of continuous linear mapping
-    (1)|<tuple|14.172|712|Topology.tm>>
+    (1)|<tuple|14.173|712|Topology.tm>>
     <associate|continuity norm of projection
-    operator|<tuple|14.177|715|Topology.tm>>
-    <associate|continuity norm on L(X,Y)|<tuple|14.176|715|Topology.tm>>
+    operator|<tuple|14.178|716|Topology.tm>>
+    <associate|continuity norm on L(X,Y)|<tuple|14.177|715|Topology.tm>>
     <associate|continuity of finite sum of continuous
-    functions|<tuple|14.141|702|Topology.tm>>
-    <associate|continuity of power function|<tuple|14.144|703|Topology.tm>>
-    <associate|continuity of sum|<tuple|14.150|705|Topology.tm>>
-    <associate|continuity of sum (1)|<tuple|14.153|705|Topology.tm>>
-    <associate|continuity of sum of continuous
-    functions|<tuple|14.140|701|Topology.tm>>
-    <associate|continuity open function|<tuple|14.133|698|Topology.tm>>
-    <associate|continuity open linear mapping|<tuple|14.179|716|Topology.tm>>
-    <associate|continuity operator norm|<tuple|14.173|713|Topology.tm>>
-    <associate|continuity operator norm (1)|<tuple|14.174|713|Topology.tm>>
-    <associate|continuity operator norm (2)|<tuple|14.175|714|Topology.tm>>
-    <associate|continuity operator norm of multilinear
-    mappings|<tuple|14.188|722|Topology.tm>>
-    <associate|continuity operator norm of multilinear mappings
-    (1)|<tuple|14.189|722|Topology.tm>>
-    <associate|continuity power of continuous
-    functions|<tuple|14.143|703|Topology.tm>>
-    <associate|continuity product and continuous
-    functions|<tuple|14.136|699|Topology.tm>>
-    <associate|continuity product of continuous
     functions|<tuple|14.142|702|Topology.tm>>
+    <associate|continuity of power function|<tuple|14.145|704|Topology.tm>>
+    <associate|continuity of sum|<tuple|14.151|705|Topology.tm>>
+    <associate|continuity of sum (1)|<tuple|14.154|706|Topology.tm>>
+    <associate|continuity of sum of continuous
+    functions|<tuple|14.141|701|Topology.tm>>
+    <associate|continuity open function|<tuple|14.134|698|Topology.tm>>
+    <associate|continuity open linear mapping|<tuple|14.180|716|Topology.tm>>
+    <associate|continuity operator norm|<tuple|14.174|713|Topology.tm>>
+    <associate|continuity operator norm (1)|<tuple|14.175|713|Topology.tm>>
+    <associate|continuity operator norm (2)|<tuple|14.176|715|Topology.tm>>
+    <associate|continuity operator norm of multilinear
+    mappings|<tuple|14.189|722|Topology.tm>>
+    <associate|continuity operator norm of multilinear mappings
+    (1)|<tuple|14.190|723|Topology.tm>>
+    <associate|continuity power of continuous
+    functions|<tuple|14.144|703|Topology.tm>>
+    <associate|continuity product and continuous
+    functions|<tuple|14.137|699|Topology.tm>>
+    <associate|continuity product of continuous
+    functions|<tuple|14.143|703|Topology.tm>>
     <associate|continuity projection map is open and
-    continuous|<tuple|14.135|698|Topology.tm>>
+    continuous|<tuple|14.136|699|Topology.tm>>
     <associate|continuity real and complex
-    part|<tuple|14.149|705|Topology.tm>>
-    <associate|continuity scalar product|<tuple|14.138|700|Topology.tm>>
-    <associate|continuity scalar product (1)|<tuple|14.139|701|Topology.tm>>
-    <associate|continuity uniform continuity|<tuple|14.146|704|Topology.tm>>
+    part|<tuple|14.150|705|Topology.tm>>
+    <associate|continuity scalar product|<tuple|14.139|701|Topology.tm>>
+    <associate|continuity scalar product (1)|<tuple|14.140|701|Topology.tm>>
+    <associate|continuity uniform continuity|<tuple|14.147|704|Topology.tm>>
     <associate|continuity universal continuity implies
-    continuity|<tuple|14.147|704|Topology.tm>>
+    continuity|<tuple|14.148|705|Topology.tm>>
     <associate|countable AUB and AxB|<tuple|6.71|200|NaturalNumbers.tm>>
     <associate|countable product of a finite family of countable sets is
     countable (2)|<tuple|6.73|200|NaturalNumbers.tm>>
@@ -2558,28 +2557,28 @@
     <associate|eq 14.1.145|<tuple|14.3|657|Topology.tm>>
     <associate|eq 14.1.162|<tuple|14.2|655|Topology.tm>>
     <associate|eq 14.1.167|<tuple|14.1|654|Topology.tm>>
-    <associate|eq 14.10.146|<tuple|14.14|665|Topology.tm>>
-    <associate|eq 14.100.150|<tuple|14.103|731|Topology.tm>>
+    <associate|eq 14.10.146|<tuple|14.14|664|Topology.tm>>
+    <associate|eq 14.100.150|<tuple|14.103|732|Topology.tm>>
     <associate|eq 14.101.150|<tuple|14.104|732|Topology.tm>>
     <associate|eq 14.102.150|<tuple|14.105|732|Topology.tm>>
     <associate|eq 14.103.150|<tuple|14.106|732|Topology.tm>>
     <associate|eq 14.104.150|<tuple|14.107|732|Topology.tm>>
     <associate|eq 14.105.150|<tuple|14.108|732|Topology.tm>>
-    <associate|eq 14.106.150|<tuple|14.109|732|Topology.tm>>
+    <associate|eq 14.106.150|<tuple|14.109|733|Topology.tm>>
     <associate|eq 14.107.150|<tuple|14.110|733|Topology.tm>>
-    <associate|eq 14.109.150|<tuple|14.113|737|Topology.tm>>
+    <associate|eq 14.109.150|<tuple|14.113|738|Topology.tm>>
     <associate|eq 14.11.146|<tuple|14.15|665|Topology.tm>>
     <associate|eq 14.111.169|<tuple|14.111|734|Topology.tm>>
     <associate|eq 14.112.152|<tuple|14.116|740|Topology.tm>>
     <associate|eq 14.112.169|<tuple|14.112|734|Topology.tm>>
     <associate|eq 14.113.152|<tuple|14.117|740|Topology.tm>>
-    <associate|eq 14.114.151|<tuple|14.114|739|Topology.tm>>
-    <associate|eq 14.114.152|<tuple|14.118|741|Topology.tm>>
-    <associate|eq 14.115.151|<tuple|14.115|739|Topology.tm>>
+    <associate|eq 14.114.151|<tuple|14.114|740|Topology.tm>>
+    <associate|eq 14.114.152|<tuple|14.118|742|Topology.tm>>
+    <associate|eq 14.115.151|<tuple|14.115|740|Topology.tm>>
     <associate|eq 14.115.152|<tuple|14.120|742|Topology.tm>>
     <associate|eq 14.115.154|<tuple|14.119|742|Topology.tm>>
     <associate|eq 14.116.152|<tuple|14.121|742|Topology.tm>>
-    <associate|eq 14.117.152|<tuple|14.122|742|Topology.tm>>
+    <associate|eq 14.117.152|<tuple|14.122|743|Topology.tm>>
     <associate|eq 14.118.152|<tuple|14.124|744|Topology.tm>>
     <associate|eq 14.119.152|<tuple|14.125|744|Topology.tm>>
     <associate|eq 14.12.146|<tuple|14.16|666|Topology.tm>>
@@ -2587,216 +2586,204 @@
     <associate|eq 14.121.152|<tuple|14.127|748|Topology.tm>>
     <associate|eq 14.122.152|<tuple|14.128|748|Topology.tm>>
     <associate|eq 14.123.152|<tuple|14.129|748|Topology.tm>>
-    <associate|eq 14.123.170|<tuple|14.123|742|Topology.tm>>
+    <associate|eq 14.123.170|<tuple|14.123|743|Topology.tm>>
     <associate|eq 14.124.152|<tuple|14.131|749|Topology.tm>>
-    <associate|eq 14.124.153|<tuple|14.130|748|Topology.tm>>
-    <associate|eq 14.125.152|<tuple|14.132|749|Topology.tm>>
+    <associate|eq 14.124.153|<tuple|14.130|749|Topology.tm>>
+    <associate|eq 14.125.152|<tuple|14.132|750|Topology.tm>>
     <associate|eq 14.127.153|<tuple|14.133|750|Topology.tm>>
     <associate|eq 14.128.153|<tuple|14.134|750|Topology.tm>>
     <associate|eq 14.129.153|<tuple|14.135|750|Topology.tm>>
     <associate|eq 14.13.146|<tuple|14.17|671|Topology.tm>>
-    <associate|eq 14.130.153|<tuple|14.136|750|Topology.tm>>
-    <associate|eq 14.131.153|<tuple|14.137|750|Topology.tm>>
-    <associate|eq 14.132.153|<tuple|14.139|752|Topology.tm>>
-    <associate|eq 14.133.153|<tuple|14.140|752|Topology.tm>>
+    <associate|eq 14.130.153|<tuple|14.136|751|Topology.tm>>
+    <associate|eq 14.131.153|<tuple|14.137|751|Topology.tm>>
+    <associate|eq 14.132.153|<tuple|14.139|753|Topology.tm>>
+    <associate|eq 14.133.153|<tuple|14.140|753|Topology.tm>>
     <associate|eq 14.134.153|<tuple|14.141|753|Topology.tm>>
-    <associate|eq 14.135.153|<tuple|14.142|754|Topology.tm>>
-    <associate|eq 14.136.153|<tuple|14.143|754|Topology.tm>>
-    <associate|eq 14.137.153|<tuple|14.144|754|Topology.tm>>
-    <associate|eq 14.138.153|<tuple|14.145|754|Topology.tm>>
-    <associate|eq 14.138.170|<tuple|14.138|752|Topology.tm>>
-    <associate|eq 14.139.153|<tuple|14.146|754|Topology.tm>>
+    <associate|eq 14.135.153|<tuple|14.142|755|Topology.tm>>
+    <associate|eq 14.136.153|<tuple|14.143|755|Topology.tm>>
+    <associate|eq 14.137.153|<tuple|14.144|755|Topology.tm>>
+    <associate|eq 14.138.153|<tuple|14.145|755|Topology.tm>>
+    <associate|eq 14.138.170|<tuple|14.138|753|Topology.tm>>
+    <associate|eq 14.139.153|<tuple|14.146|755|Topology.tm>>
     <associate|eq 14.14.146|<tuple|14.18|671|Topology.tm>>
     <associate|eq 14.140.153|<tuple|14.147|756|Topology.tm>>
     <associate|eq 14.141.153|<tuple|14.148|756|Topology.tm>>
     <associate|eq 14.142.153|<tuple|14.149|756|Topology.tm>>
-    <associate|eq 14.143.153|<tuple|14.150|756|Topology.tm>>
-    <associate|eq 14.144.153|<tuple|14.151|756|Topology.tm>>
-    <associate|eq 14.145.153|<tuple|14.152|756|Topology.tm>>
-    <associate|eq 14.146.153|<tuple|14.153|756|Topology.tm>>
-    <associate|eq 14.147.153|<tuple|14.154|757|Topology.tm>>
-    <associate|eq 14.148.153|<tuple|14.155|757|Topology.tm>>
-    <associate|eq 14.149\<point\>153|<tuple|14.178|781|Topology.tm>>
+    <associate|eq 14.143.153|<tuple|14.150|757|Topology.tm>>
+    <associate|eq 14.144.153|<tuple|14.151|757|Topology.tm>>
+    <associate|eq 14.145.153|<tuple|14.152|757|Topology.tm>>
+    <associate|eq 14.146.153|<tuple|14.153|757|Topology.tm>>
+    <associate|eq 14.147.153|<tuple|14.154|758|Topology.tm>>
+    <associate|eq 14.148.153|<tuple|14.155|758|Topology.tm>>
+    <associate|eq 14.149\<point\>153|<tuple|14.179|782|Topology.tm>>
     <associate|eq 14.15.146|<tuple|14.19|673|Topology.tm>>
-    <associate|eq 14.150.153|<tuple|14.179|781|Topology.tm>>
-    <associate|eq 14.150.154|<tuple|14.166|775|Topology.tm>>
-    <associate|eq 14.150.155|<tuple|14.161|770|Topology.tm>>
-    <associate|eq 14.150.158|<tuple|14.156|769|Topology.tm>>
-    <associate|eq 14.151.153|<tuple|14.180|781|Topology.tm>>
-    <associate|eq 14.151.154|<tuple|14.169|776|Topology.tm>>
-    <associate|eq 14.151.155|<tuple|14.167|775|Topology.tm>>
-    <associate|eq 14.151.156|<tuple|14.162|770|Topology.tm>>
-    <associate|eq 14.151.158|<tuple|14.157|769|Topology.tm>>
-    <associate|eq 14.152.153|<tuple|14.181|781|Topology.tm>>
-    <associate|eq 14.152.155|<tuple|14.168|775|Topology.tm>>
-    <associate|eq 14.152.156|<tuple|14.163|770|Topology.tm>>
-    <associate|eq 14.152.158|<tuple|14.158|769|Topology.tm>>
-    <associate|eq 14.153.155|<tuple|14.164|770|Topology.tm>>
-    <associate|eq 14.153.158|<tuple|14.159|769|Topology.tm>>
-    <associate|eq 14.154.155|<tuple|14.170|776|Topology.tm>>
-    <associate|eq 14.154.156|<tuple|14.165|775|Topology.tm>>
-    <associate|eq 14.154.158|<tuple|14.160|769|Topology.tm>>
-    <associate|eq 14.155.155|<tuple|14.171|776|Topology.tm>>
-    <associate|eq 14.156.155|<tuple|14.172|777|Topology.tm>>
-    <associate|eq 14.157.155|<tuple|14.173|777|Topology.tm>>
-    <associate|eq 14.158.155|<tuple|14.174|777|Topology.tm>>
-    <associate|eq 14.159.155|<tuple|14.175|778|Topology.tm>>
+    <associate|eq 14.150.153|<tuple|14.180|782|Topology.tm>>
+    <associate|eq 14.150.154|<tuple|14.167|776|Topology.tm>>
+    <associate|eq 14.150.155|<tuple|14.162|771|Topology.tm>>
+    <associate|eq 14.150.158|<tuple|14.157|770|Topology.tm>>
+    <associate|eq 14.151.153|<tuple|14.181|782|Topology.tm>>
+    <associate|eq 14.151.154|<tuple|14.170|777|Topology.tm>>
+    <associate|eq 14.151.155|<tuple|14.168|777|Topology.tm>>
+    <associate|eq 14.151.156|<tuple|14.163|771|Topology.tm>>
+    <associate|eq 14.151.158|<tuple|14.158|770|Topology.tm>>
+    <associate|eq 14.152.153|<tuple|14.182|783|Topology.tm>>
+    <associate|eq 14.152.155|<tuple|14.169|777|Topology.tm>>
+    <associate|eq 14.152.156|<tuple|14.164|771|Topology.tm>>
+    <associate|eq 14.152.158|<tuple|14.159|770|Topology.tm>>
+    <associate|eq 14.153.155|<tuple|14.165|771|Topology.tm>>
+    <associate|eq 14.153.158|<tuple|14.160|770|Topology.tm>>
+    <associate|eq 14.154.155|<tuple|14.171|778|Topology.tm>>
+    <associate|eq 14.154.156|<tuple|14.166|776|Topology.tm>>
+    <associate|eq 14.154.158|<tuple|14.161|771|Topology.tm>>
+    <associate|eq 14.155.155|<tuple|14.172|778|Topology.tm>>
+    <associate|eq 14.156.155|<tuple|14.173|778|Topology.tm>>
+    <associate|eq 14.156.170|<tuple|14.156|758|Topology.tm>>
+    <associate|eq 14.157.155|<tuple|14.174|778|Topology.tm>>
+    <associate|eq 14.158.155|<tuple|14.175|778|Topology.tm>>
+    <associate|eq 14.159.155|<tuple|14.176|779|Topology.tm>>
     <associate|eq 14.16.146|<tuple|14.20|673|Topology.tm>>
-    <associate|eq 14.160.155|<tuple|14.176|778|Topology.tm>>
-    <associate|eq 14.161.155|<tuple|14.177|778|Topology.tm>>
-    <associate|eq 14.17.146|<tuple|14.21|674|Topology.tm>>
-    <associate|eq 14.171.156|<tuple|14.182|787|Topology.tm>>
-    <associate|eq 14.172.156|<tuple|14.183|787|Topology.tm>>
-    <associate|eq 14.173.156|<tuple|14.184|787|Topology.tm>>
-    <associate|eq 14.174.156|<tuple|14.185|789|Topology.tm>>
-    <associate|eq 14.175.156|<tuple|14.186|789|Topology.tm>>
-    <associate|eq 14.176.156|<tuple|14.187|792|Topology.tm>>
-    <associate|eq 14.177.156|<tuple|14.188|793|Topology.tm>>
-    <associate|eq 14.178.156|<tuple|14.189|794|Topology.tm>>
-    <associate|eq 14.179.156|<tuple|14.190|794|Topology.tm>>
+    <associate|eq 14.160.155|<tuple|14.177|779|Topology.tm>>
+    <associate|eq 14.161.155|<tuple|14.178|779|Topology.tm>>
+    <associate|eq 14.17.146|<tuple|14.21|673|Topology.tm>>
+    <associate|eq 14.171.156|<tuple|14.183|788|Topology.tm>>
+    <associate|eq 14.172.156|<tuple|14.184|789|Topology.tm>>
+    <associate|eq 14.173.156|<tuple|14.185|789|Topology.tm>>
+    <associate|eq 14.174.156|<tuple|14.186|790|Topology.tm>>
+    <associate|eq 14.175.156|<tuple|14.187|791|Topology.tm>>
+    <associate|eq 14.176.156|<tuple|14.189|794|Topology.tm>>
+    <associate|eq 14.177.156|<tuple|14.190|794|Topology.tm>>
+    <associate|eq 14.178.156|<tuple|14.191|795|Topology.tm>>
+    <associate|eq 14.179.156|<tuple|14.192|795|Topology.tm>>
     <associate|eq 14.18.146|<tuple|14.22|675|Topology.tm>>
-    <associate|eq 14.180.156|<tuple|14.191|794|Topology.tm>>
-    <associate|eq 14.181.156|<tuple|14.192|794|Topology.tm>>
-    <associate|eq 14.182.156|<tuple|14.193|794|Topology.tm>>
-    <associate|eq 14.183.156|<tuple|14.194|794|Topology.tm>>
-    <associate|eq 14.184.156|<tuple|14.195|795|Topology.tm>>
-    <associate|eq 14.185.156|<tuple|14.196|795|Topology.tm>>
-    <associate|eq 14.186.156|<tuple|14.197|795|Topology.tm>>
-    <associate|eq 14.187.156|<tuple|14.198|795|Topology.tm>>
-    <associate|eq 14.188.156|<tuple|14.199|796|Topology.tm>>
-    <associate|eq 14.189.156|<tuple|14.200|796|Topology.tm>>
-    <associate|eq 14.19.146|<tuple|14.23|676|Topology.tm>>
-    <associate|eq 14.190.156|<tuple|14.201|796|Topology.tm>>
-    <associate|eq 14.191.156|<tuple|14.202|796|Topology.tm>>
-    <associate|eq 14.192.156|<tuple|14.203|797|Topology.tm>>
-    <associate|eq 14.193.156|<tuple|14.204|798|Topology.tm>>
-    <associate|eq 14.199.156|<tuple|14.206|800|Topology.tm>>
-    <associate|eq 14.199.157|<tuple|14.205|800|Topology.tm>>
+    <associate|eq 14.180.156|<tuple|14.193|796|Topology.tm>>
+    <associate|eq 14.181.156|<tuple|14.194|796|Topology.tm>>
+    <associate|eq 14.182.156|<tuple|14.195|796|Topology.tm>>
+    <associate|eq 14.183.156|<tuple|14.196|796|Topology.tm>>
+    <associate|eq 14.184.156|<tuple|14.197|796|Topology.tm>>
+    <associate|eq 14.185.156|<tuple|14.198|796|Topology.tm>>
+    <associate|eq 14.186.156|<tuple|14.199|797|Topology.tm>>
+    <associate|eq 14.187.156|<tuple|14.200|797|Topology.tm>>
+    <associate|eq 14.188.156|<tuple|14.201|797|Topology.tm>>
+    <associate|eq 14.188.170|<tuple|14.188|793|Topology.tm>>
+    <associate|eq 14.189.156|<tuple|14.202|798|Topology.tm>>
+    <associate|eq 14.19.146|<tuple|14.23|675|Topology.tm>>
+    <associate|eq 14.190.156|<tuple|14.203|798|Topology.tm>>
+    <associate|eq 14.191.156|<tuple|14.204|798|Topology.tm>>
+    <associate|eq 14.192.156|<tuple|14.205|799|Topology.tm>>
+    <associate|eq 14.193.156|<tuple|14.206|799|Topology.tm>>
+    <associate|eq 14.199.156|<tuple|14.212|803|Topology.tm>>
+    <associate|eq 14.199.157|<tuple|14.211|803|Topology.tm>>
     <associate|eq 14.2.145|<tuple|14.4|658|Topology.tm>>
     <associate|eq 14.20.146|<tuple|14.24|676|Topology.tm>>
-    <associate|eq 14.200.156|<tuple|14.207|800|Topology.tm>>
-    <associate|eq 14.201.156|<tuple|14.208|801|Topology.tm>>
-    <associate|eq 14.203.158|<tuple|14.209|801|Topology.tm>>
-    <associate|eq 14.204.158|<tuple|14.210|801|Topology.tm>>
-    <associate|eq 14.205.158|<tuple|14.211|802|Topology.tm>>
-    <associate|eq 14.206.158|<tuple|14.212|802|Topology.tm>>
-    <associate|eq 14.207.158|<tuple|14.213|802|Topology.tm>>
-    <associate|eq 14.208.158|<tuple|14.214|802|Topology.tm>>
-    <associate|eq 14.209.528|<tuple|14.215|803|Topology.tm>>
-    <associate|eq 14.21.146|<tuple|14.25|678|Topology.tm>>
-    <associate|eq 14.210.158|<tuple|14.216|803|Topology.tm>>
-    <associate|eq 14.211.159|<tuple|14.217|809|Topology.tm>>
-    <associate|eq 14.212.159|<tuple|14.218|809|Topology.tm>>
-    <associate|eq 14.213.159|<tuple|14.219|809|Topology.tm>>
-    <associate|eq 14.214.159|<tuple|14.220|809|Topology.tm>>
-    <associate|eq 14.215.159|<tuple|14.221|809|Topology.tm>>
-    <associate|eq 14.216.159|<tuple|14.222|810|Topology.tm>>
-    <associate|eq 14.217.159|<tuple|14.223|810|Topology.tm>>
-    <associate|eq 14.218.159|<tuple|14.224|810|Topology.tm>>
-    <associate|eq 14.219.160|<tuple|14.226|810|Topology.tm>>
-    <associate|eq 14.219.161|<tuple|14.225|810|Topology.tm>>
+    <associate|eq 14.200.156|<tuple|14.213|803|Topology.tm>>
+    <associate|eq 14.201.156|<tuple|14.214|804|Topology.tm>>
+    <associate|eq 14.203.158|<tuple|14.215|804|Topology.tm>>
+    <associate|eq 14.204.158|<tuple|14.216|804|Topology.tm>>
+    <associate|eq 14.205.158|<tuple|14.217|805|Topology.tm>>
+    <associate|eq 14.206.158|<tuple|14.218|805|Topology.tm>>
+    <associate|eq 14.207.158|<tuple|14.219|805|Topology.tm>>
+    <associate|eq 14.207.172|<tuple|14.207|801|Topology.tm>>
+    <associate|eq 14.208.158|<tuple|14.220|805|Topology.tm>>
+    <associate|eq 14.208.172|<tuple|14.208|802|Topology.tm>>
+    <associate|eq 14.209.172|<tuple|14.209|802|Topology.tm>>
+    <associate|eq 14.209.528|<tuple|14.221|806|Topology.tm>>
+    <associate|eq 14.21.146|<tuple|14.25|677|Topology.tm>>
+    <associate|eq 14.210.158|<tuple|14.222|806|Topology.tm>>
+    <associate|eq 14.210.172|<tuple|14.210|802|Topology.tm>>
     <associate|eq 14.22.146|<tuple|14.26|681|Topology.tm>>
-    <associate|eq 14.220.159|<tuple|14.227|810|Topology.tm>>
-    <associate|eq 14.221.519|<tuple|14.228|810|Topology.tm>>
-    <associate|eq 14.222.159|<tuple|14.230|811|Topology.tm>>
-    <associate|eq 14.223.159.1|<tuple|14.229|810|Topology.tm>>
-    <associate|eq 14.225.161|<tuple|14.231|811|Topology.tm>>
-    <associate|eq 14.226.161|<tuple|14.232|811|Topology.tm>>
-    <associate|eq 14.227\<point\>161|<tuple|14.233|811|Topology.tm>>
-    <associate|eq 14.228.161|<tuple|14.234|812|Topology.tm>>
-    <associate|eq 14.229.161|<tuple|14.235|812|Topology.tm>>
-    <associate|eq 14.23.146|<tuple|14.27|683|Topology.tm>>
-    <associate|eq 14.230.161|<tuple|14.236|812|Topology.tm>>
-    <associate|eq 14.234.164|<tuple|14.237|813|Topology.tm>>
-    <associate|eq 14.235.164|<tuple|14.238|814|Topology.tm>>
-    <associate|eq 14.236.164|<tuple|14.239|815|Topology.tm>>
-    <associate|eq 14.237.164|<tuple|14.240|815|Topology.tm>>
-    <associate|eq 14.238.164|<tuple|14.241|815|Topology.tm>>
-    <associate|eq 14.239.164|<tuple|14.243|816|Topology.tm>>
-    <associate|eq 14.239.165|<tuple|14.242|816|Topology.tm>>
+    <associate|eq 14.228.171|<tuple|14.232|812|Topology.tm>>
+    <associate|eq 14.229.171|<tuple|14.233|812|Topology.tm>>
+    <associate|eq 14.23.146|<tuple|14.27|682|Topology.tm>>
+    <associate|eq 14.230.171|<tuple|14.234|812|Topology.tm>>
+    <associate|eq 14.234.164|<tuple|14.223|807|Topology.tm>>
+    <associate|eq 14.235.164|<tuple|14.224|807|Topology.tm>>
+    <associate|eq 14.236.164|<tuple|14.225|808|Topology.tm>>
+    <associate|eq 14.237.164|<tuple|14.226|808|Topology.tm>>
+    <associate|eq 14.238.164|<tuple|14.227|809|Topology.tm>>
+    <associate|eq 14.239.164|<tuple|14.229|810|Topology.tm>>
+    <associate|eq 14.239.165|<tuple|14.228|810|Topology.tm>>
     <associate|eq 14.24.146|<tuple|14.28|683|Topology.tm>>
-    <associate|eq 14.240.164|<tuple|14.245|817|Topology.tm>>
-    <associate|eq 14.243.166|<tuple|14.246|818|Topology.tm>>
-    <associate|eq 14.244.166|<tuple|14.247|818|Topology.tm>>
-    <associate|eq 14.245.166|<tuple|14.248|818|Topology.tm>>
-    <associate|eq 14.246.166|<tuple|14.249|819|Topology.tm>>
-    <associate|eq 14.247.166|<tuple|14.250|819|Topology.tm>>
-    <associate|eq 14.248.166|<tuple|14.251|819|Topology.tm>>
-    <associate|eq 14.249.166|<tuple|14.252|820|Topology.tm>>
+    <associate|eq 14.240.164|<tuple|14.231|811|Topology.tm>>
+    <associate|eq 14.245.166|<tuple|14.235|812|Topology.tm>>
+    <associate|eq 14.246.166|<tuple|14.236|813|Topology.tm>>
+    <associate|eq 14.247.166|<tuple|14.237|813|Topology.tm>>
+    <associate|eq 14.248.166|<tuple|14.238|813|Topology.tm>>
+    <associate|eq 14.249.166|<tuple|14.239|814|Topology.tm>>
     <associate|eq 14.25.146|<tuple|14.29|685|Topology.tm>>
-    <associate|eq 14.250.166|<tuple|14.253|820|Topology.tm>>
-    <associate|eq 14.251.166|<tuple|14.254|820|Topology.tm>>
-    <associate|eq 14.252.166|<tuple|14.255|821|Topology.tm>>
-    <associate|eq 14.253.166|<tuple|14.256|821|Topology.tm>>
-    <associate|eq 14.254.166|<tuple|14.257|823|Topology.tm>>
-    <associate|eq 14.255.166|<tuple|14.258|823|Topology.tm>>
-    <associate|eq 14.256.166|<tuple|14.259|823|Topology.tm>>
-    <associate|eq 14.257.166|<tuple|14.260|823|Topology.tm>>
-    <associate|eq 14.259.167|<tuple|14.261|823|Topology.tm>>
+    <associate|eq 14.250.166|<tuple|14.240|814|Topology.tm>>
+    <associate|eq 14.251.166|<tuple|14.241|814|Topology.tm>>
+    <associate|eq 14.251.173|<tuple|14.251|818|Topology.tm>>
+    <associate|eq 14.252.166|<tuple|14.242|815|Topology.tm>>
+    <associate|eq 14.253.166|<tuple|14.243|815|Topology.tm>>
+    <associate|eq 14.254.166|<tuple|14.244|817|Topology.tm>>
+    <associate|eq 14.255.166|<tuple|14.245|817|Topology.tm>>
+    <associate|eq 14.256.166|<tuple|14.246|817|Topology.tm>>
+    <associate|eq 14.257.166|<tuple|14.247|817|Topology.tm>>
+    <associate|eq 14.259.167|<tuple|14.248|818|Topology.tm>>
     <associate|eq 14.26.146|<tuple|14.30|685|Topology.tm>>
-    <associate|eq 14.260.167|<tuple|14.262|824|Topology.tm>>
-    <associate|eq 14.261.167|<tuple|14.263|824|Topology.tm>>
-    <associate|eq 14.262.167|<tuple|14.264|824|Topology.tm>>
-    <associate|eq 14.263.167|<tuple|14.265|824|Topology.tm>>
-    <associate|eq 14.264.167|<tuple|14.266|824|Topology.tm>>
-    <associate|eq 14.265.167|<tuple|14.267|824|Topology.tm>>
-    <associate|eq 14.266.167|<tuple|14.268|825|Topology.tm>>
-    <associate|eq 14.267.167|<tuple|14.269|825|Topology.tm>>
-    <associate|eq 14.268.167|<tuple|14.270|825|Topology.tm>>
-    <associate|eq 14.269.167|<tuple|14.271|825|Topology.tm>>
-    <associate|eq 14.27.146|<tuple|14.31|685|Topology.tm>>
+    <associate|eq 14.260.167|<tuple|14.249|818|Topology.tm>>
+    <associate|eq 14.261.167|<tuple|14.250|818|Topology.tm>>
+    <associate|eq 14.262.167|<tuple|14.252|818|Topology.tm>>
+    <associate|eq 14.263.167|<tuple|14.253|818|Topology.tm>>
+    <associate|eq 14.264.167|<tuple|14.254|819|Topology.tm>>
+    <associate|eq 14.265.167|<tuple|14.255|819|Topology.tm>>
+    <associate|eq 14.266.167|<tuple|14.256|819|Topology.tm>>
+    <associate|eq 14.267.167|<tuple|14.257|819|Topology.tm>>
+    <associate|eq 14.268.167|<tuple|14.258|819|Topology.tm>>
+    <associate|eq 14.269.167|<tuple|14.259|819|Topology.tm>>
+    <associate|eq 14.27.146|<tuple|14.31|686|Topology.tm>>
     <associate|eq 14.28.147|<tuple|14.32|686|Topology.tm>>
     <associate|eq 14.29.146|<tuple|14.34|687|Topology.tm>>
-    <associate|eq 14.29.147|<tuple|14.33|686|Topology.tm>>
+    <associate|eq 14.29.147|<tuple|14.33|687|Topology.tm>>
     <associate|eq 14.3.146|<tuple|14.5|663|Topology.tm>>
     <associate|eq 14.30.146|<tuple|14.35|687|Topology.tm>>
     <associate|eq 14.31.146|<tuple|14.36|687|Topology.tm>>
-    <associate|eq 14.32.146|<tuple|14.37|687|Topology.tm>>
+    <associate|eq 14.32.146|<tuple|14.37|688|Topology.tm>>
     <associate|eq 14.33.146|<tuple|14.38|688|Topology.tm>>
     <associate|eq 14.35.147|<tuple|14.39|688|Topology.tm>>
     <associate|eq 14.36.147|<tuple|14.40|690|Topology.tm>>
     <associate|eq 14.37.147|<tuple|14.41|690|Topology.tm>>
-    <associate|eq 14.38.147|<tuple|14.42|690|Topology.tm>>
-    <associate|eq 14.39.147|<tuple|14.43|690|Topology.tm>>
-    <associate|eq 14.4.146|<tuple|14.6|664|Topology.tm>>
+    <associate|eq 14.38.147|<tuple|14.42|691|Topology.tm>>
+    <associate|eq 14.39.147|<tuple|14.43|691|Topology.tm>>
+    <associate|eq 14.4.146|<tuple|14.6|663|Topology.tm>>
     <associate|eq 14.41.147|<tuple|14.45|692|Topology.tm>>
     <associate|eq 14.43.147|<tuple|14.46|698|Topology.tm>>
     <associate|eq 14.44.147|<tuple|14.47|699|Topology.tm>>
-    <associate|eq 14.45.147|<tuple|14.48|699|Topology.tm>>
+    <associate|eq 14.45.147|<tuple|14.48|700|Topology.tm>>
     <associate|eq 14.46.147|<tuple|14.49|700|Topology.tm>>
     <associate|eq 14.47.147|<tuple|14.53|707|Topology.tm>>
-    <associate|eq 14.47.148|<tuple|14.50|702|Topology.tm>>
+    <associate|eq 14.47.148|<tuple|14.50|703|Topology.tm>>
     <associate|eq 14.48.147|<tuple|14.54|707|Topology.tm>>
     <associate|eq 14.48.148|<tuple|14.51|703|Topology.tm>>
-    <associate|eq 14.49.147|<tuple|14.55|707|Topology.tm>>
+    <associate|eq 14.49.147|<tuple|14.55|708|Topology.tm>>
     <associate|eq 14.49.148|<tuple|14.52|703|Topology.tm>>
     <associate|eq 14.5.146|<tuple|14.7|664|Topology.tm>>
-    <associate|eq 14.50.147|<tuple|14.56|708|Topology.tm>>
-    <associate|eq 14.51.147|<tuple|14.57|708|Topology.tm>>
-    <associate|eq 14.52.147|<tuple|14.58|708|Topology.tm>>
-    <associate|eq 14.56.148|<tuple|14.59|712|Topology.tm>>
-    <associate|eq 14.57.148|<tuple|14.60|713|Topology.tm>>
-    <associate|eq 14.58.148|<tuple|14.61|713|Topology.tm>>
+    <associate|eq 14.50.147|<tuple|14.56|709|Topology.tm>>
+    <associate|eq 14.51.147|<tuple|14.57|709|Topology.tm>>
+    <associate|eq 14.52.147|<tuple|14.58|709|Topology.tm>>
+    <associate|eq 14.56.148|<tuple|14.59|713|Topology.tm>>
+    <associate|eq 14.57.148|<tuple|14.60|714|Topology.tm>>
+    <associate|eq 14.58.148|<tuple|14.61|714|Topology.tm>>
     <associate|eq 14.59.148|<tuple|14.62|714|Topology.tm>>
     <associate|eq 14.6.146|<tuple|14.8|664|Topology.tm>>
     <associate|eq 14.60.148|<tuple|14.63|714|Topology.tm>>
-    <associate|eq 14.61.148|<tuple|14.64|714|Topology.tm>>
+    <associate|eq 14.61.148|<tuple|14.64|715|Topology.tm>>
     <associate|eq 14.62.148|<tuple|14.65|715|Topology.tm>>
     <associate|eq 14.63.148|<tuple|14.66|715|Topology.tm>>
-    <associate|eq 14.64.148|<tuple|14.67|720|Topology.tm>>
-    <associate|eq 14.65.148|<tuple|14.68|720|Topology.tm>>
-    <associate|eq 14.66.148|<tuple|14.69|720|Topology.tm>>
+    <associate|eq 14.64.148|<tuple|14.67|721|Topology.tm>>
+    <associate|eq 14.65.148|<tuple|14.68|721|Topology.tm>>
+    <associate|eq 14.66.148|<tuple|14.69|721|Topology.tm>>
     <associate|eq 14.67.148|<tuple|14.70|721|Topology.tm>>
     <associate|eq 14.68.148|<tuple|14.71|722|Topology.tm>>
-    <associate|eq 14.69.148|<tuple|14.72|723|Topology.tm>>
+    <associate|eq 14.69.148|<tuple|14.72|724|Topology.tm>>
     <associate|eq 14.7.146|<tuple|14.11|664|Topology.tm>>
     <associate|eq 14.70.148|<tuple|14.73|724|Topology.tm>>
     <associate|eq 14.71.148|<tuple|14.74|724|Topology.tm>>
     <associate|eq 14.72.148|<tuple|14.75|724|Topology.tm>>
     <associate|eq 14.73.148|<tuple|14.76|724|Topology.tm>>
-    <associate|eq 14.74.148|<tuple|14.77|724|Topology.tm>>
-    <associate|eq 14.75.149|<tuple|14.78|726|Topology.tm>>
-    <associate|eq 14.76.149|<tuple|14.79|726|Topology.tm>>
+    <associate|eq 14.74.148|<tuple|14.77|725|Topology.tm>>
+    <associate|eq 14.75.149|<tuple|14.78|727|Topology.tm>>
+    <associate|eq 14.76.149|<tuple|14.79|727|Topology.tm>>
     <associate|eq 14.77.149|<tuple|14.80|727|Topology.tm>>
     <associate|eq 14.78.149|<tuple|14.81|727|Topology.tm>>
     <associate|eq 14.79.149|<tuple|14.82|727|Topology.tm>>
@@ -2804,23 +2791,23 @@
     <associate|eq 14.8.163|<tuple|14.9|664|Topology.tm>>
     <associate|eq 14.80.149|<tuple|14.83|727|Topology.tm>>
     <associate|eq 14.81.150|<tuple|14.84|727|Topology.tm>>
-    <associate|eq 14.82.149|<tuple|14.85|727|Topology.tm>>
-    <associate|eq 14.83.150|<tuple|14.86|727|Topology.tm>>
-    <associate|eq 14.84.149|<tuple|14.87|727|Topology.tm>>
+    <associate|eq 14.82.149|<tuple|14.85|728|Topology.tm>>
+    <associate|eq 14.83.150|<tuple|14.86|728|Topology.tm>>
+    <associate|eq 14.84.149|<tuple|14.87|728|Topology.tm>>
     <associate|eq 14.85.150|<tuple|14.88|728|Topology.tm>>
     <associate|eq 14.86.150|<tuple|14.89|728|Topology.tm>>
     <associate|eq 14.87.150|<tuple|14.90|728|Topology.tm>>
     <associate|eq 14.88.150|<tuple|14.91|728|Topology.tm>>
-    <associate|eq 14.89.150|<tuple|14.92|728|Topology.tm>>
+    <associate|eq 14.89.150|<tuple|14.92|729|Topology.tm>>
     <associate|eq 14.9.146|<tuple|14.13|664|Topology.tm>>
     <associate|eq 14.9.164|<tuple|14.10|664|Topology.tm>>
     <associate|eq 14.90.150|<tuple|14.93|729|Topology.tm>>
-    <associate|eq 14.91.150|<tuple|14.94|729|Topology.tm>>
+    <associate|eq 14.91.150|<tuple|14.94|730|Topology.tm>>
     <associate|eq 14.92.150|<tuple|14.95|730|Topology.tm>>
     <associate|eq 14.93.150|<tuple|14.96|730|Topology.tm>>
     <associate|eq 14.94.150|<tuple|14.97|730|Topology.tm>>
     <associate|eq 14.95.150|<tuple|14.98|730|Topology.tm>>
-    <associate|eq 14.96.150|<tuple|14.99|730|Topology.tm>>
+    <associate|eq 14.96.150|<tuple|14.99|731|Topology.tm>>
     <associate|eq 14.97.150|<tuple|14.100|731|Topology.tm>>
     <associate|eq 14.98.150|<tuple|14.101|731|Topology.tm>>
     <associate|eq 14.99.150|<tuple|14.102|731|Topology.tm>>
@@ -3279,45 +3266,45 @@
     z\<less\>\<gtr\>0|<tuple|4.56|140|NaturalNumbers.tm>>
     <associate|field x^-1=y^-1=\<gtr\>x=y|<tuple|4.54|139|NaturalNumbers.tm>>
     <associate|field {-1,1}xF|<tuple|11.262|473|LinearAlgebra.tm>>
-    <associate|filter base|<tuple|14.236|743|Topology.tm>>
-    <associate|filter base accumulating alternative|<tuple|14.245|745|Topology.tm>>
-    <associate|filter base and compactness|<tuple|14.262|751|Topology.tm>>
-    <associate|filter base and continuity|<tuple|14.255|748|Topology.tm>>
+    <associate|filter base|<tuple|14.237|743|Topology.tm>>
+    <associate|filter base accumulating alternative|<tuple|14.246|745|Topology.tm>>
+    <associate|filter base and compactness|<tuple|14.263|752|Topology.tm>>
+    <associate|filter base and continuity|<tuple|14.256|748|Topology.tm>>
     <associate|filter base and continuity at a
-    point|<tuple|14.254|747|Topology.tm>>
+    point|<tuple|14.255|748|Topology.tm>>
     <associate|filter base and properties of subordinate and
-    inclusion|<tuple|14.249|745|Topology.tm>>
+    inclusion|<tuple|14.250|746|Topology.tm>>
     <associate|filter base closure and on
-    relation|<tuple|14.252|747|Topology.tm>>
+    relation|<tuple|14.253|747|Topology.tm>>
     <associate|filter base convergence and
-    Hausdorf|<tuple|14.244|745|Topology.tm>>
-    <associate|filter base convergence properties|<tuple|14.250|746|Topology.tm>>
+    Hausdorf|<tuple|14.245|745|Topology.tm>>
+    <associate|filter base convergence properties|<tuple|14.251|746|Topology.tm>>
     <associate|filter base converging and
-    acummulating|<tuple|14.243|744|Topology.tm>>
-    <associate|filter base finite intersection|<tuple|14.237|743|Topology.tm>>
+    acummulating|<tuple|14.244|745|Topology.tm>>
+    <associate|filter base finite intersection|<tuple|14.238|743|Topology.tm>>
     <associate|filter base finite intersection
-    property|<tuple|14.242|744|Topology.tm>>
+    property|<tuple|14.243|745|Topology.tm>>
     <associate|filter base function preserves
-    maximality|<tuple|14.261|751|Topology.tm>>
-    <associate|filter base inclusion|<tuple|14.248|745|Topology.tm>>
-    <associate|filter base mapping|<tuple|14.253|747|Topology.tm>>
-    <associate|filter base maximal condition|<tuple|14.258|749|Topology.tm>>
-    <associate|filter base maximal existence|<tuple|14.259|749|Topology.tm>>
+    maximality|<tuple|14.262|751|Topology.tm>>
+    <associate|filter base inclusion|<tuple|14.249|746|Topology.tm>>
+    <associate|filter base mapping|<tuple|14.254|747|Topology.tm>>
+    <associate|filter base maximal condition|<tuple|14.259|749|Topology.tm>>
+    <associate|filter base maximal existence|<tuple|14.260|750|Topology.tm>>
     <associate|filter base maximal filter base and
-    convergence|<tuple|14.260|751|Topology.tm>>
+    convergence|<tuple|14.261|751|Topology.tm>>
     <associate|filter base maximum filter
-    base|<tuple|14.257|748|Topology.tm>>
+    base|<tuple|14.258|749|Topology.tm>>
     <associate|filter base neighborhood filter and
-    converging|<tuple|14.246|745|Topology.tm>>
+    converging|<tuple|14.247|746|Topology.tm>>
     <associate|filter base neighborhood filter
-    base|<tuple|14.239|743|Topology.tm>>
+    base|<tuple|14.240|744|Topology.tm>>
     <associate|filter base neighborhood filter base is a filter
-    base|<tuple|14.240|743|Topology.tm>>
-    <associate|filter base on a subset|<tuple|14.251|747|Topology.tm>>
-    <associate|filter base projection operator|<tuple|14.256|748|Topology.tm>>
-    <associate|filter base subordinate|<tuple|14.247|745|Topology.tm>>
-    <associate|filter base trivial|<tuple|14.238|743|Topology.tm>>
-    <associate|filter base union and intersection|<tuple|14.241|744|Topology.tm>>
+    base|<tuple|14.241|744|Topology.tm>>
+    <associate|filter base on a subset|<tuple|14.252|747|Topology.tm>>
+    <associate|filter base projection operator|<tuple|14.257|749|Topology.tm>>
+    <associate|filter base subordinate|<tuple|14.248|746|Topology.tm>>
+    <associate|filter base trivial|<tuple|14.239|744|Topology.tm>>
+    <associate|filter base union and intersection|<tuple|14.242|744|Topology.tm>>
     <associate|finite distinct empty set|<tuple|11.84|375|LinearAlgebra.tm>>
     <associate|finite distinct set|<tuple|11.78|374|LinearAlgebra.tm>>
     <associate|finite distinct set existence|<tuple|11.83|375|LinearAlgebra.tm>>
@@ -3523,48 +3510,46 @@
     <associate|inverse of a field isomorphism is a field
     isomorphism|<tuple|4.69|142|NaturalNumbers.tm>>
     <associate|iteration final|<tuple|5.85|173|NaturalNumbers.tm>>
-    <associate|lemma 14.342.156|<tuple|14.357|793|Topology.tm>>
-    <associate|lemma 14.344.156|<tuple|14.358|794|Topology.tm>>
-    <associate|lemma 14.345.156|<tuple|14.359|795|Topology.tm>>
-    <associate|lemma 14.356.158|<tuple|14.367|801|Topology.tm>>
-    <associate|lemma 14.360.158|<tuple|14.373|806|Topology.tm>>
-    <associate|lemma 14.364.159|<tuple|14.377|808|Topology.tm>>
-    <associate|lemma 14.376|<tuple|14.383|815|Topology.tm>>
-    <associate|lemma 14.381.166|<tuple|14.385|818|Topology.tm>>
-    <associate|lemma 14.382.166|<tuple|14.386|818|Topology.tm>>
-    <associate|lemma 14.387.166|<tuple|14.391|822|Topology.tm>>
-    <associate|limit (a+n)/(b+n)|<tuple|14.286|761|Topology.tm>>
-    <associate|limit 1/(a+i)|<tuple|14.285|761|Topology.tm>>
-    <associate|limit a.x_n|<tuple|14.289|762|Topology.tm>>
-    <associate|limit and continuity|<tuple|14.298|765|Topology.tm>>
+    <associate|lemma 14.342.156|<tuple|14.361|795|Topology.tm>>
+    <associate|lemma 14.344.156|<tuple|14.362|795|Topology.tm>>
+    <associate|lemma 14.345.156|<tuple|14.363|797|Topology.tm>>
+    <associate|lemma 14.356.158|<tuple|14.372|804|Topology.tm>>
+    <associate|lemma 14.376|<tuple|14.377|809|Topology.tm>>
+    <associate|lemma 14.381.166|<tuple|14.379|812|Topology.tm>>
+    <associate|lemma 14.382.166|<tuple|14.380|812|Topology.tm>>
+    <associate|lemma 14.387.166|<tuple|14.385|816|Topology.tm>>
+    <associate|limit (a+n)/(b+n)|<tuple|14.289|762|Topology.tm>>
+    <associate|limit 1/(a+i)|<tuple|14.288|762|Topology.tm>>
+    <associate|limit a.x_n|<tuple|14.292|763|Topology.tm>>
+    <associate|limit and continuity|<tuple|14.301|766|Topology.tm>>
     <associate|limit and continuity in metric
-    space|<tuple|14.299|765|Topology.tm>>
-    <associate|limit and equivalent norms|<tuple|14.310|772|Topology.tm>>
-    <associate|limit and lower or upper bound|<tuple|14.292|763|Topology.tm>>
-    <associate|limit b^n|<tuple|14.284|761|Topology.tm>>
-    <associate|limit complex conjugate|<tuple|14.291|763|Topology.tm>>
-    <associate|limit complex numbers condition|<tuple|14.290|763|Topology.tm>>
-    <associate|limit constant sequence|<tuple|14.283|761|Topology.tm>>
-    <associate|limit convergence implies bounded|<tuple|14.293|764|Topology.tm>>
+    space|<tuple|14.302|766|Topology.tm>>
+    <associate|limit and equivalent norms|<tuple|14.314|773|Topology.tm>>
+    <associate|limit and lower or upper bound|<tuple|14.295|764|Topology.tm>>
+    <associate|limit b^n|<tuple|14.287|762|Topology.tm>>
+    <associate|limit complex conjugate|<tuple|14.294|764|Topology.tm>>
+    <associate|limit complex numbers condition|<tuple|14.293|764|Topology.tm>>
+    <associate|limit constant sequence|<tuple|14.286|762|Topology.tm>>
+    <associate|limit convergence implies bounded|<tuple|14.296|765|Topology.tm>>
     <associate|limit increasing decreasing
-    (1)|<tuple|14.302|767|Topology.tm>>
+    (1)|<tuple|14.306|768|Topology.tm>>
     <associate|limit increasing descending
-    sequences|<tuple|14.301|766|Topology.tm>>
+    sequences|<tuple|14.305|767|Topology.tm>>
     <associate|limit limit of sequence limited by another
-    sequence|<tuple|14.295|764|Topology.tm>>
-    <associate|limit limsup liminf|<tuple|14.303|767|Topology.tm>>
+    sequence|<tuple|14.298|765|Topology.tm>>
+    <associate|limit limsup liminf|<tuple|14.307|768|Topology.tm>>
     <associate|limit limsup liminf (equivalent
-    definition)|<tuple|14.305|768|Topology.tm>>
-    <associate|limit limsup liminf and limit|<tuple|14.306|768|Topology.tm>>
-    <associate|limit limsup liminf inequality|<tuple|14.304|767|Topology.tm>>
-    <associate|limit limsup liminf properties|<tuple|14.307|770|Topology.tm>>
-    <associate|limit of norm is norm of limit|<tuple|14.300|766|Topology.tm>>
+    definition)|<tuple|14.309|769|Topology.tm>>
+    <associate|limit limsup liminf and limit|<tuple|14.310|770|Topology.tm>>
+    <associate|limit limsup liminf inequality|<tuple|14.308|769|Topology.tm>>
+    <associate|limit limsup liminf properties|<tuple|14.311|771|Topology.tm>>
+    <associate|limit of norm is norm of limit|<tuple|14.304|767|Topology.tm>>
     <associate|limit of sequence of non negatieve real numbers is
-    positive|<tuple|14.296|765|Topology.tm>>
+    positive|<tuple|14.299|766|Topology.tm>>
     <associate|limit sequence limited by a convergent real
-    sequence|<tuple|14.294|764|Topology.tm>>
-    <associate|limit x_n+a|<tuple|14.287|762|Topology.tm>>
-    <associate|limit x_n+y_n|<tuple|14.288|762|Topology.tm>>
+    sequence|<tuple|14.297|765|Topology.tm>>
+    <associate|limit x_n+a|<tuple|14.290|763|Topology.tm>>
+    <associate|limit x_n+y_n|<tuple|14.291|763|Topology.tm>>
     <associate|linear (in)dependency properties
     (1)|<tuple|11.117|391|LinearAlgebra.tm>>
     <associate|linear Steinitz (1)|<tuple|11.119|394|LinearAlgebra.tm>>
@@ -3720,29 +3705,29 @@
     unit|<tuple|11.349|549|LinearAlgebra.tm>>
     <associate|matrix[\<less\>m] and [\<gtr\>m]|<tuple|11.348|548|LinearAlgebra.tm>>
     <associate|max element of a family|<tuple|6.52|192|NaturalNumbers.tm>>
-    <associate|metric Banach fixed point theorem|<tuple|14.382|813|Topology.tm>>
-    <associate|metric ball image preimage|<tuple|14.73|673|Topology.tm>>
+    <associate|metric Banach fixed point theorem|<tuple|14.376|807|Topology.tm>>
+    <associate|metric ball image preimage|<tuple|14.73|672|Topology.tm>>
     <associate|metric bounded set|<tuple|14.75|674|Topology.tm>>
     <associate|metric bounded set inclusion|<tuple|14.77|674|Topology.tm>>
     <associate|metric closed ball|<tuple|14.60|669|Topology.tm>>
-    <associate|metric closed balls are closed|<tuple|14.65|671|Topology.tm>>
+    <associate|metric closed balls are closed|<tuple|14.65|670|Topology.tm>>
     <associate|metric closed open balls are
     bounded|<tuple|14.78|674|Topology.tm>>
-    <associate|metric composition of isometries|<tuple|14.72|673|Topology.tm>>
-    <associate|metric contraction|<tuple|14.380|813|Topology.tm>>
-    <associate|metric contractions are continuous|<tuple|14.381|813|Topology.tm>>
+    <associate|metric composition of isometries|<tuple|14.72|672|Topology.tm>>
+    <associate|metric contraction|<tuple|14.374|806|Topology.tm>>
+    <associate|metric contractions are continuous|<tuple|14.375|807|Topology.tm>>
     <associate|metric dense set|<tuple|14.81|676|Topology.tm>>
     <associate|metric empty set is bounded|<tuple|14.76|674|Topology.tm>>
-    <associate|metric equivalent metrics|<tuple|14.67|672|Topology.tm>>
-    <associate|metric equivalent metrics condition|<tuple|14.68|672|Topology.tm>>
+    <associate|metric equivalent metrics|<tuple|14.67|671|Topology.tm>>
+    <associate|metric equivalent metrics condition|<tuple|14.68|671|Topology.tm>>
     <associate|metric isometry|<tuple|14.69|672|Topology.tm>>
     <associate|metric isometry and its inverse|<tuple|14.71|672|Topology.tm>>
     <associate|metric isometry and topologies|<tuple|14.74|673|Topology.tm>>
     <associate|metric isometry is injective|<tuple|14.70|672|Topology.tm>>
     <associate|metric open ball|<tuple|14.59|669|Topology.tm>>
     <associate|metric open ball and intersection|<tuple|14.61|669|Topology.tm>>
-    <associate|metric product topology|<tuple|14.79|675|Topology.tm>>
-    <associate|metric pseudo metric space|<tuple|14.56|669|Topology.tm>>
+    <associate|metric product topology|<tuple|14.79|674|Topology.tm>>
+    <associate|metric pseudo metric space|<tuple|14.56|668|Topology.tm>>
     <associate|metric refinement of a ball|<tuple|14.62|670|Topology.tm>>
     <associate|metric space|<tuple|14.57|669|Topology.tm>>
     <associate|metric space metric is positive|<tuple|14.58|669|Topology.tm>>
@@ -3774,7 +3759,7 @@
     permutations|<tuple|11.237|462|LinearAlgebra.tm>>
     <associate|multi zero function|<tuple|11.247|465|LinearAlgebra.tm>>
     <associate|multilinear continuous mapping
-    space|<tuple|14.185|720|Topology.tm>>
+    space|<tuple|14.186|721|Topology.tm>>
     <associate|multilinear mapping sub-space|<tuple|11.248|466|LinearAlgebra.tm>>
     <associate|n\<less\>=m=\<gtr\>S_n\<less\>=S_m|<tuple|6.17|180|NaturalNumbers.tm>>
     <associate|natural number {n,..,m}|<tuple|5.82|172|NaturalNumbers.tm>>
@@ -3895,49 +3880,50 @@
     <associate|nonsingular transformations extend a elementary
     transformation|<tuple|11.373|576|LinearAlgebra.tm>>
     <associate|normed absolute value norm
-    differences|<tuple|14.87|678|Topology.tm>>
+    differences|<tuple|14.87|677|Topology.tm>>
     <associate|normed all norms in the set of complex numbers are
-    equivalent|<tuple|14.114|693|Topology.tm>>
+    equivalent|<tuple|14.115|693|Topology.tm>>
     <associate|normed all norms in the set of real numbers are
-    equivalent|<tuple|14.113|693|Topology.tm>>
+    equivalent|<tuple|14.114|693|Topology.tm>>
     <associate|normed ball|<tuple|14.89|678|Topology.tm>>
     <associate|normed basis of T\|\||<tuple|14.98|681|Topology.tm>>
-    <associate|normed bounded set|<tuple|14.104|688|Topology.tm>>
+    <associate|normed bounded set|<tuple|14.105|689|Topology.tm>>
     <associate|normed bounded sets and generalized
-    intervals|<tuple|14.105|689|Topology.tm>>
+    intervals|<tuple|14.106|689|Topology.tm>>
+    <associate|normed closed generalized intervals|<tuple|14.101|684|Topology.tm>>
     <associate|normed complex numbers|<tuple|14.95|680|Topology.tm>>
-    <associate|normed dense set|<tuple|14.108|691|Topology.tm>>
-    <associate|normed distinct function|<tuple|14.154|705|Topology.tm>>
-    <associate|normed equivalent norms|<tuple|14.110|692|Topology.tm>>
-    <associate|normed equivalent norms in R^n|<tuple|14.267|754|Topology.tm>>
-    <associate|normed finer topologies|<tuple|14.109|692|Topology.tm>>
+    <associate|normed dense set|<tuple|14.109|692|Topology.tm>>
+    <associate|normed distinct function|<tuple|14.155|706|Topology.tm>>
+    <associate|normed equivalent norms|<tuple|14.111|693|Topology.tm>>
+    <associate|normed equivalent norms in R^n|<tuple|14.269|755|Topology.tm>>
+    <associate|normed finer topologies|<tuple|14.110|692|Topology.tm>>
     <associate|normed generalized intervals that are
-    open|<tuple|14.99|682|Topology.tm>>
-    <associate|normed isometry|<tuple|14.119|694|Topology.tm>>
-    <associate|normed isometry and composition|<tuple|14.118|694|Topology.tm>>
-    <associate|normed isometry and inverse|<tuple|14.117|694|Topology.tm>>
-    <associate|normed isometry composition|<tuple|14.120|694|Topology.tm>>
-    <associate|normed isometry is injective|<tuple|14.116|694|Topology.tm>>
-    <associate|normed linear isometry|<tuple|14.115|693|Topology.tm>>
+    open|<tuple|14.99|681|Topology.tm>>
+    <associate|normed isometry|<tuple|14.120|694|Topology.tm>>
+    <associate|normed isometry and composition|<tuple|14.119|694|Topology.tm>>
+    <associate|normed isometry and inverse|<tuple|14.118|694|Topology.tm>>
+    <associate|normed isometry composition|<tuple|14.121|695|Topology.tm>>
+    <associate|normed isometry is injective|<tuple|14.117|694|Topology.tm>>
+    <associate|normed linear isometry|<tuple|14.116|694|Topology.tm>>
     <associate|normed linear mappings between finite dimensional spaces are
-    continuous|<tuple|14.272|757|Topology.tm>>
+    continuous|<tuple|14.274|758|Topology.tm>>
     <associate|normed maximum norm|<tuple|14.94|679|Topology.tm>>
-    <associate|normed norm|<tuple|14.85|677|Topology.tm>>
-    <associate|normed norm equivalence|<tuple|14.111|692|Topology.tm>>
-    <associate|normed norm equivalence condition|<tuple|14.112|693|Topology.tm>>
-    <associate|normed norm of zero|<tuple|14.84|677|Topology.tm>>
+    <associate|normed norm|<tuple|14.85|676|Topology.tm>>
+    <associate|normed norm equivalence|<tuple|14.112|693|Topology.tm>>
+    <associate|normed norm equivalence condition|<tuple|14.113|693|Topology.tm>>
+    <associate|normed norm of zero|<tuple|14.84|676|Topology.tm>>
     <associate|normed norm on finite dimensional spaces are
-    equivalent|<tuple|14.268|755|Topology.tm>>
+    equivalent|<tuple|14.270|755|Topology.tm>>
     <associate|normed open generalized intervals|<tuple|14.100|683|Topology.tm>>
     <associate|normed open set as union of
-    intervals|<tuple|14.101|684|Topology.tm>>
-    <associate|normed pseudo norm|<tuple|14.83|677|Topology.tm>>
+    intervals|<tuple|14.102|685|Topology.tm>>
+    <associate|normed pseudo norm|<tuple|14.83|676|Topology.tm>>
     <associate|normed real numbers|<tuple|14.96|680|Topology.tm>>
-    <associate|normed scaling and translation|<tuple|14.91|679|Topology.tm>>
+    <associate|normed scaling and translation|<tuple|14.91|678|Topology.tm>>
     <associate|normed space and open sets|<tuple|14.93|679|Topology.tm>>
-    <associate|normed space set operations|<tuple|14.107|690|Topology.tm>>
-    <associate|normed sub space topology|<tuple|14.106|690|Topology.tm>>
-    <associate|normed sup(S) and inf(S)|<tuple|14.103|688|Topology.tm>>
+    <associate|normed space set operations|<tuple|14.108|690|Topology.tm>>
+    <associate|normed sub space topology|<tuple|14.107|690|Topology.tm>>
+    <associate|normed sup(S) and inf(S)|<tuple|14.104|688|Topology.tm>>
     <associate|normed topology|<tuple|14.92|679|Topology.tm>>
     <associate|normed triangle inequality|<tuple|14.86|677|Topology.tm>>
     <associate|operator|<tuple|4.1|123|NaturalNumbers.tm>>
@@ -4032,6 +4018,7 @@
     <associate|pair equality of pairs|<tuple|1.43|19|Sets.tm>>
     <associate|pair of elements|<tuple|1.41|19|Sets.tm>>
     <associate|part:DirectSumTensorProduct.tm|<tuple|11.378|588>>
+    <associate|part:IntegrationBanach.tm|<tuple|<with|mode|<quote|math>|f<around*|(|b|)>\<less\>y\<less\>f<around*|(|a|)>>|?>>
     <associate|part:LinearAlgebra.tm|<tuple|10.5.5|331>>
     <associate|part:NaturalNumbers.tm|<tuple|3.86|123>>
     <associate|part:Numbers.tm|<tuple|6.85|205>>
@@ -4276,101 +4263,86 @@
     <associate|ring subring subgroup|<tuple|4.36|131|NaturalNumbers.tm>>
     <associate|ring zero divisor|<tuple|4.33|131|NaturalNumbers.tm>>
     <associate|semi-group|<tuple|4.2|123|NaturalNumbers.tm>>
-    <associate|separation Hausdorff|<tuple|14.195|733|Topology.tm>>
+    <associate|separation Hausdorff|<tuple|14.196|733|Topology.tm>>
     <associate|separation Hausdorff every finite set is
-    closed|<tuple|14.198|733|Topology.tm>>
+    closed|<tuple|14.199|733|Topology.tm>>
     <associate|separation a metric space is first
-    countable|<tuple|14.209|735|Topology.tm>>
-    <associate|separation conditions|<tuple|14.205|735|Topology.tm>>
+    countable|<tuple|14.210|735|Topology.tm>>
+    <associate|separation conditions|<tuple|14.206|735|Topology.tm>>
     <associate|separation first countable topological
-    space|<tuple|14.208|735|Topology.tm>>
+    space|<tuple|14.209|735|Topology.tm>>
     <associate|separation fundamental system of neighborhoods of
-    x|<tuple|14.207|735|Topology.tm>>
+    x|<tuple|14.208|735|Topology.tm>>
     <associate|separation metric spaces are
-    Hausdorff|<tuple|14.196|733|Topology.tm>>
+    Hausdorff|<tuple|14.197|733|Topology.tm>>
     <associate|separation metric spaces are
-    regular|<tuple|14.200|733|Topology.tm>>
-    <associate|separation neighbors|<tuple|14.206|735|Topology.tm>>
+    regular|<tuple|14.201|734|Topology.tm>>
+    <associate|separation neighbors|<tuple|14.207|735|Topology.tm>>
     <associate|separation normal topological
-    space|<tuple|14.204|734|Topology.tm>>
+    space|<tuple|14.205|735|Topology.tm>>
     <associate|separation regular topological
-    space|<tuple|14.199|733|Topology.tm>>
+    space|<tuple|14.200|734|Topology.tm>>
     <associate|separation regularity and non empty open
-    sets|<tuple|14.202|734|Topology.tm>>
+    sets|<tuple|14.203|734|Topology.tm>>
     <associate|separation regularity and non empty open sets
-    (1)|<tuple|14.203|734|Topology.tm>>
+    (1)|<tuple|14.204|734|Topology.tm>>
     <associate|separation second countability implies first
-    countability|<tuple|14.212|735|Topology.tm>>
+    countability|<tuple|14.213|735|Topology.tm>>
     <associate|separation second countable topological
-    space|<tuple|14.211|735|Topology.tm>>
-    <associate|sequence|<tuple|14.273|757|Topology.tm>>
-    <associate|sequence convergence|<tuple|14.277|759|Topology.tm>>
+    space|<tuple|14.212|735|Topology.tm>>
+    <associate|sequence|<tuple|14.276|758|Topology.tm>>
+    <associate|sequence convergence|<tuple|14.280|760|Topology.tm>>
     <associate|sequence convergence in metric
-    space|<tuple|14.281|760|Topology.tm>>
-    <associate|sequence increasing decreasing|<tuple|14.274|758|Topology.tm>>
+    space|<tuple|14.284|761|Topology.tm>>
+    <associate|sequence increasing decreasing|<tuple|14.277|758|Topology.tm>>
     <associate|sequence increasing decreasing
-    consequence|<tuple|14.275|758|Topology.tm>>
+    consequence|<tuple|14.278|759|Topology.tm>>
     <associate|sequence increasing decreasing
-    sets|<tuple|14.276|759|Topology.tm>>
-    <associate|sequence limit|<tuple|14.279|759|Topology.tm>>
-    <associate|sequence limit definition|<tuple|14.280|759|Topology.tm>>
-    <associate|sequence limit start value|<tuple|14.278|759|Topology.tm>>
-    <associate|serie sum and scalar product|<tuple|14.344|785|Topology.tm>>
-    <associate|series|<tuple|14.335|782|Topology.tm>>
-    <associate|series absolute convergence|<tuple|14.361|798|Topology.tm>>
-    <associate|series absolute convergence alternative
-    definition|<tuple|14.374|806|Topology.tm>>
+    sets|<tuple|14.279|760|Topology.tm>>
+    <associate|sequence limit|<tuple|14.282|760|Topology.tm>>
+    <associate|sequence limit definition|<tuple|14.283|760|Topology.tm>>
+    <associate|sequence limit start value|<tuple|14.281|760|Topology.tm>>
+    <associate|serie sum and scalar product|<tuple|14.348|787|Topology.tm>>
+    <associate|series|<tuple|14.339|783|Topology.tm>>
+    <associate|series absolute convergence|<tuple|14.365|800|Topology.tm>>
     <associate|series absolute convergence
-    commutativity|<tuple|14.368|802|Topology.tm>>
-    <associate|series absolute convergence commutativity countable
-    sums|<tuple|14.371|804|Topology.tm>>
-    <associate|series absolute convergence countable
-    family|<tuple|14.370|804|Topology.tm>>
-    <associate|series absolute convergence dominant
-    convergence|<tuple|14.376|808|Topology.tm>>
+    commutativity|<tuple|14.373|805|Topology.tm>>
     <associate|series absolute convergence equals convergence only in Banach
-    space|<tuple|14.365|800|Topology.tm>>
+    space|<tuple|14.370|803|Topology.tm>>
     <associate|series absolute convergence
-    equivalences|<tuple|14.366|801|Topology.tm>>
+    equivalences|<tuple|14.371|804|Topology.tm>>
     <associate|series absolute convergence implies
-    convergence|<tuple|14.363|800|Topology.tm>>
-    <associate|series absolute convergence of countable families
-    condition|<tuple|14.375|807|Topology.tm>>
-    <associate|series absolute convergence sum and scalar
-    product|<tuple|14.372|805|Topology.tm>>
-    <associate|series absolute convergent countable
-    associativity|<tuple|14.378|809|Topology.tm>>
-    <associate|series absolute dominant convergence|<tuple|14.362|798|Topology.tm>>
-    <associate|series absolute sum over a countable
-    set|<tuple|14.369|804|Topology.tm>>
+    convergence|<tuple|14.368|802|Topology.tm>>
+    <associate|series absolute dominant convergence|<tuple|14.366|800|Topology.tm>>
+    <associate|series absolute dominant convergence
+    (1)|<tuple|14.367|801|Topology.tm>>
     <associate|series convergence condition in a Banach
-    space|<tuple|14.340|783|Topology.tm>>
+    space|<tuple|14.344|785|Topology.tm>>
     <associate|series converging of upper
-    series|<tuple|14.343|785|Topology.tm>>
-    <associate|series distributivity|<tuple|14.379|812|Topology.tm>>
-    <associate|series dominant convergence|<tuple|14.364|800|Topology.tm>>
+    series|<tuple|14.347|786|Topology.tm>>
+    <associate|series dominant convergence|<tuple|14.369|803|Topology.tm>>
     <associate|series non negative numbers
-    associativity|<tuple|14.360|797|Topology.tm>>
+    associativity|<tuple|14.364|799|Topology.tm>>
     <associate|series non negative numbers
-    commutativity|<tuple|14.348|789|Topology.tm>>
+    commutativity|<tuple|14.352|790|Topology.tm>>
     <associate|series non negative numbers countable sum equivalent
-    definition|<tuple|14.355|792|Topology.tm>>
+    definition|<tuple|14.359|793|Topology.tm>>
     <associate|series non negative numbers countable
-    sums|<tuple|14.351|790|Topology.tm>>
+    sums|<tuple|14.355|792|Topology.tm>>
     <associate|series non negative numbers countable sums
-    inclusion|<tuple|14.354|791|Topology.tm>>
+    inclusion|<tuple|14.358|792|Topology.tm>>
     <associate|series non negative numbers denumerable
-    sum|<tuple|14.349|790|Topology.tm>>
+    sum|<tuple|14.353|791|Topology.tm>>
     <associate|series non negative numbers
-    equivalences|<tuple|14.346|786|Topology.tm>>
+    equivalences|<tuple|14.350|788|Topology.tm>>
     <associate|series non negative numbers strict positive
-    term|<tuple|14.347|788|Topology.tm>>
-    <associate|series of all zeroes|<tuple|14.356|793|Topology.tm>>
-    <associate|series of complex numbers|<tuple|14.345|786|Topology.tm>>
-    <associate|series partition series|<tuple|14.342|784|Topology.tm>>
-    <associate|series power series in R|<tuple|14.338|783|Topology.tm>>
-    <associate|series terms converges to zero|<tuple|14.339|783|Topology.tm>>
-    <associate|series translation start|<tuple|14.341|784|Topology.tm>>
+    term|<tuple|14.351|790|Topology.tm>>
+    <associate|series of all zeroes|<tuple|14.360|795|Topology.tm>>
+    <associate|series of complex numbers|<tuple|14.349|787|Topology.tm>>
+    <associate|series partition series|<tuple|14.346|786|Topology.tm>>
+    <associate|series power series in R|<tuple|14.342|784|Topology.tm>>
+    <associate|series terms converges to zero|<tuple|14.343|785|Topology.tm>>
+    <associate|series translation start|<tuple|14.345|785|Topology.tm>>
     <associate|set A*B|<tuple|1.67|25|Sets.tm>>
     <associate|set A*B is subset of P(P(AUB))|<tuple|1.66|25|Sets.tm>>
     <associate|set containing a denumerable set is
@@ -4410,7 +4382,7 @@
     <associate|sum in A^n|<tuple|11.46|354|LinearAlgebra.tm>>
     <associate|sum index is a product|<tuple|11.44|353|LinearAlgebra.tm>>
     <associate|sum non zero elements|<tuple|11.49|358|LinearAlgebra.tm>>
-    <associate|sum of a countable set|<tuple|14.350|790|Topology.tm>>
+    <associate|sum of a countable set|<tuple|14.354|792|Topology.tm>>
     <associate|sum of differences|<tuple|11.10|337|LinearAlgebra.tm>>
     <associate|sum of differences (1)|<tuple|11.21|339|LinearAlgebra.tm>>
     <associate|sum of finite sums|<tuple|11.9|336|LinearAlgebra.tm>>
@@ -4422,7 +4394,7 @@
     <associate|sum of neutral element (1)|<tuple|11.16|338|LinearAlgebra.tm>>
     <associate|sum of neutral element (2)|<tuple|11.36|349|LinearAlgebra.tm>>
     <associate|sum of neutral elements|<tuple|11.5|334|LinearAlgebra.tm>>
-    <associate|sum of powers lemma|<tuple|14.337|782|Topology.tm>>
+    <associate|sum of powers lemma|<tuple|14.341|783|Topology.tm>>
     <associate|sum of real numbers and inequality|<tuple|11.51|359|LinearAlgebra.tm>>
     <associate|sum of sums|<tuple|11.6|335|LinearAlgebra.tm>>
     <associate|sum of sums (1)|<tuple|11.17|338|LinearAlgebra.tm>>
@@ -4481,8 +4453,8 @@
     <associate|tensor sub spaces (1)|<tuple|13.23|621|DirectSumTensorProduct.tm>>
     <associate|tensor tensor product of spaces|<tuple|13.8|608|DirectSumTensorProduct.tm>>
     <associate|tensor universal property|<tuple|13.12|609|DirectSumTensorProduct.tm>>
-    <associate|toplinear isomorphism|<tuple|14.182|717|Topology.tm>>
-    <associate|topology Baire space|<tuple|14.53|668|Topology.tm>>
+    <associate|toplinear isomorphism|<tuple|14.183|717|Topology.tm>>
+    <associate|topology Baire space|<tuple|14.53|667|Topology.tm>>
     <associate|topology Baire space alternative
     definition|<tuple|14.55|668|Topology.tm>>
     <associate|topology Baire space empty set|<tuple|14.54|668|Topology.tm>>
@@ -4500,7 +4472,7 @@
     topology|<tuple|14.46|665|Topology.tm>>
     <associate|topology basis properties|<tuple|14.38|660|Topology.tm>>
     <associate|topology biggest open subset|<tuple|14.14|654|Topology.tm>>
-    <associate|topology box|<tuple|14.41|662|Topology.tm>>
+    <associate|topology box|<tuple|14.41|661|Topology.tm>>
     <associate|topology box topology and bases|<tuple|14.42|662|Topology.tm>>
     <associate|topology closed set|<tuple|14.16|654|Topology.tm>>
     <associate|topology closed set and a basis|<tuple|14.37|660|Topology.tm>>
@@ -4509,7 +4481,7 @@
     <associate|topology closed set subspace
     topology|<tuple|14.17|654|Topology.tm>>
     <associate|topology closure alterantive
-    definition|<tuple|14.28|658|Topology.tm>>
+    definition|<tuple|14.28|657|Topology.tm>>
     <associate|topology closure inclusion|<tuple|14.30|658|Topology.tm>>
     <associate|topology closure is union of a set and its limit
     points|<tuple|14.27|657|Topology.tm>>
@@ -4530,11 +4502,11 @@
     <associate|topology limit point|<tuple|14.26|657|Topology.tm>>
     <associate|topology open set and interior|<tuple|14.15|654|Topology.tm>>
     <associate|topology open set condition|<tuple|14.7|652|Topology.tm>>
-    <associate|topology product|<tuple|14.43|663|Topology.tm>>
+    <associate|topology product|<tuple|14.43|662|Topology.tm>>
     <associate|topology product alternative
     definition|<tuple|14.45|663|Topology.tm>>
     <associate|topology product topology and box topology are the same in the
-    finite case|<tuple|14.47|666|Topology.tm>>
+    finite case|<tuple|14.47|665|Topology.tm>>
     <associate|topology product topology of subspace
     topologies|<tuple|14.48|666|Topology.tm>>
     <associate|topology space|<tuple|14.1|651|Topology.tm>>
@@ -4593,7 +4565,7 @@
     <associate|vector space trivial|<tuple|11.58|362|LinearAlgebra.tm>>
     <associate|vector spaces product of vector
     spaces|<tuple|11.70|367|LinearAlgebra.tm>>
-    <associate|xn\<less\>yn=\<gtr\>limxn\<less\>limyn|<tuple|14.297|765|Topology.tm>>
+    <associate|xn\<less\>yn=\<gtr\>limxn\<less\>limyn|<tuple|14.300|766|Topology.tm>>
     <associate|{n,..,m} is bijective to S_(m-n)+1|<tuple|6.18|180|NaturalNumbers.tm>>
   </collection>
 </references>
@@ -5119,17 +5091,15 @@
 
       <tuple|<tuple|dominant convergence>|<pageref|auto-402>>
 
-      <tuple|<tuple|sum over a countable set>|<pageref|auto-403>>
+      <tuple|<tuple|Baire Category theorem>|<pageref|auto-404>>
 
-      <tuple|<tuple|Baire Category theorem>|<pageref|auto-405>>
+      <tuple|<tuple|open mapping theorem>|<pageref|auto-405>>
 
-      <tuple|<tuple|open mapping theorem>|<pageref|auto-406>>
+      <tuple|<tuple|connected space>|<pageref|auto-407>>
 
-      <tuple|<tuple|connected space>|<pageref|auto-408>>
+      <tuple|<tuple|disconnected space>|<pageref|auto-408>>
 
-      <tuple|<tuple|disconnected space>|<pageref|auto-409>>
-
-      <tuple|<tuple|intermediate value theorem>|<pageref|auto-410>>
+      <tuple|<tuple|intermediate value theorem>|<pageref|auto-409>>
     </associate>
     <\associate|parts>
       <tuple|Sets.tm|chapter-nr|0|section-nr|0|subsection-nr|0>
@@ -5695,20 +5665,20 @@
       numbers <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-399>>
 
-      <with|par-left|<quote|2tab>|14.11.3.2<space|2spc>Absolute convergent
-      series <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|2tab>|14.11.3.2<space|2spc>Absolute Convergent
+      Series <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-400>>
 
       <with|par-left|<quote|1tab>|14.11.4<space|2spc>Properties of complete
-      space. <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-404>>
+      spaces. <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-403>>
 
       14.12<space|2spc>Connected Sets <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-407>
+      <no-break><pageref|auto-406>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Index>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-411><vspace|0.5fn>
+      <no-break><pageref|auto-410><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>

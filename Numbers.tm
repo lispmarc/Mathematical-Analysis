@@ -8772,7 +8772,7 @@
   <subsection|Embeddings>
 
   <\definition>
-    We define <math|\<bbb-R\><rsub|\<bbb-C\>>,\<bbb-Q\><rsub|\<bbb-C\>>,\<bbb-Z\><rsub|\<bbb-C\>>,\<bbb-N\><rsub|\<bbb-C\>>>
+    We define <math|\<bbb-R\><rsub|\<bbb-C\>>,\<bbb-Q\><rsub|\<bbb-C\>>,\<bbb-Z\><rsub|\<bbb-C\>>,\<bbb-N\><rsub|0,\<bbb-C\>>>
     as follows
 
     <\eqnarray*>
@@ -14077,7 +14077,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|6>
-    <associate|page-first|203>
+    <associate|page-first|205>
     <associate|project-flag|false>
     <associate|section-nr|3>
     <associate|subsection-nr|0>

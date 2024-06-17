@@ -750,6 +750,1037 @@
 
     \;
   </proof>
+
+  Just as with series of non negative real numbers, commutativity allows us
+  to extend the definition of infinite sums for absolute convergent series in
+  a Banach space.
+
+  <\definition>
+    <label|series absolute sum over a countable set><index|sum over a
+    countable set><dueto|Absolute convergent series of a countable family>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
+    Banach space, <math|I> a countable set,
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>X> a countable
+    family in <math|X> then we say that <math|<big|sum><rsub|i\<in\>I>x<rsub|i>>
+    is absolute convergent if either:
+
+    <\enumerate>
+      <item><math|I> is finite
+
+      <item><math|I<text| is denumerable and there exist a bijection
+      <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>I> such that
+      <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>>>>
+      is absolute convergent [in other words
+      <math|<big|sum><rsub|i=0><rsup|\<infty\>><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>>
+      converges]
+    </enumerate>
+  </definition>
+
+  Just as in [corollary: <reference|series absolute convergence implies
+  convergence>] absolute convergent series of countable families are
+  convergent in a Banach space.
+
+  TODO
+
+  Another way of expressing the concept of absolute convergence of countable
+  families is expressed in the following theorem.
+
+  <\theorem>
+    <label|series absolute convergence countable family>Let
+    <math|k\<in\>\<bbb-N\><rsub|0>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    a Banach space, <math|I> a countable set,
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>X> a countable
+    family in <math|X> then we have\ 
+
+    <\equation*>
+      <big|sum><rsub|i\<in\>I>x<rsub|i><text| is absolute convergent
+      >\<Leftrightarrow\><text| ><big|sum><rsub|i\<in\>I><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><text|
+      is convergent>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    As <math|I> is countable we must consider two possibilities:\ 
+
+    <\description>
+      <item*|<math|I> is finite>Then we have:
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>Using [definition: <reference|series non
+        negative numbers countable sums>] it follows that
+        <math|<big|sum><rsub|i\<in\>I><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>>
+        is convergent.
+
+        <item*|<math|\<Leftarrow\>>>Using [definition: <reference|series
+        absolute sum over a countable set>] it follows that
+        <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> is absolute convergent.
+      </description>
+
+      <item*|<math|I> is denumerable>Then we have:\ 
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>As <math|<big|sum><rsub|i\<in\>I>x<rsub|i>>
+        is absolute convergent there exist a bijection
+        <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>I> such that
+        <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>>
+        is absolute convergent. Hence <math|<big|sum><rsub|i=0><rsup|\<infty\>><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>>
+        is convergent or using [definition: <reference|series non negative
+        numbers countable sums>]
+
+        <\equation*>
+          <big|sum><rsub|i\<in\>I><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><text|
+          is convergent>
+        </equation*>
+
+        <item*|<math|\<Leftarrow\>>>If <math|<big|sum><rsub|i\<in\>I><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>>
+        is convergent we have by [definition: <reference|series non negative
+        numbers countable sums>] that <math|<big|sum><rsub|i=0><rsup|\<infty\>><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>>
+        is convergent. Hence by [definition: <reference|series absolute sum
+        over a countable set>]\ 
+
+        <\equation*>
+          <big|sum><rsub|i\<in\>I>x<rsub|i><text| is absolute convergent>
+        </equation*>
+      </description>
+    </description>
+
+    \;
+  </proof>
+
+  Using the above definition we can extend [theorem: <reference|sum bijection
+  on index>] from finite sums to countable absolute convergent sums.
+
+  <\theorem>
+    <label|series absolute convergence commutativity countable sums>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
+    a Banach space, <math|I> a countable set,
+    <math|\<beta\>:I\<rightarrow\>J> a bijection [hence <math|J> is also
+    countable [see theorem: <reference|equipotence finite, denumerable ,
+    countable>]] and <math|<big|sum><rsub|i\<in\>J>x<rsub|i>> a absolute
+    convergent series in <math|X> then <math|<big|sum><rsub|i\<in\>I>x<rsub|\<beta\><around*|(|i|)>>>
+    is absolute convergent and <math|<big|sum><rsub|i\<in\>J>x<rsub|i>=<big|sum><rsub|i\<in\>I>x<rsub|\<beta\><around*|(|i|)>>>.
+  </theorem>
+
+  <\proof>
+    As <math|I> is countable we must consider two cases:\ 
+
+    <\description>
+      <item*|<math|I> is finite>Then <math|<big|sum><rsub|i\<in\>I>x<rsub|\<beta\><around*|(|i|)>>>
+      converges by definition. and, as <math|J> is finite by [theorem:
+      <reference|equipotence finite, denumerable , countable>], we can use
+      [theorem: <reference|sum bijection on index>] to get
+      <math|<big|sum><rsub|i\<in\>J>x<rsub|i>=<big|sum><rsub|i\<in\>I>x<rsub|\<beta\><around*|(|i|)>>>.
+
+      <item*|<math|I> is denumerable>As <math|I> is denumerable there exist a
+      bijection <math|\<alpha\>:\<bbb-N\><rsub|0>\<rightarrow\>I> allowing us
+      to construct the bijection <math|\<beta\>\<circ\>\<alpha\>:\<bbb-N\><rsub|0>\<rightarrow\>J>.
+      As <math|<big|sum><rsub|i\<in\>J>x<rsub|i>> is absolute convergent it
+      follows from the definition that
+
+      <\equation*>
+        <big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|\<alpha\><around*|(|i|)>|)>>=<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|<around*|(|\<beta\>\<circ\>\<alpha\>|)><around*|(|i|)>><text|
+        is absolute convergent and ><big|sum><rsub|i\<in\>J>x<rsub|i>=<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|<around*|(|\<beta\>\<circ\>\<alpha\>|)><around*|(|i|)>>=<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|\<alpha\><around*|(|i|)>|)>>
+      </equation*>
+
+      For <math|<around*|{|y<rsub|i>|}><rsub|i\<in\>I>> defined by
+      <math|y<rsub|i>=x<rsub|\<beta\><around*|(|i|)>>> we have
+      <math|y<rsub|\<alpha\><around*|(|i|)>>=x<rsub|\<beta\><around*|(|\<alpha\><around*|(|i|)>|)>>>
+      so that by the above <math|<big|sum><rsub|i=0><rsup|\<infty\>>y<rsub|<around*|(|\<alpha\><around*|(|i|)>|)>>>
+      is absolute convergent and <math|<big|sum><rsub|i\<in\>J>x<rsub|i>=<big|sum><rsub|i=0><rsup|\<infty\>>y<rsub|\<alpha\><around*|(|i|)>>>.
+      As <math|\<alpha\>:\<bbb-N\><rsub|0>\<rightarrow\>I> is a bijection it
+      follows that\ 
+
+      <\equation*>
+        <big|sum><rsub|i\<in\>I>x<rsub|\<beta\><around*|(|i|)>>=<big|sum><rsub|i\<in\>I>y<rsub|i><text|
+        is absolute convergent and ><big|sum><rsub|i\<in\>I>x<rsub|\<beta\><around*|(|i|)>>=<big|sum><rsub|i\<in\>I>y<rsub|i>=<big|sum><rsub|i\<in\>J>x<rsub|i>
+      </equation*>
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|series absolute convergence sum and scalar product>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
+    a Banach space and <math|I> a countable set then we have:
+
+    <\enumerate>
+      <item>If <math|\<alpha\>\<in\>\<bbb-K\>> and
+      <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> a absolute convergent series
+      then <math|<big|sum><rsub|i\<in\>I><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>>
+      is a absolute convergent series and
+      <math|<big|sum><rsub|i\<in\>I><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>=\<alpha\>\<cdot\><big|sum><rsub|i\<in\>I>x<rsub|i>>.
+
+      <item>If <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> and
+      <math|<big|sum><rsub|i\<in\>I>y<rsub|i>> are convergent series then
+      <math|<big|sum><rsub|i\<in\>I><around*|(|x<rsub|i>+y<rsub|i>|)>> is a
+      absolute convergent series and <math|<big|sum><rsub|i\<in\>I><around*|(|x<rsub|i>+y<rsub|i>|)>=<big|sum><rsub|i\<in\>I>x<rsub|i>+<big|sum><rsub|i\<in\>I>y<rsub|i>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    As <math|I> is countable we have either:\ 
+
+    <\description>
+      <item*|<math|I> is finite>Then (1) follows from [theorem:
+      <reference|vector space finite sum (1)>] and (2) follows from [theorem:
+      <reference|sum of sums (2)>].
+
+      <item*|<math|I> is denumerable>Then we have:
+
+      <\enumerate>
+        <item>As <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> is absolute
+        convergent there exist by definition a bijection
+        <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>I> such that
+        <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>>
+        is absolute convergent, hence <math|<big|sum><rsub|i=0><rsup|\<infty\>><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>>
+        is convergent. Using [theorem: <reference|series absolute convergence
+        sum and scalar product>] it follows that\ 
+
+        <\equation*>
+          <big|sum><rsub|i=0><rsup|\<infty\>><around*|\<\|\|\>|\<alpha\>\<cdot\>x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>=<big|sum><rsub|i=0><rsup|\<infty\>><around*|(|<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>|)><text|
+          is a convergent series>
+        </equation*>
+
+        proving that <math|<big|sum><rsub|i=0><rsup|\<infty\>><around*|(|\<alpha\>\<cdot\>x<rsub|\<beta\><around*|(|i|)>>|)>>
+        is absolute convergent. Hence by [definition: <reference|series
+        absolute sum over a countable set>]\ 
+
+        <\equation*>
+          <big|sum><rsub|i\<in\>I><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)><text|
+          is absolute convergent>
+        </equation*>
+
+        Further using [theorem: <reference|series absolute convergence equals
+        convergence only in Banach space>]
+        <math|<big|sum><rsub|i\<in\>I><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>>
+        converges and we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<big|sum><rsub|i\<in\>I><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>>|<cell|\<equallim\><rsub|<text|[definition:
+          <reference|sum of a countable set>]>>>|<cell|<big|sum><rsub|i=0><rsup|\<infty\>><around*|(|\<alpha\>\<cdot\>x<rsub|\<beta\><around*|(|i|)>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|series absolute convergence sum and scalar
+          product>]>>>|<cell|\<alpha\>\<cdot\><big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+          <reference|sum of a countable set>]>>>|<cell|\<alpha\>\<cdot\><big|sum><rsub|i\<in\>I>x<rsub|i>>>>>
+        </eqnarray*>
+
+        or
+
+        <\equation*>
+          <big|sum><rsub|i\<in\>I><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>=\<alpha\>\<cdot\><big|sum><rsub|i\<in\>I>x<rsub|i>
+        </equation*>
+
+        <item>As <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> and
+        <math|<big|sum><rsub|i\<in\>I>y<rsub|i>> are absolute convergent
+        there exist bijections <math|\<alpha\>:\<bbb-N\><rsub|0>\<rightarrow\>I>
+        and <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>I> so that
+        <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<alpha\><around*|(|i|)>>>
+        and <math|<big|sum><rsub|i=0><rsup|\<infty\>>y<rsub|\<beta\><around*|(|i|)>>>
+        are absolute convergent, or \ As <math|\<alpha\><rsup|-1>\<circ\>\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>\<bbb-N\><rsub|0>>
+        is a bijection it follows from [theorem: <reference|series absolute
+        convergence commutativity>] that <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<alpha\><around*|(|<around*|(|\<alpha\><rsup|-1>\<circ\>\<beta\>|)><around*|(|i|)>|)>>>
+        is absolute convergent. As <math|\<forall\>i\<in\>\<bbb-N\><rsub|0>>
+        we have <math|x<rsub|\<alpha\><around*|(|<around*|(|\<alpha\><rsup|-1>\<circ\>\<beta\>|)><around*|(|i|)>|)>>=x<rsub|\<alpha\><around*|(|\<alpha\><rsup|-1><around*|(|\<beta\><around*|(|i|)>|)>|)>>=x<rsub|\<beta\><around*|(|i|)>>>
+        proves that\ 
+
+        <\equation*>
+          <big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>><text|
+          and ><big|sum><rsub|i=0><rsup|\<infty\>>y<rsub|\<beta\><around*|(|i|)>><text|
+          are absolute convergent>
+        </equation*>
+
+        Hence by definition\ 
+
+        <\equation*>
+          <big|sum><rsub|i=0><rsup|\<infty\>><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>><text|
+          and ><big|sum><rsub|i=0><rsup|\<infty\>><around*|\<\|\|\>|y<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>><text|
+          are convergent>
+        </equation*>
+
+        Using [theorem: <reference|series absolute convergence sum and scalar
+        product>] it follows that
+
+        <\equation*>
+          <big|sum><rsub|i=0><rsup|\<infty\>><around*|(|<around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>+<around*|\<\|\|\>|y<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>|)><text|
+          converges>
+        </equation*>
+
+        As <math|\<forall\>i\<in\>\<bbb-N\><rsub|0>>
+        <math|<around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>+y<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>+<around*|\<\|\|\>|y<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>>
+        we have by the above and the dominant convergence [theorem:
+        <reference|series dominant convergence>] that
+        \ <math|<big|sum><rsub|i=0><rsup|\<infty\>><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>+y<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>>
+        is convergent proving that\ 
+
+        <\equation*>
+          <big|sum><rsub|i=0><rsup|\<infty\>><around*|(|x<rsub|\<beta\><around*|(|i|)>>+y<rsub|\<beta\><around*|(|i|)>>|)><text|
+          is absolute convergent>
+        </equation*>
+
+        Further using [theorem: <reference|series absolute convergence equals
+        convergence only in Banach space>] we have then that
+        <math|<big|sum><rsub|i=0><rsup|\<infty\>><around*|(|x<rsub|\<beta\><around*|(|i|)>>+y<rsub|\<beta\><around*|(|i|)>>|)>>
+        is convergent and we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<big|sum><rsub|i\<in\>I><around*|(|x<rsub|i>+y<rsub|i>|)>>|<cell|\<equallim\><rsub|<text|[definition:
+          <reference|sum of a countable set>]>>>|<cell|<big|sum><rsub|i=0><rsup|\<infty\>><around*|(|x<rsub|\<beta\><around*|(|i|)>>+y<rsub|\<beta\><around*|(|i|)>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|series absolute convergence sum and scalar
+          product>]>>>|<cell|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>+<big|sum><rsub|i=0><rsup|\<infty\>>y<rsub|\<beta\><around*|(|i|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+          <reference|sum of a countable set>]>>>|<cell|<big|sum><rsub|i\<in\>I>x<rsub|i>+<big|sum><rsub|i\<in\>I>y<rsub|i>>>>>
+        </eqnarray*>
+
+        proving that\ 
+
+        <\equation*>
+          <big|sum><rsub|i\<in\>I><around*|(|x<rsub|i>+y<rsub|i>|)>=<big|sum><rsub|i\<in\>I>x<rsub|i>+<big|sum><rsub|i\<in\>I>y<rsub|i>
+        </equation*>
+      </enumerate>
+    </description>
+  </proof>
+
+  <\lemma>
+    <label|lemma 14.360.158>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a normed space, <math|I,J> sets, <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>J>\<subseteq\>X>
+    and a bijection <math|\<beta\>:I\<rightarrow\>J> then\ 
+
+    <\equation*>
+      <around*|{|<big|sum><rsub|i\<in\>H><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>\|H\<subseteq\>I\<wedge\>H<text|
+      is finite>|}>=<around*|{|<big|sum><rsub|i\<in\>H><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\|H\<subseteq\>J\<wedge\>H<text|
+      is finite>|}>
+    </equation*>
+
+    \ 
+  </lemma>
+
+  <\proof>
+    \ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|s\<in\><around*|{|<big|sum><rsub|i\<in\>H><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>\|H\<subseteq\>I\<wedge\>H<text|
+      is finite>|}>>|<cell|\<Leftrightarrow\>>|<cell|>>|<row|<cell|\<exists\>H\<subseteq\>I<text|
+      >H<text| finite such that >s=<big|sum><rsub|i\<in\>H><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>>|<cell|\<Leftrightarrow\>>|<cell|>>|<row|<cell|\<exists\>H\<subseteq\>I<text|
+      >H<text| finite such that >s\<equallim\><rsub|<text|[theorem:
+      <reference|sum bijection on index>]>><big|sum><rsub|i\<in\>\<beta\><around*|(|H|)>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>>|<cell|\<Leftrightarrowlim\><rsub|\<beta\><text|
+      is bijection>>>|<cell|>>|<row|<cell|\<exists\>H\<subseteq\>J<text|
+      >H<text| finite such that ><big|sum><rsub|i\<in\>H><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>>|<cell|\<Leftrightarrow\>>|<cell|>>|<row|<cell|s\<in\><around*|{|<big|sum><rsub|i\<in\>H><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\|H\<subseteq\>J\<wedge\>H<text|
+      is finite>|}>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+  </proof>
+
+  <\theorem>
+    <label|series absolute convergence alternative definition>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
+    a Banach space, <math|I> a countable set then we have\ 
+
+    <\equation*>
+      <big|sum><rsub|i\<in\>I>x<rsub|i><text| is absolute convergent in
+      >X<text| >\<Leftrightarrow\><text| >sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>H><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\|H\<subseteq\>I\<wedge\>H<text|
+      is finite>|}>|)><text| exist>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>As <math|I> is countable we have two cases
+      to consider:\ 
+
+      <\description>
+        <item*|<math|I> is finite>Then <math|\<forall\>x\<in\><around*|{|<big|sum><rsub|i\<in\>H><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\|H\<subseteq\>I\<wedge\>H
+        is fiinite|}>> we have that <math|\<exists\>H> finite with
+        <math|H\<subseteq\>I> so that <math|x=<big|sum><rsub|i\<in\>H><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\<leqslant\><big|sum><rsub|i\<in\>I><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\<in\>><math|<around*|{|<big|sum><rsub|i\<in\>H><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\|H\<subseteq\>I\<wedge\>H
+        is fiinite|}>> so that <math|sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>H><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\|H\<subseteq\>I\<wedge\>H
+        is finite|}>|)>=<big|sum><rsub|i\<in\>I><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>>
+        exists
+
+        <item*|<math|I> is denumerable>Then there exist a bijection
+        <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>I>. As
+        <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> is absolute convergent we
+        have by definition that <math|<big|sum><rsub|i=0><rsup|\<infty\>><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>>
+        is convergent, hence by [theorem: <reference|series non negative
+        numbers equivalences>]
+
+        <\equation*>
+          sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>H><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>\|H\<subseteq\>\<bbb-N\><rsub|0>\<wedge\>H<text|
+          is finite>|}>|)><text| exist>
+        </equation*>
+
+        As <math|<around*|{|<big|sum><rsub|i\<in\>H><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>\|H\<subseteq\>\<bbb-N\>\<wedge\>H<text|
+        is finite>|}>\<equallim\><rsub|<text|[lemma: <reference|lemma
+        14.360.158>]>><around*|{|<big|sum><rsub|i\<in\>I><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\|H\<subseteq\>I\<wedge\>H<text|
+        is finite>|}>> so that\ 
+
+        <\equation*>
+          sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>H><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\|H\<subseteq\>I\<wedge\>H<text|
+          is finite>|}>|)><text| exist>
+        </equation*>
+      </description>
+
+      <item*|<math|\<Leftarrow\>>>As <math|I> is countable we have two cases
+      to consider:\ 
+
+      <\description>
+        <item*|<math|I> is finite>Then by definition
+        <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> is absolute convergent.
+
+        <item*|<math|I> is denumerable>As <math|I> is denumerable there exist
+        a bijection <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>I>. By the
+        hypothesis <math|sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>H><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\|H\<subseteq\>I\<wedge\>H<text|
+        is finite>|}>|)>> exist so that by [lemma: <reference|lemma
+        14.360.158>]\ 
+
+        <\equation*>
+          sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>H><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>\|H\<subseteq\>\<bbb-N\><rsub|0>\<wedge\>H<text|
+          is finite>|}>|)><text| exist >
+        </equation*>
+
+        which by [theorem: <reference|series non negative numbers
+        equivalences>] proves that <math|<big|sum><rsub|i=0><rsup|\<infty\>><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>>
+        converges, hence using [definition: <reference|series absolute sum
+        over a countable set>] <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> is
+        absolute convergent.
+      </description>
+    </description>
+  </proof>
+
+  We can now extend [theorem: <reference|series absolute convergence
+  equivalences>] to the case of absolute convergent series with a countable
+  index.
+
+  <\theorem>
+    <label|series absolute convergence of countable families condition>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
+    a Banach space, <math|I> a countable set then we have
+
+    <\equation*>
+      <big|sum><rsub|i\<in\>I>x<rsub|i><text| is absolute convergent>
+    </equation*>
+
+    <\equation*>
+      \<Updownarrow\>
+    </equation*>
+
+    <\equation*>
+      \<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text| there exist a
+      finite >H\<subseteq\>I<text| such that >\<forall\>K\<subseteq\>I<text|
+      with <math|K> finite and >K<big|cap>H=\<varnothing\><text| we have
+      ><big|sum><rsub|i\<in\>K><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\<less\>\<varepsilon\>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Take <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>.
+      As <math|I> is countable we must consider two cases:
+
+      <\description>
+        <item*|<math|I> is finite>Take <math|H=I> then if
+        <math|K\<subseteq\>I> with <math|K<big|cap>H=\<varnothing\>> then
+        <math|K=K<big|cap>I=K<big|cap>H=\<varnothing\>> so that
+        <math|<big|sum><rsub|i\<in\>K><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>=<big|sum><rsub|i\<in\>\<varnothing\>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\<equallim\><rsub|<text|[definition:
+        <reference|sum generalized sum>]>>0\<less\>\<varepsilon\>>
+
+        <item*|<math|I> is denumerable>As
+        <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> is absolute convergent there
+        exist a bijection <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>I>
+        such that <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>>
+        is absolute convergent. Using [theorem: <reference|series absolute
+        convergence equivalences>] there exist a finite
+        <math|H<rprime|'>\<subseteq\>\<bbb-N\><rsub|0>> such that
+        <math|\<forall\>K\<subseteq\>\<bbb-N\><rsub|0>> with
+        <math|K<big|cap>H<rprime|'>=\<varnothing\>> we have
+        <math|<big|sum><rsub|i\<in\>K><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>\<less\>\<varepsilon\>>.
+        Take <math|H=\<beta\><around*|(|H<rprime|'>|)>> then <math|H> is
+        finite and if <math|L\<subseteq\>I> with <math|L> finite and
+        <math|L<big|cap>H=\<varnothing\>>. Them we have
+        <math|\<varnothing\>=\<beta\><rsup|-1><around*|(|L<big|cap>H|)>\<equallim\><rsub|<text|[theorem:
+        <reference|function function and intersection and
+        union>]>>\<beta\><rsup|-1><around*|(|L|)><big|cap>\<beta\><rsup|-1><around*|(|H|)>=\<beta\><rsup|-1><around*|(|L|)><big|cap>H<rprime|'>>
+        so that\ 
+
+        <\equation*>
+          <big|sum><rsub|i\<in\>\<beta\><rsup|-1><around*|(|L|)>><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>\<less\>\<varepsilon\>
+        </equation*>
+
+        As <math|\<beta\><rsub|\|\<beta\><rsup|-1>>\<of\>\<beta\><rsup|-1><around*|(|L|)>\<rightarrow\>\<beta\><around*|(|\<beta\><rsup|-1><around*|(|L|)>|)>=L>
+        is a bijection we have by [theorem: <reference|sum bijection on
+        index>] that <math|<big|sum><rsub|i\<in\>\<beta\><rsup|-1><around*|(|L|)>><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>=<big|sum><rsub|i\<in\>L><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>>
+        so that\ 
+
+        <\equation*>
+          <big|sum><rsub|i\<in\>L><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\<less\>\<varepsilon\>
+        </equation*>
+      </description>
+
+      <item*|<math|\<Leftarrow\>>>As <math|I> is countable we must consider
+      two cases:
+
+      <\description>
+        <item*|<math|I> is finite>By definition we have that
+        <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> is absolute convergent.
+
+        <item*|<math|I> is denumerable>Then there exist a bijection
+        <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>I>. Let
+        <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then by the hypothesis
+        there exist a finite <math|H<rprime|'>\<subseteq\>I> such that
+        <math|\<forall\>K\<subseteq\>H> with <math|K> finite and
+        <math|K<big|cap>H=\<varnothing\>> we have
+        <math|<big|sum><rsub|i\<in\>K><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\<less\>\<varepsilon\>>.
+        Take <math|H=\<beta\><rsup|-1><around*|(|H<rprime|'>|)>\<subseteq\>\<bbb-N\><rsub|0>>
+        and let <math|L\<subseteq\>\<bbb-N\><rsub|0>> with <math|K> finite
+        and <math|L<big|cap>H=\<varnothing\>>. Then we have that
+
+        <\equation*>
+          \<varnothing\>=\<beta\><around*|(|L<big|cap>H|)>\<equallim\><rsub|\<beta\><text|
+          is a bijection and [theorem: <reference|function function and
+          intersection and union>]>>\<beta\><around*|(|L|)><big|cap>\<beta\><around*|(|H|)>=\<beta\><around*|(|K|)><big|cap>H<rprime|'>
+        </equation*>
+
+        so that\ 
+
+        <\equation*>
+          <big|sum><rsub|i\<in\>\<beta\><around*|(|L|)>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\<less\>\<varepsilon\>
+        </equation*>
+
+        As <math|\<beta\><rsub|\|L>:L\<rightarrow\>\<beta\><around*|(|L|)>>
+        is a bijection we have by [theorem: <reference|sum bijection on
+        index>] that <math|<big|sum><rsub|i\<in\>\<beta\><around*|(|L|)>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>=<big|sum><rsub|i\<in\>L><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>>
+        so that\ 
+
+        <\equation*>
+          <big|sum><rsub|i\<in\>L><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>\<less\>\<varepsilon\>
+        </equation*>
+
+        Using \ [theorem: <reference|series absolute convergence
+        equivalences>] it follows then that
+        <math|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>>
+        is absolute convergent. Hence by [definition: <reference|series
+        absolute sum over a countable set>] it follows that\ 
+
+        <\equation*>
+          <big|sum><rsub|i\<in\>I>x<rsub|i><text| is absolute convergent>
+        </equation*>
+      </description>
+    </description>
+  </proof>
+
+  We have now the following extension of the dominant convergent series.
+
+  <\theorem>
+    <label|series absolute convergence dominant convergence><dueto|Dominant
+    Convergence>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a Banach space, <math|I> a countable set,
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>X> such that
+    there exist a <math|<around*|{|s<rsub|i>|}><rsub|i\<in\>I>\<subseteq\><around*|[|0,\<ldots\>,\<infty\>|[>>
+    such that <math|<big|sum><rsub|i\<in\>I>s<rsub|i>> is convergent and
+    <math|\<forall\>i\<in\>I> we have <math|<around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\<leqslant\>s<rsub|i>>
+    then <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> is absolute convergent and
+    <math|<around*|\<\|\|\>|<big|sum><rsub|i\<in\>I>x<rsub|i>|\<\|\|\>>\<leqslant\><big|sum><rsub|i\<in\>I>s<rsub|i>>
+  </theorem>
+
+  <\proof>
+    As <math|I> is countable we must consider two possibilities for <math|I>\ 
+
+    <\description>
+      <item*|<math|I> is finite>Then by definition
+      <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> is absolute convergent and\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|<big|sum><rsub|i\<in\>I>x<rsub|i>|\<\|\|\>>\<leqslant\><rsub|<text|[theorem:
+        <reference|normed triangle inequality>]>><big|sum><rsub|i\<in\>I><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\<leqslant\><rsub|<text|[theorem:
+        <reference|sum of real numbers and
+        inequality>]>><big|sum><rsub|i\<in\>I>s<rsub|i>
+      </equation*>
+
+      \ 
+
+      <item*|<math|I> is denumerable>Then as
+      <math|<big|sum><rsub|i\<in\>I>s<rsub|i>> is absolute convergent there
+      exist a bijection <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>I> such
+      that <math|<big|sum><rsub|i=0><rsup|\<infty\>><around*|\<\|\|\>|s<rsub|i>|\<\|\|\>>>
+      is absolute convergent, hence <math|<big|sum><rsub|i=0><rsup|\<infty\>><around*|\<\|\|\>|s<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>>
+      is convergent. As <math|\<forall\>i\<in\>\<bbb-N\><rsub|0>>
+      <math|<around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>\<leqslant\>s<rsub|\<beta\><around*|(|i|)>>>
+      it follows from [theorem: <reference|series absolute dominant
+      convergence>] that
+
+      <\equation*>
+        <big|sum><rsub|i=0><rsup|\<infty\>><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>><text|
+        converges>
+      </equation*>
+
+      and
+
+      <\equation*>
+        <big|sum><rsub|i=0><rsup|\<infty\>><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>\<leqslant\><big|sum><rsub|i=0><rsup|\<infty\>>s<rsub|\<beta\><around*|(|i|)>>.
+      </equation*>
+
+      So by [definition: <reference|series absolute sum over a countable
+      set>]
+
+      <\equation*>
+        <big|sum><rsub|i\<in\>I>x<rsub|i><text| is absolute convergent>
+      </equation*>
+
+      Further by [theorem: <reference|series absolute convergence equals
+      convergence only in Banach space>] <math|<big|sum><rsub|i\<in\>I>x<rsub|i>>
+      converges and\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|<big|sum><rsub|i\<in\>I>x<rsub|i>|\<\|\|\>>\<equallim\><rsub|<text|[definition:
+        <reference|sum of a countable set>]>><around*|\<\|\|\>|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>\<leqslant\><big|sum><rsub|i=0><rsup|\<infty\>>s<rsub|\<beta\><around*|(|i|)>>\<equallim\><rsub|<text|[definition:
+        <reference|sum of a countable set>]>><big|sum><rsub|i\<in\>I>x<rsub|i>
+      </equation*>
+    </description>
+  </proof>
+
+  We can also extend [lemma: <reference|lemma 14.356.158>] to the following
+  lemma:
+
+  <\lemma>
+    <label|lemma 14.364.159>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a Banach space, <math|I> a countable,
+    <math|<big|sum><rsub|i\<in\>I>x<rsub|i>> a absolute convergent series
+    then <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there exist a
+    finite <math|K\<subseteq\>I> such that:
+
+    <\enumerate>
+      <item><math|\<forall\>L\<subseteq\>I> with <math|L> finite and
+      <math|K<big|cap>L=\<varnothing\>> we have
+      <math|<big|sum><rsub|i\<in\>L><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\<less\>\<varepsilon\>>
+
+      <item><math|\<forall\>H\<subseteq\>I> with <math|H> finite and
+      <math|K\<subseteq\>H> we have <math|<around*|\<\|\|\>|<big|sum><rsub|i\<in\>I>x<rsub|i>-<big|sum><rsub|i\<in\>H>x<rsub|i>|\<\|\|\>>\<less\>\<varepsilon\>>
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    As <math|I> is countable we have two cases to consider:
+
+    <\description>
+      <item*|<math|I> is finite>Take <math|K=I> then we have:
+
+      <\enumerate>
+        <item>If <math|L\<subseteq\>I> with <math|K<big|cap>L=\<varnothing\>>
+        then we have <math|L=I<big|cap>L\<equallim\><rsub|K=I>K<big|cap>L=\<varnothing\>>
+        so that\ 
+
+        <\equation*>
+          <big|sum><rsub|i\<in\>L><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>=<big|sum><rsub|i\<in\>\<varnothing\>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\<equallim\><rsub|<text|[definition:
+          <reference|sum generalized sum>]>>0\<less\>\<varepsilon\>
+        </equation*>
+
+        <item>If <math|H\<subseteq\>I> with <math|K\<subseteq\>H> then as
+        <math|K=I> we have <math|H=I=K> so that\ 
+
+        <\equation*>
+          <around*|\<\|\|\>|<big|sum><rsub|i\<in\>I>x<rsub|i>-<big|sum><rsub|i\<in\>H>x<rsub|i>|\<\|\|\>>=<around*|\<\|\|\>|<big|sum><rsub|i\<in\>I>x<rsub|i>-<big|sum><rsub|i\<in\>I>x<rsub|i>|\<\|\|\>>=<around*|\<\|\|\>|0|\<\|\|\>>=0\<less\>\<varepsilon\>
+        </equation*>
+      </enumerate>
+
+      <item*|<math|I> is denumerable>Then by definition there exist a
+      bijection <math|\<beta\>:\<bbb-N\><rsub|0>\<rightarrow\>I> such that
+
+      <\equation>
+        <label|eq 14.211.159><big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>><text|
+        is absolute convergent>
+      </equation>
+
+      Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then using [lemma:
+      <reference|lemma 14.356.158>] there exists a
+      <math|K<rprime|'>\<subseteq\>\<bbb-N\><rsub|0>> such that\ 
+
+      <\equation>
+        <label|eq 14.212.159>\<forall\>L\<subseteq\>\<bbb-N\><rsub|0><text|
+        with >L<text| finite >K<rprime|'><big|cap>L=\<varnothing\><text| we
+        have ><around*|\<\|\|\>|<big|sum><rsub|i\<in\>L>x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>\<less\>\<varepsilon\>
+      </equation>
+
+      <\equation>
+        <label|eq 14.213.159>\<forall\>H\<subseteq\>\<bbb-N\><rsub|0><text|
+        with >H<text| finite and >K<rprime|'>\<subseteq\>H<text| then
+        ><around*|\<\|\|\>|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>-<big|sum><rsub|i\<in\>H>x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>\<less\>\<varepsilon\>
+      </equation>
+
+      Define <math|K=\<beta\><around*|(|K<rprime|'>|)>> then
+      <math|K\<subseteq\>I> and by [theorem: <reference|image of a finite
+      set>] <math|K> is finite. Then we have:\ 
+
+      <\enumerate>
+        <item>If <math|L\<subseteq\>I> with <math|L> finite and
+        <math|K<big|cap>L=\<varnothing\>> then we have
+        <math|\<beta\><rsup|-1><around*|(|L|)>\<subseteq\>\<beta\><rsup|-1><around*|(|I|)>=\<bbb-N\><rsub|0>>
+        and <math|\<beta\><rsup|-1><around*|(|K|)><big|cap>\<beta\><rsup|-1><around*|(|L|)>\<equallim\><rsub|<text|[theorem:
+        <reference|function function and intersection and
+        union>]>>\<beta\><rsup|-1><around*|(|K<big|cap>L|)>=\<beta\><rsup|-1><around*|(|\<varnothing\>|)>=\<varnothing\>>.
+        So using [eq: <reference|eq 14.212.159>] we have that
+        <math|<big|sum><rsub|i\<in\>\<beta\><rsup|-1><around*|(|L|)>><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>\<less\>\<varepsilon\>>.
+        As <math|\<beta\><rsub|\|\<beta\><rsup|-1><around*|(|L|)>>:\<beta\><rsup|-1><around*|(|L|)>\<rightarrow\>\<beta\><around*|(|\<beta\><rsup|-1><around*|(|L|)>|)>=L>
+        is a bijection we have by [theorem: <reference|sum bijection on
+        index>] that <math|<big|sum><rsub|i\<in\>L><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>=<big|sum><rsub|i\<in\>\<beta\><rsup|-1><around*|(|L|)>><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>>
+        proving
+
+        <\equation*>
+          <big|sum><rsub|i\<in\>L><around*|\<\|\|\>|x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>\<less\>\<varepsilon\>
+        </equation*>
+
+        <item>If <math|H\<subseteq\>I> with <math|H> finite and
+        <math|K\<subseteq\>H> then as <math|\<beta\><rsup|-1>:I\<rightarrow\>\<bbb-N\><rsub|0>>
+        is a bijection we have that <math|\<beta\><rsup|-1><around*|(|H|)>=<around*|(|\<beta\><rsup|-1>|)><around*|(|H|)>>
+        is finite and <math|K<rprime|'>=\<beta\><rsup|-1><around*|(|\<beta\><around*|(|K<rprime|'>|)>|)>=\<beta\><rsup|-1><around*|(|K|)>\<subseteq\>\<beta\><rsup|-1><around*|(|H|)>>.
+        So using [eq: <reference|eq 14.213.159>] we have
+
+        <\equation>
+          <label|eq 14.214.159><around*|\<\|\|\>|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>-<big|sum><rsub|i\<in\>\<beta\><rsup|-1><around*|(|H|)>>x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>\<less\>\<varepsilon\>.
+        </equation>
+
+        As
+
+        <\equation*>
+          \<beta\><rsub|\|\<beta\><rsup|-1><around*|(|H|)>>:\<beta\><rsup|-1><around*|(|H|)>\<rightarrow\>\<beta\><around*|(|\<beta\><rsup|-1><around*|(|H|)>|)>=H<text|
+          is a bijection>
+        </equation*>
+
+        is a bijection we have by [theorem: <reference|sum bijection on
+        index>] that
+
+        <\equation>
+          <label|eq 14.215.159><big|sum><rsub|i\<in\>H>x<rsub|i>=<big|sum><rsub|i\<in\>\<beta\><rsup|-1><around*|(|H|)>>x<rsub|\<beta\><around*|(|i|)>>
+        </equation>
+
+        proving
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|\<\|\|\>|<big|sum><rsub|i\<in\>I>x<rsub|i>-<big|sum><rsub|i\<in\>H>x<rsub|i>|\<\|\|\>>>|<cell|\<equallim\><rsub|<text|[definition:
+          <reference|sum of a countable set>]>>>|<cell|<around*|\<\|\|\>|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>-<big|sum><rsub|i\<in\>H>x<rsub|i>|\<\|\|\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 14.215.159>]>>>|<cell|<around*|\<\|\|\>|<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)>>-<big|sum><rsub|i\<in\>\<beta\><rsup|-1><around*|(|H|)>>x<rsub|\<beta\><around*|(|i|)>>|\<\|\|\>>>>|<row|<cell|>|<cell|\<less\><rsub|<text|[eq:
+          <reference|eq 14.214.159>]>>>|<cell|\<varepsilon\>>>>>
+        </eqnarray*>
+
+        or summarized
+
+        <\equation*>
+          <around*|\<\|\|\>|<big|sum><rsub|i\<in\>I>x<rsub|i>-<big|sum><rsub|i\<in\>H>x<rsub|i>|\<\|\|\>>\<less\>\<varepsilon\>
+        </equation*>
+      </enumerate>
+    </description>
+  </proof>
+
+  Next we prove associativity of absolute convergence.
+
+  <\theorem>
+    <label|series absolute convergent countable associativity>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
+    a Banach space, <math|I,K> countable sets,
+    <math|<around*|{|K<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|K|)>>
+    a <with|font-series|bold|pairwise disjoint >family of subsets of <math|K>
+    such that <math|<big|cup><rsub|i\<in\>I>K<rsub|i>=K> and
+    <math|<big|sum><rsub|i\<in\>K>x<rsub|i>> a absolute convergent series
+    then we have:\ 
+
+    <\enumerate>
+      <item><math|\<forall\>i\<in\>I> <math|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>>
+      is absolute convergent.
+
+      <item><math|<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>>
+      is absolute convergent.
+
+      <item><math|<big|sum><rsub|i\<in\>K>x<rsub|i>=<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j>|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ As <math|<big|sum><rsub|i\<in\>K>x<rsub|i>> is absolute convergent it
+    follows from [theorem: <reference|series absolute convergence countable
+    family>] that\ 
+
+    <\equation*>
+      <big|sum><rsub|i\<in\>I><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><text| is
+      a convergent series of non negative numbers>
+    </equation*>
+
+    Using then the associativity of series of non negative numbers [see
+    theorem: <reference|series non negative numbers associativity>] it
+    follows that\ 
+
+    <\equation>
+      <label|eq 14.216.159>\<forall\>i\<in\>I<text|
+      ><big|sum><rsub|j\<in\>K<rsub|i>><around*|\<\|\|\>|x<rsub|j>|\<\|\|\>><text|
+      converges and ><big|sum><rsub|i\<in\>K><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>=<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>><around*|\<\|\|\>|x<rsub|j>|\<\|\|\>>|)>
+    </equation>
+
+    Using [theorem: <reference|series absolute convergence dominant
+    convergence>] on the above we have that
+
+    <\equation>
+      <label|eq 14.217.159>\<forall\>i\<in\>I<text| that
+      ><big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j><text| is absolute converges
+      and ><around*|\<\|\|\>|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|\<\|\|\>>\<leqslant\><big|sum><rsub|j\<in\>K<rsub|i>><around*|\<\|\|\>|x<rsub|j>|\<\|\|\>>
+    </equation>
+
+    Using dominant convergence [see theorem: <reference|series absolute
+    convergence dominant convergence>] on [eqs: <reference|eq 14.216.159>,
+    <reference|eq 14.217.159>] proves that\ 
+
+    <\equation>
+      <label|eq 14.218.159><big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)><text|
+      is absolute convergent>
+    </equation>
+
+    Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. \ As
+    <math|<big|sum><rsub|i\<in\>K>x<rsub|i>> is absolute convergent we have
+    by [lemma: <reference|lemma 14.364.159>] there exist a finite
+    <math|G\<subseteq\>K> such that\ 
+
+    <\equation>
+      <label|eq 14.219.161>\<forall\>H\<subseteq\>K<text| with >H<text|
+      finite and >G\<subseteq\>H<text| we have
+      ><around*|\<\|\|\>|<big|sum><rsub|i\<in\>K>x<rsub|i>-<big|sum><rsub|i\<in\>H>x<rsub|i>|\<\|\|\>>\<less\><frac|\<varepsilon\>|3>
+    </equation>
+
+    Define <math|J=<around*|{|i\<in\>I\|K<rsub|i><big|cap>G\<neq\>\<varnothing\>|}>\<subseteq\>I>.
+    If <math|x\<in\>G\<subseteq\>K=<big|cup><rsub|i\<in\>I>K<rsub|i>> then
+    there exist a <math|i\<in\>I> such that
+    <math|x\<in\>G<big|cap>K<rsub|i>\<Rightarrow\>G<big|cap>K<rsub|i>\<neq\>\<varnothing\>\<Rightarrow\>i\<in\>J>
+    so that <math|x\<in\><big|cup><rsub|j\<in\>J><around*|(|K<rsub|j><big|cap>G|)>>
+    proving that <math|G\<subseteq\><big|cup><rsub|j\<in\>J><around*|(|K<rsub|j><big|cap>G|)>\<subseteq\>G>
+    so that
+
+    <\equation>
+      <label|eq 14.219.160>G=<big|cup><rsub|j\<in\>J><around*|(|K<rsub|j><big|cap>G|)>
+    </equation>
+
+    Assume that <math|J> is not finite then as
+    <math|<around*|{|K<rsub|j><big|cap>G|}><rsub|j\<in\>J>> is a family of
+    pairwise disjoint non empty sets if follows from [theorem:
+    <reference|infinite family of pairwise disjoint non empty sets is
+    infinite>] that <math|G=<big|cup><rsub|i\<in\>J><around*|(|K<big|cap>N<rsub|i>|)>>
+    is infinite, contradicting the fact that <math|G> was finite. Hence\ 
+
+    <\equation>
+      <label|eq 14.220.159>J<text| is finite>
+    </equation>
+
+    As by [eq: <reference|eq 14.218.159>]
+    <math|<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)><text|>>
+    is absolute convergent we can use [lemma: <reference|lemma 14.364.159>]
+    again to find a finite <math|L\<subseteq\>I> such that
+    <math|\<forall\>H\<subseteq\>I> with <math|H> finite and
+    <math|L\<subseteq\>H> we have
+
+    <\equation*>
+      <around*|\<\|\|\>|<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>-<big|sum><rsub|i\<in\>H><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>|\<\|\|\>>\<less\><frac|\<varepsilon\>|3>
+    </equation*>
+
+    Take <math|M=J<big|cup>L> then using [eq: <reference|eq 14.220.159>]
+    <math|M> is finite, <math|M\<subseteq\>I> and <math|L\<subseteq\>H> so
+    that\ 
+
+    <\equation>
+      <label|eq 14.221.519><around*|\<\|\|\>|<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>-<big|sum><rsub|i\<in\>M><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>|\<\|\|\>>\<less\><frac|\<varepsilon\>|3>
+    </equation>
+
+    By [eq: <reference|eq 14.217.159>] <math|\<forall\>i\<in\>M\<subseteq\>I>
+    <math|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>> is absolute convergent
+    we have by [lemma: <reference|lemma 14.364.159>] that there exist a
+    finite <math|M<rsub|i>\<subseteq\>K<rsub|i>> such that
+
+    <\equation>
+      <label|eq 14.223.159.1>\<forall\>H\<subseteq\>K<rsub|i><text| with
+      >H<text| finite and >M<rsub|i>\<subseteq\>H<text| we have
+      ><around*|\<\|\|\>|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>-<big|sum><rsub|j\<in\>H>x<rsub|j>|\<\|\|\>>\<less\><frac|\<varepsilon\>|3\<cdot\>card<around*|(|M|)>>
+    </equation>
+
+    Now <math|\<forall\>i\<in\>M> define <math|N<rsub|i>=M<rsub|i><big|cup><around*|(|K<rsub|i><big|cap>G|)>>
+    a finite set then we have <math|N<rsub|i>\<subseteq\>K<rsub|i>> and
+    <math|M<rsub|i>\<subseteq\>N<rsub|i>> so that by the above [eq:
+    <reference|eq 14.222.159>] we have\ 
+
+    <\equation>
+      <label|eq 14.222.159>\<forall\>i\<in\>M<text| we have
+      ><around*|\<\|\|\>|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>-<big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j>|\<\|\|\>>\<less\><frac|\<varepsilon\>|3\<cdot\>card<around*|(|M|)>>
+    </equation>
+
+    Now we have\ 
+
+    <\equation*>
+      G\<equallim\><rsub|<text|[eq: <reference|eq
+      14.219.160>]>><big|cup><rsub|j\<in\>J><around*|(|K<rsub|j><big|cap>G|)>\<subseteq\><big|cup><rsub|j\<in\>J><around*|(|M<rsub|j><big|cup><around*|(|K<rsub|j><big|cap>G|)>|)>=<big|cup><rsub|j\<in\>M>N<rsub|j>\<subseteq\><rsub|N<rsub|j>\<subseteq\>K<rsub|j>><big|cup><rsub|j\<in\>M>K<rsub|j>\<subseteq\>K
+    </equation*>
+
+    So that by [eq: <reference|eq 14.219.161>] we have\ 
+
+    <\equation>
+      <label|eq 14.225.161><around*|\<\|\|\>|<big|sum><rsub|i\<in\>K>x<rsub|i>-<big|sum><rsub|i\<in\><big|cup><rsub|j\<in\>M>N<rsub|j>>x<rsub|i>|\<\|\|\>>\<less\><frac|\<varepsilon\>|3>
+    </equation>
+
+    Further\ 
+
+    <\equation>
+      <label|eq 14.226.161>\<forall\>i,j\<in\>M<text| with >i\<neq\>j<text|
+      we have >N<rsub|i><big|cap>N<rsub|j>\<subseteq\>K<rsub|i><big|cap>K<rsub|j>=\<varnothing\>\<Rightarrow\>N<rsub|i><big|cap>N<rsub|j>=\<varnothing\>
+    </equation>
+
+    Now
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|<big|sum><rsub|i\<in\>K>x<rsub|i>-<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<big|sum><rsub|i\<in\>K>x<rsub|i>-<big|sum><rsub|i\<in\><big|cup><rsub|j\<in\>M>N<rsub|j>>x<rsub|i>+<big|sum><rsub|i\<in\><big|cup><rsub|j\<in\>M>Nj>x<rsub|i>-<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>|\<\|\|\>>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<big|sum><rsub|i\<in\>K>x<rsub|i>-<big|sum><rsub|i\<in\><big|cup><rsub|j\<in\>M>N<rsub|j>>x<rsub|i>|\<\|\|\>>+<around*|\<\|\|\>|<big|sum><rsub|i\<in\><big|cup><rsub|j\<in\>M>N<rsub|j>>x<rsub|i>-<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>|\<\|\|\>>>|<cell|\<less\><rsub|<text|[eq:
+      <reference|eq 14.225.161>>>>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|3>+<around*|\<\|\|\>|<big|sum><rsub|i\<in\><big|cup><rsub|j\<in\>M>N<rsub|j>>x<rsub|i>-<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>|\<\|\|\>>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 14.226.161>]>>>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|3>+<around*|\<\|\|\>|<big|sum><rsub|i\<in\>M><around*|(|<big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j>|)>-<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|3>+<around*|\<\|\|\>|<big|sum><rsub|i\<in\>M><around*|(|<big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j>|)>-<big|sum><rsub|i\<in\>M><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>+<big|sum><rsub|i\<in\>M><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>-<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>|\<\|\|\>>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|3>+<around*|\<\|\|\>|<big|sum><rsub|i\<in\>M><around*|(|<big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j>|)>-<big|sum><rsub|i\<in\>M><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>|\<\|\|\>>+<around*|\<\|\|\>|<big|sum><rsub|i\<in\>M><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>-<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>|\<\|\|\>>>|<cell|\<less\><rsub|<text|[eq:
+      <reference|eq 14.221.519>]>>>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|3>+<around*|\<\|\|\>|<big|sum><rsub|i\<in\>M><around*|(|<big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j>|)>-<big|sum><rsub|i\<in\>M><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>|\<\|\|\>>+<frac|\<varepsilon\>|3>>|<cell|=>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|3>+<around*|\<\|\|\>|<big|sum><rsub|i\<in\>M><around*|(|<big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j>|\<nobracket\>>-<around*|\<nobracket\>|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>|\<\|\|\>>+<frac|\<varepsilon\>|3>>|<cell|\<leqslant\><rsub|M<text|
+      is finite>>>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|3>+<big|sum><rsub|i\<in\>M><around*|\<\|\|\>|<big|sum><rsub|j\<in\>N<rsub|i>>x<rsub|j>-<big|sum><rsub|j\<in\>K<rsub|i>>|\<\|\|\>>+<frac|\<varepsilon\>|3>>|<cell|\<less\><rsub|<text|[eq:
+      <reference|eq 14.223.159.1>]>>>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|3>+<big|sum><rsub|i\<in\>M><frac|\<varepsilon\>|3\<cdot\>card<around*|(|M|)>>+<frac|\<varepsilon\>|3>>|<cell|=>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|3>+<frac|\<varepsilon\>|3>+<frac|\<varepsilon\>|3>>|<cell|=>|<cell|>>|<row|<cell|\<varepsilon\>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    So given <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> we have that
+    <math|0\<leqslant\><around*|\<\|\|\>|<big|sum><rsub|i\<in\>K>x<rsub|i>-<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>|\<\|\|\>>\<less\>\<varepsilon\>>
+    so that by [theorem: <reference|complex Archimedean property consequence
+    (2)>] <math|><math|<around*|\<\|\|\>|<big|sum><rsub|i\<in\>K>x<rsub|i>-<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>|\<\|\|\>>>
+    proving\ 
+
+    <\equation>
+      <label|eq 14.227\<point\>161><big|sum><rsub|i\<in\>K>x<rsub|i>=<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|j\<in\>K<rsub|i>>x<rsub|j>|)>
+    </equation>
+
+    Finally (1) is proved by [eq: <reference|eq 14.217.159>] , (2) by \ [eq:
+    <reference|eq 14.218.159>] and (3) by [eq: <reference|eq
+    14.227\<point\>161>].
+  </proof>
+
+  As a application of the above theorem we prove distributivity for absolute
+  convergent series in <math|\<bbb-R\>>.
+
+  <\theorem>
+    <label|series distributivity>Let <math|I,J> be countable sets,
+    <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>> the Banach
+    space of the real numbers [see theorem: <reference|complete set of real
+    numbers>] and <math|<big|sum><rsub|i\<in\>I>x<rsub|i>>,
+    <math|<big|sum><rsub|i\<in\>J>y<rsub|j>> absolute convergent series in
+    <math|\<bbb-R\>> then <math|<big|sum><rsub|<around*|(|i,j|)>\<in\>I\<times\>J><around*|(|x<rsub|i>,y<rsub|j>|)>>
+    is absolute convergent and
+
+    <\equation*>
+      <big|sum><rsub|<around*|(|i,j|)>\<in\>I\<times\>J><around*|(|x<rsub|i>,y<rsub|j>|)>=<around*|(|<big|sum><rsub|i\<in\>I>x<rsub|i>|)>\<cdot\><around*|(|<big|sum><rsub|i\<in\>J>y<rsub|j>|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    As <math|<big|sum><rsub|i\<in\>I>x<rsub|i>>,
+    <math|<big|sum><rsub|i\<in\>J>y<rsub|j>> are absolute convergent we have
+    by [theorem: <reference|series absolute convergence alternative
+    definition>] that
+
+    <\equation*>
+      s=sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>H><around*|\||x<rsub|i>|\|>\|H\<subseteq\>I\<wedge\>H<text|
+      is finite>|}>|)><text| and >t=sup<around*|(|<around*|{|<big|sum><rsub|\<iota\>H><around*|\||y<rsub|i>|\|>\|H\<subseteq\>J\<wedge\>H<text|
+      is finite>|}>|)><text| exists>
+    </equation*>
+
+    Let <math|H> be a finite subset of <math|I\<times\>J>. As
+    <math|\<pi\><rsub|1>:H\<rightarrow\>\<pi\><rsub|1><around*|(|H|)>> and
+    <math|\<pi\><rsub|2>:H\<rightarrow\>\<pi\><rsub|2><around*|(|H|)>> are
+    surjective we have that <math|\<pi\><rsub|1><around*|(|H|)>,\<pi\><rsub|2><around*|(|H|)>>
+    are finite [see theorem: <reference|surjection f:A-\<gtr\>B if A is
+    finite then B is finite>]. Further if
+    <math|<around*|(|i,j|)>\<in\>H\<subseteq\>I\<times\>J> then
+    <math|i=\<pi\><rsub|1><around*|(|<around*|(|i,j|)>|)>\<in\>\<pi\><rsub|1><around*|(|H|)>>
+    and <math|j=\<pi\><rsub|2><around*|(|<around*|(|i,j|)>|)>\<in\>\<pi\><rsub|2><around*|(|H|)>>
+    proving that <math|<around*|(|i,j|)>\<in\>\<pi\><rsub|1><around*|(|H|)>\<times\>\<pi\><rsub|2><around*|(|H|)>>
+    or\ 
+
+    <\equation*>
+      H\<subseteq\>\<pi\><rsub|1><around*|(|H|)>\<times\>\<pi\><rsub|2><around*|(|H|)>
+    </equation*>
+
+    Hence\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<big|sum><rsub|<around*|(|i,j|)>\<in\>H><around*|\||x<rsub|i>\<cdot\>y<rsub|j>|\|>>|<cell|=>|<cell|<big|sum><rsub|\<alpha\>\<in\>H><around*|(|<around*|\||x<rsub|i>|\|>\<cdot\><around*|\||y<rsub|j>|\|>|)>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<big|sum><rsub|<around*|(|i,j|)>\<in\><around*|(|\<pi\><rsub|1><around*|(|H|)>\<times\>\<pi\><rsub|2><around*|(|H|)>|)>\\H><around*|(|<around*|\||x<rsub|i>|\|>\<cdot\><around*|\||y<rsub|j>|\|>|)>+<big|sum><rsub|<around*|(|i,j|)>\<in\>H><around*|(|<around*|\||x<rsub|i>|\|>\<cdot\><around*|\||y<rsub|j>|\|>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum over disjoint subsets>]>>>|<cell|<big|sum><rsub|<around*|(|i,j|)>\<in\>\<pi\><rsub|1><around*|(|H|)>\<times\>\<pi\><rsub|2><around*|(|H|)>><around*|(|<around*|\||x<rsub|i>|\|>\<cdot\><around*|\||y<rsub|j>|\|>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[corollary:
+      <reference|sum distributivity>]>>>|<cell|<around*|(|<big|sum><rsub|i\<in\>\<pi\><rsub|1><around*|(|H|)>><around*|\||x<rsub|i>|\|>|)>\<cdot\><around*|(|<big|sum><rsub|i\<in\>\<pi\><rsub|2><around*|(|H|)>><around*|\||y<rsub|i>|\|>|)>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|s\<cdot\>t>>>>
+    </eqnarray*>
+
+    From the above it follows that <math|<around*|{|<big|sum><rsub|i\<in\>H><around*|\||x<rsub|i>\<cdot\>y<rsub|i>|\|>\|H\<subseteq\>I\<wedge\>H<text|
+    is finite>|}>> has the upper bound <math|s\<cdot\>t> so that by the
+    conditional completeness of <math|\<bbb-R\>> [see theorem:
+    <reference|complex RC is conditional complete>]
+    <math|sup<around*|(|<around*|{|<big|sum><rsub|i\<in\>H><around*|\||x<rsub|i>\<cdot\>y<rsub|i>|\|>\|H\<subseteq\>I\<wedge\>H<text|
+    is finite>|}>|)>> exist. Hence using [theorem: <reference|series absolute
+    convergence alternative definition>]\ 
+
+    <\equation>
+      <label|eq 14.228.161><big|sum><rsub|<around*|(|i,j|)>\<in\>I\<times\>J><around*|(|x<rsub|i>\<cdot\>x<rsub|j>|)><text|
+      is absolute convergent>
+    </equation>
+
+    Next we prove that\ 
+
+    <\equation>
+      <label|eq 14.229.161>I\<times\>J=<big|cup><rsub|i\<in\>I><around*|(|<around*|{|i|}>\<times\>J|)><text|
+      and >\<forall\>i,j\<in\>I<text| with >i\<neq\>j<text| we have
+      ><around*|(|<around*|{|i|}>\<times\>J|)><big|cap><around*|(|<around*|{|j|}><big|cap>J|)>=\<varnothing\>
+    </equation>
+
+    <\proof>
+      As <math|\<forall\>i\<in\>I> we have
+      <math|<around*|{|i|}>\<times\>J\<subseteq\>I\<times\>J> it follows that
+      <math|<big|cup><rsub|i\<in\>I><around*|(|<around*|{|i|}>\<times\>J|)>\<subseteq\>I\<times\>J>,
+      further if <math|<around*|(|r,s|)>\<in\>I\<times\>J> we have
+      <math|r\<in\>I\<wedge\>s\<in\>J> so that
+      <math|<around*|(|r,s|)>\<in\><around*|{|r|}>\<times\>J\<subseteq\><big|cup><rsub|i\<in\>I><around*|(|<around*|{|i|}>\<times\>J|)>>
+      or <math|I\<times\>J\<subseteq\><big|cup><rsub|i\<in\>I><around*|(|<around*|{|i|}>\<times\>J|)>>.
+      Hence\ 
+
+      <\equation*>
+        I\<times\>J=<big|cup><rsub|i\<in\>I><around*|(|<around*|{|i|}>\<times\>J|)>
+      </equation*>
+
+      Further if <math|i,j\<in\>I> with <math|i\<neq\>j> then if
+      <math|<around*|(|r,s|)>\<in\><around*|(|<around*|{|i|}>\<times\>J|)><big|cap><around*|(|<around*|{|j|}><big|cap>J|)>>
+      then <math|r=i\<wedge\>r=j\<Rightarrow\>i=j> contradicting
+      <math|i\<neq\>j> so we have\ 
+
+      <\equation*>
+        <around*|(|<around*|{|i|}>\<times\>J|)><big|cap><around*|(|<around*|{|j|}><big|cap>J|)>=\<varnothing\><text|
+        >\<forall\>i,j\<in\>I<text| with >i\<neq\>j
+      </equation*>
+    </proof>
+
+    Let \ <math|i\<in\>I> and take <math|<around*|(|r,s|)>,<around*|(|r<rprime|'>,s<rprime|'>|)>\<in\><around*|{|i|}>\<times\>J>
+    such that <math|\<pi\><rsub|2><around*|(|<around*|(|r,s|)>|)>=\<pi\><rsub|2><around*|(|<around*|(|r<rprime|'>,s<rprime|'>|)>|)>>
+    then <math|r=i=r<rprime|'>> and <math|s=s<rprime|'>> so that
+    <math|<around*|(|r,s|)>=<around*|(|r<rprime|'>,s<rprime|'>|)>>. Further
+    if <math|j\<in\>J> then <math|<around*|(|i,j|)>\<in\><around*|{|i|}>\<times\>J>
+    and <math|\<pi\><rsub|2><around*|(|<around*|(|i,j|)>|)>=j>. So we have
+    that
+
+    <\equation>
+      <label|eq 14.230.161>\<forall\>i\<in\>I<text| we have that
+      >\<pi\><rsub|2>:<around*|{|i|}>\<times\>J\<rightarrow\>J<text| is a
+      bijection>
+    </equation>
+
+    Using the previous theorem [theorem: <reference|series absolute
+    convergent countable associativity>] on [eqs: <reference|eq 14.228.161>,
+    <reference|eq 14.229.161>]
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<big|sum><rsub|<around*|(|i,j|)>\<in\>I\<times\>J><around*|(|x<rsub|i>\<cdot\>y<rsub|j>|)>>|<cell|=>|<cell|<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|<around*|(|r,s|)>\<in\><around*|{|i|}>\<times\>J><around*|(|x<rsub|r>\<cdot\>y<rsub|s>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|r,s|)>\<in\><around*|{|i|}>\<times\>J\<Rightarrow\>x<rsub|r>=x<rsub|i>>>|<cell|<big|sum><rsub|i\<in\>I><around*|(|<big|sum><rsub|<around*|(|r,s|)>\<in\><around*|{|i|}>\<times\>J><around*|(|x<rsub|i>\<cdot\>y<rsub|\<pi\><rsub|2><around*|(|r,s|)>><rsub|>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|series absolute convergence sum and scalar
+      product>]>>>|<cell|<big|sum><rsub|i\<in\>I><around*|(|x<rsub|i>\<cdot\><big|sum><rsub|<around*|(|r,s|)>>y<rsub|\<pi\><rsub|2><around*|(|r,s|)>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|series absolute convergence commutativity countable
+      sums>]>\<wedge\><text|[eq: <reference|eq
+      14.230.161>]>>>|<cell|<big|sum><rsub|i\<in\>I><around*|(|x<rsub|i\<cdot\>><big|sum><rsub|j\<in\>J><rsub|>y<rsub|j>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|series absolute convergence sum and scalar
+      product>]>>>|<cell|<around*|(|<big|sum><rsub|i\<in\>I>x<rsub|i>|)>\<cdot\><around*|(|<big|sum><rsub|j\<in\>J>y<rsub|j>|)>>>>>
+    </eqnarray*>
+  </proof>
+
+  \;
+
+  \;
 </body>
 
 <\initial>
@@ -760,8 +1791,9 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|open mapping theorem|?>>
-    <associate|complete open mapping theorem|<tuple|5|?>>
+    <associate|auto-1|<tuple|open mapping theorem|5>>
+    <associate|auto-2|<tuple|sum over a countable set|?>>
+    <associate|complete open mapping theorem|<tuple|5|5>>
     <associate|countable union of a finite family of countable sets is
     countable|<tuple|4|4>>
     <associate|eq 12.10.131|<tuple|1|1>>
@@ -774,18 +1806,62 @@
     <associate|eq 14.111.151|<tuple|8|3>>
     <associate|eq 14.112.151|<tuple|9|3>>
     <associate|eq 14.113.151|<tuple|10|3>>
-    <associate|eq 14.241.164|<tuple|11|?>>
-    <associate|eq 14.242.164|<tuple|12|?>>
-    <associate|eq 14.243.164|<tuple|13|?>>
-    <associate|eq 14.246.165|<tuple|14|?>>
-    <associate|eq 14.247.165|<tuple|15|?>>
-    <associate|eq 14.248.165|<tuple|16|?>>
-    <associate|eq 14.249.165|<tuple|17|?>>
-    <associate|eq 14.250.165|<tuple|18|?>>
-    <associate|eq 14.251.165|<tuple|19|?>>
-    <associate|eq 14.252.165|<tuple|20|?>>
-    <associate|eq 14.253.165|<tuple|21|?>>
-    <associate|eq 14.254.165|<tuple|22|?>>
-    <associate|series lemma 14.342|<tuple|3|3>>
+    <associate|eq 14.211.159|<tuple|23|?>>
+    <associate|eq 14.212.159|<tuple|24|?>>
+    <associate|eq 14.213.159|<tuple|25|?>>
+    <associate|eq 14.214.159|<tuple|26|?>>
+    <associate|eq 14.215.159|<tuple|27|?>>
+    <associate|eq 14.216.159|<tuple|28|?>>
+    <associate|eq 14.217.159|<tuple|29|?>>
+    <associate|eq 14.218.159|<tuple|30|?>>
+    <associate|eq 14.219.160|<tuple|32|?>>
+    <associate|eq 14.219.161|<tuple|31|?>>
+    <associate|eq 14.220.159|<tuple|33|?>>
+    <associate|eq 14.221.519|<tuple|34|?>>
+    <associate|eq 14.222.159|<tuple|36|?>>
+    <associate|eq 14.223.159.1|<tuple|35|?>>
+    <associate|eq 14.225.161|<tuple|37|?>>
+    <associate|eq 14.226.161|<tuple|38|?>>
+    <associate|eq 14.227\<point\>161|<tuple|39|?>>
+    <associate|eq 14.228.161|<tuple|40|?>>
+    <associate|eq 14.229.161|<tuple|41|?>>
+    <associate|eq 14.230.161|<tuple|42|?>>
+    <associate|eq 14.241.164|<tuple|11|6>>
+    <associate|eq 14.242.164|<tuple|12|6>>
+    <associate|eq 14.243.164|<tuple|13|6>>
+    <associate|eq 14.246.165|<tuple|14|6>>
+    <associate|eq 14.247.165|<tuple|15|7>>
+    <associate|eq 14.248.165|<tuple|16|7>>
+    <associate|eq 14.249.165|<tuple|17|7>>
+    <associate|eq 14.250.165|<tuple|18|7>>
+    <associate|eq 14.251.165|<tuple|19|7>>
+    <associate|eq 14.252.165|<tuple|20|8>>
+    <associate|eq 14.253.165|<tuple|21|8>>
+    <associate|eq 14.254.165|<tuple|22|8>>
+    <associate|lemma 14.360.158|<tuple|10|?>>
+    <associate|lemma 14.364.159|<tuple|14|?>>
+    <associate|series absolute convergence alternative
+    definition|<tuple|11|?>>
+    <associate|series absolute convergence commutativity countable
+    sums|<tuple|8|?>>
+    <associate|series absolute convergence countable family|<tuple|7|?>>
+    <associate|series absolute convergence dominant convergence|<tuple|13|?>>
+    <associate|series absolute convergence of countable families
+    condition|<tuple|12|?>>
+    <associate|series absolute convergence sum and scalar
+    product|<tuple|9|?>>
+    <associate|series absolute convergent countable
+    associativity|<tuple|15|?>>
+    <associate|series absolute sum over a countable set|<tuple|6|?>>
+    <associate|series distributivity|<tuple|16|?>>
+    <associate|series lemma 14.342|<tuple|3|4>>
   </collection>
 </references>
+
+<\auxiliary>
+  <\collection>
+    <\associate|idx>
+      <tuple|<tuple|open mapping theorem>|<pageref|auto-1>>
+    </associate>
+  </collection>
+</auxiliary>

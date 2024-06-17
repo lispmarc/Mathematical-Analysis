@@ -9410,6 +9410,143 @@
     </enumerate>
   </proof>
 
+  <\example>
+    <label|order min({x,y})>Let <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>>
+    be a totally ordered set, <math|x,y\<in\>X> then
+    <math|max<around*|(|<around*|{|x,y|}>|)>> and
+    <math|min<around*|(|<around*|{|x,y|}>|)>> exist.
+  </example>
+
+  <\proof>
+    As <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is a totally
+    ordered set we have either:
+
+    <\description>
+      <item*|<math|x\<leqslant\>y>>Then as <math|x,y\<in\>X>,
+      <math|x\<leqslant\>x>, <math|y\<leqslant\>y> and <math|x\<leqslant\>y>
+      we have <math|min<around*|(|<around*|{|x,y|}>|)>=x> and
+      <math|max<around*|(|<around*|{|x,y|}>|)>=y>.
+
+      <item*|<math|y\<leqslant\>x>>Then as <math|x,y\<in\>X>,
+      <math|x\<leqslant\>x>, <math|y\<leqslant\>y> and <math|y\<leqslant\>x>
+      we have <math|min<around*|(|<around*|{|x,y|}>|)>=y> and
+      <math|max<around*|(|<around*|{|x,y|}>|)>=x>.
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|order min max of union>Let <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>>
+    be a totally ordered set and <math|A\<subseteq\>X>, <math|B\<subseteq\>X>
+    then we have:
+
+    <\enumerate>
+      <item>If <math|max<around*|(|A|)>> and <math|max<around*|(|B|)>> exist
+      then <math|max<around*|(|A<big|cup>B|)>> exist and
+
+      <\equation*>
+        max<around*|(|A<big|cup>B|)>=max<around*|(|<around*|{|max<around*|(|A|)>,max<around*|(|B|)>|}>|)>
+      </equation*>
+
+      <item>If <math|min<around*|(|A|)>> and <math|min<around*|(|B|)>> exist
+      then <math|min<around*|(|A<big|cup>B|)>> exist and
+
+      <\equation*>
+        min<around*|(|A<big|cup>B|)>=min<around*|(|<around*|{|min<around*|(|A|)>,min<around*|(|B|)>|}>|)>
+      </equation*>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>We have the following possibilities for <math|max<around*|(|A|)>>
+      and <math|max<around*|(|B|)>>:
+
+      <\description>
+        <item*|<math|max<around*|(|A|)>\<leqslant\>max<around*|(|B|)>>>Then
+        <math|max<around*|(|B|)>\<in\>B\<subseteq\>A<big|cup>B> and
+        <math|\<forall\>x\<in\>A<big|cup>B> we have either:
+
+        <\description>
+          <item*|<math|x\<in\>A>>Then <math|x\<leqslant\>max<around*|(|A|)>\<leqslant\>max<around*|(|B|)>>
+          so that <math|x\<leqslant\>max<around*|(|B|)>>
+
+          <item*|<math|x\<in\>B>>Then <math|x\<leqslant\>max<around*|(|B|)>>
+        </description>
+
+        Hence <math|\<forall\>x\<in\>A<big|cup>B> we have that
+        <math|x\<leqslant\>max<around*|(|B|)>> proving that\ 
+
+        <\equation*>
+          max<around*|(|A<big|cup>B|)>=max<around*|(|B|)>\<equallim\><rsub|<text|[example:
+          <reference|order min({x,y})>]>>max<around*|(|<around*|{|max<around*|(|A|)>,max<around*|(|B|)>|}>|)>
+        </equation*>
+
+        <item*|<math|max<around*|(|B|)>\<leqslant\>max<around*|(|A|)>>>Then
+        <math|max<around*|(|A|)>\<in\>A\<subseteq\>A<big|cup>B> and
+        <math|\<forall\>x\<in\>A<big|cup>B> we have either:
+
+        <\description>
+          <item*|<math|x\<in\>A>>Then <math|x\<leqslant\>max<around*|(|A|)>>
+
+          <item*|<math|x\<in\>B>>Then <math|x\<leqslant\>max<around*|(|B|)>\<leqslant\>max<around*|(|A|)>>
+        </description>
+
+        Hence <math|\<forall\>x\<in\>A<big|cup>B> we have that
+        <math|x\<leqslant\>max<around*|(|A|)>> proving that\ 
+
+        <\equation*>
+          max<around*|(|A<big|cup>B|)>=max<around*|(|A|)>\<equallim\><rsub|<text|[example:
+          <reference|order min({x,y})>]>>max<around*|(|<around*|{|max<around*|(|A|)>,max<around*|(|B|)>|}>|)>
+        </equation*>
+      </description>
+
+      <item>We have the following possibilities for <math|min<around*|(|A|)>>
+      and <math|min<around*|(|B|)>>:
+
+      <\description>
+        <item*|<math|min<around*|(|A|)>\<leqslant\>min<around*|(|B|)>>>Then
+        <math|min<around*|(|A|)>\<in\>A\<subseteq\>A<big|cup>B> and
+        <math|\<forall\>x\<in\>A<big|cup>B> we have either:
+
+        <\description>
+          <item*|<math|x\<in\>A>>Then <math|min<around*|(|A|)>\<leqslant\>x>
+
+          <item*|<math|x\<in\>B>>Then <math|min<around*|(|A|)>\<leqslant\>min<around*|(|B|)>\<leqslant\>x>
+          so that <math|min<around*|(|A|)>\<leqslant\>x>
+        </description>
+
+        Hence <math|\<forall\>x\<in\>A<big|cup>B> we have that
+        <math|min<around*|(|A|)>\<leqslant\>x> proving that\ 
+
+        <\equation*>
+          min<around*|(|A<big|cup>B|)>=min<around*|(|A|)>\<equallim\><rsub|<text|[example:
+          <reference|order min({x,y})>]>>min<around*|(|<around*|{|min<around*|(|A|)>,min<around*|(|B|)>|}>|)>
+        </equation*>
+
+        <item*|<math|min<around*|(|B|)>\<leqslant\>min<around*|(|A|)>>>Then
+        <math|min<around*|(|B|)>\<in\>B\<subseteq\>A<big|cup>B> and
+        <math|\<forall\>x\<in\>A<big|cup>B> we have either:
+
+        <\description>
+          <item*|<math|x\<in\>A>>Then <math|min<around*|(|B|)>\<leqslant\>min<around*|(|A|)>\<leqslant\>x>
+          so that <math|min<around*|(|B|)>\<leqslant\>x>
+
+          <item*|<math|x\<in\>B>>Then <math|min<around*|(|B|)>\<leqslant\>x>
+        </description>
+
+        Hence <math|\<forall\>x\<in\>A<big|cup>B> we have that
+        <math|min<around*|(|B|)>\<leqslant\>x> proving that\ 
+
+        <\equation*>
+          min<around*|(|A<big|cup>B|)>=min<around*|(|B|)>\<equallim\><rsub|<text|[example:
+          <reference|order min({x,y})>]>>min<around*|(|<around*|{|min<around*|(|A|)>,min<around*|(|B|)>|}>|)>
+        </equation*>
+      </description>
+    </enumerate>
+  </proof>
+
   <\theorem>
     <label|order min(A)\<less\>=max(A)>If
     <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> is a partial
@@ -14097,7 +14234,7 @@
     <associate|auto-97|<tuple|well-ordered class|?>>
     <associate|auto-98|<tuple|immediate successor|?>>
     <associate|auto-99|<tuple|section|?>>
-    <associate|axiom of choice|<tuple|3.99|?>>
+    <associate|axiom of choice|<tuple|3.101|?>>
     <associate|axiom of construction|<tuple|1.9|?>>
     <associate|axiom of extent|<tuple|1.5|2>>
     <associate|axiom of infinity|<tuple|1.52|?>>
@@ -14112,31 +14249,31 @@
     <associate|cartesian product of the empty set|<tuple|1.46|?>>
     <associate|cartesian product properties (1)|<tuple|1.49|?>>
     <associate|cartesian product with enpty set|<tuple|1.47|?>>
-    <associate|choice Axiom of choice consequences|<tuple|3.125|?>>
-    <associate|choice Hausdorff maximal principle|<tuple|3.116|?>>
-    <associate|choice Hausdorff's Maximal Principle|<tuple|3.117|?>>
-    <associate|choice Hausdorff's implies Zorn's|<tuple|3.119|?>>
-    <associate|choice P'(A)|<tuple|3.96|?>>
-    <associate|choice P'(A) is a set|<tuple|3.97|?>>
-    <associate|choice Zorn implies welll ordering|<tuple|3.120|?>>
-    <associate|choice Zorn's lemma|<tuple|3.118|?>>
-    <associate|choice Zorn's lemma for pre-order|<tuple|3.126|?>>
-    <associate|choice axiom of choice equivalences (1)|<tuple|3.101|?>>
-    <associate|choice choice function|<tuple|3.98|?>>
-    <associate|choice existence of successor|<tuple|3.106|?>>
-    <associate|choice family on preimage|<tuple|3.128|?>>
-    <associate|choice function generating|<tuple|3.102|?>>
-    <associate|choice function to injection/bijection|<tuple|3.127|?>>
-    <associate|choice intersection of p-sewuences|<tuple|3.109|?>>
-    <associate|choice lemma p-sequence|<tuple|3.107|?>>
-    <associate|choice lemma p-sequence generation|<tuple|3.112|?>>
-    <associate|choice lemma properties of select|<tuple|3.113|?>>
-    <associate|choice lemma property of select elements|<tuple|3.111|?>>
+    <associate|choice Axiom of choice consequences|<tuple|3.127|?>>
+    <associate|choice Hausdorff maximal principle|<tuple|3.118|?>>
+    <associate|choice Hausdorff's Maximal Principle|<tuple|3.119|?>>
+    <associate|choice Hausdorff's implies Zorn's|<tuple|3.121|?>>
+    <associate|choice P'(A)|<tuple|3.98|?>>
+    <associate|choice P'(A) is a set|<tuple|3.99|?>>
+    <associate|choice Zorn implies welll ordering|<tuple|3.122|?>>
+    <associate|choice Zorn's lemma|<tuple|3.120|?>>
+    <associate|choice Zorn's lemma for pre-order|<tuple|3.128|?>>
+    <associate|choice axiom of choice equivalences (1)|<tuple|3.103|?>>
+    <associate|choice choice function|<tuple|3.100|?>>
+    <associate|choice existence of successor|<tuple|3.108|?>>
+    <associate|choice family on preimage|<tuple|3.130|?>>
+    <associate|choice function generating|<tuple|3.104|?>>
+    <associate|choice function to injection/bijection|<tuple|3.129|?>>
+    <associate|choice intersection of p-sewuences|<tuple|3.111|?>>
+    <associate|choice lemma p-sequence|<tuple|3.109|?>>
+    <associate|choice lemma p-sequence generation|<tuple|3.114|?>>
+    <associate|choice lemma properties of select|<tuple|3.115|?>>
+    <associate|choice lemma property of select elements|<tuple|3.113|?>>
     <associate|choice lemma select elements froms a
-    p-sewuence|<tuple|3.114|?>>
-    <associate|choice lemma upper bound of chain|<tuple|3.122|?>>
-    <associate|choice lemma well ordering lemma (1)|<tuple|3.121|?>>
-    <associate|choice well-order implies Axiom of Choice|<tuple|3.123|?>>
+    p-sewuence|<tuple|3.116|?>>
+    <associate|choice lemma upper bound of chain|<tuple|3.124|?>>
+    <associate|choice lemma well ordering lemma (1)|<tuple|3.123|?>>
+    <associate|choice well-order implies Axiom of Choice|<tuple|3.125|?>>
     <associate|class absorption laws|<tuple|1.27|?>>
     <associate|class class commutative,idempotent,associative,distributivity|<tuple|1.30|?>>
     <associate|class complement of comploment|<tuple|1.28|?>>
@@ -14430,17 +14567,17 @@
     <associate|function simple definition|<tuple|2.93|?>>
     <associate|function simple definition notation|<tuple|2.94|?>>
     <associate|function surjection and construction of inverse
-    function|<tuple|3.100|?>>
+    function|<tuple|3.102|?>>
     <associate|function surjection condition|<tuple|2.51|?>>
     <associate|function trivial bijection|<tuple|2.65|?>>
     <associate|function: A^B and sets|<tuple|2.35|?>>
-    <associate|generalized intervals and boundaries|<tuple|3.135|?>>
-    <associate|interval and inf or sup|<tuple|3.133|?>>
-    <associate|interval condition to be empty|<tuple|3.130|?>>
-    <associate|interval generalized condition (1)|<tuple|3.134|?>>
-    <associate|interval generalized interval|<tuple|3.131|?>>
-    <associate|interval generalized interval condition|<tuple|3.132|?>>
-    <associate|interval interval|<tuple|3.129|?>>
+    <associate|generalized intervals and boundaries|<tuple|3.137|?>>
+    <associate|interval and inf or sup|<tuple|3.135|?>>
+    <associate|interval condition to be empty|<tuple|3.132|?>>
+    <associate|interval generalized condition (1)|<tuple|3.136|?>>
+    <associate|interval generalized interval|<tuple|3.133|?>>
+    <associate|interval generalized interval condition|<tuple|3.134|?>>
+    <associate|interval interval|<tuple|3.131|?>>
     <associate|order A isomorphism B|<tuple|3.50|?>>
     <associate|order a\<less\>=b\<less\>=c|<tuple|3.30|?>>
     <associate|order chain|<tuple|3.41|?>>
@@ -14451,65 +14588,67 @@
     <associate|order condition for isomorphism|<tuple|3.54|?>>
     <associate|order condition for isomorphism in a totallu ordered
     set|<tuple|3.57|?>>
-    <associate|order conditional complete alternatives|<tuple|3.76|?>>
-    <associate|order conditional complete order|<tuple|3.75|?>>
+    <associate|order conditional complete alternatives|<tuple|3.78|?>>
+    <associate|order conditional complete order|<tuple|3.77|?>>
     <associate|order empty set is a chain|<tuple|3.42|?>>
     <associate|order eq order preorder to order|<tuple|3.34|?>>
-    <associate|order example inclusion order and sup, inf|<tuple|3.68|?>>
+    <associate|order example inclusion order and sup, inf|<tuple|3.70|?>>
     <associate|order greatest and lowest element are unique|<tuple|3.62|?>>
     <associate|order greatest lowest element|<tuple|3.59|?>>
     <associate|order homeomorphism extending|<tuple|3.51|?>>
-    <associate|order immediate successor|<tuple|3.83|?>>
-    <associate|order inclusion and greatest and least element|<tuple|3.70|?>>
+    <associate|order immediate successor|<tuple|3.85|?>>
+    <associate|order inclusion and greatest and least element|<tuple|3.72|?>>
     <associate|order inclusion is a order|<tuple|3.33|?>>
     <associate|order increasing, decreasing|<tuple|3.49|?>>
     <associate|order initial segement|<tuple|3.46|?>>
-    <associate|order initial segement a\<less\>b|<tuple|3.93|?>>
+    <associate|order initial segement a\<less\>b|<tuple|3.95|?>>
     <associate|order initial segement inclusion|<tuple|3.47|?>>
     <associate|order intial sergment property|<tuple|3.48|?>>
-    <associate|order isomorphism and conditional complete|<tuple|3.78|?>>
+    <associate|order isomorphism and conditional complete|<tuple|3.80|?>>
     <associate|order isomorphism condition (2)|<tuple|3.55|?>>
-    <associate|order isomorphism preservers sup and inf|<tuple|3.77|?>>
+    <associate|order isomorphism preservers sup and inf|<tuple|3.79|?>>
     <associate|order isomorphism strictly|<tuple|3.53|?>>
     <associate|order lexical order|<tuple|3.37|?>>
-    <associate|order lower upper bound and inclusion|<tuple|3.71|?>>
-    <associate|order lower upper bounds of empty set|<tuple|3.66|?>>
+    <associate|order lower upper bound and inclusion|<tuple|3.73|?>>
+    <associate|order lower upper bounds of empty set|<tuple|3.68|?>>
     <associate|order maximal minimal element|<tuple|3.58|?>>
-    <associate|order maximum of class with bigger elements|<tuple|3.64|?>>
-    <associate|order min(A)\<less\>=max(A)|<tuple|3.63|?>>
+    <associate|order maximum of class with bigger elements|<tuple|3.66|?>>
+    <associate|order min max of union|<tuple|3.64|?>>
+    <associate|order min(A)\<less\>=max(A)|<tuple|3.65|?>>
+    <associate|order min({x,y})|<tuple|3.63|?>>
     <associate|order order relation|<tuple|3.27|?>>
     <associate|order partial order on sub class|<tuple|3.35|?>>
     <associate|order partial ordered class|<tuple|3.28|?>>
     <associate|order preorder|<tuple|3.25|?>>
     <associate|order preordered class|<tuple|3.26|?>>
     <associate|order properties of the isomorph relation|<tuple|3.56|?>>
-    <associate|order section|<tuple|3.85|?>>
-    <associate|order section and well ordering|<tuple|3.86|?>>
+    <associate|order section|<tuple|3.87|?>>
+    <associate|order section and well ordering|<tuple|3.88|?>>
     <associate|order strict order|<tuple|3.32|?>>
-    <associate|order sup and inf and bigger elements|<tuple|3.73|?>>
-    <associate|order sup inf condition|<tuple|3.74|?>>
-    <associate|order sup, inf property|<tuple|3.69|?>>
-    <associate|order sup,inf and inclusion|<tuple|3.72|?>>
-    <associate|order supremum infinum|<tuple|3.67|?>>
-    <associate|order total/well-order inclusion|<tuple|3.81|?>>
+    <associate|order sup and inf and bigger elements|<tuple|3.75|?>>
+    <associate|order sup inf condition|<tuple|3.76|?>>
+    <associate|order sup, inf property|<tuple|3.71|?>>
+    <associate|order sup,inf and inclusion|<tuple|3.74|?>>
+    <associate|order supremum infinum|<tuple|3.69|?>>
+    <associate|order total/well-order inclusion|<tuple|3.83|?>>
     <associate|order totally lexicol ordering|<tuple|3.45|?>>
     <associate|order totally ordered subclass|<tuple|3.44|?>>
-    <associate|order transfinite induction|<tuple|3.87|?>>
-    <associate|order upport lower bound|<tuple|3.65|?>>
-    <associate|order well order and immediate successor|<tuple|3.84|?>>
+    <associate|order transfinite induction|<tuple|3.89|?>>
+    <associate|order upport lower bound|<tuple|3.67|?>>
+    <associate|order well order and immediate successor|<tuple|3.86|?>>
     <associate|order well order every subclass is isomorphic with A or a
-    iitial segement|<tuple|3.95|?>>
+    iitial segement|<tuple|3.97|?>>
     <associate|order well order implies conditional complete and totally
-    ordering|<tuple|3.82|?>>
-    <associate|order well ordered and order isomorphism|<tuple|3.88|?>>
-    <associate|order well ordered class and isomorphism|<tuple|3.89|?>>
+    ordering|<tuple|3.84|?>>
+    <associate|order well ordered and order isomorphism|<tuple|3.90|?>>
+    <associate|order well ordered class and isomorphism|<tuple|3.91|?>>
     <associate|order well ordered is not isomorph to a initial segment
-    |<tuple|3.90|?>>
-    <associate|order well ordered isomorphic property (3)|<tuple|3.92|?>>
-    <associate|order well ordered isomorphism property|<tuple|3.91|?>>
-    <associate|order well ordering and isomorphism (2)|<tuple|3.94|?>>
-    <associate|order well ordering and order isomorphism|<tuple|3.80|?>>
-    <associate|order well-rodered class|<tuple|3.79|?>>
+    |<tuple|3.92|?>>
+    <associate|order well ordered isomorphic property (3)|<tuple|3.94|?>>
+    <associate|order well ordered isomorphism property|<tuple|3.93|?>>
+    <associate|order well ordering and isomorphism (2)|<tuple|3.96|?>>
+    <associate|order well ordering and order isomorphism|<tuple|3.82|?>>
+    <associate|order well-rodered class|<tuple|3.81|?>>
     <associate|pair equality of pairs|<tuple|1.43|?>>
     <associate|pair of elements|<tuple|1.41|?>>
     <associate|partial function|<tuple|2.7|?>>
@@ -14539,9 +14678,9 @@
     <associate|product of a empty set is empty|<tuple|2.135|?>>
     <associate|product of family with one element|<tuple|2.136|?>>
     <associate|product of family with two classes|<tuple|2.137|?>>
-    <associate|product product is not empty|<tuple|3.104|?>>
+    <associate|product product is not empty|<tuple|3.106|?>>
     <associate|product projection function|<tuple|2.145|?>>
-    <associate|product projection is surjective|<tuple|3.103|?>>
+    <associate|product projection is surjective|<tuple|3.105|?>>
     <associate|product sub-product|<tuple|2.143|?>>
     <associate|relation|<tuple|3.1|?>>
     <associate|relation properties|<tuple|3.4|?>>
