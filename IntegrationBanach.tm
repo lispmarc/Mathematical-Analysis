@@ -16,6 +16,33 @@
   of differentation. For this reason we define Riemann integrals here and
   more general forms of integration in later chapters.
 
+  \;
+
+  First we introduce the concept of partitioning a closed interval in sub
+  intervals with no gaps. The way to do this is by specifying a ordered
+  family of boundary point for the sub intervals. For example the interval
+  <math|<around*|[|1,12|]>> can be partitioned in the following way:
+
+  <\equation*>
+    <around*|[|1,12|]>=<around*|[|1,4|]><big|cup><around*|[|4,8|]><big|cup><around*|[|8,12|]>
+  </equation*>
+
+  by the family <math|<around*|{|t<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,4|}>>>
+  where\ 
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|t<rsub|1>>|<cell|=>|<cell|1>>|<row|<cell|t<rsub|2>>|<cell|=>|<cell|4>>|<row|<cell|t<rsub|3>>|<cell|=>|<cell|8>>|<row|<cell|t<rsub|4>>|<cell|=>|<cell|12>>>>
+  </eqnarray*>
+
+  We use underscores to show the index of the boundary points of the sub
+  intervals. Hence we use the following notation.
+
+  <\equation*>
+    <around*|[|1,12|]>=<around*|[|1<rsub|1>,4<rsub|2>|]><big|cup><around*|[|4<rsub|2>,8<rsub|3>|]><big|cup><around*|[|8<rsub|3>,12<rsub|4>|]>
+  </equation*>
+
+  This is the idea of the following definition.
+
   <\definition>
     <label|riemann partition><index|partition of <math|<around*|[|a,b|]>>>Let
     <math|a,b\<in\>\<bbb-R\>> with <math|a\<leqslant\>b> then a family
@@ -311,11 +338,44 @@
     </enumerate>
   </proof>
 
-  We show now how we can construct a new partition out of two different
-  partitions that is finer then the two partitions.
+  If we have two partitions of a interval then we can always find a partition
+  that is 'composed' than the two partitions. With finer we mean that the
+  boundary points of this partition is based on the boundary points of the
+  two given partitions.
+
+  \;
+
+  <math|\<cal-P\><rsub|1>=<around*|[|1<rsub|1>,4<rsub|2>|]><big|cup><around*|[|4<rsub|2>,8<rsub|3>|]><big|cup><around*|[|8<rsub|3>,12<rsub|4>|]>>,
+  boundary points <math|<around*|{|1<rsub|1>,4<rsub|2>,8<rsub|3>,12<rsub|4>|}>>
+
+  <math|\<cal-P\><rsub|2>=<around*|[|1<rsub|1>,2<rsub|2>|]><big|cup><around*|[|2<rsub|2>,5<rsub|3>|]><big|cup><around*|[|5<rsub|3>,6<rsub|4>|]><big|cup><around*|[|6<rsub|4>,12<rsub|5>|]>>,
+  boundary points <math|<around*|{|1<rsub|1>,2<rsub|2>,5<rsub|3>,6<rsub|4>,,12<rsub|5>|}>>
+
+  \;
+
+  then the following partition can be based on the boundary points of
+  <math|\<cal-P\><rsub|1>> and <math|\<cal-P\><rsub|2>>
+
+  \;
+
+  <math|\<cal-P\>=<around*|[|1<rsub|1>,2<rsub|2>|]><big|cup><around*|[|2<rsub|2>,4<rsub|3>|]><big|cup><around*|[|4<rsub|3>,5<rsub|4>|]><big|cup><around*|[|5<rsub|4>,6<rsub|5>|]><big|cup><around*|[|6<rsub|5>.8<rsub|6>|]><big|cup><around*|[|8<rsub|6>,12<rsub|7>|]>>,
+  boundary points
+
+  <\equation*>
+    <around*|{|1<rsub|1>,2<rsub|2>,4<rsub|3>,5<rsub|4>,6<rsub|5>,8<rsub|6>,12<rsub|7>|}>=<around*|{|1<rsub|1>,4<rsub|2>,8<rsub|3>,12<rsub|4>|}><big|cup><around*|{|1<rsub|1>,2<rsub|2>,5<rsub|3>,6<rsub|4>,12<rsub|5>|}>
+  </equation*>
+
+  \;
+
+  It will turn out that there only exist a such partition that satisfies this
+  condition about the boundary points. Althoug intuitively such a partition
+  exist and is unique, proving this is rather elaborate. This is done in the
+  next two lemmas. This partition <math|\<cal-P\>> based on
+  <math|\<cal-P\><rsub|1>> and <math|\<cal-P\><rsub|2>> is noted as
+  <math|\<cal-P\><rsub|1><big|box>\<cal-P\><rsub|2>>
 
   <\lemma>
-    <label|lemma 15.5.175>Let <math|a,b\<in\>\<bbb-R\>> with
+    <label|lemma 15.5.175>Let <math|a,b\<in\>\<bbb-R\>> wiFth
     <math|a\<leqslant\>b> and <math|\<cal-P\><rsub|1>=<around*|{|t<rsup|<around*|(|1|)>><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n<rsub|1>|}>>\<subseteq\>\<bbb-R\>>,
     <math|\<cal-P\><rsub|2>=<around*|{|t<rsup|<around*|(|2|)>><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n<rsub|2>|}>>\<subseteq\>\<bbb-R\>>
     two partitions of <math|<around*|[|a,b|]>> then there exist a partition
@@ -513,8 +573,8 @@
   Combing the two above lemmas gives the following theorem.
 
   <\theorem>
-    <label|rieman combining two partitions>Let <math|a,b\<in\>\<bbb-R\>> with
-    <math|a\<leqslant\>b> and <math|\<cal-P\><rsub|1>=<around*|{|t<rsup|<around*|(|1|)>><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n<rsub|1>|}>>\<subseteq\>\<bbb-R\>>,
+    <label|riemann combining two partitions>Let <math|a,b\<in\>\<bbb-R\>>
+    with <math|a\<leqslant\>b> and <math|\<cal-P\><rsub|1>=<around*|{|t<rsup|<around*|(|1|)>><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n<rsub|1>|}>>\<subseteq\>\<bbb-R\>>,
     <math|\<cal-P\><rsub|2>=<around*|{|t<rsup|<around*|(|2|)>><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n<rsub|2>|}>>\<subseteq\>\<bbb-R\>>
     two partitions of <math|<around*|[|a,b|]>> then there exist a
     <with|font-series|bold|unique >partition
@@ -526,7 +586,7 @@
     </equation*>
 
     This <with|font-series|bold|unique> partition is noted as
-    <math|\<cal-P\><rsub|1>\<boxplus\>\<cal-P\><rsub|2>>
+    <math|\<cal-P\><rsub|1><big|box>\<cal-P\><rsub|2>>
   </theorem>
 
   <\proof>
@@ -534,13 +594,92 @@
     <reference|lemma 15.6.175>].
   </proof>
 
+  Consider the following two partitions of <math|<around*|[|1,12|]>>
+
+  \;
+
+  <math|\<cal-P\><rsub|1>=<around*|[|1<rsub|1>,4<rsub|2>|]><big|cup><around*|[|4<rsub|2>,8<rsub|3>|]><big|cup><around*|[|8<rsub|3>,12<rsub|4>|]>>,
+  boundary points <math|<around*|{|1<rsub|1>,4<rsub|2>,8<rsub|3>,12<rsub|4>|}>>
+
+  <math|\<cal-P\><rsub|2>=<around*|[|1<rsub|1>,2<rsub|2>|]><big|cup><around*|[|2<rsub|2>,5<rsub|3>|]><big|cup><around*|[|5<rsub|3>,6<rsub|4>|]><big|cup><around*|[|6<rsub|4>,12<rsub|5>|]>>,
+  boundary points <math|<around*|{|1<rsub|1>,2<rsub|2>,5<rsub|3>,6<rsub|4>,12<rsub|5>|}>>
+
+  \;
+
+  and the 'combined' partition
+
+  \;
+
+  <math|\<cal-P\><rsub|1><big|box>\<cal-P\><rsub|2>=<around*|[|1<rsub|1>,2<rsub|2>|]><big|cup><around*|[|2<rsub|2>,4<rsub|3>|]><big|cup><around*|[|4<rsub|3>,5<rsub|4>|]><big|cup><around*|[|5<rsub|4>,6<rsub|5>|]><big|cup><around*|[|6<rsub|5>.8<rsub|6>|]><big|cup><around*|[|8<rsub|6>,12<rsub|7>|]>>,
+  boundary points
+
+  <\equation*>
+    <around*|{|1<rsub|1>,2<rsub|2>,4<rsub|3>,5<rsub|4>,6<rsub|5>,8<rsub|6>,12<rsub|7>|}>=<around*|{|1<rsub|1>,4<rsub|2>,8<rsub|3>,12<rsub|4>|}><big|cup><around*|{|1<rsub|1>,2<rsub|2>,5<rsub|3>,6<rsub|4>,12<rsub|5>|}>
+  </equation*>
+
+  Note that for every sub interval <math|I> in
+  <math|\<cal-P\><rsub|1><big|box>\<cal-P\><rsub|2>> we can find a sub
+  interval in <math|\<cal-P\><rsub|1>> that contains <math|I> and a sub
+  interval in <math|\<cal-P\><rsub|2>> that contains <math|I>. Actually we
+  can find a function <math|I<rsub|\<cal-P\><rsub|1>>> that maps the index of
+  the first boundary point of <math|I> to the index of the first boundary
+  point of the containing sub interval in <math|\<cal-P\><rsub|1>> and a
+  function <math|I<rsub|\<cal-P\><rsub|2>>> that map the inde of the first
+  boundary point of <math|I> to index of the first boundary point of the
+  containing sub interval in <math|\<cal-P\><rsub|2>>.
+
+  \;
+
+  For <math|\<cal-P\><rsub|1><big|box>\<cal-P\><rsub|2>> and
+  <math|\<cal-P\><rsub|1>> we have:
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|<around*|[|1<rsub|1>,2<rsub|2>|]>,<around*|[|2<rsub|2>,4<rsub|3>|]>\<subseteq\><around*|[|1<rsub|1>,4<rsub|2>|]>>|<cell|\<Rightarrow\>>|<cell|I<rsub|\<cal-P\><rsub|1>><around*|(|1|)>=1>>|<row|<cell|>|<cell|>|<cell|I<rsub|\<cal-P\><rsub|1>><around*|(|2|)>=1>>|<row|<cell|<around*|[|4<rsub|3>,5<rsub|4>|]>,<around*|[|5<rsub|4>,6<rsub|5>|]>,<around*|[|6<rsub|5>.8<rsub|6>|]>\<subseteq\><around*|[|4<rsub|2>,8<rsub|3>|]>>|<cell|\<Rightarrow\>>|<cell|I<rsub|\<cal-P\><rsub|1>><around*|(|3|)>=2>>|<row|<cell|>|<cell|>|<cell|I<rsub|\<cal-P\><rsub|1>><around*|(|4|)>=2>>|<row|<cell|>|<cell|>|<cell|I<rsub|\<cal-P\><rsub|1>><around*|(|5|)>=2>>|<row|<cell|<around*|[|8<rsub|6>,12<rsub|7>|]>\<subseteq\><around*|[|8<rsub|3>,12<rsub|4>|]>>|<cell|\<Rightarrow\>>|<cell|I<rsub|\<cal-P\><rsub|1>><around*|(|6|)>=3>>>>
+  </eqnarray*>
+
+  For <math|\<cal-P\><rsub|1><big|box>\<cal-P\><rsub|2>> and
+  <math|\<cal-P\><rsub|1>> we have:
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|<around*|[|1<rsub|1>,2<rsub|2>|]>\<subseteq\><around*|[|1<rsub|1>,2<rsub|2>|]>>|<cell|\<Rightarrow\>>|<cell|I<rsub|\<cal-P\><rsub|2>><around*|(|1|)>=1>>|<row|<cell|<around*|[|2<rsub|2>,4<rsub|3>|]>,<around*|[|4<rsub|3>,5<rsub|4>|]>\<subseteq\><around*|[|2<rsub|2>,5<rsub|3>|]>>|<cell|\<Rightarrow\>>|<cell|I<rsub|\<cal-P\><rsub|2>><around*|(|2|)>=2>>|<row|<cell|>|<cell|>|<cell|I<rsub|\<cal-P\><rsub|2>><around*|(|3|)>=2>>|<row|<cell|<around*|[|5<rsub|4>,6<rsub|5>|]>\<subseteq\><around*|[|5<rsub|3>,6<rsub|4>|]>>|<cell|\<Rightarrow\>>|<cell|I<rsub|\<cal-P\><rsub|2>><around*|(|4|)>=3>>|<row|<cell|<around*|[|6<rsub|5>,8<rsub|6>|]>,<around*|[|8<rsub|6>,12<rsub|7>|]>\<subseteq\><around*|[|6<rsub|4>,12<rsub|5>|]>>|<cell|\<Rightarrow\>>|<cell|I<rsub|\<cal-P\><rsub|2>><around*|(|5|)>=4>>|<row|<cell|>|<cell|>|<cell|I<rsub|\<cal-P\><rsub|2>><around*|(|6|)>=4>>>>
+  </eqnarray*>
+
+  Hence we have that
+
+  <\equation*>
+    I<rsub|\<cal-P\><rsub|1>>:<around*|{|1,\<ldots\>,7-1|}>\<rightarrow\><around*|{|1,\<ldots\>,4-1|}><text|
+    is surjective>
+  </equation*>
+
+  <\equation*>
+    I<rsub|\<cal-P\><rsub|3>>:<around*|{|1,\<ldots\>,7-1|}>\<rightarrow\><around*|{|1,\<ldots\>,5-1|}><text|
+    is surjective>
+  </equation*>
+
+  Further we have
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|I<rsup|-1><rsub|\<cal-P\><rsub|1>><around*|(|<around*|{|1|}>|)>=<around*|{|1|}>>|<cell|=>|<cell|<around*|{|1,\<ldots\>,1|}><text|>>>|<row|<cell|I<rsup|-1><rsub|\<cal-P\><rsub|1>><around*|(|<around*|{|2|}>|)>=<around*|{|3,4,5|}>>|<cell|=>|<cell|<around*|{|3,\<ldots\>,5|}>>>|<row|<cell|I<rsup|-1><rsub|\<cal-P\><rsub|1>><around*|(|<around*|{|3|}>|)>=<around*|{|6|}>>|<cell|=>|<cell|<around*|{|6,\<ldots\>,6|}>>>|<row|<cell|>|<cell|>|<cell|>>|<row|<cell|I<rsup|-1><rsub|\<cal-P\><rsub|2>><around*|(|<around*|{|1|}>|)>=<around*|{|1|}>>|<cell|=>|<cell|<around*|{|1,\<ldots\>,1|}>>>|<row|<cell|I<rsup|-1><rsub|\<cal-P\><rsub|2>><around*|(|<around*|{|2|}>|)>=<around*|{|2,3|}>>|<cell|=>|<cell|<around*|{|2,\<ldots\>,3|}>>>|<row|<cell|I<rsup|-1><rsub|\<cal-P\><rsub|2>><around*|(|<around*|{|3|}>|)>=<around*|{|4|}>>|<cell|=>|<cell|<around*|{|4,\<ldots\>,4|}>>>|<row|<cell|I<rsup|-1><rsub|\<cal-P\><rsub|2>><around*|(|<around*|{|4|}>|)>=<around*|{|5,6|}>>|<cell|=>|<cell|<around*|{|5,\<ldots\>,6|}>>>>>
+  </eqnarray*>
+
+  so that
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|I<rsup|-1><rsub|\<cal-P\><rsub|1>><around*|(|<around*|{|1|}>|)>,I<rsup|-1><rsub|\<cal-P\><rsub|1>><around*|(|<around*|{|2|}>|)>,I<rsup|-1><rsub|\<cal-P\><rsub|1>><around*|(|<around*|{|3|}>|)>>|<cell|>|<cell|are
+    pairwise disjoint>>|<row|<cell|I<rsup|-1><rsub|\<cal-P\><rsub|2>><around*|(|<around*|{|1|}>|)>,I<rsup|-1><rsub|\<cal-P\><rsub|2>><around*|(|<around*|{|2|}>|)>,I<rsup|-1><rsub|\<cal-P\><rsub|2>><around*|(|<around*|{|3|}>|)>,I<rsup|-1><rsub|\<cal-P\><rsub|2>><around*|(|<around*|{|4|}>|)>,>|<cell|>|<cell|are
+    pairwise disjoint >>>>
+  </eqnarray*>
+
+  The exact proof of the above in general is done in the following two
+  lemmas.
+
   <\lemma>
-    Let <math|a,b\<in\>\<bbb-R\>> with <math|a\<leqslant\>b> and
-    <math|\<cal-P\><rsub|1>=<around*|{|t<rsup|<around*|(|1|)>><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n<rsub|1>|}>>\<subseteq\>\<bbb-R\>>,
+    <label|lemma 15.8.175>Let <math|a,b\<in\>\<bbb-R\>> with
+    <math|a\<leqslant\>b> and <math|\<cal-P\><rsub|1>=<around*|{|t<rsup|<around*|(|1|)>><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n<rsub|1>|}>>\<subseteq\>\<bbb-R\>>,
     <math|\<cal-P\><rsub|2>=<around*|{|t<rsup|<around*|(|2|)>><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n<rsub|2>|}>>\<subseteq\>\<bbb-R\>>
-    two partitions of <math|<around*|[|a,b|]>> then for the partition
-    <math|\<cal-P\><rsub|1>\<boxplus\>\<cal-P\><rsub|2>=<around*|{|t<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-R\>>
-    we have that\ 
+    two partitions of <math|<around*|[|a,b|]>>, let
+    <math|\<cal-P\><rsub|1><big|box>\<cal-P\><rsub|2>=<around*|{|t<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-R\>>
+    then we have that\ 
 
     <\equation*>
       \<forall\>i\<in\><around*|{|1,\<ldots\>,n-1|}><text| there exist a
@@ -609,7 +748,7 @@
       <label|eq 15.11.175>t<rsub|m><rsup|<around*|(|1|)>>\<leqslant\>t<rsub|i>\<less\>t<rsub|m+1><rsup|<around*|(|1|)>>
     </equation>
 
-    By [theorem: <reference|rieman combining two partitions>] there exist a
+    By [theorem: <reference|riemann combining two partitions>] there exist a
     <math|l\<in\><around*|{|1,\<ldots\>,n|}>> such that\ 
 
     <\equation>
@@ -656,6 +795,470 @@
     So as in all cases we have a contradiction the assumption must be wrong.
     Hence <math|k=i<rsub|\<cal-P\><rsub|1>>> which proves uniqueness.
   </proof>
+
+  <\lemma>
+    <label|lemma 15.9.175>Let <math|a,b\<in\>\<bbb-R\>> with
+    <math|a\<leqslant\>b> and <math|\<cal-P\><rsub|1>=<around*|{|t<rsup|<around*|(|1|)>><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n<rsub|1>|}>>\<subseteq\>\<bbb-R\>>,
+    <math|\<cal-P\><rsub|2>=<around*|{|t<rsup|<around*|(|2|)>><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n<rsub|2>|}>>\<subseteq\>\<bbb-R\>>
+    two partitions of <math|<around*|[|a,b|]>>, let
+    <math|\<cal-P\><rsub|1><big|box>\<cal-P\><rsub|2>=<around*|{|t<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-R\>>
+    then for the functions
+
+    <\equation*>
+      I<rsub|\<cal-P\><rsub|1>>:<around*|{|1,\<ldots\>,n-1|}>\<rightarrow\><around*|{|1,\<ldots\>,n<rsub|1>-1|}>
+    </equation*>
+
+    <\equation*>
+      I<rsub|\<cal-P\><rsub|2>>:<around*|{|1,\<ldots\>,n-1|}>\<rightarrow\><around*|{|1,\<ldots\>,n<rsub|2>-1|}>
+    </equation*>
+
+    functions such that
+
+    <\equation*>
+      \<forall\>i\<in\><around*|{|1,\<ldots\>,n-1|}><text| we have
+      ><around*|[|t<rsub|i>,t<rsub|i+1>|]>\<subseteq\><around*|[|t<rsup|<around*|(|1|)>><rsub|I<rsub|\<cal-P\><rsub|1>><around*|(|i|)>>,t<rsup|<around*|(|1|)>><rsub|I<rsub|\<cal-P\><rsub|1>><around*|(|i|)>+1>|]><text|
+      and ><around*|[|t<rsup|<around*|(|2|)>><rsub|I<rsub|\<cal-P\><rsub|2>><around*|(|i|)>>,t<rsup|<around*|(|2|)>><rsub|I<rsub|\<cal-P\><rsub|2>><around*|(|i|)>+1>|]>
+    </equation*>
+
+    [who exist by [lemma: <reference|lemma 15.8.175>]] we have that:
+
+    <\enumerate>
+      <item>
+
+      <\enumerate>
+        <item><math|I<rsub|\<cal-P\><rsub|1>>:<around*|{|1,\<ldots\>,n-1|}>\<rightarrow\><around*|{|1,\<ldots\>,n<rsub|1>-1|}>>
+        is surjective
+
+        <item><math|I<rsub|\<cal-P\><rsub|2>>:<around*|{|1,\<ldots\>,n-1|}>\<rightarrow\><around*|{|1,\<ldots\>,n<rsub|12>-1|}>>
+        is surjective
+      </enumerate>
+
+      \ and <math|I<rsub|\<cal-P\><rsub|2>>:<around*|{|1,\<ldots\>,n-1|}>\<rightarrow\><around*|{|1,\<ldots\>,n<rsub|2>-1|}>>
+      are surjective.
+
+      <item>\ 
+
+      <\enumerate>
+        <item><math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n<rsub|1>-1|}>>
+        <math|I<rsub|\<cal-P\><rsub|1>><rsup|-1><around*|(|<around*|{|i|}>|)>=<around*|{|m<rsup|<around*|(|1|)>><rsub|i>,\<ldots\>,M<rsup|<around*|(|1|)>><rsub|i>|}>>
+        where <math|t<rsub|m<rsup|<around*|(|1|)>><rsub|i>>=t<rsup|<around*|(|1|)>><rsub|i>>
+        and <math|t<rsub|M<rsup|<around*|(|1|)>><rsub|i>+1>=t<rsup|<around*|(|1|)>><rsub|i+1>>
+
+        <item><math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n<rsub|2>-1|}>>
+        <math|I<rsub|\<cal-P\><rsub|2>><rsup|-1><around*|(|<around*|{|i|}>|)>=<around*|{|m<rsup|<around*|(|2|)>><rsub|i>,\<ldots\>,M<rsup|<around*|(|2|)>><rsub|i>|}>>
+        where <math|t<rsub|m<rsup|<around*|(|2|)>><rsub|i>>=t<rsup|<around*|(|2|)>><rsub|i>>
+        and <math|t<rsub|M<rsup|<around*|(|2|)>><rsub|i>+1>=t<rsup|<around*|(|2|)>><rsub|i+1>>
+      </enumerate>
+
+      \ 
+
+      <item>\ 
+
+      <\enumerate>
+        <item><math|\<forall\>i,j\<in\><around*|{|1,\<ldots\>,n<rsub|1>-1|}>>
+        with <math|i\<neq\>j> we have <math|I<rsub|\<cal-P\><rsub|1>><rsup|-1><around*|(|<around*|{|i|}>|)><big|cap>I<rsub|\<cal-P\><rsub|1>><rsup|-1><around*|(|<around*|{|j|}>|)>=\<varnothing\>>
+
+        <item><math|\<forall\>i,j\<in\><around*|{|1,\<ldots\>,n<rsub|2>-1|}>>
+        with <math|i\<neq\>j> we have <math|I<rsub|\<cal-P\><rsub|2>><rsup|-1><around*|(|<around*|{|i|}>|)><big|cap>I<rsub|\<cal-P\><rsub|2>><rsup|-1><around*|(|<around*|{|j|}>|)>=\<varnothing\>>
+      </enumerate>
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    \;
+
+    <\enumerate>
+      <item>\ 
+
+      <\enumerate>
+        <item> Let <math|k\<in\><around*|{|1,\<ldots\>,n<rsub|1>-1|}>> then
+        for <math|t<rsub|k><rsup|<around*|(|1|)>>> there exist by [theorem:
+        <reference|riemann combining two partitions>] there exist a
+        <math|i\<in\><around*|{|1,\<ldots\>,n|}>> such that
+        <math|t<rsup|<around*|(|1|)>><rsub|k>=t<rsub|i>>. As
+        <math|k\<less\>n<rsub|1>> we have that
+        <math|t<rsub|k><rsup|<around*|(|1|)>>\<less\>t<rsup|<around*|(|1|)>><rsub|n>=b>
+        so that <math|t<rsub|i>\<neq\>b> proving that <math|i\<neq\>n> or\ 
+
+        <\equation>
+          <label|eq 15.10.176>i\<in\><around*|{|1,\<ldots\>,n-1|}><text| and
+          >t<rsub|i>=t<rsup|<around*|(|1|)>><rsub|k>
+        </equation>
+
+        Assume that <math|t<rsup|<around*|(|1|)>><rsub|k+1>\<less\>t<rsub|i+1>>.
+        By [theorem: <reference|riemann combining two partitions>] there
+        exist a <math|j\<in\><around*|{|1,\<ldots\>,n|}>> such that
+        <math|t<rsub|j>=t<rsup|<around*|(|1|)>><rsub|k+1>>. Then we have
+        <math|t<rsub|i>=t<rsup|<around*|(|1|)>><rsub|k>\<less\>t<rsup|<around*|(|1|)>><rsub|k+1>=t<rsub|j>=t<rsup|<around*|(|1|)>><rsub|k+1>\<less\>t<rsub|i+1>>
+        or <math|t<rsub|j>\<in\><around*|]|t<rsub|I>,t<rsub|I+1>|[>>, which
+        is impossible by [theorem: <reference|riemann partition properties>
+        (5)], so that assumption must be wrong and we must have
+        <math|t<rsub|i+1>\<leqslant\>t<rsup|<around*|(|1|)>><rsub|k+1>>,
+        combining this with [eq: <reference|eq 15.10.176>] results in
+        <math|t<rsup|<around*|(|1|)>><rsub|k>=t<rsub|i>\<less\>t<rsub|i+1>\<leqslant\>t<rsup|<around*|(|1|)>><rsub|k+1>>
+        or <math|<around*|[|t<rsub|i>,t<rsub|i+1>|]>\<subseteq\><around*|[|t<rsub|k><rsup|<around*|(|1|)>>,t<rsup|<around*|(|1|)>><rsub|k+1>|]>>.
+        This proves that <math|k=I<rsub|\<cal-P\><rsub|1>><around*|(|i|)>>
+        and thus surjectivity.
+
+        <item>This is similar as the proof of (1.a) by replacing <math|1> by
+        <math|2> in the proof.
+      </enumerate>
+
+      <item>\ 
+
+      <\enumerate>
+        <item>Let <math|i\<in\><around*|{|1,\<ldots\>,n<rsub|1>-1|}>> then,
+        as <math|I<rsub|\<cal-P\><rsub|1>>> is surjective we have that
+        <math|\<varnothing\>=I<rsub|\<cal-P\><rsub|1>><rsup|-1><around*|(|<around*|{|i|}>|)>\<subseteq\><around*|{|1,\<ldots\>,n-1|}>>.
+        Hence then minimum and maximum exist, take
+
+        <\equation>
+          <label|eq 15.11.176>m<rsup|<around*|(|1|)>><rsub|i>=min<around*|(|I<rsub|\<cal-P\><rsub|1>><rsup|-1><around*|(|<around*|{|i|}>|)>|)><text|
+          and >M<rsup|<around*|(|1|)>><rsub|i>=max<around*|(|I<rsub|\<cal-P\><rsub|1>><rsup|-1><around*|(|<around*|{|i|}>|)>|)>
+        </equation>
+
+        By the definition of <math|min>, <math|max> we have\ 
+
+        <\equation>
+          <label|eq 15.12.176>I<rsup|-1><rsub|\<cal-P\><rsub|1>><around*|(|<around*|{|i|}>|)>\<subseteq\><around*|{|m<rsup|<around*|(|1|)>><rsub|i>,\<ldots\>,M<rsup|<around*|(|1|)>><rsub|i>|}><text|
+          and >m<rsup|<around*|(|1|)>><rsub|i>,M<rsup|<around*|(|1|)>><rsub|i>\<in\>I<rsup|-1><rsub|\<cal-P\><rsub|1>><around*|(|<around*|{|i|}>|)>
+        </equation>
+
+        If <math|k\<in\><around*|{|m<rsup|<around*|(|1|)>><rsub|i>,\<ldots\>,M<rsup|<around*|(|1|)>><rsub|i>|}>>
+        then <math|m<rsup|<around*|(|1|)>><rsub|i>\<leqslant\>k\<leqslant\>M<rsup|<around*|(|1|)>><rsub|i>\<Rightarrow\>k+1\<leqslant\>M<rsup|<around*|(|1|)>><rsub|i>>
+        so that
+
+        <\equation>
+          <label|eq 15.13.175>t<rsub|m<rsup|<around*|(|1|)>><rsub|i>>\<leqslant\>t<rsub|k><text|
+          and >t<rsub|k+1>\<leqslant\>t<rsub|M<rsup|<around*|(|1|)>><rsub|i>+1>
+        </equation>
+
+        As we have <math|><math|m<rsup|<around*|(|1|)>><rsub|i>,M<rsup|<around*|(|1|)>><rsub|i>\<in\>I<rsup|-1><rsub|\<cal-P\><rsub|1>><around*|(|<around*|{|i|}>|)>>
+        it follows that <math|I<rsub|\<cal-P\><rsub|1>><around*|(|m<rsup|<around*|(|1|)>><rsub|i>|)>=i=I<rsub|\<cal-P\><rsub|1>><around*|(|M<rsup|<around*|(|1|)>><rsub|i>|)>>
+        so that <math|<around*|[|t<rsub|m<rsup|<around*|(|1|)>><rsub|i>>,t<rsub|m<rsup|<around*|(|1|)>><rsub|i>+1>|]>\<subseteq\><around*|[|t<rsup|<around*|(|1|)>><rsub|i>,t<rsup|<around*|(|1|)>><rsub|i+1>|]>>
+        and <math|<around*|[|t<rsub|M<rsup|<around*|(|1|)>><rsub|i>>,t<rsub|M<rsup|<around*|(|1|)>><rsub|i>+1>|]>\<subseteq\><around*|[|t<rsup|<around*|(|1|)>><rsub|i>,t<rsup|<around*|(|1|)>><rsub|i+1>|]>>
+        so that\ 
+
+        <\equation>
+          <label|eq: 15.14.175>t<rsup|<around*|(|1|)>><rsub|i>\<leqslant\>t<rsub|m<rsup|<around*|(|1|)>><rsub|i>>\<leqslant\>t<rsub|k>\<less\>t<rsub|k+1>\<leqslant\>t<rsub|M<rsup|<around*|(|1|)>><rsub|i>+1>\<leqslant\>t<rsup|<around*|(|1|)>><rsub|i+1><text|
+          and >t<rsup|<around*|(|1|)>><rsub|i>\<leqslant\>t<rsub|M<rsup|<around*|(|1|)>><rsub|i>>\<less\>t<rsub|M<rsup|<around*|(|1|)>><rsub|i>+1>\<leqslant\>t<rsup|<around*|(|1|)>><rsub|i+1>
+        </equation>
+
+        or <math|<around*|[|t<rsub|k>,t<rsub|k+1>|]>\<subseteq\><around*|[|t<rsup|<around*|(|1|)>><rsub|i>,t<rsup|<around*|(|1|)>><rsub|i+1>|]>>,
+        hence <math|I<rsub|\<cal-P\><rsub|1>><around*|(|k|)>=i> or
+        <math|k\<in\>I<rsup|-1><rsub|\<cal-P\><rsub|1>><around*|(|<around*|{|i|}>|)>>.
+        So we have proved that <math|<around*|{|m<rsup|<around*|(|1|)>><rsub|i>,\<ldots\>,M<rsup|<around*|(|1|)>><rsub|i>|}>\<subseteq\>I<rsup|-1><rsub|\<cal-P\><rsub|1>><around*|(|<around*|{|i|}>|)>>,
+        combining this with [eq: <reference|eq 15.12.176>] gives
+
+        <\equation>
+          <label|eq 15.15.175>I<rsub|\<cal-P\><rsub|1>><rsup|-1><around*|(|<around*|{|i|}>|)>=<around*|{|m<rsup|<around*|(|1|)>><rsub|i>,\<ldots\>,M<rsup|<around*|(|1|)>><rsub|i>|}>
+        </equation>
+
+        Assume that <math|t<rsup|<around*|(|1|)>><rsub|i>\<less\>t<rsub|m<rsup|<around*|(|1|)>><rsub|i>>>.
+        By [theorem: <reference|riemann combining two partitions>] there
+        exist a <math|l\<in\><around*|{|1,\<ldots\>,n|}>> such that
+
+        <\equation*>
+          t<rsub|l>=t<rsup|<around*|(|1|)>><rsub|i>
+        </equation*>
+
+        giving <math|t<rsub|l>\<less\>t<rsub|m<rsup|<around*|(|1|)>><rsub|i>>>,
+        resulting in
+
+        <\equation>
+          <label|eq 15.16.175>l\<less\>m<rsup|<around*|(|1|)>><rsub|i>,
+        </equation>
+
+        hence <math|l+1\<less\>m<rsup|<around*|(|1|)>><rsub|i>+1>. From this
+        it follows that
+
+        <\equation*>
+          t<rsup|<around*|(|1|)>><rsub|i>=t<rsub|l>\<less\>t<rsub|l+1>\<less\>t<rsub|m<rsup|<around*|(|1|)>>+1>\<leqslant\><rsub|<text|[eq:
+          <reference|eq: 15.14.175>]>>t<rsup|<around*|(|1|)>><rsub|i+1>
+        </equation*>
+
+        So that <math|<around*|[|t<rsub|l>,t<rsub|l+1>|]>\<subseteq\><around*|[|t<rsup|<around*|(|1|)>><rsub|i>,t<rsup|<around*|(|1|)>><rsub|i+1>|]>>
+        proving that <math|I<rsub|\<cal-P\><rsub|1>><around*|(|l|)>=i> or
+        <math|l\<in\>I<rsub|\<cal-P\><rsub|1>><rsup|-1><around*|(|<around*|{|i|}>|)>=<around*|{|m<rsup|<around*|(|1|)>><rsub|i>,\<ldots\>,M<rsup|<around*|(|1|)>><rsub|i>|}>>,
+        hence
+
+        <\equation*>
+          m<rsup|<around*|(|1|)>><rsub|i>\<leqslant\>l\<less\><rsub|<text|[eq:
+          <reference|eq 15.16.175>]>>m<rsup|<around*|(|1|)>><rsub|i>
+        </equation*>
+
+        a contradiction. From this we conclude that the assumption is wrong,
+        so <math|t<rsub|m<rsup|<around*|(|1|)>><rsub|i>>\<leqslant\>t<rsup|<around*|(|1|)>><rsub|i>>,
+        combining this with [eq: <reference|eq: 15.14.175>] proves that\ 
+
+        <\equation>
+          <label|eq 15.17.175>t<rsub|m<rsup|<around*|(|1|)>><rsub|i>>=t<rsub|i><rsup|<around*|(|1|)>>
+        </equation>
+
+        Assume that <math|t<rsub|M<rsup|<around*|(|1|)>><rsub|i>+1>\<less\>t<rsup|<around*|(|1|)>><rsub|i+1>>.
+        By \ [theorem: <reference|riemann combining two partitions>] there
+        exist a <math|k\<in\><around*|{|1,\<ldots\>,n|}>> such that
+
+        <\equation*>
+          t<rsub|k>=t<rsup|<around*|(|1|)>><rsub|i+1>
+        </equation*>
+
+        giving <math|t<rsub|M<rsup|<around*|(|1|)>><rsub|k>+1>\<less\>t<rsub|k>>
+        so that resulting in <math|M<rsup|<around*|(|1|)>><rsub|k>+1\<less\>k>
+        or
+
+        <\equation>
+          <label|eq 15.18.176>M<rsup|<around*|(|1|)>><rsub|k>\<less\>k-1
+        </equation>
+
+        so that\ 
+
+        <\equation*>
+          t<rsub|i><rsup|<around*|(|1|)>>\<leqslant\><rsub|<text|[eq:
+          <reference|eq: 15.14.175>]>>t<rsub|M<rsup|<around*|(|1|)>><rsub|k>>\<less\>t<rsub|k-1>\<less\>t<rsub|k>=t<rsup|<around*|(|1|)>><rsub|i+1>
+        </equation*>
+
+        So that <math|<around*|[|t<rsub|k-1>,t<rsub|k>|]>\<subseteq\><around*|[|t<rsup|<around*|(|1|)>><rsub|i>,t<rsup|<around*|(|1|)>><rsub|i+1>|]>>
+        proving that <math|I<rsub|\<cal-P\><rsub|1>><around*|(|k-1|)>=i> or
+        <math|k<rsup|>-1\<in\>I<rsub|\<cal-P\><rsub|1>><rsup|-1><around*|(|<around*|{|i|}>|)>=<around*|{|m<rsup|<around*|(|1|)>><rsub|i>,\<ldots\>,M<rsup|<around*|(|1|)>><rsub|i>|}>>
+        hence <math|k-1\<leqslant\>M<rsup|<around*|(|1|)>><rsub|i>\<less\><rsub|<text|[eq:
+        <reference|eq 15.18.176>]>>k-1> a contradiction. Hence the assumption
+        must be wrong and we have <math|t<rsup|<around*|(|1|)>><rsub|i+1>\<leqslant\>t<rsub|M<rsup|<around*|(|1|)>><rsub|i+1>>>,
+        combining this with [eq: <reference|eq: 15.14.175>] gives
+
+        <\equation>
+          <label|eq 15.19.176>t<rsub|M<rsup|<around*|(|1|)>><rsub|i+1>>=t<rsup|<around*|(|1|)>><rsub|i+1>
+        </equation>
+
+        Finall (2.a) is proved by [eqs: <reference|eq 15.15.175>,
+        <reference|eq 15.17.175> and <reference|eq 15.19.176>].
+
+        <item>This is similar as the proof of (2.a) by replacing <math|1> by
+        <math|2> in the proof.\ 
+      </enumerate>
+
+      <item>\ 
+
+      <\enumerate>
+        <item>Let <math|i,j\<in\><around*|{|1,\<ldots\>,n<rsub|1>-1|}>> with
+        <math|i\<neq\>j>. Assume that <math|k\<in\>I<rsub|\<cal-P\><rsub|1>><rsup|-1><around*|(|<around*|{|i|}>|)><big|cap>I<rsup|-1><rsub|\<cal-P\><rsub|1>><around*|(|<around*|{|j|}>|)>>
+        then <math|I<rsub|\<cal-P\><rsub|1>><around*|(|<around*|{|k|}>|)>=i>
+        and <math|I<rsub|\<cal-P\><rsub|1>><around*|(|<around*|{|k|}>|)>=j>
+        so that by the defition of a function we have <math|i=j> a
+        contradiction. Hence <math|I<rsub|\<cal-P\><rsub|1>><rsup|-1><around*|(|<around*|{|i|}>|)><big|cap>I<rsup|-1><rsub|\<cal-P\><rsub|1>><around*|(|<around*|{|j|}>|)>=\<varnothing\>>.
+
+        <item>This is similar as the proof of (3.a) by replacing <math|1> by
+        <math|2> in the proof.
+      </enumerate>
+    </enumerate>
+  </proof>
+
+  To be able to define a integral of a function on a closed interval we need
+  a limiting proess where the length of the intervals in the partitions
+  become smaller and smaller so that more details of the function are used in
+  the calculation of the integral. To quantify this we introduce a norm of a
+  partition. Beware this norm is unrelated to norms on normed spaces.
+
+  <\definition>
+    <label|riemann norm of partition><index|norm of a
+    partition><index|<math|\<mu\><around*|(|\<cal-P\>|)>>>Let
+    <math|a,b\<in\>\<bbb-R\>> with <math|a\<leqslant\>b> and
+    <math|\<cal-P\>=<around*|{|t<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-R\>>
+    a partition of <math|<around*|[|a,b|]>> then the
+    <with|font-series|bold|norm> of the partition noted as
+    <math|\<mu\><around*|(|\<cal-P\>|)>> is defined by\ 
+
+    <\equation*>
+      \<mu\><around*|(|\<cal-P\>|)>=max<around*|(|<around*|{|<around*|\||t<rsub|i+1>-t<rsub|i>|\|>\|i\<in\><around*|{|1,\<ldots\>,n-1|}>|}>|)>\<equallim\><rsub|t<rsub|i>\<less\>t<rsub|i+1>>max<around*|(|<around*|{|t<rsub|i+1>-t<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n-1|}>|}>|)>
+    </equation*>
+  </definition>
+
+  <\definition>
+    <label|riemann tagged partition><index|tagged
+    partition><index|<math|\<bbb-P\>>>Let <math|a,b\<in\>\<bbb-R\>> with
+    <math|a\<leqslant\>b> and <math|\<cal-P\>=<around*|{|t<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-R\>>
+    a partition of <math|<around*|[|a,b|]>> then a
+    <with|font-series|bold|tag> on <math|\<cal-P\>> is a family
+    <math|<around*|{|s<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>\<subseteq\>\<bbb-R\>>
+    such that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n-1|}>> we have
+    <math|s<rsub|i>\<in\><around*|[|t<rsub|i>,t<rsub|i+1>|]>>.\ 
+
+    A <with|font-series|bold|tagged partition >on <math|<around*|[|a,b|]>> is
+    a pair of a partition on the partition. So a tagged partition is a pair\ 
+
+    <\equation*>
+      <around*|\<langle\>|<around*|{|t<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-R\>,<around*|{|s<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>\<subseteq\>\<bbb-R\>|\<rangle\>>
+    </equation*>
+
+    such that:\ 
+
+    <\enumerate>
+      <item><math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n-1|}>> we have
+      <math|t<rsub|i>\<less\>t<rsub|i+1>> and
+      <math|s<rsub|i>\<in\><around*|[|t<rsub|i>,t<rsub|i+1>|]>>
+
+      <item><math|t<rsub|1>=a> and <math|t<rsub|2>=b>
+    </enumerate>
+
+    The norm of a tagged partition is the norm of the partition of the tagged
+    partition in othere words if\ 
+
+    <\equation*>
+      <around*|\<langle\>|<around*|{|t<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-R\>,<around*|{|s<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>\<subseteq\>\<bbb-R\>|\<rangle\>>
+    </equation*>
+
+    is a tagged partition then\ 
+
+    <\equation*>
+      \<mu\><around*|(|<around*|\<langle\>|<around*|{|t<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-R\>,<around*|{|s<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>\<subseteq\>\<bbb-R\>|\<rangle\>>|)>=\<mu\><around*|(|<around*|{|t<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-R\>|)>
+    </equation*>
+  </definition>
+
+  We are now ready to define a Riemann sum that will be used to aproximate
+  the integral of a function.
+
+  <\definition>
+    <label|riemann sum>Let <math|a,b\<in\>\<bbb-R\>> with
+    <math|a\<leqslant\>b>, <math|\<bbb-P\>=<around*|\<langle\>|<around*|{|t<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-R\>,<around*|{|s<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>\<subseteq\>\<bbb-R\>|\<rangle\>>>
+    a taaged partition on <math|<around*|[|a,b|]>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
+    normed space and <math|f:<around*|[|a,b|]>\<rightarrow\>X> a function
+    then the <with|font-series|bold|Riemann sum of <math|f> using the
+    partition <math|\<bbb-P\>>> noted ans
+    <math|\<cal-S\><around*|(|f,\<bbb-P\>|)>> is defined by\ 
+
+    <\equation*>
+      \<cal-S\><around*|(|f,\<bbb-P\>|)>=<big|sum><rsub|i=1><rsup|n-1><around*|(|t<rsub|i+1>-t<rsub|i>|)>\<cdot\>f<around*|(|t<rsub|i>|)>
+    </equation*>
+  </definition>
+
+  <\theorem>
+    Let <math|a,b\<in\>\<bbb-R\>> with <math|a\<leqslant\>b>,
+    <math|\<bbb-P\>=<around*|\<langle\>|<around*|{|t<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-R\>,<around*|{|s<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>\<subseteq\>\<bbb-R\>|\<rangle\>>>
+    a taaged partition on <math|<around*|[|a,b|]>>.
+    <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>> the normed
+    space of real numbers and <math|f:<around*|[|a,b|]>\<rightarrow\>\<bbb-R\>>,
+    <math|g:<around*|[|a,b|]>\<rightarrow\>\<bbb-R\>> functions such that
+    <math|\<forall\>x\<in\><around*|[|a,b|]>> we have
+    <math|f<around*|(|x|)>\<leqslant\>g<around*|(|x|)>> then
+    <math|\<cal-S\><around*|(|f,\<bbb-P\>|)>\<leqslant\>\<cal-S\><around*|(|g,\<bbb-P\>|)>>
+  </theorem>
+
+  <\proof>
+    As <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have
+    <math|0\<leqslant\>t<rsub|i+1>-t<rsub|i>,f<around*|(|s<rsub|i>|)>\<leqslant\>g<around*|(|s<rsub|i>|)>>
+    it follows that <math|f<around*|(|s<rsub|i>|)>\<cdot\><around*|(|t<rsub|i+1>-t<rsub|i>|)>\<leqslant\>g<around*|(|s<rsub|i>|)>\<cdot\><around*|(|t<rsub|i+1>-t<rsub|i>|)>>
+    so that <math|><math|\<cal-S\><around*|(|f,\<bbb-P\>|)>=<big|sum><rsub|i=1><rsup|n-1>f<around*|(|s<rsub|i>|)>\<cdot\><around*|(|t<rsub|i+1>-t<rsub|i>|)>=<big|sum><rsub|i=1><rsup|n-1>g<around*|(|s<rsub|i>|)>\<cdot\><around*|(|t<rsub|i+1>-t<rsub|i>|)>=\<cal-S\><around*|(|g,\<bbb-P\>|)>>.
+  </proof>
+
+  <\lemma>
+    <label|riemann and combination of tagged partitions>Let
+    <math|a,b\<in\>\<bbb-R\>> with <math|a\<leqslant\>b>,
+
+    <\equation*>
+      \<bbb-P\><rsub|1>=<around*|\<langle\>|<around*|{|t<rsup|<around*|(|1|)>><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n<rsub|1>|}>>\<subseteq\>\<bbb-R\>,<around*|{|s<rsub|i><rsup|<around*|(|1|)>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n<rsub|1>-1|}>>|\<rangle\>>
+    </equation*>
+
+    <\equation*>
+      \<bbb-P\><rsub|2>=<around*|\<langle\>|<around*|{|t<rsup|<around*|(|2|)>><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n<rsub|2>|\<nobracket\>>>\<subseteq\>\<bbb-R\>,<around*|{|s<rsub|i><rsup|<around*|(|2|)>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n<rsub|2>-1|}>>|\<rangle\>>
+    </equation*>
+
+    tagged partitions on <math|<around*|[|a,b|]>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
+    normed space and\ 
+
+    <\equation*>
+      f:<around*|[|a.b|]>\<rightarrow\>X<text| a function>
+    </equation*>
+
+    then for
+
+    <\equation*>
+      \<cal-P\><rsub|1>=<around*|{|t<rsup|<around*|(|1|)>><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n<rsub|1>|}>><big|box><around*|{|t<rsup|<around*|(|1|)>><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n<rsub|2>|\<nobracket\>>>
+    </equation*>
+
+    we have:
+
+    <\enumerate>
+      <item><math|S<around*|(|f,\<bbb-P\><rsub|1>|)>=<big|sum><rsub|i=1><rsup|n-1>f<around*|(|s<rsup|<around*|(|1|)>><rsub|I<rsub|\<cal-P\><rsub|1>><around*|(|i|)>>|)>\<cdot\><around*|(|t<rsub|i+1>-t<rsub|i>|)>>
+
+      <item><math|S<around*|(|f,\<bbb-P\><rsub|2>|)>=<big|sum><rsub|i=1><rsup|n-1>f<around*|(|s<rsup|<around*|(|2|)>><rsub|I<rsub|\<cal-P\><rsub|2>><around*|(|i|)>>|)>\<cdot\><around*|(|t<rsub|i+1>-t<rsub|i>|)>>
+
+      <item><math|S<around*|(|f,\<bbb-P\><rsub|1>|)>-S<around*|(|f,\<bbb-P\><rsub|2>|)>=<big|sum><rsub|i=1><rsup|n-1><around*|(|f<around*|(|s<rsup|<around*|(|1|)>><rsub|I<rsub|\<cal-P\><rsub|1>><around*|(|i|)>>|)>-f<around*|(|s<rsup|<around*|(|2|)>><rsub|I<rsub|\<cal-P\><rsub|2>><around*|(|i|)>>|)>|)>\<cdot\><around*|(|t<rsub|i+1>-t<rsub|i>|)>>
+    </enumerate>
+
+    where\ 
+
+    <\equation*>
+      I<rsub|\<cal-P\><rsub|1>>:<around*|{|1,\<ldots\>,n-1|}>\<rightarrow\><around*|{|1,\<ldots\>,n<rsub|1>-1|}><text|
+      and >I<rsub|\<cal-P\><rsub|2>>:<around*|{|1,\<ldots\>,n-1|}>\<rightarrow\><around*|{|1,\<ldots\>,n<rsub|2>-1|}>
+    </equation*>
+
+    are the functions defined in lemmas [lemma: <reference|lemma 15.8.175>]
+    and [lemma: <reference|lemma 15.9.175>].
+  </lemma>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>As <math|<around*|{|1,\<ldots\>,n<rsub|1>-1|}>=<big|cup><rsub|k\<in\><around*|{|1,\<ldots\>,n<rsub|1>-1|}>><around*|{|k|}>>
+      we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|{|1,\<ldots\>,n-1|}>>|<cell|=>|<cell|I<rsub|\<cal-P\><rsub|1>><rsup|-1><around*|(|<around*|{|1,\<ldots\>,n<rsub|1>-1|}>|)>>>|<row|<cell|>|<cell|=>|<cell|I<rsub|\<cal-P\><rsub|1>><rsup|-1><around*|(|<big|cup><rsub|k\<in\><around*|{|1,\<ldots\>,n<rsub|1>-1|}>><around*|{|k|}>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|family image and preimage>]>>>|<cell|<big|cup><rsub|k\<in\><around*|{|1,\<ldots\>,n<rsub|1>-1|}>>I<rsup|-1><rsub|\<cal-P\><rsub|1>><around*|(|<around*|{|k|}>|)>>>>>
+      </eqnarray*>
+
+      and by [lemmma: <reference|lemma 15.9.175>] we have\ 
+
+      <\equation*>
+        \<forall\>i,j\<in\><around*|{|1,\<ldots\>,n<rsub|1>-1|}> with
+        i\<neq\>j<text| we have >I<rsup|-1><rsub|\<cal-P\><rsub|1>><around*|(|<around*|{|i|}>|)><big|cap>I<rsup|-1><rsub|\<cal-P\><rsub|1>><around*|(|<around*|{|j|}>|)>=\<varnothing\>
+      </equation*>
+
+      allowing us to apply [theorem: <reference|sum over disjoint subsets>]
+      in the following.
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|sum><rsub|i=1><rsup|n-1>f<around*|(|s<rsup|<around*|(|1|)>><rsub|I<rsub|\<cal-P\><rsub|1>><around*|(|i|)>>|)>\<cdot\><around*|(|t<rsub|i+1>-t<rsub|i>|)>>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>f<around*|(|s<rsup|<around*|(|1|)>><rsub|I<rsub|\<cal-P\><rsub|1>><around*|(|i|)>>|)>\<cdot\><around*|(|t<rsub|i+1>-t<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><big|cup><rsub|k\<in\><around*|{|1,\<ldots\>,n<rsub|1>-1|}>>I<rsup|-1><rsub|\<cal-P\><rsub|1>><around*|(|<around*|{|k|}>|)>>f<around*|(|s<rsup|<around*|(|1|)>><rsub|I<rsub|\<cal-P\><rsub|1>><around*|(|i|)>>|)>\<cdot\><around*|(|t<rsub|i+1>-t<rsub|i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum over disjoint subsets>]>>>|<cell|<big|sum><rsub|k=1><rsup|n<rsub|1>-1><around*|(|<big|sum><rsub|i\<in\>I<rsup|-1><rsub|\<cal-P\><rsub|1>><around*|(|<around*|{|k|}>|)>>f<around*|(|s<rsup|<around*|(|1|)>><rsub|I<rsub|\<cal-P\><rsub|1>><around*|(|i|)>>|)>\<cdot\><around*|(|t<rsub|i+1>-t<rsub|i>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k=1><rsup|n<rsub|1>-1><around*|(|<big|sum><rsub|i\<in\>I<rsup|-1><rsub|\<cal-P\><rsub|1>><around*|(|<around*|{|k|}>|)>>f<around*|(|s<rsub|k><rsup|<around*|(|1|)>>|)>\<cdot\><around*|(|t<rsub|i+1>-t<rsub|i>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k=1><rsup|n<rsub|1>-1>f<around*|(|s<rsub|k><rsup|<around*|(|1|)>>|)>\<cdot\><around*|(|<big|sum><rsub|i\<in\>I<rsup|-1><rsub|\<cal-P\><rsub|1>><around*|(|<around*|{|k|}>|)>><around*|(|t<rsub|i+1>-t<rsub|i>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+        <reference|lemma 15.9.175>]>>>|<cell|<big|sum><rsub|k=1><rsup|n<rsub|1>-1>f<around*|(|s<rsub|k><rsup|<around*|(|1|)>>|)>\<cdot\><around*|(|<big|sum><rsub|i\<in\><around*|{|m<rsup|<around*|(|1|)>><rsub|k>,\<ldots\>,M<rsup|<around*|(|1|)>><rsub|k>|}>><around*|(|t<rsub|i+1>-t<rsub|i>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k=1><rsup|n<rsub|1>-1>f<around*|(|s<rsub|k><rsup|<around*|(|1|)>>|)>\<cdot\><around*|(|<big|sum><rsub|i\<in\>m<rsup|<around*|(|1|)>><rsub|k>><rsup|M<rsup|<around*|(|1|)>><rsub|k>><around*|(|t<rsub|i+1>-t<rsub|i>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theprem:
+        <reference|sum of differences (1)>]>>>|<cell|<big|sum><rsub|k=1><rsup|n<rsub|1>-1>f<around*|(|s<rsub|k><rsup|<around*|(|1|)>>|)>\<cdot\><around*|(|t<rsub|M<rsup|<around*|(|1|)>><rsub|k>+1>-t<rsub|m<rsup|<around*|(|1|)>><rsub|k>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+        <reference|lemma 15.9.175>]>>>|<cell|<big|sum><rsub|k=1><rsup|n<rsub|1>-1>f<around*|(|s<rsub|k><rsup|<around*|(|1|)>>|)>\<cdot\><around*|(|t<rsup|<around*|(|1|)>><rsub|k+1>-t<rsup|<around*|(|1|)>><rsub|k>|)>>>|<row|<cell|>|<cell|=>|<cell|\<cal-S\><around*|(|f,\<bbb-P\><rsub|1>|)>>>>>
+      </eqnarray*>
+
+      <item>The proof is similar to the proof of (1) just replace <math|1>
+      with <math|2>.
+
+      <item>We have that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|S<around*|(|f,\<bbb-P\><rsub|1>|)>-S<around*|(|f,\<bbb-P\><rsub|2>|)>>|<cell|\<equallim\><rsub|<around*|(|1,2|)>>>|<cell|<big|sum><rsub|i=1><rsup|n-1>f<around*|(|s<rsup|<around*|(|1|)>><rsub|I<rsub|\<cal-P\><rsub|1>><around*|(|i|)>>|)>\<cdot\><around*|(|t<rsub|i+1>-t<rsub|i>|)>-<big|sum><rsub|i=1><rsup|n-1>f<around*|(|s<rsup|<around*|(|2|)>><rsub|I<rsub|\<cal-P\><rsub|2>><around*|(|i|)>>|)>\<cdot\><around*|(|t<rsub|i+1>-t<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n-1><around*|(|f<around*|(|s<rsup|<around*|(|1|)>><rsub|I<rsub|\<cal-P\><rsub|1>><around*|(|i|)>>|)>-f<around*|(|s<rsup|<around*|(|2|)>><rsub|I<rsub|\<cal-P\><rsub|2>><around*|(|i|)>>|)>|)>\<cdot\><around*|(|t<rsub|i+1>-t<rsub|i>|)>>>>>
+      </eqnarray*>
+    </enumerate>
+  </proof>
+
+  <\lemma>
+    <label|lemma 15.15.176>Let <math|a,b\<in\>\<bbb-R\>> with
+    <math|a\<leqslant\>b>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    a normed space and\ 
+
+    <\equation*>
+      f:<around*|[|a.b|]>\<rightarrow\>X<text| a continuous function>
+    </equation*>
+
+    then for every <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there exist a
+    <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that for every two tagged
+    partitions <math|\<bbb-P\><rsub|1>>, <math|\<bbb-P\><rsub|2>> on
+    <math|<around*|[|a,b|]>> with <math|\<mu\><around*|(|\<bbb-P\><rsub|1>|)>\<less\>\<delta\>>
+    and <math|\<mu\><around*|(|\<bbb-P\><rsub|2>|)>\<less\>\<delta\>> we have
+    <math|<around*|\<\|\|\>|\<cal-S\><around*|(|f,\<bbb-P\><rsub|1>|)>-\<cal-S\><around*|(|f,\<bbb-P\><rsub|2>|)>|\<\|\|\>>\<less\>\<varepsilon\>>
+  </lemma>
+
+  <\proof>
+    \;
+  </proof>
 </body>
 
 <\initial>
@@ -670,28 +1273,49 @@
 <\references>
   <\collection>
     <associate|Riemann partition interval|<tuple|15.4|?>>
+    <associate|Riemann sum|<tuple|15.12|?>>
     <associate|auto-1|<tuple|15|?>>
     <associate|auto-2|<tuple|partition of
     <with|mode|<quote|math>|<around*|[|a,b|]>>|?>>
+    <associate|auto-3|<tuple|norm of a partition|?>>
+    <associate|auto-4|<tuple|<with|mode|<quote|math>|\<mu\><around*|(|\<cal-P\>|)>>|?>>
+    <associate|auto-5|<tuple|tagged partition|?>>
+    <associate|auto-6|<tuple|<with|mode|<quote|math>|\<bbb-P\>>|?>>
     <associate|eq 15.1.175|<tuple|15.1|?>>
     <associate|eq 15.10.175|<tuple|15.7|?>>
+    <associate|eq 15.10.176|<tuple|15.10|?>>
     <associate|eq 15.11.175|<tuple|15.8|?>>
+    <associate|eq 15.11.176|<tuple|15.11|?>>
     <associate|eq 15.12.175|<tuple|15.9|?>>
+    <associate|eq 15.12.176|<tuple|15.12|?>>
+    <associate|eq 15.13.175|<tuple|15.13|?>>
+    <associate|eq 15.15.175|<tuple|15.15|?>>
+    <associate|eq 15.16.175|<tuple|15.16|?>>
+    <associate|eq 15.17.175|<tuple|15.17|?>>
+    <associate|eq 15.18.176|<tuple|15.18|?>>
+    <associate|eq 15.19.176|<tuple|15.19|?>>
     <associate|eq 15.2.175|<tuple|15.2|?>>
     <associate|eq 15.3.175|<tuple|15.3|?>>
     <associate|eq 15.4.175|<tuple|15.4|?>>
     <associate|eq 15.5.175|<tuple|15.5|?>>
     <associate|eq 15.6.175|<tuple|15.6|?>>
-    <associate|eq 15.7.175|<tuple|15.10|?>>
-    <associate|eq 15.8.175|<tuple|15.11|?>>
+    <associate|eq: 15.14.175|<tuple|15.14|?>>
+    <associate|lemma 15.15.176|<tuple|15.15|?>>
     <associate|lemma 15.2.175|<tuple|15.2|?>>
-    <associate|lemma 15.5|<tuple|15.5|?>>
     <associate|lemma 15.5.175|<tuple|15.5|?>>
     <associate|lemma 15.6.175|<tuple|15.6|?>>
-    <associate|rieman combining partitions|<tuple|15.5|?>>
+    <associate|lemma 15.8.175|<tuple|15.8|?>>
+    <associate|lemma 15.9.175|<tuple|15.9|?>>
     <associate|rieman combining two partitions|<tuple|15.7|?>>
+    <associate|rieman norm of partition|<tuple|15.10|?>>
+    <associate|rieman tagged partition|<tuple|15.11|?>>
+    <associate|riemann and combination of tagged partitions|<tuple|15.14|?>>
+    <associate|riemann combining two partitions|<tuple|15.7|?>>
+    <associate|riemann norm of partition|<tuple|15.10|?>>
     <associate|riemann partition|<tuple|15.1|?>>
     <associate|riemann partition properties|<tuple|15.3|?>>
+    <associate|riemann sum|<tuple|15.12|?>>
+    <associate|riemann tagged partition|<tuple|15.11|?>>
   </collection>
 </references>
 
