@@ -569,7 +569,7 @@
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|Index>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-416><vspace|0.5fn>
+    <no-break><pageref|auto-417><vspace|0.5fn>
   </table-of-contents>
 
   <include|Sets.tm>
@@ -585,6 +585,8 @@
   <include|Topology.tm>
 
   <include|IntegrationBanach.tm>
+
+  <include|Differentiation.tm>
 
   <\the-index|idx>
     <index+1|<with|mode|math|<around*|\<langle\>|A,B,C|\<rangle\>>>|<pageref|auto-23>>
@@ -1045,6 +1047,8 @@
 
     <index+1|relation|<pageref|auto-52>>
 
+    <index+1|Riemann Integral|<pageref|auto-416>>
+
     <index+1|right action|<pageref|auto-117>>
 
     <index+1|ring|<pageref|auto-127>>
@@ -1492,11 +1496,13 @@
     <associate|auto-410|<tuple|15|821|IntegrationBanach.tm>>
     <associate|auto-411|<tuple|partition of
     <with|mode|<quote|math>|<around*|[|a,b|]>>|821|IntegrationBanach.tm>>
-    <associate|auto-412|<tuple|norm of a partition|830|IntegrationBanach.tm>>
-    <associate|auto-413|<tuple|<with|mode|<quote|math>|\<mu\><around*|(|\<cal-P\>|)>>|830|IntegrationBanach.tm>>
-    <associate|auto-414|<tuple|tagged partition|830|IntegrationBanach.tm>>
-    <associate|auto-415|<tuple|<with|mode|<quote|math>|\<bbb-P\>>|830|IntegrationBanach.tm>>
-    <associate|auto-416|<tuple|15.21|837>>
+    <associate|auto-412|<tuple|norm of a partition|829|IntegrationBanach.tm>>
+    <associate|auto-413|<tuple|<with|mode|<quote|math>|\<mu\><around*|(|\<cal-P\>|)>>|829|IntegrationBanach.tm>>
+    <associate|auto-414|<tuple|tagged partition|829|IntegrationBanach.tm>>
+    <associate|auto-415|<tuple|<with|mode|<quote|math>|\<bbb-P\>>|829|IntegrationBanach.tm>>
+    <associate|auto-416|<tuple|Riemann Integral|837|IntegrationBanach.tm>>
+    <associate|auto-417|<tuple|16|845|Differentiation.tm>>
+    <associate|auto-418|<tuple|16|?>>
     <associate|auto-42|<tuple|2.3.1|54|Sets.tm>>
     <associate|auto-43|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>>|54|Sets.tm>>
     <associate|auto-44|<tuple|<with|mode|<quote|math>|<around*|{|A<rsub|i>\|i\<in\>I|}>>|55|Sets.tm>>
@@ -2848,8 +2854,8 @@
     <associate|eq 15.11.176|<tuple|15.11|828|IntegrationBanach.tm>>
     <associate|eq 15.12.175|<tuple|15.9|827|IntegrationBanach.tm>>
     <associate|eq 15.12.176|<tuple|15.12|828|IntegrationBanach.tm>>
-    <associate|eq 15.13.175|<tuple|15.13|829|IntegrationBanach.tm>>
-    <associate|eq 15.15.175|<tuple|15.15|829|IntegrationBanach.tm>>
+    <associate|eq 15.13.175|<tuple|15.13|828|IntegrationBanach.tm>>
+    <associate|eq 15.15.175|<tuple|15.15|828|IntegrationBanach.tm>>
     <associate|eq 15.16.175|<tuple|15.16|829|IntegrationBanach.tm>>
     <associate|eq 15.17.175|<tuple|15.17|829|IntegrationBanach.tm>>
     <associate|eq 15.18.176|<tuple|15.18|829|IntegrationBanach.tm>>
@@ -2859,8 +2865,26 @@
     <associate|eq 15.20.177.1|<tuple|15.21|832|IntegrationBanach.tm>>
     <associate|eq 15.21.177|<tuple|15.22|833|IntegrationBanach.tm>>
     <associate|eq 15.22.177|<tuple|15.23|833|IntegrationBanach.tm>>
+    <associate|eq 15.24.177|<tuple|15.24|836|IntegrationBanach.tm>>
+    <associate|eq 15.25.177|<tuple|15.25|836|IntegrationBanach.tm>>
+    <associate|eq 15.26.177|<tuple|15.27|837|IntegrationBanach.tm>>
+    <associate|eq 15.27.177|<tuple|15.26|836|IntegrationBanach.tm>>
+    <associate|eq 15.28.177|<tuple|15.28|837|IntegrationBanach.tm>>
+    <associate|eq 15.29.177|<tuple|15.29|838|IntegrationBanach.tm>>
     <associate|eq 15.3.175|<tuple|15.3|824|IntegrationBanach.tm>>
+    <associate|eq 15.30.177|<tuple|15.30|839|IntegrationBanach.tm>>
+    <associate|eq 15.31.177|<tuple|15.31|839|IntegrationBanach.tm>>
+    <associate|eq 15.32.177|<tuple|15.32|839|IntegrationBanach.tm>>
+    <associate|eq 15.33.177|<tuple|15.33|840|IntegrationBanach.tm>>
+    <associate|eq 15.34.177|<tuple|15.34|840|IntegrationBanach.tm>>
+    <associate|eq 15.35.177|<tuple|15.35|840|IntegrationBanach.tm>>
+    <associate|eq 15.36.17|<tuple|15.36|841|IntegrationBanach.tm>>
+    <associate|eq 15.37.177|<tuple|15.37|841|IntegrationBanach.tm>>
+    <associate|eq 15.38.177|<tuple|15.38|841|IntegrationBanach.tm>>
+    <associate|eq 15.39.177|<tuple|15.39|843|IntegrationBanach.tm>>
     <associate|eq 15.4.175|<tuple|15.4|824|IntegrationBanach.tm>>
+    <associate|eq 15.40.177|<tuple|15.40|843|IntegrationBanach.tm>>
+    <associate|eq 15.41.177|<tuple|15.41|843|IntegrationBanach.tm>>
     <associate|eq 15.5.175|<tuple|15.5|825|IntegrationBanach.tm>>
     <associate|eq 15.6.175|<tuple|15.6|825|IntegrationBanach.tm>>
     <associate|eq 2.1.001|<tuple|2.2|27|Sets.tm>>
@@ -3202,7 +3226,7 @@
     <associate|eq 9.89.047|<tuple|9.83|283|Numbers.tm>>
     <associate|eq 9.90.047|<tuple|9.84|284|Numbers.tm>>
     <associate|eq: 14.124.176.1|<tuple|14.124|744|Topology.tm>>
-    <associate|eq: 15.14.175|<tuple|15.14|829|IntegrationBanach.tm>>
+    <associate|eq: 15.14.175|<tuple|15.14|828|IntegrationBanach.tm>>
     <associate|equipotence|<tuple|6.1|177|NaturalNumbers.tm>>
     <associate|equipotence 2^A and P(A)|<tuple|6.14|179|NaturalNumbers.tm>>
     <associate|equipotence \<less\>= condition|<tuple|6.6|177|NaturalNumbers.tm>>
@@ -3572,15 +3596,16 @@
     <associate|lemma 14.381.166|<tuple|14.382|812|Topology.tm>>
     <associate|lemma 14.382.166|<tuple|14.383|812|Topology.tm>>
     <associate|lemma 14.387.166|<tuple|14.388|816|Topology.tm>>
-    <associate|lemma 15.14.177|<tuple|15.16|831|IntegrationBanach.tm>>
-    <associate|lemma 15.15.176|<tuple|15.17|832|IntegrationBanach.tm>>
-    <associate|lemma 15.18.177|<tuple|15.18|834|IntegrationBanach.tm>>
+    <associate|lemma 15.14.177|<tuple|15.17|831|IntegrationBanach.tm>>
+    <associate|lemma 15.15.176|<tuple|15.18|832|IntegrationBanach.tm>>
+    <associate|lemma 15.18.177|<tuple|15.19|834|IntegrationBanach.tm>>
     <associate|lemma 15.2.175|<tuple|15.3|821|IntegrationBanach.tm>>
-    <associate|lemma 15.21.177|<tuple|15.21|835|IntegrationBanach.tm>>
+    <associate|lemma 15.21.177|<tuple|15.23|835|IntegrationBanach.tm>>
+    <associate|lemma 15.30.177|<tuple|15.30|840|IntegrationBanach.tm>>
     <associate|lemma 15.5.175|<tuple|15.6|824|IntegrationBanach.tm>>
     <associate|lemma 15.6.175|<tuple|15.7|825|IntegrationBanach.tm>>
     <associate|lemma 15.8.175|<tuple|15.9|827|IntegrationBanach.tm>>
-    <associate|lemma 15.9.175|<tuple|15.10|828|IntegrationBanach.tm>>
+    <associate|lemma 15.9.175|<tuple|15.10|827|IntegrationBanach.tm>>
     <associate|limit (a+n)/(b+n)|<tuple|14.292|763|Topology.tm>>
     <associate|limit 1/(a+i)|<tuple|14.291|763|Topology.tm>>
     <associate|limit a.x_n|<tuple|14.295|764|Topology.tm>>
@@ -4082,6 +4107,7 @@
     (1)|<tuple|6.54|193|NaturalNumbers.tm>>
     <associate|pair equality of pairs|<tuple|1.43|19|Sets.tm>>
     <associate|pair of elements|<tuple|1.41|19|Sets.tm>>
+    <associate|part:Differentiation.tm|<tuple|15.41|?>>
     <associate|part:DirectSumTensorProduct.tm|<tuple|11.378|587>>
     <associate|part:IntegrationBanach.tm|<tuple|<with|mode|<quote|math>|f<around*|(|b|)>\<less\>y\<less\>f<around*|(|a|)>>|821>>
     <associate|part:LinearAlgebra.tm|<tuple|10.5.5|331>>
@@ -4306,15 +4332,28 @@
     <associate|relation|<tuple|3.1|73|Sets.tm>>
     <associate|relation properties|<tuple|3.4|73|Sets.tm>>
     <associate|relation trivial|<tuple|3.3|73|Sets.tm>>
+    <associate|rieman integral properties|<tuple|15.29|838|IntegrationBanach.tm>>
     <associate|riemann combining two partitions|<tuple|15.8|825|IntegrationBanach.tm>>
+    <associate|riemann constant function|<tuple|15.22|834|IntegrationBanach.tm>>
+    <associate|riemann continuous functions are
+    integrable|<tuple|15.25|836|IntegrationBanach.tm>>
     <associate|riemann existence of tagged
     partitions|<tuple|15.13|830|IntegrationBanach.tm>>
-    <associate|riemann integral|<tuple|15.19|834|IntegrationBanach.tm>>
-    <associate|riemann norm of partition|<tuple|15.11|830|IntegrationBanach.tm>>
+    <associate|riemann f\<less\>=g|<tuple|15.26|837|IntegrationBanach.tm>>
+    <associate|riemann integral|<tuple|15.20|834|IntegrationBanach.tm>>
+    <associate|riemann integral (1)|<tuple|15.27|837|IntegrationBanach.tm>>
+    <associate|riemann integral over [a,b] to [a,c]
+    [c,b]|<tuple|15.31|843|IntegrationBanach.tm>>
+    <associate|riemann integration equivalences|<tuple|15.24|835|IntegrationBanach.tm>>
+    <associate|riemann norm of partition|<tuple|15.11|829|IntegrationBanach.tm>>
     <associate|riemann partition|<tuple|15.1|821|IntegrationBanach.tm>>
     <associate|riemann partition properties|<tuple|15.4|822|IntegrationBanach.tm>>
-    <associate|riemann sum|<tuple|15.14|831|IntegrationBanach.tm>>
-    <associate|riemann tagged partition|<tuple|15.12|830|IntegrationBanach.tm>>
+    <associate|riemann riemann integral is
+    linear|<tuple|15.28|837|IntegrationBanach.tm>>
+    <associate|riemann riemann sum and linearity|<tuple|15.15|830|IntegrationBanach.tm>>
+    <associate|riemann riemann sum is monoton|<tuple|15.16|831|IntegrationBanach.tm>>
+    <associate|riemann sum|<tuple|15.14|830|IntegrationBanach.tm>>
+    <associate|riemann tagged partition|<tuple|15.12|829|IntegrationBanach.tm>>
     <associate|ring|<tuple|4.32|131|NaturalNumbers.tm>>
     <associate|ring 0 1 and -|<tuple|4.40|132|NaturalNumbers.tm>>
     <associate|ring absorbing element|<tuple|4.39|132|NaturalNumbers.tm>>
@@ -5184,6 +5223,8 @@
       <tuple|<tuple|tagged partition>|<pageref|auto-414>>
 
       <tuple|<tuple|<with|mode|<quote|math>|\<bbb-P\>>>|<pageref|auto-415>>
+
+      <tuple|<tuple|Riemann Integral>|<pageref|auto-416>>
     </associate>
     <\associate|parts>
       <tuple|Sets.tm|chapter-nr|0|section-nr|0|subsection-nr|0>
@@ -5768,7 +5809,7 @@
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Index>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-416><vspace|0.5fn>
+      <no-break><pageref|auto-417><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>

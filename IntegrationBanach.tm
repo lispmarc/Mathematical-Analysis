@@ -1098,6 +1098,8 @@
     such that:\ 
 
     <\enumerate>
+      <item><math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>
+
       <item><math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n-1|}>> we have
       <math|t<rsub|i>\<less\>t<rsub|i+1>> and
       <math|s<rsub|i>\<in\><around*|[|t<rsub|i>,t<rsub|i+1>|]>>
@@ -1199,7 +1201,7 @@
     a tagged partition on <math|<around*|[|a,b|]>>,
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
     normed space and <math|f:<around*|[|a,b|]>\<rightarrow\>X> a function
-    then the <with|font-series|bold|Riemann sum of <math|f> using the
+    then the <with|font-series|bold|Riemann sum of <math|f> using the tagged
     partition <math|\<bbb-P\>>> noted ans
     <math|\<cal-S\><around*|(|f,\<bbb-P\>|)>> is defined by\ 
 
@@ -1789,49 +1791,6 @@
     </description>
   </proof>
 
-  <\theorem>
-    <label|riemann f\<less\>=g>Let <math|a,b\<in\>\<bbb-R\>> with
-    <math|a\<less\>b>, <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>>
-    the normed space of the real numbers and
-
-    <\equation*>
-      f,g\<in\>\<cal-R\><around*|(|<around*|[|a,b|]>,\<bbb-R\>|)><text| such
-      that >\<forall\>x\<in\><around*|[|a,b|]><text| we have
-      >f<around*|(|x|)>\<leqslant\>g<around*|(|x|)>
-    </equation*>
-
-    then we have\ 
-
-    <\equation*>
-      <big|int><rsub|a><rsup|b>f\<leqslant\><big|int><rsub|a><rsup|b>g
-    </equation*>
-  </theorem>
-
-  <\proof>
-    Using [lemma: <reference|lemma 15.21.177>1] there exists
-    <math|<around*|{|\<bbb-P\><rsub|i>|}><rsub|i\<in\>\<bbb-N\>>> such that
-    <math|<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|\<bbb-P\><rsub|i>|)>=0>.
-    Using [theorem: <reference|riemann riemann sum is monoton>] we have
-
-    <\equation>
-      <label|eq 15.26.177>\<forall\>i\<in\>\<bbb-N\><text|
-      >S<around*|(|f,\<bbb-P\><rsub|i>|)>\<leqslant\>S<around*|(|g,\<bbb-P\><rsub|i>|)>
-    </equation>
-
-    Further we have using [theorem: <reference|riemann integration
-    equivalences>] that
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|<big|int><rsub|a><rsup|b>f>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|riemann integration equivalences>]>>>|<cell|<below|lim|i\<rightarrow\>\<infty\>>\<cal-S\><around*|(|f,\<bbb-P\><rsub|i>|)>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[eq:
-      <reference|eq 15.26.177>] and [theorem:
-      <reference|xn\<less\>yn=\<gtr\>limxn\<less\>limyn>]>>>|<cell|<below|lim|i\<rightarrow\>\<infty\>>\<cal-S\><around*|(|g,\<bbb-P\><rsub|i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|riemann integration equivalences>]>>>|<cell|<big|int><rsub|a><rsup|b>g>>>>
-    </eqnarray*>
-
-    \;
-  </proof>
-
   We show now that every continuous function from <math|<around*|[|a,b|]>> to
   a Banach space is Riemann integrable.
 
@@ -1879,12 +1838,57 @@
     follows that <math|f> is Riemann integrable.
   </proof>
 
+  <\theorem>
+    <label|riemann f\<less\>=g>Let <math|a,b\<in\>\<bbb-R\>> with
+    <math|a\<less\>b>, <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>>
+    the normed space of the real numbers and
+
+    <\equation*>
+      f,g\<in\>\<cal-C\><around*|(|<around*|[|a,b|]>,\<bbb-R\>|)><text| [so
+      that by [theorem: <reference|riemann continuous functions are
+      integrable>] <math|f,g> are Riemann integrable] such that
+      >\<forall\>x\<in\><around*|[|a,b|]><text| we have
+      >f<around*|(|x|)>\<leqslant\>g<around*|(|x|)>
+    </equation*>
+
+    then we have\ 
+
+    <\equation*>
+      <big|int><rsub|a><rsup|b>f\<leqslant\><big|int><rsub|a><rsup|b>g
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Using [lemma: <reference|lemma 15.21.177>1] there exists
+    <math|<around*|{|\<bbb-P\><rsub|i>|}><rsub|i\<in\>\<bbb-N\>>> such that
+    <math|<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|\<bbb-P\><rsub|i>|)>=0>.
+    Using [theorem: <reference|riemann riemann sum is monoton>] we have
+
+    <\equation>
+      <label|eq 15.26.177>\<forall\>i\<in\>\<bbb-N\><text|
+      >S<around*|(|f,\<bbb-P\><rsub|i>|)>\<leqslant\>S<around*|(|g,\<bbb-P\><rsub|i>|)>
+    </equation>
+
+    Further we have using [theorem: <reference|riemann integration
+    equivalences>] that
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<big|int><rsub|a><rsup|b>f>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|riemann integration equivalences>]>>>|<cell|<below|lim|i\<rightarrow\>\<infty\>>\<cal-S\><around*|(|f,\<bbb-P\><rsub|i>|)>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[eq:
+      <reference|eq 15.26.177>] and [theorem:
+      <reference|xn\<less\>yn=\<gtr\>limxn\<less\>limyn>]>>>|<cell|<below|lim|i\<rightarrow\>\<infty\>>\<cal-S\><around*|(|g,\<bbb-P\><rsub|i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|riemann integration equivalences>]>>>|<cell|<big|int><rsub|a><rsup|b>g>>>>
+    </eqnarray*>
+
+    \;
+  </proof>
+
   Up to now we have always assumed that <math|a\<less\>b> in the definition
   of the Riemann integral, we remove now this restriction by extending the
   definition of the Riemann integral.
 
   <\definition>
-    <label|riemann integral><index|Riemann Integral>Let
+    <label|riemann integral (1)><index|Riemann Integral>Let
     <math|a,b\<in\>\<bbb-R\>> with <math|a\<leqslant\>b>,
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
     normed space and <math|f:<around*|[|a,b|]>\<rightarrow\>X> is Riemann
@@ -1983,6 +1987,494 @@
     </equation*>
   </proof>
 
+  <\theorem>
+    <label|rieman integral properties>Let <math|a,b\<in\>\<bbb-R\>> with
+    <math|a\<leqslant\>b>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    a Banach space and <math|f:<around*|[|a,b|]>\<rightarrow\>X> a function
+    \ then we have:
+
+    <\enumerate>
+      <item>If <math|f\<in\>\<cal-R\><around*|(|<around*|[|a,b|]>,X|)>> then
+      \ <math|\<forall\>L\<in\>L<around*|(|X,\<bbb-R\>|)>> we have that
+      <math|L\<circ\>f> is integrable and
+      <math|<big|int><rsub|a><rsup|b><around*|(|L\<circ\>f|)>=L<around*|(|<big|int><rsub|a><rsup|b>f|)>>
+
+      <item>If <math|f> is ontinuous [so that by [theorem: <reference|riemann
+      continuous functions are integrable>] <math|f> is Riemann integrable]
+      then <math|<around*|\<\|\|\>|f|\<\|\|\>>:<around*|[|a.b|]>\<rightarrow\>\<bbb-R\>>
+      defined by <math|<around*|\<\|\|\>|f|\<\|\|\>><around*|(|x|)>=<around*|\<\|\|\>|f<around*|(|x|)>|\<\|\|\>>>
+      is Riemann integrable and <math|<around*|\<\|\|\>|<big|int><rsub|a><rsup|b>f|\<\|\|\>>\<leqslant\><big|int><rsub|a><rsup|b><around*|\<\|\|\>|f|\<\|\|\>>>
+
+      <item>If <math|x\<in\>X> then <math|C<rsub|x>:<around*|[|a,b|]>\<rightarrow\>X>
+      by <math|C<rsub|x><around*|(|i|)>=x> is Riemann integrable and
+      <math|<big|int><rsub|a><rsup|b>C<rsub|x>=<around*|(|b-a|)>\<cdot\>x>
+
+      <item>If <math|f> is continuous [hence \ by [theorem:
+      <reference|riemann continuous functions are integrable>] Riemann
+      integrable] and <math|m\<in\>\<bbb-R\>> such that
+      <math|\<forall\>x\<in\><around*|[|a,b|]>> we have
+      <math|<around*|\<\|\|\>|f<around*|(|x|)>|\<\|\|\>>\<leqslant\>m> then
+
+      <\equation*>
+        <around*|\<\|\|\>|<big|int><rsub|a><rsup|b>f|\<\|\|\>>\<leqslant\>m\<cdot\><around*|(|b-a|)>
+      </equation*>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    We have to look at the following cases for <math|a,b>:
+
+    <\description>
+      <item*|<math|a=b>>Then we have:
+
+      <\enumerate>
+        <item>By definition <math|L\<circ\>f> is Riemann integrable and
+
+        <\equation*>
+          <big|int><rsub|a><rsup|b><around*|(|L\<circ\>f|)>=0=L<around*|(|0|)>=L<around*|(|<big|int><rsub|a><rsup|b>f|)>
+        </equation*>
+
+        <item>By definition <math|<around*|\<\|\|\>|f|\<\|\|\>>> is Riemann
+        integrable and\ 
+
+        <\equation*>
+          <big|int><rsub|a><rsup|b><around*|\<\|\|\>|f|\<\|\|\>>=0=<around*|\<\|\|\>|0|\<\|\|\>>=<around*|\<\|\|\>|<big|int><rsub|a><rsup|b>f|\<\|\|\>>
+        </equation*>
+
+        <item>By definition <math|C<rsub|x>> is Riemann integrable and\ 
+
+        <\equation*>
+          <big|int><rsub|a><rsup|b>C<rsub|x>=0=0\<cdot\>x=<around*|(|b-a|)>\<cdot\>x
+        </equation*>
+
+        <item>By definition <math|f> is Riemann integrable and\ 
+
+        <\equation*>
+          <around*|\<\|\|\>|<big|int><rsub|a><rsup|b>f|\<\|\|\>>=<around*|\<\|\|\>|0|\<\|\|\>>=m\<cdot\>0=m\<cdot\><around*|(|b-a|)>
+        </equation*>
+      </enumerate>
+
+      <item*|<math|a\<less\>b>>\ 
+
+      <\enumerate>
+        <item>Let <math|\<bbb-P\>=<around*|\<langle\>|<around*|\<nobracket\>|<around*|{|t<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>,<around*|{|s<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>|)>|\<rangle\>>>
+        be any tagged partition on <math|<around*|[|a,b|]>> then we have:
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|\<cal-S\><around*|(|L\<circ\>f,\<bbb-P\>|)>>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n-1><around*|(|t<rsub|i+1>-t<rsub|i>|)>\<cdot\><around*|(|L\<circ\>f|)><around*|(|s<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n-1><around*|(|t<rsub|i+1>-t<rsub|i>|)>\<cdot\>L<around*|(|f<around*|(|s<rsub|i>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|L\<in\>L<around*|(|X,\<bbb-R\>|)>>>|<cell|L<around*|(|<big|sum><rsub|i=1><rsup|n-1><around*|(|t<rsub|i+1>-t<around*|(||)>|)>\<cdot\>f<around*|(|s<rsub|i>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|\<cal-S\><around*|(|f,\<bbb-P\>|)>|)><eq-number><label|eq
+          15.30.177>>>>>
+        </eqnarray*>
+
+        Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. As
+        <math|L\<in\>L<around*|(|X,\<bbb-R\>|)>> <math|L> is continuous,
+        hence there exist a <math|\<delta\><rprime|'>\<in\>\<bbb-R\><rsup|+>>
+        such that if <math|<around*|\<\|\|\>|x|\<\|\|\>>=<around*|\<\|\|\>|x-0|\<\|\|\>>\<less\>\<delta\><rprime|'>>
+        then\ 
+
+        <\equation>
+          <label|eq 15.31.177><around*|\||L<around*|(|x|)>|\|>\<less\>\<varepsilon\>
+        </equation>
+
+        As <math|f > is Riemann integrable there exist a
+        <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that for every tagged
+        partition <math|\<bbb-P\>> on <math|<around*|[|a,b|]>> with
+        <math|\<mu\><around*|(|\<bbb-P\>|)>\<less\>\<delta\>> we have
+        <math|<around*|\<\|\|\>|\<cal-S\><around*|(|f,\<bbb-P\>|)>-<big|int><rsub|a><rsup|b>f|\<\|\|\>>\<less\>\<delta\><rprime|'>>.
+        So
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|\||\<cal-S\><around*|(|L\<circ\>f,\<bbb-P\>|)>-L<around*|(|<big|int><rsub|a><rsup|b>f|)>|\|>>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 15.30.177>]>>>|<cell|<around*|\||L<around*|(|\<cal-S\><around*|(|f,\<bbb-P\>|)>|)>-L<around*|(|<big|int><rsub|a><rsup|b>f|)>|\|>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||L<around*|(|\<cal-S\><around*|(|f,\<bbb-P\>|)>-<big|int><rsub|a><rsup|b>f|)>|\|>>>|<row|<cell|>|<cell|\<less\><rsub|<text|[eq:
+          <reference|eq 15.31.177>]>>>|<cell|\<varepsilon\>>>>>
+        </eqnarray*>
+
+        proving that <math|L\<circ\>f> is Riemann integrable and that
+
+        <\equation*>
+          <big|int><rsub|a><rsup|b><around*|(|L\<circ\>f|)>=L<around*|(|<big|int><rsub|a><rsup|b>f|)>
+        </equation*>
+
+        <\equation*>
+          \;
+        </equation*>
+
+        <item>By [example: <reference|continuity norm is continuous>]
+        <math|<around*|\<\|\|\>||\<\|\|\>>:X\<rightarrow\>\<bbb-R\>> is
+        continuous, hence as <math|<around*|\<\|\|\>|f|\<\|\|\>>=<around*|\<\|\|\>||\<\|\|\>>\<circ\>f>,
+        it follows from [theorem: <reference|continuity composition>] it
+        follows that\ 
+
+        <\equation*>
+          <around*|\<\|\|\>|f|\<\|\|\>>:<around*|[|a,b|]>\<rightarrow\>\<bbb-R\><text|
+          is continue>
+        </equation*>
+
+        Hence using [theorem: <reference|riemann continuous functions are
+        integrable>] it follows that\ 
+
+        <\equation*>
+          <around*|\<\|\|\>|f|\<\|\|\>><text| is Riemann integrable>
+        </equation*>
+
+        Let <math|\<bbb-P\>=<around*|\<langle\>|<around*|\<nobracket\>|<around*|{|t<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>,<around*|{|s<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>|)>|\<rangle\>>>
+        be any tagged partition on <math|<around*|[|a,b|]>> then we have that\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<cal-S\><around*|(|f,\<bbb-P\>|)>|\<\|\|\>>>|<cell|=>|<cell|<around*|\<\|\|\>|<big|sum><rsub|i=1><rsup|n-1><around*|(|t<rsub|i+1>-t<rsub|i>|)>\<cdot\>f<around*|(|s<rsub|i>|)>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<big|sum><rsub|i=1><rsup|n-1><around*|\<\|\|\>|<around*|(|t<rsub|i+1>-t<rsub|i>|)>\<cdot\>f<around*|(|s<rsub|i>|)>|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n-1><around*|\||t<rsub|i+1>-t<rsub|i>|\|>\<cdot\><around*|\<\|\|\>|f<around*|(|s<rsub|i>|)>|\<\|\|\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|t<rsub|i>\<less\>t<rsub|i+1>>>|<cell|<big|sum><rsub|i=1><rsup|n-1><around*|(|t<rsub|i+1>-t<rsub|i>|)>\<cdot\><around*|\<\|\|\>|f<around*|(|s<rsub|i>|)>|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|\<cal-S\><around*|(|<around*|\<\|\|\>|f|\<\|\|\>>,\<bbb-P\>|)><eq-number><label|eq
+          15.32.177>>>>>
+        </eqnarray*>
+
+        Let <math|<around*|{|\<bbb-P\><rsub|i>|}><rsub|i\<in\>\<bbb-N\>>> be
+        a sequence of tagged parititions on <math|<around*|[|a,b|]>> such
+        that <math|<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|\<bbb-P\><rsub|i>|)>=0>.
+        As <math|<around*|\<\|\|\>|f|\<\|\|\>>> is continuous and Riemann
+        integrable it follows from [theorem: <reference|riemann integration
+        equivalences>] that\ 
+
+        <\equation>
+          <label|eq 15.33.177><below|lim|i\<rightarrow\>\<infty\>>\<cal-S\><around*|(|<around*|\<\|\|\>|f|\<\|\|\>>,\<bbb-P\><rsub|i>|)><text|
+          exist and ><below|lim|i\<rightarrow\>\<infty\>>\<cal-S\><around*|(|<around*|\<\|\|\>|f|\<\|\|\>>,\<bbb-P\><rsub|i>|)>=<big|int><rsub|a><rsup|b><around*|\<\|\|\>|f|\<\|\|\>>
+        </equation>
+
+        As also <math|f> is continuous and Riemann integrable it follows from
+        [theorem: <reference|riemann integration equivalences>] that
+
+        <\equation>
+          <label|eq 15.34.177><below|lim|i\<rightarrow\>\<infty\>>\<cal-S\><around*|(|f,\<bbb-P\><rsub|i>|)><text|
+          exist and ><below|lim|i\<rightarrow\>\<infty\>>\<cal-S\><around*|(|f,\<bbb-P\><rsub|i>|)>=<big|int><rsub|a><rsup|b>f
+        </equation>
+
+        By [eq: <reference|eq 15.32.177>] we have that
+        <math|\<forall\>i\<in\>\<bbb-N\>> that
+        <math|<around*|\<\|\|\>|S<around*|(|f,\<bbb-P\><rsub|i>|)>|\<\|\|\>>\<leqslant\>S<around*|(|<around*|\<\|\|\>|f|\<\|\|\>>,\<bbb-P\><rsub|i>|)>>
+        so that we can apply [theorem: <reference|limit sequence limited by a
+        convergent real sequence>] together with [eqs: <reference|eq
+        15.33.177>, <reference|eq 15.34.177>] gives\ 
+
+        <\equation*>
+          <around*|\<\|\|\>|<big|int><rsub|a><rsup|b>f|\<\|\|\>>=<around*|\<\|\|\>|<below|lim|i\<rightarrow\>\<infty\>>\<cal-S\><around*|(|f,\<bbb-P\><rsub|i>|)>|\<\|\|\>>\<leqslant\><below|lim|i\<rightarrow\>\<infty\>>\<cal-S\><around*|(|<around*|\<\|\|\>|f|\<\|\|\>>,\<bbb-P\><rsub|i>|)>=<big|int><rsub|a><rsup|b><around*|\<\|\|\>|f|\<\|\|\>>
+        </equation*>
+
+        <item>This follows from [example: <reference|riemann constant
+        function>].
+
+        <item>Let <math|\<bbb-P\>=<around*|\<langle\>|<around*|\<nobracket\>|<around*|{|t<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>,<around*|{|s<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>|)>|\<rangle\>>>
+        be any tagged partition on <math|<around*|[|a,b|]>>. then we have:
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<cal-S\><around*|(|f,\<bbb-P\>|)>|\<\|\|\>>>|<cell|=>|<cell|<around*|\<\|\|\>|<big|sum><rsub|i=1><rsup|n-1><around*|(|t<rsub|i+1>-t<rsub|i>|)>\<cdot\>f<around*|(|s<rsub|i>|)>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<big|sum><rsub|i=1><rsup|n-1><around*|\<\|\|\>|<around*|(|t<rsub|i+1>-t<rsub|i>|)>\<cdot\>f<around*|(|s<rsub|i>|)>|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n-1><around*|\||t<rsub|i+1>-t<rsub|i>|\|>\<cdot\><around*|\<\|\|\>|f<around*|(|s<rsub|i>|)>|\<\|\|\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|t<rsub|i>\<less\>t<rsub|i>>>|<cell|<big|sum><rsub|i=1><rsup|n-1><around*|(|t<rsub|i+1>-t<rsub|i>|)>\<cdot\><around*|\<\|\|\>|f<around*|(|s<rsub|I>|)>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<big|sum><rsub|i=1><rsup|n-1><around*|(|<around*|(|t<rsub|i+1>-t<rsub|i>|)>\<cdot\>m|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|n-1><around*|(|t<rsub|i+1>-t<rsub|i>|)>|)>\<cdot\>m>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|sum of differences>]>>>|<cell|<around*|(|t<rsub|n>-t<rsub|1>|)>\<cdot\>m>>|<row|<cell|>|<cell|=>|<cell|<around*|(|b-a|)>\<cdot\>m>>>>
+        </eqnarray*>
+
+        proving that\ 
+
+        <\equation>
+          <label|eq 15.35.177><around*|\<\|\|\>|\<cal-S\><around*|(|f,\<bbb-P\>|)>|\<\|\|\>>\<leqslant\><around*|(|b-a|)>\<cdot\>m
+        </equation>
+
+        Let <math|<around*|{|\<bbb-P\><rsub|i>|}><rsub|i\<in\>\<bbb-N\>>> be
+        a sequence of tagged partitions on <math|<around*|[|a,b|]>> with
+        <math|<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|\<bbb-P\><rsub|i>|)>>
+        then as <math|f> is continuous we have that\ 
+
+        <\equation*>
+          <below|lim|i\<rightarrow\>\<infty\>>\<cal-S\><around*|(|f,\<bbb-P\><rsub|i>|)>=<big|int><rsub|a><rsup|b>f
+        </equation*>
+
+        exist. Using the above together with [eq: <reference|eq 15.35.177>]
+        allows us to apply [theorem: <reference|limit and lower or upper
+        bound>] giving\ 
+
+        <\equation*>
+          <around*|\<\|\|\>|<big|int><rsub|a><rsup|b>f|\<\|\|\>>=<around*|\<\|\|\>|<below|lim|i\<rightarrow\>\<infty\>>\<cal-S\><around*|(|f,\<bbb-P\><rsub|i>|)>|\<\|\|\>>\<leqslant\><around*|(|b-a|)>\<cdot\>m
+        </equation*>
+      </enumerate>
+    </description>
+  </proof>
+
+  <\lemma>
+    <label|lemma 15.30.177>Let <math|a,b\<in\>\<bbb-R\>> with
+    <math|a\<leqslant\>b>, <math|c\<in\><around*|]|a,b|[>>,
+    <math|\<bbb-P\><rsub|1>=<around*|\<langle\>|<around*|{|t<rsup|<around*|(|1|)>><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n<rsub|1>|}>>,<around*|{|s<rsup|<around*|(|1|)>><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n<rsub|1>-1|}>>|\<rangle\>>>
+    a tagged partition on <math|<around*|[|a,c|]>> and
+    <math|\<bbb-P\><rsub|2>=<around*|\<langle\>|<around*|{|t<rsup|<around*|(|2|)>><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n<rsub|2>|}>>,<around*|{|s<rsup|<around*|(|2|)>><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n<rsub|2>-1|}>>|\<rangle\>>>
+    a tagged partition on <math|<around*|[|c,b|]>> then for
+    <math|\<bbb-P\><rsub|1><big|sqcup>\<bbb-P\><rsub|2>> defined by\ 
+
+    <\equation*>
+      \<bbb-P\><rsub|1><big|sqcup>\<bbb-P\><rsub|2>=<around*|\<langle\>|<around*|{|t<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n<rsub|1>+n<rsub|2>-1|}>>,<around*|{|s<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n<rsub|1>+n<rsub|2>-2|}>>|\<rangle\>><text|>
+    </equation*>
+
+    where\ 
+
+    <\equation*>
+      \<forall\>i\<in\><around*|{|1,\<ldots\>,n<rsub|1>+n<rsub|2>-1|}><text|
+      we have >t<rsub|i>=<choice|<tformat|<table|<row|<cell|t<rsup|<around*|(|1|)>><rsub|i><text|
+      if >i\<in\><around*|{|1,\<ldots\>,n<rsub|1>-1|}>>>|<row|<cell|t<rsup|<around*|(|2|)>><rsub|i-n<rsub|1>+1><text|
+      if >i\<in\><around*|{|n<rsub|1>,\<ldots\>,n<rsub|1>+n<rsub|2>-1|}>>>>>>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      \<forall\>i\<in\><around*|{|1,\<ldots\>,n<rsub|1>+n<rsub|2>|}><text| we
+      have >s<rsub|i>=<choice|<tformat|<table|<row|<cell|s<rsup|<around*|(|1|)>><rsub|i><text|
+      if >i\<in\><around*|{|1,\<ldots\>,n<rsub|1>-1|}>>>|<row|<cell|s<rsup|<around*|(|2|)>><rsub|i-n<rsub|1>+1><text|
+      if >i\<in\><around*|{|n<rsub|1>,\<ldots\>,n<rsub|1>+n<rsub|2>-2|}>>>>>>
+    </equation*>
+
+    then we have:\ 
+
+    <\enumerate>
+      <item><math|\<bbb-P\><rsub|1><big|sqcup>\<bbb-P\><rsub|2>> is a tagged
+      partition on <math|<around*|[|a,b|]>>
+
+      <item><math|\<mu\><around*|(|\<bbb-P\><rsub|1><big|sqcup>\<bbb-P\><rsub|2>|)>=max<around*|(|\<mu\><around*|(|\<bbb-P\><rsub|1>|)>,\<mu\><around*|(|\<bbb-P\><rsub|2>|)>|)>>
+
+      <item>If <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+      is a normed space and <math|f:<around*|[|a,b|]>\<rightarrow\>X> a
+      function then
+
+      <\equation*>
+        \<cal-S\><around*|(|f,\<bbb-P\><rsub|1><big|sqcup>\<bbb-P\><rsub|2>|)>=\<cal-S\><around*|[|f<rsub|\|<around*|[|a,c|\<nobracket\>>>,\<bbb-P\><rsub|1>|]>+\<cal-S\><around*|[|f<rsub|<around*|[|c,b|]>>,\<bbb-P\><rsub|2>|]>
+      </equation*>
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>First we have that\ 
+
+      <\equation>
+        <label|eq 15.36.17>t<rsub|1>=t<rsup|<around*|(|1|)>><rsub|1>=a<text|>
+      </equation>
+
+      Second, using [definition: <reference|riemann tagged partition>]
+      <math|1\<less\>n<rsub|2>\<Rightarrow\>0\<leqslant\>n<rsub|2>-1> we have
+      <math|n<rsub|1>=n<rsub|1>\<leqslant\>n<rsub|1>+n<rsub|2>-1>, so that\ 
+
+      <\equation>
+        <label|eq 15.37.177>t<rsub|n<rsub|1>+n<rsub|2>-1>=t<rsup|<around*|(|2|)>><rsub|<around*|(|n<rsub|1>+n<rsub|2>-1|)>-n<rsub|1>+1>=t<rsup|<around*|(|2|)>><rsub|n<rsub|2>>=b
+      </equation>
+
+      Third for <math|i\<in\><around*|{|1,\<ldots\>,n<rsub|1>+n<rsub|2>-2|}>>
+      we have either:\ 
+
+      <\description>
+        <item*|<math|i\<in\><around*|{|1,\<ldots\>,n<rsub|1>-2|}>>>Then\ 
+
+        <\equation*>
+          t<rsub|i>=t<rsup|<around*|(|1|)>><rsub|i>\<less\>t<rsub|i+1><rsup|<around*|(|1|)>>\<equallim\><rsub|i\<less\>n<rsub|1>-2\<leqslant\>n<rsub|1>-1>t<rsub|i+1>
+        </equation*>
+
+        and\ 
+
+        <\equation*>
+          s<rsub|i>=s<rsup|<around*|(|1|)>><rsub|i>\<in\><around*|[|t<rsup|<around*|(|1|)>><rsub|i>,t<rsup|<around*|(|1|)>><rsub|i+1>|]>\<equallim\><rsub|i\<less\>n<rsub|1>-2\<leqslant\>n<rsub|1>-1><around*|[|t<rsub|i>,t<rsub|i+1>|]>
+        </equation*>
+
+        <item*|<math|i=n<rsub|1>-1>>Then\ 
+
+        <\equation*>
+          t<rsub|i>=t<rsub|n<rsub|1>-1>=t<rsup|<around*|(|1|)>><rsub|n<rsub|1>-1>\<less\>t<rsup|<around*|(|1|)>><rsub|n<rsub|1>>=c=t<rsup|<around*|(|2|)>><rsub|1>=t<rsup|<around*|(|2|)>><rsub|n<rsub|1>-n<rsub|1>+1>=t<rsub|n<rsub|1>>=t<rsub|i+1>
+        </equation*>
+
+        and as
+
+        <\equation*>
+          s<rsub|n<rsub|1>-1>=s<rsup|<around*|(|1|)>><rsub|n<rsub|1>-1>\<in\><around*|[|t<rsup|<around*|(|1|)>><rsub|n<rsub|1>-1>,t<rsup|<around*|(|1|)>><rsub|n<rsub|1>>|]>=<around*|[|t<rsub|n<rsub|1>-1>,t<rsup|<around*|(|1|)>><rsub|n<rsub|1>>|]>=<around*|[|t<rsub|n<rsub|1>-1>,c|]>=<around*|[|t<rsub|n<rsub|1>-1>,t<rsub|1><rsup|<around*|(|2|)>>|]>=<around*|[|t<rsub|n<rsub|1>-1>,t<rsub|n<rsub|1>>|]>
+        </equation*>
+
+        we have\ 
+
+        <\equation*>
+          s<rsub|i>\<in\><around*|[|t<rsub|i>,t<rsub|i+1>|]>
+        </equation*>
+
+        <item*|<math|i\<in\><around*|{|n<rsub|1>,\<ldots\>,n<rsub|1>+n<rsub|2>-2|}>>>Then
+
+        <\equation*>
+          t<rsub|i>=t<rsup|<around*|(|2|)>><rsub|i-n<rsub|1>+1>\<less\>t<rsup|<around*|(|2|)>><rsub|<around*|(|i+1|)>-n<rsub|1>+1>=t<rsub|i+1>
+        </equation*>
+
+        and\ 
+
+        <\equation*>
+          s<rsub|i>=s<rsup|<around*|(|2|)>><rsub|i-n<rsub|1>+1>\<in\><around*|[|t<rsup|<around*|(|2|)>><rsub|i-n<rsub|1>+1>,t<rsup|<around*|(|2|)>><rsub|<around*|(|i+1|)>-n<rsub|1>+1>|]>=<around*|[|t<rsub|i>,t<rsub|i+1>|]>
+        </equation*>
+      </description>
+
+      Hence in all cases we have\ 
+
+      <\equation>
+        <label|eq 15.38.177>t<rsub|i>\<less\>t<rsub|i+1><text| and
+        >s<rsub|i>\<in\><around*|[|t<rsub|i>,t<rsub|i+1>|]>
+      </equation>
+
+      So using [eqs: <reference|eq 15.36.17>, <reference|eq 15.37.177> and
+      <reference|eq 15.38.177>] it follows that\ 
+
+      <\equation*>
+        \<bbb-P\><rsub|1><big|sqcup>\<bbb-P\><rsub|2><text| is a tagged
+        partition on ><around*|[|a,b|]>
+      </equation*>
+
+      <item>Note that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|{|t<rsub|i+1>-t<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n<rsub|1>+n<rsub|2>-2|}>|}>>|<cell|=>|<cell|>>|<row|<cell|<around*|{|t<rsub|i+1>-t<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n<rsub|1>-2|}>|}><big|cup><around*|{|t<rsub|i+1>-t<rsub|i>\|i\<in\><around*|{|n<rsub|1>-1|}>|}><big|cup><around*|{|t<rsub|i+1>-t<rsub|i>\|i\<in\><around*|{|n<rsub|1>,\<ldots\>,n<rsub|1>+n<rsub|2>-2|}>|}>>|<cell|=>|<cell|>>|<row|<cell|<around*|{|t<rsup|<around*|(|1|)>><rsub|i+1>-t<rsup|<around*|(|1|)>><rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n<rsub|1>-2|}>|}><big|cup><around*|{|t<rsup|<around*|(|2|)>><rsub|1>-t<rsup|<around*|(|1|)>><rsub|n<rsub|1>-1>|}><big|cup><around*|{|t<rsup|<around*|(|2|)>><rsub|<around*|(|i+1|)>-n<rsub|1>+1>-t<rsup|<around*|(|2|)>><rsub|i-n<rsub|1>+1>\|i\<in\><around*|{|n<rsub|1>,\<ldots\>,n<rsub|1>+n<rsub|2>-2|}>|}>>|<cell|=>|<cell|>>|<row|<cell|<around*|{|t<rsup|<around*|(|1|)>><rsub|i+1>-t<rsup|<around*|(|1|)>><rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n<rsub|1>-2|}>|}><big|cup><around*|{|c-t<rsup|<around*|(|1|)>><rsub|n<rsub|1>-1>|}><big|cup><around*|{|t<rsup|<around*|(|2|)>><rsub|<around*|(|i+1|)>-n<rsub|1>+1>-t<rsup|<around*|(|2|)>><rsub|i-n<rsub|1>+1>\|i\<in\><around*|{|n<rsub|1>,\<ldots\>,n<rsub|1>+n<rsub|2>-2|}>|}>>|<cell|=>|<cell|>>|<row|<cell|<around*|{|t<rsup|<around*|(|1|)>><rsub|i+1>-t<rsup|<around*|(|1|)>><rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n<rsub|1>-2|}>|}><big|cup><around*|{|t<rsup|<around*|(|1|)>><rsub|n<rsub|1>>-t<rsup|<around*|(|1|)>><rsub|n<rsub|1>-1>|}><big|cup><around*|{|t<rsup|<around*|(|2|)>><rsub|<around*|(|i+1|)>-n<rsub|1>+1>-t<rsup|<around*|(|2|)>><rsub|i-n<rsub|1>+1>\|i\<in\><around*|{|n<rsub|1>,\<ldots\>,n<rsub|1>+n<rsub|2>-2|}>|}>>|<cell|=>|<cell|>>|<row|<cell|<around*|{|t<rsup|<around*|(|1|)>><rsub|i+1>-t<rsup|<around*|(|1|)>><rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n<rsub|1>-1|}>|}><big|cup><around*|{|t<rsup|<around*|(|2|)>><rsub|<around*|(|i+1|)>-n<rsub|1>+1>-t<rsup|<around*|(|2|)>><rsub|i-n<rsub|1>+1>\|i\<in\><around*|{|n<rsub|1>,\<ldots\>,n<rsub|1>+n<rsub|2>-2|}>|}>>|<cell|=>|<cell|>>|<row|<cell|<around*|{|t<rsup|<around*|(|1|)>><rsub|i+1>-t<rsup|<around*|(|1|)>><rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n<rsub|1>-1|}>|}><big|cup><around*|{|t<rsup|<around*|(|2|)>><rsub|i+1>-t<rsup|<around*|(|2|)>><rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n<rsub|2>-1|}>|}>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      so that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<mu\><around*|(|\<bbb-P\><rsub|1><big|sqcup>\<bbb-P\><rsub|2>|)>>|<cell|=>|<cell|>>|<row|<cell|max<around*|(|<around*|{|t<rsub|i+1>-t<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n<rsub|1>+n<rsub|2>-2|}>|}>|)>>|<cell|=>|<cell|>>|<row|<cell|max<around*|(|<around*|{|t<rsup|<around*|(|1|)>><rsub|i+1>-t<rsup|<around*|(|1|)>><rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n<rsub|1>-1|}>|}><big|cup><around*|{|t<rsup|<around*|(|2|)>><rsub|i+1>-t<rsup|<around*|(|2|)>><rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n<rsub|2>-1|}>|}>|)>>|<cell|=>|<cell|>>|<row|<cell|max<around*|(|max<around*|(|<around*|{|t<rsup|<around*|(|1|)>><rsub|i+1>-t<rsup|<around*|(|1|)>><rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n<rsub|1>-1|}>|)>,max<around*|(||\<nobracket\>><around*|{|t<rsup|<around*|(|2|)>><rsub|i+1>-t<rsup|<around*|(|2|)>><rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n<rsub|2>-1|}>|}>|)>|)>>|<cell|\<equallim\><rsub|<text|[theor:<reference|order
+        min max of union>]>>>|<cell|>>|<row|<cell|max<around*|(|\<mu\><around*|(|\<bbb-P\><rsub|1>|)>,\<mu\><around*|(|\<bbb-P\><rsub|2>|)>|)>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      <item>We have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<cal-S\><around*|(|f,\<bbb-P\>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i=1><rsup|n<rsub|1>+n<rsub|2>-2><around*|(|t<rsub|i+1>-t<rsub|i>|)>\<cdot\>f<around*|(|s<rsub|i>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i=1><rsup|n<rsub|1>-2><around*|(|t<rsub|i+1>-t<rsub|i>|)>\<cdot\>f<around*|(|s<rsub|i>|)>+<big|sum><rsub|i=n<rsub|1>-1><rsup|n<rsub|1>-1><around*|(|t<rsub|i+1>-t<rsub|i>|)>\<cdot\>f<around*|(|s<rsub|i>|)>+<big|sum><rsub|i=n<rsub|1>><rsup|n<rsub|1>+n<rsub|2>-2><around*|(|t<rsub|i+1>-t<rsub|i>|)>\<cdot\>f<around*|(|s<rsub|i>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i=1><rsup|n<rsub|1>-2><around*|(|t<rsup|<around*|(|1|)>><rsub|i+1>-t<rsub|i><rsup|<around*|(|1|)>>|)>\<cdot\>f<around*|(|s<rsub|i><rsup|<around*|(|1|)>>|)>+<around*|(|t<rsub|n<rsub|1>>-t<rsub|n<rsub|1>-1>|)>\<cdot\>f<around*|(|s<rsub|n<rsub|1>-1>|)>+<big|sum><rsub|i=n<rsub|1>><rsup|n<rsub|1>+n<rsub|2>-2><around*|(|t<rsup|<around*|(|2|)>><rsub|<around*|(|i+1|)>-n<rsub|1>+1>-t<rsup|<around*|(|2|)>><rsub|i-n<rsub|1>+1>|)>\<cdot\>f<around*|(|s<rsup|<around*|(|2|)>><rsub|i-n<rsub|1>+1>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i=1><rsup|n<rsub|1>-2><around*|(|t<rsup|<around*|(|1|)>><rsub|i+1>-t<rsub|i><rsup|<around*|(|1|)>>|)>\<cdot\>f<around*|(|s<rsub|i><rsup|<around*|(|1|)>>|)>+<around*|(|t<rsup|<around*|(|2|)>><rsub|1>-t<rsup|<around*|(|1|)>><rsub|n<rsub|1>-1>|)>\<cdot\>f<around*|(|s<rsup|<around*|(|1|)>><rsub|n<rsub|1>-1>|)>+<big|sum><rsub|i=1><rsup|n<rsub|2>-1><around*|(|t<rsup|<around*|(|2|)>><rsub|i+1>-t<rsup|<around*|(|2|)>><rsub|i>|)>\<cdot\>f<around*|(|s<rsup|<around*|(|2|)>><rsub|i>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i=1><rsup|n<rsub|1>-2><around*|(|t<rsup|<around*|(|1|)>><rsub|i+1>-t<rsub|i><rsup|<around*|(|1|)>>|)>\<cdot\>f<around*|(|s<rsub|i><rsup|<around*|(|1|)>>|)>+<around*|(|c-t<rsup|<around*|(|1|)>><rsub|n<rsub|1>-1>|)>\<cdot\>f<around*|(|s<rsup|<around*|(|1|)>><rsub|n<rsub|1>-1>|)>+<big|sum><rsub|i=1><rsup|n<rsub|2>-1><around*|(|t<rsup|<around*|(|2|)>><rsub|i+1>-t<rsup|<around*|(|2|)>><rsub|i>|)>\<cdot\>f<around*|(|s<rsup|<around*|(|2|)>><rsub|i>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i=1><rsup|n<rsub|1>-2><around*|(|t<rsup|<around*|(|1|)>><rsub|i+1>-t<rsub|i><rsup|<around*|(|1|)>>|)>\<cdot\>f<around*|(|s<rsub|i><rsup|<around*|(|1|)>>|)>+<around*|(|t<rsup|<around*|(|1|)>><rsub|n<rsub|1>>-t<rsup|<around*|(|1|)>><rsub|n<rsub|1>-1>|)>\<cdot\>f<around*|(|s<rsup|<around*|(|1|)>><rsub|n<rsub|1>-1>|)>+<big|sum><rsub|i=1><rsup|n<rsub|2>-1><around*|(|t<rsup|<around*|(|2|)>><rsub|i+1>-t<rsup|<around*|(|2|)>><rsub|i>|)>\<cdot\>f<around*|(|s<rsup|<around*|(|2|)>><rsub|i>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i=1><rsup|n<rsub|1>-1><around*|(|t<rsup|<around*|(|1|)>><rsub|i+1>-t<rsub|i><rsup|<around*|(|1|)>>|)>\<cdot\>f<around*|(|s<rsub|i><rsup|<around*|(|1|)>>|)>+<big|sum><rsub|i=1><rsup|n<rsub|2>-1><around*|(|t<rsup|<around*|(|2|)>><rsub|i+1>-t<rsup|<around*|(|2|)>><rsub|i>|)>\<cdot\>f<around*|(|s<rsup|<around*|(|2|)>><rsub|i>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i=1><rsup|n<rsub|1>-1><around*|(|t<rsup|<around*|(|1|)>><rsub|i+1>-t<rsub|i><rsup|<around*|(|1|)>>|)>\<cdot\>f<rsub|\|<around*|[|a,c|]>><around*|(|s<rsub|i><rsup|<around*|(|1|)>>|)>+<big|sum><rsub|i=1><rsup|n<rsub|2>-1><around*|(|t<rsup|<around*|(|2|)>><rsub|i+1>-t<rsup|<around*|(|2|)>><rsub|i>|)>\<cdot\>f<rsub|\|<around*|[|c,b|]>><around*|(|s<rsup|<around*|(|2|)>><rsub|i>|)>>|<cell|=>|<cell|>>|<row|<cell|\<cal-S\><around*|(|f<rsub|\|<around*|[|a,c|]>>,\<bbb-P\><rsub|1>|)>+\<cal-S\><around*|(|f<rsub|\|<around*|[|c,b|]>>,\<bbb-P\><rsub|2>|)>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+    </enumerate>
+  </proof>
+
+  We prove now a theorem that will be critical to prove later the Fundamental
+  Theorem of Calculus.
+
+  <\theorem>
+    <label|riemann integral over [a,b] to [a,c] [c,b]>Let
+    <math|a,b\<in\>\<bbb-R\>> with <math|a\<leqslant\>b>,
+    <math|c\<in\><around*|[|a,b|]>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    a Banach space and <math|f\<in\>\<cal-C\><around*|(|<around*|[|a,b|]>,X|)>>
+    [so that by [theorem: <reference|riemann continuous functions are
+    integrable> is Riemann integrable] then
+
+    <\equation*>
+      f<rsub|\|a,c>:<around*|[|a,c|]>\<rightarrow\>X<text|,
+      <math|f<rsub|\|<around*|[|c,b|]>>:<around*|[|c,b|]>\<rightarrow\>X<text|
+      are Riemann integrable>>>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      <big|int><rsub|a><rsup|b>f=<big|int><rsub|a><rsup|c>f<rsub|\|<around*|[|a,c|]>>+<big|int><rsub|c><rsup|b>f<rsub|\|<around*|[|c,b|]>>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    We have the following cases to consider for <math|a,b,c>:
+
+    <\description>
+      <item*|<math|a=b>>Then by definition we have that <math|f>,
+      <math|f<rsub|\|<around*|[|a,c|]>>>, <math|f<rsub|\|<around*|[|c,b|]>>>
+      are Riemann integrable and
+
+      <\equation*>
+        <big|int><rsub|a><rsup|b>f=0=0+0=<big|int><rsub|a><rsup|c>f<rsub|\|<around*|[|a,c|]>>+<big|int><rsub|c><rsup|b>f<rsub|\|<around*|[|c,b|]>>
+      </equation*>
+
+      <item*|<math|a\<less\>b\<wedge\>a=c>>Then
+      <math|f<rsub|\|<around*|[|a,c|]>>> is Riemann integrable by definition,
+      <math|<around*|[|c,b|]>=<around*|[|a,b|]>> and\ 
+
+      <\equation*>
+        <big|int><rsub|a><rsup|b>f=0+<big|int><rsub|a><rsup|b>f=0+<big|int><rsub|c><rsup|b>f<rsub|\|c,b>=<big|int><rsub|a><rsup|c>f<rsub|\|<around*|[|a,c|]>>+<big|int><rsub|c><rsup|b>f<rsub|\|c,b>
+      </equation*>
+
+      <item*|<math|a\<less\>b\<wedge\>b=c>>Then
+      <math|f<rsub|\|<around*|[|b,c|]>>> is Riemann integrable by definition,
+      <math|<around*|[|a,c|]>=<around*|[|a,b|]>> and\ 
+
+      <\equation*>
+        <big|int><rsub|a><rsup|b>f=<big|int><rsub|a><rsup|c>f<rsub|\|<around*|[|a,c|]>>=<big|int><rsub|a><rsup|c>f<rsub|\|<around*|[|a,c|]>>+0=<big|int><rsub|a><rsup|c>f<rsub|\|<around*|[|a,c|]>>+<big|int><rsub|c><rsup|b>f<rsub|\|<around*|[|c,b|]>>
+      </equation*>
+
+      <item*|<math|a\<less\>c\<less\>b>>As
+      <math|f:<around*|[|a,b|]>\<rightarrow\>X> is continuous it follows from
+      [theorem: <reference|continuity and subspace topology (1)>] that
+      <math|f<rsub|\|<around*|[|a,c|]>>:<around*|[|a,c|]>\<rightarrow\>X> and
+      <math|f<rsub|\|<around*|[|c,b|]>>:<around*|[|c,b|]>\<rightarrow\>X> are
+      continuous. Using [theorem: <reference|riemann continuous functions are
+      integrable>] we conclude that <math|f<rsub|\|<around*|[|a,c|]>>> and
+      <math|f<rsub|\|<around*|[|c,b|]>>> are Riemann integrable. By [lemma:
+      <reference|lemma 15.21.177>1] there exists a sequence of tagged
+      partitions <math|<around*|{|\<bbb-P\><rsup|<around*|(|1|)>><rsub|i>|}><rsub|i\<in\>\<bbb-N\>>>
+      on <math|<around*|[|a,c|]>> and a sequence of tagged partitions
+      <math|<around*|{|\<bbb-P\><rsup|<around*|(|2|)>><rsub|i>|}><rsub|i\<in\>\<bbb-N\>>>
+      on <math|<around*|[|c,b|]>> such that\ 
+
+      <\equation*>
+        <below|lim|i\<rightarrowlim\>\<infty\>>\<mu\><around*|(|\<bbb-P\><rsub|i><rsup|<around*|(|1|)>>|)>=0<text|
+        and ><below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|\<bbb-P\><rsup|<around*|(|2|)>><rsub|i>|)>=0
+      </equation*>
+
+      Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then there exists
+      <math|N<rsub|1>,N<rsub|2>\<in\>\<bbb-N\>> such that for
+      <math|n\<geqslant\>N<rsub|1>> we have
+
+      <\equation*>
+        \<mu\><around*|(|\<bbb-P\><rsup|1><rsub|n>|)>=<around*|\||\<mu\><around*|(|\<bbb-P\><rsup|<around*|(|1|)>><rsub|n>|)>-0|\|>\<less\>\<varepsilon\><text|
+        and >\<mu\><around*|(|\<bbb-P\><rsup|<around*|(|2|)>><rsub|n>|)>=<around*|\||\<mu\><around*|(|\<bbb-P\><rsup|<around*|(|2|)>><rsub|n>|)>-0|\|>\<less\>\<varepsilon\>
+      </equation*>
+
+      So if <math|n\<geqslant\>max<around*|(|N<rsub|1>,N<rsub|2>|)>>
+
+      <\equation*>
+        <around*|\||\<mu\><around*|(|\<bbb-P\><rsup|<around*|(|1|)>><rsub|n><big|sqcup>\<bbb-P\><rsup|<around*|(|2|)>><rsub|n>|)>-0|\|>=\<mu\><around*|(|\<bbb-P\><rsup|<around*|(|1|)>><rsub|n><big|sqcup>\<bbb-P\><rsup|<around*|(|2|)>><rsub|n>|)>=max<around*|(|\<mu\><around*|(|\<bbb-P\><rsup|<around*|(|1|)>><rsub|n>|)>,max<around*|(|\<mu\><around*|(|\<bbb-P\><rsup|<around*|(|2|)>><rsub|n>|)>|)>|)>\<less\>\<varepsilon\>
+      </equation*>
+
+      \ which proves that\ 
+
+      <\equation*>
+        <below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|\<bbb-P\><rsup|<around*|(|1|)>><rsub|n><big|sqcup>\<bbb-P\><rsup|<around*|(|2|)>><rsub|n>|)>=0
+      </equation*>
+    </description>
+
+    Now using [theorem: <reference|riemann integration equivalences>] and the
+    fact that <math|f,f<rsub|\|<around*|[|a,c|]>>> and
+    <math|f<rsub|<around*|[|c,b|]>>> are Riemann integrable and continuous,
+    it follows that\ 
+
+    <\equation>
+      <label|eq 15.39.177><below|lim|i\<rightarrow\>\<infty\>>\<cal-S\><around*|(|f,\<bbb-P\><rsup|<around*|(|1|)>><rsub|i><big|sqcup>\<bbb-P\><rsub|i><rsup|<around*|(|2|)>>|)><text|,
+      ><below|lim|i\<rightarrow\>\<infty\>>\<cal-S\><around*|(|f<rsub|\|<around*|[|a,c|]>>,\<bbb-P\><rsup|<around*|(|1|)>><rsub|i>|)><text|
+      and ><below|lim|i\<rightarrow\>\<infty\>>\<cal-S\><around*|(|f<rsub|\|<around*|[|c,b|]>>,\<bbb-P\><rsub|i><rsup|<around*|(|2|)>>|)><text|
+      exists >
+    </equation>
+
+    and\ 
+
+    <\equation>
+      <label|eq 15.40.177><big|int><rsub|a><rsup|b>f=<below|lim|i\<rightarrow\>\<infty\>>\<cal-S\><around*|(|f,\<bbb-P\><rsup|<around*|(|1|)>><rsub|i><big|sqcup>\<bbb-P\><rsub|i><rsup|<around*|(|2|)>>|)><text|,><big|int><rsub|a><rsup|c>f<rsub|\|<around*|[|a,c|]>>=<below|lim|i\<rightarrow\>\<infty\>>\<cal-S\><around*|(|f<rsub|\|<around*|[|a,c|]>>,\<bbb-P\><rsup|<around*|(|1|)>><rsub|i>|)><text|,><big|int><rsub|c><rsup|b>f<rsub|\|<around*|[|c,b|]>>=<below|lim|i\<rightarrow\>\<infty\>>\<cal-S\><around*|(|f<rsub|\|<around*|[|c,b|]>>,\<bbb-P\><rsub|i><rsup|<around*|(|2|)>>|)>
+    </equation>
+
+    Further we have <math|\<forall\>i\<in\>\<bbb-N\>> that\ 
+
+    <\equation>
+      <label|eq 15.41.177>\<cal-S\><around*|(|f,\<bbb-P\><rsup|<around*|(|1|)>><rsub|i><big|cup>\<bbb-P\><rsup|<around*|(|2|)>><rsub|i>|)>\<equallim\><rsub|<text|[lemma:
+      <reference|lemma 15.30.177>]>>\<cal-S\><around*|(|f<rsub|\|<around*|[|a,b|]>>,\<bbb-P\><rsup|<around*|(|1|)>><rsub|i>|)>+\<cal-S\><around*|(|f<rsub|\|<around*|[|c,b|]>>,\<bbb-P\><rsup|<around*|(|2|)>><rsub|i>|)>
+    </equation>
+
+    Finally using [theorem: <reference|limit x_n+y_n>] together with [eqs:
+    <reference|eq 15.39.177>, <reference|eq 15.40.177> and <reference|eq
+    15.41.177>] proves that\ 
+
+    <\equation*>
+      <big|int><rsub|a><rsup|b>f=<big|int><rsub|a><rsup|c>f<rsub|\|<around*|[|a,c|]>>+<big|int><rsub|c><rsup|b>f<rsub|\|<around*|[|c,b|]>>
+    </equation*>
+  </proof>
+
+  \;
+
+  \;
+
+  \;
+
   \ 
 </body>
 
@@ -2026,12 +2518,24 @@
     <associate|eq 15.22.177|<tuple|15.23|?>>
     <associate|eq 15.24.177|<tuple|15.24|?>>
     <associate|eq 15.25.177|<tuple|15.25|?>>
-    <associate|eq 15.26.177|<tuple|15.26|?>>
-    <associate|eq 15.27.177|<tuple|15.27|?>>
+    <associate|eq 15.26.177|<tuple|15.27|?>>
+    <associate|eq 15.27.177|<tuple|15.26|?>>
     <associate|eq 15.28.177|<tuple|15.28|?>>
     <associate|eq 15.29.177|<tuple|15.29|?>>
     <associate|eq 15.3.175|<tuple|15.3|?>>
+    <associate|eq 15.30.177|<tuple|15.30|?>>
+    <associate|eq 15.31.177|<tuple|15.31|?>>
+    <associate|eq 15.32.177|<tuple|15.32|?>>
+    <associate|eq 15.33.177|<tuple|15.33|?>>
+    <associate|eq 15.34.177|<tuple|15.34|?>>
+    <associate|eq 15.35.177|<tuple|15.35|?>>
+    <associate|eq 15.36.17|<tuple|15.36|?>>
+    <associate|eq 15.37.177|<tuple|15.37|?>>
+    <associate|eq 15.38.177|<tuple|15.38|?>>
+    <associate|eq 15.39.177|<tuple|15.39|?>>
     <associate|eq 15.4.175|<tuple|15.4|?>>
+    <associate|eq 15.40.177|<tuple|15.40|?>>
+    <associate|eq 15.41.177|<tuple|15.41|?>>
     <associate|eq 15.5.175|<tuple|15.5|?>>
     <associate|eq 15.6.175|<tuple|15.6|?>>
     <associate|eq: 15.14.175|<tuple|15.14|?>>
@@ -2040,21 +2544,24 @@
     <associate|lemma 15.18.177|<tuple|15.19|?>>
     <associate|lemma 15.2.175|<tuple|15.3|?>>
     <associate|lemma 15.21.177|<tuple|15.23|?>>
+    <associate|lemma 15.30.177|<tuple|15.30|?>>
     <associate|lemma 15.5.175|<tuple|15.6|?>>
     <associate|lemma 15.6.175|<tuple|15.7|?>>
     <associate|lemma 15.8.175|<tuple|15.9|?>>
     <associate|lemma 15.9.175|<tuple|15.10|?>>
+    <associate|rieman integral properties|<tuple|15.29|?>>
     <associate|riemann combining two partitions|<tuple|15.8|?>>
     <associate|riemann constant function|<tuple|15.22|?>>
-    <associate|riemann continuous functions are integrable|<tuple|15.26|?>>
+    <associate|riemann continuous functions are integrable|<tuple|15.25|?>>
     <associate|riemann existence of tagged partitions|<tuple|15.13|?>>
-    <associate|riemann f\<less\>=g|<tuple|15.25|?>>
-    <associate|riemann integral|<tuple|15.27|?>>
+    <associate|riemann f\<less\>=g|<tuple|15.26|?>>
+    <associate|riemann integral|<tuple|15.20|?>>
+    <associate|riemann integral (1)|<tuple|15.27|?>>
+    <associate|riemann integral over [a,b] to [a,c] [c,b]|<tuple|15.31|?>>
     <associate|riemann integration equivalences|<tuple|15.24|?>>
     <associate|riemann norm of partition|<tuple|15.11|?>>
     <associate|riemann partition|<tuple|15.1|?>>
     <associate|riemann partition properties|<tuple|15.4|?>>
-    <associate|riemann rieman sum and linearity|<tuple|15.15|?>>
     <associate|riemann riemann integral is linear|<tuple|15.28|?>>
     <associate|riemann riemann sum and linearity|<tuple|15.15|?>>
     <associate|riemann riemann sum is monoton|<tuple|15.16|?>>
@@ -2075,6 +2582,8 @@
       <tuple|<tuple|tagged partition>|<pageref|auto-5>>
 
       <tuple|<tuple|<with|mode|<quote|math>|\<bbb-P\>>>|<pageref|auto-6>>
+
+      <tuple|<tuple|Riemann Integral>|<pageref|auto-7>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|15<space|2spc>Integration
