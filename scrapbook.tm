@@ -1780,6 +1780,139 @@
 
   \;
 
+  <\definition>
+    <label|diff (i-\<gtr\>x)><index|<math|<around*|(|i\<rightarrow\>x|)>>>Let
+    <math|n\<in\>\<bbb-N\>>, <math|<around*|{|X<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of sets, <math|i\<in\><around*|{|1,\<ldots\>,n|}>> and
+    <math|x\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>n|}>>X<rsub|j>>
+    then we define\ 
+
+    <\equation*>
+      <around*|(|i\<rightarrow\>x|)>:X<rsub|i>\<rightarrow\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j><text|
+      by >t\<rightarrow\><around*|(|i\<rightarrow\>x|)><around*|(|t|)><text|
+      where ><around*|(|<around*|(|i\<rightarrow\>x|)><around*|(|t|)>|)><rsub|j>=<choice|<tformat|<table|<row|<cell|x<rsub|j><text|
+      if >j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>>|<row|<cell|t<text|
+      if >j=i>>>>>
+    </equation*>
+
+    In other words <math|<around*|(|i\<rightarrow\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i,>x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>|)><around*|(|t|)>=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,t,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>
+  </definition>
+
+  <\lemma>
+    <label|lemma 16.24.178>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|{|X<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>> a
+    finite family of sets, <math|U\<subseteq\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>>,
+    <math|i\<in\><around*|{|1,\<ldots\>,n|}>> and
+    <math|x\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>n|}>\\<around*|{|i|}>>X<rsub|j>>
+    then
+
+    <\equation*>
+      <around*|(|i\<rightarrow\>x|)><rsup|-1><around*|(|U|)>\<subseteq\>\<pi\><rsub|i><around*|(|U|)>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    Let <math|t\<in\><around*|(|i\<rightarrow\>x|)><rsup|-1><around*|(|U|)>>
+    then <math|<around*|(|i\<rightarrow\>x|)><around*|(|t|)>\<in\>U> hence
+    <math|\<pi\><rsub|i><around*|(|<around*|(|i\<rightarrow\>x|)><around*|(|t|)>|)>\<in\>\<pi\><rsub|i><around*|(|U|)>>.As
+
+    <\equation*>
+      \<pi\><rsub|i><around*|(|<around*|(|i\<rightarrow\>x|)><around*|(|t|)>|)>=<around*|(|<around*|(|i\<rightarrow\>x|)><around*|(|t|)>|)><rsub|i>\<equallim\><rsub|det>t
+    </equation*>
+
+    it follows that <math|t\<in\>\<pi\><rsub|i><around*|(|U|)>>. Hence we
+    have\ 
+
+    <\equation*>
+      <around*|(|i\<rightarrow\>x|)><rsup|-1><around*|(|U|)>\<subseteq\>\<pi\><rsub|i><around*|(|U|)>
+    </equation*>
+  </proof>
+
+  <\lemma>
+    <label|lemma 16.25.178>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|{|X<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>> a
+    finite family of vector spaces over the field <math|\<bbb-K\>>,
+    <math|x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>>
+    and <math|i\<in\><around*|{|1,\<ldots\>,n|}>> then we have
+
+    <\enumerate>
+      <item><math|<around*|(|i\<rightarrow\>x|)><around*|(|x<rsub|i>|)>=x>
+
+      <item><math|\<forall\>s,t\<in\>X<rsub|i><text| we have
+      ><around*|(|i\<rightarrow\>x|)><around*|(|t|)>-<around*|(|i\<rightarrow\>x|)><around*|(|s|)>=<around*|(|i\<rightarrow\>0|)><around*|(|t-s|)>>
+
+      <item><math|\<forall\>t\<in\>X<rsub|i><text| we have
+      ><around*|(|i\<rightarrow\>x|)><around*|(|t|)>=<around*|(|i\<rightarrow\>0|)><around*|(|t|)>+<around*|(|i\<rightarrow\>x|)><around*|(|0|)>>
+
+      <item><math|\<forall\>s\<in\>X<rsub|i>> we have
+      <math|x+<around*|(|i\<rightarrow\>0|)><around*|(|s|)>=<around*|(|i\<rightarrow\>x|)><around*|(|s+x<rsub|i>|)>>
+    </enumerate>
+
+    where <math|0\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>X<rsub|i>>
+    is defined by <math|<around*|(|0<rsub|1>,\<ldots\>,0<rsub|i-1>,0<rsub|i+1>,\<ldots\>,0<rsub|n>|)>>
+  </lemma>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item><math|Let j\<in\><around*|{|1,\<ldots\>,n|}>> then we have
+
+      <\equation*>
+        <around*|(|<around*|(|i\<rightarrow\>x|)><around*|(|x<rsub|i>|)>|)><rsub|j>=<choice|<tformat|<table|<row|<cell|x<rsub|j><text|
+        if >j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>>|<row|<cell|x<rsub|i><text|
+        if >i=j>>>>>=x<rsub|j>
+      </equation*>
+
+      proving that\ 
+
+      <\equation*>
+        <around*|(|i\<rightarrow\>x|)><around*|(|x<rsub|i>|)>=x
+      </equation*>
+
+      <item>Let <math|k\<in\><around*|{|1,\<ldots\>,n|}>> then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|<around*|(|i\<rightarrow\>x|)><around*|(|t|)>-<around*|(|i\<rightarrow\>x|)><around*|(|s|)>|)><rsub|k>>|<cell|=>|<cell|<around*|(|<around*|(|i\<rightarrow\>x|)><around*|(|t|)>|)><rsub|k>-<around*|(|<around*|(|i\<rightarrow\>x|)><around*|(|s|)>|)><rsub|k>>>|<row|<cell|>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|x<rsub|k><text|
+        if >k\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>>|<row|<cell|t<text|
+        if >k=i>>>>>-<choice|<tformat|<table|<row|<cell|x<rsub|k><text| if
+        >k\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>>|<row|<cell|s<text|
+        if >k=i>>>>>>>|<row|<cell|>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|0<text|
+        if >k\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>>|<row|<cell|t-s<text|
+        if >k=i>>>>>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|i\<rightarrow\>0|)><around*|(|t-s|)>>>>>
+      </eqnarray*>
+
+      <item><math|<around*|(|i\<rightarrow\>x|)><around*|(|t|)>>
+
+      <item>
+    </enumerate>
+
+    \;
+  </proof>
+
+  <\definition>
+    <label|diff delta function><index|<math|\<Delta\><rsub|i,j>>>Let
+    <math|n\<in\>\<bbb-N\>>, <math|<around*|{|X<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of vector spaces, <math|i,j\<in\><around*|{|1,\<ldots\>,n|}>>
+    and <math|x\<in\>X<rsub|i>> then we define\ 
+
+    <\equation*>
+      \<Delta\><rsub|i,j>:X<rsub|i>\<rightarrow\><big|cup><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|k><text|
+      by >\<Delta\><rsub|i,j><around*|(|x|)>=<choice|<tformat|<table|<row|<cell|x<text|
+      if >i=j>>|<row|<cell|0<rsub|j><text| if >i\<neq\>j>>>>><text| where
+      >0<rsub|j><text| is the neutral element in <math|X<rsub|j>>>
+    </equation*>
+
+    In other words <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we
+    have <math|\<Delta\><rsub|i,i><around*|(|x|)>=x\<in\>X<rsub|i>\<subseteq\><big|cup><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|k>>
+    and <math|\<forall\>j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>
+    we have <math|\<Delta\><rsub|i,j><around*|(|x|)>=0<rsub|j>\<in\>X<rsub|j>\<subseteq\><big|cup><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|k>>.
+  </definition>
+
+  We have now the following lemmas\ 
+
+  \;
+
   \;
 </body>
 
@@ -1792,69 +1925,76 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|open mapping theorem|5>>
-    <associate|auto-2|<tuple|sum over a countable set|?>>
+    <associate|auto-2|<tuple|sum over a countable set|8>>
+    <associate|auto-3|<tuple|<with|mode|<quote|math>|<around*|(|i\<rightarrow\>x|)>>|?>>
+    <associate|auto-4|<tuple|<with|mode|<quote|math>|\<Delta\><rsub|i,j>>|?>>
     <associate|complete open mapping theorem|<tuple|5|5>>
     <associate|countable union of a finite family of countable sets is
     countable|<tuple|4|4>>
+    <associate|diff (i-\<gtr\>x)|<tuple|17|?>>
+    <associate|diff delta function|<tuple|20|?>>
     <associate|eq 12.10.131|<tuple|1|1>>
     <associate|eq 12.11.131|<tuple|2|1>>
     <associate|eq 12.12.131|<tuple|3|1>>
     <associate|eq 12.13.131|<tuple|4|2>>
     <associate|eq 12.14.131|<tuple|5|2>>
     <associate|eq 12.15.131|<tuple|6|2>>
-    <associate|eq 14.110.151|<tuple|7|3>>
-    <associate|eq 14.111.151|<tuple|8|3>>
+    <associate|eq 14.110.151|<tuple|7|2>>
+    <associate|eq 14.111.151|<tuple|8|2>>
     <associate|eq 14.112.151|<tuple|9|3>>
     <associate|eq 14.113.151|<tuple|10|3>>
-    <associate|eq 14.211.159|<tuple|23|?>>
-    <associate|eq 14.212.159|<tuple|24|?>>
-    <associate|eq 14.213.159|<tuple|25|?>>
-    <associate|eq 14.214.159|<tuple|26|?>>
-    <associate|eq 14.215.159|<tuple|27|?>>
-    <associate|eq 14.216.159|<tuple|28|?>>
-    <associate|eq 14.217.159|<tuple|29|?>>
-    <associate|eq 14.218.159|<tuple|30|?>>
-    <associate|eq 14.219.160|<tuple|32|?>>
-    <associate|eq 14.219.161|<tuple|31|?>>
-    <associate|eq 14.220.159|<tuple|33|?>>
-    <associate|eq 14.221.519|<tuple|34|?>>
-    <associate|eq 14.222.159|<tuple|36|?>>
-    <associate|eq 14.223.159.1|<tuple|35|?>>
-    <associate|eq 14.225.161|<tuple|37|?>>
-    <associate|eq 14.226.161|<tuple|38|?>>
-    <associate|eq 14.227\<point\>161|<tuple|39|?>>
-    <associate|eq 14.228.161|<tuple|40|?>>
-    <associate|eq 14.229.161|<tuple|41|?>>
-    <associate|eq 14.230.161|<tuple|42|?>>
-    <associate|eq 14.241.164|<tuple|11|6>>
-    <associate|eq 14.242.164|<tuple|12|6>>
+    <associate|eq 14.211.159|<tuple|23|13>>
+    <associate|eq 14.212.159|<tuple|24|14>>
+    <associate|eq 14.213.159|<tuple|25|14>>
+    <associate|eq 14.214.159|<tuple|26|14>>
+    <associate|eq 14.215.159|<tuple|27|14>>
+    <associate|eq 14.216.159|<tuple|28|15>>
+    <associate|eq 14.217.159|<tuple|29|15>>
+    <associate|eq 14.218.159|<tuple|30|15>>
+    <associate|eq 14.219.160|<tuple|32|15>>
+    <associate|eq 14.219.161|<tuple|31|15>>
+    <associate|eq 14.220.159|<tuple|33|15>>
+    <associate|eq 14.221.519|<tuple|34|15>>
+    <associate|eq 14.222.159|<tuple|36|16>>
+    <associate|eq 14.223.159.1|<tuple|35|15>>
+    <associate|eq 14.225.161|<tuple|37|16>>
+    <associate|eq 14.226.161|<tuple|38|16>>
+    <associate|eq 14.227\<point\>161|<tuple|39|17>>
+    <associate|eq 14.228.161|<tuple|40|17>>
+    <associate|eq 14.229.161|<tuple|41|17>>
+    <associate|eq 14.230.161|<tuple|42|18>>
+    <associate|eq 14.241.164|<tuple|11|5>>
+    <associate|eq 14.242.164|<tuple|12|5>>
     <associate|eq 14.243.164|<tuple|13|6>>
     <associate|eq 14.246.165|<tuple|14|6>>
-    <associate|eq 14.247.165|<tuple|15|7>>
-    <associate|eq 14.248.165|<tuple|16|7>>
-    <associate|eq 14.249.165|<tuple|17|7>>
-    <associate|eq 14.250.165|<tuple|18|7>>
+    <associate|eq 14.247.165|<tuple|15|6>>
+    <associate|eq 14.248.165|<tuple|16|6>>
+    <associate|eq 14.249.165|<tuple|17|6>>
+    <associate|eq 14.250.165|<tuple|18|6>>
     <associate|eq 14.251.165|<tuple|19|7>>
-    <associate|eq 14.252.165|<tuple|20|8>>
-    <associate|eq 14.253.165|<tuple|21|8>>
-    <associate|eq 14.254.165|<tuple|22|8>>
-    <associate|lemma 14.360.158|<tuple|10|?>>
-    <associate|lemma 14.364.159|<tuple|14|?>>
+    <associate|eq 14.252.165|<tuple|20|7>>
+    <associate|eq 14.253.165|<tuple|21|7>>
+    <associate|eq 14.254.165|<tuple|22|7>>
+    <associate|lemma 14.360.158|<tuple|10|10>>
+    <associate|lemma 14.364.159|<tuple|14|13>>
+    <associate|lemma 16.24.178|<tuple|18|?>>
+    <associate|lemma 16.25.178|<tuple|19|?>>
     <associate|series absolute convergence alternative
-    definition|<tuple|11|?>>
+    definition|<tuple|11|11>>
     <associate|series absolute convergence commutativity countable
-    sums|<tuple|8|?>>
-    <associate|series absolute convergence countable family|<tuple|7|?>>
-    <associate|series absolute convergence dominant convergence|<tuple|13|?>>
+    sums|<tuple|8|8>>
+    <associate|series absolute convergence countable family|<tuple|7|8>>
+    <associate|series absolute convergence dominant
+    convergence|<tuple|13|13>>
     <associate|series absolute convergence of countable families
-    condition|<tuple|12|?>>
+    condition|<tuple|12|12>>
     <associate|series absolute convergence sum and scalar
-    product|<tuple|9|?>>
+    product|<tuple|9|9>>
     <associate|series absolute convergent countable
-    associativity|<tuple|15|?>>
-    <associate|series absolute sum over a countable set|<tuple|6|?>>
-    <associate|series distributivity|<tuple|16|?>>
-    <associate|series lemma 14.342|<tuple|3|4>>
+    associativity|<tuple|15|14>>
+    <associate|series absolute sum over a countable set|<tuple|6|8>>
+    <associate|series distributivity|<tuple|16|17>>
+    <associate|series lemma 14.342|<tuple|3|3>>
   </collection>
 </references>
 
@@ -1862,6 +2002,8 @@
   <\collection>
     <\associate|idx>
       <tuple|<tuple|open mapping theorem>|<pageref|auto-1>>
+
+      <tuple|<tuple|sum over a countable set>|<pageref|auto-2>>
     </associate>
   </collection>
 </auxiliary>
