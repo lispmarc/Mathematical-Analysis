@@ -1913,7 +1913,411 @@
 
   \;
 
-  \;
+  <\theorem>
+    <label|continuity L(X,L(Y,Z)) is isometric with L(X,Y;Z)>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    and <math|<around*|\<langle\>|Z,<around*|\<\|\|\>||\<\|\|\>><rsub|Z>|\<rangle\>>>
+    be normed spaces over <math|\<bbb-K\>> then we can construct a linear
+    isometric isomorphism\ 
+
+    <\equation*>
+      \<varphi\>:L<around*|(|X,Y;Z|)>\<rightarrow\>L<around*|(|X,L<around*|(|Y,Z|)>|)>
+    </equation*>
+
+    between <math|L<around*|(|X,Y;Z|)>> and
+    <math|L<around*|(|X,L<around*|(|Y,Z|)>|)>>. Hence by [theorem:
+    <reference|normed isometry and inverse>], if we take
+    <math|\<psi\>=\<varphi\><rsup|-1>> then\ 
+
+    <\equation*>
+      \<psi\>:L<around*|(|X,L<around*|(|Y,Z|)>|)>\<rightarrow\>L<around*|(|X,Y;Z|)><text|
+      is a linear isometric isomorphism>
+    </equation*>
+
+    In other words <math|L<around*|(|X,L<around*|(|Y,Z|)>|)>> and
+    <math|L<around*|(|X,Y;Z|)>> are isometric [see definition:
+    <reference|normed linear isometry>] or
+
+    <\equation*>
+      L<around*|(|X,L<around*|(|Y,Z|)>|)>\<approx\>L<around*|(|X,Y;Z|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Let <math|L\<in\>L<around*|(|X,Y;Z|)>> and given <math|x\<in\>X> define\ 
+
+    <\equation>
+      <label|eq 14.75.149>L<rsub|x>:Y\<rightarrow\>Z<text| by
+      >L<rsub|x><around*|(|y|)>=L<around*|(|x,y|)>
+    </equation>
+
+    If <math|r,s\<in\>Y> and <math|\<alpha\>\<in\>\<bbb-K\>> then\ 
+
+    <\equation*>
+      L<rsub|x><around*|(|r+\<alpha\>\<cdot\>s|)>=L<around*|(|x,r+\<alpha\>\<cdot\>s|)>\<equallim\><rsub|<text|multilinearity>>L<around*|(|x,r|)>+\<alpha\>\<cdot\>L<around*|(|x,s|)>=L<rsub|x><around*|(|r|)>+\<alpha\>\<cdot\>L<rsub|x><around*|(|s|)>
+    </equation*>
+
+    proving that\ 
+
+    <\equation>
+      <label|eq 14.76.149>L<rsub|x>\<in\>Hom<around*|(|Y,Z|)>
+    </equation>
+
+    Further for <math|r\<in\>Y> we have\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|L<rsub|x><around*|(|r|)>|\<\|\|\>><rsub|Z>=<around*|\<\|\|\>|L<around*|(|x,r|)>|\<\|\|\>><rsub|Z>\<leqslant\><rsub|<text|[theorem:
+      <reference|continuity operator norm of multilinear mappings
+      (1)>]>><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y;Z|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>\<cdot\><around*|\<\|\|\>|r|\<\|\|\>><rsub|Y>
+    </equation*>
+
+    proving by [theorem: <reference|continuity linear mapping (1)>] and
+    [definition: <reference|continuity operator norm>] that
+
+    <\equation>
+      <label|eq 14.77.149>\<forall\>x\<in\>X<text|
+      >L<rsub|x>\<in\>L<around*|(|Y,Z|)><text| and
+      ><around*|\<\|\|\>|L<rsub|x>|\<\|\|\>><rsub|L<around*|(|Y,Z|)>>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y;Z|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>
+    </equation>
+
+    The above allows us, given <math|L\<in\>L<around*|(|X,Y;Z|)>>, define\ 
+
+    <\equation>
+      <label|eq 14.78.149>\<varphi\><rsub|L>:X\<rightarrow\>L<around*|(|Y,Z|)><text|
+      by >\<varphi\><rsub|L><around*|(|x|)>=L<rsub|x>
+    </equation>
+
+    Then if <math|x,y\<in\>X> and <math|\<alpha\>\<in\>\<bbb-K\>> we have for
+    <math|r\<in\>Y> that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|\<varphi\><rsub|L><around*|(|x+\<alpha\>\<cdot\>y|)>|)><around*|(|r|)>>|<cell|=>|<cell|L<rsub|x+\<alpha\>\<cdot\>y><around*|(|r|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 14.75.149>]>>>|<cell|L<around*|(|x+\<alpha\>\<cdot\>y,r|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|multilinearity>>>|<cell|L<around*|(|x,r|)>+\<alpha\>\<cdot\>L<around*|(|y,r|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 14.75.149>]>>>|<cell|L<rsub|x><around*|(|r|)>+\<alpha\>\<cdot\>L<rsub|y><around*|(|r|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<varphi\><rsub|L><around*|(|x|)>|)><around*|(|r|)>+\<alpha\>\<cdot\><around*|(|\<varphi\><rsub|L><around*|(|y|)>|)><around*|(|r|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<varphi\><rsub|L><around*|(|x|)>+\<alpha\>\<cdot\>\<varphi\><rsub|L><around*|(|y|)>|)><around*|(|r|)>>>>>
+    </eqnarray*>
+
+    proving that <math|\<varphi\><rsub|L><around*|(|x+\<alpha\>\<cdot\>y|)>=\<varphi\><rsub|L><around*|(|x|)>+\<alpha\>\<cdot\>\<varphi\><rsub|L><around*|(|y|)>>.
+    Hence
+
+    <\equation>
+      <label|eq 14.79.149>\<varphi\><rsub|L>\<in\>Hom<around*|(|X,L<around*|(|Y,Z|)>|)>
+    </equation>
+
+    For <math|x\<in\>X> we have\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|\<varphi\><rsub|L><around*|(|x|)>|\<\|\|\>><rsub|L<around*|(|Y,Z|)>>\<equallim\><rsub|<text|[eq:
+      <reference|eq 14.78.149>]>><around*|\<\|\|\>|L<rsub|x>|\<\|\|\>><rsub|L<around*|(|Y,Z|)>>\<leqslant\><rsub|<text|[eq:
+      <reference|eq 14.77.149>]>><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y;Z|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>
+    </equation*>
+
+    proving by [theorem: <reference|continuity linear mapping (1)>] and
+    [definition: <reference|continuity operator norm>] that
+
+    <\equation>
+      <label|eq 14.80.149>\<varphi\><rsub|L>\<in\>L<around*|(|X,L<around*|(|Y,Z|)>|)><text|
+      and ><around*|\<\|\|\>|\<varphi\><rsub|L>|\<\|\|\>><rsub|L<around*|(|X,L<around*|(|Y,Z|)>|)>>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y;Z|)>>
+    </equation>
+
+    The above let us define\ 
+
+    <\equation>
+      <label|eq 14.81.150>\<varphi\>:L<around*|(|X,Y;Z|)>\<rightarrow\>L<around*|(|X,L<around*|(|Y,Z|)>|)><text|
+      by >\<varphi\><around*|(|L|)>=\<varphi\><rsub|L>
+    </equation>
+
+    Let <math|L<rsub|1>,L<rsub|2>\<in\>L<around*|(|X,Y;Z|)>> and
+    <math|\<alpha\>\<in\>\<bbb-K\>> then for <math|x\<in\>X> we have
+    <math|\<forall\>r\<in\>Y> that
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)><rsub|x><around*|(|r|)>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 14.75.149>]>>>|<cell|<around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)><around*|(|x,r|)>>>|<row|<cell|>|<cell|=>|<cell|L<rsub|1><around*|(|x,r|)>+\<alpha\>\<cdot\>L<rsub|2><around*|(|x,r|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|L<rsub|1>|)><rsub|x><around*|(|r|)>+\<alpha\>\<cdot\><around*|(|L<rsub|2>|)><rsub|x><around*|(|r|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|L<rsub|1>|)><rsub|x>+\<alpha\>\<cdot\><around*|(|L<rsub|2>|)><rsub|x>|)><around*|(|r|)>>>>>
+    </eqnarray*>
+
+    proving that <math|<around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)><rsub|x>=<around*|(|L<rsub|1>|)><rsub|x>+\<alpha\>\<cdot\><around*|(|L<rsub|2>|)><rsub|x>>.
+    Hence\ 
+
+    <\equation*>
+      \<varphi\><rsub|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>><around*|(|x|)>=<around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)><rsub|x>=<around*|(|L<rsub|1>|)><rsub|x>+\<alpha\>\<cdot\><around*|(|L<rsub|2>|)><rsub|x>=\<varphi\><rsub|L<rsub|1>><around*|(|x|)>+\<alpha\>\<cdot\>\<varphi\><rsub|L<rsub|2>><around*|(|x|)>=<around*|(|\<varphi\><rsub|L<rsub|1>>+\<alpha\>\<cdot\>\<varphi\><rsub|L<rsub|2>>|)><around*|(|x|)>
+    </equation*>
+
+    proving that <math|\<varphi\><rsub|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>>=\<varphi\><rsub|L<rsub|1>>+\<alpha\>\<cdot\>\<varphi\><rsub|L<rsub|2>>>.
+    So\ 
+
+    <\equation*>
+      \<varphi\><around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)>=\<varphi\><rsub|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>>=\<varphi\><rsub|L<rsub|1>>+\<alpha\>\<cdot\>\<varphi\><rsub|L<rsub|2>>=\<varphi\><around*|(|L<rsub|1>|)>+\<alpha\>\<cdot\>\<varphi\><around*|(|L<rsub|2>|)>
+    </equation*>
+
+    proving that\ 
+
+    <\equation>
+      <label|eq 14.82.149>\<varphi\>\<in\>Hom<around*|(|L<around*|(|X,Y;Z|)>,L<around*|(|X,L<around*|(|Y,Z|)>|)>|)><text|>
+    </equation>
+
+    Further giving <math|L\<in\>L<around*|(|X,Y;Z|)>> we have\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|\<varphi\><around*|(|L|)>|\<\|\|\>><rsub|L<around*|(|X,L<around*|(|Y,Z|)>|)>>=<around*|\<\|\|\>|\<varphi\><rsub|L>|\<\|\|\>><rsub|L<around*|(|X,L<around*|(|Y,Z|)>|)>>\<leqslant\><rsub|<text|[eq:
+      <reference|eq 14.80.149>]>><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y;Z|)>>
+    </equation*>
+
+    giving by \ [theorem: <reference|continuity linear mapping (1)>]
+
+    <\equation>
+      <label|eq 14.83.150>\<varphi\>\<in\>L<around*|(|<around*|(|L<around*|(|X,Y;Z|)>,L<around*|(|X,L<around*|(|Y,Z|)>|)>|)>|)><text|
+      and ><around*|\<\|\|\>|\<varphi\><around*|(|L|)>|\<\|\|\>><rsub|L<around*|(|X,L<around*|(|Y,Z|)>|)>>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y;Z|)>>
+    </equation>
+
+    Next we will define the inverse mapping of <math|\<varphi\>>. Let
+    <math|L\<in\>L<around*|(|X,L<around*|(|Y,Z|)>|)>> and define\ 
+
+    <\equation>
+      <label|eq 14.84.149>\<psi\><rsub|L>:X\<cdot\>Y\<rightarrow\>Z<text| by
+      >\<psi\><rsub|L><around*|(|x,y|)>=<around*|(|L<around*|(|x|)>|)><around*|(|y|)>
+    </equation>
+
+    Let <math|x,y\<in\>X>, <math|r\<in\>Y> and
+    <math|\<alpha\>\<in\>\<bbb-K\>> then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<psi\><rsub|L><around*|(|x+\<alpha\>\<cdot\>y,r|)>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 14.84.149>]>>>|<cell|<around*|(|L<around*|(|x+\<alpha\>\<cdot\>y|)>|)><around*|(|r|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|L\<in\>L<around*|(|X,L<around*|(|Y,Z|)>|)>>>|<cell|<around*|(|L<around*|(|x|)>+\<alpha\>\<cdot\>L<around*|(|y|)>|)><around*|(|r|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|L<around*|(|x|)>|)><around*|(|r|)>+\<alpha\>\<cdot\><around*|(|L<around*|(|y|)>|)><around*|(|r|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 14.84.149>]>>>|<cell|\<psi\><rsub|L><around*|(|x,r|)>+\<alpha\>\<cdot\>\<psi\><rsub|L><around*|(|y,r|)>>>>>
+    </eqnarray*>
+
+    and for <math|x\<in\>X>, <math|r,s\<in\>Y> and
+    <math|\<alpha\>\<in\>\<bbb-K\>> we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<psi\><rsub|L><around*|(|x,r+\<alpha\>\<cdot\>s|)>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 14.84.149>]>>>|<cell|<around*|(|L<around*|(|x|)>|)><around*|(|r+\<alpha\>\<cdot\>s|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|L<around*|(|x|)>\<in\>L<around*|(|Y,Z|)>>>|<cell|<around*|(|L<around*|(|x|)>|)><around*|(|r|)>+\<alpha\>\<cdot\><around*|(|L<around*|(|x|)>|)><around*|(|s|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 14.84.149>]>>>|<cell|\<psi\><rsub|L><around*|(|x,r|)>+\<alpha\>\<cdot\>\<psi\><rsub|L><around*|(|x,s|)>>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation*>
+      \<psi\><rsub|L>\<in\>Hom<around*|(|X,Y;Z|)>
+    </equation*>
+
+    If <math|<around*|(|x,y|)>\<in\>X\<cdot\>Y> then\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|\<psi\><rsub|L><around*|(|x,y|)>|\<\|\|\>><rsub|Z>=<around*|\<\|\|\>|<around*|(|L<around*|(|x|)>|)><around*|(|y|)>|\<\|\|\>><rsub|Z>\<leqslant\><rsub|L<around*|(|x|)>\<in\>L<around*|(|Y,Z|)>><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|L<around*|(|Y,Z|)>>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>><rsub|Y>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,L<around*|(|Y,Z|)>|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>><rsub|Y><rsub|>
+    </equation*>
+
+    proving by [theorems: <reference|continuity multilinear mapping (1)>,
+    <reference|continuity operator norm of multilinear mappings (1)>] that\ 
+
+    <\equation>
+      <label|eq 14.85.150>\<psi\><rsub|L>\<in\>L<around*|(|X,Y;Z|)><text| and
+      ><around*|\<\|\|\>|\<psi\><rsub|L>|\<\|\|\>><rsub|L<around*|(|X,Y;Z|)>>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,L<around*|(|Y,Z|)>|)>>
+    </equation>
+
+    The above allows use to define\ 
+
+    <\equation>
+      <label|eq 14.86.150>\<psi\>:L<around*|(|X,L<around*|(|Y,Z|)>|)>\<rightarrow\>L<around*|(|X,Y;Z|)><text|
+      by >\<psi\><around*|(|L|)>=\<psi\><rsub|L>
+    </equation>
+
+    where by [eq: <reference|eq 14.85.150>]\ 
+
+    <\equation>
+      <label|eq 14.87.150>\<forall\>L\<in\>L<around*|(|X,L<around*|(|Y,Z|)>|)><text|
+      ><around*|\<\|\|\>|\<psi\><around*|(|L|)>|\<\|\|\>><rsub|L<around*|(|X,Y;Z|)>>=<around*|\<\|\|\>|\<psi\><rsub|L>|\<\|\|\>><rsub|L<around*|(|X,Y;Z|)>>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,L<around*|(|Y,Z|)>|)>>
+    </equation>
+
+    Let <math|L\<in\>L<around*|(|X,L<around*|(|Y,Z|)>|)>> and
+    <math|x\<in\>X>, <math|y\<in\>Y> then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|<around*|(|<around*|(|\<varphi\>\<circ\>\<psi\>|)><around*|(|L|)>|)><around*|(|x|)>|)><around*|(|y|)>>|<cell|=>|<cell|<around*|(|<around*|(|\<varphi\><around*|(|\<psi\><around*|(|L|)>|)>|)><around*|(|x|)>|)><around*|(|y|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 14.81.150>]>>>|<cell|<around*|(|<around*|(|\<varphi\><rsub|\<psi\><around*|(|L|)>>|)><around*|(|x|)>|)><around*|(|y|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 14.78.149>]>>>|<cell|<around*|(|\<psi\><around*|(|L|)>|)><rsub|x><around*|(|y|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 14.75.149>]>>>|<cell|\<psi\><around*|(|L|)><around*|(|x,y|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 14.86.150>]>>>|<cell|\<psi\><rsub|L><around*|(|x,y|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 14.84.149>]>>>|<cell|<around*|(|L<around*|(|x|)>|)><around*|(|y|)>>>>>
+    </eqnarray*>
+
+    so that <math|<around*|(|<around*|(|\<varphi\>\<circ\>\<psi\>|)><around*|(|L|)>|)><around*|(|x|)>=L<around*|(|x|)>>
+    from which it follows that <math|<around*|(|\<varphi\>\<circ\>\<psi\>|)><around*|(|L|)>=L>.
+    Hence we have that\ 
+
+    <\equation>
+      <label|eq 14.88.150>\<varphi\>\<circ\>\<psi\>=Id<rsub|L<around*|(|X,L<around*|(|Y,Z|)>|)>>
+    </equation>
+
+    On the other hand if <math|L\<in\>L<around*|(|X,Y;Z|)>> and
+    <math|<around*|(|x,y|)>\<in\>X\<cdot\>Y> then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|<around*|(|\<psi\>\<circ\>\<varphi\>|)><around*|(|L|)>|)><around*|(|x,y|)>>|<cell|=>|<cell|<around*|(|\<psi\><around*|(|\<varphi\><around*|(|L|)>|)>|)><around*|(|x,y|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 14.86.150>]>>>|<cell|\<psi\><rsub|\<varphi\><around*|(|L|)>><around*|(|x,y|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 14.84.149>]>>>|<cell|<around*|(|<around*|(|\<varphi\><around*|(|L|)>|)><around*|(|x|)>|)><around*|(|y|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 14.81.150>]>>>|<cell|<around*|(|<around*|(|\<varphi\><rsub|L>|)><around*|(|x|)>|)><around*|(|y|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 14.78.149>]>>>|<cell|L<rsub|x><around*|(|y|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 14.75.149>]>>>|<cell|L<around*|(|x,y|)>>>>>
+    </eqnarray*>
+
+    proving that <math|<around*|(|\<psi\>\<circ\>\<varphi\>|)><around*|(|L|)>=L>,
+    hence\ 
+
+    <\equation>
+      <label|eq 14.89.150>\<psi\>\<circ\>\<varphi\>=Id<rsub|L<around*|(|X,Y;Z|)>>
+    </equation>
+
+    From [eqs: <reference|eq 14.88.150>, <reference|eq 14.89.150>] it follows
+    by [theorem: <reference|function bijection condition (2)>] that
+    <math|\<varphi\>:L<around*|(|X,Y;Z|)>\<rightarrow\>L<around*|(|X,L<around*|(|Y,Z|)>|)>>
+    is a bijection. Combining this with ]eq: <reference|eq 14.82.149>] proves
+    that\ 
+
+    <\equation>
+      <label|eq 14.90.150>\<varphi\><text| is a linear isomorphism>
+    </equation>
+
+    Finally we have for <math|L\<in\>L<around*|(|X,Y;Z|)>> that
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y;Z|)>>>|<cell|\<equallim\>>|<cell|<around*|\<\|\|\>|Id<rsub|L<around*|(|X,Y;Z|)>><around*|(|L|)>|\<\|\|\>><rsub|L<around*|(|X,Y;Z|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 14.89.150>]>>>|<cell|<around*|\<\|\|\>|<around*|(|\<psi\>\<circ\>\<varphi\>|)><around*|(|L|)>|\<\|\|\>><rsub|L<around*|(|X,Y;Z|)>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|\<psi\><around*|(|\<varphi\><around*|(|L|)>|)>|\<\|\|\>><rsub|L<around*|(|X,Y;Z|)>>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[eq:
+      <reference|eq 14.87.150>]>>>|<cell|<around*|\<\|\|\>|\<varphi\><around*|(|L|)>|\<\|\|\>><rsub|L<around*|(|X,L<around*|(|Y,Z|)>|)>>>>>>
+    </eqnarray*>
+
+    which combined with [eq: <reference|eq 14.83.150>] proves that
+    <math|<around*|\<\|\|\>|\<varphi\><around*|(|L|)>|\<\|\|\>><rsub|L<around*|(|X,Y;Z|)>>=<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y;Z|)>>>.
+    This together with [eq: <reference|eq 14.90.150>] proves that\ 
+
+    <\equation*>
+      \<varphi\>:L<around*|(|X,Y;Z|)>\<rightarrow\>L<around*|(|X,L<around*|(|Y,Z|)>|)><text|
+      is a linear isometric isomorphism>
+    </equation*>
+  </proof>
+
+  <\lemma>
+    Let <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>> be the
+    normed space of real (complex) numbers with the canonical norm,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
+    normed space, a open set <math|U\<subseteq\>\<bbb-K\>>, <math|x\<in\>U>
+    and
+
+    <\equation*>
+      f:U\<rightarrow\>L<rsup|n><around*|(|\<bbb-K\>;X|)><text| a function>
+    </equation*>
+
+    then\ 
+
+    <\equation*>
+      f<text| is Frèchet differentiable at <math|x>>
+    </equation*>
+
+    <\equation*>
+      \<Updownarrow\>
+    </equation*>
+
+    <\equation*>
+      f<rsub|<around*|[|n|]>><text| is differentiable at >X<text| with
+      differential ><around*|(|D<rsup|>f<around*|(|x|)>|)><rsub|<around*|[|n|]>>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>If <math|h,k\<in\>\<bbb-K\>> and
+      <math|\<alpha\>\<in\>\<bbb-K\>> then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|D
+        f<around*|(|x|)>|)><rsub|<around*|[|n|]>><around*|(|h+\<alpha\>\<cdot\>k|)>>|<cell|=>|<cell|D
+        f<around*|(|x|)><around*|(|h+\<alpha\>\<cdot\>k|)><around*|(|<wide*|1,\<ldots\>,1|\<wide-underbrace\>><rsub|n>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|D
+        f<around*|(|x|)>\<in\>L<around*|(|\<bbb-K\>,L<rsup|n><around*|(|\<bbb-K\>;X|)>|)>>>|<cell|<around*|(|D
+        f<around*|(|x|)><around*|(|h|)>+\<alpha\>\<cdot\>D
+        f<around*|(|x|)><around*|(|k|)>|)><around*|(|<wide*|1,\<ldots\>,1|\<wide-underbrace\>><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|D
+        f<around*|(|x|)><around*|(|h|)><around*|(|<wide*|1,\<ldots\>,1|\<wide-underbrace\>><rsub|n>|)>+\<alpha\>\<cdot\>D
+        f<around*|(|x|)><around*|(|k|)><around*|(|<wide*|1,\<ldots\>,1|\<wide-underbrace\>><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|D
+        f<around*|(|x|)>|)><rsub|<around*|[|n|]>><around*|(|h|)>+\<alpha\>\<cdot\><around*|(|D
+        f<around*|(|x|)>|)><rsub|<around*|[|n|]>><around*|(|k|)>>>>>
+      </eqnarray*>
+
+      proving that\ 
+
+      <\equation>
+        <label|eq 16.45.185><around*|(|D f<around*|(|x|)>|)><rsub|<around*|[|h|]>>\<in\>Hom<around*|(|\<bbb-K\>,X|)>
+      </equation>
+
+      Further if <math|h\<in\>\<bbb-K\>> then
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|<around*|(|D
+        f<around*|(|x|)>|)><rsub|<around*|[|n|]>><around*|(|h|)>|\<\|\|\>>>|<cell|=>|<cell|<around*|\<\|\|\>|D
+        f<around*|(|x|)><around*|(|h|)><around*|(|<wide*|1,\<ldots\>,1|\<wide-underbrace\>><rsub|n>|)>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\><rsub|D
+        f<around*|(|x|)>\<in\>L<around*|(|\<bbb-K\>,L<rsup|n><around*|(|\<bbb-K\>;X|)>|)>\<Rightarrow\>D
+        f<around*|(|x|)><around*|(|h|)>\<in\>L<rsup|n><around*|(|\<bbb-K\>;X|)>>>|<cell|<around*|\<\|\|\>|D
+        f<around*|(|x|)><around*|(|h|)>|\<\|\|\>><rsub|L<rsup|n><around*|(|\<bbb-K\>;X|)>>\<cdot\><big|prod><rsub|i=1><rsup|n>1>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|D
+        f<around*|(|x|)><around*|(|h|)>|\<\|\|\>><rsub|L<rsup|n><around*|(|\<bbb-K\>;X|)>>>>|<row|<cell|>|<cell|\<leqslant\><rsub|D
+        f<around*|(|x|)>\<in\>L<around*|(|\<bbb-K\>,L<rsup|n><around*|(|\<bbb-K\>;X|)>|)>><rsub|>>|<cell|<around*|\<\|\|\>|D
+        f<around*|(|x|)>|\<\|\|\>><rsub|L<around*|(|\<bbb-K\>,L<rsup|n><around*|(|\<bbb-K\>;X|)>|)>>\<cdot\><around*|\||h|\|>>>>>
+      </eqnarray*>
+
+      proving by [theorem: <reference|continuity linear mapping (1)>] and
+      [eq: <reference|eq 16.45.185>] that <math|<around*|(|D
+      f<around*|(|x|)>|)><rsub|<around*|[|n|]>>> is continuous or\ 
+
+      <\equation>
+        <label|eq 16.46.185><around*|(|D f<around*|(|x|)>|)><rsub|<around*|[|n|]>>\<in\>L<around*|(|\<bbb-K\>,Y|)>
+      </equation>
+
+      Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. As <math|f> is
+      Frèchet differentiable at <math|x> there exist a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|\<forall\>h\<in\>U<rsub|x>> with
+      <math|<around*|\||h|\|>\<less\>\<delta\>> we have\ 
+
+      <\equation>
+        <label|eq 16.47.185><around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-D
+        f<around*|(|x|)><around*|(|h|)>|\<\|\|\>><rsub|L<rsup|n><around*|(|\<bbb-K\>;X|)>>\<leqslant\>\<varepsilon\>\<cdot\><around*|\||h|\|>
+      </equation>
+
+      Now\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|f<rsub|<around*|[|h|]>><around*|(|x+h|)>-f<rsub|<around*|[|h|]>><around*|(|x|)>-<around*|(|D
+        f<around*|(|x|)>|)><rsub|<around*|[|n|]>><around*|(|h|)>|\<\|\|\>><rsub|>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|f<around*|(|x+h|)><around*|(|<wide*|1,\<ldots\>,1|\<wide-underbrace\>><rsub|n>|)>-f<around*|(|x|)><around*|(|<wide*|1,\<ldots\>,1|\<wide-underbrace\>><rsub|n>|)>-D
+        f<around*|(|x|)><around*|(|h|)><around*|(|<wide*|1,\<ldots\>,1|\<wide-underbrace\>><rsub|n>|)>|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<around*|(|f<around*|(|x+h|)>-f<around*|(|x|)>-D
+        f<around*|(|x|)><around*|(|h|)>|)><around*|(|<wide*|1,\<ldots\>,1|\<wide-underbrace\>><rsub|n>|)>|\<\|\|\>>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-D
+        f<around*|(|x|)><around*|(|h|)>|\<\|\|\>><rsub|L<around*|(|\<bbb-K\>;X|)>>\<cdot\><big|prod><rsub|i=1><rsup|1>1>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-D
+        f<around*|(|x|)><around*|(|h|)>|\<\|\|\>><rsub|L<around*|(|\<bbb-K\>;X|)>>>|<cell|\<less\><rsub|<text|[eq:
+        <reference|eq 16.47.185>]>>>|<cell|>>|<row|<cell|\<varepsilon\>\<cdot\><around*|\||h|\|>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      This proves that\ 
+
+      <\equation*>
+        f<rsub|<around*|[|h|]>><text| is Frèchet differentiable at <math|x>
+        with <math|D<around*|(| f<around*|[|n|]>|)><around*|(|x|)>=<around*|(|D
+        f<around*|(|x|)>|)><rsub|<around*|[|n|]>>>>
+      </equation*>
+
+      <item*|<math|\<Leftarrow\>>>As <math|f<rsub|<around*|[|n|]>>> is
+      Frèchet differential at <math|x> there exist a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that\ 
+
+      <\equation>
+        \<forall\>h\<in\>U<rsub|x><text| with
+        ><around*|\||h|\|>\<less\>\<delta\><text| we have
+        ><around*|\<\|\|\>|f<rsub|<around*|[|n|]>><around*|(|x+h|)>-f<rsub|<around*|[|n|]>><around*|(|x|)>-D<around*|(|f<rsub|<around*|[|n|]>>|)><around*|(|x|)><around*|(|h|)>|\<\|\|\>><rsub|Y>\<less\>\<varepsilon\>\<cdot\><around*|\||h|\|>
+      </equation>
+
+      As\ 
+    </description>
+
+    \;
+  </proof>
 </body>
 
 <\initial>
@@ -1926,13 +2330,15 @@
   <\collection>
     <associate|auto-1|<tuple|open mapping theorem|5>>
     <associate|auto-2|<tuple|sum over a countable set|8>>
-    <associate|auto-3|<tuple|<with|mode|<quote|math>|<around*|(|i\<rightarrow\>x|)>>|?>>
-    <associate|auto-4|<tuple|<with|mode|<quote|math>|\<Delta\><rsub|i,j>>|?>>
+    <associate|auto-3|<tuple|<with|mode|<quote|math>|<around*|(|i\<rightarrow\>x|)>>|18>>
+    <associate|auto-4|<tuple|<with|mode|<quote|math>|\<Delta\><rsub|i,j>>|19>>
     <associate|complete open mapping theorem|<tuple|5|5>>
+    <associate|continuity L(X,L(Y,Z)) is isometric with
+    L(X,Y;Z)|<tuple|21|19>>
     <associate|countable union of a finite family of countable sets is
     countable|<tuple|4|4>>
-    <associate|diff (i-\<gtr\>x)|<tuple|17|?>>
-    <associate|diff delta function|<tuple|20|?>>
+    <associate|diff (i-\<gtr\>x)|<tuple|17|18>>
+    <associate|diff delta function|<tuple|20|19>>
     <associate|eq 12.10.131|<tuple|1|1>>
     <associate|eq 12.11.131|<tuple|2|1>>
     <associate|eq 12.12.131|<tuple|3|1>>
@@ -1975,10 +2381,29 @@
     <associate|eq 14.252.165|<tuple|20|7>>
     <associate|eq 14.253.165|<tuple|21|7>>
     <associate|eq 14.254.165|<tuple|22|7>>
+    <associate|eq 14.75.149|<tuple|43|19>>
+    <associate|eq 14.76.149|<tuple|44|20>>
+    <associate|eq 14.77.149|<tuple|45|20>>
+    <associate|eq 14.78.149|<tuple|46|20>>
+    <associate|eq 14.79.149|<tuple|47|20>>
+    <associate|eq 14.80.149|<tuple|48|20>>
+    <associate|eq 14.81.150|<tuple|49|20>>
+    <associate|eq 14.82.149|<tuple|50|21>>
+    <associate|eq 14.83.150|<tuple|51|21>>
+    <associate|eq 14.84.149|<tuple|52|21>>
+    <associate|eq 14.85.150|<tuple|53|21>>
+    <associate|eq 14.86.150|<tuple|54|21>>
+    <associate|eq 14.87.150|<tuple|55|21>>
+    <associate|eq 14.88.150|<tuple|56|22>>
+    <associate|eq 14.89.150|<tuple|57|22>>
+    <associate|eq 14.90.150|<tuple|58|22>>
+    <associate|eq 16.45.185|<tuple|59|?>>
+    <associate|eq 16.46.185|<tuple|60|?>>
+    <associate|eq 16.47.185|<tuple|61|?>>
     <associate|lemma 14.360.158|<tuple|10|10>>
     <associate|lemma 14.364.159|<tuple|14|13>>
-    <associate|lemma 16.24.178|<tuple|18|?>>
-    <associate|lemma 16.25.178|<tuple|19|?>>
+    <associate|lemma 16.24.178|<tuple|18|18>>
+    <associate|lemma 16.25.178|<tuple|19|18>>
     <associate|series absolute convergence alternative
     definition|<tuple|11|11>>
     <associate|series absolute convergence commutativity countable
@@ -2004,6 +2429,10 @@
       <tuple|<tuple|open mapping theorem>|<pageref|auto-1>>
 
       <tuple|<tuple|sum over a countable set>|<pageref|auto-2>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|<around*|(|i\<rightarrow\>x|)>>>|<pageref|auto-3>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<Delta\><rsub|i,j>>>|<pageref|auto-4>>
     </associate>
   </collection>
 </auxiliary>
