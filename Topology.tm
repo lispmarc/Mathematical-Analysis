@@ -10281,14 +10281,14 @@
     <with|font-series|bold|unique> linear isometric isomorphism
 
     <\equation*>
-      \<varphi\>:L<rsup|n+1><around*|(|X;Y|)>\<rightarrow\>L<around*|(|X,L<rsup|n><around*|(|X;Y|)>|)><rsup|>
+      \<varphi\><rsub|<around*|[|X,Y,n|]>>:L<rsup|n+1><around*|(|X;Y|)>\<rightarrow\>L<around*|(|X,L<rsup|n><around*|(|X;Y|)>|)><rsup|>
     </equation*>
 
-    and if we take <math|\<psi\>=\<varphi\><rsup|-1>> we have the linear
-    isometric isomorphism
+    and if we take <math|\<psi\><rsub|<around*|[|X,Y,n|]>>=\<varphi\><rsub|<around*|[|X,Y,n|]>><rsup|-1>>
+    we have the linear isometric isomorphism
 
     <\equation*>
-      \<psi\>:L<around*|(|X,L<rsup|n><around*|(|X;Y|)>|)>\<rightarrow\>L<rsup|n+1><around*|(|X;Y|)>
+      \<psi\><rsub|<around*|[|X,Y,n|]>>:L<around*|(|X,L<rsup|n><around*|(|X;Y|)>|)>\<rightarrow\>L<rsup|n+1><around*|(|X;Y|)>
     </equation*>
 
     such that for every <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n+1>|)>\<in\>X<rsup|n>>
@@ -10296,14 +10296,14 @@
 
     <\equation*>
       \<forall\>L\<in\>L<rsup|n+1><around*|(|X;Y|)><text|
-      >\<varphi\><around*|(|L|)><around*|(|x<rsub|1>|)><around*|(|x<rsub|2>,\<ldots\>,x<rsub|n+1>|)>=L<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n+1>|)>
+      >\<varphi\><rsub|<around*|[|X,Y,n|]>><around*|(|L|)><around*|(|x<rsub|1>|)><around*|(|x<rsub|2>,\<ldots\>,x<rsub|n+1>|)>=L<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n+1>|)>
     </equation*>
 
     and
 
     <\equation*>
       \<forall\>L\<in\>L<around*|(|X,L<rsup|n><around*|(|X;Y|)>|)><text|
-      >\<psi\><around*|(|L|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n+1>|)>=L<around*|(|x<rsub|1>|)><around*|(|x<rsub|2>,\<ldots\>,x<rsub|n+1>|)>
+      >\<psi\><rsub|<around*|[|X,Y,n|]>><around*|(|L|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n+1>|)>=L<around*|(|x<rsub|1>|)><around*|(|x<rsub|2>,\<ldots\>,x<rsub|n+1>|)>
     </equation*>
 
     Further if there exist a <math|\<varphi\><rprime|'>:><math|L<rsup|n+1><around*|(|X;Y|)>\<rightarrow\>L<around*|(|X,L<rsup|n><around*|(|X;Y|)>|)>>
@@ -10312,7 +10312,7 @@
     then\ 
 
     <\equation*>
-      \<varphi\>=\<varphi\><rprime|'>
+      \<varphi\><rsub|<around*|[|X,Y,n|]>>=\<varphi\><rprime|'>
     </equation*>
 
     and if there exist a <math|><math|\<psi\><rprime|'>:L<around*|(|X,L<rsup|n><around*|(|X;Y|)>|)>\<rightarrow\>L<rsup|n+1><around*|(|X;Y|)>>
@@ -10321,7 +10321,7 @@
     then\ 
 
     <\equation*>
-      \<psi\>=\<psi\><rprime|'>
+      \<psi\><rsub|<around*|[|X,Y,n|]>>=\<psi\><rprime|'>
     </equation*>
 
     In other words using [definition: <reference|continuity L^n(X;Y)>] it
@@ -10370,7 +10370,7 @@
       Which, as by [definition: <reference|continuity L^n(X;Y)>]
       <math|L<around*|(|X,Y|)>=L<rsup|1>*<around*|(|X,Y|)>> and
       <math|L<around*|(|X,X;Y|)>=L<rsup|2><around*|(|X,Y|)>>, proves the
-      theorem for the case <math|n=1>.
+      first part of the theorem for the case <math|n=1>.
 
       <item*|<math|1\<less\>n>>To prove the theorem for this case we use a
       slightly modified version of the proof of the previous theorem. Let
@@ -10687,6 +10687,8 @@
         \<forall\>L\<in\>L<around*|(|X,L<rsup|n><around*|(|X,Y|)>|)><text| we
         have >\<psi\><around*|(|L|)><around*|(|x<rsub|1>,x<rsub|2>,\<ldots\>,x<rsub|n+1>|)>=L<around*|(|x<rsub|1>|)><around*|(|x<rsub|2>,\<ldots\>,x<rsub|n+1>|)>
       </equation*>
+
+      proving the first part of the theorem for the case <math|1\<less\>n>.
     </description>
 
     As for uniqueness if <math|\<varphi\><rprime|'>:><math|L<rsup|n+1><around*|(|X;Y|)>\<rightarrow\>L<around*|(|X,L<rsup|n><around*|(|X,Y|)>|)>>
@@ -10732,6 +10734,10 @@
     <\equation*>
       \<psi\><rprime|'>=\<psi\>
     </equation*>
+
+    Taking <math|\<varphi\><rsub|<around*|[|X,Y,n|]>>=\<varphi\>> and
+    <math|\<psi\><rsub|<around*|[|X,Y,n|]>>=\<psi\>> completes then the proof
+    if the theorem.
   </proof>
 
   <section|Separation>
