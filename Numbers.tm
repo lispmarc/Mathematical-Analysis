@@ -10250,8 +10250,6 @@
     </proof>
   </corollary>
 
-  TODO check the next theorem and corollary
-
   We have simular theorems for the minimum and maximum.
 
   <\theorem>
