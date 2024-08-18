@@ -9867,17 +9867,18 @@
     be normed spaces over <math|\<bbb-K\>> then if we define\ 
 
     <\equation*>
-      \<circ\>:L<around*|(|Y,Z|)>\<times\>L<around*|(|X,Y|)>\<rightarrow\>L<around*|(|X,Z|)><text|
-      defined by >\<circ\><around*|(|L<rsub|2>,L<rsub|1>|)>=L<rsub|2>\<circ\>L<rsub|1>
+      <around*|(|\<circ\>|)>:L<around*|(|Y,Z|)>\<times\>L<around*|(|X,Y|)>\<rightarrow\>L<around*|(|X,Z|)><text|
+      defined by ><around*|(|\<circ\>|)><around*|(|L<rsub|2>,L<rsub|1>|)>=L<rsub|2>\<circ\>L<rsub|1>
     </equation*>
 
     then we have that\ 
 
     <\enumerate>
-      <item><math|\<circ\>\<in\>L<around*|(|L<around*|(|Y,Z|)>,L<around*|(|X,Y|)>;L<around*|(|X,Z|)>|)>>
-      [in other words <math|\<circ\>> is multilinear and continuous]
+      <item><math|<around*|(|\<circ\>|)>\<in\>L<around*|(|L<around*|(|Y,Z|)>,L<around*|(|X,Y|)>;L<around*|(|X,Z|)>|)>>
+      [in other words <math|<around*|(|\<circ\>|)>> is multilinear and
+      continuous]
 
-      <item><math|<around*|\<\|\|\>|\<circ\>|\<\|\|\>><rsub|L<around*|(|L<around*|(|Y,Z|)>,L<around*|(|X,Y|)>;L<around*|(|X,Z|)>|)>>\<leqslant\>1>
+      <item><math|<around*|\<\|\|\>|<around*|(|\<circ\>|)>|\<\|\|\>><rsub|L<around*|(|L<around*|(|Y,Z|)>,L<around*|(|X,Y|)>;L<around*|(|X,Z|)>|)>>\<leqslant\>1>
     </enumerate>
   </theorem>
 
@@ -9887,7 +9888,7 @@
     <math|L\<in\>L<around*|(|X,Y|)>> that <math|\<forall\>x\<in\>X> we have\ 
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|\<circ\><around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>,L|)><around*|(|x|)>>|<cell|=>|<cell|<around*|(|<around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)>\<circ\>L|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)><around*|(|L<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L<rsub|1><around*|(|L<around*|(|x|)>|)>+\<alpha\>\<cdot\>L<rsub|2><around*|(|L<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|L<rsub|1>\<circ\>L|)><around*|(|x|)>+\<alpha\>\<cdot\><around*|(|L<rsub|2>\<circ\>L|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|L<rsub|1>\<circ\>L|)>+\<alpha\>\<cdot\><around*|(|L<rsub|2>\<circ\>L|)>|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<circ\><around*|(|L<rsub|1>,L|)>+\<alpha\>\<cdot\>\<circ\><around*|(|L<rsub|2>,L|)>|)><around*|(|x|)>>>>>
+      <tformat|<table|<row|<cell|<around*|(|\<circ\>|)><around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>,L|)><around*|(|x|)>>|<cell|=>|<cell|<around*|(|<around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)>\<circ\>L|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)><around*|(|L<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L<rsub|1><around*|(|L<around*|(|x|)>|)>+\<alpha\>\<cdot\>L<rsub|2><around*|(|L<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|L<rsub|1>\<circ\>L|)><around*|(|x|)>+\<alpha\>\<cdot\><around*|(|L<rsub|2>\<circ\>L|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|L<rsub|1>\<circ\>L|)>+\<alpha\>\<cdot\><around*|(|L<rsub|2>\<circ\>L|)>|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<circ\><around*|(|L<rsub|1>,L|)>+\<alpha\>\<cdot\>\<circ\><around*|(|L<rsub|2>,L|)>|)><around*|(|x|)>>>>>
     </eqnarray*>
 
     proving that\ 
@@ -9901,26 +9902,26 @@
     <math|\<forall\>x\<in\>X> we have\ 
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|\<circ\><around*|(|L,L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)><around*|(|x|)>>|<cell|=>|<cell|<around*|(|L\<circ\><around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)>|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|<around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|L<rsub|1><around*|(|x|)>+\<alpha\>\<cdot\>L<rsub|2><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|L<rsub|1><around*|(|x|)>|)>+\<alpha\>\<cdot\>L<around*|(|L<rsub|2><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|L\<circ\>L<rsub|1>|)><around*|(|x|)>+\<alpha\>\<cdot\><around*|(|L\<circ\>L<rsub|2>|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|L\<circ\>L<rsub|1>|)>+\<alpha\>\<cdot\><around*|(|L\<circ\>L<rsub|2>|)>|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<circ\><around*|(|L,L<rsub|1>|)>+\<alpha\>\<cdot\>\<circ\><around*|(|L,L<rsub|2>|)>|)><around*|(|x|)>>>>>
+      <tformat|<table|<row|<cell|\<circ\><around*|(|L,L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)><around*|(|x|)>>|<cell|=>|<cell|<around*|(|L\<circ\><around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)>|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|<around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|L<rsub|1><around*|(|x|)>+\<alpha\>\<cdot\>L<rsub|2><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|L<rsub|1><around*|(|x|)>|)>+\<alpha\>\<cdot\>L<around*|(|L<rsub|2><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|L\<circ\>L<rsub|1>|)><around*|(|x|)>+\<alpha\>\<cdot\><around*|(|L\<circ\>L<rsub|2>|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|L\<circ\>L<rsub|1>|)>+\<alpha\>\<cdot\><around*|(|L\<circ\>L<rsub|2>|)>|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|\<circ\>|)><around*|(|L,L<rsub|1>|)>+\<alpha\>\<cdot\><around*|(|\<circ\>|)><around*|(|L,L<rsub|2>|)>|)><around*|(|x|)>>>>>
     </eqnarray*>
 
     proving that\ 
 
     <\equation*>
-      \<circ\><around*|(|L,L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)>=\<circ\><around*|(|L,L<rsub|1>|)>+\<alpha\>\<cdot\>\<circ\><around*|(|L,L<rsub|2>|)>
+      <around*|(|\<circ\>|)><around*|(|L,L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)>=<around*|(|\<circ\>|)><around*|(|L,L<rsub|1>|)>+\<alpha\>\<cdot\><around*|(|\<circ\>|)><around*|(|L,L<rsub|2>|)>
     </equation*>
 
     Hence <math|\<circ\>> is multilinear or\ 
 
     <\equation*>
-      \<circ\>\<in\>Hom<around*|(|L<around*|(|Y,Z|)>,L<around*|(|X,Y|)>;L<around*|(|X,Z|)>|)>
+      <around*|(|\<circ\>|)>\<in\>Hom<around*|(|L<around*|(|Y,Z|)>,L<around*|(|X,Y|)>;L<around*|(|X,Z|)>|)>
     </equation*>
 
     For continuity note that for <math|L<rsub|1>\<in\>L<around*|(|Y,Z|)>>,
     <math|L<rsub|2>\<in\>L<around*|(|X,Y|)>> and \ <math|x\<in\>X> we have\ 
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<circ\><around*|(|L<rsub|1>,L<rsub|2>|)><around*|(|x|)>|\<\|\|\>><rsub|Z>>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|(|L<rsub|1>\<circ\>L<rsub|2>|)><around*|(|x|)>|\<\|\|\>><rsub|Z>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|L<rsub|1><around*|(|L<rsub|2><around*|(|x|)>|)>|\<\|\|\>><rsub|Z>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[theorem:
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|<around*|(|\<circ\>|)><around*|(|L<rsub|1>,L<rsub|2>|)><around*|(|x|)>|\<\|\|\>><rsub|Z>>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|(|L<rsub|1>\<circ\>L<rsub|2>|)><around*|(|x|)>|\<\|\|\>><rsub|Z>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|L<rsub|1><around*|(|L<rsub|2><around*|(|x|)>|)>|\<\|\|\>><rsub|Z>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[theorem:
       <reference|continuity operator norm
       (1)>]>>>|<cell|<around*|\<\|\|\>|L<rsub|1>|\<\|\|\>><rsub|L<around*|(|Y,Z|)>>\<cdot\><around*|\<\|\|\>|L<rsub|2><around*|(|x|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[theorem:
       <reference|continuity operator norm
@@ -9931,21 +9932,21 @@
     multilinear mappings (1)> that\ 
 
     <\equation*>
-      <around*|\<\|\|\>|\<circ\><around*|(|L<rsub|1>,L<rsub|2>|)>|\<\|\|\>><rsub|L<around*|(|X,Z|)>>\<leqslant\><around*|\<\|\|\>|L<rsub|1>|\<\|\|\>><rsub|L<around*|(|Y,Z|)>>\<cdot\><around*|\<\|\|\>|L<rsub|2>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>=1\<cdot\><around*|\<\|\|\>|L<rsub|1>|\<\|\|\>><rsub|L<around*|(|Y,Z|)>>\<cdot\><around*|\<\|\|\>|L<rsub|2>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>
+      <around*|\<\|\|\>|<around*|(|\<circ\>|)><around*|(|L<rsub|1>,L<rsub|2>|)>|\<\|\|\>><rsub|L<around*|(|X,Z|)>>\<leqslant\><around*|\<\|\|\>|L<rsub|1>|\<\|\|\>><rsub|L<around*|(|Y,Z|)>>\<cdot\><around*|\<\|\|\>|L<rsub|2>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>=1\<cdot\><around*|\<\|\|\>|L<rsub|1>|\<\|\|\>><rsub|L<around*|(|Y,Z|)>>\<cdot\><around*|\<\|\|\>|L<rsub|2>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>
     </equation*>
 
     so that by [theorem: <reference|continuity multilinear mapping (1)>]
-    \ <math|\<circ\>> is continuous. Hence\ 
+    \ <math|<around*|(|\<circ\>|)>> is continuous. Hence\ 
 
     <\equation*>
-      \<circ\>\<in\>L<around*|(|L<around*|(|Y,Z|)>,L<around*|(|X,Y|)>;L<around*|(|X,Z|)>|)>
+      <around*|(|\<circ\>|)>\<in\>L<around*|(|L<around*|(|Y,Z|)>,L<around*|(|X,Y|)>;L<around*|(|X,Z|)>|)>
     </equation*>
 
     and by [theorem <reference|continuity operator norm of multilinear
     mappings (1)>] that
 
     <\equation*>
-      <around*|\<\|\|\>|\<circ\>|\<\|\|\>><rsub|L<around*|(|L<around*|(|Y,Z|)>,L<around*|(|X,Y|)>;L<around*|(|X,Z|)>|)>>\<leqslant\>1.
+      <around*|\<\|\|\>|<around*|(|\<circ\>|)>|\<\|\|\>><rsub|L<around*|(|L<around*|(|Y,Z|)>,L<around*|(|X,Y|)>;L<around*|(|X,Z|)>|)>>\<leqslant\>1.
     </equation*>
   </proof>
 
