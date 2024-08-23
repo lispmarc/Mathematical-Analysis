@@ -6525,7 +6525,7 @@
       continuous.
 
       <item>If <math|f:X\<rightarrow\>Y> and <math|g:Y\<rightarrow\>Z> are
-      open functions then <math|g\<circ\>X\<rightarrow\>Z> is open
+      open functions then <math|g\<circ\>f:X\<rightarrow\>Z> is open
     </enumerate>
   </theorem>
 
@@ -21785,10 +21785,10 @@
       >
     </equation*>
 
-    then
+    then there exist <math|c,d\<in\>\<bbb-R\>> such that
 
     <\equation*>
-      f<around*|(|<around*|[|a,b|]>|)>=<around*|[|c,d|]>
+      f<around*|(|<around*|[|a,b|]>|)>=<around*|[|c,d|]><text|>
     </equation*>
 
     So there exists <math|x,y\<in\><around*|[|a,b|]>> such that
@@ -22158,6 +22158,7 @@
     <associate|continuity isometry is a homeomorphism|<tuple|14.167|?>>
     <associate|continuity linear mapping (1)|<tuple|14.174|?>>
     <associate|continuity linear mapping between R^n|<tuple|14.175|?>>
+    <associate|continuity linear mapping example|<tuple|14.175|?>>
     <associate|continuity multilinear mapping (1)|<tuple|14.189|?>>
     <associate|continuity multilinear mapping (2) norm|<tuple|14.193|?>>
     <associate|continuity multilinear mappings vector space|<tuple|14.192|?>>
