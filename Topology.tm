@@ -8743,7 +8743,7 @@
   </proof>
 
   <\example>
-    <label|continuity norm L(x)=a.x>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>|X|\<\|\|\>>|\<rangle\>>>
+    <label|continuity norm L(x)=a.x>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
     be a normed space, <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>>
     be normed space of real or complex numbers and <math|x\<in\>X> then if we
     define
@@ -22158,7 +22158,6 @@
     <associate|continuity isometry is a homeomorphism|<tuple|14.167|?>>
     <associate|continuity linear mapping (1)|<tuple|14.174|?>>
     <associate|continuity linear mapping between R^n|<tuple|14.175|?>>
-    <associate|continuity linear mapping example|<tuple|14.175|?>>
     <associate|continuity multilinear mapping (1)|<tuple|14.189|?>>
     <associate|continuity multilinear mapping (2) norm|<tuple|14.193|?>>
     <associate|continuity multilinear mappings vector space|<tuple|14.192|?>>

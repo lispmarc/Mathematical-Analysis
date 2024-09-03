@@ -2364,6 +2364,23 @@
     <\equation*>
       <big|int><rsub|a><rsup|b>f=<big|int><rsub|a><rsup|c>f<rsub|\|<around*|[|a,c|]>>+<big|int><rsub|c><rsup|b>f<rsub|\|<around*|[|c,b|]>>
     </equation*>
+
+    <\note>
+      To simplify notation we use the convention that if
+      <math|f\<in\>\<cal-C\><around*|(|<around*|[|a,b|]>,X|)>> and
+      <math|x\<in\><around*|[|a,b|]>> that <math|<big|int><rsub|a><rsup|x>f>
+      is the same as <math|<big|int><rsub|a><rsup|x>f<rsub|\|<around*|[|a,x|]>>>
+      and <math|<big|int><rsub|x><rsup|b>f> is the same as
+      <math|<big|int><rsub|x><rsup|b>f<rsub|\|<around*|[|x,b|]>>>. So that we
+      can write\ 
+
+      <\equation*>
+        <big|int><rsub|a><rsup|b>f=<big|int><rsub|a><rsup|c>f+<big|int><rsub|c><rsup|b>f
+      </equation*>
+
+      where the theorem ensures that <math|<big|int><rsub|a><rsup|c>f>,
+      <math|<big|int><rsub|c><rsup|b>f> exist and are well defined.
+    </note>
   </theorem>
 
   <\proof>
@@ -2481,7 +2498,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|14>
-    <associate|page-first|821>
+    <associate|page-first|827>
     <associate|section-nr|12>
     <associate|subsection-nr|0>
   </collection>
