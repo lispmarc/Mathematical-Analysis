@@ -11434,7 +11434,7 @@
     </description>
   </proof>
 
-  In metric [or normed spaces] every compact set must be bounded.
+  In pseudo metric [or normed spaces] every compact set must be bounded.
 
   <\theorem>
     <label|compact and bounded>Let <math|<around*|\<langle\>|X,d|\<rangle\>>>
