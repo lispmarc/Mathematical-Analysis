@@ -11853,7 +11853,7 @@
     space, <math|\<varnothing\>\<neq\>C\<subseteq\>X> a non empty compact
     subset of <math|X> and <math|f:X\<rightarrow\>\<bbb-R\>> a continuous
     function [using the topology <math|\<cal-T\><rsub|<around*|\|||\|>>> on
-    <math|\<bbb-R\>>] then there exists <math|m,M\<in\>X> such that\ 
+    <math|\<bbb-R\>>] then there exists <math|m,M\<in\>C> such that\ 
 
     <\equation*>
       \<forall\>x\<in\>C<text| we have >f<around*|(|m|)>\<leqslant\>f<around*|(|x|)>\<leqslant\>f<around*|(|M|)>
