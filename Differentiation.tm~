@@ -13272,12 +13272,11 @@
     </equation*>
   </proof>
 
-  The following theorem shows that if a differential, as a member of
-  <math|L<rsub|n><around*|(|X;Y|)>>, needs only to be symmetric for a
-  transposition [see definition: <reference|permutation transposition 1>].
-
   <\lemma>
-    <label|lemma 16.157.205>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>
+    <label|lemma 16.157.205>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>, Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces and <math|L\<in\>L<rsub|n><around*|(|X;Y|)>>\ 
   </lemma>
 
   \;
