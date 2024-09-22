@@ -11836,6 +11836,8 @@
     completing the proof.
   </proof>
 
+  TODO check this lemma, the next theorem and corollary 11.225
+
   <\lemma>
     <label|lemma 11.216.205>Let <math|n\<in\>\<bbb-N\>>,
     <math|i,j\<in\><around*|{|1,\<ldots\>,n|}>>, <math|m\<in\>\<bbb-N\>> and
@@ -11965,7 +11967,8 @@
   </proof>
 
   <\theorem>
-    Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <label|permutation transposition expansion>Let
+    <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
     <math|i,j\<in\><around*|{|1,\<ldots\>,n|}>> with <math|i\<neq\>j> then
     there exxists a <math|m\<in\>\<bbb-N\>> and
     <math|<around*|{|k<rsub|r>|}><rsub|r\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\><around*|{|1,\<ldots\>,n-1|}>>
@@ -12080,11 +12083,33 @@
 
         so that <math|n+1\<in\>S> in this case.
 
-        <item*|<math|i\<less\>j\<wedge\>j\<in\><around*|{|1,\<ldots\>,n|}>>>TODO
-      </description>
-    </description>
+        <item*|<math|i\<less\>j\<wedge\>j\<in\><around*|{|1,\<ldots\>,n|}>>>Then
+        as <math|i,j\<in\><around*|{|1,\<ldots\>,n|}>> we have by [theorem:
+        <reference|permutation transosition proeprties>] that
+        <math|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)>=<around*|(|i\<leftrightarrowlim\><rsub|n+1>j|)><rsub|\|<around*|{|1,\<ldots\>,n|}>>>.
+        As <math|n\<in\>S> it follows that there exist a
+        <math|<around*|{|k<rsub|r>|}><rsub|r\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\><around*|{|1,\<ldots\>,n-1|}>>
+        such that\ 
 
-    \;
+        <\equation*>
+          <around*|(|i\<leftrightarrowlim\><rsub|n>j|)>=<around*|(|k<rsub|1>\<leftrightarrowlim\><rsub|n>k<rsub|1>+1|)>\<circ\>\<ldots\>\<circ\><around*|(|k<rsub|m>\<leftrightarrowlim\><rsub|n>k<rsub|m>+1|)>
+        </equation*>
+
+        Given that <math|i,j\<in\><around*|{|1,\<ldots\>,n|}>> and
+        <math|\<forall\>r\<in\><around*|{|1,\<ldots\>,m|}>> we have
+        <math|k<rsub|r>,k<rsub|r>+1\<in\><around*|{|1,\<ldots\>,n|}>> it
+        follows from [lemma: <reference|lemma 11.216.205>] that\ 
+
+        <\equation*>
+          <around*|(|i\<leftrightarrowlim\><rsub|n+1>j|)>=<around*|(|k<rsub|1>\<leftrightarrowlim\><rsub|n+1>k<rsub|1>+1|)>\<circ\>\<ldots\>\<circ\><around*|(|k<rsub|m>\<leftrightarrowlim\><rsub|n+1>k<rsub|m>+1|)>
+        </equation*>
+
+        which proves that <math|n+1\<in\>S> in this case.
+      </description>
+
+      So in all possible cases we have <math|n+1\<in\>S> which completes the
+      induction argument.
+    </description>
   </proof>
 
   Permutations are typically used to permute the arguments of functions with
@@ -12342,10 +12367,10 @@
   We can extend the above theorem to general permutation's.
 
   <\corollary>
-    <label|permutation transpistion symmetry permutation>Let <math|X,Y> be
-    sets, <math|n\<in\>\<bbb-N\>> and <math|f:X<rsup|n>\<rightarrow\>Y> a
-    function such that <math|\<forall\>i,j\<in\><around*|{|1,\<ldots\>,n|}>>
-    with <math|i\<neq\>j> we have <math|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)>f=f>
+    <label|permutation transposition symmetry (1)>Let <math|X,Y> be sets,
+    <math|n\<in\>\<bbb-N\>> and <math|f:X<rsup|n>\<rightarrow\>Y> a function
+    such that <math|\<forall\>i,j\<in\><around*|{|1,\<ldots\>,n|}>> with
+    <math|i\<neq\>j> we have <math|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)>f=f>
     then <math|\<forall\>\<sigma\>\<in\>P<rsub|n>> we have
     <math|\<sigma\>f=f>.
   </corollary>
@@ -12368,9 +12393,40 @@
     proving the corollary.
   </proof>
 
-  <\theorem>
-    \;
-  </theorem>
+  The above shows that in order to prove that a multi parameter function is
+  stable under a permutation we only have to show that it is stable under
+  arbitrary transpositions. Actually we can weaken this condition. A multi
+  parameter function is stable under a permutation if it is stable under
+  transpositions of the form <math|<around*|(|i\<leftrightarrowlim\><rsub|n>i+1|)>>.
+
+  <\corollary>
+    <label|permutation transposition symmetry (2)>Let <math|X,Y> be sets,
+    <math|n\<in\>\<bbb-N\>> and <math|f:X<rsup|n>\<rightarrow\>Y> a function
+    such that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n-1|}>> we have
+    <math|<around*|(|i\<leftrightarrowlim\><rsub|n>i+1|)>f=f> then
+    <math|\<forall\>\<sigma\>\<in\>P<rsub|n>> we have <math|\<sigma\>f=f>.
+  </corollary>
+
+  <\proof>
+    If <math|n=1> then <math|\<sigma\>=Id<rsub|<around*|{|1|}>>> so that
+    <math|\<sigma\>f=Id<rsub|<around*|{|1|}>>f\<equallim\><rsub|<text|[theorem:
+    <reference|permutation apply identity>]>>f>. To complete the proof we
+    have to look at the case where <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>.
+    Let <math|i,j\<in\><around*|{|1,\<ldots\>,n|}>> with <math|i\<neq\>j>
+    then by [theorem: <reference|permutation transposition expansion>] there
+    exist a <math|<around*|{|k<rsub|r>|}><rsub|r\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\><around*|{|1,\<ldots\>,n-1|}>>
+    such that <math|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)>=<around*|(|k<rsub|1>\<leftrightarrowlim\><rsub|n>k<rsub|1>+1|)>\<circ\>\<ldots\>\<circ\><around*|(|k<rsub|m>\<leftrightarrowlim\><rsub|n>k<rsub|m>+1|)>>.
+    By the hypothese we have <math|\<forall\>r\<in\><around*|{|1,\<ldots\>,n-1|}>>
+    <math|<around*|(|k<rsub|r>\<leftrightarrowlim\><rsub|n>k<rsub|r>+1|)>f=f>,
+    hence using [theorem: <reference|permutation transposition symmetry>] it
+    follows that <math|<around*|(|<around*|(|k<rsub|1>\<leftrightarrowlim\><rsub|n>k<rsub|1>+1|)>\<circ\>\<ldots\>\<circ\><around*|(|k<rsub|m>\<leftrightarrowlim\><rsub|n>k<rsub|m>+1|)>|)>f=f>.
+    So as <math|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)>=<around*|(|k<rsub|1>\<leftrightarrowlim\><rsub|n>k<rsub|1>+1|)>\<circ\>\<ldots\>\<circ\><around*|(|k<rsub|m>\<leftrightarrowlim\><rsub|n>k<rsub|m>+1|)>>
+    it follows that <math|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)>f=f>.
+    As <math|i,j\<in\><around*|{|1,\<ldots\>,n|}>> was chosen arbitrary we
+    can use the previous corollary [corollary: <reference|permutation
+    transposition symmetry (1)>] to prove <math|\<sigma\>f=f> for every
+    <math|\<sigma\>\<in\>P<rsub|n>>.
+  </proof>
 
   \;
 
@@ -24330,7 +24386,6 @@
     <associate|eq 11.104.097|<tuple|11.137|?>>
     <associate|eq 11.105.097|<tuple|11.138|?>>
     <associate|eq 11.106.097|<tuple|11.139|?>>
-    <associate|eq 11.108.205|<tuple|<with|mode|<quote|math>|i\<less\>n\<wedge\>j=n+1>|?>>
     <associate|eq 11.108.206|<tuple|11.108|?>>
     <associate|eq 11.109.206|<tuple|11.109|?>>
     <associate|eq 11.11.054|<tuple|11.14|?>>
@@ -24842,15 +24897,18 @@
     transpositions|<tuple|11.230|?>>
     <associate|permutation sign properties|<tuple|11.234|?>>
     <associate|permutation sum|<tuple|11.209|?>>
-    <associate|permutation transosition (i\<less\>-\<gtr\>j) and
-    (i\<less\>-\<gtr\>i+1)|<tuple|11.216|?>>
+    <associate|permutation transosition expansion|<tuple|11.217|?>>
     <associate|permutation transosition proeprties|<tuple|11.212|?>>
     <associate|permutation transpistion symmetry
     permutation|<tuple|11.224|?>>
     <associate|permutation transposition|<tuple|11.28|?>>
     <associate|permutation transposition 1|<tuple|11.211|?>>
+    <associate|permutation transposition expansion|<tuple|11.217|?>>
     <associate|permutation transposition properties|<tuple|11.29|?>>
     <associate|permutation transposition symmetry|<tuple|11.223|?>>
+    <associate|permutation transposition symmetry (1)|<tuple|11.224|?>>
+    <associate|permutation transposition symmetry (2)|<tuple|11.225|?>>
+    <associate|permutation transposition ymmetry (2)|<tuple|11.225|?>>
     <associate|permutation {0,..,n and transposition|<tuple|11.30|?>>
     <associate|product finite product|<tuple|11.2|?>>
     <associate|product of family of elements with a zero in|<tuple|11.50|?>>
