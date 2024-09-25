@@ -13904,10 +13904,10 @@
     </enumerate>
 
     \ The set of graphs of multilinear mappings is noted as
-    <math|Hom<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>, more specific:
+    <math|Hom<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>, more specific:
 
     <\equation*>
-      Hom<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>=<around*|{|L\<in\>Y<rsup|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>\|L:<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>\<rightarrow\>Y<text|
+      Hom<around*|(|X\<ldots\>X<rsub|n>;Y|)>=<around*|{|L\<in\>Y<rsup|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>\|L:<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>\<rightarrow\>Y<text|
       is multilinear>|}>
     </equation*>
   </definition>
@@ -13917,7 +13917,7 @@
     <math|n\<in\>\<bbb-N\>>, <math|<around*|{|X<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
     be \ family of vector spaces over a field <math|F>, <math|Y> a vector
     space over the same field <math|F> and
-    <math|L\<in\>Hom<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>> then if
+    <math|L\<in\>Hom<around*|(|X\<ldots\>X<rsub|n>;Y|)>> then if
     <math|x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
     such that <math|\<exists\>i\<in\><around*|{|1,\<ldots\>,n|}>> with
     <math|x<rsub|i>=0> we have that <math|L<around*|(|x|)>=0>.
@@ -14014,7 +14014,7 @@
     we have
 
     <\equation*>
-      <big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>L<rsub|i>\<in\>Hom<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;F|)>
+      <big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>L<rsub|i>\<in\>Hom<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;F|)>
     </equation*>
   </theorem>
 
@@ -14066,7 +14066,7 @@
     <math|Hom<rsup|n><around*|(|X;Y|)>> so\ 
 
     <\equation*>
-      Hom<rsup|n><around*|(|X;Y|)>=Hom<around*|(|<wide*|X,\<ldots\>,X|\<wide-underbrace\>><rsub|n>;Y|)>
+      Hom<rsup|n><around*|(|X;Y|)>=Hom<around*|(|<wide*|X\<ldots\>X|\<wide-underbrace\>><rsub|n>;Y|)>
     </equation*>
   </definition>
 
@@ -14098,8 +14098,8 @@
     <math|<around*|{|X<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>>
     be a family of vector spaces over a field <math|F>, <math|Y> a vector
     space over the same field <math|F>, <math|a\<in\>X<rsub|n+1>> and
-    <math|L\<in\>Hom<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n+1>;Y|)>> then if
-    we define\ 
+    <math|L\<in\>Hom<around*|(|X<rsub|1>\<ldots\>X<rsub|n+1>;Y|)>> then if we
+    define\ 
 
     <\equation*>
       L<rsub|<around*|{|\<ldots\>a|}>>:<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>\<rightarrow\>Y<text|
@@ -14109,7 +14109,7 @@
     then
 
     <\equation*>
-      L<rsub|<around*|{|\<ldots\>a|}>>\<in\>Hom<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>
+      L<rsub|<around*|{|\<ldots\>a|}>>\<in\>Hom<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>
     </equation*>
   </theorem>
 
@@ -14148,7 +14148,7 @@
     <label|multi multilinear mapping and linear mapping>Let
     <math|n\<in\>\<bbb-N\>>, <math|i\<in\><around*|{|1,\<ldots\>,n|}>>,<math|<around*|{|X<rsub|j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>>
     a family of vector spaces over a field <math|F> and <math|Y> a vector
-    space over the same field <math|L\<in\>Hom<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>
+    space over the same field <math|L\<in\>Hom<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
     and <math|x\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>X<rsub|i>>
     then\ 
 
@@ -14170,7 +14170,7 @@
     \ <math|<around*|{|X<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
     a family of vector spaces over a field <math|F> and <math|Y> a vector
     space over the same field <math|F> then
-    <math|C<rsub|0>\<in\>Hom<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>
+    <math|C<rsub|0>\<in\>Hom<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
   </example>
 
   <\proof>
@@ -14193,10 +14193,10 @@
     <label|multilinear mapping sub-space>Let <math|n\<in\>\<bbb-N\>>,
     <math|<around*|{|X<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
     be a family of vector spaces over a field <math|F> and <math|Y> a vector
-    space over the same field then <math|Hom<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>
+    space over the same field then <math|Hom<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
     is a sub-space of <math|<around*|\<langle\>|Y<rsup|<big|prod><rsub|i=1><rsup|n>X<rsub|i>>,+,\<cdot\>|\<rangle\>>>.
     So by [theorem: <reference|vector space sub-space is a vector space>]
-    <math|<around*|\<langle\>|Hom<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>,+,\<cdot\>|\<rangle\>>>
+    <math|<around*|\<langle\>|Hom<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>,+,\<cdot\>|\<rangle\>>>
     is a vector space.
   </theorem>
 
@@ -14204,11 +14204,11 @@
     First using [exercise: <reference|multi zero function>] we have that\ 
 
     <\equation*>
-      C<rsub|0>\<in\>Hom<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>\<Rightarrow\>Hom<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>\<neq\>\<varnothing\>
+      C<rsub|0>\<in\>Hom<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>\<Rightarrow\>Hom<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>\<neq\>\<varnothing\>
     </equation*>
 
     Second if <math|\<alpha\>\<in\>F> and
-    <math|L<rsub|1>,L<rsub|2>\<in\>Hom<around*|(|x<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>
+    <math|L<rsub|1>,L<rsub|2>\<in\>Hom<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
     and <math|i\<in\><around*|{|1,\<ldots\>,n|}>> we have
 
     <\eqnarray*>
@@ -14224,7 +14224,7 @@
     proving that
 
     <\equation*>
-      \<alpha\>\<cdot\>L<rsub|1>+\<beta\>\<in\>Hom<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>
+      \<alpha\>\<cdot\>L<rsub|1>+\<beta\>\<in\>Hom<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>
     </equation*>
   </proof>
 
@@ -14233,9 +14233,9 @@
     <math|<around*|{|X<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
     be a family of vector spaces over a field <math|F>, <math|Y> and <math|Z>
     vector spaces over the same field <math|F>,
-    <math|L\<in\>Hom<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>> and
+    <math|L\<in\>Hom<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>> and
     <math|S\<in\>Hom<around*|(|Y,Z|)>> then
-    <math|S\<circ\>H\<in\>Hom<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>
+    <math|S\<circ\>H\<in\>Hom<around*|(|X<rsub|1>,\<ldots\>X<rsub|n>;Y|)>>
   </theorem>
 
   <\proof>
@@ -14259,8 +14259,8 @@
     <math|n\<in\>\<bbb-N\>>, <math|<around*|{|X<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
     a family of vector spaces over a field <math|F>, <math|Y> a vector space
     over the same field <math|F>, <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F>
-    and <math|L\<in\>Hom<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>> then
-    if <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+    and <math|L\<in\>Hom<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>> then if
+    <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
     we have\ 
 
     <\equation*>
@@ -14283,9 +14283,9 @@
       proving that <math|1\<in\>S>.
 
       <item*|<math|k\<in\>S\<Rightarrow\>k+1\<in\>S>>If
-      <math|k+1\<leqslant\>n> and <math|L\<in\>Hom<around*|(|X<rsub|1>,\<ldots\>,X<rsub|k+1>;Y|)>>
+      <math|k+1\<leqslant\>n> and <math|L\<in\>Hom<around*|(|X<rsub|1>\<ldots\>X<rsub|k+1>;Y|)>>
       then by [theorem: <reference|multi induction argument>]
-      <math|L<rsub|<around*|{|\<ldots\>x<rsub|k+1>|}>>\<in\>Hom<around*|(|X<rsub|1>,\<ldots\>,X<rsub|k>;Y|)>>
+      <math|L<rsub|<around*|{|\<ldots\>x<rsub|k+1>|}>>\<in\>Hom<around*|(|X<rsub|1>\<ldots\>X<rsub|k>;Y|)>>
       so that as <math|k\<in\>S> we have
 
       <\equation>
@@ -14317,9 +14317,9 @@
     space over the same field <math|F>, <math|<around*|{|Y<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
     a family such that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
     <math|Y<rsub|i>> is a sub-space of <math|X<rsub|i>> and
-    <math|L\<in\>Hom<around*|(|Y<rsub|1>,\<ldots\>,Y<rsub|n>,Z|)>> then their
-    exist a <math|K\<in\>Hom<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Z|)>>
-    such that <math|K<rsub|\|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>=L>.
+    <math|L\<in\>Hom<around*|(|Y<rsub|1>\<ldots\>Y<rsub|n>,Z|)>> then their
+    exist a <math|K\<in\>Hom<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Z|)>> such
+    that <math|K<rsub|\|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>=L>.
     In other words <math|K> is a multilinear mapping extending <math|L>.
   </theorem>
 
@@ -18623,7 +18623,7 @@
   <\lemma>
     <label|determinant adjoint properties>Let <math|n\<in\>\<bbb-N\>>,
     <math|X> a vector space over a field <math|F> of characteristic zero such
-    that <math|dim<around*|(|X|)>=n> and <math|L\<in\>Hom<around*|(|X|)>>
+    that <math|dim<around*|(|X|)>=n> and <math|L\<in\>Hom<around*|(|X,X|)>>
     then we have\ 
 
     <\enumerate>
@@ -18687,7 +18687,7 @@
   <\theorem>
     <label|determinant inverse of linear mapping>Let <math|n\<in\>\<bbb-N\>>,
     <math|X> a vector space over a field <math|F> of characteristic zero such
-    that <math|dim<around*|(|X|)>=n> and <math|L\<in\>Hom<around*|(|X|)>>
+    that <math|dim<around*|(|X|)>=n> and <math|L\<in\>Hom<around*|(|X,X|)>>
     then we have:
 
     <\enumerate>
@@ -24897,10 +24897,7 @@
     transpositions|<tuple|11.230|?>>
     <associate|permutation sign properties|<tuple|11.234|?>>
     <associate|permutation sum|<tuple|11.209|?>>
-    <associate|permutation transosition expansion|<tuple|11.217|?>>
     <associate|permutation transosition proeprties|<tuple|11.212|?>>
-    <associate|permutation transpistion symmetry
-    permutation|<tuple|11.224|?>>
     <associate|permutation transposition|<tuple|11.28|?>>
     <associate|permutation transposition 1|<tuple|11.211|?>>
     <associate|permutation transposition expansion|<tuple|11.217|?>>
@@ -24908,7 +24905,6 @@
     <associate|permutation transposition symmetry|<tuple|11.223|?>>
     <associate|permutation transposition symmetry (1)|<tuple|11.224|?>>
     <associate|permutation transposition symmetry (2)|<tuple|11.225|?>>
-    <associate|permutation transposition ymmetry (2)|<tuple|11.225|?>>
     <associate|permutation {0,..,n and transposition|<tuple|11.30|?>>
     <associate|product finite product|<tuple|11.2|?>>
     <associate|product of family of elements with a zero in|<tuple|11.50|?>>

@@ -9283,11 +9283,11 @@
     be a family of normed spaces and <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     a normed space then theset of the graphs of multilinear continuous
     mappins between <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
-    and <math|Y> is noted as <math|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>
+    and <math|Y> is noted as <math|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
     hence\ 
 
     <\equation*>
-      L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>=<around*|{|L\<in\>Hom<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>\|L<text|
+      L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>=<around*|{|L\<in\>Hom<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>\|L<text|
       is continuous>|}>
     </equation*>
   </definition>
@@ -9297,7 +9297,7 @@
     <math|n\<in\>\<bbb-N\>>, <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
     be a family of normed spaces and <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     a normed space then <math|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>
-    is a subspace of <math|Hom<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>
+    is a subspace of <math|Hom<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
     [and thus by [theorem: <reference|vector space sub-space is a vector
     space>] a vector space].
   </theorem>
@@ -9308,7 +9308,7 @@
     <reference|multilinear mapping sub-space>]
 
     <\equation>
-      <label|eq 14.64.148>C<rsub|0>\<in\>Hom<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>
+      <label|eq 14.64.148>C<rsub|0>\<in\>Hom<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>
     </equation>
 
     Further as <math|\<forall\>x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
@@ -9325,15 +9325,15 @@
     proving that\ 
 
     <\equation*>
-      L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>\<neq\>\<varnothing\>
+      L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>\<neq\>\<varnothing\>
     </equation*>
 
     Further if <math|\<alpha\>\<in\>\<bbb-K\>> and <math|L<rsub|1>>,
-    <math|L<rsub|2>\<in\>L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>> then
+    <math|L<rsub|2>\<in\>L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>> then
     by \ [theorem: <reference|multilinear mapping sub-space>]\ 
 
     <\equation>
-      <label|eq 14.66.148>L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>\<in\>Hom<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>
+      <label|eq 14.66.148>L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>\<in\>Hom<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>
     </equation>
 
     Also using [theorem: <reference|continuity multilinear mapping (1)>] we
@@ -9371,7 +9371,7 @@
     <math|n\<in\>\<bbb-N\>>, <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
     be a finite family of normed vector spaces,
     \ <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    a normed spaces and <math|L\<in\>L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>|)>>
+    a normed spaces and <math|L\<in\>L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>|)>>
     and define <math|M<rsub|L,s>> and <math|M<rsub|L,r>> by\ 
 
     <\equation*>
@@ -9494,12 +9494,12 @@
     be a finite family of normed vector spaces over the field
     <math|\<bbb-K\>>, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     is a normed spaces over <math|\<bbb-K\>> and
-    <math|L\<in\>L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>> then the
-    operator norm of <math|L> noted as <math|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>
+    <math|L\<in\>L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>> then the
+    operator norm of <math|L> noted as <math|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|>,\<ldots\>X<rsub|n>;Y|)>>>
     is defined as\ 
 
     <\equation*>
-      <around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>=inf<around*|(|M<rsub|L,r>|)>\<equallim\><rsub|<text|[theorem:
+      <around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>=inf<around*|(|M<rsub|L,r>|)>\<equallim\><rsub|<text|[theorem:
       <reference|continuity multilinear mapping (2)
       norm>]>>inf<around*|(|M<rsub|L,s>|)>
     </equation*>
@@ -9516,15 +9516,15 @@
     a normed spaces over <math|\<bbb-K\>> then we have\ 
 
     <\enumerate>
-      <item>If <math|L\<in\>L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>
+      <item>If <math|L\<in\>L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
       then <math|\<forall\>x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
       we have
 
       <\equation*>
-        <around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>
+        <around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>
       </equation*>
 
-      <item>If <math|L\<in\>L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>
+      <item>If <math|L\<in\>L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
       then <math|\<forall\>M\<in\>\<bbb-R\><rsup|+>> such that
       <math|\<forall\>x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>\ 
 
@@ -9535,10 +9535,10 @@
       we have
 
       <\equation*>
-        <around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>\<leqslant\>M
+        <around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>\<leqslant\>M
       </equation*>
 
-      <item>If <math|L\<in\>L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>
+      <item>If <math|L\<in\>L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
       then <math|\<forall\>M\<in\>\<bbb-R\><rsup|+>> such that
       <math|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>M>
       <math|\<forall\>x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
@@ -9546,13 +9546,13 @@
       <math|<around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>=1> we have\ 
 
       <\equation*>
-        <around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>\<leqslant\>M
+        <around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>\<leqslant\>M
       </equation*>
 
-      <item><math|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>:L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>\<rightarrow\>\<bbb-R\>>
-      defined by <math|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>><around*|(|L|)>=<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>
-      is a norm on <math|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>. In
-      other words <math|<around*|\<langle\>|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>,<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>|\<rangle\>>>
+      <item><math|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>:L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>\<rightarrow\>\<bbb-R\>>
+      defined by <math|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>><around*|(|L|)>=<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>>
+      is a norm on <math|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>. In
+      other words <math|<around*|\<langle\>|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>,<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>|\<rangle\>>>
       is a normed space.
     </enumerate>
   </theorem>
@@ -9571,9 +9571,9 @@
         <math|L<around*|(|x|)>=0> so that\ 
 
         <\eqnarray*>
-          <tformat|<table|<row|<cell|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|<around*|\<\|\|\>|0|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|=>|<cell|0>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>\<cdot\>0>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <tformat|<table|<row|<cell|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|<around*|\<\|\|\>|0|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|=>|<cell|0>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>\<cdot\>0>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
           <reference|product of family of elements with a zero
-          in>]>>>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>>>>>
+          in>]>>>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>>>>>
         </eqnarray*>
 
         <item*|<math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text| we
@@ -9591,41 +9591,41 @@
         there exist a <math|M\<in\>M<rsub|L,r>> such that
 
         <\equation*>
-          <around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>\<leqslant\>M\<less\><frac|1|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>>\<cdot\><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>
+          <around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>\<leqslant\>M\<less\><frac|1|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>>\<cdot\><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>
         </equation*>
 
         hence <math|M\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>\<less\><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>>
         contradicting <math|M\<in\>M<rsub|L,r>>. Hence we must have that\ 
 
         <\equation*>
-          <around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>
+          <around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>
         </equation*>
       </description>
 
       So in all cases we have\ 
 
       <\equation*>
-        <around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>
+        <around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>
       </equation*>
 
       <item>This follows from
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>|<cell|=>|<cell|>>|<row|<cell|inf<around*|(|M<rsub|L,r>|)>>|<cell|=>|<cell|>>|<row|<cell|inf<around*|(|<around*|{|M\<in\>\<bbb-R\><rsub|+>\|\<forall\>x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>>|<cell|=>|<cell|>>|<row|<cell|inf<around*|(|M<rsub|L,r>|)>>|<cell|=>|<cell|>>|<row|<cell|inf<around*|(|<around*|{|M\<in\>\<bbb-R\><rsub|+>\|\<forall\>x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>
         we have <around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>M\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>|}>|)>>|<cell|=>|<cell|>>>>
       </eqnarray*>
 
       <item>This follows from
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>|<cell|=>|<cell|>>|<row|<cell|inf<around*|(|M<rsub|L,s>|)>>|<cell|=>|<cell|>>|<row|<cell|inf<around*|(|M\<in\>\<bbb-R\><rsub|+>\|\<forall\>x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>\<vdash\>\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>>|<cell|=>|<cell|>>|<row|<cell|inf<around*|(|M<rsub|L,s>|)>>|<cell|=>|<cell|>>|<row|<cell|inf<around*|(|M\<in\>\<bbb-R\><rsub|+>\|\<forall\>x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>\<vdash\>\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>
         <around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>=1 we have
         <around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>M|)>>|<cell|>|<cell|>>>>
       </eqnarray*>
 
-      <item>Let <math|L<rsub|1>>, <math|L<rsub|2>\<in\>L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>
+      <item>Let <math|L<rsub|1>>, <math|L<rsub|2>\<in\>L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
       then by [theorem: <reference|continuity multilinear mappings vector
-      space>] we have <math|L<rsub|1>+L<rsub|2>\<in\>L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>.
+      space>] we have <math|L<rsub|1>+L<rsub|2>\<in\>L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>.
       Further we have for <math|x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
       with <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
       <math|<around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>=1> that
@@ -9637,12 +9637,12 @@
       which by (2) proves that
 
       <\equation>
-        <label|eq 14.69.148><around*|\<\|\|\>|L<rsub|1>+L<rsub|2>|\<\|\|\>><rsub|\|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>\<leqslant\><around*|\<\|\|\>|L<rsub|1>|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>+<around*|\<\|\|\>|L<rsub|2>|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>><text|>
+        <label|eq 14.69.148><around*|\<\|\|\>|L<rsub|1>+L<rsub|2>|\<\|\|\>><rsub|\|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>\<leqslant\><around*|\<\|\|\>|L<rsub|1>|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>+<around*|\<\|\|\>|L<rsub|2>|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>><text|>
       </equation>
 
       For <math|C<rsub|0>> we have by [theorem: <reference|continuity
       multilinear mappings vector space>] that
-      <math|C<rsub|0>\<in\>L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>.
+      <math|C<rsub|0>\<in\>L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>.
       Further for <math|x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
       we have
 
@@ -9653,37 +9653,37 @@
       so that by (1)\ 
 
       <\equation>
-        <label|eq 14.70.148><around*|\<\|\|\>|C<rsub|0>|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>=0
+        <label|eq 14.70.148><around*|\<\|\|\>|C<rsub|0>|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>=0
       </equation>
 
-      Assume that for <math|L\<in\>L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>
-      we have that <math|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>=0>
+      Assume that for <math|L\<in\>L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
+      we have that <math|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>=0>
       then by (1) we have <math|\<forall\>x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
       that <math|0\<leqslant\><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>=0>.
       Hence <math|<around*|\<\|\|\>|L|\<\|\|\>><rsub|Y>=0> which as
       <math|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>> is a norm proves that
       <math|L=C<rsub|0>> [the neutral element of
-      <math|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>. So we have\ 
+      <math|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>. So we have\ 
 
       <\equation>
-        <label|eq 14.71.148>L=C<rsub|0>\<Leftrightarrow\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>X<rsub|n>;Y|)>>=0
+        <label|eq 14.71.148>L=C<rsub|0>\<Leftrightarrow\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>=0
       </equation>
 
-      If <math|L\<in\>L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>> and
+      If <math|L\<in\>L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>> and
       <math|\<alpha\>\<in\>\<bbb-K\>> then by [theorem: <reference|continuity
       multilinear mappings vector space>]
-      <math|\<alpha\>\<cdot\>L\<in\>L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>.
+      <math|\<alpha\>\<cdot\>L\<in\>L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>.
       Let <math|x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
       then we have\ 
 
       <\equation*>
-        <around*|\<\|\|\>|<around*|(|\<alpha\>\<cdot\>L|)><around*|(|x|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|\<alpha\>\<cdot\>L<around*|(|x|)>|\<\|\|\>><rsub|Y>=<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\><around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>n|}>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>
+        <around*|\<\|\|\>|<around*|(|\<alpha\>\<cdot\>L|)><around*|(|x|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|\<alpha\>\<cdot\>L<around*|(|x|)>|\<\|\|\>><rsub|Y>=<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\><around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>n|}>><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>><rsub|i>
       </equation*>
 
       which proves by (1) that\ 
 
       <\equation>
-        <label|eq 14.72.148><around*|\<\|\|\>|\<alpha\>\<cdot\>L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>\<leqslant\><around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>
+        <label|eq 14.72.148><around*|\<\|\|\>|\<alpha\>\<cdot\>L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>\<leqslant\><around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
       </equation>
 
       Now for the opposite inequality for <math|\<alpha\>\<in\>\<bbb-K\>> we
@@ -9693,18 +9693,18 @@
         <item*|<math|\<alpha\>=0>>Then\ 
 
         <\eqnarray*>
-          <tformat|<table|<row|<cell|<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>|<cell|=>|<cell|0>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
-          <reference|eq 14.70.148>]>>>|<cell|<around*|\<\|\|\>|C<rsub|0>|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|(|0\<cdot\>L|)>|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|(|\<alpha\>\<cdot\>L|)>|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>>>>
+          <tformat|<table|<row|<cell|<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>X<rsub|n>;Y|)>>>|<cell|=>|<cell|0>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 14.70.148>]>>>|<cell|<around*|\<\|\|\>|C<rsub|0>|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|(|0\<cdot\>L|)>|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|(|\<alpha\>\<cdot\>L|)>|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>X<rsub|n>;Y|)>>>>>>
         </eqnarray*>
 
         <item*|<math|\<alpha\>\<neq\>0>>Assume that
-        <math|<around*|\<\|\|\>|\<alpha\>\<cdot\>L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>\<less\><around*|\||\<alpha\>|\|>\<cdot\>><math|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>.
-        Then as we have <math|<around*|\<\|\|\>|\<alpha\>\<cdot\>L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>=inf<around*|(|M<rsub|\<alpha\>\<cdot\>L,r>|)>>
+        <math|<around*|\<\|\|\>|\<alpha\>\<cdot\>L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>\<less\><around*|\||\<alpha\>|\|>\<cdot\>><math|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>>.
+        Then as we have <math|<around*|\<\|\|\>|\<alpha\>\<cdot\>L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>=inf<around*|(|M<rsub|\<alpha\>\<cdot\>L,r>|)>>
         it follows that there exist a <math|M\<in\>M<rsub|\<alpha\>\<cdot\>L,r>>
         such that\ 
 
         <\equation>
-          <label|eq 14.73.148><around*|\<\|\|\>|\<alpha\>\<cdot\>L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>\<leqslant\>M\<less\><around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,|)>\<ldots\>,X<rsub|n>;Y>
+          <label|eq 14.73.148><around*|\<\|\|\>|\<alpha\>\<cdot\>L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>\<leqslant\>M\<less\><around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
         </equation>
 
         If <math|x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
@@ -9724,29 +9724,29 @@
         hence
 
         <\equation*>
-          <around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>=inf<around*|(|M<rsub|L,r>|)>\<leqslant\><frac|M|<around*|\||a|\|>>\<less\><rsub|<text|[eq:
-          <reference|eq 14.73.148>]>><frac|<around*|\||\<alpha\>|\|>|<around*|\||\<alpha\>|\|>>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>
+          <around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>=inf<around*|(|M<rsub|L,r>|)>\<leqslant\><frac|M|<around*|\||a|\|>>\<less\><rsub|<text|[eq:
+          <reference|eq 14.73.148>]>><frac|<around*|\||\<alpha\>|\|>|<around*|\||\<alpha\>|\|>>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
         </equation*>
 
-        leading to the contradiction <math|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>\<gtr\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>.
-        Hence we must have that <math|<around*|\<\|\|\>|\<alpha\>\<cdot\>L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>\<leqslant\><around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>.
+        leading to the contradiction <math|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>\<gtr\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>>.
+        Hence we must have that <math|<around*|\<\|\|\>|\<alpha\>\<cdot\>L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>\<leqslant\><around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>>.
 
         \;
       </description>
 
-      So in both cases we have <math|<around*|\<\|\|\>|\<alpha\>\<cdot\>L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>\<leqslant\><around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>
+      So in both cases we have <math|<around*|\<\|\|\>|\<alpha\>\<cdot\>L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>\<leqslant\><around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>>
       which combined with [eq: <reference|eq 14.72.148>] proves that\ 
 
       <\equation>
-        <label|eq 14.74.148><around*|\<\|\|\>|\<alpha\>\<cdot\>L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>=<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,|)>\<ldots\>,X<rsub|n>;Y>
+        <label|eq 14.74.148><around*|\<\|\|\>|\<alpha\>\<cdot\>L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>=<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
       </equation>
 
       Finally using [eqs: <reference|eq 14.69.148>, <reference|eq 14.71.148>
       and <reference|eq 14.74.148>] it follows that\ 
 
       <\equation*>
-        <around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>><text|
-        is a norm in >L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>
+        <around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>><text|
+        is a norm in >L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>
       </equation*>
     </enumerate>
   </proof>
@@ -9762,7 +9762,7 @@
 
     <\equation*>
       L<rsup|n><around*|(|X;Y|)>=<choice|<tformat|<table|<row|<cell|L<around*|(|X,Y|)><text|
-      if >n=1>>|<row|<cell|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)><text|
+      if >n=1>>|<row|<cell|L<around*|(|<wide*|X<rsub|>\<ldots\>X|\<wide-underbrace\>><rsub|n>;Y|)><text|
       if >1\<less\>n>>>>>
     </equation*>
 
@@ -9770,12 +9770,11 @@
 
     <\equation*>
       <around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsup|n><around*|(|X;Y|)>>=<choice|<tformat|<table|<row|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>><text|
-      if >n=1>>|<row|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsup|><around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>><text|
+      if >n=1>>|<row|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsup|><around*|(|<wide*|X\<ldots\>X|\<wide-underbrace\>><rsub|n>;Y|)>><text|
       if >1\<less\>n>>>>>
     </equation*>
 
-    where <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
-    is defined by <math|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>=<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>.
+    \;
   </definition>
 
   <\theorem>
@@ -9812,13 +9811,13 @@
     be a finite family of normed vector spaces,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>,
     <math|<around*|\<langle\>|Z,<around*|\<\|\|\>||\<\|\|\>><rsub|Z>|\<rangle\>>>
-    normed spaces, <math|L\<in\>L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>
+    normed spaces, <math|L\<in\>L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
     and <math|K\<in\>L<around*|(|Y,Z|)>> then
 
     <\enumerate>
-      <item><math|K\<circ\>L\<in\>L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>
+      <item><math|K\<circ\>L\<in\>L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
 
-      <item><math|<around*|\<\|\|\>|K\<circ\>L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Z|)>>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>\<cdot\><around*|\<\|\|\>|K|\<\|\|\>><rsub|L<around*|(|Y,Z|)>>>
+      <item><math|<around*|\<\|\|\>|K\<circ\>L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Z|)>>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>\<cdot\><around*|\<\|\|\>|K|\<\|\|\>><rsub|L<around*|(|Y,Z|)>>>
     </enumerate>
   </theorem>
 
@@ -9827,13 +9826,13 @@
 
     <\enumerate>
       <item>From [theorem: <reference|multi composition>] it follows that
-      <math|K\<circ\>L\<in\>Hom<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>,
+      <math|K\<circ\>L\<in\>Hom<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>,
       Further as the composition of continuous mappings is continuous [see
       theorem: <reference|continuity composition>] we have that
       <math|K\<circ\>L> is continuous. Hence\ 
 
       <\equation*>
-        K\<circ\>L\<in\>L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>
+        K\<circ\>L\<in\>L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>
       </equation*>
 
       <item>Let <math|x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
@@ -9851,7 +9850,7 @@
       mappings (1)>] that\ 
 
       <\equation*>
-        <around*|\<\|\|\>|K\<circ\>L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>\<cdot\><around*|\<\|\|\>|K|\<\|\|\>><rsub|L<around*|(|Y,Z|)>>
+        <around*|\<\|\|\>|K\<circ\>L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>\<cdot\><around*|\<\|\|\>|K|\<\|\|\>><rsub|L<around*|(|Y,Z|)>>
       </equation*>
     </enumerate>
   </proof>
@@ -21905,7 +21904,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|13>
-    <associate|page-first|651>
+    <associate|page-first|655>
     <associate|page-medium|papyrus>
     <associate|section-nr|0>
     <associate|subsection-nr|0>
