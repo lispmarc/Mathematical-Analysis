@@ -1849,7 +1849,7 @@
     is defined by\ 
 
     <\equation*>
-      I<rsup|<around*|[|i,x|]>><around*|(|t|)>=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,t,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>
+      I<rsup|<around*|[|i,x|]>><around*|(|t|)>=<around*|(|x<rsub|1>,\<ldots\><wide*|t,x<rsub|i+1>,|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>
     </equation*>
   </definition>
 
@@ -1889,7 +1889,7 @@
       then\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|I<rsup|<around*|[|i,0|]>><around*|(|r+\<alpha\>\<cdot\>s|)>>|<cell|=>|<cell|<around*|(|0<rsub|1>,\<ldots\>,0<rsub|i-1>,r+\<alpha\>\<cdot\>s,0<rsub|i+1>,\<ldots\>,0<rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|0<rsub|1>,\<ldots\>,0<rsub|i-1>,r,0<rsub|i+1>,\<ldots\>,0<rsub|n>|)>+<around*|(|0<rsub|1>,\<ldots\>,0<rsub|i-1>,\<alpha\>\<cdot\>s,0<rsub|i+1>,\<ldots\>,0<rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|0<rsub|1>,\<ldots\>,0<rsub|i-1>,r,0<rsub|i+1>,\<ldots\>,0<rsub|n>|)>+<around*|(|\<alpha\>\<cdot\>0<rsub|1>,\<ldots\>,\<alpha\>\<cdot\>0<rsub|i-1>,\<alpha\>\<cdot\>s,\<alpha\>\<cdot\>0<rsub|i+1>,\<ldots\>,\<alpha\>\<cdot\>0<rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|0<rsub|1>,\<ldots\>,0<rsub|i-1>,r,0<rsub|i+1>,\<ldots\>,0<rsub|n>|)>+\<alpha\>\<cdot\><around*|(|0<rsub|1>,\<ldots\>,0<rsub|i-1>,s,0<rsub|i+1>,\<ldots\>,0<rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|I<rsup|<around*|[|i,0|]>><around*|(|r|)>+\<alpha\>\<cdot\>I<rsup|<around*|[|i,0|]>><around*|(|s|)>>>>>
+        <tformat|<table|<row|<cell|I<rsup|<around*|[|i,0|]>><around*|(|r+\<alpha\>\<cdot\>s|)>>|<cell|=>|<cell|<around*|(|0\<ldots\><wide*|r+\<alpha\>\<cdot\>s|\<wide-underbrace\>><rsub|i>\<ldots\>0|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|0\<ldots\><wide*|r|\<wide-underbrace\>><rsub|i>\<ldots\>0|)>+\<alpha\>\<cdot\><around*|(|0\<ldots\><wide*|s|\<wide-underbrace\>><rsub|i>\<ldots\>0|)>>>|<row|<cell|>|<cell|=>|<cell|I<rsup|<around*|[|i,0|]>><around*|(|r|)>+\<alpha\>\<cdot\>I<rsup|<around*|[|i,0|]>><around*|(|s|)>>>>>
       </eqnarray*>
 
       proving that\ 
@@ -1902,7 +1902,7 @@
       <math|j\<in\><around*|{|1,\<ldots\>,n|}>> we have
 
       <\equation>
-        <label|eq 16.16.178>\<pi\><rsub|j><around*|(|I<rsup|<around*|[|i,0|]>><around*|(|t|)>|)>=\<pi\><rsub|j><around*|(|<around*|(|0<rsub|1>,\<ldots\>,0<rsub|i-1>,t,0<rsub|i+1>,\<ldots\>,n|)>|)>=<choice|<tformat|<table|<row|<cell|t<text|
+        <label|eq 16.16.178>\<pi\><rsub|j><around*|(|I<rsup|<around*|[|i,0|]>><around*|(|t|)>|)>=\<pi\><rsub|j><around*|(|<around*|(|0,\<ldots\><wide*|t|\<wide-underbrace\>><rsub|j>|)>\<ldots\>,0|)>=<choice|<tformat|<table|<row|<cell|t<text|
         if >j=i>>|<row|<cell|0<rsub|j><text| if
         >j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>>>>>
       </equation>
@@ -1920,7 +1920,7 @@
         I<rsup|<around*|[|i,0|]>>\<in\>L<around*|(|X<rsub|i>,<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>|)>
       </equation*>
 
-      <item>This follows from <math|I<rsup|<around*|[|x,i|]>><around*|(|x|)>=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i>,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>=x>
+      <item>This follows from <math|I<rsup|<around*|[|x,i|]>><around*|(|x|)>=<around*|(|x<rsub|1>,\<ldots\><wide*|x<rsub|i>|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>=x>
 
       <item>Let <math|x\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|j>>
       and <math|j\<in\><around*|{|1,\<ldots\>,n|}>> then\ 
@@ -1974,18 +1974,18 @@
       by >f<rsup|<around*|[|i,x|]>>=f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|U|)>>
     </equation*>
 
-    As <math|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|U|)>=<around*|{|t\<in\>X<rsub|i>\|I<rsup|<around*|[|i,x|]>><around*|(|t|)>\<in\>U|}>=<around*|{|t\<in\>X<rsub|i>\|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,t,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>\<in\>U|}>>
+    As <math|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|U|)>=<around*|{|t\<in\>X<rsub|i>\|I<rsup|<around*|[|i,x|]>><around*|(|t|)>\<in\>U|}>=<around*|{|t\<in\>X<rsub|i>\|<around*|(|x<rsub|1>,\<ldots\><wide*|t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>\<in\>U|}>>
     and
 
     <\equation*>
-      f<rsup|<around*|[|i,x|]>><around*|(|t|)>=<around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><around*|(|t|)>=f<around*|(|I<rsup|<around*|[|i,x|]>><around*|(|t|)>|)>=f<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,t,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>
+      f<rsup|<around*|[|i,x|]>><around*|(|t|)>=<around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><around*|(|t|)>=f<around*|(|I<rsup|<around*|[|i,x|]>><around*|(|t|)>|)>=f<around*|(|x<rsub|1>,\<ldots\><wide*|t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>
     </equation*>
 
     we can state this definition as\ 
 
     <\equation*>
-      f<rsup|<around*|[|i,x|]>>:<around*|{|t\<in\>X<rsub|i>\|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,t,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>\<in\>U|}>\<rightarrow\>Y<text|
-      where >f<rsup|<around*|[|i,x|]>><around*|(|t|)>=f<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,t,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>
+      f<rsup|<around*|[|i,x|]>>:<around*|{|t\<in\>X<rsub|i>\|<around*|(|x<rsub|1>,\<ldots\><wide*|t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>\<in\>U|}>\<rightarrow\>Y<text|
+      where >f<rsup|<around*|[|i,x|]>><around*|(|t|)>=f<around*|(|x<rsub|1>,\<ldots\><wide*|t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>
     </equation*>
   </definition>
 
@@ -2413,7 +2413,7 @@
     </equation*>
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|<around*|\<\|\|\>|<frac|f<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,x<rsub|i>+h,x<rsub|i+1,\<ldots\>,>x<rsub|n>|)>-f<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>|h>-\<partial\><rsup|i><rsub|x>f|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<frac|f<around*|(|I<rsup|<around*|[|i,x|]>><around*|(|x+h|)>|)>-f<around*|(|I<rsup|<around*|[|i,x|]>><around*|(|x|)>|)>|>-\<partial\><rsup|i><rsub|x>f|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<frac|<around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><around*|(|x+h|)>-<around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><around*|(|x|)>|h>-\<partial\><rsup|i><rsub|x>f<around*|(|x|)>|\<\|\|\>>>|<cell|\<less\>>|<cell|\<varepsilon\>>>>>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|<frac|f<around*|(|x<rsub|1>,\<ldots\><wide*|x<rsub|i>+h|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>-f<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>|h>-\<partial\><rsup|i><rsub|x>f|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<frac|f<around*|(|I<rsup|<around*|[|i,x|]>><around*|(|x+h|)>|)>-f<around*|(|I<rsup|<around*|[|i,x|]>><around*|(|x|)>|)>|>-\<partial\><rsup|i><rsub|x>f|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<frac|<around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><around*|(|x+h|)>-<around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><around*|(|x|)>|h>-\<partial\><rsup|i><rsub|x>f<around*|(|x|)>|\<\|\|\>>>|<cell|\<less\>>|<cell|\<varepsilon\>>>>>
     </eqnarray*>
   </definition>
 
@@ -3884,6 +3884,8 @@
     </description>
   </proof>
 
+  \;
+
   <\lemma>
     <label|lemma 16.53.186>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
@@ -4027,11 +4029,11 @@
     normed spaces and <math|L\<in\>L<rsub|n><around*|(|X;Y|)>>,
     <math|i\<in\><around*|{|1,\<ldots\>,n|}>> then for
     <math|i\<in\><around*|{|1,\<ldots\>,n|}>> we have for
-    <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,r+\<alpha\>\<cdot\>t,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|n>>
+    <math|<around*|(|x<rsub|1>,\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|n>>
     that\ 
 
     <\equation*>
-      L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|i-1>:r+\<alpha\>\<cdot\>t:x<rsub|i+1>:\<ldots\>:x<rsub|n>|)>=L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|i-1>:r:x<rsub|i+1>:\<ldots\>:x<rsub|n>|)>+\<alpha\>\<cdot\>L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|i-1>:t:x<rsub|i+1>:\<ldots\>:x<rsub|n>|)>
+      L<around*|(|x<rsub|1>:\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n>|)>=L<around*|(|x<rsub|1>:\<ldots\><wide*|r|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n>|)>+\<alpha\>\<cdot\>L<around*|(|x<rsub|1>:\<ldots\><wide*|t|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n>|)>
     </equation*>
   </lemma>
 
@@ -4042,8 +4044,8 @@
       S=<around*|{|n\<in\>\<bbb-N\>\|<text|If
       >L\<in\>L<rsub|n><around*|(|X;Y|)><text| then
       >\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text| we have for
-      <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,r+\<alpha\>\<cdot\>t,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)><text|
-      that >L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|i-1>:r+\<alpha\>\<cdot\>t:x<rsub|i+1>:\<ldots\>:x<rsub|n>|)>=L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|i-1>:r:x<rsub|i+1>:\<ldots\>:x<rsub|n>|)>+\<alpha\>\<cdot\>L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|i-1>:t:x<rsub|i+1>:\<ldots\>:x<rsub|n>|)>>>|}>
+      <math|<around*|(|x<rsub|1>,\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|n><text|
+      that >L<around*|(|x<rsub|1>,\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>=L<around*|(|x<rsub|1>,\<ldots\><wide*|r|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>+\<alpha\>\<cdot\>L<around*|(|x<rsub|1>,\<ldots\><wide*|t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>>>|}>
     </equation*>
 
     then we have:\ 
@@ -4054,13 +4056,13 @@
       have <math|i=1> and given\ 
 
       <\equation*>
-        <around*|(|r+\<alpha\>\<cdot\>t|)>=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,r+\<alpha\>\<cdot\>t,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|1>
+        <around*|(|r+\<alpha\>\<cdot\>t|)>=<around*|(|x<rsub|1>,\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|1>\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|1>
       </equation*>
 
       that\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|L<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>:r+\<alpha\>\<cdot\>t:x<rsub|i+1>:\<ldots\>:x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|r+\<alpha\>\<cdot\>t|)>>|<cell|\<equallim\><rsub|L\<in\>L<around*|(|X,Y|)>>>|<cell|>>|<row|<cell|L<around*|(|y|)>+\<alpha\>\<cdot\>L<around*|(|z|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>:r:x<rsub|i+1>:\<ldots\>:x<rsub|n>|)>+\<alpha\>\<cdot\>L<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>:t:x<rsub|i+1>:\<ldots\>:x<rsub|n>|)>>|<cell|>|<cell|>>>>
+        <tformat|<table|<row|<cell|L<around*|(|x<rsub|1>,\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|r+\<alpha\>\<cdot\>t|)>>|<cell|\<equallim\><rsub|L\<in\>L<around*|(|X,Y|)>>>|<cell|>>|<row|<cell|L<around*|(|y|)>+\<alpha\>\<cdot\>L<around*|(|z|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x<rsub|1>,\<ldots\><wide*|r|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n>|)>+\<alpha\>\<cdot\>L<around*|(|x<rsub|1>,\<ldots\><wide*|t|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n>|)>>|<cell|>|<cell|>>>>
       </eqnarray*>
 
       proving that <math|1\<in\>S>.
@@ -4071,12 +4073,12 @@
       either:\ 
 
       <\description>
-        <item*|<math|i=1>>Then for <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,r+\<alpha\>\<cdot\>t,x<rsub|i+1>,\<ldots\>,x<rsub|n+1>|)>=<around*|(|r+\<alpha\>\<cdot\>t,x<rsub|2>,\<ldots\>,x<rsub|n+1>|)>>
+        <item*|<math|i=1>>Then for <math|<around*|(|x<rsub|1>,\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n+1>|)>=<around*|(|r+\<alpha\>\<cdot\>t,x<rsub|2>,\<ldots\>,x<rsub|n+1>|)>>
         we have \ 
 
         <\eqnarray*>
-          <tformat|<table|<row|<cell|L<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>:r+\<alpha\>\<cdot\>t:x<rsub|i+1>:\<ldots\>:x<rsub|n+1>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|r+\<alpha\>\<cdot\>t:x<rsub|2>:\<ldots\>:x<rsub|n+1>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|L<around*|(|r+\<alpha\>\<cdot\>t|)>|)><around*|(|x<rsub|2>:\<ldots\>:x<rsub|n+1>|)>>|<cell|\<equallim\><rsub|<text|>L\<in\>L<around*|(|X,L<rsub|n><around*|(|X;Y|)>|)>>>|<cell|>>|<row|<cell|<around*|(|L<around*|(|r|)>+\<alpha\>\<cdot\>L<around*|(|t|)>|)><around*|(|x<rsub|2>:\<ldots\>:x<rsub|n+1>|)>>|<cell|\<equallim\><rsub|<text|[lemma:
-          <reference|lemma 16.54.187>]>>>|<cell|>>|<row|<cell|<around*|(|L<around*|(|r|)>|)><around*|(|x<rsub|2>:\<ldots\>:x<rsub|n+1>|)>+\<alpha\>\<cdot\>L<around*|(|t|)><around*|(|x<rsub|2>:\<ldots\>:x<rsub|n+1>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|r:x<rsub|2>:\<ldots\>:x<rsub|n+1>|)>+\<alpha\>\<cdot\>L<around*|(|t:x<rsub|2>:\<ldots\>:x<rsub|n+1>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|i-1>:r:x<rsub|i+1>:\<ldots\>:x<rsub|n+1>|)>+\<alpha\>\<cdot\>L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|i-1>:t:x<rsub|i+1>:\<ldots\>:x<rsub|n+1>|)>>|<cell|>|<cell|>>>>
+          <tformat|<table|<row|<cell|L<around*|(|x<rsub|1>,\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n+1>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|r+\<alpha\>\<cdot\>t:x<rsub|2>:\<ldots\>:x<rsub|n+1>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|L<around*|(|r+\<alpha\>\<cdot\>t|)>|)><around*|(|x<rsub|2>:\<ldots\>:x<rsub|n+1>|)>>|<cell|\<equallim\><rsub|<text|>L\<in\>L<around*|(|X,L<rsub|n><around*|(|X;Y|)>|)>>>|<cell|>>|<row|<cell|<around*|(|L<around*|(|r|)>+\<alpha\>\<cdot\>L<around*|(|t|)>|)><around*|(|x<rsub|2>:\<ldots\>:x<rsub|n+1>|)>>|<cell|\<equallim\><rsub|<text|[lemma:
+          <reference|lemma 16.54.187>]>>>|<cell|>>|<row|<cell|<around*|(|L<around*|(|r|)>|)><around*|(|x<rsub|2>:\<ldots\>:x<rsub|n+1>|)>+\<alpha\>\<cdot\>L<around*|(|t|)><around*|(|x<rsub|2>:\<ldots\>:x<rsub|n+1>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|r:x<rsub|2>:\<ldots\>:x<rsub|n+1>|)>+\<alpha\>\<cdot\>L<around*|(|t:x<rsub|2>:\<ldots\>:x<rsub|n+1>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x<rsub|1>:\<ldots\><wide*|r|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n+1>|)>+\<alpha\>\<cdot\>L<around*|(|x<rsub|1>:\<ldots\><wide*|s|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n+1>|)>>|<cell|>|<cell|>>>>
         </eqnarray*>
 
         proving that in this case that
@@ -4092,7 +4094,7 @@
         and <math|n\<in\>S> resuls in
 
         <\eqnarray*>
-          <tformat|<table|<row|<cell|L<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,r+\<alpha\>\<cdot\>t,x<rsub|i+1>,\<ldots\>,x<rsub|n+1>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|L<around*|(|x<rsub|1>|)>|)><around*|(|x<rsub|2>:\<ldots\>:x<rsub|i-1>:r+\<alpha\>\<cdot\>t:x<rsub|i+1>:\<ldots\>:x<rsub|n>|)>>|<cell|>|<cell|>>|<row|<cell|<around*|(|L<around*|(|x<rsub|1>|)>|)><around*|(|x<rsub|2>:\<ldots\>:x<rsub|i-1>:r:x<rsub|i+1>:\<ldots\>:x<rsub|n>|)>+\<alpha\>\<cdot\><around*|(|L<around*|(|x<rsub|1>|)>|)><around*|(|x<rsub|2>:\<ldots\>:x<rsub|i-1>:t:x<rsub|i+1>:\<ldots\>:x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x<rsub|1>:x<rsub|2>:\<ldots\>:x<rsub|i-1>:r:x<rsub|i+1>:\<ldots\>:x<rsub|n>|)>+\<alpha\>\<cdot\>L<around*|(|x<rsub|1>:|\<nobracket\>><around*|\<nobracket\>|x<rsub|2>:\<ldots\>:x<rsub|i-1>:t:x<rsub|i+1>:\<ldots\>:x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|i-1>:r:x<rsub|i+1>:\<ldots\>:x<rsub|n+1>|)>+\<alpha\>\<cdot\>L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|i-1>:t:x<rsub|i+1>:\<ldots\>:x<rsub|n+1>|)>>|<cell|>|<cell|>>>>
+          <tformat|<table|<row|<cell|L<around*|(|x<rsub|1>,\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n+1>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|L<around*|(|x<rsub|1>|)>|)><around*|(|x<rsub|2>:\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i-1>\<ldots\>:x<rsub|n>|)>>|<cell|>|<cell|>>|<row|<cell|<around*|(|L<around*|(|x<rsub|1>|)>|)><around*|(|x<rsub|2>:\<ldots\><wide*|r|\<wide-underbrace\>><rsub|i-1>\<ldots\>:x<rsub|n>|)>+\<alpha\>\<cdot\><around*|(|L<around*|(|x<rsub|1>|)>|)><around*|(|x<rsub|2>:\<ldots\><wide*|s|\<wide-underbrace\>><rsub|i-1>\<ldots\>:x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x<rsub|1>:\<ldots\><wide*|r|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n>|)>+\<alpha\>\<cdot\>L<around*|(|x<rsub|1>:|\<nobracket\>><around*|\<nobracket\>|\<ldots\><wide*|t|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n>|)>>|<cell|=>|<cell|>>>>
         </eqnarray*>
 
         so that in this case we have also
@@ -4349,11 +4351,11 @@
       </equation*>
 
       If <math|i\<in\><around*|{|1,\<ldots\>,n|}>> and
-      <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,r+\<alpha\>\<cdot\>t,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|n>>
+      <math|<around*|(|x<rsub|1>,\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|n>>
       then\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|L<rsub|x><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,r+\<alpha\>\<cdot\>t,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x,x<rsub|1>,\<ldots\>,x<rsub|i-1>,r+\<alpha\>\<cdot\>t,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x,x<rsub|1>,\<ldots\>,x<rsub|i-1>,r,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>+\<alpha\>\<cdot\>L<around*|(|x,x<rsub|1>,\<ldots\>,x<rsub|i-1>,t,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|L<rsub|x><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,r,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>+\<alpha\>\<cdot\>L<rsub|x><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,t,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>|<cell|>|<cell|>>>>
+        <tformat|<table|<row|<cell|L<rsub|x><around*|(|x<rsub|1>,\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x,x<rsub|1>,\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i+1>\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x,x<rsub|1>,\<ldots\><wide*|r|\<wide-underbrace\>><rsub|i+1>\<ldots\>,x<rsub|n>|)>+\<alpha\>\<cdot\>L<around*|(|x,x<rsub|1>,\<ldots\><wide*|t|\<wide-underbrace\>><rsub|i+1>\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|L<rsub|x><around*|(|x<rsub|1>,\<ldots\><wide*|r|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>+\<alpha\>\<cdot\>L<rsub|x><around*|(|x<rsub|1>,\<ldots\><wide*|s|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>>|<cell|>|<cell|>>>>
       </eqnarray*>
 
       proving that\ 
@@ -4521,12 +4523,12 @@
     <\enumerate>
       <item>Let <math|L\<in\>L<rsub|n><around*|(|X;Y|)>> then for
       <math|i\<in\><around*|{|1,\<ldots\>,n|}>> and
-      <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,r+\<alpha\>\<cdot\>t,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|n>>
+      <math|<around*|(|x<rsub|1>,\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|n>>
       we have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|\<cal-I\><rsub|n,X,Y><around*|(|L|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,r+\<alpha\>\<cdot\>t,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|i-1>:r+\<alpha\>\<cdot\>t:x<rsub|i+1>:\<ldots\>:x<rsub|n>|)>>|<cell|\<equallim\><rsub|<text|[lemma:
-        <reference|lemma 16.55.187>]>>>|<cell|>>|<row|<cell|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|i-1>:r:x<rsub|i+1>:\<ldots\>:x<rsub|n>|)>+\<alpha\>\<cdot\>L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|i-1>:t:x<rsub|i+1>:\<ldots\>:x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|\<cal-I\><rsub|n,X,Y><around*|(|L|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,r,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>+\<alpha\>\<cdot\>\<cal-I\><rsub|n,X,Y><around*|(|L|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,t,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>|<cell|>|<cell|>>>>
+        <tformat|<table|<row|<cell|\<cal-I\><rsub|n,X,Y><around*|(|L|)><around*|(|x<rsub|1>,\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x<rsub|1>:\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n>|)>>|<cell|\<equallim\><rsub|<text|[lemma:
+        <reference|lemma 16.55.187>]>>>|<cell|>>|<row|<cell|L<around*|(|x<rsub|1>:\<ldots\><wide*|r|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n>|)>+\<alpha\>\<cdot\>L<around*|(|x<rsub|1>:\<ldots\><wide*|t|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|\<cal-I\><rsub|n,X,Y><around*|(|L|)><around*|(|x<rsub|1>,\<ldots\><wide*|r|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>+\<alpha\>\<cdot\>\<cal-I\><rsub|n,X,Y><around*|(|L|)><around*|(|x<rsub|1>,\<ldots\><wide*|s|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>>|<cell|>|<cell|>>>>
       </eqnarray*>
 
       proving that\ 
@@ -7466,7 +7468,7 @@
 
     <\equation*>
       I<rsup|<around*|[|i,x|]>>:X<rsub|i>\<rightarrow\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,k|}>>X<rsub|j><text|
-      defined by >I<rsup|<around*|[|i,x|]>><around*|(|t|)>=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,t,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)><text|
+      defined by >I<rsup|<around*|[|i,x|]>><around*|(|t|)>=<around*|(|x<rsub|1>,\<ldots\><wide*|t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)><text|
       [see definition: <reference|diff unprojection>]>
     </equation*>
 
@@ -7486,13 +7488,13 @@
     then\ 
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|<around*|(|I<rsup|<around*|[|i,0|]>>+C<rsub|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,0,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>><rsub|>|)><around*|(|t|)>>|<cell|=>|<cell|I<rsup|<around*|[|i,0|]>><around*|(|t|)>+C<rsub|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,0,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>><rsub|><around*|(|t|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|0,\<ldots\>,<wide*|t|\<wide-underbrace\>><rsub|i>,\<ldots\>,0<rsub|i>|)>+<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,0,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,t,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|I<rsup|<around*|[|i,x|]>><around*|(|t|)>>>>>
+      <tformat|<table|<row|<cell|<around*|(|I<rsup|<around*|[|i,0|]>>+C<rsub|<around*|(|x<rsub|1>,\<ldots\><wide*|0|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>><rsub|>|)><around*|(|t|)>>|<cell|=>|<cell|I<rsup|<around*|[|i,0|]>><around*|(|t|)>+C<rsub|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,0,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>><rsub|><around*|(|t|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|0,\<ldots\>,<wide*|t|\<wide-underbrace\>><rsub|i>,\<ldots\>,0<rsub|i>|)>+<around*|(|x<rsub|1>,\<ldots\><wide*|0|\<wide-underbrace\>>\<ldots\>,x<rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x<rsub|1>,\<ldots\><wide*|0|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|I<rsup|<around*|[|i,x|]>><around*|(|t|)>>>>>
     </eqnarray*>
 
     so that\ 
 
     <\equation*>
-      I<rsup|<around*|[|i,x|]>>=I<rsup|<around*|[|i,0|]>>+C<rsub|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,0,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>><rsub|>
+      I<rsup|<around*|[|i,x|]>>=I<rsup|<around*|[|i,0|]>>+C<rsub|<around*|(|x<rsub|1>,\<ldots\><wide*|0|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>><rsub|>
     </equation*>
 
     By [lemma: <reference|lemma 16.24.178>]
@@ -7500,7 +7502,7 @@
     so that by [examples: <reference|diff linear mapping is infinite times
     differentiable> and <reference|diff constant function is infinitely times
     differentiable>] <math|I<rsup|<around*|[|i,0|]>>> and
-    <math|C<rsub|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,0,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>><rsub|>>
+    <math|C<rsub|<around*|(|x<rsub|1>,\<ldots\><wide*|0|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>><rsub|>>
     are <math|\<infty\>>-times differentiable at <math|t\<in\>X<rsub|i>>.
     Using [theorem: <reference|diff higher order differential is linear>]
     proves then that
@@ -7513,7 +7515,7 @@
     and <math|\<forall\>n\<in\>\<bbb-N\>> we have
 
     <\equation>
-      <label|eq 16.82.193>D<rsub|t><rsup|<around*|[|n|]>>I<rsup|<around*|[|i,x|]>>=D<rsub|t><rsup|<around*|[|n|]>>I<rsup|<around*|[|i,0|]>>+D<rsub|t><rsup|<around*|[|n|]>>C<rsub|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,0,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>><rsub|>\<equallim\><rsub|<text|[example:
+      <label|eq 16.82.193>D<rsub|t><rsup|<around*|[|n|]>>I<rsup|<around*|[|i,x|]>>=D<rsub|t><rsup|<around*|[|n|]>>I<rsup|<around*|[|i,0|]>>+D<rsub|t><rsup|<around*|[|n|]>>C<rsub|<around*|(|x<rsub|1>,\<ldots\><wide*|0|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>><rsub|>\<equallim\><rsub|<text|[example:
       <reference|diff constant function is infinitely times
       differentiable>]>>D<rsub|t><rsup|<around*|[|n|]>>I<rsup|<around*|[|i,0|]>>
     </equation>
@@ -14678,13 +14680,13 @@
     and <math|i\<in\><around*|{|1,\<ldots\>,n|}>> we have for
 
     <\equation*>
-      <around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,r+\<alpha\>\<cdot\>t,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>
+      <around*|(|x<rsub|1>,\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>
     </equation*>
 
     that\ 
 
     <\equation*>
-      L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|i-1>,r+\<alpha\>\<cdot\>t:x<rsub|i+1>:\<ldots\>:x<rsub|n>|)>=L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|i-1>:r:x<rsub|i+1>:\<ldots\>:x<rsub|n>|)>+\<alpha\>\<cdot\>L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|i-1>:t:x<rsub|i+1>:\<ldots\>:x<rsub|n>|)>
+      L<around*|(|x<rsub|1>,\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>=L<around*|(|x<rsub|1>,\<ldots\><wide*|r|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>+\<alpha\>\<cdot\>L<around*|(|x<rsub|1>,\<ldots\><wide*|t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>
     </equation*>
   </lemma>
 
@@ -14695,8 +14697,8 @@
       S=<around*|{|n\<in\>\<bbb-N\>\|<text|If
       >L\<in\>L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)><text| then
       >\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text| we have for
-      <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,r+\<alpha\>\<cdot\>t,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i><text|
-      that >L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|i-1>:r+\<alpha\>\<cdot\>t:x<rsub|i+1>:\<ldots\>:x<rsub|n>|)>=L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|i-1>:r:x<rsub|i+1>:\<ldots\>:x<rsub|n>|)>+\<alpha\>\<cdot\>L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|i-1>:t:x<rsub|i+1>:\<ldots\>:x<rsub|n>|)>>>|}>
+      <math|<around*|(|x<rsub|1>,\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i><text|
+      that >L<around*|(|x<rsub|1>:\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n>|)>=L<around*|(|x<rsub|1>:\<ldots\><wide*|r|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n>|)>+\<alpha\>\<cdot\>L<around*|(|x<rsub|1>,\<ldots\><wide*|t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>>>|}>
     </equation*>
 
     then we have:\ 
@@ -14707,13 +14709,13 @@
       have <math|i=1> and given\ 
 
       <\equation*>
-        <around*|(|r+\<alpha\>\<cdot\>t|)>=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,r+\<alpha\>\<cdot\>t,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|1>
+        <around*|(|r+\<alpha\>\<cdot\>t|)>=<around*|(|x<rsub|1>,\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|1>
       </equation*>
 
       that\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|L<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>:r+\<alpha\>\<cdot\>t:x<rsub|i+1>:\<ldots\>:x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|r+\<alpha\>\<cdot\>t|)>>|<cell|\<equallim\><rsub|L\<in\>L<around*|(|X<rsub|1>,Y|)>>>|<cell|>>|<row|<cell|L<around*|(|y|)>+\<alpha\>\<cdot\>L<around*|(|z|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>:r:x<rsub|i+1>:\<ldots\>:x<rsub|n>|)>+\<alpha\>\<cdot\>L<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>:t:x<rsub|i+1>:\<ldots\>:x<rsub|n>|)>>|<cell|>|<cell|>>>>
+        <tformat|<table|<row|<cell|L<around*|(|x<rsub|1>:\<ldots\><wide*|r+\<alpha\>\<cdot\>t|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|r+\<alpha\>\<cdot\>t|)>>|<cell|\<equallim\><rsub|L\<in\>L<around*|(|X<rsub|1>,Y|)>>>|<cell|>>|<row|<cell|L<around*|(|y|)>+\<alpha\>\<cdot\>L<around*|(|z|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x<rsub|1>,\<ldots\><wide*|r|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n>|)>+\<alpha\>\<cdot\>L<around*|(|x<rsub|1>:\<ldots\><wide*|s|\<wide-underbrace\>><rsub|i>\<ldots\>:x<rsub|n>|)>>|<cell|>|<cell|>>>>
       </eqnarray*>
 
       proving that <math|1\<in\>S>.
@@ -14721,7 +14723,7 @@
       <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
       <math|L\<in\>L<rsub|n+1><around*|(|X<rsub|1>\<ldots\>X<rsub|n+1>;Y|)>=L<around*|(|X<rsub|1>,L<rsub|n><around*|(|X<rsub|2>\<ldots\>X<rsub|n+1>;Y|)>|)>>
       and take <math|i\<in\><around*|{|1,\<ldots\>,n+1|}>> then we have
-      either:\ 
+      either: TODO
 
       <\description>
         <item*|<math|i=1>>Then for <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,r+\<alpha\>\<cdot\>t,x<rsub|i+1>,\<ldots\>,x<rsub|n+1>|)>=<around*|(|r+\<alpha\>\<cdot\>t,x<rsub|2>,\<ldots\>,x<rsub|n+1>|)>>
@@ -15183,7 +15185,27 @@
   </theorem>
 
   <\proof>
-    TODO
+    \ 
+
+    <\enumerate>
+      <item>Let <math|L\<in\>L<rsub|n><around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
+      then for <math|i\<in\><around*|{|1,\<ldots\>,n|}>> and
+      <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,r+\<alpha\>\<cdot\>r,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+      we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<cal-I\><rsub|X<rsub|1>\<ldots\>X<rsub|n>,Y><around*|(|L|)><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,x+\<alpha\>\<cdot\>t:x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|i-1>:x+\<alpha\>\<cdot\>t:x<rsub|i+1>:\<ldots\>:x<rsub|n>|)>>|<cell|\<equallim\><rsub|<text|[lemma:
+        <reference|lemma 16.178.210>]>>>|<cell|>>|<row|<cell|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|i-1>:x,x<rsub|i+1>:\<ldots\>:x<rsub|n>|)>+L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|i-1>:x+\<alpha\>\<cdot\>t:x<rsub|i+1>:\<ldots\>:x<rsub|n>|)>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      <item>
+
+      <item>
+
+      <item>
+    </enumerate>
+
+    \;
   </proof>
 
   \;

@@ -9247,13 +9247,13 @@
         g:\<bbb-K\><rsup|n>\<rightarrow\>\<bbb-K\><text| is continuous>
       </equation*>
 
-      <item>Let <math|\<alpha\>,\<beta\>\<in\>\<bbb-K\>>,
+      <item>Let <math|\<alpha\>,x,y\<in\>\<bbb-K\>>,
       <math|i\<in\><around*|{|1,\<ldots\>,n|}>> then for
-      <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,\<alpha\>\<cdot\>x+\<beta\>\<cdot\>y,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>
+      <math|<around*|(|x<rsub|1>,\<ldots\><wide*|x+\<beta\>\<cdot\>y|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>\<in\>\<bbb-K\><rsup|n>>
       we have:
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|h<rsub|z><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,\<alpha\>\<cdot\>x+\<beta\>\<cdot\>y,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|z\<cdot\>g<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,\<alpha\>\<cdot\>x+\<beta\>\<cdot\>y,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>|<cell|\<equallim\><rsub|<around*|(|2|)>>>|<cell|>>|<row|<cell|z\<cdot\><around*|(|\<alpha\>\<cdot\>g<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,x,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>+\<beta\>\<cdot\>g<around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,y,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<alpha\>\<cdot\>h<rsub|z><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,x,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>+\<beta\>\<cdot\>h<rsub|z><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,y,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>|<cell|>|<cell|>>>>
+        <tformat|<table|<row|<cell|h<rsub|z><around*|(|x<rsub|1>,\<ldots\><wide*|x+\<beta\>\<cdot\>y|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|z\<cdot\>g<around*|(|x<rsub|1>,\<ldots\><wide*|x+\<beta\>\<cdot\>y|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>>|<cell|\<equallim\><rsub|<around*|(|2|)>>>|<cell|>>|<row|<cell|z\<cdot\><around*|(|g<around*|(|x<rsub|1>,\<ldots\><wide*|x|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>+\<beta\>\<cdot\>g<around*|(|x<rsub|1>,\<ldots\><wide*|y|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|h<rsub|z><around*|(|x<rsub|1>,\<ldots\><wide*|x|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>+\<beta\>\<cdot\>h<rsub|z><around*|(|x<rsub|1>,\<ldots\><wide*|y|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>>|<cell|>|<cell|>>>>
       </eqnarray*>
 
       proving that\ 
@@ -9271,7 +9271,7 @@
       proving that\ 
 
       <\equation*>
-        h<rsub|z>:\<bbb-K\><rsup|n>\<rightarrow\>X<text| is coninuous>
+        h<rsub|z>:\<bbb-K\><rsup|n>\<rightarrow\>X<text| is cotninuous>
       </equation*>
     </enumerate>
   </proof>
@@ -10413,7 +10413,7 @@
       have for <math|i\<in\><around*|{|1,\<ldots\>,n|}>> that\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|L<rsub|x><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,r+\<alpha\>\<cdot\>s,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x,x<rsub|1>,\<ldots\>,x<rsub|i-1>,r+\<alpha\>\<cdot\>s,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>|<cell|\<equallim\><rsub|<text|multilinearity>>>|<cell|>>|<row|<cell|L<around*|(|x,x<rsub|1>,\<ldots\>,x<rsub|i-1>,r,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>+\<alpha\>\<cdot\>L<around*|(|x,x<rsub|1>,\<ldots\>,x<rsub|i-1>,s,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|L<rsub|x><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,r,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>+\<alpha\>\<cdot\>L<rsub|x><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,s,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>|<cell|>|<cell|>>>>
+        <tformat|<table|<row|<cell|L<rsub|x><around*|(|x<rsub|1>,\<ldots\><wide*|r+\<alpha\>\<cdot\>s|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x,x<rsub|1>,\<ldots\><wide*|r+\<alpha\>\<cdot\>s|\<wide-underbrace\>><rsub|i+1>\<ldots\>,x<rsub|n>|)>>|<cell|\<equallim\><rsub|<text|multilinearity>>>|<cell|>>|<row|<cell|L<around*|(|x,x<rsub|1>,\<ldots\><wide*|r|\<wide-underbrace\>><rsub|i+1>\<ldots\>,x<rsub|n>|)>+\<alpha\>\<cdot\>L<around*|(|x,x<rsub|1>,\<ldots\><wide*|s|\<wide-underbrace\>><rsub|i+1>\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|L<rsub|x><around*|(|x<rsub|1>,\<ldots\><wide*|r|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>+\<alpha\>\<cdot\>L<rsub|x><around*|(|x<rsub|1>,\<ldots\><wide*|s|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>>|<cell|>|<cell|>>>>
       </eqnarray*>
 
       proving that\ 
@@ -10557,17 +10557,17 @@
         <item*|<math|i=1>>Then
 
         <\eqnarray*>
-          <tformat|<table|<row|<cell|\<psi\><rsub|L><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,y+\<alpha\>\<cdot\>z,x<rsub|i+1>,\<ldots\>,x<rsub|n+1>|)>>|<cell|\<equallim\><rsub|i=1>>|<cell|>>|<row|<cell|\<psi\><rsub|L><around*|(|y+\<alpha\>\<cdot\>z,x<rsub|2>,\<ldots\>,x<rsub|n+1>|)>>|<cell|\<equallim\><rsub|<text|[eq:
+          <tformat|<table|<row|<cell|\<psi\><rsub|L><around*|(|x<rsub|1>,\<ldots\><wide*|y+\<alpha\>\<cdot\>z|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n+1>|)>>|<cell|\<equallim\><rsub|i=1>>|<cell|>>|<row|<cell|\<psi\><rsub|L><around*|(|y+\<alpha\>\<cdot\>z,x<rsub|2>,\<ldots\>,x<rsub|n+1>|)>>|<cell|\<equallim\><rsub|<text|[eq:
           <reference|eq 14.99.150>]>>>|<cell|>>|<row|<cell|L<around*|(|y+\<alpha\>\<cdot\>z|)><around*|(|x<rsub|2>,\<ldots\>,x<rsub|n+1>|)>>|<cell|\<equallim\><rsub|L\<in\>L<around*|(|X,L<rsup|n><around*|(|X;Y|)>|)>>>|<cell|>>|<row|<cell|<around*|(|L<around*|(|y|)>+\<alpha\>\<cdot\>L<around*|(|z|)>|)><around*|(|x<rsub|2>,\<ldots\>,x<rsub|n+1>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|L<around*|(|y|)>|)><around*|(|x<rsub|2>,\<ldots\>,x<rsub|n+1>|)>+\<alpha\>\<cdot\><around*|(|L<around*|(|z|)>|)><around*|(|x<rsub|2>,\<ldots\>,x<rsub|n+1>|)>>|<cell|\<equallim\><rsub|<text|[eq:
-          <reference|eq 14.99.150>]>>>|<cell|>>|<row|<cell|\<psi\><rsub|L><around*|(|y,x<rsub|2>,\<ldots\>,x<rsub|n+1>|)>+\<alpha\>\<cdot\>\<psi\><rsub|L><around*|(|z,x<rsub|2>,\<ldots\>,x<rsub|n+1>|)>>|<cell|\<equallim\><rsub|i=1>>|<cell|>>|<row|<cell|\<psi\><rsub|L><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,y,x<rsub|i+1>,\<ldots\>,x<rsub|n+1>|)>+\<alpha\>\<cdot\>\<psi\><rsub|L><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,z,x<rsub|i+1>,\<ldots\>,x<rsub|n+1>|)>>|<cell|>|<cell|>>>>
+          <reference|eq 14.99.150>]>>>|<cell|>>|<row|<cell|\<psi\><rsub|L><around*|(|y,x<rsub|2>,\<ldots\>,x<rsub|n+1>|)>+\<alpha\>\<cdot\>\<psi\><rsub|L><around*|(|z,x<rsub|2>,\<ldots\>,x<rsub|n+1>|)>>|<cell|\<equallim\><rsub|i=1>>|<cell|>>|<row|<cell|\<psi\><rsub|L><around*|(|x<rsub|1>,\<ldots\><wide*|y|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n+1>|)>+\<alpha\>\<cdot\>\<psi\><rsub|L><around*|(|x<rsub|1>,\<ldots\><wide*|z|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n+1>|)>>|<cell|>|<cell|>>>>
         </eqnarray*>
 
         <item*|<math|i\<in\><around*|{|2,\<ldots\>,n+1|}>>>Then\ 
 
         <\eqnarray*>
-          <tformat|<table|<row|<cell|\<psi\><rsub|L><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,y+\<alpha\>\<cdot\>z,x<rsub|i+1>,\<ldots\>,x<rsub|n+1>|)>>|<cell|\<equallim\><rsub|<text|[eq:
-          <reference|eq 14.99.150>]>\<wedge\>i\<neq\>1>>|<cell|>>|<row|<cell|<around*|(|L<around*|(|x<rsub|1>|)>|)><around*|(|x<rsub|2>,\<ldots\>,x<rsub|i-1>,y+\<alpha\>\<cdot\>z,x<rsub|i+1>,\<ldots\>,x<rsub|n+1>|)>>|<cell|\<equallim\><rsub|L<around*|(|x<rsub|1>|)>\<in\>L<rsup|n><around*|(|X;Y|)>>>|<cell|>>|<row|<cell|<around*|(|L<around*|(|x<rsub|1>|)>|)><around*|(|x<rsub|2>,\<ldots\>,x<rsub|i-1>,y,x<rsub|i+1>,\<ldots\>,x<rsub|n+1>|)>+\<alpha\>\<cdot\><around*|(|L<around*|(|x<rsub|1>|)>|)><around*|(|x<rsub|2>,\<ldots\>,x<rsub|i-1>,z,x<rsub|i+1>,\<ldots\>,x<rsub|n+1>|)>>|<cell|\<equallim\><rsub|<text|[eq:
-          <reference|eq 14.99.150>]>>>|<cell|>>|<row|<cell|\<psi\><rsub|L><around*|(|x<rsub|1>,x<rsub|2>,\<ldots\>,x<rsub|i-1>,y,x<rsub|i+1>,\<ldots\>,x<rsub|n+1>|)>+\<alpha\>\<cdot\>\<psi\><rsub|L><around*|(|x<rsub|1>,x<rsub|2>,\<ldots\>,x<rsub|i-1>,z,x<rsub|i+1>,\<ldots\>,x<rsub|n+1>|)>>|<cell|>|<cell|>>>>
+          <tformat|<table|<row|<cell|\<psi\><rsub|L><around*|(|x<rsub|1>,\<ldots\><wide*|y+\<alpha\>\<cdot\>z|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n+1>|)>>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 14.99.150>]>\<wedge\>i\<neq\>1>>|<cell|>>|<row|<cell|<around*|(|L<around*|(|x<rsub|1>|)>|)><around*|(|x<rsub|2>,\<ldots\><wide*|y+\<alpha\>\<cdot\>z|\<wide-underbrace\>><rsub|i-1>\<ldots\>,x<rsub|n+1>|)>>|<cell|\<equallim\><rsub|L<around*|(|x<rsub|1>|)>\<in\>L<rsup|n><around*|(|X;Y|)>>>|<cell|>>|<row|<cell|<around*|(|L<around*|(|x<rsub|1>|)>|)><around*|(|x<rsub|2>,\<ldots\><wide*|y|\<wide-underbrace\>><rsub|i-1>\<ldots\>,x<rsub|n+1>|)>+\<alpha\>\<cdot\><around*|(|L<around*|(|x<rsub|1>|)>|)><around*|(|x<rsub|2>,\<ldots\><wide*|z|\<wide-underbrace\>><rsub|i-1>\<ldots\>,x<rsub|n+1>|)>>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 14.99.150>]>>>|<cell|>>|<row|<cell|\<psi\><rsub|L><around*|(|x<rsub|1>,\<ldots\><wide*|y|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n+1>|)>+\<alpha\>\<cdot\>\<psi\><rsub|L><around*|(|x<rsub|1>,\<ldots\><wide*|z|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n+1>|)>>|<cell|>|<cell|>>>>
         </eqnarray*>
       </description>
 
@@ -17344,19 +17344,19 @@
     </equation>
 
     Let <math|\<alpha\>\<in\>\<bbb-K\>>,<math|i\<in\><around*|{|1,\<ldots\>,n|}>>,
-    <math|x,y\<in\>X<rsub|i>> and <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>X<rsub|i>>
+    <math|x,y\<in\>X<rsub|i>> and <math|<around*|(|x<rsub|1>,\<ldots\><wide*|x+\<alpha\>\<cdot\>y|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>X<rsub|i>>
     then we have that
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|<around*|{|L<rsub|l><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,x+\<alpha\>\<cdot\>y,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>|}><rsub|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>|<cell|=>|<cell|>>|<row|<cell|<around*|{|L<rsub|l><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,x,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>|}><rsub|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>+\<alpha\>\<cdot\><around*|{|L<rsub|l><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,y,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>|}><rsub|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>|<cell|>|<cell|>>>>
+      <tformat|<table|<row|<cell|<around*|{|L<rsub|l><around*|(|x<rsub|1>,\<ldots\><wide*|x+\<alpha\>\<cdot\>y|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>|}><rsub|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>|<cell|=>|<cell|>>|<row|<cell|<around*|{|L<rsub|l><around*|(|x<rsub|1>,\<ldots\><wide*|x|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>|\<nobracket\>>+\<alpha\>\<cdot\><around*|\<nobracket\>|L<rsub|l><around*|(|x<rsub|1>,\<ldots\><wide*|y|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>|}><rsub|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>|<cell|>|<cell|>>>>
     </eqnarray*>
 
     Using [theorems: <reference|limit a.x_n>, <reference|limit x_n+y_n>]
-    <math|<around*|{|L<rsub|l><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,x+\<alpha\>\<cdot\>y,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>|}><rsub|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
+    <math|<around*|{|L<rsub|l><around*|(|x<rsub|1>,\<ldots\><wide*|x+\<alpha\>\<cdot\>y|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>|}><rsub|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
     converges and
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|<below|lim|l\<rightarrow\>\<infty\>>L<rsub|l><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,x+\<alpha\>\<cdot\>y,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|<below|lim|l\<rightarrow\>\<infty\>>L<rsub|l><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,x,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>+\<alpha\>\<cdot\><below|lim|l\<rightarrow\>\<infty\>>L<rsub|l><around*|(|x<rsub|1>,\<ldots\>,x<rsub|i-1>,y,x<rsub|i+1>,\<ldots\>,x<rsub|n>|)>>|<cell|>|<cell|>>>>
+      <tformat|<table|<row|<cell|<below|lim|l\<rightarrow\>\<infty\>>L<rsub|l><around*|(|x<rsub|1>,\<ldots\><wide*|x+\<alpha\>\<cdot\>y|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|<below|lim|l\<rightarrow\>\<infty\>>L<rsub|l><around*|(|x<rsub|1>,\<ldots\><wide*|x|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>+\<alpha\>\<cdot\><below|lim|l\<rightarrow\>\<infty\>>L<rsub|l><around*|(|x<rsub|1>,\<ldots\><wide*|y|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>>|<cell|>|<cell|>>>>
     </eqnarray*>
 
     proving that\ 
