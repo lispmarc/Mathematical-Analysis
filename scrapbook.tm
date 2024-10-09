@@ -3438,6 +3438,146 @@
       <around*|\<\|\|\>|f<around*|(|I<rsup|<around*|[|i,x|]>><around*|(|z|)>|)>-f<around*|(|I<rsup|<around*|[|i,x|]>><around*|(|y|)>|)>|\<\|\|\>><rsub|Y>\<leqslant\>sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|i>f<around*|(|I<rsup|<around*|[|i,x|]>><around*|(|y+t\<cdot\><around*|(|z-y|)>|)>|)>|\<\|\|\>><rsub|L<around*|(|X<rsub|i>,Y|)>>\|t\<in\><around*|[|0,1|]>|}>|)>\<cdot\><around*|\<\|\|\>|z-y|\<\|\|\>><rsub|i>
     </equation*>
   </render-proof>
+
+  <\theorem>
+    Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>, <math|m\<in\>\<bbb-N\>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces over <math|\<bbb-R\>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    a <with|font-series|bold|Banach> space,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    the normed space over <math|\<bbb-R\>> based on the product
+    <math|X=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+    with the maximum norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|max>> [see
+    definition: <reference|normed maximum norm>], <math|U> a open set in
+    <math|X> and <math|f:U\<rightarrow\>Y> is a function. If
+    <math|\<forall\><around*|{|i<rsub|j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\><around*|{|1,\<ldots\>,n|}>>
+    we have <math|\<forall\>x\<in\>U> that the partial differential
+    \ <math|D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f> of
+    order <math|m> at <math|x> exist and the function\ 
+
+    <\equation*>
+      D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f:U\<rightarrow\>L<rsub|m><around*|(|X<rsub|i<rsub|m>>\<ldots\>X<rsub|i<rsub|1>>;Y|)><text|
+      defined by >D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>><around*|(|x|)>=D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>
+    </equation*>
+
+    is continuous. Then
+
+    <\equation*>
+      f<text| is of class >C<rsup|m>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Define\ 
+
+    <\equation*>
+      S=<around*|{|m\<in\>\<bbb-N\>\|If \<forall\><around*|{|i<rsub|j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>><text|
+      we have >\<forall\>x\<in\>U<text| that
+      >D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f<text|
+      exist and> the function D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f:U\<rightarrow\>L<rsub|m><around*|(|X<rsub|i<rsub|m>>\<ldots\>X<rsub|i<rsub|1>>;Y|)><rsub|><text|
+      defined by >D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f<around*|(|x|)>=D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f<text|
+      is continuous then >f<text| is of class >C<rsup|m>|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|1\<in\>S>>This follows the definition of partial
+      differentials of order <math|m=1> and the previous theorem [theorem:
+      <reference|diff continuous partial differentials implies
+      differentiability>].
+
+      <item*|<math|m\<in\>S>>Let <math|<around*|{|i<rsub|j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\><around*|{|1,\<ldots\>,n|}>>
+      and fix <math|i<rsub|m+1>\<in\><around*|{|1,\<ldots\>,n|}>> then
+      <math|<around*|{|i<rsub|j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,m+1|}>>\<subseteq\><around*|{|1,\<ldots\>,n|}>>
+      and by the hypothesis we have that <math|\<forall\>x\<in\>U>
+      <math|D<rsup|<around*|[|m+1|]>><rsub|x,i<rsub|m+1>\<ldots\>i<rsub|1>>f>
+      exist and\ 
+
+      <\equation*>
+        D<rsup|<around*|[|m+1|]>><rsub|i<rsub|m+1>\<ldots\>i<rsub|1>>f:U\<rightarrow\>L<rsub|m+1><around*|(|X<rsub|i<rsub|m+1>>\<ldots\>X<rsub|i<rsub|1>>;Y|)><text|
+        defined by >D<rsup|<around*|[|m+1|]>><rsub|i<rsub|m+1>\<ldots\>i<rsub|1>>f<around*|(|x|)>=D<rsup|<around*|[|m+1|]>><rsub|x,i<rsub|m+1>\<ldots\>i<rsub|1>>f
+      </equation*>
+
+      is continuous. Given <math|x\<in\>U> we have, as
+      <math|D<rsup|<around*|[|m+1|]>><rsub|x,i<rsub|m+1>\<ldots\>i<rsub|1>>f>
+      exist, that there exist a <math|V<rsub|x>> with
+      <math|x\<in\>V<rsub|x>\<subseteq\>U> such that
+      <math|\<forall\>y\<in\>V> <math|D<rsub|x,i<rsub|m>,\<ldots\>,i<rsub|1>>f>
+      exist and the function\ 
+
+      <\equation*>
+        D<rsup|<around*|[|m|]>><rsub|V<rsub|x>,i<rsub|m>\<ldots\>i<rsub|1>>f:V<rsub|x>\<rightarrow\>L<rsub|m><around*|(|X<rsub|i<rsub|m>>\<ldots\>X<rsub|i<rsub|1>>;Y|)><text|
+        defined by >D<rsup|<around*|[|m|]>><rsub|V<rsub|x>,i<rsub|m>\<ldots\>i<rsub|1>>f<around*|(|y|)>=D<rsup|<around*|[|m|]>><rsub|y,i<rsub|m>\<ldots\>i<rsub|1>>f
+      </equation*>
+
+      has a <math|i<rsub|m+1>>-partial differential at <math|x>.
+      <math|D<rsup|<around*|[|m+1|]>><rsub|x,i<rsub|m+1>\<ldots\>i<rsub|1>>f>
+      is then defined to be <math|D<rsub|x,i<rsub|m+1>><around*|(|D<rsup|<around*|[|m|]>><rsub|V<rsub|x>,i<rsub|m>\<ldots\>i<rsub|1>>f|)>>.
+      As <math|x\<in\>V<rsub|x>> we have that
+      <math|D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f>
+      exist, so we can define
+
+      <\equation*>
+        D<rsub|i<rsub|m>\<ldots\>i<rsub|1>><rsup|<around*|[|m|]>>f:U\<rightarrow\>L<rsub|m><around*|(|X<rsub|i<rsub|m>>\<ldots\>X<rsub|i<rsub|1>>;Y|)><text|
+        by >D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f<around*|(|x|)>=D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f
+      </equation*>
+
+      If <math|x\<in\>U> then <math|\<forall\>y\<in\>V<rsub|x>> we have
+      <math|D<rsup|<around*|[|m|]>><rsub|V<rsub|x>,i<rsub|m>\<ldots\>i<rsub|1>><rsub|><around*|(|y|)>=D<rsup|<around*|[|m|]>><rsub|y,i<rsub|m>\<ldots\>i<rsub|1>>f=D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f<around*|(|y|)>>
+      proving that
+
+      <\equation*>
+        D<rsup|<around*|[|m|]>><rsub|V<rsub|x>,i<rsub|m>\<ldots\>i<rsub|1>>f=<around*|(|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)><rsub|\|V<rsub|x>>
+      </equation*>
+
+      Using the fact that partial differentiability is local [see theorem:
+      <reference|diff partial differentiation is local>] we conclude that
+      <math|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f> is
+      <math|i<rsub|m+1>>-partial differentiable at <math|x> and
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|D<rsup|<around*|[|m+1|]>><rsub|i<rsub|m+1>\<ldots\>i<rsub|1>>f<around*|(|x|)>>|<cell|=>|<cell|D<rsup|<around*|[|m+1|]>><rsub|x,i<rsub|m+1>\<ldots\>i<rsub|1>>f>>|<row|<cell|>|<cell|=>|<cell|D<rsup|><rsub|x,i<rsub|m+1>><around*|(|D<rsup|<around*|[|m|]>><rsub|V<rsub|x>,i<rsub|m>\<ldots\>i<rsub|1>>f|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|x,i<rsub|m+1>><around*|(|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)><rsub|\|V<rsub|x>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|theorem:
+        <reference|diff partial differentiation is
+        local>]>>>|<cell|D<rsub|x,i<rsub|m+1>><around*|(|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)>>>>>
+      </eqnarray*>
+
+      Hence if we define\ 
+
+      <\equation*>
+        D<rsub|i<rsub|m+1>><around*|(|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>.i<rsub|1>>f|)>:U\<rightarrow\>L<around*|(|X<rsub|i<rsub|m+1>>,L<rsub|m><around*|(|X<rsub|i<rsub|m>>\<ldots\>X<rsub|i<rsub|1>>;<rsub|>|)>|)>=L<rsub|m+1><around*|(|X<rsub|i<rsub|m+1>>\<ldots\>X<rsub|i<rsub|1>>;Y|)>
+      </equation*>
+
+      where
+
+      <\equation*>
+        D<rsub|i<rsub|m+1>><around*|(|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>.i<rsub|1>>f|)><around*|(|x|)>=D<rsub|x,i<rsub|m+1>><around*|(|<around*|(|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>.i<rsub|1>>f|)>|)>
+      </equation*>
+
+      then <math|D<rsub|i<rsub|m+1>><around*|(|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>.i<rsub|1>>f|)>=D<rsub|i<rsub|m+1>><around*|(|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>.i<rsub|1>>f|)>>.
+      As <math|D<rsub|i<rsub|m+1>><around*|(|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>.i<rsub|1>>f|)>>
+      is continuous it follows that <math|D<rsub|i<rsub|m+1>><around*|(|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>.i<rsub|1>>f|)>>
+      is continuous. Applying then the previous theorem [theorem:
+      <reference|diff continuous partial differentials implies
+      differentiability>] it follows that
+      <math|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f> is of
+      class <math|C<rsup|1>>. Using [theorem: <reference|diff C^n and C^m>]
+      it follows that <math|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f>
+      is of class <math|C<rsup|0>> meaning that
+      <math|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>,\<ldots\>,i<rsub|1>>f> is
+      continuous. As this is true for every
+      <math|<around*|{|i<rsub|j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\><around*|{|1,\<ldots\>,n|}>>
+      and <math|m\<in\>S> we conclude that <math|f> is of class
+      <math|C<rsup|m>>.\ 
+
+      \ 
+    </description>
+
+    \;
+  </proof>
+
+  \;
 </body>
 
 <\initial>
@@ -3531,12 +3671,12 @@
     <associate|eq 16.200.124|<tuple|86|32>>
     <associate|eq 16.261.222|<tuple|74|29>>
     <associate|eq 16.280.125.1|<tuple|75|30>>
-    <associate|eq 16.280.126|<tuple|100|34>>
+    <associate|eq 16.280.126|<tuple|100|36>>
     <associate|eq 16.281.125|<tuple|76|30>>
-    <associate|eq 16.281.126|<tuple|101|?>>
+    <associate|eq 16.281.126|<tuple|101|36>>
     <associate|eq 16.282.125|<tuple|77|31>>
-    <associate|eq 16.282.126|<tuple|102|35>>
-    <associate|eq 16.283.126|<tuple|103|35>>
+    <associate|eq 16.282.126|<tuple|102|36>>
+    <associate|eq 16.283.126|<tuple|103|36>>
     <associate|eq 16.284.124|<tuple|82|31>>
     <associate|eq 16.285.124|<tuple|80|31>>
     <associate|eq 16.286.124|<tuple|81|31>>
@@ -3564,7 +3704,7 @@
     <associate|lemma 16.107.194|<tuple|26|27>>
     <associate|lemma 16.108.194|<tuple|27|28>>
     <associate|lemma 16.190.122|<tuple|28|29>>
-    <associate|lemma 16.201.126|<tuple|30|?>>
+    <associate|lemma 16.201.126|<tuple|30|35>>
     <associate|lemma 16.24.178|<tuple|18|18>>
     <associate|lemma 16.25.178|<tuple|19|18>>
     <associate|series absolute convergence alternative
