@@ -3200,7 +3200,7 @@
     be a class then <math|Id<rsub|A>:A\<rightarrow\>B> is defined by
 
     <\equation*>
-      I<rsub|A>=<around*|{|z<mid|\|>z=<around*|(|x,x|)>\<wedge\>x\<in\>A|}>
+      Id<rsub|A>=<around*|{|z<mid|\|>z=<around*|(|x,x|)>\<wedge\>x\<in\>A|}>
     </equation*>
   </example>
 
