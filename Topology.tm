@@ -14401,7 +14401,7 @@
     </eqnarray*>
   </convention>
 
-  <subsection|Sequences and limit>
+  <subsection|Sequences and limits>
 
   <\definition>
     <label|sequence>Let <math|X> be a set, <math|k\<in\>\<bbb-N\><rsub|0>>
@@ -17853,7 +17853,7 @@
 
   <\theorem>
     <label|series power series in R>Let <math|\<lambda\>\<in\>\<bbb-R\>> with
-    <math|0\<less\>\<lambda\>\<less\>1> then
+    <math|0\<leqslant\>\<lambda\>\<less\>1> then
     <math|<big|sum><rsub|i=1><rsup|\<infty\>>\<lambda\><rsup|i>> converges
     and <math|<big|sum><rsub|i=1><rsup|\<infty\>>\<lambda\><rsup|i>=<frac|\<lambda\>|1-\<lambda\>>>
   </theorem>
@@ -17870,8 +17870,8 @@
     <math|<below|lim|k\<rightarrow\>\<infty\>>\<lambda\><rsup|k>=0>, hence
     given <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there exist a
     <math|N\<in\><around*|{|1,\<ldots\>,\<infty\>|}>> such that
-    <math|\<forall\>n\<geqslant\>N> <math|\<lambda\><rsup|k>=<around*|\||\<lambda\><rsup|k>-0|\|>\<less\>\<varepsilon\>\<cdot\><frac|1-\<lambda\>|\<lambda\><rsup|k>>>
-    so that <math|<frac|\<lambda\>|1-\<lambda\>>\<cdot\>\<lambda\><rsup|k>\<less\><frac|\<lambda\>|1-\<lambda\>>\<cdot\><frac|1-\<lambda\>|\<lambda\><rsup|k>>\<cdot\>\<varepsilon\>=\<varepsilon\>>,
+    <math|\<forall\>k\<geqslant\>N> <math|\<lambda\><rsup|k>=<around*|\||\<lambda\><rsup|k>-0|\|>\<less\>\<varepsilon\>\<cdot\><frac|1-\<lambda\>|1+\<lambda\><rsup|>>>
+    so that <math|<frac|\<lambda\>|1-\<lambda\>>\<cdot\>\<lambda\><rsup|k>\<less\><frac|\<lambda\>|1-\<lambda\>>\<cdot\><frac|1-\<lambda\>|\<lambda\>+1<rsup|>>\<cdot\>\<varepsilon\>=<frac|\<lambda\>|1+\<lambda\>>\<cdot\>\<varepsilon\>\<less\>\<varepsilon\>>,
     hence
 
     <\equation*>
