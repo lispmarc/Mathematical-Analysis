@@ -906,11 +906,11 @@
     <label|diff e-mapping><index|<math|\<varepsilon\>>-mapping>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    be normed spaces, <math|U\<subseteq\>X> a open set and <math|x\<in\>U>
+    be normed spaces, <math|U\<subseteq\>X> a open set and <math|0\<in\>U>
     then a <with|font-series|bold|<math|\<varepsilon\>>-mapping> is a
-    function <math|\<varepsilon\>:U<rsub|x>\<rightarrow\>Y> which is
-    continuous at <math|0\<in\>U<rsub|x>> [using the subspace topology on
-    <math|U<rsub|x>>] and satisfies <math|\<varepsilon\><around*|(|0|)>=0>.
+    function <math|\<varepsilon\>:U\<rightarrow\>Y> which is continuous at
+    <math|0\<in\>U> [using the subspace topology on <math|U>] and satisfies
+    <math|\<varepsilon\><around*|(|0|)>=0>.
   </definition>
 
   <\theorem>
@@ -18365,12 +18365,13 @@
 
   <\lemma>
     <label|lemma 16.228.127>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
-    be a normed space and <math|H\<in\>L<around*|(|X,X|)>> such that
-    <math|<big|sum><rsub|i=1><rsup|\<infty\>>H<rsup|i>> converges [using the
+    be a normed space, <math|k\<in\>\<bbb-N\>> and
+    <math|H\<in\>L<around*|(|X,X|)>> such that
+    <math|<big|sum><rsub|i=k><rsup|\<infty\>>H<rsup|i>> converges [using the
     norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>>] then
     <math|\<forall\>x\<in\>X> we have that
-    <math|<big|sum><rsub|i=1><rsup|\<infty\>>H<rsup|i><around*|(|x|)>>
-    converges and <math|<around*|(|<big|sum><rsub|i=1><rsup|\<infty\>>H<rsup|i>|)><around*|(|x|)>=<big|sum><rsub|i=1><rsup|\<infty\>>H<rsup|i><around*|(|x|)>>
+    <math|<big|sum><rsub|i=k><rsup|\<infty\>>H<rsup|i><around*|(|x|)>>
+    converges and <math|<around*|(|<big|sum><rsub|i=k><rsup|\<infty\>>H<rsup|i>|)><around*|(|x|)>=<big|sum><rsub|i=k><rsup|\<infty\>>H<rsup|i><around*|(|x|)>>
   </lemma>
 
   <\proof>
@@ -18379,26 +18380,26 @@
     we have that\ 
 
     <\equation*>
-      <around*|\<\|\|\>|<big|sum><rsub|i=1><rsup|n>H<rsup|i>-<big|sum><rsub|i=1><rsup|\<infty\>>H<rsup|i>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<less\><frac|\<varepsilon\>|1+<around*|\<\|\|\>|x|\<\|\|\>>>
+      <around*|\<\|\|\>|<big|sum><rsub|i=k><rsup|n>H<rsup|i>-<big|sum><rsub|i=k><rsup|\<infty\>>H<rsup|i>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<less\><frac|\<varepsilon\>|1+<around*|\<\|\|\>|x|\<\|\|\>>>
     </equation*>
 
     then we have\ 
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|<around*|\<\|\|\>|<big|sum><rsub|i=1><rsup|n>H<rsup|i><around*|(|x|)>-<around*|(|<big|sum><rsub|i=1><rsup|\<infty\>>H<rsup|i>|)><around*|(|x|)>|\<\|\|\>>>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|(|<big|sum><rsub|i=1><rsup|n>H<rsup|i>-<big|sum><rsub|i=1><rsup|\<infty\>>H<rsup|i>|)><around*|(|x|)>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|<big|sum><rsub|i=1><rsup|n>H<rsup|i>-<big|sum><rsub|i=1><rsup|\<infty\>>H<rsup|i>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>>>>|<row|<cell|>|<cell|\<less\>>|<cell|<frac|\<varepsilon\>|1+<around*|\<\|\|\>|x|\<\|\|\>>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>>>>|<row|<cell|>|<cell|\<less\>>|<cell|\<varepsilon\>>>>>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|<big|sum><rsub|i=k><rsup|n>H<rsup|i><around*|(|x|)>-<around*|(|<big|sum><rsub|i=k><rsup|\<infty\>>H<rsup|i>|)><around*|(|x|)>|\<\|\|\>>>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|(|<big|sum><rsub|i=k><rsup|n>H<rsup|i>-<big|sum><rsub|i=k><rsup|\<infty\>>H<rsup|i>|)><around*|(|x|)>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|<big|sum><rsub|i=k><rsup|n>H<rsup|i>-<big|sum><rsub|i=k><rsup|\<infty\>>H<rsup|i>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>>>>|<row|<cell|>|<cell|\<less\>>|<cell|<frac|\<varepsilon\>|1+<around*|\<\|\|\>|x|\<\|\|\>>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>>>>|<row|<cell|>|<cell|\<less\>>|<cell|\<varepsilon\>>>>>
     </eqnarray*>
 
-    proving that <math|<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=1><rsup|n>H<rsup|i><around*|(|x|)>>
+    proving that <math|<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=k><rsup|n>H<rsup|i><around*|(|x|)>>
     converges and
 
     <\equation*>
-      <below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=1><rsup|n>H<rsup|i><around*|(|x|)>=<around*|(|<big|sum><rsub|i=1><rsup|\<infty\>>H<rsup|i>|)><around*|(|x|)>
+      <below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=k><rsup|n>H<rsup|i><around*|(|x|)>=<around*|(|<big|sum><rsub|i=k><rsup|\<infty\>>H<rsup|i>|)><around*|(|x|)>
     </equation*>
 
     so that\ 
 
     <\equation*>
-      <big|sum><rsub|i=1><rsup|\<infty\>>H<rsup|i><around*|(|x|)>=<around*|(|<big|sum><rsub|i=1><rsup|\<infty\>>H<rsup|i>|)><around*|(|x|)>
+      <big|sum><rsub|i=k><rsup|\<infty\>>H<rsup|i><around*|(|x|)>=<around*|(|<big|sum><rsub|i=k><rsup|\<infty\>>H<rsup|i>|)><around*|(|x|)>
     </equation*>
 
     \;
@@ -18711,14 +18712,14 @@
         16.317.128>>>>>
       </eqnarray*>
 
-      Take <math|\<delta\>=max<around*|(|1,<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>+1|)>\<in\>\<bbb-R\><rsup|+>>
-      then if <math|<around*|\<\|\|\>|H-L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<less\><frac|1|\<delta\>>>
+      Take <math|\<delta\><rsub|L>=<frac|1|<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>+1>\<in\>\<bbb-R\><rsup|+>>
+      then if <math|<around*|\<\|\|\>|H-L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<less\>\<delta\><rsub|L>>
       we have that\ 
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|<around*|\<\|\|\>|L<rsup|-1>\<circ\><around*|(|H-L|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>|<cell|\<leqslant\><rsub|<text|[theorem:
         <reference|continuity composition of continuous linear
-        mapping>]>>>|<cell|<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|H-L|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|\<less\>>|<cell|<frac|<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>|\<delta\>>>>|<row|<cell|>|<cell|=>|<cell|<frac|<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>|max<around*|(|1,<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>+1|)>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<frac|<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>|<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>+1>>>|<row|<cell|>|<cell|\<less\>>|<cell|1>>>>
+        mapping>]>>>|<cell|<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|H-L|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|\<less\>>|<cell|<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\>\<delta\><rsub|L>>>|<row|<cell|>|<cell|=>|<cell|<frac|<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>|<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>+1>>>|<row|<cell|>|<cell|\<less\>>|<cell|1>>>>
       </eqnarray*>
 
       Hence <math|<around*|\<\|\|\>|L<rsup|-1>\<circ\><around*|(|H-L|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,1|)>>
@@ -18729,15 +18730,16 @@
         Id<rsub|X>+L<rsup|-1>\<circ\><around*|(|H-L|)>\<in\>\<cal-G\>L<around*|(|X|)>
       </equation*>
 
-      and as <math|L\<in\>\<cal-G\>L<around*|(|X|)>> we have that
+      and as <math|L\<in\>\<cal-G\>L<around*|(|X|)>> we have by [theorem:
+      <reference|diff GL(X) is a group>] that
       <math|L\<circ\><around*|(|Id<rsub|X>+L<rsup|-1>\<circ\><around*|(|H-L|)>|)>\<in\>\<cal-G\>L<around*|(|X|)>>,
       so by [eq: <reference|eq 16.317.128>] <math|H\<in\>GL<around*|(|X|)>>.
-      In other words if <math|H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|L,1|)>>
+      In other words if <math|H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|L,\<delta\><rsub|L>|)>>
       then <math|H\<in\>\<cal-G\>L<around*|(|X|)>> so that\ 
 
       <\equation>
         <label|eq 16.318.129>\<forall\>L\<in\>\<cal-G\>L<around*|(|X|)><text|
-        we have >B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|L,1|)>\<subseteq\>\<cal-G\>L<around*|(|X|)>
+        we have >L\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|L,\<delta\><rsub|L>|)>\<subseteq\>\<cal-G\>L<around*|(|X|)>
       </equation>
 
       which proves that\ 
@@ -18746,25 +18748,23 @@
         \<cal-G\>L<around*|(|X|)><text| is a open set>
       </equation*>
 
-      <item>Let <math|L\<in\>L<around*|(|X,X|)>>. If
-      <math|H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|L,1|)>>
-      then <math|<around*|\<\|\|\>|H-L|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<less\>1>
+      <item>If <math|H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|Id<rsub|X>,1|)>>
+      then <math|<around*|\<\|\|\>|H-Id<rsub|X>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<less\>1>
       so that by [corollary: <reference|diff I+H has inverse if norm of H is
-      less then 1>] that
+      less then 1>]
 
       <\equation*>
-        H=Id<rsub|X>+<around*|(|H-L|)>\<in\>\<cal-G\>L<around*|(|X|)>
+        H=Id<rsub|X>+<around*|(|H-Id<rsub|X>|)>\<in\>\<cal-G\>L<around*|(|X|)>
       </equation*>
 
       so that\ 
 
       <\equation>
-        <label|eq 16.318.128><label|eq 16.319.129>\<forall\>L\<in\>\<cal-G\>L<around*|(|X|)><text|
-        we have >B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|L,1|)>\<subseteq\>\<cal-G\>L<around*|(|X|)>
+        <label|eq 16.318.128><label|eq 16.319.129>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|Id<rsub|X>,1|)>\<subseteq\>\<cal-G\>L<around*|(|X|)>
       </equation>
 
       To prove differentiability we will rely on [corollary: <reference|diff
-      differentiability alternative definitions (1)>] hence the need for a
+      differentiability alternative definitions (1)>], hence the need for a
       <math|\<varepsilon\>>-mapping [see definition: <reference|diff
       e-mapping>]. Let <math|H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,1|)>>
       then by \ [corollary: <reference|diff I+H has inverse if norm of H is
@@ -18778,7 +18778,7 @@
       </equation>
 
       As <math|0,> <math|><math|<big|sum><rsub|i=2><rsup|\<infty\>><around*|(|-1|)><rsup|i>\<cdot\>H<rsup|i>\<in\>L<around*|(|X,X|)>>
-      it follows that
+      it follows that the following function is well defined
 
       \;
 
@@ -18815,7 +18815,7 @@
       we have <math|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<less\>1>
       so that by [example: <reference|series power series in R>]
       <math|<big|sum><rsub|i=1><rsup|\<infty\>><around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>><rsup|i>=<frac|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>|1-<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>.
-      Hence we have by [theorem: <reference|series partition series>]
+      Hence we have by [theorem: <reference|series partition series>] that
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|<big|sum><rsub|i=2><rsup|\<infty\>><around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>><rsup|i>>|<cell|\<equallim\><rsub|<text|[eq:
@@ -18825,9 +18825,11 @@
 
       As by [theorem: <reference|diff H^n properties>] we have
       <math|<around*|\<\|\|\>|<around*|(|-1|)><rsup|i>H<rsup|i>|\<\|\|\>><rsub|L<around*|(|X,X|)>>=<around*|\<\|\|\>|H<rsup|i>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<leqslant\><around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>><rsup|i>>
-      we can apply dominant convergence [theorem: <reference|series absolute
-      dominant convergence>] giving <math|<around*|\<\|\|\>|<big|sum><rsup|\<infty\>><rsub|i=2><around*|(|-1|)><rsup|i>\<cdot\>H<rsup|i>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<leqslant\><frac|<around*|\<\|\|\>|H|\<\|\|\>><rsup|2><rsub|L<around*|(|X,X|)>>|1-<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>.
-      Substituting this in [eq: <reference|eq 16.321.128>] gives\ 
+      we can apply the dominant convergence theorem [theorem:
+      <reference|series absolute dominant convergence>] proving that
+      <math|<around*|\<\|\|\>|<big|sum><rsup|\<infty\>><rsub|i=2><around*|(|-1|)><rsup|i>\<cdot\>H<rsup|i>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>
+      converges and \ <math|<around*|\<\|\|\>|<big|sum><rsup|\<infty\>><rsub|i=2><around*|(|-1|)><rsup|i>\<cdot\>H<rsup|i>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<leqslant\><frac|<around*|\<\|\|\>|H|\<\|\|\>><rsup|2><rsub|L<around*|(|X,X|)>>|1-<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>.
+      Substituting this result in [eq: <reference|eq 16.321.128>] gives\ 
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<varepsilon\><around*|(|H|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>|<cell|\<leqslant\>>|<cell|<choice|<tformat|<table|<row|<cell|0\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><text|
@@ -18844,13 +18846,13 @@
         we have ><around*|\<\|\|\>|\<varepsilon\><around*|(|H|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<leqslant\><frac|<around*|\<\|\|\>|H|\<\|\|\>><rsup|><rsub|L<around*|(|X,X|)>>|1-<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>
       </equation>
 
-      Hence given <math|\<zeta\>\<in\>\<bbb-R\><rsup|+>> we have if
+      Let <math|\<zeta\>\<in\>\<bbb-R\><rsup|+>> then if
       <math|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<less\>min<around*|(|<frac|1|2>,<frac|\<zeta\>|2>|)>\<less\>1>
-      that\ 
+      it follows that
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<varepsilon\><around*|(|H|)>-\<varepsilon\><around*|(|0|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>|<cell|=>|<cell|<around*|\<\|\|\>|\<varepsilon\><around*|(|H|)>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[eq:
-        <reference|eq 16.325.131>]>>>|<cell|<frac|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>|1-<around*|\<\|\|\>|H|\<\|\|\>>>>>|<row|<cell|>|<cell|\<less\>>|<cell|<frac|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>|1-<frac|1|2>>>>|<row|<cell|>|<cell|\<less\>>|<cell|<frac|\<zeta\>|2>\<cdot\><frac|2|>>>|<row|<cell|>|<cell|=>|<cell|\<zeta\>>>>>
+        <reference|eq 16.325.131>]>>>|<cell|<frac|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>|1-<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>>|<row|<cell|>|<cell|\<less\>>|<cell|<frac|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>|1-<frac|1|2>>>>|<row|<cell|>|<cell|\<less\>>|<cell|<frac|\<zeta\>|2>\<cdot\><frac|2|1>>>|<row|<cell|>|<cell|=>|<cell|\<zeta\>>>>>
       </eqnarray*>
 
       which proves that\ 
@@ -18859,11 +18861,11 @@
         <label|eq 16.325.129>\<varepsilon\><text| is continuous at >0
       </equation>
 
-      Using the above it follows that\ 
+      or using [definition: <reference|diff e-mapping>]
 
       <\equation>
-        <label|eq 16.327.130>\<forall\>L\<in\>\<cal-G\>L<around*|(|X|)><text|
-        >\<varepsilon\><text| is a >\<varepsilon\><text|-mapping at >L
+        <label|eq 16.327.130>\<varepsilon\><text| is a
+        >\<varepsilon\><text|-mapping>
       </equation>
 
       Consider <math|L\<in\>\<cal-G\>L<around*|(|X|)>> then we have the
@@ -18884,22 +18886,16 @@
         we have using the above that\ 
 
         <\eqnarray*>
-          <tformat|<table|<row|<cell|\<tau\><around*|(|Id<rsub|X>+H|)>-\<tau\><around*|(|Id<rsub|X>|)>-<around*|(|-H|)>>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|0<text|
+          <tformat|<table|<row|<cell|\<tau\><around*|(|Id<rsub|X>+H|)>-\<tau\><around*|(|Id<rsub|X>|)>-<around*|(|-H|)>>|<cell|=>|<cell|>>|<row|<cell|<choice|<tformat|<table|<row|<cell|0<text|
           if >H=0>>|<row|<cell|<big|sum><rsub|i=2><rsup|\<infty\>><around*|(|-1|)><rsup|i>\<cdot\>H<rsup|i><text|
-          if >H\<neq\>0>>>>>>>|<row|<cell|>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|0\<cdot\>H<text|
-          if >H=0>>|<row|<cell|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|(|<frac|1|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>>\<cdot\><big|sum><rsub|i=2><rsup|\<infty\>><around*|(|-1|)><rsup|i>\<cdot\>H<rsup|i>|)><text|
-          if >H\<neq\>0>>>>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\>\<varepsilon\><around*|(|H|)><eq-number><label|eq
+          if >H\<neq\>0>>>>>>|<cell|=>|<cell|>>|<row|<cell|<choice|<tformat|<table|<row|<cell|0\<cdot\>H<text|
+          if >H=0>>|<row|<cell|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|(|<frac|1|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>\<cdot\><big|sum><rsub|i=2><rsup|\<infty\>><around*|(|-1|)><rsup|i>\<cdot\>H<rsup|i>|)><text|
+          if >H\<neq\>0>>>>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\>\<varepsilon\><around*|(|H|)>>|<cell|>|<cell|<eq-number><label|eq
           16.327.134>>>>>
         </eqnarray*>
 
-        Let <math|x\<in\>X> then <math|<around*|(|-Id<rsub|X>\<circ\>H\<circ\>Id<rsub|X>|)><around*|(|x|)>=-Id<rsub|X><around*|(|H<around*|(|Id<rsub|X>|)>|)>=-H<around*|(|x|)>>
-        it follows that\ 
-
-        <\equation>
-          <label|eq 16.328.130>-H=-Id<rsub|X>\<circ\>H\<circ\>Id<rsub|X>
-        </equation>
-
-        so that\ 
+        As <math|-Id<rsub|X>\<circ\>H\<circ\>Id<rsub|X>=-H> we have from the
+        above that
 
         <\equation>
           <label|eq 16.329.131>\<tau\><around*|(|Id<rsub|X>+H|)>-\<tau\><around*|(|Id<rsub|X>|)>-<around*|(|-Id<rsub|X>\<circ\>H\<circ\>Id<rsub|X>|)>=<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\>\<varepsilon\><around*|(|H|)>
@@ -18909,8 +18905,7 @@
         and
 
         <\equation*>
-          -Id<rsub|L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>><around*|(|H|)>=-H<rsub|>\<equallim\><rsub|<text|[eq:
-          <reference|eq 16.328.130>]>>-Id<rsub|X>\<circ\>H\<circ\>Id<rsub|X>
+          -Id<rsub|L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>><around*|(|H|)>=-H<rsub|>=-Id<rsub|X>\<circ\>H\<circ\>Id<rsub|X>
         </equation*>
 
         So that <math|\<forall\>H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,1|)>>
@@ -18920,35 +18915,29 @@
           <label|eq 16.329.133>\<tau\><around*|(|Id<rsub|X>+H|)>-\<tau\><around*|(|Id<rsub|X>|)>-<around*|(|-Id<rsub|L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>>|)><around*|(|H|)>=<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\>\<varepsilon\><around*|(|H|)>
         </equation>
 
-        hence using the fact that <math|\<varepsilon\>> is a
-        <math|\<varepsilon\>>-mapping at <math|Id<rsub|X>> [see eq:
-        <reference|eq 16.327.130>] we can apply [theorem: <reference|diff
-        differentiability alternative definitions> (2)] proving that\ 
+        Using the above, the fact that <math|\<varepsilon\>> is a
+        <math|\<varepsilon\>>-mapping [see eq: <reference|eq 16.327.130>] and
+        <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|Id<rsub|X>,1|)>\<subseteq\>\<cal-G\>L<around*|(|X|)>>
+        [see eq: <reference|eq 16.318.128>] we can apply [corollary:
+        <reference|diff differentiability alternative definitions (1)>]
+        resulting in
 
         <\equation*>
-          D \<tau\><around*|(|Id<rsub|X>|)><text| exist and
-          >D\<tau\><around*|(|Id<rsub|X>|)>=-Id<rsub|L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>>
+          D<rsub|Id<rsub|X>> \<tau\><text| exist and
+          >D<rsub|Id<rsub|X>>\<tau\>=-Id<rsub|L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>>
         </equation*>
 
-        Define
+        where <math|D<rsub|Id<rsub|X>>\<tau\>\<in\>L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>>
+        is defined by
 
         <\equation*>
-          \<psi\>:L<around*|(|X,X|)>\<rightarrow\>L<around*|(|X,X|)><text| by
-          >\<psi\><around*|(|H|)>=-Id<rsub|X>\<circ\>H\<circ\>Id<rsub|X>=-H
-        </equation*>
-
-        so that <math|\<psi\>=-Id<rsub|L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>>>
-        hence\ 
-
-        <\equation*>
-          D<rsub|Id<rsub|X>>\<tau\>=\<psi\>
+          D<rsub|Id<rsub|X>>\<tau\><around*|(|H|)>=-Id<rsub|L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>><around*|(|H|)>=-H=-Id<rsub|X>\<circ\>H\<circ\>Id<rsub|X>
         </equation*>
 
         <item*|<math|L\<neq\>Id<rsub|X>>>Take
         <math|\<delta\>=min<around*|(|<frac|1|1+<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>,1|)>>
-        then if <math|H\<in\>L<around*|(|X,X|)>> with
-        <math|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<less\>\<delta\>>
-        we have:
+        then if <math|H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L*X,X>><around*|(|0,\<delta\>|)>>
+        we have
 
         <\eqnarray*>
           <tformat|<table|<row|<cell|<around*|\<\|\|\>|H\<circ\>L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>|<cell|\<leqslant\><rsub|<text|[theorem:
@@ -18960,29 +18949,32 @@
         is less then 1>] we get
 
         <\equation>
-          <label|eq 16.330.130>\<forall\>H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,\<delta\>|)><text|
-          we have that >Id<rsub|X>+H\<circ\>L<rsup|-1>\<in\>\<cal-G\>L<around*|(|X|)>
+          <label|eq 16.330.130>Id<rsub|X>+H\<circ\>L<rsup|-1>\<in\>\<cal-G\>L<around*|(|X|)>
         </equation>
 
         As <math|L\<in\>\<cal-G\>L<around*|(|X|)>> we have that
         <math|<around*|(|Id<rsub|X>+H\<circ\>L<rsup|-1>|)>\<circ\>L\<in\>\<cal-G\>L<around*|(|X|)>>,
-        further by [theorem:<reference|continuity composition is
-        multilinear>] <math|<around*|(|Id<rsub|X>+H\<circ\>L<rsup|-1>|)>\<circ\>L=Id<rsub|X>\<circ\>L+<around*|(|H\<circ\>L<rsup|-1>|)>\<circ\>L=Id<rsub|X>\<circ\>L+H=L+H>
-        it follows that
+        further we have that <math|<around*|(|Id<rsub|X>+H\<circ\>L<rsup|-1>|)>\<circ\>L\<equallim\><rsub|<text|[theorem:
+        <reference|continuity composition is
+        multilinear>]>>Id<rsub|X>\<circ\>L+<around*|(|H\<circ\>L<rsup|-1>|)>\<circ\>L=Id<rsub|X>\<circ\>L+H=L+H>,
+        hence \ it follows that
 
         <\equation>
           <label|eq 16.330.131>L+H=<around*|(|Id<rsub|X>+H\<circ\>L<rsup|-1>|)>\<circ\>L\<in\>\<cal-G\>L<around*|(|X|)>
         </equation>
 
-        If <math|H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|L,\<delta\>|)>\<subseteq\><rsub|\<delta\>\<leqslant\>1>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|L,1|)>>
-        then by [eq: <reference|eq 16.318.128>]
-        <math|H\<in\>\<cal-G\>L<around*|(|X|)>> so that\ 
+        If <math|H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|L,\<delta\>|)>>
+        then <math|<around*|\<\|\|\>|H-L|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<less\>\<delta\>>
+        so that <math|L-H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,\<delta\>|)>>
+        so that by [eq: <reference|eq 16.330.131>]
+        <math|L=<around*|(|L-H|)>+H\<in\>\<cal-G\>L<around*|(|X|)>> proving
+        that
 
         <\equation>
           <label|eq 16.331.131>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|L,\<delta\>|)>\<subseteq\>\<cal-G\>L<around*|(|X|)>
         </equation>
 
-        If <math|H\<in\><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|L,\<delta\>|)>|)><rsub|L>>
+        If <math|H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,\<delta\>|)>>
         then by [theorem: <reference|continuity composition of continuous
         linear mapping>] we have\ 
 
@@ -18997,10 +18989,11 @@
         </equation*>
 
         proving, as <math|dom<around*|(|\<varepsilon\>|)>\<equallim\><rsub|<text|[eq:
-        <reference|eq 16.320.128>]>>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,1|)>>\ 
+        <reference|eq 16.320.128>]>>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,1|)>>,
+        that
 
         <\equation*>
-          \<forall\>H\<in\><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|L,\<delta\>|)>|)><rsub|L><text|
+          \<forall\>H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,\<delta\>|)><text|
           we have that >\<varepsilon\><around*|(|H\<circ\>L<rsup|-1>|)><text|
           is defined>
         </equation*>
@@ -19016,7 +19009,7 @@
 
         <\eqnarray*>
           <tformat|<table|<row|<cell|\<tau\><around*|(|L+H|)>-\<tau\><around*|(|H|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|L+H|)><rsup|-1>-L<rsup|-1>>|<cell|\<equallim\><rsub|<text|[eq:
-          <reference|eq 16.330.130>]>>>|<cell|>>|<row|<cell|<around*|(|<around*|(|Id<rsub|X>+H\<circ\>L<rsup|-1>|)>\<circ\>L|)><rsup|-1>-L<rsup|-1>>|<cell|=>|<cell|>>|<row|<cell|L<rsup|-1>\<circ\><around*|(|Id<rsub|X>+H\<circ\>L<rsup|-1>|)><rsup|-1>-L<rsup|-1>>|<cell|=>|<cell|>>|<row|<cell|L<rsup|-1>\<circ\><around*|(|Id<rsub|X>+H\<circ\>L<rsup|-1>|)><rsup|-1>-L<rsup|-1>\<circ\>Id<rsub|X>>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|eq 16.330.131>]>>>|<cell|>>|<row|<cell|<around*|(|<around*|(|Id<rsub|X>+H\<circ\>L<rsup|-1>|)>\<circ\>L|)><rsup|-1>-L<rsup|-1>>|<cell|=>|<cell|>>|<row|<cell|L<rsup|-1>\<circ\><around*|(|Id<rsub|X>+H\<circ\>L<rsup|-1>|)><rsup|-1>-L<rsup|-1>>|<cell|=>|<cell|>>|<row|<cell|L<rsup|-1>\<circ\><around*|(|Id<rsub|X>+H\<circ\>L<rsup|-1>|)><rsup|-1>-L<rsup|-1>\<circ\>Id<rsub|X>>|<cell|\<equallim\><rsub|<text|[theorem:
           <reference|continuity composition is
           multilinear>]>>>|<cell|>>|<row|<cell|L<rsup|-1>\<circ\><around*|(|<around*|(|Id<rsub|X>+H\<circ\>L<rsup|-1>|)><rsup|-1>-Id<rsub|X>|)>>|<cell|=>|<cell|>>|<row|<cell|L<rsup|-1>\<circ\><around*|(|\<tau\><around*|(|Id<rsub|X>+H\<circ\>L<rsup|-1>|)>-Id<rsub|X>|)>>|<cell|=>|<cell|>>|<row|<cell|L<rsup|-1>\<circ\><around*|(|\<tau\><around*|(|Id<rsub|X>+H\<circ\>L<rsup|-1>|)>-Id<rsub|X><rsup|-1>|)>>|<cell|=>|<cell|>>|<row|<cell|L<rsup|-1>\<circ\><around*|(|\<tau\><around*|(|Id<rsub|X>+H\<circ\>L<rsup|-1>|)>-\<tau\><around*|(|Id<rsub|X>|)>|)>>|<cell|\<equallim\><rsub|<text|[eq:
           <reference|eq 16.334.133>]>>>|<cell|>>|<row|<cell|L<rsup|-1>\<circ\><around*|(|-H\<circ\>L<rsup|-1>+<around*|\<\|\|\>|H\<circ\>L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\>\<varepsilon\><around*|(|H\<circ\>L<rsup|-1>|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
@@ -19036,20 +19029,20 @@
         we can define the following function
 
         <\equation*>
-          \<varepsilon\><rprime|'>:B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,1|)>\<rightarrow\>L<around*|(|X,X|)><text|
+          \<varepsilon\><rprime|'>:B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,\<delta\>|)>\<rightarrow\>L<around*|(|X,X|)><text|
           by >\<varepsilon\><rprime|'><around*|(|H|)>=<choice|<tformat|<table|<row|<cell|0<text|
           if >H=0>>|<row|<cell|<frac|<around*|\<\|\|\>|H\<circ\>L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>\<cdot\>L<rsup|-1>\<circ\>\<varepsilon\><around*|(|H\<circ\>L<rsup|-1>|)><text|
           if >H\<neq\>0>>>>>
         </equation*>
 
-        then <math|\<forall\>H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,1|)>>
+        then <math|\<forall\>H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,\<delta\>|)>>
 
         <\equation>
           <label|eq 16.336.134><around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\>\<varepsilon\><rprime|'><around*|(|H|)>=<around*|\<\|\|\>|H\<circ\>L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\>L<rsup|-1>\<circ\>\<varepsilon\><around*|(|H\<circ\>L<rsup|-1>|)>
         </equation>
 
-        Let <math|H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,1|)>>
-        then for <math|x\<in\>X> we have
+        Further for <math|H\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,X|)>>><around*|(|0,\<delta\>|)>>
+        and <math|x\<in\>X> we have
 
         <\eqnarray*>
           <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<varepsilon\><rprime|'><around*|(|H|)><around*|(|x|)>|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<choice|<tformat|<table|<row|<cell|0<around*|(|x|)><text|
@@ -19088,7 +19081,7 @@
         then
 
         <\equation*>
-          <around*|\<\|\|\>|\<varepsilon\><around*|(|H|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<less\><frac|\<zeta\>|<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsup|2><rsub|L<around*|(|X,X|)>>+1>.
+          <around*|\<\|\|\>|\<varepsilon\><around*|(|H|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<less\><frac|\<zeta\>|<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsup|2><rsub|L<around*|(|X,X|)>>+1>
         </equation*>
 
         Take <math|\<delta\><rsub|2>=<frac|\<delta\><rsub|1>|<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>+1>>
@@ -19098,7 +19091,7 @@
         <\equation*>
           <around*|\<\|\|\>|H\<circ\>L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<leqslant\><rsub|<text|[<reference|continuity
           composition of continuous linear
-          mapping>]>><around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<less\><frac|\<delta\><rsub|1>|<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>\<cdot\><around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<less\>\<delta\><rsub|1>
+          mapping>]>><around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<less\><frac|\<delta\><rsub|1>|<around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>+1>\<cdot\><around*|\<\|\|\>|L<rsup|-1>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<less\>\<delta\><rsub|1>
         </equation*>
 
         so that\ 
@@ -19159,7 +19152,7 @@
 
         <\equation>
           <label|eq 16.338.133>\<psi\>\<in\>L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)><text|
-          and ><around*|\<\|\|\>|\<psi\>|\<\|\|\>><rsub|L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>>
+          and ><around*|\<\|\|\>|\<psi\>|\<\|\|\>><rsub|L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,X|)>><rsup|2>
         </equation>
 
         Next\ 
@@ -19170,37 +19163,32 @@
           <reference|eq 16.336.134>]>>>|<cell|<around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\>\<varepsilon\><rprime|'><around*|(|H|)>>>>>
         </eqnarray*>
 
-        Finally applying [corollary: <reference|diff differentiability
-        alternative definitions (1)>] we have that <math|\<tau\>> is Fréchet
-        differentiable at <math|L> and\ 
+        Finally using [eqs: <reference|eq 16.331.131>, <reference|eq
+        16.337.133> and the aboce allows us to] apply [corollary:
+        <reference|diff differentiability alternative definitions (1)>]
+        proving that <math|\<tau\>> is Fréchet differentiable at <math|L> and\ 
 
         <\equation*>
           D<rsub|L>\<tau\>=\<psi\>
         </equation*>
+
+        so that <math|D<rsub|L>\<tau\>\<in\>L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>>
+        is defined by <math|D<rsub|L>\<tau\><around*|(|H|)>=\<psi\><around*|(|H|)>=-L\<circ\>H\<circ\>L>.
       </description>
 
       So in all cases we have that <math|\<forall\>L\<in\>\<cal-G\>L<around*|(|X|)>>
-      <math|\<tau\>> is Fréchet differentiable at <math|L> and\ 
+      <math|\<tau\>> is Fréchet differentiable at <math|L> and
+      <math|D<rsub|L>\<tau\>\<in\>L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>>
+      is defined by <math|D<rsub|L>\<tau\><around*|(|H|)>=-L\<circ\>H\<circ\>L>.
 
-      <\equation*>
-        D<rsub|L>\<tau\>=\<psi\>
-      </equation*>
-
-      where <math|\<psi\>\<in\>L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>>
-      is defined by <math|\<psi\><around*|(|H|)>=-L\<circ\>H\<circ\>L>
-
-      <item>To prove that <math|\<tau\>> is of class <math|C<rsup|\<infty\>>>
-      we must by [theorem: <reference|diff C-infinity condition>] only prove
-      that <math|\<tau\>> is <math|n>-times differentiable on
-      <math|\<cal-G\>L<around*|(|X|)>> for every <math|n\<in\>\<bbb-N\>>.
-      Using (2) we have that <math|\<forall\>L\<in\>\<cal-G\>L<around*|(|X|)>>
+      <item>Using (2) we have that <math|\<forall\>L\<in\>\<cal-G\>L<around*|(|X|)>>
       <math|\<tau\>> has a Fréchet differential <math|D<rsub|L>\<tau\>> at
       <math|L> where <math|D<rsub|L>\<tau\>\<in\>L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>>
-      is defined by <math|D<rsub|L>\<tau\><around*|(|H|)>>. Hence we can
-      define\ 
+      is defined by <math|D<rsub|L>\<tau\><around*|(|H|)>=-L\<circ\>H\<circ\>L>.
+      Hence we can define\ 
 
       <\equation*>
-        D \<tau\><rsup|<around*|[|1|]>>:\<cal-G\>L<around*|(|X|)>\<rightarrow\>L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)><text|
+        D<rsup|<around*|[|1|]>> \<tau\>:\<cal-G\>L<around*|(|X|)>\<rightarrow\>L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)><text|
         by >D<rsup|<around*|[|1|]>>\<tau\><around*|(|L|)>=D<rsub|L>\<tau\>
       </equation*>
 
@@ -19211,8 +19199,9 @@
         >D<rsub|L><around*|(|\<tau\>|)><around*|(|H|)>=-L\<circ\>H\<circ\>L
       </equation>
 
-      We proceed now to write <math|D \<tau\>> as the composition of
-      <math|\<infty\>>-times differentiable mappings. Define\ 
+      We proceed now to show that <math|D <rsup|<around*|[|1|]>>\<tau\>> is
+      the composition of <math|\<infty\>>-times differentiable mappings and
+      <math|\<tau\>>. \ Define\ 
 
       <\equation*>
         \<chi\>:\<cal-G\>L<around*|(|X|)>\<rightarrow\>\<cal-G\>L<around*|(|X|)>\<cdot\>\<cal-G\>L<around*|(|X|)><text|
@@ -19367,8 +19356,8 @@
       We use now induction for the final part of the proof for (3). So define\ 
 
       <\equation*>
-        S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|\<tau\><text| is
-        >n<text|-times differentiable on >\<cal-G\>L<around*|(|X|)>|}>
+        S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|\<tau\><text| is of class
+        >C<rsup|n>|}>
       </equation*>
 
       then we have:
@@ -19401,6 +19390,8 @@
       of class <math|C<rsup|\<infty\>>>.
     </enumerate>
   </proof>
+
+  \;
 
   \;
 
@@ -19610,7 +19601,6 @@
     <associate|diff identity function is differentiable|<tuple|16.19|?>>
     <associate|diff increasing decreasing function|<tuple|16.133|?>>
     <associate|diff inifint=ite differentiable|<tuple|16.89|?>>
-    <associate|diff inverse mapping is c-infinite|<tuple|16.234|?>>
     <associate|diff inverse mapping on GL(X)|<tuple|16.234|?>>
     <associate|diff left and right derivate|<tuple|16.139|?>>
     <associate|diff left and right derivate and derivate|<tuple|16.141|?>>
@@ -19912,26 +19902,26 @@
     <associate|eq 16.327.130|<tuple|16.326|?>>
     <associate|eq 16.327.134|<tuple|16.327|?>>
     <associate|eq 16.328.130|<tuple|16.328|?>>
-    <associate|eq 16.329.131|<tuple|16.329|?>>
-    <associate|eq 16.329.133|<tuple|16.330|?>>
+    <associate|eq 16.329.131|<tuple|16.328|?>>
+    <associate|eq 16.329.133|<tuple|16.329|?>>
     <associate|eq 16.33.181|<tuple|16.35|?>>
-    <associate|eq 16.330.130|<tuple|16.331|?>>
-    <associate|eq 16.330.131|<tuple|16.332|?>>
-    <associate|eq 16.331.131|<tuple|16.333|?>>
-    <associate|eq 16.334.133|<tuple|16.334|?>>
-    <associate|eq 16.335.133|<tuple|16.335|?>>
-    <associate|eq 16.336.133|<tuple|16.337|?>>
-    <associate|eq 16.336.134|<tuple|16.336|?>>
-    <associate|eq 16.337.133|<tuple|16.338|?>>
-    <associate|eq 16.338.133|<tuple|16.339|?>>
+    <associate|eq 16.330.130|<tuple|16.330|?>>
+    <associate|eq 16.330.131|<tuple|16.331|?>>
+    <associate|eq 16.331.131|<tuple|16.332|?>>
+    <associate|eq 16.334.133|<tuple|16.333|?>>
+    <associate|eq 16.335.133|<tuple|16.334|?>>
+    <associate|eq 16.336.133|<tuple|16.336|?>>
+    <associate|eq 16.336.134|<tuple|16.335|?>>
+    <associate|eq 16.337.133|<tuple|16.337|?>>
+    <associate|eq 16.338.133|<tuple|16.338|?>>
     <associate|eq 16.34.181|<tuple|16.36|?>>
-    <associate|eq 16.340.133|<tuple|16.341|?>>
-    <associate|eq 16.340.134|<tuple|16.340|?>>
-    <associate|eq 16.341.133|<tuple|16.342|?>>
-    <associate|eq 16.342.133|<tuple|16.343|?>>
-    <associate|eq 16.343.133|<tuple|16.344|?>>
-    <associate|eq 16.344.133|<tuple|16.345|?>>
-    <associate|eq 16.346.134|<tuple|16.346|?>>
+    <associate|eq 16.340.133|<tuple|16.340|?>>
+    <associate|eq 16.340.134|<tuple|16.339|?>>
+    <associate|eq 16.341.133|<tuple|16.341|?>>
+    <associate|eq 16.342.133|<tuple|16.342|?>>
+    <associate|eq 16.343.133|<tuple|16.343|?>>
+    <associate|eq 16.344.133|<tuple|16.344|?>>
+    <associate|eq 16.346.134|<tuple|16.345|?>>
     <associate|eq 16.35.181|<tuple|16.37|?>>
     <associate|eq 16.36.182|<tuple|16.38|?>>
     <associate|eq 16.37.182|<tuple|16.39|?>>

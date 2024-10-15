@@ -19602,7 +19602,7 @@
     be a Banach space, <math|<around*|{|s<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\><around*|[|0,\<infty\>|[>>
     such that <math|<big|sum><rsub|i=k><rsup|\<infty\>>s<rsub|i>> is
     convergent and <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>X>
-    satisfying <math|\<forall\>i\<in\><around*|{|k,\<ldots\>\<infty\>|}>>
+    satisfies <math|\<forall\>i\<in\><around*|{|k,\<ldots\>\<infty\>|}>>
     <math|<around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\<leqslant\>s<rsub|i>> then\ 
 
     <\equation*>
@@ -22911,7 +22911,7 @@
       14.9<space|2spc>Convergence <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-85>
 
-      <with|par-left|<quote|1tab>|14.9.1<space|2spc>Sequences and limit
+      <with|par-left|<quote|1tab>|14.9.1<space|2spc>Sequences and limits
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-86>>
 
