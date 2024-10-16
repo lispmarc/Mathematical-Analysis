@@ -19391,13 +19391,195 @@
     </enumerate>
   </proof>
 
-  \;
+  We introduce now the concept of differentiable functions who have a
+  differentiable inverse.
 
-  \;
+  <\definition>
+    <label|diff diffeomorphism><index|diff diffeomorphism>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|U> a open set in <math|X>, <math|V> a open set in
+    <math|Y> and <math|f:U\<rightarrow\>V> a function then we say that
 
-  \;
+    <\enumerate>
+      <item><math|f> is a <with|font-series|bold|diffeomorphism> iff
 
-  \;
+      <\enumerate>
+        <item><math|f:U\<rightarrow\>V> is a bijection
+
+        <item><math|f:U\<rightarrow\>Y > is differentiable on <math|U>
+
+        <item><math|f<rsup|-1>:V\<rightarrow\>X> is differentiable on
+        <math|V>
+      </enumerate>
+
+      <item><math|f> is a <with|font-series|bold|diffeomorphism of class
+      <math|C<rsup|n>>> where <math|n\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>
+      iff
+
+      <\enumerate>
+        <item><math|f:U\<rightarrow\>V> is a bijection
+
+        <item><math|f:U\<rightarrow\>Y> is of class <math|C<rsup|n>>
+
+        <item><math|f<rsup|-1>:V\<rightarrow\>X> is of class <math|C<rsup|n>>
+      </enumerate>
+    </enumerate>
+  </definition>
+
+  <\example>
+    <label|diff homeomorphism is a diffeomorphism of class C^0>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces then a homeomorphism <math|f:X\<rightarrow\>Y> is of
+    class <math|C<rsup|0>>
+  </example>
+
+  <\proof>
+    This follows trivially from the definitions of a homeomorphism
+    [definition: <reference|continuity homeomorphism>] and diffeomorphism of
+    class <math|C<rsup|0>> [definition: <reference|diff diffeomorphism>].
+  </proof>
+
+  <\example>
+    <label|diff linear isomorphism between Banach spaces are
+    diffeomorphisms>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be Banach spaces and <math|L:X\<rightarrow\>Y> a continuous linear
+    isomorphism [in other words <math|L\<in\>L<around*|(|X,Y|)>> and <math|L>
+    is a bijection] then <math|L> is a diffeomorphism of class
+    <math|C<rsup|\<infty\>>>.
+  </example>
+
+  <\proof>
+    First using [theorem: <reference|complete continuous linear isomorphism
+    is a homeomorphism>] is a homeomorphism so that <math|L,L<rsup|-1>> are
+    continuous. Taking in account [theorem: <reference|linear mapping inverse
+    of a isomorphism>] we have also that <math|L<rsup|-1>> is linear. So
+    <math|L\<in\>L<around*|(|X,Y|)>> and <math|L<rsup|-1>\<in\>L<around*|(|Y,X|)>>.
+    Finally by [example: <reference|diff linear mapping is infinite times
+    differentiable>] it follows that <math|L,L<rsup|-1>> are of class
+    <math|C<rsup|\<infty\>>> proving that <math|L> is a diffeomorphism of
+    class <math|C<rsup|\<infty\>>>.
+  </proof>
+
+  <\theorem>
+    <label|diff restriction of a diffeomorphism is a diffeomorphism>Let
+    <math|n\<in\>\<bbb-N\><rsub|0>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|U> a open set in <math|X>, <math|V> a open set in
+    <math|Y> and <math|f:U\<rightarrow\>V> a diffeomorphism of class
+    <math|C<rsup|n>> then for every open set <math|W\<subseteq\>U> we have
+    that\ 
+
+    <\equation*>
+      f<rsub|\|W>:W\<rightarrow\>f<around*|(|W|)>
+    </equation*>
+
+    is a diffeomorphism of class <math|C<rsup|n>>.
+  </theorem>
+
+  <\proof>
+    As <math|f> is a diffeomorphism of class <math|C<rsup|n>>
+    <math|f:U\<rightarrow\>Y> is of class <math|C<rsup|n>> and
+    <math|f<rsup|-1>:V\<rightarrow\>X> is of class <math|C<rsup|n>>. Using
+    [theorem: <reference|diff restriction of a function of class C^n>] it
+    follows that <math|f<rsub|\|W>:W\<rightarrow\>Y> is a of class
+    <math|C<rsup|n>>. Further as <math|f<rsup|-1>:V\<rightarrow\>Y> is of
+    class <math|C<rsup|n>> it is of class <math|C<rsup|0>> hence continuous.
+    So <math|f<around*|(|W|)>\<equallim\><rsub|<text|[theorem:
+    <reference|function inverse image preimage>]>><around*|(|f<rsup|-1>|)><rsup|-1><around*|(|W|)>>
+    is open in the subspace topology of <math|V> hence open in the topology
+    of <math|X> [see theorem: <reference|topology subspace topology open
+    subset>]. Applying then [theorem: <reference|diff restriction of a
+    function of class C^n>] it follows that
+    <math|<around*|(|f<rsup|-1>|)><rsub|\|f<around*|(|W|)>>:f<around*|(|W|)>\<rightarrow\>X>
+    is of class <math|C<rsup|n>>. Finally by [theorem: <reference|function
+    inverse function and bijection>] <math|<around*|(|f<rsup|-1>|)><rsub|\|f<around*|(|W|)>>=<around*|(|f<rsub|\|W>|)><rsup|-1>>
+    so that <math|<around*|(|f<rsub|\|W>|)><rsup|-1>> is of class
+    <math|C<rsup|n>>. Hence <math|f<rsub|\|W>:W\<rightarrow\>Y> is a
+    diffeomorphism of class <math|C<rsup|n>>.
+  </proof>
+
+  <\theorem>
+    <label|diff diffeomorphism condition>Let <math|n\<in\>\<bbb-N\><rsub|0>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|U> a open set in <math|X>, <math|V> a open set in
+    <math|Y> and <math|f:U\<rightarrow\>V> then we have\ 
+
+    <\equation*>
+      f<text| is a diffeormorphism [of class >C<rsup|n><text|]>
+    </equation*>
+
+    <\equation*>
+      \<Updownarrow\>
+    </equation*>
+
+    <\equation*>
+      f:U\<rightarrow\>Y<text| is a differentiable on <math|U> [or of class
+      <math|C<rsup|n>>] and there exist a function >g:V\<rightarrow\>U<text|
+      that is a diffeomorphism [of class >C<rsup|n><text|] and
+      >f\<circ\>g=Id<rsub|Y>\<wedge\>g\<circ\>f=Id<rsub|X>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>If <math|f> is a diffeomorphism [of class
+      <math|C<rsup|n>>] then <math|f:U\<rightarrow\>Y> is differentiable on
+      <math|U> [or of class <math|C<rsup|n>>] and
+      <math|f<rsup|-1>:V\<rightarrow\>X> is differentiable [or of class
+      <math|C<rsup|n>>]. Take <math|g=f<rsup|-1>> then <math|g> is
+      differentiable on <math|V> [or of class <math|C<rsup|n>>],
+      <math|f\<circ\>g=f\<circ\>f<rsup|-1>=Id<rsub|Y>> and
+      <math|g\<circ\>f=f<rsup|-1>\<circ\>f=Id<rsub|X>>.
+
+      <item*|<math|\<Leftarrow\>>>As <math|f\<circ\>g=Id<rsub|Y>\<wedge\>g\<circ\>f=Id<rsub|X>>
+      it follows from [theorems: <reference|function bijection condition
+      (2)>, <reference|function inverse of a bijection is unique>] that
+      <math|g=f<rsup|-1>> proving that <math|f> is a diffeomorphism [or of
+      class <math|C<rsup|n>>].
+    </description>
+  </proof>
+
+  We examine now what happens when diffeomorphism's are composed.
+
+  <\theorem>
+    <label|diff diffeomorphism D(f@f^1)>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, \ <math|U> a open set in <math|X>, <math|V> a open set
+    in <math|Y> and <math|f:U\<rightarrow\>V> a diffeomorphism and
+    <math|g=f<rsup|-1>:V\<rightarrow\>U> then <math|\<forall\>x\<in\>U> we
+    have that\ 
+
+    <\equation*>
+      D<rsub|f<around*|(|x|)>>g\<circ\>D<rsub|x>f=Id<rsub|X><rsub|><text| and
+      >D<rsub|x>f\<circ\>D<rsub|f<around*|(|x|)>>g=Id<rsub|Y>
+    </equation*>
+
+    or if we define\ 
+
+    <\equation*>
+      D f:U\<rightarrow\>L<around*|(|X,Y|)><text| by >D
+      f<around*|(|x|)>=D<rsub|x>f<text| and >D
+      g:V\<rightarrow\>L<around*|(|Y,X|)><text| by >D
+      g<around*|(|x|)>=D<rsub|x>g
+    </equation*>
+
+    <\equation*>
+      D g<around*|(|f<around*|(|x|)>|)>\<circ\>D
+      f<around*|(|x|)>=Id<rsub|X><text| and >D f<around*|(|x|)>\<circ\>D
+      g<around*|(|f<around*|(|x|)>|)>=Id<rsub|Y>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \;
+  </proof>
 
   \;
 
@@ -19471,6 +19653,7 @@
     <associate|auto-56|<tuple|toplinear isomorphism|?>>
     <associate|auto-57|<tuple|<with|mode|<quote|math>|\<cal-G\>L<around*|(|X|)>>|?>>
     <associate|auto-58|<tuple|<with|mode|<quote|math>|H<rsup|n>>|?>>
+    <associate|auto-59|<tuple|diff diffeomorphism|?>>
     <associate|auto-6|<tuple|16.1.2|?>>
     <associate|auto-7|<tuple|<with|mode|<quote|math>|f<rprime|'><around*|(|x|)>>|?>>
     <associate|auto-8|<tuple|16.1.3|?>>
@@ -19518,6 +19701,7 @@
     derivatest|<tuple|16.206|?>>
     <associate|diff class C^1 on a closed interval|<tuple|16.147|?>>
     <associate|diff class C^n|<tuple|16.92|?>>
+    <associate|diff composition of diffeomorphs|<tuple|16.240|?>>
     <associate|diff composition with a linear mapping|<tuple|16.35|?>>
     <associate|diff constant function and partial
     differentiation|<tuple|16.44|?>>
@@ -19539,6 +19723,9 @@
     <associate|diff derivate on a closed interval|<tuple|16.142|?>>
     <associate|diff derivate operator is linear|<tuple|16.32|?>>
     <associate|diff derivative is local|<tuple|16.30|?>>
+    <associate|diff diffeomorphism|<tuple|16.235|?>>
+    <associate|diff diffeomorphism D(f@f^1)|<tuple|16.240|?>>
+    <associate|diff diffeomorphism condition|<tuple|16.239|?>>
     <associate|diff differentiability|<tuple|16.17|?>>
     <associate|diff differentiability alternative
     definitions|<tuple|16.26|?>>
@@ -19598,6 +19785,8 @@
     symmetric|<tuple|16.200|?>>
     <associate|diff higher order partial differentiation on a open
     set|<tuple|16.195|?>>
+    <associate|diff homeomorphism is a diffeomorphism of class
+    C^0|<tuple|16.236|?>>
     <associate|diff identity function is differentiable|<tuple|16.19|?>>
     <associate|diff increasing decreasing function|<tuple|16.133|?>>
     <associate|diff inifint=ite differentiable|<tuple|16.89|?>>
@@ -19606,6 +19795,8 @@
     <associate|diff left and right derivate and derivate|<tuple|16.141|?>>
     <associate|diff left/right derivate linearity|<tuple|16.140|?>>
     <associate|diff line segment [0,1]|<tuple|16.157|?>>
+    <associate|diff linear isomorphism between Banach spaces are
+    diffeomorphisms|<tuple|16.237|?>>
     <associate|diff linear mapping is infinite times
     differentiable|<tuple|16.112|?>>
     <associate|diff linear mappings are differentiable|<tuple|16.24|?>>
@@ -19645,6 +19836,8 @@
     <associate|diff power of composition|<tuple|16.228|?>>
     <associate|diff projection functon is infinite times
     differentiable|<tuple|16.115|?>>
+    <associate|diff restriction of a diffeomorphism is a
+    diffeomorphism|<tuple|16.238|?>>
     <associate|diff restriction of a function of class C^n|<tuple|16.93|?>>
     <associate|diff scalar product function has a derivate|<tuple|16.14|?>>
     <associate|diff second derivate convex concave|<tuple|16.136|?>>
@@ -19901,7 +20094,6 @@
     <associate|eq 16.325.131|<tuple|16.324|?>>
     <associate|eq 16.327.130|<tuple|16.326|?>>
     <associate|eq 16.327.134|<tuple|16.327|?>>
-    <associate|eq 16.328.130|<tuple|16.328|?>>
     <associate|eq 16.329.131|<tuple|16.328|?>>
     <associate|eq 16.329.133|<tuple|16.329|?>>
     <associate|eq 16.33.181|<tuple|16.35|?>>
@@ -20138,6 +20330,8 @@
       <tuple|<tuple|<with|mode|<quote|math>|\<cal-G\>L<around*|(|X|)>>>|<pageref|auto-57>>
 
       <tuple|<tuple|<with|mode|<quote|math>|H<rsup|n>>>|<pageref|auto-58>>
+
+      <tuple|<tuple|diff diffeomorphism>|<pageref|auto-59>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|16<space|2spc>Differentation
