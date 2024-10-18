@@ -19349,7 +19349,7 @@
       <rsup|<around*|[|1|]>>\<tau\><around*|(|L|)>>. Hence we have\ 
 
       <\equation>
-        <label|eq 16.346.134>D<rsup|<around*|[|1|]>>
+        <label|eq 16.346.134.1>D<rsup|<around*|[|1|]>>
         \<tau\>=\<varphi\>\<circ\>\<chi\>\<circ\>\<tau\>
       </equation>
 
@@ -19376,7 +19376,7 @@
         chain rule [see theorem: <reference|diff chain rule higher order
         class>] to prove that <math|\<varphi\>\<circ\>\<chi\>\<circ\>\<tau\>>
         is of class <math|C<rsup|n>>. Hence by [eq: <reference|eq
-        16.346.134>] <math|D<rsup|<around*|[|1|]>>\<tau\>> is of class
+        16.346.134.1>] <math|D<rsup|<around*|[|1|]>>\<tau\>> is of class
         <math|C<rsup|n>>, which by [theorem: <reference|diff f is of class
         C^n if D^1f u=is of class C^n-1>] means that <math|\<tau\>> is of
         class <math|C<rsup|n+1>>. So that\ 
@@ -19709,9 +19709,9 @@
     <\proof>
       Define
 
-      <\equation*>
-        T=Id<rsub|X>-f:U\<rightarrow\>X
-      </equation*>
+      <\equation>
+        <label|eq 16.347.136>T=Id<rsub|X>-f:U\<rightarrow\>X
+      </equation>
 
       Then\ 
 
@@ -19759,15 +19759,15 @@
       Further as <math|0\<in\>U> there exist a
       <math|\<rho\><rsub|2>\<in\>\<bbb-R\><rsup|+>> such that
       <math|0\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,\<delta\><rsub|2>|)>\<subseteq\>U>.
-      Take <math|\<rho\><rsub|2>=min<around*|(|\<rho\><rsub|1>,\<rho\><rsub|2>|)>\<in\>\<bbb-R\><rsup|+>>
+      Take <math|\<rho\><rsub|3>=min<around*|(|\<rho\><rsub|1>,\<rho\><rsub|2>|)>\<in\>\<bbb-R\><rsup|+>>
       then if <math|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,\<rho\><rsub|3>|)>>
       we have <math|<around*|\<\|\|\>|x|\<\|\|\>>\<less\>\<delta\><rsub|2>\<Rightarrow\>x\<in\>U>
       and <math|<around*|\<\|\|\>|x|\<\|\|\>>\<leqslant\>\<delta\><rsub|1>\<Rightarrow\><around*|\<\|\|\>|D<rsup|>f<around*|(|x|)>|\<\|\|\>>\<less\><frac|1|2>>.
-      Take <math|\<rho\>=<frac|\<rho\><rsub|3>|3>> then we have\ 
+      Take <math|\<rho\>=<frac|\<rho\><rsub|3>|2>> then we have\ 
 
       <\equation>
         <label|eq 16.350.134><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,\<rho\>|)>|\<wide-bar\>>\<subseteq\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,\<rho\><rsub|3>|)>\<subseteq\>U<text|
-        and >\<forall\>x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,\<rho\>|)><text|
+        and >\<forall\>x\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,\<rho\>|)>|\<wide-bar\>><text|
         we have ><around*|\<\|\|\>|D<rsup|>T<around*|(|x|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<less\><frac|1|2>\<less\>1
       </equation>
 
@@ -19798,143 +19798,260 @@
       To finish the proposition we prove the following conjectures.\ 
 
       <\conjecture>
-        <label|conjecture 16.245.134>Let <math|\<sigma\>\<in\>\<bbb-R\><rsup|+>>
-        with <math|\<sigma\>\<leqslant\>\<rho\>> then
-        <math|\<forall\>y\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<sigma\>|2>|)>|\<wide-bar\>>>
-        there exist a <with|font-series|bold|unique
-        ><math|x\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<sigma\>|4>|)>|\<wide-bar\>>>
-        such that <math|f<around*|(|x|)>=y>
+        <label|conjecture 16.245.136>If <math|0\<less\>\<rho\><rprime|'>\<less\>\<rho\>>
+        then <math|\<forall\>y\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<rho\><rprime|'>|2>|)>|\<wide-bar\>>>
+        there exist a <with|font-series|bold|uniquely determined
+        ><math|x\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,\<rho\><rprime|'>|)>|\<wide-bar\>>>
+        such that <math|y=f<around*|(|x|)>>.
       </conjecture>
 
       <\proof>
-        Given <math|y\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<sigma\>|2>|)>>
-        and <math|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<sigma\>|2>|)>>
-        define <math|T<rsub|y>=y+T<around*|(|x|)>\<in\>X> then we have
+        Let <math|y\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<rho\><rprime|'>|2>|)>|\<wide-bar\>>>
+        and define\ 
 
         <\equation*>
-          <around*|\<\|\|\>|T<rsub|y><around*|(|x|)>|\<\|\|\>>=<around*|\<\|\|\>|y+T<around*|(|x|)>|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|y|\<\|\|\>>+<around*|\<\|\|\>|T<around*|(|x|)>|\<\|\|\>>\<leqslant\><rsub|<text|[eq:
-          <reference|eq 16.351.134>]>><around*|\<\|\|\>|y|\<\|\|\>>+<frac|1|2>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>>\<less\><frac|\<sigma\>|2>+<frac|\<sigma\>|2>=\<sigma\>
+          T<rsub|y>:U\<rightarrow\>X<text| by
+          >T<rsub|y><around*|(|x|)>\<equallim\><rsub|<text|[eq: <reference|eq
+          16.347.136>]>>y+T<around*|(|x|)>=y+x-f<around*|(|x|)>
         </equation*>
 
-        or <math|T<rsub|y>\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,\<sigma\>|)>>.
-        Hence we can define the function\ 
+        in other words\ 
 
         <\equation*>
-          T<rsub|y>:B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<sigma\>|2>|)>\<rightarrow\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<sigma\>|2>|)>
-          by T<rsub|y><around*|(|x|)>=y+T<around*|(|x|)>
-        </equation*>
-
-        so that\ 
-
-        <\equation*>
-          T<rsub|y>=C<rsub|y>+T<text|>
+          T<rsub|y>=C<rsub|y>+T
         </equation*>
 
         Hence as <math|C<rsub|y>> is of class <math|C<rsup|\<infty\>>> [see
         example: <reference|diff constant function is infinitely times
-        differentiable>] and <math|T> is of class <math|C<rsup|n>> [see eq:
-        <reference|eq 16.347.135>] it follows that\ 
+        differentiable>, <reference|diff linear mapping is infinite times
+        differentiable> and <math|T> is of class <math|C<rsup|n>> [see eq:
+        <reference|eq 16.347.135>] it follows from [theorem: <reference|diff
+        higher order differential is linear>] that
 
         <\equation*>
           T<rsub|y><text| is of class >C<rsup|n>
         </equation*>
 
-        and\ 
+        Let <math|x\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,\<rho\><rprime|'>|)>|\<wide-bar\>>\<subseteq\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,\<rho\>|)>|\<wide-bar\>>\<subseteq\><rsub|<text|[eq:
+        <reference|eq 16.350.134>]>>U> then we have\ 
 
         <\equation*>
-          \<forall\>x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<sigma\>|2>|)><text|
-          >D<rsub|x>T<rsub|y>=D<rsub|x>C<rsub|y>+D<rsub|x>T=D<rsub|x>T
+          <around*|\<\|\|\>|T<rsub|y><around*|(|x|)>|\<\|\|\>>=<around*|\<\|\|\>|y+T<around*|(|x|)>|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|y|\<\|\|\>>+<around*|\<\|\|\>|T<around*|(|x|)>|\<\|\|\>>\<less\><rsub|<text|[eq:
+          <reference|eq 16.351.134>]>><around*|\<\|\|\>|y|\<\|\|\>>+<frac|1|2>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>>\<less\><frac|\<rho\><rprime|'>|2>+<frac|1<rprime|'>|2>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>>\<leqslant\><frac|\<rho\><rprime|'>|2>+<frac|\<rho\><rprime|'>|2>=\<rho\><rprime|'>
         </equation*>
 
-        Hence <math|\<forall\>x\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<sigma\>|4>|)>|\<wide-bar\>>\<subseteq\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<sigma\>|2>|)>>
-        we have <math|<around*|\<\|\|\>|D<rsub|x>T<rsub|y>|\<\|\|\>><rsub|L<around*|(|X,X|)>>=<around*|\<\|\|\>|D<rsub|x>T|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<leqslant\><rsub|<text|[eq:
-        <reference|eq 16.350.134>]>><frac|1|2><rsub|<text|>>>. As <math|X> is
-        a Banach space and <math|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<sigma\>|4>|)>|\<wide-bar\>>>
+        proving that\ 
+
+        <\equation>
+          <label|eq 16.354.136>\<forall\>x\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,\<rho\><rprime|'>|)>|\<wide-bar\>><text|
+          we have ><around*|\<\|\|\>|T<rsub|y><around*|(|x|)>|\<\|\|\>>\<leqslant\>\<rho\><rprime|'><text|
+          so that >T<rsub|y><around*|(|x|)>\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,\<rho\><rprime|'>|)>
+        </equation>
+
+        Define\ 
+
+        <\equation>
+          <label|eq 16.355.136>D T<rsub|y>:U\<rightarrow\>L<around*|(|X,X|)><text|
+          by >D T<rsub|y><around*|(|x|)>=D<rsub|x>T<rsub|y>=D<rsub|x>C<rsub|y>+D<rsub|x>T=0+D<rsub|x>T=D<rsub|x>T
+        </equation>
+
+        Using [eq: <reference|eq 16.350.134>] on the above results\ 
+
+        <\equation>
+          <label|eq 16.356.136>\<forall\>x\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,\<rho\><rprime|'>|)>|\<wide-bar\>>\<subseteq\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,\<rho\>|)>|\<wide-bar\>><text|
+          we have ><around*|\<\|\|\>|D T<rsub|y>|\<\|\|\>><rsub|L<around*|(|X,X|)>>=<around*|\<\|\|\>|D<rsub|x>T|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<less\><frac|1|2>
+        </equation>
+
+        As <math|X> is a Banach space and
+        <math|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,\<rho\><rprime|'>|)>|\<wide-bar\>>>
         is convex we can apply the mean value theorem [theorem:
-        <reference|diff mean value theorem (2)>] giving that\ 
+        <reference|diff mean value theorem (2)>] on the above to get
+
+        <\equation>
+          <label|eq 16.357.137>\<forall\>x<rsub|1>,x<rsub|2>\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,\<rho\><rprime|'>|)>|\<wide-bar\>><text|
+          we have ><around*|\<\|\|\>|T<rsub|y><around*|(|x<rsub|1>|)>-T<rsub|y><around*|(|x<rsub|2>|)>|\<\|\|\>>\<leqslant\><frac|1|2>\<cdot\><around*|\<\|\|\>|x<rsub|1>-x<rsub|2>|\<\|\|\>>
+        </equation>
+
+        Using [eq: <reference|eq 16.354.136>] it follows that the following
+        function is well defined
 
         <\equation*>
-          \<forall\>x<rsub|1>,x<rsub|2>\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<sigma\>|4>|)>|\<wide-bar\>><text|
-          we have ><around*|\<\|\|\>|T<rsub|y><around*|(|x<rsub|1>|)>-T<rsub|y><around*|(|x<rsub|2>|)>|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x<rsub|1>-x<rsub|2>|\<\|\|\>>
+          S<rsub|y>=<around*|(|T<rsub|y>|)><rsub|\|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,\<rho\><rprime|'>|)>|\<wide-bar\>>>:<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,\<rho\><rprime|'>|)>|\<wide-bar\>>\<rightarrow\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,\<rho\><rprime|'>|)>|\<wide-bar\>>
         </equation*>
 
-        proving that <math|<around*|(|T<rsub|y>|)><rsub|\|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<sigma\>|4>|)>|\<wide-bar\>>>>
-        is a contraction [see definition: <reference|metric contraction>]. As
-        \ <math|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<sigma\>|4>|)>|\<wide-bar\>>>
+        and that this function is a contraction [see definition:
+        <reference|metric contraction>]. As
+        <math|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,\<rho\><rprime|'>|)>|\<wide-bar\>>>
         is closed and <math|X> is a Banach space it follows from [theorem:
         <reference|complete closed subset of a complete space is complete>]
-        that <math|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<sigma\>|4>|)>|\<wide-bar\>>>
-        is a Banach space. So we can use the Banach fixed point theorem [see:
-        <reference|metric Banach fixed point theorem>] there exist a
-        <with|font-series|bold|unique> <math|x\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<sigma\>|4>|)>|\<wide-bar\>>\<subseteq\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,\<sigma\>|)>|\<wide-bar\>>>
-        such that <math|<around*|(|T<rsub|y>|)><rsub|\|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<sigma\>|4>|)>|\<wide-bar\>>><around*|(|x|)>=x>.
-        Hence
+        that <math|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,\<rho\><rprime|'>|)>|\<wide-bar\>>>
+        is a Banach space. So we can apply the Banach Fixed Point theorem
+        [see theorem: <reference|metric Banach fixed point theorem>] giving
+
+        <\equation>
+          <label|eq 16.358.136><text|There exist a
+          <with|font-series|bold|unique> >x\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,\<rho\><rprime|'>|)>|\<wide-bar\>><text|
+          such that >T<rsub|y><around*|(|x|)>=x
+        </equation>
+
+        From the definition of <math|T<rsub|y>> we have that
+        <math|f<around*|(|x|)>=y+x-T<rsub|y><around*|(|x|)>\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.358.136>]>>y+x-x=y> proving that\ 
 
         <\equation*>
-          0=T<rsub|y><around*|(|x|)>-x=y+T<around*|(|x|)>-x=y+Id<rsub|X><around*|(|x|)>-f<around*|(|x|)>-x=y+x-f<around*|(|x|)>-x=y-f<around*|(|x|)>
-          </equation*>
-
-        so that\ 
-
-        <\equation*>
-          f<around*|(|x|)>=y
+          y=f<around*|(|x|)>
         </equation*>
 
-        Further if <math|x<rprime|'>\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,\<sigma\>|)>|\<wide-bar\>>>
-        satisfies <math|f<around*|(|x<rprime|'>|)>=y> then
-
-        <\equation*>
-          <around*|(|T<rsub|y>|)><rsub|\|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<sigma\>|4>|)>|\<wide-bar\>>><around*|(|x|)>=T<rsub|y><around*|(|x<rprime|'>|)>=y+T<around*|(|x<rprime|'>|)>=y+Id<rsub|X><around*|(|x<rprime|'>|)>-f<around*|(|x<rprime|'>|)>=y+x<rprime|'>-y=x<rprime|'>
-        </equation*>
-
-        which as <math|x> was unique proves that <math|x=x<rprime|'>>. So we
-        have found a unique <math|x\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<sigma\>|4>|)>|\<wide-bar\>>>
-        </proof>
+        As for uniqueness assume that there exist a
+        <math|x<rprime|'>\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,\<rho\><rprime|'>|)>|\<wide-bar\>>>
+        such that <math|y=f<around*|(|x<rprime|'>|)>> then we have that
+        <math|T<rsub|y><around*|(|x<rprime|'>|)>=y+x<rprime|'>-f<around*|(|x<rprime|'>|)>=y+x<rprime|'>-y=x<rprime|'>>
+        so that by [eq: <reference|eq 16.358.136>] <math|x=x<rprime|'>>.
+      </proof>
 
       <\conjecture>
-        <label|conjecture 16.246.135>There exist a
-        <math|\<chi\>\<in\>\<bbb-R\><rsup|+>> with
-        <math|\<chi\>\<less\>\<rho\>> such that for
+        <label|conjecture 16.246.136>For the open set
 
         <\equation*>
-          U<rsub|\<chi\>>=B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,\<chi\>|)><big|cap>f<rsup|-1><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<chi\>|2>|)>|)><text|
-          >
+          U<rsub|\<rho\>>=B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<rho\>|4>|)><big|cap>f<rsup|-1><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<rho\>|4>|)>|)>
         </equation*>
 
-        we have\ 
+        we have that\ 
 
         <\equation*>
-          f<rsub|\|U<rsub|<lprime|`>x>>:U<rsub|\<chi\>>\<rightarrow\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<chi\>|2>|)><text|
-          is a bijection>
+          f<rsub|\|U<rsub|\<rho\>>>:U<rsub|\<rho\>>\<rightarrow\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<rho\>|4>|)>
         </equation*>
 
-        <\note>
-          As <math|f> is of class <math|C<rsup|n>> it is of class
-          <math|C<rsup|0>> hence continuous, so <math|U<rsub|\<chi\>>> is a
-          open set\ 
-        </note>
+        is a bijection.
       </conjecture>
 
       <\proof>
-        Take <math|\<chi\>=<frac|\<rho\>|2>\<in\>\<bbb-R\><rsup|+>> then
-        <math|\<chi\>\<less\>\<rho\>> and we have for
-        <math|f<rsub|\|U<rsub|<lprime|`>x>>:U<rsub|\<chi\>>\<rightarrow\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<chi\>|2>|)>>
-        that
+        For the function\ 
+
+        <\equation*>
+          f<rsub|\|U<rsub|\<rho\>>>:U<rsub|\<rho\>>\<rightarrow\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<rho\>|4>|)>
+        </equation*>
+
+        we have:
 
         <\description>
-          <item*|surjectivity>
+          <item*|surjectivity>Let <math|y\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<rho\>|4>|)>>
+          then by the previous conjecture [conjecture: <reference|conjecture
+          16.245.136>] there exist a <math|x\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<rho\>|2>|)>|\<wide-bar\>>>
+          such that\ 
 
-          <item*|injectivity>
+          <\equation>
+            <label|eq 16.359.136>f*<around*|(|x|)>=y
+          </equation>
+
+          We prove now by contradiction that\ 
+
+          <\equation>
+            <label|eq 16.360.136><around*|\<\|\|\>|x|\<\|\|\>>\<neq\><frac|\<rho\>|2>
+          </equation>
+
+          As <math|y\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<rho\>|4>|)>>
+          we have that <math|<around*|\<\|\|\>|f<around*|(|x|)>|\<\|\|\>>\<less\><frac|\<rho\>|4>>
+          so that <math|\<varepsilon\>=<frac|\<rho\>|4>-<around*|\<\|\|\>|y|\<\|\|\>>\<in\>\<bbb-R\><rsup|+>>.
+          Given that <math|f> is continuous [because <math|f> is of class
+          <math|C<rsup|n>> hence of class <math|C<rsup|0>> by [theorem:
+          <reference|diff C^n and C^m>]] there exist a
+          <math|\<delta\><rprime|'>\<in\>\<bbb-R\><rsup|+>> such that if
+          <math|z\<in\>U> with <math|<around*|\<\|\|\>|x-z|\<\|\|\>>\<less\>\<delta\><rprime|'>>
+          then we have <math|<around*|\<\|\|\>|f<around*|(|x|)>-f<around*|(|z|)>|\<\|\|\>>\<less\>\<varepsilon\>>.
+          Define <math|\<delta\>=min<around*|(|\<delta\><rprime|'>,<frac|\<rho\>|2>|)>\<in\>\<bbb-R\><rsup|+>>
+          and take <math|x<rsub|1>=<around*|(|1+<frac|\<delta\>|\<rho\>>|)>\<cdot\>x>
+          then we have <math|<around*|\<\|\|\>|x|\<\|\|\>>\<less\><around*|(|1+<frac|\<delta\>|\<rho\>>|)>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>>=<around*|\<\|\|\>|x<rsub|1>|\<\|\|\>>>
+          and <math|<around*|\<\|\|\>|x<rsub|1>|\<\|\|\>>=<around*|(|1+<frac|\<delta\>|\<rho\>>|)>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>>=<around*|(|1+<frac|\<delta\>|\<rho\>>|)>\<cdot\><frac|\<rho\>|2>=<frac|\<rho\>|2>+<frac|\<delta\>|2>\<less\><frac|\<rho\>|2>+<frac|\<rho\>|4>\<less\><frac|\<rho\>|2>+<frac|\<rho\>|2>=\<rho\>>
+          so that\ 
+
+          <\equation>
+            <label|eq 16.361.136><frac|\<rho\>|2>=<around*|\<\|\|\>|x|\<\|\|\>>\<less\><around*|\<\|\|\>|x<rsub|1>|\<\|\|\>>\<less\>\<rho\>
+          </equation>
+
+          Further we have\ 
+
+          <\equation*>
+            <around*|\<\|\|\>|x-x<rsub|1>|\<\|\|\>>=<around*|\<\|\|\>|x-<around*|(|1+<frac|\<delta\>|\<rho\>>|)>\<cdot\>x|\<\|\|\>>=<around*|\<\|\|\>|<frac|\<delta\>|\<rho\>>\<cdot\>x|\<\|\|\>>=<frac|\<delta\>|\<rho\>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>>\<equallim\><rsub|<around*|\<\|\|\>|x|\<\|\|\>>=<frac|\<rho\>|2>><frac|\<delta\>|\<rho\>>\<cdot\><frac|\<rho\>|2>\<less\>\<delta\>\<less\>\<delta\><rprime|'>
+          </equation*>
+
+          so that\ 
+
+          <\equation*>
+            <around*|\<\|\|\>|f<around*|(|x|)>-f<around*|(|x<rsub|1>|)>|\<\|\|\>>\<less\>\<varepsilon\>=<frac|\<rho\>|2>-<around*|\<\|\|\>|y|\<\|\|\>>
+          </equation*>
+
+          Hence\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|<around*|\<\|\|\>|f<around*|(|x<rsub|1>|)>|\<\|\|\>>>|<cell|=>|<cell|<around*|\<\|\|\>|f<around*|(|x<rsub|1>|)>-f<around*|(|x+f<around*|(|x|)>|)>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|f<around*|(|x<rsub|1>|)>-f<around*|(|x|)>|\<\|\|\>>+<around*|\<\|\|\>|f<around*|(|x|)>|\<\|\|\>>>>|<row|<cell|>|<cell|\<less\>>|<cell|<frac|\<rho\>|4>-<around*|\<\|\|\>|y|\<\|\|\>>+<around*|\<\|\|\>|f<around*|(|x|)>|\<\|\|\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+            <reference|eq 16.359.136>]>>>|<cell|<frac|\<rho\>|4>-<around*|\<\|\|\>|y|\<\|\|\>>+<around*|\<\|\|\>|y|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<frac|\<rho\>|4>>>>>
+          </eqnarray*>
+
+          proving that <math|f<around*|(|x<rsub|1>|)>\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<rho\>|4>|)>\<subseteq\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<rho\>|4>|)>|\<wide-bar\>>>.
+          Using the previous conjecture [conjecture: <reference|conjecture
+          16.245.136>] there exist a <math|x<rsub|2>\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<rho\>|2>|)>|\<wide-bar\>>>
+          such that <math|f<around*|(|x<rsub|1>|)>=f<around*|(|x<rsub|2>|)>>.
+          As <math|<around*|\<\|\|\>|x<rsub|2>|\<\|\|\>>\<leqslant\><frac|\<rho\>|2>\<less\>\<rho\>>,
+          <math|<around*|\<\|\|\>|x<rsub|1>|\<\|\|\>>\<less\>\<rho\>> and
+          <math|f<around*|(|x<rsub|1>|)>=f<around*|(|x<rsub|2>|)>> we have by
+          [conjecture: <reference|conjecture 16.245.136>] that
+          <math|x<rsub|1>=x<rsub|2>>. Then we have
+
+          <\equation*>
+            <frac|\<rho\>|2>\<less\><rsub|<text|[eq: <reference|eq
+            16.361.136>]>><around*|\<\|\|\>|x<rsub|1>|\<\|\|\>>=<around*|\<\|\|\>|x<rsub|2>|\<\|\|\>>\<leqslant\><frac|\<rho\>|2>
+          </equation*>
+
+          leading to the contradiction <math|<frac|r|2>\<less\><frac|r|2>>.
+          Hence our assumption is wrong and we must have that\ 
+
+          <\equation*>
+            <around*|\<\|\|\>|x|\<\|\|\>>\<neq\><frac|\<rho\>|2>
+          </equation*>
+
+          So as <math|x\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<rho\>|2>|)>|\<wide-bar\>>>
+          we have <math|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<rho\>|2>|)>>,
+          further as <math|f<around*|(|x|)>=y\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<rho\>|4>|)>>
+          it follows that <math|x\<in\>f<rsup|-1><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<rho\>|4>|)>|)>>
+          so that <math|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<rho\>|4>|)><big|cap>f<rsup|-1><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<rho\>|4>|)>|)>=U<rsub|x>>.\ 
+
+          <item*|injectivity>Assume that there exist
+          <math|x<rsub|1>,x<rsub|2>\<in\>U<rsub|\<rho\>>\<subseteq\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<rho\>|4>|)>>
+          such that <math|f<around*|(|x<rsub|1>|)>=f<around*|(|x<rsub|2>|)>\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<rho\>|4>|)>>
+          so that by the previous conjecture [conjecture:
+          <reference|conjecture 16.245.136>] <math|x<rsub|1>=x<rsub|2>>.
         </description>
       </proof>
+
+      Proceeding with the proof of [propostion: <reference|proposition
+      16.244.134>] we have as <math|f<rsub|\|U<rsub|\<rho\>>>:U<rsub|\<rho\>>\<rightarrow\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<rho\>|4>|)>>
+      is a bijection that
+
+      <\equation>
+        <label|eq 16.362.136> g=<around*|(|f<rsub|\|U<rsub|\<rho\>>>|)><rsup|-1>:B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<rho\>|4>|)>=U<rsub|\<rho\>><text|
+        where >U<rsub|\<rho\>>=B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<rho\>|4>|)><big|cap>f<rsup|-1><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,<frac|\<rho\>|4>|)>|)>
+      </equation>
+
+      We prove now that <math|g> is continuous.
+
+      <\conjecture>
+        <label|conjecture 16.247.136><math|g<text| is continuous.>>
+      </conjecture>
+
+      <\proof>
+        \;
+      </proof>
+
+      \;
+
+      \;
     </proof>
 
     \;
   </proof>
 
   \;
-
-  s
 </body>
 
 <\initial>
@@ -20011,8 +20128,9 @@
     <associate|auto-7|<tuple|<with|mode|<quote|math>|f<rprime|'><around*|(|x|)>>|?>>
     <associate|auto-8|<tuple|16.1.3|?>>
     <associate|auto-9|<tuple|differentiability|?>>
-    <associate|conjecture 16.245.134|<tuple|16.245|?>>
-    <associate|conjecture 16.246.135|<tuple|16.246|?>>
+    <associate|conjecture 16.245.136|<tuple|16.245|?>>
+    <associate|conjecture 16.246.136|<tuple|16.246|?>>
+    <associate|conjecture 16.247.136|<tuple|16.247|?>>
     <associate|continuity limit of composition of linear
     maps|<tuple|16.226|?>>
     <associate|continuity of a function and convergence of the
@@ -20470,14 +20588,25 @@
     <associate|eq 16.343.133|<tuple|16.343|?>>
     <associate|eq 16.344.133|<tuple|16.344|?>>
     <associate|eq 16.346.134|<tuple|16.346|?>>
-    <associate|eq 16.347.134|<tuple|16.348|?>>
-    <associate|eq 16.347.135|<tuple|16.347|?>>
-    <associate|eq 16.348.134|<tuple|16.349|?>>
-    <associate|eq 16.349.134|<tuple|16.350|?>>
+    <associate|eq 16.346.134.1|<tuple|16.345|?>>
+    <associate|eq 16.347.134|<tuple|16.349|?>>
+    <associate|eq 16.347.135|<tuple|16.348|?>>
+    <associate|eq 16.347.136|<tuple|16.347|?>>
+    <associate|eq 16.348.134|<tuple|16.350|?>>
+    <associate|eq 16.349.134|<tuple|16.351|?>>
     <associate|eq 16.35.181|<tuple|16.37|?>>
-    <associate|eq 16.350.134|<tuple|16.351|?>>
-    <associate|eq 16.351.134|<tuple|16.352|?>>
+    <associate|eq 16.350.134|<tuple|16.352|?>>
+    <associate|eq 16.351.134|<tuple|16.353|?>>
+    <associate|eq 16.354.136|<tuple|16.354|?>>
+    <associate|eq 16.355.136|<tuple|16.355|?>>
+    <associate|eq 16.356.136|<tuple|16.356|?>>
+    <associate|eq 16.357.137|<tuple|16.357|?>>
+    <associate|eq 16.358.136|<tuple|16.358|?>>
+    <associate|eq 16.359.136|<tuple|16.359|?>>
     <associate|eq 16.36.182|<tuple|16.38|?>>
+    <associate|eq 16.360.136|<tuple|16.360|?>>
+    <associate|eq 16.361.136|<tuple|16.361|?>>
+    <associate|eq 16.362.136|<tuple|16.362|?>>
     <associate|eq 16.37.182|<tuple|16.39|?>>
     <associate|eq 16.38.182|<tuple|16.40|?>>
     <associate|eq 16.39.182|<tuple|16.41|?>>
