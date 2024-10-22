@@ -19672,11 +19672,11 @@
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     be Banach spaces, <math|U> a open set in <math|X>,
-    <math|x<rsub|0>\<in\>X>, <math|f:U\<rightarrow\>Y> a function of class
+    <math|x<rsub|0>\<in\>U>, <math|f:U\<rightarrow\>Y> a function of class
     <math|C<rsup|n>> such that <math|D<rsub|x<rsub|0>>f\<in\>L<rsub|n><around*|(|X,Y|)>>
     is a bijection then <math|f> is a local diffeomorphism of class
-    <math|C<rsup|n>> at <math|x>. In other words there exist a open set
-    <math|U<rsub|x<rsub|0>>> in <math|X> with
+    <math|C<rsup|n>> at <math|x<rsub|0>>. In other words there exist a open
+    set <math|U<rsub|x<rsub|0>>> in <math|X> with
     <math|x<rsub|0>\<in\>U<rsub|x<rsub|0>>\<subseteq\>U> and a open set
     <math|V<rsub|f<around*|(|x<rsub|0>|)>>> with
     <math|f<around*|(|x<rsub|0>|)>\<in\>V<rsub|f<around*|(|x<rsub|0>|)>>>
@@ -20506,17 +20506,149 @@
     Finally we extend the latest proposition to proof the inverse function
     theorem, to increase readability we repeat here the inverse function
     theorem as a conjecture, so as this conjecture is proved we have
-    completed the proof of the inverse function theorem.
+    completed the proof of the inverse function theorem.\ 
+
+    <\conjecture>
+      <label|eq 16.251.141>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+      be a normed space, <math|n\<in\>\<bbb-N\>>, <math|x\<in\>X>, <math|U> a
+      open set in <math|X>, <math|y\<in\>U> then there exist a open set
+      <math|W>, a diffeomorphism <math|\<tau\>:W\<rightarrow\>U> of class
+      <math|C<rsup|n>> such that <math|x\<in\>W>,
+      <math|y=\<tau\><around*|(|x|)>> and <math|\<forall\>z\<in\>W>
+      <math|D<rsub|z>\<tau\>=Id<rsub|X>>.
+    </conjecture>
+
+    <\proof>
+      Define the functions
+
+      <\equation>
+        <label|eq 16.382.140>\<tau\><rsub|1>:X\<rightarrow\>X<text| by
+        >\<tau\><rsub|1><around*|(|z|)>=z-<around*|(|x-y|)><text| and
+        >\<tau\><rsub|2>:X\<rightarrow\>X<text| by
+        >\<tau\><rsub|2><around*|(|z|)>=z+<around*|(|x-y|)>
+      </equation>
+
+      then we have by [example: <reference|diff translation is infinite
+      differentiable>] that\ 
+
+      <\equation>
+        <label|eq 16.383.140>\<tau\><rsub|1><text| and >\<tau\><rsub|2><text|
+        are of class >C<rsup|\<infty\>><text| hence of class
+        ><text|<math|C<rsup|n><text|>> and >\<forall\>x\<in\>X<text|
+        >D<rsub|x>\<tau\><rsub|1>=Id<rsub|X>=D<rsub|x>\<tau\><rsub|2>
+      </equation>
+
+      Further if <math|z\<in\>Z> then we have
+
+      <\equation*>
+        <around*|(|\<tau\><rsub|1>\<circ\>\<tau\><rsub|2>|)><around*|(|z|)>=\<tau\><rsub|1><around*|(|\<tau\><rsub|2><around*|(|z|)>|)>=\<tau\><rsub|1><around*|(|x+<around*|(|x-y|)>|)>=z+<around*|(|x-y|)>-<around*|(|x-y|)>=z=Id<rsub|X><around*|(|z|)>
+      </equation*>
+
+      and
+
+      <\equation*>
+        <around*|(|\<tau\><rsub|2>\<circ\>\<tau\><rsub|1>|)><around*|(|z|)>=\<tau\><rsub|2><around*|(|\<tau\><rsub|1><around*|(|z|)>|)>=\<tau\><rsub|2><around*|(|z-<around*|(|x-y|)>|)>=z-<around*|(|x-y|)>+<around*|(|x-y|)>=z=Id<rsub|X><around*|(|z|)>
+      </equation*>
+
+      so that <math|\<tau\><rsub|1>\<circ\>\<tau\><rsub|2>=Id<rsub|X>=\<tau\><rsub|2>\<circ\>\<tau\><rsub|1>>
+      proving that\ 
+
+      <\equation>
+        <label|eq 16.384.140>\<tau\><rsub|1>,\<tau\><rsub|2><text| are
+        bijections between >X<text| and >X<text| and
+        >\<tau\><rsub|1><rsup|-1>=\<tau\><rsub|2><text| and
+        >\<tau\><rsub|2><rsup|-1>=\<tau\><rsub|1>
+      </equation>
+
+      Further we have\ 
+
+      <\equation>
+        <label|eq 16.385.140>\<tau\><rsub|1><around*|(|x|)>=x-<around*|(|x-y|)>=y\<in\>U
+      </equation>
+
+      Take <math|W=<around*|(|\<tau\><rsub|1><rsup|>|)><rsup|-1><around*|(|U|)>>.
+      As <math|U> is open and continuous it follows that
+
+      <\equation>
+        <label|eq 16.386.141>W<text| is a open set and from [eq:
+        <reference|eq 16.385.140>]> x\<in\>W
+      </equation>
+
+      is open, further, as <math|\<tau\><rsub|1>> is a bijection it follows
+      from [theorem: <reference|function preimage of image>] that
+      <math|\<tau\><rsub|1><around*|(|W|)>=U>. Hence by [theorem:
+      <reference|function restriction of a function>]\ 
+
+      <\equation>
+        <label|eq 16.386.140>\<tau\>=<around*|(|\<tau\><rsub|1>|)><rsub|\|W>:W\<rightarrow\>U<text|
+        is a bijection>
+      </equation>
+
+      Further <math|\<tau\><rsub|2><around*|(|U|)>=\<tau\><rsub|1><rsup|-1><around*|(|U|)>=\<tau\><rsup|-1><rsub|1><around*|(|\<tau\><rsub|1><around*|(|W|)>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|function preimage of image>]>>W> so that by [theorem:
+      <reference|function preimage of image>] we have\ 
+
+      <\equation>
+        <label|eq 16.387.140><around*|(|\<tau\><rsub|2>|)><rsub|\|U>:U\<rightarrow\>W<text|
+        is a bijection>
+      </equation>
+
+      If <math|z\<in\>W> then
+
+      <\equation*>
+        <around*|(|<around*|(|\<tau\><rsub|2>|)><rsub|\|U>\<circ\><around*|(|\<tau\><rsub|1>|)><rsub|\|W>|)>=<around*|(|\<tau\><rsub|2>|)><rsub|\|U><around*|(|<around*|(|\<tau\><rsub|1>|)><rsub|\|W><around*|(|z|)>|)>=\<tau\><rsub|2><around*|(|<around*|(|\<tau\><rsub|1>|)><rsub|\|W><around*|(|z|)>|)>=\<tau\><rsub|2><around*|(|\<tau\><rsub|1><around*|(|z|)>|)>=<around*|(|\<tau\><rsub|2>\<circ\>\<tau\><rsub|1>|)><around*|(|z|)>\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.384.140>]>>Id<rsub|W><around*|(|z|)>
+      </equation*>
+
+      If <math|z\<in\>U> then
+
+      <\equation*>
+        <around*|(|<around*|(|\<tau\><rsub|1>|)><rsub|\|W>\<circ\><around*|(|\<tau\><rsub|2>|)><rsub|\|U>|)>=<around*|(|\<tau\><rsub|1>|)><rsub|\|W><around*|(|<around*|(|\<tau\><rsub|2>|)><rsub|\|U><around*|(|z|)>|)>=\<tau\><rsub|1><around*|(|<around*|(|\<tau\><rsub|2>|)><rsub|\|U><around*|(|z|)>|)>=\<tau\><rsub|1><around*|(|\<tau\><rsub|2><around*|(|z|)>|)>=<around*|(|\<tau\><rsub|1>\<circ\>\<tau\><rsub|2>|)><around*|(|z|)>\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.384.140>]>>Id<rsub|U><around*|(|z|)>
+      </equation*>
+
+      so that\ 
+
+      <\equation>
+        <label|eq 16.388.140><around*|(|\<tau\><rsub|1>|)><rsub|\|W><text|,
+        <math|<around*|(|\<tau\><rsub|2>|)><rsub|\|U>> are bijections with
+        ><around*|(|<around*|(|\<tau\><rsub|1>|)><rsub|\|W>|)><rsup|-1>=<around*|(|\<tau\><rsub|2>|)><rsub|\|U>
+      </equation>
+
+      Using [theorem: <reference|diff restriction of a function of class
+      C^n>] on [eqs: <reference|eq 16.383.140>, <reference|eq 16.386.140> and
+      <reference|eq 16.387.140>] it follows that\ 
+
+      <\equation*>
+        \<tau\>=<around*|(|\<tau\><rsub|1>|)><rsub|\|W>:W\<rightarrow\>Y<text|
+        and ><around*|(|\<tau\><rsub|2>|)><rsub|\|U>:U\<rightarrow\>X<text|
+        are of class >C<rsup|n><text| and >\<forall\>z\<in\>W<text| we have
+        >D<rsub|z>\<tau\>=D<rsub|z><around*|(|\<tau\>|)><rsub|<mid|\|>W>=Id<rsub|X>
+      </equation*>
+
+      so that by [eq: <reference|eq 16.388.140>]
+
+      <\equation*>
+        <around*|(|\<tau\><rsub|1>|)><rsub|\|W>:W\<rightarrow\>U<text| is a
+        diffeomorphism of class >C<rsup|n><text| and
+        >\<forall\>z\<in\>W<text| we have >D<rsub|z>\<tau\>=Id<rsub|X>
+      </equation*>
+
+      Hence we have found a open set <math|W> with <math|x\<in\>W>, a
+      diffeomorphism <math|\<tau\>:W\<rightarrow\>U> of class
+      <math|C<rsup|n>> satisfying <math|\<forall\>z\<in\>W<text| that
+      >D<rsub|z>\<tau\>=Id<rsub|X>> and <math|\<tau\><around*|(|x|)>=y>.
+    </proof>
 
     <\conjecture>
       Let <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
       <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
       be Banach spaces, <math|U> a open set in <math|X>,
-      <math|x<rsub|0>\<in\>X>, <math|f:U\<rightarrow\>Y> a function of class
+      <math|x<rsub|0>\<in\>U>, <math|f:U\<rightarrow\>Y> a function of class
       <math|C<rsup|n>> such that <math|D<rsub|x<rsub|0>>f\<in\>L<rsub|n><around*|(|X,Y|)>>
       is a bijection then <math|f> is a local diffeomorphism of class
-      <math|C<rsup|n>> at <math|x>. In other words there exist a open set
-      <math|U<rsub|x<rsub|0>>> in <math|X> with
+      <math|C<rsup|n>> at <math|x<rsub|0>>. In other words there exist a open
+      set <math|U<rsub|x<rsub|0>>> in <math|X> with
       <math|x<rsub|0>\<in\>U<rsub|x<rsub|0>>\<subseteq\>U> and a open set
       <math|V<rsub|f<around*|(|x<rsub|0>|)>>> with
       <math|f<around*|(|x<rsub|0>|)>\<in\>V<rsub|f<around*|(|x<rsub|0>|)>>>
@@ -20529,13 +20661,239 @@
     </conjecture>
 
     <\proof>
+      Define <math|\<tau\><rsub|1>:X\<rightarrow\>X> by
+      <math|\<tau\><rsub|1><around*|(|x|)>=x+x<rsub|0>> then by [example:
+      <reference|diff translation is infinite differentiable>]
+      <math|\<tau\><rsub|1>> is of class <math|C<rsup|\<infty\>>> with
+      <math|D<rsub|0>\<tau\><rsub|1>=Id<rsub|X>>. Then
+
+      <\equation*>
+        \<tau\><rsub|1><around*|(|0|)>=x<rsub|>\<Rightarrow\>0\<in\>W<text|
+        where >W=<around*|(|\<tau\><rsub|1>|)><rsup|-1><around*|(|U|)>
+      </equation*>
+
+      As <math|\<tau\><rsub|1>> is of class <math|C<rsup|0>> hence is
+      continuous <math|W> is open, applying then [theorem: <reference|diff
+      restriction of a function of class C^n>] we have that\ 
+
+      <\equation*>
+        \<tau\><rsub|2>=<around*|(|\<tau\><rsub|1>|)><rsub|\|W>:W\<rightarrow\>X<text|
+        is of class >C<rsup|\<infty\>><text| with
+        >D<rsub|0>\<tau\><rsub|2>=Id<rsub|X>
+      </equation*>
+
+      and\ 
+
+      <\equation*>
+        0\<in\>W
+      </equation*>
+
+      If <math|y\<in\>\<tau\><rsub|2><around*|(|W|)>> then there exist a
+      <math|x\<in\>W> such that <math|\<tau\><rsub|2><around*|(|x|)>=y>, as
+      <math|W=<around*|(|\<tau\><rsub|1>|)><rsup|-1><around*|(|U|)>> we have
+      that <math|y=\<tau\><rsub|1><around*|(|x|)>\<in\>U> proving that\ 
+
+      <\equation*>
+        \<tau\><rsub|2><around*|(|W|)>\<subseteq\>U
+      </equation*>
+
+      Furher define <math|\<tau\><rsub|3>:Y\<rightarrow\>Y> by
+      <math|\<tau\><rsub|3><around*|(|x|)>=x+f<around*|(|x<rsub|0>|)>> then
+      by [example: <reference|diff translation is infinite differentiable>]
+      <math|\<tau\><rsub|3>> is of class <math|C<rsup|\<infty\>>> with
+      <math|D<rsub|0>\<tau\><rsub|3>=Id<rsub|Y>>. So we can construct the
+      function
+
+      <\equation*>
+        h=\<tau\><rsub|3>\<circ\>f\<circ\>\<tau\><rsub|2>:W\<rightarrow\>Y
+      </equation*>
+
+      Using the chain rule [theorem: <reference|diff chain rule higher order
+      class>] it follows that <math|h> is of class <math|C<rsup|\<infty\>>>
+      and\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|D<rsub|0>h>|<cell|=>|<cell|D<rsub|0><around*|(|\<tau\><rsub|3>\<circ\>f\<circ\>\<tau\><rsub|2>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|0><around*|(|<around*|(|\<tau\><rsub|3>\<circ\>f|)>\<circ\>\<tau\><rsub|2>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|\<tau\><rsub|2><around*|(|0|)>><around*|(|\<tau\><rsub|3>\<circ\>f|)>\<circ\>D<rsub|0>\<tau\><rsub|2>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|\<tau\><rsub|2><around*|(|0|)>><around*|(|\<tau\><rsub|3>\<circ\>f|)>\<circ\>Id<rsub|X>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|\<tau\><rsub|2><around*|(|0|)>><around*|(|\<tau\><rsub|3>\<circ\>f|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|f<around*|(|\<tau\><rsub|1><around*|(|0|)>|)>>\<tau\><rsub|3>\<circ\>D<rsub|\<tau\><rsub|2><around*|(|0|)>>f>>|<row|<cell|>|<cell|=>|<cell|Id<rsub|Y>\<circ\>D<rsub|\<tau\><rsub|2><around*|(|0|)>>f>>|<row|<cell|>|<cell|=>|<cell|D<rsub|\<tau\><rsub|2><around*|(|0|)>>f>>|<row|<cell|>|<cell|=>|<cell|D<rsub|x<rsub|0>>f>>>>
+      </eqnarray*>
+
+      As <math|D<rsub|x<rsub|0>>f> is a bijection it follows from the above
+      that\ 
+
+      <\equation*>
+        D<rsub|0>h<text| is a bijection>
+      </equation*>
+
+      Further we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|h<around*|(|0|)>>|<cell|=>|<cell|<around*|(|\<tau\><rsub|3>\<circ\>f\<circ\>\<tau\><rsub|2>|)><around*|(|0|)>>>|<row|<cell|>|<cell|=>|<cell|\<tau\><rsub|3><around*|(|f<around*|(|\<tau\><rsub|2><around*|(|0|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<tau\><rsub|3><around*|(|f<around*|(|0+x<rsub|0>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<tau\><rsub|3><around*|(|f<around*|(|x<rsub|0>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|0>>>>
+      </eqnarray*>
+
+      So the conditions for the previous proposition [proposition:
+      <reference|proposition 16.249.138>] are satisfied proving that <math|h>
+      is a local diffeomorphism of class <math|C<rsup|n>> at <math|0>. Hence
+      there exist open sets <math|U<rsub|0>>, <math|V<rsub|0>> with
+      <math|0\<in\>U<rsub|0>>, <math|0=h<around*|(|0|)>\<in\>V<rsub|0>> such
+      that
+
+      <\equation>
+        <label|eq 16.390.141>h<rsub|\|U<rsub|0>>:U<rsub|0>\<rightarrow\>V<rsub|0><text|
+        is a diffeomorphism of class >C<rsup|n><text|>
+      </equation>
+
+      Define now
+
+      <\equation*>
+        \<tau\><rsub|4>:X\<rightarrow\>X<text| by
+        >\<tau\><rsub|4><around*|(|x|)>=x-x<rsub|0><text| and
+        >\<tau\><rsub|5>:Y\<rightarrow\>Y<text| by
+        >\<tau\><rsub|5><around*|(|x|)>=x+x<rsub|0>
+      </equation*>
+
+      then we have that for <math|x\<in\>X>
+
+      <\equation*>
+        <around*|(|\<tau\><rsub|4>\<circ\>\<tau\><rsub|5>|)><around*|(|x|)>=\<tau\><rsub|4><around*|(|\<tau\><rsub|5><around*|(|x|)>|)>=\<tau\><rsub|4><around*|(|x+x<rsub|0>|)>=x+x<rsub|0>-x<rsub|0>=x=Id<rsub|X><around*|(|x|)>
+      </equation*>
+
+      <\equation*>
+        <around*|(|\<tau\><rsub|5>\<circ\>\<tau\><rsub|4>|)><around*|(|x|)>=\<tau\><rsub|5><around*|(|\<tau\><rsub|4><around*|(|x|)>|)>=\<tau\><rsub|5><around*|(|x-x<rsub|0>|)>=x-x<rsub|0>+x<rsub|0>=x=Id<rsub|X><around*|(|x|)>
+      </equation*>
+
+      proving that <math|\<tau\><rsub|4>\<circ\>\<tau\><rsub|5>=Id<rsub|X>=\<tau\><rsub|5>\<circ\>\<tau\><rsub|4>>
+      so that\ 
+
+      <\equation*>
+        \<tau\><rsub|4><text|,>\<tau\><rsub|5><text| are bijections and
+        ><around*|(|\<tau\><rsub|4>|)><rsup|-1>=\<tau\><rsub|5>
+      </equation*>
+
+      Let <math|U<rsub|x<rsub|0>>=<around*|(|\<tau\><rsub|4>|)><rsup|-1><around*|(|U<rsub|0>|)>>
+      then as <math|\<tau\><rsub|4>> is a bijection we have that
+      <math|\<tau\><rsub|4><around*|(|U<rsub|x<rsub|0>>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|function preimage of image>]>>U<rsub|0>> hence\ 
+
+      <\equation*>
+        <around*|(|\<tau\><rsub|4>|)><rsub|\|U<rsub|x<rsub|0>>>:U<rsub|x<rsub|0>>\<rightarrow\>U<rsub|0><text|
+        is a bijection>
+      </equation*>
+
+      Further we have that
+
+      <\equation*>
+        <around*|(|<around*|(|\<tau\><rsub|4>|)><rsub|\|U<rsub|x<rsub|0>>>|)><rsup|-1>\<equallim\><rsub|<text|[theorem:
+        <reference|function inverse function and
+        bijection>]>><around*|(|<around*|(|\<tau\><rsub|4>|)><rsup|-1>|)><rsub|\|\<tau\><rsub|4><around*|(|U<rsub|x<rsub|>>|)>>=<around*|(|\<tau\><rsub|5>|)><rsub|\|U<rsub|0>>:U<rsub|0>\<rightarrow\>U<rsub|x<rsub|0>>
+      </equation*>
+
+      Using [example: <reference|diff translation is infinite
+      differentiable>] it follows that <math|\<tau\><rsub|4>,\<tau\><rsub|5>>
+      are of class <math|C<rsup|\<infty\>>>. So <math|\<tau\><rsub|4>> is
+      continuous proving that <math|U<rsub|x<rsub|>>> is a open set. Hence by
+      definition of a diffeomorphism it follows that
+
+      <\equation>
+        <label|eq 16.391.141><around*|(|\<tau\><rsub|4>|)><rsub|\|U<rsub|x<rsub|0>>>:U<rsub|x<rsub|0>>\<rightarrow\>U<rsub|0><text|
+        is a diffeomorphism of class >C<rsup|n>
+      </equation>
+
+      Next define
+
+      <\equation*>
+        \<tau\><rsub|6>:Y\<rightarrow\>Y<text| by
+        >\<tau\><rsub|6><around*|(|y|)>=y+f<around*|(|x<rsub|0>|)><text| and
+        >\<tau\><rsub|7>:Y\<rightarrow\>Y<text| by
+        >\<tau\><rsub|7><around*|(|y|)>=y-f<around*|(|x<rsub|0>|)>
+      </equation*>
+
+      then we have that for <math|y\<in\>Y>
+
+      <\equation*>
+        <around*|(|\<tau\><rsub|6>\<circ\>\<tau\><rsub|7>|)><around*|(|y|)>=\<tau\><rsub|6><around*|(|\<tau\><rsub|6><around*|(|y|)>|)>=\<tau\><rsub|6><around*|(|y-f<around*|(|x<rsub|0>|)>|)>=y-f<around*|(|x<rsub|0>|)>+f<around*|(|x<rsub|0>|)>=y=Id<rsub|Y><around*|(|y|)>
+      </equation*>
+
+      <\equation*>
+        <around*|(|\<tau\><rsub|7>\<circ\>\<tau\><rsub|6>|)><around*|(|y|)>=\<tau\><rsub|7><around*|(|\<tau\><rsub|6><around*|(|y|)>|)>=\<tau\><rsub|7><around*|(|y+f<around*|(|x<rsub|0>|)>|)>=y+f<around*|(|x<rsub|0>|)>-f<around*|(|x<rsub|0>|)>=y=Id<rsub|Y><around*|(|y|)>
+      </equation*>
+
+      proving that <math|\<tau\><rsub|6>\<circ\>\<tau\><rsub|7>=Id<rsub|Y>=\<tau\><rsub|7>\<circ\>\<tau\><rsub|6>>
+      so that\ 
+
+      <\equation*>
+        \<tau\><rsub|6><text|,>\<tau\><rsub|7><text| are bijections and
+        ><around*|(|\<tau\><rsub|7>|)><rsup|-1>=\<tau\><rsub|6>
+      </equation*>
+
+      Let <math|V<rsub|f<around*|(|x<rsub|0>|)>>=\<tau\><rsub|6><around*|(|V<rsub|0>|)>>
+      then we have\ 
+
+      <\equation*>
+        \<tau\><rsub|6>:V<rsub|0>\<rightarrow\>V<rsub|f<around*|(|x<rsub|0>|)>><text|
+        is a bijction>
+      </equation*>
+
+      further we have\ 
+
+      <\equation>
+        <label|eq 16.391.140>V<rsub|f<around*|(|x<rsub|0>|)>>=<around*|(|<around*|(|\<tau\><rsub|7>|)><rsup|-1>|)><around*|(|V<rsub|0>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|function inverse image
+        preimage>]>><around*|(|\<tau\><rsub|7>|)><rsup|-1><around*|(|V<rsub|0>|)>
+      </equation>
+
+      and\ 
+
+      <\equation*>
+        <around*|(|<around*|(|\<tau\><rsub|6>|)><rsub|\|V<rsub|0>>|)><rsup|-1>\<equallim\><rsub|<text|[theorem:
+        <reference|function inverse function and
+        bijection>]>><around*|(|<around*|(|\<tau\><rsub|6>|)><rsup|-1>|)><rsub|\|\<tau\><rsub|6><around*|(|V<rsub|0>|)>>=<around*|(|<around*|(|\<tau\><rsub|6>|)><rsup|-1>|)><rsub|\|V<rsub|f<around*|(|x<rsub|0>|)>>>:V<rsub|f<around*|(|x<rsub|0>|)>>\<rightarrow\>V<rsub|0>
+      </equation*>
+
+      Using \ [example: <reference|diff translation is infinite
+      differentiable>] it follows that <math|\<tau\><rsub|6>,\<tau\><rsub|7>>
+      are of class <math|C<rsup|\<infty\>>>. So <math|\<tau\><rsub|7>> is
+      continuous proving by [eq: <reference|eq 16.391.140>] that
+      <math|V<rsub|f<around*|(|x<rsub|0>|)>>> is a open set. Hence by
+      definition of a diffeomorphism it follows that
+
+      <\equation>
+        <label|eq 16.393.141><around*|(|\<tau\><rsub|6>|)><rsub|\|V<rsub|0>>:V<rsub|0>\<rightarrow\>V<rsub|f<around*|(|x<rsub|0>|)>><text|
+        is a diffeomorphism of class >C<rsup|n>
+      </equation>
+
+      Define now\ 
+
+      <\equation*>
+        g=<around*|(|\<tau\><rsub|6>|)><rsub|\|V<rsub|0>>\<circ\>h<rsub|\|U<rsub|0>>\<circ\><around*|(|\<tau\><rsub|4>|)><rsub|\|U<rsub|x<rsub|0>>>:U<rsub|x<rsub|0>>\<rightarrow\>V<rsub|f<around*|(|x<rsub|0>|)>>
+      </equation*>
+
+      then using [eqs <reference|eq 16.390.141>, <reference|eq 16.391.141>,
+      <reference|eq 16.392.141>] and [theorem: <reference|diff diffeomorphism
+      composition>] it follows that\ 
+
+      <\equation*>
+        g:U<rsub|x<rsub|0>>\<rightarrow\>V<rsub|f<around*|(|x<rsub|0>|)>><text|
+        is a diffeomorphism of class >C<rsup|n>
+      </equation*>
+
+      Further we have for <math|x\<in\>U<rsub|x<rsub|0>>> that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|g<around*|(|x|)>>|<cell|=>|<cell|<around*|(|<around*|(|\<tau\><rsub|6>|)><rsub|\|V<rsub|0>>\<circ\>h<rsub|\|U<rsub|0>>\<circ\><around*|(|\<tau\><rsub|4>|)><rsub|\|U<rsub|x<rsub|0>>>|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<tau\><rsub|6>|)><rsub|\|V<rsub|0>><around*|(|h<rsub|\|U<rsub|0>><around*|(|<around*|(|\<tau\><rsub|4>|)><rsub|\|U<rsub|x<rsub|0>>><around*|(|x|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<tau\><rsub|6><around*|(|h<around*|(|\<tau\><rsub|4><around*|(|x|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<tau\><rsub|6><around*|(|<around*|(|\<tau\><rsub|3>\<circ\>f\<circ\>\<tau\><rsub|2>|)><around*|(|x-x<rsub|0>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<tau\><rsub|6><around*|(|\<tau\><rsub|3><around*|(|f<around*|(|\<tau\><rsub|2><around*|(|x-x<rsub|0>|)>|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|t<rsub|6><around*|(|t<rsub|3><around*|(|f<around*|(|x|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|t<rsub|6><around*|(|f<around*|(|x|)>+f<around*|(|x<rsub|0>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|f<rsub|\|U<rsub|x<rsub|0>>><around*|(|x|)>>>>>
+      </eqnarray*>
+
+      which proves that\ 
+
+      <\equation*>
+        g=f<rsub|\|U<rsub|x<rsub|0>>>
+      </equation*>
+
+      <\equation*>
+        \;
+      </equation*>
+
       \;
     </proof>
-
-    \;
   </proof>
-
-  \;
 </body>
 
 <\initial>
@@ -20975,6 +21333,7 @@
     <associate|eq 16.249.210|<tuple|16.250|?>>
     <associate|eq 16.25.178|<tuple|16.29|?>>
     <associate|eq 16.250.210|<tuple|16.251|?>>
+    <associate|eq 16.251.141|<tuple|16.251|?>>
     <associate|eq 16.251.210|<tuple|16.252|?>>
     <associate|eq 16.252.210|<tuple|16.253|?>>
     <associate|eq 16.253.210|<tuple|16.254|?>>
@@ -21106,7 +21465,6 @@
     <associate|eq 16.371.137|<tuple|16.372|?>>
     <associate|eq 16.372.137|<tuple|16.373|?>>
     <associate|eq 16.374.138|<tuple|16.374|?>>
-    <associate|eq 16.375.138|<tuple|16.376|?>>
     <associate|eq 16.375\<point\>139|<tuple|16.375|?>>
     <associate|eq 16.376.138|<tuple|16.376|?>>
     <associate|eq 16.377.138|<tuple|16.377|?>>
@@ -21115,7 +21473,20 @@
     <associate|eq 16.38.182|<tuple|16.40|?>>
     <associate|eq 16.380.138|<tuple|16.380|?>>
     <associate|eq 16.381.138|<tuple|16.381|?>>
+    <associate|eq 16.382.140|<tuple|16.382|?>>
+    <associate|eq 16.383.140|<tuple|16.383|?>>
+    <associate|eq 16.384.140|<tuple|16.384|?>>
+    <associate|eq 16.385.140|<tuple|16.385|?>>
+    <associate|eq 16.386.140|<tuple|16.387|?>>
+    <associate|eq 16.386.141|<tuple|16.386|?>>
+    <associate|eq 16.387.140|<tuple|16.388|?>>
+    <associate|eq 16.388.140|<tuple|16.389|?>>
     <associate|eq 16.39.182|<tuple|16.41|?>>
+    <associate|eq 16.390.141|<tuple|16.390|?>>
+    <associate|eq 16.391.140|<tuple|16.392|?>>
+    <associate|eq 16.391.141|<tuple|16.391|?>>
+    <associate|eq 16.392.141|<tuple|16.392|?>>
+    <associate|eq 16.393.141|<tuple|16.393|?>>
     <associate|eq 16.4.177|<tuple|16.5|?>>
     <associate|eq 16.41.182|<tuple|16.43|?>>
     <associate|eq 16.42.187|<tuple|16.44|?>>

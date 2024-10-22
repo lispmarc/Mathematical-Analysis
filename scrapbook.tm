@@ -3874,6 +3874,136 @@
 
     \;
   </proof>
+
+  <\proof>
+    First we define the following translations
+
+    <\equation*>
+      \<forall\>y\<in\>X<text| define >\<tau\><rsub|X,y>:X\<rightarrow\>X<text|
+      by >\<tau\><rsub|X,y><around*|(|z|)>=y+z
+    </equation*>
+
+    <\equation*>
+      \<forall\>y\<in\>Y<text| define <math|\<tau\><rsub|Y,y>:Y\<rightarrow\>Y<text|
+      by >\<tau\><rsub|Y,y><around*|(|z|)>=y+z>>
+    </equation*>
+
+    Note that we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|\<tau\><rsub|X,y>\<circ\>\<tau\><rsub|X,-y>|)><around*|(|z|)>>|<cell|=>|<cell|\<tau\><rsub|X,y><around*|(|\<tau\><rsub|X,-y><around*|(|z|)>|)>=\<tau\><rsub|X,y><around*|(|<around*|(|-y|)>+z|)>=y+<around*|(|-y|)>+z=Id<rsub|X><around*|(|z|)>>>|<row|<cell|<around*|(|\<tau\><rsub|X,-y>\<circ\>\<tau\><rsub|X,y>|)><around*|(|z|)>>|<cell|=>|<cell|\<tau\><rsub|X,-y><around*|(|\<tau\><rsub|X,y><around*|(|z|)>|)>=\<tau\><rsub|X,y><around*|(|y+z|)>=<around*|(|-y|)>+y+z=Id<rsub|X><around*|(|z|)>>>|<row|<cell|<around*|(|\<tau\><rsub|Y,y>\<circ\>\<tau\><rsub|Y,-y>|)><around*|(|z|)>>|<cell|=>|<cell|\<tau\><rsub|Y,y><around*|(|\<tau\><rsub|Y,-y><around*|(|z|)>|)>=\<tau\><rsub|Y,y><around*|(|<around*|(|-y|)>+z|)>=y+<around*|(|-y|)>+z=Id<rsub|X><around*|(|z|)>>>|<row|<cell|<around*|(|\<tau\><rsub|Y,-y>\<circ\>\<tau\><rsub|Y,y>|)><around*|(|z|)>>|<cell|=>|<cell|\<tau\><rsub|Y,-y><around*|(|\<tau\><rsub|Y,y><around*|(|z|)>|)>=\<tau\><rsub|Y,y><around*|(|y+z|)>=<around*|(|-y|)>+y+z=Id<rsub|X><around*|(|z|)>>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation>
+      <label|eq 16.382.139>\<forall\>y\<in\>X<text| >\<tau\><rsub|X,y><text|
+      is a bijection and ><around*|(|\<tau\><rsub|X,y>|)><rsup|-1>=\<tau\><rsub|X,-y>
+    </equation>
+
+    <\equation>
+      <label|eq 16.383.139>\<forall\>y\<in\>Y<text| >\<tau\><rsub|Y,y><text|
+      is a bijection and ><around*|(|\<tau\><rsub|Y,y>|)><rsup|-1>=\<tau\><rsub|Y,-y>
+    </equation>
+
+    Further using [example: <reference|diff translation is infinite
+    differentiable>] it follows that
+
+    <\equation*>
+      \<forall\>y\<in\>X<text| >\<tau\><rsub|X,y><text| is of class
+      >C<rsup|\<infty\>><text| and >\<forall\>y\<in\>Y<text|
+      >\<tau\><rsub|Y,y><text| is of class >C<rsup|\<infty\>><text|>
+    </equation*>
+
+    \;
+
+    <\equation*>
+      \;
+    </equation*>
+
+    \;
+  </proof>
+
+  So by the above and [eqs: <reference|eq 16.382.139>, <reference|eq
+  16.383.139>] it follows tha
+
+  <\equation>
+    <label|eq 16.384.139>\<forall\>y\<in\>X<text| >\<tau\><rsub|X,y><text| is
+    a diffeomorphism of class >\<cap\>\<forall\>y\<in\>Y<text|
+    >\<tau\><rsub|Y,y><text| is a diffeomorphism of class >C<rsup|\<infty\>>
+  </equation>
+
+  Define\ 
+
+  <\equation>
+    <label|eq 16.382.139>h=\<tau\><rsub|Y,-f<around*|(|x<rsub|0>|)>>\<circ\>f\<circ\>\<tau\><rsub|X,x<rsub|0>>:<around*|(|\<tau\><rsub|X,x<rsub|0>>|)><rsup|-1><around*|(|U|)>\<rightarrow\>Y
+  </equation>
+
+  As <math|x<rsub|0>\<in\>U> that <math|\<tau\><rsub|X,x<rsub|0>><around*|(|0|)>=x<rsub|0>+0=x<rsub|0>\<in\>U>
+  so that <math|0\<in\><around*|(|\<tau\><rsub|X,x<rsub|0>>|)><rsup|-1><around*|(|U|)>>,
+  further we have
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|h<around*|(|0|)>>|<cell|=>|<cell|<around*|(|\<tau\><rsub|Y,-f<around*|(|x<rsub|0>|)>>\<circ\>f\<circ\>\<tau\><rsub|X,x<rsub|0>>|)><around*|(|0|)>>>|<row|<cell|>|<cell|=>|<cell|\<tau\><rsub|Y,-f<around*|(|x<rsub|0>|)>><around*|(|f<around*|(|\<tau\><rsub|X,x<rsub|0>><around*|(|0|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<tau\><rsub|Y,-f<around*|(|x<rsub|0>|)>><around*|(|f<around*|(|x<rsub|0>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|0<eq-number><label|eq
+    16.383.139>>>>>
+  </eqnarray*>
+
+  Further as <math|f> is of class <math|C<rsup|n>> and
+  <math|\<tau\><rsub|Y,-f<around*|(|x<rsub|0>|)>>>,
+  <math|\<tau\><rsub|X,x<rsub|0>>> are of class <math|C<rsup|\<infty\>>> it
+  follows from the chain rule [theorem: <reference|diff chain rule higher
+  order class>] that <math|h> is of class <math|C<rsup|n>> and\ 
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|D<rsub|0>h>|<cell|=>|<cell|D<rsub|0><around*|(|\<tau\><rsub|Y,-f<around*|(|x<rsub|0>|)>>\<circ\>f\<circ\>\<tau\><rsub|X,x<rsub|0>>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|0><around*|(|<around*|(|\<tau\><rsub|Y,-f<around*|(|x<rsub|0>|)>>\<circ\>f|)>\<circ\>\<tau\><rsub|X,x<rsub|0>>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|\<tau\><rsub|X,x<rsub|0>><around*|(|0|)>><around*|(|\<tau\><rsub|Y,-f<around*|(|x<rsub|0>|)>>\<circ\>f|)>\<circ\>D<rsub|0>\<tau\><rsub|X,x<rsub|0>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[example:
+    <reference|diff translation is infinite
+    differentiable>]>>>|<cell|D<rsub|\<tau\><rsub|X,x<rsub|0>><around*|(|0|)>><around*|(|\<tau\><rsub|Y,-f<around*|(|x<rsub|0>|)>>\<circ\>f|)>\<circ\>Id<rsub|X>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|x<rsub|0>><around*|(|\<tau\><rsub|Y,-f<around*|(|x<rsub|0>|)>>\<circ\>f|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|f<around*|(|x<rsub|0>|)>>\<tau\><rsub|Y,-f<around*|(|x<rsub|0>|)>>\<circ\>D<rsub|x<rsub|0>>f>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[example:
+    <reference|diff translation is infinite
+    differentiable>]>>>|<cell|Id<rsub|Y>\<circ\>D<rsub|x<rsub|0>>f>>|<row|<cell|>|<cell|=>|<cell|D<rsub|x<rsub|0>>f>>>>
+  </eqnarray*>
+
+  Hence as <math|D<rsub|x<rsub|0>>f\<in\>L<around*|(|X,Y|)>> is a bijection
+  <math|D<rsub|0>h> is a isomorphism. So the conditions for [proposition:
+  <reference|proposition 16.249.138>] are satisifed. Hence there exist open
+  sets <math|U<rsub|0>>, <math|V<rsub|0>> with <math|0\<in\>U<rsub|0>>,
+  <math|0\<in\>V<rsub|0>> such that\ 
+
+  <\equation>
+    <label|eq 16.387.138>h<rsub|\|U<rsub|0>>:U<rsub|0>\<rightarrow\>V<rsub|0><text|
+    is a diffeomorphism of class >C<rsup|n>
+  </equation>
+
+  Define now <math|U<rsub|x<rsub|0>>=<around*|(|\<tau\><rsub|X,-x<rsub|0>>|)><rsup|-1><around*|(|U<rsub|0>|)>>,
+  <math|V<rsub|x<rsub|0>>=<around*|(|\<tau\><rsub|Y,-f<around*|(|x<rsub|0>|)>>|)><rsup|-1><around*|(|V<rsub|0>|)>=\<tau\><rsub|Y,f<around*|(|x<rsub|0>|)>><around*|(|V<rsub|0>|)>>
+  then, as <math|><math|\<tau\><rsub|X,-x<rsub|0>>>,<math|\<tau\><rsub|Y,-f<around*|(|x<rsub|0>|)>>>
+  are of class <math|C<rsup|\<infty\>>>, <math|U<rsub|x<rsub|0>>> is open in
+  <math|X> and <math|V<rsub|x<rsub|0>>> is open in <math|Y>. From
+  <math|\<tau\><rsub|X,-x<rsub|0>><around*|(|x<rsub|0>|)>=0\<in\>U<rsub|0>>
+  it follows that <math|x<rsub|0>\<in\>U<rsub|x<rsub|0>>>, further
+  <math|f<around*|(|x<rsub|0>|)>=\<tau\><rsub|X,f<around*|(|x<rsub|0>|)>><around*|(|0|)>\<in\>V<rsub|x<rsub|0>>>.
+  So we have\ 
+
+  <\equation*>
+    U<rsub|x<rsub|0>>,V<rsub|x<rsub|0>><text| are open,
+    >x<rsub|0>\<in\>U<rsub|x<rsub|0>><text| and
+    >f<around*|(|x<rsub|0>|)>\<in\>V<rsub|x<rsub|0>>
+  </equation*>
+
+  Using \ [theorem: <reference|function restriction of a function>] we have
+  that\ 
+
+  <\equation*>
+    \<tau\><rsub|X,>
+  </equation*>
+
+  Define then the following bijection [see <reference|function composition
+  injectivity, surjectivity and bijectivity (1)>]
+
+  <\equation*>
+    g=\<tau\><rsub|Y,f<around*|(|x<rsub|0>|)>>\<circ\>h<rsub|\|U<rsub|0>>\<circ\>\<tau\><rsub|X,-x<rsub|0>>:U<rsub|x<rsub|0>>=<around*|(|\<tau\><rsub|X,-x<rsub|0>>|)><rsup|-1><around*|(|U<rsub|0>|)>\<rightarrow\>\<tau\><rsub|><rsub|>
+  </equation*>
+
+  \;
 </body>
 
 <\initial>
@@ -3890,8 +4020,8 @@
     <associate|auto-4|<tuple|<with|mode|<quote|math>|\<Delta\><rsub|i,j>>|19>>
     <associate|auto-5|<tuple|1|23>>
     <associate|complete open mapping theorem|<tuple|5|5>>
-    <associate|conjecture 16.245.134|<tuple|32|?>>
-    <associate|conjecture 16.246.135|<tuple|33|?>>
+    <associate|conjecture 16.245.134|<tuple|32|38>>
+    <associate|conjecture 16.246.135|<tuple|33|39>>
     <associate|continuity L(X,L(Y,Z)) is isometric with
     L(X,Y;Z)|<tuple|21|19>>
     <associate|countable union of a finite family of countable sets is
@@ -3990,13 +4120,17 @@
     <associate|eq 16.297.125|<tuple|93|33>>
     <associate|eq 16.298.125|<tuple|94|33>>
     <associate|eq 16.300.126|<tuple|95|34>>
-    <associate|eq 16.353.135|<tuple|104|?>>
-    <associate|eq 16.354.135|<tuple|105|?>>
-    <associate|eq 16.355.135|<tuple|106|?>>
-    <associate|eq 16.359.136|<tuple|107|?>>
-    <associate|eq 16.360.136|<tuple|108|?>>
-    <associate|eq 16.361.136|<tuple|109|?>>
-    <associate|eq 16.362.136|<tuple|110|?>>
+    <associate|eq 16.353.135|<tuple|104|39>>
+    <associate|eq 16.354.135|<tuple|105|39>>
+    <associate|eq 16.355.135|<tuple|106|40>>
+    <associate|eq 16.359.136|<tuple|107|40>>
+    <associate|eq 16.360.136|<tuple|108|40>>
+    <associate|eq 16.361.136|<tuple|109|41>>
+    <associate|eq 16.362.136|<tuple|110|41>>
+    <associate|eq 16.382.139|<tuple|114|?>>
+    <associate|eq 16.383.139|<tuple|115|?>>
+    <associate|eq 16.384.139|<tuple|113|?>>
+    <associate|eq 16.387.138|<tuple|116|?>>
     <associate|eq 16.45.185|<tuple|59|23>>
     <associate|eq 16.46.185|<tuple|60|23>>
     <associate|eq 16.47.185|<tuple|61|23>>

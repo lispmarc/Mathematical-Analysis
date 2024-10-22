@@ -4843,6 +4843,9 @@
 
       <item>If <math|f:A\<rightarrow\>B> is injective then
       <math|f<rsub|\|C>:C\<rightarrow\>f<around*|(|C|)>> is a bijection
+
+      <item>If <math|f:A\<rightarrow\>B> is a bijection then
+      <math|f<rsub|\|C>:C\<rightarrow\>f<around*|(|C|)>> is a bijection
     </enumerate>
   </theorem>
 
@@ -4875,6 +4878,9 @@
       <\equation*>
         f<rsub|\|C>:C\<rightarrow\>f<around*|(|C|)><text| is a bijection>
       </equation*>
+
+      <item>As a bijection is injective thie follows from
+      <math|<around*|(|3|)>>.
     </enumerate>
   </proof>
 
