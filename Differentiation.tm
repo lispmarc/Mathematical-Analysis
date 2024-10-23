@@ -20641,7 +20641,8 @@
     </proof>
 
     <\conjecture>
-      Let <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+      <label|conjecture 16.252>Let <math|n\<in\>\<bbb-N\>>,
+      <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
       <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
       be Banach spaces, <math|U> a open set in <math|X>,
       <math|x<rsub|0>\<in\>U>, <math|f:U\<rightarrow\>Y> a function of class
@@ -20661,51 +20662,45 @@
     </conjecture>
 
     <\proof>
-      Define <math|\<tau\><rsub|1>:X\<rightarrow\>X> by
-      <math|\<tau\><rsub|1><around*|(|x|)>=x+x<rsub|0>> then by [example:
+      Define <math|\<cal-T\><rsub|1>:X\<rightarrow\>X> by
+      <math|\<cal-T\><rsub|1><around*|(|x|)>=x+x<rsub|0>> then by [example:
       <reference|diff translation is infinite differentiable>]
-      <math|\<tau\><rsub|1>> is of class <math|C<rsup|\<infty\>>> with
-      <math|D<rsub|0>\<tau\><rsub|1>=Id<rsub|X>>. Then
+      <math|\<cal-T\><rsub|1>> is of class <math|C<rsup|\<infty\>>> with
+      <math|D<rsub|0>\<cal-T\><rsub|1>=Id<rsub|X>>. Then
 
-      <\equation*>
-        \<tau\><rsub|1><around*|(|0|)>=x<rsub|>\<Rightarrow\>0\<in\>W<text|
-        where >W=<around*|(|\<tau\><rsub|1>|)><rsup|-1><around*|(|U|)>
-      </equation*>
+      <\equation>
+        <label|eq 16.300.142>\<cal-T\><rsub|1><around*|(|0|)>=x<rsub|>\<Rightarrow\>0\<in\>W<text|
+        where >W=<around*|(|\<cal-T\><rsub|1>|)><rsup|-1><around*|(|U|)>
+      </equation>
 
-      As <math|\<tau\><rsub|1>> is of class <math|C<rsup|0>> hence is
-      continuous <math|W> is open, applying then [theorem: <reference|diff
-      restriction of a function of class C^n>] we have that\ 
+      As <math|\<cal-T\><rsub|1>> is of class <math|C<rsup|\<infty\>>> hence
+      continuous <math|W> is a open set, so applying [theorem:
+      <reference|diff restriction of a function of class C^n>] we have\ 
 
-      <\equation*>
-        \<tau\><rsub|2>=<around*|(|\<tau\><rsub|1>|)><rsub|\|W>:W\<rightarrow\>X<text|
+      <\equation>
+        <label|eq 16.391.142><around*|(|\<cal-T\><rsub|1>|)><rsub|\|W>:W\<rightarrow\>X<text|
         is of class >C<rsup|\<infty\>><text| with
-        >D<rsub|0>\<tau\><rsub|2>=Id<rsub|X>
-      </equation*>
+        >D<rsub|0><around*|(|\<cal-T\><rsub|1>|)><rsub|\|W>=Id<rsub|X>
+      </equation>
 
-      and\ 
+      Further\ 
 
-      <\equation*>
-        0\<in\>W
-      </equation*>
+      <\equation>
+        <label|eq 16.392.142><around*|(|\<cal-T\><rsub|1>|)><rsub|\|W><around*|(|W|)>\<equallim\><rsub|<text|[theorem:
+        <reference|function restricted function
+        properties>]<verbatim|>>>\<cal-T\><rsub|1><around*|(|W|)>=\<cal-T\><rsub|1><around*|(|<around*|(|\<cal-T\><rsub|1>|)><rsup|-1><around*|(|U|)>|)>\<subseteq\><rsub|<text|[theorem:
+        <reference|function preimage of image (1)>]>>U
+      </equation>
 
-      If <math|y\<in\>\<tau\><rsub|2><around*|(|W|)>> then there exist a
-      <math|x\<in\>W> such that <math|\<tau\><rsub|2><around*|(|x|)>=y>, as
-      <math|W=<around*|(|\<tau\><rsub|1>|)><rsup|-1><around*|(|U|)>> we have
-      that <math|y=\<tau\><rsub|1><around*|(|x|)>\<in\>U> proving that\ 
-
-      <\equation*>
-        \<tau\><rsub|2><around*|(|W|)>\<subseteq\>U
-      </equation*>
-
-      Furher define <math|\<tau\><rsub|3>:Y\<rightarrow\>Y> by
-      <math|\<tau\><rsub|3><around*|(|x|)>=x+f<around*|(|x<rsub|0>|)>> then
+      Furher define <math|\<cal-T\><rsub|2>:Y\<rightarrow\>Y> by
+      <math|\<cal-T\><rsub|2><around*|(|x|)>=x+f<around*|(|x<rsub|0>|)>> then
       by [example: <reference|diff translation is infinite differentiable>]
-      <math|\<tau\><rsub|3>> is of class <math|C<rsup|\<infty\>>> with
-      <math|D<rsub|0>\<tau\><rsub|3>=Id<rsub|Y>>. So we can construct the
+      <math|\<cal-T\><rsub|2>> is of class <math|C<rsup|\<infty\>>> with
+      <math|D<rsub|0>\<cal-T\><rsub|2>=Id<rsub|Y>>. So we can construct the
       function
 
       <\equation*>
-        h=\<tau\><rsub|3>\<circ\>f\<circ\>\<tau\><rsub|2>:W\<rightarrow\>Y
+        h=\<cal-T\><rsub|2>\<circ\>f\<circ\><around*|(|\<cal-T\><rsub|1>|)><rsub|\|W>:W\<rightarrow\>Y
       </equation*>
 
       Using the chain rule [theorem: <reference|diff chain rule higher order
@@ -20713,7 +20708,7 @@
       and\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|D<rsub|0>h>|<cell|=>|<cell|D<rsub|0><around*|(|\<tau\><rsub|3>\<circ\>f\<circ\>\<tau\><rsub|2>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|0><around*|(|<around*|(|\<tau\><rsub|3>\<circ\>f|)>\<circ\>\<tau\><rsub|2>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|\<tau\><rsub|2><around*|(|0|)>><around*|(|\<tau\><rsub|3>\<circ\>f|)>\<circ\>D<rsub|0>\<tau\><rsub|2>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|\<tau\><rsub|2><around*|(|0|)>><around*|(|\<tau\><rsub|3>\<circ\>f|)>\<circ\>Id<rsub|X>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|\<tau\><rsub|2><around*|(|0|)>><around*|(|\<tau\><rsub|3>\<circ\>f|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|f<around*|(|\<tau\><rsub|1><around*|(|0|)>|)>>\<tau\><rsub|3>\<circ\>D<rsub|\<tau\><rsub|2><around*|(|0|)>>f>>|<row|<cell|>|<cell|=>|<cell|Id<rsub|Y>\<circ\>D<rsub|\<tau\><rsub|2><around*|(|0|)>>f>>|<row|<cell|>|<cell|=>|<cell|D<rsub|\<tau\><rsub|2><around*|(|0|)>>f>>|<row|<cell|>|<cell|=>|<cell|D<rsub|x<rsub|0>>f>>>>
+        <tformat|<table|<row|<cell|D<rsub|0>h>|<cell|=>|<cell|D<rsub|0><around*|(|\<cal-T\><rsub|2>\<circ\>f\<circ\><around*|(|\<cal-T\><rsub|1>|)><rsub|\|W>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|0><around*|(|<around*|(|\<cal-T\><rsub|2>\<circ\>f|)>\<circ\><around*|(|\<cal-T\><rsub|1>|)><rsub|\|W>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|<around*|(|\<cal-T\><rsub|1>|)><rsub|\|W><around*|(|0|)>><around*|(|\<cal-T\><rsub|2>\<circ\>f|)>\<circ\>D<rsub|0><around*|(|\<cal-T\><rsub|1>|)><rsub|\|W>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|<around*|(|\<cal-T\><rsub|1>|)><rsub|\|W><around*|(|0|)>><around*|(|\<cal-T\><rsub|2>\<circ\>f|)>\<circ\>Id<rsub|X>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|<around*|(|\<cal-T\><rsub|1>|)><rsub|\|W><around*|(|0|)>><around*|(|\<cal-T\><rsub|2>\<circ\>f|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|x<rsub|0>><around*|(|\<cal-T\><rsub|2>\<circ\>f|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|f<around*|(|x<rsub|0>|)>>\<cal-T\><rsub|2>\<circ\>D<rsub|x<rsub|0>>f>>|<row|<cell|>|<cell|=>|<cell|Id<rsub|Y>\<circ\>D<rsub|x<rsub|0>>f>>|<row|<cell|>|<cell|=>|<cell|D<rsub|x<rsub|0>>f>>>>
       </eqnarray*>
 
       As <math|D<rsub|x<rsub|0>>f> is a bijection it follows from the above
@@ -20726,174 +20721,239 @@
       Further we have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|h<around*|(|0|)>>|<cell|=>|<cell|<around*|(|\<tau\><rsub|3>\<circ\>f\<circ\>\<tau\><rsub|2>|)><around*|(|0|)>>>|<row|<cell|>|<cell|=>|<cell|\<tau\><rsub|3><around*|(|f<around*|(|\<tau\><rsub|2><around*|(|0|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<tau\><rsub|3><around*|(|f<around*|(|0+x<rsub|0>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<tau\><rsub|3><around*|(|f<around*|(|x<rsub|0>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|0>>>>
+        <tformat|<table|<row|<cell|h<around*|(|0|)>>|<cell|=>|<cell|<around*|(|\<cal-T\><rsub|2>\<circ\>f\<circ\><around*|(|\<cal-T\><rsub|1>|)><rsub|\|W>|)><around*|(|0|)>>>|<row|<cell|>|<cell|=>|<cell|\<cal-T\><rsub|2><around*|(|f<around*|(|<around*|(|\<cal-T\><rsub|1>|)><rsub|\|W><around*|(|0|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<cal-T\><rsub|2><around*|(|f<around*|(|x<rsub|0>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<cal-T\><rsub|2><around*|(|f<around*|(|x<rsub|0>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|x<rsub|0>|)>-f<around*|(|x<rsub|0>|)>>>|<row|<cell|>|<cell|=>|<cell|0>>>>
       </eqnarray*>
 
       So the conditions for the previous proposition [proposition:
-      <reference|proposition 16.249.138>] are satisfied proving that <math|h>
-      is a local diffeomorphism of class <math|C<rsup|n>> at <math|0>. Hence
-      there exist open sets <math|U<rsub|0>>, <math|V<rsub|0>> with
-      <math|0\<in\>U<rsub|0>>, <math|0=h<around*|(|0|)>\<in\>V<rsub|0>> such
-      that
+      <reference|proposition 16.249.138>] are satisfied and we have that
+      <math|h> is a local diffeomorphism of class <math|C<rsup|n>> at
+      <math|0>. Hence there exist by [definition: <reference|diff local
+      diffeomorphism>] open sets <math|U<rsub|0>>, <math|V<rsub|0>>\ 
 
       <\equation>
-        <label|eq 16.390.141>h<rsub|\|U<rsub|0>>:U<rsub|0>\<rightarrow\>V<rsub|0><text|
-        is a diffeomorphism of class >C<rsup|n><text|>
+        <label|eq 16.393.142>0\<in\>U<rsub|0>\<subseteq\>W<text|,
+        >0=h<around*|(|0|)>\<in\>V<rsub|0><text| and
+        >h<rsub|\|U<rsub|0>>:U<rsub|0>\<rightarrow\>V<rsub|0><text| is a
+        diffeomorphism of class >C<rsup|n><text|>
       </equation>
 
       Define now
 
       <\equation*>
-        \<tau\><rsub|4>:X\<rightarrow\>X<text| by
-        >\<tau\><rsub|4><around*|(|x|)>=x-x<rsub|0><text| and
-        >\<tau\><rsub|5>:Y\<rightarrow\>Y<text| by
-        >\<tau\><rsub|5><around*|(|x|)>=x+x<rsub|0>
+        \<cal-T\><rsub|3>:X\<rightarrow\>X<text| by
+        >\<cal-T\><rsub|3><around*|(|x|)>=x-x<rsub|0>
       </equation*>
 
       then we have that for <math|x\<in\>X>
 
       <\equation*>
-        <around*|(|\<tau\><rsub|4>\<circ\>\<tau\><rsub|5>|)><around*|(|x|)>=\<tau\><rsub|4><around*|(|\<tau\><rsub|5><around*|(|x|)>|)>=\<tau\><rsub|4><around*|(|x+x<rsub|0>|)>=x+x<rsub|0>-x<rsub|0>=x=Id<rsub|X><around*|(|x|)>
+        <around*|(|\<cal-T\><rsub|3>\<circ\>\<cal-T\><rsub|1>|)><around*|(|x|)>=\<cal-T\><rsub|3><around*|(|\<cal-T\><rsub|1><around*|(|x|)>|)>=\<cal-T\><rsub|3><around*|(|x+x<rsub|0>|)>=x+x<rsub|0>-x<rsub|0>=x=Id<rsub|X><around*|(|x|)>
       </equation*>
 
       <\equation*>
-        <around*|(|\<tau\><rsub|5>\<circ\>\<tau\><rsub|4>|)><around*|(|x|)>=\<tau\><rsub|5><around*|(|\<tau\><rsub|4><around*|(|x|)>|)>=\<tau\><rsub|5><around*|(|x-x<rsub|0>|)>=x-x<rsub|0>+x<rsub|0>=x=Id<rsub|X><around*|(|x|)>
+        <around*|(|\<cal-T\><rsub|1>\<circ\>\<cal-T\><rsub|3>|)><around*|(|x|)>=\<cal-T\><rsub|1><around*|(|\<cal-T\><rsub|3><around*|(|x|)>|)>=\<cal-T\><rsub|1><around*|(|x-x<rsub|0>|)>=x-x<rsub|0>+x<rsub|0>=x=Id<rsub|X><around*|(|x|)>
       </equation*>
 
-      proving that <math|\<tau\><rsub|4>\<circ\>\<tau\><rsub|5>=Id<rsub|X>=\<tau\><rsub|5>\<circ\>\<tau\><rsub|4>>
+      proving that <math|\<cal-T\><rsub|3>\<circ\>\<cal-T\><rsub|1>=Id<rsub|X>=\<cal-T\><rsub|3>\<circ\>\<cal-T\><rsub|1>>
       so that\ 
 
-      <\equation*>
-        \<tau\><rsub|4><text|,>\<tau\><rsub|5><text| are bijections and
-        ><around*|(|\<tau\><rsub|4>|)><rsup|-1>=\<tau\><rsub|5>
-      </equation*>
+      <\equation>
+        <label|eq 16.394.142>\<cal-T\><rsub|3><text|,>\<cal-T\><rsub|1><text|
+        are bijections and ><around*|(|\<cal-T\><rsub|3>|)><rsup|-1>=\<cal-T\><rsub|1>\<wedge\><around*|(|\<cal-T\><rsub|1>|)><rsup|-1>=\<cal-T\><rsub|3>
+      </equation>
 
-      Let <math|U<rsub|x<rsub|0>>=<around*|(|\<tau\><rsub|4>|)><rsup|-1><around*|(|U<rsub|0>|)>>
-      then as <math|\<tau\><rsub|4>> is a bijection we have that
-      <math|\<tau\><rsub|4><around*|(|U<rsub|x<rsub|0>>|)>\<equallim\><rsub|<text|[theorem:
+      Let <math|U<rsub|x<rsub|0>>=<around*|(|\<cal-T\><rsub|3>|)><rsup|-1><around*|(|U<rsub|0>|)>>
+      then as <math|\<cal-T\><rsub|3>> is a bijection we have that
+      <math|\<cal-T\><rsub|3><around*|(|U<rsub|x<rsub|0>>|)>\<equallim\><rsub|<text|[theorem:
       <reference|function preimage of image>]>>U<rsub|0>> hence\ 
 
-      <\equation*>
-        <around*|(|\<tau\><rsub|4>|)><rsub|\|U<rsub|x<rsub|0>>>:U<rsub|x<rsub|0>>\<rightarrow\>U<rsub|0><text|
+      <\equation>
+        <label|eq 16.395.142><around*|(|\<cal-T\><rsub|3>|)><rsub|\|U<rsub|x<rsub|0>>>:U<rsub|x<rsub|0>>\<rightarrow\>U<rsub|0><text|
         is a bijection>
-      </equation*>
+      </equation>
 
       Further we have that
 
-      <\equation*>
-        <around*|(|<around*|(|\<tau\><rsub|4>|)><rsub|\|U<rsub|x<rsub|0>>>|)><rsup|-1>\<equallim\><rsub|<text|[theorem:
+      <\equation>
+        <label|eq 16.396.142><around*|(|<around*|(|\<cal-T\><rsub|3>|)><rsub|\|U<rsub|x<rsub|0>>>|)><rsup|-1>\<equallim\><rsub|<text|[theorem:
         <reference|function inverse function and
-        bijection>]>><around*|(|<around*|(|\<tau\><rsub|4>|)><rsup|-1>|)><rsub|\|\<tau\><rsub|4><around*|(|U<rsub|x<rsub|>>|)>>=<around*|(|\<tau\><rsub|5>|)><rsub|\|U<rsub|0>>:U<rsub|0>\<rightarrow\>U<rsub|x<rsub|0>>
+        bijection>]>><around*|(|<around*|(|\<cal-T\><rsub|3>|)><rsup|-1>|)><rsub|\|\<cal-T\><rsub|3><around*|(|U<rsub|x<rsub|>>|)>>\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.394.142>]>><around*|(|\<cal-T\><rsub|1>|)><rsub|\|U<rsub|0>>:U<rsub|0>\<rightarrow\>U<rsub|x<rsub|0>>
+      </equation>
+
+      We have also\ 
+
+      <\equation*>
+        U<rsub|x<rsub|0>>=<around*|(|\<cal-T\><rsub|3>|)><rsup|-1><around*|(|U<rsub|0>|)>\<subseteq\><rsub|<text|[eq:
+        <reference|eq 16.393.142>]>><around*|(|\<cal-T\><rsub|3>|)><rsup|-1><around*|(|W|)>=<around*|(|<around*|(|\<cal-T\><rsub|1>|)><rsup|-1>|)><rsup|-1><around*|(|W|)>\<equallim\><rsub|<text|[theorem:
+        <reference|function inverse image
+        preimage>]>>\<cal-T\><rsub|1><around*|(|W|)>\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.392.142>]>>U
       </equation*>
 
-      Using [example: <reference|diff translation is infinite
-      differentiable>] it follows that <math|\<tau\><rsub|4>,\<tau\><rsub|5>>
-      are of class <math|C<rsup|\<infty\>>>. So <math|\<tau\><rsub|4>> is
-      continuous proving that <math|U<rsub|x<rsub|>>> is a open set. Hence by
-      definition of a diffeomorphism it follows that
+      or\ 
 
       <\equation>
-        <label|eq 16.391.141><around*|(|\<tau\><rsub|4>|)><rsub|\|U<rsub|x<rsub|0>>>:U<rsub|x<rsub|0>>\<rightarrow\>U<rsub|0><text|
+        <label|eq 16.397.142>U<rsub|x<rsub|0>>\<subseteq\>U
+      </equation>
+
+      By [eq: <reference|eq 16.393.142>] <math|0\<in\>U<rsub|0>> so that
+      <math|\<cal-T\><rsub|3><around*|(|x<rsub|0>|)>=x<rsub|0>-x<rsub|0>=0\<in\>U<rsub|0>>
+      proving that
+
+      <\equation>
+        <label|eq 16.398.142>x<rsub|0>\<in\><around*|(|\<cal-T\><rsub|3>|)><rsup|-1><around*|(|U<rsub|0>|)>=U<rsub|x<rsub|0>>
+      </equation>
+
+      Using [example: <reference|diff translation is infinite
+      differentiable>] it follows that <math|\<cal-T\><rsub|3>,\<cal-T\><rsub|1>>
+      are of class <math|C<rsup|\<infty\>>>. \ So applying [theorem:
+      <reference|diff restriction of a function of class C^n>] we have that\ 
+
+      <\equation>
+        <label|eq 16.399.142><around*|(|\<cal-T\><rsub|3>|)><rsub|\|U<rsub|x<rsub|>>>:U<rsub|x<rsub|0>>\<rightarrow\>X<text|,
+        ><around*|(|<around*|(|\<cal-T\><rsub|3>|)><rsub|\|U<rsub|x<rsub|0>>>|)><rsup|-1>:U<rsub|0>\<rightarrow\>X<text|
+        are of class >C<rsup|\<infty\>>
+      </equation>
+
+      As <math|\<cal-T\><rsub|3>> is of class <math|C<rsup|\<infty\>>>
+      <math|\<cal-T\><rsub|3>> is continuous so that
+
+      <\equation>
+        <label|eq 16.400.142>U<rsub|x<rsub|0>>=<around*|(|\<cal-T\><rsub|3>|)><rsup|-1><around*|(|U<rsub|0>|)><text|
+        is a open set>
+      </equation>
+
+      Hence by definition of a diffeomorphism [see definition:
+      <reference|diff diffeomorphism>] it follows from [eqs: <reference|eq
+      16.395.142>,<reference|eq 16.399.142>, <reference|eq 16.400.142>] that
+
+      <\equation>
+        <label|eq 16.401.142><around*|(|\<cal-T\><rsub|3>|)><rsub|\|U<rsub|x<rsub|0>>>:U<rsub|x<rsub|0>>\<rightarrow\>U<rsub|0><text|
         is a diffeomorphism of class >C<rsup|n>
       </equation>
 
       Next define
 
       <\equation*>
-        \<tau\><rsub|6>:Y\<rightarrow\>Y<text| by
-        >\<tau\><rsub|6><around*|(|y|)>=y+f<around*|(|x<rsub|0>|)><text| and
-        >\<tau\><rsub|7>:Y\<rightarrow\>Y<text| by
-        >\<tau\><rsub|7><around*|(|y|)>=y-f<around*|(|x<rsub|0>|)>
+        \<cal-T\><rsub|4>:Y\<rightarrow\>Y<text| by
+        >\<cal-T\><rsub|4><around*|(|y|)>=y+f<around*|(|x<rsub|0>|)><text|
+        and >\<cal-T\><rsub|5>:Y\<rightarrow\>Y<text| by
+        >\<cal-T\><rsub|5><around*|(|y|)>=y-f<around*|(|x<rsub|0>|)>
       </equation*>
 
       then we have that for <math|y\<in\>Y>
 
       <\equation*>
-        <around*|(|\<tau\><rsub|6>\<circ\>\<tau\><rsub|7>|)><around*|(|y|)>=\<tau\><rsub|6><around*|(|\<tau\><rsub|6><around*|(|y|)>|)>=\<tau\><rsub|6><around*|(|y-f<around*|(|x<rsub|0>|)>|)>=y-f<around*|(|x<rsub|0>|)>+f<around*|(|x<rsub|0>|)>=y=Id<rsub|Y><around*|(|y|)>
+        <around*|(|\<cal-T\><rsub|4>\<circ\>\<cal-T\><rsub|5>|)><around*|(|y|)>=\<cal-T\><rsub|4><around*|(|\<cal-T\><rsub|5><around*|(|y|)>|)>=\<cal-T\><rsub|4><around*|(|y-f<around*|(|x<rsub|0>|)>|)>=y-f<around*|(|x<rsub|0>|)>+f<around*|(|x<rsub|0>|)>=y=Id<rsub|Y><around*|(|y|)>
       </equation*>
 
       <\equation*>
-        <around*|(|\<tau\><rsub|7>\<circ\>\<tau\><rsub|6>|)><around*|(|y|)>=\<tau\><rsub|7><around*|(|\<tau\><rsub|6><around*|(|y|)>|)>=\<tau\><rsub|7><around*|(|y+f<around*|(|x<rsub|0>|)>|)>=y+f<around*|(|x<rsub|0>|)>-f<around*|(|x<rsub|0>|)>=y=Id<rsub|Y><around*|(|y|)>
+        <around*|(|\<cal-T\><rsub|5>\<circ\>\<cal-T\><rsub|4>|)><around*|(|y|)>=\<cal-T\><rsub|5><around*|(|\<cal-T\><rsub|4><around*|(|y|)>|)>=\<cal-T\><rsub|5><around*|(|y+f<around*|(|x<rsub|0>|)>|)>=y+f<around*|(|x<rsub|0>|)>-f<around*|(|x<rsub|0>|)>=y=Id<rsub|Y><around*|(|y|)>
       </equation*>
 
-      proving that <math|\<tau\><rsub|6>\<circ\>\<tau\><rsub|7>=Id<rsub|Y>=\<tau\><rsub|7>\<circ\>\<tau\><rsub|6>>
+      proving that <math|\<cal-T\><rsub|4>\<circ\>\<cal-T\><rsub|5>=Id<rsub|Y>=\<cal-T\><rsub|5>\<circ\>\<cal-T\><rsub|4>>
       so that\ 
 
       <\equation*>
-        \<tau\><rsub|6><text|,>\<tau\><rsub|7><text| are bijections and
-        ><around*|(|\<tau\><rsub|7>|)><rsup|-1>=\<tau\><rsub|6>
+        \<cal-T\><rsub|4><text|,>\<cal-T\><rsub|5><text| are bijections and
+        ><around*|(|\<cal-T\><rsub|4>|)><rsup|-1>=\<cal-T\><rsub|5>\<wedge\><around*|(|\<cal-T\><rsub|5>|)><rsup|-1>=\<cal-T\><rsub|4>
       </equation*>
 
-      Let <math|V<rsub|f<around*|(|x<rsub|0>|)>>=\<tau\><rsub|6><around*|(|V<rsub|0>|)>>
+      Let <math|V<rsub|f<around*|(|x<rsub|0>|)>>=\<cal-T\><rsub|4><around*|(|V<rsub|0>|)>>
       then we have\ 
 
-      <\equation*>
-        \<tau\><rsub|6>:V<rsub|0>\<rightarrow\>V<rsub|f<around*|(|x<rsub|0>|)>><text|
+      <\equation>
+        <label|eq 16.402.142>\<cal-T\><rsub|4>:V<rsub|0>\<rightarrow\>V<rsub|f<around*|(|x<rsub|0>|)>><text|
         is a bijction>
-      </equation*>
+      </equation>
 
       further we have\ 
 
       <\equation>
-        <label|eq 16.391.140>V<rsub|f<around*|(|x<rsub|0>|)>>=<around*|(|<around*|(|\<tau\><rsub|7>|)><rsup|-1>|)><around*|(|V<rsub|0>|)>\<equallim\><rsub|<text|[theorem:
+        <label|eq 16.403.142>V<rsub|f<around*|(|x<rsub|0>|)>>=\<cal-T\><rsub|4><around*|(|V<rsub|0>|)>=<around*|(|<around*|(|\<cal-T\><rsub|5>|)><rsup|-1>|)><around*|(|V<rsub|0>|)>\<equallim\><rsub|<text|[theorem:
         <reference|function inverse image
-        preimage>]>><around*|(|\<tau\><rsub|7>|)><rsup|-1><around*|(|V<rsub|0>|)>
+        preimage>]>><around*|(|\<cal-T\><rsub|5>|)><rsup|-1><around*|(|V<rsub|0>|)>
       </equation>
 
       and\ 
 
-      <\equation*>
-        <around*|(|<around*|(|\<tau\><rsub|6>|)><rsub|\|V<rsub|0>>|)><rsup|-1>\<equallim\><rsub|<text|[theorem:
+      <\equation>
+        <label|eq 16.404.142><around*|(|<around*|(|\<cal-T\><rsub|4>|)><rsub|\|V<rsub|0>>|)><rsup|-1>\<equallim\><rsub|<text|[theorem:
         <reference|function inverse function and
-        bijection>]>><around*|(|<around*|(|\<tau\><rsub|6>|)><rsup|-1>|)><rsub|\|\<tau\><rsub|6><around*|(|V<rsub|0>|)>>=<around*|(|<around*|(|\<tau\><rsub|6>|)><rsup|-1>|)><rsub|\|V<rsub|f<around*|(|x<rsub|0>|)>>>:V<rsub|f<around*|(|x<rsub|0>|)>>\<rightarrow\>V<rsub|0>
-      </equation*>
+        bijection>]>><around*|(|<around*|(|\<cal-T\><rsub|4>|)><rsup|-1>|)><rsub|\|\<cal-T\><rsub|4><around*|(|V<rsub|0>|)>>=<around*|(|<around*|(|\<cal-T\><rsub|4>|)><rsup|-1>|)><rsub|\|V<rsub|f<around*|(|x<rsub|0>|)>>>:V<rsub|f<around*|(|x<rsub|0>|)>>\<rightarrow\>V<rsub|0>
+      </equation>
 
       Using \ [example: <reference|diff translation is infinite
-      differentiable>] it follows that <math|\<tau\><rsub|6>,\<tau\><rsub|7>>
-      are of class <math|C<rsup|\<infty\>>>. So <math|\<tau\><rsub|7>> is
-      continuous proving by [eq: <reference|eq 16.391.140>] that
-      <math|V<rsub|f<around*|(|x<rsub|0>|)>>> is a open set. Hence by
-      definition of a diffeomorphism it follows that
+      differentiable>] it follows that <math|\<cal-T\><rsub|4>,\<cal-T\><rsub|5>>
+      are of class <math|C<rsup|\<infty\>>>. So applying [theorem:
+      <reference|diff restriction of a function of class C^n>] we have that\ 
 
       <\equation>
-        <label|eq 16.393.141><around*|(|\<tau\><rsub|6>|)><rsub|\|V<rsub|0>>:V<rsub|0>\<rightarrow\>V<rsub|f<around*|(|x<rsub|0>|)>><text|
+        <label|eq 16.405.142><around*|(|\<cal-T\><rsub|4>|)><rsub|\|V<rsub|0>>:V<rsub|0>\<rightarrow\>Y<text|,
+        ><around*|(|<around*|(|\<cal-T\><rsub|4>|)><rsub|\|V<rsub|0>>|)><rsup|-1>:V<rsub|f<around*|(|x<rsub|0>|)>>\<rightarrow\>Y<text|
+        are of class >C<rsup|\<infty\>>
+      </equation>
+
+      As <math|\<cal-T\><rsub|5>> is of class <math|C<rsup|\<infty\>>> hence
+      continuous it follows that
+
+      <\equation>
+        <label|eq 16.406.142>V<rsub|f<around*|(|x<rsub|0>|)>>\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.403.142>]>><around*|(|\<cal-T\><rsub|5>|)><rsup|-1><around*|(|V<rsub|0>|)><text|
+        is a open set>
+      </equation>
+
+      Hence by definition of a diffeomorphism [see definition:
+      <reference|diff diffeomorphism>] it follows from [eq: <reference|eq
+      16.402.142>, <reference|eq 16.405.142>, <reference|eq 16.406.142>] that
+
+      <\equation>
+        <label|eq 16.407.142><around*|(|\<cal-T\><rsub|4>|)><rsub|\|V<rsub|0>>:V<rsub|0>\<rightarrow\>V<rsub|f<around*|(|x<rsub|0>|)>><text|
         is a diffeomorphism of class >C<rsup|n>
       </equation>
 
       Define now\ 
 
       <\equation*>
-        g=<around*|(|\<tau\><rsub|6>|)><rsub|\|V<rsub|0>>\<circ\>h<rsub|\|U<rsub|0>>\<circ\><around*|(|\<tau\><rsub|4>|)><rsub|\|U<rsub|x<rsub|0>>>:U<rsub|x<rsub|0>>\<rightarrow\>V<rsub|f<around*|(|x<rsub|0>|)>>
+        g=<around*|(|\<cal-T\><rsub|4>|)><rsub|\|V<rsub|0>>\<circ\>h<rsub|\|U<rsub|0>>\<circ\><around*|(|\<cal-T\><rsub|3>|)><rsub|\|U<rsub|x<rsub|0>>>:U<rsub|x<rsub|0>>\<rightarrow\>V<rsub|f<around*|(|x<rsub|0>|)>>
       </equation*>
 
-      then using [eqs <reference|eq 16.390.141>, <reference|eq 16.391.141>,
-      <reference|eq 16.392.141>] and [theorem: <reference|diff diffeomorphism
+      then using [eqs <reference|eq 16.401.142>, <reference|eq 16.393.142>,
+      <reference|eq 16.407.142>] and [theorem: <reference|diff diffeomorphism
       composition>] it follows that\ 
 
-      <\equation*>
-        g:U<rsub|x<rsub|0>>\<rightarrow\>V<rsub|f<around*|(|x<rsub|0>|)>><text|
+      <\equation>
+        <label|eq 16.408.142>g:U<rsub|x<rsub|0>>\<rightarrow\>V<rsub|f<around*|(|x<rsub|0>|)>><text|
         is a diffeomorphism of class >C<rsup|n>
-      </equation*>
+      </equation>
 
       Further we have for <math|x\<in\>U<rsub|x<rsub|0>>> that\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|g<around*|(|x|)>>|<cell|=>|<cell|<around*|(|<around*|(|\<tau\><rsub|6>|)><rsub|\|V<rsub|0>>\<circ\>h<rsub|\|U<rsub|0>>\<circ\><around*|(|\<tau\><rsub|4>|)><rsub|\|U<rsub|x<rsub|0>>>|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<tau\><rsub|6>|)><rsub|\|V<rsub|0>><around*|(|h<rsub|\|U<rsub|0>><around*|(|<around*|(|\<tau\><rsub|4>|)><rsub|\|U<rsub|x<rsub|0>>><around*|(|x|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<tau\><rsub|6><around*|(|h<around*|(|\<tau\><rsub|4><around*|(|x|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<tau\><rsub|6><around*|(|<around*|(|\<tau\><rsub|3>\<circ\>f\<circ\>\<tau\><rsub|2>|)><around*|(|x-x<rsub|0>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<tau\><rsub|6><around*|(|\<tau\><rsub|3><around*|(|f<around*|(|\<tau\><rsub|2><around*|(|x-x<rsub|0>|)>|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|t<rsub|6><around*|(|t<rsub|3><around*|(|f<around*|(|x|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|t<rsub|6><around*|(|f<around*|(|x|)>+f<around*|(|x<rsub|0>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|f<rsub|\|U<rsub|x<rsub|0>>><around*|(|x|)>>>>>
+        <tformat|<table|<row|<cell|g<around*|(|x|)>>|<cell|=>|<cell|<around*|(|<around*|(|\<cal-T\><rsub|4>|)><rsub|\|V<rsub|0>>\<circ\>h<rsub|\|U<rsub|0>>\<circ\><around*|(|\<cal-T\><rsub|3>|)><rsub|\|U<rsub|x<rsub|0>>>|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<cal-T\><rsub|4>|)><rsub|\|V<rsub|0>><around*|(|h<rsub|\|U<rsub|0>><around*|(|<around*|(|\<cal-T\><rsub|3>|)><rsub|\|U<rsub|x<rsub|0>>><around*|(|x|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<cal-T\><rsub|4><around*|(|h<around*|(|\<cal-T\><rsub|3><around*|(|x|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<cal-T\><rsub|4><around*|(|<around*|(|\<cal-T\><rsub|2>\<circ\>f\<circ\><around*|(|\<cal-T\><rsub|1>|)><rsub|\|W>|)><around*|(|x-x<rsub|0>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<cal-T\><rsub|4><around*|(|<around*|(|\<cal-T\><rsub|2>\<circ\>f\<circ\>\<cal-T\><rsub|1>|)><around*|(|x-x<rsub|0>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<cal-T\><rsub|4><around*|(|\<cal-T\><rsub|2><around*|(|f<around*|(|\<cal-T\><rsub|1><around*|(|x-x<rsub|0>|)>|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<cal-T\><rsub|4><around*|(|\<cal-T\><rsub|2><around*|(|f<around*|(|x-x<rsub|0>+x<rsub|0>|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<cal-T\><rsub|4><rsub|><around*|(|\<cal-T\><rsub|2><around*|(|f<around*|(|x|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<cal-T\><rsub|4><around*|(|f<around*|(|x|)>+f<around*|(|x<rsub|0>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|x|)>+f<around*|(|x<rsub|0>|)>-f<around*|(|x<rsub|0>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|x|)><eq-number><label|eq
+        16.409.142>>>|<row|<cell|>|<cell|\<equallim\>>|<cell|f<rsub|\|U<rsub|x<rsub|0>>><around*|(|x|)>>>>>
       </eqnarray*>
 
-      which proves that\ 
-
-      <\equation*>
-        g=f<rsub|\|U<rsub|x<rsub|0>>>
-      </equation*>
-
-      <\equation*>
-        \;
-      </equation*>
+      which proves that <math|g=f<rsub|\|U<rsub|x<rsub|0>>>>. Hence by [eq:
+      <reference|eq 16.408.142>] <math|f<rsub|\|U<rsub|x<rsub|0>>>:U<rsub|x<rsub|0>>\<rightarrow\>V<rsub|x<rsub|0>>>
+      is a diffeomorphism of class <math|C<rsup|n>>. As
+      <math|x<rsub|0>\<in\>U<rsub|x<rsub|0>>> [see eq: <reference|eq
+      16.398.142>], <math|f<around*|(|x<rsub|0>|)>\<equallim\><rsub|x<rsub|0>\<in\>U<rsub|x<rsub|0>>>g<around*|(|x<rsub|0>|)>\<in\>V<rsub|f<around*|(|x<rsub|0>|)>>>,
+      <math|U<rsub|x<rsub|0>>\<subseteq\>U> it follows from the definition of
+      a local diffeomorphism [see definition: <reference|diff local
+      diffeomorphism>] that <math|f> is a local diffeomorphism of class
+      <math|C<rsup|n>> at <math|x<rsub|0>>
 
       \;
     </proof>
+
+    Finally as the above conjecture [conjeture: <reference|conjecture
+    16.252>] is the same as the inverse theorem [theorem: <reference|diff
+    inverse function theorem>] we have proved the inverse function theorem.
   </proof>
+
+  \;
 </body>
 
 <\initial>
@@ -20974,6 +21034,7 @@
     <associate|conjecture 16.246.136|<tuple|16.247|?>>
     <associate|conjecture 16.247.136|<tuple|16.248|?>>
     <associate|conjecture 16.248.136|<tuple|16.249|?>>
+    <associate|conjecture 16.252|<tuple|16.252|?>>
     <associate|continuity limit of composition of linear
     maps|<tuple|16.227|?>>
     <associate|continuity of a function and convergence of the
@@ -21171,6 +21232,7 @@
     <associate|diff vector functions (2)|<tuple|16.58|?>>
     <associate|diff vector functions and linearity|<tuple|16.55|?>>
     <associate|eq 10.137.199|<tuple|16.145|?>>
+    <associate|eq 14.406.142|<tuple|16.406|?>>
     <associate|eq 16.1.177|<tuple|16.2|?>>
     <associate|eq 16.1.194|<tuple|16.1|?>>
     <associate|eq 16.10.178|<tuple|16.11|?>>
@@ -21385,6 +21447,7 @@
     <associate|eq 16.3.177|<tuple|16.4|?>>
     <associate|eq 16.300.126|<tuple|16.299|?>>
     <associate|eq 16.300.127|<tuple|16.300|?>>
+    <associate|eq 16.300.142|<tuple|16.390|?>>
     <associate|eq 16.301.127|<tuple|16.301|?>>
     <associate|eq 16.302.127|<tuple|16.302|?>>
     <associate|eq 16.303.127|<tuple|16.303|?>>
@@ -21482,12 +21545,31 @@
     <associate|eq 16.387.140|<tuple|16.388|?>>
     <associate|eq 16.388.140|<tuple|16.389|?>>
     <associate|eq 16.39.182|<tuple|16.41|?>>
-    <associate|eq 16.390.141|<tuple|16.390|?>>
-    <associate|eq 16.391.140|<tuple|16.392|?>>
-    <associate|eq 16.391.141|<tuple|16.391|?>>
-    <associate|eq 16.392.141|<tuple|16.392|?>>
-    <associate|eq 16.393.141|<tuple|16.393|?>>
+    <associate|eq 16.390.141|<tuple|16.393|?>>
+    <associate|eq 16.391.140|<tuple|16.403|?>>
+    <associate|eq 16.391.141|<tuple|16.400|?>>
+    <associate|eq 16.391.142|<tuple|16.391|?>>
+    <associate|eq 16.392.142|<tuple|16.392|?>>
+    <associate|eq 16.393.141|<tuple|16.407|?>>
+    <associate|eq 16.393.142|<tuple|16.393|?>>
+    <associate|eq 16.394.142|<tuple|16.394|?>>
+    <associate|eq 16.395.142|<tuple|16.395|?>>
+    <associate|eq 16.396.142|<tuple|16.396|?>>
+    <associate|eq 16.397.142|<tuple|16.397|?>>
+    <associate|eq 16.398.142|<tuple|16.398|?>>
+    <associate|eq 16.399.142|<tuple|16.399|?>>
     <associate|eq 16.4.177|<tuple|16.5|?>>
+    <associate|eq 16.400.142|<tuple|16.400|?>>
+    <associate|eq 16.401.142|<tuple|16.401|?>>
+    <associate|eq 16.402.142|<tuple|16.402|?>>
+    <associate|eq 16.403.140|<tuple|16.403|?>>
+    <associate|eq 16.403.142|<tuple|16.403|?>>
+    <associate|eq 16.404.142|<tuple|16.404|?>>
+    <associate|eq 16.405.142|<tuple|16.405|?>>
+    <associate|eq 16.406.142|<tuple|16.406|?>>
+    <associate|eq 16.407.142|<tuple|16.407|?>>
+    <associate|eq 16.408.142|<tuple|16.408|?>>
+    <associate|eq 16.409.142|<tuple|16.409|?>>
     <associate|eq 16.41.182|<tuple|16.43|?>>
     <associate|eq 16.42.187|<tuple|16.44|?>>
     <associate|eq 16.43.187|<tuple|16.45|?>>
