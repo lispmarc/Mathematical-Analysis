@@ -12007,9 +12007,9 @@
       <math|n\<in\><around*|{|2,\<ldots\>,\<infty\>|}>> that
       <math|0\<less\>\<alpha\><rsup|n>\<less\>\<alpha\>>
 
-      <item><math|\<forall\>\<alpha\>,\<beta\>\<in\>\<bbb-C\>> such that
-      <math|1\<leqslant\>\<alpha\>> and <math|n\<in\>\<bbb-N\><rsub|\<bbb-C\>>>
-      we have:
+      <item><math|\<forall\>\<alpha\>,\<beta\>\<in\>\<bbb-R\><rsub|\<bbb-C\>>>
+      such that <math|1\<leqslant\>\<alpha\>> and
+      <math|n\<in\>\<bbb-N\><rsub|\<bbb-C\>>> we have:
 
       <\enumerate>
         <item>If <math|\<alpha\>\<less\>\<beta\>> then
@@ -12257,8 +12257,8 @@
 
   <\theorem>
     <label|complex n\<less\>m and 0\<less\>x\<less\>1 then x^n\<less\>x^m>If
-    <math|x\<in\>\<bbb-C\>> with <math|0\<less\>x\<less\>1> and
-    <math|n,m\<in\>\<bbb-N\><rsub|\<bbb-C\>>> such that <math|n\<less\>m>
+    <math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>> with <math|0\<less\>x\<less\>1>
+    and <math|n,m\<in\>\<bbb-N\><rsub|\<bbb-C\>>> such that <math|n\<less\>m>
     then <math|x<rsup|m>\<less\>x<rsup|n>>.
   </theorem>
 
@@ -12285,7 +12285,7 @@
       proving that <math|n+1\<in\>S<rsub|m>>.
     </description>
 
-    Using Mathematical induction [see theorem: <reference|complex
+    Using mathematical induction [see theorem: <reference|complex
     mathematical induction>] we have that
     <math|S<rsub|m>=<around*|{|1,\<ldots\>,\<infty\>|}><rsub|>>. So take
     <math|n,m\<in\>\<bbb-N\><rsub|0,\<bbb-R\>>> with <math|n\<less\>m> then
@@ -12293,6 +12293,40 @@
     <math|k\<in\><around*|{|1,\<ldots\>,\<infty\>|}>=S<rsub|n>> hence
     <math|x<rsup|m>=x<rsup|n+k>\<less\>x<rsup|n><rsup|> completing the
     proof.>
+  </proof>
+
+  <\theorem>
+    <label|complex n\<less\>m and 1\<less\>=x then x^n\<less\>x^m>If
+    <math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>> with <math|1\<leqslant\>x> then
+    <math|\<forall\>n,m\<in\>\<bbb-N\><rsub|\<bbb-C\>,0>> with
+    <math|n\<leqslant\>m> we have <math|x<rsup|n>\<leqslant\>x<rsup|m>>
+  </theorem>
+
+  <\proof>
+    We prove this by induction so take <math|S<rsub|n>=<around*|{|m\<in\><around*|{|0,\<ldots\>,\<infty\>|}>\|x<rsup|n>\<leqslant\>x<rsup|n+m>|}>>
+    then we have:
+
+    <\description>
+      <item*|<math|0\<in\>S<rsub|n>>>As <math|x<rsup|n>=x<rsup|n+0>\<Rightarrow\>x<rsup|n>\<leqslant\>x<rsup|n+0>>
+      proving that <math|0\<in\>S>.
+
+      <item*|<math|m\<in\>S\<Rightarrow\>m+1\<in\>S>>As <math|1\<leqslant\>x>
+      <math|0\<less\>x> it follows from [theorem: <reference|complex power
+      and inequality>] that <math|0\<less\>x<rsup|n+m>>, hence as
+      <math|1\<leqslant\>x> it follows from [theorem: <reference|complex RC
+      order properties>] that <math|x<rsup|n+m>=1\<cdot\>x<rsup|n+m>\<leqslant\>x\<cdot\>x<rsup|n+m>=x<rsup|n+<around*|(|m+1|)>>>.
+      Given that <math|x<rsup|n>\<leqslant\>x<rsup|n+m>> [because
+      <math|m\<in\>S>] it follows that <math|x<rsup|n>\<leqslant\>x<rsup|n+<around*|(|m+1|)>>>,
+      hence <math|m+1\<in\>S>.\ 
+    </description>
+
+    Using mathematical induction [see theorem: <reference|complex
+    mathematical induction>] we have that
+    <math|S<rsub|n>=<around*|{|0,\<ldots\>,\<infty\>|}><rsub|>>. So if
+    <math|n,m\<in\>\<bbb-N\><rsub|\<bbb-C\>,0>> with <math|n\<leqslant\>m>
+    then <math|k=m-n\<in\><around*|{|0,\<ldots\>,\<infty\>|}>=S<rsub|n>> and
+    <math|x<rsup|n>\<leqslant\>x<rsup|n+k>=x<rsup|n+<around*|(|m-n|)>>=x<rsup|m>>
+    completing the proof.
   </proof>
 
   <\theorem>
@@ -13207,6 +13241,9 @@
         <around*|\||z|\|>=<choice|<tformat|<table|<row|<cell|z if
         0\<leqslant\>z>>|<row|<cell|-z if z\<less\>0>>>>>
       </equation*>
+
+      <item>If <math|n\<in\>\<bbb-N\><rsub|\<bbb-C\>,0>> then
+      <math|<around*|\||z<rsup|n>|\|>=<around*|\||z|\|><rsup|n>>
     </enumerate>
   </theorem>
 
@@ -13363,9 +13400,28 @@
         <item*|<math|z\<less\>0>>Then <math|0\<less\>-z> so that by [eq:
         <reference|eq 10.58.051>] we have
         <math|-z=<around*|\||-z|\|>\<equallim\><rsub|<around*|(|6|)>><around*|\||z|\|>>
-        proving <math|-z=<around*|\||z|\|>>.
+        proving <math|-z=<around*|\||z|\|>>
+      </description>
+
+      <item>We prove this by induction so let
+      <math|S=<around*|{|i\<in\><around*|{|0,\<ldots\>,\<infty\>|}>\|<around*|\||z<rsup|n>|\|>=<around*|\||z|\|><rsup|n>|}>>
+      then we have:
+
+      <\description>
+        <item*|<math|0\<in\>S>>As <math|<around*|\||z<rsup|0>|\|>=<around*|\||1|\|>\<equallim\><rsub|<around*|(|11|)>>1=<around*|\||1|\|><rsup|0>>
+        proving that <math|0\<in\>S>.
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>We have
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|\||z<rsup|n+1>|\|>>|<cell|=>|<cell|<around*|\||z\<cdot\>z<rsup|n>|\|>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|1|)>>>|<cell|<around*|\||z|\|>\<cdot\><around*|\||z<rsup|n>|\|>>>|<row|<cell|>|<cell|\<equallim\><rsub|n\<in\>S>>|<cell|<around*|\||z|\|><rsup|n+1>>>>>
+        </eqnarray*>
+
+        proving that <math|n+1\<in\>S>.
       </description>
     </enumerate>
+
+    \;
   </proof>
 
   <subsection|Finite sets>
@@ -14143,7 +14199,7 @@
     <associate|auto-9|<tuple|<with|mode|<quote|math>|m\|n>|?>>
     <associate|complex (x^n-1)\<gtr\>=n.(x-1)|<tuple|10.57|?>>
     <associate|complex 0\<less\>1|<tuple|10.10|?>>
-    <associate|complex 0\<less\>x^n\<less\>e|<tuple|10.60|?>>
+    <associate|complex 0\<less\>x^n\<less\>e|<tuple|10.61|?>>
     <associate|complex Archimedean property|<tuple|10.29|?>>
     <associate|complex Archimedean property consequence (1)|<tuple|10.30|?>>
     <associate|complex Archimedean property consequence (2)|<tuple|10.31|?>>
@@ -14155,26 +14211,26 @@
     <associate|complex RC order (2)|<tuple|10.8|?>>
     <associate|complex RC order properties|<tuple|10.14|?>>
     <associate|complex a\<less\>2^n|<tuple|10.56|?>>
-    <associate|complex cardinality|<tuple|10.83|?>>
-    <associate|complex cardinality adding element|<tuple|10.87|?>>
-    <associate|complex cardinality alternative|<tuple|10.84|?>>
-    <associate|complex cardinality and finite family|<tuple|10.90|?>>
-    <associate|complex cardinality equality and subset|<tuple|10.89|?>>
-    <associate|complex cardinality properties|<tuple|10.86|?>>
-    <associate|complex cardinality removing a element|<tuple|10.88|?>>
-    <associate|complex conjugate|<tuple|10.76|?>>
-    <associate|complex conjugate properties|<tuple|10.77|?>>
+    <associate|complex cardinality|<tuple|10.84|?>>
+    <associate|complex cardinality adding element|<tuple|10.88|?>>
+    <associate|complex cardinality alternative|<tuple|10.85|?>>
+    <associate|complex cardinality and finite family|<tuple|10.91|?>>
+    <associate|complex cardinality equality and subset|<tuple|10.90|?>>
+    <associate|complex cardinality properties|<tuple|10.87|?>>
+    <associate|complex cardinality removing a element|<tuple|10.89|?>>
+    <associate|complex conjugate|<tuple|10.77|?>>
+    <associate|complex conjugate properties|<tuple|10.78|?>>
     <associate|complex definition by recursion (1)|<tuple|10.42|?>>
     <associate|complex definition by recursion (2)|<tuple|10.43|?>>
     <associate|complex definition recursion finite|<tuple|10.44|?>>
     <associate|complex densitiy theorem|<tuple|10.32|?>>
     <associate|complex embedding|<tuple|10.5|?>>
     <associate|complex field|<tuple|10.2|?>>
-    <associate|complex finite lemma|<tuple|10.80|?>>
-    <associate|complex finite set condition|<tuple|10.81|?>>
-    <associate|complex finite set condition (1)|<tuple|10.82|?>>
-    <associate|complex finite subset|<tuple|10.85|?>>
-    <associate|complex i^2=-1|<tuple|10.71|?>>
+    <associate|complex finite lemma|<tuple|10.81|?>>
+    <associate|complex finite set condition|<tuple|10.82|?>>
+    <associate|complex finite set condition (1)|<tuple|10.83|?>>
+    <associate|complex finite subset|<tuple|10.86|?>>
+    <associate|complex i^2=-1|<tuple|10.72|?>>
     <associate|complex integers are conditional complete|<tuple|10.16|?>>
     <associate|complex irrational numbers|<tuple|10.20|?>>
     <associate|complex mathematical induction|<tuple|10.35|?>>
@@ -14184,10 +14240,12 @@
     <associate|complex n\<less\>2^n|<tuple|10.55|?>>
     <associate|complex n\<less\>m and 0\<less\>x\<less\>1 then
     x^n\<less\>x^m|<tuple|10.59|?>>
-    <associate|complex norm|<tuple|10.78|?>>
-    <associate|complex norm properties|<tuple|10.79|?>>
+    <associate|complex n\<less\>m and 1\<less\>=x then
+    x^n\<less\>x^m|<tuple|10.60|?>>
+    <associate|complex norm|<tuple|10.79|?>>
+    <associate|complex norm properties|<tuple|10.80|?>>
     <associate|complex notation|<tuple|10.3|?>>
-    <associate|complex notation (0)|<tuple|10.72|?>>
+    <associate|complex notation (0)|<tuple|10.73|?>>
     <associate|complex numbers|<tuple|10.1|?>>
     <associate|complex order isomorphisms|<tuple|10.9|?>>
     <associate|complex power|<tuple|10.48|?>>
@@ -14196,22 +14254,22 @@
     <associate|complex power of inverse|<tuple|10.52|?>>
     <associate|complex power properties|<tuple|10.53|?>>
     <associate|complex rational numbers specification|<tuple|10.6|?>>
-    <associate|complex real imaginair|<tuple|10.74|?>>
-    <associate|complex real. imaginair properties|<tuple|10.75|?>>
+    <associate|complex real imaginair|<tuple|10.75|?>>
+    <associate|complex real. imaginair properties|<tuple|10.76|?>>
     <associate|complex recursion|<tuple|10.37|?>>
     <associate|complex recursion iteration|<tuple|10.38|?>>
     <associate|complex recursion step|<tuple|10.39|?>>
     <associate|complex recursion step (2)|<tuple|10.40|?>>
     <associate|complex recursion step form finite|<tuple|10.41|?>>
-    <associate|complex root is strictly increasing|<tuple|10.66|?>>
-    <associate|complex sqrt x\<less\>sqrt x^2|<tuple|10.68|?>>
-    <associate|complex sqrt(0) and sqrt(1)|<tuple|10.64|?>>
-    <associate|complex square operator is a bijection|<tuple|10.61|?>>
-    <associate|complex square root|<tuple|10.62|?>>
-    <associate|complex square root norm|<tuple|10.70|?>>
-    <associate|complex square root of 2 is irational|<tuple|10.65|?>>
-    <associate|complex square root of product|<tuple|10.69|?>>
-    <associate|complex square root properties (1)|<tuple|10.67|?>>
+    <associate|complex root is strictly increasing|<tuple|10.67|?>>
+    <associate|complex sqrt x\<less\>sqrt x^2|<tuple|10.69|?>>
+    <associate|complex sqrt(0) and sqrt(1)|<tuple|10.65|?>>
+    <associate|complex square operator is a bijection|<tuple|10.62|?>>
+    <associate|complex square root|<tuple|10.63|?>>
+    <associate|complex square root norm|<tuple|10.71|?>>
+    <associate|complex square root of 2 is irational|<tuple|10.66|?>>
+    <associate|complex square root of product|<tuple|10.70|?>>
+    <associate|complex square root properties (1)|<tuple|10.68|?>>
     <associate|complex sup(-S),inf(-S)|<tuple|10.21|?>>
     <associate|complex sup(S+T) and inf(S+T)|<tuple|10.23|?>>
     <associate|complex sup(S+s) inf(T+t)|<tuple|10.24|?>>
@@ -14433,11 +14491,11 @@
     <associate|eq 9.82.036|<tuple|9.82|?>>
     <associate|eq 9.89.047|<tuple|9.83|?>>
     <associate|eq 9.90.047|<tuple|9.84|?>>
-    <associate|extended reals|<tuple|10.92|?>>
-    <associate|extended reals are fully ordered|<tuple|10.96|?>>
-    <associate|extended reals existence|<tuple|10.91|?>>
-    <associate|extended reals finite real number|<tuple|10.93|?>>
-    <associate|extended reals order definition|<tuple|10.94|?>>
+    <associate|extended reals|<tuple|10.93|?>>
+    <associate|extended reals are fully ordered|<tuple|10.97|?>>
+    <associate|extended reals existence|<tuple|10.92|?>>
+    <associate|extended reals finite real number|<tuple|10.94|?>>
+    <associate|extended reals order definition|<tuple|10.95|?>>
     <associate|field with characteristics zero|<tuple|10.47|?>>
     <associate|integeres order|<tuple|7.21|?>>
     <associate|integers|<tuple|7.2|?>>

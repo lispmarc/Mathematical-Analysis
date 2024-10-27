@@ -21098,7 +21098,7 @@
   </proof>
 
   <\theorem>
-    <label|diff implicit theorem><index|implicit function theorem
+    <label|diff implicit function theorem><index|implicit function theorem
     (1)><dueto|Implicit Function Theorem (1)>Let <math|n\<in\>\<bbb-N\>>,
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
@@ -21121,9 +21121,8 @@
     </equation*>
 
     are well defined and coninuous. If <math|\<exists\><around*|(|x<rsub|0>,y<rsub|0>|)>\<in\>U\<cdot\>V>
-    such that <math|f<around*|(|x<rsub|0>,y<rsub|0>|)>=0> and
-    <math|D<rsub|2>f<around*|(|x<rsub|0>,y<rsub|0>|)>> is a bijection then we
-    have:
+    such that <math|D<rsub|2>f<around*|(|x<rsub|0>,y<rsub|0>|)>> is a
+    bijection then we have:
 
     <\enumerate>
       <item>There exist a open set <math|W<rsub|0>\<subseteq\>U\<cdot\>Z> and
@@ -21173,7 +21172,7 @@
   </theorem>
 
   <\proof>
-    <dueto|>First, as we have to deal with different products hence different
+    First, as we have to deal with different products hence different
     projections, we introduce the following notations for the different
     projections:
 
@@ -21561,7 +21560,7 @@
     have\ 
 
     <\equation*>
-      <around*|(|<around*|(|f\<circ\>\<psi\>|)>\<circ\>I<rsup|<around*|(|1,<around*|(|x,z|)>|)>><rsup|>|)><around*|(|t|)>=<around*|(|f\<circ\>\<psi\>|)><around*|(|I<rsup|<around*|(|1,<around*|(|x,z|)>|)>><around*|(|t|)>|)>\<equallim\><rsub|<text|[definition:
+      <around*|(|<around*|(|f\<circ\>\<psi\>|)>\<circ\>I<rsup|<around*|[|1,<around*|(|x,z|)>|]>><rsup|>|)><around*|(|t|)>=<around*|(|f\<circ\>\<psi\>|)><around*|(|I<rsup|<around*|[|1,<around*|(|x,z|)>|]>><around*|(|t|)>|)>\<equallim\><rsub|<text|[definition:
       <reference|diff unprojection>]>><around*|(|f\<circ\>\<psi\>|)><around*|(|t,z|)>\<equallim\><rsub|<text|[eq:
       <reference|eq 16.430.144>]>>z=C<rsub|z><around*|(|t|)>
     </equation*>
@@ -21569,11 +21568,11 @@
     proving that\ 
 
     <\equation*>
-      <around*|(|f\<circ\>\<psi\>|)>\<circ\>I<rsup|<around*|(|1,<around*|(|x,z|)>|)>><rsup|>=C<rsub|z>
+      <around*|(|f\<circ\>\<psi\>|)>\<circ\>I<rsup|<around*|[|1,<around*|(|x,z|)>|]>><rsup|>=C<rsub|z>
     </equation*>
 
     so that by [example: <reference|diff constant function is
-    differentiable>] <math|<around*|(|f\<circ\>\<psi\>|)>\<circ\>I<rsup|<around*|(|1,<around*|(|x,z|)>|)>><rsup|>>
+    differentiable>] <math|<around*|(|f\<circ\>\<psi\>|)>\<circ\>I<rsup|<around*|[|1,<around*|(|x,z|)>|]>><rsup|>>
     is Fréchet differentiable at <math|t> which by [definition:
     <reference|diff partial differential definition>] proves that
     <math|f\<circ\>\<psi\>> has a <math|1>-partial differential at <math|t>
@@ -21582,7 +21581,7 @@
     <\equation>
       <label|eq 16.430.144.1>D<rsub|<around*|(|x,z|)>,1><around*|(|f\<circ\>\<psi\>|)>\<equallim\><rsub|<text|[definition:
       <reference|diff partial differential
-      definition>]>>D<rsub|x><around*|(|<around*|(|f\<circ\>\<psi\>|)>\<circ\>I<rsup|<around*|(|1,<around*|(|x,z|)>|)>><rsup|>|)>=D<rsub|x>C<rsub|z>\<equallim\><rsub|<text|[example:
+      definition>]>>D<rsub|x><around*|(|<around*|(|f\<circ\>\<psi\>|)>\<circ\>I<rsup|<around*|[|1,<around*|(|x,z|)>|]>><rsup|>|)>=D<rsub|x>C<rsub|z>\<equallim\><rsub|<text|[example:
       <reference|diff constant function is
       differentiable>]>>0\<in\>L<around*|(|X,Z|)>
     </equation>
@@ -21590,14 +21589,14 @@
     Also
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|<around*|(|<around*|(|\<pi\><rsup|X\<cdot\>Z><rsub|1>\<circ\>\<psi\>|)>\<circ\>I<rsup|<around*|(|1,<around*|(|x,z|)>|)>>|)><around*|(|t|)>>|<cell|=>|<cell|\<pi\><rsup|X\<cdot\>Z><rsub|1><around*|(|\<psi\><around*|(|I<rsup|<around*|(|1,<around*|(|x,z|)>|)>><around*|(|t|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsup|X\<cdot\>Z><rsub|1><around*|(|\<psi\><around*|(|t,z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsup|X\<cdot\>Z><rsub|1><around*|(|t,g<around*|(|t,z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|t>>|<row|<cell|>|<cell|=>|<cell|Id<rsub|X><around*|(|t|)>>>|<row|<cell|<around*|(|<around*|(|\<pi\><rsup|X\<cdot\>Z><rsub|2>\<circ\>\<psi\>|)>\<circ\>I<rsup|<around*|(|1,<around*|(|x,z|)>|)>>|)><around*|(|t|)>>|<cell|=>|<cell|\<pi\><rsup|X\<cdot\>Z><rsub|2><around*|(|\<psi\><around*|(|I<rsup|<around*|(|1,<around*|(|x,z|)>|)>><around*|(|t|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsup|X\<cdot\>Z><rsub|2><around*|(|\<psi\><around*|(|t,z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsup|X\<cdot\>Z><rsub|2><around*|(|t,g<around*|(|t,z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|g<around*|(|t,z|)>>>|<row|<cell|>|<cell|=>|<cell|g<around*|(|I<rsup|<around*|(|1,<around*|(|x,z|)>|)>><around*|(|t|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|g\<circ\>I<rsup|<around*|(|1,<around*|(|x,z|)>|)>>|)><around*|(|t|)>>>>>
+      <tformat|<table|<row|<cell|<around*|(|<around*|(|\<pi\><rsup|X\<cdot\>Z><rsub|1>\<circ\>\<psi\>|)>\<circ\>I<rsup|<around*|[|1,<around*|(|x,z|)>|]>>|)><around*|(|t|)>>|<cell|=>|<cell|\<pi\><rsup|X\<cdot\>Z><rsub|1><around*|(|\<psi\><around*|(|I<rsup|<around*|[|1,<around*|(|x,z|)>|]>><around*|(|t|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsup|X\<cdot\>Z><rsub|1><around*|(|\<psi\><around*|(|t,z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsup|X\<cdot\>Z><rsub|1><around*|(|t,g<around*|(|t,z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|t>>|<row|<cell|>|<cell|=>|<cell|Id<rsub|X><around*|(|t|)>>>|<row|<cell|<around*|(|<around*|(|\<pi\><rsup|X\<cdot\>Z><rsub|2>\<circ\>\<psi\>|)>\<circ\>I<rsup|<around*|[|1,<around*|(|x,z|)>|]>>|)><around*|(|t|)>>|<cell|=>|<cell|\<pi\><rsup|X\<cdot\>Z><rsub|2><around*|(|\<psi\><around*|(|I<rsup|<around*|[|1,<around*|(|x,z|)>|]>><around*|(|t|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsup|X\<cdot\>Z><rsub|2><around*|(|\<psi\><around*|(|t,z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsup|X\<cdot\>Z><rsub|2><around*|(|t,g<around*|(|t,z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|g<around*|(|t,z|)>>>|<row|<cell|>|<cell|=>|<cell|g<around*|(|I<rsup|<around*|[|1,<around*|(|x,z|)>|]>><around*|(|t|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|g\<circ\>I<rsup|<around*|[|1,<around*|(|x,z|)>|]>>|)><around*|(|t|)>>>>>
     </eqnarray*>
 
     so that
 
     <\equation>
-      <label|eq 16.431.144><around*|(|\<pi\><rsup|X\<cdot\>Z><rsub|1>\<circ\>\<psi\>|)>\<circ\>I<rsup|<around*|(|1,<around*|(|x,z|)>|)>>=I<rsub|X><text|
-      and ><around*|(|\<pi\><rsup|X\<cdot\>Z><rsub|2>\<circ\>\<psi\>|)>\<circ\>I<rsup|<around*|(|1,<around*|(|x,z|)>|)>>=g\<circ\>I<rsup|<around*|(|1,<around*|(|x,z|)>|)>>
+      <label|eq 16.431.144><around*|(|\<pi\><rsup|X\<cdot\>Z><rsub|1>\<circ\>\<psi\>|)>\<circ\>I<rsup|<around*|[|1,<around*|(|x,z|)>|]>>=I<rsub|X><text|
+      and ><around*|(|\<pi\><rsup|X\<cdot\>Z><rsub|2>\<circ\>\<psi\>|)>\<circ\>I<rsup|<around*|[|1,<around*|(|x,z|)>|]>>=g\<circ\>I<rsup|<around*|[|1,<around*|(|x,z|)>|]>>
     </equation>
 
     As <math|g> is of class <math|C<rsup|n>> [see eq: <reference|eq
@@ -21624,12 +21623,12 @@
       <tformat|<table|<row|<cell|D<rsub|<around*|(|x,z|)>,1><around*|(|f\<circ\>\<psi\>|)><around*|(|h|)>>|<cell|\<equallim\><rsub|<tabular*|<tformat|<table|<row|<cell|<text|[eq:
       <reference|eq 16.428.144>]>>>|<row|<cell|<text|[theorem:
       <reference|diff chain rule and partial
-      differential>]>>>>>>>>|<cell|>>|<row|<cell|<around*|(|D<rsub|\<psi\><around*|(|x,z|)>>f\<circ\>D<rsub|<around*|(|x,z|)>,1>\<psi\>|)><around*|(|h|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|D<rsub|\<psi\><around*|(|x,z|)>>f\<circ\><around*|(|D<rsub|<around*|(|x,z|)>><around*|(|\<psi\>\<circ\>I<rsup|<around*|(|1,<around*|(|x,z|)>|)>>|)>|)>|)><around*|(|h|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      differential>]>>>>>>>>|<cell|>>|<row|<cell|<around*|(|D<rsub|\<psi\><around*|(|x,z|)>>f\<circ\>D<rsub|<around*|(|x,z|)>,1>\<psi\>|)><around*|(|h|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|D<rsub|\<psi\><around*|(|x,z|)>>f\<circ\><around*|(|D<rsub|<around*|(|x,z|)>><around*|(|\<psi\>\<circ\>I<rsup|<around*|[|1,<around*|(|x,z|)>|]>>|)>|)>|)><around*|(|h|)>>|<cell|\<equallim\><rsub|<text|[theorem:
       <reference|diff differential of a vector valued
-      function>]>>>|<cell|>>|<row|<cell|<around*|(|D<rsub|\<psi\><around*|(|x,z|)>>f\<circ\><around*|(|D<rsub|<around*|(|x,z|)>><around*|(|\<pi\><rsup|X\<cdot\>Z><rsub|1>\<circ\><around*|(|\<psi\>\<circ\>I<rsup|<around*|(|1,<around*|(|x,z|)>|)>>|)>|)>,D<rsub|<around*|(|x,z|)>><around*|(|\<pi\><rsup|X\<cdot\>Z><rsub|2>\<circ\><around*|(|\<psi\>\<circ\>I<rsup|<around*|(|1,<around*|(|x,z|)>|)>>|)>|)>|)><rsub|\<star\>>|)><around*|(|h|)>>|<cell|\<equallim\><rsub|<text|[eq:
-      <reference|eq 16.431.144>]>>>|<cell|>>|<row|<cell|<around*|(|D<rsub|\<psi\><around*|(|x,z|)>>f\<circ\><around*|(|D<rsub|<around*|(|x,z|)>>Id<rsub|X>,D<rsub|<around*|(|x,z|)>><around*|(|g\<circ\>I<rsup|<around*|(|1,<around*|(|x,z|)>|)>>|)>|)><rsub|\<ast\>>|)><around*|(|h|)>>|<cell|\<equallim\><rsub|<text|[example:
+      function>]>>>|<cell|>>|<row|<cell|<around*|(|D<rsub|\<psi\><around*|(|x,z|)>>f\<circ\><around*|(|D<rsub|<around*|(|x,z|)>><around*|(|\<pi\><rsup|X\<cdot\>Z><rsub|1>\<circ\><around*|(|\<psi\>\<circ\>I<rsup|<around*|[|1,<around*|(|x,z|)>|]>>|)>|)>,D<rsub|<around*|(|x,z|)>><around*|(|\<pi\><rsup|X\<cdot\>Z><rsub|2>\<circ\><around*|(|\<psi\>\<circ\>I<rsup|<around*|[|1,<around*|(|x,z|)>|]>>|)>|)>|)><rsub|\<star\>>|)><around*|(|h|)>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.431.144>]>>>|<cell|>>|<row|<cell|<around*|(|D<rsub|\<psi\><around*|(|x,z|)>>f\<circ\><around*|(|D<rsub|<around*|(|x,z|)>>Id<rsub|X>,D<rsub|<around*|(|x,z|)>><around*|(|g\<circ\>I<rsup|<around*|[|1,<around*|(|x,z|)>|]>>|)>|)><rsub|\<ast\>>|)><around*|(|h|)>>|<cell|\<equallim\><rsub|<text|[example:
       <reference|diff identity function is
-      differentiable>]>>>|<cell|>>|<row|<cell|<around*|(|D<rsub|\<psi\><around*|(|x,z|)>>f\<circ\><around*|(|Id<rsub|X>,D<rsub|<around*|(|x,z|)>><around*|(|g\<circ\>I<rsup|<around*|(|1,<around*|(|x,z|)>|)>>|)>|)><rsub|\<ast\>>|)><around*|(|h|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|D<rsub|\<psi\><around*|(|x,z|)>>f\<circ\><around*|(|Id<rsub|X>,D<rsub|<around*|(|x,z|)>,1>g|)><rsub|\<ast\>>|)><around*|(|h|)>>|<cell|=>|<cell|>>|<row|<cell|D<rsub|\<psi\><around*|(|x,z|)>>f<around*|(|<around*|(|Id<rsub|X>,D<rsub|<around*|(|x,z|)>,1>g|)><rsub|\<ast\>><around*|(|h|)>|)>>|<cell|=>|<cell|>>|<row|<cell|D<rsub|\<psi\><around*|(|x,z|)>>f<around*|(|h,D<rsub|<around*|(|x,z|)>,1>g<around*|(|h|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      differentiable>]>>>|<cell|>>|<row|<cell|<around*|(|D<rsub|\<psi\><around*|(|x,z|)>>f\<circ\><around*|(|Id<rsub|X>,D<rsub|<around*|(|x,z|)>><around*|(|g\<circ\>I<rsup|<around*|[|1,<around*|(|x,z|)>|]>>|)>|)><rsub|\<ast\>>|)><around*|(|h|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|D<rsub|\<psi\><around*|(|x,z|)>>f\<circ\><around*|(|Id<rsub|X>,D<rsub|<around*|(|x,z|)>,1>g|)><rsub|\<ast\>>|)><around*|(|h|)>>|<cell|=>|<cell|>>|<row|<cell|D<rsub|\<psi\><around*|(|x,z|)>>f<around*|(|<around*|(|Id<rsub|X>,D<rsub|<around*|(|x,z|)>,1>g|)><rsub|\<ast\>><around*|(|h|)>|)>>|<cell|=>|<cell|>>|<row|<cell|D<rsub|\<psi\><around*|(|x,z|)>>f<around*|(|h,D<rsub|<around*|(|x,z|)>,1>g<around*|(|h|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
       <reference|diff Frechet differentation implies partial
       differentiability >]>>>|<cell|>>|<row|<cell|D<rsub|\<psi\><around*|(|x,z|)>,1>f<around*|(|h|)>+D<rsub|\<psi\><around*|(|x,z|)>,2>f<around*|(|D<rsub|<around*|(|x,z|)>,1>g<around*|(|h|)>|)>>|<cell|=>|<cell|>>|<row|<cell|D<rsub|\<psi\><around*|(|x,z|)>,1>f<around*|(|h|)>+<around*|(|D<rsub|\<psi\><around*|(|x,z|)>,2>f\<circ\>D<rsub|<around*|(|x,z|)>,1>g|)><around*|(|h|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|D<rsub|\<psi\><around*|(|x,z|)>,1>f+D<rsub|\<psi\><around*|(|x,z|)>.2>f\<circ\>D<rsub|<around*|(|x,z|)>,1>g|)><around*|(|h|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|D<rsub|1>f<around*|(|\<psi\><around*|(|x,z|)>|)>+D<rsub|2>f<around*|(|\<psi\><around*|(|x,z|)>|)>\<circ\>D<rsub|1>g<around*|(|x,z|)>|)><around*|(|h|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|D<rsub|1>f<around*|(|x,g<around*|(|x,z|)>|)>+D<rsub|2>f<around*|(|x,g<around*|(|x,z|)>|)>\<circ\>D<rsub|1>g<around*|(|x,z|)>|)><around*|(|h|)>>|<cell|>|<cell|>>>>
     </eqnarray*>
@@ -21666,20 +21665,20 @@
     <math|<around*|(|x,z|)>\<in\>W<rsub|0>> we have for <math|t\<in\>Z> that\ 
 
     <\equation*>
-      <around*|(|\<pi\><rsup|X\<cdot\>Z><rsub|2>\<circ\>I<rsup|<around*|(|2,<around*|(|x,z|)>|)>>|)><around*|(|t|)>=\<pi\><rsup|X\<cdot\>Z><rsub|2><around*|(|I<rsup|<around*|(|2,<around*|(|x,z|)>|)>><around*|(|t|)>|)>=\<pi\><rsup|X\<cdot\>Z><rsub|2><around*|(|x,t|)>=t=Id<rsub|Z><around*|(|t|)>
+      <around*|(|\<pi\><rsup|X\<cdot\>Z><rsub|2>\<circ\>I<rsup|<around*|[|2,<around*|(|x,z|)>|]>>|)><around*|(|t|)>=\<pi\><rsup|X\<cdot\>Z><rsub|2><around*|(|I<rsup|<around*|[|2,<around*|(|x,z|)>|]>><around*|(|t|)>|)>=\<pi\><rsup|X\<cdot\>Z><rsub|2><around*|(|x,t|)>=t=Id<rsub|Z><around*|(|t|)>
     </equation*>
 
     so that\ 
 
     <\equation>
-      <label|eq 16.433.144>\<pi\><rsup|X\<cdot\>Z<rsub|2>><rsub|2>\<circ\>I<rsup|<around*|(|2,<around*|(|z,x|)>|)>>=Id<rsub|Z>
+      <label|eq 16.433.144>\<pi\><rsup|X\<cdot\>Z<rsub|2>><rsub|2>\<circ\>I<rsup|<around*|[|2,<around*|(|z,x|)>|]>>=Id<rsub|Z>
     </equation>
 
     hence we have\ 
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|D<rsub|<around*|(|x,z|)>,2><around*|(|f\<circ\>\<psi\>|)>>|<cell|\<equallim\><rsub|<text|[eq:
-      <reference|eq 16.430.144>]>>>|<cell|D<rsub|<around*|(|x,z|)>,2><around*|(|\<pi\><rsup|X\<cdot\>Z><rsub|2>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|<around*|(|x,z|)>><around*|(|\<pi\><rsup|X\<cdot\>Z><rsub|2>\<circ\>I<rsup|<around*|(|2,<around*|(|x,z|)>|)>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.430.144>]>>>|<cell|D<rsub|<around*|(|x,z|)>,2><around*|(|\<pi\><rsup|X\<cdot\>Z><rsub|2>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|<around*|(|x,z|)>><around*|(|\<pi\><rsup|X\<cdot\>Z><rsub|2>\<circ\>I<rsup|<around*|[|2,<around*|(|x,z|)>|]>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
       <reference|eq 16.433.144>]>>>|<cell|D<rsub|<around*|(|x,z|)>>Id<rsub|Z>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
       <reference|diff identity function is
       differentiable>]>>>|<cell|Id<rsub|Z><eq-number><label|eq
@@ -21689,13 +21688,13 @@
     Further we have\ 
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|<around*|(|\<pi\><rsup|X\<cdot\>Z><rsub|1>\<circ\>\<psi\>\<circ\>I<rsup|<around*|(|2,<around*|(|x,z|)>|)>>|)><around*|(|t|)>>|<cell|=>|<cell|\<pi\><rsup|X\<cdot\>Z><rsub|1><around*|(|\<psi\><around*|(|I<rsup|<around*|(|2,<around*|(|x,z|)>|)>><around*|(|t|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsup|X\<cdot\>Z><rsub|1><around*|(|\<psi\><around*|(|x,t|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsub|1><rsup|X\<cdot\>Z><around*|(|x,g<around*|(|x,t|)>|)>>>|<row|<cell|>|<cell|=>|<cell|x>>|<row|<cell|>|<cell|=>|<cell|C<rsub|x><around*|(|t|)>>>|<row|<cell|<around*|(|\<pi\><rsup|X\<cdot\>Z><rsub|2>\<circ\>\<psi\>\<circ\>I<rsup|<around*|(|2,<around*|(|x,z|)>|)>>|)><around*|(|t|)>>|<cell|=>|<cell|\<pi\><rsup|X\<cdot\>Z><rsub|2><around*|(|\<psi\><around*|(|I<rsup|<around*|(|2,<around*|(|x,z|)>|)>><around*|(|t|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsup|X\<cdot\>Z><rsub|2><around*|(|\<psi\><around*|(|x,t|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsub|2><rsup|X\<cdot\>Z><around*|(|x,g<around*|(|x,t|)>|)>>>|<row|<cell|>|<cell|=>|<cell|g<around*|(|x,t|)>>>|<row|<cell|>|<cell|=>|<cell|g<around*|(|I<rsup|<around*|(|2,<around*|(|x,z|)>|)>><around*|(|t|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|g\<circ\>I<rsup|<around*|(|2,<around*|(|x,z|)>|)>>|)><around*|(|t|)>>>>>
+      <tformat|<table|<row|<cell|<around*|(|\<pi\><rsup|X\<cdot\>Z><rsub|1>\<circ\>\<psi\>\<circ\>I<rsup|<around*|[|2,<around*|(|x,z|)>|]>>|)><around*|(|t|)>>|<cell|=>|<cell|\<pi\><rsup|X\<cdot\>Z><rsub|1><around*|(|\<psi\><around*|(|I<rsup|<around*|[|2,<around*|(|x,z|)>|]>><around*|(|t|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsup|X\<cdot\>Z><rsub|1><around*|(|\<psi\><around*|(|x,t|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsub|1><rsup|X\<cdot\>Z><around*|(|x,g<around*|(|x,t|)>|)>>>|<row|<cell|>|<cell|=>|<cell|x>>|<row|<cell|>|<cell|=>|<cell|C<rsub|x><around*|(|t|)>>>|<row|<cell|<around*|(|\<pi\><rsup|X\<cdot\>Z><rsub|2>\<circ\>\<psi\>\<circ\>I<rsup|<around*|[|2,<around*|(|x,z|)>|]>>|)><around*|(|t|)>>|<cell|=>|<cell|\<pi\><rsup|X\<cdot\>Z><rsub|2><around*|(|\<psi\><around*|(|I<rsup|<around*|[|2,<around*|(|x,z|)>|]>><around*|(|t|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsup|X\<cdot\>Z><rsub|2><around*|(|\<psi\><around*|(|x,t|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsub|2><rsup|X\<cdot\>Z><around*|(|x,g<around*|(|x,t|)>|)>>>|<row|<cell|>|<cell|=>|<cell|g<around*|(|x,t|)>>>|<row|<cell|>|<cell|=>|<cell|g<around*|(|I<rsup|<around*|[|2,<around*|(|x,z|)>|]>><around*|(|t|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|g\<circ\>I<rsup|<around*|[|2,<around*|(|x,z|)>|]>>|)><around*|(|t|)>>>>>
     </eqnarray*>
 
     proving that\ 
 
     <\equation>
-      <label|eq 16.435.144>\<pi\><rsup|X\<cdot\>Z><rsub|1>\<circ\>\<psi\>\<circ\>I<rsup|<around*|(|2,<around*|(|x,z|)>|)>>=C<rsub|x>\<wedge\>\<pi\><rsup|X\<cdot\>Z><rsub|2>\<circ\>\<psi\>\<circ\>I<rsup|<around*|(|2,<around*|(|x,z|)>|)>>=g\<circ\>I<rsup|<around*|(|2,<around*|(|x,z|)>|)>>
+      <label|eq 16.435.144>\<pi\><rsup|X\<cdot\>Z><rsub|1>\<circ\>\<psi\>\<circ\>I<rsup|<around*|[|2,<around*|(|x,z|)>|]>>=C<rsub|x>\<wedge\>\<pi\><rsup|X\<cdot\>Z><rsub|2>\<circ\>\<psi\>\<circ\>I<rsup|<around*|[|2,<around*|(|x,z|)>|]>>=g\<circ\>I<rsup|<around*|[|2,<around*|(|x,z|)>|]>>
     </equation>
 
     We use the above to calulate <math|D<rsub|<around*|(|x,z|)>,2><around*|(|f\<circ\>\<psi\>|)>>
@@ -21705,12 +21704,12 @@
       <tformat|<table|<row|<cell|D<rsub|<around*|(|x,z|)>,2><around*|(|f\<circ\>\<psi\>|)><around*|(|h|)>>|<cell|\<equallim\><rsub|<tabular*|<tformat|<table|<row|<cell|<text|[eq:
       <reference|eq 16.428.144>]>>>|<row|<cell|<text|[theorem:
       <reference|diff chain rule and partial
-      differential>]>>>>>>>>|<cell|>>|<row|<cell|<around*|(|D<rsub|\<psi\><around*|(|x,z|)>>f\<circ\>D<rsub|<around*|(|x,z|)>,2>\<psi\>|)><around*|(|h|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|D<rsub|\<psi\><around*|(|x,z|)>>f\<circ\>D<rsub|<around*|(|x,z|)>><around*|(|\<psi\>\<circ\>I<rsup|<around*|(|2,<around*|(|x,z|)>|)>>|)>|)><around*|(|h|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      differential>]>>>>>>>>|<cell|>>|<row|<cell|<around*|(|D<rsub|\<psi\><around*|(|x,z|)>>f\<circ\>D<rsub|<around*|(|x,z|)>,2>\<psi\>|)><around*|(|h|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|D<rsub|\<psi\><around*|(|x,z|)>>f\<circ\>D<rsub|<around*|(|x,z|)>><around*|(|\<psi\>\<circ\>I<rsup|<around*|[|2,<around*|(|x,z|)>|]>>|)>|)><around*|(|h|)>>|<cell|\<equallim\><rsub|<text|[theorem:
       <reference|diff differential of a vector valued
-      function>]>>>|<cell|>>|<row|<cell|<around*|(|D<rsub|\<psi\><around*|(|x,z|)>>f\<circ\><around*|(|D<rsub|<around*|(|x,z|)>><around*|(|\<pi\><rsup|X\<cdot\>Z><rsub|1>\<circ\><around*|(|\<psi\>\<circ\>I<rsup|<around*|(|2,<around*|(|x,z|)>|)>>|)>|)>,D<rsub|<around*|(|x,z|)>><around*|(|\<pi\><rsup|X\<cdot\>Z><rsub|2><around*|(|\<psi\>\<circ\>I<rsup|<around*|(|2,<around*|(|x,z|)>|)>>|)>|)>|)><rsub|\<ast\>>|)><around*|(|h|)>>|<cell|\<equallim\><rsub|<text|[eq:
-      <reference|eq 16.435.144>]>>>|<cell|>>|<row|<cell|<around*|(|D<rsub|\<psi\><around*|(|x,z|)>>f\<circ\><around*|(|D<rsub|<around*|(|x,z|)>>C<rsub|x>,D<rsub|<around*|(|x,z|)>><around*|(|g\<circ\>I<rsup|<around*|(|2,<around*|(|x,z|)>|)>>|)>|)><rsub|\<ast\>>|)><around*|(|h|)>>|<cell|\<equallim\><rsub|<text|[eq:
+      function>]>>>|<cell|>>|<row|<cell|<around*|(|D<rsub|\<psi\><around*|(|x,z|)>>f\<circ\><around*|(|D<rsub|<around*|(|x,z|)>><around*|(|\<pi\><rsup|X\<cdot\>Z><rsub|1>\<circ\><around*|(|\<psi\>\<circ\>I<rsup|<around*|[|2,<around*|(|x,z|)>|]>>|)>|)>,D<rsub|<around*|(|x,z|)>><around*|(|\<pi\><rsup|X\<cdot\>Z><rsub|2><around*|(|\<psi\>\<circ\>I<rsup|<around*|[|2,<around*|(|x,z|)>|]>>|)>|)>|)><rsub|\<ast\>>|)><around*|(|h|)>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.435.144>]>>>|<cell|>>|<row|<cell|<around*|(|D<rsub|\<psi\><around*|(|x,z|)>>f\<circ\><around*|(|D<rsub|<around*|(|x,z|)>>C<rsub|x>,D<rsub|<around*|(|x,z|)>><around*|(|g\<circ\>I<rsup|<around*|[|2,<around*|(|x,z|)>|]>>|)>|)><rsub|\<ast\>>|)><around*|(|h|)>>|<cell|\<equallim\><rsub|<text|[eq:
       <reference|diff constant function is
-      differentiable>]>>>|<cell|>>|<row|<cell|<around*|(|D<rsub|\<psi\><around*|(|x,z|)>>f\<circ\><around*|(|0,D<rsub|<around*|(|x,z|)>><around*|(|g\<circ\>I<rsup|<around*|(|2,<around*|(|x,z|)>|)>>|)>|)><rsub|\<ast\>>|)><around*|(|h|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|D<rsub|\<psi\><around*|(|x,z|)>>f\<circ\><around*|(|0,D<rsub|<around*|(|x,z|)>,2>g|)><rsub|\<ast\>>|)><around*|(|h|)>>|<cell|=>|<cell|>>|<row|<cell|D<rsub|\<psi\><around*|(|x,z|)>>f<around*|(|<around*|(|0,D<rsub|<around*|(|x,z|)>,2>g|)><rsub|\<ast\>><around*|(|h|)>|)>>|<cell|=>|<cell|>>|<row|<cell|D<rsub|\<psi\><around*|(|x,z|)>>f<around*|(|0<around*|(|h|)>,D<rsub|<around*|(|x,z|)>,2>g<around*|(|h|)>|)>>|<cell|=>|<cell|>>|<row|<cell|D<rsub|\<psi\><around*|(|x,z|)>>f<around*|(|0,D<rsub|<around*|(|x,z|)>,2>g<around*|(|h|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      differentiable>]>>>|<cell|>>|<row|<cell|<around*|(|D<rsub|\<psi\><around*|(|x,z|)>>f\<circ\><around*|(|0,D<rsub|<around*|(|x,z|)>><around*|(|g\<circ\>I<rsup|<around*|[|2,<around*|(|x,z|)>|]>>|)>|)><rsub|\<ast\>>|)><around*|(|h|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|D<rsub|\<psi\><around*|(|x,z|)>>f\<circ\><around*|(|0,D<rsub|<around*|(|x,z|)>,2>g|)><rsub|\<ast\>>|)><around*|(|h|)>>|<cell|=>|<cell|>>|<row|<cell|D<rsub|\<psi\><around*|(|x,z|)>>f<around*|(|<around*|(|0,D<rsub|<around*|(|x,z|)>,2>g|)><rsub|\<ast\>><around*|(|h|)>|)>>|<cell|=>|<cell|>>|<row|<cell|D<rsub|\<psi\><around*|(|x,z|)>>f<around*|(|0<around*|(|h|)>,D<rsub|<around*|(|x,z|)>,2>g<around*|(|h|)>|)>>|<cell|=>|<cell|>>|<row|<cell|D<rsub|\<psi\><around*|(|x,z|)>>f<around*|(|0,D<rsub|<around*|(|x,z|)>,2>g<around*|(|h|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
       <reference|diff Frechet differentation implies partial
       differentiability >]>>>|<cell|>>|<row|<cell|D<rsub|\<psi\><around*|(|x,z|)>,1>f<around*|(|0|)>+D<rsub|\<psi\><around*|(|x,z|)>,2>f<around*|(|D<rsub|<around*|(|x,z|)>,2>g<around*|(|h|)>|)>>|<cell|=>|<cell|>>|<row|<cell|D<rsub|\<psi\><around*|(|x,z|)>,2>f<around*|(|D<rsub|<around*|(|x,z|)>,2>g<around*|(|h|)>|)>>|<cell|=>|<cell|>>|<row|<cell|D<rsub|2>f<around*|(|\<psi\><around*|(|x,z|)><around*|(|D<rsub|2>g<around*|(|<around*|\<nobracket\>|x,z|)><around*|(|h|)>|)>|)>|\<nobracket\>>>|<cell|=>|<cell|>>|<row|<cell|D<rsub|2>f<around*|(|x,g<around*|(|x,z|)>|)><around*|(|D<rsub|2>g<around*|(|x,z|)><around*|(|h|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|D<rsub|2>f<around*|(|x,g<around*|(|x,z|)>|)>\<circ\>D<rsub|2>g<around*|(|x,z|)>|)><around*|(|h|)>>|<cell|>|<cell|>>>>
     </eqnarray*>
@@ -21736,15 +21735,16 @@
   A simpler version of the implicit function theorem is the following.
 
   <\theorem>
-    <label|implicit function theorem(1)><index|implict function theorem
+    <label|diff implicit function theorem (1)><index|implict function theorem
     (2)>Let <math|n\<in\>\<bbb-N\>,<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     and <math|<around*|\<langle\>|Z,<around*|\<\|\|\>||\<\|\|\>><rsub|Z>|\<rangle\>>>
-    be Banach spaces, <math|U> a open set in <math|X> and
-    <math|f:U\<cdot\>V\<rightarrow\>Z> of class <math|C<rsup|n>>. Using
-    [theorem: <reference|diff higher order differentiation implies higher
-    order partial differation (1)>] and [definition: <reference|diff higher
-    order partial differentiation>] \ we have that\ 
+    be Banach spaces, <math|U> a open set in <math|X>, <math|V> a open set in
+    <math|Y> and <math|f:U\<cdot\>V\<rightarrow\>Z> of class
+    <math|C<rsup|n>>. Using [theorem: <reference|diff higher order
+    differentiation implies higher order partial differation (1)>] and
+    [definition: <reference|diff higher order partial differentiation>] \ we
+    have that\ 
 
     <\equation*>
       D<rsub|1>f:U\<cdot\>V\<rightarrow\>L<around*|(|X,Z|)><text| defined by
@@ -21798,7 +21798,134 @@
   </theorem>
 
   <\proof>
-    \;
+    Using the implicit function theorem [theorem: <reference|diff implicit
+    function theorem>] there exist a open set
+    <math|W<rsub|0>\<subseteq\>U\<cdot\>Z> and a open set
+    <math|V<rsub|0>\<subseteq\>V> with <math|<around*|(|x<rsub|0>,y<rsub|0>|)>\<in\>W<rsub|0>>
+    such that there exist a map <math|h:W<rsub|0>\<rightarrow\>V<rsub|0>> of
+    class <math|C<rsup|n>> such that
+
+    <\equation>
+      <around*|(|x<rsub|0>,f<around*|(|x<rsub|0>,y<rsub|0>|)>|)>\<in\>W<rsub|0>
+    </equation>
+
+    <\equation>
+      <label|eq 16.438.145>h<around*|(|x<rsub|0>,f<around*|(|x<rsub|0>,y<rsub|0>|)>|)>=y<rsub|0>
+    </equation>
+
+    and <math|\<forall\><around*|(|x,z|)>\<in\>W<rsub|0>> we have
+
+    <\equation>
+      <label|eq 16.439.145>f<around*|(|x,h<around*|(|x,z|)>|)>=z<text|>
+    </equation>
+
+    <\equation>
+      <label|eq 16.440.145>D<rsub|1>h<around*|(|x,z|)>=-<around*|(|D<rsub|2>f<around*|(|x,h<around*|(|x,z|)>|)>|)><rsup|-1>\<circ\>D<rsub|1>f<around*|(|x,h<around*|(|x,z|)>|)>
+    </equation>
+
+    <\equation>
+      D<rsub|2>h<around*|(|x,z|)>=<around*|(|D<rsub|2>f<around*|(|x,h<around*|(|x,z|)>|)>|)><rsup|-1>
+    </equation>
+
+    where\ 
+
+    <\equation*>
+      D<rsub|1>h:W<rsub|0>\<rightarrow\>L<around*|(|X,Y|)><text| is defined
+      by >D<rsub|1>h<around*|(|x,z|)>=D<rsub|<around*|(|x,z|)>,1>h
+    </equation*>
+
+    <\equation*>
+      D<rsub|2>h:W<rsub|0>\<rightarrow\>L<around*|(|Z,Y|)><text| is defined
+      by >D<rsub|2>h<around*|(|x,z|)>=D<rsub|<around*|(|x,z|)>,2>h
+    </equation*>
+
+    Using the definition of the product topology on <math|X\<cdot\>Y> [see:
+    definition: <reference|topology box>] and [theorem: <reference|topology
+    product topology and box topology are the same in the finite case>] there
+    exists a open set <math|W> in <math|X> and a open set <math|O> in
+    <math|Z> such that
+
+    <\equation*>
+      <around*|(|x<rsub|0>,f<around*|(|x<rsub|0>,y<rsub|0>|)>|)>\<in\>W\<cdot\>O\<subseteq\>W<rsub|0>\<subseteq\>U\<cdot\>Z
+    </equation*>
+
+    From the above it follows that <math|f<around*|(|x<rsub|0>,w<rsub|0>|)>\<in\>O>
+    so if <math|x\<in\>W> then by the above
+    <math|<around*|(|x,f<around*|(|x<rsub|0>,y<rsub|0>|)>|)>\<in\>W\<cdot\>O>
+    which is the domain of <math|h> so the following function is well defined\ 
+
+    <\equation>
+      <label|eq 16.442.145>g:W\<rightarrow\>V<text| where
+      >g<around*|(|x|)>=h<around*|(|x,f<around*|(|x<rsub|0>,y<rsub|0>|)>|)>
+    </equation>
+
+    then we have\ 
+
+    <\equation>
+      <label|eq 16.443.145>g<around*|(|x<rsub|0>|)>=h<around*|(|x<rsub|0>,f<around*|(|x<rsub|0>,y<rsub|0>|)>|)>\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.438.145>]>>y<rsub|0>
+    </equation>
+
+    Further for <math|x\<in\>W> we have <math|<around*|(|x,f<around*|(|x<rsub|0>,y<rsub|0>|)>|)>\<in\>W\<cdot\>O\<subseteq\>W<rsub|0>>
+    so that
+
+    <\equation*>
+      f<around*|(|x,g<around*|(|x|)>|)>=f<around*|(|x,h<around*|(|x,f<around*|(|x<rsub|0>,y<rsub|0>|)>|)>|)>\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.439.145>]>>f<around*|(|x<rsub|0>,y<rsub|0>|)>
+    </equation*>
+
+    hence\ 
+
+    <\equation>
+      <label|eq 16.444.145>\<forall\>x\<in\>W<text| we have
+      >f<around*|(|x,g<around*|(|x|)>|)>=f<around*|(|x<rsub|0>,y<rsub|0>|)>
+    </equation>
+
+    Further we have for <math|t\<in\>W> that
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|h\<circ\>I<rsup|<around*|[|1,<around*|(|x,f<around*|(|x<rsub|0>,y<rsub|0>|)>|)>|]>>|)><around*|(|t|)>>|<cell|=>|<cell|h<around*|(|I<rsup|<around*|[|1,<around*|(|x,f<around*|(|x<rsub|0>,y<rsub|0>|)>|)>|]>><around*|(|t|)>|)>>>|<row|<cell|>|<cell|=>|<cell|h<around*|(|t,f<around*|(|x<rsub|0>,y<rsub|0>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.442.145>]>>>|<cell|g<around*|(|t|)>>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation*>
+      g=h\<circ\>I<rsup|<around*|[|1,<around*|(|x,f<around*|(|x<rsub|0>,y<rsub|0>|)>|)>|]>>
+    </equation*>
+
+    Using the chain rule [see theorem: <reference|diff chain rule higher
+    order class>] and the fact that <math|h> is of class <math|C<rsup|n>> and
+    <math|I<rsup|<around*|[|1,<around*|(|x,f<around*|(|x<rsub|0>,y<rsub|0>|)>|)>|]>>>
+    is of class <math|C<rsup|\<infty\>>> [see example: <reference|diff
+    unprojection is infinite times differentiable>] it follows that\ 
+
+    <\equation>
+      <label|eq 16.445.145>g<text| is of class >C<rsup|r>
+    </equation>
+
+    so that\ 
+
+    <\equation*>
+      D g:W\<rightarrow\>L<around*|(|X,Y|)><text| defined by >D
+      g<around*|(|x|)>=D<rsub|x>g
+    </equation*>
+
+    is well defined. Further we have for <math|x\<in\>W> that
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|D g<around*|(|x|)>>|<cell|=>|<cell|D<rsub|x>g>>|<row|<cell|>|<cell|=>|<cell|D<rsub|x><around*|(|h\<circ\>I<rsup|<around*|[|1,<around*|(|x,f<around*|(|x<rsub|0>,y<rsub|0>|)>|)>|]>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[definition:
+      <reference|diff partial differential
+      definition>]>>>|<cell|D<rsub|<around*|(|x,f<around*|(|x<rsub|0>,y<rsub|0>|)>|)>,1>h>>|<row|<cell|>|<cell|=>|<cell|D<rsub|1>
+      h<around*|(|x,f<around*|(|x<rsub|0>,y<rsub|0>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.440.145>]>>>|<cell|-<around*|(|D<rsub|2>f<around*|(|x,h<around*|(|x,f<around*|(|x<rsub|0>,y<rsub|0>|)>|)>|)>|)><rsup|-1>\<circ\>D<rsub|1>f<around*|(|x,h<around*|(|x,f<around*|(|x<rsub|0>,y<rsub|0>|)>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|eq 16.442.145>]>>>|<cell|-<around*|(|D<rsub|2>f<around*|(|x,g<around*|(|x|)>|)>|)><rsup|-1>\<circ\>D<rsub|1>f<around*|(|x,g<around*|(|x|)>|)><eq-number><label|eq
+      16.446.145>>>>>
+    </eqnarray*>
+
+    The theorem is then proved by [eqs: <reference|eq 16.445.145>,
+    <reference|eq 16.443.145>, <reference|eq 16.444.145> and <reference|eq
+    16.446.145>].
   </proof>
 
   \;
@@ -22021,6 +22148,8 @@
     <associate|diff homeomorphism is a diffeomorphism of class
     C^0|<tuple|16.237|?>>
     <associate|diff identity function is differentiable|<tuple|16.19|?>>
+    <associate|diff implicit function theorem|<tuple|16.255|?>>
+    <associate|diff implicit function theorem (1)|<tuple|16.256|?>>
     <associate|diff implicit theorem|<tuple|16.255|?>>
     <associate|diff increasing decreasing function|<tuple|16.133|?>>
     <associate|diff inifint=ite differentiable|<tuple|16.89|?>>
@@ -22444,10 +22573,19 @@
     <associate|eq 16.431.144|<tuple|16.431|?>>
     <associate|eq 16.432.144|<tuple|16.432|?>>
     <associate|eq 16.433.144|<tuple|16.433|?>>
+    <associate|eq 16.433.145|<tuple|16.444|?>>
     <associate|eq 16.434.144|<tuple|16.434|?>>
     <associate|eq 16.435.144|<tuple|16.435|?>>
     <associate|eq 16.436.144|<tuple|16.436|?>>
+    <associate|eq 16.438.145|<tuple|16.438|?>>
+    <associate|eq 16.439.145|<tuple|16.439|?>>
     <associate|eq 16.44.188|<tuple|16.46|?>>
+    <associate|eq 16.440.145|<tuple|16.440|?>>
+    <associate|eq 16.442.145|<tuple|16.442|?>>
+    <associate|eq 16.443.145|<tuple|16.443|?>>
+    <associate|eq 16.444.145|<tuple|16.444|?>>
+    <associate|eq 16.445.145|<tuple|16.445|?>>
+    <associate|eq 16.446.145|<tuple|16.446|?>>
     <associate|eq 16.45.188|<tuple|16.47|?>>
     <associate|eq 16.46.188|<tuple|16.48|?>>
     <associate|eq 16.47.188|<tuple|16.49|?>>
@@ -22521,6 +22659,7 @@
     <associate|eq 16.98.194|<tuple|16.113|?>>
     <associate|eq 16.99.194|<tuple|16.114|?>>
     <associate|eq 19.96.199|<tuple|16.102|?>>
+    <associate|implicit function theorem (1)|<tuple|16.256|?>>
     <associate|implicit function theorem(1)|<tuple|16.256|?>>
     <associate|inverse function and derivate|<tuple|16.253|?>>
     <associate|lemma 16.101.194|<tuple|16.123|?>>
@@ -22665,6 +22804,10 @@
       <tuple|<tuple|local diffeomorphism>|<pageref|auto-60>>
 
       <tuple|<tuple|inverse function theorem>|<pageref|auto-61>>
+
+      <tuple|<tuple|implicit function theorem (1)>|<pageref|auto-62>>
+
+      <tuple|<tuple|implict function theorem (2)>|<pageref|auto-63>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|16<space|2spc>Differentation
