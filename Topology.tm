@@ -11774,7 +11774,8 @@
   </proof>
 
   <\theorem>
-    <label|compact image of a cmpact set by a continuous function>Let
+    <label|compact image of a cmpact set by a continuous
+    function><index|extreme value theorem><dueto|Extrem Value Theorem>Let
     <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological
     space, <math|f:X\<rightarrow\>\<bbb-R\>> a continuous function [using the
     topology <math|\<cal-T\><rsub|<around*|\|||\|>>> on <math|\<bbb-R\>>] and
@@ -21858,7 +21859,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|13>
-    <associate|page-first|659>
+    <associate|page-first|661>
     <associate|page-medium|papyrus>
     <associate|section-nr|0>
     <associate|subsection-nr|0>
@@ -21869,19 +21870,20 @@
   <\collection>
     <associate|auto-1|<tuple|14|?>>
     <associate|auto-10|<tuple|<with|mode|<quote|math>|A<rprime|'>>|?>>
-    <associate|auto-100|<tuple|series|?>>
-    <associate|auto-101|<tuple|14.10.3.1|?>>
-    <associate|auto-102|<tuple|14.10.3.2|?>>
-    <associate|auto-103|<tuple|absolute convergence|?>>
-    <associate|auto-104|<tuple|dominant convergence|?>>
-    <associate|auto-105|<tuple|14.10.4|?>>
-    <associate|auto-106|<tuple|Baire Category theorem|?>>
-    <associate|auto-107|<tuple|open mapping theorem|?>>
-    <associate|auto-108|<tuple|14.11|?>>
-    <associate|auto-109|<tuple|connected space|?>>
+    <associate|auto-100|<tuple|14.10.3|?>>
+    <associate|auto-101|<tuple|series|?>>
+    <associate|auto-102|<tuple|14.10.3.1|?>>
+    <associate|auto-103|<tuple|14.10.3.2|?>>
+    <associate|auto-104|<tuple|absolute convergence|?>>
+    <associate|auto-105|<tuple|dominant convergence|?>>
+    <associate|auto-106|<tuple|14.10.4|?>>
+    <associate|auto-107|<tuple|Baire Category theorem|?>>
+    <associate|auto-108|<tuple|open mapping theorem|?>>
+    <associate|auto-109|<tuple|14.11|?>>
     <associate|auto-11|<tuple|14.1.2|?>>
-    <associate|auto-110|<tuple|disconnected space|?>>
-    <associate|auto-111|<tuple|intermediate value theorem|?>>
+    <associate|auto-110|<tuple|connected space|?>>
+    <associate|auto-111|<tuple|disconnected space|?>>
+    <associate|auto-112|<tuple|intermediate value theorem|?>>
     <associate|auto-12|<tuple|box topology|?>>
     <associate|auto-13|<tuple|14.1.3|?>>
     <associate|auto-14|<tuple|dense set|?>>
@@ -21941,45 +21943,45 @@
     <associate|auto-63|<tuple|14.8|?>>
     <associate|auto-64|<tuple|compact space|?>>
     <associate|auto-65|<tuple|compact set|?>>
-    <associate|auto-66|<tuple|limit point compactness|?>>
-    <associate|auto-67|<tuple|compact class|?>>
-    <associate|auto-68|<tuple|14.8.1|?>>
-    <associate|auto-69|<tuple|14.8.1.1|?>>
+    <associate|auto-66|<tuple|extreme value theorem|?>>
+    <associate|auto-67|<tuple|limit point compactness|?>>
+    <associate|auto-68|<tuple|compact class|?>>
+    <associate|auto-69|<tuple|14.8.1|?>>
     <associate|auto-7|<tuple|<with|mode|<quote|math>|\<cal-T\><rsup|\<cal-C\>>>|?>>
-    <associate|auto-70|<tuple|filter base|?>>
-    <associate|auto-71|<tuple|neighborhood filter base|?>>
-    <associate|auto-72|<tuple|converging to a point|?>>
-    <associate|auto-73|<tuple|accumaling at a point|?>>
-    <associate|auto-74|<tuple|<with|mode|<quote|math>|\<frak-U\>\<rightarrow\>x>|?>>
-    <associate|auto-75|<tuple|<with|mode|<quote|math>|\<frak-U\>\<succ\>x>|?>>
-    <associate|auto-76|<tuple|subordinate filter bases|?>>
-    <associate|auto-77|<tuple|<with|mode|<quote|math>|\<frak-W\>\<geqslant\>\<frak-U\>>|?>>
-    <associate|auto-78|<tuple|<with|mode|<quote|math>|\<frak-U\>\<ll\>\<frak-W\>>|?>>
-    <associate|auto-79|<tuple|<with|mode|<quote|math>|\<frak-U\>\<sqsubseteq\>\<frak-W\>>|?>>
+    <associate|auto-70|<tuple|14.8.1.1|?>>
+    <associate|auto-71|<tuple|filter base|?>>
+    <associate|auto-72|<tuple|neighborhood filter base|?>>
+    <associate|auto-73|<tuple|converging to a point|?>>
+    <associate|auto-74|<tuple|accumaling at a point|?>>
+    <associate|auto-75|<tuple|<with|mode|<quote|math>|\<frak-U\>\<rightarrow\>x>|?>>
+    <associate|auto-76|<tuple|<with|mode|<quote|math>|\<frak-U\>\<succ\>x>|?>>
+    <associate|auto-77|<tuple|subordinate filter bases|?>>
+    <associate|auto-78|<tuple|<with|mode|<quote|math>|\<frak-W\>\<geqslant\>\<frak-U\>>|?>>
+    <associate|auto-79|<tuple|<with|mode|<quote|math>|\<frak-U\>\<ll\>\<frak-W\>>|?>>
     <associate|auto-8|<tuple|limit point|?>>
-    <associate|auto-80|<tuple|ultra filter|?>>
-    <associate|auto-81|<tuple|maximum filter base|?>>
-    <associate|auto-82|<tuple|14.8.1.2|?>>
-    <associate|auto-83|<tuple|Tychonoff's theorem|?>>
-    <associate|auto-84|<tuple|14.8.1.3|?>>
-    <associate|auto-85|<tuple|14.9|?>>
-    <associate|auto-86|<tuple|14.9.1|?>>
-    <associate|auto-87|<tuple|14.9.2|?>>
-    <associate|auto-88|<tuple|14.9.3|?>>
-    <associate|auto-89|<tuple|<with|mode|<quote|math>|<below|lim
-    sup|n\<rightarrow\>\<infty\>> x<rsub|n>>|?>>
+    <associate|auto-80|<tuple|<with|mode|<quote|math>|\<frak-U\>\<sqsubseteq\>\<frak-W\>>|?>>
+    <associate|auto-81|<tuple|ultra filter|?>>
+    <associate|auto-82|<tuple|maximum filter base|?>>
+    <associate|auto-83|<tuple|14.8.1.2|?>>
+    <associate|auto-84|<tuple|Tychonoff's theorem|?>>
+    <associate|auto-85|<tuple|14.8.1.3|?>>
+    <associate|auto-86|<tuple|14.9|?>>
+    <associate|auto-87|<tuple|14.9.1|?>>
+    <associate|auto-88|<tuple|14.9.2|?>>
+    <associate|auto-89|<tuple|14.9.3|?>>
     <associate|auto-9|<tuple|accumulation point|?>>
     <associate|auto-90|<tuple|<with|mode|<quote|math>|<below|lim
+    sup|n\<rightarrow\>\<infty\>> x<rsub|n>>|?>>
+    <associate|auto-91|<tuple|<with|mode|<quote|math>|<below|lim
     inf|n\<rightarrow\>\<infty\>> x<rsub|n>>|?>>
-    <associate|auto-91|<tuple|14.10|?>>
-    <associate|auto-92|<tuple|Cauchy sequence|?>>
+    <associate|auto-92|<tuple|14.10|?>>
     <associate|auto-93|<tuple|Cauchy sequence|?>>
-    <associate|auto-94|<tuple|complete space|?>>
-    <associate|auto-95|<tuple|Banach space|?>>
-    <associate|auto-96|<tuple|14.10.1|?>>
-    <associate|auto-97|<tuple|14.10.2|?>>
-    <associate|auto-98|<tuple|bounded uniform convergence|?>>
-    <associate|auto-99|<tuple|14.10.3|?>>
+    <associate|auto-94|<tuple|Cauchy sequence|?>>
+    <associate|auto-95|<tuple|complete space|?>>
+    <associate|auto-96|<tuple|Banach space|?>>
+    <associate|auto-97|<tuple|14.10.1|?>>
+    <associate|auto-98|<tuple|14.10.2|?>>
+    <associate|auto-99|<tuple|bounded uniform convergence|?>>
     <associate|bounded B(X,Y) is a normed space|<tuple|14.339|?>>
     <associate|bounded function|<tuple|14.337|?>>
     <associate|bounded function B(X,Y) is a vector space|<tuple|14.338|?>>
