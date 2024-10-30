@@ -875,7 +875,7 @@
   </proof>
 
   In the proof of the fundamental theorem of algebra we use the extreme value
-  theorem [theorem: <reference|compact extreme value theorem>] we need to
+  theorem [theorem: <reference|compact extreme value theorem>], so we need to
   look at continuous functions using the above norm. This is the subject of
   the following theorem.
 
@@ -890,50 +890,311 @@
       is continuous.
 
       <item><math|Given n\<in\>\<bbb-N\><rsub|0> > we have that
-      <math|<around*|(|Id<rsub|\<bbb-C\>>|)><rsup|n>:\<bbb-C\>\<rightarrow\>\<bbb-C\>>
+      <math|<around*|(|\<cdot\>|)><rsup|n>:\<bbb-C\>\<rightarrow\>\<bbb-C\>>
+      defined by <math|<around*|(|\<cdot\>|)><rsup|n><around*|(|z|)>=z<rsup|n>>
       is continuous.
 
       <item>Given <math|n\<in\>\<bbb-N\>>,
-      <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\>\<bbb-N\><rsub|0>
-      <around*|{|0,\<ldots\>,n|}>>> the function
-      <math|p:\<bbb-C\>\<rightarrow\>\<bbb-C\>> defined by
-      <math|p<around*|(|x|)>=<big|sum><rsub|i=0><rsup|n>\<alpha\><rsub|i>\<cdot\>x<rsup|i>>
-      is continuous
+      <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>>
+      then the function <math|p:\<bbb-C\>\<rightarrow\>\<bbb-C\>> defined by
+      <math|p<around*|(|z|)>=<big|sum><rsub|i=0><rsup|n>\<alpha\><rsub|i>\<cdot\>z<rsup|i>>
+      is continuous.\ 
 
-      <item>The function <math|<around*|\<langle\>||\<rangle\>>:\<bbb-C\>\<rightarrow\>\<bbb-R\>>
-      defined by <math|<around*|\<langle\>|z|\<rangle\>>=z\<cdot\><wide|z|\<bar\>>=<around*|\||z|\|><rsup|2>
+      <item>The function <math|<around*|\<langle\>|z|\<rangle\>>:\<bbb-C\>\<rightarrow\>\<bbb-R\>>
+      defined by <math|<around*|\<langle\>|z|\<rangle\>>=<around*|\<langle\>||\<rangle\>><around*|(|z|)>=z\<cdot\><wide|z|\<bar\>>=<around*|\||z|\|><rsup|2>
       > is continuous
 
-      <item>Given <math|n\<in\>\<bbb-N\>>,
-      <math|<around*|{|a<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>> the function
-      <math|p\<cdot\><wide|p|\<bar\>>:\<bbb-C\>\<rightarrow\>\<bbb-R\>>
-      defined by <math|<around*|(|p\<cdot\><wide|p|\<bar\>>|)><around*|(|x|)>=<around*|(|<big|sum><rsub|i=0><rsup|n>\<alpha\><rsub|i>\<cdot\>x<rsup|i>|)>\<cdot\><wide|<around*|(|<big|sum><rsub|i=0><rsup|n>\<alpha\><rsub|i>\<cdot\>x<rsup|i>|)>|\<bar\>>>
-      is continuous
+      <item>Given <math|n\<in\>\<bbb-N\><rsub|0>>,
+      <math|<around*|{|a<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>>
+      the function
 
-      <item>The function <math|<wide||\<bar\>>:\<bbb-C\>\<rightarrow\>\<bbb-C\>>
-      defined by <math|<wide||\<bar\>><around*|(|z|)>=<wide|z|\<bar\>>> is
-      continuous
+      <\equation*>
+        p\<cdot\><wide|p|\<bar\>>:\<bbb-C\>\<rightarrow\>\<bbb-R\><text|
+        defined by ><around*|(|p\<cdot\><wide|p|\<wide-bar\>>|)><around*|(|z|)>=<around*|(|<big|sum><rsub|i=0><rsup|n>\<alpha\><rsub|i>\<cdot\>z<rsup|i>|)>\<cdot\><wide|<around*|(|<big|sum><rsub|i=0><rsup|n>\<alpha\><rsub|i>\<cdot\>z<rsup|i>|)>|\<bar\>>
+      </equation*>
+
+      is continuous.
+
+      <item>The function <math|<around*|(|<wide|\<cdot\>|\<bar\>>|)>:\<bbb-C\>\<rightarrow\>\<bbb-C\>>
+      defined by <math|<around*|(|<wide|\<cdot\>|\<wide-bar\>>|)><around*|(|z|)>=<wide|z|\<wide-bar\>>>
+      is continuous.
 
       <item>Given <math|z\<in\>\<bbb-C\>> then the function
       <math|<around*|(|\<cdot\>z|)>:\<bbb-R\>\<rightarrow\>\<bbb-C\>> defined
       by <math|<around*|(|.z|)><around*|(|\<alpha\>|)>=\<alpha\>\<cdot\>z> is
-      continuous
+      continuous.
 
       <item>If <math|p:\<bbb-C\>\<rightarrow\>\<bbb-C\>> is a polynomial and
       <math|z\<in\>\<bbb-C\>> then <math|p<rsub|\<cdot\>z>:\<bbb-R\>\<rightarrow\>\<bbb-C\>>
       defined by <math|p<rsub|\<cdot\>z><around*|(|\<alpha\>|)>=p<around*|(|\<alpha\>\<cdot\>z|)>>
-      is contnuous.
+      is continuous.
 
-      <item>The function <math|Re:\<bbb-C\>\<rightarrow\>\<bbb-R\>> defined
-      by <math|x\<rightarrow\>Re<around*|(|x|)>> is continuous
+      <item>The function <math|Re:\<bbb-C\>\<rightarrow\>\<bbb-R\>> is
+      continuous
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    <space|1em>
+
+    <\enumerate>
+      <item>As <math|\<forall\>z\<in\>\<bbb-C\>> we have
+      <math|<around*|(|\<alpha\>\<cdot\>|)><around*|(|z|)>=\<alpha\>\<cdot\>z=\<alpha\>\<cdot\>Id<rsub|\<bbb-C\>><around*|(|z|)>>
+      we have <math|<around*|(|\<alpha\>\<cdot\>|)>=\<alpha\>\<cdot\>Id<rsub|\<bbb-C\>>>.
+      By [example: <reference|continuity identity function>]<math|>
+      <math|Id<rsub|\<bbb-C\>>> is continuous so that by [theorem:
+      <reference|continuity of sum of continuous functions>]
+      <math|<around*|(|\<alpha\>\<cdot\>|)>> is continuous.
+
+      <item>As <math|\<forall\>z\<in\>\<bbb-C\>> we have that
+      <math|<around*|(|\<cdot\>|)><rsup|n><around*|(|z|)>=z<rsup|n>=<around*|(|Id<rsub|\<bbb-C\>><around*|(|z|)>|)><rsup|n>>
+      we have, as <math|Id<rsub|\<bbb-C\>>> is continuous, by [theorem:
+      <reference|continuity power of continuous functions>] that
+      <math|<around*|(|\<cdot\>|)><rsup|n>> is continuous.\ 
+
+      <item>Let <math|i\<in\><around*|{|1,\<ldots\>,n|}>> then by (1) and (2)
+      <math|<around*|(|\<alpha\><rsub|i>\<cdot\>|)>> and
+      <math|<around*|(|\<cdot\>|)><rsup|i>> are continuous. So, as the
+      composition of continuous functions is continuous [see theorem:
+      <reference|continuity composition>], it follows that
+      <math|<around*|(|\<alpha\><rsub|i>\<cdot\>|)>\<circ\><around*|(|\<cdot\>|)><rsup|i>>
+      is continous. Using now [theorem: <reference|continuity of finite sum
+      of continuous functions>] it follows that\ 
+
+      <\equation*>
+        <big|sum><rsub|i=0><rsup|n><around*|(|<around*|(|\<alpha\><rsub|i>\<cdot\>|)>\<circ\><around*|(|\<cdot\>|)><rsup|i>|)>
+      </equation*>
+
+      is continuous. Let <math|z\<in\>\<bbb-C\>> then
+
+      <\equation*>
+        <around*|(|<big|sum><rsub|i=0><rsup|n><around*|(|<around*|(|\<alpha\><rsub|i>\<cdot\>|)>\<circ\><around*|(|\<cdot\>|)><rsup|i>|)>|)><around*|(|z|)>=<big|sum><rsub|i=0><rsup|n><around*|(|<around*|(|\<alpha\><rsub|i>\<cdot\>|)>\<circ\><around*|(|\<cdot\>|)><rsup|i>|)><around*|(|z|)>=<big|sum><rsub|i=0><rsup|n><around*|(|\<alpha\><rsub|i>\<cdot\>|)><around*|(|<around*|(|\<cdot\>|)><rsup|i><around*|(|z|)>|)>=<big|sum><rsub|i=0><rsup|n>\<alpha\><rsub|i>\<cdot\>z<rsup|i>=p<around*|(|z|)>
+      </equation*>
+
+      it follows that <math|p=<big|sum><rsub|i=0><rsup|n><around*|(|<around*|(|\<alpha\><rsub|i>\<cdot\>|)>\<circ\><around*|(|\<cdot\>|)><rsup|i>|)>>.
+      Hence <math|p> is continuous.
+
+      <item>Let <math|z\<in\>\<bbb-C\>> and
+      <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. Take
+      <math|\<delta\>=min<around*|(|1,<frac|\<varepsilon\>|2\<cdot\><around*|\<\|\|\>|y|\<\|\|\>>+1>|)>\<in\>\<bbb-R\><rsup|+>>
+      then if <math|y\<in\>\<bbb-C\>> with
+      <math|<around*|\<\|\|\>|z-y|\<\|\|\>>\<less\>\<delta\>> then if we
+      define <math|h=z-y> we have <math|<around*|\<\|\|\>|h|\<\|\|\>>\<less\>\<delta\>>
+      and
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\||<around*|\<langle\>|z|\<rangle\>>-<around*|\<langle\>|y|\<rangle\>>|\|>>|<cell|\<equallim\><rsub|<text|[lemma:
+        <reference|fundamental norm properties>]>>>|<cell|<around*|\<\|\|\>|<around*|\<langle\>|z|\<rangle\>>-<around*|\<langle\>|y|\<rangle\>>|\<\|\|\>>>>|<row|<cell|>|<cell|>|<cell|<around*|\<\|\|\>|<around*|\<langle\>|y+h|\<rangle\>>-<around*|\<langle\>|y|\<rangle\>>|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|(|y+h|)>\<cdot\><wide|<around*|(|y+h|)>|\<wide-bar\>>-y\<cdot\><wide|y|\<wide-bar\>>|\<\|\|\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|complex norm properties>]>>>|<cell|<around*|\<\|\|\>|<around*|(|y+h|)>\<cdot\><around*|(|<wide|y|\<wide-bar\>>+<wide|h|\<wide-bar\>>|)>-y\<cdot\><wide|y|\<wide-bar\>>|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|y\<cdot\><wide|y|\<wide-bar\>>+y\<cdot\><wide|h|\<wide-bar\>>+h\<cdot\><wide|y|\<wide-bar\>>+h\<cdot\><wide|h|\<wide-bar\>>-y\<cdot\><wide|y|\<wide-bar\>>|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|y\<cdot\><wide|h|\<wide-bar\>>+h\<cdot\><wide|y|\<wide-bar\>>+h\<cdot\><wide|h|\<wide-bar\>>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|y\<cdot\><wide|h|\<wide-bar\>>|\<\|\|\>>+<around*|\<\|\|\>|h\<cdot\><wide|y|\<wide-bar\>>|\<\|\|\>>+<around*|\<\|\|\>|h\<cdot\><wide|h|\<wide-bar\>>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|<math|\<equallim\><rsub|<text|[lemma:
+        <reference|fundamental norm properties>(3)]>>>>><text|>>|<cell|<around*|\<\|\|\>|y|\<\|\|\>>\<cdot\><around*|\<\|\|\>|<wide|h|\<wide-bar\>>|\<\|\|\>>+<around*|\<\|\|\>|h|\<\|\|\>>\<cdot\><around*|\<\|\|\>|<wide|y|\<wide-bar\>>|\<\|\|\>>+<around*|\<\|\|\>|h|\<\|\|\>>\<cdot\><around*|\<\|\|\>|<wide|h|\<wide-bar\>>|\<\|\|\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+        <reference|fundamental norm properties>(2)]>>>|<cell|<around*|\<\|\|\>|y|\<\|\|\>>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>>+<around*|\<\|\|\>|h|\<\|\|\>>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>>+<around*|\<\|\|\>|h|\<\|\|\>>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|h|\<\|\|\>>\<cdot\><around*|(|2\<cdot\><around*|\<\|\|\>|y|\<\|\|\>>+<around*|\<\|\|\>|h|\<\|\|\>>|)>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<around*|\<\|\|\>|h|\<\|\|\>>\<less\>\<delta\>\<leqslant\>1>>|<cell|<around*|\<\|\|\>|h|\<\|\|\>>\<cdot\><around*|(|2\<cdot\><around*|\<\|\|\>|y|\<\|\|\>>+1|)>>>|<row|<cell|>|<cell|\<less\>>|<cell|<frac|\<varepsilon\>|2\<cdot\><around*|\<\|\|\>|y|\<\|\|\>>+1>\<cdot\><around*|(|2\<cdot\><around*|\<\|\|\>|y|\<\|\|\>>+1|)>>>|<row|<cell|>|<cell|=>|<cell|\<varepsilon\>>>>>
+      </eqnarray*>
+
+      proving continuity of <math|<around*|\<langle\>|\<cdot\>|\<rangle\>>>.
+
+      <item>Let <math|z\<in\>\<bbb-C\>> then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|<around*|\<langle\>|\<cdot\>|\<rangle\>>\<circ\>p|)><around*|(|z|)>>|<cell|=>|<cell|<around*|\<langle\>|\<cdot\>|\<rangle\>><around*|(|p<around*|(|z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|\<cdot\>|\<rangle\>><around*|(|<big|sum><rsub|i=0><rsup|n>\<alpha\><rsub|i>\<cdot\>z<rsup|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i=0><rsup|n>\<alpha\><rsub|i>\<cdot\>z<rsup|i>|)>\<cdot\><wide|<around*|(|<big|sum><rsub|i=0><rsup|n>\<alpha\><rsub|i>\<cdot\>z<rsup|i>|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|p\<cdot\>p|)><around*|(|z|)>>>>>
+      </eqnarray*>
+
+      so that
+
+      <\equation*>
+        <around*|(|<around*|\<langle\>|\<cdot\>|\<rangle\>>\<circ\>p|)>=p\<cdot\>p
+      </equation*>
+
+      By (3),(4) <math|p> and <math|<around*|\<langle\>|\<cdot\>|\<rangle\>>>
+      are continous, hence using [theorem: <reference|continuity
+      composition>] <math|p\<cdot\>p> is continuous.
+
+      <item>Let <math|\<varepsilon\>\<in\>\<bbb-R\>>, <math|z\<in\>\<bbb-C\>>
+      then if <math|z<rprime|'>\<in\>\<bbb-C\>> with
+      <math|<around*|\<\|\|\>|z-z<rprime|'>|\<\|\|\>>\<less\>\<varepsilon\>>
+      we have
+
+      <\equation*>
+        <around*|\<\|\|\>|<wide|z|\<wide-bar\>>-<wide|z<rprime|'>|\<wide-bar\>>|\<\|\|\>>\<equallim\><rsub|<text|[theorem:
+        <reference|complex conjugate properties>]>><around*|\<\|\|\>|<wide|z-z<rprime|'>|\<wide-bar\>>|\<\|\|\>>\<equallim\><rsub|<text|[lemma:
+        <reference|fundamental norm properties>]>><around*|\<\|\|\>|z-z<rprime|'>|\<\|\|\>>\<less\>\<varepsilon\>
+      </equation*>
+
+      <item>Let <math|z\<in\>\<bbb-C\>>, <math|\<alpha\>\<in\>\<bbb-R\>>,
+      given \ <math|\<varepsilon\>\<gtr\>0> define
+      <math|\<delta\>=<frac|\<varepsilon\>|<around*|\<\|\|\>|z|\<\|\|\>>+1>\<in\>\<bbb-R\><rsup|+>>
+      then we have <math|\<forall\>\<alpha\><rprime|'>\<in\>\<bbb-R\>> with
+      <math|<around*|\||\<alpha\>-\<alpha\><rprime|'>|\|>\<less\>\<delta\>>
+      that
+
+      <\equation*>
+        <around*|\<\|\|\>|<around*|(|\<cdot\>z|)><around*|(|\<alpha\>|)>-<around*|(|\<cdot\>z|)><around*|(|\<alpha\><rprime|'>|)>|\<\|\|\>>=<around*|\<\|\|\>|\<alpha\>\<cdot\>z-\<alpha\><rprime|'>\<cdot\>z|\<\|\|\>>=<around*|\<\|\|\>|<around*|(|\<alpha\>-\<alpha\><rprime|'>|)>\<cdot\>z|\<\|\|\>>=<around*|\||\<alpha\>-\<alpha\><rprime|'>|\|>\<cdot\><around*|\<\|\|\>|z|\<\|\|\>>\<less\><frac|\<varepsilon\>|<around*|\<\|\|\>|z|\<\|\|\>>+1>\<cdot\><around*|\<\|\|\>|z|\<\|\|\>>\<less\>\<varepsilon\>
+      </equation*>
+
+      proving that <math|<around*|(|\<cdot\>z|)>> is continuous.
+
+      <item>Given <math|\<alpha\>\<in\>\<bbb-R\>> we have
+      <math|<around*|(|p<rsub|\<cdot\>z>|)><around*|(|\<alpha\>|)>=p<around*|(|\<alpha\>\<cdot\>z|)>=p<around*|(|<around*|(|\<cdot\>z|)><around*|(|\<alpha\>|)>|)>=<around*|(|p\<circ\><around*|(|\<cdot\>z|)>|)><around*|(|\<alpha\>|)>>
+      so that <math|p<rsub|\<cdot\>z>=p\<circ\><around*|(|\<cdot\>z|)>>. As
+      <math|p<rsub|\<cdot\>z>=p\<circ\><around*|(|\<cdot\>z|)>> is the
+      composition of two continuous functions [see (3) and (7)] we have that
+      <math|p<rsub|\<cdot\>z>> is continuous.
+
+      <item>Let <math|z\<in\>\<bbb-C\>> then given
+      <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> we have for
+      <math|\<delta\>=\<varepsilon\>> that
+      <math|\<forall\>z<rprime|'>\<in\>\<bbb-C\>> with
+      <math|<around*|\<\|\|\>|z-z<rprime|'>|\<\|\|\>>\<less\>\<delta\>> so
+      that
+
+      <\equation*>
+        <around*|\||Re<around*|(|z|)>-Re<around*|(|z<rprime|'>|)>|\|>=<around*|\||Re<around*|(|z-z<rprime|'>|)>|\|>\<leqslant\><around*|\||Re<around*|(|z-z<rprime|'>|)>|\|>+<around*|\||Img<around*|(|z-z<rprime|'>|)>|\|>=<around*|\<\|\|\>|z-z<rprime|'>|\<\|\|\>>\<less\>\<delta\>=\<varepsilon\>
+      </equation*>
+
+      proving continuity.
+    </enumerate>
+  </proof>
+
+  The following very specific lemma will be used in the proof of the
+  fundamental theorem of algebra.
+
+  <\lemma>
+    <label|lemma 17.19.136>Let <math|n\<in\>\<bbb-N\><rsub|0>> then\ 
+
+    <\enumerate>
+      <item><math|<around*|(|1+i|)><rsup|4\<cdot\>n+2>=2\<cdot\><around*|(|-4|)><rsup|n>\<cdot\>i>
+
+      <item><math|<around*|(|1-i|)><rsup|4\<cdot\>n+2>=-2\<cdot\><around*|(|-4|)><rsup|n>\<cdot\>i>
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    This is easely proved by induction.\ 
+
+    <\enumerate>
+      <item>Take <math|S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|<around*|(|1+i|)><rsup|4\<cdot\>n+2>=2\<cdot\><around*|(|-4|)><rsup|n>\<cdot\>i|}>>
+      then we have:
+
+      <\description>
+        <item*|<math|0\<in\>S>><math|><math|<around*|(|1+i|)><rsup|4\<cdot\>0+2>=<around*|(|1+i|)><rsup|2>=1<rsup|2>+2\<cdot\>i+i<rsup|2>=1+2\<cdot\>i-1=2\<cdot\>i=2\<cdot\><around*|(|-4|)><rsup|0>\<cdot\>i>
+        so that <math|0\<in\>S>.
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>We have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|1+i|)><rsup|4\<cdot\><around*|(|n+1|)>+2>>|<cell|=>|<cell|<around*|(|1+i|)><rsup|<around*|(|4\<cdot\>n+2|)>+4>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|1+i|)><rsup|<around*|(|4\<cdot\>n+2|)>>\<cdot\><around*|(|1+i|)><rsup|4>>>|<row|<cell|>|<cell|\<equallim\><rsub|n\<in\>S>>|<cell|2\<cdot\><around*|(|-4|)><rsup|n>\<cdot\>i\<cdot\><around*|(|1+i|)><rsup|4>>>|<row|<cell|>|<cell|=>|<cell|2\<cdot\><around*|(|-4|)><rsup|n>\<cdot\>i\<cdot\><around*|(|1+i|)><rsup|2>\<cdot\><around*|(|1+i|)><rsup|2>>>|<row|<cell|>|<cell|=>|<cell|2\<cdot\><around*|(|-4|)><rsup|n>\<cdot\>i\<cdot\><around*|(|1+2\<cdot\>i+i<rsup|2>|)>\<cdot\><around*|(|1+2\<cdot\>i+i<rsup|2>|)>>>|<row|<cell|>|<cell|=>|<cell|2\<cdot\><around*|(|-4|)><rsup|n>\<cdot\>i\<cdot\><around*|(|2\<cdot\>i|)>\<cdot\><around*|(|2\<cdot\>i|)>>>|<row|<cell|>|<cell|=>|<cell|2\<cdot\><around*|(|-4|)><rsup|n>\<cdot\>i\<cdot\><around*|(|4\<cdot\>i<rsup|2>|)>>>|<row|<cell|>|<cell|=>|<cell|2\<cdot\><around*|(|-4|)><rsup|n>\<cdot\>i\<cdot\><around*|(|-4|)>>>|<row|<cell|>|<cell|=>|<cell|2\<cdot\><around*|(|-4|)><rsup|n+1>\<cdot\>i>>>>
+        </eqnarray*>
+
+        proving that <math|n+1\<in\>S>.
+      </description>
+
+      <item>Take <math|S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|<around*|(|1-i|)><rsup|4\<cdot\>n+2>=-2\<cdot\><around*|(|-4|)><rsup|n>\<cdot\>i|}>>
+      then we have:
+
+      <\description>
+        <item*|<math|0\<in\>S>><math|><math|<around*|(|1-i|)><rsup|4\<cdot\>0+2>=<around*|(|1-i|)><rsup|2>=1<rsup|2>-2\<cdot\>i+i<rsup|2>=1-2\<cdot\>i-1=-2\<cdot\>i=-2\<cdot\><around*|(|-4|)><rsup|0>\<cdot\>i>
+        so that <math|0\<in\>S>.
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>We have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|1-i|)><rsup|4\<cdot\><around*|(|n+1|)>+2>>|<cell|=>|<cell|<around*|(|1-i|)><rsup|<around*|(|4\<cdot\>n+2|)>+4>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|1-i|)><rsup|<around*|(|4\<cdot\>n+2|)>>\<cdot\><around*|(|1-i|)><rsup|4>>>|<row|<cell|>|<cell|\<equallim\><rsub|n\<in\>S>>|<cell|-2\<cdot\><around*|(|-4|)><rsup|n>\<cdot\>i\<cdot\><around*|(|1-i|)><rsup|4>>>|<row|<cell|>|<cell|=>|<cell|-2\<cdot\><around*|(|-4|)><rsup|n>\<cdot\>i\<cdot\><around*|(|1-i|)><rsup|2>\<cdot\><around*|(|1-i|)><rsup|2>>>|<row|<cell|>|<cell|=>|<cell|-2\<cdot\><around*|(|-4|)><rsup|n>\<cdot\>i\<cdot\><around*|(|1-2\<cdot\>i+i<rsup|2>|)>\<cdot\><around*|(|1-2\<cdot\>i+i<rsup|2>|)>>>|<row|<cell|>|<cell|=>|<cell|-2\<cdot\><around*|(|-4|)><rsup|n>\<cdot\>i\<cdot\><around*|(|-2\<cdot\>i|)>\<cdot\><around*|(|-2\<cdot\>i|)>>>|<row|<cell|>|<cell|=>|<cell|-2\<cdot\><around*|(|-4|)><rsup|n>\<cdot\>i\<cdot\><around*|(|4\<cdot\>i<rsup|2>|)>>>|<row|<cell|>|<cell|=>|<cell|-2\<cdot\><around*|(|-4|)><rsup|n>\<cdot\><around*|(|-4|)>\<cdot\>i>>|<row|<cell|>|<cell|=>|<cell|-2\<cdot\><around*|(|-4|)><rsup|n+1>\<cdot\>i>>>>
+        </eqnarray*>
+
+        proving that <math|n+1\<in\>S>.
+      </description>
+    </enumerate>
+  </proof>
+
+  We also use the binomial expansion of <math|<around*|(|a+b|)><rsup|n>> so
+  we need the following definitions and theorems.
+
+  <\definition>
+    <label|fundamental factorial><index|factorial><index|<math|f!>>Given
+    <math|n\<in\>\<bbb-N\><rsub|0>> then we define <math|n!> by\ 
+
+    <\equation*>
+      n!=<choice|<tformat|<table|<row|<cell|1<text| if
+      >n=0>>|<row|<cell|n\<cdot\><around*|(|n-1|)><text| if >0\<less\>n>>>>>
+    </equation*>
+  </definition>
+
+  <\definition>
+    <label|fundamental binomial coefficient><index|binomial
+    coefficient><index|binomial coefficient>Given
+    <math|n\<in\>\<bbb-N\><rsub|0>> and <math|k\<in\><around*|{|0,\<ldots\>,n|}>>
+    then\ 
+
+    <\equation*>
+      <binom|n|k>=<frac|n!|k!*\<cdot\><around*|(|n-k|)>!>
+    </equation*>
+  </definition>
+
+  <\theorem>
+    <label|fundamental binomial properties><index|<math|<binom|n|k>>>Let
+    <math|n\<in\>\<bbb-N\><rsub|0>> then we have\ 
+
+    <\enumerate>
+      <item><math|<binom|n|0>=1>
+
+      <item><math|<binom|n|n>=1>
+
+      <item>If <math|n\<in\>\<bbb-N\>> and <math|0\<less\>k\<leqslant\>n>
+      then <math|<binom|n|k>+<binom|n|k-1>=<binom|n+1|k>>
     </enumerate>
   </theorem>
 
   <\proof>
     \ 
+
+    <\enumerate>
+      <item><math|<binom|n|0>=<frac|n!|0!\<cdot\><around*|(|n-0|)>!>=<frac|n!|1\<cdot\>n!>=1>
+
+      <item><math|<binom|n|n>=<frac|n!|n!\<cdot\><around*|(|n-n|)>!>=<frac|n!|n!\<cdot\>0!>=<frac|n!|n!\<cdot\>1>=1>
+
+      <item>We have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<binom|n|k>+<binom|n|m-1>>|<cell|=>|<cell|<frac|n!|k!\<cdot\><around*|(|n-k|)>!>+<frac|n!|<around*|(|k-1|)>!\<cdot\><around*|(|n-<around*|(|k-1|)>|)>!>>>|<row|<cell|>|<cell|=>|<cell|<frac|n!\<cdot\><around*|(|<around*|(|n+1|)>-k|)>|k!\<cdot\><around*|(|n-k|)>!\<cdot\><around*|(|<around*|(|n+1|)>-k|)>>+<frac|n!\<cdot\>k|k\<cdot\><around*|(|k-1|)>!\<cdot\><around*|(|n+1-k|)>>>>|<row|<cell|>|<cell|=>|<cell|<frac|n!\<cdot\><around*|(|n+1-k|)>|k!\<cdot\><around*|(|<around*|(|n+1|)>-k|)>!>+<frac|n!\<cdot\>k|k!\<cdot\><around*|(|<around*|(|n+1|)>-k|)>!>>>|<row|<cell|>|<cell|=>|<cell|<frac|n!\<cdot\><around*|(|n+1|)>|k!\<cdot\><around*|(|<around*|(|n+1|)>-k|)>!>>>|<row|<cell|>|<cell|=>|<cell|<frac|<around*|(|n+1|)>!|k!\<cdot\><around*|(|<around*|(|n+1|)>-k|)>!>>>|<row|<cell|>|<cell|=>|<cell|<binom|n+1|k>>>>>
+      </eqnarray*>
+
+      \;
+    </enumerate>
   </proof>
 
-  \;
+  We prove now the binomial formula.
+
+  <\theorem>
+    <label|fundamental binomial formula><index|binomial
+    formula><dueto|Binomial Formula>Let <math|F> be a field,
+    <math|n\<in\>\<bbb-N\>>, <math|a,b\<in\>F> then\ 
+
+    <\equation*>
+      <around*|(|a+b|)><rsup|n>=<big|sum><rsub|k=0><rsup|n><binom|n|k>\<cdot\>a<rsup|k>\<cdot\>b<rsup|n-k>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    We prove this by induction, so defined\ 
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\>\|<around*|(|a+b|)><rsup|n>=<big|sum><rsub|k=0><rsup|n><binom|n|k>\<cdot\>a<rsup|k>\<cdot\>b<rsup|n-k>|}>
+    </equation*>
+
+    then we have:\ 
+
+    <\description>
+      <item*|<math|1\<in\>S>>As <math|<big|sum><rsub|k=0><rsup|1><binom|1|k>\<cdot\>a<rsup|k>\<cdot\>b<rsup|n-k>=<binom|1|0>\<cdot\>a<rsup|0>\<cdot\>b<rsup|1-0>+<binom|1|1>\<cdot\>a<rsup|1>\<cdot\>b<rsup|1-1>\<equallim\><rsub|<text|[theorem:
+      <reference|fundamental binomial properties>]>>a+b=<around*|(|a+b|)><rsup|1>>\ 
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>We have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|a+b|)><rsup|n+1>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|a+b|)><rsup|n>\<cdot\><around*|(|a+b|)>>|<cell|\<equallim\><rsub|n\<in\>S>>|<cell|>>|<row|<cell|<around*|(|<big|sum><rsub|k=0><rsup|n><binom|n|k>\<cdot\>a<rsup|k>\<cdot\>b<rsup|n-k>|)>\<cdot\><around*|(|a+b|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|k=0><rsup|n><binom|n|k>\<cdot\>a\<cdot\>a<rsup|k>\<cdot\>b<rsup|n-k>+<big|sum><rsub|k=0><rsup|n><binom|n|k>\<cdot\>a<rsup|k>\<cdot\>b\<cdot\>b<rsup|n-k>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|k=0><rsup|n><binom|n|k>\<cdot\>a<rsup|k+1>\<cdot\>b<rsup|n-k>+<big|sum><rsub|k=0><rsup|n><binom|n|k>\<cdot\>a<rsup|k>\<cdot\>b<rsup|n-k+1>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|k=1><rsup|n+1><binom|n|k-1>\<cdot\>a<rsup|k>\<cdot\>b<rsup|<around*|(|n+1|)>-k>+<big|sum><rsub|k=0><rsup|n><binom|n|k>\<cdot\>a<rsup|k>\<cdot\>b<rsup|n-k+1>>|<cell|=>|<cell|>>|<row|<cell|<binom|n|n+1-1>\<cdot\>a<rsup|n+1>\<cdot\>b<rsup|<around*|(|n+1|)>-<around*|(|n+1|)>>+<big|sum><rsub|k=1><rsup|n><binom|n|k-1>\<cdot\>a<rsup|k>\<cdot\>b<rsup|<around*|(|n+1|)>-k>+<big|sum><rsub|k=0><rsup|n><binom|n|k>\<cdot\>a<rsup|k>\<cdot\>b<rsup|n-k+1>>|<cell|=>|<cell|>>|<row|<cell|a<rsup|n+1>+<big|sum><rsub|k=1><rsup|n><binom|n|k-1>\<cdot\>a<rsup|k>\<cdot\>b<rsup|<around*|(|n+1|)>-k>+<big|sum><rsub|k=0><rsup|n><binom|n|k>\<cdot\>a<rsup|k>\<cdot\>b<rsup|n-k+1>>|<cell|=>|<cell|>>|<row|<cell|a<rsup|n+1>+<big|sum><rsub|k=1><rsup|n><binom|n|k-1>\<cdot\>a<rsup|k>\<cdot\>b<rsup|<around*|(|n+1|)>-k>+<big|sum><rsub|k=1><rsup|n><binom|n|k>\<cdot\>a<rsup|k>\<cdot\>b<rsup|n-k+1>+<binom|n|0>\<cdot\>a<rsup|0>\<cdot\>b<rsup|n-0+1>>|<cell|=>|<cell|>>|<row|<cell|a<rsup|n+1>+<big|sum><rsub|k=1><rsup|n><binom|n|k-1>\<cdot\>a<rsup|k>\<cdot\>b<rsup|<around*|(|n+1|)>-k>+<big|sum><rsub|k=1><rsup|n><binom|n|k>\<cdot\>a<rsup|k>\<cdot\>b<rsup|n-k+1>+b<rsup|n+1>>|<cell|=>|<cell|>>|<row|<cell|a<rsup|n+1>+b<rsup|n+1>+<big|sum><rsub|k=1><rsup|n><around*|(|<binom|n|k-1>+<binom|n|k>|)>\<cdot\>a<rsup|k>\<cdot\>b<rsup|<around*|(|n+1|)>-k>>|<cell|=>|<cell|>>|<row|<cell|a<rsup|n+1>+b<rsup|n+1>+<big|sum><rsub|k=1><rsup|n><binom|n+1|k>\<cdot\>a<rsup|k>\<cdot\>b<rsup|<around*|(|n+1|)>-k>>|<cell|=>|<cell|>>|<row|<cell|<binom|n+1|n+1>\<cdot\>a<rsup|<around*|(|n+1|)>>\<cdot\>b<rsup|<around*|(|n+1|)>-<around*|(|n+1|)>>+<binom|n+1|0>\<cdot\>a<rsup|n>\<cdot\>b<rsup|<around*|(|n+1|)>-0>+<big|sum><rsub|k=1><rsup|n><binom|n+1|k>\<cdot\>a<rsup|k>\<cdot\>b<rsup|<around*|(|n+1|)>-k>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|k=0><rsup|n+1><binom|n+1|k>\<cdot\>a<rsup|k>\<cdot\>b<rsup|<around*|(|n+1|)>-k>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      proving that <math|n+1\<in\>S>.
+    </description>
+  </proof>
 </body>
 
 <\initial>
@@ -948,6 +1209,11 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|17|?>>
+    <associate|auto-10|<tuple|<with|mode|<quote|math>|f!>|?>>
+    <associate|auto-11|<tuple|binomial coefficient|?>>
+    <associate|auto-12|<tuple|binomial coefficient|?>>
+    <associate|auto-13|<tuple|<with|mode|<quote|math>|<with|math-level|<quote|1>|<left|(><resize|<tformat|<cwith|1|-1|1|-1|cell-halign|c>|<tformat|<cwith|1|-1|1|1|cell-lsep|0spc>|<cwith|1|-1|1|1|cell-rsep|0spc>|<table|<row|<cell|n>>|<row|<cell|k>>>>>||<plus|1b|2.5sep>||<minus|1t|2.5sep>><right|)>>>|?>>
+    <associate|auto-14|<tuple|binomial formula|?>>
     <associate|auto-2|<tuple|17.1|?>>
     <associate|auto-3|<tuple|17.1.1|?>>
     <associate|auto-4|<tuple|coefficients of a polynomial|?>>
@@ -955,6 +1221,8 @@
     <associate|auto-6|<tuple|17.1.2|?>>
     <associate|auto-7|<tuple|divergent limit|?>>
     <associate|auto-8|<tuple|17.1.3|?>>
+    <associate|auto-9|<tuple|factorial|?>>
+    <associate|binomial properties|<tuple|17.22|?>>
     <associate|divergent limit of sums|<tuple|17.15|?>>
     <associate|eq 17.1.145|<tuple|17.1|?>>
     <associate|eq 17.10.135|<tuple|17.10|?>>
@@ -966,6 +1234,9 @@
     <associate|eq 17.7.135|<tuple|17.7|?>>
     <associate|eq 17.8.135|<tuple|17.8|?>>
     <associate|eq 17.9.135|<tuple|17.9|?>>
+    <associate|fundamental binomial coefficient|<tuple|17.21|?>>
+    <associate|fundamental binomial formula|<tuple|17.23|?>>
+    <associate|fundamental binomial properties|<tuple|17.22|?>>
     <associate|fundamental coefficients are unique (1)|<tuple|17.4|?>>
     <associate|fundamental coefficients of a polynomial|<tuple|17.6|?>>
     <associate|fundamental coefficients of a polynomial
@@ -975,6 +1246,7 @@
     <associate|fundamental continuity|<tuple|17.18|?>>
     <associate|fundamental divergent limit|<tuple|17.13|?>>
     <associate|fundamental divergent limit of -f|<tuple|17.14|?>>
+    <associate|fundamental factorial|<tuple|17.20|?>>
     <associate|fundamental finite product of polynomials|<tuple|17.12|?>>
     <associate|fundamental non constant polynomal|<tuple|17.9|?>>
     <associate|fundamental norm in C|<tuple|17.16|?>>
@@ -982,6 +1254,7 @@
     <associate|fundamental polynomal|<tuple|17.1|?>>
     <associate|fundamental product of polynomials is a
     polynomial|<tuple|17.11|?>>
+    <associate|lemma 17.19.136|<tuple|17.19|?>>
     <associate|lemma 17.8.145|<tuple|17.10|?>>
   </collection>
 </references>
