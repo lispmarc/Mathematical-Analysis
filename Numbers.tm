@@ -13097,7 +13097,7 @@
       <math|<wide|<around*|(|<wide|z|\<wide-bar\>>|)>|\<wide-bar\>>=z>
 
       <item><math|\<forall\>z<rsub|1>,z<rsub|2>\<in\>\<bbb-C\>> we have
-      <math|<wide|z<rsub|1>+z<rsub|2>|\<wide-bar\>>=<wide|z<rsub|<lprime|`>>|\<wide-bar\>>+<wide|z<rsub|2>|\<wide-bar\>>>
+      <math|<wide|z<rsub|1>+z<rsub|2>|\<wide-bar\>>=<wide|z<rsub|1>|\<wide-bar\>>+<wide|z<rsub|2>|\<wide-bar\>>>
 
       <item><math|\<forall\>z<rsub|1>,z<rsub|2>\<in\>\<bbb-C\>> we have
       <math|<wide|z<rsub|1>\<cdot\>z<rsub|2>|\<wide-bar\>>=<wide|z<rsub|1>|\<wide-bar\>>\<cdot\><wide|z<rsub|2>|\<wide-bar\>>>
@@ -13119,6 +13119,10 @@
 
       <item><math|\<forall\>z\<in\>\<bbb-C\><text| we have
       ><wide|-z|\<wide-bar\>>=-<wide|z|\<wide-bar\>>>
+
+      <item>Let <math|n\<in\>\<bbb-N\>> and
+      <math|<around*|{|z<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-C\>>
+      then <math|<wide|<big|sum><rsub|i=1><rsup|n>z<rsub|i>|\<wide-bar\>>=<big|sum><rsub|i=1><rsup|n><wide|z<rsub|i>|\<wide-bar\>>>
     </enumerate>
   </theorem>
 
@@ -13188,9 +13192,32 @@
       <\eqnarray*>
         <tformat|<table|<row|<cell|<wide|-z|\<wide-bar\>>>|<cell|=>|<cell|<wide|-<around*|(|Re<around*|(|z|)>+i\<cdot\>Img<around*|(|z|)>|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|=>|<cell|<wide|-Re<around*|(|z|)>+i\<cdot\><around*|(|-Img<around*|(|z|)>|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|=>|<cell|-Re<around*|(|z|)>-i\<cdot\><around*|(|-Img<around*|(|z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|-<around*|(|Re<around*|(|z|)>-i\<cdot\>Img<around*|(|z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|-<wide|z|\<wide-bar\>>>>>>
       </eqnarray*>
-    </enumerate>
 
-    \;
+      <item>We prove this by induction, so let <math|>
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\>\|\<forall\><around*|{|z<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-C\><text|
+        we have ><wide|<big|sum><rsub|i=1><rsup|n>z<rsub|i>|\<bar\>>=<big|sum><rsub|i=1><rsup|n><wide|z<rsub|i>|\<wide-bar\>>|}>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|1\<in\>\<cal-S\>>>this follows from
+        <math|<wide|<big|sum><rsub|i=1><rsup|1>z<rsub|i>|\<bar\>>=<wide|z<rsub|1>|\<wide-bar\>>=<big|sum><rsub|i=1><rsup|1><wide|z<rsub|i>|\<wide-bar\>>>
+        for <math|<around*|{|z<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,1|}>>\<subseteq\>\<bbb-C\>>
+
+        <item*|<math|n\<in\>\<cal-S\>\<Rightarrow\>n+1\<in\>\<cal-S\>>>we
+        have for <math|<around*|{|z<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>>
+        that
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<wide|<big|sum><rsub|i=1><rsup|n+1>z<rsub|i>|\<bar\>>>|<cell|=>|<cell|<wide|z<rsub|n+1>+<big|sum><rsub|i=1><rsup|n>z<rsub|i>|\<bar\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|3|)>>>|<cell|<wide|z<rsub|n+1>|\<bar\>>+<wide|<big|sum><rsub|i=1><rsup|n>z<rsub|i>|\<bar\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|n\<in\>\<cal-S\>>>|<cell|<wide|z<rsub|n+1>|\<bar\>>+<big|sum><rsub|i=1><rsup|n><wide|z<rsub|i>|\<wide-bar\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n+1><wide|z<rsub|i>|\<wide-bar\>>>>>>
+        </eqnarray*>
+
+        proving that <math|n+1\<in\>\<cal-S\>>.
+      </description>
+    </enumerate>
   </proof>
 
   Using the above theorem we have that <math|\<forall\>z\<in\>\<bbb-C\>>

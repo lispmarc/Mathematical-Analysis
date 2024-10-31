@@ -1195,12 +1195,153 @@
       proving that <math|n+1\<in\>S>.
     </description>
   </proof>
+
+  <\lemma>
+    <label|lemma 17.24.136><math|p\<in\>\<cal-P\>> be a polynomial [see
+    definition: <reference|fundamental non constant polynomal>] and
+    <math|z<rsub|0>\<in\>\<bbb-C\>> then
+
+    <\equation*>
+      p<rsub|<around*|(|+z<rsub|0>|)>>:\<bbb-C\>\<rightarrow\>\<bbb-C\><text|
+      defined by >p<rsub|<around*|(|+z<rsub|0>|)>><around*|(|z|)>=p<around*|(|z<rsub|0>+z|)>
+    </equation*>
+
+    is a polynomial with <math|ord<around*|(|p<rsub|<around*|(|+z<rsub|0>|)>>|)>=ord<around*|(|p|)>>.
+  </lemma>
+
+  <\proof>
+    We prove this by induction so let\ 
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|<text|If >p\<in\>\<cal-P\><text|
+      with >ord<around*|(|p|)>=n<text| then
+      >p<rsub|<around*|(|+z<rsub|0>|)>>\<in\>\<cal-P\><text| with
+      >ord<around*|(|p|)>=ord<around*|(|p<rsub|<around*|(|+z<rsub|0>|)>>|)>|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|0\<in\>S>>If <math|p\<in\>\<cal-P\>> with
+      <math|ord<around*|(|p|)>=0> then <math|p=<big|sum><rsup|0><rsub|i=0>a<rsub|i>\<cdot\>z<rsup|i>=a<rsub|0>\<cdot\>z<rsup|0>=a<rsub|0>>.
+      If <math|z\<in\>\<bbb-C\>> then <math|p<rsub|<around*|(|+z<rsub|0>|)>>=p<around*|(|z+z<rsub|0>|)>=a<rsub|0>>
+      so that <math|p<rsub|<around*|(|+z<rsub|0>|)>>=p>. Hence
+      <math|0\<in\>S>
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+      <math|p\<in\>\<cal-P\>> with <math|ord<around*|(|p|)>=n+1> then there
+      exist a <math|<around*|{|a<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n+1|}>>\<subseteq\>\<bbb-C\>>
+      such that <math|a<rsub|n+1>\<neq\>0>. Define
+
+      <\equation*>
+        <around*|{|b<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>><text|
+        by >b<rsub|i>=a<rsub|i+1>
+      </equation*>
+
+      then <math|b<rsub|n>=a<rsub|n+1>\<neq\>0> so that
+      <math|q=<big|sum><rsub|i=0><rsup|n>b<rsub|i>\<cdot\>z<rsup|i>> is a
+      polynomial with <math|ord<around*|(|q|)>=n>. Further we have for
+      <math|z\<in\>\<bbb-C\>> that:\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|p<around*|(|z|)>>|<cell|=>|<cell|<big|sum><rsub|i=0><rsup|n+1>a<rsub|i>\<cdot\>z<rsup|i>>>|<row|<cell|>|<cell|=>|<cell|a<rsub|0>+<big|sum><rsub|i=1><rsup|n+1>a<rsub|i>\<cdot\>z<rsup|i>>>|<row|<cell|>|<cell|=>|<cell|a<rsub|0>+<big|sum><rsub|i=1><rsup|n+1>a<rsub|i>\<cdot\>z\<cdot\>z<rsup|i-1>>>|<row|<cell|>|<cell|=>|<cell|a<rsub|0>+z\<cdot\><big|sum><rsub|i=1><rsup|n+1>a<rsub|i>\<cdot\>z<rsup|i-1>>>|<row|<cell|>|<cell|=>|<cell|a<rsub|0>+z\<cdot\><big|sum><rsub|i=0><rsup|n>a<rsub|i+1>\<cdot\>z<rsup|i>>>|<row|<cell|>|<cell|=>|<cell|a<rsub|0>+z\<cdot\><big|sum><rsub|i=0><rsup|n>b<rsub|i>\<cdot\>z<rsup|i>>>|<row|<cell|>|<cell|=>|<cell|a<rsub|0>+z\<cdot\>q<around*|(|z|)><eq-number><label|eq
+        17.11.136>>>>>
+      </eqnarray*>
+
+      As <math|n\<in\>S> we have that <math|q<rsub|<around*|(|+z<rsub|0>|)>>>
+      is a polynomial if order <math|n>, hence there exist a
+      <math|<around*|{|c<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>\<subseteq\>\<bbb-C\>>
+      with <math|c<rsub|n>\<neq\>0> such that
+
+      <\equation>
+        <label|eq 17.12.136>\<forall\>z\<in\>\<bbb-C\><text| we have
+        >q<around*|(|z<rsub|0>+z|)>=q<rsub|<around*|(|+z<rsub|0>|)>>=<big|sum><rsub|i=0><rsup|n>c<rsub|i>\<cdot\>z<rsup|i>
+      </equation>
+
+      Further we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|p<rsub|<around*|(|+z<rsub|0>|)>><around*|(|z|)>>|<cell|=>|<cell|p<around*|(|z<rsub|0>+z|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 17.11.136>]>>>|<cell|a<rsub|0>+<around*|(|z<rsub|0>+z|)>\<cdot\>q<around*|(|z<rsub|0>+z|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 17.12.136>]>>>|<cell|a<rsub|0>+<around*|(|z<rsub|0>+z|)>\<cdot\><big|sum><rsub|i=0><rsup|n>c<rsub|i>\<cdot\>z<rsup|i>>>|<row|<cell|>|<cell|=>|<cell|a<rsub|0>+z<rsub|0>\<cdot\><big|sum><rsub|i=0><rsup|n>c<rsub|i>\<cdot\>z<rsup|i>+z\<cdot\><big|sum><rsub|i=0><rsup|n>c<rsub|i>\<cdot\>z<rsup|i>>>|<row|<cell|>|<cell|=>|<cell|a<rsub|0>+<big|sum><rsub|i=0><rsup|n>c<rsub|i>\<cdot\>z<rsub|0*>\<cdot\>z<rsup|i>+<big|sum><rsub|i=0><rsup|n>c<rsub|i>\<cdot\>z<rsup|i+1>>>|<row|<cell|>|<cell|=>|<cell|a<rsub|0>+<big|sum><rsub|i=0><rsup|n>c<rsub|i>\<cdot\>z<rsub|0>\<cdot\>z<rsup|i>+<big|sum><rsub|i=1><rsup|n+1>c<rsub|i-1>\<cdot\>z<rsup|i>>>|<row|<cell|>|<cell|=>|<cell|a<rsub|0>+c<rsub|0>\<cdot\>z<rsub|0>+<big|sum><rsub|i=1><rsup|n>c<rsub|i>\<cdot\>z<rsub|0>\<cdot\>z<rsup|i>+<big|sum><rsub|i=1><rsup|n+1>c<rsub|i-1>\<cdot\>z<rsup|i>>>|<row|<cell|>|<cell|=>|<cell|a<rsub|0>+c<rsub|0>\<cdot\>z<rsub|0>+<big|sum><rsub|i=1><rsup|n>c<rsub|i>\<cdot\>z<rsub|0>\<cdot\>z<rsup|i>+<big|sum><rsub|i=1><rsup|n>c<rsub|i-1>\<cdot\>z<rsup|i>+c<rsub|n>\<cdot\>z<rsup|n+1>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|a<rsub|0>+c<rsub|0>\<cdot\>z<rsub|0>|)>+<big|sum><rsub|i=1><rsup|n><around*|(|c<rsub|i>\<cdot\>z<rsub|0>+c<rsub|i-1>|)>\<cdot\>z<rsup|i>+c<rsub|n>\<cdot\>z<rsup|n+1>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n+1>d<rsub|i>\<cdot\>z<rsup|i>>>>>
+      </eqnarray*>
+
+      where\ 
+
+      <\equation*>
+        <around*|{|d<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n+1|}>><text|
+        is defined by >d<rsub|i>=<choice|<tformat|<table|<row|<cell|a<rsub|0>+c<rsub|0>\<cdot\>z<rsub|0><text|
+        if >i=0>>|<row|<cell|c<rsub|i>\<cdot\>z<rsub|0>+c<rsub|i-1><text| if
+        >i\<in\><around*|{|1,\<ldots\>,n|}>>>|<row|<cell|c<rsub|n><text| if
+        >i=n+1>>>>>
+      </equation*>
+
+      As <math|d<rsub|n+1>=c<rsub|n>\<neq\>0> it follows that
+      <math|p<rsub|<around*|(|+z<rsub|0>|)>><around*|(|z|)>> is a polynomial
+      with <math|ord<around*|(|p<rsub|<around*|(|<rsub|z<rsub|0>>|)>>|)>=n+1=ord<around*|(|p|)>>
+      which proves that <math|n+1\<in\>S>.
+    </description>
+  </proof>
+
+  <\lemma>
+    <label|lemma 17.25.136>Let <math|p:\<bbb-C\>\<rightarrow\>\<bbb-C\>> be a
+    polynomial of order <math|n\<in\>\<bbb-N\>> then there exists a
+    <math|1\<leqslant\>m\<leqslant\>n> and a polynomial <math|q> of order
+    <math|n-m> such that <math|p<around*|(|z|)>=p<around*|(|0|)>+z<rsup|m>\<cdot\>q<around*|(|z|)>>
+    and <math|q<around*|(|0|)>\<neq\>0>.
+  </lemma>
+
+  <\proof>
+    As <math|p> is a polynomial of order <math|n> there exist a
+    <math|<around*|{|a<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>\<subseteq\>\<bbb-C\>>
+    with <math|a<rsub|n>\<neq\>0> so that <math|\<forall\>z\<in\>\<bbb-C\>>
+
+    <\equation*>
+      p<around*|(|z|)>=<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\>z<rsup|i>
+    </equation*>
+
+    Then we have that <math|p<around*|(|0|)>=<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\>0<rsup|i>=a<rsub|0>+<big|sum><rsub|i=1><rsup|n>a<rsub|i>\<cdot\>0<rsup|i>=a<rsub|0>+<big|sum><rsub|i=1><rsup|n>a<rsub|i>\<cdot\>0=a<rsub|0>>
+    proving that\ 
+
+    <\equation>
+      <label|eq 17.13.136>a<rsub|0>=p<around*|(|0|)>
+    </equation>
+
+    Define <math|K=<around*|{|i\<in\><around*|{|1,\<ldots\>,n|}>\|a<rsub|i>\<neq\>0|}>>
+    then as <math|1\<leqslant\>n> and <math|a<rsub|n>\<neq\>0>
+    <math|K\<neq\>\<varnothing\>> so that <math|m=min<around*|(|K|)>> exist
+    and <math|\<forall\>i\<in\><around*|{|0,\<ldots\>,m-1|}>> we have
+    <math|a<rsub|i>=0> and <math|a<rsub|m>\<neq\>0>. Define now
+
+    <\equation*>
+      <around*|{|c<rsub|i>|}><rsub|\<in\><around*|{|0,\<ldots\>,n-m|}>><text|
+      by >c<rsub|i>=a<rsub|i+m><text| then >c<rsub|n-m>=a<rsub|n>\<neq\>0
+    </equation*>
+
+    and the polynomial <math|q> or order <math|n-m> by\ 
+
+    <\equation>
+      <label|eq 17.14.136>q<around*|(|z|)>=<big|sum><rsub|i=0><rsup|n-m>c<rsub|i>\<cdot\>z<rsup|i>
+    </equation>
+
+    then we have for <math|z\<in\>\<bbb-C\>>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|p<around*|(|z|)>>|<cell|=>|<cell|<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\>z<rsup|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>a<rsub|i>\<cdot\>z<rsup|i>>>|<row|<cell|>|<cell|=>|<cell|a<rsub|0>+<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><rsup|>a<rsub|i>\<cdot\>z<rsup|i>>>|<row|<cell|>|<cell|=>|<cell|a<rsub|0>+<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,m-1|}>>a<rsub|i>\<cdot\>z<rsup|i>+<big|sum><rsub|i\<in\><around*|{|m,\<ldots\>,n|}>>a<rsub|i>\<cdot\>z<rsup|i>>>|<row|<cell|>|<cell|=>|<cell|a<rsub|0>+<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,m-1|}>>0\<cdot\>z<rsup|i>+<big|sum><rsub|i\<in\><around*|{|m,\<ldots\>,n|}>>a<rsub|i>\<cdot\>z<rsup|i>>>|<row|<cell|>|<cell|=>|<cell|a<rsub|0>+<big|sum><rsub|i=m><rsup|n>a<rsub|i>\<cdot\>z<rsup|i>>>|<row|<cell|>|<cell|=>|<cell|a<rsub|0>+<big|sum><rsub|i=m><rsup|n>a<rsub|i>\<cdot\>z<rsup|m>\<cdot\>z<rsup|i-m>>>|<row|<cell|>|<cell|=>|<cell|a<rsub|0>+z<rsup|m>\<cdot\><rsup|><big|sum><rsub|i=m><rsup|n>a<rsub|i>\<cdot\>z<rsup|i-m>>>|<row|<cell|>|<cell|=>|<cell|a<rsub|0>+z<rsup|m>\<cdot\><rsup|><big|sum><rsub|i=0><rsup|n-m>a<rsub|i+m>\<cdot\>z<rsup|i>>>|<row|<cell|>|<cell|=>|<cell|a<rsub|0>+z<rsup|m>\<cdot\><big|sum><rsub|i=0><rsup|n-m>c<rsub|i>\<cdot\>z<rsup|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eqs:
+      <reference|eq 17.13.136>, <reference|eq
+      17.14.136>]>>>|<cell|p<around*|(|0|)>+z<rsup|m>\<cdot\>q<around*|(|z|)><eq-number>>>>>
+    </eqnarray*>
+
+    Finally we have <math|q<around*|(|0|)>=<big|sum><rsub|i=0><rsup|n-m>c<rsub|i>\<cdot\>0<rsup|i>=c<rsub|0>+<big|sum><rsub|i=1><rsup|n-m>c<rsub|i>\<cdot\>0<rsup|i>=c<rsub|0>+<big|sum><rsub|i=1><rsup|n-m>c<rsub|i>\<cdot\>0=c<rsub|0>=a<rsub|m>\<neq\>0>\ 
+
+    \;
+  </proof>
 </body>
 
 <\initial>
   <\collection>
     <associate|chapter-nr|16>
-    <associate|page-first|1069>
+    <associate|page-first|1071>
     <associate|section-nr|6>
     <associate|subsection-nr|0>
   </collection>
@@ -1222,10 +1363,13 @@
     <associate|auto-7|<tuple|divergent limit|?>>
     <associate|auto-8|<tuple|17.1.3|?>>
     <associate|auto-9|<tuple|factorial|?>>
-    <associate|binomial properties|<tuple|17.22|?>>
     <associate|divergent limit of sums|<tuple|17.15|?>>
     <associate|eq 17.1.145|<tuple|17.1|?>>
     <associate|eq 17.10.135|<tuple|17.10|?>>
+    <associate|eq 17.11.136|<tuple|17.11|?>>
+    <associate|eq 17.12.136|<tuple|17.12|?>>
+    <associate|eq 17.13.136|<tuple|17.13|?>>
+    <associate|eq 17.14.136|<tuple|17.14|?>>
     <associate|eq 17.2|<tuple|17.2|?>>
     <associate|eq 17.3.135|<tuple|17.3|?>>
     <associate|eq 17.4.135|<tuple|17.4|?>>
@@ -1255,6 +1399,8 @@
     <associate|fundamental product of polynomials is a
     polynomial|<tuple|17.11|?>>
     <associate|lemma 17.19.136|<tuple|17.19|?>>
+    <associate|lemma 17.24.136|<tuple|17.24|?>>
+    <associate|lemma 17.25.136|<tuple|17.25|?>>
     <associate|lemma 17.8.145|<tuple|17.10|?>>
   </collection>
 </references>
@@ -1267,6 +1413,18 @@
       <tuple|<tuple|non constant polynomial>|<pageref|auto-5>>
 
       <tuple|<tuple|divergent limit>|<pageref|auto-7>>
+
+      <tuple|<tuple|factorial>|<pageref|auto-9>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|f!>>|<pageref|auto-10>>
+
+      <tuple|<tuple|binomial coefficient>|<pageref|auto-11>>
+
+      <tuple|<tuple|binomial coefficient>|<pageref|auto-12>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|<with|math-level|<quote|1>|<left|(><resize|<tformat|<cwith|1|-1|1|-1|cell-halign|c>|<tformat|<cwith|1|-1|1|1|cell-lsep|0spc>|<cwith|1|-1|1|1|cell-rsep|0spc>|<table|<row|<cell|n>>|<row|<cell|k>>>>>||<plus|1b|2.5sep>||<minus|1t|2.5sep>><right|)>>>>|<pageref|auto-13>>
+
+      <tuple|<tuple|binomial formula>|<pageref|auto-14>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|17<space|2spc>Fundamental

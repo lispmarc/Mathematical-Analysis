@@ -2592,12 +2592,6 @@
   <math|f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|U|)>>>
   many properties of the Fréchet differential also applies.
 
-  \;
-
-  TODO checked this file up to here, check the rest note
-  <math|U<rsub|<around*|[|i,x|]>>=<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|U|)>>
-  and <math|f<rsup|<around*|[|i,x|]>>=f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|U<rsub|<around*|[|i,x|]>>>>
-
   <\theorem>
     <label|diff partial differential properties>Let
     <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
@@ -2636,7 +2630,7 @@
         D<rsub|x,i><around*|(|\<alpha\>\<cdot\>f|)>=\<alpha\>\<cdot\>D<rsub|x,i>f
       </equation*>
 
-      <item>If <math|f:U\<rightarrow\>Y> is such that
+      <item>If <math|f:X\<rightarrow\>Y> is such that
       <math|f\<circ\>I<rsup|<around*|[|i,x|]>>\<in\>L<around*|(|X<rsub|i>,Y|)>>
       then <math|f> is <math|i>-partial differentiable and\ 
 
@@ -2651,35 +2645,35 @@
 
     <\enumerate>
       <item>As <math|f,g> are <math|i>-partial differentiable at <math|x> we
-      have by definition that <math|f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)>>,
-      <math|g\<circ\>I<rsup|<around*|[|i,x|]>>> are Fréchet differentiable at
-      <math|x<rsub|i>> with
+      have by definition that <math|f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>>
+      and <math|<around*|(|g\<circ\>I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>>
+      are Fréchet differentiable at <math|x<rsub|i>> with
 
       <\equation>
-        <label|eq 16.18.179>D<rsub|x,i><rsup|>f=D<rsub|x<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><text|
-        and >D<rsub|x,i><rsup|>g=D<rsub|x<rsub|i>><around*|(|g\<circ\>I<rsup|<around*|[|i,x|]>>|)>
+        <label|eq 16.18.179>D<rsub|x,i><rsup|>f=D<rsub|x<rsub|i>><around*|(|f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>|)><text|
+        and >D<rsub|x,i><rsup|>g=D<rsub|x<rsub|i>><around*|(|g\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>|)>
       </equation>
 
       Using [theorem: <reference|diff derivate operator is linear>] we have
       that
 
       <\equation*>
-        <around*|\<nobracket\>|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>+g\<circ\>I<rsup|<around*|[|i,x|]>><text|
+        <around*|\<nobracket\>|f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>|)>+g\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>><text|
         is Fréchet differentiable at <math|x<rsub|i>>>
       </equation*>
 
       with\ 
 
       <\equation*>
-        D<rsub|x<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>+g\<circ\>I<rsup|<around*|[|i,x|]>>|)>=D<rsub|x<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>+D<rsub|x<rsub|i>><around*|(|g\<circ\>I<rsup|<around*|[|i,x|]>>|)>
+        D<rsub|x<rsub|i>><around*|(|f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>+g\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>|)>=D<rsub|x<rsub|i>><around*|(|f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>|)>+D<rsub|x<rsub|i>><around*|(|g\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>|)>
       </equation*>
 
-      As <math|<around*|(|f+g|)>\<circ\>I<rsup|<around*|[|i,x|]>>=f\<circ\>I<rsup|<around*|[|i,x|]>>+g\<circ\>I<rsup|<around*|[|i,x|]>>>
+      As <math|<around*|(|f+g|)>\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>=f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>+g\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>>
       it follows that <math|f+g> is Fréchet differentiable at
       <math|x<rsub|i>> with\ 
 
       <\equation*>
-        D<rsub|x<rsub|i>><around*|(|<around*|(|f+g|)>\<circ\>I<rsup|<around*|[|i,x|]>>|)>=D<rsub|x<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>+D<rsub|x<rsub|i>><around*|(|g\<circ\>I<rsup|<around*|[|i,x|]>>|)>\<equallim\><rsub|<text|[eq:
+        D<rsub|x<rsub|i>><around*|(|<around*|(|f+g|)>\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>|)>=D<rsub|x<rsub|i>><around*|(|f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>|)>+D<rsub|x<rsub|i>><around*|(|g\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>|)>\<equallim\><rsub|<text|[eq:
         <reference|eq 16.18.179>]>>D<rsub|x,i><rsup|>f+D<rsub|x,i><rsup|>g
       </equation*>
 
@@ -2691,11 +2685,11 @@
       </equation*>
 
       <item>As <math|f> is <math|i>-partial differentiable we have by
-      definition that <math|f\<circ\>I<rsup|<around*|[|i,x|]>>> is Fréchet
-      differentiable at <math|x<rsub|i>> with
+      definition that <math|f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>>
+      is Fréchet differentiable at <math|x<rsub|i>> with
 
       <\equation>
-        <label|eq 16.19.179>D<rsub|x,i><rsup|>f=D<rsub|x<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>
+        <label|eq 16.19.179>D<rsub|x,i><rsup|>f=D<rsub|x<rsub|i>><around*|(|f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>|)>
       </equation>
 
       Using [theorem: <reference|diff derivate operator is linear>] we have
@@ -2709,15 +2703,15 @@
       with\ 
 
       <\equation*>
-        D<rsub|x<rsub|i>><around*|(|\<alpha\>\<cdot\><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>|)>=\<alpha\>\<cdot\>D<rsub|x<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>
+        D<rsub|x<rsub|i>><around*|(|\<alpha\>\<cdot\><around*|(|f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>|)>|)>=\<alpha\>\<cdot\>D<rsub|x<rsub|i>><around*|(|f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>|)>
       </equation*>
 
-      As <math|<around*|(|\<alpha\>\<cdot\>f|)>\<circ\>I<rsup|<around*|[|i,x|]>>=\<alpha\>\<cdot\><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>>
+      As <math|<around*|(|\<alpha\>\<cdot\>f|)>\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>=\<alpha\>\<cdot\><around*|(|f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>|)>>
       it follows that <math|\<alpha\>\<cdot\>f> is Fréchet differentiable at
       <math|x<rsub|i>> with\ 
 
       <\equation*>
-        D<rsub|x<rsub|i>><around*|(|<around*|(|\<alpha\>f|)>\<circ\>I<rsup|<around*|[|i,x|]>>|)>=\<alpha\>\<cdot\>D<rsub|x<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>\<equallim\><rsub|<text|[eq:
+        D<rsub|x<rsub|i>><around*|(|<around*|(|\<alpha\>f|)>\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>|)>=\<alpha\>\<cdot\>D<rsub|x<rsub|i>><around*|(|f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>|)>\<equallim\><rsub|<text|[eq:
         <reference|eq 16.19.179>]>>\<alpha\>\<cdot\>D<rsub|x,i><rsup|>f
       </equation*>
 
@@ -2821,7 +2815,7 @@
     </equation>
   </proof>
 
-  Next we define the calculus partial derivative of a multi parameter
+  Next we define the calculus partial derivative of a multi-parameter
   function.
 
   <\definition>
@@ -2841,18 +2835,23 @@
     </equation*>
 
     then <math|f> has a <with|font-series|bold|<math|i>-partial derivative at
-    <math|x>> noted by <math|\<partial\><rsub|x><rsup|i>f<around*|(|x|)>\<in\>X>
-    if <math|f\<circ\>I<rsup|<around*|[|i,x|]>>> has a derivative at
-    <math|x<rsub|i>>, the <with|font-series|bold|<math|i>-partial derivative
-    at <math|x>> is defined to be <math|<around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><rsub|x<rsub|i>><rprime|'>>,
-    hence <math|\<partial\><rsub|x,i>f<around*|(|x|)>=<around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><rsub|x<rsub|i>><rprime|'>\<in\>X>.
+    <math|x>> noted by <math|\<partial\><rsub|x,i><rsup|>f<around*|(|x|)>\<in\>X>
+    if <math|f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>>
+    has a derivative at <math|x<rsub|i>>, the
+    <with|font-series|bold|<math|i>-partial derivative at <math|x>> is
+    defined by
+
+    <\equation*>
+      \<partial\><rsub|x,i>f<around*|(|x|)>=<around*|(|f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>|)><rsub|x<rsub|i>><rprime|'>\<in\>X
+    </equation*>
+
     Using [definitions: <reference|diff unprojection> and <reference|diff
     calculus derivate>] this is equivalent with
 
     <\equation*>
       \<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text| there exist a
       >\<delta\>\<in\>\<bbb-R\><rsup|+><text| such that
-      >\<forall\>h\<in\><around*|(|<around*|(|I<rsup|<around*|[|x,i|]>>|)><rsup|-1><around*|(|U|)>|)><rsub|x<rsub|i>><text|
+      >\<forall\>h\<in\><around*|(|U<rsub|<around*|[|i,x|]>>|)><rsub|x<rsub|i>><text|
       with >0\<less\><around*|\||h|\|>\<less\>\<delta\><text| we have >
     </equation*>
 
@@ -2879,7 +2878,7 @@
       f:U\<rightarrow\>X<text| a function >
     </equation*>
 
-    then we have\ 
+    then\ 
 
     <\equation*>
       f<text| has a >i<text|-partial derivative at >x<text|
@@ -2907,11 +2906,11 @@
 
     <\description>
       <item*|<math|\<Rightarrow\>>>As <math|f> has a <math|i>-partial
-      derivative at <math|x> <math|f\<circ\>I<rsup|<around*|[|i,x|]>>> has a
-      derivative at <math|x<rsub|i>>. Using [theorem: <reference|diff
+      derivative at <math|x> <math|f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>>
+      has a derivative at <math|x<rsub|i>>. Using [theorem: <reference|diff
       derivate and frechet differential>] it follows that
-      <math|f\<circ\>I<rsup|<around*|[|i,x|]>>> is Fréchet differentiable at
-      <math|x<rsub|i>>, hence by definition
+      <math|f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>>
+      is Fréchet differentiable at <math|x<rsub|i>>, hence by definition
 
       <\equation*>
         f<text| is >i<text|-partial differentiable at >x
@@ -2921,17 +2920,17 @@
       differential>] we have also
 
       <\equation*>
-        <around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><rprime|'><rsub|x<rsub|i>>=D<rsub|x<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><around*|(|1|)>
+        <around*|(|f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>|)><rprime|'><rsub|x<rsub|i>>=D<rsub|x<rsub|i>><around*|(|f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>|)><around*|(|1|)>
       </equation*>
 
       and\ 
 
       <\equation*>
-        \<forall\>h\<in\>\<bbb-K\><text| >D<rsub|x<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>=h\<cdot\><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><rsub|x<rsub|i>><rprime|'>
+        \<forall\>h\<in\>\<bbb-K\><text| >D<rsub|x<rsub|i>><around*|(|f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>|)>=h\<cdot\><around*|(|f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>|)><rsub|x<rsub|i>><rprime|'>
       </equation*>
 
-      As <math|\<partial\><rsub|x,i>f\<equallim\><rsub|<text|def>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><rprime|'><rsub|x<rsub|i>>>
-      and <math|D<rsup|><rsub|x,i>f\<equallim\><rsub|<text|def>>D<rsub|x<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>>
+      As <math|\<partial\><rsub|x,i>f\<equallim\><rsub|<text|def>><around*|(|f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>|)><rprime|'><rsub|x<rsub|i>>>
+      and <math|D<rsup|><rsub|x,i>f\<equallim\><rsub|<text|def>>D<rsub|x<rsub|i>><around*|(|f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>|)>>
       we have\ 
 
       <\equation*>
@@ -2941,12 +2940,12 @@
       </equation*>
 
       <item*|<math|\<Leftarrow\>>>As <math|f> has a <math|i>-partial
-      differential at <math|x> <math|f\<circ\>I<rsup|<around*|[|i,x|]>>> is
-      Fréchet differentiable at <math|x<rsub|i>>. Using [theorem:
+      differential at <math|x> <math|f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>>
+      is Fréchet differentiable at <math|x<rsub|i>>. Using [theorem:
       <reference|diff derivate and frechet differential>] it follows that
-      <math|f\<circ\>I<rsup|<around*|[|i,x|]>>> has a derivative at
-      <math|x<rsub|i>> and thus by definition that <math|f> has a
-      <math|i>-partial derivative at <math|x>.
+      <math|f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|U<rsub|<around*|[|i,x|]>>>>
+      has a derivative at <math|x<rsub|i>> and thus by definition that
+      <math|f> has a <math|i>-partial derivative at <math|x>.
     </description>
   </proof>
 
@@ -2961,7 +2960,7 @@
     <math|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>,
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
     normed space, <math|U,V\<subseteq\>\<bbb-K\><rsup|n>> open sets in
-    <math|\<bbb-K\><rsup|n>>, <math|x\<in\>U>,
+    <math|\<bbb-K\><rsup|n>>, <math|x\<in\>U<big|cap>V>,
     <math|i\<in\><around*|{|1,\<ldots\>,n|}>> and
 
     <\equation*>
@@ -2969,7 +2968,8 @@
     </equation*>
 
     functions such that there exist a open set <math|W> with
-    <math|x\<in\>W\<subseteq\>U<big|cap>V>. Then if <math|f> has a
+    <math|x\<in\>W\<subseteq\>U<big|cap>V> and <math|\<forall\>y\<in\>W>
+    <math|f<around*|(|y|)>=g<around*|(|y|)>> Then if <math|f> has a
     <math|i>-partial derivative at <math|x> <math|g> has also a
     <math|i>-partial derivative at <math|x> and
     <math|\<partial\><rsub|x,i>f=\<partial\><rsub|x,i>g>.
@@ -2986,11 +2986,11 @@
     <math|D<rsub|x,i>f=D<rsub|x,i>g>. Hence using \ [theorem: <reference|diff
     partial derivate and partial differential>] again <math|g> has a
     <math|i>-partial derivative at <math|x> and
-    <math|\<partial\><rsub|x,i>g=D<rsub|x,i>g=D<rsub|x,i>f=\<partial\><rsub|x,i>g>.
+    <math|\<partial\><rsub|x,i>g=D<rsub|x,i>g<around*|(|1|)>=D<rsub|x,i>f<around*|(|1|)>=\<partial\><rsub|x,i>g>.
   </proof>
 
   We can rephrase [theorem: <reference|diff Frechet differentation implies
-  partial differentiability >] as follows:
+  partial differentiability >] as follows for partial derivatives.
 
   <\theorem>
     <label|diff differentiability and K^n>Let
@@ -3179,7 +3179,7 @@
     <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|<around*|(|<around*|(|L<rsub|1>,\<ldots\>,L<rsub|n>|)><rsub|\<ast\>><around*|(|x+\<alpha\>\<cdot\>y|)>|)><rsub|i>>|<cell|=>|<cell|L<rsub|i><around*|(|x+\<alpha\>\<cdot\>y|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|L<rsub|i>\<in\>L<around*|(|X,X<rsub|i>|)>>>|<cell|L<rsub|i><around*|(|x|)>+\<alpha\>\<cdot\>L<rsub|i><around*|(|y|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|L<rsub|1>,\<ldots\>,L<rsub|n>|)><rsub|\<ast\>><around*|(|x|)>|)><rsub|i>+<around*|(|\<alpha\>\<cdot\><around*|(|L<rsub|1>,\<ldots\>,L<rsub|n>|)><rsub|\<ast\>><around*|(|y|)>|)><rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|L<rsub|1>,\<ldots\>,L<rsub|n>|)><rsub|\<ast\>><around*|(|x|)>+\<alpha\>\<cdot\><around*|(|L<rsub|1>,\<ldots\>,L<rsub|n>|)><rsub|\<ast\>><around*|(|y|)>|)><rsub|i>>>>>
+      <tformat|<table|<row|<cell|<around*|(|<around*|(|L<rsub|1>,\<ldots\>,L<rsub|n>|)><rsub|\<ast\>><around*|(|x+\<alpha\>\<cdot\>y|)>|)><rsub|i>>|<cell|=>|<cell|<around*|(|L<rsub|1><around*|(|x+\<alpha\>\<cdot\>y|)>,\<ldots\>,L<rsub|i><around*|(|x+\<alpha\>\<cdot\>y|)>|)><rsub|i>>>|<row|<cell|>|<cell|=>|<cell|L<rsub|i><around*|(|x+\<alpha\>\<cdot\>y|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|L<rsub|i>\<in\>L<around*|(|X,X<rsub|i>|)>>>|<cell|L<rsub|i><around*|(|x|)>+\<alpha\>\<cdot\>L<rsub|i><around*|(|y|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|L<rsub|1><around*|(|x|)>,\<ldots\>,l<rsub|n><around*|(|x|)>|)><rsub|i>+\<alpha\>\<cdot\><around*|(|L<rsub|1><around*|(|y|)>,\<ldots\>,L<rsub|n><around*|(|y|)>|)><rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|L<rsub|1>,\<ldots\>,L<rsub|n>|)><rsub|\<ast\>><around*|(|x|)>|)><rsub|i>+<around*|(|\<alpha\>\<cdot\><around*|(|L<rsub|1>,\<ldots\>,L<rsub|n>|)><rsub|\<ast\>><around*|(|y|)>|)><rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|L<rsub|1>,\<ldots\>,L<rsub|n>|)><rsub|\<ast\>><around*|(|x|)>+\<alpha\>\<cdot\><around*|(|L<rsub|1>,\<ldots\>,L<rsub|n>|)><rsub|\<ast\>><around*|(|y|)>|)><rsub|i>>>>>
     </eqnarray*>
 
     proving that <math|<around*|(|L<rsub|1>,\<ldots\>,L<rsub|n>|)><rsub|\<ast\>><around*|(|x+\<alpha\>\<cdot\>y|)>=><math|<around*|(|L<rsub|1>,\<ldots\>,L<rsub|n>|)><rsub|\<ast\>><around*|(|x|)>+\<alpha\>\<cdot\><around*|(|L<rsub|1>,\<ldots\>,L<rsub|n>|)><rsub|\<ast\>><around*|(|y|)>>.
@@ -3253,7 +3253,7 @@
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
     a normed space, <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
     a family of normed spaces, <math|<around*|\<langle\>|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
-    the normed spaces equipped with the maximum norm [see theorem:
+    the normed product space equipped with the maximum norm [see theorem:
     <reference|normed maximum norm>], <math|U\<subseteq\>X> a open set in
     <math|X>, <math|x\<in\>U> and\ 
 
@@ -3319,10 +3319,12 @@
       <math|\<pi\><rsub|i>\<circ\>f> is differentiable at <math|x> there
       exist a <math|\<delta\><rsub|i>\<in\>\<bbb-R\><rsup|+>> so that
       <math|\<forall\>h\<in\>U<rsub|x>> with
-      <math|<around*|\<\|\|\>|h|\<\|\|\>>\<less\>\<delta\><rsub|i>> we have\ 
+      <math|<around*|\<\|\|\>|h|\<\|\|\>>\<less\>\<delta\><rsub|i>> we have
+      <math|<around*|\<\|\|\>|<around*|(|\<pi\><rsub|i>\<circ\>f|)><around*|(|x+h|)>-<around*|(|\<pi\><rsub|i>\<circ\>f|)><around*|(|x|)>-D<rsub|x><around*|(|\<pi\><rsub|i>\<circ\>f|)><around*|(|h|)>|\<\|\|\>><rsub|i>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>>>
+      so that
 
       <\equation>
-        <label|eq 16.22.178><around*|\<\|\|\>|<around*|(|\<pi\><rsub|i>\<circ\>f|)><around*|(|x+h|)>-<around*|(|\<pi\><rsub|i>\<circ\>f|)><around*|(|x|)>-D<rsub|x><around*|(|\<pi\><rsub|i>\<circ\>f|)><around*|(|h|)>|\<\|\|\>><rsub|i>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>>
+        <label|eq 16.22.178>max<around*|(|<around*|{|<around*|\<\|\|\>|<around*|(|\<pi\><rsub|i>\<circ\>f|)><around*|(|x+h|)>-<around*|(|\<pi\><rsub|i>\<circ\>f|)><around*|(|x|)>-D<rsub|x><around*|(|\<pi\><rsub|i>\<circ\>f|)><around*|(|h|)>|\<\|\|\>><rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>>
       </equation>
 
       If <math|h\<in\>U<rsub|x>> satisfies
@@ -3465,7 +3467,7 @@
     <math|x>>. Further if <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>>
     defined by <math|<around*|(|e<rsub|i>|)><rsub|j>=\<delta\><rsub|i,j>> is
     the canonical basis of <math|\<bbb-K\><rsup|n>> and
-    <math|<around*|{|f<rsub|1>,\<ldots\>,f<rsub|m>|}>> defined by
+    <math|F=<around*|{|f<rsub|1>,\<ldots\>,f<rsub|m>|}>> defined by
     <math|<around*|(|f<rsub|i>|)><rsub|j>=\<delta\><rsub|i,j>> is the
     canonical basis of <math|\<bbb-K\><rsup|m>> then\ 
 
@@ -3535,13 +3537,13 @@
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|<around*|(|D<rsub|x>f<around*|(|e<rsub|i>|)>|)><rsub|j>>|<cell|\<equallim\><rsub|<text|[eq:
-      <reference|eq 16.25.178>]>>>|<cell|<big|sum><rsub|k=1><rsup|n>\<partial\><rsub|x,k><around*|(|\<pi\><rsub|j>\<circ\>f|)>\<cdot\><around*|(|e<rsub|k>|)><rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k=1><rsup|n>\<partial\><rsub|x,k><around*|(|\<pi\><rsub|j>\<circ\>f|)>\<cdot\>\<delta\><rsub|k,i>>>|<row|<cell|>|<cell|=>|<cell|\<partial\><rsub|x,i><around*|(|\<pi\><rsub|j>\<circ\>f|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<bmatrix|<tformat|<table|<row|<cell|<frac|\<partial\><around*|(|f<rsub|1>,\<ldots\>,f<rsub|m>|)>|\<partial\><around*|(|1,\<ldots\>,n|)>>>>>>><rsub|x>|)><rsub|j,i>>>>>
+      <reference|eq 16.25.178>]>>>|<cell|<big|sum><rsub|k=1><rsup|n>\<partial\><rsub|x,k><around*|(|\<pi\><rsub|j>\<circ\>f|)>\<cdot\><around*|(|e<rsub|i>|)><rsub|k>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k=1><rsup|n>\<partial\><rsub|x,k><around*|(|\<pi\><rsub|j>\<circ\>f|)>\<cdot\>\<delta\><rsub|i,k>>>|<row|<cell|>|<cell|=>|<cell|\<partial\><rsub|x,i><around*|(|\<pi\><rsub|j>\<circ\>f|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<bmatrix|<tformat|<table|<row|<cell|<frac|\<partial\><around*|(|f<rsub|1>,\<ldots\>,f<rsub|m>|)>|\<partial\><around*|(|1,\<ldots\>,n|)>>>>>>><rsub|x>|)><rsub|j,i>>>>>
     </eqnarray*>
 
     so that\ 
 
     <\equation*>
-      \<cal-M\><around*|(|D<rsub|x>f;E,F|)><rsub|j,i>=<tabular|<tformat|<table|<row|<cell|=>|<cell|<around*|(|<bmatrix|<tformat|<table|<row|<cell|<frac|\<partial\><around*|(|f<rsub|1>,\<ldots\>,f<rsub|m>|)>|\<partial\><around*|(|1,\<ldots\>,n|)>>>>>>><rsub|x>|)><rsub|j,i>>>>>>
+      \<cal-M\><around*|(|D<rsub|x>f;E,F|)><rsub|j,i>=<around*|(|<bmatrix|<tformat|<table|<row|<cell|<frac|\<partial\><around*|(|f<rsub|1>,\<ldots\>,f<rsub|m>|)>|\<partial\><around*|(|1,\<ldots\>,n|)>>>>>>><rsub|x>|)><rsub|j,i>
     </equation*>
 
     or\ 
@@ -3549,8 +3551,6 @@
     <\equation*>
       \<cal-M\><around*|(|D<rsub|x>f;E,F|)>=<bmatrix|<tformat|<table|<row|<cell|<frac|\<partial\><around*|(|f<rsub|1>,\<ldots\>,f<rsub|m>|)>|\<partial\><around*|(|1,\<ldots\>,n|)>>>>>>><rsub|x>
     </equation*>
-
-    \;
   </proof>
 
   <\lemma>
@@ -3589,7 +3589,7 @@
     and <math|\<alpha\>\<in\>\<bbb-K\>> then we have\ 
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|<around*|(|L<around*|(|x<rsub|1>,\<ast\>|)>+L<around*|(|\<ast\>,x<rsub|2>|)>|)><around*|(|<around*|(|h<rsub|1>,h<rsub|2>|)>+\<alpha\>\<cdot\><around*|(|g<rsub|1>,g<rsub|2>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|L<around*|(|x<rsub|1>,\<ast\>|)>+L<around*|(|\<ast\>,x<rsub|2>|)>|)><around*|(|h<rsub|1>+\<alpha\>\<cdot\>g<rsub|1>,h<rsub|2>+\<alpha\>\<cdot\>g<rsub|2>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x<rsub|1>,h<rsub|2>+\<alpha\>\<cdot\>g<rsub|2>|)>+L<around*|(|h<rsub|1>+\<alpha\>\<cdot\>g<rsub|1>,x<rsub|2>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x<rsub|1>,h<rsub|2>|)>+\<alpha\>\<cdot\>L<around*|(|x<rsub|1>,g<rsub|2>|)>+L<around*|(|h<rsub|1>,x<rsub|2>|)>+\<alpha\>\<cdot\>L<around*|(|g<rsub|1>,x<rsub|2>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x<rsub|1>,h<rsub|2>|)>+L<around*|(|h<rsub|1>,x<rsub|2>|)>+\<alpha\>*\<cdot\><around*|(|L<around*|(|x<rsub|1>,g<rsub|2>|)>+L<around*|(|g<rsub|1>,x<rsub|2>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|L<around*|(|x<rsub|1>,\<ast\>|)>+L<around*|(|\<ast\>,x<rsub|2>|)>|)><around*|(|h<rsub|1>,h<rsub|2>|)>+\<alpha\>\<cdot\><around*|(|<around*|(|L<around*|(|x<rsub|1>,\<ast\>|)>+L<around*|(|\<ast\>,x<rsub|2>|)>|)><around*|(|g<rsub|1>,g<rsub|2>|)>|)>>|<cell|=>|<cell|>>>>
+      <tformat|<table|<row|<cell|<around*|(|L<around*|(|x<rsub|1>,\<ast\>|)>+L<around*|(|\<ast\>,x<rsub|2>|)>|)><around*|(|<around*|(|h<rsub|1>,h<rsub|2>|)>+\<alpha\>\<cdot\><around*|(|g<rsub|1>,g<rsub|2>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|L<around*|(|x<rsub|1>,\<ast\>|)>+L<around*|(|\<ast\>,x<rsub|2>|)>|)><around*|(|h<rsub|1>+\<alpha\>\<cdot\>g<rsub|1>,h<rsub|2>+\<alpha\>\<cdot\>g<rsub|2>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x<rsub|1>,h<rsub|2>+\<alpha\>\<cdot\>g<rsub|2>|)>+L<around*|(|h<rsub|1>+\<alpha\>\<cdot\>g<rsub|1>,x<rsub|2>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x<rsub|1>,h<rsub|2>|)>+\<alpha\>\<cdot\>L<around*|(|x<rsub|1>,g<rsub|2>|)>+L<around*|(|h<rsub|1>,x<rsub|2>|)>+\<alpha\>\<cdot\>L<around*|(|g<rsub|1>,x<rsub|2>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|x<rsub|1>,h<rsub|2>|)>+L<around*|(|h<rsub|1>,x<rsub|2>|)>+\<alpha\>*\<cdot\><around*|(|L<around*|(|x<rsub|1>,g<rsub|2>|)>+L<around*|(|g<rsub|1>,x<rsub|2>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|L<around*|(|x<rsub|1>,\<ast\>|)>+L<around*|(|\<ast\>,x<rsub|2>|)>|)><around*|(|h<rsub|1>,h<rsub|2>|)>+\<alpha\>\<cdot\><around*|(|<around*|(|L<around*|(|x<rsub|1>,\<ast\>|)>+L<around*|(|\<ast\>,x<rsub|2>|)>|)><around*|(|g<rsub|1>,g<rsub|2>|)>|)>>|<cell|>|<cell|>>>>
     </eqnarray*>
 
     Hence we have that\ 
@@ -3709,7 +3709,7 @@
     </equation>
 
     Further if <math|h=<around*|(|h<rsub|1>,h<rsub|2>|)>\<in\>\<bbb-K\><rsup|2>>
-    with <math|<around*|\||h<rsub|1>|\|>=<around*|\||h<rsub|2>=1|\|>> then we
+    with <math|<around*|\||h<rsub|1>|\|>=<around*|\||h<rsub|2>|\|>=1> then we
     have\ 
 
     <\equation*>
@@ -3718,13 +3718,13 @@
 
     proving by [theorem: <reference|continuity multilinear mapping (1)>] that
     <math|L> is continuous, hence combined with [eq: <reference|eq
-    16.20.181>] it follows that <math|<around*|(|\<cdot\>|)>\<in\>L<around*|(|<wide*|\<bbb-K\>,\<ldots\>,\<bbb-K\>|\<wide-underbrace\>><rsub|2>;Y|)>>.
+    16.20.181>] it follows that <math|L\<in\>L<around*|(|<wide*|\<bbb-K\>,\<ldots\>,\<bbb-K\>|\<wide-underbrace\>><rsub|2>;Y|)>>.
     Using the previous lemma [lemma: <reference|lemma 16.23.181>] it follows
     that\ 
 
     <\equation>
       <label|eq 16.33.181>\<forall\>y=<around*|(|y<rsub|1>,y<rsub|2>|)>\<in\>\<bbb-K\><rsup|2><text|
-      <math|<around*|(|\<cdot\>|)>> is differentiable at <math|y> with
+      <math|L> is differentiable at <math|y> with
       >D<rsub|<around*|(|y<rsub|1>,y<rsub|2>|)>>L=L<around*|(|y<rsub|1>,\<ast\>|)>+L<around*|(|\<ast\>,y<rsub|2>|)>
     </equation>
 
@@ -3748,7 +3748,7 @@
     <\equation>
       <label|eq 16.34.181>h<text| is Fréchet differentiable at <math|x> with
       >\<pi\><rsub|1>\<circ\>D<rsub|x>h=D<rsub|x>g<text| and
-      >\<pi\><rsub|2>\<circ\>D<rsub|x>h=D<rsub|x>f
+      >\<pi\><rsub|2>\<circ\>D<rsub|x>h=D<rsub|x>f\<wedge\>D<rsub|x>h<text|>
     </equation>
 
     Now <math|\<forall\>y\<in\>U> we have
@@ -3764,7 +3764,8 @@
     </equation*>
 
     Using the Chain Rule [see theorem: <reference|diff chain rule>] on [eqs:
-    <reference|eq 16.33.181> and <reference|eq 16.34.181>] we have that\ 
+    <reference|eq 16.33.181> and <reference|eq 16.34.181>] we have that
+    <math|L\<circ\>h> is Fréchet differentiable at <math|x> so that
 
     <\equation*>
       g\<cdot\>f<text| is Fréchet differentiable at >x<text|>
@@ -3774,8 +3775,10 @@
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|D<rsub|x><around*|(|g\<cdot\>f|)><around*|(|k|)>>|<cell|=>|<cell|D<rsub|x><around*|(|L\<circ\>h|)><around*|(|k|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|D
-      <rsub|h<around*|(|x|)>>L\<circ\>D<rsub|x>h|)><around*|(|k|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|h<around*|(|x|)>>L<around*|(|D<rsub|x>h<around*|(|k|)>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|<around*|(|g<around*|(|x|)>,f<around*|(|x|)>|)>>L<around*|(|D<rsub|x>h<around*|(|k|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
-      <reference|eq 16.34.181>]>>>|<cell|D<rsub|<around*|(|g<around*|(|x|)>,f<around*|(|x|)>|)>>L<around*|(|D<rsub|x>g<around*|(|k|)>,D<rsub|x>f<around*|(|k|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <rsub|h<around*|(|x|)>>L\<circ\>D<rsub|x>h|)><around*|(|k|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|h<around*|(|x|)>>L<around*|(|D<rsub|x>h<around*|(|k|)>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|<around*|(|g<around*|(|x|)>,f<around*|(|x|)>|)>>L<around*|(|D<rsub|x>h<around*|(|k|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|diff differential of a vector valued
+      function>]>>>|<cell|D<rsub|<around*|(|g<around*|(|x|)>,f<around*|(|x|)>|)>>L<around*|(|<around*|(|D<rsub|x><around*|(|\<pi\><rsub|1>\<circ\>h|)>,D<rsub|x><around*|(|\<pi\><rsub|2>\<circ\>h|)>|)><rsub|\<ast\>><around*|(|k|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.34.181>]>>>|<cell|D<rsub|<around*|(|g<around*|(|x|)>,f<around*|(|x|)>|)>>L<around*|(|<around*|(|D<rsub|x>g,D<rsub|x>f|)><rsub|\<ast\>><around*|(|k|)>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|<around*|(|g<around*|(|x|)>,f<around*|(|x|)>|)>>L<around*|(|D<rsub|x>g<around*|(|k|)>,D<rsub|x>f<around*|(|k|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
       <reference|eq 16.33.181>]>>>|<cell|<around*|(|L<around*|(|g<around*|(|x|)>,\<ast\>|)>+L<around*|(|\<ast\>,f<around*|(|x|)>|)>|)><around*|(|D<rsub|x>g<around*|(|k|)>,D<rsub|x>f<around*|(|k|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|g<around*|(|x|)>,D<rsub|x>f<around*|(|k|)>|)>+L<around*|(|D<rsub|x>g<around*|(|k|)>,f<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|g<around*|(|x|)>\<cdot\>D<rsub|x>f<around*|(|k|)>+<around*|(|D<rsub|x>g<around*|(|k|)>|)>\<cdot\>f<around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|g<around*|(|x|)>\<cdot\>D<rsub|x>f<around*|(|k|)>+f<around*|(|x|)>\<cdot\>D<rsub|x>g<around*|(|k|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|g<around*|(|x|)>\<cdot\>D<rsub|x>f|)><around*|(|k|)>+<around*|(|f<around*|(|x|)>\<cdot\>D<rsub|x>g|)><around*|(|k|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|g<around*|(|x|)>\<cdot\>D<rsub|x>f+f<around*|(|x|)>\<cdot\>D<rsub|x>g|)><around*|(|k|)>>>>>
     </eqnarray*>
 
@@ -3857,30 +3860,31 @@
     <math|h\<in\><around*|(|\<bbb-K\>\\<around*|{|0|}>|)><rsub|x>> with\ 
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|<frac|<frac|1|x+h>-<frac|1|x>|h>-<around*|(|-<frac|1|x<rsup|2>>|)>>|<cell|=>|<cell|<frac|<frac|x-<around*|(|x+h|)>|x\<cdot\><around*|(|x+h|)>>|h>+<frac|1|x<rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|<frac|<frac|-h|x\<cdot\><around*|(|x+h|)>>|h>+<frac|1|x<rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|<frac|-1|x\<cdot\><around*|(|x+h|)>>+<frac|1|x<rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|<frac|1|x>\<cdot\><around*|(|<frac|1|x>-<frac|1|x+h>|)>>>|<row|<cell|>|<cell|=>|<cell|<frac|1|x>\<cdot\><frac|x+h-x|x\<cdot\><around*|(|x+h|)>>>>|<row|<cell|>|<cell|=>|<cell|<frac|h|x<rsup|2>\<cdot\><around*|(|x+h|)>><eq-number><label|eq
+      <tformat|<table|<row|<cell|<frac|<frac|1|x+h>-<frac|1|x>|h>-<around*|(|-<frac|1|x<rsup|2>>|)>>|<cell|=>|<cell|<frac|<frac|1|x+h>-<frac|1|x>|h>+<frac|1|x<rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|<frac|<frac|x-x-h|<around*|(|x+h|)>\<cdot\>x>|h>+<frac|1|x<rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|<frac|<frac|-h|<around*|(|x+h|)>\<cdot\>x>|h>+<frac|1|x<rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|<frac|-1|<around*|(|x+h|)>\<cdot\>x>+<frac|1|x<rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|<frac|-x+<around*|(|x+h|)>|<around*|(|x+h|)>\<cdot\>x<rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|<frac|h|x<rsup|2>\<cdot\><around*|(|x+h|)>><eq-number><label|eq
       16.36.182>>>>>
     </eqnarray*>
 
-    Take now <math|\<delta\>=min<around*|(|\<varepsilon\>\<cdot\><around*|\||x|\|><rsup|3>,<frac|<around*|\||x|\|>|2>|)>\<in\>\<bbb-R\><rsup|+>>
+    Take now <math|\<delta\>=min<around*|(|<frac|\<varepsilon\>|2>\<cdot\><around*|\||x|\|><rsup|3>,<frac|<around*|\||x|\|>|2>|)>\<in\>\<bbb-R\><rsup|+>>
     [as <math|x\<neq\>0>] then we have for
     <math|h\<in\><around*|(|\<bbb-K\>\\<around*|{|0|}>|)><rsub|x>> with
     <math|0\<less\><around*|\||h|\|>\<less\>\<delta\>> that
 
     <\equation>
-      <label|eq 16.37.182><around*|\||h|\|>\<less\><frac|<around*|\||x|\|>|2>\<less\><around*|\||x|\|>\<Rightarrow\>0\<less\><around*|\||x|\|>-<around*|\||h|\|>
+      <label|eq 16.37.182><around*|\||h|\|>\<less\><frac|<around*|\||x|\|>|2>\<less\><around*|\||x|\|>\<Rightarrow\>0\<less\><around*|\||x|\|>-<around*|\||h|\|><text|
+      and ><frac|<around*|\||x|\|>|2>=<around*|\||x|\|>-<frac|<around*|\||x|\|>|2>\<less\><around*|\||x|\|>-<around*|\||h|\|>\<Rightarrow\><frac|1|<around*|\||x|\|>-<around*|\||h|\|>>\<less\><frac|2|<around*|\||x|\|>>
     </equation>
 
-    and
+    so that
 
     <\equation>
       <label|eq 16.38.182><around*|\||x|\|>=<around*|\||x+h-h|\|>\<leqslant\><around*|\||x+h|\|>+<around*|\||h|\|>\<Rightarrow\><around*|\||x|\|>-<around*|\||h|\|>\<less\><around*|\||x+h|\|>\<Rightarrowlim\><rsub|<text|[eq:
-      <reference|eq 16.37.182>]>><frac|1|<around*|\||x+h|\|>>\<less\><frac|1|<around*|\||x|\|>-<around*|\||h|\|>>\<less\><frac|1|<around*|\||x|\|>>
+      <reference|eq 16.37.182>]>><frac|1|<around*|\||x+h|\|>>\<less\><frac|1|<around*|\||x|\|>-<around*|\||h|\|>>\<less\><frac|2|<around*|\||x|\|>>
     </equation>
 
     and\ 
 
     <\equation>
-      <label|eq 16.39.182><around*|\||h|\|>\<less\>\<varepsilon\>\<cdot\><around*|\||x|\|><rsup|3>
+      <label|eq 16.39.182><around*|\||h|\|>\<less\><frac|\<varepsilon\>|2>\<cdot\><around*|\||x|\|><rsup|3>
     </equation>
 
     Hence we have\ 
@@ -3890,8 +3894,8 @@
     <\eqnarray*>
       <tformat|<table|<row|<cell|<around*|\||<frac|<frac|1|x+h>-<frac|1|x>|h>-<around*|(|-<frac|1|x<rsup|2>>|)>|\|>>|<cell|\<equallim\><rsub|<text|[eq:
       <reference|eq 16.36.182>]>>>|<cell|<around*|\||<frac|h|x<rsup|2>\<cdot\><around*|(|x+h|)>>|\|>>>|<row|<cell|>|<cell|=>|<cell|<frac|<around*|\||h|\|>|<around*|\||x|\|><rsup|2>\<cdot\><around*|\||x+h|\|>>>>|<row|<cell|>|<cell|\<less\><rsub|<text|[eq:
-      <reference|eq 16.38.182>]>>>|<cell|<frac|<around*|\||h|\|>|<around*|\||x|\|><rsup|2>\<cdot\><around*|\||x|\|>>>>|<row|<cell|>|<cell|=>|<cell|<frac|<around*|\||h|\|>|<around*|\||x|\|><rsup|3>>>>|<row|<cell|>|<cell|\<less\><rsub|<text|[eq:
-      <reference|eq 16.39.182>]>>>|<cell|<frac|\<varepsilon\>\<cdot\><around*|\||x|\|><rsup|3>|<around*|\||x|\|><rsup|3>>>>|<row|<cell|>|<cell|=>|<cell|\<varepsilon\>>>>>
+      <reference|eq 16.38.182>]>>>|<cell|<frac|<around*|\||h|\|>\<cdot\>2|<around*|\||x|\|><rsup|2>\<cdot\><around*|\||x|\|>>>>|<row|<cell|>|<cell|=>|<cell|<frac|<around*|\||h|\|>\<cdot\>2|<around*|\||x|\|><rsup|3>>>>|<row|<cell|>|<cell|\<less\><rsub|<text|[eq:
+      <reference|eq 16.39.182>]>>>|<cell|<frac|\<varepsilon\>\<cdot\><around*|\||x|\|><rsup|3>|2\<cdot\><around*|\||x|\|><rsup|3>>>>|<row|<cell|>|<cell|=>|<cell|\<varepsilon\>>>>>
     </eqnarray*>
 
     which proves that\ 
@@ -3911,14 +3915,14 @@
       <item>If <math|n\<in\>\<bbb-N\>> then <math|\<forall\>x\<in\>\<bbb-K\>>
 
       <\equation*>
-        <around*|(|\<ast\>|)><rsup|n>:\<bbb-K\>\<rightarrow\>\<bbb-K\><text|
-        defined by ><around*|(|\<ast\>|)><rsup|n><around*|(|x|)>=x<rsup|n>
+        <around*|(|\<cdot\>|)><rsup|n>:\<bbb-K\>\<rightarrow\>\<bbb-K\><text|
+        defined by ><around*|(|\<cdot\>|)><rsup|n><around*|(|x|)>=x<rsup|n>
       </equation*>
 
       has a derivative at <math|x> and\ 
 
       <\equation*>
-        <around*|(|<around*|(|\<ast\>|)><rsup|n>|)><rprime|'><rsub|x>=n\<cdot\><around*|(|\<ast\>|)><rsup|n-1><around*|(|x|)>
+        <around*|(|<around*|(|\<cdot\>|)><rsup|n>|)><rprime|'><rsub|x>=n\<cdot\><around*|(|\<cdot\>|)><rsup|n-1><around*|(|x|)>
       </equation*>
 
       or in a shorter notation
@@ -3932,14 +3936,14 @@
       <math|\<bbb-K\>>] then\ 
 
       <\equation*>
-        <around*|(|\<ast\>|)>:\<bbb-K\>\\<around*|{|0|}>\<rightarrow\>\<bbb-K\><text|
-        defined by ><around*|(|\<ast\>|)><rsup|z><around*|(|x|)>=<frac|1|x<rsup|<around*|(|-z|)>>>
+        <around*|(|\<cdot\>|)>:\<bbb-K\>\\<around*|{|0|}>\<rightarrow\>\<bbb-K\><text|
+        defined by ><around*|(|\<cdot\>|)><rsup|z><around*|(|x|)>=<frac|1|x<rsup|<around*|(|-z|)>>>
       </equation*>
 
       has a derivative at <math|x> and\ 
 
       <\equation*>
-        <around*|(|<around*|(|\<ast\>|)><rsup|z>|)><rprime|'><rsub|x>=z\<cdot\><around*|(|\<ast\>|)><rsup|z-1>
+        <around*|(|<around*|(|\<cdot\>|)><rsup|z>|)><rprime|'><rsub|x>=z\<cdot\><around*|(|\<cdot\>|)><rsup|z-1>
       </equation*>
 
       or in a shorter notation\ 
@@ -3958,31 +3962,31 @@
       <math|x\<in\>\<bbb-K\>> define\ 
 
       <\equation*>
-        S=<around*|{|n\<in\>\<bbb-N\>\|<around*|(|\<ast\>|)><rsup|n><text| is
-        calculus differentiable at >x<text| and
-        ><around*|(|<around*|(|\<ast\>|)><rsup|n>|)><rsub|x><rprime|'>=n\<cdot\><around*|(|\<ast\>|)><rsup|n-1><around*|(|x|)>|}>
+        S=<around*|{|n\<in\>\<bbb-N\>\|<around*|(|\<cdot\>|)><rsup|n><text|
+        is calculus differentiable at >x<text| and
+        ><around*|(|<around*|(|\<cdot\>|)><rsup|n>|)><rsub|x><rprime|'>=n\<cdot\><around*|(|\<cdot\>|)><rsup|n-1><around*|(|x|)>|}>
       </equation*>
 
       then we have:
 
       <\description>
-        <item*|<math|1\<in\>S>>If <math|z=1> then
-        <math|<around*|(|\<ast\>|)><rsup|z>=<around*|(|\<ast\>|)><rsup|1>=Id<rsub|\<bbb-K\>>>
+        <item*|<math|1\<in\>S>>If <math|n=1> then
+        <math|<around*|(|\<cdot\>|)><rsup|n>=<around*|(|\<cdot\>|)><rsup|1>=Id<rsub|\<bbb-K\>>>
         so that by [theorem: <reference|diff identity function is
-        differentiable>] <math|<around*|(|\<ast\>|)><rsup|1>> is Fréchet
-        differentiable at <math|x> with <math|D<around*|(|\<ast\>|)><rsup|1><around*|(|x|)>=Id<rsub|\<bbb-K\>>>.
+        differentiable>] <math|<around*|(|\<cdot\>|)><rsup|1>> is Fréchet
+        differentiable at <math|x> with <math|D<around*|(|\<cdot\>|)><rsup|1><around*|(|x|)>=Id<rsub|\<bbb-K\>>>.
         Using [theorem: <reference|diff derivate and frechet differential>]
         it follows that
 
         <\equation*>
-          <around*|(|\<ast\>|)><rsup|1><text| has a derivative at >x<text|
+          <around*|(|\<cdot\>|)><rsup|1><text| has a derivative at >x<text|
           and >
         </equation*>
 
         and
 
         <\equation*>
-          <around*|(|<around*|(|\<ast\>|)><rsup|1>|)><rprime|'><rsub|x>=D<rsub|x><around*|(|\<ast\>|)><rsup|1><around*|(|1|)>=Id<rsub|\<bbb-K\>><around*|(|1|)>=1=1\<cdot\><around*|(|\<ast\>|)><rsup|0><around*|(|x|)>=1\<cdot\><around*|(|\<ast\>|)><rsup|1-1><around*|(|x|)>
+          <around*|(|<around*|(|\<cdot\>|)><rsup|1>|)><rprime|'><rsub|x>=D<rsub|x><around*|(|\<cdot\>|)><rsup|1><around*|(|1|)>=Id<rsub|\<bbb-K\>><around*|(|1|)>=1=1\<cdot\><around*|(|\<cdot\>|)><rsup|0><around*|(|x|)>=1\<cdot\><around*|(|\<cdot\>|)><rsup|1-1><around*|(|x|)>
         </equation*>
 
         \ proving that <math|1\<in\>S>.
@@ -3991,35 +3995,35 @@
         we have
 
         <\equation*>
-          <around*|(|\<ast\>|)><rsup|n+1><around*|(|x|)>=x<rsup|n+1>=x\<cdot\>x<rsup|n>=Id<rsub|X><around*|(|x|)>\<cdot\><around*|(|\<ast\>|)><rsup|n><around*|(|x|)>
+          <around*|(|\<cdot\>|)><rsup|n+1><around*|(|x|)>=x<rsup|n+1>=x\<cdot\>x<rsup|n>=Id<rsub|X><around*|(|x|)>\<cdot\><around*|(|\<cdot\>|)><rsup|n><around*|(|x|)>
         </equation*>
 
         so that\ 
 
         <\equation*>
-          <around*|(|\<ast\>|)><rsup|n+1>=Id<rsub|\<bbb-K\>>\<cdot\><around*|(|\<ast\>|)><rsup|n>
+          <around*|(|\<cdot\>|)><rsup|n+1>=Id<rsub|\<bbb-K\>>\<cdot\><around*|(|\<cdot\>|)><rsup|n>
         </equation*>
 
-        As <math|n\<in\>S> we have that <math|<around*|(|\<ast\>|)><rsup|n>>
+        As <math|n\<in\>S> we have that <math|<around*|(|\<cdot\>|)><rsup|n>>
         has a derivative at <math|x> with
 
         <\equation*>
-          <around*|(|<around*|(|\<ast\>|)><rsup|n>|)><rprime|'><rsub|x>=n\<cdot\><around*|(|\<ast\>|)><rsup|n-1><around*|(|x|)>.
+          <around*|(|<around*|(|\<cdot\>|)><rsup|n>|)><rprime|'><rsub|x>=n\<cdot\><around*|(|\<cdot\>|)><rsup|n-1><around*|(|x|)>.
         </equation*>
 
-        So <math|><math|<around*|(|\<ast\>|)><rsup|n+1>> is the product of
+        So <math|><math|<around*|(|\<cdot\>|)><rsup|n+1>> is the product of
         two functions that have a derivative at <math|x>, hence by
         [corollary: <reference|diff derivate of a product of functions>] we
         have that
 
         <\equation*>
-          <around*|(|\<ast\>|)><rsup|n+1><text| has a derivative at >x
+          <around*|(|\<cdot\>|)><rsup|n+1><text| has a derivative at >x
         </equation*>
 
         and\ 
 
         <\eqnarray*>
-          <tformat|<table|<row|<cell|<around*|(|<around*|(|\<ast\>|)><rsup|n+1>|)><rprime|'><rsub|x>>|<cell|=>|<cell|<around*|(|Id<rsub|\<bbb-K\>>\<cdot\><around*|(|\<ast\>|)><rsup|n>|)><rprime|'><rsub|x>>>|<row|<cell|>|<cell|=>|<cell|Id<rsub|\<bbb-K\>><around*|(|x|)>\<cdot\><around*|(|<around*|(|\<ast\>|)><rsup|n>|)><rprime|'><rsub|x>+<around*|(|\<ast\>|)><rsup|n><around*|(|x|)>\<cdot\><around*|(|Id<rsub|\<bbb-K\>>|)><rprime|'><rsub|x>>>|<row|<cell|>|<cell|=>|<cell|x\<cdot\>n\<cdot\>x<rsup|n-1>+x<rsup|n>\<cdot\>1>>|<row|<cell|>|<cell|=>|<cell|n\<cdot\>x<rsup|n>+1\<cdot\>x<rsup|n>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|n+1|)>\<cdot\>x<rsup|n>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|n+1|)>\<cdot\>x<rsup|<around*|(|n+1|)>-1>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|n+1|)>\<cdot\><around*|(|*\<ast\>|)><rsup|<around*|(|n+1|)>-1><around*|(|x|)>>>>>
+          <tformat|<table|<row|<cell|<around*|(|<around*|(|\<cdot\>|)><rsup|n+1>|)><rprime|'><rsub|x>>|<cell|=>|<cell|<around*|(|Id<rsub|\<bbb-K\>>\<cdot\><around*|(|\<cdot\>|)><rsup|n>|)><rprime|'><rsub|x>>>|<row|<cell|>|<cell|=>|<cell|Id<rsub|\<bbb-K\>><around*|(|x|)>\<cdot\><around*|(|<around*|(|\<cdot\>|)><rsup|n>|)><rprime|'><rsub|x>+<around*|(|\<cdot\>|)><rsup|n><around*|(|x|)>\<cdot\><around*|(|Id<rsub|\<bbb-K\>>|)><rprime|'><rsub|x>>>|<row|<cell|>|<cell|=>|<cell|x\<cdot\>n\<cdot\>x<rsup|n-1>+x<rsup|n>\<cdot\>1>>|<row|<cell|>|<cell|=>|<cell|n\<cdot\>x<rsup|n>+1\<cdot\>x<rsup|n>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|n+1|)>\<cdot\>x<rsup|n>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|n+1|)>\<cdot\>x<rsup|<around*|(|n+1|)>-1>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|n+1|)>\<cdot\><around*|(|*\<cdot\>|)><rsup|<around*|(|n+1|)>-1><around*|(|x|)>>>>>
         </eqnarray*>
 
         proving that <math|n+1\<in\>S>.
@@ -4029,31 +4033,35 @@
       every <math|y\<in\>\<bbb-K\>\\<around*|{|0|}>> we have\ 
 
       <\equation>
-        <around*|(|<around*|(|<frac|1|\<ast\>>|)>\<circ\><around*|(|\<ast\>|)><rsup|n>|)><around*|(|y|)>=<around*|(|<frac|1|\<ast\>>|)><around*|(|<around*|(|\<ast\>|)><around*|(|y|)>|)>=<around*|(|<frac|1|\<ast\>>|)><around*|(|y<rsup|n>|)>=<frac|1|y<rsup|n>>=<frac|1|y<rsup|-z>>=<around*|(|\<ast\>|)><rsup|z><around*|(|y|)>
+        <around*|(|<around*|(|<frac|1|\<ast\>>|)>\<circ\><around*|(|\<cdot\>|)><rsup|n>|)><around*|(|y|)>=<around*|(|<frac|1|\<ast\>>|)><around*|(|<around*|(|\<cdot\>|)><rsup|n><around*|(|y|)>|)>=<around*|(|<frac|1|\<ast\>>|)><around*|(|y<rsup|n>|)>=<frac|1|y<rsup|n>>=<frac|1|y<rsup|-z>>=<around*|(|\<cdot\>|)><rsup|z><around*|(|y|)>
       </equation>
 
-      So <math|<around*|(|\<ast\>|)><rsup|z>> is the composition of
+      So <math|<around*|(|\<cdot\>|)><rsup|z>> is the composition of
       <math|<around*|(|<frac|1|\<ast\>>|)>> and
-      <math|<around*|(|\<ast\>|)><rsup|n>> where these functions have a
+      <math|<around*|(|\<cdot\>|)><rsup|n>> where these functions have a
       derivative at <math|x> and
 
       <\equation>
-        <label|eq 16.41.182><around*|(|<around*|(|\<ast\>|)><rsup|n>|)><rprime|'><rsub|x>=n\<cdot\>x<rsup|n-1><text|
-        and ><around*|(|<frac|1|\<ast\>>|)><rprime|'><rsub|x>\<equallim\><rsub|<text|[eq:
+        <label|eq 16.41.182><around*|(|<around*|(|\<cdot\>|)><rsup|n>|)><rprime|'><rsub|x>=n\<cdot\>x<rsup|n-1><text|
+        and ><around*|(|<frac|1|\<cdot\>>|)><rprime|'><rsub|x>\<equallim\><rsub|<text|[eq:
         <reference|diff derivate of inverse function>]>>-<frac|1|x<rsup|2>>
       </equation>
 
       Hence using [theorem: <reference|diff chain rule calculus>] we have
-      that <math|<around*|(|\<ast\>|)><rsup|z>> has a derivative at <math|x>
+      that <math|<around*|(|\<cdot\>|)><rsup|z>> has a derivative at <math|x>
       and\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<around*|(|<around*|(|\<ast\>|)><rsup|z>|)><rprime|'><rsub|x>>|<cell|=>|<cell|<around*|(|<around*|(|<frac|1|\<ast\>>|)>\<circ\><around*|(|\<ast\>|)><rsup|n>|)><rprime|'><rsub|x>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|diff chain rule calculus>]>>>|<cell|<around*|(|<around*|(|\<ast\>|)><rsup|n>|)><rprime|'><rsub|x>\<cdot\><around*|(|<frac|1|\<ast\>>|)><rprime|'><rsub|<around*|(|\<ast\>|)><rsup|n><around*|(|x|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
-        <reference|eq 16.41.182>]>>>|<cell|n\<cdot\>x<rsup|n-1>\<cdot\><frac|-1|<around*|(|<around*|(|\<star\>|)><rsup|n><around*|(|x|)>|)><rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|n\<cdot\>x<rsup|n-1>\<cdot\>-<frac|1|x<rsup|2\<cdot\>n>>>>|<row|<cell|>|<cell|=>|<cell|-n\<cdot\>x<rsup|n-1>\<cdot\><frac|1|x<rsup|n-1>\<cdot\>x<rsup|2\<cdot\>n-<around*|(|n-1|)>>>>>|<row|<cell|>|<cell|=>|<cell|-n\<cdot\><frac|1|x<rsup|n+1>>>>|<row|<cell|>|<cell|=>|<cell|z\<cdot\><frac|1|x<rsup|n+1>>>>|<row|<cell|>|<cell|=>|<cell|z\<cdot\><around*|(|\<ast\>|)><rsup|-<around*|(|n+1|)>><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|z\<cdot\><around*|(|\<ast\>|)><rsup|z-1><around*|(|x|)>>>>>
+        <tformat|<table|<row|<cell|<around*|(|<around*|(|\<cdot\>|)><rsup|z>|)><rprime|'><rsub|x>>|<cell|=>|<cell|<around*|(|<around*|(|<frac|1|\<ast\>>|)>\<circ\><around*|(|\<cdot\>|)><rsup|n>|)><rprime|'><rsub|x>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|diff chain rule calculus>]>>>|<cell|<around*|(|<around*|(|\<cdot\>|)><rsup|n>|)><rprime|'><rsub|x>\<cdot\><around*|(|<frac|1|\<ast\>>|)><rprime|'><rsub|<around*|(|\<cdot\>|)><rsup|n><around*|(|x|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.41.182>]>>>|<cell|n\<cdot\>x<rsup|n-1>\<cdot\><frac|-1|<around*|(|<around*|(|\<cdot\>|)><rsup|n><around*|(|x|)>|)><rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|n\<cdot\>x<rsup|n-1>\<cdot\>-<frac|1|x<rsup|2\<cdot\>n>>>>|<row|<cell|>|<cell|=>|<cell|-n\<cdot\>x<rsup|n-1>\<cdot\><frac|1|x<rsup|n-1>\<cdot\>x<rsup|2\<cdot\>n-<around*|(|n-1|)>>>>>|<row|<cell|>|<cell|=>|<cell|-n\<cdot\><frac|1|x<rsup|n+1>>>>|<row|<cell|>|<cell|=>|<cell|z\<cdot\><frac|1|x<rsup|n+1>>>>|<row|<cell|>|<cell|=>|<cell|z\<cdot\><around*|(|\<cdot\>|)><rsup|-<around*|(|n+1|)>><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|z\<cdot\><around*|(|\<cdot\>|)><rsup|z-1><around*|(|x|)>>>>>
       </eqnarray*>
     </enumerate>
   </proof>
+
+  TODO checked this file up to here, check the rest note
+  <math|U<rsub|<around*|[|i,x|]>>=<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|U|)>>
+  and <math|f<rsup|<around*|[|i,x|]>>=f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|U<rsub|<around*|[|i,x|]>>>>
 
   <section|Higher order differentials>
 
@@ -22018,7 +22026,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|15>
-    <associate|page-first|859>
+    <associate|page-first|861>
     <associate|section-nr|0>
     <associate|subsection-nr|0>
   </collection>
