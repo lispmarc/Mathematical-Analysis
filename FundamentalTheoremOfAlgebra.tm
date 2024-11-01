@@ -1332,7 +1332,204 @@
       17.14.136>]>>>|<cell|p<around*|(|0|)>+z<rsup|m>\<cdot\>q<around*|(|z|)><eq-number>>>>>
     </eqnarray*>
 
-    Finally we have <math|q<around*|(|0|)>=<big|sum><rsub|i=0><rsup|n-m>c<rsub|i>\<cdot\>0<rsup|i>=c<rsub|0>+<big|sum><rsub|i=1><rsup|n-m>c<rsub|i>\<cdot\>0<rsup|i>=c<rsub|0>+<big|sum><rsub|i=1><rsup|n-m>c<rsub|i>\<cdot\>0=c<rsub|0>=a<rsub|m>\<neq\>0>\ 
+    Finally we have <math|q<around*|(|0|)>=<big|sum><rsub|i=0><rsup|n-m>c<rsub|i>\<cdot\>0<rsup|i>=c<rsub|0>+<big|sum><rsub|i=1><rsup|n-m>c<rsub|i>\<cdot\>0<rsup|i>=c<rsub|0>+<big|sum><rsub|i=1><rsup|n-m>c<rsub|i>\<cdot\>0=c<rsub|0>=a<rsub|m>\<neq\>0>
+    </proof>
+
+  The following lemma shows how we can split up the sets
+  <math|<around*|{|0,\<ldots\>,2\<cdot\>n|}>> and
+  <math|<around*|{|0,\<ldots\>,2\<cdot\>n-1|}>> in disjoint sets of even and
+  odd numbers.
+
+  <\lemma>
+    <label|lemma 17.26.136>Let <math|n\<in\>\<bbb-N\>> then we have the
+    following <with|font-series|bold|disjoint> unions\ 
+
+    <\enumerate>
+      <item><math|<around*|{|0,\<ldots\>,2\<cdot\>n|}>=<around*|{|2\<cdot\>k\|k\<in\><around*|{|0,\<ldots\>,n|}>|}><big|sqcup><around*|{|2\<cdot\>k+1\|k\<in\><around*|{|0,\<ldots\>,n-1|}>|}>>
+
+      <item><math|<around*|{|0,\<ldots\>,2\<cdot\>n-1|}>=<around*|{|2\<cdot\>k\|k\<in\><around*|{|0,\<ldots\>,n-1|}>|}><big|sqcup><around*|{|2\<cdot\>k+1\|k\<in\><around*|{|0,\<ldots\>,n-1|}>|}>>
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>We use induction in the proof, so let
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\>\|<around*|{|0,\<ldots\>,2\<cdot\>n|}>=<around*|{|2\<cdot\>k\|k\<in\><around*|{|0,\<ldots\>,n|}>|}><big|cup><around*|{|2\<cdot\>k+1\|k\<in\><around*|{|0,\<ldots\>,n-1|}>|}>|}>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|1\<in\>S>>As <math|<around*|{|0,\<ldots\>,2\<cdot\>1|}>=<around*|{|0,1,2|}>=<around*|{|0,2|}><big|cup><around*|{|1|}>=<around*|{|2\<cdot\>k\|k\<in\><around*|{|0,1|}>|}><big|cup><around*|{|2\<cdot\>k+1\|k\<in\><around*|{|0|}>|}>>
+        we have that <math|1\<in\>S>
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>We have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|{|0,\<ldots\>,2\<cdot\><around*|(|n+1|)>|}>>|<cell|=>|<cell|>>|<row|<cell|<around*|{|0,\<ldots\>,2\<cdot\>n|}><big|cup><around*|{|2\<cdot\>n+1,2\<cdot\><around*|(|n+1|)>|}>>|<cell|\<equallim\><rsub|n\<in\>S>>|<cell|>>|<row|<cell|<around*|{|2\<cdot\>k\|k\<in\><around*|{|0,\<ldots\>,n|}>|}><big|cup><around*|{|2\<cdot\>k+1\|k\<in\><around*|{|0,\<ldots\>,n-1|}>|}><big|cup><around*|{|2\<cdot\>n+1,2\<cdot\><around*|(|n+1|)>|}>>|<cell|=>|<cell|>>|<row|<cell|<around*|{|2\<cdot\>k\|k\<in\><around*|{|0,\<ldots\>,n+1|}>|}><big|cup><around*|{|2\<cdot\>k+1\|k\<in\><around*|{|0,\<ldots\>,n|}>|}>>|<cell|=>|<cell|>>|<row|<cell|<around*|{|2\<cdot\>k\|k\<in\><around*|{|0,\<ldots\>,n+1|}>|}><big|cup><around*|{|2\<cdot\>k+1\|k\<in\><around*|{|0,\<ldots\>,<around*|(|n+1|)>-1|}>|}>>|<cell|>|<cell|>>>>
+        </eqnarray*>
+
+        proving that <math|n+1\<in\>S>.
+      </description>
+
+      Mathematical induction proves then that
+      <math|\<forall\>n\<in\>\<bbb-N\><text| we have >>
+
+      <\equation*>
+        <around*|{|0,\<ldots\>,2\<cdot\>n|}>=<around*|{|2\<cdot\>k\|k\<in\><around*|{|0,\<ldots\>,n|}>|}><big|cup><around*|{|2\<cdot\>k+1\|k\<in\><around*|{|0,\<ldots\>,n-1|}>|}>
+      </equation*>
+
+      Further if <math|m\<in\><around*|{|2\<cdot\>k\|k\<in\><around*|{|0,\<ldots\>,n|}>|}><big|cap><around*|{|2\<cdot\>k+1\|k\<in\><around*|{|0,\<ldots\>,n-1|}>|}>>
+      then there exist a <math|k\<in\><around*|{|0,\<ldots\>,n|}>> and a
+      <math|l\<in\><around*|{|0,\<ldots\>.n-1|}>> such that
+      <math|2\<cdot\>k=m=2\<cdot\>l+1> so that by [theorem:
+      <reference|integers even condition>] <math|m> is even and odd [= not
+      even] leading to a contradiction. Hence we must have that\ 
+
+      <\equation*>
+        <around*|{|2\<cdot\>k\|k\<in\><around*|{|0,\<ldots\>,n|}>|}><big|cap><around*|{|2\<cdot\>k+1\|k\<in\><around*|{|0,\<ldots\>,n-1|}>|}>=\<varnothing\>
+      </equation*>
+
+      so that\ 
+
+      <\equation*>
+        <around*|{|0,\<ldots\>,2\<cdot\>n|}>=<around*|{|2\<cdot\>k\|k\<in\><around*|{|0,\<ldots\>,n|}>|}><big|sqcup><around*|{|2\<cdot\>k+1\|k\<in\><around*|{|0,\<ldots\>,n-1|}>|}>
+      </equation*>
+
+      <item>We use induction in the proof, so let
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\>\|<around*|{|0,\<ldots\>,2\<cdot\>n-1|}>=<around*|{|2\<cdot\>k\|k\<in\><around*|{|0,\<ldots\>,n-1|}>|}><big|cup><around*|{|2\<cdot\>k+1\|k\<in\><around*|{|0,\<ldots\>,n-1|}>|}>|}>
+      </equation*>
+
+      then we have:\ 
+
+      <\description>
+        <item*|<math|1\<in\>S>>As <math|<around*|{|0,\<ldots\>,2\<cdot\>1-1|}>=<around*|{|0,1|}>=<around*|{|0|}><big|cup><around*|{|1|}>=<around*|{|2\<cdot\>k\|k\<in\><around*|{|0|}>|}><big|cup><around*|{|2\<cdot\>k+1\|k\<in\><around*|{|0|}>|}>>
+        we have that <math|1\<in\>S>.
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>We have
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|{|0,\<ldots\>,2\<cdot\><around*|(|n+1|)>-1|}>>|<cell|=>|<cell|>>|<row|<cell|<around*|{|0,\<ldots\>,2\<cdot\>n+1|}>>|<cell|=>|<cell|>>|<row|<cell|<around*|{|0,\<ldots\>,2\<cdot\>n-1|}><big|cup><around*|{|2\<cdot\>n,2\<cdot\>n+1|}>>|<cell|\<equallim\><rsub|n\<in\>S>>|<cell|>>|<row|<cell|<around*|{|2\<cdot\>k\|k\<in\><around*|{|0,\<ldots\>,n-1|}>|}><big|cup><around*|{|2\<cdot\>k+1\|k\<in\><around*|{|0,\<ldots\>,n-1|}>|}><big|cup><around*|{|2\<cdot\>n,2\<cdot\>n+1|}>>|<cell|=>|<cell|>>|<row|<cell|<around*|{|2\<cdot\>k\|k\<in\><around*|{|0,\<ldots\>,n|}>|}><big|cup><around*|{|2\<cdot\>k+1\|k\<in\><around*|{|0,\<ldots\>,n|}>|}>>|<cell|=>|<cell|>>|<row|<cell|<around*|{|2\<cdot\>k\|k\<in\><around*|{|0,\<ldots\>,<around*|(|n+1|)>-1|}>|}><big|cup><around*|{|2\<cdot\>k+1\|k\<in\><around*|{|0,\<ldots\>,<around*|(|n+1|)>-1|}>|}>>|<cell|>|<cell|>>>>
+        </eqnarray*>
+
+        so that <math|n+1\<in\>S>.
+      </description>
+
+      Mathematical induction proves then that
+      <math|\<forall\>n\<in\>\<bbb-N\>> we have\ 
+
+      <\equation*>
+        <around*|{|0,\<ldots\>,2\<cdot\>n-1|}>=<around*|{|2\<cdot\>k\|k\<in\><around*|{|0,\<ldots\>,n-1|}>|}><big|cup><around*|{|2\<cdot\>k+1\|k\<in\><around*|{|0,\<ldots\>,n-1|}>|}>
+      </equation*>
+
+      Further if <math|m\<in\><around*|{|2\<cdot\>k\|k\<in\><around*|{|0,\<ldots\>,n-1|}>|}><big|cap><around*|{|2\<cdot\>k+1\|k\<in\><around*|{|0,\<ldots\>,n-1|}>|}>>
+      then there exist a <math|k\<in\><around*|{|0,\<ldots\>,n-1|}>> and a
+      <math|l\<in\><around*|{|0,\<ldots\>.n-1|}>> such that
+      <math|2\<cdot\>k=m=2\<cdot\>l+1> so that by [theorem:
+      <reference|integers even condition>] <math|m> is even and odd [= not
+      even] leading to a contradiction. Hence we must have that
+
+      <\equation*>
+        <around*|{|2\<cdot\>k\|k\<in\><around*|{|0,\<ldots\>,n-1|}>|}><big|cap><around*|{|2\<cdot\>k+1\|k\<in\><around*|{|0,\<ldots\>,n-1|}>|}>=\<varnothing\>
+      </equation*>
+
+      so that\ 
+
+      <\equation*>
+        <around*|{|0,\<ldots\>,2\<cdot\>n-1|}>=<around*|{|2\<cdot\>k\|k\<in\><around*|{|0,\<ldots\>,n-1|}>|}><big|sqcup><around*|{|2\<cdot\>k+1\|k\<in\><around*|{|0,\<ldots\>,n-1|}>|}>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  <\lemma>
+    <label|lemma 17.27.136>Let <math|n\<in\>\<bbb-N\>> then if we define
+
+    <\equation*>
+      A=<around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}><text|
+      and for >m\<in\><around*|{|1,\<ldots\>,2\<cdot\>n-1|}>
+      B<rsub|m>=<around*|{|<around*|(|k,l|)>\<in\>A\|k+l=m|}>\<subseteq\>A
+    </equation*>
+
+    we have that\ 
+
+    <\equation*>
+      A=<big|sqcup><rsub|m\<in\><around*|{|1,\<ldots\>,2\<cdot\>n-1|}>>B<rsub|m>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    As <math|\<forall\>m\<in\><around*|{|1,\<ldots\>,2\<cdot\>n-1|}>>
+    <math|B<rsub|m>\<subseteq\>A> it follows that\ 
+
+    <\equation>
+      <label|eq 17.16.136><big|cup><rsub|m\<in\><around*|{|1,\<ldots\>,2\<cdot\>n-1|}>>B<rsub|m>\<subseteq\>A
+    </equation>
+
+    Further if <math|<around*|(|k,l|)>\<in\>A> then
+    <math|0\<leqslant\>k\<less\>l\<leqslant\>n> so that
+    <math|k+l\<less\>l+l\<leqslant\>2\<cdot\>n> hence
+    <math|k+l\<leqslant\>2\<cdot\>n-1>. Further as <math|0\<less\>l> we have
+    <math|0\<less\>k+l> or <math|1\<leqslant\>k+l>. Hence if we take
+    <math|m=k+l> we have <math|m\<in\><around*|{|1,\<ldots\>,2\<cdot\>n-1|}>>
+    proving that <math|<around*|(|k,l|)>\<in\>B<rsub|m>\<subseteq\><big|cup><rsub|m\<in\><around*|{|1,\<ldots\>,2\<cdot\>n-1|}>>B<rsub|m>>
+    or that <math|A\<subseteq\><big|cup><rsub|m\<in\><around*|{|1,\<ldots\>,2\<cdot\>n-1|}>>B<rsub|m>>.
+    Combining this with [eq: <reference|eq 17.16.136>] gives us
+
+    <\equation*>
+      A=<big|cup><rsub|m\<in\><around*|{|1,\<ldots\>,2\<cdot\>n-1|}>>B<rsub|m>
+    </equation*>
+
+    Let <math|m,m<rprime|'>\<in\><around*|{|1,\<ldots\>,2\<cdot\>n-1|}>> with
+    <math|m\<neq\>m<rprime|'>> and assume that
+    <math|<around*|(|k,l|)>\<in\>B<rsub|m><big|cap>B<rsub|m<rprime|'>>> then
+    <math|m=k+l=m<rprime|'>> contradicting <math|m=m<rprime|'>>, so we must
+    have that <math|B<rsub|m><big|cap>B<rsub|m<rprime|'>>=\<varnothing\>>.
+    Hence\ 
+
+    <\equation*>
+      A=<big|sqcup><rsub|m\<in\><around*|{|1,\<ldots\>,2\<cdot\>n-1|}>>B<rsub|m>
+    </equation*>
+  </proof>
+
+  <\lemma>
+    <label|lemma 17.28.136>Let <math|n\<in\>\<bbb-N\>> then for
+    <math|k=2\<cdot\>n> and <math|\<zeta\>=<around*|(|1+<frac|i|k>|)><rsup|2>>
+    we have that <math|Re<around*|(|\<zeta\><rsup|k>|)>\<less\>0\<less\>Img<around*|(|\<zeta\><rsup|k>|)>>.
+  </lemma>
+
+  <\proof>
+    We have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<zeta\><rsup|k>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|complex (x^n)^m>>>>|<cell|>>|<row|<cell|<around*|(|1+<frac|i|k>|)><rsup|2\<cdot\>k>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|fundamental binomial formula>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|l=0><rsup|2\<cdot\>k><around*|(|<binom|2\<cdot\>k|l>\<cdot\><around*|(|<frac|i|k>|)><rsup|l>\<cdot\>1<rsup|2\<cdot\>k-l>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|l=0><rsup|2\<cdot\>k><around*|(|<binom|2\<cdot\>k|l>\<cdot\><around*|(|<frac|i|k>|)><rsup|l>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|0,\<ldots\>,2\<cdot\>k|}>><around*|(|<binom|2\<cdot\>k|l>\<cdot\><around*|(|<frac|i|k>|)><rsup|l>|)>>|<cell|\<equallim\><rsub|<text|[lemma:
+      <reference|lemma 17.26.136>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|2\<cdot\>j\|j\<in\><around*|{|0,\<ldots\>,k|}>|}><big|sqcup><around*|{|2\<cdot\>j+1\|j\<in\><around*|{|1,\<ldots\>,k-1|}>|}>><around*|(|<binom|2\<cdot\>k|l>\<cdot\><around*|(|<frac|i|k>|)><rsup|l>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum over disjoint subsets>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|2\<cdot\>j\|j\<in\><around*|{|0,\<ldots\>,k|}>|}>><around*|(|<binom|2\<cdot\>k|l>\<cdot\><around*|(|<frac|i|k>|)><rsup|l>|)>+<big|sum><rsub|l\<in\><around*|{|2\<cdot\>j+1\|j\<in\><around*|{|1,\<ldots\>,k-1|}>|}>><around*|(|<binom|2\<cdot\>k|l>\<cdot\><around*|(|<frac|i|k>|)><rsup|l>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum bijection on index>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|<around*|\<nobracket\>|0,\<ldots\>,k|}>|\<nobracket\>>><around*|(|<binom|2\<cdot\>k|2\<cdot\>l>\<cdot\><around*|(|<frac|i|k>|)><rsup|2\<cdot\>l>|)>+<big|sum><rsub|l\<in\><around*|{|1,\<ldots\>,k-1|}>><around*|(|<binom|2\<cdot\>k|2\<cdot\>l+1>\<cdot\><around*|(|<frac|i|k>|)><rsup|2\<cdot\>l+1>|)>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation>
+      <label|eq 17.17.136>\<zeta\><rsup|k>=<big|sum><rsub|l\<in\><around*|{|<around*|\<nobracket\>|0,\<ldots\>,k|}>|\<nobracket\>>><around*|(|<binom|2\<cdot\>k|2\<cdot\>l>\<cdot\><around*|(|<frac|i|k>|)><rsup|2\<cdot\>l>|)>+<big|sum><rsub|l\<in\><around*|{|1,\<ldots\>,k-1|}>><around*|(|<binom|2\<cdot\>k|2\<cdot\>l+1>\<cdot\><around*|(|<frac|i|k>|)><rsup|2\<cdot\>l+1>|)>
+    </equation>
+
+    Now\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<big|sum><rsub|l\<in\><around*|{|<around*|\<nobracket\>|0,\<ldots\>,k|}>|\<nobracket\>>><around*|(|<binom|2\<cdot\>k|2\<cdot\>l>\<cdot\><around*|(|<frac|i|k>|)><rsup|2\<cdot\>l>|)>>|<cell|\<equallim\><rsub|k=2\<cdot\>n>>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|<around*|\<nobracket\>|0,\<ldots\>,2\<cdot\>n|}>|\<nobracket\>>><around*|(|<binom|2\<cdot\>k|2\<cdot\>l>\<cdot\><around*|(|<frac|i|k>|)><rsup|2\<cdot\>l>|)>>|<cell|\<equallim\><rsub|<text|[lemma:
+      <reference|lemma 17.26.136>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|2\<cdot\>j\|j\<in\><around*|{|0,\<ldots\>,n|}>|}><big|sqcup><around*|{|2\<cdot\>j+1\|j\<in\><around*|{|0,\<ldots\>,n-1|}>|}>><around*|(|<binom|2\<cdot\>k|2\<cdot\>l>\<cdot\><around*|(|<frac|i|k>|)><rsup|2\<cdot\>l>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum over disjoint subsets>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|2\<cdot\>j\|j\<in\><around*|{|0,\<ldots\>,n|}>|}>><around*|(|<binom|2\<cdot\>k|2\<cdot\>l>\<cdot\><around*|(|<frac|i|k>|)><rsup|2\<cdot\>l>|)>+<big|sum><rsub|l\<in\><around*|{|2\<cdot\>j+1\|j\<in\><around*|{|0,\<ldots\>,n-1|}>|}>><around*|(|<binom|2\<cdot\>k|2\<cdot\>l>\<cdot\><around*|(|<frac|i|k>|)><rsup|2\<cdot\>l>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum bijection on index>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|0,\<ldots\>,n|}>><around*|(|<binom|2\<cdot\>k|4\<cdot\>l>\<cdot\><frac|i<rsup|4\<cdot\>l>|k<rsup|4\<cdot\>l>>|)>+<big|sum><rsub|l\<in\><around*|{|0,\<ldots\>,n-1|}>><around*|(|<binom|2\<cdot\>k|4\<cdot\>l+2>\<cdot\><frac|i<rsup|4\<cdot\>l+2>|k<rsup|4\<cdot\>l+2>>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|complex power of i>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|0,\<ldots\>,n|}>><around*|(|<binom|2\<cdot\>k|4\<cdot\>l>\<cdot\><frac|1|k<rsup|4\<cdot\>l>>|)>-<big|sum><rsub|l\<in\><around*|{|0,\<ldots\>,n-1|}>><around*|(|<binom|2\<cdot\>k|4\<cdot\>l+2>\<cdot\><frac|1|k<rsup|4\<cdot\>l+2>>|)>>|<cell|>|<cell|>>|<row|<cell|>|<cell|>|<cell|>>>>
+    </eqnarray*>
 
     \;
   </proof>
@@ -1341,7 +1538,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|16>
-    <associate|page-first|1071>
+    <associate|page-first|1069>
     <associate|section-nr|6>
     <associate|subsection-nr|0>
   </collection>
@@ -1370,6 +1567,8 @@
     <associate|eq 17.12.136|<tuple|17.12|?>>
     <associate|eq 17.13.136|<tuple|17.13|?>>
     <associate|eq 17.14.136|<tuple|17.14|?>>
+    <associate|eq 17.16.136|<tuple|17.16|?>>
+    <associate|eq 17.17.136|<tuple|17.17|?>>
     <associate|eq 17.2|<tuple|17.2|?>>
     <associate|eq 17.3.135|<tuple|17.3|?>>
     <associate|eq 17.4.135|<tuple|17.4|?>>
@@ -1401,6 +1600,9 @@
     <associate|lemma 17.19.136|<tuple|17.19|?>>
     <associate|lemma 17.24.136|<tuple|17.24|?>>
     <associate|lemma 17.25.136|<tuple|17.25|?>>
+    <associate|lemma 17.26.136|<tuple|17.26|?>>
+    <associate|lemma 17.27.136|<tuple|17.27|?>>
+    <associate|lemma 17.28.136|<tuple|17.28|?>>
     <associate|lemma 17.8.145|<tuple|17.10|?>>
   </collection>
 </references>
