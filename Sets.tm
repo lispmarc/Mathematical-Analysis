@@ -40,8 +40,11 @@
     <math|\<neg\><around*|(|x\<in\>A|)>>.\ 
   </definition>
 
-  Next we define <with|font-series|bold|sets> and
-  <with|font-series|bold|elements>, they are the same thing. A
+  Next we introduce <with|font-series|bold|sets> and
+  <with|font-series|bold|elements>, they are two notation for the same thing,
+  we use <with|font-series|bold|set> if we want to stress that it is a kind
+  of collection and <with|font-series|bold|element> that is also a member of
+  a class in contrast to a class that does not have to be a member. A
   <with|font-series|bold|set> or <with|font-series|bold|element> is something
   that is a member of a class.
 
@@ -14188,6 +14191,7 @@
     <associate|chapter-nr|0>
     <associate|page-first|9>
     <associate|page-medium|papyrus>
+    <associate|par-first|0tab>
     <associate|project-flag|false>
     <associate|section-nr|0>
     <associate|subsection-nr|0>

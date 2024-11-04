@@ -18,6 +18,8 @@
   use algebraic operations to prove the theorem. First to define the concept
   of a higher order equation we must introduce the concept of polynomals.
 
+  \;
+
   <section|Prerequisites>
 
   <subsection|Polynomials>
@@ -1836,12 +1838,255 @@
       Re<around*|(|\<zeta\><rsup|k>|)>\<less\>0\<less\>Img<around*|(|\<zeta\><rsup|k>|)>
     </equation*>
   </proof>
+
+  <subsection|Proof of the fundamental theorem of algebra>
+
+  After all this work we are ready to proof fundamental theorem of algebra.
+
+  <\theorem>
+    <label|fundamental theorem of algebra>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|{|a<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>\<subseteq\>\<bbb-C\>>
+    with <math|a<rsub|n>\<neq\>0> and <math|p:\<bbb-C\>\<rightarrow\>\<bbb-C\>>
+    the polynomial defined by <math|p<around*|(|z|)>=<big|sum><rsub|i=0>a<rsub|0>\<cdot\>z<rsup|i>>
+    then there exist a <math|z<rsub|0>\<in\>\<bbb-C\>> such that
+    <math|p<around*|(|z<rsub|0>|)>>. In other words every non constant
+    polynomial has a zero point.
+  </theorem>
+
+  <\proof>
+    First define\ 
+
+    <\equation*>
+      p\<cdot\><wide|p|\<wide-bar\>>:\<bbb-C\>\<rightarrow\>\<bbb-C\><text|
+      by ><around*|(|p\<cdot\><wide|p|\<wide-bar\>>|)><around*|(|z|)>=p<around*|(|z|)>\<cdot\><wide|p<around*|(|z|)>|\<wide-bar\>>
+    </equation*>
+
+    then for <math|z\<in\>\<bbb-C\>> we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|p\<cdot\><wide|p|\<wide-bar\>>|)><around*|(|z|)>>|<cell|=>|<cell|>>|<row|<cell|p<around*|(|z|)>\<cdot\><wide|p<around*|(|z|)>|\<wide-bar\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\>z<rsup|i>|)>\<cdot\><wide|<around*|(|<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\>z<rsup|i>|)>|\<wide-bar\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<big|sum><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>a<rsub|i>\<cdot\>z<rsup|i>|)>\<cdot\><wide|<around*|(|<big|sum><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>a<rsub|i>\<cdot\>z<rsup|i>|)>|\<wide-bar\>>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|complex conjugate properties>]>>>|<cell|>>|<row|<cell|<around*|(|<big|sum><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>a<rsub|i>\<cdot\>z<rsup|i>|)>\<cdot\><around*|(|<big|sum><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>><wide|a<rsub|i>\<cdot\>z<rsup|i>|\<wide-bar\>>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|complex conjugate properties>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|0,\<ldots\>,|}><rsup|2>>a<rsub|i>\<cdot\>z<rsup|i>\<cdot\><wide|a<rsub|j>\<cdot\>z<rsup|j>|\<wide-bar\>>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum over disjoint subsets>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k=l|}>>a<rsub|i>\<cdot\>z<rsup|i>\<cdot\><wide|a<rsub|j>\<cdot\>z<rsup|j>|\<wide-bar\>>+<big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>>a<rsub|i>\<cdot\>z<rsup|i>\<cdot\><wide|a<rsub|j>\<cdot\>z<rsup|j>|\<wide-bar\>>+<big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|l\<less\>k|}>>a<rsub|i>\<cdot\>z<rsup|i>\<cdot\><wide|a<rsub|j>\<cdot\>z<rsup|j>|\<wide-bar\>>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>a<rsub|i>\<cdot\>z<rsup|i>\<cdot\><wide|a<rsub|i>\<cdot\>z<rsup|i>|\<wide-bar\>>+<big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>>a<rsub|i>\<cdot\>z<rsup|i>\<cdot\><wide|a<rsub|j>\<cdot\>z<rsup|j>|\<wide-bar\>>+<big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|l\<less\>k|}>>a<rsub|i>\<cdot\>z<rsup|i>\<cdot\><wide|a<rsub|j>\<cdot\>z<rsup|j>|\<wide-bar\>>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>a<rsub|i>\<cdot\>z<rsup|i>\<cdot\><wide|a<rsub|i>\<cdot\>z<rsup|i>|\<wide-bar\>>+<big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>>a<rsub|i>\<cdot\>z<rsup|i>\<cdot\><wide|a<rsub|j>\<cdot\>z<rsup|j>|\<wide-bar\>>+<big|sum><rsub|<around*|(|j,i|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>>a<rsub|i>\<cdot\><wide|a<rsub|j>|\<wide-bar\>>\<cdot\>z<rsup|i>\<cdot\><around*|(|<wide|z|\<wide-bar\>>|)><rsup|j>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>a<rsub|i>\<cdot\>z<rsup|i>\<cdot\><wide|a<rsub|i>\<cdot\>z<rsup|i>|\<wide-bar\>>+<big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>>a<rsub|i>\<cdot\>z<rsup|i>\<cdot\><wide|a<rsub|j>\<cdot\>z<rsup|j>|\<wide-bar\>>+<big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>>a<rsub|j>\<cdot\>z<rsup|j>\<cdot\><wide|a<rsub|i>\<cdot\>z<rsup|i>|\<wide-bar\>>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>a<rsub|i>\<cdot\><wide|a<rsub|i>|\<wide-bar\>>\<cdot\>z<rsup|i>\<cdot\><around*|(|<wide|z|\<wide-bar\>>|)><rsup|i>+<big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>><around*|(|a<rsub|i>\<cdot\>z<rsup|i>\<cdot\><wide|a<rsub|j>\<cdot\>z<rsup|j>|\<wide-bar\>>+a<rsub|j>\<cdot\>z<rsup|j>\<cdot\><wide|a<rsub|i>\<cdot\>z<rsup|i>|\<wide-bar\>>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|complex conjugate properties>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>a<rsub|i>\<cdot\><wide|a<rsub|i>|\<wide-bar\>>\<cdot\>z<rsup|i>\<cdot\><around*|(|<wide|z|\<wide-bar\>>|)><rsup|i>+<big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>><around*|(|a<rsub|i>\<cdot\>z<rsup|i>\<cdot\><wide|a<rsub|j>\<cdot\>z<rsup|j>|\<wide-bar\>>+<wide|a<rsub|i>\<cdot\>z<rsup|i>\<cdot\><wide|a<rsub|j>\<cdot\>z<rsup|j>|\<wide-bar\>>|\<wide-bar\>>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|complex conjugate properties>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>a<rsub|i>\<cdot\><wide|a<rsub|i>|\<wide-bar\>>\<cdot\>z<rsup|i>\<cdot\><around*|(|<wide|z|\<wide-bar\>>|)><rsup|i>+2\<cdot\><big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>>Re<around*|(|a<rsub|i>\<cdot\>z<rsup|i>\<cdot\><wide|a<rsub|j>\<cdot\>z<rsup|j>|\<wide-bar\>>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>><around*|\||a<rsub|i>|\|><rsup|2>\<cdot\><around*|\||z|\|><rsup|2\<cdot\>i>+2\<cdot\><big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>>Re<around*|(|a<rsub|i>\<cdot\>z<rsup|i>\<cdot\><wide|a<rsub|j>\<cdot\>z<rsup|j>|\<wide-bar\>>|)>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    so we have that
+
+    <\equation>
+      <label|eq 17.43.138><around*|(|p\<cdot\><wide|p|\<wide-bar\>>|)><around*|(|z|)>=<big|sum><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>><around*|\||a<rsub|i>|\|><rsup|2>\<cdot\><around*|\||z|\|><rsup|2\<cdot\>i>+2\<cdot\><big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>>Re<around*|(|a<rsub|i>\<cdot\>z<rsup|i>\<cdot\><wide|a<rsub|j>\<cdot\>z<rsup|j>|\<wide-bar\>>|)>
+    </equation>
+
+    Further we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|p\<cdot\><wide|p|\<wide-bar\>>|)><around*|(|z|)>>|<cell|=>|<cell|>>|<row|<cell|p<around*|(|z|)>\<cdot\><wide|p<around*|(|z|)>|\<wide-bar\>>>|<cell|\<equallim\><rsub|0\<leqslant\>p<around*|(|z|)>\<cdot\><wide|p<around*|(|z|)>|\<wide-bar\>>\<in\>\<bbb-R\>>>|<cell|>>|<row|<cell|<around*|\||p<around*|(|z|)>\<cdot\><wide|p<around*|(|z|)>|\<wide-bar\>>|\|>>|<cell|\<equallim\><rsub|<text|[lemma:
+      <reference|fundamental norm properties>]>>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|p<around*|(|z|)>\<cdot\><wide|p<around*|(|z|)>|\<wide-bar\>>|\<\|\|\>>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 17.43.138>]>>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<big|sum><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>><around*|\||a<rsub|i>|\|><rsup|2>\<cdot\><around*|\||z|\|><rsup|2\<cdot\>i>+2\<cdot\><big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>>Re<around*|(|a<rsub|i>\<cdot\>z<rsup|i>\<cdot\><wide|a<rsub|j>\<cdot\>z<rsup|j>|\<wide-bar\>>|)>|\<\|\|\>>>|<cell|\<geqslant\><rsub|<text|[theorem:
+      <reference|normed absolute value norm
+      differences>]>>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<big|sum><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>><around*|\||a<rsub|i>|\|><rsup|2>\<cdot\><around*|\||z|\|><rsup|2\<cdot\>i>|\<\|\|\>>-<around*|\<\|\|\>|2\<cdot\><big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>>Re<around*|(|a<rsub|i>\<cdot\>z<rsup|i>\<cdot\><wide|a<rsub|j>\<cdot\>z<rsup|j>|\<wide-bar\>>|)>|\<\|\|\>>>|<cell|\<equallim\><rsub|<text|[lemma:
+      <reference|fundamental norm properties>]>>>|<cell|>>|<row|<cell|<around*|\||<big|sum><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>><around*|\||a<rsub|i>|\|><rsup|2>\<cdot\><around*|\||z|\|><rsup|2\<cdot\>i>|\|>-<around*|\<\|\|\>|2\<cdot\><big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>>Re<around*|(|a<rsub|i>\<cdot\>z<rsup|i>\<cdot\><wide|a<rsub|j>\<cdot\>z<rsup|j>|\<wide-bar\>>|)>|\<\|\|\>>>|<cell|\<equallim\><rsub|>>|<cell|>>|<row|<cell|<big|sum><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>><around*|\||a<rsub|i>|\|><rsup|2>\<cdot\><around*|\||z|\|><rsup|2\<cdot\>i>-2\<cdot\><around*|\<\|\|\>|<big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>>Re<around*|(|a<rsub|i>\<cdot\>z<rsup|i>\<cdot\><wide|a<rsub|j>\<cdot\>z<rsup|j>|\<wide-bar\>>|)>|\<\|\|\>>>|<cell|\<geqslant\>>|<cell|>>|<row|<cell|<around*|\||a<rsub|n>|\|><rsup|2>\<cdot\><around*|\||z|\|><rsup|2\<cdot\>n>-2\<cdot\><around*|\<\|\|\>|<big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>>Re<around*|(|a<rsub|i>\<cdot\>z<rsup|i>\<cdot\><wide|a<rsub|j>\<cdot\>z<rsup|j>|\<wide-bar\>>|)>|\<\|\|\>>>|<cell|\<geqslant\>>|<cell|>>|<row|<cell|<around*|\||a<rsub|n>|\|><rsup|2>\<cdot\><around*|\||z|\|><rsup|2\<cdot\>n>-2\<cdot\><big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>><around*|\<\|\|\>|Re<around*|(|a<rsub|i>\<cdot\>z<rsup|i>\<cdot\><wide|a<rsub|j>\<cdot\>z<rsup|j>|\<wide-bar\>>|)>|\<\|\|\>>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|complex conjugate properties>]>>>|<cell|>>|<row|<cell|<around*|\||a<rsub|n>|\|><rsup|2>\<cdot\><around*|\||z|\|><rsup|2\<cdot\>n>-2\<cdot\><big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>><around*|\<\|\|\>|Re<around*|(|a<rsub|i>\<cdot\><wide|a|\<wide-bar\>><rsub|j>\<cdot\>z<rsup|i>\<cdot\><wide|z<rsup|j>|\<wide-bar\>>|)>|\<\|\|\>>>|<cell|\<geqslant\><rsub|<text|[lemma:
+      <reference|fundamental norm properties>(4)]>>>|<cell|>>|<row|<cell|<around*|\||a<rsub|n>|\|><rsup|2>\<cdot\><around*|\||z|\|><rsup|2\<cdot\>n>-2\<cdot\><big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>><around*|\<\|\|\>|a<rsub|i>\<cdot\><wide|a<rsub|j>|\<wide-bar\>>|\<\|\|\>>\<cdot\><around*|\<\|\|\>|z<rsup|i>\<cdot\><wide|z<rsup|j>|\<wide-bar\>>|\<\|\|\>>>|<cell|\<geqslant\><rsub|<text|[lemma:
+      <reference|fundamental norm properties>(3)]>>>|<cell|>>|<row|<cell|<around*|\||a<rsub|n>|\|><rsup|2>\<cdot\><around*|\||z|\|><rsup|2\<cdot\>n>-2\<cdot\><big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>><around*|\<\|\|\>|a<rsub|i>\<cdot\><wide|a<rsub|j>|\<wide-bar\>>|\<\|\|\>>\<cdot\><around*|\<\|\|\>|z<rsup|i>|\<\|\|\>>\<cdot\><around*|\<\|\|\>|<wide|z<rsup|j>|\<wide-bar\>>|\<\|\|\>>>|<cell|\<equallim\><rsub|<text|[lemma:
+      <reference|fundamental norm properties>(2)]>>>|<cell|>>|<row|<cell|<around*|\||a<rsub|n>|\|><rsup|2>\<cdot\><around*|\||z|\|><rsup|2\<cdot\>n>-2\<cdot\><big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>><around*|\<\|\|\>|a<rsub|i>\<cdot\><wide|a<rsub|j>|\<wide-bar\>>|\<\|\|\>>\<cdot\><around*|\<\|\|\>|z<rsup|i>|\<\|\|\>>\<cdot\><around*|\<\|\|\>|z<rsup|j>|\<\|\|\>>>|<cell|\<geqslant\><rsub|<text|[lemma:
+      <reference|fundamental norm properties>(5)]>>>|<cell|>>|<row|<cell|<around*|\||a<rsub|n>|\|><rsup|2>\<cdot\><around*|\||z|\|><rsup|2\<cdot\>n>-2\<cdot\><big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>><around*|\<\|\|\>|a<rsub|i>\<cdot\><wide|a<rsub|j>|\<wide-bar\>>|\<\|\|\>>\<cdot\><around*|\<\|\|\>|z|\<\|\|\>><rsup|i>\<cdot\><around*|\<\|\|\>|z<rsup|>|\<\|\|\>><rsup|j>>|<cell|=>|<cell|>>|<row|<cell|<around*|\||a<rsub|n>|\|><rsup|2>\<cdot\><around*|\||z|\|><rsup|2\<cdot\>n>-2\<cdot\><big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>><around*|\<\|\|\>|a<rsub|i>\<cdot\><wide|a<rsub|j>|\<wide-bar\>>|\<\|\|\>>\<cdot\><around*|\<\|\|\>|z|\<\|\|\>><rsup|i+j>>|<cell|\<equallim\><rsub|0\<leqslant\><around*|\||z|\|><rsup|2\<cdot\>n>\<in\>\<bbb-R\>\<wedge\><text|[lemma:
+      <reference|fundamental norm properties>]>>>|<cell|>>|<row|<cell|<around*|\||a<rsub|n>|\|><rsup|2>\<cdot\><around*|\<\|\|\>|<around*|\||z|\|><rsup|2\<cdot\>n>|\<\|\|\>>-2\<cdot\><big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>><around*|\<\|\|\>|a<rsub|i>\<cdot\><wide|a<rsub|j>|\<wide-bar\>>|\<\|\|\>>\<cdot\><around*|\<\|\|\>|z|\<\|\|\>><rsup|i+j>>|<cell|=>|<cell|>>|<row|<cell|<around*|\||a<rsub|n>|\|><rsup|2>\<cdot\><around*|\<\|\|\>|z<rsup|n>\<cdot\><wide|z<rsup|n>|\<wide-bar\>>|\<\|\|\>>-2\<cdot\><big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>><around*|\<\|\|\>|a<rsub|i>\<cdot\><wide|a<rsub|j>|\<wide-bar\>>|\<\|\|\>>\<cdot\><around*|\<\|\|\>|z|\<\|\|\>><rsup|i+j>>|<cell|\<geqslant\><rsub|<text|[lemma:
+      <reference|fundamental norm properties>(3)]>>>|<cell|>>|<row|<cell|<around*|\||a<rsub|n>|\|><rsup|2>\<cdot\><frac|<around*|\<\|\|\>|z<rsup|n>|\<\|\|\>>\<cdot\><around*|\<\|\|\>|<wide|z<rsup|n>|\<wide-bar\>>|\<\|\|\>>|2>-2\<cdot\><big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>><around*|\<\|\|\>|a<rsub|i>\<cdot\><wide|a<rsub|j>|\<wide-bar\>>|\<\|\|\>>\<cdot\><around*|\<\|\|\>|z|\<\|\|\>><rsup|i+j>>|<cell|\<equallim\><rsub|<text|[lemma:
+      <reference|fundamental norm properties>(2)]>>>|<cell|>>|<row|<cell|<around*|\||a<rsub|n>|\|><rsup|2>\<cdot\><frac|<around*|\<\|\|\>|z<rsup|n>|\<\|\|\>>\<cdot\><around*|\<\|\|\>|z<rsup|n>|\<\|\|\>>|2>-2\<cdot\><big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>><around*|\<\|\|\>|a<rsub|i>\<cdot\><wide|a<rsub|j>|\<wide-bar\>>|\<\|\|\>>\<cdot\><around*|\<\|\|\>|z|\<\|\|\>><rsup|i+j>>|<cell|=>|<cell|>>|<row|<cell|<around*|\||a<rsub|n>|\|><rsup|2>\<cdot\><frac|<around*|\<\|\|\>|z<rsup|n>|\<\|\|\>><rsup|2>|2>-2\<cdot\><big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>><around*|\<\|\|\>|a<rsub|i>\<cdot\><wide|a<rsub|j>|\<wide-bar\>>|\<\|\|\>>\<cdot\><around*|\<\|\|\>|z|\<\|\|\>><rsup|i+j>>|<cell|\<geqslant\><rsub|<text|[lemma:
+      <reference|fundamental norm properties>(7)]>>>|<cell|>>|<row|<cell|<around*|\||a<rsub|n>|\|><rsup|2>\<cdot\><frac|<around*|\<\|\|\>|z|\<\|\|\>><rsup|2\<cdot\>n>|2\<cdot\>2<rsup|n>>-2\<cdot\><big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>><around*|\<\|\|\>|a<rsub|i>\<cdot\><wide|a<rsub|j>|\<wide-bar\>>|\<\|\|\>>\<cdot\><around*|\<\|\|\>|z|\<\|\|\>><rsup|i+j>>|<cell|=>|<cell|>>|<row|<cell|<around*|\||a<rsub|n>|\|><rsup|2>\<cdot\><frac|<around*|\<\|\|\>|z|\<\|\|\>><rsup|2\<cdot\>n>|2<rsup|n+1>>-2\<cdot\><big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>><around*|\<\|\|\>|a<rsub|i>\<cdot\><wide|a<rsub|j>|\<wide-bar\>>|\<\|\|\>>\<cdot\><around*|\<\|\|\>|z|\<\|\|\>><rsup|i+j>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    so that\ 
+
+    <\equation>
+      <label|eq 17.44.138><around*|(|p\<cdot\><wide|p|\<wide-bar\>>|)><around*|(|z|)>\<geqslant\><around*|\||a<rsub|n>|\|><rsup|2>\<cdot\><frac|<around*|\<\|\|\>|z|\<\|\|\>><rsup|2\<cdot\>n>|2<rsup|n+1>>-2\<cdot\><big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>><around*|\<\|\|\>|a<rsub|i>\<cdot\><wide|a<rsub|j>|\<wide-bar\>>|\<\|\|\>>\<cdot\><around*|\<\|\|\>|z|\<\|\|\>><rsup|i+j>
+    </equation>
+
+    Using [lemma: <reference|lemma 17.27.136>] we have
+    <math|A=<around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>=<big|sqcup><rsub|m\<in\><around*|{|1,\<ldots\>,2\<cdot\>n-1|}>>B<rsub|m>>
+    where <math|<rigid|B<rsub|m>=<around*|{|<around*|(|k,l|)>\<in\>A\|k+l=m|}>>>.
+    Using this in the above [eq: <reference|eq 17.44.138>] gives
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\<in\><around*|{|0,\<ldots\>,n|}><rsup|2>\|k\<less\>l|}>><around*|\<\|\|\>|a<rsub|i>\<cdot\><wide|a<rsub|j>|\<wide-bar\>>|\<\|\|\>>\<cdot\><around*|\<\|\|\>|z|\<\|\|\>><rsup|i+j>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|<around*|(|i,j|)>\<in\><big|sqcup><rsub|m\<in\><around*|{|1,\<ldots\>,2\<cdot\>n-1|}>>B<rsub|i>><around*|\<\|\|\>|a<rsub|i>\<cdot\><wide|a<rsub|j>|\<wide-bar\>>|\<\|\|\>>\<cdot\><around*|\<\|\|\>|z|\<\|\|\>><rsup|i+j>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum over disjoint subsets
+      (1)>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|m\<in\><around*|{|1,\<ldots\>,2\<cdot\>n-1|}>><around*|(|<big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\|k+l=m|}>><around*|\<\|\|\>|a<rsub|i>\<cdot\><wide|a<rsub|j>|\<wide-bar\>>|\<\|\|\>>\<cdot\><around*|\<\|\|\>|z|\<\|\|\>><rsup|i+j>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|m\<in\><around*|{|1,\<ldots\>,2\<cdot\>n-1|}>><around*|(|<big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\|k+l=m|}>><around*|\<\|\|\>|a<rsub|i>\<cdot\><wide|a<rsub|j>|\<wide-bar\>>|\<\|\|\>>\<cdot\><around*|\<\|\|\>|z|\<\|\|\>><rsup|m>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|m\<in\><around*|{|1,\<ldots\>,2\<cdot\>n-1|}>><around*|(|<big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\|k+l=m|}>><around*|\<\|\|\>|a<rsub|i>\<cdot\><wide|a<rsub|j>|\<wide-bar\>>|\<\|\|\>>|)>\<cdot\><around*|\<\|\|\>|z|\<\|\|\>><rsup|m>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|m\<in\><around*|{|1,\<ldots\>,2\<cdot\>n-1|}>>b<rsub|m>\<cdot\><around*|\<\|\|\>|z|\<\|\|\>><rsup|m>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    where <math|\<forall\>m\<in\><around*|{|1,\<ldots\>,2\<cdot\>n-1|}>>
+    <math|b<rsub|m>=<big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|<around*|(|k,l|)>\|k+l=m|}>><around*|\<\|\|\>|a<rsub|i>\<cdot\><wide|a<rsub|j>|\<wide-bar\>>|\<\|\|\>>>.
+    Substituting this in [eq: <reference|eq 17.44.138>] gives\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|p\<cdot\><wide|p|\<wide-bar\>>|)><around*|(|z|)>>|<cell|\<geqslant\>>|<cell|<around*|\||a<rsub|n>|\|><rsup|2>\<cdot\><frac|<around*|\<\|\|\>|z|\<\|\|\>><rsup|2\<cdot\>n>|2<rsup|n+1>>-2\<cdot\><big|sum><rsub|m\<in\><around*|{|1,\<ldots\>,2\<cdot\>n-1|}>>b<rsub|m>\<cdot\><around*|\<\|\|\>|z|\<\|\|\>><rsup|m>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||a<rsub|n>|\|><rsup|2>\<cdot\><frac|<around*|\<\|\|\>|z|\<\|\|\>><rsup|2\<cdot\>n>|2<rsup|n+1>>+<big|sum><rsub|m\<in\><around*|{|1,\<ldots\>,2\<cdot\>n-1|}>><around*|(|-2\<cdot\>b<rsub|m>|)>\<cdot\><around*|\<\|\|\>|z|\<\|\|\>><rsup|m>>>|<row|<cell|>|<cell|=>|<cell|0\<cdot\><around*|\<\|\|\>|z|\<\|\|\>><rsup|0>+<around*|\||a<rsub|n>|\|><rsup|2>\<cdot\><frac|<around*|\<\|\|\>|z|\<\|\|\>><rsup|2\<cdot\>n>|2<rsup|n+1>>+<big|sum><rsub|m\<in\><around*|{|1,\<ldots\>,2\<cdot\>n-1|}>><around*|(|-2\<cdot\>b<rsub|m>|)>\<cdot\><around*|\<\|\|\>|z|\<\|\|\>><rsup|m>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=0><rsup|2\<cdot\>n>c<rsub|i>\<cdot\><around*|\<\|\|\>|z|\<\|\|\>><rsup|i><eq-number><label|eq
+      17.45.138>>>>>
+    </eqnarray*>
+
+    where\ 
+
+    <\equation*>
+      <around*|{|c<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,2\<cdot\>n|}>><text|where
+      >c<rsub|i>=<choice|<tformat|<table|<row|<cell|0<text| if
+      >i=0>>|<row|<cell|-2\<cdot\>b<rsub|i><text| if
+      >i\<in\><around*|{|1,\<ldots\>,2\<cdot\>n-1|}>>>|<row|<cell|<frac|1|2<rsup|n+1>>\<cdot\><around*|\||a<rsub|n>|\|><rsup|2><text|
+      if >i=2\<cdot\>n>>>>>
+    </equation*>
+
+    then as <math|a<rsub|n>\<neq\>0> we have that
+    <math|0\<less\>c<rsub|2\<cdot\>n>>. Hence using [lemma:
+    <reference|divergent limit of sums>] it follows that\ 
+
+    <\equation*>
+      <below|lim|x\<rightarrow\>\<infty\>><big|sum><rsub|i=0><rsup|2\<cdot\>n>c<rsub|i>\<cdot\>x<rsup|i>=\<infty\>
+    </equation*>
+
+    so there exist a <math|R<rprime|'>\<in\>\<bbb-R\>> such that if
+    <math|x\<geqslant\>R<rprime|'>> then <math|<big|sum><rsub|i=0><rsup|2\<cdot\>n>c<rsub|i>\<cdot\>x<rsup|i>\<geqslant\><around*|(|p\<cdot\><wide|p|\<wide-bar\>>|)><around*|(|0|)>+1\<gtr\><around*|(|p\<cdot\><wide|p|\<wide-bar\>>|)><around*|(|0|)>>.
+    Take <math|R=min<around*|(|R<rprime|'>,1|)>> then we have using [eq:
+    <reference|eq 17.45.138>] that
+
+    <\equation>
+      <label|eq 17.46.138>0\<less\>R<text| and
+      >\<forall\>z\<in\>\<bbb-C\><text| with
+      <math|<around*|\<\|\|\>|z|\<\|\|\>>\<geqslant\>R<text| we have
+      >>><around*|(|p\<cdot\><wide|p|\<wide-bar\>>|)><around*|(|z|)>\<geqslant\><big|sum><rsub|i=0><rsup|2\<cdot\>n>c<rsub|i>\<cdot\><around*|\<\|\|\>|z|\<\|\|\>><rsup|i>\<gtr\><around*|(|p\<cdot\><wide|p|\<wide-bar\>>|)><around*|(|0|)>
+    </equation>
+
+    Now as <math|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,R|)>|\<wide-bar\>>>
+    is closed and bounded in <math|<around*|\<langle\>|\<bbb-C\>,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    [see theorems: <reference|metric closed balls are closed>,
+    <reference|metric closed open balls are bounded>] it follows from
+    [theorem: <reference|compact Heine-Borel complex>] that\ 
+
+    <\equation>
+      <label|eq 17.47.138><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,R|)>|\<wide-bar\>><text|
+      is compact in ><around*|\<langle\>|\<bbb-C\>,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>
+    </equation>
+
+    Now by [theorem: <reference|fundamental continuity>(5)] the function
+    <math|p\<cdot\><wide|p|\<wide-bar\>>> is continuous in
+    <math|<around*|\<langle\>|\<bbb-C\>,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    so that using the above we can apply the extreme value theorem [theorem:
+    <reference|compact extreme value theorem>]. Hence there exist a
+    <math|z<rsub|0>\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,R|)>|\<wide-bar\>>>
+    so that\ 
+
+    <\equation>
+      <label|eq 17.48.138>\<forall\>z\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,R|)>|\<wide-bar\>>
+      we have <around*|(|p\<cdot\><wide|p|\<wide-bar\>>|)><around*|(|z|)>\<geqslant\><around*|(|p\<cdot\><wide|p|\<wide-bar\>>|)><around*|(|z<rsub|0>|)>
+    </equation>
+
+    As <math|0\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|0,R|)>|\<wide-bar\>>>
+    it follows from the above that\ 
+
+    <\equation>
+      <label|eq 17.49.138><around*|(|p\<cdot\><wide|p|\<wide-bar\>>|)><around*|(|0|)>\<geqslant\><around*|(|p\<cdot\><wide|p|\<wide-bar\>>|)><around*|(|z<rsub|0>|)>
+    </equation>
+
+    If <math|z\<in\>\<bbb-C\>> then we have either:\ 
+
+    <\description>
+      <item*|<math|<around*|\<\|\|\>|z|\<\|\|\>>\<leqslant\>R>>then by [eq:
+      <reference|eq 17.48.138>] <math|><math|
+      <around*|(|p\<cdot\><wide|p|\<wide-bar\>>|)><around*|(|z|)>\<geqslant\><around*|(|p\<cdot\><wide|p|\<wide-bar\>>|)><around*|(|z<rsub|0>|)>>
+
+      <item*|<math|R\<less\><around*|\<\|\|\>|z|\<\|\|\>>>>then by [eq:
+      <reference|eq 17.46.138>] <math|><math|<around*|(|p\<cdot\><wide|p|\<wide-bar\>>|)><around*|(|z|)>\<geqslant\>\<geqslant\><around*|(|p\<cdot\><wide|p|\<wide-bar\>>|)><around*|(|0|)>\<geqslant\><rsub|<text|[eq:
+      <reference|eq 17.49.138>]>><around*|(|p\<cdot\><wide|p|\<wide-bar\>>|)><around*|(|z<rsub|0>|)>>
+    </description>
+
+    so we have
+
+    <\equation>
+      <label|eq 17.50.138>\<forall\>c\<in\>\<bbb-C\><text| that >
+      <around*|(|p\<cdot\><wide|p|\<wide-bar\>>|)><around*|(|z|)>\<geqslant\><around*|(|p\<cdot\><wide|p|\<wide-bar\>>|)><around*|(|z<rsub|0>|)>
+    </equation>
+
+    Define now
+
+    <\equation>
+      <label|eq 17.51.138>r:\<bbb-C\>\<rightarrow\>\<bbb-C\><text| by
+      >r<around*|(|z|)>=p<around*|(|z+z<rsub|0>|)><text| and
+      >r\<cdot\><wide|r|\<wide-bar\>>:\<bbb-C\>\<rightarrow\>\<bbb-C\><text|
+      by ><around*|(|r\<cdot\><wide|r|\<wide-bar\>>|)><around*|(|z|)>=r<around*|(|z|)>\<cdot\><wide|r<around*|(|z|)>|\<wide-bar\>>
+    </equation>
+
+    Then we have\ 
+
+    <\equation>
+      <label|eq 17.52.138>r<around*|(|0|)>=p<around*|(|0+z<rsub|0>|)>=p<around*|(|z<rsub|0>|)>
+    </equation>
+
+    Further
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|r\<cdot\><wide|r|\<wide-bar\>>|)><around*|(|z|)>>|<cell|=>|<cell|r<around*|(|z|)>\<cdot\><wide|r<around*|(|z|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|=>|<cell|p<around*|(|z+z<rsub|0>|)>\<cdot\><wide|p<around*|(|z+z<rsub|0>|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|\<geqslant\><rsub|<text|[eq:
+      <reference|eq 17.50.138>]>>>|<cell|<around*|(|p\<cdot\><wide|p|\<wide-bar\>>|)><around*|(|z<rsub|0>|)>>>|<row|<cell|>|<cell|=>|<cell|p<around*|(|z<rsub|0>|)>\<cdot\><wide|p<around*|(|z<rsub|0>|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|eq:
+      <reference|eq 17.52.138>>>>|<cell|r<around*|(|0|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|r\<cdot\><wide||\<wide-bar\>><wide|r|\<wide-bar\>>|)><around*|(|0|)>>>>>
+    </eqnarray*>
+
+    in other words
+
+    <\equation>
+      <label|eq 17.53.138>\<forall\>z\<in\>\<bbb-C\><text| we have
+      <math|<around*|(|r\<cdot\><wide|r|\<wide-bar\>>|)><around*|(|z|)>-<around*|(|r\<cdot\><wide|r|\<wide-bar\>>|)><around*|(|0|)>=r<around*|(|z|)>\<cdot\><wide|r<around*|(|z|)>|\<wide-bar\>>-r<around*|(|0|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>\<geqslant\>0>>
+    </equation>
+
+    By [lemma: <reference|lemma 17.24.136>] and the definition of <math|r> it
+    follows that <math|r> is a polynomial with
+    <math|ord<around*|(|r|)>=ord<around*|(|p|)>>. Further using [lemma:
+    <reference|lemma 17.25.136>] there exist a
+    <math|k\<in\><around*|{|1,\<ldots\>,n|}>> a a polynomial of otder
+    <math|n-k> such that <math|q<around*|(|0|)>\<neq\>0> and\ 
+
+    <\equation>
+      <label|eq 17.54.138>\<forall\>z\<in\>\<bbb-C\><text| we have
+      >r<around*|(|z|)>=r<around*|(|0|)>+z<rsup|k>\<cdot\>q<around*|(|z|)>
+    </equation>
+
+    Then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|0>|<cell|\<leqslant\>>|<cell|r<around*|(|z|)>\<cdot\><wide|r<around*|(|z|)>|\<wide-bar\>>-r<around*|(|0|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|r<around*|(|0|)>+z<rsup|k>\<cdot\>q<around*|(|z|)>|)>\<cdot\><around*|(|<wide|r<around*|(|0|)>+z<rsup|k>\<cdot\>q<around*|(|z|)>|\<wide-bar\>>|)>-<around*|(|r<around*|(|0|)>+0<rsup|k>\<cdot\>q<around*|(|0|)>|)>\<cdot\><around*|(|<wide|r<around*|(|0|)>+0<rsup|k>\<cdot\>q<around*|(|0|)>|\<wide-bar\>>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|r<around*|(|0|)>+z<rsup|k>\<cdot\>q<around*|(|z|)>|)>\<cdot\><around*|(|<wide|r<around*|(|0|)>+z<rsup|k>\<cdot\>q<around*|(|z|)>|\<wide-bar\>>|)>-r<around*|(|0|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|complex conjugate properties>]>>>|<cell|<around*|(|r<around*|(|0|)>+z<rsup|k>\<cdot\>q<around*|(|z|)>|)>\<cdot\><around*|(|<wide|r<around*|(|0|)>|\<wide-bar\>>+<wide|z<rsup|k>\<cdot\>q<around*|(|z|)>|\<wide-bar\>>|)><wide||\<wide-bar\>>-r<around*|(|0|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|=>|<cell|r<around*|(|0|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>+r<around*|(|0|)>\<cdot\><wide|z<rsup|k>\<cdot\>q<around*|(|z|)>|\<wide-bar\>>+z<rsup|k>\<cdot\>q<around*|(|z|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>+z<rsup|k>\<cdot\>q<around*|(|z|)>\<cdot\><wide|z<rsup|k>\<cdot\>q<around*|(|z|)>|\<wide-bar\>>-r<around*|(|0|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|=>|<cell|r<around*|(|0|)>\<cdot\><wide|z<rsup|k>\<cdot\>q<around*|(|z|)>|\<wide-bar\>>+z<rsup|k>\<cdot\>q<around*|(|z|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>+z<rsup|k>\<cdot\>q<around*|(|z|)>\<cdot\><wide|z<rsup|k>\<cdot\>q<around*|(|z|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|=>|<cell|<wide|<wide|r<around*|(|0|)>|\<wide-bar\>>\<cdot\>z<rsup|k>\<cdot\>q<around*|(|z|)>|\<wide-bar\>>+z<rsup|k>\<cdot\>q<around*|(|z|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>+z<rsup|k>\<cdot\>q<around*|(|z|)>\<cdot\><wide|z<rsup|k>\<cdot\>q<around*|(|z|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|=>|<cell|<wide|z<rsup|k>\<cdot\>q<around*|(|z|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>|\<wide-bar\>>+z<rsup|k>\<cdot\>q<around*|(|z|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>+z<rsup|k>\<cdot\>q<around*|(|z|)>\<cdot\><wide|z<rsup|k>\<cdot\>q<around*|(|z|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|complex conjugate properties>]>>>|<cell|2\<cdot\>Re<around*|(|z<rsup|k>\<cdot\>q<around*|(|z|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>|)>+z<rsup|k>\<cdot\>q<around*|(|z|)>\<cdot\><wide|z<rsup|k>\<cdot\>q<around*|(|z|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theoren:
+      <reference|complex norm properties>]>>>|<cell|2\<cdot\>Re<around*|(|z<rsup|k>\<cdot\>q<around*|(|z|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>|)>+<around*|\||z<rsup|k>\<cdot\>q<around*|(|z|)>|\|><rsup|2>>>>>
+    </eqnarray*>
+
+    hence
+
+    <\equation>
+      <label|eq 17.55.138><around*|\||z<rsup|k>\<cdot\>q<around*|(|z|)>|\|><rsup|2>+2\<cdot\>Re<around*|(|z<rsup|k>\<cdot\>q<around*|(|z|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>|)>\<geqslant\>0
+    </equation>
+
+    Given <math|x\<in\>\<bbb-C\>> and <math|\<delta\>\<in\>\<bbb-R\><rsup|+>>
+    then taken <math|z=\<delta\>\<cdot\>x> and substituting this in the above
+    gives\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|0>|<cell|\<leqslant\>>|<cell|<around*|\||<around*|(|\<delta\>\<cdot\>x|)><rsup|k>\<cdot\>q<around*|(|\<delta\>\<cdot\>x|)>|\|><rsup|2>+2\<cdot\>Re<around*|(|<around*|(|\<delta\>\<cdot\>x|)><rsup|k>\<cdot\>q<around*|(|\<delta\>\<cdot\>x|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorems:
+      <reference|complex conjugate properties>,<reference|complex real.
+      imaginair properties>]>>>|<cell|\<delta\><rsup|2\<cdot\>k>\<cdot\><around*|\||x<rsup|k>\<cdot\>q<around*|(|\<delta\>\<cdot\>x|)>|\|><rsup|2>+2\<cdot\>\<delta\><rsup|k>\<cdot\>Re<around*|(|x<rsup|k>\<cdot\>q<around*|(|\<delta\>\<cdot\>x|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>|)>>>>>
+    </eqnarray*>
+
+    and by dividing both sides of the above by
+    <math|\<delta\><rsup|k>\<gtr\>0> we have\ 
+
+    <\equation>
+      <label|eq 17.56.138>0\<leqslant\>\<delta\><rsup|k>\<cdot\><around*|\||x<rsup|k>\<cdot\>q<around*|(|\<delta\>\<cdot\>x|)>|\|><rsup|2>+2\<cdot\>Re<around*|(|x<rsup|k>\<cdot\>q<around*|(|\<delta\>\<cdot\>x|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>|)>
+    </equation>
+
+    \;
+  </proof>
 </body>
 
 <\initial>
   <\collection>
     <associate|chapter-nr|16>
-    <associate|page-first|1069>
+    <associate|page-first|1071>
+    <associate|par-first|0tab>
     <associate|section-nr|6>
     <associate|subsection-nr|0>
   </collection>
@@ -1855,6 +2100,7 @@
     <associate|auto-12|<tuple|binomial coefficient|?>>
     <associate|auto-13|<tuple|<with|mode|<quote|math>|<with|math-level|<quote|1>|<left|(><resize|<tformat|<cwith|1|-1|1|-1|cell-halign|c>|<tformat|<cwith|1|-1|1|1|cell-lsep|0spc>|<cwith|1|-1|1|1|cell-rsep|0spc>|<table|<row|<cell|n>>|<row|<cell|k>>>>>||<plus|1b|2.5sep>||<minus|1t|2.5sep>><right|)>>>|?>>
     <associate|auto-14|<tuple|binomial formula|?>>
+    <associate|auto-15|<tuple|17.1.4|?>>
     <associate|auto-2|<tuple|17.1|?>>
     <associate|auto-3|<tuple|17.1.1|?>>
     <associate|auto-4|<tuple|coefficients of a polynomial|?>>
@@ -1900,7 +2146,21 @@
     <associate|eq 17.40.136|<tuple|17.40|?>>
     <associate|eq 17.41.136|<tuple|17.41|?>>
     <associate|eq 17.42.136|<tuple|17.42|?>>
+    <associate|eq 17.43.138|<tuple|17.43|?>>
+    <associate|eq 17.44.138|<tuple|17.44|?>>
+    <associate|eq 17.45.138|<tuple|17.45|?>>
+    <associate|eq 17.46.138|<tuple|17.46|?>>
+    <associate|eq 17.47.138|<tuple|17.47|?>>
+    <associate|eq 17.48.138|<tuple|17.48|?>>
+    <associate|eq 17.49.138|<tuple|17.49|?>>
     <associate|eq 17.5.135|<tuple|17.5|?>>
+    <associate|eq 17.50.138|<tuple|17.50|?>>
+    <associate|eq 17.51.138|<tuple|17.51|?>>
+    <associate|eq 17.52.138|<tuple|17.52|?>>
+    <associate|eq 17.53.138|<tuple|17.53|?>>
+    <associate|eq 17.54.138|<tuple|17.54|?>>
+    <associate|eq 17.55.138|<tuple|17.55|?>>
+    <associate|eq 17.56.138|<tuple|17.56|?>>
     <associate|eq 17.6.135|<tuple|17.6|?>>
     <associate|eq 17.7.135|<tuple|17.7|?>>
     <associate|eq 17.8.135|<tuple|17.8|?>>
@@ -1925,6 +2185,7 @@
     <associate|fundamental polynomal|<tuple|17.1|?>>
     <associate|fundamental product of polynomials is a
     polynomial|<tuple|17.11|?>>
+    <associate|fundamental theorem of algebra|<tuple|17.29|?>>
     <associate|lemma 17.19.136|<tuple|17.19|?>>
     <associate|lemma 17.24.136|<tuple|17.24|?>>
     <associate|lemma 17.25.136|<tuple|17.25|?>>
@@ -1976,6 +2237,10 @@
       <with|mode|<quote|math>|\<bbb-C\>> needed for the fundamental theorem
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-8>>
+
+      <with|par-left|<quote|1tab>|17.1.4<space|2spc>Proof of the fundamental
+      theorem of algebra <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-15>>
     </associate>
   </collection>
 </auxiliary>

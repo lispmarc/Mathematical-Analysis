@@ -2498,8 +2498,9 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|14>
-    <associate|page-first|827>
-    <associate|section-nr|12>
+    <associate|page-first|835>
+    <associate|par-first|0tab>
+    <associate|section-nr|11>
     <associate|subsection-nr|0>
   </collection>
 </initial>

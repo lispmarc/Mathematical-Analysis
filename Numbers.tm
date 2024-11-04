@@ -13259,14 +13259,17 @@
       <item><math|\<forall\>z\<in\>\<bbb-C\><text| we have
       ><wide|-z|\<wide-bar\>>=-<wide|z|\<wide-bar\>>>
 
-      <item>Let <math|n\<in\>\<bbb-N\>> and
+      <item>Let <math|n\<in\>\<bbb-N\><rsub|\<bbb-C\>>> and
       <math|<around*|{|z<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-C\>>
       then <math|<wide|<big|sum><rsub|i=1><rsup|n>z<rsub|i>|\<wide-bar\>>=<big|sum><rsub|i=1><rsup|n><wide|z<rsub|i>|\<wide-bar\>>>
+
+      <item>Let <math|n\<in\>\<bbb-N\><rsub|\<bbb-C\>>> and
+      <math|z\<in\>\<bbb-C\>> then <math|<wide|z<rsup|n>|\<wide-bar\>>=<around*|(|<wide|z|\<wide-bar\>>|)><rsup|n>>
     </enumerate>
   </theorem>
 
   <\proof>
-    \ 
+    \;
 
     <\enumerate>
       <item>As <math|i=0+i\<cdot\>1> we have that <math|Re<around*|(|i|)>=0>
@@ -13355,6 +13358,21 @@
         </eqnarray*>
 
         proving that <math|n+1\<in\>\<cal-S\>>.
+      </description>
+
+      <item>We prove this by induction, so let
+      <math|S=<around*|{|n\<in\>\<bbb-N\><rsub|\<bbb-C\>,0>\|<wide|z<rsup|n>|\<wide-bar\>>=<around*|(|<wide|z|\<wide-bar\>>|)><rsup|n>|}>>
+      then we have:
+
+      <\description>
+        <item*|<math|0\<in\>S>>As <math|<wide|z<rsup|0>|\<wide-bar\>>=<wide|1|\<wide-bar\>>\<equallim\><rsub|<around*|(|7|)>>1=<around*|(|<wide|z|\<wide-bar\>>|)><rsup|0>>
+        proving that <math|0\<in\>S>.
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Then we have
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<wide|z<rsup|n+1>|\<wide-bar\>>>|<cell|=>|<cell|<wide|z<rsup|n>\<cdot\>z|\<wide-bar\>>\<equallim\><rsub|<around*|(|4|)>><wide|z<rsup|n>|\<wide-bar\>>\<cdot\><wide|z|\<wide-bar\>>\<equallim\><rsub|n\<in\>S><around*|(|<wide|z|\<wide-bar\>>|)><rsup|n>\<cdot\><wide|z|\<wide-bar\>>=<around*|(|<wide|z|\<wide-bar\>>|)><rsup|n+1>>>>>
+        </eqnarray*>
       </description>
     </enumerate>
   </proof>
@@ -14298,6 +14316,7 @@
   <\collection>
     <associate|chapter-nr|6>
     <associate|page-first|205>
+    <associate|par-first|0tab>
     <associate|project-flag|false>
     <associate|section-nr|3>
     <associate|subsection-nr|0>

@@ -3622,7 +3622,7 @@
     a pseudo normed space then <math|\<forall\>x,y\<in\>X> we have\ 
 
     <\equation*>
-      <around*|\||<around*|\<\|\|\>|x|\<\|\|\>>-<around*|\<\|\|\>|y|\<\|\|\>>|\|>\<leqslant\><around*|\<\|\|\>|x+y|\<\|\|\>>
+      <around*|\<\|\|\>|x|\<\|\|\>>-<around*|\<\|\|\>|y|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x+y|\<\|\|\>>\<wedge\><around*|\<\|\|\>|y|\<\|\|\>>-<around*|\<\|\|\>|x|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x+y|\<\|\|\>>\<wedge\><around*|\||<around*|\<\|\|\>|x|\<\|\|\>>-<around*|\<\|\|\>|y|\<\|\|\>>|\|>\<leqslant\><around*|\<\|\|\>|x+y|\<\|\|\>>
     </equation*>
   </theorem>
 
@@ -11802,7 +11802,8 @@
   </proof>
 
   <\theorem>
-    <label|compact extreme value theorem>Let
+    <label|compact extreme value theorem><index|extreme value
+    theorem><dueto|Extreme Value Theorem>Let
     <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological
     space, <math|\<varnothing\>\<neq\>C\<subseteq\>X> a non empty compact
     subset of <math|X> and <math|f:X\<rightarrow\>\<bbb-R\>> a continuous
@@ -21859,8 +21860,9 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|13>
-    <associate|page-first|661>
+    <associate|page-first|663>
     <associate|page-medium|papyrus>
+    <associate|par-first|0tab>
     <associate|section-nr|0>
     <associate|subsection-nr|0>
   </collection>
@@ -21870,20 +21872,21 @@
   <\collection>
     <associate|auto-1|<tuple|14|?>>
     <associate|auto-10|<tuple|<with|mode|<quote|math>|A<rprime|'>>|?>>
-    <associate|auto-100|<tuple|14.10.3|?>>
-    <associate|auto-101|<tuple|series|?>>
-    <associate|auto-102|<tuple|14.10.3.1|?>>
-    <associate|auto-103|<tuple|14.10.3.2|?>>
-    <associate|auto-104|<tuple|absolute convergence|?>>
-    <associate|auto-105|<tuple|dominant convergence|?>>
-    <associate|auto-106|<tuple|14.10.4|?>>
-    <associate|auto-107|<tuple|Baire Category theorem|?>>
-    <associate|auto-108|<tuple|open mapping theorem|?>>
-    <associate|auto-109|<tuple|14.11|?>>
+    <associate|auto-100|<tuple|bounded uniform convergence|?>>
+    <associate|auto-101|<tuple|14.10.3|?>>
+    <associate|auto-102|<tuple|series|?>>
+    <associate|auto-103|<tuple|14.10.3.1|?>>
+    <associate|auto-104|<tuple|14.10.3.2|?>>
+    <associate|auto-105|<tuple|absolute convergence|?>>
+    <associate|auto-106|<tuple|dominant convergence|?>>
+    <associate|auto-107|<tuple|14.10.4|?>>
+    <associate|auto-108|<tuple|Baire Category theorem|?>>
+    <associate|auto-109|<tuple|open mapping theorem|?>>
     <associate|auto-11|<tuple|14.1.2|?>>
-    <associate|auto-110|<tuple|connected space|?>>
-    <associate|auto-111|<tuple|disconnected space|?>>
-    <associate|auto-112|<tuple|intermediate value theorem|?>>
+    <associate|auto-110|<tuple|14.11|?>>
+    <associate|auto-111|<tuple|connected space|?>>
+    <associate|auto-112|<tuple|disconnected space|?>>
+    <associate|auto-113|<tuple|intermediate value theorem|?>>
     <associate|auto-12|<tuple|box topology|?>>
     <associate|auto-13|<tuple|14.1.3|?>>
     <associate|auto-14|<tuple|dense set|?>>
@@ -21944,44 +21947,44 @@
     <associate|auto-64|<tuple|compact space|?>>
     <associate|auto-65|<tuple|compact set|?>>
     <associate|auto-66|<tuple|extreme value theorem|?>>
-    <associate|auto-67|<tuple|limit point compactness|?>>
-    <associate|auto-68|<tuple|compact class|?>>
-    <associate|auto-69|<tuple|14.8.1|?>>
+    <associate|auto-67|<tuple|extreme value theorem|?>>
+    <associate|auto-68|<tuple|limit point compactness|?>>
+    <associate|auto-69|<tuple|compact class|?>>
     <associate|auto-7|<tuple|<with|mode|<quote|math>|\<cal-T\><rsup|\<cal-C\>>>|?>>
-    <associate|auto-70|<tuple|14.8.1.1|?>>
-    <associate|auto-71|<tuple|filter base|?>>
-    <associate|auto-72|<tuple|neighborhood filter base|?>>
-    <associate|auto-73|<tuple|converging to a point|?>>
-    <associate|auto-74|<tuple|accumaling at a point|?>>
-    <associate|auto-75|<tuple|<with|mode|<quote|math>|\<frak-U\>\<rightarrow\>x>|?>>
-    <associate|auto-76|<tuple|<with|mode|<quote|math>|\<frak-U\>\<succ\>x>|?>>
-    <associate|auto-77|<tuple|subordinate filter bases|?>>
-    <associate|auto-78|<tuple|<with|mode|<quote|math>|\<frak-W\>\<geqslant\>\<frak-U\>>|?>>
-    <associate|auto-79|<tuple|<with|mode|<quote|math>|\<frak-U\>\<ll\>\<frak-W\>>|?>>
+    <associate|auto-70|<tuple|14.8.1|?>>
+    <associate|auto-71|<tuple|14.8.1.1|?>>
+    <associate|auto-72|<tuple|filter base|?>>
+    <associate|auto-73|<tuple|neighborhood filter base|?>>
+    <associate|auto-74|<tuple|converging to a point|?>>
+    <associate|auto-75|<tuple|accumaling at a point|?>>
+    <associate|auto-76|<tuple|<with|mode|<quote|math>|\<frak-U\>\<rightarrow\>x>|?>>
+    <associate|auto-77|<tuple|<with|mode|<quote|math>|\<frak-U\>\<succ\>x>|?>>
+    <associate|auto-78|<tuple|subordinate filter bases|?>>
+    <associate|auto-79|<tuple|<with|mode|<quote|math>|\<frak-W\>\<geqslant\>\<frak-U\>>|?>>
     <associate|auto-8|<tuple|limit point|?>>
-    <associate|auto-80|<tuple|<with|mode|<quote|math>|\<frak-U\>\<sqsubseteq\>\<frak-W\>>|?>>
-    <associate|auto-81|<tuple|ultra filter|?>>
-    <associate|auto-82|<tuple|maximum filter base|?>>
-    <associate|auto-83|<tuple|14.8.1.2|?>>
-    <associate|auto-84|<tuple|Tychonoff's theorem|?>>
-    <associate|auto-85|<tuple|14.8.1.3|?>>
-    <associate|auto-86|<tuple|14.9|?>>
-    <associate|auto-87|<tuple|14.9.1|?>>
-    <associate|auto-88|<tuple|14.9.2|?>>
-    <associate|auto-89|<tuple|14.9.3|?>>
+    <associate|auto-80|<tuple|<with|mode|<quote|math>|\<frak-U\>\<ll\>\<frak-W\>>|?>>
+    <associate|auto-81|<tuple|<with|mode|<quote|math>|\<frak-U\>\<sqsubseteq\>\<frak-W\>>|?>>
+    <associate|auto-82|<tuple|ultra filter|?>>
+    <associate|auto-83|<tuple|maximum filter base|?>>
+    <associate|auto-84|<tuple|14.8.1.2|?>>
+    <associate|auto-85|<tuple|Tychonoff's theorem|?>>
+    <associate|auto-86|<tuple|14.8.1.3|?>>
+    <associate|auto-87|<tuple|14.9|?>>
+    <associate|auto-88|<tuple|14.9.1|?>>
+    <associate|auto-89|<tuple|14.9.2|?>>
     <associate|auto-9|<tuple|accumulation point|?>>
-    <associate|auto-90|<tuple|<with|mode|<quote|math>|<below|lim
-    sup|n\<rightarrow\>\<infty\>> x<rsub|n>>|?>>
+    <associate|auto-90|<tuple|14.9.3|?>>
     <associate|auto-91|<tuple|<with|mode|<quote|math>|<below|lim
+    sup|n\<rightarrow\>\<infty\>> x<rsub|n>>|?>>
+    <associate|auto-92|<tuple|<with|mode|<quote|math>|<below|lim
     inf|n\<rightarrow\>\<infty\>> x<rsub|n>>|?>>
-    <associate|auto-92|<tuple|14.10|?>>
-    <associate|auto-93|<tuple|Cauchy sequence|?>>
+    <associate|auto-93|<tuple|14.10|?>>
     <associate|auto-94|<tuple|Cauchy sequence|?>>
-    <associate|auto-95|<tuple|complete space|?>>
-    <associate|auto-96|<tuple|Banach space|?>>
-    <associate|auto-97|<tuple|14.10.1|?>>
-    <associate|auto-98|<tuple|14.10.2|?>>
-    <associate|auto-99|<tuple|bounded uniform convergence|?>>
+    <associate|auto-95|<tuple|Cauchy sequence|?>>
+    <associate|auto-96|<tuple|complete space|?>>
+    <associate|auto-97|<tuple|Banach space|?>>
+    <associate|auto-98|<tuple|14.10.1|?>>
+    <associate|auto-99|<tuple|14.10.2|?>>
     <associate|bounded B(X,Y) is a normed space|<tuple|14.339|?>>
     <associate|bounded function|<tuple|14.337|?>>
     <associate|bounded function B(X,Y) is a vector space|<tuple|14.338|?>>
@@ -22776,67 +22779,69 @@
 
       <tuple|<tuple|compact set>|<pageref|auto-65>>
 
-      <tuple|<tuple|limit point compactness>|<pageref|auto-66>>
+      <tuple|<tuple|extreme value theorem>|<pageref|auto-66>>
 
-      <tuple|<tuple|compact class>|<pageref|auto-67>>
+      <tuple|<tuple|limit point compactness>|<pageref|auto-67>>
 
-      <tuple|<tuple|filter base>|<pageref|auto-70>>
+      <tuple|<tuple|compact class>|<pageref|auto-68>>
 
-      <tuple|<tuple|neighborhood filter base>|<pageref|auto-71>>
+      <tuple|<tuple|filter base>|<pageref|auto-71>>
 
-      <tuple|<tuple|converging to a point>|<pageref|auto-72>>
+      <tuple|<tuple|neighborhood filter base>|<pageref|auto-72>>
 
-      <tuple|<tuple|accumaling at a point>|<pageref|auto-73>>
+      <tuple|<tuple|converging to a point>|<pageref|auto-73>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<frak-U\>\<rightarrow\>x>>|<pageref|auto-74>>
+      <tuple|<tuple|accumaling at a point>|<pageref|auto-74>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<frak-U\>\<succ\>x>>|<pageref|auto-75>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<frak-U\>\<rightarrow\>x>>|<pageref|auto-75>>
 
-      <tuple|<tuple|subordinate filter bases>|<pageref|auto-76>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<frak-U\>\<succ\>x>>|<pageref|auto-76>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<frak-W\>\<geqslant\>\<frak-U\>>>|<pageref|auto-77>>
+      <tuple|<tuple|subordinate filter bases>|<pageref|auto-77>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<frak-U\>\<ll\>\<frak-W\>>>|<pageref|auto-78>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<frak-W\>\<geqslant\>\<frak-U\>>>|<pageref|auto-78>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<frak-U\>\<sqsubseteq\>\<frak-W\>>>|<pageref|auto-79>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<frak-U\>\<ll\>\<frak-W\>>>|<pageref|auto-79>>
 
-      <tuple|<tuple|ultra filter>|<pageref|auto-80>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<frak-U\>\<sqsubseteq\>\<frak-W\>>>|<pageref|auto-80>>
 
-      <tuple|<tuple|maximum filter base>|<pageref|auto-81>>
+      <tuple|<tuple|ultra filter>|<pageref|auto-81>>
 
-      <tuple|<tuple|Tychonoff's theorem>|<pageref|auto-83>>
+      <tuple|<tuple|maximum filter base>|<pageref|auto-82>>
+
+      <tuple|<tuple|Tychonoff's theorem>|<pageref|auto-84>>
 
       <tuple|<tuple|<with|mode|<quote|math>|<below|lim
-      sup|n\<rightarrow\>\<infty\>> x<rsub|n>>>|<pageref|auto-89>>
+      sup|n\<rightarrow\>\<infty\>> x<rsub|n>>>|<pageref|auto-90>>
 
       <tuple|<tuple|<with|mode|<quote|math>|<below|lim
-      inf|n\<rightarrow\>\<infty\>> x<rsub|n>>>|<pageref|auto-90>>
-
-      <tuple|<tuple|Cauchy sequence>|<pageref|auto-92>>
+      inf|n\<rightarrow\>\<infty\>> x<rsub|n>>>|<pageref|auto-91>>
 
       <tuple|<tuple|Cauchy sequence>|<pageref|auto-93>>
 
-      <tuple|<tuple|complete space>|<pageref|auto-94>>
+      <tuple|<tuple|Cauchy sequence>|<pageref|auto-94>>
 
-      <tuple|<tuple|Banach space>|<pageref|auto-95>>
+      <tuple|<tuple|complete space>|<pageref|auto-95>>
 
-      <tuple|<tuple|bounded uniform convergence>|<pageref|auto-98>>
+      <tuple|<tuple|Banach space>|<pageref|auto-96>>
 
-      <tuple|<tuple|series>|<pageref|auto-100>>
+      <tuple|<tuple|bounded uniform convergence>|<pageref|auto-99>>
 
-      <tuple|<tuple|absolute convergence>|<pageref|auto-103>>
+      <tuple|<tuple|series>|<pageref|auto-101>>
 
-      <tuple|<tuple|dominant convergence>|<pageref|auto-104>>
+      <tuple|<tuple|absolute convergence>|<pageref|auto-104>>
 
-      <tuple|<tuple|Baire Category theorem>|<pageref|auto-106>>
+      <tuple|<tuple|dominant convergence>|<pageref|auto-105>>
 
-      <tuple|<tuple|open mapping theorem>|<pageref|auto-107>>
+      <tuple|<tuple|Baire Category theorem>|<pageref|auto-107>>
 
-      <tuple|<tuple|connected space>|<pageref|auto-109>>
+      <tuple|<tuple|open mapping theorem>|<pageref|auto-108>>
 
-      <tuple|<tuple|disconnected space>|<pageref|auto-110>>
+      <tuple|<tuple|connected space>|<pageref|auto-110>>
 
-      <tuple|<tuple|intermediate value theorem>|<pageref|auto-111>>
+      <tuple|<tuple|disconnected space>|<pageref|auto-111>>
+
+      <tuple|<tuple|intermediate value theorem>|<pageref|auto-112>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|14<space|2spc>Topology>
@@ -22896,64 +22901,64 @@
 
       <with|par-left|<quote|1tab>|14.8.1<space|2spc>Product of Compact sets
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-68>>
+      <no-break><pageref|auto-69>>
 
       <with|par-left|<quote|2tab>|14.8.1.1<space|2spc>Filter bases
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-69>>
+      <no-break><pageref|auto-70>>
 
       <with|par-left|<quote|2tab>|14.8.1.2<space|2spc>Tychonoff's theorem
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-82>>
+      <no-break><pageref|auto-83>>
 
       <with|par-left|<quote|2tab>|14.8.1.3<space|2spc>Consequences of
       Tychonoff's Theorem <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-84>>
+      <no-break><pageref|auto-85>>
 
       14.9<space|2spc>Convergence <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-85>
+      <no-break><pageref|auto-86>
 
       <with|par-left|<quote|1tab>|14.9.1<space|2spc>Sequences and limits
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-86>>
+      <no-break><pageref|auto-87>>
 
       <with|par-left|<quote|1tab>|14.9.2<space|2spc>Properties of the limit
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-87>>
+      <no-break><pageref|auto-88>>
 
       <with|par-left|<quote|1tab>|14.9.3<space|2spc>Sequences of real numbers
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-88>>
+      <no-break><pageref|auto-89>>
 
       14.10<space|2spc>Complete spaces <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-91>
+      <no-break><pageref|auto-92>
 
       <with|par-left|<quote|1tab>|14.10.1<space|2spc>Examples of complete
       spaces <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-96>>
+      <no-break><pageref|auto-97>>
 
       <with|par-left|<quote|1tab>|14.10.2<space|2spc>Uniform convergence and
       Bounded functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-97>>
+      <no-break><pageref|auto-98>>
 
       <with|par-left|<quote|1tab>|14.10.3<space|2spc>Series
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-99>>
+      <no-break><pageref|auto-100>>
 
       <with|par-left|<quote|2tab>|14.10.3.1<space|2spc>Series of non negative
       numbers <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-101>>
+      <no-break><pageref|auto-102>>
 
       <with|par-left|<quote|2tab>|14.10.3.2<space|2spc>Absolute Convergent
       Series <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-102>>
+      <no-break><pageref|auto-103>>
 
       <with|par-left|<quote|1tab>|14.10.4<space|2spc>Properties of complete
       spaces. <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-105>>
+      <no-break><pageref|auto-106>>
 
       14.11<space|2spc>Connected Sets <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-108>
+      <no-break><pageref|auto-109>
     </associate>
   </collection>
 </auxiliary>

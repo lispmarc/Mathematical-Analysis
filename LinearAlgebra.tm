@@ -24257,8 +24257,9 @@
   <\collection>
     <associate|chapter-nr|10>
     <associate|item-nr|4>
-    <associate|page-first|331>
+    <associate|page-first|333>
     <associate|page-medium|papyrus>
+    <associate|par-first|0tab>
     <associate|section-nr|5>
     <associate|subsection-nr|5>
   </collection>

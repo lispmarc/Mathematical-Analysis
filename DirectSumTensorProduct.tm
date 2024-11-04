@@ -1,13 +1,11 @@
-<TeXmacs|2.1.2>
+<TeXmacs|2.1.4>
 
 <project|FullBook.tm>
 
 <style|<tuple|book|preview-ref|smart-ref>>
 
 <\body>
-  \;
-
-  TODO check next<chapter|Internal Direct Sum>
+  <chapter|Internal Direct Sum>
 
   We will now extend the sum of two subsets of a vector space \ [see
   definition: <reference|vector space sum of sub-spaces>] to a sum of a
@@ -6160,7 +6158,8 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|11>
-    <associate|page-first|581>
+    <associate|page-first|598>
+    <associate|par-first|0tab>
     <associate|section-nr|9>
     <associate|subsection-nr|0>
   </collection>

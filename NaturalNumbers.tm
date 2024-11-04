@@ -9854,6 +9854,7 @@
     <associate|chapter-nr|3>
     <associate|page-first|123>
     <associate|page-medium|paper>
+    <associate|par-first|0tab>
     <associate|project-flag|false>
     <associate|section-nr|5>
     <associate|subsection-nr|0>
@@ -9918,8 +9919,8 @@
     <associate|auto-58|<tuple|6.2.2|190>>
     <associate|auto-59|<tuple|6.2.3|195>>
     <associate|auto-6|<tuple|sub-semi-group|125>>
-    <associate|auto-60|<tuple|6.2.4|199>>
-    <associate|auto-61|<tuple|6.3|201>>
+    <associate|auto-60|<tuple|6.2.4|198>>
+    <associate|auto-61|<tuple|6.3|200>>
     <associate|auto-7|<tuple|sup-group|125>>
     <associate|auto-8|<tuple|group isomorphism|127>>
     <associate|auto-9|<tuple|left action|130>>
@@ -10050,7 +10051,7 @@
     <associate|finite power notation|<tuple|6.75|201>>
     <associate|finite product of sets|<tuple|6.74|201>>
     <associate|finite product of sets bijection|<tuple|6.80|202>>
-    <associate|finite product of sets power|<tuple|6.81|203>>
+    <associate|finite product of sets power|<tuple|6.81|202>>
     <associate|finite product of sets power equivalence|<tuple|6.82|203>>
     <associate|finite product of sets projection operator|<tuple|6.76|201>>
     <associate|finite product of sets single set|<tuple|6.83|203>>
