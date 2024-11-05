@@ -933,6 +933,17 @@
 
       <item>The function <math|Re:\<bbb-C\>\<rightarrow\>\<bbb-R\>> is
       continuous
+
+      <item>If <math|f:\<bbb-C\>\<rightarrow\>\<bbb-C\>> and
+      <math|g:\<bbb-C\>\<rightarrow\>\<bbb-C\>> are continuous functions in
+      <math|<around*|\<langle\>|\<bbb-C\>,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+      then\ 
+
+      <\equation*>
+        f\<cdot\>g:\<bbb-C\>\<rightarrow\>\<bbb-C\><text| define by
+        ><around*|(|f\<cdot\>g|)><text| is continuous> in
+        <around*|\<langle\>|\<bbb-C\>,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>
+      </equation*>
     </enumerate>
   </theorem>
 
@@ -1053,7 +1064,48 @@
       </equation*>
 
       proving continuity.
+
+      <item>Let <math|z\<in\>\<bbb-C\>> and
+      <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then as <math|f,g> are
+      continuous there exist a <math|\<delta\><rsub|1>,\<delta\><rsub|2>\<in\>\<bbb-R\><rsup|+>>
+      such that\ 
+
+      <\equation>
+        <label|eq 17.11.139>\<forall\>z<rprime|'>\<in\>\<bbb-C\><text| with
+        ><around*|\<\|\|\>|z-z<rprime|'>|\<\|\|\>>\<less\>\<delta\><rsub|1><text|
+        we have ><around*|\<\|\|\>|f<around*|(|z|)>-f<around*|(|z<rprime|'>|)>|\<\|\|\>>\<less\>min<around*|(|1,<frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\<\|\|\>|g<around*|(|z|)>|\<\|\|\>>|)>>|)>
+      </equation>
+
+      <\equation>
+        <label|eq 17.12.139>\<forall\>z<rprime|'>\<in\>\<bbb-C\><text| with
+        ><around*|\<\|\|\>|z-z<rprime|'>|\<\|\|\>>\<less\>\<delta\><rsub|2><text|
+        we have <math|<around*|\<\|\|\>|g<around*|(|z|)>-g<around*|(|z<rprime|'>|)>|\<\|\|\>>\<less\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\<\|\|\>|f<around*|(|z|)>|\<\|\|\>>|)>>>>
+      </equation>
+
+      Defin <math|\<delta\>=min<around*|(|\<delta\><rsub|1>,\<delta\><rsub|2>|)>\<in\>\<bbb-R\><rsup|+>>
+      then if <math|z<rprime|'>\<in\>\<bbb-C\>> with
+      <math|<around*|\<\|\|\>|z<rprime|'>|\<\|\|\>>\<less\>\<delta\>> we have\ 
+
+      <\equation>
+        <label|eq 17.13.139><around*|\<\|\|\>|f<around*|(|z<rprime|'>|)>|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|f<around*|(|z|)>-<around*|(|f<around*|(|z|)>-f<around*|(|z<rprime|'>|)>|)>|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|f<around*|(|z|)>-f<around*|(|z<rprime|'>|)>|\<\|\|\>>+<around*|\<\|\|\>|f<around*|(|z|)>|\<\|\|\>>\<less\>1+<around*|\<\|\|\>|f<around*|(|z|\<\|\|\>>|\<nobracket\>>
+      </equation>
+
+      Now
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|<around*|(|f\<cdot\>g|)><around*|(|z|)>-<around*|(|f\<cdot\>g|)><around*|(|z<rprime|'>|)>|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|f<around*|(|z|)>\<cdot\>g<around*|(|z|)>-f<around*|(|z<rprime|'>|)>\<cdot\>g<around*|(|z<rprime|'>|)>|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|f<around*|(|z|)>\<cdot\>g<around*|(|z|)>-f<around*|(|z<rprime|'>|)>\<cdot\>g<around*|(|z|)>+f<around*|(|z<rprime|'>|)>\<cdot\>g<around*|(|z|)>-f<around*|(|z<rprime|'>|)>\<cdot\>g<around*|(|z<rprime|'>|)>|\<\|\|\>>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|f<around*|(|z|)>\<cdot\>g<around*|(|z|)>-f<around*|(|z<rprime|'>|)>\<cdot\>g<around*|(|z|)>|\<\|\|\>>+<around*|\<\|\|\>|f<around*|(|z<rprime|'>|)>\<cdot\>g<around*|(|z|)>-f<around*|(|z<rprime|'>|)>\<cdot\>g<around*|(|z<rprime|'>|)>|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<around*|(|f<around*|(|z|)>-f<around*|(|z<rprime|'>|)>|)>\<cdot\>g<around*|(|z|)>|\<\|\|\>>+<around*|\<\|\|\>|f<around*|(|z<rprime|'>|)>\<cdot\><around*|(|g<around*|(|z|)>-g<around*|(|z<rprime|'>|)>|)>|\<\|\|\>>>|<cell|\<leqslant\><rsub|<text|[lemma:
+        <reference|fundamental norm properties>(4)]>>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|f<around*|(|z|)>-f<around*|(|z<rprime|'>|)>|\<\|\|\>>\<cdot\><around*|\<\|\|\>|g<around*|(|z|)>|\<\|\|\>>+<around*|\<\|\|\>|f<around*|(|z<rprime|'>|)>|\<\|\|\>>\<cdot\><around*|\<\|\|\>|g<around*|(|z|)>-g<around*|(|z<rprime|'>|)>|\<\|\|\>>>|<cell|\<less\><rsub|<text|[eq:
+        <reference|eq 17.13.139>]>>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|f<around*|(|z|)>-f<around*|(|z<rprime|'>|)>|\<\|\|\>>\<cdot\><around*|\<\|\|\>|g<around*|(|z|)>|\<\|\|\>>+<around*|(|1+<around*|\<\|\|\>|f<around*|(|z|)>|\<\|\|\>>|)>\<cdot\><around*|\<\|\|\>|g<around*|(|z|)>-g<around*|(|z<rprime|'>|)>|\<\|\|\>>>|<cell|\<less\><rsub|<text|[eqs:
+        <reference|eq 17.11.139>, <reference|eq
+        17.12.139>>>>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\<\|\|\>|g<around*|(|z|)>|\<\|\|\>>|)>>\<cdot\><around*|\<\|\|\>|g<around*|(|z|)>|\<\|\|\>>+<around*|(|1+<around*|\<\|\|\>|f<around*|(|z|)>|\<\|\|\>>|)>\<cdot\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\<\|\|\>|f<around*|(|z|)>|\<\|\|\>>|)>>>|<cell|\<less\>>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|2>+<frac|\<varepsilon\>|2>>|<cell|=>|<cell|>>|<row|<cell|\<varepsilon\>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      proving that <math|f\<cdot\>g> is continuous at <math|z>. As
+      <math|z\<in\>\<bbb-C\>> was chosen arbitrary <math|f\<cdot\>g> is
+      continuous.
     </enumerate>
+
+    \;
   </proof>
 
   The following very specific lemma will be used in the proof of the
@@ -2038,11 +2090,12 @@
     follows that <math|r> is a polynomial with
     <math|ord<around*|(|r|)>=ord<around*|(|p|)>>. Further using [lemma:
     <reference|lemma 17.25.136>] there exist a
-    <math|k\<in\><around*|{|1,\<ldots\>,n|}>> a a polynomial of otder
-    <math|n-k> such that <math|q<around*|(|0|)>\<neq\>0> and\ 
+    <math|k\<in\><around*|{|1,\<ldots\>,n|}>> a a polynomial of order
+    <math|n-k> such that\ 
 
     <\equation>
-      <label|eq 17.54.138>\<forall\>z\<in\>\<bbb-C\><text| we have
+      <label|eq 17.54.138>q<around*|(|0|)>\<neq\>0<text| and
+      >\<forall\>z\<in\>\<bbb-C\><text| we have
       >r<around*|(|z|)>=r<around*|(|0|)>+z<rsup|k>\<cdot\>q<around*|(|z|)>
     </equation>
 
@@ -2078,8 +2131,374 @@
       <label|eq 17.56.138>0\<leqslant\>\<delta\><rsup|k>\<cdot\><around*|\||x<rsup|k>\<cdot\>q<around*|(|\<delta\>\<cdot\>x|)>|\|><rsup|2>+2\<cdot\>Re<around*|(|x<rsup|k>\<cdot\>q<around*|(|\<delta\>\<cdot\>x|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>|)>
     </equation>
 
-    \;
+    Given <math|x\<in\>\<bbb-C\>> define\ 
+
+    <\equation>
+      <label|eq 17.60.138>f<rsub|x>:\<bbb-R\>\<rightarrow\>\<bbb-R\><text| by
+      >f<rsub|x><around*|(|\<delta\>|)>=\<delta\><rsup|k>\<cdot\><around*|\||x<rsup|k>\<cdot\>q<around*|(|\<delta\>\<cdot\>x|)>|\|><rsup|2>+2\<cdot\>Re<around*|(|x<rsup|k>\<cdot\>q<around*|(|\<delta\>\<cdot\>x|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>|)>
+    </equation>
+
+    We prove now that <math|f<rsub|x>> is continuous by showing that it is
+    the sum of functions composed of the continuous functions in [theorem:
+    <reference|fundamental continuity>]. So define\ 
+
+    <\equation*>
+      f<rsub|x,1>:\<bbb-C\>\<rightarrow\>\<bbb-R\><text| by
+      ><around*|\<langle\>|\<cdot\>|\<rangle\>>\<circ\><around*|(|x<rsup|k>\<cdot\>|)>\<circ\>q\<circ\><around*|(|x\<cdot\>|)>
+    </equation*>
+
+    wich is continous as the composition the continuous mappings
+    <math|<around*|\<langle\>|\<cdot\>|\<rangle\>>>,
+    <math|<around*|(|x<rsup|k>\<cdot\>|)>>, <math|q> and
+    <math|<around*|(|x\<cdot\>|)>> [see theorem: <reference|fundamental
+    continuity>(1,3,4)]. Using the definition of <math|f<rsub|x,1>> we have:
+
+    <\equation>
+      <label|eq 17.61.139>f<rsub|x,1><around*|(|\<delta\>|)>=<around*|\<langle\>|\<cdot\>|\<rangle\>><around*|(|x<rsup|k>\<cdot\>|)><around*|(|q<around*|(|x\<cdot\>|)><around*|(|\<delta\>|)>|)>=<around*|\<langle\>|\<cdot\>|\<rangle\>><around*|(|x<rsup|k>\<cdot\>|)><around*|(|q<around*|(|x\<cdot\>\<delta\>|)>|)>=<around*|\<langle\>|\<cdot\>|\<rangle\>><around*|(|x<rsup|k>\<cdot\>q<around*|(|x\<cdot\>\<delta\>|)>|)>=<around*|\||x<rsup|k>\<cdot\>q<around*|(|\<delta\>\<cdot\>x|)>|\|><rsup|2>
+    </equation>
+
+    \ Define\ 
+
+    <\equation>
+      <label|eq 17.62.139>f<rsub|x,2>:\<bbb-C\>\<rightarrow\>\<bbb-C\><text|
+      by >f<rsub|x,2>=<around*|(|<around*|(|\<cdot\>|)><rsup|k>|)>\<cdot\>f<rsub|x,1><text|
+      so that >f<rsub|x,2><around*|(|\<delta\>|)>=<around*|(|\<cdot\>|)><rsup|k><around*|(|\<delta\>|)>\<cdot\>f<rsub|x,1><around*|(|\<delta\>|)>\<equallim\><rsub|<text|[eq:
+      <reference|eq 17.61.139>]>>\<delta\><rsup|2>\<cdot\><around*|\||x<rsup|k>\<cdot\>q<around*|(|\<delta\>\<cdot\>x|)>|\|><rsup|2>
+    </equation>
+
+    which is continuous because it is the product of the continuous mappings
+    <math|<around*|(|\<cdot\>|)><rsup|k>> and <math|f<rsub|x,1>> [see
+    theorem: <reference|fundamental continuity>(2,10). Define\ 
+
+    <\equation*>
+      f<rsub|x,3>:\<bbb-C\>\<rightarrow\>\<bbb-R\><text| by
+      >f<rsub|x,3>=Re\<circ\><around*|(|x<rsup|k>\<cdot\>|)>\<circ\><around*|(|<wide|r<around*|(|0|)>|\<wide-bar\>>\<cdot\>|)>\<circ\>q\<circ\><around*|(|x\<cdot\>|)>
+    </equation*>
+
+    which is continuous as the composition of continuous functions [see
+    theorem: <reference|fundamental continuity>(1,3,4,9)]. Further using the
+    definition of <math|f<rsub|x,3>> we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|f<rsub|x,3><around*|(|\<delta\>|)>>|<cell|=>|<cell|Re<around*|(|<around*|(|x<rsup|k>\<cdot\>|)><around*|(|<wide|r<around*|(|0|)>|\<wide-bar\>>\<cdot\>|)><around*|(|q<around*|(|<around*|(|x\<cdot\>|)><around*|(|\<delta\>|)>|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|Re<around*|(|<around*|(|x<rsup|k>\<cdot\>|)><around*|(|<wide|r<around*|(|0|)>|\<wide-bar\>>\<cdot\>|)><around*|(|q<around*|(|x\<cdot\>\<delta\>|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|Re<around*|(|<around*|(|x<rsup|k>\<cdot\>|)><around*|(|<wide|r<around*|(|0|)>|\<wide-bar\>>\<cdot\>|)><around*|(|q<around*|(|\<delta\>\<cdot\>x|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|Re<around*|(|<around*|(|x<rsup|k>\<cdot\>|)><around*|(|<wide|r<around*|(|0|)>|\<wide-bar\>>\<cdot\>q<around*|(|\<delta\>\<cdot\>x|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|Re<around*|(|<around*|(|x<rsup|k>\<cdot\>|)><around*|(|q<around*|(|\<delta\>\<cdot\>x|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|Re<around*|(|x<rsup|k>\<cdot\>q<around*|(|\<delta\>\<cdot\>x|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>|)><eq-number><label|eq
+      17.63.139>>>>>
+    </eqnarray*>
+
+    Hence we have for <math|\<delta\>\<in\>\<bbb-R\>>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|f<rsub|x,2>+f<rsub|x,3>|)><around*|(|\<delta\>|)>>|<cell|=>|<cell|<around*|(|f<rsub|x,2>|)><rsub|\|\<bbb-R\>><around*|(|\<delta\>|)>+<around*|(|f<rsub|x,3>|)><rsub|\|\<bbb-R\>><around*|(|\<delta\>|)>>>|<row|<cell|>|<cell|=>|<cell|f<rsub|x,2><around*|(|\<delta\>|)>+f<rsub|x,3>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eqs:
+      <reference|eq 17.62.139>,<reference|eq
+      17.63.139>]>>>|<cell|\<delta\><rsup|2>\<cdot\><around*|\||x<rsup|k>\<cdot\>q<around*|(|\<delta\>\<cdot\>x|)>|\|><rsup|2>+Re<around*|(|x<rsup|k>\<cdot\>q<around*|(|\<delta\>\<cdot\>x|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 17.60.138>]>>>|<cell|f<rsub|x><around*|(|\<delta\>|)>>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation*>
+      f<rsub|x>=<around*|(|f<rsub|x,2>|)><rsub|\|\<bbb-R\>>+<around*|(|f<rsub|x,3>|)><rsub|\|\<bbb-R\>>
+    </equation*>
+
+    where by [theorem: <reference|continuity and subspace topology (2)>]
+    <math|<around*|(|f<rsub|x,2>|)><rsub|\|\<bbb-R\>><text| and
+    ><around*|(|f<rsub|x,3>|)><rsub|\|\<bbb-R\>>> are continuous. So
+    <math|f<rsub|x>> is the sum of two continuous function hence by [theorem:
+    <reference|continuity of finite sum of continuous functions>] it is
+    continuous. To summarize\ 
+
+    <\equation>
+      <label|eq 17.64.139>\<forall\>x\<in\>\<bbb-C\>
+      \ f<rsub|x>:\<bbb-R\>\<rightarrow\>\<bbb-R\><text| defined by
+      >f<around*|(|\<delta\>|)>=\<delta\><rsup|2>\<cdot\><around*|\||x<rsup|k>\<cdot\>q<around*|(|\<delta\>\<cdot\>x|)>|\|><rsup|2>+Re<around*|(|x<rsup|k>\<cdot\>q<around*|(|\<delta\>\<cdot\>x|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>|)><text|
+      is continuous>
+    </equation>
+
+    Combining this result with [eq: <reference|eq 17.56.138>] results in\ 
+
+    <\equation>
+      <label|eq 17.65.139>\<forall\>x\<in\>\<bbb-C\><text| we have
+      >\<forall\>\<delta\>\<in\>\<bbb-R\><rsup|+><text| that
+      >0\<leqslant\>f<rsub|x><around*|(|\<delta\>|)>
+    </equation>
+
+    What about <math|\<delta\>=0>? Assume that
+    <math|f<rsub|x><around*|(|0|)>\<less\>0> then
+    <math|\<varepsilon\>=-f<rsub|x><around*|(|0|)>\<in\>\<bbb-R\><rsup|+>> so
+    by the continuoty of <math|f<rsub|x>> at <math|0> there exist a
+    <math|\<zeta\>\<in\>\<bbb-R\><rsup|+>> such that
+    <math|\<forall\>\<delta\>\<in\>\<bbb-R\>> with
+    <math|<around*|\<\|\|\>|f<rsub|x><around*|(|0|)>-f<rsub|x><around*|(|\<zeta\>|)>|\<\|\|\>>\<less\>-f<around*|(|0|)>>.
+    So if we take <math|\<delta\>=<frac|\<zeta\>|2>> then we have\ 
+
+    <\equation*>
+      <around*|\||f<rsub|x><around*|(|0|)>-f<rsub|x><around*|(|<frac|\<zeta\>|2>|)>|\|>\<equallim\><rsub|<text|[theorem:
+      <reference|fundamental norm properties>(1)>><around*|\<\|\|\>|f<rsub|x><around*|(|0|)>-f<rsub|x><around*|(|<frac|\<zeta\>|2>|)>|\<\|\|\>>\<less\>-f<rsub|x><around*|(|0|)>
+    </equation*>
+
+    As <math|f<rsub|x><around*|(|0|)>\<less\><rsub|<text|assumption>>0\<leqslant\>f<rsub|x><around*|(|<frac|\<zeta\>|2>|)>>
+    we have that <math|f<rsub|x><around*|(|<frac|\<zeta\>|2>|)>-f<rsub|x><around*|(|0|)>=<around*|\||f<rsub|x><around*|(|0|)>-f<rsub|x><around*|(|<frac|\<zeta\>|2>|)>|\|>\<less\>-f<rsub|x><around*|(|0|)>>
+    so that <math|f<rsub|x><around*|(|<frac|\<zeta\>|2>|)>\<less\>0>
+    contradiction <math|0\<leqslant\>f<rsub|x><around*|(|<frac|\<zeta\>|2>|)>>.
+    Hence the assumption is wrong and we have for <math|x\<in\>\<bbb-C\>>
+    that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|0>|<cell|\<leqslant\>>|<cell|f<rsub|x><around*|(|0|)>>>|<row|<cell|>|<cell|=>|<cell|0<rsup|2>\<cdot\><around*|\||x<rsup|k>\<cdot\>q<around*|(|0\<cdot\>x|)>|\|><rsup|2>+Re<around*|(|x<rsup|k>\<cdot\>q<around*|(|0\<cdot\>x|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>|)>>>|<row|<cell|>|<cell|=>|<cell|Re<around*|(|x<rsup|k>\<cdot\>q<around*|(|0|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>|\<nobracket\>>>>>>
+    </eqnarray*>
+
+    or as <math|><math|<around*|(|0|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>\<in\>\<bbb-C\>>
+
+    <\equation>
+      <label|eq 17.66.139>0\<leqslant\>Re<around*|(|x<rsup|k>\<cdot\><around*|(|a+i\<cdot\>b|)>|)><text|
+      where >q<around*|(|0|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>=a+i\<cdot\>b<text|
+      >\<forall\>x\<in\>\<bbb-C\>
+    </equation>
+
+    Now for <math|k\<in\><around*|{|1,\<ldots\>,n|}>> we have the following
+    exclusive cases:
+
+    <\description>
+      <item*|<math|k<text| is odd>>>Then <math|k=2\<cdot\>m+1> [see theorem:
+      <reference|integers even odd equivalences>]. Substituting <math|x=1>
+      and <math|x=-1> in [eq: <reference|eq 17.66.139>] gives\ 
+
+      <\equation*>
+        0\<leqslant\>Re<around*|(|1<rsup|k>\<cdot\><around*|(|a+i\<cdot\>b|)>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|complex power properties>]>>Re<around*|(|a+i\<cdot\>b|)>=a
+      </equation*>
+
+      <\equation*>
+        0\<leqslant\>Re<around*|(|<around*|(|-1|)><rsup|k>\<cdot\><around*|(|a+i\<cdot\>b|)>|)>=Re<around*|(|<around*|(|-1|)><rsup|2\<cdot\>m+1>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|complex power properties>]>>Re<around*|(|-a-i\<cdot\>b|)>=-a
+      </equation*>
+
+      hence <math|0\<leqslant\>a\<wedge\>a\<leqslant\>0> so that\ 
+
+      <\equation*>
+        a=0
+      </equation*>
+
+      Now for <math|m> we have either:\ 
+
+      <\description>
+        <item*|<math|m=even>>Then <math|m=2\<cdot\>l> so that
+        <math|k=4\<cdot\>l+1>. Substitute <math|x=i> and <math|x=-i> in [eq:
+        <reference|eq 17.66.139>] taking in account that <math|a=0> gives\ 
+
+        <\equation*>
+          0\<leqslant\>Re<around*|(|i<rsup|k>\<cdot\>i\<cdot\>b|)>=Re<around*|(|i<rsup|4\<cdot\>l+1>\<cdot\>i\<cdot\>b|)>\<equallim\><rsub|<text|[theorem:
+          <reference|complex power of i>]>>Re<around*|(|i\<cdot\>i\<cdot\>b|)>=Re<around*|(|-b|)>=-b<text|>
+        </equation*>
+
+        and
+
+        <\equation*>
+          0\<leqslant\>Re<around*|(|<around*|(|-i|)><rsup|k>\<cdot\>i\<cdot\>b|)>=Re<around*|(|<around*|(|-1|)><rsup|2\<cdot\>m+1>\<cdot\>k<rsup|4\<cdot\>l+1>\<cdot\>i\<cdot\>b|)>\<equallim\><rsub|<text|[theorem:
+          <reference|complex power properties>,<reference|complex power of
+          i>]>>Re<around*|(|-i\<cdot\>i\<cdot\>b|)>=b
+        </equation*>
+
+        Hence <math|0\<leqslant\>b\<wedge\>b\<leqslant\>0> so that
+
+        <\equation*>
+          b=0
+        </equation*>
+
+        <item*|<math|m=odd>>Then <math|m=2\<cdot\>l+1> so that
+        <math|k=2\<cdot\><around*|(|2\<cdot\>l+1|)>+1=4\<cdot\>l+3> hence if
+        we substitute <math|x=i> and <math|x=-i> in [eq: <reference|eq
+        17.66.139>] taking in account that <math|a=0> we get
+
+        <\equation*>
+          0\<leqslant\>Re<around*|(|i<rsup|k>\<cdot\>i\<cdot\>b|)>=Re<around*|(|i<rsup|4\<cdot\>l+3>\<cdot\>i\<cdot\>b|)>\<equallim\><rsub|<text|[theorem:
+          <reference|complex power of i>]>>Re<around*|(|<around*|(|-i|)>\<exterior\>i\<cdot\>b|)>=Re<around*|(|b|)>=b
+        </equation*>
+
+        and
+
+        <\equation*>
+          0\<leqslant\>Re<around*|(|<around*|(|-i|)><rsup|k>\<cdot\>i\<cdot\>b|)>=Re<around*|(|<around*|(|-1|)><rsup|2\<cdot\>m+1>\<cdot\>i<rsup|4\<cdot\>l+3>\<cdot\>i\<cdot\>b|)>\<equallim\><rsub|<text|[theorem:
+          <reference|complex power properties>,<reference|complex power of
+          i>]>>Re<around*|(|<around*|(|-1|)>\<cdot\><around*|(|-i|)>\<cdot\>i\<cdot\>b|)>=Re<around*|(|-b|)>=-b
+        </equation*>
+
+        Hence \ <math|0\<leqslant\>b\<wedge\>b\<leqslant\>0> so that
+
+        <\equation*>
+          b=0
+        </equation*>
+      </description>
+
+      So we have that <math|a=b=0> so that
+      <math|q<around*|(|0|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>=0+i\<cdot\>0=0>,
+      as <math|q<around*|(|0|)>\<neq\>0> [see eq: <reference|eq 17.54.138>]
+      we conclude that
+
+      <\equation*>
+        <wide|r<around*|(|0|)>|\<wide-bar\>>=0
+      </equation*>
+
+      <item*|<math|k<text| is even>>>Then <math|k=2\<cdot\>m> [see theorem:
+      <reference|integers even odd equivalences>] and for <math|m> we have
+      either:
+
+      <\description>
+        <item*|<math|m<text| is odd>>>Then <math|m=2\<cdot\>l+1> so that
+        <math|k=4\<cdot\>l+2>. Substituting <math|x=i> in [eq: <reference|eq
+        17.66.139>] gives
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|0>|<cell|\<leqslant\>>|<cell|Re<around*|(|i<rsup|k>\<cdot\><around*|(|a+i\<cdot\>b|)>|)>>>|<row|<cell|>|<cell|=>|<cell|Re<around*|(|i<rsup|4\<cdot\>l+2>\<cdot\><around*|(|a+i\<cdot\>b|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|complex power of i>]>>>|<cell|Re<around*|(|-<around*|(|a+i\<cdot\>b|)>|)>>>|<row|<cell|>|<cell|=>|<cell|Re<around*|(|-a-i\<cdot\>b|)>>>|<row|<cell|>|<cell|=>|<cell|-a>>>>
+        </eqnarray*>
+
+        Substituting <math|x=1> in [eq: <reference|eq 17.66.139>] gives
+
+        <\equation*>
+          0\<leqslant\>Re<around*|(|1<rsup|k>\<cdot\><around*|(|a+i\<cdot\>b|)>|)>=Re<around*|(|a+i\<cdot\>b|)>=a
+        </equation*>
+
+        Hence <math|0\<leqslant\>a\<wedge\>a\<leqslant\>0> proving that\ 
+
+        <\equation*>
+          a=0
+        </equation*>
+
+        Substituting <math|x=<around*|(|1+i|)>> in [eq: <reference|eq
+        17.66.139>] gives
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|0>|<cell|\<leqslant\>>|<cell|Re<around*|(|<around*|(|1+i|)><rsup|k>\<cdot\><around*|(|a+i\<cdot\>b|)>|)>>>|<row|<cell|>|<cell|=>|<cell|Re<around*|(|<around*|(|1+i|)><rsup|4\<cdot\>l+2>\<cdot\>i\<cdot\>b|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+          <reference|lemma 17.19.136>]>>>|<cell|Re<around*|(|2\<cdot\><around*|(|-4|)><rsup|l>\<cdot\>i\<cdot\>i\<cdot\>b|)>>>|<row|<cell|>|<cell|=>|<cell|Re<around*|(|-2\<cdot\><around*|(|-4|)><rsup|l>\<cdot\>b|)>>>|<row|<cell|>|<cell|=>|<cell|-2\<cdot\><around*|(|-4|)><rsup|l>\<cdot\>b>>>>
+        </eqnarray*>
+
+        and substituting <math|x=<around*|(|1-i|)>> in [eq: <reference|eq
+        17.66.139>] gives
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|0>|<cell|\<leqslant\>>|<cell|Re<around*|(|<around*|(|1-i|)><rsup|k>\<cdot\><around*|(|a+i\<cdot\>b|)>|)>>>|<row|<cell|>|<cell|=>|<cell|Re<around*|(|<around*|(|1-i|)><rsup|4\<cdot\>l+2>\<cdot\>i\<cdot\>b|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+          <reference|lemma 17.19.136>]>>>|<cell|Re<around*|(|-2\<cdot\><around*|(|-4|)><rsup|l>\<cdot\>i\<cdot\>i\<cdot\>b|)>>>|<row|<cell|>|<cell|=>|<cell|Re<around*|(|2\<cdot\><around*|(|-4|)><rsup|l>\<cdot\>b|)>>>|<row|<cell|>|<cell|=>|<cell|2\<cdot\><around*|(|-4|)><rsup|l>\<cdot\>b>>>>
+        </eqnarray*>
+
+        If now <math|<around*|(|-4|)><rsup|l>\<leqslant\>0> then we have
+        <math|b\<leqslant\>0\<wedge\>0\<leqslant\>b\<Rightarrow\>b=0> and if
+        <math|0\<leqslant\><around*|(|-4|)><rsup|l>> then
+        <rigid|<math|0\<leqslant\>b\<wedge\>b\<leqslant\>0\<Rightarrow\>b=0>>.
+        So we have <math|a=b=0> proving that
+        <math|q<around*|(|0|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>=0+i\<cdot\>0=0>,
+        as <math|q<around*|(|0|)>\<neq\>0> [see eq: <reference|eq 17.54.138>]
+        we conclude that
+
+        <\equation*>
+          <wide|r<around*|(|0|)>|\<wide-bar\>>=0
+        </equation*>
+
+        <item*|<math|m<text| is even>>>Then <math|m=2\<cdot\>l> so that
+        <math|k=4\<cdot\>l>. Substituting <math|x=1> in \ [eq: <reference|eq
+        17.66.139>] gives\ 
+
+        <\equation*>
+          0\<leqslant\>Re<around*|(|1<rsup|k>\<cdot\><around*|(|a+i\<cdot\>b|)>|)>=Re<around*|(|a|)>=a
+        </equation*>
+
+        proving that\ 
+
+        <\equation>
+          <label|eq 17.67.139>0\<leqslant\>a
+        </equation>
+
+        Take now <math|x=<around*|(|1+<frac|i|2\<cdot\>l>|)>> then
+        <math|x<rsup|k>=<around*|(|1+<frac|i|2\<cdot\>l>|)><rsup|4\<cdot\>l>=<around*|(|<around*|(|1+<frac|i|m>|)><rsup|2>|)><rsup|m>>
+        so that using [lemma: <reference|lemma 17.28.136>] we have that\ 
+
+        <\equation*>
+          Re<around*|(|x<rsup|k>|)>\<less\>0\<less\>Img<around*|(|x<rsup|k>|)>
+        </equation*>
+
+        As <math|x<rsup|k>\<in\>\<bbb-C\>> we can write <math|x<rsup|k>> as
+        <math|x<rsup|k>=c+i\<cdot\>d> and <math|c=Re<around*|(|x<rsup|k>|)>>
+        and <math|d=Img<around*|(|x<rsup|k>|)>> so that\ 
+
+        <\equation>
+          <label|eq 17.68.139>c\<less\>0\<less\>d
+        </equation>
+
+        Subsituting <math|x<rsup|k>=c+i\<cdot\>d> in [eq: <reference|eq
+        17.66.139>] gives
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|0>|<cell|\<leqslant\>>|<cell|Re<around*|(|x<rsup|k>\<cdot\><around*|(|a+i\<cdot\>b|)>|)>>>|<row|<cell|>|<cell|=>|<cell|Re<around*|(|<around*|(|c+i\<cdot\>d|)>\<cdot\><around*|(|a+i\<cdot\>b|)>|)>>>|<row|<cell|>|<cell|=>|<cell|Re<around*|(|c\<cdot\>a-b\<cdot\>d+i\<cdot\><around*|(|d\<cdot\>a+c\<cdot\>b|)>|)>>>|<row|<cell|>|<cell|=>|<cell|c\<cdot\>a-b\<cdot\>d>>>>
+        </eqnarray*>
+
+        so that\ 
+
+        <\equation>
+          <label|eq 17.69.139>0\<leqslant\>c\<cdot\>a-b\<cdot\>d
+        </equation>
+
+        Take <math|y=<wide|x|\<wide-bar\>>> then
+        <math|y<rsup|k>=<around*|(|<wide|x|\<wide-bar\>>|)><rsup|k>\<equallim\><rsub|<text|[theorem:
+        <reference|complex conjugate properties>]>><wide|x<rsup|k>|\<wide-bar\>>>
+        so that <math|y<rsup|k>=c-i\<cdot\>d>, substituting this in \ [eq:
+        <reference|eq 17.66.139>] gives
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|0>|<cell|\<leqslant\>>|<cell|Re<around*|(|y<rsup|k>\<cdot\><around*|(|a+i\<cdot\>b|)>|)>>>|<row|<cell|>|<cell|=>|<cell|Re<around*|(|<around*|(|c-i\<cdot\>d|)>\<cdot\><around*|(|a+i\<cdot\>b|)>|)>>>|<row|<cell|>|<cell|=>|<cell|Re<around*|(|c\<cdot\>a+b\<cdot\>d+i\<cdot\><around*|(|c\<cdot\>b-d\<cdot\>a|)>|)>>>|<row|<cell|>|<cell|=>|<cell|c\<cdot\>a+b\<cdot\>d>>>>
+        </eqnarray*>
+
+        so that\ 
+
+        <\equation>
+          <label|eq 17.70.139>0\<leqslant\>c\<cdot\>a+b\<cdot\>d
+        </equation>
+
+        Adding [eq: <reference|eq 17.69.139>] to [eq: <reference|eq
+        17.70.139>] gives <math|0\<leqslant\>c\<cdot\>a-b\<cdot\>d+c*\<cdot\>a+b\<cdot\>d=2\<cdot\>c\<cdot\>a>
+        so that <math|0\<leqslant\>c\<cdot\>a>. As by [eq: <reference|eq
+        17.68.139>] <math|c\<less\>0> it follows that <math|a\<leqslant\>0>
+        which combined with [eq: <reference|eq 17.67.139>] proves that\ 
+
+        <\equation*>
+          a=0
+        </equation*>
+
+        Substituting<nbsp>this in [eqs: <reference|eq 17.69.139> and
+        <reference|eq 17.70.139>] yields <math|0\<leqslant\>-b\<cdot\>d\<Rightarrow\>b\<cdot\>d\<leqslant\>0>
+        and <math|0\<leqslant\>b\<cdot\>d> so that <math|b\<cdot\>d=0>, as by
+        [eq: <reference|eq 17.68.139>] <math|d\<neq\>0> it follows that
+
+        <\equation*>
+          b=0
+        </equation*>
+
+        Hence <math|q<around*|(|0|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>=a+i\<cdot\>b=0>
+        and as <math|q<around*|(|0|)>\<neq\>0> [see eq: <reference|eq
+        17.54.138>] it follows that
+
+        <\equation*>
+          <wide|r<around*|(|0|)>|\<wide-bar\>>=0
+        </equation*>
+      </description>
+    </description>
+
+    Hence in all cases we have <math|<wide|r<around*|(|0|)>|\<wide-bar\>>=0>
+    so that <math|<around*|\||r<around*|(|0|)>|\|><rsup|2>=r<around*|(|0|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>=0>
+    from which it follows that <math|r<around*|(|0|)>>. As by definition
+    [see: <reference|eq 17.52.138>] <math|r<around*|(|0|)>=p<around*|(|z<rsub|0><rsub|>|)>>
+    it follows that\ 
+
+    <\equation*>
+      p<around*|(|z<rsub|0>|)>=0
+    </equation*>
+
+    and we proved that there exist a zero point of the polynomial <math|p>.\ 
   </proof>
+
+  <\note>
+    In the above proof we have used the extreme value theorem to find the
+    existence of a zero point of <math|p> without actual providing a explicit
+    expression to calculate the zero point.
+  </note>
 </body>
 
 <\initial>
@@ -2112,57 +2531,72 @@
     <associate|divergent limit of sums|<tuple|17.15|?>>
     <associate|eq 17.1.145|<tuple|17.1|?>>
     <associate|eq 17.10.135|<tuple|17.10|?>>
-    <associate|eq 17.11.136|<tuple|17.11|?>>
-    <associate|eq 17.12.136|<tuple|17.12|?>>
-    <associate|eq 17.13.136|<tuple|17.13|?>>
-    <associate|eq 17.14.136|<tuple|17.14|?>>
-    <associate|eq 17.16.136|<tuple|17.16|?>>
-    <associate|eq 17.17.136|<tuple|17.17|?>>
-    <associate|eq 17.18.136|<tuple|17.18|?>>
-    <associate|eq 17.19.136|<tuple|17.19|?>>
+    <associate|eq 17.11.136|<tuple|17.14|?>>
+    <associate|eq 17.11.139|<tuple|17.11|?>>
+    <associate|eq 17.12.136|<tuple|17.15|?>>
+    <associate|eq 17.12.139|<tuple|17.12|?>>
+    <associate|eq 17.13.136|<tuple|17.16|?>>
+    <associate|eq 17.13.139|<tuple|17.13|?>>
+    <associate|eq 17.14.136|<tuple|17.17|?>>
+    <associate|eq 17.16.136|<tuple|17.19|?>>
+    <associate|eq 17.17.136|<tuple|17.20|?>>
+    <associate|eq 17.18.136|<tuple|17.21|?>>
+    <associate|eq 17.19.136|<tuple|17.22|?>>
     <associate|eq 17.2|<tuple|17.2|?>>
-    <associate|eq 17.20.136|<tuple|17.20|?>>
-    <associate|eq 17.21.136|<tuple|17.21|?>>
-    <associate|eq 17.22.136|<tuple|17.22|?>>
-    <associate|eq 17.23.136|<tuple|17.23|?>>
-    <associate|eq 17.24.136|<tuple|17.24|?>>
-    <associate|eq 17.25.136|<tuple|17.25|?>>
-    <associate|eq 17.26.136|<tuple|17.26|?>>
-    <associate|eq 17.27.136|<tuple|17.27|?>>
-    <associate|eq 17.28.136|<tuple|17.28|?>>
-    <associate|eq 17.29.136|<tuple|17.29|?>>
+    <associate|eq 17.20.136|<tuple|17.23|?>>
+    <associate|eq 17.21.136|<tuple|17.24|?>>
+    <associate|eq 17.22.136|<tuple|17.25|?>>
+    <associate|eq 17.23.136|<tuple|17.26|?>>
+    <associate|eq 17.24.136|<tuple|17.27|?>>
+    <associate|eq 17.25.136|<tuple|17.28|?>>
+    <associate|eq 17.26.136|<tuple|17.29|?>>
+    <associate|eq 17.27.136|<tuple|17.30|?>>
+    <associate|eq 17.28.136|<tuple|17.31|?>>
+    <associate|eq 17.29.136|<tuple|17.32|?>>
     <associate|eq 17.3.135|<tuple|17.3|?>>
-    <associate|eq 17.30.136|<tuple|17.30|?>>
-    <associate|eq 17.31.136|<tuple|17.31|?>>
-    <associate|eq 17.32.136|<tuple|17.32|?>>
-    <associate|eq 17.33.136|<tuple|17.33|?>>
-    <associate|eq 17.34.136|<tuple|17.34|?>>
-    <associate|eq 17.35.136|<tuple|17.35|?>>
-    <associate|eq 17.36.136|<tuple|17.36|?>>
-    <associate|eq 17.37.136|<tuple|17.37|?>>
-    <associate|eq 17.38.136|<tuple|17.38|?>>
-    <associate|eq 17.39.136|<tuple|17.39|?>>
+    <associate|eq 17.30.136|<tuple|17.33|?>>
+    <associate|eq 17.31.136|<tuple|17.34|?>>
+    <associate|eq 17.32.136|<tuple|17.35|?>>
+    <associate|eq 17.33.136|<tuple|17.36|?>>
+    <associate|eq 17.34.136|<tuple|17.37|?>>
+    <associate|eq 17.35.136|<tuple|17.38|?>>
+    <associate|eq 17.36.136|<tuple|17.39|?>>
+    <associate|eq 17.37.136|<tuple|17.40|?>>
+    <associate|eq 17.38.136|<tuple|17.41|?>>
+    <associate|eq 17.39.136|<tuple|17.42|?>>
     <associate|eq 17.4.135|<tuple|17.4|?>>
-    <associate|eq 17.40.136|<tuple|17.40|?>>
-    <associate|eq 17.41.136|<tuple|17.41|?>>
-    <associate|eq 17.42.136|<tuple|17.42|?>>
-    <associate|eq 17.43.138|<tuple|17.43|?>>
-    <associate|eq 17.44.138|<tuple|17.44|?>>
-    <associate|eq 17.45.138|<tuple|17.45|?>>
-    <associate|eq 17.46.138|<tuple|17.46|?>>
-    <associate|eq 17.47.138|<tuple|17.47|?>>
-    <associate|eq 17.48.138|<tuple|17.48|?>>
-    <associate|eq 17.49.138|<tuple|17.49|?>>
+    <associate|eq 17.40.136|<tuple|17.43|?>>
+    <associate|eq 17.41.136|<tuple|17.44|?>>
+    <associate|eq 17.42.136|<tuple|17.45|?>>
+    <associate|eq 17.43.138|<tuple|17.46|?>>
+    <associate|eq 17.44.138|<tuple|17.47|?>>
+    <associate|eq 17.45.138|<tuple|17.48|?>>
+    <associate|eq 17.46.138|<tuple|17.49|?>>
+    <associate|eq 17.47.138|<tuple|17.50|?>>
+    <associate|eq 17.48.138|<tuple|17.51|?>>
+    <associate|eq 17.49.138|<tuple|17.52|?>>
     <associate|eq 17.5.135|<tuple|17.5|?>>
-    <associate|eq 17.50.138|<tuple|17.50|?>>
-    <associate|eq 17.51.138|<tuple|17.51|?>>
-    <associate|eq 17.52.138|<tuple|17.52|?>>
-    <associate|eq 17.53.138|<tuple|17.53|?>>
-    <associate|eq 17.54.138|<tuple|17.54|?>>
-    <associate|eq 17.55.138|<tuple|17.55|?>>
-    <associate|eq 17.56.138|<tuple|17.56|?>>
+    <associate|eq 17.50.138|<tuple|17.53|?>>
+    <associate|eq 17.51.138|<tuple|17.54|?>>
+    <associate|eq 17.52.138|<tuple|17.55|?>>
+    <associate|eq 17.53.138|<tuple|17.56|?>>
+    <associate|eq 17.54.138|<tuple|17.57|?>>
+    <associate|eq 17.55.138|<tuple|17.58|?>>
+    <associate|eq 17.56.138|<tuple|17.59|?>>
+    <associate|eq 17.57.138|<tuple|17.60|?>>
     <associate|eq 17.6.135|<tuple|17.6|?>>
+    <associate|eq 17.60.138|<tuple|17.60|?>>
+    <associate|eq 17.61.139|<tuple|17.61|?>>
+    <associate|eq 17.62.139|<tuple|17.62|?>>
+    <associate|eq 17.63.139|<tuple|17.63|?>>
+    <associate|eq 17.64.139|<tuple|17.64|?>>
+    <associate|eq 17.65.139|<tuple|17.65|?>>
+    <associate|eq 17.66.139|<tuple|17.66|?>>
+    <associate|eq 17.67.139|<tuple|17.67|?>>
+    <associate|eq 17.68.139|<tuple|17.68|?>>
+    <associate|eq 17.69.139|<tuple|17.69|?>>
     <associate|eq 17.7.135|<tuple|17.7|?>>
+    <associate|eq 17.70.139|<tuple|17.70|?>>
     <associate|eq 17.8.135|<tuple|17.8|?>>
     <associate|eq 17.9.135|<tuple|17.9|?>>
     <associate|fundamental binomial coefficient|<tuple|17.21|?>>
