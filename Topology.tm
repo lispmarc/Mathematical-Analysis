@@ -9138,7 +9138,7 @@
 
       <\equation*>
         h<rsub|z>:\<bbb-K\><rsup|n>\<rightarrow\>X<text| defined by
-        >h<rsub|z><around*|(|x|)>=z\<cdot\>g<around*|(|x|)>=z\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i>
+        >h<rsub|z><around*|(|x|)>=z\<cdot\>g<around*|(|x|)>=<around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i>|)>\<cdot\>z
       </equation*>
 
       is multilinear and continuous [using the norms
@@ -9207,7 +9207,7 @@
       we have:
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|h<rsub|z><around*|(|x<rsub|1>,\<ldots\><wide*|x+\<beta\>\<cdot\>y|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|z\<cdot\>g<around*|(|x<rsub|1>,\<ldots\><wide*|x+\<beta\>\<cdot\>y|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>>|<cell|\<equallim\><rsub|<around*|(|2|)>>>|<cell|>>|<row|<cell|z\<cdot\><around*|(|g<around*|(|x<rsub|1>,\<ldots\><wide*|x|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>+\<beta\>\<cdot\>g<around*|(|x<rsub|1>,\<ldots\><wide*|y|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|h<rsub|z><around*|(|x<rsub|1>,\<ldots\><wide*|x|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>+\<beta\>\<cdot\>h<rsub|z><around*|(|x<rsub|1>,\<ldots\><wide*|y|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>>|<cell|>|<cell|>>>>
+        <tformat|<table|<row|<cell|h<rsub|z><around*|(|x<rsub|1>,\<ldots\><wide*|x+\<beta\>\<cdot\>y|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|g<around*|(|x<rsub|1>,\<ldots\><wide*|x+\<beta\>\<cdot\>y|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>\<cdot\>z>|<cell|\<equallim\><rsub|<around*|(|2|)>>>|<cell|>>|<row|<cell|<around*|(|g<around*|(|x<rsub|1>,\<ldots\><wide*|x|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>+\<beta\>\<cdot\>g<around*|(|x<rsub|1>,\<ldots\><wide*|y|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>|)>\<cdot\>z>|<cell|=>|<cell|>>|<row|<cell|h<rsub|z><around*|(|x<rsub|1>,\<ldots\><wide*|x|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>+\<beta\>\<cdot\>h<rsub|z><around*|(|x<rsub|1>,\<ldots\><wide*|y|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>>|<cell|>|<cell|>>>>
       </eqnarray*>
 
       proving that\ 
@@ -9219,13 +9219,13 @@
       Further we have
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<around*|\<\|\|\>|h<rsub|z><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>|\<\|\|\>><rsub|X>>|<cell|=>|<cell|<around*|\<\|\|\>|z\<cdot\>g<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||g<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>|\|>\<cdot\><around*|\<\|\|\>|z|\<\|\|\>><rsub|X>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<around*|(|2|)>>>|<cell|<around*|\<\|\|\>|z|\<\|\|\>><rsub|X>\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\||x<rsub|i>|\|>>>>>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|h<rsub|z><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>|\<\|\|\>><rsub|X>>|<cell|=>|<cell|<around*|\<\|\|\>|g<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<cdot\>z|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||g<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>|\|>\<cdot\><around*|\<\|\|\>|z|\<\|\|\>><rsub|X>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<around*|(|2|)>>>|<cell|<around*|\<\|\|\>|z|\<\|\|\>><rsub|X>\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|\||x<rsub|i>|\|>>>>>
       </eqnarray*>
 
       proving that\ 
 
       <\equation*>
-        h<rsub|z>:\<bbb-K\><rsup|n>\<rightarrow\>X<text| is cotninuous>
+        h<rsub|z>:\<bbb-K\><rsup|n>\<rightarrow\>X<text| is continuous>
       </equation*>
     </enumerate>
   </proof>
@@ -22781,67 +22781,69 @@
 
       <tuple|<tuple|extreme value theorem>|<pageref|auto-66>>
 
-      <tuple|<tuple|limit point compactness>|<pageref|auto-67>>
+      <tuple|<tuple|extreme value theorem>|<pageref|auto-67>>
 
-      <tuple|<tuple|compact class>|<pageref|auto-68>>
+      <tuple|<tuple|limit point compactness>|<pageref|auto-68>>
 
-      <tuple|<tuple|filter base>|<pageref|auto-71>>
+      <tuple|<tuple|compact class>|<pageref|auto-69>>
 
-      <tuple|<tuple|neighborhood filter base>|<pageref|auto-72>>
+      <tuple|<tuple|filter base>|<pageref|auto-72>>
 
-      <tuple|<tuple|converging to a point>|<pageref|auto-73>>
+      <tuple|<tuple|neighborhood filter base>|<pageref|auto-73>>
 
-      <tuple|<tuple|accumaling at a point>|<pageref|auto-74>>
+      <tuple|<tuple|converging to a point>|<pageref|auto-74>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<frak-U\>\<rightarrow\>x>>|<pageref|auto-75>>
+      <tuple|<tuple|accumaling at a point>|<pageref|auto-75>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<frak-U\>\<succ\>x>>|<pageref|auto-76>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<frak-U\>\<rightarrow\>x>>|<pageref|auto-76>>
 
-      <tuple|<tuple|subordinate filter bases>|<pageref|auto-77>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<frak-U\>\<succ\>x>>|<pageref|auto-77>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<frak-W\>\<geqslant\>\<frak-U\>>>|<pageref|auto-78>>
+      <tuple|<tuple|subordinate filter bases>|<pageref|auto-78>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<frak-U\>\<ll\>\<frak-W\>>>|<pageref|auto-79>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<frak-W\>\<geqslant\>\<frak-U\>>>|<pageref|auto-79>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<frak-U\>\<sqsubseteq\>\<frak-W\>>>|<pageref|auto-80>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<frak-U\>\<ll\>\<frak-W\>>>|<pageref|auto-80>>
 
-      <tuple|<tuple|ultra filter>|<pageref|auto-81>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<frak-U\>\<sqsubseteq\>\<frak-W\>>>|<pageref|auto-81>>
 
-      <tuple|<tuple|maximum filter base>|<pageref|auto-82>>
+      <tuple|<tuple|ultra filter>|<pageref|auto-82>>
 
-      <tuple|<tuple|Tychonoff's theorem>|<pageref|auto-84>>
+      <tuple|<tuple|maximum filter base>|<pageref|auto-83>>
+
+      <tuple|<tuple|Tychonoff's theorem>|<pageref|auto-85>>
 
       <tuple|<tuple|<with|mode|<quote|math>|<below|lim
-      sup|n\<rightarrow\>\<infty\>> x<rsub|n>>>|<pageref|auto-90>>
+      sup|n\<rightarrow\>\<infty\>> x<rsub|n>>>|<pageref|auto-91>>
 
       <tuple|<tuple|<with|mode|<quote|math>|<below|lim
-      inf|n\<rightarrow\>\<infty\>> x<rsub|n>>>|<pageref|auto-91>>
-
-      <tuple|<tuple|Cauchy sequence>|<pageref|auto-93>>
+      inf|n\<rightarrow\>\<infty\>> x<rsub|n>>>|<pageref|auto-92>>
 
       <tuple|<tuple|Cauchy sequence>|<pageref|auto-94>>
 
-      <tuple|<tuple|complete space>|<pageref|auto-95>>
+      <tuple|<tuple|Cauchy sequence>|<pageref|auto-95>>
 
-      <tuple|<tuple|Banach space>|<pageref|auto-96>>
+      <tuple|<tuple|complete space>|<pageref|auto-96>>
 
-      <tuple|<tuple|bounded uniform convergence>|<pageref|auto-99>>
+      <tuple|<tuple|Banach space>|<pageref|auto-97>>
 
-      <tuple|<tuple|series>|<pageref|auto-101>>
+      <tuple|<tuple|bounded uniform convergence>|<pageref|auto-100>>
 
-      <tuple|<tuple|absolute convergence>|<pageref|auto-104>>
+      <tuple|<tuple|series>|<pageref|auto-102>>
 
-      <tuple|<tuple|dominant convergence>|<pageref|auto-105>>
+      <tuple|<tuple|absolute convergence>|<pageref|auto-105>>
 
-      <tuple|<tuple|Baire Category theorem>|<pageref|auto-107>>
+      <tuple|<tuple|dominant convergence>|<pageref|auto-106>>
 
-      <tuple|<tuple|open mapping theorem>|<pageref|auto-108>>
+      <tuple|<tuple|Baire Category theorem>|<pageref|auto-108>>
 
-      <tuple|<tuple|connected space>|<pageref|auto-110>>
+      <tuple|<tuple|open mapping theorem>|<pageref|auto-109>>
 
-      <tuple|<tuple|disconnected space>|<pageref|auto-111>>
+      <tuple|<tuple|connected space>|<pageref|auto-111>>
 
-      <tuple|<tuple|intermediate value theorem>|<pageref|auto-112>>
+      <tuple|<tuple|disconnected space>|<pageref|auto-112>>
+
+      <tuple|<tuple|intermediate value theorem>|<pageref|auto-113>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|14<space|2spc>Topology>
@@ -22901,64 +22903,64 @@
 
       <with|par-left|<quote|1tab>|14.8.1<space|2spc>Product of Compact sets
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-69>>
+      <no-break><pageref|auto-70>>
 
       <with|par-left|<quote|2tab>|14.8.1.1<space|2spc>Filter bases
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-70>>
+      <no-break><pageref|auto-71>>
 
       <with|par-left|<quote|2tab>|14.8.1.2<space|2spc>Tychonoff's theorem
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-83>>
+      <no-break><pageref|auto-84>>
 
       <with|par-left|<quote|2tab>|14.8.1.3<space|2spc>Consequences of
       Tychonoff's Theorem <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-85>>
+      <no-break><pageref|auto-86>>
 
       14.9<space|2spc>Convergence <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-86>
+      <no-break><pageref|auto-87>
 
       <with|par-left|<quote|1tab>|14.9.1<space|2spc>Sequences and limits
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-87>>
+      <no-break><pageref|auto-88>>
 
       <with|par-left|<quote|1tab>|14.9.2<space|2spc>Properties of the limit
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-88>>
+      <no-break><pageref|auto-89>>
 
       <with|par-left|<quote|1tab>|14.9.3<space|2spc>Sequences of real numbers
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-89>>
+      <no-break><pageref|auto-90>>
 
       14.10<space|2spc>Complete spaces <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-92>
+      <no-break><pageref|auto-93>
 
       <with|par-left|<quote|1tab>|14.10.1<space|2spc>Examples of complete
       spaces <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-97>>
+      <no-break><pageref|auto-98>>
 
       <with|par-left|<quote|1tab>|14.10.2<space|2spc>Uniform convergence and
       Bounded functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-98>>
+      <no-break><pageref|auto-99>>
 
       <with|par-left|<quote|1tab>|14.10.3<space|2spc>Series
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-100>>
+      <no-break><pageref|auto-101>>
 
       <with|par-left|<quote|2tab>|14.10.3.1<space|2spc>Series of non negative
       numbers <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-102>>
+      <no-break><pageref|auto-103>>
 
       <with|par-left|<quote|2tab>|14.10.3.2<space|2spc>Absolute Convergent
       Series <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-103>>
+      <no-break><pageref|auto-104>>
 
       <with|par-left|<quote|1tab>|14.10.4<space|2spc>Properties of complete
       spaces. <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-106>>
+      <no-break><pageref|auto-107>>
 
       14.11<space|2spc>Connected Sets <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-109>
+      <no-break><pageref|auto-110>
     </associate>
   </collection>
 </auxiliary>
