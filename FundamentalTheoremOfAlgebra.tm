@@ -2499,12 +2499,611 @@
     existence of a zero point of <math|p> without actual providing a explicit
     expression to calculate the zero point.
   </note>
+
+  <\theorem>
+    <label|fundamental theorem and conjugate>Let <math|n\<in\>\<bbb-N\>> and
+    <math|<around*|{|a<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>\<subseteq\>\<bbb-R\>>
+    with <math|a<rsub|n>\<neq\>0> then if we define
+
+    <\equation*>
+      p:\<bbb-C\>\<rightarrow\>\<bbb-C\><text| is defined by
+      >p<around*|(|z|)>=<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\>z<rsup|i>
+    </equation*>
+
+    [in other words <math|p> is a polynomial of order <math|n> with real
+    coefficients] then for <math|z\<in\>\<bbb-C\>> with
+    <math|p<around*|(|z|)>=0> we have that
+    <math|p<around*|(|<wide|z|\<wide-bar\>>|)>=0>.
+  </theorem>
+
+  <\proof>
+    If <math|p<around*|(|z|)>=0> then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|0>|<cell|=>|<cell|<wide|0|\<wide-bar\>>>>|<row|<cell|>|<cell|=>|<cell|<wide|p<around*|(|z|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|=>|<cell|<wide|<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\>z<rsup|i>|\<wide-bar\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|complex conjugate properties>]>>>|<cell|<big|sum><rsub|i=0><rsup|n><wide|a<rsub|i>|\<wide-bar\>>\<cdot\><around*|(|<wide|z|\<wide-bar\>>|)><rsup|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|complex conjugate properties>]>\<wedge\>a<rsub|i>\<in\>\<bbb-R\>>>|<cell|<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\><around*|(|<wide|z|\<wide-bar\>>|)><rsup|i>>>|<row|<cell|>|<cell|=>|<cell|p<around*|(|<wide|z|\<wide-bar\>>|)>>>>>
+    </eqnarray*>
+  </proof>
+
+  <\theorem>
+    <label|fundamental p(z)=(z-z0)>Let <math|n\<in\>\<bbb-N\>> and
+    <math|<around*|{|a<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>\<subseteq\>\<bbb-C\>>
+    with <math|a<rsub|n>\<neq\>0> then if we define
+
+    <\equation*>
+      p:\<bbb-C\>\<rightarrow\>\<bbb-C\><text| is defined by
+      >p<around*|(|z|)>=<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\>z<rsup|i>
+    </equation*>
+
+    [in other words <math|p> is a polynomial of order <math|n>] and
+    <math|z<rsub|0>\<in\>\<bbb-C\>> such that
+    <math|p<around*|(|z<rsub|0>|)>=0> then there exist a
+    <math|m\<in\><around*|{|1,\<ldots\>,n|}>> and a polynomial <math|q> with
+    <math|ord<around*|(|q|)>=n-m> such that <math|\<forall\>z\<in\>\<bbb-C\>>
+    we have <math|p<around*|(|z|)>=<around*|(|z-z<rsub|0>|)><rsup|m>\<cdot\>q<around*|(|z|)>>
+    and <math|q<around*|(|z<rsub|0>|)>\<neq\>0>.
+  </theorem>
+
+  <\proof>
+    Define
+
+    <\equation>
+      <label|eq 17.71.139>r:\<bbb-C\>\<rightarrow\>\<bbb-C\><text| by
+      >r<around*|(|z|)>=p<around*|(|z+z<rsub|0>|)>
+    </equation>
+
+    then by [lemma: <reference|lemma 17.24.136>]
+
+    <\equation>
+      <label|eq 17.72.139>r<text| is a polynomial with
+      >ord<around*|(|r|)>=ord<around*|(|p|)>\<in\>\<bbb-N\>
+    </equation>
+
+    Using [lemma: <reference|lemma 17.25.136>] there exist a
+    <math|m\<in\><around*|{|1,\<ldots\>,n|}>> and a polynomial <math|s> such\ 
+
+    <\equation>
+      <label|eq 17.73.139>s<around*|(|0|)>\<neq\>0<text|
+      >ord<around*|(|s|)>=n-m<text| and >\<forall\>z\<in\>\<bbb-C\><text| we
+      have >r<around*|(|z|)>=r<around*|(|0|)>+z<rsup|m>\<cdot\>s<around*|(|z|)>
+    </equation>
+
+    Then we have for <math|z\<in\>\<bbb-C\>>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|p<around*|(|z|)>>|<cell|=>|<cell|p<around*|(|<around*|(|z-z<rsub|0>|)>+z<rsub|0>|)>>>|<row|<cell|>|<cell|=>|<cell|r<around*|(|z-z<rsub|0>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 17.73.139>]>>>|<cell|r<around*|(|0|)>+<around*|(|z-z<rsub|0>|)><rsup|m>\<cdot\>s<around*|(|z-z<rsub|0>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 17.71.139>>>>|<cell|p<around*|(|0+z<rsub|0>|)>+<around*|(|z-z<rsub|0>|)><rsup|m>\<cdot\>s<around*|(|z-z<rsub|0>|)>>>|<row|<cell|>|<cell|=>|<cell|p<around*|(|z<rsub|0>|)>+<around*|(|z-z<rsub|0>|)><rsup|m>\<cdot\>s<around*|(|z-z<rsub|0>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|z-z<rsub|0>|)><rsup|m>\<cdot\>s<around*|(|z-z<rsub|0>|)><eq-number><label|eq
+      17.74.139>>>>>
+    </eqnarray*>
+
+    Define\ 
+
+    <\equation>
+      <label|eq 17.75.139>q:\<bbb-C\>\<rightarrow\>\<bbb-C\><text| by
+      >q<around*|(|z|)>=s<around*|(|z-z<rsub|0>|)>=s<around*|(|z+<around*|(|-z<rsub|0>|)>|)>
+    </equation>
+
+    then by [lemma: <reference|lemma 17.24.136>] we have that\ 
+
+    <\equation*>
+      q<text| is a polynomial and >ord<around*|(|q|)>=ord<around*|(|s|)>=n-m
+    </equation*>
+
+    Substituting this in [eq: <reference|eq 17.74.139>] gives\ 
+
+    <\equation*>
+      p<around*|(|z|)>=<around*|(|z-z<rsub|0>|)><rsup|m>\<cdot\>q<around*|(|z|)>
+    </equation*>
+
+    Further\ 
+
+    <\equation*>
+      q<around*|(|z<rsub|0>|)>=s<around*|(|z<rsub|0>-z<rsub|0>|)>=s<around*|(|0|)>\<neq\>0
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|fundamental factorization of a polynomial (1)>Let <math|p> be
+    polynomial with <math|ord<around*|(|p|)>\<in\>\<bbb-N\>> then there
+    exists a <math|c\<in\>\<bbb-C\>\\<around*|{|0|}>> and a
+    <math|<around*|{|z<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>>\<subseteq\>\<bbb-C\>>
+    such that\ 
+
+    <\equation*>
+      \<forall\>z\<in\>\<bbb-C\><text| we have
+      >p<around*|(|z|)>=c\<cdot\><big|prod><rsub|i=1><rsup|ord<around*|(|p|)>><around*|(|z-z<rsub|i>|)>
+    </equation*>
+
+    Further more
+
+    <\equation*>
+      <around*|{|z\<in\>\<bbb-C\>\|p<around*|(|z|)>=0|}>=<around*|{|z<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>|}>
+    </equation*>
+
+    in other words the distinct number of zero points of a polynomial is less
+    then the order of the polynomial.
+  </theorem>
+
+  <\proof>
+    We prove this by induction on the order of the polynomial. So let\ 
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\>\|<text|If >p<text| is a polynomial with
+      >1\<leqslant\>ord<around*|(|p|)>\<leqslant\>n<text| then there exists a
+      >c\<in\>\<bbb-C\>\\<around*|{|0|}><text| and
+      ><around*|{|z<rsub|i>|}><rsub|i\<in\>ord<around*|(|p|)>><text| such
+      that >\<forall\>z\<in\>\<bbb-C\><text|
+      >p<around*|(|z|)>=c\<cdot\><big|prod><rsub|i=1><rsup|ord<around*|(|p|)>><around*|(|z-z<rsub|i>|)>|}><text|
+      then we have:>
+    </equation*>
+
+    <\description>
+      <item*|<math|1\<in\>\<bbb-N\>>>Then <math|ord<around*|(|p|)>=1> so
+      <math|p:\<bbb-C\>\<rightarrow\>\<bbb-C\>> is defined by
+      <math|p<around*|(|z|)>=a<rsub|0>+a<rsub|1>\<cdot\>z> where
+      <math|a<rsub|1>\<neq\>0>. Take <math|z<rsub|1>=-<frac|a<rsub|0>|a<rsub|1>>>
+      and <math|c=a<rsub|1>> then <math|c\<neq\>0> and
+      <math|c\<cdot\><big|prod><rsub|i=1><rsup|1><around*|(|z-z<rsub|i>|)>=c\<cdot\><around*|(|z-z<rsub|i>|)>=a<rsub|1>\<cdot\><around*|(|z+<frac|a<rsub|0>|a<rsub|1>>|)>=a<rsub|1>\<cdot\>z+a<rsub|0>=p<around*|(|z|)>>.
+      So we have that <math|1\<in\>S>\ 
+
+      <item*|<math|n\<in\>\<bbb-N\>\<rightarrow\>n+1\<in\>\<bbb-N\>>>Let
+      <math|p> be a polymial with <math|1\<leqslant\>ord<around*|(|p|)>\<leqslant\>n+1>
+      then we have for <math|ord<around*|(|p|)>> either:
+
+      <\description>
+        <item*|<math|1\<leqslant\>ord<around*|(|p|)>\<leqslant\>n>>As
+        <math|n\<in\>S> there exist a <math|c\<in\>\<bbb-C\>\\<around*|{|0|}>>
+        and <math|<around*|{|z<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>>>
+        with <math|p<around*|(|z|)>=c\<cdot\><big|prod><rsub|i=1><rsup|ord<around*|(|p|)>><around*|(|z-z<rsub|i>|)>>
+        so that in this case <math|n+1\<in\>S>.
+
+        <item*|<math|1\<leqslant\>ord<around*|(|p|)>=n+1>>Let <math|p> be a
+        polynomial with <math|ord<around*|(|p|)>=n+1\<in\>\<bbb-N\>>. Using
+        the fundamental theorem of algebra there exist a
+        <math|y<rsub|0>\<in\>\<bbb-C\>> such that
+        <math|p<around*|(|y<rsub|0>|)>=0>. Using the previous theorem
+        [theorem: <reference|fundamental p(z)=(z-z0)>] there exist a
+        <math|m\<in\><around*|{|1,\<ldots\>,n+1|}>> and a polynomial <math|q>
+        of order <math|<around*|(|n+1|)>-m> such that\ 
+
+        <\equation>
+          <label|eq 17.76.139>p<around*|(|z|)>=<around*|(|z-y<rsub|0>|)><rsup|m>\<cdot\>q<around*|(|z|)>
+          <infix-and>q<around*|(|y<rsub|0>|)>\<neq\>0
+        </equation>
+
+        for <math|m> we have now either:\ 
+
+        <\description>
+          <item*|<math|m=n+1>>Then <math|ord<around*|(|q|)>=n+1-m=0> so that
+          there exist a <math|c\<in\>\<bbb-C\>\\<around*|{|0|}>> with\ 
+
+          <\equation*>
+            q:\<bbb-C\>\<rightarrow\>\<bbb-C\><text| defined by
+            >q<around*|(|z|)>=c
+          </equation*>
+
+          Hence if we define <math|<around*|{|z<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>\<bbb-C\>>
+          by <math|z<rsub|i>=y<rsub|0>> then\ 
+
+          <\equation*>
+            \<forall\>z\<in\>\<bbb-C\><text| we have
+            >p<around*|(|z|)>=c\<cdot\><around*|(|z-y<rsub|0>|)><rsup|n+1>=c\<cdot\><big|prod><rsub|i=1><rsup|n+1><around*|(|z-y<rsub|0>|)>=c\<cdot\><big|prod><rsub|i=1><rsup|ord<around*|(|p|)>><around*|(|z-z<rsub|i>|)>
+          </equation*>
+
+          proving that <math|n+1\<in\>S> in this case.
+
+          <item*|<math|m\<less\>n+1>>Then
+          <math|ord<around*|(|q|)>=<around*|(|n+1|)>-m\<gtr\>0> so that
+          <math|1\<leqslant\>ord<around*|(|q|)>\<leqslant\>n>, as
+          <math|n\<in\>S> there exist a <math|c\<in\>\<bbb-C\>\\<around*|{|0|}>>
+          and a <math|<around*|{|y<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,ord<around*|(|q|)>|}>>\<subseteq\>\<bbb-C\>>
+          such that <math|\<forall\>z\<in\>\<bbb-C\>> we have\ 
+
+          <\equation>
+            <label|eq 17.77.139>q<around*|(|z|)>=c\<cdot\><big|prod><rsub|i=1><rsup|ord<around*|(|q|)>><around*|(|z-y<rsub|i>|)>=c\<cdot\><big|prod><rsub|i=1><rsup|<around*|(|n+1|)>-m><around*|(|x-y<rsub|i>|)>
+          </equation>
+
+          Define now <math|<around*|{|z<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>\<bbb-C\>>
+          by <math|z<rsub|i>=<choice|<tformat|<table|<row|<cell|y<rsub|0><text|
+          if >i\<in\><around*|{|1,\<ldots\>,m|}>>>|<row|<cell|z<rsub|i-m><text|
+          if >i\<in\><around*|{|m+1,\<ldots\>,n+1|}>>>>>>> then we have\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|p<around*|(|z|)>>|<cell|\<equallim\><rsub|<text|[eq:
+            <reference|eq 17.76.139>]>>>|<cell|<around*|(|z-y<rsub|0>|)><rsup|m>\<cdot\>q<around*|(|z|)>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|i=1><rsup|m><around*|(|z-y<rsub|0>|)>\<cdot\>q<around*|(|z|)>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|i=1><rsup|m><around*|(|z-z<rsub|i>|)>\<cdot\>q<around*|(|z|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+            <reference|eq 17.77.139>]>>>|<cell|c\<cdot\><around*|(|<big|prod><rsub|i=1><rsup|m><around*|(|z-z<rsub|i>|)>|)>\<cdot\><around*|(|<big|prod><rsub|i=1><rsup|<around*|(|n+1|)>-m><around*|(|x-y<rsub|i>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|c\<cdot\><around*|(|<big|prod><rsub|i=1><rsup|m><around*|(|z-z<rsub|i>|)>|)>\<cdot\><around*|(|<big|prod><rsub|i=m+1><rsup|n+1><around*|(|x-y<rsub|i-m>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|c\<cdot\><around*|(|<big|prod><rsub|i=1><rsup|m><around*|(|z-z<rsub|i>|)>|)>\<cdot\><around*|(|<big|prod><rsub|i=m+1><rsup|n+1><around*|(|x-z<rsub|i>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|c\<cdot\><big|prod><rsub|i=1><rsup|n+1><around*|(|z-z<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|c\<cdot\><big|prod><rsub|i=1><rsup|ord<around*|(|p|)>><around*|(|z-z<rsub|i>|)>>>>>
+          </eqnarray*>
+
+          proving that in this case <math|n+1\<in\>S>.
+        </description>
+      </description>
+    </description>
+
+    Mathethematical induction proves that <math|S=\<bbb-N\>>. Hence if
+    <math|p> is a polynomial with <math|ord<around*|(|p|)>\<in\>\<bbb-N\>>
+    then as <math|1\<leqslant\>ord<around*|(|p|)>\<in\>\<bbb-N\>=S> it
+    follows that\ 
+
+    <\equation*>
+      \<exists\>c\<in\>\<bbb-C\>\\<around*|{|0|}><text| and
+      ><around*|{|z<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>>\<subseteq\>\<bbb-C\><text|
+      such that >p<around*|(|z|)>=c\<cdot\><big|prod><rsub|i=1><rsup|ord<around*|(|p|)>><around*|(|z-z<rsub|i>|)>
+    </equation*>
+
+    Further if <math|z\<in\><around*|{|z<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>|}>>
+    then there exist a <math|k\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>>
+    such that <math|x=z<rsub|k>>, Hence\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|p<around*|(|z|)>>|<cell|=>|<cell|p<around*|(|z<rsub|k>|)>>>|<row|<cell|>|<cell|=>|<cell|c\<cdot\><big|prod><rsub|i=1><rsup|ord<around*|(|p|)>><around*|(|z<rsub|k>-z<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|c\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>><around*|(|z<rsub|k>-z<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|c\<cdot\><big|prod><rsub|i\<in\><around*|{|i<rsub|0>|}>><around*|(|z<rsub|k>-z<rsub|i>|)>\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>\\<around*|{|i<rsub|0>|}>><around*|(|z<rsub|k>-z<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|c\<cdot\><around*|(|z<rsub|k>-z<rsub|k>|)>\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>\\<around*|{|i<rsub|0>|}>><around*|(|z<rsub|k>-z<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|c\<cdot\>0\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>\\<around*|{|i<rsub|0>|}>><around*|(|z<rsub|k>-z<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|0>>>>
+    </eqnarray*>
+
+    so that <math|z\<in\><around*|{|z\<in\>\<bbb-C\>\|p<around*|(|z|)>=0|}>>.
+    Hence\ 
+
+    <\equation>
+      <label|eq 17.78.139><around*|{|z<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>|}>\<subseteq\><around*|{|z\<in\>\<bbb-C\>\|p<around*|(|z|)>=0|}>
+    </equation>
+
+    Further if <math|z\<in\><around*|{|z\<in\>S\|p<around*|(|z|)>=0|}>> then
+    <math|0=c\<cdot\><big|prod><rsub|i=1><rsup|ord<around*|(|p|)>><around*|(|z-z<rsub|i>|)>>,
+    hence as <math|c\<neq\>0>, we have that
+
+    <\equation*>
+      0=<big|prod><rsub|i=1><rsup|ord<around*|(|p|)>><around*|(|z-z<rsub|i>|)>
+    </equation*>
+
+    Assume that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>>
+    <math|z<rsub|i>\<neq\>z> then <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>>
+    <math|z-z<rsub|i>\<neq\>0>, hence using [theorem: <reference|sum non zero
+    elements>] <math|<big|prod><rsub|i=1><rsup|ord<around*|(|p|)>><around*|(|z-z<rsub|i>|)>\<neq\>0>
+    contradicting <math|0=<big|prod><rsub|i=1><rsup|ord<around*|(|p|)>><around*|(|z-z<rsub|i>|)>>.
+    So there must exist a <math|k\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>>
+    such that <math|z=z<rsub|k>>. So <math|<around*|{|z\<in\>S\|p<around*|(|z|)>=0|}>\<subseteq\><around*|{|z<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>|}>>
+    which combined with [eq: <reference|eq 17.78.139>] proves that\ 
+
+    <\equation*>
+      <around*|{|z<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>|}>=<around*|{|z\<in\>\<bbb-C\>\|p<around*|(|z|)>=0|}>
+    </equation*>
+  </proof>
+
+  <\lemma>
+    <label|fundamental condition for a polynomial to have real
+    coefficients>Let <math|p> be a polynomial such that
+    <math|\<forall\>x\<in\>\<bbb-R\>> <math|p<around*|(|x|)>\<in\>\<bbb-R\>>
+    then <math|p> has real coefficients.\ 
+  </lemma>
+
+  <\proof>
+    As <math|p> is a polynomial there exist a
+    <math|<around*|{|a<rsub|i>|}><rsub|i\<in\>n>\<subseteq\>\<bbb-C\>> such
+    that <math|\<forall\>z\<in\>\<bbb-C\>>
+    <math|p<around*|(|z|)>=<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\>z<rsup|i>>.
+    Let <math|x\<in\>\<bbb-R\>> then as <math|p<around*|(|x|)>\<in\>\<bbb-R\>>
+    we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|0>|<cell|=>|<cell|Img<around*|(|p<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|Img<around*|(|<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\>x<rsup|i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[example:
+      <reference|linear mapping Img Re>]>>>|<cell|<big|sum><rsub|i=0><rsup|n>Img<around*|(|a<rsub|i>\<cdot\>x<rsup|i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|complex real. imaginair properties>]>\<wedge\>x<rsup|i>\<in\>\<bbb-R\>>>|<cell|<big|sum><rsub|i=0><rsup|n>Img<around*|(|a<rsub|i>|)>\<cdot\>x<rsup|i>>>>>
+    </eqnarray*>
+
+    so that <math|\<forall\>x\<in\>\<bbb-R\>> we have
+    <math|<big|sum><rsub|i=0><rsup|n>Img<around*|(|a<rsub|i>|)>\<cdot\>x<rsup|i>=0>.
+    As <math|Img<around*|(|a<rsub|i>|)>\<in\>\<bbb-R\>> it follows from
+    [theorem: <reference|fundamental coefficients of zero polynome>] that
+    <math|\<forall\>i\<in\><around*|{|0,\<ldots\>,n|}>> we have
+    <math|Img<around*|(|a<rsub|i>|)>=0> so that
+    <math|a<rsub|i>\<in\>\<bbb-R\>>.
+  </proof>
+
+  <\theorem>
+    <label|fundamental factorization of a polynomial (2)>Let <math|p> be a
+    polynomial with <math|ord<around*|(|p|)>\<in\>\<bbb-N\>> and
+    <with|font-series|bold|real coefficients> then there exists a
+    <math|c\<in\>\<bbb-R\>\\<around*|{|0|}>>,
+    <math|m,M\<in\>\<bbb-N\><rsub|0>>, <math|<around*|{|\<lambda\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>m|}>>\<subseteq\>\<bbb-R\>>,
+    <math|<around*|{|b<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,M|}>>\<subseteq\>\<bbb-R\>>
+    and <math|<around*|{|c<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,M|}>>\<subseteq\>\<bbb-R\>>
+    such that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,m|}>> we have\ 
+
+    <\equation*>
+      <around*|(|b<rsub|i>|)><rsup|2>\<less\>4\<cdot\>c<rsub|i><text|>
+    </equation*>
+
+    and <math|\<forall\>z\<in\>\<bbb-C\>> we have\ 
+
+    <\equation*>
+      p<around*|(|z|)>=c\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|z-\<lambda\><rsub|i>|)>|)>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,M|}>><around*|(|z<rsup|2>+b<rsub|i>\<cdot\>z+c<rsub|i>|)>|)>
+    </equation*>
+
+    <\note>
+      That if <math|m=0> then <math|<around*|{|1,\<ldots\>,m|}>=\<varnothing\>>
+      so that <math|<around*|{|\<lambda\><rsub|i>|}><rsub|i\<in\>\<varnothing\>>>
+      is the empty family [see example: <reference|family empty family>] and
+      <math|><math|<big|prod><rsub|i\<in\>\<varnothing\>><around*|(|z-\<lambda\><rsub|i>|)>=1>
+      [see definition: <reference|sum generalized sum>]. Likewise if
+      <math|M=0> then <math|<around*|{|b<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,M|}>>>
+      and <math|<around*|{|c<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,M|}>>>
+      are empty families and <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,M|}>><around*|(|z<rsup|2>+b<rsub|i>\<cdot\>z+c<rsub|i>|)>=1>
+    </note>
+  </theorem>
+
+  <\proof>
+    We prove this by induction so defined
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\>\|<text|If >p<text| is a polynomial with
+      real coefficients and >1\<leqslant\>ord<around*|(|p|)>\<leqslant\>n<text|
+      then there exists a >c\<in\>\<bbb-C\><text|,
+      ><rigid|m,M\<in\>\<bbb-N\><rsub|0>><text|,
+      ><rigid|<around*|{|\<lambda\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>\<bbb-R\>><text|,
+      ><around*|{|b<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,M|}>>\<subseteq\>\<bbb-R\><text|
+      and ><around*|{|c<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,M|}>>\<subseteq\>\<bbb-R\><text|
+      such that >\<forall\>z\<in\>\<bbb-C\><text| we have
+      >p<around*|(|z|)>=c\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,M|}>><around*|(|z-\<lambda\><rsub|i>|)>|)>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,M|}>>z<rsup|2>+b<rsub|i>\<cdot\>z+c<rsub|i>|)>|}>
+    </equation*>
+
+    then we have:\ 
+
+    <\description>
+      <item*|<math|1\<in\>S>>If <math|1\<leqslant\>ord<around*|(|p|)>\<leqslant\>1>
+      then <math|ord<around*|(|p|)>> and there exist
+      <math|a<rsub|0>,a<rsub|1>\<in\>\<bbb-R\>> such that<math|>
+      <math|a<rsub|1>\<neq\>0> and <math|<rigid|p<around*|(|z|)>=a<rsub|0>+a<rsub|1>\<cdot\>z>>.
+      Take <math|m=1>, <math|M=0>, <math|<around*|{|\<lambda\><rsub|i>|}><rsub|i<around*|{|1,\<ldots\>,m|}>><text|
+      defined by >\<lambda\><rsub|1>=-<frac|a<rsub|0>|a<rsub|1>>\<in\>\<bbb-R\>>,
+      <math|<rigid|<around*|{|b<rsub|i>|}><rsub|i\<in\>\<varnothing\>>=<around*|{|c<rsub|i>|}><rsub|i\<in\>\<varnothing\>>>=\<varnothing\>>
+      then we have
+
+      <\equation*>
+        c\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|z-\<lambda\><rsub|i>|)>|)>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,0|}>=\<varnothing\>>z<rsup|2>+b<rsub|i>\<cdot\>z+c<rsub|i>|)>=a<rsub|1>\<cdot\><around*|(|z+<frac|a<rsub|0>|a<rsub|1>>|)>=a<rsub|0>+a<rsub|1>\<cdot\>z-p<around*|(|z|)>
+      </equation*>
+
+      Hence we must have that <math|1\<in\>S>.
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let <math|p> be a
+      polynomial with real coefficients and
+      <math|1\<leqslant\>ord<around*|(|p|)>\<leqslant\>n+1>. For
+      <math|ord<around*|(|p|)>> we have either:\ 
+
+      <\description>
+        <item*|<math|ord<around*|(|p|)>\<less\>n+1>>Then
+        <math|ord<around*|(|p|)>\<leqslant\>n> so as <math|n\<in\>S> we have
+        that<math|<text| then there exists a >c\<in\>\<bbb-R\><text|,
+        ><rigid|m,M\<in\>\<bbb-N\><rsub|0>><text|,
+        ><rigid|<around*|{|\<lambda\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>\<bbb-R\>><text|,
+        ><around*|{|b<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,M|}>>\<subseteq\>\<bbb-R\><text|
+        and ><around*|{|c<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,M|}>>\<subseteq\>\<bbb-R\><text|
+        such that >\<forall\>z\<in\>\<bbb-C\><text| we have
+        >p<around*|(|z|)>=c\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,M|}>><around*|(|z-\<lambda\><rsub|i>|)>|)>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,M|}>>z<rsup|2>+b<rsub|i>\<cdot\>z+c<rsub|i>|)>>.
+        This proves that <math|n+1\<in\>S> in this case.
+
+        <item*|<math|ord<around*|(|p|)>=n+1>>As
+        <math|1\<leqslant\>ord<around*|(|p|)>>
+        <math|ord<around*|(|p|)>\<in\>\<bbb-N\>> so that by the previous
+        theorem there exist <math|<around*|{|z<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>>\<subseteq\>\<bbb-C\>>
+        and a <math|c<rprime|'>\<in\>\<bbb-C\>> with
+        <math|c<rprime|'>\<neq\>0> such that
+
+        <\equation>
+          <label|eq 17.79.139>\<forall\>z\<in\>\<bbb-C\><text|we have
+          >p<around*|(|z|)>=c<rprime|'>\<cdot\><big|prod><rsub|i=1><rsup|ord<around*|(|p|)>><around*|(|z-z<rsub|i>|)>=c<rprime|'>\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>><around*|(|z-z<rsub|i>|)>
+        </equation>
+
+        and\ 
+
+        <\equation>
+          <label|eq 17.80.139><around*|{|z<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>|}>=<around*|{|z\|p<around*|(|z|)>=0|}>
+        </equation>
+
+        If <math|<around*|{|z<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,\<ldots\>,ord<around*|(|p|)>|}>>\<subseteq\>\<bbb-R\>>
+        then by taking <math|m=ord<around*|(|p|)>,> <math|M=0> and
+        <rigid|<math|<rigid|<around*|{|b<rsub|i>|}><rsub|i\<in\>\<varnothing\>>=<around*|{|c<rsub|i>|}><rsub|i\<in\>\<varnothing\>>>=\<varnothing\>><math|>>
+        we have that
+
+        <\equation*>
+          p<around*|(|z|)>=c<rprime|'>\<cdot\><around*|(|<big|prod><rsub|i=1><rsup|ord<around*|(|p|)>><around*|(|z-z<rsub|i>|)>|)>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,0|}>=\<varnothing\>><around*|(|z<rsup|2>+b<rsub|i>\<cdot\>z+c<rsub|i>|)>|)>
+        </equation*>
+
+        proving that <math|n+1\<in\>S> in this case. Hence we must only prove
+        the case where there exist <math|k\<in\><around*|{|1,\<ldots\>,n+1|}>>
+        such that <math|z<rsub|k>\<nin\>\<bbb-R\>>. Now as <math|p> has real
+        coefficients it follows from [lemma: <reference|fundamental theorem
+        and conjugate>] that <math|p<around*|(|<wide|z<rsub|k>|\<wide-bar\>>|)>=0>,
+        hence by [eq: <reference|eq 17.80.139>] there exist a
+        <math|l\<in\><around*|{|1,\<ldots\>,n+1|}>> such that
+        <math|z<rsub|l>=<wide|z<rsub|k>|\<wide-bar\>>>. If <math|k=l> then we
+        would have that <math|z<rsub|k>=<wide|z<rsub|k>|\<wide-bar\>>> so
+        that by [theorem: <reference|complex conjugate properties>]
+        <math|z\<in\>\<bbb-R\>> contradicting
+        <math|z<rsub|k>\<nin\>\<bbb-R\>>. Hence we must have that
+        <math|k\<neq\>l> and <math|z<rsub|l>=<wide|z<rsub|k>|\<wide-bar\>>>.
+        Next we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|p<around*|(|z|)>>|<cell|=>|<cell|c<rprime|'>\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>><around*|(|z-z<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|c<rprime|'>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>\\<around*|{|k,l|}>><around*|(|z-z<rsub|i>|)>|)>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|k,l|}>><around*|(|z-z<rsub|i>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|c<rprime|'>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>\\<around*|{|k,l|}>><around*|(|z-z<rsub|i>|)>|)>\<cdot\><around*|(|z-z<rsub|k>|)>\<cdot\><around*|(|z-z<rsub|l>|)>>>|<row|<cell|>|<cell|=>|<cell|c<rprime|'>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>\\<around*|{|k,l|}>><around*|(|z-z<rsub|i>|)>|)>\<cdot\><around*|(|z-z<rsub|k>|)>\<cdot\><around*|(|z-<wide|z<rsub|k>|\<wide-bar\>>|)>>>|<row|<cell|>|<cell|=>|<cell|c<rprime|'>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>\\<around*|{|k,l|}>><around*|(|z-z<rsub|i>|)>|)>\<cdot\><around*|(|z<rsup|2>-z\<cdot\><wide|z<rsub|k>|\<wide-bar\>>-z<rsub|k>\<cdot\>z+z<rsub|k>\<cdot\><wide|z<rsub|k>|\<wide-bar\>>|)>>>|<row|<cell|>|<cell|=>|<cell|c<rprime|'>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>\\<around*|{|k,l|}>><around*|(|z-z<rsub|i>|)>|)>\<cdot\><around*|(|z<rsup|2>-<around*|(|z<rsub|k>+<wide|z<rsub|k>|\<wide-bar\>>|)>\<cdot\>z+z<rsub|k>\<cdot\><wide|z<rsub|k>|\<wide-bar\>>|)>>>|<row|<cell|>|<cell|=>|<cell|c<rprime|'>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>\\<around*|{|k,l|}>><around*|(|z-z<rsub|i>|)>|)>\<cdot\><around*|(|z<rsup|2>+d\<cdot\>z+e|)>>>>>
+        </eqnarray*>
+
+        where <math|d=-<around*|(|z<rsub|k>+<wide|z<rsub|k>|\<wide-bar\>>|)>=-Re<around*|(|z<rsub|k>|)>\<in\>\<bbb-R\>>
+        and <math|e=z<rsub|k>\<cdot\><wide|z<rsub|k>|\<wide-bar\>>=<around*|\||z<rsub|k>|\|><rsup|2>\<in\>\<bbb-R\>>.
+        Hence we have\ 
+
+        <\equation>
+          <label|eq 17.81.139>p<around*|(|z|)>=c<rprime|'>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>\\<around*|{|k,l|}>><around*|(|z-z<rsub|i>|)>|)>\<cdot\><around*|(|z<rsup|2>+d\<cdot\>z+e|)><text|
+          where >d=-Re<around*|(|z<rsub|k>|)>\<in\>\<bbb-R\>\<wedge\>e=<around*|\||z<rsub|k>|\|><rsup|2>\<in\>\<bbb-R\>
+        </equation>
+
+        Now as <math|z<rsub|k>\<in\>\<bbb-C\>\\\<bbb-R\>> we have that
+        <math|0\<less\>img<around*|(|z<rsub|k>|)>> so that
+
+        <\equation*>
+          d<rsup|2>=4\<cdot\><around*|(|Re<around*|(|z<rsub|k>|)>|)><rsup|2>\<less\>4\<cdot\><around*|(|Re<around*|(|z<rsub|k>|)>|)><rsup|2>+4\<cdot\><around*|(|Img<around*|(|z<rsub|k>|)>|)><rsup|k>=4\<cdot\><around*|\||z<rsup|k>|\|><rsup|2>=4\<cdot\>e
+        </equation*>
+
+        hence\ 
+
+        <\equation>
+          <label|eq 17.82.139>d<rsup|2>\<less\>4\<cdot\>e
+        </equation>
+
+        As <math|k\<neq\>l> and <math|k,l\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>>
+        we have by [theorem: <reference|complex cardinality properties>] that
+        <math|<rigid|card<around*|(|<around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>\\<around*|{|k,l|}>|)>>=ord<around*|(|p|)>-2>.
+        Hence there exist a bijection
+
+        <\equation*>
+          \<beta\>:<around*|{|1,\<ldots\>,ord<around*|(|p|)>-2|}>\<rightarrow\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>\\<around*|{|k,l|}>
+        </equation*>
+
+        so that by applying [theorem: <reference|sum bijection on index>] on
+        [eq; <reference|eq 17.81.139>] gives\ 
+
+        <\equation>
+          <label|eq 17.83.139>p<around*|(|z|)>=c<rprime|'>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>-2|}>><around*|(|z-z<rsub|\<beta\><around*|(|i|)>>|)>|)>\<cdot\><around*|(|z<rsup|2>+d\<cdot\>z+e|)>
+        </equation>
+
+        For <math|i\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>-2|}>> we
+        have as <math|c<rprime|'>\<neq\>0> that
+
+        <\equation*>
+          p<rsub|i>:\<bbb-C\>\<rightarrow\>\<bbb-C\><text| defined by
+          <math|p<rsub|\<beta\><around*|(|i|)>><around*|(|z|)>=z-z<rsub|\<beta\><around*|(|i|)>>=-z>><rsub|\<beta\><around*|(|i|)>>+z<text|
+          is a polynomial with >ord<around*|(|p<rsub|\<beta\><around*|(|i|)>>|)>=1
+        </equation*>
+
+        Define now\ 
+
+        <\equation*>
+          q:\<bbb-C\>\<rightarrow\>\<bbb-C\><text| by
+          >q<around*|(|z|)>=c<rprime|'>\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>-2|}>>p<rsub|i><around*|(|z|)>=<big|prod><rsub|i=1><rsup|ord<around*|(|p|)>-2>p<rsub|i><around*|(|x|)>=<big|prod><rsub|i=1><rsup|ord<around*|(|p|)>-2><around*|(|z-z<rsub|\<beta\><around*|(|i|)>>|)>
+        </equation*>
+
+        so that by [eq: <reference|eq 17.83.139>] we have\ 
+
+        <\equation>
+          <label|eq 17.84.139>p<around*|(|z|)>=q<around*|(|z|)>\<cdot\><around*|(|z<rsup|2>+d\<cdot\>z+e|)>
+        </equation>
+
+        Using [theorem: <reference|fundamental factorization of a polynomial
+        (1)>] it follows then that
+
+        <\equation>
+          <label|eq 17.84.139.1>q<text| is a polynomial with
+          >ord<around*|(|q|)>=ord<around*|(|p|)>-2=n-1
+        </equation>
+
+        Let <math|x\<in\>\<bbb-R\>> then by [eq: <reference|eq 17.82.139>]
+        <math|0\<less\>e-<frac|d<rsup|2><rsub|>|4>\<less\><around*|(|x+<frac|d|2>|)><rsup|2>+e-<frac|d<rsup|2>|4>>
+        and as
+
+        <\equation*>
+          <around*|(|x+<frac|d|2>|)><rsup|2>+e-<frac|d<rsup|2>|4>=x<rsup|2>+x\<cdot\>d+<frac|d<rsup|2>|4>+e-<frac|d<rsup|2>|4>=x<rsup|2>+d\<cdot\>x+e
+        </equation*>
+
+        we have that <math|0\<less\>x<rsup|2>+d\<cdot\>x+e> which as
+        <math|p<around*|(|x|)>\<in\>\<bbb-R\>> proves that
+        <math|q<around*|(|x|)>=<frac|p<around*|(|z|)>|z<rsup|2>+d\<cdot\>x+e>\<in\>\<bbb-R\>>.
+        Using [theorem: <reference|fundamental condition for a polynomial to
+        have real coefficients>] it follows that <math|q> has real
+        coefficients hence as <math|ord<around*|(|q|)>=n-1\<less\>n> and
+        <math|n\<in\>S> there exist <math|c\<in\>\<bbb-C\><text|,
+        >m,M<rprime|'>\<in\>\<bbb-N\><rsub|0>>,
+        <math|<around*|{|\<lambda\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>\<bbb-R\>>,
+        <math|<around*|{|b<rprime|'><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,M<rprime|'>|}>>\<subseteq\>\<bbb-R\>>
+        and <math|<around*|{|c<rprime|'><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,M<rprime|'>|}>>\<subseteq\>\<bbb-R\>>
+        such that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,M<rprime|'>|}>>
+        <math|b<rprime|'><rsup|2>\<less\><frac|c<rprime|'>|4>> and
+
+        <\equation>
+          <label|eq 17.86.139>\<forall\>z\<in\>\<bbb-C\><text|
+          >q<around*|(|z|)>=c\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,m<rprime|'>|}>><around*|(|z-\<lambda\><rprime|'><rsub|i>|)>|)>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,M<rprime|'>|}>><around*|(|z<rsup|2>+b<rsub|i><rprime|'>\<cdot\>z+c<rsub|i><rprime|'>|)>|)>
+        </equation>
+
+        Hence if we take <math|>M=M'+1, <math|<around*|{|c<rsub|i>|}><rsub|i\<in\>M>\<subseteq\>\<bbb-R\>>
+        by <math|c<rsub|i>=<choice|<tformat|<table|<row|<cell|d<text| if
+        >i=M=M<rprime|'>+1>>|<row|<cell|b<rprime|'><rsub|i><text| if
+        >i\<in\><around*|{|1,\<ldots\>,M<rprime|'>|}>>>>>>> and
+        <math|<around*|{|c<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,M|}>>\<subseteq\>\<bbb-R\>>
+        by <math|b<rsub|i>=<choice|<tformat|<table|<row|<cell|e<text| if
+        i=M=M'+1>>>|<row|<cell|c<rprime|'><rsub|i><text| if
+        >i\<in\><around*|{|1,\<ldots\>,M|}>>>>>>>then we have
+        <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,M|}>> that
+        <math|b<rsup|2>\<less\><frac|c|4>>
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|c\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|z-\<lambda\><rsub|i>|)>|)>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,M|}>><around*|(|z<rsup|2>+b<rsub|i>\<cdot\>z+c<rsub|i>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|c\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|z-\<lambda\><rsub|i>|)>|)>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,M<rprime|'>|}>><around*|(|z<rsup|2>+b<rsub|i>\<cdot\>z+c<rsub|i>|)>|)>\<cdot\><around*|(|z<rsup|2>+b<rsub|M>\<cdot\>z+c<rsub|M>|)>>|<cell|=>|<cell|>>|<row|<cell|c\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|z-\<lambda\><rsub|i>|)>|)>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,M<rprime|'>|}>><around*|(|z<rsup|2>+b<rsub|i>\<cdot\>z+c<rsub|i>|)>|)>\<cdot\><around*|(|z<rsup|2>+d\<cdot\>z+e|)>>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 17.86.139>]>>>|<cell|>>|<row|<cell|q<around*|(|z|)>\<cdot\><around*|(|z<rsup|2>+d\<cdot\>z+e|)>>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 17.84.139>>>>|<cell|>>|<row|<cell|p<around*|(|z|)>>|<cell|>|<cell|>>>>
+        </eqnarray*>
+
+        Hence we have that\ 
+
+        <\equation*>
+          p<around*|(|z|)>=c\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|z-\<lambda\><rsub|i>|)>|)>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,M|}>><around*|(|z<rsup|2>+b<rsub|i>\<cdot\>z+c<rsub|i>|)>|)>
+        </equation*>
+
+        so that we have <math|n+1\<in\>S> in this case.
+      </description>
+    </description>
+
+    Using mathematical induction we have that <math|S=\<bbb-N\>>. Hence if
+    <math|p> is a polynomial of <math|ord<around*|(|q|)>> then we can write
+    <math|p<around*|(|z|)>> as\ 
+
+    <\equation>
+      <label|eq 17.87.140>p<around*|(|z|)>=c\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|z-\<lambda\><rsub|i>|)>|)>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,M|}>><around*|(|z<rsup|2>+b<rsub|i>\<cdot\>z+c<rsub|i>|)>|)>
+    </equation>
+
+    where <math|c\<in\>\<bbb-C\><text|, ><rigid|m,M\<in\>\<bbb-N\><rsub|0>><text|,
+    ><rigid|<around*|{|\<lambda\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>\<bbb-R\>><text|,
+    ><around*|{|b<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,M|}>>\<subseteq\>\<bbb-R\><text|
+    and ><around*|{|c<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,M|}>>\<subseteq\>\<bbb-R\>>
+    and <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,M|}>> we have
+    <math|b<rsub|i><rsup|2>\<less\><frac|c|4>>. \ Rest us to prove that
+    <math|c\<in\>\<bbb-R\>>. Using [theorem: <reference|fundamental
+    factorization of a polynomial (1)>] we have that there exist a family
+    <math|<around*|{|z<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>>\<subseteq\>\<bbb-C\>>
+    such that <math|<around*|{|z<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>|}>=<around*|{|z\<in\>\<bbb-C\>\|p<around*|(|z|)>=0|}>>.
+    Assume that <math|<around*|{|1,\<ldots\>,ord<around*|(|p|)>+1|}>\<subseteq\><around*|{|z\<in\>\<bbb-C\>\|p<around*|(|z|)>=0|}>>
+    then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|ord<around*|(|p|)>+1>|<cell|\<leqslant\><rsub|<text|[theorem:
+      <reference|complex finite subset>]>>>|<cell|card<around*|(|<around*|{|z\<in\>\<bbb-C\>\|p<around*|(|z|)>=0|}>|)>>>|<row|<cell|>|<cell|=>|<cell|card<around*|(|<around*|{|z<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>|}>|)>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[theorem:
+      <reference|complex cardinality and finite
+      family>]>>>|<cell|card<around*|(|<around*|{|1,\<ldots\>,ord<around*|(|p|)>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|ord<around*|(|p|)>>>>>
+    </eqnarray*>
+
+    leading to the contradiction <math|ord<around*|(|p|)>\<less\>ord<around*|(|p|)>+1\<leqslant\>ord<around*|(|p|)>>,
+    hence <math|><math|<around*|{|1,\<ldots\>,ord<around*|(|p|)>+1|}>\<subseteq\><around*|{|z\<in\>\<bbb-C\>\|p<around*|(|z|)>=0|}>>,
+    so that there exist a <math|x\<in\><around*|{|1,\<ldots\>,ord<around*|(|p|)>+1|}>\<subseteq\>\<bbb-R\>>
+    with <math|x\<nin\><around*|{|z\<in\>\<bbb-C\>\|p<around*|(|z|)>=0|}>> so
+    that <math|p<around*|(|x|)>\<neq\>0>. Hence by [eq: <reference|eq
+    17.87.140>] <math|><math|<around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|z-\<lambda\><rsub|i>|)>|)>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,M|}>><around*|(|z<rsup|2>+b<rsub|i>\<cdot\>z+c<rsub|i>|)>|)>\<neq\>0>
+    so that we have\ 
+
+    <\equation*>
+      c=<frac|p<around*|(|x|)>|<around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|x-\<lambda\><rsub|i>|)>|)>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,M|}>><around*|(|x<rsup|2>+b<rsub|i>\<cdot\>x+c<rsub|i>|)>|)>>
+    </equation*>
+
+    As <math|p<around*|(|x|)>\<in\>\<bbb-R\>> [because <math|p> has real
+    coefficients], \ <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|x-\<lambda\><rsub|i>|)>\<in\>\<bbb-R\>>
+    [because <math|\<lambda\><rsub|i>> is real] and
+    <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,M|}>><around*|(|x<rsup|2>+b<rsub|i>\<cdot\>x+c<rsub|i>|)>\<in\>\<bbb-R\>>
+    [because <math|b<rsub|i>,c<rsub|i>\<in\>\<bbb-R\>>] it follows that
+    <math|c\<in\>\<bbb-R\>>.
+  </proof>
+
+  \;
 </body>
 
 <\initial>
   <\collection>
     <associate|chapter-nr|16>
-    <associate|page-first|1071>
+    <associate|page-first|1069>
     <associate|par-first|0tab>
     <associate|section-nr|6>
     <associate|subsection-nr|0>
@@ -2583,7 +3182,6 @@
     <associate|eq 17.54.138|<tuple|17.57|?>>
     <associate|eq 17.55.138|<tuple|17.58|?>>
     <associate|eq 17.56.138|<tuple|17.59|?>>
-    <associate|eq 17.57.138|<tuple|17.60|?>>
     <associate|eq 17.6.135|<tuple|17.6|?>>
     <associate|eq 17.60.138|<tuple|17.60|?>>
     <associate|eq 17.61.139|<tuple|17.61|?>>
@@ -2597,7 +3195,24 @@
     <associate|eq 17.69.139|<tuple|17.69|?>>
     <associate|eq 17.7.135|<tuple|17.7|?>>
     <associate|eq 17.70.139|<tuple|17.70|?>>
+    <associate|eq 17.71.139|<tuple|17.71|?>>
+    <associate|eq 17.72.139|<tuple|17.72|?>>
+    <associate|eq 17.73.139|<tuple|17.73|?>>
+    <associate|eq 17.74.139|<tuple|17.74|?>>
+    <associate|eq 17.75.139|<tuple|17.75|?>>
+    <associate|eq 17.76.139|<tuple|17.76|?>>
+    <associate|eq 17.77.139|<tuple|17.77|?>>
+    <associate|eq 17.78.139|<tuple|17.78|?>>
+    <associate|eq 17.79.139|<tuple|17.79|?>>
     <associate|eq 17.8.135|<tuple|17.8|?>>
+    <associate|eq 17.80.139|<tuple|17.80|?>>
+    <associate|eq 17.81.139|<tuple|17.81|?>>
+    <associate|eq 17.82.139|<tuple|17.82|?>>
+    <associate|eq 17.83.139|<tuple|17.83|?>>
+    <associate|eq 17.84.139|<tuple|17.84|?>>
+    <associate|eq 17.84.139.1|<tuple|17.85|?>>
+    <associate|eq 17.86.139|<tuple|17.86|?>>
+    <associate|eq 17.87.140|<tuple|17.87|?>>
     <associate|eq 17.9.135|<tuple|17.9|?>>
     <associate|fundamental binomial coefficient|<tuple|17.21|?>>
     <associate|fundamental binomial formula|<tuple|17.23|?>>
@@ -2608,17 +3223,23 @@
     bijection|<tuple|17.7|?>>
     <associate|fundamental coefficients of zero polynome|<tuple|17.2|?>>
     <associate|fundamental coefficients uniqueness|<tuple|17.5|?>>
+    <associate|fundamental condition for a polynomial to have real
+    coefficients|<tuple|17.34|?>>
     <associate|fundamental continuity|<tuple|17.18|?>>
     <associate|fundamental divergent limit|<tuple|17.13|?>>
     <associate|fundamental divergent limit of -f|<tuple|17.14|?>>
     <associate|fundamental factorial|<tuple|17.20|?>>
+    <associate|fundamental factorization of a polynomial (1)|<tuple|17.33|?>>
+    <associate|fundamental factorization of a polynomial (2)|<tuple|17.35|?>>
     <associate|fundamental finite product of polynomials|<tuple|17.12|?>>
     <associate|fundamental non constant polynomal|<tuple|17.9|?>>
     <associate|fundamental norm in C|<tuple|17.16|?>>
     <associate|fundamental norm properties|<tuple|17.17|?>>
+    <associate|fundamental p(z)=(z-z0)|<tuple|17.32|?>>
     <associate|fundamental polynomal|<tuple|17.1|?>>
     <associate|fundamental product of polynomials is a
     polynomial|<tuple|17.11|?>>
+    <associate|fundamental theorem and conjugate|<tuple|17.31|?>>
     <associate|fundamental theorem of algebra|<tuple|17.29|?>>
     <associate|lemma 17.19.136|<tuple|17.19|?>>
     <associate|lemma 17.24.136|<tuple|17.24|?>>

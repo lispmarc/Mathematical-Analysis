@@ -11973,7 +11973,7 @@
 
   <\proof>
     Theorem we prove this by induction, take
-    <math|S=<around*|{|n\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>\|<around*|(|x<rsup|-1>|)><rsup|n>=<around*|(|x<rsup|n>|)><rsup|-1>|}>>
+    <math|S=<around*|{|n\<in\>\<bbb-N\><rsub|\<bbb-C\>>\|<around*|(|x<rsup|-1>|)><rsup|n>=<around*|(|x<rsup|n>|)><rsup|-1>|}>>
     then we have:
 
     <\description>
@@ -11996,8 +11996,9 @@
     then we have
 
     <\enumerate>
-      <item>If <math|n\<neq\>0> then <math|0<rsup|n>=0> [note that by
-      definition <math|0<rsup|0>=1>]
+      <item>If <math|n\<neq\>0> then <math|x<rsup|n>=0\<Leftrightarrow\>0>
+      [note that by definition <math|0<rsup|0>=1> so we must have
+      <math|n\<neq\>0>]
 
       <item><math|1<rsup|n>=1>
 
@@ -12013,8 +12014,38 @@
     \ 
 
     <\enumerate>
-      <item>If <math|n\<neq\>0> then <math|\<exists\>m\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>>
-      such that <math|n=m+1> so that <math|0<rsup|n>=0<rsup|m+1>=0\<cdot\>0<rsup|m>=0>
+      <item> We have to prove that <math|\<forall\>n\<in\>\<bbb-N\><rsub|\<bbb-C\>>>
+      we have <math|x<rsup|n>=0\<Leftrightarrow\>x=0>
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>We prove this by induction so let
+        <math|S=<around*|{|n\<in\>\<bbb-N\><rsub|\<bbb-C\>>\|If
+        x<rsup|n>=0<text| then >x=0|}>> then we have:
+
+        <\description>
+          <item*|<math|1\<in\>S>>This is trivial because
+          <math|x=x<rsup|1>=0\<Rightarrow\>x=0>
+
+          <item*|<math|n\<in\>S\<rightarrow\>n+1\<in\>S>>If
+          <math|x<rsup|n+1>=0> then as <math|x<rsup|n+1>=x\<cdot\>x<rsup|n>>
+          it follows that <math|0=x\<cdot\>x<rsup|n>>. Assume that
+          <math|x\<neq\>0> then as <math|\<bbb-C\>> is a field
+          <math|x<rsup|-1>> exist so that
+
+          <\equation*>
+            0=x<rsup|-1>\<cdot\>0=x<rsup|-1>\<cdot\><around*|(|x\<cdot\>x<rsup|n>|)>=<around*|(|x<rsup|-1>\<cdot\>x|)>\<cdot\>x<rsup|n>=1\<cdot\>x<rsub|n>=x<rsub|n>\<Rightarrow\>x<rsup|m>=0
+          </equation*>
+
+          As <math|m\<in\>S> it follows that <math|x=0> contradicting the
+          assumption <math|x\<neq\>0>, hence the assumption is wrong and we
+          must have <math|x=0>. This proves that <math|n+1\<in\>S>.
+        </description>
+
+        <item*|<math|\<Leftarrow\>>>As <math|n\<in\>\<bbb-N\><rsub|\<bbb-C\>>>
+        we have that <math|0<rsup|n>=0\<cdot\>0<rsup|n-1>=0>.
+      </description>
+
+      so that <math|0<rsup|n>=0<rsup|m+1>=0\<cdot\>0<rsup|m>=0>
 
       <item>We proceed by induction, so let\ 
 
@@ -13090,7 +13121,7 @@
 
       <item><math|\<forall\>z\<in\>\<bbb-C\>> and
       <math|\<alpha\>\<in\>\<bbb-R\>> then
-      <math|Img<around*|(|\<alpha\>\<cdot\>z|)>=\<alpha\>\<cdot\>Img<around*|(|z|)>>.
+      <math|Img<around*|(|\<alpha\>\<cdot\>z|)>=\<alpha\>\<cdot\>Img<around*|(|z|)>>
     </enumerate>
   </theorem>
 
