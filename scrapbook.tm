@@ -4004,6 +4004,121 @@
   </equation*>
 
   \;
+
+  \;
+
+  <\proof>
+    Define\ 
+
+    <\equation*>
+      \<sigma\>:\<bbb-R\>\<rightarrow\>X<text| by
+      >\<sigma\><around*|(|t|)>=x+t\<cdot\><around*|(|y-x|)>=x\<cdot\><around*|(|1-t|)>+t\<cdot\>y
+    </equation*>
+
+    Take <math|W=\<sigma\><rsup|-1><around*|(|U|)>> then as <math|\<sigma\>>
+    is of class <math|C<rsup|1>>, hence continuous [see lemma:
+    <reference|lemma 16.135.200>] it follows that <math|W> is open. Let
+    <math|t\<in\><around*|[|0,1|]>> then <math|\<sigma\><around*|(|t|)>=<around*|(|1-t|)>\<cdot\>x+y\<in\>U>
+    so that <math|t\<in\>\<sigma\><rsup|-1><around*|(|U|)>>, hence we have
+
+    <\equation*>
+      <around*|[|0,1|]>\<subseteq\>\<sigma\><rsup|-1><around*|(|U|)>=W
+    </equation*>
+
+    Then for\ 
+
+    <\equation*>
+      \<sigma\><rsub|\|W>:W\<rightarrow\>X
+    </equation*>
+
+    we have that <math|\<sigma\><rsub|\|W><around*|(|W|)>=\<sigma\><around*|(|W|)>=\<sigma\><around*|(|\<sigma\><rsup|-1><around*|(|U|)>|)>\<subseteq\>U>.
+    Hence the following function is well defined:
+
+    <\equation*>
+      f\<circ\>\<sigma\><rsub|\|W>:W\<rightarrow\>\<bbb-R\>
+    </equation*>
+
+    Let <math|t\<in\>W> then by [see lemma: <reference|lemma 16.135.200>]
+    <math|\<sigma\>> is differentiable at <math|x> with
+    <math|D<rsub|t>\<sigma\>\<in\>L<around*|(|\<bbb-R\>,X|)>> defined by
+
+    <\equation*>
+      D<rsub|t>\<sigma\><around*|(|h|)>=h\<cdot\><around*|(|y-x|)>.
+    </equation*>
+
+    So using [theorem: <reference|diff differentiability is a local
+    property>] it follows that <math|\<sigma\><rsub|\|W>> is differentiable a
+    <math|t> with <math|D<rsub|t>\<sigma\><rsub|\|W>=D<rsub|t>\<sigma\>>.
+    Further, as <math|f> is of class <math|C<rsup|1>>, <math|f> is
+    differentiable at <math|\<sigma\><around*|(|t|)>>. Using the chain rule
+    [see theorem: <reference|diff chain rule>] it follows that
+    <math|f\<circ\>\<sigma\><rsub|\|W>> is differentiable at <math|t> and
+
+    <\equation>
+      <label|eq 16.183.200>D<rsub|t><around*|(|f\<circ\>\<sigma\><rsub|\|W>|)>=D<rsub|\<sigma\><rsub|\|W><around*|(|t|)>>f\<circ\>D<rsub|t>\<sigma\>\<equallim\><rsub|t\<in\>W>D<rsub|\<sigma\><around*|(|t|)>>f\<circ\>D<rsub|t>\<sigma\>
+    </equation>
+
+    Define <math|g> by\ 
+
+    <\equation*>
+      g:<around*|[|0,1|]>\<rightarrow\>\<bbb-R\><text| by
+      >g=<around*|(|f\<circ\>\<sigma\><rsub|\|W>|)><rsub|\|<around*|[|0,1|]>>
+    </equation*>
+
+    As <math|f> is of class <math|C<rsup|1>>, hence of class <math|C<rsup|0>>
+    [see theorem: <reference|diff C^n and C^m>], it follows that <math|f> is
+    continuous. Further <math|\<sigma\>> is continuous, hence by [theorem:
+    <reference|continuity and subspace topology (2)>]
+    <math|\<sigma\><rsub|\|w>> is continuous so that
+    <math|f\<circ\>\<sigma\><rsub|\|W>> is continuous. Using [theorem:
+    <reference|continuity and subspace topology (2)>] again we have that\ 
+
+    <\equation>
+      <label|eq 16.184.200>g<text| is continuous.>
+    </equation>
+
+    Further for <math|t\<in\><around*|]|0,1|[>> we have
+    <math|g<rsub|\|<around*|]|0,1|]>><around*|(|t|)>\<equallim\><rsub|t\<in\><around*|]|0,1|[>>g<around*|(|t|)>\<equallim\><rsub|t\<in\><around*|]|0,1|[>\<subseteq\><around*|[|0,1|]>><around*|(|f\<circ\>\<sigma\><rsub|\|W>|)><around*|(|t|)>\<equallim\><rsub|t\<in\><around*|]|0,1|]>><around*|(|f\<circ\>\<sigma\><rsub|\|W>|)><rsub|<around*|]|0,1|[>>>
+    so that <math|g<rsub|\|<around*|]|0,1|[>>=<around*|(|f\<circ\>\<sigma\><rsub|\|W>|)><rsub|<around*|]|0,1|[>>>.
+    As <math|<around*|]|0,1|[>\<subseteq\>W> and
+    <math|f\<circ\>\<sigma\><rsub|\|W>> is differentiable at <math|t\<in\>W>
+    it follows from [theorem: <reference|diff differentiability is a local
+    property>] that <math|><math|<around*|(|f\<circ\>\<sigma\><rsub|\|W>|)><rsub|<around*|]|0,1|[>>>
+    is differentiable at <math|t >with
+
+    <\equation*>
+      D<rsub|t><around*|(|f\<circ\>\<sigma\><rsub|\|W>|)><rsub|<around*|]|0,1|[>>=D<rsub|t><around*|(|f\<circ\>\<sigma\><rsub|\|W>|)>\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.183.200>]>>D<rsub|\<sigma\><around*|(|t|)>>f\<circ\>D<rsub|t>\<sigma\>.
+    </equation*>
+
+    Hence\ 
+
+    <\equation>
+      <label|eq 16.185.200>\<forall\>t\<in\><around*|]|0,1|[><text|
+      >g<rsub|\|<around*|]|0,1|[>><text| is differentiable at >t<text| with
+      >D<rsub|t><around*|(|g<rsub|\|<around*|]|0,1|[>>|)>=D<rsub|\<sigma\><around*|(|t|)>>f\<circ\>D<rsub|t>\<sigma\>
+    </equation>
+
+    Because of [eqs: <reference|eq 16.184.200> and <reference|eq 16.185.200>]
+    we can use Lagrange's theorem [theorem: <reference|diff Lagrange
+    theorem>] to find a <math|\<zeta\>\<in\><around*|]|0,1|[>> so that\ 
+
+    <\equation>
+      <label|eq 16.186.200>g<around*|(|1|)>-g<around*|(|0|)>=<around*|(|g<rsub|<around*|]|0,1|[>>|)><rprime|'><rsub|\<zeta\>>\<cdot\><around*|(|1-0|)>=<around*|(|g<rsub|<around*|]|0,1|[>>|)><rprime|'><rsub|\<zeta\>>
+    </equation>
+
+    Take <math|z=x+\<zeta\>\<cdot\><around*|(|y-x|)>=\<sigma\><around*|(|\<zeta\>|)>>
+    then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|f<around*|(|y|)>-f<around*|(|x|)>>|<cell|=>|<cell|f<around*|(|x+1\<cdot\><around*|(|y-x|)>|)>-f<around*|(|x+0\<cdot\><around*|(|y-x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|\<sigma\><around*|(|1|)>|)>-f<around*|(|\<sigma\><around*|(|0|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|1,0\<in\><around*|[|0,1|]>>>|<cell|f<around*|(|\<sigma\><rsub|\|W><around*|(|1|)>|)>-f<around*|(|\<sigma\><rsub|\|W><around*|(|0|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|f\<circ\>\<sigma\><rsub|\|W>|)><around*|(|1|)>-<around*|(|f\<circ\>\<sigma\><rsub|\|w>|)><around*|(|0|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|1,0\<in\><around*|[|0,1|]>>>|<cell|<around*|(|f\<circ\>\<sigma\><rsub|\|W>|)><rsub|\|<around*|[|0,1|]>><around*|(|1|)>-<around*|(|f\<circ\>\<sigma\><rsub|\|w>|)><rsub|\|<around*|[|0,1|]>><around*|(|0|)>>>|<row|<cell|>|<cell|=>|<cell|g<around*|(|1|)>-g<around*|(|0|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.186.200>]>>>|<cell|<around*|(|g<rsub|<around*|]|0,1|[>>|)><rprime|'><rsub|\<zeta\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|diff derivate and frechet
+      differential>]>>>|<cell|D<rsub|\<zeta\>><around*|(|g<rsub|\|<around*|]|0,1|[>>|)><around*|(|1|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.185.200>]>>>|<cell|<around*|(|D<rsub|\<sigma\><around*|(|\<zeta\>|)>>f\<circ\>D<rsub|\<zeta\>>\<sigma\>|)><around*|(|1|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|\<sigma\><around*|(|\<zeta\>|)>>f<around*|(|D<rsub|\<zeta\>>\<sigma\><around*|(|1|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+      <reference|lemma 16.135.200>]>>>|<cell|D<rsub|\<sigma\><around*|(|\<zeta\>|)>>f<around*|(|y-x|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|z=\<sigma\><around*|(|\<zeta\>|)>>>|<cell|D<rsub|z>f<around*|(|y-x|)>>>>>
+    </eqnarray*>
+  </proof>
 </body>
 
 <\initial>
@@ -4096,6 +4211,10 @@
     <associate|eq 16.128.194|<tuple|71|26>>
     <associate|eq 16.129.194|<tuple|72|26>>
     <associate|eq 16.130.194|<tuple|73|27>>
+    <associate|eq 16.183.200|<tuple|117|?>>
+    <associate|eq 16.184.200|<tuple|118|?>>
+    <associate|eq 16.185.200|<tuple|119|?>>
+    <associate|eq 16.186.200|<tuple|120|?>>
     <associate|eq 16.200.124|<tuple|86|32>>
     <associate|eq 16.261.222|<tuple|74|29>>
     <associate|eq 16.280.125.1|<tuple|75|30>>
@@ -4127,10 +4246,10 @@
     <associate|eq 16.360.136|<tuple|108|40>>
     <associate|eq 16.361.136|<tuple|109|41>>
     <associate|eq 16.362.136|<tuple|110|41>>
-    <associate|eq 16.382.139|<tuple|114|?>>
-    <associate|eq 16.383.139|<tuple|115|?>>
-    <associate|eq 16.384.139|<tuple|113|?>>
-    <associate|eq 16.387.138|<tuple|116|?>>
+    <associate|eq 16.382.139|<tuple|114|42>>
+    <associate|eq 16.383.139|<tuple|115|42>>
+    <associate|eq 16.384.139|<tuple|113|42>>
+    <associate|eq 16.387.138|<tuple|116|42>>
     <associate|eq 16.45.185|<tuple|59|23>>
     <associate|eq 16.46.185|<tuple|60|23>>
     <associate|eq 16.47.185|<tuple|61|23>>
