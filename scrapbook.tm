@@ -4119,6 +4119,604 @@
       <reference|lemma 16.135.200>]>>>|<cell|D<rsub|\<sigma\><around*|(|\<zeta\>|)>>f<around*|(|y-x|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|z=\<sigma\><around*|(|\<zeta\>|)>>>|<cell|D<rsub|z>f<around*|(|y-x|)>>>>>
     </eqnarray*>
   </proof>
+
+  Main value theorem from Dieudonne contains a error
+
+  <\lemma>
+    <label|lemma 16.148.201>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a normed space, <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b>,
+    <math|x\<in\><around*|[|a,b|[>>, <math|f:<around*|[|a,b|]>\<rightarrow\>X>
+    a function that has a derivative at <math|x> then given
+    <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there exist a
+    <math|\<lambda\>\<in\><around*|]|x,b|]>> such that
+    <math|\<forall\>\<zeta\>\<in\><around*|[|x,\<lambda\>|[>> we have\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|f<around*|(|\<zeta\>|)>-f<around*|(|x|)>-f<rprime|'><rsub|x>\<cdot\><around*|(|\<zeta\>-x|)>|\<\|\|\>>\<leqslant\>\<varepsilon\>\<cdot\><around*|(|\<zeta\>-x|)>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. As
+    <math|x\<in\><around*|[|a,b|[>> we have either:\ 
+
+    <\description>
+      <item*|<math|x=a>>Then by [definition: <reference|diff derivate on a
+      closed interval>] <math|f> has a right derivative at <math|a=x> and
+      <math|f<rprime|'><rsub|x>=f<rprime|'><rsub|+,x>>.
+
+      <item*|<math|x\<in\><around*|]|a,b|[>>>Then by [definition:
+      <reference|diff derivate on a closed interval>]
+      <math|f<rsub|\|<around*|]|a,b|[>>> has a derivative at <math|x> and
+      <math|f<rprime|'><rsub|x>=<around*|(|f<rsub|\|<around*|]|a,b|[>>|)><rprime|'><rsub|x>>.
+      Using [theorem: <reference|diff left and right derivate and
+      derivate>(2)] it follows that <math|f> has a right derivative at
+      <math|x> and <math|<around*|(|f<rsub|\|<around*|]|a,b|[>>|)><rprime|'><rsub|,x>=f<rprime|'><rsub|+,x>>
+      so that <math|f<rprime|'><rsub|x>=f<rprime|'><rsub|+,x>>
+    </description>
+
+    So in all cases we have that\ 
+
+    <\equation>
+      <label|eq 16.196.201>f<text| has a right derivative at <math|x> and
+      >f<rprime|'><rsub|x>=f<rprime|'><rsub|+,x>
+    </equation>
+
+    Using the definition of a right derivative there exist a
+    <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that if
+    <math|0\<less\>h\<less\>\<delta\>> and <math|x+h\<in\><around*|[|a,b|]>>
+    then
+
+    <\equation>
+      <label|eq 16.197.201><around*|\<\|\|\>|<frac|f<around*|(|x+h|)>-f<around*|(|x|)>|h>-f<rprime|'><rsub|+,x>|\<\|\|\>>\<less\>\<varepsilon\>
+    </equation>
+
+    Take <math|\<lambda\>=min<around*|(|x+\<delta\>,b|)>> so that, as
+    <math|x\<less\>x+\<delta\>\<wedge\>x\<less\>b>,
+    <math|\<lambda\>\<in\><around*|]|x,b|]>> <math|>then for
+    <math|\<zeta\>\<in\><around*|[|x,\<lambda\>|[>> we have either:
+
+    <\description>
+      <item*|<math|\<zeta\>=x>>Then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|f<around*|(|\<zeta\>|)>-f<around*|(|x|)>-f<rsub|x><rprime|'>\<cdot\><around*|(|\<zeta\>-x|)>|\<\|\|\>>>|<cell|\<equallim\><rsub|\<zeta\>=x>>|<cell|<around*|\<\|\|\>|f<around*|(|\<zeta\>|)>-f<around*|(|\<zeta\>|)>-f<rprime|'><rsub|+,x>\<cdot\><around*|(|\<zeta\>-\<zeta\>|\<nobracket\>>|)>\<\|\|\>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|0|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|0>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|\<varepsilon\>\<cdot\><around*|(|\<zeta\>-x|)>>>>>
+      </eqnarray*>
+
+      <item*|<math|x\<less\>\<zeta\>>>Then
+      <math|0\<less\>\<zeta\>-x\<less\>\<lambda\>-x\<leqslant\><around*|(|x+\<delta\>|)>-x=\<delta\>>
+      and \ <math|x+<around*|(|\<zeta\>-x|)>=\<zeta\>\<in\><around*|[|a,b|]>>
+      [because <math|<rigid|a\<leqslant\>x\<less\>\<zeta\>\<wedge\>\<zeta\>\<less\>\<lambda\>\<leqslant\>b>>]
+      so that we can use [eq: <reference|eq 16.197.201>] [where we take
+      <math|h=\<zeta\>-x>] to get\ 
+
+      <\equation>
+        <label|eq 16.198.201><around*|\<\|\|\>|<frac|f<around*|(|\<zeta\>|)>-f<around*|(|x|)>|\<zeta\>-x>-f<rprime|'><rsub|+,x>|\<\|\|\>>=<around*|\<\|\|\>|<frac|f<around*|(|x+<around*|(|\<zeta\>-x|)>|)>-f<around*|(|x|)>|\<zeta\>-x>-f<rprime|'><rsub|+,x>|\<\|\|\>>\<less\>\<varepsilon\>
+      </equation>
+
+      hence\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|f<around*|(|\<zeta\>|)>-f<around*|(|x|)>-f<rprime|'><rsub|x>\<cdot\><around*|(|\<zeta\>-x|)>|\<\|\|\>>>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.196.201>]>>>|<cell|<around*|\<\|\|\>|f<around*|(|\<zeta\>|)>-f<around*|(|x|)>-f<rprime|'><rsub|+,x>\<cdot\><around*|(|\<zeta\>-x|)>|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|(|\<zeta\>-x|)>\<cdot\><around*|(|<frac|f<around*|(|\<zeta\>|)>-f<around*|(|x|)>|\<zeta\>-x>-f<rprime|'><rsub|+,x>|)>|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||\<zeta\>-x|\|>\<cdot\><around*|\<\|\|\>|<frac|f<around*|(|\<zeta\>|)>-f<around*|(|x|)>|\<zeta\>-x>-f<rprime|'><rsub|+,x>|\<\|\|\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|x\<less\>\<zeta\>>>|<cell|<around*|(|\<zeta\>-x|)>\<cdot\><around*|\<\|\|\>|<frac|f<around*|(|\<zeta\>|)>-f<around*|(|x|)>|\<zeta\>-x>-f<rprime|'><rsub|+,x>|\<\|\|\>>>>|<row|<cell|>|<cell|\<less\><rsub|<text|[eq:
+        <reference|eq 16.198.201>]>>>|<cell|\<varepsilon\>\<cdot\><around*|(|\<zeta\>-x|)>>>>>
+      </eqnarray*>
+    </description>
+
+    Hence in both cases we have that\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|f<around*|(|\<zeta\>|)>-f<around*|(|x|)>-f<rprime|'><rsub|x>\<cdot\><around*|(|\<zeta\>-x|)>|\<\|\|\>>\<leqslant\>\<zeta\>\<cdot\><around*|(|\<zeta\>-x|)>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|diff mean value theorem (5)><dueto|Main Value Theorem (V)>Let
+    <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
+    normed space, <math|f:<around*|[|a,b|]>\<rightarrow\>X>,
+    <math|\<varphi\>:<around*|[|a,b|]>\<rightarrow\>\<bbb-R\>> continuous
+    functions such that there exist a denumerable set
+    <math|E\<subseteq\><around*|[|a,b|]>> for which
+    <math|\<forall\>x\<in\><around*|[|a,b|]>\\E> <math|f> and
+    <math|\<varphi\>> has derivatives <math|f<rprime|'><rsub|x>> and
+    <math|\<varphi\><rprime|'><rsub|x>> at <math|x> with
+    <math|<around*|\<\|\|\>|f<rprime|'><rsub|x>|\<\|\|\>>\<leqslant\>\<varphi\><rprime|'><rsub|x>>
+    then <math|<around*|\<\|\|\>|f<around*|(|b|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|b|)>-\<varphi\><around*|(|a|)>>.
+  </theorem>
+
+  <\proof>
+    As <math|E> is denumerable there exist a bijection
+    <math|\<rho\>:\<bbb-N\>\<rightarrow\>E>. Define for
+    <math|\<beta\>\<in\><around*|[|a,b|]>>
+    <math|\<xi\><around*|(|\<beta\>|)>\<in\><around*|[|0,\<infty\>|[>> as
+    follows\ 
+
+    <\equation*>
+      \<xi\><around*|(|\<beta\>|)>=<big|sum><rsub|n\<in\><around*|{|i\<in\>\<bbb-N\>\|\<rho\><around*|(|i|)>\<less\>\<beta\>|}>><frac|1|2<rsup|n>>\<equallim\><rsub|<text|[definition:
+      <reference|sum generalized sum>]>><choice|<tformat|<table|<row|<cell|0<text|
+      if ><around*|{|i\<in\>\<bbb-N\>\|\<rho\><around*|(|i|)>\<less\>\<beta\>|}>=\<varnothing\>>>|<row|<cell|<big|sum><rsub|n\<in\><around*|{|i\<in\>\<bbb-N\>\|\<rho\><around*|(|i|)>\<less\>\<beta\>|}>><frac|1|2<rsup|n>><text|
+      if ><around*|{|i\<in\>\<bbb-N\>\|\<rho\><around*|(|i|)>\<less\>\<beta\>|}>\<neq\>\<varnothing\>>>>>>
+    </equation*>
+
+    Note that <math|<around*|{|i\<in\>\<bbb-N\>\|\<rho\><around*|(|i|)>\<less\>\<beta\>|}>>
+    is finite because by [theorem: <reference|complex Archimedean property
+    consequence (1)>] there exist a <math|n\<in\>\<bbb-N\>> such that
+    <math|\<beta\>\<leqslant\>n>, hence <math|<around*|{|i\<in\>\<bbb-N\>\|\<rho\><around*|(|i|)>\<less\>\<beta\>|}>\<subseteq\><around*|{|1,\<ldots\>,n|}>>,
+    so the sum <math|<big|sum><rsub|n\<in\><around*|{|i\<in\>\<bbb-N\>\|\<rho\><around*|(|i|)>\<less\>\<beta\>|}>><frac|1|2<rsup|n>>>
+    is well defined. Further as <math|\<rho\><around*|(|\<bbb-N\>|)>=E\<subseteq\><around*|[|a,b|]>>
+    we have <math|\<forall\>i\<in\>\<bbb-N\>> that
+    <math|a\<leqslant\>\<rho\><around*|(|i|)>> so that
+    <math|\<rho\><around*|(|i|)>\<nless\>a>, hence
+    <math|<around*|{|i\<in\>\<bbb-N\>\|\<rho\><around*|(|i|)>\<less\>a|}>=\<varnothing\>>.
+    Hence\ 
+
+    <\equation>
+      <label|eq 16.199.201>\<xi\><around*|(|a|)>=0
+    </equation>
+
+    Define for <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+    <math|A<rsub|\<varepsilon\>>> by\ 
+
+    <\equation*>
+      A<rsub|\<varepsilon\>>=<around*|{|\<beta\>\<in\><around*|[|a,b|]>\|\<forall\>\<gamma\>\<in\><around*|[|a,\<beta\>|[>\<vDash\><around*|\<\|\|\>|f<around*|(|\<gamma\>|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|\<gamma\>|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|\<gamma\>-a|)>+\<varepsilon\>\<cdot\>\<xi\><around*|(|\<gamma\>|)>|}>\<subseteq\><around*|[|a,b|]>
+    </equation*>
+
+    Then for <math|\<beta\>=a> \ <math|<around*|[|a,\<beta\>|[>=\<varnothing\>>
+    so that <math|\<forall\>\<gamma\>\<in\><around*|[|a,\<beta\>|[>\<vDash\><around*|\<\|\|\>|f<around*|(|\<gamma\>|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|\<gamma\>|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|\<gamma\>-a|)>+\<varepsilon\>\<cdot\>\<xi\><around*|(|\<gamma\>|)>>
+    is satisfied vacuously so that
+
+    <\equation>
+      <label|eq 16.200.201>a\<in\>A<rsub|\<varepsilon\>><text| hence
+      >A<rsub|\<varepsilon\>>\<neq\>\<varnothing\>
+    </equation>
+
+    If <math|\<beta\>\<in\>A<rsub|\<varepsilon\>>> then for
+    <math|\<xi\>\<in\><around*|[|a,\<beta\>|]>> we have for all
+    <math|\<lambda\>\<in\><around*|[|a,\<xi\>|[>> that
+    <math|a\<leqslant\>\<lambda\>\<less\>\<xi\>\<leqslant\>\<beta\>> hence
+    <math|\<gamma\>\<in\><around*|[|a,\<beta\>|[>> so that
+
+    <\equation*>
+      <around*|\<\|\|\>|f<around*|(|\<gamma\>|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|\<gamma\>|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|\<gamma\>-a|)>+\<varepsilon\>\<cdot\>\<xi\><around*|(|\<gamma\>|)>
+    </equation*>
+
+    which proves that <math|\<xi\>\<in\>A<rsub|\<varepsilon\>>>. Hence
+
+    <\equation>
+      <label|eq 16.201.201>\<forall\>\<beta\>\<in\>A<rsub|\<varepsilon\>><text|
+      we have ><around*|[|a,\<beta\>|]>\<subseteq\>A<rsub|\<varepsilon\>>
+    </equation>
+
+    As <math|\<varnothing\>\<neq\>A<rsub|\<varepsilon\>>> and
+    <math|A<rsub|\<varepsilon\>>> is bounded above by <math|b> [because
+    <math|A<rsub|\<varepsilon\>>\<subseteq\><around*|[|a,b|]>>] it follows
+    from the conditional completeness of the real numbers [see theorem:
+    <reference|complex RC is conditional complete>] that
+    <math|sup<around*|(|A<rsub|\<varepsilon\>>|)>> exist. As
+    <math|A<rsub|\<varepsilon\>>\<subseteq\><around*|[|a,b|]>> we have
+    <math|\<forall\>\<zeta\>\<in\>A<rsub|\<varepsilon\>>> that
+    <math|a\<leqslant\>\<zeta\>\<leqslant\>b> proving that
+    <math|a\<leqslant\>sup<around*|(|A<rsub|\<varepsilon\>>|)>\<leqslant\>b>.
+    So if we take <math|\<sigma\>=sup<around*|(|A<rsub|\<varepsilon\>>|)>>
+    then we have
+
+    <\equation>
+      <label|eq 16.202.201>\<sigma\>=sup<around*|(|A<rsub|\<varepsilon\>>|)><text|
+      and >\<sigma\>\<in\><around*|[|a,b|]>
+    </equation>
+
+    If <math|\<zeta\>\<in\><around*|[|a,\<sigma\>|[>> then
+    <math|\<zeta\>\<less\>\<sigma\>=sup<around*|(|A<rsub|\<varepsilon\>>|)>>
+    so that there exist a <math|\<beta\>\<in\>A<rsub|\<varepsilon\>>> such
+    that <math|a\<leqslant\>\<zeta\>\<less\>\<beta\>\<leqslant\>sup<around*|(|A<rsub|\<varepsilon\>>|)>=\<sigma\>>
+    so that <math|\<zeta\>\<in\><around*|[|a,\<beta\>|[>\<subseteq\><around*|[|a,\<beta\>|]>>.
+    As by [eq: <reference|eq 16.201.201>]
+    <math|<around*|[|a,\<beta\>|]>\<subseteq\>A<rsub|\<varepsilon\>>> it
+    follows that <math|\<zeta\>\<in\>A<rsub|\<varepsilon\>>>. Hence
+
+    <\equation*>
+      <around*|[|a,\<sigma\>|[>\<subseteq\>A<rsub|\<varepsilon\>>
+    </equation*>
+
+    Further as <math|\<beta\>\<in\>A<rsub|\<varepsilon\>>> and
+    <math|\<zeta\>\<in\><around*|[|a,\<beta\>|]>> it follows that <math|>
+    <math|<around*|\<\|\|\>|f<around*|(|\<zeta\>|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|\<zeta\>|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|\<zeta\>-a|)>+\<varepsilon\>\<cdot\>\<xi\><around*|(|\<gamma\>|)>>
+    so, as <math|\<zeta\>\<in\><around*|[|a,\<sigma\>|[>> was chosen
+    arbitrary, it follows that <math|\<sigma\>\<in\>A<rsub|\<varepsilon\>>>.
+    Hence we have\ 
+
+    <\equation>
+      <label|eq 16.203.201><around*|[|a,\<sigma\>|]>\<subseteq\>A<rsub|\<varepsilon\>>
+    </equation>
+
+    Assume that <math|x\<in\>A<rsub|\<varepsilon\>>\\<around*|[|a,\<sigma\>|]>>
+    then, as <math|x\<in\>A<rsub|\<varepsilon\>>\<subseteq\><around*|[|a,b|]>>
+    so that <math|a\<leqslant\>x>, we must have, as
+    <math|x\<nin\><around*|[|a,\<sigma\>|]>>, that <math|\<sigma\>\<less\>x>
+    which contradicts the fact that <math|x\<leqslant\>sup<around*|(|A<rsub|\<varepsilon\>>|)>=\<sigma\>>.
+    Hence <math|A<rsub|\<varepsilon\>>\\<around*|[|a,\<sigma\>|]>=\<varnothing\>>,
+    so if <math|x\<in\>A<rsub|\<varepsilon\>>> then we must have
+    <math|x\<in\><around*|[|a,\<sigma\>|]>> proving that
+    <math|A<rsub|\<varepsilon\>>\<subseteq\><around*|[|a,\<sigma\>|]>> which
+    combined with [eq: <reference|eq 16.203.201>] results in\ 
+
+    <\equation>
+      <label|eq 16.204.201><around*|[|a,\<sigma\>|]>=A<rsub|\<varepsilon\>>
+    </equation>
+
+    Take <math|\<alpha\>,\<beta\>\<in\><around*|[|a,b|]>> with
+    <math|\<alpha\>\<less\>\<beta\>>. If <math|n\<in\><around*|{|i\<in\>\<bbb-N\>\|\<rho\><around*|(|i|)>\<less\>\<alpha\>|}>>
+    then we have <math|\<rho\><around*|(|n|)>\<less\>\<alpha\>\<less\>\<beta\>>
+    so that <math|<rigid|n\<in\><around*|{|i\<in\>\<bbb-N\>\|\<rho\><around*|(|i|)>\<less\>\<beta\>|}>>>
+    proving that <math|<around*|{|i\<in\>\<bbb-N\>\|\<rho\><around*|(|i|)>\<less\>\<alpha\>|}>\<subseteq\><around*|{|i\<in\>\<bbb-N\>\|\<rho\><around*|(|i|)>\<less\>\<beta\>|}>>.
+    We consider now the following cases for
+    <math|<around*|{|i\<in\>\<bbb-N\>\|\<rho\><around*|(|i|)>\<less\>\<alpha\>|}>>:\ 
+
+    <\description>
+      <item*|<math|<around*|{|i\<in\>\<bbb-N\>\|\<rho\><around*|(|i|)>\<less\>\<alpha\>|}>=\<varnothing\>>>Then
+      <math|\<xi\><around*|(|\<alpha\>|)>=0\<leqslant\>\<xi\><around*|(|\<beta\>|)>>
+
+      <item*|<math|<around*|{|i\<in\>\<bbb-N\>\|\<rho\><around*|(|i|)>\<less\>\<alpha\>|}>\<neq\>\<varnothing\>>>Then,
+      as <math|<around*|{|i\<in\>\<bbb-N\>\|\<rho\><around*|(|i|)>\<less\>\<alpha\>|}>\<subseteq\><around*|{|i\<in\>\<bbb-N\>\|\<rho\><around*|(|i|)>\<less\>\<beta\>|}>>,
+      we have that <math|<rigid|<around*|{|i\<in\>\<bbb-N\>\|\<rho\><around*|(|i|)>\<less\>\<beta\>|}>\<neq\>\<varnothing\>>>
+      and\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<xi\><around*|(|\<beta\>|)>>|<cell|=>|<cell|<big|sum><rsub|n\<in\><around*|{|i\<in\>\<bbb-N\>\|\<rho\><around*|(|i|)>\<less\>\<beta\>|}>><frac|1|2<rsup|n>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|n\<in\><around*|{|i\<in\>\<bbb-N\>\|\<rho\><around*|(|i|)>\<less\>\<alpha\>|}>><frac|1|2<rsup|n>>+<big|sum><rsub|n\<in\><around*|{|i\<in\>\<bbb-N\>\|\<rho\><around*|(|i|)>\<less\>\<beta\>|}>\\<around*|{|i\<in\>\<bbb-N\>\|\<rho\><around*|(|i|)>\<less\>\<alpha\>|}>><frac|1|2<rsup|n>>>>|<row|<cell|>|<cell|\<geqslant\>>|<cell|<big|sum><rsub|n\<in\><around*|{|i\<in\>\<bbb-N\>\|\<rho\><around*|(|i|)>\<less\>\<alpha\>|}>><frac|1|2<rsup|n>>>>|<row|<cell|>|<cell|=>|<cell|\<xi\><around*|(|\<alpha\>|)>>>>>
+      </eqnarray*>
+    </description>
+
+    proving in all cases that <math|\<xi\><around*|(|\<alpha\>|)>\<leqslant\>\<xi\><around*|(|\<beta\>|)>>.
+    Hence\ 
+
+    <\equation>
+      <label|eq 16.205.201>\<forall\>\<alpha\>,\<beta\>\<in\><around*|[|a,b|]><text|
+      with >\<alpha\>\<less\>\<beta\><text| we have
+      >0\<leqslant\>\<xi\><around*|(|\<alpha\>|)>\<leqslant\>\<xi\><around*|(|\<beta\>|)>
+    </equation>
+
+    As <math|\<sigma\>\<in\>A<rsub|\<varepsilon\>>\<subseteq\><around*|[|a,b|]>>
+    we have that <math|a\<leqslant\>\<sigma\>> and we have then two cases to
+    consider:
+
+    <\description>
+      <item*|<math|a=\<sigma\>>>Then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|f<around*|(|\<sigma\>|)>-f<around*|(|a|)>|\<\|\|\>>>|<cell|=>|<cell|<around*|\<\|\|\>|f<around*|(|\<sigma\>|)>-f<around*|(|\<sigma\>|)>|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|0>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|0+0+\<varepsilon\>\<cdot\>\<xi\><around*|(|\<sigma\>|)>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|\<varphi\><around*|(|\<sigma\>|)>-\<varphi\><around*|(|\<sigma\>|)>+\<varepsilon\>\<cdot\><around*|(|\<sigma\>-\<sigma\>|)>+\<varepsilon\>\<cdot\>\<xi\><around*|(|\<sigma\>|)>>>>>
+      </eqnarray*>
+
+      <item*|<math|a\<less\>\<sigma\>>>Choose
+      <math|\<zeta\>\<in\>\<bbb-R\><rsup|+>>. By the continuity of
+      <math|\<varphi\>> at <math|\<sigma\>> there exist a
+      <math|\<delta\><rsub|\<varphi\>>\<in\>\<bbb-R\><rsup|+>> such that\ 
+
+      <\equation*>
+        \<forall\>\<alpha\>\<in\><around*|]|\<sigma\>-\<delta\><rsub|\<varphi\>>,a+\<delta\><rsub|\<varphi\>>|[><big|cap><around*|[|a,b|]><text|
+        we have ><around*|\||\<varphi\><around*|(|\<alpha\>|)>-\<varphi\><around*|(|\<sigma\>|)>|\|>\<less\><frac|\<zeta\>|2>
+      </equation*>
+
+      further using the continuity of <math|f> at <math|\<sigma\>> there
+      exist a <math|\<delta\><rsub|f>\<in\>\<bbb-R\><rsup|+>> such that\ 
+
+      <\equation*>
+        \<forall\>\<alpha\>\<in\><around*|]|\<sigma\>-\<delta\><rsub|f>,\<sigma\>+\<delta\><rsub|f>|[><big|cap><around*|[|a,b|]><text|
+        we have ><around*|\<\|\|\>|f<around*|(|\<alpha\>|)>-f<around*|(|\<sigma\>|)>|\<\|\|\>>\<less\><frac|\<zeta\>|2>
+      </equation*>
+
+      Take <math|\<delta\>=min<around*|(|\<delta\><rsub|\<varphi\>>,\<delta\><rsub|f>,\<sigma\>-a|)>\<in\>\<bbb-R\><rsup|+>>
+      [because <math|a\<less\>\<sigma\>>] \ then as
+      <math|\<sigma\>-\<delta\>\<less\>\<sigma\>> there exist a
+      <math|\<beta\>\<in\>\<bbb-R\>> such that
+      <math|\<sigma\>-\<delta\>\<less\>\<beta\>\<less\>\<sigma\>\<less\>\<sigma\>+\<delta\>>
+      . As <math|\<delta\>\<leqslant\>\<sigma\>-a> we have that
+      <math|a\<leqslant\>\<sigma\>-\<delta\>\<less\>\<beta\>>, further, as
+      <math|\<sigma\>\<in\>A<rsub|\<varepsilon\>>\<subseteq\><around*|[|a,b|]>>,
+      it follows that <math|\<beta\>\<less\>\<sigma\>\<leqslant\>b>. Hence we
+      conclude that <math|a\<leqslant\>\<beta\>\<leqslant\>b> and
+      <math|\<sigma\>-\<delta\>\<less\>\<beta\>\<less\>\<sigma\>+\<delta\>>,
+      which, as <math|\<delta\>\<leqslant\>\<delta\><rsub|f>,\<delta\><rsub|\<varphi\>>>,
+      proves that <math|\<beta\>\<in\><around*|]|\<sigma\>-\<delta\><rsub|\<varphi\>>,\<sigma\>+\<delta\><rsub|\<varphi\>>|[><big|cap><around*|]|\<sigma\>-\<delta\><rsub|f>,\<sigma\>+\<delta\><rsub|f>|[><big|cap><around*|[|a,b|]>>.
+      Hence we have that\ 
+
+      <\equation>
+        <label|eq 16.206.202><around*|\||\<varphi\><around*|(|\<beta\>|)>-\<varphi\><around*|(|\<sigma\>|)>|\|>\<less\><frac|\<zeta\>|2><text|
+        and ><around*|\<\|\|\>|f<around*|(|\<beta\>|)>-f<around*|(|\<sigma\>|)>|\<\|\|\>>\<less\><frac|\<zeta\>|2>
+      </equation>
+
+      Next
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<varphi\><around*|(|\<beta\>|)>-\<varphi\><around*|(|a|)>>|<cell|=>|<cell|\<varphi\><around*|(|\<beta\>|)>-\<varphi\><around*|(|a|)>=\<varphi\><around*|(|\<sigma\>|)>-\<varphi\><around*|(|a|)>+\<varphi\><around*|(|\<beta\>|)>-\<varphi\><around*|(|\<sigma\>|)>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|\<varphi\><around*|(|\<sigma\>|)>-\<varphi\><around*|(|a|)>+<around*|\||\<varphi\><around*|(|\<beta\>|)>-\<varphi\><around*|(|\<sigma\>|)>|\|>>>|<row|<cell|>|<cell|\<less\><rsub|<text|[eq:
+        <reference|eq 16.206.202>>>>|<cell|\<varphi\><around*|(|\<sigma\>|)>-\<varphi\><around*|(|a|)>+<frac|\<zeta\>|2><eq-number><label|eq
+        16.207.201.1>>>>>
+      </eqnarray*>
+
+      Further
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|f<around*|(|\<sigma\>|)>-f<around*|(|a|)>|\<\|\|\>>>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|f<around*|(|\<beta\>|)>-f<around*|(|a|)>+f<around*|(|\<sigma\>|)>-f<around*|(|\<beta\>|)>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|f<around*|(|\<beta\>|)>-f<around*|(|a|)>|\<\|\|\>>+<around*|\<\|\|\>|f<around*|(|\<sigma\>|)>-f<around*|(|\<beta\>|)>|\<\|\|\>>>>|<row|<cell|>|<cell|\<less\><rsub|<text|[eq:
+        <reference|eq 16.206.202>]>>>|<cell|<around*|\<\|\|\>|f<around*|(|\<beta\>|)>-f<around*|(|a|)>|\<\|\|\>>+<frac|\<zeta\>|2>>>|<row|<cell|>|<cell|\<leqslant\><rsub|\<sigma\>\<in\>A<rsub|\<varepsilon\>>\<wedge\>a\<leqslant\>\<beta\>\<less\>\<sigma\>>>|<cell|\<varphi\><around*|(|\<beta\>|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|\<beta\>-a|)>+\<varepsilon\>\<cdot\>\<xi\><around*|(|\<beta\>|)>+<frac|\<zeta\>|2>>>|<row|<cell|>|<cell|\<less\><rsub|<text|[eq:
+        <reference|eq 16.207.201.1>]>>>|<cell|\<varphi\><around*|(|\<sigma\>|)>-\<varphi\><around*|(|a|)>+<frac|\<zeta\>|2>+\<varepsilon\>\<cdot\><around*|(|\<beta\>-a|)>+\<varepsilon\>\<cdot\>\<xi\><around*|(|\<beta\>|)>+<frac|\<zeta\>|2>>>|<row|<cell|>|<cell|=>|<cell|\<varphi\><around*|(|\<sigma\>|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|\<beta\>-a|)>+\<varepsilon\>\<cdot\>\<xi\><around*|(|\<beta\>|)>+\<zeta\>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[eq:
+        <reference|eq 16.205.201>]>\<wedge\>\<beta\>\<less\>\<sigma\>>>|<cell|\<varphi\><around*|(|\<sigma\>|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|\<sigma\>-a|)>+\<varepsilon\>\<cdot\>\<xi\><around*|(|\<sigma\>|)>+\<zeta\>>>>>
+      </eqnarray*>
+
+      As <math|\<zeta\>> was chosen arbitrary it follows from [theorem:
+      <reference|complex Archimedean property consequence (2)>] that
+
+      <\equation*>
+        <around*|\<\|\|\>|f<around*|(|\<sigma\>|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|\<sigma\>|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|\<sigma\>-a|)>+\<varepsilon\>\<cdot\>\<xi\><around*|(|\<sigma\>|)>
+      </equation*>
+    </description>
+
+    So in all possible cases for <math|\<sigma\>> we have\ 
+
+    <\equation>
+      <label|eq 16.207.201><around*|\<\|\|\>|f<around*|(|\<sigma\>|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|\<sigma\>|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|\<sigma\>-a|)>+\<varepsilon\>\<cdot\>\<xi\><around*|(|\<sigma\>|)>
+    </equation>
+
+    Suppose now that <math|\<sigma\>\<less\>b> then we have for
+    <math|\<sigma\>> the following possibilities in relation to <math|E>:
+
+    <\description>
+      <item*|<math|\<sigma\>\<nin\>E>>Then <math|\<varphi\>,f> have a
+      derivative at <math|\<sigma\>>. <space|0.2spc>As
+      <math|a\<leqslant\>\<sigma\>\<less\>b> it follows from [lemma:
+      <reference|lemma 16.148.201>] that there exists
+      <math|\<lambda\><rsub|\<varphi\>>,\<lambda\><rsub|f>\<in\><around*|]|\<sigma\>,b|]>>
+      such that
+
+      <\equation*>
+        \<forall\>\<zeta\>\<in\><around*|[|\<sigma\>,\<lambda\><rsub|\<varphi\>>|[><text|
+        ><around*|\||\<varphi\><around*|(|\<zeta\>|)>-\<varphi\><around*|(|\<sigma\>|)>-\<varphi\><rprime|'><rsub|\<sigma\>>\<cdot\><around*|(|\<zeta\>-\<sigma\>|)>|\|>\<leqslant\><frac|\<varepsilon\>|2>\<cdot\><around*|(|\<zeta\>-\<sigma\>|)>
+      </equation*>
+
+      <\equation*>
+        \<forall\>\<zeta\>\<in\><around*|[|\<sigma\>,\<lambda\><rsub|f>|]><text|
+        ><around*|\<\|\|\>|f<around*|(|\<zeta\>|)>-f<around*|(|\<sigma\>|)>-f<rprime|'><rsub|\<sigma\>>\<cdot\><around*|(|\<zeta\>-\<sigma\>|)>|\<\|\|\>>\<leqslant\><frac|\<varepsilon\>|2>\<cdot\><around*|(|\<zeta\>-\<sigma\>|)>
+      </equation*>
+
+      <math|> So if <math|\<zeta\>\<in\><around*|[|\<sigma\>,min<around*|(|\<lambda\><rsub|\<varphi\>>,\<lambda\><rsub|f>|)>|[>>
+      we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<varphi\><rsub|\<sigma\>><rprime|'>\<cdot\><around*|(|\<zeta\>-\<sigma\>|)>>|<cell|=>|<cell|\<varphi\><rprime|'><rsub|\<sigma\>>\<cdot\><around*|(|\<zeta\>-\<sigma\>|)>-<around*|(|\<varphi\><around*|(|\<zeta\>|)>-\<varphi\><around*|(|\<sigma\>|)>|)>+\<varphi\><around*|(|\<zeta\>|)>-\<varphi\><around*|(|\<sigma\>|)>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\||\<varphi\><rprime|'><rsub|\<sigma\>>\<cdot\><around*|(|\<zeta\>-\<sigma\>|)>-<around*|(|\<varphi\><around*|(|\<zeta\>|)>-\<varphi\><around*|(|\<sigma\>|)>|)>|\|>+\<varphi\><around*|(|\<zeta\>|)>-\<varphi\><around*|(|\<sigma\>|)>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<frac|\<varepsilon\>|2>\<cdot\><around*|(|\<zeta\>-\<sigma\>|)>+\<varphi\><around*|(|\<zeta\>|)>-\<varphi\><around*|(|\<sigma\>|)><eq-number><label|eq
+        16.208.201>>>>>
+      </eqnarray*>
+
+      and
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|f<around*|(|\<zeta\>|)>-f<around*|(|\<sigma\>|)>|\<\|\|\>>>|<cell|=>|<cell|<around*|\<\|\|\>|f<around*|(|\<zeta\>|)>-f<around*|(|\<sigma\>|)>-f<rprime|'><rsub|\<sigma\>>\<cdot\><around*|(|\<zeta\>-\<sigma\>|)>+f<rprime|'><rsub|\<sigma\>>\<cdot\><around*|(|\<zeta\>-\<sigma\>|)>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|f<around*|(|\<zeta\>|)>-f<around*|(|\<sigma\>|)>-f<rprime|'><rsub|\<sigma\>>\<cdot\><around*|(|\<zeta\>-\<sigma\>|)>|\<\|\|\>>+<around*|\<\|\|\>|f<rprime|'><rsub|\<sigma\>>\<cdot\><around*|(|\<zeta\>-\<sigma\>|)>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<frac|\<varepsilon\>|2>\<cdot\><around*|(|\<zeta\>-\<sigma\>|)>+<around*|\<\|\|\>|f<rprime|'><rsub|\<sigma\>>\<cdot\><around*|(|\<zeta\>-\<sigma\>|)>|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<frac|\<varepsilon\>|2>\<cdot\><around*|(|\<zeta\>-\<sigma\>|)>+<around*|\<\|\|\>|f<rprime|'><rsub|\<sigma\>>|\<\|\|\>>\<cdot\><around*|\||\<zeta\>-\<sigma\>|\|>>>|<row|<cell|>|<cell|\<equallim\><rsub|\<zeta\>\<in\><around*|[|\<sigma\>,min<around*|(|\<lambda\><rsub|\<varphi\>>,\<lambda\><rsub|f>|)>|[>\<Rightarrow\>\<sigma\>\<leqslant\>\<zeta\>>>|<cell|<frac|\<varepsilon\>|2>\<cdot\><around*|(|\<zeta\>-\<sigma\>|)>+<around*|\<\|\|\>|f<rprime|'><rsub|\<sigma\>>|\<\|\|\>>\<cdot\><around*|(|\<zeta\>-\<sigma\>|)>>>|<row|<cell|>|<cell|\<leqslant\><rsub|hypothesis>>|<cell|<frac|\<varepsilon\>|2>\<cdot\><around*|(|\<zeta\>-\<sigma\>|)>+\<varphi\><rprime|'><rsub|\<sigma\>>\<cdot\><around*|(|\<zeta\>-\<sigma\>|)>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<around*|[|eq:<reference|eq
+        16.208.201>|]>>>|<cell|<frac|\<varepsilon\>|2>\<cdot\><around*|(|\<zeta\>-\<sigma\>|)>+<frac|\<varepsilon\>|2>\<cdot\><around*|(|\<zeta\>-\<sigma\>|)>+\<varphi\><around*|(|\<zeta\>|)>-\<varphi\><around*|(|\<sigma\>|)>>>|<row|<cell|>|<cell|=>|<cell|\<varphi\><around*|(|\<zeta\>|)>-\<varphi\><around*|(|\<sigma\>|)>+\<varepsilon\>\<cdot\><around*|(|\<zeta\>-\<sigma\>|)>>>>>
+      </eqnarray*>
+
+      proving\ 
+
+      <\equation>
+        <label|eq 16.209.201><around*|\<\|\|\>|f<around*|(|\<zeta\>|)>-f<around*|(|\<sigma\>|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|\<zeta\>|)>-\<varphi\><around*|(|\<sigma\>|)>+\<varepsilon\>\<cdot\><around*|(|\<zeta\>-\<sigma\>|)>
+      </equation>
+
+      Next\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|f<around*|(|\<zeta\>|)>-f<around*|(|a|)>|\<\|\|\>>>|<cell|=>|<cell|<around*|\<\|\|\>|f<around*|(|\<zeta\>|)>-f<around*|(|\<sigma\>|)>+f<around*|(|\<sigma\>|)>-f<around*|(|a|)>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|f<around*|(|\<zeta\>|)>-f<around*|(|\<sigma\>|)>|\<\|\|\>>+<around*|\<\|\|\>|f<around*|(|\<sigma\>|)>-f<around*|(|a|)>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[eq:
+        <reference|eq 16.209.201>]>>>|<cell|\<varphi\><around*|(|\<zeta\>|)>-\<varphi\><around*|(|\<sigma\>|)>+\<varepsilon\>\<cdot\><around*|(|\<zeta\>-\<sigma\>|)>+<around*|\<\|\|\>|f<around*|(|\<sigma\>|)>-f<around*|(|a|)>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[eq:
+        <reference|eq 16.207.201>]>>>|<cell|\<varphi\><around*|(|\<zeta\>|)>-<wide*|\<varphi\><around*|(|\<sigma\>|)>|\<wide-underbrace\>><rsub|1>+<wide*|\<varepsilon\>\<cdot\><around*|(|\<zeta\>-\<sigma\>|)>|\<wide-underbrace\>><rsub|2>+<wide*|\<varphi\><around*|(|\<sigma\>|)>|\<wide-underbrace\>><rsub|1>-\<varphi\><around*|(|a|)>+<wide*|\<varepsilon\>\<cdot\><around*|(|\<sigma\>-a|)>|\<wide-underbrace\>><rsub|2>+\<varepsilon\>\<cdot\>\<xi\><around*|(|\<sigma\>|)>>>|<row|<cell|>|<cell|=>|<cell|\<varphi\><around*|(|\<zeta\>|)>-\<varphi\><around*|(|a|)>+<wide*|\<varepsilon\>\<cdot\><around*|(|\<zeta\>-a|)>|\<wide-underbrace\>><rsub|2>+\<varepsilon\>\<cdot\>\<xi\><around*|(|\<sigma\>|)>>>|<row|<cell|>|<cell|\<leqslant\><rsub|\<sigma\>\<less\>\<zeta\>\<wedge\><text|[eq:
+        <reference|eq 16.205.201>]>>>|<cell|\<varphi\><around*|(|\<zeta\>|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|\<zeta\>-a|)>+\<varepsilon\>\<cdot\>\<xi\><around*|(|\<zeta\>|)>>>>>
+      </eqnarray*>
+
+      So\ 
+
+      <\equation*>
+        \<forall\>\<zeta\>\<in\><around*|[|\<sigma\>,min<around*|(|\<lambda\><rsub|\<varphi\>>,\<lambda\><rsub|f>|)>|[><text|
+        we have ><around*|\<\|\|\>|f<around*|(|\<zeta\>|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|\<zeta\>|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|\<zeta\>-a|)>+\<varepsilon\>\<cdot\>\<xi\><around*|(|\<zeta\>|)>
+      </equation*>
+
+      As <math|\<sigma\>\<in\>A<rsub|\<varepsilon\>>> we have also\ 
+
+      <\equation*>
+        \<forall\>\<zeta\>\<in\><around*|[|a,\<sigma\>|[><text|
+        \ ><around*|\<\|\|\>|f<around*|(|\<zeta\>|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|\<zeta\>|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|\<zeta\>-a|)>+\<varepsilon\>\<cdot\>\<xi\><around*|(|\<zeta\>|)>
+      </equation*>
+
+      so that\ 
+
+      <\equation*>
+        \<forall\>\<zeta\>\<in\><around*|[|a,min<around*|(|\<lambda\><rsub|\<varphi\>>,\<lambda\><rsub|f>|)>|[><text|
+        ><around*|\<\|\|\>|f<around*|(|\<zeta\>|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|\<zeta\>|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|\<zeta\>-a|)>+\<varepsilon\>\<cdot\>\<xi\><around*|(|\<zeta\>|)>
+      </equation*>
+
+      proving that <math|min<around*|(|\<lambda\><rsub|\<varphi\>>,\<lambda\><rsub|f>|)>\<in\>A<rsub|\<varepsilon\>>>
+      so that <math|min<around*|(|\<lambda\><rsub|\<varphi\>>,\<lambda\><rsub|f>|)>\<leqslant\>sup<around*|(|A<rsub|\<varepsilon\>>|)>=\<sigma\>>.
+      As <math|\<lambda\><rsub|\<varphi\>>,\<lambda\><rsub|f>\<in\><around*|]|\<sigma\>,b|]>>
+      we have <math|\<sigma\>\<less\>min<around*|(|\<lambda\><rsub|\<varphi\>>,\<lambda\><rsub|f>|)>>
+      leading to the contradiction <math|\<sigma\>\<less\>\<sigma\>>. Hence
+      this case leads to a contradiction.
+
+      <item*|<math|\<sigma\>\<in\>E>>Then there exist a
+      <math|m\<in\>\<bbb-N\>> such that <math|\<sigma\>=\<rho\><around*|(|m|)>>.
+      As <math|f,\<varphi\>> are continuous at <math|\<sigma\>> there exists
+      <math|\<gamma\><rsub|f>,\<gamma\><rsub|\<varphi\>>\<in\>\<bbb-R\><rsup|+>>
+      such that\ 
+
+      <\equation*>
+        \<forall\>\<alpha\>\<in\><around*|]|\<sigma\>-\<gamma\><rsub|\<varphi\>>,\<sigma\>+\<gamma\><rsub|\<varphi\>>|[><big|cap><around*|[|a,b|]><text|
+        we have ><around*|\||\<varphi\><around*|(|\<alpha\>|)>-\<varphi\><around*|(|\<sigma\>|)>|\|>\<less\><frac|\<varepsilon\>|2>\<cdot\><frac|1|2<rsup|m>>
+      </equation*>
+
+      and\ 
+
+      <\equation*>
+        \<forall\>\<alpha\>\<in\><around*|]|\<sigma\>-\<gamma\><rsub|f>,\<sigma\>+\<gamma\><rsub|f>|[><big|cap><around*|[|a,b|]><text|
+        we have ><around*|\<\|\|\>|f<around*|(|\<alpha\>|)>-f<around*|(|\<sigma\>|)>|\<\|\|\>>\<less\><frac|\<varepsilon\>|2>\<cdot\><frac|1|2<rsup|m>>
+      </equation*>
+
+      As we assumed that <math|\<sigma\>\<less\>b> it follows that
+      <math|\<mu\>=min<around*|(|b-\<sigma\>,\<gamma\><rsub|\<varphi\>>,\<gamma\><rsub|f>|)>\<in\>\<bbb-R\><rsup|+>>.
+      If <math|\<zeta\>\<in\><around*|[|\<sigma\>,\<sigma\>+\<mu\>|[>> then
+      <math|a\<leqslant\>\<sigma\>\<leqslant\>\<zeta\>\<less\>\<sigma\>+\<mu\>\<leqslant\>b-\<sigma\>,<text|
+      >\<sigma\>+\<gamma\><rsub|\<varphi\>>,<text|
+      >\<sigma\>+\<gamma\><rsub|f>> so that
+      <math|\<zeta\>\<in\><around*|]|\<sigma\>-\<gamma\><rsub|\<varphi\>>,\<sigma\>+\<gamma\><rsub|\<varphi\>>|[><big|cap><around*|]|\<sigma\>-\<gamma\><rsub|f>,\<sigma\>+\<gamma\><rsub|f>|[><big|cap><around*|[|a,b|]>>
+      and we must have that
+
+      <\equation>
+        <label|eq 16.211.202><around*|\||\<varphi\><around*|(|\<zeta\>|)>-\<varphi\><around*|(|\<sigma\>|)>|\|>\<less\><frac|\<varepsilon\>|2>\<cdot\><frac|1|2<rsup|m>>\<wedge\><around*|\<\|\|\>|f<around*|(|\<zeta\>|)>-f<around*|(|\<sigma\>|)>|\<\|\|\>>\<leqslant\><frac|\<varepsilon\>|2>\<cdot\><frac|1|2<rsup|m>>
+      </equation>
+
+      Further
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|f<around*|(|\<zeta\>|)>-f<around*|(|a|)>|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|f<around*|(|\<zeta\>|)>-f<around*|(|\<sigma\>|)>+f<around*|(|\<sigma\>|)>-f<around*|(|a|)>|\<\|\|\>>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|f<around*|(|\<zeta\>|)>-f<around*|(|\<sigma\>|)>|\<\|\|\>>+<around*|\<\|\|\>|f<around*|(|\<sigma\>|)>-f<around*|(|a|)>|\<\|\|\>>>|<cell|\<leqslant\><rsub|<text|[eq:
+        <reference|eq 16.211.202>>>>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|2>\<cdot\><frac|1|2<rsup|m>>+<around*|\<\|\|\>|f<around*|(|\<sigma\>|)>-f<around*|(|a|)>|\<\|\|\>>>|<cell|\<leqslant\><rsub|<text|[eq:
+        <reference|eq 16.207.201>]>>>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|2>\<cdot\><frac|1|2<rsup|m>>+\<varphi\><around*|(|\<sigma\>|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|\<sigma\>-a|)>+\<varepsilon\>\<cdot\>\<xi\><around*|(|\<sigma\>|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|2>\<cdot\><frac|1|2<rsup|m>>+\<varphi\>*<around*|(|\<zeta\>|)>-\<varphi\><around*|(|\<zeta\>|)>+\<varphi\><around*|(|\<sigma\>|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|\<sigma\>-a|)>+\<varepsilon\>\<cdot\>\<xi\><around*|(|\<sigma\>|)>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|2>\<cdot\><frac|1|2<rsup|m>>+<around*|\||\<varphi\>*<around*|(|\<sigma\>|)>-\<varphi\><around*|(|\<zeta\>|)>|\|>+\<varphi\><around*|(|\<zeta\>|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|\<sigma\>-a|)>+\<varepsilon\>\<cdot\>\<xi\><around*|(|\<sigma\>|)>>|<cell|\<leqslant\><rsub|<text|[eq:
+        <reference|eq 16.211.202>>>>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|2>\<cdot\><frac|1|2<rsup|m>>+<frac|\<varepsilon\>|2>\<cdot\><frac|1|2<rsup|m>>+\<varphi\><around*|(|\<zeta\>|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|\<sigma\>-a|)>+\<varepsilon\>\<cdot\>\<xi\><around*|(|\<sigma\>|)>>|<cell|=>|<cell|>>|<row|<cell|\<varphi\><around*|(|\<zeta\>|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|\<sigma\>-a|)>+\<varepsilon\>\<cdot\><frac|1|2<rsup|m>>+\<varepsilon\>\<cdot\>\<xi\><around*|(|\<sigma\>|)>>|<cell|=>|<cell|>>|<row|<cell|\<varphi\><around*|(|\<zeta\>|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|\<sigma\>-a|)>+\<varepsilon\>\<cdot\><frac|1|2<rsup|m>>+\<varepsilon\>\<cdot\><big|sum><rsub|n\<in\><around*|{|i\<in\>\<bbb-N\>\|\<rho\><around*|(|i|)>\<less\>\<sigma\>|}>><frac|1|2<rsup|n>>>|<cell|\<equallim\><rsub|\<sigma\>=\<rho\><around*|(|m|)>>>|<cell|>>|<row|<cell|\<varphi\><around*|(|\<zeta\>|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|\<sigma\>-a|)>+<big|sum><rsub|n\<in\><around*|{|i\<in\>\<bbb-N\>\|\<rho\><around*|(|i|)>=\<sigma\>|}>>\<varepsilon\>\<cdot\><frac|1|2<rsup|m>>+\<varepsilon\>\<cdot\><big|sum><rsub|n\<in\><around*|{|i\<in\>\<bbb-N\>\|\<rho\><around*|(|i|)>\<less\>\<sigma\>|}>><frac|1|2<rsup|n>>>|<cell|=>|<cell|>>|<row|<cell|\<varphi\><around*|(|\<zeta\>|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|\<sigma\>-a|)>+\<varepsilon\>\<cdot\><big|sum><rsub|n\<in\><around*|{|i\<in\>\<bbb-N\>\|\<rho\><around*|(|i|)>\<leqslant\>\<sigma\>|}>><frac|1|2<rsup|n>>>|<cell|\<leqslant\><rsub|\<sigma\>\<leqslant\>\<zeta\>>>|<cell|>>|<row|<cell|TODO
+        problem we must have \<sigma\>\<less\>\<zeta\> instedad of
+        \<sigma\>\<leqslant\>\<zeta\>>|<cell|>|<cell|>>|<row|<cell|\<varphi\><around*|(|\<zeta\>|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|\<sigma\>-a|)>+\<varepsilon\>\<cdot\><big|sum><rsub|n\<in\><around*|{|i\<in\>\<bbb-N\>\|\<rho\><around*|(|i|)>\<less\>\<zeta\>|}>><frac|1|2<rsup|m>>>|<cell|=>|<cell|>>|<row|<cell|\<varphi\><around*|(|\<zeta\>|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|\<sigma\>-a|)>+\<varepsilon\>\<cdot\>\<xi\><around*|(|\<zeta\>|)>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      proving that\ 
+
+      <\equation*>
+        \<forall\>\<zeta\>\<in\><around*|[|\<sigma\>,\<sigma\>+\<mu\>|[><text|
+        ><around*|\<\|\|\>|f<around*|(|\<zeta\>|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|\<zeta\>|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|\<sigma\>-a|)>+\<varepsilon\>\<cdot\>\<xi\><around*|(|\<zeta\>|)>
+      </equation*>
+
+      As <math|\<sigma\>\<in\>A<rsub|\<varepsilon\>>> we have also\ 
+
+      <\equation*>
+        \<forall\>\<zeta\>\<in\><around*|[|a,\<sigma\>|[><text|
+        \ ><around*|\<\|\|\>|f<around*|(|\<zeta\>|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|\<zeta\>|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|\<zeta\>-a|)>+\<varepsilon\>\<cdot\>\<xi\><around*|(|\<zeta\>|)>
+      </equation*>
+
+      so that\ 
+
+      <\equation*>
+        \<forall\>\<zeta\>\<in\><around*|[|\<sigma\>,\<sigma\>+\<mu\>|[><text|
+        ><text| \ ><around*|\<\|\|\>|f<around*|(|\<zeta\>|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|\<zeta\>|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|\<zeta\>-a|)>+\<varepsilon\>\<cdot\>\<xi\><around*|(|\<zeta\>|)>
+      </equation*>
+
+      proving that <math|\<sigma\>+\<mu\>\<in\>A<rsub|\<varepsilon\>>>. Hence
+      <math|\<sigma\>\<less\>\<sigma\>+\<mu\>\<leqslant\>sup<around*|(|A<rsub|\<varepsilon\>>|)>\<leqslant\>\<sigma\>>
+      giving the contradiction <math|\<sigma\>\<less\>\<sigma\>>.
+    </description>
+
+    As in all cases we have a contradiction the assumption
+    <math|\<sigma\>\<less\>b> must be false, hence we must have
+    <math|\<sigma\>=b>, then by [eq: <reference|eq 16.207.201>] we have that\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|f<around*|(|b|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|b|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|b-a|)>+\<varepsilon\>\<cdot\>\<xi\><around*|(|b|)>
+    </equation*>
+
+    As <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> was chosen arbitrary it
+    follows from [theorem: <reference|complex Archimedean property
+    consequence (2)>] that
+
+    <\equation*>
+      <around*|\<\|\|\>|f<around*|(|b|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|b|)>-\<varphi\><around*|(|a|)>
+    </equation*>
+  </proof>
+
+  \;
+
+  <\corollary>
+    <label|diff mean value theorem (8)><dueto|Main Value Theorem (VI)>Let
+    <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
+    normed space, <math|f:<around*|[|a,b|]>\<rightarrow\>X>,
+    <math|\<varphi\>:<around*|[|a,b|]>\<rightarrow\>\<bbb-R\>> continuous
+    functions such that <math|\<forall\>x\<in\><around*|[|a,b|]>> <math|f>
+    and <math|\<varphi\>> has a derivative <math|f<rprime|'><rsub|x>> and
+    <math|\<varphi\><rprime|'><rsub|x>> at <math|x> with
+    <math|<around*|\<\|\|\>|f<rprime|'><rsub|x>|\<\|\|\>>\<leqslant\>\<varphi\><rprime|'><rsub|x>>
+    then <math|<around*|\<\|\|\>|f<around*|(|b|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|b|)>-\<varphi\><around*|(|a|)>>.
+  </corollary>
+
+  <\proof>
+    Let <math|E=<around*|{|a+<around*|(|b-a|)>\<cdot\><frac|1|n>\|n\<in\>\<bbb-N\><rsub|0>|}>>
+    then as <math|\<forall\>n\<in\>\<bbb-N\>> we have that
+    <math|0\<less\><frac|1|n>\<less\>1\<Rightarrowlim\><rsub|0\<less\>b-a>0\<less\><around*|(|b-a|)>\<cdot\><frac|1|n>\<less\><around*|(|b-a|)>\<Rightarrow\>a\<less\>a+<around*|(|b-a|)>\<cdot\><frac|1|n>\<less\>b>
+    it follows that <math|E\<subseteq\><around*|[|a,b|]>>. Define
+    <math|\<rho\>:\<bbb-N\>\<rightarrow\>E<text| by
+    >\<rho\>=a+<around*|(|b-a|)>\<cdot\><frac|1|n>> then clearly
+    <math|\<rho\>> is surjective. Further if
+    <math|\<rho\><around*|(|n|)>=\<rho\><around*|(|n<rprime|'>|)> then
+    ><math|a+<around*|(|b-a|)>\<cdot\><frac|1|n>=a+<around*|(|b-a|)>\<cdot\><frac|1|n<rsub|<rprime|'>>>\<Rightarrowlim\><rsub|a\<less\>b><frac|1|n>=<frac|1|n<rprime|'>>>
+    so that <math|n=n<rprime|'>>, which proves that <math|\<rho\>> is
+    injective. Hence we have a bijection <math|\<rho\>> between
+    <math|\<bbb-N\>> and <math|E > so that <math|E> is denumerable. As
+    <math|\<forall\>x\<in\><around*|[|a,b|]>> <math|f<rprime|'><rsub|x>>,
+    <math|\<varphi\><rprime|'><rsub|x>> exists with
+    <math|<around*|\<\|\|\>|f<rprime|'><rsub|x>|\<\|\|\>>\<leqslant\>\<varphi\><rprime|'><rsub|x>>
+    the same applies for <math|<around*|[|a,b|]>\\E>, so applying [theorem:
+    <reference|diff mean value theorem (5)>] proves that\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|f<around*|(|b|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|b|)>-\<varphi\><around*|(|a|)>
+    </equation*>
+  </proof>
+
+  <\corollary>
+    <label|diff mean value theorem (6)><dueto|Main value Theorem (VII)>Let
+    <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
+    normed space, <math|f:<around*|[|a,b|]>\<rightarrow\>Y> a continuous
+    function such that there exist a denumerable set
+    <math|E\<subseteq\><around*|[|a,b|]>> so that
+    <math|\<forall\>x\<in\><around*|[|a,b|]>\\E> <math|f<rprime|'><rsub|x>>
+    exists and <math|<around*|\<\|\|\>|f<rprime|'><rsub|x>|\<\|\|\>>\<leqslant\>M>
+    then <math|<around*|\<\|\|\>|f<around*|(|b|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>M\<cdot\><around*|(|b-a|)>>
+  </corollary>
+
+  <\proof>
+    Define <math|\<varphi\>:\<bbb-R\>\<rightarrow\>\<bbb-R\>> by
+    <math|\<varphi\><around*|(|x|)>=M\<cdot\><around*|(|x-a|)>><space|1em>then
+    by [examples: <reference|diff derivate on [a,b] of a constant
+    function>,<reference|diff derivate on [a,b] of a constant function>] and
+    [theorems: <reference|diff differentiability on a closed set>,
+    <reference|diff derivate on [a,b] linearity>] it follows that
+    <math|\<forall\>t\<in\><around*|[|a,b|]>\\E> <math|\<varphi\>> has a
+    derivative at <math|t> with <math|\<varphi\><rprime|'><rsub|t>=x>. So
+    using [theorem: <reference|diff mean value theorem (5)>] it follows that:
+
+    <\equation*>
+      <around*|\<\|\|\>|f<around*|(|b|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|b|)>-\<varphi\><around*|(|a|)>=M\<cdot\><around*|(|b-a|)>-M\<cdot\><around*|(|a-a|)>=M\<cdot\><around*|(|b-a|)>
+    </equation*>
+  </proof>
+
+  <\corollary>
+    <label|diff mean value theorem (7)><dueto|Main Value Theorem (VIII)>Let
+    <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
+    normed space, <math|f:<around*|[|a,b|]>\<rightarrow\>Y> a continuous
+    function such that <math|\<forall\>x\<in\><around*|[|a,b|]>>
+    <math|f<rprime|'><around*|(|x|)>> exists and
+    <math|<around*|\<\|\|\>|f<rprime|'><rsub|x>|\<\|\|\>>\<leqslant\>M> then
+    <math|<around*|\<\|\|\>|f<around*|(|b|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>M\<cdot\><around*|(|b-a|)>>.
+  </corollary>
+
+  <\proof>
+    Let <math|E=<around*|{|a+<around*|(|b-a|)>\<cdot\><frac|1|n>\|n\<in\>\<bbb-N\><rsub|0>|}>>
+    then as <math|\<forall\>n\<in\>\<bbb-N\>> we have that
+    <math|0\<less\><frac|1|n>\<less\>1\<Rightarrowlim\><rsub|0\<less\>b-a>0\<less\><around*|(|b-a|)>\<cdot\><frac|1|n>\<less\><around*|(|b-a|)>\<Rightarrow\>a\<less\>a+<around*|(|b-a|)>\<cdot\><frac|1|n>\<less\>b>
+    it follows that <math|E\<subseteq\><around*|[|a,b|]>>. Define
+    <math|\<rho\>:\<bbb-N\>\<rightarrow\>E<text| by
+    >\<rho\>=a+<around*|(|b-a|)>\<cdot\><frac|1|n>> then clearly
+    <math|\<rho\>> is surjective. Further if
+    <math|\<rho\><around*|(|n|)>=\<rho\><around*|(|n<rprime|'>|)> then
+    ><math|a+<around*|(|b-a|)>\<cdot\><frac|1|n>=a+<around*|(|b-a|)>\<cdot\><frac|1|n<rsub|<rprime|'>>>\<Rightarrowlim\><rsub|a\<less\>b><frac|1|n>=<frac|1|n<rprime|'>>>
+    so that <math|n=n<rprime|'>>, which proves that <math|\<rho\>> is
+    injective. Hence we have a bijection <math|\<rho\>> between
+    <math|\<bbb-N\>> and <math|E > so that <math|E> is denumerable. As
+    <math|\<forall\>x\<in\><around*|[|a,b|]>> we have that
+    <math|f<rprime|'><rsub|x>> exist and <math|<around*|\<\|\|\>|f<rprime|'><rsub|x>|\<\|\|\>>\<leqslant\>M>
+    the same applies to <math|<around*|[|a,b|]>\\Y>. So by the previous
+    corollary [corollary: <reference|diff mean value theorem (6)>] it follows
+    that <math|<around*|\<\|\|\>|f<around*|(|b|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>M\<cdot\><around*|(|b-a|)>>.
+  </proof>
 </body>
 
 <\initial>
@@ -4143,6 +4741,10 @@
     countable|<tuple|4|4>>
     <associate|diff (i-\<gtr\>x)|<tuple|17|18>>
     <associate|diff delta function|<tuple|20|19>>
+    <associate|diff mean value theorem (5)|<tuple|36|?>>
+    <associate|diff mean value theorem (6)|<tuple|38|?>>
+    <associate|diff mean value theorem (7)|<tuple|39|?>>
+    <associate|diff mean value theorem (8)|<tuple|37|?>>
     <associate|eq 12.10.131|<tuple|1|1>>
     <associate|eq 12.11.131|<tuple|2|1>>
     <associate|eq 12.12.131|<tuple|3|1>>
@@ -4211,11 +4813,27 @@
     <associate|eq 16.128.194|<tuple|71|26>>
     <associate|eq 16.129.194|<tuple|72|26>>
     <associate|eq 16.130.194|<tuple|73|27>>
-    <associate|eq 16.183.200|<tuple|117|?>>
-    <associate|eq 16.184.200|<tuple|118|?>>
-    <associate|eq 16.185.200|<tuple|119|?>>
-    <associate|eq 16.186.200|<tuple|120|?>>
+    <associate|eq 16.183.200|<tuple|117|43>>
+    <associate|eq 16.184.200|<tuple|118|43>>
+    <associate|eq 16.185.200|<tuple|119|43>>
+    <associate|eq 16.186.200|<tuple|120|43>>
+    <associate|eq 16.196.201|<tuple|121|?>>
+    <associate|eq 16.197.201|<tuple|122|?>>
+    <associate|eq 16.198.201|<tuple|123|?>>
+    <associate|eq 16.199.201|<tuple|124|?>>
     <associate|eq 16.200.124|<tuple|86|32>>
+    <associate|eq 16.200.201|<tuple|125|?>>
+    <associate|eq 16.201.201|<tuple|126|?>>
+    <associate|eq 16.202.201|<tuple|127|?>>
+    <associate|eq 16.203.201|<tuple|128|?>>
+    <associate|eq 16.204.201|<tuple|129|?>>
+    <associate|eq 16.205.201|<tuple|130|?>>
+    <associate|eq 16.206.202|<tuple|131|?>>
+    <associate|eq 16.207.201|<tuple|133|?>>
+    <associate|eq 16.207.201.1|<tuple|132|?>>
+    <associate|eq 16.208.201|<tuple|134|?>>
+    <associate|eq 16.209.201|<tuple|135|?>>
+    <associate|eq 16.211.202|<tuple|136|?>>
     <associate|eq 16.261.222|<tuple|74|29>>
     <associate|eq 16.280.125.1|<tuple|75|30>>
     <associate|eq 16.280.126|<tuple|100|36>>
@@ -4261,6 +4879,7 @@
     <associate|lemma 16.106.194|<tuple|25|26>>
     <associate|lemma 16.107.194|<tuple|26|27>>
     <associate|lemma 16.108.194|<tuple|27|28>>
+    <associate|lemma 16.148.201|<tuple|35|?>>
     <associate|lemma 16.190.122|<tuple|28|29>>
     <associate|lemma 16.201.126|<tuple|30|35>>
     <associate|lemma 16.24.178|<tuple|18|18>>
