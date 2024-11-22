@@ -8745,7 +8745,8 @@
   <\example>
     <label|continuity identity function norm>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
-    a normed space then <math|Id<rsub|X>\<in\>L<around*|(|X,X|)>>
+    a normed space then <math|Id<rsub|X>\<in\>L<around*|(|X,X|)>> and
+    <math|<around*|\<\|\|\>|Id<rsub|X>|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<leqslant\>1>.
   </example>
 
   <\proof>
@@ -21860,7 +21861,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|13>
-    <associate|page-first|663>
+    <associate|page-first|665>
     <associate|page-medium|papyrus>
     <associate|par-first|0tab>
     <associate|section-nr|0>
