@@ -619,10 +619,10 @@
           <item*|<math|x=\<beta\>\<cdot\>y>>Then
 
           <\equation*>
-            <around*|\<langle\>|x,y|\<rangle\>><rsup|2>=\<beta\>\<cdot\><around*|\<langle\>|y,y|\<rangle\>>\<cdot\><around*|\<langle\>|x,y|\<rangle\>>=<around*|\<langle\>|y,y|\<rangle\>>\<cdot\><around*|\<langle\>|x,x|\<rangle\>>=<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>><rsup|2>
+            <around*|\||<around*|\<langle\>|x,y|\<rangle\>>|\|><rsup|2>=<around*|\<langle\>|\<beta\>\<cdot\>y,y|\<rangle\>>\<cdot\><around*|\<langle\>|x,y|\<rangle\>>=\<beta\>\<cdot\><around*|\<langle\>|y,y|\<rangle\>>\<cdot\><around*|\<langle\>|x,y|\<rangle\>>=<around*|\<langle\>|y,y|\<rangle\>>\<cdot\><around*|\<langle\>|x,x|\<rangle\>>=<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>><rsup|2>
           </equation*>
 
-          so that [theorem: <reference|complex sqrt x\<less\>sqrt x^2>]\ 
+          so that by [theorem: <reference|complex sqrt x\<less\>sqrt x^2>]\ 
 
           <\equation*>
             <around*|\||<around*|\<langle\>|x,y|\<rangle\>>|\|>=<around*|\<\|\|\>|x|\<\|\|\>>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>>
@@ -631,10 +631,10 @@
           <item*|<math|y=\<beta\>\<cdot\>x>>Then\ 
 
           <\equation*>
-            <around*|\<langle\>|x,y|\<rangle\>><rsup|2>=\<beta\>\<cdot\><around*|\<langle\>|x,x|\<rangle\>>\<cdot\><around*|\<langle\>|x,y|\<rangle\>>=<around*|\<langle\>|x,x|\<rangle\>>\<cdot\><around*|\<langle\>|y,y|\<rangle\>>=<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>><rsup|2>
+            <around*|\||<around*|\<langle\>|x,y|\<rangle\>>|\|><rsup|2>=<around*|\<langle\>|x,\<beta\>\<cdot\>x|\<rangle\>>\<cdot\><around*|\<langle\>|x,y|\<rangle\>>=\<beta\>\<cdot\><around*|\<langle\>|x,x|\<rangle\>>\<cdot\><around*|\<langle\>|x,y|\<rangle\>>=<around*|\<langle\>|x,x|\<rangle\>>\<cdot\><around*|\<langle\>|y,y|\<rangle\>>=<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>><rsup|2>
           </equation*>
 
-          so that [theorem: <reference|complex sqrt x\<less\>sqrt x^2>]\ 
+          so that by [theorem: <reference|complex sqrt x\<less\>sqrt x^2>]\ 
 
           <\equation*>
             <around*|\||<around*|\<langle\>|x,y|\<rangle\>>|\|>=<around*|\<\|\|\>|x|\<\|\|\>>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>>
@@ -648,7 +648,24 @@
           ><around*|\||<around*|\<langle\>|x,y|\<rangle\>>|\|>=<around*|\<\|\|\>|x|\<\|\|\>>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>>
         </equation*>
 
-        For the opposite in implication TODO
+        For the opposite in implication. Assume that
+        <math|<around*|\||<around*|\<langle\>|x,y|\<rangle\>>|\|>=<around*|\<\|\|\>|x|\<\|\|\>>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>>>
+        then we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|\<langle\>|<around*|\<langle\>|y,y|\<rangle\>>\<cdot\>x-<around*|\<langle\>|x,y|\<rangle\>>\<cdot\>y,<around*|\<langle\>|y,y|\<rangle\>>\<cdot\>x-<around*|\<langle\>|x,y|\<rangle\>>\<cdot\>y|\<rangle\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<langle\>|y,y|\<rangle\>><rsup|2>\<cdot\><around*|\<langle\>|x,x|\<rangle\>>-<around*|\<langle\>|y,y|\<rangle\>>\<cdot\><around*|\<langle\>|x,y|\<rangle\>>\<cdot\><around*|\<langle\>|x,y|\<rangle\>>-<around*|\<langle\>|x,y|\<rangle\>>\<cdot\><around*|\<langle\>|y,y|\<rangle\>>\<cdot\><around*|\<langle\>|y,x|\<rangle\>>+<around*|\<langle\>|x,y|\<rangle\>>\<cdot\><around*|\<langle\>|x,y|\<rangle\>>\<cdot\><around*|\<langle\>|y,y|\<rangle\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<langle\>|y,y|\<rangle\>><rsup|2>\<cdot\><around*|\<langle\>|x,x|\<rangle\>>-2\<cdot\><around*|\<langle\>|y,y|\<rangle\>>\<cdot\><around*|\<langle\>|x,y|\<rangle\>><rsup|2>+<around*|\<langle\>|x,y|\<rangle\>><rsup|2>\<cdot\><around*|\<langle\>|y,y|\<rangle\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|y|\<\|\|\>><rsup|4>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|2>-2\<cdot\><around*|\<\|\|\>|y|\<\|\|\>><rsup|2>\<cdot\><around*|\<langle\>|x,y|\<rangle\>><rsup|2>+<around*|\<langle\>|x,y|\<rangle\>><rsup|2>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>><rsup|2>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|y|\<\|\|\>><rsup|4>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|2>-2\<cdot\><around*|\<\|\|\>|y|\<\|\|\>><rsup|2>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|2>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>><rsup|2>+<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>\<cdot\><around*|\<\|\|\>|y<rsup|2>|\<\|\|\>>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>><rsup|2>>|<cell|>|<cell|>>|<row|<cell|<around*|\<\|\|\>|y|\<\|\|\>><rsup|4>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|2>-2\<cdot\><around*|\<\|\|\>|y|\<\|\|\>><rsup|4>\<cdot\><around*|\<\|\|\>|x<rsup|2>|\<\|\|\>>+<around*|\<\|\|\>|y|\<\|\|\>><rsup|4>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|2>>|<cell|=0>|<cell|>>>>
+        </eqnarray*>
+
+        so that <math|<around*|\<langle\>|y,y|\<rangle\>>\<cdot\>x-<around*|\<langle\>|x,y|\<rangle\>>\<cdot\>y=0>.
+        Hence <math|<around*|\<\|\|\>|y|\<\|\|\>><rsup|2>\<cdot\>x=<around*|\<langle\>|x,y|\<rangle\>>\<cdot\>y>
+        or as <math|<around*|\<\|\|\>|y|\<\|\|\>><rsup|2>\<neq\>0> that
+        <math|x=<frac|<around*|\<langle\>|x,y|\<rangle\>>|<around*|\<\|\|\>|y|\<\|\|\>><rsup|2>>\<cdot\>y>.
+        This proves that\ 
+
+        <\equation*>
+          <text|If ><around*|\||<around*|\<langle\>|x,y|\<rangle\>>|\|>=<around*|\<\|\|\>|x|\<\|\|\>>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>><text|
+          then >x,y<text| are linear dependent>
+        </equation*>
 
         <item*|complex inner product>Then we have\ 
 
@@ -676,11 +693,65 @@
           <around*|\||<around*|\<langle\>|x,y|\<rangle\>>|\|>\<leqslant\><around*|\<\|\|\>|x|\<\|\|\>>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>>
         </equation*>
 
-        TODO equivalence
+        Further if <math|x,y> are linear dependent then we have either\ 
+
+        <\description>
+          <item*|<math|x=\<beta\>\<cdot\>y>>Then
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|<around*|\||<around*|\<langle\>|x,y|\<rangle\>>|\|><rsup|2>>|<cell|=>|<cell|<around*|\<langle\>|x,y|\<rangle\>>\<cdot\><wide|<around*|\<langle\>|x,y|\<rangle\>>|\<wide-bar\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|\<beta\>\<cdot\>y,y|\<rangle\>>\<cdot\><wide|<around*|\<langle\>|x,y|\<rangle\>>|\<wide-bar\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|y,y|\<rangle\>>\<cdot\>\<beta\>\<cdot\><around*|\<langle\>|y,x|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|y,y|\<rangle\>>\<cdot\><around*|\<langle\>|x,x|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>><rsup|2>>>>>
+          </eqnarray*>
+
+          so that by [theorem: <reference|complex sqrt x\<less\>sqrt x^2>]\ 
+
+          <\equation*>
+            <around*|\||<around*|\<langle\>|x,y|\<rangle\>>|\|>=<around*|\<\|\|\>|x|\<\|\|\>>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>>
+          </equation*>
+
+          <item*|<math|y=\<beta\>\<cdot\>x>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|<around*|\||<around*|\<langle\>|x,y|\<rangle\>>|\|><rsup|2>>|<cell|=>|<cell|<around*|\<langle\>|x,y|\<rangle\>>\<cdot\><wide|<around*|\<langle\>|x,y|\<rangle\>>|\<wide-bar\>>>>|<row|<cell|>|<cell|>|<cell|<around*|\<langle\>|x,y|\<rangle\>>\<cdot\><around*|\<langle\>|y,x|\<rangle\>>>>|<row|<cell|>|<cell|>|<cell|<around*|\<langle\>|x,y|\<rangle\>>\<cdot\>\<beta\>\<cdot\><around*|\<langle\>|x,x|\<rangle\>>>>|<row|<cell|>|<cell|>|<cell|<around*|\<langle\>|y,y|\<rangle\>>\<cdot\><around*|\<langle\>|x,x|\<rangle\>>>>|<row|<cell|>|<cell|>|<cell|<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>><rsup|2>>>>>
+          </eqnarray*>
+
+          <\equation*>
+            <around*|\||<around*|\<langle\>|x,y|\<rangle\>>|\|><rsup|2>=<around*|\<\|\|\>|x|\<\|\|\>>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>>
+          </equation*>
+
+          so that by [theorem: <reference|complex sqrt x\<less\>sqrt x^2>]\ 
+
+          <\equation*>
+            <around*|\||<around*|\<langle\>|x,y|\<rangle\>>|\|>=<around*|\<\|\|\>|x|\<\|\|\>>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>>
+          </equation*>
+        </description>
+
+        So we have proved that\ 
+
+        <\equation*>
+          <text|If >x,y<text| are linear dependent then
+          ><around*|\||<around*|\<langle\>|x,y|\<rangle\>>|\|>=<around*|\<\|\|\>|x|\<\|\|\>>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>>
+        </equation*>
+
+        For the opposite implication. Assume that
+        <math|<around*|\||<around*|\<langle\>|x,y|\<rangle\>>|\|>=<around*|\<\|\|\>|x|\<\|\|\>>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>>>
+        then we have
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|\<langle\>|<around*|\<langle\>|y,y|\<rangle\>>\<cdot\>x-<around*|\<langle\>|x,y|\<rangle\>>\<cdot\>y,<around*|\<langle\>|y,y|\<rangle\>>\<cdot\>x-<around*|\<langle\>|x,y|\<rangle\>>\<cdot\>y|\<rangle\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<langle\>|y,y|\<rangle\>><rsup|2>\<cdot\><around*|\<langle\>|x,x|\<rangle\>>-<around*|\<langle\>|y,y|\<rangle\>>\<cdot\><wide|<around*|\<langle\>|x,y|\<rangle\>>|\<wide-bar\>>\<cdot\><around*|\<langle\>|x,y|\<rangle\>>-<around*|\<langle\>|x,y|\<rangle\>>\<cdot\><around*|\<langle\>|y,y|\<rangle\>>\<cdot\><around*|\<langle\>|y,x|\<rangle\>>+<around*|\<langle\>|x,y|\<rangle\>>\<cdot\><wide|<around*|\<langle\>|x,y|\<rangle\>>|\<wide-bar\>>\<cdot\><around*|\<langle\>|y,y|\<rangle\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|y|\<\|\|\>><rsup|4>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|2>-<around*|\<\|\|\>|y|\<\|\|\>><rsup|2>\<cdot\><around*|\||<around*|\<langle\>|x,y|\<rangle\>>|\|><rsup|2>-<around*|\<\|\|\>|y|\<\|\|\>><rsup|2>\<cdot\><around*|\||<around*|\<langle\>|x,y|\<rangle\>>|\|><rsup|2>+<around*|\||<around*|\<langle\>|x,y|\<rangle\>>|\|><rsup|2>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>><rsup|2>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|y|\<\|\|\>><rsup|4>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|2>-<around*|\<\|\|\>|y|\<\|\|\>><rsup|2>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|2>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>><rsup|2>-<around*|\<\|\|\>|y|\<\|\|\>><rsup|2>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>><rsup|2>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|2>+<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>><rsup|2>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>><rsup|2>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|y|\<\|\|\>><rsup|4>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|2>-<around*|\<\|\|\>|y|\<\|\|\>><rsup|4>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|2>-<around*|\<\|\|\>|y|\<\|\|\>><rsup|4>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|2>+<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>><rsup|4>>|<cell|=>|<cell|>>|<row|<cell|0>|<cell|>|<cell|>>>>
+        </eqnarray*>
+
+        so that <math|<around*|\<langle\>|y,y|\<rangle\>>\<cdot\>x-<around*|\<langle\>|x,y|\<rangle\>>\<cdot\>y=0>.
+        Hence <math|<around*|\<\|\|\>|y|\<\|\|\>><rsup|2>\<cdot\>x=<around*|\<langle\>|x,y|\<rangle\>>\<cdot\>y>
+        or as <math|<around*|\<\|\|\>|y|\<\|\|\>><rsup|2>\<neq\>0> that
+        <math|x=<frac|<around*|\<langle\>|x,y|\<rangle\>>|<around*|\<\|\|\>|y|\<\|\|\>><rsup|2>>\<cdot\>y>.
+        This proves that\ 
+
+        <\equation*>
+          <text|If ><around*|\||<around*|\<langle\>|x,y|\<rangle\>>|\|>=<around*|\<\|\|\>|x|\<\|\|\>>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>><text|
+          then >x,y<text| are linear dependent>
+        </equation*>
       </description>
     </description>
-
-    \;
   </proof>
 
   <\theorem>
@@ -715,14 +786,59 @@
         <item>If <math|x,y\<in\>X> then we have\ 
 
         <\eqnarray*>
-          <tformat|<table|<row|<cell|<around*|\<\|\|\>|x+y|\<\|\|\>><rsup|2>>|<cell|=>|<cell|<around*|\<langle\>|x+y,x+y|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|x,x+y|\<rangle\>>+<around*|\<langle\>|y,x+y|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|x,x|\<rangle\>>+<around*|\<langle\>|x,y|\<rangle\>>+<around*|\<langle\>|y,x|\<rangle\>>+<around*|\<langle\>|y,y|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>+<around*|\<langle\>|x,y|\<rangle\>>+<around*|\<langle\>|x,y|\<rangle\>>+<around*|\<\|\|\>|y|\<\|\|\>><rsup|2>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>+<around*|\<langle\>|x,y|\<rangle\>>+<around*|\<langle\>|x,y|\<rangle\>>+<around*|\<\|\|\>|y|\<\|\|\>><rsup|2>>>>>
+          <tformat|<table|<row|<cell|<around*|\<\|\|\>|x+y|\<\|\|\>><rsup|2>>|<cell|=>|<cell|<around*|\<langle\>|x+y,x+y|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|x,x+y|\<rangle\>>+<around*|\<langle\>|y,x+y|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|x,x|\<rangle\>>+<around*|\<langle\>|x,y|\<rangle\>>+<around*|\<langle\>|y,x|\<rangle\>>+<around*|\<langle\>|y,y|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>+<around*|\<langle\>|x,y|\<rangle\>>+<around*|\<langle\>|x,y|\<rangle\>>+<around*|\<\|\|\>|y|\<\|\|\>><rsup|2>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>+<around*|\<langle\>|x,y|\<rangle\>>+<around*|\<langle\>|x,y|\<rangle\>>+<around*|\<\|\|\>|y|\<\|\|\>><rsup|2>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>+2\<cdot\><around*|\<langle\>|x,y|\<rangle\>>+<around*|\<\|\|\>|y|\<\|\|\>><rsup|2>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>+2\<cdot\><around*|\||<around*|\<langle\>|x,y|\<rangle\>>|\|>+<around*|\<\|\|\>|y|\<\|\|\>><rsup|2>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|\|theorem:
+          <reference|inner Schwartz in equality>]>>>|<cell|<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>+2\<cdot\><around*|\<\|\|\>|x|\<\|\|\>>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>>+<around*|\<\|\|\>|y|\<\|\|\>><rsup|2>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|\<\|\|\>|x|\<\|\|\>>+<around*|\<\|\|\>|y|\<\|\|\>>|)><rsup|2>>>>>
         </eqnarray*>
+
+        which as the square root is strictly increasind [see theorem:
+        <reference|complex root is strictly increasing>] proves that\ 
+
+        <\equation*>
+          <around*|\<\|\|\>|x+y|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x|\<\|\|\>>+<around*|\<\|\|\>|y|\<\|\|\>>
+        </equation*>
+
+        <item>If <math|<around*|\<\|\|\>|x|\<\|\|\>>=0> then
+        <math|<around*|\<langle\>|x,x|\<rangle\>>=<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>=0>
+        so that <math|x=0>.
       </enumerate>
 
-      <item*|complex inner product>
-    </description>
+      <item*|complex inner product>Then we have:
 
-    \;
+      <\enumerate>
+        <item>If <math|x\<in\>X> then <math|0\<leqslant\><sqrt|<around*|\<langle\>|x,x|\<rangle\>>>=<around*|\<\|\|\>|x|\<\|\|\>>>
+        [see <reference|complex square root>]\ 
+
+        <item>If <math|\<alpha\>\<in\>X> then
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<alpha\>\<cdot\>x|\<\|\|\>>>|<cell|=>|<cell|<sqrt|<around*|\<langle\>|\<alpha\>\<cdot\>x,\<alpha\>\<cdot\>x|\<rangle\>>>>>|<row|<cell|>|<cell|=>|<cell|<sqrt|<around*|\<langle\>|\<alpha\>\<cdot\>x,\<alpha\>\<cdot\>x|\<rangle\>>>>>|<row|<cell|>|<cell|=>|<cell|<sqrt|\<alpha\>\<cdot\><wide|\<alpha\>|\<wide-bar\>>\<cdot\><around*|\<langle\>|x,x|\<rangle\>>>>>|<row|<cell|>|<cell|=>|<cell|<sqrt|<around*|\||\<alpha\>|\|><rsup|2>\<cdot\><around*|\<langle\>|x,x|\<rangle\>>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|complex square root of
+          product>]>>>|<cell|<sqrt|<around*|\||\<alpha\>|\|><rsup|2>>\<cdot\><sqrt|<around*|\<langle\>|x,x|\<rangle\>>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|complex sqrt x\<less\>sqrt
+          x^2>]>>>|<cell|<around*|\||\<alpha\>|\|>\<cdot\><sqrt|<around*|\<langle\>|x,x|\<rangle\>>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>>>>>>
+        </eqnarray*>
+
+        <item>If <math|x,y\<in\>X> then we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|\<\|\|\>|x+y|\<\|\|\>><rsup|2>>|<cell|=>|<cell|<around*|\<langle\>|x+y,x+y|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|x,x+y|\<rangle\>>+<around*|\<langle\>|y,x+y|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|x,x|\<rangle\>>+<around*|\<langle\>|x,y|\<rangle\>>+<around*|\<langle\>|y,x|\<rangle\>>+<around*|\<langle\>|y,y|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>+<around*|\<langle\>|x,y|\<rangle\>>+<wide|<around*|\<langle\>|x,y|\<rangle\>>|\<wide-bar\>>+<around*|\<\|\|\>|y|\<\|\|\>><rsup|2>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|complex conjugate properties>]>>>|<cell|<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>+2\<cdot\>Re<around*|(|<around*|\<langle\>|x,y|\<rangle\>>|)>+<around*|\<\|\|\>|y|\<\|\|\>><rsup|2>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[theorem:
+          <reference|complex norm properties>>>>|<cell|<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>+2\<cdot\><around*|\||<around*|\<langle\>|x,y|\<rangle\>>|\|>+<around*|\<\|\|\>|y|\<\|\|\>><rsup|2>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|\|theorem:
+          <reference|inner Schwartz in equality>]>>>|<cell|<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>+2\<cdot\><around*|\<\|\|\>|x|\<\|\|\>>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>>+<around*|\<\|\|\>|y|\<\|\|\>><rsup|2>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|\<\|\|\>|x|\<\|\|\>>+<around*|\<\|\|\>|y|\<\|\|\>>|)><rsup|2>>>>>
+        </eqnarray*>
+
+        which as the square root is strictly increasind [see theorem:
+        <reference|complex root is strictly increasing>] proves that\ 
+
+        <\equation*>
+          <around*|\<\|\|\>|x+y|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x|\<\|\|\>>+<around*|\<\|\|\>|y|\<\|\|\>>
+        </equation*>
+
+        <item>If <math|<around*|\<\|\|\>|x|\<\|\|\>>=0> then
+        <math|<around*|\<langle\>|x,x|\<rangle\>>=<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>=0>
+        so that <math|x=0>.
+      </enumerate>
+    </description>
   </proof>
 
   \;
@@ -761,7 +877,6 @@
     <associate|inner real inner product space|<tuple|18.1|?>>
     <associate|inner real inner product space properties|<tuple|18.2|?>>
     <associate|inner real product space construction|<tuple|18.10|?>>
-    <associate|lemma 18.14.146|<tuple|18.14|?>>
   </collection>
 </references>
 
@@ -775,6 +890,9 @@
       18.1<space|2spc>Definition and properties
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2>
+
+      18.2<space|2spc>Inner product norm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-3>
     </associate>
   </collection>
 </auxiliary>
