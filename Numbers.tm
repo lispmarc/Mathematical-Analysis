@@ -13290,9 +13290,13 @@
       <item><math|\<forall\>z\<in\>\<bbb-C\><text| we have
       ><wide|-z|\<wide-bar\>>=-<wide|z|\<wide-bar\>>>
 
+      <item><math|\<forall\>z\<in\>\<bbb-C\>> we have
+      <math|<wide|<wide|z|\<wide-bar\>>|\<wide-bar\>>=z>
+
       <item>Let <math|n\<in\>\<bbb-N\><rsub|\<bbb-C\>>> and
       <math|<around*|{|z<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-C\>>
       then <math|<wide|<big|sum><rsub|i=1><rsup|n>z<rsub|i>|\<wide-bar\>>=<big|sum><rsub|i=1><rsup|n><wide|z<rsub|i>|\<wide-bar\>>>
+      [see definition: <reference|sum alternative definition (1)>]
 
       <item>Let <math|n\<in\>\<bbb-N\><rsub|\<bbb-C\>>> and
       <math|z\<in\>\<bbb-C\>> then <math|<wide|z<rsup|n>|\<wide-bar\>>=<around*|(|<wide|z|\<wide-bar\>>|)><rsup|n>>
@@ -13365,6 +13369,8 @@
       <\eqnarray*>
         <tformat|<table|<row|<cell|<wide|-z|\<wide-bar\>>>|<cell|=>|<cell|<wide|-<around*|(|Re<around*|(|z|)>+i\<cdot\>Img<around*|(|z|)>|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|=>|<cell|<wide|-Re<around*|(|z|)>+i\<cdot\><around*|(|-Img<around*|(|z|)>|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|=>|<cell|-Re<around*|(|z|)>-i\<cdot\><around*|(|-Img<around*|(|z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|-<around*|(|Re<around*|(|z|)>-i\<cdot\>Img<around*|(|z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|-<wide|z|\<wide-bar\>>>>>>
       </eqnarray*>
+
+      <item><math|<wide|<wide|z|\<wide-bar\>>|\<wide-bar\>>=<wide|Re<around*|(|z|)>-i\<cdot\>Img<around*|(|z|)>|\<wide-bar\>>=Re<around*|(|z|)>+i\<cdot\>Img<around*|(|z|)>>
 
       <item>We prove this by induction, so let <math|>
 
