@@ -5920,8 +5920,6 @@
     and [theorem: <reference|normed isometry>]
   </proof>
 
-  TODO We skip the inner product for later
-
   <section|Continuous functions>
 
   <subsection|Continuous and open functions>
