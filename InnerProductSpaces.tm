@@ -1717,8 +1717,8 @@
   </proof>
 
   <\theorem>
-    <label|inner adjoint and composition><label|inner adjoint operator is
-    linear>Let <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>><rsub|X>|\<rangle\>>>,
+    <label|inner adjoint and composition><label|inner adjoint operator and
+    composition>Let <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<langle\>||\<rangle\>><rsub|Y>|\<rangle\>>>
     and <math|<around*|\<langle\>|Z,<around*|\<langle\>||\<rangle\>><rsub|Z>|\<rangle\>>>
     be finite dimensional real [or complex] inner product spaces with
@@ -1765,12 +1765,12 @@
     <math|M<rsup|H>> is defined by\ 
 
     <\equation*>
-      \<forall\><around*|(|i,j|)>\<in\><around*|{|1,\<ldots\>,n|}>\<times\><around*|{|1,\<ldots\>,m|}><text|
+      \<forall\><around*|(|i,j|)>\<in\><around*|{|1,\<ldots\>,m|}>\<times\><around*|{|1,\<ldots\>,n|}><text|
       ><around*|(|M<rsup|H>|)><rsub|i,j>=<wide|M<rsub|j,i>|\<wide-bar\>><text|>
     </equation*>
 
     <\note>
-      If <math|\<bbb-K\>=\<bbb-R\>> then <math|\<forall\><around*|(|i,j|)>\<in\><around*|{|1,\<ldots\>,n|}>\<times\><around*|{|1,\<ldots\>,m|}><text|
+      If <math|\<bbb-K\>=\<bbb-R\>> then <math|\<forall\><around*|(|i,j|)>\<in\><around*|{|1,\<ldots\>,m|}>\<times\><around*|{|1,\<ldots\>,n|}><text|
       ><around*|(|M<rsup|H>|)><rsub|i,j>=<wide|M<rsub|j,i>|\<wide-bar\>><text|>=M<rsub|j,i>=<around*|(|M<rsup|T>|)><rsub|i,j>>
       so that\ 
 
@@ -1813,6 +1813,241 @@
     </equation*>
   </definition>
 
+  <\theorem>
+    <label|inner matrix of adjoint operator>Let
+    <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<langle\>||\<rangle\>><rsub|Y>|\<rangle\>>>
+    be finite dimensional real [or complex] inner product spaces with
+    <math|dim<around*|(|X|)>=n>, <math|dim<around*|(|Y|)>=m>,
+    <math|n,m\<in\>\<bbb-R\>>, <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>>
+    a orthonormal basis for <math|X>, <math|F=<around*|{|f<rsub|1>,\<ldots\>,f<rsub|m>|}>>
+    a orthonormal basis for <math|Y> and <math|L\<in\>Hom<around*|(|X,Y|)>>
+    then for <math|L<rsup|\<ast\>>\<in\>Hom<around*|(|Y,X|)>> we have that
+
+    <\equation*>
+      \<cal-M\><around*|(|L<rsup|\<ast\>>;F,E|)>=\<cal-M\><around*|(|L,E;F|)><rsup|H>
+    </equation*>
+
+    See [definition: <reference|matrix linear mapping>] for
+    <math|\<cal-M\><around*|(|L<rsup|\<ast\>>;F,E|)>> and
+    <math|\<cal-M\><around*|(|L,E;F|)>>.
+  </theorem>
+
+  <\proof>
+    We must make a distinction between the real and complex case.
+
+    <\description>
+      <item*|real inner product space>Using [theorem: <reference|inner matrix
+      of linear mapping>] we have <math|\<forall\><around*|(|i,j|)>\<in\><around*|{|1,\<ldots\>,n|}>\<times\><around*|{|1,\<ldots\>,m|}>>
+      that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|\<cal-M\><around*|(|L;E,F|)><rsup|H>|)><rsub|i,j>>|<cell|=>|<cell|<wide|\<cal-M\><around*|(|L;E,F|)><rsub|j,i>|\<wide-bar\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|inner matrix of linear
+        mapping>]>>>|<cell|<wide|<around*|\<langle\>|L<around*|(|e<rsub|i>|)>,f<rsub|j>|\<rangle\>><rsub|Y>|\<wide-bar\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|inner adjoint operator>]>>>|<cell|<wide|<around*|\<langle\>|e<rsub|i>,L<rsup|\<ast\>><around*|(|f<rsub|j>|)>|\<rangle\>><rsub|X>|\<wide-bar\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|\<langle\>|,|\<rangle\>><rsub|X>\<in\>\<bbb-R\>>>|<cell|<around*|\<langle\>|e<rsub|i>,L<rsup|\<ast\>><around*|(|f<rsub|j>|)>|\<rangle\>><rsub|X>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|L<rsup|\<star\>><around*|(|f<rsub|j>|)>,e<rsub|i>|\<rangle\>><rsub|X>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|inner matrix of linear
+        mapping>]>>>|<cell|\<cal-M\><around*|(|L<rsup|\<ast\>>;F,E|)><rsub|i,j>>>>>
+      </eqnarray*>
+
+      proving that <math|\<cal-M\><around*|(|L<rsup|\<ast\>>;F,E|)>=\<cal-M\><around*|(|L,E;F|)><rsup|H>>.
+
+      <item*|complex inner product space>Using [theorem: <reference|inner
+      matrix of linear mapping>] we have <math|\<forall\><around*|(|i,j|)>\<in\><around*|{|1,\<ldots\>,n|}>\<times\><around*|{|1,\<ldots\>,m|}>>
+      that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|\<cal-M\><around*|(|L;E,F|)><rsup|H>|)><rsub|i,j>>|<cell|=>|<cell|<wide|\<cal-M\><around*|(|L;E,F|)><rsub|j,i>|\<wide-bar\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|inner matrix of linear
+        mapping>]>>>|<cell|<wide|<around*|\<langle\>|L<around*|(|e<rsub|i>|)>,f<rsub|j>|\<rangle\>><rsub|Y>|\<wide-bar\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|inner adjoint operator>]>>>|<cell|<wide|<around*|\<langle\>|e<rsub|i>,L<rsup|\<ast\>><around*|(|f<rsub|j>|)>|\<rangle\>><rsub|X>|\<wide-bar\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|L<rsup|\<star\>><around*|(|f<rsub|j>|)>,e<rsub|i>|\<rangle\>><rsub|X>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|inner matrix of linear
+        mapping>]>>>|<cell|\<cal-M\><around*|(|L<rsup|\<ast\>>;F,E|)><rsub|i,j>>>>>
+      </eqnarray*>
+
+      proving that <math|\<cal-M\><around*|(|L<rsup|\<ast\>>;F,E|)>=\<cal-M\><around*|(|L,E;F|)><rsup|H>>.
+    </description>
+  </proof>
+
+  <\corollary>
+    <label|inner determinant of adjoint mapping>Let
+    <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>><rsub|X>|\<rangle\>>>
+    be a finite dimensional real inner product spaces with
+    <math|dim<around*|(|X|)>\<in\>\<bbb-N\>> and
+    <math|L\<in\>Hom<around*|(|X|)>=Hom<around*|(|X,X|)>> then\ 
+
+    <\equation*>
+      det<around*|(|L|)>=det<around*|(|L<rsup|\<ast\>>|)>
+    </equation*>
+  </corollary>
+
+  <\proof>
+    Let <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> be a basis in
+    <math|X> then
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|det<around*|(|L|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|determinant of matrix and linear
+      transformation>]>>>|<cell|det<around*|(|\<cal-M\><around*|(|L;E,F|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|matrix determinant of transpose>]>>>|<cell|det<around*|(|\<cal-M\><around*|(|L;E,F|)><rsup|T>|)>>>|<row|<cell|>|<cell|=>|<cell|det<around*|(|\<cal-M\><around*|(|L;E,F|)><rsup|H>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|inner determinant of adjoint
+      mapping>]>>>|<cell|det<around*|(|L<rsup|\<ast\>>|)>>>>>
+    </eqnarray*>
+  </proof>
+
+  <section|Spectral Theorem>
+
+  <subsection|Polynomials and linear operators>
+
+  We use now the fundamental theorem of algebra to prove the spectral theorem
+  of linear algebra, that states under which conditions a linear operator can
+  be diagonlized. First we introduce linear operators and the relation of
+  linear operators and polynomes.
+
+  <\definition>
+    <label|spectral linear operator><index|linear operator><index|linear
+    operator>Let <math|X> be a vector space and <math|L:X\<rightarrow\>X> a
+    mappinge then <math|L> is a <with|font-series|bold|linear operator on X>
+    if <math|L\<in\>Hom<around*|(|X,X|)>=Hom<around*|(|X|)>>.
+  </definition>
+
+  <\theorem>
+    <label|spectral linear operator isomorphism>Let <math|X> be a finite
+    dimensional and <math|L\<in\>Hom<around*|(|X|)>> [<math|L> is a linear
+    operator] then we have the following equivalences:\ 
+
+    <\enumerate>
+      <item><math|L> is a isomorphism.
+
+      <item><math|L> is injective.
+
+      <item><math|L> is surjective.
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|1\<Rightarrow\>2>>This is trivial as a bijection is
+      injective and surjective.
+
+      <item*|<math|1\<Rightarrow\>3>>This is trivial as a bijection is
+      injective and surjective.
+
+      <item*|<math|2\<Rightarrow\>1>>This follows from [theorem:
+      <reference|linear mapping injectivity and surjectivity>].
+
+      <item*|<math|3\<Rightarrow\>1>>As <math|L> is surjective it follows
+      from [theorem: <reference|linear mapping surjectivity and rank>] that
+      <math|rank<around*|(|L|)>=dim<around*|(|X|)>>. As by [theorem:
+      <reference|linear mapping dimension theorem>]
+      <math|dim<around*|(|X|)>=dim<around*|(|ker<around*|(|L|)>|)>+rank<around*|(|L|)>>
+      it follows that <math|dim<around*|(|ker<around*|(|L|)>|)>=0>, hence
+      using [theorem: <reference|linear mapping injectivity and kernel>] we
+      have that <math|L> is injective. So <math|L> is a bijection and as
+      <math|L> is linear it is by [theorem: <reference|linear mapping
+      injective transformation>] a linear isomorphism.
+    </description>
+  </proof>
+
+  <\definition>
+    Let <math|n\<in\>\<bbb-N\>>, <math|X> a vector space and
+    <math|<around*|{|L<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>Hom<around*|(|X|)>>
+    a finite family of linear operators then
+    <math|<big|prod><rsub|i=1><rsup|n>L<rsub|i>:X\<rightarrow\>X> is
+    recursively defined by\ 
+
+    <\equation*>
+      <around*|(|<big|prod><rsub|i=1><rsup|n>L<rsub|i>|)>=<choice|<tformat|<table|<row|<cell|L<rsub|1><text|
+      if >n=1>>|<row|<cell|L<rsub|n>\<circ\><big|prod><rsub|i=1><rsup|n-1><text|
+      if >1\<less\>n>>>>>
+    </equation*>
+  </definition>
+
+  A special case of the above is the following
+
+  <\definition>
+    Let <math|n\<in\>\<bbb-N\><rsub|0>>, <math|X> a vector space and
+    <math|L\<in\>Hom<around*|(|X|)>> then <math|L<rsup|n>> is recursively
+    defined by\ 
+
+    <\equation*>
+      L<rsup|n>=<choice|<tformat|<table|<row|<cell|Id<rsub|X><text| if
+      >n=0>>|<row|<cell|L\<circ\>L<rsup|n-1><text| if >0\<less\>n>>>>>
+    </equation*>
+
+    In essence we have defined the power of linear operators.
+  </definition>
+
+  We show now that the power of operators behaves as normal power functions.
+
+  <\theorem>
+    <label|spectral L^n+m=L^noL^m>Let <math|n,m\<in\>\<bbb-N\><rsub|0>>,
+    <math|X> a vector space and <math|L\<in\>Hom<around*|(|X|)>> then\ 
+
+    <\equation*>
+      L<rsup|n+m>=L<rsup|n>\<circ\>L<rsup|m>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    This is trivially proved by induction, so define\ 
+
+    <\equation*>
+      S<rsub|n>=<around*|{|m\<in\>\<bbb-N\><rsub|0>\|L<rsup|n+m>=L<rsup|n>\<circ\>L<rsup|m>|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|0\<in\>S<rsub|n>>>As <math|L<rsup|n+0>=L<rsup|n>=L<rsup|n>\<circ\>Id<rsub|X>=L<rsup|n>\<circ\>L<rsup|0><rsup|>>
+      proving that <math|0\<in\>S>.
+
+      <item*|<math|n\<in\>S<rsub|n>\<Rightarrow\>n+1\<in\>S<rsub|n>>>As
+
+      <\equation*>
+        L<rsup|n+<around*|(|m+1|)>>=L<rsup|<around*|(|n+m|)>+1>=L<rsup|<around*|(|n+m|)>>\<circ\>L\<equallim\><rsub|m\<in\>S<rsub|n>><around*|(|L<rsup|n>\<circ\>L<rsup|m>|)>\<circ\>L=L<rsup|n>\<circ\><around*|(|L<rsup|m>\<circ\>L|)>=L<rsup|n>\<circ\>L<rsup|m+1>
+      </equation*>
+
+      proving that <math|n+1\<in\>S<rsub|n>>.
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|spectral L^n is linear>Let <math|n\<in\>\<bbb-N\><rsub|0>>,
+    <math|X> a vector space and <math|L\<in\>Hom<around*|(|X|)>> then
+    <math|L<rsup|n>\<in\>Hom<around*|(|X|)>>
+  </theorem>
+
+  <\proof>
+    This is trivially proved by induction, so define
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|L<rsup|n>\<in\>Hom<around*|(|X|)>|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|0\<in\>S>>As <math|L<rsup|0>=Id<rsub|X>\<in\>Hom<around*|(|X|)>>
+      it follows that <math|0\<in\>S>.
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>As <math|n\<in\>S> we
+      have that <math|L<rsup|n>\<in\>Hom<around*|(|X|)>>, futher as
+      <math|L\<in\>Hom<around*|(|X|)>> it follows form [theorem:
+      <reference|linear mapping composition>] that
+      <math|L<rsup|n+1>=L<rsup|n>\<circ\>L<rsup|1>=L<rsup|n>\<circ\><around*|(|L<rsup|1>\<circ\>L<rsup|0>|)>=L<rsup|n>\<circ\><around*|(|L\<circ\>Id<rsub|x>|)>=L<rsup|n>\<circ\>L\<in\>Hom<around*|(|X|)>>
+      proving that <math|n+1\<in\>S>.
+    </description>
+  </proof>
+
+  \;
+
+  \ 
+
+  \;
+
   \;
 </body>
 
@@ -1841,6 +2076,10 @@
     <associate|auto-18|<tuple|hermition matrix|?>>
     <associate|auto-19|<tuple|unitary matrix|?>>
     <associate|auto-2|<tuple|18.1|?>>
+    <associate|auto-20|<tuple|18.4|?>>
+    <associate|auto-21|<tuple|18.4.1|?>>
+    <associate|auto-22|<tuple|linear operator|?>>
+    <associate|auto-23|<tuple|linear operator|?>>
     <associate|auto-3|<tuple|inner product|?>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|<around*|\<langle\>||\<rangle\>>>|?>>
     <associate|auto-5|<tuple|complex inner product|?>>
@@ -1862,11 +2101,13 @@
     <associate|inner adjoint and composition|<tuple|18.36|?>>
     <associate|inner adjoint of adjoint|<tuple|18.33|?>>
     <associate|inner adjoint operator|<tuple|18.32|?>>
-    <associate|inner adjoint operator is linear|<tuple|18.36|?>>
+    <associate|inner adjoint operator and composition|<tuple|18.36|?>>
+    <associate|inner adjoint operator is linear|<tuple|18.34|?>>
     <associate|inner canonical basis are orthonormal|<tuple|18.23|?>>
     <associate|inner complex inner product properties|<tuple|18.8|?>>
     <associate|inner complex inner product space|<tuple|18.4|?>>
     <associate|inner complex product space construction|<tuple|18.11|?>>
+    <associate|inner determinant of adjoint mapping|<tuple|18.43|?>>
     <associate|inner euclidean norm complex numbers|<tuple|18.17|?>>
     <associate|inner euclidean norm on finite dimensional spaces
     (complex)|<tuple|18.20|?>>
@@ -1876,6 +2117,7 @@
     <associate|inner hermitian matrix|<tuple|18.40|?>>
     <associate|inner linear function from inner product|<tuple|18.30|?>>
     <associate|inner linear independence and orthogonality|<tuple|18.24|?>>
+    <associate|inner matrix of adjoint operator|<tuple|18.42|?>>
     <associate|inner matrix of linear mapping|<tuple|18.25|?>>
     <associate|inner orthogonality|<tuple|18.21|?>>
     <associate|inner orthonormal set|<tuple|18.28|?>>
@@ -1891,6 +2133,10 @@
     <associate|inner real product space construction|<tuple|18.10|?>>
     <associate|inner symmetric matrix|<tuple|18.39|?>>
     <associate|inner unitary matrix|<tuple|18.41|?>>
+    <associate|spectral L^n is linear|<tuple|18.49|?>>
+    <associate|spectral L^n+m=L^noL^m|<tuple|18.48|?>>
+    <associate|spectral linear operator|<tuple|18.44|?>>
+    <associate|spectral linear operator isomorphism|<tuple|18.45|?>>
   </collection>
 </references>
 
@@ -1916,6 +2162,18 @@
       <tuple|<tuple|Riesz Representation Theorm>|<pageref|auto-14>>
 
       <tuple|<tuple|adjoint mapping>|<pageref|auto-15>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|M<rsup|H>>>|<pageref|auto-16>>
+
+      <tuple|<tuple|symmetric matrix>|<pageref|auto-17>>
+
+      <tuple|<tuple|hermition matrix>|<pageref|auto-18>>
+
+      <tuple|<tuple|unitary matrix>|<pageref|auto-19>>
+
+      <tuple|<tuple|linear operator>|<pageref|auto-22>>
+
+      <tuple|<tuple|linear operator>|<pageref|auto-23>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|18<space|2spc>Inner
@@ -1935,6 +2193,13 @@
       <with|par-left|<quote|1tab>|18.3.1<space|2spc>Dual spaces and inner
       product <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-12>>
+
+      18.4<space|2spc>Spectral Theorem <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-20>
+
+      <with|par-left|<quote|1tab>|18.4.1<space|2spc>Polynomials and linear
+      operators <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-21>>
     </associate>
   </collection>
 </auxiliary>
