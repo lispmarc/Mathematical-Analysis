@@ -1672,7 +1672,7 @@
     </description>
   </proof>
 
-  The operator of taking the adjoint of a linear mapping is alos linear as
+  The operator of taking the adjoint of a linear mapping is also linear as
   the following theorem shows.
 
   <\theorem>
@@ -1955,12 +1955,12 @@
     Let <math|n\<in\>\<bbb-N\>>, <math|X> a vector space and
     <math|<around*|{|L<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>Hom<around*|(|X|)>>
     a finite family of linear operators then
-    <math|<big|prod><rsub|i=1><rsup|n>L<rsub|i>:X\<rightarrow\>X> is
+    <math|<big|odot><rsub|i=1><rsup|n>L<rsub|i>:X\<rightarrow\>X> is
     recursively defined by\ 
 
     <\equation*>
-      <around*|(|<big|prod><rsub|i=1><rsup|n>L<rsub|i>|)>=<choice|<tformat|<table|<row|<cell|L<rsub|1><text|
-      if >n=1>>|<row|<cell|L<rsub|n>\<circ\><big|prod><rsub|i=1><rsup|n-1><text|
+      <around*|(|<big|odot><rsub|i=1><rsup|n>L<rsub|i>|)>=<choice|<tformat|<table|<row|<cell|L<rsub|1><text|
+      if >n=1>>|<row|<cell|L<rsub|n>\<circ\><big|odot><rsub|i=1><rsup|n-1><text|
       if >1\<less\>n>>>>>
     </equation*>
   </definition>
@@ -2042,6 +2042,530 @@
     </description>
   </proof>
 
+  <\theorem>
+    <label|spectral composition of injective linear mappings>Let <math|X> be
+    a vector space, <math|n\<in\>\<bbb-N\>> and
+    <math|<around*|{|L<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>Hom<around*|(|X|)>>
+    such that <math|<rigid|\<forall\>i\<in\>ker<around*|(|L<rsub|i>|)>=<around*|{|0|}>>>
+    then\ 
+
+    <\equation*>
+      ker<around*|(|<big|odot><rsub|i=1><rsup|n>L<rsub|i>|)>=<around*|{|0|}>
+    </equation*>
+
+    In other words, using [theorem: <reference|linear mapping injectivity and
+    kernel>], if <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|L<rsub|i>> is injective then <math|<big|odot><rsub|i=1><rsup|n>L<rsub|i>>
+    is injective.
+  </theorem>
+
+  <\proof>
+    We use induction to prove this, so define\ 
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\>\|<text|If
+      ><around*|{|L<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>Hom<around*|(|X|)><text|
+      satisfies that >\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      >ker<around*|(|L<rsub|i>|)>=<around*|{|0|}><text| then
+      ><rigid|ker<around*|(|<big|odot><rsub|i=1><rsup|n>L<rsub|i>|)>=<around*|{|0|}>>|}>
+    </equation*>
+
+    we have:
+
+    <\description>
+      <item*|<math|1\<in\>S>>Let <math|<around*|{|L<rsub|i>|}><rsub|i\<in\><around*|{|1|}>>\<subseteq\>Hom<around*|(|X|)>>
+      with <math|ker<around*|(|L<rsub|1>|)>=<around*|{|0|}>> then we have
+      <math|ker<around*|(|<big|odot><rsub|i=1><rsup|1>L<rsub|i>|)>=ker<around*|(|L<rsub|1>|)>=<around*|{|0|}>>
+      which proves that <math|1\<in\>S>.
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+      <math|<around*|{|L<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>Hom<around*|(|X|)>>
+      with <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n+1|}>>
+      <math|ker<around*|(|L<rsub|i>|)>=<around*|{|0|}>>. If
+      <math|x\<in\>ker<around*|(|<big|odot><rsub|i=1><rsup|n+1>L<rsub|i>|)>>
+      then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|0>|<cell|=>|<cell|<around*|(|<big|odot><rsub|i=1><rsup|n+1>L<rsub|i>|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|L<rsub|n+1>\<circ\><big|odot><rsub|i=1><rsup|n>L<rsub|i>|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|L<rsub|n+1><around*|(|<around*|(|<big|odot><rsub|i=1><rsup|n>L<rsub|i>|)><around*|(|x|)>|)>>>>>
+      </eqnarray*>
+
+      hence as <math|ker<around*|(|L<rsub|n+1>|)>=<around*|{|0|}>> we must
+      have that <math|<around*|(|<big|odot><rsub|i=1><rsup|n>L<rsub|i>|)><around*|(|x|)>=0>,
+      hence as <math|n\<in\>S>, it follows that <math|x=0>. So
+      <math|ker<around*|(|<big|odot><rsub|i=1><rsup|n+1>L<rsub|i>|)>=<around*|{|0|}>>
+      proving that <math|n+1\<in\>S>.
+    </description>
+  </proof>
+
+  We are now ready to introduce polynomial linear operators.
+
+  <\definition>
+    Let <math|n\<in\>\<bbb-N\><rsub|0>>, <math|X> a vector space over
+    <math|\<bbb-C\>>, <math|L\<in\>Hom<around*|(|X|)>> and
+    <math|p\<in\>\<cal-P\><rsub|n>> a polynomial of order <math|n> [see
+    definition: <reference|fundamental polynomal>] then
+    <math|p<around*|[|L|]>:X\<rightarrow\>X> is defined by\ 
+
+    <\equation*>
+      p<around*|[|L|]><around*|(|x|)>=<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\>L<rsup|i><around*|(|x|)>
+    </equation*>
+
+    where <math|<around*|{|a<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>\<subseteq\>\<bbb-C\>>
+    is the unique family with <math|\<alpha\><rsub|n>\<neq\>0> such that
+    <math|p<around*|(|z|)>=<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\>z<rsup|i>>
+    [see definition: <reference|fundamental polynomal>] and [theorem:
+    <reference|fundamental coefficients are unique (1)>]. Linear operators of
+    the form <math|p<around*|[|L|]>> where <math|p> is a polynomial of order
+    <math|n> are called <with|font-series|bold|polynomial operators of order
+    <math|>n>.
+
+    <\note>
+      Using [theorems: <reference|linear mapping Hom(X,Y)> and
+      <reference|spectral L^n is linear>] it follows that
+      <math|p<around*|[|L|]>\<in\>Hom<around*|(|X|)>>.
+    </note>
+  </definition>
+
+  We prove now that the product of polynomials is equal to the composition of
+  the associated polynomial operator. This allows us to uplift properties of
+  polynomials to polynomial operator.
+
+  <\theorem>
+    <label|spectral polynomial operator composition and polynomial
+    product>Let <math|X> be a vactor space over <math|\<bbb-C\>>,
+    <math|p,q\<in\>\<cal-P\><rsub|n>> polynomial operators of order <math|n>
+    and <math|L\<in\>Hom<around*|(|X|)>> then we have\ 
+
+    <\equation*>
+      <around*|(|p\<cdot\>q|)><around*|[|L|]>=p<around*|[|L|]>\<circ\>q<around*|[|L|]>
+    </equation*>
+
+    <\note>
+      By [theorem: <reference|fundamental product of polynomials is a
+      polynomial>] it is guaranteed that <math|p\<cdot\>q> is a polynomial so
+      that <math|<around*|(|p\<cdot\>q|)>> makes sense.
+    </note>
+  </theorem>
+
+  <\proof>
+    Let <math|p> be defined by <math|<around*|{|a<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>\<subseteq\>\<bbb-C\>>
+    and <math|q> be defined by <math|<around*|{|b<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,m|}>>\<subseteq\>\<bbb-C\>>.
+    Then by [theorem: <reference|fundamental product of polynomials is a
+    polynomial>] we have that
+
+    <\equation>
+      <label|eq 18.9.146>p\<cdot\>q<text| has coefficients
+      ><around*|{|c<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n+m|}>><text|
+      where >c<rsub|i>=<big|sum><rsub|<around*|(|k,l|)>\<in\><around*|{|<around*|(|r,s|)>\<in\><around*|{|0,\<ldots\>,n|}>\<times\><around*|{|0,\<ldots\>,m|}>\|r+s=i|}>>a<rsub|k>\<cdot\>b<rsub|l>
+    </equation>
+
+    Next we calculate <math|p<around*|[|L|]>\<circ\>q<around*|[|L|]>>, let
+    <math|x\<in\>X> then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|p<around*|[|L|]>\<circ\>q<around*|[|L|]>|)><around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|p<around*|[|L|]><around*|(|q<around*|[|L|]><around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i=1><rsup|n>a<rsub|i>\<cdot\>L<rsup|i><around*|(|q<around*|[|L|]><around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i=1><rsup|n>a<rsub|i>\<cdot\>L<rsup|i><around*|(|<big|sum><rsub|j=1><rsup|m>b<rsub|j>\<cdot\>L<rsup|j><around*|(|x|)><rsup|>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|spectral L^n is linear>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|i=1><rsup|n>a<rsub|i>\<cdot\><big|sum><rsub|j=1><rsup|m>b<rsub|j>\<cdot\>L<rsup|i><around*|(|L<rsup|j><around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i=1><rsup|n><around*|(|<big|sum><rsub|j=1><rsup|m>a<rsub|i>\<cdot\>b<rsub|j>\<cdot\>L<rsup|i><around*|(|L<rsup|j><around*|(|x|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i=1><rsup|n><around*|(|<big|sum><rsub|j=1><rsup|m>a<rsub|i>\<cdot\>b<rsub|j>\<cdot\><around*|(|L<rsup|i>\<circ\>L<rsup|j>|)><around*|(|x|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|spectral L^n+m=L^noL^m>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|i=1><rsup|n><around*|(|<big|sum><rsub|j=1><rsup|m>a<rsub|i>\<cdot\>b<rsub|j>\<cdot\>L<rsup|i+j><around*|(|x|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum distributivity>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|<around*|(|i,j|)>\<in\><around*|{|0,\<ldots\>,n|}>\<times\><around*|{|0,\<ldots\>,m|}>>a<rsub|i>\<cdot\>b<rsub|j>\<cdot\>L<rsup|i+j><around*|(|x|)>>|<cell|\<equallim\><rsub|<text|[lemma:
+      <reference|lemma 17.8.145>, theorem: <reference|sum over disjoint
+      subsets>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|i=0><rsup|n+m><around*|(|<big|sum><rsub|<around*|(|k,l|)>\<in\><around*|{|<around*|(|r,s|)>\<in\><around*|{|0,\<ldots\>,n|}>\<times\><around*|{|0,\<ldots\>,m|}>\|r+s=i|}>>a<rsub|k>\<cdot\>b<rsub|l>\<cdot\>L<rsup|k+l><around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i=0><rsup|n+m><around*|(|<big|sum><rsub|<around*|(|k,l|)>\<in\><around*|{|<around*|(|r,s|)>\<in\><around*|{|0,\<ldots\>,n|}>\<times\><around*|{|0,\<ldots\>,m|}>\|r+s=i|}>>a<rsub|k>\<cdot\>b<rsub|l>\<cdot\>L<rsup|i><around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i=0><rsup|n+m><around*|(|<big|sum><rsub|<around*|(|k,l|)>\<in\><around*|{|<around*|(|r,s|)>\<in\><around*|{|0,\<ldots\>,n|}>\<times\><around*|{|0,\<ldots\>,m|}>\|r+s=i|}>>a<rsub|k>\<cdot\>b<rsub|l>|)>\<cdot\>L<rsup|i><around*|(|x|)>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 18.9.146>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|i=0><rsup|n+m>c<rsub|i>\<cdot\>L<rsup|i><around*|(|x|)>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 18.9.146>]>>>|<cell|>>|<row|<cell|<around*|(|p\<cdot\>q|)><around*|[|L|]><around*|(|x|)>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    which proves that\ 
+
+    <\equation*>
+      p<around*|[|L|]>\<circ\>q<around*|[|L|]>=<around*|(|p\<cdot\>q|)><around*|[|L|]>
+    </equation*>
+  </proof>
+
+  The above can be extended, by induction.
+
+  <\theorem>
+    <label|spectral finite product of polynomial>Let <math|n\<in\>\<bbb-N\>>,
+    <math|X> a vector space over <math|\<bbb-C\>>,
+    <math|<around*|{|p<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-P\>>
+    a finite family of polynomials and <math|L\<in\>Hom<around*|(|X|)>> then\ 
+
+    <\equation*>
+      <around*|(|<big|prod><rsub|i=1><rsup|n>p<rsub|i>|)><around*|[|L|]>=<big|odot><rsub|i=1><rsup|n>p<rsub|i><around*|[|L|]>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Define\ 
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\>\|<text|If
+      ><around*|{|p<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-P\><text|
+      then ><around*|(|<big|prod><rsub|i=1><rsup|n>p<rsub|i>|)><around*|[|L|]>=<big|odot><rsub|i=1><rsup|n>p<rsub|i><around*|[|L|]>|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|1\<in\>S>>If <math|<around*|{|p<rsub|i>|}><rsub|i\<in\><around*|{|1|}>>\<subseteq\>\<cal-P\>>
+      then <math|<around*|(|<big|prod><rsub|i=1><rsup|1>p<rsub|i>|)><around*|[|L|]>=p<rsub|1><around*|[|L|]>=<big|odot><rsub|i=1><rsup|1>p<rsub|i><around*|[|L|]>>
+      proving that <math|1\<in\>S>.
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>If
+      <math|<around*|{|p<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>\<cal-P\>>
+      then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|<big|prod><rsub|i=1><rsup|n+1>p<rsub|i>|)><around*|[|L|]>>|<cell|=>|<cell|<around*|(|p<rsub|n+1>\<cdot\><big|prod><rsub|i=1><rsup|n>p<rsub|i>|)><around*|[|L|]>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|spectral polynomial operator composition and polynomial
+        product>]>>>|<cell|p<rsub|n+1><around*|[|L|]>\<circ\><around*|(|<big|prod><rsub|i=1><rsup|n>p<rsub|i>|)><around*|[|L|]>>>|<row|<cell|>|<cell|\<equallim\><rsub|n\<in\>S>>|<cell|p<rsub|n+1><around*|[|L|]>\<circ\><big|odot><rsub|i=1><rsup|n>p<rsub|i><around*|[|L|]>>>|<row|<cell|>|<cell|\<equallim\><rsub|def>>|<cell|<big|odot><rsub|i=1><rsup|n+1>p<rsub|i><around*|[|L|]>>>>>
+      </eqnarray*>
+
+      proving that <math|n+1\<in\>S>.
+    </description>
+  </proof>
+
+  <\definition>
+    Let <math|X> be a vector space over <math|\<bbb-C\>> and
+    <math|L\<in\>Hom<around*|(|X|)>> then we define
+    <math|\<cal-P\><around*|[|L|]>> by\ 
+
+    <\equation*>
+      \<cal-P\><around*|[|L|]>=<around*|{|p<around*|[|L|]>\|p\<in\>\<cal-P\>|}>
+    </equation*>
+
+    In essence <math|\<cal-P\><around*|[|L|]>> is the set of all the
+    polynomial operators based on the linear operator <math|L>.
+  </definition>
+
+  <\theorem>
+    <label|spectral P[L] is a abelian semi group>Let X be a vector space over
+    <math|\<bbb-C\>> and <math|L\<in\>Hom<around*|(|X|)>> then
+    <math|<around*|\<langle\>|\<cal-P\><around*|[|L|]>,\<circ\>|\<rangle\>>>
+    is a Abelian semi group with neutral element <math|Id<rsub|X>>.
+  </theorem>
+
+  <\proof>
+    First if <math|x,y\<in\>\<cal-P\><around*|[|L|]>> then there exist
+    <math|p,q\<in\>\<cal-P\>> such that <math|x=p<around*|[|L|]>> and
+    <math|y=q<around*|[|L|]>>, so we have by [theorem: <reference|spectral
+    polynomial operator composition and polynomial product>] we have that
+    <math|x\<circ\>y=p<around*|[|L|]>\<circ\>q<around*|[|L|]>=<around*|(|p\<cdot\>q|)><around*|[|L|]>\<in\>\<cal-P\><around*|[|L|]>>.
+    Hence\ 
+
+    <\equation*>
+      \<circ\>:\<cal-P\><around*|[|L|]>\<times\>\<cal-P\><around*|[|L|]>\<rightarrow\>\<cal-P\><around*|[|L|]><text|
+      defined by >\<circ\><around*|[|x,y|]>=x\<circ\>y
+    </equation*>
+
+    is well defined. Further we have:
+
+    <\description>
+      <item*|associativity>This is trivial as composition of functions is
+      associative.
+
+      <item*|neutral element>Take <math|<around*|{|a<rsub|i><rsub|>|}><rsub|i\<in\><around*|{|0|}>>\<subseteq\>\<bbb-C\>>
+      define by <math|a<rsub|0>=1> then <math|p<rsub|>> defined by
+      <rigid|<math|p<around*|(|z|)>=<big|sum><rsub|i=0><rsup|0>a<rsub|i>\<cdot\>z<rsup|i>=a<rsub|0>\<cdot\>z<rsup|0>=a<rsub|0>>>
+      is a element of <math|\<cal-P\>>. Then <math|p<around*|[|L|]>> is
+      defined by
+
+      <\equation*>
+        p<around*|[|L|]><around*|(|x|)>=<big|sum><rsub|i=0><rsup|0>a<rsub|i>\<cdot\>L<rsup|i><around*|(|z|)>=L<rsup|0><around*|(|z|)>=Id<rsub|X><around*|(|z|)>
+      </equation*>
+
+      proving that <math|Id<rsub|X>\<in\>\<cal-P\><around*|[|L|]>>. Further
+      if <math|x\<in\>\<cal-P\><around*|[|L|]>> then we have that
+      <math|x\<circ\>Id<rsub|X>=x=Id<rsub|X>\<circ\>x>. Hence
+      <math|Id<rsub|X>> is the neutral element in
+      <math|<around*|\<langle\>|\<cal-P\><around*|[|L|]>,\<circ\>|\<rangle\>>>.
+
+      <item*|commutativity>If <math|x,y\<in\>\<cal-P\><around*|[|L|]>> then
+      there exist <math|p,q\<in\>\<cal-P\>> such that
+      <math|x=\<cal-P\><around*|[|L|]>> and
+      <math|y=\<cal-P\><around*|[|L|]>>. SO we have\ 
+
+      <\equation*>
+        x\<circ\>y=p<around*|[|L|]>\<circ\>q<around*|[|L|]>\<equallim\><rsub|<text|[theorem:
+        <reference|spectral polynomial operator composition and polynomial
+        product>]>><around*|(|p\<cdot\>q|)><around*|[|L|]>=<around*|(|q\<cdot\>p|)><around*|[|L|]>\<equallim\><rsub|<text|[theorem:
+        <reference|spectral polynomial operator composition and polynomial
+        product>]>>q<around*|[|L|]>\<circ\>p<around*|[|L|]>
+      </equation*>
+    </description>
+  </proof>
+
+  The above can be used to prove that composition is stable under
+  permutations.
+
+  <\theorem>
+    <label|spectral composition and permutations>Let <math|n\<in\>\<bbb-N\>>,
+    <math|X> a vector space over <math|\<bbb-C\>>,
+    <math|L\<in\>Hom<around*|(|X|)>> then if
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-P\><around*|[|L|]>>
+    and <math|\<sigma\>\<in\>P<rsub|n>> then we have that
+
+    <\equation*>
+      <big|odot><rsub|i=1><rsup|n>x<rsub|i>=<big|odot><rsub|i=1><rsup|n>x<rsub|\<sigma\><around*|(|i|)>>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    By the previous theorem [theorem: <reference|spectral P[L] is a abelian
+    semi group>] <math|\<circ\>> can be considered the sum of the Abelian
+    group <math|<around*|\<langle\>|\<cal-P\><around*|[|L|]>,\<circ\>|\<rangle\>>>
+    and <math|<big|odot><rsub|i=1><rsup|n>x<rsub|i>> as a finite sum. The
+    theorem follows then from [theorem: <reference|sum commutativity>].
+  </proof>
+
+  The following theorem shows how we can factorize polynomial operators.
+
+  <\theorem>
+    <label|spectral factorization of polynomial operators>Let <math|X> be a
+    vector space over <math|\<bbb-C\>>, <math|L\<in\>Hom<around*|(|X|)>> and
+    <math|p\<in\>\<cal-P\>> a polynomial of order <math|n\<in\>\<bbb-N\>> [in
+    other words a non constant polynomial] then there exist a
+    <math|c\<in\>\<bbb-C\>\\<around*|{|0|}>> and a family
+    <math|<around*|{|\<lambda\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-C\>>
+    such that that\ 
+
+    <\equation*>
+      p<around*|[|L|]>=c\<cdot\><big|odot><rsub|i=1><rsup|n><around*|(|L-\<lambda\><rsub|i>\<cdot\>Id<rsub|X>|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Using [theorem: <reference|fundamental factorization of a polynomial
+    (1)>] there exist a <math|c\<in\>\<bbb-C\>\\<around*|{|0|}>> and
+    <math|<around*|{|\<lambda\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-C\>>
+    such that\ 
+
+    <\equation>
+      <label|eq 18.10.146>p<around*|(|z|)>=c\<cdot\><big|prod><rsub|i=1><rsup|n><around*|(|z-\<lambda\><rsub|i>|)>=C<rsub|c><around*|(|z|)>\<cdot\><big|prod><rsub|i=1><rsup|n><around*|(|z-\<lambda\><rsub|i>|)>
+    </equation>
+
+    Given <math|i\<in\><around*|{|1,\<ldots\>,n|}>> we have for
+    <math|p<rsub|i>:\<bbb-C\>\<rightarrow\>\<bbb-C\>> defined by
+    <math|p<rsub|i><around*|(|z|)>=x-\<lambda\><rsub|i>> that
+    <math|p<rsub|i><around*|(|z|)>=z-\<lambda\><rsub|i>=<big|sum><rsub|j=0><rsup|1>c<rsub|i,j>\<cdot\>z<rsup|j>>
+    where <math|c<rsub|i,0>=-\<lambda\><rsub|i>> and
+    <math|c<rsub|i,1>=1\<neq\>1> so that <math|p<rsub|i>> is a polynomial of
+    order <math|1>. Further, as for <math|<around*|{|a<rsub|i>|}><rsub|i\<in\><around*|{|0|}>>\<subseteq\>a<rsub|i>>
+    with <math|a<rsub|0>=c> we have <math|<big|sum><rsub|i=0><rsup|0>a<rsub|i>\<cdot\>z<rsup|i>=a<rsub|0>\<cdot\>z<rsup|0>=C<rsub|z><around*|(|z|)>>
+    it follows that <math|C<rsub|c>> is a polynomial of order <math|0>. So if
+    we define
+
+    <\equation*>
+      <around*|{|q<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>\<cal-P\><text|
+      by >q<rsub|i>=<choice|<tformat|<table|<row|<cell|C<rsub|c><text| if
+      >i=n+1>>|<row|<cell|p<rsub|i><text| if
+      >i\<in\><around*|{|1,\<ldots\>,n|}>>>>>>
+    </equation*>
+
+    then we have for <math|z\<in\>\<bbb-C\>> that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|<big|prod><rsub|i=1><rsup|n+1>q<rsub|i>|)><around*|(|z|)>>|<cell|=>|<cell|<big|prod><rsub|i=1><rsup|n+1>q<rsub|i><around*|(|z|)>>>|<row|<cell|>|<cell|=>|<cell|q<rsub|n+1><around*|(|z|)>\<cdot\><big|prod><rsub|i=1><rsup|n>q<rsub|i><around*|(|z|)>>>|<row|<cell|>|<cell|=>|<cell|C<rsub|c><around*|(|z|)>\<cdot\><big|prod><rsub|i=1><rsup|n>p<rsub|i><around*|(|z|)>>>|<row|<cell|>|<cell|=>|<cell|c\<cdot\><big|prod><rsub|i=1><rsup|n><around*|(|z-\<lambda\><rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|p<around*|(|z|)>>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation>
+      <label|eq 18.11.146>p=<big|prod><rsub|i=1><rsup|n+1>q<rsub|i>
+    </equation>
+
+    Now if <math|i\<in\><around*|{|1,\<ldots\>,n|}>> then we have for
+    <math|x\<in\>X> that
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|q<rsub|i><around*|[|L|]><around*|(|x|)>>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|<big|sum><rsub|i=0><rsup|0>a<rsub|i>\<cdot\>L<rsup|i><around*|(|x|)><text|
+      if >i=n+1>>|<row|<cell|<big|sum><rsub|j=0><rsup|0>c<rsub|i,j>\<cdot\>L<rsup|j><around*|(|x|)><text|
+      if >i\<in\><around*|{|1,\<ldots\>,n|}>>>>>>>>|<row|<cell|>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|c\<cdot\>L<rsup|0><around*|(|x|)><text|
+      if >i=n+1<text| if >i=n+1>>|<row|<cell|-\<lambda\><rsub|i>\<cdot\>L<rsup|0><around*|(|x|)>+1\<cdot\>L<rsup|1><around*|(|x|)><text|
+      if >i\<in\><around*|{|1,\<ldots\>,n|}>>>>>>>>|<row|<cell|>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|c\<cdot\>Id<rsub|X><around*|(|x|)><text|
+      if >i=n+1>>|<row|<cell|L<around*|(|x|)>-\<lambda\><rsub|i>\<cdot\>Id<rsub|X><around*|(|x|)><text|
+      if >i\<in\><around*|{|1,\<ldots\>,n|}>>>>>>>>|<row|<cell|>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|<around*|(|c\<cdot\>Id<rsub|X>|)><around*|(|x|)><text|
+      if >i=n+1>>|<row|<cell|<around*|(|L-\<lambda\><rsub|i>\<cdot\>Id<rsub|X>|)><around*|(|x|)><text|
+      if >i\<in\><around*|{|1,\<ldots\>,n|}>>>>>>>>>>
+    </eqnarray*>
+
+    so that\ 
+
+    <\equation>
+      <label|eq 18.12.146>q<rsub|i><around*|[|L|]>=<choice|<tformat|<table|<row|<cell|c\<cdot\>Id<rsub|X><text|
+      if >i=n+1>>|<row|<cell|<around*|(|L-\<lambda\><rsub|i>\<cdot\>Id<rsub|X>|)>
+      if i\<in\><around*|{|1,\<ldots\>,n|}>>>>>>
+    </equation>
+
+    Hence we have that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|p<around*|[|L|]>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|eq 18.11.146>]>>>|<cell|<around*|(|<big|prod><rsub|i=1><rsup|n+1>q<rsub|i>|)><around*|[|L|]>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|spectral finite product of
+      polynomial>]>>>|<cell|<big|odot><rsub|i=1><rsup|n+1>q<rsub|i><around*|[|L|]>>>|<row|<cell|>|<cell|=>|<cell|q<rsub|n+1><around*|[|L|]>\<circ\><big|odot><rsub|i=1><rsup|n>q<rsub|i><around*|[|L|]>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 18.12.146>]>>>|<cell|<around*|(|c\<cdot\>Id<rsub|X>|)>\<circ\><big|odot><rsub|i=1><rsup|n><around*|(|L-\<lambda\><rsub|i>\<cdot\>Id<rsub|X>|)>>>|<row|<cell|>|<cell|=>|<cell|c\<cdot\><big|odot><rsub|i=1><rsup|n><around*|(|L-\<lambda\><rsub|i>\<cdot\>Id<rsub|X>|)>>>>>
+    </eqnarray*>
+  </proof>
+
+  <subsection|Eigen vectors and eigen values.>
+
+  <\definition>
+    <label|spectral eigen vectors and values><index|eigen vector><index|eigen
+    value>Let <math|X> be a vector space over a field <math|\<cal-F\>> and
+    <math|L\<in\>Hom<around*|(|X|)>> then <math|x\<in\>X> is a
+    <with|font-series|bold|eigenvector >with
+    <with|font-series|bold|eigenvalue ><math|\<lambda\>> if\ 
+
+    <\equation*>
+      x\<neq\>0<text| and >L<around*|(|x|)>=\<lambda\>\<cdot\>x
+    </equation*>
+
+    <\note>
+      The condition <math|x\<neq\>0> is essential because
+      <math|L<around*|(|0|)>=0=\<lambda\>\<cdot\>0> for all
+      <math|\<lambda\>\<in\>\<cal-F\>>, hence if we want to have a special
+      meaning for <math|\<lambda\>> we must exclude the case <math|x=0>.
+    </note>
+  </definition>
+
+  It turns out that in a non trivial finite dimensional vector spaces over
+  <math|\<bbb-C\>> every <math|L\<in\>Hom<around*|(|X|)>> has eigenvectors
+  with eigenvalues.
+
+  <\theorem>
+    <label|spectral eigenvectors exist in a finite dimensional complex
+    space>Let <math|X> be finite dimensional vector space over
+    <math|\<bbb-C\>> with <math|dim<around*|(|X|)>\<in\>\<bbb-N\>> [in other
+    words <math|X> is not trivial] then ever <math|L\<in\>Hom<around*|(|X|)>>
+    has at least one eigenvector.
+  </theorem>
+
+  <\proof>
+    Let <math|n=dim<around*|(|X|)>> then as <math|n\<neq\>0> there exist a
+    <math|x\<in\>X> with <math|x\<neq\>0>. Consider now the set
+    <math|W=<around*|{|L<rsup|0><around*|(|x|)>,\<ldots\>,L<rsup|n><around*|(|x|)>|}>\<subseteq\>X>
+    of <math|n+1> vectors in <math|X>. As <math|dim<around*|(|X|)>=n>
+    <math|W> must be linear dpendent. Hence there exist a family
+    <math|<around*|{|a<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>\<subseteq\>\<bbb-C\>>
+    such that <math|\<exists\>k\<in\><around*|{|0,\<ldots\>,n|}>> with
+    <math|a<rsub|k>\<neq\>0> such that\ 
+
+    <\equation*>
+      <big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\>L<rsup|i><around*|(|x|)>=0
+    </equation*>
+
+    As <math|k\<in\><around*|{|i\<in\><around*|{|0,\<ldots\>,n|}>\|a<rsub|i>\<neq\>0|}>>,
+    <math|m=max<around*|(|<around*|{|i\<in\><around*|{|0,\<ldots\>,n|}>\|a<rsub|i>\<neq\>0|}>|)>>
+    exist.
+
+    <\equation*>
+      0=<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\>L<rsup|i><around*|(|x|)>=<big|sum><rsub|i\<in\><around*|{|0,\<ldots\>,m|}>>a<rsub|i>\<cdot\>L<rsup|i><around*|(|x|)>+<big|sum><rsub|i\<in\><around*|{|m+1,\<ldots\>,n|}>>a<rsub|i>\<cdot\>L<rsup|i><around*|(|x|)>=<big|sum><rsub|i=0><rsup|m>a<rsub|i>\<cdot\>L<rsup|i><around*|(|x|)>
+    </equation*>
+
+    hence we have\ 
+
+    <\equation>
+      <label|eq 18.13.146><big|sum><rsub|i=0><rsup|m>a<rsub|i>\<cdot\>L<rsup|i><around*|(|x|)>=0<text|
+      and >a<rsub|m>\<neq\>0
+    </equation>
+
+    If <math|m=0> then <math|0=<big|sum><rsub|i=0><rsup|0>a<rsub|i>\<cdot\>L<rsup|i><around*|(|x|)>=a<rsub|o>\<cdot\>L<rsup|0><around*|(|x|)>=a<rsub|0>\<cdot\>Id<around*|(|x|)>=a<rsub|0>\<cdot\>x>
+    which, as <math|a<rsub|0>\<neq\>0> leads to the contradiction
+    <math|0=x\<neq\>0>. Take the polynomial <math|p\<in\>\<cal-P\>> defined
+    by <math|p<around*|(|z|)>=<big|sum><rsub|i=0><rsup|m>a<rsub|i>\<cdot\>z<rsup|i>>
+    then as <math|m\<in\>\<bbb-N\>> we have by [theorem: <reference|spectral
+    factorization of polynomial operators>] that there exists a
+    <math|c\<in\>\<bbb-C\>\\<around*|{|0|}>> and <math|>a family
+    <math|<around*|{|\<lambda\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-C\>>
+    such that
+
+    <\equation*>
+      <big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\>L<rsup|i>=p<around*|[|L|]>=c\<cdot\><big|odot><rsub|i=1><rsup|n><around*|(|L-\<lambda\><rsub|i>\<cdot\>Id<rsub|X>|)>
+    </equation*>
+
+    So we have by [eq: <reference|eq 18.13.146>]
+
+    <\equation*>
+      0=<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\>L<rsup|i><around*|(|x|)>=<around*|(|<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\>L<rsup|i>|)><around*|(|x|)>=c\<cdot\><around*|(|<big|odot><rsub|i=1><rsup|n><around*|(|L-\<lambda\><rsub|i>\<cdot\>Id<rsub|X>|)>|)><around*|(|x|)>
+    </equation*>
+
+    which as <math|c\<neq\>0> proves that
+    <math|<around*|(|<big|odot><rsub|i=1><rsup|n><around*|(|L-\<lambda\><rsub|i>\<cdot\>Id<rsub|X>|)>|)><around*|(|x|)>=0>
+    which as <math|x\<neq\>0> proves that
+
+    <\equation*>
+      ker<around*|(|<big|odot><rsub|i=1><rsup|n><around*|(|L-\<lambda\><rsub|i>\<cdot\>Id<rsub|X>|)>|)>\<neq\><around*|{|0|}>
+    </equation*>
+
+    Assume that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|ker<around*|(|L-\<lambda\><rsub|i>\<cdot\>Id<rsub|X>|)>=<around*|{|0|}>>
+    then by [theorem: <reference|spectral composition of injective linear
+    mappings>] <math|<rigid|ker<around*|(|<big|odot><rsub|i=1><rsup|n><around*|(|L-\<lambda\><rsub|i>\<cdot\>Id<rsub|X>|)>|)>=<around*|{|0|}>>>
+    contradicting the above. Hence there exist a
+    <math|l\<in\><around*|{|1,\<ldots\>,n|}>> such that
+    <math|ker<around*|(|L-\<lambda\><rsub|l>\<cdot\>Id<rsub|X>|)>\<neq\><around*|{|0|}>>,
+    so there exist a <math|w\<in\>X> with <math|w\<neq\>0> such that
+    <math|<around*|(|L-\<lambda\><rsub|l>\<cdot\>Id<rsub|X>|)><around*|(|w|)>=L<around*|(|w|)>-\<lambda\><rsub|l>\<cdot\>x=0>
+    or <math|L<around*|(|w|)>=\<lambda\><rsub|l>\<cdot\>w>. So we found a
+    eigenvector <math|w> with eigenvalue <math|\<lambda\><rsub|l>>.
+  </proof>
+
+  TODO create here section about upper triangular and diagonal matrices
+
+  <\definition>
+    <label|spectral invariant sub-space><index|invariant sub-space>Let
+    <math|X> be a vactor space, <math|Y> a sub-space of <math|X> and
+    <math|L\<in\>Hom<around*|(|X|)>> then we say that <math|Y> is
+    <with|font-series|bold|invariant under L> if
+    <math|L<around*|(|Y|)>\<subseteq\>Y>. In other words every vector in
+    <math|Y> is mapped to another vector in <math|Y>.
+  </definition>
+
+  <\definition>
+    <label|spectral upper triangular matrix><index|upper triangular
+    matrix><index|upper triangular matrix>Let <math|n\<in\>\<bbb-N\>>,
+    <math|\<cal-F\>> a field then a matrix
+    \ <math|M\<in\>\<cal-M\><rsub|n,n><around*|(|\<cal-F\>|)>> is a
+    <with|font-series|bold|upper triangular matrix >if
+    <math|\<forall\>i,j\<in\><around*|{|1,\<ldots\>,n|}>> with
+    <math|i\<gtr\>j> we have <math|M<rsub|i,j>=0>. In other words a matrix is
+    a upper triangular matrix if the matrix is empty below its diagonal.
+  </definition>
+
+  <\example>
+    The matrix <math|M=<matrix|<tformat|<table|<row|<cell|1>|<cell|2>|<cell|3>>|<row|<cell|0>|<cell|4>|<cell|5>>|<row|<cell|0>|<cell|0>|<cell|6>>>>>>
+    is a upper triangular matrix because
+
+    <\equation*>
+      M<rsub|1,2>=M<rsub|1,3>=M<rsub|3,2>=0
+    </equation*>
+  </example>
+
+  A special case of a upper triangular matrix is a diagonal matrix.
+
+  <\definition>
+    <label|spectral diagonal matrix><index|diagonal matrix>Let
+    <math|n\<in\>\<bbb-N\>>, <math|\<cal-F\>> a field then a matrix
+    <math|M\<in\>\<cal-M\><rsub|n,n><around*|(|\<cal-F\>|)>> is
+    <with|font-series|bold|diagonal> if <math|\<forall\>i,j\<in\><around*|{|1,\<ldots\>,n|}>>
+    with <math|i\<neq\>j> <math|M<rsub|i,j>=0>. In other words a matrix is
+    diagonal if all no diagonal elements are <math|0>.
+  </definition>
+
+  <\example>
+    The matrix <math|M=<matrix|<tformat|<table|<row|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|2>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|3>>>>>>
+    is diagonal because
+
+    <\equation*>
+      M<rsub|2,1>=M<rsub|3,1>=M<rsub|1,2>=M<rsub|3,2>=M<rsub|1,3>=M<rsub|2,3>=0
+    </equation*>
+  </example>
+
+  \;
+
+  \;
+
+  \;
+
   \;
 
   \ 
@@ -2054,7 +2578,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|17>
-    <associate|page-first|1113>
+    <associate|page-first|1111>
     <associate|page-medium|papyrus>
     <associate|par-first|0tab>
     <associate|section-nr|1>
@@ -2080,7 +2604,14 @@
     <associate|auto-21|<tuple|18.4.1|?>>
     <associate|auto-22|<tuple|linear operator|?>>
     <associate|auto-23|<tuple|linear operator|?>>
+    <associate|auto-24|<tuple|18.4.2|?>>
+    <associate|auto-25|<tuple|eigen vector|?>>
+    <associate|auto-26|<tuple|eigen value|?>>
+    <associate|auto-27|<tuple|invariant sub-space|?>>
+    <associate|auto-28|<tuple|upper triangular matrix|?>>
+    <associate|auto-29|<tuple|upper triangular matrix|?>>
     <associate|auto-3|<tuple|inner product|?>>
+    <associate|auto-30|<tuple|diagonal matrix|?>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|<around*|\<langle\>||\<rangle\>>>|?>>
     <associate|auto-5|<tuple|complex inner product|?>>
     <associate|auto-6|<tuple|18.2|?>>
@@ -2088,6 +2619,10 @@
     <associate|auto-8|<tuple|18.3|?>>
     <associate|auto-9|<tuple|orthogonality|?>>
     <associate|eq 18.1.146|<tuple|18.1|?>>
+    <associate|eq 18.10.146|<tuple|18.10|?>>
+    <associate|eq 18.11.146|<tuple|18.11|?>>
+    <associate|eq 18.12.146|<tuple|18.12|?>>
+    <associate|eq 18.13.146|<tuple|18.13|?>>
     <associate|eq 18.2.146|<tuple|18.3|?>>
     <associate|eq 18.2.146.1|<tuple|18.2|?>>
     <associate|eq 18.3.146|<tuple|18.4|?>>
@@ -2095,6 +2630,7 @@
     <associate|eq 18.5.146|<tuple|18.7|?>>
     <associate|eq 18.5.146.2|<tuple|18.5|?>>
     <associate|eq 18.8.146|<tuple|18.8|?>>
+    <associate|eq 18.9.146|<tuple|18.9|?>>
     <associate|inner Gram-Schmidt procedure|<tuple|18.26|?>>
     <associate|inner Riesz Representation theorm|<tuple|18.31|?>>
     <associate|inner Schwartz in equality|<tuple|18.14|?>>
@@ -2135,8 +2671,23 @@
     <associate|inner unitary matrix|<tuple|18.41|?>>
     <associate|spectral L^n is linear|<tuple|18.49|?>>
     <associate|spectral L^n+m=L^noL^m|<tuple|18.48|?>>
+    <associate|spectral P[L] is a abelian semi group|<tuple|18.57|?>>
+    <associate|spectral composition and permutations|<tuple|18.58|?>>
+    <associate|spectral composition of injective linear
+    mappings|<tuple|18.50|?>>
+    <associate|spectral diagonal matrix|<tuple|18.66|?>>
+    <associate|spectral eigen vectors and values|<tuple|18.60|?>>
+    <associate|spectral eigenvectors exist in a finite dimensional complex
+    space|<tuple|18.62|?>>
+    <associate|spectral factorization of polynomial
+    operators|<tuple|18.59|?>>
+    <associate|spectral finite product of polynomial|<tuple|18.55|?>>
+    <associate|spectral invariant sub-space|<tuple|18.63|?>>
     <associate|spectral linear operator|<tuple|18.44|?>>
     <associate|spectral linear operator isomorphism|<tuple|18.45|?>>
+    <associate|spectral polynomial operator composition and polynomial
+    product|<tuple|18.53|?>>
+    <associate|spectral upper triangular matrix|<tuple|18.64|?>>
   </collection>
 </references>
 
