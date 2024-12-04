@@ -1755,9 +1755,10 @@
     </equation*>
   </proof>
 
-  To examine the relation between the adjoint of a linear operator and its
-  matrix we first had to extend the concept of the transpose <math|M<rsup|T>>
-  of a matrix <math|M> [see definition: <reference|matrix transpose>].
+  To examine the relation between the adjoint of a linear transformation and
+  its matrix we first had to extend the concept of the transpose
+  <math|M<rsup|T>> of a matrix <math|M> [see definition: <reference|matrix
+  transpose>].
 
   <\definition>
     <index|<math|M<rsup|H>>>Let <math|n,m\<in\>\<bbb-N\>> then for
@@ -1897,24 +1898,24 @@
 
   <section|Spectral Theorem>
 
-  <subsection|Polynomials and linear operators>
+  <subsection|Polynomials and linear transformations>
 
   We use now the fundamental theorem of algebra to prove the spectral theorem
-  of linear algebra, that states under which conditions a linear operator can
-  be diagonlized. First we introduce linear operators and the relation of
-  linear operators and polynomes.
+  of linear algebra, that states under which conditions a linear
+  transformation can be diagonlized. First we introduce linear
+  transformations and the relation of linear transformations and polynomes.
 
   <\definition>
     <label|spectral linear operator><index|linear operator><index|linear
     operator>Let <math|X> be a vector space and <math|L:X\<rightarrow\>X> a
-    mappinge then <math|L> is a <with|font-series|bold|linear operator on X>
-    if <math|L\<in\>Hom<around*|(|X,X|)>=Hom<around*|(|X|)>>.
+    mappinge then <math|L> is a <with|font-series|bold|linear transformation
+    on X> if <math|L\<in\>Hom<around*|(|X,X|)>=Hom<around*|(|X|)>>.
   </definition>
 
   <\theorem>
     <label|spectral linear operator isomorphism>Let <math|X> be a finite
     dimensional and <math|L\<in\>Hom<around*|(|X|)>> [<math|L> is a linear
-    operator] then we have the following equivalences:\ 
+    transformation] then we have the following equivalences:\ 
 
     <\enumerate>
       <item><math|L> is a isomorphism.
@@ -1954,7 +1955,7 @@
   <\definition>
     Let <math|n\<in\>\<bbb-N\>>, <math|X> a vector space and
     <math|<around*|{|L<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>Hom<around*|(|X|)>>
-    a finite family of linear operators then
+    a finite family of linear transformations then
     <math|<big|odot><rsub|i=1><rsup|n>L<rsub|i>:X\<rightarrow\>X> is
     recursively defined by\ 
 
@@ -1977,7 +1978,7 @@
       >n=0>>|<row|<cell|L\<circ\>L<rsup|n-1><text| if >0\<less\>n>>>>>
     </equation*>
 
-    In essence we have defined the power of linear operators.
+    In essence we have defined the power of linear transformations.
   </definition>
 
   We show now that the power of operators behaves as normal power functions.
@@ -2097,7 +2098,7 @@
     </description>
   </proof>
 
-  We are now ready to introduce polynomial linear operators.
+  We are now ready to introduce polynomial linear transformations.
 
   <\definition>
     Let <math|n\<in\>\<bbb-N\><rsub|0>>, <math|X> a vector space over
@@ -2233,7 +2234,7 @@
     </equation*>
 
     In essence <math|\<cal-P\><around*|[|L|]>> is the set of all the
-    polynomial operators based on the linear operator <math|L>.
+    polynomial operators based on the linear transformation <math|L>.
   </definition>
 
   <\theorem>
@@ -2511,6 +2512,8 @@
 
   TODO create here section about upper triangular and diagonal matrices
 
+  <subsection|Upper triangular and diagonal matrices>
+
   <\definition>
     <label|spectral invariant sub-space><index|invariant sub-space>Let
     <math|X> be a vactor space, <math|Y> a sub-space of <math|X> and
@@ -2540,6 +2543,364 @@
     </equation*>
   </example>
 
+  The following theorem gives necessary and sufficient conditions for the
+  matrix of a linear transformation to be upper triangular.
+
+  <\theorem>
+    <label|spectral upper triangular conditions>Let <math|X> be a finite
+    dimensional vector space with <math|dim<around*|(|X|)>\<in\>\<bbb-N\>>
+    [hence <math|X> is not trivial], <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>>
+    a basis for <math|X> and <math|L\<in\>Hom<around*|(|X|)>> a linear
+    transformation then we have the following equivalences:
+
+    <\enumerate>
+      <item><math|\<cal-M\><around*|(|L;E,E|)>> is upper triangular
+
+      <item><math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have
+      <math|L<around*|(|e<rsub|i>|)>\<in\>span<around*|(|<around*|{|e<rsub|k>\|k\<in\><around*|{|1,\<ldots\>,i|}>|}>|)>>
+
+      <item><math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have that
+      <math|span<around*|(|<around*|{|e<rsub|k>\|k\<in\><around*|{|1,\<ldots\>,i|}>|}>|)>>
+      is invariant under <math|L>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    Let <math|M=\<cal-M\><around*|(|L;E,E|)>> then we have:
+
+    <\description>
+      <item*|<math|1\<Rightarrow\>2>>Let <math|i\<in\><around*|{|1,\<ldots\>,n|}>>
+      then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|L<around*|(|e<rsub|i>|)>>|<cell|=>|<cell|<big|sum><rsub|k=1><rsup|n>M<rsub|k,i>\<cdot\>e<rsub|k><rsub|>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,i|}>>M<rsub|k,i>\<cdot\>e<rsub|k>+<big|sum><rsub|k\<in\><around*|{|i+1,\<ldots\>,n|}>>M<rsub|k,i>\<cdot\>e<rsub|k>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,i|}>>M<rsub|k,i>\<cdot\>e<rsub|k>+<big|sum><rsub|k\<in\><around*|{|i+1,\<ldots\>,n|}>>0\<cdot\>e<rsub|k>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,i|}>>M<rsub|k,i>\<cdot\>e<rsub|k>>>>>
+      </eqnarray*>
+
+      so that <math|L<around*|(|e<rsub|i>|)>\<in\>span<around*|(|<around*|{|e<rsub|k>\|k\<in\><around*|{|1,\<ldots\>,i|}>|}>|)>>.
+
+      <item*|<math|2\<Rightarrow\>1>>Let <math|i\<in\><around*|{|1,\<ldots\>,n|}>>
+      then, as <math|L<around*|(|e<rsub|i>|)>\<in\>span<around*|(|<around*|{|e<rsub|k>\|k\<in\><around*|{|1,\<ldots\>,i|}>|}>|)>>,
+      there exist a <math|<around*|{|\<alpha\><rsub|k>|}><rsub|k\<in\><around*|{|1,\<ldots\>,i|}>>>
+      such that <math|L<around*|(|e<rsub|i>|)>=<big|sum><rsub|k=1><rsup|i>\<alpha\><rsub|k>\<cdot\>e<rsub|k>>.
+      Define
+
+      <\equation*>
+        <around*|{|\<beta\><rsub|k>|}><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>><text|
+        by >\<beta\><rsub|k>=<choice|<tformat|<table|<row|<cell|\<alpha\><rsub|k><text|
+        if >k\<in\><around*|{|1,\<ldots\>,i|}>>>|<row|<cell|0<text| if
+        >k\<in\><around*|{|i+1,\<ldots\>,n|}>>>>>>
+      </equation*>
+
+      then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|sum><rsub|i=1><rsup|n>M<rsub|k,i>\<cdot\>e<rsub|k>>|<cell|=>|<cell|L<around*|(|e<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k=1><rsup|i>\<alpha\><rsub|k>\<cdot\>e<rsub|k>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,i|}>>\<beta\><rsub|k>\<cdot\>e<rsub|k>+<big|sum><rsub|k\<in\><around*|{|i+1,\<ldots\>,n|}>>0\<cdot\>e<rsub|k>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,i|}>>\<beta\><rsub|k>\<cdot\>e<rsub|k>+<big|sum><rsub|k\<in\><around*|{|i+1,\<ldots\>,n|}>>\<beta\><rsub|k>\<cdot\>e<rsub|k>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k=1><rsup|n>\<beta\><rsub|k>\<cdot\>e<rsub|k>>>>>
+      </eqnarray*>
+
+      As <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> is a basis it
+      follows that <math|\<forall\>k\<in\><around*|{|1,\<ldots\>,n|}>>
+      <math|M<rsub|k,i>=\<beta\><rsub|k>>, hence
+      <math|\<forall\>k\<in\><around*|{|i+1,\<ldots\>,n|}>> we have
+      <math|M<rsub|k,i>=\<beta\><rsub|k>=0>. As
+      <math|i\<in\><around*|{|1,\<ldots\>,n|}>> was chosen arbitrary it
+      follows that <math|M<rsub|k,i>=0> whenever <math|k\<gtr\>i> proving
+      that <math|M> is upper triangular.
+
+      <item*|<math|2\<Rightarrow\>3>>Given
+      <math|i\<in\><around*|{|1,\<ldots\>,n|}>> take
+      <math|x\<in\>span<around*|(|<around*|{|e<rsub|l>\|l\<in\><around*|{|1,\<ldots\>,i|}>|}>|)>>
+      then there exist a <math|<around*|{|x<rsub|k>|}><rsub|k\<in\><around*|{|1,\<ldots\>,i|}>>>
+      such that <math|x=<big|sum><rsub|k=1><rsup|i>x<rsub|k>\<cdot\>e<rsub|k>>,
+      hence\ 
+
+      <\equation*>
+        L<around*|(|x|)>=L<around*|(|<big|sum><rsub|k=1><rsup|i>x<rsub|k>\<cdot\>e<rsub|k>|)>=<big|sum><rsub|k=1><rsup|i>x<rsub|k>\<cdot\>L<around*|(|e<rsub|k>|)>
+      </equation*>
+
+      so that\ 
+
+      <\equation>
+        <label|eq 18.14.146>L<around*|(|x|)>\<in\>span<around*|(|<around*|{|L<around*|(|e<rsub|k>|)>\|k\<in\><around*|{|1,\<ldots\>,i|}>|}>|)>
+      </equation>
+
+      Now for every <math|k\<in\><around*|{|1,\<ldots\>,i|}>\<subseteq\><around*|{|1,\<ldots\>,n|}>>
+      we have by (2) that
+
+      <\equation*>
+        L<around*|(|e<rsub|k>|)>\<in\>span<around*|(|<around*|{|e<rsub|l>\|l\<in\><around*|{|1,\<ldots\>,k|}>|}>|)>\<subseteq\><rsub|<text|[theorem:
+        <reference|linear span subsets>]>>span<around*|(|<around*|{|e<rsub|l>\|l\<in\><around*|{|1,\<ldots\>,i|}>|}>|)>
+      </equation*>
+
+      so that <math|<around*|{|L<around*|(|e<rsub|k>|)>\|k\<in\><around*|{|1,\<ldots\>,i|}>|}>\<subseteq\>span<around*|(|<around*|{|e<rsub|l>\|l\<in\><around*|{|1,\<ldots\>,i|}>|}>|)>>
+      or using [theorem: <reference|linear span subsets>] again\ 
+
+      <\equation*>
+        span<around*|(|<around*|{|L<around*|(|e<rsub|k>|)>\|k\<in\><around*|{|1,\<ldots\>,i|}>|}>|)>\<subseteq\>span<around*|(|span<around*|(|<around*|{|e<rsub|l>\|l\<in\><around*|{|1,\<ldots\>,i|}>|}>|)>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|linear span of span>]>>span<around*|(|e<rsub|l>\|l\<in\><around*|{|1,\<ldots\>,i|}>|)>
+      </equation*>
+
+      which combined with [eq: <reference|eq 18.14.146>] proves that\ 
+
+      <\equation*>
+        L<around*|(|x|)>\<subseteq\>span<around*|(|e<rsub|l>\|l\<in\><around*|{|1,\<ldots\>,i|}>|)>
+      </equation*>
+
+      As <math|x\<in\>span<around*|(|<around*|{|e<rsub|k>\|k\<in\><around*|{|1,\<ldots\>,i|}>|}>|)>>
+      we have from the above that\ 
+
+      <\equation*>
+        L<around*|(|span<around*|(|<around*|{|e<rsub|k>\|k\<in\><around*|{|1,\<ldots\>,i|}>|}>|)>|)>\<subseteq\>span<around*|(|<around*|{|e<rsub|k>\|k\<in\><around*|{|1,\<ldots\>,i|}>|}>|)>
+      </equation*>
+
+      showing that <math|span<around*|(|<around*|{|e<rsub|k>\|k\<in\><around*|{|1,\<ldots\>,i|}>|}>|)>>
+      is invariant under <math|L>.
+
+      <item*|<math|3\<Rightarrow\>2>>Let <math|i\<in\><around*|{|1,\<ldots\>,n|}>>
+      then as <math|e<rsub|i>\<in\>span<around*|(|<around*|{|e<rsub|l>\|l\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>>
+      and <math|span<around*|(|<around*|{|e<rsub|l>\|l\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>>
+      is invariant under <math|L> we have that
+      <math|L<around*|(|e<rsub|i>|)>\<in\>span<around*|(|<around*|{|e<rsub|l>\|l\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>>.
+    </description>
+  </proof>
+
+  We show now that in finite dimensional non trivial vector spaces over
+  <math|\<bbb-C\>> every linear transformation can have a upper triangular
+  matrix.
+
+  <\theorem>
+    <label|spectral upper triangular matrix for a linear operator>Let
+    <math|n\<in\>\<bbb-N\>>, <math|X> a finite dimensional vector space over
+    <math|\<bbb-C\>> with <math|dim<around*|(|X|)>=n> [hence <math|X> is not
+    trivial] and <math|L\<in\>Hom<around*|(|X|)>> then there exist a basis
+    <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> for <math|X> such that
+    <math|\<cal-M\><around*|(|L;E,E|)>> is a upper triangular matrix.
+  </theorem>
+
+  <\proof>
+    We prove this by induction, so define
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\>\|If X<text| is a finite dimensional
+      vector space over <math|\<bbb-C\>> with <math|m=dim<around*|(|X|)>>,
+      >0\<less\>m\<leqslant\>n<text| then for
+      ><rigid|L\<in\>Hom<around*|(|X|)>><text| there exist a basis
+      <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|m>|}>> such that
+      >\<cal-M\><around*|(|L;E,E|)>|}>
+    </equation*>
+
+    then we have:\ 
+
+    <\description>
+      <item*|<math|1\<in\>S>>If <math|dim<around*|(|X|)>=1> then there exist
+      a basis <math|E=<around*|{|e<rsub|1>|}>> of <math|X> and for
+      <math|L\<in\>Hom<around*|(|X|)>> the matrix
+      <math|\<cal-M\><around*|[|L;E,E|]>> is a <math|1\<times\>1> matrix
+      which is automatical upper diagonal, hence <math|1\<in\>S>.
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let <math|X> be a finite
+      dimensional basis with <math|1\<less\>dim<around*|(|X|)>\<leqslant\>n+1>
+      and <math|L\<in\>Hom<around*|(|X|)>>. For <math|dim<around*|(|X|)>> we
+      have either:\ 
+
+      <\description>
+        <item*|<math|dim<around*|(|X|)>\<less\>n+1>>Then
+        <math|dim<around*|(|X|)>\<leqslant\>n> so that, as <math|n\<in\>S>,
+        there exist a basis <math|<rigid|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|dim<around*|(|X|)>>|}>>>
+        such that <math|\<cal-M\><around*|(|L;E,E|)>> is upper triangular.
+        Hence in this case we have that <math|n+1\<in\>S>
+
+        <item*|<math|dim<around*|(|X|)>=n+1>>Using [theorem:
+        <reference|spectral eigenvectors exist in a finite dimensional
+        complex space>] there exist a eigenvector <math|x\<in\>X> with
+        eigenvalue <math|\<lambda\>>. So <math|<around*|(|L-\<lambda\>\<cdot\>Id<rsub|X>|)><around*|(|x|)>=0>
+        and <math|x\<neq\>0> hence\ 
+
+        <\equation*>
+          ker<around*|(|L-\<lambda\>\<cdot\>Id<rsub|X>|)>\<neq\><around*|{|0|}>
+        </equation*>
+
+        By [theorem: <reference|linear mapping kernel and range are
+        subspaces>] <math|ker<around*|(|L-\<lambda\>\<cdot\>Id<rsub|X>|)>> is
+        a sub-space of <math|X>, so that by [theorem: <reference|basis
+        sub-space>] <math|ker<around*|(|L-\<lambda\>\<cdot\>Id<rsub|X>|)>> is
+        finite dimensional and together with the above we have\ 
+
+        <\equation*>
+          0\<less\>dim<around*|(|ker<around*|(|L-\<lambda\>\<cdot\>Id<rsub|X>|)>|)>\<leqslant\>dim<around*|(|X|)>
+        </equation*>
+
+        Using [theorem: <reference|linear mapping dimension theorem>] we have
+        that\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|dim<around*|(|X|)>>|<cell|=>|<cell|dim<around*|(|ker<around*|(|L-\<lambda\>\<cdot\>Id<rsub|X>|)>|)>+rank<around*|(|L-\<lambda\>\<cdot\>Id<rsub|x>|)>>>|<row|<cell|>|<cell|=>|<cell|dim<around*|(|ker<around*|(|L-\<lambda\>\<cdot\>Id<rsub|X>|)>|)>+dim<around*|(|<around*|(|L-\<lambda\>\<cdot\>Id<rsub|X>|)><around*|(|X|)>|)>>>>>
+        </eqnarray*>
+
+        proving by the above that
+
+        <\equation*>
+          dim<around*|(|<around*|(|L-\<lambda\>\<cdot\>Id<rsub|X>|)><around*|(|X|)>|)>\<less\>dim<around*|(|X|)>
+        </equation*>
+
+        Summarized\ 
+
+        <\equation*>
+          U=<around*|(|L-\<lambda\>\<cdot\>Id<rsub|X>|)><around*|(|X|)><text|
+          is a vector space [see theorem: <reference|linear mapping kernel
+          and range are subspaces>] with >dim<around*|(|U|)>\<less\>dim<around*|(|X|)>
+        </equation*>
+
+        If <math|u\<in\>U> then <math|L<around*|(|u|)>=L<around*|(|u|)>-\<lambda\>\<cdot\>u+\<lambda\>\<cdot\>u=<around*|(|L-\<lambda\>\<cdot\>Id<rsub|X>|)><around*|(|u|)>+\<lambda\>\<cdot\>u\<in\>U>
+        [as <math|<rigid|<around*|(|L-\<lambda\>\<cdot\>Id<rsub|X>|)><around*|(|u|)>\<in\><around*|(|L-\<lambda\>\<cdot\>Id<rsub|X>|)><around*|(|X|)>=U>>
+        and <math|U> is a vector space], hence we have that\ 
+
+        <\equation*>
+          L<around*|(|U|)>\<subseteq\>U
+        </equation*>
+
+        From the above combined with the fact that the linear mapping to a
+        subspace is linear [see theorem: <reference|linear mapping
+        restriction>] it follows that\ 
+
+        <\equation*>
+          L<rsub|\|U>\<in\>Hom<around*|(|U|)>
+        </equation*>
+
+        Hence, as <math|dim<around*|(|U|)>\<less\>dim<around*|(|X|)>=n+1>
+        implies <math|dim<around*|(|U|)>\<leqslant\>n> and <math|n\<in\>S>,
+        we have that there exist a basis <math|V=<around*|{|v<rsub|1>,\<ldots\>,v<rsub|dim<around*|(|U|)>>|}>>
+        for <math|U> such that <math|\<cal-M\><around*|(|L<rsub|\|U>;V,V|)>>
+        is upper triangular. Applying then the previous theorem [theorem:
+        <reference|spectral upper triangular conditions>] it follows that\ 
+
+        <\equation>
+          <label|eq 18.15.146>\<forall\>j\<in\><around*|{|1,\<ldots\>,dim<around*|(|U|)>|}><text|
+          >L<around*|(|v<rsub|j>|)>=L<rsub|\|U><around*|(|v<rsub|j>|)>\<in\>span<around*|(|<around*|{|v<rsub|k>\|k\<in\><around*|{|1,\<ldots\>,j|}>|}>|)>
+        </equation>
+
+        As <math|<around*|{|v<rsub|1>,\<ldots\>,v<rsub|dim<around*|(|U|)>>|}>>
+        is linear independent we can use [theorem: <reference|basis extending
+        linear independent set (1)>] to extend
+        <math|<around*|{|v<rsub|1>,\<ldots\>,v<rsub|dim<around*|(|U|)>>|}>>
+        to a basis <math|<around*|{|w<rsub|1>,\<ldots\>,w<rsub|n+1>|}>> where
+        <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,dim<around*|(|U|)>|}>>
+        we have <math|w<rsub|i>=v<rsub|i>>. Using the above on [eq:
+        <reference|eq 18.15.146>] results in\ 
+
+        <\equation>
+          <label|eq 18.16.146>\<forall\>j\<in\><around*|{|1,\<ldots\>,dim<around*|(|U|)>|}><text|
+          we have >L<around*|(|w<rsub|j>|)>\<in\>span<around*|(|<around*|{|w<rsub|k>\|k\<in\><around*|{|1,\<ldots\>,j|}>|}>|)>
+        </equation>
+
+        Let <math|j\<in\><around*|{|dim<around*|(|U|)>+1,\<ldots\>,n+1|}>>
+        then we have\ 
+
+        <\equation>
+          <label|eq 18.17.146>L<around*|(|w<rsub|j>|)>=<around*|(|L-\<lambda\>\<cdot\>Id<rsub|X>|)><around*|(|w<rsub|j>|)>+\<lambda\>\<cdot\>Id<rsub|X><around*|(|w<rsub|j>|)>=<around*|(|L-\<lambda\>\<cdot\>Id<rsub|X>|)><around*|(|w<rsub|j>|)>+\<lambda\>\<cdot\>w<rsub|j>
+        </equation>
+
+        As <math|>
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|L-\<lambda\>\<cdot\>Id<rsub|X>|)><around*|(|w<rsub|j>|)>>|<cell|\<in\>>|<cell|<around*|(|L-\<lambda\>\<cdot\>Id<rsub|X>|)><around*|(|X|)>>>|<row|<cell|>|<cell|=>|<cell|U>>|<row|<cell|>|<cell|=>|<cell|span<around*|(|<around*|{|v<rsub|k>\|k\<in\><around*|{|1,\<ldots\>,dim<around*|(|U|)>|}>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|span<around*|(|<around*|{|w<rsub|k>\|k\<in\><around*|{|1,\<ldots\>,dim<around*|(|U|)>|}>|}>|)>>>|<row|<cell|>|<cell|\<subseteq\><rsub|<text|[theorem:
+          <reference|linear span subsets>]>>>|<cell|span<around*|(|<around*|{|w<rsub|k>\|k\<in\><around*|{|1,\<ldots\>,j|}>|}>|)>>>>>
+        </eqnarray*>
+
+        and <math|><math|span<around*|(|<around*|{|w<rsub|k>\|k\<in\><around*|{|1,\<ldots\>,j|}>|}>|)>>
+        is a vector space [see theorem: <reference|linear span is a
+        sub-space>] it follows from [eq: <reference|eq 18.17.146>] that
+        <math|L<around*|(|w<rsub|j>|)>\<in\>span<around*|(|<around*|{|w<rsub|k>\|k\<in\><around*|{|1,\<ldots\>,j|}>|}>|)>>.
+        Hence\ 
+
+        <\equation*>
+          \<forall\>j\<in\><around*|{|dim<around*|(|U|)>+1,\<ldots\>,n+1|}><text|
+          we have >L<around*|(|w<rsub|j>|)>\<in\>span<around*|(|<around*|{|w<rsub|k>\|k\<in\><around*|{|1,\<ldots\>,j|}>|}>|)>
+        </equation*>
+
+        Combining the above with [eq: <reference|eq 18.16.146>] that\ 
+
+        <\equation*>
+          \<forall\>j\<in\><around*|{|1,\<ldots\>,n+1|}><text| we have
+          >L<around*|(|w<rsub|j>|)>\<in\>span<around*|(|<around*|{|w<rsub|k>\|k\<in\><around*|{|1,\<ldots\>,j|}>|}>|)>
+        </equation*>
+
+        Applying then the previous theorem [theorem: <reference|spectral
+        upper triangular conditions>] again it follows that for the basis
+        <math|W=<around*|{|w<rsub|1>,\<ldots\>,w<rsub|n>|}>> of <math|X> we
+        have
+
+        <\equation*>
+          \<cal-M\><around*|(|L;W,W|)><text| is a upper triangular matrix>
+        </equation*>
+
+        Hence we conclude that <math|n+1\<in\>S>.
+      </description>
+    </description>
+  </proof>
+
+  We can actual ensure that the basis that makes the matrix of a linear
+  transformation is orthonormal.
+
+  <\theorem>
+    <label|spectral Schur's theorem><index|Schur's Theorem>Let
+    <math|n\<in\>\<bbb-N\>>, <math|X> a finite dimensional vector space over
+    <math|\<bbb-C\>> with <math|dim<around*|(|X|)>=n> [hence <math|X> is not
+    trivial] and <math|L\<in\>Hom<around*|(|X|)>> then there exist a
+    orthonormal basis <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> for
+    <math|X> such that <math|\<cal-M\><around*|(|L;E,E|)>> is a upper
+    triangular matrix.
+  </theorem>
+
+  <\proof>
+    Using the previous theorem [theorem: <reference|spectral upper triangular
+    matrix for a linear operator>] there exist a basis
+    <math|B=<around*|{|b<rsub|1>,\<ldots\>,b<rsub|n>|}>> of <math|X> such
+    that\ 
+
+    <\equation*>
+      \<cal-M\><around*|(|L;B,B|)><text| is upper triangular>
+    </equation*>
+
+    By [theorem: <reference|spectral upper triangular conditions>] it follows
+    then that <math|B> satisified
+
+    <\equation>
+      <label|eq 18.18.146>\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      we have >L<around*|(|span<around*|(|<around*|{|b<rsub|k>\|k\<in\><around*|{|1,\<ldots\>,i|}>|}>|)>|)>\<subseteq\>span<around*|(|<around*|{|b<rsub|k>\|k\<in\><around*|{|1,\<ldots\>,i|}>|}>|)>
+    </equation>
+
+    We can now use the Gram-Schmidt procedure [see theorems: <reference|inner
+    Gram-Schmidt procedure>] to find a orthonormal set
+    <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> such that\ 
+
+    <\equation>
+      <label|eq 18.19.146>\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      >span<around*|(|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|i>|}>|)>=span<around*|(|<around*|{|b<rsub|1>,\<ldots\>,b<rsub|i>|}>|)>
+    </equation>
+
+    As <math|<around*|{|e<rsub|1>,\<ldots\>e<rsub|n>|}>> is orthonormal it
+    follows from [theorem: <reference|inner orthonormal set>] that\ 
+
+    <\equation*>
+      E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}><text| is a basis of >X
+    </equation*>
+
+    Substituting [eq: <reference|eq 18.19.146>] in [eq: <reference|eq
+    18.18.146>] results in
+
+    <\equation*>
+      \<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text| we have
+      >L<around*|(|span<around*|(|<around*|{|e<rsub|k>\|k\<in\><around*|{|1,\<ldots\>,i|}>|}>|)>|)>\<subseteq\>span<around*|(|<around*|{|e<rsub|k>\|k\<in\><around*|{|1,\<ldots\>,i|}>|}>|)>
+    </equation*>
+
+    which by [theorem: <reference|spectral upper triangular conditions>]
+    proves that\ 
+
+    <\equation*>
+      \<cal-M\><around*|(|L;E,E|)><text| is a upper diagonal matrix>
+    </equation*>
+  </proof>
+
   A special case of a upper triangular matrix is a diagonal matrix.
 
   <\definition>
@@ -2560,6 +2921,135 @@
     </equation*>
   </example>
 
+  <\definition>
+    <label|spectral self adjoint transformation><index|self-adjoint linear
+    transformation><dueto|Self-adjoint linear transformations>Let
+    <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
+    be a real [or compact] finite dimensional inner product space then
+    <math|L\<in\>Hom<around*|(|X|)>=Hom<around*|(|X,X|)>> is
+    <with|font-series|bold|self adjoint>\ 
+
+    <\equation*>
+      L=L<rsup|\<ast\>>
+    </equation*>
+
+    where <math|L<rsup|\<ast\>>> is defined in [theorem: <reference|inner
+    adjoint operator>] [so <math|L<rsup|\<star\>>\<in\>Hom<around*|(|X,X|)>>
+    is the <with|font-series|bold|unique> linear transformation such that
+    <math|\<forall\>y\<in\>X> we have <math|\<forall\>x\<in\>X> that
+    <math|<around*|\<langle\>|x,L<rsup|\<ast\>><around*|(|y|)>|\<rangle\>>=<around*|\<langle\>|L<around*|(|x|)>,y|\<rangle\>>>].
+    In other words <math|L> is self-adjoint iff <math|\<forall\>x,y\<in\>X>
+    we have <math|<around*|\<langle\>|x,L<around*|(|y|)>|\<rangle\>>=<around*|\<langle\>|L<around*|(|x|)>,y|\<rangle\>>>.
+  </definition>
+
+  <\example>
+    <label|spectrum identy map is self-adjoint>Let
+    <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
+    be a real [or compact] finite dimensional inner product space then
+    <math|Id<rsub|X>> is a self-adjoint transformation.
+  </example>
+
+  <\proof>
+    Using [theorem: <reference|linear mapping semi-group>]
+    <math|Id<rsub|X>\<in\>Hom<around*|(|X|)>>, further
+    <math|\<forall\>x,y\<in\>X> we have\ 
+
+    <\equation*>
+      <around*|\<langle\>|x,Id<rsub|X><around*|(|y|)>|\<rangle\>>=<around*|\<langle\>|x,y|\<rangle\>>=<around*|\<langle\>|Id<rsub|X><around*|(|x|)>,y|\<rangle\>>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|spectral matrices of self adjoint transformations are
+    Hermitian>Let <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
+    be a real [or compact] finite dimensional inner product space with a
+    basis <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>>,
+    <math|n\<in\>\<bbb-N\>> and <math|L\<in\>Hom<around*|(|X|)>> then\ 
+
+    <\equation*>
+      L<text| is self-adjoint>
+    </equation*>
+
+    <\equation*>
+      \<Updownarrow\>
+    </equation*>
+
+    <\equation*>
+      \<cal-M\><around*|(|L;E,E|)><text| is Hermitian>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>This follows from\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<cal-M\><around*|(|L;E,E|)>>|<cell|\<equallim\><rsub|L=L<rsup|\<ast\>>>>|<cell|\<cal-M\><around*|(|L<rsup|\<ast\>>;E,E|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|inner matrix of adjoint
+        operator>]>>>|<cell|\<cal-M\><around*|(|L;E,E|)><rsup|H>>>>>
+      </eqnarray*>
+
+      so that <math|\<cal-M\><around*|(|L;E,E|)>> is Hermitian.
+
+      <item*|<math|\<Leftarrow\>>>Let <math|x\<in\>X> then there exist a
+      <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<in\>\<bbb-K\>>
+      such that <math|x=<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\>e<rsub|i>>.
+      Let <math|k\<in\><around*|{|1,\<ldots\>,n|}>> then we have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|L<around*|(|x|)>|)><rsub|k>>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n>\<cal-M\><around*|(|L;E,E|)><rsub|k,i>\<cdot\>x<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n><around*|(|\<cal-M\><around*|(|L;E,E|)><rsup|H>|)><rsub|k,i>\<cdot\>x<rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|inner matrix of adjoint
+        operator>]>>>|<cell|<big|sum><rsub|i=1><rsup|n>\<cal-M\><around*|(|L<rsup|\<ast\>>;E,E|)><rsub|k,i>\<cdot\>x<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|L<rsup|\<ast\>><around*|(|x|)>|)><rsub|k>>>>>
+      </eqnarray*>
+
+      proving that <math|L<around*|(|x|)>=L<rsup|\<ast\>><around*|(|x|)>>. As
+      <math|x\<in\>X> was chosen arbitrary it follows that
+      <math|L=L<rsup|\<ast\>>> hence <math|L> is self-adjoint.
+    </description>
+  </proof>
+
+  <\corollary>
+    <label|spectral diagnolizing operator is self-adjoint>Let
+    <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
+    be a real \ finite dimensional inner product space and
+    <math|L\<in\>Hom<around*|(|X|)>> a linear transformation such that there
+    exist a basis <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> so that
+    <math|\<cal-M\><around*|(|L;E,E|)>> is diagonal then <math|L> is
+    self-adjoint/
+  </corollary>
+
+  <\proof>
+    As <math|\<cal-M\><around*|(|L;E,E|)>> is real and diagonal we have
+    <math|\<forall\>i,j\<in\><around*|{|1,\<ldots\>,n|}>> that
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|\<cal-M\><around*|(|L;E,E|)><rsup|H>|)><rsub|i,j>>|<cell|=>|<cell|<around*|(|\<cal-M\><around*|(|L;E,E|)><rsup|\<star\>>|)><rsub|j,i>>>|<row|<cell|>|<cell|=>|<cell|\<cal-M\><around*|(|L;E,E|)><rsub|j,i>>>|<row|<cell|>|<cell|=>|<cell|\<cal-M\><around*|(|L;E,E|)><rsub|i,i>\<cdot\>\<delta\><rsub|i,j>>>|<row|<cell|>|<cell|=>|<cell|\<cal-M\><around*|(|L;E,E|)><rsub|i,j>>>>>
+    </eqnarray*>
+
+    proving that <math|\<cal-M\><around*|(|L;E,E|)>> is Hermitian, hence by
+    [theorem: <reference|spectral matrices of self adjoint transformations
+    are Hermitian>] <math|L> is self-adjoint.
+  </proof>
+
+  All the eigenvalues of a self-adjoint mapping are real as is show in the
+  next theorem.
+
+  <\theorem>
+    <label|spectral eigen values of a self-adjoint operator are linear>Let
+    <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
+    be a real [or compact] finite dimensional inner product space and
+    <math|L\<in\>Hom<around*|(|X|)>> then every eigenvalue of <math|L> is a
+    real number.
+  </theorem>
+
+  <\proof>
+    If <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
+    is a real inner product space then the result is trivial, so consider the
+    case of complex inner product space.\ 
+  </proof>
+
   \;
 
   \;
@@ -2578,7 +3068,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|17>
-    <associate|page-first|1111>
+    <associate|page-first|1115>
     <associate|page-medium|papyrus>
     <associate|par-first|0tab>
     <associate|section-nr|1>
@@ -2607,11 +3097,14 @@
     <associate|auto-24|<tuple|18.4.2|?>>
     <associate|auto-25|<tuple|eigen vector|?>>
     <associate|auto-26|<tuple|eigen value|?>>
-    <associate|auto-27|<tuple|invariant sub-space|?>>
-    <associate|auto-28|<tuple|upper triangular matrix|?>>
+    <associate|auto-27|<tuple|18.4.3|?>>
+    <associate|auto-28|<tuple|invariant sub-space|?>>
     <associate|auto-29|<tuple|upper triangular matrix|?>>
     <associate|auto-3|<tuple|inner product|?>>
-    <associate|auto-30|<tuple|diagonal matrix|?>>
+    <associate|auto-30|<tuple|upper triangular matrix|?>>
+    <associate|auto-31|<tuple|Schur's Theorem|?>>
+    <associate|auto-32|<tuple|diagonal matrix|?>>
+    <associate|auto-33|<tuple|self-adjoint linear transformation|?>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|<around*|\<langle\>||\<rangle\>>>|?>>
     <associate|auto-5|<tuple|complex inner product|?>>
     <associate|auto-6|<tuple|18.2|?>>
@@ -2623,6 +3116,12 @@
     <associate|eq 18.11.146|<tuple|18.11|?>>
     <associate|eq 18.12.146|<tuple|18.12|?>>
     <associate|eq 18.13.146|<tuple|18.13|?>>
+    <associate|eq 18.14.146|<tuple|18.14|?>>
+    <associate|eq 18.15.146|<tuple|18.15|?>>
+    <associate|eq 18.16.146|<tuple|18.16|?>>
+    <associate|eq 18.17.146|<tuple|18.17|?>>
+    <associate|eq 18.18.146|<tuple|18.18|?>>
+    <associate|eq 18.19.146|<tuple|18.19|?>>
     <associate|eq 18.2.146|<tuple|18.3|?>>
     <associate|eq 18.2.146.1|<tuple|18.2|?>>
     <associate|eq 18.3.146|<tuple|18.4|?>>
@@ -2672,10 +3171,15 @@
     <associate|spectral L^n is linear|<tuple|18.49|?>>
     <associate|spectral L^n+m=L^noL^m|<tuple|18.48|?>>
     <associate|spectral P[L] is a abelian semi group|<tuple|18.57|?>>
+    <associate|spectral Schur's theorem|<tuple|18.68|?>>
     <associate|spectral composition and permutations|<tuple|18.58|?>>
     <associate|spectral composition of injective linear
     mappings|<tuple|18.50|?>>
-    <associate|spectral diagonal matrix|<tuple|18.66|?>>
+    <associate|spectral diagnolizing operator is
+    self-adjoint|<tuple|18.74|?>>
+    <associate|spectral diagonal matrix|<tuple|18.69|?>>
+    <associate|spectral eigen values of a self-adjoint operator are
+    linear|<tuple|18.75|?>>
     <associate|spectral eigen vectors and values|<tuple|18.60|?>>
     <associate|spectral eigenvectors exist in a finite dimensional complex
     space|<tuple|18.62|?>>
@@ -2685,9 +3189,16 @@
     <associate|spectral invariant sub-space|<tuple|18.63|?>>
     <associate|spectral linear operator|<tuple|18.44|?>>
     <associate|spectral linear operator isomorphism|<tuple|18.45|?>>
+    <associate|spectral matrices of self adjoint transformations are
+    Hermitian|<tuple|18.73|?>>
     <associate|spectral polynomial operator composition and polynomial
     product|<tuple|18.53|?>>
+    <associate|spectral self adjoint transformation|<tuple|18.71|?>>
+    <associate|spectral upper triangular conditions|<tuple|18.66|?>>
     <associate|spectral upper triangular matrix|<tuple|18.64|?>>
+    <associate|spectral upper triangular matrix for a linear
+    operator|<tuple|18.67|?>>
+    <associate|spectrum identy map is self-adjoint|<tuple|18.72|?>>
   </collection>
 </references>
 
@@ -2725,6 +3236,20 @@
       <tuple|<tuple|linear operator>|<pageref|auto-22>>
 
       <tuple|<tuple|linear operator>|<pageref|auto-23>>
+
+      <tuple|<tuple|eigen vector>|<pageref|auto-25>>
+
+      <tuple|<tuple|eigen value>|<pageref|auto-26>>
+
+      <tuple|<tuple|invariant sub-space>|<pageref|auto-27>>
+
+      <tuple|<tuple|upper triangular matrix>|<pageref|auto-28>>
+
+      <tuple|<tuple|upper triangular matrix>|<pageref|auto-29>>
+
+      <tuple|<tuple|diagonal matrix>|<pageref|auto-30>>
+
+      <tuple|<tuple|Schur's Theorem>|<pageref|auto-31>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|18<space|2spc>Inner
@@ -2749,8 +3274,12 @@
       <no-break><pageref|auto-20>
 
       <with|par-left|<quote|1tab>|18.4.1<space|2spc>Polynomials and linear
-      operators <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      transformations <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-21>>
+
+      <with|par-left|<quote|1tab>|18.4.2<space|2spc>Eigen vectors and eigen
+      values. <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-24>>
     </associate>
   </collection>
 </auxiliary>
