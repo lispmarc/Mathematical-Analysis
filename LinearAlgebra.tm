@@ -9882,8 +9882,6 @@
     </equation*>
   </proof>
 
-  TODO prove the next two theorems
-
   <\theorem>
     <label|linear mapping rank(L) dimension><label|linear mapping
     surjectivity and dim image>Let <math|<around*|\<langle\>|X,+,\<cdot\>|\<rangle\>>>
@@ -19758,6 +19756,59 @@
     proving that <math|L<rsub|1>=L<rsub|2>>.
   </proof>
 
+  <\theorem>
+    <label|linear mapping definition by its values for the basis vectors>Let
+    <math|n,m\<in\>\<bbb-N\>>, <math|X,Y> finite dimensional vector spaces
+    over a field <math|F> with bases <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>\<subseteq\>X>,<math|<around*|{|f<rsub|1>,\<ldots\>,f<rsub|m>|}>\<subseteq\>F>
+    and <math|<around*|{|l<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>Y>
+    then there exist a unique <math|L\<in\>Hom<around*|(|X|)>> such that
+    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|L<around*|(|e<rsub|i>|)>=l<rsub|i>>.
+  </theorem>
+
+  <\proof>
+    Define <math|L:X\<rightarrow\>Y> by <math|L<around*|(|x|)>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i>\<cdot\>l<rsub|i>>
+    where <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F>
+    is the unique family such that <math|x=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i>\<cdot\>e<rsub|i>>.
+    Then if <math|y,z\<in\>X> and <math|\<alpha\>\<in\>F> then there exist
+    unique <rigid|<math|<around*|{|y<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F>>
+    and <math|<around*|{|z<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F>
+    such that <math|y=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><rsup|>y<rsub|i>\<cdot\>e<rsub|i>>
+    and <math|<rigid|z=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>z<rsub|i>\<cdot\>e<rsub|i>>>.
+    Then\ 
+
+    <\equation*>
+      y+\<alpha\>\<cdot\>z=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><rsup|>y<rsub|i>\<cdot\>e<rsub|i>+\<alpha\>\<cdot\><big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>z<rsub|i>\<cdot\>e<rsub|i>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|y<rsub|i>+\<alpha\>\<cdot\>z<rsub|i>|)>\<cdot\>e<rsub|i>
+    </equation*>
+
+    so that\ 
+
+    <\equation*>
+      L<around*|(|y+\<alpha\>\<cdot\>z|)>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|y<rsub|i>+\<alpha\>\<cdot\>z<rsub|i>|)>\<cdot\>l<rsub|i>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>y<rsub|i>\<cdot\>l<rsub|i>+\<alpha\>\<cdot\><big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>z<rsub|i>\<cdot\>l<rsub|i>=L<around*|(|y|)>+\<alpha\>\<cdot\>L<around*|(|z|)>
+    </equation*>
+
+    Hence\ 
+
+    <\equation*>
+      L\<in\>Hom<around*|(|X,Y|)>
+    </equation*>
+
+    Further as <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have
+    that <math|e<rsub|i>=<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>\<delta\><rsub|k,i>\<cdot\>e<rsub|k>>
+    it follows that
+
+    <\equation*>
+      L<around*|(|e<rsub|i>|)>=<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>><rsup|>\<delta\><rsub|k,i>\<cdot\>l<rsub|k>=l<rsub|i>
+    </equation*>
+
+    Finally if there exist a <math|K\<in\>Hom<around*|(|X,Y|)>> such that
+    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|K<around*|(|e<rsub|i>|)>=l<rsub|i>> then
+    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|K<around*|(|e<rsub|i>|)>=L<around*|(|e<rsub|i>|)>> so that by
+    [theorem: <reference|linear mapping and basis vectors>] <math|L=K>.
+  </proof>
+
   We show now how to associate a matrix with a linear mapping between finite
   dimensional spaces.\ 
 
@@ -24706,7 +24757,7 @@
     <associate|basis dimensionality|<tuple|11.147|?>>
     <associate|basis exist|<tuple|11.144|?>>
     <associate|basis existence (1)|<tuple|11.141|?>>
-    <associate|basis extending linear independent set|<tuple|11.153|?>>
+    <associate|basis extending linear independent set|<tuple|11.142|?>>
     <associate|basis extending linear independent set (1)|<tuple|11.153|?>>
     <associate|basis finite alternative (1)|<tuple|11.138|?>>
     <associate|basis finite alternative (2)|<tuple|11.139|?>>
@@ -24755,9 +24806,9 @@
     <associate|determinant mapping existence of non trivial|<tuple|11.289|?>>
     <associate|determinant non zero determinant mappings are multiples of
     each other|<tuple|11.291|?>>
-    <associate|determinant of a matrix with unit cross|<tuple|11.362|?>>
+    <associate|determinant of a matrix with unit cross|<tuple|11.363|?>>
     <associate|determinant of matrix and linear
-    transformation|<tuple|11.345|?>>
+    transformation|<tuple|11.346|?>>
     <associate|determinant permutation applied on n-linear
     function|<tuple|11.277|?>>
     <associate|determinant skew symetric functions and determinant
@@ -25120,6 +25171,9 @@
     <associate|linear mapping composition|<tuple|11.174|?>>
     <associate|linear mapping composition isomorphism|<tuple|11.176|?>>
     <associate|linear mapping composition properties|<tuple|11.175|?>>
+    <associate|linear mapping definition|<tuple|11.327|?>>
+    <associate|linear mapping definition by its values for the basis
+    vectors|<tuple|11.327|?>>
     <associate|linear mapping dimension theorem|<tuple|11.198|?>>
     <associate|linear mapping dual space|<tuple|11.180|?>>
     <associate|linear mapping equivalence|<tuple|11.167|?>>
@@ -25168,61 +25222,61 @@
     <associate|linear span subsets|<tuple|11.106|?>>
     <associate|linear span({0})|<tuple|11.102|?>>
     <associate|linerar mapping between R^2 and C|<tuple|11.172|?>>
-    <associate|matrix (+)|<tuple|11.363|?>>
-    <associate|matrix Hom(X,Y) is isomorphic|<tuple|11.332|?>>
-    <associate|matrix [+]|<tuple|11.355|?>>
-    <associate|matrix [+] and transpose (1)|<tuple|11.357|?>>
-    <associate|matrix [+] and transpose (2)|<tuple|11.361|?>>
-    <associate|matrix [+a](x)|<tuple|11.353|?>>
-    <associate|matrix [a+]|<tuple|11.352|?>>
-    <associate|matrix adjoint|<tuple|11.365|?>>
+    <associate|matrix (+)|<tuple|11.364|?>>
+    <associate|matrix Hom(X,Y) is isomorphic|<tuple|11.333|?>>
+    <associate|matrix [+]|<tuple|11.356|?>>
+    <associate|matrix [+] and transpose (1)|<tuple|11.358|?>>
+    <associate|matrix [+] and transpose (2)|<tuple|11.362|?>>
+    <associate|matrix [+a](x)|<tuple|11.354|?>>
+    <associate|matrix [a+]|<tuple|11.353|?>>
+    <associate|matrix adjoint|<tuple|11.366|?>>
     <associate|matrix adjoint and det of the matrix of a linear
-    transformation|<tuple|11.367|?>>
-    <associate|matrix adjoint matrix linear transformation|<tuple|11.366|?>>
-    <associate|matrix cofactor|<tuple|11.370|?>>
+    transformation|<tuple|11.368|?>>
+    <associate|matrix adjoint matrix linear transformation|<tuple|11.367|?>>
+    <associate|matrix cofactor|<tuple|11.371|?>>
     <associate|matrix column rank is row rank|<tuple|11.324|?>>
-    <associate|matrix composition|<tuple|11.334|?>>
+    <associate|matrix composition|<tuple|11.335|?>>
     <associate|matrix definition|<tuple|11.314|?>>
-    <associate|matrix delta minus|<tuple|11.354|?>>
-    <associate|matrix determinant|<tuple|11.340|?>>
-    <associate|matrix determinant and adjoint properties|<tuple|11.368|?>>
-    <associate|matrix determinant and delta|<tuple|11.348|?>>
-    <associate|matrix determinant example 1|<tuple|11.341|?>>
-    <associate|matrix determinant of a diagonal matrix|<tuple|11.343|?>>
-    <associate|matrix determinant of transpose|<tuple|11.344|?>>
+    <associate|matrix delta minus|<tuple|11.355|?>>
+    <associate|matrix determinant|<tuple|11.341|?>>
+    <associate|matrix determinant and adjoint properties|<tuple|11.369|?>>
+    <associate|matrix determinant and delta|<tuple|11.349|?>>
+    <associate|matrix determinant example 1|<tuple|11.342|?>>
+    <associate|matrix determinant of a diagonal matrix|<tuple|11.344|?>>
+    <associate|matrix determinant of transpose|<tuple|11.345|?>>
     <associate|matrix determinant permutation rows or
-    columns|<tuple|11.350|?>>
-    <associate|matrix determinant propertie|<tuple|11.347|?>>
+    columns|<tuple|11.351|?>>
+    <associate|matrix determinant propertie|<tuple|11.348|?>>
     <associate|matrix diagonal|<tuple|disgonal matrix|?>>
-    <associate|matrix dterminant is zero|<tuple|11.351|?>>
-    <associate|matrix dterminant shortcut|<tuple|11.373|?>>
+    <associate|matrix dterminant is zero|<tuple|11.352|?>>
+    <associate|matrix dterminant shortcut|<tuple|11.374|?>>
     <associate|matrix identity|<tuple|11.315|?>>
-    <associate|matrix inverse|<tuple|11.335|?>>
-    <associate|matrix inverse is unique|<tuple|11.336|?>>
+    <associate|matrix inverse|<tuple|11.336|?>>
+    <associate|matrix inverse is unique|<tuple|11.337|?>>
     <associate|matrix inverse matrix inverse linear
-    transformation|<tuple|11.339|?>>
-    <associate|matrix inverse of inverse|<tuple|11.338|?>>
-    <associate|matrix invertability condition|<tuple|11.374|?>>
-    <associate|matrix invertable matrix|<tuple|11.337|?>>
-    <associate|matrix linear map F^n F^m|<tuple|11.333|?>>
-    <associate|matrix linear map application|<tuple|11.329|?>>
-    <associate|matrix linear mapping|<tuple|11.327|?>>
-    <associate|matrix mapping is linear|<tuple|11.330|?>>
+    transformation|<tuple|11.340|?>>
+    <associate|matrix inverse of inverse|<tuple|11.339|?>>
+    <associate|matrix invertability condition|<tuple|11.375|?>>
+    <associate|matrix invertable matrix|<tuple|11.338|?>>
+    <associate|matrix linear map F^n F^m|<tuple|11.334|?>>
+    <associate|matrix linear map application|<tuple|11.330|?>>
+    <associate|matrix linear mapping|<tuple|11.328|?>>
+    <associate|matrix mapping is linear|<tuple|11.331|?>>
     <associate|matrix mapping linear map to a matrix is a
-    bijection|<tuple|11.331|?>>
-    <associate|matrix non singular and isomorphism|<tuple|11.346|?>>
+    bijection|<tuple|11.332|?>>
+    <associate|matrix non singular and isomorphism|<tuple|11.347|?>>
     <associate|matrix null|<tuple|11.316|?>>
     <associate|matrix operations|<tuple|11.317|?>>
-    <associate|matrix permutation|<tuple|11.349|?>>
+    <associate|matrix permutation|<tuple|11.350|?>>
     <associate|matrix rank|<tuple|11.325|?>>
     <associate|matrix remove rwows or columns after a specified
-    position|<tuple|11.358|?>>
+    position|<tuple|11.359|?>>
     <associate|matrix rows and columns|<tuple|11.323|?>>
     <associate|matrix semigroup|<tuple|11.320|?>>
     <associate|matrix transpose|<tuple|11.322|?>>
     <associate|matrix vector space|<tuple|11.319|?>>
-    <associate|matrix where first row and colum are unit|<tuple|11.360|?>>
-    <associate|matrix[\<less\>m] and [\<gtr\>m]|<tuple|11.359|?>>
+    <associate|matrix where first row and colum are unit|<tuple|11.361|?>>
+    <associate|matrix[\<less\>m] and [\<gtr\>m]|<tuple|11.360|?>>
     <associate|multi composition|<tuple|11.259|?>>
     <associate|multi function of many arguments (1)|<tuple|11.255|?>>
     <associate|multi induction argument|<tuple|11.254|?>>
@@ -25243,31 +25297,31 @@
     <associate|multi tupple convention and permutations|<tuple|11.247|?>>
     <associate|multi zero function|<tuple|11.257|?>>
     <associate|multilinear mapping sub-space|<tuple|11.258|?>>
-    <associate|nonsingular elementary transformations|<tuple|11.379|?>>
-    <associate|nonsingular transformation|<tuple|11.375|?>>
-    <associate|nonsingular transformation L(n)|<tuple|11.383|?>>
+    <associate|nonsingular elementary transformations|<tuple|11.380|?>>
+    <associate|nonsingular transformation|<tuple|11.376|?>>
+    <associate|nonsingular transformation L(n)|<tuple|11.384|?>>
     <associate|nonsingular transformation L^n composition
-    (1)|<tuple|11.385|?>>
+    (1)|<tuple|11.386|?>>
     <associate|nonsingular transformation L^n composition
-    (2)|<tuple|11.386|?>>
-    <associate|nonsingular transformation composition|<tuple|11.382|?>>
+    (2)|<tuple|11.387|?>>
+    <associate|nonsingular transformation composition|<tuple|11.383|?>>
     <associate|nonsingular transformation composition and composed
-    of|<tuple|11.387|?>>
-    <associate|nonsingular transformation group|<tuple|11.376|?>>
+    of|<tuple|11.388|?>>
+    <associate|nonsingular transformation group|<tuple|11.377|?>>
     <associate|nonsingular transformation is composed of elementary
-    transformations|<tuple|11.388|?>>
+    transformations|<tuple|11.389|?>>
     <associate|nonsingular transformation is composed of nonsingular
-    elementary transformations|<tuple|11.389|?>>
+    elementary transformations|<tuple|11.390|?>>
     <associate|nonsingular transformations composition of B's
-    (1)|<tuple|11.380|?>>
+    (1)|<tuple|11.381|?>>
     <associate|nonsingular transformations composition of B's
-    (2)|<tuple|11.381|?>>
+    (2)|<tuple|11.382|?>>
     <associate|nonsingular transformations elementary
-    predefinition|<tuple|11.377|?>>
+    predefinition|<tuple|11.378|?>>
     <associate|nonsingular transformations elementary
-    properties|<tuple|11.378|?>>
+    properties|<tuple|11.379|?>>
     <associate|nonsingular transformations extend a elementary
-    transformation|<tuple|11.384|?>>
+    transformation|<tuple|11.385|?>>
     <associate|permutation Pn|<tuple|11.208|?>>
     <associate|permutation Pn is a group|<tuple|11.214|?>>
     <associate|permutation Pn is finite|<tuple|11.213|?>>
