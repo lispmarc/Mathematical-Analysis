@@ -2192,11 +2192,11 @@
   We are now ready to introduce polynomial linear operators.
 
   <\definition>
-    Let <math|n\<in\>\<bbb-N\><rsub|0>>, <math|X> a vector space over
-    <math|\<bbb-C\>>, <math|L\<in\>Hom<around*|(|X|)>> and
-    <math|p\<in\>\<cal-P\><rsub|n>> a polynomial of order <math|n> [see
-    definition: <reference|fundamental polynomal>] then
-    <math|p<around*|[|L|]>:X\<rightarrow\>X> is defined by\ 
+    <label|spectral polynomial operator>Let <math|n\<in\>\<bbb-N\><rsub|0>>,
+    <math|X> a vector space over <math|\<bbb-C\>>,
+    <math|L\<in\>Hom<around*|(|X|)>> and <math|p\<in\>\<cal-P\><rsub|n>> a
+    polynomial of order <math|n> [see definition: <reference|fundamental
+    polynomal>] then <math|p<around*|[|L|]>:X\<rightarrow\>X> is defined by\ 
 
     <\equation*>
       p<around*|[|L|]><around*|(|x|)>=<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\>L<rsup|i><around*|(|x|)>
@@ -2932,12 +2932,12 @@
   operator is orthonormal.
 
   <\theorem>
-    <label|spectral Schur's theorem><index|Schur's Theorem>Let
-    <math|n\<in\>\<bbb-N\>>, <math|X> a finite dimensional vector space over
-    <math|\<bbb-C\>> with <math|dim<around*|(|X|)>=n> [hence <math|X> is not
-    trivial] and <math|L\<in\>Hom<around*|(|X|)>> then there exist a
-    orthonormal basis <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> for
-    <math|X> such that <math|\<cal-M\><around*|(|L;E,E|)>> is a upper
+    <label|spectral Schur's theorem><index|Schur's Theorem><dueto|Schur's
+    Theorem>Let <math|n\<in\>\<bbb-N\>>, <math|X> a finite dimensional vector
+    space over <math|\<bbb-C\>> with <math|dim<around*|(|X|)>=n> [hence
+    <math|X> is not trivial] and <math|L\<in\>Hom<around*|(|X|)>> then there
+    exist a orthonormal basis <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>>
+    for <math|X> such that <math|\<cal-M\><around*|(|L;E,E|)>> is a upper
     triangular matrix.
   </theorem>
 
@@ -3733,12 +3733,414 @@
       we have ><around*|\<langle\>|L<around*|(|L<rsup|\<ast\>><around*|(|x|)>|)>,x|\<rangle\>>=<around*|\<langle\>|L<rsup|\<ast\>><around*|(|L<around*|(|x|)>|)>,x|\<rangle\>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>x\<in\>X<text|
       we have ><around*|\<langle\>|L<rsup|\<ast\>><around*|(|x|)>,L<rsup|\<ast\>><around*|(|x|)>|\<rangle\>>=<around*|\<langle\>|L<around*|(|x|)>,<around*|(|L<rsup|\<ast\>>|)><rsup|\<ast\>><around*|(|x|)>|\<rangle\>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>x\<in\>X<text|
       we have ><text|><around*|\<langle\>|L<rsup|\<ast\>><around*|(|x|)>,L<rsup|\<ast\>><around*|(|x|)>|\<rangle\>>=<around*|\<langle\>|L<around*|(|x|)>,L<around*|(|x|)>|\<rangle\>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>x\<in\>X<text|
-      we have ><around*|\<\|\|\>|L<rsup|\<ast\>><around*|(|x|)>|\<\|\|\>><rsup|2>=<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsup|2>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>x\<in\>X<text|
-      we have ><around*|\<\|\|\>|L<rsup|\<ast\>><around*|(|x|)>|\<\|\|\>>=<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>>>>>>
+      we have ><around*|\<\|\|\>|L<rsup|\<ast\>><around*|(|x|)>|\<\|\|\>><rsup|2>=<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsup|2>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|0\<leqslant\><around*|\<\|\|\>||\<\|\|\>>\<wedge\><text|[theorem:
+      <reference|complex square operator is a
+      bijection>]>>>|<cell|\<forall\>x\<in\>X<text| we have
+      ><around*|\<\|\|\>|L<rsup|\<ast\>><around*|(|x|)>|\<\|\|\>>=<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>>>>>>
     </eqnarray*>
 
     proving the theorem.
   </proof>
+
+  The following shows the relation between diagonalization of the matrix of a
+  linear mapping and eigen values.
+
+  <\theorem>
+    <label|spectral orthonormalization and diagonlization>Let
+    <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
+    be a real [or complex] finite dimensional inner product space with
+    <math|dim<around*|(|X|)>=n\<in\>\<bbb-N\>> and
+    <math|L\<in\>Hom<around*|(|X|)>> then the following are equivalent:
+
+    <\enumerate>
+      <item>There exist a orthonormal basis
+      <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> of <math|X> such
+      that <math|\<cal-M\><around*|(|L;E,E|)>> is diagonal.
+
+      <item><math|X> has a orthonormal basis
+      <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> such that
+      <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> <math|e<rsub|i>> is
+      a eigenvector of <math|L>.
+    </enumerate>
+
+    Further if (1) or (2) is true the the eigenvalue of <math|e<rsub|i>> is
+    <math|\<cal-M\><around*|(|L;E,E|)><rsub|i,i>>.
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|1\<Rightarrow\>2>>As there exist a
+      <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> such that
+      <math|\<forall\>i,j\<in\><around*|{|1,\<ldots\>,n|}>> with
+      <math|i\<neq\>j> we have <rigid|<math|\<cal-M\><around*|(|L;E,E|)><rsub|i,j>=0>>.
+      Hence given <math|i\<in\><around*|{|1,\<ldots\>,n|}>> we have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|L<around*|(|e<rsub|i>|)>>|<cell|=>|<cell|<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>\<cal-M\><around*|(|L;E,E|)><rsub|k,i>e<rsub|k>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>\\k\<neq\>i>\<cal-M\><around*|(|L;E,E|)><rsub|k,i>e<rsub|k>+<big|sum><rsub|k\<in\><around*|{|i|}>>\<cal-M\><around*|(|L;E,E|)><rsub|k,i>e<rsub|k>>>|<row|<cell|>|<cell|=>|<cell|\<cal-M\><around*|(|L;E,E|)><rsub|i,i>\<cdot\>e<rsub|i>>>>>
+      </eqnarray*>
+
+      proving that <math|e<rsub|i>> is a eigen vector of <math|L> withe eigen
+      value <math|\<cal-M\><around*|(|L;E,E|)><rsub|i,i>>
+
+      <item*|<math|2\<Rightarrow\>1>>As <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+      <math|e<rsub|i>> is a eigen vector of <math|L>, hence there exist a
+      <math|\<lambda\><rsub|i>\<in\>\<bbb-K\>> such that
+      <math|L<around*|(|e<rsub|i>|)>=\<lambda\><rsub|i>\<cdot\>e<rsub|i>>.
+      Hence\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|L<around*|(|e<rsub|i>|)>>|<cell|=>|<cell|\<lambda\><rsub|i>\<cdot\>e<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k=1><rsup|n>\<lambda\><rsub|k>\<cdot\>\<delta\><rsub|i,k>\<cdot\>e<rsub|k>>>>>
+      </eqnarray*>
+
+      which proves by [definition: <reference|matrix linear mapping>] that
+      <math|\<forall\>i,k\<in\><around*|{|1,\<ldots\>,n|}>>
+      <math|\<cal-M\><around*|(|L;E,E|)><rsub|k,i>=\<lambda\><rsub|k>\<cdot\>\<delta\><rsub|i,k>>
+      proving that <math|\<cal-M\><around*|(|L;E,E|)>> is diagonal.
+    </description>
+  </proof>
+
+  We prove now the Complex Spectral Theorem which proves that the matrix of a
+  normal operator can be diagonalize or equivalent that there exist a basis
+  of <math|X> of eigenvectors for the normal operators.
+
+  <\theorem>
+    <label|spectral complex spectral theorem><index|Spectral Theorem
+    (Complex)>Let <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
+    be complex finite dimensional inner product space with
+    <math|<rigid|dim<around*|(|X|)>=n\<in\>\<bbb-N\>>>and
+    <math|L\<in\>Hom<around*|(|X|)>> the the following are equivalent
+
+    <\enumerate>
+      <item><math|L> is normal
+
+      <item>There exist a orthonormal basis
+      <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> of <math|X> such
+      that <math|\<cal-M\><around*|(|L;E,E|)>> is diagonal.
+
+      <item><math|X> has a orthonormal basis
+      <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> such that
+      <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> <math|e<rsub|i>> is
+      a eigen vector of <math|L>.
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|1\<Rightarrow\>2>>Using Schur's theorem [see theorem:
+      <reference|spectral Schur's theorem>] there exist a orthonormal basis
+      <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> for <math|X> such
+      that <math|M=\<cal-M\><around*|(|L;E,E|)>> is a upper triangular
+      matrix. We use now a induction argument to prove that\ 
+
+      <\equation>
+        <label|eq 18.24.148>\<forall\>m\<in\><around*|{|1,\<ldots\>,n|}><text|
+        we have >\<forall\>i\<in\><around*|{|1,\<ldots\>,m|}>\<wedge\>\<forall\>j\<in\><around*|{|i+1,\<ldots\>,n|}><text|
+        we have >M<rsub|i,j>=0
+      </equation>
+
+      So define\ 
+
+      <\equation*>
+        S<rsub|n>=<around*|{|m\<in\>\<bbb-N\>\|<text|If >m\<leqslant\>n<text|
+        then >\<forall\>i\<in\><around*|{|1,\<ldots\>,m|}>\<wedge\>\<forall\>j\<in\><around*|{|i+1,\<ldots\>,n|}><text|
+        >M<rsub|i,j>=0|}>
+      </equation*>
+
+      then we have:\ 
+
+      <\description>
+        <item*|<math|1\<in\>S<rsub|n>>>As <math|M> is upper triangular we
+        have
+
+        <\equation*>
+          L<around*|(|e<rsub|1>|)>=<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>M<rsub|k,1>\<cdot\>e<rsub|k>=M<rsub|1,1>+<big|sum><rsub|k\<in\><around*|{|2,\<ldots\>,n|}>>M<rsub|k,1>\<cdot\>e<rsub|k>=M<rsub|1,1>+0=M<rsub|1,1>\<cdot\>e<rsub|1>
+        </equation*>
+
+        so that <math|<around*|\<\|\|\>|L<around*|(|e<rsub|1>|)>|\<\|\|\>><rsup|2>=<around*|\<langle\>|L<around*|(|e<rsub|1>|)>,L<around*|(|e<rsub|1>|)>|\<rangle\>>=<around*|\<langle\>|M<rsub|1,1>\<cdot\>e<rsub|1>,M<rsub|1,1>\<cdot\>e<rsub|1>|\<rangle\>>=M<rsub|1,1>\<cdot\><wide|M<rsub|1,1>|\<wide-bar\>>\<cdot\><around*|\<langle\>|e<rsub|1>,e<rsub|1>|\<rangle\>>=<around*|\||M<rsub|1,1>|\|><rsup|2>>
+        proving that\ 
+
+        <\equation>
+          <label|eq 18.25.148><around*|\<\|\|\>|L<around*|(|e<rsub|1>|)>|\<\|\|\>><rsup|2>=<around*|\||M<rsub|1,1>|\|><rsup|2>
+        </equation>
+
+        Further we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|\<\|\|\>|L<rsup|\<ast\>><around*|(|e<rsub|1>|)>|\<\|\|\>><rsup|2>>|<cell|=>|<cell|<around*|\<langle\>|L<rsup|\<ast\>><around*|(|e<rsub|1>|)>,L<rsup|\<ast\>><around*|(|e<rsub|1>|)>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|<big|sum><rsub|k=1><rsup|n>\<cal-M\><around*|(|L<rsup|\<ast\>>;E,E|)><rsub|k,1>\<cdot\>e<rsub|k>,<big|sum><rsub|l=1><rsup|n>\<cal-M\><around*|(|L<rsup|\<star\>>;E,E|)><rsub|l,1>\<cdot\>e<rsub|l>|\<rangle\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|inner matrix of adjoint
+          operator>]>>>|<cell|<around*|\<langle\>|<big|sum><rsub|k=1><rsup|n>\<cal-M\><around*|(|L;E,E|)><rsup|H><rsub|k,1>\<cdot\>e<rsub|k>,<big|sum><rsub|l=1><rsup|n>\<cal-M\><around*|(|L;E,E|)><rsup|H><rsub|l,1>\<cdot\>e<rsub|l>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|<big|sum><rsub|k=1><rsup|n><wide|\<cal-M\><around*|(|L;E,E|)><rsub|1,k>|\<wide-bar\>>\<cdot\>e<rsub|k>,<big|sum><rsub|l=1><rsup|n><wide|\<cal-M\><around*|(|L;E,E|)><rsub|1,l>|\<wide-bar\>>\<cdot\>e<rsub|l>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|<big|sum><rsub|k=1><rsup|n><wide|M<rsub|1,k>|\<wide-bar\>>\<cdot\>e<rsub|k>,<big|sum><rsub|l=1><rsup|n><wide|M<rsub|1,l>|\<wide-bar\>>\<cdot\>e<rsub|l>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k=1><rsup|n><wide|M<rsub|1,k>|\<wide-bar\>>\<cdot\><around*|\<langle\>|e<rsub|k>,<big|sum><rsub|l=1><rsup|n><wide|M<rsub|1,l>|\<wide-bar\>>\<cdot\>e<rsub|l>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k=1><rsup|n><wide|M<rsub|1,k>|\<wide-bar\>>\<cdot\><around*|(|<big|sum><rsub|l=1><rsup|n><wide|<wide|M<rsub|1,l>|\<wide-bar\>>|\<wide-bar\>>\<cdot\><around*|\<langle\>|e<rsub|k>,e<rsub|l>|\<rangle\>>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k=1><rsup|n><wide|M<rsub|1,k>|\<wide-bar\>>\<cdot\><around*|(|<big|sum><rsub|l=1><rsup|n>M<rsub|1,l>\<cdot\><around*|\<langle\>|e<rsub|k>,e<rsub|l>|\<rangle\>>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k=1><rsup|n><wide|M<rsub|1,k>|\<wide-bar\>>\<cdot\><around*|(|<big|sum><rsub|l=1><rsup|n>M<rsub|1,l>\<cdot\>\<delta\><rsub|k,l>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k=1><rsup|n><wide|M<rsub|1,k>|\<wide-bar\>>\<cdot\>M<rsub|1,k>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k=1><rsup|n><around*|\||M<rsub|1,k>|\|><rsup|2>>>>>
+        </eqnarray*>
+
+        proving that\ 
+
+        <\equation>
+          <label|eq 18.26.148><around*|\<\|\|\>|L<rsup|\<ast\>><around*|(|e<rsub|1>|)>|\<\|\|\>><rsup|2>=<big|sum><rsub|k=1><rsup|n><around*|\||M<rsub|1,k>|\|><rsup|2>
+        </equation>
+
+        As <math|L> is normal we have by [theorem: <reference|spectral normal
+        operator alternative>] we have that
+        <math|<around*|\<\|\|\>|L<around*|(|e<rsub|1>|)>|\<\|\|\>>=<around*|\<\|\|\>|L<around*|(|e<rsub|1>|)>|\<\|\|\>>>
+        so that by [eqs: <reference|eq 18.25.148> and <reference|eq
+        18.26.148>] we have\ 
+
+        <\equation*>
+          <around*|\||M<rsub|1,1>|\|><rsup|2>=<big|sum><rsub|k=1><rsup|n><around*|\||M<rsub|1,k>|\|><rsup|2>=<around*|\||M<rsub|1,1>|\|><rsup|2>+<big|sum><rsub|k\<in\><around*|{|2,\<ldots\>,n|}>><around*|\||M<rsub|1,k>|\|><rsup|2>
+        </equation*>
+
+        so that <math|><math|<big|sum><rsub|k\<in\><around*|{|2,\<ldots\>,n|}>><around*|\||M<rsub|1,k>|\|><rsup|2>=0>
+        hence <math|\<forall\>k\<in\><around*|{|2,\<ldots\>,n|}>> we have
+        <math|M<rsub|1,k>=0>. In other words
+        <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,1|}>> we have
+        <math|\<forall\>j\<in\><around*|{|1+1,\<ldots\>,n|}>> we have
+        <math|M<rsub|i,j>=0>. Hence it is proved that
+        <math|1\<in\>S<rsub|n>>.
+
+        <item*|<math|m\<in\>S<rsub|n>\<Rightarrow\>m+a\<in\>S<rsub|n>>>If
+        <math|m+1\<leqslant\>n> then <math|m\<less\>n> and as <math|m\<in\>S>
+        we have that\ 
+
+        <\equation>
+          <label|eq 18.27.148>\<forall\>i\<in\><around*|{|1,\<ldots\>,m|}><text|
+          that >\<forall\>j\<in\><around*|{|m+1,\<ldots\>,n|}><text|
+          >M<rsub|i,j>=0
+        </equation>
+
+        Further we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|L<around*|(|e<rsub|m+1>|)>>|<cell|=>|<cell|<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>M<rsub|k,m+1>\<cdot\>e<rsub|k>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,m+1|}>>M<rsub|k,m+1>\<cdot\>e<rsub|k>+<big|sum><rsub|k\<in\><around*|{|m+2,\<ldots\>,n|}>>M<rsub|k,m+1>\<cdot\>e<rsub|k>>>|<row|<cell|>|<cell|\<equallim\><rsub|M<text|
+          is upper triangular>>>|<cell|<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,m+1|}>>M<rsub|k,m+1>\<cdot\>e<rsub|k>+0>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,m+1|}>>M<rsub|k,m+1>\<cdot\>e<rsub|k>>>|<row|<cell|>|<cell|=>|<cell|M<rsub|m+1,m+1>\<cdot\>e<rsub|m+1>+<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,m|}>>M<rsub|k,m+1>\<cdot\>e<rsub|k>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 18.27.148>]>>>|<cell|M<rsub|m+1,m+1>\<cdot\>e<rsub|m+1>+0>>>>
+        </eqnarray*>
+
+        so that
+
+        <\equation*>
+          <around*|\<\|\|\>|L<around*|(|e<rsub|m+1>|)>|\<\|\|\>><rsup|2>=<around*|\<langle\>|L<around*|(|e<rsub|m+1>|)>,L<around*|(|e<rsub|m+1>|)>|\<rangle\>>=<around*|\<langle\>|M<rsub|m+1,m+1>\<cdot\>e<rsub|m+1>,M<rsub|m+1,m+1>\<cdot\>e<rsub|m+1><rsub|>|\<rangle\>>=<around*|\||M<rsub|m+1,m+1>|\|><rsup|2>
+        </equation*>
+
+        Hence we have\ 
+
+        <\equation>
+          <label|eq 18.28.148><around*|\<\|\|\>|L<around*|(|e<rsub|m+1>|)>|\<\|\|\>><rsup|2>=<around*|\||M<rsub|m+1,m+1>|\|><rsup|2>
+        </equation>
+
+        Further we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|\<\|\|\>|L<rsup|\<ast\>><around*|(|e<rsub|m+1>|)>|\<\|\|\>><rsup|2>>|<cell|=>|<cell|<around*|\<langle\>|L<rsup|\<ast\>><around*|(|e<rsub|m+1>|)>,L<rsup|\<ast\>><around*|(|e<rsub|m+1>|)>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|<big|sum><rsub|k=1><rsup|n>\<cal-M\><around*|(|L<rsup|\<star\>>;E,E|)><rsub|k,m+1>\<cdot\>e<rsub|k>,<big|sum><rsub|l=1><rsup|n>\<cal-M\><around*|(|L<rsup|\<star\>>;E,E|)><rsub|l,m+1>\<cdot\>e<rsub|l>|\<rangle\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|inner matrix of adjoint
+          operator>]>>>|<cell|<around*|\<langle\>|<big|sum><rsub|k=1><rsup|n>\<cal-M\><around*|(|L;E,E|)><rsup|H><rsub|k,m+1>\<cdot\>e<rsub|k>,<big|sum><rsub|l=1><rsup|n>\<cal-M\><around*|(|L;E,E|)><rsup|H><rsub|l,m+1>\<cdot\>e<rsub|l>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|<big|sum><rsub|k=1><rsup|n><wide|\<cal-M\><around*|(|L;E,E|)><rsub|m+1,k>|\<wide-bar\>>\<cdot\>e<rsub|k>,<big|sum><rsub|l=1><rsup|n><wide|\<cal-M\><around*|(|L;E,E|)><rsub|m+1,l>|\<wide-bar\>>\<cdot\>e<rsub|l>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|<big|sum><rsub|k=1><rsup|n><wide|M<rsub|m+1,k>|\<wide-bar\>>\<cdot\>e<rsub|k>,<big|sum><rsub|l=1><rsup|n><wide|M<rsub|m+1,l>|\<wide-bar\>>\<cdot\>e<rsub|l>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k=1><rsup|n><wide|M<rsub|m+1,k>|\<wide-bar\>>\<cdot\><around*|\<langle\>|e<rsub|k>,<big|sum><rsub|l=1><rsup|n><wide|M<rsub|m+1,l>|\<wide-bar\>>\<cdot\>e<rsub|l>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k=1><rsup|n><wide|M<rsub|m+1,k>|\<wide-bar\>>\<cdot\><big|sum><rsub|l=1><rsup|n><wide|<wide|M<rsub|m+1,l>|\<wide-bar\>>|\<wide-bar\>>\<cdot\><around*|\<langle\>|e<rsub|k>,e<rsub|l>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k=1><rsup|n><wide|M<rsub|m+1,k>|\<wide-bar\>>\<cdot\><big|sum><rsub|l=1><rsup|n>M<rsub|m+1,l>\<cdot\>\<delta\><rsub|k,l>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k=1><rsup|n><wide|M<rsub|m+1,k>|\<wide-bar\>>\<cdot\>M<rsub|m+1,k>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k=1><rsup|n><around*|\||M<rsub|m+1,k>|\|><rsup|2>>>>>
+        </eqnarray*>
+
+        proving that\ 
+
+        <\equation>
+          <label|eq 18.29.148><around*|\<\|\|\>|L<rsup|\<star\>><around*|(|e<rsub|m+1>|)>|\<\|\|\>><rsup|2>=<big|sum><rsub|k=1><rsup|n><around*|\||M<rsub|m+1,k>|\|><rsup|2>
+        </equation>
+
+        As <math|L> is normal we have by [theorem: <reference|spectral normal
+        operator alternative>] we have that
+        <math|<around*|\<\|\|\>|L<around*|(|e<rsub|m+1>|)>|\<\|\|\>>=<around*|\<\|\|\>|L<around*|(|e<rsub|m+1>|)>|\<\|\|\>>>
+        we have by [eqs: <reference|eq 18.28.148> and <reference|eq
+        18.29.148>] that\ 
+
+        <\equation*>
+          <around*|\||M<rsub|m+1,m+1>|\|><rsup|2>=<big|sum><rsub|k=1><rsup|n><around*|\||M<rsub|m+1,k>|\|><rsup|2>=<around*|\||M<rsub|m+1,m+1>|\|><rsup|2>+<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|m+1|}>><around*|\||M<rsub|m+1,k>|\|><rsup|2>
+        </equation*>
+
+        so that <math|><math|<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|m+1|}>><around*|\||M<rsub|m+1,k>|\|><rsup|2>=0>,
+        hence <math|\<forall\>k\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|m+1|}>>
+        <math|M<rsub|m+1,k>=0>. Hence <math|\<forall\>j\<in\><around*|{|<around*|(|m+1|)>+1,\<ldots\>,n|}>>
+        we have <math|M<rsub|m+1,j>=0> which combined with [eq: <reference|eq
+        18.27.148>] proves that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,m+1|}>>
+        that <math|\<forall\>j\<in\><around*|{|<around*|(|m+1|)>+1,\<ldots\>,i|}>>
+        <math|M<rsub|i,j>=0>. Hence we have proved that
+        <math|m+1\<in\>S<rsub|n>>.
+      </description>
+
+      Mathematical induction proves that <math|S<rsub|n>=\<bbb-N\>> hence for\ 
+
+      <\equation>
+        <label|eq 18.130.148>\<forall\>m\<in\><around*|{|1,\<ldots\>,n|}><text|
+        we have >\<forall\>i\<in\><around*|{|1,\<ldots\>,m|}><text| that
+        >\<forall\>j\<in\><around*|{|m+1,\<ldots\>,i|}><text| we have
+        >M<rsub|i,j>=0
+      </equation>
+
+      Let <math|k,l\<in\><around*|{|1,\<ldots\>,n|}>> with <math|k\<neq\>l>
+      then we have either:
+
+      <\description>
+        <item*|<math|k\<less\>l>>As <math|k\<in\><around*|{|1,\<ldots\>,n|}>>,
+        <math|k\<in\><around*|{|1,\<ldots\>,k|}>> and
+        <math|k+1\<leqslant\>l\<Rightarrow\>l\<in\><around*|{|k+1,\<ldots\>,n|}>>
+        it follows that <math|M<rsub|k,l>=0>.
+
+        <item*|<math|l\<less\>k>>As <math|l\<in\><around*|{|1,\<ldots\>,n|}>>,
+        <math|l\<in\><around*|{|1,\<ldots\>,l|}>> and
+        <math|l+1\<leqslant\>k\<Rightarrow\>k\<in\><around*|{|l+1,\<ldots\>,n|}>>
+        it follows that <math|M<rsub|k,l>=0>.
+      </description>
+
+      which proves that\ 
+
+      <\equation*>
+        \<cal-M\><around*|(|L;E,E|)>=M<text| is diagonal.>
+      </equation*>
+
+      <item*|<math|2\<Rightarrow\>1>>As there exist a basis
+      <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> such that
+      <math|\<cal-M\><around*|(|L;E,E|)>> is diagonal. Let
+      <math|i,j\<in\><around*|{|1,\<ldots\>,n|}>> with <math|i\<neq\>j> then
+      <math|\<cal-M\><around*|(|L<rsup|\<ast\>>;E,E|)><rsub|i,j>\<equallim\><rsub|<text|[theorem:
+      <reference|inner matrix of adjoint operator>]>>\<cal-M\><around*|(|L;E,E|)><rsup|H><rsub|i,j>=<wide|\<cal-M\><around*|(|L;E,E|)><rsub|j,i>|\<wide-bar\>>=<wide|0|\<wide-bar\>>=0<wide||\<wide-bar\>>>
+      so that <math|\<cal-M\><around*|(|L<rsup|\<ast\>>;E,E|)>> is also
+      diagonal. Let <math|i\<in\><around*|{|1,\<ldots\>,n|}>> then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|L\<circ\>L<rsup|\<ast\>>|)><around*|(|e<rsub|i>|)>>|<cell|=>|<cell|L<around*|(|L<rsup|\<ast\>><around*|(|e<rsub|i>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|<big|sum><rsub|k=1><rsup|n>\<cal-M\><around*|(|L<rsup|\<ast\>>;E,E|)><rsub|k,i>\<cdot\>e<rsub|k>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|\<cal-M\><around*|(|L<rsup|\<ast\>>;E,E|)><rsub|i,i>\<cdot\>e<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|\<cal-M\><around*|(|L<rsup|\<ast\>>;E,E|)>\<cdot\>L<around*|(|e<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|\<cal-M\><around*|(|L<rsup|\<ast\>>;E,E|)>\<cdot\><around*|(|<big|sum><rsub|k=1><rsup|n>\<cal-M\><around*|(|L;E,E|)><rsub|k,i>\<cdot\>e<rsub|k>|)>>>|<row|<cell|>|<cell|=>|<cell|\<cal-M\><around*|(|L<rsup|\<ast\>>;E,E|)>\<cdot\>\<cal-M\><around*|(|L;E,E|)><rsub|i,i>\<cdot\>e<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|\<cal-M\><around*|(|L;E,E|)>\<cdot\>\<cal-M\><around*|(|L<rsup|\<ast\>>;E,E|)><rsub|i,i>\<cdot\>e<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|\<cal-M\><around*|(|L;E,E|)>\<cdot\><big|sum><rsub|k=1><rsup|n>\<cal-M\><around*|(|L<rsup|\<ast\>>;E,E|)><rsub|k,i>\<cdot\>e<rsub|k>>>|<row|<cell|>|<cell|=>|<cell|\<cal-M\><around*|(|L;E,E|)>\<cdot\>L<rsup|\<ast\>><around*|(|e<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|L<rsup|\<star\>><around*|(|\<cal-M\><around*|(|L;E,E|)>\<cdot\>e<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|L<rsup|\<ast\>><around*|(|<big|sum><rsub|k=1><rsup|n>\<cal-M\><around*|(|L;E,E|)><rsub|k,i>\<cdot\>e<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|L<rsup|\<ast\>><around*|(|L<around*|(|e<rsub|i>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|L<rsup|\<star\>>\<circ\>L|)><around*|(|e<rsub|i>|)>>>>>
+      </eqnarray*>
+
+      So that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have
+
+      <\equation>
+        <label|eq 18.31.148><around*|(|L\<circ\>L<rsup|\<ast\>>|)><around*|(|e<rsub|i>|)>=<around*|(|L<rsup|\<ast\>>\<circ\>L|)><around*|(|e<rsub|i>|)>
+      </equation>
+
+      Let <math|x\<in\>X> then we have that
+      <math|x=<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\>e<rsub|i>>
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|L\<circ\>L<rsup|\<ast\>>|)><around*|(|x|)>>|<cell|=>|<cell|<around*|(|L\<circ\>L<rsup|\<ast\>>|)><around*|(|<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\>e<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\><around*|(|L\<circ\>L<rsup|\<ast\>>|)><around*|(|e<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\><around*|(|L<rsup|\<ast\>>\<circ\>L|)><around*|(|e<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|L<rsup|\<ast\>>\<circ\>L<rsup|>|)><around*|(|<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\>e<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|L<rsup|\<ast\>>\<circ\>L<rsup|>|)><around*|(|x|)>>>>>
+      </eqnarray*>
+
+      proving that <math|L\<circ\>L<rsup|\<ast\>>=L<rsup|\<ast\>>\<circ\>L>.
+      Hence <math|L> is normal.
+
+      <item*|<math|2\<Leftrightarrow\>3>>This is actually proved in [theorem:
+      <reference|spectral orthonormalization and diagonlization>]
+    </description>
+  </proof>
+
+  <\corollary>
+    <label|spectral theorema diagonalization>Let
+    <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
+    be a complete finite dimensional inner product spaces with
+    <math|dim<around*|(|X|)>=n\<in\>\<bbb-N\>>,
+    <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> a orthonormal basis
+    of <math|X>, <math|L\<in\>Hom<around*|(|X|)>> a normal operator then
+    there exist a unary operator <math|U\<in\>Hom<around*|(|X|)>> such that
+    <math|\<cal-M\><around*|(|U<rsup|\<ast\>>\<circ\>L\<circ\>U;E,E|)>> is a
+    diagonal matrix.
+  </corollary>
+
+  <\proof>
+    Using the Complex Spectral Theorem there exist a orthonormal basis
+    <math|F=<around*|{|f<rsub|1>,\<ldots\>,f<rsub|n>|}>> such that
+    <math|\<cal-M\><around*|(|L;F,F|)>> is diagonal. By [theorem:
+    <reference|spectral operator mapping bases is unitary>] there exist a
+    unitary mapping <math|U\<in\>Hom<around*|(|X|)>> such that
+    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|U<around*|(|e<rsub|i>|)>=f<rsub|i>>. Then we have
+    <math|\<forall\>i,j\<in\><around*|{|1,\<ldots\>,n|}>> that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<cal-M\><around*|(|U<rsup|\<ast\>>\<circ\>L\<circ\>U;E,E|)><rsub|i,j>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|inner matrix of linear mapping>]>>>|<cell|<around*|\<langle\>|<around*|(|U<rsup|\<ast\>>\<circ\>L\<circ\>U|)><around*|(|e<rsub|j>|)>,e<rsub|i>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|U<rsup|\<ast\>><around*|(|L<around*|(|U<around*|(|e<rsub|j>|)>|)>|)>,e<rsub|i>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|L<around*|(|U<around*|(|e<rsub|j>|)>|)>,<around*|(|U<rsup|\<ast\>>|)><rsup|\<ast\>><around*|(|e<rsub|i>|)>|\<rangle\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|inner adjoint of adjoint>]>>>|<cell|<around*|\<langle\>|L<around*|(|U<around*|(|e<rsub|j>|)>|)>,U<around*|(|e<rsub|i>|)>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|L<around*|(|f<rsub|j>|)>,f<rsub|i>|\<rangle\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|inner matrix of linear mapping>]>>>|<cell|\<cal-M\><around*|(|L;F,F|)><rsub|i,j>>>>>
+    </eqnarray*>
+
+    so that <math|\<cal-M\><around*|(|U<rsup|\<ast\>>\<circ\>L\<circ\>U;E,E|)>=\<cal-M\><around*|(|L;F;F|)>>
+    proving that <math|\<cal-M\><around*|(|U<rsup|\<ast\>>\<circ\>L\<circ\>U;E,E|)>>
+    is diagonal.
+  </proof>
+
+  Having proved the spectral theorem in the complex case we proceed now to
+  prove the spectral theorem for the real case/ First we need a little lemma.
+
+  <\lemma>
+    <label|lemma 18.95.148>Let <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
+    be a real [or complex] finite dimensional inner product space,
+    <math|<rigid|L\<in\>Hom<around*|(|X|)>>> a self-adjoint linear operator,
+    <math|b,c\<in\>\<bbb-R\>> such that <math|b<rsup|2>\<less\>4\<cdot\>c>
+    then <math|L<rsup|2>+b\<cdot\>L+c\<cdot\>Id<rsub|X>> is a isomorphism.
+  </lemma>
+
+  <\proof>
+    By [definition: <reference|spectral polynomial operator>] it follows that
+    <math|L<rsup|2>+b\<cdot\>L+c\<cdot\>Id<rsub|X>\<in\>Hom<around*|(|X|)>>
+    so that using [theorem: <reference|linear mapping injective
+    transformation>] we only have to prove that
+    <math|L<rsup|2>+\<beta\>\<cdot\>L+c\<cdot\>Id<rsub|X>> is injective. For
+    every <math|x\<in\>X> with <math|x\<neq\>0> we have using the Cauchy
+    Schwarz inequality [see theorem: <reference|inner Schwartz in equality>]
+    we have\ 
+
+    <\equation*>
+      -b\<cdot\><around*|\<langle\>|L<around*|(|x|)>,x|\<rangle\>>=<around*|\<langle\>|-b\<cdot\>L<around*|(|x|)>,x|\<rangle\>>\<leqslant\><around*|\<\|\|\>|-b\<cdot\>L<around*|(|x|)>|\<\|\|\>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>>=<around*|\||b|\|>\<cdot\><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>>
+    </equation*>
+
+    or
+
+    <\equation>
+      <label|eq 18.32.148>-<around*|\||b|\|>\<cdot\><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>>\<leqslant\>b\<cdot\><around*|\<langle\>|L<around*|(|x|)>,x|\<rangle\>>
+    </equation>
+
+    Further\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<langle\>|<around*|(|L<rsup|2>+b\<cdot\>L+c\<cdot\>Id<rsub|x>|)><around*|(|x|)>,x|\<rangle\>>>|<cell|=>|<cell|<around*|\<langle\>|L<rsup|2><around*|(|x|)>+b\<cdot\>L<around*|(|x|)>+c\<cdot\>x,x|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|L<rsup|2><around*|(|x|)>,x<rsup|>|\<rangle\>>+b\<cdot\><around*|\<langle\>|L<around*|(|x|)>,x|\<rangle\>>+c\<cdot\><around*|\<langle\>|x,x|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|L<around*|(|x|)>,L<rsup|\<ast\>><around*|(|x|)>|\<rangle\>>+b\<cdot\><around*|\<langle\>|L<around*|(|x|)>,x|\<rangle\>>+c\<cdot\><around*|\<langle\>|x,x|\<rangle\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|L
+      is adjoint>>>|<cell|<around*|\<langle\>|L<around*|(|x|)>,L<around*|(|x|)>|\<rangle\>>+b\<cdot\><around*|\<langle\>|L<around*|(|x|)>,x|\<rangle\>>+c\<cdot\><around*|\<langle\>|x,x|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsup|2>+b\<cdot\><around*|\<langle\>|L<around*|(|x|)>,x|\<rangle\>>+c\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|2>>>|<row|<cell|>|<cell|\<geqslant\><rsub|<text|[eq:
+      <reference|eq 18.32.148>>>>|<cell|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsup|2>-<around*|\||b|\|>\<cdot\><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>>+c\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|2>>>>>
+    </eqnarray*>
+
+    proving\ 
+
+    <\equation>
+      <label|eq 18.33.148><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsup|2>-<around*|\||b|\|>\<cdot\><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>>+c\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|2>\<leqslant\><around*|\<langle\>|<around*|(|L<rsup|2>+b\<cdot\>L+c\<cdot\>Id<rsub|x>|)><around*|(|x|)>,x|\<rangle\>>
+    </equation>
+
+    Next\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>>-<frac|<around*|\||b|\|>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>>|2>|)><rsup|2>+<around*|(|c-<frac|b<rsup|2>|4>|)>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|2>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsup|2>-<around*|\||b|\|>\<cdot\><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>>+<frac|<around*|\||b|\|><rsup|2>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|2>|4>+c\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|2>-<frac|b<rsup|2>|4>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|2>>|<cell|\<equallim\><rsub|b\<in\>\<bbb-R\>\<Rightarrow\>b<rsup|2>=<around*|\||b|\|><rsup|2>>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsup|2>-<around*|\||b|\|>\<cdot\><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>>+c\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|2>>|<cell|\<leqslant\><rsub|<text|[eq:
+      <reference|eq 18.33.148>]>>>|<cell|>>|<row|<cell|<around*|\<langle\>|<around*|(|L<rsup|2>+b\<cdot\>L+c\<cdot\>Id<rsub|x>|)><around*|(|x|)>,x|\<rangle\>>>|<cell|>|<cell|<eq-number><label|eq
+      18.34.148>>>>>
+    </eqnarray*>
+
+    Now as <math|0\<leqslant\><around*|(|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>>-<frac|<around*|\||b|\|>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>>|2>|)><rsup|2>>
+    and <math|b<rsup|2>\<less\>4\<cdot\>c\<Rightarrow\>0\<less\>c-<frac|b<rsup|2>|4>>
+    so that as <math|0\<less\><around*|\<\|\|\>|x|\<\|\|\>>> we have
+
+    <\equation*>
+      0\<less\><around*|(|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>>-<frac|<around*|\||b|\|>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>>|2>|)><rsup|2>+<around*|(|c-<frac|b<rsup|2>|4>|)>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsup|2>
+    </equation*>
+
+    which by [eq: <reference|eq 18.34.148>] results in\ 
+
+    <\equation*>
+      0\<less\><around*|\<langle\>|<around*|(|L<rsup|2>+b\<cdot\>L+c\<cdot\>Id<rsub|x>|)><around*|(|x|)>,x|\<rangle\>>
+    </equation*>
+
+    so we must have that <math|<around*|(|L<rsup|2>+b\<cdot\>L+c\<cdot\>Id<rsub|x>|)><around*|(|x|)>\<neq\>0>.
+    Hence <math|ker<around*|(|L<rsup|2>+b\<cdot\>L+c\<cdot\>Id<rsub|x>|)>=<around*|{|0|}>>
+    so that by [theorem: <reference|linear mapping injectivity and kernel>]\ 
+
+    <\equation*>
+      L<rsup|2>+b\<cdot\>L+c\<cdot\>Id<rsub|x><text| is injective>
+    </equation*>
+  </proof>
+
+  We are now ready to prove that in the real case self-adjoint operators have
+  a eigenvector with a eigenvalue.
+
+  \;
 
   \;
 
@@ -3810,6 +4212,7 @@
     <associate|auto-34|<tuple|unitary operator|?>>
     <associate|auto-35|<tuple|coordinate transformation|?>>
     <associate|auto-36|<tuple|normal operator|?>>
+    <associate|auto-37|<tuple|Spectral Theorem (Complex)|?>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|<around*|\<langle\>||\<rangle\>>>|?>>
     <associate|auto-5|<tuple|complex inner product|?>>
     <associate|auto-6|<tuple|18.2|?>>
@@ -3821,6 +4224,7 @@
     <associate|eq 18.11.146|<tuple|18.11|?>>
     <associate|eq 18.12.146|<tuple|18.12|?>>
     <associate|eq 18.13.146|<tuple|18.13|?>>
+    <associate|eq 18.130.148|<tuple|18.30|?>>
     <associate|eq 18.14.146|<tuple|18.14|?>>
     <associate|eq 18.15.146|<tuple|18.15|?>>
     <associate|eq 18.16.146|<tuple|18.16|?>>
@@ -3829,18 +4233,27 @@
     <associate|eq 18.19.146|<tuple|18.19|?>>
     <associate|eq 18.2.146|<tuple|18.3|?>>
     <associate|eq 18.2.146.1|<tuple|18.2|?>>
-    <associate|eq 18.2.148|<tuple|<with|mode|<quote|math>|\<Leftarrow\>>|?>>
     <associate|eq 18.20.147|<tuple|18.20|?>>
     <associate|eq 18.21.147|<tuple|18.21|?>>
     <associate|eq 18.22.147|<tuple|18.22|?>>
-    <associate|eq 18.23.147|<tuple|18.23|?>>
     <associate|eq 18.23.148|<tuple|18.23|?>>
+    <associate|eq 18.24.148|<tuple|18.24|?>>
+    <associate|eq 18.25.148|<tuple|18.25|?>>
+    <associate|eq 18.26.148|<tuple|18.26|?>>
+    <associate|eq 18.27.148|<tuple|18.27|?>>
+    <associate|eq 18.28.148|<tuple|18.28|?>>
+    <associate|eq 18.29.148|<tuple|18.29|?>>
     <associate|eq 18.3.146|<tuple|18.4|?>>
+    <associate|eq 18.31.148|<tuple|18.31|?>>
+    <associate|eq 18.32.148|<tuple|18.32|?>>
+    <associate|eq 18.33.148|<tuple|18.33|?>>
+    <associate|eq 18.34.148|<tuple|18.34|?>>
     <associate|eq 18.4.146|<tuple|18.6|?>>
     <associate|eq 18.5.146|<tuple|18.7|?>>
     <associate|eq 18.5.146.2|<tuple|18.5|?>>
     <associate|eq 18.8.146|<tuple|18.8|?>>
     <associate|eq 18.9.146|<tuple|18.9|?>>
+    <associate|eq 1826.148|<tuple|18.26|?>>
     <associate|inner Gram-Schmidt procedure|<tuple|18.28|?>>
     <associate|inner Riesz Representation theorm|<tuple|18.33|?>>
     <associate|inner Schwartz in equality|<tuple|18.16|?>>
@@ -3881,11 +4294,13 @@
     <associate|inner real product space construction|<tuple|18.12|?>>
     <associate|inner symmetric matrix|<tuple|18.41|?>>
     <associate|inner unitary matrix|<tuple|18.43|?>>
+    <associate|lemma 18.95.148|<tuple|18.95|?>>
     <associate|spectral L^n is linear|<tuple|18.51|?>>
     <associate|spectral L^n+m=L^noL^m|<tuple|18.50|?>>
     <associate|spectral P[L] is a abelian semi group|<tuple|18.59|?>>
     <associate|spectral Schur's theorem|<tuple|18.70|?>>
     <associate|spectral change of base|<tuple|18.87|?>>
+    <associate|spectral complex spectral theorem|<tuple|18.93|?>>
     <associate|spectral composition and permutations|<tuple|18.60|?>>
     <associate|spectral composition of injective linear
     mappings|<tuple|18.52|?>>
@@ -3913,11 +4328,15 @@
     <associate|spectral normal operator|<tuple|18.89|?>>
     <associate|spectral normal operator alternative|<tuple|18.91|?>>
     <associate|spectral operator mapping bases is unitary|<tuple|18.88|?>>
+    <associate|spectral orthonormalization and
+    diagonlization|<tuple|18.92|?>>
+    <associate|spectral polynomial operator|<tuple|18.53|?>>
     <associate|spectral polynomial operator composition and polynomial
     product|<tuple|18.55|?>>
     <associate|spectral self adjoint transformation|<tuple|18.73|?>>
     <associate|spectral self-adjoint operator condition for operator to be
     zero|<tuple|18.78|?>>
+    <associate|spectral theorema diagonalization|<tuple|18.94|?>>
     <associate|spectral unitary operator|<tuple|18.79|?>>
     <associate|spectral unitary operator alternative|<tuple|18.80|?>>
     <associate|spectral unitary operator has a unitary
@@ -3984,6 +4403,8 @@
       <tuple|<tuple|unitary operator>|<pageref|auto-34>>
 
       <tuple|<tuple|coordinate transformation>|<pageref|auto-35>>
+
+      <tuple|<tuple|normal operator>|<pageref|auto-36>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|18<space|2spc>Inner
