@@ -2536,7 +2536,8 @@
     <math|x\<in\>X> with <math|x\<neq\>0>. Consider now the set
     <math|W=<around*|{|L<rsup|0><around*|(|x|)>,\<ldots\>,L<rsup|n><around*|(|x|)>|}>\<subseteq\>X>
     of <math|n+1> vectors in <math|X>. As <math|dim<around*|(|X|)>=n>
-    <math|W> must be linear dpendent. Hence there exist a family
+    <math|W> must be linear dependent [see theorem: <reference|basis card(S)
+    \<gtr\> dim(V) then S is linear dependent>]]. Hence there exist a family
     <math|<around*|{|a<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>\<subseteq\>\<bbb-C\>>
     such that <math|\<exists\>k\<in\><around*|{|0,\<ldots\>,n|}>> with
     <math|a<rsub|k>\<neq\>0> such that\ 
@@ -4138,7 +4139,158 @@
   </proof>
 
   We are now ready to prove that in the real case self-adjoint operators have
-  a eigenvector with a eigenvalue.
+  a eigenvector with areal eigen value.
+
+  <\theorem>
+    <label|spectral self-adjoint operators have a eigenvector with real
+    eigenvalues>Let <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
+    be a real [or complex] finite dimensional inner product space and
+    <math|L\<in\>Hom<around*|(|X|)>> a self-adjoint operator then <math|L>
+    has a eigenvector.\ 
+
+    <\note>
+      Using [theorem: <reference|spectral self-adjoint operators have a
+      eigenvector with real eigenvalues>] all the eigenvalues are real.
+    </note>
+  </theorem>
+
+  <\proof>
+    By [theorem: <reference|spectral eigenvectors exist in a finite
+    dimensional complex space>] every <math|L\<in\>Home<around*|(|X|)>> in a
+    complex finite dimenional inner product space has a eigenvector, hence
+    this is also true for a self-adjoint operator. So we must only prove the
+    theorem for a real finite dimensional inner product space. Let
+    <math|n=dim<around*|(|X|)>\<in\>\<bbb-N\>> and choose <math|x\<in\>X>
+    with <math|x\<neq\>0> [this exist because <math|n\<in\>\<bbb-N\>> so that
+    <math|X> is non trivial]. Consider now the set
+    <rigid|<math|W=<around*|{|L<rsup|0><around*|(|x|)>,\<ldots\>,L<rsup|n><around*|(|x|)>|}>\<subseteq\>X>>
+    of <math|n+1> vectors in <math|X>. As <math|dim<around*|(|X|)>=n>
+    <math|W> must be linear dependent [see theorem: <reference|basis card(S)
+    \<gtr\> dim(V) then S is linear dependent>]]. So there exist a family
+    <math|<around*|{|a<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>\<subseteq\>\<bbb-R\>>
+    such that
+
+    <\equation*>
+      <around*|{|i\<in\><around*|{|0,\<ldots\>,n|}>\|a<rsub|i>\<neq\>0|}>\<neq\>\<varnothing\><text|
+      and ><big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\>L<rsup|i><around*|(|x|)>=0
+    </equation*>
+
+    As <math|<around*|{|i\<in\><around*|{|0,\<ldots\>,n|}>\|a<rsub|i>\<neq\>0|}>>
+    is non empty and finite <math|N=max<around*|(|<around*|{|i\<in\>0,\<ldots\>,n|}>\|a<rsub|i>\<neq\>0|)>>
+    exist. So we have\ 
+
+    <\equation*>
+      0=<big|sum><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>a<rsub|i>\<cdot\>L<rsup|i><around*|(|x|)>=<big|sum><rsub|i\<in\><around*|{|0,\<ldots\>,N|}>>a<rsub|i>\<cdot\>L<rsup|i><around*|(|x|)>+<big|sum><rsub|i\<in\><around*|{|0,\<ldots\>,N|}>>a<rsub|i>\<cdot\>L<rsup|i><around*|(|x|)>=<big|sum><rsub|i\<in\><around*|{|0,\<ldots\>,N|}>>a<rsub|i>\<cdot\>L<rsup|i><around*|(|x|)>
+    </equation*>
+
+    or\ 
+
+    <\equation>
+      <label|eq 18.35.148><big|sum><rsub|i=0><rsup|N>a<rsub|i>\<cdot\>L<rsup|i><around*|(|x|)>=0
+    </equation>
+
+    If <math|N=0> then <math|0=<big|sum><rsub|i=0><rsup|N>a<rsub|i>\<cdot\>L<rsup|i><around*|(|x|)>=a<rsub|0>\<cdot\>L<rsup|0><around*|(|x|)>=a<rsub|0>\<cdot\>x>
+    which as <math|a<rsub|0>\<neq\>0> proves that <math|x=0> contradicting
+    <math|x\<neq\>0>. Hence we have\ 
+
+    <\equation>
+      <label|eq 18.36.148>N\<neq\>0
+    </equation>
+
+    So if we define the polynomial <math|p\<in\>\<cal-P\>> by
+    <math|p<around*|(|z|)>=<big|sum><rsub|i=0><rsup|N>a<rsub|i>\<cdot\>L<rsup|i><around*|(|x|)>>
+    then <math|ord<around*|(|p|)>=N\<in\>\<bbb-N\>>. Hence by [theorem:
+    <reference|fundamental factorization of a polynomial (2)>] there exists a
+    <math|c\<in\>\<bbb-R\>\\<around*|{|0|}>>,
+    <math|m,M\<in\>\<bbb-N\><rsub|0>>, <math|<around*|{|b<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,M|}>>\<subseteq\>\<bbb-R\>>
+    and <math|<around*|{|c<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-R\>>
+    such that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,M|}>> we have
+
+    <\equation*>
+      <around*|(|b<rsub|i>|)><rsup|2>\<less\>4\<cdot\>c<rsub|i>
+    </equation*>
+
+    <\equation*>
+      \<forall\>z\<in\>\<bbb-C\><text| we have
+      >p<around*|(|z|)>=c\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|z-\<lambda\><rsub|i>|)>|)>\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,M|}>><around*|(|z<rsup|2>+b<rsub|i>\<cdot\>z+c<rsub|i>|)>
+    </equation*>
+
+    Define now
+
+    <\equation*>
+      <around*|{|p<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m+M+1|}>><text|
+      by >p<rsub|i><around*|(|z|)>=<choice|<tformat|<table|<row|<cell|c=c\<cdot\>z<rsup|0><text|
+      if >i=1>>|<row|<cell|z-\<lambda\><rsub|i-1><text| if
+      >i\<in\><around*|{|2,\<ldots\>,m+1|}>>>|<row|<cell|z<rsup|2>+b<rsub|i-<around*|(|m+1|)>>\<cdot\>z+c<rsub|i-m><text|
+      if >i\<in\><around*|{|m+2,\<ldots\>,m+M+1|}>>>>>>
+    </equation*>
+
+    then we have <math|\<forall\>c\<in\>\<bbb-C\>> that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,m+M+1|}>>p<rsub|i><around*|(|z|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<big|sum><rsub|i\<in\><around*|{|1|}>>p<rsub|i><around*|(|z|)>|)>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|2,\<ldots\>,m+1|}>>p<rsub|i><around*|(|z|)>|)>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|m+2,\<ldots\>,m+M+1|}>>p<rsub|i><around*|(|z|)>|)>>|<cell|=>|<cell|>>|<row|<cell|c\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|2,\<ldots\>,m+1|}>><around*|(|z-\<lambda\><rsub|i-1>|)>|)>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|m+2,\<ldots\>,m+M+1|}>><around*|(|z<rsup|2>+b<rsub|i-<around*|(|m+1|)>>\<cdot\>z+c<rsub|i-<around*|(|m+1|)>>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|c\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|z-\<lambda\><rsub|i>|)>|)>\<cdot\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,M|}>><around*|(|z<rsup|2>+b<rsub|i>\<cdot\>z+c<rsub|i>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|p<around*|(|z|)>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    Using [theorem: <reference|spectral finite product of polynomial>] we
+    have then that\ 
+
+    <\equation*>
+      <big|sum><rsub|i=0><rsup|N>a<rsub|i>\<cdot\>L<rsup|i>\<equallim\><rsub|<text|[definition:
+      <reference|spectral polynomial operator>]>>p<around*|[|L|]>\<equallim\><rsub|<text|[theorem:
+      <reference|spectral finite product of
+      polynomial>]]>><big|odot><rsub|i=1><rsup|n+M+1>p<rsub|i><around*|[|L|]>
+    </equation*>
+
+    Now as for <math|x\<neq\>0> we have <math|p<around*|[|L|]><around*|(|x|)>=<big|sum><rsub|i=0><rsup|N>a<rsub|i>\<cdot\>L<rsup|i><around*|(|x|)>\<equallim\><rsub|<text|[eq:
+    <reference|eq 18.35.148>]>>0> it follows that
+    <math|ker<around*|(|<big|odot><rsub|i=1><rsup|n+M+1>p<rsub|i><around*|[|L|]>|)>\<neq\>0>,
+    hence using [theorem: <reference|spectral composition of injective linear
+    mappings>] there exist a <math|k\<in\><around*|{|1,\<ldots\>,m+M+1|}>>
+    such that <math|ker<around*|(|p<rsub|k><around*|[|L|]>|)>\<neq\>\<varnothing\>>
+    or
+
+    <\equation>
+      <label|eq 18.37.148>p<rsub|k><around*|[|L|]><around*|(|y|)><text| is
+      not injective>
+    </equation>
+
+    For <math|k> we have to consider the following cases\ 
+
+    <\description>
+      <item*|<math|k=1>>Then as <math|p<rsub|1>> is defined by
+      <math|p<rsub|1><around*|(|z|)>=c\<cdot\>z<rsup|0>> we have
+      <math|p<rsub|1><around*|[|L|]>=c\<cdot\>Id<rsub|X>>. As
+      <math|p<rsub|1><around*|[|L|]>> is not injective
+      <math|ker<around*|(|p<rsub|1><around*|[|L|]>|)>\<neq\>0> so that there
+      exist a <math|x\<neq\>0> such that <math|0=p<rsub|k><around*|[|L|]><around*|(|x|)>=c\<cdot\>x>
+      which as <math|c\<neq\>0> leads to the contradiction
+      <math|0\<neq\>x=0>. Hence this case will never occur.
+
+      <item*|<math|k\<in\><around*|{|m+2,\<ldots\>,m+M+1|}>>>Then as
+      <math|p<rsub|k>> ia defined by <math|p<rsub|k><around*|(|z|)>=z<rsup|2>+b<rsub|k>\<cdot\>z+c<rsub|k>>
+      we have that
+
+      <\equation*>
+        p<rsub|k><around*|[|L|]>=L<rsup|2>+b<rsub|k>\<cdot\>L+c<rsub|k>\<cdot\>Id<rsub|X>
+      </equation*>
+
+      which as <math|><math|<around*|(|b<rsub|i>|)><rsup|2>\<less\>4\<cdot\>c<rsub|i>>
+      proves by [lemma: <reference|lemma 18.95.148>] that
+      <math|p<rsub|k><around*|[|L|]>> is a bijection hence injective
+      contradicting [eq: <reference|eq 18.37.148>]. So this case never
+      occurs.
+    </description>
+
+    So the only valid case is the case where
+    <math|k\<in\><around*|{|2,\<ldots\>,m+1|}>>. Then
+    <math|p<rsub|k><around*|(|z|)>=z-\<lambda\><rsub|k>> and
+    <math|p<rsub|k><around*|[|L|]>=L-\<lambda\><rsub|k>\<cdot\>Id<rsub|X>>.
+    As <math|ker<around*|(|p<rsub|k><around*|[|L|]>|)>\<neq\>0> there exist a
+    <math|x\<in\>X> with <math|x\<neq\>0> such that
+    <math|0=p<rsub|k><around*|[|L|]><around*|(|x|)>=L<around*|(|x|)>-\<lambda\><rsub|k>\<cdot\>x>
+    or <math|L<around*|(|x|)>=\<lambda\><rsub|k>\<cdot\>x>. Hence we found a
+    eigenvector of <math|L>.
+  </proof>
 
   \;
 
@@ -4248,12 +4400,14 @@
     <associate|eq 18.32.148|<tuple|18.32|?>>
     <associate|eq 18.33.148|<tuple|18.33|?>>
     <associate|eq 18.34.148|<tuple|18.34|?>>
+    <associate|eq 18.35.148|<tuple|18.35|?>>
+    <associate|eq 18.36.148|<tuple|18.36|?>>
+    <associate|eq 18.37.148|<tuple|18.37|?>>
     <associate|eq 18.4.146|<tuple|18.6|?>>
     <associate|eq 18.5.146|<tuple|18.7|?>>
     <associate|eq 18.5.146.2|<tuple|18.5|?>>
     <associate|eq 18.8.146|<tuple|18.8|?>>
     <associate|eq 18.9.146|<tuple|18.9|?>>
-    <associate|eq 1826.148|<tuple|18.26|?>>
     <associate|inner Gram-Schmidt procedure|<tuple|18.28|?>>
     <associate|inner Riesz Representation theorm|<tuple|18.33|?>>
     <associate|inner Schwartz in equality|<tuple|18.16|?>>
@@ -4336,6 +4490,8 @@
     <associate|spectral self adjoint transformation|<tuple|18.73|?>>
     <associate|spectral self-adjoint operator condition for operator to be
     zero|<tuple|18.78|?>>
+    <associate|spectral self-adjoint operators have a eigenvector with real
+    eigenvalues|<tuple|18.96|?>>
     <associate|spectral theorema diagonalization|<tuple|18.94|?>>
     <associate|spectral unitary operator|<tuple|18.79|?>>
     <associate|spectral unitary operator alternative|<tuple|18.80|?>>
@@ -4405,6 +4561,8 @@
       <tuple|<tuple|coordinate transformation>|<pageref|auto-35>>
 
       <tuple|<tuple|normal operator>|<pageref|auto-36>>
+
+      <tuple|<tuple|Spectral Theorem (Complex)>|<pageref|auto-37>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|18<space|2spc>Inner
