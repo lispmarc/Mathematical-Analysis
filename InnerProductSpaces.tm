@@ -44,6 +44,36 @@
     </enumerate>
   </definition>
 
+  <\theorem>
+    <label|inner product real subspace>Let
+    <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
+    be a real inner product space and <math|Y\<subseteq\>X> a subspace of
+    <math|X> then <math|<around*|\<langle\>|Y,<around*|\<langle\>||\<rangle\>><rsub|\|><rsub|Y\<times\>Y>|\<rangle\>>>
+    is a real inner product space.
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item><math|\<forall\>x,y\<in\>Y> we have
+      <math|<around*|\<langle\>|x,y|\<rangle\>><rsub|\|Y\<times\>Y>=<around*|\<langle\>|x,y|\<rangle\>>=<around*|\<langle\>|y,x|\<rangle\>>=<around*|\<langle\>|y,x|\<rangle\>><rsub|\|Y\<times\>Y>>.
+
+      <item><math|\<forall\>x,y,z\<in\>Y> and
+      <math|\<forall\>\<alpha\>\<in\>\<bbb-R\>> we have
+
+      <\equation*>
+        <around*|\<langle\>|x+\<alpha\>\<cdot\>y,z|\<rangle\>><rsub|\|Y\<times\>Y>=<around*|\<langle\>|x+\<alpha\>\<cdot\>y,z|\<rangle\>>=<around*|\<langle\>|x,z|\<rangle\>>+\<alpha\>\<cdot\><around*|\<langle\>|y,z|\<rangle\>>=<around*|\<langle\>|x,z|\<rangle\>><rsub|\|Y\<times\>Y>+\<alpha\>\<cdot\><around*|\<langle\>|y,z|\<rangle\>><rsub|Y\<times\>Y>.
+      </equation*>
+
+      <item><math|\<forall\>x\<in\>Y<text| we have
+      ><around*|\<langle\>|x,x|\<rangle\>><rsub|Y\<times\>Y>=<around*|\<langle\>|x,x|\<rangle\>>\<geqslant\>0>
+
+      <item><math|\<forall\>x\<in\>Y> we have
+      <math|<around*|\<langle\>|x,x|\<rangle\>><rsub|\|Y\<times\>Y>\<Rightarrow\><around*|\<langle\>|x,x|\<rangle\>>=0\<Rightarrow\>x=0>
+    </enumerate>
+  </proof>
+
   The inner product has the following properties.
 
   <\theorem>
@@ -205,6 +235,36 @@
       we use the mathematical convention here.
     </note>
   </definition>
+
+  <\theorem>
+    <label|inner product complex subspace>Let
+    <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
+    be a real inner product space and <math|Y\<subseteq\>X> a subspace of
+    <math|X> then <math|<around*|\<langle\>|Y,<around*|\<langle\>||\<rangle\>><rsub|\|><rsub|Y\<times\>Y>|\<rangle\>>>
+    is a real inner product space.
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item><math|\<forall\>x,y\<in\>Y> we have
+      <math|<around*|\<langle\>|x,y|\<rangle\>><rsub|\|Y\<times\>Y>=<around*|\<langle\>|x,y|\<rangle\>>=<around*|\<langle\>|y,x|\<rangle\>>=<around*|\<langle\>|y,x|\<rangle\>><rsub|\|Y\<times\>Y>>.
+
+      <item><math|\<forall\>x,y,z\<in\>Y> and
+      <math|\<forall\>\<alpha\>\<in\>\<bbb-R\>> we have
+
+      <\equation*>
+        <around*|\<langle\>|x+\<alpha\>\<cdot\>y,z|\<rangle\>><rsub|\|Y\<times\>Y>=<around*|\<langle\>|x+\<alpha\>\<cdot\>y,z|\<rangle\>>=<around*|\<langle\>|x,z|\<rangle\>>+\<alpha\>\<cdot\><around*|\<langle\>|y,z|\<rangle\>>=<around*|\<langle\>|x,z|\<rangle\>><rsub|\|Y\<times\>Y>+\<alpha\>\<cdot\><around*|\<langle\>|y,z|\<rangle\>><rsub|Y\<times\>Y>.
+      </equation*>
+
+      <item><math|\<forall\>x\<in\>Y<text| we have
+      ><around*|\<langle\>|x,x|\<rangle\>><rsub|Y\<times\>Y>=<around*|\<langle\>|x,x|\<rangle\>>\<geqslant\>0>
+
+      <item><math|\<forall\>x\<in\>Y> we have
+      <math|<around*|\<langle\>|x,x|\<rangle\>><rsub|\|Y\<times\>Y>\<Rightarrow\><around*|\<langle\>|x,x|\<rangle\>>=0\<Rightarrow\>x=0>
+    </enumerate>
+  </proof>
 
   <\example>
     <label|inner product on C^n>Let <math|n\<in\>\<bbb-N\>> and define
@@ -1190,7 +1250,34 @@
   </proof>
 
   Using orthonormal bases in finite dimensional vector spaces has the benefit
-  of giving a simple representation for the matrix of a linear mapping.
+  of giving a simple representation for the matrix of a linear mapping or of
+  the expansion of a element in its basis.
+
+  <\theorem>
+    <label|inner expansion in a orthonormal basis>Let
+    <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>><rsub|X>|\<rangle\>>>
+    be a finite dimensional real [or complex] inner product spaces with a
+    orthonormal basis <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>>
+    then <math|\<forall\>x\<in\>X> we have
+    <math|x=<big|sum><rsub|i=1><rsup|n><around*|\<langle\>|x,e<rsub|i>|\<rangle\>>\<cdot\>e<rsub|i>>
+  </theorem>
+
+  <\proof>
+    If <math|x\<in\>X> then there exist a
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-K\>>
+    such that <math|x=<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\>e<rsub|i>>.
+    Let <math|k\<in\><around*|{|1,\<ldots\>,n|}>> then\ 
+
+    <\equation*>
+      <around*|\<langle\>|x,e<rsub|k>|\<rangle\>>=<around*|\<langle\>|<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\>e<rsub|i>,e<rsub|k>|\<rangle\>>=<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\><around*|\<langle\>|e<rsub|i>,e<rsub|k>|\<rangle\>>=<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\>\<delta\><rsub|i,k>=x<rsub|k>
+    </equation*>
+
+    so that\ 
+
+    <\equation*>
+      x=<big|sum><rsub|i=1><rsup|n><around*|\<langle\>|x,e<rsub|i>|\<rangle\>>\<cdot\>e<rsub|i>
+    </equation*>
+  </proof>
 
   <\theorem>
     <label|inner matrix of linear mapping>Let
@@ -1220,6 +1307,8 @@
       sums>]>>>|<cell|<big|sum><rsub|k=1><rsup|m>\<cal-M\><around*|(|L;E,F|)><rsub|k,i>\<cdot\><around*|\<langle\>|f<rsub|k>,f<rsub|j>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k=1><rsup|m>\<cal-M\><around*|(|L;E,F|)><rsub|k,i>\<cdot\>\<delta\><rsub|k,j>>>|<row|<cell|>|<cell|=>|<cell|\<cal-M\><around*|(|L;E,F|)><rsub|j,i>>>>>
     </eqnarray*>
   </proof>
+
+  \;
 
   It turns out that for every finite dimensional real [or complex] inner
   product space we can construct a orthonormal basis.
@@ -3807,8 +3896,9 @@
   of <math|X> of eigenvectors for the normal operators.
 
   <\theorem>
-    <label|spectral complex spectral theorem><index|Spectral Theorem
-    (Complex)>Let <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
+    <label|spectral complex spectral theorem><index|spectral Theorem
+    (Complex)><dueto|Complex Spectral Theorem>Let
+    <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
     be complex finite dimensional inner product space with
     <math|<rigid|dim<around*|(|X|)>=n\<in\>\<bbb-N\>>>and
     <math|L\<in\>Hom<around*|(|X|)>> the the following are equivalent
@@ -4292,6 +4382,397 @@
     eigenvector of <math|L>.
   </proof>
 
+  <\definition>
+    <label|spectral orthogonal complement><index|orthogonal
+    complement><index|<math|U<rsup|\<perp\>>>>Let
+    <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
+    be a real [or complex] inner product space, <math|U\<subseteq\>X> then
+    the <with|font-series|bold|orthogonal complement> of <math|U> noted by
+    <math|U<rsup|\<perp\>>> is defined by\ 
+
+    <\equation*>
+      U<rsup|\<perp\>>=<around*|{|x\<in\>X\|\<forall\>y\<in\>U<text| we have
+      ><around*|\<langle\>|x,y|\<rangle\>>=0|}>\<subseteq\>X
+    </equation*>
+
+    In other words the orthogonal complement of a set is the collection of
+    all elements in <math|X> that are orthogonal to every element of the
+    given set.
+  </definition>
+
+  <\theorem>
+    <label|spectral orthogonal complement properties>Let
+    <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
+    be a real [or complex] inner product space then we have:
+
+    <\enumerate>
+      <item>If <math|U\<subseteq\>X> then <math|U<rsup|\<perp\>>> is a
+      sub-space of <math|X>.
+
+      <item><math|<around*|{|0|}><rsup|\<perp\>>=X>
+
+      <item><math|X<rsup|\<perp\>>=<around*|{|0|}>>
+
+      <item>If <math|U\<subseteq\>X> then
+      <math|U<big|cap>U<rsup|\<perp\>>\<subseteq\><around*|{|0|}>>
+
+      <item>If <math|U\<subseteq\>X> is a sub-space then
+      <math|U<big|cap>U<rsup|\<perp\>>=<around*|{|0|}>>
+
+      <item>If <math|U,W\<subseteq\>X> with <math|U\<subseteq\>W> then
+      <math|W<rsup|\<perp\>>\<subseteq\>U<rsup|\<perp\>>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|x,y\<in\>U<rsup|\<perp\>>>,
+      <math|\<alpha\>\<in\>\<bbb-K\>> then <math|\<forall\>u\<in\>U> we have
+      <math|<around*|\<langle\>|x+\<alpha\>\<cdot\>y,u|\<rangle\>>=<around*|\<langle\>|x,u|\<rangle\>>+\<alpha\>\<cdot\><around*|\<langle\>|y,u|\<rangle\>>=0+0=0>
+      proving that <math|x+\<alpha\>\<cdot\>y\<in\>U<rsup|\<perp\>>>. Further
+      as <math|\<forall\>u\<in\>U> <math|<around*|\<langle\>|0,u|\<rangle\>>=0>
+      it follows that <math|0\<in\>U<rsup|\<perp\>>>, hence
+      <math|U<rsup|\<perp\>>\<neq\>\<varnothing\>>.
+
+      <item>As <math|\<forall\>x\<in\>X> we have
+      <math|<around*|\<langle\>|x,0|\<rangle\>>=0> it follows that
+      <math|X\<subseteq\><around*|{|0|}><rsup|\<perp\>>\<subseteq\>X> so that
+      <math|X=<around*|{|0|}><rsup|\<perp\>>>.
+
+      <item>First <math|\<forall\>x\<in\>X> we have
+      <math|<around*|\<langle\>|0,x|\<rangle\>>> so that
+      <math|<around*|{|0|}>\<subseteq\>X<rsup|\<perp\>>>, second if
+      <math|y\<in\>X<rsup|\<perp\>>> then as
+      <math|X<rsup|\<perp\>>\<subseteq\>X> <math|y\<in\>X>, so
+      <math|<around*|\<langle\>|y,y|\<rangle\>>=0>, hence
+      <math|y=0\<in\><around*|{|0|}>> proving that
+      <math|X<rsup|\<perp\>>\<subseteq\><around*|{|0|}>>. Hence it follows
+      that\ 
+
+      <\equation*>
+        X<rsup|\<perp\>>=<around*|{|0|}>
+      </equation*>
+
+      <item>Let <math|x\<in\>U<big|cap>U<rsup|\<perp\>>> then <math|x\<in\>U>
+      and as also <math|x\<in\>U<rsup|\<perp\>>> we have
+      <math|<around*|\<langle\>|x,x|\<rangle\>>=0> so that
+      <math|x=0\<in\><around*|{|0|}>>. Hence it follows that
+      <math|U<big|cap>U<rsup|\<perp\>>\<subseteq\><around*|{|0|}>>.
+
+      <item>As <math|U> is a sub-space it follows that <math|0\<in\>U>, as by
+      <math|<around*|(|1|)>> <math|U<rsup|\<perp\>>> is a sub-space we have
+      also a <math|0\<in\>U<rsup|\<perp\>>>, so
+      <math|<around*|{|0|}>\<subseteq\>U<big|cap>U<rsup|\<perp\>>>. Combining
+      this with (4) results in <math|U<big|cap>U<rsup|\<perp\>>=<around*|{|0|}>>.
+
+      <item>If <math|x\<in\>W<rsup|\<perp\>>> then <math|\<forall\>u\<in\>U>
+      we have, as <math|U\<subseteq\>W> that <math|u\<in\>W> hence
+      <math|<around*|\<langle\>|x,u|\<rangle\>>=0> proving that
+      <math|x\<in\>U<rsup|\<perp\>>>, hence
+      <math|W<rsup|\<perp\>>\<subseteq\>U<rsup|\<perp\>>>.
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|spectral theorem direct sum>Let
+    <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
+    be a real [or complex] inner product space, <math|U> a finite dimensional
+    sup-space of <math|X> then
+
+    <\equation*>
+      X=U\<oplus\>U<rsup|\<perp\>>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    We have the following cases to consider for <math|U>:
+
+    <\description>
+      <item*|<math|U<text| is trivial>>>Then <math|U=<around*|{|0|}>> and
+      <math|U<rsup|\<perp\>>=<around*|{|0|}><rsup|\<perp\>>\<equallim\><rsub|<text|[theorem:
+      <reference|spectral orthogonal complement properties>]>>X> so that
+
+      <\equation*>
+        U\<oplus\>U<rsup|\<perp\>>=<around*|{|0|}>\<oplus\>X\<equallim\><rsub|<text|[example:
+        <reference|vector space internal direct sum trivial example>]>>X
+      </equation*>
+
+      <item*|<math|U<text| is not trivial>>>As <math|U> is finite dimensional
+      there exist [theorem: <reference|inner orthonormalization (1)>] a
+      orthonormal basis <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>>,
+      <math|n\<in\>\<bbb-N\>> for <math|U>. Let <math|x\<in\>X> then we have
+      for <math|y=<big|sum><rsub|i=1><rsup|n><around*|\<langle\>|x,e<rsub|i>|\<rangle\>>\<cdot\>e<rsub|i>>
+      and <math|<rigid|z=x-y>><space|1em>that clearly
+
+      <\equation*>
+        x=y+z<text| and <math|y\<in\>U>>
+      </equation*>
+
+      Further if <math|u\<in\>U> then we have by [theorem: <reference|inner
+      expansion in a orthonormal basis>] \ <math|u=<big|sum><rsub|i=1><rsup|n><around*|\<langle\>|u,e<rsub|i>|\<rangle\>>\<cdot\>e<rsub|i>>
+      then we have:
+
+      <\description>
+        <item*|real case>\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|\<langle\>|z,u|\<rangle\>>>|<cell|=>|<cell|<around*|\<langle\>|x-y,u|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|x,u|\<rangle\>>-<around*|\<langle\>|y,u|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|x,u|\<rangle\>>-<around*|\<langle\>|<big|sum><rsub|i=1><rsup|n><around*|\<langle\>|x,e<rsub|i>|\<rangle\>>\<cdot\>e<rsub|i>,u|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|x,u|\<rangle\>>-<big|sum><rsub|i=1><rsup|n><around*|\<langle\>|x,e<rsub|i>|\<rangle\>>\<cdot\><around*|\<langle\>|e<rsub|i>,u|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|x,u|\<rangle\>>-<big|sum><rsub|i=1><rsup|n><around*|\<langle\>|x,e<rsub|i>|\<rangle\>>\<cdot\><around*|\<langle\>|e<rsub|i>,<big|sum><rsub|k=1><rsup|n>u<rsub|k>\<cdot\>e<rsub|k>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|x,u|\<rangle\>>-<big|sum><rsub|i=1><rsup|n><around*|\<langle\>|x,e<rsub|i>|\<rangle\>>\<cdot\><big|sum><rsub|k=1><rsup|n>u<rsub|k>\<cdot\><around*|\<langle\>|e<rsub|i>,e<rsub|k>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|x,u|\<rangle\>>-<big|sum><rsub|i=1><rsup|n><around*|\<langle\>|x,e<rsub|i>|\<rangle\>>\<cdot\><big|sum><rsub|k=1><rsup|n>u<rsub|k>\<cdot\>\<delta\><rsub|i,k>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|x,u|\<rangle\>>-<big|sum><rsub|i=1><rsup|n>u<rsub|i>\<cdot\><around*|\<langle\>|x,e<rsub|i>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|x,u|\<rangle\>>-<around*|\<langle\>|x,<big|sum><rsub|i=1><rsup|n>u<rsub|i>\<cdot\>e<rsub|i>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|x,u|\<rangle\>>-<around*|\<langle\>|x,u|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|0>>>>
+        </eqnarray*>
+
+        <item*|complex case>
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|\<langle\>|z,u|\<rangle\>>>|<cell|=>|<cell|<around*|\<langle\>|x-y,u|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|x,u|\<rangle\>>-<around*|\<langle\>|y,u|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|x,u|\<rangle\>>-<around*|\<langle\>|<big|sum><rsub|i=1><rsup|n><around*|\<langle\>|x,e<rsub|i>|\<rangle\>>\<cdot\>e<rsub|i>,u|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|x,u|\<rangle\>>-<big|sum><rsub|i=1><rsup|n><around*|\<langle\>|x,e<rsub|i>|\<rangle\>>\<cdot\><around*|\<langle\>|e<rsub|i>,u|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|x,u|\<rangle\>>-<big|sum><rsub|i=1><rsup|n><around*|\<langle\>|x,e<rsub|i>|\<rangle\>>\<cdot\><around*|\<langle\>|e<rsub|i>,<big|sum><rsub|k=1><rsup|n>u<rsub|k>\<cdot\>e<rsub|k>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|x,u|\<rangle\>>-<big|sum><rsub|i=1><rsup|n><around*|\<langle\>|x,e<rsub|i>|\<rangle\>>\<cdot\><big|sum><rsub|k=1><rsup|n><wide|u<rsub|k>|\<wide-bar\>>\<cdot\><around*|\<langle\>|e<rsub|i>,e<rsub|k>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|x,u|\<rangle\>>-<big|sum><rsub|i=1><rsup|n><around*|\<langle\>|x,e<rsub|i>|\<rangle\>>\<cdot\><big|sum><rsub|k=1><rsup|n><wide|u<rsub|k>|\<wide-bar\>>\<cdot\>\<delta\><rsub|i,k>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|x,u|\<rangle\>>-<big|sum><rsub|i=1><rsup|n><wide|u<rsub|i>|\<wide-bar\>>\<cdot\><around*|\<langle\>|x,e<rsub|i>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|x,u|\<rangle\>>-<around*|\<langle\>|x,<big|sum><rsub|i=1><rsup|n>u<rsub|i>\<cdot\>e<rsub|i>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|x,u|\<rangle\>>-<around*|\<langle\>|x,u|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|0>>>>
+        </eqnarray*>
+      </description>
+
+      so we have in all cases that <math|<around*|\<langle\>|z,u|\<rangle\>>=0>,
+      proving that <math|z\<in\>U<rsup|\<perp\>>>. Hence we have that\ 
+
+      <\equation*>
+        X=U+U<rsup|\<perp\>>
+      </equation*>
+
+      As by [theorem: <reference|spectral orthogonal complement properties>]
+      <math|U<big|cap>U<rsup|\<perp\>>=<around*|{|0|}>> it follows from
+      [theorem: <reference|vector space internal direct sum decomposition>]
+      that\ 
+
+      <\equation*>
+        X=U\<oplus\>U<rsup|\<perp\>>
+      </equation*>
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|spectral orthogonal complement and linear operator>Let
+    <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
+    be a real [or complex] finite dimensional space,
+    <math|L\<in\>Hom<around*|(|X|)>> a self-adjoint operatr and
+    <math|U\<subseteq\>X> a sub-space of <math|X> so that
+    <math|L<around*|(|U|)>\<subseteq\>U> then\ 
+
+    <\enumerate>
+      <item><math|L<around*|(|U<rsup|\<perp\>>|)>\<subseteq\>U<rsup|\<perp\>>>
+
+      <item><math|L<rsub|\|U>\<in\>Hom<around*|(|U|)>> is self-adjoint in
+      <math|<around*|\<langle\>|U,<around*|\<langle\>||\<rangle\>><rsub|\|U\<times\>U>|\<rangle\>>>
+
+      <item><math|L<rsub|\|U>\<in\>Hom<around*|(|U<rsup|\<perp\>>|)>> is
+      self-adjoint in <math|<around*|\<langle\>|U<rsup|\<perp\>>,<around*|\<langle\>||\<rangle\>><rsub|U<rsup|\<perp\>>\<times\>U<rsup|\<perp\>>>|\<rangle\>>>
+    </enumerate>
+  </theorem>
+
+  Using [theorems: <reference|inner product real subspace>, <reference|inner
+  product complex subspace>] for a proof that
+  <math|<around*|\<langle\>|U,<around*|\<langle\>||\<rangle\>><rsub|\|U\<times\>U>|\<rangle\>>>
+  and <math|<around*|\<langle\>|U<rsup|\<perp\>>,<around*|\<langle\>||\<rangle\>><rsub|U<rsup|\<perp\>>\<times\>U<rsup|\<perp\>>>|\<rangle\>>>
+  are inner product space.
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|y\<in\>L<around*|(|U<rsup|\<perp\>>|)>> then there
+      exist a <math|x\<in\>U<rsup|\<perp\>>> such that
+      <math|y=L<around*|(|x|)>>. If <math|u\<in\>U> then
+      <math|L<around*|(|u|)>\<in\>U> and we have
+      <math|<around*|\<langle\>|y,u|\<rangle\>>=<around*|\<langle\>|L<around*|(|x|)>,u|\<rangle\>>=<around*|\<langle\>|x,L<rsup|\<ast\>><around*|(|u|)>|\<rangle\>>=<around*|\<langle\>|x,L<around*|(|u|)>|\<rangle\>>\<equallim\><rsub|L<around*|(|u|)>\<subseteq\>U\<wedge\>x\<in\>U<rsup|\<perp\>>>0>,
+      hence <math|y\<in\>U<rsup|\<perp\>>>. So
+      <math|L<around*|(|U<rsup|\<perp\>>|)>\<subseteq\>U<rsup|\<perp\>>>.
+
+      <item>Let <math|x,y\<in\>U> then <math|L<rsub|\|U><around*|(|x|)>=L<around*|(|x|)>\<in\>U>
+      and <math|L<rsub|\|U><around*|(|y|)>=L<around*|(|y|)>\<in\>U> so that
+
+      <\equation*>
+        <around*|\<langle\>|L<rsub|\|U><around*|(|x|)>,y|\<rangle\>><rsub|\|U\<times\>U>=<around*|\<langle\>|L<around*|(|x|)>,y|\<rangle\>>=<around*|\<langle\>|x,L<around*|(|y|)>|\<rangle\>>=<around*|\<langle\>|x,L<rsub|\|U><around*|(|y|)>|\<rangle\>><rsub|\|U\<times\>U>
+      </equation*>
+
+      proving by [theorem: <reference|spectral self adjoint transformation>]
+      that <math|L<rsub|\|U>> is self-adjoint.
+
+      <item>This follows from (2) by replacing <math|U> by
+      <math|U<rsup|\<bot\>>> and the fact that <math|U<rsup|\<bot\>>> is also
+      a subspace in <math|X> [see theorem: <reference|spectral orthogonal
+      complement properties>].
+    </enumerate>
+  </proof>
+
+  We are now ready to prove the Spectral Theorem in the real case.\ 
+
+  <\theorem>
+    <label|spectral real spectral theorem><dueto|Real Spectral Theorem>Let
+    <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
+    be a real finite dimensional space with
+    <math|dim<around*|(|X|)>\<in\>\<bbb-N\>> and
+    <math|L\<in\>Hom<around*|(|X|)>> then the following are equivalent:
+
+    <\enumerate>
+      <item><math|L> is self-adjoint
+
+      <item>There exist a orthonormal base
+      <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> for <math|X> such
+      that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+      <math|e<rsub|i>> is a eigenvector of <math|L>.
+
+      <item>There exists a basis <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>>
+      for <math|X> such that <math|\<cal-M\><around*|(|L;E,E|)>> is diagonal.
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|1\<Rightarrow\>2>>We prove this by induction on
+      <math|dim<around*|(|X|)>> so define\ 
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\>\|<text|If
+        ><around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>><text|
+        is a real inner product space with >dim<around*|(|X|)>=n<text| and
+        >L\<in\>Hom<around*|(|X|)><text| is self-adjoint then there exist a
+        orthonormal base <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>
+        for >X such that >\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|>
+        e<rsub|i><text| is a eigenvector of >L|}>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|1\<in\>S>>If <math|dim<around*|(|X|)>=1> then there
+        exist by [theorem: <reference|inner orthonormalization (1)>] a
+        orthonormal basis <math|<around*|{|e<rsub|1>|}>> for <math|X>. As
+        <math|L<around*|(|e<rsub|1>|)>\<in\>X> there exist a
+        <math|\<lambda\><rsub|1>\<in\>\<bbb-R\>> such that
+        <math|L<around*|(|e<rsub|1>|)>=\<lambda\><rsub|1>\<cdot\>e<rsub|1>>
+        proving that <math|e<rsub|1>> is a eigenvector of <math|X>. Hence
+        <math|1\<in\>S>.\ 
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+        <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
+        be a real finite inner product space with
+        <math|dim<around*|(|X|)>=n+1>
+      </description>
+
+      \ and take <math|L\<in\>Hom<around*|(|X|)>>. As <math|L> is
+      self-adjoint there exist by [theorem: <reference|spectral self-adjoint
+      operators have a eigenvector with real eigenvalues>] a eigenvector
+      <math|x> with a real egenvalue <math|\<lambda\>>, so that
+
+      <\equation*>
+        x\<neq\>0<text|, >L<around*|(|x|)>=\<lambda\>\<cdot\>x<text| and
+        >\<lambda\>\<in\>\<bbb-R\>
+      </equation*>
+
+      Define <math|e<rsub|n+1>=<frac|x|<around*|\<\|\|\>|x|\<\|\|\>>>> then
+      we have\ 
+
+      <\equation*>
+        e<rsub|n+1>\<neq\>0<text|, ><around*|\<\|\|\>|e<rsub|n+1>|\<\|\|\>>=1<text|
+        and >L<around*|(|e<rsub|n+1>|)>=<frac|L<around*|(|x|)>|<around*|\<\|\|\>|x|\<\|\|\>>>=\<lambda\>\<cdot\><frac|x|<around*|\<\|\|\>|x|\<\|\|\>>>=\<lambda\>\<cdot\>e<rsub|n+1>
+      </equation*>
+
+      Define now <math|U=span<around*|(|<around*|{|e<rsub|n+1>|}>|)>=<around*|{|\<alpha\>\<cdot\>e<rsub|n+1>\|\<alpha\>\<in\>\<bbb-R\>|}>>
+      which is a vector space with <math|dim<around*|(|U|)>=1>. Using
+      [theorem: <reference|spectral orthogonal complement> we have then that\ 
+
+      <\equation*>
+        X=U\<oplus\>U<rsup|\<perp\>>
+      </equation*>
+
+      As <math|U<rsup|\<perp\>>\<in\>X> we have by [theorem: <reference|basis
+      sub-space>] that <math|U<rsup|\<perp\>>> is finite dimensional, so we
+      can use [theorem: <reference|vector space internal direct sum
+      dimension>[ to get <math|n+1=dim<around*|(|X|)>=dim<around*|(|U\<oplus\>U<rsup|\<perp\>>|)>=dim<around*|(|U|)>+dim<around*|(|U<rsup|\<perp\>>|)>=1+dim<around*|(|U<rsup|\<perp\>>|)>>,
+      hence <math|dim<around*|(|U<rsup|\<perp\>>|)>=n>. So by [theorem:
+      <reference|inner product real subspace>] we have that\ 
+
+      <\equation*>
+        <around*|\<langle\>|U<rsup|\<perp\>>,<around*|\<langle\>||\<rangle\>><rsub|\|U<rsup|\<perp\>>>|\<rangle\>><text|
+        is a real inner product space with
+        >dim<around*|(|U<rsup|\<perp\>>|)>=n
+      </equation*>
+
+      Further by the previous theorem [theorem: <reference|spectral
+      orthogonal complement and linear operator>] we have that
+      <math|L<rsub|\|U<rsup|\<perp\>>>> is a self-adjoint operator in
+      <math|<around*|\<langle\>|U<rsup|\<perp\>>,<around*|\<langle\>||\<rangle\>><rsub|\|U<rsup|\<perp\>>>|\<rangle\>>>.
+      Hence as <math|n\<in\>\<cal-S\>> there exist a orthonormal basis
+      <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> for
+      <math|U<rsup|\<perp\>>> such that <math|\<forall\>i\<in\><around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>>
+      <math|e<rsub|i>> is a eigenvector of <math|U<rsup|\<perp\>>> with
+      eigenvector <math|\<lambda\><rsub|i>>. Consider now
+
+      <\equation*>
+        E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>,e<rsub|n+1>|}>
+      </equation*>
+
+      Let <math|i,j\<in\><around*|{|1,\<ldots\>,n+1|}>> with <math|i\<neq\>j>
+      then we have either:
+
+      <\description>
+        <item*|<math|i,j\<in\><around*|{|1,\<ldots\>,n|}>>>Then as
+        <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> is orthonormal
+        <math|<around*|\<langle\>|e<rsub|i>,e<rsub|j>|\<rangle\>>=0>
+
+        <item*|<math|i=n+1\<wedge\>j\<in\><around*|{|1,\<ldots\>,n|}>>>Then
+        as <math|e<rsub|j>\<in\>U<rsup|\<perp\>>> and
+        <math|e<rsub|n+1>\<in\>U> <math|<around*|\<langle\>|e<rsub|i>,e<rsub|j>|\<rangle\>>=<around*|\<langle\>|e<rsub|n+1>,e<rsub|j>|\<rangle\>>=0>
+
+        <item*|<math|i\<in\><around*|{|1,\<ldots\>,n|}>\<wedge\>j=n+1>>Then
+        as <math|e<rsub|i>\<in\>U<rsup|\<perp\>>> and
+        <math|e<rsub|n+1>\<in\>U> <math|<around*|\<langle\>|e<rsub|i>,e<rsub|j>|\<rangle\>>=<around*|\<langle\>|e<rsub|i>,e<rsub|n+1>|\<rangle\>>=0>
+      </description>
+
+      hence we have that <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>,e<rsub|n+1>|}>>
+      is a orthonormal set. Using then [theorem: <reference|inner orthonormal
+      set>] it follows that\ 
+
+      <\equation*>
+        <around*|{|e<rsub|1>,\<ldots\>,e<rsub|n+1>|}><text| is a orthonormal
+        basis for >X
+      </equation*>
+
+      Further if <math|i\<in\><around*|{|1,\<ldots\>,n+1|}>> then we have
+      either:
+
+      <\description>
+        <item*|<math|i\<in\><around*|{|1,\<ldots\>,n|}>>>Then
+        <math|L<around*|(|e<rsub|i>|)>=L<rsub|\|U<rsup|\<perp\>>><around*|(|e<rsub|i>|)>=\<lambda\><rsub|i>\<cdot\>e<rsub|i>>
+        so that <math|e<rsub|i>> is a eigenvector of <math|L>
+
+        <item*|<math|i=n+1>>Then <math|L<around*|(|e<rsub|i>|)>=L<around*|(|e<rsub|n+1>|)>=\<lambda\>\<cdot\>e<rsub|n+1>>
+        so that <math|e<rsub|i>> is a eigenvector of <math|L>
+      </description>
+
+      hence <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n+1|}>>
+      <math|e<rsub|i>> is a eigenvector of <math|L>. So <math|n+1\<in\>S>.
+
+      <item*|<math|2\<Rightarrow\>1>>Let <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>>
+      be a orthonormal basis for <math|X> such that
+      <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> <math|e<rsub|i>> is
+      a eigenvector of <math|L>. Then if <math|x,y\<in\>X> there exist
+      <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-R\>>,
+      <math|<around*|{|y<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-R\>>
+      such that <math|x=<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\>e<rsub|i>>
+      and <math|y=<big|sum><rsub|i=1><rsup|n>y<rsub|i>\<cdot\>e<rsub|i>>. So\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<langle\>|L<around*|(|x|)>,y|\<rangle\>>>|<cell|=>|<cell|<around*|\<langle\>|L<around*|(|<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\>e<rsub|i>|)>,<big|sum><rsub|j=1><rsup|n>y<rsub|j>\<cdot\>e<rsub|j>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\>L<around*|(|e<rsub|i>|)>,<big|sum><rsub|j=1><rsup|n>y<rsub|j>\<cdot\>e<rsub|j>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\>\<lambda\><rsub|i>\<cdot\>e<rsub|i>,<big|sum><rsub|j=1><rsup|n>y<rsub|j>\<cdot\>e<rsub|j>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\>\<lambda\><rsub|i>\<cdot\><around*|\<langle\>|e<rsub|i>,<big|sum><rsub|j=1><rsup|n>y<rsub|j>\<cdot\>e<rsub|j>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n><around*|(|x<rsub|i>\<cdot\>\<lambda\><rsub|i>\<cdot\><big|sum><rsub|j=1><rsup|n>y<rsub|j>\<cdot\><around*|\<langle\>|e<rsub|i>,e<rsub|j>|\<rangle\>>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n><around*|(|x<rsub|i>\<cdot\>\<lambda\><rsub|i>\<cdot\><big|sum><rsub|j=1><rsup|n>y<rsub|j>\<cdot\>\<delta\><rsub|i,j>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n>\<lambda\><rsub|i>\<cdot\>x<rsub|i>\<cdot\>y<rsub|i>>>|<row|<cell|<around*|\<langle\>|x,L<around*|(|y|)>|\<rangle\>>>|<cell|=>|<cell|<around*|\<langle\>|<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\>e<rsub|i>,L<around*|(|<big|sum><rsub|j=1><rsup|n>y<rsub|j>\<cdot\>e<rsub|j>|)>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\><around*|\<langle\>|e<rsub|i>,<big|sum><rsub|j=1><rsup|n>y<rsub|j>\<cdot\>L<around*|(|e<rsub|j>|)>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\><around*|(|<big|sum><rsub|j=1><rsup|n>y<rsub|j>\<cdot\>\<lambda\><rsub|j>\<cdot\><around*|\<langle\>|e<rsub|i>,e<rsub|j>|\<rangle\>>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\><around*|(|<big|sum><rsub|j=1><rsup|n>y<rsub|j>\<cdot\>\<lambda\><rsub|j>\<cdot\>\<delta\><rsub|i,j>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n>\<lambda\><rsub|i>\<cdot\>x<rsub|i>\<cdot\>y<rsub|i>>>>>
+      </eqnarray*>
+
+      From the above it follows that <math|<around*|\<langle\>|L<around*|(|x|)>,y|\<rangle\>>=<around*|\<langle\>|x,L<around*|(|y|)>|\<rangle\>>>
+      which as <math|x,y\<in\>X> where chosen arbitrary proves that <math|L>
+      is self-adjoint.
+
+      <item*|<math|2\<Leftrightarrow\>3>>This is actually proved in [theorem:
+      <reference|spectral orthonormalization and diagonlization>].
+    </description>
+  </proof>
+
   \;
 
   \;
@@ -4324,7 +4805,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|17>
-    <associate|page-first|1113>
+    <associate|page-first|1115>
     <associate|page-medium|papyrus>
     <associate|par-first|0tab>
     <associate|section-nr|1>
@@ -4364,7 +4845,9 @@
     <associate|auto-34|<tuple|unitary operator|?>>
     <associate|auto-35|<tuple|coordinate transformation|?>>
     <associate|auto-36|<tuple|normal operator|?>>
-    <associate|auto-37|<tuple|Spectral Theorem (Complex)|?>>
+    <associate|auto-37|<tuple|spectral Theorem (Complex)|?>>
+    <associate|auto-38|<tuple|orthogonal complement|?>>
+    <associate|auto-39|<tuple|<with|mode|<quote|math>|U<rsup|\<perp\>>>|?>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|<around*|\<langle\>||\<rangle\>>>|?>>
     <associate|auto-5|<tuple|complex inner product|?>>
     <associate|auto-6|<tuple|18.2|?>>
@@ -4408,100 +4891,113 @@
     <associate|eq 18.5.146.2|<tuple|18.5|?>>
     <associate|eq 18.8.146|<tuple|18.8|?>>
     <associate|eq 18.9.146|<tuple|18.9|?>>
-    <associate|inner Gram-Schmidt procedure|<tuple|18.28|?>>
-    <associate|inner Riesz Representation theorm|<tuple|18.33|?>>
-    <associate|inner Schwartz in equality|<tuple|18.16|?>>
-    <associate|inner adjoint and composition|<tuple|18.38|?>>
-    <associate|inner adjoint of adjoint|<tuple|18.35|?>>
-    <associate|inner adjoint operator|<tuple|18.34|?>>
-    <associate|inner adjoint operator and composition|<tuple|18.38|?>>
-    <associate|inner adjoint operator is linear|<tuple|18.36|?>>
-    <associate|inner canonical basis are orthonormal|<tuple|18.25|?>>
-    <associate|inner complex inner product properties|<tuple|18.8|?>>
-    <associate|inner complex inner product space|<tuple|18.4|?>>
-    <associate|inner complex product space construction|<tuple|18.13|?>>
+    <associate|inner Gram-Schmidt procedure|<tuple|18.31|?>>
+    <associate|inner Riesz Representation theorm|<tuple|18.36|?>>
+    <associate|inner Schwartz in equality|<tuple|18.18|?>>
+    <associate|inner adjoint and composition|<tuple|18.41|?>>
+    <associate|inner adjoint of adjoint|<tuple|18.38|?>>
+    <associate|inner adjoint operator|<tuple|18.37|?>>
+    <associate|inner adjoint operator and composition|<tuple|18.41|?>>
+    <associate|inner adjoint operator is linear|<tuple|18.39|?>>
+    <associate|inner canonical basis are orthonormal|<tuple|18.27|?>>
+    <associate|inner complex inner product properties|<tuple|18.10|?>>
+    <associate|inner complex inner product space|<tuple|18.5|?>>
+    <associate|inner complex product space construction|<tuple|18.15|?>>
     <associate|inner condition for linear operator to be
-    zero|<tuple|18.10|?>>
-    <associate|inner determinant of adjoint mapping|<tuple|18.45|?>>
-    <associate|inner euclidean norm complex numbers|<tuple|18.19|?>>
+    zero|<tuple|18.12|?>>
+    <associate|inner determinant of adjoint mapping|<tuple|18.48|?>>
+    <associate|inner euclidean norm complex numbers|<tuple|18.21|?>>
     <associate|inner euclidean norm on finite dimensional spaces
-    (complex)|<tuple|18.22|?>>
+    (complex)|<tuple|18.24|?>>
     <associate|inner euclidean norm on finite dimensional spaces
-    (real)|<tuple|18.20|?>>
-    <associate|inner euclidean norm real numbers|<tuple|18.18|?>>
-    <associate|inner hermitian matrix|<tuple|18.42|?>>
-    <associate|inner linear function from inner product|<tuple|18.32|?>>
-    <associate|inner linear independence and orthogonality|<tuple|18.26|?>>
-    <associate|inner matrix of adjoint operator|<tuple|18.44|?>>
-    <associate|inner matrix of linear mapping|<tuple|18.27|?>>
-    <associate|inner orthogonality|<tuple|18.23|?>>
-    <associate|inner orthonormal set|<tuple|18.30|?>>
-    <associate|inner orthonormal set definition|<tuple|18.24|?>>
-    <associate|inner orthonormalization (1)|<tuple|18.29|?>>
-    <associate|inner product and finite sums|<tuple|18.9|?>>
-    <associate|inner product norm|<tuple|18.14|?>>
-    <associate|inner product norm (1)|<tuple|18.17|?>>
-    <associate|inner product on C^n|<tuple|18.7|?>>
-    <associate|inner product on R^n|<tuple|18.3|?>>
+    (real)|<tuple|18.22|?>>
+    <associate|inner euclidean norm real numbers|<tuple|18.20|?>>
+    <associate|inner expansion in a orthonormal basis|<tuple|18.29|?>>
+    <associate|inner hermitian matrix|<tuple|18.45|?>>
+    <associate|inner inner product on a sub-space|<tuple|18.2|?>>
+    <associate|inner linear function from inner product|<tuple|18.35|?>>
+    <associate|inner linear independence and orthogonality|<tuple|18.28|?>>
+    <associate|inner matrix of adjoint operator|<tuple|18.47|?>>
+    <associate|inner matrix of linear mapping|<tuple|18.30|?>>
+    <associate|inner orthogonality|<tuple|18.25|?>>
+    <associate|inner orthonormal set|<tuple|18.33|?>>
+    <associate|inner orthonormal set definition|<tuple|18.26|?>>
+    <associate|inner orthonormalization (1)|<tuple|18.32|?>>
+    <associate|inner product and finite sums|<tuple|18.11|?>>
+    <associate|inner product complex subspace|<tuple|18.8|?>>
+    <associate|inner product norm|<tuple|18.16|?>>
+    <associate|inner product norm (1)|<tuple|18.19|?>>
+    <associate|inner product on C^n|<tuple|18.9|?>>
+    <associate|inner product on R^n|<tuple|18.4|?>>
+    <associate|inner product real subspace|<tuple|18.8|?>>
     <associate|inner real inner product space|<tuple|18.1|?>>
-    <associate|inner real inner product space properties|<tuple|18.2|?>>
-    <associate|inner real product space construction|<tuple|18.12|?>>
-    <associate|inner symmetric matrix|<tuple|18.41|?>>
-    <associate|inner unitary matrix|<tuple|18.43|?>>
-    <associate|lemma 18.95.148|<tuple|18.95|?>>
-    <associate|spectral L^n is linear|<tuple|18.51|?>>
-    <associate|spectral L^n+m=L^noL^m|<tuple|18.50|?>>
-    <associate|spectral P[L] is a abelian semi group|<tuple|18.59|?>>
-    <associate|spectral Schur's theorem|<tuple|18.70|?>>
-    <associate|spectral change of base|<tuple|18.87|?>>
-    <associate|spectral complex spectral theorem|<tuple|18.93|?>>
-    <associate|spectral composition and permutations|<tuple|18.60|?>>
+    <associate|inner real inner product space properties|<tuple|18.3|?>>
+    <associate|inner real product space construction|<tuple|18.14|?>>
+    <associate|inner symmetric matrix|<tuple|18.44|?>>
+    <associate|inner unitary matrix|<tuple|18.46|?>>
+    <associate|lemma 18.95.148|<tuple|18.98|?>>
+    <associate|spectral L^n is linear|<tuple|18.54|?>>
+    <associate|spectral L^n+m=L^noL^m|<tuple|18.53|?>>
+    <associate|spectral P[L] is a abelian semi group|<tuple|18.62|?>>
+    <associate|spectral Schur's theorem|<tuple|18.73|?>>
+    <associate|spectral change of base|<tuple|18.90|?>>
+    <associate|spectral complex spectral theorem|<tuple|18.96|?>>
+    <associate|spectral composition and permutations|<tuple|18.63|?>>
     <associate|spectral composition of injective linear
-    mappings|<tuple|18.52|?>>
-    <associate|spectral coordinate transformation|<tuple|18.86|?>>
+    mappings|<tuple|18.55|?>>
+    <associate|spectral coordinate transformation|<tuple|18.89|?>>
     <associate|spectral diagnolizing operator is
-    self-adjoint|<tuple|18.76|?>>
-    <associate|spectral diagonal matrix|<tuple|18.71|?>>
+    self-adjoint|<tuple|18.79|?>>
+    <associate|spectral diagonal matrix|<tuple|18.74|?>>
     <associate|spectral eigen values of a self-adjoint operator are
-    linear|<tuple|18.77|?>>
-    <associate|spectral eigen vectors and values|<tuple|18.62|?>>
+    linear|<tuple|18.80|?>>
+    <associate|spectral eigen vectors and values|<tuple|18.65|?>>
     <associate|spectral eigenvectors exist in a finite dimensional complex
-    space|<tuple|18.64|?>>
+    space|<tuple|18.67|?>>
     <associate|spectral every self-adjoint an unitary operator are
-    normal|<tuple|18.90|?>>
+    normal|<tuple|18.93|?>>
     <associate|spectral factorization of polynomial
-    operators|<tuple|18.61|?>>
-    <associate|spectral finite product of polynomial|<tuple|18.57|?>>
-    <associate|spectral identy map is self-adjoint|<tuple|18.74|?>>
-    <associate|spectral identy map is unitary|<tuple|18.82|?>>
-    <associate|spectral invariant sub-space|<tuple|18.65|?>>
-    <associate|spectral linear operator|<tuple|18.46|?>>
-    <associate|spectral linear operator isomorphism|<tuple|18.47|?>>
+    operators|<tuple|18.64|?>>
+    <associate|spectral finite product of polynomial|<tuple|18.60|?>>
+    <associate|spectral identy map is self-adjoint|<tuple|18.77|?>>
+    <associate|spectral identy map is unitary|<tuple|18.85|?>>
+    <associate|spectral invariant sub-space|<tuple|18.68|?>>
+    <associate|spectral linear operator|<tuple|18.49|?>>
+    <associate|spectral linear operator isomorphism|<tuple|18.50|?>>
     <associate|spectral matrices of self adjoint transformations are
-    Hermitian|<tuple|18.75|?>>
-    <associate|spectral normal operator|<tuple|18.89|?>>
-    <associate|spectral normal operator alternative|<tuple|18.91|?>>
-    <associate|spectral operator mapping bases is unitary|<tuple|18.88|?>>
+    Hermitian|<tuple|18.78|?>>
+    <associate|spectral normal operator|<tuple|18.92|?>>
+    <associate|spectral normal operator alternative|<tuple|18.94|?>>
+    <associate|spectral operator mapping bases is unitary|<tuple|18.91|?>>
+    <associate|spectral orthogonal complement|<tuple|18.101|?>>
+    <associate|spectral orthogonal complement and linear
+    operator|<tuple|18.104|?>>
+    <associate|spectral orthogonal complement properties|<tuple|18.102|?>>
     <associate|spectral orthonormalization and
-    diagonlization|<tuple|18.92|?>>
-    <associate|spectral polynomial operator|<tuple|18.53|?>>
+    diagonlization|<tuple|18.95|?>>
+    <associate|spectral polynomial operator|<tuple|18.56|?>>
     <associate|spectral polynomial operator composition and polynomial
-    product|<tuple|18.55|?>>
-    <associate|spectral self adjoint transformation|<tuple|18.73|?>>
+    product|<tuple|18.58|?>>
+    <associate|spectral real spectral theorem|<tuple|18.105|?>>
+    <associate|spectral self adjoint transformation|<tuple|18.76|?>>
     <associate|spectral self-adjoint operator condition for operator to be
-    zero|<tuple|18.78|?>>
+    zero|<tuple|18.81|?>>
     <associate|spectral self-adjoint operators have a eigenvector with real
-    eigenvalues|<tuple|18.96|?>>
-    <associate|spectral theorema diagonalization|<tuple|18.94|?>>
-    <associate|spectral unitary operator|<tuple|18.79|?>>
-    <associate|spectral unitary operator alternative|<tuple|18.80|?>>
+    eigenvalues|<tuple|18.99|?>>
+    <associate|spectral theorem|<tuple|18.105|?>>
+    <associate|spectral theorem complex|<tuple|18.105|?>>
+    <associate|spectral theorem direct sum|<tuple|18.103|?>>
+    <associate|spectral theorem real|<tuple|18.105|?>>
+    <associate|spectral theorema diagonalization|<tuple|18.97|?>>
+    <associate|spectral unitary operator|<tuple|18.82|?>>
+    <associate|spectral unitary operator alternative|<tuple|18.83|?>>
     <associate|spectral unitary operator has a unitary
-    matrix|<tuple|18.85|?>>
-    <associate|spectral unitary operator properties|<tuple|18.81|?>>
-    <associate|spectral upper triangular conditions|<tuple|18.68|?>>
-    <associate|spectral upper triangular matrix|<tuple|18.66|?>>
+    matrix|<tuple|18.88|?>>
+    <associate|spectral unitary operator properties|<tuple|18.84|?>>
+    <associate|spectral upper triangular conditions|<tuple|18.71|?>>
+    <associate|spectral upper triangular matrix|<tuple|18.69|?>>
     <associate|spectral upper triangular matrix for a linear
-    operator|<tuple|18.69|?>>
+    operator|<tuple|18.72|?>>
   </collection>
 </references>
 
