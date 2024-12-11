@@ -5587,7 +5587,11 @@
 
       <item><math|\<exists\>k\<in\><around*|{|1,\<ldots\>,n|}>> and a
       <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>>\<subseteq\>F>
-      such that <math|w<rsub|k>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}><around*|{|k|}>>\<alpha\><rsub|i>\<cdot\>w<rsub|i>>
+      such that <math|w<rsub|k>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>>\<alpha\><rsub|i>\<cdot\>w<rsub|i>>
+
+      <item><math|\<exists\>k\<in\><around*|{|1,\<ldots\>,n|}>> and a
+      <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<subseteq\>F>
+      such that <math|w<rsub|k>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<alpha\><rsub|i>\<cdot\>w<rsub|i>>
     </enumerate>
   </theorem>
 
@@ -5779,10 +5783,57 @@
         <reference|sum over disjoint subsets>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>>\<alpha\><rsub|i>\<cdot\>w<rsub|i>+<big|sum><rsub|i\<in\><around*|{|k|}>>\<alpha\><rsub|i>\<cdot\>w<rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|sum general single>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>>\<alpha\><rsub|i>\<cdot\>w<rsub|i>+\<alpha\><rsub|k>\<cdot\>w<rsub|k>>>|<row|<cell|>|<cell|=>|<cell|w<rsub|k>+<around*|(|-1|)>\<cdot\>w<rsub|k>>>|<row|<cell|>|<cell|=>|<cell|0>>>>
       </eqnarray*>
-    </description>
 
-    \;
+      <item*|<math|4\<Rightarrow\>6>>By the hypothesis there exist a
+      \ <math|<around*|{|\<beta\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F>
+      satisfying <math|\<exists\>j\<in\><around*|{|1,\<ldots\>,n|}>> with
+      <math|\<beta\><rsub|j>\<neq\>0> such that
+      <math|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<beta\><rsub|i>\<cdot\>w<rsub|i>=0>.
+      Hence the set <math|A=<around*|{|j\<in\><around*|{|1,\<ldots\>,n|}>\|\<alpha\><rsub|j>\<neq\>0|}>>
+      is non empty and finite so <math|k=max<around*|(|A|)>> exist. So
+      <math|\<forall\>i\<in\><around*|{|k+1,\<ldots\>,n|}>> we have
+      <math|\<alpha\><rsub|i>=0> and we have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|0>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<beta\><rsub|i>\<cdot\>w<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,m-1|}>>\<beta\><rsub|i>\<cdot\>w<rsub|i>+<big|sum><rsub|i\<in\><around*|{|k|}>>\<alpha\><rsub|i>\<cdot\>w<rsub|i>+<big|sum><rsub|i\<in\><around*|{|k+1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>w<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,m-1|}>>\<beta\><rsub|i>\<cdot\>w<rsub|i>+\<beta\><rsub|k>\<cdot\>w<rsub|k>+0>>>>
+      </eqnarray*>
+
+      which as <math|\<beta\><rsub|k>\<neq\>0> proves that\ 
+
+      <\equation*>
+        w<rsub|k>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>><frac|-\<beta\><rsub|i>|\<beta\><rsub|k>>\<cdot\>w<rsub|i>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<alpha\><rsub|i>\<cdot\>w<rsub|i>
+      </equation*>
+
+      where\ 
+
+      <\equation*>
+        <around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m-1|}>>\<subseteq\>F<text|
+        is defined by >\<alpha\><rsub|i>=<frac|-\<beta\><rsub|i>|\<beta\><rsub|m>>
+      </equation*>
+
+      <item*|<math|6\<Rightarrow\>4>>By the hypothesis there exist a
+      <math|k\<in\><around*|{|1,\<ldots\>,n|}>> and a
+      <math|<around*|{|\<beta\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<subseteq\>F>
+      such that <math|w<rsub|k>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<beta\><rsub|i>\<cdot\>w<rsub|i>>.
+      Define then\ 
+
+      <\equation*>
+        <around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>F<text|
+        by >\<alpha\><rsub|i>=<choice|<tformat|<table|<row|<cell|0<text| if
+        >i\<in\><around*|{|k+1,\<ldots\>,n|}>>>|<row|<cell|-1<text| if
+        >i=k>>|<row|<cell|\<beta\><rsub|i><text| if
+        >i\<in\><around*|{|1,\<ldots\>,k-1|}>>>>>>
+      </equation*>
+
+      then <math|\<alpha\><rsub|k>\<neq\>0> and\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>w<rsub|i>>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<alpha\><rsub|i>\<cdot\>w<rsub|i>+<big|sum><rsub|i\<in\><around*|{|k|}>>\<alpha\><rsub|i>\<cdot\>w<rsub|i>+<big|sum><rsub|i\<in\><around*|{|k+1,\<ldots\>,n|}>>\<alpha\><rsub|i>\<cdot\>w<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<beta\><rsub|i>\<cdot\>w<rsub|i>+\<alpha\><rsub|k>\<cdot\>w<rsub|k>+0>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<beta\><rsub|i>\<cdot\>w<rsub|i>-w<rsub|k>>>|<row|<cell|>|<cell|=>|<cell|0>>>>
+      </eqnarray*>
+    </description>
   </proof>
+
+  \;
 
   The opposite of a linear dependent set is a linear independent set.
 
@@ -6011,6 +6062,8 @@
       <math|V> is linear dependent.
     </enumerate>
   </proof>
+
+  \;
 
   The following lemma shows, how given a finite linear independent set
   <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> and a set that spans the

@@ -1983,6 +1983,11 @@
     M=M<rsup|H>
   </equation*>
 
+  <\note>
+    If <math|\<bbb-K\>=\<bbb-R\>> then <math|M<rsup|H>=M<rsup|T>> so if
+    <math|M> is Hermitian if and only if <math|M> is symetri
+  </note>
+
   <\definition>
     <label|inner unitary matrix><index|unitary matrix><dueto|Unitary
     Matrix>Let <math|n,m\<in\>\<bbb-N\>> and
@@ -1990,8 +1995,18 @@
     unitary if\ 
 
     <\equation*>
-      U<rsup|H>\<cdot\>U=E=U\<cdot\>U<rsup|H>
+      M<rsup|H>\<cdot\>M=E=M\<cdot\>M<rsup|H>
     </equation*>
+
+    <\note>
+      From the above definition it follows that if <math|M> is unitary then
+      <math|M<rsup|-1>=M<rsup|H>>.
+    </note>
+
+    <\note>
+      If <math|\<bbb-K\>=\<bbb-R\>> then <math|M<rsup|H>=M<rsup|T>>, hence if
+      <math|M> is unitary then <math|M<rsup|-1>=M<rsup|T>>.
+    </note>
   </definition>
 
   <\theorem>
@@ -2594,7 +2609,7 @@
     value>Let <math|X> be a vector space over a field <math|\<cal-F\>> and
     <math|L\<in\>Hom<around*|(|X|)>> then <math|x\<in\>X> is a
     <with|font-series|bold|eigenvector >with
-    <with|font-series|bold|eigenvalue ><math|\<lambda\>> if\ 
+    <with|font-series|bold|eigenvalue ><math|\<lambda\>\<in\>\<cal-F\>> if\ 
 
     <\equation*>
       x\<neq\>0<text| and >L<around*|(|x|)>=\<lambda\>\<cdot\>x
@@ -2691,7 +2706,127 @@
     eigenvector <math|w> with eigenvalue <math|\<lambda\><rsub|l>>.
   </proof>
 
-  TODO create here section about upper triangular and diagonal matrices
+  TODO some theorems about eigenvalues
+
+  <\definition>
+    <label|spectral eigenspace><index|eigenspace><index|<math|E<around*|(|L,\<lambda\>|)>>><dueto|eigenspace>Let
+    <math|X> be a vector space over a field <math|\<cal-F\>> and
+    <math|L\<in\>Hom<around*|(|X|)>> with a eigenvalue <math|\<lambda\>> then
+    the <with|font-series|bold|eigenspace> of <math|\<lambda\>> note by
+    <math|E<around*|(|L,\<lambda\>|)>> is defined by\ 
+
+    <\equation*>
+      E<around*|(|L,\<lambda\>|)>=<around*|{|x\<in\>X\|L<around*|(|x|)>=\<lambda\>\<cdot\>x|}>
+    </equation*>
+  </definition>
+
+  <\theorem>
+    <label|spectral eigenspace \<less\>\<gtr\> {0}>Let <math|X> be a vector
+    space over a field <math|\<cal-F\>> and <math|L\<in\>Hom<around*|(|X|)>>
+    then if <math|\<lambda\>> is a eigenvalue of <math|L> then
+    <math|E<around*|(|L,\<lambda\>|)>> is a non trivial sub-space of
+    <math|X>.
+  </theorem>
+
+  <\proof>
+    As <math|\<lambda\>> is a eigen value of <math|L> there exist a
+    <math|x\<in\>X> such that <math|L<around*|(|x|)>=\<lambda\>\<cdot\>x>,
+    hence
+
+    <\equation*>
+      \<emptyset\>\<neq\>E<around*|(|L,\<lambda\>|)>=<around*|{|x\<in\>X\|L<around*|(|x|)>=\<lambda\>\<cdot\>x|}>\<neq\><around*|{|0|}>
+    </equation*>
+
+    If <math|x,y\<in\>E<around*|(|L,\<lambda\>|)>> and
+    <math|\<alpha\>\<in\>\<cal-F\>> then <math|L<around*|(|x+\<alpha\>\<cdot\>y|)>=L<around*|(|x|)>+\<alpha\>\<cdot\>L<around*|(|y|)>=\<lambda\>\<cdot\>x+\<alpha\>\<cdot\>\<lambda\>\<cdot\>y=\<lambda\>\<cdot\><around*|(|x+\<alpha\>\<cdot\>y|)>>
+    proving that <math|x+\<alpha\>\<cdot\>y\<in\>E<around*|(|L,\<lambda\>|)>>.
+  </proof>
+
+  <\theorem>
+    <label|spectral distinct eigenvalues and linear independence>Let <math|X>
+    be a vector space over a field <math|\<cal-F\>> and
+    <math|L\<in\>Hom<around*|(|X|)>>, <math|n\<in\>\<bbb-N\>> and
+    <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> a finite set of
+    eigenvectors with <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> a
+    eigenvalue <math|\<lambda\><rsub|i>> such that
+    <math|\<forall\>i,j\<in\><around*|{|1,\<ldots\>,n|}>> with
+    <math|i\<neq\>j> we have <math|\<lambda\><rsub|i>\<neq\>\<lambda\><rsub|j>>
+    then <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> is linear
+    independent.\ 
+
+    In other words if <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> is a
+    finite set of eigenvector with distinct eigenvalues then
+    <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> is linear independent.
+  </theorem>
+
+  <\proof>
+    Assume that <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> is linear
+    dependent then by [theorem: <reference|linear dependent finite set> (6)]
+    there exist a <math|k\<in\><around*|{|1,\<ldots\>,n|}>> such that
+    <math|e<rsub|k>\<in\>span<around*|(|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|k-1>|}>|)>>.
+    So the finite set\ 
+
+    <\equation*>
+      A=<around*|{|k\<in\><around*|{|1,\<ldots\>,n|}>\|e<rsub|k>\<in\>span<around*|(|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|k-1>|}>|)>|}>
+    </equation*>
+
+    is not empty. Hence <math|k=min<around*|(|A|)>> exist and
+    <math|e<rsub|k>\<in\>span<around*|(|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|k-1>|}>|)>>.
+    If <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|k-1>|}>> is again
+    dependent then by [theorem: <reference|linear dependent finite set> (6)]
+    again there exist a <math|l\<in\><around*|{|1,\<ldots\>,k-1|}>\<subseteq\><around*|{|1,\<ldots\>,n|}>>
+    such that <math|e<rsub|l>\<in\>span<around*|(|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|l-1>|}>|)>>
+    contradicting the fact that <math|k=min<around*|(|A|)>>. Hence we have
+    that\ 
+
+    <\equation*>
+      e<rsub|k>\<in\>span<around*|(|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|k-1>|}>|)><text|
+      and ><around*|{|e<rsub|1>,\<ldots\>,e<rsub|k-1>|}><text| is linear
+      independent>
+    </equation*>
+
+    So there exist a <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<subseteq\>\<cal-F\>>
+    such that <math|e<rsub|k>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<alpha\><rsub|i>\<cdot\>e<rsub|i>>.
+    Applying then <math|L> we get
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<lambda\><rsub|k>\<cdot\>e<rsub|k>>|<cell|=>|<cell|L<around*|(|e<rsub|k>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<alpha\><rsub|i>\<cdot\>e<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<alpha\><rsub|i>\<cdot\>L<around*|(|e<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<alpha\><rsub|i>\<cdot\>\<lambda\><rsub|i>\<cdot\>e<rsub|i>>>>>
+    </eqnarray*>
+
+    As also <math|\<lambda\><rsub|k>\<cdot\>e<rsub|k>=\<lambda\><rsub|k>*\<cdot\><big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<alpha\><rsub|i>\<cdot\>e<rsub|i>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<alpha\><rsub|i>\<cdot\>\<lambda\><rsub|k>\<cdot\>e<rsub|i>>
+    we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|0>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<alpha\><rsub|i>\<cdot\>\<lambda\><rsub|i>\<cdot\>e<rsub|i>-<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<alpha\><rsub|i>\<cdot\>\<lambda\><rsub|k>\<cdot\>e<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<alpha\><rsub|i>\<cdot\><around*|(|\<lambda\><rsub|i>-\<lambda\><rsub|k>|)>\<cdot\>e<rsub|i>>>>>
+    </eqnarray*>
+
+    Given that <math|<text|><around*|{|e<rsub|1>,\<ldots\>,e<rsub|k-1>|}>> is
+    linear dependent we have that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,k-1|}>>
+    <math|\<alpha\><rsub|i>\<cdot\><around*|(|\<lambda\><rsub|i>-\<lambda\><rsub|k>|)>>
+    which as <math|\<lambda\><rsub|k>\<neq\>\<lambda\><rsub|i>> [because
+    <math|k\<neq\>i>] proves that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,k-1|}>>
+    <math|\<alpha\><rsub|i>=0>. Hence <math|e<rsub|k>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<alpha\><rsub|i>\<cdot\>e<rsub|i>=0>
+    contradicting then fact that <math|e<rsub|k>\<neq\>0> because
+    <math|e<rsub|k>> is a eigenvector. So the assumption wrong and\ 
+
+    <\equation*>
+      <around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}><text| is linear dependent.>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    Let <math|X> be a finite dimensional vector space over a field
+    <math|\<cal-F\>> and <math|L\<in\>Hom<around*|(|X|)>> then
+    <math|card<around*|(|<around*|{|\<lambda\>\<in\>\<cal-F\>\|\<lambda\><text|
+    is a eigen value for >L|}>|)>\<leqslant\>dim<around*|(|X|)>>.
+
+    In other words every linear operator has at most
+    <math|dim<around*|(|X|)>> distinct eigen values.
+  </theorem>
+
+  TODO proof the above theorem
+
+  \;
 
   <subsection|Upper triangular and diagonal matrices>
 
@@ -3019,7 +3154,7 @@
   </proof>
 
   We can actual ensure that the basis that makes the matrix of a linear
-  operator is orthonormal.
+  operator upper diagonal is orthonormal.
 
   <\theorem>
     <label|spectral Schur's theorem><index|Schur's Theorem><dueto|Schur's
@@ -3080,6 +3215,8 @@
       \<cal-M\><around*|(|L;E,E|)><text| is a upper diagonal matrix>
     </equation*>
   </proof>
+
+  <subsection|Diagonalization and spectral theorems>
 
   A special case of a upper triangular matrix is a diagonal matrix.
 
@@ -3569,6 +3706,10 @@
       <\equation*>
         \<cal-M\><around*|(|L;E,E|)>=\<cal-M\><around*|(|U;E,E|)>\<cdot\>\<cal-M\><around*|(|L;F,F|)>\<cdot\>\<cal-M\><around*|(|U;E,E|)><rsup|-1>
       </equation*>
+
+      <\equation*>
+        \<cal-M\><around*|(|L;F,F|)>=\<cal-M\><around*|(|U;E,E|)><rsup|-1>\<cdot\>\<cal-M\><around*|(|L;E,E|)>\<cdot\>\<cal-M\><around*|(|U;E,E|)>
+      </equation*>
     </enumerate>
   </theorem>
 
@@ -3673,10 +3814,25 @@
 
       which by [definition: <reference|matrix linear mapping>] proves that\ 
 
+      <\equation>
+        <label|eq 18.23.149>\<cal-M\><around*|(|L;E,E|)>=\<cal-M\><around*|(|U;E,E|)>\<cdot\>\<cal-M\><around*|(|L;F,F|)>\<cdot\>\<cal-M\><around*|(|U;E,E|)><rsup|-1>
+      </equation>
+
+      Finally\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<cal-M\><around*|(|U;E,E|)><rsup|-1>\<cdot\>\<cal-M\><around*|(|L;E,E|)>\<cdot\>\<cal-M\><around*|(|U;E,E|)>>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 18.23.149>]>>>|<cell|>>|<row|<cell|\<cal-M\><around*|(|U;E,E|)><rsup|-1>\<cdot\>\<cal-M\><around*|(|U;E,E|)>\<cdot\>\<cal-M\><around*|(|L;F,F|)>\<cdot\>\<cal-M\><around*|(|U;E,E|)><rsup|-1>\<cdot\>\<cal-M\><around*|(|U;E,E|)>>|<cell|=>|<cell|>>|<row|<cell|\<cal-M\><around*|(|L;F,F|)>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      proving that\ 
+
       <\equation*>
-        \<cal-M\><around*|(|L;E,E|)>=\<cal-M\><around*|(|U;E,E|)>\<cdot\>\<cal-M\><around*|(|L;F,F|)>\<cdot\>\<cal-M\><around*|(|U;E,E|)><rsup|-1>
+        \<cal-M\><around*|(|L;F,F|)>=\<cal-M\><around*|(|U;E,E|)><rsup|-1>\<cdot\>\<cal-M\><around*|(|L;E,E|)>\<cdot\>\<cal-M\><around*|(|U;E,E|)>
       </equation*>
     </enumerate>
+
+    \;
   </proof>
 
   For inner product spaces we have additionally.
@@ -4617,8 +4773,9 @@
       that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
       <math|e<rsub|i>> is a eigenvector of <math|L>.
 
-      <item>There exists a basis <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>>
-      for <math|X> such that <math|\<cal-M\><around*|(|L;E,E|)>> is diagonal.
+      <item>There exists a orthonormal basis
+      <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> for <math|X> such
+      that <math|\<cal-M\><around*|(|L;E,E|)>> is diagonal.
     </enumerate>
   </theorem>
 
@@ -4773,7 +4930,152 @@
     </description>
   </proof>
 
-  \;
+  <\corollary>
+    <label|spectral diagonalization of a self-adjoint operator (real)>Let
+    <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
+    be a real finite dimensional space with
+    <math|dim<around*|(|X|)>\<in\>\<bbb-N\>> with
+    <math|<rigid|dim<around*|(|X|)>=n\<in\>\<bbb-N\>>>,
+    <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> a orthonormal basis
+    and <math|<rigid|L\<in\>Hom<around*|(|X|)>>> a self-adjoint operator then
+    there exist a unitary operator <math|<rigid|U\<in\>Hom<around*|(|X|)>>>
+    such that <math|\<cal-M\><around*|(|U<rsup|\<star\>>\<circ\>L\<circ\>U;E,E|)>>
+    is diagonal.
+  </corollary>
+
+  <\proof>
+    Using the real spectral theorem [theorem: <reference|spectral real
+    spectral theorem>] there exist a orthonormal basis
+    <math|<rigid|F=<around*|{|f<rsub|1>,\<ldots\>,f<rsub|n>|}>>> such
+    <math|\<cal-M\><around*|(|L;F,F|)>> is diagonal. Take now the unitary
+    mapping <math|U\<in\>Hom<around*|(|X|)>> defined by
+    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|U<around*|(|e<rsub|i>|)>=f<rsub|i>> [see theorem:
+    <reference|spectral operator mapping bases is unitary>] then we have for
+    <math|i,j\<in\><around*|{|1,\<ldots\>,n|}>> that
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<cal-M\><around*|(|U<rsup|\<ast\>>\<circ\>L\<circ\>U;E,E|)><rsub|i,j>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|inner matrix of linear mapping>]>>>|<cell|<around*|\<langle\>|<around*|(|U<rsup|\<ast\>>\<circ\>L\<circ\>U|)><around*|(|e<rsub|j>|)>,e<rsub|i>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|U<rsup|\<ast\>><around*|(|L<around*|(|U<around*|(|e<rsub|j>|)>|)>|)>,e<rsub|i>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|L<around*|(|U<around*|(|e<rsub|j>|)>|)>,<around*|(|U<rsup|\<ast\>>|)><rsup|\<ast\>><around*|(|e<rsub|i>|)>|\<rangle\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|inner adjoint of adjoint>]>>>|<cell|<around*|\<langle\>|L<around*|(|U<around*|(|e<rsub|j>|)>|)>,U<around*|(|e<rsub|i>|)>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|L<around*|(|f<rsub|j>|)>,f<rsub|i>|\<rangle\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|inner matrix of linear mapping>]>>>|<cell|\<cal-M\><around*|(|L;F,F|)><rsub|i,j>>>>>
+    </eqnarray*>
+
+    So <math|\<cal-M\><around*|(|U<rsup|\<ast\>>\<circ\>L\<circ\>U;E,E|)>=\<cal-M\><around*|(|L;F,F|)>>
+    which, as <math|\<cal-M\><around*|(|L;F,F|)>> is diagonal, proves that
+    <math|<rigid|\<cal-M\><around*|(|U<rsup|\<ast\>>\<circ\>L\<circ\>U;E,E|)>>>
+    is diagonal.
+  </proof>
+
+  <\theorem>
+    <label|spectrum diagonalization of a matrix>Let <math|n\<in\>\<bbb-N\>>
+    then we have:
+
+    <\enumerate>
+      <item>If <math|M\<in\>\<cal-M\><rsub|n,n><around*|(|\<bbb-R\>|)>> is a
+      summetrix matrix then there exist a unitary matrix <math|U> such that
+      <math|U<rsup|T>\<cdot\>M\<cdot\>U\<equallim\><rsub|U<text| is
+      unitary>>U<rsup|-1>\<cdot\>M\<cdot\>U> is diagonal.
+
+      <item>If <math|M\<in\>\<cal-M\><rsub|n,n><around*|(|\<bbb-C\>|)>> is a
+      hermitian matrix then there exist a unitary matrix <math|U> such that
+      <math|<rigid|U<rsup|H>\<cdot\>M\<cdot\>U\<equallim\><rsub|U<text| is
+      unitary>>U<rsup|-1>\<cdot\>M\<cdot\>U>> is diagonal.
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Take the inner product vector space
+      <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
+      defined in [example: <reference|inner product on R^n>] together with
+      the canonical orthonormal basis <math|E=<around*|{|e<rsub|1>,\<ldots\>,e+n|}>>
+      defined by <math|<around*|(|e<rsub|i>|)><rsub|j>=\<delta\><rsub|i,j>>
+      [see example: <reference|inner canonical basis are orthonormal>].
+      Define <math|L\<in\>Hom<around*|(|\<bbb-R\>|)>> by
+      <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+      <math|L<around*|(|e<rsub|i>|)>=<big|sum><rsub|k=1><rsup|n>M<rsub|i,k>\<cdot\>e<rsub|k>>
+      so that
+
+      <\equation>
+        <label|eq 18.39.149>\<cal-M\><around*|(|L;E,E|)>=M
+      </equation>
+
+      As <math|M> is symmetric it is Hermitian [see definition:
+      <reference|inner hermitian matrix>] we have by [theorem:
+      <reference|spectral matrices of self adjoint transformations are
+      Hermitian>] that <math|L> is a self-adjoint operator. Using the real
+      spectral theorem [see theorem: <reference|spectral real spectral
+      theorem>] there exist a orthonormal basis
+      <math|F=<around*|{|f<rsub|1>,\<ldots\>,f<rsub|n>|}>> such that
+      <math|\<cal-M\><around*|(|L;F,F|)>> is diagonal. Let <math|V> be the
+      coordinate transformation from <math|E> to <math|F> then using
+      [theorem: <reference|spectral change of base>]
+
+      <\equation*>
+        \<cal-M\><around*|(|L;F,F|)>=\<cal-M\><around*|(|V;E,E|)><rsup|-1>\<cdot\>\<cal-M\><around*|(|L;E,E|)>\<cdot\>\<cal-M\><around*|(|V;E,E|)>
+      </equation*>
+
+      so that\ 
+
+      <\equation*>
+        \<cal-M\><around*|(|V;E,E|)><rsup|-1>\<cdot\>M\<cdot\>\<cal-M\><around*|(|V;E,E|)><text|
+        is a diagonal matrix>
+      </equation*>
+
+      Using [theorem: <reference|spectral operator mapping bases is unitary>]
+      it follows that <math|\<cal-M\><around*|(|V;E,E|)>> is unitary. So if
+      we take <math|U=\<cal-M\><around*|(|V;E,E|)>> then we found a unitary
+      matrix <math|U> such that <math|U<rsup|-1>\<cdot\>M\<cdot\>U> is
+      diagonal.
+
+      <item>Take the inner product vector space
+      <math|<around*|\<langle\>|\<bbb-C\><rsup|n>,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
+      defined in [example: <reference|inner product on C^n>] together with
+      the canonical orthonormal basis <math|E=<around*|{|e<rsub|1>,\<ldots\>,e+n|}>>
+      defined by <math|<around*|(|e<rsub|i>|)><rsub|j>=\<delta\><rsub|i,j>>
+      [see example: <reference|inner canonical basis are orthonormal>].
+      Define <math|L\<in\>Hom<around*|(|\<bbb-R\>|)>> by
+      <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+      <math|L<around*|(|e<rsub|i>|)>=<big|sum><rsub|k=1><rsup|n>M<rsub|i,k>\<cdot\>e<rsub|k>>
+      so that
+
+      <\equation>
+        <label|eq 18.40.149>\<cal-M\><around*|(|L;E,E|)>=M
+      </equation>
+
+      As <math|M> is Hermitian [see definition: <reference|inner hermitian
+      matrix>] we have by [theorem: <reference|spectral matrices of self
+      adjoint transformations are Hermitian>] that <math|L> is a self-adjoint
+      operator hence normal by [theorem: <reference|spectral every
+      self-adjoint an unitary operator are normal>]. Using the complex
+      spectral theorem [see theorem: <reference|spectral complex spectral
+      theorem>] there exist a orthonormal basis
+      <math|F=<around*|{|f<rsub|1>,\<ldots\>,f<rsub|n>|}>> such that
+      <math|\<cal-M\><around*|(|L;F,F|)>> is diagonal. Let <math|V> be the
+      coordinate transformation from <math|E> to <math|F> then using
+      [theorem: <reference|spectral change of base>]
+
+      <\equation*>
+        \<cal-M\><around*|(|L;F,F|)>=\<cal-M\><around*|(|V;E,E|)><rsup|-1>\<cdot\>\<cal-M\><around*|(|L;E,E|)>\<cdot\>\<cal-M\><around*|(|V;E,E|)>
+      </equation*>
+
+      so that\ 
+
+      <\equation*>
+        \<cal-M\><around*|(|V;E,E|)><rsup|-1>\<cdot\>M\<cdot\>\<cal-M\><around*|(|V;E,E|)><text|
+        is a diagonal matrix>
+      </equation*>
+
+      Using [theorem: <reference|spectral operator mapping bases is unitary>]
+      it follows that <math|\<cal-M\><around*|(|V;E,E|)>> is unitary. So if
+      we take <math|U=\<cal-M\><around*|(|V;E,E|)>> then we found a unitary
+      matrix <math|U> such that <math|U<rsup|-1>\<cdot\>M\<cdot\>U> is
+      diagonal.
+    </enumerate>
+  </proof>
 
   \;
 
@@ -4834,21 +5136,24 @@
     <associate|auto-24|<tuple|18.4.2|?>>
     <associate|auto-25|<tuple|eigen vector|?>>
     <associate|auto-26|<tuple|eigen value|?>>
-    <associate|auto-27|<tuple|18.4.3|?>>
-    <associate|auto-28|<tuple|invariant sub-space|?>>
-    <associate|auto-29|<tuple|upper triangular matrix|?>>
+    <associate|auto-27|<tuple|eigenspace|?>>
+    <associate|auto-28|<tuple|<with|mode|<quote|math>|E<around*|(|L,\<lambda\>|)>>|?>>
+    <associate|auto-29|<tuple|18.4.3|?>>
     <associate|auto-3|<tuple|inner product|?>>
-    <associate|auto-30|<tuple|upper triangular matrix|?>>
-    <associate|auto-31|<tuple|Schur's Theorem|?>>
-    <associate|auto-32|<tuple|diagonal matrix|?>>
-    <associate|auto-33|<tuple|self-adjoint linear transformation|?>>
-    <associate|auto-34|<tuple|unitary operator|?>>
-    <associate|auto-35|<tuple|coordinate transformation|?>>
-    <associate|auto-36|<tuple|normal operator|?>>
-    <associate|auto-37|<tuple|spectral Theorem (Complex)|?>>
-    <associate|auto-38|<tuple|orthogonal complement|?>>
-    <associate|auto-39|<tuple|<with|mode|<quote|math>|U<rsup|\<perp\>>>|?>>
+    <associate|auto-30|<tuple|invariant sub-space|?>>
+    <associate|auto-31|<tuple|upper triangular matrix|?>>
+    <associate|auto-32|<tuple|upper triangular matrix|?>>
+    <associate|auto-33|<tuple|Schur's Theorem|?>>
+    <associate|auto-34|<tuple|18.4.4|?>>
+    <associate|auto-35|<tuple|diagonal matrix|?>>
+    <associate|auto-36|<tuple|self-adjoint linear transformation|?>>
+    <associate|auto-37|<tuple|unitary operator|?>>
+    <associate|auto-38|<tuple|coordinate transformation|?>>
+    <associate|auto-39|<tuple|normal operator|?>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|<around*|\<langle\>||\<rangle\>>>|?>>
+    <associate|auto-40|<tuple|spectral Theorem (Complex)|?>>
+    <associate|auto-41|<tuple|orthogonal complement|?>>
+    <associate|auto-42|<tuple|<with|mode|<quote|math>|U<rsup|\<perp\>>>|?>>
     <associate|auto-5|<tuple|complex inner product|?>>
     <associate|auto-6|<tuple|18.2|?>>
     <associate|auto-7|<tuple|inner product norm|?>>
@@ -4859,7 +5164,7 @@
     <associate|eq 18.11.146|<tuple|18.11|?>>
     <associate|eq 18.12.146|<tuple|18.12|?>>
     <associate|eq 18.13.146|<tuple|18.13|?>>
-    <associate|eq 18.130.148|<tuple|18.30|?>>
+    <associate|eq 18.130.148|<tuple|18.31|?>>
     <associate|eq 18.14.146|<tuple|18.14|?>>
     <associate|eq 18.15.146|<tuple|18.15|?>>
     <associate|eq 18.16.146|<tuple|18.16|?>>
@@ -4871,22 +5176,25 @@
     <associate|eq 18.20.147|<tuple|18.20|?>>
     <associate|eq 18.21.147|<tuple|18.21|?>>
     <associate|eq 18.22.147|<tuple|18.22|?>>
-    <associate|eq 18.23.148|<tuple|18.23|?>>
-    <associate|eq 18.24.148|<tuple|18.24|?>>
-    <associate|eq 18.25.148|<tuple|18.25|?>>
-    <associate|eq 18.26.148|<tuple|18.26|?>>
-    <associate|eq 18.27.148|<tuple|18.27|?>>
-    <associate|eq 18.28.148|<tuple|18.28|?>>
-    <associate|eq 18.29.148|<tuple|18.29|?>>
+    <associate|eq 18.23.148|<tuple|18.24|?>>
+    <associate|eq 18.23.149|<tuple|18.23|?>>
+    <associate|eq 18.24.148|<tuple|18.25|?>>
+    <associate|eq 18.25.148|<tuple|18.26|?>>
+    <associate|eq 18.26.148|<tuple|18.27|?>>
+    <associate|eq 18.27.148|<tuple|18.28|?>>
+    <associate|eq 18.28.148|<tuple|18.29|?>>
+    <associate|eq 18.29.148|<tuple|18.30|?>>
     <associate|eq 18.3.146|<tuple|18.4|?>>
-    <associate|eq 18.31.148|<tuple|18.31|?>>
-    <associate|eq 18.32.148|<tuple|18.32|?>>
-    <associate|eq 18.33.148|<tuple|18.33|?>>
-    <associate|eq 18.34.148|<tuple|18.34|?>>
-    <associate|eq 18.35.148|<tuple|18.35|?>>
-    <associate|eq 18.36.148|<tuple|18.36|?>>
-    <associate|eq 18.37.148|<tuple|18.37|?>>
+    <associate|eq 18.31.148|<tuple|18.32|?>>
+    <associate|eq 18.32.148|<tuple|18.33|?>>
+    <associate|eq 18.33.148|<tuple|18.34|?>>
+    <associate|eq 18.34.148|<tuple|18.35|?>>
+    <associate|eq 18.35.148|<tuple|18.36|?>>
+    <associate|eq 18.36.148|<tuple|18.37|?>>
+    <associate|eq 18.37.148|<tuple|18.38|?>>
+    <associate|eq 18.39.149|<tuple|18.39|?>>
     <associate|eq 18.4.146|<tuple|18.6|?>>
+    <associate|eq 18.40.149|<tuple|18.40|?>>
     <associate|eq 18.5.146|<tuple|18.7|?>>
     <associate|eq 18.5.146.2|<tuple|18.5|?>>
     <associate|eq 18.8.146|<tuple|18.8|?>>
@@ -4905,7 +5213,7 @@
     <associate|inner complex product space construction|<tuple|18.15|?>>
     <associate|inner condition for linear operator to be
     zero|<tuple|18.12|?>>
-    <associate|inner determinant of adjoint mapping|<tuple|18.48|?>>
+    <associate|inner determinant of adjoint mapping|<tuple|18.51|?>>
     <associate|inner euclidean norm complex numbers|<tuple|18.21|?>>
     <associate|inner euclidean norm on finite dimensional spaces
     (complex)|<tuple|18.24|?>>
@@ -4914,10 +5222,9 @@
     <associate|inner euclidean norm real numbers|<tuple|18.20|?>>
     <associate|inner expansion in a orthonormal basis|<tuple|18.29|?>>
     <associate|inner hermitian matrix|<tuple|18.45|?>>
-    <associate|inner inner product on a sub-space|<tuple|18.2|?>>
     <associate|inner linear function from inner product|<tuple|18.35|?>>
     <associate|inner linear independence and orthogonality|<tuple|18.28|?>>
-    <associate|inner matrix of adjoint operator|<tuple|18.47|?>>
+    <associate|inner matrix of adjoint operator|<tuple|18.50|?>>
     <associate|inner matrix of linear mapping|<tuple|18.30|?>>
     <associate|inner orthogonality|<tuple|18.25|?>>
     <associate|inner orthonormal set|<tuple|18.33|?>>
@@ -4929,75 +5236,79 @@
     <associate|inner product norm (1)|<tuple|18.19|?>>
     <associate|inner product on C^n|<tuple|18.9|?>>
     <associate|inner product on R^n|<tuple|18.4|?>>
-    <associate|inner product real subspace|<tuple|18.8|?>>
+    <associate|inner product real subspace|<tuple|18.2|?>>
     <associate|inner real inner product space|<tuple|18.1|?>>
     <associate|inner real inner product space properties|<tuple|18.3|?>>
     <associate|inner real product space construction|<tuple|18.14|?>>
     <associate|inner symmetric matrix|<tuple|18.44|?>>
-    <associate|inner unitary matrix|<tuple|18.46|?>>
-    <associate|lemma 18.95.148|<tuple|18.98|?>>
-    <associate|spectral L^n is linear|<tuple|18.54|?>>
-    <associate|spectral L^n+m=L^noL^m|<tuple|18.53|?>>
-    <associate|spectral P[L] is a abelian semi group|<tuple|18.62|?>>
-    <associate|spectral Schur's theorem|<tuple|18.73|?>>
-    <associate|spectral change of base|<tuple|18.90|?>>
-    <associate|spectral complex spectral theorem|<tuple|18.96|?>>
-    <associate|spectral composition and permutations|<tuple|18.63|?>>
+    <associate|inner unitary matrix|<tuple|18.47|?>>
+    <associate|lemma 18.95.148|<tuple|18.105|?>>
+    <associate|spectral L^n is linear|<tuple|18.57|?>>
+    <associate|spectral L^n+m=L^noL^m|<tuple|18.56|?>>
+    <associate|spectral P[L] is a abelian semi group|<tuple|18.65|?>>
+    <associate|spectral Schur's theorem|<tuple|18.80|?>>
+    <associate|spectral change of base|<tuple|18.97|?>>
+    <associate|spectral complex spectral theorem|<tuple|18.103|?>>
+    <associate|spectral composition and permutations|<tuple|18.66|?>>
     <associate|spectral composition of injective linear
-    mappings|<tuple|18.55|?>>
-    <associate|spectral coordinate transformation|<tuple|18.89|?>>
+    mappings|<tuple|18.58|?>>
+    <associate|spectral coordinate transformation|<tuple|18.96|?>>
     <associate|spectral diagnolizing operator is
-    self-adjoint|<tuple|18.79|?>>
-    <associate|spectral diagonal matrix|<tuple|18.74|?>>
+    self-adjoint|<tuple|18.86|?>>
+    <associate|spectral diagonal matrix|<tuple|18.81|?>>
+    <associate|spectral diagonalization of a self-adjoint operator
+    (real)|<tuple|18.113|?>>
+    <associate|spectral distinct eigenvalues and linear
+    independence|<tuple|18.73|?>>
     <associate|spectral eigen values of a self-adjoint operator are
-    linear|<tuple|18.80|?>>
-    <associate|spectral eigen vectors and values|<tuple|18.65|?>>
+    linear|<tuple|18.87|?>>
+    <associate|spectral eigen vectors and values|<tuple|18.68|?>>
+    <associate|spectral eigenspace|<tuple|18.71|?>>
+    <associate|spectral eigenspace \<less\>\<gtr\> {0}|<tuple|18.72|?>>
     <associate|spectral eigenvectors exist in a finite dimensional complex
-    space|<tuple|18.67|?>>
+    space|<tuple|18.70|?>>
     <associate|spectral every self-adjoint an unitary operator are
-    normal|<tuple|18.93|?>>
+    normal|<tuple|18.100|?>>
     <associate|spectral factorization of polynomial
-    operators|<tuple|18.64|?>>
-    <associate|spectral finite product of polynomial|<tuple|18.60|?>>
-    <associate|spectral identy map is self-adjoint|<tuple|18.77|?>>
-    <associate|spectral identy map is unitary|<tuple|18.85|?>>
-    <associate|spectral invariant sub-space|<tuple|18.68|?>>
-    <associate|spectral linear operator|<tuple|18.49|?>>
-    <associate|spectral linear operator isomorphism|<tuple|18.50|?>>
+    operators|<tuple|18.67|?>>
+    <associate|spectral finite product of polynomial|<tuple|18.63|?>>
+    <associate|spectral identy map is self-adjoint|<tuple|18.84|?>>
+    <associate|spectral identy map is unitary|<tuple|18.92|?>>
+    <associate|spectral invariant sub-space|<tuple|18.75|?>>
+    <associate|spectral linear operator|<tuple|18.52|?>>
+    <associate|spectral linear operator isomorphism|<tuple|18.53|?>>
     <associate|spectral matrices of self adjoint transformations are
-    Hermitian|<tuple|18.78|?>>
-    <associate|spectral normal operator|<tuple|18.92|?>>
-    <associate|spectral normal operator alternative|<tuple|18.94|?>>
-    <associate|spectral operator mapping bases is unitary|<tuple|18.91|?>>
-    <associate|spectral orthogonal complement|<tuple|18.101|?>>
+    Hermitian|<tuple|18.85|?>>
+    <associate|spectral normal operator|<tuple|18.99|?>>
+    <associate|spectral normal operator alternative|<tuple|18.101|?>>
+    <associate|spectral operator mapping bases is unitary|<tuple|18.98|?>>
+    <associate|spectral orthogonal complement|<tuple|18.108|?>>
     <associate|spectral orthogonal complement and linear
-    operator|<tuple|18.104|?>>
-    <associate|spectral orthogonal complement properties|<tuple|18.102|?>>
+    operator|<tuple|18.111|?>>
+    <associate|spectral orthogonal complement properties|<tuple|18.109|?>>
     <associate|spectral orthonormalization and
-    diagonlization|<tuple|18.95|?>>
-    <associate|spectral polynomial operator|<tuple|18.56|?>>
+    diagonlization|<tuple|18.102|?>>
+    <associate|spectral polynomial operator|<tuple|18.59|?>>
     <associate|spectral polynomial operator composition and polynomial
-    product|<tuple|18.58|?>>
-    <associate|spectral real spectral theorem|<tuple|18.105|?>>
-    <associate|spectral self adjoint transformation|<tuple|18.76|?>>
+    product|<tuple|18.61|?>>
+    <associate|spectral real spectral theorem|<tuple|18.112|?>>
+    <associate|spectral self adjoint transformation|<tuple|18.83|?>>
     <associate|spectral self-adjoint operator condition for operator to be
-    zero|<tuple|18.81|?>>
+    zero|<tuple|18.88|?>>
     <associate|spectral self-adjoint operators have a eigenvector with real
-    eigenvalues|<tuple|18.99|?>>
-    <associate|spectral theorem|<tuple|18.105|?>>
-    <associate|spectral theorem complex|<tuple|18.105|?>>
-    <associate|spectral theorem direct sum|<tuple|18.103|?>>
-    <associate|spectral theorem real|<tuple|18.105|?>>
-    <associate|spectral theorema diagonalization|<tuple|18.97|?>>
-    <associate|spectral unitary operator|<tuple|18.82|?>>
-    <associate|spectral unitary operator alternative|<tuple|18.83|?>>
+    eigenvalues|<tuple|18.106|?>>
+    <associate|spectral theorem direct sum|<tuple|18.110|?>>
+    <associate|spectral theorema diagonalization|<tuple|18.104|?>>
+    <associate|spectral unitary operator|<tuple|18.89|?>>
+    <associate|spectral unitary operator alternative|<tuple|18.90|?>>
     <associate|spectral unitary operator has a unitary
-    matrix|<tuple|18.88|?>>
-    <associate|spectral unitary operator properties|<tuple|18.84|?>>
-    <associate|spectral upper triangular conditions|<tuple|18.71|?>>
-    <associate|spectral upper triangular matrix|<tuple|18.69|?>>
+    matrix|<tuple|18.95|?>>
+    <associate|spectral unitary operator properties|<tuple|18.91|?>>
+    <associate|spectral upper triangular conditions|<tuple|18.78|?>>
+    <associate|spectral upper triangular matrix|<tuple|18.76|?>>
     <associate|spectral upper triangular matrix for a linear
-    operator|<tuple|18.72|?>>
+    operator|<tuple|18.79|?>>
+    <associate|spectrum diagonalization of a matrix|<tuple|18.114|?>>
   </collection>
 </references>
 
@@ -5040,25 +5351,33 @@
 
       <tuple|<tuple|eigen value>|<pageref|auto-26>>
 
-      <tuple|<tuple|invariant sub-space>|<pageref|auto-28>>
+      <tuple|<tuple|eigenspace>|<pageref|auto-27>>
 
-      <tuple|<tuple|upper triangular matrix>|<pageref|auto-29>>
+      <tuple|<tuple|<with|mode|<quote|math>|E<around*|(|L,\<lambda\>|)>>>|<pageref|auto-28>>
 
-      <tuple|<tuple|upper triangular matrix>|<pageref|auto-30>>
+      <tuple|<tuple|invariant sub-space>|<pageref|auto-30>>
 
-      <tuple|<tuple|Schur's Theorem>|<pageref|auto-31>>
+      <tuple|<tuple|upper triangular matrix>|<pageref|auto-31>>
 
-      <tuple|<tuple|diagonal matrix>|<pageref|auto-32>>
+      <tuple|<tuple|upper triangular matrix>|<pageref|auto-32>>
 
-      <tuple|<tuple|self-adjoint linear transformation>|<pageref|auto-33>>
+      <tuple|<tuple|Schur's Theorem>|<pageref|auto-33>>
 
-      <tuple|<tuple|unitary operator>|<pageref|auto-34>>
+      <tuple|<tuple|diagonal matrix>|<pageref|auto-35>>
 
-      <tuple|<tuple|coordinate transformation>|<pageref|auto-35>>
+      <tuple|<tuple|self-adjoint linear transformation>|<pageref|auto-36>>
 
-      <tuple|<tuple|normal operator>|<pageref|auto-36>>
+      <tuple|<tuple|unitary operator>|<pageref|auto-37>>
 
-      <tuple|<tuple|Spectral Theorem (Complex)>|<pageref|auto-37>>
+      <tuple|<tuple|coordinate transformation>|<pageref|auto-38>>
+
+      <tuple|<tuple|normal operator>|<pageref|auto-39>>
+
+      <tuple|<tuple|spectral Theorem (Complex)>|<pageref|auto-40>>
+
+      <tuple|<tuple|orthogonal complement>|<pageref|auto-41>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|U<rsup|\<perp\>>>>|<pageref|auto-42>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|18<space|2spc>Inner
@@ -5092,7 +5411,11 @@
 
       <with|par-left|<quote|1tab>|18.4.3<space|2spc>Upper triangular and
       diagonal matrices <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-27>>
+      <no-break><pageref|auto-29>>
+
+      <with|par-left|<quote|1tab>|18.4.4<space|2spc>Diagonalization and
+      spectral theorems <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-34>>
     </associate>
   </collection>
 </auxiliary>
