@@ -2602,7 +2602,7 @@
     </eqnarray*>
   </proof>
 
-  <subsection|Eigen vectors and eigen values.>
+  <subsection|Eigen vectors and eigenvalues.>
 
   <\definition>
     <label|spectral eigen vectors and values><index|eigen vector><index|eigen
@@ -2729,7 +2729,7 @@
   </theorem>
 
   <\proof>
-    As <math|\<lambda\>> is a eigen value of <math|L> there exist a
+    As <math|\<lambda\>> is a eigenvalue of <math|L> there exist a
     <math|x\<in\>X> such that <math|L<around*|(|x|)>=\<lambda\>\<cdot\>x>,
     hence
 
@@ -2739,54 +2739,64 @@
 
     If <math|x,y\<in\>E<around*|(|L,\<lambda\>|)>> and
     <math|\<alpha\>\<in\>\<cal-F\>> then <math|L<around*|(|x+\<alpha\>\<cdot\>y|)>=L<around*|(|x|)>+\<alpha\>\<cdot\>L<around*|(|y|)>=\<lambda\>\<cdot\>x+\<alpha\>\<cdot\>\<lambda\>\<cdot\>y=\<lambda\>\<cdot\><around*|(|x+\<alpha\>\<cdot\>y|)>>
-    proving that <math|x+\<alpha\>\<cdot\>y\<in\>E<around*|(|L,\<lambda\>|)>>.
+    proving that <math|x+\<alpha\>\<cdot\>y\<in\>E<around*|(|L,\<lambda\>|)>>
   </proof>
 
   <\theorem>
     <label|spectral distinct eigenvalues and linear independence>Let <math|X>
     be a vector space over a field <math|\<cal-F\>> and
     <math|L\<in\>Hom<around*|(|X|)>>, <math|n\<in\>\<bbb-N\>> and
-    <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> a finite set of
-    eigenvectors with <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> a
-    eigenvalue <math|\<lambda\><rsub|i>> such that
+    <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>> a
+    finite family of eigenvectors with <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    a eigenvalue <math|\<lambda\><rsub|i>> such that
     <math|\<forall\>i,j\<in\><around*|{|1,\<ldots\>,n|}>> with
     <math|i\<neq\>j> we have <math|\<lambda\><rsub|i>\<neq\>\<lambda\><rsub|j>>
-    then <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> is linear
-    independent.\ 
-
-    In other words if <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> is a
-    finite set of eigenvector with distinct eigenvalues then
-    <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> is linear independent.
+    then <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    is linear independent. In other words if
+    <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    is a finite family of eigenvectors with distinct eigenvalues then
+    <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    is linear independent.
   </theorem>
 
   <\proof>
-    Assume that <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> is linear
-    dependent then by [theorem: <reference|linear dependent finite set> (6)]
-    there exist a <math|k\<in\><around*|{|1,\<ldots\>,n|}>> such that
-    <math|e<rsub|k>\<in\>span<around*|(|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|k-1>|}>|)>>.
+    Assume that <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    is linear dependent then by [theorem: <reference|linear dependent family
+    alternative (1)>] there exists a <math|k\<in\><around*|{|1,\<ldots\>,n|}>>
+    and <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<subseteq\>F>
+    such that <math|e<rsub|k>\<in\><big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<alpha\><rsub|i>\<cdot\>x<rsub|i>>.
     So the finite set\ 
 
     <\equation*>
-      A=<around*|{|k\<in\><around*|{|1,\<ldots\>,n|}>\|e<rsub|k>\<in\>span<around*|(|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|k-1>|}>|)>|}>
+      A=<around*|{|k\<in\><around*|{|1,\<ldots\>,n|}>\|\<exists\><around*|{|\<alpha\><rsub|i>|}><rsub|i\<ni\><around*|{|1,\<ldots\>,k-1|}>>\<subseteq\>F<text|
+      such that >e<rsub|k>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<alpha\><rsub|i>\<cdot\>x<rsub|i>|}>
     </equation*>
 
-    is not empty. Hence <math|k=min<around*|(|A|)>> exist and
-    <math|e<rsub|k>\<in\>span<around*|(|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|k-1>|}>|)>>.
-    If <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|k-1>|}>> is again
-    dependent then by [theorem: <reference|linear dependent finite set> (6)]
-    again there exist a <math|l\<in\><around*|{|1,\<ldots\>,k-1|}>\<subseteq\><around*|{|1,\<ldots\>,n|}>>
-    such that <math|e<rsub|l>\<in\>span<around*|(|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|l-1>|}>|)>>
-    contradicting the fact that <math|k=min<around*|(|A|)>>. Hence we have
-    that\ 
+    is not empty. Hence <math|k=min<around*|(|A|)>> exist and there exist a
+    <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<subseteq\>F>
+    such that
 
     <\equation*>
-      e<rsub|k>\<in\>span<around*|(|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|k-1>|}>|)><text|
-      and ><around*|{|e<rsub|1>,\<ldots\>,e<rsub|k-1>|}><text| is linear
-      independent>
+      x<rsub|k>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<alpha\><rsub|i>\<cdot\>x<rsub|i>
     </equation*>
 
-    So there exist a <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<subseteq\>\<cal-F\>>
-    such that <math|e<rsub|k>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<alpha\><rsub|i>\<cdot\>e<rsub|i>>.
+    If <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>>
+    is again dependent then by \ [theorem: <reference|linear dependent family
+    alternative (1)>] again there exist a
+    <math|<rigid|l\<in\><around*|{|1,\<ldots\>,k-1|}>\<subseteq\><around*|{|1,\<ldots\>,n|}>>>
+    and <math|<around*|{|\<beta\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,l-1|}>>\<subseteq\>F>
+    such that <math|e<rsub|l>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,l-1|}>>\<beta\><rsub|i>\<cdot\>e<rsub|i>>,
+    hence <math|l\<in\>A>, contradicting the fact that
+    <math|k=min<around*|(|A|)>> [as <math|l\<leqslant\>k-1\<less\>k>]. So
+    <math|<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,k-1|}>|}>> must
+    be linear independent. Hence we have that\ 
+
+    <\equation*>
+      e<rsub|k>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<alpha\><rsub|i>\<cdot\>x<rsub|i><text|
+      and ><around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,k-1|}>|}><text|
+      is linear independent>
+    </equation*>
+
     Applying then <math|L> we get
 
     <\eqnarray*>
@@ -2801,8 +2811,8 @@
     </eqnarray*>
 
     Given that <math|<text|><around*|{|e<rsub|1>,\<ldots\>,e<rsub|k-1>|}>> is
-    linear dependent we have that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,k-1|}>>
-    <math|\<alpha\><rsub|i>\<cdot\><around*|(|\<lambda\><rsub|i>-\<lambda\><rsub|k>|)>>
+    linear independent we have that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,k-1|}>>
+    <math|\<alpha\><rsub|i>\<cdot\><around*|(|\<lambda\><rsub|i>-\<lambda\><rsub|k>|)>=0>
     which as <math|\<lambda\><rsub|k>\<neq\>\<lambda\><rsub|i>> [because
     <math|k\<neq\>i>] proves that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,k-1|}>>
     <math|\<alpha\><rsub|i>=0>. Hence <math|e<rsub|k>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k-1|}>>\<alpha\><rsub|i>\<cdot\>e<rsub|i>=0>
@@ -2810,7 +2820,8 @@
     <math|e<rsub|k>> is a eigenvector. So the assumption wrong and\ 
 
     <\equation*>
-      <around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}><text| is linear dependent.>
+      <around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}><text| is linear
+      independent.>
     </equation*>
   </proof>
 
@@ -2818,15 +2829,48 @@
     Let <math|X> be a finite dimensional vector space over a field
     <math|\<cal-F\>> and <math|L\<in\>Hom<around*|(|X|)>> then
     <math|card<around*|(|<around*|{|\<lambda\>\<in\>\<cal-F\>\|\<lambda\><text|
-    is a eigen value for >L|}>|)>\<leqslant\>dim<around*|(|X|)>>.
-
-    In other words every linear operator has at most
-    <math|dim<around*|(|X|)>> distinct eigen values.
+    is a eigenvalue for >L|}>|)>\<leqslant\>dim<around*|(|X|)>>. In other
+    words every linear operator has at most <math|dim<around*|(|X|)>>
+    distinct eigenvalues.
   </theorem>
 
-  TODO proof the above theorem
+  <\proof>
+    Let <math|\<Lambda\>=<around*|{|\<lambda\>\<in\>\<cal-F\>\|\<lambda\><text|
+    is a eigenvalue of >L|}>=<around*|{|\<lambda\>\<in\>\<cal-F\>\|\<exists\>x\<in\>X<text|
+    such that >L<around*|(|x|)>=\<lambda\>\<cdot\>x|}>>, If
+    <math|<rigid|m=card<around*|(|\<Lambda\>|)>>> then we can write
+    <math|\<Lambda\>> as
 
-  \;
+    <\equation*>
+      \<Lambda\>=<around*|{|\<lambda\><rsub|1>,\<ldots\>,\<lambda\><rsub|m>|}>
+      <around*|[|meaning that \<lambda\>:<around*|{|1,\<ldots\>,n|}>\<rightarrow\>\<Lambda\><text|
+      is a bijection>|]>
+    </equation*>
+
+    For each <math|i\<in\><around*|{|1,\<ldots\>,m|}>> we can find by
+    definition a eigenvector <math|x\<in\>X> such that
+    <math|L<around*|(|x|)>=\<lambda\><rsub|i>\<cdot\>x> allowing us to define
+    a family <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>X>
+    such that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|L<around*|(|e<rsub|i>|)>=\<lambda\><rsub|i>\<cdot\>e<rsub|i>> [see
+    theorem: <reference|choice function generating>]. Let
+    <math|i,j\<in\><around*|{|1,\<ldots\>,m|}>> with <math|i\<neq\>j> then,
+    as <math|\<lambda\>> is a bijection, <math|\<lambda\><rsub|i>\<neq\>\<lambda\><rsub|j>>,
+    so by the previous theorem [theorem: <reference|spectral distinct
+    eigenvalues and linear independence>]
+    <math|<around*|{|e<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>>
+    is linear independent. Hence by [theorem:<reference|linear independent
+    family set>] <math|<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,m|}>|}>>
+    is linear independent set with <math|card<around*|(|<around*|{|e<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,m|}>|}>|)>=m>.
+    Using then [theorem: <reference|basis card(S) \<gtr\> dim(V) then S is
+    linear dependent>] it follows that we must have that
+    <math|m\<leqslant\>dim<around*|(|X|)>> or\ 
+
+    <\equation*>
+      card<around*|(|<around*|{|\<lambda\>\<in\>\<cal-F\>\|\<lambda\><text|
+      is a eigenvalue of >L|}>|)>\<leqslant\>dim<around*|(|X|)>
+    </equation*>
+  </proof>
 
   <subsection|Upper triangular and diagonal matrices>
 
@@ -3989,7 +4033,7 @@
   </proof>
 
   The following shows the relation between diagonalization of the matrix of a
-  linear mapping and eigen values.
+  linear mapping and eigenvalues.
 
   <\theorem>
     <label|spectral orthonormalization and diagonlization>Let
@@ -4027,11 +4071,11 @@
         <tformat|<table|<row|<cell|L<around*|(|e<rsub|i>|)>>|<cell|=>|<cell|<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>\<cal-M\><around*|(|L;E,E|)><rsub|k,i>e<rsub|k>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>\\k\<neq\>i>\<cal-M\><around*|(|L;E,E|)><rsub|k,i>e<rsub|k>+<big|sum><rsub|k\<in\><around*|{|i|}>>\<cal-M\><around*|(|L;E,E|)><rsub|k,i>e<rsub|k>>>|<row|<cell|>|<cell|=>|<cell|\<cal-M\><around*|(|L;E,E|)><rsub|i,i>\<cdot\>e<rsub|i>>>>>
       </eqnarray*>
 
-      proving that <math|e<rsub|i>> is a eigen vector of <math|L> withe eigen
-      value <math|\<cal-M\><around*|(|L;E,E|)><rsub|i,i>>
+      proving that <math|e<rsub|i>> is a eigenvector of <math|L> withe
+      eigenvalue <math|\<cal-M\><around*|(|L;E,E|)><rsub|i,i>>
 
       <item*|<math|2\<Rightarrow\>1>>As <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
-      <math|e<rsub|i>> is a eigen vector of <math|L>, hence there exist a
+      <math|e<rsub|i>> is a eigenvector of <math|L>, hence there exist a
       <math|\<lambda\><rsub|i>\<in\>\<bbb-K\>> such that
       <math|L<around*|(|e<rsub|i>|)>=\<lambda\><rsub|i>\<cdot\>e<rsub|i>>.
       Hence\ 
@@ -4069,7 +4113,7 @@
       <item><math|X> has a orthonormal basis
       <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> such that
       <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> <math|e<rsub|i>> is
-      a eigen vector of <math|L>.
+      a eigenvector of <math|L>.
     </enumerate>
   </theorem>
 
@@ -4385,7 +4429,7 @@
   </proof>
 
   We are now ready to prove that in the real case self-adjoint operators have
-  a eigenvector with areal eigen value.
+  a eigenvector with areal eigenvalue.
 
   <\theorem>
     <label|spectral self-adjoint operators have a eigenvector with real
@@ -5405,8 +5449,8 @@
       operators <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-21>>
 
-      <with|par-left|<quote|1tab>|18.4.2<space|2spc>Eigen vectors and eigen
-      values. <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|18.4.2<space|2spc>Eigen vectors and
+      eigenvalues. <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-24>>
 
       <with|par-left|<quote|1tab>|18.4.3<space|2spc>Upper triangular and

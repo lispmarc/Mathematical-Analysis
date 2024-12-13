@@ -17802,7 +17802,7 @@
     To avoid excessive notation instead of saying
     '<math|<around*|{|x|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
     is a sequence such that the series <math|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>>
-    converges' we say just 'the series <math|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>>
+    converges' we just says 'the series <math|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>>
     converges' where the sequence <math|<around*|{|x<rsub|i>|)>i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
     is implicit assumed.
   </remark>
@@ -21859,7 +21859,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|13>
-    <associate|page-first|665>
+    <associate|page-first|667>
     <associate|page-medium|papyrus>
     <associate|par-first|0tab>
     <associate|section-nr|0>
