@@ -379,7 +379,7 @@
     <label|direct sum of subspaces>If <math|V> is a vector space over a field
     <math|F> and <math|<around*|{|V<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|V|)>>
     such that <math|\<forall\>i\<in\>I> <math|V<rsub|i>> is a sub space of
-    <math|V>\ 
+    <math|V> then
 
     <\enumerate>
       <item> <math|<big|sum><rsub|i\<in\>I>V<rsub|i>> is a sub space of
@@ -390,8 +390,6 @@
 
       <item>If <math|k\<in\>I> then <math|V<rsub|k>\<subseteq\><big|sum><rsub|i\<in\>I>V<rsub|i>>
     </enumerate>
-
-    then
   </theorem>
 
   <\proof>
@@ -559,8 +557,8 @@
   </proof>
 
   <\example>
-    <label|direct sum singleton>If <math|V> is a vector space then and
-    <math|W> a sub-space then <math|W=<big|oplus><rsub|i\<in\><around*|{|k|}>>V<rsub|i>>
+    <label|direct sum singleton>If <math|V> is a vector space and <math|W> a
+    sub-space then <math|W=<big|oplus><rsub|i\<in\><around*|{|k|}>>V<rsub|i>>
     where <math|V<rsub|k>=W>.
   </example>
 
@@ -1277,7 +1275,8 @@
 
   <\theorem>
     <label|direct sum dimension>Let <math|V> be a vector space over a field
-    <math|F>, <math|n\<in\>\<bbb-N\>> finite such that\ 
+    <math|F>, <math|n\<in\>\<bbb-N\>>, <math|<around*|{|V<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of \ finite dimensional sub-spaces of <math|V> such that\ 
 
     <\equation*>
       V=<big|oplus><rsub|i\<in\><around*|{|1,\<ldots\>.,n|}>>V<rsub|i>
@@ -1411,61 +1410,65 @@
 
 <\initial>
   <\collection>
+    <associate|chapter-nr|11>
+    <associate|page-first|605>
     <associate|page-medium|beamer>
+    <associate|section-nr|9>
+    <associate|subsection-nr|0>
   </collection>
 </initial>
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|1|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|direct sum|<tuple|1.5|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|direct sum and bijection|<tuple|1.13|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|direct sum and isomorphism|<tuple|1.16|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|direct sum decomposition|<tuple|1.8|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|direct sum dimension|<tuple|1.15|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|direct sum empty sum|<tuple|1.2|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|direct sum index union (1)|<tuple|1.9|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|direct sum index union (2)|<tuple|1.10|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|direct sum index union (3)|<tuple|1.11|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|direct sum of a empty family|<tuple|1.6|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|direct sum of sets|<tuple|1.1|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|direct sum of sets properties|<tuple|1.3|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|direct sum of subspaces|<tuple|1.4|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|direct sum of two vector spaces|<tuple|1.14|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|direct sum singleton|<tuple|1.7|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|eq 12.1.1224|<tuple|1.1|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|eq 12.10.132|<tuple|1.11|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|eq 12.11.132|<tuple|1.12|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|eq 12.12.127|<tuple|1.27|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|eq 12.12.132|<tuple|1.13|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|eq 12.13.132|<tuple|1.14|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|eq 12.14.132|<tuple|1.15|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|eq 12.15.132|<tuple|1.16|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|eq 12.16.132|<tuple|1.17|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|eq 12.17.132|<tuple|1.18|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|eq 12.18.132|<tuple|1.19|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|eq 12.19.132|<tuple|1.20|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|eq 12.2.124|<tuple|1.2|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|eq 12.20.132|<tuple|1.21|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|eq 12.21.132|<tuple|1.22|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|eq 12.3.124|<tuple|1.4|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|eq 12.3.125|<tuple|1.3|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|eq 12.5.125|<tuple|1.23|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|eq 12.5.132|<tuple|1.6|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|eq 12.5.133|<tuple|1.5|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|eq 12.6.125|<tuple|1.24|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|eq 12.6.132|<tuple|1.7|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|eq 12.7.125|<tuple|1.25|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|eq 12.7.132|<tuple|1.8|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|eq 12.8.132|<tuple|1.9|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
-    <associate|eq 12.9.132|<tuple|1.10|?|../../.TeXmacs/texts/scratch/no_name_31.tm>>
+    <associate|auto-1|<tuple|12|?>>
+    <associate|direct sum|<tuple|12.5|?>>
+    <associate|direct sum and bijection|<tuple|12.13|?>>
+    <associate|direct sum and isomorphism|<tuple|12.16|?>>
+    <associate|direct sum decomposition|<tuple|12.8|?>>
+    <associate|direct sum dimension|<tuple|12.15|?>>
+    <associate|direct sum empty sum|<tuple|12.2|?>>
+    <associate|direct sum index union (1)|<tuple|12.9|?>>
+    <associate|direct sum index union (2)|<tuple|12.10|?>>
+    <associate|direct sum index union (3)|<tuple|12.11|?>>
+    <associate|direct sum of a empty family|<tuple|12.6|?>>
+    <associate|direct sum of sets|<tuple|12.1|?>>
+    <associate|direct sum of sets properties|<tuple|12.3|?>>
+    <associate|direct sum of subspaces|<tuple|12.4|?>>
+    <associate|direct sum of two vector spaces|<tuple|12.14|?>>
+    <associate|direct sum singleton|<tuple|12.7|?>>
+    <associate|eq 12.1.1224|<tuple|12.1|?>>
+    <associate|eq 12.10.132|<tuple|12.11|?>>
+    <associate|eq 12.11.132|<tuple|12.12|?>>
+    <associate|eq 12.12.127|<tuple|12.27|?>>
+    <associate|eq 12.12.132|<tuple|12.13|?>>
+    <associate|eq 12.13.132|<tuple|12.14|?>>
+    <associate|eq 12.14.132|<tuple|12.15|?>>
+    <associate|eq 12.15.132|<tuple|12.16|?>>
+    <associate|eq 12.16.132|<tuple|12.17|?>>
+    <associate|eq 12.17.132|<tuple|12.18|?>>
+    <associate|eq 12.18.132|<tuple|12.19|?>>
+    <associate|eq 12.19.132|<tuple|12.20|?>>
+    <associate|eq 12.2.124|<tuple|12.2|?>>
+    <associate|eq 12.20.132|<tuple|12.21|?>>
+    <associate|eq 12.21.132|<tuple|12.22|?>>
+    <associate|eq 12.3.124|<tuple|12.4|?>>
+    <associate|eq 12.3.125|<tuple|12.3|?>>
+    <associate|eq 12.5.125|<tuple|12.23|?>>
+    <associate|eq 12.5.132|<tuple|12.6|?>>
+    <associate|eq 12.5.133|<tuple|12.5|?>>
+    <associate|eq 12.6.125|<tuple|12.24|?>>
+    <associate|eq 12.6.132|<tuple|12.7|?>>
+    <associate|eq 12.7.125|<tuple|12.25|?>>
+    <associate|eq 12.7.132|<tuple|12.8|?>>
+    <associate|eq 12.8.132|<tuple|12.9|?>>
+    <associate|eq 12.9.132|<tuple|12.10|?>>
   </collection>
 </references>
 
 <\auxiliary>
   <\collection>
     <\associate|toc>
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Internal
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|12<space|2spc>Internal
       Direct Sum> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1><vspace|0.5fn>
     </associate>

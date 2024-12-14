@@ -2602,7 +2602,7 @@
     </eqnarray*>
   </proof>
 
-  <subsection|Eigen vectors and eigenvalues.>
+  <subsection|Eigenvectors and eigenvalues.>
 
   <\definition>
     <label|spectral eigen vectors and values><index|eigen vector><index|eigen
@@ -2718,6 +2718,12 @@
     <\equation*>
       E<around*|(|L,\<lambda\>|)>=<around*|{|x\<in\>X\|L<around*|(|x|)>=\<lambda\>\<cdot\>x|}>
     </equation*>
+
+    <\note>
+      As <math|L<around*|(|0|)>=0=\<lambda\>\<cdot\>0> we have that
+      <math|0\<in\>E<around*|(|L,\<lambda\>|)>> although <math|0> is not a
+      eigenvector.\ 
+    </note>
   </definition>
 
   <\theorem>
@@ -2826,8 +2832,9 @@
   </proof>
 
   <\theorem>
-    Let <math|X> be a finite dimensional vector space over a field
-    <math|\<cal-F\>> and <math|L\<in\>Hom<around*|(|X|)>> then
+    <label|spectral number of eigenvalues>Let <math|X> be a finite
+    dimensional vector space over a field <math|\<cal-F\>> and
+    <math|L\<in\>Hom<around*|(|X|)>> then
     <math|card<around*|(|<around*|{|\<lambda\>\<in\>\<cal-F\>\|\<lambda\><text|
     is a eigenvalue for >L|}>|)>\<leqslant\>dim<around*|(|X|)>>. In other
     words every linear operator has at most <math|dim<around*|(|X|)>>
@@ -2870,6 +2877,177 @@
       card<around*|(|<around*|{|\<lambda\>\<in\>\<cal-F\>\|\<lambda\><text|
       is a eigenvalue of >L|}>|)>\<leqslant\>dim<around*|(|X|)>
     </equation*>
+  </proof>
+
+  <\theorem>
+    <label|spectral sum of eigenspaces>Let <math|X> be a finite dimensional
+    vector space over a field <math|\<cal-F\>> and
+    <math|L\<in\>Hom<around*|(|X|)>> with eigenvalues
+    <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>>,
+    <math|n\<in\>\<bbb-N\>> then for <math|E<around*|(|L,\<lambda\><rsub|1>,\<ldots\>,\<lambda\><rsub|n>|)>>
+    defined by\ 
+
+    <\equation*>
+      E<around*|(|L;\<lambda\><rsub|1>,\<ldots\>,\<lambda\><rsub|n>|)>=span<around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<around*|(|L,\<lambda\><rsub|i>|)>|)>
+    </equation*>
+
+    \ we have:
+
+    <\enumerate>
+      <item><math|E<around*|(|L;\<lambda\><rsub|1>,\<ldots\>,\<lambda\><rsub|n>|)>>
+      is a sub-space of <math|X>
+
+      <item><math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+      <math|E<around*|(|L,\<lambda\><rsub|i>|)>> is a sub-space of
+      <math|E<around*|(|L;\<lambda\><rsub|1>,\<ldots\>,\<lambda\><rsub|n>|)>>
+
+      <item><math|E<around*|(|L;\<lambda\><rsub|1>,\<ldots\>,\<lambda\><rsub|n>|)>=<big|oplus><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<around*|(|L,\<lambda\><rsub|i>|)>>
+
+      <item><math|dim<around*|(|E<around*|(|L;\<lambda\><rsub|1>,\<ldots\>,\<lambda\><rsub|n>|)>|)>=<big|sum><rsub|i=1><rsup|n>dim<around*|(|E<around*|(|L,\<lambda\><rsub|i>|)>|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>This follows from [theorem: <reference|linear span is a
+      sub-space>].
+
+      <item>Let <math|i\<in\>I> then by [theorem: <reference|spectral
+      eigenspace \<less\>\<gtr\> {0}>] <math|E<around*|(|L,\<lambda\><rsub|i>|)>>
+      is a sub-space of <math|X>, hence <math|\<forall\>x,y\<in\>E<around*|(|L,\<lambda\><rsub|i>|)>>
+      and <math|\<alpha\>\<in\>\<bbb-F\>> we have
+
+      <\equation*>
+        x+\<alpha\>\<cdot\>y\<in\>E<around*|(|L,\<lambda\><rsub|i>|)>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<around*|(|L,\<lambda\><rsub|i>|)>\<subseteq\>span<around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<around*|(|L,\<lambda\><rsub|i>|)>|)>=E<around*|(|L;\<lambda\><rsub|1>,\<ldots\>,n|)>
+      </equation*>
+
+      which, as also <math|E<around*|(|L,\<lambda\><rsub|i>|)>\<neq\>\<varnothing\>>,
+      proves that <math|E<around*|(|L,\<lambda\><rsub|i>|)>> is a sub-space
+      of <math|E<around*|(|L;\<lambda\><rsub|1>,\<ldots\>,\<lambda\><rsub|n>|)>>.
+
+      <item>Let <math|x\<in\>E<around*|(|L;\<lambda\><rsub|1>,\<ldots\>,\<lambda\><rsub|n>|)>=span<around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<around*|(|L,\<lambda\><rsub|i>|)>|)>>
+      then there exists a <math|m\<in\>\<bbb-N\>>, a
+      <math|<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>\<cal-F\>>
+      and a <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<in\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<around*|(|L,\<lambda\><rsub|i>|)>>
+      such that
+
+      <\equation*>
+        x=<big|sum><rsub|i=1><rsup|m>\<alpha\><rsub|i>\<cdot\>x<rsub|i>
+      </equation*>
+
+      If <math|i\<in\><around*|{|1,\<ldots\>,m|}>> then there exist a
+      <math|k<rsub|i>\<in\><around*|{|1,\<ldots\>,n|}>> such that
+      <math|x<rsub|i>\<in\>E<around*|(|L,\<lambda\><rsub|k<rsub|i>>|)>>, then
+      <math|<rigid|\<alpha\><rsub|i>\<cdot\>x<rsub|i>\<in\>E<around*|(|L,\<lambda\><rsub|k<rsub|i>>|)>>>.
+      Define now
+
+      <\equation*>
+        <around*|{|w<rsub|i,j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>E<around*|(|L;\<lambda\><rsub|1>,\<ldots\>,\<lambda\><rsub|n>|)><text|
+        by >w<rsub|i,j>=<choice|<tformat|<table|<row|<cell|0<text| if
+        >j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k<rsub|i>|}>>>|<row|<cell|\<alpha\><rsub|i>\<cdot\>x<rsub|i><text|
+        if >j=k<rsub|i>>>>>>
+      </equation*>
+
+      then we have\ 
+
+      <\equation*>
+        <big|sum><rsub|j=1><rsup|n>w<rsub|i,j>=<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k<rsub|i>|}>>w<rsub|i,j>+<big|sum><rsub|j\<in\><around*|{|k<rsub|i>|}>>w<rsub|i,j>=\<alpha\><rsub|i>\<cdot\>x<rsub|i>
+      </equation*>
+
+      proving that
+
+      <\equation*>
+        \<forall\>i\<in\><around*|{|1,\<ldots\>,m|}><text|
+        >\<alpha\><rsub|i>\<cdot\>x<rsub|i>\<in\><big|sum><rsub|j<around*|\<langle\>|1,\<ldots\>,n|\<rangle\>>>E<around*|(|L,\<lambda\><rsub|j>|)>
+      </equation*>
+
+      As by (2) and [theorem: <reference|direct sum of subspaces>]
+      <math|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>E<around*|(|L,\<lambda\><rsub|j>|)>>
+      is a vector space it follows from the above that
+      <math|x=<big|sum><rsub|i=1><rsup|m>\<alpha\><rsub|i>\<cdot\>x<rsub|i>\<in\><big|sum><rsub|j<around*|{|1,\<ldots\>,n|}>>E<around*|(|L,\<lambda\><rsub|j>|)>>.
+      Hence we have proved that\ 
+
+      <\equation*>
+        E<around*|(|L;\<lambda\><rsub|1>,\<ldots\>,\<lambda\><rsub|n>|)>\<subseteq\><big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>E<around*|(|L,\<lambda\><rsub|j>|)>
+      </equation*>
+
+      If <math|x\<in\><big|sum><rsub|j=1><rsup|n>E<around*|(|L,\<lambda\><rsub|j>|)>>
+      then <math|x=<big|sum><rsub|j=1><rsup|n>v<rsub|i>> where
+      <math|v<rsub|j>\<in\>E<around*|(|L,\<lambda\><rsub|j>|)>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<around*|(|L,\<lambda\><rsub|i>|)>>
+      so that <math|x\<in\>span<around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<around*|(|L,\<lambda\><rsub|i>|)>|)>=E<around*|(|L;\<lambda\><rsub|1>,\<ldots\>,n|)>>,
+      hence <math|<rigid|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>E<around*|(|L,\<lambda\><rsub|j>|)>\<subseteq\>E<around*|(|L;\<lambda\><rsub|1>,\<ldots\>,n|)>>>.
+      Combining this with the above proves that\ 
+
+      <\equation>
+        <label|eq 18.14.150>E<around*|(|L;\<lambda\><rsub|1>,\<ldots\>,\<lambda\><rsub|n>|)>=<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>E<around*|(|L,\<lambda\><rsub|j>|)>
+      </equation>
+
+      Let <math|k\<in\><around*|{|1,\<ldots\>,n|}>> and assume that
+      <math|x\<in\>E<around*|(|L,\<lambda\><rsub|k>|)><big|cap><around*|(|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>>E<around*|(|L,\<lambda\><rsub|j>|)>|)>>
+      then
+
+      <\equation>
+        <label|eq 18.15.150>x\<in\>E<around*|(|L,\<lambda\><rsub|k>|)>\<wedge\>x=<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>>v<rsub|j>
+        <text| where >v<rsub|j>\<in\>E<around*|(|L,\<lambda\><rsub|j>|)>
+      </equation>
+
+      Define <math|<around*|{|w<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+      by <math|w<rsub|i>=<choice|<tformat|<table|<row|<cell|-x<text| if
+      >i=k>>|<row|<cell|v<rsub|i><text| if
+      >i\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>>>>>>\<in\>E<around*|(|L,\<lambda\><rsub|i>|)>>
+      then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|0>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>w<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|j\<in\><around*|{|1,\<ldots\>,n|}>\|w<rsub|i>\<neq\>0|}>>w<rsub|i>+<big|sum><rsub|i\<in\><around*|{|j\<in\><around*|{|1,\<ldots\>,n|}>\|w<rsub|i>=0|}>>w<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|j\<in\><around*|{|1,\<ldots\>,n|}>\|w<rsub|i>\<neq\>0|}>>w<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\>I>w<rsub|i><eq-number><label|eq
+        18.16.150>>>>>
+      </eqnarray*>
+
+      where <math|I=<around*|{|i\<in\><around*|{|1,\<ldots\>,n|}>\|w<rsub|i>\<neq\>0|}>>.
+      Then <math|\<forall\>i\<in\>I<text| we have
+      >w<rsub|i>\<neq\>0\<wedge\>L<around*|(|w<rsub|i>|)>=\<lambda\><rsub|i>\<cdot\>w<rsub|i>>
+      or <math|w<rsub|i>> is a eigen vector of <math|L>. Assume that
+      <math|I\<neq\>\<varnothing\>> then there exist a
+      <math|k\<in\><around*|{|1,\<ldots\>,n|}>> such that
+      <math|I=<around*|{|i<rsub|1>,\<ldots\>,i<rsub|k>|}>> and
+      <math|\<forall\>r,s\<in\><around*|{|1,\<ldots\>,k|}>> with
+      <math|r\<neq\>s> we have <math|i<rsub|r>\<neq\>i<rsub|s>> so that
+      <math|\<lambda\><rsub|r<rsub|1>>\<neq\>\<lambda\><rsub|i<rsub|s>>>,
+      hence <math|<around*|{|w<rsub|i<rsub|j>>|}><rsub|j\<in\><around*|{|1,\<ldots\>,i<rsub|k>|}>>>
+      is a family of eigenvectors with distinct eigenvalues. Applying then
+      [theorem: <reference|spectral distinct eigenvalues and linear
+      independence>] <math|<around*|{|w<rsub|i<rsub|j>>|}><rsub|j\<in\><around*|{|1,\<ldots\>,i<rsub|k>|}>>>
+      is lineare independent contradicting that we have proved that
+      <math|<big|sum><rsub|i\<in\>I>w<rsub|i>=0> [see eq: <reference|eq
+      18.16.150>] Hence we must have that <math|I=\<varnothing\>> and
+      <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> <math|w<rsub|i>=0>,
+      in particular <math|w<rsub|k>=-x=0\<Rightarrow\>x=0>. So it follows
+      that <math|E<around*|(|L,\<lambda\><rsub|k>|)><big|cap><around*|(|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>>E<around*|(|L,\<lambda\><rsub|j>|)>|)>\<subseteq\><around*|{|0|}>>.
+      As <math|E<around*|(|L,\<lambda\><rsub|k>|)>> and
+      <math|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>>E<around*|(|L,\<lambda\><rsub|j>|)>>
+      are vector spaces we have alos that
+      \ \ <math|0\<in\>E<around*|(|L,\<lambda\><rsub|k>|)><big|cap><around*|(|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>>E<around*|(|L,\<lambda\><rsub|j>|)>|)>>.
+      Hence we conclude that\ 
+
+      <\equation*>
+        E<around*|(|L,\<lambda\><rsub|k>|)><big|cap><around*|(|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>>E<around*|(|L,\<lambda\><rsub|j>|)>|)>=<around*|{|0|}>
+      </equation*>
+
+      Finally using [theorem: <reference|direct sum decomposition>] together
+      with (1),(2) and [eq: <reference|eq 18.14.150>] it follows that\ 
+
+      <\equation*>
+        E<around*|(|L;\<lambda\><rsub|1>,\<ldots\>,\<lambda\><rsub|n>|)>=<big|oplus><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<around*|(|L,\<lambda\><rsub|i>|)>
+      </equation*>
+
+      <item>Using (3) and [theorem: <reference|direct sum dimension>] it
+      follows that\ 
+
+      <\equation*>
+        dim<around*|(|E<around*|(|L;\<lambda\><rsub|1>,\<ldots\>,\<lambda\><rsub|n>|)>|)>=<big|sum><rsub|i=1><rsup|n>dim<around*|(|E<around*|(|L,\<lambda\><rsub|i>|)>|)>
+      </equation*>
+    </enumerate>
   </proof>
 
   <subsection|Upper triangular and diagonal matrices>
@@ -5151,7 +5329,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|17>
-    <associate|page-first|1115>
+    <associate|page-first|1113>
     <associate|page-medium|papyrus>
     <associate|par-first|0tab>
     <associate|section-nr|1>
@@ -5208,37 +5386,41 @@
     <associate|eq 18.11.146|<tuple|18.11|?>>
     <associate|eq 18.12.146|<tuple|18.12|?>>
     <associate|eq 18.13.146|<tuple|18.13|?>>
-    <associate|eq 18.130.148|<tuple|18.31|?>>
-    <associate|eq 18.14.146|<tuple|18.14|?>>
-    <associate|eq 18.15.146|<tuple|18.15|?>>
-    <associate|eq 18.16.146|<tuple|18.16|?>>
-    <associate|eq 18.17.146|<tuple|18.17|?>>
-    <associate|eq 18.18.146|<tuple|18.18|?>>
-    <associate|eq 18.19.146|<tuple|18.19|?>>
+    <associate|eq 18.130.148|<tuple|18.34|?>>
+    <associate|eq 18.14.146|<tuple|18.17|?>>
+    <associate|eq 18.14.149|<tuple|18.14|?>>
+    <associate|eq 18.14.150|<tuple|18.14|?>>
+    <associate|eq 18.15.146|<tuple|18.18|?>>
+    <associate|eq 18.15.150|<tuple|18.15|?>>
+    <associate|eq 18.16.146|<tuple|18.19|?>>
+    <associate|eq 18.16.150|<tuple|18.16|?>>
+    <associate|eq 18.17.146|<tuple|18.20|?>>
+    <associate|eq 18.18.146|<tuple|18.21|?>>
+    <associate|eq 18.19.146|<tuple|18.22|?>>
     <associate|eq 18.2.146|<tuple|18.3|?>>
     <associate|eq 18.2.146.1|<tuple|18.2|?>>
-    <associate|eq 18.20.147|<tuple|18.20|?>>
-    <associate|eq 18.21.147|<tuple|18.21|?>>
-    <associate|eq 18.22.147|<tuple|18.22|?>>
-    <associate|eq 18.23.148|<tuple|18.24|?>>
-    <associate|eq 18.23.149|<tuple|18.23|?>>
-    <associate|eq 18.24.148|<tuple|18.25|?>>
-    <associate|eq 18.25.148|<tuple|18.26|?>>
-    <associate|eq 18.26.148|<tuple|18.27|?>>
-    <associate|eq 18.27.148|<tuple|18.28|?>>
-    <associate|eq 18.28.148|<tuple|18.29|?>>
-    <associate|eq 18.29.148|<tuple|18.30|?>>
+    <associate|eq 18.20.147|<tuple|18.23|?>>
+    <associate|eq 18.21.147|<tuple|18.24|?>>
+    <associate|eq 18.22.147|<tuple|18.25|?>>
+    <associate|eq 18.23.148|<tuple|18.27|?>>
+    <associate|eq 18.23.149|<tuple|18.26|?>>
+    <associate|eq 18.24.148|<tuple|18.28|?>>
+    <associate|eq 18.25.148|<tuple|18.29|?>>
+    <associate|eq 18.26.148|<tuple|18.30|?>>
+    <associate|eq 18.27.148|<tuple|18.31|?>>
+    <associate|eq 18.28.148|<tuple|18.32|?>>
+    <associate|eq 18.29.148|<tuple|18.33|?>>
     <associate|eq 18.3.146|<tuple|18.4|?>>
-    <associate|eq 18.31.148|<tuple|18.32|?>>
-    <associate|eq 18.32.148|<tuple|18.33|?>>
-    <associate|eq 18.33.148|<tuple|18.34|?>>
-    <associate|eq 18.34.148|<tuple|18.35|?>>
-    <associate|eq 18.35.148|<tuple|18.36|?>>
-    <associate|eq 18.36.148|<tuple|18.37|?>>
-    <associate|eq 18.37.148|<tuple|18.38|?>>
-    <associate|eq 18.39.149|<tuple|18.39|?>>
+    <associate|eq 18.31.148|<tuple|18.35|?>>
+    <associate|eq 18.32.148|<tuple|18.36|?>>
+    <associate|eq 18.33.148|<tuple|18.37|?>>
+    <associate|eq 18.34.148|<tuple|18.38|?>>
+    <associate|eq 18.35.148|<tuple|18.39|?>>
+    <associate|eq 18.36.148|<tuple|18.40|?>>
+    <associate|eq 18.37.148|<tuple|18.41|?>>
+    <associate|eq 18.39.149|<tuple|18.42|?>>
     <associate|eq 18.4.146|<tuple|18.6|?>>
-    <associate|eq 18.40.149|<tuple|18.40|?>>
+    <associate|eq 18.40.149|<tuple|18.43|?>>
     <associate|eq 18.5.146|<tuple|18.7|?>>
     <associate|eq 18.5.146.2|<tuple|18.5|?>>
     <associate|eq 18.8.146|<tuple|18.8|?>>
@@ -5286,73 +5468,77 @@
     <associate|inner real product space construction|<tuple|18.14|?>>
     <associate|inner symmetric matrix|<tuple|18.44|?>>
     <associate|inner unitary matrix|<tuple|18.47|?>>
-    <associate|lemma 18.95.148|<tuple|18.105|?>>
+    <associate|lemma 18.95.148|<tuple|18.107|?>>
+    <associate|spectral|<tuple|18.76|?>>
     <associate|spectral L^n is linear|<tuple|18.57|?>>
     <associate|spectral L^n+m=L^noL^m|<tuple|18.56|?>>
     <associate|spectral P[L] is a abelian semi group|<tuple|18.65|?>>
-    <associate|spectral Schur's theorem|<tuple|18.80|?>>
-    <associate|spectral change of base|<tuple|18.97|?>>
-    <associate|spectral complex spectral theorem|<tuple|18.103|?>>
+    <associate|spectral Schur's theorem|<tuple|18.82|?>>
+    <associate|spectral change of base|<tuple|18.99|?>>
+    <associate|spectral complex spectral theorem|<tuple|18.105|?>>
     <associate|spectral composition and permutations|<tuple|18.66|?>>
     <associate|spectral composition of injective linear
     mappings|<tuple|18.58|?>>
-    <associate|spectral coordinate transformation|<tuple|18.96|?>>
+    <associate|spectral coordinate transformation|<tuple|18.98|?>>
     <associate|spectral diagnolizing operator is
-    self-adjoint|<tuple|18.86|?>>
-    <associate|spectral diagonal matrix|<tuple|18.81|?>>
+    self-adjoint|<tuple|18.88|?>>
+    <associate|spectral diagonal matrix|<tuple|18.83|?>>
     <associate|spectral diagonalization of a self-adjoint operator
-    (real)|<tuple|18.113|?>>
+    (real)|<tuple|18.115|?>>
     <associate|spectral distinct eigenvalues and linear
-    independence|<tuple|18.73|?>>
+    independence|<tuple|18.74|?>>
     <associate|spectral eigen values of a self-adjoint operator are
-    linear|<tuple|18.87|?>>
+    linear|<tuple|18.89|?>>
     <associate|spectral eigen vectors and values|<tuple|18.68|?>>
     <associate|spectral eigenspace|<tuple|18.71|?>>
-    <associate|spectral eigenspace \<less\>\<gtr\> {0}|<tuple|18.72|?>>
+    <associate|spectral eigenspace \<less\>\<gtr\> {0}|<tuple|18.73|?>>
+    <associate|spectral eigenspace of a operator|<tuple|18.76|?>>
     <associate|spectral eigenvectors exist in a finite dimensional complex
     space|<tuple|18.70|?>>
     <associate|spectral every self-adjoint an unitary operator are
-    normal|<tuple|18.100|?>>
+    normal|<tuple|18.102|?>>
     <associate|spectral factorization of polynomial
     operators|<tuple|18.67|?>>
     <associate|spectral finite product of polynomial|<tuple|18.63|?>>
-    <associate|spectral identy map is self-adjoint|<tuple|18.84|?>>
-    <associate|spectral identy map is unitary|<tuple|18.92|?>>
-    <associate|spectral invariant sub-space|<tuple|18.75|?>>
+    <associate|spectral identy map is self-adjoint|<tuple|18.86|?>>
+    <associate|spectral identy map is unitary|<tuple|18.94|?>>
+    <associate|spectral invariant sub-space|<tuple|18.77|?>>
     <associate|spectral linear operator|<tuple|18.52|?>>
     <associate|spectral linear operator isomorphism|<tuple|18.53|?>>
     <associate|spectral matrices of self adjoint transformations are
-    Hermitian|<tuple|18.85|?>>
-    <associate|spectral normal operator|<tuple|18.99|?>>
-    <associate|spectral normal operator alternative|<tuple|18.101|?>>
-    <associate|spectral operator mapping bases is unitary|<tuple|18.98|?>>
-    <associate|spectral orthogonal complement|<tuple|18.108|?>>
+    Hermitian|<tuple|18.87|?>>
+    <associate|spectral normal operator|<tuple|18.101|?>>
+    <associate|spectral normal operator alternative|<tuple|18.103|?>>
+    <associate|spectral number of eigenvalues|<tuple|18.75|?>>
+    <associate|spectral operator mapping bases is unitary|<tuple|18.100|?>>
+    <associate|spectral orthogonal complement|<tuple|18.110|?>>
     <associate|spectral orthogonal complement and linear
-    operator|<tuple|18.111|?>>
-    <associate|spectral orthogonal complement properties|<tuple|18.109|?>>
+    operator|<tuple|18.113|?>>
+    <associate|spectral orthogonal complement properties|<tuple|18.111|?>>
     <associate|spectral orthonormalization and
-    diagonlization|<tuple|18.102|?>>
+    diagonlization|<tuple|18.104|?>>
     <associate|spectral polynomial operator|<tuple|18.59|?>>
     <associate|spectral polynomial operator composition and polynomial
     product|<tuple|18.61|?>>
-    <associate|spectral real spectral theorem|<tuple|18.112|?>>
-    <associate|spectral self adjoint transformation|<tuple|18.83|?>>
+    <associate|spectral real spectral theorem|<tuple|18.114|?>>
+    <associate|spectral self adjoint transformation|<tuple|18.85|?>>
     <associate|spectral self-adjoint operator condition for operator to be
-    zero|<tuple|18.88|?>>
+    zero|<tuple|18.90|?>>
     <associate|spectral self-adjoint operators have a eigenvector with real
-    eigenvalues|<tuple|18.106|?>>
-    <associate|spectral theorem direct sum|<tuple|18.110|?>>
-    <associate|spectral theorema diagonalization|<tuple|18.104|?>>
-    <associate|spectral unitary operator|<tuple|18.89|?>>
-    <associate|spectral unitary operator alternative|<tuple|18.90|?>>
+    eigenvalues|<tuple|18.108|?>>
+    <associate|spectral sum of eigenspaces|<tuple|18.76|?>>
+    <associate|spectral theorem direct sum|<tuple|18.112|?>>
+    <associate|spectral theorema diagonalization|<tuple|18.106|?>>
+    <associate|spectral unitary operator|<tuple|18.91|?>>
+    <associate|spectral unitary operator alternative|<tuple|18.92|?>>
     <associate|spectral unitary operator has a unitary
-    matrix|<tuple|18.95|?>>
-    <associate|spectral unitary operator properties|<tuple|18.91|?>>
-    <associate|spectral upper triangular conditions|<tuple|18.78|?>>
-    <associate|spectral upper triangular matrix|<tuple|18.76|?>>
+    matrix|<tuple|18.97|?>>
+    <associate|spectral unitary operator properties|<tuple|18.93|?>>
+    <associate|spectral upper triangular conditions|<tuple|18.80|?>>
+    <associate|spectral upper triangular matrix|<tuple|18.78|?>>
     <associate|spectral upper triangular matrix for a linear
-    operator|<tuple|18.79|?>>
-    <associate|spectrum diagonalization of a matrix|<tuple|18.114|?>>
+    operator|<tuple|18.81|?>>
+    <associate|spectrum diagonalization of a matrix|<tuple|18.116|?>>
   </collection>
 </references>
 
