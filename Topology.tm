@@ -14817,7 +14817,8 @@
   <math|\<bbb-R\>>.
 
   <\theorem>
-    If <math|<around*|\<langle\>|X,d|\<rangle\>>> is a metric space,
+    <label|sequence convergence equivalences>If
+    <math|<around*|\<langle\>|X,d|\<rangle\>>> is a metric space,
     <math|k\<in\>\<bbb-N\><rsub|0>>, <math|x\<in\>X> and
     <math|<around*|{|x<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>X>
     a sequence then we have\ 
@@ -17893,8 +17894,45 @@
     <label|series terms converges to zero>Let
     <math|k\<in\>\<bbb-N\><rsub|0>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
     be a normed space then if <math|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i>>
-    converges then <math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>=0>
+    converges then
+
+    <\enumerate>
+      <item><math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>=0>
+
+      <item><math|\<exists\>K\<in\>\<bbb-R\><rsup|+><text| such that
+      >\<forall\>i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> we have
+      <math|<around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\<leqslant\>K>
+    </enumerate>
   </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. As
+      <math|<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=k><rsup|n>x<rsub|i>>
+      exist we have that <math|<around*|{|<big|sum><rsub|i=k><rsup|n>x<rsub|i>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
+      is Cauchy so there exist a <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
+      such that <math|n,m\<geqslant\>\<bbb-N\>> we have that
+      <math|<around*|\<\|\|\>|<big|sum><rsub|i=k><rsup|n>x<rsub|i>-<big|sum><rsub|i=k><rsup|m>x<rsub|i>|\<\|\|\>>\<less\>\<varepsilon\>>.
+      In particular we have <math|\<forall\>n\<geqslant\>N\<Rightarrow\>n+1\<geqslant\>N>
+      that <math|<around*|\<\|\|\>|x<rsub|n>-0|\<\|\|\>>=<around*|\<\|\|\>|x<rsub|n>|\<\|\|\>>=<around*|\<\|\|\>|<big|sum><rsub|i=k><rsup|n+1>x<rsub|i>-<big|sum><rsub|i=k><rsup|n>x<rsub|i>|\<\|\|\>>\<less\>\<varepsilon\>>.
+      Hence\ 
+
+      <\equation*>
+        <below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>=0
+      </equation*>
+
+      <item>As <math|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>> exist it
+      follows from [theorem: <reference|limit convergence implies bounded>]
+      that there exist a <math|K\<in\>\<bbb-R\><rsup|+>> such that\ 
+
+      <\equation*>
+        \<forall\>i\<in\><around*|{|k,\<ldots\>,\<infty\>|}><text| we have
+        ><around*|\<\|\|\>|x<rsub|i>|\<\|\|\>>\<leqslant\>K
+      </equation*>
+    </enumerate>
+  </proof>
 
   <\proof>
     Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. As
@@ -22579,6 +22617,7 @@
     space|<tuple|14.216|?>>
     <associate|sequence|<tuple|14.281|?>>
     <associate|sequence convergence|<tuple|14.285|?>>
+    <associate|sequence convergence equivalences|<tuple|14.290|?>>
     <associate|sequence convergence in metric space|<tuple|14.289|?>>
     <associate|sequence increasing decreasing|<tuple|14.282|?>>
     <associate|sequence increasing decreasing consequence|<tuple|14.283|?>>

@@ -14287,8 +14287,6 @@
     note <math|<wide|\<leqslant\>|\<wide-bar\>>>.
   </notation>
 
-  \;
-
   <subsection|Conventions >
 
   \;
@@ -14296,10 +14294,10 @@
   Now we are finished with the tower of different types of numbers. From now
   on for the rest of this book we work only with
   <math|\<bbb-N\><rsub|0,\<bbb-C\>>>, <math|\<bbb-Z\><rsub|\<bbb-C\>>>,
-  <math|\<bbb-Q\><rsub|\<bbb-C\>>>, <math|\<bbb-R\><rsub|\<bbb-C\>>> and
-  <math|\<bbb-C\>>. To avoid excesive use of subscripts we leave out the
-  subscripts. Hence for the rest of this book we use the following
-  conventions:
+  <math|\<bbb-Q\><rsub|\<bbb-C\>>>, <math|\<bbb-R\><rsub|\<bbb-C\>>>,
+  <math|\<bbb-C\>> and <math|<wide|\<bbb-R\>|\<wide-bar\>>>. To avoid
+  excesive use of subscripts we leave out the subscripts. Hence for the rest
+  of this book we use the following conventions:
 
   <\equation*>
     <block*|<tformat|<cwith|1|1|1|-1|cell-background|<pattern|/usr/share/Xmacs/misc/patterns/vintage/metal-rough-light.png||>>|<table|<row|<cell|Name
