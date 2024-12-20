@@ -862,7 +862,7 @@
   <math|<big|sum><rsub|n=0><rsup|\<infty\>><frac|1|n!>\<cdot\>z<rsup|n>>.
 
   <\theorem>
-    <label|exp ep series>Let <math|z\<in\>\<bbb-C\>> then\ 
+    <label|exp exp series>Let <math|z\<in\>\<bbb-C\>> then\ 
 
     <\enumerate>
       <item><math|<wide|\<cal-D\>|\<wide-bar\>><around*|[|<big|sum><rsub|n=0><rsup|\<infty\>><frac|1|n!>\<cdot\>z<rsup|n>|]>=\<bbb-C\>=\<cal-D\><around*|[|<big|sum><rsub|n=0><rsup|\<infty\>><frac|1|n!>\<cdot\>z<rsup|n>|]>>
@@ -873,7 +873,7 @@
 
       <item><math|\<cal-R\><around*|[|<big|sum><rsub|n=0><rsup|\<infty\>><frac|1|n!>\<cdot\>z<rsup|n>|]>=\<infty\>>
 
-      <item><math|B<rsub|<around*|\|||\|>><around*|(|0,\<cal-R\><around*|[|<big|sum><rsub|n=0><rsup|\<infty\>><frac|1|n!>\<cdot\>z<rsup|n>|]>|)>=<wide|\<cal-D\>|\<wide-bar\>><around*|[|<big|sum><rsub|n=0><rsup|\<infty\>><frac|1|n!>\<cdot\>z<rsup|n>|]>=\<cal-D\><around*|[|<big|sum><rsub|n=0><rsup|\<infty\>><frac|1|n!>\<cdot\>z<rsup|n>|]>=<wide|B<rsub|<around*|\|||\|>><around*|(|0,\<cal-R\><around*|[|<big|sum><rsub|n=0><rsup|\<infty\>><frac|1|n!>\<cdot\>z<rsup|n>|]>|)>|\<wide-bar\>>>
+      <item><math|B<rsub|<around*|\|||\|>><around*|(|0,\<cal-R\><around*|[|<big|sum><rsub|n=0><rsup|\<infty\>><frac|1|n!>\<cdot\>z<rsup|n>|]>|)>=<wide|\<cal-D\>|\<wide-bar\>><around*|[|<big|sum><rsub|n=0><rsup|\<infty\>><frac|1|n!>\<cdot\>z<rsup|n>|]>=\<cal-D\><around*|[|<big|sum><rsub|n=0><rsup|\<infty\>><frac|1|n!>\<cdot\>z<rsup|n>|]>=<wide|B<rsub|<around*|\|||\|>><around*|(|0,\<cal-R\><around*|[|<big|sum><rsub|n=0><rsup|\<infty\>><frac|1|n!>\<cdot\>z<rsup|n>|]>|)>|\<wide-bar\>>=\<bbb-C\>>
 
       <item><math|>If <math|z=0> then <math|<big|sum><rsub|n=0><rsup|\<infty\>><frac|1|n!>\<cdot\>z<rsup|n>=1>
     </enumerate>
@@ -1345,43 +1345,516 @@
         <tformat|<table|<row|<cell|<around*|\||<big|sum><rsub|i=2><rsup|n><binom|n|i>\<cdot\>h<rsup|i-1>\<cdot\>z<rsup|n-i>|\|>>|<cell|=>|<cell|>>|<row|<cell|<around*|\||h|\|>\<cdot\><around*|\||<big|sum><rsub|i=2><rsup|n><binom|n|i>\<cdot\>h<rsup|i-2>\<cdot\>z<rsup|n-i>|\|>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|<around*|\||h|\|>\<cdot\><big|sum><rsub|i=2><rsup|n><binom|n|i>\<cdot\><around*|\||h|\|><rsup|i-2>\<cdot\><around*|\||z|\|><rsup|n-i>>|<cell|=>|<cell|>>|<row|<cell|<around*|\||h|\|>\<cdot\><big|sum><rsub|i=2><rsup|n><frac|n!|<around*|(|n-i|)>!\<cdot\>i!>\<cdot\><around*|\||h|\|><rsup|i-2>\<cdot\><around*|\||z|\|><rsup|n-i>>|<cell|\<equallim\><rsub|n,i\<geqslant\>2>>|<cell|>>|<row|<cell|<around*|\||h|\|>\<cdot\><big|sum><rsub|i=2><rsup|n><frac|n\<cdot\><around*|(|n-1|)>\<cdot\><around*|(|n-2|)>!|<around*|(|n-i|)>!\<cdot\>i\<cdot\><around*|(|i-1|)>\<cdot\><around*|(|i-2|)>!>\<cdot\><around*|\||h|\|><rsup|i-2>\<cdot\><around*|\||z|\|><rsup|n-i>>|<cell|\<leqslant\><rsub|i\<geqslant\>2\<Rightarrow\>i\<cdot\><around*|(|i-1|)>\<geqslant\>1>>|<cell|>>|<row|<cell|<around*|\||h|\|>\<cdot\><big|sum><rsub|i=2><rsup|n><frac|n\<cdot\><around*|(|n-1|)>\<cdot\><around*|(|n-2|)>!|<around*|(|n-i|)>!\<cdot\><around*|(|i-2|)>!>\<cdot\><around*|\||h|\|><rsup|i-2>\<cdot\><around*|\||z|\|><rsup|n-i>>|<cell|=>|<cell|>>|<row|<cell|<around*|\||h|\|>\<cdot\>n\<cdot\><around*|(|n-1|)>\<cdot\><big|sum><rsub|i=2><rsup|n><frac|<around*|(|n-2|)>!|<around*|(|n-i|)>!\<cdot\><around*|(|i-2|)>!>\<cdot\><around*|\||h|\|><rsup|i-2>\<cdot\><around*|\||z|\|><rsup|n-i>>|<cell|=>|<cell|>>|<row|<cell|<around*|\||h|\|>\<cdot\>n\<cdot\><around*|(|n-1|)>\<cdot\><big|sum><rsub|i=2><rsup|n><frac|<around*|(|n-2|)>!|<around*|(|<around*|(|n-2|)>-<around*|(|i-2|)>|)>!\<cdot\><around*|(|i-2|)>!>\<cdot\><around*|\||h|\|><rsup|i-2>\<cdot\><around*|\||z|\|><rsup|<around*|(|n-2|)>-<around*|(|i-2|)>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\||h|\|>\<cdot\>n\<cdot\><around*|(|n-1|)>\<cdot\><big|sum><rsub|i=0><rsup|n-2><frac|<around*|(|n-2|)>!|<around*|(|<around*|(|n-2|)>-i|)>!\<cdot\>i!>\<cdot\><around*|\||h|\|><rsup|i>\<cdot\><around*|\||z|\|><rsup|<around*|(|n-2|)>-i>>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|fundamental binomial formula>]>>>|<cell|>>|<row|<cell|<around*|\||h|\|>\<cdot\>n\<cdot\><around*|(|n-1|)>\<cdot\><around*|(|<around*|\||z|\|>+<around*|\||h|\|>|)><rsup|n-2>>|<cell|>|<cell|>>>>
       </eqnarray*>
+
+      proving
+
+      <\equation>
+        <label|eq 19.20.151><big|sum><rsub|i=2><rsup|n><binom|n|i>\<cdot\><around*|\||h|\|><rsup|i-2>\<cdot\><around*|\||z|\|><rsup|n-i>\<leqslant\><around*|\||h|\|>\<cdot\>n\<cdot\><around*|(|n-1|)>\<cdot\><around*|(|<around*|\||z|\|>+<around*|\||h|\|>|)><rsup|n-2>
+      </equation>
+
+      As\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\||z|\|>+<around*|\||h|\|>>|<cell|\<less\>>|<cell|\<delta\>-<around*|\||z|\|>+<around*|\||z|\|>>>|<row|<cell|>|<cell|=>|<cell|\<delta\>>>|<row|<cell|>|<cell|\<less\>>|<cell|\<cal-R\><around*|[|<big|sum><rsub|n=0><rsup|\<infty\>>a<rsub|n>\<cdot\>z<rsup|n>|]>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|exp derived power service
+        properties>]>>>|<cell|\<cal-R\><around*|[|<big|sum><rsub|n=0><rsup|\<infty\>><around*|(|n+1|)>\<cdot\>a<rsub|n+1>\<cdot\>z<rsup|n>|]>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|exp derived power service
+        properties>]>>>|<cell|\<cal-R\><around*|[|<big|sum><rsub|n=0><rsup|\<infty\>><around*|(|<around*|(|n+1|)>+1|)>\<cdot\><around*|(|n+1|)>\<cdot\>a<rsub|<around*|(|n+1|)>+1>\<cdot\>z<rsup|n>|]>>>|<row|<cell|>|<cell|=>|<cell|\<cal-R\><around*|[|<big|sum><rsub|n=0><rsup|\<infty\>><around*|(|n+2|)>\<cdot\><around*|(|n+1|)>\<cdot\>a<rsub|n+2>\<cdot\>z<rsup|n>|]>>>>>
+      </eqnarray*>
+
+      so that <rigid|<math|<around*|\||z|\|>+<around*|\||h|\|>\<in\>B<rsub|<around*|\|||\|>><around*|(|\<cal-R\><around*|[|<big|sum><rsub|n=0><rsup|\<infty\>><around*|(|n+2|)>\<cdot\><around*|(|n+1|)>\<cdot\>a<rsub|n+2>\<cdot\>z<rsup|n>|]>|)>\<subseteq\><wide|\<cal-D\>|\<wide-bar\>><around*|[|<big|sum><rsub|n=0><rsup|\<infty\>><around*|(|n+2|)>\<cdot\><around*|(|n+1|)>\<cdot\>a<rsub|n+2>\<cdot\>z<rsup|n>|]>>>.
+      Hence we have that <math|<big|sum><rsub|n=0><rsup|\<infty\>><around*|(|n+2|)>\<cdot\><around*|(|n+1|)>\<cdot\><around*|\||a<rsub|n+2>|\|>\<cdot\><around*|(|<around*|\||z|\|>+<around*|\||h|\|>|)><rsup|n>>
+      converges, using \ [theorem: <reference|series translation start>] it
+      follows that <math|><math|<big|sum><rsub|n=2><rsup|\<infty\>>n\<cdot\><around*|(|n-1|)>\<cdot\><around*|\||a<rsub|n>|\|>\<cdot\><around*|(|<around*|\||z|\|>+<around*|\||h|\|>|)><rsup|n-2>>
+      converges. Further using [theorem: <reference|serie sum and scalar
+      product>] it follows that <math|<big|sum><rsub|n=0><rsup|\<infty\>><around*|\||h|\|>\<cdot\>n\<cdot\><around*|(|n-1|)>\<cdot\><around*|\||a<rsub|n>|\|>\<cdot\><around*|(|<around*|\||z|\|>+<around*|\||h|\|>|)><rsup|n-2>>
+      converges. As by [eq: <reference|eq 19.20.151>]
+
+      <\equation*>
+        <big|sum><rsub|i=2><rsup|n><binom|n|i>\<cdot\><around*|\||h|\|><rsup|i-2>\<cdot\><around*|\||z|\|><rsup|n-i>\<leqslant\><around*|\||h|\|>\<cdot\>n\<cdot\><around*|(|n-1|)>\<cdot\><around*|(|<around*|\||z|\|>+<around*|\||h|\|>|)><rsup|n-2>
+      </equation*>
+
+      we can use dominant convergence [see theorem: <reference|series
+      absolute dominant convergence>] proving that
+
+      <\equation*>
+        <big|sum><rsup|\<infty\>><rsub|n=2><around*|(|<big|sum><rsub|i=2><rsup|n><binom|n|i>\<cdot\><around*|\||h|\|><rsup|i-2>\<cdot\><around*|\||z|\|><rsup|n-i>|)>
+      </equation*>
+
+      converges and that\ 
+
+      <\equation*>
+        <around*|\||<big|sum><rsup|\<infty\>><rsub|n=2><around*|(|<big|sum><rsub|i=2><rsup|n><binom|n|i>\<cdot\><around*|\||h|\|><rsup|i-2>\<cdot\><around*|\||z|\|><rsup|n-i>|)>|\|>\<leqslant\><big|sum><rsub|n=0><rsup|\<infty\>><around*|\||h|\|>\<cdot\>n\<cdot\><around*|(|n-1|)>\<cdot\><around*|\||a<rsub|n>|\|>\<cdot\><around*|(|<around*|\||z|\|>+<around*|\||h|\|>|)><rsup|n-2>
+      </equation*>
+
+      Hence we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\||<frac|f<around*|(|z+h|)>-f<around*|(|z|)>|h>-g<around*|(|z|)>|\|>>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 19.19.151>]>>>|<cell|<around*|\||<big|sum><rsub|n=2><rsup|\<infty\>>a<rsub|n>\<cdot\><around*|(|<big|sum><rsub|i=2><rsup|n><binom|n|i>\<cdot\>h<rsup|i-1>\<cdot\>z<rsup|n-i>|)>|\|>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<big|sum><rsub|n=0><rsup|\<infty\>><around*|\||h|\|>\<cdot\>n\<cdot\><around*|(|n-1|)>\<cdot\><around*|\||a<rsub|n>|\|>\<cdot\><around*|(|<around*|\||z|\|>+<around*|\||h|\|>|)><rsup|n-2>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|serie sum and scalar product>>>>|<cell|<around*|\||h|\|>\<cdot\><big|sum><rsub|n=0><rsup|\<infty\>><around*|\||h|\|>\<cdot\>n\<cdot\><around*|(|n-1|)>\<cdot\><around*|\||a<rsub|n>|\|>\<cdot\><around*|(|<around*|\||z|\|>+<around*|\||h|\|>|)><rsup|n-2>>>>>
+      </eqnarray*>
+
+      Take now <math|\<delta\><rsub|\<varepsilon\>>=min<around*|(|\<delta\>,<frac|\<varepsilon\>|1+<big|sum><rsub|n=0><rsup|\<infty\>><around*|\||h|\|>\<cdot\>n\<cdot\><around*|(|n-1|)>\<cdot\><around*|\||a<rsub|n>|\|>\<cdot\><around*|(|<around*|\||z|\|>+<around*|\||h|\|>|)><rsup|n-2>>|)>>
+      then if <math|0\<less\><around*|\||h|\|>\<less\>\<delta\><rsub|\<varepsilon\>>>
+      it follows that\ 
+
+      <\equation*>
+        <around*|\||<frac|f<around*|(|z+h|)>-f<around*|(|z|)>|h>-g<around*|(|z|)>|\|>\<less\>\<varepsilon\>
+      </equation*>
+
+      which proves that
+
+      <\equation*>
+        f<rprime|'><rsub|z><text| exist and
+        <math|f<rprime|'><rsub|z>=g<around*|(|z|)>>>
+      </equation*>
+
+      Using the definition of <math|f> and <math|g> we have finally that
+      <math|<around*|(|<big|sum><rsub|n=0><rsup|\<infty\>>a<rsub|n>\<cdot\><around*|(|\<ast\>|)><rsup|n>|)><rsub|z><rprime|'>>
+      exist and
+
+      <\equation*>
+        <around*|(|<big|sum><rsub|n=0><rsup|\<infty\>>a<rsub|n>\<cdot\><around*|(|\<ast\>|)><rsup|n>|)><rsub|z><rprime|'>=<big|sum><rsub|n=0><rsup|\<infty\>><around*|(|n+1|)>\<cdot\>a<rsub|n+1>\<cdot\>z<rsup|n>
+      </equation*>
     </enumerate>
+  </proof>
 
-    hence we have\ 
+  We can use the above theorem to prove that the exponential function has a
+  derivative at every complex number.
 
-    <\equation>
-      <label|eq 19.20.151><around*|\||h|\|>\<cdot\><big|sum><rsub|i=2><rsup|n><binom|n|i>\<cdot\><around*|\||h|\|><rsup|i-2>\<cdot\><around*|\||z|\|><rsup|n-i>\<leqslant\><around*|\||h|\|>\<cdot\>n\<cdot\><around*|(|n-1|)>\<cdot\><around*|(|<around*|\||z|\|>+<around*|\||h|\|>|)><rsup|n-2>
-    </equation>
-
-    As\ 
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|<around*|\||z|\|>+<around*|\||h|\|>>|<cell|\<less\>>|<cell|\<delta\>-<around*|\||z|\|>+<around*|\||z|\|>>>|<row|<cell|>|<cell|=>|<cell|\<delta\>>>|<row|<cell|>|<cell|\<less\>>|<cell|\<cal-R\><around*|[|<big|sum><rsub|n=0><rsup|\<infty\>>a<rsub|n>\<cdot\>z<rsup|n>|]>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|exp derived power service
-      properties>]>>>|<cell|\<cal-R\><around*|[|<big|sum><rsub|n=0><rsup|\<infty\>><around*|(|n+1|)>\<cdot\>a<rsub|n+1>\<cdot\>z<rsup|n>|]>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|exp derived power service
-      properties>]>>>|<cell|\<cal-R\><around*|[|<big|sum><rsub|n=0><rsup|\<infty\>><around*|(|<around*|(|n+1|)>+1|)>\<cdot\><around*|(|n+1|)>\<cdot\>a<rsub|<around*|(|n+1|)>+1>\<cdot\>z<rsup|n>|]>>>|<row|<cell|>|<cell|=>|<cell|\<cal-R\><around*|[|<big|sum><rsub|n=0><rsup|\<infty\>><around*|(|n+2|)>\<cdot\><around*|(|n+1|)>\<cdot\>a<rsub|n+2>\<cdot\>z<rsup|n>|]>>>>>
-    </eqnarray*>
-
-    so that <math|<around*|\||z|\|>+<around*|\||h|\|>\<in\>B<rsub|<around*|\|||\|>><around*|(|\<cal-R\><around*|[|<big|sum><rsub|n=0><rsup|\<infty\>><around*|(|n+2|)>\<cdot\><around*|(|n+1|)>\<cdot\>a<rsub|n+2>\<cdot\>z<rsup|n>|]>|)>\<subseteq\><wide|\<cal-D\>|\<wide-bar\>><around*|[|<big|sum><rsub|n=0><rsup|\<infty\>><around*|(|n+2|)>\<cdot\><around*|(|n+1|)>\<cdot\>a<rsub|n+2>\<cdot\>z<rsup|n>|]>>.
-    Hence we have that <math|<big|sum><rsub|n=0><rsup|\<infty\>><around*|(|n+2|)>\<cdot\><around*|(|n+1|)>\<cdot\><around*|\||a<rsub|n+2>|\|>\<cdot\><around*|(|<around*|\||z|\|>+<around*|\||h|\|>|)><rsup|n>>
-    converges, using \ [theorem: <reference|series translation start>] it
-    follows that <math|><math|<big|sum><rsub|n=2><rsup|\<infty\>>n\<cdot\><around*|(|n-1|)>\<cdot\>a<rsub|n>\<cdot\><around*|(|<around*|\||z|\|>+<around*|\||h|\|>|)><rsup|n-2>>
-    converges and that
+  <\theorem>
+    <label|exp derivative><math|\<forall\>z\<in\>\<bbb-C\>> the exponential
+    function\ 
 
     <\equation*>
-      <big|sum><rsub|n=2><rsup|\<infty\>>n\<cdot\><around*|(|n-1|)>\<cdot\>a<rsub|n>\<cdot\><around*|(|<around*|\||z|\|>+<around*|\||h|\|>|)><rsup|n-2>=<big|sum><rsub|n=0><rsup|\<infty\>><around*|(|n+2|)>\<cdot\><around*|(|n+1|)>\<cdot\>a<rsub|n+2>\<cdot\><around*|(|<around*|\||z|\|>+<around*|\||h|\|>|)><rsup|n>
+      exp:\<bbb-C\>\<rightarrow\>\<bbb-C\><text| defined by
+      >exp<around*|(|z|)>=<big|sum><rsub|n=0><rsup|\<infty\>><frac|z<rsup|n>|n!>
     </equation*>
+
+    or
+
+    <\equation*>
+      exp=<big|sum><rsub|n=0><rsup|\<infty\>><frac|1|n!>\<cdot\><around*|(|\<ast\>|)><rsup|n>
+    </equation*>
+
+    has a derivative <math|exp<rprime|'><rsub|z>> where\ 
+
+    <\equation*>
+      exp<rprime|'><rsub|z>=exp<around*|(|z|)>
+    </equation*>
+
+    In other words if we define <math|exp<rprime|'>> by\ 
+
+    <\equation*>
+      exp<rprime|'>:\<bbb-C\>\<rightarrow\>\<bbb-C\> by
+      exp<rprime|'><around*|(|x|)>=exp<rprime|'><rsub|x>
+    </equation*>
+
+    then\ 
+
+    <\equation*>
+      exp<rprime|'>=exp
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Using [theorem: <reference|exp exp series>] it follows that
+    <math|B<rsub|<around*|\|||\|>><around*|(|0,\<cal-D\><around*|[|<big|sum><rsub|n=0><rsup|\<infty\>><frac|z<rsup|n>|n!>|]>|)>=\<bbb-C\>>
+    then by the previous theorem \ [theorem: <reference|exp derivative of a
+    power series>] we have that <math|\<forall\>z\<in\>\<bbb-C\>>
+    <math|<around*|(|<big|sum><rsub|n=0><rsup|\<infty\>><frac|1|n!>\<cdot\><around*|(|\<ast\>|)><rsup|n>|)><rprime|'><rsub|z>>
+    exist and\ 
+
+    <\equation*>
+      exp<rprime|'><rsub|z>=<around*|(|<big|sum><rsub|n=0><rsup|\<infty\>><frac|1|n!>\<cdot\><around*|(|\<ast\>|)><rsup|n>|)><rprime|'><rsub|z>=<big|sum><rsub|n=0><rsup|\<infty\>><frac|n+1|<around*|(|n+1|)>!>\<cdot\>z<rsup|n>=<big|sum><rsub|n=0><rsup|\<infty\>><frac|z<rsup|n>|n!>=<around*|(|<big|sum><rsub|n=0><rsup|\<infty\>><frac|<around*|(|\<ast\>|)><rsup|n>|n!>|)><around*|(|z|)>=exp<around*|(|z|)>
+    </equation*>
+  </proof>
+
+  A direct consequence of the above is that the exponential function is
+  continuous.
+
+  <\theorem>
+    <label|exp is continuous>For <math|exp:\<bbb-C\>\<rightarrow\>\<bbb-C\>>
+    we have:\ 
+
+    <\enumerate>
+      <item><math|exp> is continuous
+
+      <item><math|\<forall\>z\<in\>\<bbb-C\>> we have
+      <math|\<forall\>n\<in\>\<bbb-N\>> that <math|exp> has a <math|n>-th
+      derivative at <math|z> and <math|exp<rsup|<around*|(|n|)>><rsub|z>=exp<around*|(|z|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>As <math|\<forall\>z\<in\>\<bbb-C\>> <math|exp<rprime|'><rsub|z>>
+      exist it follows from [theorem: <reference|diff derivate and frechet
+      differential>] that <math|exp> is differentiable at <math|z>, hence,
+      using [theorem: <reference|diff differentiable function is
+      continuous>], <math|exp> is continuous at <math|x>.
+
+      <item>The prove is easily done by induction, so let
+      <math|z\<in\>\<bbb-C\>> and define
+
+      <\equation*>
+        S<rsub|z>=<around*|{|n\<in\>S\|exp<rsup|<around*|(|n|)>><rsub|z><text|
+        exist and >exp<rsup|<around*|(|n|)>><rsub|z>=exp<around*|(|z|)>|}>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|1\<in\>S>>As <math|exp<rprime|'><rsub|z>> exist and
+        <math|exp<rsup|<around*|(|1|)>><rsub|z>=exp<rprime|'><rsub|z>=exp<around*|(|z|)>>
+        we have that <math|1\<in\>S>.\ 
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>As <math|n\<in\>S> it
+        follows that <math|\<forall\>z\<in\>\<bbb-C\>>
+        <math|exp<rsup|<around*|(|n|)>><rsub|z>> exist and
+        <math|exp<rsup|<around*|(|n|)>><rsub|z>=exp<around*|(|z|)>> so that
+        the function\ 
+
+        <\equation*>
+          exp<rsup|<around*|(|n|)>>:\<bbb-C\>\<rightarrow\>\<bbb-C\><text|
+          >exp<rsup|<around*|(|n|)>><around*|(|z|)>=exp<rsup|n><rsub|z>
+        </equation*>
+
+        is equal to <math|exp:\<bbb-C\>\<rightarrow\>\<bbb-C\>>, hence
+        <math|exp<rsup|<around*|(|n|)>>=exp>. Let <math|z\<in\>\<bbb-C\>>
+        then as <math|exp<rprime|'><rsub|z>> exist and
+        <math|exp<rprime|'><rsub|z>=exp<around*|(|z|)>> it follows by
+        definition that <math|exp<rsup|<around*|(|n+1|)>><rsub|z>> exist and
+        that
+
+        <\equation*>
+          exp<rsup|<around*|(|n+1|)>><rsub|z>=<around*|(|exp<rsup|<around*|(|n|)>>|)><rprime|'><rsub|z>=exp<rprime|'><rsub|z>=exp<around*|(|z|)>
+        </equation*>
+
+        So it follows that <math|n+1\<in\>S>.
+      </description>
+    </enumerate>
+  </proof>
+
+  <subsection|Properties of the exponential function>
+
+  Next we show that the exponential behaves a lot like a power of a number.
+  This motivates the common notation to write <math|exp<around*|(|z|)>> as
+  <math|e<rsup|z>>. First we need some theorems about series.
+
+  <\theorem>
+    <label|exp Mertens theorem><dueto|Mertens>Let
+    <math|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>> br a absolute
+    convergent series in <math|\<bbb-C\>> and
+    <math|<big|sum><rsub|i=0><rsup|\<infty\>>b<rsub|i>> a convergent series
+    in <math|\<bbb-C\>>. If <math|<around*|{|c<rsub|i>|}><rsub|i\<in\>\<bbb-N\><rsub|0>>\<subseteq\>\<bbb-C\>>
+    is defined by <math|c<rsub|i>=<big|sum><rsub|j=0><rsup|i>a<rsub|j>\<cdot\>b<rsub|i-j>>
+    them <math|<big|sum><rsub|i=0><rsup|\<infty\>>c<rsub|i>> converges and\ 
+
+    <\equation*>
+      <big|sum><rsub|i=0><rsup|\<infty\>>c<rsub|i>=<around*|(|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>|)>\<cdot\><around*|(|<big|sum><rsub|i=0><rsup|\<infty\>>b<rsub|i>|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Let <math|A=<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>> and
+    <math|B=<big|sum><rsub|i=0><rsup|\<infty\>>b<rsub|i>>. <math|>We prove
+    now by induction that\ 
+
+    <\equation>
+      <label|eq 19.21.151>\<forall\>n\<in\>\<bbb-N\><rsub|0><text|
+      <math|<big|sum><rsub|i=0><rsup|n>c<rsub|i>=<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\><around*|(|<big|sum><rsub|j=0><rsup|n-i>b<rsub|j>|)>>>
+    </equation>
+
+    <\proof>
+      Let <math|S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|<big|sum><rsub|i=0><rsup|n>c<rsub|i>=<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\><around*|(|<big|sum><rsub|j=0><rsup|n-i>b<rsub|j>|)>|}>>
+      then we have:
+
+      <\description>
+        <item*|<math|0\<in\>S>><math|<big|sum><rsub|i=0><rsup|0>c<rsub|i>=c<rsub|0>=<big|sum><rsub|j=0><rsup|0>a<rsub|j>\<cdot\>b<rsub|0-j>=a<rsub|0>\<cdot\>b<rsub|0>=<big|sum><rsub|i=0><rsup|0>a<rsub|i>\<cdot\>b<rsub|0>=<big|sum><rsub|i=0><rsup|0>a<rsub|i>\<cdot\><around*|(|<big|sum><rsub|j=0><rsup|o-i>b<rsub|j>|)>>
+        proving that <math|0\<in\>S>.
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Then\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<big|sum><rsub|i=0><rsup|<around*|(|n+1|)>>a<rsub|i>\<cdot\><around*|(|<big|sum><rsub|j=0><rsup|<around*|(|n+1|)>-i>b<rsub|j>|)>>|<cell|=>|<cell|>>|<row|<cell|a<rsub|n+1>\<cdot\><big|sum><rsub|j=0><rsup|<around*|(|n+1|)>-<around*|(|n+1|)>>b<rsub|j>+<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\><around*|(|<big|sum><rsub|j=0><rsup|<around*|(|n+1|)>-i>b<rsub|j>|)>>|<cell|=>|<cell|>>|<row|<cell|a<rsub|n+1>\<cdot\>b<rsub|0>+<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\><around*|(|b<rsub|n+1-i>+<big|sum><rsub|j=0><rsup|n-i>b<rsub|j>|)>>|<cell|=>|<cell|>>|<row|<cell|a<rsub|n+1>\<cdot\>b<rsub|0>+<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\>b<rsub|n+1-i>+<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\><around*|(|<big|sum><rsub|j=0><rsup|n-i>b<rsub|j>|)>>|<cell|\<equallim\><rsub|n\<in\>S>>|<cell|>>|<row|<cell|a<rsub|n+1>\<cdot\>b<rsub|0>+<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\>b<rsub|n+1-i>+<big|sum><rsub|i=0><rsup|n>c<rsub|i>>|<cell|=>|<cell|>>|<row|<cell|a<rsub|n+1>\<cdot\>b<rsub|<around*|(|n+1|)>-<around*|(|n+1|)>>+<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\>b<rsub|n+1-i>+<big|sum><rsub|i=0><rsup|n>c<rsub|i>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i=0><rsup|n+1>a<rsub|i>\<cdot\>b<rsub|n+1-i>+<big|sum><rsub|i=0><rsup|n>c<rsub|i>>|<cell|=>|<cell|>>|<row|<cell|c<rsub|n+1>+<big|sum><rsub|i=0><rsup|n>c<rsub|i>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i=0><rsup|n+1>c<rsub|i>>|<cell|>|<cell|>>>>
+        </eqnarray*>
+
+        which proves that <math|n+1\<in\>S>.
+      </description>
+
+      Mathematical induction proves then [eq: <reference|eq 19.21.151>].
+    </proof>
+
+    By [theorem: <reference|series partition series>] we have for
+    <math|n\<in\>\<bbb-N\><rsub|0>> that <math|B=<big|sum><rsub|i=0><rsup|\<infty\>>b<rsub|i>=<big|sum><rsub|i=0><rsup|n-i>b<rsub|i>+<big|sum><rsub|i=n-i+1><rsup|\<infty\>>b<rsub|i>>,
+    hence <math|B-<big|sum><rsup|\<infty\>><rsub|i=n-i+1>b<rsub|i>=<big|sum><rsub|i=0><rsup|n-i>b<rsub|i>>.
+    Substituting this in [eq: <reference|eq 19.21.151>] gives that
+    <math|\<forall\>n\<in\>\<bbb-N\><rsub|0>>
+
+    <\equation*>
+      <big|sum><rsub|i=0><rsup|n>c<rsub|i>=<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\><around*|(|B-<big|sum><rsup|\<infty\>><rsub|i=n-i+1>b<rsub|i>|)>=B\<cdot\><big|sum><rsub|i=0><rsup|n>a<rsub|i>-<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\><around*|(|<big|sum><rsup|\<infty\>><rsub|j=n-i+1>b<rsub|j>|)>
+    </equation*>
+
+    Hence\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\||<big|sum><rsub|i=0><rsup|n>c<rsub|i>-A\<cdot\>B|\|>>|<cell|=>|<cell|<around*|\||B\<cdot\><big|sum><rsub|i=0><rsup|n>a<rsub|i>-A\<cdot\>B-<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\><around*|(|<big|sum><rsup|\<infty\>><rsub|j=n-i+1>b<rsub|j>|)>|\|>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||<around*|(|<big|sum><rsub|i=0><rsup|n>a<rsub|i>-A|)>\<cdot\>B-<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\><around*|(|<big|sum><rsup|\<infty\>><rsub|j=n-i+1>b<rsub|j>|)>|\|>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\||<big|sum><rsub|i=0><rsup|n>a<rsub|i>-A|\|>+<around*|\||<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\><around*|(|<big|sum><rsup|\<infty\>><rsub|j=n-i+1>b<rsub|j>|)>|\|>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\||<big|sum><rsub|i=0><rsup|n>a<rsub|i>-A|\|>+<big|sum><rsub|i=0><rsup|n><around*|\||a<rsub|i>\<cdot\><around*|(|<big|sum><rsup|\<infty\>><rsub|j=n-i+1>b<rsub|j>|)>|\|>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||<big|sum><rsub|i=0><rsup|n>a<rsub|i>-A|\|>+<big|sum><rsub|i=0><rsup|n><around*|(|<around*|\||a<rsub|i>|\|>\<cdot\><around*|\||<big|sum><rsup|\<infty\>><rsub|j=n-i+1>b<rsub|j>|\|>|)>>>>>
+    </eqnarray*>
+
+    so that\ 
+
+    <\equation>
+      <label|eq 19.22.151><around*|\||<big|sum><rsub|i=0><rsup|n>c<rsub|i>-A\<cdot\>B|\|>\<leqslant\><around*|\||<big|sum><rsub|i=0><rsup|n>a<rsub|i>-A|\|>+<big|sum><rsub|i=0><rsup|n><around*|(|<around*|\||a<rsub|i>|\|>\<cdot\><around*|\||<big|sum><rsup|\<infty\>><rsub|j=n-i+1>b<rsub|j>|\|>|)>
+    </equation>
+
+    Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then as
+    <math|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>=A> there exist a
+    <math|N<rsub|1>\<in\>\<bbb-N\><rsub|0>> such that\ 
+
+    <\equation>
+      <label|eq 19.23.151>\<forall\>n\<geqslant\>N<rsub|1><text| we have
+      ><around*|\||<big|sum><rsub|i=0><rsup|n>a<rsub|i>-A|\|>\<less\><frac|\<varepsilon\>|2>
+    </equation>
+
+    Further as <math|<big|sum><rsub|i=0><rsup|\<infty\>>b<rsub|i>> converges
+    it follow from [theorem: <reference|series converging of upper series>]
+
+    <\equation>
+      <label|eq 19.24.151><below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=n><rsup|\<infty\>>b<rsub|i>=0
+    </equation>
+
+    Using then [theorem: <reference|limit convergence implies bounded>] on
+    the above proves that there exist a <math|M\<in\>\<bbb-R\><rsup|+>> such
+    that\ 
+
+    <\equation>
+      <label|eq 19.25.151>\<forall\>n\<in\>\<bbb-N\><rsub|0><text| we have
+      <math|<around*|\||<big|sum><rsub|i=n><rsup|\<infty\>>b<rsub|i>|\|>\<leqslant\>M>>
+    </equation>
+
+    As <math|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>> is absolute
+    convergent <math|<big|sum><rsub|i=0><rsup|n><around*|\||a<rsub|i>|\|>> is
+    convergent, given that <math|<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=n><rsup|\<infty\>>b<rsub|i>=0>
+    there exist a <math|N<rsub|2>\<in\>\<bbb-N\><rsub|0>> such that\ 
+
+    <\equation>
+      <label|eq 19.26.151>\<forall\>n\<geqslant\>N<rsub|2><text| we have that
+      ><around*|\||<big|sum><rsub|i=n><rsup|\<infty\>>b<rsub|i>|\|>\<less\><frac|\<varepsilon\>|4\<cdot\><around*|(|<big|sum><rsub|i=1><rsup|\<infty\>><around*|\||\<alpha\><rsub|i>|\|>+1|)>>
+    </equation>
+
+    Further as by \ [theorem: <reference|series converging of upper series>]
+    <math|<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=n><rsup|\<infty\>><around*|\||a<rsub|i>|\|>=0>
+    there exist a <math|N<rsub|3>\<in\>\<bbb-N\><rsub|0>> such that\ 
+
+    <\equation>
+      <label|eq 19.27.151><big|sum><rsub|i=N<rsub|3>+1><rsup|\<infty\>><around*|\||a<rsub|i>|\|>\<less\><frac|\<varepsilon\>|4\<cdot\>M>
+    </equation>
+
+    Let <math|N<rsub|4>=max<around*|(|N<rsub|2>,N<rsub|3>|)>> and
+    <math|N=max<around*|(|N<rsub|1>,2\<cdot\>N<rsub|4>|)>> then for
+    <math|n\<geqslant\>N> we have that <math|n\<geqslant\>2<rsub|>\<cdot\>N<rsub|4>>,
+    so that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,N<rsub|4>|}>> we
+    have that <math|n-i\<geqslant\>2\<cdot\>N<rsub|4>-N<rsub|4>=N<rsub|4>\<geqslant\>N<rsub|2>>.
+    Hence if <math|n\<geqslant\>N> then we have\ 
+
+    <\equation>
+      <label|eq 19.28.151>\<forall\>i\<in\><around*|{|1\<ldots\>,N<rsub|4>|}><text|
+      that >n-i+1\<geqslant\>N<rsub|2>
+    </equation>
+
+    and
+
+    \;
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<big|sum><rsub|i=0><rsup|n><around*|(|<around*|\||a<rsub|i>|\|>\<cdot\><around*|\||<big|sum><rsup|\<infty\>><rsub|j=n-i+1>b<rsub|j>|\|>|)>>|<cell|\<equallim\>>|<cell|>>|<row|<cell|<big|sum><rsub|i=0><rsup|N<rsub|4>><around*|(|<around*|\||a<rsub|i>|\|>\<cdot\><around*|\||<big|sum><rsup|\<infty\>><rsub|j=n-i+1>b<rsub|j>|\|>|)>+<big|sum><rsub|i=N<rsub|4>+1><rsup|n><around*|(|<around*|\||a<rsub|i>|\|>\<cdot\><around*|\||<big|sum><rsup|\<infty\>><rsub|j=n-i+1>b<rsub|j>|\|>|)>>|<cell|\<leqslant\><rsub|<text|[eqs:
+      <reference|eq 19.28.151>, <reference|eq
+      19.26.151>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|i=0><rsup|N<rsub|4>><around*|(|<around*|\||a<rsub|i>|\|>\<cdot\><frac|\<varepsilon\>|4\<cdot\><around*|(|<big|sum><rsub|i=1><rsup|\<infty\>><around*|\||\<alpha\><rsub|i>|\|>+1|)>>|)>+<big|sum><rsub|i=N<rsub|4>+1><rsup|n><around*|(|<around*|\||a<rsub|i>|\|>\<cdot\><around*|\||<big|sum><rsup|\<infty\>><rsub|j=n-i+1>b<rsub|j>|\|>|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|4\<cdot\><around*|(|<big|sum><rsub|i=1><rsup|\<infty\>><around*|\||\<alpha\><rsub|i>|\|>+1|)>>\<cdot\><big|sum><rsub|i=0><rsup|N<rsub|4>><around*|\||a<rsub|i>|\|>+<big|sum><rsub|i=N<rsub|4>+1><rsup|n><around*|(|<around*|\||a<rsub|i>|\|>\<cdot\><around*|\||<big|sum><rsup|\<infty\>><rsub|j=n-i+1>b<rsub|j>|\|>|)>>|<cell|\<leqslant\><rsub|<text|[theorem:
+      <reference|series partition series>]>><rsub|<text|>>>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|4\<cdot\><around*|(|<big|sum><rsub|i=1><rsup|\<infty\>><around*|\||\<alpha\><rsub|i>|\|>+1|)>>\<cdot\><big|sum><rsub|i=0><rsup|\<infty\>><around*|\||a<rsub|i>|\|>+<big|sum><rsub|i=N<rsub|4>+1><rsup|n><around*|(|<around*|\||a<rsub|i>|\|>\<cdot\><around*|\||<big|sum><rsup|\<infty\>><rsub|j=n-i+1>b<rsub|j>|\|>|)>>|<cell|\<less\>>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|4>+<big|sum><rsub|i=N<rsub|4>+1><rsup|n><around*|(|<around*|\||a<rsub|i>|\|>\<cdot\><around*|\||<big|sum><rsup|\<infty\>><rsub|j=n-i+1>b<rsub|j>|\|>|)>>|<cell|\<leqslant\><rsub|<text|[eq:
+      <reference|eq 19.25.151>]>>>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|4>+<big|sum><rsub|i=N<rsub|4>+1><rsup|n><around*|(|<around*|\||a<rsub|i>|\|>\<cdot\>M|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|4>+M\<cdot\><big|sum><rsub|i=N<rsub|4>+1><rsup|n><around*|\||a<rsub|i>|\|>>|<cell|\<leqslant\><rsub|<text|[theorem:
+      <reference|series partition series>]>><rsub|<text|>>>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|4>+M\<cdot\><big|sum><rsub|i=N<rsub|4>+1><rsup|\<infty\>><around*|\||a<rsub|i>|\|>>|<cell|\<leqslant\><rsub|<text|[eq:
+      <reference|eq 19.27.151>]>>>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|4>+M\<cdot\><frac|\<varepsilon\>|4\<cdot\>M>>|<cell|=>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|2>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    provinh that\ 
+
+    <\equation*>
+      <big|sum><rsub|i=0><rsup|n><around*|(|<around*|\||a<rsub|i>|\|>\<cdot\><around*|\||<big|sum><rsup|\<infty\>><rsub|j=n-i+1>b<rsub|j>|\|>|)>\<less\><frac|\<varepsilon\>|2>
+    </equation*>
+
+    Combining the above with [eq: <reference|eq 19.22.151>] and [eq:
+    <reference|eq 19.23.151>] it follows that\ 
+
+    <\equation*>
+      \<forall\>n\<geqslant\>N<text| we have
+      ><around*|\||<big|sum><rsub|i=0><rsup|n>c<rsub|i>-A\<cdot\>B|\|>\<less\>\<varepsilon\><text|>
+    </equation*>
+
+    Hence\ 
+
+    <\equation*>
+      <big|sum><rsub|i=0><rsup|\<infty\>>c<rsub|i><text| converges and
+      ><big|sum><rsub|i=0><rsup|\<infty\>>c<rsub|i>=A\<cdot\>B=<around*|(|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>|)>\<cdot\><around*|(|<big|sum><rsub|i=0><rsup|\<infty\>>b<rsub|i>|)>
+    </equation*>
+  </proof>
+
+  We apply now the above theorem to the product of power series.
+
+  <\theorem>
+    <label|exp product of power series>Let
+    <math|<big|sum><rsub|n=0><rsup|\<infty\>>a<rsub|n>\<cdot\>z<rsup|n>>,
+    <math|><math|<big|sum><rsub|n=0><rsup|\<infty\>>b<rsub|n>\<cdot\>z<rsup|n>>
+    then if <math|z\<in\><wide|\<cal-D\>|\<wide-bar\>><around*|(|<big|sum><rsub|n=0><rsup|\<infty\>>a<rsub|n>\<cdot\>z<rsup|n>|)><big|cap>\<cal-D\><around*|(|<big|sum><rsub|n=0><rsup|\<infty\>>b<rsub|n>\<cdot\>z<rsup|n>|)>>
+    we have that <math|z\<in\>\<cal-D\><around*|(|<big|sum><rsub|i=0><rsup|\<infty\>>c<rsub|i>\<cdot\>z<rsup|i>|)>>
+    where <math|c<rsub|i>=<big|sum><rsub|j=0><rsup|i>a<rsub|j>\<cdot\>b<rsub|i-j>>.
+    Further
+
+    <\equation*>
+      <big|sum><rsub|i=0><rsup|\<infty\>>c<rsub|i>=<around*|(|<big|sum><rsub|n=0><rsup|\<infty\>>a<rsub|n>\<cdot\>z<rsup|n>|)>\<cdot\><around*|(|<big|sum><rsub|n=0><rsup|\<infty\>>b<rsub|n>\<cdot\>z<rsup|n>|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Let <math|z\<in\><wide|\<cal-D\>|\<wide-bar\>><around*|(|<big|sum><rsub|n=0><rsup|\<infty\>>a<rsub|n>\<cdot\>z<rsup|n>|)><big|cap>\<cal-D\><around*|(|<big|sum><rsub|n=0><rsup|\<infty\>>b<rsub|n>\<cdot\>z<rsup|n>|)>>
+    then <math|<big|sum><rsub|n=0><rsup|\<infty\>>a<rsub|n>\<cdot\>z<rsup|n>>
+    is absolute convergent and <math|<big|sum><rsub|n=0><rsup|\<infty\>>b<rsub|n>\<cdot\>z<rsup|n>>
+    is convergent. By the previous theorem [theorem: <reference|exp Mertens
+    theorem>] it follows that\ 
+
+    <\equation*>
+      <big|sum><rsub|i=0><rsup|\<infty\>><around*|(|<big|sum><rsub|j=0><rsup|i><around*|(|a<rsub|j>\<cdot\>z<rsup|j>|)>\<cdot\><around*|(|b<rsub|i-j>\<cdot\>z<rsup|i-j>|)>|)>
+    </equation*>
+
+    converges and\ 
+
+    <\equation*>
+      <big|sum><rsub|i=0><rsup|\<infty\>><around*|(|<big|sum><rsub|j=0><rsup|i><around*|(|a<rsub|j>\<cdot\>z<rsup|j>|)>\<cdot\><around*|(|b<rsub|i-j>\<cdot\>z<rsup|i-j>|)>|)>=<around*|(|<big|sum><rsub|n=0><rsup|\<infty\>>a<rsub|n>\<cdot\>z<rsup|n>|)>\<cdot\><around*|(|<big|sum><rsub|n=0><rsup|\<infty\>>b<rsub|n>\<cdot\>z<rsup|n>|)>
+    </equation*>
+
+    Further we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<big|sum><rsub|i=0><rsup|\<infty\>><around*|(|<big|sum><rsub|j=0><rsup|i><around*|(|a<rsub|j>\<cdot\>z<rsup|j>|)>\<cdot\><around*|(|b<rsub|i-j>\<cdot\>z<rsup|i-j>|)>|)>>|<cell|=>|<cell|<big|sum><rsub|i=0><rsup|\<infty\>><around*|(|<big|sum><rsub|j=0><rsup|i>a<rsub|j>\<cdot\><around*|\<nobracket\>|b<rsub|i-j>\<cdot\>z<rsup|i>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=0><rsup|\<infty\>><around*|(|<big|sum><rsub|j=0><rsup|i>a<rsub|j>\<cdot\>b<rsub|i-j>|)>\<cdot\>z<rsup|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=0><rsup|\<infty\>>c<rsub|i>\<cdot\>z<rsup|i>>>>>
+    </eqnarray*>
+
+    proving that <math|<big|sum><rsub|i=0><rsup|\<infty\>>c<rsub|i>\<cdot\>z<rsup|i>>
+    converges and <math|<big|sum><rsub|i=0><rsup|\<infty\>>c<rsub|i>\<cdot\>z<rsup|i>=<around*|(|<big|sum><rsub|n=0><rsup|\<infty\>>a<rsub|n>\<cdot\>z<rsup|n>|)>\<cdot\><around*|(|<big|sum><rsub|n=0><rsup|\<infty\>>b<rsub|n>\<cdot\>z<rsup|n>|)>>.
+  </proof>
+
+  <\theorem>
+    <label|exp exp(x+y)=exp(x).exp(y)>Let <math|x,y\<in\>\<bbb-C\>> then
+    <math|exp<around*|(|x+y|)>=exp<around*|(|x|)>\<cdot\>exp<around*|(|y|)>>
+  </theorem>
+
+  <\proof>
+    Let <math|x,y\<in\>\<bbb-C\>> then as
+    <math|\<bbb-C\>\<equallim\><rsub|<text|[theorem: <reference|exp exp
+    series>]>><wide|\<cal-D\>|\<wide-bar\>><around*|[|<big|sum><rsub|n=0><rsup|\<infty\>><frac|z<rsup|n>|n!>|]>>
+    it follows that <math|<big|sum><rsub|n=0><rsup|\<infty\>><frac|x<rsup|n>|n!>>
+    and <math|<big|sum><rsub|n=0><rsup|\<infty\>><frac|y<rsup|n>|n!>> are
+    absolute convergent [see definition: <reference|series absolute
+    convergence>]. Hence we can use the above theorem [theorem:
+    <reference|exp product of power series>] giving that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|exp<around*|(|x|)>\<cdot\>exp<around*|(|y|)>>|<cell|=>|<cell|<around*|(|<big|sum><rsub|n=0><rsup|\<infty\>><frac|x<rsup|n>|n!>|)>\<cdot\><around*|(|<big|sum><rsub|n=0><rsup|\<infty\>><frac|y<rsup|n>|n!>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|exp Mertens theorem>]>>>|<cell|<big|sum><rsub|n=0><rsup|\<infty\>><around*|(|<big|sum><rsub|i=0><rsup|n><frac|x<rsup|i>|i!>\<cdot\><frac|y<rsup|i-j>|<around*|(|i-j|)>!>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|n=0><rsup|\<infty\>><frac|1|n!>\<cdot\><big|sum><rsub|i=0><rsup|n><around*|(|<frac|n!|i!\<cdot\><around*|(|i-j|)>!>\<cdot\>x<rsup|i>\<cdot\>y<rsup|i-j>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|fundamental binomial formula>]>>>|<cell|<big|sum><rsub|n=0><rsup|\<infty\>><frac|<around*|(|x+y|)><rsup|i>|n!>>>|<row|<cell|>|<cell|=>|<cell|exp<around*|(|x+y|)>>>>>
+    </eqnarray*>
+  </proof>
+
+  <\theorem>
+    <label|exp properties>The exponential function
+    <math|exp:\<bbb-C\>\<rightarrow\>\<bbb-C\>> has the following properties:
+
+    <\enumerate>
+      <item><math|exp<around*|(|0|)>=1>
+
+      <item><math|\<forall\>z\<in\>\<bbb-C\>> we have
+      <math|exp<around*|(|z|)>\<neq\>0>.
+
+      <item><math|\<forall\>z\<in\>\<bbb-C\>> we have
+      <math|exp<around*|(|-z|)>=<frac|1|exp<around*|(|z|)>>>.
+
+      <item><math|\<forall\>z\<in\>\<bbb-R\>> we have
+      <math|0\<less\>exp<around*|(|z|)>> or in other words
+      <math|exp<around*|(|\<bbb-R\>|)>\<subseteq\>\<bbb-R\><rsup|+>>.
+
+      <item><math|\<forall\>z\<in\>\<bbb-R\>> with <math|0\<less\>z> we have
+      <math|1\<less\>exp<around*|(|z|)>>
+
+      <item><math|\<forall\>x,y\<in\>\<bbb-R\>> with <math|x\<less\>y> we
+      have <math|exp<around*|(|x|)>\<less\>exp<around*|(|y|)>> [<math|exp> is
+      strictly increasing]
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|z=0> then <math|exp<around*|(|0|)>=exp<around*|(|z|)>=<big|sum><rsub|i=0><rsup|\<infty\>><frac|1|i!>\<cdot\>z<rsup|i>\<equallim\><rsub|<text|[[example:
+      <reference|exp 0 is in convergence domain>]]>><frac|1|0!>=1>.
+
+      <item>Assume that <math|\<exists\>z\<in\>\<bbb-C\>> such that
+      <math|exp<around*|(|z|)>=0>. Then\ 
+
+      <\equation*>
+        1=exp<around*|(|0|)>=exp<around*|(|z+<around*|(|-z|)>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|exp exp(x+y)=exp(x).exp(y)>]>>exp<around*|(|z|)>\<cdot\>exp<around*|(|-z|)>=0\<cdot\>exp<around*|(|-z|)>=0
+      </equation*>
+
+      leading to the contradiction <math|1=0>. So the assumption is wrong and
+      we have <math|\<forall\>z\<in\>\<bbb-C\>> that
+      <math|exp<around*|(|z|)>\<neq\>0>.
+
+      <item><math|1=exp<around*|(|0|)>=exp<around*|(|z+<around*|(|-z|)>|)>=exp<around*|(|z|)>\<cdot\>exp<around*|(|-z|)>>
+      so using (2) we have <math|exp<around*|(|-z|)>=<frac|1|exp<around*|(|z|)>>>.
+
+      <item>If <math|z\<in\>\<bbb-R\>> then we have 3 cases to consider for
+      <math|z>:\ 
+
+      <\description>
+        <item*|<math|z\<in\>\<bbb-R\><rsup|+>>>Then
+        <math|\<forall\>i\<in\>\<bbb-N\><rsub|0>> we have
+        <math|0\<less\><frac|z<rsup|i>|i!>> [see theorem: <reference|complex
+        power is internal>] so that by [theorem: <reference|series non
+        negative numbers strict positive term>]
+        <math|0\<less\><big|sum><rsub|i=0><rsup|\<infty\>><frac|z<rsup|i>|i!>=exp<around*|(|z|)>>.
+
+        <item*|<math|z=0>>Then <math|0\<less\>1=exp<around*|(|0|)>=exp<around*|(|z|)>>.
+
+        <item*|<math|z\<in\>\<bbb-R\><rsup|->>>Then
+        <math|-z\<in\>\<bbb-R\><rsup|+>> then
+        <math|0\<less\><frac|1|exp<around*|(|-z|)>>\<equallim\><rsub|<around*|(|3|)>>exp<around*|(|z|)>>.
+      </description>
+
+      Hence in all cases we have <math|0\<less\>exp<around*|(|z|)>>.
+
+      <item>
+
+      <item>
+
+      <item>
+    </enumerate>
 
     \;
   </proof>
+
+  \;
+
+  \;
 </body>
 
 <\initial>
   <\collection>
     <associate|chapter-nr|18>
     <associate|page-first|1175>
-    <associate|page-medium|paper>
+    <associate|page-medium|papyrus>
     <associate|section-nr|4>
     <associate|subsection-nr|4>
   </collection>
@@ -1402,6 +1875,7 @@
     <associate|auto-19|<tuple|19.1.4|1185>>
     <associate|auto-2|<tuple|19.1|1175>>
     <associate|auto-20|<tuple|derived power series|1186>>
+    <associate|auto-21|<tuple|19.1.5|1193>>
     <associate|auto-3|<tuple|19.1.1|1175>>
     <associate|auto-4|<tuple|power series|1175>>
     <associate|auto-5|<tuple|<with|mode|<quote|math>|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>\<cdot\>z<rsup|i>>|1175>>
@@ -1420,6 +1894,14 @@
     <associate|eq 19.19.151|<tuple|19.19|1190>>
     <associate|eq 19.2.150|<tuple|19.2|1176>>
     <associate|eq 19.20.151|<tuple|19.20|1191>>
+    <associate|eq 19.21.151|<tuple|19.21|1193>>
+    <associate|eq 19.22.151|<tuple|19.22|?>>
+    <associate|eq 19.23.151|<tuple|19.23|?>>
+    <associate|eq 19.24.151|<tuple|19.24|?>>
+    <associate|eq 19.25.151|<tuple|19.25|?>>
+    <associate|eq 19.26.151|<tuple|19.26|?>>
+    <associate|eq 19.27.151|<tuple|19.27|?>>
+    <associate|eq 19.28.151|<tuple|19.28|?>>
     <associate|eq 19.3.150|<tuple|19.3|1178>>
     <associate|eq 19.4.150|<tuple|19.4|1181>>
     <associate|eq 19.5.150|<tuple|19.5|1182>>
@@ -1432,6 +1914,7 @@
     <associate|exp|<tuple|19.22|1185>>
     <associate|exp 0 is in convergence domain|<tuple|19.4|1175>>
     <associate|exp Abel Dirichlet|<tuple|19.18|1181>>
+    <associate|exp Mertens theorem|<tuple|19.29|1193>>
     <associate|exp ball extensions|<tuple|19.11|1178>>
     <associate|exp ball of convergence|<tuple|19.7|1176>>
     <associate|exp balls inclucsion|<tuple|19.14|1179>>
@@ -1442,13 +1925,18 @@
     <associate|exp convergence domains property|<tuple|19.5|1176>>
     <associate|exp convergion radius|<tuple|19.8|1176>>
     <associate|exp d'Alembert|<tuple|19.20|1183>>
+    <associate|exp derivative|<tuple|19.27|1192>>
     <associate|exp derivative of a power series|<tuple|19.26|1188>>
     <associate|exp derived power series|<tuple|19.24|1186>>
     <associate|exp derived power service properties|<tuple|19.25|1186>>
-    <associate|exp ep series|<tuple|19.21|1183>>
+    <associate|exp exp series|<tuple|19.21|1183>>
+    <associate|exp exp(x+y)=exp(x).exp(y)|<tuple|19.31|1194>>
     <associate|exp inequality of Abel|<tuple|19.17|1180>>
+    <associate|exp is continuous|<tuple|19.28|1193>>
     <associate|exp power function|<tuple|19.15|1179>>
     <associate|exp power series|<tuple|19.1|1175>>
+    <associate|exp product of power series|<tuple|19.30|?>>
+    <associate|exp properties|<tuple|19.32|?>>
     <associate|lemma 19.15.150|<tuple|19.16|1179>>
     <associate|lemma 19.18.150|<tuple|19.19|1182>>
   </collection>
@@ -1509,6 +1997,10 @@
       <with|par-left|<quote|1tab>|19.1.4<space|2spc>Differentiation of the
       exponental function <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-19>>
+
+      <with|par-left|<quote|1tab>|19.1.5<space|2spc>Properties of the
+      exponential function <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-21>>
     </associate>
   </collection>
 </auxiliary>
