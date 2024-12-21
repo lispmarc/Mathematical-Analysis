@@ -10388,14 +10388,14 @@
     a function then we say:
 
     <\enumerate>
-      <item><math|f> is concave on <math|<around*|[|a,b|]>> if
+      <item><math|f> is convex on <math|<around*|[|a,b|]>> if
       <math|\<forall\>x\<in\><around*|[|a,b|]>> we have
 
       <\equation*>
         f<around*|(|x|)>\<leqslant\><frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>=f<around*|(|a|)>+<frac|f<around*|(|b|)>-f<around*|(|a|)>|b-a>\<cdot\><around*|(|x-a|)>
       </equation*>
 
-      <item><math|f> is convex on <math|<around*|[|a,b|]>> if
+      <item><math|f> is concave on <math|<around*|[|a,b|]>> if
       <math|\<forall\>x\<in\><around*|[|a,b|]>> we have
 
       <\equation*>
@@ -10411,8 +10411,8 @@
     <math|<around*|(|b,f<around*|(|b|)>|)>>.
   </definition>
 
-  <small-figure|<with|gr-mode|<tuple|edit|text-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.200045gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-dash-style-unit|2ln|gr-line-width|2ln|gr-color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|gr-auto-crop|true|<graphics||<with|arrow-end|\<gtr\>|line-width|2ln|dash-style-unit|2ln|<line|<point|-6|0>|<point|-1.0|0.0>>>|<with|arrow-end|\<gtr\>|line-width|2ln|dash-style-unit|2ln|<line|<point|-6|0>|<point|-6.0|5.0>>>|<with|arrow-end|\<gtr\>|line-width|2ln|dash-style-unit|2ln|<line|<point|1|0>|<point|6.0|0.0>>>|<with|arrow-end|\<gtr\>|line-width|2ln|dash-style-unit|2ln|<line|<point|1|0>|<point|1.0|5.0>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|line-width|2ln|dash-style-unit|2ln|<spline|<point|-5|1>|<point|-3.0|3.0>|<point|-1.0|2.0>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|line-width|2ln|dash-style-unit|2ln|<spline|<point|2|3>|<point|4.0|1.0>|<point|6.0|2.0>>>|<with|color|red|line-width|2ln|dash-style-unit|2ln|<line|<point|-5|1>|<point|-1.0|2.0>>>|<with|color|red|line-width|2ln|dash-style-unit|2ln|<line|<point|2|3>|<point|6.0|2.0>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|<text-at|<math|<around*|(|a,f<around*|(|a|)>|)>>|<point|-5|0.7>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|<text-at|<math|<around*|(|b,f<around*|(|b|)>|)>>|<point|-1|1.7>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|<text-at|<math|<around*|(|a,f<around*|(|a|)>|)>>|<point|2|3.3>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|<text-at|<math|<around*|(|b,f<around*|(|b|)>|)>>|<point|6|2.4>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|<text-at|convex
-  function|<point|-4|4>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|<text-at|concave
+  <small-figure|<with|gr-mode|<tuple|edit|text-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.200045gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-dash-style-unit|2ln|gr-line-width|2ln|gr-color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|gr-auto-crop|true|<graphics||<with|arrow-end|\<gtr\>|line-width|2ln|dash-style-unit|2ln|<line|<point|-6|0>|<point|-1.0|0.0>>>|<with|arrow-end|\<gtr\>|line-width|2ln|dash-style-unit|2ln|<line|<point|-6|0>|<point|-6.0|5.0>>>|<with|arrow-end|\<gtr\>|line-width|2ln|dash-style-unit|2ln|<line|<point|1|0>|<point|6.0|0.0>>>|<with|arrow-end|\<gtr\>|line-width|2ln|dash-style-unit|2ln|<line|<point|1|0>|<point|1.0|5.0>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|line-width|2ln|dash-style-unit|2ln|<spline|<point|-5|1>|<point|-3.0|3.0>|<point|-1.0|2.0>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|line-width|2ln|dash-style-unit|2ln|<spline|<point|2|3>|<point|4.0|1.0>|<point|6.0|2.0>>>|<with|color|red|line-width|2ln|dash-style-unit|2ln|<line|<point|-5|1>|<point|-1.0|2.0>>>|<with|color|red|line-width|2ln|dash-style-unit|2ln|<line|<point|2|3>|<point|6.0|2.0>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|<text-at|<math|<around*|(|a,f<around*|(|a|)>|)>>|<point|-5|0.7>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|<text-at|<math|<around*|(|b,f<around*|(|b|)>|)>>|<point|-1|1.7>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|<text-at|<math|<around*|(|a,f<around*|(|a|)>|)>>|<point|2|3.3>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|<text-at|<math|<around*|(|b,f<around*|(|b|)>|)>>|<point|6|2.4>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|<text-at|concave
+  function|<point|-4|4>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|<text-at|convex
   function|<point|3|4>>>>>|>
 
   \;
@@ -10432,11 +10432,11 @@
     <\enumerate>
       <item>If <math|\<forall\>x\<in\><around*|]|a,b|[>>
       <math|0\<leqslant\>f<rsup|<around*|(|2|)>><rsub|x>> then <math|f> is
-      concave on <math|<around*|[|a,b|]>>.
+      convex on <math|<around*|[|a,b|]>>.
 
       <item>If <math|\<forall\>x\<in\><around*|]|a,b|[>>
       <math|f<rsup|<around*|(|2|)>><rsub|x>\<leqslant\>0> then <math|f> is
-      convex on <math|<around*|[|a,b|]>>.
+      concave on <math|<around*|[|a,b|]>>.
     </enumerate>
   </theorem>
 
@@ -10553,11 +10553,11 @@
     <\enumerate>
       <item>If <math|\<forall\>x\<in\><around*|]|a,b|[>>
       <math|0\<leqslant\>f<rsup|<around*|(|2|)>><rsup|><around*|(|x|)>> then
-      <math|f> is concave on <math|<around*|[|a,b|]>>
+      <math|f> is convex on <math|<around*|[|a,b|]>>
 
       <item>If <math|\<forall\>x\<in\><around*|]|a,b|[>>
       <math|f<rsup|<around*|(|2|)>><around*|(|x|)>\<leqslant\>0> then
-      <math|f> is convex on <math|<around*|[|a,b|]>>
+      <math|f> is concave on <math|<around*|[|a,b|]>>
     </enumerate>
   </proof>
 
@@ -10739,7 +10739,7 @@
         </equation>
 
         Further using [theorem: <reference|diff second derivate convex
-        concave>] <math|f> is concave on <math|<around*|[|y,x<rsub|0>|]>> so
+        concave>] <math|f> is convex on <math|<around*|[|y,x<rsub|0>|]>> so
         that
 
         <\equation>
@@ -10776,7 +10776,7 @@
         </equation>
 
         Further using [theorem: <reference|diff second derivate convex
-        concave>] <math|f> is concave on <math|<around*|[|x<rsub|0>,y|]>> so
+        concave>] <math|f> is convex on <math|<around*|[|x<rsub|0>,y|]>> so
         that
 
         <\equation>
@@ -10837,7 +10837,7 @@
         </equation>
 
         Further using [theorem: <reference|diff second derivate convex
-        concave>] <math|f> is convex on <math|<around*|[|y,x<rsub|0>|]>> so
+        concave>] <math|f> is concave on <math|<around*|[|y,x<rsub|0>|]>> so
         that
 
         <\equation>
@@ -10874,7 +10874,7 @@
         </equation>
 
         Further using [theorem: <reference|diff second derivate convex
-        concave>] <math|f> is convex on <math|<around*|[|x<rsub|0>,y|]>> so
+        concave>] <math|f> is concave on <math|<around*|[|x<rsub|0>,y|]>> so
         that
 
         <\equation>
@@ -21662,7 +21662,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|15>
-    <associate|page-first|865>
+    <associate|page-first|867>
     <associate|par-first|0tab>
     <associate|par-mode|justify>
     <associate|section-nr|0>

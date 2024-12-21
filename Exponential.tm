@@ -1785,11 +1785,15 @@
       <math|exp<around*|(|\<bbb-R\>|)>\<subseteq\>\<bbb-R\><rsup|+>>.
 
       <item><math|\<forall\>z\<in\>\<bbb-R\>> with <math|0\<less\>z> we have
-      <math|1\<less\>exp<around*|(|z|)>>
+      <math|1\<less\>exp<around*|(|z|)>>.
 
       <item><math|\<forall\>x,y\<in\>\<bbb-R\>> with <math|x\<less\>y> we
       have <math|exp<around*|(|x|)>\<less\>exp<around*|(|y|)>> [<math|exp> is
-      strictly increasing]
+      strictly increasing].
+
+      <item><math|\<forall\>x,y\<in\>\<bbb-R\>> with <math|x\<less\>y> it
+      follows that <math|exp> is convex on <math|<around*|[|x,y|]>> [see
+      definition: <reference|diff convex concave>].
     </enumerate>
   </theorem>
 
@@ -1835,15 +1839,300 @@
 
       Hence in all cases we have <math|0\<less\>exp<around*|(|z|)>>.
 
-      <item>
+      <item>If <math|0\<less\>z> then <math|\<forall\>i\<in\>\<bbb-N\><rsub|0>>
+      we have <math|0\<less\><frac|z<rsup|i>|i!>> [see theorem:
+      <reference|complex power is internal>] so that by [theorem:
+      <reference|series non negative numbers strict positive term>]
+      <math|0\<less\><big|sum><rsub|i=1><rsup|\<infty\>><frac|z<rsup|i>|i!>=exp<around*|(|z|)>>.
+      Hence <math|exp<around*|(|z|)>=<big|sum><rsub|i=0><rsup|\<infty\>><frac|z<rsup|i>|i!>\<equallim\><rsub|<text|[theorem:
+      <reference|series partition series>]>><frac|z<rsup|0>|0!>+<big|sum><rsub|i=1><rsup|\<infty\>><frac|z<rsup|i>|i!>=1+<big|sum><rsub|i=><rsup|\<infty\>><frac|z<rsup|i>|i!>\<gtr\>1>.
+
+      <item>Let <math|x\<less\>y> then <math|0\<less\>y-x> so that by (5)
+      <math|1\<less\>exp<around*|(|y-x|)>>, as
+      <math|0\<less\>exp<around*|(|x|)>> it follows that
+
+      <\equation*>
+        exp<around*|(|x|)>\<less\>exp<around*|(|x|)>\<cdot\>exp<around*|(|y-x|)>\<cdot\>exp<around*|(|x+y-x|)>=exp<around*|(|y|)>
+      </equation*>
+
+      <item>Let <math|x\<in\>\<bbb-R\>> then
+      <math|exp<rsup|<around*|(|2|)>><rsub|x>\<equallim\><rsub|<text|[theorem:
+      <reference|exp is continuous>]>>exp<around*|(|x|)>\<gtr\>0> [by (4) so
+      that by [theorem: <reference|diff second derivate convex concave>] is
+      convex.
+    </enumerate>
+  </proof>
+
+  We introduce now what is probably the most interesting number in
+  mathematics [maybe with the exception of <math|\<pi\>> which we will also
+  define in this chapter] which is Euler's number.
+
+  \;
+
+  <\definition>
+    <label|exp Euler's number><index|<math|\<mathe\>>><dueto|Euler's
+    number>Euler's number noted as <math|\<mathe\>> is defined as\ 
+
+    <\equation*>
+      \<mathe\>=exp<around*|(|1|)>=<big|sum><rsub|n=1><rsup|\<infty\>><frac|1|n!>
+    </equation*>
+  </definition>
+
+  Using Euler's number we see that the exponential of natural numbers behaves
+  as a power of Euler's number.
+
+  <\theorem>
+    <label|exp of natural numbers><math|\<forall\>n\<in\>\<bbb-N\><rsub|0>>
+    we have\ 
+
+    <\enumerate>
+      <item><math|\<mathe\>\<in\>\<bbb-R\><rsup|+>> and
+      <math|1\<less\>\<mathe\>>
+
+      <item><math|exp<around*|(|n|)>=\<mathe\><rsup|n>>
+
+      <item><math|exp<around*|(|-n|)>=<frac|1|\<mathe\><rsup|n>>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>As <math|1\<in\>\<bbb-R\><rsup|+>> it follows from [theorem:
+      <reference|exp properties> (5)] that
+      <math|1\<less\>exp<around*|(|1|)>=\<mathe\>>
+
+      <item>We prove this by induction so define:\ 
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|exp<around*|(|n|)>=\<mathe\><rsup|n>|}>
+      </equation*>
+
+      then we have:\ 
+
+      <\description>
+        <item*|<math|0\<in\>S>>As <math|exp<around*|(|0|)>\<equallim\><rsub|<text|[theorem:
+        <reference|exp properties>]>>1=\<mathe\><rsup|0>> it follows that
+        <math|0\<in\>S>.
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>As
+        \ <math|exp<around*|(|n+1|)>\<equallim\><rsub|<text|[theorem:
+        <reference|exp exp(x+y)=exp(x).exp(y)>]>>exp<around*|(|n|)>\<cdot\>exp<around*|(|1|)>\<equallim\><rsub|n\<in\>S>\<mathe\><rsup|n>\<cdot\>\<mathe\>=\<mathe\><rsup|n+1>>
+        it follows that <math|n+1\<in\>S>.
+      </description>
+
+      <item><math|exp<around*|(|-n|)>\<equallim\><rsub|<text|[theorem:
+      <reference|exp properties>]>><frac|1|exp<around*|(|n|)>>\<equallim\><rsub|<around*|(|1|)>><frac|1|\<mathe\><rsup|n>>>
+    </enumerate>
+  </proof>
+
+  The above theorem suggest that we could extend this to
+  <math|exp<around*|(|z|)>=\<mathe\><rsup|z>> where <math|z> is not a whole
+  number. To be able to do this we must find a inverse of the exponential
+  function which will be only possible on real numbers.
+
+  <\theorem>
+    <label|exp exp tends to infinity>Let <math|y\<in\>\<bbb-R\><rsup|+>> then
+    there exist a <math|x\<in\>\<bbb-R\>> such that
+    <math|y\<less\>exp<around*|(|x|)>>
+  </theorem>
+
+  <\proof>
+    By [theorem: <reference|exp of natural numbers>] it follows that
+    <math|1\<less\>\<mathe\>> so that by [theorem: <reference|complex
+    1\<less\>x then a\<less\>x^n>] there exist a <math|n\<in\>\<bbb-N\>> such
+    that <math|y\<leqslant\>\<mathe\><rsup|n>>. As by [theorem:
+    <reference|exp of natural numbers>] <math|\<mathe\><rsup|n>=exp<around*|(|n|)>>
+    it follows that <math|y\<leqslant\>exp<around*|(|n|)>> where
+    <math|n\<in\>\<bbb-N\>\<subseteq\>\<bbb-R\>>.
+  </proof>
+
+  <\theorem>
+    <label|exp bijection><math|exp<rsub|\|\<bbb-R\>>:\<bbb-R\>\<rightarrow\>\<bbb-R\><rsup|+>>
+    is a bijection, <math|exp<around*|(|\<bbb-R\><rsup|+>|)>=<around*|]|1,\<infty\>|[>>
+    and <math|exp<around*|(|\<bbb-R\><rsup|->|)>=<around*|]|0,1|[>>
+  </theorem>
+
+  <\proof>
+    First we have to prove that <math|exp<rsub|\|\<bbb-R\>>:\<bbb-R\>\<rightarrow\>\<bbb-R\><rsup|+>>
+    is a bijection.\ 
+
+    <\description>
+      <item*|injectivity>Let <math|x,y\<in\>\<bbb-R\>> such that
+      <math|exp<around*|(|x|)>=exp<rsub|\|\<bbb-R\>><around*|(|x|)>=exp<rsub|\|\<bbb-R\>><around*|(|y|)>=exp<around*|(|y|)>>.
+      Assume that <math|x\<neq\>y> then we may without loss of generality
+      assume that <math|x\<less\>y>. Then by [theorem: <reference|exp
+      properties> (6)] it follows that <math|exp<around*|(|x|)>\<less\>exp<around*|(|y|)>>
+      contradicting <math|exp<around*|(|x|)>=exp<around*|(|Y|)>>. Hence the
+      assumption must be wrong and we must have that <math|x=y>.
+
+      <item*|surjectivity>Let <math|y\<in\>\<bbb-R\><rsup|+>=<around*|]|0,\<infty\>|[>>
+      then we have the following possibilities:
+
+      <\description>
+        <item*|<math|y=1>>Then <math|exp<around*|(|0|)>=1=y>.
+
+        <item*|<math|1\<less\>y>>Then by [theorem: <reference|exp exp tends
+        to infinity>] there exist a <math|z\<in\>\<bbb-R\>> such that
+        <math|y\<less\>exp<around*|(|z|)>> hence we have as
+        <math|1=exp<around*|(|0|)>> that <math|exp<around*|(|0|)>\<less\>y\<less\>exp<around*|(|z|)>>.
+        Further by [theorem: <reference|exp is continuous>] on
+        <math|\<bbb-R\>> hence continuous on <math|<around*|[|0,z|]>>. Using
+        the intermediate value theorem [see theorem: <reference|connected
+        intermediate value theorem>] there exist a
+        <math|x\<in\><around*|[|0,y|]>> such that
+        <math|exp<around*|(|x|)>=y>.
+
+        <item*|<math|0\<less\>y\<less\>1>>Then <math|1\<less\><frac|1|y>> so
+        that by the previous case there exist a <math|z\<in\>\<bbb-R\>> such
+        that <math|exp<around*|(|z|)>=<frac|1|y>>. Take <math|x=-z> then
+        <math|exp<around*|(|x|)>=exp<around*|(|-y|)>\<equallim\><rsub|<text|[theorem:
+        <reference|exp properties> (3)]>><frac|1|exp<around*|(|y|)>>=<frac|1|<frac|1|y>>=y>
+      </description>
+
+      So in all cases we found a <math|x\<in\>\<bbb-R\>> such that
+      <math|exp<around*|(|x|)>=y> which proves surjectivity.
+    </description>
+
+    For the remainder of the theorem. Let <math|x\<in\>\<bbb-R\><rsup|+>>
+    then by [theorem: <reference|exp properties>(5)] we have that
+    <math|1\<less\>exp<around*|(|x|)>> hence\ 
+
+    <\equation>
+      <label|eq 19.29.151>exp<around*|(|\<bbb-R\><rsup|+>|)>\<subseteq\><around*|]|1,\<infty\>|[>
+    </equation>
+
+    If <math|x\<in\>\<bbb-R\><rsup|->> then <math|-x\<in\>\<bbb-R\><rsup|+>
+    so that by >[theorem: <reference|exp properties>(5)] we have
+    <math|1\<less\>exp<around*|(|-x|)>=<frac|1|exp<around*|(|x|)>>> so that
+    <math|<rigid|exp<around*|(|x|)>\<less\>1>>. Hence we have proved that\ 
+
+    <\equation>
+      <label|eq 19.30.151>exp<around*|(|\<bbb-R\><rsup|->|)>\<subseteq\><around*|]|0,1|[>
+    </equation>
+
+    If <math|y\<in\><around*|]|1,\<infty\>|[>\<subseteq\>\<bbb-R\><rsup|+>>
+    then by surjectivity of <math|exp<rsub|\|\<bbb-R\>>> there exist a
+    <math|x\<in\>\<bbb-R\>> such that <math|exp<around*|(|x|)>=y>. Assume
+    that <math|x\<in\>\<bbb-R\><rsup|->> then by [eq: <reference|eq
+    19.30.151>] <math|y=exp<around*|(|x|)>\<in\><around*|]|0,1|[>>
+    contradicting <math|y\<in\><around*|]|1,\<infty\>|[>> hence we must have
+    that <math|x\<in\>\<bbb-R\><rsub|0><rsup|+>> or as
+    <math|exp<around*|(|0|)>=1\<neq\>y> we must have
+    <math|x\<in\>\<bbb-R\><rsup|+>>, hence
+    <math|y\<in\>exp<around*|(|\<bbb-R\><rsup|+>|)>>. So
+    <math|<around*|]|1,\<infty\>|[>\<subseteq\>exp<around*|(|\<bbb-R\><rsup|+>|)>>
+    which combined with [eq: <reference|eq 19.29.151>] gives\ 
+
+    <\equation>
+      <label|eq 19.31.151>exp<around*|(|\<bbb-R\>|)>=<around*|]|1,\<infty\>|[>
+    </equation>
+
+    If <math|y\<in\><around*|]|0,1|[>\<subseteq\>\<bbb-R\><rsup|+>> then by
+    surjectivity there exist a <math|x\<in\>\<bbb-R\>> such that
+    <math|exp<around*|(|x|)>=y>. Assume that <math|x\<in\>\<bbb-R\><rsup|+>>
+    then by [eq: <reference|eq 19.29.151>]
+    <math|y=exp<around*|(|x|)>\<subseteq\><around*|]|1,\<infty\>|[>>
+    contradicting <math|y\<in\><around*|]|0,1|[>>. Hence we must have that
+    <math|x\<in\>\<bbb-R\><rsup|-><rsub|0>>, which, as
+    <math|exp<around*|(|0|)>=1\<neq\>y>, means that
+    <math|x\<in\>\<bbb-R\><rsup|->>, hence
+    <math|y\<in\>exp<around*|(|\<bbb-R\><rsup|->|)>>. So
+    <math|<around*|]|0,1|[>\<subseteq\>exp<around*|(|\<bbb-R\><rsup|->|)>>
+    which combined with [eq: <reference|eq 19.30.151>] proves\ 
+
+    <\equation*>
+      exp<around*|(|\<bbb-R\><rsup|->|)>=<around*|]|0,1|[>
+    </equation*>
+  </proof>
+
+  As every bijection has a inverse the function
+  <math|exp<rsub|\|\<bbb-R\>>:\<bbb-R\>\<rightarrow\>\<bbb-R\><rsup|+>> has a
+  inverse called the Napierian logarithm.
+
+  <\definition>
+    <label|exp Napierian logarithm><index|Napierian
+    logarithm><index|<math|log<around*|(|x|)>>>The Napierian logarithm noted
+    as <math|log> is the inverse of \ <math|exp<rsub|\|\<bbb-R\>>:\<bbb-R\>\<rightarrow\>\<bbb-R\><rsup|+>>.
+    In other words\ 
+
+    <\equation*>
+      log:\<bbb-R\><rsup|+>\<rightarrow\>\<bbb-R\><text| is defined by
+      >log=<around*|(|exp<rsub|\|\<bbb-R\>>|)><rsup|-1>
+    </equation*>
+  </definition>
+
+  Based on the definition of the logarithm and the properties of the
+  exponential function we have the following properties of the logarithm.
+
+  <\theorem>
+    <label|exp logarithm properties><math|log:\<bbb-R\><rsup|+>\<rightarrow\>\<bbb-R\>>
+    has the following properties:
+
+    <\enumerate>
+      <item><math|\<forall\>x\<in\>\<bbb-R\><rsup|+>> we have
+      <math|exp<around*|(|log<around*|(|x|)>|)>=x>.
+
+      <item><math|\<forall\>x\<in\>\<bbb-R\>> we have
+      <math|log<around*|(|exp<around*|(|x|)>|)>=x>.
+
+      <item><math|log<around*|(|e|)>=1>.
+
+      <item><math|log<around*|(|1|)>=0>.
+
+      <item><math|\<forall\>x,y\<in\>\<bbb-R\><rsup|+>> we have
+      <math|log<around*|(|x\<cdot\>y|)>=log<around*|(|x|)>+log<around*|(|y|)>>.
+
+      <item><math|\<forall\>x\<in\>\<bbb-R\><rsup|+>> we have
+      <math|log<around*|(|<frac|1|x>|)>=-log<around*|(|x|)>>.
+
+      <item><math|\<forall\>x\<in\>\<bbb-R\><rsup|+>> <math|log> has a
+      derivate <math|log<rprime|'><rsub|x>> where
+      <math|log<rprime|'><rsub|x>=<frac|1|x>>.
+
+      <item><math|log:\<bbb-R\><rsup|+>\<rightarrow\>\<bbb-R\>> is strictly
+      increasing and <math|\<forall\>x\<less\>1> we have
+      <math|log<around*|(|x|)>\<less\>0>.
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|x\<in\>\<bbb-R\><rsup|+>> then
+      <math|exp<around*|(|log<around*|(|x|)>|)>=exp<rsub|\|\<bbb-R\>><around*|(|<around*|(|exp<rsub|\|\<bbb-R\>>|)><rsup|-1><around*|(|x|)>|)>=x>.
+
+      <item>Let <math|x\<in\>\<bbb-R\>> then
+      <math|log<around*|(|exp<around*|(|x|)>|)>=<around*|(|exp<rsub|\|\<bbb-R\>>|)><rsup|-1><around*|(|exp<rsub|\|\<bbb-R\>><around*|(|x|)>|)>=x>.
+
+      <item><math|log<around*|(|e|)>=<around*|(|exp<rsub|\|\<bbb-R\>>|)><rsup|-1><around*|(|exp<around*|(|1|)>|)>=<around*|(|exp<rsub|\|\<bbb-R\>>|)><rsup|-1><around*|(|exp<rsub|\|\<bbb-R\>><around*|(|1|)>|)>=1>.
+
+      <item><math|log<around*|(|1|)>=<around*|(|exp<rsub|<mid|\|>\<bbb-R\>>|)><rsup|-1><around*|(|exp<around*|(|0|)>|)>=<around*|(|exp<rsub|<mid|\|>\<bbb-R\>>|)><rsup|-1><around*|(|exp<rsub|\|\<bbb-R\>><around*|(|0|)>|)>=0>.
+
+      <item>Let <math|x,y\<in\>\<bbb-R\><rsup|+>> then
+
+      <\equation*>
+        exp<rsub|\|\<bbb-R\>><around*|(|log<around*|(|x|)>+log<around*|(|y|)>|)>=exp<around*|(|log<around*|(|x|)>+log<around*|(|y|)>|)>=exp<rsub|><around*|(|log<around*|(|x|)>|)>\<cdot\>exp<around*|(|log<around*|(|y|)>|)>\<equallim\><rsub|<around*|(|1|)>>x\<cdot\>y
+      </equation*>
+
+      so that <math|log<around*|(|x|)>+log<around*|(|y|)>=<around*|(|exp<rsub|\|\<bbb-R\>>|)><rsup|-1><around*|(|x\<cdot\>y|)>=log<around*|(|x\<cdot\>y|)>>.
+
+      <item>Let <math|x\<in\>\<bbb-R\><rsup|+>> then by (1)
+      <math|exp<rsub|\|\<bbb-R\>><around*|(|-log<around*|(|x|)>|)>=exp<around*|(|-log<around*|(|x|)>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|exp properties>]>><frac|1|exp<around*|(|log<around*|(|x|)>|)>>\<equallim\><rsub|<around*|(|1|)>><frac|1|x>>
+      so that <math|-log<around*|(|x|)>=<around*|(|exp<rsub|\|\<bbb-R\>>|)><rsup|-1><around*|(|<frac|1|x>|)>=log<around*|(|<frac|1|x>|)>>.
 
       <item>
 
       <item>
     </enumerate>
-
-    \;
   </proof>
+
+  \;
+
+  \;
 
   \;
 
@@ -1876,6 +2165,9 @@
     <associate|auto-2|<tuple|19.1|1175>>
     <associate|auto-20|<tuple|derived power series|1186>>
     <associate|auto-21|<tuple|19.1.5|1193>>
+    <associate|auto-22|<tuple|<with|mode|<quote|math>|\<mathe\>>|?>>
+    <associate|auto-23|<tuple|Napierian logarithm|?>>
+    <associate|auto-24|<tuple|<with|mode|<quote|math>|log<around*|(|x|)>>|?>>
     <associate|auto-3|<tuple|19.1.1|1175>>
     <associate|auto-4|<tuple|power series|1175>>
     <associate|auto-5|<tuple|<with|mode|<quote|math>|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>\<cdot\>z<rsup|i>>|1175>>
@@ -1902,7 +2194,10 @@
     <associate|eq 19.26.151|<tuple|19.26|?>>
     <associate|eq 19.27.151|<tuple|19.27|?>>
     <associate|eq 19.28.151|<tuple|19.28|?>>
+    <associate|eq 19.29.151|<tuple|19.29|?>>
     <associate|eq 19.3.150|<tuple|19.3|1178>>
+    <associate|eq 19.30.151|<tuple|19.30|?>>
+    <associate|eq 19.31.151|<tuple|19.31|?>>
     <associate|eq 19.4.150|<tuple|19.4|1181>>
     <associate|eq 19.5.150|<tuple|19.5|1182>>
     <associate|eq 19.6.150|<tuple|19.8|1183>>
@@ -1914,10 +2209,13 @@
     <associate|exp|<tuple|19.22|1185>>
     <associate|exp 0 is in convergence domain|<tuple|19.4|1175>>
     <associate|exp Abel Dirichlet|<tuple|19.18|1181>>
+    <associate|exp Euler's number|<tuple|19.33|?>>
     <associate|exp Mertens theorem|<tuple|19.29|1193>>
+    <associate|exp Napierian logarithm|<tuple|19.37|?>>
     <associate|exp ball extensions|<tuple|19.11|1178>>
     <associate|exp ball of convergence|<tuple|19.7|1176>>
     <associate|exp balls inclucsion|<tuple|19.14|1179>>
+    <associate|exp bijection|<tuple|19.36|?>>
     <associate|exp convergence domain|<tuple|19.3|1175>>
     <associate|exp convergence domain (1)|<tuple|19.6|1176>>
     <associate|exp convergence domains and balls (1)|<tuple|19.10|1177>>
@@ -1930,9 +2228,12 @@
     <associate|exp derived power series|<tuple|19.24|1186>>
     <associate|exp derived power service properties|<tuple|19.25|1186>>
     <associate|exp exp series|<tuple|19.21|1183>>
+    <associate|exp exp tends to infinity|<tuple|19.35|?>>
     <associate|exp exp(x+y)=exp(x).exp(y)|<tuple|19.31|1194>>
     <associate|exp inequality of Abel|<tuple|19.17|1180>>
     <associate|exp is continuous|<tuple|19.28|1193>>
+    <associate|exp logarithm properties|<tuple|19.38|?>>
+    <associate|exp of natural numbers|<tuple|19.34|?>>
     <associate|exp power function|<tuple|19.15|1179>>
     <associate|exp power series|<tuple|19.1|1175>>
     <associate|exp product of power series|<tuple|19.30|?>>
@@ -1972,6 +2273,8 @@
       <tuple|<tuple|<with|mode|<quote|math>|exp<around*|(|z|)>>>|<pageref|auto-18>>
 
       <tuple|<tuple|derived power series>|<pageref|auto-20>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<mathe\>>>|<pageref|auto-22>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|19<space|2spc>The
