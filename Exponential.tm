@@ -2049,12 +2049,13 @@
 
   As every bijection has a inverse the function
   <math|exp<rsub|\|\<bbb-R\>>:\<bbb-R\>\<rightarrow\>\<bbb-R\><rsup|+>> has a
-  inverse called the Napierian logarithm.
+  inverse called the natural logarithm.
 
   <\definition>
-    <label|exp Napierian logarithm><index|Napierian
-    logarithm><index|<math|log<around*|(|x|)>>>The Napierian logarithm noted
-    as <math|log> is the inverse of \ <math|exp<rsub|\|\<bbb-R\>>:\<bbb-R\>\<rightarrow\>\<bbb-R\><rsup|+>>.
+    <label|exp natural logarithm><index|natural
+    logarithm><index|<math|log<around*|(|x|)>>><dueto|Natural Logarithm>The
+    natural logarithm noted as <math|log> is the inverse of
+    \ <math|exp<rsub|\|\<bbb-R\>>:\<bbb-R\>\<rightarrow\>\<bbb-R\><rsup|+>>.
     In other words\ 
 
     <\equation*>
@@ -2124,11 +2125,481 @@
       <reference|exp properties>]>><frac|1|exp<around*|(|log<around*|(|x|)>|)>>\<equallim\><rsub|<around*|(|1|)>><frac|1|x>>
       so that <math|-log<around*|(|x|)>=<around*|(|exp<rsub|\|\<bbb-R\>>|)><rsup|-1><around*|(|<frac|1|x>|)>=log<around*|(|<frac|1|x>|)>>.
 
-      <item>
+      <item>Let <math|x\<in\>\<bbb-R\><rsup|+>> and take
+      <math|y=log<around*|(|x|)>>. As <math|exp<rprime|'><rsub|y>=exp<around*|(|y|)>\<gtr\>0>
+      we have by the inverse function theorem [see theorem:
+      <reference|inverse function and derivate>] that there exist a open
+      <math|U\<subseteq\>\<bbb-R\>> and <math|V\<subseteq\>\<bbb-R\><rsup|+>>
+      with <math|y\<in\>U> and <math|exp<around*|(|y|)>\<in\>V\<Rightarrowlim\><rsub|exp<around*|(|y|)>=exp<around*|(|log<around*|(|x|)>|)>x>x\<in\>V>
+      such that <math|exp<rsub|\|U>:U\<rightarrow\>V> has a inverse
+      <math|<around*|(|exp<rsub|\|U>|)><rsup|-1>:V\<rightarrow\>U> and
 
-      <item>
+      <\equation>
+        <label|eq 19.32.151>\<forall\>z\<in\>V<text| we have
+        ><around*|(|<around*|(|exp<rsub|\|U>|)><rsup|-1>|)><rprime|'><rsub|exp<around*|(|z|)>>=<frac|1|exp<rprime|'><rsub|z>>
+      </equation>
+
+      As <math|\<forall\>v\<in\>V> we have
+      <math|<around*|(|exp<rsub|\|U>\<circ\>log<rsub|\|V>|)><around*|(|v|)>=exp<rsub|\|U><around*|(|log<rsub|\|V><around*|(|v|)>|)>=exp<around*|(|log<around*|(|v|)>|)>=v=Id<rsub|V><around*|(|u|)>>
+      and <math|\<forall\>u\<in\>U> we have
+      <math|<around*|(|log<rsub|\|V>\<circ\>exp<rsub|<around*|\||U|\|>>|)><around*|(|u|)>=log<rsub|\|V><around*|(|exp<rsub|\|U><around*|(|u|)>|)>=log<around*|(|exp<around*|(|u|)>|)>=u=Id<rsub|U><around*|(|u|)>>
+      so that <math|<rigid|<around*|(|exp<rsub|\|U>|)><rsup|-1>=log<rsub|\|V>>>.
+      Substituting this in [eq: <reference|eq 19.32.151>] we have\ 
+
+      <\equation*>
+        \<forall\>z\<in\>V<text| we have ><around*|(|log<rsub|\|V>|)><rprime|'><rsub|exp<around*|(|z|)>>=<frac|1|exp<rprime|'><rsub|z>>\<equallim\><rsub|<text|[theorem:
+        <reference|exp derivative>]>><frac|1|exp<around*|(|z|)>>
+      </equation*>
+
+      As <math|log<around*|(|x|)>=y\<in\>U> we have by the above that
+      <math|<around*|(|log<rsub|\|V>|)><rprime|'><rsub|exp<around*|(|log<around*|(|x|)>|)>>=<frac|1|exp<around*|(|log<around*|(|x|)>|)>>>
+      so that\ 
+
+      <\equation*>
+        <around*|(|log<rsub|\|V>|)><rprime|'><rsub|x>=<frac|1|x>
+      </equation*>
+
+      Finally using the locality of the derivative [theorem: <reference|diff
+      derivative is local>] it follows that <math|log> has a derivative at
+      <math|x> and <math|log<rprime|'><rsub|x>=<frac|1|x>>.
+
+      <item>Let <math|x,y\<in\>\<bbb-R\><rsup|+>> with <math|x\<less\>y>.
+      Assume that <math|log<around*|(|y|)>\<leqslant\>log<around*|(|x|)>>
+      then as by [theorem: <reference|exp properties>] <math|exp> is strict
+      increasing it follows that <math|y=exp<around*|(|log<around*|(|y|)>|)>\<leqslant\>exp<around*|(|log<around*|(|x|)>|)>=x>
+      contradicting <math|x\<less\>y>. Hence the assumption is wrong and we
+      must have that <math|log<around*|(|x|)>\<less\>log<around*|(|y|)>>.
+      Further if <math|x\<less\>1> then <math|log<around*|(|x|)>\<less\>log<around*|(|1|)>\<equallim\><rsub|<around*|(|4|)>>0>.
     </enumerate>
   </proof>
+
+  We are now ready to extend the n-th power of a real number where <math|n>
+  is a natural number to the cases where <math|n> is not a natural number.\ 
+
+  <\definition>
+    <label|exp generalized power><index|generalized
+    power><index|<math|a<rsup|x>>><dueto|Generalized Power>Let
+    <math|a\<in\><around*|[|0,\<infty\>|[>> and <math|p\<in\>\<bbb-R\>> then
+    we define <math|a<rsup|p>> as follows
+
+    <\equation*>
+      a<rsup|p>=<choice|<tformat|<table|<row|<cell|exp<around*|(|p\<cdot\>log<around*|(|a|)>|)>
+      <text|if >a\<in\><around*|]|0,\<ldots\>,\<infty\>|[>>>|<row|<cell|0<text|
+      if >a=0\<wedge\>p\<neq\>0>>|<row|<cell|1<text| if >a=0\<wedge\>p=0>>>>>
+    </equation*>
+
+    <\note>
+      In this text <math|0<rsup|0>=1> because we have for
+      <math|n\<in\>\<bbb-N\><rsub|0>> defined <math|a<rsup|n>> algebraic by
+      <math|a<rsup|n>=<choice|<tformat|<table|<row|<cell|1<text| if
+      >n=0>>|<row|<cell|a\<cdot\>a<rsup|n-1><text| if
+      >n\<in\>\<bbb-N\>>>>>>>[see definition: <reference|complex power>].
+      Many mathematical text argue that <math|>if <math|n\<in\>\<bbb-N\>>
+      then <math|0<rsup|n>=0\<cdot\>0<rsup|n-1>=0> so that <math|0<rsup|0>>
+      should be <math|0> instead or that <math|0<rsup|0>> is undefined. As we
+      have already used the algebraic definition <math|0<rsup|0>=1> in
+      polynomial power series we adopt the convention that
+      <math|0<rsup|0>=1>.
+    </note>
+
+    <\note>
+      As the domain of the natural logarithm is <math|\<bbb-R\><rsup|+>> we
+      define <math|a<rsup|p>> only for <math|a\<in\>\<bbb-R\><rsup|+><rsub|0>>
+      another reason is that we will show later that
+      <math|a<rsup|<frac|1|2>>=<sqrt|a>> and <math|<sqrt|-1>> is not defined
+      in <math|\<bbb-R\>>.
+    </note>
+  </definition>
+
+  Having defined <math|a<rsup|p>> we have the following properties of
+  <math|a<rsup|p>>
+
+  <\theorem>
+    <label|exp generalized power properties>We have the following properties
+    for the generalized power
+
+    <\enumerate>
+      <item><math|\<forall\>a\<in\><around*|[|0,\<ldots\>,\<infty\>|[>>
+      <math|a<rsup|0>=1>.
+
+      <item><math|\<forall\>a\<in\><around*|]|0,\<ldots\>,\<infty\>|[>> and
+      <math|\<forall\>x\<in\>\<bbb-R\>> we have that
+      <math|0\<less\>a<rsup|x>>
+
+      <item><math|\<forall\>a\<in\><around*|[|0,\<ldots\>,\<infty\>|[>> and
+      <math|\<forall\>x\<in\>\<bbb-R\>\\<around*|{|0|}>> we have that
+      <math|a<rsup|x>=0\<Leftrightarrow\>a=0>.
+
+      <item><math|\<forall\>a\<in\><around*|[|0,\<ldots\>,\<infty\>|[>> and
+      <math|\<forall\>n\<in\>\<bbb-N\><rsub|0>> we have
+      <math|a<rsup|n>=<choice|<tformat|<table|<row|<cell|1<text| if
+      >n=1>>|<row|<cell|a\<cdot\>a<rsup|n-1><text| if
+      >n\<in\>\<bbb-N\>>>>>>=<wide*|a\<ldots\>a|\<wide-underbrace\>><rsub|n>>
+      [see definition: <reference|complex power>].
+
+      <item><math|\<forall\>x\<in\>\<bbb-R\><rsup|>> we have
+      <math|1<rsup|x>=1>.
+
+      <item><math|\<forall\>x\<in\>\<bbb-R\>> we have
+      <math|e<rsup|x>=exp<around*|(|x|)>>.
+
+      <item><math|\<forall\>a\<in\><around*|]|0,\<ldots\>,\<infty\>|[>> we
+      have <math|a<rsup|-1>=<frac|1|a>>.
+
+      <\note>
+        For <math|a=0> we have <math|a<rsup|-1>=0> and <math|<frac|1|a>> is
+        undefined so the condition <math|0\<less\>a> is required.
+      </note>
+
+      <item><math|\<forall\>a\<in\><around*|]|0,\<ldots\>,\<infty\>|[>> we
+      have <math|<frac|a<rsup|x>|a>=a<rsup|x-1>>.
+
+      <\note>
+        For <math|a=0> we have <math|<frac|a<rsup|n>|a>> is undefined so the
+        condition <math|0\<less\>a> is needed.
+      </note>
+
+      <item><math|><math|\<forall\>a\<in\><around*|]|0,\<ldots\>,\<infty\>|[>>
+      and <math|\<forall\>x\<in\>\<bbb-R\>> we have
+      <math|a<rsup|-x>=<frac|1|a<rsup|x>>>.
+
+      <\note>
+        For <math|a=0> we have <math|<frac|1|a<rsup|n>>> is undefined so the
+        condition <math|0\<less\>a> is needed.
+      </note>
+
+      <item><math|\<forall\>a\<in\><around*|]|0,\<ldots\>,\<infty\>|[><infix-and>\<forall\>x,y\<in\>\<bbb-R\>>
+      we have <math|<around*|(|a<rsup|x>|)><rsup|y>=a<rsup|x\<cdot\>y>>.
+
+      <\note>
+        <math|0\<less\>a> is essential because
+        <math|0<rsup|1>\<cdot\>0<rsup|0>=0\<cdot\>1=0\<neq\>1=0<rsup|0>=0<rsup|1\<cdot\>0>>.
+      </note>
+
+      <item><math|\<forall\>a,b\<in\><around*|]|0,\<infty\>|[>> we have
+      <math|\<forall\>x\<in\>\<bbb-R\>> that
+      <math|<around*|(|a\<cdot\>b|)><rsup|x>=a<rsup|x>\<cdot\>b<rsup|x><rsup|>>.\ 
+
+      <\note>
+        If <math|a=0> and <math|b=1> then for <math|p=0> we have
+        <math|<around*|(|a\<cdot\>b|)><rsup|x>=0<rsup|0>=1> and
+        <math|a<rsup|x>\<cdot\>b<rsup|x>=0<rsup|0>\<cdot\>1<rsup|0>=0> so
+        that <math|a,b\<in\><around*|]|0,\<infty\>|[>> is indeed required.
+      </note>
+
+      <item><math|\<forall\>x,y\<in\>\<bbb-R\>> we have
+      <math|a<rsup|x+y>=a<rsup|x>\<cdot\>a<rsup|y>>.
+
+      <item><math|\<forall\>x\<in\><around*|]|0,\<infty\>|[>> we have that
+      <math|<around*|(|\<ast\>|)><rsup|x>:<around*|]|0,\<ldots\>,\<infty\>|[>\<rightarrow\>\<bbb-R\>>
+      defined by <math|<around*|(|\<ast\>|)><rsup|x><around*|(|y|)>=y<rsup|x>>
+      is stricly increasing.
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>For <math|a\<in\><around*|[|0,\<ldots\>,\<infty\>|[>> we have
+      either:
+
+      <\description>
+        <item*|<math|a=0>>Then <math|a<rsup|0>=1>
+
+        <item*|<math|a\<in\><around*|]|0,\<ldots\>,\<infty\>|[>>>Then
+        <math|a<rsup|0>=exp<around*|(|0\<cdot\>log<around*|(|a|)>|)>=exp<around*|(|0|)>\<equallim\><rsub|<text|[theorem:
+        <reference|exp properties>]>>1>
+      </description>
+
+      <item>If <math|a\<in\><around*|]|0,\<ldots\>,\<infty\>|[>> then
+      <math|a<rsup|x>=exp<around*|(|x\<cdot\>log<around*|(|a|)>|)>\<gtr\>0>
+      [because [theorem: <reference|exp properties>(4)]]\ 
+
+      <item>Let <math|a<rsup|x>=0> and assume that <math|a\<neq\>0> then
+      <math|a\<in\><around*|]|0,\<ldots\>,\<infty\>|[>> so that
+      <math|0=exp<around*|(|x\<cdot\>log<around*|(|a|)>|)>>. As by [theorem:
+      <reference|exp properties> (4)] <math|0\<less\>exp<around*|(|x\<cdot\>log<around*|(|a|)>|)>>
+      we reach the contraduction <math|0\<gtr\>0>. Hence we have\ 
+
+      <\equation*>
+        a<rsup|x>=0\<Rightarrow\>a=0
+      </equation*>
+
+      If <math|a=0> then as <math|x\<neq\>0> we have that <math|a<rsup|x>=0>
+      so that\ 
+
+      <\equation*>
+        a=0\<Rightarrow\>a<rsup|x>=0
+      </equation*>
+
+      <item>To avoid confusion of notation write
+      <math|a<rsup|<around*|[|n|]>>> for the old definition of the power [see
+      definition: <reference|complex power>] so
+      <math|a<rsup|<around*|[|n|]>>=<choice|<tformat|<table|<row|<cell|1<text|
+      if >n=0>>|<row|<cell|a\<cdot\>a<rsup|n-1><text| if
+      >n\<in\>\<bbb-N\>>>>>>>. Let <math|n\<in\>\<bbb-N\><rsub|0>> then for
+      <math|a\<in\><around*|[|0,\<ldots\>,\<infty\>|]>> we have either:\ 
+
+      <\description>
+        <item*|<math|a=0>>Then for <math|n\<in\>\<bbb-N\><rsub|0>> we have
+        either:
+
+        <\description>
+          <item*|<math|n=0>>Then <math|a<rsup|n>=a<rsup|0>=<choice|<tformat|<table|<row|<cell|exp<around*|(|n\<cdot\>log<around*|(|a|)>|)>
+          <text|if >a\<in\><around*|]|0,\<ldots\>,\<infty\>|[>>>|<row|<cell|0<text|
+          if >a=0\<wedge\>n\<neq\>0>>|<row|<cell|1<text| if
+          >a=0\<wedge\>n=0>>>>>=1=a<rsup|<around*|[|n|]>>>.
+
+          <item*|<math|n\<neq\>0>>Then <math|a<rsup|n>=0<rsup|n>=<choice|<tformat|<table|<row|<cell|exp<around*|(|n\<cdot\>log<around*|(|a|)>|)>
+          <text|if >a\<in\><around*|]|0,\<ldots\>,\<infty\>|[>>>|<row|<cell|0<text|
+          if >a=0\<wedge\>n\<neq\>0>>|<row|<cell|1<text| if
+          >a=0\<wedge\>n=0>>>>>=0=a<rsup|<around*|[|n|]>>>
+        </description>
+
+        <item*|<math|a\<in\><around*|]|0,\<ldots\>,\<infty\>|[>>>We use now
+        induction to prove this, so define\ 
+
+        <\equation*>
+          S<rsub|a>=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|a<rsup|n>=a<rsup|<around*|[|n|]>>|}>
+        </equation*>
+
+        then we have:\ 
+
+        <\description>
+          <item*|<math|0\<in\>S>>As <math|a<rsup|0>\<equallim\><rsub|a\<in\><around*|]|0,\<ldots\>,\<infty\>|[>>exp<around*|(|0\<cdot\>log<around*|(|a|)>|)>=exp<around*|(|0|)>=1=a<rsup|<around*|[|0|]>>>,
+          it follows that <math|0\<in\>S>.
+
+          <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>We have then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|a<rsup|n+1>>|<cell|\<equallim\><rsub|a\<in\><around*|]|0,\<ldots\>,\<infty\>|[>>>|<cell|exp<around*|(|<around*|(|n+1|)>\<cdot\>log<around*|(|a|)>|)>>>|<row|<cell|>|<cell|=>|<cell|exp<around*|(|n\<cdot\>log<around*|(|a|)>+log<around*|(|a|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+            <reference|exp exp(x+y)=exp(x).exp(y)>]>>>|<cell|exp<around*|(|n\<cdot\>log<around*|(|a|)>|)>\<cdot\>exp<around*|(|log<around*|(|a|)>|)>>>|<row|<cell|>|<cell|n\<in\>S>|<cell|a<rsup|<around*|[|n|]>>\<cdot\>exp<around*|(|log<around*|(|a|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+            <reference|exp logarithm properties>]>>>|<cell|a<rsup|<around*|[|n|]>>\<cdot\>a>>|<row|<cell|>|<cell|=>|<cell|a<rsup|<around*|[|n+1|]>>>>>>
+          </eqnarray*>
+
+          proving that <math|n+1\<in\>S>.
+        </description>
+
+        Mathematical induction proves then that in this case
+        <math|\<forall\>n\<in\>\<bbb-N\><rsub|0>> we have that
+        <math|a<rsup|n>=a<rsup|<around*|[|n|]>>>.
+      </description>
+
+      So in all possible cases we have\ 
+
+      <\equation*>
+        a<rsup|n>=a<rsup|<around*|[|n|]>>=<choice|<tformat|<table|<row|<cell|1<text|
+        if >n=0>>|<row|<cell|a\<cdot\>a<rsup|n-1><text| if
+        >n\<in\>\<bbb-N\>>>>>>
+      </equation*>
+
+      <item>As <math|1\<in\><around*|]|0,\<ldots\>,\<infty\>|[>> we have that
+
+      <\equation*>
+        1<rsup|x>=exp<around*|(|x\<cdot\>log<around*|(|1|)>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|exp logarithm properties>]>>exp<around*|(|x\<cdot\>0|)>=exp<around*|(|0|)>\<equallim\><rsub|<text|[theorem:
+        <reference|exp properties>]>>1
+      </equation*>
+
+      <item>As by [theorem: <reference|exp of natural numbers>]
+      <math|1\<less\>e> we have that <math|e\<in\><around*|]|0,\<ldots\>,\<infty\>|[>>
+      so that\ 
+
+      <\equation*>
+        e<rsup|x>=exp<around*|(|x\<cdot\>log<around*|(|e|)>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|exp logarithm properties>]>>exp<around*|(|x\<cdot\>1|)>=exp<around*|(|x|)>
+      </equation*>
+
+      <item>If <math|a\<in\><around*|]|0,\<ldots\>,\<infty\>|[>> then
+
+      <\equation*>
+        a<rsup|-1>=exp<around*|(|<around*|(|-1|)>\<cdot\>log<around*|(|a|)>|)>=exp<around*|(|-log<around*|(|a|)>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|exp properties>]>><frac|1|exp<around*|(|log<around*|(|a|)>|)>>\<equallim\><rsub|<text|[theorem:
+        <reference|exp logarithm properties>]>><frac|1|a>
+      </equation*>
+
+      <item>If <math|a\<in\><around*|]|0,\<ldots\>,\<infty\>|[>> then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<frac|a<rsup|x>|a>>|<cell|=>|<cell|<frac|exp<around*|(|x\<cdot\>log<around*|(|a|)>|)>|a>>>|<row|<cell|>|<cell|=>|<cell|<frac|exp<around*|(|<around*|(|<around*|(|x-1|)>+1|)>\<cdot\>log<around*|(|a|)>|)>|a>>>|<row|<cell|>|<cell|=>|<cell|<frac|exp<around*|(|<around*|(|x-1|)>\<cdot\>log<around*|(|a|)>+log<around*|(|a|)>|)>|a>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|exp properties>]>>>|<cell|<frac|exp<around*|(|<around*|(|x-1|)>\<cdot\>log<around*|(|a|)>|)>\<cdot\>exp<around*|(|log<around*|(|a|)>|)>|a>>>|<row|<cell|>|<cell|=>|<cell|<frac|a<rsup|x-1>\<cdot\>exp<around*|(|log<around*|(|a|)>|)>|a>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|exp logarithm properties>]>>>|<cell|<frac|a<rsup|x-1>\<cdot\>a|a>>>|<row|<cell|>|<cell|=>|<cell|a<rsup|x-1>>>>>
+      </eqnarray*>
+
+      <item>If <math|a\<in\><around*|]|0,\<ldots\>,\<infty\>|[>> then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|a<rsup|-x>>|<cell|=>|<cell|exp<around*|(|-x\<cdot\>log<around*|(|a|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|exp properties>]>>>|<cell|<frac|1|exp<around*|(|x\<cdot\>log<around*|(|a|)>|)>>>>|<row|<cell|>|<cell|=>|<cell|<frac|1|a<rsup|x>>>>>>
+      </eqnarray*>
+
+      <item>As <math|a\<in\><around*|]|0,\<ldots\>,\<infty\>|[>> we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|a<rsup|x>|)><rsup|y>>|<cell|=>|<cell|exp<around*|(|y\<cdot\>log<around*|(|a<rsup|x>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|exp<around*|(|y\<cdot\>log<around*|(|exp<around*|(|x\<cdot\>log<around*|(|a|)>|)>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|exp logarithm properties>]>>>|<cell|exp<around*|(|y\<cdot\>x\<cdot\>log<around*|(|a|)>|)>>>|<row|<cell|>|<cell|=>|<cell|exp<around*|(|<around*|(|x\<cdot\>y|)>\<cdot\>log<around*|(|a|)>|)>>>|<row|<cell|>|<cell|=>|<cell|a<rsup|x\<cdot\>y>>>>>
+      </eqnarray*>
+
+      <item>As <math|a,b\<in\><around*|]|0,\<ldots\>,\<infty\>|[>> then
+      <math|a\<cdot\>b\<in\><around*|]|0,\<ldots\>,\<infty\>|[>> so that
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|a\<cdot\>b|)><rsup|x>>|<cell|=>|<cell|exp<around*|(|x\<cdot\>log<around*|(|a\<cdot\>b|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|exp logarithm properties>]>>>|<cell|exp<around*|(|x\<cdot\><around*|(|log<around*|(|a|)>+log<around*|(|b|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|exp<around*|(|x\<cdot\>log<around*|(|a|)>+x\<cdot\>log<around*|(|b|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|exp exp(x+y)=exp(x).exp(y)>]>>>|<cell|exp<around*|(|x\<cdot\>log<around*|(|a|)>|)>\<cdot\>exp<around*|(|x\<cdot\>log<around*|(|b|)>|)>>>|<row|<cell|>|<cell|=>|<cell|a<rsup|x>\<cdot\>b<rsup|x>>>>>
+      </eqnarray*>
+
+      <item>Let <math|a,b\<in\><around*|]|0,\<ldots\>,\<infty\>|[>> then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|a<rsup|x+y>>|<cell|=>|<cell|exp<around*|(|<around*|(|x+y|)>\<cdot\>log<around*|(|a|)>|)>>>|<row|<cell|>|<cell|=>|<cell|exp<around*|(|x\<cdot\>log<around*|(|a|)>+y\<cdot\>log*<around*|(|a|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|exp exp(x+y)=exp(x).exp(y)>]>>>|<cell|exp<around*|(|x\<cdot\>log<around*|(|a|)>|)>\<cdot\>exp<around*|(|y*\<cdot\>log<around*|(|a|)>|)>>>|<row|<cell|>|<cell|=>|<cell|x<rsup|a>\<cdot\>y<rsup|a>>>>>
+      </eqnarray*>
+
+      <item>Let <math|y,z\<in\><around*|]|0,\<ldots\>,\<infty\>|[>> such that
+      <math|y\<less\>z> then as <math|log> is strictly increasing [see
+      theorem: <reference|exp logarithm properties>] it follows that
+      <math|log<around*|(|y|)>\<less\>log<around*|(|z|)>> and as
+      <math|0\<less\>log<around*|(|y|)>,log<around*|(|z|)>> and
+      <math|0\<less\>x> we have <math|x\<cdot\>log<around*|(|y|)>\<less\>x\<cdot\>log<around*|(|z|)>>.
+      Further, as <math|exp> is strictly increasing [see theorem:
+      <reference|exp properties>], it follows that
+
+      <\equation*>
+        y<rsup|x>=exp<around*|(|x\<cdot\>log<around*|(|y|)>|)>\<less\>exp<around*|(|x\<cdot\>log<around*|(|z|)>|)>=z<rsup|x>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|exp derivative of (*)^x>Let <math|x\<in\>\<bbb-R\>> then the
+    function\ 
+
+    <\equation*>
+      <around*|(|\<star\>|)><rsup|x>:<around*|]|0,\<infty\>|[>=\<bbb-R\><rsup|+>\<rightarrow\>\<bbb-R\><text|
+      defined by ><around*|(|\<ast\>|)><rsup|x><around*|(|y|)>=y<rsup|x>
+    </equation*>
+
+    has a derivative <math|<around*|(|<around*|(|\<star\>|)><rsup|x>|)><rprime|'><rsub|y>>
+    at every <math|y\<in\><around*|]|0,\<infty\>|[>> with
+    <math|<around*|(|<around*|(|\<ast\>|)><rsup|x>|)><rprime|'><rsub|y>=x\<cdot\>y<rsup|x-1>>
+  </theorem>
+
+  <\proof>
+    Let <math|x\<in\>\<bbb-R\>> and define\ 
+
+    <\equation*>
+      \<varphi\>:\<bbb-R\>\<rightarrow\>\<bbb-R\><text| defined by
+      >\<varphi\><around*|(|y|)>=x\<cdot\>y
+    </equation*>
+
+    then by [example: <reference|diff f(t)=a.x+y is infinite differentiable>]
+    it follows that <math|\<forall\>y\<in\>\<bbb-R\>> has a derivative at
+    <math|y> and\ 
+
+    <\equation*>
+      \<varphi\><rprime|'><rsub|y>=x
+    </equation*>
+
+    Further if <math|z\<in\>\<bbb-R\><rsup|+>> then
+
+    <\equation*>
+      <around*|(|exp\<circ\>\<varphi\>\<circ\>log|)><around*|(|z|)>=exp<around*|(|\<varphi\><around*|(|log<around*|(|z|)>|)>|)>=exp<around*|(|x\<cdot\>log<around*|(|z|)>|)>=z<rsup|x>=<around*|(|\<ast\>|)><rsup|x><around*|(|z|)>
+    </equation*>
+
+    proving that\ 
+
+    <\equation*>
+      <around*|(|\<ast\>|)><rsup|x>=exp\<circ\>\<varphi\>\<circ\>log
+    </equation*>
+
+    As by [theorem: <reference|exp derivative>] <math|exp> has a derivative
+    at every <math|y\<in\>\<bbb-R\>> with
+    <math|exp<rsub|y><rprime|'>=exp<around*|(|y|)>> and by [theorem:
+    <reference|exp logarithm properties>] <math|log> has a derivative at
+    every <math|y> with <math|log<rprime|'><rsub|y>=<frac|1|y>> we can use
+    the chain rule [see theorem:<reference|diff chain rule calculus>] twice
+    proving that \ <math|<around*|(|\<star\>|)><rsup|x>=exp\<circ\>\<varphi\>\<circ\>log>
+    has a derivative for every <math|y\<in\>\<bbb-R\><rsup|+>> and\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|<around*|(|\<ast\>|)><rsup|x>|)><rprime|'><rsub|y>>|<cell|=>|<cell|<around*|(|exp\<circ\>\<varphi\>\<circ\>log|)><rprime|'><rsub|y>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|exp\<circ\><around*|(|\<varphi\>\<circ\>log|)>|)><rprime|'><rsub|y>>>|<row|<cell|>|<cell|=>|<cell|exp<rprime|'><rsub|<around*|(|\<varphi\>\<circ\>log|)><around*|(|y|)>>\<cdot\><around*|(|\<varphi\>\<circ\>log|)><rprime|'><rsub|y>>>|<row|<cell|>|<cell|\<equallim\>>|<cell|exp<around*|(|<around*|(|\<varphi\>\<circ\>log|)><around*|(|y|)>|)>\<cdot\><around*|(|\<varphi\>\<circ\>log|)><rprime|'><rsub|y>>>|<row|<cell|>|<cell|=>|<cell|exp<around*|(|\<varphi\><around*|(|log<around*|(|y|)>|)>|)>\<cdot\><around*|(|\<varphi\>\<circ\>log|)><rprime|'><rsub|y>>>|<row|<cell|>|<cell|=>|<cell|exp<around*|(|x\<cdot\>log<around*|(|y|)>|)>\<cdot\><around*|(|\<varphi\>\<circ\>log|)><rprime|'><rsub|y>>>|<row|<cell|>|<cell|=>|<cell|y<rsup|x>\<cdot\><around*|(|\<varphi\><rprime|'><rsub|log<around*|(|y|)>>\<cdot\>log<rprime|'><rsub|y>|)>>>|<row|<cell|>|<cell|=>|<cell|y<rsup|x>\<cdot\>x\<cdot\><frac|1|y>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|exp generalized power properties>
+      (8)]>>>|<cell|x\<cdot\>y<rsup|x-1>>>>>
+    </eqnarray*>
+  </proof>
+
+  <\theorem>
+    <label|exp derivative of x^(*)>Let <math|a\<in\><around*|]|0,\<infty\>|[>>
+    then <math|\<forall\>y\<in\>\<bbb-R\>> we have that the function\ 
+
+    <\equation*>
+      a<rsup|<around*|(|\<ast\>|)>>:\<bbb-R\>\<rightarrow\>\<bbb-R\><text|
+      defined by >a<rsup|<around*|(|\<ast\>|)>><around*|(|x|)>=a<rsup|x>
+    </equation*>
+
+    has a derivative at <math|y> and <math|<around*|(|a<rsup|<around*|(|\<ast\>|)>>|)><rprime|'><rsub|x>=log<around*|(|a|)>\<cdot\>a<rsup|x>>.
+  </theorem>
+
+  <\proof>
+    Define\ 
+
+    <\equation*>
+      \<varphi\>:\<bbb-R\>\<rightarrow\>\<bbb-R\><text| by
+      >\<varphi\><around*|(|x|)>=x\<cdot\>log<around*|(|a|)>
+    </equation*>
+
+    then by \ [example: <reference|diff f(t)=a.x+y is infinite
+    differentiable>] it follows that <math|\<forall\>x\<in\>\<bbb-R\>> has a
+    derivative at <math|x> and\ 
+
+    <\equation*>
+      \<varphi\><rprime|'><rsub|x>=log<around*|(|a|)>
+    </equation*>
+
+    Further we have for <math|x\<in\>\<bbb-R\>> that
+    <math|<around*|(|exp\<circ\>\<varphi\>|)><around*|(|x|)>=exp<around*|(|\<varphi\><around*|(|x|)>|)>=exp<around*|(|x\<cdot\>log<around*|(|a|)>|)>=a<rsup|x>=a<rsup|<around*|(|\<ast\>|)>><around*|(|x|)>>
+    proving that\ 
+
+    <\equation*>
+      a<rsup|<around*|(|\<ast\>|)>>=exp\<circ\>\<varphi\>
+    </equation*>
+
+    As by [theorem: <reference|exp derivative>] <math|exp> has a derivative
+    at every <math|x\<in\>\<bbb-R\>> with
+    <math|exp<rsub|x><rprime|'>=exp<around*|(|x|)>> we can use the chain rule
+    [see theorem:<reference|diff chain rule calculus>] to prove that
+    <math|a<rsup|<around*|(|\<ast\>|)>>> has a derivative at every
+    <math|x\<in\>\<bbb-R\>> and that
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|a<rsup|<around*|(|\<ast\>|)>>|)><rprime|'><rsub|x>>|<cell|=>|<cell|<around*|(|exp\<circ\>\<varphi\>|)><rprime|'><rsub|x>>>|<row|<cell|>|<cell|=>|<cell|exp<rsup|<rprime|'>><rsub|\<varphi\><around*|(|x|)>>\<cdot\>\<varphi\><rprime|'><rsub|x>>>|<row|<cell|>|<cell|=>|<cell|exp<around*|(|\<varphi\><around*|(|x|)>|)>\<cdot\>\<varphi\><rprime|'><rsub|x>>>|<row|<cell|>|<cell|=>|<cell|exp<around*|(|x\<cdot\>log<around*|(|a|)>|)>\<cdot\>\<varphi\><rprime|'><rsub|x>>>|<row|<cell|>|<cell|=>|<cell|a<rsup|x>\<cdot\>\<varphi\><rprime|'><rsub|x>>>|<row|<cell|>|<cell|=>|<cell|log<around*|(|a|)>\<cdot\>a<rsup|x>>>>>
+    </eqnarray*>
+  </proof>
+
+  <\theorem>
+    <label|exp (*)^x is continuous>Let <math|x\<in\>\<bbb-R\>> then
+    <math|<around*|(|\<ast\>|)><rsup|x>:<around*|[|0,\<ldots\>,\<infty\>|[>\<rightarrow\>\<bbb-R\>>
+    defined by <math|<around*|(|\<ast\>|)><rsup|x><around*|(|y|)>=y<rsup|x>>
+    is continuous on <math|<around*|[|0,\<infty\>|[>> [where we use the
+    sub-space topology of <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>>
+    on the <math|<around*|[|0,\<ldots\>,\<infty\>|[>>
+  </theorem>
+
+  <\proof>
+    Let <math|y\<in\><around*|[|0,\<infty\>|[>> then we have either:\ 
+
+    <\description>
+      <item*|<math|y=0>>Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then\ 
+
+      <item*|<math|y\<neq\>0>>
+    </description>
+  </proof>
+
+  \;
+
+  \;
 
   \;
 
@@ -2166,8 +2637,10 @@
     <associate|auto-20|<tuple|derived power series|1186>>
     <associate|auto-21|<tuple|19.1.5|1193>>
     <associate|auto-22|<tuple|<with|mode|<quote|math>|\<mathe\>>|?>>
-    <associate|auto-23|<tuple|Napierian logarithm|?>>
+    <associate|auto-23|<tuple|natural logarithm|?>>
     <associate|auto-24|<tuple|<with|mode|<quote|math>|log<around*|(|x|)>>|?>>
+    <associate|auto-25|<tuple|generalized power|?>>
+    <associate|auto-26|<tuple|<with|mode|<quote|math>|a<rsup|x>>|?>>
     <associate|auto-3|<tuple|19.1.1|1175>>
     <associate|auto-4|<tuple|power series|1175>>
     <associate|auto-5|<tuple|<with|mode|<quote|math>|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>\<cdot\>z<rsup|i>>|1175>>
@@ -2198,6 +2671,7 @@
     <associate|eq 19.3.150|<tuple|19.3|1178>>
     <associate|eq 19.30.151|<tuple|19.30|?>>
     <associate|eq 19.31.151|<tuple|19.31|?>>
+    <associate|eq 19.32.151|<tuple|19.32|?>>
     <associate|eq 19.4.150|<tuple|19.4|1181>>
     <associate|eq 19.5.150|<tuple|19.5|1182>>
     <associate|eq 19.6.150|<tuple|19.8|1183>>
@@ -2207,11 +2681,11 @@
     <associate|eq 19.8.150|<tuple|19.10|1183>>
     <associate|eq 19.9.150|<tuple|19.11|1184>>
     <associate|exp|<tuple|19.22|1185>>
+    <associate|exp (*)^x is continuous|<tuple|19.50|?>>
     <associate|exp 0 is in convergence domain|<tuple|19.4|1175>>
     <associate|exp Abel Dirichlet|<tuple|19.18|1181>>
     <associate|exp Euler's number|<tuple|19.33|?>>
     <associate|exp Mertens theorem|<tuple|19.29|1193>>
-    <associate|exp Napierian logarithm|<tuple|19.37|?>>
     <associate|exp ball extensions|<tuple|19.11|1178>>
     <associate|exp ball of convergence|<tuple|19.7|1176>>
     <associate|exp balls inclucsion|<tuple|19.14|1179>>
@@ -2224,15 +2698,20 @@
     <associate|exp convergion radius|<tuple|19.8|1176>>
     <associate|exp d'Alembert|<tuple|19.20|1183>>
     <associate|exp derivative|<tuple|19.27|1192>>
+    <associate|exp derivative of (*)^x|<tuple|19.48|?>>
     <associate|exp derivative of a power series|<tuple|19.26|1188>>
+    <associate|exp derivative of x^(*)|<tuple|19.49|?>>
     <associate|exp derived power series|<tuple|19.24|1186>>
     <associate|exp derived power service properties|<tuple|19.25|1186>>
     <associate|exp exp series|<tuple|19.21|1183>>
     <associate|exp exp tends to infinity|<tuple|19.35|?>>
     <associate|exp exp(x+y)=exp(x).exp(y)|<tuple|19.31|1194>>
+    <associate|exp generalized power|<tuple|19.39|?>>
+    <associate|exp generalized power properties|<tuple|19.42|?>>
     <associate|exp inequality of Abel|<tuple|19.17|1180>>
     <associate|exp is continuous|<tuple|19.28|1193>>
     <associate|exp logarithm properties|<tuple|19.38|?>>
+    <associate|exp natural logarithm|<tuple|19.37|?>>
     <associate|exp of natural numbers|<tuple|19.34|?>>
     <associate|exp power function|<tuple|19.15|1179>>
     <associate|exp power series|<tuple|19.1|1175>>
@@ -2275,6 +2754,10 @@
       <tuple|<tuple|derived power series>|<pageref|auto-20>>
 
       <tuple|<tuple|<with|mode|<quote|math>|\<mathe\>>>|<pageref|auto-22>>
+
+      <tuple|<tuple|natural logarithm>|<pageref|auto-23>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|log<around*|(|x|)>>>|<pageref|auto-24>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|19<space|2spc>The

@@ -1556,7 +1556,7 @@
     <math|W> with <math|x\<in\>W\<subseteq\>U<big|cap>V> and
     <math|\<forall\>y\<in\>W> <math|f<around*|(|y|)>=g<around*|(|y|)>>. Then
     if <math|f> has a derivative <math|f<rprime|'><rsub|x>> at <math|x> it
-    follows that <math|g> has also a derivative and that
+    follows that <math|g> has also a derivative at <math|z> and that
     <math|f<rprime|'><rsub|x>=g<rprime|'><rsub|x>>.
 
     <\note>
@@ -1564,6 +1564,14 @@
       this reduces to the following. If <math|f> has a derivative
       <math|f<rprime|'><rsub|x>> at <math|x> then <math|f<rsub|\|V>> has a
       derivative at <math|x> and <math|f<rprime|'><rsub|x>=<around*|(|f<rsub|\|V>|)><rprime|'><rsub|x>>.
+      </note>
+
+    <\note>
+      In the special case of <math|U\<subseteq\>V> and <math|f=g<rsub|\|U>>
+      this reduces to the following. If <math|g<rsub|\|U>> has a derivative
+      <math|<around*|(|g<rsub|\|U>|)><rprime|'><rsub|x>> at <math|x> then
+      <math|g> has also a derivative at <math|x> and
+      <math|<around*|(|g<rsub|\|U>|)><rprime|'><rsub|x>=f<rprime|'><rsub|x>>.
     </note>
   </corollary>
 
@@ -21744,211 +21752,211 @@
     <associate|auto-70|<tuple|implict function theorem (2)|?>>
     <associate|auto-8|<tuple|16.1.3|?>>
     <associate|auto-9|<tuple|differentiability|?>>
-    <associate|conjecture 16.245.136|<tuple|16.247|?>>
-    <associate|conjecture 16.246.136|<tuple|16.248|?>>
-    <associate|conjecture 16.247.136|<tuple|16.249|?>>
-    <associate|conjecture 16.248.136|<tuple|16.250|?>>
-    <associate|conjecture 16.252|<tuple|16.252|?>>
+    <associate|conjecture 16.245.136|<tuple|16.248|?>>
+    <associate|conjecture 16.246.136|<tuple|16.249|?>>
+    <associate|conjecture 16.247.136|<tuple|16.250|?>>
+    <associate|conjecture 16.248.136|<tuple|16.251|?>>
+    <associate|conjecture 16.252|<tuple|16.253|?>>
     <associate|continuity limit of composition of linear
-    maps|<tuple|16.228|?>>
+    maps|<tuple|16.229|?>>
     <associate|continuity of a function and convergence of the
     function|<tuple|16.9|?>>
     <associate|convergence of a function to a point|<tuple|16.5|?>>
-    <associate|corollary 16.50.192|<tuple|16.73|?>>
+    <associate|corollary 16.50.192|<tuple|16.74|?>>
     <associate|diff Bx(x,d)|<tuple|16.4|?>>
-    <associate|diff C-infinity condition|<tuple|16.99|?>>
-    <associate|diff C^(n+m)|<tuple|16.109|?>>
-    <associate|diff C^1 and derivates|<tuple|16.101|?>>
-    <associate|diff C^n and C^m|<tuple|16.108|?>>
-    <associate|diff D^f=D^(n-1)D^1f|<tuple|16.111|?>>
+    <associate|diff C-infinity condition|<tuple|16.100|?>>
+    <associate|diff C^(n+m)|<tuple|16.110|?>>
+    <associate|diff C^1 and derivates|<tuple|16.102|?>>
+    <associate|diff C^n and C^m|<tuple|16.109|?>>
+    <associate|diff D^f=D^(n-1)D^1f|<tuple|16.112|?>>
     <associate|diff Frechet differentation implies partial differentiability
-    |<tuple|16.48|?>>
-    <associate|diff GL(X) is a group|<tuple|16.227|?>>
-    <associate|diff H^n properties|<tuple|16.231|?>>
+    |<tuple|16.49|?>>
+    <associate|diff GL(X) is a group|<tuple|16.228|?>>
+    <associate|diff H^n properties|<tuple|16.232|?>>
     <associate|diff I+H has inverse if norm of H is less then
-    1|<tuple|16.235|?>>
-    <associate|diff Jacobian matrix|<tuple|16.64|?>>
-    <associate|diff L(x1:..:xn) (1)|<tuple|16.183|?>>
-    <associate|diff L(x1:..xn)|<tuple|16.74|?>>
-    <associate|diff L(x1:..xn)=L(1:..:1). product|<tuple|16.78|?>>
-    <associate|diff L_n(X;Y)|<tuple|16.70|?>>
-    <associate|diff L_n(x1,..,xn;Y)|<tuple|16.179|?>>
-    <associate|diff Lagrange theorem|<tuple|16.138|?>>
-    <associate|diff Lagrange theorem (1)|<tuple|16.139|?>>
-    <associate|diff Rolle's theorem|<tuple|16.137|?>>
+    1|<tuple|16.236|?>>
+    <associate|diff Jacobian matrix|<tuple|16.65|?>>
+    <associate|diff L(x1:..:xn) (1)|<tuple|16.184|?>>
+    <associate|diff L(x1:..xn)|<tuple|16.75|?>>
+    <associate|diff L(x1:..xn)=L(1:..:1). product|<tuple|16.79|?>>
+    <associate|diff L_n(X;Y)|<tuple|16.71|?>>
+    <associate|diff L_n(x1,..,xn;Y)|<tuple|16.180|?>>
+    <associate|diff Lagrange theorem|<tuple|16.139|?>>
+    <associate|diff Lagrange theorem (1)|<tuple|16.140|?>>
+    <associate|diff Rolle's theorem|<tuple|16.138|?>>
     <associate|diff Ux|<tuple|16.1|?>>
     <associate|diff Ux=-x+U=U-x|<tuple|16.3|?>>
-    <associate|diff balls are convex|<tuple|16.159|?>>
+    <associate|diff balls are convex|<tuple|16.160|?>>
     <associate|diff bilinear mappings are infinite times
-    differentiable|<tuple|16.123|?>>
+    differentiable|<tuple|16.124|?>>
     <associate|diff calculus derivate|<tuple|16.12|?>>
     <associate|diff calculus derivate (1)|<tuple|16.13|?>>
-    <associate|diff chain rule|<tuple|16.36|?>>
-    <associate|diff chain rule and partial differential|<tuple|16.53|?>>
-    <associate|diff chain rule calculus|<tuple|16.37|?>>
-    <associate|diff chain rule higher order|<tuple|16.131|?>>
-    <associate|diff chain rule higher order class|<tuple|16.132|?>>
+    <associate|diff chain rule|<tuple|16.37|?>>
+    <associate|diff chain rule and partial differential|<tuple|16.54|?>>
+    <associate|diff chain rule calculus|<tuple|16.38|?>>
+    <associate|diff chain rule higher order|<tuple|16.132|?>>
+    <associate|diff chain rule higher order class|<tuple|16.133|?>>
     <associate|diff class C^1 is equivalent with continuous partial
-    derivatest|<tuple|16.206|?>>
-    <associate|diff class C^1 on a closed interval|<tuple|16.153|?>>
-    <associate|diff class C^n|<tuple|16.97|?>>
-    <associate|diff composition with a linear mapping|<tuple|16.38|?>>
+    derivatest|<tuple|16.207|?>>
+    <associate|diff class C^1 on a closed interval|<tuple|16.154|?>>
+    <associate|diff class C^n|<tuple|16.98|?>>
+    <associate|diff composition with a linear mapping|<tuple|16.39|?>>
     <associate|diff constant function and partial
-    differentiation|<tuple|16.49|?>>
+    differentiation|<tuple|16.50|?>>
     <associate|diff constant function is differentiable|<tuple|16.26|?>>
     <associate|diff constant function is infinitely times
-    differentiable|<tuple|16.116|?>>
+    differentiable|<tuple|16.117|?>>
     <associate|diff continuous partial differentials implies
-    differentiability|<tuple|16.205|?>>
-    <associate|diff convex concave|<tuple|16.141|?>>
-    <associate|diff convex set|<tuple|16.158|?>>
+    differentiability|<tuple|16.206|?>>
+    <associate|diff convex concave|<tuple|16.142|?>>
+    <associate|diff convex set|<tuple|16.159|?>>
     <associate|diff derivate and frechet differential|<tuple|16.32|?>>
-    <associate|diff derivate and local extremum|<tuple|16.136|?>>
-    <associate|diff derivate and local minimum and maximum|<tuple|16.143|?>>
-    <associate|diff derivate of a product of functions|<tuple|16.67|?>>
-    <associate|diff derivate of inverse function|<tuple|16.68|?>>
-    <associate|diff derivate on [a,b] linearity|<tuple|16.151|?>>
+    <associate|diff derivate and local extremum|<tuple|16.137|?>>
+    <associate|diff derivate and local minimum and maximum|<tuple|16.144|?>>
+    <associate|diff derivate of a product of functions|<tuple|16.68|?>>
+    <associate|diff derivate of inverse function|<tuple|16.69|?>>
+    <associate|diff derivate on [a,b] linearity|<tuple|16.152|?>>
     <associate|diff derivate on [a,b] of a constant
-    function|<tuple|16.150|?>>
-    <associate|diff derivate on a closed interval|<tuple|16.148|?>>
-    <associate|diff derivate operator is linear|<tuple|16.35|?>>
+    function|<tuple|16.151|?>>
+    <associate|diff derivate on a closed interval|<tuple|16.149|?>>
+    <associate|diff derivate operator is linear|<tuple|16.36|?>>
     <associate|diff derivative is local|<tuple|16.33|?>>
     <associate|diff derivative is unique if domain is open|<tuple|16.11|?>>
-    <associate|diff diffeomorphism|<tuple|16.237|?>>
-    <associate|diff diffeomorphism D(f@f^-1)|<tuple|16.242|?>>
-    <associate|diff diffeomorphism composition|<tuple|16.243|?>>
-    <associate|diff diffeomorphism condition|<tuple|16.241|?>>
+    <associate|diff diffeomorphism|<tuple|16.238|?>>
+    <associate|diff diffeomorphism D(f@f^-1)|<tuple|16.243|?>>
+    <associate|diff diffeomorphism composition|<tuple|16.244|?>>
+    <associate|diff diffeomorphism condition|<tuple|16.242|?>>
     <associate|diff differentiability|<tuple|16.18|?>>
     <associate|diff differentiability alternative
     definitions|<tuple|16.29|?>>
     <associate|diff differentiability alternative definitions
     (1)|<tuple|16.30|?>>
-    <associate|diff differentiability and K^n|<tuple|16.57|?>>
+    <associate|diff differentiability and K^n|<tuple|16.58|?>>
     <associate|diff differentiability is a local property|<tuple|16.24|?>>
     <associate|diff differentiability is a local property
     (1)|<tuple|16.25|?>>
-    <associate|diff differentiability on a closed set|<tuple|16.152|?>>
+    <associate|diff differentiability on a closed set|<tuple|16.153|?>>
     <associate|diff differentiability on a set|<tuple|16.20|?>>
     <associate|diff differentiable function is continuous|<tuple|16.31|?>>
     <associate|diff differential is unique|<tuple|16.17|?>>
-    <associate|diff differential of a vector valued function|<tuple|16.62|?>>
-    <associate|diff differential of product of functions|<tuple|16.66|?>>
+    <associate|diff differential of a vector valued function|<tuple|16.63|?>>
+    <associate|diff differential of product of functions|<tuple|16.67|?>>
     <associate|diff e-mapping|<tuple|16.28|?>>
     <associate|diff equivalent norms|<tuple|16.23|?>>
-    <associate|diff evaluation operator|<tuple|16.169|?>>
+    <associate|diff evaluation operator|<tuple|16.170|?>>
     <associate|diff f is of class C^n if D^1f u=is of class
-    C^n-1|<tuple|16.113|?>>
-    <associate|diff f(t)=a.x+y is infinite differentiable|<tuple|16.119|?>>
-    <associate|diff fundamental theorem of calculus (1)|<tuple|16.154|?>>
-    <associate|diff fundamental theorem of calculus (2)|<tuple|16.155|?>>
+    C^n-1|<tuple|16.114|?>>
+    <associate|diff f(t)=a.x+y is infinite differentiable|<tuple|16.120|?>>
+    <associate|diff fundamental theorem of calculus (1)|<tuple|16.155|?>>
+    <associate|diff fundamental theorem of calculus (2)|<tuple|16.156|?>>
     <associate|diff higher order continuous differential and higher order
-    continuous derivate|<tuple|16.216|?>>
-    <associate|diff higher order derivate|<tuple|16.102|?>>
-    <associate|diff higher order derivate and differential|<tuple|16.104|?>>
-    <associate|diff higher order derivate is linear|<tuple|16.115|?>>
-    <associate|diff higher order derivate on a open set|<tuple|16.105|?>>
-    <associate|diff higher order derivate on a open set (1)|<tuple|16.106|?>>
-    <associate|diff higher order derivates|<tuple|16.207|?>>
-    <associate|diff higher order derivates on a open set|<tuple|16.209|?>>
+    continuous derivate|<tuple|16.217|?>>
+    <associate|diff higher order derivate|<tuple|16.103|?>>
+    <associate|diff higher order derivate and differential|<tuple|16.105|?>>
+    <associate|diff higher order derivate is linear|<tuple|16.116|?>>
+    <associate|diff higher order derivate on a open set|<tuple|16.106|?>>
+    <associate|diff higher order derivate on a open set (1)|<tuple|16.107|?>>
+    <associate|diff higher order derivates|<tuple|16.208|?>>
+    <associate|diff higher order derivates on a open set|<tuple|16.210|?>>
     <associate|diff higher order differation implies higher order partial
-    differation|<tuple|16.198|?>>
+    differation|<tuple|16.199|?>>
     <associate|diff higher order differential class of a
-    product|<tuple|16.134|?>>
-    <associate|diff higher order differential is linear|<tuple|16.114|?>>
-    <associate|diff higher order differential of a product|<tuple|16.133|?>>
+    product|<tuple|16.135|?>>
+    <associate|diff higher order differential is linear|<tuple|16.115|?>>
+    <associate|diff higher order differential of a product|<tuple|16.134|?>>
     <associate|diff higher order differentials are symmetric in there
-    arguments|<tuple|16.176|?>>
-    <associate|diff higher order differentiation|<tuple|16.89|?>>
-    <associate|diff higher order differentiation (1)|<tuple|16.95|?>>
+    arguments|<tuple|16.177|?>>
+    <associate|diff higher order differentiation|<tuple|16.90|?>>
+    <associate|diff higher order differentiation (1)|<tuple|16.96|?>>
     <associate|diff higher order differentiation and vector
-    functions|<tuple|16.128|?>>
-    <associate|diff higher order differentiation classes|<tuple|16.129|?>>
+    functions|<tuple|16.129|?>>
+    <associate|diff higher order differentiation classes|<tuple|16.130|?>>
     <associate|diff higher order differentiation implies higher order
-    derivates|<tuple|16.218|?>>
+    derivates|<tuple|16.219|?>>
     <associate|diff higher order differentiation implies higher order partial
-    differation (1)|<tuple|16.199|?>>
-    <associate|diff higher order differentiation is local|<tuple|16.91|?>>
+    differation (1)|<tuple|16.200|?>>
+    <associate|diff higher order differentiation is local|<tuple|16.92|?>>
     <associate|diff higher order differentiation on a open
-    set|<tuple|16.92|?>>
+    set|<tuple|16.93|?>>
     <associate|diff higher order differentiation on a open set
-    (1)|<tuple|16.93|?>>
-    <associate|diff higher order partial differentiation|<tuple|16.193|?>>
+    (1)|<tuple|16.94|?>>
+    <associate|diff higher order partial differentiation|<tuple|16.194|?>>
     <associate|diff higher order partial differentiation is
-    symmetric|<tuple|16.200|?>>
+    symmetric|<tuple|16.201|?>>
     <associate|diff higher order partial differentiation on a open
-    set|<tuple|16.195|?>>
+    set|<tuple|16.196|?>>
     <associate|diff homeomorphism is a diffeomorphism of class
-    C^0|<tuple|16.238|?>>
+    C^0|<tuple|16.239|?>>
     <associate|diff identity function is differentiable|<tuple|16.22|?>>
     <associate|diff identity function is infinite times
-    differentiable|<tuple|16.118|?>>
-    <associate|diff implicit function theorem|<tuple|16.256|?>>
-    <associate|diff implicit function theorem (1)|<tuple|16.257|?>>
-    <associate|diff increasing decreasing function|<tuple|16.140|?>>
-    <associate|diff inifint=ite differentiable|<tuple|16.94|?>>
-    <associate|diff inverse function theorem|<tuple|16.245|?>>
-    <associate|diff inverse function theorem and Jacobian|<tuple|16.253|?>>
-    <associate|diff inverse mapping on GL(X)|<tuple|16.236|?>>
-    <associate|diff left and right derivate|<tuple|16.145|?>>
-    <associate|diff left and right derivate and derivate|<tuple|16.147|?>>
-    <associate|diff left/right derivate linearity|<tuple|16.146|?>>
-    <associate|diff line segment [0,1]|<tuple|16.162|?>>
+    differentiable|<tuple|16.119|?>>
+    <associate|diff implicit function theorem|<tuple|16.257|?>>
+    <associate|diff implicit function theorem (1)|<tuple|16.258|?>>
+    <associate|diff increasing decreasing function|<tuple|16.141|?>>
+    <associate|diff inifint=ite differentiable|<tuple|16.95|?>>
+    <associate|diff inverse function theorem|<tuple|16.246|?>>
+    <associate|diff inverse function theorem and Jacobian|<tuple|16.254|?>>
+    <associate|diff inverse mapping on GL(X)|<tuple|16.237|?>>
+    <associate|diff left and right derivate|<tuple|16.146|?>>
+    <associate|diff left and right derivate and derivate|<tuple|16.148|?>>
+    <associate|diff left/right derivate linearity|<tuple|16.147|?>>
+    <associate|diff line segment [0,1]|<tuple|16.163|?>>
     <associate|diff linear isomorphism between Banach spaces are
-    diffeomorphisms|<tuple|16.239|?>>
+    diffeomorphisms|<tuple|16.240|?>>
     <associate|diff linear mapping is infinite times
-    differentiable|<tuple|16.117|?>>
+    differentiable|<tuple|16.118|?>>
     <associate|diff linear mappings are differentiable|<tuple|16.27|?>>
-    <associate|diff linear to multilinear|<tuple|16.86|?>>
-    <associate|diff linear to multilinear (1)|<tuple|16.191|?>>
-    <associate|diff linesegement|<tuple|16.161|?>>
-    <associate|diff local diffeomorphism|<tuple|16.244|?>>
-    <associate|diff mean value theorem (0)|<tuple|16.160|?>>
-    <associate|diff mean value theorem (1)|<tuple|16.157|?>>
-    <associate|diff mean value theorem (2)|<tuple|16.160|?>>
-    <associate|diff mean value theorem (3)|<tuple|16.164|?>>
-    <associate|diff mean value theorem (3.1)|<tuple|16.165|?>>
-    <associate|diff mean value theorem (4)|<tuple|16.166|?>>
-    <associate|diff minimum maximum|<tuple|16.135|?>>
+    <associate|diff linear to multilinear|<tuple|16.87|?>>
+    <associate|diff linear to multilinear (1)|<tuple|16.192|?>>
+    <associate|diff linesegement|<tuple|16.162|?>>
+    <associate|diff local diffeomorphism|<tuple|16.245|?>>
+    <associate|diff mean value theorem (0)|<tuple|16.161|?>>
+    <associate|diff mean value theorem (1)|<tuple|16.158|?>>
+    <associate|diff mean value theorem (2)|<tuple|16.161|?>>
+    <associate|diff mean value theorem (3)|<tuple|16.165|?>>
+    <associate|diff mean value theorem (3.1)|<tuple|16.166|?>>
+    <associate|diff mean value theorem (4)|<tuple|16.167|?>>
+    <associate|diff minimum maximum|<tuple|16.136|?>>
     <associate|diff multiparameter function to one parameter
-    function|<tuple|16.42|?>>
-    <associate|diff n-times and m-times differentiability|<tuple|16.107|?>>
+    function|<tuple|16.43|?>>
+    <associate|diff n-times and m-times differentiability|<tuple|16.108|?>>
     <associate|diff partial derivate and partial
-    differential|<tuple|16.55|?>>
+    differential|<tuple|16.56|?>>
     <associate|diff partial derivate and partial differential of higher
-    order|<tuple|16.210|?>>
+    order|<tuple|16.211|?>>
     <associate|diff partial derivate and partial differential of higher order
-    (1)|<tuple|16.214|?>>
+    (1)|<tuple|16.215|?>>
     <associate|diff partial derivate and partial differential of higher order
-    (2)|<tuple|16.215|?>>
-    <associate|diff partial derivate definition|<tuple|16.54|?>>
-    <associate|diff partial derivation is local|<tuple|16.56|?>>
+    (2)|<tuple|16.216|?>>
+    <associate|diff partial derivate definition|<tuple|16.55|?>>
+    <associate|diff partial derivation is local|<tuple|16.57|?>>
     <associate|diff partial differentiability does not mean
-    differentiaility|<tuple|16.51|?>>
-    <associate|diff partial differential definition|<tuple|16.43|?>>
-    <associate|diff partial differential definition (1)|<tuple|16.45|?>>
-    <associate|diff partial differential properties|<tuple|16.52|?>>
-    <associate|diff partial differentiation is local|<tuple|16.46|?>>
-    <associate|diff partial differentiation is local (1)|<tuple|16.47|?>>
-    <associate|diff power|<tuple|16.69|?>>
-    <associate|diff power of composition|<tuple|16.230|?>>
+    differentiaility|<tuple|16.52|?>>
+    <associate|diff partial differential definition|<tuple|16.44|?>>
+    <associate|diff partial differential definition (1)|<tuple|16.46|?>>
+    <associate|diff partial differential properties|<tuple|16.53|?>>
+    <associate|diff partial differentiation is local|<tuple|16.47|?>>
+    <associate|diff partial differentiation is local (1)|<tuple|16.48|?>>
+    <associate|diff power|<tuple|16.70|?>>
+    <associate|diff power of composition|<tuple|16.231|?>>
     <associate|diff projection functon is infinite times
-    differentiable|<tuple|16.122|?>>
+    differentiable|<tuple|16.123|?>>
     <associate|diff restriction of a diffeomorphism is a
-    diffeomorphism|<tuple|16.240|?>>
-    <associate|diff restriction of a function of class C^n|<tuple|16.98|?>>
+    diffeomorphism|<tuple|16.241|?>>
+    <associate|diff restriction of a function of class C^n|<tuple|16.99|?>>
     <associate|diff scalar product function has a derivate|<tuple|16.15|?>>
-    <associate|diff second derivate convex concave|<tuple|16.142|?>>
-    <associate|diff space of toplinear isomorphism|<tuple|16.226|?>>
+    <associate|diff second derivate convex concave|<tuple|16.143|?>>
+    <associate|diff space of toplinear isomorphism|<tuple|16.227|?>>
     <associate|diff toplinear isomorphism between Banach
-    spaces|<tuple|16.225|?>>
-    <associate|diff translation is infinite differentiable|<tuple|16.121|?>>
-    <associate|diff unprojection|<tuple|16.39|?>>
+    spaces|<tuple|16.226|?>>
+    <associate|diff translation is infinite differentiable|<tuple|16.122|?>>
+    <associate|diff unprojection|<tuple|16.40|?>>
     <associate|diff unprojection is infinite times
-    differentiable|<tuple|16.120|?>>
-    <associate|diff vector functions|<tuple|16.58|?>>
-    <associate|diff vector functions (1)|<tuple|16.61|?>>
-    <associate|diff vector functions (2)|<tuple|16.63|?>>
-    <associate|diff vector functions and linearity|<tuple|16.60|?>>
+    differentiable|<tuple|16.121|?>>
+    <associate|diff vector functions|<tuple|16.59|?>>
+    <associate|diff vector functions (1)|<tuple|16.62|?>>
+    <associate|diff vector functions (2)|<tuple|16.64|?>>
+    <associate|diff vector functions and linearity|<tuple|16.61|?>>
     <associate|eq 14.411.143|<tuple|16.409|?>>
     <associate|eq 16.1.177|<tuple|16.2|?>>
     <associate|eq 16.1.194|<tuple|16.1|?>>
@@ -22034,7 +22042,7 @@
     <associate|eq 16.168.200|<tuple|16.177|?>>
     <associate|eq 16.17.178|<tuple|16.20|?>>
     <associate|eq 16.17.180|<tuple|16.32|?>>
-    <associate|eq 16.176.211|<tuple|16.184|?>>
+    <associate|eq 16.176.211|<tuple|16.185|?>>
     <associate|eq 16.179.200|<tuple|16.188|?>>
     <associate|eq 16.18.178|<tuple|16.23|?>>
     <associate|eq 16.18.179|<tuple|16.21|?>>
@@ -22390,65 +22398,65 @@
     <associate|eq 16.98.194|<tuple|16.118|?>>
     <associate|eq 16.99.194|<tuple|16.119|?>>
     <associate|eq 19.96.199|<tuple|16.107|?>>
-    <associate|inverse function and derivate|<tuple|16.254|?>>
-    <associate|lemma 16.101.194|<tuple|16.130|?>>
-    <associate|lemma 16.104.194|<tuple|16.172|?>>
-    <associate|lemma 16.105.194|<tuple|16.173|?>>
-    <associate|lemma 16.135.200|<tuple|16.156|?>>
-    <associate|lemma 16.144.201|<tuple|16.163|?>>
-    <associate|lemma 16.155.203|<tuple|16.167|?>>
-    <associate|lemma 16.157.205|<tuple|16.168|?>>
-    <associate|lemma 16.159.206|<tuple|16.170|?>>
-    <associate|lemma 16.160.206|<tuple|16.171|?>>
-    <associate|lemma 16.166.210|<tuple|16.174|?>>
-    <associate|lemma 16.167.210|<tuple|16.175|?>>
-    <associate|lemma 16.173.211|<tuple|16.181|?>>
-    <associate|lemma 16.174.211|<tuple|16.182|?>>
-    <associate|lemma 16.177.211|<tuple|16.185|?>>
-    <associate|lemma 16.178.210|<tuple|16.186|?>>
-    <associate|lemma 16.179.210|<tuple|16.187|?>>
-    <associate|lemma 16.180.210|<tuple|16.188|?>>
-    <associate|lemma 16.181.210|<tuple|16.189|?>>
-    <associate|lemma 16.182.210|<tuple|16.190|?>>
-    <associate|lemma 16.192.122|<tuple|16.196|?>>
-    <associate|lemma 16.195.124|<tuple|16.197|?>>
+    <associate|inverse function and derivate|<tuple|16.255|?>>
+    <associate|lemma 16.101.194|<tuple|16.131|?>>
+    <associate|lemma 16.104.194|<tuple|16.173|?>>
+    <associate|lemma 16.105.194|<tuple|16.174|?>>
+    <associate|lemma 16.135.200|<tuple|16.157|?>>
+    <associate|lemma 16.144.201|<tuple|16.164|?>>
+    <associate|lemma 16.155.203|<tuple|16.168|?>>
+    <associate|lemma 16.157.205|<tuple|16.169|?>>
+    <associate|lemma 16.159.206|<tuple|16.171|?>>
+    <associate|lemma 16.160.206|<tuple|16.172|?>>
+    <associate|lemma 16.166.210|<tuple|16.175|?>>
+    <associate|lemma 16.167.210|<tuple|16.176|?>>
+    <associate|lemma 16.173.211|<tuple|16.182|?>>
+    <associate|lemma 16.174.211|<tuple|16.183|?>>
+    <associate|lemma 16.177.211|<tuple|16.186|?>>
+    <associate|lemma 16.178.210|<tuple|16.187|?>>
+    <associate|lemma 16.179.210|<tuple|16.188|?>>
+    <associate|lemma 16.180.210|<tuple|16.189|?>>
+    <associate|lemma 16.181.210|<tuple|16.190|?>>
+    <associate|lemma 16.182.210|<tuple|16.191|?>>
+    <associate|lemma 16.192.122|<tuple|16.197|?>>
+    <associate|lemma 16.195.124|<tuple|16.198|?>>
     <associate|lemma 16.2.177|<tuple|16.7|?>>
-    <associate|lemma 16.200.126|<tuple|16.203|?>>
-    <associate|lemma 16.202.127|<tuple|16.204|?>>
-    <associate|lemma 16.211.127|<tuple|16.213|?>>
-    <associate|lemma 16.216.144|<tuple|16.217|?>>
-    <associate|lemma 16.228.127|<tuple|16.232|?>>
-    <associate|lemma 16.229.127|<tuple|16.233|?>>
-    <associate|lemma 16.23.181|<tuple|16.65|?>>
-    <associate|lemma 16.24.178|<tuple|16.41|?>>
-    <associate|lemma 16.254.143|<tuple|16.255|?>>
+    <associate|lemma 16.200.126|<tuple|16.204|?>>
+    <associate|lemma 16.202.127|<tuple|16.205|?>>
+    <associate|lemma 16.211.127|<tuple|16.214|?>>
+    <associate|lemma 16.216.144|<tuple|16.218|?>>
+    <associate|lemma 16.228.127|<tuple|16.233|?>>
+    <associate|lemma 16.229.127|<tuple|16.234|?>>
+    <associate|lemma 16.23.181|<tuple|16.66|?>>
+    <associate|lemma 16.24.178|<tuple|16.42|?>>
+    <associate|lemma 16.254.143|<tuple|16.256|?>>
     <associate|lemma 16.5.178|<tuple|16.10|?>>
-    <associate|lemma 16.51.186|<tuple|16.77|?>>
-    <associate|lemma 16.53.186|<tuple|16.79|?>>
-    <associate|lemma 16.54.187|<tuple|16.80|?>>
-    <associate|lemma 16.55.187|<tuple|16.81|?>>
-    <associate|lemma 16.56.187|<tuple|16.82|?>>
-    <associate|lemma 16.57.187|<tuple|16.83|?>>
-    <associate|lemma 16.58.188|<tuple|16.84|?>>
-    <associate|lemma 16.59.188|<tuple|16.85|?>>
-    <associate|lemma 16.61.207|<tuple|16.72|?>>
-    <associate|lemma 16.72.189|<tuple|16.103|?>>
-    <associate|lemma 16.83.197|<tuple|16.100|?>>
-    <associate|lemma 16.93.193|<tuple|16.124|?>>
-    <associate|lemma 16.96.193|<tuple|16.125|?>>
-    <associate|lemma 16.97.193|<tuple|16.126|?>>
-    <associate|lemma 16.98.194|<tuple|16.127|?>>
+    <associate|lemma 16.51.186|<tuple|16.78|?>>
+    <associate|lemma 16.53.186|<tuple|16.80|?>>
+    <associate|lemma 16.54.187|<tuple|16.81|?>>
+    <associate|lemma 16.55.187|<tuple|16.82|?>>
+    <associate|lemma 16.56.187|<tuple|16.83|?>>
+    <associate|lemma 16.57.187|<tuple|16.84|?>>
+    <associate|lemma 16.58.188|<tuple|16.85|?>>
+    <associate|lemma 16.59.188|<tuple|16.86|?>>
+    <associate|lemma 16.61.207|<tuple|16.73|?>>
+    <associate|lemma 16.72.189|<tuple|16.104|?>>
+    <associate|lemma 16.83.197|<tuple|16.101|?>>
+    <associate|lemma 16.93.193|<tuple|16.125|?>>
+    <associate|lemma 16.96.193|<tuple|16.126|?>>
+    <associate|lemma 16.97.193|<tuple|16.127|?>>
+    <associate|lemma 16.98.194|<tuple|16.128|?>>
     <associate|limit of a function|<tuple|16.8|?>>
-    <associate|note 16.210.127|<tuple|16.212|?>>
-    <associate|note 16.65.191|<tuple|16.90|?>>
-    <associate|proposition 16.244.134|<tuple|16.246|?>>
-    <associate|proposition 16.249.138|<tuple|16.251|?>>
-    <associate|toplinear isomorphism|<tuple|16.222|?>>
+    <associate|note 16.210.127|<tuple|16.213|?>>
+    <associate|note 16.65.191|<tuple|16.91|?>>
+    <associate|proposition 16.244.134|<tuple|16.247|?>>
+    <associate|proposition 16.249.138|<tuple|16.252|?>>
+    <associate|toplinear isomorphism|<tuple|16.223|?>>
     <associate|topology normed space is a topological vector
-    space|<tuple|16.221|?>>
+    space|<tuple|16.222|?>>
     <associate|topology toplinear isomorphism in a normed
-    space|<tuple|16.224|?>>
-    <associate|topology topological vector space|<tuple|16.220|?>>
+    space|<tuple|16.225|?>>
+    <associate|topology topological vector space|<tuple|16.221|?>>
   </collection>
 </references>
 
