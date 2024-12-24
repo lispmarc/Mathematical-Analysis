@@ -2173,6 +2173,8 @@
     </enumerate>
   </proof>
 
+  <subsection|Generalized power >
+
   We are now ready to extend the n-th power of a real number where <math|n>
   is a natural number to the cases where <math|n> is not a natural number.\ 
 
@@ -3016,12 +3018,280 @@
           b=a<rsup|p-1>
         </equation*>
 
-        <item*|<math|b\<Rightarrow\>a>>
+        <item*|<math|b\<Rightarrow\>a>>If <math|b=a<rsup|p-1>> then
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<frac|a<rsup|p>|p>+<frac|b<rsup|q>|q>>|<cell|=>|<cell|<frac|a<rsup|p>|p>+<frac|<around*|(|a<rsup|p-1>|)><rsup|q>|q>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 19.38.152>]>>>|<cell|<frac|a<rsup|p>|p>+<frac|<around*|(|a<rsup|<frac|p|q>>|)><rsup|q>|q>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|exp generalized power
+          properties>]>>>|<cell|<frac|a<rsup|p>|p>+<frac|a<rsup|<frac|p|q>\<cdot\>q>|q>>>|<row|<cell|>|<cell|=>|<cell|<frac|a<rsup|p>|p>+<frac|a<rsup|p>|q>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<frac|1|p>+<frac|1|q>|)>\<cdot\>a<rsup|p>>>|<row|<cell|>|<cell|=>|<cell|a<rsup|p>>>|<row|<cell|>|<cell|=>|<cell|a<rsup|<around*|(|p-1|)>+1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|exp generalized power
+          properties>]>>>|<cell|a<rsup|<around*|(|p-1|)>>\<cdot\>a<rsup|1>>>|<row|<cell|>|<cell|=>|<cell|b\<cdot\>a<rsup|1>>>|<row|<cell|>|<cell|=>|<cell|a\<cdot\>b>>>>
+        </eqnarray*>
+
+        <item*|<math|b\<Rightarrow\>c>>If <math|b=a<rsup|p-1>> then we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|b<rsup|q>>|<cell|=>|<cell|<around*|(|a<rsup|p-1>|)><rsup|q>>>|<row|<cell|>|<cell|<math|\<equallim\><rsub|<text|[eq:
+          <reference|eq 19.38.152>]>>>>|<cell|<around*|(|a<rsup|<frac|p|q>>|)><rsup|q>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|exp generalized power
+          properties>]>>>|<cell|a<rsup|<frac|p|q>*\<cdot\>q>>>|<row|<cell|>|<cell|=>|<cell|a<rsup|p>>>>>
+        </eqnarray*>
+
+        <item*|<math|c\<Rightarrow\>b>>If <math|a<rsup|p>=b<rsup|q>> then
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|b>|<cell|=>|<cell|b<rsup|q\<cdot\><frac|1|q>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|exp generalized power
+          properties>]>>>|<cell|<around*|(|b<rsup|q>|)><rsup|<frac|1|q>>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|a<rsup|p>|)><rsup|<frac|1|q>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|exp generalized power
+          properties>]>>>|<cell|a<rsup|<frac|p|q>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 19.38.152>]>>>|<cell|a<rsup|p-1>>>>>
+        </eqnarray*>
       </description>
+    </enumerate>
+  </proof>
+
+  <subsection|Trigoniometric functions>
+
+  For the generalized powers and the natural logarithm we studied the
+  behavior of the exponential function in the real domain. For goniometric
+  function we consider the behavior of the exponential function in the
+  complex domain.
+
+  <\theorem>
+    <label|exp complement and absolute norm>\ 
+
+    <\enumerate>
+      <item><math|\<forall\>z\<in\>\<bbb-C\>> we have that
+      <math|<wide|exp<around*|(|z|)>|\<wide-bar\>>=exp<around*|(|z|)>>
+
+      <item><math|\<forall\>z\<in\>\<bbb-C\>> we have that
+      <math|<around*|\||exp<around*|(|z|)>|\|>=exp<around*|(|Re<around*|(|z|)>|)>>
+
+      <item><math|\<forall\>x+i\<cdot\>y\<in\>\<bbb-C\>> we have that
+      <math|<around*|\||exp<around*|(|z|)>|\|>=exp<around*|(|x|)>> and
+      <math|<around*|\||exp<around*|(|i\<cdot\>y|)>|\|>=exp<around*|(|0|)>=1>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>We have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|>|<cell|>|<cell|>>>>
+        <tformat|<table|<row|<cell|exp<around*|(|<wide|z|\<wide-bar\>>|)>>|<cell|=>|<cell|<big|sum><rsub|i=0><rsup|n><frac|<wide|z|\<wide-bar\>><rsup|i>|i!>>>|<row|<cell|>|<cell|=>|<cell|<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=0><rsup|n><frac|<wide|z|\<wide-bar\>><rsup|i>|i!>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|complex conjugate properties>]>>>|<cell|<below|lim|n\<rightarrow\>\<infty\>><wide|<big|sum><rsub|i=0><rsup|n><frac|z<rsup|i>|i!>|\<wide-bar\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|limit complex conjugate>]>>>|<cell|<wide|lim<rsub|n\<rightarrow\>\<infty\>><big|sum><rsub|i=n><rsup|\<infty\>><frac|z<rsup|i>|i!>|\<wide-bar\>>>>|<row|<cell|>|<cell|=>|<cell|<wide|exp<around*|(|z|)>|\<wide-bar\>>>>>>
       </eqnarray*>
+
+      <item>We have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\||exp<around*|(|z|)>|\|><rsup|2>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|complex norm properties>]>>>|<cell|exp<around*|(|z|)>\<cdot\><wide|exp<around*|(|z|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|1|)>>>|<cell|exp<around*|(|z|)>\<cdot\>exp<around*|(|<wide|z|\<wide-bar\>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|exp exp(x+y)=exp(x).exp(y)>]>>>|<cell|exp<around*|(|z+<wide|z|\<wide-bar\>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|complex conjugate properties>]>>>|<cell|exp<around*|(|2\<cdot\>Re<around*|(|z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|exp<around*|(|Re<around*|(|z|)>+Re<around*|(|z|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|exp exp(x+y)=exp(x).exp(y)>]>>>|<cell|exp<around*|(|Re<around*|(|z|)>|)>\<cdot\>exp<around*|(|Re<around*|(|z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|exp<around*|(|Re<around*|(|z|)>|)><rsup|2>>>>>
+      </eqnarray*>
+
+      Now as <math|<around*|\||exp<around*|(|z|)>|\|>\<in\>\<bbb-R\><rsup|+>>
+      and <math|exp<around*|(|Re<around*|(|z|)>|)>\<in\>\<bbb-R\><rsup|+>>[see
+      theorem: <reference|exp properties>] it follows from [theorem:
+      <reference|complex square root>] that
+      <math|exp<around*|(|z|)>=exp<around*|(|Re<around*|(|z|)>|)>>.
+
+      <item>If <math|z=x+i\<cdot\>y> then
+      <math|<around*|\||exp<around*|(|z|)>|\|>\<equallim\><rsub|<around*|(|2|)>>exp<around*|(|Re<around*|(|z|)>|)>=exp<around*|(|x|)>>,
+      further
+
+      <\equation*>
+        <around*|\||exp<around*|(|i\<cdot\>y|)>|\|>\<equallim\><rsub|<around*|(|2|)>>exp<around*|(|Re<around*|(|i\<cdot\>y|)>|)>=exp<around*|(|0|)>\<equallim\><rsub|<text|[theorem:
+        <reference|exp properties>]>>1
+      </equation*>
+    </enumerate>
+  </proof>
+
+  We define now the trigoniometric functions in terms of the exponential
+  functions=.
+
+  <\definition>
+    <label|exp triginiometric function><index|trigoniometric
+    functions><index|sinus><index|cosinus><index|<math|sin<around*|(|z|)>>><index|<math|cos<around*|(|z|)>>><dueto|Trigoniometric
+    functions>
+
+    <\enumerate>
+      <item><math|cos:\<bbb-C\>\<rightarrow\>\<bbb-C\><text| is defined by
+      >cos<around*|(|z|)>=<frac|exp<around*|(|i\<cdot\>z|)>+exp<around*|(|-i\<cdot\>z|)>|2>\<equallim\><rsub|<text|[theorem:
+      <reference|exp generalized power properties>(6)]>><frac|\<mathe\><rsup|i\<cdot\>z>+\<mathe\><rsup|-i\<cdot\>z>|2>>
+
+      <item><math|sin:\<bbb-C\>\<rightarrow\>\<bbb-C\>> is defined by
+      <math|sin<around*|(|z|)>=<frac|exp<around*|(|i\<cdot\>z|)>-exp<around*|(|-i\<cdot\>z|)>|2\<cdot\>i>\<equallim\><rsub|<text|[theorem:
+      <reference|exp generalized power properties>(6)]>><frac|\<mathe\><rsup|i\<cdot\>z>-\<mathe\><rsup|-i\<cdot\>z>|2\<cdot\>i>>
+    </enumerate>
+  </definition>
+
+  <\theorem>
+    <label|exp trigoniometric properties>We have the following properties for
+    the trigoniometric function.
+
+    <\enumerate>
+      <item><math|\<forall\>z\<in\>\<bbb-C\>> we have
+      <math|cos<around*|(|z|)>+i\<cdot\>sin<around*|(|z|)>=exp<around*|(|i\<cdot\>z|)>\<equallim\><rsub|<text|[theorem:
+      <reference|exp generalized power properties>(6)]>>\<mathe\><rsup|i\<cdot\>z>>.
+
+      <item><math|cos:\<bbb-C\>\<rightarrow\>\<bbb-C\>> and
+      <math|sin:\<bbb-C\>\<rightarrow\>\<bbb-C\>> are continuos.
+
+      <item><math|cos<around*|(|0|)>=1>.
+
+      <item><math|sin<around*|(|0|)>=1>.
+
+      <item><math|\<forall\>z\<in\>\<bbb-C\>> we have:
+
+      <\enumerate>
+        <item><math|cos<around*|(|-z|)>=cos<around*|(|z|)>>.
+
+        <item><math|sim<around*|(|-z|)>=-sin<around*|(|z|)>>.
+      </enumerate>
+
+      <item><math|\<forall\>z\<in\>\<bbb-C\>> we have
+      <math|cos<rsup|2>*<around*|(|z|)>+sim<rsup|2><around*|(|z|)>=1>
+
+      <item><math|\<forall\>x,y\<in\>\<bbb-C\>> we have:\ 
+
+      <\enumerate>
+        <item><math|cos<around*|(|x+y|)>=cos<around*|(|x|)>\<cdot\>cos<around*|(|y|)>-sin<around*|(|x|)>\<cdot\>sin<around*|(|y|)>>.
+
+        <item><math|sin<around*|(|x+y|)>=sin<around*|(|x|)>\<cdot\>cos<around*|(|y|)>+cos<around*|(|x|)>\<cdot\>sin<around*|(|y|)>>.
+      </enumerate>
+
+      <item><math|\<forall\>x\<in\>\<bbb-R\>> we have:
+
+      <\enumerate>
+        <item><math|cos<around*|(|x|)>\<in\>\<bbb-R\>>.
+
+        <item><math|sin<around*|(|x|)>\<in\>\<bbb-R\>>.
+      </enumerate>
+
+      <item><math|\<forall\>x\<in\>\<bbb-R\>> we have:\ 
+
+      <\enumerate>
+        <item><math|Re<around*|(|\<mathe\><rsup|i\<cdot\>x>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|exp generalized power properties>(6)]>>Re<around*|(|exp<around*|(|i\<cdot\>x|)>|)>=cos<around*|(|x|)>>.
+
+        <item><math|Img<around*|(|\<mathe\><rsup|i\<cdot\>x>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|exp generalized power properties>(6)]>>Img<around*|(|exp<around*|(|i\<cdot\>x|)>|)>=sim<around*|(|x|)>>.
+      </enumerate>
+
+      <item><math|\<forall\>x\<in\>\<bbb-R\>> we have
+      <math|<around*|\||\<mathe\><rsup|i\<cdot\>x>|\|>\<equallim\><rsub|<text|[theorem:
+      <reference|exp generalized power properties>(6)]>><around*|\||exp<around*|(|i\<cdot\>x|)>|\|>=1>.
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|z\<in\>\<bbb-C\>> then
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|cos<around*|(|z|)>+i\<cdot\>sin<around*|(|z|)>>|<cell|=>|<cell|<frac|exp<around*|(|i\<cdot\>z|)>+exp<around*|(|-i\<cdot\>z|)>|2>+i\<cdot\><frac|exp<around*|(|i\<cdot\>z|)>-exp<around*|(|-i\<cdot\>z|)>|2\<cdot\>i>>>|<row|<cell|>|<cell|=>|<cell|<frac|exp<around*|(|i\<cdot\>z|)>+exp<around*|(|-i\<cdot\>z|)>+exp<around*|(|i\<cdot\>z|)>-exp<around*|(|-i\<cdot\>z|)>|2>>>|<row|<cell|>|<cell|=>|<cell|exp<around*|(|i\<cdot\>z|)>>>>>
+      </eqnarray*>
+
+      <item>Note that <math|h:\<bbb-C\>\<rightarrow\>\<bbb-C\>> defined by
+      <math|f=i\<cdot\>Id<rsub|\<bbb-C\>>> and
+      <math|g:\<bbb-C\>\<rightarrow\>\<bbb-C\>> defined by
+      <math|g=-i\<cdot\>Id<rsub|\<bbb-C\>>> are continuous [see example:
+      <reference|continuity identity function>] and theorem:
+      <reference|continuity of sum of continuous functions>]. As <math|exp>
+      is continuous [see theorem: <reference|exp is continuous>] it follows
+      from [theorem: <reference|continuity composition>] that
+      <math|exp\<circ\>f> and <math|exp\<circ\>g> are continuous. Hence using
+      [theorem: <reference|continuity of sum of continuous functions>]
+      <math|<frac|1|2>\<cdot\><around*|(|exp\<circ\>f+exp\<circ\>g|)>> and
+      <math|<frac|1|2\<cdot\>i>\<cdot\><around*|(|exp\<circ\>f-exp\<circ\>g|)>>
+      are continuous. Let <math|z\<in\>\<bbb-C\>> then\ 
+
+      <\equation*>
+        <around*|(|<frac|1|2>\<cdot\><around*|(|exp\<circ\>f+exp\<circ\>g|)>|)><around*|(|z|)>=<frac|exp<around*|(|f<around*|(|z|)>|)>+exp<around*|(|g<around*|(|z|)>|)>|2>=<frac|exp<around*|(|i\<cdot\>z|)>+exp<around*|(|-i\<cdot\>z|)>|2>=cos<around*|(|z|)>
+      </equation*>
+
+      and\ 
+
+      <\equation*>
+        <around*|(|<frac|1|2\<cdot\>i>\<cdot\><around*|(|exp\<circ\>f-exp\<circ\>g|)>|)><around*|(|z|)>=<frac|exp<around*|(|f<around*|(|z|)>|)>-exp<around*|(|g<around*|(|z|)>|)>|2\<cdot\>i>=<frac|exp<around*|(|i\<cdot\>z|)>-exp<around*|(|-i\<cdot\>z|)>|2\<cdot\>i>=sin<around*|(|z|)>
+      </equation*>
+
+      proving that <math|<frac|1|2>\<cdot\><around*|(|exp\<circ\>f+exp\<circ\>g|)>=cos>
+      and <math|<frac|1|2\<cdot\>i>\<cdot\><around*|(|exp\<circ\>f-exp\<circ\>g|)>=sin>.
+      Hence <math|cos> and <math|sin> are continuous.
+
+      <item><math|cos<around*|(|0|)>=<frac|exp<around*|(|i\<cdot\>0|)>+exp<around*|(|i\<cdot\>0|)>|2>=<frac|exp<around*|(|0|)>+ecp<around*|(|0|)>|2>\<equallim\><rsub|<text|[theorem:
+      <reference|exp properties>]>><frac|1+1|2>=1>.
+
+      <item><math|sin<around*|(|0|)>=<frac|exp<around*|(|i\<cdot\>0|)>-exp<around*|(|i\<cdot\>0|)>|2\<cdot\>i>=<frac|exp<around*|(|0|)>-exp<around*|(|0|)>|2\<cdot\>i>=0>.
+
+      <item>Let <math|z\<in\>\<bbb-C\>> then we have:
+
+      <\enumerate>
+        <item><math|cos<around*|(|z|)>=<frac|exp<around*|(|-i\<cdot\>z|)>+exp<around*|(|-<around*|(|-i\<cdot\>z|)>|)>|2>=<frac|exp<around*|(|i\<cdot\>z|)>+exp<around*|(|-i\<cdot\>z|)>|2>=cos<around*|(|z|)>>.
+
+        <item><math|sin<around*|(|z|)>=<frac|exp<around*|(|-i\<cdot\>z|)>-exp<around*|(|-<around*|(|-i\<cdot\>z|)>|)>|2\<cdot\>i>=<frac|exp<around*|(|-i\<cdot\>z|)>-exp<around*|(|i\<cdot\>z|)>|2\<cdot\>i>=-<frac|exp<around*|(|i\<cdot\>z|)>-exp<around*|(|-i\<cdot\>z|)>|2\<cdot\>i>=-sin<around*|(|z|)>>
+      </enumerate>
+
+      <item> Let <math|z\<in\>\<bbb-C\>> then
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|cos<rsup|2><around*|(|z|)>+sin<rsup|2><around*|(|z|)>>|<cell|=>|<cell|<frac|<around*|(|exp<around*|(|i\<cdot\>z|)>+exp<around*|(|-i\<cdot\>z|)>|)><rsup|2>|4>+<frac|<around*|(|exp<around*|(|i\<cdot\>z|)>-exp<around*|(|-i\<cdot\>z|)>|)><rsup|2>|-4>>>|<row|<cell|>|<cell|=>|<cell|<frac|1|4>\<cdot\><around*|(|<around*|(|exp<around*|(|i\<cdot\>z|)>+exp<around*|(|-i\<cdot\>z|)>|)><rsup|2>-<around*|(|exp<around*|(|i\<cdot\>z|)>-exp<around*|(|-i\<cdot\>z|)>|)><rsup|2>|)>>>|<row|<cell|>|<cell|=>|<cell|<frac|1|4>\<cdot\><around*|(|<around*|(|exp<around*|(|i\<cdot\>z|)>|)><rsup|2>+<around*|(|exp<around*|(|-i\<cdot\>z|)>|)><rsup|2>+2\<cdot\>exp<around*|(|i\<cdot\>z|)>\<cdot\>exp<around*|(|-i\<cdot\>z|)>-<around*|(|exp<around*|(|i\<cdot\>z|)>|)><rsup|2>-<around*|(|exp<around*|(|-i\<cdot\>z|)>|)><rsup|2>+2\<cdot\>exp<around*|(|i\<cdot\>z|)>\<cdot\>exp<around*|(|-i\<cdot\>z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<frac|1|4>\<cdot\>4\<cdot\>exp<around*|(|i\<cdot\>z|)>\<cdot\>exp<around*|(|-i\<cdot\>z|)>>>|<row|<cell|>|<cell|=>|<cell|exp(i\<cdot\>z)\<cdot\>exp(-i\<cdot\>z)>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|exp exp(x+y)=exp(x).exp(y)>]>>>|<cell|exp<around*|(|i\<cdot\>z-i\<cdot\>z|)>>>|<row|<cell|>|<cell|=>|<cell|exp<around*|(|0|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|exp properties>]>>>|<cell|1>>>>
+      </eqnarray*>
+
+      <item> Let <math|a<rsub|x>=exp<around*|(|i\<cdot\>x|)>>,
+      <math|b<rsub|x>=exp<around*|(|-i\<cdot\>x|)>>,
+      <math|a<rsub|y>=exp<around*|(|i\<cdot\>y|)>> and
+      <math|b<rsub|y>=exp<around*|(|-i\<cdot\>y|)>> then we have
+
+      <\enumerate>
+        <item>
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|cos<around*|(|x|)>\<cdot\>cos<around*|(|y|)>-sin<around*|(|x|)>\<cdot\>sin<around*|(|y|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|1|4>\<cdot\><around*|(|a<rsub|x>+b<rsub|x>|)>\<cdot\><around*|(|a<rsub|y>+b<rsub|y>|)>+<frac|1|4>\<cdot\><around*|(|a<rsub|x>-b<rsub|x>|)>\<cdot\><around*|(|a<rsub|y>-b<rsub|y>|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|1|4>\<cdot\><around*|[|<around*|(|a<rsub|x>\<cdot\>a<rsub|y>+a<rsub|x>\<cdot\>b<rsub|y>+b<rsub|x>\<cdot\>a<rsub|y>+b<rsub|x>\<cdot\>b<rsub|y>|)>+<around*|(|a<rsub|x>\<cdot\>a<rsub|y>-a<rsub|x>\<cdot\>b<rsub|y>-b<rsub|x>\<cdot\>a<rsub|y>+b<rsub|x>\<cdot\>b<rsub|y>|)>|]>>|<cell|=>|<cell|>>|<row|<cell|<frac|1|4>\<cdot\><around*|[|<around*|(|a<rsub|x>\<cdot\>a<rsub|y>+a<rsub|x>\<cdot\>b<rsub|y>+b<rsub|x>\<cdot\>a<rsub|y>+b<rsub|x>\<cdot\>b<rsub|y>|)>+<around*|(|a<rsub|x>\<cdot\>a<rsub|y>-a<rsub|x>\<cdot\>b<rsub|y>-b<rsub|x>\<cdot\>a<rsub|y>+b<rsub|x>\<cdot\>b<rsub|y>|)>|]>>|<cell|=>|<cell|>>|<row|<cell|<frac|1|4>\<cdot\><around*|[|a<rsub|x>\<cdot\>a<rsub|y>+a<rsub|x>\<cdot\>b<rsub|y>+b<rsub|x>\<cdot\>a<rsub|y>+b<rsub|x>\<cdot\>b<rsub|y>+a<rsub|x>\<cdot\>a<rsub|y>-a<rsub|x>\<cdot\>b<rsub|y>-b<rsub|x>\<cdot\>a<rsub|y>+b<rsub|x>\<cdot\>b<rsub|y>|]>>|<cell|=>|<cell|>>|<row|<cell|<frac|1|4>\<cdot\><around*|(|2\<cdot\>a<rsub|x>\<cdot\>a<rsub|y>+2\<cdot\>b<rsub|x>\<cdot\>b<rsub|y>|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|1|2>\<cdot\><around*|(|exp<around*|(|i\<cdot\>x|)>\<cdot\>exp<around*|(|i\<cdot\>y|)>+exp<around*|(|-i\<cdot\>x|)>\<cdot\>exp<around*|(|-i\<cdot\>y|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|1|2>\<cdot\><around*|(|exp<around*|(|i\<cdot\>x+i\<cdot\>y|)>+exp<around*|(|-i\<cdot\>x-i\<cdot\>y|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|1|2>\<cdot\><around*|(|exp<around*|(|i\<cdot\><around*|(|x+y|)>|)>+exp<around*|(|-i\<cdot\><around*|(|x+y|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|cos<around*|(|x+y|)>>|<cell|>|<cell|>>>>
+        </eqnarray*>
+
+        <item>\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|sin<around*|(|x|)>\<cdot\>cos<around*|(|y|)>+cos<around*|(|x|)>\<cdot\>sin<around*|(|y|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|1|4\<cdot\>i>\<cdot\><around*|(|<around*|(|a<rsub|x>-b<rsub|x>|)>\<cdot\><around*|(|a<rsub|y>+b<rsub|y>|)>+<around*|(|a<rsub|x>+b<rsub|x>|)>\<cdot\><around*|(|a<rsub|y>-b<rsub|y>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|1|4\<cdot\>i>\<cdot\><around*|(|a<rsub|x>\<cdot\>a<rsub|y>+a<rsub|x>\<cdot\>b<rsub|y>-b<rsub|x>\<cdot\>a<rsub|y>-b<rsub|x>\<cdot\>b<rsub|y>+a<rsub|x>\<cdot\>a<rsub|y>-a<rsub|x>\<cdot\>b<rsub|y>+b<rsub|x>\<cdot\>a<rsub|y>-b<rsub|x>\<cdot\>b<rsub|y>|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|1|4\<cdot\>i>\<cdot\><around*|(|2\<cdot\>a<rsub|x>\<cdot\>a<rsub|y>-2\<cdot\>b<rsub|x>\<cdot\>b<rsub|y>|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|1|2\<cdot\>i>\<cdot\><around*|(|exp<around*|(|i\<cdot\>x|)>\<cdot\>exp<around*|(|i\<cdot\>y|)>-exp<around*|(|-i\<cdot\>x|)>\<cdot\>exp<around*|(|-i\<cdot\>y|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|1|2\<cdot\>i>\<cdot\><around*|(|exp<around*|(|i\<cdot\>x+i\<cdot\>y|)>-exp<around*|(|-i\<cdot\>x-i\<cdot\>y|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|1|2\<cdot\>i>\<cdot\><around*|(|exp<around*|(|i\<cdot\><around*|(|x+y|)>|)>+exp<around*|(|-i\<cdot\><around*|(|x+y|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|sin<around*|(|x+y|)>>|<cell|>|<cell|>>>>
+        </eqnarray*>
+      </enumerate>
+
+      <item>Let <math|x\<in\>\<bbb-R\>> then\ 
+
+      <\enumerate>
+        <item>\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|cos<around*|(|x|)>>|<cell|=>|<cell|<frac|exp<around*|(|i\<cdot\>x|)>+exp<around*|(|-i\<cdot\>x|)>|2>>>|<row|<cell|>|<cell|=>|<cell|<frac|exp<around*|(|i\<cdot\>x|)>+exp<around*|(|<wide|i\<cdot\>x|\<wide-bar\>>|)>|2>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|exp complement and absolute
+          norm>]>>>|<cell|<frac|exp<around*|(|i\<cdot\>x|)>+<wide|exp<around*|(|i\<cdot\>x|)>|\<wide-bar\>>|2>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|complex conjugate properties>]>>>|<cell|<frac|2\<cdot\>Re<around*|(|exp<around*|(|i\<cdot\>x|)>|)>|2>>>|<row|<cell|>|<cell|=>|<cell|Re<around*|(|exp<around*|(|i\<cdot\>x|)>|)>\<in\>\<bbb-R\>>>>>
+        </eqnarray*>
+
+        <item>\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|sin<around*|(|x|)>>|<cell|=>|<cell|<frac|exp<around*|(|i\<cdot\>x|)>-exp<around*|(|-i\<cdot\>x|)>|2\<cdot\>i>>>|<row|<cell|>|<cell|=>|<cell|<frac|exp<around*|(|i\<cdot\>x|)>-exp<around*|(|<wide|i\<cdot\>x|\<wide-bar\>>|)>|2\<cdot\>i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|exp complement and absolute
+          norm>]>>>|<cell|<frac|2\<cdot\>i\<cdot\>Img<around*|(|exp<around*|(|i\<cdot\>x|)>|)>|2\<cdot\>i>>>|<row|<cell|>|<cell|=>|<cell|Img<around*|(|exp<around*|(|i\<cdot\>x|)>|)>\<in\>\<bbb-R\>>>>>
+        </eqnarray*>
+      </enumerate>
+
+      <item>
     </enumerate>
 
     \;
@@ -3041,7 +3311,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|18>
-    <associate|page-first|1175>
+    <associate|page-first|1177>
     <associate|page-medium|papyrus>
     <associate|section-nr|4>
     <associate|subsection-nr|4>
@@ -3067,10 +3337,17 @@
     <associate|auto-22|<tuple|<with|mode|<quote|math>|\<mathe\>>|?>>
     <associate|auto-23|<tuple|natural logarithm|?>>
     <associate|auto-24|<tuple|<with|mode|<quote|math>|log<around*|(|x|)>>|?>>
-    <associate|auto-25|<tuple|generalized power|?>>
-    <associate|auto-26|<tuple|<with|mode|<quote|math>|a<rsup|x>>|?>>
-    <associate|auto-27|<tuple|Young's inequality|?>>
+    <associate|auto-25|<tuple|19.1.6|?>>
+    <associate|auto-26|<tuple|generalized power|?>>
+    <associate|auto-27|<tuple|<with|mode|<quote|math>|a<rsup|x>>|?>>
+    <associate|auto-28|<tuple|Young's inequality|?>>
+    <associate|auto-29|<tuple|19.1.7|?>>
     <associate|auto-3|<tuple|19.1.1|1175>>
+    <associate|auto-30|<tuple|trigoniometric functions|?>>
+    <associate|auto-31|<tuple|sinus|?>>
+    <associate|auto-32|<tuple|cosinus|?>>
+    <associate|auto-33|<tuple|<with|mode|<quote|math>|sin<around*|(|z|)>>|?>>
+    <associate|auto-34|<tuple|<with|mode|<quote|math>|cos<around*|(|z|)>>|?>>
     <associate|auto-4|<tuple|power series|1175>>
     <associate|auto-5|<tuple|<with|mode|<quote|math>|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>\<cdot\>z<rsup|i>>|1175>>
     <associate|auto-6|<tuple|convergence domain|1175>>
@@ -3126,6 +3403,7 @@
     <associate|exp ball of convergence|<tuple|19.7|1176>>
     <associate|exp balls inclucsion|<tuple|19.14|1179>>
     <associate|exp bijection|<tuple|19.36|?>>
+    <associate|exp complement and absolute norm|<tuple|19.55|?>>
     <associate|exp convergence domain|<tuple|19.3|1175>>
     <associate|exp convergence domain (1)|<tuple|19.6|1176>>
     <associate|exp convergence domains and balls (1)|<tuple|19.10|1177>>
@@ -3153,6 +3431,8 @@
     <associate|exp power series|<tuple|19.1|1175>>
     <associate|exp product of power series|<tuple|19.30|?>>
     <associate|exp properties|<tuple|19.32|?>>
+    <associate|exp triginiometric function|<tuple|19.56|?>>
+    <associate|exp trigoniometric properties|<tuple|19.57|?>>
     <associate|lemma 19.15.150|<tuple|19.16|1179>>
     <associate|lemma 19.18.150|<tuple|19.19|1182>>
     <associate|lemma 19.51.151|<tuple|19.52|?>>

@@ -13303,6 +13303,9 @@
       <item><math|\<forall\>z\<in\>\<bbb-C\>> we have
       <math|z+<wide|z|\<wide-bar\>>=2\<cdot\>Re<around*|(|z|)>>
 
+      <item><math|\<forall\>z\<in\>\<bbb-C\>> we have
+      <math|<around*|(|z-<wide|z|\<wide-bar\>>|)>=2\<cdot\>i\<cdot\>Img<around*|(|z|)>>
+
       <item><math|\<forall\>z\<in\>\<bbb-C\><text| we have
       ><wide|-z|\<wide-bar\>>=-<wide|z|\<wide-bar\>>>
 
@@ -13379,6 +13382,8 @@
       so that <math|z\<cdot\><wide|z|\<wide-bar\>>\<in\>\<bbb-R\><rsup|+><rsub|0,\<bbb-C\>>>.
 
       <item><math|z+<wide|z|\<wide-bar\>>=<around*|(|Re<around*|(|z|)>+i\<cdot\>Img<around*|(|z|)>|)>+<around*|(|Re<around*|(|z|)>-i\<cdot\>Img<around*|(|z|)>|)>=2\<cdot\>Re<around*|(|z|)>>
+
+      <item><math|z-<wide|z|\<wide-bar\>>=<around*|(|Re<around*|(|z|)>+i\<cdot\>Img<around*|(|z|)>|)>-<around*|(|Re<around*|(|z|)>-i\<cdot\>Img<around*|(|z|)>|)>=2\<cdot\>i\<cdot\>Img<around*|(|z|)>>
 
       <item>\ 
 
