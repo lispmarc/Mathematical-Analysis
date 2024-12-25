@@ -3171,24 +3171,29 @@
       <item><math|\<forall\>x\<in\>\<bbb-R\>> we have:
 
       <\enumerate>
-        <item><math|cos<around*|(|x|)>\<in\>\<bbb-R\>>.
+        <item><math|cos<around*|(|x|)>\<in\>\<bbb-R\>> and
+        <math|Re<around*|(|\<mathe\><rsup|i\<cdot\>x>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|exp generalized power properties>(6)]>>Re<around*|(|exp<around*|(|i\<cdot\>x|)>|)>=cos<around*|(|x|)>>
 
-        <item><math|sin<around*|(|x|)>\<in\>\<bbb-R\>>.
-      </enumerate>
-
-      <item><math|\<forall\>x\<in\>\<bbb-R\>> we have:\ 
-
-      <\enumerate>
-        <item><math|Re<around*|(|\<mathe\><rsup|i\<cdot\>x>|)>\<equallim\><rsub|<text|[theorem:
-        <reference|exp generalized power properties>(6)]>>Re<around*|(|exp<around*|(|i\<cdot\>x|)>|)>=cos<around*|(|x|)>>.
-
-        <item><math|Img<around*|(|\<mathe\><rsup|i\<cdot\>x>|)>\<equallim\><rsub|<text|[theorem:
-        <reference|exp generalized power properties>(6)]>>Img<around*|(|exp<around*|(|i\<cdot\>x|)>|)>=sim<around*|(|x|)>>.
+        <item><math|sin<around*|(|x|)>\<in\>\<bbb-R\>> and
+        <math|Img<around*|(|\<mathe\><rsup|i\<cdot\>x>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|exp generalized power properties>(6)]>>Img<around*|(|exp<around*|(|i\<cdot\>x|)>|)>=sim<around*|(|x|)>>
       </enumerate>
 
       <item><math|\<forall\>x\<in\>\<bbb-R\>> we have
-      <math|<around*|\||\<mathe\><rsup|i\<cdot\>x>|\|>\<equallim\><rsub|<text|[theorem:
-      <reference|exp generalized power properties>(6)]>><around*|\||exp<around*|(|i\<cdot\>x|)>|\|>=1>.
+
+      <\equation*>
+        <around*|\||\<mathe\><rsup|i\<cdot\>x>|\|>\<equallim\><rsub|<text|[theorem:
+        <reference|exp generalized power properties>(6)]>><around*|\||exp<around*|(|i\<cdot\>x|)>|\|>=1<text|
+        and ><around*|\||e<rsup|-i\<cdot\>z>|\|>\<equallim\><rsub|<text|[theorem:
+        <reference|exp generalized power properties>(6)]>><around*|\||exp<around*|(|-i\<cdot\>x|)>|\|>=1
+      </equation*>
+
+      <item><math|\<forall\>x\<in\>\<bbb-R\>> we have
+      <math|<around*|\||cos<around*|(|x|)>|\|>\<in\><around*|[|0,1|]>> and
+      <math|<around*|\||sin<around*|(|x|)>|\|>\<in\><around*|[|0,1|]>> or in
+      other words as <math|cos<around*|(|x|)>,sin<around*|(|x|)>\<in\>\<bbb-R\>>
+      <math|-1\<leqslant\>cos<around*|(|x|)>,sin<around*|(|x|)>\<leqslant\>1>
     </enumerate>
   </theorem>
 
@@ -3291,17 +3296,331 @@
         </eqnarray*>
       </enumerate>
 
-      <item>
+      <item>Let <math|x\<in\>\<bbb-R\>> then
+
+      <\equation*>
+        <around*|\||e<rsup|i\<cdot\>x>|\|>\<equallim\><rsub|<text|[theorem:
+        <reference|exp generalized power properties>(6)]>><around*|\||exp<around*|(|i\<cdot\>x|)>|\|>\<equallim\><rsub|<text|[theorem:
+        <reference|exp complement and absolute norm> (3)]>>=1<rsub|<text|>>
+      </equation*>
+
+      further\ 
+
+      <\equation*>
+        <around*|\||exp<around*|(|-i\<cdot\>x|)>|\|>\<equallim\><rsub|x\<in\>\<bbb-R\>><around*|\||exp<around*|(|<wide|i\<cdot\>x|\<wide-bar\>>|)>|\|>\<equallim\><rsub|<text|[theorem:
+        <reference|exp complement and absolute
+        norm>]>><around*|\||<wide|exp<around*|(|i\<cdot\>x|)>|\<wide-bar\>>|\|>\<equallim\><rsub|<text|[theorem:
+        <reference|complex norm properties>]>><around*|\||exp<around*|(|i\<cdot\>z|)>|\|>=1
+      </equation*>
+
+      <item>Let <math|x\<in\>\<bbb-R\>> then we have:
+
+      <\equation*>
+        <around*|\||cos<around*|(|x|)>|\|>\<equallim\><frac|1|2>*\<cdot\><around*|\||e<rsup|i\<cdot\>x>+e<rsup|-i\<cdot\>x>|\|>\<leqslant\><frac|1|2>\<cdot\><around*|(|<around*|\||e<rsup|i\<cdot\>x>|\|>+<around*|\||e<rsup|-i\<cdot\>x>|\|>|)>\<equallim\><rsub|<around*|(|9|)>><frac|1|2>\<cdot\>2=1
+      </equation*>
+
+      and\ 
+
+      <\equation*>
+        <around*|\||cos<around*|(|x|)>|\|>\<equallim\><around*|\||<frac|1|2\<cdot\>i>*|\|>\<cdot\><around*|\||e<rsup|i\<cdot\>x>-e<rsup|-i\<cdot\>x>|\|>\<leqslant\><frac|1|2>\<cdot\><around*|(|<around*|\||e<rsup|i\<cdot\>x>|\|>+<around*|\||e<rsup|-i\<cdot\>x>|\|>|)>\<equallim\><rsub|<around*|(|9|)>><frac|1|2>\<cdot\>2=1
+      </equation*>
     </enumerate>
 
     \;
   </proof>
 
-  \;
+  <\theorem>
+    <label|exp derivative of cos(x) and sin(x)><math|\<forall\>z\<in\>\<bbb-C\>>
+    we have that <math|cos:\<bbb-C\>\<rightarrow\>\<bbb-C\>> has a derivative
+    at <math|z> with
+
+    <\equation*>
+      cos<rprime|'><rsub|z>=-sin<around*|(|z|)>
+    </equation*>
+
+    and <math|sin:\<bbb-C\>\<rightarrow\>\<bbb-C\>> has a derivate at
+    <math|z> with\ 
+
+    <\equation*>
+      sin<rprime|'><rsub|z>=cos<around*|(|z|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    As <math|\<forall\>z\<in\>\<bbb-C\>> we have that
+
+    <\equation*>
+      <around*|(|<frac|1|2>\<cdot\><around*|(|exp\<circ\><around*|(|i\<cdot\>Id<rsub|C>|)>+exp\<circ\><around*|(|-i\<cdot\>Id<rsub|\<bbb-C\>>|)>|)>|)><around*|(|z|)>=<frac|1|2>\<cdot\><around*|(|exp<around*|(|i\<cdot\>x|)>+exp<around*|(|-i\<cdot\>x|)>|)>=cos<around*|(|x|)>
+    </equation*>
+
+    hence\ 
+
+    <\equation*>
+      cos=<frac|1|2>\<cdot\><around*|(|exp\<circ\><around*|(|i\<cdot\>Id<rsub|C>|)>+exp\<circ\><around*|(|-i\<cdot\>Id<rsub|\<bbb-C\>>|)>|)>
+    </equation*>
+
+    Likewise we have that\ 
+
+    <\equation*>
+      <around*|(|<frac|1|2*\<cdot\>i>\<cdot\><around*|(|exp\<circ\><around*|(|i\<cdot\>Id<rsub|C>|)>-exp\<circ\><around*|(|-i\<cdot\>Id<rsub|\<bbb-C\>>|)>|)>|)><around*|(|z|)>=<frac|1|2\<cdot\>i>\<cdot\><around*|(|exp<around*|(|i\<cdot\>x|)>-exp<around*|(|-i\<cdot\>x|)>|)>=sin<around*|(|x|)>
+    </equation*>
+
+    hence\ 
+
+    <\equation*>
+      sin=<frac|1|2>\<cdot\><around*|(|exp\<circ\><around*|(|i\<cdot\>Id<rsub|C>|)>-exp\<circ\><around*|(|-i\<cdot\>Id<rsub|\<bbb-C\>>|)>|)>
+    </equation*>
+
+    Let <math|z\<in\>\<bbb-C\> >then by [theorem: <reference|exp
+    derivative>], [examples: <reference|diff identity has a derivative>],
+    [theorem: <reference|diff derivate on [a,b] linearity>] and the chaing
+    rule [theorem: <reference|diff chain rule calculus>] it follows that
+    <math|sin> and <math|cos> has a derivative at <math|z> and\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|cos<rprime|'><rsub|z>>|<cell|=>|<cell|<around*|(|<frac|1|2>\<cdot\><around*|(|exp\<circ\><around*|(|i\<cdot\>Id<rsub|\<bbb-C\>>|)>+exp\<circ\><around*|(|-i\<cdot\>Id<rsub|\<bbb-C\>>|)>|)>|)><rprime|'><rsub|z>>>|<row|<cell|>|<cell|=>|<cell|<frac|1|2>\<cdot\><around*|(|<around*|(|exp\<circ\><around*|(|i\<cdot\>Id<rsub|\<bbb-C\>>|)>|)><rprime|'><rsub|z>+<around*|(|exp\<circ\><around*|(|-i\<cdot\>Id<rsub|\<bbb-C\>>|)>|)><rprime|'><rsub|z>|)>>>|<row|<cell|>|<cell|=>|<cell|<frac|1|2>\<cdot\><around*|(|exp<rprime|'><rsub|<around*|(|i\<cdot\>Id<rsub|\<bbb-C\>>|)><around*|(|z|)>>\<cdot\>i\<cdot\><around*|(|Id<rsub|\<bbb-C\>>|)><rprime|'><rsub|c>+exp<rprime|'><rsub|<around*|(|-i\<cdot\>Id<rsub|\<bbb-C\>>|)><around*|(|z|)>>\<cdot\><around*|(|-i|)>\<cdot\><around*|(|Id<rsub|\<bbb-C\>>|)><rprime|'><rsub|z>|)>>>|<row|<cell|>|<cell|=>|<cell|<frac|1|2>\<cdot\><around*|(|exp<rprime|'><rsub|i\<cdot\>z>\<cdot\>i\<cdot\>1+exp<rprime|'><rsub|-i\<cdot\>z>\<cdot\><around*|(|-i|)>\<cdot\>1|)>>>|<row|<cell|>|<cell|=>|<cell|<frac|1|2>\<cdot\><around*|(|i\<cdot\>exp<around*|(|i\<cdot\>z|)>-i\<cdot\>exp<around*|(|-i\<cdot\>z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<frac|1|2>\<cdot\><frac|i|i>\<cdot\>i\<cdot\><around*|(|exp<around*|(|i\<cdot\>z|)>-exp<around*|(|-i\<cdot\>z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|-<frac|1|2\<cdot\>i>\<cdot\><around*|(|exp<around*|(|i\<cdot\>x|)>-exp<around*|(|-i\<cdot\>z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|sin<around*|(|z|)>>>>>
+    </eqnarray*>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|sin<rprime|'><rsub|z>>|<cell|=>|<cell|<around*|(|<frac|1|2\<cdot\>i>\<cdot\><around*|(|exp\<circ\><around*|(|i\<cdot\>Id<rsub|\<bbb-C\>>|)>-exp\<circ\><around*|(|-i\<cdot\>Id<rsub|\<bbb-C\>>|)>|)>|)><rprime|'><rsub|z>>>|<row|<cell|>|<cell|=>|<cell|<frac|1|2\<cdot\>i>\<cdot\><around*|(|<around*|(|exp\<circ\><around*|(|i\<cdot\>Id<rsub|\<bbb-C\>>|)>|)><rprime|'><rsub|z>-<around*|(|exp\<circ\><around*|(|-i\<cdot\>Id<rsub|\<bbb-C\>>|)>|)><rprime|'><rsub|z>|)>>>|<row|<cell|>|<cell|=>|<cell|<frac|1|2\<cdot\>i>\<cdot\><around*|(|exp<rprime|'><rsub|<around*|(|i\<cdot\>Id<rsub|\<bbb-C\>>|)><around*|(|z|)>>\<cdot\>i\<cdot\><around*|(|Id<rsub|\<bbb-C\>>|)><rprime|'><rsub|c>-exp<rprime|'><rsub|<around*|(|-i\<cdot\>Id<rsub|\<bbb-C\>>|)><around*|(|z|)>>\<cdot\><around*|(|-i|)>\<cdot\><around*|(|Id<rsub|\<bbb-C\>>|)><rprime|'><rsub|z>|)>>>|<row|<cell|>|<cell|=>|<cell|<frac|1|2\<cdot\>i>\<cdot\><around*|(|exp<rprime|'><rsub|i\<cdot\>z>\<cdot\>i\<cdot\>1+exp<rprime|'><rsub|-i\<cdot\>z>\<cdot\>i\<cdot\>1|)>>>|<row|<cell|>|<cell|=>|<cell|<frac|1|2\<cdot\>i>\<cdot\>i\<cdot\><around*|(|exp<around*|(|i\<cdot\>z|)>+exp<around*|(|-i\<cdot\>z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<frac|1|2>\<cdot\><around*|(|exp<around*|(|i\<cdot\>z|)>+exp<around*|(|-i\<cdot\>z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|cos<around*|(|z|)>>>>>
+    </eqnarray*>
+  </proof>
+
+  The next theorem shows that there exist a <math|x<rsub|0>\<in\>\<bbb-R\>>
+  such that <math|cos<around*|(|x<rsub|0>|)>>. This will be used to define
+  the <math|\<pi\>> and show that <math|sin> and <math|cos> are periodic.
 
   \;
 
-  \;
+  <\theorem>
+    <label|exp cos has a zero element><math|\<exists\>x<rsub|0>\<in\><around*|[|0,\<infty\>|[>>
+    such that <math|cos<around*|(|x<rsub|0>|)>=0>.
+  </theorem>
+
+  <\proof>
+    We proceed by contradiction. So assume that
+
+    <\equation>
+      <label|eq 19.39.152><dueto|assumption>\<forall\>x\<in\><around*|[|0,\<infty\>|[><text|
+      >cos<around*|(|x|)>\<neq\>0
+    </equation>
+
+    Assume that there exist <math|x\<in\><around*|[|0,\<infty\>|[>> such that
+    <math|cos<around*|(|x|)>\<less\>0\<less\>1\<equallim\><rsub|<text|[theorem:
+    <reference|exp trigoniometric properties>]>>cos<around*|(|0|)>> then
+
+    <\equation*>
+      cos<rsub|\|<around*|[|0,x|]>><around*|(|x|)>=cos<around*|(|x|)>\<leqslant\>0\<less\>cos<rsub|\|<around*|[|0,z|]>>
+    </equation*>
+
+    Further as \ <math|cos:\<bbb-R\>\<rightarrow\>\<bbb-R\>> is continuous it
+    follows from [theorem: <reference|continuity and subspace topology (2)>]
+    that <math|cos<rsub|<around*|[|0,x|]>>> is continuous. So we can use the
+    intermediate value theorem [theorem: <reference|connected intermediate
+    value theorem>] to find a <math|y\<in\><around*|[|0,x|]>> such that
+    <math|cos<around*|(|y|)>=cos<rsub|\|<around*|[|0,1|]>><around*|(|y|)>=0>
+    which contradicts [eq: <reference|eq 19.39.152>]. So
+    <math|\<forall\>x\<in\><around*|[|0,\<infty\>|[>> we must have that
+    <math|0\<leqslant\>cos<around*|(|x|)>> or using [eq: <reference|eq
+    19.39.152>] that <math|0\<less\>cos<around*|(|x|)>>, as by [theorem:
+    <reference|exp derivative of cos(x) and sin(x)>]
+    <math|sin<rprime|'><rsub|x>> exist and
+    <math|sin<rprime|'><rsub|x>=cos<around*|(|x|)>\<gtr\>0> it follows from
+    [theorem: <reference|diff increasing decreasing function>]\ 
+
+    <\equation>
+      <label|eq 19.40.152>sin<text| is strictly increasing on
+      ><around*|[|0,\<infty\>|[>
+    </equation>
+
+    As <math|sin<around*|(|0|)>\<equallim\><rsub|<text|[theorem:
+    <reference|exp trigoniometric properties>]>>0> we conclude that\ 
+
+    <\equation>
+      <label|eq 19.41.152>\<forall\>x\<in\><around*|]|0,\<infty\>|[><text| we
+      have >0\<less\>sin<around*|(|x|)>
+    </equation>
+
+    As <math|\<forall\>x,y\<in\>\<bbb-R\>> we have by [theorem:
+    <reference|exp trigoniometric properties>] that
+    <math|cos<around*|(|x|)>\<less\>1<text| and
+    >-cos<around*|(|y|)>\<less\>1> it follows that
+
+    <\equation>
+      <label|eq 19.42.152>\<forall\>x,y\<in\>\<bbb-R\><text| we have
+      >cos<around*|(|x|)>-cos<around*|(|y|)>\<less\>1+1=2
+    </equation>
+
+    Let <math|x,y\<in\>\<bbb-R\>> with <math|0\<less\>x\<less\>y>. By
+    [theorem: <reference|exp derivative of cos(x) and sin(x)>] <math|>we have
+    that <math|\<forall\>t\<in\>\<bbb-R\>> <math|cos<rprime|'><rsub|t>> exist
+    and <math|cos<rprime|'><rsub|t>=-sin<around*|(|t|)>> so that if we define\ 
+
+    <\equation*>
+      cos<rprime|'>:\<bbb-R\>\<rightarrow\>\<bbb-R\><text| by
+      >cos<rprime|'><around*|(|t|)>=cos<rprime|'><rsub|t>
+    </equation*>
+
+    it follows that\ 
+
+    <\equation*>
+      cos<rprime|'>=-sin <text| which is continuous [see theorem:
+      <reference|exp trigoniometric properties>(2)]>
+    </equation*>
+
+    So using [theorem: <reference|diff differentiability on a closed set>] it
+    follows that\ 
+
+    <\equation>
+      <label|eq 19.43.152>cos<rsub|\|<around*|[|x,y|]>><text| has a
+      derivative at every <math|t\<in\><around*|[|x,y|]>> and
+      ><around*|(|cos<rsub|\|<around*|[|x,y|]>>|)><rprime|'>=sin<rsub|\|<around*|[|x,y|]>>
+    </equation>
+
+    As <math|sin> is continuous on <math|\<bbb-R\>>, hence <math|>by
+    [theorem: <reference|continuity and subspace topology (2)>] on
+    <math|<around*|[|x,y|]>> the Rieman integral exist [see theorem:
+    <reference|riemann continuous functions are integrable>] and we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<big|int><rsub|x><rsup|y>sin<rsub|\|<around*|[|x,y|]>>>|<cell|=>|<cell|<big|int><rsub|x><rsup|y>-<around*|(|cos<rsub|\|<around*|[|x,y|]>>|)><rprime|'>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|riemann riemann integral is
+      linear>]>>>|<cell|-<big|int><rsub|x><rsup|y><around*|(|cos<rsub|\|<around*|[|x,y|]>>|)><rprime|'>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 19.43.152>] and [theorem: <reference|diff fundamental
+      theorem of calculus (2)>]>>>|<cell|-<around*|(|cos<rsub|\|<around*|[|x,y|]>><around*|(|y|)>-cos<rsub|\|<around*|[|x,y|]>><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|cos<around*|(|x|)>=cos<around*|(|y|)>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[eq:
+      <reference|eq 19.42.152>]>>>|<cell|2>>>>
+    </eqnarray*>
+
+    proving that
+
+    <\equation>
+      <label|eq 19.44.152><big|int><rsub|x><rsup|y>sin<rsub|\|<around*|[|x,y|]>>\<leqslant\>2
+    </equation>
+
+    Define now the constant function\ 
+
+    <\equation*>
+      C<rsub|sin<around*|(|x|)>>:<around*|[|x,y|]>\<rightarrow\>\<bbb-R\><text|
+      by >C<rsub|sin<around*|(|x|)>>=sin<around*|(|x|)>
+    </equation*>
+
+    Then
+
+    <\equation>
+      <label|eq 19.45.152>\<forall\>t\<in\><around*|[|x,y|]><text| we have
+      >C<rsub|sin<around*|(|x|)>><around*|(|t|)>=sin<around*|(|x|)>\<leqslant\><rsub|<text|[eq:
+      <reference|eq 19.40.152>]>>sin<around*|(|t|)>=sin<rsub|<around*|[|x,y|]>><around*|(|t|)>
+    </equation>
+
+    Now
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|sin<around*|(|x|)>\<cdot\><around*|(|y-x|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|rieman integral properties>]>>>|<cell|<big|int><rsub|x><rsup|y>C<rsub|sin<around*|(|x|)>>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[eq:
+      <reference|eq 19.45.152>] and [theorem: <reference|riemann
+      f\<less\>=g>]>>>|<cell|<big|int><rsub|x><rsup|y>sin<rsub|\|<around*|[|x,y|]>>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[eq:
+      <reference|eq 19.44.152>]>>>|<cell|2>>>>
+    </eqnarray*>
+
+    Hence taking in account that by [eq: <reference|eq 19.41.152>]
+    <math|0\<less\>sin<around*|(|x|)>> it follows that
+
+    <\equation*>
+      \<forall\>x,y\<in\>\<bbb-R\><text| with >0\<less\>x\<less\>y<text| we
+      have >y-x\<less\><frac|2|sin<around*|(|x|)>>
+    </equation*>
+
+    Take now <math|x\<in\>\<bbb-R\><rsup|+>> and
+    <math|y=<frac|2|sin<around*|(|x|)>>+x+1> then, as
+    <math|0\<less\>sin<around*|(|x|)>>, we have that
+    <math|0\<less\>x\<less\>y> so that <math|<frac|2|sin<around*|(|x|)>>+1=y-x\<less\><frac|2|sin<around*|(|x|)>>>
+    leading to the contradiction <math|1\<less\>0>. Hence the assumption [eq:
+    <reference|eq 19.39.152>] is wrong and there exist a
+    <math|x<rsub|0>\<in\><around*|[|0,\<infty\>|[>> such that
+    <math|cos<around*|(|x<rsub|0>|)>=0>.
+  </proof>
+
+  <\lemma>
+    <label|eq 19.60.152><math|<around*|{|x\<in\><around*|[|0,\<infty\>|[>\|cos<around*|(|x|)>=0|}>=cos<rsup|-1><around*|(|<around*|{|0|}>|)><big|cap><around*|[|0,\<infty\>|[>>
+    has a minimum.
+  </lemma>
+
+  <\proof>
+    Using [theorem: <reference|exp cos has a zero element>] it follows that
+    <math|cos<rsup|-1><around*|(|<around*|{|0|}>|)><big|cap><around*|[|0,\<infty\>|[>\<neq\>0>,
+    further <math|cos<rsup|-1><around*|(|<around*|{|0|}>|)><big|cap><around*|[|0,\<infty\>|[>>
+    is bounded below by <math|0>, hence, as <math|\<bbb-R\>> is conditional
+    complete [see theorem: <reference|complex RC is conditional complete>],
+    it follows that\ 
+
+    <\equation*>
+      x<rsub|0>=inf<around*|(|cos<rsup|-1><around*|(|<around*|{|0|}>|)><big|cap><around*|[|0,\<infty\>|[>|)><text|
+      exist and >0\<leqslant\>x<rsub|0>
+    </equation*>
+
+    As <math|<around*|{|0|}>> is closed [see theorems: <reference|separation
+    metric spaces are Hausdorff>, <reference|separation Hausdorff every
+    finite set is closed>] and <math|cos> is continuous it follows from
+    [theorem: <reference|continuity equivalences>] that
+    <math|cos<rsup|-1><around*|(|<around*|{|0|}>|)>>. Further by [theorems:
+    <reference|normed generalized intervals that are open>]
+    \ <math|<around*|[|0,\<infty\>|[>> is closed so that\ 
+
+    <\equation*>
+      cos<rsup|-1><around*|(|<around*|{|0|}>|)><big|cap><around*|[|0,\<infty\>|[><text|
+      is closed>
+    </equation*>
+
+    Assume now that <math|x<rsub|0>\<nin\>cos<rsup|-1><around*|(|<around*|{|0|}>|)><big|cap><around*|[|0,\<infty\>|[>>
+    then <math|x<rsub|0>\<in\>\<bbb-R\>\\cos<rsup|-1><around*|(|<around*|{|0|}>|)><big|cap><around*|[|0,\<infty\>|[>>
+    a open set, so there exist a <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such
+    that <math|x<rsub|0>\<in\><around*|]|x<rsub|0>-\<delta\>,x<rsub|0>+\<delta\>|[>\<subseteq\>\<bbb-R\>\\cos<rsup|-1><around*|(|<around*|{|0|}>|)><big|cap><around*|[|0,\<infty\>|[>>
+    or\ 
+
+    <\equation>
+      <label|eq 19.46\<point\>152><around*|]|x<rsub|0>-\<delta\>,x<rsub|0>+\<delta\>|[><big|cap>cos<rsup|-1><around*|(|<around*|{|0|}>|)><big|cap><around*|[|0,\<infty\>|[>=\<varnothing\>
+    </equation>
+
+    As <math|inf<around*|(|cos<rsup|-1><around*|(|<around*|{|0|}>|)><big|cap><around*|[|0,\<infty\>|[>|)>=x<rsub|0>\<less\>x<rsub|0>+\<delta\>>
+    we have that there exist a <math|y\<in\>cos<rsup|-1><around*|(|<around*|{|0|}>|)><big|cap><around*|[|0,\<infty\>|[>>
+    such that <math|x<rsub|0>-\<delta\>\<less\>x<rsub|0>\<leqslant\>y\<less\>x<rsub|0>+\<delta\>>
+    so that <math|y\<in\>><math|<around*|]|x<rsub|0>-\<delta\>,x<rsub|0>+\<delta\>|[><big|cap>cos<rsup|-1><around*|(|<around*|{|0|}>|)><big|cap><around*|[|0,\<infty\>|[>>
+    contradicting [eq: <reference|eq 19.46\<point\>152>]. Hence we have that
+    <math|x<rsub|0>\<in\>cos<rsup|-1><around*|(|<around*|{|0|}>|)><big|cap><around*|[|0,\<infty\>|[>>
+    or\ 
+
+    <\equation*>
+      x<rsub|0>=min<around*|(|cos<rsup|-1><around*|(|<around*|{|0|}>|)><big|cap><around*|[|0,\<infty\>|[>|)>
+    </equation*>
+  </proof>
+
+  The above allows us to finally define <math|\<pi\>>.
+
+  <\definition>
+    <label|exp pi><index|<math|\<pi\>>><math|\<pi\>> is defined by
+
+    <\equation*>
+      \<pi\>=2\<cdot\>min<around*|(|cos<rsup|-1><around*|(|<around*|{|0|}>|)><big|cap><around*|[|0,\<infty\>|[>|)>
+    </equation*>
+
+    so that
+
+    <\equation*>
+      <frac|\<pi\>|2>=min<around*|(|cos<rsup|-1><around*|(|<around*|{|0|}>|)><big|cap><around*|[|0,\<infty\>|[>|)>
+    </equation*>
+
+    In other words <math|<frac|\<pi\>|2>> is the smallest positive real
+    number <math|x<rsub|0>> such that <math|cos<around*|(|x<rsub|0>|)>=0>.\ 
+
+    <\note>
+      As <math|cos<around*|(|0|)>\<equallim\><rsub|<text|[theorem:
+      <reference|exp trigoniometric properties>]>>1> we must have that
+      <math|0\<less\>\<pi\>>.
+    </note>
+  </definition>
+
+  Next we prove that <math|\<pi\>> and the trigoniometric functions have the
+  usual properties.
 
   \;
 
@@ -3311,7 +3630,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|18>
-    <associate|page-first|1177>
+    <associate|page-first|1179>
     <associate|page-medium|papyrus>
     <associate|section-nr|4>
     <associate|subsection-nr|4>
@@ -3320,20 +3639,20 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|19|1175>>
-    <associate|auto-10|<tuple|convergence radius|1176>>
-    <associate|auto-11|<tuple|<with|mode|<quote|math>|\<cal-R\><around*|[|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>\<cdot\>z<rsup|i>|]>>|1176>>
-    <associate|auto-12|<tuple|<with|mode|<quote|math>|<big|sum><rsub|n=0><rsup|\<infty\>>a<rsub|n>\<cdot\><around*|(|\<ast\>|)><rsup|n>>|1179>>
-    <associate|auto-13|<tuple|19.1.2|1179>>
-    <associate|auto-14|<tuple|inequality of Abel|1180>>
-    <associate|auto-15|<tuple|Abel Dirichlet criteria|1181>>
-    <associate|auto-16|<tuple|19.1.3|1183>>
-    <associate|auto-17|<tuple|exponential function|1185>>
-    <associate|auto-18|<tuple|<with|mode|<quote|math>|exp<around*|(|z|)>>|1185>>
-    <associate|auto-19|<tuple|19.1.4|1185>>
-    <associate|auto-2|<tuple|19.1|1175>>
-    <associate|auto-20|<tuple|derived power series|1186>>
-    <associate|auto-21|<tuple|19.1.5|1193>>
+    <associate|auto-1|<tuple|19|?>>
+    <associate|auto-10|<tuple|convergence radius|?>>
+    <associate|auto-11|<tuple|<with|mode|<quote|math>|\<cal-R\><around*|[|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>\<cdot\>z<rsup|i>|]>>|?>>
+    <associate|auto-12|<tuple|<with|mode|<quote|math>|<big|sum><rsub|n=0><rsup|\<infty\>>a<rsub|n>\<cdot\><around*|(|\<ast\>|)><rsup|n>>|?>>
+    <associate|auto-13|<tuple|19.1.2|?>>
+    <associate|auto-14|<tuple|inequality of Abel|?>>
+    <associate|auto-15|<tuple|Abel Dirichlet criteria|?>>
+    <associate|auto-16|<tuple|19.1.3|?>>
+    <associate|auto-17|<tuple|exponential function|?>>
+    <associate|auto-18|<tuple|<with|mode|<quote|math>|exp<around*|(|z|)>>|?>>
+    <associate|auto-19|<tuple|19.1.4|?>>
+    <associate|auto-2|<tuple|19.1|?>>
+    <associate|auto-20|<tuple|derived power series|?>>
+    <associate|auto-21|<tuple|19.1.5|?>>
     <associate|auto-22|<tuple|<with|mode|<quote|math>|\<mathe\>>|?>>
     <associate|auto-23|<tuple|natural logarithm|?>>
     <associate|auto-24|<tuple|<with|mode|<quote|math>|log<around*|(|x|)>>|?>>
@@ -3342,30 +3661,31 @@
     <associate|auto-27|<tuple|<with|mode|<quote|math>|a<rsup|x>>|?>>
     <associate|auto-28|<tuple|Young's inequality|?>>
     <associate|auto-29|<tuple|19.1.7|?>>
-    <associate|auto-3|<tuple|19.1.1|1175>>
+    <associate|auto-3|<tuple|19.1.1|?>>
     <associate|auto-30|<tuple|trigoniometric functions|?>>
     <associate|auto-31|<tuple|sinus|?>>
     <associate|auto-32|<tuple|cosinus|?>>
     <associate|auto-33|<tuple|<with|mode|<quote|math>|sin<around*|(|z|)>>|?>>
     <associate|auto-34|<tuple|<with|mode|<quote|math>|cos<around*|(|z|)>>|?>>
-    <associate|auto-4|<tuple|power series|1175>>
-    <associate|auto-5|<tuple|<with|mode|<quote|math>|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>\<cdot\>z<rsup|i>>|1175>>
-    <associate|auto-6|<tuple|convergence domain|1175>>
-    <associate|auto-7|<tuple|absolute convergence domain|1175>>
-    <associate|auto-8|<tuple|<with|mode|<quote|math>|\<cal-D\><around*|[|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>\<cdot\>z<rsup|i>|]>>|1175>>
-    <associate|auto-9|<tuple|<with|mode|<quote|math>|<wide|\<cal-D\><around*|[|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>\<cdot\>z<rsup|i>|]>|\<wide-bar\>>>|1175>>
-    <associate|eq 19.1.150|<tuple|19.1|1176>>
-    <associate|eq 19.10.150|<tuple|19.12|1184>>
-    <associate|eq 19.11.150|<tuple|19.13|1184>>
-    <associate|eq 19.12.150|<tuple|19.14|1184>>
-    <associate|eq 19.13.150|<tuple|19.15|1184>>
-    <associate|eq 19.16.151|<tuple|19.16|1187>>
-    <associate|eq 19.17.151|<tuple|19.17|1187>>
-    <associate|eq 19.18.151|<tuple|19.18|1187>>
-    <associate|eq 19.19.151|<tuple|19.19|1190>>
-    <associate|eq 19.2.150|<tuple|19.2|1176>>
-    <associate|eq 19.20.151|<tuple|19.20|1191>>
-    <associate|eq 19.21.151|<tuple|19.21|1193>>
+    <associate|auto-35|<tuple|<with|mode|<quote|math>|\<pi\>>|?>>
+    <associate|auto-4|<tuple|power series|?>>
+    <associate|auto-5|<tuple|<with|mode|<quote|math>|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>\<cdot\>z<rsup|i>>|?>>
+    <associate|auto-6|<tuple|convergence domain|?>>
+    <associate|auto-7|<tuple|absolute convergence domain|?>>
+    <associate|auto-8|<tuple|<with|mode|<quote|math>|\<cal-D\><around*|[|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>\<cdot\>z<rsup|i>|]>>|?>>
+    <associate|auto-9|<tuple|<with|mode|<quote|math>|<wide|\<cal-D\><around*|[|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>\<cdot\>z<rsup|i>|]>|\<wide-bar\>>>|?>>
+    <associate|eq 19.1.150|<tuple|19.1|?>>
+    <associate|eq 19.10.150|<tuple|19.12|?>>
+    <associate|eq 19.11.150|<tuple|19.13|?>>
+    <associate|eq 19.12.150|<tuple|19.14|?>>
+    <associate|eq 19.13.150|<tuple|19.15|?>>
+    <associate|eq 19.16.151|<tuple|19.16|?>>
+    <associate|eq 19.17.151|<tuple|19.17|?>>
+    <associate|eq 19.18.151|<tuple|19.18|?>>
+    <associate|eq 19.19.151|<tuple|19.19|?>>
+    <associate|eq 19.2.150|<tuple|19.2|?>>
+    <associate|eq 19.20.151|<tuple|19.20|?>>
+    <associate|eq 19.21.151|<tuple|19.21|?>>
     <associate|eq 19.22.151|<tuple|19.22|?>>
     <associate|eq 19.23.151|<tuple|19.23|?>>
     <associate|eq 19.24.151|<tuple|19.24|?>>
@@ -3374,7 +3694,7 @@
     <associate|eq 19.27.151|<tuple|19.27|?>>
     <associate|eq 19.28.151|<tuple|19.28|?>>
     <associate|eq 19.29.151|<tuple|19.29|?>>
-    <associate|eq 19.3.150|<tuple|19.3|1178>>
+    <associate|eq 19.3.150|<tuple|19.3|?>>
     <associate|eq 19.30.151|<tuple|19.30|?>>
     <associate|eq 19.31.151|<tuple|19.31|?>>
     <associate|eq 19.32.151|<tuple|19.32|?>>
@@ -3384,57 +3704,69 @@
     <associate|eq 19.36.151|<tuple|19.36|?>>
     <associate|eq 19.37.152|<tuple|19.37|?>>
     <associate|eq 19.38.152|<tuple|19.38|?>>
-    <associate|eq 19.4.150|<tuple|19.4|1181>>
-    <associate|eq 19.5.150|<tuple|19.5|1182>>
-    <associate|eq 19.6.150|<tuple|19.8|1183>>
-    <associate|eq 19.6.151|<tuple|19.6|1182>>
-    <associate|eq 19.7.150|<tuple|19.9|1183>>
-    <associate|eq 19.7.151|<tuple|19.7|1182>>
-    <associate|eq 19.8.150|<tuple|19.10|1183>>
-    <associate|eq 19.9.150|<tuple|19.11|1184>>
-    <associate|exp|<tuple|19.22|1185>>
+    <associate|eq 19.39.152|<tuple|19.39|?>>
+    <associate|eq 19.4.150|<tuple|19.4|?>>
+    <associate|eq 19.40.152|<tuple|19.40|?>>
+    <associate|eq 19.41.152|<tuple|19.41|?>>
+    <associate|eq 19.42.152|<tuple|19.42|?>>
+    <associate|eq 19.43.152|<tuple|19.43|?>>
+    <associate|eq 19.44.152|<tuple|19.44|?>>
+    <associate|eq 19.45.152|<tuple|19.45|?>>
+    <associate|eq 19.46\<point\>152|<tuple|19.46|?>>
+    <associate|eq 19.5.150|<tuple|19.5|?>>
+    <associate|eq 19.6.150|<tuple|19.8|?>>
+    <associate|eq 19.6.151|<tuple|19.6|?>>
+    <associate|eq 19.60.152|<tuple|19.60|?>>
+    <associate|eq 19.7.150|<tuple|19.9|?>>
+    <associate|eq 19.7.151|<tuple|19.7|?>>
+    <associate|eq 19.8.150|<tuple|19.10|?>>
+    <associate|eq 19.9.150|<tuple|19.11|?>>
+    <associate|exp|<tuple|19.22|?>>
     <associate|exp (*)^x is continuous|<tuple|19.51|?>>
-    <associate|exp 0 is in convergence domain|<tuple|19.4|1175>>
-    <associate|exp Abel Dirichlet|<tuple|19.18|1181>>
+    <associate|exp 0 is in convergence domain|<tuple|19.4|?>>
+    <associate|exp Abel Dirichlet|<tuple|19.18|?>>
     <associate|exp Euler's number|<tuple|19.33|?>>
-    <associate|exp Mertens theorem|<tuple|19.29|1193>>
+    <associate|exp Mertens theorem|<tuple|19.29|?>>
     <associate|exp Young's inequality|<tuple|19.53|?>>
-    <associate|exp ball extensions|<tuple|19.11|1178>>
-    <associate|exp ball of convergence|<tuple|19.7|1176>>
-    <associate|exp balls inclucsion|<tuple|19.14|1179>>
+    <associate|exp ball extensions|<tuple|19.11|?>>
+    <associate|exp ball of convergence|<tuple|19.7|?>>
+    <associate|exp balls inclucsion|<tuple|19.14|?>>
     <associate|exp bijection|<tuple|19.36|?>>
     <associate|exp complement and absolute norm|<tuple|19.55|?>>
-    <associate|exp convergence domain|<tuple|19.3|1175>>
-    <associate|exp convergence domain (1)|<tuple|19.6|1176>>
-    <associate|exp convergence domains and balls (1)|<tuple|19.10|1177>>
-    <associate|exp convergence domains and balls (2)|<tuple|19.13|1179>>
-    <associate|exp convergence domains property|<tuple|19.5|1176>>
-    <associate|exp convergion radius|<tuple|19.8|1176>>
-    <associate|exp d'Alembert|<tuple|19.20|1183>>
-    <associate|exp derivative|<tuple|19.27|1192>>
+    <associate|exp convergence domain|<tuple|19.3|?>>
+    <associate|exp convergence domain (1)|<tuple|19.6|?>>
+    <associate|exp convergence domains and balls (1)|<tuple|19.10|?>>
+    <associate|exp convergence domains and balls (2)|<tuple|19.13|?>>
+    <associate|exp convergence domains property|<tuple|19.5|?>>
+    <associate|exp convergion radius|<tuple|19.8|?>>
+    <associate|exp cos has a zero element|<tuple|19.59|?>>
+    <associate|exp d'Alembert|<tuple|19.20|?>>
+    <associate|exp derivative|<tuple|19.27|?>>
     <associate|exp derivative of (*)^x|<tuple|19.49|?>>
-    <associate|exp derivative of a power series|<tuple|19.26|1188>>
+    <associate|exp derivative of a power series|<tuple|19.26|?>>
+    <associate|exp derivative of cos(x) and sin(x)|<tuple|19.58|?>>
     <associate|exp derivative of x^(*)|<tuple|19.50|?>>
-    <associate|exp derived power series|<tuple|19.24|1186>>
-    <associate|exp derived power service properties|<tuple|19.25|1186>>
-    <associate|exp exp series|<tuple|19.21|1183>>
+    <associate|exp derived power series|<tuple|19.24|?>>
+    <associate|exp derived power service properties|<tuple|19.25|?>>
+    <associate|exp exp series|<tuple|19.21|?>>
     <associate|exp exp tends to infinity|<tuple|19.35|?>>
-    <associate|exp exp(x+y)=exp(x).exp(y)|<tuple|19.31|1194>>
+    <associate|exp exp(x+y)=exp(x).exp(y)|<tuple|19.31|?>>
     <associate|exp generalized power|<tuple|19.39|?>>
     <associate|exp generalized power properties|<tuple|19.42|?>>
-    <associate|exp inequality of Abel|<tuple|19.17|1180>>
-    <associate|exp is continuous|<tuple|19.28|1193>>
+    <associate|exp inequality of Abel|<tuple|19.17|?>>
+    <associate|exp is continuous|<tuple|19.28|?>>
     <associate|exp logarithm properties|<tuple|19.38|?>>
     <associate|exp natural logarithm|<tuple|19.37|?>>
     <associate|exp of natural numbers|<tuple|19.34|?>>
-    <associate|exp power function|<tuple|19.15|1179>>
-    <associate|exp power series|<tuple|19.1|1175>>
+    <associate|exp pi|<tuple|19.61|?>>
+    <associate|exp power function|<tuple|19.15|?>>
+    <associate|exp power series|<tuple|19.1|?>>
     <associate|exp product of power series|<tuple|19.30|?>>
     <associate|exp properties|<tuple|19.32|?>>
     <associate|exp triginiometric function|<tuple|19.56|?>>
     <associate|exp trigoniometric properties|<tuple|19.57|?>>
-    <associate|lemma 19.15.150|<tuple|19.16|1179>>
-    <associate|lemma 19.18.150|<tuple|19.19|1182>>
+    <associate|lemma 19.15.150|<tuple|19.16|?>>
+    <associate|lemma 19.18.150|<tuple|19.19|?>>
     <associate|lemma 19.51.151|<tuple|19.52|?>>
   </collection>
 </references>
@@ -3476,11 +3808,21 @@
 
       <tuple|<tuple|<with|mode|<quote|math>|log<around*|(|x|)>>>|<pageref|auto-24>>
 
-      <tuple|<tuple|generalized power>|<pageref|auto-25>>
+      <tuple|<tuple|generalized power>|<pageref|auto-26>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|a<rsup|x>>>|<pageref|auto-26>>
+      <tuple|<tuple|<with|mode|<quote|math>|a<rsup|x>>>|<pageref|auto-27>>
 
-      <tuple|<tuple|Young's inequality>|<pageref|auto-27>>
+      <tuple|<tuple|Young's inequality>|<pageref|auto-28>>
+
+      <tuple|<tuple|trigoniometric functions>|<pageref|auto-30>>
+
+      <tuple|<tuple|sinus>|<pageref|auto-31>>
+
+      <tuple|<tuple|cosinus>|<pageref|auto-32>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|sin<around*|(|z|)>>>|<pageref|auto-33>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|cos<around*|(|z|)>>>|<pageref|auto-34>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|19<space|2spc>The
@@ -3510,6 +3852,14 @@
       <with|par-left|<quote|1tab>|19.1.5<space|2spc>Properties of the
       exponential function <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-21>>
+
+      <with|par-left|<quote|1tab>|19.1.6<space|2spc>Generalized power
+      \ <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-25>>
+
+      <with|par-left|<quote|1tab>|19.1.7<space|2spc>Trigoniometric functions
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-29>>
     </associate>
   </collection>
 </auxiliary>
