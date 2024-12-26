@@ -3147,7 +3147,7 @@
 
       <item><math|cos<around*|(|0|)>=1>.
 
-      <item><math|sin<around*|(|0|)>=1>.
+      <item><math|sin<around*|(|0|)>=0>.
 
       <item><math|\<forall\>z\<in\>\<bbb-C\>> we have:
 
@@ -3622,9 +3622,353 @@
   Next we prove that <math|\<pi\>> and the trigoniometric functions have the
   usual properties.
 
-  \;
+  <\theorem>
+    <label|exp cos/sin in range 0 to pi/2>
 
-  \;
+    <\enumerate>
+      <item><math|\<forall\>x\<in\><around*|[|0,<frac|\<pi\>|2>|[>> we have
+      <math|0\<less\>cos<around*|(|x|)>> and by the above definition
+      <math|cos<around*|(|<frac|\<pi\>|2>|)>=0>.
+
+      <item><math|\<forall\>x\<in\><around*|]|0,<frac|\<pi\>|2>|]>> we have
+      <math|0\<less\>sin<around*|(|x|)>> and
+      <math|sin<around*|(|<frac|\<pi\>|2>|)>=1>.
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Assume that <math|\<exists\>x\<in\><around*|[|0,<frac|\<pi\>|2>|[>>
+      such that <math|cos<around*|(|x|)>\<leqslant\>0>. If
+      <math|cos<around*|(|x|)>=0> then as
+      <math|<rigid|<frac|\<pi\>|2>=min<around*|(|cos<rsup|-1><around*|(|<around*|{|0|}>|)><big|cap><around*|[|0,\<infty\>|[>|)>>>
+      we have <math|<frac|\<pi\>|2>\<leqslant\>x\<less\><frac|\<pi\>|2>> a
+      contradiction, so we must have that <math|cos<around*|(|x|)>\<less\>0>.
+      Then we have\ 
+
+      <\equation*>
+        cos<rsub|\|<around*|[|0,<frac|\<pi\>|2>|[>><around*|(|x|)>\<less\>0\<less\>1\<equallim\><rsub|<text|[eq:
+        <reference|exp trigoniometric properties>]>>cos<around*|(|0|)>=cos<rsub|\|<around*|[|0,<frac|\<pi\>|2>|]>><around*|(|0|)>
+      </equation*>
+
+      As <math|cos<rsub|\|<around*|[|0,<frac|\<pi\>|2>|]>>> is continuous on
+      <math|<around*|[|0,<frac|\<pi\>|2>|]>> [see theorems: <reference|exp
+      trigoniometric properties>(2)] we can use the intermediate value
+      theorem [theorem: <reference|connected intermediate value theorem>] to
+      find a <math|z\<in\><around*|[|0,x|]>> such that
+      <math|cos<around*|(|z|)>=cos<rsub|\|<around*|[|0,x|]>><around*|(|z|)>=0>
+      hence <math|z\<in\>cos<rsup|-1><around*|(|<around*|{|0|}>|)><big|cap><around*|[|0,\<infty\>|[>>.
+      So we have
+
+      <\equation*>
+        z\<leqslant\>x\<less\><frac|\<pi\>|2>=min<around*|(|cos<rsup|-1><around*|(|<around*|{|0|}>|)><big|cap><around*|[|0,\<infty\>|[>|)>\<leqslant\>z
+      </equation*>
+
+      a contradiction. So the assumption is wrong and we must have that
+      <math|\<forall\>x\<in\><around*|[|0,<frac|\<pi\>|2>|[>> we have
+      <math|0\<less\>cos<around*|(|x|)>>.
+
+      <item>As <math|\<forall\>x\<in\><around*|[|0,<frac|\<pi\>|2>|[>> we
+      have <math|sin<rprime|'><rsub|x>\<equallim\><rsub|<text|[theorem:
+      <reference|exp derivative of cos(x) and
+      sin(x)>]>>cos<around*|(|x|)>\<gtr\>0> [by (1)] it follows from
+      [theorem: <reference|diff increasing decreasing function>] that
+      <math|sin> is strictly increasing on
+      <math|<around*|[|0,<frac|\<pi\>|2>|[>>. Hence if
+      <math|x\<in\><around*|]|0,<frac|\<pi\>|2>|[>> we have <math|0\<less\>x>
+      so that <math|0\<equallim\><rsub|<text|[theorem: <reference|exp
+      trigoniometric properties>]>>sin<around*|(|0|)>\<less\>sin<around*|(|x|)>>.
+      So\ 
+
+      <\equation>
+        <label|eq 19.47.152>\<forall\>x\<in\><around*|]|0,<frac|\<pi\>|2>|[><text|
+        we have >0\<less\>sin<around*|(|x|)>
+      </equation>
+
+      As <math|\<forall\>x\<in\><around*|[|0,<frac|\<pi\>|2>|]>=<around*|[|0,<tfrac|\<pi\>|2>|[><big|cup><around*|{|<frac|\<pi\>|2>|}>>
+      we have <math|0\<leqslant\>cos<around*|(|x|)>\<equallim\><rsub|<text|[theorem:
+      <reference|exp derivative of cos(x) and
+      sin(x)>]>>sin<rprime|'><rsub|x>> it follows from \ [theorem:
+      <reference|diff increasing decreasing function>] <math|sin> is
+      increasing on <math|<around*|[|0,<frac|\<pi\>|2>|]>> so that
+      <math|\<forall\>x\<in\><around*|[|0,<frac|\<pi\>|2>|]>> we have that
+      <math|0=sin<around*|(|0|)>\<leqslant\>sin<around*|(|x|)>>. More
+      specific
+
+      <\equation*>
+        0\<leqslant\>sin<around*|(|<frac|\<pi\>|2>|)>
+      </equation*>
+
+      Now <math|1\<equallim\><rsub|<text|[theorem: <reference|exp
+      trigoniometric properties>(6)]>>sin<rsup|2><around*|(|<frac|\<pi\>|2>|)>+cos<rsup|2><around*|(|<frac|\<pi\>|2>|)>=sin<rsup|2><around*|(|<frac|\<pi\><rsub|>|2>|)>+0<rsup|2>=sin<rsup|2><around*|(|x|)>>
+      proving that <math|sin<rsup|2><around*|(|x|)>=1>. Using then
+      [definition: <reference|complex square root>] together with
+      <math|0\<leqslant\>sin<around*|(|<frac|\<pi\>|2>|)>> proves that\ 
+
+      <\equation*>
+        sin<around*|(|<frac|\<pi\>|2>|)>=1
+      </equation*>
+
+      Combining this with [eq: <reference|eq 19.47.152>] gives\ 
+
+      <\equation*>
+        \<forall\>x\<in\><around*|]|0,<frac|\<pi\>|2>|]><text| we have
+        >0\<less\>sin<around*|(|x|)><text| and
+        >sin<around*|(|<frac|\<pi\>|2>|)>=1
+      </equation*>
+    </enumerate>
+
+    \;
+  </proof>
+
+  <\theorem>
+    <label|exp trigoniometric properties (1)>We have for <math|sin> and
+    <math|co>s the following properties:
+
+    <\enumerate>
+      <item><math|cos<around*|(|0|)>=1>
+
+      <item><math|cos<around*|(|<frac|\<pi\>|2>|)>=0>
+
+      <item><math|sin*<around*|(|0|)>=0>
+
+      <item><math|sin<around*|(|<frac|\<pi\>|2>|)>=1>
+
+      <item><math|cos<around*|(|\<pi\>|)>=-1>
+
+      <item><math|sin<around*|(|\<pi\>|)>=0>
+
+      <item><math|cos<around*|(|2\<cdot\>\<pi\>|)>=1>
+
+      <item><math|sin<around*|(|2\<cdot\>\<pi\>|)>=0>
+
+      <item><math|cos<around*|(|<frac|\<pi\>|4>|)>=sin<around*|(|<frac|\<pi\>|4>|)>=<sqrt|<frac|1|2>>>
+
+      <item><math|\<forall\>x\<in\>\<bbb-C\>> we have
+      <math|cos<around*|(|x+<frac|\<pi\>|2>|)>=-sin<around*|(|x|)>>
+
+      <item><math|\<forall\>x\<in\>\<bbb-C\>> we have
+      <math|sin<around*|(|x+<frac|\<pi\>|2>|)>=cos<around*|(|x|)>>
+
+      <item><math|\<forall\>x\<in\>\<bbb-C\>>
+      <math|\<forall\>n\<in\>\<bbb-N\><rsub|0>> we have
+      <math|cos<around*|(|x\<pm\>2\<cdot\>n\<cdot\>\<pi\>|)>=cos<around*|(|x|)>>
+
+      <item><math|\<forall\>x\<in\>\<bbb-C\>>
+      <math|\<forall\>n\<in\>\<bbb-N\><rsub|0>> we have
+      <math|sin<around*|(|x<rsub|>\<pm\>2\<cdot\>n\<cdot\>\<pi\>|)>=sin<around*|(|x|)>>
+
+      <item><math|\<forall\>x\<in\><around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>
+      we have that <math|0\<less\>cos<around*|(|x|)>> and
+      <math|\<forall\>x\<in\><around*|]|0,\<pi\>|[>> we have
+      <math|0\<less\>sin<around*|(|x|)>>.
+
+      <item><math|\<forall\>x\<in\>\<bbb-C\>>
+      <math|\<forall\>n\<in\>\<bbb-N\><rsub|0>> we have
+      <math|e<rsup|i\<cdot\><around*|(|x\<pm\>2\<cdot\>n\<cdot\>\<pi\>|)>>\<equallim\><rsub|<text|[theorem:
+      <reference|exp generalized power properties>]>>exp<around*|(|i\<cdot\><around*|(|x\<pm\>2\<cdot\>n\<cdot\>\<pi\>|)>|)>=exp<around*|(|i\<cdot\>x|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>This was proved in [theorem: <reference|exp trigoniometric
+      properties>].
+
+      <item>As <math|<frac|\<pi\>|2>=min<around*|(|cos<rsup|-1><around*|(|<around*|{|0|}>|)><big|cap><around*|[|0,\<infty\>|[>|)>>
+      it follows that <math|cos<around*|(|<tfrac|\<pi\>|2>|)>=0>.
+
+      <item>This was proved in [theorem: <reference|exp trigoniometric
+      properties>].
+
+      <item>This is proved in [theorem: <reference|exp cos/sin in range 0 to
+      pi/2>].
+
+      <item><math|cos<around*|(|\<pi\>|)>=cos<around*|(|<frac|\<pi\>|2>+<frac|\<pi\>|2>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|exp trigoniometric properties>]>>cos<around*|(|<frac|\<pi\>|2>|)>\<cdot\>cos<around*|(|<frac|\<pi\>|2>|)>-sin<around*|(|<frac|\<pi\>|2>|)>\<cdot\>sin<around*|(|<frac|\<pi\>|2>|)>\<equallim\><rsub|<around*|(|2,4|)>>0\<cdot\>0-1\<cdot\>1=-1>
+
+      <item><math|sin<around*|(|\<pi\>|)>=sin<around*|(|<frac|\<pi\>|2>+<frac|\<pi\>|2>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|exp trigoniometric properties>]>>><math|sin<around*|(|<frac|\<pi\>|2>|)>\<cdot\>cos<around*|(|<frac|\<pi\>|2>|)>-cos<around*|(|<frac|\<pi\>|2>|)>\<cdot\>sin<around*|(|<frac|\<pi\>|2>|)>\<equallim\><rsub|<around*|(|2,4|)>>1\<cdot\>0-0\<cdot\>1=0>
+
+      <item><math|cos<around*|(|2\<cdot\>\<pi\>|)>=cos<around*|(|\<pi\>+\<pi\>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|exp trigoniometric properties>]>>cos<around*|(|\<pi\>|)>\<cdot\>cos<around*|(|\<pi\>|)>-sin<around*|(|\<pi\>|)>\<cdot\>sin<around*|(|\<pi\>|)>\<equallim\><rsub|<around*|(|5,6|)>>-1\<cdot\>-1=0\<cdot\>0=1>
+
+      <item><math|sin<around*|(|2\<cdot\>\<pi\>|)>=sin<around*|(|\<pi\>+\<pi\>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|exp trigoniometric properties>]>>sin<around*|(|\<pi\>|)>\<cdot\>cos<around*|(|\<pi\>|)>-cos<around*|(|\<pi\>|)>\<cdot\>sin<around*|(|\<pi\>|)>\<equallim\><rsub|<around*|(|5,6|)>>0\<cdot\>-1-<around*|(|-1|)>\<cdot\>0=0>
+
+      <item>We have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|0>|<cell|=>|<cell|cos<around*|(|<frac|\<pi\>|2>|)>>>|<row|<cell|>|<cell|=>|<cell|cos<around*|(|<frac|\<pi\>|4>+<frac|\<pi\>|4>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|exp trigoniometric properties>(7)]>>>|<cell|cos<around*|(|<frac|\<pi\>|4>|)>\<cdot\>cos<around*|(|<frac|\<pi\>|4>|)>-sin<around*|(|<frac|\<pi\>|4>|)>\<cdot\>sin<around*|(|<frac|\<pi\>|4>|)>>>|<row|<cell|>|<cell|=>|<cell|cos<rsup|2><around*|(|<frac|\<pi\>|4>|)>-sin<rsup|2><around*|(|<frac|\<pi\>|4>|)>>>>>
+      </eqnarray*>
+
+      so that <math|cos<rsup|2><around*|(|<frac|\<pi\>|4>|)>=sin<rsup|2><around*|(|<frac|\<pi\>|4>|)>>.
+      As by [theorem: <reference|exp cos/sin in range 0 to pi/2>]
+      <math|0\<leqslant\>cos<around*|(|<frac|\<pi\>|4>|)>,sin<around*|(|<frac|\<pi\>|4>|)>>
+      it follows from [definition: <reference|complex square root>] that\ 
+
+      <\equation*>
+        cos<around*|(|<frac|\<pi\>|4>|)>=sin<around*|(|<frac|\<pi\>|4>|)>
+      </equation*>
+
+      Next\ 
+
+      <\equation*>
+        1\<equallim\><rsub|<text|[theorem: <reference|exp trigoniometric
+        properties>]>>sin<rsup|2><around*|(|<frac|\<pi\>|4>|)>+cos<rsup|2><around*|(|<frac|\<pi\>|4>|)>=2\<cdot\>sin<rsup|2><around*|(|<frac|\<pi\>|4>|)>
+      </equation*>
+
+      hence <math|sin<rsup|2><around*|(|<frac|\<pi\>|4>|)>=<frac|1|2>> which
+      as <math|0\<leqslant\>sin<around*|(|<frac|\<pi\>|4>|)>,<frac|1|2>>
+      proves that\ 
+
+      <\equation*>
+        <sqrt|<frac|1|2>>=sin<around*|(|<frac|\<pi\>|4>|)>=cos<around*|(|<frac|\<pi\>|4>|)>
+      </equation*>
+
+      <item>We have <math|\<forall\>z\<in\>\<bbb-C\> > that
+
+      <\equation*>
+        cos<around*|(|x+<frac|\<pi\>|2>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|exp trigoniometric properties>]>>cos<around*|(|x|)>\<cdot\>cos<around*|(|<frac|\<pi\>|2>|)>-sin<around*|(|x|)>\<cdot\>sin<around*|(|<frac|\<pi\>|2>|)>\<equallim\><rsub|<around*|(|2,4|)>>cos<around*|(|x|)>\<cdot\>0-sin<around*|(|x|)>\<cdot\>1=-sin<around*|(|x|)>
+      </equation*>
+
+      <item>We have <math|\<forall\>z\<in\>\<bbb-C\>> that\ 
+
+      <\equation*>
+        sin<around*|(|x+<frac|\<pi\>|2>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|exp trigoniometric properties>]>>sin<around*|(|x|)>\<cdot\>cos<around*|(|<frac|\<pi\>|2>|)>+cos<around*|(|x|)>\<cdot\>sin<around*|(|<frac|\<pi\>|2>|)>\<equallim\><rsub|<around*|(|2,4|)>>sin<around*|(|x|)>\<cdot\>0+cos<around*|(|x|)>\<cdot\>1=cos<around*|(|x|)>
+      </equation*>
+
+      <item>We prove this by induction, so let\ 
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|cos<around*|(|x\<pm\>2\<cdot\>n\<cdot\>\<pi\>|)>=cos<around*|(|x|)>|}>
+      </equation*>
+
+      then we have:\ 
+
+      <\description>
+        <item*|<math|0\<in\>S>>As <math|cos<around*|(|x\<pm\>2\<cdot\>0\<cdot\>\<pi\>|)>=cos<around*|(|x\<pm\>0|)>=cos<around*|(|x|)>>
+        it follows that <math|0\<in\>S>
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>We have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|cos<around*|(|x\<pm\>2\<cdot\><around*|(|n+1|)>\<cdot\>\<pi\>|)>>|<cell|=>|<cell|>>|<row|<cell|cos<around*|(|<around*|(|x\<pm\>2\<cdot\>n\<cdot\>\<pi\>|)>\<pm\>2\<cdot\>\<pi\>|)>>|<cell|\<equallim\><rsub|<text|<math|<text|[theorem:
+          <reference|exp trigoniometric properties>]>>>>>|<cell|>>|<row|<cell|cos<around*|(|x+2\<cdot\>n\<cdot\>\<pi\>|)>\<cdot\>cos<around*|(|\<pm\>\<pi\>|)>-sin<around*|(|x+2\<cdot\>n\<cdot\>\<pi\>|)>\<cdot\>sin<around*|(|\<pm\>\<pi\>|)>>|<cell|\<equallim\><rsub|<text|<math|<text|[theorem:
+          <reference|exp trigoniometric properties>]>>>>>|<cell|>>|<row|<cell|cos<around*|(|x+2\<cdot\>n\<cdot\>\<pi\>|)>\<cdot\>cos<around*|(|\<pi\>|)>-sin<around*|(|x+2\<cdot\>n\<cdot\>\<pi\>|)>\<cdot\><around*|(|\<pm\>sin<around*|(|\<pi\>|)>|)>>|<cell|\<equallim\><rsub|<around*|(|7,8|)>>>|<cell|>>|<row|<cell|cos<around*|(|x+2\<cdot\>n\<cdot\>\<pi\>|)>\<cdot\>1-sin<around*|(|x+2\<cdot\>n\<cdot\>\<pi\>|)>\<cdot\>0>|<cell|=>|<cell|>>|<row|<cell|cos<around*|(|x+2\<cdot\>n\<cdot\>\<pi\>|)>>|<cell|\<equallim\><rsub|n\<in\>S>>|<cell|>>|<row|<cell|cos<around*|(|x|)>>|<cell|>|<cell|>>>>
+        </eqnarray*>
+
+        proving that <math|n+1\<in\>\<bbb-N\><rsub|0>>
+      </description>
+
+      <item>We prove this by induction, so let\ 
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|sin<around*|(|x\<pm\>2\<cdot\>n\<cdot\>\<pi\>|)>=sin<around*|(|x|)>|}>
+      </equation*>
+
+      then we have:\ 
+
+      <\description>
+        <item*|<math|0\<in\>S>>As <math|sin<around*|(|x\<pm\>2\<cdot\>0\<cdot\>\<pi\>|)>=sin<around*|(|x\<pm\>0|)>=sin<around*|(|x|)>>
+        it follows that <math|0\<in\>S>
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>We have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|sin<around*|(|x\<pm\>2\<cdot\><around*|(|n+1|)>\<cdot\>\<pi\>|)>>|<cell|=>|<cell|>>|<row|<cell|sin<around*|(|<around*|(|x\<pm\>2\<cdot\>n\<cdot\>\<pi\>|)>\<pm\>2\<cdot\>\<pi\>|)>>|<cell|\<equallim\><rsub|<text|<math|[theorem:
+          19.57]>>>>|<cell|>>|<row|<cell|sin<around*|(|x\<pm\>2\<cdot\>n\<cdot\>\<pi\>|)>\<cdot\>cos<around*|(|\<pm\>\<pi\>|)>+cos<around*|(|x\<pm\>2\<cdot\>n\<cdot\>\<pi\>|)>\<cdot\>sin<around*|(|\<pm\>\<pi\>|)>>|<cell|\<equallim\><rsub|<text|<math|[theorem:
+          19.57]>>>>|<cell|>>|<row|<cell|sin<around*|(|x\<pm\>2\<cdot\>n\<cdot\>\<pi\>|)>\<cdot\>cos<around*|(|\<pi\>|)>+cos<around*|(|x\<pm\>2\<cdot\>n\<cdot\>\<pi\>|)>\<cdot\><around*|(|\<pm\>sin<around*|(|\<pi\>|)>|)>>|<cell|\<equallim\><rsub|<around*|(|7,8|)>>>|<cell|>>|<row|<cell|sin<around*|(|x+2\<cdot\>n\<cdot\>\<pi\>|)>\<cdot\>1-sin<around*|(|x+2\<cdot\>n\<cdot\>\<pi\>|)>\<cdot\>0>|<cell|=>|<cell|>>|<row|<cell|sin<around*|(|x+2\<cdot\>n\<cdot\>\<pi\>|)>>|<cell|\<equallim\><rsub|n\<in\>S>>|<cell|>>|<row|<cell|sin<around*|(|x|)>>|<cell|>|<cell|>>>>
+        </eqnarray*>
+
+        proving that <math|n+1\<in\>\<bbb-N\><rsub|0>>
+      </description>
+
+      <item>Using [theorem: <reference|exp cos/sin in range 0 to pi/2>] we
+      have \ 
+
+      <\equation>
+        <label|eq 19.48.152>\<forall\>x\<in\><around*|[|0,<frac|\<pi\>|2>|[><text|
+        we have <math|0\<less\>cos<around*|(|x|)>>><infix-and>\<forall\>x\<in\><around*|]|0,<frac|\<pi\>|2>|]><text|
+        we have >0\<less\>sin<around*|(|x|)>
+      </equation>
+
+      Let <math|x\<in\><around*|]|-<frac|\<pi\>|2>,0|]>> then
+      <math|x+<frac|\<pi\>|2>\<in\><around*|]|0,<frac|\<pi\>|2>|]>> so that
+      <math|0\<less\><rsub|<text|[eq: <reference|eq
+      19.48.152>]>>sin<around*|(|x+<frac|\<pi\>|2>|)>\<equallim\><rsub|<around*|(|11|)>>cos<around*|(|x|)>>
+      hence\ 
+
+      <\equation>
+        <label|eq 19.49.152>\<forall\>x\<in\><around*|]|-<frac|\<pi\>|2>,0|]><text|
+        we have >0\<less\>cos<around*|(|x|)>
+      </equation>
+
+      Let <math|x\<in\><around*|[|<frac|\<pi\>|2>,\<pi\>|[>> then
+      <math|x-<frac|\<pi\>|2>\<in\><around*|[|0,<frac|\<pi\>|2>|[>> so that
+      <math|0\<less\>cos<around*|(|x-<frac|\<pi\>|2>|)>\<equallim\><rsub|<around*|(|11|)>>sin<around*|(|<around*|(|x-<frac|\<pi\>|2>|)>+<frac|\<pi\>|2>|)>=sin<around*|(|x|)>>
+      hence\ 
+
+      <\equation>
+        <label|eq 19.50.152>\<forall\>x\<in\><around*|[|<frac|\<pi\>|2>,\<pi\>|[><text|
+        we have >0\<less\>sin<around*|(|x|)>
+      </equation>
+
+      Combining [eqs: <reference|eq 19.48.152>, <reference|eq 19.49.152> and
+      <reference|eq 19.50.152>] results in\ 
+
+      <\equation*>
+        \<forall\>x\<in\><around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[><text|
+        we have >0\<less\>cos<around*|(|x|)><text| and
+        >\<forall\>x\<in\><around*|]|0,\<pi\>|[><text| we have
+        >0\<less\>sin<around*|(|x|)>
+      </equation*>
+
+      <item>We have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|exp<around*|(|i\<cdot\><around*|(|x\<pm\>2\<cdot\>n\<cdot\>p|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|exp trigoniometric properties>]>>>|<cell|cos<around*|(|x\<pm\>2\<cdot\>n\<cdot\>p|)>+i\<cdot\>sin<around*|(|x\<pm\>2\<cdot\>n\<cdot\>p|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|12,13|)>>>|<cell|cos<around*|(|x|)>+i\<cdot\>sin<around*|(|x|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|exp trigoniometric properties>]>>>|<cell|exp<around*|(|i\<cdot\>x|)>>>>>
+      </eqnarray*>
+    </enumerate>
+  </proof>
+
+  We have also what is probably the most beautifull \ mathematical equations
+  (because it combines the fundamental constants <math|0>, <math|1>,
+  <math|\<pi\>> and <math|\<mathe\>>).
+
+  <\theorem>
+    <label|exp Euler's equation><index|Euler's equation><dueto|Eulor's
+    equation>We have <math|e<rsup|i\<cdot\>\<pi\>>+1=0>
+  </theorem>
+
+  <\proof>
+    We have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|e<rsup|i\<cdot\>\<pi\>>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|exp generalized power properties>]>>>|<cell|exp<around*|(|i\<cdot\>\<pi\>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|exp trigoniometric properties>]>>>|<cell|cos<around*|(|\<pi\>|)>+i\<cdot\>sin<around*|(|\<pi\>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|exp trigoniometric properties (1)>]>>>|<cell|-1>>>>
+    </eqnarray*>
+
+    hence\ 
+
+    <\equation*>
+      e<rsup|i\<cdot\>x>+1=0
+    </equation*>
+  </proof>
+
+  Next introduce the inverses of <math|cos> and <math|sin> <math|arcsine> and
+  <math|arccosine>.
 </body>
 
 <\initial>
@@ -3668,6 +4012,7 @@
     <associate|auto-33|<tuple|<with|mode|<quote|math>|sin<around*|(|z|)>>|?>>
     <associate|auto-34|<tuple|<with|mode|<quote|math>|cos<around*|(|z|)>>|?>>
     <associate|auto-35|<tuple|<with|mode|<quote|math>|\<pi\>>|?>>
+    <associate|auto-36|<tuple|Euler's equation|?>>
     <associate|auto-4|<tuple|power series|?>>
     <associate|auto-5|<tuple|<with|mode|<quote|math>|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>\<cdot\>z<rsup|i>>|?>>
     <associate|auto-6|<tuple|convergence domain|?>>
@@ -3713,7 +4058,11 @@
     <associate|eq 19.44.152|<tuple|19.44|?>>
     <associate|eq 19.45.152|<tuple|19.45|?>>
     <associate|eq 19.46\<point\>152|<tuple|19.46|?>>
+    <associate|eq 19.47.152|<tuple|19.47|?>>
+    <associate|eq 19.48.152|<tuple|19.48|?>>
+    <associate|eq 19.49.152|<tuple|19.49|?>>
     <associate|eq 19.5.150|<tuple|19.5|?>>
+    <associate|eq 19.50.152|<tuple|19.50|?>>
     <associate|eq 19.6.150|<tuple|19.8|?>>
     <associate|eq 19.6.151|<tuple|19.6|?>>
     <associate|eq 19.60.152|<tuple|19.60|?>>
@@ -3725,6 +4074,7 @@
     <associate|exp (*)^x is continuous|<tuple|19.51|?>>
     <associate|exp 0 is in convergence domain|<tuple|19.4|?>>
     <associate|exp Abel Dirichlet|<tuple|19.18|?>>
+    <associate|exp Euler's equation|<tuple|19.65|?>>
     <associate|exp Euler's number|<tuple|19.33|?>>
     <associate|exp Mertens theorem|<tuple|19.29|?>>
     <associate|exp Young's inequality|<tuple|19.53|?>>
@@ -3740,6 +4090,7 @@
     <associate|exp convergence domains property|<tuple|19.5|?>>
     <associate|exp convergion radius|<tuple|19.8|?>>
     <associate|exp cos has a zero element|<tuple|19.59|?>>
+    <associate|exp cos/sin in range 0 to pi/2|<tuple|19.63|?>>
     <associate|exp d'Alembert|<tuple|19.20|?>>
     <associate|exp derivative|<tuple|19.27|?>>
     <associate|exp derivative of (*)^x|<tuple|19.49|?>>
@@ -3765,6 +4116,7 @@
     <associate|exp properties|<tuple|19.32|?>>
     <associate|exp triginiometric function|<tuple|19.56|?>>
     <associate|exp trigoniometric properties|<tuple|19.57|?>>
+    <associate|exp trigoniometric properties (1)|<tuple|19.64|?>>
     <associate|lemma 19.15.150|<tuple|19.16|?>>
     <associate|lemma 19.18.150|<tuple|19.19|?>>
     <associate|lemma 19.51.151|<tuple|19.52|?>>
@@ -3823,6 +4175,8 @@
       <tuple|<tuple|<with|mode|<quote|math>|sin<around*|(|z|)>>>|<pageref|auto-33>>
 
       <tuple|<tuple|<with|mode|<quote|math>|cos<around*|(|z|)>>>|<pageref|auto-34>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<pi\>>>|<pageref|auto-35>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|19<space|2spc>The
