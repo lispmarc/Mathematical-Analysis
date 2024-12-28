@@ -9,8 +9,8 @@
 
   <section|Definition and properties>
 
-  Inner products extends the notion of length and orhogonality of vectors in
-  Euclidian space.\ 
+  Inner products extends the notion of length and orthogonality of vectors in
+  Euclidean space.\ 
 
   <\definition>
     <label|inner real inner product space><index|inner
@@ -18,7 +18,7 @@
     <with|font-series|bold|real inner product space >is a pair
     <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
     where <math|X> is a vector space over the field <math|\<bbb-R\>> together
-    with a mapping [the <with|font-series|bold|inner prodict>]
+    with a mapping [the <with|font-series|bold|inner product>]
 
     <\equation*>
       <around*|\<langle\>||\<rangle\>>:X\<times\>X\<rightarrow\>\<bbb-R\><text|
@@ -192,7 +192,7 @@
     <with|font-series|bold|complex inner product space >is a pair
     <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
     where <math|X> is a vector space over the field <math|\<bbb-C\>> together
-    with a mapping [the <with|font-series|bold|inner prodict>]
+    with a mapping [the <with|font-series|bold|inner product>]
 
     <\equation*>
       <around*|\<langle\>||\<rangle\>>:X\<times\>X\<rightarrow\>\<bbb-C\><text|
@@ -399,7 +399,7 @@
   <\theorem>
     <label|inner product and finite sums>Let
     <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
-    be a real [or complex] inner prodct space, <math|n\<in\>\<bbb-N\>>,
+    be a real [or complex] inner product space, <math|n\<in\>\<bbb-N\>>,
     <math|y\<in\>X> and <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>X>
     then\ 
 
@@ -522,7 +522,7 @@
 
   <\note>
     The proof of the above theorem works only for the complex case, later we
-    will prove that on a real finite dimensonal inner product space the
+    will prove that on a real finite dimensional inner product space the
     theorem is true for self-adjoint operators. [see theorem:
     <reference|spectral self-adjoint operator condition for operator to be
     zero>].
@@ -947,7 +947,7 @@
           <reference|inner Schwartz in equality>]>>>|<cell|<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>+2\<cdot\><around*|\<\|\|\>|x|\<\|\|\>>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>>+<around*|\<\|\|\>|y|\<\|\|\>><rsup|2>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|\<\|\|\>|x|\<\|\|\>>+<around*|\<\|\|\>|y|\<\|\|\>>|)><rsup|2>>>>>
         </eqnarray*>
 
-        which as the square root is strictly increasind [see theorem:
+        which as the square root is strictly increasing [see theorem:
         <reference|complex root is strictly increasing>] proves that\ 
 
         <\equation*>
@@ -984,7 +984,7 @@
           <reference|inner Schwartz in equality>]>>>|<cell|<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>+2\<cdot\><around*|\<\|\|\>|x|\<\|\|\>>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>>+<around*|\<\|\|\>|y|\<\|\|\>><rsup|2>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|\<\|\|\>|x|\<\|\|\>>+<around*|\<\|\|\>|y|\<\|\|\>>|)><rsup|2>>>>>
         </eqnarray*>
 
-        which as the square root is strictly increasind [see theorem:
+        which as the square root is strictly increasing [see theorem:
         <reference|complex root is strictly increasing>] proves that\ 
 
         <\equation*>
@@ -1060,7 +1060,7 @@
 
   <\example>
     Let <math|<around*|\<langle\>|\<bbb-R\><rsup|2>,<around*|\<\|\|\>||\<\|\|\>><rsub|e>|\<rangle\>>>
-    be the real vector space of pairs of real numbers equiped with the
+    be the real vector space of pairs of real numbers equipped with the
     Euclidean norm defined by <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|e>=<sqrt|<big|sum><rsub|i=1><rsup|2>x<rsub|i><rsup|2>>=<sqrt|x<rsub|1><rsup|2>+x<rsub|2><rsup|2>>>
     and <math|<around*|\<langle\>|\<bbb-C\>,\<\|\|\>|\<rangle\>>> be the
     space of complex numbers with the absolute value norm then there exist a
@@ -1488,7 +1488,7 @@
     exist a basis <math|<around*|{|e<rprime|'><rsub|1>,\<ldots\>,e<rprime|'><rsub|n>|}>>
     on <math|X>. Hence <math|<around*|{|e<rprime|'><rsub|1>,\<ldots\>,e<rprime|'><rsub|n>|}>>
     is linear independent and <math|span<around*|(|<around*|{|e<rprime|'><rsub|1>,\<ldots\>,e<rprime|'><rsub|n>|}>|)>=X>.
-    Using the Gram-Schmidt procedue [see theorem: <reference|inner
+    Using the Gram-Schmidt procedure [see theorem: <reference|inner
     Gram-Schmidt procedure>] we can construct a orthonormal set
     <math|<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> [hence by [theorem:
     <reference|inner linear independence and orthogonality>] a linear
@@ -1985,7 +1985,7 @@
 
   <\note>
     If <math|\<bbb-K\>=\<bbb-R\>> then <math|M<rsup|H>=M<rsup|T>> so if
-    <math|M> is Hermitian if and only if <math|M> is symetri
+    <math|M> is Hermitian if and only if <math|M> is symmetric
   </note>
 
   <\definition>
@@ -2098,12 +2098,12 @@
   We use now the fundamental theorem of algebra to prove the spectral theorem
   of linear algebra, that states under which conditions a linear operator can
   be diagonlized. First we introduce linear operators and the relation of
-  linear operators and polynomes.
+  linear operators and polynomials.
 
   <\definition>
     <label|spectral linear operator><index|linear operator><index|linear
     operator>Let <math|X> be a vector space and <math|L:X\<rightarrow\>X> a
-    mappinge then <math|L> is a <with|font-series|bold|linear operator on X>
+    mappings then <math|L> is a <with|font-series|bold|linear operator on X>
     if <math|L\<in\>Hom<around*|(|X,X|)>=Hom<around*|(|X|)>>.
   </definition>
 
@@ -2230,7 +2230,7 @@
       it follows that <math|0\<in\>S>.
 
       <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>As <math|n\<in\>S> we
-      have that <math|L<rsup|n>\<in\>Hom<around*|(|X|)>>, futher as
+      have that <math|L<rsup|n>\<in\>Hom<around*|(|X|)>>, further as
       <math|L\<in\>Hom<around*|(|X|)>> it follows form [theorem:
       <reference|linear mapping composition>] that
       <math|L<rsup|n+1>=L<rsup|n>\<circ\>L<rsup|1>=L<rsup|n>\<circ\><around*|(|L<rsup|1>\<circ\>L<rsup|0>|)>=L<rsup|n>\<circ\><around*|(|L\<circ\>Id<rsub|x>|)>=L<rsup|n>\<circ\>L\<in\>Hom<around*|(|X|)>>
@@ -2328,7 +2328,7 @@
 
   <\theorem>
     <label|spectral polynomial operator composition and polynomial
-    product>Let <math|X> be a vactor space over <math|\<bbb-C\>>,
+    product>Let <math|X> be a vector space over <math|\<bbb-C\>>,
     <math|p,q\<in\>\<cal-P\><rsub|n>> polynomial operators of order <math|n>
     and <math|L\<in\>Hom<around*|(|X|)>> then we have\ 
 
@@ -3018,7 +3018,7 @@
       is a family of eigenvectors with distinct eigenvalues. Applying then
       [theorem: <reference|spectral distinct eigenvalues and linear
       independence>] <math|<around*|{|w<rsub|i<rsub|j>>|}><rsub|j\<in\><around*|{|1,\<ldots\>,i<rsub|k>|}>>>
-      is lineare independent contradicting that we have proved that
+      is linear independent contradicting that we have proved that
       <math|<big|sum><rsub|i\<in\>I>w<rsub|i>=0> [see eq: <reference|eq
       18.16.150>] Hence we must have that <math|I=\<varnothing\>> and
       <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> <math|w<rsub|i>=0>,
@@ -3026,7 +3026,7 @@
       that <math|E<around*|(|L,\<lambda\><rsub|k>|)><big|cap><around*|(|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>>E<around*|(|L,\<lambda\><rsub|j>|)>|)>\<subseteq\><around*|{|0|}>>.
       As <math|E<around*|(|L,\<lambda\><rsub|k>|)>> and
       <math|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>>E<around*|(|L,\<lambda\><rsub|j>|)>>
-      are vector spaces we have alos that
+      are vector spaces we have also that
       \ \ <math|0\<in\>E<around*|(|L,\<lambda\><rsub|k>|)><big|cap><around*|(|<big|sum><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|k|}>>E<around*|(|L,\<lambda\><rsub|j>|)>|)>>.
       Hence we conclude that\ 
 
@@ -3054,7 +3054,7 @@
 
   <\definition>
     <label|spectral invariant sub-space><index|invariant sub-space>Let
-    <math|X> be a vactor space, <math|Y> a sub-space of <math|X> and
+    <math|X> be a vector space, <math|Y> a sub-space of <math|X> and
     <math|L\<in\>Hom<around*|(|X|)>> then we say that <math|Y> is
     <with|font-series|bold|invariant under L> if
     <math|L<around*|(|Y|)>\<subseteq\>Y>. In other words every vector in
@@ -3232,7 +3232,7 @@
       a basis <math|E=<around*|{|e<rsub|1>|}>> of <math|X> and for
       <math|L\<in\>Hom<around*|(|X|)>> the matrix
       <math|\<cal-M\><around*|[|L;E,E|]>> is a <math|1\<times\>1> matrix
-      which is automatical upper diagonal, hence <math|1\<in\>S>.
+      which is automatically upper diagonal, hence <math|1\<in\>S>.
 
       <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let <math|X> be a finite
       dimensional basis with <math|1\<less\>dim<around*|(|X|)>\<leqslant\>n+1>
@@ -3399,7 +3399,7 @@
     </equation*>
 
     By [theorem: <reference|spectral upper triangular conditions>] it follows
-    then that <math|B> satisified
+    then that <math|B> satisfied
 
     <\equation>
       <label|eq 18.18.146>\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
@@ -3612,8 +3612,9 @@
   </theorem>
 
   <\proof>
-    The complex cas was already prove in [theorem: <reference|inner condition
-    for linear operator to be zero>] so we must only prove the real case.\ 
+    The complex case was already prove in [theorem: <reference|inner
+    condition for linear operator to be zero>] so we must only prove the real
+    case.\ 
 
     <\description>
       <item*|<math|\<Rightarrow\>>>Let <math|x\<in\>X> then
@@ -4116,7 +4117,7 @@
         </eqnarray*>
       </description>
 
-      <item>This follows fron\ 
+      <item>This follows from\ 
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|\<cal-M\><around*|(|U;E,E|)><rsup|H>\<cdot\>\<cal-M\><around*|(|U;E,E|)>>|<cell|\<equallim\><rsub|<text|[theorem:
@@ -4150,7 +4151,7 @@
   </lemma>
 
   <\proof>
-    If <math|L> is self adoint then <math|L\<circ\>L<rsup|\<star\>>=L\<circ\>L=L<rsup|\<ast\>>\<circ\>L>
+    If <math|L> is self adjoint then <math|L\<circ\>L<rsup|\<star\>>=L\<circ\>L=L<rsup|\<ast\>>\<circ\>L>
     proving that <math|L> is unitary. Further if <math|L> is unitary then
     <math|L\<circ\>L<rsup|\<ast\>>=Id<rsub|X>=L<rsup|\<ast\>>\<circ\>L>
     proving that <math|L> is unitary in this case.
@@ -4185,7 +4186,7 @@
 
     <\equation>
       <label|eq 18.23.148>L\<circ\>L<rsup|\<star\>>-L<rsup|\<ast\>>\<circ\>L<text|
-      is self-adjoiint>
+      is self-adjoint>
     </equation>
 
     Further we have\ 
@@ -4270,7 +4271,7 @@
   </proof>
 
   We prove now the Complex Spectral Theorem which proves that the matrix of a
-  normal operator can be diagonalize or equivalent that there exist a basis
+  normal operator can be diagonlized or equivalent that there exist a basis
   of <math|X> of eigenvectors for the normal operators.
 
   <\theorem>
@@ -4503,7 +4504,7 @@
     <math|dim<around*|(|X|)>=n\<in\>\<bbb-N\>>,
     <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> a orthonormal basis
     of <math|X>, <math|L\<in\>Hom<around*|(|X|)>> a normal operator then
-    there exist a unary operator <math|U\<in\>Hom<around*|(|X|)>> such that
+    there exist a unitary operator <math|U\<in\>Hom<around*|(|X|)>> such that
     <math|\<cal-M\><around*|(|U<rsup|\<ast\>>\<circ\>L\<circ\>U;E,E|)>> is a
     diagonal matrix.
   </corollary>
@@ -4625,7 +4626,7 @@
   <\proof>
     By [theorem: <reference|spectral eigenvectors exist in a finite
     dimensional complex space>] every <math|L\<in\>Home<around*|(|X|)>> in a
-    complex finite dimenional inner product space has a eigenvector, hence
+    complex finite dimensional inner product space has a eigenvector, hence
     this is also true for a self-adjoint operator. So we must only prove the
     theorem for a real finite dimensional inner product space. Let
     <math|n=dim<around*|(|X|)>\<in\>\<bbb-N\>> and choose <math|x\<in\>X>
@@ -4735,7 +4736,7 @@
       <math|0\<neq\>x=0>. Hence this case will never occur.
 
       <item*|<math|k\<in\><around*|{|m+2,\<ldots\>,m+M+1|}>>>Then as
-      <math|p<rsub|k>> ia defined by <math|p<rsub|k><around*|(|z|)>=z<rsup|2>+b<rsub|k>\<cdot\>z+c<rsub|k>>
+      <math|p<rsub|k>> is defined by <math|p<rsub|k><around*|(|z|)>=z<rsup|2>+b<rsub|k>\<cdot\>z+c<rsub|k>>
       we have that
 
       <\equation*>
@@ -4928,7 +4929,7 @@
     <label|spectral orthogonal complement and linear operator>Let
     <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
     be a real [or complex] finite dimensional space,
-    <math|L\<in\>Hom<around*|(|X|)>> a self-adjoint operatr and
+    <math|L\<in\>Hom<around*|(|X|)>> a self-adjoint operator and
     <math|U\<subseteq\>X> a sub-space of <math|X> so that
     <math|L<around*|(|U|)>\<subseteq\>U> then\ 
 
@@ -5039,7 +5040,7 @@
       \ and take <math|L\<in\>Hom<around*|(|X|)>>. As <math|L> is
       self-adjoint there exist by [theorem: <reference|spectral self-adjoint
       operators have a eigenvector with real eigenvalues>] a eigenvector
-      <math|x> with a real egenvalue <math|\<lambda\>>, so that
+      <math|x> with a real eigenvalue <math|\<lambda\>>, so that
 
       <\equation*>
         x\<neq\>0<text|, >L<around*|(|x|)>=\<lambda\>\<cdot\>x<text| and
@@ -5195,7 +5196,7 @@
 
     <\enumerate>
       <item>If <math|M\<in\>\<cal-M\><rsub|n,n><around*|(|\<bbb-R\>|)>> is a
-      summetrix matrix then there exist a unitary matrix <math|U> such that
+      symmetric matrix then there exist a unitary matrix <math|U> such that
       <math|U<rsup|T>\<cdot\>M\<cdot\>U\<equallim\><rsub|U<text| is
       unitary>>U<rsup|-1>\<cdot\>M\<cdot\>U> is diagonal.
 
@@ -5329,7 +5330,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|17>
-    <associate|page-first|1113>
+    <associate|page-first|1121>
     <associate|page-medium|papyrus>
     <associate|par-first|0tab>
     <associate|section-nr|1>
@@ -5388,7 +5389,6 @@
     <associate|eq 18.13.146|<tuple|18.13|?>>
     <associate|eq 18.130.148|<tuple|18.34|?>>
     <associate|eq 18.14.146|<tuple|18.17|?>>
-    <associate|eq 18.14.149|<tuple|18.14|?>>
     <associate|eq 18.14.150|<tuple|18.14|?>>
     <associate|eq 18.15.146|<tuple|18.18|?>>
     <associate|eq 18.15.150|<tuple|18.15|?>>
@@ -5469,7 +5469,6 @@
     <associate|inner symmetric matrix|<tuple|18.44|?>>
     <associate|inner unitary matrix|<tuple|18.47|?>>
     <associate|lemma 18.95.148|<tuple|18.107|?>>
-    <associate|spectral|<tuple|18.76|?>>
     <associate|spectral L^n is linear|<tuple|18.57|?>>
     <associate|spectral L^n+m=L^noL^m|<tuple|18.56|?>>
     <associate|spectral P[L] is a abelian semi group|<tuple|18.65|?>>
@@ -5492,7 +5491,6 @@
     <associate|spectral eigen vectors and values|<tuple|18.68|?>>
     <associate|spectral eigenspace|<tuple|18.71|?>>
     <associate|spectral eigenspace \<less\>\<gtr\> {0}|<tuple|18.73|?>>
-    <associate|spectral eigenspace of a operator|<tuple|18.76|?>>
     <associate|spectral eigenvectors exist in a finite dimensional complex
     space|<tuple|18.70|?>>
     <associate|spectral every self-adjoint an unitary operator are
@@ -5635,7 +5633,7 @@
       operators <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-21>>
 
-      <with|par-left|<quote|1tab>|18.4.2<space|2spc>Eigen vectors and
+      <with|par-left|<quote|1tab>|18.4.2<space|2spc>Eigenvectors and
       eigenvalues. <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-24>>
 

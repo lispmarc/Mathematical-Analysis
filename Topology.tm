@@ -6176,7 +6176,7 @@
       <item*|<math|\<Rightarrow\>>>Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
       then by [theorem: <reference|continuity in a normed space>] there exist
       a <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
-      <math|\<forall\>y\<in\>U> statisfying
+      <math|\<forall\>y\<in\>U> satisfying
       <math|><math|<around*|(|<around*|\<\|\|\>|x-y|\<\|\|\>><rsub|X>|)><rsub|\|U\<times\>*U>\<less\>\<delta\>>
       we have <math|<around*|\<\|\|\>|<around*|(|x|)>-f<around*|(|y|)>|\<\|\|\>><rsub|Y>\<less\>\<varepsilon\>>.
       If <math|y\<in\>U> satisfies <math|<around*|\<\|\|\>|x-y|\<\|\|\>><rsub|X>\<less\>\<delta\>>
@@ -6344,8 +6344,8 @@
     proving that <math|f<rsub|\|A>> is continuous at <math|x>.
   </proof>
 
-  The oppossite is true if <math|A> is open showing that continuity at a
-  point is a local property.
+  The opposite is true if <math|A> is open showing that continuity at a point
+  is a local property.
 
   <\theorem>
     <label|continuity and subspace topology (3)>Let
@@ -7709,7 +7709,7 @@
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     be pseudo normed spaces over <math|\<bbb-K\>> and
-    <math|f:X\<rightarrow\>Y> a llinear isometric isomorphism then
+    <math|f:X\<rightarrow\>Y> a linear isometric isomorphism then
     <math|f:X\<rightarrow\>Y> is a homeomorphism using the topologies
     <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>>,
     <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>>>. In other
@@ -8329,7 +8329,7 @@
 
         <item*|<math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>\<neq\>0>>Then
         <math|<around*|\<\|\|\>|<frac|1|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>\<cdot\>x|\<\|\|\>><rsub|X>=<frac|1|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>=1>
-        so tha,t as <math|M\<in\>A<rsub|L,s>>, we have
+        so that as <math|M\<in\>A<rsub|L,s>>, we have
 
         <\equation*>
           <frac|1|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>\<cdot\><around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|<frac|1|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>\<cdot\>L<around*|(|x|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|L<around*|(|<frac|1|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>\<cdot\>x|)>|\<\|\|\>><rsub|Y>\<leqslant\>M
@@ -9234,8 +9234,8 @@
     space><index|<math|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>Let
     <math|n\<in\>\<bbb-N\>>, \ <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
     be a family of normed spaces and <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    a normed space then theset of the graphs of multilinear continuous
-    mappins between <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+    a normed space then the set of the graphs of multilinear continuous
+    mappings between <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
     and <math|Y> is noted as <math|L<around*|(|X<rsub|1>\<ldots\>X<rsub|n>;Y|)>>
     hence\ 
 
@@ -10654,7 +10654,7 @@
         we have >\<varphi\><around*|(|L|)><around*|(|x<rsub|1>|)><around*|(|x<rsub|2>,\<ldots\>,x<rsub|n+1>|)>=L<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n+1>|)>
       </equation>
 
-      furhter if <math|L\<in\>L<around*|(|X,L<rsup|n><around*|(|X,Y|)>|)>>
+      further if <math|L\<in\>L<around*|(|X,L<rsup|n><around*|(|X,Y|)>|)>>
       then\ 
 
       <\eqnarray*>
@@ -11774,7 +11774,7 @@
 
   <\theorem>
     <label|compact image of a cmpact set by a continuous
-    function><index|extreme value theorem><dueto|Extrem Value Theorem>Let
+    function><index|extreme value theorem><dueto|Extreme Value Theorem>Let
     <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological
     space, <math|f:X\<rightarrow\>\<bbb-R\>> a continuous function [using the
     topology <math|\<cal-T\><rsub|<around*|\|||\|>>> on <math|\<bbb-R\>>] and
@@ -12787,7 +12787,7 @@
         \<frak-W\>\<rightarrow\>x
       </equation*>
 
-      <item*|<math|\<Lleftarrow\>>>By the hypothesis there exist a fileter
+      <item*|<math|\<Lleftarrow\>>>By the hypothesis there exist a filter
       base \ <math|\<frak-U\>=<around*|{|A<rsub|\<alpha\>>|}><rsub|\<alpha\>\<in\>I>\<subseteq\>\<cal-P\><around*|(|X|)>>
       <with|font-series|bold|on> <math|A> with
       <math|\<frak-U\>\<rightarrow\>x>. Then if <math|U\<in\>\<cal-T\>> with
@@ -13784,7 +13784,7 @@
   <\theorem>
     <label|compact rectangles are compact>Let
     <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>|\<rangle\>>>
-    be the topological space of tupples of real numbers where the norm
+    be the topological space of tuples of real numbers where the norm
     <math|<around*|\<\|\|\>||\<\|\|\>><rsub|n>> is defined by
     <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|n>=max<around*|(|<around*|{|<around*|\||\<pi\><rsub|i><around*|(|x|)>|\|>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>>
     then for <math|<around*|{|a<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-R\>>
@@ -13814,7 +13814,7 @@
   <\theorem>
     <label|compact Heine-Borel (1)><dueto|Heine-Borel>Let
     <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>|\<rangle\>>
-    >be the topological space of the tupples of real numbers based on the
+    >be the topological space of the tuples of real numbers based on the
     maximum norm and <math|C\<subseteq\>\<bbb-R\><rsup|n>> then we have\ 
 
     <\equation*>
@@ -19816,7 +19816,7 @@
   \;
 
   A consequence of the dominant convergence theorem is that every absolute
-  convergent serie is convergent.
+  convergent series is convergent.
 
   <\corollary>
     <label|series absolute convergence implies convergence>Let
@@ -21422,8 +21422,8 @@
       then <math|A<rsub|1>\<equallim\><rsub|<text|[lemma: <reference|lemma
       14.387.166>]>>X\\A<rsub|2>> is open and
       <math|A<rsub|2>\<equallim\><rsub|<text|[lemma: <reference|lemma
-      14.387.166>]>>X\\A<rsub|1>> is open, so by the connectnes of <math|X>
-      we must have either <math|A<rsub|1>=\<emptyset\>> or
+      14.387.166>]>>X\\A<rsub|1>> is open, so, as <math|X> is connected, we
+      must have either <math|A<rsub|1>=\<emptyset\>> or
       <math|A<rsub|2>=\<emptyset\>>.
 
       <item*|<math|3\<Rightarrow\>1>>Let <math|A\<subseteq\>X> and <math|A>
@@ -21897,7 +21897,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|13>
-    <associate|page-first|667>
+    <associate|page-first|671>
     <associate|page-medium|papyrus>
     <associate|par-first|0tab>
     <associate|section-nr|0>

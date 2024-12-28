@@ -5,7 +5,7 @@
 <style|<tuple|book|smart-ref|preview-ref>>
 
 <\body>
-  <chapter|The exponational function>
+  <chapter|The exponential function>
 
   <section|Power series>
 
@@ -23,7 +23,7 @@
     is a sequence of complex numbers. If for a given <math|z\<in\>\<bbb-C\>>
     <math|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>\<cdot\>z<rsup|i>>
     converges then <math|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>\<cdot\>z<rsup|i>>
-    referes to the limit <math|<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=1><rsup|n>a<rsub|i>\<cdot\>z<rsup|i>>.
+    refers to the limit <math|<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=1><rsup|n>a<rsub|i>\<cdot\>z<rsup|i>>.
   </definition>
 
   <\note>
@@ -32,8 +32,8 @@
     stands for\ 
 
     <\enumerate>
-      <item>A <with|font-series|bold|power series> which is essenetial
-      another notation of a family <math|<around*|{|a<rsub|i>|}><rsub|i\<in\>\<bbb-N\><rsub|0>>\<subseteq\>\<bbb-C\>>
+      <item>A <with|font-series|bold|power series> which is essential another
+      notation of a family <math|<around*|{|a<rsub|i>|}><rsub|i\<in\>\<bbb-N\><rsub|0>>\<subseteq\>\<bbb-C\>>
 
       <item>A series if we have chosen a certain a complex number <math|z>.
 
@@ -110,7 +110,7 @@
   <\theorem>
     <label|exp convergence domains property>Let
     <math|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>\<cdot\>z<rsup|i>> be a
-    power serie then we have\ 
+    power series then we have\ 
 
     <\equation*>
       0\<in\><wide|\<cal-D\>|\<wide-bar\>><around*|[|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>\<cdot\>z<rsup|i>|]>\<subseteq\>\<cal-D\><around*|[|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>\<cdot\>z<rsup|i>|]>
@@ -121,7 +121,7 @@
     First if <math|z=0> then <math|<around*|\||z|\|>=0> and by [example:
     <reference|exp 0 is in convergence domain>]we have that
     <math|<big|sum><rsub|i=0><rsup|\<infty\>><around*|\||\<alpha\><rsub|i>|\|><rsup|i>>
-    coverges to <math|<around*|\||a<rsub|o>|\|>> proving that\ 
+    converges to <math|<around*|\||a<rsub|o>|\|>> proving that\ 
 
     <\equation*>
       0\<in\><wide|\<cal-D\>|\<wide-bar\>><around*|[|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>\<cdot\>z<rsup|i>|]>
@@ -191,7 +191,7 @@
       <math|<big|sum><rsub|i=0><rsup|\<infty\>>q<rsup|i>> converges and thus
       by [theorem: <reference|serie sum and scalar product>]
       <math|<big|sum><rsub|i=0><rsup|\<infty\>>K\<cdot\>q<rsup|i>> converges.
-      Hence by dominant convergen [theorem: <reference|series dominant
+      Hence by dominant convergence [theorem: <reference|series dominant
       convergence>] and [eq: <reference|eq 19.2.150>] we have that
       <math|<big|sum><rsub|i=1><rsup|\<infty\>><around*|\||a<rsub|i>|\|>\<cdot\>\<rho\><rsup|i>>.
     </description>
@@ -199,7 +199,7 @@
 
   <\corollary>
     <label|exp ball of convergence>Let <math|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>\<cdot\>z<rsup|i>>
-    be a pwer series, <math|0\<neq\>z<rsub|0>\<in\><wide|\<cal-D\>|\<wide-bar\>><around*|[|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>\<cdot\>z<rsup|i>|]>>
+    be a power series, <math|0\<neq\>z<rsub|0>\<in\><wide|\<cal-D\>|\<wide-bar\>><around*|[|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>\<cdot\>z<rsup|i>|]>>
     then\ 
 
     <\equation*>
@@ -247,7 +247,7 @@
     </note>
   </definition>
 
-  Given the above definition we have folllowing properties of the convergence
+  Given the above definition we have following properties of the convergence
   radius of a power series.
 
   <\theorem>
@@ -483,7 +483,7 @@
       Assume that <math|0\<less\>\<rho\>> then there exist a <math|\<delta\>>
       such that <math|0\<less\>\<delta\>\<less\>\<rho\>> then
       <math|\<delta\>\<in\><around*|{|0|}>> giving the contradiction
-      <math|0\<less\>0>. Hence we nust have that <math|\<rho\>=0>.
+      <math|0\<less\>0>. Hence we must have that <math|\<rho\>=0>.
 
       <item*|<math|\<rho\><rprime|'>=\<infty\>>>Then
       <math|\<rho\>\<leqslant\>\<rho\><rprime|'>>
@@ -576,7 +576,7 @@
   </lemma>
 
   <\proof>
-    For <math|n\<in\>\<bbb-N\><rsub|0>> we have two cases to onsider:
+    For <math|n\<in\>\<bbb-N\><rsub|0>> we have two cases to consider:
 
     <\description>
       <item*|<math|n=0>>Then <math|<around*|\||\<sigma\>|\|>=<around*|\||<big|sum><rsub|i=0><rsup|0>\<alpha\><rsub|i>\<cdot\>z<rsub|i>|\|>=<around*|\||\<alpha\><rsub|0>\<cdot\>z<rsub|0>|\|>=<around*|\||\<alpha\><rsub|0>\<cdot\><big|sum><rsub|0><rsup|0>z<rsub|i>|\|>=<around*|\||\<alpha\><rsub|0>\<cdot\>s<rsub|0>|\|>=<around*|\||\<alpha\><rsub|0>|\|>\<cdot\><around*|\||s<rsub|0>|\|>\<less\><around*|\||\<alpha\><rsub|0>|\|>\<cdot\>\<mu\>>
@@ -842,7 +842,7 @@
       power series in R>] that <math|<big|sum><rsub|i=1><rsup|\<infty\>>\<rho\><rsup|i>>
       is convergent, hence, using [theorem: <reference|series partition
       series>], <math|<big|sum><rsub|i=n><rsup|\<infty\>>\<rho\><rsup|i>> is
-      convergent. Using [lemma: <reference|lemma 19.18.150>] togehter with
+      convergent. Using [lemma: <reference|lemma 19.18.150>] together with
       [eqs: <reference|eq 19.7.150>, <reference|eq 19.8.150>] proves then
       that <math|<big|sum><rsub|i=n><rsup|n>x<rsub|i>> is convergent.
       Finally, by [theorem: <reference|series partition series>] again, we
@@ -1034,7 +1034,7 @@
     </note>
   </definition>
 
-  <subsection|Differentiation of the exponental function>
+  <subsection|Differentiation of the exponential function>
 
   Given a power series <math|<big|sum><rsub|n=0><rsup|\<infty\>>a<rsub|n>\<cdot\>z<rsup|n>>
   with <math|0\<less\>\<cal-R\><around*|[|<big|sum><rsub|n=0><rsup|\<infty\>>a<rsub|n>\<cdot\>z<rsup|n>|]>>
@@ -1057,7 +1057,7 @@
   which is again a power function. Of course we must ensure that
   <math|<big|sum><rsub|n=0><rsup|\<infty\>>a<rsub|n+1>\<cdot\><around*|(|n+1|)>\<cdot\>z<rsup|n>>
   is a convergence power series and prove that we can differentiate under a
-  infinite sum which is actually a limit of partial sums. Neverteless
+  infinite sum which is actually a limit of partial sums. Nevertheless
   <math|<big|sum><rsub|n=0><rsup|\<infty\>>a<rsub|n+1>\<cdot\><around*|(|n+1|)>\<cdot\>z<rsup|n>>
   is a power series.
 
@@ -1214,7 +1214,7 @@
       converges. Using then [theorem: <reference|serie sum and scalar
       product>] together with [eq: <reference|eq 19.18.151>] it follows that
       <math|<big|sum><rsub|n=0><rsup|\<infty\>>K\<cdot\><frac|n+1|\<rho\>>\<cdot\>q<rsup|n>>
-      is convergent. Using then dominent convergence [see theorem:
+      is convergent. Using then dominant convergence [see theorem:
       <reference|series absolute dominant convergence>] we conclude that
       <math|<big|sum><rsub|n=0><rsup|\<infty\>><around*|(|n+1|)>\<cdot\>a<rsub|n+1>\<cdot\>z<rsup|n>>
       converges, hence <math|z\<in\>\<cal-D\><around*|[|<big|sum><rsub|n=0><rsup|\<infty\>><around*|(|n+1|)>\<cdot\>a<rsub|n+1>\<cdot\>z<rsup|n>|]>>.
@@ -1244,8 +1244,8 @@
   </proof>
 
   Hence we have found the conditions where a derived power series converges.
-  We prove now that the derivated power series of a power series is indeed
-  its derivative.
+  We prove now that the derived power series of a power series is indeed its
+  derivative.
 
   <\theorem>
     <label|exp derivative of a power series>Let
@@ -1267,7 +1267,7 @@
         defined by ><around*|(|<big|sum><rsub|n=0><rsup|\<infty\>>a<rsub|n>\<cdot\><around*|(|\<ast\>|)><rsup|n>|)><around*|(|z|)>=<big|sum><rsub|n=0><rsup|\<infty\>>a<rsub|n>\<cdot\>z<rsup|n>
       </equation*>
 
-      has a derivate <math|<around*|(|<big|sum><rsub|n=0><rsup|\<infty\>>a<rsub|n>\<cdot\><around*|(|\<ast\>|)><rsup|n>|)><rsub|z><rprime|'>>
+      has a derivative <math|<around*|(|<big|sum><rsub|n=0><rsup|\<infty\>>a<rsub|n>\<cdot\><around*|(|\<ast\>|)><rsup|n>|)><rsub|z><rprime|'>>
       at <math|z> and\ 
 
       <\equation*>
@@ -1547,7 +1547,7 @@
 
   <\theorem>
     <label|exp Mertens theorem><dueto|Mertens>Let
-    <math|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>> br a absolute
+    <math|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>> be a absolute
     convergent series in <math|\<bbb-C\>> and
     <math|<big|sum><rsub|i=0><rsup|\<infty\>>b<rsub|i>> a convergent series
     in <math|\<bbb-C\>>. If <math|<around*|{|c<rsub|i>|}><rsub|i\<in\>\<bbb-N\><rsub|0>>\<subseteq\>\<bbb-C\>>
@@ -1680,7 +1680,7 @@
       <reference|eq 19.27.151>]>>>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|4>+M\<cdot\><frac|\<varepsilon\>|4\<cdot\>M>>|<cell|=>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|2>>|<cell|>|<cell|>>>>
     </eqnarray*>
 
-    provinh that\ 
+    proving that\ 
 
     <\equation*>
       <big|sum><rsub|i=0><rsup|n><around*|(|<around*|\||a<rsub|i>|\|>\<cdot\><around*|\||<big|sum><rsup|\<infty\>><rsub|j=n-i+1>b<rsub|j>|\|>|)>\<less\><frac|\<varepsilon\>|2>
@@ -2089,7 +2089,7 @@
       <math|log<around*|(|<frac|1|x>|)>=-log<around*|(|x|)>>.
 
       <item><math|\<forall\>x\<in\>\<bbb-R\><rsup|+>> <math|log> has a
-      derivate <math|log<rprime|'><rsub|x>> where
+      derivative <math|log<rprime|'><rsub|x>> where
       <math|log<rprime|'><rsub|x>=<frac|1|x>>.
 
       <item><math|log:\<bbb-R\><rsup|+>\<rightarrow\>\<bbb-R\>> is strictly
@@ -2309,7 +2309,7 @@
       <item><math|\<forall\>x\<in\><around*|]|0,\<infty\>|[>> we have that
       <math|<around*|(|\<ast\>|)><rsup|x>:<around*|]|0,\<ldots\>,\<infty\>|[>\<rightarrow\>\<bbb-R\>>
       defined by <math|<around*|(|\<ast\>|)><rsup|x><around*|(|y|)>=y<rsup|x>>
-      is stricly increasing.
+      is strictly increasing.
     </enumerate>
   </theorem>
 
@@ -2336,7 +2336,7 @@
       <math|<around*|]|0,\<infty\>|[>> so that
       <math|0=exp<around*|(|x\<cdot\>log<around*|(|a|)>|)>>. As by [theorem:
       <reference|exp properties> (4)] <math|0\<less\>exp<around*|(|x\<cdot\>log<around*|(|a|)>|)>>
-      we reach the contraduction <math|0\<gtr\>0>. Hence we have\ 
+      we reach the contradiction <math|0\<gtr\>0>. Hence we have\ 
 
       <\equation*>
         a<rsup|x>=0\<Rightarrow\>a=0
@@ -2815,7 +2815,7 @@
         strictly increasing>
       </equation>
 
-      As <math|<around*|(|\<ast\>|)><rsup|1-p>> is continous [see theorem:
+      As <math|<around*|(|\<ast\>|)><rsup|1-p>> is continuous [see theorem:
       <reference|exp (*)^x is continuous>], <math|C<rsub|p>> is continuous
       and <math|Id<rsub|<around*|]|0,\<infty\>|[>>> is continuous [see
       examples: <reference|continuity constant function>,
@@ -2872,7 +2872,7 @@
         leading to the contradiction <math|0\<less\>0>.\ 
       </description>
 
-      As in al cases we have a contradiction the assumption is wrong and we
+      As in ail cases we have a contradiction the assumption is wrong and we
       must have\ 
 
       <\equation*>
@@ -2909,7 +2909,7 @@
       <math|><math|<frac|1|p>=1-<frac|1|q>\<leqslant\>0> contradicting
       <math|0\<less\>p\<Rightarrow\>0\<less\><frac|1|p>>. Hence the condition
       <math|<frac|1|p>+<frac|1|q>=1\<wedge\>p,q\<in\><around*|]|0,1|[>>
-      authomatical includes <math|a,b\<in\><around*|]|1,\<infty\>|[>>.
+      automatically includes <math|a,b\<in\><around*|]|1,\<infty\>|[>>.
     </note>
   </theorem>
 
@@ -2939,7 +2939,7 @@
         </eqnarray*>
 
         <item*|<math|log<around*|(|a<rsup|p>|)>\<less\>log<around*|(|b<rsup|q>|)>>>Then
-        as <math|exp> is convext [see theorem: <reference|exp properties>] it
+        as <math|exp> is convex [see theorem: <reference|exp properties>] it
         follows from [theorem: <reference|diff convex/concave alternative>]
         that\ 
 
@@ -2948,7 +2948,7 @@
         </equation*>
 
         <item*|<math|log<around*|(|a<rsup|p>|)>\<gtr\>log<around*|(|b<rsup|q>|)>>>hen
-        as <math|exp> is convext [see theorem: <reference|exp properties>] it
+        as <math|exp> is convex [see theorem: <reference|exp properties>] it
         follows from [theorem: <reference|diff convex/concave alternative>]
         that\ 
 
@@ -3003,7 +3003,7 @@
         </eqnarray*>
 
         so that by [lemma: <reference|lemma 19.51.151>] we conclude that
-        <math|<frac|b<rsup|q-1>|a>=1> or <math|a=b<rsup|q-1>>. Hene
+        <math|<frac|b<rsup|q-1>|a>=1> or <math|a=b<rsup|q-1>>. Hence
 
         <\equation*>
           a<rsup|p-1>=<around*|(|b<rsup|q-1>|)><rsup|1-q>\<equallim\><rsub|<text|[theorem:
@@ -3052,11 +3052,11 @@
     </enumerate>
   </proof>
 
-  <subsection|Trigoniometric functions>
+  <subsection|Trigonometric functions>
 
   For the generalized powers and the natural logarithm we studied the
-  behavior of the exponential function in the real domain. For goniometric
-  function we consider the behavior of the exponential function in the
+  behavior of the exponential function in the real domain. For trigonometric
+  functions we consider the behavior of the exponential function in the
   complex domain.
 
   <\theorem>
@@ -3114,12 +3114,12 @@
     </enumerate>
   </proof>
 
-  We define now the trigoniometric functions in terms of the exponential
+  We define now the trigonometric functions in terms of the exponential
   functions=.
 
   <\definition>
     <label|exp triginiometric function><index|trigoniometric
-    functions><index|sinus><index|cosinus><index|<math|sin<around*|(|z|)>>><index|<math|cos<around*|(|z|)>>><dueto|Trigoniometric
+    functions><index|sinus><index|cosinus><index|<math|sin<around*|(|z|)>>><index|<math|cos<around*|(|z|)>>><dueto|Trigonometric
     functions>
 
     <\enumerate>
@@ -3135,7 +3135,7 @@
 
   <\theorem>
     <label|exp trigoniometric properties>We have the following properties for
-    the trigoniometric function.
+    the trigonometric function.
 
     <\enumerate>
       <item><math|\<forall\>z\<in\>\<bbb-C\>> we have
@@ -3143,7 +3143,7 @@
       <reference|exp generalized power properties>(6)]>>\<mathe\><rsup|i\<cdot\>z>>.
 
       <item><math|cos:\<bbb-C\>\<rightarrow\>\<bbb-C\>> and
-      <math|sin:\<bbb-C\>\<rightarrow\>\<bbb-C\>> are continuos.
+      <math|sin:\<bbb-C\>\<rightarrow\>\<bbb-C\>> are continuous.
 
       <item><math|cos<around*|(|0|)>=1>.
 
@@ -3338,7 +3338,7 @@
       cos<rprime|'><rsub|z>=-sin<around*|(|z|)>
     </equation*>
 
-    and <math|sin:\<bbb-C\>\<rightarrow\>\<bbb-C\>> has a derivate at
+    and <math|sin:\<bbb-C\>\<rightarrow\>\<bbb-C\>> has a derivative at
     <math|z> with\ 
 
     <\equation*>
@@ -3373,7 +3373,7 @@
 
     Let <math|z\<in\>\<bbb-C\> >then by [theorem: <reference|exp
     derivative>], [examples: <reference|diff identity has a derivative>],
-    [theorem: <reference|diff derivate on [a,b] linearity>] and the chaing
+    [theorem: <reference|diff derivate on [a,b] linearity>] and the chain
     rule [theorem: <reference|diff chain rule calculus>] it follows that
     <math|sin> and <math|cos> has a derivative at <math|z> and\ 
 
@@ -3479,7 +3479,7 @@
 
     As <math|sin> is continuous on <math|\<bbb-R\>>, hence <math|>by
     [theorem: <reference|continuity and subspace topology (2)>] on
-    <math|<around*|[|x,y|]>> the Rieman integral exist [see theorem:
+    <math|<around*|[|x,y|]>> the Riemann integral exist [see theorem:
     <reference|riemann continuous functions are integrable>] and we have\ 
 
     <\eqnarray*>
@@ -3619,7 +3619,7 @@
     </note>
   </definition>
 
-  Next we prove that <math|\<pi\>> and the trigoniometric functions have the
+  Next we prove that <math|\<pi\>> and the trigonometric functions have the
   usual properties.
 
   <\theorem>
@@ -3763,7 +3763,12 @@
       <item><math|\<forall\>x\<in\><around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>
       we have that <math|0\<less\>cos<around*|(|x|)>> and
       <math|\<forall\>x\<in\><around*|]|0,\<pi\>|[>> we have
-      <math|0\<less\>sin<around*|(|x|)>>.
+      <math|0\<less\>sin<around*|(|x|)>>
+
+      <item><math|\<forall\>x\<in\><around*|]|0,\<pi\>|[>> we have
+      <math|cos<around*|(|x|)>\<neq\>1\<wedge\>sin<around*|(|x|)>\<neq\>-1>
+      and <math|\<forall\>x\<in\><around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>
+      we have <math|sin<around*|(|x|)>\<neq\>1\<wedge\>sin<around*|(|x|)>\<neq\>-1>
 
       <item><math|\<forall\>x\<in\>\<bbb-C\>>
       <math|\<forall\>n\<in\>\<bbb-N\><rsub|0>> we have
@@ -3931,6 +3936,35 @@
         >0\<less\>sin<around*|(|x|)>
       </equation*>
 
+      <item>Assume that there exist a <math|x\<in\><around*|]|0,\<pi\>|[>>
+      such that <math|cos<around*|(|x|)>=1> or <math|cos<around*|(|x|)>=-1>.
+      Then as by (14) <math|0\<less\>sin<around*|(|x|)>> we have that
+      <math|0\<less\>sin<rsup|2><around*|(|x|)>\<equallim\><rsub|<text|[theorem:
+      <reference|exp trigoniometric properties>(6)>>1-cos<rsup|2><around*|(|x|)>=1-1=0>
+      giving the contradiction <math|10\<less\>0>. Hence the assumption is
+      wrong and we must have that
+
+      <\equation>
+        <label|eq 19.51.152>\<forall\>x\<in\><around*|]|0,\<pi\>|[><text| we
+        have >cos<around*|(|x|)>\<neq\>1<text| and
+        <math|cos<around*|(|x|)>\<neq\>-1>>
+      </equation>
+
+      Let <math|x\<in\><around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>> then
+      <math|x+<frac|\<pi\>|2>\<in\><around*|]|0,\<pi\>|[>> so that
+      <math|-sin<around*|(|x|)>\<equallim\><rsub|<around*|(|10|)>>cos<around*|(|x|)>>
+      which as by [eq: <reference|eq 19.51.152>]
+      <math|cos<around*|(|x|)>\<neq\>1> and
+      <math|cos<around*|(|x|)>\<neq\>-1> proves that
+      <math|sin<around*|(|x|)>\<neq\>-1> and
+      <math|sin<around*|(|x|)>\<neq\>1>. Hence\ 
+
+      <\equation*>
+        \<forall\>x\<in\><around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[><text|
+        we have >sin<around*|(|x|)>\<neq\>1<text| and
+        >sin<around*|(|x|)>\<neq\>-1
+      </equation*>
+
       <item>We have\ 
 
       <\eqnarray*>
@@ -3939,14 +3973,16 @@
         <reference|exp trigoniometric properties>]>>>|<cell|exp<around*|(|i\<cdot\>x|)>>>>>
       </eqnarray*>
     </enumerate>
+
+    \;
   </proof>
 
-  We have also what is probably the most beautifull \ mathematical equations
+  We have also what is probably the most beautiful \ mathematical equations
   (because it combines the fundamental constants <math|0>, <math|1>,
   <math|\<pi\>> and <math|\<mathe\>>).
 
   <\theorem>
-    <label|exp Euler's equation><index|Euler's equation><dueto|Eulor's
+    <label|exp Euler's equation><index|Euler's equation><dueto|Euler's
     equation>We have <math|e<rsup|i\<cdot\>\<pi\>>+1=0>
   </theorem>
 
@@ -3967,14 +4003,531 @@
     </equation*>
   </proof>
 
-  Next introduce the inverses of <math|cos> and <math|sin> <math|arcsine> and
-  <math|arccosine>.
+  Next we introduce the inverses of the functions
+  <math|cos<rsub|\|<around*|[|0,\<pi\>|]>>> and
+  <math|sin<rsub|\|<around*|[|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|]>>>. Of
+  course we must first prove that \ <math|cos<rsub|\|<around*|[|0,\<pi\>|]>>>
+  and <math|sin<rsub|\|<around*|[|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|]>>> are
+  indeed bijections.
+
+  <\theorem>
+    \ <label|exp cos , sin bijection>
+
+    <\enumerate>
+      <item>The function <math|cos<rsub|\|<around*|[|0,\<pi\>|]>>:<around*|[|0\<comma\>\<pi\>|]>\<rightarrow\><around*|[|-1,1|]>>
+      is a bijection.
+
+      <item>The function <math|sin<rsub|\|<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>:<around*|[|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|]>\<rightarrow\><around*|[|-1,1|]>>
+      is a bijection.
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>We have\ 
+
+      <\description>
+        <item*|injectivity>Let <math|x,y\<in\><around*|[|0,\<pi\>|]>> with
+        <math|cos<around*|(|x|)>=cos<around*|(|y|)>>. Without loosing
+        generality we can take <math|x\<leqslant\>y> [if not interchange
+        <math|x> and <math|y>]. Assume that <math|x\<neq\>y> then we have
+        <math|x\<less\>y> and we must look at the following cases:
+
+        <\description>
+          <item*|<math|x=0\<less\>y=\<pi\>>>Then we would have
+
+          <\equation*>
+            1=cos<around*|(|0|)>\<equallim\><rsub|<text|[theorem:
+            <reference|exp trigoniometric properties
+            (1)>]>>cos<around*|(|x|)>=cos<around*|(|y|)>\<equallim\><rsub|<text|[theorem:
+            <reference|exp trigoniometric properties (1)>]>>0
+          </equation*>
+
+          leading to the contradiction <math|1\<neq\>0>.
+
+          <item*|<math|x=0\<less\>y\<less\>\<pi\>>>As
+          <math|y\<in\><around*|]|0,\<pi\>|[>> it follows from [theorem:
+          <reference|exp trigoniometric properties (1)>(15)] that
+          <math|cos<around*|(|y|)>\<neq\>1> which as
+          <math|1\<equallim\><rsub|<text|[theorem: <reference|exp
+          trigoniometric properties (1)>]>>cos<around*|(|0|)>=cos<around*|(|x|)>=cos<around*|(|y|)>>
+          leads to the contradiction <math|1\<neq\>1>.
+
+          <item*|<math|0\<less\>x\<less\>y=\<pi\>>>As
+          <math|x\<in\><around*|]|0,\<pi\>|[> >it follows from [theorem:
+          <reference|exp trigoniometric properties (1)>(155)] that
+          <math|<rigid|cos<around*|(|x|)>\<neq\>-1>> which as
+          <math|-1\<equallim\><rsub|<text|[theorem: <reference|exp
+          trigoniometric properties (1)>]>>cos<around*|(|\<pi\>|)>> leads to
+          the contradiction <math|-1\<neq\>-1>.
+
+          <item*|<math|0\<less\>x\<less\>y\<less\>\<pi\>>>As
+          <math|\<forall\>z\<in\><around*|]|0,\<pi\>|[>> we have
+          <math|cos<rprime|'><rsub|z>\<equallim\><rsub|<text|[theorem:
+          <reference|exp derivative of cos(x) and
+          sin(x)>]>>sin<around*|(|z|)>\<gtr\>0> [see theorem: <reference|exp
+          trigoniometric properties (1)>] it follows from [theorem:
+          <reference|diff increasing decreasing function>] that <math|cos> is
+          strictly increasing on <math|<around*|]|0,\<pi\>|[>>. Hence
+          <math|cos<around*|(|x|)>\<less\>cos<around*|(|y|)>> contradicting
+          <math|cos<around*|(|x|)>=cos<around*|(|y|)>>.\ 
+        </description>
+
+        As in all cases we have a contradiction the assumption is wrong and
+        we must have that <math|x=y> proving injectivity.
+
+        <item*|<math|surjectivity>>Let <math|y\<in\><around*|[|-1,1|]>> then
+        we have either:
+
+        <\description>
+          <item*|<math|y=-1>>Then for <math|\<pi\>\<in\><around*|[|0,\<pi\>|]>>
+          we have <math|cos<around*|(|\<pi\>|)>\<equallim\><rsub|<text|[theorem:
+          <reference|exp trigoniometric properties (1)>]>>-1=y>.
+
+          <item*|<math|y=1>>Then <math|0\<in\><around*|[|0,\<pi\>|]>> we have
+          <math|cos<around*|(|0|)>\<equallim\><rsub|<text|[theorem:
+          <reference|exp trigoniometric properties (1)>]>>1=y>.
+
+          <item*|<math|y\<in\><around*|]|-1,1|[>>>By [theorem: <reference|exp
+          trigoniometric properties>] and [theorem: <reference|continuity and
+          subspace topology (2)>] it follows that
+          <math|cos<rsub|\|<around*|[|0,\<pi\>|]>>> is continuous, further we
+          have
+
+          <\equation*>
+            cos<rsub|\|<around*|[|0,\<pi\>|]>><around*|(|\<pi\>|)>=cos<around*|(|\<pi\>|)>=-1\<less\>y\<less\>1=cos<around*|(|0|)>=cos<rsub|\|<around*|[|0,\<pi\>|]>><around*|(|0|)>
+          </equation*>
+
+          So we can use the intermediate value theorem [theorem:
+          <reference|connected intermediate value theorem>] to find a
+          <math|x\<in\><around*|[|0,\<pi\>|]>> such that
+          <math|cos<around*|(|x|)>=y>
+        </description>
+
+        So in all cases we have found a <math|x\<in\><around*|[|0,\<pi\>|]>>
+        such that <math|cos<around*|(|x|)>=y> proving surjectivity.
+      </description>
+
+      <item>We have\ 
+
+      <\description>
+        <item*|injectivity>Let <math|x,y\<in\><around*|[|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|]>>
+        with <math|sin<around*|(|x|)>=sin<around*|(|y|)>>. Without loosing
+        generality we can take <math|x\<leqslant\>y> [if not interchange
+        <math|x> and <math|y>]. Assume that <math|x\<neq\>y> then we have
+        <math|x\<less\>y> and we must look at the following cases:
+
+        <\description>
+          <item*|<math|x=-<frac|\<pi\>|2>\<less\>y=<frac|\<pi\>|2>>>Then we
+          would have
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|-1>|<cell|\<equallim\><rsub|<text|[theorem:
+            <reference|exp trigoniometric properties
+            (1)>]>>>|<cell|-sin<around*|(|<frac|\<pi\>|2>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+            <reference|exp trigoniometric
+            properties>]>>>|<cell|sin<around*|(|-<frac|\<pi\>|2>|)>>>|<row|<cell|>|<cell|=>|<cell|sin<around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|sin<around*|(|y|)>>>|<row|<cell|>|<cell|=>|<cell|sin<around*|(|<frac|\<pi\>|2>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+            <reference|exp trigoniometric properties (1)>]>>>|<cell|1>>>>
+          </eqnarray*>
+
+          leading to the contradiction <math|-1\<neq\>1>.
+
+          <item*|<math|x=-<frac|\<pi\>|2>\<less\>y\<less\><frac|\<pi\>|2>>>As
+          <math|y\<in\><around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>> it
+          follows from [theorem: <reference|exp trigoniometric properties
+          (1)>(15)] that <math|sin<around*|(|y|)>\<neq\>-1> which as
+          <math|-1\<equallim\><rsub|<text|[theorem: <reference|exp
+          trigoniometric properties (1)>]>>sin<around*|(|-<frac|\<pi\>|2>|)>=sin<around*|(|x|)>=sin<around*|(|y|)>>
+          leads to the contradiction <math|-1\<neq\>-1>.
+
+          <item*|<math|-<frac|\<pi\>|2>\<less\>x\<less\>y=<frac|\<pi\>|2>>>As
+          <math|x\<in\><around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[> >it
+          follows from [theorem: <reference|exp trigoniometric properties
+          (1)>(15)] that <math|<rigid|sin<around*|(|x|)>\<neq\>-1>> which as
+          <math|-1\<equallim\><rsub|<text|[theorem: <reference|exp
+          trigoniometric properties (1)>]>>sin<around*|(|<frac|\<pi\>|2>|)>>
+          leads to the contradiction <rigid|<math|-1\<neq\>-1>>.
+
+          <item*|<math|-<frac|\<pi\>|2>\<less\>x\<less\>y\<less\><frac|\<pi\>|2>>>As
+          <math|\<forall\>z\<in\><around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>
+          we have <math|sin<rprime|'><rsub|z>\<equallim\><rsub|<text|[theorem:
+          <reference|exp derivative of cos(x) and
+          sin(x)>]>>cos<around*|(|z|)>\<gtr\>0> [see theorem: <reference|exp
+          trigoniometric properties (1)>] it follows from [theorem:
+          <reference|diff increasing decreasing function>] that <math|sin> is
+          strictly increasing on <math|<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>.
+          Hence <math|sin<around*|(|x|)>\<less\>sin<around*|(|y|)>>
+          contradicting <math|sin<around*|(|x|)>=sin<around*|(|y|)>>.\ 
+        </description>
+
+        As in all cases we have a contradiction the assumption is wrong and
+        we must have that <math|x=y> proving injectivity.
+
+        <item*|<math|surjectivity>>Let <math|y\<in\><around*|[|-1,1|]>> then
+        we have either:
+
+        <\description>
+          <item*|<math|y=-1>>Then for <math|-<frac|\<pi\>|2>\<in\><around*|[|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|]>>
+          we have
+
+          <\equation*>
+            sin<around*|(|-<frac|\<pi\>|2>|)>\<equallim\><rsub|<text|[theorem:
+            <reference|exp trigoniometric
+            properties>]>>-sin<around*|(|<frac|\<pi\>|2>|)>\<equallim\><rsub|<text|[theorem:
+            <reference|exp trigoniometric properties (1)>]>>-1=y.\ 
+          </equation*>
+
+          <item*|<math|y=1>>Then for <math|<frac|\<pi\>|2>\<in\><around*|[|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|]>>
+          we have <math|sin<around*|(|<frac|\<pi\>|2>|)>\<equallim\><rsub|<text|[theorem:
+          <reference|exp trigoniometric properties (1)>]>>1=y>.
+
+          <item*|<math|y\<in\><around*|]|-1,1|[>>>By [theorem: <reference|exp
+          trigoniometric properties>] and [theorem: <reference|continuity and
+          subspace topology (2)>] it follows that
+          sin<math|<rsub|\|<around*|[|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|]>>>
+          is continuous, further we have
+
+          <\equation*>
+            sin<rsub|\|<around*|[|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|]>><around*|(|-<frac|\<pi\>|2>|)>=sin<around*|(|-<frac|\<pi\>|2>|)>=-1\<less\>y\<less\>1=sin<around*|(|<frac|\<pi\>|2>|)>=sin<rsub|\|<around*|[|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|]>><around*|(|<frac|\<pi\>|2>|)>
+          </equation*>
+
+          So we can use the intermediate value theorem [theorem:
+          <reference|connected intermediate value theorem>] to find a
+          <math|x\<in\><around*|[|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|]>> such
+          that <math|cos<around*|(|x|)>=y>.
+        </description>
+
+        So in all cases we have found a <math|x\<in\><around*|[|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|]>>
+        such that <math|cos<around*|(|x|)>=y> proving surjectivity.
+      </description>
+    </enumerate>
+  </proof>
+
+  <\definition>
+    <label|exp arccosine arcsine><index|<math|arccosine<around*|(|x|)>>><index|<math|arcsine<around*|(|x|)>>>The
+    above theorem allows us to define <math|arccosine> and <math|arcsine> as
+    follows\ 
+
+    <\equation*>
+      arccosine:<around*|[|-1,1|]>\<rightarrow\><around*|[|0,\<pi\>|]><text|
+      is defined by >arccosine=<around*|(|cos<rsub|\|<around*|[|0,\<pi\>|]>>|)><rsup|-1>
+    </equation*>
+
+    and
+
+    <\equation*>
+      arcsine:<around*|[|-1,1|]>\<rightarrow\><around*|[|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|]><text|
+      is defined by >arcsine=<around*|(|sin<rsub|\|<around*|[|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|]>>|)><rsup|-1>
+    </equation*>
+  </definition>
+
+  We have then the following trivial properties for <math|arccosine> or
+  <math|arcsine>
+
+  <\theorem>
+    <label|exp arccosine arcsine properties>We have for <math|arccosine> and
+    <math|arcsine>
+
+    <\enumerate>
+      <item><math|\<forall\>x\<in\><around*|[|-1,1|]>> we have
+      <math|cos<around*|(|arccosine<around*|(|x|)>|)>=x> and
+      <math|sin<around*|(|arcsine<around*|(|x|)>|)>>
+
+      <item><math|\<forall\>x\<in\><around*|[|0,\<pi\>|]>> we have
+      <math|arccosine<around*|(|cos<around*|(|x|)>|)>=x>
+
+      <item><math|\<forall\>x\<in\><around*|[|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|]>>
+      we have <math|arcsine<around*|(|sin<around*|(|x|)>|)>=x>
+
+      <item><math|arcosine<around*|(|-1|)>=\<pi\>>
+
+      <item><math|arcosine<around*|(|0|)>=<frac|\<pi\>|2>>
+
+      <item><math|arccose<around*|(|1|)>=0>
+
+      <item><math|arcsine<around*|(|-1|)>=-<frac|\<pi\>|2>>
+
+      <item><math|arcsine<around*|(|0|)>=0>
+
+      <item><math|arcsine<around*|(|1|)>=<frac|\<pi\>|2>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|x\<in\><around*|[|-1,1|]>> then
+
+      <\equation*>
+        cos<around*|(|arccosine<around*|(|x|)>|)>\<equallim\><rsub|arccosine<around*|(|<around*|[|-1,1|]>|)>=<around*|[|0,\<pi\>|]>>cos<rsub|\|<around*|[|0,\<pi\>|]>><around*|(|arcosine<around*|(|x|)>|)>=cos<rsub|\|<around*|[|0,\<pi\>|]>><around*|(|<around*|(|cos<rsub|\|<around*|[|0.\<pi\>|]>>|)><rsup|-1><around*|(|x|)>|)>=x
+      </equation*>
+
+      Further\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|sin<around*|(|arcsine<around*|(|x|)>|)>>|<cell|\<equallim\><rsub|arcsine<around*|(|<around*|[|-1,1|]>|)>=<around*|[|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|]>>>|<cell|sin<rsub|\|<around*|[|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|]>><around*|(|arcsine<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|sin<rsub|\|<around*|[|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|]>><around*|(|<around*|(|sin<rsub|<around*|[|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|]>>|)><rsup|-1><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|x>>>>
+      </eqnarray*>
+
+      <item>Let <math|x\<in\><around*|[|0,\<pi\>|]>> then
+
+      <\equation*>
+        arccos<around*|(|cos<around*|(|x|)>|)>=arccos<around*|(|cos<rsub|\|<around*|[|0,\<pi\>|]>><around*|(|x|)>|)>=<around*|(|cos<rsub|\|<around*|[|0,\<pi\>|]>>|)><rsup|-1><around*|(|cos<rsub|\|<around*|[|0,\<pi\>|]>><around*|(|x|)>|)>=x
+      </equation*>
+
+      <item>Let <math|x\<in\><around*|[|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|]>>
+      then\ 
+
+      <\equation*>
+        arcsin<around*|(|sin<around*|(|x|)>|)>=arcsin<around*|(|sin<rsub|\|<around*|[|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|]>><around*|(|x|)>|)>=<around*|(|sin<rsub|\|<around*|[|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|]>>|)><rsup|-1><around*|(|sin<rsub|\\<around*|[|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|]>><around*|(|x|)>|)>=x
+      </equation*>
+
+      <item>As <math|cos<around*|(|\<pi\>|)>=-1> and
+      <math|\<pi\>\<in\><around*|[|0,\<pi\>|]>> we have
+      <math|\<pi\>\<equallim\><rsub|<around*|(|1|)>>arccosin<around*|(|cos<around*|(|\<pi\>|)>|)>=arccosine<around*|(|-1|)>>.
+
+      <item>As <math|cos<around*|(|<frac|\<pi\>|2>|)>=0> and
+      <math|<frac|\<pi\>|2>\<in\><around*|[|0,\<pi\>|]>> we have
+      <math|<frac|\<pi\>|2>\<equallim\><rsub|<around*|(|1|)>>arccosin<around*|(|cos<around*|(|<frac|\<pi\>|2>|)>|)>=arccosine<around*|(|0|)>>.
+
+      <item>As <math|cos<around*|(|0|)>=1> and
+      <math|0\<in\><around*|[|0,\<pi\>|]>> we have
+      <math|0\<equallim\><rsub|<around*|(|1|)>>arccosin<around*|(|cos<around*|(|0|)>|)>=arccosine<around*|(|1|)>>.
+
+      <item>As <math|sin<around*|(|-<frac|\<pi\>|2>|)>=-sin<around*|(|<frac|\<pi\>|2>|)>=-1>
+      and <math|-<frac|\<pi\>|2>\<in\><around*|[|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|]>>
+      we have <math|-<frac|\<pi\>|2>\<equallim\><rsub|<around*|(|1|)>>arcsine<around*|(|sin<around*|(|-<frac|\<pi\>|2>|)>|)>=arcsin<around*|(|-1|)>>
+
+      <item>As <math|sin<around*|(|0|)>=0> and
+      <math|0\<in\><around*|[|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|]>> we have
+      <math|0\<equallim\><rsub|<around*|(|1|)>>arcsine<around*|(|sin<around*|(|0|)>|)>=arcsin<around*|(|0|)>>
+
+      <item>As <math|sin<around*|(|<frac|\<pi\>|2>|)>=1> and
+      <math|<frac|\<pi\>|2>\<in\><around*|[|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|]>>
+      we have <math|<frac|\<pi\>|2>\<equallim\><rsub|<around*|(|1|)>>arcsine<around*|(|sin<around*|(|<frac|\<pi\>|2>|)>|)>=arcsin<around*|(|1|)>>
+    </enumerate>
+  </proof>
+
+  Once we have defined the sinus and cosinus we can define the tangent as
+  follows:
+
+  <\definition>
+    <label|exp tangent>The tangent function noted as <math|tan> is defined by\ 
+
+    <\equation*>
+      tan:<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>\<rightarrow\>\<bbb-R\><text|
+      where >tan<around*|(|x|)>=<frac|sin<around*|(|x|)>|cos<around*|(|x|)>>
+    </equation*>
+
+    in other words\ 
+
+    <\equation*>
+      tan=<frac|sin<rsub|\|<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>|cos<rsub|\|<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>>
+    </equation*>
+  </definition>
+
+  <\note>
+    As by [theorem: <reference|exp trigoniometric properties (1)>(14)]
+    <math|0\<less\>cos<around*|(|x|)>> for every <math|x> in
+    <math|<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>> this function is
+    well defined.
+  </note>
+
+  <\theorem>
+    <label|exp tangent properties>The tangent function has the following
+    properties:
+
+    <\enumerate>
+      <item><math|tan<around*|(|0|)>=0>
+
+      <item><math|\<forall\>x\<in\><around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>
+      <math|tan> has a derivative <math|tan<rprime|'><rsub|x> where
+      tan<rprime|'><rsub|x>=<frac|1|cos<rsup|2><around*|(|x|)>>>
+
+      <item><math|tan> is a continuous function
+
+      <item><math|tan> is strictly increasing on
+      <math|<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>
+
+      <item><math|tan:<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>\<rightarrow\>\<bbb-R\>>
+      is a bijective function
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item><math|tan<around*|(|0|)>=<frac|sin<around*|(|0|)>|cos<around*|(|0|)>>\<equallim\><rsub|<text|[theorem:
+      <reference|exp trigoniometric properties>]>><frac|0|1>=1>
+
+      <item>Let <math|x\<in\><around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>.
+      Using [theorem: <reference|exp derivative of cos(x) and sin(x)>] and
+      [theorem: <reference|diff derivative is local>] it follows that
+      <math|sin<rsub|\|<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>> and
+      <math|cos<rsub|\|<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>> has a
+      derivative at <math|x> with <math|<around*|(|sin<rsub|\|<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>|)><rprime|'><rsub|x>=cos<around*|(|x|)>>
+      and <math|<around*|(|cos<rsub|\|<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>|)><rprime|'><rsub|x>=-sin<around*|(|x|)>>.
+      As <math|tan=<frac|sin<rsub|\|<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>|cos<rsub|\|<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>>>
+      it follows from [theorem: <reference|diff derivative of f/g>] that
+      <math|tan> has a derivative at <math|x> and that
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|tan<rprime|'><rsub|x>>|<cell|=>|<cell|<around*|(|<frac|sin<rsub|\|<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>|cos<rsub|\|<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>>|)><rprime|'><rsub|x>>>|<row|<cell|>|<cell|=>|<cell|<frac|<around*|(|sin<rsub|\|<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>|)><rprime|'><rsub|x>\<cdot\>cos<rsub|\|<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>><rsup|><around*|(|x|)>-<around*|(|cos<rsub|\|<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>><rsup|><around*|(|x|)>|)><rprime|'><rsub|x>\<cdot\>sin<rsub|\|<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>><around*|(|x|)>|*<around*|(|cos<rsub|\|<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>><rsup|><around*|(|x|)>|)><rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|<frac|cos<around*|(|x|)>\<cdot\>cos<around*|(|x|)>+sin<around*|(|x|)>\<cdot\>sin<around*|(|x|)>|cos<rsup|2><around*|(|x|)>>>>|<row|<cell|>|<cell|=>|<cell|<frac|cos<rsup|2><around*|(|x|)>+sin<rsup|2><around*|(|x|)>|cos<rsup|2><around*|(|x|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|exp trigoniometric properties>]>>>|<cell|<frac|1|cos<rsup|2><around*|(|x|)>>>>>>
+      </eqnarray*>
+
+      <item>Let <math|x\<in\><around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>
+      then, as <math|tan<rprime|'><rsub|x>=<frac|1|cos<rsup|2><around*|(|x|)>>>
+      and <math|0\<less\>cos<around*|(|x|)>> [see theorem: <reference|exp
+      trigoniometric properties (1)>(14)] it follows that
+      <math|0\<less\>tan<around*|(|x|)>>. Hence using [theorem:
+      <reference|diff increasing decreasing function>] it follows that
+      <math|tan> is strictly increasing on
+      <math|<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>'
+
+      <item>As <math|\<forall\>x\<in\><around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>
+      <math|tan<rprime|'><rsub|x>> exist it follows from [theorem:
+      <reference|diff derivate and frechet differential>] that <math|tan> is
+      differentiable at <math|x>, hence, using [theorem: <reference|diff
+      differentiable function is continuous>], <math|tan> is continuous at
+      <math|x>.
+
+      <item>We have for <math|tan:<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>\<rightarrow\>\<bbb-R\>>
+
+      <\description>
+        <item*|injectivity>Let <math|x,y\<in\><around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>
+        be such that <math|tan<around*|(|x|)>=tan<around*|(|y|)>>. Assume
+        that <math|x\<neq\>y> then we have either <math|x\<less\>y> or
+        <math|y\<less\>z>. As <math|tan> is strictly increasing by (3) we
+        would then have that <math|tan<around*|(|x|)>\<less\>tan<around*|(|y|)>>
+        or <math|tan<around*|(|y|)>\<less\>tan<around*|(|x|)>> which
+        contradicts <math|tan<around*|(|x|)>=tan<around*|(|y|)>>. Hence we
+        must have that <math|x=y>.
+
+        <item*|surjectivity>Let <math|y\<in\>\<bbb-R\><rsup|+>>. Take
+        <math|z=<frac|y|<sqrt|2>>+1> then
+        <math|0\<less\><frac|1|z>\<less\>1>. As by [theorem: <reference|exp
+        cos , sin bijection>] <math|<rigid|cos:<around*|[|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|]>\<rightarrow\>\<bbb-R\>>>
+        is a bijection \ there exist a <math|x<rprime|'>\<in\><around*|[|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|]>>
+        such that
+
+        <\equation*>
+          <frac|1|z>=cos<around*|(|x<rprime|'>|)>
+        </equation*>
+
+        Further as <math|cos<around*|(|0|)>=1> and
+        <math|cos<around*|(|<frac|\<pi\>|2>|)>=0> and
+        <math|<frac|1|z>\<neq\>0,1> we must have that\ 
+
+        <\equation*>
+          x<rsub|1>\<in\><around*|]|0,<frac|\<pi\>|2>|[>
+        </equation*>
+
+        As by [theorems: <reference|exp derivative of cos(x) and sin(x)>,
+        <reference|exp trigoniometric properties (1)>]
+        <math|\<forall\>t\<in\><around*|]|0,<frac|\<pi\>|2>|[>\<subseteq\><around*|]|0,\<pi\>|[>>
+        <math|sin<rprime|'><rsub|t>=cos<around*|(|t|)>\<gtr\>0> and
+        <rigid|<math|cos<rprime|'><rsub|t>=-sin<around*|(|t|)>\<less\>0>> it
+        follows by [theorem: <reference|diff increasing decreasing function>]
+        that <math|sin> is strictly increasing and <math|cos> is strictly
+        decreasing. So if we take
+
+        <\equation*>
+          x<rsub|2>=max<around*|(|<frac|\<pi\>|4>,x<rsub|1>|)>\<in\><around*|]|0,<frac|\<pi\>|2>|[>
+        </equation*>
+
+        then we have
+
+        <\equation*>
+          <frac|1|<sqrt|2>>\<equallim\><rsub|<text|[theorem: <reference|exp
+          trigoniometric properties (1)>]>>sin<around*|(|<frac|\<pi\>|4>|)>\<leqslant\>sin<around*|(|x<rsub|2>|)><text|
+          and ><frac|1|z>=cos<around*|(|x<rsub|1>|)>\<geqslant\>cos<around*|(|x<rsub|2>|)><text|
+          or >z\<leqslant\><frac|1|cos<around*|(|x<rsub|2>|)>>
+        </equation*>
+
+        hence\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|tan*<around*|(|x<rsub|2>|)>>|<cell|=>|<cell|<frac|sin<around*|(|x<rsub|2>|)>|cos<around*|(|x<rsub|2>|)>>>>|<row|<cell|>|<cell|\<geqslant\>>|<cell|<sqrt|2>\<cdot\><frac|1|cos<around*|(|x<rsub|2>|)>>>>|<row|<cell|>|<cell|\<geqslant\>>|<cell|<sqrt|2>\<cdot\>z>>|<row|<cell|>|<cell|\<gtr\><rsub|z=<frac|y|<sqrt|2>>+1>>|<cell|<sqrt|2>\<cdot\><frac|y|<sqrt|2>>>>|<row|<cell|>|<cell|=>|<cell|y>>>>
+        </eqnarray*>
+
+        So we have found a <math|x<rsub|2>\<in\><around*|]|0,<frac|\<pi\>|2>|[>>
+        such that
+
+        <\equation*>
+          tan<rsub|\|<around*|[|0,x<rsub|2>|]>><around*|(|0|)>=tan<around*|(|0|)>=0\<less\>y\<less\>tan<around*|(|x<rsub|2>|)>=tan<rsub|\|<around*|[|0,x<rsub|2>|]>><around*|(|x<rsub|2>|)>
+        </equation*>
+
+        By [theorem: <reference|continuity and subspace topology (2)>] and
+        (3) it follows that <math|tan<rsub|\|<around*|[|0,x<rsub|2>|]>>> is
+        continuous. So we can use the intermediate value theorem [see
+        theorem: <reference|connected intermediate value theorem>] to find a
+        <math|x<rsub|3>\<in\><around*|[|0,x<rsub|2>|]>> such that
+        <math|tan<around*|(|x<rsub|3>|)>=tan<rsub|\|<around*|[|0,x<rsub|2>|]>><around*|(|x|)>=y>.
+        As <math|tan<around*|(|0|)>\<equallim\><rsub|<around*|(|1|)>>0\<neq\>y>
+        and <math|x<rsub|2>\<less\><frac|\<pi\>|2>> we have found a
+        <math|x<rsub|3>\<in\><around*|]|0,<frac|\<pi\>|2>|[>> such that
+        <math|tan<around*|(|x<rsub|3>|)>>. To summarize
+
+        <\equation>
+          <label|eq 19.52.153>\<forall\>y\<in\>\<bbb-R\><rsup|+><text| there
+          exist a >x\<in\><around*|]|0,<frac|\<pi\>|2>|[><text| such that
+          >tan<around*|(|x|)>=y
+        </equation>
+
+        Now to prove surjectivity: Let <math|y\<in\>\<bbb-R\>> then we have
+        either:
+
+        <\description>
+          <item*|<math|y=0>>Then by (1) <math|tan<around*|(|0|)>=0=y>.
+
+          <item*|<math|0\<less\>y>>Then by [eq: <reference|eq 19.52.153>]
+          there exist a <math|x\<in\><around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>
+          such that <math|tan<around*|(|x|)>=y>
+
+          <item*|<math|y\<less\>0>>Then <math|-<frac|1|y>\<in\>\<bbb-R\><rsup|+>>
+          and by [eq: <reference|eq 19.52.153>] there exist a
+          <math|x<rprime|'>\<in\><around*|]|0,<frac|\<pi\>|2>|[>> such that
+          <math|tan<around*|(|x<rprime|'>|)>=-<frac|1|y>>. Take
+          <math|x=x<rprime|'>-<frac|\<pi\>|2>> then
+          <math|x\<in\><around*|]|-<frac|\<pi\>|2>,0|[>\<subseteq\><around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>
+          and\ 
+
+          <\equation*>
+            y=-<frac|1|tan<around*|(|x<rprime|'>|)>>=<frac|cos<around*|(|x<rprime|'>|)>|sin<around*|(|x<rprime|'>|)>>=<frac|cos<around*|(|x+<frac|\<pi\>|2>|)>|sin<around*|(|x+<frac|\<pi\>|2>|)>>\<equallim\><rsub|<text|[theorem:
+            <reference|exp trigoniometric properties
+            (1)>>>-<frac|-sin*<around*|(|x|)>|cos<around*|(|x|)>>=tan<around*|(|x|)>
+          </equation*>
+        </description>
+
+        So in all cases we there exist a <math|x\<in\><around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>
+        such that <math|y=tan<around*|(|x|)>> proving surjectivity
+      </description>
+    </enumerate>
+  </proof>
+
+  As by the previous theorem <math|tan:<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>\<rightarrow\>\<bbb-R\>>
+  is a bijection it has a inverse called the <math|arctan>.
+
+  <\definition>
+    <label|exp arctan>The arctangent function is defined by\ 
+
+    <\equation*>
+      arctan:\<bbb-R\>\<rightarrow\><around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[><text|
+      is defined by >arctan=tan<rsup|-1>
+    </equation*>
+
+    which as the inverse of a bijection is itself a bijection.
+  </definition>
 </body>
 
 <\initial>
   <\collection>
     <associate|chapter-nr|18>
-    <associate|page-first|1179>
+    <associate|page-first|1181>
     <associate|page-medium|papyrus>
     <associate|section-nr|4>
     <associate|subsection-nr|4>
@@ -4013,6 +4566,8 @@
     <associate|auto-34|<tuple|<with|mode|<quote|math>|cos<around*|(|z|)>>|?>>
     <associate|auto-35|<tuple|<with|mode|<quote|math>|\<pi\>>|?>>
     <associate|auto-36|<tuple|Euler's equation|?>>
+    <associate|auto-37|<tuple|<with|mode|<quote|math>|arccosine<around*|(|x|)>>|?>>
+    <associate|auto-38|<tuple|<with|mode|<quote|math>|arcsine<around*|(|x|)>>|?>>
     <associate|auto-4|<tuple|power series|?>>
     <associate|auto-5|<tuple|<with|mode|<quote|math>|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>\<cdot\>z<rsup|i>>|?>>
     <associate|auto-6|<tuple|convergence domain|?>>
@@ -4063,6 +4618,8 @@
     <associate|eq 19.49.152|<tuple|19.49|?>>
     <associate|eq 19.5.150|<tuple|19.5|?>>
     <associate|eq 19.50.152|<tuple|19.50|?>>
+    <associate|eq 19.51.152|<tuple|19.51|?>>
+    <associate|eq 19.52.153|<tuple|19.52|?>>
     <associate|eq 19.6.150|<tuple|19.8|?>>
     <associate|eq 19.6.151|<tuple|19.6|?>>
     <associate|eq 19.60.152|<tuple|19.60|?>>
@@ -4078,6 +4635,9 @@
     <associate|exp Euler's number|<tuple|19.33|?>>
     <associate|exp Mertens theorem|<tuple|19.29|?>>
     <associate|exp Young's inequality|<tuple|19.53|?>>
+    <associate|exp arccosine arcsine|<tuple|19.67|?>>
+    <associate|exp arccosine arcsine properties|<tuple|19.68|?>>
+    <associate|exp arctan|<tuple|19.72|?>>
     <associate|exp ball extensions|<tuple|19.11|?>>
     <associate|exp ball of convergence|<tuple|19.7|?>>
     <associate|exp balls inclucsion|<tuple|19.14|?>>
@@ -4089,6 +4649,7 @@
     <associate|exp convergence domains and balls (2)|<tuple|19.13|?>>
     <associate|exp convergence domains property|<tuple|19.5|?>>
     <associate|exp convergion radius|<tuple|19.8|?>>
+    <associate|exp cos , sin bijection|<tuple|19.66|?>>
     <associate|exp cos has a zero element|<tuple|19.59|?>>
     <associate|exp cos/sin in range 0 to pi/2|<tuple|19.63|?>>
     <associate|exp d'Alembert|<tuple|19.20|?>>
@@ -4114,6 +4675,8 @@
     <associate|exp power series|<tuple|19.1|?>>
     <associate|exp product of power series|<tuple|19.30|?>>
     <associate|exp properties|<tuple|19.32|?>>
+    <associate|exp tangent|<tuple|19.69|?>>
+    <associate|exp tangent properties|<tuple|19.71|?>>
     <associate|exp triginiometric function|<tuple|19.56|?>>
     <associate|exp trigoniometric properties|<tuple|19.57|?>>
     <associate|exp trigoniometric properties (1)|<tuple|19.64|?>>
@@ -4177,10 +4740,16 @@
       <tuple|<tuple|<with|mode|<quote|math>|cos<around*|(|z|)>>>|<pageref|auto-34>>
 
       <tuple|<tuple|<with|mode|<quote|math>|\<pi\>>>|<pageref|auto-35>>
+
+      <tuple|<tuple|Euler's equation>|<pageref|auto-36>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|arccosine<around*|(|x|)>>>|<pageref|auto-37>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|arcsine<around*|(|x|)>>>|<pageref|auto-38>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|19<space|2spc>The
-      exponational function> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      exponential function> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1><vspace|0.5fn>
 
       19.1<space|2spc>Power series <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
@@ -4200,7 +4769,7 @@
       <no-break><pageref|auto-16>>
 
       <with|par-left|<quote|1tab>|19.1.4<space|2spc>Differentiation of the
-      exponental function <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      exponential function <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-19>>
 
       <with|par-left|<quote|1tab>|19.1.5<space|2spc>Properties of the
@@ -4211,7 +4780,7 @@
       \ <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-25>>
 
-      <with|par-left|<quote|1tab>|19.1.7<space|2spc>Trigoniometric functions
+      <with|par-left|<quote|1tab>|19.1.7<space|2spc>Trigonometric functions
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-29>>
     </associate>

@@ -14,11 +14,14 @@
     a<rsub|n>\<cdot\>x<rsup|n>+a<rsub|n-1>\<cdot\>x<rsup|n-1>+\<cdots\>+a<rsub|0>=0
   </equation*>
 
-  This is mostly done using complex analysis. However in this case we will
-  use algebraic operations to prove the theorem. First to define the concept
-  of a higher order equation we must introduce the concept of polynomals.
+  has a solution. In many books this is done by integration in the complex
+  plane. However in this book we will use algebraic and analytic operations
+  to prove the theorem. First to define the concept of a higher order
+  equation we introduce the concept of polynomials.
 
   \;
+
+  TODO checked to here
 
   <section|Prerequisites>
 
@@ -29,8 +32,8 @@
     function <math|p:\<bbb-C\>\<rightarrow\>\<bbb-C\>> is
     a<with|font-series|bold| <with|font-series|bold|polynomial>>
     <with|font-series|bold|of order <math|n>> if there exist a family
-    <math|<around*|{|a<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>\<subseteq\>\<bbb-C\>>
-    called the <with|font-series|bold|coefficients of <math|p>> with
+    <math|<around*|{|a<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>\<subseteq\>\<bbb-C\>>,
+    called the <with|font-series|bold|coefficients of <math|p>>, with
     <math|a<rsub|n>\<neq\>0> so that <math|p> is defined by\ 
 
     <\equation*>
@@ -53,16 +56,17 @@
     </equation*>
   </definition>
 
-  Note that in principle a polynomial can have different coefficients and be
-  of different orders. We will see however that this is not the case and that
-  every polynomial can be represented by a unique set of coefficients.
+  Note that in principle different coefficients of different order define the
+  same polynomial function. We will prove however that this is not the case
+  and that every polynomial can be represented by a unique set of
+  coefficients.
 
   <\lemma>
     <label|fundamental coefficients of zero polynome>Let
     <math|<around*|{|a<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>\<subseteq\>\<bbb-C\>>
     such that <math|\<forall\>x\<in\>\<bbb-R\>\<subseteq\>\<bbb-C\>> we have
     <math|<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\>x<rsup|i>=0> then
-    <math|\<forall\>i\<in\><around*|{|0,\<ldots\>,n|}>> we have
+    <math|<rigid|\<forall\>i\<in\><around*|{|0,\<ldots\>,n|}>>> we have
     <math|a<rsub|i>=0>
   </lemma>
 
@@ -235,7 +239,7 @@
     </equation*>
   </definition>
 
-  Actuall it turns out that the relation between a polynomial and its
+  Actually it turns out that the relation between a polynomial and its
   coefficients is a bijection
 
   <\theorem>
@@ -603,7 +607,7 @@
         </equation*>
 
         so that <math|<below|lim|x\<rightarrow\>\<infty\>><big|sum><rsub|i=1><rsup|n+1>a<rsub|i>\<cdot\>x<rsup|i>>
-        proveing that <math|n+1\<in\>S>.
+        proving that <math|n+1\<in\>S>.
       </description>
 
       <item>If <math|a<rsub|n>\<less\>0> then
@@ -614,7 +618,7 @@
     </enumerate>
   </proof>
 
-  <subsection|Propertues of <math|\<bbb-C\>> needed for the fundamental
+  <subsection|Properties of <math|\<bbb-C\>> needed for the fundamental
   theorem>
 
   First we define a norm on <math|\<bbb-C\>> that does not need the square
@@ -971,7 +975,7 @@
       composition of continuous functions is continuous [see theorem:
       <reference|continuity composition>], it follows that
       <math|<around*|(|\<alpha\><rsub|i>\<cdot\>|)>\<circ\><around*|(|\<cdot\>|)><rsup|i>>
-      is continous. Using now [theorem: <reference|continuity of finite sum
+      is continuous. Using now [theorem: <reference|continuity of finite sum
       of continuous functions>] it follows that\ 
 
       <\equation*>
@@ -1018,7 +1022,7 @@
       </equation*>
 
       By (3),(4) <math|p> and <math|<around*|\<langle\>|\<cdot\>|\<rangle\>>>
-      are continous, hence using [theorem: <reference|continuity
+      are continuous, hence using [theorem: <reference|continuity
       composition>] <math|p\<cdot\>p> is continuous.
 
       <item>Let <math|\<varepsilon\>\<in\>\<bbb-R\>>, <math|z\<in\>\<bbb-C\>>
@@ -1082,7 +1086,7 @@
         we have <math|<around*|\<\|\|\>|g<around*|(|z|)>-g<around*|(|z<rprime|'>|)>|\<\|\|\>>\<less\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\<\|\|\>|f<around*|(|z|)>|\<\|\|\>>|)>>>>
       </equation>
 
-      Defin <math|\<delta\>=min<around*|(|\<delta\><rsub|1>,\<delta\><rsub|2>|)>\<in\>\<bbb-R\><rsup|+>>
+      Define <math|\<delta\>=min<around*|(|\<delta\><rsub|1>,\<delta\><rsub|2>|)>\<in\>\<bbb-R\><rsup|+>>
       then if <math|z<rprime|'>\<in\>\<bbb-C\>> with
       <math|<around*|\<\|\|\>|z<rprime|'>|\<\|\|\>>\<less\>\<delta\>> we have\ 
 
@@ -1122,7 +1126,7 @@
   </lemma>
 
   <\proof>
-    This is easely proved by induction.\ 
+    This is easily proved by induction.\ 
 
     <\enumerate>
       <item>Take <math|S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|<around*|(|1+i|)><rsup|4\<cdot\>n+2>=2\<cdot\><around*|(|-4|)><rsup|n>\<cdot\>i|}>>
@@ -1648,7 +1652,7 @@
       <label|eq 17.25.136>A=1+<binom|2\<cdot\>k|4>\<cdot\><frac|1|k<rsup|4>>-<binom|2\<cdot\>k|2>\<cdot\><frac|1|k<rsup|2>>+<big|sum><rsub|l\<in\><around*|{|2\<cdot\>j+1\|j\<in\><around*|{|1,\<ldots\>,n-1|}>|}>><around*|(|<binom|2\<cdot\>k|2\<cdot\>*l+2>\<cdot\><frac|1|k<rsup|2\<cdot\>l+2>>-<binom|2\<cdot\>k|2\<cdot\>l>\<cdot\><frac|1|k<rsup|2\<cdot\>l>>|)>
     </equation>
 
-    and as <math|A> does not containg <math|i> anymore we have also\ 
+    and as <math|A> does not contains <math|i> anymore we have also\ 
 
     <\equation>
       <label|eq 17.26.136>A\<in\>\<bbb-R\>
@@ -1884,7 +1888,7 @@
       <reference|eq 17.28.136>]>>B<rprime|'>\<gtr\>0
     </equation>
 
-    Summaring [eq: <reference|eq 17.40.136>] gives finally
+    Summarizing [eq: <reference|eq 17.40.136>] gives finally
 
     <\equation*>
       Re<around*|(|\<zeta\><rsup|k>|)>\<less\>0\<less\>Img<around*|(|\<zeta\><rsup|k>|)>
@@ -2104,7 +2108,7 @@
     <\eqnarray*>
       <tformat|<table|<row|<cell|0>|<cell|\<leqslant\>>|<cell|r<around*|(|z|)>\<cdot\><wide|r<around*|(|z|)>|\<wide-bar\>>-r<around*|(|0|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|r<around*|(|0|)>+z<rsup|k>\<cdot\>q<around*|(|z|)>|)>\<cdot\><around*|(|<wide|r<around*|(|0|)>+z<rsup|k>\<cdot\>q<around*|(|z|)>|\<wide-bar\>>|)>-<around*|(|r<around*|(|0|)>+0<rsup|k>\<cdot\>q<around*|(|0|)>|)>\<cdot\><around*|(|<wide|r<around*|(|0|)>+0<rsup|k>\<cdot\>q<around*|(|0|)>|\<wide-bar\>>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|r<around*|(|0|)>+z<rsup|k>\<cdot\>q<around*|(|z|)>|)>\<cdot\><around*|(|<wide|r<around*|(|0|)>+z<rsup|k>\<cdot\>q<around*|(|z|)>|\<wide-bar\>>|)>-r<around*|(|0|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
       <reference|complex conjugate properties>]>>>|<cell|<around*|(|r<around*|(|0|)>+z<rsup|k>\<cdot\>q<around*|(|z|)>|)>\<cdot\><around*|(|<wide|r<around*|(|0|)>|\<wide-bar\>>+<wide|z<rsup|k>\<cdot\>q<around*|(|z|)>|\<wide-bar\>>|)><wide||\<wide-bar\>>-r<around*|(|0|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|=>|<cell|r<around*|(|0|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>+r<around*|(|0|)>\<cdot\><wide|z<rsup|k>\<cdot\>q<around*|(|z|)>|\<wide-bar\>>+z<rsup|k>\<cdot\>q<around*|(|z|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>+z<rsup|k>\<cdot\>q<around*|(|z|)>\<cdot\><wide|z<rsup|k>\<cdot\>q<around*|(|z|)>|\<wide-bar\>>-r<around*|(|0|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|=>|<cell|r<around*|(|0|)>\<cdot\><wide|z<rsup|k>\<cdot\>q<around*|(|z|)>|\<wide-bar\>>+z<rsup|k>\<cdot\>q<around*|(|z|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>+z<rsup|k>\<cdot\>q<around*|(|z|)>\<cdot\><wide|z<rsup|k>\<cdot\>q<around*|(|z|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|=>|<cell|<wide|<wide|r<around*|(|0|)>|\<wide-bar\>>\<cdot\>z<rsup|k>\<cdot\>q<around*|(|z|)>|\<wide-bar\>>+z<rsup|k>\<cdot\>q<around*|(|z|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>+z<rsup|k>\<cdot\>q<around*|(|z|)>\<cdot\><wide|z<rsup|k>\<cdot\>q<around*|(|z|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|=>|<cell|<wide|z<rsup|k>\<cdot\>q<around*|(|z|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>|\<wide-bar\>>+z<rsup|k>\<cdot\>q<around*|(|z|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>+z<rsup|k>\<cdot\>q<around*|(|z|)>\<cdot\><wide|z<rsup|k>\<cdot\>q<around*|(|z|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|complex conjugate properties>]>>>|<cell|2\<cdot\>Re<around*|(|z<rsup|k>\<cdot\>q<around*|(|z|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>|)>+z<rsup|k>\<cdot\>q<around*|(|z|)>\<cdot\><wide|z<rsup|k>\<cdot\>q<around*|(|z|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theoren:
+      <reference|complex conjugate properties>]>>>|<cell|2\<cdot\>Re<around*|(|z<rsup|k>\<cdot\>q<around*|(|z|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>|)>+z<rsup|k>\<cdot\>q<around*|(|z|)>\<cdot\><wide|z<rsup|k>\<cdot\>q<around*|(|z|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
       <reference|complex norm properties>]>>>|<cell|2\<cdot\>Re<around*|(|z<rsup|k>\<cdot\>q<around*|(|z|)>\<cdot\><wide|r<around*|(|0|)>|\<wide-bar\>>|)>+<around*|\||z<rsup|k>\<cdot\>q<around*|(|z|)>|\|><rsup|2>>>>>
     </eqnarray*>
 
@@ -2147,7 +2151,7 @@
       ><around*|\<langle\>|\<cdot\>|\<rangle\>>\<circ\><around*|(|x<rsup|k>\<cdot\>|)>\<circ\>q\<circ\><around*|(|x\<cdot\>|)>
     </equation*>
 
-    wich is continous as the composition the continuous mappings
+    which is continuous as the composition the continuous mappings
     <math|<around*|\<langle\>|\<cdot\>|\<rangle\>>>,
     <math|<around*|(|x<rsup|k>\<cdot\>|)>>, <math|q> and
     <math|<around*|(|x\<cdot\>|)>> [see theorem: <reference|fundamental
@@ -2224,7 +2228,7 @@
     What about <math|\<delta\>=0>? Assume that
     <math|f<rsub|x><around*|(|0|)>\<less\>0> then
     <math|\<varepsilon\>=-f<rsub|x><around*|(|0|)>\<in\>\<bbb-R\><rsup|+>> so
-    by the continuoty of <math|f<rsub|x>> at <math|0> there exist a
+    by the continuity of <math|f<rsub|x>> at <math|0> there exist a
     <math|\<zeta\>\<in\>\<bbb-R\><rsup|+>> such that
     <math|\<forall\>\<delta\>\<in\>\<bbb-R\>> with
     <math|<around*|\<\|\|\>|f<rsub|x><around*|(|0|)>-f<rsub|x><around*|(|\<zeta\>|)>|\<\|\|\>>\<less\>-f<around*|(|0|)>>.
@@ -2423,7 +2427,7 @@
           <label|eq 17.68.139>c\<less\>0\<less\>d
         </equation>
 
-        Subsituting <math|x<rsup|k>=c+i\<cdot\>d> in [eq: <reference|eq
+        Substituting <math|x<rsup|k>=c+i\<cdot\>d> in [eq: <reference|eq
         17.66.139>] gives
 
         <\eqnarray*>
@@ -2649,7 +2653,7 @@
       So we have that <math|1\<in\>S>\ 
 
       <item*|<math|n\<in\>\<bbb-N\>\<rightarrow\>n+1\<in\>\<bbb-N\>>>Let
-      <math|p> be a polymial with <math|1\<leqslant\>ord<around*|(|p|)>\<leqslant\>n+1>
+      <math|p> be a polynomial with <math|1\<leqslant\>ord<around*|(|p|)>\<leqslant\>n+1>
       then we have for <math|ord<around*|(|p|)>> either:
 
       <\description>
@@ -2721,10 +2725,9 @@
       </description>
     </description>
 
-    Mathethematical induction proves that <math|S=\<bbb-N\>>. Hence if
-    <math|p> is a polynomial with <math|ord<around*|(|p|)>\<in\>\<bbb-N\>>
-    then as <math|1\<leqslant\>ord<around*|(|p|)>\<in\>\<bbb-N\>=S> it
-    follows that\ 
+    Mathematical induction proves that <math|S=\<bbb-N\>>. Hence if <math|p>
+    is a polynomial with <math|ord<around*|(|p|)>\<in\>\<bbb-N\>> then as
+    <math|1\<leqslant\>ord<around*|(|p|)>\<in\>\<bbb-N\>=S> it follows that\ 
 
     <\equation*>
       \<exists\>c\<in\>\<bbb-C\>\\<around*|{|0|}><text| and
@@ -3103,7 +3106,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|16>
-    <associate|page-first|1069>
+    <associate|page-first|1081>
     <associate|par-first|0tab>
     <associate|section-nr|6>
     <associate|subsection-nr|0>

@@ -580,9 +580,9 @@
         <reference|class de Morgan's law>]>>>|<cell|A<big|cap><around*|(|A<rsup|c><big|cup><around*|(|B<rsup|c>|)><rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|class complement of comploment>]>>>|<cell|A<big|cap><around*|(|A<rsup|c><big|cup>B|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|class class commutative,idempotent,associative,distributivity>]>>>|<cell|<around*|(|A<big|cap>A<rsup|c>|)><big|cup><around*|(|A<big|cap>B|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|class difference>]>>>|<cell|<around*|(|A\\A|)><big|cup><around*|(|A<big|cap>B|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theoremc:
+        <reference|class difference>]>>>|<cell|<around*|(|A\\A|)><big|cup><around*|(|A<big|cap>B|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|class universal and empotyset
-        properties>]>>>|<cell|\<varnothing\><big|cup><around*|(|A<big|cap>B|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theoremc:
+        properties>]>>>|<cell|\<varnothing\><big|cup><around*|(|A<big|cap>B|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|class universal and empotyset
         properties>]>>>|<cell|A<big|cap>B>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|class inclusion and union and
@@ -2327,7 +2327,7 @@
     </equation*>
 
     is a partial function. We call <math|g\<circ\>f:A\<rightarrow\>D> the
-    <with|font-series|bold|composiiton> of <math|f:A\<rightarrow\>B> and
+    <with|font-series|bold|composition> of <math|f:A\<rightarrow\>B> and
     <math|g:C-D>
   </theorem>
 
@@ -2582,7 +2582,7 @@
   </definition>
 
   So every function is also a partial function, hence statements about
-  partial functions applies also for functions. One special benefiit of
+  partial functions applies also for functions. One special benefit of
   functions is the following.
 
   <\theorem>
@@ -5029,7 +5029,7 @@
         f<rsub|\|C>:C\<rightarrow\>f<around*|(|C|)><text| is a bijection>
       </equation*>
 
-      <item>As a bijection is injective thie follows from
+      <item>As a bijection is injective this follows from
       <math|<around*|(|3|)>>.
     </enumerate>
   </proof>
@@ -5149,7 +5149,7 @@
     </enumerate>
   </proof>
 
-  The following theorem will be usefull for manifolds later
+  The following theorem will be useful for manifolds later
 
   <\theorem>
     Let <math|f:A\<rightarrow\>B> and <math|g:C\<rightarrow\>D> be injections
@@ -5571,8 +5571,8 @@
   <subsection|Indexed sets>
 
   In many cases we have to deal with sets indexed by a index, which is
-  actually a function in another form. We will use this in toplogy and vector
-  spaces.
+  actually a function in another form. We will use this in topology and
+  vector spaces.
 
   <\definition>
     <label|function indexed set><dueto|indexed set>Let
@@ -5614,7 +5614,7 @@
   </definition>
 
   <\example>
-    <label|function indexed set example>Every set can be writen as a unique
+    <label|function indexed set example>Every set can be written as a unique
     indexed set indexed by itself. So if <math|A> is a set then
     <math|A=<around*|{|Id<rsub|X><around*|(|i|)>\|i\<in\>I|}>>.
   </example>
@@ -6723,7 +6723,7 @@
       <big|cup><rsub|i\<in\>I>A<rsub|i>=<big|cup><rsub|<around*|(|i,j|)>\<in\>I\<times\>J>B<rsub|i,j>
     </equation*>
 
-    in othere words\ 
+    in other words\ 
   </theorem>
 
   <\proof>
@@ -9277,7 +9277,7 @@
     be partial ordered classes, <math|D\<subseteq\>B>
 
     <\enumerate>
-      <item>If <math|D\<subseteq\>B> is equiped with the induced order from
+      <item>If <math|D\<subseteq\>B> is equipped with the induced order from
       <math|<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>> [see
       theorem: <reference|order partial order on sub class>] and\ 
 
@@ -9294,7 +9294,7 @@
         is a order homeomorphism>
       </equation*>
 
-      <item>If <math|D\<subseteq\>B> is equiped with the induced order from
+      <item>If <math|D\<subseteq\>B> is equipped with the induced order from
       <math|<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>> [see
       theorem: <reference|order partial order on sub class>] and
 
@@ -9308,10 +9308,10 @@
 
       <\equation*>
         g\<circ\>f:<around*|\<langle\>|A,\<leqslant\><rsub|A>|\<rangle\>>\<rightarrow\><around*|\<langle\>|C,\<leqslant\><rsub|C>|\<rangle\>><text|
-        is stritly increasing>
+        is strictly increasing>
       </equation*>
 
-      <item>If <math|D\<subseteq\>B> is equiped with the induced order from
+      <item>If <math|D\<subseteq\>B> is equipped with the induced order from
       <math|<around*|\<langle\>|B,\<leqslant\><rsub|B>|\<rangle\>>> [see
       theorem: <reference|order partial order on sub class>] and
 
@@ -9944,8 +9944,8 @@
     </enumerate>
   </proof>
 
-  The following theorem will be used a lot of time when dealing with
-  supremums and infinums.
+  The following theorem will be used a lot of time when dealing with supremum
+  and infinum.
 
   <\theorem>
     <label|order sup, inf property>Let <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>>
@@ -13772,7 +13772,7 @@
 
       <\enumerate>
         <item>Let <math|z\<in\>I> then using the definition of a supremum and
-        infinum as a upper and lowerbound that
+        infinum as a upper and lower bound that
         \ <math|inf<around*|(|I|)>\<leqslant\>z\<wedge\>z\<leqslant\>sup<around*|(|I|)>>
         so that\ 
 
@@ -14286,7 +14286,7 @@
       Assume that <math|b\<less\>d> then by [eq: <reference|eq 3.84.146>]
       <math|c\<less\>x\<less\>b\<less\>d> so that
       <math|b\<in\><around*|]|c,d|[>=<around*|]|a,b|[>> leading to the
-      contradicton <math|b\<less\>b>, hence\ 
+      contradiction <math|b\<less\>b>, hence\ 
 
       <\equation>
         <label|eq 3.86.146>d\<leqslant\>b
@@ -14336,7 +14336,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|0>
-    <associate|page-first|9>
+    <associate|page-first|11>
     <associate|page-medium|papyrus>
     <associate|par-first|0tab>
     <associate|project-flag|false>

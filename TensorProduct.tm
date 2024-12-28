@@ -43,7 +43,7 @@
   <math|\<varphi\>=h\<circ\>\<nu\>> is actually unique. Hence every
   multilinear mapping <math|\<varphi\>\<in\>Hom<around*|(|V<rsub|1>,\<ldots\>,V<rsub|n>;U|)>>
   can be represented uniquely by a linear mapping
-  <math|h\<in\>Hom<around*|(|P,U|)>> such thast
+  <math|h\<in\>Hom<around*|(|P,U|)>> such that
   <math|\<varphi\>=h\<circ\>\<nu\>>.
 
   <\theorem>
@@ -224,7 +224,7 @@
 
         proving that <math|f+<around*|(|g+h|)>=<around*|(|f+g|)>+h>
 
-        <item*|commutatitivity>If <math|f,g\<in\>\<cal-F\><around*|(|X,F|)>>
+        <item*|commutativity>If <math|f,g\<in\>\<cal-F\><around*|(|X,F|)>>
         then we have <math|\<forall\>x\<in\>X> that\ 
 
         <\equation*>
@@ -518,7 +518,7 @@
     \<delta\><rsub|<around*|(|v<rsub|1>,\<ldots\>,v<rsub|i-1>,x+\<alpha\>\<cdot\>y,v<rsub|i+1>,\<ldots\>,v<rsub|n>|)>>-\<delta\><rsub|<around*|(|v<rsub|1>,\<ldots\>,v<rsub|i-1>,x,v<rsub|i+1>,\<ldots\>,v<rsub|n>|)>>-\<alpha\>\<cdot\>\<delta\><rsub|<around*|(|v<rsub|1>,\<ldots\>,v<rsub|i-1>,y,v<rsub|i+1>,\<ldots\>,v<rsub|n>|)>>
   </equation*>
 
-  are mapped on the neutral element of this newe vector space. The
+  are mapped on the neutral element of this newer vector space. The
   composition of <math|\<delta\>> and this new mapping will be a multilinear
   mapping from <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,|}>>V<rsub|i>>
   to this new space. The standard way to do this is by creating a factor
@@ -572,7 +572,7 @@
   <\definition>
     <label|tensor tensor product of spaces>Let
     <math|n\<in\>\<bbb-N\>,<around*|{|V<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
-    a family of vector spaces over a field <math|F> nd
+    a family of vector spaces over a field <math|F> and
     <math|<around*|\<langle\>|\<cal-F\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,|}>>V<rsub|i>|)>,+,\<cdot\>|\<rangle\>>>
     the free vector space of <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>>
     then <math|V<rsub|1>\<odot\>\<cdots\>\<odot\>V<rsub|n>> is the factor
@@ -955,7 +955,7 @@
         <tformat|<table|<row|<cell|<big|sum><rsub|i\<in\>I<big|cup>J>\<gamma\><rsub|i>\<cdot\>i>|<cell|=>|<cell|<big|sum><rsub|i\<in\>I\\J>\<gamma\><rsub|i>\<cdot\>i+<big|sum><rsub|i\<in\>J\\I>\<gamma\><rsub|i>\<cdot\>i+<big|sum><rsub|i\<in\>I<big|cap>J>\<gamma\><rsub|i>\<cdot\>i>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\>I\\J>\<alpha\><rsub|i>\<cdot\>i+<big|sum><rsub|i\<in\>J\\I>\<alpha\>\<cdot\>\<beta\><rsub|i>\<cdot\>i+<big|sum><rsub|i\<in\>I<big|cap>J><around*|(|\<alpha\><rsub|i>+\<alpha\>\<cdot\>\<beta\><rsub|i>|)>\<cdot\>i>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\>I\\J>\<alpha\><rsub|i>\<cdot\>i+\<alpha\>\<cdot\><big|sum><rsub|i\<in\>J\\I>\<beta\><rsub|i>\<cdot\>i+<big|sum><rsub|i\<in\>I<big|cap>J>\<alpha\><rsub|i>\<cdot\>i+\<alpha\>\<cdot\><big|sum><rsub|i\<in\>I<big|cap>J>\<beta\><rsub|i>\<cdot\>i>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i\<in\>I\\J>\<alpha\><rsub|i>\<cdot\>i+<big|sum><rsub|i\<in\>I<big|cap>J>\<alpha\><rsub|i>\<cdot\>i|)>+\<alpha\>\<cdot\><around*|(|<big|sum><rsub|i\<in\>J\\I>\<beta\><rsub|i>\<cdot\>i+<big|sum><rsub|i\<in\>I<big|cap>J>\<beta\><rsub|i>\<cdot\>i|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\>I<big|cup>J>\<alpha\><rsub|i>\<cdot\>i+<big|sum><rsub|i\<in\>I<big|cup>J>\<beta\><rsub|i>\<cdot\>i>>|<row|<cell|>|<cell|=>|<cell|x+\<alpha\>\<cdot\>y>>>>
       </eqnarray*>
 
-      so that by definitiob of <math|\<gamma\>>
+      so that by definition of <math|\<gamma\>>
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|\<gamma\><around*|(|x+\<alpha\>\<cdot\>y|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i\<in\>I<big|cup>J>\<gamma\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>>|<cell|>|<cell|>>|<row|<cell|<big|sum><rsub|i\<in\>I\\J>\<gamma\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>+<big|sum><rsub|i\<in\>J\\I>\<gamma\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>+<big|sum><rsub|i\<in\>I<big|cap>J>\<gamma\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|i\<in\>I\\J>\<alpha\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>+<big|sum><rsub|i\<in\>J\\I>\<alpha\>\<cdot\>\<beta\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>+<big|sum><rsub|i\<in\>I<big|cap>J><around*|(|\<alpha\><rsub|i>+\<alpha\>\<cdot\>\<beta\><rsub|i>|)>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<wide*|<big|sum><rsub|i\<in\>I\\J>\<alpha\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>|\<wide-underbrace\>><rsub|<around*|(|1|)>>+<wide*|\<alpha\>\<cdot\><big|sum><rsub|i\<in\>J\\I>\<beta\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>|\<wide-underbrace\>><rsub|<around*|(|2|)>>+<wide*|<big|sum><rsub|i\<in\>I<big|cap>J>\<alpha\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>|\<wide-underbrace\>><rsub|<around*|(|1|)>>+<wide*|\<alpha\>\<cdot\><big|sum><rsub|i\<in\>I<big|cap>J>\<beta\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>|\<wide-underbrace\>><rsub|<around*|(|2|)>>>|<cell|=>|<cell|>>|<row|<cell|<wide*|<big|sum><rsub|i\<in\>I>\<alpha\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>|\<wide-underbrace\>><rsub|<around*|(|1|)>>+<wide*|\<alpha\>\<cdot\><big|sum><rsub|i\<in\>I>\<beta\><rsub|i>\<cdot\>\<varphi\><around*|(|\<delta\><rsup|-1><around*|(|i|)>|)>|\<wide-underbrace\>><rsub|<around*|(|2|)>>>|<cell|=>|<cell|>>|<row|<cell|\<gamma\><around*|(|x|)>+\<alpha\>\<cdot\>\<gamma\><around*|(|y|)>>|<cell|>|<cell|>>>>
@@ -2097,7 +2097,7 @@
       so that <math|k<rsub|z>-1\<in\>K<rsub|z>> contradicting
       <math|k<rsub|z>=min<around*|(|K<rsub|z>|)>>. Hence
       <math|<around*|{|u<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k<rsub|z>|}>>>
-      is not lineard dependent, proving that
+      is not linear dependent, proving that
       <math|<around*|{|u<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k<rsub|z>|}>>>
       is linear dependent.
 
@@ -2142,7 +2142,7 @@
       so that <math|k<rsub|z>-1\<in\>K<rsub|z>> contradicting
       <math|k<rsub|z>=min<around*|(|K<rsub|z>|)>>. Hence
       <math|<around*|{|u<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k<rsub|z>|}>>>
-      is not lineard dependent, proving that
+      is not linear dependent, proving that
       <math|<around*|{|u<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k<rsub|z>|}>>>
       is linear dependent.
     </enumerate>
@@ -2738,7 +2738,7 @@
       <label|eq 13.42.129>h\<circ\>k=Id<rsub|P>
     </equation>
 
-    Now we are ready to consruct the tensor product, starting with the
+    Now we are ready to construct the tensor product, starting with the
     multilinear mapping. Define [see eq: <reference|eq 13.22.129>,
     <reference|eq 13.34.129>]
 
@@ -3444,7 +3444,7 @@
         V<rsub|1>\<otimes\>V<rsub|2>=<around*|(|W<rsub|1>\<otimes\>V<rsub|2>|)>\<oplus\><around*|(|W<rsub|2>\<otimes\>V<rsub|2>|)>
       </equation*>
 
-      <item>The proof is simular to the proof of (1). If
+      <item>The proof is similar to the proof of (1). If
       <math|v=<around*|(|v<rsub|1>,v<rsub|2>|)>\<in\>V<rsub|1>\<cdot\>V<rsub|2>>
       then as <math|V<rsub|2>=W<rsub|1>\<oplus\>W<rsub|2>> there exists
       <with|font-series|bold|unique> <math|w<rsub|1>\<in\>W<rsub|1>>,
@@ -4347,7 +4347,7 @@
       by >\<nu\><around*|(|v<rsub|1>,\<ldots\>,v<rsub|n>|)>=<around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<lambda\><rsub|i>|)>\<cdot\>\<otimes\><around*|(|e<rsub|1>,\<ldots\>,e<rsub|n>|)>
     </equation*>
 
-    whete <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    where <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
     <math|v<rsub|i>=\<lambda\><rsub|i>\<cdot\>e<rsub|i>> [the unique
     expansion of a vector in a given basis]. Then we proof that
 
@@ -4684,7 +4684,7 @@
     </equation*>
   </definition>
 
-  We introduct now the concept of <math|p>-<math|q> tensors.
+  We introduce now the concept of <math|p>-<math|q> tensors.
 
   <\definition>
     <label|tensor product p-q-tensors>Let <math|V> be a vector space over a
@@ -4756,231 +4756,185 @@
 
 <\initial>
   <\collection>
-    <associate|chapter-nr|11>
-    <associate|page-first|?>
+    <associate|chapter-nr|12>
+    <associate|page-first|623>
     <associate|par-first|0tab>
-    <associate|section-nr|9>
+    <associate|section-nr|0>
     <associate|subsection-nr|0>
   </collection>
 </initial>
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|12|?>>
+    <associate|auto-1|<tuple|13|?>>
     <associate|auto-2|<tuple|<with|mode|<quote|math>|F<around*|(|X,F|)>>|?>>
     <associate|auto-3|<tuple|free vector space over a set|?>>
-    <associate|auto-4|<tuple|free vector space over a set|?>>
-    <associate|direct sum|<tuple|12.5|?>>
-    <associate|direct sum and bijection|<tuple|12.13|?>>
-    <associate|direct sum and isomorphism|<tuple|12.16|?>>
-    <associate|direct sum decomposition|<tuple|12.8|?>>
-    <associate|direct sum dimension|<tuple|12.15|?>>
-    <associate|direct sum empty sum|<tuple|12.2|?>>
-    <associate|direct sum index union (1)|<tuple|12.9|?>>
-    <associate|direct sum index union (2)|<tuple|12.10|?>>
-    <associate|direct sum index union (3)|<tuple|12.11|?>>
-    <associate|direct sum of a empty family|<tuple|12.6|?>>
-    <associate|direct sum of sets|<tuple|12.1|?>>
-    <associate|direct sum of sets properties|<tuple|12.3|?>>
-    <associate|direct sum of subspaces|<tuple|12.4|?>>
-    <associate|direct sum of two vector spaces|<tuple|12.14|?>>
-    <associate|direct sum singleton|<tuple|12.7|?>>
-    <associate|eq 12.1.1224|<tuple|12.1|?>>
-    <associate|eq 12.10.132|<tuple|12.11|?>>
-    <associate|eq 12.11.132|<tuple|12.12|?>>
-    <associate|eq 12.12.127|<tuple|12.27|?>>
-    <associate|eq 12.12.132|<tuple|12.13|?>>
-    <associate|eq 12.13.132|<tuple|12.14|?>>
-    <associate|eq 12.14.132|<tuple|12.15|?>>
-    <associate|eq 12.15.132|<tuple|12.16|?>>
-    <associate|eq 12.16.132|<tuple|12.17|?>>
-    <associate|eq 12.17.132|<tuple|12.18|?>>
-    <associate|eq 12.18.132|<tuple|12.19|?>>
-    <associate|eq 12.19.132|<tuple|12.20|?>>
-    <associate|eq 12.2.124|<tuple|12.2|?>>
-    <associate|eq 12.20.132|<tuple|12.21|?>>
-    <associate|eq 12.21.132|<tuple|12.22|?>>
-    <associate|eq 12.3.124|<tuple|12.4|?>>
-    <associate|eq 12.3.125|<tuple|12.3|?>>
-    <associate|eq 12.5.125|<tuple|12.23|?>>
-    <associate|eq 12.5.132|<tuple|12.6|?>>
-    <associate|eq 12.5.133|<tuple|12.5|?>>
-    <associate|eq 12.6.125|<tuple|12.24|?>>
-    <associate|eq 12.6.132|<tuple|12.7|?>>
-    <associate|eq 12.7.125|<tuple|12.25|?>>
-    <associate|eq 12.7.132|<tuple|12.8|?>>
-    <associate|eq 12.8.132|<tuple|12.9|?>>
-    <associate|eq 12.9.132|<tuple|12.10|?>>
-    <associate|eq 13.1.127|<tuple|12.11|?>>
-    <associate|eq 13.1.129|<tuple|12.1|?>>
-    <associate|eq 13.10.127|<tuple|12.4|?>>
-    <associate|eq 13.11.127|<tuple|12.5|?>>
-    <associate|eq 13.110.144|<tuple|12.110|?>>
-    <associate|eq 13.111.144|<tuple|12.111|?>>
-    <associate|eq 13.112.144|<tuple|12.112|?>>
-    <associate|eq 13.12.127|<tuple|12.6|?>>
-    <associate|eq 13.13.128|<tuple|12.7|?>>
-    <associate|eq 13.14.127|<tuple|12.8|?>>
-    <associate|eq 13.15.128|<tuple|12.9|?>>
-    <associate|eq 13.16.128|<tuple|12.10|?>>
-    <associate|eq 13.19.135|<tuple|12.19|?>>
-    <associate|eq 13.19129|<tuple|12.32|?>>
-    <associate|eq 13.2.127|<tuple|12.12|?>>
-    <associate|eq 13.2.129|<tuple|12.2|?>>
-    <associate|eq 13.20.129|<tuple|12.33|?>>
-    <associate|eq 13.20.135|<tuple|12.20|?>>
-    <associate|eq 13.21.129|<tuple|12.34|?>>
-    <associate|eq 13.21.135|<tuple|12.21|?>>
-    <associate|eq 13.22.129|<tuple|12.47|?>>
-    <associate|eq 13.22.137|<tuple|12.23|?>>
-    <associate|eq 13.22.139|<tuple|12.22|?>>
-    <associate|eq 13.23.129|<tuple|12.48|?>>
-    <associate|eq 13.23.137|<tuple|12.24|?>>
-    <associate|eq 13.24.129|<tuple|12.49|?>>
-    <associate|eq 13.24.137|<tuple|12.25|?>>
-    <associate|eq 13.25.129|<tuple|12.50|?>>
-    <associate|eq 13.25.137|<tuple|12.27|?>>
-    <associate|eq 13.25.138|<tuple|12.26|?>>
-    <associate|eq 13.26.129|<tuple|12.51|?>>
-    <associate|eq 13.26.137|<tuple|12.29|?>>
-    <associate|eq 13.27.129|<tuple|12.52|?>>
-    <associate|eq 13.27.137|<tuple|12.30|?>>
-    <associate|eq 13.28.129|<tuple|12.53|?>>
-    <associate|eq 13.29.129|<tuple|12.54|?>>
-    <associate|eq 13.3.127|<tuple|12.13|?>>
-    <associate|eq 13.30.129|<tuple|12.55|?>>
-    <associate|eq 13.30.138|<tuple|12.31|?>>
-    <associate|eq 13.31.129|<tuple|12.56|?>>
-    <associate|eq 13.32.129|<tuple|12.57|?>>
-    <associate|eq 13.33.129|<tuple|12.58|?>>
-    <associate|eq 13.34.129|<tuple|12.59|?>>
-    <associate|eq 13.35.129|<tuple|12.60|?>>
-    <associate|eq 13.35.140|<tuple|12.36|?>>
-    <associate|eq 13.35.143|<tuple|12.35|?>>
-    <associate|eq 13.36.129|<tuple|12.61|?>>
-    <associate|eq 13.36.140|<tuple|12.41|?>>
-    <associate|eq 13.36.141|<tuple|12.40|?>>
-    <associate|eq 13.36.142|<tuple|12.37|?>>
-    <associate|eq 13.37.129|<tuple|12.62|?>>
-    <associate|eq 13.37.140|<tuple|12.42|?>>
-    <associate|eq 13.38.129|<tuple|12.63|?>>
-    <associate|eq 13.38.140|<tuple|12.44|?>>
-    <associate|eq 13.38.143|<tuple|12.38|?>>
-    <associate|eq 13.39.129|<tuple|12.64|?>>
-    <associate|eq 13.39.140|<tuple|12.45|?>>
-    <associate|eq 13.39.143|<tuple|12.39|?>>
-    <associate|eq 13.4.127|<tuple|12.14|?>>
-    <associate|eq 13.40.129|<tuple|12.65|?>>
-    <associate|eq 13.41.129|<tuple|12.66|?>>
-    <associate|eq 13.41.140|<tuple|12.46|?>>
-    <associate|eq 13.42.129|<tuple|12.67|?>>
-    <associate|eq 13.43.129|<tuple|12.68|?>>
-    <associate|eq 13.43.144|<tuple|12.43|?>>
-    <associate|eq 13.44.129|<tuple|12.69|?>>
-    <associate|eq 13.45.129|<tuple|12.70|?>>
-    <associate|eq 13.46.129|<tuple|12.71|?>>
-    <associate|eq 13.47.129|<tuple|12.72|?>>
-    <associate|eq 13.48.129|<tuple|12.73|?>>
-    <associate|eq 13.49.129|<tuple|12.74|?>>
-    <associate|eq 13.5.127|<tuple|12.15|?>>
-    <associate|eq 13.50.129|<tuple|12.75|?>>
-    <associate|eq 13.51.129|<tuple|12.76|?>>
-    <associate|eq 13.52.130|<tuple|12.77|?>>
-    <associate|eq 13.53.129|<tuple|12.78|?>>
-    <associate|eq 13.54.129|<tuple|12.79|?>>
-    <associate|eq 13.55.130|<tuple|12.80|?>>
-    <associate|eq 13.56.130|<tuple|12.81|?>>
-    <associate|eq 13.56.133|<tuple|12.90|?>>
-    <associate|eq 13.57.130|<tuple|12.82|?>>
-    <associate|eq 13.58.130|<tuple|12.83|?>>
-    <associate|eq 13.59.130|<tuple|12.84|?>>
-    <associate|eq 13.6.127|<tuple|12.16|?>>
-    <associate|eq 13.60.130|<tuple|12.85|?>>
-    <associate|eq 13.61.130|<tuple|12.86|?>>
-    <associate|eq 13.62.130|<tuple|12.87|?>>
-    <associate|eq 13.63.130|<tuple|12.88|?>>
-    <associate|eq 13.64.130|<tuple|12.89|?>>
-    <associate|eq 13.65.130|<tuple|12.96|?>>
-    <associate|eq 13.66.130|<tuple|12.97|?>>
-    <associate|eq 13.66.133|<tuple|12.91|?>>
-    <associate|eq 13.67\<point\>133|<tuple|12.92|?>>
-    <associate|eq 13.68.133|<tuple|12.93|?>>
-    <associate|eq 13.69.133|<tuple|12.94|?>>
-    <associate|eq 13.7.127|<tuple|12.17|?>>
-    <associate|eq 13.70\<point\>133|<tuple|12.95|?>>
-    <associate|eq 13.73.133|<tuple|12.98|?>>
-    <associate|eq 13.74.133|<tuple|12.99|?>>
-    <associate|eq 13.75.133|<tuple|12.100|?>>
-    <associate|eq 13.76.133|<tuple|12.101|?>>
-    <associate|eq 13.77.133|<tuple|12.102|?>>
-    <associate|eq 13.78.133|<tuple|12.103|?>>
-    <associate|eq 13.8.127|<tuple|12.18|?>>
-    <associate|eq 13.9.127|<tuple|12.3|?>>
-    <associate|eq 13.92.138|<tuple|12.104|?>>
-    <associate|eq 13.93.138|<tuple|12.105|?>>
-    <associate|eq 13.94.138|<tuple|12.106|?>>
-    <associate|eq 13.95.138|<tuple|12.107|?>>
-    <associate|eq 13.96.138|<tuple|12.108|?>>
-    <associate|eq 13.97.138|<tuple|12.109|?>>
-    <associate|tensor finite family of finite sets|<tuple|12.29|?>>
-    <associate|tensor multi-index|<tuple|12.30|?>>
-    <associate|tensor multilinear mapping sum|<tuple|12.32|?>>
-    <associate|tensor null space|<tuple|12.7|?>>
-    <associate|tensor product|<tuple|12.1|?>>
+    <associate|eq 13.1.127|<tuple|13.11|?>>
+    <associate|eq 13.1.129|<tuple|13.1|?>>
+    <associate|eq 13.10.127|<tuple|13.4|?>>
+    <associate|eq 13.11.127|<tuple|13.5|?>>
+    <associate|eq 13.110.144|<tuple|13.110|?>>
+    <associate|eq 13.111.144|<tuple|13.111|?>>
+    <associate|eq 13.112.144|<tuple|13.112|?>>
+    <associate|eq 13.12.127|<tuple|13.6|?>>
+    <associate|eq 13.13.128|<tuple|13.7|?>>
+    <associate|eq 13.14.127|<tuple|13.8|?>>
+    <associate|eq 13.15.128|<tuple|13.9|?>>
+    <associate|eq 13.16.128|<tuple|13.10|?>>
+    <associate|eq 13.19.135|<tuple|13.19|?>>
+    <associate|eq 13.19129|<tuple|13.32|?>>
+    <associate|eq 13.2.127|<tuple|13.12|?>>
+    <associate|eq 13.2.129|<tuple|13.2|?>>
+    <associate|eq 13.20.129|<tuple|13.33|?>>
+    <associate|eq 13.20.135|<tuple|13.20|?>>
+    <associate|eq 13.21.129|<tuple|13.34|?>>
+    <associate|eq 13.21.135|<tuple|13.21|?>>
+    <associate|eq 13.22.129|<tuple|13.47|?>>
+    <associate|eq 13.22.137|<tuple|13.23|?>>
+    <associate|eq 13.22.139|<tuple|13.22|?>>
+    <associate|eq 13.23.129|<tuple|13.48|?>>
+    <associate|eq 13.23.137|<tuple|13.24|?>>
+    <associate|eq 13.24.129|<tuple|13.49|?>>
+    <associate|eq 13.24.137|<tuple|13.25|?>>
+    <associate|eq 13.25.129|<tuple|13.50|?>>
+    <associate|eq 13.25.137|<tuple|13.27|?>>
+    <associate|eq 13.25.138|<tuple|13.26|?>>
+    <associate|eq 13.26.129|<tuple|13.51|?>>
+    <associate|eq 13.26.137|<tuple|13.29|?>>
+    <associate|eq 13.27.129|<tuple|13.52|?>>
+    <associate|eq 13.27.137|<tuple|13.30|?>>
+    <associate|eq 13.28.129|<tuple|13.53|?>>
+    <associate|eq 13.29.129|<tuple|13.54|?>>
+    <associate|eq 13.3.127|<tuple|13.13|?>>
+    <associate|eq 13.30.129|<tuple|13.55|?>>
+    <associate|eq 13.30.138|<tuple|13.31|?>>
+    <associate|eq 13.31.129|<tuple|13.56|?>>
+    <associate|eq 13.32.129|<tuple|13.57|?>>
+    <associate|eq 13.33.129|<tuple|13.58|?>>
+    <associate|eq 13.34.129|<tuple|13.59|?>>
+    <associate|eq 13.35.129|<tuple|13.60|?>>
+    <associate|eq 13.35.140|<tuple|13.36|?>>
+    <associate|eq 13.35.143|<tuple|13.35|?>>
+    <associate|eq 13.36.129|<tuple|13.61|?>>
+    <associate|eq 13.36.140|<tuple|13.41|?>>
+    <associate|eq 13.36.141|<tuple|13.40|?>>
+    <associate|eq 13.36.142|<tuple|13.37|?>>
+    <associate|eq 13.37.129|<tuple|13.62|?>>
+    <associate|eq 13.37.140|<tuple|13.42|?>>
+    <associate|eq 13.38.129|<tuple|13.63|?>>
+    <associate|eq 13.38.140|<tuple|13.44|?>>
+    <associate|eq 13.38.143|<tuple|13.38|?>>
+    <associate|eq 13.39.129|<tuple|13.64|?>>
+    <associate|eq 13.39.140|<tuple|13.45|?>>
+    <associate|eq 13.39.143|<tuple|13.39|?>>
+    <associate|eq 13.4.127|<tuple|13.14|?>>
+    <associate|eq 13.40.129|<tuple|13.65|?>>
+    <associate|eq 13.41.129|<tuple|13.66|?>>
+    <associate|eq 13.41.140|<tuple|13.46|?>>
+    <associate|eq 13.42.129|<tuple|13.67|?>>
+    <associate|eq 13.43.129|<tuple|13.68|?>>
+    <associate|eq 13.43.144|<tuple|13.43|?>>
+    <associate|eq 13.44.129|<tuple|13.69|?>>
+    <associate|eq 13.45.129|<tuple|13.70|?>>
+    <associate|eq 13.46.129|<tuple|13.71|?>>
+    <associate|eq 13.47.129|<tuple|13.72|?>>
+    <associate|eq 13.48.129|<tuple|13.73|?>>
+    <associate|eq 13.49.129|<tuple|13.74|?>>
+    <associate|eq 13.5.127|<tuple|13.15|?>>
+    <associate|eq 13.50.129|<tuple|13.75|?>>
+    <associate|eq 13.51.129|<tuple|13.76|?>>
+    <associate|eq 13.52.130|<tuple|13.77|?>>
+    <associate|eq 13.53.129|<tuple|13.78|?>>
+    <associate|eq 13.54.129|<tuple|13.79|?>>
+    <associate|eq 13.55.130|<tuple|13.80|?>>
+    <associate|eq 13.56.130|<tuple|13.81|?>>
+    <associate|eq 13.56.133|<tuple|13.90|?>>
+    <associate|eq 13.57.130|<tuple|13.82|?>>
+    <associate|eq 13.58.130|<tuple|13.83|?>>
+    <associate|eq 13.59.130|<tuple|13.84|?>>
+    <associate|eq 13.6.127|<tuple|13.16|?>>
+    <associate|eq 13.60.130|<tuple|13.85|?>>
+    <associate|eq 13.61.130|<tuple|13.86|?>>
+    <associate|eq 13.62.130|<tuple|13.87|?>>
+    <associate|eq 13.63.130|<tuple|13.88|?>>
+    <associate|eq 13.64.130|<tuple|13.89|?>>
+    <associate|eq 13.65.130|<tuple|13.96|?>>
+    <associate|eq 13.66.130|<tuple|13.97|?>>
+    <associate|eq 13.66.133|<tuple|13.91|?>>
+    <associate|eq 13.67\<point\>133|<tuple|13.92|?>>
+    <associate|eq 13.68.133|<tuple|13.93|?>>
+    <associate|eq 13.69.133|<tuple|13.94|?>>
+    <associate|eq 13.7.127|<tuple|13.17|?>>
+    <associate|eq 13.70\<point\>133|<tuple|13.95|?>>
+    <associate|eq 13.73.133|<tuple|13.98|?>>
+    <associate|eq 13.74.133|<tuple|13.99|?>>
+    <associate|eq 13.75.133|<tuple|13.100|?>>
+    <associate|eq 13.76.133|<tuple|13.101|?>>
+    <associate|eq 13.77.133|<tuple|13.102|?>>
+    <associate|eq 13.78.133|<tuple|13.103|?>>
+    <associate|eq 13.8.127|<tuple|13.18|?>>
+    <associate|eq 13.9.127|<tuple|13.3|?>>
+    <associate|eq 13.92.138|<tuple|13.104|?>>
+    <associate|eq 13.93.138|<tuple|13.105|?>>
+    <associate|eq 13.94.138|<tuple|13.106|?>>
+    <associate|eq 13.95.138|<tuple|13.107|?>>
+    <associate|eq 13.96.138|<tuple|13.108|?>>
+    <associate|eq 13.97.138|<tuple|13.109|?>>
+    <associate|tensor finite family of finite sets|<tuple|13.29|?>>
+    <associate|tensor multi-index|<tuple|13.30|?>>
+    <associate|tensor multilinear mapping sum|<tuple|13.32|?>>
+    <associate|tensor null space|<tuple|13.7|?>>
+    <associate|tensor product|<tuple|13.1|?>>
     <associate|tensor product and direct sum of two vector
-    spaces|<tuple|12.34|?>>
-    <associate|tensor product and sum of vector space|<tuple|12.33|?>>
-    <associate|tensor product basis|<tuple|12.40|?>>
-    <associate|tensor product components|<tuple|12.41|?>>
-    <associate|tensor product convention|<tuple|12.19|?>>
-    <associate|tensor product induction argument|<tuple|12.27|?>>
-    <associate|tensor product induction argument (2)|<tuple|12.28|?>>
-    <associate|tensor product induction argument (3)|<tuple|12.26|?>>
-    <associate|tensor product linear independency|<tuple|12.25|?>>
+    spaces|<tuple|13.34|?>>
+    <associate|tensor product and sum of vector space|<tuple|13.33|?>>
+    <associate|tensor product basis|<tuple|13.40|?>>
+    <associate|tensor product components|<tuple|13.41|?>>
+    <associate|tensor product convention|<tuple|13.19|?>>
+    <associate|tensor product induction argument|<tuple|13.27|?>>
+    <associate|tensor product induction argument (2)|<tuple|13.28|?>>
+    <associate|tensor product induction argument (3)|<tuple|13.26|?>>
+    <associate|tensor product linear independency|<tuple|13.25|?>>
     <associate|tensor product of direct sum and a vector
-    space|<tuple|12.35|?>>
+    space|<tuple|13.35|?>>
     <associate|tensor product of direct sum and a vector space
-    (2)|<tuple|12.36|?>>
-    <associate|tensor product of direct sums|<tuple|12.38|?>>
-    <associate|tensor product of spaces existence|<tuple|12.13|?>>
-    <associate|tensor product of spaces existence (1)|<tuple|12.20|?>>
-    <associate|tensor product of two direct sums|<tuple|12.37|?>>
-    <associate|tensor product of vectors|<tuple|12.10|?>>
-    <associate|tensor product one dimensional spaces|<tuple|12.39|?>>
-    <associate|tensor product p-q-tensors|<tuple|12.42|?>>
-    <associate|tensor product singleton|<tuple|12.17|?>>
-    <associate|tensor product singleton (1)|<tuple|12.22|?>>
-    <associate|tensor product unique representation|<tuple|12.2|?>>
-    <associate|tensor product uniqueness|<tuple|12.15|?>>
-    <associate|tensor product uniqueness (1)|<tuple|12.21|?>>
-    <associate|tensor product uniqueness and existance|<tuple|12.16|?>>
-    <associate|tensor product zero|<tuple|12.24|?>>
-    <associate|tensor sub spaces|<tuple|12.18|?>>
-    <associate|tensor sub spaces (1)|<tuple|12.23|?>>
-    <associate|tensor tensor product of spaces|<tuple|12.8|?>>
-    <associate|tensor universal property|<tuple|12.12|?>>
-    <associate|vector space free|<tuple|12.5|?>>
-    <associate|vector space free basis and embedding|<tuple|12.6|?>>
-    <associate|vector space free operations|<tuple|12.4|?>>
-    <associate|vector space free predefinition|<tuple|12.3|?>>
+    (2)|<tuple|13.36|?>>
+    <associate|tensor product of direct sums|<tuple|13.38|?>>
+    <associate|tensor product of spaces existence|<tuple|13.13|?>>
+    <associate|tensor product of spaces existence (1)|<tuple|13.20|?>>
+    <associate|tensor product of two direct sums|<tuple|13.37|?>>
+    <associate|tensor product of vectors|<tuple|13.10|?>>
+    <associate|tensor product one dimensional spaces|<tuple|13.39|?>>
+    <associate|tensor product p-q-tensors|<tuple|13.42|?>>
+    <associate|tensor product singleton|<tuple|13.17|?>>
+    <associate|tensor product singleton (1)|<tuple|13.22|?>>
+    <associate|tensor product unique representation|<tuple|13.2|?>>
+    <associate|tensor product uniqueness|<tuple|13.15|?>>
+    <associate|tensor product uniqueness (1)|<tuple|13.21|?>>
+    <associate|tensor product uniqueness and existance|<tuple|13.16|?>>
+    <associate|tensor product zero|<tuple|13.24|?>>
+    <associate|tensor sub spaces|<tuple|13.18|?>>
+    <associate|tensor sub spaces (1)|<tuple|13.23|?>>
+    <associate|tensor tensor product of spaces|<tuple|13.8|?>>
+    <associate|tensor universal property|<tuple|13.12|?>>
+    <associate|vector space free|<tuple|13.5|?>>
+    <associate|vector space free basis and embedding|<tuple|13.6|?>>
+    <associate|vector space free operations|<tuple|13.4|?>>
+    <associate|vector space free predefinition|<tuple|13.3|?>>
   </collection>
 </references>
 
 <\auxiliary>
   <\collection>
     <\associate|idx>
-      <tuple|<tuple|<with|mode|<quote|math>|F<around*|(|X,F|)>>>|<pageref|auto-3>>
+      <tuple|<tuple|<with|mode|<quote|math>|F<around*|(|X,F|)>>>|<pageref|auto-2>>
 
-      <tuple|<tuple|free vector space over a set>|<pageref|auto-4>>
+      <tuple|<tuple|free vector space over a set>|<pageref|auto-3>>
     </associate>
     <\associate|toc>
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|12<space|2spc>Internal
-      Direct Sum> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-1><vspace|0.5fn>
-
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|13<space|2spc>Tensor
       product of vector spaces> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-2><vspace|0.5fn>
+      <no-break><pageref|auto-1><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>

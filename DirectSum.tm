@@ -488,7 +488,7 @@
   <math|v<rsub|i>\<in\>V<rsub|i>>, however this expansion is not unique,
   which is not very useful (compare this with the uniqueness of the expansion
   of a vector in a basis). To solve this we extend the concept of a direct
-  sum of two subspaces [see definition: <reference|vector space internal
+  sum of two sub-spaces [see definition: <reference|vector space internal
   direct sum>] to a direct sum of a finite family.
 
   <\definition>
@@ -1239,7 +1239,7 @@
     </equation*>
   </proof>
 
-  The following exsmple shows that the direct interal sum defined in this
+  The following example shows that the direct integral sum defined in this
   section is indeed a extension of the internal direct sum in [definition:
   <reference|vector space internal direct sum>].
 
@@ -1411,7 +1411,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|11>
-    <associate|page-first|605>
+    <associate|page-first|609>
     <associate|page-medium|beamer>
     <associate|section-nr|9>
     <associate|subsection-nr|0>

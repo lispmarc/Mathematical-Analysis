@@ -1913,7 +1913,7 @@
   integer numbers in it. Just as with <math|\<bbb-Z\>> and
   <math|\<bbb-N\><rsub|0>> we will introduce a order relation, a sum
   operator, a product operator, neutral elements for addition and
-  multiplication as well as inverse elements. To avoid excesive notation we
+  multiplication as well as inverse elements. To avoid excessive notation we
   use the same symbols for the natural numbers, integers and rational numbers
   and use context to determine the meaning of the symbols involved. The
   following table should help you in determining the meaning of the different
@@ -5954,7 +5954,7 @@
       [theorems: <reference|rational ordered field>, <reference|field order
       properties>] <math|0\<less\>x<rsup|-1>> so that by applying [theorems:
       <reference|rational ordered field>, <reference|field order properties>]
-      repeately we have that <math|0\<less\>s<rsub|1>\<cdot\><around*|(|1-x|)>\<cdot\>x<rsup|-1>>
+      repeatedly we have that <math|0\<less\>s<rsub|1>\<cdot\><around*|(|1-x|)>\<cdot\>x<rsup|-1>>
       or
 
       <\equation>
@@ -8431,7 +8431,7 @@
 
   <\theorem>
     <label|real natural numbers, integers and rational numbers>We have the
-    following relation between the embbeddings of
+    following relation between the embeddings of
     <math|\<bbb-N\><rsub|0>,\<bbb-Z\>,\<bbb-Q\>> in <math|\<bbb-R\>>
 
     <\equation*>
@@ -8546,7 +8546,7 @@
   <math|x<rsup|2>=-1> has no solution because
   <math|0\<less\>1\<Rightarrow\>-1\<less\>0> and by [theorems:
   <reference|real ordered field>, <reference|field order properties>]
-  <math|0\<leqslant\>x<rsup|2>>. This problem wil be solved by introducing
+  <math|0\<leqslant\>x<rsup|2>>. This problem will be solved by introducing
   the set of complex numbers. Note that to avoid having to use different
   symbols for neutral elements, inverse elements, sum, product etc. we use
   context to derive the meaning of the different symbols.\ 
@@ -9686,7 +9686,7 @@
     </enumerate>
   </proof>
 
-  As for conditonal completeness we have the following theorems
+  As for conditional completeness we have the following theorems
 
   <\theorem>
     <label|complex integers are conditional
@@ -10250,7 +10250,7 @@
     </proof>
   </corollary>
 
-  We have simular theorems for the minimum and maximum.
+  We have similar theorems for the minimum and maximum.
 
   <\theorem>
     <label|complex max(S+T),min(S+T)>Let <math|S,T\<subseteq\>\<bbb-R\><rsub|\<bbb-C\>>>
@@ -13790,7 +13790,7 @@
       <item*|injectivity>If <math|\<gamma\><around*|(|i|)>=\<gamma\><around*|(|j|)>>
       then <math|i+1=j+1> hence <math|i=j>
 
-      <item*|surjectity>If <math|j\<in\><around*|{|1,\<ldots\>,k|}>> then
+      <item*|surjectivity>If <math|j\<in\><around*|{|1,\<ldots\>,k|}>> then
       <math|1\<leqslant\>j\<leqslant\>k\<Rightarrow\>0\<leqslant\>j-1\<leqslant\>k-1>
       proving that <math|j-1\<in\><around*|{|0,\<ldots\>,k-1|}>>. As
       <math|\<gamma\><around*|(|j-1|)>=<around*|(|j-1|)>+1=j> surjectivity is
@@ -14037,9 +14037,9 @@
 
   <subsection|Extended real numbers>
 
-  Finally we define the set of extended real numbers which usefull if we have
-  to work with numbers that are bigger or lower then every real number. This
-  will be usefull later for limits, dimensions.\ 
+  Finally we define the set of extended real numbers which are useful if we
+  have to work with numbers that are bigger or lower then every real number.
+  This will be useful later for limits, dimensions.\ 
 
   <\lemma>
     <label|extended reals existence>There exists at least two different
@@ -14100,7 +14100,7 @@
     \ 
 
     <\description>
-      <item*|reflexitivity>The following cases occurs for
+      <item*|reflectivity>The following cases occurs for
       <math|x\<in\><wide|\<bbb-R\>|\<wide-bar\>>>
 
       <\description>
@@ -14114,7 +14114,7 @@
         <math|x\<leqslant\><rsub|\<bbb-R\>>x\<Rightarrow\>x<wide|\<leqslant\>|\<wide-bar\>>x>
       </description>
 
-      proving reflexitivity.
+      proving reflectivity.
 
       <item*|anti-symmetry>Let <math|x,y\<in\><wide|\<bbb-R\>|\<wide-bar\>>>
       with <math|x<wide|\<leqslant\>|\<wide-bar\>>y\<wedge\>y<wide|\<leqslant\>|\<wide-bar\>>x>
@@ -14137,7 +14137,7 @@
 
         <item*|<math|x=-\<infty\>\<wedge\>y=-\<infty\>>>then <math|x=y>
 
-        <item*|<math|x\<in\>\<bbb-R\>\<wedge\>y=-\<infty\>>>then asby
+        <item*|<math|x\<in\>\<bbb-R\>\<wedge\>y=-\<infty\>>>then as by
         definition <math|\<neg\><around*|(|x<wide|\<leqslant\>|\<wide-bar\>>y|)>>
         the case does not apply
 
@@ -14146,11 +14146,11 @@
         this case does not apply
 
         <item*|<math|x=-\<infty\>\<wedge\>y\<in\>\<bbb-R\>>>then as by
-        definiton <math|\<neg\><around*|(|y<wide|\<leqslant\>|\<wide-bar\>>x|)>>
+        definition <math|\<neg\><around*|(|y<wide|\<leqslant\>|\<wide-bar\>>x|)>>
         this case does not apply
 
         <item*|<math|x\<in\>\<bbb-R\>\<wedge\>y\<in\>\<bbb-R\>>>then by
-        defintion <math|x\<leqslant\>y> and <math|y\<leqslant\>x> from which
+        definition <math|x\<leqslant\>y> and <math|y\<leqslant\>x> from which
         it follows that <math|x=y>
       </description>
 
@@ -14304,7 +14304,7 @@
   </proof>
 
   <\notation>
-    From now on, to avoid excessive nottion, we use <math|\<leqslant\>> to
+    From now on, to avoid excessive notation, we use <math|\<leqslant\>> to
     note <math|<wide|\<leqslant\>|\<wide-bar\>>>.
   </notation>
 
@@ -14317,7 +14317,7 @@
   <math|\<bbb-N\><rsub|0,\<bbb-C\>>>, <math|\<bbb-Z\><rsub|\<bbb-C\>>>,
   <math|\<bbb-Q\><rsub|\<bbb-C\>>>, <math|\<bbb-R\><rsub|\<bbb-C\>>>,
   <math|\<bbb-C\>> and <math|<wide|\<bbb-R\>|\<wide-bar\>>>. To avoid
-  excesive use of subscripts we leave out the subscripts. Hence for the rest
+  excessive use of subscripts we leave out the subscripts. Hence for the rest
   of this book we use the following conventions:
 
   <\equation*>
@@ -14371,7 +14371,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|6>
-    <associate|page-first|207>
+    <associate|page-first|209>
     <associate|par-first|0tab>
     <associate|project-flag|false>
     <associate|section-nr|3>

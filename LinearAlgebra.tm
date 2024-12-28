@@ -1360,7 +1360,7 @@
       element <math|1>, <math|I> a finite set and
       <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>I>> then we use
       <math|<big|prod>> instead of <math|<big|sum>> and have then that
-      <math|<big|prod><rsub|i\<in\>I>x<rsub|i>> ss defined by\ 
+      <math|<big|prod><rsub|i\<in\>I>x<rsub|i>> is defined by\ 
 
       <\enumerate>
         <item>If <math|I=\<varnothing\>> then
@@ -1378,8 +1378,8 @@
       </enumerate>
     </note>
 
-    Of course all staments about summation applies also to mulitplication if
-    you replace <math|<big|sum>> by <math|<big|prod>> and <math|0> by
+    Of course all statements about summation applies also to multiplication
+    if you replace <math|<big|sum>> by <math|<big|prod>> and <math|0> by
     <math|1>.
   </definition>
 
@@ -1994,7 +1994,7 @@
     \;
   </proof>
 
-  The following corollary will be usefull in induction proofs.
+  The following corollary will be useful in induction proofs.
 
   <\corollary>
     <label|sum index is a finite product>Let
@@ -2047,7 +2047,7 @@
       <label|eq 11.11.143><big|sum><rsub|\<sigma\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>>x<rsub|\<sigma\><rsub|1>,\<ldots\>,\<sigma\><rsub|n>>=<big|sum><rsub|i\<in\>I<rsub|1>><around*|(|<big|sum><rsub|\<sigma\>\<in\>J<rsub|i>>x<rsub|\<sigma\><rsub|1>,<rsub|>\<ldots\>,\<sigma\><rsub|n>>|)>
     </equation>
 
-    Givrn <math|i\<in\>I<rsub|1>> define
+    Given <math|i\<in\>I<rsub|1>> define
 
     <\equation*>
       \<beta\><rsub|i>:<big|prod><rsub|<around*|(|2,\<ldots\>,n|)>>I<rsub|i>\<rightarrow\>J<rsub|i><text|
@@ -3565,8 +3565,8 @@
   <subsection|Factor spaces of a vector space>
 
   A factor space allows us to threat a sub-space of a vector space as a
-  neutral elment in higher level of vector space. To create a factor space we
-  first define a equivalence relation, the factor space is then the set of
+  neutral element in higher level of vector space. To create a factor space
+  we first define a equivalence relation, the factor space is then the set of
   equivalence classes. We add then operators to the factor space based on the
   operators for addition and scalar product of the original vector space.
 
@@ -3583,9 +3583,9 @@
     \ 
 
     <\description>
-      <item*|reflexitivity>As <math|Y> is a sub-space of <math|x> we have
-      that <math|0\<in\>Y> [see theorem: <reference|vector space sub-space is
-      a vector space>], hence if <math|x\<in\>X> we have that
+      <item*|reflectivity>As <math|Y> is a sub-space of <math|x> we have that
+      <math|0\<in\>Y> [see theorem: <reference|vector space sub-space is a
+      vector space>], hence if <math|x\<in\>X> we have that
       <math|x-x=0\<in\>Y> proving that <math|\<forall\>x\<in\>X>
       <math|x\<sim\><rsub|Y>x>.
 
@@ -3600,8 +3600,8 @@
     </description>
   </proof>
 
-  We form now the set of equivalence classes and endow it with a addtion and
-  scallar product operator based on the operators of the original vector
+  We form now the set of equivalence classes and endow it with a addition and
+  scalar product operator based on the operators of the original vector
   space.
 
   <\theorem>
@@ -3706,7 +3706,7 @@
           <tformat|<table|<row|<cell|\<sim\><rsub|Y><around*|[|x|]>+<around*|(|\<sim\><rsub|Y><around*|[|y|]>+\<sim\><rsub|Y><around*|[|z|]>|)>>|<cell|=>|<cell|\<sim\><rsub|Y><around*|[|x|]>+\<sim\><rsub|Y><around*|[|y+z|]>>>|<row|<cell|>|<cell|=>|<cell|\<sim\><rsub|Y><around*|[|x+<around*|(|y+z|)>|]>>>|<row|<cell|>|<cell|=>|<cell|\<sim\><rsub|Y><around*|[|<around*|(|x+y|)>+z|]>>>|<row|<cell|>|<cell|=>|<cell|\<sim\><rsub|Y><around*|[|x+y|]>+\<sim\><rsub|Y><around*|[|z|]>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<sim\><rsub|Y><around*|[|x|]>+\<sim\><rsub|Y><around*|[|y|]>|)>+\<sim\><rsub|Y><around*|[|z|]>>>>>
         </eqnarray*>
 
-        <item*|commutatitivity>Let <math|\<sim\><rsub|Y><around*|[|x|]>>,
+        <item*|commutativity>Let <math|\<sim\><rsub|Y><around*|[|x|]>>,
         <math|\<sim\><rsub|Y><around*|[|y|]>><math|\<in\>X/Y> then
 
         <\equation*>
@@ -3717,14 +3717,14 @@
         then
 
         <\equation*>
-          \<sim\><rsub|Y><around*|[|x|]>+\<sim\><rsub|Y><around*|[|0|]>\<equallim\><rsub|<text|commutatitivity>>\<sim\><rsub|Y><around*|[|0|]>+\<sim\><rsub|Y><around*|[|x|]>=\<sim\><rsub|Y><around*|[|0+x|]>=\<sim\><rsub|Y><around*|[|x|]>
+          \<sim\><rsub|Y><around*|[|x|]>+\<sim\><rsub|Y><around*|[|0|]>\<equallim\><rsub|<text|commutativity>>\<sim\><rsub|Y><around*|[|0|]>+\<sim\><rsub|Y><around*|[|x|]>=\<sim\><rsub|Y><around*|[|0+x|]>=\<sim\><rsub|Y><around*|[|x|]>
         </equation*>
 
         <item*|inverse element> Let <math|\<sim\><rsub|Y><around*|[|x|]>><math|\<in\>X/Y>
         then
 
         <\equation*>
-          \<sim\><rsub|Y><around*|[|x|]>+\<sim\><rsub|Y><around*|[|-x|]>\<equallim\><rsub|<text|commutatitivity>>\<sim\><rsub|Y><around*|[|-x|]>+\<sim\><rsub|Y><around*|[|x|]>=\<sim\><rsub|Y><around*|[|<around*|(|-x|)>+x|]>=\<sim\><rsub|Y><around*|[|0|]>
+          \<sim\><rsub|Y><around*|[|x|]>+\<sim\><rsub|Y><around*|[|-x|]>\<equallim\><rsub|<text|commutativity>>\<sim\><rsub|Y><around*|[|-x|]>+\<sim\><rsub|Y><around*|[|x|]>=\<sim\><rsub|Y><around*|[|<around*|(|-x|)>+x|]>=\<sim\><rsub|Y><around*|[|0|]>
         </equation*>
       </description>
 
@@ -7128,7 +7128,7 @@
       <tformat|<table|<row|<cell|\<forall\>u\<in\>I\\J>|<cell|<text|we have
       >>|<cell|\<alpha\><rsub|u>=0>>|<row|<cell|\<forall\>u\<in\>J\\I>|<cell|<text|we
       have >>|<cell|\<beta\><rsub|u>=0>>|<row|<cell|\<forall\>u\<in\>I<big|cap>J>|<cell|<text|we
-      ahve >\<alpha\><rsub|u>=\<beta\><rsub|u>>|<cell|>>>>
+      have >\<alpha\><rsub|u>=\<beta\><rsub|u>>|<cell|>>>>
     </eqnarray*>
   </theorem>
 
@@ -7229,7 +7229,7 @@
     which proves existence. As for uniqueness, assume that there exists a
     finite <math|J\<subseteq\>B> and a <math|<around*|{|\<beta\><rsub|i>|}><rsub|i\<in\>J>\<subseteq\>F\\<around*|{|0|}>>
     such that <math|v=<big|sum><rsub|i\<in\>J>\<beta\><rsub|i>\<cdot\>i>.
-    Then by the previous theprem [theorem: <reference|basis alternative (3)>]
+    Then by the previous theorem [theorem: <reference|basis alternative (3)>]
     we have that\ 
 
     <\equation*>
@@ -8513,7 +8513,7 @@
       <item>Let <math|card<around*|(|S|)>> then we can write <math|S > as
       <math|S=<around*|{|s<rsub|1>,\<ldots\>,s<rsub|card<around*|(|S|)>>|}>>.
       Assume that <math|S> is linear independent then as
-      <math|span<around*|(|E|)>=V> it follows from a consequence of Steintz
+      <math|span<around*|(|E|)>=V> it follows from a consequence of Steinitz
       theorem [see corollary: <reference|linear Steinitz (1)>] that
       <math|card<around*|(|S|)>\<leqslant\>card<around*|(|E|)>=dim<around*|(|V|)>>,
       so, as <math|dim<around*|(|V|)>\<less\>card<around*|(|S|)>>, we reach
@@ -8525,7 +8525,7 @@
       family set>] <math|<rigid|S=<around*|{|v<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,m|}>|}>>>
       is a linear independent set with <math|card<around*|(|S|)>=m\<gtr\>dim<around*|(|V|)>>
       which is impossible by (1). Hence <math|<around*|{|v<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>>
-      is a linear independent familie.
+      is a linear independent family.
     </enumerate>
   </proof>
 
@@ -9859,7 +9859,7 @@
     <math|<around*|\<langle\>|X,+,\<cdot\>|\<rangle\>>> and
     <math|<around*|\<langle\>|Y,+,\<cdot\>|\<rangle\>>> be vector spaces over
     a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>> and
-    <math|L\<in\>Hom<around*|(|X,Y|)>> then the r<with|font-series|bold|ank
+    <math|L\<in\>Hom<around*|(|X,Y|)>> then the <with|font-series|bold|rank
     of <math|L>> noted as <math|rank<around*|(|L|)>> is defined by\ 
 
     <\equation*>
@@ -10972,7 +10972,7 @@
 
   <\theorem>
     <label|vector space internal sum existence><dueto|Fundamental theorem of
-    subspaces>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a
+    sub-spaces>Let <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>> be a
     vector space over a field <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>
     and <math|X> a sub-space of <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
     then there exists a subspace <math|Y> of <math|V> such that
@@ -12527,7 +12527,7 @@
     <label|permutation transposition expansion>Let
     <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
     <math|i,j\<in\><around*|{|1,\<ldots\>,n|}>> with <math|i\<neq\>j> then
-    there exxists a <math|m\<in\>\<bbb-N\>> and
+    there exists a <math|m\<in\>\<bbb-N\>> and
     <math|<around*|{|k<rsub|r>|}><rsub|r\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\><around*|{|1,\<ldots\>,n-1|}>>
     such that <math|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)>=<around*|(|k<rsub|1>\<leftrightarrowlim\><rsub|n>k<rsub|1>+1|)>\<circ\>\<ldots\>\<circ\><around*|(|k<rsub|m>\<leftrightarrowlim\><rsub|n>k<rsub|m+1>|)>>
   </theorem>
@@ -12559,7 +12559,7 @@
       <reference|permutation transosition
       proeprties>]>><around*|(|j\<leftrightarrowlim\><rsub|n+1>i|)>> we may
       assume that <math|i\<less\>j> so we have the following cases to
-      consideder:
+      consider:
 
       <\description>
         <item*|<math|i=n\<wedge\>j=n+1>>Then
@@ -12973,7 +12973,7 @@
     then by [theorem: <reference|permutation transposition expansion>] there
     exist a <math|<around*|{|k<rsub|r>|}><rsub|r\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\><around*|{|1,\<ldots\>,n-1|}>>
     such that <math|<around*|(|i\<leftrightarrowlim\><rsub|n>j|)>=<around*|(|k<rsub|1>\<leftrightarrowlim\><rsub|n>k<rsub|1>+1|)>\<circ\>\<ldots\>\<circ\><around*|(|k<rsub|m>\<leftrightarrowlim\><rsub|n>k<rsub|m>+1|)>>.
-    By the hypothese we have <math|\<forall\>r\<in\><around*|{|1,\<ldots\>,n-1|}>>
+    By the hypothesis we have <math|\<forall\>r\<in\><around*|{|1,\<ldots\>,n-1|}>>
     <math|<around*|(|k<rsub|r>\<leftrightarrowlim\><rsub|n>k<rsub|r>+1|)>f=f>,
     hence using [theorem: <reference|permutation transposition symmetry>] it
     follows that <math|<around*|(|<around*|(|k<rsub|1>\<leftrightarrowlim\><rsub|n>k<rsub|1>+1|)>\<circ\>\<ldots\>\<circ\><around*|(|k<rsub|m>\<leftrightarrowlim\><rsub|n>k<rsub|m>+1|)>|)>f=f>.
@@ -14613,7 +14613,7 @@
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|<around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>L<rsub|j>|)><around*|(|x<rsub|1>,\<ldots\><wide*|u+\<alpha\>\<cdot\>v|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>L<rsub|j>|)><around*|(|r|)>>|<cell|=>|<cell|>>|<row|<cell|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>L<rsub|j><around*|(|r<rsub|j>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|sum over disjoint subsets>]>>>|<cell|>>|<row|<cell|<around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>L<rsub|j><around*|(|r<rsub|j>|)>|)>\<cdot\>L<rsub|i><around*|(|r<rsub|i>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>L<rsub|j><around*|(|r<rsub|j>|)>|)>\<cdot\>L<rsub|i><around*|(|u+\<alpha\>\<cdot\>v|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>L<rsub|j><around*|(|r<rsub|j>|)>|)>\<cdot\><around*|(|L<rsub|i><around*|(|u|)>+\<alpha\>\<cdot\>L<rsub|i><around*|(|v|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>L<rsub|j><around*|(|r<rsub|j>|)>|)>\<cdot\>L<rsub|i><around*|(|u|)>+\<alpha\>\<cdot\><around*|(|<around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>L<rsub|j><around*|(|r<rsub|j>|)>|)>\<cdot\>L<rsub|i><around*|(|v|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>L<rsub|j><around*|(|s<rsub|j>|)>|)>\<cdot\>L<rsub|i><around*|(|s<rsub|i>|)>+\<alpha\>\<cdot\><around*|(|<around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>L<rsub|j><around*|(|t<rsub|j>|)>|)>\<cdot\>L<rsub|i><around*|(|t<rsub|i>|)>|)>>|<cell|\<equallim\><rsub|<text|[theprem:
+      <reference|sum over disjoint subsets>]>>>|<cell|>>|<row|<cell|<around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>L<rsub|j><around*|(|r<rsub|j>|)>|)>\<cdot\>L<rsub|i><around*|(|r<rsub|i>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>L<rsub|j><around*|(|r<rsub|j>|)>|)>\<cdot\>L<rsub|i><around*|(|u+\<alpha\>\<cdot\>v|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>L<rsub|j><around*|(|r<rsub|j>|)>|)>\<cdot\><around*|(|L<rsub|i><around*|(|u|)>+\<alpha\>\<cdot\>L<rsub|i><around*|(|v|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>L<rsub|j><around*|(|r<rsub|j>|)>|)>\<cdot\>L<rsub|i><around*|(|u|)>+\<alpha\>\<cdot\><around*|(|<around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>L<rsub|j><around*|(|r<rsub|j>|)>|)>\<cdot\>L<rsub|i><around*|(|v|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>L<rsub|j><around*|(|s<rsub|j>|)>|)>\<cdot\>L<rsub|i><around*|(|s<rsub|i>|)>+\<alpha\>\<cdot\><around*|(|<around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>L<rsub|j><around*|(|t<rsub|j>|)>|)>\<cdot\>L<rsub|i><around*|(|t<rsub|i>|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
       <reference|sum over disjoint subsets>]>>>|<cell|>>|<row|<cell|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>L<rsub|j><around*|(|s<rsub|j>|)>+\<alpha\>\<cdot\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>L<rsub|j><around*|(|t<rsub|j>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>L<rsub|j>|)><around*|(|s|)>+\<alpha\>\<cdot\><around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>L<rsub|j>|)><around*|(|t|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>L<rsub|j>|)><around*|(|x<rsub|1>,\<ldots\><wide*|u|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>+\<alpha\>\<cdot\><around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>L<rsub|j>|)><around*|(|x<rsub|1>,\<ldots\><wide*|v|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>>|<cell|>|<cell|>>>>
     </eqnarray*>
 
@@ -24859,7 +24859,7 @@
   <\collection>
     <associate|chapter-nr|10>
     <associate|item-nr|4>
-    <associate|page-first|336>
+    <associate|page-first|337>
     <associate|page-medium|papyrus>
     <associate|par-first|0tab>
     <associate|section-nr|5>
@@ -25335,7 +25335,6 @@
     <associate|linear combination (1)|<tuple|11.94|?>>
     <associate|linear combination (3)|<tuple|11.95|?>>
     <associate|linear dependendent family|<tuple|11.124|?>>
-    <associate|linear dependendent family alternative (1)|<tuple|11.126|?>>
     <associate|linear dependent family alternative|<tuple|11.125|?>>
     <associate|linear dependent family alternative (1)|<tuple|11.126|?>>
     <associate|linear dependent family condition|<tuple|11.127|?>>
