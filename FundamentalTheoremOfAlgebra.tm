@@ -19,10 +19,6 @@
   to prove the theorem. First to define the concept of a higher order
   equation we introduce the concept of polynomials.
 
-  \;
-
-  TODO checked to here
-
   <section|Prerequisites>
 
   <subsection|Polynomials>
@@ -78,10 +74,10 @@
     <math|\<forall\>i\<in\><around*|{|m+1,\<ldots\>,n|}>> we have
     <math|a<rsub|i>=0>. So that\ 
 
-    <\equation*>
-      \<forall\>x\<in\>\<bbb-R\><text| we we have
-      >0=p<around*|(|x|)>=<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\>x<rsup|i>=<big|sum><rsub|i=0><rsup|m>a<rsub|i>\<cdot\>x<rsup|i>+<big|sum><rsub|i=m+1><rsup|n>a<rsub|i>\<cdot\>x<rsup|i>=<big|sum><rsub|i=0><rsup|m>a<rsub|i>\<cdot\>x<rsup|i>
-    </equation*>
+    <\equation>
+      <label|eq 17.1.154>\<forall\>x\<in\>\<bbb-R\><text| we we have
+      >0=p<around*|(|x|)>=<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\>x<rsup|i>=<big|sum><rsub|i\<in\><around*|{|0,\<ldots\>,m|}>>a<rsub|i>\<cdot\>x<rsup|i>+<big|sum><rsub|i\<in\><around*|{|m+1,\<ldots\>,n|}>>a<rsub|i>\<cdot\>x<rsup|i>=<big|sum><rsub|i=0><rsup|m>a<rsub|i>\<cdot\>x<rsup|i>
+    </equation>
 
     <\description>
       <item*|<math|m=0>>Then we have <math|0=p<around*|(|1|)>=<big|sum><rsub|i=0><rsup|0>a<rsub|0>\<cdot\>1<rsup|0>=a<rsub|0>\<neq\>0>
@@ -90,19 +86,20 @@
       <item*|<math|0\<less\>m>>Then as <math|a<rsub|m>\<neq\>0> we can take
       <math|x=<frac|<big|sum><rsub|i=0><rsup|m-1><around*|\||a<rsub|i>|\|>|<around*|\||a<rsub|m>|\|>>+1>
       then <math|1\<leqslant\>x> and we have by [theorem: <reference|complex
-      n\<less\>m and 0\<less\>x\<less\>1 then x^n\<less\>x^m>] that
+      n\<less\>m and 1\<less\>=x then x^n\<less\>x^m>] that
       <math|\<forall\>j\<in\><around*|{|0,\<ldots\>,m-1|}>> we have
       <math|x<rsup|j>\<leqslant\>x<rsup|m-1>>. Hence\ 
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|<around*|\||<big|sum><rsub|i=0><rsup|m-1>a<rsub|i>\<cdot\>x<rsup|i>|\|>>|<cell|\<leqslant\>>|<cell|<big|sum><rsub|i=0><rsup|m-1><around*|\||a<rsub|i>\<cdot\>x<rsup|i>|\|>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|complex norm properties>]>>>|<cell|<big|sum><rsub|i=0><rsup|m-1><around*|\||a<rsub|i>|\|>\<cdot\><around*|\||x|\|><rsup|i>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<big|sum><rsub|i=0><rsup|m-1><around*|\||a<rsub|i>|\|>\<cdot\><around*|\||x|\|><rsup|m-1>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||x|\|><rsup|m-1>\<cdot\><big|sum><rsub|i=0><rsup|m-1><around*|\||a<rsub|i>|\|>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||x|\|><rsup|m-1>\<cdot\><around*|\||a<rsub|m>|\|>\<cdot\><around*|(|x-1|)>>>|<row|<cell|>|<cell|\<less\>>|<cell|<around*|\||x|\|><rsup|m>\<cdot\><around*|\||a<rsub|m>|\|>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|complex norm properties>]>>>|<cell|<big|sum><rsub|i=0><rsup|m-1><around*|\||a<rsub|i>|\|>\<cdot\><around*|\||x|\|><rsup|i>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<big|sum><rsub|i=0><rsup|m-1><around*|\||a<rsub|i>|\|>\<cdot\><around*|\||x|\|><rsup|m-1>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||x|\|><rsup|m-1>\<cdot\><big|sum><rsub|i=0><rsup|m-1><around*|\||a<rsub|i>|\|>>>|<row|<cell|>|<cell|\<equallim\><rsub|x=<frac|<big|sum><rsub|i=0><rsup|m-1><around*|\||a<rsub|i>|\|>|<around*|\||a<rsub|m>|\|>>+1>>|<cell|<around*|\||x|\|><rsup|m-1>\<cdot\><around*|\||a<rsub|m>|\|>\<cdot\><around*|(|x-1|)>>>|<row|<cell|>|<cell|\<less\><rsub|x-1\<less\>x>>|<cell|<around*|\||x|\|><rsup|m-1>*\<cdot\><around*|\||a<rsub|m>|\|>\<cdot\>x>>|<row|<cell|>|<cell|\<equallim\><rsub|0\<less\>1\<leqslant\>x>>|<cell|<around*|\||x|\|><rsup|m>\<cdot\><around*|\||a<rsub|m>|\|>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|complex norm properties>]>>>|<cell|<around*|\||-a<rsub|m>\<cdot\>x<rsup|m>|\|>>>>>
       </eqnarray*>
 
       Hence <math|<big|sum><rsub|i=0><rsup|m-1>a<rsub|i>\<cdot\>x<rsup|i>\<neq\>-a<rsub|m>x<rsup|m>>
       so that <math|<big|sum><rsub|i=0><rsup|m>a<rsub|i>\<cdot\>x<rsup|i>=<big|sum><rsub|i=0><rsup|m-1>a<rsub|i>\<cdot\>x<rsup|i>+a<rsub|m>\<cdot\>x<rsup|m>\<neq\>0>
-      contradicting <math|0=p<around*|(|x|)>=<big|sum><rsub|i=0><rsup|m>a<rsub|i>\<cdot\>x<rsup|i>>.
+      contradicting <math|0\<equallim\><rsub|<text|[eq: <reference|eq
+      17.1.154>]>>p<around*|(|x|)>=<big|sum><rsub|i=0><rsup|m>a<rsub|i>\<cdot\>x<rsup|i>>.
     </description>
 
     As in all possible cases we have a contradiction the assumption is wrong
@@ -155,9 +152,9 @@
   <\lemma>
     <label|fundamental coefficients uniqueness>Let
     <math|n,m\<in\>\<bbb-N\><rsub|0>>, <math|<around*|{|a<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>\<subseteq\>\<bbb-C\>>
-    a family such that <math|a<rsub|n>\<neq\>0> if <math|n\<neq\>0> and
+    a family such that <math|a<rsub|n>\<neq\>0> and
     <math|<around*|{|b<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,m|}>>\<subseteq\>\<bbb-C\>>
-    a family such that <math|b<rsub|m>\<neq\>0> if <math|m\<neq\>0>. Then if
+    a family such that <math|b<rsub|m>\<neq\>0>. Then if
     <math|\<forall\>z\<in\>\<bbb-C\>> <math|<big|sum><rsub|i=1><rsup|n>a<rsub|i>\<cdot\>z<rsup|i>=<big|sum><rsub|i=1><rsup|m>b<rsub|i>\<cdot\>z<rsup|i>>
     it follows that <math|n=m> and <math|\<forall\>i\<in\><around*|{|0,\<ldots\>,n|}>>
     we have <math|a<rsub|i>=b<rsub|i>> [in other words
@@ -187,8 +184,7 @@
 
       so that by [corollary: <reference|fundamental coefficients are unique
       (1)>] we have that <math|0=a<rprime|'><rsub|m>=b<rsub|m>>. As
-      <math|0\<leqslant\>n\<less\>m\<Rightarrow\>m\<neq\>0> we have
-      <math|b<rsub|m>\<neq\>0> and we reach a contradiction. Hence this case
+      \ <math|b<rsub|m>\<neq\>0> we reach a contradiction. Hence this case
       will never occur.
 
       <item*|<math|m\<less\>n>>Define then
@@ -199,25 +195,24 @@
       <math|\<forall\>z\<in\>\<bbb-C\>>
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<big|sum><rsub|i=0><rsup|n>b<rprime|'><rsub|i>\<cdot\>z<rsup|i>>|<cell|=>|<cell|<big|sum><rsub|i=0><rsup|m>b<rprime|'><rsub|i>\<cdot\>z<rsup|i>+<big|sum><rsub|i=m+1><rsup|n>b<rprime|'><rsub|i>\<cdot\>z<rsup|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=0><rsup|m>b<rsub|i>\<cdot\>z<rsup|i>+<big|sum><rsub|i=m+1><rsup|n>0\<cdot\>z<rsup|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=0><rsup|m>b<rsub|i>\<cdot\>z<rsup|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|a>a<rsub|i>\<cdot\>z<rsup|i>>>>>
+        <tformat|<table|<row|<cell|<big|sum><rsub|i=0><rsup|n>b<rprime|'><rsub|i>\<cdot\>z<rsup|i>>|<cell|=>|<cell|<big|sum><rsub|i=0><rsup|m>b<rprime|'><rsub|i>\<cdot\>z<rsup|i>+<big|sum><rsub|i=m+1><rsup|n>b<rprime|'><rsub|i>\<cdot\>z<rsup|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=0><rsup|m>b<rsub|i>\<cdot\>z<rsup|i>+<big|sum><rsub|i=m+1><rsup|n>0\<cdot\>z<rsup|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=0><rsup|m>b<rsub|i>\<cdot\>z<rsup|i>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n>a<rsub|i>\<cdot\>z<rsup|i>>>>>
       </eqnarray*>
 
       so that by [corollary: <reference|fundamental coefficients are unique
-      (1)>] we have that <math|0=b<rprime|'><rsub|m>=a<rsub|m>>. As
-      <math|0\<leqslant\>m\<less\>n\<Rightarrow\>n\<neq\>0> we have
-      <math|a<rsub|n>\<neq\>0> and we reach a contradiction. Hence this case
+      (1)>] we have that <math|0=b<rprime|'><rsub|n>=a<rsub|n>>. As
+      \ <math|a<rsub|n>\<neq\>0> we reach a contradiction. Hence this case
       will never occur.
     </description>
 
     So the only valid cases is <math|n=m> proving the lemma.
   </proof>
 
-  The above ensures that the following definition is valid.
+  The above ensures that the following functions are valid.
 
   <\definition>
     <label|fundamental coefficients of a polynomial><index|coefficients of a
-    polynomial>Let <math|\<cal-C\>=<around*|{|<around*|{|a<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>\<subseteq\>\<bbb-C\>\|a<rsub|n>\<neq\>0<text|
-    if >n\<neq\>0|}>> then we define
+    polynomial>Let <math|\<cal-C\>=<around*|{|<around*|{|a<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>\<subseteq\>\<bbb-C\>\|a<rsub|n>\<neq\>0|}>>
+    then we define
 
     <\equation*>
       ord<rsub|coef>:\<cal-C\>\<rightarrow\>\<bbb-N\><rsub|0><text| by
@@ -227,7 +222,8 @@
     <\equation*>
       coef:\<cal-P\>\<rightarrow\>\<cal-C\><text| where
       >coef<around*|(|p|)>=<around*|{|a<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<in\>\<cal-C\><text|
-      such that >\<forall\>z\<in\>\<bbb-C\><text| we have
+      is the unique family [see lemma: <reference|fundamental coefficients
+      uniqueness>] such that >\<forall\>z\<in\>\<bbb-C\><text| we have
       >p<around*|(|z|)>=<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\>z<rsup|i>
     </equation*>
 
@@ -257,7 +253,7 @@
   </theorem>
 
   <\proof>
-    <space|1em>
+    \;
 
     <\description>
       <item*|injectivity>If <math|coef<around*|(|p|)>=coef<around*|(|q|)>>
@@ -272,7 +268,7 @@
 
       <item*|surjectivity>If <math|<around*|{|a<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<in\>\<cal-C\>>
       then <math|><math|<around*|{|a<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-C\>>
-      and <math|a<rsub|n>\<neq\>0<text| if >n\<neq\>0>. So if we define
+      and <math|a<rsub|n>\<neq\>0>. So if we define
       <math|p:\<bbb-C\>\<rightarrow\>\<bbb-C\>> by
       <math|p<around*|(|z|)>=<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\>z<rsup|i>>
       then <math|coef<around*|(|p|)>=<around*|{|a<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>.
@@ -292,7 +288,7 @@
     <label|fundamental non constant polynomal><index|non constant
     polynomial>A polynomial <math|p\<in\>\<cal-P\>> is
     <with|font-series|bold|non constant> if
-    <math|0\<less\>ord<around*|(|p|)>> a polynomial <math|p> is
+    <math|0\<less\>ord<around*|(|p|)>>, a polynomial <math|p> is
     <with|font-series|bold|constant >if <math|ord<around*|(|p|)>=0>.
   </definition>
 
@@ -329,7 +325,7 @@
 
     If <math|<around*|(|r,s|)>\<in\><around*|{|0,\<ldots\>,n|}>\<times\><around*|{|0,\<ldots\>,m|}>>
     then <math|0\<leqslant\>r\<leqslant\>n\<wedge\>0\<leqslant\>s\<leqslant\>m>
-    so that <math|r+s\<leqslant\>n+m> hence
+    so that <math|0\<leqslant\>r+s\<leqslant\>n+m> hence
 
     <\equation*>
       <around*|(|r,s|)>\<in\>I<rsub|r+s>\<subseteq\><big|cup><rsub|i\<in\><around*|{|0,\<ldots\>,n+m|}>>I<rsub|i>
@@ -343,7 +339,7 @@
 
     Let <math|i,j\<in\><around*|{|0,\<ldots\>,n+m|}>> with <math|i\<neq\>j>
     then if <math|<around*|(|r,s|)>\<in\>I<rsub|i><big|cap>I<rsub|j>> we have
-    that <math|i=r+s=j> contradiction <math|i\<neq\>j> so that\ 
+    that <math|i=r+s=j> contradictimg <math|i\<neq\>j> so that\ 
 
     <\equation*>
       I<rsub|i><big|cap>I<rsub|j>=\<varnothing\>
@@ -425,19 +421,19 @@
     <\equation*>
       S=<around*|{|n\<in\>\<bbb-N\>\|If <around*|{|p<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-P\><text|
       then ><big|prod><rsub|i=1><rsup|n>p<rsub|i>\<in\>\<cal-P\><text| and
-      >ord<around*|(|<big|prod><rsub|i=1><rsup|n>p<rsub|i>|)>=<big|prod><rsub|i=1><rsup|n>ord<around*|(|p<rsub|i>|)>|}>
+      >ord<around*|(|<big|prod><rsub|i=1><rsup|n>p<rsub|i>|)>=<big|sum><rsub|i=1><rsup|n>ord<around*|(|p<rsub|i>|)>|}>
     </equation*>
 
     then we have:\ 
 
     <\description>
-      <item*|<math|1\<in\>S>>then <math|\<forall\>z\<in\>\<bbb-C\>> we have
+      <item*|<math|1\<in\>S>>Then <math|\<forall\>z\<in\>\<bbb-C\>> we have
       <math|<around*|(|<big|prod><rsub|i=1><rsup|1>p<rsub|i>|)><around*|(|z|)>=p<rsub|1><around*|(|z|)>>
       proving that <math|><math|<big|prod><rsub|i=1><rsup|1>p<rsub|i>=p<rsub|1>>
-      a polynomial and <math|ord<around*|(|<big|prod><rsub|i=1><rsup|1>p<rsub|i>|)>=ord<around*|(|p<rsub|1>|)>=<big|sum><rsub|i=1><rsup|1>ord<around*|(|p<rsub|i>|)>>
+      [which is a polynomial] and <math|ord<around*|(|<big|prod><rsub|i=1><rsup|1>p<rsub|i>|)>=ord<around*|(|p<rsub|1>|)>=<big|sum><rsub|i=1><rsup|1>ord<around*|(|p<rsub|i>|)>>
       hence <math|1\<in\>\<cal-S\>>
 
-      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>\<cal-S\>>>then
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>\<cal-S\>>>Then
       <math|\<forall\>z\<in\>\<bbb-C\>> we have that
 
       <\equation*>
@@ -481,8 +477,7 @@
 
   <\theorem>
     <label|fundamental divergent limit of -f>Let
-    <math|f:\<bbb-R\>\<rightarrow\>\<bbb-R\>> be a function and consider then
-    for
+    <math|f:\<bbb-R\>\<rightarrow\>\<bbb-R\>> be a function then for
 
     <\equation*>
       -f:\<bbb-R\>\<rightarrow\>\<bbb-R\> <text| defined by
@@ -538,7 +533,7 @@
 
       <\equation*>
         \<cal-S\>=<around*|{|n\<in\>\<bbb-N\>\|\<forall\><around*|{|a<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>\<subseteq\>\<bbb-R\><text|
-        with >a<rsub|n>\<gtr\>0<text| then we have
+        with >a<rsub|n>\<gtr\>0<text| we have
         ><below|lim|x\<rightarrow\>\<infty\>><around*|(|<big|sum><rsub|i=0><rsup|n>a<rsub|i>\<cdot\>x<rsup|i>|)>=\<infty\>|}>
       </equation*>
 
@@ -599,14 +594,14 @@
           M-a<rsub|0>\<leqslant\>max<around*|(|1,M-a<rsub|0>|)>\<leqslant\>x\<cdot\><big|sum><rsub|i=0><rsup|n>b<rsup|i>\<cdot\>x<rsup|i>
         </equation*>
 
-        so that\ 
+        or\ 
 
         <\equation*>
           M\<leqslant\>a<rsub|0>+x\<cdot\><big|sum><rsub|i=0><rsup|n>b<rsup|i>\<cdot\>x<rsup|i>\<equallim\><rsub|<text|[eq:
           <reference|eq 17.2>]>><big|sum><rsub|i=1><rsup|n+1>a<rsub|i>\<cdot\>x<rsup|i>
         </equation*>
 
-        so that <math|<below|lim|x\<rightarrow\>\<infty\>><big|sum><rsub|i=1><rsup|n+1>a<rsub|i>\<cdot\>x<rsup|i>>
+        hence <math|<below|lim|x\<rightarrow\>\<infty\>><big|sum><rsub|i=1><rsup|n+1>a<rsub|i>\<cdot\>x<rsup|i>>
         proving that <math|n+1\<in\>S>.
       </description>
 
@@ -712,7 +707,7 @@
       so that\ 
 
       <\equation>
-        <label|eq 17.3.135>2\<cdot\><around*|\||a|\|>\<cdot\><around*|\||b|\|>\<less\><around*|\||a|\|><rsup|2>+<around*|\||b|\|><rsup|2>
+        <label|eq 17.3.135>2\<cdot\><around*|\||a|\|>\<cdot\><around*|\||b|\|>\<leqslant\><around*|\||a|\|><rsup|2>+<around*|\||b|\|><rsup|2>
       </equation>
 
       So <math|<around*|(|<around*|\||a|\|>+<around*|\||b|\|>|)><rsup|2>=<around*|\||a|\|><rsup|2>+<around*|\||b|\|><rsup|2>+2\<cdot\><around*|\||a|\|>\<cdot\><around*|\||b|\|>\<leqslant\><rsub|<text|[eq:
@@ -756,13 +751,13 @@
       Now\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<around*|(|a\<cdot\>c-b\<cdot\>d|)><rsup|2>+<around*|(|a\<cdot\>d+b\<cdot\>c|)><rsup|2>>|<cell|=>|<cell|a<rsup|2>\<cdot\>c<rsup|2>+b<rsup|2>\<cdot\>d<rsup|2>-2\<cdot\>a\<cdot\>c\<cdot\>b\<cdot\>d+a<rsup|2>\<cdot\>d<rsup|2>+b<rsup|2>\<cdot\>c<rsup|2>+4\<cdot\>a\<cdot\>d\<cdot\>b\<cdot\>c>>|<row|<cell|>|<cell|=>|<cell|a<rsup|2>\<cdot\>c<rsup|2>+b<rsup|2>\<cdot\>d<rsup|2>+a<rsup|2>\<cdot\>d<rsup|2>+b<rsup|2>\<cdot\>c<rsup|2>>>|<row|<cell|>|<cell|=>|<cell|a<rsup|2>\<cdot\><around*|(|c<rsup|2>+d<rsup|2>|)>+b<rsup|2>\<cdot\><around*|(|d<rsup|2>+c<rsup|2>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|a<rsup|2>+b<rsup|2>|)>\<cdot\><around*|(|c<rsup|2>+d<rsup|2>|)>>>>>
+        <tformat|<table|<row|<cell|<around*|(|a\<cdot\>c-b\<cdot\>d|)><rsup|2>+<around*|(|a\<cdot\>d+b\<cdot\>c|)><rsup|2>>|<cell|=>|<cell|a<rsup|2>\<cdot\>c<rsup|2>+b<rsup|2>\<cdot\>d<rsup|2>-2\<cdot\>a\<cdot\>c\<cdot\>b\<cdot\>d+a<rsup|2>\<cdot\>d<rsup|2>+b<rsup|2>\<cdot\>c<rsup|2>+\<cdot\>a\<cdot\>d\<cdot\>b\<cdot\>c>>|<row|<cell|>|<cell|=>|<cell|a<rsup|2>\<cdot\>c<rsup|2>+b<rsup|2>\<cdot\>d<rsup|2>+a<rsup|2>\<cdot\>d<rsup|2>+b<rsup|2>\<cdot\>c<rsup|2>>>|<row|<cell|>|<cell|=>|<cell|a<rsup|2>\<cdot\><around*|(|c<rsup|2>+d<rsup|2>|)>+b<rsup|2>\<cdot\><around*|(|d<rsup|2>+c<rsup|2>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|a<rsup|2>+b<rsup|2>|)>\<cdot\><around*|(|c<rsup|2>+d<rsup|2>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|a,b,c,d\<in\>\<bbb-R\>>>|<cell|<around*|(|<around*|\||a|\|><rsup|2>+<around*|\||b|\|><rsup|2>|)>\<cdot\><around*|(|<around*|\||c|\|><rsup|d>+<around*|\||d|\|><rsup|2>|)>>>>>
       </eqnarray*>
 
       substituting the above in [eq: <reference|eq 17.7.135>] we have that\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<around*|(|<around*|\||a|\|>+<around*|\||b|\|>|)><rsup|2>\<cdot\><around*|(|<around*|\||c|\|>+<around*|\||d|\|>|)><rsup|2>>|<cell|\<leqslant\>>|<cell|4\<cdot\><around*|(|a\<cdot\>c-b\<cdot\>d|)><rsup|2>+<around*|(|a\<cdot\>d+b\<cdot\>c|)><rsup|2>>>|<row|<cell|>|<cell|=>|<cell|4\<cdot\><around*|\||a\<cdot\>c-b\<cdot\>d|\|><rsup|2>+<around*|\||a\<cdot\>d+b\<cdot\>c|\|><rsup|2>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|4\<cdot\><around*|\||a\<cdot\>c-b\<cdot\>d|\|><rsup|2>+<around*|\||a\<cdot\>d+b\<cdot\>c|\|><rsup|2>+8\<cdot\><around*|\||a\<cdot\>c-b\<cdot\>d|\|>\<cdot\><around*|\||a\<cdot\>d+b\<cdot\>c|\|>>>|<row|<cell|>|<cell|=>|<cell|4\<cdot\><around*|(|<around*|\||a\<cdot\>c-b\<cdot\>d|\|>+<around*|\||a\<cdot\>d+b\<cdot\>c|\|>|)><rsup|2>>>>>
+        <tformat|<table|<row|<cell|<around*|(|<around*|\||a|\|>+<around*|\||b|\|>|)><rsup|2>\<cdot\><around*|(|<around*|\||c|\|>+<around*|\||d|\|>|)><rsup|2>>|<cell|\<leqslant\>>|<cell|4\<cdot\><around*|(|<around*|(|a\<cdot\>c-b\<cdot\>d|)><rsup|2>+<around*|(|a\<cdot\>d+b\<cdot\>c|)><rsup|2>|)>>>|<row|<cell|>|<cell|=>|<cell|4\<cdot\><around*|(|<around*|\||a\<cdot\>c-b\<cdot\>d|\|><rsup|2>+<around*|\||a\<cdot\>d+b\<cdot\>c|\|><rsup|2>|)>>>|<row|<cell|>|<cell|=>|<cell|4\<cdot\><around*|\||a\<cdot\>c-b\<cdot\>d|\|><rsup|2>+4\<cdot\><around*|\||a\<cdot\>d+b\<cdot\>c|\|><rsup|2>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|4\<cdot\><around*|\||a\<cdot\>c-b\<cdot\>d|\|><rsup|2>+4\<cdot\><around*|\||a\<cdot\>d+b\<cdot\>c|\|><rsup|2>+8\<cdot\><around*|\||a\<cdot\>c-b\<cdot\>d|\|>\<cdot\><around*|\||a\<cdot\>d+b\<cdot\>c|\|>>>|<row|<cell|>|<cell|=>|<cell|4\<cdot\><around*|(|<around*|\||a\<cdot\>c-b\<cdot\>d|\|>+<around*|\||a\<cdot\>d+b\<cdot\>c|\|>|)><rsup|2>>>>>
       </eqnarray*>
 
       Using the fact that the square root is increasing on
@@ -991,10 +986,10 @@
       it follows that <math|p=<big|sum><rsub|i=0><rsup|n><around*|(|<around*|(|\<alpha\><rsub|i>\<cdot\>|)>\<circ\><around*|(|\<cdot\>|)><rsup|i>|)>>.
       Hence <math|p> is continuous.
 
-      <item>Let <math|z\<in\>\<bbb-C\>> and
+      <item>Let <math|y\<in\>\<bbb-C\>> and
       <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. Take
       <math|\<delta\>=min<around*|(|1,<frac|\<varepsilon\>|2\<cdot\><around*|\<\|\|\>|y|\<\|\|\>>+1>|)>\<in\>\<bbb-R\><rsup|+>>
-      then if <math|y\<in\>\<bbb-C\>> with
+      then if <math|z\<in\>\<bbb-C\>> with
       <math|<around*|\<\|\|\>|z-y|\<\|\|\>>\<less\>\<delta\>> then if we
       define <math|h=z-y> we have <math|<around*|\<\|\|\>|h|\<\|\|\>>\<less\>\<delta\>>
       and
@@ -1012,18 +1007,18 @@
       <item>Let <math|z\<in\>\<bbb-C\>> then\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<around*|(|<around*|\<langle\>|\<cdot\>|\<rangle\>>\<circ\>p|)><around*|(|z|)>>|<cell|=>|<cell|<around*|\<langle\>|\<cdot\>|\<rangle\>><around*|(|p<around*|(|z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|\<cdot\>|\<rangle\>><around*|(|<big|sum><rsub|i=0><rsup|n>\<alpha\><rsub|i>\<cdot\>z<rsup|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i=0><rsup|n>\<alpha\><rsub|i>\<cdot\>z<rsup|i>|)>\<cdot\><wide|<around*|(|<big|sum><rsub|i=0><rsup|n>\<alpha\><rsub|i>\<cdot\>z<rsup|i>|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|p\<cdot\>p|)><around*|(|z|)>>>>>
+        <tformat|<table|<row|<cell|<around*|(|<around*|\<langle\>|\<cdot\>|\<rangle\>>\<circ\>p|)><around*|(|z|)>>|<cell|=>|<cell|<around*|\<langle\>|\<cdot\>|\<rangle\>><around*|(|p<around*|(|z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|\<cdot\>|\<rangle\>><around*|(|<big|sum><rsub|i=0><rsup|n>\<alpha\><rsub|i>\<cdot\>z<rsup|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i=0><rsup|n>\<alpha\><rsub|i>\<cdot\>z<rsup|i>|)>\<cdot\><wide|<around*|(|<big|sum><rsub|i=0><rsup|n>\<alpha\><rsub|i>\<cdot\>z<rsup|i>|)>|\<wide-bar\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|p\<cdot\><wide|p|\<wide-bar\>>|)><around*|(|z|)>>>>>
       </eqnarray*>
 
       so that
 
       <\equation*>
-        <around*|(|<around*|\<langle\>|\<cdot\>|\<rangle\>>\<circ\>p|)>=p\<cdot\>p
+        <around*|(|<around*|\<langle\>|\<cdot\>|\<rangle\>>\<circ\>p|)>=p\<cdot\><wide|p|\<wide-bar\>>
       </equation*>
 
       By (3),(4) <math|p> and <math|<around*|\<langle\>|\<cdot\>|\<rangle\>>>
       are continuous, hence using [theorem: <reference|continuity
-      composition>] <math|p\<cdot\>p> is continuous.
+      composition>] <math|p\<cdot\><wide|p|\<wide-bar\>>> is continuous.
 
       <item>Let <math|\<varepsilon\>\<in\>\<bbb-R\>>, <math|z\<in\>\<bbb-C\>>
       then if <math|z<rprime|'>\<in\>\<bbb-C\>> with
@@ -1108,9 +1103,9 @@
       <math|z\<in\>\<bbb-C\>> was chosen arbitrary <math|f\<cdot\>g> is
       continuous.
     </enumerate>
-
-    \;
   </proof>
+
+  TODO checked to here
 
   The following very specific lemma will be used in the proof of the
   fundamental theorem of algebra.
@@ -3131,92 +3126,93 @@
     <associate|auto-8|<tuple|17.1.3|?>>
     <associate|auto-9|<tuple|factorial|?>>
     <associate|divergent limit of sums|<tuple|17.15|?>>
-    <associate|eq 17.1.145|<tuple|17.1|?>>
-    <associate|eq 17.10.135|<tuple|17.10|?>>
-    <associate|eq 17.11.136|<tuple|17.14|?>>
-    <associate|eq 17.11.139|<tuple|17.11|?>>
-    <associate|eq 17.12.136|<tuple|17.15|?>>
-    <associate|eq 17.12.139|<tuple|17.12|?>>
-    <associate|eq 17.13.136|<tuple|17.16|?>>
-    <associate|eq 17.13.139|<tuple|17.13|?>>
-    <associate|eq 17.14.136|<tuple|17.17|?>>
-    <associate|eq 17.16.136|<tuple|17.19|?>>
-    <associate|eq 17.17.136|<tuple|17.20|?>>
-    <associate|eq 17.18.136|<tuple|17.21|?>>
-    <associate|eq 17.19.136|<tuple|17.22|?>>
-    <associate|eq 17.2|<tuple|17.2|?>>
-    <associate|eq 17.20.136|<tuple|17.23|?>>
-    <associate|eq 17.21.136|<tuple|17.24|?>>
-    <associate|eq 17.22.136|<tuple|17.25|?>>
-    <associate|eq 17.23.136|<tuple|17.26|?>>
-    <associate|eq 17.24.136|<tuple|17.27|?>>
-    <associate|eq 17.25.136|<tuple|17.28|?>>
-    <associate|eq 17.26.136|<tuple|17.29|?>>
-    <associate|eq 17.27.136|<tuple|17.30|?>>
-    <associate|eq 17.28.136|<tuple|17.31|?>>
-    <associate|eq 17.29.136|<tuple|17.32|?>>
-    <associate|eq 17.3.135|<tuple|17.3|?>>
-    <associate|eq 17.30.136|<tuple|17.33|?>>
-    <associate|eq 17.31.136|<tuple|17.34|?>>
-    <associate|eq 17.32.136|<tuple|17.35|?>>
-    <associate|eq 17.33.136|<tuple|17.36|?>>
-    <associate|eq 17.34.136|<tuple|17.37|?>>
-    <associate|eq 17.35.136|<tuple|17.38|?>>
-    <associate|eq 17.36.136|<tuple|17.39|?>>
-    <associate|eq 17.37.136|<tuple|17.40|?>>
-    <associate|eq 17.38.136|<tuple|17.41|?>>
-    <associate|eq 17.39.136|<tuple|17.42|?>>
-    <associate|eq 17.4.135|<tuple|17.4|?>>
-    <associate|eq 17.40.136|<tuple|17.43|?>>
-    <associate|eq 17.41.136|<tuple|17.44|?>>
-    <associate|eq 17.42.136|<tuple|17.45|?>>
-    <associate|eq 17.43.138|<tuple|17.46|?>>
-    <associate|eq 17.44.138|<tuple|17.47|?>>
-    <associate|eq 17.45.138|<tuple|17.48|?>>
-    <associate|eq 17.46.138|<tuple|17.49|?>>
-    <associate|eq 17.47.138|<tuple|17.50|?>>
-    <associate|eq 17.48.138|<tuple|17.51|?>>
-    <associate|eq 17.49.138|<tuple|17.52|?>>
-    <associate|eq 17.5.135|<tuple|17.5|?>>
-    <associate|eq 17.50.138|<tuple|17.53|?>>
-    <associate|eq 17.51.138|<tuple|17.54|?>>
-    <associate|eq 17.52.138|<tuple|17.55|?>>
-    <associate|eq 17.53.138|<tuple|17.56|?>>
-    <associate|eq 17.54.138|<tuple|17.57|?>>
-    <associate|eq 17.55.138|<tuple|17.58|?>>
-    <associate|eq 17.56.138|<tuple|17.59|?>>
-    <associate|eq 17.6.135|<tuple|17.6|?>>
-    <associate|eq 17.60.138|<tuple|17.60|?>>
-    <associate|eq 17.61.139|<tuple|17.61|?>>
-    <associate|eq 17.62.139|<tuple|17.62|?>>
-    <associate|eq 17.63.139|<tuple|17.63|?>>
-    <associate|eq 17.64.139|<tuple|17.64|?>>
-    <associate|eq 17.65.139|<tuple|17.65|?>>
-    <associate|eq 17.66.139|<tuple|17.66|?>>
-    <associate|eq 17.67.139|<tuple|17.67|?>>
-    <associate|eq 17.68.139|<tuple|17.68|?>>
-    <associate|eq 17.69.139|<tuple|17.69|?>>
-    <associate|eq 17.7.135|<tuple|17.7|?>>
-    <associate|eq 17.70.139|<tuple|17.70|?>>
-    <associate|eq 17.71.139|<tuple|17.71|?>>
-    <associate|eq 17.72.139|<tuple|17.72|?>>
-    <associate|eq 17.73.139|<tuple|17.73|?>>
-    <associate|eq 17.74.139|<tuple|17.74|?>>
-    <associate|eq 17.75.139|<tuple|17.75|?>>
-    <associate|eq 17.76.139|<tuple|17.76|?>>
-    <associate|eq 17.77.139|<tuple|17.77|?>>
-    <associate|eq 17.78.139|<tuple|17.78|?>>
-    <associate|eq 17.79.139|<tuple|17.79|?>>
-    <associate|eq 17.8.135|<tuple|17.8|?>>
-    <associate|eq 17.80.139|<tuple|17.80|?>>
-    <associate|eq 17.81.139|<tuple|17.81|?>>
-    <associate|eq 17.82.139|<tuple|17.82|?>>
-    <associate|eq 17.83.139|<tuple|17.83|?>>
-    <associate|eq 17.84.139|<tuple|17.84|?>>
-    <associate|eq 17.84.139.1|<tuple|17.85|?>>
-    <associate|eq 17.86.139|<tuple|17.86|?>>
-    <associate|eq 17.87.140|<tuple|17.87|?>>
-    <associate|eq 17.9.135|<tuple|17.9|?>>
+    <associate|eq 17.1.145|<tuple|17.2|?>>
+    <associate|eq 17.1.154|<tuple|17.1|?>>
+    <associate|eq 17.10.135|<tuple|17.11|?>>
+    <associate|eq 17.11.136|<tuple|17.15|?>>
+    <associate|eq 17.11.139|<tuple|17.12|?>>
+    <associate|eq 17.12.136|<tuple|17.16|?>>
+    <associate|eq 17.12.139|<tuple|17.13|?>>
+    <associate|eq 17.13.136|<tuple|17.17|?>>
+    <associate|eq 17.13.139|<tuple|17.14|?>>
+    <associate|eq 17.14.136|<tuple|17.18|?>>
+    <associate|eq 17.16.136|<tuple|17.20|?>>
+    <associate|eq 17.17.136|<tuple|17.21|?>>
+    <associate|eq 17.18.136|<tuple|17.22|?>>
+    <associate|eq 17.19.136|<tuple|17.23|?>>
+    <associate|eq 17.2|<tuple|17.3|?>>
+    <associate|eq 17.20.136|<tuple|17.24|?>>
+    <associate|eq 17.21.136|<tuple|17.25|?>>
+    <associate|eq 17.22.136|<tuple|17.26|?>>
+    <associate|eq 17.23.136|<tuple|17.27|?>>
+    <associate|eq 17.24.136|<tuple|17.28|?>>
+    <associate|eq 17.25.136|<tuple|17.29|?>>
+    <associate|eq 17.26.136|<tuple|17.30|?>>
+    <associate|eq 17.27.136|<tuple|17.31|?>>
+    <associate|eq 17.28.136|<tuple|17.32|?>>
+    <associate|eq 17.29.136|<tuple|17.33|?>>
+    <associate|eq 17.3.135|<tuple|17.4|?>>
+    <associate|eq 17.30.136|<tuple|17.34|?>>
+    <associate|eq 17.31.136|<tuple|17.35|?>>
+    <associate|eq 17.32.136|<tuple|17.36|?>>
+    <associate|eq 17.33.136|<tuple|17.37|?>>
+    <associate|eq 17.34.136|<tuple|17.38|?>>
+    <associate|eq 17.35.136|<tuple|17.39|?>>
+    <associate|eq 17.36.136|<tuple|17.40|?>>
+    <associate|eq 17.37.136|<tuple|17.41|?>>
+    <associate|eq 17.38.136|<tuple|17.42|?>>
+    <associate|eq 17.39.136|<tuple|17.43|?>>
+    <associate|eq 17.4.135|<tuple|17.5|?>>
+    <associate|eq 17.40.136|<tuple|17.44|?>>
+    <associate|eq 17.41.136|<tuple|17.45|?>>
+    <associate|eq 17.42.136|<tuple|17.46|?>>
+    <associate|eq 17.43.138|<tuple|17.47|?>>
+    <associate|eq 17.44.138|<tuple|17.48|?>>
+    <associate|eq 17.45.138|<tuple|17.49|?>>
+    <associate|eq 17.46.138|<tuple|17.50|?>>
+    <associate|eq 17.47.138|<tuple|17.51|?>>
+    <associate|eq 17.48.138|<tuple|17.52|?>>
+    <associate|eq 17.49.138|<tuple|17.53|?>>
+    <associate|eq 17.5.135|<tuple|17.6|?>>
+    <associate|eq 17.50.138|<tuple|17.54|?>>
+    <associate|eq 17.51.138|<tuple|17.55|?>>
+    <associate|eq 17.52.138|<tuple|17.56|?>>
+    <associate|eq 17.53.138|<tuple|17.57|?>>
+    <associate|eq 17.54.138|<tuple|17.58|?>>
+    <associate|eq 17.55.138|<tuple|17.59|?>>
+    <associate|eq 17.56.138|<tuple|17.60|?>>
+    <associate|eq 17.6.135|<tuple|17.7|?>>
+    <associate|eq 17.60.138|<tuple|17.61|?>>
+    <associate|eq 17.61.139|<tuple|17.62|?>>
+    <associate|eq 17.62.139|<tuple|17.63|?>>
+    <associate|eq 17.63.139|<tuple|17.64|?>>
+    <associate|eq 17.64.139|<tuple|17.65|?>>
+    <associate|eq 17.65.139|<tuple|17.66|?>>
+    <associate|eq 17.66.139|<tuple|17.67|?>>
+    <associate|eq 17.67.139|<tuple|17.68|?>>
+    <associate|eq 17.68.139|<tuple|17.69|?>>
+    <associate|eq 17.69.139|<tuple|17.70|?>>
+    <associate|eq 17.7.135|<tuple|17.8|?>>
+    <associate|eq 17.70.139|<tuple|17.71|?>>
+    <associate|eq 17.71.139|<tuple|17.72|?>>
+    <associate|eq 17.72.139|<tuple|17.73|?>>
+    <associate|eq 17.73.139|<tuple|17.74|?>>
+    <associate|eq 17.74.139|<tuple|17.75|?>>
+    <associate|eq 17.75.139|<tuple|17.76|?>>
+    <associate|eq 17.76.139|<tuple|17.77|?>>
+    <associate|eq 17.77.139|<tuple|17.78|?>>
+    <associate|eq 17.78.139|<tuple|17.79|?>>
+    <associate|eq 17.79.139|<tuple|17.80|?>>
+    <associate|eq 17.8.135|<tuple|17.9|?>>
+    <associate|eq 17.80.139|<tuple|17.81|?>>
+    <associate|eq 17.81.139|<tuple|17.82|?>>
+    <associate|eq 17.82.139|<tuple|17.83|?>>
+    <associate|eq 17.83.139|<tuple|17.84|?>>
+    <associate|eq 17.84.139|<tuple|17.85|?>>
+    <associate|eq 17.84.139.1|<tuple|17.86|?>>
+    <associate|eq 17.86.139|<tuple|17.87|?>>
+    <associate|eq 17.87.140|<tuple|17.88|?>>
+    <associate|eq 17.9.135|<tuple|17.10|?>>
     <associate|fundamental binomial coefficient|<tuple|17.21|?>>
     <associate|fundamental binomial formula|<tuple|17.23|?>>
     <associate|fundamental binomial properties|<tuple|17.22|?>>
@@ -3291,7 +3287,7 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-6>>
 
-      <with|par-left|<quote|1tab>|17.1.3<space|2spc>Propertues of
+      <with|par-left|<quote|1tab>|17.1.3<space|2spc>Properties of
       <with|mode|<quote|math>|\<bbb-C\>> needed for the fundamental theorem
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-8>>
