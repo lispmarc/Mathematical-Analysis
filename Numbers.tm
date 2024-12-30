@@ -1785,7 +1785,7 @@
   <\definition>
     <label|integers even odd><index|even integers><index|odd integers>A
     <math|z\<in\>\<bbb-Z\>> is <with|font-series|bold|even> if <math|2\|z>
-    and <with|font-series|bold|odd> is <math|z> is not even.
+    and <with|font-series|bold|odd> if <math|z> is not even.
   </definition>
 
   <\theorem>

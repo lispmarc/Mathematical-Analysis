@@ -2127,15 +2127,16 @@
 
       <item>Let <math|x\<in\>\<bbb-R\><rsup|+>> and take
       <math|y=log<around*|(|x|)>>. As <math|exp<rprime|'><rsub|y>=exp<around*|(|y|)>\<gtr\>0>
-      we have by the inverse function theorem [see theorem:
-      <reference|inverse function and derivate>] that there exist a open
-      <math|U\<subseteq\>\<bbb-R\>> and <math|V\<subseteq\>\<bbb-R\><rsup|+>>
-      with <math|y\<in\>U> and <math|exp<around*|(|y|)>\<in\>V\<Rightarrowlim\><rsub|exp<around*|(|y|)>=exp<around*|(|log<around*|(|x|)>|)>x>x\<in\>V>
+      and <math|exp<rprime|'>=exp> is continuous we have by the inverse
+      function theorem [see theorem: <reference|inverse function and
+      derivate>(3)] that there exist a open <math|U\<subseteq\>\<bbb-R\>> and
+      <math|V\<subseteq\>\<bbb-R\><rsup|+>> with <math|y\<in\>U> and
+      <math|exp<around*|(|y|)>\<in\>V\<Rightarrowlim\><rsub|exp<around*|(|y|)>=exp<around*|(|log<around*|(|x|)>|)>>x\<in\>V>
       such that <math|exp<rsub|\|U>:U\<rightarrow\>V> has a inverse
       <math|<around*|(|exp<rsub|\|U>|)><rsup|-1>:V\<rightarrow\>U> and
 
       <\equation>
-        <label|eq 19.32.151>\<forall\>z\<in\>V<text| we have
+        <label|eq 19.32.151>\<forall\>z\<in\>U<text| we have
         ><around*|(|<around*|(|exp<rsub|\|U>|)><rsup|-1>|)><rprime|'><rsub|exp<around*|(|z|)>>=<frac|1|exp<rprime|'><rsub|z>>
       </equation>
 
@@ -2152,7 +2153,7 @@
       </equation*>
 
       As <math|log<around*|(|x|)>=y\<in\>U> we have by the above that
-      <math|<around*|(|log<rsub|\|V>|)><rprime|'><rsub|exp<around*|(|log<around*|(|x|)>|)>>=<frac|1|exp<around*|(|log<around*|(|x|)>|)>>>
+      <math|<around*|(||\<nobracket\>><around*|(|log<rsub|\|V>|)><rprime|'><rsub|exp<around*|(|log<around*|(|x|)>|)>>=<frac|1|exp<around*|(|log<around*|(|x|)>|)>>>
       so that\ 
 
       <\equation*>
@@ -4344,12 +4345,12 @@
 
       <item><math|\<forall\>x\<in\><around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>
       <math|tan> has a derivative <math|tan<rprime|'><rsub|x> where
-      tan<rprime|'><rsub|x>=<frac|1|cos<rsup|2><around*|(|x|)>>>
-
-      <item><math|tan> is a continuous function
+      tan<rprime|'><rsub|x>=<frac|1|cos<rsup|2><around*|(|x|)>>\<gtr\>0>
 
       <item><math|tan> is strictly increasing on
       <math|<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>
+
+      <item><math|tan> is a continuous function
 
       <item><math|tan:<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>\<rightarrow\>\<bbb-R\>>
       is a bijective function
@@ -4378,6 +4379,11 @@
         <tformat|<table|<row|<cell|tan<rprime|'><rsub|x>>|<cell|=>|<cell|<around*|(|<frac|sin<rsub|\|<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>|cos<rsub|\|<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>>|)><rprime|'><rsub|x>>>|<row|<cell|>|<cell|=>|<cell|<frac|<around*|(|sin<rsub|\|<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>|)><rprime|'><rsub|x>\<cdot\>cos<rsub|\|<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>><rsup|><around*|(|x|)>-<around*|(|cos<rsub|\|<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>><rsup|><around*|(|x|)>|)><rprime|'><rsub|x>\<cdot\>sin<rsub|\|<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>><around*|(|x|)>|*<around*|(|cos<rsub|\|<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>><rsup|><around*|(|x|)>|)><rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|<frac|cos<around*|(|x|)>\<cdot\>cos<around*|(|x|)>+sin<around*|(|x|)>\<cdot\>sin<around*|(|x|)>|cos<rsup|2><around*|(|x|)>>>>|<row|<cell|>|<cell|=>|<cell|<frac|cos<rsup|2><around*|(|x|)>+sin<rsup|2><around*|(|x|)>|cos<rsup|2><around*|(|x|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|exp trigoniometric properties>]>>>|<cell|<frac|1|cos<rsup|2><around*|(|x|)>>>>>>
       </eqnarray*>
+
+      Further for <math|x\<in\><around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>
+      we have by [theorem: <reference|exp trigoniometric properties (1)>]
+      that <math|0\<less\>cos<around*|(|x|)>> so that
+      <math|<frac|1|cos<rsup|2><around*|(|x|)>>\<gtr\>0>.
 
       <item>Let <math|x\<in\><around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>
       then, as <math|tan<rprime|'><rsub|x>=<frac|1|cos<rsup|2><around*|(|x|)>>>
@@ -4522,6 +4528,97 @@
 
     which as the inverse of a bijection is itself a bijection.
   </definition>
+
+  <\theorem>
+    The arctangent function <math|arctan:\<bbb-R\>\<rightarrow\><around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>
+    has the following properties:
+
+    <\enumerate>
+      <item><math|\<forall\>x\<in\>\<bbb-R\>>
+      <math|tan<around*|(|arctan<around*|(|x|)>|)>=x>
+
+      <item><math|\<forall\>x\<in\><around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>
+      <math|arctan<around*|(|tan<around*|(|x|)>|)>=x>
+
+      <item><math|arctan<around*|(|0|)>=0>
+
+      <item><math|\<forall\>x\<in\>\<bbb-R\>> <math|arctan> has a derivative
+      at <math|x> where <math|arctan<rprime|'><rsub|x>=<frac|1|1+x<rsup|2>>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|x\<in\>\<bbb-R\>> then
+      <math|tan<around*|(|arctan<around*|(|x|)>|)>=tan<around*|(|tan<rsup|-1><around*|(|x|)>|)>=x>
+
+      <item>Let <math|x\<in\><around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>
+      then <math|arctan<around*|(|tan<around*|(|x|)>|)>=tan<rsup|-1><around*|(|tan<around*|(|x|)>|)>=x>
+
+      <item><math|>As <math|tan<around*|(|0|)>\<equallim\><rsub|<text|[theorem:
+      <reference|exp tangent properties>]>>0> it follows that
+      <math|arctan<around*|(|0|)>=tan<rsup|-1><around*|(|0|)>=0>
+
+      <item>Let <math|x\<in\>\<bbb-R\>> and take
+      <math|y=arctan<around*|(|x|)>\<in\><around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>.
+      We want to apply the inverse function theorem [see theorem:
+      <reference|inverse function and derivate>] so we must prove that\ 
+
+      <\equation*>
+        tan<rprime|'>:<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>\<rightarrow\>\<bbb-R\><text|
+        by >tan<rprime|'><around*|(|x|)>=tan<rprime|'><rsub|x>
+      </equation*>
+
+      is continuous and that <math|tan<rprime|'><rsub|y>\<neq\>0>. Using
+      [theorem: <reference|exp tangent properties>(2)] it follows that
+      <math|tan<rprime|'>=<frac|1|<around*|(|cos<rsub|\|<around*|]|-<frac|\<pi\>|2>,<tfrac|p|2>|[>>|)><rsup|2>>>,
+      as <math|cos<rsub|\|<around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>>> is
+      continuous [see theorems: <reference|exp trigoniometric properties>,
+      <reference|continuity and subspace topology (2)>], so by [theorem:
+      <reference|continuity 1/f^2 is continuous>] it follows that
+      <math|tan<rprime|'>=<frac|1|<around*|(|cos<rsub|\|<around*|]|-<frac|\<pi\>|2>,<tfrac|p|2>|[>>|)><rsup|2>>>
+      is continuous, further <math|tan<rprime|'><rsub|y>\<equallim\><rsub|<text|[theorem:
+      <reference|exp tangent properties>(2)]>><frac|1|cos<rsup|2><around*|(|y|)>>\<gtr\>0>.
+      By \ the inverse function theorem [see theorem: <reference|inverse
+      function and derivate>(3)] there exist a open
+      <math|U\<subseteq\><around*|]|-<frac|\<pi\>|2>,<frac|\<pi\>|2>|[>> and
+      <math|V\<subseteq\>\<bbb-R\><rsup|>> with <math|y\<in\>U> and
+      <math|tan<around*|(|y|)>\<in\>V\<Rightarrowlim\><rsub|tan<around*|(|y|)>=tan<around*|(|arctan<around*|(|x|)>|)>=x>x\<in\>V>
+      such that <math|tan<rsub|\|U>:U\<rightarrow\>V> has a inverse
+      <math|<around*|(|tan<rsub|\|U>|)><rsup|-1>:V\<rightarrow\>U> and
+
+      <\equation>
+        <label|eq 19.53.153>\<forall\>z\<in\>V<text| we have
+        ><around*|(|<around*|(|tan<rsub|\|U>|)><rsup|-1>|)><rprime|'><rsub|tan<around*|(|z|)>>=<frac|1|tan<rprime|'><rsub|z>>
+      </equation>
+
+      As <math|\<forall\>v\<in\>V> we have
+      <math|<around*|(|tan<rsub|\|U>\<circ\>arctan<rsub|\|V>|)><around*|(|v|)>=tan<rsub|\|U><around*|(|arctan<rsub|\|V><around*|(|v|)>|)>=tan<around*|(|arctan<around*|(|v|)>|)>=v=Id<rsub|V><around*|(|u|)>>
+      and <math|\<forall\>u\<in\>U> we have
+      <math|<around*|(|arctan<rsub|\|V>\<circ\>tan<rsub|<around*|\||U|\|>>|)><around*|(|u|)>=arctan<rsub|\|V><around*|(|tan<rsub|\|U><around*|(|u|)>|)>=arctan<around*|(|tan<around*|(|u|)>|)>=u=Id<rsub|U><around*|(|u|)>>
+      so that <math|<rigid|<around*|(|tan<rsub|\|U>|)><rsup|-1>=arctan<rsub|\|V>>>.
+      Substituting this in [eq: <reference|eq 19.53.153>] we have\ 
+
+      <\equation*>
+        \<forall\>z\<in\>V<text| we have ><around*|(|arctan<rsub|\|V>|)><rprime|'><rsub|tan<around*|(|z|)>>=<frac|1|tan<rprime|'><rsub|z>>\<equallim\><rsub|<text|[theorem:
+        <reference|exp tangent properties>]>><frac|1|<around*|(|<frac|1|cos<rsup|2><around*|(|z|)>>|)>>=<frac|1|<around*|(|<frac|cos<rsup|2><around*|(|z|)>+sin<rsup|2><around*|(|z|)>|cos<rsup|2><around*|(|x|)>>|)>>=<tfrac|1|1+<around*|(|tan<rsup|><around*|(|z|)>|)><rsup|2>>
+      </equation*>
+
+      As <math|arctan<around*|(|x|)>=y\<in\>V> we have by the above that
+      <math|<around*|(|arctan<rsub|\|V>|)><rprime|'><rsub|tan<around*|(|arctan<around*|(|x|)>|)>>=<frac|1|1+<around*|(|tan<rsup|><around*|(|arctan<around*|(|s|)>|)>|)><rsup|2>>>
+      so that\ 
+
+      <\equation*>
+        <around*|(|arctan<rsub|\|V>|)><rprime|'><rsub|x>=<frac|1|1+x<rsup|2>>
+      </equation*>
+
+      Finally using the locality of the derivative [theorem: <reference|diff
+      derivative is local>] it follows that <math|>arctan has a derivative at
+      <math|x> and <math|arctan<rprime|'><rsub|x>=<frac|1|1+x<rsup|2>>>.
+    </enumerate>
+  </proof>
 </body>
 
 <\initial>
@@ -4620,6 +4717,7 @@
     <associate|eq 19.50.152|<tuple|19.50|?>>
     <associate|eq 19.51.152|<tuple|19.51|?>>
     <associate|eq 19.52.153|<tuple|19.52|?>>
+    <associate|eq 19.53.153|<tuple|19.53|?>>
     <associate|eq 19.6.150|<tuple|19.8|?>>
     <associate|eq 19.6.151|<tuple|19.6|?>>
     <associate|eq 19.60.152|<tuple|19.60|?>>
