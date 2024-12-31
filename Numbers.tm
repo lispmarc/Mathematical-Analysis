@@ -785,7 +785,7 @@
       \<leqslant\>=<around*|{|<around*|(|x,y|)>\<in\>\<bbb-Z\>\<times\>\<bbb-Z\><around*|\||y+<around*|(|-x|)>\<in\>\<bbb-Z\><rsup|+><rsub|0>|\|>|}>
     </equation*>
 
-    is a totally ordered set.
+    is a partial ordered set that is fully [or total] ordered.
   </theorem>
 
   <\proof>
@@ -14035,11 +14035,7 @@
     This follows from [theorem: <reference|set of finite family is finite>].
   </proof>
 
-  <subsection|Extended real numbers>
-
-  Finally we define the set of extended real numbers which are useful if we
-  have to work with numbers that are bigger or lower then every real number.
-  This will be useful later for limits, dimensions.\ 
+  The following lemma will later be used to define the extended real numbers.
 
   <\lemma>
     <label|extended reals existence>There exists at least two different
@@ -14055,258 +14051,6 @@
     <math|<around*|(|\<bbb-Q\>,0|)>\<nin\>\<bbb-R\><rsub|\<bbb-C\>>> and
     <math|<around*|(|\<varnothing\>,0|)>\<neq\><around*|(|\<bbb-Q\>,0|)>>
   </proof>
-
-  <\definition>
-    <label|extended reals>The set of extended real numbers
-    <math|<wide|\<bbb-R\>|\<wide-bar\>>> is defined as\ 
-
-    <\equation*>
-      <wide|\<bbb-R\>|\<wide-bar\>>=\<bbb-R\><rsub|\<bbb-C\>><big|cup><around*|{|\<infty\>,-\<infty\>|}>
-    </equation*>
-
-    where <math|\<infty\>,-\<infty\>\<nin\>\<bbb-R\><rsub|\<bbb-C\>>> and
-    <math|\<infty\>\<neq\>-\<infty\>><math|>
-  </definition>
-
-  <\definition>
-    <label|extended reals finite real number>A
-    <math|x\<in\><wide|\<bbb-R\>|\<wide-bar\>>> is a called a finite real
-    number if <math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>> so
-    <math|\<bbb-R\><rsub|\<bbb-C\>>> is the set of finite real numbers.
-  </definition>
-
-  <\definition>
-    <label|extended reals order definition><math|<wide|\<leqslant\>|\<wide-bar\>>\<in\><wide|\<bbb-R\>|\<wide-bar\>>\<times\><wide|\<bbb-R\>|\<wide-bar\>>>
-    is defined as follows
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|<around*|{|<around*|(|-\<infty\>,-\<infty\>|)>,<around*|(|-\<infty\>,\<infty\>|)>,<around*|(|\<infty\>,\<infty\>|)>|}>>|<cell|<big|cup>>|<cell|<around*|{|<around*|(|x,\<infty\>|)>\|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>|}>>>|<row|<cell|>|<cell|<big|cup>>|<cell|<around*|{|<around*|(|-\<infty\>,x|)>\|x\<in\>\<bbb-R\><rsub|C>|}>>>|<row|<cell|>|<cell|<big|cup>>|<cell|<around*|{|<around*|(|x,y|)>\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<times\>\<bbb-R\><rsub|\<bbb-C\>>\|x\<leqslant\>y|}>>>>>
-    </eqnarray*>
-  </definition>
-
-  <\note>
-    As <math|<around*|{|-\<infty\>,\<infty\>|}><big|cap>\<bbb-R\>=\<emptyset\>>
-    and <math|-\<infty\>\<neq\>\<infty\>> we have
-    <math|\<forall\>x\<in\>\<bbb-R\><rsub|\<bbb-C\>>> we have
-    <math|-\<infty\>\<less\>x> and <math|x\<less\>\<infty\>>
-  </note>
-
-  <\theorem>
-    <label|extended reals are fully ordered><math|<around*|\<langle\>|<wide|\<bbb-R\>|\<wide-bar\>>,<wide|\<leqslant\>|\<wide-bar\>>|\<rangle\>>>
-    is fully ordered.
-  </theorem>
-
-  <\proof>
-    \ 
-
-    <\description>
-      <item*|reflectivity>The following cases occurs for
-      <math|x\<in\><wide|\<bbb-R\>|\<wide-bar\>>>
-
-      <\description>
-        <item*|<math|x=\<infty\>>>then by definition
-        <math|x<wide|\<leqslant\>|\<wide-bar\>>x>
-
-        <item*|<math|x=-\<infty\>>>then by definition
-        <math|x<wide|\<leqslant\>|\<wide-bar\>>x>
-
-        <item*|<math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>>>then as
-        <math|x\<leqslant\><rsub|\<bbb-R\>>x\<Rightarrow\>x<wide|\<leqslant\>|\<wide-bar\>>x>
-      </description>
-
-      proving reflectivity.
-
-      <item*|anti-symmetry>Let <math|x,y\<in\><wide|\<bbb-R\>|\<wide-bar\>>>
-      with <math|x<wide|\<leqslant\>|\<wide-bar\>>y\<wedge\>y<wide|\<leqslant\>|\<wide-bar\>>x>
-      then the following cases must be considered for
-      <math|x,y\<in\><wide|\<bbb-R\>|\<wide-bar\>>>:\ 
-
-      <\description>
-        <item*|<math|x=\<infty\>\<wedge\>y=\<infty\>>>then <math|x=y>
-
-        <item*|<math|x=-\<infty\>\<wedge\>y=\<infty\>>>then as by the
-        definition <math|\<neg\><around*|(|y<wide|\<leqslant\>|\<wide-bar\>>x|)>>
-        this case will not apply.
-
-        <item*|<math|x\<in\>\<bbb-R\>\<wedge\>y=\<infty\>>>then as by
-        definition <math|y\<nleqslant\>x> this case does not apply
-
-        <item*|<math|x=\<infty\>\<wedge\>y=-\<infty\>>>then as by definition
-        \ <math|\<neg\><around*|(|x<wide|\<leqslant\>|\<wide-bar\>>y|)>> this
-        case does not apply
-
-        <item*|<math|x=-\<infty\>\<wedge\>y=-\<infty\>>>then <math|x=y>
-
-        <item*|<math|x\<in\>\<bbb-R\>\<wedge\>y=-\<infty\>>>then as by
-        definition <math|\<neg\><around*|(|x<wide|\<leqslant\>|\<wide-bar\>>y|)>>
-        the case does not apply
-
-        <item*|<math|x=\<infty\>\<wedge\>y\<in\>\<bbb-R\>>>then as by
-        definition <math|\<neg\><around*|(|x<wide|\<leqslant\>|\<wide-bar\>>y|)>>
-        this case does not apply
-
-        <item*|<math|x=-\<infty\>\<wedge\>y\<in\>\<bbb-R\>>>then as by
-        definition <math|\<neg\><around*|(|y<wide|\<leqslant\>|\<wide-bar\>>x|)>>
-        this case does not apply
-
-        <item*|<math|x\<in\>\<bbb-R\>\<wedge\>y\<in\>\<bbb-R\>>>then by
-        definition <math|x\<leqslant\>y> and <math|y\<leqslant\>x> from which
-        it follows that <math|x=y>
-      </description>
-
-      so in all the cases where <math|x<wide|\<leqslant\>|\<wide-bar\>>y\<wedge\>y<wide|\<leqslant\>|\<wide-bar\>>x>
-      we have <math|x=y>
-
-      <item*|transitivity>Let <math|x,y,z\<in\><wide|\<bbb-R\>|\<wide-bar\>>>
-      with <math|x<wide|\<leqslant\>|\<wide-bar\>>y\<wedge\>y<wide|\<leqslant\>|\<wide-bar\>>z>
-      then the following cases must be considered for
-      <math|x,y,z\<in\><wide|\<bbb-R\>|\<wide-bar\>>>:
-
-      <\description>
-        <item*|<math|x=\<infty\>\<wedge\>y=\<infty\>\<wedge\>z=\<infty\>>>then
-        <math|x<wide|\<leqslant\>|\<wide-bar\>>z>
-
-        <item*|<math|x=-\<infty\>\<wedge\>y=\<infty\>\<wedge\>z=\<infty\>>>then
-        <math|x<wide|\<leqslant\>|\<wide-bar\>>z>
-
-        <item*|<math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>y=\<infty\>\<wedge\>z=\<infty\>>>then
-        <math|x<wide|\<leqslant\>|\<wide-bar\>>z>
-
-        <item*|<math|x=\<infty\>\<wedge\>y=-\<infty\>\<wedge\>z=\<infty\>>>then
-        as <math|\<neg\><around*|(|x<wide|\<leqslant\>|\<wide-bar\>>y|)>>
-        this cases does not count
-
-        <item*|<math|x=-\<infty\>\<wedge\>y=-\<infty\>\<wedge\>z=\<infty\>>>then
-        <math|x<wide|\<leqslant\>|\<wide-bar\>>z>
-
-        <item*|<math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>y=-\<infty\>\<wedge\>z=\<infty\>>>then
-        as <math|\<neg\><around*|(|x<wide|\<leqslant\>|\<wide-bar\>>y|)>>
-        this case does not count
-
-        <item*|<math|x=\<infty\>\<wedge\>y\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>z=\<infty\>>>then
-        as <math|\<neg\><around*|(|x<wide|\<leqslant\>|\<wide-bar\>>y|)>>
-        this case does not count
-
-        <item*|<math|x=-\<infty\>\<wedge\>y\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>z=\<infty\>>>then
-        <math|x<wide|\<leqslant\>|\<wide-bar\>>z>
-
-        <item*|<math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>y\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>z=\<infty\>>>then
-        <math|x<wide|\<leqslant\>|\<wide-bar\>>z>
-
-        <item*|<math|x=\<infty\>\<wedge\>y=\<infty\>\<wedge\>z=-\<infty\>>>then
-        as <math|\<neg\><around*|(|y<wide|\<leqslant\>|\<wide-bar\>>x|)>>
-        this case does not count
-
-        <item*|<math|x=-\<infty\>\<wedge\>y=\<infty\>\<wedge\>z=-\<infty\>>>then
-        as <math|\<neg\><around*|(|y<wide|\<leqslant\>|\<wide-bar\>>x|)>>
-        this case does not count
-
-        <item*|<math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>y=\<infty\>\<wedge\>z=-\<infty\>>>then
-        as <math|\<neg\><around*|(|y<wide|\<leqslant\>|\<wide-bar\>>x|)>>
-        this case does not count
-
-        <item*|<math|x=\<infty\>\<wedge\>y=-\<infty\>\<wedge\>z=-\<infty\>>>then
-        as <math|\<neg\><around*|(|x<wide|\<leqslant\>|\<wide-bar\>>y|)>>
-        this case does not count
-
-        <item*|<math|x=-\<infty\>\<wedge\>y=-\<infty\>\<wedge\>z=-\<infty\>>>then
-        <math|x<wide|\<leqslant\>|\<wide-bar\>>z>
-
-        <item*|<math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>y=-\<infty\>\<wedge\>z=-\<infty\>>>then
-        as <math|\<neg\><around*|(|x<wide|\<leqslant\>|\<wide-bar\>>y|)>>
-        this case does not count
-
-        <item*|<math|x=\<infty\>\<wedge\>y\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>z=-\<infty\>>>then
-        as <math|\<neg\><around*|(|y<wide|\<leqslant\>|\<wide-bar\>>z|)>>
-        this case does not count
-
-        <item*|<math|x=-\<infty\>\<wedge\>y\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>z=-\<infty\>>>then
-        as <math|\<neg\><around*|(|y<wide|\<leqslant\>|\<wide-bar\>>z|)>>
-        this case does not count
-
-        <item*|<math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>y\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>z=-\<infty\>>>then
-        as <math|\<neg\><around*|(|y<wide|\<leqslant\>|\<wide-bar\>>z|)>>
-        this case does not count
-
-        <item*|<math|x=\<infty\>\<wedge\>y=\<infty\>\<wedge\>z\<in\>\<bbb-R\><rsub|\<bbb-C\>>>>then
-        as <math|\<neg\><around*|(|y<wide|\<leqslant\>|\<wide-bar\>>z|)>>
-        this case does not count
-
-        <item*|<math|x=-\<infty\>\<wedge\>y=\<infty\>\<wedge\>z\<in\>\<bbb-R\><rsub|\<bbb-C\>>>>then
-        as <math|\<neg\><around*|(|y<wide|\<leqslant\>|\<wide-bar\>>z|)>>
-        this case does not count
-
-        <item*|<math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>y=\<infty\>\<wedge\>z\<in\>\<bbb-R\><rsub|\<bbb-C\>>>>then
-        as \<neg\><around*|(|y<wide|\<leqslant\>|\<wide-bar\>>z|)> this case
-        does not count
-
-        <item*|<math|x=\<infty\>\<wedge\>y=-\<infty\>\<wedge\>z\<in\>\<bbb-R\><rsub|\<bbb-C\>>>>then
-        as <math|\<neg\><around*|(|x<wide|\<leqslant\>|\<wide-bar\>>y|)>>
-        this case does not count
-
-        <item*|<math|x-\<infty\>\<wedge\>y=-\<infty\>\<wedge\>z\<in\>\<bbb-R\><rsub|\<bbb-C\>>>>then
-        <math|x<wide|\<leqslant\>|\<wide-bar\>>z>
-
-        <item*|<math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>y=-\<infty\>\<wedge\>z\<in\>\<bbb-R\><rsub|\<bbb-C\>>>>then
-        as \<neg\><around*|(|x<wide|\<leqslant\>|\<wide-bar\>>y|)> this case
-        does not count
-
-        <item*|<math|x=\<infty\>\<wedge\>y\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>z\<in\>\<bbb-R\><rsub|\<bbb-C\>>>>then
-        as \<neg\><around*|(|x<wide|\<leqslant\>|\<wide-bar\>>y|)> this case
-        does not count
-
-        <item*|<math|x=-\<infty\>\<wedge\>y\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>z\<in\>\<bbb-R\><rsub|\<bbb-C\>>>>then
-        <math|x<wide|\<leqslant\>|\<wide-bar\>>z>
-
-        <item*|<math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>y\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>z\<in\>\<bbb-R\><rsub|\<bbb-C\>>>>then
-        <math|x<wide|\<leqslant\>|\<wide-bar\>>z>
-      </description>
-
-      so in all cases that count we have <math|x<wide|\<leqslant\>|\<wide-bar\>>z>
-
-      <item*|fully-ordered>The following cases must be considered for
-      <math|x,y\<in\><wide|\<bbb-R\>|\<wide-bar\>>>:\ 
-
-      <\description>
-        <item*|<math|x=\<infty\>\<wedge\>y=\<infty\>>>then
-        <math|x<wide|\<leqslant\>|\<wide-bar\>>y>
-
-        <item*|<math|x=-\<infty\>\<wedge\>x=\<infty\>>>then
-        <math|x<wide|\<leqslant\>|\<wide-bar\>>y>
-
-        <item*|<math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>y=\<infty\>>>then
-        <math|x<wide|\<leqslant\>|\<wide-bar\>>y>
-
-        <item*|<math|x=\<infty\>\<wedge\>y=-\<infty\>>>then
-        <math|y<wide|\<leqslant\>|\<wide-bar\>>x>
-
-        <item*|<math|x=-\<infty\>\<wedge\>y=-\<infty\>>>then
-        <math|x<wide|\<leqslant\>|\<wide-bar\>>y>
-
-        <item*|<math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>y=-\<infty\>>>then
-        <math|y<wide|\<leqslant\>|\<wide-bar\>>x>
-
-        <item*|<math|x=\<infty\>\<wedge\>y\<in\>\<bbb-R\><rsub|\<bbb-C\>>>>then
-        <math|y<wide|\<leqslant\>|\<wide-bar\>>x>
-
-        <item*|<math|x=-\<infty\>\<wedge\>y\<in\>\<bbb-R\><rsub|\<bbb-C\>>>>then
-        <math|x<wide|\<leqslant\>|\<wide-bar\>>y>
-
-        <item*|<math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>\<wedge\>y<rsub|\<bbb-C\>>\<in\>\<bbb-R\>>>then
-        either <math|x\<leqslant\>y\<Rightarrow\>x<wide|\<leqslant\>|\<wide-bar\>>y>
-        or <math|y\<leqslant\>x\<Rightarrow\>y<wide|\<leqslant\>|\<wide-bar\>>x>
-      </description>
-
-      so in all possible cases we have either
-      <math|x<wide|\<leqslant\>|\<wide-bar\>>y> or
-      <math|y<wide|\<leqslant\>|\<wide-bar\>>x>
-    </description>
-  </proof>
-
-  <\notation>
-    From now on, to avoid excessive notation, we use <math|\<leqslant\>> to
-    note <math|<wide|\<leqslant\>|\<wide-bar\>>>.
-  </notation>
 
   <subsection|Conventions >
 
@@ -14433,7 +14177,6 @@
     <associate|auto-53|<tuple|10.5.3|?>>
     <associate|auto-54|<tuple|<with|mode|<quote|math>|card<around*|(|I|)>>|?>>
     <associate|auto-55|<tuple|10.5.4|?>>
-    <associate|auto-56|<tuple|10.5.5|?>>
     <associate|auto-6|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-Z\>,\<leqslant\>|\<rangle\>>>|?>>
     <associate|auto-7|<tuple|absolute value|?>>
     <associate|auto-8|<tuple|<with|mode|<quote|math>|<around*|\||x|\|>>|?>>
@@ -14737,11 +14480,7 @@
     <associate|eq 9.82.036|<tuple|9.82|?>>
     <associate|eq 9.89.047|<tuple|9.83|?>>
     <associate|eq 9.90.047|<tuple|9.84|?>>
-    <associate|extended reals|<tuple|10.97|?>>
-    <associate|extended reals are fully ordered|<tuple|10.101|?>>
     <associate|extended reals existence|<tuple|10.96|?>>
-    <associate|extended reals finite real number|<tuple|10.98|?>>
-    <associate|extended reals order definition|<tuple|10.99|?>>
     <associate|field with characteristics zero|<tuple|10.47|?>>
     <associate|integeres order|<tuple|7.21|?>>
     <associate|integers|<tuple|7.2|?>>
@@ -15068,13 +14807,9 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-53>>
 
-      <with|par-left|<quote|1tab>|10.5.4<space|2spc>Extended real numbers
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-55>>
-
-      <with|par-left|<quote|1tab>|10.5.5<space|2spc>Conventions
+      <with|par-left|<quote|1tab>|10.5.4<space|2spc>Conventions
       \ <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-56>>
+      <no-break><pageref|auto-55>>
     </associate>
   </collection>
 </auxiliary>

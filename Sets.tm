@@ -9038,7 +9038,7 @@
 
   <\definition>
     <label|totally ordered class><index|totally ordered class><index|fully
-    ordered class><index|linear ordered class>A pre-ordered class
+    ordered class><index|linear ordered class>A partial ordered class
     <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>> is a
     <with|font-series|bold|totally ordered class> iff
 

@@ -19,6 +19,10 @@
 
   <\enumerate>
     <item>Spell check started/Finished
+
+    <item>Definition of totally (fully ordered) set is change from preorder +
+    total ordering to partial order + tota; order. Check must be done to
+    ensure that this does not introduce inconsequences.\ 
   </enumerate>
 
   <section|NaturalNumbers.tm>
@@ -99,8 +103,8 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|20>
-    <associate|page-first|1231>
-    <associate|section-nr|1>
+    <associate|page-first|1237>
+    <associate|section-nr|2>
     <associate|subsection-nr|0>
   </collection>
 </initial>
@@ -178,11 +182,14 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-14>
 
-      22.12<space|2spc>Measure.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      22.12<space|2spc>Exponential.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-15>
 
-      22.13<space|2spc>Manifold.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      22.13<space|2spc>Measure.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-16>
+
+      22.14<space|2spc>Manifold.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-17>
     </associate>
   </collection>
 </auxiliary>
