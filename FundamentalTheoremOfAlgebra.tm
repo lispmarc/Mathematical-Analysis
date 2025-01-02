@@ -1567,12 +1567,201 @@
     We have\ 
 
     <\eqnarray*>
+      <tformat|<table|<row|<cell|\<zeta\><rsup|k>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<around*|(|1+<frac|i|k>|)><rsup|2>|)><rsup|k>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|complex (x^n)^m>]>>>|<cell|>>|<row|<cell|<around*|(|1+<frac|i|k>|)><rsup|2\<cdot\>k>>|<cell|\<equallim\><rsub|k=2\<cdot\>n>>|<cell|>>|<row|<cell|<around*|(|1+<frac|i|2\<cdot\>n>|)><rsup|4\<cdot\>n>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|fundamental binomial formula>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|l=0><rsup|4\<cdot\>n><binom|4\<cdot\>n|l>\<cdot\><around*|(|<frac|i|2\<cdot\>n>|)><rsup|l>\<cdot\>1<rsup|4\<cdot\>n-l>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|l=0><rsup|4\<cdot\>n><binom|4\<cdot\>n|l>\<cdot\><around*|(|<frac|i|2\<cdot\>n>|)><rsup|l>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|0,\<ldots\>,2\<cdot\><around*|(|2\<cdot\>n|)>|}>><binom|4\<cdot\>n|l>\<cdot\><around*|(|<frac|i|2\<cdot\>n>|)><rsup|l>>|<cell|\<equallim\><rsub|<text|[lemma:
+      <reference|lemma 17.26.136>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|2\<cdot\>j\|j\<in\><around*|{|0,\<ldots\>,2\<cdot\>n|}>|}><big|sqcup><around*|{|2\<cdot\>j+1\|j\<in\><around*|{|0,\<ldots\>,2\<cdot\>n-1|}>|}>><binom|4\<cdot\>n|l>\<cdot\><around*|(|<frac|i|2\<cdot\>n>|)><rsup|l>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|2\<cdot\>j\|j\<in\><around*|{|0,\<ldots\>,2\<cdot\>n|}>|}>><binom|4\<cdot\>n|l>\<cdot\><around*|(|<frac|i|2\<cdot\>n>|)><rsup|l>+<big|sum><rsub|l\<in\><around*|{|2\<cdot\>j+1\|j\<in\><around*|{|0,\<ldots\>,2\<cdot\>n-1|}>|}>><binom|4\<cdot\>n|l>\<cdot\><around*|(|<frac|i|2\<cdot\>n>|)><rsup|l>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    so that we have\ 
+
+    <\equation>
+      <label|eq 17.21.154>\<zeta\><rsup|k>=A+B
+    </equation>
+
+    where\ 
+
+    <\equation>
+      <label|eq 17.22.154>A=<big|sum><rsub|l\<in\><around*|{|2\<cdot\>j\|j\<in\><around*|{|0,\<ldots\>,2\<cdot\>n|}>|}>><binom|4\<cdot\>n|l>\<cdot\><around*|(|<frac|i|2\<cdot\>n>|)><rsup|l>
+    </equation>
+
+    <\equation>
+      <label|eq 17.23.154>B=<big|sum><rsub|l\<in\><around*|{|2\<cdot\>j+1\|j\<in\><around*|{|0,\<ldots\>,2\<cdot\>n-1|}>|}>><binom|4\<cdot\>n|l>\<cdot\><around*|(|<frac|i|2\<cdot\>n>|)><rsup|l>
+    </equation>
+
+    For <math|A> we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|A>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 17.22.154>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|2\<cdot\>j\|j\<in\><around*|{|0,\<ldots\>,2\<cdot\>n|}>|}>><binom|4\<cdot\>n|l>\<cdot\><around*|(|<frac|i|2\<cdot\>n>|)><rsup|l>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum bijection on index>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|0,\<ldots\>,2\<cdot\>n|}>><binom|4\<cdot\>n|2\<cdot\>l>\<cdot\><around*|(|<frac|i|2\<cdot\>n>|)><rsup|2\<cdot\>l>>|<cell|\<equallim\><rsub|<text|[lemma:
+      <reference|lemma 17.26.136>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|2\<cdot\>j\|j\<in\><around*|{|0,\<ldots\>,n|}>|}><big|sqcup><around*|{|2\<cdot\>j+1\|j\<in\><around*|{|0,\<ldots\>,n-1|}>|}>><binom|4\<cdot\>n|2\<cdot\>l>\<cdot\><around*|(|<frac|i|2\<cdot\>n>|)><rsup|2\<cdot\>l>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|2\<cdot\>j\|j\<in\><around*|{|0,\<ldots\>,n|}>|}>><binom|4\<cdot\>n|2\<cdot\>l>\<cdot\><around*|(|<frac|i|2\<cdot\>n>|)><rsup|2\<cdot\>l>+<big|sum><rsub|l\<in\><around*|{|2\<cdot\>j+1\|j\<in\><around*|{|0,\<ldots\>,n-1|}>|}>><binom|4\<cdot\>n|2\<cdot\>l>\<cdot\><around*|(|<frac|i|2\<cdot\>n>|)><rsup|2\<cdot\>l>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    So that\ 
+
+    <\equation>
+      <label|eq 17.24.154>A=C+D
+    </equation>
+
+    where\ 
+
+    <\equation>
+      <label|eq 17.25.154>C=<big|sum><rsub|l\<in\><around*|{|2\<cdot\>j\|j\<in\><around*|{|0,\<ldots\>,n|}>|}>><binom|4\<cdot\>n|2\<cdot\>l>\<cdot\><around*|(|<frac|i|2\<cdot\>n>|)><rsup|2\<cdot\>l>
+    </equation>
+
+    <\equation>
+      <label|eq 17.26.154>D=<big|sum><rsub|l\<in\><around*|{|2\<cdot\>j+1\|j\<in\><around*|{|0,\<ldots\>,n-1|}>|}>><binom|4\<cdot\>n|2\<cdot\>l>\<cdot\><around*|(|<frac|i|2\<cdot\>n>|)><rsup|2\<cdot\>l>
+    </equation>
+
+    For <math|C> we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|C>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 17.25.154>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|2\<cdot\>j\|j\<in\><around*|{|0,\<ldots\>,n|}>|}>><binom|4\<cdot\>n|2\<cdot\>l>\<cdot\><around*|(|<frac|i|2\<cdot\>n>|)><rsup|2\<cdot\>l>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum bijection on index>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|0,\<ldots\>,n|}>><binom|4\<cdot\>n|2\<cdot\><around*|(|2\<cdot\>l|)>>\<cdot\><around*|(|<frac|i|2\<cdot\>n>|)><rsup|2\<cdot\><around*|(|2\<cdot\>l|)>>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|0,\<ldots\>,n|}>><binom|4\<cdot\>n|4\<cdot\>l>\<cdot\><around*|(|<frac|i|2\<cdot\>n>|)><rsup|4\<cdot\>l>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|0,\<ldots\>,n|}>><binom|4\<cdot\>n|4\<cdot\>l>\<cdot\><frac|i<rsup|4\<cdot\>l>|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>l>>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|complex power of i>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|0,\<ldots\>,n|}>><binom|4\<cdot\>n|4\<cdot\>l>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>l>>>|<cell|=>|<cell|>>|<row|<cell|<binom|4\<cdot\>n|4\<cdot\>0>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>0>>+<binom|4\<cdot\>n|4\<cdot\>1>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>1>>+<big|sum><rsub|l\<in\><around*|{|2,\<ldots\>,n|}>><binom|4\<cdot\>n|4\<cdot\>l>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>l>>>|<cell|=>|<cell|>>|<row|<cell|1+<binom|4\<cdot\>n|4>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|4>>+<big|sum><rsub|l\<in\><around*|{|2,\<ldots\>,n|}>><binom|4\<cdot\>n|4\<cdot\>l>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>l>>>|<cell|=>|<cell|>>|<row|<cell|1+<binom|4\<cdot\>n|4>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|4>>+<big|sum><rsub|l\<in\><around*|{|1,\<ldots\>,n-1|}>><binom|4\<cdot\>n|4\<cdot\><around*|(|l+1|)>>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\><around*|(|l+1|)>>>>|<cell|\<equallim\><rsub|2\<cdot\>n=k>>|<cell|>>|<row|<cell|1+<binom|2\<cdot\>k|4>\<cdot\><frac|1|k<rsup|4>>+<big|sum><rsub|l\<in\><around*|{|1,\<ldots\>,n-1|}>><binom|4\<cdot\>n|4\<cdot\><around*|(|l+1|)>>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\><around*|(|l+1|)>>>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    so that\ 
+
+    <\equation>
+      <label|eq 17.27.154>C=1+<binom|2\<cdot\>k|4>\<cdot\><frac|1|k<rsup|4>>+<big|sum><rsub|l\<in\><around*|{|1,\<ldots\>,n-1|}>><binom|4\<cdot\>n|4\<cdot\><around*|(|l+1|)>>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\><around*|(|l+1|)>>>
+    </equation>
+
+    For <math|D> we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|D>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 17.26.154>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|2\<cdot\>j+1\|j\<in\><around*|{|0,\<ldots\>,n-1|}>|}>><binom|4\<cdot\>n|2\<cdot\>l>\<cdot\><around*|(|<frac|i|2\<cdot\>n>|)><rsup|2\<cdot\>l>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum bijection on index>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|0,\<ldots\>,n-1|}>><binom|4\<cdot\>n|2\<cdot\><around*|(|2\<cdot\>l+1|)>>\<cdot\><around*|(|<frac|i|2\<cdot\>n>|)><rsup|2\<cdot\><around*|(|2\<cdot\>l+1|)>>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|0,\<ldots\>,n-1|}>><binom|4\<cdot\>n|4\<cdot\>l+2>\<cdot\><around*|(|<frac|i|2\<cdot\>n>|)><rsup|4\<cdot\>l+2>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|0,\<ldots\>,n-1|}>><binom|4\<cdot\>n|4\<cdot\>l+2>\<cdot\><frac|i<rsup|4\<cdot\>l+2>|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>l+2>>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|complex power of i>]>>>|<cell|>>|<row|<cell|-<big|sum><rsub|l\<in\><around*|{|0,\<ldots\>,n-1|}>><binom|4\<cdot\>n|4\<cdot\>l+2>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>l+2>>>|<cell|=>|<cell|>>|<row|<cell|-<binom|4\<cdot\>n|4\<cdot\>0+2>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>0+2>>-<big|sum><rsub|l\<in\><around*|{|1,\<ldots\>,n-1|}>><binom|4\<cdot\>n|4\<cdot\>l+2>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>l+2>>>|<cell|=>|<cell|>>|<row|<cell|-<binom|4\<cdot\>n|2>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|2>>-<big|sum><rsub|l\<in\><around*|{|1,\<ldots\>,n-1|}>><binom|4\<cdot\>n|4\<cdot\>l+2>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>l+2>>>|<cell|\<equallim\><rsub|k=2\<cdot\>n>>|<cell|>>|<row|<cell|-<binom|2\<cdot\>k|2>\<cdot\><frac|1|k<rsup|2>>-<big|sum><rsub|l\<in\><around*|{|1,\<ldots\>,n-1|}>><binom|4\<cdot\>n|4\<cdot\>l+2>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>l+2>>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    So that\ 
+
+    <\equation>
+      <label|eq 17.28.154>D=-<binom|2\<cdot\>k|2>\<cdot\><frac|1|k<rsup|2>>-<big|sum><rsub|l\<in\><around*|{|1,\<ldots\>,n-1|}>><binom|4\<cdot\>n|4\<cdot\>l+2>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>l+2>>
+    </equation>
+
+    So we have from [eqs: <reference|eq 17.27.154>, <reference|eq 17.28.154>]
+    that\ 
+
+    <\equation>
+      <label|eq 17.29.154>A=C+D=1+<binom|2\<cdot\>k|4>\<cdot\><frac|1|k<rsup|4>>-<binom|2\<cdot\>k|2>\<cdot\><frac|1|k<rsup|2>>+E
+    </equation>
+
+    where\ 
+
+    <\equation>
+      <label|eq 17.30.154>E=<big|sum><rsub|l\<in\><around*|{|1,\<ldots\>,n-1|}>><binom|4\<cdot\>n|4\<cdot\><around*|(|l+1|)>>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\><around*|(|l+1|)>>>-<big|sum><rsub|l\<in\><around*|{|1,\<ldots\>,n-1|}>><binom|4\<cdot\>n|4\<cdot\>l+2>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>l+2>>
+    </equation>
+
+    First we look the term <math|1+<binom|2\<cdot\>k|4>\<cdot\><frac|1|k<rsup|4>>-<binom|2\<cdot\>k|2>\<cdot\><frac|1|k<rsup|2>>>
+    and calculate <math|<binom|2\<cdot\>k|4>> in terms of
+    <math|<binom|2\<cdot\>k|2>>. First notice that
+    <math|2\<leqslant\>2\<cdot\>n=k> so that <math|4\<leqslant\>2\<cdot\>k>
+    and thus <math|0\<less\>2\<cdot\>k-3\<wedge\>0\<less\>2\<cdot\>k-2> which
+    we use in the following calculation:\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<binom|2\<cdot\>k|4>>|<cell|=>|<cell|<frac|<around*|(|2\<cdot\>k|)>!|4!\<cdot\><around*|(|2\<cdot\>k-4|)>!>>>|<row|<cell|>|<cell|=>|<cell|<frac|<around*|(|2\<cdot\>k|)>!|4\<cdot\>3\<cdot\>2!\<cdot\><around*|(|2\<cdot\>k-4|)>!>>>|<row|<cell|>|<cell|\<equallim\><rsub|0\<less\>2\<cdot\>k-3,2\<cdot\>k-2>>|<cell|<frac|<around*|(|2\<cdot\>k|)>!\<cdot\><around*|(|2\<cdot\>k-2|)>\<cdot\><around*|(|2\<cdot\>k-3|)>|4\<cdot\>3\<cdot\>2!\<cdot\><around*|(|2\<cdot\>k-4|)>!\<cdot\><around*|(|2\<cdot\>k-2|)>\<cdot\><around*|(|2\<cdot\>k-3|)>>>>|<row|<cell|>|<cell|=>|<cell|<frac|<around*|(|2\<cdot\>k|)>!\<cdot\><around*|(|2\<cdot\>k-2|)>\<cdot\><around*|(|2\<cdot\>k-3|)>|4\<cdot\>3\<cdot\>2!\<cdot\><around*|(|2\<cdot\>k-2|)>\<cdot\><around*|(|2\<cdot\>k-3|)>\<cdot\><around*|(|2\<cdot\>k-4|)>!>>>|<row|<cell|>|<cell|=>|<cell|<frac|<around*|(|2\<cdot\>k|)>!\<cdot\><around*|(|2\<cdot\>k-2|)>\<cdot\><around*|(|2\<cdot\>k-3|)>|4\<cdot\>3\<cdot\>2!\<cdot\><around*|(|2\<cdot\>k-2|)>!>>>|<row|<cell|>|<cell|=>|<cell|<frac|<around*|(|2\<cdot\>k|)>!\<cdot\><around*|(|2\<cdot\>k-2|)>\<cdot\><around*|(|2\<cdot\>k-3|)>|2!\<cdot\><around*|(|2\<cdot\>k-2|)>!\<cdot\>4\<cdot\>3>>>|<row|<cell|>|<cell|=>|<cell|<binom|2\<cdot\>k|2>\<cdot\><frac|<around*|(|2\<cdot\>k-2|)>\<cdot\><around*|(|2\<cdot\>k-3|)>|4\<cdot\>3>>>|<row|<cell|>|<cell|=>|<cell|<binom|2\<cdot\>k|2>\<cdot\><frac|4\<cdot\>k<rsup|2>-6\<cdot\>k-4\<cdot\>k+6|12>>>|<row|<cell|>|<cell|=>|<cell|<binom|2\<cdot\>k|2>\<cdot\><frac|4\<cdot\>k<rsup|2>-10\<cdot\>k+6|12>>>|<row|<cell|>|<cell|=>|<cell|<binom|2\<cdot\>k|2>\<cdot\><frac|2\<cdot\>k<rsup|2>-5\<cdot\>k+3|6>>>>>
+    </eqnarray*>
+
+    so that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|1+<binom|2\<cdot\>k|4>\<cdot\><frac|1|k<rsup|4>>-<binom|2\<cdot\>k|2>\<cdot\><frac|1|k<rsup|2>>>|<cell|=>|<cell|1+<binom|2\<cdot\>k|2>\<cdot\><frac|2\<cdot\>k<rsup|2>-5\<cdot\>k+3|6>\<cdot\><frac|1|k<rsup|4>>-<binom|2\<cdot\>k|2>\<cdot\><frac|1|k<rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|1+<binom|2\<cdot\>k|2>\<cdot\><around*|(|<frac|2\<cdot\>k<rsup|2>-5\<cdot\>k+3|6>\<cdot\><frac|1|k<rsup|4>>-<frac|1|k<rsup|2>>|)>>>|<row|<cell|>|<cell|=>|<cell|1+<binom|2\<cdot\>k|2>\<cdot\><frac|1|k<rsup|2>>\<cdot\><around*|(|<frac|2\<cdot\>k<rsup|2>-5\<cdot\>k+3|6\<cdot\>k<rsup|2>>-1|)>>>|<row|<cell|>|<cell|=>|<cell|1+<binom|2\<cdot\>k|2>\<cdot\><frac|1|k<rsup|2>>\<cdot\><around*|(|<frac|2\<cdot\>k<rsup|2>-5\<cdot\>k+3-6\<cdot\>k<rsup|2>|6\<cdot\>k<rsup|2>>|)>>>|<row|<cell|>|<cell|=>|<cell|1+<binom|2\<cdot\>k|2>\<cdot\><frac|1|k<rsup|2>>\<cdot\><around*|(|<frac|-4\<cdot\>k<rsup|2>-5\<cdot\>k+3|6\<cdot\>k<rsup|2>>|)>>>|<row|<cell|>|<cell|=>|<cell|1+<binom|2\<cdot\>k|2>\<cdot\><frac|1|k<rsup|2>>\<cdot\><around*|(|-<frac|2|3>+<frac|-5\<cdot\>k+3|6\<cdot\>k<rsup|2>>|)>>>|<row|<cell|>|<cell|=>|<cell|1+<frac|<around*|(|2\<cdot\>k|)>!|2!\<cdot\><around*|(|2\<cdot\>k-2|)>!>\<cdot\><frac|1|k<rsup|2>>\<cdot\><around*|(|-<frac|2|3>+<frac|-5\<cdot\>k+3|6\<cdot\>k<rsup|2>>|)>>>|<row|<cell|>|<cell|=>|<cell|1+<frac|2\<cdot\>k\<cdot\><around*|(|2\<cdot\>k-1|)>\<cdot\><around*|(|2\<cdot\>k-2|)>!|2\<cdot\><around*|(|2\<cdot\>k-2|)>!>\<cdot\><frac|1|k<rsup|2>>\<cdot\><around*|(|-<frac|2|3>+<frac|-5\<cdot\>k+3|6\<cdot\>k<rsup|2>>|)>>>|<row|<cell|>|<cell|=>|<cell|1+k\<cdot\><around*|(|2\<cdot\>k-1|)>\<cdot\><frac|1|k<rsup|2>>\<cdot\><around*|(|-<frac|2|3>+<frac|-5\<cdot\>k+3|6\<cdot\>k<rsup|2>>|)>>>|<row|<cell|>|<cell|=>|<cell|1+<around*|(|2-<frac|1|k>|)>\<cdot\><around*|(|-<frac|2|3>+<frac|-5\<cdot\>k+3|6\<cdot\>k<rsup|2>>|)>>>|<row|<cell|>|<cell|=>|<cell|1-<frac|4|3>+<frac|-5\<cdot\>k+3|3\<cdot\>k<rsup|2>>+<frac|2|3\<cdot\>k>-<frac|5\<cdot\>k+3|6\<cdot\>k<rsup|3>>>>|<row|<cell|>|<cell|=>|<cell|-<frac|1|3>+<frac|-10\<cdot\>k<rsup|2>+3\<cdot\>k+4\<cdot\>k<rsup|2>-5\<cdot\>k+3|6\<cdot\>k<rsup|3>>>>|<row|<cell|>|<cell|=>|<cell|-<frac|1|3>+<frac|-6\<cdot\>k<rsup|2>-2\<cdot\>k+3|6\<cdot\>k<rsup|3>>>>|<row|<cell|>|<cell|=>|<cell|-<frac|1|3>+<frac|-6\<cdot\>k<rsup|2>|6\<cdot\>k<rsup|3>>+<frac|-2\<cdot\>k+3|6\<cdot\>k<rsup|3>>>>>>
+    </eqnarray*>
+
+    So that\ 
+
+    <\equation>
+      <label|eq 17.31.154>1+<binom|2\<cdot\>k|4>\<cdot\><frac|1|k<rsup|4>>-<binom|2\<cdot\>k|2>\<cdot\><frac|1|k<rsup|2>>=-<frac|1|3>+<frac|-6\<cdot\>k<rsup|2>|6\<cdot\>k<rsup|3>>+<frac|-2\<cdot\>k+3|6\<cdot\>k<rsup|3>>
+    </equation>
+
+    As <math|2\<leqslant\>2\<cdot\>n=k> we have
+    <math|4\<leqslant\>2\<cdot\>k\<Rightarrow\>3\<less\>2\<cdot\>k> or
+    <math|3-2\<cdot\>k\<less\>0>, hence using the above we have that\ 
+
+    <\equation>
+      <label|eq 17.32.154>1+<binom|2\<cdot\>k|4>\<cdot\><frac|1|k<rsup|4>>-<binom|2\<cdot\>k|2>\<cdot\><frac|1|k<rsup|2>>\<less\>0
+    </equation>
+
+    Next we calculate the value of the terms in <math|E>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|E>|<cell|\<equallim\><rsub|<text|[eqL
+      <reference|eq 17.30.154>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|1,\<ldots\>,n-1|}>><binom|4\<cdot\>n|4\<cdot\><around*|(|l+1|)>>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\><around*|(|l+1|)>>>-<big|sum><rsub|l\<in\><around*|{|1,\<ldots\>,n-1|}>><binom|4\<cdot\>n|4\<cdot\>l+2>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>l+2>>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|1,\<ldots\>,n-1|}>><around*|(|<binom|4\<cdot\>n|4\<cdot\><around*|(|l+1|)>>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\><around*|(|l+1|)>>>-<binom|4\<cdot\>n|4\<cdot\>l+2>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>l+2>>|)>>|<cell|=>|<cell|>>>>
+    </eqnarray*>
+
+    So we have that\ 
+
+    <\equation>
+      <label|eq 17.33.154>E=<big|sum><rsub|l\<in\><around*|{|1,\<ldots\>,n-1|}>>E<rsub|l><text|
+      where >E<rsub|l>=<binom|4\<cdot\>n|4\<cdot\><around*|(|l+1|)>>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\><around*|(|l+1|)>>>-<binom|4\<cdot\>n|4\<cdot\>l+2>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>l+2>>
+    </equation>
+
+    Now for <math|l\<in\><around*|{|1,\<ldots\>,n-1|}>> we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|E<rsub|l>>|<cell|=>|<cell|>>|<row|<cell|<binom|4\<cdot\>n|4\<cdot\><around*|(|l+1|)>>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\><around*|(|l+1|)>>>-<binom|4\<cdot\>n|4\<cdot\>l+2>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>l+2>>>|<cell|=>|<cell|>>|<row|<cell|<binom|4\<cdot\>n|4\<cdot\>l+4>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>l+4>>-<binom|4\<cdot\>n|4\<cdot\>l+2>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>l+2>>>|<cell|=>|<cell|>>|<row|<cell|<binom|4\<cdot\>n|4\<cdot\>l+4>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>l+2>\<cdot\><around*|(|2\<cdot\>n|)><rsup|2>>-<binom|4\<cdot\>n|4\<cdot\>l+2>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>l+2>>>|<cell|=>|<cell|>>|<row|<cell|<frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>l+2>>\<cdot\><around*|(|<binom|4\<cdot\>n|4\<cdot\>l+4>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|2>>-<binom|4\<cdot\>n|4\<cdot\>l+2>|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>l+2>>\<cdot\><around*|(|<frac|<around*|(|4\<cdot\>n|)>!|<around*|(|4\<cdot\>l+4|)>!\<cdot\><around*|(|4\<cdot\>n-<around*|(|4\<cdot\>l+4|)>|)>!>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|2>>-<frac|<around*|(|4\<cdot\>n|)>!|<around*|(|4\<cdot\>l+2|)>!\<cdot\><around*|(|4\<cdot\>n-<around*|(|4\<cdot\>l+2|)>|)>!>|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>l+2>>\<cdot\><around*|(|<frac|<around*|(|4\<cdot\>n|)>!|<around*|(|4\<cdot\>l+4|)>!\<cdot\><around*|(|4\<cdot\>n-4\<cdot\>l-4|)>!>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|2>>-<frac|<around*|(|4\<cdot\>n|)>!|<around*|(|4\<cdot\>l+2|)>!\<cdot\><around*|(|4\<cdot\>n-4\<cdot\>l-2|)>!>|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>l+2>>\<cdot\><around*|(|<frac|<around*|(|4\<cdot\>n|)>!|<around*|(|4\<cdot\>l+4|)>\<cdot\><around*|(|4\<cdot\>l+3|)>\<cdot\><around*|(|4\<cdot\>l+2|)>!\<cdot\><around*|(|4\<cdot\>n-4\<cdot\>l-4|)>!>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|2>>-<frac|<around*|(|4\<cdot\>n|)>!|<around*|(|4\<cdot\>l+2|)>!\<cdot\><around*|(|4\<cdot\>n-4\<cdot\>l-2|)>!>|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>l+2>\<cdot\><around*|(|4\<cdot\>l+2|)>>\<cdot\><around*|(|<frac|<around*|(|4\<cdot\>n|)>!|<around*|(|4\<cdot\>l+4|)>\<cdot\><around*|(|4\<cdot\>l+3|)>\<cdot\><around*|(|4\<cdot\>n-4\<cdot\>l-4|)>!>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|2>>-<frac|<around*|(|4\<cdot\>n|)>!|<around*|(|4\<cdot\>n-4\<cdot\>l-2|)>!>|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>l+2>\<cdot\><around*|(|4\<cdot\>l+2|)>>\<cdot\><around*|(|<frac|<around*|(|4\<cdot\>n|)>!|<around*|(|4\<cdot\>l+4|)>\<cdot\><around*|(|4\<cdot\>l+3|)>\<cdot\><around*|(|4\<cdot\>n-4\<cdot\>l-4|)>!>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|2>>-<frac|<around*|(|4\<cdot\>n|)>!|<around*|(|4\<cdot\>n-4\<cdot\>l-2|)>\<cdot\><around*|(|4\<cdot\>n-4\<cdot\>l-3|)>\<cdot\><around*|(|4\<cdot\>n-4\<cdot\>l-4|)>!>|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|1|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>l+2>\<cdot\><around*|(|4\<cdot\>l+2|)>\<cdot\><around*|(|4\<cdot\>n-4\<cdot\>l-4|)>!>\<cdot\><around*|(|<frac|<around*|(|4\<cdot\>n|)>!|<around*|(|4\<cdot\>l+4|)>\<cdot\><around*|(|4\<cdot\>l+3|)>>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|2>>-<frac|<around*|(|4\<cdot\>n|)>!|<around*|(|4\<cdot\>n-4\<cdot\>l-2|)>\<cdot\><around*|(|4\<cdot\>n-4\<cdot\>l-3|)>>|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|<around*|(|4\<cdot\>n|)>!|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>l+2>\<cdot\><around*|(|4\<cdot\>l+2|)>\<cdot\><around*|(|4\<cdot\>n-4\<cdot\>l-4|)>!>\<cdot\><around*|(|<frac|1|<around*|(|4\<cdot\>l+4|)>\<cdot\><around*|(|4\<cdot\>l+3|)>>\<cdot\><frac|1|<around*|(|2\<cdot\>n|)><rsup|2>>-<frac|1|<around*|(|4\<cdot\>n-4\<cdot\>l-2|)>\<cdot\><around*|(|4\<cdot\>n-4\<cdot\>l-3|)>>|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|<around*|(|4\<cdot\>n|)>!|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>l+2>\<cdot\><around*|(|4\<cdot\>l+2|)>\<cdot\><around*|(|4\<cdot\>n-4\<cdot\>l-4|)>!>\<cdot\><frac|<around*|(|4\<cdot\>n-4\<cdot\>l-2|)>\<cdot\><around*|(|4\<cdot\>n-4\<cdot\>l-3|)>-<around*|(|4\<cdot\>l+4|)>\<cdot\><around*|(|4\<cdot\>l+3|)>\<cdot\><around*|(|2\<cdot\>n|)><rsup|2>|<around*|(|4\<cdot\>l+4|)>\<cdot\><around*|(|4\<cdot\>l+3|)>\<cdot\><around*|(|4\<cdot\>n-4\<cdot\>l-2|)>\<cdot\><around*|(|4\<cdot\>n-4\<cdot\>l-3|)>>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    Define\ 
+
+    <\equation*>
+      F=<frac|<around*|(|4\<cdot\>n|)>!|<around*|(|2\<cdot\>n|)><rsup|4\<cdot\>l+2>\<cdot\><around*|(|4\<cdot\>l+2|)>\<cdot\><around*|(|4\<cdot\>n-4\<cdot\>l-4|)>!>\<cdot\><frac|1|<around*|(|4\<cdot\>l+4|)>\<cdot\><around*|(|4\<cdot\>l+3|)>\<cdot\><around*|(|4\<cdot\>n-4\<cdot\>l-2|)>\<cdot\><around*|(|4\<cdot\>n-4\<cdot\>l-3|)>>
+    </equation*>
+
+    \ then\ 
+
+    <\equation>
+      <label|eq 17.34.154>0\<less\>F<text| and
+      >E<rsub|l>=F\<cdot\><around*|(|4\<cdot\>n-4\<cdot\>l-2|)>\<cdot\><around*|(|4\<cdot\>n-4\<cdot\>l-3|)>-<around*|(|4\<cdot\>l+4|)>\<cdot\><around*|(|4\<cdot\>l+3|)>\<cdot\><around*|(|2\<cdot\>n|)><rsup|2>
+    </equation>
+
+    Now as <math|l\<in\><around*|{|0,\<ldots\>,n-1|}>> we have that
+    <math|0\<less\>l\<less\>n> so that <math|l<rsup|2>\<less\>n<rsup|2>> and
+    <math|l\<less\>n>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|4\<cdot\>n-4\<cdot\>l-2|)>\<cdot\><around*|(|4\<cdot\>n-4\<cdot\>l-3|)>-<around*|(|4\<cdot\>l+4|)>\<cdot\><around*|(|4\<cdot\>l+3|)>\<cdot\><around*|(|2\<cdot\>n|)><rsup|2>>|<cell|=>|<cell|>>|<row|<cell|16\<cdot\>n<rsup|2>-<wide*|16\<cdot\>n\<cdot\>l|\<wide-underbrace\>><rsub|1>-<wide*|12\<cdot\>n|\<wide-underbrace\>><rsub|2>-<wide*|16\<cdot\>n\<cdot\>l|\<wide-underbrace\>><rsub|1>+16\<cdot\>l<rsup|2>+<wide*|12\<cdot\>l|\<wide-underbrace\>><rsub|3>-<wide*|8\<cdot\>n|\<wide-underbrace\>><rsub|2>+<wide*|8\<cdot\>l|\<wide-underbrace\>><rsub|3>-6-<around*|(|4\<cdot\>l+4|)>\<cdot\><around*|(|4\<cdot\>l+3|)>\<cdot\><around*|(|2\<cdot\>n|)><rsup|2>>|<cell|=>|<cell|>>|<row|<cell|16\<cdot\>n<rsup|2>-<wide*|32\<cdot\>n\<cdot\>l|\<wide-underbrace\>><rsub|1>-<wide*|20\<cdot\>n|\<wide-underbrace\>><rsub|2>+16\<cdot\>l<rsup|2>+<wide*|20\<cdot\>l|\<wide-underbrace\>><rsub|3>-6-<around*|(|4\<cdot\>l+4|)>\<cdot\><around*|(|4\<cdot\>l+3|)>\<cdot\><around*|(|2\<cdot\>n|)><rsup|2>>|<cell|=>|<cell|>>|<row|<cell|16\<cdot\>n<rsup|2>-32\<cdot\>n\<cdot\>l-20\<cdot\>n+16\<cdot\>l<rsup|2>+20\<cdot\>l-6-<around*|(|4\<cdot\>l+4|)>\<cdot\><around*|(|4\<cdot\>l+3|)>\<cdot\><around*|(|2\<cdot\>n|)><rsup|2>>|<cell|=>|<cell|>>|<row|<cell|16\<cdot\>n<rsup|2>-32\<cdot\>n\<cdot\>l-20\<cdot\>n+16\<cdot\>l<rsup|2>+20\<cdot\>l-6-<around*|(|4\<cdot\>l+4|)>\<cdot\><around*|(|4\<cdot\>l+3|)>\<cdot\>4\<cdot\>n<rsup|2>>|<cell|=>|<cell|>>|<row|<cell|16\<cdot\>n<rsup|2>-32\<cdot\>n\<cdot\>l-20\<cdot\>n+16\<cdot\>l<rsup|2>+20\<cdot\>l-6-4\<cdot\>n<rsup|2>\<cdot\><around*|(|4\<cdot\>l+4|)>\<cdot\><around*|(|4\<cdot\>l+3|)>>|<cell|=>|<cell|>>|<row|<cell|16\<cdot\>n<rsup|2>-32\<cdot\>n\<cdot\>l-20\<cdot\>n+16\<cdot\>l<rsup|2>+20\<cdot\>l-6-4\<cdot\>n<rsup|2>\<cdot\><around*|(|16\<cdot\>l<rsup|2>+12\<cdot\>l+16\<cdot\>l+12|)>>|<cell|=>|<cell|>>|<row|<cell|16\<cdot\>n<rsup|2>-32\<cdot\>n\<cdot\>l-20\<cdot\>n+16\<cdot\>l<rsup|2>+20\<cdot\>l-6-4\<cdot\>n<rsup|2>\<cdot\><around*|(|16\<cdot\>l<rsup|2>+28\<cdot\>l+12|)>>|<cell|=>|<cell|>>|<row|<cell|16\<cdot\>n<rsup|2>-32\<cdot\>n\<cdot\>l-20\<cdot\>n+16\<cdot\>l<rsup|2>+20\<cdot\>l-6-64\<cdot\>n<rsup|2>\<cdot\>l<rsup|2>-112\<cdot\>n<rsup|2>\<cdot\>l-48\<cdot\>n<rsup|2>>|<cell|=>|<cell|>>|<row|<cell|<wide*|16\<cdot\>n<rsup|2>|\<wide-underbrace\>><rsub|1>-32\<cdot\>n\<cdot\>l-20\<cdot\>n+16\<cdot\>l<rsup|2>+20\<cdot\>l-6-64\<cdot\>n<rsup|2>\<cdot\>l<rsup|2>-112\<cdot\>n<rsup|2>\<cdot\>l-<wide*|48\<cdot\>n<rsup|2>|\<wide-underbrace\>><rsub|1>>|<cell|=>|<cell|>>|<row|<cell|<wide*|-32\<cdot\>n<rsup|2>|\<wide-underbrace\>><rsub|1>-32\<cdot\>n\<cdot\>l-20\<cdot\>n+16\<cdot\>l<rsup|2>+20\<cdot\>l-6-64\<cdot\>n<rsup|2>\<cdot\>l<rsup|2>-112\<cdot\>n<rsup|2>\<cdot\>l>|<cell|=>|<cell|>>|<row|<cell|-32\<cdot\>n<rsup|2>-32\<cdot\>n\<cdot\>l-20\<cdot\>n+16\<cdot\>l<rsup|2>+20\<cdot\>l-6-64\<cdot\>n<rsup|2>\<cdot\>l<rsup|2>-112\<cdot\>n<rsup|2>\<cdot\>l>|<cell|\<less\><rsub|l<rsup|2>\<less\>n<rsup|2>>>|<cell|>>|<row|<cell|-32\<cdot\>n<rsup|2>-32\<cdot\>n\<cdot\>l-20\<cdot\>n+16\<cdot\>n<rsup|2>+20\<cdot\>l-6-64\<cdot\>n<rsup|2>\<cdot\>l<rsup|2>-112\<cdot\>n<rsup|2>\<cdot\>l>|<cell|\<less\><rsub|l\<less\>n>>|<cell|>>|<row|<cell|-32\<cdot\>n<rsup|2>-32\<cdot\>n\<cdot\>l-20\<cdot\>n+16\<cdot\>n<rsup|2>+20\<cdot\>n-6-64\<cdot\>n<rsup|2>\<cdot\>l<rsup|2>-112\<cdot\>n<rsup|2>\<cdot\>l>|<cell|=>|<cell|>>|<row|<cell|<wide*|-32\<cdot\>n<rsup|2>|\<wide-underbrace\>><rsub|1>-32\<cdot\>n\<cdot\>l-<wide*|20\<cdot\>n|\<wide-underbrace\>><rsub|2>+<wide*|16\<cdot\>n<rsup|2>|\<wide-underbrace\>><rsub|1>+<wide*|20\<cdot\>n|\<wide-underbrace\>><rsub|2>-6-64\<cdot\>n<rsup|2>\<cdot\>l<rsup|2>-112\<cdot\>n<rsup|2>\<cdot\>l>|<cell|=>|<cell|>>|<row|<cell|<wide*|-16\<cdot\>n<rsup|2>|\<wide-underbrace\>><rsub|1>-32\<cdot\>n\<cdot\>l-6-64\<cdot\>n<rsup|2>\<cdot\>l<rsup|2>-112\<cdot\>n<rsup|2>\<cdot\>l>|<cell|\<less\>>|<cell|>>|<row|<cell|0>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    Which proves that <math|<around*|(|4\<cdot\>n-4\<cdot\>l-2|)>\<cdot\><around*|(|4\<cdot\>n-4\<cdot\>l-3|)>-<around*|(|4\<cdot\>l+4|)>\<cdot\><around*|(|4\<cdot\>l+3|)>\<cdot\><around*|(|2\<cdot\>n|)><rsup|2>\<less\>0>
+    and combining this with [eq: <reference|eq 17.34.154>] that
+    <math|\<forall\>l\<in\><around*|{|1,\<ldots\>,n-1|}>>
+    <math|E<rsub|l>\<less\>0> so that by [eq: <reference|eq 17.33.154>]\ 
+
+    <\equation>
+      <label|eq 17.35.154>E\<less\>0
+    </equation>
+
+    Combining then [eqs: <reference|eq 17.35.154>, <reference|eq 17.32.154>
+    and <reference|eq 17.29.154> proves that\ 
+
+    <\equation>
+      <label|eq 17.36.154>A\<in\>\<bbb-R\><text| and <math|A\<less\>0>>
+    </equation>
+
+    TODO Prove that <math|B> is imaginair and positive
+  </proof>
+
+  \;
+
+  \;
+
+  <\proof>
+    We have\ 
+
+    <\eqnarray*>
       <tformat|<table|<row|<cell|\<zeta\><rsup|k>>|<cell|\<equallim\><rsub|<text|[theorem:
       <reference|complex (x^n)^m>]>>>|<cell|>>|<row|<cell|<around*|(|1+<frac|i|k>|)><rsup|2\<cdot\>k>>|<cell|\<equallim\><rsub|<text|[theorem:
       <reference|fundamental binomial formula>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|l=0><rsup|2\<cdot\>k><around*|(|<binom|2\<cdot\>k|l>\<cdot\><around*|(|<frac|i|k>|)><rsup|l>\<cdot\>1<rsup|2\<cdot\>k-l>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|l=0><rsup|2\<cdot\>k><around*|(|<binom|2\<cdot\>k|l>\<cdot\><around*|(|<frac|i|k>|)><rsup|l>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|0,\<ldots\>,2\<cdot\>k|}>><around*|(|<binom|2\<cdot\>k|l>\<cdot\><around*|(|<frac|i|k>|)><rsup|l>|)>>|<cell|\<equallim\><rsub|<text|[lemma:
-      <reference|lemma 17.26.136>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|2\<cdot\>j\|j\<in\><around*|{|0,\<ldots\>,k|}>|}><big|sqcup><around*|{|2\<cdot\>j+1\|j\<in\><around*|{|1,\<ldots\>,k-1|}>|}>><around*|(|<binom|2\<cdot\>k|l>\<cdot\><around*|(|<frac|i|k>|)><rsup|l>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|sum over disjoint subsets>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|2\<cdot\>j\|j\<in\><around*|{|0,\<ldots\>,k|}>|}>><around*|(|<binom|2\<cdot\>k|l>\<cdot\><around*|(|<frac|i|k>|)><rsup|l>|)>+<big|sum><rsub|l\<in\><around*|{|2\<cdot\>j+1\|j\<in\><around*|{|1,\<ldots\>,k-1|}>|}>><around*|(|<binom|2\<cdot\>k|l>\<cdot\><around*|(|<frac|i|k>|)><rsup|l>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|sum bijection on index>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|<around*|\<nobracket\>|0,\<ldots\>,k|}>|\<nobracket\>>><around*|(|<binom|2\<cdot\>k|2\<cdot\>l>\<cdot\><around*|(|<frac|i|k>|)><rsup|2\<cdot\>l>|)>+<big|sum><rsub|l\<in\><around*|{|1,\<ldots\>,k-1|}>><around*|(|<binom|2\<cdot\>k|2\<cdot\>l+1>\<cdot\><around*|(|<frac|i|k>|)><rsup|2\<cdot\>l+1>|)>>|<cell|>|<cell|>>>>
+      <reference|lemma 17.26.136>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|2\<cdot\>j\|j\<in\><around*|{|0,\<ldots\>,k|}>|}><big|sqcup><around*|{|2\<cdot\>j+1\|j\<in\><around*|{|0,\<ldots\>,k-1|}>|}>><around*|(|<binom|2\<cdot\>k|l>\<cdot\><around*|(|<frac|i|k>|)><rsup|l>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum over disjoint subsets>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|2\<cdot\>j\|j\<in\><around*|{|0,\<ldots\>,k|}>|}>><around*|(|<binom|2\<cdot\>k|l>\<cdot\><around*|(|<frac|i|k>|)><rsup|l>|)>+<big|sum><rsub|l\<in\><around*|{|2\<cdot\>j+1\|j\<in\><around*|{|0,\<ldots\>,k-1|}>|}>><around*|(|<binom|2\<cdot\>k|l>\<cdot\><around*|(|<frac|i|k>|)><rsup|l>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum bijection on index>]>>>|<cell|>>|<row|<cell|<big|sum><rsub|l\<in\><around*|{|<around*|\<nobracket\>|0,\<ldots\>,k|}>|\<nobracket\>>><around*|(|<binom|2\<cdot\>k|2\<cdot\>l>\<cdot\><around*|(|<frac|i|k>|)><rsup|2\<cdot\>l>|)>+<big|sum><rsub|l\<in\><around*|{|0,\<ldots\>,k-1|}>><around*|(|<binom|2\<cdot\>k|2\<cdot\>l+1>\<cdot\><around*|(|<frac|i|k>|)><rsup|2\<cdot\>l+1>|)>>|<cell|>|<cell|>>>>
     </eqnarray*>
 
     proving that\ 
@@ -1585,7 +1774,7 @@
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|A>|<cell|=>|<cell|<big|sum><rsub|l\<in\><around*|{|<around*|\<nobracket\>|0,\<ldots\>,k|}>|\<nobracket\>>><around*|(|<binom|2\<cdot\>k|2\<cdot\>l>\<cdot\><around*|(|<frac|i|k>|)><rsup|2\<cdot\>l>|)><eq-number><label|eq
-      17.18.136>>>|<row|<cell|B>|<cell|=>|<cell|<big|sum><rsub|l\<in\><around*|{|1,\<ldots\>,k-1|}>><around*|(|<binom|2\<cdot\>k|2\<cdot\>l+1>\<cdot\><around*|(|<frac|i|k>|)><rsup|2\<cdot\>l+1>|)><eq-number><label|eq
+      17.18.136>>>|<row|<cell|B>|<cell|=>|<cell|<big|sum><rsub|l\<in\><around*|{|0,\<ldots\>,k-1|}>><around*|(|<binom|2\<cdot\>k|2\<cdot\>l+1>\<cdot\><around*|(|<frac|i|k>|)><rsup|2\<cdot\>l+1>|)><eq-number><label|eq
       17.19.136>>>>>
     </eqnarray*>
 
@@ -3145,81 +3334,97 @@
     <associate|eq 17.13.139|<tuple|17.14|?>>
     <associate|eq 17.14.136|<tuple|17.18|?>>
     <associate|eq 17.16.136|<tuple|17.20|?>>
-    <associate|eq 17.17.136|<tuple|17.21|?>>
-    <associate|eq 17.18.136|<tuple|17.22|?>>
-    <associate|eq 17.19.136|<tuple|17.23|?>>
+    <associate|eq 17.17.136|<tuple|17.37|?>>
+    <associate|eq 17.18.136|<tuple|17.38|?>>
+    <associate|eq 17.19.136|<tuple|17.39|?>>
     <associate|eq 17.2|<tuple|17.3|?>>
-    <associate|eq 17.20.136|<tuple|17.24|?>>
-    <associate|eq 17.21.136|<tuple|17.25|?>>
-    <associate|eq 17.22.136|<tuple|17.26|?>>
-    <associate|eq 17.23.136|<tuple|17.27|?>>
-    <associate|eq 17.24.136|<tuple|17.28|?>>
-    <associate|eq 17.25.136|<tuple|17.29|?>>
-    <associate|eq 17.26.136|<tuple|17.30|?>>
-    <associate|eq 17.27.136|<tuple|17.31|?>>
-    <associate|eq 17.28.136|<tuple|17.32|?>>
-    <associate|eq 17.29.136|<tuple|17.33|?>>
+    <associate|eq 17.20.136|<tuple|17.40|?>>
+    <associate|eq 17.21.136|<tuple|17.41|?>>
+    <associate|eq 17.21.154|<tuple|17.21|?>>
+    <associate|eq 17.22.136|<tuple|17.42|?>>
+    <associate|eq 17.22.154|<tuple|17.22|?>>
+    <associate|eq 17.23.136|<tuple|17.43|?>>
+    <associate|eq 17.23.154|<tuple|17.23|?>>
+    <associate|eq 17.24.136|<tuple|17.44|?>>
+    <associate|eq 17.24.154|<tuple|17.24|?>>
+    <associate|eq 17.25.136|<tuple|17.45|?>>
+    <associate|eq 17.25.154|<tuple|17.25|?>>
+    <associate|eq 17.26.136|<tuple|17.46|?>>
+    <associate|eq 17.26.154|<tuple|17.26|?>>
+    <associate|eq 17.27.136|<tuple|17.47|?>>
+    <associate|eq 17.27.154|<tuple|17.27|?>>
+    <associate|eq 17.28.136|<tuple|17.48|?>>
+    <associate|eq 17.28.154|<tuple|17.28|?>>
+    <associate|eq 17.29.136|<tuple|17.49|?>>
+    <associate|eq 17.29.154|<tuple|17.29|?>>
     <associate|eq 17.3.135|<tuple|17.4|?>>
-    <associate|eq 17.30.136|<tuple|17.34|?>>
-    <associate|eq 17.31.136|<tuple|17.35|?>>
-    <associate|eq 17.32.136|<tuple|17.36|?>>
-    <associate|eq 17.33.136|<tuple|17.37|?>>
-    <associate|eq 17.34.136|<tuple|17.38|?>>
-    <associate|eq 17.35.136|<tuple|17.39|?>>
-    <associate|eq 17.36.136|<tuple|17.40|?>>
-    <associate|eq 17.37.136|<tuple|17.41|?>>
-    <associate|eq 17.38.136|<tuple|17.42|?>>
-    <associate|eq 17.39.136|<tuple|17.43|?>>
+    <associate|eq 17.30.136|<tuple|17.50|?>>
+    <associate|eq 17.30.154|<tuple|17.30|?>>
+    <associate|eq 17.31.136|<tuple|17.51|?>>
+    <associate|eq 17.31.154|<tuple|17.31|?>>
+    <associate|eq 17.32.136|<tuple|17.52|?>>
+    <associate|eq 17.32.154|<tuple|17.32|?>>
+    <associate|eq 17.33.136|<tuple|17.53|?>>
+    <associate|eq 17.33.154|<tuple|17.33|?>>
+    <associate|eq 17.34.136|<tuple|17.54|?>>
+    <associate|eq 17.34.154|<tuple|17.34|?>>
+    <associate|eq 17.35.136|<tuple|17.55|?>>
+    <associate|eq 17.35.154|<tuple|17.35|?>>
+    <associate|eq 17.36.136|<tuple|17.56|?>>
+    <associate|eq 17.36.154|<tuple|17.36|?>>
+    <associate|eq 17.37.136|<tuple|17.57|?>>
+    <associate|eq 17.38.136|<tuple|17.58|?>>
+    <associate|eq 17.39.136|<tuple|17.59|?>>
     <associate|eq 17.4.135|<tuple|17.5|?>>
-    <associate|eq 17.40.136|<tuple|17.44|?>>
-    <associate|eq 17.41.136|<tuple|17.45|?>>
-    <associate|eq 17.42.136|<tuple|17.46|?>>
-    <associate|eq 17.43.138|<tuple|17.47|?>>
-    <associate|eq 17.44.138|<tuple|17.48|?>>
-    <associate|eq 17.45.138|<tuple|17.49|?>>
-    <associate|eq 17.46.138|<tuple|17.50|?>>
-    <associate|eq 17.47.138|<tuple|17.51|?>>
-    <associate|eq 17.48.138|<tuple|17.52|?>>
-    <associate|eq 17.49.138|<tuple|17.53|?>>
+    <associate|eq 17.40.136|<tuple|17.60|?>>
+    <associate|eq 17.41.136|<tuple|17.61|?>>
+    <associate|eq 17.42.136|<tuple|17.62|?>>
+    <associate|eq 17.43.138|<tuple|17.63|?>>
+    <associate|eq 17.44.138|<tuple|17.64|?>>
+    <associate|eq 17.45.138|<tuple|17.65|?>>
+    <associate|eq 17.46.138|<tuple|17.66|?>>
+    <associate|eq 17.47.138|<tuple|17.67|?>>
+    <associate|eq 17.48.138|<tuple|17.68|?>>
+    <associate|eq 17.49.138|<tuple|17.69|?>>
     <associate|eq 17.5.135|<tuple|17.6|?>>
-    <associate|eq 17.50.138|<tuple|17.54|?>>
-    <associate|eq 17.51.138|<tuple|17.55|?>>
-    <associate|eq 17.52.138|<tuple|17.56|?>>
-    <associate|eq 17.53.138|<tuple|17.57|?>>
-    <associate|eq 17.54.138|<tuple|17.58|?>>
-    <associate|eq 17.55.138|<tuple|17.59|?>>
-    <associate|eq 17.56.138|<tuple|17.60|?>>
+    <associate|eq 17.50.138|<tuple|17.70|?>>
+    <associate|eq 17.51.138|<tuple|17.71|?>>
+    <associate|eq 17.52.138|<tuple|17.72|?>>
+    <associate|eq 17.53.138|<tuple|17.73|?>>
+    <associate|eq 17.54.138|<tuple|17.74|?>>
+    <associate|eq 17.55.138|<tuple|17.75|?>>
+    <associate|eq 17.56.138|<tuple|17.76|?>>
     <associate|eq 17.6.135|<tuple|17.7|?>>
-    <associate|eq 17.60.138|<tuple|17.61|?>>
-    <associate|eq 17.61.139|<tuple|17.62|?>>
-    <associate|eq 17.62.139|<tuple|17.63|?>>
-    <associate|eq 17.63.139|<tuple|17.64|?>>
-    <associate|eq 17.64.139|<tuple|17.65|?>>
-    <associate|eq 17.65.139|<tuple|17.66|?>>
-    <associate|eq 17.66.139|<tuple|17.67|?>>
-    <associate|eq 17.67.139|<tuple|17.68|?>>
-    <associate|eq 17.68.139|<tuple|17.69|?>>
-    <associate|eq 17.69.139|<tuple|17.70|?>>
+    <associate|eq 17.60.138|<tuple|17.77|?>>
+    <associate|eq 17.61.139|<tuple|17.78|?>>
+    <associate|eq 17.62.139|<tuple|17.79|?>>
+    <associate|eq 17.63.139|<tuple|17.80|?>>
+    <associate|eq 17.64.139|<tuple|17.81|?>>
+    <associate|eq 17.65.139|<tuple|17.82|?>>
+    <associate|eq 17.66.139|<tuple|17.83|?>>
+    <associate|eq 17.67.139|<tuple|17.84|?>>
+    <associate|eq 17.68.139|<tuple|17.85|?>>
+    <associate|eq 17.69.139|<tuple|17.86|?>>
     <associate|eq 17.7.135|<tuple|17.8|?>>
-    <associate|eq 17.70.139|<tuple|17.71|?>>
-    <associate|eq 17.71.139|<tuple|17.72|?>>
-    <associate|eq 17.72.139|<tuple|17.73|?>>
-    <associate|eq 17.73.139|<tuple|17.74|?>>
-    <associate|eq 17.74.139|<tuple|17.75|?>>
-    <associate|eq 17.75.139|<tuple|17.76|?>>
-    <associate|eq 17.76.139|<tuple|17.77|?>>
-    <associate|eq 17.77.139|<tuple|17.78|?>>
-    <associate|eq 17.78.139|<tuple|17.79|?>>
-    <associate|eq 17.79.139|<tuple|17.80|?>>
+    <associate|eq 17.70.139|<tuple|17.87|?>>
+    <associate|eq 17.71.139|<tuple|17.88|?>>
+    <associate|eq 17.72.139|<tuple|17.89|?>>
+    <associate|eq 17.73.139|<tuple|17.90|?>>
+    <associate|eq 17.74.139|<tuple|17.91|?>>
+    <associate|eq 17.75.139|<tuple|17.92|?>>
+    <associate|eq 17.76.139|<tuple|17.93|?>>
+    <associate|eq 17.77.139|<tuple|17.94|?>>
+    <associate|eq 17.78.139|<tuple|17.95|?>>
+    <associate|eq 17.79.139|<tuple|17.96|?>>
     <associate|eq 17.8.135|<tuple|17.9|?>>
-    <associate|eq 17.80.139|<tuple|17.81|?>>
-    <associate|eq 17.81.139|<tuple|17.82|?>>
-    <associate|eq 17.82.139|<tuple|17.83|?>>
-    <associate|eq 17.83.139|<tuple|17.84|?>>
-    <associate|eq 17.84.139|<tuple|17.85|?>>
-    <associate|eq 17.84.139.1|<tuple|17.86|?>>
-    <associate|eq 17.86.139|<tuple|17.87|?>>
-    <associate|eq 17.87.140|<tuple|17.88|?>>
+    <associate|eq 17.80.139|<tuple|17.97|?>>
+    <associate|eq 17.81.139|<tuple|17.98|?>>
+    <associate|eq 17.82.139|<tuple|17.99|?>>
+    <associate|eq 17.83.139|<tuple|17.100|?>>
+    <associate|eq 17.84.139|<tuple|17.101|?>>
+    <associate|eq 17.84.139.1|<tuple|17.102|?>>
+    <associate|eq 17.86.139|<tuple|17.103|?>>
+    <associate|eq 17.87.140|<tuple|17.104|?>>
     <associate|eq 17.9.135|<tuple|17.10|?>>
     <associate|fundamental binomial coefficient|<tuple|17.21|?>>
     <associate|fundamental binomial formula|<tuple|17.23|?>>

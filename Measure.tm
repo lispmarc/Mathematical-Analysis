@@ -51,6 +51,8 @@
     </note>
   </definition>
 
+  <subsection|Order relation in <math|<wide|\<bbb-R\>|\<wide-bar\>>>>
+
   <\definition>
     <label|extended reals finite real number>A
     <math|x\<in\><wide|\<bbb-R\>|\<wide-bar\>>> is a called a finite real
@@ -101,6 +103,11 @@
         \<forall\>x\<in\><wide|\<bbb-R\>|\<wide-bar\>> we
         have-\<infty\>\<leqslant\>x<text| and >x\<leqslant\>\<infty\>
       </equation*>
+
+      So in essence <math|\<infty\>> is a number that is bigger then all
+      numbers in <math|<wide|\<bbb-R\>|\<wide-bar\>>> and <math|-\<infty\>>
+      is a number that is less than every number in
+      <math|<wide|\<bbb-R\>|\<wide-bar\>>>.
     </note>
 
     <\note>
@@ -339,29 +346,76 @@
     <label|extended sup and inf exist>Let
     <math|\<varnothing\>\<neq\>A\<subseteq\><wide|\<bbb-R\>|\<wide-bar\>>>
     then <math|sup<around*|(|A|)>> and <math|inf<around*|(|A|)>> exist.
-    Further we have:\ 
+    Further we have:
 
     <\enumerate>
-      <item><math|sup<around*|(|<around*|{|-\<infty\>|}>|)>=-\<infty\>>
+      <item><math|sup<around*|(|A|)>> has the following values for the
+      possible cases of <math|A>:
 
-      <item>If <math|\<infty\>\<in\>A> then
-      <math|sup<around*|(|A|)>=\<infty\>>
+      <\description>
+        <item*|<math|A=<around*|{|-\<infty\>|}>>>Then
+        <math|sup<around*|(|A|)>=-\<infty\>>
 
-      <item>If <math|\<infty\>\<nin\>A> then we have:
+        <item*|<math|A\<neq\><around*|{|-\<infty\>|}>>>Then we have the
+        following possible subcases:
 
-      <\enumerate>
-        <item>If <math|><math|\<exists\>u\<in\>\<bbb-R\>\<vdash\>\<forall\>x\<in\>A
-        we have x\<leqslant\>u> then <math|sup<around*|(|A|)>=sup<rsub|\<bbb-R\>><around*|(|A<big|cap>\<bbb-R\>|)>>
+        <\description>
+          <item*|<math|\<infty\>\<in\>A>>Then
+          <math|sup<around*|(|A|)>=\<infty\>>
 
-        <item>If <math|\<exists\>u\<in\>\<bbb-R\>\<vdash\>\<forall\>x\<in\>A
-        we have x\<leqslant\>u> then <math|sup<around*|(|A|)>=\<infty\>>
-      </enumerate>
+          <item*|<math|\<infty\>\<nin\>A>>Then we have the following
+          subcases:\ 
+
+          <\description>
+            <item*|<math|\<exists\>u\<in\>\<bbb-R\>\<vdash\>\<forall\>x\<in\>A<text|
+            we have >x\<leqslant\>u>>Then
+            <math|sup<around*|(|A|)>=sup<rsub|\<bbb-R\>><around*|(|A<big|cap>\<bbb-R\>|)>\<in\>\<bbb-R\>>
+
+            <item*|<math|\<forall\>u\<in\>R\<vdash\>\<exists\>x\<in\>A<text|
+            we have >x\<nleqslant\>u>>Then
+            <math|sup<around*|(|A|)>=\<infty\>>
+          </description>
+        </description>
+      </description>
+
+      <item><math|inf<around*|(|A|)>> has the following values for the
+      possible cases of <math|A>:
+
+      <\description>
+        <item*|<math|A=<around*|{|\<infty\>|}>>>Then
+        <math|inf<around*|(|A|)>=\<infty\>>
+
+        <item*|<math|A\<neq\><around*|{|\<infty\>|}>>>Then we have the
+        following possible subcases:
+
+        <\description>
+          <item*|<math|-\<infty\>\<in\>A>>Then
+          <math|inf<around*|(|A|)>=-\<infty\>>
+
+          <item*|<math|-\<infty\>\<nin\>A>>Then we have the following
+          subcases:\ 
+
+          <\description>
+            <item*|<math|\<exists\>l\<in\>\<bbb-R\>\<vdash\>\<forall\>x\<in\>A<text|
+            we have >l\<leqslant\>x>>Then
+            <math|inf<around*|(|A|)>=inf<rsub|\<bbb-R\>><around*|(|A<big|cap>\<bbb-R\>|)>\<in\>\<bbb-R\>>
+
+            <item*|<math|\<forall\>l\<in\>R\<vdash\>\<exists\>x\<in\>A<text|
+            we have >l\<nleqslant\>x>>Then
+            <math|inf<around*|(|A|)>=-\<infty\>>
+          </description>
+        </description>
+      </description>
     </enumerate>
 
-    where <math|sup<around*|(|A|)>> is the supremum of <math|A> using
-    <math|\<leqslant\>> and <math|sup<rsub|\<bbb-R\>><around*|(|A<big|cap>\<bbb-R\>|)>>
+    Where <math|sup<around*|(|A|)>> is the supremum of <math|A> using
+    <math|\<leqslant\>>, <math|sup<rsub|\<bbb-R\>><around*|(|A<big|cap>\<bbb-R\>|)>>
     is the supremum of <math|A<big|cap>\<bbb-R\>> using
-    <math|\<leqslant\><rsub|\<bbb-R\>>>.
+    <math|\<leqslant\><rsub|\<bbb-R\>>>, <math|inf<around*|(|A|)>> is the
+    infinum of <math|A> using <math|\<leqslant\>> and
+    <math|inf<rsub|\<bbb-R\>><around*|(|A<big|cap>\<bbb-R\>|)>> is the
+    infinum of <math|A<big|cap>\<bbb-R\>> using
+    <math|\<leqslant\><rsub|\<bbb-R\>0>>.
   </theorem>
 
   <\proof>
@@ -391,8 +445,7 @@
         bound of <math|A>. Hence <math|sup<around*|(|A|)>=\<infty\>> or\ 
 
         <\equation*>
-          <text|If <math|\<infty\>\<in\>A> [so that
-          <math|A\<neq\><around*|{|-\<infty\>|}>>] then
+          <text|If <math|\<infty\>\<in\>A> then
           <math|sup<around*|(|A|)>=\<infty\>>>
         </equation*>
 
@@ -453,7 +506,7 @@
             <math|-\<infty\>\<leqslant\>x\<leqslant\>-\<infty\>\<Rightarrow\>x=-\<infty\>>
             so that <math|<rigid|A\<subseteq\><around*|{|-\<infty\>|}>>> or
             <math|A<big|cap>\<bbb-R\>\<subseteq\><around*|{|-\<infty\>|}><big|cap>\<bbb-R\>=\<varnothing\>>
-            contradicting the fact that <math|A<big|cap>\<bbb-R\>=\<varnothing\>>.
+            contradicting the fact that <rigid|<math|A<big|cap>\<bbb-R\>=\<varnothing\>>>.
             So this case will never occur.
           </description>
 
@@ -466,13 +519,356 @@
           </equation*>
 
           <item*|<math|\<forall\>u\<in\>\<bbb-R\>\<vdash\>\<exists\>x\<in\>A<text|
-          with >x\<nleqslant\>u>>
+          with >x\<nleqslant\>u>>As <math|\<forall\>x\<in\><wide|\<bbb-R\>|\<wide-bar\>>>
+          we have that <math|x\<leqslant\>\<infty\>> it follows that
+          <math|\<infty\>> is a upper bound of <math|A> [using
+          <math|\<leqslant\>>]. Let <math|u> be another upper bound of
+          <math|A>. Assume that <math|\<infty\>\<nleqslant\>u> then by
+          [theorem: <reference|order comparable property>]
+          <math|u\<less\>\<infty\>> or <math|u\<neq\>\<infty\>> so that
+          <math|u> is either:
+
+          <\description>
+            <item*|<math|u=-\<infty\>>>Then <math|\<forall\>x\<in\>A> we have
+            <math|-\<infty\>\<leqslant\>x\<leqslant\>u=-\<infty\>\<Rightarrow\>x=-\<infty\>>
+            so that <math|<rigid|A\<subseteq\><around*|{|-\<infty\>|}>>> or
+            <math|A<big|cap>\<bbb-R\>\<subseteq\><around*|{|-\<infty\>|}><big|cap>\<bbb-R\>=\<varnothing\>>
+            contradicting the fact that <math|A<rigid|<big|cap>\<bbb-R\>>=\<varnothing\>>.
+
+            <item*|<math|u\<in\>\<bbb-R\>>>Then <math|\<exists\>x\<in\>A>
+            such that <math|x\<nleqslant\>u> contradicting the fact that
+            <math|u> is a upper bound.
+          </description>
+
+          As in all cases we have a contradiction we must have that the
+          assumption is wrong and that <math|\<infty\>\<leqslant\>u>. Hence
+          <math|\<infty\>> is the lowest upper bound of <math|A> [using
+          <math|\<leqslant\>>] or <math|\<infty\>> is the supremum of
+          <math|A>, so
+
+          <\equation*>
+            sup<around*|(|A|)>=\<infty\>
+          </equation*>
         </description>
       </description>
     </description>
 
-    \;
+    So in all possibke cases of <math|A> we have found that
+    <math|sup<around*|(|A|)>> exists. Next we prove that
+    <math|inf<around*|(|A|)>> exist, for <math|A> we have either:\ 
+
+    <\description>
+      <item*|<math|A=<around*|{|\<infty\>|}>>>As
+      <math|\<infty\>\<leqslant\>\<infty\>> <math|\<infty\>> is a lower bound
+      of <math|A>. If <math|l\<in\><wide|\<bbb-R\>|\<wide-bar\>>> is another
+      lower bound then, as <math|l\<leqslant\>\<infty\>> it follows that
+      <math|\<infty\>> is the greatest upper bound of <math|A> hence
+      <math|inf<around*|(|A|)>=\<infty\>> and\ 
+
+      <\equation*>
+        inf<around*|(|<around*|{|\<infty\>|}>|)>=\<infty\>
+      </equation*>
+
+      <item*|<math|A\<neq\><around*|{|\<infty\>|}>>>Then we have either:
+
+      <\description>
+        <item*|<math|-\<infty\>\<in\>A>>As <math|\<forall\>x\<in\>A> we have
+        <math|-\<infty\>\<leqslant\>x> so <math|-\<infty\>> is clearly a
+        lower bound for <math|A>. If <math|l> is a another lower bound for
+        <math|A> then, as <math|-\<infty\>\<in\>A>, we must have that
+        <math|u\<leqslant\>-\<infty\>> so <math|-\<infty\>> is the greatest
+        lower bound of <math|A>. Hence <math|inf<around*|(|A|)>=-\<infty\>>
+        or\ 
+
+        <\equation*>
+          <text|If <math|-\<infty\>\<in\>A> then
+          <math|inf<around*|(|A|)>=-\<infty\>>>
+        </equation*>
+
+        <item*|<math|-\<infty\>\<nin\>A>>As <math|A\<neq\>\<varnothing\>> and
+        <math|A\<neq\><around*|{|\<infty\>|}>> there must be a
+        <math|z\<in\>A> with <math|z\<neq\>\<infty\>>, as
+        <math|-\<infty\>\<nin\>A> it follows that <math|z\<in\>\<bbb-R\>>.
+        Hence we conclude that\ 
+
+        <\equation*>
+          A<big|cap>\<bbb-R\>\<neq\>\<varnothing\>
+        </equation*>
+
+        \ Consider now for <math|A> the following cases:
+
+        <\description>
+          <item*|<math|\<exists\>l\<in\>\<bbb-R\>\<vdash\>\<forall\>x\<in\>A<text|
+          we have >l\<leqslant\>x>>Then <math|\<forall\>x\<in\>A<big|cap>\<bbb-R\>>
+          we have <math|l\<leqslant\>x> or, as <math|x,l\<in\>\<bbb-R\>> that
+          <math|l\<leqslant\><rsub|\<bbb-R\>>x>, so
+          <math|\<varnothing\>\<neq\>A<big|cap>\<bbb-R\>> is bounded below by
+          <math|l>. As <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\><rsub|\<bbb-R\>>|\<rangle\>>>
+          is conditional complete [see theorem: <reference|complex RC is
+          conditional complete>] <math|A<big|cap>\<bbb-R\>> has a infinnum
+          <math|I=inf<rsub|\<bbb-R\>><around*|(|A<big|cap>\<bbb-R\>|)>\<in\>\<bbb-R\>>.
+          Let <math|x\<in\>A>, then, given that <math|-\<infty\>\<nin\>A>, we
+          have either:
+
+          <\description>
+            <item*|<math|x\<in\>A<big|cap>\<bbb-R\>>>Then
+            <math|I\<leqslant\><rsub|\<bbb-R\>>x> so that
+            <math|I\<leqslant\>x>
+
+            <item*|<math|x=\<infty\>>>Then <math|I\<leqslant\>x>
+          </description>
+
+          So in all cases we have <math|I\<leqslant\>x> which proves that\ 
+
+          <\equation*>
+            I<text| is a lower bound of >A <around*|[|using\<leqslant\>|]>
+          </equation*>
+
+          Let <math|L> be another lower bound of <math|A> [using
+          <math|\<leqslant\>>] then we have either:\ 
+
+          <\description>
+            <item*|<math|L\<in\>\<bbb-R\>>>Then
+            <math|\<forall\>x\<in\>A<big|cap>\<bbb-R\>\<subseteq\>A> we have
+            <math|L\<leqslant\>x>, hence, as <math|x,L\<in\>\<bbb-R\>>,
+            <math|L\<leqslant\><rsub|\<bbb-R\>>x> so that <math|L> is another
+            lower bound of <math|A<big|cap>\<bbb-R\>> using
+            <math|\<leqslant\><rsub|\<bbb-R\>>>. So we must have that
+            <math|L\<leqslant\>I>.
+
+            <item*|<math|L=\<infty\>>>Then <math|\<forall\>x\<in\>A> we have
+            <math|\<infty\>\<leqslant\>x\<leqslant\>\<infty\>\<Rightarrow\>x=\<infty\>>
+            so that <math|A\<subseteq\><around*|{|\<infty\>|}>> or
+            <math|A<big|cap>\<bbb-R\>\<subseteq\><around*|{|\<infty\>|}><big|cap>\<bbb-R\>=\<varnothing\>>
+            contradicting the fact that <rigid|<math|A<big|cap>\<bbb-R\>=\<varnothing\>>>.
+            So this case will never occur.
+
+            <item*|<math|L=-\<infty\>>>Then <math|L\<leqslant\>I>
+          </description>
+
+          As in all valid cases <math|L\<leqslant\>I> it follows that
+          <math|I> is the greatest lower bound of <math|A> or <math|I> is the
+          infinum of <math|A>. So\ 
+
+          <\equation*>
+            inf<around*|(|A|)>=<text|inf><rsub|\<bbb-R\>><around*|(|A<big|cap>\<bbb-R\>|)>
+          </equation*>
+
+          <item*|<math|\<forall\>l\<in\>\<bbb-R\>\<vdash\>\<exists\>x\<in\>A<text|
+          with >l\<nleqslant\>x>>As <math|\<forall\>x\<in\><wide|\<bbb-R\>|\<wide-bar\>>>
+          we have that <math|-\<infty\>\<leqslant\>x> it follows that
+          <math|-\<infty\>> is a lower bound of <math|A> [using
+          <math|\<leqslant\>>]. Let <math|l> be another lower bound of
+          <math|A>. Assume that <math|l\<nleqslant\>-\<infty\>> then by
+          [theorem: <reference|order comparable property>]
+          <math|-\<infty\>\<less\>l> or <math|l\<neq\>-\<infty\>> so that
+          <math|l> is either:
+
+          <\description>
+            <item*|<math|l=\<infty\>>>Then <math|\<forall\>x\<in\>A> we have
+            <math|\<infty\>=l\<leqslant\>x\<leqslant\>\<infty\>\<Rightarrow\>x=\<infty\>>
+            so that <math|<rigid|A\<subseteq\><around*|{|\<infty\>|}>>> or
+            <math|A<big|cap>\<bbb-R\>\<subseteq\><around*|{|\<infty\>|}><big|cap>\<bbb-R\>=\<varnothing\>>
+            contradicting the fact that <math|A<rigid|<big|cap>\<bbb-R\>>=\<varnothing\>>.
+
+            <item*|<math|l\<in\>\<bbb-R\>>>Then <math|\<exists\>x\<in\>A>
+            such that <math|l\<nleqslant\>x> contradicting the fact that
+            <math|l> is a lower bound.
+          </description>
+
+          As in all cases we have a contradiction we must have that the
+          assumption is wrong and that <math|l\<leqslant\>-\<infty\>>. Hence
+          <math|-\<infty\>> is the greatest lower bound of <math|A> [using
+          <math|\<leqslant\>>] or <math|-\<infty\>> is the infinum of
+          <math|A>. So
+
+          <\equation*>
+            inf<around*|(|A|)>=-\<infty\>
+          </equation*>
+        </description>
+      </description>
+    </description>
+
+    So in all possible cases of <math|A> we have proved that
+    <math|inf<around*|(|A|)>> exist.
   </proof>
+
+  <\corollary>
+    <label|extended sup inf of real numbers>If
+    <math|\<varnothing\>\<neq\>A\<subseteq\>\<bbb-R\>> then
+    <math|sup<around*|(|A|)>\<neq\>-\<infty\>> and
+    <math|inf<around*|(|A|)>\<neq\>\<infty\>>
+  </corollary>
+
+  <\proof>
+    If <math|sup<around*|(|A|)>=-\<infty\>> then <math|\<forall\>x\<in\>A> we
+    have <math|-\<infty\>\<leqslant\>x\<leqslant\>-\<infty\>> so that
+    <math|x=-\<infty\>>, hence <math|A\<subseteq\><around*|{|-\<infty\>|}>>
+    so that we get <math|\<varnothing\>\<neq\>A=A<big|cap>\<bbb-R\>\<subseteq\><around*|{|-\<infty\>|}><big|cap>\<bbb-R\>=\<varnothing\>>
+    a contradiction. Hence\ 
+
+    <\equation*>
+      sup<around*|(|A|)>\<neq\>-\<infty\>
+    </equation*>
+
+    Likewise if <math|inf<around*|(|A|)>=\<infty\>> then
+    \ <math|\<forall\>x\<in\>A> we have <math|\<infty\>\<leqslant\>x\<leqslant\>\<infty\>>
+    so that <math|x=\<infty\>>, hence <math|A\<subseteq\><around*|{|\<infty\>|}>>
+    so that we get <math|\<varnothing\>\<neq\>A=A<big|cap>\<bbb-R\>\<subseteq\><around*|{|\<infty\>|}><big|cap>\<bbb-R\>=\<varnothing\>>
+    a contradiction. Hence\ 
+
+    <\equation*>
+      inf<around*|(|A|)>\<neq\>\<infty\>
+    </equation*>
+  </proof>
+
+  The next theorem shows the neccesary and sufficient contraint for the
+  supremum and infinum to be not finite.
+
+  <\corollary>
+    <label|extended infinite inf sup>Let <math|\<varnothing\>\<neq\>A\<subseteq\><wide|\<bbb-R\>|\<wide-bar\>>>
+    then\ 
+
+    <\enumerate>
+      <item><math|sup<around*|(|A|)>=\<infty\>> <math|\<Leftrightarrow\>>
+      <math|\<infty\>\<in\>A<text| or >\<forall\>u\<in\>\<bbb-R\>> there
+      exist a <math|x\<in\>A<big|cap>\<bbb-R\>> with <math|x\<nleqslant\>u>.
+
+      <item><math|inf<around*|(|A|)>=-\<infty\>\<Leftrightarrow\>-\<infty\>\<in\>A<text|
+      or >\<forall\>\<in\>\<bbb-R\>> there exist a
+      <math|x\<in\>A<big|cap>\<bbb-R\>> with <math|l\<leqslant\>x>.
+
+      <item><math|sup<around*|(|A|)>=-\<infty\>\<Leftrightarrow\>A=<around*|{|-\<infty\>|}>>
+
+      <item><math|inf<around*|(|A|)>=\<infty\>\<Leftrightarrow\>A=<around*|{|\<infty\>|}>>
+    </enumerate>
+  </corollary>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item> From [theorem: <reference|extended sup and inf exist> (1)] it
+      follows that the only possible cases where
+      <math|sup<around*|(|A|)>=\<infty\>> are that either
+      <math|\<infty\>\<in\>A> or <math|\<forall\>u\<in\>\<bbb-R\>> there
+      exist a <math|x\<in\>A<big|cap>\<bbb-R\>> with <math|x\<nleqslant\>u>.
+
+      <item>From [theorem: <reference|extended sup and inf exist> (2)] it
+      follows that the only possible cases where
+      <math|inf<around*|(|A|)>=-\<infty\>> are that either
+      <math|-\<infty\>\<in\>A> or <math|\<forall\>l\<in\>\<bbb-R\>> there
+      exist a <math|x\<in\>A<big|cap>\<bbb-R\>> with <math|l\<nleqslant\>x>.
+
+      <item>From [theorem: <reference|extended sup and inf exist> (1)] it
+      follows that the only possible cases where
+      <math|sup<around*|(|A|)>=-\<infty\>> is the case where
+      <math|A=<around*|{|-\<infty\>|}>>.
+
+      <item>From [theorem: <reference|extended sup and inf exist> (2)] it
+      follows that the only possible cases where
+      <math|inf<around*|(|A|)>=\<infty\>> is the case where
+      <math|A=<around*|{|\<infty\>|}>>.
+    </enumerate>
+  </proof>
+
+  <subsection|Arithmetic operations on <math|<wide|\<bbb-R\>|\<wide-bar\>>>>
+
+  The sum operator on <math|<wide|\<bbb-R\>|\<wide-bar\>>> is a extension of
+  the sum on <math|\<bbb-R\>> such that most inequalities involving sums are
+  still satisfied.
+
+  <\definition>
+    The sum operator is defined by\ 
+
+    <\equation*>
+      <around*|(|+|)>:<around*|(|<wide|\<bbb-R\>|\<wide-bar\>>\<times\><wide|\<bbb-R\>|\<wide-bar\>>|)>\\<around*|{|<around*|(|\<infty\>,-\<infty\>|)>,<around*|(|-\<infty\>,\<infty\>|)>|}>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+      by ><around*|(|+|)><around*|(|x,y|)>\<equallim\><rsub|notation>x+y
+    </equation*>
+
+    where\ 
+
+    <\equation*>
+      x+y=<choice|<tformat|<table|<row|<cell|\<infty\><text| if
+      >x=\<infty\>\<wedge\>y\<in\><wide|\<bbb-R\>|\<wide-bar\>>\\<around*|{|-\<infty\>|}>>>|<row|<cell|\<infty\><text|
+      if >y=\<infty\>\<wedge\>x\<in\><wide|\<bbb-R\>|\<wide-bar\>>\\<around*|{|-\<infty\>|}>>>|<row|<cell|-\<infty\><text|
+      if >x=-\<infty\>\<wedge\>y\<in\><wide|\<bbb-R\>|\<wide-bar\>>\\<around*|{|\<infty\>|}>>>|<row|<cell|-\<infty\><text|
+      if >y=-\<infty\>\<wedge\>x\<in\><wide|\<bbb-R\>|\<wide-bar\>>\\<around*|{|\<infty\>|}>>>|<row|<cell|x+<rsub|\<bbb-R\>>y<text|
+      >if x,y\<in\>\<bbb-R\><text| where >+<rsub|\<bbb-R\>><text| is the sum
+      defined for the real numbers>>>>>>
+    </equation*>
+
+    <\note>
+      <math|\<infty\>+<around*|(|-\<infty\>|)>> and
+      <math|-\<infty\>+\<infty\>> are not defined at all.
+    </note>
+  </definition>
+
+  <\definition>
+    The multiplication operator <math|\<cdot\>> is defined by\ 
+
+    <\equation*>
+      <around*|(|\<cdot\>|)>:<wide|\<bbb-R\>|\<wide-bar\>>\<times\><wide|\<bbb-R\>|\<wide-bar\>>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>
+      by <around*|(|\<cdot\>|)><around*|(|x,y|)>\<equallim\><rsub|notation>x\<cdot\>y
+    </equation*>
+
+    where\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|x\<cdot\>y>|<cell|=>|<cell|<choice|<tformat|<table|<row|<cell|\<infty\><text|
+      if >x=\<infty\>\<wedge\>y\<in\><around*|]|0,\<infty\>|]>>>|<row|<cell|\<infty\><text|
+      if >y=\<infty\>\<wedge\>x\<in\><around*|]|0,\<infty\>|]>>>|<row|<cell|\<infty\><text|
+      if >x=-\<infty\>\<wedge\>y\<in\><around*|[|-\<infty\>,0|[>>>|<row|<cell|\<infty\><text|
+      if >y=-\<infty\>\<wedge\>x\<in\><around*|[|-\<infty\>,0|[>>>|<row|<cell|-\<infty\><text|
+      if >x=-\<infty\>\<wedge\>y\<in\><around*|]|0,\<infty\>|]>>>|<row|<cell|-\<infty\><text|
+      if >y=-\<infty\>\<wedge\>x\<in\><around*|]|0,\<infty\>|]>>>|<row|<cell|-\<infty\><text|
+      if >x=\<infty\>\<wedge\>y\<in\><around*|[|-\<infty\>,0|[>>>|<row|<cell|-\<infty\><text|
+      if >y=\<infty\>\<wedge\>x\<in\><around*|[|-\<infty\>,0|[>>>|<row|<cell|0<text|
+      if >x=0\<wedge\>y\<in\><wide|\<bbb-R\>|\<wide-bar\>>>>|<row|<cell|0<text|
+      if >y=0\<wedge\>y\<in\><wide|\<bbb-R\>|\<wide-bar\>>>>|<row|<cell|x\<cdot\><rsub|\<bbb-R\>>y<text|
+      if >x,y\<in\>\<bbb-R\><text| <math|<text| where
+      >\<cdot\><rsub|\<bbb-R\>><text| is the sum defined for the real
+      numbers>>>>>>>>>>>>
+    </eqnarray*>
+  </definition>
+
+  <\definition>
+    The negate operator <math|-> is defined by\ 
+
+    <\equation*>
+      <around*|(|-|)>:<wide|\<bbb-R\>|\<wide-bar\>>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+      where ><around*|(|-|)><around*|(|x|)>\<equallim\><rsub|<text|notation>>-x\<equallim\><rsub|defined><around*|(|-1|)>\<cdot\>x
+    </equation*>
+
+    So as <math|<around*|(|-1|)>\<in\><around*|]|0,\<infty\>|[>> we have that\ 
+
+    <\equation*>
+      -x=<choice|<tformat|<table|<row|<cell|\<infty\><text| if
+      >x=-\<infty\>>>|<row|<cell|-\<infty\><text| if
+      >x=\<infty\>>>|<row|<cell|<around*|(|-1|)>\<cdot\><rsub|\<bbb-R\>><text|
+      if >x\<in\>\<bbb-R\>>>>>>
+    </equation*>
+  </definition>
+
+  We define the inverse operator.
+
+  <\definition>
+    The inverse operator <math|<around*|(|\<cdot\>|)><rsup|-1>> is defined by\ 
+
+    <\equation*>
+      <around*|(|\<cdot\>|)><rsup|-1>:<wide|\<bbb-R\>|\<wide-bar\>>\\<around*|{|0|}>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+      >by <around*|(|\<cdot\>|)><rsup|-1>=<choice|<tformat|<table|<row|<cell|0<text|
+      if >x=-\<infty\>>>|<row|<cell|0<text| if
+      >x=\<infty\>>>|<row|<cell|x<rsup|-1><text| if >x\<in\>\<bbb-R\><text|
+      where <math|x<rsup|-1><text| is the inverse defined in
+      >\<bbb-R\>>>>>>>>
+    </equation*>
+
+    <\notation>
+      As usualy we note <math|<around*|(|\<cdot\>|)><rsup|-1><around*|(|x|)>>
+      as <math|x<rsup|-1>>, <math|1/x> or <math|<frac|1|x>>
+    </notation>
+  </definition>
 
   \;
 
@@ -484,7 +880,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|19>
-    <associate|page-first|1229>
+    <associate|page-first|1233>
     <associate|section-nr|1>
     <associate|subsection-nr|7>
   </collection>
@@ -494,14 +890,17 @@
   <\collection>
     <associate|auto-1|<tuple|20|?>>
     <associate|auto-2|<tuple|20.1|?>>
-    <associate|auto-3|<tuple|20.2|?>>
+    <associate|auto-3|<tuple|20.1.1|?>>
+    <associate|auto-4|<tuple|20.1.2|?>>
+    <associate|auto-5|<tuple|20.2|?>>
+    <associate|extended|<tuple|20.13|?>>
     <associate|extended fully order|<tuple|20.9|?>>
+    <associate|extended infinite inf sup|<tuple|20.13|?>>
     <associate|extended order relation|<tuple|20.4|?>>
     <associate|extended reals|<tuple|20.1|?>>
-    <associate|extended reals are fully ordered|<tuple|20.10|?>>
     <associate|extended reals finite real number|<tuple|20.3|?>>
-    <associate|extended reals order definition|<tuple|20.8|?>>
     <associate|extended sup and inf exist|<tuple|20.11|?>>
+    <associate|extended sup inf of real numbers|<tuple|20.12|?>>
   </collection>
 </references>
 
