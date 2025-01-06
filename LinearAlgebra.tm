@@ -9,7 +9,7 @@
 
   <chapter|Linear Algebra>
 
-  <section|Sums and products>
+  <section|Sums and products><label|section sums and products>
 
   <subsection|Definition and properties>
 
@@ -24859,11 +24859,11 @@
   <\collection>
     <associate|chapter-nr|10>
     <associate|item-nr|4>
-    <associate|page-first|337>
+    <associate|page-first|336>
     <associate|page-medium|papyrus>
     <associate|par-first|0tab>
     <associate|section-nr|5>
-    <associate|subsection-nr|5>
+    <associate|subsection-nr|4>
   </collection>
 </initial>
 
@@ -25560,6 +25560,7 @@
     <associate|product finite product|<tuple|11.2|?>>
     <associate|product of family of elements with a zero in|<tuple|11.53|?>>
     <associate|rank|<tuple|11.329|?>>
+    <associate|section sums and products|<tuple|11.1|?>>
     <associate|sum alternative definition|<tuple|11.4|?>>
     <associate|sum alternative definition (1)|<tuple|11.15|?>>
     <associate|sum alternative definition (2)|<tuple|11.22|?>>
