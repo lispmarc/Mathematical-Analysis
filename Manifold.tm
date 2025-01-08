@@ -78,7 +78,7 @@
   <\enumerate>
     <item>Spell check started/Finished
 
-    <item>Check for errors started
+    <item>Check for errors started/Finished
   </enumerate>
 
   <section|InnerProductSpaces.tm>
@@ -103,7 +103,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|20>
-    <associate|page-first|1237>
+    <associate|page-first|1247>
     <associate|section-nr|2>
     <associate|subsection-nr|0>
   </collection>
