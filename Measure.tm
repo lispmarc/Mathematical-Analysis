@@ -2495,28 +2495,397 @@
       <math|B<rsub|1>,B<rsub|2>> either:
 
       <\description>
-        <item*|<math|B<rsub|1>\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<wedge\>B<rsub|2>\<in\>\<cal-B\><rsub|<around*|\|||\|>>>>
+        <item*|<math|B<rsub|1>\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<wedge\>B<rsub|2>\<in\>\<cal-B\><rsub|<around*|\|||\|>>>>Then
+        there exists <math|a<rsub|1>>, <math|b<rsub|1>>, <math|a<rsub|2>>,
+        <math|b<rsub|2>> with <math|B<rsub|1>=<around*|]|a<rsub|1>,b<rsub|1>|[>\<wedge\>B<rsub|2>=<around*|]|a<rsub|2>,b<rsub|2>|[>>,
+        as <math|x\<in\>B<rsub|1><big|cap>B<rsub|2>>
+        \ <math|a<rsub|1>\<less\>x\<less\>b<rsub|1>> and
+        <math|a<rsub|2>\<less\>x\<less\>b<rsub|2>>. Define
+        <math|B=<around*|]|a,b|[>> where <math|a=max<around*|(|a<rsub|1>,a<rsub|2>|)>>
+        and <math|b=min<around*|(|b<rsub|1>,b<rsub|2>|)>> \ then
+        <math|a\<less\>x\<less\>b> or <math|x\<in\>B\<in\>\<cal-B\><rsub|<around*|\|||\|>>>.
+        Further if <math|y\<in\>B> then <math|a<rsub|1>,a<rsub|2>\<leqslant\>a\<less\>y\<less\>b\<leqslant\>b<rsub|1>,b<rsub|2>>
+        so that <math|y\<in\>B<rsub|1><big|cap>B<rsub|2>>. Hence
+        <math|x\<in\>B\<subseteq\>B<rsub|1><big|cap>B<rsub|2>> where
+        <math|B\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<subset\>-\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>.
 
-        <item*|<math|B<rsub|1>\<in\>\<cal-B\><rsub|-\<infty\>>\<wedge\>B<rsub|2>\<in\>\<cal-B\><rsub|<around*|\|||\|>>>>
+        <item*|<math|B<rsub|1>\<in\>\<cal-B\><rsub|-\<infty\>>\<wedge\>B<rsub|2>\<in\>\<cal-B\><rsub|<around*|\|||\|>>>>Then
+        there exists <math|a,b,c\<in\>\<bbb-R\>> such that
+        <math|B<rsub|2>=<around*|]|a,b|[>> and
+        <math|B<rsub|1>=<around*|[|-\<infty\>,c|[>>, as
+        <math|x\<in\>B<rsub|1><big|cap>B<rsub|2>> we have that
+        <math|x\<less\>c> and <math|a\<less\>x\<less\>b>. Define
+        <math|B=<around*|]|a,d|[>> where <math|d=min<around*|(|c,b|)>> then
+        <math|a\<less\>x\<less\>d> so that
+        <math|x\<in\>B\<in\>\<cal-B\><rsub|<around*|\|||\|>>>. Further if
+        <math|y\<in\>B> then <math|a\<less\>y\<less\>d\<leqslant\>c,b> so
+        that <math|y\<in\>B<rsub|1><big|cap>B<rsub|2>>. Hence
+        <math|x\<in\>B\<subseteq\>B<rsub|1><big|cap>B<rsub|2>> where
+        <math|><math|B\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<subseteq\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>.
 
-        <item*|<math|B<rsub|1>\<in\>\<cal-B\><rsub|\<infty\>>\<wedge\>B<rsub|2>\<in\>\<cal-B\><rsub|<around*|\|||\|>>>>
+        <item*|<math|B<rsub|1>\<in\>\<cal-B\><rsub|\<infty\>>\<wedge\>B<rsub|2>\<in\>\<cal-B\><rsub|<around*|\|||\|>>>>Then
+        there exists <math|a,b,c\<in\>\<bbb-R\>> such that
+        <math|B<rsub|2>=<around*|]|a,b|[>> and
+        <math|B<rsub|1>=<around*|]|c,\<infty\>|]>>, as
+        <math|x\<in\>B<rsub|1><big|cap>B<rsub|2>> we have that
+        <math|c\<less\>x> and <math|a\<less\>x\<less\>b>. Define
+        <math|B=<around*|]|d,b|[>> where <math|d=max<around*|(|c,a|)>> then
+        <math|d\<less\>x\<less\>b> so that
+        <math|x\<in\>B\<in\>\<cal-B\><rsub|<around*|\|||\|>>>. Further if
+        <math|y\<in\>B> then <math|c,a\<leqslant\>d\<less\>y\<less\>b> so
+        that <math|y\<in\>B<rsub|1><big|cap>B<rsub|2>>. Hence
+        <math|x\<in\>B\<subseteq\>B<rsub|1><big|cap>B<rsub|2>> where
+        <math|><math|B\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<subseteq\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>.
 
-        <item*|<math|B<rsub|1>\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<wedge\>B<rsub|2>\<in\>\<cal-B\><rsub|-\<infty\>>>>
+        <item*|<math|B<rsub|1>\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<wedge\>B<rsub|2>\<in\>\<cal-B\><rsub|-\<infty\>>>>Then
+        there exists <math|a,b,c\<in\>\<bbb-R\>> such that
+        <math|B<rsub|1>=<around*|]|a,b|[>> and
+        <math|B<rsub|2>=<around*|[|-\<infty\>,c|[>>, as
+        <math|x\<in\>B<rsub|1><big|cap>B<rsub|2>> we have
+        <math|a\<less\>x\<less\>b> and <math|x\<less\>c>. Define
+        <math|B=<around*|]|a,d|[>> where <math|d=min<around*|(|b,c|)>> then
+        <math|a\<less\>x\<less\>d> so that
+        <math|x\<in\>B\<in\>\<cal-B\><rsub|<around*|\|||\|>>>. Further if
+        <math|y\<in\>B> then <math|a\<less\>y\<less\>d\<leqslant\>b,c> so
+        that <math|y\<in\>B<rsub|1><big|cap>B<rsub|2>>. Hence
+        <math|x\<in\>B\<subseteq\>B<rsub|1><big|cap>B<rsub|2>> where
+        <math|><math|B\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<subseteq\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>.
 
-        <item*|<math|B<rsub|1>\<in\>\<cal-B\><rsub|-\<infty\>>\<wedge\>B<rsub|2>\<in\>\<cal-B\><rsub|-\<infty\>>>>
+        <item*|<math|B<rsub|1>\<in\>\<cal-B\><rsub|-\<infty\>>\<wedge\>B<rsub|2>\<in\>\<cal-B\><rsub|-\<infty\>>>>Then
+        there exists <math|c<rsub|1>,c<rsub|2>\<in\>\<bbb-R\>> such that
+        <math|B<rsub|1>=<around*|[|-\<infty\>,c<rsub|1>|[>> and
+        <math|<rigid|B<rsub|2>=<around*|[|-\<infty\>,c<rsub|2>|[>>>, as
+        <math|x\<in\>B<rsub|1><big|cap>B<rsub|2>> we have that
+        <math|x\<less\>c<rsub|1>,c<rsub|2>> hence if we define
+        <math|<rigid|B=<around*|[|-\<infty\>,c|[>>> where
+        \ <math|<rigid|c=min<around*|(|c<rsub|1>,c<rsub|2>|)>\<in\>\<bbb-R\>>>
+        then <math|x\<less\>c> so that <math|x\<in\>B\<in\>\<cal-B\><rsub|-\<infty\>>>.
+        Further if <math|y\<in\>B> then <math|y\<less\>c\<leqslant\>c<rsub|1>,c<rsub|2>>
+        so that <math|y\<in\>B<rsub|1><big|cap>B<rsub|2>>. Hence
+        <math|x\<in\>B\<subseteq\>B<rsub|1><big|cap>B<rsub|2>> where
+        <math|><math|B\<in\>\<cal-B\><rsub|-\<infty\>>\<subseteq\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>.
 
-        <item*|<math|B<rsub|1>\<in\>\<cal-B\><rsub|\<infty\>>\<wedge\>B<rsub|2>\<in\>\<cal-B\><rsub|-\<infty\>>>>
+        <item*|<math|B<rsub|1>\<in\>\<cal-B\><rsub|\<infty\>>\<wedge\>B<rsub|2>\<in\>\<cal-B\><rsub|-\<infty\>>>>Then
+        there exists <math|c<rsub|1>,c<rsub|2>\<in\>\<bbb-R\>> such that
+        <math|B<rsub|1>=<around*|]|c<rsub|1>,\<infty\>|]>> and
+        <math|B<rsub|2>=<around*|[|-\<infty\>,c<rsub|2>|[>,>as
+        <math|x\<in\>B<rsub|1><big|cap>B<rsub|2>> we have that
+        <math|c<rsub|1>\<less\>x\<less\>c<rsub|2>>. Define
+        <math|B=<around*|]|c<rsub|1>,c<rsub|2>|[>> then
+        <math|x\<in\>B\<in\>\<cal-B\><rsub|<around*|\|||\|>>>. Further if
+        <math|y\<in\>B> then <math|c<rsub|1>\<less\>y\<less\>c<rsub|2>> so
+        that <math|y\<in\>B<rsub|1><big|cap>B<rsub|2>>. Hence
+        <math|x\<in\>B\<subseteq\>B<rsub|1><big|cap>B<rsub|2>> where
+        <math|><math|B\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<subseteq\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>.
 
-        <item*|<math|B<rsub|1>\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<wedge\>B<rsub|2>\<in\>\<cal-B\><rsub|\<infty\>>>>
+        <item*|<math|B<rsub|1>\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<wedge\>B<rsub|2>\<in\>\<cal-B\><rsub|\<infty\>>>>Then
+        there exists <math|a,b,c\<in\>\<bbb-R\>> such that
+        <math|B<rsub|1>=<around*|]|a,b|[>> and
+        <math|B<rsub|2>=<around*|]|c,\<infty\>|]>>, as
+        <math|x\<in\>B<rsub|1><big|cap>B<rsub|2>> we have that
+        <math|a\<less\>x\<less\>b> and <math|c\<less\>x>. Define
+        <math|B=<around*|]|d,b|[>> where <math|d=max<around*|(|a,c|)>> then
+        we have <math|d\<less\>x\<less\>b> so that
+        <math|x\<in\>B\<in\>\<cal-B\><rsub|<around*|\|||\|>>>. Further if
+        <math|y\<in\>B> then <math|a,c\<leqslant\>d\<less\>y\<less\>b> so
+        that <math|y\<in\>B<rsub|1><big|cap>B<rsub|2>>. Hence
+        <math|x\<in\>B\<subseteq\>B<rsub|1><big|cap>B<rsub|2>> where
+        <math|><math|B\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<subseteq\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>.
 
-        <item*|<math|B<rsub|1>\<in\>\<cal-B\><rsub|-\<infty\>>\<wedge\>B<rsub|2>\<in\>\<cal-B\><rsub|\<infty\>>>>
+        <item*|<math|B<rsub|1>\<in\>\<cal-B\><rsub|-\<infty\>>\<wedge\>B<rsub|2>\<in\>\<cal-B\><rsub|\<infty\>>>>Then
+        there exists <math|c<rsub|1>,c<rsub|2>\<in\>\<bbb-R\>> such that
+        <math|B<rsub|1>=<around*|[|-\<infty\>,c<rsub|1>|[>> and
+        <math|<rigid|B<rsub|2>=<around*|]|c<rsub|2>,\<infty\>|]>>>, as
+        <math|x\<in\>B<rsub|1><big|cap>B<rsub|2>> we have
+        <math|c<rsub|2>\<less\>x\<less\>c<rsub|1>>. Define
+        <math|B=<around*|]|c<rsub|2>,c<rsub|1>|[>> then
+        <math|x\<in\>B\<in\>\<cal-B\><rsub|<around*|\|||\|>>>. Further if
+        <math|y\<in\>B> then <math|c<rsub|2>\<less\>y\<less\>c<rsub|1>> so
+        that <math|y\<in\>B<rsub|1><big|cap>B<rsub|2>>. Hence
+        <math|x\<in\>B\<subseteq\>B<rsub|1><big|cap>B<rsub|2>> where
+        <math|><math|B\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<subseteq\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>.\ 
 
-        <item*|<math|B<rsub|1>\<in\>\<cal-B\><rsub|\<infty\>>\<wedge\>B<rsub|2>\<in\>\<cal-B\><rsub|\<infty\>>>>
+        <item*|<math|B<rsub|1>\<in\>\<cal-B\><rsub|\<infty\>>\<wedge\>B<rsub|2>\<in\>\<cal-B\><rsub|\<infty\>>>>Then
+        there exists <math|c<rsub|1>,c<rsub|2>\<in\>\<bbb-R\>> such that
+        <math|B<rsub|1>=<around*|]|c<rsub|1>,\<infty\>|]>\<wedge\><rigid|B<rsub|2>=<around*|]|c<rsub|2>,\<infty\>|]>>>,
+        as <math|x\<in\>B<rsub|1><big|cap>B<rsub|2>> we have
+        <math|c<rsub|1>\<less\>x\<wedge\>c<rsub|2>\<less\>x>. Define
+        <math|B=<around*|]|c,\<infty\>|]>> where
+        <math|c=max<around*|(|c<rsub|1>,c<rsub|2>|)>\<in\>\<bbb-R\>> then
+        <math|c\<less\>x> so that <math|x\<in\>B<rsub|\<infty\>>>. Further if
+        <math|y\<in\>B> then <math|c<rsub|1>,c<rsub|2>\<leqslant\>c\<less\>y>
+        so that <math|y\<in\>B<rsub|1><big|cap>B<rsub|2>>. Hence
+        <math|x\<in\>B\<subseteq\>B<rsub|1><big|cap>B<rsub|2>> where
+        <math|><math|B\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<subseteq\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>.
       </description>
     </enumerate>
   </proof>
 
-  \ 
+  We use now <math|\<cal-B\><rsub|<wide|<wide|\<bbb-R\>|\<wide-bar\>>|\<wide-bar\>>>>
+  to generate the canonical topology on <math|<wide|\<bbb-R\>|\<wide-bar\>>>.
+
+  <\definition>
+    <label|extended canonical topology><index|<math|\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>>The
+    canonical topology on <math|<wide|\<bbb-R\>|\<wide-bar\>>> noted as
+    <math|\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>> is defined as\ 
+
+    <\equation*>
+      \<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>=<around*|{|U\<subseteq\><wide|\<bbb-R\>|\<wide-bar\>>\|\<forall\>x\<in\>U<text|
+      we have that >\<exists\>B\<in\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>><text|
+      such that >x\<in\>B\<subseteq\>U|}>
+    </equation*>
+
+    which is indeed a topology by [theorem: <reference|topology basis
+    generating>] and [lemma: <reference|extended generating basis>].
+  </definition>
+
+  It turns out that the subspace topology of
+  <math|\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>> [see theorem:
+  <reference|topology subspace topology>] is equal to the canonical topology
+  <math|\<cal-T\><rsub|<around*|\|||\|>>> on <math|\<bbb-R\>>.
+
+  <\theorem>
+    <label|extended canonical topologies on the real and extended real
+    space>Let <math|\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>> be the
+    canonical topology on <math|<wide|\<bbb-R\>|\<wide-bar\>>> and
+    <math|\<cal-T\><rsub|<around*|\|||\|>>> the canonical topology on
+    <math|\<bbb-R\>> [see theorem: <reference|normed basis of T\|\|>] then\ 
+
+    <\equation*>
+      \<cal-T\><rsub|<around*|\|||\|>>\<subseteq\>\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      \<cal-T\><rsub|<around*|\|||\|>>=<around*|{|U<big|cap>\<bbb-R\>\|U\<in\>\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>|}>\<equallim\><rsub|<text|[theorem:
+      <reference|topology subspace topology>]>><around*|(|\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>|)><rsub|\|\<bbb-R\>>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    By definition\ 
+
+    <\equation*>
+      \<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>=<around*|{|U\<subseteq\><wide|\<bbb-R\>|\<wide-bar\>>\|\<forall\>x\<in\>U<text|
+      we have that >\<exists\>B\<in\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>><text|
+      such that >x\<in\>B\<subseteq\>U|}>
+    </equation*>
+
+    Further by [theorem: <reference|normed basis of T\|\|>]\ 
+
+    <\equation*>
+      \<cal-T\><rsub|<around*|\|||\|>>=<around*|{|U\<subseteq\>\<bbb-R\>\|\<forall\>x\<in\>U<text|
+      we have that >\<exists\>B\<in\>\<cal-B\><rsub|<around*|\|||\|>><text|
+      such that >x\<in\>B\<subseteq\>U|}>
+    </equation*>
+
+    where\ 
+
+    <\equation*>
+      \<cal-B\><rsub|<around*|\|||\|>>=<around*|{|<around*|]|a,b|[>\|a,b\<in\>\<bbb-R\>\<wedge\>a\<less\>b|}>\<subseteq\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>
+    </equation*>
+
+    Let <math|U\<in\>\<cal-T\><rsub|<around*|\|||\|>>> then
+    <math|\<forall\>x\<in\>U> <math|\<exists\>B\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<subseteq\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>
+    such that <math|x\<in\>B\<subseteq\>U> proving that
+    <math|U\<in\>\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>, hence we
+    have\ 
+
+    <\equation>
+      <label|eq 20.1.155>\<cal-T\><rsub|<around*|\|||\|>>\<subseteq\>\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>
+    </equation>
+
+    If <math|U\<in\>\<cal-T\><rsub|<around*|\|||\|>>> then
+    <math|U\<subseteq\>\<bbb-R\>\<Rightarrow\>U=U<big|cap>\<bbb-R\>> and by
+    [eq: <reference|eq 20.1.155>] <math|U\<in\>\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>
+    so that <math|U\<in\><around*|{|U<big|cap>\<bbb-R\>\|U\<in\>\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>|}>>
+    hence\ 
+
+    <\equation>
+      <label|eq 20.2.155>\<cal-T\><rsub|<around*|\|||\|>>\<subseteq\><around*|{|U<big|cap>\<bbb-R\>\|U\<in\>\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>|}>
+    </equation>
+
+    If <math|U\<in\><around*|{|U<big|cap>\<bbb-R\>\|U\<in\>\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>|}>>
+    then there exist a <math|V\<in\>\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>
+    such that\ 
+
+    <\equation>
+      <label|eq 20.3.155>U=V<big|cap>\<bbb-R\>
+    </equation>
+
+    If <math|x\<in\>U> then <math|x\<in\>\<bbb-R\>> and
+    <math|x\<in\>V\<in\>\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>, so
+    there exists a <math|B<rprime|'><rsub|x>\<in\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>
+    such that <math|x\<in\>B<rprime|'><rsub|x>\<subseteq\>V>. For
+    <math|B<rprime|'><rsub|x>> we have then either:\ 
+
+    <\description>
+      <item*|<math|B<rprime|'><rsub|x>\<in\>\<cal-B\><rsub|<around*|\|||\|>>>>Then
+      there exist a <math|a,b\<in\>\<bbb-R\>> such that
+      <math|B<rprime|'><rsub|x>=<around*|]|a,b|[>\<subseteq\>\<bbb-R\>> hence
+      if we take <math|B<rsub|x>=B<rprime|'><rsub|x>> then
+
+      <\equation*>
+        x\<in\>B<rsub|x>=B<rsub|x><big|cap>\<bbb-R\>\<subseteq\>V<big|cap>\<bbb-R\>=U
+      </equation*>
+
+      <item*|<math|B<rprime|'><rsub|x>\<in\>\<cal-B\><rsub|-\<infty\>>>>Then
+      <math|\<exists\>c\<in\>\<bbb-R\>> such that
+      <math|B<rprime|'><rsub|x>=<around*|[|-\<infty\>,c|[>>. Define
+      <math|B<rsub|x>=<around*|]|x-1,c|[>\<subseteq\>\<bbb-R\>> then
+      <math|x-1\<less\>x\<less\>c> so that
+      <math|x\<in\>B<rsub|x>\<in\>\<cal-B\><rsub|<around*|\|||\|>>>. Further
+      for <math|y\<in\>B<rsub|x>> we have <math|y\<less\>c> so that
+      <math|y\<in\>B<rprime|'><rsub|x>> proving that
+      <math|x\<in\>B<rsub|x>\<subseteq\>B<rprime|'><rsub|x>>. Hence
+
+      <\equation*>
+        x\<in\>B<rsub|x>=B<rsub|x><big|cap>\<bbb-R\>\<subseteq\>V<big|cap>\<bbb-R\>=U
+      </equation*>
+
+      <item*|<math|B<rprime|'><rsub|x>\<in\>\<cal-B\><rsub|\<infty\>>>>Then
+      <math|\<exists\>c\<in\>\<bbb-R\>> such that
+      <math|B<rprime|'><rsub|\<infty\>>=<around*|]|c,\<infty\>|]>>. Define
+      <math|B<rsub|x>=<around*|]|c,x+1|[>\<subseteq\>\<bbb-R\>> then
+      <math|c\<less\>x\<less\>x+1> so that
+      <math|x\<in\>B<rsub|x>\<in\>\<cal-B\><rsub|<around*|\|||\|>>>. Further
+      for <math|y\<in\>B<rsub|x>> we have <math|c\<less\>y> so that
+      <math|y\<in\>B<rprime|'><rsub|x>> proving that
+      <math|x\<in\>B<rsub|x>\<subseteq\>B<rprime|'><rsub|x>>. Hence\ 
+
+      <\equation*>
+        x\<in\>B<rsub|x>=B<rsub|x><big|cap>\<bbb-R\>\<subseteq\>V<big|cap>\<bbb-R\>=U
+      </equation*>
+    </description>
+
+    so in all cases we found a <math|B<rsub|x>\<in\>\<cal-B\><rsub|<around*|\|||\|>>>
+    such that <math|x\<in\>B<rsub|x>\<subseteq\>U>. As <math|x> was choose
+    arbitrary it follows that <math|U\<in\>\<cal-T\><rsub|<around*|\|||\|>>>.
+    Hence <math|<around*|{|U<big|cap>\<bbb-R\>\|U\<in\>\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>|}>\<subseteq\>\<cal-T\><rsub|<around*|\|||\|>>>
+    which combined with [eq: <reference|eq 20.2.155>] gives\ 
+
+    <\equation*>
+      \<cal-T\><rsub|<around*|\|||\|>>=<around*|{|U<big|cap>\<bbb-R\>\|U\<in\>\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>|}>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|extended closed sets>We have the following closed sets in
+    <math|\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>\ 
+
+    <\enumerate>
+      <item><math|\<forall\>x\<in\>\<bbb-R\>>
+      <math|<around*|[|-\<infty\>,x|]>> is closed.
+
+      <item><math|\<forall\>x\<in\>\<bbb-R\>>
+      <math|<around*|[|x,\<infty\>|]>> is closed,
+
+      <item><math|\<forall\>x\<in\>\<bbb-R\>> <math|<around*|{|x|}>> is
+      closed.
+
+      <item><math|<around*|[|-\<infty\>,\<infty\>|]>> is closed.
+
+      <item><math|<around*|{|-\<infty\>,\<infty\>|}>> is closed
+
+      <item><math|<around*|{|-\<infty\>|}>> is closed.
+
+      <item><math|<around*|{|\<infty\>|}>> is closed.
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>As\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|y\<in\><wide|\<bbb-R\>|\<wide-bar\>>\\<around*|[|-\<infty\>,x|]>>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><wide|\<bbb-R\>|\<wide-bar\>>\<wedge\>\<neg\><around*|(|-\<infty\>\<leqslant\>y\<leqslant\>x|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><wide|\<bbb-R\>|\<wide-bar\>>\<wedge\><around*|(|y\<less\>-\<infty\>\<vee\>x\<less\>y|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><wide|\<bbb-R\>|\<wide-bar\>>\<wedge\>x\<less\>y>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><around*|]|x,\<infty\>|]>>>>>
+      </eqnarray*>
+
+      so that <math|<wide|\<bbb-R\>|\<wide-bar\>>\\<around*|[|-\<infty\>,x|]>=<around*|]|x,\<infty\>|]>\<in\>\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>,
+      hence <math|<around*|[|-\<infty\>,x|]>> is closed.
+
+      <item>As\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|y\<in\><wide|\<bbb-R\>|\<wide-bar\>>\\<around*|[|x,\<infty\>|]>>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><wide|\<bbb-R\>|\<wide-bar\>>\<wedge\>\<neg\><around*|(|x\<leqslant\>y\<geqslant\>\<infty\>|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><wide|\<bbb-R\>|\<wide-bar\>>\<wedge\><around*|(|y\<less\>x\<vee\>\<infty\>\<less\>y|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><wide|\<bbb-R\>|\<wide-bar\>>\<wedge\>y\<less\>x>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><around*|[|-\<infty\>,x|[>>>>>
+      </eqnarray*>
+
+      so that <math|<wide|\<bbb-R\>|\<wide-bar\>>\\<around*|[|x,\<infty\>|]>=<around*|[|-\<infty\>,x|[>\<in\>\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>
+      which proves that <math|<around*|[|x,\<infty\>|]>> is closed.
+
+      <item>As <math|<around*|{|x|}>=<around*|[|-\<infty\>,x|]><big|cap><around*|[|x,\<infty\>|]>>
+      it follows from (1) and (2) that <math|<around*|{|x|}>> is closed.
+
+      <item>This is trivial as <math|<wide|\<bbb-R\>|\<wide-bar\>>=<around*|[|-\<infty\>,\<infty\>|]>>.
+
+      <item>As <math|<wide|\<bbb-R\>|\<wide-bar\>>\\<around*|{|-\<infty\>,\<infty\>|}>=\<bbb-R\>\<in\>\<cal-T\><rsub|<around*|\|||\|>>\<subseteq\>\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>><rsub|>>
+      it follows that <math|<around*|{|-\<infty\>,\<infty\>|}>> is closed.
+
+      <item>As <math|<around*|{|-\<infty\>|}>=<around*|{|-\<infty\>,\<infty\>|}><big|cap><around*|[|-\<infty\>,0|]>>
+      it follows from (2) and (5) that <math|<around*|{|-\<infty\>|}>> is
+      closed.
+
+      <item>As <math|<around*|{|\<infty\>|}>=<around*|{|-\<infty\>,\<infty\>|}><big|cap><around*|[|0,\<infty\>|]>>
+      it follows form <math|<around*|(|1|)>> and <math|<around*|(|5|)>> that
+      <math|<around*|{|\<infty\>|}>> is closed.
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|extended open set properties>
+
+    <\enumerate>
+      <item>If <math|x\<in\>\<bbb-R\>> then and
+      <math|U\<in\>\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>> with
+      <math|x\<in\>U> then <math|\<exists\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+      such that <math|x\<in\><around*|]|x-\<varepsilon\>,x+\<varepsilon\>|[>\<subseteq\>U>.
+
+      <item>If <math|U\<in\>\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>
+      with <math|-\<infty\>\<in\>U> then <math|\<exists\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+      such that <math|-\<infty\>\<in\><around*|[|-\<infty\>,\<varepsilon\>|[>\<subseteq\>U>.
+
+      <item>f <math|U\<in\>\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>
+      with <math|\<infty\>\<in\>U> then <math|\<exists\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+      such that <math|\<infty\>\<in\><around*|]|\<varepsilon\>,\<infty\>|]>\<subseteq\>U>.
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|x\<in\>U> then as <math|\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>
+      is the gnerating basis for <math|\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>
+      there exist a <math|B\<in\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>
+      such that <math|x\<in\>B\<subseteq\>U>. For <math|B> we have either:
+
+      <\description>
+        <item*|<math|B\<in\>\<cal-B\><rsub|<around*|\|||\|>>>>As
+        <math|\<cal-B\><rsub|<around*|\|||\|>>\<equallim\><rsub|<text|[theorem:
+        <reference|normed basis of T\|\|>]>><around*|{|<around*|]|y-\<varepsilon\>,y+\<varepsilon\>|[>\|y\<in\>\<bbb-R\>\<wedge\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>|}>>
+        then there exist <math|y\<in\>\<bbb-R\>\<wedge\>\<delta\>\<in\>\<bbb-R\><rsup|+>>
+        so that <math|B=<around*|]|y-\<delta\>,y+\<delta\>|[>>. As
+        <math|x\<in\>B> we have that <math|y-\<delta\>\<less\>x\<less\>y+\<delta\>>,
+        take <math|\<varepsilon\>=min<around*|(|x-<around*|(|y-\<delta\>|)>,<around*|(|y+\<delta\>|)>-x|)>\<in\>\<bbb-R\><rsup|+>>
+        then <math|x+\<varepsilon\>\<leqslant\>x+<around*|(|y+\<delta\>|)>-x=y+\<delta\>>
+        and <math|x-\<varepsilon\>\<geqslant\>x-<around*|(|x-<around*|(|y-\<delta\>|)>|)>=y-\<delta\>>.
+        So if <math|z\<in\><around*|]|x-\<varepsilon\>,x+\<varepsilon\>|[>>
+        then <math|y-\<delta\>\<leqslant\>x-\<varepsilon\>\<less\>z\<less\>x+\<varepsilon\>\<leqslant\>y+\<delta\>\<subseteq\>U>
+        hence <math|x\<in\><around*|]|x-\<varepsilon\>,x+\<varepsilon\>|[>\<subseteq\>U>.
+
+        <item*|<math|B\<in\>\<cal-B\><rsub|-\<infty\>>>>
+
+        <item*|<math|B\<in\>\<cal-B\><rsub|<around*|\|||\|>>>>
+      </description>
+
+      <item>
+
+      <item>
+    </enumerate>
+  </proof>
 
   <section|Measure spaces>
 
@@ -2535,6 +2904,7 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|20|?>>
+    <associate|auto-10|<tuple|20.2|?>>
     <associate|auto-2|<tuple|20.1|?>>
     <associate|auto-3|<tuple|20.1.1|?>>
     <associate|auto-4|<tuple|20.1.2|?>>
@@ -2542,7 +2912,10 @@
     <associate|auto-6|<tuple|<with|mode|<quote|math>|<wide|\<bbb-R\>|\<wide-bar\>><rsup|+><rsub|0>>|?>>
     <associate|auto-7|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|<wide|\<bbb-R\>|\<wide-bar\>><rsup|+><rsub|0>,+|\<rangle\>>>|?>>
     <associate|auto-8|<tuple|20.1.3|?>>
-    <associate|auto-9|<tuple|20.2|?>>
+    <associate|auto-9|<tuple|<with|mode|<quote|math>|\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>|?>>
+    <associate|eq 20.1.155|<tuple|20.1|?>>
+    <associate|eq 20.2.155|<tuple|20.2|?>>
+    <associate|eq 20.3.155|<tuple|20.3|?>>
     <associate|extended -(x.y)|<tuple|20.34|?>>
     <associate|extended 0\<less\>=x and 0\<less\>=y then
     x\<less\>=x-y\<less\>=x|<tuple|20.25|?>>
@@ -2554,12 +2927,17 @@
     <associate|extended abelian semi group (1)|<tuple|20.33|?>>
     <associate|extended absolute value|<tuple|20.36|?>>
     <associate|extended basis for the topology|<tuple|20.40|?>>
+    <associate|extended canonical topologies on the real and extended real
+    space|<tuple|20.43|?>>
+    <associate|extended canonical topology|<tuple|20.42|?>>
+    <associate|extended closed sets|<tuple|20.44|?>>
     <associate|extended distributitivy|<tuple|20.35|?>>
     <associate|extended fully order|<tuple|20.9|?>>
     <associate|extended generating basis|<tuple|20.41|?>>
     <associate|extended infinite inf sup|<tuple|20.13|?>>
     <associate|extended negate|<tuple|20.32|?>>
     <associate|extended neutral element|<tuple|20.16|?>>
+    <associate|extended open set properties|<tuple|20.45|?>>
     <associate|extended order relation|<tuple|20.4|?>>
     <associate|extended positive and non negative numbers|<tuple|20.23|?>>
     <associate|extended reals|<tuple|20.1|?>>
@@ -2581,6 +2959,8 @@
       <tuple|<tuple|<with|mode|<quote|math>|<wide|\<bbb-R\>|\<wide-bar\>><rsup|+><rsub|0>>>|<pageref|auto-6>>
 
       <tuple|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|<wide|\<bbb-R\>|\<wide-bar\>><rsup|+><rsub|0>,+|\<rangle\>>>>|<pageref|auto-7>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>>|<pageref|auto-9>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|20<space|2spc>Measures
@@ -2607,7 +2987,7 @@
       <no-break><pageref|auto-8>>
 
       20.2<space|2spc>Measure spaces <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-9>
+      <no-break><pageref|auto-10>
     </associate>
   </collection>
 </auxiliary>

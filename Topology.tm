@@ -7370,7 +7370,7 @@
     is <with|font-series|bold|uniform continuous> [hence by [theorem:
     <reference|continuity uniform continuity>] continuous] using the
     topological spaces <math|<around*|\<langle\>|X,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>>|\<rangle\>>>
-    and <math|<around*|\<langle\>|\<bbb-R\>,\<cal-T\><rsub|\<bbb-R\><rsub|<around*|\|||\|>>>|\<rangle\>>>
+    and <math|<around*|\<langle\>|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|\<rangle\>>>
   </example>
 
   <\proof>
