@@ -11,6 +11,8 @@
 
   <subsection|Definition and converge domain>
 
+  TODO cheched untill this
+
   <\definition>
     <label|exp power series><index|power series><index|<math|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>\<cdot\>z<rsup|i>>><dueto|Power
     Series>A <with|font-series|bold|power series> is a expression of the form
@@ -4624,7 +4626,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|18>
-    <associate|page-first|1181>
+    <associate|page-first|1183>
     <associate|page-medium|papyrus>
     <associate|section-nr|4>
     <associate|subsection-nr|4>

@@ -91,6 +91,8 @@
 
   <\enumerate>
     <item>Spell check started/Finished
+
+    <item>Check for errors Started/
   </enumerate>
 
   <section|Measure.tm>
@@ -103,7 +105,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|20>
-    <associate|page-first|1247>
+    <associate|page-first|1255>
     <associate|section-nr|2>
     <associate|subsection-nr|0>
   </collection>

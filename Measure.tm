@@ -2845,7 +2845,7 @@
 
       <item>If <math|U\<in\>\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>
       with <math|-\<infty\>\<in\>U> then <math|\<exists\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
-      such that <math|-\<infty\>\<in\><around*|[|-\<infty\>,\<varepsilon\>|[>\<subseteq\>U>.
+      such that <math|-\<infty\>\<in\><around*|[|-\<infty\>,-\<varepsilon\>|[>\<subseteq\>U>.
 
       <item>f <math|U\<in\>\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>
       with <math|\<infty\>\<in\>U> then <math|\<exists\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
@@ -2866,25 +2866,376 @@
         <item*|<math|B\<in\>\<cal-B\><rsub|<around*|\|||\|>>>>As
         <math|\<cal-B\><rsub|<around*|\|||\|>>\<equallim\><rsub|<text|[theorem:
         <reference|normed basis of T\|\|>]>><around*|{|<around*|]|y-\<varepsilon\>,y+\<varepsilon\>|[>\|y\<in\>\<bbb-R\>\<wedge\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>|}>>
-        then there exist <math|y\<in\>\<bbb-R\>\<wedge\>\<delta\>\<in\>\<bbb-R\><rsup|+>>
-        so that <math|B=<around*|]|y-\<delta\>,y+\<delta\>|[>>. As
-        <math|x\<in\>B> we have that <math|y-\<delta\>\<less\>x\<less\>y+\<delta\>>,
-        take <math|\<varepsilon\>=min<around*|(|x-<around*|(|y-\<delta\>|)>,<around*|(|y+\<delta\>|)>-x|)>\<in\>\<bbb-R\><rsup|+>>
-        then <math|x+\<varepsilon\>\<leqslant\>x+<around*|(|y+\<delta\>|)>-x=y+\<delta\>>
-        and <math|x-\<varepsilon\>\<geqslant\>x-<around*|(|x-<around*|(|y-\<delta\>|)>|)>=y-\<delta\>>.
-        So if <math|z\<in\><around*|]|x-\<varepsilon\>,x+\<varepsilon\>|[>>
-        then <math|y-\<delta\>\<leqslant\>x-\<varepsilon\>\<less\>z\<less\>x+\<varepsilon\>\<leqslant\>y+\<delta\>\<subseteq\>U>
-        hence <math|x\<in\><around*|]|x-\<varepsilon\>,x+\<varepsilon\>|[>\<subseteq\>U>.
+        there exists a <math|y\<in\>\<bbb-R\><text| and a
+        >\<delta\>\<in\>\<bbb-R\><rsup|+>> so that
+        <math|B=<around*|]|y-\<delta\>,y+\<delta\>|[>>. As <math|x\<in\>B> we
+        have <math|y-\<delta\>\<less\>x\<less\>y+\<delta\>>, define
+        <math|\<varepsilon\>=min<around*|(|x-<around*|(|y-\<delta\>|)>,<around*|(|y+\<delta\>|)>-x|)>>
+        then if <math|z\<in\><around*|]|x-\<varepsilon\>,x+\<varepsilon\>|[>>
+        we have\ 
 
-        <item*|<math|B\<in\>\<cal-B\><rsub|-\<infty\>>>>
+        <\equation*>
+          y-\<delta\>=x-<around*|(|x-<around*|(|y-\<delta\>|)>|)>\<leqslant\>x-\<varepsilon\>\<less\>z\<less\>x+\<varepsilon\>\<leqslant\>x+<around*|(|y+\<delta\>|)>-x=y+\<delta\>
+        </equation*>
 
-        <item*|<math|B\<in\>\<cal-B\><rsub|<around*|\|||\|>>>>
+        so that <math|x\<in\>B>. Hence <math|x\<in\><around*|]|x-\<varepsilon\>,x+\<varepsilon\>|[>\<subseteq\>B\<subseteq\>U>.
+
+        <item*|<math|B\<in\>\<cal-B\><rsub|-\<infty\>>>>Then there exist a
+        <math|c\<in\>\<bbb-R\>> such that
+        <math|B=<around*|[|-\<infty\>,c|[>>, as <math|x\<in\>\<bbb-R\>> and
+        <math|x\<in\>B> we have <math|-\<infty\>\<less\>x\<less\>c>. Take
+        <math|\<varepsilon\>=c-x\<in\>\<bbb-R\><rsup|+>> then if
+        <math|y\<in\><around*|]|x-\<varepsilon\>,x+\<varepsilon\>|[>\<subseteq\>\<bbb-R\>>
+        we have <math|<rigid|-\<infty\>\<less\>y\<less\>x+\<varepsilon\>=x+<around*|(|c-x|)>=c>>
+        so that <math|x\<in\><around*|]|x-\<varepsilon\>,x+\<varepsilon\>|[>\<subseteq\><around*|]|-\<infty\>,c|[>=B\<subseteq\>U>.
+
+        <item*|<math|B\<in\>\<cal-B\><rsub|<around*|\|||\|>>>>Then there
+        exist a <math|c\<in\>\<bbb-R\>> such that
+        <math|B=<around*|]|c,\<infty\>|]>>, as <math|x\<in\>\<bbb-R\>> and
+        <math|x\<in\>B> we have <math|c\<less\>x\<less\>\<infty\>>. Take
+        <math|\<varepsilon\>=x-c\<in\>\<bbb-R\>> then if
+        <math|y\<in\><around*|]|x-\<varepsilon\>,x+\<varepsilon\>|[>\<subseteq\>\<bbb-R\>>
+        we have <math|<rigid|c=x-<around*|(|x-c|)>=x-\<varepsilon\>\<less\>y\<less\>\<infty\>>>
+        so that <math|x\<in\><around*|]|x-\<varepsilon\>,x+\<varepsilon\>|[>\<subseteq\><around*|]|c,\<infty\>|]>=B\<subseteq\>U>.
       </description>
 
-      <item>
+      <item>As <math|\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>> is the
+      generating basis for <math|\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>
+      there exists a <math|B\<in\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>
+      such that <math|-\<infty\>\<in\>B\<subseteq\>U>. For <math|B> we have
+      either:\ 
 
-      <item>
+      <\description>
+        <item*|<math|B\<in\>\<cal-B\><rsub|<around*|\|||\|>>>>Then there
+        exists <math|a,b\<in\>\<bbb-R\>> such that
+        <math|B=<around*|]|a,b|[>>, as <math|-\<infty\>\<in\>B> we have
+        <math|<rigid|-\<infty\>\<less\>a\<less\>-\<infty\>>> a contradiction.
+        So this case does not apply.
+
+        <item*|<math|B\<in\>\<cal-B\><rsub|-\<infty\>>>>Then there exists a
+        <math|c\<in\>\<bbb-R\>> such that
+        <math|B=<around*|[|-\<infty\>,c|[>>, take
+        <rigid|<math|\<varepsilon\>=-min<around*|(|c,-1|)>\<in\>\<bbb-R\><rsup|+>>>.
+        If <math|y\<in\><around*|[|-\<infty\>,-\<varepsilon\>|[>> we have
+        that <math|-\<infty\>\<leqslant\>y\<less\>-\<varepsilon\>=min<around*|(|c,-1|)>\<leqslant\>c><space|1em>so
+        that <math|<rigid|-\<infty\>\<in\><around*|[|-\<infty\>,-\<varepsilon\>|[>\<subseteq\>B\<subseteq\>U>>.
+
+        <item*|<math|B\<in\>\<cal-B\><rsub|\<infty\>>>>Then there exists a
+        <math|c\<in\>\<bbb-R\>> such that <math|B=<around*|]|c,\<infty\>|]>>,
+        as <math|-\<infty\>\<in\>B> we have that
+        <math|-\<infty\>\<less\>c\<less\>-\<infty\>> a contradiction. So this
+        case does not apply.
+      </description>
+
+      <item>As <math|\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>> is the
+      generating basis for <math|\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>
+      there exists a <math|B\<in\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>
+      such that <math|\<infty\>\<in\>B\<subseteq\>U>. For <math|B> we have
+      either:\ 
+
+      <\description>
+        <item*|<math|B\<in\>\<cal-B\><rsub|<around*|\|||\|>>>>Then there
+        exists <math|a,b\<in\>\<bbb-R\>> such that
+        <math|B=<around*|]|a,b|[>>, as <math|\<infty\>\<in\>B> we have
+        <math|\<infty\>\<less\>b\<less\>\<infty\>> a contradiction. So this
+        case does not apply.
+
+        <item*|<math|B\<in\>\<cal-B\><rsub|-\<infty\>>>>Then there exists a
+        <math|c\<in\>\<bbb-R\>> such that
+        <math|B=<around*|[|-\<infty\>,c|[>>, as <math|\<infty\>\<in\>B> we
+        have that <math|\<infty\>\<less\>c\<less\>\<infty\>> a contradiction.
+        So this case does not apply.
+
+        <item*|<math|B\<in\>\<cal-B\><rsub|\<infty\>>>>Then there exists a
+        <math|c\<in\>\<bbb-R\>> such that <math|B=<around*|]|c,\<infty\>|]>>,
+        take <math|\<varepsilon\>=max<around*|(|1,c|)>\<in\>\<bbb-R\><rsup|+>>.
+        If <math|y\<in\><around*|]|\<varepsilon\>,\<infty\>|]>> then
+        <math|c\<leqslant\>\<varepsilon\>\<less\>y\<leqslant\>\<infty\>> so
+        that <math|\<infty\>\<in\><around*|]|\<varepsilon\>,\<infty\>|]>\<subseteq\>B\<subseteq\>U>.
+      </description>
     </enumerate>
+  </proof>
+
+  We show now that continuous functions with codomain <math|\<bbb-R\>> are
+  also continuous if we use the codomain <math|<wide|\<bbb-R\>|\<wide-bar\>>>.
+
+  <\theorem>
+    <label|extended continuous functions>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
+    and let <math|f:X\<rightarrow\>\<bbb-R\>> be a continuous function [using
+    the topology <math|\<cal-T\><rsub|<around*|\|||\|>>>] then
+    <math|f:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>> is also continuous
+    using the topology <math|\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>.
+  </theorem>
+
+  <\proof>
+    Let <math|x\<in\>X> and let <math|U\<in\>\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>
+    be such that <math|f<around*|(|x|)>\<in\>U>. As
+    <math|f<around*|(|X|)>\<subseteq\>\<bbb-R\>> we have that
+    <math|f<around*|(|x|)>\<in\>\<bbb-R\>>, then by [theorem:
+    <reference|extended open set properties>] there exist a
+    <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> such that
+    <math|f<around*|(|x|)>\<in\><around*|]|f<around*|(|x|)>-\<varepsilon\>,f<around*|(|x|)>+\<varepsilon\>|[>\<subseteq\>U>.
+    As <math|f:X\<rightarrow\>\<bbb-R\>> is continuous and
+    <math|<around*|]|f<around*|(|x|)>-\<varepsilon\>,f<around*|(|x|)>+\<varepsilon\>|[>>
+    is open in <math|\<bbb-R\>> it follows that
+    <math|V=f<rsup|-1><around*|(|<around*|]|f<around*|(|x|)>-\<varepsilon\>,f<around*|(|x|)>+\<varepsilon\>|[>|)>\<in\>\<cal-T\>>.
+    As <math|f<around*|(|x|)>\<in\><around*|]|f<around*|(|x|)>-\<varepsilon\>,f<around*|(|x|)>+\<varepsilon\>|[>>
+    we have that <math|x\<in\>V>, further
+
+    <\equation*>
+      f<around*|(|V|)>=f<around*|(|f<rsup|-1><around*|(|<around*|]|f<around*|(|x|)>-\<varepsilon\>,f<around*|(|x|)>+\<varepsilon\>|[>|)>|)>\<subseteq\><around*|]|f<around*|(|x|)>-\<varepsilon\>,f<around*|(|x|)>+\<varepsilon\>|[>\<subseteq\>U
+    </equation*>
+
+    So using [theorem: <reference|continuity at a point>] <math|f> is
+    continuous at <math|x>, as <math|x\<in\>X> was chosen arbitrary it
+    follows that <math|<rigid|f:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>>>
+    is continuous.
+  </proof>
+
+  <\theorem>
+    <label|extended open set scaling and translation>If
+    <math|U\<in\>\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>> then for
+    <math|x\<in\>\<bbb-R\>> we have that
+
+    <\enumerate>
+      <item><math|x+U=<around*|{|x+u\|u\<in\>U|}>\<in\>\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>
+      [in other words if <math|U> is open then <math|x+U> is open]
+
+      <item>If <math|x\<neq\>0> then <math|x\<cdot\>U=<around*|{|x\<cdot\>u\|u\<in\>U|}>\<in\>\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>
+      [in other words uf <math|U> is open then <math|x\<cdot\>U> is open]
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|y\<in\>x+U> then there exist a <math|u\<in\>U> such
+      that <math|y=x+u>. For <math|u\<in\>U> we have either:
+
+      <\description>
+        <item*|<math|u\<in\>\<bbb-R\>>>Using [theorem: <reference|extended
+        open set properties>] there exists a
+        <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> such that\ 
+
+        <\equation*>
+          u\<in\><around*|]|u-\<varepsilon\>,u+\<varepsilon\>|[>\<subseteq\>U
+        </equation*>
+
+        Let <math|z\<in\><around*|]|y-\<varepsilon\>,y+\<varepsilon\>|[>>
+        then <math|<around*|(|x+u|)>-\<varepsilon\>=y-\<varepsilon\>\<less\>z\<less\>y+\<varepsilon\>=<around*|(|x+u|)>+\<varepsilon\>>
+        hence <math|<rigid|u-\<varepsilon\>\<less\>z-x\<less\>u+\<varepsilon\>>>
+        or <math|z-x\<in\><around*|]|u-\<varepsilon\>,u+\<varepsilon\>|[>\<subseteq\>U>
+        so that <math|z=z+<around*|(|z-x|)>\<in\>x+U>, hence
+        <math|y\<in\><around*|]|y-\<varepsilon\>,y+\<varepsilon\>|[>\<subseteq\>x+U>
+        As <math|<around*|]|y-\<varepsilon\>,y+\<varepsilon\>|[>\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<subseteq\>B<rsub|<wide|<wide|\<bbb-R\>|\<wide-bar\>>|\<wide-bar\>>>>
+        we have by taking <math|B=<around*|]|y-\<varepsilon\>,y+\<varepsilon\>|[>>
+        we have that\ 
+
+        <\equation*>
+          \<exists\>B\<in\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>><text|
+          such that >y\<in\>B\<subseteq\>x+U
+        </equation*>
+
+        <item*|<math|u=-\<infty\>>>Using \ [theorem: <reference|extended open
+        set properties>] there exists a <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+        such that
+
+        <\equation*>
+          u=-\<infty\>\<in\><around*|[|-\<infty\>,-\<varepsilon\>|[>\<subseteq\>U
+        </equation*>
+
+        Let <math|z\<in\><around*|[|-\<infty\>,-\<varepsilon\>+x|[>> then
+        <math|-\<infty\>\<leqslant\>z\<less\>-\<varepsilon\>+x> so that
+        <math|-\<infty\>\<leqslant\>z-x\<less\>-\<varepsilon\>> proving that
+        <math|z-x\<in\><around*|[|-\<infty\>,-\<varepsilon\>|[>\<subseteq\>U>,
+        hence <math|z=x+<around*|(|z-x|)>\<in\>x+U> or
+        <math|<around*|[|-\<infty\>,-\<varepsilon\>+x|[>\<subseteq\>x+U>. As
+        <math|y=x+u=x+<around*|(|-\<infty\>|)>=-\<infty\>> it follows that
+        <math|y\<in\><around*|[|-\<infty\>,-\<varepsilon\>+x|[>\<subseteq\>x+U>.
+        Hence if we take <math|<rigid|B=<around*|[|-\<infty\>,-\<varepsilon\>+x|[>\<in\>\<cal-B\><rsub|-\<infty\>>\<subseteq\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>>
+        we have that\ 
+
+        <\equation*>
+          \<exists\>B\<in\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>> such
+          that y\<in\>B\<subseteq\>x+U
+        </equation*>
+
+        <item*|<math|u\<in\>\<infty\>>>Using \ [theorem: <reference|extended
+        open set properties>] there exists a
+        <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> such that
+
+        <\equation*>
+          u=\<infty\>\<in\><around*|]|\<varepsilon\>,\<infty\>|]>\<subseteq\>U
+        </equation*>
+
+        Let <math|z\<in\><around*|]|\<varepsilon\>+x,\<infty\>|]>> then
+        <math|\<varepsilon\>+x\<less\>z\<leqslant\>\<infty\>> so that
+        <math|\<varepsilon\>\<less\>z-x\<leqslant\>\<infty\>> proving that
+        <math|z-x\<in\><around*|]|\<varepsilon\>,\<infty\>|]>\<subseteq\>U>,
+        hence <math|z=x+<around*|(|z-x|)>\<in\>x+U> or
+        <math|<around*|]|\<varepsilon\>+x,\<infty\>|]>\<subseteq\>x+U>. As
+        <math|y=x+u=x+\<infty\>=\<infty\>> it follows that
+        <math|y\<in\><around*|]|\<varepsilon\>+x,\<infty\>|]>\<subseteq\>x+U>.
+        Hence if we take <math|<rigid|B=<around*|]|\<varepsilon\>+x,\<infty\>|]>\<in\>\<cal-B\><rsub|-\<infty\>>\<subseteq\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>>
+        we have that\ 
+
+        <\equation*>
+          \<exists\>B\<in\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>> such
+          that y\<in\>B\<subseteq\>x+U
+        </equation*>
+      </description>
+
+      As <math|y\<in\>x+U> was chosen arbitrary and in all cases we found a
+      <math|B\<in\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>> [the
+      generating basis of <math|\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>]
+      such that <math|y\<in\>B\<subseteq\>x+U> it follows that
+      <math|x+U\<in\>\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>.
+
+      <item>If <math|y\<in\>x\<cdot\>U> then there exist a <math|u\<in\>U>
+      such that <math|y=x\<cdot\>y>. For <math|u\<in\>U> we have the
+      following possibilities.\ 
+
+      <\description>
+        <item*|<math|u\<in\>\<bbb-R\>>>Using \ [theorem: <reference|extended
+        open set properties>] there exist a
+        <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> such that
+
+        <\equation*>
+          u\<in\><around*|]|u-\<varepsilon\>,u+\<varepsilon\>|[>\<subseteq\>U
+        </equation*>
+
+        For <math|x\<neq\>0> we have now either:
+
+        <\description>
+          <item*|<math|0\<less\>x>>Then <math|x\<cdot\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+          so that <math|x\<cdot\>u-x\<cdot\>\<varepsilon\>\<less\>x\<cdot\>u\<less\>x\<cdot\>u+x\<cdot\>\<varepsilon\>>.
+          so that\ 
+
+          <\equation*>
+            y=x\<cdot\>u\<in\><around*|]|x\<cdot\>u-x\<cdot\>\<varepsilon\>,x\<cdot\>u+x\<cdot\>\<varepsilon\>|[>
+          </equation*>
+
+          Further if <math|z\<in\><around*|]|x\<cdot\>u-x\<cdot\>\<varepsilon\>,x\<cdot\>u+x\<cdot\>\<varepsilon\>|[>>
+          then <math|x\<cdot\>u-x\<cdot\>\<varepsilon\>\<less\>z\<less\>x\<cdot\>u+x\<cdot\>\<varepsilon\>>
+          so, as <math|0\<less\>x>, <math|u-\<varepsilon\>\<less\><frac|z|x>\<less\>x+\<varepsilon\>>.
+          Hence <math|<frac|z|x>\<in\><around*|]|u-\<varepsilon\>,u+\<varepsilon\>|[>\<subseteq\>U>
+          so that <math|z=x\<cdot\><frac|z|x>\<in\>x\<cdot\>U> proving that
+
+          <\equation*>
+            y=x\<cdot\>u\<in\><around*|]|x\<cdot\>u-x\<cdot\>\<varepsilon\>,x\<cdot\>u+x\<cdot\>\<varepsilon\>|[>\<subseteq\>x\<cdot\>U
+          </equation*>
+
+          Take <math|B=]x\<cdot\>u-x\<cdot\>\<varepsilon\>,x\<cdot\>u+x\<cdot\>\<varepsilon\>[\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<subseteq\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>
+          then we have that\ 
+
+          <\equation*>
+            \<exists\>B\<in\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>><text|
+            such that >y\<in\>B\<subseteq\>x\<cdot\>U
+          </equation*>
+
+          <item*|<math|x\<less\>0>>Then <math|-x\<cdot\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+          so that <math|x\<cdot\>u+x\<cdot\>\<varepsilon\>\<less\>x\<cdot\>u\<less\>x\<cdot\>u-x\<cdot\>\<varepsilon\>>,
+          so that\ 
+
+          <\equation*>
+            y=x\<cdot\>u\<in\><around*|]|x\<cdot\>u+x\<cdot\>\<varepsilon\>,x\<cdot\>u-x\<cdot\>\<varepsilon\>|[>
+          </equation*>
+
+          Further if <math|z\<in\><around*|]|x\<cdot\>u+x\<cdot\>\<varepsilon\>,x\<cdot\>u-x\<cdot\>\<varepsilon\>|[>>
+          then <math|x\<cdot\>u+x\<cdot\>\<varepsilon\>\<less\>z\<less\>x\<cdot\>u-x\<cdot\>\<varepsilon\>>
+          or, as <math|x\<less\>0\<Rightarrow\><frac|1|x>\<less\>0> that
+          <math|u-\<varepsilon\>\<less\><frac|z|x>\<less\>u+\<varepsilon\>>.
+          Hence <math|<frac|z|x>\<in\><around*|]|u-\<varepsilon\>,u+\<varepsilon\>|[>\<subseteq\>U>
+          so that <math|z=x\<cdot\><frac|z|x>\<in\>x\<cdot\>U> proving that\ 
+
+          <\equation*>
+            y\<in\><around*|]|x\<cdot\>u+x\<cdot\>\<varepsilon\>,x\<cdot\>u-x\<cdot\>\<varepsilon\>|[>\<subseteq\>x\<cdot\>U
+          </equation*>
+
+          Take <math|B=<around*|]|x\<cdot\>u+x\<cdot\>\<varepsilon\>,x\<cdot\>u-x\<cdot\>\<varepsilon\>|[>\<in\>\<cal-B\><rsub|<around*|\|||\|>>\<subseteq\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>
+          then we have that\ 
+
+          <\equation*>
+            \<exists\>B\<in\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>><text|
+            such that >y\<in\>B\<subseteq\>x\<cdot\>U
+          </equation*>
+        </description>
+
+        As <math|y\<in\>x\<cdot\>U> was chosen arbitrary and in all cases we
+        found a <math|B\<in\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>
+        [the generating basis of <math|\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>]
+        such that <math|y\<in\>B\<subseteq\>x\<cdot\>U> it follows that
+        <math|x\<cdot\>U\<in\>\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>.
+
+        <item*|<math|u=-\<infty\>>>Using \ [theorem: <reference|extended open
+        set properties>] there exist a <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+        such that\ 
+
+        <\equation*>
+          -\<infty\>\<in\><around*|[|-\<infty\>,-\<varepsilon\>|[>\<subseteq\>U
+        </equation*>
+
+        For <math|x\<neq\>0> we have either:\ 
+
+        <\description>
+          <item*|<math|0\<less\>x>>then
+
+          <\equation*>
+            y=x\<cdot\><around*|(|-\<infty\>|)>=-\<infty\>\<in\><around*|[|-\<infty\>,-x\<cdot\>\<varepsilon\>|[><text|
+            where >x\<cdot\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>
+          </equation*>
+
+          further if <math|z\<in\><around*|[|-\<infty\>,-x\<cdot\>\<varepsilon\>|[>>
+          then <math|-\<infty\>\<leqslant\>z\<less\>-x\<cdot\>\<varepsilon\>>
+          so that <math|-\<infty\>\<leqslant\><frac|z|x>\<less\>-\<varepsilon\>>
+          proving that <math|<frac|z|x>\<in\><around*|[|-\<infty\>,-\<varepsilon\>|[>\<subseteq\>U>
+          or that <math|z=x\<cdot\><frac|z|x>\<in\>x\<cdot\>U>. Hence
+
+          <\equation*>
+            y\<in\><around*|[|-\<infty\>,-x\<cdot\>\<varepsilon\>|[>\<subset\>x\<cdot\>U
+          </equation*>
+
+          Take <math|B=<around*|[|-\<infty\>,-x\<cdot\>\<varepsilon\>|[>\<in\>\<cal-B\><rsub|-\<infty\>>\<subseteq\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>
+          then we have\ 
+
+          <\equation*>
+            \<exists\>B\<in\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>><text|
+            such that >y\<in\>B\<subseteq\>x\<cdot\>U
+          </equation*>
+
+          <item*|<math|x\<less\>0>>then
+
+          <\equation*>
+            y=x\<cdot\><around*|(|-\<infty\>|)>=\<infty\>\<in\><around*|]|-x\<cdot\>\<varepsilon\>,\<infty\>|]><text|
+            where >-x\<cdot\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>
+          </equation*>
+
+          further if <math|z\<in\><around*|]|-x\<cdot\>\<varepsilon\>,\<infty\>|]>>
+          then <math|-x\<cdot\>\<varepsilon\>\<less\>z\<leqslant\>\<infty\>>
+          so that <math|-\<infty\>=<frac|1|x>\<cdot\>\<infty\>\<leqslant\><frac|z|x>\<less\>-x\<cdot\>\<varepsilon\>>
+          proving that <math|<frac|z|x>\<in\><around*|[|-\<infty\>,-x\<cdot\>\<varepsilon\>|[>\<subseteq\>U>
+          so that <math|z=x\<cdot\><frac|z|x>\<in\>x\<cdot\>U>. Hence
+
+          <\equation*>
+            y\<in\><around*|]|-x\<cdot\>\<varepsilon\>,\<infty\>|]>\<subset\>x\<cdot\>U
+          </equation*>
+
+          Take <math|B=<around*|]|-x\<cdot\>\<varepsilon\>,\<infty\>|]>\<in\>\<cal-B\><rsub|\<infty\>>\<subseteq\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>
+          then we have\ 
+
+          <\equation*>
+            \<exists\>B\<in\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>><text|
+            such that >y\<in\>B\<subseteq\>x\<cdot\>U
+          </equation*>
+        </description>
+
+        <item*|<math|u=\<infty\>>>
+      </description>
+    </enumerate>
+
+    \;
   </proof>
 
   <section|Measure spaces>
@@ -2931,6 +3282,7 @@
     space|<tuple|20.43|?>>
     <associate|extended canonical topology|<tuple|20.42|?>>
     <associate|extended closed sets|<tuple|20.44|?>>
+    <associate|extended continuous functions|<tuple|20.46|?>>
     <associate|extended distributitivy|<tuple|20.35|?>>
     <associate|extended fully order|<tuple|20.9|?>>
     <associate|extended generating basis|<tuple|20.41|?>>
@@ -2938,6 +3290,7 @@
     <associate|extended negate|<tuple|20.32|?>>
     <associate|extended neutral element|<tuple|20.16|?>>
     <associate|extended open set properties|<tuple|20.45|?>>
+    <associate|extended open set scaling and translation|<tuple|20.47|?>>
     <associate|extended order relation|<tuple|20.4|?>>
     <associate|extended positive and non negative numbers|<tuple|20.23|?>>
     <associate|extended reals|<tuple|20.1|?>>
