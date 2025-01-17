@@ -1799,210 +1799,6 @@
     </enumerate>
   </proof>
 
-  <\theorem>
-    <label|extended negate inequality>If <math|x,y\<in\><wide|\<bbb-R\>|\<wide-bar\>>>
-    then we have\ 
-
-    <\enumerate>
-      <item>If <math|-x=-y> then <math|x=y>
-
-      <item>If <math|x\<leqslant\>y> then <math|-y\<leqslant\>-x>
-
-      <item>If <math|x\<less\>y> then <math|-y\<less\>-x>
-    </enumerate>
-  </theorem>
-
-  <\proof>
-    \;
-
-    <\enumerate>
-      <item>For <math|x> we have the following cases to consider
-
-      <\description>
-        <item*|<math|x\<in\>\<bbb-R\>>>Then
-        <math|-x=<around*|(|-1|)>\<cdot\><rsub|\<bbb-R\>>x\<in\>\<bbb-R\>> so
-        that <math|-y\<in\>\<bbb-R\>>. If <math|y=\<infty\>> or
-        <math|y=-\<infty\>> then <math|-y\<nin\>\<bbb-R\>>, so we must have
-        that <math|y\<in\>\<bbb-R\>>, but then we have that
-        <math|-y=<around*|(|-1|)>\<cdot\><rsub|\<bbb-R\>>y>. Hence we have
-        <math|<around*|(|-1|)>\<cdot\><rsub|\<bbb-R\>>x=<around*|(|-1|)>\<cdot\><rsub|\<bbb-R\>>y\<Rightarrow\>x=y>.
-
-        <item*|<math|x=\<infty\>>>then <math|-x=-\<infty\>> so that
-        <math|-y=-\<infty\>>. If <math|y\<in\>\<bbb-R\>> then
-        <math|-y\<in\>\<bbb-R\>> and if <math|y=-\<infty\>> then
-        <math|-y=\<infty\>>, so we must have that <math|y=\<infty\>> from
-        which it follows that <math|x=y>.
-
-        <item*|<math|x=-\<infty\>>>then <math|-x=\<infty\>> so that
-        <math|-y=\<infty\>>. If <math|y\<in\>\<bbb-R\>> then
-        <math|-y\<in\>\<bbb-R\>> and if <math|y=\<infty\>> then
-        <math|-y=-\<infty\>>, so we must have that <math|y=-\<infty\>> from
-        which it follows that <math|x=y>.
-      </description>
-
-      <item>If <math|x\<leqslant\>y> then we have to consider the following
-      possibilities for <math|x>
-
-      <\description>
-        <item*|<math|x\<in\>\<bbb-R\>>>then as <math|x\<leqslant\>y> we have
-        to consider the following possibilities for <math|y>
-
-        <\description>
-          <item*|<math|y\<in\>\<bbb-R\>>>then using the properties of the
-          reals we have <math|<around*|(|-y|)>\<leqslant\><around*|(|-x|)>>
-
-          <item*|<math|y=\<infty\>>>then <math|-y=-\<infty\>\<less\>-x\<in\>\<bbb-R\>\<Rightarrow\><around*|(|-y|)>\<leqslant\><around*|(|-x|)>>
-        </description>
-
-        <item*|<math|x=\<infty\>>>then as <math|x\<leqslant\>y> we have
-        <math|y=\<infty\>> so that <math|-y=-\<infty\>\<leqslant\>-\<infty\>=-x>
-        proving <math|<around*|(|-y|)>\<leqslant\><around*|(|-x|)>>
-
-        <item*|<math|x=-\<infty\>>>then as <math|x\<leqslant\>y> we have to
-        consider the following possibilities
-
-        <\description>
-          <item*|<math|y\<in\>\<bbb-R\>>>then <math|-x=\<infty\>> so as
-          <math|-y\<in\>\<bbb-R\>> <math|-y\<leqslant\>\<infty\>=-x> proving
-          <math|<around*|(|-y|)>\<leqslant\><around*|(|-x|)>>
-
-          <item*|<math|y=\<infty\>>>then <math|-y=-\<infty\>\<less\>\<infty\>=-x>
-          proving <math|<around*|(|-y|)>\<leqslant\><around*|(|-x|)>>
-
-          <item*|<math|y=-\<infty\>>>then <math|-y=\<infty\>=-x> proving
-          <math|<around*|(|-y|)>\<leqslant\><around*|(|-x|)>>
-        </description>
-      </description>
-
-      <item>If <math|x\<less\>y> then <math|x\<neq\>y> and
-      <math|x\<leqslant\>y>, using (2) we have then that
-      <math|<around*|(|-y|)>\<leqslant\>-x> and using (1) that
-      <math|-x\<neq\>-y> proving that <math|-y\<less\>-x>.
-    </enumerate>
-  </proof>
-
-  TODO prove the following corollary
-
-  <\corollary>
-    <label|extended x\<less\>=y then for 0\<less\>=s we have
-    s.x\<less\>=s.y>If <math|x,y\<in\><wide|\<bbb-R\>|\<wide-bar\>>> with
-    <math|x\<leqslant\>y> then for <math|\<lambda\>\<in\><wide|\<bbb-R\>|\<wide-bar\>>>
-    we have\ 
-
-    <\enumerate>
-      <item>If <math|0\<leqslant\>\<lambda\>> then
-      <math|\<lambda\>\<cdot\>x\<leqslant\>\<lambda\>\<cdot\>y>\ 
-
-      <item>If <math|\<lambda\>\<leqslant\>0> then
-      <math|\<lambda\>\<cdot\>y\<leqslant\>\<lambda\>\<cdot\>x>
-    </enumerate>
-  </corollary>
-
-  <\proof>
-    \;
-
-    <\enumerate>
-      <item>For <math|0\<leqslant\>\<lambda\>> we have the following cases to
-      consider for <math|\<lambda\>>\ 
-
-      <\description>
-        <item*|<math|\<lambda\>=0>>then <math|\<lambda\>\<cdot\>x=0=\<lambda\>\<cdot\>y\<Rightarrow\>\<lambda\>\<cdot\>x\<leqslant\>\<lambda\>\<cdot\>y>
-
-        <item*|<math|\<lambda\>\<in\>\<bbb-R\><rsub|+>>>then for <math|x> we
-        have either\ 
-
-        <\description>
-          <item*|<math|x=-\<infty\>>>then
-          <math|\<lambda\>\<cdot\>x=-\<infty\>\<leqslant\>\<lambda\>\<cdot\>y>
-
-          <item*|<math|x\<in\>\<bbb-R\>>>then as <math|-\<infty\>\<less\>x>
-          we must have that <math|-\<infty\>\<less\>y>, so for <math|y> to
-          consider either
-
-          <\description>
-            <item*|<math|y=\<infty\>>>then
-            <math|\<lambda\>\<cdot\>y=\<infty\>> so that
-            <math|\<lambda\>\<cdot\>x\<leqslant\>\<lambda\>\<cdot\>y>
-
-            <item*|<math|y\<in\>\<bbb-R\>>>then as
-            <math|x\<leqslant\><rsub|\<bbb-R\>>y> we have using
-            \ <reference|properties of positive, negative real numbers> that
-            <math|\<lambda\>\<cdot\>x\<leqslant\><rsub|\<bbb-R\>>\<lambda\>\<cdot\>y>
-            proving <math|\<lambda\>\<cdot\>x\<leqslant\>\<lambda\>\<cdot\>y>.
-          </description>
-
-          <item*|<math|x=\<infty\>>>then <math|y\<equallim\><rsub|x\<leqslant\>y>\<infty\>>
-          hence <math|\<lambda\>\<cdot\>x=\<infty\>=\<lambda\>\<cdot\>y\<Rightarrow\>\<lambda\>\<cdot\>x\<leqslant\>\<lambda\>\<cdot\>y>
-        </description>
-
-        <item*|<math|\<lambda\>=\<infty\>>>then for <math|x> we have either
-
-        <\description>
-          <item*|<math|x=-\<infty\>>>then
-          <math|\<lambda\>\<cdot\>x=-\<infty\>\<leqslant\>\<lambda\>\<cdot\>y>\ 
-
-          <item*|<math|x\<in\>\<bbb-R\><rsub|->>>then
-          <math|\<lambda\>\<cdot\>x=-\<infty\>\<leqslant\>\<lambda\>\<cdot\>y>
-
-          <item*|<math|x=0>>then as <math|0=x\<leqslant\>y> we have for
-          <math|y> either
-
-          <\description>
-            <item*|<math|y=0>>then <math|\<lambda\>\<cdot\>x=0=\<lambda\>\<cdot\>y\<Rightarrow\>\<lambda\>\<cdot\>x\<leqslant\>\<lambda\>\<cdot\>y>
-
-            <item*|<math|y\<in\>\<bbb-R\><rsub|+>>>then
-            <math|\<lambda\>\<cdot\>x=0\<leqslant\>\<infty\>=\<lambda\>\<cdot\>y\<Rightarrow\>\<lambda\>\<cdot\>x\<leqslant\>\<lambda\>\<cdot\>y>
-
-            <item*|<math|y=\<infty\>>>then
-            <math|\<lambda\>\<cdot\>x=0\<leqslant\>\<infty\>=\<lambda\>\<cdot\>y\<Rightarrow\>\<lambda\>\<cdot\>x\<leqslant\>\<lambda\>\<cdot\>y>
-          </description>
-
-          <item*|<math|x\<in\>\<bbb-R\><rsub|+>>> then as
-          <math|0\<less\>x\<leqslant\>y> we have either\ 
-
-          <\description>
-            <item*|<math|y\<in\>\<bbb-R\><rsub|+>>>then
-            <math|\<lambda\>\<cdot\>x=\<infty\>=\<lambda\>\<cdot\>y\<Rightarrow\>\<lambda\>\<cdot\>x\<leqslant\>\<lambda\>\<cdot\>y>
-
-            <item*|<math|y=\<infty\>>>then
-            <math|\<lambda\>\<cdot\>x=\<infty\>=\<lambda\>\<cdot\>y\<Rightarrow\>\<lambda\>\<cdot\>x\<leqslant\>\<lambda\>\<cdot\>y>
-          </description>
-
-          <item*|<math|x=\<infty\>>>then <math|y=\<infty\>> and
-          <math|\<lambda\>\<cdot\>x=\<infty\>=\<lambda\>\<cdot\>y\<Rightarrow\>\<lambda\>\<cdot\>x\<leqslant\>\<lambda\>\<cdot\>y>
-        </description>
-      </description>
-
-      <item>As <math|\<lambda\>\<leqslant\>0> we have by
-      <reference|x\<less\>=y=\<gtr\>-y\<less\>=-x> that
-      <math|0\<leqslant\><around*|(|-\<lambda\>|)>> then by (1)
-      <math|<around*|(|-\<lambda\>|)>\<cdot\>x\<leqslant\><around*|(|-\<lambda\>|)>\<cdot\>y>,<space|1em>Using
-      <reference|x\<less\>=y=\<gtr\>-y\<less\>=-x> we have that
-      <math|<around*|(|-<around*|(|<around*|(|-\<lambda\>|)>\<cdot\>y|)>|)>\<leqslant\><around*|(|-<around*|(|<around*|(|-\<lambda\>|)>\<cdot\>x|)>|)>>.
-      As
-
-      <\equation*>
-        <around*|(|-<around*|(|<around*|(|-\<lambda\>|)>\<cdot\>y|)>|)>\<equallim\><rsub|def><around*|(|<around*|(|-1|)>\<cdot\><around*|(|<around*|(|<around*|(|-1|)>\<cdot\>\<lambda\>|)>\<cdot\>y|)>|)>\<equallim\><rsub|<text|<reference|associativity
-        of the product of extnded reals>>><around*|(|<around*|(|-1|)>\<cdot\><around*|(|-1|)>|)><around*|(|\<lambda\>\<cdot\>y|)>=\<lambda\>\<cdot\>y
-      </equation*>
-
-      and
-
-      <\equation*>
-        <around*|(|-<around*|(|<around*|(|-\<lambda\>|)>\<cdot\>x|)>|)>\<equallim\><rsub|def><around*|(|<around*|(|-1|)>\<cdot\><around*|(|<around*|(|<around*|(|-1|)>\<cdot\>\<lambda\>|)>\<cdot\>x|)>|)>\<equallim\><rsub|<text|<reference|associativity
-        of the product of extnded reals>>><around*|(|<around*|(|-1|)>\<cdot\><around*|(|-1|)>|)><around*|(|\<lambda\>\<cdot\>x|)>=\<lambda\>\<cdot\>x
-      </equation*>
-
-      it follows that
-
-      <\equation*>
-        \<lambda\>\<cdot\>y\<less\>\<lambda\>\<cdot\>x
-      </equation*>
-    </enumerate>
-  </proof>
-
-  \;
-
   Altough the product <math|x\<cdot\>y> is defined for every
   <math|x,y\<in\><wide|\<bbb-R\>|\<wide-bar\>>>
   <math|<around*|\<langle\>|<wide|\<bbb-R\>|\<wide-bar\>>,\<cdot\>|\<rangle\>>>
@@ -2368,6 +2164,255 @@
     </equation*>
 
     \;
+  </proof>
+
+  <\theorem>
+    <label|extended x\<less\>=y then for 0\<less\>=s we have
+    s.x\<less\>=s.y>If <math|x,y\<in\><wide|\<bbb-R\>|\<wide-bar\>>> with
+    <math|x\<leqslant\>y> then for <math|\<lambda\>\<in\><wide|\<bbb-R\>|\<wide-bar\>>>
+    we have\ 
+
+    <\enumerate>
+      <item>If <math|0\<leqslant\>\<lambda\>> then
+      <math|\<lambda\>\<cdot\>x\<leqslant\>\<lambda\>\<cdot\>y>\ 
+
+      <item>If <math|\<lambda\>\<leqslant\>0> then
+      <math|\<lambda\>\<cdot\>y\<leqslant\>\<lambda\>\<cdot\>x>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>For <math|0\<leqslant\>\<lambda\>> we have either:\ 
+
+      <\description>
+        <item*|<math|\<lambda\>=0>>Then <math|\<lambda\>\<cdot\>x=0\<cdot\>x=0=0\<cdot\>y=\<lambda\>\<cdot\>y>
+        so that <math|\<lambda\>\<cdot\>x\<leqslant\>\<lambda\>\<cdot\>y>.
+
+        <item*|<math|\<lambda\>\<in\>\<bbb-R\><rsup|+>>>Then for <math|x> we
+        have either:
+
+        <\description>
+          <item*|<math|x\<in\>\<bbb-R\>>>Then for <math|y> we have as
+          <math|-\<infty\>\<less\>x\<leqslant\>y> that\ 
+
+          <\description>
+            <item*|<math|y\<in\>\<bbb-R\>>>Then using [theorem:
+            <reference|complex RC order properties>] we have
+
+            <\equation*>
+              \<lambda\>\<cdot\>x=\<lambda\>\<cdot\><rsub|\<bbb-R\>>x<below|\<leqslant\><rsub|\<bbb-R\>>|<text|[theorem:
+              <reference|complex RC order
+              properties>]>>\<lambda\>\<cdot\><rsub|\<bbb-R\>>y=\<lambda\>\<cdot\>y
+            </equation*>
+
+            so that\ 
+
+            <\equation*>
+              \<lambda\>\<cdot\>x\<leqslant\>\<lambda\>\<cdot\>y
+            </equation*>
+
+            <item*|<math|y=\<infty\>>>Then
+            <math|\<lambda\>\<cdot\>x\<in\>\<bbb-R\>> so that
+            <math|\<lambda\>\<cdot\>x\<leqslant\>\<infty\>=\<lambda\>\<cdot\>\<infty\>=\<lambda\>\<cdot\>y>
+            so that <math|\<lambda\>\<cdot\>x\<leqslant\>\<lambda\>\<cdot\>y>.
+          </description>
+
+          <item*|<math|x=-\<infty\>>>Then for <math|y> we have either:\ 
+
+          <\description>
+            <item*|<math|y\<in\>\<bbb-R\>>>Then
+            <math|\<lambda\>\<cdot\>y\<in\>\<bbb-R\>> so that
+            <math|\<lambda\>\<cdot\>x=\<lambda\>\<cdot\><around*|(|-\<infty\>|)>=-\<infty\>\<less\>\<lambda\>\<cdot\>y>
+            hence <math|\<lambda\>\<cdot\>x\<leqslant\>\<lambda\>\<cdot\>y>.
+
+            <item*|<math|y=-\<infty\>>>Then
+            <math|\<lambda\>\<cdot\>x=\<lambda\>\<cdot\><around*|(|-\<infty\>|)>=-\<infty\>=\<lambda\>\<cdot\>y>
+            so that <math|\<lambda\>\<cdot\>x\<leqslant\>\<lambda\>\<cdot\>y>.
+
+            <item*|<math|y=\<infty\>>>Then
+            <math|\<lambda\>\<cdot\>x=\<lambda\>\<cdot\><around*|(|-\<infty\>|)>=-\<infty\>\<less\>\<infty\>=\<lambda\>\<cdot\>y>
+            so that \ <math|\<lambda\>\<cdot\>x\<leqslant\>\<lambda\>\<cdot\>y>.
+          </description>
+
+          <item*|<math|x=\<infty\>>>Then as <math|x\<leqslant\>y> we have
+          that <math|y=\<infty\>> hence <math|\<lambda\>\<cdot\>x=\<infty\>=\<lambda\>\<cdot\>y>
+          so that <math|<rigid|\<lambda\>\<cdot\>x\<leqslant\>\<lambda\>\<cdot\>y>>.
+          \ 
+        </description>
+
+        <item*|<math|\<lambda\>=\<infty\>>>Then for <math|x> we have either:\ 
+
+        <\description>
+          <item*|<math|x\<less\>0>>Then for <math|y> we have either:\ 
+
+          <\description>
+            <item*|<math|y\<less\>0>>Then
+            <math|\<lambda\>\<cdot\>x=-\<infty\>=\<lambda\>\<cdot\>y> so that
+            <math|\<lambda\>\<cdot\>x\<leqslant\>\<lambda\>\<cdot\>y>.
+
+            <item*|<math|y=0>>Then <math|\<lambda\>\<cdot\>x=-\<infty\>\<less\>0=\<lambda\>\<cdot\>\<infty\>=\<lambda\>\<cdot\>y>
+            so that <math|\<lambda\>\<cdot\>x\<leqslant\>\<lambda\>\<cdot\>y>.
+
+            <item*|<math|0\<less\>y>>Then
+            <math|\<lambda\>\<cdot\>x=-\<infty\>\<less\>\<infty\>=\<lambda\>\<cdot\>\<infty\>=\<lambda\>\<cdot\>y>
+            so that <math|\<lambda\>\<cdot\>x\<leqslant\>\<lambda\>\<cdot\>y>.
+          </description>
+
+          <item*|<math|x=0>>Then as <math|x\<leqslant\>y> we have that
+          <math|y> is either:\ 
+
+          <\description>
+            <item*|<math|y=0>>Then <math|\<lambda\>\<cdot\>x=0=\<lambda\>\<cdot\>y>
+            so that <math|\<lambda\>\<cdot\>x\<leqslant\>\<lambda\>\<cdot\>y>.
+
+            <item*|<math|0\<less\>y>>Then
+            <math|\<lambda\>\<cdot\>x=0\<less\>\<infty\>=\<lambda\>\<cdot\>y>
+            so that <math|\<lambda\>\<cdot\>x\<leqslant\>\<lambda\>\<cdot\>y>.
+          </description>
+
+          <item*|<math|0\<less\>x>>Then as <math|x\<leqslant\>y> we have that
+          <math|0\<less\>y> so that <math|\<lambda\>\<cdot\>x=\<infty\>=\<lambda\>\<cdot\>y>
+          so that <math|\<lambda\>\<cdot\>x\<leqslant\>\<lambda\>\<cdot\>y>.
+        </description>
+      </description>
+
+      <item>For <math|\<lambda\>\<leqslant\>0> we have either:\ 
+
+      <\description>
+        <item*|<math|\<lambda\>=0>>Then <math|\<lambda\>\<cdot\>x=0\<cdot\>x=0=0\<cdot\>y=\<lambda\>\<cdot\>y>
+        so that <math|\<lambda\>\<cdot\>x\<leqslant\>\<lambda\>\<cdot\>y>.
+
+        <item*|<math|\<lambda\>\<in\>\<bbb-R\><rsup|->>>Then for <math|x> we
+        have either:
+
+        <\description>
+          <item*|<math|x\<in\>\<bbb-R\>>>Then for <math|y> we have as
+          <math|-\<infty\>\<less\>x\<leqslant\>y> that\ 
+
+          <\description>
+            <item*|<math|y\<in\>\<bbb-R\>>>Then using [theorem:
+            <reference|complex RC order properties>] we have
+
+            <\equation*>
+              \<lambda\>\<cdot\>y=\<lambda\>\<cdot\><rsub|\<bbb-R\>>y<below|\<leqslant\><rsub|\<bbb-R\>>|<text|[theorem:
+              <reference|complex RC order
+              properties>]>>\<lambda\>\<cdot\><rsub|\<bbb-R\>>x=\<lambda\>\<cdot\>x
+            </equation*>
+
+            so that\ 
+
+            <\equation*>
+              \<lambda\>\<cdot\>y\<leqslant\>\<lambda\>\<cdot\>x
+            </equation*>
+
+            <item*|<math|y=\<infty\>>>Then
+            <math|\<lambda\>\<cdot\>x\<in\>\<bbb-R\>> so that
+            <math|\<lambda\>\<cdot\>y=-\<infty\>\<less\>\<lambda\>\<cdot\>x>
+            so that <math|\<lambda\>\<cdot\>y\<leqslant\>\<lambda\>\<cdot\>x>.
+          </description>
+
+          <item*|<math|x=-\<infty\>>>Then for <math|y> we have either:\ 
+
+          <\description>
+            <item*|<math|y\<in\>\<bbb-R\>>>Then
+            <math|\<lambda\>\<cdot\>y\<in\>\<bbb-R\>> so that
+            <math|\<lambda\>\<cdot\>y\<less\>\<infty\>=\<lambda\>\<cdot\>x>
+            hence <math|\<lambda\>\<cdot\>y\<leqslant\>\<lambda\>\<cdot\>x>.
+
+            <item*|<math|y=-\<infty\>>>Then
+            <math|\<lambda\>\<cdot\>y=\<infty\>=\<lambda\>\<cdot\>x> so that
+            <math|\<lambda\>\<cdot\>y\<leqslant\>\<lambda\>\<cdot\>x>.
+
+            <item*|<math|y=\<infty\>>>Then
+            <math|\<lambda\>\<cdot\>y=-\<infty\>\<less\>\<infty\>=\<lambda\>\<cdot\>x>
+            so that \ <math|\<lambda\>\<cdot\>y\<leqslant\>\<lambda\>\<cdot\>x>.
+          </description>
+
+          <item*|<math|x=\<infty\>>>Then as <math|x\<leqslant\>y> we have
+          that <math|y=\<infty\>> hence <math|\<lambda\>\<cdot\>y=-\<infty\>=\<lambda\>\<cdot\>x>
+          so that <math|<rigid|\<lambda\>\<cdot\>y\<leqslant\>\<lambda\>\<cdot\>x>>.
+          \ 
+        </description>
+
+        <item*|<math|\<lambda\>=-\<infty\>>>Then for <math|x> we have either:\ 
+
+        <\description>
+          <item*|<math|x\<less\>0>>Then for <math|y> we have either:\ 
+
+          <\description>
+            <item*|<math|y\<less\>0>>Then
+            <math|\<lambda\>\<cdot\>y=\<infty\>=\<lambda\>\<cdot\>x> so that
+            <math|\<lambda\>\<cdot\>y\<leqslant\>\<lambda\>\<cdot\>x>.
+
+            <item*|<math|y=0>>Then <math|\<lambda\>\<cdot\>y=0\<less\>\<infty\>=\<lambda\>\<cdot\><around*|(|-\<infty\>|)>=\<lambda\>\<cdot\>x>
+            so that <math|\<lambda\>\<cdot\>y\<leqslant\>\<lambda\>\<cdot\>x>.
+
+            <item*|<math|0\<less\>y>>Then
+            <math|\<lambda\>\<cdot\>y=-\<infty\>\<less\>\<infty\>=\<lambda\>\<cdot\>x>
+            so that <math|\<lambda\>\<cdot\>y\<leqslant\>\<lambda\>\<cdot\>x>.
+          </description>
+
+          <item*|<math|x=0>>Then as <math|x\<leqslant\>y> we have that
+          <math|y> is either:\ 
+
+          <\description>
+            <item*|<math|y=0>>Then <math|\<lambda\>\<cdot\>y=0=\<lambda\>\<cdot\>x>
+            so that <math|\<lambda\>\<cdot\>y\<leqslant\>\<lambda\>\<cdot\>x>.
+
+            <item*|<math|0\<less\>y>>Then
+            <math|\<lambda\>\<cdot\>y=-\<infty\>\<less\>0=\<lambda\>\<cdot\>x>
+            so that <math|\<lambda\>\<cdot\>y\<leqslant\>\<lambda\>\<cdot\>x>.
+          </description>
+
+          <item*|<math|0\<less\>x>>Then as <math|x\<leqslant\>y> we have that
+          <math|0\<less\>y> so that <math|\<lambda\>\<cdot\>y=-\<infty\>=\<lambda\>\<cdot\>x>
+          so that <math|\<lambda\>\<cdot\>y\<leqslant\>\<lambda\>\<cdot\>x>.
+        </description>
+      </description>
+    </enumerate>
+  </proof>
+
+  <\corollary>
+    <label|extended negate inequality>If <math|x,y\<in\><wide|\<bbb-R\>|\<wide-bar\>>>
+    then we have\ 
+
+    <\enumerate>
+      <item>If <math|-x=-y> then <math|x=y>
+
+      <item>If <math|x\<leqslant\>y> then <math|-y\<leqslant\>-x>
+
+      <item>If <math|x\<less\>y> then <math|-y\<less\>-x>
+    </enumerate>
+  </corollary>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>We have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|extended abelian semi group
+        (1)>]>>>|<cell|1\<cdot\>x>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|-1|)>\<cdot\><around*|(|-1|)>|)>\<cdot\>x>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|extended abelian semi group
+        (1)>]>>>|<cell|<around*|(|-1|)>\<cdot\><around*|(|<around*|(|-1|)>\<cdot\>x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|-1|)>\<cdot\><around*|(|-x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|-1|)>\<cdot\><around*|(|-y|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|-1|)>\<cdot\><around*|(|<around*|(|-1|)>\<cdot\>y|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|extended abelian semi group
+        (1)>]>>>|<cell|<around*|(|<around*|(|-1|)>\<cdot\><around*|(|-1|)>|)>\<cdot\>y>>|<row|<cell|>|<cell|=>|<cell|1\<cdot\>y>>|<row|<cell|>|<cell|=>|<cell|y>>>>
+      </eqnarray*>
+
+      <item>Take <math|\<lambda\>=-1\<leqslant\>0> then
+      <math|-y=\<lambda\>\<cdot\>y<below|\<leqslant\>|<text|[theorem:
+      <reference|extended x\<less\>=y then for 0\<less\>=s we have
+      s.x\<less\>=s.y>]>>\<lambda\>\<cdot\>x=-x>
+
+      <item>If <math|x\<less\>y> then <math|x\<neq\>y> and <math|x\<less\>y>,
+      using (2) we have then that <math|<around*|(|-y|)>\<leqslant\>-x> and
+      using (1) that <math|-x\<neq\>-y> proving that <math|-y\<less\>-x>
+    </enumerate>
   </proof>
 
   We have also a variant of the distributive law in
@@ -4095,7 +4140,7 @@
           <label|eq 20.9.155>inf<around*|(|S|)>+y\<leqslant\>inf<around*|(|<around*|{|s+y\|s\<in\>S|}>|)>
         </equation>
 
-        Assume that <math|<label|eq 20.9.155>inf<around*|(|S|)>+y\<less\>inf<around*|(|<around*|{|s+y\|s\<in\>S|}>|)>>
+        Assume that <math|inf<around*|(|S|)>+y\<less\>inf<around*|(|<around*|{|s+y\|s\<in\>S|}>|)>>
         then by [theorem: <reference|extended x+z=y+z=\<gtr\>x-y>]\ 
 
         <\equation*>
@@ -4219,8 +4264,7 @@
   </proof>
 
   <\theorem>
-    <label|extended lim inf lim sup negate>Let
-    <math|\<varnothing\>\<neq\>S\<subseteq\><wide|\<bbb-R\>|\<wide-bar\>>>
+    <label|extended inf sup negate>Let <math|\<varnothing\>\<neq\>S\<subseteq\><wide|\<bbb-R\>|\<wide-bar\>>>
     then\ 
 
     <\enumerate>
@@ -4249,16 +4293,156 @@
       </equation>
 
       Assume that <math|-sup<around*|(|S|)>\<less\>inf<around*|(|<around*|{|-s\|s\<in\>S|}>|\<nobracket\>>>
-      then by\ 
+      then by [corollary: <reference|extended negate inequality>]
+      <math|-inf<around*|(|<around*|{|-s\|s\<in\>S|}>|)>\<less\>sup<around*|(|S|)>>
+      so that there exist a <math|s\<in\>S> such that
+      <math|-inf<around*|(|<around*|{|-s\|s\<in\>S|}>|)>\<less\>s> so that by
+      [corollary: <reference|extended negate inequality>] again we have
+      <math|-s\<less\>inf<around*|(|<around*|{|-s\|s\<in\>S|}>|)>>, hence
+      <math|inf<around*|(|<around*|{|-s\|s\<in\>S|}>|)>\<less\>-s\<less\>inf<around*|(|<around*|{|-s\|s\<in\>S|}>|)>>
+      a contradiction. So the assumption must be false and we have
+      <math|inf<around*|(|<around*|{|-s\|s\<in\>S|}>|)>\<leqslant\>-sup<around*|(|S|)>>,
+      combining this with [eq: <reference|eq 20.10.155>] proves that\ 
 
-      <item>
+      <\equation*>
+        -sup<around*|(|S|)>=inf<around*|(|<around*|{|-s\|s\<in\>S|}>|)>
+      </equation*>
 
-      <item>
+      <item>Take <math|A=<around*|{|-s\|s\<in\>S|}>> then
+      <math|S=<around*|{|-s\|s\<in\>A|}>> then\ 
 
-      <item>
+      <\equation*>
+        -inf<around*|(|S|)>=-inf<around*|(|<around*|{|-s\|s\<in\>A|}>|)>\<equallim\><rsub|<around*|(|1|)>>-<around*|(|-sup<around*|(|A|)>|)>=sup<around*|(|<around*|{|-s\|s\<in\>S|}>|)>
+      </equation*>
+
+      <item>For <math|\<alpha\>\<in\><around*|[|0,\<infty\>|[>> we have
+      either:
+
+      <\description>
+        <item*|<math|\<alpha\>=0>>Then <math|<around*|{|\<alpha\>\<cdot\>s\|s\<in\>S|}>=<around*|{|0|}>>
+        so that
+
+        <\equation*>
+          sup<around*|(|<around*|{|\<alpha\>\<cdot\>s\|s\<in\>S|}>|)>=sup<around*|(|<around*|{|0|}>|)>=0=0\<cdot\>sup<around*|(|S|)>=\<alpha\>\<cdot\>sup<around*|(|S|)>
+        </equation*>
+
+        proving that <math|\<alpha\>\<cdot\>sup<around*|(|S|)>=sup<around*|(|<around*|{|\<alpha\>\<cdot\>s\|s\<in\>S|}>|)>>.
+
+        <item*|<math|\<alpha\>\<neq\>0>>Let <math|s\<in\>S> then
+        <math|s\<leqslant\>sup<around*|(|s|)>> then, as
+        <math|0\<less\>\<alpha\>>, we have by [theorem: <reference|extended
+        x\<less\>=y then for 0\<less\>=s we have s.x\<less\>=s.y>] that
+        <math|\<alpha\>\<cdot\>s\<leqslant\>\<alpha\>\<cdot\>sup<around*|(|S|)>>.
+        Hence\ 
+
+        <\equation>
+          <label|eq 20.11.155>sup<around*|(|<around*|{|\<alpha\>\<cdot\>s\|s\<in\>S|}>|)>\<leqslant\>\<alpha\>\<cdot\>sup<around*|(|S|)>
+        </equation>
+
+        Assume that <math|sup<around*|(|<around*|{|\<alpha\>\<cdot\>s\|s\<in\>S|}>|)>\<less\>\<alpha\>\<cdot\>sup<around*|(|S|)>>
+        then as <math|0\<less\>\<alpha\>\<in\>\<bbb-R\>> we have
+        <math|0\<less\><frac|1|\<alpha\>>> so that by [theorem:
+        <reference|extended x\<less\>=y then for 0\<less\>=s we have
+        s.x\<less\>=s.y>] <math|<frac|1|\<alpha\>>\<cdot\>sup<around*|(|<around*|{|\<alpha\>\<cdot\>s\|s\<in\>S|}>|)>\<less\>sup<around*|(|S|)>>.
+        Hence there exist a <math|s\<in\>S> such that
+        <math|<frac|1|\<alpha\>>\<cdot\>sup<around*|(|<around*|{|\<alpha\>\<cdot\>s\|s\<in\>S|}>|)>\<less\>s>
+        so that by [theorem: <reference|extended x\<less\>=y then for
+        0\<less\>=s we have s.x\<less\>=s.y>] again we have
+        <rigid|<math|sup<around*|(|<around*|{|\<alpha\>\<cdot\>s\|s\<in\>S|}>|)>\<less\>\<alpha\>\<cdot\>s\<leqslant\>sup<around*|(|<around*|{|\<alpha\>\<cdot\>s\|s\<in\>S|}>|)>>>
+        a contradiction. Hence the assumption must be false and we have that
+        <math|\<alpha\>\<cdot\>sup<around*|(|S|)>\<leqslant\>sup<around*|(|<around*|{|\<alpha\>\<cdot\>s\|s\<in\>S|}>|)>>,
+        combining this with [eq: <reference|eq 20.11.155>] we have\ 
+
+        <\equation*>
+          \<alpha\>\<cdot\>sup<around*|(|S|)>=sup<around*|(|<around*|{|\<alpha\>\<cdot\>s\|s\<in\>S|}>|)>
+        </equation*>
+      </description>
+
+      <item>For <math|\<alpha\>\<in\><around*|[|0,\<infty\>|[>> we have
+      either:
+
+      <\description>
+        <item*|<math|\<alpha\>=0>>Then <math|<around*|{|\<alpha\>\<cdot\>s\|s\<in\>S|}>=<around*|{|0|}>>
+        so that
+
+        <\equation*>
+          inf<around*|(|<around*|{|\<alpha\>\<cdot\>s\|s\<in\>S|}>|)>=inf<around*|(|<around*|{|0|}>|)>=0=0\<cdot\>inf<around*|(|S|)>=\<alpha\>\<cdot\>inf<around*|(|S|)>
+        </equation*>
+
+        proving that <math|\<alpha\>\<cdot\>inf<around*|(|S|)>=inf<around*|(|<around*|{|\<alpha\>\<cdot\>s\|s\<in\>S|}>|)>>.
+
+        <item*|<math|\<alpha\>\<neq\>0>>Let <math|s\<in\>S> then
+        <math|inf<around*|(|s|)>\<leqslant\>s> then, as
+        <math|0\<less\>\<alpha\>>, we have by [theorem: <reference|extended
+        x\<less\>=y then for 0\<less\>=s we have s.x\<less\>=s.y>] that
+        <rigid|<math|\<alpha\>\<cdot\>inf<around*|(|S|)>\<leqslant\>\<alpha\>\<cdot\>s>>.
+        Hence\ 
+
+        <\equation>
+          <label|eq 20.12.155>\<alpha\>\<cdot\>inf<around*|(|S|)>\<leqslant\>inf<around*|(|<around*|{|\<alpha\>\<cdot\>s\|s\<in\>S|}>|)>
+        </equation>
+
+        Assume that <math|\<alpha\>\<cdot\>inf<around*|(|S|)>\<less\>inf<around*|(|<around*|{|\<alpha\>\<cdot\>s\|s\<in\>S|}>|)>>
+        then as <math|0\<less\>\<alpha\>\<in\>\<bbb-R\>> we have
+        <math|0\<less\><frac|1|\<alpha\>>> so that by [theorem:
+        <reference|extended x\<less\>=y then for 0\<less\>=s we have
+        s.x\<less\>=s.y>] <math|inf<around*|(|S|)>\<less\><frac|1|\<alpha\>>\<cdot\>inf<around*|(|<around*|{|\<alpha\>\<cdot\>s\|s\<in\>S|}>|)>>.
+        Hence there exist a <math|s\<in\>S> such that
+        <math|s\<less\><frac|1|\<alpha\>>\<cdot\>inf<around*|(|<around*|{|\<alpha\>\<cdot\>s\|s\<in\>S|}>|)>>
+        so that by [theorem: <reference|extended x\<less\>=y then for
+        0\<less\>=s we have s.x\<less\>=s.y>] again we have
+        <rigid|<math|inf<around*|(|<around*|{|\<alpha\>\<cdot\>s\|s\<in\>S|}>|)>\<leqslant\>\<alpha\>\<cdot\>s\<less\>inf<around*|(|<around*|{|\<alpha\>\<cdot\>s\|s\<in\>S|}>|)>>>
+        a contradiction. Hence the assumption must be false and we have that
+        <math|inf<around*|(|<around*|{|\<alpha\>\<cdot\>s\|s\<in\>S|}>|)>\<leqslant\>\<alpha\>\<cdot\>inf<around*|(|S|)>>,
+        combining this with [eq: <reference|eq 20.12.155>] we have\ 
+
+        <\equation*>
+          \<alpha\>\<cdot\>inf<around*|(|S|)>=inf<around*|(|<around*|{|\<alpha\>\<cdot\>s\|s\<in\>S|}>|)>
+        </equation*>
+      </description>
     </enumerate>
+  </proof>
 
-    \;
+  <\theorem>
+    <label|extended lim inf lim sup and negation>Let
+    <math|k\<in\>\<bbb-N\><rsub|0>>, <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\><wide|\<bbb-R\>|\<wide-bar\>>>
+    then we have:
+
+    <\enumerate>
+      <item><math|<below|lim inf|i\<rightarrow\>\<infty\>>
+      <around*|(|-x<rsub|i>|)>=-<below|lim sup|i\<rightarrow\>\<infty\>>
+      x<rsub|i>>.
+
+      <item><math|<below|lim sup|i\<rightarrow\>\<infty\>>
+      <around*|(|-x<rsub|i>|)>=-<below|lim sup|i\<rightarrow\>\<infty\>>
+      x<rsub|i>>.
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<below|lim inf|i\<rightarrow\>\<infty\>>
+        <around*|(|-x<rsub|i>|)>>|<cell|=>|<cell|sup<around*|(|<around*|{|inf<around*|(|<around*|{|-x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|extended inf sup negate>]>>>|<cell|sup<around*|(|<around*|{|-sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|extended inf sup negate>]>>>|<cell|-inf<around*|(|<around*|{|sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|-<below|lim
+        sup|i\<rightarrow\>\<infty\>> x<rsub|i>>>>>
+      </eqnarray*>
+
+      <item>
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<below|lim sup|i\<rightarrow\>\<infty\>>
+        <around*|(|-x<rsub|i>|)>>|<cell|=>|<cell|inf<around*|(|<around*|{|sup<around*|(|<around*|{|-x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|extended inf sup negate>]>>>|<cell|inf<around*|(|<around*|{|-inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|extended inf sup negate>]>>>|<cell|-sup<around*|(|<around*|{|inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|-<below|lim
+        inf|i\<rightarrow\>\<infty\>> x<rsub|i>>>>>
+      </eqnarray*>
+    </enumerate>
   </proof>
 
   <section|Measure spaces>
@@ -4294,6 +4478,8 @@
     <associate|auto-9|<tuple|<with|mode|<quote|math>|\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>|?>>
     <associate|eq 20.1.155|<tuple|20.1|?>>
     <associate|eq 20.10.155|<tuple|20.10|?>>
+    <associate|eq 20.11.155|<tuple|20.11|?>>
+    <associate|eq 20.12.155|<tuple|20.12|?>>
     <associate|eq 20.2.155|<tuple|20.2|?>>
     <associate|eq 20.3.155|<tuple|20.3|?>>
     <associate|eq 20.4.155|<tuple|20.4|?>>
@@ -4302,7 +4488,7 @@
     <associate|eq 20.7.155|<tuple|20.7|?>>
     <associate|eq 20.8.155|<tuple|20.8|?>>
     <associate|eq 20.9.155|<tuple|20.9|?>>
-    <associate|extended -(x.y)|<tuple|20.36|?>>
+    <associate|extended -(x.y)|<tuple|20.34|?>>
     <associate|extended 0\<less\>=x and 0\<less\>=y then
     x\<less\>=x-y\<less\>=x|<tuple|20.25|?>>
     <associate|extended 0\<less\>=y and z=x+y then
@@ -4310,7 +4496,7 @@
     <associate|extended 0\<less\>x and 0\<less\>=y then
     0\<less\>x+y|<tuple|20.29|?>>
     <associate|extended abelian semi group|<tuple|20.24|?>>
-    <associate|extended abelian semi group (1)|<tuple|20.35|?>>
+    <associate|extended abelian semi group (1)|<tuple|20.33|?>>
     <associate|extended absolute value|<tuple|20.38|?>>
     <associate|extended basis for the topology|<tuple|20.42|?>>
     <associate|extended canonical topologies on the real and extended real
@@ -4322,16 +4508,18 @@
     <associate|extended distributitivy|<tuple|20.37|?>>
     <associate|extended fully order|<tuple|20.9|?>>
     <associate|extended generating basis|<tuple|20.43|?>>
+    <associate|extended inf sup negate|<tuple|20.60|?>>
     <associate|extended inf(sup) sup(inf)|<tuple|20.51|?>>
     <associate|extended infinite inf sup|<tuple|20.13|?>>
     <associate|extended lim inf and lim sup|<tuple|20.52|?>>
     <associate|extended lim inf and lim sup and sum|<tuple|20.59|?>>
+    <associate|extended lim inf lim sup and negation|<tuple|20.61|?>>
     <associate|extended lim inf lim sup ineqality (1)|<tuple|20.56|?>>
     <associate|extended lim inf lim sup ineqality (2)|<tuple|20.57|?>>
     <associate|extended lim inf lim sup negate|<tuple|20.60|?>>
     <associate|extended lim inf x_i+n|<tuple|20.55|?>>
     <associate|extended negate|<tuple|20.32|?>>
-    <associate|extended negate inequality|<tuple|20.33|?>>
+    <associate|extended negate inequality|<tuple|20.36|?>>
     <associate|extended neutral element|<tuple|20.16|?>>
     <associate|extended open set properties|<tuple|20.47|?>>
     <associate|extended open set scaling and translation|<tuple|20.49|?>>
@@ -4343,12 +4531,11 @@
     <associate|extended sup and inf exist|<tuple|20.11|?>>
     <associate|extended sup inf of real numbers|<tuple|20.12|?>>
     <associate|extended sup of set and sum|<tuple|20.58|?>>
-    <associate|extended sup x_i+x|<tuple|20.56|?>>
     <associate|extended topology od Hsusdorff|<tuple|20.50|?>>
     <associate|extended x+z=y+z=\<gtr\>x-y|<tuple|20.26|?>>
     <associate|extended x.y|<tuple|20.31|?>>
     <associate|extended x\<less\>=y then for 0\<less\>=s we have
-    s.x\<less\>=s.y|<tuple|20.34|?>>
+    s.x\<less\>=s.y|<tuple|20.35|?>>
     <associate|extended x\<less\>=y then x+z\<less\>=y+z|<tuple|20.27|?>>
   </collection>
 </references>
