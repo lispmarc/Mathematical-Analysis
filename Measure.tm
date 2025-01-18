@@ -4445,6 +4445,369 @@
     </enumerate>
   </proof>
 
+  <\lemma>
+    <label|extended lemma 20.62.155>Let <math|k\<in\>\<bbb-N\><rsub|0>>,
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>\<bbb-R\>>,
+    <math|<around*|{|y<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>\<bbb-R\>>
+    such that <math|\<forall\>i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> we
+    have [so that <math|x<rsub|i>+y<rsub|i>> is well defined] then we have:
+
+    <\enumerate>
+      <item>If <math|\<forall\>i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
+      <math|x<rsub|i>\<leqslant\>x<rsub|i+1>\<wedge\>y<rsub|i>\<leqslant\>y<rsub|i+1>>
+      then\ 
+
+      <\equation*>
+        sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>+sup<around*|(|<around*|{|y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>=sup<around*|(|<around*|{|x<rsub|i>+y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>
+      </equation*>
+
+      <item>If <math|\<forall\>i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
+      <math|x<rsub|i+1>\<leqslant\>x<rsub|i>\<wedge\>y<rsub|i+1>\<leqslant\>y<rsub|i>>
+      then\ 
+
+      <\equation*>
+        inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>+inf<around*|(|<around*|{|y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>=inf<around*|(|<around*|{|x<rsub|i>+y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>
+      </equation*>
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>As <math|\<forall\>i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
+      <math|x<rsub|i>\<leqslant\>sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>>
+      and <math|y<rsub|i>\<leqslant\>sup<around*|(|<around*|{|y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>>
+      so that by [theorem: <reference|extended x\<less\>=y then
+      x+z\<less\>=y+z>] that
+
+      <\equation>
+        <label|eq 20.13.156>x<rsub|i>+y<rsub|i>\<leqslant\>sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>+y<rsub|i>
+      </equation>
+
+      By [theorem: <reference|extended sup inf of real numbers>] and the fact
+      that <math|<around*|{|x<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>,<around*|{|y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>\<neq\>-\<infty\>>
+      so that
+
+      <\equation*>
+        <around*|(|y<rsub|i>,sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>|)>\<in\><around*|(|<wide|\<bbb-R\>|\<wide-bar\>>\<times\><wide|\<bbb-R\>|\<wide-bar\>>|)>\\<around*|{|<around*|(|-\<infty\>,\<infty\>|)>,<around*|(|\<infty\>,-\<infty\>|)>|}>
+      </equation*>
+
+      and
+
+      <\equation*>
+        <around*|(|sup<around*|(|<around*|{|y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>,sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>|)>\<in\><around*|(|<wide|\<bbb-R\>|\<wide-bar\>>\<times\><wide|\<bbb-R\>|\<wide-bar\>>|)>\\<around*|{|<around*|(|-\<infty\>,\<infty\>|)>,<around*|(|\<infty\>,-\<infty\>|)>|}>
+      </equation*>
+
+      Hence by [theorem: <reference|extended x\<less\>=y then
+      x+z\<less\>=y+z>] we have that\ 
+
+      <\equation*>
+        y<rsub|i>+sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>\<leqslant\>sup<around*|(|<around*|{|y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>+sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>
+      </equation*>
+
+      Using the above, [eq: <reference|eq 20.13.156>] and commutativity we
+      have that\ 
+
+      <\equation*>
+        x<rsub|i>+y<rsub|i>\<leqslant\>sup<around*|(|<around*|{|y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>+sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>
+      </equation*>
+
+      <\equation>
+        <label|eq 20.13.155>sup<around*|(|<around*|{|x<rsub|i>+y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>\<leqslant\>sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>+sup<around*|(|<around*|{|y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>
+      </equation>
+
+      Let <math|m\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> then for every
+      <math|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> we have either:\ 
+
+      <\description>
+        <item*|<math|n\<less\>m>>Then <math|x<rsub|m>+y<rsub|n>\<leqslant\>x<rsub|m>+y<rsub|m>\<leqslant\>sup<around*|(|<around*|{|x<rsub|i>+y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,n|}>|}>|)>>
+        so that
+
+        <\equation*>
+          y<rsub|n>\<leqslant\>sup<around*|(|<around*|{|x<rsub|i>+y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>-x<rsub|m>
+        </equation*>
+
+        <item*|<math|m\<leqslant\>n>>Then
+        <math|x<rsub|m>+y<rsub|n>\<leqslant\>x<rsub|n>+y<rsub|n>\<leqslant\>sup<around*|(|<around*|{|x<rsub|i>+y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,n|}>|}>|)>>
+        so that
+
+        <\equation*>
+          y<rsub|n>\<leqslant\>sup<around*|(|<around*|{|x<rsub|i>+y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>-x<rsub|m>
+        </equation*>
+      </description>
+
+      As in all cases we have <math|><math|y<rsub|n>\<leqslant\>sup<around*|(|<around*|{|x<rsub|i>+y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>-x<rsub|m>>
+      it follows that\ 
+
+      <\equation>
+        <label|eq 20.14.155>\<forall\>m\<in\><around*|{|k,\<ldots\>,\<infty\>|}><text|
+        >sup<around*|(|<around*|{|y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>\<leqslant\>sup<around*|(|<around*|{|x<rsub|i>+y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>-x<rsub|m>
+      </equation>
+
+      As <math|\<forall\>i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
+      <math|x<rsub|i>\<in\>\<bbb-R\>> we have by [theorem:
+      <reference|extended sup inf of real numbers>] only the following
+      possibilities for <math|sup<around*|(|<around*|{|y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>>:\ 
+
+      <\description>
+        <item*|<math|sup<around*|(|<around*|{|y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>=\<infty\>>>Then
+        by [eq: <reference|eq 20.14.155>]
+        <math|sup<around*|(|<around*|{|x<rsub|i>+y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>=\<infty\>>
+        so that <math|>
+
+        <\equation*>
+          sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>+sup<around*|(|<around*|{|y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>=\<infty\>=sup<around*|(|<around*|{|x<rsub|i>+y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>
+        </equation*>
+
+        \ hence
+
+        <\equation*>
+          sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>+sup<around*|(|<around*|{|y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>\<leqslant\>sup<around*|(|<around*|{|x<rsub|i>+y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>
+        </equation*>
+
+        <item*|<math|sup<around*|(|<around*|{|y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>\<in\>\<bbb-R\>>>Then
+        by [theorems: <reference|extended x+z=y+z=\<gtr\>x-y>,
+        <reference|extended x\<less\>=y then x+z\<less\>=y+z>] and [eq:
+        <reference|eq 20.14.155>] we have
+
+        <\equation*>
+          x<rsub|m>\<leqslant\>sup<around*|(|<around*|{|x<rsub|i>+y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>-sup<around*|(|<around*|{|y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>
+        </equation*>
+
+        so that
+
+        <\equation*>
+          sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>\<leqslant\>sup<around*|(|<around*|{|x<rsub|i>+y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>-sup<around*|(|<around*|{|y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>
+        </equation*>
+
+        which by [theorems: <reference|extended x+z=y+z=\<gtr\>x-y>] proves
+        that\ 
+
+        <\equation*>
+          sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>+sup<around*|(|<around*|{|y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>\<leqslant\>sup<around*|(|<around*|{|x<rsub|i>+y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>
+        </equation*>
+      </description>
+
+      So in all cases we have\ 
+
+      <\equation*>
+        sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>+sup<around*|(|<around*|{|y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>\<leqslant\>sup<around*|(|<around*|{|x<rsub|i>+y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>
+      </equation*>
+
+      which combined with [eq: <reference|eq 20.13.155>] proves that\ 
+
+      <\equation*>
+        sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>+sup<around*|(|<around*|{|y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>=sup<around*|(|<around*|{|x<rsub|i>+y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>
+      </equation*>
+
+      <item>Consider the sequences <math|<around*|{|-x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>\<bbb-R\>>,
+      <math|<around*|{|-y<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>\<bbb-R\>>
+      then as <math|\<forall\>i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
+      <math|x<rsub|i+1>\<leqslant\>x<rsub|i>\<wedge\>y<rsub|i+1>\<leqslant\>y<rsub|i>>
+      it follows from [theorem: <reference|extended negate inequality>] that
+      <math|-x<rsub|i>\<leqslant\>-x<rsub|i+1>\<wedge\>-y<rsub|i>\<leqslant\>-y<rsub|i+1>>.
+      Hence we can use (1) to get\ 
+
+      <\equation*>
+        sup<around*|(|<around*|{|-x<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>+sup<around*|(|<around*|{|-y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>=sup<around*|(|<around*|{|-<around*|(|x<rsub|i>+y<rsub|i>|)>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>
+      </equation*>
+
+      Then using \ [theorem: <reference|extended inf sup negate>] on the
+      above we have\ 
+
+      <\equation*>
+        -inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>-inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>=-inf<around*|(|<around*|{|x<rsub|i>+y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>
+      </equation*>
+
+      hence
+
+      <\equation*>
+        inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>+inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>=inf<around*|(|<around*|{|x<rsub|i>+y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>
+      </equation*>
+    </enumerate>
+
+    \;
+  </proof>
+
+  <\theorem>
+    <label|extended lim inf lim sup properties>Let
+    <math|k\<in\>\<bbb-N\><rsub|0>> then <math|<below|lim
+    inf|i\<rightarrow\>\<infty\>>> and <math|<below|lim
+    sup|i\<rightarrow\>\<infty\>>> have the following properties\ 
+
+    <\enumerate>
+      <item>If <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\><wide|\<bbb-R\>|\<wide-bar\>>>
+      is a sequence of extended reals and
+      <math|0\<leqslant\>\<alpha\>\<in\>\<bbb-R\>> then
+
+      <\enumerate>
+        <item><math|<below|lim inf|i\<rightarrow\>\<infty\>><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>=\<alpha\>\<cdot\><below|lim
+        inf|i\<rightarrow\>\<infty\>> x<rsub|i>>
+
+        <item><math|<below|lim sup|i\<rightarrow\>\<infty\>><around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>=\<alpha\>\<cdot\><below|lim
+        sup|i\<rightarrow\>\<infty\>> x<rsub|i>>
+      </enumerate>
+
+      \ 
+
+      <item>If <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,n|}>>,<around*|{|y<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,n|}>>\<subseteq\>\<bbb-R\>>
+      are sequences of <with|font-series|bold|real numbers> such that
+      <math|<around*|(|<below|lim inf|i\<rightarrow\>\<infty\>>
+      x<rsub|i>|)>+<around*|(|<below|lim inf|i\<rightarrow\>\<infty\>>
+      y<rsub|i>|)>> are well defined then\ 
+
+      <\enumerate>
+        <item><math|<around*|(|<below|lim inf|i\<rightarrow\>\<infty\>>
+        x<rsub|i>|)>+<around*|(|<below|lim inf|i\<rightarrow\>\<infty\>>
+        y<rsub|i>|)>\<leqslant\><below|lim
+        inf|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>+y<rsub|i>|)>>
+
+        <item><math|<below|lim sup |i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>+y<rsub|i>|)>\<leqslant\><around*|(|<below|lim
+        inf|i\<rightarrow\>\<infty\>> x<rsub|i>|)>+<around*|(|<below|lim
+        inf|i\<rightarrow\>\<infty\>> y<rsub|i>|)>>
+      </enumerate>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<below|lim inf|i\<rightarrow\>\<infty\>>
+        <around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>>|<cell|=>|<cell|sup<around*|(|<around*|{|inf<around*|(|<around*|{|\<alpha\>\<cdot\>x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|extended inf sup negate>]>>>|<cell|sup<around*|(|<around*|{|\<alpha\>\<cdot\>inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|extended inf sup negate>]>>>|<cell|\<alpha\>\<cdot\>sup<around*|(|<around*|{|inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\><below|lim
+        inf|i\<rightarrow\>\<infty\>><space|1em>x<rsub|i>>>>>
+      </eqnarray*>
+
+      and\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<below|lim sup|i\<rightarrow\>\<infty\>>
+        <around*|(|\<alpha\>\<cdot\>x<rsub|i>|)>>|<cell|=>|<cell|inf<around*|(|<around*|{|sup<around*|(|<around*|{|\<alpha\>\<cdot\>x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|extended inf sup negate>]>>>|<cell|inf<around*|(|<around*|{|\<alpha\>\<cdot\>sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|extended inf sup negate>]>>>|<cell|\<alpha\>\<cdot\>inf<around*|(|<around*|{|sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\><below|lim
+        inf|i\<rightarrow\>\<infty\>><space|1em>x<rsub|i>>>>>
+      </eqnarray*>
+
+      <item>Let <math|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> then we
+      have that <math|\<forall\>i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>>
+      <math|inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>\<leqslant\>x<rsub|i>\<in\>\<bbb-R\>>
+      and <rigid|<math|><math|inf<around*|(|<around*|{|y<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>\<leqslant\>y<rsub|i>\<in\>\<bbb-R\>>>
+      so that by [theorem: <reference|extended x\<less\>=y then
+      x+z\<less\>=y+z>]\ 
+
+      <\equation>
+        <label|eq 20.16.156>inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>+y<rsub|i>\<leqslant\>x<rsub|i>+y<rsub|i>
+      </equation>
+
+      Further by [theorem: <reference|extended sup inf of real numbers>] we
+      have that <math|><math|inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>>,<math|inf<around*|(|<around*|{|y<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\<neq\>\<infty\>>
+      so that
+
+      <\equation*>
+        <around*|(|y<rsub|i>,inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>|)>\<in\><around*|(|<wide|\<bbb-R\>|\<wide-bar\>>\<times\><wide|\<bbb-R\>|\<wide-bar\>>|)>\\<around*|{|<around*|(|-\<infty\>,\<infty\>|)>,<around*|(|\<infty\>,-\<infty\>|)>|}>
+      </equation*>
+
+      and\ 
+
+      <\equation*>
+        <around*|(|inf<around*|(|<around*|{|y<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>,inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>|)>\<in\><around*|(|<wide|\<bbb-R\>|\<wide-bar\>>\<times\><wide|\<bbb-R\>|\<wide-bar\>>|)>\\<around*|{|<around*|(|-\<infty\>,\<infty\>|)>,<around*|(|\<infty\>,-\<infty\>|)>|}>
+      </equation*>
+
+      Hence using \ [theorem: <reference|extended x\<less\>=y then
+      x+z\<less\>=y+z>] we have that\ 
+
+      <\equation*>
+        inf<around*|(|<around*|{|y<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>+inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\<leqslant\>y<rsub|i>+inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>
+      </equation*>
+
+      Using the above, [eq: <reference|eq 20.16.156>] and commutativity we
+      have that\ 
+
+      <\equation*>
+        inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>+inf<around*|(|<around*|{|y<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\<leqslant\>x<rsub|i>+y<rsub|i>
+      </equation*>
+
+      So that\ 
+
+      <\equation*>
+        inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>+inf<around*|(|<around*|{|y<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\<leqslant\>inf<around*|(|<around*|{|x<rsub|i>+y<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>
+      </equation*>
+
+      Hence\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|sup<around*|(|<around*|{|inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>+inf<around*|(|<around*|{|y<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>>|<cell|\<leqslant\>>|<cell|>>|<row|<cell|sup<around*|(|<around*|{|inf<around*|(|<around*|{|x<rsub|i>+y<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>>|<cell|=>|<cell|>>|<row|<cell|<below|lim
+        inf|i\<rightarrow\>\<infty\>> <around*|(|x<rsub|i>+y<rsub|i>|)>>|<cell|>|<cell|<eq-number><label|eq
+        20.17.156>>>>>
+      </eqnarray*>
+
+      Now <math|\<forall\>l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> we have
+      that
+
+      <\equation*>
+        inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\<leqslant\>inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|l+1,\<ldots\>,\<infty\>|}>|}>|)>
+      </equation*>
+
+      and
+
+      <\equation*>
+        inf<around*|(|<around*|{|y<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\<leqslant\>inf<around*|(|<around*|{|y<rsub|i>\|i\<in\><around*|{|l+1,\<ldots\>,\<infty\>|}>|}>|)>
+      </equation*>
+
+      so that by [theorem: <reference|extended lemma 20.62.155>]\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|sup<around*|(|<around*|{|inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>+inf<around*|(|<around*|{|y<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>>|<cell|=>|<cell|>>|<row|<cell|sup<around*|(|<around*|{|<around*|{|x<rsub|i>\|i\<in\><around*|{|l+1,\<ldots\>,\<infty\>|}>|}>\|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>+sup<around*|(|<around*|{|<around*|{|y<rsub|i>\|i\<in\><around*|{|l+1,\<ldots\>,\<infty\>|}>|}>\|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>>|<cell|=>|<cell|>>|<row|<cell|<below|lim
+        inf|i\<rightarrow\>\<infty\>> x<rsub|i>+<below|lim
+        inf|i\<rightarrow\>\<infty\>> y<rsub|i>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      Substituting the above in [eq: <reference|eq 20.17.156>] gives finally\ 
+
+      <\equation>
+        <label|eq 20.18.156>\<forall\><around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>,<around*|{|y<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>\<bbb-R\><text|
+        ><below|<text|>lim inf|i\<rightarrow\>\<infty\>> x<rsub|i>+<below|lim
+        inf|i\<rightarrow\>\<infty\>> y<rsub|i>\<leqslant\><below|lim
+        inf|i\<rightarrow\>\<infty\>> <around*|(|x<rsub|i>+y<rsub|i>|)>
+      </equation>
+
+      Consider <math|>the sequences <math|<around*|{|-x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>,<around*|{|-y<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>\<bbb-R\>>
+      then by [eq: <reference|eq 20.18.156>] we have that\ 
+
+      <\equation*>
+        <text| ><below|<text|>lim inf|i\<rightarrow\>\<infty\>>
+        <around*|(|-x<rsub|i>|)>+<below|lim inf|i\<rightarrow\>\<infty\>>
+        <around*|(|-y<rsub|i>|)>\<leqslant\><below|lim
+        inf|i\<rightarrow\>\<infty\>><around*|(|-<around*|(|x<rsub|i>+y<rsub|i>|)>|)>
+      </equation*>
+
+      Then using \ [theorem: <reference|extended inf sup negate>] on the
+      above gives\ 
+
+      <\equation*>
+        <text| ><below|<text|>-lim sup|i\<rightarrow\>\<infty\>>
+        x<rsub|i>+<around*|(|<below|-lim sup|i\<rightarrow\>\<infty\>>
+        y<rsub|i>|)>\<leqslant\><below|-lim sup|i\<rightarrow\>\<infty\>>
+        <around*|(|x<rsub|i>+y<rsub|i>|)>
+      </equation*>
+
+      hence\ 
+
+      <\equation*>
+        <below|lim sup|i\<rightarrow\>\<infty\>>
+        <around*|(|x<rsub|i>+y<rsub|i>|)>\<leqslant\><below|<text|>lim
+        sup|i\<rightarrow\>\<infty\>> x<rsub|i><below|<text|>+lim
+        sup|i\<rightarrow\>\<infty\>> y<rsub|i>
+      </equation*>
+    </enumerate>
+  </proof>
+
   <section|Measure spaces>
 
   \;
@@ -4480,6 +4843,12 @@
     <associate|eq 20.10.155|<tuple|20.10|?>>
     <associate|eq 20.11.155|<tuple|20.11|?>>
     <associate|eq 20.12.155|<tuple|20.12|?>>
+    <associate|eq 20.13.155|<tuple|20.14|?>>
+    <associate|eq 20.13.156|<tuple|20.13|?>>
+    <associate|eq 20.14.155|<tuple|20.15|?>>
+    <associate|eq 20.16.156|<tuple|20.16|?>>
+    <associate|eq 20.17.156|<tuple|20.17|?>>
+    <associate|eq 20.18.156|<tuple|20.18|?>>
     <associate|eq 20.2.155|<tuple|20.2|?>>
     <associate|eq 20.3.155|<tuple|20.3|?>>
     <associate|eq 20.4.155|<tuple|20.4|?>>
@@ -4511,12 +4880,13 @@
     <associate|extended inf sup negate|<tuple|20.60|?>>
     <associate|extended inf(sup) sup(inf)|<tuple|20.51|?>>
     <associate|extended infinite inf sup|<tuple|20.13|?>>
+    <associate|extended lemma 20.62.155|<tuple|20.62|?>>
     <associate|extended lim inf and lim sup|<tuple|20.52|?>>
     <associate|extended lim inf and lim sup and sum|<tuple|20.59|?>>
     <associate|extended lim inf lim sup and negation|<tuple|20.61|?>>
     <associate|extended lim inf lim sup ineqality (1)|<tuple|20.56|?>>
     <associate|extended lim inf lim sup ineqality (2)|<tuple|20.57|?>>
-    <associate|extended lim inf lim sup negate|<tuple|20.60|?>>
+    <associate|extended lim inf lim sup properties|<tuple|20.63|?>>
     <associate|extended lim inf x_i+n|<tuple|20.55|?>>
     <associate|extended negate|<tuple|20.32|?>>
     <associate|extended negate inequality|<tuple|20.36|?>>
