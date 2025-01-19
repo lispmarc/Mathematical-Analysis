@@ -16169,7 +16169,8 @@
       x<rsub|n>=<below|lim sup|n\<rightarrow\>\<infty\>> x<rsub|n>
     </equation*>
 
-    Further if <math|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|i>> then\ 
+    Further if <math|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|i>> exist
+    then\ 
 
     <\equation*>
       <below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>=<below|lim
@@ -22028,6 +22029,8 @@
       <math|x\<in\><around*|[|a,b|]>> such that <math|y=f<around*|(|x|)>>.
     </description>
   </proof>
+
+  \;
 </body>
 
 <\initial>

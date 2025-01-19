@@ -732,11 +732,13 @@
     <\enumerate>
       <item><math|sup<around*|(|A|)>=\<infty\>> <math|\<Leftrightarrow\>>
       <math|\<infty\>\<in\>A<text| or >\<forall\>u\<in\>\<bbb-R\>> there
-      exist a <math|x\<in\>A<big|cap>\<bbb-R\>> with <math|x\<nleqslant\>u>.
+      exist a <math|x\<in\>A<big|cap>\<bbb-R\>> with <math|x\<nleqslant\>u>
+      or <math|u\<less\>x>.
 
       <item><math|inf<around*|(|A|)>=-\<infty\>\<Leftrightarrow\>-\<infty\>\<in\>A<text|
       or >\<forall\>\<in\>\<bbb-R\>> there exist a
-      <math|x\<in\>A<big|cap>\<bbb-R\>> with <math|l\<leqslant\>x>.
+      <math|x\<in\>A<big|cap>\<bbb-R\>> with <math|l\<nleqslant\>x> or
+      <math|x\<less\>l>.
 
       <item><math|sup<around*|(|A|)>=-\<infty\>\<Leftrightarrow\>A=<around*|{|-\<infty\>|}>>
 
@@ -4808,6 +4810,661 @@
     </enumerate>
   </proof>
 
+  <\theorem>
+    <label|extended lim inf \<less\>= lim sup>Let
+    <math|k\<in\>\<bbb-N\><rsub|0>>, <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\><wide|\<bbb-R\>|\<wide-bar\>>>
+    then <math|<below|lim inf|i\<rightarrow\>\<infty\>>
+    x<rsub|i>\<leqslant\><below|lim sup|i\<rightarrow\>\<infty\>> x<rsub|i>>
+  </theorem>
+
+  <\proof>
+    Fix <math|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> then
+    <math|\<forall\>m\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> we have
+    either:\ 
+
+    <\description>
+      <item*|<math|m\<in\><around*|{|k,\<ldots\>,n-1|}>>>then
+      <math|m\<less\>n> so that <math|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>\<subseteq\><around*|{|x<rsub|i><around*|\||i\<in\><around*|{|m,\<ldots\>,\<infty\>|}>|\|>|}>>
+      hence\ 
+
+      <\equation*>
+        inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|m,\<ldots\>,\<infty\>|}>|}>|)>\<leqslant\>inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>\<leqslant\>x<rsub|n>\<leqslant\>sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>
+      </equation*>
+
+      <item*|<math|m\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>>then
+      <math|inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|m,\<ldots\>,\<infty\>|}>|}>|)><below|\<leqslant\>|m\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>x<rsub|n>\<leqslant\>sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>>
+    </description>
+
+    hence we have\ 
+
+    <\equation*>
+      \<forall\>m\<in\><around*|{|k,\<ldots\>,\<infty\>|}><text| we have
+      >inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|m,\<ldots\>,\<infty\>|}>|}>|)>\<leqslant\>sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>
+    </equation*>
+
+    so we have\ 
+
+    <\equation*>
+      sup<around*|(|<around*|{|inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|m,\<ldots\>,\<infty\>|}>|}>|)>\|m\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>\<leqslant\>sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>
+    </equation*>
+
+    or\ 
+
+    <\equation*>
+      \<forall\>n\<in\><around*|{|k,\<ldots\>,\<infty\>|}> <below|lim
+      inf|i\<rightarrow\>\<infty\>> x<rsub|i>\<leqslant\>sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>
+    </equation*>
+
+    so that\ 
+
+    <\equation*>
+      <below|lim inf|i\<rightarrow\>\<infty\>>
+      x<rsub|i>\<leqslant\>inf<around*|(|<around*|{|sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>=<below|lim
+      sup|i\<rightarrow\>\<infty\>> x<rsub|i>
+    </equation*>
+  </proof>
+
+  <\remark>
+    <label|extended lim inf lim sup in the set of real numbers>If we note
+    <math|\<leqslant\><rsub|\<bbb-R\>>> as the order relation on
+    <math|\<bbb-R\>>, <math|sup<rsub|\<bbb-R\>>> and
+    <math|inf<rsub|\<bbb-R\>>> the supremum and infinum in <math|\<bbb-R\>>
+    and <math|lim<rsub|\<bbb-R\>>>the limit in
+    <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\><rsub|\<bbb-R\>>|\<rangle\>>>
+    where <math|<around*|\|||\|><rsub|\<bbb-R\>>> is the absolute value on
+    <math|\<bbb-R\>> then we have in [defintion: <reference|limit limsup
+    liminf>] defined <math|<below|lim<rsub|\<bbb-R\>>
+    inf|i\<rightarrow\>\<infty\>>> and <math|<below|lim<rsub|\<bbb-R\>>
+    sup|i\<rightarrow\>\<infty\>>> defined by\ 
+
+    <\enumerate>
+      <item><math|<below|lim<rsub|\<bbb-R\>> sup|n\<rightarrow\>\<infty\>>
+      x<rsub|n>> exist if\ 
+
+      <\enumerate>
+        <item><math|\<forall\>n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
+        <math|sup<rsub|\<bbb-R\>><around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>>
+        exist\ 
+
+        <item><math|<below|lim<rsub|\<bbb-R\>>|n\<rightarrow\>\<infty\>>
+        sup<rsub|\<bbb-R\>><around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>>
+        exist
+      </enumerate>
+
+      If <math|<below|lim<rsub|\<bbb-R\>> sup|n\<rightarrow\>\<infty\>>
+      x<rsub|n>> exist then <math|<below|lim<rsub|\<bbb-R\>>
+      sup|n\<rightarrow\>\<infty\>> x<rsub|n>=<below|lim<rsub|\<bbb-R\>>|m\<rightarrow\>\<infty\>>
+      sup<rsub|\<bbb-R\>><around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>>
+
+      <item><math|<below|lim<rsub|\<bbb-R\>> inf|n\<rightarrow\>\<infty\>>
+      x<rsub|n>> exist if\ 
+
+      <\enumerate>
+        <item><math|\<forall\>n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
+        <math|inf<rsub|R><around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>>
+        exist\ 
+
+        <item><math|<below|lim<rsub|\<bbb-R\>>|n\<rightarrow\>\<infty\>>
+        inf<rsub|\<bbb-R\>><around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>>
+        exist
+      </enumerate>
+
+      If <math|<below|lim<rsub|\<bbb-R\>> inf|n\<rightarrow\>\<infty\>>
+      x<rsub|n>> exist then <math|<below|lim<rsub|\<bbb-R\>>
+      inf|n\<rightarrow\>\<infty\>> x<rsub|n>=<below|lim<rsub|\<bbb-R\>>|m\<rightarrow\>\<infty\>>inf<rsub|\<bbb-R\>><around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>>
+    </enumerate>
+
+    Using [theorem: <reference|limit limsup liminf (equivalent definition)>]
+    the above definition is equivalent with\ 
+
+    <\enumerate>
+      <item>\ 
+
+      <\equation*>
+        <below|<text|lim><rsub|\<bbb-R\> > sup|n\<rightarrow\>\<infty\>>
+        x<rsub|n><text| exist>
+      </equation*>
+
+      <\equation*>
+        \<Updownarrow\>
+      </equation*>
+
+      <\equation*>
+        \<forall\>n\<in\><around*|{|k,\<ldots\>,\<infty\>|}><text|
+        sup><rsub|\<bbb-R\>><around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)><text|
+        exist>
+      </equation*>
+
+      <\equation*>
+        and
+      </equation*>
+
+      <\equation*>
+        <text|inf><rsub|\<bbb-R\>> <around*|(|<text|sup><rsub|\<bbb-R\>><around*|\<nobracket\>|<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>.,\<infty\>|}>|}>|)>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)><text|
+        exist>
+      </equation*>
+
+      Further if <math|<below|lim<rsub|\<bbb-R\>>
+      sup|n\<rightarrow\>\<infty\>> x<rsub|n>> exist then\ 
+
+      <\equation*>
+        <below|<text|lim><rsub|\<bbb-R\>> sup|n\<rightarrow\>\<infty\>>
+        x<rsub|n>=inf<around*|(|<around*|{|<text|sup><rsub|\<bbb-R\>><around*|(|<around*|{|x<rsub|i><rsub|>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>
+      </equation*>
+
+      <item>
+
+      <\equation*>
+        <below|<text|lim><rsub|\<bbb-R\>> inf|n\<rightarrow\>\<infty\>>
+        x<rsub|n><text| exist>
+      </equation*>
+
+      <\equation*>
+        \<Updownarrow\>
+      </equation*>
+
+      <\equation*>
+        \<forall\>n\<in\><around*|{|k,\<ldots\>,\<infty\>|}><text|
+        inf><rsub|\<bbb-R\>><around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)><text|
+        exist>
+      </equation*>
+
+      <\equation*>
+        and
+      </equation*>
+
+      <\equation*>
+        <text|sup><rsub|\<bbb-R\>><around*|(|<around*|{|inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|n,\<ldots\>.,\<infty\>|}>|}>|)>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)><text|
+        exist>
+      </equation*>
+
+      Further if <math|<below|lim<rsub|\<bbb-R\>>
+      inf|n\<rightarrow\>\<infty\>> x<rsub|n>> exist then\ 
+
+      <\equation*>
+        <below|<text|lim><rsub|\<bbb-R\>> inf|n\<rightarrow\>\<infty\>>
+        x<rsub|n>=<text|sup><rsub|\<bbb-R\>><around*|(|<around*|{|<text|inf><rsub|\<bbb-R\>><around*|(|<around*|{|x<rsub|i><rsub|>\|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>
+      </equation*>
+    </enumerate>
+
+    Using [theorem: <reference|limit limsup liminf and limit>] we have that\ 
+
+    <\equation*>
+      <below|<text|lim><rsub|\<bbb-R\>>|n\<rightarrow\>\<infty\>>x<rsub|n><text|
+      exist >\<Leftrightarrow\><text| ><below|<text|lim><rsub|\<bbb-R\>>
+      inf|n\<rightarrow\>\<infty\>> x<rsub|n><text| and
+      ><below|<text|lim><rsub|\<bbb-R\>> \ sup|n\<rightarrow\>\<infty\>>
+      x<rsub|n><text| exists and ><below|<text|lim><rsub|\<bbb-R\>>
+      inf|n\<rightarrow\>\<infty\>> x<rsub|n>=<below|<text|lim><rsub|\<bbb-R\>>
+      sup|n\<rightarrow\>\<infty\>> x<rsub|n>
+    </equation*>
+
+    Further if <math|<below|lim<rsub|\<bbb-R\>>|n\<rightarrow\>\<infty\>>x<rsub|i>>
+    exist then\ 
+
+    <\equation*>
+      <below|<text|lim><rsub|\<bbb-R\>>|n\<rightarrow\>\<infty\>>x<rsub|n>=<below|<text|lim><rsub|\<bbb-R\>>
+      inf|n\<rightarrow\>\<infty\>> x<rsub|i>=<text|lim><rsub|\<bbb-R\>><below|
+      sup|n\<rightarrow\>\<infty\>> x<rsub|n>
+    </equation*>
+
+    This suggest the following extension of a limit in <math|\<bbb-R\>> to
+    the limit in <math|<wide|\<bbb-R\>|\<wide-bar\>>>
+  </remark>
+
+  <\definition>
+    <label|extended limit><index|limit in
+    <math|<wide|\<bbb-R\>|\<wide-bar\>>>><index|<math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>>>Let
+    <math|k\<in\>\<bbb-N\><rsub|0>> and <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\><wide|\<bbb-R\>|\<wide-bar\>>>
+    such that <math|<below|lim inf|i\<rightarrow\>\<infty\>>
+    x<rsub|i>=<below|lim sup|i\<rightarrow\>\<infty\>> x<rsub|i>> then we say
+    that <math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>> exist and we
+    have by definition that\ 
+
+    <\equation*>
+      <below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>=<below|lim
+      inf|i\<rightarrow\>\<infty\>> x<rsub|i>=<below|lim
+      sup|i\<rightarrow\>\<infty\>> x<rsub|i>
+    </equation*>
+
+    <\note>
+      In this chapter we use <math|lim>for the <math|lim> in
+      <math|<wide|\<bbb-R\>|\<wide-bar\>>> which is defined using only the
+      order relation <math|\<leqslant\>>. As for <math|\<bbb-R\>>
+      <math|lim<rsub|\<bbb-R\>>>represents the limit in <math|\<bbb-R\>>
+      which is based on the absolute value
+      <math|<around*|\|||\|><rsub|\<bbb-R\>>> in <math|\<bbb-R\>> but can be
+      defined by the order relation <math|\<leqslant\><rsub|\<bbb-R\>>> in
+      <math|\<bbb-R\>> where <math|\<leqslant\><rsub|\<bbb-R\>>\<subseteq\>\<leqslant\>>.
+      Further <math|sup>, <math|inf>, <math|lim inf>, <math|lim sup>are all
+      defined in <math|<wide|\<bbb-R\>|\<wide-bar\>>> using the order
+      relation <math|\<leqslant\>> on <math|<wide|\<bbb-R\>|\<wide-bar\>>>
+      and <math|sup<rsub|\<bbb-R\>>>, <math|inf<rsub|\<bbb-R\>>> are defined
+      on <math|\<bbb-R\>> using the order relation
+      <math|\<leqslant\><rsub|\<bbb-R\>>> on <math|\<bbb-R\>> and
+      <math|lim<rsub|\<bbb-R\>> inf>, <math|lim<rsub|\<bbb-R\>> sup>are
+      defined in [definition: <reference|limit limsup liminf>] or [theorem:
+      <reference|limit limsup liminf (equivalent definition)>].
+    </note>
+  </definition>
+
+  <\example>
+    <label|extended limit constant sequence>Let
+    <math|k\<in\>\<bbb-N\><rsub|0>> and <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\><wide|\<bbb-R\>|\<wide-bar\>>>
+    is defined by <math|x<rsub|i>=x> where
+    <math|x\<in\><wide|\<bbb-R\>|\<wide-bar\>>>.
+  </example>
+
+  <\proof>
+    This follows from the definition and [example: <reference|extended
+    constant sequence>].
+  </proof>
+
+  We have the following relation beteen <math|lim<rsub|\<bbb-R\>>> the limit
+  in <math|\<bbb-R\>> and <math|lim> the limit in
+  <math|<wide|\<bbb-R\>|\<wide-bar\>>>.
+
+  <\theorem>
+    <label|extended limit in the (extended) real numbers>Let
+    <math|k\<in\>\<bbb-N\><rsub|0>>, <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>\<bbb-R\>>
+    a sequence of <with|font-series|bold|real> numbers then we have:
+
+    <\enumerate>
+      <item>If <math|<below|lim<rsub|\<bbb-R\>>|i\<rightarrow\>\<infty\>>
+      x<rsub|i>> exists then <math|<below|lim inf|i\<rightarrow\>\<infty\>>
+      x<rsub|i>=<below|lim<rsub|\<bbb-R\>>|i\<rightarrow\>\<infty\>>
+      x<rsub|i>=<below|lim sup|i\<rightarrow\>\<infty\>> x<rsub|i>>
+
+      <item>If <math|<below|lim inf|i\<rightarrow\>\<infty\>>
+      x<rsub|i>=<below|lim sup|i\<rightarrow\>\<infty\>>
+      x<rsub|i>\<in\>\<bbb-R\>><math|> then
+      <math|<below|lim<rsub|\<bbb-R\>>|i\<rightarrow\>\<infty\>> x<rsub|i>>
+      exists and <math|><math|<below|lim inf|i\<rightarrow\>\<infty\>>
+      x<rsub|i>=<below|lim<rsub|\<bbb-R\>>
+      x<rsub|i>|i\<rightarrow\>\<infty\>>=<below|lim
+      sup|i\<rightarrow\>\<infty\>> x<rsub|i>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|x=<below|lim<rsub|\<bbb-R\>>
+      x<rsub|i>|i\<rightarrow\>\<infty\>>\<in\>\<bbb-R\>>. Assume that
+      <math|><math|<below|lim inf|i\<rightarrow\>\<infty\>>
+      x<rsub|i>\<less\>x> then as <math|x\<in\>\<bbb-R\>\<Rightarrow\>x\<less\>\<infty\>>
+      we have either:\ 
+
+      <\description>
+        <item*|<math|><math|<below|lim inf|i\<rightarrow\>\<infty\>>
+        x<rsub|i>=-\<infty\>>>Then <math|sup<around*|(|<around*|{|inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>=-\<infty\>>
+        so that by [theorem: <reference|extended infinite inf sup>] it
+        follows that <math|<around*|{|inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>=<around*|{|-\<infty\>|}>>
+        hence\ 
+
+        <\equation>
+          <label|eq 20.19.156>inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>=-\<infty\>
+        </equation>
+
+        <\equation*>
+          \;
+        </equation*>
+
+        As <math|<below|lim<rsub|\<bbb-R\>>|i\<rightarrow\>\<infty\>>
+        x<rsub|i>> exist it follows from [theorem: <reference|limit
+        convergence implies bounded>] that there exists a
+        <math|L\<in\>\<bbb-R\>> such that
+        <math|\<forall\>i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
+        <math|<around*|\||x<rsub|i>|\|><rsub|\<bbb-R\>>\<leqslant\>L\<less\>L+1>.
+        So if we take <math|K=L+1\<in\>\<bbb-R\>> then we have\ 
+
+        <\equation*>
+          \<forall\>i\<in\><around*|{|k,\<ldots\>,\<infty\>|}> we
+          have-K\<less\>x<rsub|i>\<less\>K
+        </equation*>
+
+        So <math|-\<infty\>\<less\>-K\<less\>x<rsub|i>>
+        <math|\<forall\>i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> hence
+        <math|-\<infty\>\<less\>-K\<leqslant\>inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>>
+        contradicting [eq: <reference|eq 20.19.156>].\ 
+
+        <item*|<math|<below|lim inf|i\<rightarrow\>\<infty\>>
+        x<rsub|i>\<in\>\<bbb-R\>>>As <math|<below|\<bbb-R\>\<ni\>lim
+        inf|i\<rightarrow\>\<infty\>> x<rsub|i>\<less\>x\<in\>\<bbb-R\>> we
+        have that <math|\<varepsilon\>=<below|x-lim
+        inf|i\<rightarrow\>\<infty\>> x<rsub|i>\<in\>\<bbb-R\><rsup|+>>. As
+        <math|<rigid|<below|lim<rsub|\<bbb-R\>>|i\<rightarrow\>\<infty\>>=>x>
+        there exist a <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such
+        that\ 
+
+        <\equation>
+          <label|eq 20.20.156>\<forall\>n\<in\><around*|{|N,\<ldots\>,\<infty\>|}><text|
+          we have ><around*|\||x<rsub|n>-x|\|><rsub|\<bbb-R\>>\<less\><rsub|\<bbb-R\>>\<varepsilon\>
+        </equation>
+
+        Now\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|N,\<ldots\>,\<infty\>|}>|}>|)>>|<cell|\<leqslant\>>|<cell|sup<around*|(|<around*|{|inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|<below|lim
+          inf|i\<rightarrow\>\<infty\>> x<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|x-\<varepsilon\>>>|<row|<cell|>|<cell|\<less\>>|<cell|x-<frac|\<varepsilon\>|2>>>>>
+        </eqnarray*>
+
+        Hence by the definition of the infinum there exist a
+        <math|M\<in\><around*|{|N,\<ldots\>,\<infty\>|}>> such that
+        <math|x<rsub|M>\<less\>x-<frac|\<varepsilon\>|2>\<Rightarrowlim\><rsub|x<rsub|M>,x\<in\>\<bbb-R\>>x<rsub|M>\<less\><rsub|\<bbb-R\>>x-<frac|\<varepsilon\>|2>>.
+        Hence <math|<around*|\||x<rsub|M>-x|\|><rsub|\<bbb-R\>>\<geqslant\><rsub|\<bbb-R\>>x-x<rsub|M>\<gtr\><rsub|\<bbb-R\>><frac|\<varepsilon\>|2>>
+        contradicting [<reference|eq 20.20.156>].
+      </description>
+
+      So in all cases we reach a a contradiction proving that the assumption
+      is wrong, hence we have that\ 
+
+      <\equation>
+        <label|eq 20.21.156>x\<leqslant\><below|lim
+        inf|i\<rightarrow\>\<infty\>> x<rsub|i><below|\<leqslant\>|<text|[theorem:
+        <reference|extended lim inf \<less\>= lim sup>]>><below|lim
+        sup|i\<rightarrow\>\<infty\>> x<rsub|i>
+      </equation>
+
+      Assume that <math|x\<less\><below|lim sup|i\<rightarrow\>\<infty\>>
+      x<rsub|i>>. Then as <math|-\<infty\>\<less\>x\<less\><below|lim
+      sup|i\<rightarrow\>\<infty\>> x<rsub|i>> we have for <math|<below|lim
+      sup|i\<rightarrow\>\<infty\>> x<rsub|i>> either:
+
+      <\description>
+        <item*|<math|<below|lim sup|i\<rightarrow\>\<infty\>>
+        x<rsub|i>=\<infty\>>>Then <math|inf<around*|(|<around*|{|sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>=\<infty\>>
+        so that by [theorem: <reference|extended infinite inf sup>] it
+        follows that <math|<around*|{|sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>=<around*|{|\<infty\>|}>>.
+        Hence\ 
+
+        <\equation>
+          <label|eq 20.22.156>sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>=\<infty\>
+        </equation>
+
+        As <math|<below|lim<rsub|\<bbb-R\>>
+        x<rsub|i>|i\<rightarrow\>\<infty\>>> exist it follows from [theorem:
+        <reference|limit convergence implies bounded>] that there exists a
+        <math|L\<in\>\<bbb-R\>> such that
+        <math|\<forall\>i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
+        <math|<around*|\||x<rsub|i>|\|><rsub|\<bbb-R\>>\<leqslant\>L\<less\>L+1>.
+        So if we take <math|K=L+1\<in\>\<bbb-R\>> then we have\ 
+
+        <\equation*>
+          \<forall\>i\<in\><around*|{|k,\<ldots\>,\<infty\>|}> we
+          have-K\<less\>x<rsub|i>\<less\>K
+        </equation*>
+
+        So <math|sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>\<leqslant\>K\<less\>\<infty\>>
+        contradiction [eq: <reference|eq 20.22.156>].
+
+        <item*|<math|<below|lim sup|i\<rightarrow\>\<infty\>>
+        x<rsub|i>\<in\>\<bbb-R\>>>As <math|\<bbb-R\>\<ni\>x\<less\><below|lim
+        sup|i\<rightarrow\>\<infty\>> x<rsub|i>\<in\>\<bbb-R\>> we have that
+        <math|\<varepsilon\>=<below|lim sup|i\<rightarrow\>\<infty\>>
+        x<rsub|i>-x\<in\>\<bbb-R\><rsup|+>>. As
+        <math|<below|lim<rsub|\<bbb-R\>> x<rsub|i>|i\<rightarrow\>\<infty\>>=x>
+        there exist a <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such
+        that
+
+        <\equation>
+          <label|eq 20.23.156>\<forall\>n\<in\><around*|{|N,\<ldots\>,\<infty\>|}><text|
+          we have ><around*|\||x<rsub|n>-x|\|><rsub|\<bbb-R\>>\<less\>\<varepsilon\>
+        </equation>
+
+        Now\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|N,\<ldots\>,\<infty\>|}>|}>|)>>|<cell|\<geqslant\>>|<cell|inf<around*|(|<around*|{|sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|<below|lim
+          sup|i\<rightarrow\>\<infty\>> x<rsub|i>>>|<row|<cell|>|<cell|=>|<cell|x+\<varepsilon\>>>|<row|<cell|>|<cell|\<gtr\>>|<cell|x+<frac|\<varepsilon\>|2>>>>>
+        </eqnarray*>
+
+        So using the definition of the supremum there exist a
+        <math|M\<in\><around*|{|N,\<ldots\>,\<infty\>|}>> such that
+        <math|x<rsub|M>\<gtr\>x+<frac|\<varepsilon\>|2>\<Rightarrowlim\><rsub|x<rsub|M>,x\<in\>\<bbb-R\>>x<rsub|M>\<gtr\><rsub|\<bbb-R\>>x+<frac|\<varepsilon\>|2>>.
+        Hence <math|<around*|\||x<rsub|M>-x|\|>\<geqslant\><rsub|\<bbb-R\>>x<rsub|M>-x\<gtr\><rsub|\<bbb-R\>><frac|\<varepsilon\>|2>>
+        contradicting [eq: <reference|eq 20.23.156>].
+      </description>
+
+      As in all cases we have a contradictionthe assumption must be wrong so
+      that
+
+      <\equation*>
+        <below|lim sup|i\<rightarrow\>\<infty\>> x<rsub|i>\<leqslant\>x.
+      </equation*>
+
+      Combining this with [eq: <reference|eq 20.21.156>] we have\ 
+
+      <\equation*>
+        <below|lim inf|i\<rightarrowlim\>\<infty\>>
+        x<rsub|i><below|\<leqslant\>|<text|[theorem: <reference|extended lim
+        inf \<less\>= lim sup>]>><below|lim sup|i\<rightarrow\>\<infty\>>
+        x<rsub|i>\<leqslant\>x\<leqslant\><below|lim
+        inf|i\<rightarrow\>\<infty\>> x<rsub|i><below|\<leqslant\>|<text|[theorem:
+        <reference|extended lim inf \<less\>= lim sup>]>><below|lim
+        sup|i\<rightarrow\>\<infty\>> x<rsub|i>
+      </equation*>
+
+      so that\ 
+
+      <\equation*>
+        <below|lim inf|i\<rightarrowlim\>\<infty\>>
+        x<rsub|i>=<below|<text|lim><rsub|\<bbb-R\>>|i\<rightarrow\>\<infty\>>
+        x<rsub|i>=<below|lim sup|i\<rightarrow\>\<infty\>> x<rsub|i>
+      </equation*>
+
+      <item>Let <math|x=<below|lim inf|i\<rightarrowlim\>\<infty\>>
+      x<rsub|i>=<below|lim sup|i\<rightarrow\>\<infty\>>
+      x<rsub|i>\<in\>\<bbb-R\>>. Take <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+      then we have
+
+      <\equation*>
+        x-\<varepsilon\>\<less\>x=<below|lim inf|i\<rightarrowlim\>\<infty\>>
+        x<rsub|i>=sup<around*|(|<around*|{|inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>
+      </equation*>
+
+      Hence by the definition of the supremum there exist a
+      <math|M<rsub|1>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that\ 
+
+      <\equation*>
+        x-\<varepsilon\>\<less\>inf<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|M<rsub|1>,\<ldots\>,\<infty\>|}>|}>|)>
+      </equation*>
+
+      Hence
+
+      <\equation>
+        <label|eq 20.24\<point\>156>\<forall\>n\<in\><around*|{|M<rsub|1>,\<ldots\>,\<infty\>|}><text|
+        we have >x-\<varepsilon\>\<less\>x<rsub|n>
+      </equation>
+
+      Further as <math|x=<below|lim sup|i\<rightarrow\>\<infty\>> x<rsub|i>>
+      we have that <math|inf<around*|(|<around*|{|sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>=x\<less\>x+\<varepsilon\>>
+      so that by the definition of the infinum there exist a
+      <math|M<rsub|2>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that\ 
+
+      <\equation*>
+        sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|M<rsub|2>,\<ldots\>,\<infty\>|}>|}>|)>\<less\>x+\<varepsilon\>
+      </equation*>
+
+      Hence\ 
+
+      <\equation>
+        <label|eq 20.25.156>\<forall\>n\<in\><around*|{|M<rsub|2>,\<ldots\>,\<infty\>|}><text|
+        we have >x<rsub|n>\<less\>x+\<varepsilon\>
+      </equation>
+
+      Take <math|M=max<around*|(|M<rsub|1>,M<rsub|2>|)>> then we have by
+      [eqs: <reference|eq 20.24\<point\>156>, <reference|eq 20.25.156>] that
+      <math|\<forall\>n\<in\><around*|{|M,\<ldots\>,\<infty\>|}>>
+      \ <math|x-\<varepsilon\>\<less\>x<rsub|n>\<less\>x+\<varepsilon\>> or
+      as <math|x,\<varepsilon\>\<in\>\<bbb-R\>> that
+      <math|x-\<varepsilon\>\<less\><rsub|\<bbb-R\>>x<rsub|n>\<less\><rsub|\<bbb-R\>>x+\<varepsilon\>\<Rightarrow\><around*|\||x<rsub|n>-x|\|><rsub|R>\<less\><rsub|\<bbb-R\>>\<varepsilon\>>
+      proving that\ 
+
+      <\equation*>
+        <below|<text|lim><rsub|\<bbb-R\>>|i\<rightarrow\>\<infty\>>
+        x<rsub|i><text| exists and ><below|<text|lim><rsub|\<bbb-R\>>|i\<rightarrow\>\<infty\>>
+        x<rsub|i>=x=<below|lim inf|i\<rightarrowlim\>\<infty\>>
+        x<rsub|i>=<below|lim sup|i\<rightarrow\>\<infty\>> x<rsub|i>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  A consequence of the above theorem is that
+  <math|<below|lim|i\<rightarrow\>\<infty\>>> is a extensionof
+  <math|<below|lim<rsub|\<bbb-R\>>|i\<rightarrow\>\<infty\>>> to
+  <math|<wide|\<bbb-R\>|\<wide-bar\>>>.
+
+  <\corollary>
+    <label|extended lim inf lim sup in the set of real numbers (1)>Let
+    <math|k\<in\>\<bbb-N\><rsub|0>>, <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>\<bbb-R\>>
+    a sequence of <with|font-series|bold|real> numbers then we have\ 
+
+    <\equation*>
+      <below|<text|lim>|i\<rightarrow\>\<infty\>>x<rsub|i><text| exists
+      >\<Leftrightarrow\><text| ><below|lim|i\<rightarrow\>\<infty\>>
+      x<rsub|i><text| exist and ><below|lim|i\<rightarrow\>\<infty\>>
+      x<rsub|i>\<in\>\<bbb-R\>
+    </equation*>
+
+    Further if <math|<below|lim<rsub|\<bbb-R\>>|i\<rightarrow\>\<infty\>>
+    x<rsub|i>> exists or <math|<below|lim|i\<rightarrow\>\<infty\>>
+    x<rsub|i>> exists then <math|><math|<below|lim<rsub|\<bbb-R\>>|i\<rightarrow\>\<infty\>>
+    x<rsub|i>=<below|lim|i\<rightarrow\>\<infty\>> x<rsub|i>>
+  </corollary>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Using [theorem: <reference|extended limit
+      in the (extended) real numbers>] it follows that <math|<below|lim
+      inf|i\<rightarrow\>\<infty\>> x<rsub|i>=<below|lim<rsub|\<bbb-R\>>|i\<rightarrow\>\<infty\>>
+      x<rsub|i>=<below|lim sup|i\<rightarrow\>\<infty\>> x<rsub|i>> so that
+      by definition <math|<below|lim|i\<rightarrow\>\<infty\>> x<rsub|i>>
+      exists and <math|\<bbb-R\>\<ni\><below|lim<rsub|\<bbb-R\>>|i\<rightarrow\>\<infty\>>
+      x<rsub|i>=<below|lim|i\<rightarrow\>\<infty\>> x<rsub|i>>.
+
+      <item*|<math|\<Leftarrow\>>>If <math|><math|<below|lim|i\<rightarrow\>\<infty\>>
+      x<rsub|i>><space|1em>exists and <math|<below|lim|i\<rightarrow\>\<infty\>>
+      x<rsub|i>\<in\>\<bbb-R\>> we have that <math|><math|<below|lim
+      inf|i\<rightarrow\>\<infty\>> x<rsub|i>=<below|lim
+      sup|i\<rightarrow\>\<infty\>> x<rsub|i>=<below|lim|i\<rightarrow\>\<infty\>>
+      x<rsub|i>\<in\>\<bbb-R\>>. Hence by [theorem: <reference|extended limit
+      in the (extended) real numbers>] <math|<below|lim<rsub|\<bbb-R\>>|i\<rightarrow\>\<infty\>>
+      x<rsub|i>> exists and <math|<below|lim|i\<rightarrow\>\<infty\>>
+      x<rsub|i>=<below|lim inf|i\<rightarrow\>\<infty\>> x<rsub|i>=<below|lim
+      sup|i\<rightarrow\>\<infty\>> x<rsub|i>>.
+    </description>
+  </proof>
+
+  The idea of a limit in <math|\<bbb-R\>> is that the sequence approches its
+  limit the higher the index is, we show now that the limit in
+  <math|<wide|\<bbb-R\>|\<wide-bar\>>>.
+
+  <\theorem>
+    <label|extended limit equivalences>Let <math|k\<in\>\<bbb-N\><rsub|0>>,
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\><wide|\<bbb-R\>|\<wide-bar\>>>
+    then we have the following equivalences.
+  </theorem>
+
+  <\enumerate>
+    <item>\ 
+
+    <\equation*>
+      <below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>=\<infty\><text|
+      >\<Leftrightarrow\><text| >\<forall\>C\<in\>\<bbb-R\><rsup|+><text|
+      >\<exists\>N\<in\><around*|{|k,\<ldots\>,\<infty\>|}><text| such that
+      >\<forall\>n\<in\><around*|{|N,\<ldots\>,\<infty\>|}><text| we have
+      >C\<less\>x<rsub|n>
+    </equation*>
+
+    <item>\ 
+
+    <\equation*>
+      <below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>=-\<infty\><text|
+      >\<Leftrightarrow\><text| >\<forall\>C\<in\>\<bbb-R\><rsup|+><text|
+      >\<exists\>N\<in\><around*|{|k,\<ldots\>,\<infty\>|}><text| such that
+      >\<forall\>n\<in\><around*|{|N,\<ldots\>,\<infty\>|}><text| we have
+      >x<rsub|n>\<less\>-C
+    </equation*>
+
+    <item>\ 
+
+    <\equation*>
+      <below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>=x\<in\>\<bbb-R\><text|
+      >\<Leftrightarrow\><text| >\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text|
+      >\<exists\>N\<in\><around*|{|k,\<ldots\>,\<infty\>|}><text| such that
+      ><around*|\||x<rsub|n>-x|\|>\<less\>\<varepsilon\>
+    </equation*>
+  </enumerate>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>\ 
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>If <math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>=\<infty\>>
+        then <math|<below|lim inf|i\<rightarrow\>\<infty\>>
+        x<rsub|i>=<below|lim sup|i\<rightarrow\>\<infty\>>
+        x<rsub|i>=\<infty\>> so that
+
+        <\equation*>
+          inf<around*|(|<around*|{|sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>=\<infty\>
+        </equation*>
+
+        Hence using [theorem: <reference|extended infinite inf sup>] we have
+        that\ 
+
+        <\equation*>
+          <around*|{|sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\|l\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>=<around*|{|\<infty\>|}>
+        </equation*>
+
+        so that\ 
+
+        <\equation*>
+          sup<around*|(|<around*|{|x<rsub|i>\|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>=\<infty\>
+        </equation*>
+
+        <item*|<math|\<Leftarrow\>>>
+      </description>
+
+      <item>
+
+      <item>
+    </enumerate>
+
+    \;
+  </proof>
+
+  We can now derive the different properties of the limit in
+  <math|<wide|\<bbb-R\>|\<wide-bar\>>> based on the properties of
+  <math|<below|lim sup|i\<rightarrow\>\<infty\>>> and <math|<below|lim
+  inf|i\<rightarrow\>\<infty\>>>.\ 
+
+  <\theorem>
+    <label|extended limit and index translation>Let
+    <math|k\<in\>\<bbb-N\><rsub|0>>, <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\><wide|\<bbb-R\>|\<wide-bar\>>>
+    and <math|n\<in\>\<bbb-N\><rsub|0>> then if
+    <math|<below|lim|i\<rightarrow\>\<infty\>> x<rsub|i>> exists we have that
+    <math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i+n>> exists and
+    <math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i+n>=<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>>.
+  </theorem>
+
+  <\proof>
+    As <math|<below|lim|i\<rightarrow\>\<infty\>> x<rsub|i>> we have that
+    <math|<below|lim inf|i\<rightarrow\>\<infty\>> x<rsub|i>=<below|lim
+    sup|i\<rightarrow\>\<infty\>> x<rsub|i><rsub|>=<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>>.
+    Using [theorem: <reference|extended lim inf x_i+n>] it follows that
+    <math|><math|<below|lim inf|i\<rightarrow\>\<infty\>>
+    x<rsub|i+n>=<below|lim sup|i\<rightarrow\>\<infty\>> x<rsub|i+n><rsub|>>
+    so that <math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i+n>> exists and
+    <math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i+n>=<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i+n>>.
+  </proof>
+
   <section|Measure spaces>
 
   \;
@@ -4816,7 +5473,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|19>
-    <associate|page-first|1233>
+    <associate|page-first|1231>
     <associate|section-nr|1>
     <associate|subsection-nr|7>
   </collection>
@@ -4830,7 +5487,10 @@
     inf|i\<rightarrow\>\<infty\>> x<rsub|i>>|?>>
     <associate|auto-12|<tuple|<with|mode|<quote|math>|<below|lim
     sup|i\<rightarrow\>\<infty\>> x<rsub|i>>|?>>
-    <associate|auto-13|<tuple|20.2|?>>
+    <associate|auto-13|<tuple|limit in <with|mode|<quote|math>|<wide|\<bbb-R\>|\<wide-bar\>>>|?>>
+    <associate|auto-14|<tuple|<with|mode|<quote|math>|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>>|?>>
+    <associate|auto-15|<tuple|20.2|?>>
+    <associate|auto-16|<tuple|20.2|?>>
     <associate|auto-2|<tuple|20.1|?>>
     <associate|auto-3|<tuple|20.1.1|?>>
     <associate|auto-4|<tuple|20.1.2|?>>
@@ -4849,7 +5509,14 @@
     <associate|eq 20.16.156|<tuple|20.16|?>>
     <associate|eq 20.17.156|<tuple|20.17|?>>
     <associate|eq 20.18.156|<tuple|20.18|?>>
+    <associate|eq 20.19.156|<tuple|20.19|?>>
     <associate|eq 20.2.155|<tuple|20.2|?>>
+    <associate|eq 20.20.156|<tuple|20.20|?>>
+    <associate|eq 20.21.156|<tuple|20.21|?>>
+    <associate|eq 20.22.156|<tuple|20.22|?>>
+    <associate|eq 20.23.156|<tuple|20.23|?>>
+    <associate|eq 20.24\<point\>156|<tuple|20.24|?>>
+    <associate|eq 20.25.156|<tuple|20.25|?>>
     <associate|eq 20.3.155|<tuple|20.3|?>>
     <associate|eq 20.4.155|<tuple|20.4|?>>
     <associate|eq 20.5.155|<tuple|20.5|?>>
@@ -4881,13 +5548,24 @@
     <associate|extended inf(sup) sup(inf)|<tuple|20.51|?>>
     <associate|extended infinite inf sup|<tuple|20.13|?>>
     <associate|extended lemma 20.62.155|<tuple|20.62|?>>
+    <associate|extended lim inf \<less\>= lim sup|<tuple|20.64|?>>
     <associate|extended lim inf and lim sup|<tuple|20.52|?>>
     <associate|extended lim inf and lim sup and sum|<tuple|20.59|?>>
     <associate|extended lim inf lim sup and negation|<tuple|20.61|?>>
+    <associate|extended lim inf lim sup in the set of real
+    numbers|<tuple|20.65|?>>
+    <associate|extended lim inf lim sup in the set of real numbers
+    (1)|<tuple|20.70|?>>
     <associate|extended lim inf lim sup ineqality (1)|<tuple|20.56|?>>
     <associate|extended lim inf lim sup ineqality (2)|<tuple|20.57|?>>
     <associate|extended lim inf lim sup properties|<tuple|20.63|?>>
     <associate|extended lim inf x_i+n|<tuple|20.55|?>>
+    <associate|extended limit|<tuple|20.66|?>>
+    <associate|extended limit and index translation|<tuple|20.72|?>>
+    <associate|extended limit constant sequence|<tuple|20.68|?>>
+    <associate|extended limit equivalences|<tuple|20.71|?>>
+    <associate|extended limit in the (extended) real numbers|<tuple|20.69|?>>
+    <associate|extended limit of x_n+x|<tuple|20.72|?>>
     <associate|extended negate|<tuple|20.32|?>>
     <associate|extended negate inequality|<tuple|20.36|?>>
     <associate|extended neutral element|<tuple|20.16|?>>
@@ -4926,6 +5604,10 @@
 
       <tuple|<tuple|<with|mode|<quote|math>|<below|lim
       sup|i\<rightarrow\>\<infty\>> x<rsub|i>>>|<pageref|auto-12>>
+
+      <tuple|<tuple|limit in <with|mode|<quote|math>|<wide|\<bbb-R\>|\<wide-bar\>>>>|<pageref|auto-13>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>>>|<pageref|auto-14>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|20<space|2spc>Measures
@@ -4957,7 +5639,7 @@
       <no-break><pageref|auto-10>>
 
       20.2<space|2spc>Measure spaces <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-13>
+      <no-break><pageref|auto-15>
     </associate>
   </collection>
 </auxiliary>
