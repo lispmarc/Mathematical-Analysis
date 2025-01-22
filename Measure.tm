@@ -5367,39 +5367,39 @@
     <label|extended limit equivalences>Let <math|k\<in\>\<bbb-N\><rsub|0>>,
     <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\><wide|\<bbb-R\>|\<wide-bar\>>>
     then we have the following equivalences.
+
+    <\enumerate>
+      <item>\ 
+
+      <\equation*>
+        <below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>=\<infty\><text|
+        >\<Leftrightarrow\><text| >\<forall\>C\<in\>\<bbb-R\><rsup|+><text|
+        >\<exists\>N\<in\><around*|{|k,\<ldots\>,\<infty\>|}><text| such that
+        >\<forall\>n\<in\><around*|{|N,\<ldots\>,\<infty\>|}><text| we have
+        >C\<less\>x<rsub|n>
+      </equation*>
+
+      <item>\ 
+
+      <\equation*>
+        <below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>=-\<infty\><text|
+        >\<Leftrightarrow\><text| >\<forall\>C\<in\>\<bbb-R\><rsup|+><text|
+        >\<exists\>N\<in\><around*|{|k,\<ldots\>,\<infty\>|}><text| such that
+        >\<forall\>n\<in\><around*|{|N,\<ldots\>,\<infty\>|}><text| we have
+        >x<rsub|n>\<less\>-C
+      </equation*>
+
+      <item> If <math|x\<in\>\<bbb-R\>> then
+
+      <\equation*>
+        <below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>=x\<in\>\<bbb-R\><text|
+        >\<Leftrightarrow\><text|>\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text|
+        >\<exists\>N\<in\><around*|{|k,\<ldots\>,\<infty\>|}><text| such that
+        <math|\<forall\>n\<in\><around*|{|N,\<ldots\>,\<infty\>|}>>
+        ><around*|\||x<rsub|n>-x|\|>\<less\>\<varepsilon\>
+      </equation*>
+    </enumerate>
   </theorem>
-
-  <\enumerate>
-    <item>\ 
-
-    <\equation*>
-      <below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>=\<infty\><text|
-      >\<Leftrightarrow\><text| >\<forall\>C\<in\>\<bbb-R\><rsup|+><text|
-      >\<exists\>N\<in\><around*|{|k,\<ldots\>,\<infty\>|}><text| such that
-      >\<forall\>n\<in\><around*|{|N,\<ldots\>,\<infty\>|}><text| we have
-      >C\<less\>x<rsub|n>
-    </equation*>
-
-    <item>\ 
-
-    <\equation*>
-      <below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>=-\<infty\><text|
-      >\<Leftrightarrow\><text| >\<forall\>C\<in\>\<bbb-R\><rsup|+><text|
-      >\<exists\>N\<in\><around*|{|k,\<ldots\>,\<infty\>|}><text| such that
-      >\<forall\>n\<in\><around*|{|N,\<ldots\>,\<infty\>|}><text| we have
-      >x<rsub|n>\<less\>-C
-    </equation*>
-
-    <item> If <math|x\<in\>\<bbb-R\>> then
-
-    <\equation*>
-      <below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>=x\<in\>\<bbb-R\><text|
-      >\<Leftrightarrow\><text|>\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text|
-      >\<exists\>N\<in\><around*|{|k,\<ldots\>,\<infty\>|}><text| such that
-      <math|\<forall\>n\<in\><around*|{|N,\<ldots\>,\<infty\>|}>>
-      ><around*|\||x<rsub|n>-x|\|>\<less\>\<varepsilon\>
-    </equation*>
-  </enumerate>
 
   <\proof>
     \ 
@@ -5767,12 +5767,13 @@
       and <math|<around*|{|y<rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\><wide|\<bbb-R\>|\<wide-bar\>>>
       be sequences with limits, <math|<around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>,<below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>|)>\<in\><around*|(|<wide|\<bbb-R\>|\<wide-bar\>>\<times\><wide|\<bbb-R\>|\<wide-bar\>>|)>\\<around*|{|<around*|(|-\<infty\>,\<infty\>|)>,<around*|(|\<infty\>,-\<infty\>|)>|}>>
       [so that <math|><math|<rigid|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>+<below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>>>
-      is well defined] and there exist a <math|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
-      such that <math|<rigid|\<forall\>i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>>
+      is well defined] then there exist a
+      <math|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
+      <math|<rigid|\<forall\>i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>>
       <rigid|<math|<around*|(|x<rsub|i>,y<rsub|i>|)>\<in\><around*|(|<wide|\<bbb-R\>|\<wide-bar\>>\<times\><wide|\<bbb-R\>|\<wide-bar\>>|)>\\<around*|{|<around*|(|-\<infty\>,\<infty\>|)>,<around*|(|\<infty\>,-\<infty\>|)>|}>>>
-      [hence <math|x<rsub|i>+y<rsub|i>> is defined] then
+      [hence <math|x<rsub|i>+y<rsub|i>> is defined] and
       <math|<around*|{|x<rsub|i>+y<rsub|i>|}><rsub|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>\<subseteq\><wide|\<bbb-R\>|\<wide-bar\>>>
-      has a limit and\ 
+      has a limit with\ 
 
       <\equation*>
         <below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>+y<rsub|i>|)>=<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>+<below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>
@@ -5919,10 +5920,618 @@
       we have the following cases to consider:\ 
 
       <\description>
-        <item*|>
+        <item*|<math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>\<in\>\<bbb-R\>\<wedge\><below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>\<in\>\<bbb-R\>>>Let
+        <math|x=<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>> and
+        <math|y=<below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>> then by
+        [theorem: <reference|extended limit equivalences>] there exists
+        \ <math|N<rsub|1>,N<rsub|2>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
+        such that
+
+        <\equation*>
+          \<forall\>i\<in\><around*|{|N<rsub|1>,\<ldots\>,\<infty\>|}><text|
+          ><around*|\||x<rsub|i>-x|\|>\<less\>1\<Rightarrow\>-\<infty\>\<less\>x-1\<less\>x<rsub|i>\<less\>x+1\<less\>\<infty\>
+        </equation*>
+
+        and\ 
+
+        <\equation*>
+          \<forall\>i\<in\><around*|{|N<rsub|2>,\<ldots\>,\<infty\>|}><text|
+          ><around*|\||y<rsub|i>-y|\|>\<less\>1\<Rightarrow\>-\<infty\>\<less\>y-1\<less\>x=y<rsub|i>\<less\>y+1\<less\>\<infty\>
+        </equation*>
+
+        Hence if take <math|n=max<around*|(|N<rsub|1>,N<rsub|2>|)>> then we
+        have\ 
+
+        <\equation*>
+          \<forall\>i\<in\><around*|{|n,\<ldots\>,\<infty\>|}><text| that
+          ><around*|(|x<rsub|i>,y<rsub|i>|)>\<in\>\<bbb-R\>\<times\>\<bbb-R\>\<subseteq\><around*|(|<wide|\<bbb-R\>|\<wide-bar\>>\<times\><wide|\<bbb-R\>|\<wide-bar\>>|)>\\<around*|{|<around*|(|-\<infty\>,\<infty\>|)>,<around*|(|\<infty\>,-\<infty\>|)>|}>
+        </equation*>
+
+        \ Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then [theorem:
+        <reference|extended limit equivalences>] there exists
+        \ <math|M<rsub|1>,M<rsub|2>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
+        such that
+
+        <\equation*>
+          \<forall\>i\<in\><around*|{|M<rsub|1>,\<ldots\>,\<infty\>|}><text|
+          ><around*|\||y<rsub|i>-y|\|>\<less\><frac|\<varepsilon\>|2>
+        </equation*>
+
+        and\ 
+
+        <\equation*>
+          \<forall\>i\<in\><around*|{|M<rsub|1>,\<ldots\>,\<infty\>|}><text|
+          ><around*|\||y<rsub|i>-y|\|>\<less\><frac|\<varepsilon\>|2>
+        </equation*>
+
+        Take <math|N=max<around*|(|M<rsub|1>,M<rsub|2>,n|)>> then
+        <math|\<forall\>i\<in\><around*|{|N,\<ldots\>,\<infty\>|}>> we have
+        that <math|x<rsub|i>+y<rsub|i>> is well defined and\ 
+
+        <\equation*>
+          <around*|\||x<rsub|i>+y<rsub|i>-<around*|(|x+y|)>|\|>\<leqslant\><around*|\||x<rsub|i>-x|\|>+<around*|\||y<rsub|i>-y|\|>=<frac|\<varepsilon\>|2>+<frac|\<varepsilon\>|2>=\<varepsilon\>
+        </equation*>
+
+        Hence using [theorem: <reference|extended limit equivalences>] it
+        follows that <math|<around*|{|x<rsub|i>+y<rsub|i>|}><rsub|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>>
+        has a limit
+
+        <\equation*>
+          <below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>+y<rsub|i>|)>=x+y=<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>+<below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>
+        </equation*>
+
+        <item*|<math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>=-\<infty\>\<wedge\><below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>\<in\>\<bbb-R\>>>Let
+        <math|y=<below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>> then by
+        [theorem: <reference|extended limit equivalences>] there exists
+        <math|<rigid|N<rsub|1>,N<rsub|2>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
+        such that\ 
+
+        <\equation*>
+          \<forall\>i\<in\><around*|{|N<rsub|1>,\<ldots\>,\<infty\>|}> we
+          have x<rsub|i>\<less\>-1\<less\>\<infty\>
+        </equation*>
+
+        <\equation*>
+          \<forall\>i\<in\><around*|{|N<rsub|2>,\<ldots\>,\<infty\>|}><text|
+          we have ><around*|\||y-1|\|>\<less\>1\<Rightarrow\>-\<infty\>\<less\>y-1\<less\>y<rsub|i>\<less\>y+1\<less\>\<infty\>
+        </equation*>
+
+        Hence if we take <math|n=max<around*|(|N<rsub|1>,N<rsub|2>|)>> we
+        have that
+
+        <\equation*>
+          \<forall\>i\<in\><around*|{|n,\<ldots\>,\<infty\>|}> that
+          <around*|(|x<rsub|i>,y<rsub|i>|)>\<in\><around*|(|<wide|\<bbb-R\>|\<wide-bar\>>\<times\><wide|\<bbb-R\>|\<wide-bar\>>|)>\\<around*|{|<around*|(|-\<infty\>,\<infty\>|)>,<around*|(|\<infty\>,-\<infty\>|)>|}>
+        </equation*>
+
+        Further take <math|C\<in\>\<bbb-R\><rsup|+>> and take
+        <math|C<rprime|'>=max<around*|(|C+<around*|(|y+1|)>,1|)>\<in\>\<bbb-R\><rsup|+>>
+        then <math|C+<around*|(|y+1|)>\<leqslant\>C<rprime|'>> or
+        <math|-C<rprime|'>\<leqslant\>-C-<around*|(|y+1|)>>. By [theorem:
+        <reference|extended limit equivalences>] there exist a
+        <math|N<rsub|3>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
+        <math|\<forall\>i\<in\><around*|{|N<rsub|3>,\<ldots\>,\<infty\>|}>>
+        we have that <math|x<rsub|i>\<less\>-C<rprime|'>>. Hence if
+        <math|N=max<around*|(|n,N<rsub|3>|)>\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>
+        then we have for <math|i\<in\><around*|{|N,\<ldots\>,\<infty\>|}>>
+        that <math|x<rsub|i>\<less\>-C<rprime|'>> and as
+        <math|y<rsub|i>\<in\>\<bbb-R\>> it follows from [theorem:
+        <reference|extended x\<less\>=y then x+z\<less\>=y+z>] that
+        <math|x<rsub|i>+y<rsub|i>\<less\>-C<rprime|'>+y<rsub|i>>. Hence\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|x<rsub|i>+y<rsub|i>>|<cell|\<less\>>|<cell|-C<rprime|'>+y<rsub|i>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|-C-<around*|(|y+1|)>+y<rsub|i>>>|<row|<cell|>|<cell|\<less\>>|<cell|-C-<around*|(|y+1|)>+y+1>>|<row|<cell|>|<cell|=>|<cell|-C>>>>
+        </eqnarray*>
+
+        Using [theorem: <reference|extended limit equivalences>] it follows
+        then that <math|<around*|{|x<rsub|i>+y<rsub|i>|}><rsub|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>>
+        has a limit and <math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>+y<rsub|i>|)>=-\<infty\>>.
+        As <math|<below|lim|i\<rightarrowlim\>\<infty\>>x<rsub|i>=-\<infty\>>
+        and <math|<below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>\<in\>\<bbb-R\>>
+        it follows that <math|<rigid|<below|lim|i\<rightarrowlim\>\<infty\>>x<rsub|i>+<below|lim|i\<rightarrowlim\>\<infty\>>y<rsub|i>=-\<infty\>>>.
+        So\ 
+
+        <\equation*>
+          <below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>+y<rsub|i>|)><text|
+          exist and ><below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>+y<rsub|i>|)>=<below|lim|i\<rightarrowlim\>\<infty\>>x<rsub|i>+<below|lim|i\<rightarrowlim\>\<infty\>>y<rsub|i>
+        </equation*>
+
+        <item*|<math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>=\<infty\>\<wedge\><below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>\<in\>\<bbb-R\>>>Let
+        <math|y=<below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>> then by
+        [theorem: <reference|extended limit equivalences>] there exists
+        <math|<rigid|N<rsub|1>,N<rsub|2>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
+        such that\ 
+
+        <\equation*>
+          \<forall\>i\<in\><around*|{|N<rsub|1>,\<ldots\>,\<infty\>|}> we
+          have-\<infty\>\<less\>1\<less\>x<rsub|i>
+        </equation*>
+
+        <\equation*>
+          \<forall\>i\<in\><around*|{|N<rsub|2>,\<ldots\>,\<infty\>|}><text|
+          we have ><around*|\||y-1|\|>\<less\>1\<Rightarrow\>-\<infty\>\<less\>y-1\<less\>y<rsub|i>\<less\>y+1\<less\>\<infty\>
+        </equation*>
+
+        Hence if we take <math|n=max<around*|(|N<rsub|1>,N<rsub|2>|)>> we
+        have that
+
+        <\equation*>
+          \<forall\>i\<in\><around*|{|n,\<ldots\>,\<infty\>|}> that
+          <around*|(|x<rsub|i>,y<rsub|i>|)>\<in\><around*|(|<wide|\<bbb-R\>|\<wide-bar\>>\<times\><wide|\<bbb-R\>|\<wide-bar\>>|)>\\<around*|{|<around*|(|-\<infty\>,\<infty\>|)>,<around*|(|\<infty\>,-\<infty\>|)>|}>
+        </equation*>
+
+        Further take <math|C\<in\>\<bbb-R\><rsup|+>> and take
+        <math|C<rprime|'>=max<around*|(|C-<around*|(|y-1|)>,1|)>\<in\>\<bbb-R\><rsup|+>>
+        then <math|C-<around*|(|y-1|)>\<leqslant\>C<rprime|'>>. By [theorem:
+        <reference|extended limit equivalences>] there exist a
+        <math|N<rsub|3>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
+        <math|\<forall\>i\<in\><around*|{|N<rsub|3>,\<ldots\>,\<infty\>|}>>
+        we have that <math|C<rprime|'>\<less\>x>. Hence if
+        <math|N=max<around*|(|n,N<rsub|3>|)>\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>
+        then we have for <math|i\<in\><around*|{|N,\<ldots\>,\<infty\>|}>>
+        that <math|C<rprime|'>\<less\>x<rsub|i>> \ and as
+        <math|y<rsub|i>\<in\>\<bbb-R\>> it follows from [theorem:
+        <reference|extended x\<less\>=y then x+z\<less\>=y+z>] that
+        <math|C<rprime|'>+y<rsub|i>\<less\>x<rsub|i>+y<rsub|i>>. Hence\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|x<rsub|i>+y<rsub|i>>|<cell|\<gtr\>>|<cell|C<rprime|'>+y<rsub|i>>>|<row|<cell|>|<cell|\<geqslant\>>|<cell|C-<around*|(|y-1|)>+y<rsub|i>>>|<row|<cell|>|<cell|\<gtr\>>|<cell|C-<around*|(|y-1|)>+<around*|(|y-1|)>>>|<row|<cell|>|<cell|=>|<cell|C>>>>
+        </eqnarray*>
+
+        Using [theorem: <reference|extended limit equivalences>] it follows
+        then that <math|<around*|{|x<rsub|i>+y<rsub|i>|}><rsub|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>>
+        has a limit and <math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>+y<rsub|i>|)>=\<infty\>>.
+        As <math|<below|lim|i\<rightarrowlim\>\<infty\>>x<rsub|i>=\<infty\>>
+        and <math|<below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>\<in\>\<bbb-R\>>
+        it follows that <math|<rigid|<below|lim|i\<rightarrowlim\>\<infty\>>x<rsub|i>+<below|lim|i\<rightarrowlim\>\<infty\>>y<rsub|i>=\<infty\>>>.
+        So\ 
+
+        <\equation*>
+          <below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>+y<rsub|i>|)><text|
+          exist and ><below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>+y<rsub|i>|)>=<below|lim|i\<rightarrowlim\>\<infty\>>x<rsub|i>+<below|lim|i\<rightarrowlim\>\<infty\>>y<rsub|i>
+        </equation*>
+
+        <item*|<math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>\<in\>\<bbb-R\>\<wedge\><below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>=-\<infty\>>>Let
+        <math|x=<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>> then by
+        [theorem: <reference|extended limit equivalences>] there exists
+        <math|<rigid|N<rsub|1>,N<rsub|2>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
+        such that\ 
+
+        <\equation*>
+          \<forall\>i\<in\><around*|{|N<rsub|1>,\<ldots\>,\<infty\>|}> we
+          have y<rsub|i>\<less\>-1\<less\>\<infty\>
+        </equation*>
+
+        <\equation*>
+          \<forall\>i\<in\><around*|{|N<rsub|2>,\<ldots\>,\<infty\>|}><text|
+          we have ><around*|\||x-1|\|>\<less\>1\<Rightarrow\>-\<infty\>\<less\>x-1\<less\>x<rsub|i>\<less\>x+1\<less\>\<infty\>
+        </equation*>
+
+        Hence if we take <math|n=max<around*|(|N<rsub|1>,N<rsub|2>|)>> we
+        have that
+
+        <\equation*>
+          \<forall\>i\<in\><around*|{|n,\<ldots\>,\<infty\>|}> that
+          <around*|(|x<rsub|i>,y<rsub|i>|)>\<in\><around*|(|<wide|\<bbb-R\>|\<wide-bar\>>\<times\><wide|\<bbb-R\>|\<wide-bar\>>|)>\\<around*|{|<around*|(|-\<infty\>,\<infty\>|)>,<around*|(|\<infty\>,-\<infty\>|)>|}>
+        </equation*>
+
+        Further take <math|C\<in\>\<bbb-R\><rsup|+>> and take
+        <math|C<rprime|'>=max<around*|(|C+<around*|(|x+1|)>,1|)>\<in\>\<bbb-R\><rsup|+>>
+        then <math|C+<around*|(|x+1|)>\<leqslant\>C<rprime|'>> or
+        <math|-C<rprime|'>\<leqslant\>-C-<around*|(|x+1|)>>. By [theorem:
+        <reference|extended limit equivalences>] there exist a
+        <math|N<rsub|3>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
+        <math|\<forall\>i\<in\><around*|{|N<rsub|3>,\<ldots\>,\<infty\>|}>>
+        we have that <math|y<rsub|i>\<less\>-C<rprime|'>>. Hence if
+        <math|N=max<around*|(|n,N<rsub|3>|)>\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>
+        then we have for <math|i\<in\><around*|{|N,\<ldots\>,\<infty\>|}>>
+        that <math|y<rsub|i>\<less\>-C<rprime|'>> and as
+        <math|y<rsub|i>\<in\>\<bbb-R\>> it follows from [theorem:
+        <reference|extended x\<less\>=y then x+z\<less\>=y+z>] that
+        <math|x<rsub|i>+y<rsub|i>\<less\>-C<rprime|'>+x<rsub|i>>. Hence\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|x<rsub|i>+y<rsub|i>>|<cell|\<less\>>|<cell|-C<rprime|'>+x<rsub|i>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|-C-<around*|(|x+1|)>+x<rsub|i>>>|<row|<cell|>|<cell|\<less\>>|<cell|-C-<around*|(|x+1|)>+x+1>>|<row|<cell|>|<cell|=>|<cell|-C>>>>
+        </eqnarray*>
+
+        Using [theorem: <reference|extended limit equivalences>] it follows
+        then that <math|<around*|{|x<rsub|i>+y<rsub|i>|}><rsub|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>>
+        has a limit and <math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>+y<rsub|i>|)>=-\<infty\>>.
+        As <math|<below|lim|i\<rightarrowlim\>\<infty\>>y<rsub|i>=-\<infty\>>
+        and <math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>\<in\>\<bbb-R\>>
+        it follows that <math|<rigid|<below|lim|i\<rightarrowlim\>\<infty\>>x<rsub|i>+<below|lim|i\<rightarrowlim\>\<infty\>>y<rsub|i>=-\<infty\>>>.
+        So\ 
+
+        <\equation*>
+          <below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>+y<rsub|i>|)><text|
+          exist and ><below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>+y<rsub|i>|)>=<below|lim|i\<rightarrowlim\>\<infty\>>x<rsub|i>+<below|lim|i\<rightarrowlim\>\<infty\>>y<rsub|i>
+        </equation*>
+
+        <item*|<math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>=-\<infty\>\<wedge\><below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>=-\<infty\>>>Using
+        [theorem: <reference|extended limit equivalences>] there exists
+        <math|N<rsub|1>,N<rsub|2>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
+        such that\ 
+
+        <\equation*>
+          \<forall\>i\<in\><around*|{|N<rsub|1>,\<ldots\>,\<infty\>|}><text|
+          >x<rsub|i>\<less\>-1\<less\>\<infty\><text| and
+          >\<forall\>i\<in\><around*|{|N<rsub|2>,\<ldots\>,\<infty\>|}>
+          y<rsub|i>\<less\>-1\<less\>\<infty\>
+        </equation*>
+
+        So if we take <math|n=max<around*|(|N<rsub|1>,N<rsub|2>|)>> then for
+        <math|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>> we have\ 
+
+        <\equation*>
+          <around*|(|x<rsub|i>,y<rsub|i>|)>\<in\><around*|(|<wide|\<bbb-R\>|\<wide-bar\>>\<times\><wide|\<bbb-R\>|\<wide-bar\>>|)>\\<around*|{|<around*|(|-\<infty\>,\<infty\>|)>,<around*|(|\<infty\>,-\<infty\>|)>|}>
+        </equation*>
+
+        Further if <math|C\<in\>\<bbb-R\><rsup|+>> then there exists
+        <math|N<rsub|3>,N<rsub|4>\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>
+        such that\ 
+
+        <\equation*>
+          \<forall\>i\<in\><around*|{|N<rsub|3>,\<ldots\>,\<infty\>|}><text|
+          >x<rsub|i>\<less\>-<frac|C|2><text| and
+          >\<forall\>i\<in\><around*|{|N<rsub|4>,\<ldots\>,\<infty\>|}><text|
+          >y<rsub|i>\<less\>-<frac|C|2>
+        </equation*>
+
+        Take <math|N=max<around*|(|N<rsub|3>,N<rsub|4>|)>\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>
+        then <math|\<forall\>i\<in\><around*|{|N,\<ldots\>,\<infty\>|}>> we
+        have by [theorem: <reference|extended x\<less\>=y then
+        x+z\<less\>=y+z>] that\ 
+
+        <\equation*>
+          x<rsub|i>+y<rsub|i>\<less\>-<frac|C|2>+<around*|(|-<frac|C|2>|)>=-C
+        </equation*>
+
+        So that by \ [theorem: <reference|extended limit equivalences>]
+        <math|<around*|{|x<rsub|i>+y<rsub|i>|}><rsub|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>>
+        has a limit and <math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>+y<rsub|i>|)>=-\<infty\>>,
+        hence, as <math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>+<below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>=-\<infty\>+<around*|(|-\<infty\>|)>=-\<infty\>>,
+        it follows that\ 
+
+        <\equation*>
+          <below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>+y<rsub|i>|)><text|
+          exist and ><below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>+y<rsub|i>|)>=<below|lim|i\<rightarrowlim\>\<infty\>>x<rsub|i>+<below|lim|i\<rightarrowlim\>\<infty\>>y<rsub|i>
+        </equation*>
+
+        <item*|<math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>\<in\>\<bbb-R\>\<wedge\><below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>=\<infty\>>>Let
+        <math|x=<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>> then by
+        [theorem: <reference|extended limit equivalences>] there exists
+        <math|<rigid|N<rsub|1>,N<rsub|2>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
+        such that\ 
+
+        <\equation*>
+          \<forall\>i\<in\><around*|{|N<rsub|1>,\<ldots\>,\<infty\>|}> we
+          have-\<infty\>\<less\>1\<less\>y<rsub|i>
+        </equation*>
+
+        <\equation*>
+          \<forall\>i\<in\><around*|{|N<rsub|2>,\<ldots\>,\<infty\>|}><text|
+          we have ><around*|\||x-1|\|>\<less\>1\<Rightarrow\>-\<infty\>\<less\>x-1\<less\>x<rsub|i>\<less\>x+1\<less\>\<infty\>
+        </equation*>
+
+        Hence if we take <math|n=max<around*|(|N<rsub|1>,N<rsub|2>|)>> we
+        have that
+
+        <\equation*>
+          \<forall\>i\<in\><around*|{|n,\<ldots\>,\<infty\>|}> that
+          <around*|(|x<rsub|i>,y<rsub|i>|)>\<in\><around*|(|<wide|\<bbb-R\>|\<wide-bar\>>\<times\><wide|\<bbb-R\>|\<wide-bar\>>|)>\\<around*|{|<around*|(|-\<infty\>,\<infty\>|)>,<around*|(|\<infty\>,-\<infty\>|)>|}>
+        </equation*>
+
+        Further take <math|C\<in\>\<bbb-R\><rsup|+>> and take
+        <math|C<rprime|'>=max<around*|(|C-<around*|(|x-1|)>,1|)>\<in\>\<bbb-R\><rsup|+>>
+        then <math|C-<around*|(|x-1|)>\<leqslant\>C<rprime|'>>. By [theorem:
+        <reference|extended limit equivalences>] there exist a
+        <math|N<rsub|3>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
+        <math|\<forall\>i\<in\><around*|{|N<rsub|3>,\<ldots\>,\<infty\>|}>>
+        we have that <math|C<rprime|'>\<less\>y>. Hence if
+        <math|N=max<around*|(|n,N<rsub|3>|)>\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>
+        then we have for <math|i\<in\><around*|{|N,\<ldots\>,\<infty\>|}>>
+        that <math|C<rprime|'>\<less\>y<rsub|i>> \ and as
+        <math|x<rsub|i>\<in\>\<bbb-R\>> it follows from [theorem:
+        <reference|extended x\<less\>=y then x+z\<less\>=y+z>] that
+        <math|C<rprime|'>+x<rsub|i>\<less\>x<rsub|i>+y<rsub|i>>. Hence\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|x<rsub|i>+y<rsub|i>>|<cell|\<gtr\>>|<cell|C<rprime|'>+x<rsub|i>>>|<row|<cell|>|<cell|\<geqslant\>>|<cell|C-<around*|(|x-1|)>+x<rsub|i>>>|<row|<cell|>|<cell|\<gtr\>>|<cell|C-<around*|(|x-1|)>+<around*|(|x-1|)>>>|<row|<cell|>|<cell|=>|<cell|C>>>>
+        </eqnarray*>
+
+        Using [theorem: <reference|extended limit equivalences>] it follows
+        then that <math|<around*|{|x<rsub|i>+y<rsub|i>|}><rsub|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>>
+        has a limit and <math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>+y<rsub|i>|)>=\<infty\>>.
+        As <math|<below|lim|i\<rightarrowlim\>\<infty\>>y<rsub|i>=\<infty\>>
+        and <math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>\<in\>\<bbb-R\>>
+        it follows that <math|<rigid|<below|lim|i\<rightarrowlim\>\<infty\>>x<rsub|i>+<below|lim|i\<rightarrowlim\>\<infty\>>y<rsub|i>=\<infty\>>>.
+        So\ 
+
+        <\equation*>
+          <below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>+y<rsub|i>|)><text|
+          exist and ><below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>+y<rsub|i>|)>=<below|lim|i\<rightarrowlim\>\<infty\>>x<rsub|i>+<below|lim|i\<rightarrowlim\>\<infty\>>y<rsub|i>
+        </equation*>
+
+        <item*|<math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>=\<infty\>\<wedge\><below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>=\<infty\>>>Using
+        [theorem: <reference|extended limit equivalences>] there exists
+        <math|N<rsub|1>,N<rsub|2>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
+        such that\ 
+
+        <\equation*>
+          \<forall\>i\<in\><around*|{|N<rsub|1>,\<ldots\>,\<infty\>|}><text|
+          >-\<infty\>\<less\>1\<less\>x<rsub|i><text| and
+          >\<forall\>i\<in\><around*|{|N<rsub|2>,\<ldots\>,\<infty\>|}><text|
+          >-\<infty\>\<less\>1\<less\>y<rsub|i>
+        </equation*>
+
+        So if we take <math|n=max<around*|(|N<rsub|1>,N<rsub|2>|)>> then for
+        <math|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>> we have\ 
+
+        <\equation*>
+          <around*|(|x<rsub|i>,y<rsub|i>|)>\<in\><around*|(|<wide|\<bbb-R\>|\<wide-bar\>>\<times\><wide|\<bbb-R\>|\<wide-bar\>>|)>\\<around*|{|<around*|(|-\<infty\>,\<infty\>|)>,<around*|(|\<infty\>,-\<infty\>|)>|}>
+        </equation*>
+
+        Further if <math|C\<in\>\<bbb-R\><rsup|+>> then there exists
+        <math|N<rsub|3>,N<rsub|4>\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>
+        such that\ 
+
+        <\equation*>
+          \<forall\>i\<in\><around*|{|N<rsub|3>,\<ldots\>,\<infty\>|}><text|
+          ><frac|C|2>\<less\>x<rsub|i><text| and
+          >\<forall\>i\<in\><around*|{|N<rsub|4>,\<ldots\>,\<infty\>|}><text|
+          ><frac|C|2>\<less\>y<rsub|i>
+        </equation*>
+
+        Take <math|N=max<around*|(|N<rsub|3>,N<rsub|4>|)>\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>
+        then <math|\<forall\>i\<in\><around*|{|N,\<ldots\>,\<infty\>|}>> we
+        have by [theorem: <reference|extended x\<less\>=y then
+        x+z\<less\>=y+z>] that\ 
+
+        <\equation*>
+          C=<frac|C|2>+<frac|C|2>\<less\>x<rsub|i>+y<rsub|i>
+        </equation*>
+
+        So that by \ [theorem: <reference|extended limit equivalences>]
+        <math|<around*|{|x<rsub|i>+y<rsub|i>|}><rsub|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>>
+        has a limit and <math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>+y<rsub|i>|)>=\<infty\>>,
+        hence, as <math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>+<below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>=\<infty\>+\<infty\>=\<infty\>>,
+        it follows that\ 
+
+        <\equation*>
+          <below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>+y<rsub|i>|)><text|
+          exist and ><below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>+y<rsub|i>|)>=<below|lim|i\<rightarrowlim\>\<infty\>>x<rsub|i>+<below|lim|i\<rightarrowlim\>\<infty\>>y<rsub|i>
+        </equation*>
       </description>
 
-      <item>
+      <item>As <math|<around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>,<below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>|)>\<in\><around*|(|<wide|\<bbb-R\>|\<wide-bar\>>\<times\><wide|\<bbb-R\>|\<wide-bar\>>|)>\\<around*|{|<around*|(|0,-\<infty\>|)>,<around*|(|0,\<infty\>|)>,<around*|(|-\<infty\>,0|)>,<around*|(|\<infty\>,0|)>|}>>
+      we have either:
+
+      <\description>
+        <item*|<math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>\<in\>\<bbb-R\>\<wedge\><below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>\<in\>\<bbb-R\>>>Let
+        <math|x=<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>> and
+        <math|y=<below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>>. Take
+        <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. Using [theorem:
+        <reference|extended limit equivalences>] there exists a
+        <math|N<rsub|1>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that\ 
+
+        <\equation*>
+          \<forall\>i\<in\><around*|{|N<rsub|1>,\<ldots\>,\<infty\>|}><text|
+          we have ><around*|\||x-x<rsub|i>|\|>\<less\>1\<Rightarrow\><around*|\||x<rsub|i>|\|>=<around*|\||x-x<rsub|i>|\|>+<around*|\||x|\|>\<less\>1+<around*|\||x|\|><text|>
+        </equation*>
+
+        Further as <math|1+<around*|\||x|\|>\<in\>\<bbb-R\><rsup|+>> there
+        exists a <math|N<rsub|2>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
+        such that\ 
+
+        <\equation*>
+          \<forall\>i\<in\><around*|{|N<rsub|2>,\<ldots\>,\<infty\>|}><text|
+          ><around*|\||x<rsub|i>-x|\|>\<less\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\||y|\|>|)>>\<less\>\<infty\>
+        </equation*>
+
+        and there exist a <math|N<rsub|3>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
+        such that\ 
+
+        <\equation*>
+          \<forall\>i\<in\><around*|{|N<rsub|3>,\<ldots\>,\<infty\>|}><text|
+          ><around*|\||y<rsub|i>-y|\|>\<less\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\||x|\|>|)>>\<less\>\<infty\>
+        </equation*>
+
+        Let <math|N=max<around*|(|N<rsub|1>,N<rsub|2>,N<rsub|3>|)>> then we
+        have for <math|i\<in\><around*|{|N,\<ldots\>,\<infty\>|}>> that
+        <math|<rigid|-\<infty\>\<less\>x-\<varepsilon\>\<less\>x<rsub|i>\<less\>x+\<varepsilon\>\<less\>\<infty\>>>
+        and <math|-\<infty\>\<less\>y-\<varepsilon\>\<less\>y<rsub|i>\<less\>y+\<varepsilon\>\<less\>\<infty\>>
+        so that <math|x<rsub|i>,y<rsub|i>\<in\>\<bbb-R\>> hence
+
+        <\equation*>
+          0\<leqslant\><around*|\||x<rsub|i>|\|>,<around*|\||y<rsub|i>|\|>,<around*|\||x|\|>,<around*|\||y|\|>\<in\>\<bbb-R\>
+        </equation*>
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|\||x<rsub|i>\<cdot\>y<rsub|i>-x\<cdot\>y|\|>>|<cell|=>|<cell|<around*|\||x<rsub|i>\<cdot\>y<rsub|i>-x<rsub|i>\<cdot\>y+x<rsub|i>\<cdot\>y-x\<cdot\>y|\|>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||x<rsub|i>\<cdot\><around*|(|y<rsub|i>-y|)>+<around*|(|x<rsub|i>-x|)>\<cdot\>y|\|>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\||x<rsub|i>\<cdot\><around*|(|y<rsub|i>-y|)>|\|>+<around*|\||<around*|(|x<rsub|i>-x|)>\<cdot\>y|\|>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||x<rsub|i>|\|>\<cdot\><around*|\||y<rsub|i>-y|\|>+<around*|\||x<rsub|i>-x|\|>\<cdot\><around*|\||y|\|>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\||x<rsub|i>|\|>\<cdot\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\||x|\|>|)>>+<frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\||y|\|>|)>>\<cdot\><around*|\||y|\|>>>|<row|<cell|>|<cell|\<less\>>|<cell|<around*|(|1+<around*|\||x<rsub|i>|\|>|)>\<cdot\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\||x|\|>|)>>+<frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\||y|\|>|)>>\<cdot\><around*|\||y|\|>>>|<row|<cell|>|<cell|\<less\>>|<cell|<frac|\<varepsilon\>|2>+<frac|\<varepsilon\>|2>>>|<row|<cell|>|<cell|=>|<cell|\<varepsilon\>>>>>
+        </eqnarray*>
+
+        Using [theorem: <reference|extended limit equivalences>] again it
+        follows that\ 
+
+        <\equation*>
+          <below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>\<cdot\>y<rsub|i>|)><text|
+          exists and ><below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>\<cdot\>y<rsub|i>|)>=<around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)>\<cdot\><around*|(|<below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>|)>
+        </equation*>
+
+        <item*|<math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>=\<infty\>\<wedge\><below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>\<in\>\<bbb-R\>\\<around*|{|0|}>>>Let
+        <math|C\<in\>\<bbb-R\><rsup|+>>. For
+        <math|y=<below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>> we have
+        either:
+
+        <\description>
+          <item*|<math|0\<less\>y>>For <math|<frac|y|2>\<in\>\<bbb-R\><rsup|+>>
+          we have by [theorem: <reference|extended limit equivalences>] that
+          there exist a <math|N<rsub|1>> such that\ 
+
+          <\equation>
+            <label|eq 20.28.156>\<forall\>i\<in\><around*|{|N<rsub|1>,\<ldots\>,\<infty\>|}><text|
+            we have >-\<infty\>\<less\><frac|y|2>=y-<frac|y|2>\<less\>y<rsub|i>\<less\>y+<frac|y|2>\<less\>\<infty\>
+          </equation>
+
+          Let <math|C\<in\>\<bbb-R\><rsup|+>> then
+          <math|<frac|2\<cdot\><around*|(|C+1|)>|y>\<in\>\<bbb-R\><rsup|+>>
+          so by [theorem: <reference|extended limit equivalences>] there
+          exist a <math|<rigid|N<rsub|2>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
+          such that\ 
+
+          <\equation>
+            <label|eq 20.29.156>\<forall\>i\<in\><around*|{|N<rsub|2>,\<ldots\>,\<infty\>|}><text|
+            we have ><frac|2\<cdot\><around*|(|C+1|)>|y>\<less\>x<rsub|i>
+          </equation>
+
+          Let <math|N=max<around*|(|N<rsub|1>,N<rsub|2>|)>> then
+          <math|\<forall\>i\<in\><around*|{|N,\<ldots\>,\<infty\>|}>> we have
+          as <math|<frac|2\<cdot\><around*|(|C+1|)>|y>\<in\>\<bbb-R\><rsup|+>>
+          by [theorem: <reference|extended x\<less\>=y then for 0\<less\>=s
+          we have s.x\<less\>=s.y>] that\ 
+
+          <\equation*>
+            C+1=<frac|y|2>\<cdot\><frac|2\<cdot\><around*|(|C+1|)>|y><below|\<leqslant\>|<text|[eq:
+            <reference|eq 20.28.156>]>><frac|2\<cdot\><around*|(|C+1|)>|y>\<cdot\>y<rsub|i>
+          </equation*>
+
+          Further as by [eq: <reference|eq 20.28.156>]
+          <math|0\<less\>y<rsub|i>> we have by [theorem: <reference|extended
+          x\<less\>=y then for 0\<less\>=s we have s.x\<less\>=s.y>] and [eq:
+          <reference|eq 20.29.156>] that\ 
+
+          <\equation*>
+            <frac|2\<cdot\><around*|(|C+1|)>|y>\<cdot\>y<rsub|i>\<less\>x<rsub|i>\<cdot\>y<rsub|i>=<around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)>\<cdot\><around*|(|<below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>|)>
+          </equation*>
+
+          So that <math|C\<less\>C+1\<less\>x<rsub|i>\<cdot\>y<rsub|i>>
+          <math|\<forall\>i\<in\><around*|{|N,\<ldots\>,\<infty\>|}>>, hence
+          using [theorem: <reference|extended limit equivalences>] we have
+          that\ 
+
+          <\equation*>
+            <below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>\<cdot\>y<rsub|i>|)><text|
+            exists and ><below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>\<cdot\>y<rsub|i>|)>=\<infty\>=\<infty\>\<cdot\>y=x\<cdot\>y
+          </equation*>
+
+          <item*|<math|y\<less\>0>>By (3) we have that
+          <math|-y\<in\><below|lim|i\<rightarrow\>\<infty\>><around*|(|-y<rsub|1>|)>>.
+          For <math|-<frac|y|2>\<in\>\<bbb-R\><rsup|+>> we have by [theorem:
+          <reference|extended limit equivalences>] that there exist a
+          <math|N<rsub|1>> such that
+
+          <\equation>
+            <label|eq 20.30.156>\<forall\>i\<in\><around*|{|N<rsub|1>,\<ldots\>,\<infty\>|}><text|
+            we have >-\<infty\>\<less\>-<frac|y|2>=-y-<around*|(|-<frac|y|2>|)>\<less\>-y<rsub|i>\<less\>-y+<around*|(|-<frac|y|2>|)>
+          </equation>
+
+          Let <math|C\<in\>\<bbb-R\><rsup|+>> then
+          <math|-<frac|2\<cdot\><around*|(|C+1|)>|y>\<in\>\<bbb-R\><rsup|+>>
+          so by \ [theorem: <reference|extended limit equivalences>] there
+          exist a <math|<rigid|N<rsub|2>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
+          such that\ 
+
+          <\equation>
+            <label|eq 20.31.156>\<forall\>i\<in\><around*|{|N<rsub|2>,\<ldots\>,\<infty\>|}><text|
+            we have >-<frac|2\<cdot\><around*|(|C+1|)>|y>\<less\>x<rsub|i>
+          </equation>
+
+          Let <math|N=max<around*|(|N<rsub|1>,N<rsub|2>|)>> then
+          <math|\<forall\>i\<in\><around*|{|N,\<ldots\>,\<infty\>|}>> we have
+          as <math|-<frac|2\<cdot\><around*|(|C+1|)>|y>\<in\>\<bbb-R\><rsup|+>>
+          by [theorem: <reference|extended x\<less\>=y then for 0\<less\>=s
+          we have s.x\<less\>=s.y>] that\ 
+
+          <\equation*>
+            C+1=<around*|(|-<frac|y|2>|)>\<cdot\><around*|(|-<frac|2\<cdot\><around*|(|C+1|)>|y>|)><below|\<less\>|<text|[eq:
+            <reference|eq 20.30.156>]>><around*|(|-<frac|2\<cdot\><around*|(|C+1|)>|y>|)>\<cdot\><around*|(|-y<rsub|i>|)>
+          </equation*>
+
+          Further as by [eq: <reference|eq 20.30.156>]
+          <math|0\<less\>-y<rsub|i>> so that by [theorem: <reference|extended
+          x\<less\>=y then for 0\<less\>=s we have s.x\<less\>=s.y>] and [eq:
+          <reference|eq 20.31.156>]\ 
+
+          <\equation*>
+            -<frac|2\<cdot\><around*|(|C+1|)>|y>\<cdot\><around*|(|-y<rsub|i>|)>\<less\>x<rsub|i>\<cdot\><around*|(|-y<rsub|i>|)>=-<around*|(|x<rsub|i>\<cdot\>y<rsub|i>|)>
+          </equation*>
+
+          hence\ 
+
+          <\equation*>
+            C\<less\>C+1\<less\>-<around*|(|x<rsub|i>\<cdot\>y<rsub|i>|)>
+          </equation*>
+
+          Hence by [theorem: <reference|extended limit equivalences>]
+          <math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|-<around*|(|x<rsub|i>\<cdot\>y<rsub|i>|)>|)>>
+          exists and <math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|-<around*|(|x<rsub|i>\<cdot\>y<rsub|i>|)>|)>=\<infty\>>,
+          using (3) it follows that <math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>\<cdot\>y<rsub|i>|)>>
+          exist and\ 
+
+          <\equation*>
+            <below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>\<cdot\>y<rsub|i>|)>=-<below|lim|i\<rightarrow\>\<infty\>><around*|(|-<around*|(|x<rsub|i>\<cdot\>y<rsub|i>|)>|)>=-\<infty\>=\<infty\>\<cdot\>y=x\<cdot\>y
+          </equation*>
+
+          or\ 
+
+          <\equation*>
+            <below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>\<cdot\>y<rsub|i>|)><text|
+            exists and ><below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>\<cdot\>y<rsub|i>|)>=x\<cdot\>y=<around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)>\<cdot\><around*|(|<below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>|)>
+          </equation*>
+        </description>
+
+        <item*|<math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>=-\<infty\>\<wedge\><below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>\<in\>\<bbb-R\>\\<around*|{|0|}>>>Define
+        <math|<around*|{|x<rprime|'><rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
+        by <math|x<rprime|'><rsub|i>=-x<rsub|i>> then
+        <math|<below|lim|i\<rightarrow\>\<infty\>>x<rprime|'><rsub|i>\<equallim\><rsub|<around*|(|2|)>>-<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>=\<infty\>>.
+        Hence this reduces to the case <math|<rigid|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>=-\<infty\>\<wedge\><below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>\<in\>\<bbb-R\>\\<around*|{|0|}>>>
+        by substituting <math|x<rsub|i>> by <math|x<rprime|'><rsub|i>>. So we
+        have that <math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rprime|'><rsub|i>\<cdot\>y<rsub|i>|)>=<around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rprime|'><rsub|i>|)>\<cdot\><around*|(|<below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>|)>>
+        so\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>\<cdot\>y<rsub|i>|)>>|<cell|\<equallim\><rsub|<around*|(|3|)>>>|<cell|-<below|lim|i\<rightarrow\>\<infty\>><around*|(|-<around*|(|x<rsub|i>\<cdot\>y<rsub|i>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rprime|'><rsub|i>\<cdot\>y<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rprime|'><rsub|i>|)>\<cdot\><around*|(|<below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<below|lim|i\<rightarrow\>\<infty\>><around*|(|-x<rsub|i>|)>|)>\<cdot\><around*|(|<below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|-<around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)>\<cdot\><around*|(|<below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>|)>>>>>
+        </eqnarray*>
+
+        Hence\ 
+
+        <\equation*>
+          <below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>\<cdot\>y<rsub|i>|)><text|
+          exists and ><below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>\<cdot\>y<rsub|i>|)>=<around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)>\<cdot\><around*|(|<below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>|)>
+        </equation*>
+
+        <item*|<math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>\<in\>\<bbb-R\>\\<around*|{|0|}>\<wedge\><below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>=\<infty\>>>Define
+        <math|<around*|{|x<rprime|'><rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>,
+        <math|<around*|{|y<rprime|'><rsub|i>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
+        by <math|x<rprime|'><rsub|i>=y<rsub|i>\<wedge\>y<rprime|'><rsub|i>=x<rsub|i>>.
+        Then this cases reduces to the case
+        <math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>=\<infty\>\<wedge\><below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>\<in\>\<bbb-R\>\\<around*|{|0|}>>
+        hence\ 
+
+        <\equation*>
+          <below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rprime|'><rsub|i>\<cdot\>y<rprime|'><rsub|i>|)><text|
+          exists and ><below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i><rprime|'>\<cdot\>y<rsub|i><rprime|'>|)>=<around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i><rprime|'>|)>\<cdot\><around*|(|<below|lim|i\<rightarrow\>\<infty\>>y<rsub|i><rprime|'>|)>=<around*|(|<below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>|)>\<cdot\><around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)>
+        </equation*>
+
+        so that\ 
+
+        <\equation*>
+          <below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>\<cdot\>y<rsub|i>|)>=<below|lim|i\<rightarrow\>\<infty\>><around*|(|y<rsub|i>\<cdot\>x<rsub|i>|)>=<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rprime|'><rsub|i>\<cdot\>y<rprime|'><rsub|i>|)>
+          exist<infix-and> <below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>\<cdot\>y<rsub|i>|)>=<around*|(|<below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>|)>\<cdot\><around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)>
+        </equation*>
+
+        \ <math|>
+
+        <item*|<math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>=\<infty\>\<wedge\><below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>=\<infty\>>>
+
+        <item*|<math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>-\<infty\>\<wedge\><below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>=\<infty\>>>
+
+        <item*|<math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>\<in\>\<bbb-R\>\\<around*|{|0|}>\<wedge\><below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>=-\<infty\>>>
+
+        <item*|<math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>=-\<infty\>\<wedge\><below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>=-\<infty\>>>
+
+        <item*|<math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>=\<infty\>\<wedge\><below|lim|i\<rightarrow\>\<infty\>>y<rsub|i>=-\<infty\>>>
+      </description>
     </enumerate>
 
     \;
@@ -5983,7 +6592,11 @@
     <associate|eq 20.25.156|<tuple|20.25|?>>
     <associate|eq 20.26.156|<tuple|20.26|?>>
     <associate|eq 20.27.156|<tuple|20.27|?>>
+    <associate|eq 20.28.156|<tuple|20.28|?>>
+    <associate|eq 20.29.156|<tuple|20.29|?>>
     <associate|eq 20.3.155|<tuple|20.3|?>>
+    <associate|eq 20.30.156|<tuple|20.30|?>>
+    <associate|eq 20.31.156|<tuple|20.31|?>>
     <associate|eq 20.4.155|<tuple|20.4|?>>
     <associate|eq 20.5.155|<tuple|20.5|?>>
     <associate|eq 20.6.155|<tuple|20.6|?>>
