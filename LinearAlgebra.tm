@@ -1020,7 +1020,7 @@
         <item*|<math|k\<neq\>i,j>>Then <math|<around*|(|i\<leftrightarrowlim\><rsub|I>j|)><around*|(|k|)>=j\<equallim\><rsub|i=j>i=k=Id<rsub|I><around*|(|k|)>>
       </description>
 
-      proving that <math|<around*|(|i\<leftrightarrowlim\><rsub|I>j|)>>=Id_I
+      proving that <math|<around*|(|i\<leftrightarrowlim\><rsub|I>j|)>=Id<rsub|I>>
 
       <item>If <math|k\<in\>I> then we have either:\ 
 
@@ -2644,7 +2644,7 @@
       <\equation*>
         S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|<text|If
         >card<around*|(|I|)>=n<text| then
-        >\<forall\><around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>R<text|
+        >\<forall\><around*|{|x<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<bbb-R\><text|
         with >\<forall\>i\<in\>I<text| >0\<leqslant\>x<rsub|i><text| we have
         >0\<leqslant\><big|sum><rsub|i\<in\>I>x<rsub|i>|}>
       </equation*>

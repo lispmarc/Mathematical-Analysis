@@ -71,6 +71,8 @@
 
   <\enumerate>
     <item>Spell check started/Finished
+
+    <item>At a <math|C<rsup|k>> at a point
   </enumerate>
 
   <section|FundamentalTheorem.OfAlgebra.tm>
@@ -105,7 +107,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|20>
-    <associate|page-first|1255>
+    <associate|page-first|1295>
     <associate|section-nr|2>
     <associate|subsection-nr|0>
   </collection>

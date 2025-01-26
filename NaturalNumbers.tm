@@ -9929,6 +9929,8 @@
     <associate|cardinality of union of two disjoint finite
     sets|<tuple|6.41|191>>
     <associate|countable AUB and AxB|<tuple|6.71|204>>
+    <associate|countable denumerable union of disjoint non empty countable
+    sets is denumerable|<tuple|6.71|?>>
     <associate|countable product of a finite family of countable sets is
     countable (2)|<tuple|6.73|204>>
     <associate|countable product of finite family of countable sets is
