@@ -2811,7 +2811,7 @@
     <math|f:A\<rightarrow\>B> and <math|g:C\<rightarrow\>D> functions with
     <math|f<around*|(|A|)>\<subseteq\>C> then
     <math|g\<circ\>f:A\<rightarrow\>D> is also a function with
-    <math|range<around*|(|g\<circ\>f|)>=g<around*|(|range<around*|(|f|)>|)>>TODO
+    <math|range<around*|(|g\<circ\>f|)>=g<around*|(|range<around*|(|f|)>|)>>
   </theorem>
 
   <\proof>
@@ -4944,40 +4944,33 @@
     functions and <math|E\<subseteq\>A> then
 
     <\equation*>
-      <around*|(|g\<circ\>f|)><rsub|\|E>=g<rsub|\|f<around*|(|E|)>>\<circ\>f<rsub|\|E>
+      <around*|(|g\<circ\>f|)><rsub|\|E>=g\<circ\>f<rsub|\|E>
     </equation*>
   </theorem>
 
   <\proof>
     Let <math|<around*|(|x,z|)>\<in\><around*|(|f\<circ\>g|)><rsub|\|E>> then
-    <math|<around*|(|x,z|)>\<in\>f\<circ\>g> and <math|x\<in\>E>. Hence
+    <math|<around*|(|x,z|)>\<in\>f\<circ\>g> and <math|x\<in\>E>, hence
     <math|\<exists\>y> such that <math|<around*|(|x,y|)>\<in\>f\<wedge\><around*|(|y,z|)>\<in\>g>,
-    as <math|x\<in\>E> <math|<around*|(|x,y|)>\<in\>f<rsub|\|E>>. From
-    <math|x\<in\>E> and <math|<around*|(|x,y|)>\<in\>f> it follows also that
-    <math|y\<in\>f<around*|(|E|)>>, hence as <math|<around*|(|y,z|)>\<in\>g>
-    we have that <math|<around*|(|y,z|)>\<in\>g<rsub|\|f<around*|(|E|)>>>.
-    From <math|<around*|(|x,y|)>\<in\>f<rsub|\|E>> and
-    <math|<around*|(|y,z|)>\<in\>g<rsub|\|f<around*|(|E|)>>> it follows that
-    <math|<around*|(|x,z|)>\<in\>g<rsub|\|f<around*|(|E|)>>\<circ\>f<rsub|\|E>>
-    so that\ 
+    further, as <math|x\<in\>E>, \ it follows that
+    <math|<around*|(|x,y|)>\<in\>f<rsub|\|E>>. So we must conclude that
+    <math|<around*|(|x,z|)>\<in\>g\<circ\>f<rsub|\|E>> which proves that\ 
 
     <\equation>
-      <label|eq 2.17.003><around*|(|g\<circ\>f|)><rsub|\|E>\<subseteq\>g<rsub|\|f<around*|(|E|)>>\<circ\>f<rsub|\|E>
+      <label|eq 2.17.003><around*|(|g\<circ\>f|)><rsub|\|E>\<subseteq\>g\<circ\>f<rsub|\|E>
     </equation>
 
-    If <math|<around*|(|x,z|)>\<in\>g<rsub|\|f<around*|(|E|)>>\<circ\>f<rsub|\|E>>
-    then there exists a <math|y> such that
-    <math|<around*|(|x,y|)>\<in\>f<rsub|\|E>> and
-    <math|<around*|(|y,z|)>\<in\>g<rsub|\|f<around*|(|E|)>>>, so
-    <math|x\<in\>E>, <math|<around*|(|x,y|)>\<in\>f>,
-    <math|y\<in\>f<around*|(|E|)>> and <math|<around*|(|y,z|)>\<in\>g>. Hence
-    <math|x\<in\>E> and <math|<around*|(|x,z|)>\<in\>g\<circ\>f> proving that
-    <math|<around*|(|x,z|)>\<in\><around*|(|g\<circ\>f|)><rsub|\|E>.> So
-    <math|g<rsub|\|f<around*|(|E|)>>\<circ\>f<rsub|\|E>\<subseteq\><around*|(|g\<circ\>f|)><rsub|\|E>>
-    which combined with [eq: <reference|eq 2.17.003>] gives
+    If <math|<around*|(|x,z|)>\<in\>g\<circ\>f<rsub|\|E>> then there exist a
+    <math|y> such that <math|<around*|(|x,y|)>\<in\>f<rsub|\|E>\<wedge\><around*|(|y,z|)>\<in\>g>,
+    as <math|<around*|(|x,y|)>\<in\>f<rsub|\|E>> we must have that
+    <math|x\<in\>E> and <math|<around*|(|x,y|)>\<in\>f>. Hence
+    <math|<around*|(|x,z|)>\<in\>g\<circ\>f> and <math|x\<in\>E> proving that
+    <math|<around*|(|x,z|)>\<in\><around*|(|g\<circ\>f|)><rsub|\|E>> so that
+    <math|g\<circ\>f<rsub|\|E>\<subseteq\><around*|(|g\<circ\>f|)><rsub|\|E>>.
+    Combining this with [eq: <reference|eq 2.17.003>] proves finally that\ 
 
     <\equation*>
-      <around*|(|g\<circ\>f|)><rsub|\|E>=g<rsub|\|f<around*|(|E|)>>\<circ\>g<rsub|\|E>
+      <around*|(|g\<circ\>f|)><rsub|\|E>=g\<circ\>f<rsub|\|E>
     </equation*>
   </proof>
 
@@ -5164,7 +5157,7 @@
       <item><math|f\<circ\>g<rsup|-1>:g<around*|(|A<big|cap>C|)>\<rightarrow\>f<around*|(|A<big|cap>C|)>>
       is a bijection
 
-      <item><math|f\<circ\>g<rsup|-1>=<around*|(|f\<circ\>g<rsup|-1>|)><rsub|\|g<around*|(|A<big|cap>C|)>><rsup|>=f<rsub|\|A<big|cap>C>\<circ\><around*|(|g<rsup|-1>|)><rsub|\|g<around*|(|A<big|cap>C|)>>=f<rsub|\|<around*|(|A<big|cap>C|)>>\<circ\><around*|(|g<rsub|\|A<big|cap>C>|)><rsup|-1>>
+      <item><math|f\<circ\>g<rsup|-1>=<around*|(|f\<circ\>g<rsup|-1>|)><rsub|\|g<around*|(|A<big|cap>C|)>><rsup|>=f<rsub|>\<circ\><around*|(|g<rsup|-1>|)><rsub|\|g<around*|(|A<big|cap>C|)>>=f\<circ\><around*|(|g<rsub|\|A<big|cap>C>|)><rsup|-1>>
     </enumerate>
   </theorem>
 
@@ -5234,12 +5227,12 @@
       <\eqnarray*>
         <tformat|<table|<row|<cell|<around*|(|f\<circ\>g<rsup|-1>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|function restriction and
-        domain>]>>>|<cell|<around*|(|f\<circ\>g<rsup|-1>|)><rsub|dom<around*|(|f\<circ\>g<rsup|-1>|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|1|)><text|>>>|<cell|<around*|(|f\<circ\>g<rsup|-1>|)><rsub|g<around*|(|A<big|cap>C|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        domain>]>>>|<cell|<around*|(|f\<circ\>g<rsup|-1>|)><rsub|\|dom<around*|(|f\<circ\>g<rsup|-1>|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|1|)><text|>>>|<cell|<around*|(|f\<circ\>g<rsup|-1>|)><rsub|\|g<around*|(|A<big|cap>C|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|function composition and
-        restriction>]>>>|<cell|f<rsub|\|g<rsup|-1><around*|(|g<around*|(|A<big|cap>C|)>|)>>\<circ\><around*|(|g<rsup|-1>|)><rsub|g<around*|(|A<big|cap>C|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|g<text|
+        restriction>]>>>|<cell|f\<circ\><around*|(|g<rsup|-1>|)><rsub|g<around*|(|A<big|cap>C|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|g<text|
         is injective and [theorem: <reference|function preimage of
-        image>]>>>|<cell|f<rsub|\|A<big|cap>C>\<circ\><around*|(|g<rsup|-1>|)><rsub|\|g<around*|(|A<big|cap>C|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|function inverse and restriction>]>>>|<cell|f<rsub|\|A<big|cap>C>\<circ\><around*|(|g<rsub|\|A<big|cap>C>|)><rsup|-1>>>>>
+        image>]>>>|<cell|f<rsub|>\<circ\><around*|(|g<rsup|-1>|)><rsub|\|g<around*|(|A<big|cap>C|)>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|function inverse and restriction>]>>>|<cell|f<rsub|>\<circ\><around*|(|g<rsub|\|A<big|cap>C>|)><rsup|-1>>>>>
       </eqnarray*>
     </enumerate>
   </proof>
@@ -14548,7 +14541,7 @@
     <associate|eq 2.16.005|<tuple|2.22|?>>
     <associate|eq 2.16.141|<tuple|2.16|?>>
     <associate|eq 2.17.002|<tuple|2.33|?>>
-    <associate|eq 2.17.003|<tuple|2.30|?>>
+    <associate|eq 2.17.003|<tuple|2.31|?>>
     <associate|eq 2.17.004|<tuple|2.29|?>>
     <associate|eq 2.17.006|<tuple|2.23|?>>
     <associate|eq 2.17.141|<tuple|2.17|?>>

@@ -6518,6 +6518,11 @@
     spaces then we have:
 
     <\enumerate>
+      <item>If <math|f:X\<rightarrow\>Y> is a function that is coninuous at
+      <math|x> and <math|g:Y\<rightarrow\>Z> a function that is continuous at
+      <math|f<around*|(|x|)>> then <math|g\<circ\>f> is continuous at
+      <math|x>.
+
       <item>If <math|f:X\<rightarrow\>Y> and <math|g:Y\<rightarrow\>Z> are
       continuous functions then <math|g\<circ\>f:X\<rightarrow\>Z> is
       continuous.
@@ -6531,6 +6536,26 @@
     \ 
 
     <\enumerate>
+      <item>Let <math|W\<in\>T<rsub|Z>> such that
+      <math|<around*|(|g\<circ\>f|)><around*|(|x|)>\<in\>W> then
+      <math|g<around*|(|f<around*|(|x|)>|)>\<in\>W>. As <math|g> is
+      continuous at <math|f<around*|(|x|)>> there exist a open set
+      <math|V\<in\>\<cal-T\><rsub|Y>> such that
+      <math|f<around*|(|x|)>\<in\>V> and <math|g<around*|(|V|)>\<subseteq\>W>.
+      Using the fact that <math|f> is continuous at <math|x> there exist a
+      open set <math|U\<in\>\<cal-T\><rsub|X>> such that <math|x\<in\>U> and
+      <math|f<around*|(|U|)>\<subseteq\>V>. Further we have\ 
+
+      <\equation*>
+        <around*|(|g\<circ\>f|)><around*|(|U|)>\<equallim\><rsub|<text|[theroem:
+        <reference|partial function image preimage of
+        compositions>]>>g<around*|(|f<around*|(|U|)>|)><below|\<subseteq\>|<text|[theorem:
+        <reference|partial functions image/preimage
+        properties>]>>g<around*|(|V|)>\<subseteq\>W
+      </equation*>
+
+      which proves that\ 
+
       <item>Let <math|V\<in\>\<cal-T\><rsub|Z>> then, as <math|g> is
       continuous we have by [theorem: <reference|continuity continuous
       function (1)>] that <math|g<rsup|-1><around*|(|V|)>\<in\>\<cal-T\><rsub|Y>>,
@@ -22282,7 +22307,7 @@
     <associate|continuity and subspace topology (2)|<tuple|14.135|?>>
     <associate|continuity and subspace topology (3)|<tuple|14.134|?>>
     <associate|continuity at a point|<tuple|14.123|?>>
-    <associate|continuity composition|<tuple|14.138|?>>
+    <associate|continuity composition|<tuple|14.139|?>>
     <associate|continuity composition is multilinear|<tuple|14.199|?>>
     <associate|continuity composition of continuous linear
     mapping|<tuple|14.187|?>>
