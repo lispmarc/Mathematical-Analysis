@@ -4868,6 +4868,10 @@
       <around*|\<\|\|\>|f<around*|(|I<rsup|<around*|[|i,x|]>><around*|(|u|)>|)>-f<around*|(|I<rsup|<around*|[|i,x|]>>|)><around*|(|v|)>|\<\|\|\>><rsub|Y>\<leqslant\><around*|\<\|\|\>|u-v|\<\|\|\>><rsub|i>\<cdot\>sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|i>f<around*|(|I<rsup|<around*|[|i,x|]>><around*|(|u+t\<cdot\><around*|(|v-u|)>|)>|)>|\<\|\|\>><rsub|L<around*|(|X<rsub|i>,Y|)>>\|t\<in\><around*|[|0,1|]>|}>|)>
     </equation*>
   </proof>
+
+  \;
+
+  \;
 </body>
 
 <\initial>
@@ -4982,19 +4986,19 @@
     <associate|eq 16.206.202|<tuple|131|47>>
     <associate|eq 16.207.201|<tuple|133|47>>
     <associate|eq 16.207.201.1|<tuple|132|47>>
-    <associate|eq 16.208.201|<tuple|134|48>>
+    <associate|eq 16.208.201|<tuple|134|47>>
     <associate|eq 16.209.201|<tuple|135|48>>
     <associate|eq 16.211.202|<tuple|136|49>>
     <associate|eq 16.261.222|<tuple|74|29>>
     <associate|eq 16.280.125.1|<tuple|75|30>>
     <associate|eq 16.280.126|<tuple|100|36>>
-    <associate|eq 16.280.127|<tuple|137|?>>
+    <associate|eq 16.280.127|<tuple|137|51>>
     <associate|eq 16.281.125|<tuple|76|30>>
     <associate|eq 16.281.126|<tuple|101|36>>
-    <associate|eq 16.281.127|<tuple|138|?>>
+    <associate|eq 16.281.127|<tuple|138|51>>
     <associate|eq 16.282.125|<tuple|77|31>>
     <associate|eq 16.282.126|<tuple|102|36>>
-    <associate|eq 16.282.127|<tuple|139|?>>
+    <associate|eq 16.282.127|<tuple|139|52>>
     <associate|eq 16.283.126|<tuple|103|36>>
     <associate|eq 16.284.124|<tuple|82|31>>
     <associate|eq 16.285.124|<tuple|80|31>>
@@ -5036,7 +5040,7 @@
     <associate|lemma 16.148.201|<tuple|35|44>>
     <associate|lemma 16.190.122|<tuple|28|29>>
     <associate|lemma 16.201.126|<tuple|30|35>>
-    <associate|lemma 16.202.127|<tuple|40|?>>
+    <associate|lemma 16.202.127|<tuple|40|50>>
     <associate|lemma 16.24.178|<tuple|18|18>>
     <associate|lemma 16.25.178|<tuple|19|18>>
     <associate|series absolute convergence alternative
