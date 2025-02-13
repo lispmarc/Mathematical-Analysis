@@ -6047,7 +6047,7 @@
     </description>
   </proof>
 
-  Every <math|\<infty\>>-times differentiable function is of class
+  Every <math|\<infty\>>-times differentiable function is
   <math|C<rsup|\<infty\>>> as is proved in the following theorem.
 
   <\theorem>
@@ -7190,7 +7190,7 @@
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>,
     <math|U,V> open sets in <math|X> with <math|V\<subseteq\>U> and
-    <math|<rigid|f:U\<rightarrow\>Y>> a function of class <math|C<rsup|n+m>>
+    <math|<rigid|f:U\<rightarrow\>Y>> a function that is <math|C<rsup|n+m>>
     on <math|V> [hence by [theorem: <reference|diff C^n and C^m>] is also
     <math|C<rsup|n>> on <math|V>] so that the following functions are well
     defined
@@ -7728,10 +7728,10 @@
       to consider:
 
       <\description>
-        <item*|<math|n=1>>As <math|f> is of class <math|C<rsup|1>> at
-        <math|x> there exist a open set <math|V> with
-        <math|x\<in\>V\<subseteq\>U> such that <math|f> is <math|>1-times
-        differentiable on <math|V> and the function\ 
+        <item*|<math|n=1>>As <math|f> is <math|C<rsup|1>> at <math|x> there
+        exist a open set <math|V> with <math|x\<in\>V\<subseteq\>U> such that
+        <math|f> is <math|>1-times differentiable on <math|V> and the
+        function\ 
 
         <\equation*>
           D<rsup|<around*|[|1|]>>f:V\<rightarrow\>L<rsub|1><around*|(|X;Y|)><text|
@@ -7903,6 +7903,82 @@
     </description>
   </proof>
 
+  <\corollary>
+    <label|diff f is of class C^n if D^1f u=is of class C^n-1 (1)>Let
+    <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be two normed spaces, <math|U,V> open sets in <math|X> with
+    <math|x\<in\>V\<subseteq\>U> and <math|f:U\<rightarrow\>Y> a function
+    then we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|f<text| is >C<rsup|n><text| on
+      >V>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|f<text|
+      is >1<text|-times differentiable on >V<text| and
+      >>|<cell|>>|<row|<cell|>|<cell|D<rsup|<around*|[|1|]>>f:U\<rightarrow\>L<rsub|1><around*|(|X;Y|)>=L<around*|(|X,Y|)><text|
+      defined by >D<rsup|<around*|[|1|]>>f<around*|(|x|)>=D<rsup|<around*|[|1|]>><rsub|x>f<text|
+      is >C<rsup|n-1><text| on >V>|<cell|>>>>
+    </eqnarray*>
+  </corollary>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|x\<in\>V> then <math|f> is
+      <math|C<rsup|n>> at <math|x> and by the previous corollary [corollary:
+      <reference|diff f is of class C^n if D^1f u=is of class C^n-1>] there
+      exist a open <math|V<rsub|x>> with <math|x\<in\>V<rsub|x>\<subseteq\>U>
+      such that <math|f> is <math|1>-times differentiable on <math|V<rsub|x>>
+      and\ 
+
+      <\equation*>
+        D<rsup|<around*|[|1|]>><rsub|V<rsub|x>>f:V<rsub|x>\<rightarrow\>L<rsub|1><around*|(|X;Y|)>=L<around*|(|X,Y|)><text|
+        defined by >D<rsup|<around*|[|1|]>><rsub|V<rsub|x>>f<around*|(|y|)>=D<rsub|y><rsup|<around*|[|1|]>>f<text|
+        is >C<rsup|n-1><text| at >x
+      </equation*>
+
+      Hence <math|f> is <math|1>-times differentiable on <math|V> [as
+      <math|\<forall\>x\<in\>V> <math|x\<in\>V<rsub|x>>] and we can define\ 
+
+      <\equation*>
+        D<rsup|<around*|[|1|]>>f:V\<rightarrow\>L<rsub|1><around*|(|X;Y|)>=L<around*|(|X,Y|)><text|
+        by >D<rsup|<around*|[|1|]>>f<around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y>f
+      </equation*>
+
+      Let <math|x\<in\>V> and take <math|y\<in\>V<rsub|x>> then
+      <math|D<rsup|<around*|[|1|]>><rsub|V<rsub|X>>f<around*|(|y|)>=D<rsub|y><rsup|<around*|[|1|]>>f=D<rsup|<around*|[|1|]>>f<around*|(|x|)>\<equallim\><rsub|y\<in\>V<rsub|x>><around*|(|D<rsup|<around*|[|1|]>>f|)><rsub|\|V<rsub|x>><around*|(|y|)>>
+      proving that\ 
+
+      <\equation*>
+        <around*|(|D<rsup|<around*|[|1|]>>f|)><rsub|\|V<rsub|x>>=D<rsup|<around*|[|1|]>><rsub|V<rsub|X>>f
+      </equation*>
+
+      hence as <math|D<rsup|<around*|[|1|]>><rsub|V<rsub|x>>f> is
+      <math|C<rsup|n-1>> at <math|x> it follows that
+      <math|<around*|(|D<rsup|<around*|[|1|]>>f|)><rsub|\|V<rsub|x>>> is
+      <math|C<rsup|n-1>> at <math|x>. Using locality [see theorem:
+      <reference|diff restriction of a function of class C^n>] that
+      <math|D<rsup|<around*|[|1|]>>f> is <math|C<rsup|n-1>> at <math|x>. As
+      <math|x\<in\>V> was choosen arbitrary it follows that
+      <math|D<rsup|<around*|[|1|]>>f> is <math|C<rsup|n-1>> on <math|V>.
+
+      <item*|<math|\<Leftarrow\>>>By the hypothesis <math|f> is
+      <math|1>-times differentiable on <math|V> and
+
+      <\equation*>
+        D<rsup|<around*|[|1|]>>f:V\<rightarrow\>L<rsub|1><around*|(|X;Y|)>=L<around*|(|X,Y|)><text|
+        defined by >D<rsup|<around*|[|1|]>>f<around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y>f<text|
+        is >C<rsup|n-1><text| on >V
+      </equation*>
+
+      Hence if <math|x\<in\>V> then by [corollary: <reference|diff f is of
+      class C^n if D^1f u=is of class C^n-1>] <math|f> is <math|C<rsup|n>> at
+      <math|x>. As <math|x\<in\>V> was choosen arbitrary it follows that
+      <math|f> is <math|C<rsup|n>> on <math|V>.
+    </description>
+  </proof>
+
   Just as the Fréchet differential is linear [see theorem: <reference|diff
   derivate operator is linear>] we have the same for higher order
   differentials and derivatives.
@@ -7911,7 +7987,8 @@
     <label|diff higher order differential is linear>Let
     <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    normed spaces, <math|U> a open set in <math|X> then we have:
+    normed spaces, <math|U> a open set in <math|X>, <math|x\<in\>U> then we
+    have:
 
     <\enumerate>
       <item>If <math|f:U\<rightarrow\>Y>, <math|g:U\<rightarrow\>Y> are
@@ -7936,19 +8013,19 @@
       and <math|D<rsub|x><rsup|<around*|[|n|]>><around*|(|\<alpha\>\<cdot\>f|)>=\<alpha\>\<cdot\>D<rsub|x><rsup|<around*|[|n|]>>f>.
 
       <item>If <math|f:U\<rightarrow\>Y>, <math|g:U\<rightarrow\>Y> are
-      functions of class <math|C<rsup|n>> then <math|f+g> is of class
-      <math|C<rsup|n>>.
+      functions that are <math|C<rsup|n>> at <math|x> then <math|f+g> is
+      <math|C<rsup|n>> at <math|x>.
 
       <item>If <math|k\<in\>\<bbb-N\>> and
       <math|<around*|{|f<rsub|i>:U\<rightarrow\>Y|}><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>>
       is a family of functions such that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,k|}>>
-      <math|f<rsup|i>> is of class <math|C<rsup|n>> then
-      <math|<big|sum><rsub|i=1><rsup|k>f<rsub|i>> is of class
-      <math|C<rsup|n>>.
+      <math|f<rsup|i>> is is <math|C<rsup|n>> at <math|x> then
+      <math|<big|sum><rsub|i=1><rsup|k>f<rsub|i>> is <math|C<rsup|n>> at
+      <math|x>
 
       <item>If <math|\<alpha\>\<in\>\<bbb-K\>>, <math|f:U\<rightarrow\>Y> is
-      of class <math|C<rsup|n>> then <math|\<alpha\>\<cdot\>f> is of class
-      <math|C<rsup|n>>.
+      <math|C<rsup|n>> at <math|x> then <math|\<alpha\>\<cdot\>f> is
+      <math|C<rsup|n>> at <math|x>.
     </enumerate>
   </theorem>
 
@@ -8266,7 +8343,7 @@
         <math|<around*|(|D<rsup|<around*|[|n|]>>f|)><rsub|\|V>+<around*|(|D<rsup|<around*|[|n|]>>g|)><rsub|\|V>>
         is continuous at <math|x>, so that
         <math|D<rsup|<around*|[|n|]>><around*|(|f+g|)>> is continuous at
-        <math|x>. Hence <math|f+g> is of class <math|C<rsup|n>> at <math|x>.
+        <math|x>. Hence <math|f+g> is <math|C<rsup|n>> at <math|x>.
       </description>
 
       <item>We use induction to prove this. So let\ 
@@ -8330,8 +8407,8 @@
       functions>] <math|\<alpha\>\<cdot\>D<rsup|<around*|[|n|]>>f> is
       continuous at <math|x>, it follows that
       <math|D<rsup|<around*|[|n|]>><around*|(|\<alpha\>\<cdot\>f|)>> is
-      continuous, proving that <math|\<alpha\>\<cdot\>f> is of class
-      <math|C<rsup|n>>.
+      continuous, proving that <math|\<alpha\>\<cdot\>f> is <math|C<rsup|n>>
+      at <math|x>.
     </enumerate>
   </proof>
 
@@ -9529,8 +9606,8 @@
     </description>
   </proof>
 
-  We can use a similar proof for differential classes. To simplify this proof
-  we fist prove the following lemma:
+  We can use a similar proof for <math|C<rsup|n>> differentiability. To
+  simplify this proof we fist prove the following lemma:
 
   <\lemma>
     <label|lemma 16.139.181>Let <math|n,k\<in\>\<bbb-N\>>,
@@ -10152,8 +10229,8 @@
   </proof>
 
   We can use the same proof technique as is used in the General Chain Rule to
-  prove that the composition of functions of class <math|C<rsup|n>> is of
-  class <math|C<rsup|n>>.
+  prove that the composition of functions that are <math|C<rsup|n>> is
+  <math|C<rsup|n>>.
 
   <\theorem>
     <label|diff chain rule higher order class>Let
@@ -13936,8 +14013,8 @@
     a Banach space, <math|U> a open set in <math|X>, <math|x\<in\>U>,
     <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
     <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\>|)>\<subseteq\>U>,
-    <math|f:U\<rightarrow\>Y> a function of class <math|C<rsup|1>> then
-    <math|\<forall\>y,z\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\>|)>>
+    <math|f:U\<rightarrow\>Y> a function that is <math|C<rsup|1>> on <math|U>
+    then <math|\<forall\>y,z\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\>|)>>
     we have that\ 
 
     <\equation*>
@@ -14299,8 +14376,9 @@
       <label|eq 16.224.204><around*|\<\|\|\>|<around*|(|g<rsub|v,w>|)><rprime|'><rsub|t>-<around*|(|g<rsub|v,w>|)><rprime|'><rsub|0>|\<\|\|\>><rsub|Y>\<leqslant\>4\<cdot\>\<varepsilon\>*\<cdot\><around*|\<\|\|\>|v|\<\|\|\>><rsub|X>\<cdot\><around*|(|<around*|\<\|\|\>|v|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|w|\<\|\|\>><rsub|X>|)>
     </equation>
 
-    As <math|g<rsub|v,w>> is of class <math|C<rsup|1>>, it follows from
-    [theorem: <reference|diff C^1 and derivates>] that the function
+    As <math|g<rsub|v,w>> is <math|C<rsup|1>> on <math|<around*|]|-2,2|[>>,
+    it follows from [theorem: <reference|diff C^1 and derivates>] that the
+    function
 
     <\equation*>
       g<rprime|'><rsub|v,w>:<around*|]|-2,2|[>\<rightarrow\>Y<text| defined
@@ -14609,7 +14687,7 @@
 
     <\equation>
       <label|eq 16.230.206>g=ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>>\<circ\>D<rsup|<around*|[|n|]>>f<text|
-      is of class >C<rsup|1>
+      is >C<rsup|1><text| on >U
     </equation>
 
     and\ 
@@ -14931,7 +15009,7 @@
     [eq: <reference|eq 16.236.210>] that
 
     <\equation*>
-      g<text| is of class >C<rsup|2><text| on <math|U> and by [theorem:
+      g<text| is >C<rsup|2><text| on <math|U> and by [theorem:
       <reference|diff C^n and C^m>] also >C<rsup|1><text| on >U
     </equation*>
 
@@ -14979,10 +15057,11 @@
 
     As <math|D<rsup|<around*|[|n-1|]>>f> is <math|C<rsup|1>> on <math|U> [see
     theorem: <reference|diff C^(n+m)>] and
-    \ <math|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n-2>>> is of class
-    <math|C<rsup|\<infty\>>>on <math|L<rsub|n-2>X;Y> [see lemma:
-    <reference|lemma 16.159.206>], it follows from the chain rule [theorem:
-    <reference|diff chain rule higher order class>] and the above that\ 
+    \ <math|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n-2>>> is
+    <math|C<rsup|\<infty\>>>on <math|L<rsub|n-2><around*|(|X;Y|)>> [see
+    lemma: <reference|lemma 16.159.206>], it follows from the chain rule
+    [theorem: <reference|diff chain rule higher order class>] and the above
+    that\ 
 
     <\equation*>
       D g<around*|(|\<star\>|)><around*|(|u|)><text| is >C<rsup|1><text| on
@@ -17283,8 +17362,8 @@
     <around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>> is continuous. Hence\ 
 
     <\equation>
-      <label|eq 16.272.142>f\<circ\>I<rsup|<around*|[|i,x|]>><text| is of
-      class >C<rsup|1>
+      <label|eq 16.272.142>f\<circ\>I<rsup|<around*|[|i,x|]>><text| is
+      >C<rsup|1><text| on >X<rsub|i>
     </equation>
 
     Further we have\ 
@@ -17368,8 +17447,6 @@
       D f<around*|(|x|)>=<big|sum><rsub|i=1><rsup|n><around*|(|D<rsub|i>f<around*|(|x|)>\<circ\>\<pi\><rsub|i>|)>
     </equation*>
   </theorem>
-
-  TODO check this
 
   <\render-proof|Proof>
     By the hypothesis we have that\ 
@@ -17713,11 +17790,11 @@
     <math|<around*|\<\|\|\>|D f<around*|(|x|)>-D
     f<around*|(|y|)>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<less\>\<varepsilon\>>.
     Hence <math|D f> is continuous at <math|x> and as <math|x> was chosen
-    arbitrary we have that <math|D f> is continuous. So we can finally
-    conclude that\ 
+    arbitrary we have that <math|D f> is continuous. Using [theorem:
+    <reference|diff C^n on a set condition>] we can finally conclude that\ 
 
     <\equation*>
-      f is of class C<rsup|1>
+      f is \ C<rsup|1><text| on >U
     </equation*>
   </render-proof>
 
@@ -17740,7 +17817,7 @@
     equivalent:
 
     <\enumerate>
-      <item><math|f> is of class <math|C<rsup|1>>
+      <item><math|f> is <math|C<rsup|1>> on <math|U>
 
       <item><math|\<forall\>x\<in\>U<text| we have that
       >\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> <math|f> has a
@@ -18253,9 +18330,9 @@
     </description>
   </proof>
 
-  We can now combine theorems [theorem: <reference|diff partial derivate and
-  partial differential of higher order>] and [theorem: <reference|diff
-  partial derivate and partial differential of higher order (1)>] to find the
+  We can now combine [theorem: <reference|diff partial derivate and partial
+  differential of higher order>] and [theorem: <reference|diff partial
+  derivate and partial differential of higher order (1)>] to find the
   following equivalences.
 
   <\theorem>
@@ -18536,7 +18613,7 @@
     be the vector space <math|\<bbb-K\><rsup|n>> with the maximum norm,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     a Banach space, a open set <math|U\<subseteq\>\<bbb-K\><rsup|n>>,
-    <math|f:U\<rightarrow\>Y> a function that is of class <math|C<rsup|m>>
+    <math|f:U\<rightarrow\>Y> a function that is <math|C<rsup|m>> on <math|U>
     then <math|\<forall\>x\<in\>U> and <math|\<forall\><around*|{|i<rsub|j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\><around*|{|1,\<ldots\>,n|}>>
     <math|\<partial\><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f> exist and the
     function\ 
@@ -18591,8 +18668,7 @@
 
   The purpose of this section is to prove the inverse function theorem that
   gives a sufficient conditions for a function between Banach spaces to be
-  invertible. First we introduce some concepts needed to prove this theorem.
-  We start with toplinear isomorphism's.
+  invertible. First we introduce some concepts needed to prove this theorem.\ 
 
   <\definition>
     <label|topology topological vector space><index|topological vector
@@ -19327,6 +19403,8 @@
     </equation*>
   </proof>
 
+  TODO
+
   <\theorem>
     <label|diff inverse mapping on GL(X)>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
@@ -19351,7 +19429,8 @@
         is defined by >D<rsub|L>\<tau\><around*|(|H|)>=-L<rsup|-1>\<circ\>H\<circ\>L
       </equation*>
 
-      <item>The function <math|\<tau\>> is of class <math|C<rsup|\<infty\>>>.
+      <item>The function <math|\<tau\>> is <math|C<rsup|\<infty\>>> on
+      <math|U>.
     </enumerate>
   </theorem>
 
@@ -19888,14 +19967,15 @@
 
       so that <math|\<pi\><rsub|1>\<circ\>\<chi\>=Id<rsub|\<cal-G\>L<around*|(|X|)>>>,
       <math|\<pi\><rsub|2>\<circ\>\<chi\>=Id<rsub|\<cal-G\>L<around*|(|X|)>>>.
-      As <math|Id<rsub|\<cal-G\>L<around*|(|X|)>>> is of class
-      <math|C<rsup|\<infty\>>> [see theorem: <reference|diff constant
-      function is infinitely times differentiable>], it follows from
-      [theorem: <reference|diff differential of a vector valued function>]
-      that\ 
+      As <math|Id<rsub|\<cal-G\>L<around*|(|X|)>>> is of
+      <math|C<rsup|\<infty\>>> on <math|GL<around*|(|X|)>> [see theorem:
+      <reference|diff constant function is infinitely times differentiable>],
+      it follows from [theorem: <reference|diff differential of a vector
+      valued function>] that\ 
 
       <\equation>
-        <label|eq 16.340.133>\<cal-X\><text| is of class >C<rsup|\<infty\>>
+        <label|eq 16.340.133>\<cal-X\><text| is \ >C<rsup|\<infty\>><text| on
+        >\<cal-G\>L<around*|(|X|)>
       </equation>
 
       Given <math|L,K\<in\>L<around*|(|X,X|)>> define
@@ -19997,7 +20077,8 @@
       differentiable>] we have that\ 
 
       <\equation>
-        <label|eq 16.344.133>\<varphi\><text| is >of class C<rsup|\<infty\>>
+        <label|eq 16.344.133>\<varphi\><text| is >C<rsup|\<infty\>><text| on
+        >L<around*|(|X,X|)>\<cdot\>L<around*|(|X,X|)>
       </equation>
 
       Take <math|L\<in\>\<cal-G\>L<around*|(|X|)>> then for
@@ -20022,8 +20103,8 @@
       We use now induction for the final part of the proof for (3). So define\ 
 
       <\equation*>
-        S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|\<tau\><text| is of class
-        >C<rsup|n>|}>
+        S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|\<tau\><text| is
+        >C<rsup|n><text| on >\<cal-G\>L<around*|(|X|)>|}>
       </equation*>
 
       then we have:
@@ -20032,20 +20113,23 @@
         <item*|<math|0\<in\>S>>As <math|\<forall\>L\<in\>\<cal-G\>L<around*|(|X|)>
         \<tau\>> is Fréchet differentiable at <math|L>, it follows by
         [theorem: <reference|diff differentiable function is continuous>]
-        that <math|\<tau\>> is continuous. Hence <math|\<tau\>> is of class
-        <math|C<rsup|0>> proving that <math|0\<in\>S>.
+        that <math|\<tau\>> is continuous. Hence <math|\<tau\>> is
+        <math|C<rsup|0>> on <math|\<cal-G\>L<around*|(|X|)>> proving that
+        <math|0\<in\>S>.
 
         <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>By [eqs: <reference|eq
         16.340.133>, <reference|eq 16.344.133>] <math|\<varphi\>,\<chi\>> are
-        of class <math|C<rsup|\<infty\>>> and, as <math|n\<in\>S>,
-        <math|\<tau\><text| is of class <math|C<rsup|n>>>>. So we can use the
-        chain rule [see theorem: <reference|diff chain rule higher order
-        class>] to prove that <math|\<varphi\>\<circ\>\<chi\>\<circ\>\<tau\>>
-        is of class <math|C<rsup|n>>. Hence by [eq: <reference|eq
-        16.346.134.1>] <math|D<rsup|<around*|[|1|]>>\<tau\>> is of class
-        <math|C<rsup|n>>, which by [theorem: <reference|diff f is of class
-        C^n if D^1f u=is of class C^n-1>] means that <math|\<tau\>> is of
-        class <math|C<rsup|n+1>>. So that\ 
+        <math|C<rsup|\<infty\>>> on their domains and, as <math|n\<in\>S>,
+        <math|\<tau\><text| is \ <math|C<rsup|n>>>> on
+        <math|\<cal-G\>L<around*|(|X|)>>. So we can use the chain rule [see
+        theorem: <reference|diff chain rule higher order class>] to prove
+        that <math|\<varphi\>\<circ\>\<chi\>\<circ\>\<tau\>> is
+        <math|C<rsup|n>> on <math|\<cal-G\>L<around*|(|X|)>>. Hence by [eq:
+        <reference|eq 16.346.134.1>] <math|D<rsup|<around*|[|1|]>>\<tau\>> is
+        <math|C<rsup|n>> on <math|\<cal-G\>L<around*|(|X|)>>, which by
+        [theorem: <reference|diff f is of class C^n if D^1f u=is of class
+        C^n-1>] means that <math|\<tau\>> is <math|C<rsup|n+1>> on
+        <math|\<cal-G\>L<around*|(|X|)>>. So that\ 
 
         <\equation*>
           n+1\<in\>S
@@ -20053,7 +20137,7 @@
       </description>
 
       By mathematical induction <math|S=\<bbb-N\>> so that <math|\<tau\>> is
-      of class <math|C<rsup|\<infty\>>>.
+      <math|C<rsup|\<infty\>>> on <math|\<cal-G\>L<around*|(|X|)>>.
     </enumerate>
   </proof>
 
@@ -20086,9 +20170,10 @@
       <\enumerate>
         <item><math|f:U\<rightarrow\>V> is a bijection
 
-        <item><math|f:U\<rightarrow\>Y> is of class <math|C<rsup|n>>
+        <item><math|f:U\<rightarrow\>Y> is <math|C<rsup|n>> on <math|U>
 
-        <item><math|f<rsup|-1>:V\<rightarrow\>X> is of class <math|C<rsup|n>>
+        <item><math|f<rsup|-1>:V\<rightarrow\>X> is <math|C<rsup|n>> on
+        <math|V>
       </enumerate>
     </enumerate>
   </definition>
@@ -20097,8 +20182,8 @@
     <label|diff homeomorphism is a diffeomorphism of class C^0>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    be normed spaces then a homeomorphism <math|f:X\<rightarrow\>Y> is of
-    class <math|C<rsup|0>>
+    be normed spaces then a homeomorphism <math|f:X\<rightarrow\>Y> is of is
+    a diffeoremorphis of class <math|C<rsup|0>>
   </example>
 
   <\proof>
@@ -20124,9 +20209,9 @@
     of a isomorphism>] we have also that <math|L<rsup|-1>> is linear. So
     <math|L\<in\>L<around*|(|X,Y|)>> and <math|L<rsup|-1>\<in\>L<around*|(|Y,X|)>>.
     Finally by [example: <reference|diff linear mapping is infinite times
-    differentiable>] it follows that <math|L,L<rsup|-1>> are of class
-    <math|C<rsup|\<infty\>>> proving that <math|L> is a diffeomorphism of
-    class <math|C<rsup|\<infty\>>>.
+    differentiable>] it follows that <math|L,L<rsup|-1>> are
+    <math|C<rsup|\<infty\>>> on their domains proving that <math|L> is a
+    diffeomorphism of class <math|C<rsup|\<infty\>>>.
   </proof>
 
   <\theorem>
@@ -20149,23 +20234,24 @@
     Using [theorem: <reference|function restriction of a function>] it
     follows that <math|f<rsub|\|W>:W\<rightarrow\>f<around*|(|W|)>> is a
     bijection. As <math|f> is a diffeomorphism of class <math|C<rsup|n>>
-    <math|f:U\<rightarrow\>Y> is of class <math|C<rsup|n>> and
-    <math|f<rsup|-1>:V\<rightarrow\>X> is of class <math|C<rsup|n>>. Using
+    <math|f:U\<rightarrow\>Y> is <math|C<rsup|n>> on <math|U> and
+    <math|f<rsup|-1>:V\<rightarrow\>X> is <math|C<rsup|n>> on <math|V>. Using
     [theorem: <reference|diff restriction of a function of class C^n>] it
-    follows that <math|f<rsub|\|W>:W\<rightarrow\>Y> is a of class
-    <math|C<rsup|n>>. Further as <math|f<rsup|-1>:V\<rightarrow\>Y> is of
-    class <math|C<rsup|n>> it is of class <math|C<rsup|0>> hence continuous.
-    So <math|f<around*|(|W|)>\<equallim\><rsub|<text|[theorem:
+    follows that <math|f<rsub|\|W>:W\<rightarrow\>Y> is <math|C<rsup|n>> on
+    <math|W>. Further as <math|f<rsup|-1>:V\<rightarrow\>Y> is
+    <math|C<rsup|n>> on <math|V> it is <math|C<rsup|0>> on <math|V> hence
+    continuous. So <math|f<around*|(|W|)>\<equallim\><rsub|<text|[theorem:
     <reference|function inverse image preimage>]>><around*|(|f<rsup|-1>|)><rsup|-1><around*|(|W|)>>
     is open in the subspace topology of <math|V> hence open in the topology
     of <math|X> [see theorem: <reference|topology subspace topology open
     subset>]. Applying then [theorem: <reference|diff restriction of a
     function of class C^n>] it follows that
     <math|<around*|(|f<rsup|-1>|)><rsub|\|f<around*|(|W|)>>:f<around*|(|W|)>\<rightarrow\>X>
-    is of class <math|C<rsup|n>>. Finally by [theorem: <reference|function
-    inverse function and bijection>] \ <math|<around*|(|f<rsup|-1>|)><rsub|\|f<around*|(|W|)>>=<around*|(|f<rsub|\|W>|)><rsup|-1>>
-    so that <math|<around*|(|f<rsub|\|W>|)><rsup|-1>> is of class
-    <math|C<rsup|n>>. Hence <math|f<rsub|\|W>:W\<rightarrow\>f<around*|(|W|)>>
+    is \ <math|C<rsup|n>> on <math|f<around*|(|W|)>>. Finally by [theorem:
+    <reference|function inverse function and bijection>]
+    \ <math|<around*|(|f<rsup|-1>|)><rsub|\|f<around*|(|W|)>>=<around*|(|f<rsub|\|W>|)><rsup|-1>>
+    so that <math|<around*|(|f<rsub|\|W>|)><rsup|-1>> is <math|C<rsup|n>> on
+    <math|f<around*|(|W|)>>. Hence <math|f<rsub|\|W>:W\<rightarrow\>f<around*|(|W|)>>
     is a diffeomorphism of class <math|C<rsup|n>>.
   </proof>
 
@@ -20185,9 +20271,10 @@
     </equation*>
 
     <\equation*>
-      f:U\<rightarrow\>Y<text| is a differentiable on <math|U> [or of class
-      <math|C<rsup|n>>] and there exist a function >g:V\<rightarrow\>U<text|
-      that is a diffeomorphism [of class >C<rsup|n><text|] and
+      f:U\<rightarrow\>Y<text| is a differentiable on <math|U> [or
+      \ <math|C<rsup|n>> on <math|U>] and there exist a function
+      >g:V\<rightarrow\>U<text| that is a diffeomorphism [or
+      \ >C<rsup|n><text| on <math|V>] and
       >f\<circ\>g=Id<rsub|U>\<wedge\>g\<circ\>f=Id<rsub|V>
     </equation*>
   </theorem>
@@ -20196,12 +20283,12 @@
     \ 
 
     <\description>
-      <item*|<math|\<Rightarrow\>>>If <math|f> is a diffeomorphism [of class
-      <math|C<rsup|n>>] then <math|f:U\<rightarrow\>Y> is differentiable on
-      <math|U> [or of class <math|C<rsup|n>>] and
-      <math|f<rsup|-1>:V\<rightarrow\>X> is differentiable [or of class
-      <math|C<rsup|n>>]. Take <math|g=f<rsup|-1>> then <math|g> is
-      differentiable on <math|V> [or of class <math|C<rsup|n>>],
+      <item*|<math|\<Rightarrow\>>>If <math|f> is a diffeomorphism [or
+      <math|C<rsup|n>> on <math|U>] then <math|f:U\<rightarrow\>Y> is
+      differentiable on <math|U> [or <math|C<rsup|n>> on <math|U>] and
+      <math|f<rsup|-1>:V\<rightarrow\>X> is differentiable [or
+      <math|C<rsup|n>> on <math|V>]. Take <math|g=f<rsup|-1>> then <math|g>
+      is differentiable on <math|V> [or <math|C<rsup|n>> on <math|V>],
       <math|f\<circ\>g=f\<circ\>f<rsup|-1>=Id<rsub|V>> and
       <math|g\<circ\>f=f<rsup|-1>\<circ\>f=Id<rsub|U>>.
 
@@ -20298,12 +20385,12 @@
     differentiable on <math|U> and <math|<around*|(|g\<circ\>f|)><rsup|-1>=f<rsup|-1>\<circ\>g<rsup|-1>>
     is differentiable on <math|W>, hence <math|g\<circ\>f> is a
     diffeomorphism. Likewise if <math|f,g> are diffeomorphism's of class
-    <math|C<rsup|n>> then <math|f,g,f<rsup|-1>,g<rsup|-1>> are of class
-    <math|C<rsup|n>>, hence, using the chain rule [theorem: <reference|diff
-    chain rule higher order class>], <math|g\<circ\>f> and
+    <math|C<rsup|n>> then <math|f,g,f<rsup|-1>,g<rsup|-1>> are
+    <math|C<rsup|n>> on their domains, hence, using the chain rule [theorem:
+    <reference|diff chain rule higher order class>], <math|g\<circ\>f> and
     <math|<around*|(|g\<circ\>f|)><rsup|-1>=f<rsup|-1>\<circ\>g<rsup|-1>> are
-    of class <math|C<rsup|n>>. From this it follows that <math|g\<circ\>f>
-    are differentiable of class <math|C<rsup|n>>.
+    <math|C<rsup|n>> on ther domains. From this it follows that
+    <math|g\<circ\>f> are differentiable of class <math|C<rsup|n>>.
   </proof>
 
   We weaken now the concept of a diffeomorphism to that of a local
@@ -20336,11 +20423,12 @@
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     be Banach spaces, <math|U> a open set in <math|X>,
-    <math|x<rsub|0>\<in\>U>, <math|f:U\<rightarrow\>Y> a function of class
-    <math|C<rsup|n>> such that <math|D<rsub|x<rsub|0>>f\<in\>L<rsub|n><around*|(|X,Y|)>>
-    is a bijection then <math|f> is a local diffeomorphism of class
-    <math|C<rsup|n>> at <math|x<rsub|0>>. In other words there exist a open
-    set <math|U<rsub|x<rsub|0>>> in <math|X> with
+    <math|x<rsub|0>\<in\>U> and <math|f:U\<rightarrow\>Y> a function such
+    that <math|f> is <math|C<rsup|n>> on <math|U> and
+    <math|<rigid|D<rsub|x<rsub|0>>f\<in\>L<rsub|n><around*|(|X,Y|)>>> is a
+    bijection then <math|f> is a <with|font-series|bold|local diffeomorphism
+    of class <math|C<rsup|n>>> at <math|x<rsub|0>>. In other words there
+    exist a open set <math|U<rsub|x<rsub|0>>> in <math|X> with
     <math|x<rsub|0>\<in\>U<rsub|x<rsub|0>>\<subseteq\>U> and a open set
     <math|V<rsub|f<around*|(|x<rsub|0>|)>>> in <math|Y> with
     <math|f<around*|(|x<rsub|0>|)>\<in\>V<rsub|f<around*|(|x<rsub|0>|)>>>
@@ -20373,10 +20461,11 @@
       <label|proposition 16.244.134>Let <math|n\<in\>\<bbb-N\>>,
       <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
       be a Banach space and <math|U> a open set in <math|X> with
-      <math|0\<in\>U> and <math|<rigid|f:U\<rightarrow\>X>> a function of
-      class <math|C<rsup|n>> such that <math|D<rsub|0>f=Id<rsub|X>> and
-      <math|f<around*|(|0|)>=0> then <math|f> is a local diffeomorphism of
-      class <math|C<rsup|n>>at <math|0>.
+      <math|0\<in\>U> and <math|<rigid|f:U\<rightarrow\>X>> a function such
+      that <math|f> is <math|C<rsup|n>> on <math|U>,
+      <math|D<rsub|0>f=Id<rsub|X>> and <math|f<around*|(|0|)>=0> then
+      <math|f> is a local diffeomorphism of class <math|C<rsup|n>>at
+      <math|0>.
     </proposition>
 
     <\render-proof|Proof>
@@ -20393,17 +20482,17 @@
       </equation*>
 
       By [example: <reference|diff identity function is infinite times
-      differentiable>] <math|Id<rsub|U>> is of class
-      <math|C<rsup|\<infty\>>>, so using [theorems: <reference|diff higher
-      order differential is linear>, <reference|diff C^n and C^m>] it follows
-      that
+      differentiable>] <math|Id<rsub|U>> is <math|C<rsup|\<infty\>>> on
+      <math|U>, so using [theorems: <reference|diff higher order differential
+      is linear>, <reference|diff C^n and C^m>] it follows that
 
       <\equation>
-        <label|eq 16.347.135>T<text| is of class <math|C<rsup|n>>>
+        <label|eq 16.347.135>T<text| is <math|C<rsup|n>>> on U
       </equation>
 
-      and using [theorem: <reference|diff C^n and C^m>] again it follows that
-      <math|T> is of class <math|C<rsup|1>> hence we have that
+      and using [theorem: <reference|diff C^n and C^m>] it follows that
+      <math|T> is <math|C<rsup|1>> on <math|U> hence we have form [theorem:
+      <reference|diff C^n on a set condition>] that
 
       <\equation>
         <label|eq 16.347.134>D T:U\<rightarrow\>L<around*|(|X,X|)><text|
@@ -20494,14 +20583,14 @@
           T<rsub|y>=C<rsub|y>+T
         </equation*>
 
-        Hence as <math|C<rsub|y>> is of class <math|C<rsup|\<infty\>>> [see
+        Hence as <math|C<rsub|y>> is <math|C<rsup|\<infty\>>> <math|X> [see
         example: <reference|diff constant function is infinitely times
-        differentiable>] and <math|T> is of class <math|C<rsup|n>> [see eq:
-        <reference|eq 16.347.135>] it follows from [theorem: <reference|diff
-        higher order differential is linear>] that
+        differentiable>] and <math|T> is <math|C<rsup|n>> on <math|U> [see
+        eq: <reference|eq 16.347.135>] it follows from [theorem:
+        <reference|diff higher order differential is linear>] that
 
         <\equation*>
-          T<rsub|y><text| is of class >C<rsup|n>
+          T<rsub|y><text| is >C<rsup|n><text| on >U
         </equation*>
 
         Let <math|x\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<rho\><rprime|'>|)>|\<wide-bar\>>\<subseteq\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<rho\>|)>|\<wide-bar\>>\<subseteq\><rsub|<text|[eq:
@@ -20577,16 +20666,15 @@
       </proof>
 
       <\conjecture>
-        <label|conjecture 16.246.136>For the open set [as <math|f> is of
-        class <math|C<rsup|n>> it is continuous hence
-        <math|f<rsup|-1><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<rho\>|4>|)>|)>>
-        is open]
+        <label|conjecture 16.246.136>For the open set\ 
 
         <\equation*>
           U<rsub|\<rho\>>=B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<rho\>|2>|)><big|cap>f<rsup|-1><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<rho\>|4>|)>|)>
         </equation*>
 
-        we have that\ 
+        [as <math|f> is <math|C<rsup|n>> on <math|U >it is continuous hence
+        <math|f<rsup|-1><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<rho\>|4>|)>|)>>
+        is open] we have that\ 
 
         <\equation*>
           0\<in\>U<rsub|\<rho\>>
@@ -20637,9 +20725,9 @@
           As <math|y\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<rho\>|4>|)>>
           we have that <math|<around*|\<\|\|\>|f<around*|(|x|)>|\<\|\|\>><rsub|X>=<around*|\<\|\|\>|y|\<\|\|\>><rsub|X>\<less\><frac|\<rho\>|4>>
           so that <math|\<varepsilon\>=<frac|\<rho\>|4>-<around*|\<\|\|\>|y|\<\|\|\>>\<in\>\<bbb-R\><rsup|+>>.
-          Given that <math|f> is continuous [because <math|f> is of class
-          <math|C<rsup|n>>, hence of class <math|C<rsup|0>> by [theorem:
-          <reference|diff C^n and C^m>]] there exist a
+          Given that <math|f> is continuous [because <math|f> is
+          <math|C<rsup|n>> on <math|U>], hence <math|C<rsup|0>> on <math|U>
+          by [theorem: <reference|diff C^n and C^m>] there exist a
           <math|\<delta\><rprime|'>\<in\>\<bbb-R\><rsup|+>> such that if
           <math|z\<in\>U> with <math|<around*|\<\|\|\>|x-z|\<\|\|\>>\<less\>\<delta\><rprime|'>>
           then we have <math|<around*|\<\|\|\>|f<around*|(|x|)>-f<around*|(|z|)>|\<\|\|\>>\<less\>\<varepsilon\>>.
@@ -20974,17 +21062,18 @@
       </proof>
 
       To complete the proof of [proposition: <reference|proposition
-      16.244.134>] we need to proof that <math|g> is of class
-      <math|C<rsup|n>>. Consider the inversion mapping:\ 
+      16.244.134>] we need to proof that <math|g> is <math|C<rsup|n>> on
+      <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<rho\>|4>|)>>.
+      Consider the inversion mapping:
 
       <\equation*>
-        \<tau\>:GL<around*|(|X,X|)>\<rightarrow\>L<around*|(|X,X|)><text|
+        \<tau\>:GL<around*|(|X|)>\<rightarrow\>L<around*|(|X,X|)><text|
         defined by >\<tau\><around*|(|L|)>=L<rsup|-1><text| [see theorem:
         <reference|diff inverse mapping on GL(X)>]>
       </equation*>
 
-      As <math|f:U\<rightarrow\>X> is of class <math|C<rsup|n>> we can define
-      the function:\ 
+      As <math|f:U\<rightarrow\>X> is <math|C<rsup|n>> on <math|U> hence
+      <math|C<rsup|1>> on <math|U> we can define the function:\ 
 
       <\equation*>
         D f:U\<rightarrow\>L<around*|(|X,X|)><text| by >D
@@ -21023,47 +21112,54 @@
         <label|eq 16.374.138>\<tau\>\<circ\>D f\<circ\>g=D g
       </equation>
 
-      Next we use mathematical induction to prove that <math|g> is of class
-      <math|C<rsup|n>>. So define
+      Next we use mathematical induction to prove that <math|g> is
+      <math|C<rsup|n>> on <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<rho\>|4>|)>>.
+      So define
 
       <\equation*>
         S=<around*|{|m\<in\>\<bbb-N\>\|<text|If >m\<leqslant\>n<text| then
-        >g<text| is of class >C<rsup|m>|}>
+        >g<text| is >C<rsup|m><text| on >B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<rho\>|4>|)>|}>
       </equation*>
 
       then we have:
 
       <\description>
         <item*|<math|1\<in\>S>>By [theorem: <reference|diff inverse mapping
-        on GL(X)>]] <math|\<tau\>> is of class <math|C<rsup|\<infty\>>> hence
-        continuous, further by [conjecture: <reference|conjecture
-        16.247.136>] <math|g> is continuous and, as <math|f> is of class
-        <math|C<rsup|n>>, <math|D f> is continuous. So <math|\<tau\>\<circ\>D
-        f\<circ\>g> is continuous proving by \ [eq: <reference|eq
-        16.374.138>] that <math|D g> is continuous, hence <math|g> is of
-        class <math|C<rsup|1>>. Hence <math|1\<in\>S>.
+        on GL(X)>] <math|\<tau\>> is <math|C<rsup|\<infty\>>> on
+        <math|\<cal-G\>L<around*|(|X|)>> hence continuous, further by
+        [conjecture: <reference|conjecture 16.247.136>] <math|g> is
+        continuous and, as <math|f> is <math|C<rsup|n>> on <math|U> hence
+        <math|C<rsup|1>> on <math|U>, <math|D f> is continuous. So
+        <math|\<tau\>\<circ\>D f\<circ\>g> is continuous proving by \ [eq:
+        <reference|eq 16.374.138>] that <math|D g> is continuous, hence
+        <math|g> is <math|C<rsup|1>> on <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<rho\>|4>|)>>.
+        So <math|1\<in\>S>.
 
         <item*|<math|m\<in\>S\<Rightarrow\>m+1\<in\>S>>If
-        <math|m+1\<leqslant\>n> then as <math|f> is of class <math|C<rsup|n>>
-        it follows from [theorem: <reference|diff C^n and C^m>] that <math|f>
-        is of class <math|C<rsup|m+1>> so that by [theorem: <reference|diff f
-        is of class C^n if D^1f u=is of class C^n-1>] <math|D f> is of class
-        <math|C<rsup|m>>. Further as <math|\<tau\>> is of class
-        <math|C<rsup|\<infty\>>> and <math|g> is of class <math|C<rsup|m>>
+        <math|m+1\<leqslant\>n> then as <math|f> is <math|C<rsup|n>> on
+        <math|U> it follows from [theorem: <reference|diff C^n and C^m>] that
+        <math|f> is <math|C<rsup|m+1>> on <math|U> so that by [theorem:
+        <reference|diff f is of class C^n if D^1f u=is of class C^n-1>]
+        <math|D f> is <math|C<rsup|m>> on <math|U>. Further as <math|\<tau\>>
+        is <math|C<rsup|\<infty\>>> on <math|\<cal-G\>L<around*|(|X|)>> and
+        <math|g> is <math|C<rsup|m>> on <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<rho\>|4>|)>>
         [because <math|m\<in\>S>] it follows from the chain rule [theorem:
         <reference|diff chain rule higher order class>] that
-        <math|\<tau\>\<circ\>D f\<circ\>g> is of class <math|C<rsup|m>>.
-        Hence using [eq: <reference|eq 16.374.138>] we conclude that <math|D
-        g> is of class <math|C<rsup|m>>, which by [theorem: <reference|diff f
-        is of class C^n if D^1f u=is of class C^n-1>] proves that <math|g> is
-        of class \ <math|C<rsup|m+1>>. Hence it follows that
-        <math|m+1\<in\>S>.
+        <math|\<tau\>\<circ\>D f\<circ\>g> is <math|C<rsup|m>> on
+        <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<rho\>|4>|)>>.
+        Hence using [eq: <reference|eq 16.374.138>] we conclude that
+        <math|D<rsup|<around*|[|1|]>>g=D g> is <math|C<rsup|m>> on
+        <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<rho\>|4>|)>>,
+        which by [theorem: <reference|diff f is of class C^n if D^1f u=is of
+        class C^n-1 (1)>] proves that <math|g> \ <math|C<rsup|m+1>> on
+        <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<rho\>|4>|)>>.
+        Hence it follows that <math|m+1\<in\>S>.
       </description>
 
       Using induction it follows that <math|S=\<bbb-N\>> so that, as
-      <math|n\<in\>\<bbb-N\>> and <math|n\<leqslant\>n>, <math|g> is of class
-      <math|C<rsup|n>>. As <math|g> is the inverse of
-      <math|><math|f<rsub|\|U<rsub|\<rho\>>>:U<rsub|\<rho\>>\<rightarrow\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<rho\>|2>|)>>,
+      <math|n\<in\>\<bbb-N\>> and <math|n\<leqslant\>n>, <math|g> is s
+      <math|C<rsup|n>> on its domain. As <math|g> is the inverse of
+      <math|><math|f<rsub|\|U<rsub|\<rho\>>>:U<rsub|\<rho\>>\<rightarrow\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<rho\>|4>|)>>,
       <math|0\<in\>U<rsub|\<rho\>>> [see conjecture: <reference|conjecture
       16.246.136>], it follows that <math|f> is a local diffeomorphism of
       class <math|C<rsup|n>> at <math|0>. This concludes the proof of
@@ -21078,10 +21174,10 @@
       <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
       <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
       be Banach spaces, <math|U> a open set in <math|X>, <math|0\<in\>U> and
-      <math|f:U\<rightarrow\>Y> a function of class <math|C<rsup|n>> such
-      that <math|f<around*|(|0|)>=0> and <math|D<rsub|0>f\<in\>L<around*|(|X,Y|)>>
-      is a bijection then <math|f> is a local diffeomorphism of class
-      <math|C<rsup|n>> at <math|0>.\ 
+      <math|f:U\<rightarrow\>Y> a function such that <math|f> is
+      <math|C<rsup|n>> on <math|U>, <math|f<around*|(|0|)>=0> and
+      <math|D<rsub|0>f\<in\>L<around*|(|X,Y|)>> is a bijection then <math|f>
+      is a local diffeomorphism of class <math|C<rsup|n>> at <math|0>.\ 
     </proposition>
 
     <\proof>
@@ -21102,16 +21198,16 @@
 
       is well defined and is linear and continuous, hence by [theorem:
       <reference|diff linear mapping is infinite times differentiable>]
-      <math|<around*|(|D<rsub|0>f|)><rsup|-1>> is of class
-      <math|C<rsup|\<infty\>>>. So as <math|f> is of class <math|C<rsup|n>>
-      it follows from the chain rule [theorem: <reference|diff chain rule
-      higher order class>] that\ 
+      <math|<around*|(|D<rsub|0>f|)><rsup|-1>> is <math|C<rsup|\<infty\>>> on
+      <math|Y>. As <math|f> is <math|C<rsup|n>> on <math|U> it follows from
+      the chain rule [theorem: <reference|diff chain rule higher order
+      class>] that\ 
 
       <\equation*>
         h=<around*|(|D<rsub|0>f|)><rsup|-1>\<circ\>f:U\<rightarrow\>X
       </equation*>
 
-      is of class <math|C<rsup|n>>. Then\ 
+      is <math|C<rsup|n>> on <math|U>. Then\ 
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|h<around*|(|0|)>>|<cell|=>|<cell|<around*|(|<around*|(|D<rsub|0>f|)><rsup|-1>\<circ\>f|)><around*|(|0|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|D<rsub|0>f|)><rsup|-1><around*|(|f<around*|(|0|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|f<around*|(|0|)>=0>>|<cell|<around*|(|D<rsub|0>f|)><rsup|-1><around*|(|0|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|linearity>>|<cell|0<eq-number><label|eq
@@ -21202,7 +21298,7 @@
       is a local diffeomorphism of class <math|C<rsup|n>> at <math|0>.\ 
     </proof>
 
-    Finally we extend the latest proposition to proof the inverse function
+    Finally we extend the latest proposition to prove the inverse function
     theorem, to increase readability we repeat here the inverse function
     theorem as a conjecture, so as this conjecture is proved we have
     completed the proof of the inverse function theorem.\ 
@@ -21212,9 +21308,10 @@
       <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
       <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
       be Banach spaces, <math|U> a open set in <math|X>,
-      <math|x<rsub|0>\<in\>U>, <math|f:U\<rightarrow\>Y> a function of class
-      <math|C<rsup|n>> such that <math|D<rsub|x<rsub|0>>f\<in\>L<rsub|n><around*|(|X,Y|)>>
-      is a bijection then <math|f> is a local diffeomorphism of class
+      <math|x<rsub|0>\<in\>U>, <math|f:U\<rightarrow\>Y> a function such that
+      <math|f> is <math|C<rsup|n>> on <math|U> and
+      <math|D<rsub|x<rsub|0>>f\<in\>L<rsub|n><around*|(|X,Y|)>> is a
+      bijection then <math|f> is a local diffeomorphism of class
       <math|C<rsup|n>> at <math|x<rsub|0>>. In other words there exist a open
       set <math|U<rsub|x<rsub|0>>> in <math|X> with
       <math|x<rsub|0>\<in\>U<rsub|x<rsub|0>>\<subseteq\>U> and a open set
@@ -21232,7 +21329,7 @@
       Define <math|\<cal-T\><rsub|1>:X\<rightarrow\>X> by
       <math|\<cal-T\><rsub|1><around*|(|x|)>=x+x<rsub|0>> then by [example:
       <reference|diff translation is infinite differentiable>]
-      <math|\<cal-T\><rsub|1>> is of class <math|C<rsup|\<infty\>>> with
+      <math|\<cal-T\><rsub|1>> is <math|C<rsup|\<infty\>>> on <math|U> with
       <math|D<rsub|0>\<cal-T\><rsub|1>=Id<rsub|X>>. Further
 
       <\equation>
@@ -21240,13 +21337,13 @@
         where >W=<around*|(|\<cal-T\><rsub|1>|)><rsup|-1><around*|(|U|)>
       </equation>
 
-      As <math|\<cal-T\><rsub|1>> is of class <math|C<rsup|\<infty\>>> hence
-      continuous, <math|W> is a open set, so applying [theorem:
+      As <math|\<cal-T\><rsub|1>> is <math|C<rsup|\<infty\>>> on <math|X>
+      hence continuous, <math|W> is a open set, so applying [theorem:
       <reference|diff restriction of a function of class C^n>] we have\ 
 
       <\equation>
         <label|eq 16.391.142><around*|(|\<cal-T\><rsub|1>|)><rsub|\|W>:W\<rightarrow\>X<text|
-        is of class >C<rsup|\<infty\>><text| with
+        is >C<rsup|\<infty\>><text| on <math|W> with
         >D<rsub|0><around*|(|\<cal-T\><rsub|1>|)><rsub|\|W>=D<rsub|0>\<cal-T\><rsub|1>=Id<rsub|X>
       </equation>
 
@@ -21262,7 +21359,7 @@
       Further define <math|\<cal-T\><rsub|2>:Y\<rightarrow\>Y> by
       <math|\<cal-T\><rsub|2><around*|(|x|)>=x-f<around*|(|x<rsub|0>|)>> then
       by [example: <reference|diff translation is infinite differentiable>]
-      <math|\<cal-T\><rsub|2>> is of class <math|C<rsup|\<infty\>>> with
+      <math|\<cal-T\><rsub|2>> is <math|C<rsup|\<infty\>>> on <math|Y> with
       <math|D<rsub|0>\<cal-T\><rsub|2>=Id<rsub|Y>>. So we can construct the
       function
 
@@ -21271,7 +21368,7 @@
       </equation>
 
       Using the chain rule [theorem: <reference|diff chain rule higher order
-      class>] it follows that <math|h> is of class <math|C<rsup|n>> and\ 
+      class>] it follows that <math|h> <math|C<rsup|n>> on <math|W> and\ 
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|D<rsub|0>h>|<cell|=>|<cell|D<rsub|0><around*|(|\<cal-T\><rsub|2>\<circ\>f\<circ\><around*|(|\<cal-T\><rsub|1>|)><rsub|\|W>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|0><around*|(|<around*|(|\<cal-T\><rsub|2>\<circ\>f|)>\<circ\><around*|(|\<cal-T\><rsub|1>|)><rsub|\|W>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|<around*|(|\<cal-T\><rsub|1>|)><rsub|\|W><around*|(|0|)>><around*|(|\<cal-T\><rsub|2>\<circ\>f|)>\<circ\>D<rsub|0><around*|(|\<cal-T\><rsub|1>|)><rsub|\|W>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|<around*|(|\<cal-T\><rsub|1>|)><rsub|\|W><around*|(|0|)>><around*|(|\<cal-T\><rsub|2>\<circ\>f|)>\<circ\>Id<rsub|X>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|<around*|(|\<cal-T\><rsub|1>|)><rsub|\|W><around*|(|0|)>><around*|(|\<cal-T\><rsub|2>\<circ\>f|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|x<rsub|0>><around*|(|\<cal-T\><rsub|2>\<circ\>f|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|f<around*|(|x<rsub|0>|)>>\<cal-T\><rsub|2>\<circ\>D<rsub|x<rsub|0>>f>>|<row|<cell|>|<cell|=>|<cell|Id<rsub|Y>\<circ\>D<rsub|x<rsub|0>>f>>|<row|<cell|>|<cell|=>|<cell|D<rsub|x<rsub|0>>f>>>>
@@ -21373,16 +21470,16 @@
 
       Using [example: <reference|diff translation is infinite
       differentiable>] it follows that <math|\<cal-T\><rsub|3>,\<cal-T\><rsub|1>>
-      are of class <math|C<rsup|\<infty\>>>. \ So applying [theorem:
+      are <math|C<rsup|\<infty\>>> on <math|X>. \ So applying [theorem:
       <reference|diff restriction of a function of class C^n>] we have that\ 
 
       <\equation>
-        <label|eq 16.399.142><around*|(|\<cal-T\><rsub|3>|)><rsub|\|U<rsub|x<rsub|>>>:U<rsub|x<rsub|0>>\<rightarrow\>X<text|,
+        <label|eq 16.399.142><around*|(|\<cal-T\><rsub|3>|)><rsub|\|U<rsub|x<rsub|0>>>:U<rsub|x<rsub|0>>\<rightarrow\>X<text|,
         ><around*|(|<around*|(|\<cal-T\><rsub|3>|)><rsub|\|U<rsub|x<rsub|0>>>|)><rsup|-1>:U<rsub|0>\<rightarrow\>X<text|
-        are of class >C<rsup|\<infty\>>
+        are >C<rsup|\<infty\>><text| on theire respectively domains>
       </equation>
 
-      As <math|\<cal-T\><rsub|3>> is of class <math|C<rsup|\<infty\>>>
+      As <math|\<cal-T\><rsub|3>> is <math|C<rsup|\<infty\>>> on <math|X>
       <math|\<cal-T\><rsub|3>> is continuous so that
 
       <\equation>
@@ -21452,17 +21549,17 @@
 
       Using \ [example: <reference|diff translation is infinite
       differentiable>] it follows that <math|\<cal-T\><rsub|4>,\<cal-T\><rsub|5>>
-      are of class <math|C<rsup|\<infty\>>>. So applying [theorem:
+      are <math|C<rsup|\<infty\>>> on <math|Y>. So applying [theorem:
       <reference|diff restriction of a function of class C^n>] we have that\ 
 
       <\equation>
         <label|eq 16.405.142><around*|(|\<cal-T\><rsub|4>|)><rsub|\|V<rsub|0>>:V<rsub|0>\<rightarrow\>Y<text|,
         ><around*|(|<around*|(|\<cal-T\><rsub|4>|)><rsub|\|V<rsub|0>>|)><rsup|-1>:V<rsub|f<around*|(|x<rsub|0>|)>>\<rightarrow\>Y<text|
-        are of class >C<rsup|\<infty\>>
+        are >C<rsup|\<infty\>><text| on their respectively domains>
       </equation>
 
-      As <math|\<cal-T\><rsub|5>> is of class <math|C<rsup|\<infty\>>> hence
-      continuous it follows that
+      As <math|\<cal-T\><rsub|5>> is<math|C<rsup|\<infty\>>> on <math|Y>
+      hence continuous it follows that
 
       <\equation>
         <label|eq 16.406.142>V<rsub|f<around*|(|x<rsub|0>|)>>\<equallim\><rsub|<text|[eq:
@@ -21526,8 +21623,9 @@
     be the normed space equipped with the maximum norm
     <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|n>=max<around*|(|<around*|{|<around*|\||x<rsub|i>|\|>i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>>,
     <math|U> a open set in <math|\<bbb-K\><rsup|n>>, <math|x<rsub|0>\<in\>U>
-    and <math|f:\<bbb-K\><rsup|n>\<rightarrow\>\<bbb-K\><rsup|n>> a function
-    of class <math|C<rsup|m>> such that <math|det<around*|(|<bmatrix|<tformat|<table|<row|<cell|<frac|\<partial\><around*|(|f<rsub|1>,\<ldots\>,f<rsub|m>|)>|\<partial\><around*|(|1,\<ldots\>,n|)>>>>>>><rsub|x<rsub|0>>|)>\<neq\>0>
+    and <math|f:U\<rightarrow\>\<bbb-K\><rsup|n>> a function such that
+    <math|f> is <math|C<rsup|m>> on <math|U> such that
+    <math|det<around*|(|<bmatrix|<tformat|<table|<row|<cell|<frac|\<partial\><around*|(|f<rsub|1>,\<ldots\>,f<rsub|m>|)>|\<partial\><around*|(|1,\<ldots\>,n|)>>>>>>><rsub|x<rsub|0>>|)>\<neq\>0>
     then <math|f> is a local diffeomorphism of class <math|C<rsup|n>> at
     <math|x<rsub|0>>. In other words there exist a open set
     <math|U<rsub|x<rsub|0>>> in <math|\<bbb-K\><rsup|n>> with
@@ -21611,7 +21709,7 @@
     Using [theorem: <reference|diff C^1 and derivates>] it follows that\ 
 
     <\equation*>
-      f<text| is of class <math|C<rsup|1>>>
+      f<text| is <math|C<rsup|1>> on >U
     </equation*>
 
     As <math|f<rprime|'><rsub|x<rsub|0>>\<neq\>0> we can define the function
@@ -21651,7 +21749,7 @@
 
     <\equation*>
       <around*|(|f<rsub|\|U<rsub|x<rsub|0>>>|)><rsup|-1>:V<rsub|f<around*|(|x<rsub|0>|)>>\<rightarrow\>\<bbb-K\><text|
-      is of class <math|C<rsup|1>>>
+      is <math|C<rsup|1>> on >V<rsub|f<around*|(|x<rsub|0>|)>>
     </equation*>
 
     so that by [theorem: <reference|diff C^1 and derivates>]
@@ -21751,11 +21849,11 @@
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     and <math|<around*|\<langle\>|Z,<around*|\<\|\|\>||\<\|\|\>><rsub|Z>|\<rangle\>>>
     be Banach spaces, U a open set in <math|X>, <math|V> a open set in
-    <math|Y> and <math|f:U\<cdot\>V\<rightarrow\>Z> be a function of class
-    <math|C<rsup|n>>. Using [theorem: <reference|diff higher order
-    differentiation implies higher order partial differation (1)>] and
-    [definition: <reference|diff higher order partial differentiation>] \ we
-    have that\ 
+    <math|Y> and <math|f:U\<cdot\>V\<rightarrow\>Z> be a function that is
+    <math|C<rsup|n>> on <math|U\<cdot\>V>. Using [theorem: <reference|diff
+    higher order differentiation implies higher order partial differation
+    (1)>] and [definition: <reference|diff higher order partial
+    differentiation>] \ we have that\ 
 
     <\equation*>
       D<rsub|1>f:U\<cdot\>V\<rightarrow\>L<around*|(|X,Z|)><text| defined by
@@ -21776,7 +21874,7 @@
       a open set <math|V<rsub|0>\<subseteq\>V> with
       <math|<around*|(|x<rsub|0>,f<around*|(|x<rsub|0>,y<rsub|0>|)>|)>\<in\>W<rsub|0>>
       such that there exist a map <math|g:W<rsub|0>\<rightarrow\>V<rsub|0>>
-      of class <math|C<rsup|n>> such that
+      such that <math|g> is <math|C<rsup|n>> on <math|W<rsub|0>> such that
       <math|g<around*|(|x<rsub|0>,f<around*|(|x<rsub|0>,y<rsub|0>|)>|)>=y<rsub|0>>
       and
 
@@ -21790,10 +21888,10 @@
       that <math|<around*|(|D<rsub|2>f<around*|(|x,g<around*|(|x,z|)>|)>|)><rsup|-1>>
       exist.\ 
 
-      <item>As <math|g> is of class <math|C<rsup|n>> we have by [theorem:
-      <reference|diff higher order differentiation implies higher order
-      partial differation (1)>] and [definition: <reference|diff higher order
-      partial differentiation>] that\ 
+      <item>As <math|g> is <math|C<rsup|n>> on <math|W<rsub|0>> we have by
+      [theorem: <reference|diff higher order differentiation implies higher
+      order partial differation (1)>] and [definition: <reference|diff higher
+      order partial differentiation>] that\ 
 
       <\equation*>
         D<rsub|1>g:W<rsub|0>\<rightarrow\>L<around*|(|X,Y|)><text| defined by
@@ -21837,7 +21935,8 @@
 
     <\equation>
       <label|eq 16.403.143>\<pi\><rsup|X\<cdot\>Y><rsub|1>,\<pi\><rsup|X\<cdot\>Y><rsub|2>,\<pi\><rsup|X\<cdot\>Z><rsub|1>,\<pi\><rsup|X\<cdot\>Z><rsub|2><text|
-      and their restrictions to open sets are of class >C<rsup|\<infty\>>
+      and their restrictions to open sets are >C<rsup|\<infty\>><text| on
+      their domains>
     </equation>
 
     Define now the function
@@ -21857,8 +21956,8 @@
 
     <\equation>
       <label|eq 16.405.143>\<pi\><rsup|X\<cdot\>Y><rsub|1>\<circ\>\<varphi\>=<around*|(|\<pi\><rsup|X\<cdot\>Y><rsub|1>|)><rsub|\|U\<cdot\>V><text|
-      and >\<pi\><rsup|X\<cdot\>Y><rsub|1>\<circ\>\<varphi\><text| is of
-      class >C<rsup|\<infty\>>
+      and >\<pi\><rsup|X\<cdot\>Y><rsub|1>\<circ\>\<varphi\><text| is
+      >C<rsup|\<infty\>><text| on >U\<cdot\>V
     </equation>
 
     Further we have\ 
@@ -21871,8 +21970,8 @@
 
     <\equation>
       <label|eq 16.406.143>\<pi\><rsub|2><rsup|X\<cdot\>Y>\<circ\>\<varphi\>=f<text|
-      so that >\<pi\><rsub|2><rsup|X\<cdot\>Y>\<circ\>\<varphi\><text| is of
-      class >C<rsup|n>
+      so that >\<pi\><rsub|2><rsup|X\<cdot\>Y>\<circ\>\<varphi\><text| is
+      >C<rsup|n><text| on >U\<cdot\>V
     </equation>
 
     Using \ [theorem: <reference|diff higher order differentiation classes>]
@@ -21880,7 +21979,8 @@
     16.406.143>] proves that\ 
 
     <\equation>
-      <label|eq 16.407.143>\<varphi\><text| is of class <math|C<rsup|n>>>
+      <label|eq 16.407.143>\<varphi\><text| is <math|C<rsup|n>> on
+      >U\<cdot\>V
     </equation>
 
     So for <math|<around*|(|x,y|)>\<in\>U\<cdot\>V> we have that
@@ -22018,7 +22118,7 @@
 
     <\equation>
       <label|eq 16.417.145><around*|(|\<varphi\><rsub|\|U<rsub|0>\<cdot\>V<rsub|>>|)><rsup|-1>:W<rsub|0>\<rightarrow\>U<rsub|0>\<cdot\>V<rsub|0><text|
-      exists and is of class >C<rsup|n>
+      exists and is >C<rsup|n><text| on >W<rsub|0>
     </equation>
 
     If <math|<around*|(|x,z|)>\<in\>W<rsub|0>> then
@@ -22074,14 +22174,14 @@
       <label|eq 16.422.145>g<around*|(|x<rsub|0>,f<around*|(|x<rsub|0>,y<rsub|0>|)>|)>=y<rsub|0>
     </equation>
 
-    As <math|\<pi\><rsup|X\<cdot\>Y><rsub|2>> is of class
-    <math|C<rsup|\<infty\>>> [see eq: <reference|eq 16.403.143>] and by [eq:
+    As <math|\<pi\><rsup|X\<cdot\>Y><rsub|2>> is <math|C<rsup|\<infty\>>> on
+    <math|X\<cdot\>Y> [see eq: <reference|eq 16.403.143>] and by [eq:
     <reference|eq 16.417.145>] <math|<around*|(|\<varphi\><rsub|\|U<rsub|0>\<cdot\>V<rsub|0>>|)><rsup|-1>>
-    is of class <math|C<rsup|n>> it follows from the chain rule [theorem:
-    <reference|diff chain rule higher order class>] that\ 
+    is <math|C<rsup|n>> on <math|W<rsub|0>> it follows from the chain rule
+    [theorem: <reference|diff chain rule higher order class>] that\ 
 
     <\equation>
-      <label|eq 16.422.143>g<text| is of class >C<rsup|n>
+      <label|eq 16.422.143>g<text| is >C<rsup|n><text| on >W<rsub|0>
     </equation>
 
     As <math|\<varphi\><rsub|\|U<rsub|0>\<cdot\>V<rsub|0>>:U<rsub|0>\<cdot\>V<rsub|0>\<rightarrow\>W<rsub|0>>
@@ -22172,14 +22272,15 @@
     </equation*>
 
     By [example: <reference|diff projection functon is infinite times
-    differentiable>] <math|\<pi\><rsup|X\<cdot\>Y><rsub|1>> is of class
-    <math|C<rsup|\<infty\>>> and by [eq: <reference|eq 16.422.143>] <math|g>
-    is of class <math|C<rsup|n>>, so using the above and [theorem:
-    <reference|diff higher order differentiation classes>] it follows that\ 
+    differentiable>] <math|\<pi\><rsup|X\<cdot\>Y><rsub|1>> is
+    <math|C<rsup|\<infty\>>> on <math|X\<cdot\>Y> and by [eq: <reference|eq
+    16.422.143>] <math|g> is <math|C<rsup|n>> on <math|W<rsub|0>>, so using
+    the above and [theorem: <reference|diff higher order differentiation
+    classes>] it follows that\ 
 
     <\equation>
-      <label|eq 16.428.144>\<psi\><text| is of class >C<rsup|n><text| hence
-      Fréchet differentiable on >W<rsub|0>
+      <label|eq 16.428.144>\<psi\><text| is >C<rsup|n><text| on
+      <math|W<rsub|0>> hence Fréchet differentiable on >W<rsub|0>
     </equation>
 
     Define\ 
@@ -22243,11 +22344,11 @@
       and ><around*|(|\<pi\><rsup|X\<cdot\>Z><rsub|2>\<circ\>\<psi\>|)>\<circ\>I<rsup|<around*|[|1,<around*|(|x,z|)>|]>>=g\<circ\>I<rsup|<around*|[|1,<around*|(|x,z|)>|]>>
     </equation>
 
-    As <math|g> is of class <math|C<rsup|n>> [see eq: <reference|eq
-    16.422.143>] <math|g> is Fréchet differentiable on <math|W<rsub|0>> hence
-    by [theorem: <reference|diff higher order differentiation implies higher
-    order partial differation (1)>] and [definition: <reference|diff higher
-    order partial differentiation>] that\ 
+    As <math|g> is <math|C<rsup|n>> on <math|W<rsub|0>> [see eq:
+    <reference|eq 16.422.143>] <math|g> is Fréchet differentiable on
+    <math|W<rsub|0>> hence by [theorem: <reference|diff higher order
+    differentiation implies higher order partial differation (1)>] and
+    [definition: <reference|diff higher order partial differentiation>] that\ 
 
     <\equation*>
       D<rsub|1>g:W<rsub|0>\<rightarrow\>L<around*|(|X,Y|)><text| defined by
@@ -22382,11 +22483,11 @@
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     and <math|<around*|\<langle\>|Z,<around*|\<\|\|\>||\<\|\|\>><rsub|Z>|\<rangle\>>>
     be Banach spaces, <math|U> a open set in <math|X>, <math|V> a open set in
-    <math|Y> and <math|f:U\<cdot\>V\<rightarrow\>Z> of class
-    <math|C<rsup|n>>. Using [theorem: <reference|diff higher order
-    differentiation implies higher order partial differation (1)>] and
-    [definition: <reference|diff higher order partial differentiation>] \ we
-    have that\ 
+    <math|Y> and <math|f:U\<cdot\>V\<rightarrow\>Z> a function that is
+    <math|C<rsup|n>> on <math|U\<cdot\>V>. Using [theorem: <reference|diff
+    higher order differentiation implies higher order partial differation
+    (1)>] and [definition: <reference|diff higher order partial
+    differentiation>] \ we have that\ 
 
     <\equation*>
       D<rsub|1>f:U\<cdot\>V\<rightarrow\>L<around*|(|X,Z|)><text| defined by
@@ -22402,7 +22503,7 @@
     such that <math|D<rsub|2>f<around*|(|x<rsub|0>,y<rsub|0>|)>> is bijective
     then there exist a open set <math|W> with
     <math|x<rsub|0>\<in\>W\<subseteq\>U> and a function
-    <math|g:W\<rightarrow\>Y> of class <math|C<rsup|n>> such that
+    <math|g:W\<rightarrow\>Y> that is <math|C<rsup|n>> on <math|W> such that
 
     <\equation*>
       g<around*|(|x<rsub|0>|)>=y<rsub|0><text| and >\<forall\>x\<in\>W<text|
@@ -22423,8 +22524,8 @@
     function theorem>] there exist a open set
     <math|W<rsub|0>\<subseteq\>U\<cdot\>Z> and a open set
     <math|V<rsub|0>\<subseteq\>V> with <math|<around*|(|x<rsub|0>,y<rsub|0>|)>\<in\>W<rsub|0>>
-    such that there exist a map <math|h:W<rsub|0>\<rightarrow\>V<rsub|0>> of
-    class <math|C<rsup|n>> such that
+    such that there exist a map <math|h:W<rsub|0>\<rightarrow\>V<rsub|0>>
+    that is <math|C<rsup|n>> on <math|W<rsub|0>> and satisfies
 
     <\equation>
       <around*|(|x<rsub|0>,f<around*|(|x<rsub|0>,y<rsub|0>|)>|)>\<in\>W<rsub|0>
@@ -22434,7 +22535,7 @@
       <label|eq 16.438.145>h<around*|(|x<rsub|0>,f<around*|(|x<rsub|0>,y<rsub|0>|)>|)>=y<rsub|0>
     </equation>
 
-    and <math|\<forall\><around*|(|x,z|)>\<in\>W<rsub|0>> we have
+    and <math|\<forall\><around*|(|x,z|)>\<in\>W<rsub|0>>\ 
 
     <\equation>
       <label|eq 16.439.145>f<around*|(|x,h<around*|(|x,z|)>|)>=z<text|>
@@ -22516,13 +22617,14 @@
     </equation*>
 
     Using the chain rule [see theorem: <reference|diff chain rule higher
-    order class>] and the fact that <math|h> is of class <math|C<rsup|n>> and
-    <math|I<rsup|<around*|[|1,<around*|(|x,f<around*|(|x<rsub|0>,y<rsub|0>|)>|)>|]>>>
-    is of class <math|C<rsup|\<infty\>>> [see example: <reference|diff
-    unprojection is infinite times differentiable>] it follows that\ 
+    order class>] and the fact that <math|h> is <math|C<rsup|n>> on
+    <math|W<rsub|0>> and <math|I<rsup|<around*|[|1,<around*|(|x,f<around*|(|x<rsub|0>,y<rsub|0>|)>|)>|]>>>
+    is <math|C<rsup|\<infty\>>> on <math|W<rsub|0>> [see example:
+    <reference|diff unprojection is infinite times differentiable>] it
+    follows that\ 
 
     <\equation>
-      <label|eq 16.445.145>g<text| is of class >C<rsup|r>
+      <label|eq 16.445.145>g<text| is >C<rsup|n><text| on >W
     </equation>
 
     so that
@@ -22643,13 +22745,13 @@
     <associate|auto-70|<tuple|implict function theorem (2)|?>>
     <associate|auto-8|<tuple|16.1.3|?>>
     <associate|auto-9|<tuple|differentiability|?>>
-    <associate|conjecture 16.245.136|<tuple|16.262|?>>
-    <associate|conjecture 16.246.136|<tuple|16.263|?>>
-    <associate|conjecture 16.247.136|<tuple|16.264|?>>
-    <associate|conjecture 16.248.136|<tuple|16.265|?>>
-    <associate|conjecture 16.252|<tuple|16.267|?>>
+    <associate|conjecture 16.245.136|<tuple|16.263|?>>
+    <associate|conjecture 16.246.136|<tuple|16.264|?>>
+    <associate|conjecture 16.247.136|<tuple|16.265|?>>
+    <associate|conjecture 16.248.136|<tuple|16.266|?>>
+    <associate|conjecture 16.252|<tuple|16.268|?>>
     <associate|continuity limit of composition of linear
-    maps|<tuple|16.243|?>>
+    maps|<tuple|16.244|?>>
     <associate|continuity of a function and convergence of the
     function|<tuple|16.9|?>>
     <associate|convergence of a function to a point|<tuple|16.5|?>>
@@ -22665,35 +22767,35 @@
     <associate|diff D^f=D^(n-1)D^1f|<tuple|16.122|?>>
     <associate|diff Frechet differentation implies partial differentiability
     |<tuple|16.52|?>>
-    <associate|diff GL(X) is a group|<tuple|16.242|?>>
-    <associate|diff H^n properties|<tuple|16.246|?>>
+    <associate|diff GL(X) is a group|<tuple|16.243|?>>
+    <associate|diff H^n properties|<tuple|16.247|?>>
     <associate|diff I+H has inverse if norm of H is less then
-    1|<tuple|16.250|?>>
+    1|<tuple|16.251|?>>
     <associate|diff Jacobian matrix|<tuple|16.68|?>>
-    <associate|diff L(x1:..:xn) (1)|<tuple|16.198|?>>
+    <associate|diff L(x1:..:xn) (1)|<tuple|16.199|?>>
     <associate|diff L(x1:..xn)|<tuple|16.79|?>>
     <associate|diff L(x1:..xn)=L(1:..:1). product|<tuple|16.83|?>>
     <associate|diff L_n(X;Y)|<tuple|16.75|?>>
-    <associate|diff L_n(x1,..,xn;Y)|<tuple|16.194|?>>
-    <associate|diff Lagrange theorem|<tuple|16.151|?>>
-    <associate|diff Lagrange theorem (1)|<tuple|16.152|?>>
-    <associate|diff Rolle's theorem|<tuple|16.150|?>>
+    <associate|diff L_n(x1,..,xn;Y)|<tuple|16.195|?>>
+    <associate|diff Lagrange theorem|<tuple|16.152|?>>
+    <associate|diff Lagrange theorem (1)|<tuple|16.153|?>>
+    <associate|diff Rolle's theorem|<tuple|16.151|?>>
     <associate|diff Ux|<tuple|16.1|?>>
     <associate|diff Ux=-x+U=U-x|<tuple|16.3|?>>
-    <associate|diff balls are convex|<tuple|16.173|?>>
+    <associate|diff balls are convex|<tuple|16.174|?>>
     <associate|diff bilinear mappings are infinite times
-    differentiable|<tuple|16.134|?>>
+    differentiable|<tuple|16.135|?>>
     <associate|diff calculus derivate|<tuple|16.12|?>>
     <associate|diff calculus derivate (1)|<tuple|16.13|?>>
     <associate|diff chain rule|<tuple|16.39|?>>
     <associate|diff chain rule (1)|<tuple|16.40|?>>
     <associate|diff chain rule and partial differential|<tuple|16.57|?>>
     <associate|diff chain rule calculus|<tuple|16.41|?>>
-    <associate|diff chain rule higher order|<tuple|16.144|?>>
-    <associate|diff chain rule higher order class|<tuple|16.146|?>>
+    <associate|diff chain rule higher order|<tuple|16.145|?>>
+    <associate|diff chain rule higher order class|<tuple|16.147|?>>
     <associate|diff class C^1 is equivalent with continuous partial
-    derivatest|<tuple|16.221|?>>
-    <associate|diff class C^1 on a closed interval|<tuple|16.167|?>>
+    derivatest|<tuple|16.222|?>>
+    <associate|diff class C^1 on a closed interval|<tuple|16.168|?>>
     <associate|diff class C^@@|<tuple|16.105|?>>
     <associate|diff class C^n|<tuple|16.103|?>>
     <associate|diff composition with a linear mapping|<tuple|16.42|?>>
@@ -22702,29 +22804,29 @@
     <associate|diff constant function has a derivative|<tuple|16.36|?>>
     <associate|diff constant function is differentiable|<tuple|16.26|?>>
     <associate|diff constant function is infinitely times
-    differentiable|<tuple|16.127|?>>
+    differentiable|<tuple|16.128|?>>
     <associate|diff continuous partial differentials implies
-    differentiability|<tuple|16.220|?>>
-    <associate|diff convex concave|<tuple|16.154|?>>
-    <associate|diff convex set|<tuple|16.172|?>>
-    <associate|diff convex/concave alternative|<tuple|16.155|?>>
+    differentiability|<tuple|16.221|?>>
+    <associate|diff convex concave|<tuple|16.155|?>>
+    <associate|diff convex set|<tuple|16.173|?>>
+    <associate|diff convex/concave alternative|<tuple|16.156|?>>
     <associate|diff derivate and frechet differential|<tuple|16.32|?>>
-    <associate|diff derivate and local extremum|<tuple|16.149|?>>
-    <associate|diff derivate and local minimum and maximum|<tuple|16.157|?>>
+    <associate|diff derivate and local extremum|<tuple|16.150|?>>
+    <associate|diff derivate and local minimum and maximum|<tuple|16.158|?>>
     <associate|diff derivate of a product of functions|<tuple|16.71|?>>
     <associate|diff derivate of inverse function|<tuple|16.72|?>>
-    <associate|diff derivate on [a,b] linearity|<tuple|16.165|?>>
+    <associate|diff derivate on [a,b] linearity|<tuple|16.166|?>>
     <associate|diff derivate on [a,b] of a constant
-    function|<tuple|16.164|?>>
-    <associate|diff derivate on a closed interval|<tuple|16.162|?>>
+    function|<tuple|16.165|?>>
+    <associate|diff derivate on a closed interval|<tuple|16.163|?>>
     <associate|diff derivate operator is linear|<tuple|16.38|?>>
     <associate|diff derivative is local|<tuple|16.33|?>>
     <associate|diff derivative is unique if domain is open|<tuple|16.11|?>>
     <associate|diff derivative of f/g|<tuple|16.74|?>>
-    <associate|diff diffeomorphism|<tuple|16.252|?>>
-    <associate|diff diffeomorphism D(f@f^-1)|<tuple|16.257|?>>
-    <associate|diff diffeomorphism composition|<tuple|16.258|?>>
-    <associate|diff diffeomorphism condition|<tuple|16.256|?>>
+    <associate|diff diffeomorphism|<tuple|16.253|?>>
+    <associate|diff diffeomorphism D(f@f^-1)|<tuple|16.258|?>>
+    <associate|diff diffeomorphism composition|<tuple|16.259|?>>
+    <associate|diff diffeomorphism condition|<tuple|16.257|?>>
     <associate|diff differentiability|<tuple|16.18|?>>
     <associate|diff differentiability alternative
     definitions|<tuple|16.29|?>>
@@ -22734,7 +22836,7 @@
     <associate|diff differentiability is a local property|<tuple|16.24|?>>
     <associate|diff differentiability is a local property
     (1)|<tuple|16.25|?>>
-    <associate|diff differentiability on a closed set|<tuple|16.166|?>>
+    <associate|diff differentiability on a closed set|<tuple|16.167|?>>
     <associate|diff differentiability on a set|<tuple|16.20|?>>
     <associate|diff differentiable function is continuous|<tuple|16.31|?>>
     <associate|diff differential is unique|<tuple|16.17|?>>
@@ -22742,92 +22844,94 @@
     <associate|diff differential of product of functions|<tuple|16.70|?>>
     <associate|diff e-mapping|<tuple|16.28|?>>
     <associate|diff equivalent norms|<tuple|16.23|?>>
-    <associate|diff evaluation operator|<tuple|16.184|?>>
+    <associate|diff evaluation operator|<tuple|16.185|?>>
     <associate|diff f is of class C^n if D^1f u=is of class
     C^n-1|<tuple|16.124|?>>
-    <associate|diff f(t)=a.x+y is infinite differentiable|<tuple|16.130|?>>
-    <associate|diff fundamental theorem of calculus (1)|<tuple|16.168|?>>
-    <associate|diff fundamental theorem of calculus (2)|<tuple|16.169|?>>
+    <associate|diff f is of class C^n if D^1f u=is of class C^n-1
+    (1)|<tuple|16.125|?>>
+    <associate|diff f(t)=a.x+y is infinite differentiable|<tuple|16.131|?>>
+    <associate|diff fundamental theorem of calculus (1)|<tuple|16.169|?>>
+    <associate|diff fundamental theorem of calculus (2)|<tuple|16.170|?>>
     <associate|diff higher order continuous differential and higher order
-    continuous derivate|<tuple|16.231|?>>
+    continuous derivate|<tuple|16.232|?>>
     <associate|diff higher order derivate|<tuple|16.113|?>>
     <associate|diff higher order derivate and differential|<tuple|16.115|?>>
-    <associate|diff higher order derivate is linear|<tuple|16.126|?>>
+    <associate|diff higher order derivate is linear|<tuple|16.127|?>>
     <associate|diff higher order derivate on a open set|<tuple|16.116|?>>
     <associate|diff higher order derivate on a open set (1)|<tuple|16.117|?>>
-    <associate|diff higher order derivates|<tuple|16.222|?>>
-    <associate|diff higher order derivates on a open set|<tuple|16.224|?>>
+    <associate|diff higher order derivates|<tuple|16.223|?>>
+    <associate|diff higher order derivates on a open set|<tuple|16.225|?>>
     <associate|diff higher order differation implies higher order partial
-    differation|<tuple|16.213|?>>
-    <associate|diff higher order differential is linear|<tuple|16.125|?>>
-    <associate|diff higher order differential of a product|<tuple|16.145|?>>
+    differation|<tuple|16.214|?>>
+    <associate|diff higher order differential is linear|<tuple|16.126|?>>
+    <associate|diff higher order differential of a product|<tuple|16.146|?>>
     <associate|diff higher order differential of a product
-    (1)|<tuple|16.147|?>>
+    (1)|<tuple|16.148|?>>
     <associate|diff higher order differentials are symmetric in there
-    arguments|<tuple|16.191|?>>
+    arguments|<tuple|16.192|?>>
     <associate|diff higher order differentiation|<tuple|16.94|?>>
     <associate|diff higher order differentiation (1)|<tuple|16.101|?>>
     <associate|diff higher order differentiation and vector
-    functions|<tuple|16.140|?>>
-    <associate|diff higher order differentiation classes|<tuple|16.142|?>>
+    functions|<tuple|16.141|?>>
+    <associate|diff higher order differentiation classes|<tuple|16.143|?>>
     <associate|diff higher order differentiation implies higher order
-    derivates|<tuple|16.233|?>>
+    derivates|<tuple|16.234|?>>
     <associate|diff higher order differentiation implies higher order partial
-    differation (1)|<tuple|16.214|?>>
+    differation (1)|<tuple|16.215|?>>
     <associate|diff higher order differentiation is local|<tuple|16.96|?>>
     <associate|diff higher order differentiation on a open
     set|<tuple|16.97|?>>
     <associate|diff higher order differentiation on a open set
     (1)|<tuple|16.99|?>>
-    <associate|diff higher order partial differentiation|<tuple|16.208|?>>
+    <associate|diff higher order partial differentiation|<tuple|16.209|?>>
     <associate|diff higher order partial differentiation is
-    symmetric|<tuple|16.215|?>>
+    symmetric|<tuple|16.216|?>>
     <associate|diff higher order partial differentiation on a open
-    set|<tuple|16.210|?>>
+    set|<tuple|16.211|?>>
     <associate|diff homeomorphism is a diffeomorphism of class
-    C^0|<tuple|16.253|?>>
+    C^0|<tuple|16.254|?>>
     <associate|diff identity function is differentiable|<tuple|16.22|?>>
     <associate|diff identity function is infinite times
-    differentiable|<tuple|16.129|?>>
+    differentiable|<tuple|16.130|?>>
     <associate|diff identity has a derivative|<tuple|16.37|?>>
-    <associate|diff implicit function theorem|<tuple|16.271|?>>
-    <associate|diff implicit function theorem (1)|<tuple|16.272|?>>
-    <associate|diff increasing decreasing function|<tuple|16.153|?>>
+    <associate|diff implicit function theorem|<tuple|16.272|?>>
+    <associate|diff implicit function theorem (1)|<tuple|16.273|?>>
+    <associate|diff increasing decreasing function|<tuple|16.154|?>>
     <associate|diff inifint=ite differentiable|<tuple|16.100|?>>
-    <associate|diff inverse function theorem|<tuple|16.260|?>>
-    <associate|diff inverse function theorem and Jacobian|<tuple|16.268|?>>
-    <associate|diff inverse mapping on GL(X)|<tuple|16.251|?>>
-    <associate|diff left and right derivate|<tuple|16.159|?>>
-    <associate|diff left and right derivate and derivate|<tuple|16.161|?>>
-    <associate|diff left/right derivate linearity|<tuple|16.160|?>>
-    <associate|diff line segment [0,1]|<tuple|16.177|?>>
+    <associate|diff inverse function theorem|<tuple|16.261|?>>
+    <associate|diff inverse function theorem and Jacobian|<tuple|16.269|?>>
+    <associate|diff inverse mapping on GL(X)|<tuple|16.252|?>>
+    <associate|diff left and right derivate|<tuple|16.160|?>>
+    <associate|diff left and right derivate and derivate|<tuple|16.162|?>>
+    <associate|diff left/right derivate linearity|<tuple|16.161|?>>
+    <associate|diff line segment [0,1]|<tuple|16.178|?>>
     <associate|diff linear isomorphism between Banach spaces are
-    diffeomorphisms|<tuple|16.254|?>>
+    diffeomorphisms|<tuple|16.255|?>>
     <associate|diff linear mapping is infinite times
-    differentiable|<tuple|16.128|?>>
+    differentiable|<tuple|16.129|?>>
     <associate|diff linear mappings are differentiable|<tuple|16.27|?>>
     <associate|diff linear to multilinear|<tuple|16.91|?>>
-    <associate|diff linear to multilinear (1)|<tuple|16.206|?>>
-    <associate|diff linesegement|<tuple|16.175|?>>
-    <associate|diff local diffeomorphism|<tuple|16.259|?>>
-    <associate|diff mean value theorem (0)|<tuple|16.174|?>>
-    <associate|diff mean value theorem (1)|<tuple|16.171|?>>
-    <associate|diff mean value theorem (2)|<tuple|16.174|?>>
-    <associate|diff mean value theorem (3)|<tuple|16.179|?>>
-    <associate|diff mean value theorem (3.1)|<tuple|16.180|?>>
-    <associate|diff mean value theorem (4)|<tuple|16.181|?>>
-    <associate|diff minimum maximum|<tuple|16.148|?>>
+    <associate|diff linear to multilinear (1)|<tuple|16.207|?>>
+    <associate|diff linesegement|<tuple|16.176|?>>
+    <associate|diff local diffeomorphism|<tuple|16.260|?>>
+    <associate|diff mean value theorem (0)|<tuple|16.175|?>>
+    <associate|diff mean value theorem (1)|<tuple|16.172|?>>
+    <associate|diff mean value theorem (2)|<tuple|16.175|?>>
+    <associate|diff mean value theorem (3)|<tuple|16.180|?>>
+    <associate|diff mean value theorem (3.1)|<tuple|16.181|?>>
+    <associate|diff mean value theorem (4)|<tuple|16.182|?>>
+    <associate|diff minimum maximum|<tuple|16.149|?>>
     <associate|diff multiparameter function to one parameter
     function|<tuple|16.46|?>>
     <associate|diff n-times and m-times differentiability|<tuple|16.118|?>>
     <associate|diff partial derivate and partial
     differential|<tuple|16.59|?>>
     <associate|diff partial derivate and partial differential of higher
-    order|<tuple|16.225|?>>
+    order|<tuple|16.226|?>>
     <associate|diff partial derivate and partial differential of higher order
-    (1)|<tuple|16.229|?>>
+    (1)|<tuple|16.230|?>>
     <associate|diff partial derivate and partial differential of higher order
-    (2)|<tuple|16.230|?>>
+    (2)|<tuple|16.231|?>>
     <associate|diff partial derivate definition|<tuple|16.58|?>>
     <associate|diff partial derivation is local|<tuple|16.60|?>>
     <associate|diff partial differentiability does not mean
@@ -22838,21 +22942,21 @@
     <associate|diff partial differentiation is local|<tuple|16.50|?>>
     <associate|diff partial differentiation is local (1)|<tuple|16.51|?>>
     <associate|diff power|<tuple|16.73|?>>
-    <associate|diff power of composition|<tuple|16.245|?>>
+    <associate|diff power of composition|<tuple|16.246|?>>
     <associate|diff projection functon is infinite times
-    differentiable|<tuple|16.133|?>>
+    differentiable|<tuple|16.134|?>>
     <associate|diff restriction of a diffeomorphism is a
-    diffeomorphism|<tuple|16.255|?>>
+    diffeomorphism|<tuple|16.256|?>>
     <associate|diff restriction of a function of class C^n|<tuple|16.106|?>>
     <associate|diff scalar product function has a derivate|<tuple|16.15|?>>
-    <associate|diff second derivate convex concave|<tuple|16.156|?>>
-    <associate|diff space of toplinear isomorphism|<tuple|16.241|?>>
+    <associate|diff second derivate convex concave|<tuple|16.157|?>>
+    <associate|diff space of toplinear isomorphism|<tuple|16.242|?>>
     <associate|diff toplinear isomorphism between Banach
-    spaces|<tuple|16.240|?>>
-    <associate|diff translation is infinite differentiable|<tuple|16.132|?>>
+    spaces|<tuple|16.241|?>>
+    <associate|diff translation is infinite differentiable|<tuple|16.133|?>>
     <associate|diff unprojection|<tuple|16.43|?>>
     <associate|diff unprojection is infinite times
-    differentiable|<tuple|16.131|?>>
+    differentiable|<tuple|16.132|?>>
     <associate|diff vector functions|<tuple|16.62|?>>
     <associate|diff vector functions (1)|<tuple|16.65|?>>
     <associate|diff vector functions (2)|<tuple|16.67|?>>
@@ -22871,6 +22975,7 @@
     <associate|eq 16.104.181|<tuple|16.104|?>>
     <associate|eq 16.104.194|<tuple|16.140|?>>
     <associate|eq 16.105.194|<tuple|16.141|?>>
+    <associate|eq 16.105.200|<tuple|16.105|?>>
     <associate|eq 16.11.178|<tuple|16.12|?>>
     <associate|eq 16.118.181|<tuple|16.118|?>>
     <associate|eq 16.119.181|<tuple|16.119|?>>
@@ -22963,7 +23068,7 @@
     <associate|eq 16.168.200|<tuple|16.195|?>>
     <associate|eq 16.17.178|<tuple|16.20|?>>
     <associate|eq 16.17.180|<tuple|16.32|?>>
-    <associate|eq 16.176.211|<tuple|16.199|?>>
+    <associate|eq 16.176.211|<tuple|16.200|?>>
     <associate|eq 16.179.200|<tuple|16.206|?>>
     <associate|eq 16.18.178|<tuple|16.23|?>>
     <associate|eq 16.18.179|<tuple|16.21|?>>
@@ -23314,39 +23419,39 @@
     <associate|eq 16.91.199|<tuple|16.116|?>>
     <associate|eq 16.92.194|<tuple|16.127|?>>
     <associate|eq 16.95.181|<tuple|16.95|?>>
-    <associate|inverse function and derivate|<tuple|16.269|?>>
-    <associate|lemma 16.101.194|<tuple|16.143|?>>
-    <associate|lemma 16.104.194|<tuple|16.187|?>>
-    <associate|lemma 16.105.194|<tuple|16.188|?>>
-    <associate|lemma 16.135.200|<tuple|16.170|?>>
-    <associate|lemma 16.139.181|<tuple|16.141|?>>
-    <associate|lemma 16.144.201|<tuple|16.178|?>>
-    <associate|lemma 16.155.203|<tuple|16.182|?>>
-    <associate|lemma 16.157.205|<tuple|16.183|?>>
-    <associate|lemma 16.159.206|<tuple|16.185|?>>
-    <associate|lemma 16.160.206|<tuple|16.186|?>>
-    <associate|lemma 16.166.210|<tuple|16.189|?>>
-    <associate|lemma 16.167.210|<tuple|16.190|?>>
-    <associate|lemma 16.173.211|<tuple|16.196|?>>
-    <associate|lemma 16.174.211|<tuple|16.197|?>>
-    <associate|lemma 16.177.211|<tuple|16.200|?>>
-    <associate|lemma 16.178.210|<tuple|16.201|?>>
-    <associate|lemma 16.179.210|<tuple|16.202|?>>
-    <associate|lemma 16.180.210|<tuple|16.203|?>>
-    <associate|lemma 16.181.210|<tuple|16.204|?>>
-    <associate|lemma 16.182.210|<tuple|16.205|?>>
-    <associate|lemma 16.192.122|<tuple|16.211|?>>
-    <associate|lemma 16.195.124|<tuple|16.212|?>>
+    <associate|inverse function and derivate|<tuple|16.270|?>>
+    <associate|lemma 16.101.194|<tuple|16.144|?>>
+    <associate|lemma 16.104.194|<tuple|16.188|?>>
+    <associate|lemma 16.105.194|<tuple|16.189|?>>
+    <associate|lemma 16.135.200|<tuple|16.171|?>>
+    <associate|lemma 16.139.181|<tuple|16.142|?>>
+    <associate|lemma 16.144.201|<tuple|16.179|?>>
+    <associate|lemma 16.155.203|<tuple|16.183|?>>
+    <associate|lemma 16.157.205|<tuple|16.184|?>>
+    <associate|lemma 16.159.206|<tuple|16.186|?>>
+    <associate|lemma 16.160.206|<tuple|16.187|?>>
+    <associate|lemma 16.166.210|<tuple|16.190|?>>
+    <associate|lemma 16.167.210|<tuple|16.191|?>>
+    <associate|lemma 16.173.211|<tuple|16.197|?>>
+    <associate|lemma 16.174.211|<tuple|16.198|?>>
+    <associate|lemma 16.177.211|<tuple|16.201|?>>
+    <associate|lemma 16.178.210|<tuple|16.202|?>>
+    <associate|lemma 16.179.210|<tuple|16.203|?>>
+    <associate|lemma 16.180.210|<tuple|16.204|?>>
+    <associate|lemma 16.181.210|<tuple|16.205|?>>
+    <associate|lemma 16.182.210|<tuple|16.206|?>>
+    <associate|lemma 16.192.122|<tuple|16.212|?>>
+    <associate|lemma 16.195.124|<tuple|16.213|?>>
     <associate|lemma 16.2.177|<tuple|16.7|?>>
-    <associate|lemma 16.200.126|<tuple|16.218|?>>
-    <associate|lemma 16.202.127|<tuple|16.219|?>>
-    <associate|lemma 16.211.127|<tuple|16.228|?>>
-    <associate|lemma 16.216.144|<tuple|16.232|?>>
-    <associate|lemma 16.228.127|<tuple|16.247|?>>
-    <associate|lemma 16.229.127|<tuple|16.248|?>>
+    <associate|lemma 16.200.126|<tuple|16.219|?>>
+    <associate|lemma 16.202.127|<tuple|16.220|?>>
+    <associate|lemma 16.211.127|<tuple|16.229|?>>
+    <associate|lemma 16.216.144|<tuple|16.233|?>>
+    <associate|lemma 16.228.127|<tuple|16.248|?>>
+    <associate|lemma 16.229.127|<tuple|16.249|?>>
     <associate|lemma 16.23.181|<tuple|16.69|?>>
     <associate|lemma 16.24.178|<tuple|16.45|?>>
-    <associate|lemma 16.254.143|<tuple|16.270|?>>
+    <associate|lemma 16.254.143|<tuple|16.271|?>>
     <associate|lemma 16.5.178|<tuple|16.10|?>>
     <associate|lemma 16.51.186|<tuple|16.82|?>>
     <associate|lemma 16.53.186|<tuple|16.84|?>>
@@ -23359,22 +23464,22 @@
     <associate|lemma 16.61.207|<tuple|16.77|?>>
     <associate|lemma 16.72.189|<tuple|16.114|?>>
     <associate|lemma 16.83.197|<tuple|16.110|?>>
-    <associate|lemma 16.93.193|<tuple|16.136|?>>
-    <associate|lemma 16.96.193|<tuple|16.137|?>>
-    <associate|lemma 16.97.193|<tuple|16.138|?>>
-    <associate|lemma 16.98.194|<tuple|16.139|?>>
+    <associate|lemma 16.93.193|<tuple|16.137|?>>
+    <associate|lemma 16.96.193|<tuple|16.138|?>>
+    <associate|lemma 16.97.193|<tuple|16.139|?>>
+    <associate|lemma 16.98.194|<tuple|16.140|?>>
     <associate|limit of a function|<tuple|16.8|?>>
     <associate|note 16.103.180|<tuple|16.104|?>>
-    <associate|note 16.210.127|<tuple|16.227|?>>
+    <associate|note 16.210.127|<tuple|16.228|?>>
     <associate|note 16.65.191|<tuple|16.95|?>>
-    <associate|proposition 16.244.134|<tuple|16.261|?>>
-    <associate|proposition 16.249.138|<tuple|16.266|?>>
-    <associate|toplinear isomorphism|<tuple|16.237|?>>
+    <associate|proposition 16.244.134|<tuple|16.262|?>>
+    <associate|proposition 16.249.138|<tuple|16.267|?>>
+    <associate|toplinear isomorphism|<tuple|16.238|?>>
     <associate|topology normed space is a topological vector
-    space|<tuple|16.236|?>>
+    space|<tuple|16.237|?>>
     <associate|topology toplinear isomorphism in a normed
-    space|<tuple|16.239|?>>
-    <associate|topology topological vector space|<tuple|16.235|?>>
+    space|<tuple|16.240|?>>
+    <associate|topology topological vector space|<tuple|16.236|?>>
   </collection>
 </references>
 
