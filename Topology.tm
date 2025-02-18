@@ -4494,6 +4494,8 @@
   We prove now that every open set in <math|<around*|\<langle\>|\<bbb-R\>.\<cal-T\><rsub|<around*|\|||\|>>|\<rangle\>>>
   is a countable union of open intervals.
 
+  \;
+
   <\theorem>
     <label|normed open set as union of intervals>Given
     <math|<around*|\<langle\>|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|\<rangle\>>>
@@ -4501,10 +4503,17 @@
     absolute value norm and <math|U\<in\>\<cal-T\><rsub|<around*|\|||\|>>> a
     open set then there exists a <math|\<cal-U\>\<subseteq\>\<cal-T\><rsub|<around*|\|||\|>>>
     where <math|\<cal-U\>> is countable and <math|\<forall\>I\<in\>\<cal-U\>>
-    we have that <math|I> is a open generalized interval such that\ 
+    we have that <math|I> is a non empty open generalized interval such that\ 
 
     <\equation*>
       U=<big|cup><rsub|I\<in\>\<cal-U\>>I
+    </equation*>
+
+    and
+
+    <\equation*>
+      \<forall\>I,J\<in\>\<cal-U\><text| with >I\<neq\>J<text| we have
+      >I<big|cap>J=\<varnothing\>
     </equation*>
   </theorem>
 
@@ -4540,17 +4549,26 @@
 
       <\description>
         <item*|<math|x\<leqslant\>y\<leqslant\>z>>Then by [eq: <reference|eq
-        14.25.146>] we have <math|<around*|]|x,y|[>\<subseteq\>U\<wedge\><around*|]|y,z|[>\<subseteq\>U>
+        14.25.146>] we have
+
+        <\equation*>
+          <around*|]|x,y|[>=<around*|]|min<around*|(|x,y|)>,max<around*|(|x,y|)>|[>\<subseteq\>U\<wedge\><around*|]|y,z|[>=<around*|]|min<around*|(|y,z|)>,max<around*|(|y,z|)>|[>\<subseteq\>U
+        </equation*>
+
         and as <math|y\<in\>U>
 
         <\equation*>
-          <around*|]|min<around*|(|x,z|)>,max<around*|(|x,|)>|[>=<around*|]|x,z|[>=<around*|]|x,y|[><big|cup><around*|{|y|}><big|cup><around*|]|y,z|[>\<subseteq\>U
+          <around*|]|min<around*|(|x,z|)>,max<around*|(|x,z|)>|[>=<around*|]|x,z|[>=<around*|]|x,y|[><big|cup><around*|{|y|}><big|cup><around*|]|y,z|[>\<subseteq\>U
         </equation*>
 
         proving that <math|x\<sim\>z>.
 
         <item*|<math|x\<leqslant\>z\<leqslant\>y>>Then by [eq: <reference|eq
-        14.25.146>] we have <math|<around*|]|x,y|[>\<subseteq\>U\<wedge\><around*|]|z,y|[>\<subseteq\>U>\ 
+        14.25.146>] we have
+
+        <\equation*>
+          <around*|]|x,y|[>=<around*|]|min<around*|(|x,y|)>,max<around*|(|x,y|)>|[>\<subseteq\>U\<wedge\><around*|]|z,y|[>=<around*|]|min<around*|(|y,z|)>,max<around*|(|y,z|)>|[>\<subseteq\>U
+        </equation*>
 
         <\equation*>
           <around*|]|min<around*|(|x,z|)>,max<around*|(|x,z|)>|[>=<around*|]|x,z|[>\<subseteq\><around*|]|x,y|[>\<subseteq\>U
@@ -4559,7 +4577,11 @@
         proving that <math|x\<sim\>z>.
 
         <item*|<math|y\<leqslant\>x\<leqslant\>z>>Then by [eq: <reference|eq
-        14.25.146>] we have <math|<around*|]|y,x|[>\<subseteq\>U\<wedge\><around*|]|y,z|[>\<subseteq\>U>
+        14.25.146>] we have
+
+        <\equation*>
+          <around*|]|y,x|[>=<around*|]|min<around*|(|x,y|)>,max<around*|(|x,y|)>|[>\<subseteq\>U\<wedge\><around*|]|y,z|[>=<around*|]|min<around*|(|y,z|)>,max<around*|(|y,z|)>|[>\<subseteq\>U
+        </equation*>
 
         <\equation*>
           <around*|]|min<around*|(|x,z|)>,max<around*|(|x,z|)>|[>=<around*|]|x,z|[>\<subseteq\><around*|]|y,z|[>\<subseteq\>U
@@ -4568,7 +4590,11 @@
         proving that <math|x\<sim\>z>.
 
         <item*|<math|y\<leqslant\>z\<leqslant\>x>>Then by [eq: <reference|eq
-        14.25.146>] we have <math|<around*|]|y,x|[>\<subseteq\>U\<wedge\><around*|]|y,z|[>\<subseteq\>U>
+        14.25.146>] we have
+
+        <\equation*>
+          <around*|]|y,x|[>=<around*|]|min<around*|(|x,y|)>,max<around*|(|x,y|)>|[>=\<subseteq\>U\<wedge\><around*|]|y,z|[>=<around*|]|min<around*|(|y,z|)>,max<around*|(|y,z|)>|[>\<subseteq\>U
+        </equation*>
 
         <\equation*>
           <around*|]|min<around*|(|x,z|)>,max<around*|(|x,z|)>|[>=<around*|]|z,x|[>\<subseteq\><around*|]|y,x|[>\<subseteq\>U
@@ -4577,7 +4603,11 @@
         proving that <math|x\<sim\>z>.
 
         <item*|<math|z\<leqslant\>x\<leqslant\>y>>Then by [eq: <reference|eq
-        14.25.146>] we have <math|<around*|]|x,y|[>\<subseteq\>U\<wedge\><around*|]|z,y|[>\<subseteq\>U>
+        14.25.146>] we have
+
+        <\equation*>
+          <around*|]|x,y|[>=<around*|]|min<around*|(|x,y|)>,max<around*|(|x,y|)>|[>\<subseteq\>U\<wedge\><around*|]|z,y|[>=<around*|]|min<around*|(|y,z|)>,max<around*|(|y,z|)>|[>\<subseteq\>U
+        </equation*>
 
         <\equation*>
           <around*|]|min<around*|(|x,z|)>.max<around*|(|x,z|)>|[>=<around*|]|z,x|[>\<subseteq\><around*|]|z,y|[>\<subseteq\>U
@@ -4586,7 +4616,12 @@
         proving that <math|x\<sim\>z>.
 
         <item*|<math|z\<leqslant\>y\<leqslant\>x>>Then by [eq: <reference|eq
-        14.25.146>] we have <math|<around*|]|y,x|[>\<subseteq\>U\<wedge\><around*|]|z,y|[>\<subseteq\>U>
+        14.25.146>] we have
+
+        <\equation*>
+          <around*|]|y,x|[>=<around*|]|min<around*|(|x,y|)>,max<around*|(|x,y|)>|[>\<subseteq\>U\<wedge\><around*|]|z,y|[>=<around*|]|min<around*|(|y,z|)>,max<around*|(|y,z|)>|[>\<subseteq\>U
+        </equation*>
+
         and as <math|y\<in\>U> we have that
 
         <\equation*>
@@ -4648,7 +4683,8 @@
     proving by [definition: <reference|topology basis>] that\ 
 
     <\equation>
-      <label|eq 14.27.146>I=\<sim\><around*|[|x|]><text| is open>
+      <label|eq 14.27.146>I=\<sim\><around*|[|x|]><text| is
+      open><infix-and>as x\<in\>\<sim\><around*|[|x|]>=I<text| >I\<neq\>0
     </equation>
 
     Let <math|r,s\<in\>I=\<sim\><around*|[|x|]>> with <math|r\<less\>s> then
@@ -4756,6 +4792,7 @@
     so that <math|I<big|cap>J\<neq\>\<varnothing\>>. Then by [eq:
     <reference|eq 14.26.146>] we must have <math|I=J> which proves as
     <math|><math|<big|cup><rsub|I\<in\>\<cal-U\>><around*|(|\<bbb-Q\><big|cap>I|)>\<subseteq\>\<bbb-Q\>>
+    that
 
     <\equation*>
       f:\<cal-U\>\<rightarrow\>\<bbb-Q\><text| is injective>
@@ -4770,12 +4807,13 @@
       <reference|eq 14.27.146>,<reference|eq 14.28.147>]>
       U=<big|cup><rsub|I\<in\>\<cal-U\>>I<text| and
       >\<forall\>I\<in\>\<cal-U\><text| >I<text| is a open generalized
-      interval>
+      interval> that is not empty.
     </equation*>
   </proof>
 
   <\corollary>
-    Given <math|<around*|\<langle\>|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|\<rangle\>>>
+    <label|normed open set as union of intervals (1)>Given
+    <math|<around*|\<langle\>|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|\<rangle\>>>
     the set of reals endowed with the topology generated by the absolute
     value norm and <math|U\<in\>\<cal-T\><rsub|<around*|\|||\|>>> a open set
     then there exist a countable set <math|\<cal-I\>> and a family
@@ -4784,14 +4822,17 @@
       <around*|{|<around*|]|a<rsub|i>,b<rsub|i>|[>|}><rsub|i\<in\>\<cal-I\>>\<subseteq\>\<cal-T\><rsub|<around*|\|||\|>><text|
       such that >U=<big|cup><rsub|i\<in\>\<cal-I\>><around*|]|a<rsub|i>,b<rsub|i>|[>
     </equation*>
+
+    such that <math|\<forall\>i\<in\>\<cal-I\>>
+    <math|<around*|]|a<rsub|i>,b<rsub|i>|[>\<neq\>\<varnothing\>>
   </corollary>
 
   <\proof>
     Using the previous theorem [theorem: <reference|normed open set as union
     of intervals>] there exists a countable set
     <math|\<cal-U\>\<subseteq\>\<cal-T\><rsub|<around*|\|||\|>>> such that
-    <math|\<forall\>I\<in\>\<cal-U\>> <math|I> is open generalized interval
-    and\ 
+    <math|\<forall\>I\<in\>\<cal-U\>> <math|I> is a open generalized interval
+    and non emptyand\ 
 
     <\equation>
       <label|eq 14.29.147>U=<big|cup><rsub|I\<in\>\<cal-U\>>I
@@ -4811,12 +4852,16 @@
         <math|I=<big|cup><rsub|i\<in\>\<cal-I\><rsub|I>><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>>>
       </equation*>
 
+      Further as <math|<around*|]|a<rsub|1>,b<rsub|1>|[>=I\<neq\>\<varnothing\>>
+      we have <math|\<forall\>i\<in\>\<cal-I\><rsub|i>> that
+      <math|<around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>\<neq\>\<varnothing\>><math|>.
+
       <item*|<math|I=<around*|]|-\<infty\>,a|[>>>Take
-      <math|\<cal-I\><rsub|I>=\<bbb-N\><rsub|0>> and
+      <math|\<cal-I\><rsub|I>=\<bbb-N\>> and
       <math|<around*|{|<around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>|}><rsub|i\<in\>\<cal-I\><rsub|I>>=<around*|{|<around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>|}><rsub|i\<in\>\<bbb-N\><rsub|0>>>
-      by <math|a<rsub|<around*|(|I,i|)>>=-i\<wedge\>b<rsub|<around*|(|I,i|)>>=a>.
+      by <math|a<rsub|<around*|(|I,i|)>>=-i+a\<wedge\>b<rsub|<around*|(|I,i|)>>=a>.
       Then <math|\<forall\>i\<in\>\<cal-I\><rsub|I>> we have
-      <math|\<forall\>x\<in\><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>=<around*|]|-i,a|[>\<Rightarrow\>-i\<less\>x\<less\>a\<Rightarrow\>x\<in\><around*|]|-\<infty\>,a|[>=I>
+      <math|\<forall\>x\<in\><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>=<around*|]|-i+a,a|[>\<Rightarrow\>-i+a\<less\>x\<less\>a\<Rightarrow\>x\<in\><around*|]|-\<infty\>,a|[>=I>
       proving that
 
       <\equation>
@@ -4826,8 +4871,9 @@
       Further if <math|x\<in\>I> then <math|x\<less\>a> and by a consequence
       of the Archimedean Property of the real numbers [see theorem:
       <reference|complex Archimedean property consequence (1)>] there exist a
-      <math|n\<in\>\<bbb-N\><rsub|0>=\<cal-I\><rsub|I>> such that
-      <math|-n\<less\>x> hence <math|x\<in\><around*|]|-n,a|[>=<around*|]|a<rsub|n>,b<rsub|n>|[>\<subseteq\><big|cup><rsub|i\<in\>\<cal-I\><rsub|I>><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>>.
+      <math|n\<in\>\<bbb-N\>=\<cal-I\><rsub|I>> such that
+      <math|-n\<less\>x-a> hence <math|-n+a\<less\>x> so that
+      <math|x\<in\><around*|]|-n+a,a|[>=<around*|]|a<rsub|<around*|(|I,n|)>>,b<rsub|<around*|(|I,n|)>>|[>\<subseteq\><big|cup><rsub|i\<in\>\<cal-I\><rsub|I>><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>>.
       Proving that <math|I\<subseteq\><big|cup><rsub|i\<in\>\<cal-I\><rsub|I>><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>>
       which combined with <reference|eq 14.29.146>] proves that\ 
 
@@ -4836,23 +4882,26 @@
         >I=<big|cup><rsub|i\<in\>\<cal-I\><rsub|I>><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>
       </equation*>
 
+      Further <math|\<forall\>i\<in\>\<cal-I\><rsub|I>=\<bbb-N\>> we have as
+      <math|-i+a\<less\>a> that <math|\<varnothing\>\<neq\><around*|]|-i+a,a|[>=<around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>>.
+
       <item*|<math|I=<around*|]|a,\<infty\>|[>>>Take
-      <math|\<cal-I\><rsub|I>=\<bbb-N\><rsub|0>> and
+      <math|\<cal-I\><rsub|I>=\<bbb-N\>> and
       <math|<around*|{|<around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>|}><rsub|i\<in\>\<cal-I\><rsub|I>>=<around*|{|<around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>|}><rsub|i\<in\>\<bbb-N\><rsub|0>>>
-      by <math|a<rsub|<around*|(|I,i|)>>=a\<wedge\>b<rsub|<around*|(|I,i|)>>=n>.
+      by <math|a<rsub|<around*|(|I,i|)>>=a\<wedge\>b<rsub|<around*|(|I,i|)>>=a+i>.
       Then <math|\<forall\>i\<in\>\<cal-I\><rsub|I>> we have
-      <math|\<forall\>x\<in\><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>=<around*|]|a,i|[>\<Rightarrow\>a\<less\>x\<less\>i\<Rightarrow\>x\<in\><around*|]|a,\<infty\>|[>>
+      <math|\<forall\>x\<in\><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>=<around*|]|a,a+i|[>\<Rightarrow\>a\<less\>x\<less\>a+i\<Rightarrow\>x\<in\><around*|]|a,\<infty\>|[>>
       proving that
 
       <\equation>
         <label|eq 14.30.146><big|cup><rsub|i\<in\>\<cal-I\><rsub|I>><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>\<subseteq\>I
       </equation>
 
-      Further if <math|x\<in\>I> then <math|a\<less\>x> then by a consequence
+      Further if <math|x\<in\>I> then <math|a\<less\>x> and by a consequence
       of the Archimedean Property of the real numbers [see theorem:
       <reference|complex Archimedean property consequence (1)>] there exist a
-      <math|n\<in\>\<bbb-N\><rsub|0>=\<cal-I\><rsub|I>> such that
-      <math|x\<less\>n> hence <math|x\<in\><around*|]|a,n|[>=<around*|]|a<rsub|n>,b<rsub|n>|[>\<subseteq\><big|cup><rsub|i\<in\>\<cal-I\><rsub|I>><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>>.
+      <math|n\<in\>\<bbb-N\>=\<cal-I\><rsub|I>> such that <math|x-a\<less\>n>
+      hence <math|x\<less\>n+a> or <math|x\<in\><around*|]|a,a+n|[>=<around*|]|a<rsub|<around*|(|I,n|)>>,b<rsub|<around*|(|I,n|)>>|[>\<subseteq\><big|cup><rsub|i\<in\>\<cal-I\><rsub|I>><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>>.
       Proving that <math|I\<subseteq\><big|cup><rsub|i\<in\>\<cal-I\><rsub|I>><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>>
       which combined with <reference|eq 14.30.146>] proves that\ 
 
@@ -4861,8 +4910,11 @@
         >I=<big|cup><rsub|i\<in\>\<cal-I\><rsub|I>><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>
       </equation*>
 
+      Further <math|\<forall\>i\<in\>\<cal-I\><rsub|I>=\<bbb-N\>> we have as
+      <math|a\<less\>a+i> that <math|\<varnothing\>\<neq\><around*|]|a,a+i|[>=<around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>>
+
       <item*|<math|I=<around*|]|-\<infty\>,\<infty\>|[>>>Then
-      <math|I=\<bbb-R\>>. Take <math|\<cal-I\><rsub|I>=\<bbb-N\><rsub|0>> and
+      <math|I=\<bbb-R\>>. Take <math|\<cal-I\><rsub|I>=\<bbb-N\>> and
       <math|<around*|{|<around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>|}><rsub|i\<in\>\<cal-I\><rsub|I>>=<around*|{|<around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>|}><rsub|i\<in\>\<bbb-N\><rsub|0>>>
       by <math|a<rsub|<around*|(|I,i|)>>=-i\<wedge\>b<rsub|<around*|(|I,i|)>>=i>.
       Then <math|\<forall\>i\<in\>\<cal-I\><rsub|I>> we have
@@ -4887,15 +4939,19 @@
         \<cal-I\><rsub|I><text| is countable and
         >I=<big|cup><rsub|i\<in\>\<cal-I\><rsub|I>><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>
       </equation*>
+
+      Further <math|\<forall\>i\<in\>\<cal-I\><rsub|I>> we have
+      <math|\<varnothing\>\<neq\>0<around*|]|-i,i|[>=<around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>>
     </description>
 
-    So we have that\ 
+    So we have that <math|\<forall\>I\<in\>\<cal-U\>> there exist a countable
+    <math|\<cal-I\><rsub|I>> and <math|><math|<around*|{|<around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>|}><rsub|i\<in\>\<cal-I\><rsub|i>>\<subseteq\>\<cal-T\><rsub|<around*|\|||\|>>>
+    so that\ 
 
     <\equation>
-      <label|eq 14.32.146>\<forall\>I\<in\>\<cal-U\> <text| there exists a
-      countable >\<cal-I\><rsub|I><text| and >
-      <around*|{|<around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>|}><rsub|i\<in\>\<cal-I\><rsub|i>>\<subseteq\>\<cal-T\><rsub|<around*|\|||\|>><text|
-      so that >I=<big|cup><rsub|i\<in\>\<cal-I\><rsub|I>><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>
+      <label|eq 14.32.146>I=<big|cup><rsub|i\<in\>\<cal-I\><rsub|I>><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[><text|
+      and >\<forall\>i\<in\>I<text| we have that
+      ><around*|]|a<rsub|<around*|(|I,i|)>>,b<rsub|<around*|(|I,i|)>>|[>\<neq\>\<varnothing\>
     </equation>
 
     Now we have\ 
@@ -4933,7 +4989,7 @@
       <label|eq 14.35.147>U=<big|cup><rsub|I\<in\>\<cal-U\>>I=<big|cup><rsub|r\<in\><big|cup><rsub|I\<in\>\<cal-U\>><around*|{|I|}>\<times\>\<cal-I\><rsub|I>><around*|]|a<rsub|r>,b<rsub|r>|[>
     </equation>
 
-    Now using [theorem: <reference|countable AUB and AxB>] together with [eq:
+    Using [theorem: <reference|countable AUB and AxB>] together with [eq:
     <reference|eq 14.32.146>] we have <math|\<forall\>I\<in\>\<cal-U\>> that
     <math|<around*|{|I|}>\<times\>\<cal-I\><rsub|I>> is countable. As
     <math|\<cal-U\>> is countable it follows from [theorem:
@@ -4943,8 +4999,10 @@
     we have that\ 
 
     <\equation*>
-      \<cal-I\><text| is countable and >U\<equallim\><rsub|<text|[eq:
-      <reference|eq 14.35.147>]>><big|cup><rsub|r\<in\>\<cal-I\>><around*|]|a<rsub|r>,b<rsub|r>|[>
+      \<cal-I\><text| is countable, >U\<equallim\><rsub|<text|[eq:
+      <reference|eq 14.35.147>]>><big|cup><rsub|r\<in\>\<cal-I\>><around*|]|a<rsub|r>,b<rsub|r>|[><text|
+      and >\<forall\>i\<in\>I<text| we have
+      ><around*|]|a<rsub|i>,b<rsub|i>|[>\<neq\>\<varnothing\>
     </equation*>
   </proof>
 
@@ -22307,7 +22365,7 @@
     <associate|continuity and subspace topology (2)|<tuple|14.135|?>>
     <associate|continuity and subspace topology (3)|<tuple|14.134|?>>
     <associate|continuity at a point|<tuple|14.123|?>>
-    <associate|continuity composition|<tuple|14.139|?>>
+    <associate|continuity composition|<tuple|14.138|?>>
     <associate|continuity composition is multilinear|<tuple|14.199|?>>
     <associate|continuity composition of continuous linear
     mapping|<tuple|14.187|?>>
@@ -22777,6 +22835,7 @@
     equivalent|<tuple|14.277|?>>
     <associate|normed open generalized intervals|<tuple|14.100|?>>
     <associate|normed open set as union of intervals|<tuple|14.103|?>>
+    <associate|normed open set as union of intervals (1)|<tuple|14.104|?>>
     <associate|normed pseudo norm|<tuple|14.83|?>>
     <associate|normed real numbers|<tuple|14.96|?>>
     <associate|normed scaling and translation|<tuple|14.91|?>>

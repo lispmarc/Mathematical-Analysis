@@ -922,7 +922,7 @@
     <label|diff constant function is differentiable>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>,
-    <math|y\<in\>Y> <math|U> a open sFet in <math|X> then
+    <math|y\<in\>Y> <math|U> a open set in <math|X> then
     <math|\<forall\>x\<in\>U> we have that
 
     <\equation*>
@@ -2010,7 +2010,7 @@
     property>] again it follows that\ 
 
     <\equation*>
-      g\<circ\>f<text| is Fréchet differentable at >x<text| with
+      g\<circ\>f<text| is Fréchet differentiable at >x<text| with
       >D<rsub|x><around*|(|g\<circ\>f|)>=D<rsub|x><around*|(|g\<circ\>f|)><rsub|\|W>=D<rsub|f<around*|(|x|)>>g\<circ\>D<rsub|x>f
     </equation*>
   </proof>
@@ -5804,7 +5804,7 @@
         >x<text| with >D<rsub|x><around*|(|D<rsup|<around*|[|n-1|]>>f|)>=D<rsup|<around*|[|n|]>><rsub|x>f
       </equation*>
 
-      Hence as <math|x\<in\>V> was choosen arbitrary we have that\ 
+      Hence as <math|x\<in\>V> was chosen arbitrary we have that\ 
 
       <\equation*>
         D<rsup|<around*|[|n-1|]>>f<text| is Fréchet differentiable on
@@ -6208,7 +6208,7 @@
       As <math|V<rsub|x>> is open [because <math|W<rsub|x>,>V are open] it
       follows from [theorem: <reference|continuity and subspace topology
       (3)>] that <math|><math|D<rsup|<around*|[|n|]>>f> is continuous at
-      <math|x>. As <math|x\<in\>V> was choosen arbitrar if follows that\ 
+      <math|x>. As <math|x\<in\>V> was chosen arbitrary if follows that\ 
 
       <\equation*>
         D<rsup|<around*|[|n|]>>f<text| is a >continuous function
@@ -6225,7 +6225,7 @@
 
       hence <math|D<rsup|<around*|[|n|]>>f> is continuous at <math|x>. So by
       definition <math|f> is <math|C<rsup|n>> at <math|x>. As <math|x\<in\>V>
-      was choosen arbitrar it follows that\ 
+      was chosen arbitrary it follows that\ 
 
       <\equation*>
         D<rsup|<around*|[|n|]>>f<text| is continuous on >V
@@ -6345,7 +6345,7 @@
       <\equation*>
         D<rsup|<around*|[|1|]>>f:V\<rightarrow\>L<rsub|1><around*|(|\<bbb-K\>;Y|)>=L<around*|(|\<bbb-K\>,Y|)><text|
         defined by >D<rsup|<around*|[|1|]>>f<around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y>f\<equallim\><rsub|def>D<rsub|y>f<text|
-        is continous at >x
+        is continuous at >x
       </equation*>
 
       Let <math|y\<in\>V> then by [theorem: <reference|diff derivate and
@@ -6405,7 +6405,7 @@
         <around*|(|D<rsup|<around*|[|1|]>>f|)><around*|(|\<ast\>|)><around*|(|1|)>=f<rprime|'>
       </equation*>
 
-      As <math|f<rprime|'>> is continupus at <math|x> it follows that
+      As <math|f<rprime|'>> is continuous at <math|x> it follows that
       <math|<around*|(|D<rsup|<around*|[|1|]>>f|)><around*|(|\<ast\>|)><around*|(|1|)>>
       is continuous at <math|x> and using \ [lemma: <reference|lemma
       16.83.197>] that\ 
@@ -7261,7 +7261,7 @@
       </equation*>
 
       is Fréchet differentiable on <math|V> [hence <math|1>-times
-      differentable on <math|V>] and that <math|\<forall\>x\<in\>V> we have
+      differentiable on <math|V>] and that <math|\<forall\>x\<in\>V> we have
 
       <\equation>
         <label|eq 16.86.181>D<rsup|<around*|[|1|]>><rsub|x><around*|(|D<rsup|<around*|[|n|]>>f|)>\<equallim\><rsub|def>D<rsup|><rsub|x><around*|(|D<rsup|<around*|[|n|]>>f|)>=D<rsup|<around*|[|n+1|]>><rsub|x>f=D<rsup|<around*|[|n+1|]>>f<around*|(|x|)>
@@ -7960,7 +7960,7 @@
       <math|C<rsup|n-1>> at <math|x>. Using locality [see theorem:
       <reference|diff restriction of a function of class C^n>] that
       <math|D<rsup|<around*|[|1|]>>f> is <math|C<rsup|n-1>> at <math|x>. As
-      <math|x\<in\>V> was choosen arbitrary it follows that
+      <math|x\<in\>V> was chosen arbitrary it follows that
       <math|D<rsup|<around*|[|1|]>>f> is <math|C<rsup|n-1>> on <math|V>.
 
       <item*|<math|\<Leftarrow\>>>By the hypothesis <math|f> is
@@ -7974,7 +7974,7 @@
 
       Hence if <math|x\<in\>V> then by [corollary: <reference|diff f is of
       class C^n if D^1f u=is of class C^n-1>] <math|f> is <math|C<rsup|n>> at
-      <math|x>. As <math|x\<in\>V> was choosen arbitrary it follows that
+      <math|x>. As <math|x\<in\>V> was chosen arbitrary it follows that
       <math|f> is <math|C<rsup|n>> on <math|V>.
     </description>
   </proof>
@@ -13544,12 +13544,12 @@
     <math|U> [see theorem: <reference|diff C^n and C^m>], it follows that
     <math|f> is continuous, further <math|\<sigma\><rsub|\|W>> is continuous
     [as <math|\<sigma\>> is continuous it follows from [theorem:
-    <reference|continuity and subspace topology (2)>] thatt
+    <reference|continuity and subspace topology (2)>] that
     <math|\<sigma\><rsub|\|w>> is continuous]. Hence
     <math|f\<circ\>\<sigma\><rsub|\|W>> is continuous. Using [theorem:
     <reference|continuity and subspace topology (2)>] again we have that
     <math|<around*|(|f\<circ\>\<sigma\><rsub|\|W>|)><rsub|\|<around*|[|0,1|]>>>
-    is continous so we have that
+    is continuous so we have that
 
     <\equation>
       <label|eq 16.184.200>g<text| is continuous>
@@ -20183,7 +20183,7 @@
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     be normed spaces then a homeomorphism <math|f:X\<rightarrow\>Y> is of is
-    a diffeoremorphis of class <math|C<rsup|0>>
+    a diffeomorphism of class <math|C<rsup|0>>
   </example>
 
   <\proof>
@@ -20389,7 +20389,7 @@
     <math|C<rsup|n>> on their domains, hence, using the chain rule [theorem:
     <reference|diff chain rule higher order class>], <math|g\<circ\>f> and
     <math|<around*|(|g\<circ\>f|)><rsup|-1>=f<rsup|-1>\<circ\>g<rsup|-1>> are
-    <math|C<rsup|n>> on ther domains. From this it follows that
+    <math|C<rsup|n>> on their domains. From this it follows that
     <math|g\<circ\>f> are differentiable of class <math|C<rsup|n>>.
   </proof>
 
@@ -21476,7 +21476,7 @@
       <\equation>
         <label|eq 16.399.142><around*|(|\<cal-T\><rsub|3>|)><rsub|\|U<rsub|x<rsub|0>>>:U<rsub|x<rsub|0>>\<rightarrow\>X<text|,
         ><around*|(|<around*|(|\<cal-T\><rsub|3>|)><rsub|\|U<rsub|x<rsub|0>>>|)><rsup|-1>:U<rsub|0>\<rightarrow\>X<text|
-        are >C<rsup|\<infty\>><text| on theire respectively domains>
+        are >C<rsup|\<infty\>><text| on their respectively domains>
       </equation>
 
       As <math|\<cal-T\><rsub|3>> is <math|C<rsup|\<infty\>>> on <math|X>

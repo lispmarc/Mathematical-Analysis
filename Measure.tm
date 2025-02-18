@@ -18,7 +18,7 @@
   <math|\<bbb-R\>> meaning that the measure of a set would not be always
   defined as a real number. To solve this problem we extend the set of real
   numbers by adding two elements, <math|\<infty\>> which will be bigger then
-  every real number and <math|-\<infty\>> which will be snaller then every
+  every real number and <math|-\<infty\>> which will be smaller then every
   real number.
 
   <\definition>
@@ -357,14 +357,14 @@
         <math|sup<around*|(|A|)>=-\<infty\>>
 
         <item*|<math|A\<neq\><around*|{|-\<infty\>|}>>>Then we have the
-        following possible subcases:
+        following possible sub-cases:
 
         <\description>
           <item*|<math|\<infty\>\<in\>A>>Then
           <math|sup<around*|(|A|)>=\<infty\>>
 
           <item*|<math|\<infty\>\<nin\>A>>Then we have the following
-          subcases:\ 
+          sub-cases:\ 
 
           <\description>
             <item*|<math|\<exists\>u\<in\>\<bbb-R\>\<vdash\>\<forall\>x\<in\>A<text|
@@ -386,14 +386,14 @@
         <math|inf<around*|(|A|)>=\<infty\>>
 
         <item*|<math|A\<neq\><around*|{|\<infty\>|}>>>Then we have the
-        following possible subcases:
+        following possible sub-cases:
 
         <\description>
           <item*|<math|-\<infty\>\<in\>A>>Then
           <math|inf<around*|(|A|)>=-\<infty\>>
 
           <item*|<math|-\<infty\>\<nin\>A>>Then we have the following
-          subcases:\ 
+          sub-cases:\ 
 
           <\description>
             <item*|<math|\<exists\>l\<in\>\<bbb-R\>\<vdash\>\<forall\>x\<in\>A<text|
@@ -553,7 +553,7 @@
       </description>
     </description>
 
-    So in all possibke cases of <math|A> we have found that
+    So in all possible cases of <math|A> we have found that
     <math|sup<around*|(|A|)>> exists. Next we prove that
     <math|inf<around*|(|A|)>> exist, for <math|A> we have either:\ 
 
@@ -605,7 +605,7 @@
           <math|\<varnothing\>\<neq\>A<big|cap>\<bbb-R\>> is bounded below by
           <math|l>. As <math|<around*|\<langle\>|\<bbb-R\>,\<leqslant\><rsub|\<bbb-R\>>|\<rangle\>>>
           is conditional complete [see theorem: <reference|complex RC is
-          conditional complete>] <math|A<big|cap>\<bbb-R\>> has a infinnum
+          conditional complete>] <math|A<big|cap>\<bbb-R\>> has a infinum
           <math|I=inf<rsub|\<bbb-R\>><around*|(|A<big|cap>\<bbb-R\>|)>\<in\>\<bbb-R\>>.
           Let <math|x\<in\>A>, then, given that <math|-\<infty\>\<nin\>A>, we
           have either:
@@ -722,7 +722,7 @@
     </equation*>
   </proof>
 
-  The next theorem shows the neccesary and sufficient contraint for the
+  The next theorem shows the necessary and sufficient constraint for the
   supremum and infinum to be not finite.
 
   <\corollary>
@@ -897,7 +897,7 @@
     </equation*>
 
     <\notation>
-      As usualy we note <math|<around*|(|\<cdot\>|)><rsup|-1><around*|(|x|)>>
+      As usually we note <math|<around*|(|\<cdot\>|)><rsup|-1><around*|(|x|)>>
       as <math|x<rsup|-1>>, <math|1/x> or <math|<frac|1|x>>
     </notation>
   </definition>
@@ -1057,7 +1057,7 @@
     </description>
   </proof>
 
-  We have to be very carefull if we combine sums and inequalities on
+  We have to be very careful if we combine sums and inequalities on
   <math|<wide|\<bbb-R\>|\<wide-bar\>>> the reasoning that works in
   <math|\<bbb-R\>> does not work always in
   <math|<wide|\<bbb-R\>|\<wide-bar\>>>. For example if <math|x=10,y=4> and
@@ -1069,7 +1069,7 @@
     <label|extended 0\<less\>=x and 0\<less\>=y then
     x\<less\>=x-y\<less\>=x>Let <math|x,y\<in\><wide|\<bbb-R\>|\<wide-bar\>>>
     be such that <math|0\<leqslant\>x\<wedge\>0\<leqslant\>y> and one of
-    <math|x,y> is finite [so that <math|x-y> is well definied] then
+    <math|x,y> is finite [so that <math|x-y> is well defined] then
     <math|x-y\<leqslant\>x>
   </theorem>
 
@@ -1177,7 +1177,7 @@
         the properties of the real numbers we have <math|x\<leqslant\>y>.
 
         <item*|<math|x=\<infty\>\<wedge\>y\<in\>\<bbb-R\>>>Then
-        <math|\<infty\>=x+z\<leqslant\>y+z\<in\>\<bbb-R\>> whuch as
+        <math|\<infty\>=x+z\<leqslant\>y+z\<in\>\<bbb-R\>> which as
         <math|y+z\<less\>\<infty\>> proves that
         <math|<rigid|\<infty\>=x+y\<subset\>\<bbb-R\>>> which as
         <math|\<infty\>\<nin\>\<bbb-R\>> is not a valid case.
@@ -1218,7 +1218,7 @@
         the properties of the real numbers we have <math|x\<leqslant\>y>.
 
         <item*|<math|x=\<infty\>\<wedge\>y\<in\>\<bbb-R\>>>Then
-        <math|\<infty\>=x+z\<less\>y+z\<in\>\<bbb-R\>> whuch as
+        <math|\<infty\>=x+z\<less\>y+z\<in\>\<bbb-R\>> which as
         <math|y+z\<less\>\<infty\>> proves that
         <math|<rigid|\<infty\>=x+y\<subset\>\<bbb-R\>>> which as
         <math|\<infty\>\<nin\>\<bbb-R\>> is not a valid case.
@@ -1529,7 +1529,7 @@
         <math|-\<infty\>\<less\>x\<leqslant\>y=-\<infty\>> so this is not a
         valid case.
 
-        <item*|<math|x=-\<infty\>\<wedge\>y=-\<infty\>\<wedge\>z=-\<infty\>>>Thne
+        <item*|<math|x=-\<infty\>\<wedge\>y=-\<infty\>\<wedge\>z=-\<infty\>>>Then
         <math|x+z=-\<infty\>=y+z> so that <math|x+z\<leqslant\>y+z>.
 
         <item*|<math|x=\<infty\>\<wedge\>y=-\<infty\>\<wedge\>z=-\<infty\>>>This
@@ -1806,12 +1806,12 @@
     </enumerate>
   </proof>
 
-  Altough the product <math|x\<cdot\>y> is defined for every
+  Although the product <math|x\<cdot\>y> is defined for every
   <math|x,y\<in\><wide|\<bbb-R\>|\<wide-bar\>>>
   <math|<around*|\<langle\>|<wide|\<bbb-R\>|\<wide-bar\>>,\<cdot\>|\<rangle\>>>
-  is not a group, for examle <math|0> has still no inverse. However
+  is not a group, for example <math|0> has still no inverse. However
   <math|<around*|\<langle\>|<wide|\<bbb-R\>|\<wide-bar\>>,\<cdot\>|\<rangle\>>>
-  is a abelian semi group.
+  is a Abelian semi group.
 
   <\theorem>
     <label|extended abelian semi group (1)><math|<around*|\<langle\>|<wide|\<bbb-R\>|\<wide-bar\>>,\<cdot\>|\<rangle\>>>
@@ -2423,7 +2423,7 @@
   </proof>
 
   We have also a variant of the distributive law in
-  <math|<wide|\<bbb-R\>|\<wide-bar\>>> but again we must be carefull. For
+  <math|<wide|\<bbb-R\>|\<wide-bar\>>> but again we must be careful. For
   example <math|\<infty\>\<cdot\><around*|(|1-3|)>=\<infty\>\<cdot\><around*|(|-2|)>=-\<infty\>>
   but <math|\<infty\>\<cdot\>1+\<infty\>\<cdot\><around*|(|-3|)>> is not
   defined because <math|\<infty\>\<cdot\>1=\<infty\>> and
@@ -2565,7 +2565,7 @@
     </description>
   </proof>
 
-  The absolute value of the extended real numbers has simular properties as
+  The absolute value of the extended real numbers has similar properties as
   the absolute value on the real numbers.\ 
 
   <\theorem>
@@ -2688,7 +2688,7 @@
 
   Unfortunately <math|<around*|\<langle\>|<wide|\<bbb-R\>|\<wide-bar\>>,\<\|\|\>|\<rangle\>>>
   is not a normed space because <math|<wide|\<bbb-R\>|\<wide-bar\>>> is not a
-  vector space [rember <math|\<infty\>+<around*|(|-\<infty\>|)>> and
+  vector space [remember <math|\<infty\>+<around*|(|-\<infty\>|)>> and
   <math|<around*|(|-\<infty\>|)>+\<infty\>> are not defined. So we can not
   base a topology on a norm instead we use a generating basis [see theorem:
   <reference|topology basis generating>].
@@ -3114,7 +3114,7 @@
 
     <\enumerate>
       <item>If <math|x\<in\>U> then as <math|\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>
-      is the gnerating basis for <math|\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>
+      is the generating basis for <math|\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>
       there exist a <math|B\<in\>\<cal-B\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>
       such that <math|x\<in\>B\<subseteq\>U>. For <math|B> we have either:
 
@@ -3259,7 +3259,7 @@
       [in other words if <math|U> is open then <math|x+U> is open]
 
       <item>If <math|x\<neq\>0> then <math|x\<cdot\>U=<around*|{|x\<cdot\>u\|u\<in\>U|}>\<in\>\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>
-      [in other words uf <math|U> is open then <math|x\<cdot\>U> is open]
+      [in other words is <math|U> is open then <math|x\<cdot\>U> is open]
     </enumerate>
   </theorem>
 
@@ -3660,8 +3660,8 @@
   will always have a limit, in other words series of non negative numbers
   always converges. To do this we make use of the fact that in
   <math|<wide|\<bbb-R\>|\<wide-bar\>>> every non empty subset has a supremum
-  and infinum and define the limit of a sequence in terms of supremums and
-  infinums.\ 
+  and infinum and define the limit of a sequence in terms of supremum and
+  infinum.\ 
 
   <\theorem>
     <label|extended inf(sup) sup(inf)>Let <math|k\<in\>\<bbb-N\><rsub|0>>,
@@ -4227,7 +4227,7 @@
     <math|x\<in\>\<bbb-R\>> [hence <math|\<forall\>i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
     we have that <math|x<rsub|i>+x> is well defined] then for
     <math|<around*|{|x<rsub|i>+x|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\><wide|\<bbb-R\>|\<wide-bar\>>>
-    we haveL
+    we have
 
     <\enumerate>
       <item><math|<below|lim inf|i\<rightarrow\>\<infty\>>
@@ -4877,7 +4877,7 @@
     and <math|lim<rsub|\<bbb-R\>>>the limit in
     <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\><rsub|\<bbb-R\>>|\<rangle\>>>
     where <math|<around*|\|||\|><rsub|\<bbb-R\>>> is the absolute value on
-    <math|\<bbb-R\>> then we have in [defintion: <reference|limit limsup
+    <math|\<bbb-R\>> then we have in [definition: <reference|limit limsup
     liminf>] defined <math|<below|lim<rsub|\<bbb-R\>>
     inf|i\<rightarrow\>\<infty\>>> and <math|<below|lim<rsub|\<bbb-R\>>
     sup|i\<rightarrow\>\<infty\>>> defined by\ 
@@ -5105,7 +5105,7 @@
     </equation*>
   </proof>
 
-  We have the following relation beteen <math|lim<rsub|\<bbb-R\>>> the limit
+  We have the following relation between <math|lim<rsub|\<bbb-R\>>> the limit
   in <math|\<bbb-R\>> and <math|lim> the limit in
   <math|<wide|\<bbb-R\>|\<wide-bar\>>>.
 
@@ -5272,7 +5272,7 @@
         contradicting [eq: <reference|eq 20.23.156>].
       </description>
 
-      As in all cases we have a contradictionthe assumption must be wrong so
+      As in all cases we have a contradiction the assumption must be wrong so
       that
 
       <\equation*>
@@ -5439,7 +5439,7 @@
     </enumerate>
   </proof>
 
-  The idea of a limit in <math|\<bbb-R\>> is that the sequence approches its
+  The idea of a limit in <math|\<bbb-R\>> is that the sequence approaches its
   limit the higher the index is, we show now that the limit in
   <math|<wide|\<bbb-R\>|\<wide-bar\>>>.
 
@@ -5756,7 +5756,7 @@
           sup|i\<rightarrow\>\<infty\>> x<rsub|i>\<less\><rsub|\<bbb-R\>>x+\<varepsilon\>
         </equation*>
 
-        So as <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> was choosen
+        So as <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> was chosen
         arbitrary it follows from [theorem: <reference|complex Archimedean
         property consequence (2)>] that\ 
 
@@ -6852,7 +6852,7 @@
       such that <rigid|<math|\<forall\>i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>>
       we have <math|0\<less\>1\<less\>x<rsub|i>> hence
       <math|<around*|{|<frac|1|x<rsub|i>>|}><rsub|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>>
-      is wel defined. Take <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then
+      is well defined. Take <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then
       by [theorem: <reference|complex Archimedean property consequence (1)>]
       there exist a <math|C\<in\>\<bbb-N\>> such that
       <math|0\<less\><frac|1|C>\<less\>\<varepsilon\>>. As
@@ -6879,7 +6879,7 @@
       <math|<rigid|\<forall\>i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>> we
       have <math|x<rsub|i>\<less\>-1\<less\>0> hence
       <math|<around*|{|<frac|1|x<rsub|i>>|}><rsub|i\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>>
-      is wel defined. Take <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then
+      is well defined. Take <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then
       by [theorem: <reference|complex Archimedean property consequence (1)>]
       there exist a <math|C\<in\>\<bbb-N\>> such that
       <math|0\<less\><frac|1|C>\<less\>\<varepsilon\>>. As
@@ -7166,7 +7166,7 @@
     </enumerate>
   </proof>
 
-  To be able to define the infinite sum of non negatieve extended we must
+  To be able to define the infinite sum of non negative extended we must
   prove that the partial sums area increasing. For this we extend [theorem:
   <reference|sum of real numbers and inequality>] to be valid for the
   extended real numbers.
@@ -7476,7 +7476,7 @@
         </eqnarray*>
       </description>
 
-      Hemce using mathematical induction we have that\ 
+      Hence using mathematical induction we have that\ 
 
       <\equation>
         <label|eq 20.38.156>\<forall\><around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|0,\<ldots\>,n|}>>\<subseteq\><around*|[|0,\<infty\>|]><text|,
@@ -7691,7 +7691,7 @@
         <reference|extended series and permutations>]>><big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<beta\><around*|(|<around*|(|\<beta\><rsup|-1>\<circ\>\<gamma\>|)><around*|(|i|)>|)>>=<big|sum><rsub|i=0><rsup|\<infty\>>x<rsub|\<gamma\><around*|(|i|)>>
       </equation*>
 
-      so that this definition is independent of the choosen bijection.
+      so that this definition is independent of the chosen bijection.
     </note>
   </definition>
 
@@ -7800,7 +7800,7 @@
       </equation>
 
       For the opposite inequality take <math|m\<in\><around*|{|l,\<ldots\>,\<infty\>|}>>
-      thn we have\ 
+      then we have\ 
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|<big|sum><rsub|j=l><rsup|m><around*|(|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i,j>|)>>|<cell|\<equallim\><rsub|<around*|(|2|)>>>|<cell|<big|sum><rsub|i=k><rsup|\<infty\>><around*|(|<big|sum><rsub|j=l><rsup|m>x<rsub|i,j>|)>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[theorem:
@@ -7883,8 +7883,8 @@
       <reference|extended infinite sum properties>]>>>|<cell|<big|sum><rsub|i=k><rsup|n>sup<around*|(|<around*|{|<big|sum><rsub|j=l><rsup|s>x<rsub|i,j>\|s\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=k><rsup|n><around*|(|<big|sum><rsub|j=l><rsup|\<infty\>>x<rsub|i,j>|)>>>>>
     </eqnarray*>
 
-    Hence as <math|r\<in\><around*|{|m,\<ldots\>,\<infty\>|}>> was choosen
-    arbitray it follows that\ 
+    Hence as <math|r\<in\><around*|{|m,\<ldots\>,\<infty\>|}>> was chosen
+    arbitrary it follows that\ 
 
     <\equation>
       <label|eq 20.43.156><big|sum><rsub|i=m><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)><rsub|1>,\<beta\><around*|(|i|)><rsub|2>>=sup<around*|(|<around*|{|<big|sum><rsub|i=m><rsup|r>x<rsub|\<beta\><around*|(|i|)><rsub|1>,\<beta\><around*|(|i|)><rsub|2>>\|r\<in\><around*|{|m,\<ldots\>,\<infty\>|}>|}>|)>\<leqslant\><big|sum><rsub|i=k><rsup|n><around*|(|<big|sum><rsub|j=l><rsup|\<infty\>>x<rsub|i,j>|)>
@@ -7921,7 +7921,7 @@
       <reference|sum general equivalence>]>>>|<cell|<big|sum><rsub|i=m><rsup|M<rsub|r>>x<rsub|\<beta\><around*|(|i|)><rsub|1>,\<beta\><around*|(|i|)><rsub|2>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|sup<around*|(|<around*|{|<big|sum><rsub|i=m><rsup|s>x<rsub|\<beta\><around*|(|i|)><rsub|1>,\<beta\><around*|(|i|)><rsub|2>>\|s\<in\><around*|{|m,\<ldots\>,\<infty\>|}>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=m><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)><rsub|1>,\<beta\><around*|(|i|)><rsub|2>>>>>>
     </eqnarray*>
 
-    Hence as <math|r\<in\><around*|{|l,\<ldots\>,\<infty\>|}>> was choosen
+    Hence as <math|r\<in\><around*|{|l,\<ldots\>,\<infty\>|}>> was chosen
     arbitrary we have that\ 
 
     <\equation*>
@@ -7937,7 +7937,7 @@
     \;
   </proof>
 
-  Next we extend the above theorem for aribitrary finite sums of different
+  Next we extend the above theorem for arbitrary finite sums of different
   size.
 
   <\theorem>
@@ -8029,8 +8029,8 @@
       <reference|extended finite sums>]>>>|<cell|sup<around*|(|<around*|{|<big|sum><rsub|r=k><rsup|n><around*|(|<big|sum><rsub|j=n<rsub|r>><rsup|m<rsub|r>>x<rsub|r,j>|)>\|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|r=k><rsup|\<infty\>><around*|(|<big|sum><rsub|j=n<rsub|r>><rsup|m<rsub|r>>x<rsub|r,j>|)>>>>>
     </eqnarray*>
 
-    So <math|m\<in\><around*|{|l,\<ldots\>,\<infty\>|}>> was choosen
-    arbitrary we have that\ 
+    So <math|m\<in\><around*|{|l,\<ldots\>,\<infty\>|}>> was chosen arbitrary
+    we have that\ 
 
     <\equation>
       <label|eq 20.46.156><big|sum><rsub|i=l><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)><rsub|1>,\<beta\><around*|(|i|)><rsub|2>>=sup<around*|(|<around*|{|<big|sum><rsub|i=l><rsup|m>x<rsub|\<beta\><around*|(|i|)><rsub|1>,\<beta\><around*|(|i|)><rsub|2>>\|m\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>\<leqslant\><big|sum><rsub|r=k><rsup|\<infty\>><around*|(|<big|sum><rsub|j=n<rsub|r>><rsup|m<rsub|r>>x<rsub|r,j>|)>
@@ -8062,8 +8062,8 @@
       <reference|sum bijection on index>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|l,\<ldots\>,M<rsub|m>|}>>x<rsub|\<beta\><around*|(|i|)><rsub|1>,\<beta\><around*|(|i|)><rsub|2>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=l><rsup|M<rsub|m>>x<rsub|\<beta\><around*|(|i|)><rsub|1>,\<beta\><around*|(|i|)><rsub|2>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|sup<around*|(|<around*|{|<big|sum><rsub|i=l><rsup|n>x<rsub|\<beta\><around*|(|i|)><rsub|1>,\<beta\><around*|(|i|)><rsub|2>>\|n\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=l><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)><rsub|1>,\<beta\><around*|(|i|)><rsub|2>>>>>>
     </eqnarray*>
 
-    As <math|m\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> was choosen
-    arbitrary it follows that\ 
+    As <math|m\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> was chosen arbitrary
+    it follows that\ 
 
     <\equation*>
       <big|sum><rsub|r=k><rsup|\<infty\>><around*|(|<big|sum><rsub|j=n<rsub|r>><rsup|m<rsub|r>>x<rsub|r,j>|)>=sup<around*|(|<around*|{|<big|sum><rsub|r=k><rsup|n><around*|(|<big|sum><rsub|j=n<rsub|r>><rsup|m<rsub|r>>x<rsub|r,j>|)>\|n\<in\><around*|{|r,\<ldots\>,\<infty\>|}>|}>|)>\<leqslant\><big|sum><rsub|i=l><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)><rsub|1>,\<beta\><around*|(|i|)><rsub|2>>
@@ -8125,8 +8125,8 @@
       <reference|extended finite sums>]>>>|<cell|<big|sum><rsup|N<rsub|m>><rsub|i=k>sup<around*|(|<around*|{|<big|sum><rsub|j=l><rsup|r>x<rsub|i,j>\|r\<in\><around*|{|l,\<ldots\>,\<infty\>|}>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsup|N<rsub|m>><rsub|i=k><around*|(|<big|sum><rsub|j=l><rsup|M<rsub|m>>x<rsub|i,j>|)>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|sup<around*|(|<around*|{|<big|sum><rsup|r><rsub|i=k><around*|(|<big|sum><rsub|j=l><rsup|M<rsub|m>>x<rsub|i,j>|)>\|r\<in\><around*|{|k,\<ldots\>,\<infty\>|}>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=k><rsup|\<infty\>><around*|(|<big|sum><rsub|j=l><rsup|\<infty\>>x<rsub|i,j>|)>>>>>
     </eqnarray*>
 
-    As <math|m\<in\><around*|{|n,\<ldots\>,\<infty\>|}>> was choosen
-    arbitrary it follows that\ 
+    As <math|m\<in\><around*|{|n,\<ldots\>,\<infty\>|}>> was chosen arbitrary
+    it follows that\ 
 
     <\equation>
       <label|eq 20.49.156><big|sum><rsub|i=n><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)><rsub|1>,\<beta\><around*|(|i|)><rsub|2>>=sup<around*|(|<around*|{|<big|sum><rsub|i=n><rsup|m>x<rsub|\<beta\><around*|(|i|)><rsub|1>,\<beta\><around*|(|i|)><rsub|2>>\|m\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>\<leqslant\><big|sum><rsub|i=k><rsup|\<infty\>><around*|(|<big|sum><rsub|j=l><rsup|\<infty\>>x<rsub|i,j>|)>
@@ -8157,7 +8157,7 @@
       <reference|sum bijection on index>]>>>|<cell|<big|sum><rsub|i\<in\><around*|{|n,\<ldots\>,N|}>>x<rsub|\<beta\><around*|(|i|)><rsub|1>,\<beta\><around*|(|i|)><rsub|2>>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=n><rsup|N>x<rsub|\<beta\><around*|(|i|)><rsub|1>,\<beta\><around*|(|i|)><rsub|2>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|sup<around*|(|<around*|{|<big|sum><rsub|i=n><rsup|m>x<rsub|\<beta\><around*|(|i|)><rsub|1>,\<beta\><around*|(|i|)><rsub|2>>\|m\<in\><around*|{|n,\<ldots\>,\<infty\>|}>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=n><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)><rsub|1>,\<beta\><around*|(|i|)><rsub|2>>>>>>
     </eqnarray*>
 
-    Hence as <math|r\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> was choosen
+    Hence as <math|r\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> was chosen
     arbitrary we have that\ 
 
     <\equation>
@@ -8172,7 +8172,7 @@
       <reference|eq 20.51.156>]>>>|<cell|<big|sum><rsub|i=n><rsup|\<infty\>>x<rsub|\<beta\><around*|(|i|)><rsub|1>,\<beta\><around*|(|i|)><rsub|2>>>>>>
     </eqnarray*>
 
-    So as <math|s\<in\><around*|{|l,\<ldots\>,\<infty\>|}>> is choosen
+    So as <math|s\<in\><around*|{|l,\<ldots\>,\<infty\>|}>> is chosen
     arbitrary we have that\ 
 
     <\equation*>
@@ -8302,13 +8302,1893 @@
 
   <section|Measure spaces>
 
+  <subsection|Rings, algebras and <math|\<sigma\>>-algebras>
+
+  <\definition>
+    <label|measure ring><index|ring of sets><dueto|Ring>Let <math|X> be a set
+    then <math|\<cal-R\>\<subseteq\>\<cal-P\><around*|(|X|)>> [the set of
+    subsets of <math|X>] is a <with|font-series|bold|ring> on <math|X> if
+    <math|\<cal-R\>> satisfies:
+
+    <\enumerate>
+      <item><math|R\<neq\>\<varnothing\>>
+
+      <item>If <math|A,B\<in\>\<cal-R\>> then
+      <math|A<big|cup>B\<in\>\<cal-R\>>
+
+      <item>If <math|A>, <math|B\<in\>\<cal-R\>> then
+      <math|A\\B\<in\>\<cal-R\>>
+    </enumerate>
+  </definition>
+
+  Rather trivial examples of rings are the following:
+
+  <\example>
+    <label|measure {empty set} is a ring>Let <math|X> be a set then
+    <math|<around*|{|\<varnothing\>|}>> is a ring on <math|X>
+  </example>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>As <math|\<varnothing\>\<in\><around*|{|\<varnothing\>|}>> we
+      have that <math|<around*|{|\<varnothing\>|}>\<neq\>\<varnothing\>>
+
+      <item>If <math|A,B\<in\><around*|{|\<varnothing\>|}>> then
+      <math|A=B=\<varnothing\>> so that <math|A<big|cup>B=\<varnothing\>\<in\><around*|{|\<varnothing\>|}>>
+
+      <item>If If <math|A,B\<in\><around*|{|\<varnothing\>|}>> then
+      <math|A=B=\<varnothing\>> so that <math|A\\B=\<varnothing\>\\\<varnothing\>=\<varnothing\>\<in\><around*|{|\<varnothing\>|}>>
+    </enumerate>
+  </proof>
+
+  <\example>
+    <label|measure P(X) is a ring>Let <math|X> be a set then
+    <math|\<cal-P\><around*|(|X|)>> is a ring on <math|X>
+  </example>
+
+  <\proof>
+    As <math|X\<subseteq\>X> <math|X\<in\>\<cal-P\><around*|(|X|)>> so that
+
+    <\equation*>
+      \<cal-P\><around*|(|X|)>\<neq\>\<varnothing\>
+    </equation*>
+
+    If <math|A,B\<in\>\<cal-P\><around*|(|X|)>> then <math|A,B\<subseteq\>X>
+    so that <math|A<big|cup>B\<subseteq\>X> and <math|A\\B\<subseteq\>X> so
+    that\ 
+
+    <\equation*>
+      A<big|cup>B\<in\>\<cal-P\><around*|(|X|)><text| and
+      >A\\B\<in\>\<cal-P\><around*|(|X|)>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|measure ring properties>Let <math|X> be a empty set and
+    <math|\<cal-R\>> a ring on <math|X> then we have\ 
+
+    <\enumerate>
+      <item><math|\<varnothing\>\<in\>\<cal-R\>>
+
+      <item>If <math|n\<in\>\<bbb-N\>> and
+      <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-R\>>
+      a finite family of sets in <math|\<cal-R\>> then
+      <math|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<in\>\<cal-R\>>
+
+      <item>If <math|A,B\<in\>\<cal-R\>> then
+      <math|A<big|cap>B\<in\>\<cal-R\>>
+
+      <item>If <math|n\<in\>\<bbb-N\>> and
+      <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-R\>>
+      a finite family of sets in <math|\<cal-R\>> then
+      <math|<big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<in\>\<cal-R\>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>As <math|\<cal-R\>\<neq\>\<varnothing\>> there exist a
+      <math|A\<in\>\<cal-R\>> so that <math|\<varnothing\>=A\\A\<in\>\<cal-R\>>
+
+      <item>We prove this by induction so let
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\>\|<text|If
+        ><around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-R\><text|
+        then ><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<in\>\<cal-R\>|}>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|1\<in\>S>>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1|}>>\<subseteq\>\<cal-R\>>
+        then <math|<big|cup><rsub|i\<in\><around*|{|1|}>>A<rsub|i>=A<rsub|1>\<in\>\<cal-R\>>
+        so that <math|1\<in\>S>.
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+        <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>\<cal-R\>>
+        then <math|A<rsub|n+1>\<in\>\<cal-R\>> and, as <math|n\<in\>S>,
+        <math|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<in\>\<cal-R\>>.
+        Hence <math|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>A<rsub|i>=A<rsub|n+1><big|cup><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)>\<in\>\<cal-R\>>
+        which proves that <math|n+1\<in\>S>
+      </description>
+
+      <item>If <math|A,B\<in\>\<cal-R\>> then <math|A\\B\<in\>\<cal-R\>> so
+      that <math|A\\<around*|(|A\\B|)>\<in\>\<cal-R\>> which as
+      <math|A\\<around*|(|A\\B|)>\<equallim\><rsub|<text|[theorem:
+      <reference|class inclusion and union and intersection>]>>A<big|cap>B>
+      proves that <math|A<big|cap>B\<in\>\<cal-R\>>.
+
+      <item>We prove this by induction so let
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\>\|<text|If
+        ><around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-R\><text|
+        then ><big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<in\>\<cal-R\>|}>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|1\<in\>S>>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1|}>>\<subseteq\>\<cal-R\>>
+        then <math|<big|cap><rsub|i\<in\><around*|{|1|}>>A<rsub|i>=A<rsub|1>\<in\>\<cal-R\>>
+        so that <math|1\<in\>S>.
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+        <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>\<cal-R\>>
+        then <math|A<rsub|n+1>\<in\>\<cal-R\>> and, as <math|n\<in\>S>,
+        <math|<big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<in\>\<cal-R\>>.
+        Hence <math|<big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>A<rsub|i>=A<rsub|n+1><big|cap><around*|(|<big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)>\<in\>\<cal-R\>>
+        which proves that <math|>that <math|n+1\<in\>S>
+      </description>
+    </enumerate>
+  </proof>
+
+  A algebra on <math|X> is a ring such that <math|X> is a element of the
+  ring.
+
+  <\definition>
+    <label|measure algebra><index|algebra of sets><dueto|Algebra>Let <math|X>
+    be a set then <math|\<cal-A\>\<subseteq\>\<cal-P\><around*|(|X|)>> is a
+    <with|font-series|bold|algebra> on <math|X> if <math|\<cal-A\>> satisfies
+
+    <\enumerate>
+      <item><math|\<cal-A\>> is a ring on <math|X>
+
+      <item><math|X\<in\>\<cal-R\>>
+    </enumerate>
+  </definition>
+
+  <\example>
+    <label|measure {emptyset,set} is a measure>Let
+    <math|X\<neq\>\<varnothing\>> be a non empty set then
+    <math|<around*|{|\<varnothing\>|}>> is a ring [see example:
+    <reference|measure {empty set} is a ring>] but not a algebra because
+    <math|X\<nin\><around*|{|\<varnothing\>|}>>, however
+    <math|<around*|{|X,\<varnothing\>|}>> is a algebra on <math|X>.\ 
+  </example>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>As <math|X,\<varnothing\>\<in\><around*|{|X,\<varnothing\>|}>>
+      <math|<around*|{|X,\<varnothing\>|}>\<neq\>\<varnothing\>>
+
+      <item>If <math|A,B\<in\><around*|{|X,\<varnothing\>|}>> then we have
+      either:\ 
+
+      <\description>
+        <item*|<math|A=X\<wedge\>B=X>>Then
+        <math|A<big|cup>B=X\<in\><around*|{|X,\<varnothing\>|}>> and
+        <math|A\\B=X\\X=\<varnothing\>\<in\><around*|{|X,\<varnothing\>|}>>
+
+        <item*|<math|A=\<varnothing\>\<wedge\>B=X>>Then
+        <math|A<big|cup>B=X\<in\><around*|{|X,\<varnothing\>|}>> and
+        <math|A\\B=\<varnothing\>\\X=\<varnothing\>\<in\><around*|{|X,\<varnothing\>|}>>
+
+        <item*|<math|A=X\<wedge\>B=\<varnothing\>>>Then
+        <math|A<big|cup>B=X\<in\><around*|{|X,\<varnothing\>|}>> and
+        <math|A\\B=X\\\<varnothing\>=X\<in\><around*|{|X,\<varnothing\>|}>>
+
+        <item*|<math|A=\<varnothing\>\<wedge\>B=\<varnothing\>>>Then
+        <math|A<big|cup>B=\<varnothing\>\<in\><around*|{|X,\<varnothing\>|}>>
+        and <math|A\\B=\<varnothing\>\\\<varnothing\>=\<varnothing\>\<in\><around*|{|X,\<varnothing\>|}>>
+      </description>
+    </enumerate>
+  </proof>
+
+  <\example>
+    <label|measure P(X) is a algebra>Let <math|X> be a set then
+    <math|\<cal-P\><around*|(|X|)>> is a ring on <math|X>
+  </example>
+
+  <\proof>
+    Using [example: <reference|measure P(X) is a ring>] it follows that
+    <math|\<cal-A\>> is a ring. Further as <math|X\<subset\>X> it follows
+    that <math|X\<in\>\<cal-P\><around*|(|X|)>>.
+  </proof>
+
+  The following summarizes some trivial properties of a algebra.
+
+  <\theorem>
+    <label|measure algebra properties>Let <math|X> be a set and
+    <math|\<cal-A\>> a algebra on <math|X> then we have:\ 
+
+    <\enumerate>
+      <item><math|\<varnothing\>\<in\>\<cal-A\>>
+
+      <item><math|X\<in\>\<cal-A\>>
+
+      <item><math|\<forall\>A,B\<in\>\<cal-A\>> we have that
+      <math|A<big|cup>B\<in\>\<cal-A\>>, <math|A<big|cap>B\<in\>\<cal-A\>>
+      and <math|A\\B\<in\>\<cal-A\>>
+
+      <item>If <math|n\<in\>\<bbb-N\>> and
+      <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\>>
+      a finite family of sets in <math|\<cal-A\>> then
+      <math|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<in\>\<cal-A\>>
+
+      <item>If <math|n\<in\>\<bbb-N\>> and
+      <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\>>
+      a finite family of sets in <math|\<cal-A\>> then
+      <math|<big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<in\>\<cal-A\>>
+
+      <item><math|\<forall\>A\<in\>\<cal-A\>> we have that
+      <math|X\\A\<in\>\<cal-A\>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>As <math|\<cal-A\>> is a ring this follows from [theorem:
+      <reference|measure ring properties>].
+
+      <item>This is stated in the definition of a algebra.
+
+      <item>As <math|\<cal-A\>> is a ring this follows from [theorem:
+      <reference|measure ring properties>] and the definition of a ring.
+
+      <item>As <math|\<cal-A\>> is a ring this follows from [theorem:
+      <reference|measure ring properties>].
+
+      <item>As <math|\<cal-A\>> is a ring this follows from [theorem:
+      <reference|measure ring properties>].
+
+      <item>As <math|X\<in\>\<cal-A\>> and <math|A\<in\>\<cal-A\>> we have by
+      (3) that <math|X\\A\<in\>\<cal-A\>>.
+    </enumerate>
+  </proof>
+
+  In most books we have the following equivalent definitons of a algebra
+
+  <\theorem>
+    <label|measure algebra equavalent definition>Let <math|X> be a set and
+    <math|\<cal-A\>\<subseteq\>\<cal-P\><around*|(|X|)>> then the following
+    are equivalent:
+
+    <\enumerate>
+      <item><math|\<cal-A\>> is a algebra on <math|X>
+
+      <item><math|\<cal-A\>> satisifes:\ 
+
+      <\enumerate>
+        <item><math|X\<in\>\<cal-A\>>
+
+        <item><math|\<forall\>A\<in\>\<cal-A\>> we have
+        <math|X\\A\<in\>\<cal-A\>>
+
+        <item><math|\<forall\>A,B\<in\>\<cal-A\>> we have
+        <math|A<big|cap>B\<in\>\<cal-A\>>
+      </enumerate>
+
+      <item><math|\<cal-A\>> satisfies:\ 
+
+      <\enumerate>
+        <item><math|X\<in\>\<cal-A\>>
+
+        <item><math|\<forall\>A\<in\>\<cal-A\>> we have
+        <math|X\\A\<in\>\<cal-A\>>
+
+        <item><math|\<forall\>A,B\<in\>\<cal-A\>> we have
+        <math|A<big|cup>B\<in\>\<cal-A\>>
+      </enumerate>
+
+      <item><math|\<cal-A\>> satisfies:\ 
+
+      <\enumerate>
+        <item><math|X\<in\>\<cal-A\>>
+
+        <item><math|\<forall\>A,B\<in\>\<cal-A\>> we have
+        <math|A\\B\<in\>\<cal-A\>>
+      </enumerate>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|1\<Rightarrow\>2>>If <math|\<cal-A\>> is a algebra then by
+      definition <math|\<cal-A\>> is a ring and <math|X\<in\>\<cal-A\>> so
+      that
+
+      <\enumerate>
+        <item><math|X\<in\>\<cal-A\>>\ 
+
+        <item><math|\<forall\>A\<in\>\<cal-A\>> we have, as
+        <math|X\<in\>\<cal-A\>>, that <math|X\\A\<in\>\<cal-A\>> [by the
+        definition of a ring].
+
+        <item><math|\<forall\>A,B\<in\>\<cal-A\>> we have by the definition
+        of a ring that <math|A\\B\<in\>\<cal-A\>>.
+      </enumerate>
+
+      <item*|<math|2\<Rightarrow\>3>>We have:\ 
+
+      <\enumerate>
+        <item><math|X\<in\>\<cal-A\>> by the hypothesis.
+
+        <item><math|X\\A> by the hypothesis.
+
+        <item>Let <math|A,B\<in\>\<cal-A\>> then we have that
+        <math|X\\A\<in\>\<cal-A\>> and <math|X\\B\<in\>\<cal-A\>> so that
+        <math|<around*|(|X\\A|)><big|cap><around*|(|X\\B|)>\<in\>\<cal-A\>>,
+        hence
+
+        <\equation*>
+          X\\<around*|(|<around*|(|X\\A|)><big|cap><around*|(|X\\B|)>|)>\<in\>\<cal-A\>
+        </equation*>
+
+        Further we have
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|X\\<around*|(|<around*|(|X\\A|)><big|cap><around*|(|X\\B|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|class set difference and union ,
+          intersection>]>>>|<cell|<around*|(|X\\<around*|(|X\\A|)>|)><big|cup><around*|(|X\\<around*|(|X\\B|)>|)>>>|<row|<cell|>|<cell|<below|\<equallim\>|A,B\<subseteq\>X\<wedge\><text|[theorem:
+          <reference|class inclusion and union and
+          intersection>]>>>|<cell|A<big|cup>B>>>>
+        </eqnarray*>
+
+        so that <math|A<big|cup>B\<in\>\<cal-A\>>.
+      </enumerate>
+
+      <item*|<math|3\<Rightarrow\>4>>We have
+
+      <\enumerate>
+        <item><math|X\<in\>\<cal-A\>> by the hypothesis
+
+        <item>Let <math|A,B\<in\>\<cal-A\>> then <math|X\\A\<in\>\<cal-A\>>
+        so that <math|<around*|(|X\\A|)><big|cup>B\<in\>\<cal-A\>> hence\ 
+
+        <\equation*>
+          X\\<around*|(|<around*|(|X\\A|)><big|cup>B|)>\<in\>\<cal-A\>
+        </equation*>
+
+        Further we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|X\\<around*|(|<around*|(|X\\A|)><big|cup>B|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|class set difference and union ,
+          intersection>]>>>|<cell|<around*|(|X\\<around*|(|X\\A|)>|)><big|cap><around*|(|X\\B|)>>>|<row|<cell|>|<cell|<below|\<equallim\>|A\<subseteq\>X\<wedge\><text|[theorem:
+          <reference|class inclusion and union and
+          intersection>]>>>|<cell|A<big|cap><around*|(|X\\B|)>>>|<row|<cell|>|<cell|<below|\<equallim\>|A,B\<subseteq\>X\<wedge\><text|[theorem:
+          <reference|class inclusion and union and
+          intersection>]>>>|<cell|A\\B>>>>
+        </eqnarray*>
+
+        so that <math|A\\B\<in\>\<cal-A\>>
+      </enumerate>
+
+      <item*|<math|4\<Rightarrow\>1>>Then we have\ 
+
+      <\enumerate>
+        <item><math|X\<in\>\<cal-A\>> by the hypothesis.
+
+        <item>If <math|A,B\<in\>\<cal-A\>> then by the hypothesis
+        <math|A\\B\<in\>\<cal-A\>> so that
+        <math|A\\<around*|(|A\\B|)>\<in\>\<cal-A\>>, as by [theorem:
+        <reference|class inclusion and union and intersection>]
+        <math|A\\<around*|(|A\\B|)>=A<big|cap>B> it follows that
+        <math|A<big|cap>B\<in\>\<cal-A\>> hence we have proved that\ 
+
+        <\equation*>
+          \<forall\>A,B\<in\>\<cal-A\><text| we have
+          >A<big|cap>B\<in\>\<cal-A\>
+        </equation*>
+
+        Further if <math|A,B\<in\>\<cal-A\>> then as <math|X\<in\>\<cal-A\>>
+        we have that <math|<around*|(|X\\A|)>,<around*|(|X\\B|)>\<in\>\<cal-A\>>
+        so that <rigid|<math|<around*|(|X\\A|)><big|cap><around*|(|X\\B|)>\<in\>\<cal-A\>>>,
+        hence we have that\ 
+
+        <\equation*>
+          X\\<around*|(|<around*|(|X\\A|)><big|cap><around*|(|X\\B|)>|)>\<in\>\<cal-A\>
+        </equation*>
+
+        Now\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|X\\<around*|(|<around*|(|X\\A|)><big|cap><around*|(|X\\B|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|class set difference and union ,
+          intersection>]>>>|<cell|<around*|(|X\\<around*|(|X\\A|)>|)><big|cup><around*|(|X\\<around*|(|X\\B|)>|)>>>|<row|<cell|>|<cell|<below|\<equallim\>|A,B\<subseteq\>X\<wedge\><text|[theorem:
+          <reference|class inclusion and union and
+          intersection>]>>>|<cell|A<big|cup>B>>>>
+        </eqnarray*>
+
+        proving that\ 
+
+        <\equation*>
+          \<forall\>A,B\<in\>\<cal-A\><text| we have
+          >A<big|cup>B\<in\>\<cal-A\>
+        </equation*>
+      </enumerate>
+
+      So as <math|X\<in\>\<cal-A\>\<Rightarrow\>\<cal-A\>\<neq\>\<varnothing\>>
+      and <math|\<forall\>A,B\<in\>\<cal-A\>> we have
+      <math|A<big|cup>B\<in\>\<cal-A\>> and <math|A\\B\<in\>\<cal-A\>> it
+      follows that <math|\<cal-A\>> is a algebra.
+    </description>
+  </proof>
+
+  We also want to deal with countable unions of sets and for this we define a
+  sigma algebra.
+
+  <\definition>
+    <label|measure sigma algebra><index|sigma
+    algebra><index|<math|\<sigma\>>-algebra>Let <math|X> be a set,
+    <math|\<cal-A\>\<subseteq\>\<cal-P\><around*|(|X|)>> then
+    <math|\<cal-A\>> is a sigma algebra [noted as <math|\<sigma\>>-algebra]
+    on <math|X> if\ 
+
+    <\enumerate>
+      <item><math|X\<in\>\<cal-A\>>
+
+      <item><math|\<forall\>A\<in\>\<cal-A\>> we have
+      <math|X\\A\<in\>\<cal-A\>>
+
+      <item>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
+      is a countable family of sets in <math|\<cal-A\>> then
+      <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>>
+    </enumerate>
+
+    <\note>
+      If <math|A,B\<in\>\<cal-A\>> then if we define
+      <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
+      by <math|A<rsub|i>=<choice|<tformat|<table|<row|<cell|A<text| if
+      >i=1>>|<row|<cell|B<text| if >i\<in\><around*|{|,\<ldots\>,\<infty\>|}>>>>>>>
+      then\ 
+
+      <\equation*>
+        A<big|cup>B=A<rsub|1><big|cup><around*|(|<big|cup><rsub|i\<in\><around*|{|2,\<ldots\>,\<infty\>|}>>A<rsub|i>|)>=<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>
+      </equation*>
+
+      so that every <math|\<sigma\>>-algebra on <math|X> is a algebra. So we
+      have\ 
+
+      <\equation*>
+        \<sigma\><text|-algebra >\<Rightarrowlim\><rsub|is a ><text| algebra
+        >\<Rightarrowlim\><rsub|is a><text| ring>
+      </equation*>
+    </note>
+  </definition>
+
+  We have the following equivalent definitions of a <math|\<sigma\>>-algebra
+
+  <\theorem>
+    <label|measure sigma algebra equivalences>Let <math|X> be a set,
+    <math|\<cal-A\>\<subseteq\>\<cal-P\><around*|(|X|)>> then we have the
+    following equivalences:\ 
+
+    <\enumerate>
+      <item><math|\<cal-A\>> is a <math|\<sigma\>>-algebra on <math|X>\ 
+
+      <item><math|\<cal-A\>> is a algebra and
+      <math|\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><text|
+      we have ><big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>>
+
+      <item><math|\<cal-A\>> satisfies:\ 
+
+      <\enumerate>
+        <item><math|\<varnothing\>\<in\>\<cal-A\>>
+
+        <item><math|\<forall\>A\<in\>\<cal-A\>> we have
+        <math|X\\A\<in\>\<cal-A\>>
+
+        <item><math|\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
+        we have <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>>
+      </enumerate>
+
+      <item><math|\<cal-A\>> satisfies:\ 
+
+      <\enumerate>
+        <item><math|\<varnothing\>\<in\>\<cal-A\>>
+
+        <item><math|\<forall\>A\<in\>\<cal-A\>> we have
+        <math|X\\A\<in\>\<cal-A\>>
+
+        <item><math|\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
+        we have <math|<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>>
+      </enumerate>
+
+      <item><math|\<cal-A\>> satisfies:\ 
+
+      <\enumerate>
+        <item><math|X\<in\>\<cal-A\>>
+
+        <item><math|\<forall\>A\<in\>\<cal-A\>> we have
+        <math|X\\A\<in\>\<cal-A\>>
+
+        <item><math|\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
+        we have <math|<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>>
+      </enumerate>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|1\<Rightarrow\>2>>This follows from the fact that a
+      <math|\<sigma\>>-algebra on <math|X> is a algebra on <math|X>.
+
+      <item*|<math|2\<Rightarrow\>3>>As <math|\<cal-A\>> is a algebra we have
+      by [theorem: <reference|measure algebra properties>] that
+
+      <\equation*>
+        \<varnothing\>\<in\>\<cal-A\>
+      </equation*>
+
+      <\equation*>
+        \<forall\>A\<in\>\<cal-A\><text| we have >X\\A\<in\>\<cal-A\>
+      </equation*>
+
+      Finally by the definition of a <math|\<sigma\>>-algebra we have\ 
+
+      <\equation*>
+        \<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><text|
+        we have ><big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>
+      </equation*>
+
+      <item*|<math|3\<Rightarrow\>4>>We have by (3) that\ 
+
+      <\equation*>
+        \<varnothing\>\<in\>\<cal-A\><text| and
+        >\<forall\>A\<in\>\<cal-A\><text| we have >X\\A\<in\>\<cal-A\>
+      </equation*>
+
+      Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>.
+      If <math|i\<in\>\<bbb-N\>> then as <math|A<rsub|i>\<in\>\<cal-A\>> it
+      follows that <math|X\\A<rsub|i>\<in\>\<cal-A\>> we have by (3) that
+      <math|<big|cup><rsub|i\<in\>\<bbb-N\>><around*|(|X\\A<rsub|i>|)>\<in\>\<cal-A\>>
+      so that
+
+      <\equation*>
+        X\\<around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>><around*|(|X\\A<rsub|i>|)>|)>\<in\>\<cal-A\>
+      </equation*>
+
+      As\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|X\\<around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>><around*|(|X\\A<rsub|i>|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|family de Morgan>]>>>|<cell|<big|cap><rsub|i\<in\>\<bbb-N\>><around*|(|X\\<around*|(|X\\A<rsub|i>|)>|)>>>|<row|<cell|>|<cell|<below|\<equallim\>|A<rsub|i>\<subseteq\>X\<wedge\><text|[theorem:
+        <reference|class inclusion and union and
+        intersection>]>>>|<cell|<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>>>>>
+      </eqnarray*>
+
+      it follows that\ 
+
+      <\equation*>
+        \<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><text|
+        we have ><big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>
+      </equation*>
+
+      \ <math|>
+
+      <item*|<math|4\<Rightarrow\>5>>By (4) we have that
+      <math|\<varnothing\>\<in\>\<cal-A\>> so that by (4) again we have\ 
+
+      <\equation*>
+        X=X\\\<varnothing\>\<in\>\<cal-A\>
+      </equation*>
+
+      further by (4) we have\ 
+
+      <\equation*>
+        \<forall\>A\<in\>\<cal-A\><text| we have >X\\A\<in\>\<cal-A\><text|
+        and >\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><text|
+        we have ><big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>
+      </equation*>
+
+      <item*|<math|5\<Rightarrow\>1>>By (1) we have\ 
+
+      <\equation*>
+        X\<in\>\<cal-A\><text| and >\<forall\>A\<in\>\<cal-A\><text| we have
+        >X\\A\<in\>\<cal-A\>
+      </equation*>
+
+      Further if <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
+      then <math|\<forall\>i\<in\>\<bbb-N\>> we have
+      <math|A<rsub|i>\<in\>\<cal-A\>> so that
+      <math|X\\A<rsub|i>\<in\>\<cal-A\>>. Hence we have\ 
+
+      <\equation*>
+        X\\<around*|(|<big|cap><rsub|i\<in\>\<bbb-N\>><around*|(|X\\A<rsub|i>|)>|)>\<in\>\<cal-A\>
+      </equation*>
+
+      Now\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|X\\<around*|(|<big|cap><rsub|i\<in\>\<bbb-N\>><around*|(|X\\A<rsub|i>|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|family de Morgan>]>>>|<cell|<big|cup><rsub|i\<in\>\<bbb-N\>><around*|(|X\\<around*|(|X\\A<rsub|i>|)>|)>>>|<row|<cell|>|<cell|<below|\<equallim\>|A<rsub|i>\<subseteq\>X\<wedge\><text|[theorem:
+        <reference|class inclusion and union and
+        intersection>]>>>|<cell|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>>>>>
+      </eqnarray*>
+
+      so that\ 
+
+      <\equation*>
+        \<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><text|
+        we have ><big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>
+      </equation*>
+
+      This proves that <math|\<cal-A\>> is a <math|\<sigma\>>-algebra.
+    </description>
+  </proof>
+
+  <\example>
+    Let <math|X\<neq\>\<varnothing\>> be a set then
+    <math|<around*|{|\<varnothing\>|}>> is not a <math|\<sigma\>>-algebra on
+    <math|X> [see example: <reference|measure {empty set} is a ring>] but
+    <math|<around*|{|\<varnothing\>,X|}>> is a <math|\<sigma\>>-algebra on
+    <math|X>.
+  </example>
+
+  <\proof>
+    Using [example: <reference|measure {empty set} is a ring>] it follows
+    that <math|<around*|{|\<varnothing\>,X|}>> is a algebra on <math|X> so
+    that\ 
+
+    <\equation*>
+      X\<in\>\<cal-A\><text| and >\<forall\>A\<in\>\<cal-A\><text| we have
+      >X\\A\<in\>\<cal-A\>
+    </equation*>
+
+    \ Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\><around*|{|\<varnothing\>,X|}>>
+    then we have two cases to consider:\ 
+
+    <\description>
+      <item*|<math|\<forall\>i\<in\>\<bbb-N\><text| we have
+      <math|A<rsub|i>\<neq\>\<varnothing\>>>>>Then
+      <math|\<forall\>i\<in\>\<bbb-N\>> <math|A<rsub|i>=X> so that
+      <math|<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>=X\<in\>\<cal-A\>>
+
+      <item*|<math|\<exists\>i\<in\>\<bbb-N\><text| with
+      >A<rsub|i>=\<varnothing\>>>Then <math|<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>=\<varnothing\>\<in\>\<cal-A\>>
+    </description>
+
+    so that <math|<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>>.
+    Applying then [theorem: <reference|measure sigma algebra equivalences>]
+    proves that <math|<around*|{|\<varnothing\>,X|}>> is a
+    <math|\<sigma\>>-algebra on <math|X>.
+  </proof>
+
+  <\example>
+    <label|measure P(X) is a sigma algebra>Let <math|X> be a set then
+    <math|\<cal-P\><around*|(|X|)>> is a <math|\<sigma\>>-algebra on <math|X>
+  </example>
+
+  <\proof>
+    Using [example: <reference|measure P(X) is a algebra>]
+    <math|\<cal-P\><around*|(|X|)>> is a algebra on <math|X>. Further for
+    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-P\><around*|(|X|)>>
+    we have <math|\<forall\>i\<in\>\<bbb-N\>> that
+    <math|A<rsub|i>\<subseteq\>X> so that
+    <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<subseteq\>X> proving
+    that <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-P\><around*|(|X|)>>.
+    Applying then [theorem: <reference|measure sigma algebra equivalences>]
+    proves that <math|\<cal-P\><around*|(|X|)>> is a <math|\<sigma\>>-algebra
+    on <math|X>.
+  </proof>
+
+  <\theorem>
+    <label|measure countable union is in sigma algebra>Let <math|X> be a set,
+    <math|\<cal-A\>> a <math|\<sigma\>>-algebra on <math|X>, <math|I> a
+    countable set, <math|<around*|{|A<rsub|>|}><rsub|i\<in\>I>\<subseteq\>\<cal-A\>>
+    a countable family of element of <math|\<cal-A\>> then we have\ 
+
+    <\enumerate>
+      <item><math|<big|cup><rsub|i\<in\>I>A<rsub|i>\<in\>\<cal-A\>>
+
+      <item><math|<big|cap><rsub|i\<in\>I>A<rsub|i>\<in\>\<cal-A\>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>For <math|I> we have either\ 
+
+      <\description>
+        <item*|<math|I> is finite>Then there exist a bijection
+        <math|\<beta\>:<around*|{|1,\<ldots\>,n|}>\<rightarrow\>I> where
+        <math|n\<in\>\<bbb-N\><rsub|0>>. Let
+        <math|x\<in\><big|cup><rsub|i\<in\>I>A<rsub|i>> then there exist a
+        <math|i\<in\>I> such that <math|x\<in\>A<rsub|i>>. As <math|\<beta\>>
+        is a bijection hence surjective there exist a
+        <math|j\<in\><around*|{|1,\<ldots\>,n|}>> such that
+        <math|i=\<beta\><around*|(|j|)>> so that
+        <math|x\<in\>A<rsub|\<beta\><around*|(|j|)>>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|\<beta\><around*|(|j|)>>>.
+        Hence we have that\ 
+
+        <\equation>
+          <label|eq 20.52.200.1><big|cup><rsub|i\<in\>I>A<rsub|i>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|\<beta\><around*|(|i|)>>
+        </equation>
+
+        Likewise if <math|x\<in\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|\<beta\><around*|(|i|)>>>
+        then there exist a <math|j\<in\><around*|{|1,\<ldots\>,n|}>> such
+        that <math|x\<in\>A<rsub|\<beta\><around*|(|j|)>>> which as
+        <math|\<beta\><around*|(|j|)>\<in\>I> proves that
+        <math|x\<in\><big|cup><rsub|i\<in\>I>A<rsub|i>>, hence
+        <math|><math|<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|\<beta\><around*|(|i|)>>\<subseteq\><big|cup><rsub|i\<in\>I>A<rsub|i>>.
+        Combining this with [eq: <reference|eq 20.52.200.1>] proves that\ 
+
+        <\equation*>
+          <big|cup><rsub|i\<in\>I>A<rsub|i>=<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|\<beta\><around*|(|i|)>>
+        </equation*>
+
+        As <math|\<forall\>j\<in\><around*|{|1,\<ldots\>,n|}>>
+        <math|A<rsub|\<beta\><around*|(|i|)>>\<in\>\<cal-A\>> [because
+        <math|\<beta\><around*|(|i|)>\<in\>I>] it follows, as a
+        <math|\<sigma\>>-algebra is a ring, from [theorem: <reference|measure
+        ring properties>] that <math|<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|\<beta\><around*|(|i|)>>\<in\>\<cal-A\>>.
+        Hence\ 
+
+        <\equation*>
+          <big|cup><rsub|i\<in\>I>A<rsub|i>\<in\>\<cal-A\>
+        </equation*>
+
+        <item*|<math|I> is denumerable>Then there exist a bijection
+        <math|\<beta\>:\<bbb-N\>\<rightarrow\>I>. Let
+        <math|x\<in\><big|cup><rsub|i\<in\>I>A<rsub|i>> then there exist a
+        <math|i\<in\>I> such that <math|x\<in\>A<rsub|i>>. As <math|\<beta\>>
+        is a bijection hence surjective there exist a <math|j\<in\>\<bbb-N\>>
+        such that <math|i=\<beta\><around*|(|j|)>> so that
+        <math|x\<in\>A<rsub|\<beta\><around*|(|j|)>>\<subseteq\><big|cup><rsub|j\<in\>\<bbb-N\>>A<rsub|\<beta\><around*|(|j|)>>>.
+        Hence we have that\ 
+
+        <\equation>
+          <label|eq 20.53.200.1><big|cup><rsub|i\<in\>I>A<rsub|i>\<subseteq\><big|cup><rsub|j\<in\>\<bbb-N\>>A<rsub|\<beta\><around*|(|i|)>>
+        </equation>
+
+        Likewise if <math|x\<in\><big|cup><rsub|j\<in\>\<bbb-N\>>A<rsub|\<beta\><around*|(|i|)>>>
+        then there exist a <math|j\<in\>\<bbb-N\>> such that
+        <math|x\<in\>A<rsub|\<beta\><around*|(|j|)>>> which as
+        <math|\<beta\><around*|(|j|)>\<in\>I> proves that
+        <math|x\<in\><big|cup><rsub|i\<in\>I>A<rsub|i>>, hence
+        <math|><math|<big|cup><rsub|j\<in\>\<bbb-N\>>A<rsub|\<beta\><around*|(|i|)>>\<subseteq\><big|cup><rsub|i\<in\>I>A<rsub|i>>.
+        Combining this with [eq: <reference|eq 20.53.200.1>] proves that\ 
+
+        <\equation*>
+          <big|cup><rsub|i\<in\>I>A<rsub|i>=<big|cup><rsub|j\<in\>\<bbb-N\>>A<rsub|\<beta\><around*|(|i|)>>
+        </equation*>
+
+        As <math|\<forall\>j\<in\>\<bbb-N\>>
+        <math|A<rsub|\<beta\><around*|(|i|)>>\<in\>\<cal-A\>> [because
+        <math|\<beta\><around*|(|i|)>\<in\>I>] it follows, as a
+        <math|\<sigma\>>-algebra is a ring, from [theorem: <reference|measure
+        ring properties>] that <math|<big|cup><rsub|j\<in\>\<bbb-N\>>A<rsub|\<beta\><around*|(|i|)>>\<in\>\<cal-A\>>.
+        Hence\ 
+
+        <\equation*>
+          <big|cup><rsub|i\<in\>I>A<rsub|i>\<in\>\<cal-A\>
+        </equation*>
+      </description>
+
+      <item>Let <math|i\<in\>I> then <math|A<rsub|i>\<in\>\<cal-A\>> hence
+      <math|X\\A<rsub|i>\<in\>\<cal-A\>> so that by (1)
+      \ <math|<big|cup><rsub|i\<in\>I><around*|(|X\\A<rsub|i>|)>\<in\>\<cal-A\>>
+      from which it follows that\ 
+
+      <\equation*>
+        X\\<around*|(|<big|cup><rsub|i\<in\>I><around*|(|X\\A<rsub|i>|)>|)>\<in\>\<cal-A\>
+      </equation*>
+
+      As we have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|X\\<around*|(|<big|cup><rsub|i\<in\>I><around*|(|X\\A<rsub|i>|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|family de Morgan>]>>>|<cell|<big|cap><rsub|i\<in\>I><around*|(|X\\<around*|(|X\\A<rsub|i>|)>|)>>>|<row|<cell|>|<cell|<below|\<equallim\>|A<rsub|i>\<subseteq\>X\<wedge\><text|[theorem:
+        <reference|class inclusion and union and
+        intersection>]>>>|<cell|<big|cap><rsub|i\<in\>I>A<rsub|i>>>>>
+      </eqnarray*>
+
+      it follows that\ 
+
+      <\equation*>
+        <big|cap><rsub|i\<in\>I>A<rsub|n>\<in\>\<cal-A\>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  We show now how we can generate a <math|\<sigma\>> algebra based on a
+  arbitrary subset of <math|\<cal-P\><around*|(|X|)>>. First we prove that
+  for a non empty collection of <math|\<sigma\>>-algebra's the intersection
+  of this collection is again a <math|\<sigma\>>-algebra.\ 
+
+  <\lemma>
+    <label|measure sigma algebra intersection>Let <math|X> be a set and
+    <math|\<frak-A\>> a non empty set of <math|\<sigma\>>-algebra's on
+    <math|X> then <math|<big|cap><rsub|\<cal-A\>\<in\>\<frak-A\>>\<cal-A\>>
+    is a <math|\<sigma\>>-algebra on <math|X>.
+  </lemma>
+
+  <\proof>
+    As <math|\<frak-A\>\<neq\>\<varnothing\>> there exist a
+    <math|\<cal-S\>\<in\>\<frak-A\>> with
+    <math|\<cal-S\>\<subseteq\>\<cal-P\><around*|(|\<cal-X\>|)>> so that we
+    have by [theorem: <reference|class general intersection>] that
+    <math|<big|cap><rsub|<math-tt|>\<cal-A\>\<in\>\<frak-A\>>\<cal-A\>\<subseteq\>\<cal-S\>\<subseteq\>\<cal-P\><around*|(|X|)>>
+    proving that\ 
+
+    <\equation*>
+      <big|cap><rsub|<math-tt|>\<cal-A\>\<in\>\<frak-A\>>\<cal-A\>\<subseteq\>\<cal-P\><around*|(|X|)>
+    </equation*>
+
+    \ <math|>As <math|\<forall\>\<cal-A\>\<in\>\<frak-A\>> <math|\<cal-A\>>
+    is a <math|\<sigma\>>-algebra on <math|X> we have by [theorem:
+    <reference|measure sigma algebra equivalences>] that
+    <math|X\<in\>\<cal-A\>> hence\ 
+
+    <\equation*>
+      X\<in\><big|cap><rsub|\<cal-A\>\<in\>\<frak-A\>>\<cal-A\>
+    </equation*>
+
+    Let <math|A\<in\><big|cap><rsub|\<cal-A\>\<in\>\<frak-A\>>\<cal-A\>> then
+    for <math|\<cal-A\>\<in\>\<frak-A\>> we have <math|A\<in\>\<cal-A\>> so
+    that <math|X\\A\<in\>\<cal-A\>> which as <math|\<cal-A\>\<in\>\<frak-A\>>
+    was chosen arbitrary proves that <math|X\\A\<in\><big|cap><rsub|\<cal-A\>\<in\>\<frak-A\>>\<cal-A\>>.
+    Hence as <math|A\<in\><big|cap><rsub|\<cal-A\>\<in\>\<frak-A\>>\<cal-A\>>
+    was chosen arbitrary we have that\ 
+
+    <\equation*>
+      \<forall\>A\<in\><big|cap><rsub|\<cal-A\>\<in\>\<frak-A\>>\<cal-A\><text|
+      we have >X\\A\<in\><big|cap><rsub|\<cal-A\>\<in\>\<frak-A\>>\<cal-A\>
+    </equation*>
+
+    If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\><big|cap><rsub|\<cal-A\>\<in\>\<frak-A\>>\<cal-A\>>
+    then for <math|\<cal-A\>\<in\>\<frak-A\>> we have
+    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
+    so that <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>>
+    which as <math|\<cal-A\>\<in\>\<frak-A\>> was chosen arbitrary proves
+    that <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|>\<in\><big|cap><rsub|\<cal-A\>\<in\>\<frak-A\>>\<cal-A\>>.
+    Hence as <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\><big|cap><rsub|\<cal-A\>\<in\>\<frak-A\>>\<cal-A\>>
+    was chosen arbitrary we have that\ 
+
+    <\equation*>
+      \<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\><big|cap><rsub|\<cal-A\>\<in\>\<frak-A\>>\<cal-A\><text|
+      we have ><big|cap><rsub|\<cal-A\>\<in\>\<frak-A\>>\<cal-A\>\<in\><big|cap><rsub|\<cal-A\>\<in\>\<frak-A\>>\<cal-A\>
+    </equation*>
+
+    \ 
+  </proof>
+
+  We use now the above theorem to show how we can generate a
+  <math|\<sigma\>>-algebra out of a non empty subset of
+  <math|\<cal-P\><around*|(|X|)>>.
+
+  <\theorem>
+    <label|measure generated sigma algebra>Let <math|X> be a set
+    <math|\<cal-A\>\<subseteq\>\<cal-P\><around*|(|X|)>> then there exist a
+    <with|font-series|bold|unique> algebra
+    <math|\<sigma\><around*|[|\<cal-A\>|]>> on <math|X> such that:\ 
+
+    <\enumerate>
+      <item><math|\<cal-A\>\<subseteq\>\<sigma\><around*|[|\<cal-A\>|]>>
+
+      <item>If <math|\<cal-B\>> is another <math|\<sigma\>>-algebra with
+      <math|\<cal-A\>\<subseteq\>\<cal-B\>> then
+      <math|\<sigma\><around*|[|\<cal-A\>|]>\<subseteq\>\<cal-B\>>
+    </enumerate>
+
+    This unique smallest <math|\<sigma\>>-algebra that contains
+    <math|\<cal-A\>> is called the <math|\<sigma\>>-algebra generated by
+    <math|\<cal-A\>>
+  </theorem>
+
+  <\proof>
+    Define <math|\<frak-A\>=<around*|{|\<cal-T\>\|\<cal-T\><text| is a
+    >\<sigma\><text|-algebra on >X<text| with
+    >\<cal-A\>\<subseteq\>\<cal-T\>|}>>. As
+    <math|\<cal-A\>\<subseteq\>\<cal-P\><around*|(|X|)>> and
+    <math|\<cal-P\><around*|(|X|)>> and <math|\<cal-P\><around*|(|X|)>> is a
+    <math|\<sigma\>>-algebra on <math|X> [see example: <reference|measure
+    P(X) is a sigma algebra>] it follows that
+    <math|\<cal-P\><around*|(|X|)>\<in\>\<frak-A\>> hence <math|\<frak-A\>>
+    is not empty. Using then previous lemma [lemma: <reference|measure sigma
+    algebra intersection>] it follows that
+
+    <\equation*>
+      <big|cap><rsub|\<cal-T\>\<in\>\<frak-A\>>\<cal-T\><text| is a
+      >\<sigma\><text|-algebra on >X
+    </equation*>
+
+    As <math|\<forall\>\<cal-T\>\<in\>\<frak-A\>>
+    <math|\<cal-A\>\<subseteq\>\<cal-T\>> it follows from [theorem:
+    <reference|class general intersection>] that
+
+    <\equation*>
+      \<cal-A\>\<subseteq\><big|cap><rsub|\<cal-T\>\<in\>\<frak-A\>>\<cal-T\>
+    </equation*>
+
+    Finally assume that <math|\<cal-B\>> is another <math|\<sigma\>>-algebra
+    on <math|X> such that <math|\<cal-A\>\<subseteq\>\<cal-B\>> then
+    <math|\<cal-B\>\<in\>\<frak-A\>> so that by [theorem: <reference|class
+    general intersection>]
+
+    <\equation*>
+      <big|cap><rsub|\<cal-T\>\<in\>\<frak-A\>>\<cal-T\>\<subseteq\>\<cal-B\>
+    </equation*>
+  </proof>
+
+  A special case of a <math|\<sigma\>>-algebra in the context of topological
+  spaces it the Borel algebrat.
+
+  <\definition>
+    <label|measure Borel algebra><index|Borel
+    algebra><index|<math|\<cal-B\><around*|[|X,\<cal-T\>|]>>>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
+    then the Borel algebra on <math|X> noted as
+    <math|\<cal-B\><around*|[|X,\<cal-T\>|]>> is defined to be
+    <math|\<cal-B\><around*|[|X,\<cal-T\>|]>=\<sigma\><around*|[|\<cal-T\>|]>>.
+    In other words the Borel algebra on a topological space is the
+    <math|\<sigma\>>algebra generated by <math|\<cal-T\>>.
+  </definition>
+
+  <\theorem>
+    <label|measure Borel algebra and closure>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a topological space
+    then <math|\<cal-B\><around*|[|X,\<cal-T\>|]>=\<sigma\><around*|[|<around*|{|C\<subseteq\>X\|C<text|
+    is closed>|}>|]>>.
+  </theorem>
+
+  <\proof>
+    If <math|C\<in\><around*|{|C\<subseteq\>X\|C<text| is closed>|}>> then
+    <math|C> is closed, hence there exist a open <math|U\<in\>\<cal-T\>> such
+    that <math|C=X\<setminus\>U>. As <math|U\<in\>\<cal-T\>\<in\>\<sigma\><around*|[|\<cal-T\>|]>>
+    it follows that <math|C=X\\U\<in\>\<sigma\><around*|[|\<cal-T\>|]>>. So
+    <math|<around*|{|C\<subseteq\>X\|C<text| is
+    closed>|}>\<subseteq\>\<sigma\><around*|[|\<cal-T\>|]>> a
+    <math|\<sigma\>>-algebra, hence using [theorem: <reference|measure
+    generated sigma algebra>[ we have\ 
+
+    <\equation*>
+      \<sigma\><around*|[|<around*|{|C\<subseteq\>X\|C<text| is
+      closed>|}>|]>\<subseteq\>\<sigma\><around*|[|\<cal-T\>|]>
+    </equation*>
+
+    If <math|U\<in\>\<cal-T\>> then <math|X\\U> is closed hence
+    <math|X\\U\<in\><around*|{|C\<subseteq\>X\|C<text| is
+    closed>|}>\<in\>\<sigma\><around*|[|<around*|{|C\<subseteq\>X\|C<text| is
+    closed>|}>|]>>, hence <math|U=X\\<around*|(|X\\U|)>\<in\>\<sigma\><around*|[|<around*|{|C\<subseteq\>X\|C<text|
+    is closed>|}>|]>> proving that <math|\<cal-T\>\<subseteq\>\<sigma\><around*|[|<around*|{|C\<subseteq\>X\|C<text|
+    is closed>|}>|]>>. So using [theorem: <reference|measure generated sigma
+    algebra>[ we have\ 
+
+    <\equation*>
+      \<sigma\><around*|[|\<cal-T\>|]>\<subseteq\>\<sigma\><around*|[|<around*|{|C\<subseteq\>X\|C<text|
+      is closed>|}>|]>
+    </equation*>
+
+    This proves that\ 
+
+    <\equation*>
+      \<cal-B\><around*|[|X,\<cal-T\>|]>=\<sigma\><around*|[|\<cal-T\>|]>=\<sigma\><around*|[|<around*|{|C\<subseteq\>X\|C<text|
+      is closed>|}>|]>
+    </equation*>
+  </proof>
+
+  <subsection| Borel algebra on <math|\<bbb-R\>>>
+
+  <\definition>
+    <label|measure borel algebrat on R><index|<math|\<cal-B\><around*|[|\<bbb-R\>|]>>>Let
+    <math|<around*|\<langle\>|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|\<rangle\>>>
+    be the set of real numbers with the canonical topology
+    <math|\<cal-T\><rsub|<around*|\|||\|>>> based on the absolute value norm
+    [see theorem: <reference|normed basis of T\|\|>] then then
+    <math|\<cal-B\><around*|[|\<bbb-R\>|]>> is the Borel algebra based on
+    <math|\<cal-T\><rsub|<around*|\|||\|>>>. In other words\ 
+
+    <\equation*>
+      \<cal-B\><around*|[|\<bbb-R\>|]>=\<cal-B\><around*|[|\<bbb-R\>,\<cal-T\><rsub|<around*|\|||\|>>|]>=\<sigma\><around*|[|\<cal-T\><rsub|<around*|\|||\|>>|]>
+    </equation*>
+  </definition>
+
+  We will now find equivalent definitions for
+  <math|\<cal-B\><around*|[|\<bbb-R\>|]>> that will be usefull if we define a
+  measure. First we introduce the concept of bounded intervals on
+  <math|\<bbb-R\>>.
+
+  <\definition>
+    <index|<math|\<cal-I\><rsub|<around*|[||]>>>><index|<math|\<cal-I\><rsub|<around*|[||[>>>><index|<math|\<cal-I\><rsub|<around*|]||]>>>><index|<math|\<cal-I\><rsub|<around*|]||[>>>><index|<math|\<cal-I\>>>We
+    define the following set of bounded intervals:
+
+    <\enumerate>
+      <item><math|\<cal-I\><rsub|<around*|[||]>>=<around*|{|<around*|[|a,b|]>\|a,b\<in\>\<bbb-R\>\<wedge\><around*|[|a,b|]>\<neq\>\<varnothing\>|}>>
+      [the set of non empty closed bounded intervals]
+
+      <item><math|\<cal-I\><rsub|<around*|[||[>>=<around*|{|<around*|[|a,b|[>\|a,b\<in\>\<bbb-R\>\<wedge\><around*|[|a,b|[>\<neq\>\<varnothing\>|}>>
+      [the set of non empty right open bounded intervals]
+
+      <item><math|\<cal-I\><rsub|<around*|]||]>><rsub|>=<around*|{|<around*|]|a,b|]>\|a,b\<in\>\<bbb-R\>\<wedge\><around*|]|a,b|]>\<neq\>\<varnothing\>|}>>
+      [the set of non empty left open bounded intervals]
+
+      <item><math|\<cal-I\><rsub|<around*|]||[>>=<around*|{|<around*|]|a,b|[>\|a,b\<in\>\<bbb-R\>\<wedge\><around*|]|a,b|[>\<neq\>\<varnothing\>|}>>
+      [the set of non empty open bounded intervals]
+
+      <item><math|\<cal-I\>=\<cal-I\><rsub|<around*|[||]>><big|cup>\<cal-I\><rsub|<around*|[||[>><big|cup>\<cal-I\><rsub|<around*|]||]>><big|cup>\<cal-I\><rsub|<around*|]||[>>>
+    </enumerate>
+
+    <\note>
+      If <math|b=a> then <math|<around*|]|a,b|[>=<around*|[|a,b|[>=<around*|]|a,b|]>=\<varnothing\>>
+      and if <math|b\<less\>a> then <math|<around*|[|a,b|]>=<around*|[|a,b|[>=<around*|]|a,b|]>=<around*|]|a,b|[>=\<varnothing\>>
+      then we have valid bounded intervals but they are not elements of
+      <math|\<cal-I\><rsub|<around*|[||]>>>,
+      <math|\<cal-I\><rsub|<around*|[||[>>>,
+      <math|\<cal-I\><rsub|<around*|]||]>>> and
+      <math|\<cal-I\><rsub|<around*|]||[>>>. One reason to exclude these
+      intervals is that the boundary points of these intevals are not well
+      defined [for eample <math|<around*|[|1,0|[>=<around*|[|2,0|[>=<around*|[|0,0|[>>
+      which is needed for defining the length of the interval based on the
+      boundary points.
+    </note>
+  </definition>
+
+  For case to case analysis the following lemma will be usefull.
+
+  <\lemma>
+    <label|lemma 20.119.200>We have that <math|\<cal-I\><rsub|<around*|[||]>>>,
+    <math|\<cal-I\><rsub|<around*|[||[>>>,
+    <math|\<cal-I\><rsub|<around*|]||]>>> and
+    <math|\<cal-I\><rsub|<around*|]||[>>> are pairwise disjoint. In other
+    words we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|\<cal-I\><rsub|<around*|[||]>><big|cap>\<cal-I\><rsub|<around*|[||[>>=\<varnothing\>>|<cell|>>|<row|<cell|>|<cell|\<cal-I\><rsub|<around*|[||]>><big|cap>\<cal-I\><rsub|<around*|]||]>>=\<varnothing\>>|<cell|>>|<row|<cell|>|<cell|\<cal-I\><rsub|<around*|[||]>><big|cap>\<cal-I\><rsub|<around*|]||[>>=\<varnothing\>>|<cell|>>|<row|<cell|>|<cell|\<cal-I\><rsub|<around*|[||[>><big|cap>\<cal-I\><rsub|<around*|[||]>>=\<varnothing\>>|<cell|>>|<row|<cell|>|<cell|\<cal-I\><rsub|<around*|[||[>><big|cap>\<cal-I\><rsub|<around*|]||]>>=\<varnothing\>>|<cell|>>|<row|<cell|>|<cell|\<cal-I\><rsub|<around*|[||[>><big|cap>\<cal-I\><rsub|<around*|]||[>>=\<varnothing\>>|<cell|>>|<row|<cell|>|<cell|\<cal-I\><rsub|<around*|]||]>><big|cap>\<cal-I\><rsub|<around*|[||]>>=\<varnothing\>>|<cell|>>|<row|<cell|>|<cell|\<cal-I\><rsub|<around*|]||]>><big|cap>\<cal-I\><rsub|<around*|[||[>>=\<varnothing\>>|<cell|>>|<row|<cell|>|<cell|\<cal-I\><rsub|<around*|]||]>><big|cap>\<cal-I\><rsub|<around*|]||[>>=\<varnothing\>>|<cell|>>|<row|<cell|>|<cell|\<cal-I\><rsub|<around*|]||[>><big|cap>\<cal-I\><rsub|<around*|[||]>>=\<varnothing\>>|<cell|>>|<row|<cell|>|<cell|\<cal-I\><rsub|<around*|]||[>><big|cap>\<cal-I\><rsub|<around*|[||[>>=\<varnothing\>>|<cell|>>|<row|<cell|>|<cell|\<cal-I\><rsub|<around*|]||[>><big|cap>\<cal-I\><rsub|<around*|]||]>>=\<varnothing\>>|<cell|>>>>
+    </eqnarray*>
+
+    so that\ 
+
+    <\equation*>
+      \<cal-I\>=\<cal-I\><rsub|<around*|[||]>><big|sqcup>\<cal-I\><rsub|<around*|[||[>><big|sqcup>\<cal-I\><rsub|<around*|]||]>><big|sqcup>\<cal-I\><rsub|<around*|]||[>>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    We have to check the following cases:
+
+    <\description>
+      <item*|<math|\<cal-I\><rsub|<around*|[||]>><big|cap>\<cal-I\><rsub|<around*|[||[>>>>If
+      <math|I\<in\>\<cal-I\><rsub|<around*|[||]>><big|cap>\<cal-I\><rsub|<around*|[||[>>>
+      then <math|\<varnothing\>\<neq\>I=<around*|[|a,b|]>=<around*|[|c,d|[>>.
+      As <math|<around*|[|a,b|]>\<neq\>\<varnothing\>> it follows from
+      [theorem: <reference|interval condition to be empty>] that
+      <math|a\<leqslant\>b> so that <math|b\<in\><around*|[|a,b|]>=<around*|[|c,d|[>>
+      hence <math|c\<leqslant\>b\<less\>d>. Using [theorem:
+      <reference|complex densitiy theorem>] there exist a
+      <math|x\<in\>\<bbb-R\>> such that <math|c\<leqslant\>b\<less\>x\<less\>d>
+      proving that <math|x\<in\><around*|[|c,d|[>=<around*|[|a,b|]>> so that
+      <math|b\<less\>x\<leqslant\>b> leading to the contradiction
+      <math|b\<less\>b>. Hence we have\ 
+
+      <\equation>
+        <label|eq 20.52.200>\<cal-I\><rsub|<around*|[||]>><big|cap>\<cal-I\><rsub|<around*|[||[>>=\<varnothing\>
+      </equation>
+
+      <item*|<math|\<cal-I\><rsub|<around*|[||]>><big|cap>\<cal-I\><rsub|<around*|]||]>>>>If
+      <math|I\<in\>\<cal-I\><rsub|<around*|[||]>><big|cap>\<cal-I\><rsub|<around*|]||]>>>
+      then <math|\<varnothing\>=<around*|[|a,b|]>=<around*|]|c,d|]>>. As
+      <math|<around*|[|a,b|]>\<neq\>\<varnothing\>> it follows from [theorem:
+      <reference|interval condition to be empty>] that <math|a\<leqslant\>b>
+      so that <math|a\<in\><around*|[|a,b|]>=<around*|]|c,d|]>> hence
+      <math|c\<less\>a\<leqslant\>d>. Using [theorem: <reference|complex
+      densitiy theorem>] there exist a <math|x\<in\>\<bbb-R\>> such that
+      <math|c\<less\>x\<less\>a\<leqslant\>d> proving that
+      <math|x\<in\><around*|]|c,d|]>=<around*|[|a,b|]>> so that
+      <math|a\<leqslant\>x\<less\>a> leading to the contradiction
+      <math|a\<less\>a>. Hence we have\ 
+
+      <\equation>
+        <label|eq 20.53.200>\<cal-I\><rsub|<around*|[||]>><big|cap>\<cal-I\><rsub|<around*|]||]>>=\<varnothing\>
+      </equation>
+
+      <item*|<math|\<cal-I\><rsub|<around*|[||]>><big|cap>\<cal-I\><rsub|<around*|]||[>>>>If
+      <math|I\<in\>\<cal-I\><rsub|<around*|[||]>><big|cap>\<cal-I\><rsub|<around*|]||[>>>
+      then <math|\<varnothing\>\<neq\>I=<around*|[|a,b|]>=<around*|]|c,d|[>>.
+      As As <math|<around*|[|a,b|]>\<neq\>\<varnothing\>> it follows from
+      [theorem: <reference|interval condition to be empty>] that
+      <math|a\<leqslant\>b> so that <math|b\<in\><around*|[|a,b|]>=<around*|]|c,d|[>>
+      hence <math|c\<less\>b\<less\>d>. Using [theorem: <reference|complex
+      densitiy theorem>] there exist a <math|x\<in\>\<bbb-R\>> such that
+      <math|c\<less\>b\<less\>x\<less\>d> proving that
+      <math|x\<in\><around*|]|c,d|[>=<around*|[|a,b|]>> so that
+      <math|b\<less\>x\<leqslant\>b> leading to the contradiction
+      <math|b\<less\>b>. Hence we have\ 
+
+      <\equation>
+        <label|eq 20.54.200>\<cal-I\><rsub|<around*|[||]>><big|cap>\<cal-I\><rsub|<around*|]||[>>=\<varnothing\>
+      </equation>
+
+      <item*|<math|\<cal-I\><rsub|<around*|[||[>><big|cap>\<cal-I\><rsub|<around*|[||]>>>>Then
+      we have\ 
+
+      <\equation*>
+        \<cal-I\><rsub|<around*|[||[>><big|cap>\<cal-I\><rsub|<around*|[||]>>=\<cal-I\><rsub|<around*|[||]>><big|cap>\<cal-I\><rsub|<around*|[||[>>\<equallim\><rsub|<text|[eq;
+        <reference|eq 20.52.200>]>>\<varnothing\>
+      </equation*>
+
+      <item*|<math|\<cal-I\><rsub|<around*|[||[>><big|cap>\<cal-I\><rsub|<around*|]||]>>>>If
+      <math|I\<in\>\<cal-I\><rsub|<around*|[||[>><big|cap>\<cal-I\><rsub|<around*|]||]>>>
+      then <math|\<varnothing\>\<neq\>I=<around*|[|a,b|[>=<around*|]|c,d|]>>.
+      As \ <math|<around*|[|a,b|]>\<neq\>\<varnothing\>> it follows from
+      [theorem: <reference|interval condition to be empty>] that
+      <math|a\<less\>b> so that <math|a\<in\><around*|[|a,b|[>=<around*|]|c,d|]>>
+      hence <math|c\<less\>a\<leqslant\>d>. Using [theorem:
+      <reference|complex densitiy theorem>] there exist a
+      <math|x\<in\>\<bbb-R\>> such that <math|c\<less\>x\<less\>a\<leqslant\>d>
+      proving that <math|x\<in\><around*|]|c,d|]>=<around*|[|a,b|[>> so that
+      <math|a\<leqslant\>x\<less\>a> leading to the contradiction
+      <math|a\<less\>a>. Hence we have
+
+      <\equation>
+        <label|eq 20.55.200>\<cal-I\><rsub|<around*|[||[>><big|cap>\<cal-I\><rsub|<around*|]||]>>=\<varnothing\>
+      </equation>
+
+      <item*|<math|\<cal-I\><rsub|<around*|[||[>><big|cap>\<cal-I\><rsub|<around*|]||[>>>>If
+      <math|I\<in\>\<cal-I\><rsub|<around*|[||[>><big|cap>\<cal-I\><rsub|<around*|]||[>>>
+      then <math|\<varnothing\>\<neq\>I=<around*|[|a,b|[>=<around*|]|c,d|[>>.
+      As \ <math|<around*|[|a,b|]>\<neq\>\<varnothing\>> it follows from
+      [theorem: <reference|interval condition to be empty>] that
+      <math|a\<less\>b> so that <math|a\<in\><around*|[|a,b|[>=<around*|]|c,d|]>>
+      hence <math|c\<less\>a\<less\>d>. Using [theorem: <reference|complex
+      densitiy theorem>] there exist a <math|x\<in\>\<bbb-R\>> such that
+      <math|c\<less\>x\<less\>a\<less\>d> proving that
+      <math|x\<in\><around*|]|c,d|[>=<around*|[|a,b|[>> so that
+      <math|a\<leqslant\>x\<less\>a> leading to the contradiction
+      <math|a\<less\>a>. Hence we have\ 
+
+      <\equation>
+        <label|eq 20.56.200>\<cal-I\><rsub|<around*|[||[>><big|cap>\<cal-I\><rsub|<around*|]||[>>=\<varnothing\>
+      </equation>
+
+      <item*|<math|\<cal-I\><rsub|<around*|]||]>><big|cap>\<cal-I\><rsub|<around*|[||]>>>>Then
+      we have\ 
+
+      <\equation*>
+        \<cal-I\><rsub|<around*|]||]>><big|cap>\<cal-I\><rsub|<around*|[||]>>=\<cal-I\><rsub|<around*|[||]>><big|cap>\<cal-I\><rsub|<around*|]||]>>\<equallim\><rsub|<text|[eq:
+        <reference|eq 20.53.200>]>>\<varnothing\>
+      </equation*>
+
+      <item*|<math|\<cal-I\><rsub|<around*|]||]>><big|cap>\<cal-I\><rsub|<around*|[||[>>>>If
+      <math|I\<in\>\<cal-I\><rsub|<around*|]||]>><big|cap>\<cal-I\><rsub|<around*|[||[>>>
+      then <math|I=<around*|]|a,b|]>=<around*|[|c,d|[>>. As
+      <math|<around*|]|a,b|]>\<neq\>\<varnothing\>> we have by [theorem:
+      <reference|interval condition to be empty>] that <math|a\<less\>b> so
+      that <math|b\<in\><around*|]|a,b|]>=<around*|[|c,d|[>> hence
+      <math|c\<leqslant\>b\<less\>d>. Using [theorem: <reference|complex
+      densitiy theorem>] there exist a <math|x\<in\>\<bbb-R\>> such that
+      <math|c\<leqslant\>b\<less\>x\<less\>d> proving that
+      <math|x\<in\><around*|[|c,d|[>=<around*|]|a,b|]>> so that
+      <math|b\<less\>x\<leqslant\>b> leading to the contradiction
+      <math|b\<less\>b>. Hence we have\ 
+
+      <\equation>
+        <label|eq 20.57.200>\<cal-I\><rsub|<around*|]||]>><big|cap>\<cal-I\><rsub|<around*|[||[>>=\<varnothing\>
+      </equation>
+
+      <item*|<math|\<cal-I\><rsub|<around*|]||]>><big|cap>\<cal-I\><rsub|<around*|]||[>>>>If
+      <math|I\<in\>\<cal-I\><rsub|<around*|]||]>><big|cap>\<cal-I\><rsub|<around*|]||[>>>
+      then <math|I=<around*|]|a,b|]>=<around*|]|c,d|[>>. As
+      <math|<around*|]|a,b|]>\<neq\>\<varnothing\>> we have by [theorem:
+      <reference|interval condition to be empty>] that <math|a\<less\>b> so
+      that <math|b\<in\><around*|]|a,b|]>=<around*|]|c,d|[>> hence
+      <math|c\<less\>b\<less\>d>. Using [theorem: <reference|complex densitiy
+      theorem>] there exist a <math|x\<in\>\<bbb-R\>> such that
+      <math|c\<less\>b\<less\>x\<less\>d> proving that
+      <math|x\<in\><around*|]|c,d|[>=<around*|]|a,b|]>> so that
+      <math|b\<less\>x\<leqslant\>b> leading to the contradiction
+      <math|b\<less\>b>. Hence we have\ 
+
+      <\equation>
+        <label|eq 20.58.200>\<cal-I\><rsub|<around*|]||]>><big|cap>\<cal-I\><rsub|<around*|]||[>>=\<varnothing\>
+      </equation>
+
+      <item*|<math|\<cal-I\><rsub|<around*|]||[>><big|cap>\<cal-I\><rsub|<around*|[||]>>>>Then
+      we have\ 
+
+      <\equation*>
+        \<cal-I\><rsub|<around*|]||[>><big|cap>\<cal-I\><rsub|<around*|[||]>>=\<cal-I\><rsub|<around*|[||]>><big|cap>\<cal-I\><rsub|<around*|]||[>>\<equallim\><rsub|<text|[eq:
+        <reference|eq 20.54.200>]>>\<varnothing\>
+      </equation*>
+
+      <item*|<math|\<cal-I\><rsub|<around*|]||[>><big|cap>\<cal-I\><rsub|<around*|[||[>>>>Then
+      we have\ 
+
+      <\equation*>
+        \<cal-I\><rsub|<around*|]||[>><big|cap>\<cal-I\><rsub|<around*|[||[>>=\<cal-I\><rsub|<around*|[||[>><big|cap>\<cal-I\><rsub|<around*|]||[>>\<equallim\><rsub|<text|[eq:
+        <reference|eq 20.56.200>]>>\<varnothing\>
+      </equation*>
+
+      <item*|<math|\<cal-I\><rsub|<around*|]||[>><big|cup>\<cal-I\><rsub|<around*|]||]>>>>Then
+      we have\ 
+
+      <\equation*>
+        \<cal-I\><rsub|<around*|]||[>><big|cap>\<cal-I\><rsub|<around*|]||]>>=\<cal-I\><rsub|<around*|]||]>><big|cap>\<cal-I\><rsub|<around*|]||[>>\<equallim\><rsub|<text|[eq:
+        <reference|eq 20.58.200>]>>\<varnothing\>
+      </equation*>
+    </description>
+  </proof>
+
+  The following allows us to switch between the different types of non empty
+  bounded intervals.
+
+  <\lemma>
+    <label|lemma 20.121.200>Let <math|a,b\<in\>\<bbb-R\>> the we have\ 
+
+    <\enumerate>
+      <item><math|<around*|]|a,b|]>=<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a,b+<frac|1|n>|[>>
+
+      <item><math|<around*|[|a,b|[>=<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,b|[>>
+
+      <item><math|<around*|[|a,b|]>=<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,b|]>>
+
+      <item><math|<around*|[|a,b|]>=<big|cap><rsub|n\<in\>\<bbb-N\>><around*|[|a,b+<frac|1|n>|[>>
+
+      <item><math|<around*|[|a,b|]>=<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,b+<frac|1|n>|[>>
+
+      <item><math|<around*|]|-\<infty\>,a|]>=<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|-\<infty\>,a+<frac|1|n>|[>>
+
+      <item><math|<around*|[|a,\<infty\>|[>=<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,\<infty\>|[>>
+
+      <item><math|<around*|]|a,b|]>=<big|cup><rsub|n\<in\>\<bbb-N\>><around*|[|a+<frac|1|n>,b|]>>
+
+      <item><math|<around*|[|a,b|[>=<big|cup><rsub|n\<in\>\<bbb-N\>><around*|[|a,b-<frac|1|n>|]>>
+
+      <item><math|<around*|]|a,b|[>=<big|cup><rsub|n\<in\>\<bbb-N\>><around*|]|a,b-<frac|1|n>|]>>
+
+      <item><math|<around*|]|a,b|[>=<big|cup><rsub|n\<in\>\<bbb-N\>><around*|[|a+<frac|1|n>,b|[>>
+
+      <item><math|<around*|]|a,b|[>=<big|cup><rsub|n\<in\>\<bbb-N\>><around*|[|a+<frac|1|n>,b-<frac|1|n>|]>>
+
+      <item><math|<around*|]|-\<infty\>,a|[>=<big|cup><rsub|n\<in\>\<bbb-N\>><around*|]|-\<infty\>,a-<frac|1|n>|]>>
+
+      <item><math|<around*|]|a,\<infty\>|[>=<big|cup><rsub|n\<in\>\<bbb-N\>><around*|[|a+<frac|1|n>,\<infty\>|[>>
+
+      <item><math|<around*|[|a,b|[>=<around*|[|a,\<infty\>|[>\\<around*|[|b,\<infty\>|[>>
+
+      <item><math|<around*|]|a,b|]>=<around*|]|-\<infty\>,b|]>\\<around*|]|-\<infty\>,a|]>>
+
+      <item><math|<around*|]|a,\<infty\>|[>=\<bbb-R\>\\<around*|]|-\<infty\>,a|]>>
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|x\<in\><around*|]|a,b|]>> then
+      <math|a\<less\>x\<leqslant\>b> and as <math|\<forall\>n\<in\>\<bbb-N\>>
+      <math|b\<less\>b+<frac|1|n>> we have
+      <math|a\<less\>x\<less\>b+<frac|1|n>> so it follows that
+      <math|x\<in\><around*|]|a,b+<frac|1|n>|[>>. Hence\ 
+
+      <\equation>
+        <label|eq 18.8.020><around*|]|a,b|]>\<subseteq\><big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a,b+<frac|1|n>|[>
+      </equation>
+
+      If <math|x\<in\><big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a,b+<frac|1|n>|[>>
+      then <math|\<forall\>n\<in\>\<bbb-N\>>
+      <math|x\<in\><around*|]|a,b+<frac|1|n>|[>> or
+      <math|a\<less\>x\<less\>b+<frac|1|n>> which by [corollary:
+      <reference|complex Archimedean property consequence (2)>] proves that
+      <math|a\<less\>x\<leqslant\>b> hence <math|x\<in\><around*|]|a,b|]>>.
+      So it follows that <math|<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a,b+<frac|1|n>|[>\<subseteq\><around*|]|a,b|]>>
+      which using [eq: <reference|eq 18.8.020>] proves that\ 
+
+      <\equation*>
+        <around*|]|a,b|]>=<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a,b+<frac|1|n>|[>
+      </equation*>
+
+      <item>Let <math|x\<in\><around*|[|a,b|[>> then
+      <math|a\<leqslant\>x\<less\>b> and as <math|\<forall\>n\<in\>\<bbb-N\>>
+      we have <math|a-<frac|1|n>\<less\>a> it follows that
+      <math|x\<in\><around*|]|a-<frac|1|n>,b|[>>. Hence\ 
+
+      <\equation>
+        <label|eq 18.9.020><around*|[|a,b|[>\<subseteq\><big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,b|[>
+      </equation>
+
+      If <math|x\<in\><big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,b|[>>
+      then <math|\<forall\>n\<in\>\<bbb-N\>> we have
+      <math|a-<frac|1|n>\<less\>x\<less\>b\<Rightarrow\>a\<less\>x+<frac|1|n>\<wedge\>x\<less\>b>
+      which by [corollary: <reference|complex Archimedean property
+      consequence (2)>] proves that <math|a\<leqslant\>x\<less\>b> hence
+      <math|x\<in\><around*|[|a,b|[>>. So
+      <math|<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,b|[>\<subseteq\><around*|[|a,b|[>>
+      which using [eq: <reference|eq 18.9.020>] prove that
+
+      <\equation*>
+        <around*|[|a,b|[>=<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,b|[>
+      </equation*>
+
+      <item>Let <math|x\<in\><around*|[|a,b|]>> then
+      <math|a\<leqslant\>x\<less\>b> and as <math|\<forall\>n\<in\>\<bbb-N\>>
+      we have <math|a-<frac|1|n>\<less\>a\<Rightarrow\>x\<in\><around*|]|a-<frac|1|n>,b|]>>.
+      Hence
+
+      <\equation>
+        <label|eq 18.10.021><around*|[|a,b|]>\<subseteq\><big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,b|]>
+      </equation>
+
+      If <math|x\<in\><big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,b|]>>
+      then <math|\<forall\>n\<in\>\<bbb-N\>> then
+      <math|a-<frac|1|n>\<less\>x\<leqslant\>b> or
+      <math|a\<less\>x+<frac|1|n>> which by [corollary: <reference|complex
+      Archimedean property consequence (2)>] proves that
+      <math|a\<leqslant\>x> giving <math|x\<in\><around*|[|a,b|]>>. So we
+      have <math|<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,b|]>\<subseteq\><around*|[|a,b|]>>
+      which combined with [eq: <reference|eq 18.10.021>] gives
+
+      <\equation*>
+        <around*|[|a,b|]>=<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,b|]>
+      </equation*>
+
+      <item>Let <math|x\<in\><around*|[|a,b|]>> then
+      <math|a\<leqslant\>x\<leqslant\>b> then
+      <math|\<forall\>n\<in\>\<bbb-N\>> we have
+      <math|a\<leqslant\>x\<leqslant\>b\<less\>b+<frac|1|n>>. Which proves
+      that\ 
+
+      <\equation>
+        <label|eq 18.11.021><around*|[|a,b|]>\<subseteq\><big|cap><rsub|n\<in\>\<bbb-N\>><around*|[|a,b+<frac|1|n>|[>
+      </equation>
+
+      If <math|x\<in\><big|cap><rsub|n\<in\>\<bbb-N\>><around*|[|a,b+<frac|1|n>|[>>
+      then <math|\<forall\>n\<in\>\<bbb-N\>> we have
+      <math|a\<leqslant\>x\<less\>b+<frac|1|n>>. Using [corollary:
+      <reference|complex Archimedean property consequence (2)>] we have
+      <math|x\<leqslant\>b> proving that <math|x\<in\><around*|[|a,b|]>>.
+      Hence <math|<big|cap><rsub|n\<in\>\<bbb-N\>><around*|[|a,b+<frac|1|n>|[>\<subseteq\><around*|[|a,b|]>>
+      which combined with [eq: <reference|eq 18.11.021>] gives\ 
+
+      <\equation*>
+        <around*|[|a,b|]>=<big|cap><rsub|n\<in\>\<bbb-N\>><around*|[|a,b+<frac|1|n>|[>
+      </equation*>
+
+      <item>Let <math|x\<in\><around*|[|a,b|]>> then
+      <math|a\<leqslant\>x\<leqslant\>b> and as
+      <math|\<forall\>n\<in\>\<bbb-N\>> we have
+      <math|a-<frac|1|n>\<less\>x\<less\>b+<frac|1|n>> it follows that
+      <math|x\<in\><around*|]|a-<frac|1|n>,b+<frac|1|n>|[>>. Hence\ 
+
+      <\equation>
+        <label|eq 18.12.021><around*|[|a,b|]>\<subseteq\><big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,b+<frac|1|n>|[>
+      </equation>
+
+      Let <math|x\<in\><big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,b+<frac|1|n>|[>>
+      then <math|\<forall\>n\<in\>\<bbb-N\>> we have
+      <math|a-<frac|1|n>\<less\>x\<wedge\>x\<less\>b+<frac|1|n>\<Rightarrow\>a\<less\>x+<frac|1|n>\<wedge\>x\<less\>b+<frac|1|n>>.
+      Using [corollary: <reference|complex Archimedean property consequence
+      (2)>] we have <math|a\<leqslant\>x\<wedge\>x\<leqslant\>b> or
+      <math|x\<in\><around*|[|a,b|]>>. Hence
+      <math|<rigid|<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,b+<frac|1|n>|[>\<subseteq\><around*|[|a,b|]>>>
+      which together with [eq: <reference|eq 18.12.021>] proves\ 
+
+      <\equation*>
+        <around*|[|a,b|]>=<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,b+<frac|1|n>|[>
+      </equation*>
+
+      <item>Let <math|x\<in\><around*|]|-\<infty\>,a|]>> then
+      <math|x\<leqslant\>a> and as <math|\<forall\>n\<in\>\<bbb-N\>> we have
+      <math|x\<less\>a+<frac|1|n>> it follows that
+      <math|x\<in\><around*|]|-\<infty\>,a+<frac|1|n>|[>>. Hence\ 
+
+      <\equation>
+        <label|eq 18.13.021><around*|]|-\<infty\>,a|]>\<subseteq\><big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|-\<infty\>,a+<frac|1|n>|[>
+      </equation>
+
+      Let <math|x\<in\><big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|-\<infty\>,a+<frac|1|n>|[>>
+      then <math|\<forall\>n\<in\>\<bbb-N\>> we have
+      <math|x\<less\>a+<frac|1|n>> which by [corollary: <reference|complex
+      Archimedean property consequence (2)>] gives <math|x\<leqslant\>a> or
+      <math|x\<in\><around*|]|-\<infty\>,a|]>>. Hence
+      <math|<big|cap><rsub|n\<in\>\<bbb-N\><rsub|>><around*|]|-\<infty\>,a+<frac|1|n>|[>\<subseteq\><around*|]|-\<infty\>,a|]>>
+      which together with [eq: <reference|eq 18.13.021>] proves
+
+      <\equation*>
+        <big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|-\<infty\>,a+<frac|1|n>|[>=<around*|]|-\<infty\>,a|]>
+      </equation*>
+
+      <item>Let <math|x\<in\><around*|[|a,\<infty\>|[>> then
+      <math|a\<leqslant\>x> so that <math|\<forall\>n\<in\>\<bbb-N\><rsub|9>>
+      we have <math|a-<frac|1|n>\<less\>x> giving
+      <math|x\<in\><around*|]|a-<frac|1|n>,\<infty\>|[>> proving that\ 
+
+      <\equation>
+        <label|eq 18.14.021><around*|[|a,\<infty\>|[>\<subseteq\><big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,\<infty\>|[>
+      </equation>
+
+      Let <math|x\<in\><big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,\<infty\>|[>>
+      then <math|\<forall\>n\<in\>\<bbb-N\>> we have
+      <math|a-<frac|1|n>\<less\>x\<Rightarrow\>a\<less\>x+<frac|1|n>> which
+      by [corollary: <reference|complex Archimedean property consequence
+      (2)>] proves that <math|x\<in\><around*|[|a,\<infty\>|[>>. Hence
+      <math|<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,\<infty\>|[>\<subseteq\><around*|[|a,\<infty\>|]>>
+      which together with [eq: <reference|eq 18.14.021>] <math|>proves that
+
+      <\equation*>
+        <around*|[|a,\<infty\>|[>=<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,\<infty\>|[>
+      </equation*>
+
+      <item>Let <math|x\<in\><around*|]|a,b|]>> then
+      <math|a\<less\>x\<leqslant\>b> and using [corollary: <reference|complex
+      Archimedean property consequence (1)>] there exists a
+      <math|n\<in\>\<bbb-N\>> such that <math|a\<less\>a+<frac|1|n>\<less\>x\<leqslant\>b>
+      proving that <math|x\<in\><around*|[|a+<frac|1|n>,b|]>>. Hence\ 
+
+      <\equation>
+        <label|eq 18.15.021><around*|]|a,b|]>\<subseteq\><big|cup><rsub|n\<in\>\<bbb-N\>><around*|[|a+<frac|1|n>,b|]>
+      </equation>
+
+      Let <math|x\<in\><big|cup><rsub|n\<in\>\<bbb-N\>><around*|[|a+<frac|1|n>,b|]>>
+      then there exists a <math|n\<in\>\<bbb-N\>> such that
+      <math|x\<in\><around*|[|a+<frac|1|n>,b|]>\<Rightarrow\>a\<less\>a+<frac|1|n>\<leqslant\>x\<leqslant\>b>.
+      Hence <math|x\<in\><around*|]|a,b|]>> proving that
+      <math|<big|cup><rsub|n\<in\>\<bbb-N\>><around*|[|a+<frac|1|n>,b|]>\<subseteq\><around*|]|a,b|]>>
+      which by [eq: <reference|eq 18.15.021>] gives
+
+      <\equation*>
+        <around*|]|a,b|]>=<big|cup><rsub|n\<in\>\<bbb-N\>><around*|[|a+<frac|1|n>,b|]>
+      </equation*>
+
+      <item>Let <math|x\<in\><around*|[|a,b|[>> then
+      <math|a\<leqslant\>x\<less\>b> and using [corollary: <reference|complex
+      Archimedean property consequence (1)>] there exists a
+      <math|n\<in\>\<bbb-N\>> such that <math|a\<leqslant\>x\<less\>x+<frac|1|n>\<less\>b\<Rightarrow\>a\<leqslant\>x\<wedge\>x\<less\>b-<frac|1|n>>
+      proving that <math|x\<in\><around*|[|a,b-<frac|1|n>|]>>. So\ 
+
+      <\equation>
+        <label|eq 18.16.021><around*|\<nobracket\>|a,b|[>\<subseteq\><big|cup><rsub|n\<in\>\<bbb-N\>><around*|[|a,b-<frac|1|n>|]>
+      </equation>
+
+      If <math|x\<in\><big|cup><rsub|n\<in\>\<bbb-N\>><around*|[|a,b-<frac|1|n>|]>>
+      then <math|\<exists\>n\<in\>\<bbb-N\>> such that
+      <math|x\<in\><around*|[|a,b-<frac|1|n>|]>\<Rightarrow\>a\<leqslant\>x\<leqslant\>b-<frac|1|n>\<less\>b>
+      proving that <math|x\<in\><around*|[|a,b|[>>. Hence
+      <math|<big|cup><rsub|n\<in\>\<bbb-N\>><around*|[|a,b-<frac|1|n>|]>\<subseteq\><around*|[|a,b|[>>
+      which combined with <reference|eq 18.16.021> gives\ 
+
+      <\equation*>
+        <around*|[|a,b|[>=<big|cup><rsub|n\<in\>\<bbb-N\>><around*|[|a,b-<frac|1|n>|]>
+      </equation*>
+
+      <item>Let <math|x\<in\><around*|]|a,b|[>> then
+      <math|a\<less\>x\<less\>b> and using [corollary: <reference|complex
+      Archimedean property consequence (1)>] there exists a
+      <math|n\<in\>\<bbb-N\>> such that <math|a\<less\>x\<less\>x+<frac|1|n>\<less\>b>
+      hence <math|a\<less\>x\<less\>b-<frac|1|n>> proving that
+      <math|x\<in\><around*|]|a,b-<frac|1|n>|]>>. So\ 
+
+      <\equation>
+        <label|eq 18.17.021><around*|]|a,b|[>\<subseteq\><big|cup><rsub|n\<in\>\<bbb-N\>><around*|]|a,b-<frac|1|n>|]>
+      </equation>
+
+      If <math|x\<in\><big|cup><rsub|n\<in\>\<bbb-N\>><around*|]|a,b-<frac|1|n>|]>>
+      then <math|\<exists\>n\<in\>\<bbb-N\>> such that
+      <math|a\<less\>x\<leqslant\>b-<frac|1|n>\<less\>b\<Rightarrow\>x\<in\><around*|]|a,b|[>>
+      proving that <math|<big|cup><rsub|n\<in\>\<bbb-N\>><around*|]|a,b-<frac|1|n>|]>\<subseteq\><around*|]|a,b|[>>.
+      Combining this with [eq: <reference|eq 18.17.021>] gives\ 
+
+      <\equation*>
+        <around*|]|a,b|[>=<big|cup><rsub|n\<in\>\<bbb-N\>><around*|]|a,b-<frac|1|n>|]>
+      </equation*>
+
+      <item>Let <math|x\<in\><around*|]|a,b|[>> then
+      <math|a\<less\>x\<less\>b> and using \ [corollary: <reference|complex
+      Archimedean property consequence (1)>] there exists a
+      <math|n\<in\>\<bbb-N\>> such that <math|a\<less\>a+<frac|1|n>\<less\>x\<less\>b>
+      proving that <math|x\<in\><around*|[|a+<frac|1|n>,b|[>>. Hence\ 
+
+      <\equation>
+        <label|eq 18.18.021><around*|]|a,b|[>\<subseteq\><big|cup><rsub|n\<in\>\<bbb-N\>><around*|[|a+<frac|1|n>,b|[>
+      </equation>
+
+      If <math|x\<in\><big|cup><rsub|n\<in\>\<bbb-N\>><around*|[|a+<frac|1|n>,b|[><rsub|>>
+      then <math|\<exists\>n\<in\>\<bbb-N\>> such that
+      <math|a\<less\>a+<frac|1|n>\<less\>x\<less\>b\<Rightarrow\>x\<in\><around*|]|a,b|[>>
+      proving that <math|<big|cup><rsub|n\<in\>\<bbb-N\>><around*|[|a+<frac|1|n>,b|[>\<subseteq\><around*|]|a,b|[>>.
+      Combining this with [eq: <reference|eq 18.18.021>] gives\ 
+
+      <\equation*>
+        <around*|]|a,b|[>=<big|cup><rsub|n\<in\>\<bbb-N\>><around*|[|a+<frac|1|n>|[>
+      </equation*>
+
+      <item>Let <math|x\<in\><around*|]|a,b|[>> then
+      <math|a\<less\>x\<less\>b> and using [corollary: <reference|complex
+      Archimedean property consequence (1)>] there exists
+      <math|n<rsub|1>,n<rsub|2>\<in\>\<bbb-N\>> such that
+      <math|a\<less\>a+<frac|1|n<rsub|1>>\<less\>x\<less\>x+<frac|1|n<rsub|2>>\<less\>b\<Rightarrow\>a+<frac|1|n<rsub|1>>\<less\>x\<less\>b-<frac|1|n<rsub|2>>>.
+      Take <math|m=max<around*|(|n<rsub|1>,n<rsub|2>|)>> then
+      <math|<frac|1|m>\<leqslant\><frac|1|n<rsub|1>>,<frac|1|n<rsub|2>>> so
+      that <math|a+<frac|1|m>\<leqslant\>a+<frac|1|n<rsub|1>>\<less\>x\<less\>b-<frac|1|n<rsub|2>>\<leqslant\>b-<frac|1|m>>
+      proving that <math|x\<in\><around*|[|a+<frac|1|m>,b-<frac|1|m>|]>>.
+      Hence\ 
+
+      <\equation>
+        <label|eq 18.19.021><around*|]|a,b|[>\<subseteq\><big|cup><rsub|n\<in\>\<bbb-N\>><around*|[|a+<frac|1|m>,b-<frac|1|m>|]>
+      </equation>
+
+      If <math|x\<in\><big|cup><rsub|n\<in\>\<bbb-N\>><around*|[|a+<frac|1|n>,b-<frac|1|n>|]>>
+      then <math|\<exists\>n\<in\>\<bbb-N\>> such that
+      <math|x\<in\><around*|[|a+<frac|1|n>,b-<frac|1|n>|]>\<Rightarrow\>a\<less\>a+<frac|1|n>\<leqslant\>x\<less\>b-<frac|1|n>\<less\>b>
+      proving that <math|a\<less\>x\<less\>b> or
+      <math|x\<in\><around*|]|a,b|[>>. So
+      <math|<big|cup><rsub|n\<in\>\<bbb-N\>><around*|[|a+<frac|1|n>,b-<frac|1|n>|]>\<subseteq\><around*|]|a,b|[>>
+      which together with [eq: <reference|eq 18.19.021>] gives
+
+      <\equation*>
+        <around*|]|a,b|[>=<big|cup><rsub|n\<in\>\<bbb-N\>><around*|[|a+<frac|1|m>,b-<frac|1|m>|]>
+      </equation*>
+
+      <item>Let <math|x\<in\><around*|]|-\<infty\>,a|[>> then
+      <math|x\<less\>a> and using [corollary: <reference|complex Archimedean
+      property consequence (1)>] there exists a <math|n\<in\>\<bbb-N\>> such
+      that <math|x+<frac|1|n>\<less\>a\<Rightarrow\>x\<less\>a-<frac|1|n>\<Rightarrow\>x\<in\><around*|]|-\<infty\>,a-<frac|1|n>|]>>
+      proving that\ 
+
+      <\equation>
+        <label|eq 18.20.021><around*|]|-\<infty\>,a|[>\<subseteq\><big|cup><rsub|n\<in\>\<bbb-N\>><around*|]|-\<infty\>,a-<frac|1|n>|]>
+      </equation>
+
+      If <math|x\<in\><big|cup><rsub|n\<in\>\<bbb-N\>><around*|]|-\<infty\>,a-<frac|1|n>|]>>
+      then <math|\<exists\>n\<in\>\<bbb-N\>> such that
+      <math|x\<in\><around*|]|-\<infty\>,a-<frac|1|n>|]>\<Rightarrow\>x\<leqslant\>a-<frac|1|n>\<less\>a>
+      giving <math|x\<in\><around*|]|-\<infty\>,a|[>> and proving that
+      <math|<big|cup><rsub|n\<in\>\<bbb-N\>><around*|]|-\<infty\>,a|]>\<subseteq\><around*|]|-\<infty\>,a|[>>.
+      Using this together with [eq: <reference|eq 18.20.021>] proves
+
+      <\equation*>
+        <around*|]|-\<infty\>,a|[>=<big|cup><rsub|n\<in\>\<bbb-N\>><around*|]|-\<infty\>,a-<frac|1|n>|]>
+      </equation*>
+
+      <item>Let <math|x\<in\><around*|]|a,\<infty\>|[>> then
+      <math|a\<less\>x> and using [corollary: <reference|complex Archimedean
+      property consequence (1)>] there exists a <math|n\<in\>\<bbb-N\>> such
+      that <math|a+<frac|1|n>\<less\>x\<Rightarrow\>x\<in\><around*|[|a+<frac|1|n>,\<infty\>|[>>.
+      Hence\ 
+
+      <\equation>
+        <label|eq 18.21.021><around*|]|a,\<infty\>|[>\<subseteq\><big|cup><rsub|n\<in\>\<bbb-N\>><around*|[|a+<frac|1|n>,\<infty\>|[>
+      </equation>
+
+      If <math|x\<in\><big|cup><rsub|n\<in\>\<bbb-N\>><around*|[|a+<frac|1|n>,\<infty\>|[>>
+      then <math|\<exists\>n\<in\>\<bbb-N\>> such that
+      <math|x\<in\><around*|[|a+<frac|1|n>,\<infty\>|[>\<Rightarrow\>a\<less\>a+<frac|1|n>\<leqslant\>x>
+      hence <math|x\<in\><around*|]|a,\<infty\>|[>>. This proves that
+      <math|<big|cup><rsub|n\<in\>\<bbb-N\>><around*|[|a+<frac|1|n>,\<infty\>|[>\<subseteq\><around*|]|a,\<infty\>|[>>,
+      combining this with [eq: <reference|eq 18.21.021>] gives\ 
+
+      <\equation*>
+        <around*|]|a,\<infty\>|[>=<big|cup><rsub|n\<in\>\<bbb-N\>+0><around*|[|a+<frac|1|n>,\<infty\>|[>
+      </equation*>
+
+      <item>Let <math|x\<in\><around*|[|a,b|[>> then
+      <math|a\<leqslant\>x\<wedge\>x\<less\>b\<Rightarrow\>a\<leqslant\>x\<wedge\>\<neg\><around*|(|b\<leqslant\>x|)>>
+      so that <math|x\<in\><around*|[|a,\<infty\>|[>> and
+      <math|x\<nin\><around*|[|b,\<infty\>|[>> proving that\ 
+
+      <\equation>
+        <label|eq 18.22.021><around*|[|a,b|[>\<subseteq\><around*|[|a,\<infty\>|[>\\<around*|[|b,\<infty\>|[>
+      </equation>
+
+      If <math|x\<in\><around*|[|a,\<infty\>|[>\\<around*|[|b,\<infty\>|[>>
+      then <math|a\<leqslant\>x\<wedge\>\<neg\><around*|(|b\<leqslant\>x|)>>
+      or <math|a\<leqslant\>x*> and <math|x\<less\>b> proving that
+      <math|<around*|[|a,\<infty\>|[>\\<around*|[|b,\<infty\>|[>\<subseteq\><around*|[|a,b|[>>.
+      Combining this with [eq: <reference|eq 18.22.021>] proves that
+
+      <\equation*>
+        <around*|[|a,b|[>=<around*|[|a,\<infty\>|[>\\<around*|[|b,\<infty\>|[>
+      </equation*>
+
+      <item>Let <math|x\<in\><around*|]|a,b|]>> then
+      <math|a\<less\>x\<wedge\>x\<leqslant\>b> then
+      <math|\<neg\><around*|(|x\<leqslant\>a|)>\<wedge\>x\<leqslant\>b> so
+      that <math|x\<nin\><around*|]|-\<infty\>,a|]>\<wedge\>x\<in\><around*|]|-\<infty\>,b|]>>
+      proving that <math|x\<in\><around*|]|-\<infty\>,b|[>\\<around*|]|-\<infty\>,a|]>>.
+      For the opposite inclusion let <math|x\<in\><around*|]|-\<infty\>,b|]>\\<around*|]|-\<infty\>,a|]>>
+      then <math|x\<leqslant\>b> and <math|\<neg\><around*|(|x\<leqslant\>a|)>>
+      proving that <math|x\<leqslant\>b> and <math|a\<less\>x> or
+      <math|x\<in\><around*|]|a,b|]>>. Hence\ 
+
+      <\equation*>
+        <around*|]|a,b|]>=<around*|]|-\<infty\>,b|]>\\<around*|]|-\<infty\>,a|]>
+      </equation*>
+
+      <item>If <math|x\<in\><around*|]|a,\<infty\>|[>> then
+      <math|x\<in\>\<bbb-R\>\<wedge\>a\<less\>x> so that
+      <math|x\<nleqslant\>a\<Rightarrow\>x\<nin\><around*|]|-\<infty\>,a|]>>
+      hence <math|x\<in\>\<bbb-R\>\\<around*|]|-\<infty\>,a|]>>, further if
+      <math|x\<in\>\<bbb-R\>\\<around*|]|-\<infty\>,a|]>> then
+      <math|x\<in\>\<bbb-R\>\<wedge\>x\<nin\><around*|]|-\<infty\>,a|]>\<Rightarrow\>x\<nleqslant\>a\<Rightarrow\>a\<less\>x>
+      or <math|x\<in\><around*|]|a,\<infty\>|[>> hence\ 
+
+      <\equation*>
+        <around*|]|a,\<infty\>|[>=\<bbb-R\>\\<around*|]|-\<infty\>,a|]>
+      </equation*>
+    </enumerate>
+
+    \;
+  </proof>
+
+  We are now ready to prove alternative forms for
+  <math|\<cal-B\><around*|[|\<bbb-R\>|]>>.
+
+  <\theorem>
+    <label|measure B[R] equivalences>We have the following alternative forms
+    for <math|\<cal-B\><around*|[|\<bbb-R\>|]>\<equallim\><rsub|<text|definition>>\<sigma\><around*|[|\<cal-T\><rsub|<around*|\|||\|>>|]>>\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<sigma\><around*|[|<around*|{|C\<subseteq\>\<bbb-R\>\|C<text|
+      is closed in >\<cal-T\><rsub|<around*|\|||\|>>|}>|]>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|measure Borel algebra and
+      closure>]>>>|<cell|\<cal-B\><around*|[|\<bbb-R\>|]>>>|<row|<cell|>|<cell|=>|<cell|\<sigma\><around*|[|\<cal-T\><rsub|<around*|\|||\|>>|]>>>|<row|<cell|>|<cell|=>|<cell|\<sigma\><around*|[|\<cal-I\><rsub|<around*|]||[>>|]>>>|<row|<cell|>|<cell|=>|<cell|\<sigma\><around*|[|\<cal-I\><rsub|<around*|]||]>>|]>>>|<row|<cell|>|<cell|=>|<cell|\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||]>>|]>>>|<row|<cell|>|<cell|=>|<cell|\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||[>>|]>>>|<row|<cell|>|<cell|=>|<cell|\<sigma\><around*|[|<around*|{|<around*|[|a,\<infty\>|[>\|a\<in\>\<bbb-R\>|}>|]>>>|<row|<cell|>|<cell|=>|<cell|\<sigma\><around*|[|<around*|{|<around*|]|a,\<infty\>|[>\|a\<in\>\<bbb-R\>|}>|]>>>|<row|<cell|>|<cell|=>|<cell|\<sigma\><around*|[|<around*|{|<around*|]|-\<infty\>,a|]>\|a\<in\>\<bbb-R\>|}>|]>>>|<row|<cell|>|<cell|=>|<cell|\<sigma\><around*|[|<around*|{|<around*|]|-\<infty\>,a|[>\|a\<in\>\<bbb-R\>|}>|]>>>>>
+    </eqnarray*>
+  </theorem>
+
+  <\proof>
+    Let <math|U\<in\>\<cal-T\><rsub|<around*|\|||\|>>> then by [corollary:
+    <reference|normed open set as union of intervals (1)>] there exist a
+    countable family <math|<around*|{|<around*|]|a<rsub|i>,b<rsub|i>|[>|}><rsub|i\<in\>I>\<subseteq\>\<cal-I\><rsub|<around*|]||[>>>
+    such that\ 
+
+    <\equation>
+      <label|eq 20.76.200>\<forall\>i\<in\>I<text|
+      ><around*|]|a<rsub|i>,\<beta\><rsub|i>|[>\<neq\>\<varnothing\><text|
+      and >U=<big|cup><rsub|i\<in\>I><around*|]|a<rsub|i>,\<beta\><rsub|i>|[>
+    </equation>
+
+    As <math|\<cal-I\><rsub|<around*|]||[>>\<subseteq\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|]||[>>|]>>
+    which is a <math|\<sigma\>>-algebra it follows from [theorem:
+    <reference|measure countable union is in sigma algebra>] that
+    <math|U=<big|cup><rsub|i\<in\>I><around*|]|a<rsub|i>,\<beta\><rsub|i>|[>\<in\>\<sigma\><around*|(|\<cal-I\><rsub|<around*|]||[>>|)>>.
+    As <math|U\<in\>\<cal-T\><rsub|<around*|\|||\|>>> was chosen arbitrary it
+    follows that <math|\<cal-T\><rsub|<around*|\|||\|>>\<subseteq\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|]||[>>|]>>.
+    Using then [theorem: <reference|measure generated sigma algebra>] it
+    follows that\ 
+
+    <\equation>
+      <label|eq 20.77.200>\<cal-B\><around*|[|\<bbb-R\>|]>\<equallim\><rsub|def>\<sigma\><around*|[|\<cal-T\><rsub|<around*|\|||\|>>|]>\<subseteq\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|]||[>>|]>
+    </equation>
+
+    If <math|<around*|]|a,b|[>\<in\>\<cal-I\><rsub|<around*|]||[>>> then by
+    [lemma: <reference|lemma 20.121.200>]
+    <math|<around*|]|a,b|[>=<big|cup><rsub|n\<in\>\<bbb-N\>><around*|]|a,b-<frac|1|n>|]>>.
+    Let <math|n\<in\>\<bbb-N\>> then we have either:\ 
+
+    <\description>
+      <item*|<math|<around*|]|a,b-<frac|1|n>|]>=\<varnothing\>>>Then
+      <math|><math|<around*|]|a,b-<frac|1|n>|]>=\<varnothing\>\<in\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|]||]>>|]>>
+
+      <item*|<math|<around*|]|a,b-<frac|1|n>|]>\<neq\>\<varnothing\>>>Then
+      <math|><math|<around*|]|a,b-<frac|1|n>|]>\<in\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|]||]>>|]>>
+    </description>
+
+    so that <math|<around*|{|<around*|]|a,b-<frac|1|n>|]>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|]||]>>|]>>
+    from which it follows by [lemma: <reference|measure countable union is in
+    sigma algebra>] that
+
+    <\equation*>
+      <around*|]|a,b|[>=<big|cup><rsub|n\<in\>\<bbb-N\>><around*|]|a,b-<frac|1|n>|]>\<in\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|]||]>>|]>
+    </equation*>
+
+    <math|>. Hence we have <math|\<cal-I\><rsub|<around*|]||[>>\<subseteq\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|]||]>>|]>>
+    a <math|\<sigma\>>-algebra on <math|\<bbb-R\>>. Using [theorem:
+    <reference|measure generated sigma algebra>] it follows then that\ 
+
+    <\equation>
+      <label|eq 20.78.200>\<sigma\><around*|[|\<cal-I\><rsub|<around*|]||[>>|]>\<subseteq\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|]||]>>|]>
+    </equation>
+
+    If <math|<around*|]|a,b|]>\<in\>\<cal-I\><rsub|<around*|]||]>>> then by
+    [lemma: <reference|lemma 20.121.200>]
+    <math|<around*|]|a,b|]>=<big|cup><rsub|n\<in\>\<bbb-N\>><around*|[|a+<frac|1|n>,b|]>>.
+    For <math|n\<in\>\<bbb-N\>> we have either:\ 
+
+    <\description>
+      <item*|<math|<around*|[|a+<frac|1|n>,b|]>=\<varnothing\>>>Then
+      <math|<around*|[|a+<frac|1|n>,b|]>=\<varnothing\>\<in\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||]>>|]>>
+
+      <item*|<math|<around*|[|a+<frac|1|n>,b|]>\<neq\>\<varnothing\>>>Then
+      <math|<around*|[|a+<frac|1|n>,b|]>\<in\>\<cal-I\><rsub|<around*|[||]>>\<subseteq\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||]>>|)><around*|[||]>>
+    </description>
+
+    so that <math|<around*|{|<around*|[|a+<frac|1|n>,b|]>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||]>>|]>>
+    from which it follows by [theorem: <reference|measure countable union is
+    in sigma algebra>] that
+
+    <\equation*>
+      <around*|]|a,b|]>=<big|cup><rsub|n\<in\>\<bbb-N\>><around*|[|a+<frac|1|n>,b|]>\<in\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||]>>|]>
+    </equation*>
+
+    Hence we have <math|\<cal-I\><rsub|<around*|]||]>>\<subseteq\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||]>>|]>>
+    a <math|\<sigma\>>-algebra on <math|\<bbb-R\>> so that by [theorem:
+    <reference|measure generated sigma algebra>]\ 
+
+    <\equation>
+      <label|eq 20.79.200>\<sigma\><around*|[|\<cal-I\><rsub|<around*|]||]>>|]>\<subseteq\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||]>>|]>
+    </equation>
+
+    If <math|<around*|[|a,b|]>\<in\>\<cal-I\><rsub|<around*|[||]>>> then by
+    [lemma: <reference|lemma 20.121.200>]
+    <math|<around*|[|a,b|]>=<big|cap><rsub|n\<in\>\<bbb-N\>><around*|[|a,b+<frac|1|n>|[>>.
+    For <math|n\<in\>\<bbb-N\>> we have either:\ 
+
+    <\description>
+      <item*|<math|<around*|[|a,b+<frac|1|n>|[>=\<varnothing\>>>Then
+      <math|<around*|[|a,b+<frac|1|n>|[>=\<varnothing\>\<in\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||[>>|]>>
+
+      <item*|<math|<around*|[|a,b+<frac|1|n>|[>\<neq\>\<varnothing\>>>Then
+      <math|<around*|[|a,b+<frac|1|n>|[>\<in\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||[>>|]>>
+    </description>
+
+    so that <math|<around*|{|<around*|[|a,b+<frac|1|n>|[>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||[>>|]>>
+    form which it it follows by [theorem: <reference|measure countable union
+    is in sigma algebra>] that\ 
+
+    <\equation*>
+      <around*|[|a,b|]>=<big|cap><rsub|n\<in\>\<bbb-N\>><around*|[|a,b+<frac|1|n>|[>\<in\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||[>>|]>
+    </equation*>
+
+    Hence we have <math|><math|\<cal-I\><rsub|<around*|[||]>>\<subseteq\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||[>>|]>>
+    a <math|\<sigma\>>-algebra on <math|\<bbb-R\>> so that by [theorem:
+    <reference|measure generated sigma algebra>]\ 
+
+    <\equation>
+      <label|eq 20.80.200>\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||]>>|]>\<subseteq\>\<sigma\><around*|[|\<cal-T\><rsub|<around*|[||[>>|]>
+    </equation>
+
+    If <math|<around*|[|a,b|[>\<in\>\<cal-I\><rsub|<around*|[||[>>> then by
+    [lemma: <reference|lemma 20.121.200>]
+    <math|<around*|[|a,b|[>=<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,b|[>>.
+    As <math|\<forall\>n\<in\>\<bbb-N\>> <math|<around*|]|a-<frac|1|n>,b|[>>
+    is open it follows that <math|<around*|{|<around*|]|a-<frac|1|n>,b|[>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>\<cal-T\><rsub|<around*|\|||\|>>>
+    so that by [theorem <reference|measure countable union is in sigma
+    algebra>] <math|<around*|[|a,b|[>=<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,b|[>\<in\>\<sigma\><around*|[|\<cal-T\><rsub|<around*|\|||\|>>|]>>.
+    Hence we have that <math|\<cal-I\><rsub|<around*|[||[>>\<subseteq\>\<sigma\><around*|[|\<cal-T\><rsub|<around*|\|||\|>>|]>>
+    so that\ 
+
+    <\equation>
+      <label|eq 20.81.200>\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||[>>|]>\<subseteq\>\<sigma\><around*|[|\<cal-T\><rsub|<around*|\|||\|>>|]>\<equallim\><rsub|def>\<cal-B\><around*|[|\<bbb-R\>|]>
+    </equation>
+
+    Combining [eqs: <reference|eq 20.77.200>, <reference|eq 20.78.200>,
+    <reference|eq 20.79.200>, <reference|eq 20.80.200> and <reference|eq
+    20.81.200>] it follows that\ 
+
+    <\equation>
+      <label|eq 20.82.200>\<cal-B\><around*|[|\<bbb-R\>|]>=\<sigma\><around*|[|\<cal-T\><rsub|<around*|\|||\|>>|]>=\<sigma\><around*|[|\<cal-I\><rsub|<around*|]||[>>|]>=\<sigma\><around*|[|\<cal-I\><rsub|<around*|]||]>>|]>=\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||]>>|]><rsub|>=\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||[>>|]>
+    </equation>
+
+    If <math|<around*|[|a,b|[>\<in\>\<cal-I\><rsub|<around*|[||[>>> then
+    using [lemma: <reference|lemma 20.121.200>] we have that
+
+    <\equation*>
+      <around*|[|a,b|]>=<around*|[|a,\<infty\>|]>\\<around*|[|b,\<infty\>|[><below|\<in\>|<text|[theorem:
+      <reference|measure algebra properties>]>>\<sigma\><around*|[|<around*|{|<around*|[|a,\<infty\>|[>\|a\<in\>\<bbb-R\>|}>|]>
+    </equation*>
+
+    proving <math|\<cal-I\><rsub|<around*|[||[>>\<subseteq\>\<sigma\><around*|[|<around*|{|<around*|[|a,\<infty\>|[>\|a\<in\>\<bbb-R\>|}>|]>>
+    a <math|\<sigma\>>-algebra. Hence using [theorem: <reference|measure
+    generated sigma algebra>] we have\ 
+
+    <\equation>
+      <label|eq 20.83.200>\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||[>>|]>\<subseteq\>\<sigma\><around*|[|<around*|{|<around*|[|a,\<infty\>|[>\|a\<in\>\<bbb-R\>|}>|]>
+    </equation>
+
+    If <math|<around*|[|a,\<infty\>|[>\<in\><around*|{|<around*|[|a,\<infty\>|[>\|a\<in\>\<bbb-R\>|}>>
+    then using [lemma: <reference|lemma 20.121.200>] we have that
+    <math|<around*|[|a,\<infty\>|[>=<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,\<infty\>|[>>.
+    As <math|<around*|{|<around*|]|a-<frac|1|n>,\<infty\>|[>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\><around*|{|<around*|]|a-<frac|1|n>,\<infty\>|[>\|n\<in\>\<bbb-N\>|}>\<subseteq\>\<sigma\><around*|[|<around*|{|<around*|]|a,\<infty\>|[>\|a\<in\>\<bbb-R\>|}>|]>>
+    it follows from [theorem: <reference|measure countable union is in sigma
+    algebra>] that
+
+    <\equation*>
+      <around*|[|a,\<infty\>|[>=<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|a-<frac|1|n>,\<infty\>|[>\<in\>\<sigma\><around*|[|<around*|{|<around*|]|a,\<infty\>|[>\|a\<in\>\<bbb-R\>|}>|]>
+    </equation*>
+
+    Hence <math|><math|<around*|{|<around*|[|a,\<infty\>|[>\|a\<in\>\<bbb-R\>|}>\<subseteq\>\<sigma\><around*|[|<around*|{|<around*|]|a,\<infty\>|[>\|a\<in\>\<bbb-R\>|}>|]>>
+    so that by [theorem: <reference|measure generated sigma algebra>]
+
+    <\equation>
+      <label|eq 20.84.200>\<sigma\><around*|[|<around*|{|<around*|[|a,\<infty\>|[>\|a\<in\>\<bbb-R\>|}>|]>\<subseteq\>\<sigma\><around*|[|<around*|{|<around*|]|a,\<infty\>|[>\|a\<in\>\<bbb-R\>|}>|]>
+    </equation>
+
+    Let <math|<around*|]|a,\<infty\>|[>\<in\><around*|{|<around*|]|a,\<infty\>|[>\|a\<in\>\<bbb-R\>|}>>
+    then by [lemma: <reference|lemma 20.121.200>]
+    <math|<around*|]|a,\<infty\>|[>=\<bbb-R\>\\<around*|]|-\<infty\>,a|]>\<in\>\<sigma\><around*|[|<around*|{|<around*|]|-\<infty\>,a|]>\|a\<in\>\<bbb-R\>|}>|]>>
+    so that <math|<around*|{|<around*|]|a,\<infty\>|[>\|a\<in\>\<bbb-R\>|}>\<subseteq\>\<sigma\><around*|[|<around*|{|<around*|]|-\<infty\>,a|]>\|a\<in\>\<bbb-R\>|}>|]>>.
+    Using <math|>[theorem: <reference|measure generated sigma algebra>] it
+    follows that\ 
+
+    <\equation>
+      <label|eq 20.85.200>\<sigma\><around*|[|<around*|{|<around*|]|a,\<infty\>|[>\|a\<in\>\<bbb-R\>|}>|]>\<subseteq\>\<sigma\><around*|[|<around*|{|<around*|]|-\<infty\>,a|]>\|a\<in\>\<bbb-R\>|}>|]>
+    </equation>
+
+    Let <math|<around*|]|-\<infty\>,a|]>\<in\><around*|{|<around*|]|-\<infty\>,a|]>\|a\<in\>\<bbb-R\>|}>>
+    then by [lemma: <reference|lemma 20.121.200>]
+    <math|<around*|]|-\<infty\>,a|]>=<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|-\<infty\>,a+<frac|1|n>|[>>.
+    As <math|<rigid|<around*|{|<around*|]|-\<infty\>,a+<frac|1|n>|[>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\><around*|{|<around*|]|-\<infty\>,a|[>\|a\<in\>\<bbb-R\>|}>\<subseteq\>\<sigma\><around*|[|<around*|{|<around*|]|-\<infty\>,a|[>\|a\<in\>\<bbb-R\>|}>|]>>>
+    it follows from \ [theorem: <reference|measure countable union is in
+    sigma algebra>] that <math|><math|<around*|]|-\<infty\>,a|]>=<big|cap><rsub|n\<in\>\<bbb-N\>><around*|]|-\<infty\>,a+<frac|1|n>|[>\<in\>\<sigma\><around*|[|<around*|{|<around*|]|-\<infty\>,a|[>\|a\<in\>\<bbb-R\>|}>|]>>.
+    Hence
+
+    <\equation*>
+      <around*|{|<around*|]|-\<infty\>,a|]>\|a\<in\>\<bbb-R\>|}>\<subseteq\>\<sigma\><around*|[|<around*|{|<around*|]|-\<infty\>,a|[>\|a\<in\>\<bbb-R\>|}>|]>
+    </equation*>
+
+    which by <math|>[theorem: <reference|measure generated sigma algebra>]
+    proves that\ 
+
+    <\equation>
+      <label|eq 20.86.200>\<sigma\><around*|[|<around*|{|<around*|]|-\<infty\>,a|]>\|a\<in\>\<bbb-R\>|}>|]>\<subseteq\>\<sigma\><around*|[|<around*|{|<around*|]|-\<infty\>,a|[>\|a\<in\>\<bbb-R\>|}>|]>
+    </equation>
+
+    Let <math|<around*|]|-\<infty\>,a|[>\<in\><around*|{|<around*|]|-\<infty\>,a|[>\|a\<in\>\<bbb-R\>|}>>
+    then as <math|<around*|]|-\<infty\>,a|[>> is open it follows that
+    <math|><math|<around*|{|<around*|]|-\<infty\>,a|[>\|a\<in\>\<bbb-R\>|}>\<subseteq\>\<cal-T\><rsub|<around*|\|||\|>>\<subseteq\>\<sigma\><around*|[|\<cal-T\><rsub|<around*|\|||\|>>|]>>
+    and using [theorem: <reference|measure generated sigma algebra>] it
+    follows that\ 
+
+    <\equation>
+      <label|eq 20.87.200>\<sigma\><around*|[|<around*|{|<around*|]|-\<infty\>,a|[>\|a\<in\>\<bbb-R\>|}>|]>\<subseteq\>\<sigma\><around*|[|\<cal-T\><rsub|<around*|\|||\|>>|]>\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.82.200>]>>\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||[>>|]>
+    </equation>
+
+    Combining [eqs: <reference|eq 20.83.200>, <reference|eq 20.84.200>,
+    <reference|eq 20.85.200>, <reference|eq 20.86.200> and <reference|eq
+    20.87.200>] gives\ 
+
+    <\equation*>
+      \<sigma\><around*|[|\<cal-I\><rsub|<around*|[||[>>|]>=\<sigma\><around*|[|<around*|{|<around*|[|a,\<infty\>|[>\|a\<in\>\<bbb-R\>|}>|]>=\<sigma\><around*|[|<around*|{|<around*|]|a,\<infty\>|[>\|a\<in\>\<bbb-R\>|}>|]>=\<sigma\><around*|[|<around*|{|<around*|]|-\<infty\>,a|]>\|a\<in\>\<bbb-R\>|}>|]>=\<sigma\><around*|[|<around*|{|<around*|]|-\<infty\>,a|[>\|a\<in\>\<bbb-R\>|}>|]>
+    </equation*>
+
+    Finally combining the above with [eq: <reference|eq 20.82.200>] proves
+    that
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<cal-B\><around*|[|\<bbb-R\>|]>>|<cell|=>|<cell|\<sigma\><around*|[|\<cal-T\><rsub|<around*|\|||\|>>|]>>>|<row|<cell|>|<cell|=>|<cell|\<sigma\><around*|[|\<cal-I\><rsub|<around*|]||[>>|]>>>|<row|<cell|>|<cell|=>|<cell|\<sigma\><around*|[|\<cal-I\><rsub|<around*|]||]>>|]>>>|<row|<cell|>|<cell|=>|<cell|\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||]>>|]>>>|<row|<cell|>|<cell|=>|<cell|\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||[>>|]>>>|<row|<cell|>|<cell|=>|<cell|\<sigma\><around*|[|<around*|{|<around*|[|a,\<infty\>|[>\|a\<in\>\<bbb-R\>|}>|]>>>|<row|<cell|>|<cell|=>|<cell|\<sigma\><around*|[|<around*|{|<around*|]|a,\<infty\>|[>\|a\<in\>\<bbb-R\>|}>|]>>>|<row|<cell|>|<cell|=>|<cell|\<sigma\><around*|[|<around*|{|<around*|]|-\<infty\>,a|]>\|a\<in\>\<bbb-R\>|}>|]>>>|<row|<cell|>|<cell|=>|<cell|\<sigma\><around*|[|<around*|{|<around*|]|-\<infty\>,a|[>\|a\<in\>\<bbb-R\>|}>|]>>>>>
+    </eqnarray*>
+  </proof>
+
+  <subsection|Borel algebra on <math|\<bbb-R\><rsup|n>>>
+
+  \;
+
   \;
 </body>
 
 <\initial>
   <\collection>
     <associate|chapter-nr|19>
-    <associate|page-first|1233>
+    <associate|page-first|1239>
     <associate|section-nr|1>
     <associate|subsection-nr|7>
   </collection>
@@ -8328,15 +10208,44 @@
     <associate|auto-16|<tuple|<with|mode|<quote|math>|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i><with|mode|<quote|text>|
     in >\<bbb-R\>>|?>>
     <associate|auto-17|<tuple|20.2|?>>
+    <associate|auto-18|<tuple|20.2.1|?>>
+    <associate|auto-19|<tuple|ring of sets|?>>
     <associate|auto-2|<tuple|20.1|?>>
+    <associate|auto-20|<tuple|algebra of sets|?>>
+    <associate|auto-21|<tuple|sigma algebra|?>>
+    <associate|auto-22|<tuple|<with|mode|<quote|math>|\<sigma\>>-algebra|?>>
+    <associate|auto-23|<tuple|Borel algebra|?>>
+    <associate|auto-24|<tuple|<with|mode|<quote|math>|\<cal-B\><around*|[|X,\<cal-T\>|]>>|?>>
+    <associate|auto-25|<tuple|20.2.2|?>>
+    <associate|auto-26|<tuple|<with|mode|<quote|math>|\<cal-B\><around*|[|\<bbb-R\>|]>>|?>>
+    <associate|auto-27|<tuple|<with|mode|<quote|math>|\<cal-I\><rsub|<around*|[||]>>>|?>>
+    <associate|auto-28|<tuple|<with|mode|<quote|math>|\<cal-I\><rsub|<around*|[||[>>>|?>>
+    <associate|auto-29|<tuple|<with|mode|<quote|math>|\<cal-I\><rsub|<around*|]||]>>>|?>>
     <associate|auto-3|<tuple|20.1.1|?>>
+    <associate|auto-30|<tuple|<with|mode|<quote|math>|\<cal-I\><rsub|<around*|]||[>>>|?>>
+    <associate|auto-31|<tuple|<with|mode|<quote|math>|\<cal-I\>>|?>>
+    <associate|auto-32|<tuple|20.2.3|?>>
     <associate|auto-4|<tuple|20.1.2|?>>
     <associate|auto-5|<tuple|<with|mode|<quote|math>|<wide|\<bbb-R\><rsup|>|\<wide-bar\>><rsup|+>>|?>>
     <associate|auto-6|<tuple|<with|mode|<quote|math>|<wide|\<bbb-R\>|\<wide-bar\>><rsup|+><rsub|0>>|?>>
     <associate|auto-7|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|<wide|\<bbb-R\>|\<wide-bar\>><rsup|+><rsub|0>,+|\<rangle\>>>|?>>
     <associate|auto-8|<tuple|20.1.3|?>>
     <associate|auto-9|<tuple|<with|mode|<quote|math>|\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>|?>>
-    <associate|eq 120.51.156|<tuple|20.51|?>>
+    <associate|eq 18.10.021|<tuple|20.63|?>>
+    <associate|eq 18.11.021|<tuple|20.64|?>>
+    <associate|eq 18.12.021|<tuple|20.65|?>>
+    <associate|eq 18.13.021|<tuple|20.66|?>>
+    <associate|eq 18.14.021|<tuple|20.67|?>>
+    <associate|eq 18.15.021|<tuple|20.68|?>>
+    <associate|eq 18.16.021|<tuple|20.69|?>>
+    <associate|eq 18.17.021|<tuple|20.70|?>>
+    <associate|eq 18.18.021|<tuple|20.71|?>>
+    <associate|eq 18.19.021|<tuple|20.72|?>>
+    <associate|eq 18.20.021|<tuple|20.73|?>>
+    <associate|eq 18.21.021|<tuple|20.74|?>>
+    <associate|eq 18.22.021|<tuple|20.75|?>>
+    <associate|eq 18.8.020|<tuple|20.61|?>>
+    <associate|eq 18.9.020|<tuple|20.62|?>>
     <associate|eq 20.1.155|<tuple|20.1|?>>
     <associate|eq 20.10.155|<tuple|20.10|?>>
     <associate|eq 20.11.155|<tuple|20.11|?>>
@@ -8384,9 +10293,30 @@
     <associate|eq 20.5.155|<tuple|20.5|?>>
     <associate|eq 20.50.156|<tuple|20.50|?>>
     <associate|eq 20.51.156|<tuple|20.51|?>>
+    <associate|eq 20.52.200|<tuple|20.54|?>>
+    <associate|eq 20.52.200.1|<tuple|20.52|?>>
+    <associate|eq 20.53.200|<tuple|20.55|?>>
+    <associate|eq 20.53.200.1|<tuple|20.53|?>>
+    <associate|eq 20.54.200|<tuple|20.56|?>>
+    <associate|eq 20.55.200|<tuple|20.57|?>>
+    <associate|eq 20.56.200|<tuple|20.58|?>>
+    <associate|eq 20.57.200|<tuple|20.59|?>>
+    <associate|eq 20.58.200|<tuple|20.60|?>>
     <associate|eq 20.6.155|<tuple|20.6|?>>
     <associate|eq 20.7.155|<tuple|20.7|?>>
+    <associate|eq 20.76.200|<tuple|20.76|?>>
+    <associate|eq 20.77.200|<tuple|20.77|?>>
+    <associate|eq 20.78.200|<tuple|20.78|?>>
+    <associate|eq 20.79.200|<tuple|20.79|?>>
     <associate|eq 20.8.155|<tuple|20.8|?>>
+    <associate|eq 20.80.200|<tuple|20.80|?>>
+    <associate|eq 20.81.200|<tuple|20.81|?>>
+    <associate|eq 20.82.200|<tuple|20.82|?>>
+    <associate|eq 20.83.200|<tuple|20.83|?>>
+    <associate|eq 20.84.200|<tuple|20.84|?>>
+    <associate|eq 20.85.200|<tuple|20.85|?>>
+    <associate|eq 20.86.200|<tuple|20.86|?>>
+    <associate|eq 20.87.200|<tuple|20.87|?>>
     <associate|eq 20.9.155|<tuple|20.9|?>>
     <associate|extended -(x.y)|<tuple|20.34|?>>
     <associate|extended 0\<less\>=x and 0\<less\>=y then
@@ -8465,10 +10395,31 @@
     <associate|extended x\<less\>=y then for 0\<less\>=s we have
     s.x\<less\>=s.y|<tuple|20.35|?>>
     <associate|extended x\<less\>=y then x+z\<less\>=y+z|<tuple|20.27|?>>
+    <associate|lemma 20.119.200|<tuple|20.121|?>>
+    <associate|lemma 20.121.200|<tuple|20.122|?>>
     <associate|lemma 20.78.156|<tuple|20.78|?>>
     <associate|lemma 20.80.156|<tuple|20.80|?>>
     <associate|lemma 20.90.156|<tuple|20.92|?>>
     <associate|lemma 20.95.156|<tuple|20.97|?>>
+    <associate|measure B[R] equivalences|<tuple|20.123|?>>
+    <associate|measure Borel algebra|<tuple|20.116|?>>
+    <associate|measure Borel algebra and closure|<tuple|20.117|?>>
+    <associate|measure P(X) is a algebra|<tuple|20.105|?>>
+    <associate|measure P(X) is a ring|<tuple|20.101|?>>
+    <associate|measure P(X) is a sigma algebra|<tuple|20.112|?>>
+    <associate|measure algebra|<tuple|20.103|?>>
+    <associate|measure algebra equavalent definition|<tuple|20.107|?>>
+    <associate|measure algebra properties|<tuple|20.106|?>>
+    <associate|measure borel algebrat on R|<tuple|20.118|?>>
+    <associate|measure countable union is in sigma algebra|<tuple|20.113|?>>
+    <associate|measure generated sigma algebra|<tuple|20.115|?>>
+    <associate|measure ring|<tuple|20.99|?>>
+    <associate|measure ring properties|<tuple|20.102|?>>
+    <associate|measure sigma algebra|<tuple|20.108|?>>
+    <associate|measure sigma algebra equivalences|<tuple|20.110|?>>
+    <associate|measure sigma algebra intersection|<tuple|20.114|?>>
+    <associate|measure {empty set} is a ring|<tuple|20.100|?>>
+    <associate|measure {emptyset,set} is a measure|<tuple|20.104|?>>
   </collection>
 </references>
 
@@ -8495,6 +10446,30 @@
 
       <tuple|<tuple|<with|mode|<quote|math>|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i><with|mode|<quote|text>|
       in >\<bbb-R\>>>|<pageref|auto-16>>
+
+      <tuple|<tuple|ring of sets>|<pageref|auto-19>>
+
+      <tuple|<tuple|algebra of sets>|<pageref|auto-20>>
+
+      <tuple|<tuple|sigma algebra>|<pageref|auto-21>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<sigma\>>-algebra>|<pageref|auto-22>>
+
+      <tuple|<tuple|Borel algebra>|<pageref|auto-23>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-B\><around*|[|X,\<cal-T\>|]>>>|<pageref|auto-24>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-B\><around*|[|\<bbb-R\>|]>>>|<pageref|auto-26>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-I\><rsub|<around*|[||]>>>>|<pageref|auto-27>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-I\><rsub|<around*|[||[>>>>|<pageref|auto-28>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-I\><rsub|<around*|]||]>>>>|<pageref|auto-29>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-I\><rsub|<around*|]||[>>>>|<pageref|auto-30>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-I\>>>|<pageref|auto-31>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|20<space|2spc>Measures
@@ -8531,6 +10506,15 @@
 
       20.2<space|2spc>Measure spaces <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-17>
+
+      <with|par-left|<quote|1tab>|20.2.1<space|2spc>Rings, algebras and
+      <with|mode|<quote|math>|\<sigma\>>-algebras
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-18>>
+
+      <with|par-left|<quote|1tab>|20.2.2<space|2spc> Borel algebra on
+      <with|mode|<quote|math>|\<bbb-R\>> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-25>>
     </associate>
   </collection>
 </auxiliary>

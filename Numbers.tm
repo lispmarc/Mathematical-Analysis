@@ -10567,6 +10567,10 @@
 
       <item>If <math|0\<less\>x> then <math|\<exists\>n\<in\>\<bbb-N\><rsub|\<bbb-C\>>>
       such that <math|0\<less\>1/n\<less\>x>
+
+      <item>For <math|y\<in\>\<bbb-R\><rsub|\<bbb-C\>>> with
+      <math|x\<less\>y> we have htat <math|\<exists\>n\<in\>\<bbb-N\><rsub|\<bbb-C\>>>
+      such that <math|x\<less\>x+<frac|1|n>\<less\>y>
     </enumerate>
   </corollary>
 
@@ -10623,6 +10627,11 @@
       <math|0\<less\>n<rsup|-1>=1/n> which using [theorems:
       <reference|complex RC order properties>] on <math|1\<less\>n\<cdot\>x>
       gives <math|0\<less\>1/n=1\<cdot\>n<rsup|-1>\<less\><around*|(|n\<cdot\>x|)>\<cdot\>n<rsup|-1>=x>.
+
+      <item>As <math|x\<less\>y> we have that <math|0\<less\>y-x> hence using
+      (7) there exist a <math|n\<in\>\<bbb-N\><rsub|\<bbb-C\>>> such that
+      <math|0\<less\><frac|1|n>\<less\>y-x> hence
+      <math|x=0+x\<less\><frac|1|n>+x\<less\><around*|(|y-x|)>+x=y>.
     </enumerate>
   </proof>
 

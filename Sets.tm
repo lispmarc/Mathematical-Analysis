@@ -521,79 +521,6 @@
   </proof>
 
   <\theorem>
-    <label|class inclusion and union and intersection>If <math|A,B>, <math|C>
-    are classes then we have\ 
-
-    <\enumerate>
-      <item><math|A\<subseteq\>B> if and only if <math|A<big|cup>B=B>
-
-      <item><math|A\<subseteq\>B> if and only if <math|A<big|cap>B=A>
-
-      <item>If <math|A\<subseteq\>B> then <math|C\\B\<subseteq\>C\\A>
-
-      <item>If <math|B\<subseteq\>A> then <math|A\\<around*|(|A\\B|)>=B>
-    </enumerate>
-  </theorem>
-
-  <\proof>
-    \ 
-
-    <\enumerate>
-      <item>
-
-      <\description>
-        <item*|<math|\<Rightarrow\>>>If <math|x\<in\>A<big|cup>B\<Rightarrow\>x\<in\>A\<Rightarrowlim\><rsub|A\<subseteq\>B>x\<in\>B>
-        and thus <math|A<big|cup>B\<subseteq\>B>. From the previous theorem
-        [theorem: <reference|class intersection, union, inclusion>] we have
-        <math|B\<subseteq\>A<big|cup>B> so by <reference|class properties
-        (1)> we have <math|A<big|cup>B=B>
-
-        <item*|<math|\<Leftarrow\>>>If <math|A<big|cup>B=B> then
-        <math|x\<in\>A\<Rightarrow\>x\<in\>A<big|cup>B\<Rightarrowlim\><rsub|A<big|cup>B=B>x\<in\>B>
-        and thus <math|A\<subseteq\>B>
-      </description>
-
-      <item>
-
-      <\description>
-        <item*|<math|\<Rightarrow\>>>If <math|x\<in\>A\<Rightarrowlim\><rsub|A\<subseteq\>B>x\<in\>B\<Rightarrow\>x\<in\>A\<wedge\>x\<in\>B\<Rightarrow\>x\<in\>A<big|cap>B>
-        proving that <math|A\<subseteq\>A<big|cap>B>. From the previous
-        theorem we have <math|A<big|cap>B\<subseteq\>A> so by [theorem:
-        <reference|class properties (1)>] we have <math|A<big|cap>B=A>
-
-        <item*|<math|\<Leftarrow\>>>If <math|A<big|cap>B=A> we have
-        <math|x\<in\>A\<Rightarrow\>x\<in\>A<big|cap>B\<Rightarrow\><around*|(|x\<in\>A\<wedge\>x\<in\>B|)>\<Rightarrow\>x\<in\>B>
-        so <math|A\<subseteq\>B>.
-      </description>
-
-      <item>If <math|x\<in\>C\\B> then <math|x\<in\>C> and <math|x\<nin\>B>.
-      If <math|x\<in\>A> then as <math|A\<subseteq\>B> we would have
-      <math|x\<in\>B> contradicting <math|x\<nin\>B> hence <math|x\<nin\>A>
-      proving that <math|x\<in\>C\\A>.
-
-      <item>We have
-
-      <\eqnarray*>
-        <tformat|<table|<row|<cell|A\\<around*|(|A\\B|)>>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|class difference>]>>>|<cell|A<big|cap><around*|(|A\\B|)><rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|class difference>]>>>|<cell|A<big|cap><around*|(|A<big|cap>B<rsup|c>|)><rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|class de Morgan's law>]>>>|<cell|A<big|cap><around*|(|A<rsup|c><big|cup><around*|(|B<rsup|c>|)><rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|class complement of comploment>]>>>|<cell|A<big|cap><around*|(|A<rsup|c><big|cup>B|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|class class commutative,idempotent,associative,distributivity>]>>>|<cell|<around*|(|A<big|cap>A<rsup|c>|)><big|cup><around*|(|A<big|cap>B|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|class difference>]>>>|<cell|<around*|(|A\\A|)><big|cup><around*|(|A<big|cap>B|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|class universal and empotyset
-        properties>]>>>|<cell|\<varnothing\><big|cup><around*|(|A<big|cap>B|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|class universal and empotyset
-        properties>]>>>|<cell|A<big|cap>B>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|class inclusion and union and
-        intersection>]>>>|<cell|B>>>>
-      </eqnarray*>
-    </enumerate>
-
-    \;
-  </proof>
-
-  <\theorem>
     <label|class absorption laws><dueto|Absorption Laws>If <math|A,B> are
     classes then\ 
 
@@ -858,6 +785,98 @@
       contradiction, so by [theorem: <reference|class empty set is unique>]
       we have that <math|A\\A=\<varnothing\>>
     </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|class inclusion and union and intersection>If <math|A,B>, <math|C>
+    are classes then we have\ 
+
+    <\enumerate>
+      <item><math|A\<subseteq\>B> if and only if <math|A<big|cup>B=B>
+
+      <item><math|A\<subseteq\>B> if and only if <math|A<big|cap>B=A>
+
+      <item>If <math|A\<subseteq\>B> then <math|C\\B\<subseteq\>C\\A>
+
+      <item><math|A\\<around*|(|A\\B|)>=A<big|cap>B>
+
+      <item>If <math|B\<subseteq\>A> then <math|A\\<around*|(|A\\B|)>=B>
+
+      <item>If <math|B,C\<subseteq\>A><space|1em>then
+      <math|B<big|cap><around*|(|A\\C|)>=B\\C>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>If <math|x\<in\>A<big|cup>B\<Rightarrow\>x\<in\>A\<Rightarrowlim\><rsub|A\<subseteq\>B>x\<in\>B>
+        and thus <math|A<big|cup>B\<subseteq\>B>. From the previous theorem
+        [theorem: <reference|class intersection, union, inclusion>] we have
+        <math|B\<subseteq\>A<big|cup>B> so by <reference|class properties
+        (1)> we have <math|A<big|cup>B=B>
+
+        <item*|<math|\<Leftarrow\>>>If <math|A<big|cup>B=B> then
+        <math|x\<in\>A\<Rightarrow\>x\<in\>A<big|cup>B\<Rightarrowlim\><rsub|A<big|cup>B=B>x\<in\>B>
+        and thus <math|A\<subseteq\>B>
+      </description>
+
+      <item>
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>If <math|x\<in\>A\<Rightarrowlim\><rsub|A\<subseteq\>B>x\<in\>B\<Rightarrow\>x\<in\>A\<wedge\>x\<in\>B\<Rightarrow\>x\<in\>A<big|cap>B>
+        proving that <math|A\<subseteq\>A<big|cap>B>. From the previous
+        theorem we have <math|A<big|cap>B\<subseteq\>A> so by [theorem:
+        <reference|class properties (1)>] we have <math|A<big|cap>B=A>
+
+        <item*|<math|\<Leftarrow\>>>If <math|A<big|cap>B=A> we have
+        <math|x\<in\>A\<Rightarrow\>x\<in\>A<big|cap>B\<Rightarrow\><around*|(|x\<in\>A\<wedge\>x\<in\>B|)>\<Rightarrow\>x\<in\>B>
+        so <math|A\<subseteq\>B>.
+      </description>
+
+      <item>If <math|x\<in\>C\\B> then <math|x\<in\>C> and <math|x\<nin\>B>.
+      If <math|x\<in\>A> then as <math|A\<subseteq\>B> we would have
+      <math|x\<in\>B> contradicting <math|x\<nin\>B> hence <math|x\<nin\>A>
+      proving that <math|x\<in\>C\\A>.
+
+      <item>We have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|A\\<around*|(|A\\B|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class difference>]>>>|<cell|A<big|cap><around*|(|A\\B|)><rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class difference>]>>>|<cell|A<big|cap><around*|(|A<big|cap>B<rsup|c>|)><rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class de Morgan's law>]>>>|<cell|A<big|cap><around*|(|A<rsup|c><big|cup><around*|(|B<rsup|c>|)><rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class complement of comploment>]>>>|<cell|A<big|cap><around*|(|A<rsup|c><big|cup>B|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class class commutative,idempotent,associative,distributivity>]>>>|<cell|<around*|(|A<big|cap>A<rsup|c>|)><big|cup><around*|(|A<big|cap>B|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class difference>]>>>|<cell|<around*|(|A\\A|)><big|cup><around*|(|A<big|cap>B|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class universal and empotyset
+        properties>]>>>|<cell|\<varnothing\><big|cup><around*|(|A<big|cap>B|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class universal and empotyset
+        properties>]>>>|<cell|A<big|cap>B>>>>
+      </eqnarray*>
+
+      <item>We have\ 
+
+      <\equation*>
+        A\\<around*|(|A\\B|)>\<equallim\><rsub|<around*|(|4|)>>A<big|cap>B\<equallim\><rsub|<text|[theorem:
+        <reference|class inclusion and union and intersection>]>>B
+      </equation*>
+
+      <item>We have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|B<big|cap><around*|(|A\\C|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class difference>]>>>|<cell|B<big|cap><around*|(|A<big|cap>C<rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class class commutative,idempotent,associative,distributivity>]>>>|<cell|<around*|(|B<big|cap>A|)><big|cap>C<rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|B\<subseteq\>A\<wedge\><around*|(|2|)>>>|<cell|B<big|cap>C<rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class de Morgan's law>]>>>|<cell|B\\C>>>>
+      </eqnarray*>
+    </enumerate>
+
+    \;
   </proof>
 
   <section|Cartesian products>
@@ -14490,25 +14509,25 @@
     <associate|choice lemma upper bound of chain|<tuple|3.124|?>>
     <associate|choice lemma well ordering lemma (1)|<tuple|3.123|?>>
     <associate|choice well-order implies Axiom of Choice|<tuple|3.125|?>>
-    <associate|class absorption laws|<tuple|1.27|?>>
-    <associate|class class commutative,idempotent,associative,distributivity|<tuple|1.30|?>>
-    <associate|class complement of comploment|<tuple|1.28|?>>
-    <associate|class de Morgan's law|<tuple|1.29|?>>
+    <associate|class absorption laws|<tuple|1.26|?>>
+    <associate|class class commutative,idempotent,associative,distributivity|<tuple|1.29|?>>
+    <associate|class complement of comploment|<tuple|1.27|?>>
+    <associate|class de Morgan's law|<tuple|1.28|?>>
     <associate|class difference|<tuple|1.24|?>>
     <associate|class empty set|<tuple|1.18|?>>
     <associate|class empty set definition|<tuple|1.16|?>>
     <associate|class empty set is unique|<tuple|1.19|?>>
     <associate|class general intersection|<tuple|1.60|?>>
-    <associate|class inclusion and union and intersection|<tuple|1.26|?>>
+    <associate|class inclusion and union and intersection|<tuple|1.32|?>>
     <associate|class intersection|<tuple|1.57|?>>
     <associate|class intersection, union, inclusion|<tuple|1.25|?>>
     <associate|class not empty sets|<tuple|1.20|?>>
     <associate|class properties (1)|<tuple|1.8|2>>
-    <associate|class set difference and union , intersection|<tuple|1.31|?>>
+    <associate|class set difference and union , intersection|<tuple|1.30|?>>
     <associate|class trivial union intersection|<tuple|1.58|?>>
     <associate|class union|<tuple|1.56|?>>
     <associate|class union{A,B}|<tuple|1.59|?>>
-    <associate|class universal and empotyset properties|<tuple|1.32|?>>
+    <associate|class universal and empotyset properties|<tuple|1.31|?>>
     <associate|element a=b=\<gtr\>{a}={b}|<tuple|1.34|?>>
     <associate|element equalitiy of unordered pairs|<tuple|1.39|?>>
     <associate|element equality of unordered pairs (1)|<tuple|1.40|?>>
@@ -14541,7 +14560,7 @@
     <associate|eq 2.16.005|<tuple|2.22|?>>
     <associate|eq 2.16.141|<tuple|2.16|?>>
     <associate|eq 2.17.002|<tuple|2.33|?>>
-    <associate|eq 2.17.003|<tuple|2.31|?>>
+    <associate|eq 2.17.003|<tuple|2.30|?>>
     <associate|eq 2.17.004|<tuple|2.29|?>>
     <associate|eq 2.17.006|<tuple|2.23|?>>
     <associate|eq 2.17.141|<tuple|2.17|?>>
