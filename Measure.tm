@@ -9118,6 +9118,107 @@
     </enumerate>
   </proof>
 
+  If we have already proved that a subset of <math|\<cal-P\><around*|(|X|)>>
+  is a algebra on <math|X> then the following theorem will be usefull to
+  prove that this subset is actually a <math|\<sigma\>>-algebra.
+
+  <\theorem>
+    <label|measure condition for a algebra to be a sigma algebra>Let <math|X>
+    be a set and let <math|\<cal-A\>> be a algebra on <math|X> then we have:\ 
+
+    <\enumerate>
+      <item>If <math|\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
+      with <math|\<forall\>i\<in\>\<bbb-N\>>
+      <math|A<rsub|i>\<subseteq\>A<rsub|i+1>> we have
+      <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>> then
+      <math|\<cal-A\>> is a <math|\<sigma\>>-algebra on <math|X>.
+
+      <item>If <math|\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
+      with <math|\<forall\>i\<in\>\<bbb-N\>>
+      <math|A<rsub|i+1>\<subseteq\>A<rsub|i>> we have
+      <math|<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>> then
+      <math|\<cal-A\>> is a <math|\<sigma\>>-algebra on <math|X>.
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>.
+      Define <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>> by
+      <math|B<rsub|i>=<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,i|}>>A<rsub|i>>
+      then as <math|\<cal-A\>> is a algebra we have by [theorem:
+      <reference|measure algebra properties>] that
+      <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>.
+      Further for <math|i\<in\>\<bbb-N\>> we have
+
+      <\equation*>
+        B<rsub|i>=<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,i|}>>B<rsub|j>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,i+1|}>>B<rsub|j>=B<rsub|i+1>
+      </equation*>
+
+      hence by the hypothese we have\ 
+
+      <\equation>
+        <label|eq 20.54.200><big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>\<in\>\<cal-A\>
+      </equation>
+
+      As <math|\<forall\>i\<in\>\<bbb-N\>> we have
+      <math|A<rsub|i>\<subseteq\><big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,i|}>>A<rsub|j>=B<rsub|i>>
+      it follows that
+
+      <\equation>
+        <label|eq 20.55.200><big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>
+      </equation>
+
+      Further if <math|x\<in\><big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>> then
+      there exist a <math|i\<in\>\<bbb-N\>> such that
+      <math|x\<in\>B<rsub|i>=<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,i|}>>A<rsub|j>>,
+      hence there exist a <math|j\<in\><around*|{|1,\<ldots\>,i|}>> such that
+      <math|x\<in\>A<rsub|j>\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>>.
+      This proves that <math|<big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>>
+      which combined with [eq: <reference|eq 20.55.200>] gives us
+      <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>=<big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>>,
+      hence using [eq: <reference|eq 20.54.200>] we have that\ 
+
+      <\equation*>
+        <big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>
+      </equation*>
+
+      Applying then [theorem: <reference|measure sigma algebra equivalences>]
+      it follows that <math|\<cal-A\>> is a <math|\<sigma\>>-algebra.
+
+      <item>Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
+      be such that <math|\<forall\>i\<in\>\<bbb-N\>> we have
+      <math|A<rsub|i>\<subseteq\>A<rsub|i+1>>. Let <math|i\<in\>\<bbb-N\>>
+      then as <math|\<cal-A\>> is a algebra
+      <math|X\\A<rsub|i>\<in\>\<cal-A\>>, further if
+      <math|x\<in\>X\\A<rsub|i+1>> then <math|x\<in\>X> and
+      <math|x\<nin\>A<rsub|i>> [as <math|A<rsub|i>\<subseteq\>A<rsub|i+1>>]
+      so that <math|x\<in\>X\\A<rsub|i>>. Hence
+      <math|<around*|{|X\\A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
+      and <math|\<forall\>i\<in\>\<bbb-N\>> we have
+      <math|X\\A<rsub|i+1>\<subseteq\>X\\A<rsub|i>> so by the hypothesis we
+      have that <math|<big|cap><rsub|i\<in\>\<bbb-N\>><around*|(|X\\A<rsub|i>|)>\<in\>\<cal-A\>>.
+      As <math|\<cal-A\>> is a algebra we have then that\ 
+
+      <\equation*>
+        X\\<around*|(|<big|cap><rsub|i\<in\>\<bbb-N\>><around*|(|X\\A<rsub|i>|)>|)>\<in\>\<cal-A\>
+      </equation*>
+
+      Further <math|><math|X\\<around*|(|<big|cap><rsub|i\<in\>\<bbb-N\>><around*|(|X\\A<rsub|i>|)>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|family de Morgan>]>><big|cup><rsub|i\<in\>\<bbb-N\>><around*|(|X\\<around*|(|X\\A<rsub|i>|)>|)>\<equallim\><rsub|A<rsub|i>\<subseteq\>X\<wedge\><text|[theorem:
+      <reference|class inclusion and union and
+      intersection>]>><big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>> so that
+      <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>>. Hence
+      we have proved that <math|\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<cal-A\>>\<subseteq\>\<cal-A\>>
+      with <math|\<forall\>i\<in\>\<bbb-N\>>
+      <math|A<rsub|i>\<subseteq\>A<rsub|i+1>>
+      <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>> ao that
+      by (1) <math|\<cal-A\>> is a <math|\<sigma\>>-algebra.
+    </enumerate>
+  </proof>
+
   We show now how we can generate a <math|\<sigma\>> algebra based on a
   arbitrary subset of <math|\<cal-P\><around*|(|X|)>>. First we prove that
   for a non empty collection of <math|\<sigma\>>-algebra's the intersection
@@ -9239,7 +9340,7 @@
   </proof>
 
   A special case of a <math|\<sigma\>>-algebra in the context of topological
-  spaces it the Borel algebrat.
+  spaces is the Borel algebra.
 
   <\definition>
     <label|measure Borel algebra><index|Borel
@@ -9295,7 +9396,30 @@
     </equation*>
   </proof>
 
-  <subsection| Borel algebra on <math|\<bbb-R\>>>
+  TODO
+
+  <subsection|Dynkin Classes>
+
+  This section deals with a proof technique that will be useful later.
+
+  <\definition>
+    Let <math|X> be a set then <math|\<frak-D\>\<subseteq\>\<cal-P\><around*|(|X|)>>
+    is a Dynkin class on <math|X> if\ 
+
+    <\enumerate>
+      <item><math|X\<in\>\<frak-D\>>
+
+      <item><math|\<forall\>A,B\<in\>\<frak-D\>> with <math|B\<subseteq\>A>
+      we have that <math|A\\B\<in\>\<frak-D\>>
+
+      <item><math|\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
+      with <math|\<forall\>i\<in\>\<bbb-N\>>
+      <math|A<rsub|i>\<subseteq\>A<rsub|i+1>> we have
+      <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<frak-D\>>
+    </enumerate>
+  </definition>
+
+  <subsection|Borel algebra on <math|\<bbb-R\>>>
 
   <\definition>
     <label|measure borel algebrat on R><index|<math|\<cal-B\><around*|[|\<bbb-R\>|]>>>Let
@@ -10180,6 +10304,972 @@
 
   <subsection|Borel algebra on <math|\<bbb-R\><rsup|n>>>
 
+  <\definition>
+    <label|measure Borel algebra on R^n>Let <math|n\<in\>\<bbb-N\>> then the
+    Borel algebra on <math|\<bbb-R\><rsup|n>> is noted as
+    <math|\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>> so\ 
+
+    <\equation*>
+      \<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>=\<sigma\><around*|[|\<bbb-R\><rsup|n>,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>>n>|]>
+    </equation*>
+
+    where <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>> is the
+    canonical topology on <math|\<bbb-R\><rsup|n>> [see example:
+    <reference|normed maximum norm R^n>]
+  </definition>
+
+  First we extend the concept of generalized intervals to intervals on
+  <math|\<bbb-R\><rsup|n>>
+
+  <\definition>
+    <label|measure order on R^n>Let <math|n\<in\>\<bbb-N\>> and
+    <math|x,y\<in\>\<bbb-R\><rsup|n>> then <math|x\<leqslant\><rsub|n>y> if
+    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|x<rsub|i>\<less\>y<rsub|i>>
+  </definition>
+
+  This relation makes <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<leqslant\><rsub|n>|\<rangle\>>>
+  a partial ordered set.
+
+  <\theorem>
+    Let <math|n\<in\>\<bbb-N\>> then <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<leqslant\><rsub|n>|\<rangle\>>>
+    is a partial ordered set.
+
+    <\note>
+      As for <math|<around*|(|1,2|)>>, <math|<around*|(|2,1|)>> we that
+      <math|<around*|(|1,2|)>\<nleqslant\><rsub|2><around*|(|2,1|)>> and
+      <math|<around*|(|2,1|)>\<nleqslant\><rsub|2><around*|(|1,2|)>>
+      <math|\<leqslant\><rsub|n>> is not a total or full order.\ 
+    </note>
+  </theorem>
+
+  <\proof>
+    We have
+
+    <\description>
+      <item*|reflexivity>If <math|x\<in\>\<bbb-R\><rsup|n>> then
+      <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have
+      <math|x<rsub|i>=x<rsub|i>\<Rightarrow\>x<rsub|i>\<leqslant\>x<rsub|i>>
+      proving that <math|x\<leqslant\><rsub|n>x>.
+
+      <item*|anti-symmetry>If <math|x,y\<in\>\<bbb-R\><rsup|n>> satisfies
+      <math|x\<leqslant\>y\<wedge\>y\<leqslant\>x> then we have
+      <math|\<forall\>i\<in\>\<bbb-N\>> we have
+      <math|x<rsub|i>\<leqslant\>y<rsub|i>> and
+      <math|y<rsub|i>\<leqslant\>x<rsub|i>> so that
+      <math|x<rsub|i>=y<rsub|i>> from which it follows that <math|x=y>.
+
+      <item*|transitivity>If <math|x\<leqslant\><rsub|n>y> and
+      <math|y\<leqslant\><rsub|n>z> then we have
+      <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> that
+      <math|x<rsub|i>\<leqslant\>y<rsub|i>\<wedge\>y<rsub|i>\<leqslant\>z<rsub|i>\<Rightarrow\>x<rsub|i>\<leqslant\>z<rsub|i>>
+      from which it follows that <math|x\<leqslant\><rsub|n>z>.
+    </description>
+  </proof>
+
+  Using this order relation we can extend the conecpt of intervals to
+  intervals in <math|\<bbb-R\><rsup|n>>.
+
+  <\definition>
+    Let <math|n\<in\>\<bbb-N\><rsub|0>>, <math|a,b\<in\>\<bbb-R\><rsup|n>>
+    such that <math|a\<leqslant\><rsub|n>b> then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|[|a,b|]>>|<cell|=>|<cell|<around*|{|x\<in\>\<bbb-R\><rsup|n>\|a\<leqslant\><rsub|n>x\<wedge\>x\<leqslant\><rsub|n>b|}>>>|<row|<cell|>|<cell|=>|<cell|<around*|{|x\<in\>\<bbb-R\><rsup|n>\|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      we have >a<rsub|i>\<leqslant\>x<rsub|i>\<wedge\>x<rsub|i>\<leqslant\>b<rsub|i>|}>>>|<row|<cell|>|<cell|=>|<cell|<around*|{|x\<in\>\<bbb-R\><rsup|n>\|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      we have >x<rsub|i>\<in\><around*|[|a<rsub|i>,b<rsub|i>|]>|}>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i>,b<rsub|i>|]>>>|<row|<cell|<around*|[|a,b|[>>|<cell|=>|<cell|<around*|{|x\<in\>\<bbb-R\><rsup|n>\|a\<leqslant\><rsub|n>x\<wedge\>x\<less\><rsub|n>b|}>>>|<row|<cell|>|<cell|=>|<cell|<around*|{|x\<in\>\<bbb-R\><rsup|n>\|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      we have >a<rsub|i>\<leqslant\>x<rsub|i>\<wedge\>x<rsub|i>\<less\>b<rsub|i>|}>>>|<row|<cell|>|<cell|=>|<cell|<around*|{|x\<in\>\<bbb-R\><rsup|n>\|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      we have >x<rsub|i>\<in\><around*|[|a<rsub|i>,b<rsub|i>|[>|}>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|i\<less\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i>,b<rsub|i>|[>>>|<row|<cell|<around*|]|a,b|]>>|<cell|=>|<cell|<around*|{|x\<in\>\<bbb-R\><rsup|n>\|a\<less\><rsub|n>x\<wedge\>x\<leqslant\><rsub|n>b|}>>>|<row|<cell|>|<cell|=>|<cell|<around*|{|x\<in\>\<bbb-R\><rsup|n>\|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      we have >a<rsub|i>\<less\>x<rsub|i>\<wedge\>x<rsub|i>\<leqslant\>b<rsub|i>|}>>>|<row|<cell|>|<cell|=>|<cell|<around*|{|x\<in\>\<bbb-R\><rsup|n>\|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      we have >x<rsub|i>\<in\><around*|]|a<rsub|i>,b<rsub|i>|]>|}>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|i\<less\><around*|{|1,\<ldots\>,n|}>><around*|]|a<rsub|i>,b<rsub|i>|]>>>|<row|<cell|<around*|]|a,b|[>>|<cell|=>|<cell|<around*|{|x\<in\>\<bbb-R\><rsup|n>\|a\<less\><rsub|n>x\<wedge\>x\<less\><rsub|n>b|}>>>|<row|<cell|>|<cell|=>|<cell|<around*|{|x\<in\>\<bbb-R\><rsup|n>\|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      we have >a<rsub|i>\<less\>x<rsub|i>\<wedge\>x<rsub|i>\<less\>b<rsub|i>|}>>>|<row|<cell|>|<cell|=>|<cell|<around*|{|x\<in\>\<bbb-R\><rsup|n>\|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      we have >x<rsub|i>\<in\><around*|]|a<rsub|i>,b<rsub|i>|[>|}>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|i\<less\><around*|{|1,\<ldots\>,n|}>><around*|]|a<rsub|i>,b<rsub|i>|[>>>|<row|<cell|<around*|]|-\<infty\>,a|]>>|<cell|=>|<cell|<around*|{|x\<in\>\<bbb-R\><rsup|n>\|x\<leqslant\><rsub|n>a|}>>>|<row|<cell|>|<cell|=>|<cell|<around*|{|x\<in\>\<bbb-R\><rsup|n>\|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      we have >x<rsub|i>\<leqslant\>a<rsub|i>|}>>>|<row|<cell|>|<cell|=>|<cell|<around*|{|x\<in\>\<bbb-R\><rsup|n>\|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      we have >x<rsub|i>\<in\><around*|]|-\<infty\>,a<rsub|i>|]>|}>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|i\<less\><around*|{|1,\<ldots\>,n|}>><around*|]|-\<infty\>,a<rsub|i>|]>>>|<row|<cell|<around*|]|-\<infty\>,a|[>>|<cell|=>|<cell|<around*|{|x\<in\>\<bbb-R\><rsup|n>\|x\<less\>a|}>>>|<row|<cell|>|<cell|=>|<cell|<around*|{|x\<in\>\<bbb-R\><rsup|n>\|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      we have >x<rsub|i>\<less\>a<rsub|i>|}>>>|<row|<cell|>|<cell|=>|<cell|<around*|{|x\<in\>\<bbb-R\><rsup|n>\|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      we have >x<rsub|i>\<in\><around*|]|-\<infty\>,a<rsub|i>|[>|}>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|i\<less\><around*|{|1,\<ldots\>,n|}>><around*|]|-\<infty\>,a<rsub|i>|[>>>|<row|<cell|<around*|[|a,\<infty\>|[>>|<cell|=>|<cell|<around*|{|x\<in\>\<bbb-R\><rsup|n>\|a\<leqslant\><rsub|n>x|}>>>|<row|<cell|>|<cell|=>|<cell|<around*|{|x\<in\>\<bbb-R\><rsup|n>\|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      we have >a<rsub|i>\<leqslant\>x<rsub|i>|}>>>|<row|<cell|>|<cell|=>|<cell|<around*|{|x\<in\>\<bbb-R\><rsup|n>\|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      we have >x<rsub|i>\<in\><around*|[|a<rsub|i>,\<infty\>|[>|}>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|i\<less\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i>,\<infty\>|[>>>|<row|<cell|<around*|]|a,\<infty\>|[>>|<cell|=>|<cell|<around*|{|x\<in\>\<bbb-R\><rsup|n>\|a\<less\><rsub|n>x|}>>>|<row|<cell|>|<cell|=>|<cell|<around*|{|x\<in\>\<bbb-R\><rsup|n>\|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      we have >a<rsub|i>\<less\>x<rsub|i>|}>>>|<row|<cell|>|<cell|=>|<cell|<around*|{|x\<in\>\<bbb-R\><rsup|n>\|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      we have >x<rsub|i>\<in\><around*|]|a<rsub|i>,\<infty\>|[>|}>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|i\<less\><around*|{|1,\<ldots\>,n|}>><around*|]|a<rsub|i>,\<infty\>|[>>>>>
+    </eqnarray*>
+  </definition>
+
+  To simply notation we have also the following definitions:
+
+  <\definition>
+    Let <math|n\<in\>\<bbb-N\><rsub|0>> and <math|a,b\<in\>\<bbb-R\>> then we
+    define the following sets
+
+    <\enumerate>
+      <item><math|<around*|[|a,b|]><rsup|n>=<around*|{|x\<in\>\<bbb-R\><rsup|n>\|a\<leqslant\>x<rsub|i>\<leqslant\>b|}>>
+
+      <item><math|<around*|[|a,b|[><rsup|n>=<around*|{|x\<in\>\<bbb-R\><rsup|n>\|a\<leqslant\>x<rsub|i>\<less\>b|}>>
+
+      <item><math|<around*|]|a,b|]><rsup|n>=<around*|{|x\<in\>\<bbb-R\><rsup|n>\|a\<less\>x<rsub|i>\<leqslant\>b|}>>
+
+      <item><math|<around*|]|a,b|[><rsup|n>=<around*|{|x\<in\>\<bbb-R\><rsup|n>\|a\<less\>x<rsub|i>\<less\>b|}>>
+
+      <item><math|<around*|]|-\<infty\>,a|]><rsup|n>=<around*|{|x\<in\>\<bbb-R\><rsup|n>\|x<rsub|i>\<leqslant\>a|}>>
+
+      <item><math|<around*|]|-\<infty\>,a|[><rsup|n>=<around*|{|x\<in\>\<bbb-R\><rsup|n>\|x<rsub|i>\<less\>a|}>>
+
+      <item><math|<around*|[|a,\<infty\>|[><rsup|n>=<around*|{|x\<in\>\<bbb-R\><rsup|n>\|a\<leqslant\>x<rsub|i>|}>>
+
+      <item><math|<around*|]|a,\<infty\>|[><rsup|n>=<around*|{|x\<in\>\<bbb-R\><rsup|n>\|a\<less\>x<rsub|i>|}>>
+    </enumerate>
+  </definition>
+
+  We specify now the sufficient and necessary condition for a interval in
+  <math|\<bbb-R\><rsup|n>> to be empty.
+
+  <\lemma>
+    <label|lemma 20.129.200>
+
+    Let <math|n\<in\>\<bbb-N\>> and <math|a,b\<in\>\<bbb-R\><rsup|n>> with
+    <math|a\<leqslant\>b> then we have\ 
+
+    <\enumerate>
+      <item><math|<around*|[|a,b|[>=\<emptyset\>\<Leftrightarrow\>\<exists\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      such that <math|a<rsub|i>=b<rsub|i>>>>
+
+      <item><math|<around*|]|a,b|]>=\<emptyset\>\<Leftrightarrow\>\<exists\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      such that <math|a<rsub|i>=b<rsub|i>>>>
+
+      <item><math|<around*|]|a,b|[>=\<emptyset\>\<Leftrightarrow\>\<exists\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      such that <math|a<rsub|i>=b<rsub|i>>>>
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item> As <math|<around*|[|a,b|[>=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i>,b<rsub|i>|[>>
+      we have
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>If <math|<around*|[|a,b|[>=\<emptyset\>>
+        then by [theorem <reference|choice product sets empty condition>]
+        <math|\<exists\>i\<in\><around*|{|1,\<ldots\>,n|}>> such that
+        <math|<around*|[|a<rsub|i>,b<rsub|i>|[>=\<emptyset\>>. If
+        <math|a<rsub|i>\<less\>b<rsub|i>> then by [theorem:
+        <reference|complex densitiy theorem>] there exists a
+        <math|x\<in\>\<bbb-R\>> such that
+        <math|a<rsub|i>\<less\>x\<less\>b<rsub|i>\<Rightarrow\>x\<in\><around*|[|a<rsub|i>,b<rsub|i>|[>>
+        contradicting <math|<around*|[|a<rsub|i>,b<rsub|i>|[>=\<emptyset\>>,
+        so we must have <math|a<rsub|i>\<geqslant\>b<rsub|i>>. As further
+        <math|a\<leqslant\>b\<Rightarrow\>a<rsub|i>\<leqslant\>b<rsub|i>> it
+        follows that <math|a<rsub|i>=b<rsub|i>>.
+
+        <item*|<math|\<Leftarrow\>>>If there exists a
+        <math|i\<in\><around*|{|1,\<ldots\>,n|}>> with
+        \ <math|a<rsub|i>=b<rsub|i>> then if
+        <math|x\<in\><around*|[|a<rsub|i>,b<rsub|i>|[>> we have
+        <math|<rigid|a<rsub|i>\<leqslant\>x\<wedge\>x\<less\>a<rsub|i>>>
+        leading to the contradiction <math|a<rsub|i>\<less\>a<rsub|i>> so
+        <math|<around*|[|a<rsub|i>,b<rsub|i>|[>=\<emptyset\>>. Hence using
+        [theorem <reference|choice product sets empty condition>]
+        <rigid|<math|<around*|[|a,b|[>=\<varnothing\>>>.
+      </description>
+
+      <item>\ 
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>If <math|<around*|]|a,b|]>=\<emptyset\>>
+        then by [theorem <reference|choice product sets empty condition>]
+        <math|\<exists\>i\<in\><around*|{|1,\<ldots\>,n|}>> such that
+        <math|<around*|]|a<rsub|i>,b<rsub|i>|]>=\<emptyset\>>. If
+        <math|a<rsub|i>\<less\>b<rsub|i>> then by [theorem:
+        <reference|complex densitiy theorem>] there exists a
+        <math|x\<in\>\<bbb-R\>> such that
+        <math|a<rsub|i>\<less\>x\<less\>b<rsub|i>\<Rightarrow\>x\<in\><around*|]|a<rsub|i>,b<rsub|i>|]>>
+        contradicting <math|<around*|]|a<rsub|i>,b<rsub|i>|]>=\<emptyset\>>,
+        so we must have <math|a<rsub|i>\<geqslant\>b<rsub|i>>. As further
+        <math|a\<leqslant\>b\<Rightarrow\>a<rsub|i>\<leqslant\>b<rsub|i>> it
+        follows that <math|a<rsub|i>=b<rsub|i>>.
+
+        <item*|<math|\<Leftarrow\>>>If there exists a
+        <math|i\<in\><around*|{|1,\<ldots\>,n|}>> with
+        \ <math|a<rsub|i>=b<rsub|i>> then if
+        <math|x\<in\><around*|]|a<rsub|i>,b<rsub|i>|]>> we have
+        <math|<rigid|a<rsub|i>\<less\>x\<wedge\>x\<leqslant\>a<rsub|i>>>
+        leading to the contradiction <math|a<rsub|i>\<less\>a<rsub|i>> so
+        <math|<around*|]|a<rsub|i>,b<rsub|i>|]>=\<emptyset\>>. Hence using
+        [theorem <reference|choice product sets empty condition>]
+        <rigid|<math|<around*|]|a,b|]>=\<varnothing\>>>.
+      </description>
+
+      <item>\ 
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>If <math|<around*|]|a,b|[>=\<emptyset\>>
+        then by [theorem <reference|choice product sets empty condition>]
+        <math|\<exists\>i\<in\><around*|{|1,\<ldots\>,n|}>> such that
+        <math|<around*|]|a<rsub|i>,b<rsub|i>|[>=\<emptyset\>>. If
+        <math|a<rsub|i>\<less\>b<rsub|i>> then by [theorem:
+        <reference|complex densitiy theorem>] there exists a
+        <math|x\<in\>\<bbb-R\>> such that
+        <math|a<rsub|i>\<less\>x\<less\>b<rsub|i>\<Rightarrow\>x\<in\><around*|]|a<rsub|i>,b<rsub|i>|[>>
+        contradicting <math|<around*|]|a<rsub|i>,b<rsub|i>|[>=\<emptyset\>>,
+        so we must have <math|a<rsub|i>\<geqslant\>b<rsub|i>>. As further
+        <math|a\<leqslant\>b\<Rightarrow\>a<rsub|i>\<leqslant\>b<rsub|i>> it
+        follows that <math|a<rsub|i>=b<rsub|i>>.
+
+        <item*|<math|\<Leftarrow\>>>If there exists a
+        <math|i\<in\><around*|{|1,\<ldots\>,n|}>> with
+        \ <math|a<rsub|i>=b<rsub|i>> then if
+        <math|x\<in\><around*|]|a<rsub|i>,b<rsub|i>|[>> we have
+        <math|<rigid|a<rsub|i>\<less\>x\<wedge\>x\<leqslant\>a<rsub|i>>>
+        leading to the contradiction <math|a<rsub|i>\<less\>a<rsub|i>> so
+        <math|<around*|]|a<rsub|i>,b<rsub|i>|[>=\<emptyset\>>. Hence using
+        [theorem <reference|choice product sets empty condition>]
+        <rigid|<math|<around*|]|a,b|]>=\<varnothing\>>>.
+      </description>
+    </enumerate>
+  </proof>
+
+  To be able to use half open intervals in <math|\<bbb-R\><rsup|n>> of the
+  form <math|<around*|[|a,b|]>> to generate the Borel algebra on
+  <math|\<bbb-R\><rsup|n>> we introduce Dyadic intervals. We prove then that
+  any open sets in <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<cal-T\>|\<rangle\>>>
+  is a countable union of Diadic intervals. First we define the set of half
+  open intervals on <math|\<bbb-R\><rsup|n>>
+
+  <\definition>
+    <label|measure half open intervals in R^n>Let <math|n\<in\>\<bbb-N\>>
+    then <math|\<cal-R\><rsup|n>=<around*|{|<around*|[|a,b|[>\|a,b\<in\>\<bbb-R\><rsup|n>\<wedge\>a\<less\>b|}>>
+
+    <\note>
+      Note as <math|a\<less\>b> we have by [lemma: <reference|lemma
+      20.129.200>] that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+      <math|a<rsub|i>\<less\>b<rsub|i>> so that
+      <math|<around*|[|a<rsub|i>,b<rsub|i>|[>\<neq\>\<varnothing\>>.
+    </note>
+  </definition>
+
+  The following lemma allows us to define a function that maps a element of
+  <math|\<cal-R\><rsup|n>> to its endpoints. Using this we can define then
+  the volume of elements of <math|\<cal-R\><rsup|n>>.
+
+  <\lemma>
+    <label|lemma 20.132.200>Let <math|n\<in\>\<bbb-N\>> and
+    <math|I\<in\>\<cal-R\><rsup|n>> then there exist a
+    <with|font-series|bold|unique> a <math|a,b\<in\>\<bbb-R\><rsup|n>> such
+    that <math|I=<around*|[|a,b|[>>
+  </lemma>
+
+  <\proof>
+    If <math|I\<in\>\<cal-R\><rsup|n>> then by definition of
+    <math|\<cal-R\><rsup|n>> there exist a <math|a,b\<in\>\<bbb-R\><rsup|n
+    >>with <math|a\<less\>b> such that <math|I=<around*|[|a,b|[>>. Assume
+    that there exists also a <math|a<rprime|'>,b<rprime|'>\<in\>\<bbb-R\><rsup|n>>
+    such that <math|I=<around*|[|a<rprime|'>,b<rprime|'>|[>>. Then
+    <math|<rigid|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i>,b<rsub|i>|[>=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rprime|'><rsub|i>,b<rprime|'><rsub|i>|[>>>
+    and <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|<around*|[|a<rsub|i>,b<rsub|i>|[>\<neq\>\<varnothing\>>, hence
+    using [theorem: <reference|choice product equality>] we have that\ 
+
+    <\equation*>
+      \<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text| that
+      >\<varnothing\>\<neq\><around*|[|a<rsub|i>,b<rsub|i>|[>=<around*|[|a<rprime|'><rsub|i>,b<rprime|'><rsub|i>|[>
+    </equation*>
+
+    Let <math|i\<in\><around*|{|1,\<ldots\>,n|}>> then as
+    <math|\<varnothing\>\<neq\><around*|[|a<rsub|i>,b<rsub|i>|[>=<around*|[|a<rprime|'><rsub|i>,b<rprime|'><rsub|i>|[>>
+    it follows from [theorem: <reference|generalized intervals and
+    boundaries>] that <math|a<rsub|i>=a<rprime|'><rsub|i>> and
+    <math|b<rsub|i>=b<rprime|'><rsub|i>> proving uniqueness..
+  </proof>
+
+  Thanks to the above lemma the following is well defined.
+
+  <\definition>
+    <label|measure begin end><index|begin><index|end><index|<math|v<rsup|n><around*|(|I|)>>>Let
+    <math|n\<in\>\<bbb-N\>> then we define:\ 
+
+    <\enumerate>
+      <item><math|begin:\<cal-R\><rsup|n>\<rightarrow\>\<bbb-R\>> by
+      <math|begin<around*|(|I|)>=a> where <math|I=<around*|[|a,b|[>>
+
+      <item><math|end:\<cal-R\><rsup|n>\<rightarrow\>\<bbb-R\>> by
+      <math|end<around*|(|I|)>=b> where <math|I=<around*|[|a,b|[>>
+
+      <item><math|v<rsup|n>:\<cal-R\><rsup|n>\<rightarrow\><around*|[|0,\<infty\>|[>>
+      where <math|v<rsup|n><around*|(|I|)>=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|begin<around*|(|I|)><rsub|i>-end<around*|(|I|)><rsub|i>|)>>
+    </enumerate>
+  </definition>
+
+  We introduce now Dyadic cubes that forms a countable subset of
+  <math|\<cal-R\><rsup|n>>.
+
+  <\definition>
+    <label|measure Dyadic cubes><index|Dyadic interval><dueto|Dyadic
+    Cubes>Let <math|n\<in\>\<bbb-N\>>, <math|m\<in\>\<bbb-N\><rsub|0>> then
+    we define <math|\<cal-D\><rsup|n><rsub|m>> by\ 
+
+    <\equation*>
+      \<cal-D\><rsup|n><rsub|m>=<around*|{|<around*|[|<frac|z|2<rsup|m>>,<frac|z+1|2<rsup|m>>|[>\|z\<in\>\<bbb-Z\><rsup|n>|}>\<subseteq\>\<cal-R\><rsup|n>
+    </equation*>
+
+    Elements of <math|\<cal-D\><rsup|n><rsub|m>> are called Dyadic cubes of
+    order <math|m>. Further <math|\<cal-D\><rsup|n>> defined by\ 
+
+    <\equation*>
+      \<cal-D\><rsup|n>=<big|cup><rsub|m\<in\>\<bbb-N\><rsub|0>>\<cal-D\><rsup|n><rsub|m>\<subseteq\>\<cal-R\><rsup|n>
+    </equation*>
+
+    is the set of all Dyadic cubes.
+
+    <\note>
+      As <math|<frac|z|2<rsup|m>>\<less\><frac|z+1|2<rsup|m>>> we have that
+      <math|<frac|z|2<rsup|m>>\<in\><around*|[|<frac|z|2<rsup|m>>,<frac|z+1|2<rsup|m>>|[>>
+      so that Dyadic cubes are not empty.
+    </note>
+  </definition>
+
+  <\lemma>
+    <label|lemma 20.136.200>Let <math|k,l\<in\>\<bbb-N\><rsub|0>> with
+    <math|k\<leqslant\>l>, <math|r,q\<in\>\<bbb-Z\>> then for
+    <math|<around*|[|<frac|r|2<rsup|l>>,<frac|r+1|2<rsup|l>>|]>>,
+    <math|<around*|[|<frac|q|2<rsup|k>>,<frac|q+1|2<rsup|k>>|[>> we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|[|<frac|r|2<rsup|l>>,<frac|r+1|2<rsup|l>>|[><big|cap><around*|[|<frac|q|2<rsup|k>>,<frac|q+1|2<rsup|k>>|[>\<neq\>\<emptyset\>>|<cell|\<Rightarrow\>>|<cell|<around*|[|<frac|r|2<rsup|l>>,<frac|r+1|2<rsup|l>>|[>\<subseteq\><around*|[|<frac|q|2<rsup|k>>,<frac|q+1|2<rsup|k>>|[>>>|<row|<cell|<around*|[|<frac|r|2<rsup|l>>,<frac|r+1|2<rsup|l>>|[><big|cap><around*|[|<frac|q|2<rsup|k>>,<frac|q+1|2<rsup|k>>|[>=\<emptyset\>>|<cell|\<Rightarrow\>>|<cell|<around*|[|<frac|r|2<rsup|l>>,<frac|r+1|2<rsup|l>>|[>\<nsubseteq\><around*|[|<frac|q|2<rsup|k>>,<frac|q+1|2<rsup|k>>|[>>>>>
+    </eqnarray*>
+
+    in other words. We have either <math|<around*|[|<frac|r|2<rsup|l>>,<frac|r+1|2<rsup|l>>|[><big|cap><around*|[|<frac|q|2<rsup|k>>,<frac|q+1|2<rsup|k>>|[>=\<emptyset\>>
+    or <math|<around*|[|<frac|r|2<rsup|l>>,<frac|r+1|2<rsup|l>>|[>\<subseteq\><around*|[|<frac|q|2<rsup|k>>,<frac|q+1|2<rsup|k>>|[>>
+    but not both.
+  </lemma>
+
+  <\proof>
+    Take <math|I=<around*|[|<frac|q|2<rsup|l>>,<frac|q+1|2<rsup|l>>|[>> and
+    <math|J=<around*|[|<frac|r|2<rsup|k>>,<frac|r+1|2<rsup|k>>|[>>. As
+    <math|k\<leqslant\>l> we have <math|0\<leqslant\>l-k=n>. Next
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|J>|<cell|=>|<cell|<around*|[|<frac|r|2<rsup|k>>,<frac|r+1|2<rsup|k>>|[>>>|<row|<cell|>|<cell|=>|<cell|<around*|[|<frac|r|2<rsup|k>>\<cdot\><frac|2<rsup|l-k>|2<rsup|l-k>>,<frac|r+1|2<rsup|k>>\<cdot\><frac|2<rsup|l-k>|2<rsup|l-k>>|[>>>|<row|<cell|>|<cell|=>|<cell|<around*|[|<frac|r\<cdot\>2<rsup|l-k>|2<rsup|l>>,<frac|r\<cdot\>2<rsup|l-k>+2<rsup|l-k>|2<rsup|l>>|[>>>|<row|<cell|>|<cell|=>|<cell|<around*|[|<frac|r\<cdot\>2<rsup|n>|2<rsup|l>>,<frac|r\<cdot\>2<rsup|n>+2<rsup|n>|2<rsup|l>>|[><eq-number><label|eq
+      18.39.022>>>>>
+    </eqnarray*>
+
+    Assume that <math|I<big|cap>J\<neq\>\<emptyset\>> so that
+    <math|\<exists\>x\<in\>I<big|cap>J> giving\ 
+
+    <\equation>
+      <label|eq 18.40.022><frac|q|2<rsup|l>>\<leqslant\>x\<less\><frac|q+1|2<rsup|l>>\<wedge\><frac|r\<cdot\>2<rsup|n>|2<rsup|l>>\<leqslant\>x\<less\><frac|r\<cdot\>2<rsup|n>+2<rsup|n>|2<rsup|l>>
+    </equation>
+
+    If now <math|<frac|q+1|2<rsup|l>>\<leqslant\><frac|r\<cdot\>2<rsup|n>|2<rsup|l>>>
+    then <math|x\<less\><frac|q+1|2<rsup|l>>\<leqslant\><frac|r\<cdot\>2<rsup|n>|2<rsup|l>>\<leqslant\>x>
+    giving the contradiction <math|x\<less\>x> so we must have\ 
+
+    <\equation>
+      <label|eq 18.41.022><frac|r\<cdot\>2<rsup|n>|2<rsup|l>>\<less\><frac|q+1|2<rsup|l>>
+    </equation>
+
+    Further if <math|<frac|r\<cdot\>2<rsup|<rsup|n>>+2<rsup|n>|2<rsup|l>>\<leqslant\><frac|q|2<rsup|l>>>
+    then <math|x\<less\><frac|r\<cdot\>2<rsup|n>+2<rsup|n>|2<rsup|l>>\<leqslant\><frac|q|2<rsup|l>>\<leqslant\>x>
+    giving the contradiction <math|x\<less\>x> again so we must have that\ 
+
+    <\equation>
+      <label|eq 18.42.022><frac|q|2<rsup|l>>\<less\><frac|r\<cdot\>2<rsup|n>+2<rsup|n>|2<rsup|l>>
+    </equation>
+
+    Multiplying <reference|eq 18.41.022> and <reference|eq 18.42.022> by
+    <math|2<rsup|l>> gives <math|r\<cdot\>2<rsup|n>\<less\>q+1\<wedge\>q\<less\>r\<cdot\>2<rsup|n>+2<rsup|n>>.
+    As <math|r\<cdot\>2<rsup|n>,q+1,r\<cdot\>2<rsup|n>+2<rsup|n>\<in\>\<bbb-Z\>>
+    we have by [theorem: <reference|complex x\<less\>y=\<gtr\>x+1\<less\>=y>]
+    that <math|r\<cdot\>2<rsup|n>+1\<leqslant\>q+1\<wedge\>q+1\<leqslant\>r\<cdot\>2<rsup|n>+2<rsup|n>\<Rightarrow\>r\<cdot\>2<rsup|n>\<leqslant\>q\<wedge\>q+1\<leqslant\>r\<cdot\>2<rsup|n>+2<rsup|n>>.
+    Dividing by <math|2<rsup|l>> gives:
+
+    <\equation>
+      <label|eq 18.43.022><frac|r\<cdot\>2<rsup|n>|2<rsup|l>>\<leqslant\><frac|q|2<rsup|l>>\<wedge\><frac|q+1|2<rsup|l>>\<leqslant\><frac|r\<cdot\>2<rsup|n>+2<rsup|n>|2<rsup|l>>
+    </equation>
+
+    Next if <math|x\<in\>I<big|cap>J> then
+    <math|<frac|q|2<rsup|l>>\<leqslant\>x\<less\><frac|q+1|2<rsup|l>>\<Rightarrowlim\><rsub|<text|<reference|eq
+    18.43.022>>><frac|r\<cdot\>2<rsup|n>|2<rsup|l>>\<leqslant\>x\<less\><frac|r\<cdot\>2<rsup|n>+2<rsup|n>|2<rsup|l>>>
+    proving using <reference|eq 18.39.022> that <math|x\<in\>J>. Hence we
+    have\ 
+
+    <\equation*>
+      <text|If >I<big|cap>J\<neq\>\<emptyset\><text| then >I\<subseteq\>J
+    </equation*>
+
+    Finally if <math|I<big|cap>J=\<emptyset\>> then if <math|I\<subseteq\>J>
+    we have <math|\<emptyset\>=I<big|cap>J=I> a contradiction as
+    <math|<frac|q|2<rsup|l>>\<in\>I>. Hence we have either
+    <math|I<big|cap>J=\<emptyset\>> or <math|I\<subseteq\>J> but not both.
+  </proof>
+
+  <\theorem>
+    <label|measure Dyadic cubes properties>Let <math|n\<in\>\<bbb-N\>> then
+    we have\ 
+
+    <\enumerate>
+      <item><math|\<forall\>m\<in\>\<bbb-N\><rsub|0>> and
+      <math|\<forall\>R,Q\<in\>\<cal-D\><rsup|n><rsub|m>> with
+      <math|R\<neq\>Q> we have <math|R<big|cap>Q=\<varnothing\>>
+
+      <item>Let <math|k,l\<in\>\<bbb-N\><rsub|0>> with <math|k\<leqslant\>l>
+      then if <math|R\<in\>\<cal-D\><rsup|n><rsub|l>> and
+      <math|R\<in\>\<cal-D\><rsup|n><rsub|k>> we have that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|R<big|cap>Q\<neq\>\<varnothing\>>|<cell|\<Rightarrow\>>|<cell|R\<subseteq\>Q>>|<row|<cell|R<big|cap>Q=\<varnothing\>>|<cell|\<Rightarrow\>>|<cell|R\<nsubseteq\>Q>>>>
+      </eqnarray*>
+
+      <item><math|\<forall\>m\<in\>\<bbb-N\><rsub|0>> we have that
+      <math|\<bbb-R\><rsup|n>=<big|sqcup><rsub|R\<in\>\<cal-D\><rsup|n><rsub|m>>R>
+      [here <math|<big|sqcup><rsub|R\<in\>\<cal-D\><rsup|n><rsub|m>>R> is a
+      disjoint union because of (1)].
+
+      <item><math|\<forall\>m\<in\>\<bbb-N\><rsub|0>> and
+      <math|\<forall\>R\<in\>\<cal-D\><rsup|n><rsub|m>> we have that
+      <math|v<rsup|n><around*|(|R|)>=<frac|1|2<rsup|n\<cdot\>m>>\<less\>1>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|m\<in\>\<bbb-N\><rsub|0>> and
+      <math|R,Q\<in\>\<cal-D\><rsup|n><rsub|m>> with <math|R\<neq\>Q>. Then
+      there exist <math|r,z\<in\>\<bbb-Z\><rsup|n>> such that
+
+      <\equation*>
+        R=<around*|[|<frac|r|2<rsup|m>>,<frac|r+1|2<rsup|m>>|[>=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|<frac|r<rsub|i>|2<rsup|m>>,<frac|r<rsub|i>|2<rsup|m>>|[><text|
+        and >Q=<around*|[|<frac|z|2<rsup|m>>,<frac|z+1|2<rsup|m>>|[>=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|<frac|z<rsub|i>|2<rsup|m>>,<frac|z<rsub|i>+1|2<rsup|m>>|[>
+      </equation*>
+
+      As <math|R\<neq\>Q> there exist a <math|i\<in\><around*|{|1,\<ldots\>,n|}>>
+      such that <math|<around*|[|<frac|r<rsub|i>|2<rsup|m>>,<frac|r<rsub|i>+1|2<rsup|m>>|[>\<neq\><around*|[|<frac|z<rsub|i>|2<rsup|m>>,<frac|z<rsub|i>+1|2<rsup|m>>|[>>,
+      hence we must have that <math|r<rsub|i>\<neq\>z<rsub|i>>. We can always
+      assume that <math|r<rsub|i>\<less\>z<rsub|i>> [if not exchange <math|R>
+      and <math|Q>] so that <math|r<rsub|i>+1\<leqslant\>z<rsub|i>> [as
+      <math|r<rsub|i>,z<rsub|i>\<in\>\<bbb-Z\>> we can use \ [theorem:
+      <reference|complex x\<less\>y=\<gtr\>x+1\<less\>=y>]]. Assume that
+      <math|x\<in\><around*|[|<frac|r<rsub|i>|2<rsup|m>>,<frac|r<rsub|i>+1|2<rsup|m>>|[><big|cap><around*|[|<frac|z<rsub|i>|2<rsup|m>>,<frac|z<rsub|i>+1|2<rsup|m>>|[>>
+      then <math|<frac|r<rsub|i>|2<rsup|m>>\<leqslant\>x\<less\><frac|r<rsub|i>+1|2<rsup|m>>\<leqslant\><frac|z<rsub|i>|2<rsup|m>>\<leqslant\>x\<less\><frac|z<rsub|i>+1|2<rsup|m>>>
+      leading to the contradiction <math|x\<less\>x> hence we must have that
+      <math|<around*|[|<frac|r<rsub|i>|2<rsup|m>>,<frac|r<rsub|i>+1|2<rsup|m>>|[><big|cap><around*|[|<frac|z<rsub|i>|2<rsup|m>>,<frac|z<rsub|i>+1|2<rsup|m>>|[>=\<varnothing\>>.
+      Using [theorem: <reference|choice product sets empty condition>] it
+      follows that <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|<frac|r<rsub|i>|2<rsup|m>>,<frac|r<rsub|i>|2<rsup|m>>|[><big|cap><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|<frac|z<rsub|i>|2<rsup|m>>,<frac|z<rsub|i>+1|2<rsup|m>>|[>>
+      or\ 
+
+      <\equation*>
+        R<big|cap>Q=\<varnothing\>
+      </equation*>
+
+      <item>Let <math|k,l\<in\>\<bbb-N\><rsub|0>> with <math|k\<leqslant\>l>
+      and <math|R\<in\>\<cal-D\><rsup|n><rsub|l>>,
+      <math|Q\<in\>\<cal-D\><rsup|n><rsub|k>> then there exists
+      <math|r,q\<in\>\<bbb-Z\><rsup|n>> with
+      <math|R=<around*|[|<frac|r|2<rsup|m>>,<frac|r+1|2<rsup|m>>|[>>,
+      <math|Q=<around*|[|<frac|z|2<rsup|m>>,<frac|z+1|2<rsup|m>>|[>>. Assume
+      that <math|R\<nsubseteq\>Q> then we have either\ 
+
+      <\description>
+        <item*|<math|\<exists\>i\<in\><around*|{|1,\<ldots\>,n|}>\<vDash\><around*|[|<frac|r<rsub|i>|2<rsup|m>>,<frac|r<rsub|i>+1|2<rsup|m>>|[><big|cap><around*|[|<frac|z<rsub|i>|2<rsup|m>>,<frac|z<rsub|i>+1|2<rsup|m>>|[>=\<varnothing\>>>Then
+        using [theorem: <reference|choice product sets empty condition>] we
+        have <math|R<big|cap>Q=\<varnothing\>>
+
+        <item*|<math|\<exists\>i\<in\><around*|{|1,\<ldots\>,n|}>\<vDash\><around*|[|<frac|r<rsub|i>|2<rsup|m>>,<frac|r<rsub|i>+1|2<rsup|m>>|[><big|cap><around*|[|<frac|z<rsub|i>|2<rsup|m>>,<frac|z<rsub|i>+1|2<rsup|m>>|[>\<neq\>\<varnothing\>>>Then
+        using [lemma: <reference|lemma 20.136.200>] we have
+        <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> that
+        <math|<around*|[|<frac|r<rsub|i>|2<rsup|m>>,<frac|r<rsub|i>+1|2<rsup|m>>|[>\<subseteq\><around*|[|<frac|z<rsub|i>|2<rsup|m>>,<frac|z<rsub|i>+1|2<rsup|m>>|[>>.
+        Applying [theorem: <reference|choice product inclusion (1)>] proves
+        that <math|R\<subseteq\>Q> contradicting <math|R\<nsubseteq\>Q>. So
+        this case never applies.
+      </description>
+
+      So we conclude that if <math|R\<nsubseteq\>\<bbb-Q\>> then
+      <math|R<big|cap>Q=\<varnothing\>> or using contraposition we have\ 
+
+      <\equation*>
+        <text|If <math|R<big|cap>Q\<neq\>\<varnothing\><text| then
+        <math|R\<subseteq\>Q>>>>
+      </equation*>
+
+      On the other hand if <math|R<big|cap>Q=\<varnothing\>> and
+      <math|R\<subseteq\>Q> then <math|\<varnothing\>\<neq\>R=R<big|cap>Q=\<varnothing\>>
+      s controdiction so we have\ 
+
+      <\equation*>
+        <text|If >R<big|cap>Q=\<varnothing\><text| then >R\<nsubseteq\>Q
+      </equation*>
+
+      <item>Let <math|m\<in\>\<bbb-N\>> and <math|x\<in\>\<bbb-R\><rsup|n>>
+      then <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have
+      <math|x<rsub|i>\<in\>\<bbb-R\>>. Using [theorem: <reference|complex
+      Archimedean property consequence (1)>] there exist a
+      <math|z<rsub|i>\<in\>\<bbb-Z\>> such that
+      <math|z<rsub|i>\<leqslant\>x<rsub|i>\<cdot\>2<rsup|m>\<less\>z<rsub|i>+1>,
+      hence <math|<frac|z<rsub|i>|2<rsup|m>>\<leqslant\>x<rsub|i>\<less\><frac|z<rsub|i>+1|2<rsup|m>>>.
+      So if we take <math|z=<around*|(|z<rsub|1>,\<ldots\>,z<rsub|m>|)>> then
+      <math|x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|<frac|z<rsub|i>|2<rsup|m>>,<frac|z<rsub|i>+1|2<rsup|m>>|[>=<around*|[|<frac|z|2<rsup|m>>,<frac|z+1|2<rsup|m>>|[>\<in\>\<cal-D\><rsup|n><rsub|m>>
+      proving that <math|\<bbb-R\><rsup|n>\<subseteq\><big|cup><rsub|R\<in\>\<cal-D\><rsup|n><rsub|m>>R>.
+      As <math|\<forall\>R\<in\>\<cal-D\><rsup|n><rsub|m>>
+      <math|R\<subseteq\>R<rsup|n>> we have proved that\ 
+
+      <\equation*>
+        R<rsup|n>=<big|cup><rsub|R\<in\>\<cal-D\><rsup|n><rsub|m>>R
+      </equation*>
+
+      Finally by (1) we have that <math|\<forall\>R,R<rprime|'>\<in\>\<cal-D\><rsup|n><rsub|m>>
+      with <math|R\<neq\>R<rprime|'>> we have
+      <math|R<big|cap>R<rprime|'>=\<varnothing\>> so that\ 
+
+      <\equation*>
+        R<rsup|n>=<big|sqcup><rsub|R\<in\>\<cal-D\><rsup|n><rsub|m>>R
+      </equation*>
+
+      <item>If <math|R\<in\>\<cal-R\><rsup|n><rsub|m>> then
+      <math|\<exists\>z\<in\>\<bbb-Z\><rsup|n>> such that
+      <math|R=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|<frac|z<rsub|i>|2<rsup|n>>,<frac|z<rsub|i>+1|2<rsup|n>>|[>>
+      so that\ 
+
+      <\equation*>
+        v<rsup|n><around*|(|R|)>=<big|prod><rsub|i=1><rsup|n><around*|(|<frac|z<rsub|i>+1-z<rsub|i>|2<rsup|m>>|)>=<big|prod><rsub|i=1><rsup|n><frac|1|2<rsup|m>>=<frac|1|2<rsup|n\<cdot\>m>>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  One of the reasons that we introduce the Dyadic cubes as a subset of
+  <math|\<cal-R\><rsup|n>> is that <math|\<cal-D\><rsup|n><rsub|m>> is a
+  denumerable set in contrast with <math|\<cal-R\><rsup|n>> which we need
+  giving the definition of a <math|\<sigma\>>-algebra. This is proved in the
+  next lemma.
+
+  <\lemma>
+    <label|lemma 20.138.200>Let <math|n\<in\>\<bbb-N\>> then\ 
+
+    <\enumerate>
+      <item><math|\<forall\>m\<in\>\<bbb-N\><rsub|0>>
+      <math|\<cal-D\><rsup|n><rsub|m>> is denumerable.
+
+      <item><math|\<cal-D\><rsup|n>> is denumerable
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    \;
+
+    <\enumerate>
+      <item>Let <math|m\<in\>\<bbb-N\><rsub|0>> then as <math|\<bbb-Z\>> is
+      denumerable [see theorem: <reference|complex embedding>] we have by
+      [theorem: <reference|denumerable product of finite family of
+      denumerable sets is denumerable (1)>] that <math|\<bbb-Z\><rsup|n>> is
+      also denumerable. Define now <math|\<beta\>:\<bbb-Z\><rsup|n>\<rightarrow\>\<cal-D\><rsup|n><rsub|m>>
+      by <math|\<beta\><around*|(|z|)>=<around*|[|<frac|z|2<rsup|m>>,<frac|z+1|2<rsup|m>>|[>>
+      then <math|\<beta\>> is a bijection.
+
+      <\description>
+        <item*|injectivity>If <math|\<beta\><around*|(|z|)>-\<beta\><around*|(|w|)>>
+        then <math|<around*|[|<frac|z|2<rsup|m>>,<frac|z+1|2<rsup|m>>|[>=<around*|[|<frac|w|2<rsup|m>>,<frac|w+1|2<rsup|m>>|[>>.
+        Using the fact that a Dyadic cube is not empty together with [lemma:
+        <reference|lemma 20.132.200>] gives
+        <math|<frac|z|2<rsup|m>>=<frac|w|2<rsup|m>>> proving that <math|z=w>.
+
+        <item*|surjectivity>This follows from the definition of
+        <math|\<cal-D\><rsup|n><rsub|m>>
+      </description>
+
+      So <math|\<cal-D\><rsup|n><rsub|m>> is denumerable.
+
+      <item>Using [theorem: <reference|denumerable union of a denumerable
+      family of denumerable sets is denumerable>] it follows that
+      <math|\<cal-D\><rsup|n>=<big|cup><rsub|m\<in\>\<bbb-N\>>\<cal-D\><rsup|n><rsub|m>>
+      is denumerable
+    </enumerate>
+  </proof>
+
+  We are now finally ready to prove that every non empty open set on
+  <math|\<bbb-R\><rsup|n>> can be written as a denumerable union of pairwise
+  disjoint Dyadic cubes.
+
+  <\lemma>
+    <label|lemma 20.139.200>Let <math|n\<in\>\<bbb-N\>>,
+    <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>> the canonical
+    topology on <math|\<bbb-R\>> [see example: <reference|normed maximum norm
+    R^n>] then if <math|\<varnothing\>\<neq\>U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>>
+    there exist a <with|font-series|bold|pairwise disjoint family
+    ><math|<around*|{|D<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-D\><rsup|n>>
+    such that <math|U=<big|sqcup><rsub|i\<in\>\<bbb-N\>>D<rsub|i>>.
+  </lemma>
+
+  <\proof>
+    Let <math|\<varnothing\>\<neq\>U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>>
+    be a non empty open set in <math|\<bbb-R\><rsup|n>>. Given
+    <math|m\<in\>\<bbb-N\><rsub|0>> define\ 
+
+    <\equation>
+      <label|eq 20.93.200>\<cal-S\><rsub|m>=<around*|{|D\<in\>\<cal-D\><rsup|n><rsub|m>\|D\<subseteq\>U|}>\<subseteq\>\<cal-D\><rsup|n><rsub|m>
+    </equation>
+
+    and recursively\ 
+
+    <\equation>
+      <label|eq 20.94.200>\<cal-T\><rsub|m>=<choice|<tformat|<table|<row|<cell|S<rsub|0><text|
+      if >m=0>>|<row|<cell|<around*|{|D\<in\>\<cal-S\><rsub|m>\|\<forall\>i\<in\><around*|{|0,\<ldots\>,m-1|}><text|
+      we have >\<forall\>R\<in\>\<cal-T\><rsub|i><text| that
+      >R<big|cap>D=\<varnothing\>|}><text| if >m\<in\>\<bbb-N\>>>>>>
+    </equation>
+
+    Using the above definitions we have the following inclusions
+
+    <\equation>
+      <label|eq 20.95.200>\<forall\>m\<in\>\<bbb-N\><rsub|0><text| we have
+      >\<cal-T\><rsub|m>\<subseteq\>\<cal-S\><rsub|m>\<subseteq\>\<cal-D\><rsup|n><rsub|m>\<subseteq\>\<cal-D\><rsup|n>
+    </equation>
+
+    Further we define
+
+    <\equation>
+      <label|eq 20.96.200>\<cal-T\>=<big|cup><rsub|m\<in\>\<bbb-N\><rsub|0>>\<cal-T\><rsub|m>
+    </equation>
+
+    If <math|D\<in\>\<cal-D\>> then there exist a
+    <math|i\<in\>\<bbb-N\><rsub|0>> such that
+    <math|D\<in\>\<cal-T\><rsub|i>\<subseteq\>\<cal-S\><rsub|i>> proving by
+    [eq: <reference|eq 20.93.200>] that <math|D\<subseteq\>U>, hence we have\ 
+
+    <\equation>
+      <label|eq 20.97.200><big|cup><rsub|D\<in\>\<cal-T\>>D\<subseteq\>U
+    </equation>
+
+    Proving the opposite inclusion is a little more difficult. Let
+    <math|x\<in\>U> then there exist a <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+    such that <math|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>><around*|(|x,\<varepsilon\>|)>\<subseteq\>U>.
+    Using the Archimedean property of the real numbers [see theorem:
+    <reference|complex Archimedean property consequence (1)>] there exist
+    <math|n<rsub|\<varepsilon\>>\<in\>\<bbb-N\>> such that
+
+    <\equation>
+      <label|eq 20.98.200>0\<less\><frac|1|n<rsub|x>>\<less\>\<varepsilon\>
+    </equation>
+
+    Using [theorem: <reference|measure Dyadic cubes properties> (3)] there
+    exist a <math|D<rsub|x>\<in\>\<cal-D\><rsup|n><rsub|n<rsub|x>>> such that
+
+    <\equation*>
+      D<rsub|x>=<around*|[|<frac|z|2<rsup|n<rsub|x>>>,<frac|z+1|2<rsup|n<rsub|x>>>|[>=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|<frac|z<rsub|i>|2<rsup|n<rsub|x>>>,<frac|z<rsub|i>+1|2<rsup|n<rsub|x>>>|[>\<in\>\<cal-D\><rsup|n><rsub|n<rsub|x>><text|
+      such that >x\<in\>D<rsub|x>
+    </equation*>
+
+    from which it follows that\ 
+
+    <\equation>
+      <label|eq 20.99.200>\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      we have ><frac|z<rsub|i>|2<rsup|n<rsub|x>>>\<leqslant\>x<rsub|i>\<less\><frac|z<rsub|i>+1|2<rsup|n<rsub|x>>>
+    </equation>
+
+    Let <math|y\<in\>D<rsub|x>> then <math|y\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|<frac|z<rsub|i>|2<rsup|n<rsub|x>>>,<frac|z<rsub|i>+1|2<rsup|n<rsub|x>>>|[>>
+    so that
+
+    <\equation>
+      <label|eq 20.100.200>\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      we have ><frac|z<rsub|i>|2<rsup|n<rsub|x>>>\<leqslant\>y<rsub|i>\<less\><frac|z<rsub|i>+1|2<rsup|n<rsub|x>>>
+    </equation>
+
+    Hence we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|y<rsub|i>-x<rsub|i>>|<cell|<below|\<less\>|<text|[eq:
+      <reference|eq 20.100.200>>>>|<cell|<frac|z<rsub|i>+1|2<rsup|n<rsub|x>>>-x<rsub|i>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[eq:
+      <reference|eq 20.99.200>]>>>|<cell|<frac|z<rsub|i>+1|2<rsup|n<rsub|x>>>-<frac|z<rsub|i>|2<rsup|n<rsub|x>>>>>|<row|<cell|>|<cell|=>|<cell|<frac|1|2<rsup|n<rsub|x>>>>>|<row|<cell|>|<cell|<below|\<less\>|<text|[eq:
+      <reference|eq 20.98.200>>>>|<cell|\<varepsilon\>>>|<row|<cell|x<rsub|i>-y<rsub|i>>|<cell|<below|\<less\>|<text|[eq:
+      <reference|eq 20.99.200>]>>>|<cell|<frac|z<rsub|i>+1|2<rsup|n<rsub|x>>>-y<rsub|i>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[eq:
+      <reference|eq 20.100.200>>>>|<cell|<frac|z<rsub|i>+1|2<rsup|n<rsub|x>>>-<frac|z<rsub|i>|2<rsup|n<rsub|x>>>>>|<row|<cell|>|<cell|<below|\<less\>|<text|[eq:
+      <reference|eq 20.98.200>>>>|<cell|\<varepsilon\>>>>>
+    </eqnarray*>
+
+    which proves that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|<around*|\||y<rsub|i>-x<rsub|i>|\|>\<less\>\<varepsilon\>>. Hence
+    <math|<around*|\<\|\|\>|y-x|\<\|\|\>><rsub|n>=max<around*|(|<around*|{|<around*|\||y<rsub|i>-x<rsub|i>|\|>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>\<less\>\<varepsilon\>>
+    so that <math|y\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>><around*|(|x,\<varepsilon\>|)>>.
+    In conclusion\ 
+
+    <\equation*>
+      x\<in\>D<rsub|x>\<subseteq\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>><around*|(|x,\<varepsilon\>|)>\<subseteq\>U
+    </equation*>
+
+    As <math|D<rsub|x>\<in\>\<cal-D\><rsup|n><rsub|n<rsub|x>>> it follows
+    from the above and [eq: <reference|eq 20.93.200>] that
+
+    <\equation>
+      <label|eq 20.101.200>x\<in\>D<rsub|x>\<in\>S<rsub|n<rsub|x>>
+    </equation>
+
+    Define now\ 
+
+    <\equation>
+      <label|eq 20.102.200>\<cal-K\><rsub|x>=<around*|{|i\<in\><around*|{|0,\<ldots\>,n<rsub|x>|}>\|\<exists\>D\<in\>\<cal-S\><rsub|i>\|x\<in\>D|}>\<subseteq\><around*|{|0,\<ldots\>,n<rsub|x><rsub|>|}>
+    </equation>
+
+    Then by [eq: <reference|eq 20.101.200>]
+    <math|n<rsub|x>\<in\>\<cal-K\><rsub|x>> so that
+    <math|\<cal-K\><rsub|x>\<neq\>\<varnothing\>>, as further
+    <math|\<cal-K\><rsub|x>> is finite it follows that\ 
+
+    <\equation>
+      <label|eq 20.103.200>m<rsub|x>=min<around*|(|\<cal-K\><rsub|x>|)><text|
+      exist>
+    </equation>
+
+    For <math|m<rsub|x>\<in\>\<cal-K\><rsub|x>\<subseteq\><around*|{|0,\<ldots\>,n<rsub|x>|}>>
+    we have now two possible cases:\ 
+
+    <\description>
+      <item*|<math|m<rsub|x>=0>>then <math|\<exists\>D\<in\>S<rsub|0>> such
+      that <math|x\<in\>D>. As by [eqs: <reference|eq 20.94.200>,
+      <reference|eq 20.96.200>] <math|S<rsub|0>=\<cal-T\><rsub|0>> and
+      <math|\<cal-T\><rsub|0>\<in\>\<cal-T\>> we that
+      <math|x\<in\>D\<in\>\<cal-T\>>. In other words
+      <math|x\<in\><big|cup><rsub|D\<in\>\<cal-T\>>D>.
+
+      <item*|<math|m<rsub|x>\<in\><around*|{|1,\<ldots\>,n<rsub|x>|}>>>Then
+      <math|\<exists\>D\<in\>\<cal-S\><rsub|m<rsub|x>><below|\<subseteq\>|<text|[eq:
+      <reference|eq 20.93.200>]>>\<cal-D\><rsup|n><rsub|m<rsub|x>>> such that
+      <math|x\<in\>D> and <math|\<forall\>i\<in\><around*|{|0,\<ldots\>,m<rsub|x>-1|}>>
+      we have that <math|\<forall\>R\<in\>\<cal-S\><rsub|i>> that
+      <math|x\<nin\>R>. Let <math|i\<in\><around*|{|0,\<ldots\>,m<rsub|x>-1|}>>
+      and assume that <math|\<exists\>R\<in\>\<cal-S\><rsub|i>\<subseteq\>\<cal-D\><rsup|n><rsub|i>>
+      such that <math|R<big|cap>D\<neq\>\<varnothing\>> then by [theorem:
+      <reference|measure Dyadic cubes properties> (2)] and the fact that
+      <math|i\<leqslant\>m<rsub|x>> it follows that <math|D\<subseteq\>R>, as
+      <math|x\<in\>D> it follows that <math|x\<in\>R> contradicing
+      <math|x\<nin\>R> hence the assumption is wrong and we must have that
+      <math|\<forall\>R\<in\>\<cal-S\><rsub|i>> we have that
+      <math|R<big|cap>D=\<varnothing\>>. As this is true
+      <math|\<forall\>i\<in\><around*|{|0,\<ldots\>,m<rsub|x>-1|}>> it
+      follows from [definition: <reference|eq 20.94.200>] that
+      <math|D\<in\>\<cal-T\><rsub|m<rsub|x>><below|\<subseteq\>|<text|[eq:
+      <reference|eq 20.96.200>]>>\<cal-T\>>. In other words we have
+      <math|x\<in\>D\<in\>\<cal-T\>> which proves that
+      <math|x\<in\><big|cup><rsub|D\<in\>\<cal-T\>>D>.
+    </description>
+
+    So in all cases we have that <math|x\<in\><big|cup><rsub|D\<in\>\<cal-T\>>D>
+    which as <math|x\<in\>U> was chosen arbitrary proves that
+    <math|<rigid|U\<subseteq\><big|cup><rsub|D\<in\>\<cal-T\>>D>>. Combining
+    this with [eq: <reference|eq 20.96.200>] proves that\ 
+
+    <\equation>
+      <label|eq 20.104.200>U=<big|cup><rsub|D\<in\>\<cal-T\>>D
+    </equation>
+
+    Next we must prove that <math|U> is a pairwise disjoint union. Let
+    <math|D,E\<in\>\<cal-T\>=<big|cup><rsub|m\<in\>\<bbb-N\><rsub|0>>\<cal-T\><rsub|m>>
+    with <math|D\<neq\>E> then there exist <math|k,l\<in\>\<bbb-N\><rsub|0>>
+    such that <math|D\<in\>\<cal-T\><rsub|k>\<subseteq\>\<cal-D\><rsup|n><rsub|k>>
+    and <math|E\<in\>\<cal-T\><rsub|l>\<subseteq\>\<cal-D\><rsup|n><rsub|l>>.
+    For <math|k,l> we have the following possible cases:
+
+    <\description>
+      <item*|<math|k=l>>Then using [theorem: <reference|measure Dyadic cubes
+      properties> (1)] it follows that <math|D<big|cap>E=\<varnothing\>>.
+
+      <item*|<math|k\<less\>l>>Then using [eq: <reference|eq 20.94.200>] that
+      <math|D<big|cap>E=\<varnothing\>>.
+
+      <item*|<math|l\<less\>k>>Then using [eq: <reference|eq 20.94.200>] that
+      <math|D<big|cap>E=\<varnothing\>>.
+    </description>
+
+    combining the above with [eq: <reference|eq 20.104.200>] gives then\ 
+
+    <\equation>
+      <label|eq 20.105.200>\<forall\>D,E\<in\>\<cal-T\><text| with
+      >D\<neq\>E<text| we have >D<big|cap>E=\<varnothing\>
+    </equation>
+
+    Next we prove that <math|\<cal-T\>> is denumerable, first we prove that
+    <math|\<cal-T\>> is not finite (hence by definition infinite). Assume
+    that <math|\<cal-T\>> is finite. As <math|U\<neq\>\<varnothing\>> we must
+    have that <math|\<cal-T\>\<neq\>\<varnothing\>> [because
+    <math|<big|cup><rsub|D\<in\>\<varnothing\>>D=\<varnothing\>>] so that
+    <math|m=min<around*|(|<around*|{|<around*|(|begin<around*|(|D|)>|)><rsub|1>\|D\<in\>\<cal-T\>|}>|)>>
+    exist. Hence there exist a <math|R=<around*|[|a,b|[>\<in\>\<cal-T\>> such
+    that <math|a<rsub|1>=m>. As <math|a\<in\><around*|[|a,b|[>=R> and by [eq:
+    <reference|eq 20.105.200>] <math|R\<subseteq\>U> it follows that
+    <math|a\<in\>U>. Hence there exist a <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+    such that <math|a\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>><around*|(|a,\<varepsilon\>|)>\<subseteq\>U>.
+    Define <math|e> by <math|<around*|(|e|)><rsub|i>=<choice|<tformat|<table|<row|<cell|1<text|
+    i=1>>>|<row|<cell|0<text| if >i\<in\><around*|{|2,\<ldots\>,n|}>>>>>>>
+    then for <math|i\<in\><around*|{|1,\<ldots\>,n|}>> we have
+
+    <\equation*>
+      <around*|\||<around*|(|a-<around*|(|a-<frac|\<varepsilon\>|2>\<cdot\>e|)>|)><rsub|i>|\|>=<around*|\||<frac|\<varepsilon\>|2>\<cdot\>e<rsub|i>|\|>=<around*|\||<frac|\<varepsilon\>|2>|\|>\<cdot\><around*|\||<choice|<tformat|<table|<row|<cell|1<text|
+      if >i=1>>|<row|<cell|0<text| if >i\<in\><around*|{|2,\<ldots\>,n|}>>>>>>|\|>\<leqslant\><frac|\<varepsilon\>|2>\<less\>\<varepsilon\>
+    </equation*>
+
+    so that <math|<around*|\<\|\|\>|a-<around*|(|a-<frac|\<varepsilon\>|2>\<cdot\>e|)>|\<\|\|\>><rsub|n>\<less\>\<varepsilon\>>.
+    Hence <math|a-<frac|\<varepsilon\>|2>\<cdot\>e\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>><around*|(|a,\<varepsilon\>|)>\<subseteq\>U>
+    then by [eq: <reference|eq 20.105.200>] there exist a
+    <math|D<rprime|'>\<in\>\<cal-T\>> such that
+    <math|a-<frac|\<varepsilon\>|2>\<cdot\>e\<in\>D<rprime|'>>. As
+    <math|D<rprime|'>=<around*|[|begin<around*|(|D<rprime|'>|)>,end<around*|(|D<rprime|'>|)>|[>>
+    it follows that <math|begin<around*|(|D<rprime|'>|)>\<leqslant\>a-<frac|\<varepsilon\>|2>\<cdot\>e>
+    so that <math|<around*|(|begin<around*|(|D<rprime|'>|)>|)><rsub|1>\<leqslant\><around*|(|a-<frac|\<varepsilon\>|2>\<cdot\>e|)><rsub|1>=a<rsub|1>-<frac|\<varepsilon\>|2>\<cdot\>1=m-<frac|\<varepsilon\>|2>>.
+    As <math|m=min<around*|(|<around*|{|<around*|(|begin<around*|(|D|)>|)><rsub|1>\|D\<in\>\<cal-T\>|}>|)>>
+    <math|<rigid|m\<leqslant\><around*|(|begin<around*|(|D<rprime|'>|)>|)><rsub|1>>>
+    which leads to the contradiction <math|m\<leqslant\>m-<frac|\<varepsilon\>|2>\<less\>m>,
+    so the assumption is wrong and we must have that\ 
+
+    <\equation>
+      <label|eq 20.106.200>\<cal-T\><text| is not finite or
+      <math|\<cal-T\><text| is infinite>>>
+    </equation>
+
+    As <math|\<cal-D\><rsup|n>> is denumerable [see theorem: <reference|lemma
+    20.138.200>] and <math|\<cal-T\><below|\<subseteq\>|<text|[eq:
+    <reference|eq 20.95.200>]>>\<cal-D\><rsup|n>> it follows from the above
+    and [theorem: <reference|denumerable every subset is finite
+    denumerable.>] that\ 
+
+    <\equation*>
+      \<cal-T\><text| is denumerable>
+    </equation*>
+
+    So there exist a bijection <math|\<beta\>:\<bbb-N\>\<rightarrow\>\<cal-T\>>.
+    define then <math|<around*|{|D<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-T\>\<subseteq\>\<cal-D\><rsup|n>>
+    by <math|D<rsub|i>=\<beta\><around*|(|i|)>> then we have\ 
+
+    <\equation*>
+      <big|cup><rsub|i\<in\>\<bbb-N\>>D<rsub|i>\<equallim\><rsub|<text|[theorem:
+      <reference|family union of family set and
+      surjections>]>><big|cup><rsub|D\<in\>\<cal-T\>>D=U
+    </equation*>
+
+    Further if <math|i,j\<in\>\<bbb-N\>> with <math|i\<neq\>j> then as
+    <math|\<beta\>> is a bijection, hence injective, it follows that
+    <math|D<rsub|i>\<neq\>D<rsub|j>>, so that using [eq: <reference|eq
+    20.105.200>] we have <math|D<rsub|i><big|cap>D<rsub|j>=\<varnothing\>>.
+    Hence\ 
+
+    <\equation*>
+      U=<big|sqcup><rsub|i\<in\>\<bbb-N\>>D<rsub|i>
+    </equation*>
+  </proof>
+
+  <\lemma>
+    <label|lemma 20.141.200>Let <math|n\<in\>\<bbb-N\>> and
+    <math|R\<in\>\<cal-R\><rsup|n>> with <math|R\<neq\>\<varnothing\>> then
+    there exist a sequence <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>>
+    of open sets such that <math|R=<big|cap><rsub|i\<in\>\<bbb-N\>>U<rsub|i>>
+  </lemma>
+
+  <\proof>
+    As <math|R\<in\>\<cal-R\><rsup|n>> there exists a
+    <math|a,b\<in\>\<bbb-R\><rsup|n>> with <math|a\<leqslant\>b> such that
+    <math|R=<around*|[|a,b|[>=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i>,b<rsub|i>|[>>.
+    Define then <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>> by
+    <math|U<rsub|i>=<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|]|a<rsub|j>-<frac|1|j>,b<rsub|j>|[>>.
+    As \ <math|<around*|]|a<rsub|j>-<frac|1|i>,b<rsub|j>|[>\<in\>\<cal-T\><rsub|<around*|\|||\|>>>
+    [see theorem: <reference|normed basis of T\|\|>] and
+    <math|T<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>> is the product
+    topology based on <math|\<cal-T\><rsub|<around*|\|||\|>>> [see
+    <reference|normed maximum norm R^n>] it follows that
+    <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>>.
+    Let <math|i\<in\>\<bbb-N\>> and <math|x\<in\>R> then we have
+    <math|\<forall\>j\<in\><around*|{|1,\<ldots\>,n|}>> that
+    <math|x<rsub|j>\<in\><around*|[|a<rsub|j>,b<rsub|j>|[>\<Rightarrow\>a<rsub|j>\<leqslant\>x<rsub|j>\<less\>b<rsub|j>\<Rightarrow\>a<rsub|j>-<frac|1|i>\<less\>a<rsub|j>\<leqslant\>x<rsub|j>\<less\>b<rsub|j>\<Rightarrow\>x<rsub|j>\<in\><around*|]|a<rsub|j>-<frac|1|i>,b<rsub|j>|[>>,
+    proving using [theorem: <reference|choice product inclusion (1)>] that
+    <math|R\<subseteq\>U<rsub|i>>. Hence we have\ 
+
+    <\equation>
+      <label|eq 20.107.200>R\<subseteq\><big|cap><rsub|i\<in\>\<bbb-N\>>U<rsub|i>
+    </equation>
+
+    For the opposite inequality let <math|x\<in\><big|cap><rsub|i\<in\>\<bbb-N\>>U<rsub|i>>
+    then <math|\<forall\>i\<in\>\<bbb-N\>> we have <math|x\<in\>U<rsub|i>> so
+    that <math|\<forall\>j\<in\><around*|{|1,\<ldots\>,n|}>> we have
+    <math|x<rsub|j>\<in\><around*|]|a<rsub|j>-<frac|1|i>,b<rsub|j>|[>\<Rightarrow\>a<rsub|j>-<frac|1|i>\<less\>x<rsub|j>\<less\>b<rsub|j>>.
+    Assume that <math|\<exists\>j\<in\><around*|{|1,\<ldots\>,n|}>> such that
+    <math|x<rsub|j>\<less\>a<rsub|j>> then using [theorem: <reference|complex
+    Archimedean property consequence (1)>] there exists a
+    <math|i\<in\>\<bbb-N\>> such that <math|x<rsub|j>\<less\>x<rsub|j>+<frac|1|i>\<less\>a<rsub|j>\<Rightarrow\>x<rsub|j>\<less\>a<rsub|j>-<frac|1|i>>
+    contradicting the fact that <math|a<rsub|j>-<frac|1|i>\<less\>x<rsub|j>>.
+    Hence <math|\<forall\>j\<in\><around*|{|1,\<ldots\>,n|}>> we have
+    <math|a<rsub|j>\<leqslant\>x<rsub|j>\<less\>b<rsub|j>> proving that
+    <math|x\<in\>R> so that <math|<big|cap><rsub|i\<in\>\<bbb-N\>>U<rsub|i>\<subseteq\>R>.
+    This together with [eq: <reference|eq 20.107.200>] proves
+
+    <\equation*>
+      R=<big|cap><rsub|i\<in\>\<bbb-N\>>U<rsub|i>
+    </equation*>
+  </proof>
+
+  We are ready now to prove a alternative definition for the Borel algebra on
+  <math|\<bbb-R\><rsup|n>>.
+
+  <\theorem>
+    <label|measure Borel algebra on R^n>Let <math|n\<in\>\<bbb-N\>> then we
+    have\ 
+
+    <\equation*>
+      \<sigma\><around*|[|<around*|{|C\<subseteq\>\<bbb-R\><rsup|n>\|C<text|
+      is close in >\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>|}>|]>=\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>=\<sigma\><around*|[|\<cal-R\><rsup|n>|]>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Using [theorem: <reference|measure Borel algebra and closure>] we have
+
+    <\equation*>
+      \<sigma\><around*|[|<around*|{|C\<subseteq\>\<bbb-R\><rsup|n>\|C<text|
+      is close in >\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>|}>|]>\<equallim\><rsub|<text|[theorem:
+      <reference|measure Borel algebra and
+      closure>]>>\<cal-B\><around*|[|\<bbb-R\><rsup|n>,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>|]>\<equallim\><rsub|def>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>
+    </equation*>
+
+    so we only have to prove that <math|\<cal-B\><around*|[|\<bbb-R\><rsup|n>,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>|]>=\<sigma\><around*|[|\<cal-R\><rsup|n>|]>>.
+    Let <math|U\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>>
+    then we have either:\ 
+
+    <\description>
+      <item*|<math|U=\<varnothing\>>>Then
+      <math|U=\<varnothing\>\<in\>\<sigma\><around*|[|\<cal-R\><rsup|n>|]>>.
+
+      <item*|<math|U\<neq\>\<varnothing\>>>Then using [lemma:
+      <reference|lemma 20.139.200>] there exist a sequence
+      <math|<around*|{|D<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-D\><rsup|n>\<subseteq\>\<cal-R\><rsup|n>>
+      such that <math|U=<big|cup><rsub|i\<in\>\<bbb-N\>>D<rsub|i>> which as
+      <math|\<sigma\><around*|[|\<cal-R\><rsup|n>|]>> is a
+      <math|\<sigma\>>-algebra proves that
+      <math|U\<in\>\<sigma\><around*|[|\<cal-R\><rsup|n>|]>>
+    </description>
+
+    Hence we have <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>\<subseteq\>\<sigma\><around*|[|\<cal-R\><rsup|n>|]>>
+    which by [theorem: <reference|measure generated sigma algebra>] gives
+
+    <\equation>
+      <label|eq 20.108.200>\<sigma\><around*|[|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>|]>\<subseteq\>\<sigma\><around*|[|\<cal-R\><rsup|n>|]>
+    </equation>
+
+    For the opposite inclusion let <math|R\<in\>\<cal-R\><rsup|n>> then by
+    [lemma: <reference|lemma 20.141.200>] there exist a
+    <math|<around*|{|U<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>>
+    such that <math|R=<big|cap><rsub|i\<in\>\<bbb-N\>>U<rsub|i>>. As
+    <math|\<sigma\><around*|[|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>|]>>
+    is a <math|\<sigma\>>-alebra we have by [theorem: <reference|measure
+    countable union is in sigma algebra>] that
+    <math|R\<in\>\<sigma\><around*|[|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>|]>>.
+    Hence <math|\<cal-R\><rsup|n>\<subseteq\>\<sigma\><around*|[|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>|]>>
+    which by [theorem: <reference|measure generated sigma algebra>] gives
+    <math|\<sigma\><around*|[|\<cal-R\><rsup|n>|]>\<subseteq\>\<sigma\><around*|[|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>|]>>.
+    Combining this with [eq: <reference|eq 20.108.200>] gives\ 
+
+    <\equation*>
+      \<sigma\><around*|[|\<cal-R\><rsup|n>|]>=\<sigma\><around*|[|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>|]>\<equallim\><rsub|def>\<cal-B\><around*|[|\<bbb-R\><rsup|n>,\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>|]>=\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>
+    </equation*>
+  </proof>
+
+  <subsection|Algebra properties>
+
   \;
 
   \;
@@ -10188,7 +11278,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|19>
-    <associate|page-first|1239>
+    <associate|page-first|1241>
     <associate|section-nr|1>
     <associate|subsection-nr|7>
   </collection>
@@ -10217,37 +11307,57 @@
     <associate|auto-23|<tuple|Borel algebra|?>>
     <associate|auto-24|<tuple|<with|mode|<quote|math>|\<cal-B\><around*|[|X,\<cal-T\>|]>>|?>>
     <associate|auto-25|<tuple|20.2.2|?>>
-    <associate|auto-26|<tuple|<with|mode|<quote|math>|\<cal-B\><around*|[|\<bbb-R\>|]>>|?>>
-    <associate|auto-27|<tuple|<with|mode|<quote|math>|\<cal-I\><rsub|<around*|[||]>>>|?>>
-    <associate|auto-28|<tuple|<with|mode|<quote|math>|\<cal-I\><rsub|<around*|[||[>>>|?>>
-    <associate|auto-29|<tuple|<with|mode|<quote|math>|\<cal-I\><rsub|<around*|]||]>>>|?>>
+    <associate|auto-26|<tuple|20.2.3|?>>
+    <associate|auto-27|<tuple|<with|mode|<quote|math>|\<cal-B\><around*|[|\<bbb-R\>|]>>|?>>
+    <associate|auto-28|<tuple|<with|mode|<quote|math>|\<cal-I\><rsub|<around*|[||]>>>|?>>
+    <associate|auto-29|<tuple|<with|mode|<quote|math>|\<cal-I\><rsub|<around*|[||[>>>|?>>
     <associate|auto-3|<tuple|20.1.1|?>>
-    <associate|auto-30|<tuple|<with|mode|<quote|math>|\<cal-I\><rsub|<around*|]||[>>>|?>>
-    <associate|auto-31|<tuple|<with|mode|<quote|math>|\<cal-I\>>|?>>
-    <associate|auto-32|<tuple|20.2.3|?>>
+    <associate|auto-30|<tuple|<with|mode|<quote|math>|\<cal-I\><rsub|<around*|]||]>>>|?>>
+    <associate|auto-31|<tuple|<with|mode|<quote|math>|\<cal-I\><rsub|<around*|]||[>>>|?>>
+    <associate|auto-32|<tuple|<with|mode|<quote|math>|\<cal-I\>>|?>>
+    <associate|auto-33|<tuple|20.2.4|?>>
+    <associate|auto-34|<tuple|begin|?>>
+    <associate|auto-35|<tuple|end|?>>
+    <associate|auto-36|<tuple|<with|mode|<quote|math>|v<rsup|n><around*|(|I|)>>|?>>
+    <associate|auto-37|<tuple|Dyadic interval|?>>
+    <associate|auto-38|<tuple|20.2.5|?>>
     <associate|auto-4|<tuple|20.1.2|?>>
     <associate|auto-5|<tuple|<with|mode|<quote|math>|<wide|\<bbb-R\><rsup|>|\<wide-bar\>><rsup|+>>|?>>
     <associate|auto-6|<tuple|<with|mode|<quote|math>|<wide|\<bbb-R\>|\<wide-bar\>><rsup|+><rsub|0>>|?>>
     <associate|auto-7|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|<wide|\<bbb-R\>|\<wide-bar\>><rsup|+><rsub|0>,+|\<rangle\>>>|?>>
     <associate|auto-8|<tuple|20.1.3|?>>
     <associate|auto-9|<tuple|<with|mode|<quote|math>|\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>|?>>
-    <associate|eq 18.10.021|<tuple|20.63|?>>
-    <associate|eq 18.11.021|<tuple|20.64|?>>
-    <associate|eq 18.12.021|<tuple|20.65|?>>
-    <associate|eq 18.13.021|<tuple|20.66|?>>
-    <associate|eq 18.14.021|<tuple|20.67|?>>
-    <associate|eq 18.15.021|<tuple|20.68|?>>
-    <associate|eq 18.16.021|<tuple|20.69|?>>
-    <associate|eq 18.17.021|<tuple|20.70|?>>
-    <associate|eq 18.18.021|<tuple|20.71|?>>
-    <associate|eq 18.19.021|<tuple|20.72|?>>
-    <associate|eq 18.20.021|<tuple|20.73|?>>
-    <associate|eq 18.21.021|<tuple|20.74|?>>
-    <associate|eq 18.22.021|<tuple|20.75|?>>
-    <associate|eq 18.8.020|<tuple|20.61|?>>
-    <associate|eq 18.9.020|<tuple|20.62|?>>
+    <associate|eq 18.10.021|<tuple|20.65|?>>
+    <associate|eq 18.11.021|<tuple|20.66|?>>
+    <associate|eq 18.12.021|<tuple|20.67|?>>
+    <associate|eq 18.13.021|<tuple|20.68|?>>
+    <associate|eq 18.14.021|<tuple|20.69|?>>
+    <associate|eq 18.15.021|<tuple|20.70|?>>
+    <associate|eq 18.16.021|<tuple|20.71|?>>
+    <associate|eq 18.17.021|<tuple|20.72|?>>
+    <associate|eq 18.18.021|<tuple|20.73|?>>
+    <associate|eq 18.19.021|<tuple|20.74|?>>
+    <associate|eq 18.20.021|<tuple|20.75|?>>
+    <associate|eq 18.21.021|<tuple|20.76|?>>
+    <associate|eq 18.22.021|<tuple|20.77|?>>
+    <associate|eq 18.39.022|<tuple|20.90|?>>
+    <associate|eq 18.40.022|<tuple|20.91|?>>
+    <associate|eq 18.41.022|<tuple|20.92|?>>
+    <associate|eq 18.42.022|<tuple|20.93|?>>
+    <associate|eq 18.43.022|<tuple|20.94|?>>
+    <associate|eq 18.8.020|<tuple|20.63|?>>
+    <associate|eq 18.9.020|<tuple|20.64|?>>
     <associate|eq 20.1.155|<tuple|20.1|?>>
     <associate|eq 20.10.155|<tuple|20.10|?>>
+    <associate|eq 20.100.200|<tuple|20.102|?>>
+    <associate|eq 20.101.200|<tuple|20.103|?>>
+    <associate|eq 20.102.200|<tuple|20.104|?>>
+    <associate|eq 20.103.200|<tuple|20.105|?>>
+    <associate|eq 20.104.200|<tuple|20.106|?>>
+    <associate|eq 20.105.200|<tuple|20.107|?>>
+    <associate|eq 20.106.200|<tuple|20.108|?>>
+    <associate|eq 20.107.200|<tuple|20.109|?>>
+    <associate|eq 20.108.200|<tuple|20.110|?>>
     <associate|eq 20.11.155|<tuple|20.11|?>>
     <associate|eq 20.12.155|<tuple|20.12|?>>
     <associate|eq 20.13.155|<tuple|20.14|?>>
@@ -10293,31 +11403,38 @@
     <associate|eq 20.5.155|<tuple|20.5|?>>
     <associate|eq 20.50.156|<tuple|20.50|?>>
     <associate|eq 20.51.156|<tuple|20.51|?>>
-    <associate|eq 20.52.200|<tuple|20.54|?>>
+    <associate|eq 20.52.200|<tuple|20.56|?>>
     <associate|eq 20.52.200.1|<tuple|20.52|?>>
-    <associate|eq 20.53.200|<tuple|20.55|?>>
+    <associate|eq 20.53.200|<tuple|20.57|?>>
     <associate|eq 20.53.200.1|<tuple|20.53|?>>
-    <associate|eq 20.54.200|<tuple|20.56|?>>
-    <associate|eq 20.55.200|<tuple|20.57|?>>
-    <associate|eq 20.56.200|<tuple|20.58|?>>
-    <associate|eq 20.57.200|<tuple|20.59|?>>
-    <associate|eq 20.58.200|<tuple|20.60|?>>
+    <associate|eq 20.54.200|<tuple|20.58|?>>
+    <associate|eq 20.55.200|<tuple|20.59|?>>
+    <associate|eq 20.56.200|<tuple|20.60|?>>
+    <associate|eq 20.57.200|<tuple|20.61|?>>
+    <associate|eq 20.58.200|<tuple|20.62|?>>
     <associate|eq 20.6.155|<tuple|20.6|?>>
     <associate|eq 20.7.155|<tuple|20.7|?>>
-    <associate|eq 20.76.200|<tuple|20.76|?>>
-    <associate|eq 20.77.200|<tuple|20.77|?>>
-    <associate|eq 20.78.200|<tuple|20.78|?>>
-    <associate|eq 20.79.200|<tuple|20.79|?>>
+    <associate|eq 20.76.200|<tuple|20.78|?>>
+    <associate|eq 20.77.200|<tuple|20.79|?>>
+    <associate|eq 20.78.200|<tuple|20.80|?>>
+    <associate|eq 20.79.200|<tuple|20.81|?>>
     <associate|eq 20.8.155|<tuple|20.8|?>>
-    <associate|eq 20.80.200|<tuple|20.80|?>>
-    <associate|eq 20.81.200|<tuple|20.81|?>>
-    <associate|eq 20.82.200|<tuple|20.82|?>>
-    <associate|eq 20.83.200|<tuple|20.83|?>>
-    <associate|eq 20.84.200|<tuple|20.84|?>>
-    <associate|eq 20.85.200|<tuple|20.85|?>>
-    <associate|eq 20.86.200|<tuple|20.86|?>>
-    <associate|eq 20.87.200|<tuple|20.87|?>>
+    <associate|eq 20.80.200|<tuple|20.82|?>>
+    <associate|eq 20.81.200|<tuple|20.83|?>>
+    <associate|eq 20.82.200|<tuple|20.84|?>>
+    <associate|eq 20.83.200|<tuple|20.85|?>>
+    <associate|eq 20.84.200|<tuple|20.86|?>>
+    <associate|eq 20.85.200|<tuple|20.87|?>>
+    <associate|eq 20.86.200|<tuple|20.88|?>>
+    <associate|eq 20.87.200|<tuple|20.89|?>>
     <associate|eq 20.9.155|<tuple|20.9|?>>
+    <associate|eq 20.93.200|<tuple|20.95|?>>
+    <associate|eq 20.94.200|<tuple|20.96|?>>
+    <associate|eq 20.95.200|<tuple|20.97|?>>
+    <associate|eq 20.96.200|<tuple|20.98|?>>
+    <associate|eq 20.97.200|<tuple|20.99|?>>
+    <associate|eq 20.98.200|<tuple|20.100|?>>
+    <associate|eq 20.99.200|<tuple|20.101|?>>
     <associate|extended -(x.y)|<tuple|20.34|?>>
     <associate|extended 0\<less\>=x and 0\<less\>=y then
     x\<less\>=x-y\<less\>=x|<tuple|20.25|?>>
@@ -10395,29 +11512,43 @@
     <associate|extended x\<less\>=y then for 0\<less\>=s we have
     s.x\<less\>=s.y|<tuple|20.35|?>>
     <associate|extended x\<less\>=y then x+z\<less\>=y+z|<tuple|20.27|?>>
-    <associate|lemma 20.119.200|<tuple|20.121|?>>
-    <associate|lemma 20.121.200|<tuple|20.122|?>>
+    <associate|lemma 20.119.200|<tuple|20.123|?>>
+    <associate|lemma 20.121.200|<tuple|20.124|?>>
+    <associate|lemma 20.129.200|<tuple|20.132|?>>
+    <associate|lemma 20.132.200|<tuple|20.135|?>>
+    <associate|lemma 20.136.200|<tuple|20.139|?>>
+    <associate|lemma 20.138.200|<tuple|20.141|?>>
+    <associate|lemma 20.139.200|<tuple|20.142|?>>
+    <associate|lemma 20.141.200|<tuple|20.143|?>>
     <associate|lemma 20.78.156|<tuple|20.78|?>>
     <associate|lemma 20.80.156|<tuple|20.80|?>>
     <associate|lemma 20.90.156|<tuple|20.92|?>>
     <associate|lemma 20.95.156|<tuple|20.97|?>>
-    <associate|measure B[R] equivalences|<tuple|20.123|?>>
-    <associate|measure Borel algebra|<tuple|20.116|?>>
-    <associate|measure Borel algebra and closure|<tuple|20.117|?>>
+    <associate|measure B[R] equivalences|<tuple|20.125|?>>
+    <associate|measure Borel algebra|<tuple|20.117|?>>
+    <associate|measure Borel algebra and closure|<tuple|20.118|?>>
+    <associate|measure Borel algebra on R^n|<tuple|20.144|?>>
+    <associate|measure Dyadic cubes|<tuple|20.137|?>>
+    <associate|measure Dyadic cubes properties|<tuple|20.140|?>>
     <associate|measure P(X) is a algebra|<tuple|20.105|?>>
     <associate|measure P(X) is a ring|<tuple|20.101|?>>
     <associate|measure P(X) is a sigma algebra|<tuple|20.112|?>>
     <associate|measure algebra|<tuple|20.103|?>>
     <associate|measure algebra equavalent definition|<tuple|20.107|?>>
     <associate|measure algebra properties|<tuple|20.106|?>>
-    <associate|measure borel algebrat on R|<tuple|20.118|?>>
+    <associate|measure begin end|<tuple|20.136|?>>
+    <associate|measure borel algebrat on R|<tuple|20.120|?>>
+    <associate|measure condition for a algebra to be a sigma
+    algebra|<tuple|20.114|?>>
     <associate|measure countable union is in sigma algebra|<tuple|20.113|?>>
-    <associate|measure generated sigma algebra|<tuple|20.115|?>>
+    <associate|measure generated sigma algebra|<tuple|20.116|?>>
+    <associate|measure half open intervals in R^n|<tuple|20.133|?>>
+    <associate|measure order on R^n|<tuple|20.127|?>>
     <associate|measure ring|<tuple|20.99|?>>
     <associate|measure ring properties|<tuple|20.102|?>>
     <associate|measure sigma algebra|<tuple|20.108|?>>
     <associate|measure sigma algebra equivalences|<tuple|20.110|?>>
-    <associate|measure sigma algebra intersection|<tuple|20.114|?>>
+    <associate|measure sigma algebra intersection|<tuple|20.115|?>>
     <associate|measure {empty set} is a ring|<tuple|20.100|?>>
     <associate|measure {emptyset,set} is a measure|<tuple|20.104|?>>
   </collection>
@@ -10470,6 +11601,14 @@
       <tuple|<tuple|<with|mode|<quote|math>|\<cal-I\><rsub|<around*|]||[>>>>|<pageref|auto-30>>
 
       <tuple|<tuple|<with|mode|<quote|math>|\<cal-I\>>>|<pageref|auto-31>>
+
+      <tuple|<tuple|begin>|<pageref|auto-33>>
+
+      <tuple|<tuple|end>|<pageref|auto-34>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|v<rsup|n><around*|(|I|)>>>|<pageref|auto-35>>
+
+      <tuple|<tuple|Dyadic interval>|<pageref|auto-36>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|20<space|2spc>Measures
@@ -10515,6 +11654,15 @@
       <with|par-left|<quote|1tab>|20.2.2<space|2spc> Borel algebra on
       <with|mode|<quote|math>|\<bbb-R\>> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-25>>
+
+      <with|par-left|<quote|1tab>|20.2.3<space|2spc>Borel algebra on
+      <with|mode|<quote|math>|\<bbb-R\><rsup|n>>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-32>>
+
+      <with|par-left|<quote|1tab>|20.2.4<space|2spc>Algebra properties
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-37>>
     </associate>
   </collection>
 </auxiliary>

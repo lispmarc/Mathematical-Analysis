@@ -12066,9 +12066,144 @@
   We can rephrase the above theorem in another way.
 
   <\theorem>
-    Let <math|I> be a set, <math|B> a set and <math|\<forall\>i\<in\>I> there
-    exist a <math|A<rsub|i>\<subseteq\>A<rsub|i>>
+    <label|choice product sets empty condition>Let
+    <math|<around*|{|A|}><rsub|i\<in\>I>\<subseteq\>\<cal-A\>> be a family of
+    sets where <math|I,\<cal-A\>> are sets then we have\ 
+
+    <\equation*>
+      <big|prod><rsub|i\<in\>I>A<rsub|i>=\<varnothing\><text|
+      >\<Leftrightarrow\><text| >\<exists\>k\<in\>I<text| with
+      >A<rsub|k>=\<varnothing\>
+    </equation*>
   </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Assume that <math|\<forall\>k\<in\>I>
+      <math|A<rsub|k>\<neq\>\<varnothing\>> it follows from the previous
+      theorem [theorem: <reference|product product is not empty>] it follows
+      that <math|<big|prod><rsub|i\<in\>I>A<rsub|i>\<neq\>\<varnothing\>>
+      contradicting the hypothesis <math|<big|prod><rsub|i\<in\>I>A<rsub|i>=\<varnothing\>>.
+      So the assumption is wrong and we must have that
+      <math|\<exists\>k\<in\>I> with <math|A<rsub|k>=\<varnothing\>>.
+
+      <item*|<math|\<Leftarrow\>>>Assume that
+      <math|<big|prod><rsub|i\<in\>I>A<rsub|i>\<neq\>\<varnothing\>> then by
+      the previous theorem [theorem: <reference|product product is not
+      empty>] <math|\<exists\>k\<in\>I> with
+      <math|A<rsub|k>\<neq\>\<varnothing\>> contradicting the hypothesis.
+      Hence the assumption is wrong and we must have
+      <math|<big|prod><rsub|i\<in\>I>A<rsub|i>=\<varnothing\>>.
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|choice product inclusion (1)>Let
+    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>A> and
+    <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B> be two
+    families and <math|\<forall\>i\<in\>I>
+    <math|A<rsub|i>\<neq\>\<varnothing\>> then\ 
+
+    <\equation*>
+      <big|prod><rsub|i\<in\>I>A<rsub|i>\<subseteq\><big|prod><rsub|i\<in\>I>B<rsub|i><text|
+      >\<Leftrightarrow\><text| >\<forall\>i\<in\>I<text| we have
+      >A<rsub|i>\<subseteq\>B<rsub|i>
+    </equation*>
+
+    <\note>
+      The condition <math|\<forall\>i\<in\>I> <math|A<rsub|i>\<neq\>0> is
+      essential, for example if we define
+      <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,2|}>>> by
+      <math|A<rsub|1>=<around*|{|1|}>>, <math|A<rsub|2>=\<varnothing\>> and
+      <math|<around*|{|B<rsub|i>|}><rsub|i\<in\><around*|{|1,2|}>>> by
+      <math|B<rsub|1>=<around*|{|2|}>> and <math|B<rsub|2>=<around*|{|3|}>>
+      then <math|<big|prod><rsub|i\<in\><around*|{|1,2|}>>A<rsub|i>=\<varnothing\>\<subseteq\><big|prod><rsub|i\<in\><around*|{|1,2|}>>B<rsub|i>>
+      but <math|A<rsub|1>\<nsubseteq\>B<rsub|1>>.
+    </note>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|i\<in\>I> then by [theorem:
+      <reference|product projection is surjective>]
+      <math|\<pi\><rsub|i>:<big|prod><rsub|j\<in\>I>A<rsub|j>\<rightarrow\>A<rsub|i>>
+      defined by <math|\<pi\><rsub|i><around*|(|x|)>=x<around*|(|i|)>> is a
+      surjection. Given <math|a\<in\>A<rsub|i>> then as <math|\<pi\><rsub|i>>
+      is a surjection there exist a <math|x\<in\><big|prod><rsub|i\<in\>I>A<rsub|i>>
+      such that <math|a=\<pi\><rsub|i><around*|(|x|)>=x<around*|(|i|)>>. As
+      <math|<big|prod><rsub|i\<in\>I>A<rsub|i>\<subseteq\><big|prod><rsub|i\<in\>I>B<rsub|i>>
+      we have that <math|x\<in\><big|prod><rsub|i\<in\>I>B<rsub|i>> hence
+      <math|a=x<around*|(|i|)>\<in\>B> proving that
+      <math|A<rsub|i>\<subseteq\>B<rsub|i>>
+
+      <item*|<math|\<Leftarrow\>>>This follows from [theorem:
+      <reference|product inclusion>].
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|choice product equality>Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>A>
+    and <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>B> be two
+    families and <math|\<forall\>i\<in\>I>
+    <math|A<rsub|i>\<neq\>\<varnothing\>> then we have\ 
+
+    <\equation>
+      <label|eq 3.59.200><big|prod><rsub|i\<in\>I>A<rsub|i>=<big|prod><rsub|i\<in\>I>B<rsub|i><text|
+      >\<Leftrightarrow\><text| >\<forall\>i\<in\>I<text|
+      >A<rsub|i>=b<rsub|i>
+    </equation>
+
+    <\note>
+      The condition <math|\<forall\>i\<in\>I> <math|A<rsub|i>\<neq\>0> is
+      essential, for example if we define
+      <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,2|}>>> by
+      <math|A<rsub|1>=<around*|{|1|}>>, <math|A<rsub|2>=\<varnothing\>> and
+      <math|<around*|{|B<rsub|i>|}><rsub|i\<in\><around*|{|1,2|}>>> by
+      <math|B<rsub|1>=\<varnothing\>> and <math|B<rsub|2>=<around*|{|3|}>>
+      then <math|<big|prod><rsub|i\<in\><around*|{|1,2|}>>A<rsub|i>=\<varnothing\>\<subseteq\><big|prod><rsub|i\<in\><around*|{|1,2|}>>B<rsub|i>>
+      but <math|A<rsub|1>\<neq\>B<rsub|1>>.
+    </note>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>As <math|<big|prod><rsub|i\<in\>I>A<rsub|i>=<big|prod><rsub|i\<in\>I>B<rsub|i><text|>>
+      we have <math|<big|prod><rsub|i\<in\>I>A<rsub|i>\<subseteq\><big|prod><rsub|i\<in\>I>B<rsub|i>>
+      so that by [theorem: <reference|choice product inclusion (1)>] we have\ 
+
+      <\equation*>
+        \<forall\>i\<in\>I<text| we have >A<rsub|i>\<subseteq\>B<rsub|i>
+      </equation*>
+
+      By [theorem: <reference|product product is not empty>] it follows that
+      <math|<big|prod><rsub|i\<in\>I>A<rsub|i>=\<varnothing\>> so that
+      <math|<big|prod><rsub|i\<in\>I>B<rsub|i>=\<varnothing\>> and using
+      [theorem: <reference|product product is not empty>] again that
+      <math|\<forall\>i\<in\>I> <math|B<rsub|i>\<neq\>\<varnothing\>>. Hence
+      as <math|<big|prod><rsub|i\<in\>I>B<rsub|i>\<subseteq\><big|prod><rsub|i\<in\>I>A<rsub|i>>
+      we have by [theorem: <reference|choice product inclusion (1)>] that\ 
+
+      <\equation*>
+        \<forall\>i\<in\>I<text| we have <math|B<rsub|i>\<subseteq\>A<rsub|i>>>
+      </equation*>
+
+      Combining this with [eq: <reference|eq 3.59.200>] proves that\ 
+
+      <\equation*>
+        \<forall\>i\<in\>I<text| we have <math|A<rsub|i>=B<rsub|i>>>
+      </equation*>
+
+      <item*|<math|\<Leftarrow\>>>This is trivial.
+    </description>
+
+    \;
+  </proof>
 
   The Axiom of Choice has also important consequences for partial ordered
   sets.\ 
@@ -14145,19 +14280,19 @@
 
       <item><math|\<forall\>a,b,c,d> with
       <math|<around*|[|a,b|]>\<neq\>\<emptyset\>> then we have if
-      <math|<around*|[|a,b|]>=<around*|[|c,d|]>> then <math|a=c\<wedge\>b=d>
+      <math|<around*|[|a,b|]>=<around*|[|c,d|]>> that <math|a=c\<wedge\>b=d>
 
       <item><math|\<forall\>a,b,c,d> with
       <math|<around*|]|a,b|]>\<neq\>\<emptyset\>> then we have if
-      <math|<around*|]|a,b|]>=<around*|]|c,d|]>> then <math|a=c\<wedge\>b=d>
+      <math|<around*|]|a,b|]>=<around*|]|c,d|]>> that <math|a=c\<wedge\>b=d>
 
       <item><math|\<forall\>a,b,c,d> with
       <math|<around*|[|a,b|[>\<neq\>\<emptyset\>> then we have if
-      <math|<around*|[|a,b|[>=<around*|[|c,d|[>> then <math|a=c\<wedge\>b=d>
+      <math|<around*|[|a,b|[>=<around*|[|c,d|[>> that <math|a=c\<wedge\>b=d>
 
       <item><math|\<forall\>a,b,c,d> with
       <math|<around*|]|a,b|[>\<neq\>\<emptyset\>> then we have if
-      <math|<around*|]|a,b|[>=<around*|]|c,d|[>> then <math|a=c\<wedge\>b=d>
+      <math|<around*|]|a,b|[>=<around*|]|c,d|[>> that <math|a=c\<wedge\>b=d>
     </enumerate>
   </theorem>
 
@@ -14484,31 +14619,34 @@
     <associate|cartesian product of the empty set|<tuple|1.46|?>>
     <associate|cartesian product properties (1)|<tuple|1.49|?>>
     <associate|cartesian product with enpty set|<tuple|1.47|?>>
-    <associate|choice Axiom of choice consequences|<tuple|3.127|?>>
-    <associate|choice Hausdorff maximal principle|<tuple|3.118|?>>
-    <associate|choice Hausdorff's Maximal Principle|<tuple|3.119|?>>
-    <associate|choice Hausdorff's implies Zorn's|<tuple|3.121|?>>
+    <associate|choice Axiom of choice consequences|<tuple|3.131|?>>
+    <associate|choice Hausdorff maximal principle|<tuple|3.122|?>>
+    <associate|choice Hausdorff's Maximal Principle|<tuple|3.123|?>>
+    <associate|choice Hausdorff's implies Zorn's|<tuple|3.125|?>>
     <associate|choice P'(A)|<tuple|3.98|?>>
     <associate|choice P'(A) is a set|<tuple|3.99|?>>
-    <associate|choice Zorn implies welll ordering|<tuple|3.122|?>>
-    <associate|choice Zorn's lemma|<tuple|3.120|?>>
-    <associate|choice Zorn's lemma for pre-order|<tuple|3.128|?>>
+    <associate|choice Zorn implies welll ordering|<tuple|3.126|?>>
+    <associate|choice Zorn's lemma|<tuple|3.124|?>>
+    <associate|choice Zorn's lemma for pre-order|<tuple|3.132|?>>
     <associate|choice axiom of choice equivalences (1)|<tuple|3.103|?>>
     <associate|choice choice function|<tuple|3.100|?>>
-    <associate|choice existence of successor|<tuple|3.108|?>>
-    <associate|choice family on preimage|<tuple|3.130|?>>
+    <associate|choice existence of successor|<tuple|3.112|?>>
+    <associate|choice family on preimage|<tuple|3.134|?>>
     <associate|choice function generating|<tuple|3.104|?>>
-    <associate|choice function to injection/bijection|<tuple|3.129|?>>
-    <associate|choice intersection of p-sewuences|<tuple|3.111|?>>
-    <associate|choice lemma p-sequence|<tuple|3.109|?>>
-    <associate|choice lemma p-sequence generation|<tuple|3.114|?>>
-    <associate|choice lemma properties of select|<tuple|3.115|?>>
-    <associate|choice lemma property of select elements|<tuple|3.113|?>>
+    <associate|choice function to injection/bijection|<tuple|3.133|?>>
+    <associate|choice intersection of p-sewuences|<tuple|3.115|?>>
+    <associate|choice lemma p-sequence|<tuple|3.113|?>>
+    <associate|choice lemma p-sequence generation|<tuple|3.118|?>>
+    <associate|choice lemma properties of select|<tuple|3.119|?>>
+    <associate|choice lemma property of select elements|<tuple|3.117|?>>
     <associate|choice lemma select elements froms a
-    p-sewuence|<tuple|3.116|?>>
-    <associate|choice lemma upper bound of chain|<tuple|3.124|?>>
-    <associate|choice lemma well ordering lemma (1)|<tuple|3.123|?>>
-    <associate|choice well-order implies Axiom of Choice|<tuple|3.125|?>>
+    p-sewuence|<tuple|3.120|?>>
+    <associate|choice lemma upper bound of chain|<tuple|3.128|?>>
+    <associate|choice lemma well ordering lemma (1)|<tuple|3.127|?>>
+    <associate|choice product equality|<tuple|3.110|?>>
+    <associate|choice product inclusion (1)|<tuple|3.108|?>>
+    <associate|choice product sets empty condition|<tuple|3.107|?>>
+    <associate|choice well-order implies Axiom of Choice|<tuple|3.129|?>>
     <associate|class absorption laws|<tuple|1.26|?>>
     <associate|class class commutative,idempotent,associative,distributivity|<tuple|1.29|?>>
     <associate|class complement of comploment|<tuple|1.27|?>>
@@ -14569,21 +14707,21 @@
     <associate|eq 2.19.002|<tuple|2.35|?>>
     <associate|eq 2.2.001|<tuple|2.4|?>>
     <associate|eq 2.20.002|<tuple|2.36|?>>
-    <associate|eq 2.20.053|<tuple|3.74|?>>
+    <associate|eq 2.20.053|<tuple|3.75|?>>
     <associate|eq 2.21.002|<tuple|2.37|?>>
     <associate|eq 2.21.017|<tuple|2.26|?>>
-    <associate|eq 2.21.053|<tuple|3.75|?>>
+    <associate|eq 2.21.053|<tuple|3.76|?>>
     <associate|eq 2.22.017|<tuple|2.27|?>>
-    <associate|eq 2.22.053|<tuple|3.76|?>>
-    <associate|eq 2.23.053|<tuple|3.77|?>>
-    <associate|eq 2.24.053|<tuple|3.78|?>>
+    <associate|eq 2.22.053|<tuple|3.77|?>>
+    <associate|eq 2.23.053|<tuple|3.78|?>>
+    <associate|eq 2.24.053|<tuple|3.79|?>>
     <associate|eq 2.25.004|<tuple|2.39|?>>
-    <associate|eq 2.25.053|<tuple|3.79|?>>
+    <associate|eq 2.25.053|<tuple|3.80|?>>
     <associate|eq 2.25.141|<tuple|2.25|?>>
     <associate|eq 2.26.004|<tuple|2.40|?>>
-    <associate|eq 2.26.053|<tuple|3.80|?>>
+    <associate|eq 2.26.053|<tuple|3.81|?>>
     <associate|eq 2.27.004|<tuple|2.41|?>>
-    <associate|eq 2.27.053|<tuple|3.81|?>>
+    <associate|eq 2.27.053|<tuple|3.82|?>>
     <associate|eq 2.27.133|<tuple|2.31|?>>
     <associate|eq 2.28.004|<tuple|2.42|?>>
     <associate|eq 2.29.004|<tuple|2.44|?>>
@@ -14674,29 +14812,30 @@
     <associate|eq 3.54.016|<tuple|3.56|?>>
     <associate|eq 3.55.016|<tuple|3.57|?>>
     <associate|eq 3.56.016|<tuple|3.58|?>>
-    <associate|eq 3.57.018|<tuple|3.59|?>>
-    <associate|eq 3.58.018|<tuple|3.60|?>>
-    <associate|eq 3.59.018|<tuple|3.61|?>>
+    <associate|eq 3.57.018|<tuple|3.60|?>>
+    <associate|eq 3.58.018|<tuple|3.61|?>>
+    <associate|eq 3.59.018|<tuple|3.62|?>>
+    <associate|eq 3.59.200|<tuple|3.59|?>>
     <associate|eq 3.6.009|<tuple|3.6|?>>
-    <associate|eq 3.61.018|<tuple|3.62|?>>
-    <associate|eq 3.62.018|<tuple|3.63|?>>
-    <associate|eq 3.63.018|<tuple|3.64|?>>
-    <associate|eq 3.64.018|<tuple|3.65|?>>
-    <associate|eq 3.65.018|<tuple|3.66|?>>
-    <associate|eq 3.66.018|<tuple|3.68|?>>
-    <associate|eq 3.66.019|<tuple|3.67|?>>
-    <associate|eq 3.68.019|<tuple|3.69|?>>
-    <associate|eq 3.69.019|<tuple|3.70|?>>
+    <associate|eq 3.61.018|<tuple|3.63|?>>
+    <associate|eq 3.62.018|<tuple|3.64|?>>
+    <associate|eq 3.63.018|<tuple|3.65|?>>
+    <associate|eq 3.64.018|<tuple|3.66|?>>
+    <associate|eq 3.65.018|<tuple|3.67|?>>
+    <associate|eq 3.66.018|<tuple|3.69|?>>
+    <associate|eq 3.66.019|<tuple|3.68|?>>
+    <associate|eq 3.68.019|<tuple|3.70|?>>
+    <associate|eq 3.69.019|<tuple|3.71|?>>
     <associate|eq 3.7.009|<tuple|3.7|?>>
-    <associate|eq 3.70.019|<tuple|3.71|?>>
-    <associate|eq 3.71.019|<tuple|3.72|?>>
-    <associate|eq 3.72.019|<tuple|3.73|?>>
+    <associate|eq 3.70.019|<tuple|3.72|?>>
+    <associate|eq 3.71.019|<tuple|3.73|?>>
+    <associate|eq 3.72.019|<tuple|3.74|?>>
     <associate|eq 3.8.011|<tuple|3.8|?>>
-    <associate|eq 3.82.146|<tuple|3.82|?>>
-    <associate|eq 3.83.146|<tuple|3.83|?>>
-    <associate|eq 3.84.146|<tuple|3.84|?>>
-    <associate|eq 3.85.146|<tuple|3.85|?>>
-    <associate|eq 3.86.146|<tuple|3.86|?>>
+    <associate|eq 3.82.146|<tuple|3.83|?>>
+    <associate|eq 3.83.146|<tuple|3.84|?>>
+    <associate|eq 3.84.146|<tuple|3.85|?>>
+    <associate|eq 3.85.146|<tuple|3.86|?>>
+    <associate|eq 3.86.146|<tuple|3.87|?>>
     <associate|eq 3.9.011|<tuple|3.9|?>>
     <associate|equivalence relation|<tuple|3.5|?>>
     <associate|equivalence relation A/R|<tuple|3.16|?>>
@@ -14815,13 +14954,13 @@
     <associate|function surjection condition|<tuple|2.52|?>>
     <associate|function trivial bijection|<tuple|2.66|?>>
     <associate|function: A^B and sets|<tuple|2.36|?>>
-    <associate|generalized intervals and boundaries|<tuple|3.137|?>>
-    <associate|interval and inf or sup|<tuple|3.135|?>>
-    <associate|interval condition to be empty|<tuple|3.132|?>>
-    <associate|interval generalized condition (1)|<tuple|3.136|?>>
-    <associate|interval generalized interval|<tuple|3.133|?>>
-    <associate|interval generalized interval condition|<tuple|3.134|?>>
-    <associate|interval interval|<tuple|3.131|?>>
+    <associate|generalized intervals and boundaries|<tuple|3.141|?>>
+    <associate|interval and inf or sup|<tuple|3.139|?>>
+    <associate|interval condition to be empty|<tuple|3.136|?>>
+    <associate|interval generalized condition (1)|<tuple|3.140|?>>
+    <associate|interval generalized interval|<tuple|3.137|?>>
+    <associate|interval generalized interval condition|<tuple|3.138|?>>
+    <associate|interval interval|<tuple|3.135|?>>
     <associate|order A isomorphism B|<tuple|3.50|?>>
     <associate|order a\<less\>=b\<less\>=c|<tuple|3.30|?>>
     <associate|order chain|<tuple|3.41|?>>

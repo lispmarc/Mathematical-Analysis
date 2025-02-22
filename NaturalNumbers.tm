@@ -8723,7 +8723,7 @@
     <label|denumerable product of two denumerable set is
     denumerable><math|\<bbb-N\><rsub|0>\<times\>\<bbb-N\><rsub|0>\<approx\>\<bbb-N\><rsub|0>>,
     in other words <math|\<bbb-N\><rsub|0>\<times\>\<bbb-N\><rsub|0>> is
-    denumerable/
+    denumerable.
   </theorem>
 
   <\proof>
@@ -9040,6 +9040,76 @@
   </proof>
 
   <\theorem>
+    <label|denumerable product of finite family of denumerable sets is
+    denumerable>Let <math|n\<in\>\<bbb-N\><rsub|0>\\<around*|{|0|}>> and
+    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>S<rsub|n>>> such that
+    <math|\<forall\>i\<in\>S<rsub|n>> <math|A<rsub|i>> is denumerable then
+    <math|<big|prod><rsub|i\<in\>S<rsub|n>>A<rsub|i>> is denumerable.
+  </theorem>
+
+  <\proof>
+    We proof this by induction, so define\ 
+
+    <\equation*>
+      S=<around*|{|n\<in\><around*|{|1,\<ldots\>,\<infty\>|}>\|If
+      <around*|{|A<rsub|i>|}><rsub|i\<in\>S<rsub|n>><text| satisfies
+      >\<forall\>i\<in\>S<rsub|n><text| >A<rsub|i><text| is denumerable then
+      ><big|prod><rsub|i\<in\>S<rsub|n>>A<rsub|i><text| is denumerable>|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|1\<in\>S>>As <math|S<rsub|1>=<around*|{|0|}>> we can use
+      [example: <reference|product of family with one element>] to find a
+      bijection <math|\<beta\>:A<rsub|0>\<rightarrow\><big|prod><rsub|i\<in\><around*|{|0|}>>A<rsub|i>=<big|prod><rsub|i\<in\>S<rsub|1>>A<rsub|i>>
+      proving that <math|A<rsub|0>\<approx\><big|prod><rsub|i\<in\>S<rsub|1>>A<rsub|i>>,
+      hence <math|<big|prod><rsub|i\<in\>S<rsub|1>>A<rsub|i>> is denumerable
+      [see theorem: <reference|equipotence finite, denumerable , countable>].
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+      <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>S<rsub|n+1>>> be such that
+      <math|\<forall\>i\<in\>S<rsub|n+1>> <math|A<rsub|i>> is denumerable. As
+      <math|n\<in\>S> we have that <math|<big|prod><rsub|i\<in\>S<rsub|n>>A<rsub|i>>
+      is denumerable, so by [theorem: <reference|denumerable product of
+      denumerable sets is denumerable>] we have that
+      <math|<around*|(|<big|prod><rsub|i\<in\>S<rsub|n>>A<rsub|i>|)>\<times\>A<rsub|n><text|>>
+      is denumerable. Finally by [theorem: <reference|product of finite
+      family of sets>] we have <math|<big|prod><rsub|i\<in\>S<rsub|n+1>>A<rsub|i>\<approx\><around*|(|<big|prod><rsub|i\<in\>S<rsub|n>>A<rsub|i>|)>\<times\>A<rsub|n>>
+      so that <math|<big|prod><rsub|i\<in\>S<rsub|n+1>>A<rsub|i>> is
+      denumerable [see theorem: <reference|equipotence finite, denumerable ,
+      countable>]. Hence <math|n+1\<in\>S>.
+    </description>
+
+    Mathematical induction proves then that
+    <math|S=<around*|{|1,\<ldots\>,\<infty\>|}>> proving the theorem.
+  </proof>
+
+  <\corollary>
+    <label|denumerable product of finite family of denumerable sets is
+    denumerable (1)>If <math|I> is non empty and finite and
+    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>> such that
+    <math|\<forall\>i\<in\>I> <math|A<rsub|i>> is denumerable then
+    <math|<big|prod><rsub|i\<in\>I>A<rsub|i>> is denumerable.
+  </corollary>
+
+  <\proof>
+    As <math|I> is finite and non empty there exists a
+    <math|n\<in\>\<bbb-N\><rsub|0>\\<around*|{|0|}>> such that
+    <math|n\<approx\>I> hence there exist a bijection
+    <math|f:n=S<rsub|n>\<rightarrow\>I>, Using [theorem: <reference|family
+    product and index transformation>] there exists a bijection
+    <math|\<beta\>:<big|prod><rsub|i\<in\>I>A<rsub|i>\<rightarrow\><big|prod><rsub|i\<in\>S<rsub|n>>A<rsub|f<around*|(|i|)>><rsub|>>
+    so that <math|<big|prod><rsub|i\<in\>S<rsub|n>>A<rsub|f<around*|(|i|)>>\<approx\><big|prod><rsub|i\<in\>I>A<rsub|i><rsub|>>.
+    Using the previous theorem [theorem: <reference|denumerable product of
+    finite family of denumerable sets is denumerable>]
+    <math|><math|<big|prod><rsub|i\<in\>S<rsub|n>>A<rsub|f<around*|(|i|)>>>
+    is denumerable, hence by [theorem: <reference|equipotence finite,
+    denumerable , countable>] <math|<big|prod><rsub|i\<in\>I>A<rsub|i>> is
+    denumerable.
+  </proof>
+
+  <\theorem>
     <label|denumerable union of a finite family of denumerable sets is
     denumerable>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>> is such that
     <math|I\<neq\>\<varnothing\>\<wedge\>I> is finite and
@@ -9338,8 +9408,6 @@
     <math|<big|cup><rsub|i\<in\>I>A<rsub|i>> is countable.
   </proof>
 
-  \;
-
   <\theorem>
     <label|countable AUB and AxB>If <math|A,B> are countable sets then we
     have <math|A\<times\>B> is countable.
@@ -9395,8 +9463,7 @@
       bijection <math|\<beta\>:A<rsub|0>\<rightarrow\><big|prod><rsub|i\<in\><around*|{|0|}>>A<rsub|i>=<big|prod><rsub|i\<in\>S<rsub|1>>A<rsub|i>>
       proving that <math|A<rsub|0>\<approx\><big|prod><rsub|i\<in\>S<rsub|1>>A<rsub|i>>,
       hence <math|<big|prod><rsub|i\<in\>S<rsub|1>>A<rsub|i>> is countable
-      [see theorem\Q <reference|equipotence finite, denumerable ,
-      countable>].
+      [see theorem: <reference|equipotence finite, denumerable , countable>].
 
       <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
       <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>S<rsub|n+1>>> be such that
@@ -9919,8 +9986,8 @@
     <associate|auto-58|<tuple|6.2.2|194>>
     <associate|auto-59|<tuple|6.2.3|199>>
     <associate|auto-6|<tuple|sub-semi-group|129>>
-    <associate|auto-60|<tuple|6.2.4|202>>
-    <associate|auto-61|<tuple|6.3|204>>
+    <associate|auto-60|<tuple|6.2.4|203>>
+    <associate|auto-61|<tuple|6.3|205>>
     <associate|auto-7|<tuple|sup-group|129>>
     <associate|auto-8|<tuple|group isomorphism|131>>
     <associate|auto-9|<tuple|left action|134>>
@@ -9928,21 +9995,19 @@
     <associate|cardinality of the empty set is 0|<tuple|6.39|190>>
     <associate|cardinality of union of two disjoint finite
     sets|<tuple|6.41|191>>
-    <associate|countable AUB and AxB|<tuple|6.71|204>>
-    <associate|countable denumerable union of disjoint non empty countable
-    sets is denumerable|<tuple|6.71|?>>
+    <associate|countable AUB and AxB|<tuple|6.73|204>>
     <associate|countable product of a finite family of countable sets is
-    countable (2)|<tuple|6.73|204>>
+    countable (2)|<tuple|6.75|205>>
     <associate|countable product of finite family of countable sets is
-    countable|<tuple|6.72|204>>
+    countable|<tuple|6.74|204>>
     <associate|countable set|<tuple|6.25|186>>
-    <associate|countable set conditions (1)|<tuple|6.69|203>>
+    <associate|countable set conditions (1)|<tuple|6.71|203>>
     <associate|countable subset of countable set is
-    countable|<tuple|6.68|203>>
+    countable|<tuple|6.70|203>>
     <associate|countable subset of denumerable set is
-    countable|<tuple|6.67|203>>
+    countable|<tuple|6.69|203>>
     <associate|countable union of a denumerable family of countable sets is
-    denumerable|<tuple|6.70|203>>
+    denumerable|<tuple|6.72|204>>
     <associate|definition by recursion (1)|<tuple|5.89|178>>
     <associate|definition by recursion (2)|<tuple|5.90|179>>
     <associate|denumerable every subset is finite
@@ -9952,6 +10017,10 @@
     <associate|denumerable product nxN is denumerable|<tuple|6.63|201>>
     <associate|denumerable product of denumerable sets is
     denumerable|<tuple|6.62|201>>
+    <associate|denumerable product of finite family of denumerable sets is
+    denumerable|<tuple|6.65|202>>
+    <associate|denumerable product of finite family of denumerable sets is
+    denumerable (1)|<tuple|6.66|202>>
     <associate|denumerable product of finite set and a denumerable set is
     denurable|<tuple|6.64|201>>
     <associate|denumerable product of two denumerable set is
@@ -9959,9 +10028,9 @@
     <associate|denumerable set|<tuple|6.24|185>>
     <associate|denumerable subsets of N_0|<tuple|6.58|199>>
     <associate|denumerable union of a denumerable family of denumerable sets
-    is denumerable|<tuple|6.66|202>>
+    is denumerable|<tuple|6.68|203>>
     <associate|denumerable union of a finite family of denumerable sets is
-    denumerable|<tuple|6.65|202>>
+    denumerable|<tuple|6.67|202>>
     <associate|denumerable with one less element|<tuple|6.27|186>>
     <associate|empty set is finite|<tuple|6.20|185>>
     <associate|eq 5.1.019|<tuple|5.1|157>>
@@ -10050,15 +10119,15 @@
     <associate|field x^-1=y^-1=\<gtr\>x=y|<tuple|4.54|143>>
     <associate|finite ordered sets have a maximum and
     minimum|<tuple|6.48|193>>
-    <associate|finite power notation|<tuple|6.75|205>>
-    <associate|finite product of sets|<tuple|6.74|205>>
-    <associate|finite product of sets bijection|<tuple|6.80|206>>
-    <associate|finite product of sets power|<tuple|6.81|206>>
-    <associate|finite product of sets power equivalence|<tuple|6.82|207>>
-    <associate|finite product of sets projection operator|<tuple|6.76|205>>
-    <associate|finite product of sets single set|<tuple|6.83|207>>
-    <associate|finite product of two sets|<tuple|6.78|205>>
-    <associate|finite product properties|<tuple|6.79|205>>
+    <associate|finite power notation|<tuple|6.77|205>>
+    <associate|finite product of sets|<tuple|6.76|205>>
+    <associate|finite product of sets bijection|<tuple|6.82|206>>
+    <associate|finite product of sets power|<tuple|6.83|207>>
+    <associate|finite product of sets power equivalence|<tuple|6.84|207>>
+    <associate|finite product of sets projection operator|<tuple|6.78|205>>
+    <associate|finite product of sets single set|<tuple|6.85|207>>
+    <associate|finite product of two sets|<tuple|6.80|206>>
+    <associate|finite product properties|<tuple|6.81|206>>
     <associate|finite set|<tuple|6.19|185>>
     <associate|finite set alternate definition lemma|<tuple|6.21|185>>
     <associate|finite set alternative definition|<tuple|6.22|185>>
@@ -10076,7 +10145,7 @@
     <associate|group example set of functions|<tuple|4.4|127>>
     <associate|group faithful, transitive action (1)|<tuple|4.30|134>>
     <associate|group faithful, transitive action (2)|<tuple|4.31|135>>
-    <associate|group finite power|<tuple|6.84|207>>
+    <associate|group finite power|<tuple|6.86|207>>
     <associate|group group|<tuple|4.5|128>>
     <associate|group group inheritance|<tuple|4.16|130>>
     <associate|group group inverse of inverse|<tuple|4.9|128>>
