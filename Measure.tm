@@ -8541,6 +8541,107 @@
     <reference|eq 20.55.202> and <reference|eq 20.56.202>].
   </proof>
 
+  <\definition>
+    Let <math|X> be a set and <math|\<cal-A\>\<subseteq\>\<cal-P\><around*|(|X|)>>
+    then\ 
+
+    <\enumerate>
+      <item><math|\<cal-A\>> is <math|\<cup\>>-stable if
+      <math|\<forall\>A,B\<in\>\<cal-A\>> we have
+      <math|A<big|cup>B\<in\>\<cal-A\>>
+
+      <item><math|\<cal-A\>> is <math|\<cap\>>-stable if
+      <math|\<forall\>A,B\<in\>\<cal-A\>> we have
+      <math|A<big|cap>B\<in\>\<cal-A\>>
+    </enumerate>
+  </definition>
+
+  <\theorem>
+    <label|measure union intersection stable>Let <math|X> be a set and
+    <math|\<cal-A\>\<subseteq\>\<cal-P\><around*|(|X|)>> then we have:
+
+    <\enumerate>
+      <item><math|\<cal-A\><text| is >\<cup\>>-stable
+      <math|\<Leftrightarrow\>> <math|\<forall\><around*|{|A<rsub|i>|}><rsub|\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\>>,
+      <math|n\<in\>\<bbb-N\>> we have <math|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<in\>\<cal-A\>>
+
+      <item><math|\<cal-A\><text| is >\<cap\>>-stable
+      <math|\<Leftrightarrow\>> <math|\<forall\><around*|{|A<rsub|i>|}><rsub|\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\>>,
+      <math|n\<in\>\<bbb-N\>> we have <math|<big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<in\>\<cal-A\>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ This is easely proved by induction
+
+    <\enumerate>
+      <item>\ 
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>We prove this by induction so let
+
+        <\equation*>
+          S=<around*|{|n\<in\>\<bbb-N\>\|<text|If
+          ><around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\><text|
+          then ><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<in\>\<cal-A\>|}>
+        </equation*>
+
+        then we have:
+
+        <\description>
+          <item*|<math|1\<in\>S>>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1|}>>\<subseteq\>\<cal-A\>>
+          then <math|<big|cup><rsub|i\<in\><around*|{|1|}>>A<rsub|i>=A<rsub|1>\<in\>\<cal-A\>>
+          so that <math|1\<in\>S>.
+
+          <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+          <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>\<cal-A\>>
+          then <math|A<rsub|n+1>\<in\>\<cal-A\>> and, as <math|n\<in\>S>,
+          <math|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<in\>\<cal-A\>>.
+          Hence <math|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>A<rsub|i>=A<rsub|n+1><big|cup><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)>\<in\>\<cal-A\>>
+          which proves that <math|n+1\<in\>S>
+        </description>
+
+        <item*|<math|\<Leftarrow\>>>Let <math|A,B\<in\>\<cal-A\>> and define
+        <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,2|}>>\<subseteq\>\<cal-A\>>
+        by <math|A<rsub|1>=A> and <math|A<rsub|2>=B> then
+        <rigid|<math|A<big|cup>B=A<rsub|1><big|cup>A<rsub|2>=<big|cup><rsub|i\<in\><around*|{|1,2|}>>A<rsub|i>\<in\>\<cal-A\>>>.
+      </description>
+
+      <item>\ 
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>><item*|<math|\<Rightarrow\>>>We prove
+        this by induction so let
+
+        <\equation*>
+          S=<around*|{|n\<in\>\<bbb-N\>\|<text|If
+          ><around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\><text|
+          then ><big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<in\>\<cal-A\>|}>
+        </equation*>
+
+        then we have:
+
+        <\description>
+          <item*|<math|1\<in\>S>>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1|}>>\<subseteq\>\<cal-A\>>
+          then <math|<big|cap><rsub|i\<in\><around*|{|1|}>>A<rsub|i>=A<rsub|1>\<in\>\<cal-A\>>
+          so that <math|1\<in\>S>.
+
+          <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+          <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>\<cal-A\>>
+          then <math|A<rsub|n+1>\<in\>\<cal-A\>> and, as <math|n\<in\>S>,
+          <math|<big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<in\>\<cal-A\>>.
+          Hence <math|<big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>A<rsub|i>=A<rsub|n+1><big|cap><around*|(|<big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)>\<in\>\<cal-A\>>
+          which proves that <math|n+1\<in\>S>
+        </description>
+
+        <item*|<math|\<Leftarrow\>>>Let <math|A,B\<in\>\<cal-A\>> and define
+        <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,2|}>>\<subseteq\>\<cal-A\>>
+        by <math|A<rsub|1>=A> and <math|A<rsub|2>=B> then
+        <rigid|<math|A<big|cap>B=A<rsub|1><big|cap>A<rsub|2>=<big|cap><rsub|i\<in\><around*|{|1,2|}>>A<rsub|i>\<in\>\<cal-A\>>>.
+      </description>
+    </enumerate>
+  </proof>
+
   <section|Rings, algebras and <math|\<sigma\>>-algebras>
 
   <\definition>
@@ -8553,7 +8654,8 @@
       <item><math|R\<neq\>\<varnothing\>>
 
       <item>If <math|A,B\<in\>\<cal-R\>> then
-      <math|A<big|cup>B\<in\>\<cal-R\>>
+      <math|A<big|cup>B\<in\>\<cal-R\>> [in other words <math|\<cal-R\>> is
+      <math|\<cup\>>-stable]
 
       <item>If <math|A>, <math|B\<in\>\<cal-R\>> then
       <math|A\\B\<in\>\<cal-R\>>
@@ -8617,7 +8719,8 @@
       <math|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<in\>\<cal-R\>>
 
       <item>If <math|A,B\<in\>\<cal-R\>> then
-      <math|A<big|cap>B\<in\>\<cal-R\>>
+      <math|A<big|cap>B\<in\>\<cal-R\>> [in other words <math|\<cal-R\>> is
+      <math|\<cap\>>-stable]
 
       <item>If <math|n\<in\>\<bbb-N\>> and
       <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-R\>>
@@ -8633,28 +8736,8 @@
       <item>As <math|\<cal-R\>\<neq\>\<varnothing\>> there exist a
       <math|A\<in\>\<cal-R\>> so that <math|\<varnothing\>=A\\A\<in\>\<cal-R\>>
 
-      <item>We prove this by induction so let
-
-      <\equation*>
-        S=<around*|{|n\<in\>\<bbb-N\>\|<text|If
-        ><around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-R\><text|
-        then ><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<in\>\<cal-R\>|}>
-      </equation*>
-
-      then we have:
-
-      <\description>
-        <item*|<math|1\<in\>S>>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1|}>>\<subseteq\>\<cal-R\>>
-        then <math|<big|cup><rsub|i\<in\><around*|{|1|}>>A<rsub|i>=A<rsub|1>\<in\>\<cal-R\>>
-        so that <math|1\<in\>S>.
-
-        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
-        <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>\<cal-R\>>
-        then <math|A<rsub|n+1>\<in\>\<cal-R\>> and, as <math|n\<in\>S>,
-        <math|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<in\>\<cal-R\>>.
-        Hence <math|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>A<rsub|i>=A<rsub|n+1><big|cup><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)>\<in\>\<cal-R\>>
-        which proves that <math|n+1\<in\>S>
-      </description>
+      <item>This follows from [theorem: <reference|measure union intersection
+      stable>].
 
       <item>If <math|A,B\<in\>\<cal-R\>> then <math|A\\B\<in\>\<cal-R\>> so
       that <math|A\\<around*|(|A\\B|)>\<in\>\<cal-R\>> which as
@@ -8662,28 +8745,8 @@
       <reference|class inclusion and union and intersection>]>>A<big|cap>B>
       proves that <math|A<big|cap>B\<in\>\<cal-R\>>.
 
-      <item>We prove this by induction so let
-
-      <\equation*>
-        S=<around*|{|n\<in\>\<bbb-N\>\|<text|If
-        ><around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-R\><text|
-        then ><big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<in\>\<cal-R\>|}>
-      </equation*>
-
-      then we have:
-
-      <\description>
-        <item*|<math|1\<in\>S>>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1|}>>\<subseteq\>\<cal-R\>>
-        then <math|<big|cap><rsub|i\<in\><around*|{|1|}>>A<rsub|i>=A<rsub|1>\<in\>\<cal-R\>>
-        so that <math|1\<in\>S>.
-
-        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
-        <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>\<cal-R\>>
-        then <math|A<rsub|n+1>\<in\>\<cal-R\>> and, as <math|n\<in\>S>,
-        <math|<big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<in\>\<cal-R\>>.
-        Hence <math|<big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>A<rsub|i>=A<rsub|n+1><big|cap><around*|(|<big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)>\<in\>\<cal-R\>>
-        which proves that <math|>that <math|n+1\<in\>S>
-      </description>
+      <item>This follows from [theorem: <reference|measure union intersection
+      stable>].
     </enumerate>
   </proof>
 
@@ -8824,7 +8887,8 @@
         <math|X\\A\<in\>\<cal-A\>>
 
         <item><math|\<forall\>A,B\<in\>\<cal-A\>> we have
-        <math|A<big|cap>B\<in\>\<cal-A\>>
+        <math|A<big|cap>B\<in\>\<cal-A\>> [in other words <math|\<cal-A\>> is
+        <math|\<cap\>>-stable]
       </enumerate>
 
       <item><math|\<cal-A\>> satisfies:\ 
@@ -8836,7 +8900,8 @@
         <math|X\\A\<in\>\<cal-A\>>
 
         <item><math|\<forall\>A,B\<in\>\<cal-A\>> we have
-        <math|A<big|cup>B\<in\>\<cal-A\>>
+        <math|A<big|cup>B\<in\>\<cal-A\>> [in other words <math|\<cal-A\>> is
+        <math|\<cup\>>-stable]
       </enumerate>
 
       <item><math|\<cal-A\>> satisfies:\ 
@@ -12723,8 +12788,9 @@
   </proof>
 
   <\theorem>
-    Let <math|X> be a set <math|\<cal-D\>\<subseteq\>\<cal-P\><around*|(|X|)>>
-    then there exist a <with|font-series|bold|unique> Dynkin system
+    <label|measure Dynkin system generated>Let <math|X> be a set
+    <math|\<cal-D\>\<subseteq\>\<cal-P\><around*|(|X|)>> then there exist a
+    <with|font-series|bold|unique> Dynkin system
     <math|\<delta\><around*|[|\<cal-A\>|]>> on <math|X> such that:\ 
 
     <\enumerate>
@@ -12788,6 +12854,266 @@
       </equation*>
     </enumerate>
   </proof>
+
+  <\theorem>
+    <label|measure Dynkin system condition for sigma algebra>Let <math|X> be
+    a set and <math|\<frak-D\>> a Dynkin system on <math|X> then we have\ 
+
+    <\equation*>
+      \<frak-D\><text| is a >\<sigma\><text|-algebra
+      >\<Leftrightarrow\><text| >\<forall\>A,B\<in\>\<frak-D\><text| we have
+      >A<big|cap>B\<in\>\<frak-D\><text| [in other words >\<frak-D\><text| is
+      >\<cap\><text|-stable]>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|A,B\<in\>\<frak-D\>> then, as
+      <math|\<frak-D\>> is a <math|\<sigma\>>-algebra, it follows from
+      [theorems: <reference|measure sigma algebra equivalences>,
+      <reference|measure algebra equavalent definition>] <math|>that
+      <math|A<big|cap>B\<in\>\<cal-A\>>.
+
+      <item*|<math|\<Leftarrow\>>>As <math|\<frak-D\>> is a Dynkin system and
+      <math|\<cap\>>-stable we have already that\ 
+
+      <\equation>
+        <label|eq 20.133.202>X\<in\>\<frak-D\><text|,
+        >\<forall\>D\<in\>\<frak-D\><text| we have
+        >X\\D\<in\>\<frak-D\><infix-and>\<forall\>A,B\<in\>\<frak-D\><text|
+        we have >A<big|cap>B\<in\>\<frak-D\>
+      </equation>
+
+      Let <math|<around*|{|D<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<frak-D\>>.
+      Define\ 
+
+      <\equation*>
+        <around*|{|E<rsub|i>|}><rsub|i\<in\>\<bbb-N\>><text| by
+        >E<rsub|i>=<choice|<tformat|<table|<row|<cell|D<rsub|1><text| if
+        >i=1>>|<row|<cell|D<rsub|i><big|cap><around*|(|<big|cap><rsub|j\<in\><around*|{|1,\<ldots\>,i-1|}>><around*|(|X\\D<rsub|j>|)>|)><text|
+        if >i\<in\><around*|{|2,\<ldots\>\<infty\>|}>>>>>><below|\<in\>|<text|[eq:
+        <reference|eq 20.133.202>]>\<wedge\><text|[theorem:
+        <reference|measure union intersection stable>]>>\<frak-D\>
+      </equation*>
+
+      Then <math|\<forall\>i\<in\>\<bbb-N\>> we have
+
+      <\equation>
+        <label|eq 20.134.202>E<rsub|i>=<choice|<tformat|<table|<row|<cell|D<rsub|1>\<subseteq\>D<rsub|i><text|
+        if >i=1>>|<row|<cell|D<rsub|i><big|cap><around*|(|<big|cap><rsub|j\<in\><around*|{|1,\<ldots\>,i-1|}>><around*|(|X\\D<rsub|j>|)>|)>\<subseteq\>D<rsub|i><text|
+        if >i\<in\><around*|{|2,\<ldots\>,\<infty\>|}>>>>>>\<subseteq\>D<rsub|i>
+      </equation>
+
+      so that\ 
+
+      <\equation>
+        <label|eq 20.135.202><big|cup><rsub|i\<in\>\<bbb-N\>>E<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\>>D<rsub|i>
+      </equation>
+
+      If <math|x\<in\><big|cup><rsub|i\<in\>\<bbb-N\>>D<rsub|i>> then there
+      exist a <math|k\<in\>\<bbb-N\>> such that <math|x\<in\>D<rsub|k>>.
+      Define
+
+      <\equation*>
+        S=<around*|{|i\<in\><around*|{|1,\<ldots\>,k|}>\|x\<in\>D<rsub|i>|}>\<subseteq\><around*|{|1,\<ldots\>,k|}>
+      </equation*>
+
+      then <math|k\<in\>S> and <math|S> is finite so that
+      <math|m=min<around*|(|S|)>> exists. For <math|m> we have either:\ 
+
+      <\description>
+        <item*|<math|m=1>>Then <math|x\<in\>D<rsub|1>=E<rsub|1>\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\>>E<rsub|i>>
+
+        <item*|<math|1\<less\>m>>Then <math|x\<in\>D<rsub|m>> and
+        <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,m-1|}>>
+        <math|x\<nin\>D<rsub|i>\<Rightarrow\>x\<in\>X\\D<rsub|i>> so that
+
+        <\equation*>
+          x\<in\>D<rsub|m><big|cap><around*|(|<big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,m-1|}>><around*|(|X\\D<rsub|i>|)>|)>=E<rsub|m>\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\>>E<rsub|i>
+        </equation*>
+      </description>
+
+      Hence <math|<big|cup><rsub|i\<in\>\<bbb-N\>>D<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\>>E<rsub|i>>
+      we have by [eq: <reference|eq 20.135.202>] that\ 
+
+      <\equation>
+        <label|eq 20.136.202><big|cup><rsub|i\<in\>\<bbb-N\>>E<rsub|i>=<big|cup><rsub|i\<in\>\<bbb-N\>>D<rsub|i>
+      </equation>
+
+      Let <math|i,j\<in\>\<bbb-N\>> with <math|i\<neq\>j> then we may always
+      assume that <math|i\<less\>j> [otherwise exchange <math|i> and
+      <math|j>]. Assume that <math|x\<in\>E<rsub|i><big|cap>E<rsub|j>> then
+      <math|x\<in\>E<rsub|i><below|\<subseteq\>|<text|[eq: <reference|eq
+      20.134.202>]>>D<rsub|i>> and \ <math|<rigid|x\<in\>E<rsub|j>=D<rsub|j><big|cap><around*|(|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,j-1|}>><around*|(|X\\D<rsub|k>|)>|)>\<subseteq\><around*|(|X\\D<rsub|i>|)>>>
+      so that we reach the contradiction <rigid|<math|x\<in\>D<rsub|i>> and
+      <math|x\<nin\>D<rsub|i>>>. Hence we have\ 
+
+      <\equation*>
+        \<forall\>i,j\<in\>\<bbb-N\><text| with >i\<neq\>j<text| we have that
+        >E<rsub|i><big|cap>E<rsub|j>=\<varnothing\>
+      </equation*>
+
+      Hence by the definition of a Dynkin system we have that\ 
+
+      <\equation*>
+        <big|cup><rsub|i\<in\>\<bbb-N\>>D<rsub|i>\<equallim\><rsub|<text|[eq:
+        <reference|eq 20.136.202>]>><big|cup><rsub|i\<in\>\<bbb-N\>>E<rsub|i>\<in\>\<frak-D\>
+      </equation*>
+
+      Finally by the above, [eq: <reference|eq 20.133.202>] and [definition:
+      <reference|measure sigma algebra>] it follows that <math|\<frak-D\>> is
+      a <math|\<sigma\>>-algebra on <math|X>.
+    </description>
+  </proof>
+
+  <\theorem>
+    If <math|\<cal-D\>\<subseteq\>\<cal-P\><around*|(|\<cal-A\>|)>> is such
+    that <math|\<forall\>A,B\<in\>\<frak-D\>>
+    <math|A<big|cap>B\<in\>\<cal-D\>> then
+    <math|\<delta\><around*|(|\<cal-D\>|)>=\<sigma\><around*|(|\<cal-D\>|)>>
+  </theorem>
+
+  <\proof>
+    Using [theorem: <reference|measure Dynkin system generated>] it follows
+    that\ 
+
+    <\equation>
+      <label|eq 20.137.202>\<delta\><around*|[|\<cal-D\>|]>\<subseteq\>\<sigma\><around*|[|\<cal-D\>|]>
+    </equation>
+
+    Let <math|D\<in\>\<delta\><around*|[|\<cal-D\>|]>> and define\ 
+
+    <\equation>
+      <label|eq 20.138.202>\<frak-D\><rsub|D>=<around*|{|E\<subseteq\>X\|E<big|cap>D\<in\>\<delta\><around*|[|\<cal-D\>|]>|}>
+    </equation>
+
+    As <math|X\<subseteq\>X> and <math|X\<in\>\<delta\><around*|[|\<cal-D\>|]>>
+    [because <math|\<delta\><around*|[|\<cal-D\>|]>> is a Dynkin system] it
+    follows that\ 
+
+    <\equation>
+      <label|eq 20.139.202>X\<in\>\<frak-D\><rsub|D>
+    </equation>
+
+    Let <math|E\<in\>\<frak-D\><rsub|D>> then <math|X\\E\<subseteq\>X> and\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|X\\<around*|(|<around*|(|E<big|cap>D|)><big|cup><around*|(|X\\D|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|class set difference and union ,
+      intersection>]>>>|<cell|<around*|(|X\\<around*|(|E<big|cap>D|)>|)><big|cap><around*|(|X\\<around*|(|X\\D|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|class inclusion and union and
+      intersection>]>\<wedge\>D\<subseteq\>X>>|<cell|<around*|(|X\\<around*|(|E<big|cap>D|)>|)><big|cap>D>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|class set difference and union ,
+      intersection>]>>>|<cell|<around*|(|<around*|(|X\\E|)><big|cup><around*|(|X\\D|)>|)><big|cap>D>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|class class commutative,idempotent,associative,distributivity>]>>>|<cell|<around*|(|<around*|(|X\\E|)><big|cap>D|)><big|cup><around*|(|<around*|(|X\\D|)><big|cap>D|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|X\\E|)><big|cap>D|)><big|cup>\<varnothing\>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|X\\E|)><big|cap>D>>>>
+    </eqnarray*>
+
+    Further <math|<around*|(|E<big|cap>D|)><big|cap><around*|(|X\\D|)>=\<varnothing\>>
+    so that\ 
+
+    <\equation>
+      <label|eq 20.140.202><around*|(|X\\E|)><big|cap>D=X\\<around*|(|<around*|(|E<big|cap>D|)><big|sqcup><around*|(|X\\D|)>|)>
+    </equation>
+
+    As <math|E\<in\>\<frak-D\><rsub|D>> we have by [eq: <reference|eq
+    20.138.202>] that <math|E<big|cap>D\<in\>\<delta\><around*|[|\<cal-D\>|]>>,
+    further as <math|\<delta\>*<around*|[|\<cal-D\>|]>> is a Dynkin system
+    and <math|D\<in\>\<delta\><around*|[|\<cal-D\>|]>>
+    <math|X\\D\<in\>\<delta\><around*|[|\<cal-D\>|]>> so that
+    <math|<around*|(|E<big|cap>D|)><big|sqcup><around*|(|X\\D|)>\<in\>\<delta\><around*|[|\<cal-D\>|]>>
+    and finally that\ 
+
+    <\equation*>
+      X\\<around*|(|<around*|(|E<big|cap>D|)><big|sqcup><around*|(|X\\D|)>|)>\<in\>\<delta\><around*|[|\<cal-D\>|]>
+    </equation*>
+
+    Hence by [eq: <reference|eq 20.140.202>] it follows that\ 
+
+    <\equation>
+      <label|eq 20.141.202>\<forall\>E\<in\>\<frak-D\><rsub|D><text| that
+      >X\\E\<in\>\<frak-D\><rsub|D>
+    </equation>
+
+    Let <math|<around*|{|D<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<frak-D\><rsub|D>>
+    be pairwise disjoint then <math|\<forall\>i,j\<in\>\<bbb-N\>> with
+    <math|i\<neq\>j> we have <rigid|<math|<around*|(|D<rsub|i><big|cap>D|)><big|cap><around*|(|D<rsub|j><big|cap>D|)>\<subseteq\>D<rsub|i><big|cap>D<rsub|j>=\<varnothing\>>>,
+    further <math|\<forall\>i\<in\>\<bbb-N\>> we have by definition of
+    <math|\<frak-D\><rsub|D>> that <rigid|<math|D<rsub|i><big|cap>D\<in\>\<delta\><around*|[|\<cal-D\>|]>>>.
+    Hence <math|<around*|{|D<rsub|i><big|cap>D|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<delta\><around*|[|\<cal-D\>|]>>
+    is pairwise disjoint, so that, as <math|\<delta\><around*|[|\<cal-D\>|]>>
+    is a Dynkin system, we have \ 
+
+    <\equation*>
+      <around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>D<rsub|i>|)><big|cap>D=<big|sqcup><rsub|i\<in\>\<bbb-N\>><around*|(|D<rsub|i><big|cap>D|)>\<in\>\<delta\><around*|[|\<cal-D\>|]>
+    </equation*>
+
+    proving that\ 
+
+    <\equation>
+      <label|eq 20.142.202><big|sqcup><rsub|i\<in\>\<bbb-N\>>D<rsub|i>\<in\>\<frak-D\><rsub|D>
+    </equation>
+
+    From [eqs: <reference|eq 20.139.202>. <reference|eq 20.141.202> and
+    <reference|eq 20.142.202>] it follows that <math|\<frak-D\><rsub|D>> is a
+    Dynkin system on <math|X>, hence\ 
+
+    <\equation>
+      <label|eq 20.143.202>\<forall\>D\<in\>\<delta\><around*|[|\<cal-D\>|]><text|
+      we have that >\<frak-D\><rsub|D><text| is a Dynkin system>
+    </equation>
+
+    Let <math|G\<in\>\<cal-D\>\<subseteq\>\<delta\><around*|[|\<cal-D\>|]>>
+    then by the hypothesis <math|\<forall\>D\<in\>\<cal-D\>> we have that
+    <math|G<big|cap>D\<in\>\<cal-D\>\<Rightarrow\>D\<in\>\<frak-D\><rsub|G>>,
+    hence <math|\<cal-D\>\<subseteq\>\<frak-D\><rsub|G>>. As
+    <math|\<frak-D\><rsub|G>> is a Dynkin system and
+    <math|\<delta\><around*|[|\<cal-D\>|]>> is the smallest Dynkin system
+    containing <math|\<cal-D\>> it follows that
+    <math|\<delta\><around*|[|\<cal-D\>|]>\<subseteq\>\<frak-D\><rsub|G>>.
+    Hence we have proved that\ 
+
+    <\equation>
+      <label|eq 20.144.202>\<forall\>G\<in\>\<cal-D\><text| we have
+      >\<delta\><around*|[|\<cal-D\>|]>\<subseteq\>\<frak-D\><rsub|G>
+    </equation>
+
+    Let <math|G\<in\>\<cal-D\>> and <math|D\<in\>\<delta\><around*|[|\<cal-D\>|]><below|\<subseteq\>|<text|[eq:
+    <reference|eq 20.144.202>]>>\<frak-D\><rsub|G>> then by the definition of
+    <math|\<frak-D\><rsub|G>> we have <math|G<big|cap>D\<in\>\<delta\><around*|[|\<cal-D\>|]>>
+    so that <math|G\<in\>\<frak-D\><rsub|D>>. In other words
+    <math|\<forall\>D\<in\>\<delta\><around*|[|\<cal-D\>|]>> we have
+    <math|\<forall\>G\<in\>\<cal-D\>> that <math|G\<in\>\<frak-D\><rsub|D>>
+    proving that
+
+    <\equation*>
+      \<forall\>D\<in\>\<delta\><around*|[|\<cal-D\>|]><text| we have
+      >\<cal-D\>\<subseteq\>\<frak-D\><rsub|D>
+    </equation*>
+
+    As <math|\<delta\><around*|[|\<cal-D\>|]>> is the smallest Dynkin system
+    containg <math|\<cal-D\>> and <math|\<frak-D\><rsub|D>> is a Dynkin
+    system [see eq: <reference|eq 20.143.202>] it follows from the above that\ 
+
+    <\equation*>
+      \<forall\>D\<in\>\<delta\><around*|[|\<cal-D\>|]><text| that
+      >\<delta\><around*|[|\<cal-D\>|]>\<subseteq\>\<frak-D\><rsub|D>
+    </equation*>
+
+    Let <math|A,B\<in\>\<delta\><around*|[|\<cal-D\>|]>> then by the above we
+    have <math|A\<in\>\<frak-D\><rsub|B>\<Rightarrowlim\><rsub|<text|[eq:
+    <reference|eq 20.138.202>]>>A<big|cap>B\<in\>\<delta\><around*|[|\<cal-D\>|]>>.
+    Hence by [theorem: <reference|measure Dynkin system condition for sigma
+    algebra>] it follows finally that\ 
+
+    <\equation*>
+      \<delta\><around*|[|\<cal-D\>|]><text| is a >\<sigma\><text|-algebra>
+    </equation*>
+  </proof>
+
+  \;
 
   \;
 
@@ -12853,7 +13179,6 @@
     <associate|auto-45|<tuple|20.4.2|?>>
     <associate|auto-46|<tuple|Dynkim system|?>>
     <associate|auto-47|<tuple|<with|mode|<quote|math>|\<frak-D\>>|?>>
-    <associate|auto-48|<tuple|20.4.3|?>>
     <associate|auto-5|<tuple|<with|mode|<quote|math>|<wide|\<bbb-R\><rsup|>|\<wide-bar\>><rsup|+>>|?>>
     <associate|auto-6|<tuple|<with|mode|<quote|math>|<wide|\<bbb-R\>|\<wide-bar\>><rsup|+><rsub|0>>|?>>
     <associate|auto-7|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|<wide|\<bbb-R\>|\<wide-bar\>><rsup|+><rsub|0>,+|\<rangle\>>>|?>>
@@ -12912,7 +13237,19 @@
     <associate|eq 20.13.156|<tuple|20.13|?>>
     <associate|eq 20.131.202|<tuple|20.131|?>>
     <associate|eq 20.132.202|<tuple|20.132|?>>
+    <associate|eq 20.133.202|<tuple|20.133|?>>
+    <associate|eq 20.134.202|<tuple|20.134|?>>
+    <associate|eq 20.135.202|<tuple|20.135|?>>
+    <associate|eq 20.136.202|<tuple|20.136|?>>
+    <associate|eq 20.137.202|<tuple|20.137|?>>
+    <associate|eq 20.138.202|<tuple|20.138|?>>
+    <associate|eq 20.139.202|<tuple|20.139|?>>
     <associate|eq 20.14.155|<tuple|20.15|?>>
+    <associate|eq 20.140.202|<tuple|20.140|?>>
+    <associate|eq 20.141.202|<tuple|20.141|?>>
+    <associate|eq 20.142.202|<tuple|20.142|?>>
+    <associate|eq 20.143.202|<tuple|20.143|?>>
+    <associate|eq 20.144.202|<tuple|20.144|?>>
     <associate|eq 20.16.156|<tuple|20.16|?>>
     <associate|eq 20.17.156|<tuple|20.17|?>>
     <associate|eq 20.18.156|<tuple|20.18|?>>
@@ -13070,74 +13407,74 @@
     <associate|extended x\<less\>=y then for 0\<less\>=s we have
     s.x\<less\>=s.y|<tuple|20.35|?>>
     <associate|extended x\<less\>=y then x+z\<less\>=y+z|<tuple|20.27|?>>
-    <associate|label 20.147.200|<tuple|20.152|?>>
+    <associate|label 20.147.200|<tuple|20.154|?>>
     <associate|lemma 20.102.202|<tuple|20.102|?>>
-    <associate|lemma 20.119.200|<tuple|20.128|?>>
-    <associate|lemma 20.121.200|<tuple|20.129|?>>
-    <associate|lemma 20.129.200|<tuple|20.137|?>>
-    <associate|lemma 20.132.200|<tuple|20.140|?>>
-    <associate|lemma 20.136.200|<tuple|20.144|?>>
-    <associate|lemma 20.138.200|<tuple|20.146|?>>
-    <associate|lemma 20.139.200|<tuple|20.147|?>>
-    <associate|lemma 20.141.200|<tuple|20.148|?>>
+    <associate|lemma 20.119.200|<tuple|20.130|?>>
+    <associate|lemma 20.121.200|<tuple|20.131|?>>
+    <associate|lemma 20.129.200|<tuple|20.139|?>>
+    <associate|lemma 20.132.200|<tuple|20.142|?>>
+    <associate|lemma 20.136.200|<tuple|20.146|?>>
+    <associate|lemma 20.138.200|<tuple|20.148|?>>
+    <associate|lemma 20.139.200|<tuple|20.149|?>>
+    <associate|lemma 20.141.200|<tuple|20.150|?>>
     <associate|lemma 20.161.201|<tuple|20.101|?>>
-    <associate|lemma 20.171|<tuple|20.172|?>>
-    <associate|lemma 20.172|<tuple|20.172|?>>
-    <associate|lemma 20.172.1|<tuple|20.172|?>>
+    <associate|lemma 20.172.1|<tuple|20.174|?>>
     <associate|lemma 20.78.156|<tuple|20.78|?>>
     <associate|lemma 20.80.156|<tuple|20.80|?>>
     <associate|lemma 20.90.156|<tuple|20.94|?>>
     <associate|lemma 20.95.156|<tuple|20.99|?>>
-    <associate|measure B[R] equivalences|<tuple|20.130|?>>
-    <associate|measure Borel algebra|<tuple|20.122|?>>
-    <associate|measure Borel algebra and closure|<tuple|20.123|?>>
-    <associate|measure Borel algebra on|<tuple|20.130|?>>
-    <associate|measure Borel algebra on R|<tuple|20.130|?>>
-    <associate|measure Borel algebra on R^n|<tuple|20.131|?>>
-    <associate|measure Borel algebra on R^n (equivalences)|<tuple|20.149|?>>
-    <associate|measure Dyadic cubes|<tuple|20.142|?>>
-    <associate|measure Dyadic cubes properties|<tuple|20.145|?>>
-    <associate|measure Dynkin system|<tuple|20.168|?>>
-    <associate|measure Dynkin system P(X)|<tuple|20.171|?>>
-    <associate|measure Dynkin system properties|<tuple|20.170|?>>
-    <associate|measure P(X) is a algebra|<tuple|20.109|?>>
-    <associate|measure P(X) is a ring|<tuple|20.105|?>>
-    <associate|measure P(X) is a sigma algebra|<tuple|20.117|?>>
-    <associate|measure algebra|<tuple|20.107|?>>
-    <associate|measure algebra equavalent definition|<tuple|20.111|?>>
-    <associate|measure algebra properties|<tuple|20.110|?>>
-    <associate|measure begin end|<tuple|20.141|?>>
-    <associate|measure borel algebrat on R|<tuple|20.125|?>>
+    <associate|measure Borel algebra|<tuple|20.124|?>>
+    <associate|measure Borel algebra and closure|<tuple|20.125|?>>
+    <associate|measure Borel algebra on R|<tuple|20.132|?>>
+    <associate|measure Borel algebra on R^n|<tuple|20.133|?>>
+    <associate|measure Borel algebra on R^n (equivalences)|<tuple|20.151|?>>
+    <associate|measure Dyadic cubes|<tuple|20.144|?>>
+    <associate|measure Dyadic cubes properties|<tuple|20.147|?>>
+    <associate|measure Dynkin system|<tuple|20.170|?>>
+    <associate|measure Dynkin system P(X)|<tuple|20.173|?>>
+    <associate|measure Dynkin system condition for sigma
+    algebra|<tuple|20.176|?>>
+    <associate|measure Dynkin system generated|<tuple|20.175|?>>
+    <associate|measure Dynkin system properties|<tuple|20.172|?>>
+    <associate|measure P(X) is a algebra|<tuple|20.111|?>>
+    <associate|measure P(X) is a ring|<tuple|20.107|?>>
+    <associate|measure P(X) is a sigma algebra|<tuple|20.119|?>>
+    <associate|measure algebra|<tuple|20.109|?>>
+    <associate|measure algebra equavalent definition|<tuple|20.113|?>>
+    <associate|measure algebra properties|<tuple|20.112|?>>
+    <associate|measure begin end|<tuple|20.143|?>>
+    <associate|measure borel algebrat on R|<tuple|20.127|?>>
     <associate|measure condition for a algebra to be a sigma
-    algebra|<tuple|20.119|?>>
+    algebra|<tuple|20.121|?>>
     <associate|measure countable additivity implies
-    additivity|<tuple|20.153|?>>
+    additivity|<tuple|20.155|?>>
     <associate|measure countable additivity implies sub
-    additivity|<tuple|20.164|?>>
-    <associate|measure countable union is in sigma algebra|<tuple|20.118|?>>
-    <associate|measure finite measure|<tuple|20.161|?>>
-    <associate|measure generated sigma algebra|<tuple|20.121|?>>
-    <associate|measure half open intervals in R^n|<tuple|20.138|?>>
-    <associate|measure measurable space|<tuple|20.114|?>>
-    <associate|measure measure conditions|<tuple|20.167|?>>
-    <associate|measure measure definition|<tuple|20.154|?>>
-    <associate|measure measure on A\|B|<tuple|20.159|?>>
-    <associate|measure measure on sub sigma algebra|<tuple|20.158|?>>
-    <associate|measure measure space|<tuple|20.156|?>>
-    <associate|measure measure space properties (1)|<tuple|20.160|?>>
-    <associate|measure measure space properties (2)|<tuple|20.165|?>>
-    <associate|measure measure space properties (3)|<tuple|20.166|?>>
-    <associate|measure order on R^n|<tuple|20.132|?>>
-    <associate|measure ring|<tuple|20.103|?>>
-    <associate|measure ring properties|<tuple|20.106|?>>
-    <associate|measure sigma algebra|<tuple|20.112|?>>
-    <associate|measure sigma algebra equivalences|<tuple|20.115|?>>
-    <associate|measure sigma algebra intersection|<tuple|20.120|?>>
-    <associate|measure sigma finite measure space|<tuple|20.163|?>>
-    <associate|measure sub measure space|<tuple|20.124|?>>
-    <associate|measure sum amd scalar product of measures|<tuple|20.157|?>>
-    <associate|measure {empty set} is a ring|<tuple|20.104|?>>
-    <associate|measure {emptyset,set} is a measure|<tuple|20.108|?>>
+    additivity|<tuple|20.166|?>>
+    <associate|measure countable union is in sigma algebra|<tuple|20.120|?>>
+    <associate|measure finite measure|<tuple|20.163|?>>
+    <associate|measure generated sigma algebra|<tuple|20.123|?>>
+    <associate|measure half open intervals in R^n|<tuple|20.140|?>>
+    <associate|measure measurable space|<tuple|20.116|?>>
+    <associate|measure measure conditions|<tuple|20.169|?>>
+    <associate|measure measure definition|<tuple|20.156|?>>
+    <associate|measure measure on A\|B|<tuple|20.161|?>>
+    <associate|measure measure on sub sigma algebra|<tuple|20.160|?>>
+    <associate|measure measure space|<tuple|20.158|?>>
+    <associate|measure measure space properties (1)|<tuple|20.162|?>>
+    <associate|measure measure space properties (2)|<tuple|20.167|?>>
+    <associate|measure measure space properties (3)|<tuple|20.168|?>>
+    <associate|measure order on R^n|<tuple|20.134|?>>
+    <associate|measure ring|<tuple|20.105|?>>
+    <associate|measure ring properties|<tuple|20.108|?>>
+    <associate|measure sigma algebra|<tuple|20.114|?>>
+    <associate|measure sigma algebra equivalences|<tuple|20.117|?>>
+    <associate|measure sigma algebra intersection|<tuple|20.122|?>>
+    <associate|measure sigma finite measure space|<tuple|20.165|?>>
+    <associate|measure sub measure space|<tuple|20.126|?>>
+    <associate|measure sum amd scalar product of measures|<tuple|20.159|?>>
+    <associate|measure union intersection stable|<tuple|20.104|?>>
+    <associate|measure {empty set} is a ring|<tuple|20.106|?>>
+    <associate|measure {emptyset,set} is a measure|<tuple|20.110|?>>
   </collection>
 </references>
 
@@ -13209,6 +13546,10 @@
 
       <tuple|<tuple|<with|mode|<quote|math>|\<sigma\>>-finite measure
       space>|<pageref|auto-44>>
+
+      <tuple|<tuple|Dynkim system>|<pageref|auto-46>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<frak-D\>>>|<pageref|auto-47>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|20<space|2spc>Measures
@@ -13267,7 +13608,7 @@
       properties <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-40>>
 
-      <with|par-left|<quote|1tab>|20.4.2<space|2spc>Dynkin Classes
+      <with|par-left|<quote|1tab>|20.4.2<space|2spc>Carathéodory Theorem
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-45>>
     </associate>
