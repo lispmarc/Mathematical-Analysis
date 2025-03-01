@@ -562,7 +562,7 @@
 
   <\theorem>
     <label|class de Morgan's law><dueto|DeMorgan's Law>For all classes
-    <math|A,B,C> we have\ 
+    <math|A,B> we have\ 
 
     <\enumerate>
       <item><math|<around*|(|A<big|cup>B|)><rsup|c>=A<rsup|c><big|cap>B<rsup|c>>
@@ -595,6 +595,21 @@
       follows then from axiom of extent [axiom: <reference|axiom of extent>]
     </enumerate>
   </proof>
+
+  <\theorem>
+    <label|class subset and complement>Let <math|A,B> be classes such that
+    <math|A\<subseteq\>B> then <math|A<big|cap>B<rsup|c>=\<varnothing\>>
+  </theorem>
+
+  <\proof>
+    Assume that <math|x\<in\>A<big|cap>B<rsup|c>> then
+    <math|x\<in\>A\<wedge\>x\<nin\>B>, as <math|A\<subseteq\>B> we have
+    <math|x\<in\>B> so we reach the contradiction
+    <math|x\<in\>B\<wedge\>x\<nin\>B>. Hence
+    <math|A<big|cap>B<rsup|c>=\<varnothing\>>.
+  </proof>
+
+  \;
 
   <\theorem>
     <label|class class commutative,idempotent,associative,distributivity>Let
@@ -802,7 +817,12 @@
 
       <item>If <math|B\<subseteq\>A> then <math|A\\<around*|(|A\\B|)>=B>
 
-      <item>If <math|B,C\<subseteq\>A><space|1em>then
+      <item>If <math|B\<subseteq\>A> then
+      <math|B\\<around*|(|A\\C|)>=B<big|cap>C>
+
+      <item><math|A<big|cap><around*|(|B\\C|)>=<around*|(|A<big|cap>B|)>\\C>
+
+      <item>If <math|B\<subseteq\>A><space|1em>then
       <math|B<big|cap><around*|(|A\\C|)>=B\\C>
     </enumerate>
   </theorem>
@@ -866,13 +886,37 @@
         <reference|class inclusion and union and intersection>]>>B
       </equation*>
 
+      <item>If <math|B\<subseteq\>A> then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|B\\<around*|(|A\\C|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class difference>]>>>|<cell|B<big|cap><around*|(|A\\C|)><rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class difference>]>>>|<cell|B<big|cap><around*|(|A<big|cap>C<rsup|c>|)><rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class de Morgan's law>]>>>|<cell|B<big|cap><around*|(|A<rsup|c><big|cup><around*|(|C<rsup|c>|)><rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class complement of comploment>]>>>|<cell|B<big|cap><around*|(|A<rsup|c><big|cup>C|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class class commutative,idempotent,associative,distributivity>]>>>|<cell|<around*|(|B<big|cap>A<rsup|c>|)><big|cup><around*|(|B<big|cap>C|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class subset and complement>]>>>|<cell|\<varnothing\><big|cup><around*|(|B<big|cap>C|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class universal and empotyset
+        properties>]>>>|<cell|B<big|cap>C>>>>
+      </eqnarray*>
+
       <item>We have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|B<big|cap><around*|(|A\\C|)>>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|class difference>]>>>|<cell|B<big|cap><around*|(|A<big|cap>C<rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|class class commutative,idempotent,associative,distributivity>]>>>|<cell|<around*|(|B<big|cap>A|)><big|cap>C<rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|B\<subseteq\>A\<wedge\><around*|(|2|)>>>|<cell|B<big|cap>C<rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|class de Morgan's law>]>>>|<cell|B\\C>>>>
+        <tformat|<table|<row|<cell|A<big|cap><around*|(|B\\C|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class difference>]>>>|<cell|A<big|cap><around*|(|B<big|cap>C<rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class class commutative,idempotent,associative,distributivity>]>>>|<cell|<around*|(|A<big|cap>B|)><big|cap>C<rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class difference>]>>>|<cell|<around*|(|A<big|cap>B|)>\\C>>>>
+      </eqnarray*>
+
+      <\equation*>
+        \;
+      </equation*>
+
+      <item>We have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|B<big|cap><around*|(|A\\C|)>>|<cell|\<equallim\><rsub|<around*|(|7|)>>>|<cell|<around*|(|B<big|cap>A|)>\\C>>|<row|<cell|>|<cell|\<equallim\><rsub|B\<subseteq\>A\<wedge\><around*|(|2|)>>>|<cell|B\\C>>>>
       </eqnarray*>
     </enumerate>
 
@@ -14607,18 +14651,18 @@
     <associate|axiom of choice|<tuple|3.101|?>>
     <associate|axiom of construction|<tuple|1.9|?>>
     <associate|axiom of extent|<tuple|1.5|2>>
-    <associate|axiom of infinity|<tuple|1.52|?>>
-    <associate|axiom of pairing|<tuple|1.36|?>>
-    <associate|axiom of power|<tuple|1.64|?>>
-    <associate|axiom of subsets|<tuple|1.54|?>>
-    <associate|axiom of union|<tuple|1.61|?>>
+    <associate|axiom of infinity|<tuple|1.53|?>>
+    <associate|axiom of pairing|<tuple|1.37|?>>
+    <associate|axiom of power|<tuple|1.65|?>>
+    <associate|axiom of subsets|<tuple|1.55|?>>
+    <associate|axiom of union|<tuple|1.62|?>>
     <associate|bijection|<tuple|2.62|?>>
     <associate|bijective classes|<tuple|2.63|?>>
-    <associate|cartesian product|<tuple|1.44|?>>
-    <associate|cartesian product and inclusion|<tuple|1.48|?>>
-    <associate|cartesian product of the empty set|<tuple|1.46|?>>
-    <associate|cartesian product properties (1)|<tuple|1.49|?>>
-    <associate|cartesian product with enpty set|<tuple|1.47|?>>
+    <associate|cartesian product|<tuple|1.45|?>>
+    <associate|cartesian product and inclusion|<tuple|1.49|?>>
+    <associate|cartesian product of the empty set|<tuple|1.47|?>>
+    <associate|cartesian product properties (1)|<tuple|1.50|?>>
+    <associate|cartesian product with enpty set|<tuple|1.48|?>>
     <associate|choice Axiom of choice consequences|<tuple|3.131|?>>
     <associate|choice Hausdorff maximal principle|<tuple|3.122|?>>
     <associate|choice Hausdorff's Maximal Principle|<tuple|3.123|?>>
@@ -14648,30 +14692,31 @@
     <associate|choice product sets empty condition|<tuple|3.107|?>>
     <associate|choice well-order implies Axiom of Choice|<tuple|3.129|?>>
     <associate|class absorption laws|<tuple|1.26|?>>
-    <associate|class class commutative,idempotent,associative,distributivity|<tuple|1.29|?>>
+    <associate|class class commutative,idempotent,associative,distributivity|<tuple|1.30|?>>
     <associate|class complement of comploment|<tuple|1.27|?>>
     <associate|class de Morgan's law|<tuple|1.28|?>>
     <associate|class difference|<tuple|1.24|?>>
     <associate|class empty set|<tuple|1.18|?>>
     <associate|class empty set definition|<tuple|1.16|?>>
     <associate|class empty set is unique|<tuple|1.19|?>>
-    <associate|class general intersection|<tuple|1.60|?>>
-    <associate|class inclusion and union and intersection|<tuple|1.32|?>>
-    <associate|class intersection|<tuple|1.57|?>>
+    <associate|class general intersection|<tuple|1.61|?>>
+    <associate|class inclusion and union and intersection|<tuple|1.33|?>>
+    <associate|class intersection|<tuple|1.58|?>>
     <associate|class intersection, union, inclusion|<tuple|1.25|?>>
     <associate|class not empty sets|<tuple|1.20|?>>
     <associate|class properties (1)|<tuple|1.8|2>>
-    <associate|class set difference and union , intersection|<tuple|1.30|?>>
-    <associate|class trivial union intersection|<tuple|1.58|?>>
-    <associate|class union|<tuple|1.56|?>>
-    <associate|class union{A,B}|<tuple|1.59|?>>
-    <associate|class universal and empotyset properties|<tuple|1.31|?>>
-    <associate|element a=b=\<gtr\>{a}={b}|<tuple|1.34|?>>
-    <associate|element equalitiy of unordered pairs|<tuple|1.39|?>>
-    <associate|element equality of unordered pairs (1)|<tuple|1.40|?>>
+    <associate|class set difference and union , intersection|<tuple|1.31|?>>
+    <associate|class subset and complement|<tuple|1.29|?>>
+    <associate|class trivial union intersection|<tuple|1.59|?>>
+    <associate|class union|<tuple|1.57|?>>
+    <associate|class union{A,B}|<tuple|1.60|?>>
+    <associate|class universal and empotyset properties|<tuple|1.32|?>>
+    <associate|element a=b=\<gtr\>{a}={b}|<tuple|1.35|?>>
+    <associate|element equalitiy of unordered pairs|<tuple|1.40|?>>
+    <associate|element equality of unordered pairs (1)|<tuple|1.41|?>>
     <associate|element is set|<tuple|1.2|?>>
-    <associate|element {a,a}={a}|<tuple|1.37|?>>
-    <associate|element: {a} is a element|<tuple|1.38|?>>
+    <associate|element {a,a}={a}|<tuple|1.38|?>>
+    <associate|element: {a} is a element|<tuple|1.39|?>>
     <associate|empty set property|<tuple|1.17|?>>
     <associate|eq 1.1 001|<tuple|1.1|2>>
     <associate|eq 1.2 001|<tuple|1.2|2>>
@@ -15032,8 +15077,8 @@
     <associate|order well ordering and isomorphism (2)|<tuple|3.96|?>>
     <associate|order well ordering and order isomorphism|<tuple|3.82|?>>
     <associate|order well-rodered class|<tuple|3.81|?>>
-    <associate|pair equality of pairs|<tuple|1.43|?>>
-    <associate|pair of elements|<tuple|1.41|?>>
+    <associate|pair equality of pairs|<tuple|1.44|?>>
+    <associate|pair of elements|<tuple|1.42|?>>
     <associate|partial function|<tuple|2.7|?>>
     <associate|partial function associativity|<tuple|2.21|?>>
     <associate|partial function composition of graphs|<tuple|2.18|?>>
@@ -15051,7 +15096,7 @@
     <associate|partial function set domain range|<tuple|2.12|?>>
     <associate|partial functions image/preimage properties|<tuple|2.17|?>>
     <associate|parttial function graph|<tuple|2.6|?>>
-    <associate|power set|<tuple|1.63|?>>
+    <associate|power set|<tuple|1.64|?>>
     <associate|product|<tuple|2.137|?>>
     <associate|product and intersection|<tuple|2.142|?>>
     <associate|product and power|<tuple|2.144|?>>
@@ -15068,15 +15113,15 @@
     <associate|relation|<tuple|3.1|?>>
     <associate|relation properties|<tuple|3.4|?>>
     <associate|relation trivial|<tuple|3.3|?>>
-    <associate|set A*B|<tuple|1.67|?>>
-    <associate|set A*B is subset of P(P(AUB))|<tuple|1.66|?>>
-    <associate|set element proper class|<tuple|1.50|?>>
+    <associate|set A*B|<tuple|1.68|?>>
+    <associate|set A*B is subset of P(P(AUB))|<tuple|1.67|?>>
+    <associate|set element proper class|<tuple|1.51|?>>
     <associate|set emptyset is not set of empty set|<tuple|2.2|?>>
-    <associate|set extending set with new element|<tuple|1.68|?>>
-    <associate|set intersection of two sets is aset|<tuple|1.55|?>>
-    <associate|set restriction of a set of sets|<tuple|1.65|?>>
-    <associate|set successor set|<tuple|1.51|?>>
-    <associate|set union of two sets is a set|<tuple|1.62|?>>
+    <associate|set extending set with new element|<tuple|1.69|?>>
+    <associate|set intersection of two sets is aset|<tuple|1.56|?>>
+    <associate|set restriction of a set of sets|<tuple|1.66|?>>
+    <associate|set successor set|<tuple|1.52|?>>
+    <associate|set union of two sets is a set|<tuple|1.63|?>>
     <associate|totally ordered class|<tuple|3.40|?>>
     <associate|universal class|<tuple|1.12|?>>
     <associate|universal class property|<tuple|1.13|?>>
