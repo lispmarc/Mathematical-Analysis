@@ -14005,40 +14005,81 @@
         20.171.202>>>>>
       </eqnarray*>
 
-      Taking the limit gives\ 
+      Next\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><rsup|\<ast\>><around*|(|B<big|cap>A<rsub|i>|)>+\<mu\><rsup|\<ast\>><around*|(|B\\<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)><rsub|>>|<cell|=>|<cell|>>|<row|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|<big|sum><rsub|i=1><rsup|n>\<mu\><rsup|\<ast\>><around*|(|B<big|cap>A<rsub|i>|)>|)>+\<mu\><rsup|\<ast\>><around*|(|B\\<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <tformat|<table|<row|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><rsup|\<ast\>><around*|(|B<big|cap>A<rsub|i>|)>+\<mu\><rsup|\<ast\>><around*|(|B\\<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>>|<cell|=>|<cell|>>|<row|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|<big|sum><rsub|i=1><rsup|n>\<mu\><rsup|\<ast\>><around*|(|B<big|cap>A<rsub|i>|)>|)>+\<mu\><rsup|\<ast\>><around*|(|B\\<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|extended limit properties>]>>>|<cell|>>|<row|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|<big|sum><rsub|i=1><rsup|n>\<mu\><rsup|\<ast\>><around*|(|B<big|cap>A<rsub|i>|)>+\<mu\><rsup|\<ast\>><around*|(|B\\<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>|)>>|<cell|<below|\<leqslant\><text|>|<text|[theorem:
         <reference|extended limit properties>]>\<wedge\><text|[eq:
-        <reference|eq 20.171.202>]>>>|<cell|>>|<row|<cell|\<mu\><around*|(|B|)>>|<cell|>|<cell|>>>>
+        <reference|eq 20.171.202>]>>>|<cell|>>|<row|<cell|\<mu\><rsup|\<ast\>><around*|(|B|)>>|<cell|>|<cell|>>>>
       </eqnarray*>
 
-      \;
+      proving that <math|\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-M\><around*|[|\<mu\><rsup|\<ast\>>|]>>
+      and <math|B\<in\>\<cal-P\><around*|(|X|)>>
 
-      \;
+      <\equation>
+        <label|eq 20.172.202><big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><rsup|\<ast\>><around*|(|B<big|cap>A<rsub|i>|)>+\<mu\><rsup|\<ast\>><around*|(|B\\<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>\<leqslant\>\<mu\><rsup|\<ast\>><around*|(|B|)>
+      </equation>
 
-      \;
+      Hence we have for <math|\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-M\><around*|[|\<mu\><rsup|\<ast\>>|]>>
+      and <math|B\<in\>\<cal-P\><around*|(|X|)>> that
 
-      <item>
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<mu\><rsup|\<ast\>><rsub|><around*|(|B<big|cap><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>|)>+\<mu\><rsup|\<ast\>><around*|(|B\\<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>>|<cell|=>|<cell|>>|<row|<cell|\<mu\><rsup|\<ast\>><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>><around*|(|B<big|cap>A<rsub|i>|)>|)>+\<mu\><rsup|\<ast\>><around*|(|B\\<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>>|<cell|<below|\<leqslant\>|\<mu\><rsup|\<ast\>><text|
+        is a outer measure>>>|<cell|>>|<row|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><rsup|\<ast\>><around*|(|B<big|cap>A<rsub|i>|)>+\<mu\><rsup|\<ast\>><around*|(|B\\<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>>|<cell|<below|\<leqslant\>|<text|[eq:
+        <reference|eq 20.172.202>]>>>|<cell|\<mu\><rsup|\<ast\>><around*|(|B|)>>>>>
+      </eqnarray*>
+
+      So by [theorem: <reference|measure measurable set equivalences>] it
+      follows that <math|><math|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>>
+      is <math|\<mu\><rsup|\<star\>>>-measureable. Hence we have proved that\ 
+
+      <\equation>
+        <label|eq 20.173.202>\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-M\><around*|[|\<mu\><rsup|\<ast\>>|]><text|
+        pairwise disjoint we have ><big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-M\><around*|[|\<mu\><rsup|\<ast\>>|]>
+      </equation>
+
+      As <math|\<cal-M\><around*|[|\<mu\><rsup|\<ast\>>|]>> is a algebra [see
+      eq: <reference|eq 20.167.202>] we can use the alternative definition
+      for a <math|\<sigma\>>-algbra [see theorem: <reference|measure sigma
+      algebra equivalences>] and the above to prove that\ 
+
+      <\equation*>
+        \<cal-M\><around*|[|\<mu\><rsup|\<ast\>>|]><text| is a
+        >\<sigma\><text|-algebra>
+      </equation*>
+
+      <item>Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-M\><around*|[|\<mu\><rsup|\<ast\>>|]>>
+      a pairwise disjoint family then for
+      <math|B=<big|sqcup><rsub|j\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-P\><around*|(|X|)>>
+      we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|sum><rsub|i=1><rsup|\<infty\>><around*|(|\<mu\><rsup|\<ast\>>|)><rsub|\|\<cal-M\><around*|[|\<mu\><rsup|\<ast\>>|]>><around*|(|A<rsub|i>|)>>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><rsup|\<ast\>><around*|(|A<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><rsup|\<ast\>><around*|(|<around*|(|<big|cup><rsub|j\<in\>\<bbb-N\>>A<rsub|j>|)><big|cap>A<rsub|i>|)>+0>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><rsup|\<ast\>><around*|(|<around*|(|<big|cup><rsub|j\<in\>\<bbb-N\>>A<rsub|j>|)><big|cap>A<rsub|i>|)>+\<mu\><rsup|\<ast\>><around*|(|<around*|(|<big|cup><rsub|j\<in\>\<bbb-N\>>A<rsub|j>|)>\\<around*|(|<big|cup><rsub|j\<in\>\<bbb-N\>>A<rsub|j>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><rsup|\<ast\>><around*|(|B<big|cap>A<rsub|i>|)>+\<mu\><rsup|\<ast\>><around*|(|B\\<around*|(|<big|cup><rsub|j\<in\>\<bbb-N\>>A<rsub|j>|)>|)>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[eq:
+        <reference|eq 20.172.202>]>>>|<cell|\<mu\><rsup|\<ast\>><around*|(|B|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><rsup|\<ast\>><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<mu\><rsup|\<ast\>>|)><rsub|\|\<cal-M\><around*|[|\<mu\><rsup|\<ast\>>|]>><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>>>>>
+      </eqnarray*>
+
+      As further by the sub-additivity of <math|\<mu\><rsup|\<ast\>>> we have
+
+      <\equation*>
+        <around*|(|\<mu\><rsup|\<ast\>>|)><rsub|\|\<cal-M\><around*|[|\<mu\><rsup|\<ast\>>|]>><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=\<mu\><rsup|\<ast\>><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>\<leqslant\><big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><rsup|\<ast\>><around*|(|A<rsub|i>|)>=<big|sum><rsub|i=1><rsup|\<infty\>><around*|(|\<mu\><rsup|\<ast\>>|)><rsub|\|\<cal-M\><around*|[|\<mu\><rsup|*\<ast\>>|]>><around*|(|A<rsub|i>|)>
+      </equation*>
+
+      it follows that
+
+      <\equation*>
+        <around*|(|\<mu\><rsup|\<ast\>>|)><rsub|\|\<cal-M\><around*|[|\<mu\><rsup|\<ast\>>|]>><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=<big|sum><rsub|i=1><rsup|\<infty\>><around*|(|\<mu\><rsup|\<ast\>>|)><rsub|\|\<cal-M\><around*|[|\<mu\><rsup|*\<ast\>>|]>><around*|(|A<rsub|i>|)>
+      </equation*>
+
+      which together with <math|><math|<around*|(|\<mu\><rsup|\<ast\>>|)><rsub|\|\<cal-M\><around*|[|\<mu\><rsup|\<ast\>>|]>><around*|(|\<varnothing\>|)>=\<mu\><rsup|\<star\>><around*|(|\<varnothing\>|)>=0>
+      it follows that\ 
+
+      <\equation*>
+        <around*|(|\<mu\><rsup|\<ast\>>|)><rsub|\|\<cal-M\><around*|[|\<mu\><rsup|\<ast\>>|]>><text|
+        is a measure on >\<cal-M\><around*|[|\<mu\><rsup|\<ast\>>|]>
+      </equation*>
     </enumerate>
-
-    \;
   </proof>
-
-  \;
-
-  \;
-
-  \;
-
-  \;
-
-  \;
-
-  \;
-
-  \;
 </body>
 
 <\initial>
@@ -14046,7 +14087,7 @@
     <associate|chapter-nr|19>
     <associate|item-nr|>
     <associate|last-item-nr|2>
-    <associate|page-first|1239>
+    <associate|page-first|1241>
     <associate|section-nr|1>
     <associate|subsection-nr|7>
   </collection>
@@ -14206,6 +14247,8 @@
     <associate|eq 20.17.156|<tuple|20.17|?>>
     <associate|eq 20.170.202|<tuple|20.170|?>>
     <associate|eq 20.171.202|<tuple|20.171|?>>
+    <associate|eq 20.172.202|<tuple|20.172|?>>
+    <associate|eq 20.173.202|<tuple|20.173|?>>
     <associate|eq 20.18.156|<tuple|20.18|?>>
     <associate|eq 20.19.156|<tuple|20.19|?>>
     <associate|eq 20.2.155|<tuple|20.2|?>>
