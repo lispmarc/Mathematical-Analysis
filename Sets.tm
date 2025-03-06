@@ -14323,20 +14323,25 @@
       <math|a=b>
 
       <item><math|\<forall\>a,b,c,d> with
-      <math|<around*|[|a,b|]>\<neq\>\<emptyset\>> then we have if
-      <math|<around*|[|a,b|]>=<around*|[|c,d|]>> that <math|a=c\<wedge\>b=d>
+      <math|<around*|[|a,b|]>\<neq\>\<emptyset\>> we have if
+      <math|<around*|[|a,b|]>=<around*|[|c,d|]>> then <math|a=c\<wedge\>b=d>
 
       <item><math|\<forall\>a,b,c,d> with
-      <math|<around*|]|a,b|]>\<neq\>\<emptyset\>> then we have if
-      <math|<around*|]|a,b|]>=<around*|]|c,d|]>> that <math|a=c\<wedge\>b=d>
+      <math|<around*|]|a,b|]>\<neq\>\<emptyset\>> we have if
+      <math|<around*|]|a,b|]>=<around*|]|c,d|]>> then <math|a=c\<wedge\>b=d>
 
       <item><math|\<forall\>a,b,c,d> with
-      <math|<around*|[|a,b|[>\<neq\>\<emptyset\>> then we have if
-      <math|<around*|[|a,b|[>=<around*|[|c,d|[>> that <math|a=c\<wedge\>b=d>
+      <math|<around*|[|a,b|[>\<neq\>\<emptyset\>> we have if
+      <math|<around*|[|a,b|[>=<around*|[|c,d|[>> then <math|a=c\<wedge\>b=d>
 
       <item><math|\<forall\>a,b,c,d> with
-      <math|<around*|]|a,b|[>\<neq\>\<emptyset\>> then we have if
-      <math|<around*|]|a,b|[>=<around*|]|c,d|[>> that <math|a=c\<wedge\>b=d>
+      <math|<around*|]|a,b|[>\<neq\>\<emptyset\>> we have if
+      <math|<around*|]|a,b|[>=<around*|]|c,d|[>> then <math|a=c\<wedge\>b=d>
+
+      <item><math|\<forall\>a,b,c,d> with
+      <math|<around*|[|a,b|[>\<neq\>\<varnothing\>> we have if
+      <math|<around*|[|a,b|[>\<subseteq\><around*|[|c,d|[><text| >>then
+      <math|c\<leqslant\>a\<wedge\>b\<leqslant\>d>
     </enumerate>
   </theorem>
 
@@ -14491,6 +14496,32 @@
 
       <\equation*>
         b=d
+      </equation*>
+
+      <item>As <math|<around*|[|a,b|[>\<neq\>\<varnothing\>>
+      <math|a\<less\>b> so that <math|a\<in\><around*|[|a,b|[>\<subseteq\><around*|[|c,d|[>>
+      hence
+
+      <\equation*>
+        c\<leqslant\>a
+      </equation*>
+
+      Assume that <math|d\<less\>a> then, as
+      <math|a\<in\><around*|[|a,b|[>\<subseteq\><around*|[|c,d|[>>, we have
+      <math|a\<less\>d> leading to the contradiction <math|d\<less\>d> hence
+      we must have\ 
+
+      <\equation*>
+        a\<leqslant\>d
+      </equation*>
+
+      Assume that <math|d\<less\>b> then by the above we have
+      <math|a\<leqslant\>d\<less\>b> so that
+      <math|d\<in\><around*|[|a,b|[>\<subseteq\><around*|[|c,d|[>> leading to
+      the contradiction <math|d\<less\>d>. Hence we must have\ 
+
+      <\equation*>
+        b\<leqslant\>d
       </equation*>
     </enumerate>
   </proof>
