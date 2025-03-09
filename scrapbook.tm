@@ -4872,6 +4872,499 @@
   \;
 
   \;
+
+  <\lemma>
+    <label|lemma 20.206.204>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|{|I<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-I\><rsub|<around*|[||[>>>
+    is such that <math|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>\<in\>\<cal-I\><rsub|<around*|[||[>>>
+    then <math|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>=<around*|[|a,b|[>>
+    where <math|a=min<around*|(|<around*|{|begin<around*|(|I<rsub|i>|)>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>>
+    and <math|b=max<around*|(|<around*|{|end<around*|(|I<rsub|i>|)>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>>
+  </lemma>
+
+  <\proof>
+    If <math|x\<in\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>>
+    then there exist a <math|i\<in\><around*|{|1,\<ldots\>,n|}>> such that
+    <math|x\<in\>I<rsub|i>=<around*|[|begin<around*|(|I<rsub|i>|)>,end<around*|(|I<rsub|i>|)>|[>>,
+    hence <math|begin<around*|(|I<rsub|i>|)>\<leqslant\>x\<less\>end<around*|(|I<rsub|i>|)>>,
+    as <math|>
+
+    <\equation*>
+      a=min<around*|(|<around*|{|begin<around*|(|I<rsub|i>|)>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>\<leqslant\>begin<around*|(|I<rsub|i>|)>
+    </equation*>
+
+    <\equation*>
+      end<around*|(|I<rsub|i>|)>\<leqslant\>max<around*|(|<around*|{|end<around*|(|I<rsub|i>|)>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>=b
+    </equation*>
+
+    it follows that <math|a\<leqslant\>x\<less\>b> or
+    <math|x\<in\><around*|[|a,b|[>>. Hence we have that\ 
+
+    <\equation>
+      <label|eq 20.208.204><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>\<subseteq\><around*|[|a,b|[>
+    </equation>
+
+    As <math|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>\<in\>\<cal-S\><rsub|<around*|[||[>>>
+    there exist <math|c,d\<in\>\<bbb-R\>> with <math|c\<less\>d> such that\ 
+
+    <\equation>
+      <label|eq 20.209.204><around*|[|c,d|[>=<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>\<subseteq\><around*|[|a,b|[><text|
+      so that by [theorem: <reference|generalized intervals and boundaries>]
+      >a\<leqslant\>c\<wedge\>d\<leqslant\>b
+    </equation>
+
+    As <math|a=min<around*|(|<around*|{|begin<around*|(|I<rsub|i>|)>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>>
+    then there exist <math|l\<in\>I> such that
+    <math|a=begin<around*|(|I<rsub|l>|)>\<less\>end<around*|(|I<rsub|l>|)>>
+    so that <math|a\<in\>I<rsub|l>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|l>=<around*|[|c,d|[>>
+    so that <math|c\<leqslant\>a>, combining this with [eq: <reference|eq
+    20.200.204>] proves\ 
+
+    <\equation*>
+      a=c
+    </equation*>
+
+    As <math|b=max<around*|(|<around*|{|end<around*|(|I<rsub|i>|)>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>>
+    there exist a <math|k\<in\><around*|{|1,\<ldots\>,n|}>> such that
+    <math|b=end<around*|(|I<rsub|k>|)>>, hence
+    <math|<rigid|<around*|[|begin<around*|(|I<rsub|k>|)>,end<around*|(|I<rsub|k>|)>|[>=I<rsub|k>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|l>=<around*|[|c,d|[>>>
+    so that by [theorem: <reference|generalized intervals and boundaries>]
+    <math|b=end<around*|(|I<rsub|k>|)>\<leqslant\>d>. Combining this with
+    [eq: <reference|eq 20.209.204>] proves finally that\ 
+
+    <\equation*>
+      b=d
+    </equation*>
+
+    proving that\ 
+
+    <\equation*>
+      <big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>=<around*|[|a,b|[>
+    </equation*>
+
+    \;
+  </proof>
+
+  <\lemma>
+    <label|lemma 20.207.204>Let <math|n\<in\><around*|{|2,\<ldots\>,\<infty\>|}>>,
+    <math|<around*|{|I<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-I\><rsub|<around*|[||[>>>
+    pairwise disjoint such that <math|<rigid|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>\<in\>\<cal-I\><rsub|<around*|[||[>>>>
+    then there exist a bijection <math|\<sigma\>:<around*|{|1,\<ldots\>,n|}>\<rightarrow\><around*|{|1,\<ldots\>,n|}>>
+    such that\ 
+
+    <\equation*>
+      <big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>I<rsub|\<sigma\><around*|(|i|)>>\<in\>\<cal-S\><rsub|<around*|[||[>><text|
+      and ><big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>=<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|\<sigma\><around*|(|i|)>>=<around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>I<rsub|\<sigma\><around*|[|i|]>>|)><big|sqcup>I<rsub|\<sigma\><around*|(|n|)>>
+    </equation*>
+
+    \ 
+  </lemma>
+
+  <\proof>
+    By [lemma: <reference|lemma 20.207.204>] we have that
+    <math|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>=<around*|[|a,b|[>>
+    with <math|b=max<around*|(|<around*|{|end<around*|(|I<rsub|i>|)>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>>,
+    so there exist a <math|k\<in\><around*|{|1,\<ldots\>,n|}>> such that
+    <math|b=end<around*|(|I<rsub|k>|)>>. Take
+    <math|\<sigma\>=<around*|(|n\<leftrightarrowlim\><rsub|n>k|)>:<around*|{|1,\<ldots\>,n|}>\<rightarrow\><around*|{|1,\<ldots\>,n|}>>
+    [see definition: <reference|permutation transposition>]. Then
+    <math|\<sigma\><around*|(|n|)>=k> so that
+
+    <\equation>
+      <label|eq 20.210.204><big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|\<sigma\><around*|(|i|)>>\<equallim\><rsub|<text|[theorem:
+      <reference|family union of family set and
+      surjections>]>><big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>=<around*|[|a,b|[><text|
+      where >end<around*|(|I<rsub|\<sigma\><around*|[|n|]>>|)>=b
+    </equation>
+
+    Let <math|x\<in\><around*|[|a,begin<around*|(|I<rsub|\<sigma\><around*|(|n|)>>|)>|[>>
+    then <math|x\<in\><around*|[|a,b|[>> and
+    <math|x\<less\>begin<around*|(|I<rsub|\<sigma\><around*|(|n|)>>|)>> so
+    that <math|x\<nin\><around*|[|begin<around*|(|I<rsub|\<sigma\><around*|(|n|)>>|)>,b|[>>
+    hence\ 
+
+    <\equation>
+      <label|eq 20.211.204><around*|[|a,begin<around*|(|I<rsub|\<sigma\><around*|(|n|)>>|)>|[>\<subseteq\><around*|[|a,b|[>\\<around*|[|begin<around*|(|I<rsub|\<sigma\><around*|(|n|)>>|)>,b|[>
+    </equation>
+
+    If <math|x\<in\><around*|[|a,b|[>\\<around*|[|begin<around*|(|I<rsub|\<sigma\><around*|(|n|)>>|)>,b|[>>
+    then <math|a\<leqslant\>x\<less\>b> and we have either
+    <math|x\<geqslant\>begin<around*|(|I<rsub|\<sigma\><around*|(|n|)>>|)>>
+    or <math|b\<less\>x>. The only choice that not conflicts with
+    <math|a\<leqslant\>x\<less\>b> is <math|x\<geqslant\>begin<around*|(|I<rsub|\<sigma\><around*|(|n|)>>|)>>
+    so that <math|x\<in\><around*|[|begin<around*|(|I<rsub|\<sigma\><around*|(|i|)>>|)>,b|[>>
+    hence <math|<around*|[|a,b|[>\\<around*|[|begin<around*|(|I<rsub|\<sigma\><around*|(|n|)>>|)>,b|[>\<subseteq\><around*|[|begin<around*|(|I<rsub|\<sigma\><around*|(|i|)>>|)>,b|[>>.
+    Combining this with [eq: <reference|eq 20.211.204>] results in\ 
+
+    <\equation>
+      <label|eq 20.212.204><around*|[|a,begin<around*|(|I<rsub|\<sigma\><around*|(|n|)>>|)>|[>=<around*|[|a,b|[>\\<around*|[|begin<around*|(|I<rsub|\<sigma\><around*|(|n|)>>|)>,b|[>\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.210.204>]>><around*|[|a,b|[>\\I<rsub|\<sigma\><around*|(|n|)>>
+    </equation>
+
+    Let <math|x\<in\><big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>I<rsub|\<sigma\><around*|(|i|)>>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|\<sigma\><around*|(|i|)>>>
+    then there exist a <math|i\<in\><around*|{|1,\<ldots\>,n-1|}>> such that
+    <math|x\<in\>I<rsub|\<sigma\><around*|(|i|)>>>, as
+    <math|<rigid|i\<neq\>n\<Rightarrowlim\><rsub|\<sigma\><text| is a
+    bijection>>\<sigma\><around*|(|i|)>\<neq\>\<sigma\><around*|(|j|)>>> we
+    have that <math|x\<nin\>I<rsub|\<sigma\><around*|(|n|)>>>, hence
+    <math|x\<in\><big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|\<sigma\><around*|(|i|)>>\\I<rsub|\<sigma\><around*|(|n|)>>>.
+    So\ 
+
+    <\equation>
+      <label|eq 20.213.204><big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>I<rsub|\<sigma\><around*|(|i|)>>\<subseteq\><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|\<sigma\><around*|(|i|)>>|)>\\I<rsub|\<sigma\><around*|(|n|)>>
+    </equation>
+
+    If <math|x\<in\><around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|\<sigma\><around*|(|i|)>>|)>\\I<rsub|\<sigma\><around*|(|n|)>>>
+    then there exist <math|i\<in\><around*|{|1,\<ldots\>,n|}>> such that
+    <math|x\<in\>I<rsub|\<sigma\><around*|(|i|)>>> and
+    <math|x\<nin\>I<rsub|\<sigma\><around*|(|n|)>>> from which it follows
+    that <math|i\<neq\>n>, hence <math|i\<in\><around*|{|n-1|}>> so that
+    <math|x\<in\><big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>I<rsub|i>>.
+    So <math|<rigid|<around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|\<sigma\><around*|(|i|)>>|)>\\I<rsub|\<sigma\><around*|(|n|)>>>\<subseteq\><big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>I<rsub|\<sigma\><around*|(|i|)>>>
+    which combined with [eq: <reference|eq 20.213.204>] proves that\ 
+
+    <\equation*>
+      <big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>I<rsub|\<sigma\><around*|(|i|)>>=<around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|\<sigma\><around*|(|i|)>>|)>\\I<rsub|\<sigma\><around*|(|n|)>>\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.210.204>]>><around*|[|a,b|[>\\I<rsub|\<sigma\><around*|(|n|)>>\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.212.204>]>><around*|[|a,begin<around*|(|I<rsub|\<sigma\><around*|(|n|)>>|)>|[>
+    </equation*>
+
+    As <math|\<varnothing\>\<neq\>I<rsub|\<sigma\><around*|(|1|)>>\<subseteq\><big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>I<rsub|\<sigma\><around*|(|i|)>>=<around*|[|a,begin<around*|(|I<rsub|\<sigma\><around*|(|n|)>>|)>|]>>
+    we have that <math|><math|<around*|[|a,begin<around*|(|I<rsub|\<sigma\><around*|(|n|)>>|)>|[>\<in\>\<cal-I\><rsub|<around*|[||[>>>.
+    Hence we have that\ 
+
+    <\equation*>
+      <big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>I<rsub|\<sigma\><around*|(|i|)>>\<in\>\<cal-I\><rsub|<around*|[||[>>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      <big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>=<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|\<sigma\><around*|(|i|)>>=<around*|(|<around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|\<sigma\><around*|(|i|)>>|)>\\I<rsub|\<sigma\><around*|(|i|)>>|)><big|sqcup>I<rsub|\<sigma\><around*|(|n|)>>=
+    </equation*>
+
+    \ <math|>
+
+    \ 
+  </proof>
+
+  <\lemma>
+    <label|lemma 20.208.204>Let <math|I<rsub|1>,I<rsub|2>\<in\>\<cal-I\><rsub|<around*|[||[>>>
+    be such that <math|I<rsub|1><big|cap>I<rsub|2>=\<varnothing\>> and
+    <math|I<rsub|1><big|sqcup>I<rsub|2>\<in\>\<cal-I\><rsub|<around*|[||[>>>
+    then <math|l<around*|(|I<rsub|1><big|sqcup>I<rsub|2>|)>=l<around*|(|I<rsub|1>|)>+l<around*|(|I<rsub|2>|)>>
+  </lemma>
+
+  <\proof>
+    As <math|I<rsub|1>>, <math|I<rsub|2>>,
+    <math|\<in\>\<cal-I\><rsub|<around*|[||[>>> there exist
+    <math|a,b,c,d\<in\>\<bbb-R\>> with <math|a\<less\>b\<wedge\>c\<less\>d\<wedge\>e\<less\>f>
+    such that\ 
+
+    <\equation*>
+      I<rsub|1>=<around*|[|a,b|[><text|, >I<rsub|2>=<around*|[|c,d|[>
+    </equation*>
+
+    Further as <math|><math|I<rsub|1><big|sqcup>I<rsub|2>\<in\>\<cal-I\><rsub|<around*|[||[>>>
+    it follows from [lemma: <reference|lemma 20.206.204>] that\ 
+
+    <\equation*>
+      I<rsub|1><big|sqcup>I<rsub|2>=<around*|[|e,f|[><text| where
+      >e=min<around*|(|a,c|)><text| and >f=max<around*|(|b,d|)>
+    </equation*>
+
+    If <math|a=c> then <math|a\<in\><around*|[|a,b|[>=I<rsub|1>> and
+    <math|a=c\<in\><around*|[|c,d|[>=I<rsub|2>> so that
+    <math|a\<in\>I<rsub|1><big|cap>I<rsub|2>=\<varnothing\>> which is a
+    contradiction. Hence we must have that <math|a\<neq\>c> and we can always
+    assume that <math|a\<less\>c> [otherwise excabge <math|I<rsub|1>> and
+    <math|I<rsub|2>>. If <math|c\<less\>b> then
+    <math|c\<in\><around*|[|a,b|[>> which as <math|c\<in\><around*|[|c,d|[>>
+    would mean that <math|c\<in\>I<rsub|1><big|cap>I<rsub|2>=\<varnothing\>>
+    a contradiction. Hence we must have that
+
+    <\equation>
+      <label|eq 20.214.204>b\<leqslant\>c
+    </equation>
+
+    As <math|c\<less\>d> we have that <math|b\<less\>d> so that
+    <math|e=min<around*|(|a,c|)>=a> and <math|f=max<around*|(|b,d|)>=d> and
+    we have that\ 
+
+    <\equation>
+      <label|eq 20.215.204>I<rsub|1><big|sqcup>I<rsub|2>=<around*|[|a,d|[>
+    </equation>
+
+    As <math|a\<less\>b\<leqslant\>c\<less\>d> it follows from the above that
+    <math|I<rsub|1><big|sqcup>I<rsub|2>>, as <math|b\<nless\>b> we have
+    <math|b\<nin\><around*|[|a,b|[>=I<rsub|1>> so that we must have that
+    <math|b\<in\>I<rsub|2>> hence <math|c\<leqslant\>b>. Combining this with
+    [eq: <reference|eq 20.214.204>] proves that\ 
+
+    <\equation>
+      <label|eq 20.216.204>b=c
+    </equation>
+
+    Finaly we have that\ 
+
+    <\equation*>
+      l<around*|(|I<rsub|1><big|sqcup>I<rsub|2>|)>=l<around*|(|<around*|[|a,d|[>|)>=d-a=d-b+b-a\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.216.204>]>>d-c+b-a=l<around*|(|I<rsub|2>|)>+l<around*|(|I<rsub|1>|)>=l<around*|(|I<rsub|1>|)>+l<around*|(|I<rsub|2>|)>
+    </equation*>
+  </proof>
+
+  We use now mathematical induction to extend the above reasult.
+
+  <\lemma>
+    <label|lemma 20.209.204>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|{|I<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-I\><rsub|<around*|[||[>>>
+    pairwise disjoint such that <math|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>\<in\>\<cal-I\><rsub|<around*|[||[>>>
+    then\ 
+
+    <\equation*>
+      l<around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>|)>=<big|sum><rsub|i=1><rsup|n>l<around*|(|I<rsub|i>|)>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    We use induction to prove this, so take\ 
+
+    <\equation*>
+      \<cal-S\>=<around*|{|n\<in\>\<bbb-N\>\|<text|If
+      ><around*|{|I<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-I\><rsub|<around*|[||[>><text|
+      is pairwise disjoint and ><big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>\<in\>\<cal-I\><rsub|<around*|[||[>><text|
+      then ><rigid|l<around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>|)>=<big|sum><rsub|i=1><rsup|n>l<around*|(|I<rsub|i>|)>>|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|1\<in\>S>>If <math|<around*|{|I<rsub|i>|}><rsub|i\<in\><around*|{|1|}>>\<subseteq\>\<cal-I\><rsub|<around*|[||[>>>
+      then we have <math|l<around*|(|<big|sqcup><rsub|i\<in\><around*|{|1|}>>I<rsub|1>|)>=l<around*|(|I<rsub|1>|)>=<big|sum><rsub|i=1><rsup|1>l<around*|(|I<rsub|i>|)>>
+      so that <math|1\<in\>S>.
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>\<bbb-N\>>>Let
+      <math|<around*|{|I<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>\<cal-I\><rsub|<around*|[||[>>>
+      pairwise disjoint such that <math|<rigid|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>I<rsub|i>\<in\>\<cal-I\><rsub|<around*|[||[>>>>.
+      As <math|n+1\<in\><around*|{|2,\<ldots\>,\<infty\>|}>> we can use
+      [lemma: <reference|lemma 20.207.204>] to find a bijection
+
+      <\equation*>
+        \<sigma\>:<around*|{|1,\<ldots\>,n+1|}>\<rightarrow\><around*|{|1,\<ldots\>,n+1|}>
+      </equation*>
+
+      such that
+
+      <\equation>
+        <label|eq 20.217.204><big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|\<sigma\><around*|[|i|]>>\<in\>\<cal-S\><rsub|<around*|[||[>>
+      </equation>
+
+      <\equation>
+        <label|eq 20.218.204><text| ><big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>I<rsub|i>=<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>I<rsub|\<sigma\><around*|(|i|)>>=<around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|\<sigma\><around*|(|i|)>>|)><big|sqcup>I<rsub|\<sigma\><around*|(|n+1|)>>
+      </equation>
+
+      As <math|n\<in\>S> we have that\ 
+
+      <\equation>
+        <label|eq 20.219.204>l<around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|\<sigma\><around*|(||)>>|)>=<big|sum><rsub|i=1><rsup|n>l<around*|(|I<rsub|\<sigma\><around*|(|i|)>>|)>
+      </equation>
+
+      Further we have as <math|<around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|\<sigma\><around*|(|i|)>>|)><big|cap>I<rsub|\<sigma\><around*|(|n+1|)>>=<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|I<rsub|\<sigma\><around*|(|i|)>><big|cap>I<rsub|\<sigma\><around*|(|n+1|)>>|)>=\<varnothing\>>
+      so that by [lemma: <reference|lemma 20.208.204>]\ 
+
+      <\equation>
+        <label|eq 20.220.204>l<around*|(|<around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|\<sigma\><around*|(|i|)>>|)><big|sqcup>I<rsub|\<sigma\><around*|(|n+1|)>>|)>=l<around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|\<sigma\><around*|(|i|)>>|)>+l<around*|(|I<rsub|\<sigma\><around*|(|n+1|)>>|)>
+      </equation>
+
+      Next\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|l<around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>I<rsub|i>|)>>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 20.218.204>]>>>|<cell|l<around*|(|<around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|\<sigma\><around*|(|i|)>>|)><big|sqcup>I<rsub|\<sigma\><around*|(|n+1|)>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 20.220.204>>>>|<cell|l<around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|\<sigma\><around*|(|i|)>>|)>+l<around*|(|I<rsub|\<sigma\><around*|(|n+1|)>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 20.219.204>]>>>|<cell|<big|sum><rsub|i=1><rsup|n>l<around*|(|I<rsub|\<sigma\><around*|(|i|)>>|)>+l<around*|(|I<rsub|\<sigma\><around*|(|n+1|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n+1>l<around*|(|I<rsub|\<sigma\><around*|(|i|)>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum commutativity>]>>>|<cell|<big|sum><rsub|i=1><rsup|n+1>l<around*|(|I<rsub|i>|)>>>>>
+      </eqnarray*>
+
+      which proves that <math|n+1\<in\>S>.
+    </description>
+  </proof>
+
+  We extend now the above theorem from <math|\<cal-I\><rsub|<around*|[||[>>>
+  to <math|\<cal-S\><rsub|<around*|[||[>>> proving that <math|l> is additive
+  on the semi-ring <math|\<cal-S\><rsub|<around*|[||[>>>.
+
+  <\corollary>
+    Let <math|n\<in\>\<bbb-N\>>, <math|<around*|{|I<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-S\><rsub|<around*|[||[>>>
+    pairwise disjoint such that <math|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>\<in\>\<cal-S\><rsub|<around*|[||[>>>
+    then
+
+    <\equation*>
+      l<around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>|)>=<big|sum><rsub|i=1><rsup|n>l<around*|(|I<rsub|i>|)>
+    </equation*>
+  </corollary>
+
+  <\proof>
+    Let <math|N=<around*|{|i\<in\><around*|{|1,\<ldots\>,n|}>\|I<rsub|i>\<neq\>\<varnothing\>|}>>
+    then we have either:\ 
+
+    <\description>
+      <item*|<math|N=\<varnothing\>>>Then\ 
+
+      <\equation*>
+        l<around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>|)>=l<around*|(|\<varnothing\>|)>=0=<big|sum><rsub|i=1><rsup|n>0=<big|sum><rsub|i=1><rsup|n>l<around*|(|I<rsub|i>|)>
+      </equation*>
+
+      <item*|<math|N\<neq\>\<varnothing\>>>Then as
+      <math|\<varnothing\>\<neq\>N> is finite there exist a bijection
+      <math|m\<in\><around*|{|1,\<ldots\>,n|}>> and a bijection
+      <math|<rigid|\<beta\>:<around*|{|1,\<ldots\>,m|}>\<rightarrow\>N>>.
+      Further we have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|l<around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|family union intersection and empty
+        set>]>>>|<cell|l<around*|(|<big|sqcup><rsub|i\<in\>N>I<rsub|i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|family union of family set and
+        surjections>]>>>|<cell|l<around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>I<rsub|\<sigma\><around*|(|i|)>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+        <reference|lemma 20.209.204>]>>>|<cell|<big|sum><rsub|i=1><rsup|m>l<around*|(|I<rsub|\<sigma\><around*|(|i|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>l<around*|(|I<rsub|\<sigma\><around*|(|i|)>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|sum bijection on index>]>>>|<cell|<big|sum><rsub|i\<in\>N>l<around*|(|I<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\>N>l<around*|(|I<rsub|i>|)>+<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>\\N>0>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\>N>l<around*|(|I<rsub|i>|)>+<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>\\N>l<around*|(|I<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>l<around*|(|I<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n>l<around*|(|I<rsub|i>|)>>>>>
+      </eqnarray*>
+    </description>
+
+    So in all cases we have\ 
+
+    <\equation*>
+      l<around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>|)>=<big|sum><rsub|i=1><rsup|n>l<around*|(|I<rsub|i>|)>
+    </equation*>
+  </proof>
+
+  <\lemma>
+    <label|lemma 20.211.204>Let <math|I,J\<in\>\<cal-S\><rsub|<around*|[||[>>>
+    such that <math|I\<subseteq\>J> then <math|l<around*|(|I|)>\<leqslant\>l<around*|(|J|)>>
+    [in other words <math|l> is sub-additive].
+  </lemma>
+
+  <\proof>
+    As <math|\<cal-S\><rsub|<around*|[||[>>=\<cal-I\><rsub|<around*|[||[>><big|cup><around*|{|\<varnothing\>|}>>
+    we have for <math|I> either:\ 
+
+    <\description>
+      <item*|<math|I=\<varnothing\>>>Then
+      <math|l<around*|(|I|)>=0\<leqslant\>l<around*|(|J|)>>.
+
+      <item*|<math|I\<neq\>\<varnothing\>>>Then as <math|I\<subseteq\>J>
+      <math|J\<neq\>\<varnothing\>> so that
+      <math|I,J\<in\>\<cal-I\><rsub|<around*|[||[>>> and there exist a
+      <math|a,b,c,d\<in\>\<bbb-R\>> with <math|a\<less\>b\<wedge\>c\<less\>d>
+      such that <math|I=<around*|[|a,b|[>\<wedge\>J=<around*|[|c,d|[>>.
+      Applying then [theorem: <reference|generalized intervals and
+      boundaries>(9)] we have that <math|c\<leqslant\>a\<wedge\>b\<leqslant\>d>
+      hence <math|l<around*|(|I|)>=b-a\<leqslant\>d-c=l<around*|(|J|)>>.
+    </description>
+  </proof>
+
+  Having established additivity of <math|l> on the semi-ring
+  <math|\<cal-S\><rsub|<around*|[||[>>> we prove that is a pre-measure.
+
+  <\theorem>
+    <label|measure length function is a pre-measure>The function
+    <math|l:\<cal-S\><rsub|<around*|[||[>>\<rightarrow\><around*|[|0,\<infty\>|]>>
+    is a pre-measure on the semi-ring <math|\<cal-S\><rsub|<around*|[||[>>>
+  </theorem>
+
+  <\proof>
+    We have:\ 
+
+    <\enumerate>
+      <item><math|l<around*|(|\<varnothing\>|)>\<equallim\><rsub|def>0>
+
+      <item>Let <math|<around*|{|I<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-S\><rsub|<around*|[||[>>>
+      be pairwise disjoint such that <math|<big|sqcup><rsub|i\<in\>\<bbb-N\>>I<rsub|i>\<in\>\<cal-S\><rsub|<around*|[||[>>>.
+      For <math|<big|sqcup><rsub|i\<in\>\<bbb-N\>>I<rsub|i>> we have either:\ 
+
+      <\description>
+        <item*|<math|<big|sqcup><rsub|i\<in\>\<bbb-N\>>I<rsub|i>=\<varnothing\>>>Then
+        <math|\<forall\>i\<in\>\<bbb-N\>> we have
+        <math|I<rsub|i>=\<varnothing\>> so that
+        <math|<big|sum><rsub|i=1><rsup|\<infty\>>l<around*|(|I<rsub|i>|)>=<big|sum><rsub|i=1><rsup|\<infty\>>0=0=l<around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>I<rsub|i>|)>>
+
+        <item*|<math|<big|sqcup><rsub|i\<in\>\<bbb-N\>>I<rsub|i>\<neq\>\<varnothing\>>>Then
+        \ <math|<big|sqcup><rsub|i\<in\>\<bbb-N\>>I<rsub|i>\<in\>\<cal-I\><rsub|<around*|[||[>>>
+        and there exist <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b> such
+        that\ 
+
+        <\equation*>
+          <big|sqcup><rsub|i\<in\>\<bbb-N\>>I<rsub|i>=<around*|[|a,b|[>
+        </equation*>
+
+        Let <math|n\<in\>\<bbb-N\>> then we have either
+        <math|I<rsub|n>\<in\>\<cal-I\><rsub|<around*|[||[>>\<Rightarrow\>I<rsub|n>=<around*|[|a<rsub|n>,b<rsub|n>|[>>,
+        <math|a<rsub|n>,b<rsub|n>\<in\>\<bbb-R\><text|>> with
+        <math|a<rsub|n>\<less\>b<rsub|n>> or
+        <math|I<rsub|n>=\<varnothing\>=<around*|[|a<rsub|n>,b<rsub|n>|[>>
+        where <math|a<rsub|n>=b<rsub|n>=0>. In other words we have that\ 
+
+        <\equation*>
+          \<forall\>n\<in\>\<bbb-N\><text| that
+          >I<rsub|n>=<around*|[|a<rsub|n>,b<rsub|n>|[><text| where
+          <math|a<rsub|n>,b<rsub|n>\<in\>\<bbb-R\><text| with
+          >a<rsub|n>\<leqslant\>b<rsub|n>>>
+        </equation*>
+
+        Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> such that
+        <math|0\<less\>\<varepsilon\>\<less\>b-a>. Define
+
+        <\equation*>
+          <around*|{|I<rsup|><rsub|n,\<varepsilon\>>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>\<cal-T\><rsub|<around*|\|||\|>><text|
+          by >I<rsub|n,\<varepsilon\>>=<around*|[|a<rsub|n>-<frac|\<varepsilon\>|2<rsup|n>>,b<rsub|n>|[><text|
+          and ><around*|{|I<rsup|\<circ\>><rsub|n,\<varepsilon\>>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>\<cal-T\><rsub|<around*|\|||\|>><text|
+          by >I<rsup|\<circ\>><rsub|n,\<varepsilon\>>=<around*|]|a<rsub|n>-<frac|\<varepsilon\>|2<rsup|n>>,b<rsub|n>|[>
+        </equation*>
+
+        Let <math|x\<in\><around*|[|a,b-\<varepsilon\>|]>> then
+        <math|a\<leqslant\>x\<leqslant\>b-\<varepsilon\>\<less\>b> so that
+        <math|x\<in\><around*|[|a,b|[>=<big|sqcup><rsub|i\<in\>\<bbb-N\>>I<rsub|i>>,
+        hence there exist a <math|n\<in\>\<bbb-N\>> such that
+        <math|x\<in\>I<rsub|n>> or
+
+        <\equation*>
+          a<rsub|n>\<leqslant\>x\<less\>b<rsub|n>\<Rightarrow\>a<rsub|n>-<frac|\<varepsilon\>|2<rsup|n>>\<less\>a<rsub|n>\<leqslant\>x\<less\>b<rsub|n>\<Rightarrow\>x\<in\><around*|]|a<rsub|n>-<frac|\<varepsilon\>|2<rsup|n>>,b<rsub|n>|[>=I<rsup|\<circ\>><rsub|n,\<varepsilon\>>
+        </equation*>
+
+        Hence\ 
+
+        <\equation*>
+          <around*|[|a,b-\<varepsilon\>|]>\<subseteq\><big|cup><rsub|n\<in\>\<bbb-N\>>I<rsup|\<circ\>><rsub|n,\<varepsilon\>>
+        </equation*>
+
+        As <math|><math|<around*|[|a,b-\<varepsilon\>|]>> is compact [see
+        theorem: <reference|compact Heine Borel (1)>] there exist a finite
+        <math|I\<in\>\<bbb-N\>> such that
+        <math|<around*|[|a,b-\<varepsilon\>|[>\<subseteq\><big|cup><rsub|i\<in\>F>I<rsup|\<circ\>><rsub|n,\<varepsilon\>>>.
+        Take then <math|N<rsub|\<varepsilon\>>=max<around*|(|I<big|cup><around*|{|1|}>|)>>
+        then we have\ 
+
+        <\equation*>
+          <around*|[|a,b-\<varepsilon\>|]>\<subseteq\><big|cup><rsub|n\<in\><around*|{|1,\<ldots\>,N<rsub|\<varepsilon\>>|}>>I<rsup|\<circ\>><rsub|n,\<varepsilon\>>
+        </equation*>
+
+        So we have\ 
+
+        <\equation*>
+          <around*|[|a,b-\<varepsilon\>|[>\<subseteq\><around*|[|a,b-\<varepsilon\>|]>\<subseteq\><big|cup><rsub|n\<in\><around*|{|1,\<ldots\>,N<rsub|\<varepsilon\>>|}>>I<rsup|\<circ\>><rsub|n,\<varepsilon\>>\<subseteq\><big|cup><rsub|n\<in\><around*|{|1,\<ldots\>,N<rsub|\<varepsilon\>>|}>>I<rsub|n,\<varepsilon\>>
+        </equation*>
+
+        <\equation*>
+          \;
+        </equation*>
+      </description>
+
+      \ <math|>ss
+    </enumerate>
+
+    \;
+  </proof>
 </body>
 
 <\initial>
@@ -5030,6 +5523,19 @@
     <associate|eq 16.46.185|<tuple|60|23>>
     <associate|eq 16.47.185|<tuple|61|23>>
     <associate|eq 18.283.124|<tuple|78|31>>
+    <associate|eq 20.208.204|<tuple|140|?>>
+    <associate|eq 20.209.204|<tuple|141|?>>
+    <associate|eq 20.210.204|<tuple|142|?>>
+    <associate|eq 20.211.204|<tuple|143|?>>
+    <associate|eq 20.212.204|<tuple|144|?>>
+    <associate|eq 20.213.204|<tuple|145|?>>
+    <associate|eq 20.214.204|<tuple|146|?>>
+    <associate|eq 20.215.204|<tuple|147|?>>
+    <associate|eq 20.216.204|<tuple|148|?>>
+    <associate|eq 20.217.204|<tuple|149|?>>
+    <associate|eq 20.218.204|<tuple|150|?>>
+    <associate|eq 20.219.204|<tuple|151|?>>
+    <associate|eq 20.220.204|<tuple|152|?>>
     <associate|lemma 14.360.158|<tuple|10|10>>
     <associate|lemma 14.364.159|<tuple|14|13>>
     <associate|lemma 16.104.194|<tuple|23|23>>
@@ -5043,6 +5549,12 @@
     <associate|lemma 16.202.127|<tuple|40|50>>
     <associate|lemma 16.24.178|<tuple|18|18>>
     <associate|lemma 16.25.178|<tuple|19|18>>
+    <associate|lemma 20.206.204|<tuple|41|?>>
+    <associate|lemma 20.207.204|<tuple|42|?>>
+    <associate|lemma 20.208.204|<tuple|43|?>>
+    <associate|lemma 20.209.204|<tuple|44|?>>
+    <associate|lemma 20.211.204|<tuple|46|?>>
+    <associate|measure length function is a pre-measure|<tuple|47|?>>
     <associate|series absolute convergence alternative
     definition|<tuple|11|11>>
     <associate|series absolute convergence commutativity countable
