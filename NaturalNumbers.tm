@@ -8231,72 +8231,6 @@
     </description>
   </proof>
 
-  <\corollary>
-    <label|max element of a family>Let <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>>,
-    <math|n,m\<in\>\<bbb-N\><rsub|0>> such that <math|n\<leqslant\>m> and
-    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|n,\<ldots\>,m|}>>\<subseteq\>X>
-    then there exist a bijection <math|\<alpha\>:<around*|{|n,\<ldots\>,m|}>\<rightarrow\><around*|{|n,\<ldots\>,m|}>>
-    such that <math|\<forall\>i\<in\><around*|{|n,\<ldots\>,m-1|}>> we have
-    <math|x<rsub|\<alpha\><around*|(|i|)>>\<leqslant\>x<rsub|\<alpha\><around*|(|m|)>>>
-  </corollary>
-
-  <\proof>
-    Using [theorem: <reference|{n,..,m} is bijective to S_(m-n)+1>] there
-    exists bijections\ 
-
-    <\equation>
-      <label|eq 6.12.022>\<beta\>:<around*|{|n,\<ldots\>,m|}>\<rightarrow\>S<rsub|<around*|(|m-n|)>+1><text|
-      where >\<beta\><around*|(|i|)>=i-n<text|>
-    </equation>
-
-    and\ 
-
-    <\equation>
-      <label|eq 6.13.022>\<beta\><rsup|-1>:S<rsub|<around*|(|m-n|)>+1>\<rightarrow\><around*|{|n,\<ldots\>,m|}><text|
-      where >\<beta\><around*|(|i|)>=i+n
-    </equation>
-
-    Let <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|n,\<ldots\>,m|}>>\<subseteq\>X>
-    then for <math|<around*|{|x<rsub|\<beta\><rsup|-1><around*|(|i|)>>|}><rsub|i\<in\>S<rsub|<around*|(|m-n|)>+1>>>
-    we have by [theorem: <reference|extract maximum element of a family>] a
-    bijection\ 
-
-    <\equation>
-      <label|eq 6.14.022>\<gamma\>:S<rsub|<around*|(|m-n|)>+1>\<rightarrow\>S<rsub|<around*|(|m-n|)>+1><text|
-      such that >\<forall\>i\<in\>S<rsub|m-n><text| we have
-      >x<rsub|\<beta\><rsup|-1><around*|(|\<gamma\><around*|(|i|)>|)>>\<leqslant\>x<rsub|\<beta\><rsup|-1><around*|(|\<gamma\><around*|(|m-n|)>|)>>
-    </equation>
-
-    Define now the bijection
-
-    <\equation*>
-      \<alpha\>=\<beta\><rsup|-1>\<circ\>\<gamma\>\<circ\>\<beta\>:<around*|{|n,\<ldots\>,m|}>\<rightarrow\><around*|{|n,\<ldots\>,m|}>
-    </equation*>
-
-    If <math|k\<in\><around*|{|n,\<ldots\>,m-1|}>> then
-    <math|n\<leqslant\>k\<leqslant\>m-1\<less\>m> so that by [theorem:
-    <reference|natural numbers n\<less\>=i\<less\>=m=\<gtr\>0\<less\>=i-n\<less\>=m-n>]
-    we have <math|0\<leqslant\>k-n\<less\>m-n> or
-    <math|0\<leqslant\>\<beta\><around*|(|k|)>\<less\>m-n>. So
-    <math|\<beta\><around*|(|k|)>\<in\>S<rsub|m-n>> and thus by [eq:
-    <reference|eq 6.14.022>] we have that
-
-    <\equation>
-      <label|eq 6.15.022>x<rsub|\<beta\><rsup|-1><around*|(|\<gamma\><around*|(|\<beta\><around*|(|k|)>|)>|)>>\<leqslant\>x<rsub|\<beta\><rsup|-1><around*|(|\<gamma\><around*|(|m-n|)>|)>>\<equallim\><rsub|\<beta\><around*|(|m|)>=m-n>x<rsub|\<beta\><rsup|-1><around*|(|\<gamma\><around*|(|\<beta\><around*|(|m|)>|)>|)>>
-    </equation>
-
-    Hence\ 
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|x<rsub|\<alpha\><around*|(|k|)>>>|<cell|=>|<cell|x<rsub|<around*|(|\<beta\><rsup|-1>\<circ\>\<gamma\>\<circ\>\<beta\>|)><around*|(|k|)>>>>|<row|<cell|>|<cell|=>|<cell|x<rsub|\<beta\><rsup|-1><around*|(|\<gamma\><around*|(|\<beta\><around*|(|k|)>|)>|)>>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[eq:
-      <reference|eq 6.15.022>]>>>|<cell|x<rsub|\<beta\><rsup|-1><around*|(|\<gamma\><around*|(|\<beta\><around*|(|m|)>|)>|)>>>>|<row|<cell|>|<cell|=>|<cell|x<rsub|<around*|(|\<beta\><rsup|-1>\<circ\>\<gamma\>\<circ\>\<beta\>|)><around*|(|m|)>>>>|<row|<cell|>|<cell|=>|<cell|x<rsub|\<alpha\><around*|(|m|)>>>>>>
-    </eqnarray*>
-
-    So we have found a bijection <math|\<alpha\>:<around*|{|n,\<ldots\>,m|}>\<rightarrow\><around*|{|n,\<ldots\>,m|}>>
-    such that <math|\<forall\>k\<in\><around*|{|n,\<ldots\>,m-1|}>>
-    <math|x<rsub|\<alpha\><around*|(|k|)>>\<leqslant\>x<rsub|\<alpha\><around*|(|m|)>>>
-  </proof>
-
   <\theorem>
     <label|ordering of a finite family>Let
     <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a totally
@@ -8517,6 +8451,72 @@
     So we have found a bijection <math|\<alpha\>:<around*|{|n,\<ldots\>,m|}>\<rightarrow\><around*|{|n,\<ldots\>,m|}>>
     such that <math|\<forall\>k\<in\><around*|{|n,\<ldots\>,m-1|}>>
     <math|x<rsub|\<alpha\><around*|(|k|)>>\<leqslant\>x<rsub|\<alpha\><around*|(|k+1|)>>>
+  </proof>
+
+  <\corollary>
+    <label|ordering of a finite family (2)>Let
+    <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>> be a totally
+    ordered set, <math|n,m\<in\>\<bbb-N\><rsub|0>> with <math|n\<leqslant\>m>
+    and <math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|n,\<ldots\>,m|}>>\<subseteq\>X>
+    then there exist a bijection <math|\<alpha\>:<around*|{|n,\<ldots\>,m|}>\<rightarrow\><around*|{|n,\<ldots\>,m|}>>
+    such that <math|\<forall\>i,j\<in\><around*|{|n,\<ldots\>,m|}>> with
+    <math|i\<leqslant\>j> we have <math|x<rsub|\<alpha\><around*|(|i|)>>\<leqslant\>x<rsub|\<alpha\><around*|(|i+1|)>>>
+  </corollary>
+
+  <\proof>
+    Using [corollary: <reference|ordering of a finite family (1)>] there
+    exist a bijection <math|\<alpha\>:<around*|{|n,\<ldots\>,m|}>\<rightarrow\><around*|{|n,\<ldots\>,m|}>>
+    such that\ 
+
+    <\equation*>
+      \<forall\>i\<in\><around*|{|n,\<ldots\>,m-1|}><text| we have
+      >x<rsub|\<alpha\><around*|(|i|)>>\<leqslant\>x<rsub|\<alpha\><around*|(|i+1|)>>
+    </equation*>
+
+    We proceed now by induction so let
+
+    <\equation*>
+      S=<around*|{|k\<in\><around*|{|n,\<ldots\>,\<infty\>|}>\|If
+      k\<in\><around*|{|n,\<ldots\>,m|}><text| then
+      >\<forall\>i\<in\><around*|{|n,\<ldots\>,k|}><text| we have
+      >x<rsub|\<sigma\><around*|(|i|)>>\<leqslant\>x<rsub|\<sigma\><around*|(|k|)>>|}>
+    </equation*>
+
+    then we have:\ 
+
+    <\description>
+      <item*|<math|n\<in\>S>>As <math|\<forall\>i\<in\><around*|{|n,\<ldots\>,k|}>=<around*|{|n|}>>
+      we have <math|i=n>, it follows that
+      <math|x<rsub|\<sigma\><around*|(|i|)>>=x<rsub|\<sigma\><around*|(|n|)>>=x<rsub|\<sigma\><around*|(|k|)>>>
+      so that <math|n\<in\>S>.
+
+      <item*|<math|k\<in\>S\<Rightarrow\>k+1\<in\>S>>If
+      <math|k+1\<in\><around*|{|n,\<ldots\>,m|}>> then
+      <math|<around*|{|n,\<ldots\>,k+1|}>\<subseteq\><around*|{|n,\<ldots\>,m|}>>.
+      Let <math|i\<in\><around*|{|n,\<ldots\>,k+1|}>> then for <math|i> we
+      have either:
+
+      <\description>
+        <item*|<math|i=k+1>>Then trivially
+        \ <math|x<rsub|\<sigma\><around*|(|i|)>>=x<rsub|\<sigma\><around*|(|k+1|)>>\<leqslant\>x<rsub|\<sigma\><around*|(|k+1|)>>>
+
+        <item*|<math|i\<in\><around*|{|n,\<ldots\>,k|}>>>Then as
+        <math|k\<in\>S> and <math|<around*|{|n,\<ldots\>,k|}>\<subseteq\><around*|{|n,\<ldots\>,k+1|}>\<subseteq\><around*|{|n,\<ldots\>,m|}>>
+        it follows that <math|x<rsub|\<sigma\><around*|(|i|)>>\<less\>x<rsub|\<sigma\><around*|(|k|)>>>,
+        further as <math|k\<in\><around*|{|n,\<ldots\>,m|}>> we have
+        <math|x<rsub|\<sigma\><around*|(|k|)>>\<leqslant\>x<rsub|\<sigma\><around*|(|k+1|)>>>,
+        hence we have <math|x<rsub|\<sigma\><around*|(|i|)>>\<leqslant\>x<rsub|\<sigma\><around*|(|k+1|)>>.>
+      </description>
+
+      so in all cases we have <math|x<rsub|\<sigma\><around*|(|i|)>>\<leqslant\>x<rsub|\<sigma\><around*|(|k+1|)>>>,
+      proving that <math|k+1\<in\>S>.\ 
+    </description>
+
+    Mathematical induction proves that <math|S=<around*|{|n,\<ldots\>.,\<infty\>|}>>.
+    So if <math|i,j\<in\><around*|{|n,\<ldots\>,m|}>> with
+    <math|i\<leqslant\>j> then <math|j\<in\>S>, as
+    <math|i\<in\><around*|{|n,\<ldots\>,j|}>> it follows from the definition
+    of <math|S> that <math|x<rsub|\<sigma\><around*|(|i|)>>\<leqslant\>x<rsub|\<sigma\><around*|(|j|)>>>.
   </proof>
 
   The next theorem allows use later to apply induction on the product of a
@@ -10139,20 +10139,20 @@
     <associate|eq 6.13.022|<tuple|6.14|196>>
     <associate|eq 6.14.022|<tuple|6.15|196>>
     <associate|eq 6.15.022|<tuple|6.16|196>>
-    <associate|eq 6.17.020|<tuple|6.17|196>>
-    <associate|eq 6.18.020|<tuple|6.18|196>>
-    <associate|eq 6.18.022|<tuple|6.19|197>>
-    <associate|eq 6.19.022|<tuple|6.20|197>>
+    <associate|eq 6.17.020|<tuple|6.13|196>>
+    <associate|eq 6.18.020|<tuple|6.14|196>>
+    <associate|eq 6.18.022|<tuple|6.15|197>>
+    <associate|eq 6.19.022|<tuple|6.16|197>>
     <associate|eq 6.2.019|<tuple|6.3|187>>
     <associate|eq 6.2.063|<tuple|6.2|185>>
-    <associate|eq 6.20.022|<tuple|6.21|197>>
-    <associate|eq 6.21.022|<tuple|6.22|198>>
-    <associate|eq 6.22.022|<tuple|6.23|200>>
-    <associate|eq 6.23.022|<tuple|6.24|200>>
-    <associate|eq 6.24.022|<tuple|6.25|200>>
-    <associate|eq 6.25.022|<tuple|6.26|201>>
-    <associate|eq 6.27.130|<tuple|6.27|206>>
-    <associate|eq 6.28.130|<tuple|6.28|207>>
+    <associate|eq 6.20.022|<tuple|6.17|197>>
+    <associate|eq 6.21.022|<tuple|6.18|198>>
+    <associate|eq 6.22.022|<tuple|6.19|200>>
+    <associate|eq 6.23.022|<tuple|6.20|200>>
+    <associate|eq 6.24.022|<tuple|6.21|200>>
+    <associate|eq 6.25.022|<tuple|6.22|201>>
+    <associate|eq 6.27.130|<tuple|6.23|206>>
+    <associate|eq 6.28.130|<tuple|6.24|207>>
     <associate|eq 6.3.019|<tuple|6.4|188>>
     <associate|eq 6.4.019|<tuple|6.5|188>>
     <associate|eq 6.5.019|<tuple|6.6|188>>
@@ -10341,8 +10341,9 @@
     <associate|natural numbers transitive|<tuple|5.13|155>>
     <associate|natural numbers x\<less\>=y or y\<less\>x|<tuple|5.53|169>>
     <associate|operator|<tuple|4.1|127>>
-    <associate|ordering of a finite family|<tuple|6.54|196>>
-    <associate|ordering of a finite family (1)|<tuple|6.55|197>>
+    <associate|ordering of a finite family|<tuple|6.53|196>>
+    <associate|ordering of a finite family (1)|<tuple|6.54|197>>
+    <associate|ordering of a finite family (2)|<tuple|6.55|?>>
     <associate|product of a finite family of finite sets is is
     finite|<tuple|6.57|198>>
     <associate|product of a finite family of finite sets is is finite
