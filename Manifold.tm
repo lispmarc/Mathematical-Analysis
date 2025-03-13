@@ -20,8 +20,8 @@
   <\enumerate>
     <item>Spell check started/Finished
 
-    <item>Definition of totally (fully ordered) set is change from preorder +
-    total ordering to partial order + tota; order. Check must be done to
+    <item>Definition of totally (fully ordered) set is changed from preorder
+    + total ordering to partial order + tota; order. Check must be done to
     ensure that this does not introduce inconsequences.\ 
   </enumerate>
 
@@ -74,6 +74,8 @@
 
     <item>Change definition of <math|C<rsup|k>> to <math|C<rsup|k>> at a
     point Started/Finished
+
+    <item>Add n-times derivatives on [a,b] and taylor expansion
   </enumerate>
 
   <section|FundamentalTheorem.OfAlgebra.tm>
@@ -95,10 +97,14 @@
   <\enumerate>
     <item>Spell check started/Finished
 
-    <item>Check for errors Started/
+    <item>Check for errors Started
   </enumerate>
 
   <section|Measure.tm>
+
+  <\enumerate>
+    <item>Rewrite started/
+  </enumerate>
 
   <section|Manifold.tm>
 
@@ -108,8 +114,8 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|20>
-    <associate|page-first|1329>
-    <associate|section-nr|2>
+    <associate|page-first|1363>
+    <associate|section-nr|4>
     <associate|subsection-nr|3>
   </collection>
 </initial>
