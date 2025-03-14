@@ -15334,7 +15334,7 @@
     proving uniqueness.
   </proof>
 
-  <subsubsection|Pre-measures>
+  <subsubsection|Contents and pre-measures>
 
   So given a pre-measure <math|\<mu\>> on a semi-ring <math|\<cal-S\>> we can
   extend <math|\<mu\>> to a measure on <math|\<sigma\><around*|[|\<cal-S\>|]>>
@@ -15386,6 +15386,9 @@
       <item><math|\<forall\>A,B\<in\>\<cal-R\>> with
       <math|A,B\<in\>\<cal-R\>> we have <math|A\\B\<in\>\<cal-R\>>
     </enumerate>
+
+    A content is <with|font-series|bold|finite> if
+    <math|\<forall\>A\<in\>\<cal-R\>> <math|\<mu\><around*|(|A|)>\<less\>\<infty\>>
   </definition>
 
   It turns out that a content is additive [see definition: <reference|measure
@@ -15472,19 +15475,164 @@
   </theorem>
 
   <\proof>
-    TODO\ 
+    First as <math|\<cal-R\>> is a ring we have that
+    <math|\<forall\>A,B\<in\>\<cal-R\>> <math|B\\A\<in\>\<cal-R\>>, further
 
     <\enumerate>
-      <item>
+      <item>As <math|A<big|cup><around*|(|B\\A|)>\<equallim\><rsub|<text|[theorem:
+      <reference|class disjoint unions>]>>A<big|cup>B> with
+      <math|A<big|cap><around*|(|B\\A|)>\<equallim\><rsub|<text|[theorem:
+      <reference|class disjoint unions>]>>\<varnothing\>> and <math|\<mu\>>
+      is a content we have\ 
 
-      <item>
+      <\equation>
+        <label|eq 20.206.211>\<mu\><around*|(|A<big|cup>B|)>=\<mu\><around*|(|A|)>+\<mu\><around*|(|B\\A|)>
+      </equation>
 
-      <item>
+      Further <math|B\<equallim\><rsub|<text|[theorem: <reference|class
+      disjoint unions>]>><around*|(|A<big|cap>B|)><big|cup><around*|(|B\\A|)>>
+      with <math|<around*|(|A<big|cap>B|)><big|cap><around*|(|B\\A|)>\<equallim\><rsub|<text|[theorem:
+      <reference|class disjoint unions>]>>\<varnothing\>> do that\ 
 
-      <item>
+      <\equation>
+        <label|eq 20.207.211>\<mu\><around*|(|B|)>=\<mu\><around*|(|A<big|cap>B|)>+\<mu\><around*|(|B\\A|)>
+      </equation>
 
-      <item>
+      For <math|\<mu\><around*|(|B\\A|)>> we have either:\ 
+
+      <\description>
+        <item*|<math|\<mu\><around*|(|B\\A|)>\<less\>\<infty\>>>As
+        <math|\<mu\>> is non negative we can sum [eq: <reference|eq
+        20.206.211>] and [eq: <reference|eq 20.207.211>] giving
+
+        <\equation*>
+          \<mu\><around*|(|A<big|cup>B|)>+\<mu\><around*|(|A<big|cap>B|)>+\<mu\><around*|(|B\\A|)>=\<mu\><around*|(|B|)>+\<mu\><around*|(|A|)>+\<mu\><around*|(|B\\A|)>
+        </equation*>
+
+        and we can use [theorem: <reference|extended x+z=y+z=\<gtr\>x-y>] to
+        get\ 
+
+        <\equation*>
+          \<mu\><around*|(|A<big|cup>B|)>+\<mu\><around*|(|A<big|cap>B|)>=\<mu\><around*|(|B|)>+\<mu\><around*|(|A|)>
+        </equation*>
+
+        <item*|<math|\<mu\><around*|(|B\\A|)>=\<infty\>>>Then
+
+        <\equation*>
+          \<mu\><around*|(|A<big|cup>B|)>\<equallim\><rsub|<text|[eq:
+          <reference|eq 20.206.211>]>>=\<mu\><around*|(|A|)>+\<mu\><around*|(|B\\A|)>=\<mu\><around*|(|A|)>+\<infty\>=\<infty\>
+        </equation*>
+
+        and
+
+        <\equation*>
+          \<mu\><around*|(|B|)>\<equallim\><rsub|<text|[eq: <reference|eq
+          20.207.211>]>>\<mu\><around*|(|A<big|cap>B|)>+\<mu\><around*|(|B\\A|)>=\<mu\><around*|(|A<big|cap>B|)>+\<infty\>=\<infty\>
+        </equation*>
+
+        so that\ 
+
+        <\equation*>
+          \<mu\><around*|(|A<big|cup>B|)>+\<mu\><around*|(|A<big|cap>B|)>=\<infty\>+\<mu\><around*|(|A<big|cap>B|)>=\<infty\>=\<mu\><around*|(|A|)>+\<infty\>=\<mu\><around*|(|A|)>+\<mu\><around*|(|B|)>
+        </equation*>
+      </description>
+
+      So in all cases we have\ 
+
+      <\equation*>
+        \<mu\><around*|(|A<big|cup>B|)>+\<mu\><around*|(|A<big|cap>B|)>=\<mu\><around*|(|B|)>+\<mu\><around*|(|A|)>
+      </equation*>
+
+      <item>If <math|A,B\<in\>\<cal-R\>> with <math|A\<subseteq\>B> then
+      <math|A<big|cup>B=B> so that\ 
+
+      <\equation>
+        <label|eq 20.208.211>\<mu\>*<around*|(|B|)>=\<mu\><around*|(|A<big|cup>B|)>\<equallim\><rsub|<text|[eq:
+        <reference|eq 20.206.211>]>>\<mu\><around*|(|A|)>+\<mu\><around*|(|B\\A|)>
+      </equation>
+
+      then by [theorem: <reference|extended 0\<less\>=y and z=x+y then
+      x\<less\>=z>] it follows that\ 
+
+      <\equation*>
+        \<mu\><around*|(|A|)>\<leqslant\>\<mu\><around*|(|B|)>
+      </equation*>
+
+      <item>As <math|A\<subseteq\>B> we have by [eq: <reference|eq
+      20.208.211>] that <math|\<mu\><around*|(|B|)>=\<mu\><around*|(|A|)>+\<mu\><around*|(|B\\A|)>>
+      so as <math|\<mu\><around*|(|A|)>\<less\>\<infty\>> we can safely add
+      <math|-\<mu\><around*|(|A|)>> to both sides giving\ 
+
+      <\equation*>
+        \<mu\><around*|(|B|)>-\<mu\><around*|(|A|)>=\<mu\><around*|(|A|)>+\<mu\><around*|(|B\\A|)>-\<mu\><around*|(|A|)>=\<mu\><around*|(|B\\A|)>
+      </equation*>
+
+      <item>Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-R\>>
+      define then
+
+      <\equation*>
+        <around*|{|B<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-R\><text|
+        by >B<rsub|i>=<choice|<tformat|<table|<row|<cell|A<rsub|1><text| if
+        >i=1>>|<row|<cell|A<rsub|i>\\<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,i-1|}>>A<rsub|j>>>>>><below|\<in\>|\<cal-R\><text|
+        is a ring and [theorem: <reference|measure ring
+        properties>]>>\<cal-R\>
+      </equation*>
+
+      so that\ 
+
+      <\equation>
+        <label|eq 20.209.211><around*|{|B<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-R\><text|
+        and >\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+        >B<rsub|i>\<subseteq\>A<rsub|i><below|\<Rightarrow\>|<around*|(|2|)>>\<mu\><around*|(|B<rsub|i>|)>\<leqslant\>\<mu\><around*|(|A<rsub|i>|)>
+      </equation>
+
+      Using [lemma: <reference|lemma 20.161.201>] we have that\ 
+
+      <\equation>
+        <label|eq 20.210.211><around*|{|B<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><text|
+        is pairwise disjoint and ><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>=<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>
+      </equation>
+
+      Hence\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<mu\><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)>>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 20.210.211>]>>>|<cell|\<mu\><around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|measure content is additive>]>>>|<cell|<big|sum><rsub|i=1><rsup|n>\<mu\><around*|(|B<rsub|i>|)>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[eq:
+        <reference|eq 20.209.211>]>>>|<cell|<big|sum><rsub|i=1><rsup|n>\<mu\><around*|(|A<rsub|i>|)>>>>>
+      </eqnarray*>
+
+      \ 
+
+      <item>Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-R\>>
+      be a pairwise disjoint sequence of sets in <math|\<cal-R\>> such that
+      <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-R\>>. Let
+      <math|n\<in\>\<bbb-N\>> then we have
+      <math|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<subseteq\><big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>>
+      so that\ 
+
+      <\equation>
+        <label|eq 20.211.211><big|sum><rsub|i=1><rsup|n>\<mu\><around*|(|A<rsub|i>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|measure content is additive>]>>\<mu\><around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)><below|\<leqslant\>|<around*|(|2|)>>\<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>
+      </equation>
+
+      Hence <math|\<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>>
+      is a upper bound of <math|<around*|{|<big|sum><rsub|i=1><rsup|n>\<mu\><around*|(|A<rsub|i>|)>\|n\<in\>\<bbb-N\>|}>>
+      so that\ 
+
+      <\equation*>
+        sup<around*|(|<around*|{|<big|sum><rsub|i=1><rsup|n>\<mu\><around*|(|A<rsub|i>|)>\|n\<in\>\<bbb-N\>|}>|)>\<leqslant\>\<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>
+      </equation*>
+
+      Hence\ 
+
+      <\equation*>
+        <big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|i>|)>\<equallim\><rsub|<text|[definition:
+        <reference|extended infinite sum>]>>sup<around*|(|<around*|{|<big|sum><rsub|i=1><rsup|n>\<mu\><around*|(|A<rsub|i>|)>\|n\<in\>\<bbb-N\>|}>|)>\<leqslant\>\<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>
+      </equation*>
     </enumerate>
+
+    \;
   </proof>
 
   Note that a pre-measure on a ring [remember a ring is also a semi-ring]
@@ -15533,32 +15681,22 @@
       such that <math|\<forall\>i\<in\>\<bbb-N\>>
       <math|A<rsub|i>\<subseteq\>A<rsub|i+1>> and
       <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-R\>> we have
-      <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
-      <math|\<mu\><rigid|<around*|(|A<rsub|i>|)>\<leqslant\>\<mu\><around*|(|A<rsub|i+1>|)>>>
-      and <math|<below|\<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|i>|)>\<equallim\><rsub|<text|[theorem:
-      <reference|extended limit increasing / decreasing sequence
-      exist>]>>sup<around*|(|<around*|{|\<mu\><around*|(|A<rsub|i>|)>\|i\<in\>\<bbb-N\>|}>|)>|>>.
+      <math|<below|\<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|i>|)>|>>.
 
       <item><math|\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-R\>>
       such that <math|\<forall\>i\<in\>\<bbb-N\>>
       <math|A<rsub|i+1>\<subseteq\>A<rsub|i>> and
       <math|\<mu\><around*|(|A<rsub|i>|)>\<less\>\<infty\>> and
       <math|<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-R\>> we have
-      <math|\<forall\>i\<in\>\<bbb-N\>> <math|\<mu\><around*|(|A<rsub|i+1>|)>\<leqslant\>\<mu\><around*|(|A<rsub|i>|)>>
-      and <math|\<mu\><around*|(|<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|i>|)>\<equallim\><rsub|<text|[theorem:
-      <reference|extended limit increasing / decreasing sequence
-      exist>]>>inf<around*|(|<around*|{|\<mu\><around*|(|A<rsub|i>|)>\|i\<in\>\<bbb-N\>|}>|)>>.
+      <math|\<mu\><around*|(|<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|i>|)>>.
 
       <item><math|\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-R\>>
-      such that <math|\<forall\>i\<in\>\<bbb-N\>>
+      such that <math|\<exists\>k\<in\>\<bbb-N\>> such that
+      \ <math|\<forall\>i\<in\>\<bbb-N\>>
       <math|A<rsub|i+1>\<subseteq\>A<rsub|i>> and
       <math|\<mu\><around*|(|A<rsub|i>|)>\<less\>\<infty\>> and
       <math|<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>=\<varnothing\>> we have
-      \ <math|\<forall\>i\<in\>\<bbb-N\>>
-      <math|\<mu\><around*|(|A<rsub|i+1>|)>\<leqslant\>\<mu\><around*|(|A<rsub|i>|)>>
-      and <math|<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|i>|)>\<equallim\><rsub|<text|[theorem:
-      <reference|extended limit increasing / decreasing sequence
-      exist>]>>inf<around*|(|<around*|{|\<mu\><around*|(|A<rsub|i>|)>\|i\<in\>\<bbb-N\>|}>|)>=0>.
+      \ <math|<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|i>|)>=0>.
     </enumerate>
 
     we have <math|<around*|(|1|)>\<Leftrightarrow\><around*|(|2|)>\<Rightarrow\><around*|(|3|)>\<Leftrightarrow\><around*|(|4|)>>,
@@ -15686,25 +15824,11 @@
         \<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|i>|)>
       </equation*>
 
-      Finally as by [theorem: <reference|measure pre-measure monotonity>] a
-      pre-measure is monotone it follows that
-
-      <\equation*>
-        \<forall\>i\<in\>\<bbb-N\><text| we have
-        >\<mu\><around*|(|A<rsub|i>|)>\<leqslant\>\<mu\><around*|(|A<rsub|i+1>|)>
-      </equation*>
-
-      and by [theorem: <reference|extended limit increasing / decreasing
-      sequence exist>[ that\ 
-
-      <\equation*>
-        <below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|i>|)>=sup<around*|(|<around*|{|\<mu\><around*|(|A<rsub|i>|)>\|i\<in\>\<bbb-N\>|}>|)>
-      </equation*>
-
       <item*|<math|<around*|(|2|)>\<Rightarrow\><around*|(|1|)>>>As for a
       content <math|\<mu\><around*|(|\<varnothing\>|)>=0> we only have to
       prove countable additivity. Let <math|<rigid|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-R\>>>
-      be a pairwise disjoint sequence of sets in <math|\<cal-R\>>. Define\ 
+      be a pairwise disjoint sequence of sets in <math|\<cal-R\>> such that
+      <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>>. Define\ 
 
       <\equation*>
         <around*|{|B<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-R\><text|
@@ -15727,7 +15851,7 @@
       Hence\ 
 
       <\equation>
-        <label|eq 20.212.210><big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>=<big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>
+        <label|eq 20.212.210><big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>=<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-R\>
       </equation>
 
       Using (1) together with [eqs: <reference|eq 20.211.210>, <reference|eq
@@ -15768,14 +15892,353 @@
         ring>>\<cal-R\>
       </equation*>
 
-      Then we\ 
+      Then we have\ 
 
-      <item*|<math|<around*|(|3|)>\<Rightarrow\><around*|(|4|)>>>
+      <\equation>
+        <label|eq 20.220.212.1>\<forall\>i\<in\>\<bbb-N\><text|
+        >B<rsub|i>=A<rsub|1>\\A<rsub|i><below|\<subseteq\>|<text|[theorem:
+        <reference|class inclusion and union and
+        intersection>]>>A<rsub|1>\\A<rsub|i+1>=B<rsub|i>
+      </equation>
 
-      <item*|<math|<around*|(|4|)>\<Rightarrow\><around*|(|3|)>>>
+      and\ 
+
+      <\equation>
+        <label|eq 20.220.212>A<rsub|1>\\<around*|(|<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|family de Morgan>]>><big|cup><rsub|i\<in\>\<bbb-N\>><around*|(|A<rsub|1>\\A<rsub|i>|)>=<big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>
+      </equation>
+
+      Using (2) we have then\ 
+
+      <\equation>
+        <label|eq 20.221.212>\<mu\><around*|(|A<rsub|1>\\<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=\<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>|)>\<equallim\><rsub|<around*|(|2|)>><below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|B<rsub|i>|)>=<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|1>\\A<rsub|i>|)>
+      </equation>
+
+      Let <math|i\<in\>\<bbb-N\>> then as
+      <math|<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<subseteq\>A<rsub|i>\<subseteq\>A<rsub|i>>
+      and we have by [theorem: <reference|measure content properties> (2)]
+      <math|<rigid|\<mu\><around*|(|<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>\<leqslant\>\<mu\><around*|(|A<rsub|i>|)>\<less\>\<infty\>>>
+      and <math|\<mu\><around*|(|A<rsub|i>|)>\<leqslant\>\<mu\><around*|(|A<rsub|i>|)>\<less\>\<infty\>>,
+      hence using [theorem: <reference|measure content properties>(3)] we
+      have
+
+      <\equation>
+        <label|eq 20.222.212>\<forall\>i\<in\>\<bbb-N\><text| that
+        >\<mu\><around*|(|B<rsub|i>|)>=\<mu\><around*|(|A<rsub|1>\\A<rsub|i>|)>=\<mu\><around*|(|A<rsub|1>|)>-\<mu\><around*|(|A<rsub|i>|)>
+      </equation>
+
+      and
+
+      <\equation>
+        <label|eq 20.223.212>\<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>|)>\<equallim\><rsub|<text|[eq:
+        <reference|eq 20.220.212>]>>\<mu\><around*|(|A<rsub|1>\\<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=\<mu\><around*|(|A<rsub|1>|)>-\<mu\><around*|(|<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>
+      </equation>
+
+      So\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<mu\><around*|(|A<rsub|1>|)>-\<mu\><around*|(|<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>>|<cell|\<equallim\><rsub|<text|[eqs:
+        <reference|eq 20.221.122>, <reference|eq
+        20.223.212>]>>>|<cell|<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|1>\\A<rsub|i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq;
+        <reference|eq 20.222.212>]>>>|<cell|<below|lim<rsub|i\<rightarrow\>\<infty\>>|><around*|(|\<mu\><around*|(|A<rsub|1>|)>-\<mu\><around*|(|A<rsub|i>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|extended limit properties>]>>>|<cell|<below|\<mu\><around*|(|A<rsub|1>|)>-<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|i>|)>|>>>>>
+      </eqnarray*>
+
+      As <math|\<mu\><around*|(|A<rsub|1>|)>\<less\>\<infty\>\<Rightarrow\>\<mu\><around*|(|A<rsub|1>|)>>
+      we can safely subtract <math|\<mu\><around*|(|A|)>> from both sides
+      from the above equation to get <math|-\<mu\><around*|(|<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>=-<below|lim|i\<rightarrow\>\<infty\>>|\<nobracket\>>\<mu\><around*|(|A<rsub|i>|)>>
+      from which it follows that\ 
+
+      <\equation*>
+        \<mu\><around*|(|<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|i>|)>
+      </equation*>
+
+      <item*|<math|<around*|(|3|)>\<Rightarrow\><around*|(|4|)>>>Let
+      <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-R\>>
+      be such that <math|\<forall\>i\<in\>\<bbb-N\>>
+      <math|A<rsub|i+1>\<subseteq\>A<rsub|i>> and
+      <math|\<mu\><around*|(|A<rsub|i>|)>\<less\>\<infty\>> and
+      <math|<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>=\<varnothing\>> then by
+      (3) we have
+
+      <\equation*>
+        0=\<mu\><around*|(|\<varnothing\>|)>=\<mu\><around*|(|<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|i>|)>
+      </equation*>
+
+      <item*|<math|<around*|(|4|)>\<Rightarrow\><around*|(|3|)>>>Let
+      <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-R\>>
+      be such that <math|\<forall\>i\<in\>\<bbb-N\>>
+      <math|A<rsub|i+1>\<subseteq\>A<rsub|i>> and
+      <math|\<mu\><around*|(|A<rsub|i>|)>\<less\>\<infty\>> and
+      <math|<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-R\>>. Take
+      <math|A=<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-R\>> and
+      define\ 
+
+      <\equation*>
+        <around*|{|B<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-R\><text|
+        by >B<rsub|i>=A<rsub|i>\\A<below|\<in\>|\<cal-R\><text| is a
+        ring>>\<cal-R\>
+      </equation*>
+
+      then we have\ 
+
+      <\equation*>
+        \<forall\>i\<in\>\<bbb-N\><text| that
+        >B<rsub|i+1>=A<rsub|i+1>\\A\<subseteq\>A<rsub|i>\\A=B<rsub|i>
+      </equation*>
+
+      Further we have\ 
+
+      <\equation*>
+        \<varnothing\>=A\\A=<around*|(|<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>\\A\<equallim\><rsub|<text|[theorem:
+        <reference|family properties (3)>]>><big|cap><rsub|i\<in\>\<bbb-N\>><around*|(|A<rsub|i>\\A|)>=<big|cap><rsub|i\<in\>\<bbb-N\>>B<rsub|i>
+      </equation*>
+
+      Hence using (4) we have\ 
+
+      <\equation>
+        <label|eq 20.225.212>0=<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|B<rsub|i>|)>=<below|lim|i\<rightarrow\>\<infty\>><around*|(|A<rsub|i>\\A|)>
+      </equation>
+
+      As <math|A=<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<subseteq\>A<rsub|i>>
+      and by [theorem: <reference|measure content properties>(2)]
+      <math|\<mu\><around*|(|A|)>\<leqslant\>\<mu\><around*|(|A<rsub|i>|)>\<less\>\<infty\>>
+      we have by [theorem: <reference|measure content properties>(3)] that
+
+      <\equation>
+        <label|eq 20.226.212>\<forall\>i\<in\>\<bbb-N\><text| we have
+        >\<mu\><around*|(|A<rsub|i>\\A|)>=\<mu\><around*|(|A<rsub|i>|)>-\<mu\><around*|(|A|)>
+      </equation>
+
+      Hence we have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|0>|<cell|<below|=|<text|[eq: <reference|eq
+        20.226.212>]>>>|<cell|<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|i>\\A|)>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+        <reference|eq 20.226.212>]>>>|<cell|<below|lim|i\<rightarrow\>\<infty\>><around*|(|\<mu\><around*|(|A<rsub|i>|)>-\<mu\><around*|(|A|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|extended limit properties>]>>>|<cell|<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|i>|)>-\<mu\><around*|(|A|)>>>>>
+      </eqnarray*>
+
+      As <math|\<mu\><around*|(|A|)>\<less\>\<infty\>=\<mu\><around*|(|A|)>\<in\>\<bbb-R\>>
+      we have\ 
+
+      <\equation*>
+        \<mu\><around*|(|<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=\<mu\><around*|(|A|)>=<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|i>|)>
+      </equation*>
     </description>
 
-    \;
+    Now for the last part we have to prove that if <math|\<mu\>> is finite
+    then <math|<around*|(|4|)>\<Rightarrow\><around*|(|2|)>> [because then
+    from <math|<around*|(|1|)>\<Leftrightarrow\><around*|(|2|)>\<Rightarrow\><around*|(|3|)>\<Leftrightarrow\><around*|(|4|)>>
+    it follows that <math|<around*|(|1|)>\<Leftrightarrow\><around*|(|2|)>\<Leftrightarrow\><around*|(|3|)>\<Leftrightarrow\>4>].\ 
+
+    <\description>
+      <item*|<math|<around*|(|4|)>\<Rightarrow\><around*|(|2|)>>>Let
+      <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-R\>>
+      is such that \ <math|\<forall\>i\<in\>\<bbb-N\>> we have
+      <math|A<rsub|i>\<subseteq\>A<rsub|i+1>> and
+      <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-R\>>. Take
+      <math|A=<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>> and define \ 
+
+      <\equation*>
+        <around*|{|B<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-R\><text|
+        by >B<rsub|i>=A\\A<rsub|i><below|\<in\>|\<cal-R\><text| is a
+        ring>>\<cal-R\>
+      </equation*>
+
+      Then we have
+
+      <\equation*>
+        \<forall\>i\<in\>\<bbb-N\><text| that
+        >B<rsub|i+1>=A\\A<rsub|i+1>\<equallim\><rsub|<text|[theorem:
+        <reference|class inclusion and union and
+        intersection>]>>A\\A<rsub|i>=B<rsub|i><text| and
+        >\<mu\><around*|(|B<rsub|i>|)><below|\<less\>|\<mu\><text| is
+        finite>>\<infty\>
+      </equation*>
+
+      Further we have\ 
+
+      <\equation*>
+        \<varnothing\>=A\\A=A\\<around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>\<equallim\><rsub|<text|[theorem:
+        <reference|family properties (3)>]>><big|cap><rsub|i\<in\>\<bbb-N\>><around*|(|A\\A<rsub|i>|)>=<big|cap><rsub|i\<in\>\<bbb-N\>>B<rsub|i>
+      </equation*>
+
+      So using (4) we have that\ 
+
+      <\equation>
+        <label|eq 20.227.212><below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A\\A<rsub|i>|)>=<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|B<rsub|i>|)>=0
+      </equation>
+
+      Let <math|i\<in\>\<bbb-N\>> then, as
+      \ <math|A<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>=A>
+      and <math|\<mu\><around*|(|A<rsub|i>|)><below|\<less\>|\<mu\><text| is
+      finite>>\<infty\>>, it follows from [theorem: <reference|measure
+      content properties>(3)] that <math|\<mu\><around*|(|A\\A<rsub|i>|)>=\<mu\><around*|(|A|)>-\<mu\><around*|(|A<rsub|i>|)>>.
+      Hence we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|0>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 20.227.212>]>>>|<cell|<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A\\A<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<below|lim|i\<rightarrow\>\<infty\>><around*|(|\<mu\><around*|(|A|)>-\<mu\><around*|(|A<rsub|i>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|extended limit properties>]>>>|<cell|\<mu\><around*|(|A|)>-<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|i>|)>>>>>
+      </eqnarray*>
+
+      As <math|\<mu\>> is finite it follows from the above that\ 
+
+      <\equation*>
+        \<mu\><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=\<mu\><around*|(|A|)>=<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|i>|)>
+      </equation*>
+    </description>
+  </proof>
+
+  The above equivalences allows us to determine if a content on a ring is a
+  pre-measure. However this is not always simple. If we assume a ring on a
+  topological space then proving becomes easier if we make use of the
+  properties of the topological space. For this we introduce approximation by
+  compact classes. First recap the definition of a compact class [see
+  definition: <reference|compact class>]
+
+  <\definition>
+    Let <math|X> be a set then <math|\<cal-C\>\<subseteq\>\<cal-P\><around*|(|X|)>>
+    is a <with|font-series|bold|compact class >if
+    <math|\<forall\><around*|{|K<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-C\>>
+    with <math|<big|cap><rsub|i\<in\>\<bbb-N\>>K<rsub|i>=\<varnothing\>>
+    there exist a <math|N\<in\>\<bbb-N\>><space|1em>such that
+    <math|<big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,N|}>>K<rsub|i>=\<varnothing\>>.
+  </definition>
+
+  We have then the following theorem that can be use to determine if a
+  content is a pre-measure.
+
+  <\theorem>
+    <label|measure compact class approximation>Let <math|X> be a set,
+    <math|\<cal-R\>> a ring on <math|X> and
+    <math|\<mu\>:X\<rightarrow\><around*|[|0,\<infty\>|]>> a
+    <with|font-series|bold|finite >content. If there exist a compact class
+    <math|\<cal-C\>\<subseteq\>\<cal-P\><around*|(|X|)>> such that
+    <math|\<forall\>A\<in\>\<cal-R\>> and
+    <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> we have that
+    <math|\<exists\>K<rsub|\<varepsilon\>>\<in\>\<cal-C\>> and
+    <math|\<exists\>A<rsub|\<varepsilon\>>\<in\>\<cal-R\>> such that\ 
+
+    <\equation*>
+      A<rsub|\<varepsilon\>>\<subseteq\>K<rsub|\<varepsilon\>>\<subseteq\>A<text|
+      and >\<mu\><around*|(|A\\A<rsub|\<varepsilon\>>|)>\<less\>\<varepsilon\>
+    </equation*>
+
+    then <math|\<mu\>> is a pre-measure. In other words if we can
+    'approximate' <math|\<cal-R\>> by a complex class <math|\<cal-C\>> then
+    <math|\<mu\>> is a pre-measure.\ 
+  </theorem>
+
+  <\proof>
+    Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-R\>>
+    be such that
+
+    <\equation>
+      <label|eq 20.228.212>\<forall\>i\<in\>\<bbb-N\><text| we have
+      >A<rsub|i+1>\<subseteq\>A<rsub|i><text| and
+      ><big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>=\<varnothing\>
+    </equation>
+
+    \ As <math|\<mu\>> is finite we have also\ 
+
+    <\equation>
+      <label|eq 20.229.212>\<forall\>i\<in\>\<bbb-N\><text| we have
+      >\<mu\><around*|(|A<rsub|i>|)>\<less\>\<infty\>
+    </equation>
+
+    So if we prove that \ <math|<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|i>|)>=0>
+    then it follows from [theorem: <reference|measure pre-measure
+    equivalences>] that <math|\<mu\>> is a pre-measure. Let
+    <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then by the assumption there
+    exist a <math|K<rsub|n,\<varepsilon\>>\<in\>\<cal-C\>> and a
+    <math|R<rsub|n,\<varepsilon\>>\<in\>\<cal-R\>> such that
+    <math|R<rsub|n,\<varepsilon\>>\<subseteq\>K<rsub|n,\<varepsilon\>>\<subseteq\>A<rsub|n>>
+    and <math|\<mu\><around*|(|A\\R<rsub|n,\<varepsilon\>>|)>\<less\><frac|\<varepsilon\>|2<rsup|n>>>,
+    Hence there exist <math|<around*|{|K<rsub|n,\<varepsilon\>>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>\<cal-C\>>
+    and <math|<around*|{|R<rsub|n,e>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>\<cal-R\>>
+    such that\ 
+
+    <\equation>
+      <label|eq 20.230.212>\<forall\>n\<in\>\<bbb-N\><text| we have
+      >R<rsub|n,\<varepsilon\>>\<subseteq\>K<rsub|n,\<varepsilon\>>\<subseteq\>A<rsub|n><text|
+      and >\<mu\><around*|(|A\\R<rsub|n,\<varepsilon\>>|)>\<less\><frac|\<varepsilon\>|2<rsup|n>>
+    </equation>
+
+    Then we have
+
+    <\equation*>
+      <big|cap><rsub|n\<in\>\<bbb-N\>>K<rsub|n,\<varepsilon\>>\<subseteq\><big|cap><rsub|n\<in\>\<bbb-N\>>A<rsub|n>=\<varnothing\>
+    </equation*>
+
+    so that by the definition of a compact class there exist a
+    <math|N<rsub|\<varepsilon\>>\<in\>\<bbb-N\>> such that
+    <math|<big|cap><rsub|n\<in\><around*|{|1,\<ldots\>,N<rsub|\<varepsilon\>>|}>>K<rsub|n,\<varepsilon\>>=\<varnothing\>>.
+    As <math|<big|cap><rsub|n\<in\>\<bbb-N\>>R<rsub|n,\<varepsilon\>>\<subseteq\><big|cap><rsub|n\<in\>\<bbb-N\>>K<rsub|n,\<varepsilon\>>>
+    it follows that
+
+    <\equation>
+      <label|eq 20.231.212><big|cap><rsub|n\<in\><around*|{|1,\<ldots\>,N<rsub|\<varepsilon\>>|}>>R<rsub|n,\<varepsilon\>>=<big|cap><rsub|n\<in\><around*|{|1,\<ldots\>,N<rsub|\<varepsilon\>>|}>>K<rsub|n,\<varepsilon\>>=\<varnothing\>
+    </equation>
+
+    Let <math|n\<in\><around*|{|1,\<ldots\>,N<rsub|\<varepsilon\>>|}>> then
+    <math|A<rsub|N<rsub|\<varepsilon\>>><below|\<subseteq\>|<text|[eq:
+    <reference|eq 20.230.212>]>>A<rsub|n>> so that
+    <math|A<rsub|N<rsub|\<varepsilon\>>>\<subseteq\><big|cap><rsub|n\<in\><around*|{|1,\<ldots\>,N<rsub|\<varepsilon\>>|}>>A<rsub|n>\<subseteq\>A<rsub|N<rsub|\<varepsilon\>>>>
+    proving that\ 
+
+    <\equation>
+      <label|eq 20.232.212>A<rsub|N<rsub|\<varepsilon\>>>=<big|cap><rsub|n\<in\><around*|{|1,\<ldots\>,N<rsub|\<varepsilon\>>|}>>A<rsub|n>
+    </equation>
+
+    Let <math|x\<in\><big|cap><rsub|n\<in\><around*|{|1,\<ldots\>,N<rsub|\<varepsilon\>>|}>>A<rsub|n>>.
+    Assume that <math|x\<nin\><big|cup><rsub|n\<in\><around*|{|1,\<ldots\>,N<rsub|\<varepsilon\>>|}>><around*|(|A<rsub|n>\\R<rsub|n,\<varepsilon\>>|)>>
+    then <math|\<forall\>n\<in\><around*|{|1,\<ldots\>,N<rsub|\<varepsilon\>>|}>>
+    we have <math|x\<nin\>A<rsub|n>\\R<rsub|n,\<varepsilon\>>>, as
+    <math|x\<in\><big|cap><rsub|n\<in\><around*|{|1,\<ldots\>,N<rsub|\<varepsilon\>>|}>>A<rsub|n>\<subseteq\>A<rsub|n>>,
+    it follows that <math|x\<in\>R<rsub|n,\<varepsilon\>>>. So
+    <math|x\<in\><big|cap><rsub|n\<in\><around*|{|1,\<ldots\>,N<rsub|\<varepsilon\>>|}>>R<rsub|n,\<varepsilon\>>>
+    contradicting [eq: <reference|eq 20.231.212>]. Hence the assumption is
+    wrong and we must have that <math|<rigid|x\<in\><big|cup><rsub|n\<in\><around*|{|1,\<ldots\>,N<rsub|\<varepsilon\>>|}>><around*|(|A<rsub|n>\\R<rsub|n,\<varepsilon\>>|)>>>
+    proving
+
+    <\equation>
+      <label|eq 20.233.212>A<rsub|N<rsub|\<varepsilon\>>>\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.232.212>]>><big|cap><rsub|n\<in\><around*|{|1,\<ldots\>,N<rsub|\<varepsilon\>>|}>>A<rsub|n>\<subseteq\><big|cup><rsub|n\<in\><around*|{|1,\<ldots\>,N<rsub|\<varepsilon\>>|}>><around*|(|A<rsub|n>\\R<rsub|n,\<varepsilon\>>|)><below|\<in\>|\<cal-R\><text|
+      is a ring>>\<cal-R\>
+    </equation>
+
+    Then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<mu\><around*|(|A<rsub|N<rsub|\<varepsilon\>>>|)>>|<cell|<below|\<leqslant\>|<text|[theorem:
+      <reference|measure content properties>(2)]>>>|<cell|\<mu\><around*|(|<big|cup><rsub|n\<in\><around*|{|1,\<ldots\>,N<rsub|\<varepsilon\>>|}>><around*|(|A<rsub|n>\\R<rsub|n,\<varepsilon\>>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|measure content is additive>]>>>|<cell|<big|sum><rsub|i=1><rsup|N<rsub|\<varepsilon\>>>\<mu\><around*|(|A<rsub|n>\\R<rsub|n,\<varepsilon\>>|)>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[eq:
+      <reference|eq 20.230.212>]>>>|<cell|<big|sum><rsub|i=1><rsup|N<rsub|\<varepsilon\>>><frac|\<varepsilon\>|2<rsup|n>>>>|<row|<cell|>|<cell|=>|<cell|\<varepsilon\>\<cdot\><big|sum><rsub|i=1><rsup|N><around*|(|<frac|1|2>|)><rsup|n>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+      <reference|sum of powers lemma>]>>>|<cell|\<varepsilon\>\<cdot\><around*|(|<frac|1|2>|)>\<cdot\><frac|1-<around*|(|<frac|1|2>|)><rsup|n>|1-<frac|1|2>>>>|<row|<cell|>|<cell|=>|<cell|\<varepsilon\>\<cdot\><around*|(|1-<frac|1|2<rsup|n>>|)>>>|<row|<cell|>|<cell|\<less\>>|<cell|\<varepsilon\>>>>>
+    </eqnarray*>
+
+    So we have proved that\ 
+
+    <\equation*>
+      \<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text| there exist a
+      <math|N<rsub|\<varepsilon\>>\<in\>\<bbb-N\><text| such that
+      >\<forall\>n\<in\><around*|{|N<rsub|\<varepsilon\>>,\<ldots\>,\<infty\>|}><text|
+      we have ><around*|\||\<mu\><around*|(|A<rsub|n>|)>-0|\|>=\<mu\><around*|(|A<rsub|n>|)>\<leqslant\>\<mu\><around*|(|A<rsub|N<rsub|\<varepsilon\>>>|)>\<less\>\<varepsilon\>>>
+    </equation*>
+
+    which proves that <math|<below|lim<rsub|\<bbb-R\>>|n\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|n>|)>=0>.
+    Using the fact that <math|\<mu\>> is finite and [theorem:
+    <reference|extended lim inf lim sup in the set of real numbers (1)>] it
+    follows that\ 
+
+    <\equation*>
+      <below|lim|n\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|i>|)>=0
+    </equation*>
+
+    So using [theorem: <reference|measure pre-measure equivalences>] it
+    follows that <math|\<mu\>> is a pre-measure.
   </proof>
 
   <subsubsection|Using the Carathéodory theorem on <math|\<bbb-R\><rsup|n>>>
@@ -15994,17 +16457,40 @@
     <associate|eq 20.200.210|<tuple|20.203|?>>
     <associate|eq 20.201.210|<tuple|20.204|?>>
     <associate|eq 20.202.210|<tuple|20.205|?>>
-    <associate|eq 20.206.210|<tuple|20.206|?>>
-    <associate|eq 20.207.210|<tuple|20.207|?>>
-    <associate|eq 20.208.210|<tuple|20.208|?>>
-    <associate|eq 20.209.210|<tuple|20.209|?>>
+    <associate|eq 20.206.210|<tuple|20.212|?>>
+    <associate|eq 20.206.211|<tuple|20.206|?>>
+    <associate|eq 20.207.210|<tuple|20.213|?>>
+    <associate|eq 20.207.211|<tuple|20.207|?>>
+    <associate|eq 20.208.210|<tuple|20.214|?>>
+    <associate|eq 20.208.211|<tuple|20.208|?>>
+    <associate|eq 20.209.210|<tuple|20.215|?>>
+    <associate|eq 20.209.211|<tuple|20.209|?>>
     <associate|eq 20.21.156|<tuple|20.21|?>>
-    <associate|eq 20.210.210|<tuple|20.210|?>>
-    <associate|eq 20.211.210|<tuple|20.211|?>>
-    <associate|eq 20.212.210|<tuple|20.212|?>>
-    <associate|eq 20.213.210|<tuple|20.213|?>>
+    <associate|eq 20.210.210|<tuple|20.216|?>>
+    <associate|eq 20.210.211|<tuple|20.210|?>>
+    <associate|eq 20.211.210|<tuple|20.217|?>>
+    <associate|eq 20.211.211|<tuple|20.211|?>>
+    <associate|eq 20.212.210|<tuple|20.218|?>>
+    <associate|eq 20.212.211|<tuple|20.212|?>>
+    <associate|eq 20.213.210|<tuple|20.219|?>>
     <associate|eq 20.22.156|<tuple|20.22|?>>
+    <associate|eq 20.220.211|<tuple|20.220|?>>
+    <associate|eq 20.220.212|<tuple|20.221|?>>
+    <associate|eq 20.220.212.1|<tuple|20.220|?>>
+    <associate|eq 20.221.122|<tuple|20.221|?>>
+    <associate|eq 20.221.212|<tuple|20.222|?>>
+    <associate|eq 20.222.212|<tuple|20.223|?>>
+    <associate|eq 20.223.212|<tuple|20.224|?>>
+    <associate|eq 20.225.212|<tuple|20.225|?>>
+    <associate|eq 20.226.212|<tuple|20.226|?>>
+    <associate|eq 20.227.212|<tuple|20.227|?>>
+    <associate|eq 20.228.212|<tuple|20.228|?>>
+    <associate|eq 20.229.212|<tuple|20.229|?>>
     <associate|eq 20.23.156|<tuple|20.23|?>>
+    <associate|eq 20.230.212|<tuple|20.230|?>>
+    <associate|eq 20.231.212|<tuple|20.231|?>>
+    <associate|eq 20.232.212|<tuple|20.232|?>>
+    <associate|eq 20.233.212|<tuple|20.233|?>>
     <associate|eq 20.24\<point\>156|<tuple|20.24|?>>
     <associate|eq 20.25.156|<tuple|20.25|?>>
     <associate|eq 20.26.156|<tuple|20.26|?>>
@@ -16203,6 +16689,7 @@
     <associate|measure algebra properties|<tuple|20.124|?>>
     <associate|measure begin end|<tuple|20.155|?>>
     <associate|measure borel algebrat on R|<tuple|20.139|?>>
+    <associate|measure compact class approximation|<tuple|20.216|?>>
     <associate|measure condition for a algebra to be a sigma
     algebra|<tuple|20.133|?>>
     <associate|measure content|<tuple|20.209|?>>
@@ -16448,10 +16935,14 @@
       measures <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-60>>
 
-      <with|par-left|<quote|2tab>|20.4.3.4<space|2spc>Using the Carathéodory
-      theorem on <with|mode|<quote|math>|\<bbb-R\><rsup|n>>
+      <with|par-left|<quote|2tab>|20.4.3.4<space|2spc>Pre-measures
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-65>>
+
+      <with|par-left|<quote|2tab>|20.4.3.5<space|2spc>Using the Carathéodory
+      theorem on <with|mode|<quote|math>|\<bbb-R\><rsup|n>>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-66>>
     </associate>
   </collection>
 </auxiliary>

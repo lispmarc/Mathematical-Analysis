@@ -824,6 +824,10 @@
 
       <item>If <math|B\<subseteq\>A><space|1em>then
       <math|B<big|cap><around*|(|A\\C|)>=B\\C>
+
+      <item><math|<around*|(|A\\B|)><big|cup>A=A>
+
+      <item><math|<around*|(|A\\B|)><big|cap>A=A\\B>
     </enumerate>
   </theorem>
 
@@ -918,9 +922,209 @@
       <\eqnarray*>
         <tformat|<table|<row|<cell|B<big|cap><around*|(|A\\C|)>>|<cell|\<equallim\><rsub|<around*|(|7|)>>>|<cell|<around*|(|B<big|cap>A|)>\\C>>|<row|<cell|>|<cell|\<equallim\><rsub|B\<subseteq\>A\<wedge\><around*|(|2|)>>>|<cell|B\\C>>>>
       </eqnarray*>
+
+      <item>Using [theorem: <reference|class intersection, union, inclusion>]
+      we have <math|<around*|(|A\\B|)>\<subseteq\>A> so that by (1)
+      <math|<around*|(|A\\B|)><big|cup>A=A>
+
+      <item>Using [theorem: <reference|class intersection, union, inclusion>]
+      we have <math|<around*|(|A\\B|)>\<subseteq\>A> so that by (2)
+      <math|<around*|(|A\\B|)><big|cap>A=A\\B>
     </enumerate>
 
     \;
+  </proof>
+
+  If <math|A,B> are classes then <math|x\<in\>A<big|cup>B> if and only
+  <math|x\<in\>A\<vee\>x\<in\>B> where the boolean operator satisfies the
+  following truth table\ 
+
+  <\equation*>
+    <tabular|<tformat|<cwith|1|1|1|-1|cell-background|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/ridged-brushed-light.png||>>|<cwith|1|-1|1|-1|cell-tborder|1ln>|<cwith|1|-1|1|-1|cell-bborder|1ln>|<cwith|1|-1|1|-1|cell-lborder|1ln>|<cwith|1|-1|1|-1|cell-rborder|1ln>|<table|<row|<cell|P>|<cell|Q>|<cell|P\<vee\>Q>>|<row|<cell|True>|<cell|True>|<cell|True>>|<row|<cell|False>|<cell|True>|<cell|True>>|<row|<cell|True>|<cell|False>|<cell|True>>|<row|<cell|False>|<cell|False>|<cell|False>>>>>
+  </equation*>
+
+  So if <math|x\<in\>A\<wedge\>x\<in\>B> we have that
+  <math|x\<in\>A<big|cup>B> essential because <math|\<vee\>> is the inclusive
+  'or', sometimes we want to use the exclusive 'or' operator so that if
+  <math|x\<in\>A<big|cup>B> we have either <math|x\<in\>A> or <math|x\<in\>B>
+  but not <math|x\<in\>A\<wedge\>x\<in\>B>. Essential we want to have\ 
+
+  <\equation*>
+    <tabular|<tformat|<cwith|1|1|1|-1|cell-background|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/ridged-brushed-light.png||>>|<cwith|1|-1|1|-1|cell-tborder|1ln>|<cwith|1|-1|1|-1|cell-bborder|1ln>|<cwith|1|-1|1|-1|cell-lborder|1ln>|<cwith|1|-1|1|-1|cell-rborder|1ln>|<table|<row|<cell|x\<in\>A>|<cell|x\<in\>B>|<cell|x\<in\>A<big|cup>B>>|<row|<cell|True>|<cell|True>|<cell|False>>|<row|<cell|False>|<cell|True>|<cell|True>>|<row|<cell|True>|<cell|False>|<cell|True>>|<row|<cell|False>|<cell|False>|<cell|False>>>>>
+  </equation*>
+
+  To indicate this we use the following definition
+
+  <\definition>
+    Let <math|A,B> be classes then if <math|A<big|cap>B=\<varnothing\>> we
+    use the notation <math|A<big|sqcup>B> instead of <math|A<big|cup>B>. In
+    other words if we use <math|A<big|sqcup>B> for the union then we
+    implicitly assume that <math|A<big|cap>B=\<varnothing\>>.
+  </definition>
+
+  \ Using this notation we have the following usefull set relations
+
+  <\theorem>
+    <label|class disjoint unions>Let <math|A,B> be classes then we have
+
+    <\enumerate>
+      <item><math|A<big|cap><around*|(|B\\A|)>=\<varnothing\>>
+
+      <item><math|<around*|(|A<big|cap>B|)><big|cap><around*|(|B\\A|)>=\<varnothing\>>
+
+      <item><math|A<big|sqcup><around*|(|B\\A|)>=A<big|cup>B>\ 
+
+      <item><math|A<big|cup>B=<around*|(|A\<setminus\>B|)><big|sqcup><around*|(|A<big|cap>B|)><big|sqcup><around*|(|B\\A|)>>
+
+      <item><math|B=<around*|(|A<big|cap>B|)><big|sqcup><around*|(|B\\A|)>>
+
+      <item>If <math|A\<subseteq\>B> then
+      <math|B=A<big|sqcup><around*|(|B\\A|)>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|x\<in\>A<big|cap><around*|(|B\\A|)>> then
+      <math|x\<in\>A> and <math|x\<in\>B\\A\<Rightarrow\>x\<nin\>A> leading
+      to the contradiction <math|x\<in\>A\<wedge\>x\<nin\>A>, hence we have
+      that <math|A<big|cap><around*|(|B\\A|)>=\<varnothing\>>.
+
+      <item>As <math|<around*|(|A<big|cap>B|)><below|\<subseteq\>|<text|[theoren:
+      <reference|class intersection, union, inclusion>]>>A> and
+      <math|B\\A\<subseteq\>B\\A> <math|>it follows from [theorem:
+      <reference|class intersection, union, inclusion>] that
+
+      <\equation*>
+        <around*|(|A<big|cap>B|)><big|cap><around*|(|B\\A|)>\<subseteq\>A<big|cap><around*|(|B\\A|)>\<equallim\><rsub|<around*|(|1|)>>\<varnothing\>
+      </equation*>
+
+      so that by [theorem: <reference|class empty set>]\ 
+
+      <\equation*>
+        <around*|(|A<big|cap>B|)><big|cap><around*|(|B\\A|)>=\<varnothing\>
+      </equation*>
+
+      <item>If <math|x\<in\>A<big|cup><around*|(|B\\A|)>> then
+      <math|x\<in\>A> or <math|x\<in\>B\\A\<Rightarrow\>x\<in\>B> so that
+      <math|x\<in\>A<big|cup>B>, hence
+
+      <\equation*>
+        A<big|cup><around*|(|B\\A|)>\<subseteq\>A<big|cup>B.
+      </equation*>
+
+      On the other hand if <math|x\<in\>A<big|cup>B> we have either
+      <math|x\<in\>A> or <math|x\<in\>B>. If <math|x\<nin\>A> then we must
+      have \ <math|x\<in\>B> [otherwise <math|x\<nin\>A\<wedge\>x\<nin\>B=\<neg\><around*|(|x\<in\>A\<vee\>x\<in\>B|)>=\<neg\><around*|(|x\<in\>A<big|cup>B|)>>
+      contradicting <math|x\<in\>A<big|cup>B>] so we must have
+      \ <math|x\<in\>A<big|cup><around*|(|B\\A|)>>. Hence
+
+      <\equation*>
+        A<big|cup>B\<subseteq\>A<big|cup><around*|(|B\\A|)>
+      </equation*>
+
+      Sow we conclude that <math|A<big|sqcup><around*|(|B\\A|)>=A<big|cup>B>
+      which combined with (1) gives
+
+      <\equation*>
+        A<big|sqcup><around*|(|B\\A|)>=A<big|cup>B
+      </equation*>
+
+      <item>By [theorem: <reference|class intersection, union, inclusion>] we
+      have <math|A\\B\<subseteq\>A\<subseteq\>A<big|cup>B>,
+      <math|A<big|cap>B\<subseteq\>A\<subseteq\>A<big|cup>B>,
+      <math|B\\A\<subseteq\>B\<subseteq\>A<big|cup>B> so that by [theorem:
+      <reference|class properties (1)>]
+
+      <\equation*>
+        <around*|(|A\\B|)><big|cup><around*|(|A<big|cap>B|)><big|cup><around*|(|B\\A|)>\<subseteq\>A<big|cup>B
+      </equation*>
+
+      On the other hand <math|>if <math|x\<in\>A<big|cup>B> then we have
+      either:\ 
+
+      <\description>
+        <item*|<math|x\<in\>A>>Then we have either\ 
+
+        <\description>
+          <item*|<math|x\<in\>B>>Then <math|x\<in\>A<big|cap>B> so that
+          <math|x\<in\><around*|(|A\\B|)><big|cup><around*|(|A<big|cap>B|)><big|cup><around*|(|B\\A|)>>
+
+          <item*|<math|x\<nin\>B>>Then <math|x\<in\>A\\B> so that
+          <math|x\<in\><around*|(|A\\B|)><big|cup><around*|(|A<big|cap>B|)><big|cup><around*|(|B\\A|)>>
+        </description>
+
+        <item*|<math|x\<in\>B>>Then we have either
+
+        <\description>
+          <item*|<math|x\<in\>A>>Then <math|x\<in\>A<big|cap>B> so that
+          <math|x\<in\><around*|(|A\\B|)><big|cup><around*|(|A<big|cap>B|)><big|cup><around*|(|B\\A|)>>
+
+          <item*|<math|x\<nin\>A>>Then <math|x\<in\>B\\A> so that
+          <math|x\<in\><around*|(|A\\B|)><big|cup><around*|(|A<big|cap>B|)><big|cup><around*|(|B\\A|)>>
+        </description>
+      </description>
+
+      \ hence we have that\ 
+
+      <\equation*>
+        A<big|cup>B\<subseteq\><around*|(|A\\B|)><big|cup><around*|(|A<big|cap>B|)><big|cup><around*|(|B\\A|)>
+      </equation*>
+
+      So that\ 
+
+      <\equation*>
+        A<big|cup>B=<around*|(|A\\B|)><big|cup><around*|(|A<big|cap>B|)><big|cup><around*|(|B\\A|)>
+      </equation*>
+
+      which as by (2) <math|<around*|(|A\\B|)><big|cap><around*|(|A<big|cap>B|)>=\<varnothing\>=<around*|(|B\\A|)><big|cap><around*|(|A<big|cap>B|)>>
+      we have\ 
+
+      <\equation*>
+        A<big|cup>B=<around*|(|A\\B|)><big|sqcup><around*|(|A<big|cap>B|)><big|sqcup><around*|(|B\\A|)>
+      </equation*>
+
+      <item>If <math|x\<in\>B> then we have either
+      <math|x\<in\>A\<Rightarrow\>x\<in\>A<big|cap>B> or
+      <math|x\<nin\>A\<Rightarrow\>x\<in\>B\\A> so that
+      <math|x<rigid|\<in\><around*|(|A<big|cap>B|)><big|cup><around*|(|B\\A|)>>>
+      proving\ 
+
+      <\equation*>
+        B\<subseteq\><around*|(|A<big|cap>B|)><big|cup><around*|(|B\\A|)>
+      </equation*>
+
+      If <math|x\<in\><around*|(|A<big|cap>B|)><big|cup><around*|(|A\\B|)>>
+      then we have either <math|x\<in\>A<big|cap>B\<Rightarrow\>x\<in\>B> or
+      <math|x\<in\>B\\A\<Rightarrow\>x\<in\>B> so that in all cases we have
+      <math|x\<in\>B>. Hence we have\ 
+
+      <\equation*>
+        <around*|(|A<big|cap>B|)><big|cup><around*|(|B\\A|)>\<subseteq\>B
+      </equation*>
+
+      so that\ 
+
+      <\equation*>
+        B=<around*|(|A<big|cap>B|)><big|cup><around*|(|B\\A|)>
+      </equation*>
+
+      which using (2) leads to\ 
+
+      <\equation*>
+        B=<around*|(|A<big|cap>B|)><big|sqcup><around*|(|B\\A|)>
+      </equation*>
+
+      <item>If <math|A\<subseteq\>B> then by [theorem: <reference|class
+      inclusion and union and intersection>] then <math|A=A<big|cap>B> so
+      that
+
+      <\equation*>
+        B=<around*|(|A<big|cap>B|)><big|sqcup><around*|(|B\\A|)>=A<big|sqcup><around*|(|B\\A|)>
+      </equation*>
+    </enumerate>
   </proof>
 
   <section|Cartesian products>
@@ -14682,18 +14886,18 @@
     <associate|axiom of choice|<tuple|3.101|?>>
     <associate|axiom of construction|<tuple|1.9|?>>
     <associate|axiom of extent|<tuple|1.5|2>>
-    <associate|axiom of infinity|<tuple|1.53|?>>
-    <associate|axiom of pairing|<tuple|1.37|?>>
-    <associate|axiom of power|<tuple|1.65|?>>
-    <associate|axiom of subsets|<tuple|1.55|?>>
-    <associate|axiom of union|<tuple|1.62|?>>
+    <associate|axiom of infinity|<tuple|1.55|?>>
+    <associate|axiom of pairing|<tuple|1.39|?>>
+    <associate|axiom of power|<tuple|1.67|?>>
+    <associate|axiom of subsets|<tuple|1.57|?>>
+    <associate|axiom of union|<tuple|1.64|?>>
     <associate|bijection|<tuple|2.62|?>>
     <associate|bijective classes|<tuple|2.63|?>>
-    <associate|cartesian product|<tuple|1.45|?>>
-    <associate|cartesian product and inclusion|<tuple|1.49|?>>
-    <associate|cartesian product of the empty set|<tuple|1.47|?>>
-    <associate|cartesian product properties (1)|<tuple|1.50|?>>
-    <associate|cartesian product with enpty set|<tuple|1.48|?>>
+    <associate|cartesian product|<tuple|1.47|?>>
+    <associate|cartesian product and inclusion|<tuple|1.51|?>>
+    <associate|cartesian product of the empty set|<tuple|1.49|?>>
+    <associate|cartesian product properties (1)|<tuple|1.52|?>>
+    <associate|cartesian product with enpty set|<tuple|1.50|?>>
     <associate|choice Axiom of choice consequences|<tuple|3.131|?>>
     <associate|choice Hausdorff maximal principle|<tuple|3.122|?>>
     <associate|choice Hausdorff's Maximal Principle|<tuple|3.123|?>>
@@ -14727,27 +14931,28 @@
     <associate|class complement of comploment|<tuple|1.27|?>>
     <associate|class de Morgan's law|<tuple|1.28|?>>
     <associate|class difference|<tuple|1.24|?>>
+    <associate|class disjoint unions|<tuple|1.35|?>>
     <associate|class empty set|<tuple|1.18|?>>
     <associate|class empty set definition|<tuple|1.16|?>>
     <associate|class empty set is unique|<tuple|1.19|?>>
-    <associate|class general intersection|<tuple|1.61|?>>
+    <associate|class general intersection|<tuple|1.63|?>>
     <associate|class inclusion and union and intersection|<tuple|1.33|?>>
-    <associate|class intersection|<tuple|1.58|?>>
+    <associate|class intersection|<tuple|1.60|?>>
     <associate|class intersection, union, inclusion|<tuple|1.25|?>>
     <associate|class not empty sets|<tuple|1.20|?>>
     <associate|class properties (1)|<tuple|1.8|2>>
     <associate|class set difference and union , intersection|<tuple|1.31|?>>
     <associate|class subset and complement|<tuple|1.29|?>>
-    <associate|class trivial union intersection|<tuple|1.59|?>>
-    <associate|class union|<tuple|1.57|?>>
-    <associate|class union{A,B}|<tuple|1.60|?>>
+    <associate|class trivial union intersection|<tuple|1.61|?>>
+    <associate|class union|<tuple|1.59|?>>
+    <associate|class union{A,B}|<tuple|1.62|?>>
     <associate|class universal and empotyset properties|<tuple|1.32|?>>
-    <associate|element a=b=\<gtr\>{a}={b}|<tuple|1.35|?>>
-    <associate|element equalitiy of unordered pairs|<tuple|1.40|?>>
-    <associate|element equality of unordered pairs (1)|<tuple|1.41|?>>
+    <associate|element a=b=\<gtr\>{a}={b}|<tuple|1.37|?>>
+    <associate|element equalitiy of unordered pairs|<tuple|1.42|?>>
+    <associate|element equality of unordered pairs (1)|<tuple|1.43|?>>
     <associate|element is set|<tuple|1.2|?>>
-    <associate|element {a,a}={a}|<tuple|1.38|?>>
-    <associate|element: {a} is a element|<tuple|1.39|?>>
+    <associate|element {a,a}={a}|<tuple|1.40|?>>
+    <associate|element: {a} is a element|<tuple|1.41|?>>
     <associate|empty set property|<tuple|1.17|?>>
     <associate|eq 1.1 001|<tuple|1.1|2>>
     <associate|eq 1.2 001|<tuple|1.2|2>>
@@ -15108,8 +15313,8 @@
     <associate|order well ordering and isomorphism (2)|<tuple|3.96|?>>
     <associate|order well ordering and order isomorphism|<tuple|3.82|?>>
     <associate|order well-rodered class|<tuple|3.81|?>>
-    <associate|pair equality of pairs|<tuple|1.44|?>>
-    <associate|pair of elements|<tuple|1.42|?>>
+    <associate|pair equality of pairs|<tuple|1.46|?>>
+    <associate|pair of elements|<tuple|1.44|?>>
     <associate|partial function|<tuple|2.7|?>>
     <associate|partial function associativity|<tuple|2.21|?>>
     <associate|partial function composition of graphs|<tuple|2.18|?>>
@@ -15127,7 +15332,7 @@
     <associate|partial function set domain range|<tuple|2.12|?>>
     <associate|partial functions image/preimage properties|<tuple|2.17|?>>
     <associate|parttial function graph|<tuple|2.6|?>>
-    <associate|power set|<tuple|1.64|?>>
+    <associate|power set|<tuple|1.66|?>>
     <associate|product|<tuple|2.137|?>>
     <associate|product and intersection|<tuple|2.142|?>>
     <associate|product and power|<tuple|2.144|?>>
@@ -15144,15 +15349,15 @@
     <associate|relation|<tuple|3.1|?>>
     <associate|relation properties|<tuple|3.4|?>>
     <associate|relation trivial|<tuple|3.3|?>>
-    <associate|set A*B|<tuple|1.68|?>>
-    <associate|set A*B is subset of P(P(AUB))|<tuple|1.67|?>>
-    <associate|set element proper class|<tuple|1.51|?>>
+    <associate|set A*B|<tuple|1.70|?>>
+    <associate|set A*B is subset of P(P(AUB))|<tuple|1.69|?>>
+    <associate|set element proper class|<tuple|1.53|?>>
     <associate|set emptyset is not set of empty set|<tuple|2.2|?>>
-    <associate|set extending set with new element|<tuple|1.69|?>>
-    <associate|set intersection of two sets is aset|<tuple|1.56|?>>
-    <associate|set restriction of a set of sets|<tuple|1.66|?>>
-    <associate|set successor set|<tuple|1.52|?>>
-    <associate|set union of two sets is a set|<tuple|1.63|?>>
+    <associate|set extending set with new element|<tuple|1.71|?>>
+    <associate|set intersection of two sets is aset|<tuple|1.58|?>>
+    <associate|set restriction of a set of sets|<tuple|1.68|?>>
+    <associate|set successor set|<tuple|1.54|?>>
+    <associate|set union of two sets is a set|<tuple|1.65|?>>
     <associate|totally ordered class|<tuple|3.40|?>>
     <associate|universal class|<tuple|1.12|?>>
     <associate|universal class property|<tuple|1.13|?>>
