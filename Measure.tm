@@ -8761,6 +8761,229 @@
     </enumerate>
   </proof>
 
+  <\lemma>
+    <label|lemma 20.109.213>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>> a
+    finite family of sets such that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    there exist a family <math|<around*|{|B<rsub|i,j>|}><rsub|j\<in\>I<rsub|i>>>
+    such that <math|A<rsub|i>=<big|cup><rsub|j\<in\>I<rsub|i>>B<rsub|i,j>>
+    then we have:\ 
+
+    <\enumerate>
+      <item><math|<big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>=<big|cup><rsub|\<sigma\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>><around*|(|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|k,\<sigma\><rsub|k>><rsub|>|)>>
+
+      <item>If <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+      <math|<around*|{|B<rsub|i,j>|}><rsub|j\<in\>I<rsub|i>>> is pairwise
+      disjoint then we have that <math|<around*|{|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|k,\<sigma\><rsub|k>>|}><rsub|\<sigma\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>>>
+      is pairwise disjoint. In other words
+
+      <\equation*>
+        <big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>=<big|sqcup><rsub|\<sigma\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>><around*|(|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|k,\<sigma\><rsub|k>><rsub|>|)>
+      </equation*>
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>We use induction to prove this, so define\ 
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\>\|<text|If
+        ><around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><text|
+        is such that >\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+        >\<exists\><around*|{|B<rsub|i,j>|}><rsub|j\<in\>I<rsub|i>><text|
+        with >A<rsub|i>=<big|cup><rsub|j\<in\>I<rsub|i>>B<rsub|i,j><text|
+        then ><big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>=<big|cup><rsub|\<sigma\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>><around*|(|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|k,\<sigma\><rsub|k>>|)>|}>
+      </equation*>
+
+      then we have:\ 
+
+      <\description>
+        <item*|<math|1\<in\>S>>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,1|}>>>
+        satisfies that there exist a <math|<around*|{|B<rsub|1,j>|}><rsub|j\<in\>I<rsub|1>>>
+        such that <math|A<rsub|1>=<big|cup><rsub|j\<in\>I<rsub|1>>B<rsub|1,j>>
+        then
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<big|cap><rsub|i\<in\><around*|{|1|}>>A<rsub|i>>|<cell|=>|<cell|A<rsub|1>>>|<row|<cell|>|<cell|=>|<cell|<big|cup><rsub|j\<in\>I<rsub|1>>B<rsub|1,j>>>|<row|<cell|>|<cell|=>|<cell|<big|cup><rsub|j\<in\>I<rsub|1>><around*|(|<big|cap><rsub|k\<in\><around*|{|1|}>>B<rsub|k,j>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|cup><rsub|<around*|(|j|)>\<in\><big|prod><rsub|i\<in\><around*|{|1|}>>I<rsub|i>><around*|(|<big|cap><rsub|k\<in\><around*|{|1|}>>B<rsub|k,j>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|cup><rsub|\<sigma\>\<in\><big|prod><rsub|i\<in\><around*|{|1|}>>I<rsub|i>><around*|(|<big|cap><rsub|k\<in\><around*|{|1|}>>B<rsub|k,\<sigma\><rsub|k>>|)>>>>>
+        </eqnarray*>
+
+        proving that <math|1\<in\>S>.
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+        <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>><text|
+        is such that >\<forall\>i\<in\><around*|{|1,\<ldots\>,n+1|}><text|
+        >\<exists\><around*|{|B<rsub|i,j>|}><rsub|j\<in\>I<rsub|i>><text|
+        with >A<rsub|i>=<big|cup><rsub|j\<in\>I<rsub|i>>B<rsub|i,j>>. Then as
+        <math|n\<in\>\<cal-S\>> we have that\ 
+
+        <\equation>
+          <label|eq 20.57.212><big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>=<big|cup><rsub|\<sigma\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>><around*|(|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|k,\<sigma\><rsub|k>>|)>
+        </equation>
+
+        Hence\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>A<rsub|i>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)><big|cap>A<rsub|n+1>>|<cell|\<equallim\><rsub|n\<in\>S>>|<cell|>>|<row|<cell|<around*|(|<big|cup><rsub|\<sigma\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>><around*|(|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|k,\<sigma\><rsub|k>>|)>|)><big|cap>A<rsub|n+1>>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|family distributivity>]>>>|<cell|>>|<row|<cell|<big|cup><rsub|\<sigma\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>><around*|(|<around*|(|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|k,\<sigma\><rsub|k>>|)><big|cap>A<rsub|n+1>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|cup><rsub|\<sigma\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>><around*|(|<around*|(|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|k,\<sigma\><rsub|k>>|)><big|cap><around*|(|<big|cup><rsub|j\<in\>I<rsub|n+1>>B<rsub|n+1,j>|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+          <reference|family distributivity>]>>>|<cell|>>|<row|<cell|<big|cup><rsub|\<sigma\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>><around*|(|<around*|(|<big|cup><rsub|j\<in\>I<rsub|n+1>><around*|(|B<rsub|n+1,j><big|cap><around*|(|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|k,\<sigma\><rsub|k>>|)>|)>|)>|)>>|<cell|=>|<cell|>>>>
+        </eqnarray*>
+
+        So that\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>A<rsub|i>>|<cell|=>|<cell|>>|<row|<cell|<big|cup><rsub|\<sigma\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>><around*|(|<around*|(|<big|cup><rsub|j\<in\>I<rsub|n+1>><around*|(|B<rsub|n+1,j><big|cap><around*|(|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|k,\<sigma\><rsub|k>>|)>|)>|)>|)>>|<cell|>|<cell|<eq-number><label|eq
+          20.58.212>>>>>
+        </eqnarray*>
+
+        If <math|x\<in\><big|cup><rsub|\<sigma\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>><around*|(|<around*|(|<big|cup><rsub|j\<in\>I<rsub|n+1>><around*|(|B<rsub|n+1,j><big|cap><around*|(|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|k,\<sigma\><rsub|k>>|)>|)>|)>|)>>
+        then there exist a <math|\<sigma\>=<around*|(|\<sigma\><rsub|1>,\<ldots\>,\<sigma\><rsub|n>|)>>
+        such that <math|x\<in\>><math|<around*|(|<big|cup><rsub|j\<in\>I<rsub|n+1>><around*|(|B<rsub|n+1,j><big|cap><around*|(|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|k,\<sigma\><rsub|k>>|)>|)>|)>>,
+        hence there exist a <math|j\<in\>I<rsub|n+1>> such that
+
+        <\equation*>
+          x\<in\>B<rsub|n+1,j><big|cap><around*|(|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|k,\<sigma\><rsub|k>>|)>
+        </equation*>
+
+        Define\ 
+
+        <\equation*>
+          \<tau\>\<in\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>I<rsub|i><text|
+          by >\<tau\><rsub|i>=<choice|<tformat|<table|<row|<cell|\<sigma\><rsub|i><text|
+          if >i\<in\><around*|{|1,\<ldots\>,n|}>>>|<row|<cell|j<text| if
+          >i=n+1>>>>>
+        </equation*>
+
+        then <math|x\<in\>B<rsub|n+1,\<tau\><rsub|n+1>><big|cap><around*|(|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|k,t<rsub|k>>|)>=<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n+1|}>>B<rsub|k,\<tau\><rsub|k>>>.
+        Hence\ 
+
+        <\equation*>
+          x\<in\><big|cup><rsub|\<tau\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>><around*|(|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n+1|}>>B<rsub|k,\<tau\><rsub|k>>|)>
+        </equation*>
+
+        whic proves that\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<big|cup><rsub|\<sigma\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>><around*|(|<around*|(|<big|cup><rsub|j\<in\>I<rsub|n+1>><around*|(|B<rsub|n+1,j><big|cap><around*|(|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|k,\<sigma\><rsub|k>>|)>|)>|)>|)>>|<cell|\<subseteq\>>|<cell|>>|<row|<cell|<big|cup><rsub|\<sigma\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>><around*|(|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n+1|}>>B<rsub|k,\<sigma\><rsub|k>>|)>>|<cell|>|<cell|<eq-number><label|eq
+          20.59.212>>>>>
+        </eqnarray*>
+
+        If <math|x\<in\><big|cup><rsub|\<sigma\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>><around*|(|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n+1|}>>B<rsub|k,\<sigma\><rsub|k>>|)>>
+        then there exist a <math|\<sigma\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>I<rsub|i>>
+        such that <math|x\<in\><big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n+1|}>>B<rsub|k,\<sigma\><rsub|k>>>.
+        Define <math|\<eta\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i><rsub|>
+        by \<eta\><rsub|l>=\<sigma\><rsub|l>> and
+        <math|<rigid|j=\<sigma\><rsub|n+1>\<in\>I<rsub|n+1>>> then
+
+        <\equation*>
+          x\<in\>B<rsub|n+1,j><big|cap><around*|(|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n+1|}>>B<rsub|k\<comma\>\<eta\><rsub|k>>|)>\<subseteq\><big|cup><rsub|j\<in\>I<rsub|n+1>><around*|(|B<rsub|n+1,j><big|cap><around*|(|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n+1|}>>B<rsub|k\<comma\>\<eta\><rsub|k>>|)>|)>
+        </equation*>
+
+        so that <math|x\<in\><big|cup><rsub|j\<in\>I<rsub|n+1>><around*|(|B<rsub|n+1,j><big|cap><around*|(|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n+1|}>>B<rsub|k\<comma\>\<eta\><rsub|k>>|)>|)>>
+        or as <math|\<eta\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i><rsub|>>
+        we have that <math|x\<in\><big|cup><rsub|\<eta\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>><around*|(|<big|cup><rsub|j\<in\>I<rsub|n+1>><around*|(|B<rsub|n+1,j><big|cap><around*|(|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n+1|}>>B<rsub|k\<comma\>\<eta\><rsub|k>>|)>|)>|)>>.
+        Hence
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<big|cup><rsub|\<sigma\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>><around*|(|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n+1|}>>B<rsub|k,\<sigma\><rsub|k>>|)>>|<cell|\<subseteq\>>|<cell|>>|<row|<cell|<big|cup><rsub|\<sigma\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>><around*|(|<around*|(|<big|cup><rsub|j\<in\>I<rsub|n+1>><around*|(|B<rsub|n+1,j><big|cap><around*|(|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|k,\<sigma\><rsub|k>>|)>|)>|)>|)>>|<cell|>|<cell|>>>>
+        </eqnarray*>
+
+        which combined with [eq: <reference|eq 20.59.212>] proves that\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<big|cup><rsub|\<sigma\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>><around*|(|<around*|(|<big|cup><rsub|j\<in\>I<rsub|n+1>><around*|(|B<rsub|n+1,j><big|cap><around*|(|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|k,\<sigma\><rsub|k>>|)>|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|cup><rsub|\<sigma\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>><around*|(|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n+1|}>>B<rsub|k,\<sigma\><rsub|k>>|)>>|<cell|>|<cell|>>>>
+        </eqnarray*>
+
+        Combining the above with [eq: <reference|eq 20.58.212>] proves that\ 
+
+        <\equation*>
+          <big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>A<rsub|i>=<big|cup><rsub|\<sigma\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>><around*|(|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n+1|}>>B<rsub|k,\<sigma\><rsub|k>>|)>
+        </equation*>
+
+        Hence we have that <math|n+1\<in\>\<cal-S\>>
+      </description>
+
+      <item>Assume that <math|\<sigma\>,\<tau\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>>
+      with <math|\<sigma\>\<neq\>\<tau\>> then there exist
+      <math|i\<in\><around*|{|1,\<ldots\>,n|}>> such that
+      <math|\<sigma\><rsub|i>\<neq\>\<tau\><rsub|i>>. As
+      <math|<around*|{|B<rsub|i,j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,I<rsub|i>|}>>>
+      is pairwise disjoint we have that <math|B<rsub|i,\<sigma\><rsub|i>><big|cap>B<rsub|i,\<tau\><rsub|i>>=\<varnothing\>>.
+      Hence\ 
+
+      <\equation*>
+        <around*|(|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|k,\<sigma\><rsub|k>>|)><big|cap><around*|(|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|k,\<tau\><rsub|k>>|)>\<subseteq\>B<rsub|i,\<sigma\><rsub|i>><big|cap>B<rsub|i,\<tau\><rsub|i>>=\<varnothing\>
+      </equation*>
+
+      proving that <math|<around*|{|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|k,\<sigma\><rsub|k>>|}><rsub|\<sigma\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>>>
+      is pairwise disjoint.
+
+      \ 
+    </enumerate>
+  </proof>
+
+  TODO
+
+  <\lemma>
+    <label|lemma 20.110.214>Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>>
+    be a family of sets such that <math|\<forall\>i\<in\>I> there exist a
+    <math|<around*|{|B<rsub|i,j>|}><rsub|j\<in\>I<rsub|i>>> such that
+    <math|A<rsub|i>=<big|cup><rsub|j\<in\>I<rsub|i>>B<rsub|i,j>> then\ 
+
+    <\enumerate>
+      <item><math|<big|cup><rsub|i\<in\>I>A<rsub|i>=<big|cup><rsub|\<sigma\>\<in\><big|cup><rsub|i\<in\>I><around*|{|i|}>\<times\>I<rsub|i>>B<rsub|\<sigma\><rsub|1>,\<sigma\><rsub|2>>>
+
+      <item>If additional <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>> is
+      pairwise disjoint and <math|\<forall\>i\<in\>I>
+      <math|<around*|{|B<rsub|i,j>|}><rsub|j\<in\>I<rsub|i>>> is pairwise
+      disjoint then <math|<around*|{|B<rsub|\<sigma\><rsub|1>,\<sigma\><rsub|2>>|}><rsub|\<sigma\>\<in\><big|cup><rsub|i\<in\>I><around*|{|i|}>\<times\>I<rsub|i>>>
+      is pairwise disjoint.
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|x\<in\><big|cup><rsub|i\<in\>I>A<rsub|i>> then there
+      exist a <math|i\<in\>I> such that <math|x\<in\>A<rsub|i>>, hence, as
+      <math|A<rsub|i>=<big|cup><rsub|j\<in\>I<rsub|i>>B<rsub|i,j><rsub|>>
+      there exist a <math|j\<in\>I<rsub|i>> such that
+      <math|x\<in\>B<rsub|i,j>>. As <math|\<sigma\>=<around*|(|i,j|)>\<in\><around*|{|i|}>\<times\>I<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>I><around*|{|i|}>\<times\>I<rsub|i>>
+      it follows <math|x\<in\>B<rsub|\<sigma\><rsub|1>,\<sigma\><rsub|2>>>,
+      hence we have that <math|<big|cup><rsub|i\<in\>I>A<rsub|i>\<subseteq\><big|cup><rsub|\<sigma\>\<in\><big|cup><rsub|i\<in\>I><around*|{|i|}>\<times\>I<rsub|i>>>.
+      Further as for <math|\<sigma\>\<in\><big|cup><rsub|i\<in\>I><around*|{|i|}>\<times\>I>
+      we have that <math|B<rsub|\<sigma\><rsub|1>,\<sigma\><rsub|2>>\<subseteq\><big|cup><rsub|j\<in\>I<rsub|\<sigma\><rsub|1>>>B<rsub|\<sigma\><rsub|1>,j>=A<rsub|\<sigma\><rsub|1>>\<subseteq\><big|cup><rsub|i\<in\>I>A<rsub|i>>
+      it follows that <math|<big|cup><rsub|\<sigma\>\<in\><big|cup><rsub|i\<in\>I><around*|{|i|}>\<times\>I<rsub|i>>B<rsub|\<sigma\><rsub|1>,\<sigma\><rsub|2>>\<subseteq\><big|cup><rsub|i\<in\>I>A<rsub|i>>.
+      So it follows that\ 
+
+      <\equation*>
+        <big|cup><rsub|i\<in\>I>A<rsub|i>=<big|cup><rsub|\<sigma\>\<in\><big|cup><rsub|i\<in\>I><around*|{|i|}>\<times\>I<rsub|i>>B<rsub|\<sigma\><rsub|1>,\<sigma\><rsub|2>>
+      </equation*>
+
+      <item>Let <math|\<sigma\>,\<tau\>\<in\><big|cup><rsub|i\<in\>I><around*|{|i|}>\<times\>I<rsub|i>>
+      with <math|\<sigma\>\<neq\>\<tau\>> then we have either:\ 
+
+      <\description>
+        <item*|<math|\<sigma\><rsub|1>=\<tau\><rsub|1>>>Then we must have
+        that <math|\<sigma\><rsub|2>\<neq\>\<tau\><rsub|2>> so that
+        <math|B<rsub|\<sigma\><rsub|1>,\<sigma\><rsub|2>><big|cap>B<rsub|\<tau\><rsub|1>,\<tau\><rsub|2>>=B<rsub|\<sigma\><rsub|1>,\<sigma\><rsub|2>><big|cap>B<rsub|\<sigma\><rsub|1>,\<tau\><rsub|2>>=\<varnothing\><rsub|>>
+        [because <math|<around*|{|B<rsub|\<sigma\><rsub|1>,j>|}><rsub|j\<in\>I<rsub|\<sigma\><rsub|1>>>>
+        is pairwise disjoint].
+
+        <item*|<math|\<sigma\><rsub|1>\<neq\>\<tau\><rsub|1>>>Then
+        <math|B<rsub|\<sigma\><rsub|1>,\<sigma\><rsub|2>><big|cap>B<rsub|\<tau\><rsub|1>,\<tau\><rsub|2>>\<subseteq\><around*|(|<big|cup><rsub|j\<in\>I<rsub|\<sigma\><rsub|1>>>B<rsub|\<sigma\><rsub|1>,j>|)><big|cap><around*|(|<big|cup><rsub|j\<in\>I<rsub|\<iota\>>>B<rsub|\<tau\><rsub|1>,j>|)>=A<rsub|\<sigma\><rsub|1>><big|cap>A<rsub|\<tau\><rsub|1>>=\<varnothing\>>
+        [because <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>> is pairwise
+        disjoint.
+      </description>
+
+      Hence <math|<around*|{|B<rsub|\<sigma\><rsub|1>,\<sigma\><rsub|2>>|}><rsub|\<sigma\>\<in\><big|cup><rsub|i\<in\>I><around*|{|i|}>\<times\>I<rsub|i>>>
+      is pairwise disjoint.
+    </enumerate>
+  </proof>
+
   <\definition>
     <label|measure monotone><dueto|Monotone set function>Let <math|X> be a
     set, <math|\<cal-A\>\<subseteq\>\<cal-P\><around*|(|X|)>> then a set
@@ -14489,7 +14712,7 @@
 
       <item><math|\<forall\>A,B\<in\>\<cal-S\>> we have
       <math|A<big|cap>B\<in\>\<cal-S\>> [in other words <math|\<cal-S\>> is
-      <math|\<cup\>>-stable]
+      <math|<big|cap>>-stable]
 
       <item><math|\<forall\>A,B\<in\>\<cal-S\>> there a finite pairwise
       disjoint family <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-S\>>,
@@ -15938,7 +16161,7 @@
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|\<mu\><around*|(|A<rsub|1>|)>-\<mu\><around*|(|<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>>|<cell|\<equallim\><rsub|<text|[eqs:
-        <reference|eq 20.221.122>, <reference|eq
+        <reference|eq 20.221.212>, <reference|eq
         20.223.212>]>>>|<cell|<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|1>\\A<rsub|i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq;
         <reference|eq 20.222.212>]>>>|<cell|<below|lim<rsub|i\<rightarrow\>\<infty\>>|><around*|(|\<mu\><around*|(|A<rsub|1>|)>-\<mu\><around*|(|A<rsub|i>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|extended limit properties>]>>>|<cell|<below|\<mu\><around*|(|A<rsub|1>|)>-<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|i>|)>|>>>>>
@@ -16241,6 +16464,389 @@
     follows that <math|\<mu\>> is a pre-measure.
   </proof>
 
+  The above theorem is especially usefull if we have a ring on a topological
+  Hausdorff space because every set of compact sets is a compact class [see
+  theorem: <reference|compact class and sets of compact sets>]. This
+  expressed in the following theorem.
+
+  <\theorem>
+    <label|measure compact class approximation (1)>Let
+    <math|<around*|\<langle\>|X,\<cal-T\>|\<rangle\>>> be a Hausdorff
+    topological space,, <math|\<cal-R\>> a ring on <math|X> and
+    <math|\<mu\>:X\<rightarrow\><around*|[|0,\<infty\>|]>> a
+    <with|font-series|bold|finite >content. If there exist a set
+    <math|\<cal-S\>> of compact subsets of <math|X> such that
+    <math|\<forall\>A\<in\>\<cal-R\>> and
+    <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> we have that
+    <math|\<exists\>K<rsub|\<varepsilon\>>\<in\>\<cal-C\>> and
+    <math|\<exists\>A<rsub|\<varepsilon\>>\<in\>\<cal-R\>> such that\ 
+
+    <\equation*>
+      A<rsub|\<varepsilon\>>\<subseteq\>K<rsub|\<varepsilon\>>\<subseteq\>A<text|
+      and >\<mu\><around*|(|A\\A<rsub|\<varepsilon\>>|)>\<less\>\<varepsilon\>
+    </equation*>
+
+    then <math|\<mu\>> is a pre-measure.\ 
+  </theorem>
+
+  <\proof>
+    If <math|\<cal-C\>\<subseteq\>\<cal-P\><around*|(|X|)>> is a set of
+    compact subsets of <math|X> then by [see theorem: <reference|compact
+    class and sets of compact sets>] <math|\<cal-C\>> is a compact class. The
+    proof follows then from [theorem: <reference|measure compact class
+    approximation>].
+  </proof>
+
+  Proving that <math|\<cal-R\>\<subseteq\>\<cal-P\><around*|(|X|)>> is a ring
+  is not always possible, especially proving that
+  <math|\<forall\>A,B\<in\>\<cal-R\>> we have that
+  <math|A\\B\<in\>\<cal-R\>>. For example the difference of two half-open
+  intervals in <math|\<cal-I\><rsub|<around*|[||[>>> is not always a
+  half-open interval, hence <math|\<cal-R\><rsub|<around*|[||[>>> is not a
+  ring, however it will be proved later that
+  <math|\<cal-I\><rsub|<around*|[||[>>> is a semi-ring on <math|\<bbb-R\>>.
+  Luckely it turns out that a semi-ring with a content on it can easely be
+  extended to a ring with a content on it.\ 
+
+  <\theorem>
+    <label|measure semi-ring to ring>Let <math|X> be a set,
+    <math|\<cal-S\>\<subseteq\>\<cal-P\><around*|(|X|)>> a semi-ring on
+    <math|X> then\ 
+
+    <\equation*>
+      \<cal-R\><around*|[|\<cal-S\>|]>=<around*|{|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\|n\<in\>\<bbb-N\>\<wedge\><around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>S<text|
+      is pairwise disjoint>|}>
+    </equation*>
+
+    is a ring on <math|X> such that:\ 
+
+    <\enumerate>
+      <item><math|\<cal-S\>\<subseteq\>\<cal-R\><around*|[|S|]>>
+
+      <item>If <math|\<cal-T\>> is another ring on <math|X> with
+      <math|\<cal-S\>\<subseteq\>\<cal-T\>> then
+      <math|\<cal-R\><around*|[|\<cal-S\>|]>>
+    </enumerate>
+
+    In other words the set of all disjoint finite unions of sets in
+    <math|\<cal-S\>> is the smallest ring covering <math|\<cal-S\>>
+  </theorem>
+
+  <\proof>
+    Let <math|A\<in\>\<cal-S\>> define then
+    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1|}>>\<subseteq\>\<cal-S\>>
+    by <math|A<rsub|1>=A> then <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1|}>>>
+    is pairwise disjoint and <math|A=<big|sqcup><rsub|i\<in\><around*|{|1|}>>A<rsub|i>>,
+    hence <math|A\<in\>\<cal-R\><around*|[|\<cal-S\>|]>> proving that\ 
+
+    <\equation>
+      <label|eq 20.234.212>\<cal-S\>\<subseteq\>\<cal-R\><around*|[|\<cal-S\>|]>
+    </equation>
+
+    As <math|\<cal-S\>> is a semi-ring we have
+    <math|\<varnothing\>\<in\>\<cal-S\>> so by the above we have\ 
+
+    <\equation>
+      <label|eq 20.235.212>\<varnothing\>\<in\>\<cal-R\><around*|[|\<cal-S\>|]>
+    </equation>
+
+    Let <math|A,B\<in\>\<cal-R\><around*|[|\<cal-S\>|]>> then there exists
+    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-S\>>
+    pairwise disjoint and <math|<around*|{|B<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>\<cal-S\>>
+    pairwise disjoint such that\ 
+
+    <\equation>
+      <label|eq 20.236.212>A=<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>\<wedge\>B=<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>B<rsub|i>
+    </equation>
+
+    To prove that <math|\<cal-R\><around*|[|\<cal-S\>|]>> is a ring we have
+    to prove that:\ 
+
+    <\description>
+      <item*|<math|A<big|cup>B\<in\>\<cal-R\><around*|[|\<cal-S\>|]>>>Define\ 
+
+      <\equation*>
+        <around*|{|D<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+m|}>><text|
+        by >D<rsub|i>=<choice|<tformat|<table|<row|<cell|A<rsub|i><text| if
+        >i\<in\><around*|{|1,\<ldots\>,n|}>>>|<row|<cell|B<rsub|i-n>\\A<text|
+        if >i\<in\><around*|{|n+1,\<ldots\>,n+m|}>>>>>>
+      </equation*>
+
+      As <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n+m|}>> we have
+      either:\ 
+
+      <\description>
+        <item*|<math|i\<in\><around*|{|1,\<ldots\>,n|}>>>Then
+        <math|D<rsub|i>=A<rsub|i>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>=A\<subseteq\>A<big|cup>B>
+
+        <item*|<math|i\<in\><around*|{|n+1,\<ldots\>,n+m|}>>>Then
+        <math|D<rsub|i>=B<rsub|i-n>\\A\<subseteq\>B<rsub|i-n>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>B<rsub|i>=B\<subseteq\>A<big|cap>B>
+      </description>
+
+      proving that <math|D<rsub|i>\<subseteq\>A<big|cup>B> hence
+
+      <\equation>
+        <label|eq 20.237.212><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n+m|}>>D<rsub|i>\<subseteq\>A<big|cup>B
+      </equation>
+
+      If <math|x\<in\>A<big|cup>B> then we have either:
+
+      <\description>
+        <item*|<math|x\<in\>A>>Then there exist a
+        <math|i\<in\><around*|{|1,\<ldots\>,n|}>> such that
+        <math|x\<in\>A<rsub|i>=D<rsub|i>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>D<rsub|i>>
+
+        <item*|<math|x\<in\>B>>Then we have for <math|x> either:
+
+        <\description>
+          <item*|<math|x\<in\>A>>Then there exist a
+          <math|i\<in\><around*|{|1,\<ldots\>,n|}>> such that
+
+          <\equation*>
+            x\<in\>A<rsub|i>=D<rsub|i>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>D
+          </equation*>
+
+          <item*|<math|x\<nin\>A>>Then there exist a
+          <math|i\<in\><around*|{|1,\<ldots\>,m|}>> such that
+
+          <\equation*>
+            x\<in\>B<rsub|i>=B<rsub|<around*|(|i+n|)>-n>\<Rightarrowlim\><rsub|x\<nin\>A>x\<in\>B<rsub|<around*|(|i+n|)>-n>\\A=D<rsub|i+n>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>D<rsub|i>
+          </equation*>
+        </description>
+      </description>
+
+      so in all cases we have <math|x\<in\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n+m|}>>D<rsub|i>>.
+      Hence <math|A<big|cup>B\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n+m|}>>D<rsub|i>>
+      which combined with [eq: <reference|eq 20.237.212>] proves that\ 
+
+      <\equation>
+        <label|eq 20.238.212>A<big|cup>B=<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n+m|}>>D<rsub|i>
+      </equation>
+
+      Let <math|i\<in\><around*|{|n,\<ldots\>,n+m|}>> we have as
+      <math|A,B<rsub|i-n>\<in\>\<cal-S\>> and <math|\<cal-S\>> a semi-ring
+      there exist a family
+
+      <\equation>
+        <label|eq 20.239.212><around*|{|C<rsub|i,j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|i>|}>>\<subseteq\>\<cal-S\><rsub|><text|
+        pairwise disjoint such that >D<rsub|i>=B<rsub|i-n>\\A=<big|sqcup><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|i>|}>>C<rsub|i,j><rsub|>
+      </equation>
+
+      For every <math|i\<in\><around*|{|n,\<ldots\>,n+m|}>> we have that
+      <math|<around*|{|i|}>\<times\><around*|{|1,\<ldots\>,n<rsub|i>|}>> is
+      finite [see theorem: <reference|product of finite sets>] so that by
+      [theorem: <reference|finite union of finite sets is finite>]
+      <math|<big|cup><rsub|i\<in\><around*|{|n,\<ldots\>,n+m|}>><around*|{|i|}>\<times\><around*|{|1,\<ldots\>,n<rsub|i>|}>>
+      is finite. Hence there exist a <math|N\<in\>\<bbb-N\>> and a bijection\ 
+
+      <\equation*>
+        \<sigma\>:<around*|{|1,\<ldots\>,N|}>\<rightarrow\><big|cup><rsub|i\<in\><around*|{|n,\<ldots\>,n+m|}>><around*|{|i|}>\<times\><around*|{|1,\<ldots\>,n<rsub|i>|}>
+      </equation*>
+
+      Let <math|x\<in\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,N|}>>C<rsub|\<sigma\><around*|(|i|)><rsub|1>,\<sigma\><around*|(|i|)><rsub|2>>>
+      then there exist a <math|i\<in\><around*|{|1,\<ldots\>,N|}>> such that
+
+      <\equation*>
+        x\<in\>C<rsub|\<sigma\><around*|(|i|)><rsub|1>,\<sigma\><around*|(|i|)><rsub|2>>\<subseteq\><big|sqcup><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|\<sigma\><around*|(|i|)><rsub|1>>|}>>C<rsub|\<sigma\><around*|(|i|)><rsub|1>,j>\<equallim\><rsub|<text|[eq:
+        <reference|eq 20.239.212>]>>D<rsub|\<sigma\><around*|(|i|)><rsub|1>>\<subseteq\><big|cup><rsub|i\<in\><around*|{|n,\<ldots\>,n+m|}>>D<rsub|i>
+      </equation*>
+
+      hence\ 
+
+      <\equation>
+        <label|eq 20.240.212><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,N|}>>C<rsub|\<sigma\><around*|(|i|)><rsub|1>,\<sigma\><around*|(|i|)><rsub|2>>\<subseteq\><big|cup><rsub|i\<in\><around*|{|n,\<ldots\>,n+m|}>>D<rsub|i>
+      </equation>
+
+      Let <math|x\<in\><big|cup><rsub|i\<in\><around*|{|n,\<ldots\>,n+m|}>>D<rsub|i>>
+      then there exists a <math|i\<in\><around*|{|n,\<ldots\>,n+m|}>> such
+      that <math|x\<in\>D<rsub|i>=<big|sqcup><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|i>|}>>C<rsub|i,j>>.
+      Hence there exists a <math|j\<in\><around*|{|1,\<ldots\>,n<rsub|i>|}>\<Rightarrow\><around*|(|i,j|)>\<in\><big|cup><rsub|i\<in\><around*|{|n,\<ldots\>,n+m|}>><around*|{|i|}>\<times\><around*|{|1,\<ldots\>,n<rsub|i>|}>>
+      such that <math|x\<in\>C<rsub|i,j>>. As <math|\<sigma\>> is a bijection
+      there exist a <math|k\<in\><around*|{|1,\<ldots\>,N|}>> such that
+      <math|<around*|(|i,j|)>=\<sigma\><around*|(|k|)>>, hence
+      <math|x\<in\>C<rsub|\<sigma\><around*|(|k|)><rsub|1>,\<sigma\><around*|(|k|)><rsub|2>>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,N|}>>C<rsub|\<sigma\><around*|(|i|)><rsub|1>,\<sigma\><around*|(|i|)><rsub|2>>>.
+      So <math|<big|cup><rsub|i\<in\><around*|{|n,\<ldots\>,n+m|}>>D<rsub|i>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,N|}>>C<rsub|\<sigma\><around*|(|i|)><rsub|1>,\<sigma\><around*|(|i|)><rsub|2>>>
+      which combined with [eq: <reference|eq 20.240.212>] proves that\ 
+
+      <\equation>
+        <label|eq 20.241.212><big|cup><rsub|i\<in\><around*|{|n,\<ldots\>,n+m|}>>D<rsub|i>=<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,N|}>>C<rsub|\<sigma\><around*|(|i|)><rsub|1>,\<sigma\><around*|(|i|)><rsub|2>>
+      </equation>
+
+      Define now\ 
+
+      <\equation*>
+        <around*|{|E<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+N|}>>\<subseteq\>\<cal-S\><text|
+        by >E<rsub|i>=<choice|<tformat|<table|<row|<cell|D<rsub|i>\<in\>\<cal-S\><text|
+        if >i\<in\><around*|{|1,\<ldots\>,n|}>>>|<row|<cell|C<rsub|\<sigma\><around*|(|i-n|)><rsub|i>\<sigma\><around*|(|i-n|)><rsub|2><text|>>\<in\>\<cal-S\><text|
+        if >i\<in\><around*|{|n+1,\<ldots\>,n+N|}>>>>>>
+      </equation*>
+
+      then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n+N|}>>E<rsub|i>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|family properties (2)>]>>>|<cell|<around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i>|)><big|cup><around*|(|<big|cup><rsub|i\<in\><around*|{|n+1,\<ldots\>,n+N|}>>E<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>D<rsub|i>|)><big|cup><around*|(|<big|cup><rsub|i\<in\><around*|{|n+1,\<ldots\>,n+N|}>>C<rsub|>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 20.241.212>]>>>|<cell|<around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>D<rsub|i>|)><big|cup><around*|(|<big|cup><rsub|i\<in\><around*|{|n,\<ldots\>,n+m|}>>D<rsub|i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|family properties (2)>]>>>|<cell|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n+N|}>>D<rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 20.238.212>]>>>|<cell|A<big|cup>B>>>>
+      </eqnarray*>
+
+      Hence\ 
+
+      <\equation>
+        <label|eq 20.242.212>A<big|cup>B=<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n+N|}>>E<rsub|i>
+      </equation>
+
+      Let <math|i,j\<in\><around*|{|1,\<ldots\>,n+N|}>> with <math|i\<neq\>j>
+      then we may always assume that <math|i\<less\>j> [otherwise exchange
+      <math|i> and <math|j>]. For <math|i> we have either:\ 
+
+      <\description>
+        <item*|<math|i\<in\><around*|{|1,\<ldots\>,n|}>>>Then for <math|j> we
+        have either:\ 
+
+        <\description>
+          <item*|<math|j\<in\><around*|{|1,\<ldots\>,n|}>>>Then
+          <math|E<rsub|i><big|cap>E<rsub|j>=D<rsub|i><big|cap>D<rsub|j>=A<rsub|i><big|cap>A<rsub|j>=\<varnothing\>>
+
+          <item*|<math|j\<in\><around*|{|n+1,\<ldots\>,n+N|}>>>Then
+
+          <\equation*>
+            E<rsub|j>=C<rsub|\<sigma\><around*|(|j-n|)><rsub|1>,\<sigma\><around*|(|j-n|)><rsub|2>>\<subseteq\><big|cup><rsub|k\<in\><around*|{|1,\<ldots\>,\<sigma\><around*|(|j|)><rsub|1>|}>>C<rsub|\<sigma\><around*|(|j-n|)><rsub|1>,k><below|=|<text|[eq:
+            <reference|eq 20.239.212>]>>B<rsub|\<sigma\><around*|(|j-n|)><rsub|1>>\\A
+          </equation*>
+
+          so that <math|E<rsub|i><big|cap>E<rsub|j>=D<rsub|i><big|cap>E<rsub|j>=A<rsub|i><big|cap>E<rsub|j>\<subseteq\>A<big|cap>E<rsub|j>\<subseteq\>A<big|cap><around*|(|B<rsub|\<sigma\><around*|(|j-1|)><rsub|1>>\\A|)>=\<varnothing\><rsub|>>
+          hence\ 
+
+          <\equation*>
+            E<rsub|i><big|cap>E<rsub|j>=\<varnothing\>
+          </equation*>
+        </description>
+
+        <item*|<math|i\<in\><around*|{|n+1,\<ldots\>,n+N|}>>>Then as
+        <math|i\<less\>j> we have also <math|j\<in\><around*|{|n+1,\<ldots\>,n+N|}>>
+        and
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|E<rsub|i><big|cap>E<rsub|j>>|<cell|=>|<cell|C<rsub|\<sigma\><around*|(|i-n|)><rsub|1>,\<sigma\><around*|(|i-n|)><rsub|2>><big|cap>C<rsub|\<sigma\><around*|(|j-n|)><rsub|1>\<sigma\><around*|(|j-n|)>>>>>>
+        </eqnarray*>
+
+        As <math|\<sigma\>> is a bijection and
+        <math|i\<neq\>j\<Rightarrow\>i-n\<neq\>j-n> we have that
+        <math|\<sigma\><around*|(|i-n|)>\<neq\>\<sigma\><around*|(|j-n|)>>.
+        For <math|\<sigma\><around*|(|i-n|)><rsub|1>>,
+        <math|\<sigma\><around*|(|j-n|)><rsub|1>> we have either:\ 
+
+        <\description>
+          <item*|<math|\<sigma\><around*|(|i-n|)><rsub|1>=\<sigma\><around*|(|j-n|)><rsub|1>>>Then
+          <math|\<sigma\><around*|(|i-n|)><rsub|2>\<neq\>\<sigma\><around*|(|j-n|)><rsub|2>>
+          as <math|<around*|{|C<rsub|\<sigma\><around*|(|i-n|)><rsub|>,j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|\<sigma\><around*|(|i|)><rsub|1>>|}>>>
+          is pairwise disjoint we have
+
+          <\equation*>
+            E<rsub|i><big|cap>E<rsub|j>=C<rsub|\<sigma\><around*|(|i-n|)><rsub|1>,\<sigma\><around*|(|i-n|)><rsub|2>><big|cap>C<rsub|\<sigma\><around*|(|i-n|)><rsub|1>\<sigma\><around*|(|j-n|)>>=\<varnothing\>
+          </equation*>
+
+          <item*|<math|\<sigma\><around*|(|i-n|)><rsub|1>\<neq\>\<sigma\><around*|(|j-n|)>>>Then
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|E<rsub|i><big|cap>E<rsub|j>>|<cell|=>|<cell|C<rsub|\<sigma\><around*|(|i-n|)><rsub|1>,\<sigma\><around*|(|i-n|)><rsub|2>><big|cap>C<rsub|\<sigma\><around*|(|j-n|)><rsub|1>\<sigma\><around*|(|j-n|)>>>>|<row|<cell|>|<cell|\<subseteq\>>|<cell|<around*|(|<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|\<sigma\><around*|(|i-n|)><rsub|1>>|}>>C<rsub|\<sigma\><around*|(|i-n|)><rsub|1>,j>|)><big|cap><around*|(|<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|\<sigma\><around*|(|j-n|)><rsub|1>>|}>>C<rsub|\<sigma\><around*|(|j-n|)><rsub|1>,j>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+            <reference|eq 20.239.212>>>>|<cell|<around*|(|B<rsub|\<sigma\><around*|(|i-n|)><rsub|1>-n>\\A|)><rsub|><big|cap><around*|(|B<rsub|\<sigma\><around*|(|j-n|)><rsub|2>-n>\\A|)>>>|<row|<cell|>|<cell|=>|<cell|\<varnothing\>>>>>
+          </eqnarray*>
+        </description>
+      </description>
+
+      so in all cases we have <math|E<rsub|i><big|cap>E<rsub|j>=\<varnothing\>>.
+      Hence\ 
+
+      <\equation*>
+        <around*|{|E<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+N|}>>\<subseteq\>\<b-S\><text|
+        is pairwise disjoint and >A<big|cup>B\<equallim\><rsub|<text|[eq:
+        <reference|eq 20.242.212>]>><big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n+N|}>>E<rsub|i>
+      </equation*>
+
+      so that <math|A<big|cup>B\<in\>\<cal-R\><around*|[|\<cal-S\>|]>>. Hence
+
+      <\equation>
+        \<forall\>A,B\<in\>\<cal-R\><around*|[|\<cal-S\>|]><text| we have
+        that >A<big|cup>B\<in\>\<cal-R\><around*|[|\<cal-S\>|]>
+      </equation>
+
+      <item*|<math|A\\B\<in\>\<cal-R\><around*|[|\<cal-S\>|]>>>We have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|A\\B>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 20.236.212>]>>>|<cell|<around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)>\\<around*|(|<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>B<rsub|j>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|family properties (3)>]>>>|<cell|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|A<rsub|i>\\<around*|(|<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>B<rsub|j>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|family de Morgan>]>>>|<cell|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|<big|cap><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|A<rsub|i>\\B<rsub|j>|)>|)>>>>>
+      </eqnarray*>
+
+      Further <math|\<forall\>k,l\<in\><around*|{|1,\<ldots\>,n|}>> with
+      <math|k\<neq\>l> we have\ 
+
+      <\equation*>
+        <around*|(|<big|cap><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|A<rsub|k>\\B<rsub|j>|)>|)><big|cap><around*|(|<big|cap><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|A<rsub|l>\\B<rsub|j>|)>|)>\<subseteq\>A<rsub|k><big|cap>A<rsub|l>=\<emptyset\>
+      </equation*>
+
+      so that\ 
+
+      <\equation>
+        <label|eq 20.244.212><around*|{|<big|cap><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|A<rsub|i>\\B<rsub|j>|)>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><text|
+        is pairwise disjoint >
+      </equation>
+
+      so that
+
+      <\equation>
+        <label|eq 20.245.212>A\\B=<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|<big|cap><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|A<rsub|i>\\B<rsub|j>|)>|)>
+      </equation>
+
+      Given <math|i\<in\><around*|{|1,\<ldots\>,n|}>\<wedge\>j\<in\><around*|{|1,\<ldots\>,m|}>>
+      we have as <math|A<rsub|i>,B<rsub|j>\<in\>\<cal-S\>> and
+      <math|\<cal-S\>> is semi-ring that there exist a
+
+      <\equation>
+        <label|eq 20.246.212><around*|{|C<rsup|i,j><rsub|k>|)><rsub|k\<in\><around*|{|1,\<ldots\>,n<rsub|i,j>|}>>\<subseteq\>\<cal-S\><text|
+        pairwise disjoint such that >A<rsub|i>\\B<rsub|j>=<big|cup><rsub|k\<in\><around*|{|1,\<ldots\>,n<rsub|i,j>|}>>C<rsup|i,j><rsub|k>
+      </equation>
+
+      So we have for <math|i\<in\><around*|{|1,\<ldots\>,n|}>>, using [lemma:
+      <reference|lemma 20.109.213>], that
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|cap><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|A<rsub|i>\\B<rsub|j>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sqcup><rsub|\<sigma\>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>><around*|{|1,\<ldots\>,n<rsub|i,j>|}>><around*|(|<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,m|}>>C<rsup|i,k><rsub|\<sigma\><rsub|k>><rsup|>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sqcup><rsub|\<sigma\>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>><around*|{|1,\<ldots\>,n<rsub|i,j>|}>>D<rsub|\<sigma\>,i>>|<cell|>|<cell|<eq-number>>>>>
+      </eqnarray*>
+
+      where\ 
+
+      <\equation*>
+        <around*|{|D<rsub|\<sigma\>>|}><rsub|\<sigma\>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>><around*|{|1,\<ldots\>,n<rsub|i,j>|}>><text|
+        is defined by >D<rsub|\<sigma\>,i>=<big|cap><rsub|k\<in\><around*|{|1,\<ldots\>,m|}>>C<rsup|i,k><rsub|\<sigma\><rsub|k>><rsup|>
+        is pairwise disjoint
+      </equation*>
+
+      As a semi-ring is <math|\<sigma\>>-stable [see definition:
+      <reference|measure semi-ring>] we have also that\ 
+
+      <\equation>
+        <label|eq 20.251><around*|{|D<rsub|\<sigma\>>|}><rsub|\<sigma\>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>><around*|{|1,\<ldots\>,n<rsub|i,j>|}>>\<subseteq\>\<cal-S\>
+      </equation>
+
+      Use [lemma: <reference|lemma 20.110.214>] for the rest of the proof.
+    </description>
+
+    \;
+
+    <\equation*>
+      \;
+    </equation*>
+
+    \;
+  </proof>
+
+  <reference|measure ring>
+
   <subsubsection|Using the Carathéodory theorem on <math|\<bbb-R\><rsup|n>>>
 
   \;
@@ -16253,7 +16859,7 @@
     <associate|chapter-nr|19>
     <associate|item-nr|>
     <associate|last-item-nr|2>
-    <associate|page-first|1235>
+    <associate|page-first|1237>
     <associate|section-nr|1>
     <associate|subsection-nr|7>
   </collection>
@@ -16331,168 +16937,178 @@
     <associate|auto-7|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|<wide|\<bbb-R\>|\<wide-bar\>><rsup|+><rsub|0>,+|\<rangle\>>>|?>>
     <associate|auto-8|<tuple|20.1.3|?>>
     <associate|auto-9|<tuple|<with|mode|<quote|math>|\<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>>|?>>
-    <associate|eq 18.10.021|<tuple|20.77|?>>
-    <associate|eq 18.11.021|<tuple|20.78|?>>
-    <associate|eq 18.12.021|<tuple|20.79|?>>
-    <associate|eq 18.13.021|<tuple|20.80|?>>
-    <associate|eq 18.14.021|<tuple|20.81|?>>
-    <associate|eq 18.15.021|<tuple|20.82|?>>
-    <associate|eq 18.16.021|<tuple|20.83|?>>
-    <associate|eq 18.17.021|<tuple|20.84|?>>
-    <associate|eq 18.18.021|<tuple|20.85|?>>
-    <associate|eq 18.19.021|<tuple|20.86|?>>
-    <associate|eq 18.20.021|<tuple|20.87|?>>
-    <associate|eq 18.21.021|<tuple|20.88|?>>
-    <associate|eq 18.22.021|<tuple|20.89|?>>
-    <associate|eq 18.39.022|<tuple|20.102|?>>
-    <associate|eq 18.40.022|<tuple|20.103|?>>
-    <associate|eq 18.41.022|<tuple|20.104|?>>
-    <associate|eq 18.42.022|<tuple|20.105|?>>
-    <associate|eq 18.43.022|<tuple|20.106|?>>
-    <associate|eq 18.8.020|<tuple|20.75|?>>
-    <associate|eq 18.9.020|<tuple|20.76|?>>
+    <associate|eq 18.10.021|<tuple|20.80|?>>
+    <associate|eq 18.11.021|<tuple|20.81|?>>
+    <associate|eq 18.12.021|<tuple|20.82|?>>
+    <associate|eq 18.13.021|<tuple|20.83|?>>
+    <associate|eq 18.14.021|<tuple|20.84|?>>
+    <associate|eq 18.15.021|<tuple|20.85|?>>
+    <associate|eq 18.16.021|<tuple|20.86|?>>
+    <associate|eq 18.17.021|<tuple|20.87|?>>
+    <associate|eq 18.18.021|<tuple|20.88|?>>
+    <associate|eq 18.19.021|<tuple|20.89|?>>
+    <associate|eq 18.20.021|<tuple|20.90|?>>
+    <associate|eq 18.21.021|<tuple|20.91|?>>
+    <associate|eq 18.22.021|<tuple|20.92|?>>
+    <associate|eq 18.39.022|<tuple|20.105|?>>
+    <associate|eq 18.40.022|<tuple|20.106|?>>
+    <associate|eq 18.41.022|<tuple|20.107|?>>
+    <associate|eq 18.42.022|<tuple|20.108|?>>
+    <associate|eq 18.43.022|<tuple|20.109|?>>
+    <associate|eq 18.8.020|<tuple|20.78|?>>
+    <associate|eq 18.9.020|<tuple|20.79|?>>
     <associate|eq 20.1.155|<tuple|20.1|?>>
     <associate|eq 20.10.155|<tuple|20.10|?>>
-    <associate|eq 20.100.200|<tuple|20.114|?>>
-    <associate|eq 20.101.200|<tuple|20.115|?>>
-    <associate|eq 20.102.200|<tuple|20.116|?>>
-    <associate|eq 20.103.200|<tuple|20.117|?>>
-    <associate|eq 20.104.200|<tuple|20.118|?>>
-    <associate|eq 20.105.200|<tuple|20.119|?>>
-    <associate|eq 20.106.200|<tuple|20.120|?>>
-    <associate|eq 20.107.200|<tuple|20.121|?>>
-    <associate|eq 20.108.200|<tuple|20.122|?>>
+    <associate|eq 20.100.200|<tuple|20.117|?>>
+    <associate|eq 20.101.200|<tuple|20.118|?>>
+    <associate|eq 20.102.200|<tuple|20.119|?>>
+    <associate|eq 20.103.200|<tuple|20.120|?>>
+    <associate|eq 20.104.200|<tuple|20.121|?>>
+    <associate|eq 20.105.200|<tuple|20.122|?>>
+    <associate|eq 20.106.200|<tuple|20.123|?>>
+    <associate|eq 20.107.200|<tuple|20.124|?>>
+    <associate|eq 20.108.200|<tuple|20.125|?>>
     <associate|eq 20.11.155|<tuple|20.11|?>>
     <associate|eq 20.112.201|<tuple|20.53|?>>
-    <associate|eq 20.113.201|<tuple|20.123|?>>
-    <associate|eq 20.114.201|<tuple|20.124|?>>
-    <associate|eq 20.115.201|<tuple|20.125|?>>
-    <associate|eq 20.116.201|<tuple|20.126|?>>
-    <associate|eq 20.117.201|<tuple|20.127|?>>
-    <associate|eq 20.118.118.201|<tuple|20.128|?>>
-    <associate|eq 20.119.201|<tuple|20.129|?>>
+    <associate|eq 20.113.201|<tuple|20.126|?>>
+    <associate|eq 20.114.201|<tuple|20.127|?>>
+    <associate|eq 20.115.201|<tuple|20.128|?>>
+    <associate|eq 20.116.201|<tuple|20.129|?>>
+    <associate|eq 20.117.201|<tuple|20.130|?>>
+    <associate|eq 20.118.118.201|<tuple|20.131|?>>
+    <associate|eq 20.119.201|<tuple|20.132|?>>
     <associate|eq 20.12.155|<tuple|20.12|?>>
-    <associate|eq 20.120.201|<tuple|20.130|?>>
-    <associate|eq 20.121.201|<tuple|20.131|?>>
-    <associate|eq 20.122.201|<tuple|20.132|?>>
-    <associate|eq 20.123.201|<tuple|20.133|?>>
-    <associate|eq 20.124.201|<tuple|20.134|?>>
-    <associate|eq 20.126.201.1|<tuple|20.135|?>>
-    <associate|eq 20.126.201.2|<tuple|20.136|?>>
-    <associate|eq 20.127.201.1|<tuple|20.137|?>>
+    <associate|eq 20.120.201|<tuple|20.133|?>>
+    <associate|eq 20.121.201|<tuple|20.134|?>>
+    <associate|eq 20.122.201|<tuple|20.135|?>>
+    <associate|eq 20.123.201|<tuple|20.136|?>>
+    <associate|eq 20.124.201|<tuple|20.137|?>>
+    <associate|eq 20.126.201.1|<tuple|20.138|?>>
+    <associate|eq 20.126.201.2|<tuple|20.139|?>>
+    <associate|eq 20.127.201.1|<tuple|20.140|?>>
     <associate|eq 20.13.155|<tuple|20.14|?>>
     <associate|eq 20.13.156|<tuple|20.13|?>>
-    <associate|eq 20.131.202|<tuple|20.138|?>>
-    <associate|eq 20.132.202|<tuple|20.139|?>>
-    <associate|eq 20.133.202|<tuple|20.154|?>>
-    <associate|eq 20.134.202|<tuple|20.155|?>>
-    <associate|eq 20.135.202|<tuple|20.156|?>>
-    <associate|eq 20.136.202|<tuple|20.157|?>>
-    <associate|eq 20.137.202|<tuple|20.158|?>>
-    <associate|eq 20.138.202|<tuple|20.159|?>>
-    <associate|eq 20.139.202|<tuple|20.160|?>>
+    <associate|eq 20.131.202|<tuple|20.141|?>>
+    <associate|eq 20.132.202|<tuple|20.142|?>>
+    <associate|eq 20.133.202|<tuple|20.157|?>>
+    <associate|eq 20.134.202|<tuple|20.158|?>>
+    <associate|eq 20.135.202|<tuple|20.159|?>>
+    <associate|eq 20.136.202|<tuple|20.160|?>>
+    <associate|eq 20.137.202|<tuple|20.161|?>>
+    <associate|eq 20.138.202|<tuple|20.162|?>>
+    <associate|eq 20.139.202|<tuple|20.163|?>>
     <associate|eq 20.14.155|<tuple|20.15|?>>
-    <associate|eq 20.140.202|<tuple|20.161|?>>
-    <associate|eq 20.140.210.1|<tuple|20.140|?>>
-    <associate|eq 20.141.202|<tuple|20.162|?>>
-    <associate|eq 20.141.210.2|<tuple|20.141|?>>
-    <associate|eq 20.142.202|<tuple|20.163|?>>
-    <associate|eq 20.142.210.3|<tuple|20.142|?>>
-    <associate|eq 20.143.202|<tuple|20.164|?>>
-    <associate|eq 20.144.202|<tuple|20.165|?>>
-    <associate|eq 20.145.202|<tuple|20.166|?>>
-    <associate|eq 20.146.202|<tuple|20.167|?>>
-    <associate|eq 20.147.202|<tuple|20.168|?>>
-    <associate|eq 20.148.202|<tuple|20.169|?>>
-    <associate|eq 20.149.202|<tuple|20.170|?>>
-    <associate|eq 20.150.202|<tuple|20.171|?>>
-    <associate|eq 20.151.202|<tuple|20.172|?>>
-    <associate|eq 20.152.202|<tuple|20.173|?>>
-    <associate|eq 20.153.202|<tuple|20.174|?>>
-    <associate|eq 20.154.202|<tuple|20.175|?>>
-    <associate|eq 20.155.202|<tuple|20.177|?>>
-    <associate|eq 20.156.202|<tuple|20.178|?>>
-    <associate|eq 20.157.202|<tuple|20.179|?>>
-    <associate|eq 20.158.202|<tuple|20.180|?>>
-    <associate|eq 20.159.202|<tuple|20.181|?>>
+    <associate|eq 20.140.202|<tuple|20.164|?>>
+    <associate|eq 20.140.210.1|<tuple|20.143|?>>
+    <associate|eq 20.141.202|<tuple|20.165|?>>
+    <associate|eq 20.141.210.2|<tuple|20.144|?>>
+    <associate|eq 20.142.202|<tuple|20.166|?>>
+    <associate|eq 20.142.210.3|<tuple|20.145|?>>
+    <associate|eq 20.143.202|<tuple|20.167|?>>
+    <associate|eq 20.144.202|<tuple|20.168|?>>
+    <associate|eq 20.145.202|<tuple|20.169|?>>
+    <associate|eq 20.146.202|<tuple|20.170|?>>
+    <associate|eq 20.147.202|<tuple|20.171|?>>
+    <associate|eq 20.148.202|<tuple|20.172|?>>
+    <associate|eq 20.149.202|<tuple|20.173|?>>
+    <associate|eq 20.150.202|<tuple|20.174|?>>
+    <associate|eq 20.151.202|<tuple|20.175|?>>
+    <associate|eq 20.152.202|<tuple|20.176|?>>
+    <associate|eq 20.153.202|<tuple|20.177|?>>
+    <associate|eq 20.154.202|<tuple|20.178|?>>
+    <associate|eq 20.155.202|<tuple|20.180|?>>
+    <associate|eq 20.156.202|<tuple|20.181|?>>
+    <associate|eq 20.157.202|<tuple|20.182|?>>
+    <associate|eq 20.158.202|<tuple|20.183|?>>
+    <associate|eq 20.159.202|<tuple|20.184|?>>
     <associate|eq 20.16.156|<tuple|20.16|?>>
-    <associate|eq 20.160.202|<tuple|20.182|?>>
-    <associate|eq 20.161.202|<tuple|20.183|?>>
-    <associate|eq 20.163\<point\>202|<tuple|20.143|?>>
-    <associate|eq 20.164.202|<tuple|20.144|?>>
-    <associate|eq 20.164.204|<tuple|20.185|?>>
-    <associate|eq 20.165.202|<tuple|20.145|?>>
-    <associate|eq 20.165.204|<tuple|20.186|?>>
-    <associate|eq 20.166.202|<tuple|20.146|?>>
-    <associate|eq 20.166.204|<tuple|20.187|?>>
-    <associate|eq 20.167.202|<tuple|20.147|?>>
-    <associate|eq 20.167.204|<tuple|20.188|?>>
-    <associate|eq 20.168.202|<tuple|20.148|?>>
-    <associate|eq 20.168.204|<tuple|20.189|?>>
-    <associate|eq 20.169.202|<tuple|20.149|?>>
-    <associate|eq 20.169.204|<tuple|20.190|?>>
+    <associate|eq 20.160.202|<tuple|20.185|?>>
+    <associate|eq 20.161.202|<tuple|20.186|?>>
+    <associate|eq 20.163\<point\>202|<tuple|20.146|?>>
+    <associate|eq 20.164.202|<tuple|20.147|?>>
+    <associate|eq 20.164.204|<tuple|20.188|?>>
+    <associate|eq 20.165.202|<tuple|20.148|?>>
+    <associate|eq 20.165.204|<tuple|20.189|?>>
+    <associate|eq 20.166.202|<tuple|20.149|?>>
+    <associate|eq 20.166.204|<tuple|20.190|?>>
+    <associate|eq 20.167.202|<tuple|20.150|?>>
+    <associate|eq 20.167.204|<tuple|20.191|?>>
+    <associate|eq 20.168.202|<tuple|20.151|?>>
+    <associate|eq 20.168.204|<tuple|20.192|?>>
+    <associate|eq 20.169.202|<tuple|20.152|?>>
+    <associate|eq 20.169.204|<tuple|20.193|?>>
     <associate|eq 20.17.156|<tuple|20.17|?>>
-    <associate|eq 20.170.202|<tuple|20.150|?>>
-    <associate|eq 20.170.204|<tuple|20.191|?>>
-    <associate|eq 20.171.202|<tuple|20.151|?>>
-    <associate|eq 20.171.204|<tuple|20.192|?>>
-    <associate|eq 20.172.202|<tuple|20.152|?>>
-    <associate|eq 20.173.1|<tuple|20.176|?>>
-    <associate|eq 20.173.202|<tuple|20.153|?>>
-    <associate|eq 20.177.204|<tuple|20.184|?>>
+    <associate|eq 20.170.202|<tuple|20.153|?>>
+    <associate|eq 20.170.204|<tuple|20.194|?>>
+    <associate|eq 20.171.202|<tuple|20.154|?>>
+    <associate|eq 20.171.204|<tuple|20.195|?>>
+    <associate|eq 20.172.202|<tuple|20.155|?>>
+    <associate|eq 20.173.1|<tuple|20.179|?>>
+    <associate|eq 20.173.202|<tuple|20.156|?>>
+    <associate|eq 20.177.204|<tuple|20.187|?>>
     <associate|eq 20.18.156|<tuple|20.18|?>>
     <associate|eq 20.19.156|<tuple|20.19|?>>
-    <associate|eq 20.190.210|<tuple|20.193|?>>
-    <associate|eq 20.191.210|<tuple|20.194|?>>
-    <associate|eq 20.192.210|<tuple|20.195|?>>
-    <associate|eq 20.193.210|<tuple|20.196|?>>
-    <associate|eq 20.194.210|<tuple|20.197|?>>
-    <associate|eq 20.195.210|<tuple|20.198|?>>
-    <associate|eq 20.196.210|<tuple|20.199|?>>
-    <associate|eq 20.197.210|<tuple|20.200|?>>
-    <associate|eq 20.198.210|<tuple|20.201|?>>
-    <associate|eq 20.199.210|<tuple|20.202|?>>
+    <associate|eq 20.190.210|<tuple|20.196|?>>
+    <associate|eq 20.191.210|<tuple|20.197|?>>
+    <associate|eq 20.192.210|<tuple|20.198|?>>
+    <associate|eq 20.193.210|<tuple|20.199|?>>
+    <associate|eq 20.194.210|<tuple|20.200|?>>
+    <associate|eq 20.195.210|<tuple|20.201|?>>
+    <associate|eq 20.196.210|<tuple|20.202|?>>
+    <associate|eq 20.197.210|<tuple|20.203|?>>
+    <associate|eq 20.198.210|<tuple|20.204|?>>
+    <associate|eq 20.199.210|<tuple|20.205|?>>
     <associate|eq 20.2.155|<tuple|20.2|?>>
     <associate|eq 20.20.156|<tuple|20.20|?>>
-    <associate|eq 20.200.210|<tuple|20.203|?>>
-    <associate|eq 20.201.210|<tuple|20.204|?>>
-    <associate|eq 20.202.210|<tuple|20.205|?>>
-    <associate|eq 20.206.210|<tuple|20.212|?>>
-    <associate|eq 20.206.211|<tuple|20.206|?>>
-    <associate|eq 20.207.210|<tuple|20.213|?>>
-    <associate|eq 20.207.211|<tuple|20.207|?>>
-    <associate|eq 20.208.210|<tuple|20.214|?>>
-    <associate|eq 20.208.211|<tuple|20.208|?>>
-    <associate|eq 20.209.210|<tuple|20.215|?>>
-    <associate|eq 20.209.211|<tuple|20.209|?>>
+    <associate|eq 20.200.210|<tuple|20.206|?>>
+    <associate|eq 20.201.210|<tuple|20.207|?>>
+    <associate|eq 20.202.210|<tuple|20.208|?>>
+    <associate|eq 20.206.210|<tuple|20.215|?>>
+    <associate|eq 20.206.211|<tuple|20.209|?>>
+    <associate|eq 20.207.210|<tuple|20.216|?>>
+    <associate|eq 20.207.211|<tuple|20.210|?>>
+    <associate|eq 20.208.210|<tuple|20.217|?>>
+    <associate|eq 20.208.211|<tuple|20.211|?>>
+    <associate|eq 20.209.210|<tuple|20.218|?>>
+    <associate|eq 20.209.211|<tuple|20.212|?>>
     <associate|eq 20.21.156|<tuple|20.21|?>>
-    <associate|eq 20.210.210|<tuple|20.216|?>>
-    <associate|eq 20.210.211|<tuple|20.210|?>>
-    <associate|eq 20.211.210|<tuple|20.217|?>>
-    <associate|eq 20.211.211|<tuple|20.211|?>>
-    <associate|eq 20.212.210|<tuple|20.218|?>>
-    <associate|eq 20.212.211|<tuple|20.212|?>>
-    <associate|eq 20.213.210|<tuple|20.219|?>>
+    <associate|eq 20.210.210|<tuple|20.219|?>>
+    <associate|eq 20.210.211|<tuple|20.213|?>>
+    <associate|eq 20.211.210|<tuple|20.220|?>>
+    <associate|eq 20.211.211|<tuple|20.214|?>>
+    <associate|eq 20.212.210|<tuple|20.221|?>>
+    <associate|eq 20.213.210|<tuple|20.222|?>>
     <associate|eq 20.22.156|<tuple|20.22|?>>
-    <associate|eq 20.220.211|<tuple|20.220|?>>
-    <associate|eq 20.220.212|<tuple|20.221|?>>
-    <associate|eq 20.220.212.1|<tuple|20.220|?>>
-    <associate|eq 20.221.122|<tuple|20.221|?>>
-    <associate|eq 20.221.212|<tuple|20.222|?>>
-    <associate|eq 20.222.212|<tuple|20.223|?>>
-    <associate|eq 20.223.212|<tuple|20.224|?>>
-    <associate|eq 20.225.212|<tuple|20.225|?>>
-    <associate|eq 20.226.212|<tuple|20.226|?>>
-    <associate|eq 20.227.212|<tuple|20.227|?>>
-    <associate|eq 20.228.212|<tuple|20.228|?>>
-    <associate|eq 20.229.212|<tuple|20.229|?>>
+    <associate|eq 20.220.212|<tuple|20.224|?>>
+    <associate|eq 20.220.212.1|<tuple|20.223|?>>
+    <associate|eq 20.221.212|<tuple|20.225|?>>
+    <associate|eq 20.222.212|<tuple|20.226|?>>
+    <associate|eq 20.223.212|<tuple|20.227|?>>
+    <associate|eq 20.225.212|<tuple|20.228|?>>
+    <associate|eq 20.226.212|<tuple|20.229|?>>
+    <associate|eq 20.227.212|<tuple|20.230|?>>
+    <associate|eq 20.228.212|<tuple|20.231|?>>
+    <associate|eq 20.229.212|<tuple|20.232|?>>
     <associate|eq 20.23.156|<tuple|20.23|?>>
-    <associate|eq 20.230.212|<tuple|20.230|?>>
-    <associate|eq 20.231.212|<tuple|20.231|?>>
-    <associate|eq 20.232.212|<tuple|20.232|?>>
-    <associate|eq 20.233.212|<tuple|20.233|?>>
+    <associate|eq 20.230.212|<tuple|20.233|?>>
+    <associate|eq 20.231.212|<tuple|20.234|?>>
+    <associate|eq 20.232.212|<tuple|20.235|?>>
+    <associate|eq 20.233.212|<tuple|20.236|?>>
+    <associate|eq 20.234.212|<tuple|20.237|?>>
+    <associate|eq 20.235.212|<tuple|20.238|?>>
+    <associate|eq 20.236.212|<tuple|20.239|?>>
+    <associate|eq 20.237.212|<tuple|20.240|?>>
+    <associate|eq 20.238.212|<tuple|20.241|?>>
+    <associate|eq 20.239.212|<tuple|20.242|?>>
+    <associate|eq 20.240.212|<tuple|20.243|?>>
+    <associate|eq 20.241.212|<tuple|20.244|?>>
+    <associate|eq 20.242.212|<tuple|20.245|?>>
+    <associate|eq 20.244.212|<tuple|20.247|?>>
+    <associate|eq 20.245.212|<tuple|20.248|?>>
+    <associate|eq 20.246.212|<tuple|20.249|?>>
     <associate|eq 20.24\<point\>156|<tuple|20.24|?>>
     <associate|eq 20.25.156|<tuple|20.25|?>>
+    <associate|eq 20.251|<tuple|20.251|?>>
     <associate|eq 20.26.156|<tuple|20.26|?>>
     <associate|eq 20.27.156|<tuple|20.27|?>>
     <associate|eq 20.28.156|<tuple|20.28|?>>
@@ -16523,50 +17139,54 @@
     <associate|eq 20.5.155|<tuple|20.5|?>>
     <associate|eq 20.50.156|<tuple|20.51|?>>
     <associate|eq 20.51.156|<tuple|20.52|?>>
-    <associate|eq 20.52.200|<tuple|20.68|?>>
-    <associate|eq 20.52.200.1|<tuple|20.64|?>>
-    <associate|eq 20.53.200|<tuple|20.69|?>>
-    <associate|eq 20.53.200.1|<tuple|20.65|?>>
-    <associate|eq 20.54.200|<tuple|20.70|?>>
-    <associate|eq 20.54.200.1|<tuple|20.66|?>>
+    <associate|eq 20.52.200|<tuple|20.71|?>>
+    <associate|eq 20.52.200.1|<tuple|20.67|?>>
+    <associate|eq 20.53.200|<tuple|20.72|?>>
+    <associate|eq 20.53.200.1|<tuple|20.68|?>>
+    <associate|eq 20.54.200|<tuple|20.73|?>>
+    <associate|eq 20.54.200.1|<tuple|20.69|?>>
     <associate|eq 20.54.202|<tuple|20.54|?>>
-    <associate|eq 20.55.200|<tuple|20.71|?>>
-    <associate|eq 20.55.200.1|<tuple|20.67|?>>
+    <associate|eq 20.55.200|<tuple|20.74|?>>
+    <associate|eq 20.55.200.1|<tuple|20.70|?>>
     <associate|eq 20.55.202|<tuple|20.55|?>>
-    <associate|eq 20.56.200|<tuple|20.72|?>>
+    <associate|eq 20.56.200|<tuple|20.75|?>>
     <associate|eq 20.56.202|<tuple|20.56|?>>
-    <associate|eq 20.57.200|<tuple|20.73|?>>
-    <associate|eq 20.57.203|<tuple|20.57|?>>
-    <associate|eq 20.58.200|<tuple|20.74|?>>
-    <associate|eq 20.58.203|<tuple|20.58|?>>
-    <associate|eq 20.59.203|<tuple|20.59|?>>
+    <associate|eq 20.57.200|<tuple|20.76|?>>
+    <associate|eq 20.57.203|<tuple|20.60|?>>
+    <associate|eq 20.57.212|<tuple|20.57|?>>
+    <associate|eq 20.58.200|<tuple|20.77|?>>
+    <associate|eq 20.58.203|<tuple|20.61|?>>
+    <associate|eq 20.58.212|<tuple|20.58|?>>
+    <associate|eq 20.59.203|<tuple|20.62|?>>
+    <associate|eq 20.59.212|<tuple|20.59|?>>
     <associate|eq 20.6.155|<tuple|20.6|?>>
-    <associate|eq 20.60.203|<tuple|20.60|?>>
-    <associate|eq 20.61.204|<tuple|20.61|?>>
-    <associate|eq 20.62.204|<tuple|20.62|?>>
-    <associate|eq 20.63.204|<tuple|20.63|?>>
+    <associate|eq 20.60.203|<tuple|20.63|?>>
+    <associate|eq 20.60.213|<tuple|20.60|?>>
+    <associate|eq 20.61.204|<tuple|20.64|?>>
+    <associate|eq 20.62.204|<tuple|20.65|?>>
+    <associate|eq 20.63.204|<tuple|20.66|?>>
     <associate|eq 20.7.155|<tuple|20.7|?>>
-    <associate|eq 20.76.200|<tuple|20.90|?>>
-    <associate|eq 20.77.200|<tuple|20.91|?>>
-    <associate|eq 20.78.200|<tuple|20.92|?>>
-    <associate|eq 20.79.200|<tuple|20.93|?>>
+    <associate|eq 20.76.200|<tuple|20.93|?>>
+    <associate|eq 20.77.200|<tuple|20.94|?>>
+    <associate|eq 20.78.200|<tuple|20.95|?>>
+    <associate|eq 20.79.200|<tuple|20.96|?>>
     <associate|eq 20.8.155|<tuple|20.8|?>>
-    <associate|eq 20.80.200|<tuple|20.94|?>>
-    <associate|eq 20.81.200|<tuple|20.95|?>>
-    <associate|eq 20.82.200|<tuple|20.96|?>>
-    <associate|eq 20.83.200|<tuple|20.97|?>>
-    <associate|eq 20.84.200|<tuple|20.98|?>>
-    <associate|eq 20.85.200|<tuple|20.99|?>>
-    <associate|eq 20.86.200|<tuple|20.100|?>>
-    <associate|eq 20.87.200|<tuple|20.101|?>>
+    <associate|eq 20.80.200|<tuple|20.97|?>>
+    <associate|eq 20.81.200|<tuple|20.98|?>>
+    <associate|eq 20.82.200|<tuple|20.99|?>>
+    <associate|eq 20.83.200|<tuple|20.100|?>>
+    <associate|eq 20.84.200|<tuple|20.101|?>>
+    <associate|eq 20.85.200|<tuple|20.102|?>>
+    <associate|eq 20.86.200|<tuple|20.103|?>>
+    <associate|eq 20.87.200|<tuple|20.104|?>>
     <associate|eq 20.9.155|<tuple|20.9|?>>
-    <associate|eq 20.93.200|<tuple|20.107|?>>
-    <associate|eq 20.94.200|<tuple|20.108|?>>
-    <associate|eq 20.95.200|<tuple|20.109|?>>
-    <associate|eq 20.96.200|<tuple|20.110|?>>
-    <associate|eq 20.97.200|<tuple|20.111|?>>
-    <associate|eq 20.98.200|<tuple|20.112|?>>
-    <associate|eq 20.99.200|<tuple|20.113|?>>
+    <associate|eq 20.93.200|<tuple|20.110|?>>
+    <associate|eq 20.94.200|<tuple|20.111|?>>
+    <associate|eq 20.95.200|<tuple|20.112|?>>
+    <associate|eq 20.96.200|<tuple|20.113|?>>
+    <associate|eq 20.97.200|<tuple|20.114|?>>
+    <associate|eq 20.98.200|<tuple|20.115|?>>
+    <associate|eq 20.99.200|<tuple|20.116|?>>
     <associate|extended -(x.y)|<tuple|20.34|?>>
     <associate|extended 0\<less\>=x and 0\<less\>=y then
     x\<less\>=x-y\<less\>=x|<tuple|20.25|?>>
@@ -16647,115 +17267,119 @@
     <associate|extended x\<less\>=y then for 0\<less\>=s we have
     s.x\<less\>=s.y|<tuple|20.35|?>>
     <associate|extended x\<less\>=y then x+z\<less\>=y+z|<tuple|20.27|?>>
-    <associate|label 20.147.200|<tuple|20.165|?>>
+    <associate|label 20.147.200|<tuple|20.167|?>>
     <associate|lemma 20.102.202|<tuple|20.106|?>>
-    <associate|lemma 20.119.200|<tuple|20.142|?>>
-    <associate|lemma 20.121.200|<tuple|20.143|?>>
-    <associate|lemma 20.129.200|<tuple|20.151|?>>
-    <associate|lemma 20.132.200|<tuple|20.154|?>>
-    <associate|lemma 20.136.200|<tuple|20.158|?>>
-    <associate|lemma 20.138.200|<tuple|20.160|?>>
-    <associate|lemma 20.139.200|<tuple|20.161|?>>
-    <associate|lemma 20.141.200|<tuple|20.162|?>>
+    <associate|lemma 20.109.213|<tuple|20.109|?>>
+    <associate|lemma 20.110.214|<tuple|20.110|?>>
+    <associate|lemma 20.119.200|<tuple|20.144|?>>
+    <associate|lemma 20.121.200|<tuple|20.145|?>>
+    <associate|lemma 20.129.200|<tuple|20.153|?>>
+    <associate|lemma 20.132.200|<tuple|20.156|?>>
+    <associate|lemma 20.136.200|<tuple|20.160|?>>
+    <associate|lemma 20.138.200|<tuple|20.162|?>>
+    <associate|lemma 20.139.200|<tuple|20.163|?>>
+    <associate|lemma 20.141.200|<tuple|20.164|?>>
     <associate|lemma 20.161.201|<tuple|20.105|?>>
-    <associate|lemma 20.172.1|<tuple|20.190|?>>
+    <associate|lemma 20.172.1|<tuple|20.192|?>>
     <associate|lemma 20.78.156|<tuple|20.79|?>>
     <associate|lemma 20.80.156|<tuple|20.81|?>>
     <associate|lemma 20.90.156|<tuple|20.95|?>>
     <associate|lemma 20.95.156|<tuple|20.100|?>>
-    <associate|measure Borel algebra|<tuple|20.136|?>>
-    <associate|measure Borel algebra and closure|<tuple|20.137|?>>
-    <associate|measure Borel algebra on R|<tuple|20.144|?>>
-    <associate|measure Borel algebra on R^n|<tuple|20.145|?>>
-    <associate|measure Borel algebra on R^n (equivalences)|<tuple|20.163|?>>
-    <associate|measure Caratheodory|<tuple|20.185|?>>
-    <associate|measure Dyadic cubes|<tuple|20.156|?>>
-    <associate|measure Dyadic cubes properties|<tuple|20.159|?>>
-    <associate|measure Dynkin system|<tuple|20.186|?>>
-    <associate|measure Dynkin system P(X)|<tuple|20.189|?>>
+    <associate|measure Borel algebra|<tuple|20.138|?>>
+    <associate|measure Borel algebra and closure|<tuple|20.139|?>>
+    <associate|measure Borel algebra on R|<tuple|20.146|?>>
+    <associate|measure Borel algebra on R^n|<tuple|20.147|?>>
+    <associate|measure Borel algebra on R^n (equivalences)|<tuple|20.165|?>>
+    <associate|measure Caratheodory|<tuple|20.187|?>>
+    <associate|measure Dyadic cubes|<tuple|20.158|?>>
+    <associate|measure Dyadic cubes properties|<tuple|20.161|?>>
+    <associate|measure Dynkin system|<tuple|20.188|?>>
+    <associate|measure Dynkin system P(X)|<tuple|20.191|?>>
     <associate|measure Dynkin system condition for sigma
-    algebra|<tuple|20.192|?>>
+    algebra|<tuple|20.194|?>>
     <associate|measure Dynkin system condition for sigma algebra
-    (1)|<tuple|20.193|?>>
-    <associate|measure Dynkin system generated|<tuple|20.191|?>>
-    <associate|measure Dynkin system properties|<tuple|20.188|?>>
-    <associate|measure P(X) is a algebra|<tuple|20.123|?>>
-    <associate|measure P(X) is a ring|<tuple|20.119|?>>
-    <associate|measure P(X) is a sigma algebra|<tuple|20.131|?>>
-    <associate|measure additive function monotone|<tuple|20.202|?>>
-    <associate|measure additive set function|<tuple|20.110|?>>
-    <associate|measure algebra|<tuple|20.121|?>>
-    <associate|measure algebra equavalent definition|<tuple|20.125|?>>
-    <associate|measure algebra properties|<tuple|20.124|?>>
-    <associate|measure begin end|<tuple|20.155|?>>
-    <associate|measure borel algebrat on R|<tuple|20.139|?>>
-    <associate|measure compact class approximation|<tuple|20.216|?>>
+    (1)|<tuple|20.195|?>>
+    <associate|measure Dynkin system generated|<tuple|20.193|?>>
+    <associate|measure Dynkin system properties|<tuple|20.190|?>>
+    <associate|measure P(X) is a algebra|<tuple|20.125|?>>
+    <associate|measure P(X) is a ring|<tuple|20.121|?>>
+    <associate|measure P(X) is a sigma algebra|<tuple|20.133|?>>
+    <associate|measure additive function monotone|<tuple|20.204|?>>
+    <associate|measure additive set function|<tuple|20.112|?>>
+    <associate|measure algebra|<tuple|20.123|?>>
+    <associate|measure algebra equavalent definition|<tuple|20.127|?>>
+    <associate|measure algebra properties|<tuple|20.126|?>>
+    <associate|measure begin end|<tuple|20.157|?>>
+    <associate|measure borel algebrat on R|<tuple|20.141|?>>
+    <associate|measure compact class approximation|<tuple|20.218|?>>
+    <associate|measure compact class approximation (1)|<tuple|20.219|?>>
     <associate|measure condition for a algebra to be a sigma
-    algebra|<tuple|20.133|?>>
-    <associate|measure content|<tuple|20.209|?>>
-    <associate|measure content is additive|<tuple|20.210|?>>
-    <associate|measure content properties|<tuple|20.212|?>>
-    <associate|measure countable additive set function|<tuple|20.112|?>>
+    algebra|<tuple|20.135|?>>
+    <associate|measure content|<tuple|20.211|?>>
+    <associate|measure content is additive|<tuple|20.212|?>>
+    <associate|measure content properties|<tuple|20.214|?>>
+    <associate|measure countable additive set function|<tuple|20.114|?>>
     <associate|measure countable additivity implies
-    additivity|<tuple|20.166|?>>
+    additivity|<tuple|20.168|?>>
     <associate|measure countable additivity implies finite
-    additivity|<tuple|20.114|?>>
+    additivity|<tuple|20.116|?>>
     <associate|measure countable additivity implies sub
-    additivity|<tuple|20.177|?>>
-    <associate|measure countable sub-additive set function|<tuple|20.113|?>>
+    additivity|<tuple|20.179|?>>
+    <associate|measure countable sub-additive set function|<tuple|20.115|?>>
     <associate|measure countable sub-additivity implies
-    sub-additivity|<tuple|20.116|?>>
-    <associate|measure countable union is in sigma algebra|<tuple|20.132|?>>
-    <associate|measure extending pre-measure to a measure|<tuple|20.206|?>>
-    <associate|measure finite measure|<tuple|20.174|?>>
-    <associate|measure generated sigma algebra|<tuple|20.135|?>>
-    <associate|measure half open intervals in R^n|<tuple|20.152|?>>
-    <associate|measure measurable set equivalences|<tuple|20.184|?>>
-    <associate|measure measurable sets|<tuple|20.183|?>>
-    <associate|measure measurable space|<tuple|20.128|?>>
-    <associate|measure measure conditions|<tuple|20.180|?>>
-    <associate|measure measure definition|<tuple|20.167|?>>
-    <associate|measure measure on A\|B|<tuple|20.172|?>>
-    <associate|measure measure space|<tuple|20.169|?>>
-    <associate|measure measure space properties (1)|<tuple|20.173|?>>
-    <associate|measure measure space properties (2)|<tuple|20.178|?>>
-    <associate|measure measure space properties (3)|<tuple|20.179|?>>
-    <associate|measure monotone|<tuple|20.109|?>>
-    <associate|measure on sub sigma algebra|<tuple|20.171|?>>
-    <associate|measure order on R^n|<tuple|20.146|?>>
-    <associate|measure outer measure|<tuple|20.181|?>>
-    <associate|measure outer measure construction|<tuple|20.197|?>>
+    sub-additivity|<tuple|20.118|?>>
+    <associate|measure countable union is in sigma algebra|<tuple|20.134|?>>
+    <associate|measure extending pre-measure to a measure|<tuple|20.208|?>>
+    <associate|measure finite measure|<tuple|20.176|?>>
+    <associate|measure generated sigma algebra|<tuple|20.137|?>>
+    <associate|measure half open intervals in R^n|<tuple|20.154|?>>
+    <associate|measure measurable set equivalences|<tuple|20.186|?>>
+    <associate|measure measurable sets|<tuple|20.185|?>>
+    <associate|measure measurable space|<tuple|20.130|?>>
+    <associate|measure measure conditions|<tuple|20.182|?>>
+    <associate|measure measure definition|<tuple|20.169|?>>
+    <associate|measure measure on A\|B|<tuple|20.174|?>>
+    <associate|measure measure space|<tuple|20.171|?>>
+    <associate|measure measure space properties (1)|<tuple|20.175|?>>
+    <associate|measure measure space properties (2)|<tuple|20.180|?>>
+    <associate|measure measure space properties (3)|<tuple|20.181|?>>
+    <associate|measure monotone|<tuple|20.111|?>>
+    <associate|measure on sub sigma algebra|<tuple|20.173|?>>
+    <associate|measure order on R^n|<tuple|20.148|?>>
+    <associate|measure outer measure|<tuple|20.183|?>>
+    <associate|measure outer measure construction|<tuple|20.199|?>>
     <associate|measure outer measure construction from
-    pre-measure|<tuple|20.205|?>>
-    <associate|measure outer measure is finite subadditive|<tuple|20.182|?>>
+    pre-measure|<tuple|20.207|?>>
+    <associate|measure outer measure is finite subadditive|<tuple|20.184|?>>
     <associate|measure pairwise disjoint|<tuple|20.102|?>>
     <associate|measure pairwise disjoint sets and
     bijections|<tuple|20.104|?>>
-    <associate|measure pre-measure|<tuple|20.200|?>>
-    <associate|measure pre-measure equivalences|<tuple|20.214|?>>
-    <associate|measure pre-measure is a content|<tuple|20.213|?>>
-    <associate|measure pre-measure is additive|<tuple|20.201|?>>
+    <associate|measure pre-measure|<tuple|20.202|?>>
+    <associate|measure pre-measure equivalences|<tuple|20.216|?>>
+    <associate|measure pre-measure is a content|<tuple|20.215|?>>
+    <associate|measure pre-measure is additive|<tuple|20.203|?>>
     <associate|measure pre-measure is countable
-    sub-additive|<tuple|20.204|?>>
-    <associate|measure pre-measure monotonity|<tuple|20.203|?>>
-    <associate|measure proto-ring|<tuple|20.195|?>>
-    <associate|measure ring|<tuple|20.117|?>>
-    <associate|measure ring is a semi-ring|<tuple|20.208|?>>
-    <associate|measure ring properties|<tuple|20.120|?>>
-    <associate|measure semi-ring|<tuple|20.199|?>>
-    <associate|measure sigma algebra|<tuple|20.126|?>>
-    <associate|measure sigma algebra equivalences|<tuple|20.129|?>>
-    <associate|measure sigma algebra intersection|<tuple|20.134|?>>
-    <associate|measure sigma finite measure space|<tuple|20.176|?>>
-    <associate|measure sub measure space|<tuple|20.138|?>>
-    <associate|measure sub-additive set function|<tuple|20.111|?>>
-    <associate|measure sum amd scalar product of measures|<tuple|20.170|?>>
+    sub-additive|<tuple|20.206|?>>
+    <associate|measure pre-measure monotonity|<tuple|20.205|?>>
+    <associate|measure proto-ring|<tuple|20.197|?>>
+    <associate|measure ring|<tuple|20.119|?>>
+    <associate|measure ring is a semi-ring|<tuple|20.210|?>>
+    <associate|measure ring properties|<tuple|20.122|?>>
+    <associate|measure semi-ring|<tuple|20.201|?>>
+    <associate|measure semi-ring to ring|<tuple|20.220|?>>
+    <associate|measure sigma algebra|<tuple|20.128|?>>
+    <associate|measure sigma algebra equivalences|<tuple|20.131|?>>
+    <associate|measure sigma algebra intersection|<tuple|20.136|?>>
+    <associate|measure sigma finite measure space|<tuple|20.178|?>>
+    <associate|measure sub measure space|<tuple|20.140|?>>
+    <associate|measure sub-additive set function|<tuple|20.113|?>>
+    <associate|measure sum amd scalar product of measures|<tuple|20.172|?>>
     <associate|measure union intersection stable|<tuple|20.108|?>>
-    <associate|measure uniqueness of extension of a measure|<tuple|20.194|?>>
-    <associate|measure {empty set} is a ring|<tuple|20.118|?>>
-    <associate|measure {emptyset,set} is a measure|<tuple|20.122|?>>
-    <associate|note 20.198.210|<tuple|20.198|?>>
-    <associate|proto-measure|<tuple|20.196|?>>
+    <associate|measure uniqueness of extension of a measure|<tuple|20.196|?>>
+    <associate|measure {empty set} is a ring|<tuple|20.120|?>>
+    <associate|measure {emptyset,set} is a measure|<tuple|20.124|?>>
+    <associate|note 20.198.210|<tuple|20.200|?>>
+    <associate|proto-measure|<tuple|20.198|?>>
   </collection>
 </references>
 
@@ -16935,8 +17559,8 @@
       measures <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-60>>
 
-      <with|par-left|<quote|2tab>|20.4.3.4<space|2spc>Pre-measures
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|2tab>|20.4.3.4<space|2spc>Contents and
+      pre-measures <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-65>>
 
       <with|par-left|<quote|2tab>|20.4.3.5<space|2spc>Using the Carathéodory
