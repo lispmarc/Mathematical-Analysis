@@ -5365,6 +5365,63 @@
 
     \;
   </proof>
+
+  As <math|A\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>>
+  we have that
+
+  <\equation>
+    A=A<big|cap><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)><below|=|<text|[theorem:
+    <reference|family distributivity>]>><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|A<big|cap>A<rsub|i>|)>
+  </equation>
+
+  Further as <math|\<cal-S\>> is a semi-ring hence <math|\<cap\>>-stable ir
+  follows also that\ 
+
+  <\equation>
+    <around*|{|A<big|cap>A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-S\>
+  </equation>
+
+  Define\ 
+
+  <\equation>
+    <around*|{|C<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><text| by
+    >C<rsub|i>=<choice|<tformat|<table|<row|<cell|A<big|cap>A<rsub|1><text|
+    if >i=1>>|<row|<cell|<around*|(|A<big|cap>A<rsub|i>|)>\\<big|cup><rsub|j\<in\><around*|{|2,\<ldots\>,i-1|}>><around*|(|A<big|cap>A<rsub|j>|)><text|
+    if >i\<in\><around*|{|2,\<ldots\>,n|}>>>>>>
+  </equation>
+
+  Using [lemma: <reference|lemma 20.161.201>] it follows that\ 
+
+  <\equation>
+    <label|eq 20.201.217><around*|{|C<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><text|
+    is pairwise disjoint>
+  </equation>
+
+  Let <math|i\<in\><around*|{|1,\<ldots\>,n|}>> then we have either:\ 
+
+  <\description>
+    <item*|<math|i=1>>Define <math|<around*|{|D<rsub|1,i>|}><rsub|i\<in\><around*|{|1|}>>>
+    by <math|D<rsub|1,1>=C<rsub|1>=A<big|cap>A<rsub|1>\<in\>\<cal-S\>> then
+    for <math|n<rsub|1>=1> <math|<around*|{|D<rsub|1,i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n<rsub|1>|}>>\<subseteq\>\<cal-S\>>
+    is pairwise disjoint and <math|C<rsub|1>=<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n<rsub|1>|}>>D<rsub|1,i>>.
+
+    <item*|<math|i\<in\><around*|{|2,\<ldots\>,n|}>>>Then
+    <math|C<rsub|i>=<around*|(|A<big|cap>A<rsub|i>|)>\\<big|cup><rsub|j\<in\><around*|{|2,\<ldots\>,i-1|}>><around*|(|A<big|cap>A<rsub|j>|)>>.
+    As <math|<around*|(|A<big|cap>A<rsub|i>|)>,<around*|(|A<big|cap>A|)>\<in\>\<cal-S\>>
+    it follows from [lemma: <reference|lemma 20.204.217>] there exist a
+    pairwise disjoint <math|<around*|{|D<rsub|i,j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|i>|}>>\<subseteq\>\<cal-S\>>
+    such that <math|C<rsub|i>=<big|sqcup><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|i>|}>>D<rsub|i,j>>
+  </description>
+
+  Hence we have\ 
+
+  <\equation*>
+    \<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+    >\<exists\><around*|{|D<rsub|i,j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,n<rsub|i>|}>>\<subseteq\>\<cal-S\><text|
+    pairwise disjoint such that >
+  </equation*>
+
+  \;
 </body>
 
 <\initial>
@@ -5523,19 +5580,20 @@
     <associate|eq 16.46.185|<tuple|60|23>>
     <associate|eq 16.47.185|<tuple|61|23>>
     <associate|eq 18.283.124|<tuple|78|31>>
-    <associate|eq 20.208.204|<tuple|140|?>>
-    <associate|eq 20.209.204|<tuple|141|?>>
-    <associate|eq 20.210.204|<tuple|142|?>>
-    <associate|eq 20.211.204|<tuple|143|?>>
-    <associate|eq 20.212.204|<tuple|144|?>>
-    <associate|eq 20.213.204|<tuple|145|?>>
-    <associate|eq 20.214.204|<tuple|146|?>>
-    <associate|eq 20.215.204|<tuple|147|?>>
-    <associate|eq 20.216.204|<tuple|148|?>>
-    <associate|eq 20.217.204|<tuple|149|?>>
-    <associate|eq 20.218.204|<tuple|150|?>>
-    <associate|eq 20.219.204|<tuple|151|?>>
-    <associate|eq 20.220.204|<tuple|152|?>>
+    <associate|eq 20.201.217|<tuple|156|?>>
+    <associate|eq 20.208.204|<tuple|140|52>>
+    <associate|eq 20.209.204|<tuple|141|53>>
+    <associate|eq 20.210.204|<tuple|142|53>>
+    <associate|eq 20.211.204|<tuple|143|53>>
+    <associate|eq 20.212.204|<tuple|144|53>>
+    <associate|eq 20.213.204|<tuple|145|53>>
+    <associate|eq 20.214.204|<tuple|146|54>>
+    <associate|eq 20.215.204|<tuple|147|54>>
+    <associate|eq 20.216.204|<tuple|148|54>>
+    <associate|eq 20.217.204|<tuple|149|55>>
+    <associate|eq 20.218.204|<tuple|150|55>>
+    <associate|eq 20.219.204|<tuple|151|55>>
+    <associate|eq 20.220.204|<tuple|152|55>>
     <associate|lemma 14.360.158|<tuple|10|10>>
     <associate|lemma 14.364.159|<tuple|14|13>>
     <associate|lemma 16.104.194|<tuple|23|23>>
@@ -5549,12 +5607,12 @@
     <associate|lemma 16.202.127|<tuple|40|50>>
     <associate|lemma 16.24.178|<tuple|18|18>>
     <associate|lemma 16.25.178|<tuple|19|18>>
-    <associate|lemma 20.206.204|<tuple|41|?>>
-    <associate|lemma 20.207.204|<tuple|42|?>>
-    <associate|lemma 20.208.204|<tuple|43|?>>
-    <associate|lemma 20.209.204|<tuple|44|?>>
-    <associate|lemma 20.211.204|<tuple|46|?>>
-    <associate|measure length function is a pre-measure|<tuple|47|?>>
+    <associate|lemma 20.206.204|<tuple|41|52>>
+    <associate|lemma 20.207.204|<tuple|42|53>>
+    <associate|lemma 20.208.204|<tuple|43|54>>
+    <associate|lemma 20.209.204|<tuple|44|55>>
+    <associate|lemma 20.211.204|<tuple|46|56>>
+    <associate|measure length function is a pre-measure|<tuple|47|57>>
     <associate|series absolute convergence alternative
     definition|<tuple|11|11>>
     <associate|series absolute convergence commutativity countable
