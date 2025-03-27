@@ -9700,6 +9700,8 @@
       <item><math|A\<cdot\><around*|(|B<big|cup>C|)>=<around*|(|A\<cdot\>B|)><big|cup><around*|(|A\<cdot\>C|)>>
 
       <item><math|<around*|(|A<big|cup>B|)>\<cdot\>C=<around*|(|A\<cdot\>C|)><big|cup><around*|(|B\<cdot\>C|)>>
+
+      <item><math|A\<cdot\>\<varnothing\>=\<varnothing\>=\<varnothing\>\<cdot\>A>
     </enumerate>
   </theorem>
 
@@ -9759,7 +9761,112 @@
       <\equation*>
         <around*|(|A<big|cup>B|)>\<cdot\>C=<around*|(|A\<cdot\>C|)><big|cup><around*|(|B\<cdot\>C|)>
       </equation*>
+
+      <item>This follows from the definition of <math|\<cdot\>> and [theorem:
+      <reference|product of a empty set is empty>].
     </enumerate>
+  </proof>
+
+  We have the following extension for [theorem: <reference|finite product
+  properties>(4),(5)]. TODO
+
+  <\theorem>
+    <label|finite product properties (1)>Let
+    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>> be a family of sets then we
+    have:
+
+    <\enumerate>
+      <item>If <math|B> is a set then\ 
+
+      <\equation*>
+        B\<cdot\><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>=<big|cup><rsub|i\<in\>I><around*|(|B\<cdot\>A<rsub|i>|)>
+      </equation*>
+
+      and
+
+      <\equation*>
+        <around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>\<cdot\>B=<big|cup><rsub|i\<in\>I><around*|(|A<rsub|i>\<cdot\>B|)>
+      </equation*>
+
+      <item>If <math|<around*|{|B<rsub|j>|}><rsub|j\<in\>J>> be another
+      family of sets then\ 
+
+      <\equation*>
+        <around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>\<cdot\><around*|(|<big|cup><rsub|j\<in\>J>B<rsub|j>|)>=<big|cup><rsub|i\<in\>I><around*|(|<big|cup><rsub|j\<in\>J><around*|(|A<rsub|i>\<cdot\>B<rsub|j>|)>|)>=<big|cup><rsub|<around*|(|i,j|)>\<in\>I\<times\>J><around*|(|A<rsub|i>\<cdot\>B<rsub|j>|)>
+      </equation*>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|x\<in\>B\<cdot\><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>>
+      then <math|x:<around*|{|1,2|}>\<rightarrow\>B<big|cup><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>>
+      is a function such that <math|x<around*|(|1|)>\<in\>B\<wedge\>x<around*|(|2|)>\<in\><big|cup><rsub|i\<in\>I>A<rsub|I>>,
+      hence there exist a <math|i\<in\>I> such that
+      <math|x<around*|(|2|)>\<in\>A<rsub|i>>, so
+      <math|x:<around*|{|1,2|}>\<rightarrow\>B<big|cup>A<rsub|i>> is a
+      function such that <math|x<around*|(|1|)>\<in\>B\<wedge\>x<around*|(|2|)>\<in\>A<rsub|i>>.
+      Hence <math|<rigid|x\<in\>B\<cdot\>A<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>I>B\<cdot\>A<rsub|i>>>
+      which proves that\ 
+
+      <\equation>
+        <label|eq 6.25.221>B\<cdot\><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>\<subseteq\><big|cup><rsub|i\<in\>I><around*|(|B\<cdot\>A<rsub|i>|)>
+      </equation>
+
+      If <math|x\<in\><big|cup><rsub|i\<in\>I><around*|(|B\<cdot\>A<rsub|i>|)>>
+      then there exist a <math|i\<in\>I> such that
+      <math|x\<in\>B\<cdot\>A<rsub|i>>. Hence
+      <math|x:<around*|{|1,2|}>\<rightarrow\>B<big|cup>A<rsub|i>> is a
+      function with <math|x<around*|(|1|)>\<in\>B\<wedge\>x<around*|(|2|)>\<in\>A<rsub|i>\<subseteq\>B\<cdot\><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>>,
+      which proves that <math|x\<in\>B\<cdot\><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>>.
+      Hence <math|<big|cup><rsub|i\<in\>I><around*|(|B\<cdot\>A<rsub|i>|)>\<subseteq\>B\<cdot\><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>>,
+      which combined with [eq: <reference|eq 6.25.221>] results in\ 
+
+      <\equation>
+        <label|eq 6.26.221>B\<cdot\><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>=<big|cup><rsub|i\<in\>I><around*|(|B\<cdot\>A<rsub|i>|)>
+      </equation>
+
+      Let <math|x\<in\><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>\<cdot\>B>
+      then <math|x:<around*|{|1,2|}>\<rightarrow\><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)><big|cup>B>
+      is a function such that <math|x<around*|(|1|)>\<in\><big|cup><rsub|i\<in\>I>A<rsub|I>\<wedge\>x<around*|(|2|)>\<in\>B>,
+      hence there exist a <math|i\<in\>I> such that
+      <math|x<around*|(|1|)>\<in\>A<rsub|i>>, so
+      <math|x:<around*|{|1,2|}>\<rightarrow\>A<rsub|i><big|cup>B> is a
+      function such that <math|x<around*|(|1|)>\<in\>A<rsub|i>\<wedge\>x<around*|(|2|)>\<in\>B>.
+      Hence <math|<rigid|x\<in\>A<rsub|i>\<cdot\>B\<subseteq\><big|cup><rsub|i\<in\>I>A<rsub|i>\<cdot\>B>>
+      which proves that\ 
+
+      <\equation>
+        <label|eq 6.27.221><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>\<cdot\>B\<subseteq\><big|cup><rsub|i\<in\>I><around*|(|A<rsub|i>\<cdot\>B|)>
+      </equation>
+
+      If <math|x\<in\><big|cup><rsub|i\<in\>I><around*|(|A<rsub|i>\<cdot\>B|)>>
+      then there exist a <math|i\<in\>I> such that
+      <math|x\<in\>A<rsub|i>\<cdot\>B>. Hence
+      <math|x:<around*|{|1,2|}>\<rightarrow\>A<rsub|i><big|cup>B> is a
+      function with <math|x<around*|(|1|)>\<in\>A<rsub|i>\<wedge\>x<around*|(|2|)>\<in\>B\<subseteq\><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>\<cdot\>B>,
+      which proves that <math|x\<in\><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>\<cdot\>B>.
+      Hence <math|<big|cup><rsub|i\<in\>I><around*|(|A<rsub|i>\<cdot\>B|)>\<subseteq\><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>\<cdot\>B>,
+      which combined with [eq: <reference|eq 6.27.221>] results in\ 
+
+      <\equation>
+        <label|eq 6.28.221><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>\<cdot\>B=<big|cup><rsub|i\<in\>I><around*|(|A<rsub|i>\<cdot\>B|)>
+      </equation>
+
+      <item>We have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)>\<cdot\><around*|(|<big|cup><rsub|j\<in\>J>B<rsub|j>|)>>|<cell|\<equallim\><rsub|<around*|(|1|)>>>|<cell|<big|cup><rsub|i\<in\>I><around*|(|A<rsub|i>\<cdot\><around*|(|<big|cup><rsub|j\<in\>J>B<rsub|j>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|1|)>>>|<cell|<big|cup><rsub|i\<in\>I><around*|(|<big|cup><rsub|j\<in\>J><around*|(|A<rsub|i>\<cdot\>B<rsub|j>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|family union of family of
+        families>]>>>|<cell|<big|cup><rsub|<around*|(|i,j|)>\<in\>I\<times\>J><around*|(|A<rsub|i>\<cdot\>B<rsub|j>|)>>>>>
+      </eqnarray*>
+
+      <math|>
+    </enumerate>
+
+    \;
   </proof>
 
   \;
@@ -9997,7 +10104,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|3>
-    <associate|page-first|127>
+    <associate|page-first|129>
     <associate|page-medium|papyrus>
     <associate|par-first|0tab>
     <associate|project-flag|false>
@@ -10135,10 +10242,6 @@
     <associate|eq 5.9.019|<tuple|5.9|158>>
     <associate|eq 6.10.019|<tuple|6.11|189>>
     <associate|eq 6.11.019|<tuple|6.12|190>>
-    <associate|eq 6.12.022|<tuple|6.13|196>>
-    <associate|eq 6.13.022|<tuple|6.14|196>>
-    <associate|eq 6.14.022|<tuple|6.15|196>>
-    <associate|eq 6.15.022|<tuple|6.16|196>>
     <associate|eq 6.17.020|<tuple|6.13|196>>
     <associate|eq 6.18.020|<tuple|6.14|196>>
     <associate|eq 6.18.022|<tuple|6.15|197>>
@@ -10151,8 +10254,12 @@
     <associate|eq 6.23.022|<tuple|6.20|200>>
     <associate|eq 6.24.022|<tuple|6.21|200>>
     <associate|eq 6.25.022|<tuple|6.22|201>>
+    <associate|eq 6.25.221|<tuple|6.25|?>>
+    <associate|eq 6.26.221|<tuple|6.26|?>>
     <associate|eq 6.27.130|<tuple|6.23|206>>
+    <associate|eq 6.27.221|<tuple|6.27|?>>
     <associate|eq 6.28.130|<tuple|6.24|207>>
+    <associate|eq 6.28.221|<tuple|6.28|?>>
     <associate|eq 6.3.019|<tuple|6.4|188>>
     <associate|eq 6.4.019|<tuple|6.5|188>>
     <associate|eq 6.5.019|<tuple|6.6|188>>
@@ -10202,13 +10309,14 @@
     minimum|<tuple|6.49|193>>
     <associate|finite power notation|<tuple|6.80|206>>
     <associate|finite product of sets|<tuple|6.79|205>>
-    <associate|finite product of sets bijection|<tuple|6.85|207>>
-    <associate|finite product of sets power|<tuple|6.86|207>>
-    <associate|finite product of sets power equivalence|<tuple|6.87|207>>
+    <associate|finite product of sets bijection|<tuple|6.86|207>>
+    <associate|finite product of sets power|<tuple|6.87|207>>
+    <associate|finite product of sets power equivalence|<tuple|6.88|207>>
     <associate|finite product of sets projection operator|<tuple|6.81|206>>
-    <associate|finite product of sets single set|<tuple|6.88|208>>
+    <associate|finite product of sets single set|<tuple|6.89|208>>
     <associate|finite product of two sets|<tuple|6.83|206>>
     <associate|finite product properties|<tuple|6.84|206>>
+    <associate|finite product properties (1)|<tuple|6.85|?>>
     <associate|finite set|<tuple|6.19|185>>
     <associate|finite set alternate definition lemma|<tuple|6.21|185>>
     <associate|finite set alternative definition|<tuple|6.22|185>>
@@ -10226,7 +10334,7 @@
     <associate|group example set of functions|<tuple|4.4|127>>
     <associate|group faithful, transitive action (1)|<tuple|4.30|134>>
     <associate|group faithful, transitive action (2)|<tuple|4.31|135>>
-    <associate|group finite power|<tuple|6.89|208>>
+    <associate|group finite power|<tuple|6.90|208>>
     <associate|group group|<tuple|4.5|128>>
     <associate|group group inheritance|<tuple|4.16|130>>
     <associate|group group inverse of inverse|<tuple|4.9|128>>
@@ -10257,7 +10365,6 @@
     <associate|mapping of N to a finite set (1)|<tuple|6.50|194>>
     <associate|mapping of N to a finite set (2)|<tuple|6.51|194>>
     <associate|mathematical induction|<tuple|5.83|176>>
-    <associate|max element of a family|<tuple|6.53|196>>
     <associate|n\<less\>=m=\<gtr\>S_n\<less\>=S_m|<tuple|6.17|184>>
     <associate|natural number {n,..,m}|<tuple|5.82|176>>
     <associate|natural number {n,..}|<tuple|5.80|176>>
