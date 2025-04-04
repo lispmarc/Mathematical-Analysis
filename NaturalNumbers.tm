@@ -9768,7 +9768,7 @@
   </proof>
 
   We have the following extension for [theorem: <reference|finite product
-  properties>(4),(5)]. TODO
+  properties>(4),(5)].\ 
 
   <\theorem>
     <label|finite product properties (1)>Let
@@ -10489,6 +10489,7 @@
     <associate|set is infinitie if it contains a infinite
     subset|<tuple|6.32|187>>
     <associate|set of finite family is finite|<tuple|6.46|193>>
+    <associate|sorting of a finite set|<tuple|6.52|?>>
     <associate|sub-semi-group|<tuple|4.12|129>>
     <associate|subring|<tuple|4.35|135>>
     <associate|subset of finite sets|<tuple|6.43|192>>

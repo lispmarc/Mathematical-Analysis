@@ -14044,6 +14044,132 @@
     This follows from [theorem: <reference|set of finite family is finite>].
   </proof>
 
+  The next theorem shows that every finite set can be sorted by a bijection.
+
+  <\theorem>
+    <label|sorting of a finite set>Let <math|<around*|\<langle\>|X,\<leqslant\>|\<rangle\>>>
+    be a totally ordered set, <math|A> be a finite subset of <math|X> with
+    <math|card<around*|(|A|)>=n\<in\>\<bbb-N\>> then there exist a bijection
+    <math|\<beta\>:<around*|{|1,\<ldots\>,n|}>\<rightarrow\>A> such that
+    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n-1|}>> we have
+    <math|\<beta\><around*|(|i|)>\<less\>\<beta\><around*|(|i+1|)>>
+  </theorem>
+
+  <\proof>
+    We prove this by induction on <math|card<around*|(|A|)>> so define
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\>\|<text|If >A\<subseteq\>X<text| with
+      >card<around*|(|A|)>=n<text| then there exist a bijection
+      >\<beta\>:<around*|{|1,\<ldots\>,n|}>\<rightarrow\>A<text| such that
+      >\<forall\>i\<in\><around*|{|1,\<ldots\>,n-1|}><text| we have
+      >\<beta\><around*|(|i|)>\<leqslant\>\<beta\><around*|(|i+1|)>|}>
+    </equation*>
+
+    then we have:\ 
+
+    <\description>
+      <item*|<math|1\<in\>\<cal-S\>>>As <math|card<around*|(|A|)>=1> there
+      exist a bijection <math|\<beta\>:<around*|{|1|}>\<rightarrow\>A>. As
+      <math|<around*|{|1,\<ldots\>,1-1|}>=\<varnothing\>>
+      <math|\<beta\><around*|(|i|)>\<leqslant\>\<beta\><around*|(|i+1|)>> is
+      satisfied vacuously. Hence <math|1\<in\>\<cal-S\>>.
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+      <math|A\<subseteq\>X> with <math|card<around*|(|A|)>=n+1>. As
+      <math|n\<in\>\<cal-S\>\<subseteq\>\<bbb-N\>> we have that
+      <math|n\<in\>\<bbb-N\>\<Rightarrow\>n+1\<in\><around*|{|2,\<ldots\>,\<infty\>|}>>.
+      As <math|A> is finite \ 
+
+      As <math|A> is finite and <math|A\<neq\>\<varnothing\>> [because
+      <math|n+1\<gtr\>0\<Rightarrow\>\<alpha\><around*|(|1|)>\<in\>A>]
+      <math|m=max<around*|(|A|)>> exist. Take <math|B=A\\<around*|{|m|}>>
+      then by [theorem: <reference|complex cardinality removing a element>]
+      <math|card<around*|(|B|)>=<around*|(|n+1|)>-1=n>. Hence as
+      <math|n\<in\>A> there exist a bijection\ 
+
+      <\equation*>
+        \<alpha\>:<around*|{|1,\<ldots\>,n|}>\<rightarrow\>B<text| with
+        >\<forall\>i\<in\><around*|{|1,\<ldots\>,n-1|}><text|
+        >\<alpha\><around*|(|i|)>\<less\>\<alpha\><around*|(|i+1|)>
+      </equation*>
+
+      Define then\ 
+
+      <\equation*>
+        \<beta\>:<around*|{|1,\<ldots\>,n+1|}>\<rightarrow\>A<text| by
+        >\<beta\><around*|(|i|)>=<choice|<tformat|<table|<row|<cell|\<alpha\><around*|(|i|)><text|
+        if >i\<in\><around*|{|1,\<ldots\>,n+1|}>>>|<row|<cell|m<text| if
+        <math|i=n+1>>>>>>>
+      </equation*>
+
+      then we have:\ 
+
+      <\description>
+        <item*|injectivity>If <math|i,j\<in\><around*|{|1,\<ldots\>,n+1|}>>
+        with <math|\<beta\><around*|(|i|)>=\<beta\><around*|(|j|)>> then we
+        have for <math|i,j> either:
+
+        <\description>
+          <item*|<math|i=n+1\<wedge\>j=n+1>>Then trivially <math|i=j>
+
+          <item*|<math|i\<in\><around*|{|1,\<ldots\>,n|}>\<wedge\>j=n+1>>Then
+          <math|m=\<beta\><around*|(|j|)>=\<beta\><around*|(|i|)>=\<alpha\><around*|(|i|)>\<in\>B=A\\<around*|{|m|}>>
+          giving the contradiction <math|m\<in\>A\\<around*|{|m|}>>, hence
+          this case never occurs.
+
+          <item*|<math|i=n+1\<wedge\>j\<in\><around*|{|1,\<ldots\>,n|}>>>Then
+          <math|m=\<beta\><around*|(|i|)>=\<beta\><around*|(|j|)>=\<alpha\><around*|(|j|)>\<in\>B=A\\<around*|{|m|}>>
+          giving the contradiction <math|m\<in\>A\\<around*|{|m|}>>, hence
+          this case never occurs.
+
+          <item*|<math|i\<in\><around*|{|1,\<ldots\>,n|}>\<wedge\>j\<in\><around*|{|1,\<ldots\>,n|}>>>Then
+          <math|\<alpha\><around*|(|i|)>=\<beta\><around*|(|i|)>=\<beta\><around*|(|j|)>=\<alpha\><around*|(|j|)>>
+          so that, as <math|\<alpha\>> is a bijection, <math|i=j>.
+        </description>
+
+        Hence in all valid cases we have <math|i=j> which proves injectivity.
+
+        <item*|surjectivity>Let <math|y\<in\>A> then we have either
+        <math|y=m> then <math|y=\<beta\><around*|(|n+1|)>> or
+        <math|y\<in\>A\\<around*|{|m|}>> then, as <math|\<alpha\>> is
+        surjective, <math|\<exists\>i\<in\><around*|{|1,\<ldots\>,n|}>\<subseteq\><around*|{|1,\<ldots\>,n+1|}>>
+        such that <math|y=\<alpha\><around*|(|i|)>=\<beta\><around*|(|i|)>>.
+      </description>
+
+      So we have proved that\ 
+
+      <\equation*>
+        \<beta\>:<around*|{|1,\<ldots\>,n+1|}>\<rightarrow\>A<text| is a
+        bijection>
+      </equation*>
+
+      Finally let <math|i\<in\><around*|{|1,\<ldots\>,n|}>> then we have for
+      <math|i> either:
+
+      <\description>
+        <item*|<math|i\<in\><around*|{|1,\<ldots\>,n-1|}>>>Then
+        <math|\<beta\><around*|(|i|)>=\<alpha\><around*|(|i|)>\<less\>\<alpha\><around*|(|i+1|)>=\<beta\><around*|(|i+1|)>>
+
+        <item*|<math|i=n>>Then <math|\<beta\><around*|(|n+1|)>=m>, as
+        <math|m=max<around*|(|A|)>> and <math|\<beta\><around*|(|i|)>\<in\>A>
+        it follows that <math|\<beta\><around*|(|i|)>\<leqslant\>\<beta\><around*|(|i+1|)>>,
+        further, as <math|\<beta\>> is a bijection,
+        <math|\<beta\><around*|(|i|)>\<neq\>\<beta\><around*|(|i+1|)>> so
+        that <math|\<beta\><around*|(|i|)>\<less\>\<beta\><around*|(|i+1|)>>
+      </description>
+
+      hence\ 
+
+      <\equation*>
+        \<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text| we have
+        >\<beta\><around*|(|i|)>\<less\>\<beta\><around*|(|i+1|)>
+      </equation*>
+
+      proving that <math|n+1\<in\>S>.
+    </description>
+  </proof>
+
   The following lemma will later be used to define the extended real numbers.
 
   <\lemma>
@@ -14124,7 +14250,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|6>
-    <associate|page-first|209>
+    <associate|page-first|213>
     <associate|par-first|0tab>
     <associate|project-flag|false>
     <associate|section-nr|3>
@@ -14489,7 +14615,7 @@
     <associate|eq 9.82.036|<tuple|9.82|?>>
     <associate|eq 9.89.047|<tuple|9.83|?>>
     <associate|eq 9.90.047|<tuple|9.84|?>>
-    <associate|extended reals existence|<tuple|10.96|?>>
+    <associate|extended reals existence|<tuple|10.97|?>>
     <associate|field with characteristics zero|<tuple|10.47|?>>
     <associate|integeres order|<tuple|7.21|?>>
     <associate|integers|<tuple|7.2|?>>
@@ -14644,6 +14770,7 @@
     <associate|reals the set of reals are non empty|<tuple|9.5|?>>
     <associate|recursion order|<tuple|10.36|?>>
     <associate|sign function|<tuple|8.15|?>>
+    <associate|sorting of a finite set|<tuple|10.96|?>>
   </collection>
 </references>
 

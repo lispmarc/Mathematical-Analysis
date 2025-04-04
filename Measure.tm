@@ -19994,10 +19994,13 @@
   Next it remains to prove that <math|vol<rsup|n>> is actual a content on
   <math|\<cal-R\><rsup|n><big|cup><around*|{|\<varnothing\>|}>>.
 
+  \;
+
+  TODO check if we need this theorem
+
   <\theorem>
-    Let <math|n\<in\><around*|{|2,\<ldots\>,\<infty\>|}>>,
-    <math|m\<in\>\<bbb-N\>>, <math|<around*|{|R<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>\<cal-R\><rsup|n>>,
-    <math|<around*|{|I<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-I\><rsub|<around*|[||]>>>
+    Let <math|n,m\<in\>\<bbb-N\>>,, <math|<around*|{|R<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>\<cal-R\><rsup|n>>,
+    <math|<around*|{|I<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-I\><rsub|<around*|[||[>>>
 
     <\equation*>
       \<forall\>i\<in\><around*|{|1,\<ldots\>,m|}><text|
@@ -20094,6 +20097,502 @@
     </equation*>
   </proof>
 
+  TODO end check we need this theorm
+
+  \;
+
+  The following lemma shows how a family of increasing real numbers can be
+  used to construct a family of pairwise disjoint intervals whose union is
+  also a interval.\ 
+
+  <\lemma>
+    <label|lemma 20.287.224>Let <math|n,m\<in\>\<bbb-N\>> with
+    <math|n\<leqslant\>m>, <math|<around*|{|a<rsub|i>|}><rsub|i\<in\><around*|{|n,\<ldots\>,m|}>>\<subseteq\>\<bbb-R\>>
+    such that <math|\<forall\>i\<in\><around*|{|n,\<ldots\>,m-1|}>> we have
+    <math|a<rsub|i>\<leqslant\>a<rsub|i+1>> then\ 
+
+    <\equation*>
+      <around*|{|<around*|[|a<rsub|i>,a<rsub|i+1>|[>|}><rsub|i\<in\><around*|{|n,\<ldots\>,m-1|}>><text|
+      is pairwise disjoint>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      <big|sqcup><rsub|i\<in\><around*|{|n,\<ldots\>,m-1|}>><around*|[|a<rsub|i>,a<rsub|i+1>|[>=<around*|[|a<rsub|n>,a<rsub|m>|[>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    Let <math|i,j\<in\><around*|{|n,\<ldots\>,m-1|}>> with <math|i\<neq\>j>
+    then we may assume that <math|i\<less\>j> [otherwise exchange <math|i>
+    and <math|j>]. Assume that <math|x\<in\><around*|[|a<rsub|i>,a<rsub|i+1>|[><big|cap><around*|[|a<rsub|j>,a<rsub|j+1>|[>>
+    then <math|a<rsub|i>\<leqslant\>x\<less\>a<rsub|i+1><below|\<leqslant\>|i\<less\>j\<Rightarrow\>i+1\<leqslant\>j>a<rsub|j>\<leqslant\>x\<less\>a<rsub|j+1>>
+    leading to the contradiction <math|x\<less\>x>, hence the assumption is
+    wrong proving that <math|><math|<around*|[|a<rsub|i>,a<rsub|i+1>|[><big|cap><around*|[|a<rsub|j>,a<rsub|j+1>|[>=\<varnothing\>>.
+    So
+
+    <\equation*>
+      <around*|{|<around*|[|a<rsub|i>,a<rsub|i+1>|[>|}><rsub|i\<in\><around*|{|n,\<ldots\>,m-1|}>><text|
+      is pairwise disjoint>
+    </equation*>
+
+    Let <math|x\<in\><around*|[|a<rsub|n>,a<rsub|m>|[>> then
+    <math|a<rsub|n>\<leqslant\>x\<less\>a<rsub|m>> so that
+    <math|n\<in\><around*|{|i\<in\><around*|{|n,\<ldots\>,m|}>\|a<rsub|i>\<leqslant\>x|}>>
+    a finite set. Hence <math|<rigid|M=max<around*|(|<around*|{|i\<in\><around*|{|n,\<ldots\>,m|}>\|a<rsub|i>\<leqslant\>x|}>|)>>>
+    exist. As <math|x\<less\>a<rsub|m>\<Rightarrow\>a<rsub|m>\<nleqslant\>x>
+    we have <math|M\<neq\>m> so that <rigid|<math|M\<in\><around*|{|n,\<ldots\>,m-1|}>\<Rightarrow\>M+1\<in\><around*|{|n,\<ldots\>,m|}>>>.
+    As <math|M=max<around*|(|<around*|{|i\<in\><around*|{|n,\<ldots\>,m|}>\|a<rsub|i>\<leqslant\>x|}>|)>>
+    it follows that <math|a<rsub|M>\<leqslant\>x\<less\>a<rsub|M+1>> so that
+    <math|x\<in\><around*|[|a<rsub|M>,a<rsub|M+1>|[>\<subseteq\><big|sqcup><rsub|i\<in\><around*|{|n,\<ldots\>,m-1|}>><around*|[|a<rsub|i>,a<rsub|i+1>|[>>.
+    Hence we have proved that\ 
+
+    <\equation>
+      <label|eq 20.327.224><around*|[|a<rsub|n>,a<rsub|m>|[>\<subseteq\><big|sqcup><rsub|i\<in\><around*|{|n,\<ldots\>,m-1|}>><around*|[|a<rsub|i>,a<rsub|i+1>|[>
+    </equation>
+
+    Let <math|x\<in\><big|sqcup><rsub|i\<in\><around*|{|n,\<ldots\>,m-1|}>><around*|[|a<rsub|i>,a<rsub|i+1>|[>>
+    then there exist a <math|i\<in\><around*|{|n,\<ldots\>,m-1|}>> such that
+    <math|a<rsub|i>\<leqslant\>x\<less\>a<rsub|i+1>>. As
+    <math|n\<leqslant\>i> and <math|i\<leqslant\>m-1\<less\>m> we have by the
+    hypothesis that <math|a<rsub|n>\<leqslant\>a<rsub|i>\<wedge\>a<rsub|i+1>\<leqslant\>a<rsub|m>>
+    so that <math|a<rsub|n>\<leqslant\>x\<less\>a<rsub|m>> or
+    <math|x\<in\><around*|[|a<rsub|n>,a<rsub|m>|[>>. Hence
+    <math|><math|<big|sqcup><rsub|i\<in\><around*|{|n,\<ldots\>,m-1|}>><around*|[|a<rsub|i>,a<rsub|i+1>|[>\<subseteq\><around*|[|a<rsub|n>,a<rsub|m>|[>>
+    which combined with [eq: <reference|eq 20.327.224>] gives\ 
+
+    <\equation*>
+      <big|sqcup><rsub|i\<in\><around*|{|n,\<ldots\>,m-1|}>><around*|[|a<rsub|i>,a<rsub|i+1>|[>=<around*|[|a<rsub|n>,a<rsub|m>|[>
+    </equation*>
+  </proof>
+
+  To prove additivity of the volume function we need a way to turn a
+  half-open interval that is the union of half-open intervals in a disjoint
+  union of half-open intervals while preserving the endpoints and the union.
+  This is done in the following lemma.
+
+  <\lemma>
+    <label|lemma 20.268.224>Let <math|n\<in\>\<bbb-N\>> and
+    <math|<around*|{|<around*|[|a<rsub|i>,b<rsub|i>|[>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-I\><rsub|<around*|[||[>>>
+    such that <math|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i>,b<rsub|i>|[>=<around*|[|a,b|[>>
+    then if we take\ 
+
+    <\equation*>
+      A=<around*|{|\<alpha\><rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}><big|cup><around*|{|b<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>
+    </equation*>
+
+    \ there exists a <math|m\<in\>\<bbb-N\>\\<around*|{|1|}>> and a bijection
+    <math|\<beta\>:<around*|{|1,\<ldots\>,m|}>\<rightarrow\>A> such that:
+
+    <\enumerate>
+      <item><math|\<beta\><around*|(|1|)>=a\<wedge\>\<beta\><around*|(|m|)>=b>
+
+      <item><math|\<forall\>i,j\<in\><around*|{|1,\<ldots\>,m|}>> with
+      <math|i\<less\>j> we have <math|\<beta\><around*|(|i|)>\<less\>\<beta\><around*|(|j|)>>
+
+      <item><math|\<forall\>x,y\<in\>A> with <math|x\<less\>y> we have
+      <math|\<beta\><rsup|-1><around*|(|x|)>\<less\>\<beta\><rsup|-1><around*|(|y|)>>
+
+      <item><math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have
+      <math|\<beta\><rsup|-1><around*|(|a<rsub|i>|)>\<less\>\<beta\><rsup|-1><around*|(|b<rsub|i>|)>>
+
+      <item><math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+      <math|<around*|{|<around*|[|\<beta\><around*|(|j|)>,\<beta\><around*|(|j+1|)>|[>|}><rsub|j\<in\><around*|{|\<beta\><rsup|-1><around*|(|a<rsub|i>|)>,\<ldots\>,\<beta\><rsup|-1><around*|(|b<rsub|i>|)>-1|}>>>
+      is pairwise disjoint and <math|<around*|[|a<rsub|i>,b<rsub|i>|[>=<big|sqcup><rsub|j\<in\><around*|{|\<beta\><rsup|-1><around*|(|a<rsub|i>|)>,\<ldots\>,\<beta\><rsup|-1><around*|(|b<rsub|i>|)>-1|}>><around*|[|\<beta\><around*|(|j|)>,\<beta\><around*|(|j+1|)>|[>>
+
+      <item><math|<around*|{|<around*|[|\<beta\><around*|(|i|)>,\<beta\><around*|(|i+1|)>|[>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m-1|}>>>
+      is pairwise disjoint and <math|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,m-1|}>><around*|[|\<beta\><around*|(|i|)>,\<beta\><around*|(|i+1|)>|[>=<around*|[|a,b|[>>
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    Define <math|A=<around*|{|a<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}><big|cup><around*|{|b<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>>.
+    As <math|<around*|[|a<rsub|1>,b<rsub|1>|[>\<neq\>\<varnothing\>> we have
+    that <math|<around*|[|a,b|[>=<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i>,b<rsub|i>|[>\<neq\>\<varnothing\>>
+    so that\ 
+
+    <\equation>
+      <label|eq 20.328.224>a\<less\>b
+    </equation>
+
+    Assume that <math|a\<nin\>A>. As <math|a\<in\><around*|[|a,b|[>=<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i>,b<rsub|i>|[>>
+    there exist a <math|i\<in\><around*|{|1,\<ldots\>,n|}>> such that
+    <math|<rigid|a\<in\><around*|[|a<rsub|i>,b<rsub|i>|[>\<Rightarrowlim\>a<rsub|i>\<leqslant\>a\<less\>b<rsub|i>\<Rightarrowlim\><rsub|a\<nin\>A\<Rightarrow\>a\<neq\>a<rsub|i>>a<rsub|i>\<less\>a\<less\>b<rsub|i>>>.
+    Using the density of the real numbers [theorem: <reference|complex
+    densitiy theorem>] there exist a <math|t\<in\>\<bbb-R\>> such that
+    <math|a<rsub|i>\<less\>t\<less\>a\<less\>b<rsub|i>\<Rightarrow\>t\<nin\><around*|[|a,b|[>\<wedge\>t\<in\><around*|[|a<rsub|i>,b<rsub|i>|[>\<subseteq\><around*|[|a,b|[>>
+    a contradiction. So the assumption is wrong and we have\ 
+
+    <\equation>
+      <label|eq 20.329.224>a\<in\>A
+    </equation>
+
+    Assume that <math|b\<nin\>A>. Given <math|i\<in\><around*|{|1,\<ldots\>,n|}>>
+    we have <math|<around*|[|a<rsub|i>,b<rsub|i>|[>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i>,b<rsub|i>|[>\<subseteq\><around*|[|a,b|[>>
+    so that by [theorem: <reference|generalized intervals and boundaries>]
+    <math|b<rsub|i>\<leqslant\>b\<Rightarrowlim\><rsub|b\<nin\>A\<Rightarrow\>b\<neq\>b<rsub|i>>b<rsub|i>\<less\>b>.
+    As also <math|a\<less\>b> it follows that
+    <math|<rigid|max<around*|(|<around*|{|a|}><big|cup><around*|{|b<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>\<less\>b>>.
+    Hence using the density of the real numbers [theorem: <reference|complex
+    densitiy theorem>] there exists a <math|t\<in\>\<bbb-R\>> with
+    <math|<rigid|max<around*|(|<around*|{|a|}><big|cup><around*|{|b<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>\<less\>t\<less\>b>>.
+    Hence <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|t\<nin\><around*|[|a<rsub|i>,b<rsub|i>|[>\<wedge\>a\<less\>t\<less\>b>.
+    So <rigid|<math|t\<nin\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i>,b<rsub|i>|[>=<around*|[|a,b|[>\<wedge\>t\<in\><around*|[|a,b|[>>>
+    again a contradiction. Hence the assumption is wrong and we have\ 
+
+    <\equation>
+      <label|eq 20.330.224>b\<in\>A
+    </equation>
+
+    As <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have
+    <math|<around*|[|a<rsub|i>,b<rsub|i>|[>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i>,b<rsub|i>|[>=<around*|[|a,b|[>>
+    it follows from theorem: <reference|generalized intervals and
+    boundaries>] that <math|a\<leqslant\>a<rsub|i>\<less\>b<rsub|i>\<leqslant\>b>
+    proving that\ 
+
+    <\equation*>
+      a=min<around*|(|A|)>\<wedge\>b=max<around*|(|A|)>
+    </equation*>
+
+    Using [theorems: <reference|union of two finite sets is finite>,
+    <reference|image of a finite set>] it follows that <math|A> is finite and
+    as <math|a,b\<in\>A> <math|card<around*|(|A|)>\<in\>\<bbb-N\>>, hence
+    using [theorem: <reference|sorting of a finite set>] it follows that
+    there exist a bijection \ 
+
+    <\equation>
+      <label|eq 20.331.224>\<beta\>:<around*|{|1,\<ldots\>,m|}>\<rightarrow\>A<text|
+      where >m=card<around*|(|A|)><text| such that
+      >\<forall\>i\<in\><around*|{|1,\<ldots\>,m-1|}><text|
+      >\<beta\><around*|(|i|)>\<less\>\<beta\><around*|(|i+1|)>
+    </equation>
+
+    As <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,m|}>> we have
+    <math|\<beta\><around*|(|1|)>\<leqslant\>\<beta\><around*|(|i|)>> and
+    <math|\<beta\><around*|(|i|)>\<leqslant\>\<beta\><around*|(|m|)>> it
+    follows that <math|\<beta\><around*|(|1|)>=min<around*|(|A|)>=a\<wedge\>\<beta\><around*|(|m|)>=max<around*|(|A|)>=b>,
+    hence\ 
+
+    <\equation>
+      <label|eq 20.332.224>a=\<beta\><around*|(|1|)>\<wedge\>b=\<beta\><around*|(|m|)>
+    </equation>
+
+    Let <math|x,y\<in\>A> such that <math|x\<less\>y>. If
+    <math|\<beta\><rsup|-1><around*|(|y|)>\<leqslant\>\<beta\><rsup|-1><around*|(|x|)>>
+    it follows that <math|y=\<beta\><around*|(|\<beta\><rsup|-1><around*|(|y|)>|)>\<leqslant\>\<beta\><around*|(|\<beta\><rsup|-1><around*|(|x|)>|)>=x>
+    contradicting <math|x\<leqslant\>y>. Hence we have\ 
+
+    <\equation>
+      <label|eq 20.333.224>\<forall\>x,y\<in\>A<text| with >x\<less\>y<text|
+      we have >\<beta\><rsup|-1><around*|(|x|)>\<less\>\<beta\><rsup|-1><around*|(|y|)>
+    </equation>
+
+    Let <math|i\<in\><around*|{|1,\<ldots\>,n|}>> then
+    <math|a<rsub|i>,b<rsub|i>\<in\>A> and <math|a<rsub|i>\<less\>b<rsub|i>>
+    [as <math|<around*|[|a<rsub|i>,b<rsub|i>|[>\<in\>\<cal-I\><rsub|<around*|[||[>>>]
+    so that by the above <math|\<beta\><rsup|-1><around*|(|a<rsub|i>|)>\<less\>\<beta\><rsup|-1><around*|(|b<rsub|i>|)>>.
+    In other words
+
+    <\equation>
+      <label|eq 20.334.224>\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      we have >\<beta\><rsup|-1><around*|(|a<rsub|i>|)>\<less\>\<beta\><rsup|-1><around*|(|b<rsub|i>|)>
+    </equation>
+
+    Let <math|i\<in\><around*|{|1,\<ldots\>,n|}>> then for
+    <math|j\<in\><around*|{|\<beta\><rsup|-1><around*|(|a<rsub|i>|)>,\<ldots\>,\<beta\><rsup|-1><around*|(|b<rsub|i>|)>-1|}>>
+    we have <math|\<beta\><around*|(|j|)>\<less\>\<beta\><around*|(|j|)>> so
+    that by [lemma: <reference|lemma 20.287.224>] we have\ 
+
+    <\equation>
+      <label|eq 20.335.224><around*|{|<around*|[|\<beta\><around*|(|j|)>,\<beta\><around*|(|j+1|)>|[>|}><rsub|j\<in\><around*|{|\<beta\><rsup|-1><around*|(|a<rsub|i>|)>,\<ldots\>,\<beta\><rsup|-1><around*|(|b<rsub|i>|)>-1|}>><text|
+      is pairwise disjoint >
+    </equation>
+
+    and
+
+    <\equation>
+      <label|eq 20.336.224><big|sqcup><rsub|j\<in\><around*|{|\<beta\><rsup|-1><around*|(|a<rsub|i>|)>,\<ldots\>,\<beta\><rsup|-1><around*|(|b<rsub|i>|)>-1|}>><around*|[|\<beta\><around*|(|j|)>,\<beta\><around*|(|j+1|)>|[>=<around*|[|\<beta\><around*|(|\<beta\><rsup|-1><around*|(|a<rsub|i>|)>|)>,\<beta\><around*|(|\<beta\><rsup|-1><around*|(|b<rsub|i>|)>|)>|[>=<around*|[|a<rsub|i>,b<rsub|i>|[>
+    </equation>
+
+    Using \ [lemma: <reference|lemma 20.287.224>] on [eq: <reference|eq
+    20.331.224>] gives
+
+    <\equation>
+      <label|eq 20.337.224><around*|{|<around*|[|\<beta\><around*|(|i|)>,\<beta\><around*|(|i-1|)>|[>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m-1|}>><text|
+      is pairwise disjoint>
+    </equation>
+
+    and
+
+    <\equation>
+      <label|eq 20.338.224><text| ><big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,m-1|}>><around*|[|\<beta\><around*|(|i|)>,\<beta\><around*|(|i+1|)>|[>=<around*|[|\<beta\><around*|(|1|)>,\<beta\><around*|(|n|)>|[><below|=|<text|[eq:
+      <reference|eq 20.332.224>]>><around*|[|a,b|[><rsub|>
+    </equation>
+
+    So <math|<around*|(|1|)>> is proved by [eq: <reference|eq 20.332.224>],
+    <math|<around*|(|2|)>> is proved by [eq: <reference|eq 20.331.224>],
+    <math|<around*|(|3|)>> is proved by [eq: <reference|eq 20.333.224>], (4)
+    is proved by [eq: <reference|eq 20.334.224>], (5) by [eqs: <reference|eq
+    20.335.224>, <reference|eq 20.336.224>] and finally (6) by [eqs:
+    <reference|eq 20.337.224>, <reference|eq 20.338.224>].
+  </proof>
+
+  Next we show that the volume of a rectangle that is partioned in
+  sub-rectangle by partioning the sides is the sum of the volume of the
+  sub-rectangles.
+
+  <\lemma>
+    <label|lemma 20.269.224>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|{|<around*|[|a<rsub|i>,b<rsub|i>|[>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-I\><rsub|<around*|[||[>>>
+    such that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> there
+    exists <math|<rigid|n<rsub|i>,m<rsub|i>\<in\>\<bbb-N\>>> with
+    <math|n<rsub|i>\<leqslant\>m<rsub|i>> and a
+    <math|<around*|{|a<rsub|i,j>|}><rsub|j\<in\><around*|{|n<rsub|i>,\<ldots\>,m<rsub|i>|}>>\<subseteq\>\<bbb-R\><text|
+    such that <math|\<forall\>j\<in\><around*|{|n<rsub|i>,\<ldots\>,m<rsub|i>-1|}>>>>
+    <math|a<rsub|i,j>\<leqslant\>a<rsub|i,j+1>> and
+    <rigid|<math|a<rsub|i,n<rsub|i>>=a<rsub|i>*\<wedge\>a<rsub|i,m<rsub|i>>=b<rsub|i>>>
+    then\ 
+
+    <\equation*>
+      <around*|{|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i,\<rho\><rsub|i>>,a<rsub|i,\<rho\><rsub|i>+1>|[>|}><rsub|\<rho\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|{|n<rsub|i>,\<ldots\>,m<rsub|i>-1|}>><text|
+      is pairwise disjoint>
+    </equation*>
+
+    <\equation*>
+      <big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i>,b<rsub|i>|[>=<big|sqcup><rsub|\<rho\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|{|n<rsub|i>,\<ldots\>,m<rsub|i>-1|}>><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i,\<rho\><rsub|i>>,a<rsub|i,\<rho\><rsub|i>+1>|[>|)>
+    </equation*>
+
+    <\equation*>
+      <big|prod><rsub|i=1><rsup|n><around*|(|b<rsub|i>-a<rsub|i>|)>=<big|sum><rsub|\<rho\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|{|n<rsub|i>,\<ldots\>,m<rsub|i>-1|}>><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|a<rsub|i,\<rho\><rsub|i>+1>-a<rsub|i,\<rho\><rsub|i>>|)>|)>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    Assume that <math|\<exists\>i\<in\><around*|{|1,\<ldots\>,n|}>> such that
+    <math|n<rsub|i>=m<rsub|i>> then <math|a<rsub|i>=a<rsub|i,n<rsub|i>>=a<rsub|o,m<rsub|i>>=b<rsub|i>>
+    contradicting <math|a<rsub|i>\<less\>b<rsub|i>> [because
+    <math|<around*|[|a<rsub|i>,b<rsub|i>|[>\<neq\>\<varnothing\>>], hence a
+    assumption is false and we have\ 
+
+    <\equation>
+      \<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text| we have
+      >n<rsub|i>\<less\>m<rsub|i><text| or >n<rsub|i>\<leqslant\>m<rsub|i>-1
+    </equation>
+
+    Let <math|i\<in\><around*|{|1,\<ldots\>,n|}>> then, as
+    <math|\<forall\>j\<in\><around*|{|n<rsub|i>,\<ldots\>,m<rsub|i>-1|}>>
+    <math|a<rsub|i,j>\<leqslant\>a<rsub|i,j+1>> it follows form [lemma:
+    <reference|lemma 20.287.224>] that\ 
+
+    <\equation>
+      <label|eq 20.343.224><around*|{|<around*|[|a<rsub|i,j>,a<rsub|i,j+1>|[>|}><rsub|j\<in\><around*|{|n<rsub|i>\<ldots\>,m<rsub|i>-1|}>><text|
+      is pairwise disjoint >
+    </equation>
+
+    and
+
+    <\equation>
+      <label|eq 20.344.224><around*|[|a<rsub|i>,b<rsub|i>|[>=<around*|[|a<rsub|i,n<rsub|i>>,a<rsub|i,m<rsub|i>>|[>=<big|sqcup><rsub|j\<in\><around*|{|n<rsub|i>,\<ldots\>,m<rsub|i>-1|}>><rsub|><around*|[|a<rsub|i,j>,a<rsub|i,j+1>|[>
+    </equation>
+
+    Let <math|x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i>,b<rsub|i>|[>>
+    then <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have
+    <math|x<rsub|i>\<in\><around*|[|a<rsub|i>,b<rsub|i>|[>>, hence by the
+    above there exist a <math|\<rho\><rsub|i>\<in\><around*|{|n<rsub|i>,\<ldots\>,m<rsub|i>-1|}>>
+    such that <math|x<rsub|i>\<in\><around*|[|a<rsub|i,\<rho\><rsub|i>>,a<rsub|i,\<rho\><rsub|i>+1>|[>>.
+    So for <math|\<rho\>=<around*|(|\<rho\><rsub|1>,\<ldots\>,\<rho\><rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|{|n<rsub|i>,\<ldots\>,m<rsub|i>-1|}>>
+    it follows that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|x<rsub|i>\<in\><around*|[|a<rsub|i,\<rho\><rsub|i>>,a<rsub|i,\<rho\><rsub|i>+1>|[>>
+    proving that <math|x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i,\<rho\><rsub|i>>,a<rsub|i,\<rho\><rsub|i>+1>|[>>.
+    Hence we have
+
+    <\equation>
+      <label|eq 20.345.224><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i>,b<rsub|i>|[>\<subseteq\><big|cup><rsub|\<rho\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|{|n<rsub|i>,\<ldots\>,m<rsub|i>-1|}>><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i,\<rho\><rsub|i>>,a<rsub|i,\<rho\><rsub|i>+1>|[>|)>
+    </equation>
+
+    If <math|x\<in\><big|cup><rsub|\<rho\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|{|n<rsub|i>,\<ldots\>,m<rsub|i>-1|}>><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i,\<rho\><rsub|i>>,a<rsub|i,\<rho\><rsub|i>+1>|[>|)>>
+    then there exist a <math|<rigid|\<rho\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|{|n<rsub|i>,\<ldots\>,m<rsub|i>-1|}>>>
+    such that <math|x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i,\<rho\><rsub|i>>,a<rsub|i,\<rho\><rsub|i>+1>|[>>.
+    Hence <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have
+    <math|x<rsub|i>\<in\><around*|[|a<rsub|i,\<rho\><rsub|i>>,a<rsub|i,\<rho\><rsub|i>+1>|[><below|\<subseteq\>|<text|[eq:
+    <reference|eq 20.344.224>]>><around*|[|a<rsub|i>,b<rsub|i>|[>> proving
+    that <math|x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i>,b<rsub|i>|[>>.
+    So it follows that <math|<big|cup><rsub|\<rho\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|{|n<rsub|i>,\<ldots\>,m<rsub|i>-1|}>><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i,\<rho\><rsub|i>>,a<rsub|i,\<rho\><rsub|i>+1>|[>|)>\<subseteq\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i>,b<rsub|i>|[>>
+    which combined with [eq: <reference|eq 20.345.224>] proves that\ 
+
+    <\equation>
+      <label|eq 20.3463224><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i>,b<rsub|i>|[>=<big|cup><rsub|\<rho\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|{|n<rsub|i>,\<ldots\>,m<rsub|i>-1|}>><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i,\<rho\><rsub|i>>,a<rsub|i,\<rho\><rsub|i>+1>|[>|)>
+    </equation>
+
+    Let <math|\<rho\>,\<sigma\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|{|n<rsub|i>,\<ldots\>,m<rsub|i>-1|}>>
+    with <math|\<rho\>=\<sigma\>> then there exist a
+    <math|k\<in\><around*|{|1,\<ldots\>,n|}>> such that
+    <math|\<rho\><around*|(|l|)>\<neq\>\<sigma\><around*|(|k|)>>. Assume that
+    that there exist a <math|<rigid|x\<in\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i,\<rho\><rsub|i>>,a<rsub|i,\<rho\><rsub|i>+1>|[>|)><big|cap><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i,\<rho\><rsub|i>>,a<rsub|i,\<rho\><rsub|i>+1>|[>|)>>>
+    then <math|x<rsub|k>\<in\><around*|[|a<rsub|k,\<rho\><rsub|k>>,a<rsub|k,\<rho\><rsub|k>+1>|[><big|cap><around*|[|a<rsub|k,\<sigma\><rsub|k>>,a<rsub|k,\<sigma\><rsub|k>+1>|[>\<equallim\><rsub|\<rho\><rsub|k>\<neq\>\<sigma\><rsub|k>>\<varnothing\>>
+    which is a contradiction, hence the assumption is wrong and we must have
+    that <math|<around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i,\<rho\><rsub|i>>,a<rsub|i,\<rho\><rsub|i>+1>|[>|)><big|cap><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i,\<rho\><rsub|i>>,a<rsub|i,\<rho\><rsub|i>+1>|[>|)>=\<varnothing\>>.
+    So we have\ 
+
+    <\equation>
+      <label|eq 20.347.224><around*|{|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i,\<rho\><rsub|i>>,a<rsub|i,\<rho\><rsub|i>+1>|[>|}><rsub|\<rho\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|{|n<rsub|i>,\<ldots\>,m<rsub|i>-1|}>><text|
+      is pairwise disjoint>
+    </equation>
+
+    Further we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<big|prod><rsub|i=1><rsup|n><around*|(|b<rsub|i>-a<rsub|i>|)>>|<cell|\<equallim\><rsub|<text|[definition:
+      <reference|measure length definition>]>>>|<cell|<big|prod><rsub|i=1><rsup|n>len<around*|(|<around*|[|a<rsub|i>,b<rsub|i>|[>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.343.224>, <reference|eq
+      20.344.224>]>>>|<cell|<big|prod><rsub|i=1><rsup|n>len<around*|(|<big|sqcup><rsub|j\<in\><around*|{|n<rsub|i>,\<ldots\>,m<rsub|i>|}>><around*|[|a<rsub|i,j>,a<rsub|i,j+1>|[>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+      <reference|lemma 20.246.220>]>>>|<cell|<big|prod><rsub|i=1><rsup|n><around*|(|<big|sum><rsub|j\<in\><around*|{|n<rsub|i>,\<ldots\>,m<rsub|i>|}>>len<around*|(|<around*|[|a<rsub|i,j>,a<rsub|i,j+1>|]>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|sum distributivity (1)>]>>>|<cell|<big|sum><rsub|\<rho\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|{|n<rsub|i>,\<ldots\>,m<rsub|i>|}>><rsup|><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>len<around*|(|<around*|[|a<rsub|i,\<rho\><rsub|i>>,a<rsub|i,\<rho\><rsub|i>+1>|[>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|\<rho\>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|{|n<rsub|i>,\<ldots\>,m<rsub|i>|}>><rsup|><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|a<rsub|i,\<rho\><rsub|i>+1>-a<rsub|i,\<rho\><rsub|i>>|)>|)>>>>>
+    </eqnarray*>
+
+    which proves the last part of the theorem.
+  </proof>
+
+  The following lemma proves that the if the union of half open rectangles is
+  a open rectangle then each side of the of the open rectangle is a union of
+  the corresponding sides of the subrectangles.
+
+  <\lemma>
+    <label|lemma 20.270.225>Let <math|n,m\<in\>\<bbb-N\>> and let
+    <math|<around*|{|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i,j>,b<rsub|i,j>|[>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>\<cal-R\><rsup|n>>
+    such that\ 
+
+    <\equation*>
+      <big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>n|}>><around*|[|a<rsub|i,j>,b<rsub|i,j>|[>|)>=<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|j>,b<rsub|j>|[>\<in\>\<cal-R\><rsup|n>
+    </equation*>
+
+    then <math|\<forall\>j\<in\><around*|{|1,\<ldots\>,n|}>> we have\ 
+
+    <\equation*>
+      <around*|[|a<rsub|j>,b<rsub|j>|[>=<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|[|a<rsub|i,j>,b<rsub|i,j>|[>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    Take <math|j\<in\><around*|{|1,\<ldots\>,n|}>>. If
+    <math|t\<in\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|[|a<rsub|i,j>,b<rsub|i,j>|[>>
+    then there exist a <math|i\<in\><around*|{|1,\<ldots\>,m|}>> such that
+    <math|t\<in\><around*|[|a<rsub|i,j>,b<rsub|i,j>|[>>. As
+    <math|><math|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>n|}>><around*|[|a<rsub|i,j>,b<rsub|i,j>|[>\<in\>\<cal-R\><rsup|n>>
+    <math|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>n|}>><around*|[|a<rsub|i,j>,b<rsub|i,j>|[>\<neq\>\<varnothing\>>
+    it follows from [theorems: <reference|product product is not empty>,
+    <reference|product projection is surjective>] that the projection
+    function <math|\<pi\><rsub|j>:<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>n|}>><around*|[|a<rsub|i,j>,b<rsub|i,j>|[>\<rightarrow\><around*|[|a<rsub|i,j>,b<rsub|i,j>|[>>
+    is a surjection hence there exists a <math|x\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>n|}>><around*|[|a<rsub|i,j>,b<rsub|i,j>|[>>
+    such that <math|x<rsub|j>=\<pi\><rsub|j><around*|(|x|)>=t>. As
+
+    <\equation*>
+      <big|prod><rsub|j\<in\><around*|{|1,\<ldots\>n|}>><around*|[|a<rsub|i,j>,b<rsub|i,j>|[>\<subseteq\><big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>n|}>><around*|[|a<rsub|i,j>,b<rsub|i,j>|[>|)>=<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|j>,b<rsub|j>|[>
+    </equation*>
+
+    we have that <math|x\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|j>,b<rsub|j>|[>>
+    so that <math|t=\<pi\><rsub|j><around*|(|x|)>\<in\><around*|[|a<rsub|j>,b<rsub|j>|[>>.
+    Hence we have\ 
+
+    <\equation>
+      <label|eq 20.345.225><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|[|a<rsub|i,j>,b<rsub|i,j>|[>\<subseteq\><around*|[|a<rsub|j>,b<rsub|j>|[>
+    </equation>
+
+    Let <math|t\<in\><around*|[|a<rsub|j>,b<rsub|j>|[>>. As
+    <math|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|j>,b<rsub|j>|[>\<in\>\<cal-R\><rsup|n>>
+    <math|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|j>,b<rsub|j>|[>\<neq\>\<varnothing\>>
+    so that by \ [theorems: <reference|product product is not empty>,
+    <reference|product projection is surjective>] the projection function
+    <math|\<pi\><rsub|j>:<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|j>,b<rsub|j>|[>\<rightarrow\><around*|[|a<rsub|j>,b<rsub|j>|[>>
+    is a surjection, hence there exist a <math|x\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|j>,b<rsub|j>|[>=<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>n|}>><around*|[|a<rsub|i,j>,b<rsub|i,j>|[>|)>>
+    such that <math|t=\<pi\><rsub|j><around*|(|x|)>>. Then there exists a
+    <math|i\<in\><around*|{|1,\<ldots\>,m|}>> such that
+    <math|x\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>n|}>><around*|[|a<rsub|m,j>,b<rsub|m,j>|[>>.
+    So it follows that <math|<rigid|t=\<pi\><rsub|j><around*|(|x|)>\<in\><around*|[|a<rsub|m,j>,b<rsub|m,j>|[>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|[|a<rsub|i,j>,b<rsub|i,j>|[>>>
+    which proves that <math|<around*|[|a<rsub|j>,b<rsub|j>|[>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|[|a<rsub|i,j>,b<rsub|i,j>|[>>.
+    Combining this with [eq: <reference|eq 20.345.225>] proves that\ 
+
+    <\equation*>
+      <around*|[|a<rsub|j>,b<rsub|j>|[>=<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|[|a<rsub|i,j>,b<rsub|i,j>|[>
+    </equation*>
+  </proof>
+
+  Next we calculate the size of a half open rectangle that is a union of
+  pairwise disjoint half open rectanlge.
+
+  <\lemma>
+    Let <math|n,> <math|m\<in\>\<bbb-N\>>,
+    <math|<around*|{|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i,j>,b<rsub|i,j>|[>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>\<cal-R\><rsup|n><rsub|>>
+    pairwise disjoint such that <math|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>n|}>><around*|[|a<rsub|i,j>,b<rsub|i,j>|[>|)>=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i>,b<rsub|i>|[>\<in\>\<cal-R\><rsup|n>>
+    then we have\ 
+
+    <\equation*>
+      <big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|b<rsub|i>-a<rsub|i>|)>=<big|sum><rsub|i=1><rsup|m><around*|(|<big|prod><rsub|j=1><rsup|n><around*|(|b<rsub|i,j>-a<rsub|i,j>|)>|)>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    First using the previous lemma [lemma: <reference|lemma 20.270.225>] we
+    have that\ 
+
+    <\equation>
+      <label|eq 20.346.225>\<forall\>j\<in\><around*|{|1,\<ldots\>,n|}><text|
+      ><around*|[|a<rsub|j>,b<rsub|j>|[>=<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|[|a<rsub|i,j>,b<rsub|i,j>|[>
+    </equation>
+
+    Let <math|j\<in\><around*|{|1,\<ldots\>,n|}>>. Using [lemma:
+    <reference|lemma 20.268.224>] there exists a
+    <math|n<rsub|j>\<in\>\<bbb-N\>> and a bijection
+
+    <\equation*>
+      \<beta\><rsub|j>:<around*|{|1,\<ldots\>,n<rsub|j>|}>\<rightarrow\><around*|{|a<rsub|i,j>\|i\<in\><around*|{|1,\<ldots\>,n<rsub|j>|}>|}><big|cup><around*|{|b<rsub|i,j>\|i\<in\><around*|{|1,\<ldots\>,n<rsub|j>|}>|}>
+      </equation*>
+
+    such that\ 
+
+    <\equation>
+      <label|eq 20.347.225>\<beta\><rsub|j><around*|(|1|)>=a<rsub|j>\<wedge\>\<beta\><rsub|j><around*|(|n<rsub|j>|)>=b<rsub|j>
+    </equation>
+
+    <\equation>
+      <label|eq 20.348.225>\<forall\>k,l\<in\><around*|{|1,\<ldots\>,n<rsub|j>|}><text|
+      with >k\<less\>l<text| we have >\<beta\><rsub|j><around*|(|k|)>\<less\>\<beta\><rsub|j><around*|(|l|)>
+    </equation>
+
+    <\equation>
+      <label|eq 20.349.225>\<forall\>x,y\<in\><around*|{|a<rsub|i,j>\|i\<in\><around*|{|1,\<ldots\>,n<rsub|j>|}>|}><big|cup><around*|{|b<rsub|i,j>\|i\<in\><around*|{|1,\<ldots\>,n<rsub|j>|}>|}><text|
+      with >x\<less\>y<text| we have ><around*|(|\<beta\><rsub|j>|)><rsup|-1><around*|(|x|)>\<less\><around*|(|\<beta\><rsub|j>|)><rsup|-1><around*|(|y|)>
+    </equation>
+
+    <\equation>
+      <label|eq 20.350.225>\<forall\>i\<in\><around*|{|1,\<ldots\>,m|}><text|
+      we have ><around*|(|\<beta\><rsub|j>|)><rsup|-1><around*|(|a<rsub|i,j>|)>\<less\><around*|(|\<beta\><rsub|j>|)><rsup|-1><around*|(|b<rsub|i,j>|)>
+    </equation>
+
+    <\equation>
+      <label|eq 20.351.225>\<forall\>i\<in\><around*|{|1,\<ldots\>,m|}><text|
+      \ <math|<around*|[|a<rsub|i,j>,b<rsub|i,j>|[>\<equallim\><rsub|<text|pairwise
+      disjoint union>>>><big|sqcup><rsub|l\<in\><around*|{|<around*|(|\<beta\><rsub|j>|)><rsup|-1><around*|(|a<rsub|i,j>|)>,\<ldots\>,<around*|(|\<beta\><rsub|j>|)><rsup|-1><around*|(|b<rsub|i,j>|)>-1|}>><around*|[|\<beta\><rsub|j><around*|(|l|)>,\<beta\><rsub|j><around*|(|l+1|)>|[>
+    </equation>
+
+    <\equation>
+      <label|eq 20.352.225><around*|[|a<rsub|j>,b<rsub|j>|[>\<equallim\><rsub|<text|pairwise
+      disjoiint union>><big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n<rsub|j>|}>><around*|[|\<beta\><rsub|i><around*|(|i|)>,\<beta\><rsub|j><around*|(|i+1|)>|[>
+    </equation>
+
+    \ 
+
+    \;
+  </proof>
+
+  \;
+
+  \;
+
+  \;
+
   \;
 
   \;
@@ -20104,7 +20603,7 @@
     <associate|chapter-nr|19>
     <associate|item-nr|>
     <associate|last-item-nr|2>
-    <associate|page-first|1245>
+    <associate|page-first|1249>
     <associate|section-nr|1>
     <associate|subsection-nr|7>
   </collection>
@@ -20370,7 +20869,6 @@
     <associate|eq 20.229.212|<tuple|20.243|?>>
     <associate|eq 20.23.156|<tuple|20.23|?>>
     <associate|eq 20.230.212|<tuple|20.244|?>>
-    <associate|eq 20.230.224|<tuple|20.320|?>>
     <associate|eq 20.231.212|<tuple|20.245|?>>
     <associate|eq 20.232.212|<tuple|20.246|?>>
     <associate|eq 20.233.212|<tuple|20.247|?>>
@@ -20439,7 +20937,6 @@
     <associate|eq 20.319.222|<tuple|20.319|?>>
     <associate|eq 20.32.156|<tuple|20.32|?>>
     <associate|eq 20.32.156.1|<tuple|20.33|?>>
-    <associate|eq 20.320.221|<tuple|20.324|?>>
     <associate|eq 20.320.224|<tuple|20.320|?>>
     <associate|eq 20.321.224|<tuple|20.321|?>>
     <associate|eq 20.322.224|<tuple|20.322|?>>
@@ -20447,8 +20944,36 @@
     <associate|eq 20.324.224|<tuple|20.324|?>>
     <associate|eq 20.325.224|<tuple|20.325|?>>
     <associate|eq 20.326\<point\>224|<tuple|20.326|?>>
+    <associate|eq 20.327.224|<tuple|20.327|?>>
+    <associate|eq 20.328.224|<tuple|20.328|?>>
+    <associate|eq 20.329.224|<tuple|20.329|?>>
+    <associate|eq 20.330.224|<tuple|20.330|?>>
+    <associate|eq 20.331.224|<tuple|20.331|?>>
+    <associate|eq 20.332.224|<tuple|20.332|?>>
+    <associate|eq 20.333.224|<tuple|20.333|?>>
+    <associate|eq 20.334.224|<tuple|20.334|?>>
+    <associate|eq 20.335.224|<tuple|20.335|?>>
+    <associate|eq 20.336.224|<tuple|20.336|?>>
+    <associate|eq 20.337.224|<tuple|20.337|?>>
+    <associate|eq 20.338.224|<tuple|20.338|?>>
+    <associate|eq 20.339.224|<tuple|20.339|?>>
     <associate|eq 20.34.156|<tuple|20.34|?>>
+    <associate|eq 20.340.224|<tuple|20.340|?>>
+    <associate|eq 20.341.224|<tuple|20.341|?>>
+    <associate|eq 20.343.224|<tuple|20.340|?>>
+    <associate|eq 20.344.224|<tuple|20.341|?>>
+    <associate|eq 20.345.224|<tuple|20.342|?>>
+    <associate|eq 20.345.225|<tuple|20.345|?>>
+    <associate|eq 20.346.225|<tuple|20.346|?>>
+    <associate|eq 20.3463224|<tuple|20.343|?>>
+    <associate|eq 20.347.224|<tuple|20.344|?>>
+    <associate|eq 20.347.225|<tuple|20.347|?>>
+    <associate|eq 20.348.225|<tuple|20.348|?>>
+    <associate|eq 20.349.225|<tuple|20.349|?>>
     <associate|eq 20.35.156|<tuple|20.35|?>>
+    <associate|eq 20.350.225|<tuple|20.350|?>>
+    <associate|eq 20.351.225|<tuple|20.351|?>>
+    <associate|eq 20.352.225|<tuple|20.352|?>>
     <associate|eq 20.36.156|<tuple|20.36|?>>
     <associate|eq 20.37.156|<tuple|20.37|?>>
     <associate|eq 20.38.156|<tuple|20.38|?>>
@@ -20623,6 +21148,10 @@
     <associate|lemma 20.246.220|<tuple|20.250|?>>
     <associate|lemma 20.248.220|<tuple|20.251|?>>
     <associate|lemma 20.256.220|<tuple|20.258|?>>
+    <associate|lemma 20.268.224|<tuple|20.268|?>>
+    <associate|lemma 20.269.224|<tuple|20.269|?>>
+    <associate|lemma 20.270.225|<tuple|20.270|?>>
+    <associate|lemma 20.287.224|<tuple|20.267|?>>
     <associate|lemma 20.78.156|<tuple|20.79|?>>
     <associate|lemma 20.80.156|<tuple|20.81|?>>
     <associate|lemma 20.90.156|<tuple|20.95|?>>
@@ -20849,6 +21378,8 @@
       <tuple|<tuple|pre-measure>|<pageref|auto-65>>
 
       <tuple|<tuple|<with|mode|<quote|math>|\<cal-R\><around*|[|\<cal-S\>|]>>>|<pageref|auto-67>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|vol<rsup|n><around*|(|R|)>>>|<pageref|auto-72>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|20<space|2spc>Measures
