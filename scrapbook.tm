@@ -5422,6 +5422,111 @@
   </equation*>
 
   \;
+
+  TODO check if we need this theorem
+
+  <\theorem>
+    Let <math|n,m\<in\>\<bbb-N\>>,, <math|<around*|{|R<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\>\<cal-R\><rsup|n>>,
+    <math|<around*|{|I<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-I\><rsub|<around*|[||[>>>
+
+    <\equation*>
+      \<forall\>i\<in\><around*|{|1,\<ldots\>,m|}><text|
+      ><around*|{|I<rsub|i,j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-I\><rsub|<around*|[||[>>
+      with R<rsub|i>=<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i,j>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      <around*|{|I<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-I\><rsub|<around*|[||[>><text|
+      such that ><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>R<rsub|i>=<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|j>
+    </equation*>
+
+    then we have\ 
+
+    <\equation*>
+      <big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>R<rsub|i>=<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>I<rsub|i,j>|)>
+    </equation*>
+
+    <\equation*>
+      \<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      >I<rsub|i>=<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>I<rsub|i,j>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \;
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>R<rsub|i>>|<cell|\<Rightarrow\>>|<cell|\<exists\>i\<in\><around*|{|1,\<ldots\>,m|}><text|
+      such that ><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>R<rsub|i>=<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i,j>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|\<forall\>j\<in\><around*|{|1,\<ldots\>,n|}><text|
+      >x<rsub|j>\<in\>I<rsub|i,j>\<subseteq\><big|cup><rsub|k\<in\><around*|{|1,\<ldots\>,m|}>>I<rsub|k,j>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|<big|cup><rsub|k\<in\><around*|{|1,\<ldots\>,m|}>>I<rsub|k,j>|)>>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation>
+      <label|eq 20.324.224><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>R<rsub|i>\<subseteq\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|<big|cup><rsub|k\<in\><around*|{|1,\<ldots\>,m|}>>I<rsub|k,j>|)>
+    </equation>
+
+    Let <math|i\<in\><around*|{|1,\<ldots\>,m|}>> then as
+    <math|R<rsub|i>\<in\>\<cal-R\><rsup|n>>
+    <math|\<varnothing\>\<neq\>R<rsub|i>=<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i,j>>
+    it follows from [theorem: <reference|product product is not empty>] that
+    <math|\<forall\>j\<in\><around*|{|1,\<ldots\>,n|}>
+    I<rsub|i,j>\<neq\>\<varnothing\>>. Hence by [theorem: <reference|product
+    projection function>]
+
+    <\equation*>
+      \<forall\>j\<in\><around*|{|1,\<ldots\>,n|}><text|
+      >\<pi\><rsub|j>:R<rsub|i>=<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i,j>\<rightarrow\>I<rsub|j><text|
+      is surjective>
+    </equation*>
+
+    Let <math|j\<in\><around*|{|1,\<ldots\>,n|}>> then if
+    <math|t\<in\>I<rsub|i,j>> there exists by the above a
+    <math|x\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i,j>=R<rsub|i>>
+    such that <math|\<pi\><rsub|j><around*|(|x|)>=t>. As
+    <math|R<rsub|i>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>R<rsub|i>=<big|prod><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|k>>
+    it follows that <math|x\<in\><big|prod><rsub|k\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|k>>
+    so that <math|t=\<pi\><rsub|j><around*|(|x|)>\<in\>I<rsub|j>>. Hence we
+    have that\ 
+
+    <\equation>
+      <label|eq 20.325.224>\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|,
+      >\<forall\>j\<in\><around*|{|1,\<ldots\>,n|}><text|
+      >I<rsub|i,j>\<subseteq\>I<rsub|j>
+    </equation>
+
+    Next\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|<big|cup><rsub|k\<in\><around*|{|1,\<ldots\>,m|}>>I<rsub|k,j>|)>>|<cell|\<Rightarrow\>>|<cell|>>|<row|<cell|\<forall\>j\<in\><around*|{|1,\<ldots\>,n|}><text|
+      >x<rsub|j>\<in\><big|cup><rsub|k\<in\><around*|{|1,\<ldots\>,m|}>>I<rsub|k,j>>|<cell|\<Rightarrow\>>|<cell|>>|<row|<cell|\<exists\>k\<in\><around*|{|1,\<ldots\>,m|}>
+      such that x<rsub|j>\<in\>I<rsub|k,j>>|<cell|\<Rightarrowlim\><rsub|<text|[eq:
+      <reference|eq 20.325.224>]>>>|<cell|>>|<row|<cell|x<rsub|j>\<in\>I<rsub|j>>|<cell|\<Rightarrow\>>|<cell|>>|<row|<cell|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|j>=<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>R<rsub|i>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    proving that <math|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|<big|cup><rsub|k\<in\><around*|{|1,\<ldots\>,m|}>>I<rsub|k,j>|)>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>R<rsub|i>>.
+    Combining this with [eq: <reference|eq 20.325.224>] results in\ 
+
+    <\equation>
+      <label|eq 20.326\<point\>224><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>R<rsub|i>=<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>I<rsub|i,j>|)>
+    </equation>
+
+    As <math|><math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>I<rsub|i>=<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>R<rsub|i>\<equallim\><rsub|<text|[eq:
+    <reference|eq 20.326\<point\>224>]>><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>I<rsub|i,j>|)>>
+    it follows from \ [theorem: <reference|choice product equality>] that\ 
+
+    <\equation*>
+      \<forall\>i\<in\><around*|{|1,\<ldots\>,m|}><text|
+      >I<rsub|i>=<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>I<rsub|i,j>
+    </equation*>
+  </proof>
+
+  \;
+
+  TODO end check we need this theorm
 </body>
 
 <\initial>
@@ -5580,7 +5685,7 @@
     <associate|eq 16.46.185|<tuple|60|23>>
     <associate|eq 16.47.185|<tuple|61|23>>
     <associate|eq 18.283.124|<tuple|78|31>>
-    <associate|eq 20.201.217|<tuple|156|?>>
+    <associate|eq 20.201.217|<tuple|156|58>>
     <associate|eq 20.208.204|<tuple|140|52>>
     <associate|eq 20.209.204|<tuple|141|53>>
     <associate|eq 20.210.204|<tuple|142|53>>
@@ -5594,6 +5699,9 @@
     <associate|eq 20.218.204|<tuple|150|55>>
     <associate|eq 20.219.204|<tuple|151|55>>
     <associate|eq 20.220.204|<tuple|152|55>>
+    <associate|eq 20.324.224|<tuple|157|?>>
+    <associate|eq 20.325.224|<tuple|158|?>>
+    <associate|eq 20.326\<point\>224|<tuple|159|?>>
     <associate|lemma 14.360.158|<tuple|10|10>>
     <associate|lemma 14.364.159|<tuple|14|13>>
     <associate|lemma 16.104.194|<tuple|23|23>>

@@ -114,9 +114,9 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|20>
-    <associate|page-first|1363>
+    <associate|page-first|1437>
     <associate|section-nr|4>
-    <associate|subsection-nr|3>
+    <associate|subsection-nr|4>
   </collection>
 </initial>
 
