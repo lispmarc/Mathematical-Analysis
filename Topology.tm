@@ -4851,7 +4851,7 @@
     of intervals>] there exists a countable set
     <math|\<cal-U\>\<subseteq\>\<cal-T\><rsub|<around*|\|||\|>>> such that
     <math|\<forall\>I\<in\>\<cal-U\>> <math|I> is a open generalized interval
-    and non emptyand\ 
+    and non empty and\ 
 
     <\equation>
       <label|eq 14.29.147>U=<big|cup><rsub|I\<in\>\<cal-U\>>I
@@ -22159,7 +22159,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|13>
-    <associate|page-first|669>
+    <associate|page-first|675>
     <associate|page-medium|papyrus>
     <associate|par-first|0tab>
     <associate|section-nr|0>
