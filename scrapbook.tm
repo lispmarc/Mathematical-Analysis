@@ -5527,6 +5527,58 @@
   \;
 
   TODO end check we need this theorm
+
+  \;
+
+  <\proof>
+    Let <math|x\<in\>\<bbb-R\>>. Define
+
+    <\equation*>
+      x-g:A\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>> by
+      <around*|(|x-g|)><around*|(|t|)>=x-g<around*|(|t|)><text| [which is
+      well defined because >x\<in\>\<bbb-R\><text|]>
+    </equation*>
+
+    Let <math|t\<in\><around*|{|f+g\<less\>x|}>> then
+
+    <\equation*>
+      f<around*|(|t|)>+g<around*|(|t|)>=<around*|(|f+g|)><around*|(|t|)>\<less\>x\<Rightarrowlim\><rsub|0\<leqslant\>f<around*|(|t|)>+g<around*|(|t|)>\<less\>x\<Rightarrow\>g<around*|(|t|)>\<in\>\<bbb-R\>>f<around*|(|t|)>\<less\>x-g<around*|(|t|)>
+    </equation*>
+
+    <math|>Using the densitiy of <math|\<bbb-Q\>> in
+    <math|<wide|\<bbb-R\>|\<wide-bar\>>> [see theorem: <reference|extended
+    density>] there exist a <math|q\<in\>\<bbb-Q\>> such that
+    <math|f<around*|(|t|)>\<less\>q\<less\>x-g<around*|(|t|)>> or
+    <math|f<around*|(||)>> hence <math|t\<in\><around*|{|f\<less\>q|}><big|cap><around*|{|x-g\<gtr\>q|}>\<subseteq\><big|cup><rsub|q\<in\>\<bbb-Q\>><around*|(|<around*|{|f\<less\>q|}><big|cap><around*|{|x-g\<gtr\>q|}>|)>>.
+    So\ 
+
+    <\equation>
+      <label|eq 20.422.227><around*|{|f+g\<less\>x|}>\<subseteq\><big|cup><rsub|q\<in\>\<bbb-Q\>><around*|(|<around*|{|f\<less\>q|}><big|cap><around*|{|x-g\<gtr\>q|}>|)>
+    </equation>
+
+    Further if <math|t\<in\><big|cup><rsub|q\<in\>\<bbb-Q\>><around*|(|<around*|{|f\<less\>q|}><big|cap><around*|{|x-q\<gtr\>q|}>|)>>
+    then there exist a <math|q\<in\>\<bbb-Q\>> such that
+    <math|<rigid|t\<in\><around*|{|f\<less\>q|}><big|cap><around*|{|x-q\<gtr\>q|}>>>,
+    hence <math|f<around*|(|t|)>\<less\>q\<wedge\>q\<less\>x-g<around*|(|t|)>>
+    so that <math|f<around*|(|t|)>\<less\>x-g<around*|(|t|)>>. If
+    <math|g<around*|(|t|)>=\<infty\>> then
+    <math|0\<leqslant\>f<around*|(|t|)>\<less\>-\<infty\>> a contradiction,
+    hence, as <math|0\<leqslant\>g<around*|(|t|)>>, it follows that
+    <math|g<around*|(|t|)>\<in\>\<bbb-R\>>. So from
+    <math|f<around*|(|t|)>\<less\>x-g<around*|(|t|)>> it follows that
+    <math|<around*|(|f+g|)><around*|(|t|)>=f<around*|(|t|)>+g<around*|(|t|)>\<less\>x>
+    or <math|t\<in\><around*|{|f+g\<less\>x|}>>. Hence
+    <rigid|<math|<big|cup><rsub|q\<in\>\<bbb-Q\>><around*|(|<around*|{|f\<less\>q|}><big|cap><around*|{|x-q\<gtr\>q|}>|)>\<subseteq\><around*|{|f+g\<less\>x|}>>>
+    which combined with [eq: <reference|eq 20.422.227>] proves\ 
+
+    <\equation*>
+      <around*|{|f+g\<less\>x|}>=<big|cup><rsub|q\<in\>\<bbb-Q\>><around*|(|<around*|{|f\<less\>q|}><big|cap><around*|{|x-g\<gtr\>q|}>|)>
+    </equation*>
+
+    \;
+  </proof>
+
+  \;
 </body>
 
 <\initial>
@@ -5699,9 +5751,10 @@
     <associate|eq 20.218.204|<tuple|150|55>>
     <associate|eq 20.219.204|<tuple|151|55>>
     <associate|eq 20.220.204|<tuple|152|55>>
-    <associate|eq 20.324.224|<tuple|157|?>>
-    <associate|eq 20.325.224|<tuple|158|?>>
-    <associate|eq 20.326\<point\>224|<tuple|159|?>>
+    <associate|eq 20.324.224|<tuple|157|59>>
+    <associate|eq 20.325.224|<tuple|158|59>>
+    <associate|eq 20.326\<point\>224|<tuple|159|59>>
+    <associate|eq 20.422.227|<tuple|160|?>>
     <associate|lemma 14.360.158|<tuple|10|10>>
     <associate|lemma 14.364.159|<tuple|14|13>>
     <associate|lemma 16.104.194|<tuple|23|23>>
