@@ -884,65 +884,69 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-672>>
 
+    <with|par-left|1tab|20.5.3<space|2spc>Almost everywhere properties
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-673>>
+
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|21<space|2spc>Differential
     Manifolds> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-673><vspace|0.5fn>
+    <no-break><pageref|auto-674><vspace|0.5fn>
 
     21.1<space|2spc> Topological Manifold
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-674>
+    <no-break><pageref|auto-675>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|22<space|2spc>TODO>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-675><vspace|0.5fn>
+    <no-break><pageref|auto-676><vspace|0.5fn>
 
     22.1<space|2spc>Sets.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-676>
-
-    22.2<space|2spc>NaturalNumbers.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-677>
 
-    22.3<space|2spc>Numbers.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    22.2<space|2spc>NaturalNumbers.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-678>
 
-    22.4<space|2spc>LinearAlgebra.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    22.3<space|2spc>Numbers.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-679>
 
-    22.5<space|2spc>DirectSum.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    22.4<space|2spc>LinearAlgebra.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-680>
 
-    22.6<space|2spc>TensorProduct.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    22.5<space|2spc>DirectSum.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-681>
 
-    22.7<space|2spc>Topology.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    22.6<space|2spc>TensorProduct.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-682>
 
-    22.8<space|2spc>IntegrationBanach.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    22.7<space|2spc>Topology.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-683>
 
-    22.9<space|2spc>Differentiation.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    22.8<space|2spc>IntegrationBanach.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-684>
+
+    22.9<space|2spc>Differentiation.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-685>
 
     22.10<space|2spc>FundamentalTheorem.OfAlgebra.tm
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-685>
+    <no-break><pageref|auto-686>
 
     22.11<space|2spc>InnerProductSpaces.tm
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-686>
-
-    22.12<space|2spc>Exponential.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-687>
 
-    22.13<space|2spc>Measure.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    22.12<space|2spc>Exponential.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-688>
 
-    22.14<space|2spc>Manifold.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    22.13<space|2spc>Measure.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-689>
+
+    22.14<space|2spc>Manifold.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-690>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|Index>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-690><vspace|0.5fn>
+    <no-break><pageref|auto-691><vspace|0.5fn>
   </table-of-contents>
 
   <include|Sets.tm>
@@ -1863,6 +1867,8 @@
     alegebra|<tuple|20.4.4|1377|Measure.tm>>
     <associate|NQ is conditional complete|<tuple|8.39|246|Numbers.tm>>
     <associate|Riemann partition interval|<tuple|15.5|854|IntegrationBanach.tm>>
+    <associate|almost everywhere|<tuple|20.330|?|Measure.tm>>
+    <associate|almost everywhere functions|<tuple|20.331|?|Measure.tm>>
     <associate|auto-1|<tuple|1|11|Sets.tm>>
     <associate|auto-10|<tuple|axiom of pairing|22|Sets.tm>>
     <associate|auto-100|<tuple|transfinite induction|101|Sets.tm>>
@@ -2541,26 +2547,28 @@
     <associate|auto-670|<tuple|Lebesgue measurable function|1444|Measure.tm>>
     <associate|auto-671|<tuple|<with|mode|<quote|math>|\<cal-L\><rsup|n>>|1444|Measure.tm>>
     <associate|auto-672|<tuple|20.5.2|1444|Measure.tm>>
-    <associate|auto-673|<tuple|21|1444|Manifold.tm>>
-    <associate|auto-674|<tuple|21.1|1449|Manifold.tm>>
-    <associate|auto-675|<tuple|22|1455|Manifold.tm>>
-    <associate|auto-676|<tuple|22.1|1455|Manifold.tm>>
-    <associate|auto-677|<tuple|22.2|1457|Manifold.tm>>
-    <associate|auto-678|<tuple|22.3|1457|Manifold.tm>>
-    <associate|auto-679|<tuple|22.4|1457|Manifold.tm>>
+    <associate|auto-673|<tuple|20.5.3|1444|Measure.tm>>
+    <associate|auto-674|<tuple|<with|mode|<quote|math>|\<mu\><with|mode|<quote|text>|-a.e.>>|1449|Measure.tm>>
+    <associate|auto-675|<tuple|21|1455|Manifold.tm>>
+    <associate|auto-676|<tuple|21.1|1455|Manifold.tm>>
+    <associate|auto-677|<tuple|22|1457|Manifold.tm>>
+    <associate|auto-678|<tuple|22.1|1457|Manifold.tm>>
+    <associate|auto-679|<tuple|22.2|1457|Manifold.tm>>
     <associate|auto-68|<tuple|<with|mode|<quote|math>|\<less\>>|86|Sets.tm>>
-    <associate|auto-680|<tuple|22.5|1457|Manifold.tm>>
-    <associate|auto-681|<tuple|22.6|1457|Manifold.tm>>
-    <associate|auto-682|<tuple|22.7|1457|Manifold.tm>>
-    <associate|auto-683|<tuple|22.8|1457|Manifold.tm>>
-    <associate|auto-684|<tuple|22.9|1457|Manifold.tm>>
-    <associate|auto-685|<tuple|22.10|1458|Manifold.tm>>
-    <associate|auto-686|<tuple|22.11|1458|Manifold.tm>>
-    <associate|auto-687|<tuple|22.12|1458|Manifold.tm>>
-    <associate|auto-688|<tuple|22.13|1458|Manifold.tm>>
-    <associate|auto-689|<tuple|22.14|1458|Manifold.tm>>
+    <associate|auto-680|<tuple|22.3|1457|Manifold.tm>>
+    <associate|auto-681|<tuple|22.4|1457|Manifold.tm>>
+    <associate|auto-682|<tuple|22.5|1457|Manifold.tm>>
+    <associate|auto-683|<tuple|22.6|1457|Manifold.tm>>
+    <associate|auto-684|<tuple|22.7|1457|Manifold.tm>>
+    <associate|auto-685|<tuple|22.8|1458|Manifold.tm>>
+    <associate|auto-686|<tuple|22.9|1458|Manifold.tm>>
+    <associate|auto-687|<tuple|22.10|1458|Manifold.tm>>
+    <associate|auto-688|<tuple|22.11|1458|Manifold.tm>>
+    <associate|auto-689|<tuple|22.12|1458|Manifold.tm>>
     <associate|auto-69|<tuple|comparable elements|89|Sets.tm>>
-    <associate|auto-690|<tuple|22.14|1458>>
+    <associate|auto-690|<tuple|22.13|1458|Manifold.tm>>
+    <associate|auto-691|<tuple|22.14|?|Manifold.tm>>
+    <associate|auto-692|<tuple|22.14|?>>
     <associate|auto-7|<tuple|<with|mode|<quote|math>|\<emptyset\>>|14|Sets.tm>>
     <associate|auto-70|<tuple|comparable elements|89|Sets.tm>>
     <associate|auto-71|<tuple|totally ordered class|89|Sets.tm>>
@@ -4807,6 +4815,7 @@
     <associate|eq 18.3.146|<tuple|18.4|1149|InnerProductSpaces.tm>>
     <associate|eq 18.31.148|<tuple|18.35|1184|InnerProductSpaces.tm>>
     <associate|eq 18.32.148|<tuple|18.36|1185|InnerProductSpaces.tm>>
+    <associate|eq 18.325.036.7|<tuple|20.427|?|Measure.tm>>
     <associate|eq 18.33.148|<tuple|18.37|1185|InnerProductSpaces.tm>>
     <associate|eq 18.34.148|<tuple|18.38|1185|InnerProductSpaces.tm>>
     <associate|eq 18.35.148|<tuple|18.39|1186|InnerProductSpaces.tm>>
@@ -5143,6 +5152,7 @@
     <associate|eq 20.231.212|<tuple|20.267|1396|Measure.tm>>
     <associate|eq 20.232.212|<tuple|20.268|1396|Measure.tm>>
     <associate|eq 20.233.212|<tuple|20.269|1396|Measure.tm>>
+    <associate|eq 20.245.228|<tuple|20.425|?|Measure.tm>>
     <associate|eq 20.248.220|<tuple|20.270|1398|Measure.tm>>
     <associate|eq 20.249.220|<tuple|20.271|1398|Measure.tm>>
     <associate|eq 20.24\<point\>156|<tuple|20.24|1286|Measure.tm>>
@@ -5299,7 +5309,17 @@
     <associate|eq 20.421.228|<tuple|20.423|?|Measure.tm>>
     <associate|eq 20.422.227|<tuple|20.420|1453|Measure.tm>>
     <associate|eq 20.422.228|<tuple|20.422|?|Measure.tm>>
+    <associate|eq 20.424.228|<tuple|20.424|?|Measure.tm>>
+    <associate|eq 20.426.228|<tuple|20.426|?|Measure.tm>>
+    <associate|eq 20.428.228|<tuple|20.428|?|Measure.tm>>
+    <associate|eq 20.429.228|<tuple|20.429|?|Measure.tm>>
     <associate|eq 20.43.156|<tuple|20.44|1310|Measure.tm>>
+    <associate|eq 20.430.228|<tuple|20.430|?|Measure.tm>>
+    <associate|eq 20.431.228|<tuple|20.431|?|Measure.tm>>
+    <associate|eq 20.432.228|<tuple|20.432|?|Measure.tm>>
+    <associate|eq 20.433.228|<tuple|20.433|?|Measure.tm>>
+    <associate|eq 20.434.228|<tuple|20.434|?|Measure.tm>>
+    <associate|eq 20.435.228|<tuple|20.435|?|Measure.tm>>
     <associate|eq 20.44.156|<tuple|20.45|1310|Measure.tm>>
     <associate|eq 20.45.156|<tuple|20.46|1312|Measure.tm>>
     <associate|eq 20.46.156|<tuple|20.47|1313|Measure.tm>>
@@ -6570,21 +6590,22 @@
     <associate|measurable function constant
     function|<tuple|20.299|1443|Measure.tm>>
     <associate|measurable function min and
-    max|<tuple|20.318|1451|Measure.tm>>
+    max|<tuple|20.327|1451|Measure.tm>>
     <associate|measurable function min and max
-    (1)|<tuple|20.319|1451|Measure.tm>>
+    (1)|<tuple|20.328|1451|Measure.tm>>
     <associate|measurable function product with
-    scalar|<tuple|20.327|?|Measure.tm>>
+    scalar|<tuple|20.325|?|Measure.tm>>
     <associate|measurable function properties
-    (1)|<tuple|20.328|?|Measure.tm>>
+    (1)|<tuple|20.326|?|Measure.tm>>
     <associate|measurable function real or
     extended|<tuple|20.304|1444|Measure.tm>>
     <associate|measurable function restriction|<tuple|20.314|1449|Measure.tm>>
-    <associate|measurable function sum|<tuple|20.320|1452|Measure.tm>>
+    <associate|measurable function sum|<tuple|20.318|1452|Measure.tm>>
     <associate|measurable function sum (finite
-    1)|<tuple|20.326|?|Measure.tm>>
-    <associate|measurable function sum (finite)|<tuple|20.322|?|Measure.tm>>
-    <associate|measurable function sum finite|<tuple|20.325|?|Measure.tm>>
+    1)|<tuple|20.324|?|Measure.tm>>
+    <associate|measurable function sum (finite)|<tuple|20.320|?|Measure.tm>>
+    <associate|measurable function sum finite|<tuple|20.323|?|Measure.tm>>
+    <associate|measurable function sup inf limit|<tuple|20.329|?|Measure.tm>>
     <associate|measure A.B minus C.D|<tuple|20.104|1316|Measure.tm>>
     <associate|measure Borel algebra|<tuple|20.142|1334|Measure.tm>>
     <associate|measure Borel algebra and closure|<tuple|20.143|1334|Measure.tm>>
@@ -7082,7 +7103,7 @@
     <associate|part:InnerProductSpaces.tm|<tuple|17.84|1135>>
     <associate|part:IntegrationBanach.tm|<tuple|<with|mode|<quote|math>|f<around*|(|b|)>\<less\>y\<less\>f<around*|(|a|)>>|853>>
     <associate|part:LinearAlgebra.tm|<tuple|10.5.4|340>>
-    <associate|part:Manifold.tm|<tuple|4|1455>>
+    <associate|part:Manifold.tm|<tuple|5|1455>>
     <associate|part:Measure.tm|<tuple|19.53|1245>>
     <associate|part:NaturalNumbers.tm|<tuple|9|129>>
     <associate|part:Numbers.tm|<tuple|6.91|213>>
@@ -8663,6 +8684,8 @@
       <tuple|<tuple|Lebesgue measurable function>|<pageref|auto-670>>
 
       <tuple|<tuple|<with|mode|<quote|math>|\<cal-L\><rsup|n>>>|<pageref|auto-671>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<mu\><with|mode|<quote|text>|-a.e.>>>|<pageref|auto-674>>
     </associate>
     <\associate|parts>
       <tuple|Sets.tm|chapter-nr|0|section-nr|0|subsection-nr|0>
@@ -8691,7 +8714,7 @@
 
       <tuple|Measure.tm|chapter-nr|19|section-nr|1|subsection-nr|7>
 
-      <tuple|Manifold.tm|chapter-nr|20|section-nr|5|subsection-nr|2>
+      <tuple|Manifold.tm|chapter-nr|20|section-nr|5|subsection-nr|3>
     </associate>
     <\associate|table>
       <tuple|normal|<\surround|<hidden-binding|<tuple>|5.1>|>
@@ -9589,66 +9612,70 @@
       properties <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-672>>
 
+      <with|par-left|<quote|1tab>|20.5.3<space|2spc>Almost everywhere
+      properties <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-673>>
+
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|21<space|2spc>Differential
       Manifolds> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-673><vspace|0.5fn>
+      <no-break><pageref|auto-675><vspace|0.5fn>
 
       21.1<space|2spc> Topological Manifold
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-674>
+      <no-break><pageref|auto-676>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|22<space|2spc>TODO>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-675><vspace|0.5fn>
+      <no-break><pageref|auto-677><vspace|0.5fn>
 
       22.1<space|2spc>Sets.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-676>
-
-      22.2<space|2spc>NaturalNumbers.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-677>
-
-      22.3<space|2spc>Numbers.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-678>
 
-      22.4<space|2spc>LinearAlgebra.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      22.2<space|2spc>NaturalNumbers.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-679>
 
-      22.5<space|2spc>DirectSum.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      22.3<space|2spc>Numbers.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-680>
 
-      22.6<space|2spc>TensorProduct.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      22.4<space|2spc>LinearAlgebra.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-681>
 
-      22.7<space|2spc>Topology.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      22.5<space|2spc>DirectSum.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-682>
+
+      22.6<space|2spc>TensorProduct.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-683>
+
+      22.7<space|2spc>Topology.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-684>
 
       22.8<space|2spc>IntegrationBanach.tm
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-683>
+      <no-break><pageref|auto-685>
 
       22.9<space|2spc>Differentiation.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-684>
+      <no-break><pageref|auto-686>
 
       22.10<space|2spc>FundamentalTheorem.OfAlgebra.tm
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-685>
+      <no-break><pageref|auto-687>
 
       22.11<space|2spc>InnerProductSpaces.tm
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-686>
-
-      22.12<space|2spc>Exponential.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-687>
-
-      22.13<space|2spc>Measure.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-688>
 
-      22.14<space|2spc>Manifold.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      22.12<space|2spc>Exponential.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-689>
+
+      22.13<space|2spc>Measure.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-690>
+
+      22.14<space|2spc>Manifold.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-691>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Index>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-690><vspace|0.5fn>
+      <no-break><pageref|auto-692><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
