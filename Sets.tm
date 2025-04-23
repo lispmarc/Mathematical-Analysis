@@ -5629,7 +5629,7 @@
     <\enumerate>
       <item><math|f<around*|(|E<big|cup>F|)>=f<around*|(|E|)><big|cup>f<around*|(|F|)>>
 
-      <item><math|f<rsup|-1><around*|(|C<big|cup>D|)>=f<rsup|-1><around*|(|C|)><big|cup>f<rsup|-1><around*|(||)>>
+      <item><math|f<rsup|-1><around*|(|C<big|cup>D|)>=f<rsup|-1><around*|(|C|)><big|cup>f<rsup|-1><around*|(|D|)>>
 
       <item><math|f<around*|(|E<big|cap>F|)>\<subseteq\>f<around*|(|E|)><big|cap>f<around*|(|F|)>>
 

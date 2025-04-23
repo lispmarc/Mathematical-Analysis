@@ -5578,6 +5578,90 @@
     \;
   </proof>
 
+  <\theorem>
+    <label|simple measurable (1)>Let <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>>
+    be a measurable space and <math|f:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>>
+    a simple function then\ 
+
+    <\equation*>
+      S<around*|[|X,\<cal-A\>|]>=<around*|{|f\<in\>\<cal-S\><around*|[|X|]>\|\<forall\>y\<in\>f<around*|(|X|)><text|
+      we have >f<rsup|-1><around*|(|<around*|{|y|}>|)>\<in\>\<cal-A\>|}>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Let <math|f\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]>> then
+    <math|f\<in\>\<cal-S\><around*|[|X|]>> and <math|f> is
+    <math|\<cal-A\>>-measurable. Take <math|y\<in\>f<around*|(|X|)>> then, as
+    <math|f\<in\>\<cal-S\><around*|[|X|]>>, <math|y\<in\>\<bbb-R\>>. So we
+    can use [theorem: <reference|measurable function comparisation>] to get
+    <math|f<rsup|-1><around*|(|<around*|{|y|}>|)>=<around*|{|f=y|}>\<in\>\<cal-A\>>.
+    Hence
+
+    <\equation*>
+      f\<in\><around*|{|f\<in\>\<cal-S\><around*|[|X|]>\|\<forall\>y\<in\>f<around*|(|X|)><text|
+      we have >f<rsup|-1><around*|(|<around*|{|y|}>|)>\<in\>\<cal-A\>|}>
+    </equation*>
+
+    proving that\ 
+
+    <\equation>
+      <label|eq 20.443.229>\<cal-S\><around*|[|X,\<cal-A\>|]>\<subseteq\><around*|{|f\<in\>\<cal-S\><around*|[|X|]>\|\<forall\>y\<in\>f<around*|(|X|)><text|
+      we have >f<rsup|-1><around*|(|<around*|{|y|}>|)>\<in\>\<cal-A\>|}>
+    </equation>
+
+    Let <math|f\<in\><around*|{|f\<in\>\<cal-S\><around*|[|X|]>\|\<forall\>y\<in\>f<around*|(|X|)><text|
+    we have >f<rsup|-1><around*|(|<around*|{|y|}>|)>\<in\>\<cal-A\>|}>>. As
+    <math|f\<in\>\<cal-S\><around*|(|X|)>> there exist by [theorem:
+    <reference|simple function alternative>] a <math|n\<in\>\<bbb-N\>> and a
+    bijection <math|\<beta\>:<around*|{|1,\<ldots\>,n|}>\<rightarrow\>f<around*|(|X|)>>
+    such that <math|X=<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>f<rsup|-1><around*|(|<around*|{|\<beta\><around*|(|i|)>|}>|)>>.
+    Hence\ 
+
+    <\equation>
+      <label|eq 20.444.229>X=<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>f<rsup|-1><around*|(|<around*|{|\<beta\><around*|(|i|)>|)><text|
+      and >|\<nobracket\>>\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      >f<rsup|-1><around*|(|\<beta\><around*|(|i|)>|)><below|\<in\>|\<beta\><around*|(|i|)>\<in\>f<around*|(|X|)>>\<cal-A\>
+    </equation>
+
+    Take <math|B\<in\>\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    then as <math|f<rsup|-1><around*|(|B|)>\<subseteq\>X> we have that
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|f<rsup|-1><around*|(|B|)>>|<cell|=>|<cell|X<big|cap>f<rsup|-1><around*|(|B|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>f<rsup|-1><around*|(|<around*|{|\<beta\><around*|(|i|)>|}>|)>|)><big|cap>f<rsup|-1><around*|(|B|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|f<rsup|-1><around*|(|<around*|{|\<beta\><around*|(|i|)>|}>|)><big|cap>f<rsup|-1><around*|(|B|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|function function and intersection and
+      union>]>>>|<cell|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>f<rsup|-1><around*|(|<around*|{|\<beta\><around*|(|i|)>|}><big|cap>B|)>>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation>
+      <label|eq 20.445.229>f<rsup|-1><around*|(|B|)>=<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>f<rsup|-1><around*|(|<around*|{|\<beta\><around*|(|i|)>|}><big|cap>B|)>
+    </equation>
+
+    For <math|\<beta\><around*|(|i|)>> we have either:\ 
+
+    <\description>
+      <item*|<math|\<beta\><around*|(|i|)>\<in\>B>>Then
+      <math|<around*|{|\<beta\><around*|(|i|)>|}><big|cap>B=<around*|{|\<beta\><around*|(|i|)>|}>>
+      so that <math|><math|f<rsup|-1><around*|(|<around*|{|\<beta\><around*|(|i|)>|}><big|cap>B|)>=f<rsup|-1><around*|(|<around*|{|\<beta\><around*|(|i|)>|}>|)><below|\<in\>|<text|[eq:
+      <reference|eq 20.444.229>]>>\<cal-A\>>
+
+      <item*|<math|\<beta\><around*|(|i|)>\<nin\>B>>Then
+      <math|<around*|{|\<beta\><around*|(|i|)>|}><big|cap>B=<around*|{|\<beta\><around*|(|i|)>|}>=\<varnothing\>>
+      so that <math|f<rsup|-1><around*|(|<around*|{|\<beta\><around*|(|i|)>|}><big|cap>B|)>=\<varnothing\>\<in\>\<cal-A\>>
+    </description>
+
+    so that in all cases <math|f<rsup|-1><around*|(|<around*|{|\<beta\><around*|(|i|)>|}><big|cap>B|)>\<in\>\<cal-A\>>.
+    Hence <math|<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>f<rsup|-1><around*|(|<around*|{|\<beta\><around*|(|i|)>|}><big|cap>B|)>\<in\>\<cal-A\>>
+    which by [eq: <reference|eq 20.445.229>] proves that
+    <math|f<rsup|-1><around*|(|B|)>\<in\>\<cal-A\>>. As
+    <math|B\<in\>\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>> was
+    choosen arbitrary this concludes the proof.
+  </proof>
+
+  \;
+
   \;
 </body>
 
@@ -5754,7 +5838,10 @@
     <associate|eq 20.324.224|<tuple|157|59>>
     <associate|eq 20.325.224|<tuple|158|59>>
     <associate|eq 20.326\<point\>224|<tuple|159|59>>
-    <associate|eq 20.422.227|<tuple|160|?>>
+    <associate|eq 20.422.227|<tuple|160|60>>
+    <associate|eq 20.443.229|<tuple|161|?>>
+    <associate|eq 20.444.229|<tuple|162|?>>
+    <associate|eq 20.445.229|<tuple|163|?>>
     <associate|lemma 14.360.158|<tuple|10|10>>
     <associate|lemma 14.364.159|<tuple|14|13>>
     <associate|lemma 16.104.194|<tuple|23|23>>
@@ -5790,6 +5877,7 @@
     <associate|series absolute sum over a countable set|<tuple|6|8>>
     <associate|series distributivity|<tuple|16|17>>
     <associate|series lemma 14.342|<tuple|3|3>>
+    <associate|simple measurable (1)|<tuple|49|?>>
   </collection>
 </references>
 
