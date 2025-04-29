@@ -10652,6 +10652,18 @@
       we have that <math|x\<leqslant\>y+\<varepsilon\>\<cdot\>a> then
       <math|x\<leqslant\>y>
 
+      <item>Let <math|b\<in\>\<bbb-R\><rsup|+><rsub|\<bbb-C\>>> then if
+      <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><rsub|\<bbb-C\>>>
+      with <math|\<varepsilon\>\<less\>b> we have that
+      <math|x\<leqslant\>y+\<varepsilon\>> then <math|x\<leqslant\>y>
+
+      <item>Let <math|a\<in\>\<bbb-R\><rsup|+><rsub|0,\<bbb-C\>>>,
+      <math|b\<in\>\<bbb-R\><rsup|+><rsub|0,\<bbb-C\>>> then if
+      <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><rsub|\<bbb-C\>>>
+      with <math|\<varepsilon\>\<less\>b> we have that
+      <math|x\<leqslant\>y+\<varepsilon\>\<cdot\>a> then
+      <math|x\<leqslant\>y>
+
       <item>Let <math|a\<in\>\<bbb-R\><rsup|+><rsub|0,\<bbb-C\>>> then if
       <math|\<forall\>n\<in\>\<bbb-N\><rsub|\<bbb-C\>>> we have that
       <math|x\<leqslant\>y+a/n> then <math|x\<leqslant\>y>
@@ -10707,6 +10719,41 @@
           x\<leqslant\>y
         </equation*>
       </description>
+
+      <item>Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+><rsub|\<bbb-C\>>>
+      then we have either:\ 
+
+      <\description>
+        <item*|<math|b\<leqslant\>\<varepsilon\>>>Then as <math|0\<less\>b>
+        it follow that \ <math|0\<less\><frac|b|2>\<less\>b\<leqslant\>\<varepsilon\>>
+        hence we have by the hypothesis that <math|x\<leqslant\>y+<frac|b|2>>
+        so that <math|x\<leqslant\>y+\<varepsilon\>>.
+
+        <item*|<math|\<varepsilon\>\<less\>b>>Then by the hypothesis
+        <math|x\<leqslant\>y+\<varepsilon\>>
+      </description>
+
+      So we have <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><rsub|\<bbb-C\>>>
+      that <math|x\<leqslant\>u+\<varepsilon\>> which by (2) proves that
+      <math|x\<leqslant\>y>
+
+      <item>Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+><rsub|\<bbb-C\>>>
+      then we have either:\ 
+
+      <\description>
+        <item*|<math|b\<leqslant\>\<varepsilon\>>>Then as <math|0\<less\>b>
+        it follows that \ <math|0\<less\><frac|b|2>\<less\>b\<leqslant\>\<varepsilon\>>
+        hence we have by the hypothesis that
+        <math|x\<leqslant\>y+<frac|b|2>\<cdot\>a> so that
+        <math|x\<leqslant\>y+\<varepsilon\>\<cdot\>a>.
+
+        <item*|<math|\<varepsilon\>\<less\>b>>Then by the hypothesis
+        <math|x\<leqslant\>y+\<varepsilon\>\<cdot\>a>
+      </description>
+
+      So we have <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><rsub|\<bbb-C\>>>
+      that <math|x\<leqslant\>u+\<varepsilon\>\<cdot\>a> which by (3) proves
+      that <math|x\<leqslant\>y>
 
       <item>As <math|a\<in\>\<bbb-R\><rsup|+><rsub|0,\<bbb-C\>>> we have two
       possibilities to consider:
@@ -12470,6 +12517,17 @@
     <\equation*>
       0\<less\>x<rsup|n>\<less\>\<varepsilon\>
     </equation*>
+
+    <\note>
+      As <math|0\<less\><frac|1|2>\<less\>1> it follows from the above that
+      <math|\<exists\>N\<in\>\<bbb-N\><rsub|\<bbb-C\>>> such that
+      <math|\<forall\>n\<in\>\<bbb-N\><rsub|\<bbb-C\>>> with
+      <math|N\<leqslant\>n> we have\ 
+
+      <\equation*>
+        0\<less\><frac|1|2<rsup|n>>\<less\>\<varepsilon\>
+      </equation*>
+    </note>
   </theorem>
 
   <\proof>
@@ -14334,26 +14392,26 @@
     <associate|complex RC order (2)|<tuple|10.8|?>>
     <associate|complex RC order properties|<tuple|10.14|?>>
     <associate|complex a\<less\>2^n|<tuple|10.58|?>>
-    <associate|complex cardinality|<tuple|10.88|?>>
-    <associate|complex cardinality adding element|<tuple|10.92|?>>
-    <associate|complex cardinality alternative|<tuple|10.89|?>>
-    <associate|complex cardinality and finite family|<tuple|10.95|?>>
-    <associate|complex cardinality equality and subset|<tuple|10.94|?>>
-    <associate|complex cardinality properties|<tuple|10.91|?>>
-    <associate|complex cardinality removing a element|<tuple|10.93|?>>
-    <associate|complex conjugate|<tuple|10.81|?>>
-    <associate|complex conjugate properties|<tuple|10.82|?>>
+    <associate|complex cardinality|<tuple|10.89|?>>
+    <associate|complex cardinality adding element|<tuple|10.93|?>>
+    <associate|complex cardinality alternative|<tuple|10.90|?>>
+    <associate|complex cardinality and finite family|<tuple|10.96|?>>
+    <associate|complex cardinality equality and subset|<tuple|10.95|?>>
+    <associate|complex cardinality properties|<tuple|10.92|?>>
+    <associate|complex cardinality removing a element|<tuple|10.94|?>>
+    <associate|complex conjugate|<tuple|10.82|?>>
+    <associate|complex conjugate properties|<tuple|10.83|?>>
     <associate|complex definition by recursion (1)|<tuple|10.42|?>>
     <associate|complex definition by recursion (2)|<tuple|10.43|?>>
     <associate|complex definition recursion finite|<tuple|10.44|?>>
     <associate|complex densitiy theorem|<tuple|10.32|?>>
     <associate|complex embedding|<tuple|10.5|?>>
     <associate|complex field|<tuple|10.2|?>>
-    <associate|complex finite lemma|<tuple|10.85|?>>
-    <associate|complex finite set condition|<tuple|10.86|?>>
-    <associate|complex finite set condition (1)|<tuple|10.87|?>>
-    <associate|complex finite subset|<tuple|10.90|?>>
-    <associate|complex i^2=-1|<tuple|10.75|?>>
+    <associate|complex finite lemma|<tuple|10.86|?>>
+    <associate|complex finite set condition|<tuple|10.87|?>>
+    <associate|complex finite set condition (1)|<tuple|10.88|?>>
+    <associate|complex finite subset|<tuple|10.91|?>>
+    <associate|complex i^2=-1|<tuple|10.76|?>>
     <associate|complex integers are conditional complete|<tuple|10.16|?>>
     <associate|complex irrational numbers|<tuple|10.20|?>>
     <associate|complex mathematical induction|<tuple|10.35|?>>
@@ -14365,35 +14423,35 @@
     x^n\<less\>x^m|<tuple|10.62|?>>
     <associate|complex n\<less\>m and 1\<less\>=x then
     x^n\<less\>x^m|<tuple|10.63|?>>
-    <associate|complex norm|<tuple|10.83|?>>
-    <associate|complex norm properties|<tuple|10.84|?>>
+    <associate|complex norm|<tuple|10.84|?>>
+    <associate|complex norm properties|<tuple|10.85|?>>
     <associate|complex notation|<tuple|10.3|?>>
-    <associate|complex notation (0)|<tuple|10.76|?>>
+    <associate|complex notation (0)|<tuple|10.77|?>>
     <associate|complex numbers|<tuple|10.1|?>>
     <associate|complex order isomorphisms|<tuple|10.9|?>>
     <associate|complex power|<tuple|10.48|?>>
     <associate|complex power and inequality|<tuple|10.56|?>>
     <associate|complex power is internal|<tuple|10.51|?>>
-    <associate|complex power of i|<tuple|10.80|?>>
+    <associate|complex power of i|<tuple|10.81|?>>
     <associate|complex power of inverse|<tuple|10.54|?>>
     <associate|complex power properties|<tuple|10.55|?>>
     <associate|complex rational numbers specification|<tuple|10.6|?>>
-    <associate|complex real imaginair|<tuple|10.78|?>>
-    <associate|complex real. imaginair properties|<tuple|10.79|?>>
+    <associate|complex real imaginair|<tuple|10.79|?>>
+    <associate|complex real. imaginair properties|<tuple|10.80|?>>
     <associate|complex recursion|<tuple|10.37|?>>
     <associate|complex recursion iteration|<tuple|10.38|?>>
     <associate|complex recursion step|<tuple|10.39|?>>
     <associate|complex recursion step (2)|<tuple|10.40|?>>
     <associate|complex recursion step form finite|<tuple|10.41|?>>
-    <associate|complex root is strictly increasing|<tuple|10.70|?>>
-    <associate|complex sqrt x\<less\>sqrt x^2|<tuple|10.72|?>>
-    <associate|complex sqrt(0) and sqrt(1)|<tuple|10.68|?>>
-    <associate|complex square operator is a bijection|<tuple|10.65|?>>
-    <associate|complex square root|<tuple|10.66|?>>
-    <associate|complex square root norm|<tuple|10.74|?>>
-    <associate|complex square root of 2 is irational|<tuple|10.69|?>>
-    <associate|complex square root of product|<tuple|10.73|?>>
-    <associate|complex square root properties (1)|<tuple|10.71|?>>
+    <associate|complex root is strictly increasing|<tuple|10.71|?>>
+    <associate|complex sqrt x\<less\>sqrt x^2|<tuple|10.73|?>>
+    <associate|complex sqrt(0) and sqrt(1)|<tuple|10.69|?>>
+    <associate|complex square operator is a bijection|<tuple|10.66|?>>
+    <associate|complex square root|<tuple|10.67|?>>
+    <associate|complex square root norm|<tuple|10.75|?>>
+    <associate|complex square root of 2 is irational|<tuple|10.70|?>>
+    <associate|complex square root of product|<tuple|10.74|?>>
+    <associate|complex square root properties (1)|<tuple|10.72|?>>
     <associate|complex sup(-S),inf(-S)|<tuple|10.21|?>>
     <associate|complex sup(S+T) and inf(S+T)|<tuple|10.23|?>>
     <associate|complex sup(S+s) inf(T+t)|<tuple|10.24|?>>
@@ -14615,7 +14673,7 @@
     <associate|eq 9.82.036|<tuple|9.82|?>>
     <associate|eq 9.89.047|<tuple|9.83|?>>
     <associate|eq 9.90.047|<tuple|9.84|?>>
-    <associate|extended reals existence|<tuple|10.97|?>>
+    <associate|extended reals existence|<tuple|10.98|?>>
     <associate|field with characteristics zero|<tuple|10.47|?>>
     <associate|integeres order|<tuple|7.21|?>>
     <associate|integers|<tuple|7.2|?>>
@@ -14770,7 +14828,7 @@
     <associate|reals the set of reals are non empty|<tuple|9.5|?>>
     <associate|recursion order|<tuple|10.36|?>>
     <associate|sign function|<tuple|8.15|?>>
-    <associate|sorting of a finite set|<tuple|10.96|?>>
+    <associate|sorting of a finite set|<tuple|10.97|?>>
   </collection>
 </references>
 

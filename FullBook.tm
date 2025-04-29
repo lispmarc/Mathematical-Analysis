@@ -888,65 +888,72 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-673>>
 
+    20.6<space|2spc>The measure integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-675>
+
+    <with|par-left|1tab|20.6.1<space|2spc>Integral of simple functions
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-676>>
+
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|21<space|2spc>Differential
     Manifolds> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-674><vspace|0.5fn>
+    <no-break><pageref|auto-681><vspace|0.5fn>
 
     21.1<space|2spc> Topological Manifold
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-675>
+    <no-break><pageref|auto-682>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|22<space|2spc>TODO>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-676><vspace|0.5fn>
+    <no-break><pageref|auto-683><vspace|0.5fn>
 
     22.1<space|2spc>Sets.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-677>
-
-    22.2<space|2spc>NaturalNumbers.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-678>
-
-    22.3<space|2spc>Numbers.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-679>
-
-    22.4<space|2spc>LinearAlgebra.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-680>
-
-    22.5<space|2spc>DirectSum.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-681>
-
-    22.6<space|2spc>TensorProduct.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-682>
-
-    22.7<space|2spc>Topology.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-683>
-
-    22.8<space|2spc>IntegrationBanach.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-684>
 
-    22.9<space|2spc>Differentiation.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    22.2<space|2spc>NaturalNumbers.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-685>
+
+    22.3<space|2spc>Numbers.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-686>
+
+    22.4<space|2spc>LinearAlgebra.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-687>
+
+    22.5<space|2spc>DirectSum.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-688>
+
+    22.6<space|2spc>TensorProduct.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-689>
+
+    22.7<space|2spc>Topology.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-690>
+
+    22.8<space|2spc>IntegrationBanach.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-691>
+
+    22.9<space|2spc>Differentiation.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-692>
 
     22.10<space|2spc>FundamentalTheorem.OfAlgebra.tm
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-686>
+    <no-break><pageref|auto-693>
 
     22.11<space|2spc>InnerProductSpaces.tm
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-687>
+    <no-break><pageref|auto-694>
 
     22.12<space|2spc>Exponential.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-688>
+    <no-break><pageref|auto-695>
 
     22.13<space|2spc>Measure.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-689>
+    <no-break><pageref|auto-696>
 
     22.14<space|2spc>Manifold.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-690>
+    <no-break><pageref|auto-697>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|Index>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-691><vspace|0.5fn>
+    <no-break><pageref|auto-698><vspace|0.5fn>
   </table-of-contents>
 
   <include|Sets.tm>
@@ -1152,6 +1159,8 @@
     <index+1|<with|mode|math|\<mu\><around*|(|\<cal-P\>|)>>|<pageref|auto-411>>
 
     <index+1|<with|mode|math|\<mu\><rsup|\<ast\>>>|<pageref|auto-632>>
+
+    <index+1|<with|mode|math|\<mu\><with|mode|text|-a.e.>>|<pageref|auto-674>>
 
     <index+1|<with|mode|math|\<mu\><with|mode|text|-negligible
     set>>|<pageref|auto-659>>
@@ -1433,6 +1442,8 @@
 
     <index+1|<with|mode|math|f<rprime|'><around*|(|x|)>>|<pageref|auto-421>>
 
+    <index+1|<with|mode|math|<big|int><rsup|S>f>|<pageref|auto-680>>
+
     <index+1|<with|mode|math|f!>|<pageref|auto-494>>
 
     <index+1|<with|mode|math|F<around*|(|X,F|)>>|<pageref|auto-293>>
@@ -1531,6 +1542,8 @@
     <index+1|inner product norm|<pageref|auto-506>>
 
     <index+1|integers|<pageref|auto-171>>
+
+    <index+1|integral of a simple function|<pageref|auto-679>>
 
     <index+1|interior|<pageref|auto-297>>
 
@@ -1756,6 +1769,8 @@
 
     <index+1|<with|mode|math|sign<around*|(|\<sigma\>|)>>|<pageref|auto-262>>
 
+    <index+1|simple function|<pageref|auto-677>>
+
     <index+1|<with|mode|math|sin<around*|(|z|)>>|<pageref|auto-574>>
 
     <index+1|sinus|<pageref|auto-572>>
@@ -1867,8 +1882,15 @@
     alegebra|<tuple|20.4.4|1377|Measure.tm>>
     <associate|NQ is conditional complete|<tuple|8.39|246|Numbers.tm>>
     <associate|Riemann partition interval|<tuple|15.5|854|IntegrationBanach.tm>>
-    <associate|almost everywhere|<tuple|20.330|?|Measure.tm>>
-    <associate|almost everywhere functions|<tuple|20.331|?|Measure.tm>>
+    <associate|almost everywhere|<tuple|20.335|?|Measure.tm>>
+    <associate|almost everywhere and characteristic|<tuple|20.337|?|Measure.tm>>
+    <associate|almost everywhere f=g \<less\>=\<gtr\>
+    f-g=0|<tuple|20.339|?|Measure.tm>>
+    <associate|almost everywhere functions|<tuple|20.336|?|Measure.tm>>
+    <associate|almost everywhere limit is
+    measurable|<tuple|20.341|?|Measure.tm>>
+    <associate|almost everywhere measurability|<tuple|20.340|?|Measure.tm>>
+    <associate|almost everywhere transitivity|<tuple|20.338|?|Measure.tm>>
     <associate|auto-1|<tuple|1|11|Sets.tm>>
     <associate|auto-10|<tuple|axiom of pairing|22|Sets.tm>>
     <associate|auto-100|<tuple|transfinite induction|101|Sets.tm>>
@@ -2549,26 +2571,33 @@
     <associate|auto-672|<tuple|20.5.2|1444|Measure.tm>>
     <associate|auto-673|<tuple|20.5.3|1444|Measure.tm>>
     <associate|auto-674|<tuple|<with|mode|<quote|math>|\<mu\><with|mode|<quote|text>|-a.e.>>|1449|Measure.tm>>
-    <associate|auto-675|<tuple|21|1455|Manifold.tm>>
-    <associate|auto-676|<tuple|21.1|1455|Manifold.tm>>
-    <associate|auto-677|<tuple|22|1457|Manifold.tm>>
-    <associate|auto-678|<tuple|22.1|1457|Manifold.tm>>
-    <associate|auto-679|<tuple|22.2|1457|Manifold.tm>>
+    <associate|auto-675|<tuple|20.6|1455|Measure.tm>>
+    <associate|auto-676|<tuple|20.6.1|1455|Measure.tm>>
+    <associate|auto-677|<tuple|simple function|1457|Measure.tm>>
+    <associate|auto-678|<tuple|20.5|1457|Measure.tm>>
+    <associate|auto-679|<tuple|integral of a simple
+    function|1457|Measure.tm>>
     <associate|auto-68|<tuple|<with|mode|<quote|math>|\<less\>>|86|Sets.tm>>
-    <associate|auto-680|<tuple|22.3|1457|Manifold.tm>>
-    <associate|auto-681|<tuple|22.4|1457|Manifold.tm>>
-    <associate|auto-682|<tuple|22.5|1457|Manifold.tm>>
-    <associate|auto-683|<tuple|22.6|1457|Manifold.tm>>
-    <associate|auto-684|<tuple|22.7|1457|Manifold.tm>>
-    <associate|auto-685|<tuple|22.8|1458|Manifold.tm>>
-    <associate|auto-686|<tuple|22.9|1458|Manifold.tm>>
-    <associate|auto-687|<tuple|22.10|1458|Manifold.tm>>
-    <associate|auto-688|<tuple|22.11|1458|Manifold.tm>>
-    <associate|auto-689|<tuple|22.12|1458|Manifold.tm>>
+    <associate|auto-680|<tuple|<with|mode|<quote|math>|<big|int><rsup|S>f>|1457|Measure.tm>>
+    <associate|auto-681|<tuple|21|1457|Manifold.tm>>
+    <associate|auto-682|<tuple|21.1|1457|Manifold.tm>>
+    <associate|auto-683|<tuple|22|1457|Manifold.tm>>
+    <associate|auto-684|<tuple|22.1|1457|Manifold.tm>>
+    <associate|auto-685|<tuple|22.2|1458|Manifold.tm>>
+    <associate|auto-686|<tuple|22.3|1458|Manifold.tm>>
+    <associate|auto-687|<tuple|22.4|1458|Manifold.tm>>
+    <associate|auto-688|<tuple|22.5|1458|Manifold.tm>>
+    <associate|auto-689|<tuple|22.6|1458|Manifold.tm>>
     <associate|auto-69|<tuple|comparable elements|89|Sets.tm>>
-    <associate|auto-690|<tuple|22.13|1458|Manifold.tm>>
-    <associate|auto-691|<tuple|22.14|?|Manifold.tm>>
-    <associate|auto-692|<tuple|22.14|?>>
+    <associate|auto-690|<tuple|22.7|1458|Manifold.tm>>
+    <associate|auto-691|<tuple|22.8|?|Manifold.tm>>
+    <associate|auto-692|<tuple|22.9|?|Manifold.tm>>
+    <associate|auto-693|<tuple|22.10|?|Manifold.tm>>
+    <associate|auto-694|<tuple|22.11|?|Manifold.tm>>
+    <associate|auto-695|<tuple|22.12|?|Manifold.tm>>
+    <associate|auto-696|<tuple|22.13|?|Manifold.tm>>
+    <associate|auto-697|<tuple|22.14|?|Manifold.tm>>
+    <associate|auto-698|<tuple|22.14|?>>
     <associate|auto-7|<tuple|<with|mode|<quote|math>|\<emptyset\>>|14|Sets.tm>>
     <associate|auto-70|<tuple|comparable elements|89|Sets.tm>>
     <associate|auto-71|<tuple|totally ordered class|89|Sets.tm>>
@@ -2668,6 +2697,7 @@
     <associate|cartesian product of the empty set|<tuple|1.49|24|Sets.tm>>
     <associate|cartesian product properties (1)|<tuple|1.52|25|Sets.tm>>
     <associate|cartesian product with enpty set|<tuple|1.50|24|Sets.tm>>
+    <associate|charasteristic function|<tuple|20.333|?|Measure.tm>>
     <associate|choice Axiom of choice consequences|<tuple|3.134|120|Sets.tm>>
     <associate|choice Hausdorff maximal principle|<tuple|3.125|114|Sets.tm>>
     <associate|choice Hausdorff's Maximal
@@ -3041,7 +3071,7 @@
     <associate|convergence of a function to a
     point|<tuple|16.5|878|Differentiation.tm>>
     <associate|corollary 16.50.192|<tuple|16.78|916|Differentiation.tm>>
-    <associate|corollary 20.111.218|<tuple|20.114|1323|Measure.tm>>
+    <associate|corollary 20.111.218|<tuple|20.115|1323|Measure.tm>>
     <associate|countable AUB and AxB|<tuple|6.76|207|NaturalNumbers.tm>>
     <associate|countable product of a finite family of countable sets is
     countable (2)|<tuple|6.78|207|NaturalNumbers.tm>>
@@ -4815,7 +4845,7 @@
     <associate|eq 18.3.146|<tuple|18.4|1149|InnerProductSpaces.tm>>
     <associate|eq 18.31.148|<tuple|18.35|1184|InnerProductSpaces.tm>>
     <associate|eq 18.32.148|<tuple|18.36|1185|InnerProductSpaces.tm>>
-    <associate|eq 18.325.036.7|<tuple|20.427|?|Measure.tm>>
+    <associate|eq 18.325.036.7|<tuple|20.429|?|Measure.tm>>
     <associate|eq 18.33.148|<tuple|18.37|1185|InnerProductSpaces.tm>>
     <associate|eq 18.34.148|<tuple|18.38|1185|InnerProductSpaces.tm>>
     <associate|eq 18.35.148|<tuple|18.39|1186|InnerProductSpaces.tm>>
@@ -5152,7 +5182,7 @@
     <associate|eq 20.231.212|<tuple|20.267|1396|Measure.tm>>
     <associate|eq 20.232.212|<tuple|20.268|1396|Measure.tm>>
     <associate|eq 20.233.212|<tuple|20.269|1396|Measure.tm>>
-    <associate|eq 20.245.228|<tuple|20.425|?|Measure.tm>>
+    <associate|eq 20.245.228|<tuple|20.427|?|Measure.tm>>
     <associate|eq 20.248.220|<tuple|20.270|1398|Measure.tm>>
     <associate|eq 20.249.220|<tuple|20.271|1398|Measure.tm>>
     <associate|eq 20.24\<point\>156|<tuple|20.24|1286|Measure.tm>>
@@ -5303,28 +5333,77 @@
     <associate|eq 20.416.227|<tuple|20.416|1445|Measure.tm>>
     <associate|eq 20.417.227|<tuple|20.417|1446|Measure.tm>>
     <associate|eq 20.418.227|<tuple|20.418|1447|Measure.tm>>
-    <associate|eq 20.419.227|<tuple|20.419|1447|Measure.tm>>
+    <associate|eq 20.419.227|<tuple|20.421|1447|Measure.tm>>
+    <associate|eq 20.419.229|<tuple|20.419|?|Measure.tm>>
     <associate|eq 20.42.156|<tuple|20.43|1309|Measure.tm>>
-    <associate|eq 20.421.227|<tuple|20.421|1450|Measure.tm>>
-    <associate|eq 20.421.228|<tuple|20.423|?|Measure.tm>>
-    <associate|eq 20.422.227|<tuple|20.420|1453|Measure.tm>>
-    <associate|eq 20.422.228|<tuple|20.422|?|Measure.tm>>
-    <associate|eq 20.424.228|<tuple|20.424|?|Measure.tm>>
-    <associate|eq 20.426.228|<tuple|20.426|?|Measure.tm>>
-    <associate|eq 20.428.228|<tuple|20.428|?|Measure.tm>>
-    <associate|eq 20.429.228|<tuple|20.429|?|Measure.tm>>
+    <associate|eq 20.420.229|<tuple|20.420|?|Measure.tm>>
+    <associate|eq 20.421.227|<tuple|20.423|1450|Measure.tm>>
+    <associate|eq 20.421.228|<tuple|20.425|?|Measure.tm>>
+    <associate|eq 20.422.227|<tuple|20.422|1453|Measure.tm>>
+    <associate|eq 20.422.228|<tuple|20.424|?|Measure.tm>>
+    <associate|eq 20.424.228|<tuple|20.426|?|Measure.tm>>
+    <associate|eq 20.426.228|<tuple|20.428|?|Measure.tm>>
+    <associate|eq 20.428.228|<tuple|20.430|?|Measure.tm>>
+    <associate|eq 20.429.228|<tuple|20.431|?|Measure.tm>>
     <associate|eq 20.43.156|<tuple|20.44|1310|Measure.tm>>
-    <associate|eq 20.430.228|<tuple|20.430|?|Measure.tm>>
-    <associate|eq 20.431.228|<tuple|20.431|?|Measure.tm>>
-    <associate|eq 20.432.228|<tuple|20.432|?|Measure.tm>>
-    <associate|eq 20.433.228|<tuple|20.433|?|Measure.tm>>
-    <associate|eq 20.434.228|<tuple|20.434|?|Measure.tm>>
-    <associate|eq 20.435.228|<tuple|20.435|?|Measure.tm>>
+    <associate|eq 20.430.228|<tuple|20.432|?|Measure.tm>>
+    <associate|eq 20.431.228|<tuple|20.433|?|Measure.tm>>
+    <associate|eq 20.432.228|<tuple|20.434|?|Measure.tm>>
+    <associate|eq 20.433.228|<tuple|20.435|?|Measure.tm>>
+    <associate|eq 20.434.228|<tuple|20.436|?|Measure.tm>>
+    <associate|eq 20.435.228|<tuple|20.437|?|Measure.tm>>
+    <associate|eq 20.436.228|<tuple|20.438|?|Measure.tm>>
+    <associate|eq 20.437.228|<tuple|20.439|?|Measure.tm>>
     <associate|eq 20.44.156|<tuple|20.45|1310|Measure.tm>>
+    <associate|eq 20.440.229|<tuple|20.440|?|Measure.tm>>
+    <associate|eq 20.441.229|<tuple|20.441|?|Measure.tm>>
+    <associate|eq 20.442.229|<tuple|20.442|?|Measure.tm>>
+    <associate|eq 20.443.229|<tuple|20.443|?|Measure.tm>>
+    <associate|eq 20.444.229|<tuple|20.444|?|Measure.tm>>
+    <associate|eq 20.445.229|<tuple|20.445|?|Measure.tm>>
+    <associate|eq 20.446.229|<tuple|20.446|?|Measure.tm>>
+    <associate|eq 20.447.229|<tuple|20.447|?|Measure.tm>>
+    <associate|eq 20.448.229|<tuple|20.448|?|Measure.tm>>
+    <associate|eq 20.449.229|<tuple|20.449|?|Measure.tm>>
     <associate|eq 20.45.156|<tuple|20.46|1312|Measure.tm>>
+    <associate|eq 20.451.229|<tuple|20.451|?|Measure.tm>>
+    <associate|eq 20.452.229|<tuple|20.452|?|Measure.tm>>
+    <associate|eq 20.453.229|<tuple|20.453|?|Measure.tm>>
+    <associate|eq 20.454.229|<tuple|20.454|?|Measure.tm>>
+    <associate|eq 20.455.229|<tuple|20.455|?|Measure.tm>>
+    <associate|eq 20.456\<point\>229|<tuple|20.456|?|Measure.tm>>
+    <associate|eq 20.457.229|<tuple|20.457|?|Measure.tm>>
+    <associate|eq 20.458.229|<tuple|20.458|?|Measure.tm>>
+    <associate|eq 20.459.229|<tuple|20.459|?|Measure.tm>>
     <associate|eq 20.46.156|<tuple|20.47|1313|Measure.tm>>
+    <associate|eq 20.460.229|<tuple|20.460|?|Measure.tm>>
+    <associate|eq 20.461.229|<tuple|20.461|?|Measure.tm>>
+    <associate|eq 20.462.229|<tuple|20.462|?|Measure.tm>>
+    <associate|eq 20.463.229|<tuple|20.463|?|Measure.tm>>
+    <associate|eq 20.464.229|<tuple|20.464|?|Measure.tm>>
+    <associate|eq 20.465\<point\>229|<tuple|20.465|?|Measure.tm>>
+    <associate|eq 20.466.229|<tuple|20.466|?|Measure.tm>>
+    <associate|eq 20.467.229|<tuple|20.467|?|Measure.tm>>
+    <associate|eq 20.468.229|<tuple|20.468|?|Measure.tm>>
+    <associate|eq 20.469.229|<tuple|20.469|?|Measure.tm>>
     <associate|eq 20.47.156|<tuple|20.48|1313|Measure.tm>>
+    <associate|eq 20.470.229|<tuple|20.470|?|Measure.tm>>
+    <associate|eq 20.471.229|<tuple|20.471|?|Measure.tm>>
+    <associate|eq 20.472.229|<tuple|20.472|?|Measure.tm>>
+    <associate|eq 20.473.229|<tuple|20.473|?|Measure.tm>>
+    <associate|eq 20.476.229|<tuple|20.474|?|Measure.tm>>
+    <associate|eq 20.477.229|<tuple|20.475|?|Measure.tm>>
+    <associate|eq 20.478.229|<tuple|20.476|?|Measure.tm>>
+    <associate|eq 20.479.229|<tuple|20.477|?|Measure.tm>>
     <associate|eq 20.48.156|<tuple|20.49|1314|Measure.tm>>
+    <associate|eq 20.480.229|<tuple|20.478|?|Measure.tm>>
+    <associate|eq 20.481.229|<tuple|20.479|?|Measure.tm>>
+    <associate|eq 20.482.230|<tuple|20.482|?|Measure.tm>>
+    <associate|eq 20.482\<point\>229|<tuple|20.480|?|Measure.tm>>
+    <associate|eq 20.483.229|<tuple|20.481|?|Measure.tm>>
+    <associate|eq 20.484.229|<tuple|20.483|?|Measure.tm>>
+    <associate|eq 20.484.230|<tuple|20.484|?|Measure.tm>>
+    <associate|eq 20.485.230|<tuple|20.485|?|Measure.tm>>
     <associate|eq 20.49.156|<tuple|20.50|1314|Measure.tm>>
     <associate|eq 20.5.155|<tuple|20.5|1274|Measure.tm>>
     <associate|eq 20.50.156|<tuple|20.51|1314|Measure.tm>>
@@ -5758,22 +5837,22 @@
     <associate|extended continuous functions|<tuple|20.51|1270|Measure.tm>>
     <associate|extended density|<tuple|20.12|1247|Measure.tm>>
     <associate|extended denumerable sum of denumerable
-    sums|<tuple|20.100|1313|Measure.tm>>
+    sums|<tuple|20.101|1313|Measure.tm>>
     <associate|extended denumerable sum of finite
-    sums|<tuple|20.99|1311|Measure.tm>>
+    sums|<tuple|20.100|1311|Measure.tm>>
     <associate|extended distributitivy|<tuple|20.39|1264|Measure.tm>>
     <associate|extended distributitivy finite
-    sum|<tuple|20.90|1304|Measure.tm>>
-    <associate|extended finite sums|<tuple|20.85|1301|Measure.tm>>
+    sum|<tuple|20.91|1304|Measure.tm>>
+    <associate|extended finite sums|<tuple|20.86|1301|Measure.tm>>
     <associate|extended fully order|<tuple|20.9|1246|Measure.tm>>
     <associate|extended generating basis|<tuple|20.46|1266|Measure.tm>>
     <associate|extended inf sup negate|<tuple|20.63|1278|Measure.tm>>
     <associate|extended inf(sup) sup(inf)|<tuple|20.54|1273|Measure.tm>>
     <associate|extended infinite inf sup|<tuple|20.15|1250|Measure.tm>>
-    <associate|extended infinite sum|<tuple|20.87|1304|Measure.tm>>
+    <associate|extended infinite sum|<tuple|20.88|1304|Measure.tm>>
     <associate|extended infinite sum of zero
-    elements|<tuple|20.89|1304|Measure.tm>>
-    <associate|extended infinite sum properties|<tuple|20.91|1305|Measure.tm>>
+    elements|<tuple|20.90|1304|Measure.tm>>
+    <associate|extended infinite sum properties|<tuple|20.92|1305|Measure.tm>>
     <associate|extended lemma 20.62.155|<tuple|20.65|1280|Measure.tm>>
     <associate|extended lim inf \<less\>= lim
     sup|<tuple|20.67|1283|Measure.tm>>
@@ -5794,15 +5873,16 @@
     <associate|extended lim inf x_i+n|<tuple|20.58|1275|Measure.tm>>
     <associate|extended limit|<tuple|20.69|1284|Measure.tm>>
     <associate|extended limit (-@@)^n|<tuple|20.72|1285|Measure.tm>>
-    <associate|extended limit 1/(x_i)|<tuple|20.82|1299|Measure.tm>>
+    <associate|extended limit 1/(x_i)|<tuple|20.83|1299|Measure.tm>>
     <associate|extended limit 1/n|<tuple|20.75|1287|Measure.tm>>
+    <associate|extended limit and finite sum|<tuple|20.81|?|Measure.tm>>
     <associate|extended limit and index translation|<tuple|20.77|1290|Measure.tm>>
     <associate|extended limit constant sequence|<tuple|20.71|1284|Measure.tm>>
     <associate|extended limit equivalences|<tuple|20.76|1287|Measure.tm>>
     <associate|extended limit in the (extended) real
     numbers|<tuple|20.73|1285|Measure.tm>>
     <associate|extended limit increasing / decreasing sequence
-    exist|<tuple|20.84|1300|Measure.tm>>
+    exist|<tuple|20.85|1300|Measure.tm>>
     <associate|extended limit properties|<tuple|20.78|1290|Measure.tm>>
     <associate|extended negate|<tuple|20.34|1259|Measure.tm>>
     <associate|extended negate inequality|<tuple|20.38|1263|Measure.tm>>
@@ -5811,19 +5891,19 @@
     <associate|extended open set scaling and
     translation|<tuple|20.52|1270|Measure.tm>>
     <associate|extended order relation|<tuple|20.4|1245|Measure.tm>>
-    <associate|extended partial sums converges|<tuple|20.86|1303|Measure.tm>>
+    <associate|extended partial sums converges|<tuple|20.87|1303|Measure.tm>>
     <associate|extended positive and non negative
     numbers|<tuple|20.25|1252|Measure.tm>>
     <associate|extended reals|<tuple|20.1|1245|Measure.tm>>
     <associate|extended reals existence|<tuple|10.97|340|Numbers.tm>>
     <associate|extended reals finite real
     number|<tuple|20.3|1245|Measure.tm>>
-    <associate|extended series and index translation|<tuple|20.92|1305|Measure.tm>>
-    <associate|extended series and permutations|<tuple|20.93|1306|Measure.tm>>
+    <associate|extended series and index translation|<tuple|20.93|1305|Measure.tm>>
+    <associate|extended series and permutations|<tuple|20.94|1306|Measure.tm>>
     <associate|extended series is finite then all the terms are
-    finite|<tuple|20.103|1316|Measure.tm>>
+    finite|<tuple|20.104|1316|Measure.tm>>
     <associate|extended sum|<tuple|20.16|1251|Measure.tm>>
-    <associate|extended sum of sums|<tuple|20.96|1307|Measure.tm>>
+    <associate|extended sum of sums|<tuple|20.97|1307|Measure.tm>>
     <associate|extended sup and inf exist|<tuple|20.13|1248|Measure.tm>>
     <associate|extended sup inf of real numbers|<tuple|20.14|1250|Measure.tm>>
     <associate|extended sup of set and sum|<tuple|20.61|1277|Measure.tm>>
@@ -6253,8 +6333,8 @@
     <associate|inverse of a field isomorphism is a field
     isomorphism|<tuple|4.69|149|NaturalNumbers.tm>>
     <associate|iteration final|<tuple|5.85|179|NaturalNumbers.tm>>
-    <associate|label 20.147.200|<tuple|20.179|1357|Measure.tm>>
-    <associate|label 20.252.221|<tuple|20.265|1417|Measure.tm>>
+    <associate|label 20.147.200|<tuple|20.180|1357|Measure.tm>>
+    <associate|label 20.252.221|<tuple|20.266|1417|Measure.tm>>
     <associate|lemma 11.216.205|<tuple|11.228|457|LinearAlgebra.tm>>
     <associate|lemma 14.342.156|<tuple|14.372|825|Topology.tm>>
     <associate|lemma 14.344.156|<tuple|14.373|826|Topology.tm>>
@@ -6334,44 +6414,45 @@
     <associate|lemma 19.15.150|<tuple|19.16|1199|Exponential.tm>>
     <associate|lemma 19.18.150|<tuple|19.19|1202|Exponential.tm>>
     <associate|lemma 19.51.151|<tuple|19.52|1225|Exponential.tm>>
-    <associate|lemma 20.102.202|<tuple|20.109|1319|Measure.tm>>
-    <associate|lemma 20.109.213|<tuple|20.112|1320|Measure.tm>>
-    <associate|lemma 20.110.214|<tuple|20.113|1323|Measure.tm>>
-    <associate|lemma 20.119.200|<tuple|20.148|1336|Measure.tm>>
-    <associate|lemma 20.121.200|<tuple|20.149|1337|Measure.tm>>
-    <associate|lemma 20.129.200|<tuple|20.163|1349|Measure.tm>>
-    <associate|lemma 20.132.200|<tuple|20.167|1350|Measure.tm>>
-    <associate|lemma 20.136.200|<tuple|20.172|1351|Measure.tm>>
-    <associate|lemma 20.138.200|<tuple|20.174|1353|Measure.tm>>
-    <associate|lemma 20.139.200|<tuple|20.175|1353|Measure.tm>>
-    <associate|lemma 20.141.200|<tuple|20.176|1355|Measure.tm>>
-    <associate|lemma 20.150.227|<tuple|20.152|1343|Measure.tm>>
-    <associate|lemma 20.151.227|<tuple|20.153|1344|Measure.tm>>
-    <associate|lemma 20.152.227|<tuple|20.154|1345|Measure.tm>>
-    <associate|lemma 20.153.227 |<tuple|20.155|1345|Measure.tm>>
-    <associate|lemma 20.158.223|<tuple|20.166|1350|Measure.tm>>
-    <associate|lemma 20.161.201|<tuple|20.108|1318|Measure.tm>>
-    <associate|lemma 20.172.1|<tuple|20.205|1372|Measure.tm>>
-    <associate|lemma 20.204.217|<tuple|20.219|1380|Measure.tm>>
-    <associate|lemma 20.225.220|<tuple|20.239|1398|Measure.tm>>
-    <associate|lemma 20.226.220|<tuple|20.240|1399|Measure.tm>>
-    <associate|lemma 20.228.220|<tuple|20.241|1399|Measure.tm>>
-    <associate|lemma 20.229.220|<tuple|20.242|1401|Measure.tm>>
-    <associate|lemma 20.246.220|<tuple|20.259|1414|Measure.tm>>
-    <associate|lemma 20.248.220|<tuple|20.260|1415|Measure.tm>>
-    <associate|lemma 20.256.220|<tuple|20.267|1420|Measure.tm>>
-    <associate|lemma 20.268.224|<tuple|20.277|1428|Measure.tm>>
-    <associate|lemma 20.269.224|<tuple|20.278|1430|Measure.tm>>
-    <associate|lemma 20.270.225|<tuple|20.279|1431|Measure.tm>>
-    <associate|lemma 20.271.225|<tuple|20.280|1432|Measure.tm>>
-    <associate|lemma 20.272.226|<tuple|20.282|1436|Measure.tm>>
-    <associate|lemma 20.286.226|<tuple|20.294|1440|Measure.tm>>
-    <associate|lemma 20.287.224|<tuple|20.276|1427|Measure.tm>>
-    <associate|lemma 20.309.227|<tuple|20.312|1446|Measure.tm>>
-    <associate|lemma 20.78.156|<tuple|20.81|1298|Measure.tm>>
-    <associate|lemma 20.80.156|<tuple|20.83|1300|Measure.tm>>
-    <associate|lemma 20.90.156|<tuple|20.97|1309|Measure.tm>>
-    <associate|lemma 20.95.156|<tuple|20.102|1315|Measure.tm>>
+    <associate|lemma 20.102.202|<tuple|20.110|1319|Measure.tm>>
+    <associate|lemma 20.109.213|<tuple|20.113|1320|Measure.tm>>
+    <associate|lemma 20.110.214|<tuple|20.114|1323|Measure.tm>>
+    <associate|lemma 20.119.200|<tuple|20.149|1336|Measure.tm>>
+    <associate|lemma 20.121.200|<tuple|20.150|1337|Measure.tm>>
+    <associate|lemma 20.129.200|<tuple|20.164|1349|Measure.tm>>
+    <associate|lemma 20.132.200|<tuple|20.168|1350|Measure.tm>>
+    <associate|lemma 20.136.200|<tuple|20.173|1351|Measure.tm>>
+    <associate|lemma 20.138.200|<tuple|20.175|1353|Measure.tm>>
+    <associate|lemma 20.139.200|<tuple|20.176|1353|Measure.tm>>
+    <associate|lemma 20.141.200|<tuple|20.177|1355|Measure.tm>>
+    <associate|lemma 20.150.227|<tuple|20.153|1343|Measure.tm>>
+    <associate|lemma 20.151.227|<tuple|20.154|1344|Measure.tm>>
+    <associate|lemma 20.152.227|<tuple|20.155|1345|Measure.tm>>
+    <associate|lemma 20.153.227 |<tuple|20.156|1345|Measure.tm>>
+    <associate|lemma 20.158.223|<tuple|20.167|1350|Measure.tm>>
+    <associate|lemma 20.161.201|<tuple|20.109|1318|Measure.tm>>
+    <associate|lemma 20.172.1|<tuple|20.206|1372|Measure.tm>>
+    <associate|lemma 20.204.217|<tuple|20.220|1380|Measure.tm>>
+    <associate|lemma 20.225.220|<tuple|20.240|1398|Measure.tm>>
+    <associate|lemma 20.226.220|<tuple|20.241|1399|Measure.tm>>
+    <associate|lemma 20.228.220|<tuple|20.242|1399|Measure.tm>>
+    <associate|lemma 20.229.220|<tuple|20.243|1401|Measure.tm>>
+    <associate|lemma 20.246.220|<tuple|20.260|1414|Measure.tm>>
+    <associate|lemma 20.248.220|<tuple|20.261|1415|Measure.tm>>
+    <associate|lemma 20.256.220|<tuple|20.268|1420|Measure.tm>>
+    <associate|lemma 20.268.224|<tuple|20.278|1428|Measure.tm>>
+    <associate|lemma 20.269.224|<tuple|20.279|1430|Measure.tm>>
+    <associate|lemma 20.270.225|<tuple|20.280|1431|Measure.tm>>
+    <associate|lemma 20.271.225|<tuple|20.281|1432|Measure.tm>>
+    <associate|lemma 20.272.226|<tuple|20.283|1436|Measure.tm>>
+    <associate|lemma 20.286.226|<tuple|20.295|1440|Measure.tm>>
+    <associate|lemma 20.287.224|<tuple|20.277|1427|Measure.tm>>
+    <associate|lemma 20.309.227|<tuple|20.313|1446|Measure.tm>>
+    <associate|lemma 20.351.229|<tuple|20.352|?|Measure.tm>>
+    <associate|lemma 20.78.156|<tuple|20.82|1298|Measure.tm>>
+    <associate|lemma 20.80.156|<tuple|20.84|1300|Measure.tm>>
+    <associate|lemma 20.90.156|<tuple|20.98|1309|Measure.tm>>
+    <associate|lemma 20.95.156|<tuple|20.103|1315|Measure.tm>>
     <associate|limit (-1)^/i|<tuple|14.308|795|Topology.tm>>
     <associate|limit (a+n)/(b+n)|<tuple|14.298|792|Topology.tm>>
     <associate|limit 1/(a+i)|<tuple|14.297|792|Topology.tm>>
@@ -6573,204 +6654,209 @@
     <associate|matrix where first row and colum are
     unit|<tuple|11.366|572|LinearAlgebra.tm>>
     <associate|matrix[\<less\>m] and [\<gtr\>m]|<tuple|11.365|571|LinearAlgebra.tm>>
-    <associate|measurable function|<tuple|20.297|1443|Measure.tm>>
-    <associate|measurable function (1)|<tuple|20.303|1443|Measure.tm>>
-    <associate|measurable function (2)|<tuple|20.305|1444|Measure.tm>>
-    <associate|measurable function (3)|<tuple|20.306|1444|Measure.tm>>
-    <associate|measurable function (4)|<tuple|20.307|1444|Measure.tm>>
-    <associate|measurable function (5)|<tuple|20.308|1444|Measure.tm>>
-    <associate|measurable function Borel|<tuple|20.300|1443|Measure.tm>>
+    <associate|measurable function|<tuple|20.298|1443|Measure.tm>>
+    <associate|measurable function (1)|<tuple|20.304|1443|Measure.tm>>
+    <associate|measurable function (2)|<tuple|20.306|1444|Measure.tm>>
+    <associate|measurable function (3)|<tuple|20.307|1444|Measure.tm>>
+    <associate|measurable function (4)|<tuple|20.308|1444|Measure.tm>>
+    <associate|measurable function (5)|<tuple|20.309|1444|Measure.tm>>
+    <associate|measurable function Borel|<tuple|20.301|1443|Measure.tm>>
     <associate|measurable function alternative
-    (1)|<tuple|20.313|1448|Measure.tm>>
-    <associate|measurable function and continuity|<tuple|20.315|1449|Measure.tm>>
+    (1)|<tuple|20.314|1448|Measure.tm>>
+    <associate|measurable function and continuity|<tuple|20.317|1449|Measure.tm>>
     <associate|measurable function and generated sigma
-    algebra|<tuple|20.310|1445|Measure.tm>>
-    <associate|measurable function comparisation|<tuple|20.317|1450|Measure.tm>>
-    <associate|measurable function composition|<tuple|20.316|1449|Measure.tm>>
+    algebra|<tuple|20.311|1445|Measure.tm>>
+    <associate|measurable function charasteristic|<tuple|20.334|?|Measure.tm>>
+    <associate|measurable function comparisation|<tuple|20.319|1450|Measure.tm>>
+    <associate|measurable function comparisation
+    definition|<tuple|20.312|?|Measure.tm>>
+    <associate|measurable function composition|<tuple|20.318|1449|Measure.tm>>
     <associate|measurable function constant
-    function|<tuple|20.299|1443|Measure.tm>>
+    function|<tuple|20.300|1443|Measure.tm>>
+    <associate|measurable function extension|<tuple|20.316|?|Measure.tm>>
+    <associate|measurable function limit|<tuple|20.332|?|Measure.tm>>
     <associate|measurable function min and
-    max|<tuple|20.327|1451|Measure.tm>>
+    max|<tuple|20.329|1451|Measure.tm>>
     <associate|measurable function min and max
-    (1)|<tuple|20.328|1451|Measure.tm>>
+    (1)|<tuple|20.330|1451|Measure.tm>>
     <associate|measurable function product with
-    scalar|<tuple|20.325|?|Measure.tm>>
+    scalar|<tuple|20.327|?|Measure.tm>>
     <associate|measurable function properties
-    (1)|<tuple|20.326|?|Measure.tm>>
+    (1)|<tuple|20.328|?|Measure.tm>>
     <associate|measurable function real or
-    extended|<tuple|20.304|1444|Measure.tm>>
-    <associate|measurable function restriction|<tuple|20.314|1449|Measure.tm>>
-    <associate|measurable function sum|<tuple|20.318|1452|Measure.tm>>
+    extended|<tuple|20.305|1444|Measure.tm>>
+    <associate|measurable function restriction|<tuple|20.315|1449|Measure.tm>>
+    <associate|measurable function sum|<tuple|20.320|1452|Measure.tm>>
     <associate|measurable function sum (finite
-    1)|<tuple|20.324|?|Measure.tm>>
-    <associate|measurable function sum (finite)|<tuple|20.320|?|Measure.tm>>
-    <associate|measurable function sum finite|<tuple|20.323|?|Measure.tm>>
-    <associate|measurable function sup inf limit|<tuple|20.329|?|Measure.tm>>
-    <associate|measure A.B minus C.D|<tuple|20.104|1316|Measure.tm>>
-    <associate|measure Borel algebra|<tuple|20.142|1334|Measure.tm>>
-    <associate|measure Borel algebra and closure|<tuple|20.143|1334|Measure.tm>>
-    <associate|measure Borel algebra on R|<tuple|20.150|1341|Measure.tm>>
-    <associate|measure Borel algebra on R^n|<tuple|20.157|1347|Measure.tm>>
+    1)|<tuple|20.326|?|Measure.tm>>
+    <associate|measurable function sum (finite)|<tuple|20.322|?|Measure.tm>>
+    <associate|measurable function sum finite|<tuple|20.325|?|Measure.tm>>
+    <associate|measurable function sup inf limit|<tuple|20.331|?|Measure.tm>>
+    <associate|measure A.B minus C.D|<tuple|20.105|1316|Measure.tm>>
+    <associate|measure Borel algebra|<tuple|20.143|1334|Measure.tm>>
+    <associate|measure Borel algebra and closure|<tuple|20.144|1334|Measure.tm>>
+    <associate|measure Borel algebra on R|<tuple|20.151|1341|Measure.tm>>
+    <associate|measure Borel algebra on R^n|<tuple|20.158|1347|Measure.tm>>
     <associate|measure Borel algebra on R^n (equivalences
-    1)|<tuple|20.273|1425|Measure.tm>>
+    1)|<tuple|20.274|1425|Measure.tm>>
     <associate|measure Borel algebra on R^n
-    (equivalences)|<tuple|20.177|1356|Measure.tm>>
+    (equivalences)|<tuple|20.178|1356|Measure.tm>>
     <associate|measure Borel algebra on the extended real
-    numbers|<tuple|20.151|1343|Measure.tm>>
+    numbers|<tuple|20.152|1343|Measure.tm>>
     <associate|measure Borel algebra on the extended real numbers
-    (1)|<tuple|20.156|1347|Measure.tm>>
-    <associate|measure Caratheodory|<tuple|20.200|1368|Measure.tm>>
+    (1)|<tuple|20.157|1347|Measure.tm>>
+    <associate|measure Caratheodory|<tuple|20.201|1368|Measure.tm>>
     <associate|measure Caratheodory produces complete measure
-    space|<tuple|20.290|1440|Measure.tm>>
-    <associate|measure Dyadic cubes|<tuple|20.170|1350|Measure.tm>>
-    <associate|measure Dyadic cubes properties|<tuple|20.173|1351|Measure.tm>>
-    <associate|measure Dynkin system|<tuple|20.201|1371|Measure.tm>>
-    <associate|measure Dynkin system P(X)|<tuple|20.204|1372|Measure.tm>>
+    space|<tuple|20.291|1440|Measure.tm>>
+    <associate|measure Dyadic cubes|<tuple|20.171|1350|Measure.tm>>
+    <associate|measure Dyadic cubes properties|<tuple|20.174|1351|Measure.tm>>
+    <associate|measure Dynkin system|<tuple|20.202|1371|Measure.tm>>
+    <associate|measure Dynkin system P(X)|<tuple|20.205|1372|Measure.tm>>
     <associate|measure Dynkin system condition for sigma
-    algebra|<tuple|20.207|1373|Measure.tm>>
+    algebra|<tuple|20.208|1373|Measure.tm>>
     <associate|measure Dynkin system condition for sigma algebra
-    (1)|<tuple|20.208|1374|Measure.tm>>
-    <associate|measure Dynkin system generated|<tuple|20.206|1373|Measure.tm>>
-    <associate|measure Dynkin system properties|<tuple|20.203|1372|Measure.tm>>
+    (1)|<tuple|20.209|1374|Measure.tm>>
+    <associate|measure Dynkin system generated|<tuple|20.207|1373|Measure.tm>>
+    <associate|measure Dynkin system properties|<tuple|20.204|1372|Measure.tm>>
     <associate|measure Lebesgue measure space on
-    R|<tuple|20.261|1415|Measure.tm>>
+    R|<tuple|20.262|1415|Measure.tm>>
     <associate|measure Lebesgue measure space on
-    R^n|<tuple|20.284|1438|Measure.tm>>
+    R^n|<tuple|20.285|1438|Measure.tm>>
     <associate|measure Lebesgue measure spaces are
-    complete|<tuple|20.291|1440|Measure.tm>>
-    <associate|measure P(X) is a algebra|<tuple|20.129|1327|Measure.tm>>
-    <associate|measure P(X) is a ring|<tuple|20.125|1327|Measure.tm>>
-    <associate|measure P(X) is a sigma algebra|<tuple|20.137|1332|Measure.tm>>
-    <associate|measure R^n alternative definition|<tuple|20.271|1424|Measure.tm>>
-    <associate|measure [a,b[ in R^n|<tuple|20.161|1348|Measure.tm>>
-    <associate|measure additive function monotone|<tuple|20.221|1382|Measure.tm>>
-    <associate|measure additive set function|<tuple|20.116|1324|Measure.tm>>
-    <associate|measure algebra|<tuple|20.127|1327|Measure.tm>>
+    complete|<tuple|20.292|1440|Measure.tm>>
+    <associate|measure P(X) is a algebra|<tuple|20.130|1327|Measure.tm>>
+    <associate|measure P(X) is a ring|<tuple|20.126|1327|Measure.tm>>
+    <associate|measure P(X) is a sigma algebra|<tuple|20.138|1332|Measure.tm>>
+    <associate|measure R^n alternative definition|<tuple|20.272|1424|Measure.tm>>
+    <associate|measure [a,b[ in R^n|<tuple|20.162|1348|Measure.tm>>
+    <associate|measure additive function monotone|<tuple|20.222|1382|Measure.tm>>
+    <associate|measure additive set function|<tuple|20.117|1324|Measure.tm>>
+    <associate|measure algebra|<tuple|20.128|1327|Measure.tm>>
     <associate|measure algebra equavalent
-    definition|<tuple|20.131|1328|Measure.tm>>
-    <associate|measure algebra properties|<tuple|20.130|1327|Measure.tm>>
+    definition|<tuple|20.132|1328|Measure.tm>>
+    <associate|measure algebra properties|<tuple|20.131|1327|Measure.tm>>
     <associate|measure alternative definition for a
-    content|<tuple|20.231|1389|Measure.tm>>
-    <associate|measure begin end|<tuple|20.168|1350|Measure.tm>>
-    <associate|measure begin end (R)|<tuple|20.251|1411|Measure.tm>>
-    <associate|measure borel algebrat on R|<tuple|20.145|1335|Measure.tm>>
-    <associate|measure bounded intervals|<tuple|20.146|1335|Measure.tm>>
-    <associate|measure compact class approximation|<tuple|20.235|1396|Measure.tm>>
+    content|<tuple|20.232|1389|Measure.tm>>
+    <associate|measure begin end|<tuple|20.169|1350|Measure.tm>>
+    <associate|measure begin end (R)|<tuple|20.252|1411|Measure.tm>>
+    <associate|measure borel algebrat on R|<tuple|20.146|1335|Measure.tm>>
+    <associate|measure bounded intervals|<tuple|20.147|1335|Measure.tm>>
+    <associate|measure compact class approximation|<tuple|20.236|1396|Measure.tm>>
     <associate|measure compact class approximation
-    (1)|<tuple|20.236|1397|Measure.tm>>
+    (1)|<tuple|20.237|1397|Measure.tm>>
     <associate|measure compact class approximation
-    (2)|<tuple|20.245|1405|Measure.tm>>
+    (2)|<tuple|20.246|1405|Measure.tm>>
     <associate|measure compact class approximation
-    (3)|<tuple|20.246|1406|Measure.tm>>
-    <associate|measure complete measure|<tuple|20.288|1439|Measure.tm>>
-    <associate|measure complete measure characterization|<tuple|20.289|1439|Measure.tm>>
+    (3)|<tuple|20.247|1406|Measure.tm>>
+    <associate|measure complete measure|<tuple|20.289|1439|Measure.tm>>
+    <associate|measure complete measure characterization|<tuple|20.290|1439|Measure.tm>>
     <associate|measure completing of a measure
-    space|<tuple|20.295|1441|Measure.tm>>
+    space|<tuple|20.296|1441|Measure.tm>>
     <associate|measure completion of a measure
-    space|<tuple|20.292|1440|Measure.tm>>
+    space|<tuple|20.293|1440|Measure.tm>>
     <associate|measure condition for a algebra to be a sigma
-    algebra|<tuple|20.139|1333|Measure.tm>>
-    <associate|measure content|<tuple|20.228|1389|Measure.tm>>
-    <associate|measure content extension|<tuple|20.244|1402|Measure.tm>>
-    <associate|measure content on R^n|<tuple|20.281|1435|Measure.tm>>
-    <associate|measure content properties|<tuple|20.232|1390|Measure.tm>>
+    algebra|<tuple|20.140|1333|Measure.tm>>
+    <associate|measure content|<tuple|20.229|1389|Measure.tm>>
+    <associate|measure content extension|<tuple|20.245|1402|Measure.tm>>
+    <associate|measure content on R^n|<tuple|20.282|1435|Measure.tm>>
+    <associate|measure content properties|<tuple|20.233|1390|Measure.tm>>
     <associate|measure countable additive set
-    function|<tuple|20.118|1324|Measure.tm>>
-    <associate|measure countable additivity implies
-    additivity|<tuple|20.180|1358|Measure.tm>>
-    <associate|measure countable additivity implies finite
-    additivity|<tuple|20.120|1325|Measure.tm>>
-    <associate|measure countable additivity implies sub
-    additivity|<tuple|20.191|1360|Measure.tm>>
-    <associate|measure countable sub-additive set
     function|<tuple|20.119|1324|Measure.tm>>
+    <associate|measure countable additivity implies
+    additivity|<tuple|20.181|1358|Measure.tm>>
+    <associate|measure countable additivity implies finite
+    additivity|<tuple|20.121|1325|Measure.tm>>
+    <associate|measure countable additivity implies sub
+    additivity|<tuple|20.192|1360|Measure.tm>>
+    <associate|measure countable sub-additive set
+    function|<tuple|20.120|1324|Measure.tm>>
     <associate|measure countable sub-additivity implies
-    sub-additivity|<tuple|20.122|1325|Measure.tm>>
+    sub-additivity|<tuple|20.123|1325|Measure.tm>>
     <associate|measure countable union is in sigma
-    algebra|<tuple|20.138|1332|Measure.tm>>
+    algebra|<tuple|20.139|1332|Measure.tm>>
     <associate|measure extending pre-measure to a
-    measure|<tuple|20.225|1385|Measure.tm>>
-    <associate|measure finite measure|<tuple|20.188|1360|Measure.tm>>
-    <associate|measure finite product of semi-rings|<tuple|20.269|1422|Measure.tm>>
+    measure|<tuple|20.226|1385|Measure.tm>>
+    <associate|measure finite measure|<tuple|20.189|1360|Measure.tm>>
+    <associate|measure finite product of semi-rings|<tuple|20.270|1422|Measure.tm>>
     <associate|measure finite product of semi-rings
-    (1)|<tuple|20.270|1423|Measure.tm>>
-    <associate|measure generated ring|<tuple|20.237|1397|Measure.tm>>
-    <associate|measure generated sigma algebra|<tuple|20.141|1334|Measure.tm>>
+    (1)|<tuple|20.271|1423|Measure.tm>>
+    <associate|measure generated ring|<tuple|20.238|1397|Measure.tm>>
+    <associate|measure generated sigma algebra|<tuple|20.142|1334|Measure.tm>>
     <associate|measure generated sigma algebra on
-    R|<tuple|20.250|1410|Measure.tm>>
+    R|<tuple|20.251|1410|Measure.tm>>
     <associate|measure half open intervals in
-    R^n|<tuple|20.164|1349|Measure.tm>>
-    <associate|measure length definition|<tuple|20.256|1411|Measure.tm>>
+    R^n|<tuple|20.165|1349|Measure.tm>>
+    <associate|measure length definition|<tuple|20.257|1411|Measure.tm>>
     <associate|measure length of union of pairwise half opem
-    intervals|<tuple|20.258|1412|Measure.tm>>
-    <associate|measure measurable set equivalences|<tuple|20.198|1367|Measure.tm>>
-    <associate|measure measurable sets|<tuple|20.197|1367|Measure.tm>>
-    <associate|measure measurable sets properties|<tuple|20.199|1367|Measure.tm>>
-    <associate|measure measurable space|<tuple|20.134|1329|Measure.tm>>
-    <associate|measure measure conditions|<tuple|20.194|1364|Measure.tm>>
-    <associate|measure measure definition|<tuple|20.181|1358|Measure.tm>>
-    <associate|measure measure on A\|B|<tuple|20.186|1360|Measure.tm>>
-    <associate|measure measure space|<tuple|20.183|1359|Measure.tm>>
+    intervals|<tuple|20.259|1412|Measure.tm>>
+    <associate|measure measurable set equivalences|<tuple|20.199|1367|Measure.tm>>
+    <associate|measure measurable sets|<tuple|20.198|1367|Measure.tm>>
+    <associate|measure measurable sets properties|<tuple|20.200|1367|Measure.tm>>
+    <associate|measure measurable space|<tuple|20.135|1329|Measure.tm>>
+    <associate|measure measure conditions|<tuple|20.195|1364|Measure.tm>>
+    <associate|measure measure definition|<tuple|20.182|1358|Measure.tm>>
+    <associate|measure measure on A\|B|<tuple|20.187|1360|Measure.tm>>
+    <associate|measure measure space|<tuple|20.184|1359|Measure.tm>>
     <associate|measure measure space properties
-    (1)|<tuple|20.187|1360|Measure.tm>>
+    (1)|<tuple|20.188|1360|Measure.tm>>
     <associate|measure measure space properties
-    (2)|<tuple|20.192|1361|Measure.tm>>
+    (2)|<tuple|20.193|1361|Measure.tm>>
     <associate|measure measure space properties
-    (3)|<tuple|20.193|1361|Measure.tm>>
-    <associate|measure monotone|<tuple|20.115|1324|Measure.tm>>
-    <associate|measure null set|<tuple|20.286|1439|Measure.tm>>
-    <associate|measure on sub sigma algebra|<tuple|20.185|1360|Measure.tm>>
-    <associate|measure order on R^n|<tuple|20.158|1347|Measure.tm>>
+    (3)|<tuple|20.194|1361|Measure.tm>>
+    <associate|measure monotone|<tuple|20.116|1324|Measure.tm>>
+    <associate|measure null set|<tuple|20.287|1439|Measure.tm>>
+    <associate|measure on sub sigma algebra|<tuple|20.186|1360|Measure.tm>>
+    <associate|measure order on R^n|<tuple|20.159|1347|Measure.tm>>
     <associate|measure order on half open
-    intervals|<tuple|20.257|1411|Measure.tm>>
-    <associate|measure outer measure|<tuple|20.195|1366|Measure.tm>>
-    <associate|measure outer measure construction|<tuple|20.212|1377|Measure.tm>>
+    intervals|<tuple|20.258|1411|Measure.tm>>
+    <associate|measure outer measure|<tuple|20.196|1366|Measure.tm>>
+    <associate|measure outer measure construction|<tuple|20.213|1377|Measure.tm>>
     <associate|measure outer measure construction from
-    pre-measure|<tuple|20.224|1384|Measure.tm>>
+    pre-measure|<tuple|20.225|1384|Measure.tm>>
     <associate|measure outer measure is finite
-    subadditive|<tuple|20.196|1366|Measure.tm>>
-    <associate|measure pairwise disjoint|<tuple|20.105|1318|Measure.tm>>
+    subadditive|<tuple|20.197|1366|Measure.tm>>
+    <associate|measure pairwise disjoint|<tuple|20.106|1318|Measure.tm>>
     <associate|measure pairwise disjoint sets and
-    bijections|<tuple|20.107|1318|Measure.tm>>
-    <associate|measure pre-measure|<tuple|20.217|1380|Measure.tm>>
-    <associate|measure pre-measure equivalences|<tuple|20.233|1392|Measure.tm>>
-    <associate|measure pre-measure is a content|<tuple|20.230|1389|Measure.tm>>
-    <associate|measure pre-measure is additive|<tuple|20.220|1382|Measure.tm>>
+    bijections|<tuple|20.108|1318|Measure.tm>>
+    <associate|measure pre-measure|<tuple|20.218|1380|Measure.tm>>
+    <associate|measure pre-measure equivalences|<tuple|20.234|1392|Measure.tm>>
+    <associate|measure pre-measure is a content|<tuple|20.231|1389|Measure.tm>>
+    <associate|measure pre-measure is additive|<tuple|20.221|1382|Measure.tm>>
     <associate|measure pre-measure is countable
-    sub-additive|<tuple|20.223|1383|Measure.tm>>
-    <associate|measure pre-measure monotonity|<tuple|20.222|1383|Measure.tm>>
-    <associate|measure product of two semi-rings|<tuple|20.263|1417|Measure.tm>>
-    <associate|measure proto-measure|<tuple|20.211|1377|Measure.tm>>
-    <associate|measure proto-ring|<tuple|20.210|1377|Measure.tm>>
-    <associate|measure ring|<tuple|20.123|1326|Measure.tm>>
-    <associate|measure ring is a semi-ring|<tuple|20.227|1389|Measure.tm>>
-    <associate|measure ring properties|<tuple|20.126|1327|Measure.tm>>
-    <associate|measure semi-ring|<tuple|20.214|1380|Measure.tm>>
-    <associate|measure semi-ring bijection|<tuple|20.266|1420|Measure.tm>>
-    <associate|measure semi-ring on R^n|<tuple|20.272|1425|Measure.tm>>
+    sub-additive|<tuple|20.224|1383|Measure.tm>>
+    <associate|measure pre-measure monotonity|<tuple|20.223|1383|Measure.tm>>
+    <associate|measure product of two semi-rings|<tuple|20.264|1417|Measure.tm>>
+    <associate|measure proto-measure|<tuple|20.212|1377|Measure.tm>>
+    <associate|measure proto-ring|<tuple|20.211|1377|Measure.tm>>
+    <associate|measure ring|<tuple|20.124|1326|Measure.tm>>
+    <associate|measure ring is a semi-ring|<tuple|20.228|1389|Measure.tm>>
+    <associate|measure ring properties|<tuple|20.127|1327|Measure.tm>>
+    <associate|measure semi-ring|<tuple|20.215|1380|Measure.tm>>
+    <associate|measure semi-ring bijection|<tuple|20.267|1420|Measure.tm>>
+    <associate|measure semi-ring on R^n|<tuple|20.273|1425|Measure.tm>>
     <associate|measure semi-ring on the set of real
-    numbers|<tuple|20.249|1407|Measure.tm>>
+    numbers|<tuple|20.250|1407|Measure.tm>>
     <associate|measure semi-ring on the set of real numbers
-    (1)|<tuple|20.248|1407|Measure.tm>>
-    <associate|measure semi-ring to ring|<tuple|20.243|1402|Measure.tm>>
-    <associate|measure sigma algebra|<tuple|20.132|1329|Measure.tm>>
-    <associate|measure sigma algebra equivalences|<tuple|20.135|1330|Measure.tm>>
-    <associate|measure sigma algebra intersection|<tuple|20.140|1334|Measure.tm>>
+    (1)|<tuple|20.249|1407|Measure.tm>>
+    <associate|measure semi-ring to ring|<tuple|20.244|1402|Measure.tm>>
+    <associate|measure sigma algebra|<tuple|20.133|1329|Measure.tm>>
+    <associate|measure sigma algebra equivalences|<tuple|20.136|1330|Measure.tm>>
+    <associate|measure sigma algebra intersection|<tuple|20.141|1334|Measure.tm>>
     <associate|measure sigma finite measure
-    space|<tuple|20.190|1360|Measure.tm>>
-    <associate|measure sub measure space|<tuple|20.144|1335|Measure.tm>>
-    <associate|measure sub-additive set function|<tuple|20.117|1324|Measure.tm>>
+    space|<tuple|20.191|1360|Measure.tm>>
+    <associate|measure sub measure space|<tuple|20.145|1335|Measure.tm>>
+    <associate|measure sub-additive set function|<tuple|20.118|1324|Measure.tm>>
     <associate|measure sum amd scalar product of
-    measures|<tuple|20.184|1359|Measure.tm>>
+    measures|<tuple|20.185|1359|Measure.tm>>
     <associate|measure union intersection
-    stable|<tuple|20.111|1319|Measure.tm>>
+    stable|<tuple|20.112|1319|Measure.tm>>
     <associate|measure uniqueness of extension of a
-    measure|<tuple|20.209|1375|Measure.tm>>
-    <associate|measure volume function|<tuple|20.274|1425|Measure.tm>>
-    <associate|measure volume is a pre-measure|<tuple|20.283|1437|Measure.tm>>
-    <associate|measure {empty set} is a ring|<tuple|20.124|1326|Measure.tm>>
+    measure|<tuple|20.210|1375|Measure.tm>>
+    <associate|measure volume function|<tuple|20.275|1425|Measure.tm>>
+    <associate|measure volume is a pre-measure|<tuple|20.284|1437|Measure.tm>>
+    <associate|measure {empty set} is a ring|<tuple|20.125|1326|Measure.tm>>
     <associate|measure {emptyset,set} is a
-    measure|<tuple|20.128|1327|Measure.tm>>
+    measure|<tuple|20.129|1327|Measure.tm>>
     <associate|metric Banach fixed point theorem|<tuple|14.387|837|Topology.tm>>
     <associate|metric ball image preimage|<tuple|14.73|697|Topology.tm>>
     <associate|metric bounded set|<tuple|14.75|698|Topology.tm>>
@@ -6998,7 +7084,7 @@
     <associate|note 16.103.180|<tuple|16.104|930|Differentiation.tm>>
     <associate|note 16.210.127|<tuple|16.228|1047|Differentiation.tm>>
     <associate|note 16.65.191|<tuple|16.95|926|Differentiation.tm>>
-    <associate|note 20.198.210|<tuple|20.213|1377|Measure.tm>>
+    <associate|note 20.198.210|<tuple|20.214|1377|Measure.tm>>
     <associate|operator|<tuple|4.1|129|NaturalNumbers.tm>>
     <associate|order A isomorphism B|<tuple|3.50|91|Sets.tm>>
     <associate|order a\<less\>=b\<less\>=c|<tuple|3.30|86|Sets.tm>>
@@ -7103,7 +7189,7 @@
     <associate|part:InnerProductSpaces.tm|<tuple|17.84|1135>>
     <associate|part:IntegrationBanach.tm|<tuple|<with|mode|<quote|math>|f<around*|(|b|)>\<less\>y\<less\>f<around*|(|a|)>>|853>>
     <associate|part:LinearAlgebra.tm|<tuple|10.5.4|340>>
-    <associate|part:Manifold.tm|<tuple|5|1455>>
+    <associate|part:Manifold.tm|<tuple|<with|mode|<quote|math>|<big|int><rsup|S><around*|(|<below|lim|k\<rightarrow\>\<infty\>>f<rsub|k>|)>d\<mu\>\<less\>\<infty\>>|1455>>
     <associate|part:Measure.tm|<tuple|19.53|1245>>
     <associate|part:NaturalNumbers.tm|<tuple|9|129>>
     <associate|part:Numbers.tm|<tuple|6.91|213>>
@@ -7473,6 +7559,18 @@
     <associate|set successor set|<tuple|1.54|27|Sets.tm>>
     <associate|set union of two sets is a set|<tuple|1.65|29|Sets.tm>>
     <associate|sign function|<tuple|8.15|236|Numbers.tm>>
+    <associate|simple function|<tuple|20.342|?|Measure.tm>>
+    <associate|simple function alternative|<tuple|20.343|?|Measure.tm>>
+    <associate|simple function integral|<tuple|20.350|?|Measure.tm>>
+    <associate|simple function integral properties|<tuple|20.353|?|Measure.tm>>
+    <associate|simple function integral properties
+    (1)|<tuple|20.354|?|Measure.tm>>
+    <associate|simple function integral properties
+    (2)|<tuple|20.355|?|Measure.tm>>
+    <associate|simple function measurable|<tuple|20.345|?|Measure.tm>>
+    <associate|simple function measurable (1)|<tuple|20.347|?|Measure.tm>>
+    <associate|simple function property|<tuple|20.344|?|Measure.tm>>
+    <associate|simple function representation|<tuple|20.348|?|Measure.tm>>
     <associate|sorting of a finite set|<tuple|10.96|339|Numbers.tm>>
     <associate|spectral L^n is linear|<tuple|18.57|1157|InnerProductSpaces.tm>>
     <associate|spectral L^n+m=L^noL^m|<tuple|18.56|1157|InnerProductSpaces.tm>>
@@ -7794,6 +7892,8 @@
 
         \;
       </surround>|<pageref|auto-656>>
+
+      <tuple|normal|<surround|<hidden-binding|<tuple>|20.5>||>|<pageref|auto-678>>
     </associate>
     <\associate|idx>
       <tuple|<tuple|axiom of extent>|<pageref|auto-3>>
@@ -8686,6 +8786,12 @@
       <tuple|<tuple|<with|mode|<quote|math>|\<cal-L\><rsup|n>>>|<pageref|auto-671>>
 
       <tuple|<tuple|<with|mode|<quote|math>|\<mu\><with|mode|<quote|text>|-a.e.>>>|<pageref|auto-674>>
+
+      <tuple|<tuple|simple function>|<pageref|auto-677>>
+
+      <tuple|<tuple|integral of a simple function>|<pageref|auto-679>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|<big|int><rsup|S>f>>|<pageref|auto-680>>
     </associate>
     <\associate|parts>
       <tuple|Sets.tm|chapter-nr|0|section-nr|0|subsection-nr|0>
@@ -8714,7 +8820,7 @@
 
       <tuple|Measure.tm|chapter-nr|19|section-nr|1|subsection-nr|7>
 
-      <tuple|Manifold.tm|chapter-nr|20|section-nr|5|subsection-nr|3>
+      <tuple|Manifold.tm|chapter-nr|20|section-nr|6|subsection-nr|1>
     </associate>
     <\associate|table>
       <tuple|normal|<\surround|<hidden-binding|<tuple>|5.1>|>
@@ -9616,66 +9722,74 @@
       properties <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-673>>
 
+      20.6<space|2spc>The measure integral
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-675>
+
+      <with|par-left|<quote|1tab>|20.6.1<space|2spc>Integral of simple
+      functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-676>>
+
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|21<space|2spc>Differential
       Manifolds> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-675><vspace|0.5fn>
+      <no-break><pageref|auto-681><vspace|0.5fn>
 
       21.1<space|2spc> Topological Manifold
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-676>
+      <no-break><pageref|auto-682>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|22<space|2spc>TODO>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-677><vspace|0.5fn>
+      <no-break><pageref|auto-683><vspace|0.5fn>
 
       22.1<space|2spc>Sets.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-678>
+      <no-break><pageref|auto-684>
 
       22.2<space|2spc>NaturalNumbers.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-679>
+      <no-break><pageref|auto-685>
 
       22.3<space|2spc>Numbers.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-680>
+      <no-break><pageref|auto-686>
 
       22.4<space|2spc>LinearAlgebra.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-681>
+      <no-break><pageref|auto-687>
 
       22.5<space|2spc>DirectSum.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-682>
+      <no-break><pageref|auto-688>
 
       22.6<space|2spc>TensorProduct.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-683>
+      <no-break><pageref|auto-689>
 
       22.7<space|2spc>Topology.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-684>
+      <no-break><pageref|auto-690>
 
       22.8<space|2spc>IntegrationBanach.tm
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-685>
+      <no-break><pageref|auto-691>
 
       22.9<space|2spc>Differentiation.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-686>
+      <no-break><pageref|auto-692>
 
       22.10<space|2spc>FundamentalTheorem.OfAlgebra.tm
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-687>
+      <no-break><pageref|auto-693>
 
       22.11<space|2spc>InnerProductSpaces.tm
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-688>
+      <no-break><pageref|auto-694>
 
       22.12<space|2spc>Exponential.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-689>
+      <no-break><pageref|auto-695>
 
       22.13<space|2spc>Measure.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-690>
+      <no-break><pageref|auto-696>
 
       22.14<space|2spc>Manifold.tm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-691>
+      <no-break><pageref|auto-697>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Index>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-692><vspace|0.5fn>
+      <no-break><pageref|auto-698><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
