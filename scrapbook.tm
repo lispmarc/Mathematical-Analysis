@@ -5662,6 +5662,208 @@
 
   \;
 
+  <\proof>
+    As <math|g\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>\<subseteq\>\<cal-M\><around*|[|X,\<cal-A\>|]>>
+    with <math|g<around*|(|X|)>\<subseteq\><around*|[|0,\<infty\>|]>> it
+    follows from [theorem: <reference|measure integral extension>] that\ 
+
+    <\equation>
+      <label|eq 20.568.240>g\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>|]><text|
+      and ><big|int>g d\<mu\>=<big|int><rsup|+>g d\<mu\>\<less\>\<infty\>
+    </equation>
+
+    Using [theorem: <reference|measure integral properties (2)>] we have that
+    <math|<around*|\||g|\|>\<less\>\<infty\>> <math|\<mu\>>-a.e. or as
+    <math|g<around*|(|X|)>\<subseteq\><around*|[|0,\<infty\>|]>> that
+    <math|g\<neq\>\<infty\>> <math|\<mu\>>-a.e.. In other words there exist a
+    <math|N<rsub|1>\<in\>\<cal-A\>> with <math|\<mu\><around*|(|N<rsub|1>|)>=0>
+    such that\ 
+
+    <\equation>
+      <label|eq 20.569.240>A=<around*|{|x\<in\>X\|g<around*|(|x|)>=\<infty\>|}>\<subseteq\>N<rsub|1>
+    </equation>
+
+    Further by the hypothesis ther exist a <math|N<rsub|2>\<in\>\<cal-A\>>
+    with <math|\<mu\><around*|(|N<rsub|2>|)>=0> such that\ 
+
+    <\equation>
+      <label|eq 20.570.240>B=<around*|{|x\<in\>X\|\<neg\><around*|(|<below|lim|n\<rightarrow\>\<infty\>>f<rsub|n><around*|(|x|)><text|
+      exists with ><below|f<around*|(|x|)>=<below|lim|n\<rightarrow\>\<infty\>>f<rsub|n><around*|(|x|)><text|
+      and >\<forall\>n\<in\>\<bbb-N\><text|
+      \ ><around*|\||f<rsub|n><around*|(|x|)>|\|>\<leqslant\>g<around*|(|x|)>|>|)>|}>\<subseteq\>N<rsub|2>
+    </equation>
+
+    Let <math|N=N<rsub|1><big|cup>N<rsub|2>> then <math|N\<in\>\<cal-A\>> and
+    <math|\<mu\><around*|(|N|)>\<leqslant\>\<mu\><around*|(|N<rsub|1>|)>+\<mu\><around*|(|N<rsub|2>|)>=0+0=0>
+    so that\ 
+
+    <\equation>
+      <label|eq 20.571.240>\<mu\><around*|(|N|)>=0<text| and
+      >A<big|cup>B\<subseteq\>N
+    </equation>
+
+    As <math|N\<in\>\<cal-A\>\<Rightarrow\>X\\N\<in\>\<cal-A\>> we have using
+    [theorems: <reference|measurable function charasteristic product> and
+    <reference|measure integral f+ f- are measurable>] that\ 
+
+    <\equation>
+      <label|eq 20.572.240>\<cal-X\><rsub|X\\N>\<cdot\>f\<in\>\<cal-M\><around*|[|X,\<cal-A\>|]>\<wedge\><around*|\||\<cal-X\><rsub|X\\A>\<cdot\>f|\|>\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>|]>,\<cal-X\><rsub|X\\N>\<cdot\>g\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>|]>
+    </equation>
+
+    <\equation>
+      <label|eq 20.573.240>\<forall\>n\<in\>\<bbb-N\><text|
+      >\<cal-X\><rsub|X\\N>\<cdot\>f<rsub|n>\<in\>\<cal-M\><around*|[|X,\<cal-A\>|]>\<wedge\><around*|\||\<cal-X\><rsub|X\\N>\<cdot\>f<rsub|n>|\|>\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>|]>
+    </equation>
+
+    Let <math|x\<in\>X> then we have either:
+
+    <\description>
+      <item*|<math|x\<in\>N>>Then we have\ 
+
+      <\equation*>
+        <around*|(|\<cal-X\><rsub|X\\N>\<cdot\>g|)><around*|(|x|)>=0\<less\>\<infty\>
+      </equation*>
+
+      <\equation*>
+        <around*|(|\<cal-X\><rsub|X\\N>\<cdot\>f|)><around*|(|x|)>=0=<below|lim|n\<rightarrow\>\<infty\>>0=<below|lim|n\<rightarrow\>\<infty\>><around*|(|\<cal-X\><rsub|X\\N>\<cdot\>f<rsub|n>|)><around*|(|x|)>
+      </equation*>
+
+      <\equation*>
+        \<forall\>n\<in\>\<bbb-N\><text| ><around*|\||\<cal-X\><rsub|X\\N>\<cdot\>f<rsub|n>|\|><around*|(|x|)>=0\<leqslant\>0=<around*|(|\<cal-X\><rsub|X\\N>\<cdot\>g|)><around*|(|x|)>
+      </equation*>
+
+      <item*|<math|x\<in\>X\\N>>Then we have\ 
+
+      <\equation*>
+        <around*|(|\<cal-X\><rsub|X\\N>\<cdot\>g|)><around*|(|x|)>=g<around*|(|x|)><below|\<less\>|x\<nin\>A\<wedge\><text|[eq:
+        <reference|eq 20.569.240>]>>\<infty\>
+      </equation*>
+
+      <\equation*>
+        <around*|(|\<cal-X\><rsub|X\\N>\<cdot\>f|)><around*|(|x|)>=f<around*|(|x|)>\<equallim\><rsub|x\<nin\>B><below|lim|n\<rightarrow\>\<infty\>>f<rsub|n><around*|(|x|)>=<below|lim|n\<rightarrow\>\<infty\>><around*|(|\<cal-X\><rsub|X\\N>\<cdot\>f<rsub|n>|)><around*|(|x|)>
+      </equation*>
+
+      <\equation*>
+        \<forall\>n\<in\>\<bbb-N\><text| ><around*|\||\<cal-X\><rsub|X\\N>\<cdot\>f<rsub|n>|\|><around*|(|x|)>=<around*|\||f<rsub|n><around*|(|x|)>|\|><below|\<leqslant\>|x\<nin\>B>g<around*|(|x|)>=<around*|(|\<cal-X\><rsub|X\\N>\<cdot\>g|)><around*|(|x|)>
+      </equation*>
+    </description>
+
+    which proves that in all cases we have
+
+    <\equation>
+      <label|eq 20.574.240>\<forall\>x\<in\>X<text|
+      ><around*|(|\<cal-X\><rsub|X\\N>\<cdot\>g|)><around*|(|x|)>\<less\>\<infty\>\<wedge\><around*|(|\<cal-X\><rsub|X\\N>\<cdot\>f|)><around*|(|x|)>=<below|lim|n\<rightarrow\>\<infty\>><around*|(|\<cal-X\><rsub|X\\N>\<cdot\>f<rsub|n>|)>
+    </equation>
+
+    <\equation>
+      <label|eq 20.575.240>\<forall\>x\<in\>X<text| we have
+      >\<forall\>n\<in\>\<bbb-N\><text| that
+      ><around*|\||\<cal-X\><rsub|X\\N>\<cdot\>f<rsub|n>|\|><around*|(|x|)>\<leqslant\><around*|(|\<cal-X\><rsub|X\\N>\<cdot\>g|)><around*|(|x|)><below|\<less\>|<text|[eq:
+      <reference|eq 20.575.240>]>>\<infty\><text| or
+      ><around*|(|\<cal-X\><rsub|X\\N>|)><around*|(|X|)>\<subseteq\>\<bbb-R\>
+    </equation>
+
+    Using [theorem: <reference|almost everywhere and characteristic>] we have
+    also\ 
+
+    <\equation>
+      <label|eq 20.576.240>f=\<cal-X\><rsub|X\\N>\<cdot\>f<text|
+      >\<mu\><text|-a.e. and >\<forall\>n\<in\>\<bbb-N\><text| that
+      >f<rsub|n>=\<cal-X\><rsub|X\\N>\<cdot\>f<text| >\<mu\><text|-a.e.>
+    </equation>
+
+    Applying now [theorem: <reference|measure integral and a.e. equalitiy>]
+    we get\ 
+
+    <\equation>
+      <label|eq 20.577.240>\<cal-X\><rsub|X\\N>\<cdot\>g\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]><text|
+      and ><big|int><around*|(|\<cal-X\><rsub|X\\N>\<cdot\>g|)>d\<mu\>=<big|int>g
+      d\<mu\><below|\<less\>|g\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>>\<infty\>
+    </equation>
+
+    Using [eqs: <reference|eq 20.575.240>] and ]theorem: <reference|non
+    negative integral scalar product, sum inequality>] we have
+    <math|\<forall\>n\<in\>\<bbb-N\>> that
+
+    <\equation>
+      <label|eq 20.578.240><big|int><rsup|+><around*|\||\<cal-X\><rsub|X\\N>\<cdot\>f<rsub|n>|\|>d\<mu\>\<leqslant\><big|int><rsup|+><around*|(|\<cal-X\><rsub|X\\N>\<cdot\>g|)>d\<mu\>\<equallim\><rsub|<text|[theorem:
+      <reference|measure integral extension>]>><big|int><around*|(|\<cal-X\><rsub|X\\N>\<cdot\>g|)>d\<mu\><below|\<less\>|<text|[eq:
+      <reference|eq 20.577.240>]>>\<infty\>
+    </equation>
+
+    From the above we have using [theorem: <reference|measure integral
+    extension>] that <math|<around*|\||\<cal-X\><rsub|X\\A>\<cdot\>f<rsub|n>|\|>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]><text|>>,
+    hence using [theorem: <reference|measure integral alternative>] and
+    <math|\<cal-X\><rsub|X\\A>\<cdot\>f<rsub|n><below|\<in\>|<text|[eq:
+    <reference|eq 20.573.240>]>>\<cal-M\><around*|[|X,\<cal-A\>|]>> <math|>it
+    follows that <math|\<cal-X\><rsub|X\\N>\<cdot\>f<rsub|n>\<in\>\<cal-L\><around*|[|X,\<cal-A\>|]>>.
+    As <math|f<rsub|n>=\<cal-X\><rsub|X\\N>\<cdot\>f> <math|\<mu\>>-a.e. [see
+    eq: <reference|eq 20.570.240>], <math|f<rsub|n>,\<cal-X\><rsub|X\\N>\<cdot\>f\<in\>\<cal-M\><around*|[|X,\<cal-A\>|]>>
+    we have from \ [theorem: <reference|measure integral and a.e. equalitiy>]
+    that <math|f<rsub|n>\<in\>\<cal-L\><around*|[|X\<less\>\<cal-A\>,\<mu\>|]>>
+    and <math|<big|int>f<rsub|n>d\<mu\>=<big|int><around*|(|\<cal-X\><rsub|X\\N>\<cdot\>f|)>d\<mu\>>.
+    Summarized we have\ 
+
+    <\equation>
+      <label|eq 20.579.240>\<forall\>n\<in\>\<bbb-N\><text| that
+      >f<rsub|n>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]><text| and
+      ><big|int>f<rsub|n>d\<mu\>=<big|int><around*|(|\<cal-X\><rsub|A>\<cdot\>f<rsub|n>|)>d\<mu\>
+    </equation>
+
+    Let <math|x\<in\>X,n\<in\>\<bbb-N\>>. As by [eq: <reference|eq
+    20.574.240>] <math|<below|lim|n\<rightarrow\>\<infty\>><around*|(|\<cal-X\><rsub|X\\N>\<cdot\>f<rsub|n>|)>=<around*|(|\<cal-X\><rsub|X\\N>\<cdot\>f|)><around*|(|x|)>>
+    it follows from [corollary: <reference|extended limit absolute value>]
+    that\ 
+
+    <\equation>
+      <label|eq 20.580.240><around*|\||\<cal-X\><rsub|X\\N>\<cdot\>f|\|><around*|(|x|)>=<below|lim|n\<rightarrow\>\<infty\>><around*|\||<around*|(|\<cal-X\><rsub|X\\N>\<cdot\>f<rsub|n>|)><around*|(|x|)>|\|>=<below|lim|n\<rightarrow\>\<infty\>><around*|\||\<cal-X\><rsub|X\\N>\<cdot\>f<rsub|n>|\|><around*|(|x|)>
+    </equation>
+
+    As by [eq: <reference|eq 20.575.240>] we have
+    <math|<around*|\||\<cal-X\><rsub|X\\N>\<cdot\>f|\|><around*|(|x|)>\<leqslant\><around*|(|\<cal-X\><rsub|X\\N>\<cdot\>g|)><around*|(|x|)>>
+    we have using [theorem: <reference|extended limit properties>] that\ 
+
+    <\equation>
+      <label|eq 20.581.240><below|lim|n\<rightarrow\>\<infty\>><around*|\||\<cal-X\><rsub|X\\N>\<cdot\>f<rsub|n>|\|><around*|(|x|)>\<leqslant\><around*|(|\<cal-X\><rsub|X\\N>\<cdot\>g|)><around*|(|x|)><below|\<less\>|<text|[eq:
+      <reference|eq 20.574.240>]>>\<infty\>
+    </equation>
+
+    which after substituting in [eq: <reference|eq 20.580.240>] yields\ 
+
+    <\equation>
+      <label|eq 20.582.240><around*|\||\<cal-X\><rsub|X\\N>\<cdot\>f|\|><around*|(|x|)>\<leqslant\><around*|(|\<cal-X\><rsub|X\\N>\<cdot\>g|)><around*|(|x|)>\<less\>\<infty\>
+    </equation>
+
+    As <math|<around*|\||\<cal-X\><rsub|X\\N>\<cdot\>f|\|>,><math|<around*|\||\<cal-X\><rsub|X\\N>\<cdot\>g|\|>\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>|]>>
+    [see eqs: <reference|eq 20.572.240>, <reference|eq 20.573.240>] we can
+    use [theorem: <reference|non negative integral scalar product, sum
+    inequality>] resulting in \ <math|<big|int><rsup|+><around*|\||\<cal-X\><rsub|X\\N>\<cdot\>f|\|>d\<mu\>\<leqslant\><big|int><rsup|+><around*|(|\<cal-X\><rsub|X\\N>\<cdot\>g|)>d\<mu\><math|<below|\<less\>|<text|[eq:
+    <reference|eq 20.577.240>]>>\<infty\>>> which by [theorem:
+    <reference|measure integral extension>] proves that
+    <math|<around*|\||\<cal-X\><rsub|X\\N>\<cdot\>f|\|>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>>.
+    As further <math|f=\<cal-X\><rsub|X\\N>\<cdot\>f> <math|\<mu\>>-a.e. we
+    can use [theorem: <reference|measure integral and a.e. equalitiy>] to get
+
+    <\equation>
+      <label|eq 20.583.240>f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]><text|
+      and ><big|int>f d\<mu\>=<big|int><around*|(|\<cal-X\><rsub|X\\N>\<cdot\>f|)>d\<mu\>
+    </equation>
+
+    Further from [eq: <reference|eq 20.582.240>[ we have\ 
+
+    <\equation*>
+      <around*|(|\<cal-X\><rsub|X\\N>\<cdot\>f|)><around*|(|X|)>\<subseteq\>\<bbb-R\>
+    </equation*>
+
+    \;
+  </proof>
+
+  \;
+
+  \;
+
+  \;
+
   \;
 </body>
 
@@ -5839,9 +6041,25 @@
     <associate|eq 20.325.224|<tuple|158|59>>
     <associate|eq 20.326\<point\>224|<tuple|159|59>>
     <associate|eq 20.422.227|<tuple|160|60>>
-    <associate|eq 20.443.229|<tuple|161|?>>
-    <associate|eq 20.444.229|<tuple|162|?>>
-    <associate|eq 20.445.229|<tuple|163|?>>
+    <associate|eq 20.443.229|<tuple|161|60>>
+    <associate|eq 20.444.229|<tuple|162|60>>
+    <associate|eq 20.445.229|<tuple|163|61>>
+    <associate|eq 20.568.240|<tuple|164|?>>
+    <associate|eq 20.569.240|<tuple|165|?>>
+    <associate|eq 20.570.240|<tuple|166|?>>
+    <associate|eq 20.571.240|<tuple|167|?>>
+    <associate|eq 20.572.240|<tuple|168|?>>
+    <associate|eq 20.573.240|<tuple|169|?>>
+    <associate|eq 20.574.240|<tuple|170|?>>
+    <associate|eq 20.575.240|<tuple|171|?>>
+    <associate|eq 20.576.240|<tuple|172|?>>
+    <associate|eq 20.577.240|<tuple|173|?>>
+    <associate|eq 20.578.240|<tuple|174|?>>
+    <associate|eq 20.579.240|<tuple|175|?>>
+    <associate|eq 20.580.240|<tuple|176|?>>
+    <associate|eq 20.581.240|<tuple|177|?>>
+    <associate|eq 20.582.240|<tuple|178|?>>
+    <associate|eq 20.583.240|<tuple|179|?>>
     <associate|lemma 14.360.158|<tuple|10|10>>
     <associate|lemma 14.364.159|<tuple|14|13>>
     <associate|lemma 16.104.194|<tuple|23|23>>
@@ -5877,7 +6095,7 @@
     <associate|series absolute sum over a countable set|<tuple|6|8>>
     <associate|series distributivity|<tuple|16|17>>
     <associate|series lemma 14.342|<tuple|3|3>>
-    <associate|simple measurable (1)|<tuple|49|?>>
+    <associate|simple measurable (1)|<tuple|49|60>>
   </collection>
 </references>
 
