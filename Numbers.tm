@@ -8617,7 +8617,7 @@
     is defined as follows
 
     <\enumerate>
-      <item><math|\<bbb-C\>=\<bbb-R\>\<times\>\<bbb-R\>=<around*|{|<around*|(|x,y|)>\|x,y\<in\>\<bbb-R\>|}>>
+      <item><math|\<bbb-C\>=\<bbb-R\><rsup|2>=\<bbb-R\>\<cdot\>\<bbb-R\>=<around*|{|<around*|(|x,y|)>\|x,y\<in\>\<bbb-R\>|}>>
 
       <item><math|+:\<bbb-C\>\<times\>\<bbb-C\>\<rightarrow\>\<bbb-C\>> where
       <math|<around*|(|x,y|)>+<around*|(|x<rprime|'>,y<rprime|'>|)>=<around*|(|x+x<rprime|'>,y+y<rprime|'>|)>>
@@ -14308,7 +14308,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|6>
-    <associate|page-first|213>
+    <associate|page-first|161>
     <associate|par-first|0tab>
     <associate|project-flag|false>
     <associate|section-nr|3>

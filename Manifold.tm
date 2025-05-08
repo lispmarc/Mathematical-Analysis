@@ -41,6 +41,8 @@
 
   <\enumerate>
     <item>Spell check started/Finished
+
+    <item>Rewrite this to use <math|\<bbb-R\><rsup|2>=\<bbb-R\>\<cdot\>\<bbb-R\>>
   </enumerate>
 
   <section|DirectSum.tm>
@@ -114,9 +116,9 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|20>
-    <associate|page-first|1437>
-    <associate|section-nr|4>
-    <associate|subsection-nr|4>
+    <associate|page-first|1143>
+    <associate|section-nr|6>
+    <associate|subsection-nr|5>
   </collection>
 </initial>
 
