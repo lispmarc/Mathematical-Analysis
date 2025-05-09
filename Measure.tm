@@ -28558,6 +28558,8 @@
 
   <subsection|Measure integral>
 
+  <subsubsection|Definition of the measure integral>
+
   We extend now the integral <math|<big|int><rsup|+>> of non negative
   measurable functions to the measure integral <math|<big|int>> of measurable
   functions. To do this we write a measurable ffunction <math|f> as the
@@ -29455,12 +29457,11 @@
   <\theorem>
     <label|measure integral properties>Let
     <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a measure
-    space and <math|f,g\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>> with
-    <math|f<around*|(|X|)>\<subseteq\>\<bbb-R\>\<wedge\>g<around*|(|X|)>\<subseteq\>\<bbb-R\>>
-    then we have:\ 
+    space, <math|f<around*|(|X|)>,g<around*|(|X|)>\<subseteq\>\<bbb-R\>> and
+    <math|f,g\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>> then we have:\ 
 
     <\enumerate>
-      <item><math|\<forall\>\<alpha\>\<less\>\<bbb-R\>>
+      <item><math|\<forall\>\<alpha\>\<in\>\<bbb-R\>>
       <math|\<alpha\>\<cdot\>f\<in\>\<cal-L\><around*|[|X,\<cal-A\>.,\<mu\>|]>>
       and <math|<big|int><around*|(|\<alpha\>\<cdot\>f|)>d\<mu\>=\<alpha\>\<cdot\><big|int>f
       d\<mu\>>.
@@ -29469,7 +29470,7 @@
       <math|<big|int><around*|(|f+g|)>d\<mu\>=<big|int>f d\<mu\>+<big|int>g
       d\<mu\>>
 
-      <item>If <math|\<forall\>x\<in\>X> <math|f<around*|(|x|)>\<leqslant\>g<around*|(|x|)>>
+      <item><math|\<forall\>x\<in\>X> <math|f<around*|(|x|)>\<leqslant\>g<around*|(|x|)>>
       then <math|<big|int>f d\<mu\>\<leqslant\><big|int>g d\<mu\>>
     </enumerate>
   </theorem>
@@ -29479,14 +29480,13 @@
 
     <\enumerate>
       <item>As <math|f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>> we
-      have that <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-R\>|]>>
-      and <math|<big|int><rsup|+>f<rsup|+>
-      d\<mu\>,<big|int><rsup|+>f<rsup|->d\<mu\>\<in\><around*|[|0,\<infty\>|[>>.
+      have that <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>|]>> and
+      <math|<big|int><rsup|+>f<rsup|+> d\<mu\>,<big|int><rsup|+>f<rsup|->d\<mu\>\<in\><around*|[|0,\<infty\>|[>>.
       Using [theorem: <reference|measurable function product with scalar>] we
       have that\ 
 
       <\equation>
-        <label|eq 20.524.232>\<alpha\>\<cdot\>f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-R\>|]>
+        <label|eq 20.524.232>\<alpha\>\<cdot\>f\<in\>\<cal-M\><around*|[|X,\<cal-A\>|]>
       </equation>
 
       Consider the following cases for <math|\<alpha\>>\ 
@@ -29601,19 +29601,20 @@
         </eqnarray*>
       </description>
 
-      <item>As <math|f,g\<in\>\<cal-L\><around*|[|X,\<cal-A\>.\<mu\>|]>> we
-      have that\ 
+      <item>As <math|f,g\<in\>\<cal-L\><around*|[|X,\<cal-A\>.\<mu\>|]>> and
+      <math|f<around*|(|X|)>,g<around*|(|X|)>\<subseteq\>\<bbb-R\>> we have
+      that\ 
 
       <\equation*>
-        f,g\<in\>\<cal-M\><around*|[|X,\<cal-A\>|]><text|
+        f+g<text| is well defined, >f,g\<in\>\<cal-M\><around*|[|X,\<cal-A\>|]><text|
         and><big|int><rsup|+>f<rsup|+>d\<mu\>,<big|int><rsup|+>f<rsup|->d\<mu\>,<big|int><rsup|+>g<rsup|+>d\<mu\>,<big|int><rsup|+>g<rsup|-1>d\<mu\>
       </equation*>
 
-      Using [[theorem: <reference|measurable function sum (finite)>] it
+      Using [theorem: <reference|measurable function sum (finite)>] it
       follows that\ 
 
       <\equation*>
-        f+g\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<mu\>|]>
+        f+g\<in\>\<cal-M\><around*|[|X,\<cal-A\>|]>
       </equation*>
 
       Further we have by [theorem: <reference|measure integral f+ f-
@@ -29667,7 +29668,8 @@
         d\<mu\>+<big|int>g d\<mu\>>>>>
       </eqnarray*>
 
-      <item>As <math|f,g\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>> and
+      <item>As <math|f,g\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>>,
+      <math|f<around*|(|X|)>,g<around*|(|X|)>\<subseteq\>\<bbb-R\>> and
       <math|-1\<in\>\<bbb-R\>> we have by (1) that
       <math|<around*|(|-1|)>\<cdot\>g\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>>,
       hence by (1) it follows that
@@ -29690,7 +29692,7 @@
         d\<mu\>>|<cell|=>|<cell|<big|int>g
         d\<mu\>+<around*|(|-1|)>\<cdot\><big|int>f
         d\<mu\>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|1|)>>>|<cell|<big|int>g
-        d\<mu\>+<big|int><around*|(|<around*|(|-1|)>\<cdot\>f|)>d\<mu\>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|2|)>>>|<cell|<big|int><around*|(|g+<around*|(|-1|)>\<cdot\>f|)>d\<mu\>>>|<row|<cell|>|<cell|=>|<cell|<big|int><around*|(|g-f|)>d\<mu\>>>|<row|<cell|>|<cell|<below|\<geqslant\>|<text|[eq:
+        d\<mu\>+<big|int><around*|(|<around*|(|-1|)>\<cdot\>f|)>d\<mu\>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|2|)>>>|<cell|<big|int><around*|(|g+<around*|(|-1|)>\<cdot\>f|)>d\<mu\>>>|<row|<cell|>|<cell|=>|<cell|<big|int><around*|(|g-f|)>d\<mu\>>>|<row|<cell|>|<cell|<below|\<geqslant\>|<text|[theorem
         <reference|eq 20.533.232>]>>>|<cell|0>>>>
       </eqnarray*>
 
@@ -29707,15 +29709,21 @@
   <\theorem>
     <label|measure integral alternative>Let
     <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a measure
-    space and <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>|]>> then\ 
+    space and <math|f:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>> a
+    function then\ 
 
     <\equation*>
       f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]><text|
-      >\<Leftrightarrow\><text| ><around*|\||f|\|>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]><text|>
+      >\<Rightarrow\><text| ><around*|\||f|\|>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]><text|>
     </equation*>
 
-    Further if <math|f> or <math|<around*|\||f|\|>> is
-    <math|\<mu\>>-integrable then
+    <\equation*>
+      f\<in\>\<cal-M\><rsup|><around*|[|X,\<cal-A\>|]><text| and
+      ><big|int><rsup|+><around*|\||f|\|>d\<mu\>\<less\>\<infty\>\<Rightarrow\><text|
+      >f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>
+    </equation*>
+
+    Further if <math|f> is <math|\<mu\>>-integrable then
 
     <\equation*>
       <around*|\||<big|int>f d\<mu\>|\|>\<leqslant\><big|int><around*|\||f|\|>d\<mu\>
@@ -29725,19 +29733,29 @@
   </theorem>
 
   <\proof>
-    First we prove the equivalence:\ 
+    We prove this in 3 steps:\ 
 
-    <\description>
-      <item*|<math|\<Rightarrow\>>>As <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>|]>>
-      we have by [theorem: <reference|measure integral f+ f- are measurable>]
-      that <math|f<rsup|+>,f<rsup|->\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>|]>>.
-      If <math|f> is <math|\<mu\>>-integrable then
-      <math|<big|int><rsup|+>f<rsup|+>d\<mu\>\<less\>\<infty\>> and
-      <math|<big|int><rsup|+>f<rsup|-> d\<mu\>\<less\>\<infty\>> so that by
-      [theorem: <reference|measure integral extension>]
-      \ <math|f<rsup|+><infix-and>f<rsup|->> are <math|\<mu\>>-integrable
-      with <math|<big|int><rsup|+>f<rsup|+>d\<mu\>=<big|int>f<rsup|+>
-      d\<mu\>> and <math|<big|int><rsup|+>f<rsup|->d\<mu\>=<big|int>f<rsup|->d\<mu\>>.
+    <\enumerate>
+      <item>Assume that <math|f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>>
+      then by definition\ 
+
+      <\equation>
+        <label|eq 20.541.243>f\<in\>\<cal-M\><around*|[|X,\<cal-A\>|]><text|
+        and ><big|int><rsup|+>f<rsup|+> d\<mu\>\<less\>\<infty\>\<wedge\><big|int><rsup|+>f<rsup|->d\<mu\>\<less\>\<infty\>
+      </equation>
+
+      Using \ [theorem: <reference|measure integral f+ f- are measurable>] it
+      follows then that\ 
+
+      <\equation>
+        <label|eq 20.542.243>f<rsup|+>,f<rsup|->\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>|]>
+      </equation>
+
+      So using \ [theorem: <reference|measure integral extension>] on [eqs:
+      <reference|eq 20.541.243>, <reference|eq 20.542.243>]
+      <math|f<rsup|+><infix-and>f<rsup|->> are <math|\<mu\>>-integrable with
+      <math|<rigid|<big|int><rsup|+>f<rsup|+>d\<mu\>=<big|int>f<rsup|+>
+      d\<mu\>>> and <math|<big|int><rsup|+>f<rsup|->d\<mu\>=<big|int>f<rsup|->d\<mu\>>.
       As <math|<around*|\||f|\|>=f<rsup|+>+f<rsup|->> it follows from
       [theorem: <reference|measure integral properties>] that that
 
@@ -29745,37 +29763,45 @@
         <around*|\||f|\|>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>
       </equation*>
 
-      <item*|<math|\<Leftarrow\>>>If <math|<around*|\||f|\|>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>>
-      then as <math|<around*|\||f|\|><around*|(|X|)>\<subseteq\><around*|[|0,\<infty\>|]>>
-      we have by [theorem: <reference|measure integral extension>] that\ 
-
-      <\equation>
-        <label|eq 20.534.232><around*|\||f|\|>\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>|]><text|
-        and ><big|int><around*|\||f|\|>d\<mu\>=<big|int><rsup|+><around*|\||f|\|>d\<mu\>\<less\>\<infty\>
-      </equation>
-
-      Let <math|x\<in\>X> then by [theorem: <reference|measure integral f+ f-
-      properties>] <math|f<rsup|+><around*|(|x|)>\<leqslant\><around*|\||f|\|><around*|(|x|)>\<exterior\>f<rsup|-><around*|(|x|)>\<leqslant\><around*|\||f|\|><around*|(|x|)>>
-      so that by [theorem: <reference|non negative integral scalar product,
-      sum inequality>] that <math|<big|int><rsup|+>f<rsup|+>
-      d\<mu\>\<leqslant\><big|int><around*|\||f|\|>d\<mu\>\<wedge\><big|int><rsup|+>f<rsup|->
-      d\<mu\>\<leqslant\><big|int><rsup|+><around*|\||f|\|>d\<mu\>>. Hence\ 
+      To summarize\ 
 
       <\equation*>
-        f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>
+        f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]><text|
+        >\<Rightarrow\><text| ><around*|\||f|\|>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>
       </equation*>
-    </description>
 
-    Finally\ 
+      <item>Assume that <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>|]>> and
+      <math|<big|int><rsup|+><around*|\||f|\|>d\<mu\>\<less\>\<infty\>> then
+      using [theorem: <reference|measure integral f+ f- are measurable>] it
+      follows that <math|<rigid|<around*|\||f|\|>\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>|]>>>.
+      Let <math|x\<in\>X> then by [theorem: <reference|measure integral f+ f-
+      properties>] <math|f<rsup|+><around*|(|x|)>\<leqslant\><around*|\||f<around*|(|x|)>|\|>=<around*|\||f|\|><around*|(|x|)>>
+      and <math|f<rsup|-><around*|(|x|)>\<leqslant\><around*|\||f<around*|(|x|)>|\|>=<around*|\||f|\|><around*|(|x|)>>
+      so that by [theorem: <reference|non negative integral scalar product,
+      sum inequality>] we have that <math|<big|int><rsup|+>f<rsup|+>d\<mu\>\<leqslant\><big|int><rsup|+><around*|\||f|\|>d\<mu\>\<less\>\<infty\><rsup|>>
+      and <math|<big|int><rsup|+>f<rsup|->d\<mu\>\<leqslant\><big|int><rsup|+><around*|\||f|\|>d\<mu\>\<less\>\<infty\>>.
+      Hence as we assumed that <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>|]>>
+      we have by definition that <math|f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>>.
+      Summarized we have\ 
 
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|<around*|\||<big|int>f
-      d\<mu\>|\|>>|<cell|=>|<cell|<around*|\||<big|int><rsup|+>f<rsup|+>d\<mu\>-<big|int><rsup|+>f<rsup|->d\<mu\>|\|>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\||<big|int><rsup|+>f<rsup|+>d\<mu\>|\|>+<around*|\||<big|int><rsup|+>f<rsup|->d\<mu\>|\|>>>|<row|<cell|>|<cell|\<equallim\>>|<cell|<big|int><rsup|+>f<rsup|+>d\<mu\>+<big|int><rsup|+>f<rsup|->d\<mu\>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|non negative integral scalar product, sum
-      inequality>]>>>|<cell|<big|int><rsup|+><around*|(|f<rsup|+>+g<rsup|->|)>d\<mu\>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-      <reference|measure integral f+ f- alternative>]>>>|<cell|<big|int><rsup|+><around*|\||f|\|>d\<mu\>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
-      <reference|eq 20.534.232>]>>>|<cell|<big|int><around*|\||f|\|>d\<mu\>>>>>
-    </eqnarray*>
+      <\equation*>
+        f\<in\>\<cal-M\><rsup|><around*|[|X,\<cal-A\>|]><text| and
+        ><big|int><rsup|+><around*|\||f|\|>d\<mu\>\<less\>\<infty\>\<Rightarrow\><text|
+        >f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>
+      </equation*>
+
+      <item>Finally\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\||<big|int>f
+        d\<mu\>|\|>>|<cell|=>|<cell|<around*|\||<big|int><rsup|+>f<rsup|+>d\<mu\>-<big|int><rsup|+>f<rsup|->d\<mu\>|\|>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\||<big|int><rsup|+>f<rsup|+>d\<mu\>|\|>+<around*|\||<big|int><rsup|+>f<rsup|->d\<mu\>|\|>>>|<row|<cell|>|<cell|\<equallim\>>|<cell|<big|int><rsup|+>f<rsup|+>d\<mu\>+<big|int><rsup|+>f<rsup|->d\<mu\>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|non negative integral scalar product, sum
+        inequality>]>>>|<cell|<big|int><rsup|+><around*|(|f<rsup|+>+g<rsup|->|)>d\<mu\>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|measure integral f+ f-
+        alternative>]>>>|<cell|<big|int><rsup|+><around*|\||f|\|>d\<mu\>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 20.534.232>]>>>|<cell|<big|int><around*|\||f|\|>d\<mu\>>>>>
+      </eqnarray*>
+    </enumerate>
   </proof>
 
   <\theorem>
@@ -29851,6 +29877,126 @@
       d\<mu\>=<big|int><rsup|+>f<rsup|+> d\<mu\>-<big|int><rsup|+>f<rsup|->d\<mu\>=<big|int><rsup|+>g<rsup|+>d\<mu\>-<big|int><rsup|+>g<rsup|->d\<mu\>=<big|int>g
       d\<mu\>
     </equation*>
+  </proof>
+
+  <\theorem>
+    <label|measure integral domination theorem>Let
+    <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a measure
+    space, <math|g\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>> with
+    <math|g<around*|(|X|)>\<subseteq\>\<bbb-R\>> and
+    <math|<rigid|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>|]>>> such that
+    <math|<around*|\||f|\|>\<leqslant\>g> <math|\<mu\>>-a.e. then
+    <math|f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>> and
+    <math|<big|int>f d\<mu\>\<leqslant\><big|int>g d\<mu\>>.
+  </theorem>
+
+  <\proof>
+    We prove this theorem in two stages:
+
+    <\enumerate>
+      <item>Assume that <math|\<forall\>x\<in\>X> we have
+      <math|<around*|\||f<around*|(|x|)>|\|>\<leqslant\>g<around*|(|x|)>>. As
+      <math|g\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<beta\>|]>> and
+      <math|g<around*|(|X|)>\<subseteq\><around*|[|0,\<infty\>|]>> it follows
+      from [theorem: <reference|measure integral extension>] that\ 
+
+      <\equation*>
+        g\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>|]><infix-and><big|int>g
+        d\<mu\>=<big|int><rsup|+>g d\<mu\>\<less\>\<infty\>
+      </equation*>
+
+      As <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>|]>> it follows from
+      [theorem: <reference|measure integral f+ f- are measurable>] that\ 
+
+      <\equation*>
+        f<rsup|+>,f<rsup|->\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>|]>
+      </equation*>
+
+      Let <math|x\<in\>X> then <math|f<rsup|+><around*|(|x|)><below|\<leqslant\>|<text|[theorem:
+      <reference|measure integral f+ f- properties>>><around*|\||f<around*|(|x|)>|\|>\<leqslant\>g<around*|(|x|)>>
+      and <math|f<rsup|-><around*|(|x|)><below|\<leqslant\>|<text|[theorem:
+      <reference|measure integral f+ f- properties>>><around*|\||f<around*|(|x|)>|\|>\<leqslant\>g<around*|(|x|)>>
+      so that by [theorem: <reference|non negative integral scalar product,
+      sum inequality>]
+
+      <\equation*>
+        <big|int><rsup|+>f<rsup|+>d\<mu\>\<leqslant\><big|int><rsup|+>g
+        d\<mu\>\<less\>\<infty\><text| and
+        ><big|int><rsup|+>f<rsup|->d\<mu\>\<leqslant\><big|int><rsup|+>g
+        d\<mu\>\<less\>\<infty\>
+      </equation*>
+
+      This proved that\ 
+
+      <\equation*>
+        f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>
+      </equation*>
+
+      As <math|\<forall\>x\<in\>X> <math|f<around*|(|x|)>\<leqslant\><around*|\||f<around*|(|x|)>|\|>\<leqslant\>g<around*|(|x|)><below|\<less\>|g<around*|(|X|)>\<subseteq\>\<bbb-R\>>\<infty\>>
+      we have <math|f<around*|(|X|)>\<subseteq\>\<bbb-R\>> and using
+      [theorem: <reference|measure integral properties>] that\ 
+
+      <\equation*>
+        <big|int>f d\<mu\>\<leqslant\><big|int>g d\<mu\>
+      </equation*>
+
+      <item>Assume that <math|<around*|\||f|\|>\<leqslant\>g>
+      <math|\<mu\>>-a.e. Then there exist a <math|N\<in\>\<cal-A\>> with
+      <math|\<mu\><around*|(|N|)>=0> such that\ 
+
+      <\equation*>
+        <around*|{|x\<in\>X\|\<neg\><around*|(|<around*|\||f<around*|(|x|)>|\|>\<leqslant\>g<around*|(|x|)>|)>|}>\<subseteq\>N
+      </equation*>
+
+      so that\ 
+
+      <\equation*>
+        \<forall\>x\<in\>X\\N<text| we have
+        ><around*|\||f<around*|(|x|)>|\|>\<leqslant\>g<around*|(|x|)>
+      </equation*>
+
+      Let <math|x\<in\>X> then we have either:
+
+      <\description>
+        <item*|<math|x\<in\>N>>Then <math|<around*|\||<around*|(|\<cal-X\><rsub|X\\N>\<cdot\>f|)>|\|><around*|(|x|)>=<around*|\||\<cal-X\><rsub|X\\N><around*|(|x|)>\<cdot\>f<around*|(|x|)>|\|>=<around*|\||0\<cdot\>f<around*|(|x|)>|\|>=0\<leqslant\>g<around*|(|x|)>>
+
+        <item*|<math|x\<in\>X\\N>>Then <math|<around*|\||<around*|(|\<cal-X\><rsub|X\\N>\<cdot\>f|)>|\|><around*|(|x|)>=<around*|\||\<cal-X\><rsub|X\\N><around*|(|x|)>\<cdot\>f<around*|(|x|)>|\|>=<around*|\||1\<cdot\>f<around*|(|x|)>|\|>=<around*|\||f<around*|(|x|)>|\|>\<leqslant\>g<around*|(|x|)>>
+      </description>
+
+      hence we have that
+
+      <\equation*>
+        \<forall\>x\<in\>X<text| that ><around*|\||\<cal-X\><rsub|X\\N>\<cdot\>f|\|>\<leqslant\>g<around*|(|x|)>
+      </equation*>
+
+      Further as <math|N\<in\>\<cal-A\>\<Rightarrow\>X\\N\<in\>\<cal-A\>> and
+      <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>|]>> it follows from
+      [theorem: <reference|measurable function charasteristic product>] that\ 
+
+      <\equation*>
+        \<cal-X\><rsub|X\\N>\<cdot\>f\<in\>\<cal-M\><around*|[|X,\<cal-A\>|]>
+      </equation*>
+
+      So all the conditions for (1) are satisfied and we have that\ 
+
+      <\equation*>
+        \<cal-X\><rsub|X\\A>\<cdot\>f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]><text|
+        and ><big|int><around*|(|\<cal-X\><rsub|X\\N>\<cdot\>f|)>d\<mu\>\<leqslant\><big|int>g
+        d\<mu\>
+      </equation*>
+
+      Now as <math|\<mu\><around*|(|N|)>=0> it follows from [theorem:
+      <reference|almost everywhere and characteristic>] that
+      <math|\<cal-X\><rsub|X\\A>\<cdot\>f=f<text| >\<mu\><text|-a.e.>>, using
+      then [theorem: <reference|measure integral and a.e. equalitiy>] it
+      follows that\ 
+
+      <\equation*>
+        f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]><text| and
+        ><big|int>f d\<mu\>=<big|int><around*|(|\<cal-X\><rsub|X\\N>\<cdot\>f|)>d\<mu\>\<leqslant\><big|int>g
+        d\<mu\>
+      </equation*>
+    </enumerate>
   </proof>
 
   <\theorem>
@@ -31248,7 +31394,9 @@
     </equation*>
   </proof>
 
-  <subsection|Integral of complex functions>
+  <subsection|Complex integration>
+
+  <subsubsection|Measurability of complex valued functions>
 
   If we want to develop a theory of integration of complex valued functions
   we need first to replace the measure space
@@ -31296,45 +31444,44 @@
   Once we have defined the measurable space we can define the set of all
   measurable functions to <math|\<bbb-C\>>.
 
-  TODO define <math|\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>>
-
   <\definition>
     <label|complex measurable function>Let
-    <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>> be a measurable space
-    then the set of all <math|\<cal-A\>,\<cal-B\><around*|[|\<bbb-C\>|]>>-measurable
-    function graphs is noted as <math|\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>>
-    so\ 
+    <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>> be a measurable space,
+    <math|A\<in\>\<cal-A\>> then the set of all
+    <math|\<cal-A\>,\<cal-B\><around*|[|\<bbb-C\>|]>>-measurable functions is
+    noted as <math|\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>> so\ 
 
     <\equation*>
-      \<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>=<around*|{|f\<in\>\<bbb-C\><rsup|X>\|f:X\<rightarrow\>\<bbb-C\><text|
+      \<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>=<around*|{|f\<in\>\<bbb-C\><rsup|A>\|f:X\<rightarrow\>\<bbb-C\><text|
       is >\<cal-A\>,\<cal-B\><around*|[|\<bbb-C\>|]><text|-measurable>|}>
     </equation*>
 
     <\note>
-      Sometimes we want to talk about <math|\<cal-M\><around*|[|X,\<cal-A\>|]>>
-      and <math|\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>> at the same
+      Sometimes we want to talk about <math|\<cal-M\><around*|[|A,\<cal-A\>|]>>
+      and <math|\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>> at the same
       time. In this case we use the notation
-      <math|\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-K\>|]>> where
-      <math|\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-K\>|]>> stands for either
-      <math|\<cal-M\><around*|[|X,\<cal-A\>|]>> or
-      <math|\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>>. Just like
+      <math|\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-K\>|]>> where
+      <math|\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-K\>|]>> stands for either
+      <math|\<cal-M\><around*|[|A,\<cal-A\>|]>> or
+      <math|\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>>. Just like
       <math|\<bbb-K\>> stands for either <math|\<bbb-R\>> or
       <math|\<bbb-C\>>.
     </note>
   </definition>
 
   The following general theorem will be usefull for a alternative definition
-  of <math|\<cal-M\><around*|[|X\<less\>\<cal-A\>,\<bbb-C\>|]>>.
+  of <math|\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>>.
 
   <\theorem>
     <label|complex measurable function condition>Let <math|n\<in\>\<bbb-N\>>,
-    <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>> be a measurable space
-    and <math|f:X\<rightarrow\>\<bbb-R\><rsup|n>> a function then\ 
+    <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>>,
+    <math|A\<in\>\<cal-A\>> be a measurable space and
+    <math|f:A\<rightarrow\>\<bbb-R\><rsup|n>> a function then\ 
 
     <\equation*>
       f<text| is >\<cal-A\>,\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]><text|-measurable
       >\<Leftrightarrow\><text| >\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
-      >f<rsub|i>=\<pi\><rsub|i>\<circ\>f:X\<rightarrow\>\<bbb-R\><text| is
+      >f<rsub|i>=\<pi\><rsub|i>\<circ\>f:A\<rightarrow\>\<bbb-R\><text| is
       >\<cal-A\><text|-measurable>
     </equation*>
   </theorem>
@@ -31406,8 +31553,9 @@
 
   <\theorem>
     <label|complex measurable function alternative>Let
-    <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>> be a measurable space
-    and <math|f:X\<rightarrow\>\<bbb-C\>> a function then we have\ 
+    <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>> be a measurable space,
+    <math|A\<in\>\<cal-A\>> and <math|f:A\<rightarrow\>\<bbb-C\>> a function
+    then we have\ 
 
     <\equation*>
       f<text| is >\<cal-A\>,\<cal-B\><around*|[|\<bbb-C\>|]><text|-measurable
@@ -31424,31 +31572,71 @@
   </proof>
 
   We have now similar properties for <math|\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>>
-  as for <math|\<cal-M\><around*|[|X,\<cal-A\>|]>>.
+  as for <math|\<cal-M\><around*|[|X,\<cal-A\>|]>>. First we define some
+  pointwise definitions:
+
+  <\definition>
+    Let <math|X> be a set then we define\ 
+
+    <\enumerate>
+      <item>If <math|\<alpha\>\<in\>\<bbb-C\>> and
+      <math|f:X\<rightarrow\>\<bbb-C\>> a function then
+      <math|\<alpha\>\<cdot\>f:X\<rightarrow\>\<bbb-C\>> is defined by
+      <math|<around*|(|\<alpha\>\<cdot\>f|)><around*|(|x|)>=\<alpha\>\<cdot\>f<around*|(|x|)>>
+
+      <item>If <math|f:X\<rightarrow\>\<bbb-C\>> is a function then
+      <math|<around*|\||f|\|>:X\<rightarrow\>\<bbb-R\>> is defined by
+      <math|<around*|\||f|\|><around*|(|x|)>=<around*|\||f<around*|(|x|)>|\|>>.
+
+      <item>If <math|f:X\<rightarrow\>\<bbb-C\>> and
+      <math|g:X\<rightarrow\>\<bbb-C\>> are functions then we define:\ 
+
+      <\enumerate>
+        <item><math|f+g:X\<rightarrow\>\<bbb-C\>> by
+        <math|<around*|(|f+g|)><around*|(|x|)>=f<around*|(|x|)>+g<around*|(|x|)>>
+
+        <item><math|f\<cdot\>g:X\<rightarrow\>\<bbb-C\>> by
+        <math|<around*|(|f\<cdot\>g|)><around*|(|x|)>=f<around*|(|x|)>\<cdot\>g<around*|(|x|)>>
+      </enumerate>
+
+      <item>If <math|n\<in\>\<bbb-N\>>, <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-C\><rsup|X>>
+      then <math|<big|sum><rsub|i=1><rsup|n>f<rsub|i>:X\<rightarrow\>\<bbb-C\><text|>>
+      is defined by <math|<around*|(|<big|sum><rsub|i=1><rsup|n>f<rsub|i>|)><around*|(|x|)>=<big|sum><rsub|i=1><rsup|n>f<rsub|i><around*|(|x|)>>
+
+      <item>If <math|<around*|{|f<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<bbb-C\><rsup|X>>
+      then
+
+      <\equation*>
+        <below|lim|i\<rightarrow\>\<infty\>>f<rsub|i>:<around*|{|x\<in\>X\|<below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|x|)>
+        <text| exist>|}>\<rightarrow\>\<bbb-C\><text| is defined by
+        ><around*|(|<below|lim|i\<rightarrow\>\<infty\>>f<rsub|i>|)><around*|(|x|)>=<below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|x|)>
+      </equation*>
+    </enumerate>
+  </definition>
 
   <\theorem>
     <label|complex measurable function properties>Let
-    <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>> be a measurable space
-    then we have\ 
+    <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>>,
+    <math|A\<in\>\<cal-A\>> be a measurable space then we have\ 
 
     <\enumerate>
-      <item><math|\<forall\>f,g\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>>
-      we have that <math|f+g\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>>.
+      <item><math|\<forall\>f,g\<in\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>>
+      we have that <math|f+g\<in\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>>.
 
-      <item>If <math|n\<in\>\<bbb-N\>>, <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>>
-      then <math|<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>>.
+      <item>If <math|n\<in\>\<bbb-N\>>, <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>>
+      then <math|<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<in\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>>.
 
       <item><math|\<forall\>\<alpha\>\<in\>\<bbb-C\>> and
-      <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>>we have that
-      <math|\<alpha\>\<cdot\>f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>>.
+      <math|f\<in\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>>we have that
+      <math|\<alpha\>\<cdot\>f\<in\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>>.
 
-      <item><math|\<forall\>f,g\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>>
-      we have <math|f\<cdot\>g\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>>.
+      <item><math|\<forall\>f,g\<in\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>>
+      we have <math|f\<cdot\>g\<in\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>>.
 
       <item>If <math|A\<in\>A> and <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>>
       then <math|\<cal-X\><rsub|A>\<cdot\>f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>>.
 
-      <item>If <math|<around*|{|f<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>>
+      <item>If <math|<around*|{|f<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>>
       and <math|D=<around*|{|x\<in\>X\|<below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|x|)><text|
       exist>|}>> then <math|D\<in\>\<cal-A\>> and
       <math|<rigid|<below|lim|i\<rightarrow\>\<infty\>>f<rsub|i>\<in\>\<cal-M\><around*|[|D,\<cal-A\>,\<bbb-C\>|]>>>.
@@ -31482,45 +31670,45 @@
 
       Using the above, [eq: <reference|eq 20.590.241>] and [theorem:
       <reference|measurable function sum (finite)>] we have that
-      <math|Re<around*|(|f+g|)>,Img<around*|(|f+g|)>\<in\>\<cal-M\><around*|[|X,\<cal-A\>|]>>
+      <math|Re<around*|(|f+g|)>,Img<around*|(|f+g|)>\<in\>\<cal-M\><around*|[|A,\<cal-A\>|]>>
       so that by the previous theorem [see theorem: <reference|complex
       measurable function alternative>] we have that\ 
 
       <\equation*>
-        f+g\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>
+        f+g\<in\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>
       </equation*>
 
       <item>This is easily proved by induction. So let
 
       <\equation*>
         \<cal-S\>=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|<text|If
-        ><around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]><text|
-        then ><big|sum><rsub|i=1><rsup|n>f<rsub|i>\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>|}>
+        ><around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]><text|
+        then ><big|sum><rsub|i=1><rsup|n>f<rsub|i>\<in\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>|}>
       </equation*>
 
       then we have:
 
       <\description>
         <item*|<math|1\<in\>\<cal-S\>>>If
-        <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1|}>>\<subseteq\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>>
-        then <math|<big|sum><rsub|i=1><rsup|1>f<rsub|i>=f<rsub|1>\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>>
+        <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1|}>>\<subseteq\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>>
+        then <math|<big|sum><rsub|i=1><rsup|1>f<rsub|i>=f<rsub|1>\<in\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>>
         which proves that <math|1\<in\>\<cal-S\>>.
 
         <item*|<math|n\<in\>\<cal-S\>\<Rightarrow\>n+1\<in\>\<cal-S\>>>then
-        if <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>>
-        we have as <math|<big|sum><rsub|i=1><rsup|n+1>f<rsub|i>=f<rsub|n+1>+<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>>
-        [as <math|f<rsub|n+1>\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>>,
+        if <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>>
+        we have as <math|<big|sum><rsub|i=1><rsup|n+1>f<rsub|i>=f<rsub|n+1>+<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<in\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>>
+        [as <math|f<rsub|n+1>\<in\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>>,
         <math|n\<in\>\<cal-S\>> and (1)]. So <math|n+1\<in\>\<cal-S\>>
       </description>
 
       induction proves then (2).
 
-      <item>As <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>.\<bbb-C\>|]>> we
+      <item>As <math|f\<in\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>> we
       have by the previous theorem [theorem: <reference|complex measurable
       function alternative>] that\ 
 
       <\equation>
-        <label|eq 20.591.241>Re<around*|(|f|)>,Img<around*|(|f|)>\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>
+        <label|eq 20.591.241>Re<around*|(|f|)>,Img<around*|(|f|)>\<in\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>
       </equation>
 
       Let <math|x\<in\>X> then\ 
@@ -31539,19 +31727,19 @@
       <reference|measurable function product with scalar>] we have that
 
       <\equation*>
-        Re<around*|(|\<alpha\>\<cdot\>f|)>,Img<around*|(|\<alpha\>\<cdot\>f|)>\<in\>\<cal-M\><around*|[|X,\<cal-A\>|]>
+        Re<around*|(|\<alpha\>\<cdot\>f|)>,Img<around*|(|\<alpha\>\<cdot\>f|)>\<in\>\<cal-M\><around*|[|A,\<cal-A\>|]>
       </equation*>
 
       which by [theorem: <reference|complex measurable function alternative>]
       proves\ 
 
       <\equation*>
-        \<alpha\>\<cdot\>f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>
+        \<alpha\>\<cdot\>f\<in\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>
       </equation*>
 
-      <item>As <math|f,g\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>>
+      <item>As <math|f,g\<in\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>>
       we have by [theorem: <reference|complex measurable function
-      alternative>] that <math|Ref<around*|(|f|)>,Ref<around*|(|g|)>,Img<around*|(|f|)>,<rigid|Img<around*|(|g|)>\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-R\>|]>>>.
+      alternative>] that <math|Ref<around*|(|f|)>,Ref<around*|(|g|)>,Img<around*|(|f|)>,<rigid|Img<around*|(|g|)>\<in\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-R\>|]>>>.
       Further
 
       <\eqnarray*>
@@ -31568,7 +31756,7 @@
       follows that\ 
 
       <\equation*>
-        Re<around*|(|f\<cdot\>g|)>,Img<around*|(|f\<cdot\>g|)>\<in\>\<cal-M\><around*|[|X,\<b-A\>|]>
+        Re<around*|(|f\<cdot\>g|)>,Img<around*|(|f\<cdot\>g|)>\<in\>\<cal-M\><around*|[|A,\<b-A\>|]>
       </equation*>
 
       which by [theorem: <reference|complex measurable function alternative>]
@@ -31602,23 +31790,24 @@
       hence using [theorem: <reference|complex measurable function
       alternative>] we have that <math|\<cal-X\><rsub|A>\<cdot\>f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>>.
 
-      <item>As <math|<around*|{|f<rsub|i>|}><rsub|i\<in\>\<bbb-N\><rsub|0>>\<subseteq\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>>
-      we have that
+      <item>As <math|<around*|{|f<rsub|i>|}><rsub|i\<in\>\<bbb-N\><rsub|0>>\<subseteq\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-C\>|]>>
+      we have by [theorem: <reference|complex measurable function
+      alternative>] that
 
       <\equation*>
-        \<forall\>i\<in\>\<bbb-N\><text| >Re<around*|(|f<rsub|i>|)>,Img<around*|(|f<rsub|i>|)>\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-R\>|]>
+        \<forall\>i\<in\>\<bbb-N\><text| >Re<around*|(|f<rsub|i>|)>,Img<around*|(|f<rsub|i>|)>\<in\>\<cal-M\><around*|[|A,\<cal-A\>,\<bbb-R\>|]>
       </equation*>
 
       Further using [theorem: <reference|limit complex numbers condition>] we
       have that <math|<below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|x|)>>
       exists if and only if <math|<below|lim|i\<rightarrow\>\<infty\>>Re<around*|(|f<rsub|i><around*|(|x|)>|)>>
       and <math|<below|lim|i\<rightarrow\>\<infty\>>Img<around*|(|f<rsub|i><around*|(|x|)>|)>>
-      exists. So if <math|D<rsub|1>=<around*|{|x\<in\>X\|<below|lim|i\<rightarrow\>\<infty\>>Re<around*|(|f<rsub|i><around*|(|x|)>|)>
-      exists|}>> and <rigid|<math|D<rsub|2>=<around*|{|x\<in\>X\|<below|lim|i\<rightarrow\>\<infty\>>Img<around*|(|f<rsub|i><around*|(|x|)>|)>
+      exists. So if <math|D<rsub|1>=<around*|{|x\<in\>A\|<below|lim|i\<rightarrow\>\<infty\>>Re<around*|(|f<rsub|i><around*|(|x|)>|)>
+      exists|}>> and <rigid|<math|D<rsub|2>=<around*|{|x\<in\>A\|<below|lim|i\<rightarrow\>\<infty\>>Img<around*|(|f<rsub|i><around*|(|x|)>|)>
       exists|}>>> then we have\ 
 
       <\equation*>
-        D=<around*|{|x\<in\>X\|<below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|x|)><text|
+        D=<around*|{|x\<in\>A\|<below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|x|)><text|
         exists>|}>=D<rsub|1><big|cap>D<rsub|2>
       </equation*>
 
@@ -31633,19 +31822,19 @@
       Further using [theorem: <reference|measurable function sup inf limit>]
       again we have that <math|<below|lim|i\<rightarrow\>\<infty\>>Re<around*|(|f<rsub|i>|)>\<in\>\<cal-M\><around*|[|D<rsub|1>,\<cal-A\>,\<bbb-R\>|]><text|
       and ><below|lim|i\<rightarrow\>\<infty\>>Img<around*|(|f<rsub|i>|)>\<in\>\<cal-M\><around*|[|D|]>>
-      which as <math|D\<subseteq\>D<rsub|1>,D<rsub|2>> proves by
-      <reference|measurable function and restriction> that
+      which as <math|D\<subseteq\>D<rsub|1>,D<rsub|2>> proves by [theorem:
+      <reference|measurable function restriction>] that
 
       <\equation*>
         <around*|(|<below|lim|i\<rightarrow\>\<infty\>>Re<around*|(|f<rsub|i>|)>|)><rsub|\|D>,<around*|(|<below|lim|i\<rightarrow\>\<infty\>>Img<around*|(|f<rsub|i>|)>|)><rsub|\|D>\<in\>\<cal-M\><around*|[|D,\<cal-A\>,\<bbb-C\>|]>.
       </equation*>
 
-      Further <math|\<forall\>x\<in\>D> we have by <reference|limit of
-      complex numbers>
+      Further <math|\<forall\>x\<in\>D> we have by [theorem: <reference|limit
+      complex numbers condition>]
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<around*|(|<below|lim|n\<rightarrow\>\<infty\>>Re<around*|(|f<rsub|n>|)>|)><rsub|\|D><around*|(|x|)>+i\<cdot\><around*|(|<below|lim|n\<rightarrow\>\<infty\>>Img<around*|(|f<rsub|n>|)>|)><rsub|\|D>>|<cell|=>|<cell|<below|lim|n\<rightarrow\>\<infty\>>Re<around*|(|f<rsub|n><around*|(|x|)>|)>+i\<cdot\><below|lim|n\<rightarrow\>\<infty\>>Img<around*|(|f<rsub|n><around*|(|x|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|<reference|limit
-        of complex numbers>>>>|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|Re<around*|(|f<rsub|n><around*|(|x|)>|)>+i\<cdot\>Img<around*|(|f<rsub|n><around*|(|x|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<below|lim|n\<rightarrow\>\<infty\>>f<rsub|n><around*|(|x|)>>>>>
+        <tformat|<table|<row|<cell|<around*|(|<around*|(|<below|lim|n\<rightarrow\>\<infty\>>Re<around*|(|f<rsub|n>|)>|)><rsub|\|D>+i\<cdot\><around*|(|<below|lim|n\<rightarrow\>\<infty\>>Img<around*|(|f<rsub|n>|)>|)><rsub|\|D>|)><around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<below|lim|n\<rightarrow\>\<infty\>>Re<around*|(|f<rsub|n>|)>|)><rsub|\|D><around*|(|x|)>+i\<cdot\><around*|(|<below|lim|n\<rightarrow\>\<infty\>>Img<around*|(|f<rsub|n>|)>|)><rsub|\|D><around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<below|lim|n\<rightarrow\>\<infty\>>Re<around*|(|f<rsub|n>|)>|)><around*|(|x|)>+i\<cdot\><around*|(|<below|lim|n\<rightarrow\>\<infty\>>Img<around*|(|f<rsub|n>|)>|)><around*|(|x|)>>|<cell|>|<cell|>>|<row|<cell|<below|lim|n\<rightarrow\>\<infty\>>Re<around*|(|f<rsub|n><around*|(|x|)>|)>+i\<cdot\><below|lim|n\<rightarrow\>\<infty\>>Img<around*|(|f<rsub|n><around*|(|x|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|limit complex numbers condition>]>>>|<cell|>>|<row|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|Re<around*|(|f<rsub|n><around*|(|x|)>|)>+i\<cdot\>Img<around*|(|f<rsub|n><around*|(|x|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<below|lim|n\<rightarrow\>\<infty\>>f<rsub|n><around*|(|x|)>>|<cell|>|<cell|>>>>
       </eqnarray*>
 
       proving that <math|<below|lim|n\<rightarrow\>\<infty\>>f<rsub|n>=<around*|(|<below|lim|n\<rightarrow\>\<infty\>>Re<around*|(|F<rsub|n>|)>|)><rsub|\|D>+i\<cdot\><around*|(|<below|lim|n\<rightarrow\>\<infty\>>Img<around*|(|f<rsub|n>|)>|)><rsub|\|D>>.
@@ -31655,11 +31844,259 @@
         <below|lim|n\<rightarrow\>\<infty\>>f<rsub|n>\<in\>\<cal-M\><around*|[|D,\<cal-A\>,\<bbb-C\>|]>
       </equation*>
     </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|complex measurable function absolute value>Let
+    <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>> be a measurable space,
+    <math|A\<in\>\<Alpha\>> and <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>>
+    then
+
+    <\equation*>
+      <around*|\||f|\|>\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>|]>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    As <math|<around*|\|||\|>:\<bbb-C\>\<rightarrow\>\<bbb-R\>> is continuous
+    [see theorem: <reference|continuity norm is uniform continuous>] we have
+    by [theorem: <reference|measurable function and continuity>] that the
+    function <math|<around*|\|||\|>> is <math|\<cal-B\><around*|[|\<bbb-C\>|]>,\<cal-B\><around*|[|\<bbb-R\>|]>>-measurable.
+    As <math|\<forall\>x\<in\>A> we have <math|<around*|(|<around*|\|||\|>\<circ\>f|)><around*|(|x=<around*|\|||\|><around*|(|f<around*|(|x|)>|)>|)>=<around*|\||f<around*|(|x|)>|\|>=<around*|\||f|\|><around*|(|x|)>>
+    it follows that <math|<around*|\||f|\|>=<around*|\|||\|>\<circ\>f>. So
+    using [theorem: <reference|measurable function composition>] it follows
+    that <math|<around*|\||f|\|>> is <math|\<cal-A\>,\<cal-B\><around*|[|\<bbb-R\>|]>>-measurable
+    or\ 
+
+    <\equation*>
+      <around*|\||f|\|>\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>|]>
+    </equation*>
+  </proof>
+
+  <subsubsection|Complex Measure Integral>
+
+  We can now define the integral of complex valued functions based on the
+  integrals of its real and imaginair components of these functions.
+
+  <\definition>
+    <label|complex integral><index|complex
+    integral><index|<math|<big|int><rsup|\<bbb-C\>>f d\<mu\>>>Let
+    <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a measure
+    space and <math|f:X\<rightarrow\>\<bbb-C\>> a function then\ 
+
+    <\equation*>
+      f<text| is >\<mu\><text|-complex integrable if
+      >Re<around*|(|f|)>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>\<wedge\>Img<around*|(|f|)>\<in\>\<cal-L\><around*|[|X,\<cal-A\>.\<mu\>|]>|]>
+    </equation*>
+
+    and the complex integral of <math|f> noted as
+    <math|<big|int><rsup|\<bbb-C\>>f d\<mu\>> is defined by\ 
+
+    <\equation*>
+      <big|int><rsup|\<bbb-C\>>f d\<mu\>=<big|int>Re<around*|(|f|)>d\<mu\>+i\<cdot\><big|int>Img<around*|(|f|)>d\<mu\>
+    </equation*>
+
+    The set of all complex integrable functions is noted as
+    <math|\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>> hence\ 
+
+    <\equation*>
+      \<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>=<around*|{|f\<in\>\<bbb-C\><rsup|X>\|f:X\<rightarrow\>\<bbb-C\><text|
+      is >\<mu\><text|-complex integrable>|}>
+    </equation*>
+  </definition>
+
+  The following shows that the complex integral is a extension of the measure
+  integral.
+
+  <\theorem>
+    Let <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a
+    measure space then
+
+    <\equation*>
+      \<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>\<subseteq\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      \<forall\>f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]><text| we
+      have that ><big|int><rsup|\<bbb-C\>>f d\<mu\>=<big|int>f d\<mu\>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Let <math|f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>> then
+    <math|f<around*|(|X|)>\<subseteq\>\<bbb-R\>>. Now for the function
+    <math|f:X\<rightarrow\>\<bbb-C\>> we have as
+    <math|f<around*|(|X|)>\<subseteq\>\<bbb-R\>> that
+    <math|\<forall\>x\<in\>X> <math|Re<around*|(|f|)><around*|(|x|)>=Re<around*|(|f<around*|(|x|)>|)>=f<around*|(|x|)>>
+    and <math|Img<around*|(|f|)><around*|(|x|)>=Img<around*|(|f<around*|(|x|)>|)>=0=C<rsub|0><around*|(|x|)>>.
+    Hence we have\ 
+
+    <\equation>
+      <label|eq 20.592.241>Re<around*|(|f|)>=f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]><text|
+      and >Img<around*|(|f|)>=C<rsub|0><below|\<in\>|<text|[theorem:
+      <reference|measure integral of almost zero function is
+      zero>]>>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>
+    </equation>
+
+    which proves that <math|f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>>.
+    So\ 
+
+    <\equation*>
+      \<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>\<subseteq\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>
+    </equation*>
+
+    Further\ 
+
+    <\equation*>
+      <big|int><rsup|\<bbb-C\>>f d\<mu\>=<big|int>Re<around*|(|f|)>d\<mu\>+<big|int>Img<around*|(|f|)>d\<mu\>\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.592.241>]>><big|int>f
+      d\<mu\>+<big|int>C<rsub|0>d\<mu\>\<equallim\><rsub|<text|[theorem:
+      <reference|measure integral of almost zero function is
+      zero>]>><big|int>f d\<mu\>
+    </equation*>
+  </proof>
+
+  We have the following equivalent definition of <math|\<mu\>>-complex
+  integrable functions:\ 
+
+  <\theorem>
+    <label|complex integral alternative>Let
+    <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a measure
+    space and <math|f:X\<rightarrow\>\<bbb-C\>> a complex valued function
+    then\ 
+
+    <\equation*>
+      f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]><text|
+      >\<Leftrightarrow\><text| >f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]><text|
+      and ><around*|\||f|\|>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>
+    </equation*>
+
+    Further if <math|f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>>
+    or <math|<around*|\||f|\|>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>>
+    then we have\ 
+
+    <\equation*>
+      <around*|\||<big|int><rsup|\<bbb-C\>>f
+      d\<mu\>|\|>\<leqslant\><big|int><rsup|><around*|\||f|\|>d\<mu\>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>As <math|f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>>
+      we have that <math|Re<around*|(|f|)>,Img<around*|(|f|)>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>>
+      so that <math|Re<around*|(|f|)>,Img<around*|(|f|)>\<in\>\<cal-M\><around*|[|X,\<cal-A\>|]>>.
+      Using then <math|>[theorem: <reference|complex measurable function
+      alternative>] it follows that
+
+      <\equation>
+        <label|eq 20.594.244>f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>
+      </equation>
+
+      and using [theorem: <reference|complex measurable function absolute
+      value>]
+
+      <\equation>
+        <label|eq 20.595.244><around*|\||f|\|>\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>|]>
+      </equation>
+
+      Further as <math|Re<around*|(|f|)>,Img<around*|(|g|)>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>>
+      we have by [theorem: <reference|measure integral alternative>] that
+
+      <\equation*>
+        <around*|\||Re<around*|(|f|)>|\|>,<around*|\||Img<around*|(|f|)>|\|>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>
+      </equation*>
+
+      so that
+
+      <\equation*>
+        <big|int><rsup|+><around*|\||Re<around*|(|f|)>|\|>d\<mu\>=<big|int><rsup|+><around*|\||Re<around*|(|f|)>|\|><rsup|+>d\<mu\>\<less\>\<infty\>\<exterior\><big|int><rsup|+><around*|\||Img<around*|(|f|)>|\|>d\<mu\>=<big|int><rsup|+><around*|\||Img<around*|(|f|)>|\|><rsup|+>d\<mu\>\<less\>\<infty\>
+      </equation*>
+
+      Let <math|x\<in\>X> then
+
+      <\equation*>
+        <around*|\||f|\|><around*|(|x|)>=<around*|\||f<around*|(|x|)>|\|><below|\<leqslant\>|<text|[theorem:
+        <reference|complex norm properties>(8)>><around*|\||Re<around*|(|f<around*|(|x|)>|)>|\|>+<around*|\||Img<around*|(|f<around*|(|x|)>|)>|\|>=<around*|(|<around*|\||Re<around*|(|f|)>|\|>+<around*|\||Img<around*|(|f|)>|\|>|)><around*|(|x|)>
+      </equation*>
+
+      So that by [theorem: <reference|non negative integral scalar product,
+      sum inequality>]\ 
+
+      <\equation*>
+        <big|int><rsup|+><around*|\||f|\|>d\<mu\>\<leqslant\><big|int><rsup|+><around*|(|<around*|\||Re<around*|(|f|)>|\|>+<around*|\||Img<around*|(|f|)>|\|>|)>d\<mu\>\<equallim\><rsub|<text|[theorem:
+        <reference|non negative integral scalar product, sum
+        inequality>]>><big|int><rsup|+><around*|\||Re<around*|(|f|)>|\|>d\<mu\>+<big|int><rsup|+><around*|\||Img<around*|(|f|)>|\|>d\<mu\>\<less\>\<infty\>
+      </equation*>
+
+      which together with [eq: <reference|eq 20.595.244>] proves by [theorem:
+      <reference|measure integral extension>] that\ 
+
+      <\equation*>
+        <around*|\||f|\|>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>
+      </equation*>
+
+      <item*|<math|\<Leftarrow\>>>As <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>>
+      we have using [theorem: <reference|complex measurable function
+      alternative>] that\ 
+
+      <\equation*>
+        Re<around*|(|f|)>,Img<around*|(|f|)>\<in\>\<cal-M\><around*|[|X,\<cal-A\>|]>
+      </equation*>
+
+      Let <math|x\<in\>X> then
+
+      <\equation*>
+        <around*|\||Re<around*|(|f|)>|\|><around*|(|x|)>=<around*|\||Re<around*|(|f<around*|(|x|)>|)>|\|><below|\<leqslant\>|<text|[theorem:
+        <reference|complex norm properties>(3)]>><around*|\||f<around*|(|x|)>|\|>=<around*|\||f|\|><around*|(|x|)>
+      </equation*>
+
+      <\equation*>
+        <around*|\||Img<around*|(|f|)>|\|><around*|(|x|)>=<around*|\||Img<around*|(|f<around*|(|x|)>|)>|\|><below|\<leqslant\>|<text|[theorem:
+        <reference|complex norm properties>(3)]>><around*|\||f<around*|(|x|)>|\|>=<around*|\||f|\|><around*|(|x|)>
+      </equation*>
+
+      Using then [theorem: <reference|measure integral domination theorem>]
+      it follows that <math|Re<around*|(|f|)>,Img<around*|(|f|)>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>|]>>
+      hence we have by definition that\ 
+
+      <\equation*>
+        f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>
+      </equation*>
+
+      TODO
+    </description>
 
     \;
   </proof>
 
-  \;
+  Integrals of complex valued functions have similar properties as integrals
+  of real valued functions [except properties involving inequalities as there
+  is no sensible order relation defined on <math|\<bbb-C\>>.
+
+  <\theorem>
+    <label|complex integral property>Let <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>>
+    be a measure space then we have\ 
+
+    <\enumerate>
+      <item><math|\<forall\>f,g\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>>
+      we have that <math|f+g\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>>
+      and\ 
+
+      <\equation*>
+        <big|int><rsup|\<bbb-C\>><around*|(|f+g|)>d\<mu\>=<big|int><rsup|\<bbb-C\>>f
+        d\<mu\>+<big|int><rsup|\<bbb-C\>>g d\<mu\>
+      </equation*>
+
+      <item><math|\<forall\>\<alpha\>\<in\>\<bbb-C\>> and
+      <math|f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>> we
+      have that <math|\<alpha\>\<cdot\>f\<in\>>
+    </enumerate>
+  </theorem>
 
   \;
 
@@ -31703,12 +32140,12 @@
 
 <\references>
   <\collection>
-    <associate|Beppo Levi's Theorem|<tuple|20.419|?>>
+    <associate|Beppo Levi's Theorem|<tuple|20.420|?>>
     <associate|Constructing measures and sigma alegebra|<tuple|20.4.4|?>>
-    <associate|Fatou's lemma|<tuple|20.422|?>>
-    <associate|Lebesgue's Dominated Convergence Theorem|<tuple|20.425|?>>
-    <associate|Monotone Convergence Theorem (1)|<tuple|20.415|?>>
-    <associate|Monotone Convergence Theorem (2)|<tuple|20.418|?>>
+    <associate|Fatou's lemma|<tuple|20.423|?>>
+    <associate|Lebesgue's Dominated Convergence Theorem|<tuple|20.426|?>>
+    <associate|Monotone Convergence Theorem (1)|<tuple|20.416|?>>
+    <associate|Monotone Convergence Theorem (2)|<tuple|20.419|?>>
     <associate|almost everywhere|<tuple|20.347|?>>
     <associate|almost everywhere and characteristic|<tuple|20.349|?>>
     <associate|almost everywhere f=g \<less\>=\<gtr\> f-g=0|<tuple|20.351|?>>
@@ -31726,23 +32163,29 @@
     <associate|auto-105|<tuple|20.6|?>>
     <associate|auto-106|<tuple|20.7|?>>
     <associate|auto-107|<tuple|20.6.3|?>>
-    <associate|auto-108|<tuple|<with|mode|<quote|math>|<big|int>f
+    <associate|auto-108|<tuple|20.6.3.1|?>>
+    <associate|auto-109|<tuple|<with|mode|<quote|math>|<big|int>f
     d\<mu\>>|?>>
-    <associate|auto-109|<tuple|measure integral|?>>
     <associate|auto-11|<tuple|<with|mode|<quote|math>|<below|lim
     inf|i\<rightarrow\>\<infty\>> x<rsub|i>>|?>>
-    <associate|auto-110|<tuple|<with|mode|<quote|math>|<big|int><rsub|A>f
+    <associate|auto-110|<tuple|measure integral|?>>
+    <associate|auto-111|<tuple|<with|mode|<quote|math>|<big|int><rsub|A>f
     d\<mu\>>|?>>
-    <associate|auto-111|<tuple|20.6.3.1|?>>
-    <associate|auto-112|<tuple|20.6.4|?>>
-    <associate|auto-113|<tuple|20.6.5|?>>
-    <associate|auto-114|<tuple|<with|mode|<quote|math>|\<sigma\>>-algebra on
+    <associate|auto-112|<tuple|20.6.3.2|?>>
+    <associate|auto-113|<tuple|20.6.4|?>>
+    <associate|auto-114|<tuple|20.6.5|?>>
+    <associate|auto-115|<tuple|20.6.5.1|?>>
+    <associate|auto-116|<tuple|<with|mode|<quote|math>|\<sigma\>>-algebra on
     <with|mode|<quote|math>|\<bbb-C\>>|?>>
-    <associate|auto-115|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-C\>,B<around*|[|\<bbb-C\>|]>|\<rangle\>>>|?>>
-    <associate|auto-116|<tuple|<with|mode|<quote|math>|Re<around*|(|f|)>>|?>>
-    <associate|auto-117|<tuple|<with|mode|<quote|math>|Img<around*|(|f|)>>|?>>
+    <associate|auto-117|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-C\>,B<around*|[|\<bbb-C\>|]>|\<rangle\>>>|?>>
+    <associate|auto-118|<tuple|<with|mode|<quote|math>|Re<around*|(|f|)>>|?>>
+    <associate|auto-119|<tuple|<with|mode|<quote|math>|Img<around*|(|f|)>>|?>>
     <associate|auto-12|<tuple|<with|mode|<quote|math>|<below|lim
     sup|i\<rightarrow\>\<infty\>> x<rsub|i>>|?>>
+    <associate|auto-120|<tuple|20.6.5.2|?>>
+    <associate|auto-121|<tuple|complex integral|?>>
+    <associate|auto-122|<tuple|<with|mode|<quote|math>|<big|int><rsup|\<bbb-C\>>f
+    d\<mu\>>|?>>
     <associate|auto-13|<tuple|limit in <with|mode|<quote|math>|<wide|\<bbb-R\>|\<wide-bar\>>>|?>>
     <associate|auto-14|<tuple|<with|mode|<quote|math>|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>>|?>>
     <associate|auto-15|<tuple|20.1.5|?>>
@@ -31845,11 +32288,16 @@
     <associate|auto-98|<tuple|20.6|?>>
     <associate|auto-99|<tuple|20.6.1|?>>
     <associate|charasteristic function|<tuple|20.344|?>>
-    <associate|complex measurable function|<tuple|20.427|?>>
-    <associate|complex measurable function alternative|<tuple|20.431|?>>
-    <associate|complex measurable function condition|<tuple|20.429|?>>
-    <associate|complex measurable function properties|<tuple|20.432|?>>
-    <associate|complex measurable space|<tuple|20.426|?>>
+    <associate|complex integral|<tuple|20.436|?>>
+    <associate|complex integral alternative|<tuple|20.438|?>>
+    <associate|complex integral property|<tuple|20.439|?>>
+    <associate|complex measurable function|<tuple|20.428|?>>
+    <associate|complex measurable function absolute value|<tuple|20.435|?>>
+    <associate|complex measurable function absolute value |<tuple|20.433|?>>
+    <associate|complex measurable function alternative|<tuple|20.432|?>>
+    <associate|complex measurable function condition|<tuple|20.430|?>>
+    <associate|complex measurable function properties|<tuple|20.434|?>>
+    <associate|complex measurable space|<tuple|20.427|?>>
     <associate|corollary 20.111.218|<tuple|20.118|?>>
     <associate|eq 15.81.439|<tuple|20.393|?>>
     <associate|eq 18.10.021|<tuple|20.84|?>>
@@ -31871,8 +32319,6 @@
     <associate|eq 18.41.022|<tuple|20.133|?>>
     <associate|eq 18.42.022|<tuple|20.134|?>>
     <associate|eq 18.43.022|<tuple|20.135|?>>
-    <associate|eq 18.479.037|<tuple|20.590|?>>
-    <associate|eq 18.480.037.2|<tuple|20.591|?>>
     <associate|eq 18.8.020|<tuple|20.82|?>>
     <associate|eq 18.9.020|<tuple|20.83|?>>
     <associate|eq 20.1.155|<tuple|20.1|?>>
@@ -32344,73 +32790,78 @@
     <associate|eq 20.531.232|<tuple|20.538|?>>
     <associate|eq 20.532.232|<tuple|20.539|?>>
     <associate|eq 20.533.232|<tuple|20.540|?>>
-    <associate|eq 20.534.232|<tuple|20.541|?>>
+    <associate|eq 20.534.232|<tuple|20.543|?>>
     <associate|eq 20.54.200|<tuple|20.77|?>>
     <associate|eq 20.54.200.1|<tuple|20.73|?>>
     <associate|eq 20.54.202|<tuple|20.54|?>>
-    <associate|eq 20.540.234|<tuple|20.542|?>>
-    <associate|eq 20.541.234|<tuple|20.543|?>>
-    <associate|eq 20.542.234|<tuple|20.544|?>>
-    <associate|eq 20.543.234|<tuple|20.545|?>>
-    <associate|eq 20.544.234|<tuple|20.546|?>>
-    <associate|eq 20.545.234|<tuple|20.547|?>>
-    <associate|eq 20.546.234|<tuple|20.548|?>>
-    <associate|eq 20.547.234|<tuple|20.549|?>>
-    <associate|eq 20.548.234|<tuple|20.550|?>>
-    <associate|eq 20.549.240|<tuple|20.551|?>>
+    <associate|eq 20.540.234|<tuple|20.543|?>>
+    <associate|eq 20.541.234|<tuple|20.544|?>>
+    <associate|eq 20.541.243|<tuple|20.541|?>>
+    <associate|eq 20.542.234|<tuple|20.545|?>>
+    <associate|eq 20.542.243|<tuple|20.542|?>>
+    <associate|eq 20.543.234|<tuple|20.546|?>>
+    <associate|eq 20.544.234|<tuple|20.547|?>>
+    <associate|eq 20.545.234|<tuple|20.548|?>>
+    <associate|eq 20.546.234|<tuple|20.549|?>>
+    <associate|eq 20.547.234|<tuple|20.550|?>>
+    <associate|eq 20.548.234|<tuple|20.551|?>>
+    <associate|eq 20.549.240|<tuple|20.552|?>>
     <associate|eq 20.55.200|<tuple|20.78|?>>
     <associate|eq 20.55.200.1|<tuple|20.74|?>>
     <associate|eq 20.55.202|<tuple|20.55|?>>
-    <associate|eq 20.550.240|<tuple|20.552|?>>
-    <associate|eq 20.551.240|<tuple|20.553|?>>
-    <associate|eq 20.552.240|<tuple|20.554|?>>
-    <associate|eq 20.553.240|<tuple|20.555|?>>
-    <associate|eq 20.554.240|<tuple|20.556|?>>
-    <associate|eq 20.555.240|<tuple|20.557|?>>
-    <associate|eq 20.556.240|<tuple|20.558|?>>
-    <associate|eq 20.557.240|<tuple|20.559|?>>
-    <associate|eq 20.558.240|<tuple|20.560|?>>
-    <associate|eq 20.559.240|<tuple|20.561|?>>
+    <associate|eq 20.550.240|<tuple|20.553|?>>
+    <associate|eq 20.551.240|<tuple|20.554|?>>
+    <associate|eq 20.552.240|<tuple|20.555|?>>
+    <associate|eq 20.553.240|<tuple|20.556|?>>
+    <associate|eq 20.554.240|<tuple|20.557|?>>
+    <associate|eq 20.555.240|<tuple|20.558|?>>
+    <associate|eq 20.556.240|<tuple|20.559|?>>
+    <associate|eq 20.557.240|<tuple|20.560|?>>
+    <associate|eq 20.558.240|<tuple|20.561|?>>
+    <associate|eq 20.559.240|<tuple|20.562|?>>
     <associate|eq 20.56.200|<tuple|20.79|?>>
     <associate|eq 20.56.202|<tuple|20.56|?>>
-    <associate|eq 20.560.240|<tuple|20.562|?>>
-    <associate|eq 20.561.240|<tuple|20.563|?>>
-    <associate|eq 20.562.240|<tuple|20.564|?>>
-    <associate|eq 20.563.240|<tuple|20.565|?>>
-    <associate|eq 20.564.240|<tuple|20.566|?>>
-    <associate|eq 20.565.240|<tuple|20.567|?>>
-    <associate|eq 20.566.240|<tuple|20.568|?>>
-    <associate|eq 20.567.240|<tuple|20.569|?>>
-    <associate|eq 20.568.240|<tuple|20.570|?>>
-    <associate|eq 20.569.240|<tuple|20.571|?>>
+    <associate|eq 20.560.240|<tuple|20.563|?>>
+    <associate|eq 20.561.240|<tuple|20.564|?>>
+    <associate|eq 20.562.240|<tuple|20.565|?>>
+    <associate|eq 20.563.240|<tuple|20.566|?>>
+    <associate|eq 20.564.240|<tuple|20.567|?>>
+    <associate|eq 20.565.240|<tuple|20.568|?>>
+    <associate|eq 20.566.240|<tuple|20.569|?>>
+    <associate|eq 20.567.240|<tuple|20.570|?>>
+    <associate|eq 20.568.240|<tuple|20.571|?>>
+    <associate|eq 20.569.240|<tuple|20.572|?>>
     <associate|eq 20.57.200|<tuple|20.80|?>>
     <associate|eq 20.57.203|<tuple|20.64|?>>
     <associate|eq 20.57.212|<tuple|20.57|?>>
-    <associate|eq 20.570.240|<tuple|20.572|?>>
-    <associate|eq 20.571.240|<tuple|20.573|?>>
-    <associate|eq 20.572.240|<tuple|20.574|?>>
-    <associate|eq 20.573.240|<tuple|20.575|?>>
-    <associate|eq 20.574.240|<tuple|20.576|?>>
-    <associate|eq 20.575.240|<tuple|20.577|?>>
-    <associate|eq 20.576.240|<tuple|20.578|?>>
-    <associate|eq 20.577.240|<tuple|20.579|?>>
-    <associate|eq 20.578.240|<tuple|20.580|?>>
-    <associate|eq 20.579.240|<tuple|20.581|?>>
+    <associate|eq 20.570.240|<tuple|20.573|?>>
+    <associate|eq 20.571.240|<tuple|20.574|?>>
+    <associate|eq 20.572.240|<tuple|20.575|?>>
+    <associate|eq 20.573.240|<tuple|20.576|?>>
+    <associate|eq 20.574.240|<tuple|20.577|?>>
+    <associate|eq 20.575.240|<tuple|20.578|?>>
+    <associate|eq 20.576.240|<tuple|20.579|?>>
+    <associate|eq 20.577.240|<tuple|20.580|?>>
+    <associate|eq 20.578.240|<tuple|20.581|?>>
+    <associate|eq 20.579.240|<tuple|20.582|?>>
     <associate|eq 20.58.200|<tuple|20.81|?>>
     <associate|eq 20.58.203|<tuple|20.65|?>>
     <associate|eq 20.58.212|<tuple|20.58|?>>
-    <associate|eq 20.580.240|<tuple|20.582|?>>
-    <associate|eq 20.581.240|<tuple|20.583|?>>
-    <associate|eq 20.582.240|<tuple|20.584|?>>
-    <associate|eq 20.583.240|<tuple|20.585|?>>
-    <associate|eq 20.584.240|<tuple|20.586|?>>
-    <associate|eq 20.585.240|<tuple|20.587|?>>
-    <associate|eq 20.586.240|<tuple|20.588|?>>
-    <associate|eq 20.587.240|<tuple|20.589|?>>
+    <associate|eq 20.580.240|<tuple|20.583|?>>
+    <associate|eq 20.581.240|<tuple|20.584|?>>
+    <associate|eq 20.582.240|<tuple|20.585|?>>
+    <associate|eq 20.583.240|<tuple|20.586|?>>
+    <associate|eq 20.584.240|<tuple|20.587|?>>
+    <associate|eq 20.585.240|<tuple|20.588|?>>
+    <associate|eq 20.586.240|<tuple|20.589|?>>
+    <associate|eq 20.587.240|<tuple|20.590|?>>
     <associate|eq 20.59.203|<tuple|20.66|?>>
     <associate|eq 20.59.212|<tuple|20.59|?>>
-    <associate|eq 20.590.241|<tuple|20.590|?>>
-    <associate|eq 20.591.241|<tuple|20.591|?>>
+    <associate|eq 20.590.241|<tuple|20.591|?>>
+    <associate|eq 20.591.241|<tuple|20.592|?>>
+    <associate|eq 20.592.241|<tuple|20.593|?>>
+    <associate|eq 20.594.244|<tuple|20.594|?>>
+    <associate|eq 20.595.244|<tuple|20.595|?>>
     <associate|eq 20.6.155|<tuple|20.6|?>>
     <associate|eq 20.60.203|<tuple|20.67|?>>
     <associate|eq 20.60.218|<tuple|20.60|?>>
@@ -32687,24 +33138,25 @@
     <associate|measure integral|<tuple|20.397|?>>
     <associate|measure integral (1)|<tuple|20.401|?>>
     <associate|measure integral alternative|<tuple|20.407|?>>
-    <associate|measure integral alternative (1)|<tuple|20.414|?>>
+    <associate|measure integral alternative (1)|<tuple|20.415|?>>
     <associate|measure integral and a.e. equalitiy|<tuple|20.408|?>>
     <associate|measure integral difference|<tuple|20.405|?>>
+    <associate|measure integral domination theorem|<tuple|20.409|?>>
     <associate|measure integral extension|<tuple|20.400|?>>
     <associate|measure integral f+ f-|<tuple|20.392|?>>
     <associate|measure integral f+ f- alternative|<tuple|20.394|?>>
     <associate|measure integral f+ f- are measurable|<tuple|20.395|?>>
     <associate|measure integral f+ f- properties|<tuple|20.396|?>>
-    <associate|measure integral measure construction|<tuple|20.421|?>>
+    <associate|measure integral measure construction|<tuple|20.422|?>>
     <associate|measure integral of almost zero function is
     zero|<tuple|20.403|?>>
     <associate|measure integral of zero function|<tuple|20.404|?>>
     <associate|measure integral properties|<tuple|20.406|?>>
-    <associate|measure integral properties (1)|<tuple|20.411|?>>
-    <associate|measure integral properties (2)|<tuple|20.413|?>>
-    <associate|measure integral sigma finite|<tuple|20.409|?>>
+    <associate|measure integral properties (1)|<tuple|20.412|?>>
+    <associate|measure integral properties (2)|<tuple|20.414|?>>
+    <associate|measure integral sigma finite|<tuple|20.410|?>>
     <associate|measure integral to measure over|<tuple|20.402|?>>
-    <associate|measure integral zero is a.e. zero|<tuple|20.410|?>>
+    <associate|measure integral zero is a.e. zero|<tuple|20.411|?>>
     <associate|measure length definition|<tuple|20.267|?>>
     <associate|measure length of union of pairwise half opem
     intervals|<tuple|20.269|?>>
@@ -32982,6 +33434,10 @@
       <with|mode|<quote|math>|\<bbb-C\>>>|<pageref|auto-114>>
 
       <tuple|<tuple|<with|mode|<quote|math>|<around*|\<langle\>|\<bbb-C\>,B<around*|[|\<bbb-C\>|]>|\<rangle\>>>>|<pageref|auto-115>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|Re<around*|(|f|)>>>|<pageref|auto-116>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|Img<around*|(|f|)>>>|<pageref|auto-117>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|20<space|2spc>Measures
