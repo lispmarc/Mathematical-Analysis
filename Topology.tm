@@ -6389,7 +6389,44 @@
     Let <math|V\<in\>\<cal-T\><rsub|X>> then
     <math|<around*|(|Id<rsub|X>|)><rsup|-1><around*|(|V|)>=V\<in\>\<cal-T\><rsub|X>>
     proving by \ [theorem: <reference|continuity continuous function (1)>]
-    continuity.
+    that <math|Id<rsub|X>> is continuous..
+  </proof>
+
+  <\theorem>
+    <label|continuity and subspace topology (4)>Let
+    <math|<around*|\<langle\>|X,\<cal-T\><rsub|X>|\<rangle\>>> and
+    <math|<around*|\<langle\>|Y,\<cal-T\><rsub|Y>|\<rangle\>>> be topological
+    spaces, <math|B\<subseteq\>Y> and <math|f:X\<rightarrow\>Y> a continuous
+    function such that <math|f<around*|(|X|)>\<subseteq\>B> then
+    <math|f:X\<rightarrow\>B> is continuous using the topology
+    <math|\<cal-T\><rsub|X>> on <math|X> and the subspace topology
+    <math|<around*|(|\<cal-T\><rsub|Y>|)><rsub|\|B>> on <math|B> [see
+    theorem: <reference|topology subspace topology>].
+  </theorem>
+
+  <\proof>
+    Let <math|V\<in\><around*|(|\<cal-T\><rsub|Y>|)><rsub|\|B>> then there
+    exist a open set <math|V<rprime|'>\<in\>\<cal-T\><rsub|Y>> such that
+    <math|V=V<rprime|'><big|cap>B>. As <math|f:X\<rightarrow\>Y> is
+    continuous we have by [theorem: <reference|topology subspace topology>]
+    that\ 
+
+    <\equation*>
+      f<rsup|-1><around*|(|V<rprime|'>|)>\<in\>\<cal-T\><rsub|Y>
+    </equation*>
+
+    \ Next we have\ 
+
+    <\equation*>
+      f<rsup|-1><around*|(|V<rprime|'><big|cap>B|)>\<equallim\><rsub|<text|[theorem:
+      <reference|function function and intersection and
+      union>]>>f<rsup|-1><around*|(|V<rprime|'>|)><big|cap>f<rsup|-1><around*|(|B|)>\<equallim\><rsub|f<around*|(|X|)>\<subseteq\>B\<Rightarrow\>f<rsup|-1><around*|(|B|)>=X>f<rsup|-1><around*|(|V<rprime|'>|)><big|cap>X=f<rsup|-1><around*|(|V<rprime|'>|)>\<in\>\<cal-T\><rsub|Y>
+    </equation*>
+
+    So using [theorem: <reference|topology subspace topology>] again it
+    follows that <math|f:X\<rightarrow\>B> is continous using the topology
+    <math|\<cal-T\><rsub|X>> on <math|X> and the subspace topology
+    <math|<around*|(|\<cal-T\><rsub|Y>|)><rsub|\|B>> on <math|B>.
   </proof>
 
   <\theorem>
@@ -7461,12 +7498,11 @@
   <\example>
     <label|continuity norm is uniform continuous>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
-    a pseudo normed space then\ 
+    a pseudo normed space then
 
     <\equation*>
       <around*|\<\|\|\>||\<\|\|\>>:X\<rightarrow\>\<bbb-R\><text| where
-      ><around*|\<\|\|\>||\<\|\|\>><around*|(|x|)>=<around*|\<\|\|\>|x|\<\|\|\>><text|
-      >
+      ><around*|\<\|\|\>||\<\|\|\>><around*|(|x|)>=<around*|\<\|\|\>|x|\<\|\|\>>
     </equation*>
 
     is <with|font-series|bold|uniform continuous> [hence by [theorem:
@@ -22159,7 +22195,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|13>
-    <associate|page-first|675>
+    <associate|page-first|515>
     <associate|page-medium|papyrus>
     <associate|par-first|0tab>
     <associate|section-nr|0>
@@ -22284,175 +22320,176 @@
     <associate|auto-97|<tuple|Banach space|?>>
     <associate|auto-98|<tuple|14.10.1|?>>
     <associate|auto-99|<tuple|14.10.2|?>>
-    <associate|bounded B(X,Y) is a normed space|<tuple|14.344|?>>
-    <associate|bounded function|<tuple|14.342|?>>
-    <associate|bounded function B(X,Y) is a vector space|<tuple|14.343|?>>
-    <associate|bounded uniform convergence and continuity|<tuple|14.347|?>>
+    <associate|bounded B(X,Y) is a normed space|<tuple|14.345|?>>
+    <associate|bounded function|<tuple|14.343|?>>
+    <associate|bounded function B(X,Y) is a vector space|<tuple|14.344|?>>
+    <associate|bounded uniform convergence and continuity|<tuple|14.348|?>>
     <associate|bounded uniform convergence is convergence in supremum
-    nrom|<tuple|14.348|?>>
+    nrom|<tuple|14.349|?>>
     <associate|closed set properties|<tuple|14.21|?>>
     <associate|compact Hausdorff space is regular and
-    compact|<tuple|14.239|?>>
-    <associate|compact Heine Borel (1)|<tuple|14.235|?>>
-    <associate|compact Heine Borel (2)|<tuple|14.281|?>>
-    <associate|compact Heine-Borel (1)|<tuple|14.276|?>>
-    <associate|compact Heine-Borel complex|<tuple|14.280|?>>
-    <associate|compact Heine-Borel general form|<tuple|14.282|?>>
-    <associate|compact Tychonoff's|<tuple|14.272|?>>
-    <associate|compact Tychonoff's (1)|<tuple|14.273|?>>
-    <associate|compact and basis|<tuple|14.225|?>>
-    <associate|compact and bounded|<tuple|14.230|?>>
-    <associate|compact and bounded (1)|<tuple|14.231|?>>
-    <associate|compact and continuous functions|<tuple|14.232|?>>
-    <associate|compact class|<tuple|14.242|?>>
-    <associate|compact class and sets of compact sets|<tuple|14.243|?>>
-    <associate|compact closed bounded sets in R are compact|<tuple|14.236|?>>
+    compact|<tuple|14.240|?>>
+    <associate|compact Heine Borel (1)|<tuple|14.236|?>>
+    <associate|compact Heine Borel (2)|<tuple|14.282|?>>
+    <associate|compact Heine-Borel (1)|<tuple|14.277|?>>
+    <associate|compact Heine-Borel complex|<tuple|14.281|?>>
+    <associate|compact Heine-Borel general form|<tuple|14.283|?>>
+    <associate|compact Tychonoff's|<tuple|14.273|?>>
+    <associate|compact Tychonoff's (1)|<tuple|14.274|?>>
+    <associate|compact and basis|<tuple|14.226|?>>
+    <associate|compact and bounded|<tuple|14.231|?>>
+    <associate|compact and bounded (1)|<tuple|14.232|?>>
+    <associate|compact and continuous functions|<tuple|14.233|?>>
+    <associate|compact class|<tuple|14.243|?>>
+    <associate|compact class and sets of compact sets|<tuple|14.244|?>>
+    <associate|compact closed bounded sets in R are compact|<tuple|14.237|?>>
     <associate|compact compact implies limit point
-    compactness|<tuple|14.241|?>>
+    compactness|<tuple|14.242|?>>
     <associate|compact continuous function on a compact is uniform
-    continuous|<tuple|14.244|?>>
-    <associate|compact empty set|<tuple|14.226|?>>
+    continuous|<tuple|14.245|?>>
+    <associate|compact empty set|<tuple|14.227|?>>
     <associate|compact every closed subset of a compact set is
-    compact|<tuple|14.234|?>>
-    <associate|compact extreme value theorem|<tuple|14.238|?>>
-    <associate|compact finite union of compact sets|<tuple|14.228|?>>
+    compact|<tuple|14.235|?>>
+    <associate|compact extreme value theorem|<tuple|14.239|?>>
+    <associate|compact finite union of compact sets|<tuple|14.229|?>>
     <associate|compact image of a cmpact set by a continuous
-    function|<tuple|14.237|?>>
-    <associate|compact isometric isomorphism|<tuple|14.279|?>>
-    <associate|compact limit point compact|<tuple|14.240|?>>
-    <associate|compact rectangles are compact|<tuple|14.275|?>>
-    <associate|compact set|<tuple|14.222|?>>
-    <associate|compact set alternative definition|<tuple|14.224|?>>
-    <associate|compact set is closed in a Hausdorff space|<tuple|14.233|?>>
-    <associate|compact singleton|<tuple|14.227|?>>
-    <associate|compact space|<tuple|14.221|?>>
-    <associate|compact space is compact subset|<tuple|14.223|?>>
-    <associate|compact subspace equivalences|<tuple|14.229|?>>
-    <associate|complete Baire Category|<tuple|14.389|?>>
-    <associate|complete Cauchy metric|<tuple|14.323|?>>
-    <associate|complete Cauchy normed|<tuple|14.324|?>>
-    <associate|complete Cauchy sequence is bounded (2)|<tuple|14.326|?>>
-    <associate|complete L(X,Y) is Banach|<tuple|14.339|?>>
-    <associate|complete L(X1,..,Xn;Y) is Banach|<tuple|14.340|?>>
-    <associate|complete L^n(X;Y) is Banach|<tuple|14.341|?>>
-    <associate|complete R^n is complete|<tuple|14.336|?>>
+    function|<tuple|14.238|?>>
+    <associate|compact isometric isomorphism|<tuple|14.280|?>>
+    <associate|compact limit point compact|<tuple|14.241|?>>
+    <associate|compact rectangles are compact|<tuple|14.276|?>>
+    <associate|compact set|<tuple|14.223|?>>
+    <associate|compact set alternative definition|<tuple|14.225|?>>
+    <associate|compact set is closed in a Hausdorff space|<tuple|14.234|?>>
+    <associate|compact singleton|<tuple|14.228|?>>
+    <associate|compact space|<tuple|14.222|?>>
+    <associate|compact space is compact subset|<tuple|14.224|?>>
+    <associate|compact subspace equivalences|<tuple|14.230|?>>
+    <associate|complete Baire Category|<tuple|14.390|?>>
+    <associate|complete Cauchy metric|<tuple|14.324|?>>
+    <associate|complete Cauchy normed|<tuple|14.325|?>>
+    <associate|complete Cauchy sequence is bounded (2)|<tuple|14.327|?>>
+    <associate|complete L(X,Y) is Banach|<tuple|14.340|?>>
+    <associate|complete L(X1,..,Xn;Y) is Banach|<tuple|14.341|?>>
+    <associate|complete L^n(X;Y) is Banach|<tuple|14.342|?>>
+    <associate|complete R^n is complete|<tuple|14.337|?>>
     <associate|complete bounded functions to a complete space are
-    complete|<tuple|14.349|?>>
+    complete|<tuple|14.350|?>>
     <associate|complete closed subset of a complete space is
-    complete|<tuple|14.334|?>>
-    <associate|complete compact spaces are complete|<tuple|14.333|?>>
+    complete|<tuple|14.335|?>>
+    <associate|complete compact spaces are complete|<tuple|14.334|?>>
     <associate|complete continuous linear isomorphism is a
-    homeomorphism|<tuple|14.393|?>>
-    <associate|complete convergence implies Cauchy|<tuple|14.327|?>>
+    homeomorphism|<tuple|14.394|?>>
+    <associate|complete convergence implies Cauchy|<tuple|14.328|?>>
     <associate|complete every finite dimensional normed space is a Banach
-    space|<tuple|14.337|?>>
+    space|<tuple|14.338|?>>
     <associate|complete limit point of a Cauchy sequence is unique in a
-    metric space|<tuple|14.332|?>>
-    <associate|complete open mapping theorem|<tuple|14.392|?>>
-    <associate|complete product of Banach spaces|<tuple|14.330|?>>
-    <associate|complete sequence and limit point|<tuple|14.331|?>>
-    <associate|complete set of real numbers|<tuple|14.335|?>>
-    <associate|complete space|<tuple|14.329|?>>
-    <associate|complete the complex numbers are complete|<tuple|14.338|?>>
-    <associate|complete uniform convergion|<tuple|14.345|?>>
-    <associate|connected alternative definition|<tuple|14.397|?>>
-    <associate|connected closed interval is connected|<tuple|14.400|?>>
-    <associate|connected disconnected space|<tuple|14.395|?>>
-    <associate|connected generalized intervals|<tuple|14.401|?>>
+    metric space|<tuple|14.333|?>>
+    <associate|complete open mapping theorem|<tuple|14.393|?>>
+    <associate|complete product of Banach spaces|<tuple|14.331|?>>
+    <associate|complete sequence and limit point|<tuple|14.332|?>>
+    <associate|complete set of real numbers|<tuple|14.336|?>>
+    <associate|complete space|<tuple|14.330|?>>
+    <associate|complete the complex numbers are complete|<tuple|14.339|?>>
+    <associate|complete uniform convergion|<tuple|14.346|?>>
+    <associate|connected alternative definition|<tuple|14.398|?>>
+    <associate|connected closed interval is connected|<tuple|14.401|?>>
+    <associate|connected disconnected space|<tuple|14.396|?>>
+    <associate|connected generalized intervals|<tuple|14.402|?>>
     <associate|connected image by a real continuous function of a closed
-    interval is a closed interval|<tuple|14.402|?>>
+    interval is a closed interval|<tuple|14.403|?>>
     <associate|connected image of a connected set by a continuous function is
-    connected|<tuple|14.399|?>>
-    <associate|connected intermediate value theorem|<tuple|14.403|?>>
-    <associate|connected set|<tuple|14.398|?>>
-    <associate|connected space|<tuple|14.394|?>>
-    <associate|continuity 1/f is continuous|<tuple|14.150|?>>
-    <associate|continuity 1/f^2 is continuous|<tuple|14.151|?>>
-    <associate|continuity K^n|<tuple|14.191|?>>
-    <associate|continuity K^n norm|<tuple|14.198|?>>
+    connected|<tuple|14.400|?>>
+    <associate|connected intermediate value theorem|<tuple|14.404|?>>
+    <associate|connected set|<tuple|14.399|?>>
+    <associate|connected space|<tuple|14.395|?>>
+    <associate|continuity 1/f is continuous|<tuple|14.151|?>>
+    <associate|continuity 1/f^2 is continuous|<tuple|14.152|?>>
+    <associate|continuity K^n|<tuple|14.192|?>>
+    <associate|continuity K^n norm|<tuple|14.199|?>>
     <associate|continuity L(X,L(Y,Z)) is isometric with
-    L(X,Y;Z)|<tuple|14.201|?>>
-    <associate|continuity L(X,Y) is a subspace of Hom(X,Y)|<tuple|14.176|?>>
-    <associate|continuity L^n(X;Y)|<tuple|14.197|?>>
+    L(X,Y;Z)|<tuple|14.202|?>>
+    <associate|continuity L(X,Y) is a subspace of Hom(X,Y)|<tuple|14.177|?>>
+    <associate|continuity L^n(X;Y)|<tuple|14.198|?>>
     <associate|continuity L^n+1(X;Y) is isomorph with
-    L(X,L^n(X;Y))|<tuple|14.202|?>>
-    <associate|continuity Lispschitz condition|<tuple|14.159|?>>
+    L(X,L^n(X;Y))|<tuple|14.203|?>>
+    <associate|continuity Lispschitz condition|<tuple|14.160|?>>
     <associate|continuity Lispschitz implies uniform
-    continuity|<tuple|14.160|?>>
+    continuity|<tuple|14.161|?>>
     <associate|continuity and basis|<tuple|14.126|?>>
-    <associate|continuity and subspace topology (1)|<tuple|14.134|?>>
-    <associate|continuity and subspace topology (2)|<tuple|14.136|?>>
-    <associate|continuity and subspace topology (3)|<tuple|14.135|?>>
+    <associate|continuity and subspace topology (1)|<tuple|14.135|?>>
+    <associate|continuity and subspace topology (2)|<tuple|14.137|?>>
+    <associate|continuity and subspace topology (3)|<tuple|14.136|?>>
+    <associate|continuity and subspace topology (4)|<tuple|14.134|?>>
     <associate|continuity at a point|<tuple|14.124|?>>
-    <associate|continuity composition|<tuple|14.139|?>>
-    <associate|continuity composition is multilinear|<tuple|14.200|?>>
+    <associate|continuity composition|<tuple|14.140|?>>
+    <associate|continuity composition is multilinear|<tuple|14.201|?>>
     <associate|continuity composition of continuous linear
-    mapping|<tuple|14.188|?>>
+    mapping|<tuple|14.189|?>>
     <associate|continuity composition of multilinear and linear
-    mapping|<tuple|14.199|?>>
+    mapping|<tuple|14.200|?>>
     <associate|continuity constant function|<tuple|14.132|?>>
     <associate|continuity continuous function|<tuple|14.130|?>>
     <associate|continuity continuous function (1)|<tuple|14.131|?>>
-    <associate|continuity distance function is Lipschitz|<tuple|14.164|?>>
-    <associate|continuity equivalences|<tuple|14.137|?>>
-    <associate|continuity function partial application|<tuple|14.142|?>>
-    <associate|continuity homemorphism between powers of R|<tuple|14.179|?>>
-    <associate|continuity homeomorphism|<tuple|14.165|?>>
-    <associate|continuity homeomorphism (1)|<tuple|14.166|?>>
-    <associate|continuity homeomorphism and restriction|<tuple|14.169|?>>
+    <associate|continuity distance function is Lipschitz|<tuple|14.165|?>>
+    <associate|continuity equivalences|<tuple|14.138|?>>
+    <associate|continuity function partial application|<tuple|14.143|?>>
+    <associate|continuity homemorphism between powers of R|<tuple|14.180|?>>
+    <associate|continuity homeomorphism|<tuple|14.166|?>>
+    <associate|continuity homeomorphism (1)|<tuple|14.167|?>>
+    <associate|continuity homeomorphism and restriction|<tuple|14.170|?>>
     <associate|continuity homeomorphism between K^n and finite dimensional
-    space|<tuple|14.173|?>>
-    <associate|continuity homeomorphism composition|<tuple|14.168|?>>
+    space|<tuple|14.174|?>>
+    <associate|continuity homeomorphism composition|<tuple|14.169|?>>
     <associate|continuity identity function|<tuple|14.133|?>>
-    <associate|continuity identity function norm|<tuple|14.185|?>>
+    <associate|continuity identity function norm|<tuple|14.186|?>>
     <associate|continuity identity map is linear and
-    continuous|<tuple|14.175|?>>
+    continuous|<tuple|14.176|?>>
     <associate|continuity in a metric space|<tuple|14.127|?>>
     <associate|continuity in a normed space|<tuple|14.128|?>>
     <associate|continuity in normed subspace|<tuple|14.129|?>>
-    <associate|continuity induced topology|<tuple|14.171|?>>
-    <associate|continuity inverse induced topology|<tuple|14.172|?>>
-    <associate|continuity inverse of a homeomorphism|<tuple|14.167|?>>
-    <associate|continuity isometry is a homeomorphism|<tuple|14.170|?>>
-    <associate|continuity linear mapping (1)|<tuple|14.177|?>>
-    <associate|continuity linear mapping between R^n|<tuple|14.178|?>>
-    <associate|continuity multilinear mapping (1)|<tuple|14.190|?>>
-    <associate|continuity multilinear mapping (2) norm|<tuple|14.194|?>>
-    <associate|continuity multilinear mappings vector space|<tuple|14.193|?>>
-    <associate|continuity norm L(x)=a.x|<tuple|14.186|?>>
-    <associate|continuity norm is continuous|<tuple|14.152|?>>
-    <associate|continuity norm is uniform continuous|<tuple|14.156|?>>
+    <associate|continuity induced topology|<tuple|14.172|?>>
+    <associate|continuity inverse induced topology|<tuple|14.173|?>>
+    <associate|continuity inverse of a homeomorphism|<tuple|14.168|?>>
+    <associate|continuity isometry is a homeomorphism|<tuple|14.171|?>>
+    <associate|continuity linear mapping (1)|<tuple|14.178|?>>
+    <associate|continuity linear mapping between R^n|<tuple|14.179|?>>
+    <associate|continuity multilinear mapping (1)|<tuple|14.191|?>>
+    <associate|continuity multilinear mapping (2) norm|<tuple|14.195|?>>
+    <associate|continuity multilinear mappings vector space|<tuple|14.194|?>>
+    <associate|continuity norm L(x)=a.x|<tuple|14.187|?>>
+    <associate|continuity norm is continuous|<tuple|14.153|?>>
+    <associate|continuity norm is uniform continuous|<tuple|14.157|?>>
     <associate|continuity norm of continuous linear mapping
-    (1)|<tuple|14.180|?>>
-    <associate|continuity norm of projection operator|<tuple|14.187|?>>
-    <associate|continuity norm on L(X,Y)|<tuple|14.184|?>>
+    (1)|<tuple|14.181|?>>
+    <associate|continuity norm of projection operator|<tuple|14.188|?>>
+    <associate|continuity norm on L(X,Y)|<tuple|14.185|?>>
     <associate|continuity of finite sum of continuous
-    functions|<tuple|14.146|?>>
-    <associate|continuity of power function|<tuple|14.149|?>>
-    <associate|continuity of sum|<tuple|14.158|?>>
-    <associate|continuity of sum (1)|<tuple|14.161|?>>
-    <associate|continuity of sum of continuous functions|<tuple|14.145|?>>
-    <associate|continuity open function|<tuple|14.138|?>>
-    <associate|continuity open linear mapping|<tuple|14.189|?>>
-    <associate|continuity operator norm|<tuple|14.181|?>>
-    <associate|continuity operator norm (1)|<tuple|14.182|?>>
-    <associate|continuity operator norm (2)|<tuple|14.183|?>>
+    functions|<tuple|14.147|?>>
+    <associate|continuity of power function|<tuple|14.150|?>>
+    <associate|continuity of sum|<tuple|14.159|?>>
+    <associate|continuity of sum (1)|<tuple|14.162|?>>
+    <associate|continuity of sum of continuous functions|<tuple|14.146|?>>
+    <associate|continuity open function|<tuple|14.139|?>>
+    <associate|continuity open linear mapping|<tuple|14.190|?>>
+    <associate|continuity operator norm|<tuple|14.182|?>>
+    <associate|continuity operator norm (1)|<tuple|14.183|?>>
+    <associate|continuity operator norm (2)|<tuple|14.184|?>>
     <associate|continuity operator norm of multilinear
-    mappings|<tuple|14.195|?>>
+    mappings|<tuple|14.196|?>>
     <associate|continuity operator norm of multilinear mappings
-    (1)|<tuple|14.196|?>>
-    <associate|continuity power of continuous functions|<tuple|14.148|?>>
-    <associate|continuity product and continuous functions|<tuple|14.141|?>>
-    <associate|continuity product of continuous functions|<tuple|14.147|?>>
+    (1)|<tuple|14.197|?>>
+    <associate|continuity power of continuous functions|<tuple|14.149|?>>
+    <associate|continuity product and continuous functions|<tuple|14.142|?>>
+    <associate|continuity product of continuous functions|<tuple|14.148|?>>
     <associate|continuity projection map is open and
-    continuous|<tuple|14.140|?>>
-    <associate|continuity real and complex part|<tuple|14.157|?>>
-    <associate|continuity scalar product|<tuple|14.143|?>>
-    <associate|continuity scalar product (1)|<tuple|14.144|?>>
-    <associate|continuity uniform continuity|<tuple|14.153|?>>
-    <associate|continuity uniform continuity (1)|<tuple|14.154|?>>
+    continuous|<tuple|14.141|?>>
+    <associate|continuity real and complex part|<tuple|14.158|?>>
+    <associate|continuity scalar product|<tuple|14.144|?>>
+    <associate|continuity scalar product (1)|<tuple|14.145|?>>
+    <associate|continuity uniform continuity|<tuple|14.154|?>>
+    <associate|continuity uniform continuity (1)|<tuple|14.155|?>>
     <associate|continuity universal continuity implies
-    continuity|<tuple|14.155|?>>
+    continuity|<tuple|14.156|?>>
     <associate|eq 14.1.145|<tuple|14.3|?>>
     <associate|eq 14.1.162|<tuple|14.2|?>>
     <associate|eq 14.1.167|<tuple|14.1|?>>
@@ -22720,77 +22757,77 @@
     <associate|eq 14.98.150|<tuple|14.104|?>>
     <associate|eq 14.99.150|<tuple|14.105|?>>
     <associate|eq: 14.124.176.1|<tuple|14.128|?>>
-    <associate|filter base|<tuple|14.245|?>>
-    <associate|filter base accumulating alternative|<tuple|14.254|?>>
-    <associate|filter base and compactness|<tuple|14.271|?>>
-    <associate|filter base and continuity|<tuple|14.264|?>>
-    <associate|filter base and continuity at a point|<tuple|14.263|?>>
+    <associate|filter base|<tuple|14.246|?>>
+    <associate|filter base accumulating alternative|<tuple|14.255|?>>
+    <associate|filter base and compactness|<tuple|14.272|?>>
+    <associate|filter base and continuity|<tuple|14.265|?>>
+    <associate|filter base and continuity at a point|<tuple|14.264|?>>
     <associate|filter base and properties of subordinate and
-    inclusion|<tuple|14.258|?>>
-    <associate|filter base closure and on relation|<tuple|14.261|?>>
-    <associate|filter base convergence and Hausdorf|<tuple|14.253|?>>
-    <associate|filter base convergence properties|<tuple|14.259|?>>
-    <associate|filter base converging and acummulating|<tuple|14.252|?>>
-    <associate|filter base finite intersection|<tuple|14.246|?>>
-    <associate|filter base finite intersection property|<tuple|14.251|?>>
-    <associate|filter base function preserves maximality|<tuple|14.270|?>>
-    <associate|filter base inclusion|<tuple|14.257|?>>
-    <associate|filter base mapping|<tuple|14.262|?>>
-    <associate|filter base maximal condition|<tuple|14.267|?>>
-    <associate|filter base maximal existence|<tuple|14.268|?>>
+    inclusion|<tuple|14.259|?>>
+    <associate|filter base closure and on relation|<tuple|14.262|?>>
+    <associate|filter base convergence and Hausdorf|<tuple|14.254|?>>
+    <associate|filter base convergence properties|<tuple|14.260|?>>
+    <associate|filter base converging and acummulating|<tuple|14.253|?>>
+    <associate|filter base finite intersection|<tuple|14.247|?>>
+    <associate|filter base finite intersection property|<tuple|14.252|?>>
+    <associate|filter base function preserves maximality|<tuple|14.271|?>>
+    <associate|filter base inclusion|<tuple|14.258|?>>
+    <associate|filter base mapping|<tuple|14.263|?>>
+    <associate|filter base maximal condition|<tuple|14.268|?>>
+    <associate|filter base maximal existence|<tuple|14.269|?>>
     <associate|filter base maximal filter base and
-    convergence|<tuple|14.269|?>>
-    <associate|filter base maximum filter base|<tuple|14.266|?>>
+    convergence|<tuple|14.270|?>>
+    <associate|filter base maximum filter base|<tuple|14.267|?>>
     <associate|filter base neighborhood filter and
-    converging|<tuple|14.255|?>>
-    <associate|filter base neighborhood filter base|<tuple|14.248|?>>
+    converging|<tuple|14.256|?>>
+    <associate|filter base neighborhood filter base|<tuple|14.249|?>>
     <associate|filter base neighborhood filter base is a filter
-    base|<tuple|14.249|?>>
-    <associate|filter base on a subset|<tuple|14.260|?>>
-    <associate|filter base projection operator|<tuple|14.265|?>>
-    <associate|filter base subordinate|<tuple|14.256|?>>
-    <associate|filter base trivial|<tuple|14.247|?>>
-    <associate|filter base union and intersection|<tuple|14.250|?>>
-    <associate|lemma 14.342.156|<tuple|14.372|?>>
-    <associate|lemma 14.344.156|<tuple|14.373|?>>
-    <associate|lemma 14.345.156|<tuple|14.374|?>>
-    <associate|lemma 14.356.158|<tuple|14.383|?>>
-    <associate|lemma 14.376|<tuple|14.388|?>>
-    <associate|lemma 14.381.166|<tuple|14.390|?>>
-    <associate|lemma 14.382.166|<tuple|14.391|?>>
-    <associate|lemma 14.387.166|<tuple|14.396|?>>
-    <associate|limit (-1)^/i|<tuple|14.308|?>>
-    <associate|limit (a+n)/(b+n)|<tuple|14.298|?>>
-    <associate|limit 1/(a+i)|<tuple|14.297|?>>
-    <associate|limit a.x_n|<tuple|14.302|?>>
-    <associate|limit and continuity|<tuple|14.312|?>>
-    <associate|limit and continuity in metric space|<tuple|14.313|?>>
-    <associate|limit and equivalent norms|<tuple|14.325|?>>
-    <associate|limit and lower or upper bound|<tuple|14.305|?>>
-    <associate|limit b^n|<tuple|14.296|?>>
-    <associate|limit complex conjugate|<tuple|14.304|?>>
-    <associate|limit complex numbers condition|<tuple|14.303|?>>
-    <associate|limit constant sequence|<tuple|14.295|?>>
-    <associate|limit convergence implies bounded|<tuple|14.306|?>>
-    <associate|limit increasing decreasing (1)|<tuple|14.317|?>>
-    <associate|limit increasing descending sequences|<tuple|14.316|?>>
+    base|<tuple|14.250|?>>
+    <associate|filter base on a subset|<tuple|14.261|?>>
+    <associate|filter base projection operator|<tuple|14.266|?>>
+    <associate|filter base subordinate|<tuple|14.257|?>>
+    <associate|filter base trivial|<tuple|14.248|?>>
+    <associate|filter base union and intersection|<tuple|14.251|?>>
+    <associate|lemma 14.342.156|<tuple|14.373|?>>
+    <associate|lemma 14.344.156|<tuple|14.374|?>>
+    <associate|lemma 14.345.156|<tuple|14.375|?>>
+    <associate|lemma 14.356.158|<tuple|14.384|?>>
+    <associate|lemma 14.376|<tuple|14.389|?>>
+    <associate|lemma 14.381.166|<tuple|14.391|?>>
+    <associate|lemma 14.382.166|<tuple|14.392|?>>
+    <associate|lemma 14.387.166|<tuple|14.397|?>>
+    <associate|limit (-1)^/i|<tuple|14.309|?>>
+    <associate|limit (a+n)/(b+n)|<tuple|14.299|?>>
+    <associate|limit 1/(a+i)|<tuple|14.298|?>>
+    <associate|limit a.x_n|<tuple|14.303|?>>
+    <associate|limit and continuity|<tuple|14.313|?>>
+    <associate|limit and continuity in metric space|<tuple|14.314|?>>
+    <associate|limit and equivalent norms|<tuple|14.326|?>>
+    <associate|limit and lower or upper bound|<tuple|14.306|?>>
+    <associate|limit b^n|<tuple|14.297|?>>
+    <associate|limit complex conjugate|<tuple|14.305|?>>
+    <associate|limit complex numbers condition|<tuple|14.304|?>>
+    <associate|limit constant sequence|<tuple|14.296|?>>
+    <associate|limit convergence implies bounded|<tuple|14.307|?>>
+    <associate|limit increasing decreasing (1)|<tuple|14.318|?>>
+    <associate|limit increasing descending sequences|<tuple|14.317|?>>
     <associate|limit limit of sequence limited by another
-    sequence|<tuple|14.309|?>>
-    <associate|limit limsup liminf|<tuple|14.318|?>>
-    <associate|limit limsup liminf (equivalent definition)|<tuple|14.320|?>>
-    <associate|limit limsup liminf and limit|<tuple|14.321|?>>
-    <associate|limit limsup liminf inequality|<tuple|14.319|?>>
-    <associate|limit limsup liminf properties|<tuple|14.322|?>>
-    <associate|limit of norm is norm of limit|<tuple|14.315|?>>
+    sequence|<tuple|14.310|?>>
+    <associate|limit limsup liminf|<tuple|14.319|?>>
+    <associate|limit limsup liminf (equivalent definition)|<tuple|14.321|?>>
+    <associate|limit limsup liminf and limit|<tuple|14.322|?>>
+    <associate|limit limsup liminf inequality|<tuple|14.320|?>>
+    <associate|limit limsup liminf properties|<tuple|14.323|?>>
+    <associate|limit of norm is norm of limit|<tuple|14.316|?>>
     <associate|limit of sequence of non negatieve real numbers is
-    positive|<tuple|14.310|?>>
+    positive|<tuple|14.311|?>>
     <associate|limit sequence dominated by a sequence converting to
-    0|<tuple|14.299|?>>
+    0|<tuple|14.300|?>>
     <associate|limit sequence limited by a convergent real
-    sequence|<tuple|14.307|?>>
-    <associate|limit x_n+a|<tuple|14.300|?>>
-    <associate|limit x_n+y_n|<tuple|14.301|?>>
-    <associate|metric Banach fixed point theorem|<tuple|14.387|?>>
+    sequence|<tuple|14.308|?>>
+    <associate|limit x_n+a|<tuple|14.301|?>>
+    <associate|limit x_n+y_n|<tuple|14.302|?>>
+    <associate|metric Banach fixed point theorem|<tuple|14.388|?>>
     <associate|metric ball image preimage|<tuple|14.73|?>>
     <associate|metric bounded set|<tuple|14.75|?>>
     <associate|metric bounded set inclusion|<tuple|14.77|?>>
@@ -22798,8 +22835,8 @@
     <associate|metric closed balls are closed|<tuple|14.65|?>>
     <associate|metric closed open balls are bounded|<tuple|14.78|?>>
     <associate|metric composition of isometries|<tuple|14.72|?>>
-    <associate|metric contraction|<tuple|14.385|?>>
-    <associate|metric contractions are continuous|<tuple|14.386|?>>
+    <associate|metric contraction|<tuple|14.386|?>>
+    <associate|metric contractions are continuous|<tuple|14.387|?>>
     <associate|metric dense set|<tuple|14.81|?>>
     <associate|metric empty set is bounded|<tuple|14.76|?>>
     <associate|metric equivalent metrics|<tuple|14.67|?>>
@@ -22818,7 +22855,7 @@
     <associate|metric subtopology|<tuple|14.66|?>>
     <associate|metric topology|<tuple|14.63|?>>
     <associate|metric topology (1)|<tuple|14.64|?>>
-    <associate|multilinear continuous mapping space|<tuple|14.192|?>>
+    <associate|multilinear continuous mapping space|<tuple|14.193|?>>
     <associate|normed absolute value norm differences|<tuple|14.87|?>>
     <associate|normed all norms in the set of complex numbers are
     equivalent|<tuple|14.117|?>>
@@ -22832,9 +22869,9 @@
     <associate|normed closed generalized intervals|<tuple|14.102|?>>
     <associate|normed complex numbers|<tuple|14.96|?>>
     <associate|normed dense set|<tuple|14.111|?>>
-    <associate|normed distinct function|<tuple|14.162|?>>
+    <associate|normed distinct function|<tuple|14.163|?>>
     <associate|normed equivalent norms|<tuple|14.113|?>>
-    <associate|normed equivalent norms in R^n|<tuple|14.277|?>>
+    <associate|normed equivalent norms in R^n|<tuple|14.278|?>>
     <associate|normed finer topologies|<tuple|14.112|?>>
     <associate|normed generalized intervals that are open|<tuple|14.100|?>>
     <associate|normed isometry|<tuple|14.122|?>>
@@ -22844,7 +22881,7 @@
     <associate|normed isometry is injective|<tuple|14.119|?>>
     <associate|normed linear isometry|<tuple|14.118|?>>
     <associate|normed linear mappings between finite dimensional spaces are
-    continuous|<tuple|14.283|?>>
+    continuous|<tuple|14.284|?>>
     <associate|normed maximum norm|<tuple|14.94|?>>
     <associate|normed maximum norm R^n|<tuple|14.95|?>>
     <associate|normed norm|<tuple|14.85|?>>
@@ -22852,7 +22889,7 @@
     <associate|normed norm equivalence condition|<tuple|14.115|?>>
     <associate|normed norm of zero|<tuple|14.84|?>>
     <associate|normed norm on finite dimensional spaces are
-    equivalent|<tuple|14.278|?>>
+    equivalent|<tuple|14.279|?>>
     <associate|normed open generalized intervals|<tuple|14.101|?>>
     <associate|normed open set as union of intervals|<tuple|14.104|?>>
     <associate|normed open set as union of intervals (1)|<tuple|14.105|?>>
@@ -22865,71 +22902,71 @@
     <associate|normed sup(S) and inf(S)|<tuple|14.106|?>>
     <associate|normed topology|<tuple|14.92|?>>
     <associate|normed triangle inequality|<tuple|14.86|?>>
-    <associate|separation Hausdorff|<tuple|14.203|?>>
+    <associate|separation Hausdorff|<tuple|14.204|?>>
     <associate|separation Hausdorff every finite set is
-    closed|<tuple|14.206|?>>
-    <associate|separation a metric space is first countable|<tuple|14.217|?>>
-    <associate|separation conditions|<tuple|14.213|?>>
-    <associate|separation first countable topological space|<tuple|14.216|?>>
+    closed|<tuple|14.207|?>>
+    <associate|separation a metric space is first countable|<tuple|14.218|?>>
+    <associate|separation conditions|<tuple|14.214|?>>
+    <associate|separation first countable topological space|<tuple|14.217|?>>
     <associate|separation fundamental system of neighborhoods of
-    x|<tuple|14.215|?>>
-    <associate|separation metric spaces are Hausdorff|<tuple|14.204|?>>
-    <associate|separation metric spaces are regular|<tuple|14.208|?>>
-    <associate|separation neighbors|<tuple|14.214|?>>
-    <associate|separation normal topological space|<tuple|14.212|?>>
-    <associate|separation regular topological space|<tuple|14.207|?>>
+    x|<tuple|14.216|?>>
+    <associate|separation metric spaces are Hausdorff|<tuple|14.205|?>>
+    <associate|separation metric spaces are regular|<tuple|14.209|?>>
+    <associate|separation neighbors|<tuple|14.215|?>>
+    <associate|separation normal topological space|<tuple|14.213|?>>
+    <associate|separation regular topological space|<tuple|14.208|?>>
     <associate|separation regularity and non empty open
-    sets|<tuple|14.210|?>>
+    sets|<tuple|14.211|?>>
     <associate|separation regularity and non empty open sets
-    (1)|<tuple|14.211|?>>
+    (1)|<tuple|14.212|?>>
     <associate|separation second countability implies first
-    countability|<tuple|14.220|?>>
+    countability|<tuple|14.221|?>>
     <associate|separation second countable topological
-    space|<tuple|14.219|?>>
-    <associate|sequence|<tuple|14.285|?>>
-    <associate|sequence convergence|<tuple|14.289|?>>
-    <associate|sequence convergence equivalences|<tuple|14.294|?>>
-    <associate|sequence convergence in metric space|<tuple|14.293|?>>
-    <associate|sequence increasing decreasing|<tuple|14.286|?>>
-    <associate|sequence increasing decreasing consequence|<tuple|14.287|?>>
-    <associate|sequence increasing decreasing sets|<tuple|14.288|?>>
-    <associate|sequence limit|<tuple|14.291|?>>
-    <associate|sequence limit definition|<tuple|14.292|?>>
-    <associate|sequence limit start value|<tuple|14.290|?>>
-    <associate|serie sum and scalar product|<tuple|14.359|?>>
-    <associate|series|<tuple|14.350|?>>
-    <associate|series absolute convergence|<tuple|14.376|?>>
-    <associate|series absolute convergence commutativity|<tuple|14.384|?>>
+    space|<tuple|14.220|?>>
+    <associate|sequence|<tuple|14.286|?>>
+    <associate|sequence convergence|<tuple|14.290|?>>
+    <associate|sequence convergence equivalences|<tuple|14.295|?>>
+    <associate|sequence convergence in metric space|<tuple|14.294|?>>
+    <associate|sequence increasing decreasing|<tuple|14.287|?>>
+    <associate|sequence increasing decreasing consequence|<tuple|14.288|?>>
+    <associate|sequence increasing decreasing sets|<tuple|14.289|?>>
+    <associate|sequence limit|<tuple|14.292|?>>
+    <associate|sequence limit definition|<tuple|14.293|?>>
+    <associate|sequence limit start value|<tuple|14.291|?>>
+    <associate|serie sum and scalar product|<tuple|14.360|?>>
+    <associate|series|<tuple|14.351|?>>
+    <associate|series absolute convergence|<tuple|14.377|?>>
+    <associate|series absolute convergence commutativity|<tuple|14.385|?>>
     <associate|series absolute convergence equals convergence only in Banach
-    space|<tuple|14.381|?>>
-    <associate|series absolute convergence equivalences|<tuple|14.382|?>>
+    space|<tuple|14.382|?>>
+    <associate|series absolute convergence equivalences|<tuple|14.383|?>>
     <associate|series absolute convergence implies
-    convergence|<tuple|14.379|?>>
-    <associate|series absolute dominant convergence|<tuple|14.377|?>>
-    <associate|series absolute dominant convergence (1)|<tuple|14.378|?>>
+    convergence|<tuple|14.380|?>>
+    <associate|series absolute dominant convergence|<tuple|14.378|?>>
+    <associate|series absolute dominant convergence (1)|<tuple|14.379|?>>
     <associate|series convergence condition in a Banach
-    space|<tuple|14.355|?>>
-    <associate|series converging of upper series|<tuple|14.358|?>>
-    <associate|series dominant convergence|<tuple|14.380|?>>
-    <associate|series non negative numbers associativity|<tuple|14.375|?>>
-    <associate|series non negative numbers commutativity|<tuple|14.363|?>>
+    space|<tuple|14.356|?>>
+    <associate|series converging of upper series|<tuple|14.359|?>>
+    <associate|series dominant convergence|<tuple|14.381|?>>
+    <associate|series non negative numbers associativity|<tuple|14.376|?>>
+    <associate|series non negative numbers commutativity|<tuple|14.364|?>>
     <associate|series non negative numbers countable sum equivalent
-    definition|<tuple|14.370|?>>
-    <associate|series non negative numbers countable sums|<tuple|14.366|?>>
+    definition|<tuple|14.371|?>>
+    <associate|series non negative numbers countable sums|<tuple|14.367|?>>
     <associate|series non negative numbers countable sums
-    inclusion|<tuple|14.369|?>>
-    <associate|series non negative numbers denumerable sum|<tuple|14.364|?>>
-    <associate|series non negative numbers equivalences|<tuple|14.361|?>>
+    inclusion|<tuple|14.370|?>>
+    <associate|series non negative numbers denumerable sum|<tuple|14.365|?>>
+    <associate|series non negative numbers equivalences|<tuple|14.362|?>>
     <associate|series non negative numbers strict positive
-    term|<tuple|14.362|?>>
-    <associate|series of all zeroes|<tuple|14.371|?>>
-    <associate|series of complex numbers|<tuple|14.360|?>>
-    <associate|series partition series|<tuple|14.357|?>>
-    <associate|series power series in R|<tuple|14.353|?>>
-    <associate|series terms converges to zero|<tuple|14.354|?>>
-    <associate|series translation start|<tuple|14.356|?>>
-    <associate|sum of a countable set|<tuple|14.365|?>>
-    <associate|sum of powers lemma|<tuple|14.352|?>>
+    term|<tuple|14.363|?>>
+    <associate|series of all zeroes|<tuple|14.372|?>>
+    <associate|series of complex numbers|<tuple|14.361|?>>
+    <associate|series partition series|<tuple|14.358|?>>
+    <associate|series power series in R|<tuple|14.354|?>>
+    <associate|series terms converges to zero|<tuple|14.355|?>>
+    <associate|series translation start|<tuple|14.357|?>>
+    <associate|sum of a countable set|<tuple|14.366|?>>
+    <associate|sum of powers lemma|<tuple|14.353|?>>
     <associate|topology Baire space|<tuple|14.53|?>>
     <associate|topology Baire space alternative definition|<tuple|14.55|?>>
     <associate|topology Baire space empty set|<tuple|14.54|?>>
@@ -22981,7 +23018,7 @@
     <associate|topology subspace topology|<tuple|14.8|?>>
     <associate|topology subspace topology open subset|<tuple|14.11|?>>
     <associate|topology subsubspace topology|<tuple|14.10|?>>
-    <associate|xn\<less\>yn=\<gtr\>limxn\<less\>limyn|<tuple|14.311|?>>
+    <associate|xn\<less\>yn=\<gtr\>limxn\<less\>limyn|<tuple|14.312|?>>
   </collection>
 </references>
 

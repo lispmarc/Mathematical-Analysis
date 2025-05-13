@@ -2229,7 +2229,7 @@
 
       <item><math|\<forall\>a\<in\><around*|]|0,\<infty\>|[>> and
       <math|\<forall\>x\<in\>\<bbb-R\>> we have that
-      <math|0\<less\>a<rsup|x>>
+      <math|0\<less\>a<rsup|x>> and <math|0\<leqslant\>0<rsup|x>>
 
       <item><math|\<forall\>a\<in\><around*|[|0,\<infty\>|[>> and
       <math|\<forall\>x\<in\>\<bbb-R\>\\<around*|{|0|}>> we have that
@@ -2310,7 +2310,7 @@
       <math|a<rsup|x+y>=a<rsup|x>\<cdot\>a<rsup|y>>.
 
       <item><math|\<forall\>x\<in\><around*|]|0,\<infty\>|[>> we have that
-      <math|<around*|(|\<ast\>|)><rsup|x>:<around*|]|0,\<ldots\>,\<infty\>|[>\<rightarrow\>\<bbb-R\>>
+      <math|<around*|(|\<ast\>|)><rsup|x>:<around*|[|0,\<infty\>|[>\<rightarrow\>\<bbb-R\>>
       defined by <math|<around*|(|\<ast\>|)><rsup|x><around*|(|y|)>=y<rsup|x>>
       is strictly increasing.
     </enumerate>
@@ -2320,8 +2320,7 @@
     \ 
 
     <\enumerate>
-      <item>For <math|a\<in\><around*|[|0,\<ldots\>,\<infty\>|[>> we have
-      either:
+      <item>For <math|a\<in\><around*|[|0,\<infty\>|[>> we have either:
 
       <\description>
         <item*|<math|a=0>>Then <math|a<rsup|0>=1>
@@ -2333,7 +2332,9 @@
 
       <item>If <math|<around*|]|0,\<infty\>|[>> then
       <math|a<rsup|x>=exp<around*|(|x\<cdot\>log<around*|(|a|)>|)>\<gtr\>0>
-      [because [theorem: <reference|exp properties>(4)]]\ 
+      [because [theorem: <reference|exp properties>(4)]]. Further by
+      definition we have that <math|0<rsup|x>=<choice|<tformat|<table|<row|<cell|1
+      if x=0>>|<row|<cell|0<text| if >x\<nin\>0>>>>>\<geqslant\>0>.
 
       <item>Let <math|a<rsup|x>=0> and assume that <math|a\<neq\>0> then
       <math|<around*|]|0,\<infty\>|[>> so that
@@ -2495,21 +2496,48 @@
         <reference|exp exp(x+y)=exp(x).exp(y)>]>>>|<cell|exp<around*|(|x\<cdot\>log<around*|(|a|)>|)>\<cdot\>exp<around*|(|y*\<cdot\>log<around*|(|a|)>|)>>>|<row|<cell|>|<cell|=>|<cell|x<rsup|a>\<cdot\>y<rsup|a>>>>>
       </eqnarray*>
 
-      <item>Let <math|y,z\<in\><around*|]|0,\<infty\>|[>> such that
-      <math|y\<less\>z> then as <math|log> is strictly increasing [see
-      theorem: <reference|exp logarithm properties>] it follows that
-      <math|log<around*|(|y|)>\<less\>log<around*|(|z|)>> and as
-      <math|0\<less\>log<around*|(|y|)>,log<around*|(|z|)>> and
-      <math|0\<less\>x> we have <math|x\<cdot\>log<around*|(|y|)>\<less\>x\<cdot\>log<around*|(|z|)>>.
-      Further, as <math|exp> is strictly increasing [see theorem:
-      <reference|exp properties>], it follows that
+      <item>Let <math|x\<in\><around*|]|0,\<infty\>|[>> then for every
+      <math|y,z\<in\><around*|[|0,\<infty\>|[>> with <math|y\<less\>z> we
+      have for <math|y> either:
 
-      <\equation*>
-        y<rsup|x>=exp<around*|(|x\<cdot\>log<around*|(|y|)>|)>\<less\>exp<around*|(|x\<cdot\>log<around*|(|z|)>|)>=z<rsup|x>
-      </equation*>
+      <\description>
+        <item*|<math|y=0>>Then as <math|x\<in\><around*|]|0,\<infty\>|[>> we
+        have by [definition: <reference|exp generalized power>] that
+        <math|y<rsup|x>=0>. Further as <math|0=y\<less\>z> we have by
+        [definition: <reference|exp generalized power>] that
+        <math|z<rsup|x>=exp<around*|(|x\<cdot\>log<around*|(|z|)>|)>> where
+        by [theorem: <reference|exp properties>(4)]
+        <math|0\<less\>exp<around*|(|x\<cdot\>log<around*|(|z|)>|)>>. Hence
+        we have <math|y<rsup|x>=0\<less\>exp<around*|(|x\<cdot\>log<around*|(|z|)>|)>=z<rsup|x>>
+        proving that\ 
+
+        <\equation*>
+          y<rsup|x>\<less\>z<rsup|x>
+        </equation*>
+
+        <item*|<math|0\<less\>y>>Then <math|y,z\<in\><around*|]|0,\<infty\>|[>>
+        and as <math|x\<in\><around*|]|0,\<infty\>|[>> we have by
+        [definition: <reference|exp generalized power>] that\ 
+
+        <\equation*>
+          y<rsup|x>=exp<around*|(|x\<cdot\>log<around*|(|y|)>|)>\<wedge\>z<rsup|x>=exp<around*|(|x\<cdot\>log<around*|(|z|)>|)>
+        </equation*>
+
+        As <math|log> is strictly increasing [see theorem: <reference|exp
+        logarithm properties>] it follows that
+        <math|log<around*|(|y|)>\<less\>log<around*|(|z|)>> and as
+        <math|0\<less\>log<around*|(|y|)>,log<around*|(|z|)>> and
+        <math|0\<less\>x> we have <math|x\<cdot\>log<around*|(|y|)>\<less\>x\<cdot\>log<around*|(|z|)>>.
+        Further, as <math|exp> is strictly increasing [see theorem:
+        <reference|exp properties>], it follows that
+        <math|exp<around*|(|x\<cdot\>log<around*|(|y|)>|)>\<less\>exp<around*|(|x\<cdot\>log<around*|(|z|)>|)>>
+        so that
+
+        <\equation*>
+          y<rsup|x>\<less\>z<rsup|x>
+        </equation*>
+      </description>
     </enumerate>
-
-    \;
   </proof>
 
   <\theorem>
@@ -2620,11 +2648,11 @@
 
   <\theorem>
     <label|exp (*)^x is continuous>Let <math|x\<in\><around*|]|0,\<infty\>|[>>
-    then <math|<around*|(|\<ast\>|)><rsup|x>:<around*|[|0,\<ldots\>,\<infty\>|[>\<rightarrow\>\<bbb-R\>>
+    then <math|<around*|(|\<ast\>|)><rsup|x>:<around*|[|0,\<infty\>|[>\<rightarrow\>\<bbb-R\>>
     defined by <math|<around*|(|\<ast\>|)><rsup|x><around*|(|y|)>=y<rsup|x>>
     is continuous on <math|<around*|[|0,\<infty\>|[>> [where we use the
     sub-space topology of <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>>
-    on the <math|<around*|[|0,\<ldots\>,\<infty\>|[>>
+    on the <math|<around*|[|0,\<infty\>|[>>
   </theorem>
 
   <\proof>
@@ -4626,7 +4654,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|18>
-    <associate|page-first|1183>
+    <associate|page-first|909>
     <associate|page-medium|papyrus>
     <associate|section-nr|4>
     <associate|subsection-nr|4>

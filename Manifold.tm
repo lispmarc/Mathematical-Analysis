@@ -106,6 +106,8 @@
 
   <\enumerate>
     <item>Rewrite started/
+
+    <item>Check Extended Real Numbers started
   </enumerate>
 
   <section|Manifold.tm>
