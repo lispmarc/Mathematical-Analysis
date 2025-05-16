@@ -33649,7 +33649,7 @@
     <math|<frac|1|p>+<frac|1|q>=1>, <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>>
     a measure space and <math|f\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>,
     <math|g\<in\>\<cal-L\><rsup|q><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
-    then <math|f\<cdot\>g\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+    then <math|f\<cdot\>g\<in\>\<cal-L\><rsup|1><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
     and\ 
 
     <\equation*>
@@ -33665,18 +33665,17 @@
       <reference|extended 1/x>]>>0+<frac|1|q>=<frac|1|q>> we have that
       <math|q=1> [if <math|q=-\<infty\>,\<infty\>> then
       <math|<frac|1|q>=0\<neq\>1> so we must have that
-      <math|q=<around*|(|1|)><rsup|-1>=1>]. So
-      <math|g\<in\>\<cal-L\><rsup|1><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>\<equallim\><rsub|<text|[theorem:
-      <reference|LP spaces canonical example>]>>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>.
+      <math|q=<around*|(|1|)><rsup|-1>=1>], so
+      <math|g\<in\>\<cal-L\><rsup|1><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>.
       By [theorem: <reference|measure integral sigma finite>] it follows that
-      <math|A=<around*|{|x\<in\>X\|g<around*|(|x|)>\<neq\>0|}>> is
-      <math|\<mu\>>-finite, so there exist a
+      <math|<around*|{|x\<in\>X\|<around*|\||g<around*|(|x|)>|\|>\<neq\>0|}>>
+      is <math|\<mu\>>-finite, so there exist a
       <math|<around*|{|A|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>> with
       <math|\<forall\>i\<in\>\<bbb-N\>> <math|\<mu\><around*|(|A<rsub|i>|)>\<less\>\<infty\>>
       such that\ 
 
       <\equation>
-        <label|eq 20.607.246>A=<around*|{|x\<in\>X\|g<around*|(|x|)>\<neq\>0|}>\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>
+        <label|eq 20.607.246>A=<around*|{|x\<in\>X\|<around*|\||g<around*|(|x|)>|\|>\<neq\>0|}>\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>
       </equation>
 
       Further as <math|f\<in\>\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
@@ -33687,7 +33686,7 @@
         is locally >\<mu\><text|-null>
       </equation>
 
-      So\ 
+      Using the definitions of <math|A> and <math|B> we have
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|A<big|cap>B>|<cell|<below|\<subseteq\>|<text|[eq:
@@ -33697,14 +33696,14 @@
 
       As <math|B=<around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<gtr\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>|}>>
       is locally <math|\<mu\>>-null and <math|\<mu\><around*|(|A<rsub|i>|)>\<less\>\<infty\>>
-      we have that <math|A<rsub|i><big|cap><around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<gtr\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>|}>\<in\>\<cal-N\><rsub|\<mu\>>>.
+      we have that <math|<rigid|A<rsub|i><big|cap><around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<gtr\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>|}>\<in\>\<cal-N\><rsub|\<mu\>>>>.
       So there exist a <math|N<rsub|i>\<in\>\<cal-A\>> with
       <math|\<mu\><around*|(|N<rsub|i>|)>=0> such that
-      <math|A<rsub|i><big|cap><around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<gtr\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>|}>\<subseteq\>N<rsub|i>>.
-      Hence substituting this in [eq: <reference|eq 20.609.246>] we have that\ 
+      <math|<rigid|A<rsub|i><big|cap><around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<gtr\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>|}>\<subseteq\>N<rsub|i>>>.
+      Substituting this in [eq: <reference|eq 20.609.246>] gives
 
       <\equation>
-        <label|eq 20.610.246><around*|{|x\<in\>X\|g<around*|(|x|)>\<neq\>0|}><big|cap><around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<gtr\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>|}>\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\>>N<rsub|i>
+        <label|eq 20.610.246><around*|{|x\<in\>X\|<around*|\||g<around*|(|x|)>|\|>\<neq\>0|}><big|cap><around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<gtr\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>|}>\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\>>N<rsub|i>
       </equation>
 
       and\ 
@@ -33717,12 +33716,18 @@
       If <math|x\<in\><around*|{|x\<in\>X\|<around*|\||f\<cdot\>g|\|><around*|(|x|)>\<gtr\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>\<cdot\><around*|\||g<around*|(|x|)>|\|>|}>>
       then <math|<around*|\||f<around*|(|x|)>|\|>\<cdot\><around*|\||g<around*|(|x|)>|\|>\<gtr\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>\<cdot\><around*|\||g<around*|(|x|)>|\|>>
       and we must have that \ <math|<around*|\||g<around*|(|x|)>|\|>\<neq\>0>
-      [other wise we have <math|0=<around*|\||f<around*|(|x|)>|\|>\<cdot\><around*|\||g<around*|(|x|)>|\|>\<gtr\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>\<cdot\><around*|\||g<around*|(|x|)>|\|>=0>
-      leading to the contradiction <math|0\<gtr\>0>] so that after dividing
-      by <math|<around*|\||g<around*|(|x|)>|\|>> we have
+      [otherwise we have <math|0=<around*|\||f<around*|(|x|)>|\|>\<cdot\><around*|\||g<around*|(|x|)>|\|>\<gtr\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>\<cdot\><around*|\||g<around*|(|x|)>|\|>=0>
+      leading to the contradiction <math|0\<gtr\>0>], hence dividing by
+      <math|<around*|\||g<around*|(|x|)>|\|>> we have
       <math|<around*|\||f<around*|(|x|)>|\|>\<gtr\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>>.
-      Hence <math|x\<in\><around*|{|x\<in\>X\|<around*|\||g<around*|(|x|)>|\|>\<neq\>0|}><big|cap><around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<geqslant\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>|}>>.
-      So using [eq: <reference|eq 20.610.246>] we have\ 
+      Hence <rigid|<math|x\<in\><around*|{|x\<in\>X\|<around*|\||g<around*|(|x|)>|\|>\<neq\>0|}><big|cap><around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<gtr\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>|}>>>
+      proving that
+
+      <\equation*>
+        <around*|{|x\<in\>X\|<around*|\||f\<cdot\>g|\|><around*|(|x|)>\<gtr\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>\<cdot\><around*|\||g<around*|(|x|)>|\|>|}>\<subseteq\><around*|{|x\<in\>X\|<around*|\||g<around*|(|x|)>|\|>\<neq\>0|}><big|cap><around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<gtr\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>|}>
+      </equation*>
+
+      \ So using [eq: <reference|eq 20.610.246>] it follows that
 
       <\equation*>
         <around*|{|x\<in\>X\|<around*|\||f\<cdot\>g|\|><around*|(|x|)>\<gtr\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>\<cdot\><around*|\||g<around*|(|x|)>|\|>|}>\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\>>N<rsub|i>
@@ -33745,7 +33750,7 @@
       <math|<around*|\||f\<cdot\>g|\|>\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>>.
       Further from <math|g\<in\>\<cal-L\><rsup|1><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
       it follows that <math|<around*|\||g|\|>=<around*|\||g|\|><rsup|1>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>>
-      so that by [theorem: <reference|complex integral property>] that
+      so that by [theorem: <reference|complex integral property>]
       <math|<around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>\<cdot\><around*|\||g|\|>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>>.
       Using then [eq: <reference|eq 20.612.246>] together with [theorem:
       <reference|measure integral domination theorem>] proves that\ 
@@ -33787,7 +33792,7 @@
         </equation*>
       </description>
 
-      Hence we have that\ 
+      Hence we have\ 
 
       <\equation>
         <label|eq 20.614.246>\<forall\>x\<in\>X<text| we have
@@ -33816,7 +33821,7 @@
       and\ 
 
       <\equation>
-        <label|eq 20.616.246><big|int><around*|\||f\<cdot\>g|\|>d\<mu\>\<leqslant\><big|int><around*|(|<frac|<around*|\||f|\|><rsup|p>|p>+<frac|<around*|\||g|\|><rsup|q>|q>|)>=<frac|1|p>\<cdot\><big|int><around*|\||f|\|><rsup|p>d\<mu\>+<frac|1|q>\<cdot\><big|int><around*|\||g|\|><rsup|q>d\<mu\>
+        <label|eq 20.616.246><big|int><around*|\||f\<cdot\>g|\|>d\<mu\>\<leqslant\><big|int><around*|(|<frac|<around*|\||f|\|><rsup|p>|p>+<frac|<around*|\||g|\|><rsup|q>|q>|)>d\<mu\>=<frac|1|p>\<cdot\><big|int><around*|\||f|\|><rsup|p>d\<mu\>+<frac|1|q>\<cdot\><big|int><around*|\||g|\|><rsup|q>d\<mu\>
       </equation>
 
       We examine now the case where <math|<around*|\<\|\|\>|f|\<\|\|\>><rsub|p>=1=<around*|\<\|\|\>|g|\<\|\|\>><rsub|q>>.
@@ -33824,20 +33829,20 @@
 
       <\equation*>
         1\<equallim\><rsub|<text|[theorem: <reference|exp generalized power
-        properties>]>>1<rsup|p>=<around*|(|<around*|\<\|\|\>||\<\|\|\>><rsub|p>|)>=<around*|(|<around*|(|<big|int><around*|\||f|\|><rsup|p>d\<mu\>|)><rsup|<frac|1|p>>|)><rsup|p>\<equallim\><rsub|<text|[theorem:
+        properties>]>>1<rsup|p>=<around*|(|<around*|\<\|\|\>|f|\<\|\|\>><rsub|p>|)>=<around*|(|<around*|(|<big|int><around*|\||f|\|><rsup|p>d\<mu\>|)><rsup|<frac|1|p>>|)><rsup|p>\<equallim\><rsub|<text|[theorem:
         <reference|exp generalized power properties>]>><big|int><around*|\||f|\|><rsup|p>d\<mu\>
       </equation*>
 
       <\equation*>
         1\<equallim\><rsub|<text|[theorem: <reference|exp generalized power
-        properties>]>>1<rsup|q>=<around*|(|<around*|\<\|\|\>||\<\|\|\>><rsub|q>|)>=<around*|(|<around*|(|<big|int><around*|\||f|\|><rsup|q>d\<mu\>|)><rsup|<frac|1|q>>|)><rsup|q>\<equallim\><rsub|<text|[theorem:
+        properties>]>>1<rsup|q>=<around*|(|<around*|\<\|\|\>|g|\<\|\|\>><rsub|q>|)>=<around*|(|<around*|(|<big|int><around*|\||f|\|><rsup|q>d\<mu\>|)><rsup|<frac|1|q>>|)><rsup|q>\<equallim\><rsub|<text|[theorem:
         <reference|exp generalized power properties>]>><big|int><around*|\||f|\|><rsup|q>d\<mu\>
       </equation*>
 
       Substituting this in [eq: <reference|eq 20.616.246>] gives\ 
 
       <\equation*>
-        <big|int><around*|\||f\<cdot\>g|\|>d\<mu\>=<frac|1|p>+<frac|1|q>=1
+        <big|int><around*|\||f\<cdot\>g|\|>d\<mu\>\<leqslant\><frac|1|p>+<frac|1|q>=1
       </equation*>
 
       To summarize we have\ 
@@ -33972,9 +33977,9 @@
     then <math|<around*|\<\|\|\>|f+g|\<\|\|\>><rsub|p>\<leqslant\><around*|\<\|\|\>|f|\<\|\|\>><rsub|p>+<around*|\<\|\|\>|g|\<\|\|\>><rsub|p>>
 
     <\note>
+      Using [theorem: <reference|LP vector space>]
       <math|f+g\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
-      using [theorem: <reference|LP vector space>] so that
-      <math|<around*|\<\|\|\>|f+g|\<\|\|\>><rsub|p>> is well defined.
+      so that <math|<around*|\<\|\|\>|f+g|\<\|\|\>><rsub|p>> is well defined.
     </note>
   </theorem>
 
@@ -33993,20 +33998,169 @@
     <\description>
       <item*|<math|p=\<infty\>>>Define <math|F=<around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<gtr\><around*|\<\|\|\>|f|\<\|\|\>><rsub|p>|}>>
       and <math|G=<around*|{|x\<in\>X\|<around*|\||g<around*|(|x|)>|\|>\<geqslant\><around*|\<\|\|\>|g|\<\|\|\>><rsub|\<infty\>>|}>>
-      then using [lemma: <reference|lemma 20.463.246>] we have that\ 
+      then using [lemma: <reference|lemma 20.463.246>] we have that
+      <math|F<text| is locally >\<mu\><text|-null and >G<text| is locally
+      >\<mu\><text|-null>> so that by ]theorem: <reference|LP spaces locally
+      m-null set properties>]
+
+      <\equation>
+        <label|eq 20.620.246>F<big|cup>G<text| is locally >\<mu\><text|-null>
+      </equation>
+
+      Let <math|x\<in\><around*|{|x\<in\>X\|<around*|\||<around*|(|f+g|)><around*|(|x|)>|\|>\<gtr\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>+<around*|\<\|\|\>|g|\<\|\|\>><rsub|\<infty\>>|}>>
+      then
 
       <\equation*>
-        F<text| is locally >\<mu\><text|-null and >G<text| is locally
-        >\<mu\><text|-null>
+        <around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>+<around*|\<\|\|\>|g|\<\|\|\>><rsub|\<infty\>>\<less\><around*|\||<around*|(|f+g|)><around*|(|x|)>|\|>\<leqslant\><around*|\||f<around*|(|x|)>|\|>+<around*|\||g<around*|(|x|)>|\|>.
       </equation*>
 
-      <item*|<math|p=1>>
+      Assume that <math|<around*|\||f<around*|(|x|)>|\|>\<leqslant\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>\<wedge\><around*|\||g<around*|(|x|)>|\|>\<leqslant\><around*|\<\|\|\>|g|\<\|\|\>><rsub|\<infty\>>>
+      then we would have <math|<rigid|<around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>+<around*|\<\|\|\>|g|\<\|\|\>><rsub|\<infty\>>\<less\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>+<around*|\<\|\|\>|g|\<\|\|\>><rsub|\<infty\>>>>
+      a contradiction, hence the assumption is wrong and we must have
+      <math|<around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>\<less\><around*|\||f<around*|(|x|)>|\|>\<vee\><around*|\<\|\|\>|g|\<\|\|\>><rsub|\<infty\>>\<less\><around*|\||g<around*|(|x|)>|\|>>
+      or <math|x\<in\>F<big|cup>G>. So we have proved that
 
-      <item*|<math|p\<in\><around*|]|1,\<infty\>|[>>>
+      <\equation*>
+        <around*|{|x\<in\>X\|<around*|\||<around*|(|f+g|)><around*|(|x|)>|\|>\<gtr\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>+<around*|\<\|\|\>|g<rsub|>|\<\|\|\>><rsub|\<infty\>>|}>\<subseteq\>X\\<around*|(|X\\<around*|(|F<big|cup>G|)>|)>=F<big|cup>G
+      </equation*>
+
+      so that using [eq: <reference|eq 20.620.246>] on ]theorem:
+      <reference|LP spaces locally m-null set properties>] it follows that\ 
+
+      <\equation*>
+        <around*|{|x\<in\>X\|<around*|\||<around*|(|f+g|)><around*|(|x|)>|\|>\<gtr\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>+<around*|\<\|\|\>|g<rsub|>|\<\|\|\>><rsub|\<infty\>>|}><text|
+        is locally >\<mu\><text|-null>
+      </equation*>
+
+      As by [definition: <reference|LP spaces p-norm (2)>]
+      <math|<around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>+<around*|\<\|\|\>|g|\<\|\|\>><rsub|\<infty\>>\<in\><around*|[|0,\<infty\>|[>>
+      it follows that
+
+      <\equation*>
+        <around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>+<around*|\<\|\|\>|g|\<\|\|\>><rsub|\<infty\>>\<in\><around*|{|M\<in\><around*|[|0,\<infty\>|[>\|<around*|{|x\<in\>X\|<around*|\||<around*|(|f+g|)><around*|(|x|)>|\|>\<gtr\>M|}>|}>
+      </equation*>
+
+      so that <math|<around*|\<\|\|\>|f+g|\<\|\|\>><rsub|\<infty\>><below|=|<text|[definition:
+      <reference|LP spaces p-norm (2)>]>>><math|inf<around*|(|<around*|{|M\<in\><around*|[|0,\<infty\>|[>\|<around*|{|x\<in\>X\|<around*|\||<around*|(|f+g|)><around*|(|x|)>|\|>\<gtr\>M|}>|}>|)>\<leqslant\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>+<around*|\<\|\|\>|g|\<\|\|\>><rsub|\<infty\>>>.
+      Hence we have proved that\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|f+g|\<\|\|\>><rsub|p>\<leqslant\><around*|\<\|\|\>|f|\<\|\|\>><rsub|p>+<around*|\<\|\|\>|g|\<\|\|\>><rsub|p>
+      </equation*>
+
+      <item*|<math|p=1>>Given <math|x\<in\>X> we have that
+      <math|<around*|\||f+g|\|><around*|(|x|)>=<around*|\||f<around*|(|x|)>+g<around*|(|x|)>|\|>\<leqslant\><around*|\||f<around*|(|x|)>|\|>+<around*|\||g<around*|(|x|)>|\|>>
+      so that by [theorem: <reference|measure integral properties>] we have
+      <math|<big|int><around*|\||f+g|\|>d\<mu\>\<leqslant\><big|int><around*|\||f|\|>d\<mu\>+<big|int><around*|\||g|\|>d\<mu\>>.
+      Hence we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|f+g|\<\|\|\>><rsub|1>>|<cell|=>|<cell|<around*|(|<big|int><around*|\||f+g|\|><rsup|1>d\<mu\>|)><rsup|<frac|1|1>>>>|<row|<cell|>|<cell|=>|<cell|<big|int><around*|\||f+g|\|>d\<mu\>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<big|int><around*|\||f|\|>d\<mu\>+<big|int><around*|\||g|\|>d\<mu\>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|int><around*|\||f|\|><rsup|1>d\<mu\>|)><rsup|<frac|1|1>>+<around*|(|<big|int><around*|\||g|\|><rsup|1>d\<mu\>|)><rsup|<frac|1|1>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|f|\<\|\|\>><rsub|1>+<around*|\<\|\|\>|g|\<\|\|\>><rsub|1>>>>>
+      </eqnarray*>
+
+      proving that\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|f+g|\<\|\|\>><rsub|p>\<leqslant\><around*|\<\|\|\>|f|\<\|\|\>><rsub|p>
+      </equation*>
+
+      <item*|<math|p\<in\><around*|]|1,\<infty\>|[>>>Let
+      <math|q=<frac|p|p-1>> then <math|<frac|1|p>+<frac|1|q>=<frac|1|p>+<frac|p-1|p>=<frac|p|p>=1>
+      and <math|<around*|(|p-1|)>\<cdot\>q=p>. So if follows that
+      <math|<around*|(|<around*|\||f+g|\|><rsup|p-1>|)><rsup|q>\<equallim\><rsub|<text|[theorem:
+      <reference|exp generalized power properties>]>><around*|\||f+g|\|><rsup|<around*|(|p-1|)>\<cdot\>q>=<around*|\||f+g|\|><rsup|p>>.
+      So using [eq: <reference|eq 20.619.246>] it follows that
+      <math|<around*|(|<around*|\||f+g|\|><rsup|p-1>|)><rsup|q>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+      so that
+
+      <\equation>
+        <label|eq 20.621.246><around*|\||f+g|\|><rsup|p-1>\<in\>\<cal-L\><rsup|q><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>
+      </equation>
+
+      Now as <math|f,g\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>,
+      <math|<frac|1|p>+<frac|1|q>> we have using the Holder's inequality [see
+      theorem: <reference|Holder's Inequality>] together with the above that\ 
+
+      <\equation>
+        <label|eq 20.622.246>f\<cdot\><around*|\||f+g|\|><rsup|p-1>\<in\>\<cal-L\><rsup|1><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>\<wedge\>g\<cdot\><around*|\||f+g|\|><rsup|q-1>\<in\>\<cal-L\><rsup|1><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>
+      </equation>
+
+      <\equation>
+        <label|eq 20.623.246><big|int><around*|\||f\<cdot\><around*|\||f+g|\|><rsup|p-1>|\|>d\<mu\>\<leqslant\><around*|\<\|\|\>|f|\<\|\|\>><rsub|p>\<cdot\><around*|\<\|\|\>|<around*|\||f+g|\|><rsup|p-1>|\<\|\|\>><rsub|q>
+      </equation>
+
+      <\equation>
+        <label|eq 20.624.246><big|int><around*|\||g\<cdot\><around*|\||f+g|\|><rsup|p-1>|\|>d\<mu\>\<leqslant\><around*|\<\|\|\>|g|\<\|\|\>><rsub|p>\<cdot\><around*|\<\|\|\>|<around*|\||f+g|\|><rsup|p-1>|\<\|\|\>><rsub|q>
+      </equation>
+
+      Further we have <math|\<forall\>x\<in\>X> that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\||f+g|\|><rsup|p><around*|(|x|)>>|<cell|=>|<cell|<around*|\||f<around*|(|x|)>+g<around*|(|x|)>|\|><rsup|p>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|exp generalized power properties>]>>>|<cell|<around*|\||f<around*|(|x|)>+g<around*|(|x|)>|\|>\<cdot\><around*|\||f<around*|(|x|)>+g<around*|(|x|)>|\|><rsup|p-1>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|(|<around*|\||f<around*|(|x|)>|\|>+<around*|\||g<around*|(|x|)>|\|>|)>\<cdot\><around*|\||f<around*|(|x|)>+g<around*|(|x|)>|\|><rsup|p-1>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||f<around*|(|x|)>|\|>\<cdot\><around*|\||f<around*|(|x|)>+g<around*|(|x|)>|\|><rsup|p-1>+<around*|\||g<around*|(|x|)>|\|>\<cdot\><around*|\||f<around*|(|x|)>+g<around*|(|x|)>|\|><rsup|p-1>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|\||f|\|>\<cdot\><around*|\||f+g|\|><rsup|p-1>+<around*|\||g|\|>\<cdot\><around*|\||f+g|\|><rsup|p-1>|)><around*|(|x|)>>>>>
+      </eqnarray*>
+
+      Using [theorem: <reference|measure integral properties>] we have then
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|int><around*|\||f+g|\|><rsup|p>d\<mu\>>|<cell|\<leqslant\>>|<cell|<big|int><around*|(|<around*|\||f|\|>\<cdot\><around*|\||f+g|\|><rsup|p-1>+<around*|\||g|\|>\<cdot\><around*|\||f+g|\|><rsup|p-1>|)>d\<mu\>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+        <reference|measure integral properties>]>>>|<cell|<big|int><around*|(|<around*|\||f|\|>\<cdot\><around*|\||f+g|\|><rsup|p-1>|)>d\<mu\>+<big|int><around*|(|<around*|\||g|\|>\<cdot\><around*|\||f+g|\|><rsup|p-1>|)>d\<mu\>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[eqs:
+        <reference|eq 20.623.246>, <reference|eq
+        20.624.246>]>>>|<cell|<around*|\<\|\|\>|f|\<\|\|\>><rsub|p>\<cdot\><around*|\<\|\|\>|<around*|\||f+g|\|><rsup|p-1>|\<\|\|\>><rsub|q>+<around*|\<\|\|\>|g|\<\|\|\>><rsub|p>\<cdot\><around*|\<\|\|\>|<around*|\||f+g|\|><rsup|p-1>|\<\|\|\>><rsub|q>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|\<\|\|\>|f|\<\|\|\>><rsub|p>+<around*|\<\|\|\>|g|\<\|\|\>><rsub|p>|)>\<cdot\><around*|\<\|\|\>|<around*|\||f+g|\|><rsup|p-1>|\<\|\|\>><rsub|q>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|\<\|\|\>|f|\<\|\|\>><rsub|p>+<around*|\<\|\|\>|g|\<\|\|\>><rsub|p>|)>\<cdot\><around*|(|<big|int><around*|(|<around*|\||f+g|\|><rsup|p-1>|)><rsup|q>d\<mu\>|)><rsup|<frac|1|q>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|exp generalized power properties>]>>>|<cell|<around*|(|<around*|\<\|\|\>|f|\<\|\|\>><rsub|p>+<around*|\<\|\|\>|g|\<\|\|\>><rsub|p>|)>\<cdot\><around*|(|<big|int><around*|\||f+g|\|><rsup|<around*|(|p-1|)>\<cdot\>q>d\<mu\>|)><rsup|<frac|1|q>>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|\<\|\|\>|f|\<\|\|\>><rsub|p>+<around*|\<\|\|\>|g|\<\|\|\>><rsub|p>|)>\<cdot\><around*|(|<big|int><around*|\||f+g|\|><rsup|p>d\<mu\>|)><rsup|<frac|1|q>>>>>>
+      </eqnarray*>
+
+      so that\ 
+
+      <\equation>
+        <label|eq 20.625.246><big|int><around*|\||f+g|\|><rsup|p>d\<mu\>\<leqslant\><around*|(|<around*|\<\|\|\>|f|\<\|\|\>><rsub|p>+<around*|\<\|\|\>|g|\<\|\|\>><rsub|p>|)>\<cdot\><around*|(|<big|int><around*|\||f+g|\|><rsup|p>d\<mu\>|)><rsup|<frac|1|q>>
+      </equation>
+
+      For <math|<big|int><around*|\||f+g|\|><rsup|p>d\<mu\>> we have either:\ 
+
+      <\description>
+        <item*|<math|<big|int><around*|\||f+g|\|><rsup|p>d\<mu\>=0>>Then we
+        have
+
+        <\equation*>
+          <around*|\<\|\|\>|f+g|\<\|\|\>><rsub|p>=<around*|(|<big|int><around*|\||f+g|\|><rsup|p>d\<mu\>|)><rsup|<frac|1|p>>=0<rsup|<frac|1|p>>\<equallim\><rsub|<text|[eq:
+          <reference|exp generalized power
+          properties>]>>0\<leqslant\><around*|\<\|\|\>|f|\<\|\|\>><rsub|p>+<around*|\<\|\|\>|g|\<\|\|\>><rsub|p>
+        </equation*>
+
+        so that\ 
+
+        <\equation*>
+          <around*|\<\|\|\>|f+g|\<\|\|\>><rsub|p>\<leqslant\><around*|\<\|\|\>|f|\<\|\|\>><rsub|p>+<around*|\<\|\|\>|g|\<\|\|\>><rsub|p>
+        </equation*>
+
+        <item*|<math|<big|int><around*|\||f+g|\|><rsup|p>d\<mu\>\<neq\>0>>Then
+        by [theorem: <reference|exp generalized power>] we have
+        <math|><math|<around*|(|<big|int><around*|\||f+g|\|><rsup|p>d\<mu\>|)><rsup|<frac|1|q>>\<neq\>0>
+        so that using using [eq: <reference|eq 20.625.246>] we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|\<\|\|\>|f|\<\|\|\>><rsub|p>+<around*|\<\|\|\>|g|\<\|\|\>><rsub|p>>|<cell|\<geqslant\>>|<cell|<frac|<big|int><around*|\||f+g|\|><rsup|p>d\<mu\>|<around*|(|<big|int><around*|\||f+g|\|><rsup|p>d\<mu\>|)><rsup|<frac|1|q>>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|exp generalized power
+          properties>]>>>|<cell|<around*|(|<big|int><around*|\||f+g|\|><rsup|p>d\<mu\>|)><rsup|1-<frac|1|q>>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|int><around*|\||f+g|\|><rsup|p>d\<mu\>|)><rsup|<frac|1|p>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|f+g|\<\|\|\>><rsub|p>>>>>
+        </eqnarray*>
+
+        hence\ 
+
+        <\equation*>
+          <around*|\<\|\|\>|f+g|\<\|\|\>><rsub|p>\<leqslant\><around*|\<\|\|\>|f|\<\|\|\>><rsub|p>+<around*|\<\|\|\>|g|\<\|\|\>><rsub|p>
+        </equation*>
+      </description>
     </description>
 
-    \;
+    So in all cases we have proved that\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|f+g|\<\|\|\>><rsub|p>\<leqslant\><around*|\<\|\|\>|f|\<\|\|\>><rsub|p>+<around*|\<\|\|\>|g|\<\|\|\>><rsub|p>
+    </equation*>
   </proof>
+
+  \;
 </body>
 
 <\initial>
@@ -34427,6 +34581,7 @@
     <associate|eq 20.259.216|<tuple|20.288|?>>
     <associate|eq 20.259.220|<tuple|20.283|?>>
     <associate|eq 20.26.156|<tuple|20.26|?>>
+    <associate|eq 20.26.625.246|<tuple|20.625|?>>
     <associate|eq 20.260.216|<tuple|20.289|?>>
     <associate|eq 20.260.220|<tuple|20.284|?>>
     <associate|eq 20.261.216|<tuple|20.290|?>>
@@ -34792,6 +34947,12 @@
     <associate|eq 20.619.246|<tuple|20.619|?>>
     <associate|eq 20.62.204|<tuple|20.69|?>>
     <associate|eq 20.62.218|<tuple|20.62|?>>
+    <associate|eq 20.620.246|<tuple|20.620|?>>
+    <associate|eq 20.621.246|<tuple|20.621|?>>
+    <associate|eq 20.622.246|<tuple|20.622|?>>
+    <associate|eq 20.623.246|<tuple|20.623|?>>
+    <associate|eq 20.624.246|<tuple|20.624|?>>
+    <associate|eq 20.625.246|<tuple|20.625|?>>
     <associate|eq 20.63.204|<tuple|20.70|?>>
     <associate|eq 20.63.218|<tuple|20.63|?>>
     <associate|eq 20.7.155|<tuple|20.7|?>>
