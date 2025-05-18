@@ -3622,30 +3622,51 @@
     a pseudo normed space then <math|\<forall\>x,y\<in\>X> we have\ 
 
     <\equation*>
-      <around*|\<\|\|\>|x|\<\|\|\>>-<around*|\<\|\|\>|y|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x+y|\<\|\|\>>\<wedge\><around*|\<\|\|\>|y|\<\|\|\>>-<around*|\<\|\|\>|x|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x+y|\<\|\|\>>\<wedge\><around*|\||<around*|\<\|\|\>|x|\<\|\|\>>-<around*|\<\|\|\>|y|\<\|\|\>>|\|>\<leqslant\><around*|\<\|\|\>|x+y|\<\|\|\>>
+      <around*|\||<around*|\<\|\|\>|x|\<\|\|\>>-<around*|\<\|\|\>|y|\<\|\|\>>|\|>\<leqslant\><around*|\<\|\|\>|x+y|\<\|\|\>><infix-and><around*|\||<around*|\<\|\|\>|x|\<\|\|\>>-<around*|\<\|\|\>|y|\<\|\|\>>|\|>\<leqslant\><around*|\<\|\|\>|x-y|\<\|\|\>>
     </equation*>
   </theorem>
 
   <\proof>
-    We have <math|<around*|\<\|\|\>|x|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x+y-y|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x+y|\<\|\|\>>+<around*|\<\|\|\>|y|\<\|\|\>>>
-    and <math|<around*|\<\|\|\>|y|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|y+x-x|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x+y|\<\|\|\>>+<around*|\<\|\|\>|x|\<\|\|\>>>
-    so that
+    Let <math|x.y\<in\>X> then then we we have
 
-    <\equation*>
-      <around*|\<\|\|\>|x|\<\|\|\>>-<around*|\<\|\|\>|y|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x+y|\<\|\|\>><text|
-      and ><around*|\<\|\|\>|y|\<\|\|\>>-<around*|\<\|\|\>|x|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x+y|\<\|\|\>>
-    </equation*>
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|x|\<\|\|\>>>|<cell|=>|<cell|<around*|\<\|\|\>|x+y-y|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x+y|\<\|\|\>>+<around*|\<\|\|\>|-y|\<\|\|\>>=<around*|\<\|\|\>|x+y|\<\|\|\>>+<around*|\<\|\|\>|y|\<\|\|\>><eq-number><label|eq
+      14.26.246>>>|<row|<cell|<around*|\<\|\|\>|x|\<\|\|\>>>|<cell|=>|<cell|<around*|\<\|\|\>|x-y+y|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x-y|\<\|\|\>>+<around*|\<\|\|\>|y|\<\|\|\>><eq-number><label|eq
+      14.27.246>>>|<row|<cell|<around*|\<\|\|\>|y|\<\|\|\>>>|<cell|=>|<cell|<around*|\<\|\|\>|x+y-x|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x+y|\<\|\|\>>+<around*|\<\|\|\>|-x|\<\|\|\>>=<around*|\<\|\|\>|x+y|\<\|\|\>>+<around*|\<\|\|\>|x|\<\|\|\>><eq-number><label|eq
+      14.28.246>>>|<row|<cell|<around*|\<\|\|\>|y|\<\|\|\>>>|<cell|=>|<cell|<around*|\<\|\|\>|x-y+x|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x-y|\<\|\|\>>+<around*|\<\|\|\>|x|\<\|\|\>><eq-number><label|eq
+      14.29.246>>>>>
+    </eqnarray*>
 
     For <math|<around*|\<\|\|\>|x|\<\|\|\>>-<around*|\<\|\|\>|y|\<\|\|\>>> we
-    have either\ 
+    have either
 
     <\description>
-      <item*|<math|0\<leqslant\><around*|\<\|\|\>|x|\<\|\|\>>-<around*|\<\|\|\>|y|\<\|\|\>>>>Then
-      <math|<around*|\||<around*|\<\|\|\>|x|\<\|\|\>>-<around*|\<\|\|\>|y|\<\|\|\>>|\|>=<around*|\<\|\|\>|x|\<\|\|\>>-<around*|\<\|\|\>|y|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x+y|\<\|\|\>>>
+      <item*|<math|<around*|\<\|\|\>|x|\<\|\|\>>-<around*|\<\|\|\>|y|\<\|\|\>>\<less\>0>>Then\ 
 
-      <item*|<math|<around*|\<\|\|\>|x|\<\|\|\>>-<around*|\<\|\|\>|y|\<\|\|\>>\<less\>0>>Then
-      <math|<around*|\||<around*|\<\|\|\>|x|\<\|\|\>>-<around*|\<\|\|\>|y|\<\|\|\>>|\|>=<around*|\<\|\|\>|y|\<\|\|\>>-<around*|\<\|\|\>|x|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|x+y|\<\|\|\>>>
+      <\equation*>
+        <around*|\||<around*|\<\|\|\>|x|\<\|\|\>>-<around*|\<\|\|\>|y|\<\|\|\>>|\|>=<around*|\<\|\|\>|y|\<\|\|\>>-<around*|\<\|\|\>|x|\<\|\|\>><below|\<leqslant\>|<text|[eq:
+        <reference|eq 14.28.246>]>><around*|\<\|\|\>|x+y|\<\|\|\>><text|>
+      </equation*>
+
+      <\equation*>
+        <around*|\||<around*|\<\|\|\>|x|\<\|\|\>>-<around*|\<\|\|\>|y|\<\|\|\>>|\|>=<around*|\<\|\|\>|y|\<\|\|\>>-<around*|\<\|\|\>|x|\<\|\|\>><below|\<leqslant\>|<text|[eq:
+        <reference|eq 14.29.246>]>><around*|\<\|\|\>|x-y|\<\|\|\>>
+      </equation*>
+
+      <item*|<math|0\<leqslant\><around*|\<\|\|\>|x|\<\|\|\>>-<around*|\<\|\|\>|y|\<\|\|\>>>>Thrn\ 
+
+      <\equation*>
+        <around*|\||<around*|\<\|\|\>|x|\<\|\|\>>-<around*|\<\|\|\>|y|\<\|\|\>>|\|>=<around*|\<\|\|\>|x|\<\|\|\>>-<around*|\<\|\|\>|y|\<\|\|\>><below|\<leqslant\>|<text|[eq:
+        <reference|eq 14.26.246>]>><around*|\<\|\|\>|x+y|\<\|\|\>>
+      </equation*>
+
+      <\equation*>
+        <around*|\||<around*|\<\|\|\>|x|\<\|\|\>>-<around*|\<\|\|\>|y|\<\|\|\>>|\|>=<around*|\<\|\|\>|x|\<\|\|\>>-<around*|\<\|\|\>|y|\<\|\|\>><below|\<leqslant\>|<text|[eq:
+        <reference|eq 14.27.246>]>><around*|\<\|\|\>|x-y|\<\|\|\>>
+      </equation*>
     </description>
+
+    \;
   </proof>
 
   Given a normed space we can define a metric and thus also a topology.
@@ -22494,269 +22515,273 @@
     <associate|eq 14.1.162|<tuple|14.2|?>>
     <associate|eq 14.1.167|<tuple|14.1|?>>
     <associate|eq 14.10.146|<tuple|14.14|?>>
-    <associate|eq 14.100.150|<tuple|14.106|?>>
-    <associate|eq 14.101.150|<tuple|14.107|?>>
-    <associate|eq 14.102.150|<tuple|14.108|?>>
-    <associate|eq 14.103.150|<tuple|14.109|?>>
-    <associate|eq 14.104.150|<tuple|14.110|?>>
-    <associate|eq 14.105.150|<tuple|14.111|?>>
-    <associate|eq 14.106.150|<tuple|14.112|?>>
-    <associate|eq 14.107.150|<tuple|14.114|?>>
-    <associate|eq 14.109.150|<tuple|14.117|?>>
+    <associate|eq 14.100.150|<tuple|14.110|?>>
+    <associate|eq 14.101.150|<tuple|14.111|?>>
+    <associate|eq 14.102.150|<tuple|14.112|?>>
+    <associate|eq 14.103.150|<tuple|14.113|?>>
+    <associate|eq 14.104.150|<tuple|14.114|?>>
+    <associate|eq 14.105.150|<tuple|14.115|?>>
+    <associate|eq 14.106.150|<tuple|14.116|?>>
+    <associate|eq 14.107.150|<tuple|14.118|?>>
+    <associate|eq 14.109.150|<tuple|14.121|?>>
     <associate|eq 14.11.146|<tuple|14.15|?>>
-    <associate|eq 14.111.169|<tuple|14.115|?>>
-    <associate|eq 14.111.183|<tuple|14.113|?>>
-    <associate|eq 14.112.152|<tuple|14.120|?>>
-    <associate|eq 14.112.169|<tuple|14.116|?>>
-    <associate|eq 14.113.152|<tuple|14.121|?>>
-    <associate|eq 14.114.151|<tuple|14.118|?>>
-    <associate|eq 14.114.152|<tuple|14.122|?>>
-    <associate|eq 14.115.151|<tuple|14.119|?>>
-    <associate|eq 14.115.152|<tuple|14.124|?>>
-    <associate|eq 14.115.154|<tuple|14.123|?>>
-    <associate|eq 14.116.152|<tuple|14.125|?>>
-    <associate|eq 14.117.152|<tuple|14.126|?>>
-    <associate|eq 14.118.152|<tuple|14.133|?>>
-    <associate|eq 14.119.152|<tuple|14.134|?>>
+    <associate|eq 14.111.169|<tuple|14.119|?>>
+    <associate|eq 14.111.183|<tuple|14.117|?>>
+    <associate|eq 14.112.152|<tuple|14.124|?>>
+    <associate|eq 14.112.169|<tuple|14.120|?>>
+    <associate|eq 14.113.152|<tuple|14.125|?>>
+    <associate|eq 14.114.151|<tuple|14.122|?>>
+    <associate|eq 14.114.152|<tuple|14.126|?>>
+    <associate|eq 14.115.151|<tuple|14.123|?>>
+    <associate|eq 14.115.152|<tuple|14.128|?>>
+    <associate|eq 14.115.154|<tuple|14.127|?>>
+    <associate|eq 14.116.152|<tuple|14.129|?>>
+    <associate|eq 14.117.152|<tuple|14.130|?>>
+    <associate|eq 14.118.152|<tuple|14.137|?>>
+    <associate|eq 14.119.152|<tuple|14.138|?>>
     <associate|eq 14.12.146|<tuple|14.16|?>>
-    <associate|eq 14.120.152|<tuple|14.135|?>>
-    <associate|eq 14.121.152|<tuple|14.136|?>>
-    <associate|eq 14.122.152|<tuple|14.137|?>>
-    <associate|eq 14.123.152|<tuple|14.138|?>>
-    <associate|eq 14.123.170|<tuple|14.127|?>>
-    <associate|eq 14.124.152|<tuple|14.140|?>>
-    <associate|eq 14.124.153|<tuple|14.139|?>>
-    <associate|eq 14.124.176|<tuple|14.129|?>>
-    <associate|eq 14.125.152|<tuple|14.141|?>>
-    <associate|eq 14.125.176|<tuple|14.130|?>>
-    <associate|eq 14.126.176|<tuple|14.131|?>>
-    <associate|eq 14.127.153|<tuple|14.142|?>>
-    <associate|eq 14.127.176|<tuple|14.132|?>>
-    <associate|eq 14.128.153|<tuple|14.143|?>>
-    <associate|eq 14.129.153|<tuple|14.144|?>>
+    <associate|eq 14.120.152|<tuple|14.139|?>>
+    <associate|eq 14.121.152|<tuple|14.140|?>>
+    <associate|eq 14.122.152|<tuple|14.141|?>>
+    <associate|eq 14.123.152|<tuple|14.142|?>>
+    <associate|eq 14.123.170|<tuple|14.131|?>>
+    <associate|eq 14.124.152|<tuple|14.144|?>>
+    <associate|eq 14.124.153|<tuple|14.143|?>>
+    <associate|eq 14.124.176|<tuple|14.133|?>>
+    <associate|eq 14.125.152|<tuple|14.145|?>>
+    <associate|eq 14.125.176|<tuple|14.134|?>>
+    <associate|eq 14.126.176|<tuple|14.135|?>>
+    <associate|eq 14.127.153|<tuple|14.146|?>>
+    <associate|eq 14.127.176|<tuple|14.136|?>>
+    <associate|eq 14.128.153|<tuple|14.147|?>>
+    <associate|eq 14.129.153|<tuple|14.148|?>>
     <associate|eq 14.13.146|<tuple|14.17|?>>
-    <associate|eq 14.130.153|<tuple|14.145|?>>
-    <associate|eq 14.131.153|<tuple|14.146|?>>
-    <associate|eq 14.132.153|<tuple|14.148|?>>
-    <associate|eq 14.133.153|<tuple|14.149|?>>
-    <associate|eq 14.134.153|<tuple|14.150|?>>
-    <associate|eq 14.135.153|<tuple|14.151|?>>
-    <associate|eq 14.136.153|<tuple|14.152|?>>
-    <associate|eq 14.137.153|<tuple|14.153|?>>
-    <associate|eq 14.138.153|<tuple|14.154|?>>
-    <associate|eq 14.138.170|<tuple|14.147|?>>
-    <associate|eq 14.139.153|<tuple|14.155|?>>
+    <associate|eq 14.130.153|<tuple|14.149|?>>
+    <associate|eq 14.131.153|<tuple|14.150|?>>
+    <associate|eq 14.132.153|<tuple|14.152|?>>
+    <associate|eq 14.133.153|<tuple|14.153|?>>
+    <associate|eq 14.134.153|<tuple|14.154|?>>
+    <associate|eq 14.135.153|<tuple|14.155|?>>
+    <associate|eq 14.136.153|<tuple|14.156|?>>
+    <associate|eq 14.137.153|<tuple|14.157|?>>
+    <associate|eq 14.138.153|<tuple|14.158|?>>
+    <associate|eq 14.138.170|<tuple|14.151|?>>
+    <associate|eq 14.139.153|<tuple|14.159|?>>
     <associate|eq 14.14.146|<tuple|14.18|?>>
-    <associate|eq 14.140.153|<tuple|14.156|?>>
-    <associate|eq 14.141.153|<tuple|14.157|?>>
-    <associate|eq 14.142.153|<tuple|14.158|?>>
-    <associate|eq 14.143.153|<tuple|14.159|?>>
-    <associate|eq 14.144.153|<tuple|14.160|?>>
-    <associate|eq 14.145.153|<tuple|14.161|?>>
-    <associate|eq 14.146.153|<tuple|14.162|?>>
-    <associate|eq 14.147.153|<tuple|14.164|?>>
-    <associate|eq 14.148.153|<tuple|14.165|?>>
-    <associate|eq 14.149\<point\>153|<tuple|14.189|?>>
+    <associate|eq 14.140.153|<tuple|14.160|?>>
+    <associate|eq 14.141.153|<tuple|14.161|?>>
+    <associate|eq 14.142.153|<tuple|14.162|?>>
+    <associate|eq 14.143.153|<tuple|14.163|?>>
+    <associate|eq 14.144.153|<tuple|14.164|?>>
+    <associate|eq 14.145.153|<tuple|14.165|?>>
+    <associate|eq 14.146.153|<tuple|14.166|?>>
+    <associate|eq 14.147.153|<tuple|14.168|?>>
+    <associate|eq 14.148.153|<tuple|14.169|?>>
+    <associate|eq 14.149\<point\>153|<tuple|14.193|?>>
     <associate|eq 14.15.146|<tuple|14.19|?>>
-    <associate|eq 14.150.153|<tuple|14.190|?>>
-    <associate|eq 14.150.154|<tuple|14.177|?>>
-    <associate|eq 14.150.155|<tuple|14.172|?>>
-    <associate|eq 14.150.158|<tuple|14.167|?>>
-    <associate|eq 14.151.153|<tuple|14.191|?>>
-    <associate|eq 14.151.154|<tuple|14.180|?>>
-    <associate|eq 14.151.155|<tuple|14.178|?>>
-    <associate|eq 14.151.156|<tuple|14.173|?>>
-    <associate|eq 14.151.158|<tuple|14.168|?>>
-    <associate|eq 14.152.153|<tuple|14.192|?>>
-    <associate|eq 14.152.155|<tuple|14.179|?>>
-    <associate|eq 14.152.156|<tuple|14.174|?>>
-    <associate|eq 14.152.158|<tuple|14.169|?>>
-    <associate|eq 14.153.155|<tuple|14.175|?>>
-    <associate|eq 14.153.158|<tuple|14.170|?>>
-    <associate|eq 14.154.155|<tuple|14.181|?>>
-    <associate|eq 14.154.156|<tuple|14.176|?>>
-    <associate|eq 14.154.158|<tuple|14.171|?>>
-    <associate|eq 14.155.155|<tuple|14.182|?>>
-    <associate|eq 14.156.155|<tuple|14.183|?>>
-    <associate|eq 14.156.170|<tuple|14.166|?>>
-    <associate|eq 14.157.155|<tuple|14.184|?>>
-    <associate|eq 14.158.155|<tuple|14.185|?>>
-    <associate|eq 14.159.155|<tuple|14.186|?>>
+    <associate|eq 14.150.153|<tuple|14.194|?>>
+    <associate|eq 14.150.154|<tuple|14.181|?>>
+    <associate|eq 14.150.155|<tuple|14.176|?>>
+    <associate|eq 14.150.158|<tuple|14.171|?>>
+    <associate|eq 14.151.153|<tuple|14.195|?>>
+    <associate|eq 14.151.154|<tuple|14.184|?>>
+    <associate|eq 14.151.155|<tuple|14.182|?>>
+    <associate|eq 14.151.156|<tuple|14.177|?>>
+    <associate|eq 14.151.158|<tuple|14.172|?>>
+    <associate|eq 14.152.153|<tuple|14.196|?>>
+    <associate|eq 14.152.155|<tuple|14.183|?>>
+    <associate|eq 14.152.156|<tuple|14.178|?>>
+    <associate|eq 14.152.158|<tuple|14.173|?>>
+    <associate|eq 14.153.155|<tuple|14.179|?>>
+    <associate|eq 14.153.158|<tuple|14.174|?>>
+    <associate|eq 14.154.155|<tuple|14.185|?>>
+    <associate|eq 14.154.156|<tuple|14.180|?>>
+    <associate|eq 14.154.158|<tuple|14.175|?>>
+    <associate|eq 14.155.155|<tuple|14.186|?>>
+    <associate|eq 14.156.155|<tuple|14.187|?>>
+    <associate|eq 14.156.170|<tuple|14.170|?>>
+    <associate|eq 14.157.155|<tuple|14.188|?>>
+    <associate|eq 14.158.155|<tuple|14.189|?>>
+    <associate|eq 14.159.155|<tuple|14.190|?>>
     <associate|eq 14.16.146|<tuple|14.20|?>>
-    <associate|eq 14.160.155|<tuple|14.187|?>>
-    <associate|eq 14.161.155|<tuple|14.188|?>>
-    <associate|eq 14.163.155|<tuple|14.163|?>>
+    <associate|eq 14.160.155|<tuple|14.191|?>>
+    <associate|eq 14.161.155|<tuple|14.192|?>>
+    <associate|eq 14.163.155|<tuple|14.167|?>>
     <associate|eq 14.17.146|<tuple|14.21|?>>
-    <associate|eq 14.171.156|<tuple|14.193|?>>
-    <associate|eq 14.172.156|<tuple|14.194|?>>
-    <associate|eq 14.173.156|<tuple|14.195|?>>
-    <associate|eq 14.174.156|<tuple|14.196|?>>
-    <associate|eq 14.175.156|<tuple|14.197|?>>
-    <associate|eq 14.176.156|<tuple|14.199|?>>
-    <associate|eq 14.177.156|<tuple|14.200|?>>
-    <associate|eq 14.178.156|<tuple|14.201|?>>
-    <associate|eq 14.179.156|<tuple|14.202|?>>
+    <associate|eq 14.171.156|<tuple|14.197|?>>
+    <associate|eq 14.172.156|<tuple|14.198|?>>
+    <associate|eq 14.173.156|<tuple|14.199|?>>
+    <associate|eq 14.174.156|<tuple|14.200|?>>
+    <associate|eq 14.175.156|<tuple|14.201|?>>
+    <associate|eq 14.176.156|<tuple|14.203|?>>
+    <associate|eq 14.177.156|<tuple|14.204|?>>
+    <associate|eq 14.178.156|<tuple|14.205|?>>
+    <associate|eq 14.179.156|<tuple|14.206|?>>
     <associate|eq 14.18.146|<tuple|14.22|?>>
-    <associate|eq 14.180.156|<tuple|14.203|?>>
-    <associate|eq 14.181.156|<tuple|14.204|?>>
-    <associate|eq 14.182.156|<tuple|14.205|?>>
-    <associate|eq 14.183.156|<tuple|14.206|?>>
-    <associate|eq 14.184.156|<tuple|14.207|?>>
-    <associate|eq 14.185.156|<tuple|14.208|?>>
-    <associate|eq 14.186.156|<tuple|14.209|?>>
-    <associate|eq 14.187.156|<tuple|14.210|?>>
-    <associate|eq 14.188.156|<tuple|14.211|?>>
-    <associate|eq 14.188.170|<tuple|14.198|?>>
-    <associate|eq 14.189.156|<tuple|14.212|?>>
+    <associate|eq 14.180.156|<tuple|14.207|?>>
+    <associate|eq 14.181.156|<tuple|14.208|?>>
+    <associate|eq 14.182.156|<tuple|14.209|?>>
+    <associate|eq 14.183.156|<tuple|14.210|?>>
+    <associate|eq 14.184.156|<tuple|14.211|?>>
+    <associate|eq 14.185.156|<tuple|14.212|?>>
+    <associate|eq 14.186.156|<tuple|14.213|?>>
+    <associate|eq 14.187.156|<tuple|14.214|?>>
+    <associate|eq 14.188.156|<tuple|14.215|?>>
+    <associate|eq 14.188.170|<tuple|14.202|?>>
+    <associate|eq 14.189.156|<tuple|14.216|?>>
     <associate|eq 14.19.146|<tuple|14.23|?>>
-    <associate|eq 14.190.156|<tuple|14.213|?>>
-    <associate|eq 14.191.156|<tuple|14.214|?>>
-    <associate|eq 14.192.156|<tuple|14.215|?>>
-    <associate|eq 14.193.156|<tuple|14.216|?>>
-    <associate|eq 14.199.156|<tuple|14.222|?>>
-    <associate|eq 14.199.157|<tuple|14.221|?>>
+    <associate|eq 14.190.156|<tuple|14.217|?>>
+    <associate|eq 14.191.156|<tuple|14.218|?>>
+    <associate|eq 14.192.156|<tuple|14.219|?>>
+    <associate|eq 14.193.156|<tuple|14.220|?>>
+    <associate|eq 14.199.156|<tuple|14.226|?>>
+    <associate|eq 14.199.157|<tuple|14.225|?>>
     <associate|eq 14.2.145|<tuple|14.4|?>>
     <associate|eq 14.20.146|<tuple|14.24|?>>
-    <associate|eq 14.200.156|<tuple|14.223|?>>
-    <associate|eq 14.201.156|<tuple|14.224|?>>
-    <associate|eq 14.203.158|<tuple|14.225|?>>
-    <associate|eq 14.204.158|<tuple|14.226|?>>
-    <associate|eq 14.205.158|<tuple|14.227|?>>
-    <associate|eq 14.206.158|<tuple|14.228|?>>
-    <associate|eq 14.207.158|<tuple|14.229|?>>
-    <associate|eq 14.207.172|<tuple|14.217|?>>
-    <associate|eq 14.208.158|<tuple|14.230|?>>
-    <associate|eq 14.208.172|<tuple|14.218|?>>
-    <associate|eq 14.209.172|<tuple|14.219|?>>
-    <associate|eq 14.209.528|<tuple|14.231|?>>
+    <associate|eq 14.200.156|<tuple|14.227|?>>
+    <associate|eq 14.201.156|<tuple|14.228|?>>
+    <associate|eq 14.203.158|<tuple|14.229|?>>
+    <associate|eq 14.204.158|<tuple|14.230|?>>
+    <associate|eq 14.205.158|<tuple|14.231|?>>
+    <associate|eq 14.206.158|<tuple|14.232|?>>
+    <associate|eq 14.207.158|<tuple|14.233|?>>
+    <associate|eq 14.207.172|<tuple|14.221|?>>
+    <associate|eq 14.208.158|<tuple|14.234|?>>
+    <associate|eq 14.208.172|<tuple|14.222|?>>
+    <associate|eq 14.209.172|<tuple|14.223|?>>
+    <associate|eq 14.209.528|<tuple|14.235|?>>
     <associate|eq 14.21.146|<tuple|14.25|?>>
-    <associate|eq 14.210.158|<tuple|14.232|?>>
-    <associate|eq 14.210.172|<tuple|14.220|?>>
-    <associate|eq 14.22.146|<tuple|14.26|?>>
-    <associate|eq 14.228.171|<tuple|14.242|?>>
-    <associate|eq 14.229.171|<tuple|14.243|?>>
-    <associate|eq 14.23.146|<tuple|14.27|?>>
-    <associate|eq 14.230.171|<tuple|14.244|?>>
-    <associate|eq 14.234.164|<tuple|14.233|?>>
-    <associate|eq 14.235.164|<tuple|14.234|?>>
-    <associate|eq 14.236.164|<tuple|14.235|?>>
-    <associate|eq 14.237.164|<tuple|14.236|?>>
-    <associate|eq 14.238.164|<tuple|14.237|?>>
-    <associate|eq 14.239.164|<tuple|14.239|?>>
-    <associate|eq 14.239.165|<tuple|14.238|?>>
-    <associate|eq 14.24.146|<tuple|14.28|?>>
-    <associate|eq 14.240.164|<tuple|14.241|?>>
-    <associate|eq 14.245.166|<tuple|14.245|?>>
-    <associate|eq 14.246.166|<tuple|14.246|?>>
-    <associate|eq 14.247.166|<tuple|14.247|?>>
-    <associate|eq 14.248.166|<tuple|14.248|?>>
-    <associate|eq 14.249.166|<tuple|14.249|?>>
-    <associate|eq 14.25.146|<tuple|14.29|?>>
-    <associate|eq 14.250.166|<tuple|14.250|?>>
-    <associate|eq 14.251.166|<tuple|14.251|?>>
-    <associate|eq 14.251.173|<tuple|14.261|?>>
-    <associate|eq 14.252.166|<tuple|14.252|?>>
-    <associate|eq 14.253.166|<tuple|14.253|?>>
-    <associate|eq 14.254.166|<tuple|14.254|?>>
-    <associate|eq 14.255.166|<tuple|14.255|?>>
-    <associate|eq 14.256.166|<tuple|14.256|?>>
-    <associate|eq 14.257.166|<tuple|14.257|?>>
-    <associate|eq 14.259.167|<tuple|14.258|?>>
-    <associate|eq 14.26.146|<tuple|14.30|?>>
-    <associate|eq 14.260.167|<tuple|14.259|?>>
-    <associate|eq 14.261.167|<tuple|14.260|?>>
-    <associate|eq 14.262.167|<tuple|14.262|?>>
-    <associate|eq 14.263.167|<tuple|14.263|?>>
-    <associate|eq 14.264.167|<tuple|14.264|?>>
-    <associate|eq 14.265.167|<tuple|14.265|?>>
-    <associate|eq 14.266.167|<tuple|14.266|?>>
-    <associate|eq 14.267.167|<tuple|14.267|?>>
-    <associate|eq 14.268.167|<tuple|14.268|?>>
-    <associate|eq 14.269.167|<tuple|14.269|?>>
-    <associate|eq 14.27.146|<tuple|14.31|?>>
-    <associate|eq 14.28.147|<tuple|14.32|?>>
-    <associate|eq 14.29.146|<tuple|14.34|?>>
-    <associate|eq 14.29.147|<tuple|14.33|?>>
+    <associate|eq 14.210.158|<tuple|14.236|?>>
+    <associate|eq 14.210.172|<tuple|14.224|?>>
+    <associate|eq 14.22.146|<tuple|14.30|?>>
+    <associate|eq 14.228.171|<tuple|14.246|?>>
+    <associate|eq 14.229.171|<tuple|14.247|?>>
+    <associate|eq 14.23.146|<tuple|14.31|?>>
+    <associate|eq 14.230.171|<tuple|14.248|?>>
+    <associate|eq 14.234.164|<tuple|14.237|?>>
+    <associate|eq 14.235.164|<tuple|14.238|?>>
+    <associate|eq 14.236.164|<tuple|14.239|?>>
+    <associate|eq 14.237.164|<tuple|14.240|?>>
+    <associate|eq 14.238.164|<tuple|14.241|?>>
+    <associate|eq 14.239.164|<tuple|14.243|?>>
+    <associate|eq 14.239.165|<tuple|14.242|?>>
+    <associate|eq 14.24.146|<tuple|14.32|?>>
+    <associate|eq 14.240.164|<tuple|14.245|?>>
+    <associate|eq 14.245.166|<tuple|14.249|?>>
+    <associate|eq 14.246.166|<tuple|14.250|?>>
+    <associate|eq 14.247.166|<tuple|14.251|?>>
+    <associate|eq 14.248.166|<tuple|14.252|?>>
+    <associate|eq 14.249.166|<tuple|14.253|?>>
+    <associate|eq 14.25.146|<tuple|14.33|?>>
+    <associate|eq 14.250.166|<tuple|14.254|?>>
+    <associate|eq 14.251.166|<tuple|14.255|?>>
+    <associate|eq 14.251.173|<tuple|14.265|?>>
+    <associate|eq 14.252.166|<tuple|14.256|?>>
+    <associate|eq 14.253.166|<tuple|14.257|?>>
+    <associate|eq 14.254.166|<tuple|14.258|?>>
+    <associate|eq 14.255.166|<tuple|14.259|?>>
+    <associate|eq 14.256.166|<tuple|14.260|?>>
+    <associate|eq 14.257.166|<tuple|14.261|?>>
+    <associate|eq 14.259.167|<tuple|14.262|?>>
+    <associate|eq 14.26.146|<tuple|14.26|?>>
+    <associate|eq 14.26.246|<tuple|14.26|?>>
+    <associate|eq 14.260.167|<tuple|14.263|?>>
+    <associate|eq 14.261.167|<tuple|14.264|?>>
+    <associate|eq 14.262.167|<tuple|14.266|?>>
+    <associate|eq 14.263.167|<tuple|14.267|?>>
+    <associate|eq 14.264.167|<tuple|14.268|?>>
+    <associate|eq 14.265.167|<tuple|14.269|?>>
+    <associate|eq 14.266.167|<tuple|14.270|?>>
+    <associate|eq 14.267.167|<tuple|14.271|?>>
+    <associate|eq 14.268.167|<tuple|14.272|?>>
+    <associate|eq 14.269.167|<tuple|14.273|?>>
+    <associate|eq 14.27.146|<tuple|14.35|?>>
+    <associate|eq 14.27.246|<tuple|14.27|?>>
+    <associate|eq 14.28.147|<tuple|14.36|?>>
+    <associate|eq 14.28.246|<tuple|14.28|?>>
+    <associate|eq 14.29.146|<tuple|14.29|?>>
+    <associate|eq 14.29.147|<tuple|14.37|?>>
+    <associate|eq 14.29.246|<tuple|14.29|?>>
     <associate|eq 14.3.146|<tuple|14.5|?>>
-    <associate|eq 14.30.146|<tuple|14.35|?>>
-    <associate|eq 14.31.146|<tuple|14.36|?>>
-    <associate|eq 14.32.146|<tuple|14.37|?>>
-    <associate|eq 14.33.146|<tuple|14.38|?>>
-    <associate|eq 14.35.147|<tuple|14.39|?>>
-    <associate|eq 14.36.147|<tuple|14.40|?>>
-    <associate|eq 14.37.147|<tuple|14.41|?>>
-    <associate|eq 14.38.147|<tuple|14.42|?>>
-    <associate|eq 14.39.147|<tuple|14.43|?>>
+    <associate|eq 14.30.146|<tuple|14.39|?>>
+    <associate|eq 14.31.146|<tuple|14.40|?>>
+    <associate|eq 14.32.146|<tuple|14.41|?>>
+    <associate|eq 14.33.146|<tuple|14.42|?>>
+    <associate|eq 14.35.147|<tuple|14.43|?>>
+    <associate|eq 14.36.147|<tuple|14.44|?>>
+    <associate|eq 14.37.147|<tuple|14.45|?>>
+    <associate|eq 14.38.147|<tuple|14.46|?>>
+    <associate|eq 14.39.147|<tuple|14.47|?>>
     <associate|eq 14.4.146|<tuple|14.6|?>>
-    <associate|eq 14.41.147|<tuple|14.45|?>>
-    <associate|eq 14.43.147|<tuple|14.46|?>>
-    <associate|eq 14.44.147|<tuple|14.47|?>>
-    <associate|eq 14.45.147|<tuple|14.48|?>>
-    <associate|eq 14.46.147|<tuple|14.49|?>>
-    <associate|eq 14.47.147|<tuple|14.55|?>>
-    <associate|eq 14.47.148|<tuple|14.50|?>>
-    <associate|eq 14.48.147|<tuple|14.56|?>>
-    <associate|eq 14.48.148|<tuple|14.51|?>>
-    <associate|eq 14.49.147|<tuple|14.57|?>>
-    <associate|eq 14.49.148|<tuple|14.52|?>>
+    <associate|eq 14.41.147|<tuple|14.49|?>>
+    <associate|eq 14.43.147|<tuple|14.50|?>>
+    <associate|eq 14.44.147|<tuple|14.51|?>>
+    <associate|eq 14.45.147|<tuple|14.52|?>>
+    <associate|eq 14.46.147|<tuple|14.53|?>>
+    <associate|eq 14.47.147|<tuple|14.59|?>>
+    <associate|eq 14.47.148|<tuple|14.54|?>>
+    <associate|eq 14.48.147|<tuple|14.60|?>>
+    <associate|eq 14.48.148|<tuple|14.55|?>>
+    <associate|eq 14.49.147|<tuple|14.61|?>>
+    <associate|eq 14.49.148|<tuple|14.56|?>>
     <associate|eq 14.5.146|<tuple|14.7|?>>
-    <associate|eq 14.50.147|<tuple|14.58|?>>
-    <associate|eq 14.51.147|<tuple|14.59|?>>
-    <associate|eq 14.52.147|<tuple|14.60|?>>
-    <associate|eq 14.53.153|<tuple|14.53|?>>
-    <associate|eq 14.54.153|<tuple|14.54|?>>
-    <associate|eq 14.56.148|<tuple|14.61|?>>
-    <associate|eq 14.57.148|<tuple|14.62|?>>
-    <associate|eq 14.58.148|<tuple|14.63|?>>
-    <associate|eq 14.59.148|<tuple|14.64|?>>
+    <associate|eq 14.50.147|<tuple|14.62|?>>
+    <associate|eq 14.51.147|<tuple|14.63|?>>
+    <associate|eq 14.52.147|<tuple|14.64|?>>
+    <associate|eq 14.53.153|<tuple|14.57|?>>
+    <associate|eq 14.54.153|<tuple|14.58|?>>
+    <associate|eq 14.56.148|<tuple|14.65|?>>
+    <associate|eq 14.57.148|<tuple|14.66|?>>
+    <associate|eq 14.58.148|<tuple|14.67|?>>
+    <associate|eq 14.59.148|<tuple|14.68|?>>
     <associate|eq 14.6.146|<tuple|14.8|?>>
-    <associate|eq 14.60.148|<tuple|14.65|?>>
-    <associate|eq 14.61.148|<tuple|14.66|?>>
-    <associate|eq 14.62.148|<tuple|14.67|?>>
-    <associate|eq 14.63.148|<tuple|14.68|?>>
-    <associate|eq 14.64.148|<tuple|14.69|?>>
-    <associate|eq 14.65.148|<tuple|14.70|?>>
-    <associate|eq 14.66.148|<tuple|14.71|?>>
-    <associate|eq 14.67.148|<tuple|14.72|?>>
-    <associate|eq 14.68.148|<tuple|14.73|?>>
-    <associate|eq 14.69.148|<tuple|14.74|?>>
+    <associate|eq 14.60.148|<tuple|14.69|?>>
+    <associate|eq 14.61.148|<tuple|14.70|?>>
+    <associate|eq 14.62.148|<tuple|14.71|?>>
+    <associate|eq 14.63.148|<tuple|14.72|?>>
+    <associate|eq 14.64.148|<tuple|14.73|?>>
+    <associate|eq 14.65.148|<tuple|14.74|?>>
+    <associate|eq 14.66.148|<tuple|14.75|?>>
+    <associate|eq 14.67.148|<tuple|14.76|?>>
+    <associate|eq 14.68.148|<tuple|14.77|?>>
+    <associate|eq 14.69.148|<tuple|14.78|?>>
     <associate|eq 14.7.146|<tuple|14.11|?>>
-    <associate|eq 14.70.148|<tuple|14.75|?>>
-    <associate|eq 14.71.148|<tuple|14.76|?>>
-    <associate|eq 14.72.148|<tuple|14.77|?>>
-    <associate|eq 14.73.148|<tuple|14.78|?>>
-    <associate|eq 14.74.148|<tuple|14.79|?>>
-    <associate|eq 14.75.149|<tuple|14.80|?>>
-    <associate|eq 14.76.149|<tuple|14.81|?>>
-    <associate|eq 14.77.149|<tuple|14.82|?>>
-    <associate|eq 14.78.149|<tuple|14.83|?>>
-    <associate|eq 14.79.149|<tuple|14.84|?>>
+    <associate|eq 14.70.148|<tuple|14.79|?>>
+    <associate|eq 14.71.148|<tuple|14.80|?>>
+    <associate|eq 14.72.148|<tuple|14.81|?>>
+    <associate|eq 14.73.148|<tuple|14.82|?>>
+    <associate|eq 14.74.148|<tuple|14.83|?>>
+    <associate|eq 14.75.149|<tuple|14.84|?>>
+    <associate|eq 14.76.149|<tuple|14.85|?>>
+    <associate|eq 14.77.149|<tuple|14.86|?>>
+    <associate|eq 14.78.149|<tuple|14.87|?>>
+    <associate|eq 14.79.149|<tuple|14.88|?>>
     <associate|eq 14.8.146|<tuple|14.12|?>>
     <associate|eq 14.8.163|<tuple|14.9|?>>
-    <associate|eq 14.80.149|<tuple|14.85|?>>
-    <associate|eq 14.81.150|<tuple|14.86|?>>
-    <associate|eq 14.82.149|<tuple|14.87|?>>
-    <associate|eq 14.83.150|<tuple|14.88|?>>
-    <associate|eq 14.84.149|<tuple|14.89|?>>
-    <associate|eq 14.85.150|<tuple|14.90|?>>
-    <associate|eq 14.86.150|<tuple|14.91|?>>
-    <associate|eq 14.87.150|<tuple|14.92|?>>
-    <associate|eq 14.88.150|<tuple|14.93|?>>
-    <associate|eq 14.89.150|<tuple|14.94|?>>
+    <associate|eq 14.80.149|<tuple|14.89|?>>
+    <associate|eq 14.81.150|<tuple|14.90|?>>
+    <associate|eq 14.82.149|<tuple|14.91|?>>
+    <associate|eq 14.83.150|<tuple|14.92|?>>
+    <associate|eq 14.84.149|<tuple|14.93|?>>
+    <associate|eq 14.85.150|<tuple|14.94|?>>
+    <associate|eq 14.86.150|<tuple|14.95|?>>
+    <associate|eq 14.87.150|<tuple|14.96|?>>
+    <associate|eq 14.88.150|<tuple|14.97|?>>
+    <associate|eq 14.89.150|<tuple|14.98|?>>
     <associate|eq 14.9.146|<tuple|14.13|?>>
     <associate|eq 14.9.164|<tuple|14.10|?>>
-    <associate|eq 14.90.150|<tuple|14.95|?>>
-    <associate|eq 14.91.150|<tuple|14.97|?>>
-    <associate|eq 14.92.150|<tuple|14.98|?>>
-    <associate|eq 14.93.150|<tuple|14.99|?>>
-    <associate|eq 14.94.150|<tuple|14.100|?>>
-    <associate|eq 14.94.183|<tuple|14.96|?>>
-    <associate|eq 14.95.150|<tuple|14.101|?>>
-    <associate|eq 14.96.150|<tuple|14.102|?>>
-    <associate|eq 14.97.150|<tuple|14.103|?>>
-    <associate|eq 14.98.150|<tuple|14.104|?>>
-    <associate|eq 14.99.150|<tuple|14.105|?>>
-    <associate|eq: 14.124.176.1|<tuple|14.128|?>>
+    <associate|eq 14.90.150|<tuple|14.99|?>>
+    <associate|eq 14.91.150|<tuple|14.101|?>>
+    <associate|eq 14.92.150|<tuple|14.102|?>>
+    <associate|eq 14.93.150|<tuple|14.103|?>>
+    <associate|eq 14.94.150|<tuple|14.104|?>>
+    <associate|eq 14.94.183|<tuple|14.100|?>>
+    <associate|eq 14.95.150|<tuple|14.105|?>>
+    <associate|eq 14.96.150|<tuple|14.106|?>>
+    <associate|eq 14.97.150|<tuple|14.107|?>>
+    <associate|eq 14.98.150|<tuple|14.108|?>>
+    <associate|eq 14.99.150|<tuple|14.109|?>>
+    <associate|eq: 14.124.176.1|<tuple|14.132|?>>
     <associate|filter base|<tuple|14.246|?>>
     <associate|filter base accumulating alternative|<tuple|14.255|?>>
     <associate|filter base and compactness|<tuple|14.272|?>>

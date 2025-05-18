@@ -32497,6 +32497,9 @@
   <subsection|The spaces <math|\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
   and <math|L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>>
 
+  <subsubsection|Definition of <math|\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+  and <math|L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>>
+
   In this section we introduce infinite Banach spaces that play a very
   important role in physics and functional analyses. Be carefull in the
   following we use the same symbol <math|<around*|\|||\|>> for the norm on
@@ -33397,19 +33400,25 @@
     <label|LP spaces LP norm is zero>Let <math|p\<in\><around*|[|1,\<infty\>|[>>,
     <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> a measure space
     and <math|f\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
-    such that <math|<around*|\<\|\|\>|f|\<\|\|\>><rsub|p>=0> then <math|f=0>
-    <math|\<mu\>>-a.e..
+    such that <math|<around*|\<\|\|\>|f|\<\|\|\>><rsub|p>=0> then we have
+    that <math|<around*|\||f|\|><rsup|p>=0> <math|\<mu\>>-a.e. and <math|f=0>
+    <math|\<mu\>>-a.e.
   </theorem>
 
   <\proof>
+    Let <math|x\<in\>X> then as <math|<around*|\||f<around*|(|x|)>|\|>\<in\><around*|[|0,\<infty\>|[>>
+    we have by [definition: <reference|exp generalized power>] that
+    <math|<around*|\||f<around*|(|x|)>|\|><rsup|p>\<in\><around*|[|0,\<infty\>|[>>,
+    hence we have <math|<around*|\||<around*|\||f|\|><rsup|p>|\|><around*|(|x|)>=<around*|\||<around*|\||f|\|><rsup|p><around*|(|x|)>|\|>=<around*|\||f|\|><rsup|p><around*|(|x|)>>
+    so that <math|<around*|\||<around*|\||f|\|><rsup|p>|\|>=<around*|\||f|\|><rsup|p>>.
     As <math|<around*|\<\|\|\>|f|\<\|\|\>><rsub|p>=0> we have that
     <math|<around*|(|<big|int><around*|\||f|\|><rsup|p>d\<mu\>|)><rsup|<frac|1|p>>=0>
     so that by [theorem: <reference|exp generalized power properties>]
-    <math|<big|int><around*|\||f|\|><rsup|p>d\<mu\>=0>. Using then [theorem:
-    <reference|measure integral zero is a.e. zero>] it follows that
-    <math|<around*|\||f|\|><rsup|p>=0> <math|\<mu\>>-a.e. So there exist a
-    <math|N\<in\>\<cal-A\>> with <math|\<mu\><around*|(|A|)>=0> such that
-    <math|<around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|><rsup|p>\<neq\>0|}>\<subseteq\>N>.
+    <math|<big|int><around*|\||<around*|\||f|\|><rsup|p>|\|>d\<mu\>=<big|int><around*|\||f|\|><rsup|p>d\<mu\>=0>.
+    Using then [theorem: <reference|measure integral zero is a.e. zero>] it
+    follows that <math|<around*|\||f|\|><rsup|p>=0> <math|\<mu\>>-a.e. So
+    there exist a <math|N\<in\>\<cal-A\>> with <math|\<mu\><around*|(|A|)>=0>
+    such that <math|<around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|><rsup|p>\<neq\>0|}>\<subseteq\>N>.
     Let <math|x\<in\><around*|{|x\<in\>X\|f<around*|(|x|)>\<neq\>0|}>> then
     <math|f<around*|(|x|)>\<neq\>0\<Rightarrow\><around*|\||f<around*|(|x|)>|\|>\<neq\>0\<Rightarrowlim\><rsub|<text|[theorem:
     <reference|exp generalized power properties>]>><around*|\||f<around*|(|x|)>|\|><rsup|p>\<neq\>0>
@@ -34160,6 +34169,719 @@
     </equation*>
   </proof>
 
+  We are now read to proves that <math|<around*|\<langle\>|\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>,<around*|\<\|\|\>||\<\|\|\>><rsub|p>|\<rangle\>>>
+  is a pseudo normed space.
+
+  <\theorem>
+    <label|LP spaces are pseudo normed>Let
+    <math|p\<in\><around*|[|1,\<ldots\>,\<infty\>|]>> and
+    <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a measure
+    space then <math|<around*|\<langle\>|\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>,<around*|\<\|\|\>||\<\|\|\>><rsub|p>|\<rangle\>>>
+    is a pseudo normed vectorspace over <math|\<bbb-K\>>.
+
+    <\note>
+      Using [theorem: <reference|LP vector space>] we have that
+      <math|<around*|\<langle\>|\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>,+,\<cdot\>|\<rangle\>>>
+      is a vector space.
+
+      <\note>
+        If <math|A\<in\>\<Alpha\>> such that
+        <math|A\<neq\>\<varnothing\>\<Rightarrow\>\<exists\>a\<in\>A> and
+        <math|\<mu\><around*|(|A|)>=0> then as
+        <math|\<cal-X\><rsub|A><around*|(|a|)>=1> we have that
+        <math|\<cal-X\><rsub|A>\<neq\>C<rsub|0>>. Further we have using
+        [example: <reference|non negative integral characteristics>]
+        <math|0=\<mu\><around*|(|A|)>=<big|int><rsup|+>\<cal-X\><rsub|A>d\<mu\>=<big|int>\<cal-X\><rsub|A>d\<mu\>=<around*|(|<big|int><around*|(|\<cal-X\><rsub|A>|)><rsup|1>d\<mu\>|)><rsup|<frac|1|1>>=<around*|\<\|\|\>|\<cal-X\><rsub|A>|\<\|\|\>><rsub|1>>.
+        So <math|<around*|\<\|\|\>||\<\|\|\>><rsub|1>> is only a pseudo norm
+        not a norm.
+      </note>
+    </note>
+  </theorem>
+
+  <\proof>
+    By [definitions: <reference|LP spaces p-norm (1)>, <reference|LP spaces
+    p-norm (2)>] we have that\ 
+
+    <\equation>
+      <label|eq 20.626.246><around*|\<\|\|\>||\<\|\|\>><rsub|p>:\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>\<rightarrow\><around*|[|0,\<infty\>|[>
+    </equation>
+
+    Further we have using the Minkowski's Inequality [see theorem:
+    <reference|LP spaces Minkowski's Inequality>] that\ 
+
+    <\equation>
+      <label|eq 20.627.246>\<forall\>f,g\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]><text|
+      we have ><around*|\<\|\|\>|f+g|\<\|\|\>><rsub|p>\<leqslant\><around*|\<\|\|\>|f|\<\|\|\>><rsub|p>+<around*|\<\|\|\>|g|\<\|\|\>><rsub|p>
+    </equation>
+
+    Let <math|f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>> and
+    <math|\<alpha\>\<in\>\<bbb-K\>>. For <math|p\<in\><around*|[|1,\<infty\>|]>>
+    we have either:\ 
+
+    <\description>
+      <item*|<math|p\<in\><around*|[|1,\<infty\>|[>>>Then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<alpha\>\<cdot\>f|\<\|\|\>><rsub|p>>|<cell|=>|<cell|<around*|(|<big|int><around*|\||\<alpha\>\<cdot\>f|\|><rsup|p>d\<mu\>|)><rsup|<frac|1|p>>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|int><around*|(|<around*|\||\<alpha\>|\|>\<cdot\><around*|\||f|\|>|)><rsup|p>d\<mu\>|)><rsup|<frac|1|p>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|exp generalized power properties>]>>>|<cell|<around*|(|<big|int><around*|(|<around*|\||\<alpha\>|\|><rsup|p>\<cdot\><around*|\||f|\|><rsup|p>|)>d\<mu\>|)><rsup|<frac|1|p>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|measure integral properties>]>>>|<cell|<around*|(|<around*|\||\<alpha\>|\|><rsup|p>\<cdot\><big|int><around*|\||f|\|><rsup|p>d\<mu\>|)><rsup|<frac|1|p>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|exp generalized power properties>]>>>|<cell|<around*|(|<around*|\||\<alpha\>|\|><rsup|p>|)><rsup|<frac|1|p>>\<cdot\><around*|(|<big|int><around*|\||f|\|><rsup|p>d\<mu\>|)><rsup|<frac|1|p>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|exp generalized power properties>]>>>|<cell|<around*|\||\<alpha\>|\|>\<cdot\><around*|(|<big|int><around*|\||f|\|><rsup|p>d\<mu\>|)><rsup|<frac|1|p>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|f|\<\|\|\>><rsub|p>>>>>
+      </eqnarray*>
+
+      proving that\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|\<alpha\>\<cdot\>f|\<\|\|\>><rsub|p>=<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|f|\<\|\|\>><rsub|p>
+      </equation*>
+
+      <item*|<math|p=\<infty\>>>For <math|\<alpha\>\<in\>\<bbb-K\>> we have
+      either:
+
+      <\description>
+        <item*|<math|\<alpha\>=0>>As <math|<around*|{|x\<in\>X\|<around*|\||\<alpha\>\<cdot\>f|\|><around*|(|x|)>\<gtr\>0|}>=\<varnothing\>>
+        [for if <math|<around*|\||\<alpha\>\<cdot\>f|\|><around*|(|x|)>\<gtr\>M>
+        then we have <math|0=<around*|\||\<alpha\>\<cdot\>f<around*|(|x|)>|\|>=<around*|\||\<alpha\>\<cdot\>f|\|><around*|(|x|)>\<gtr\>M\<geqslant\>0>
+        a contradicton] and by [example: <reference|LP spaces empty set is
+        locally m-null>]\ 
+
+        <\equation*>
+          <around*|{|x\<in\>X\|<around*|\||\<alpha\>\<cdot\>f|\|><around*|(|x|)>\<gtr\>0|}><text|
+          is locally >\<mu\><text|-null>
+        </equation*>
+
+        So that <math|0\<in\><around*|{|M\<in\><around*|[|0,\<infty\>|[>\|<around*|{|x\<in\>X\|<around*|\||\<alpha\>\<cdot\>f|\|><around*|(|x|)>\<gtr\>0|}><text|
+        is locally >\<mu\><text|-null>|}>> hence
+
+        <\equation*>
+          0\<leqslant\><around*|\<\|\|\>|\<alpha\>\<cdot\>f|\<\|\|\>><rsub|\<infty\>>=inf<around*|(|<around*|{|M\<in\><around*|[|0,\<infty\>|[>\|<around*|{|x\<in\>X\|<around*|\||\<alpha\>\<cdot\>f|\|><around*|(|x|)>\<gtr\>0|}><text|
+          is locally >\<mu\><text|-null>|}>|)>\<leqslant\>0
+        </equation*>
+
+        hence\ 
+
+        <\equation*>
+          <around*|\<\|\|\>|\<alpha\>\<cdot\>f|\<\|\|\>><rsub|\<infty\>>=0=<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>
+        </equation*>
+
+        <item*|<math|\<alpha\>\<neq\>0>>Let
+        <math|M\<in\><around*|[|0,\<infty\>|[>> then we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|x\<in\><around*|{|x\<in\>X\|<around*|\||<around*|(|\<alpha\>\<cdot\>f|)><around*|(|x|)>|\|>\<gtr\>M|}>>|<cell|\<Leftrightarrow\>>|<cell|<around*|\||\<alpha\>\<cdot\>f<around*|(|x|)>|\|>\<gtr\>M>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|\||\<alpha\>|\|>\<cdot\><around*|\||f<around*|(|x|)>|\|>\<gtr\>M>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|<around*|\||\<alpha\>|\|>\<neq\>0>>|<cell|<around*|\||f<around*|(|x|)>|\|>\<gtr\><frac|M|<around*|\||\<alpha\>|\|>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<gtr\><frac|M|\<alpha\>>|}>>>>>
+        </eqnarray*>
+
+        proving that\ 
+
+        <\equation>
+          <label|eq 20.628.246><around*|{|x\<in\>X\|<around*|\||<around*|(|\<alpha\>\<cdot\>f|)><around*|(|x|)>|\|>\<gtr\>M|}>=<around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<gtr\><frac|M|\<alpha\>>|}>
+        </equation>
+
+        Define\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|A>|<cell|=>|<cell|<around*|{|M\<in\><around*|[|0,\<infty\>|[><around*|\||<around*|{|x\<in\>X\|<around*|\||\<alpha\>\<cdot\>f<around*|(|x|)>|\|>\<gtr\>M|}><text|
+          is locally >\<mu\><text|-null>|\<nobracket\>>|}>>>|<row|<cell|B>|<cell|=>|<cell|<around*|{|M\<in\><around*|[|0,\<infty\>|[><around*|\||<around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<gtr\>M|}><text|
+          is locally >\<mu\><text|-null>|\<nobracket\>>|}>>>>>
+        </eqnarray*>
+
+        If <math|M\<in\>A> then <math|<around*|{|x\<in\>X\|<around*|\||\<alpha\>\<cdot\>f<around*|(|x|)>|\|>\<gtr\>M|}><text|
+        is locally >\<mu\><text|-null>> so using [eq: <reference|eq
+        20.628.246>] we have that <math|<around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<gtr\><frac|M|<around*|\||\<alpha\>|\|>>|}>>
+        <math|<text| is locally >\<mu\><text|-null>> hence
+        <math|M<rprime|'>=<frac|M|<around*|\||\<alpha\>|\|>>\<in\>B> or
+        <math|M\<in\><around*|{|<around*|\||\<alpha\>|\|>\<cdot\>M<rprime|'>\|M<rprime|'>\<in\>B|}>>
+        giving\ 
+
+        <\equation>
+          <label|eq 20.629.246>A\<subseteq\><around*|{|<around*|\||\<alpha\>|\|>\<cdot\>M<rprime|'>\|M<rprime|'>\<in\>B|}>
+        </equation>
+
+        On the other side, if <math|M\<in\><around*|{|<around*|\||\<alpha\>|\|>\<cdot\>M<rprime|'>\|M<rprime|'>\<in\>B|}>>
+        there exists a <math|M<rprime|'>\<in\>B> such that
+        <math|<rigid|M=<around*|\||\<alpha\>|\|>\<cdot\>M<rprime|'>>> or
+        <math|<frac|M|<around*|\||\<alpha\>|\|>>=M<rprime|'>\<in\>B> hence
+        <math|<around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<gtr\><frac|M|<around*|\||\<alpha\>|\|>>|}>>
+        is locally <math|\<mu\>>-null. Using [eq: <reference|eq 20.628.246>]
+        we have then that <math|<around*|{|x\<in\>X\|<around*|\||<around*|(|\<alpha\>\<cdot\>f|)><around*|(|x|)>|\|>\<gtr\>M|}>>
+        is locally <math|\<mu\>>-null or <math|M\<in\>A>, proving that
+        <math|<around*|{|<around*|\||\<alpha\>|\|>\<cdot\>M<rprime|'>\|M<rprime|'>\<in\>B|}>\<subseteq\>A>.
+        Using [eq: <reference|eq 20.629.246> we have then that\ 
+
+        <\equation>
+          <label|eq 20.630.249>A=<around*|{|<around*|\||a|\|>\<cdot\>M<rprime|'>\|M<rprime|'>\<in\>B|}>
+        </equation>
+
+        As <math|<around*|\<\|\|\>|\<alpha\>\<cdot\>f|\<\|\|\>><rsub|\<infty\>>\<equallim\><rsub|def>inf<around*|(|A|)>>
+        we have by [eq: <reference|eq 20.630.249>] that
+        <math|\<forall\>M\<in\>B> <math|<around*|\<\|\|\>|\<alpha\>\<cdot\>f|\<\|\|\>><rsub|\<infty\>>\<leqslant\><around*|\||\<alpha\>|\|>\<cdot\>M>
+        so that <math|<frac|<around*|\<\|\|\>|\<alpha\>\<cdot\>f|\<\|\|\>><rsub|\<infty\>>|<around*|\||\<alpha\>|\|>>\<leqslant\>M>
+        hence <math|<frac|<around*|\<\|\|\>|\<alpha\>\<cdot\>f|\<\|\|\>><rsub|\<infty\>>|<around*|\||\<alpha\>|\|>>\<leqslant\>inf<around*|(|B|)>=<around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>>
+        or\ 
+
+        <\equation>
+          <label|eq 20.631.246><around*|\<\|\|\>|\<alpha\>\<cdot\>f|\<\|\|\>><rsub|\<infty\>>\<leqslant\><around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>
+        </equation>
+
+        Further if <math|M\<in\><around*|{|<around*|\||\<alpha\>|\|>\<cdot\>M<rprime|'>\|M<rprime|'>\<in\>B|}>>
+        then <math|M=<around*|\||\<alpha\>|\|>\<cdot\>M<rprime|'>> where
+        <math|M<rprime|'>\<in\>B> so that
+        <math|<frac|M|<around*|\||\<alpha\>|\|>>=M<rprime|'>\<in\>B> hence
+        <math|<around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>=inf<around*|(|B|)>\<leqslant\><frac|M|<around*|\||\<alpha\>|\|>>>
+        or <math|<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>\<leqslant\>M>
+        so that
+
+        <\equation*>
+          <around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>\<leqslant\>inf<around*|(|<around*|{|<around*|\||\<alpha\>|\|>\<cdot\>M<rprime|'>\|M<rprime|'>\<in\>B|}>|)>\<equallim\><rsub|<text|[eq:
+          <reference|eq 20.630.249>]>>inf<around*|(|A|)>=<around*|\<\|\|\>|\<alpha\>\<cdot\>f|\<\|\|\>><rsub|\<infty\>>
+        </equation*>
+
+        which combined with [eq: <reference|eq 20.631.246>] proves that
+
+        <\equation*>
+          <around*|\<\|\|\>|\<alpha\>\<cdot\>f|\<\|\|\>><rsub|p>=<around*|\<\|\|\>|\<alpha\>\<cdot\>f|\<\|\|\>><rsub|\<infty\>>=<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>=<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|f|\<\|\|\>><rsub|p>
+        </equation*>
+      </description>
+    </description>
+  </proof>
+
+  It would be nice that <math|<around*|\<\|\|\>||\<\|\|\>>p> is actually a
+  norm. To do this we consider first the sub space of
+  <math|\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>> consisted of
+  functions <math|f> with <math|<around*|\<\|\|\>||\<\|\|\>><rsub|p>> and
+  construct then factor space [see theorem: <reference|vector space factor
+  space>].
+
+  <\definition>
+    <label|LP spaces p-null set><index|<math|\<cal-N\><rsup|p>>>Let
+    <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a measure
+    space, <math|p\<in\><around*|[|1,\<infty\>|]>> then we define the
+    <with|font-series|bold|p-null set> <math|\<cal-N\><rsup|p>> by\ 
+
+    <\equation*>
+      \<cal-N\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>=<around*|{|f\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>\|<around*|\<\|\|\>|f|\<\|\|\>><rsub|p>=0|}>
+    </equation*>
+  </definition>
+
+  We have the following equivalences of <math|p>-null sets.
+
+  <\theorem>
+    <label|LP spaces p-null set (1)>Let <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>>
+    be a measure space then we have\ 
+
+    <\enumerate>
+      <item>If <math|p\<in\><around*|[|1,\<infty\>|[>> then
+
+      <\equation*>
+        f\<in\>\<cal-N\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]><text|
+        >\<Leftrightarrow\><text| >f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-K\>|]><text|
+        and >f=0<text| >\<mu\><text|-a.e.>
+      </equation*>
+
+      \ 
+
+      <item>If <math|p=\<infty\>> then\ 
+
+      <\equation*>
+        f\<in\>\<cal-N\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]><text|
+        >\<Leftrightarrow\><text| >f\<in\>\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]><text|
+        and ><around*|{|x\<in\>X\|f<around*|(|x|)>\<neq\>0|}><text| is
+        locally >\<mu\><text|-null>
+      </equation*>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item> First if <math|p\<in\><around*|[|1,\<infty\>|[>> then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<in\><around*|{|x\<in\>X\|f<around*|(|x|)>\<neq\>0|}>>|<cell|\<Leftrightarrow\>>|<cell|f<around*|(|x|)>\<neq\>0>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<around*|\|||\|><text|
+        is a norm>>>|<cell|<around*|\||f<around*|(|x|)>|\|>\<neq\>0>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|<text|[theorem:
+        <reference|exp generalized power properties>]>>>|<cell|<around*|\||f<around*|(|x|)>|\|><rsup|p>\<neq\>0>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|><rsup|p>\<neq\>0|}>>>>>
+      </eqnarray*>
+
+      which proves that\ 
+
+      <\equation>
+        <label|eq 20.632.246>\<forall\>p\<in\><around*|[|1,\<infty\>|[><text|
+        we have ><around*|{|x\<in\>X\|f<around*|(|x|)>\<neq\>0|}>=<around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|><rsup|p>\<neq\>0|}>
+      </equation>
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>As <math|f\<in\>\<cal-N\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+        we have that <math|f\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+        and <math|<around*|\<\|\|\>|f|\<\|\|\>><rsub|p>=0>. Hence
+        <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-K\>|]>> and by
+        [theorem: <reference|LP spaces LP norm is zero>] <math|f=0>
+        <math|\<mu\>>-a.e..
+
+        <item*|<math|\<Leftarrow\>>>If <math|f=0> <math|\<mu\>>-a.e. then
+        there exist a <math|N\<in\>\<cal-A\>> with
+        <math|\<mu\><around*|(|N|)>=0> such that
+        <math|<rigid|<around*|{|x\<in\>X\|f*<around*|(|x|)>\<neq\>0|}>\<subseteq\>N>>,
+        using [eq: <reference|eq 20.632.246>] we have
+        <math|<around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|><rsup|p>\<neq\>0|}>\<subseteq\>N>
+        so that\ 
+
+        <\equation*>
+          <around*|\||f|\|><rsup|p>=0<text| >\<mu\><text|-a.e.>
+        </equation*>
+
+        As <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-K\>|]>> we have
+        by the above and [theorem: <reference|measure integral of almost zero
+        function is zero>] that
+
+        <\equation*>
+          <around*|\||f|\|><rsup|p>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]><text|
+          and ><big|int><around*|\||f|\|><rsup|p>d\<mu\>=0\<Rightarrow\><around*|\<\|\|\>|f|\<\|\|\>><rsub|p>=<around*|(|<big|int><around*|\||f|\|><rsup|p>d\<mu\>|)><rsup|<frac|1|p>><below|=|<text|[theorem:
+          <reference|exp generalized power properties>]>>0
+        </equation*>
+
+        so that <math|f\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+        and <math|<around*|\<\|\|\>|f|\<\|\|\>><rsub|p>=0 > which proves that
+
+        <\equation*>
+          f\<in\>\<cal-N\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>
+        </equation*>
+
+        \;
+      </description>
+
+      <item>\ 
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>As <math|f\<in\>\<cal-N\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+        we have that
+
+        <\equation*>
+          f\<in\>\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>
+        </equation*>
+
+        and <math|<around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>=0>. Using
+        [lemma: <reference|lemma 20.463.246>] it follows that
+        \ <math|<around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<gtr\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>|}><text|
+        is locally >\<mu\><text|-null>>. \ As
+        <math|<around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>=0> it follows
+        that <math|<around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<gtr\>0|}>>
+        is locally <math|\<mu\>>-null or as
+        <math|<rigid|<around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<neq\>0|}>=<around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<gtr\>0|}>>>
+        it follows that\ 
+
+        <\equation*>
+          <around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<gtr\>0|}><text|
+          is locally >\<mu\><text|-null>
+        </equation*>
+
+        <item*|<math|\<Leftarrow\>>>First we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|x\<in\><around*|{|x\<in\>X\|<around*|\||f<around*|(|z|)>|\|>\<neq\>0|}>>|<cell|\<Leftrightarrow\>>|<cell|<around*|\||f<around*|(|x|)>|\|>\<neq\>0>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|0\<leqslant\><around*|\||f<around*|(|x|)>|\|>>>|<cell|<around*|\||f<around*|(|x|)>|\|>\<gtr\>0>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<gtr\>0|}>>>>>
+        </eqnarray*>
+
+        we have that <math|><math|<around*|{|x\<in\>X\|<around*|\||f<around*|(|z|)>|\|>\<neq\>0|}>=<around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<gtr\>0|}>>
+        which, as <math|><math|<around*|{|x\<in\>X\|f<around*|(|x|)>\<neq\>0|}>>
+        is locally <math|\<mu\>>-null, proves that
+        <math|<around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<gtr\>0|}>>
+        is locally <math|\<mu\>>-null. Hence\ 
+
+        <\equation*>
+          0\<in\><around*|{|M\<in\><around*|[|0,\<infty\>|[>\|<around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<gtr\>M|}><text|
+          is locally >\<mu\><text|-null>|}>
+        </equation*>
+
+        so that <math|0\<leqslant\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>=inf<around*|(|<around*|{|M\<in\><around*|[|0,\<infty\>|[>\|<around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<gtr\>M|}><text|
+        is locally >\<mu\><text|-null>|}>|)>\<leqslant\>0> which proves that\ 
+
+        <\equation*>
+          <around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>=0
+        </equation*>
+
+        As by the hypothesis <math|f\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+        it follows from the above that\ 
+
+        <\equation*>
+          f\<in\>\<cal-N\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>
+        </equation*>
+      </description>
+    </enumerate>
+  </proof>
+
+  We prove now that <math|\<cal-N\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+  is a sub-space of <math|\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>.
+
+  <\theorem>
+    <label|LP spaces null sets is a subspace>Let
+    <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a measure
+    space and \ <math|p\<in\><around*|[|0,\<infty\>|]>> then
+    <math|<around*|\<langle\>|\<cal-N\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>,+,\<cdot\>|\<rangle\>>>
+    is a sub-space of <math|<around*|\<langle\>|\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>,+,\<cdot\>|\<rangle\>>>
+  </theorem>
+
+  <\proof>
+    As <math|C<rsub|0>\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>,
+    <math|C<rsub|0>> is the neutral element [see theorem: <reference|LP
+    vector space>] and by [theorem: <reference|LP spaces are pseudo normed>]
+    <math|<around*|\<\|\|\>||\<\|\|\>><rsub|p>> is a pseudo norm it follows
+    that <math|<around*|\<\|\|\>|C<rsub|o>|\<\|\|\>><rsub|p>=0> hence\ 
+
+    <\equation*>
+      C<rsub|0>\<in\>\<cal-N\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>\<Rightarrow\>\<cal-N\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>\<neq\>0
+    </equation*>
+
+    If <math|f,g\<in\>\<cal-N\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+    then <math|<around*|\<\|\|\>|f|\<\|\|\>><rsub|p>=0=<around*|\<\|\|\>|g|\<\|\|\>><rsub|p>>
+    so that <math|<around*|\<\|\|\>|f+g|\<\|\|\>><rsub|p>\<leqslant\><around*|\<\|\|\>|f|\<\|\|\>><rsub|p>+<around*|\<\|\|\>|g|\<\|\|\>><rsub|p>=0>
+    hence <math|<around*|\<\|\|\>|f+g|\<\|\|\>>=0>.\ 
+
+    <\equation*>
+      \<forall\>f,g\<in\>\<cal-N\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]><text|
+      we have >f+g\<in\>\<cal-N\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>
+    </equation*>
+
+    Further if <math|\<alpha\>\<in\>\<bbb-K\>>,
+    <math|f\<in\>\<cal-N\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+    then <math|<around*|\<\|\|\>|f|\<\|\|\>><rsub|p>=0> so that
+    <math|<around*|\<\|\|\>|\<alpha\>\<cdot\>f|\<\|\|\>><rsub|p>=<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|f|\<\|\|\>><rsub|p>=0>
+    proving that\ 
+
+    <\equation*>
+      \<forall\>f\<in\>\<cal-N\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>,\<forall\>\<alpha\>\<in\>\<bbb-K\><text|
+      we have >\<alpha\>\<cdot\>f\<in\>\<cal-N\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>
+    </equation*>
+
+    So we have that <math|<around*|\<langle\>|\<cal-N\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>,+,\<cdot\>|\<rangle\>>>
+    is a sub-space of <math|<around*|\<langle\>|\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>,+,\<cdot\>|\<rangle\>>>.
+  </proof>
+
+  We use now [theorem: <reference|vector space factor space>] to define
+  <math|L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+
+  <\definition>
+    Let <math|p\<in\><around*|[|1,\<infty\>|]>> and
+    <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> a measure space
+    then by [theorems: <reference|LP spaces null sets is a subspace> and
+    <reference|vector space equivalence relation>]\ 
+
+    <\equation*>
+      \<sim\><rsub|p>\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>\<times\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]><text|
+      where <math|f\<sim\><rsub|p>g<text| if
+      >f-g\<in\>\<cal-N\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>>
+    </equation*>
+
+    is a equivalence relation. For every <math|f\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+    we can then define the equivalence class <math|<around*|[|f|]><rsub|p>>
+    by\ 
+
+    <\equation*>
+      <around*|[|f|]><rsub|p>=<around*|{|g\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>\|g\<sim\><rsub|p>f|}>=<around*|{|g\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>\|f-g\<in\>\<cal-N\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>|}>
+    </equation*>
+
+    The set <math|L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>> is
+    then defined as the factor space <math|\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>/\<cal-N\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+    so that by [theorem: <reference|vector space factor space>] we have\ 
+
+    <\equation*>
+      L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>=<around*|{|<around*|[|x|]><rsub|p>\|x\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>|}>
+    </equation*>
+
+    Using \ [theorem: <reference|vector space factor space>] the following
+    operators are well defined\ 
+
+    <\equation*>
+      +:L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>\<times\>L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>\<rightarrow\>L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]><text|
+      by ><around*|[|f|]><rsub|p>+<around*|[|g|]><rsub|p>=<around*|[|f+g|]><rsub|p>
+    </equation*>
+
+    <\equation*>
+      \<cdot\>:\<bbb-K\>\<times\>L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>\<rightarrow\>L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]><text|
+      by >\<alpha\>\<cdot\><around*|[|f|]><rsub|p>=<around*|[|\<alpha\>\<cdot\>f|]><rsub|p>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      <around*|\<langle\>|L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>,+,\<cdot\>|\<rangle\>><text|
+      forms a vector space with neutral element
+      ><around*|[|C<rsub|0>|]><rsub|p>
+    </equation*>
+  </definition>
+
+  Next we show that we can define a norm on
+  <math|L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>.
+
+  <\theorem>
+    <label|LP spaces normed space>Let \ <math|p\<in\><around*|[|0,\<infty\>|]>>
+    and <math|<math|><around*|\<langle\>|X,\<b-A\>,\<mu\>|\<rangle\>>> a
+    measure space then\ 
+
+    <\equation*>
+      <around*|\<\|\|\>||\<\|\|\>><rsub|Lp>:L<around*|(|X,\<cal-A\>,\<mu\>,\<bbb-K\>|)>\<rightarrow\><around*|[|0,\<infty\>|[><text|
+      defined by ><around*|\<\|\|\>|x|\<\|\|\>><rsub|Lp>=<around*|\<\|\|\>|f|\<\|\|\>><text|
+      where >x=<around*|[|f|]><rsub|p>
+    </equation*>
+
+    is a well defined function that defines a norm on
+    <math|L<around*|(|X,\<cal-A\>,\<mu\>,\<bbb-K\>|)>> making
+
+    <\equation*>
+      <around*|\<langle\>|L<rsup|p><around*|(|X,\<cal-A\>,\<mu\>,\<bbb-K\>|)>,<around*|\<\|\|\>||\<\|\|\>><rsub|Lp>|\<rangle\>><text|
+      a normed space>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    First we must prove that <math|<around*|\<\|\|\>||\<\|\|\>><rsub|L<rsub|p>>>
+    is well defined. Let <math|f\<in\>L<rsup|p><around*|(|X,\<cal-A\>,\<mu\>,\<bbb-K\>|)>>
+    then there exist a <math|f\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+    such that <math|x=<around*|[|f|]><rsub|p>>. Assume that there exist
+    another <math|g\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+    such that <math|x=<around*|[|g|]><rsub|p>> then
+    <math|<around*|[|f|]><rsub|p>=<around*|[|g|]><rsub|p>> so that
+    <math|f-g\<in\>\<cal-N\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>.
+    Hence we have that <math|<around*|\<\|\|\>|f-g|\<\|\|\>><rsub|p>=0> so
+    that\ 
+
+    <\equation*>
+      <around*|\||<around*|\<\|\|\>|f|\<\|\|\>><rsub|p>-<around*|\<\|\|\>|g|\<\|\|\>><rsub|p>|\|><below|\<leqslant\>|<text|[theorem:
+      <reference|normed absolute value norm
+      differences>]>><around*|\<\|\|\>|f-g|\<\|\|\>><rsub|p>=0
+    </equation*>
+
+    so that <math|<around*|\<\|\|\>|f|\<\|\|\>><rsub|p>=<around*|\<\|\|\>|g<rsub|>|\<\|\|\>><rsub|p>>.
+    Hence it follows that\ 
+
+    <\equation>
+      <label|eq 20.633.246><around*|\<\|\|\>||\<\|\|\>><rsub|Lp>:L<around*|(|X,\<cal-A\>,\<mu\>,\<bbb-K\>|)>\<rightarrow\><around*|[|0,\<infty\>|[><text|
+      defined by ><around*|\<\|\|\>|x|\<\|\|\>><rsub|Lp>=<around*|\<\|\|\>|f|\<\|\|\>><text|
+      where >x=<around*|[|f|]><rsub|p><text| is well defined>
+    </equation>
+
+    Next let <math|x,y\<in\>L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+    then there exist <math|f,g\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+    such that <math|x=<around*|[|f|]><rsub|p>> and
+    <math|y=<around*|[|g|]><rsub|p>> then
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|x+y|\<\|\|\>><rsub|Lp>>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|[|f|]><rsub|p>+<around*|[|g|]><rsub|p>|\<\|\|\>><rsub|Lp>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|[|f+g|]><rsub|p>|\<\|\|\>><rsub|Lp>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|f+g|\<\|\|\>><rsub|p>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|f|\<\|\|\>><rsub|p>+<around*|\<\|\|\>|g|\<\|\|\>><rsub|p>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|[|f|]><rsub|p>|\<\|\|\>><rsub|L<rsub|p>>+<around*|\<\|\|\>|<around*|[|g|]><rsub|p>|\<\|\|\>><rsub|Lp>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|x|\<\|\|\>><rsub|Lp>+<around*|\<\|\|\>|y|\<\|\|\>><rsub|Lp>>>>>
+    </eqnarray*>
+
+    So we have proved that\ 
+
+    <\equation>
+      <label|eq 20.634.246>\<forall\>x,y\<in\>L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]><text|
+      we have ><around*|\<\|\|\>|x+y|\<\|\|\>><rsub|Lp>\<leqslant\><around*|\<\|\|\>|x|\<\|\|\>><rsub|Lp>+<around*|\<\|\|\>|y|\<\|\|\>><rsub|Lp>
+    </equation>
+
+    Further if <math|\<alpha\>\<in\>\<bbb-K\>> and
+    <math|x\<in\>L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>> then
+    there exist a <math|f\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+    such that <math|x=<around*|[|f|]><rsub|p>> so that
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<alpha\>\<cdot\>x|\<\|\|\>><rsub|Lp>>|<cell|=>|<cell|<around*|\<\|\|\>|\<alpha\>\<cdot\><around*|[|f|]><rsub|p>|\<\|\|\>><rsub|Lp>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|[|\<alpha\>\<cdot\>f|]><rsub|p>|\<\|\|\>><rsub|Lp>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|\<alpha\>\<cdot\>f|\<\|\|\>><rsub|p>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|f|\<\|\|\>><rsub|p>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|<around*|[|f|]><rsub|p>|\<\|\|\>><rsub|Lp>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|Lp>>>>>
+    </eqnarray*>
+
+    hence we have\ 
+
+    <\equation>
+      <label|eq 20.635.246>\<forall\>\<alpha\>\<in\>\<bbb-K\>,\<forall\>x\<in\>L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]><text|
+      we have ><around*|\<\|\|\>|\<alpha\>\<cdot\>x|\<\|\|\>><rsub|Lp>=<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|Lp>
+    </equation>
+
+    Finally if <math|x\<in\>L<around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>> is
+    such that <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|Lp>=0> then there
+    exist a <math|f\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+    such that <math|x=<around*|[|f|]><rsub|p>>. As
+    <math|<around*|\<\|\|\>|f|\<\|\|\>><rsub|p>=<around*|\<\|\|\>|<around*|[|f|]><rsub|p>|\<\|\|\>><rsub|Lp>=<around*|\<\|\|\>|x|\<\|\|\>><rsub|Lp>=0>
+    it follows that <math|f\<in\>\<cal-N\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>.
+    As <math|C<rsub|0>\<in\>\<cal-N\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+    we have that <math|f-C<rsub|0>\<in\>\<cal-N\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+    it follows that <math|x=<around*|[|f|]><rsub|p>=<around*|[|C<rsub|0>|]><rsub|p>>
+    the neutral element in <math|><math|L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>.
+    In other words we have\ 
+
+    <\equation>
+      <label|eq 20.636.246>\<forall\>x\<in\>L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]><text|
+      with ><around*|\<\|\|\>|x|\<\|\|\>><rsub|Lp>=0<text| we have
+      \ <math|x=<around*|[|C<rsub|0>|]><rsub|p>>>
+    </equation>
+
+    So by [eqs: <reference|eq 20.633.246>, <reference|eq 20.634.246>,
+    <reference|eq 20.635.246> and <reference|eq 20.636.246>] it follows that
+    <math|<around*|\<\|\|\>||\<\|\|\>><rsub|Lp>> is a norm.
+  </proof>
+
+  <subsubsection|The Banach space <math|<around*|\<langle\>|L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>,<around*|\<\|\|\>||\<\|\|\>><rsub|Lp>|\<rangle\>>>>
+
+  We will prove now that the norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|p>>
+  is complete. First we need some lemmas.\ 
+
+  <\lemma>
+    <label|lemma 20.476.246>Let <math|p\<in\><around*|[|1,\<infty\>|[>> and
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\><around*|[|0,\<infty\>|[>>
+    such that <math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>> exist and
+    <math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>\<in\>\<bbb-R\>> then
+    <math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p>>
+    exist and <math|<below|lim|i\<rightarrowlim\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p>=<around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)><rsup|p>>.
+  </lemma>
+
+  <\proof>
+    As <math|<around*|[|\<ast\>|]><rsup|p>:<around*|[|0,\<infty\>|[>\<rightarrow\>\<bbb-R\>>
+    defined by <math|<around*|[|\<ast\>|]><rsup|p><around*|(|x|)>=x<rsup|p>>
+    is continuous on <math|<around*|[|0,\<infty\>|[>> [see theorem:
+    <reference|exp (*)^x is continuous>] we have by [theorem:
+    <reference|limit and continuity>[ that
+    <math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p>=<below|lim|i\<rightarrow\>\<infty\>><around*|(|\<ast\>|)><rsup|p><around*|(|x|)>>
+    exist and <math|><math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p>=<below|lim|i\<rightarrow\>\<infty\>><around*|(|\<ast\>|)><rsup|p><around*|(|x|)>=<around*|(|\<ast\>|)><rsup|p><around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)>=<around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)><rsup|p>>.
+  </proof>
+
+  We extend now the above lemma to limits that can be finite or infinite.
+
+  <\lemma>
+    <label|lemma 20.477.246>Let <math|p\<in\><around*|[|1,\<infty\>|[>> and
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<bbb-N\>>
+    be such that <math|\<forall\>i\<in\>\<bbb-N\>> we have
+    <math|x<rsub|i>\<leqslant\>x<rsub|i+1>> then we have if we define\ 
+
+    <\equation*>
+      \<forall\>x\<in\><around*|[|0,\<infty\>|]><text|
+      <math|x<rsup|p>=<choice|<tformat|<table|<row|<cell|x<rsup|p><text|
+      where >x\<in\><around*|[|0,\<infty\>|[><text| [here >x<rsup|p><text| is
+      defined in [definition: <reference|exp generalized
+      power>]>>>|<row|<cell|\<infty\><text| if >x=\<infty\>>>>>>>>
+    </equation*>
+
+    that\ 
+
+    <\equation*>
+      <below|lim|i\<rightarrow\>\<infty\>>x<rsub|i><text| and
+      ><below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p><text|
+      where ><below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>,<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p>\<in\><around*|[|0,\<infty\>|]>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      sup<around*|(|<around*|{|<around*|(|x<rsub|i>|)><rsup|p>\|i\<in\>\<bbb-N\><rsub|0>|}>|)>=<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|<rsub|i>>|)><rsup|p>=<around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)><rsup|p>=<around*|(|sup<around*|(|<around*|{|x<rsub|i>\|i\<in\>\<bbb-N\><rsub|0>|}>|)>|)><rsup|p>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    As <math|\<forall\>i\<in\>\<bbb-N\>> we have
+    <math|0\<leqslant\>x<rsub|i>\<leqslant\>x<rsub|i+1>> it follows by
+    [theorem: <reference|exp generalized power properties>] that
+    <math|0\<leqslant\><around*|(|x<rsub|i>|)><rsup|p>\<leqslant\><around*|(|x<rsub|i+1>|)><rsup|p>>
+    so that by [theorems: <reference|extended limit increasing / decreasing
+    sequence exist>,<reference|extended limit properties>] it follows that\ 
+
+    <\equation*>
+      <below|lim|i\<rightarrow\>\<infty\>>x<rsub|i><text| exist,
+      ><below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p><text|
+      exist, >0\<leqslant\><below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>=sup<around*|(|<around*|{|x<rsub|i>\|i\<in\>\<bbb-N\>|}>|)><text|
+      and >0\<leqslant\><below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p>=sup<around*|(|<around*|{|<around*|(|x<rsub|i>|)><rsup|p>\|i\<in\>\<bbb-N\>|}>|)>
+    </equation*>
+
+    Let <math|i\<in\>\<bbb-N\>> then for <math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>>
+    we have either:\ 
+
+    <\description>
+      <item*|<math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>=\<infty\>>>Then
+      <math|<around*|(|x<rsub|i>|)><rsup|p>\<leqslant\>\<infty\>=\<infty\><rsup|p>=<around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)><rsup|p>>
+
+      <item*|<math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>\<neq\>\<infty\>>>Then
+      <math|x<rsub|i>\<leqslant\>sup<around*|(|<around*|{|x<rsub|i>\|i\<in\>\<bbb-N\>|}>|)>>
+      so that by [theorem: <reference|exp generalized power properties>]
+      <math|<around*|(|x<rsub|i>|)><rsup|p>\<leqslant\><around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)><rsup|p>>
+    </description>
+
+    which proves that <math|\<forall\>i\<in\>\<bbb-N\><text|
+    ><around*|(|x<rsub|i>|)><rsup|p>\<leqslant\><around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)><rsup|p>>
+    so that\ 
+
+    <\equation>
+      <label|eq 20.637.246><below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p>=sup<around*|(|<around*|{|<around*|(|x<rsub|i>|)><rsup|p>\|i\<in\>\<bbb-N\>|}>|)>\<leqslant\><around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)><rsup|p>
+    </equation>
+
+    For <math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p>>
+    we have the following cases to examine:
+
+    <\description>
+      <item*|<math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p>=\<infty\>>>Then
+      <math|><math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p>=\<infty\>\<leqslant\><around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)><rsup|p>\<leqslant\>\<infty\>>
+      so that\ 
+
+      <\equation*>
+        <below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p>=<around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)><rsup|p>
+      </equation*>
+
+      <item*|<math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p>\<neq\>\<infty\>>>Then
+      <math|\<forall\>i\<in\>\<bbb-N\>> we have
+      <math|<around*|(|x<rsub|i><rsup|>|)><rsup|p>\<leqslant\>sup<around*|(|<around*|{|<around*|(|x<rsub|i>|)><rsup|p>\|i\<in\>\<bbb-N\>|}>|)>=<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p>\<less\>\<infty\>>
+      so that by [theorem: <reference|exp generalized power>]
+      <math|x<rsub|i>\<leqslant\><around*|(|<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p>|)><rsup|<frac|1|p>>>
+      hence <math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>=sup<around*|(|<around*|{|x<rsub|i>\|i\<in\>\<bbb-N\>|}>|)>\<leqslant\><around*|(|<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p>|)><rsup|<frac|1|p>>\<less\>\<infty\>>.
+      Hence using [lemma: <reference|lemma 20.476.246>] it follows that\ 
+
+      <\equation*>
+        <below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p>=<around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)><rsup|p>
+      </equation*>
+    </description>
+
+    So in all cases we have\ 
+
+    <\equation*>
+      <below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p>=<around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)><rsup|p>
+    </equation*>
+  </proof>
+
+  <\lemma>
+    <label|lemma 20.478.246>Let <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>>
+    be a measure space then <math|<around*|\<langle\>|L<rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>,<around*|\<\|\|\>||\<\|\|\>><rsub|L\<infty\>>|\<rangle\>>>
+    is a Banach space\ 
+  </lemma>
+
+  <\proof>
+    Using [theorem: <reference|LP spaces normed space>] it follows that\ 
+
+    <\equation*>
+      <around*|\<langle\>|L<rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>,<around*|\<\|\|\>||\<\|\|\>><rsub|L\<infty\>>|\<rangle\>>
+    </equation*>
+
+    So the only thing left to prove is that this space is complete. Let
+    <math|<around*|{|f<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>L<rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+    be a Cauchy sequence then we have there exist a
+    <math|<around*|{|F<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subset\>\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+    such that <math|\<forall\>i\<in\>\<bbb-N\>>
+    <math|f<rsub|i>=<around*|[|F<rsub|i>|]><rsub|p>>. Let
+    <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then as
+    <math|<around*|{|f<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>> is Cauchy there
+    exist a <math|N<rsub|\<varepsilon\>>\<in\>\<bbb-N\>> such that
+    <math|\<forall\>n,m\<in\><around*|{|N<rsub|\<varepsilon\>>,\<ldots\>,\<infty\>|}>>
+    we have <math|<around*|\<\|\|\>|f<rsub|n>-f<rsub|m>|\<\|\|\>><rsub|L\<infty\>>\<less\>\<varepsilon\>>.
+    So <math|<around*|\<\|\|\>|F<rsub|n>-F<rsub|m>|\<\|\|\>><rsub|\<infty\>>=<around*|\<\|\|\>|<around*|[|F<rsub|n>-F<rsub|m>|]><rsub|\<infty\>>|\<\|\|\>><rsub|L\<infty\>>=<around*|\<\|\|\>|<around*|[|F<rsub|n>|]><rsub|\<infty\>>-<around*|[|F<rsub|m>|]><rsub|\<infty\>>|\<\|\|\>><rsub|L\<infty\>>=<around*|\<\|\|\>|f<rsub|n>-f<rsub|m>|\<\|\|\>><rsub|L\<infty\>>\<less\>\<varepsilon\><rsub|><rsub|>>
+    hence we have proved that\ 
+
+    <\equation>
+      \<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text|
+      >\<exists\>N<rsub|\<varepsilon\>>\<in\>\<bbb-N\><text| such that
+      >\<forall\>n,m\<in\><around*|{|N<rsub|\<varepsilon\>>,\<ldots\>,\<infty\>|}><text|
+      we have ><around*|\<\|\|\>|F<rsub|n>-F<rsub|m>|\<\|\|\>><rsub|\<infty\>>\<less\>\<varepsilon\>
+    </equation>
+
+    \;
+  </proof>
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
   \;
 </body>
 
@@ -34184,13 +34906,18 @@
     <associate|LP spaces LP norm is zero|<tuple|20.459|?>>
     <associate|LP spaces Minkowski's Inequality|<tuple|20.466|?>>
     <associate|LP spaces absolute value|<tuple|20.457|?>>
+    <associate|LP spaces are pseudo normed|<tuple|20.468|?>>
     <associate|LP spaces canonical example|<tuple|20.447|?>>
     <associate|LP spaces empty set is locally m-null|<tuple|20.461|?>>
     <associate|LP spaces locally m-null set properties|<tuple|20.462|?>>
     <associate|LP spaces locally u-null sets|<tuple|20.460|?>>
     <associate|LP spaces neutral element|<tuple|20.448|?>>
+    <associate|LP spaces normed space|<tuple|20.475|?>>
+    <associate|LP spaces null sets is a subspace|<tuple|20.473|?>>
     <associate|LP spaces p-norm (1)|<tuple|20.458|?>>
     <associate|LP spaces p-norm (2)|<tuple|20.463|?>>
+    <associate|LP spaces p-null set|<tuple|20.471|?>>
+    <associate|LP spaces p-null set (1)|<tuple|20.472|?>>
     <associate|LP spaces sum scalar product|<tuple|20.452|?>>
     <associate|LP spaces sum scalar product (1)|<tuple|20.455|?>>
     <associate|LP vector space|<tuple|20.456|?>>
@@ -34238,8 +34965,11 @@
     <associate|auto-122|<tuple|<with|mode|<quote|math>|<big|int><rsup|\<bbb-C\>>f
     d\<mu\>>|?>>
     <associate|auto-123|<tuple|20.6.6|?>>
-    <associate|auto-124|<tuple|<with|mode|<quote|math>|\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>|?>>
-    <associate|auto-125|<tuple|<with|mode|<quote|math>|\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>|?>>
+    <associate|auto-124|<tuple|20.6.6.1|?>>
+    <associate|auto-125|<tuple|<with|mode|<quote|math>|\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>|?>>
+    <associate|auto-126|<tuple|<with|mode|<quote|math>|\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>|?>>
+    <associate|auto-127|<tuple|<with|mode|<quote|math>|\<cal-N\><rsup|p>>|?>>
+    <associate|auto-128|<tuple|20.6.6.2|?>>
     <associate|auto-13|<tuple|limit in <with|mode|<quote|math>|<wide|\<bbb-R\>|\<wide-bar\>>>|?>>
     <associate|auto-14|<tuple|<with|mode|<quote|math>|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>>|?>>
     <associate|auto-15|<tuple|20.1.5|?>>
@@ -34581,7 +35311,6 @@
     <associate|eq 20.259.216|<tuple|20.288|?>>
     <associate|eq 20.259.220|<tuple|20.283|?>>
     <associate|eq 20.26.156|<tuple|20.26|?>>
-    <associate|eq 20.26.625.246|<tuple|20.625|?>>
     <associate|eq 20.260.216|<tuple|20.289|?>>
     <associate|eq 20.260.220|<tuple|20.284|?>>
     <associate|eq 20.261.216|<tuple|20.290|?>>
@@ -34953,8 +35682,20 @@
     <associate|eq 20.623.246|<tuple|20.623|?>>
     <associate|eq 20.624.246|<tuple|20.624|?>>
     <associate|eq 20.625.246|<tuple|20.625|?>>
+    <associate|eq 20.626.246|<tuple|20.626|?>>
+    <associate|eq 20.627.246|<tuple|20.627|?>>
+    <associate|eq 20.628.246|<tuple|20.628|?>>
+    <associate|eq 20.629.246|<tuple|20.629|?>>
     <associate|eq 20.63.204|<tuple|20.70|?>>
     <associate|eq 20.63.218|<tuple|20.63|?>>
+    <associate|eq 20.630.249|<tuple|20.630|?>>
+    <associate|eq 20.631.246|<tuple|20.631|?>>
+    <associate|eq 20.632.246|<tuple|20.632|?>>
+    <associate|eq 20.633.246|<tuple|20.633|?>>
+    <associate|eq 20.634.246|<tuple|20.634|?>>
+    <associate|eq 20.635.246|<tuple|20.635|?>>
+    <associate|eq 20.636.246|<tuple|20.636|?>>
+    <associate|eq 20.637.246|<tuple|20.637|?>>
     <associate|eq 20.7.155|<tuple|20.7|?>>
     <associate|eq 20.76.200|<tuple|20.97|?>>
     <associate|eq 20.77.200|<tuple|20.98|?>>
@@ -35111,6 +35852,9 @@
     <associate|lemma 20.448.245|<tuple|20.450|?>>
     <associate|lemma 20.449.245|<tuple|20.451|?>>
     <associate|lemma 20.463.246|<tuple|20.464|?>>
+    <associate|lemma 20.476.246|<tuple|20.476|?>>
+    <associate|lemma 20.477.246|<tuple|20.477|?>>
+    <associate|lemma 20.478.246|<tuple|20.478|?>>
     <associate|lemma 20.78.156|<tuple|20.85|?>>
     <associate|lemma 20.80.156|<tuple|20.87|?>>
     <associate|lemma 20.90.156|<tuple|20.101|?>>
@@ -35538,6 +36282,8 @@
       <tuple|<tuple|<with|mode|<quote|math>|\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>>|<pageref|auto-124>>
 
       <tuple|<tuple|<with|mode|<quote|math>|\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>>|<pageref|auto-125>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-N\><rsup|p>>>|<pageref|auto-126>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|20<space|2spc>Measures
