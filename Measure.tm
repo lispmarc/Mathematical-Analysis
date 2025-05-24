@@ -10062,7 +10062,7 @@
   <\definition>
     <label|measure measurable space><index|measurable
     space><index|<math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>>><dueto|Measurable
-    Space>Let <math|X> be a set and <math|\<cal-A\>> a
+    Space>Let <math|X> be a non empty set and <math|\<cal-A\>> a
     <math|\<sigma\>>-algebra on <math|X> then the couple
     <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>> is called a
     <with|font-series|bold|measurable space>.
@@ -13602,7 +13602,8 @@
     <label|measure measure space><index|measure
     space><index|<math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>>><dueto|Measure
     Space>A measure space is a triple <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>>
-    where <math|\<cal-A\>> is a <math|\<sigma\>>-algebra on <math|X> and
+    where <math|X> is a non empty set, <math| \<cal-A\>> is a
+    <math|\<sigma\>>-algebra on <math|X> and
     <math|\<mu\>:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|]>> is a
     measure on <math|\<cal-A\>>.
   </definition>
@@ -25374,10 +25375,10 @@
   <subsection|Integral of simple functions>
 
   <\definition>
-    <label|simple function><index|simple function>Let <math|X> be a set then
-    a function <math|f:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>> is a
-    <with|font-series|bold|simple function> if <math|f<around*|(|X|)>> is a
-    <with|font-series|bold|finite> <with|font-series|bold|set> and
+    <label|simple function><index|simple function>Let <math|X> be a non empty
+    set then a function <math|f:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>>
+    is a <with|font-series|bold|simple function> if <math|f<around*|(|X|)>>
+    is a <with|font-series|bold|finite> <with|font-series|bold|set> and
     <math|<with|font-series|bold|f<around*|(|X|)>\<subseteq\>\<bbb-R\>>>. The
     set of all simple function graphs is noted as
     <math|\<cal-S\><around*|[|X|]>> so\ 
@@ -25391,8 +25392,8 @@
   We have the following alternative definition of a simple function.
 
   <\theorem>
-    <label|simple function alternative>Let <math|X> be a set then for a
-    function <math|f:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>> with
+    <label|simple function alternative>Let <math|X> be a non empty set then
+    for a function <math|f:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>> with
     <math|f<around*|(|X|)>\<subseteq\>\<bbb-R\>> we have the following
     equivalences:
 
@@ -25431,8 +25432,9 @@
 
     <\description>
       <item*|<math|1\<Rightarrow\>2>>As <math|f> is a simple function
-      <math|f<around*|(|X|)>> is finite, hence there exists a
-      <math|n\<in\>\<bbb-N\>> and a bijection\ 
+      <math|f<around*|(|X|)>> is finite, further as
+      <math|X\<neq\>\<varnothing\>> <math|f<around*|(|X|)>\<neq\>\<varnothing\>>,
+      hence there exists a <math|n\<in\>\<bbb-N\>> and a bijection\ 
 
       <\equation*>
         \<beta\>:<around*|{|1,\<ldots\>,n|}>\<rightarrow\>f<around*|(|X|)>
@@ -25535,11 +25537,13 @@
     </description>
   </proof>
 
+  \;
+
   We have the following important result for functions of the form
   <math|f=<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<cal-X\><rsub|A<rsub|i>>>.
 
   <\theorem>
-    <label|simple function property>Let <math|X> be a set,
+    <label|simple function property>Let <math|X> be a non empty set,
     <math|n\<in\>\<bbb-N\>>,<math|I> finite,
     <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|X|)>>
     pairwise disjoint, <math|<around*|{|f<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<bbb-R\>>
@@ -25580,6 +25584,109 @@
       <\equation*>
         f<around*|(|x|)>=<big|sum><rsub|i\<in\>I>f<rsub|i>\<cdot\>\<cal-X\><rsub|A<rsub|i>><around*|(|x|)>=<big|sum><rsub|i\<in\>I>f<rsub|i>\<cdot\>0=0
       </equation*>
+    </enumerate>
+  </proof>
+
+  The set of simple functions is stable under pointwise sum and scalar
+  product.
+
+  <\theorem>
+    <label|simple function sum scalar product>Let <math|X> be a set then we
+    have\ 
+
+    <\enumerate>
+      <item><math|\<forall\>f\<in\>\<cal-S\><around*|[|X|]>> and
+      <math|\<forall\>\<alpha\>\<in\>\<bbb-R\>> we have
+      <math|\<alpha\>\<cdot\>f\<in\>\<cal-S\><around*|[|X|]>>
+
+      <item><math|\<forall\>f,g\<in\>\<cal-S\><around*|[|X|]>> we have
+      <math|f+g\<in\>\<cal-S\><around*|[|X|]>>\ 
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>We have to consider two cases for <math|\<alpha\>>
+
+      <\description>
+        <item*|<math|\<alpha\>=0>>Then <math|<around*|(|\<alpha\>\<cdot\>f|)><around*|(|X|)>=<around*|{|0|}>>
+        which is finite and non empty
+
+        <item*|<math|\<alpha\>\<neq\>0>>As <math|f> is a simple function
+        there exists a <math|n\<in\>\<bbb-N\>> and a bijection
+        <math|\<beta\>:<around*|{|1,\<ldots\>,n|}>\<rightarrow\>f<around*|(|X|)>>.
+        Define now
+
+        <\equation*>
+          \<alpha\><rsub|f>:<around*|{|1,\<ldots\>,n|}>\<rightarrow\><around*|(|\<alpha\>\<cdot\>f|)><around*|(|X|)><text|
+          by >\<alpha\><rsub|f><around*|(|i|)>=\<alpha\>\<cdot\>\<beta\><around*|(|i|)>
+        </equation*>
+
+        If <math|y\<in\><around*|(|\<alpha\>\<cdot\>f|)><around*|(|X|)>> then
+        there exists a <math|x\<in\>X> such that
+
+        <\equation*>
+          y=<around*|(|\<alpha\>\<cdot\>f|)><around*|(|x|)>=\<alpha\>\<cdot\>f<around*|(|x|)>\<Rightarrowlim\><rsub|\<alpha\>\<neq\>0>f<around*|(|x|)>=<frac|y|\<alpha\>>
+        </equation*>
+
+        As <math|f<around*|(|x|)>\<in\>f<around*|(|X|)>> there exists a
+        <math|i\<in\><around*|{|1,\<ldots\>,n|}>> such that
+
+        <\equation*>
+          <math|>\<beta\><around*|(|i|)>=f<around*|(|x|)>=<frac|y|\<alpha\>>\<Rightarrow\>y=\<alpha\>\<cdot\>\<beta\><around*|(|i|)>=\<alpha\><rsub|f><around*|(|i|)>
+        </equation*>
+
+        proving that <math|\<alpha\><rsub|f> is a surjection.> So using
+        [theorem: <reference|surjection f:A-\<gtr\>B if A is finite then B is
+        finite>] we have that <math|<around*|(|\<alpha\>\<cdot\>f|)><around*|(|X|)>>
+        is finite.
+      </description>
+
+      so in all cases <math|<around*|(|\<alpha\>\<cdot\>f|)><around*|(|X|)>>
+      is finite proving that <math|\<alpha\>\<cdot\>f> is a simple function.
+
+      <item>As <math|f> and <math|g> are simple functions we have that
+      <math|f<around*|(|X|)>> and <math|g<around*|(|X|)>> are finite. As the
+      product of finite sets is finite [see theroem: <reference|product of
+      finite sets>] we have that
+
+      <\equation*>
+        f<around*|(|X|)>\<times\>g<around*|(|X|)><text| is finite>
+      </equation*>
+
+      Define now
+
+      <\equation*>
+        s:f<around*|(|X|)>\<times\>g<around*|(|Y|)>\<rightarrow\><around*|{|x+y\|<around*|(|x,y|)>\<in\>f<around*|(|X|)>\<times\>g<around*|(|Y|)>|}><text|
+        by >s<around*|(|x,y|)>=x+y
+      </equation*>
+
+      Then if <math|z\<in\><around*|{|x+y\|<around*|(|x,y|)>\<in\>f<around*|(|X|)>\<times\>g<around*|(|Y|)>|}>>
+      there exists a <math|x\<in\>f<around*|(|X|)>> and a
+      <math|y\<in\>f<around*|(|Y|)>> such that
+      <math|z=x+y=s<around*|(|x,y|)>> which proves that <math|s> is
+      surjective. Applying then [theorem: <reference|surjection f:A-\<gtr\>B
+      if A is finite then B is finite>] proves that <math|>
+
+      <\equation*>
+        <around*|{|x+y\|<around*|(|x,y|)>\<in\>f<around*|(|X|)>\<times\>g<around*|(|X|)>|}><text|
+        is finite>
+      </equation*>
+
+      Let <math|y\<in\><around*|(|f+g|)><around*|(|X|)>> then there exists a
+      <math|x\<in\>X> such that
+
+      <\equation*>
+        y=f<around*|(|x|)>+g<around*|(|x|)>\<in\><around*|{|x+y\|<around*|(|x,y|)>\<in\>f<around*|(|X|)>\<times\>g<around*|(|X|)>|}>.
+      </equation*>
+
+      Hence <math|<around*|(|f+g|)><around*|(|X|)>\<subseteq\><around*|{|x+y\|<around*|(|x,y|)>\<in\>f<around*|(|X|)>\<times\>g<around*|(|X|)>|}>>
+      which, as we have proved that <math|<rigid|<around*|{|x+y\|<around*|(|x,y|)>\<in\>f<around*|(|X|)>\<times\>g<around*|(|X|)>|}>>>
+      is finite, proves using [theorem: <reference|subset of finite sets>]
+      that <math|<around*|(|f+g|)><around*|(|X|)>> is finite.. This proves
+      that <math|f+g> is a simple function.
     </enumerate>
   </proof>
 
@@ -25627,23 +25734,27 @@
   motivates the following defintion.
 
   <\definition>
-    <label|simple function measurable>Let
+    <label|simple function measurable definition (1)>Let
     <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>> be a measurable space
     then the set of <math|\<cal-A\>>-measurable real valued simple functions
-    is noted as <math|\<cal-S\><around*|[|X,\<cal-A\>|]>>, if the functions
-    are non negative the set is called <math|\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>>.
-    Hence\ 
+    is noted as <math|\<cal-S\><around*|[|X,\<cal-A\>|]>>. Hence\ 
 
     <\equation*>
       \<cal-S\><around*|[|X,\<cal-A\>|]>=<around*|{|f\<in\>\<cal-S\><around*|[|X|]>\|f:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
       is >\<cal-A\><text|-measurable>|}>
     </equation*>
 
-    and\ 
+    <\note>
+      If <math|f\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]>> then
+      <math|f:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>> is
+      <math|\<cal-A\>>-measurable so that
+      <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>.
+      Hence we have that\ 
 
-    <\equation*>
-      \<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>=<around*|{|f\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]>\|f<around*|(|X|)>\<subseteq\><around*|[|0,\<infty\>|[>|}>
-    </equation*>
+      <\equation*>
+        \<cal-S\><around*|[|X,\<cal-A\>|]>\<subseteq\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      </equation*>
+    </note>
   </definition>
 
   A trivial example of a non negative measurable simple function is the
@@ -25681,25 +25792,23 @@
   <math|\<cal-S\><around*|[|X,\<cal-A\>|]>>
 
   <\theorem>
-    <label|simple function measurable (1)>Let
+    <label|simple function measurable (0)>Let
     <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>> be a measurable space
     then we have the following equivalences:
 
     <\enumerate>
-      <item><math|f\<in\>\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>> [in
-      other words <math|f\<in\>\<cal-S\><around*|[|X|]>>,
-      <math|f<around*|(|X|)>\<subseteq\><around*|[|0,\<infty\>|[>> and
-      <math|f> is <math|\<cal-A\>>-measurable.
+      <item><math|f\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]>> [in other words
+      <math|f\<in\>\<cal-S\><around*|[|X|]>> and <math|f> is
+      <math|\<cal-A\>>-measurable.
 
-      <item><math|f\<in\>\<cal-S\><around*|[|X|]><text|,
-      <math|f<around*|(|X|)>\<subseteq\><around*|[|0,\<infty\>|[>> and
-      >\<forall\>y\<in\>f<around*|(|X|)>>
+      <item><math|f\<in\>\<cal-S\><around*|[|X|]><text| and
+      \ >\<forall\>y\<in\>f<around*|(|X|)>>
       <math|f<rsup|-1><around*|(|<around*|{|y|}>|)>\<in\>\<cal-A\>>
 
       <item>There exists a <math|n\<in\>\<bbb-N\>>, a pairwise disjoint
       family <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\>>
-      of measurable sets and a family <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\><around*|[|0,\<infty\>|[>>
-      of real non negative numbers so that
+      of measurable sets and a family <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-R\>>
+      of real numbers so that
 
       <\equation*>
         f=<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<cal-X\><rsub|A<rsub|i>>
@@ -25711,19 +25820,19 @@
     \ 
 
     <\description>
-      <item*|<math|1\<Rightarrow\>2>>As <math|f\<in\>\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>>
-      <math|f\<in\>S<around*|[|X|]>> and <math|f<around*|(|X|)>\<subseteq\><around*|[|0,\<infty\>|[>>.
-      Let <math|y\<in\>f<around*|(|X|)>> then as
-      <math|f*<around*|(|X|)>\<subseteq\><around*|[|0,\<infty\>|[>> it
-      follows that <math|y\<in\>\<bbb-R\>>. Applying then [theorem:
-      <reference|measurable function comparisation>] it follows from the fact
-      that <math|f> is <math|\<cal-A\>>-measurable that
-      <math|<rigid|f<rsup|-1><around*|(|<around*|{|y|}>|)>\<equallim\><rsub|<text|[definition:
+      <item*|<math|1\<Rightarrow\>2>>As <math|f\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]>>
+      <math|f\<in\>S<around*|[|X|]>\<Rightarrow\>f<around*|(|X|)>\<subseteq\>\<bbb-R\>>
+      and <math|f> is <math|\<cal-A\>>-measurable. \ Let
+      <math|y\<in\>f<around*|(|X|)>> then, as
+      <math|f*<around*|(|X|)>\<subseteq\>\<bbb-R\>> it follows that
+      <math|y\<in\>\<bbb-R\>>. Applying then [theorem: <reference|measurable
+      function comparisation>] it follows from the fact that <math|f> is
+      <math|\<cal-A\>>-measurable that <math|<rigid|f<rsup|-1><around*|(|<around*|{|y|}>|)>\<equallim\><rsub|<text|[definition:
       <reference|measurable function comparisation
       definition>]>><around*|{|f=y|}>\<in\>\<cal-A\>>>.
 
-      <item*|<math|2\<Rightarrow\>3>>As <math|f\<in\>S<around*|[|X|]>> we can
-      use [theorem: <reference|simple function alternative>] to get a
+      <item*|<math|2\<Rightarrow\>3>>As <math|f\<in\>S<around*|[|X|]>\<Rightarrow\>f<around*|(|X|)>\<subseteq\>\<bbb-R\>>
+      we can use [theorem: <reference|simple function alternative>] to get a
       <math|n\<in\>\<bbb-N\>> and a bijection
       <math|<rigid|\<beta\>:<around*|{|1,\<ldots\>,n|}>\<rightarrow\>f<around*|(|X|)>>>
       such that for <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-P\><around*|(|X|)>>
@@ -25745,11 +25854,11 @@
       </equation*>
 
       Finally, define <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
-      by <math|f<rsub|i>=\<beta\><around*|(|i|)>\<in\>f<around*|(|X|)>\<subseteq\><around*|[|0,\<infty\>|[>>
+      by <math|f<rsub|i>=\<beta\><around*|(|i|)>\<in\>f<around*|(|X|)>\<subseteq\>\<bbb-R\>>
       then\ 
 
       <\equation*>
-        <around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\><around*|[|0,\<infty\>|[><text|
+        <around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-R\><text|
         and >f=<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<cal-X\><rsub|A<rsub|i>>
       </equation*>
 
@@ -25758,7 +25867,7 @@
       take <math|f<rsub|n+1>=0> then\ 
 
       <\equation>
-        <label|eq 20.443.229><around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\><around*|[|0,\<infty\>|[><text|,
+        <label|eq 20.443.229><around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>\<bbb-R\><text|,
         ><around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>\<cal-A\><text|
         is pairwise disjoint, ><big|sqcup><rsub|i=1><rsup|n+1>A<rsub|i>=X
       </equation>
@@ -25774,11 +25883,11 @@
       Let <math|x\<in\>X> then there exist a
       <math|i\<in\><around*|{|1,\<ldots\>,n+1|}>> such that
       <math|x\<in\>A<rsub|i>> hence <math|<rigid|f<around*|(|x|)>\<equallim\><rsub|<text|[theorem:
-      <reference|simple function property>]>>f<rsub|i>\<in\><around*|[|0,\<infty\>|[>>>
-      which proves that\ 
+      <reference|simple function property>]>>f<rsub|i>\<in\>\<bbb-R\>>> which
+      proves that\ 
 
       <\equation*>
-        f<around*|(|X|)>\<subseteq\><around*|[|0,\<infty\>|[>
+        f<around*|(|X|)>\<subseteq\>\<bbb-R\>
       </equation*>
 
       So by [theorem: <reference|simple function alternative>] we have\ 
@@ -25882,6 +25991,187 @@
 
       <\equation*>
         f<text| is >\<cal-A\><text|-measurable>
+      </equation*>
+    </description>
+  </proof>
+
+  We show now that <math|\<cal-S\><around*|[|X,\<cal-A\>|]>> is stable under
+  the pointwise sum and product.
+
+  <\theorem>
+    <label|simple function measurable sum and scalar product>Let
+    <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>> be a measurable space
+    then we have\ 
+
+    <\enumerate>
+      <item><math|\<forall\>f\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]>> and
+      <math|\<forall\>\<alpha\>\<in\>\<bbb-R\>> we have
+      <math|\<alpha\>\<cdot\>f\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]>>
+
+      <item><math|\<forall\>f,g\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]>> we
+      have <math|f+g\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>As <math|f\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]>> we have that
+      <math|f\<in\>\<cal-S\><around*|[|X|]>> and <math|f> is
+      <math|\<cal-A\>>-measurable. By [theorem: <reference|simple function
+      sum scalar product>] we have <math|\<alpha\>\<cdot\>f\<in\>\<cal-S\><around*|[|X|]>>
+      and by [theorem: <reference|measurable function product with scalar>]
+      that <math|\<alpha\>\<cdot\>f> is <math|\<cal-A\>>-measurable. Hence
+      <math|\<alpha\>\<cdot\>f\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]>>.
+
+      <item>As <math|f,g\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]>> we have
+      that <math|f,g\<in\>\<cal-S\><around*|[|X|]>> and <math|f,g> are
+      <math|\<cal-A\>>-measurable. By [theorem: <reference|simple function
+      sum scalar product>] we have <math|f+g\<in\>\<cal-S\><around*|[|X|]>>.
+      Further using [theorem: <reference|measurable function sum (finite)>]
+      it follows that <math|f+g> is <math|\<cal-A\>>-measurable. Hence
+      <math|f+g\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]>>.
+    </enumerate>
+  </proof>
+
+  When defining integral we are only interested in non negative measurable
+  simple functions hence the following definition.
+
+  <\definition>
+    <label|simple function measurable definition (2)>Let
+    <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>> be a measurable space
+    then the set of non negative \ <math|\<cal-A\>>-measurable real valued
+    simple functions is noted as <math|\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>>
+    hence
+
+    <\equation*>
+      \<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>=<around*|{|f\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]>\|f<around*|(|X|)>\<subseteq\><around*|[|0,\<infty\>|[>|}>
+    </equation*>
+
+    <\note>
+      As by [definition: <reference|simple function measurable definition
+      (1)>] <math|\<cal-S\><around*|[|X,\<cal-A\>|]>\<subseteq\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+      it follows that <math|\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>\<subseteq\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>><rigid|>
+    </note>
+  </definition>
+
+  We have a simpler alternative definition for
+  <math|\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>>
+
+  <\theorem>
+    <label|simple function measurable (1)>Let
+    <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>> be a measurable space
+    then we have the following equivalences:
+
+    <\enumerate>
+      <item><math|f\<in\>\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>> [in
+      other words <math|f\<in\>\<cal-S\><around*|[|X|]>>,
+      <math|f<around*|(|X|)>\<subseteq\><around*|[|0,\<infty\>|[>> and
+      <math|f> is <math|\<cal-A\>>-measurable.
+
+      <item><math|f\<in\>\<cal-S\><around*|[|X|]><text|,
+      <math|f<around*|(|X|)>\<subseteq\><around*|[|0,\<infty\>|[>> and
+      >\<forall\>y\<in\>f<around*|(|X|)>>
+      <math|f<rsup|-1><around*|(|<around*|{|y|}>|)>\<in\>\<cal-A\>>
+
+      <item>There exists a <math|n\<in\>\<bbb-N\>>, a pairwise disjoint
+      family <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\>>
+      of measurable sets and a family <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\><around*|[|0,\<infty\>|[>>
+      of real non negative numbers so that
+
+      <\equation*>
+        f=<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<cal-X\><rsub|A<rsub|i>>
+      </equation*>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|1\<Rightarrow\>2>>As <math|f\<in\>\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>>
+      we have that <math|f\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]>> and
+      <math|f<around*|(|X|)>\<subseteq\><around*|[|0,\<infty\>|[>>. Using
+      [theorem: <reference|simple function measurable (0)>] that
+      <math|f\<in\>\<cal-S\><around*|[|X|]>> and
+      <math|\<forall\>y\<in\>f<around*|(|X|)>>
+      <math|f<rsup|-1><around*|(|<around*|{|y|}>|)>\<in\>\<cal-A\>>.
+
+      <item*|<math|2\<Rightarrow\>3>>As <math|f\<in\>\<cal-S\><around*|[|X|]>>
+      and <math|><math|\<forall\>y\<in\>f<around*|(|X|)>>
+      <math|f<rsup|-1><around*|(|<around*|{|y|}>|)>\<in\>\<cal-A\>> it
+      follows from [theorem: <reference|simple function measurable (0)>] that
+      there exist a <math|n\<in\>\<bbb-N\>>, a pairwise disjoint family
+      <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\>>
+      and a <math|<around*|{|f<rprime|'><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-R\>>
+      such that\ 
+
+      <\equation*>
+        f=<big|sum><rsub|i=1><rsup|n>f<rprime|'><rsub|i>\<cdot\>\<cal-X\><rsub|A<rsub|i>>
+      </equation*>
+
+      Define
+
+      <\equation*>
+        <around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\><around*|[|0,\<infty\>|[><text|
+        by >f<rsub|i>=max<around*|(|0,f<rprime|'><rsub|i>|)>
+      </equation*>
+
+      Consider now
+
+      <\equation*>
+        g=<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<cal-X\><rsub|A<rsub|i>>
+      </equation*>
+
+      Let <math|x\<in\>X> then we have either:\ 
+
+      <\description>
+        <item*|<math|x\<in\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>n|}>>A<rsub|i>>>Then
+        there exist a <math|i\<in\><around*|{|1,\<ldots\>,n|}>> such that
+        <math|x\<in\>A<rsub|i>>. Using [theorem: <reference|simple function
+        property>] we have that\ 
+
+        <\equation*>
+          f<rprime|'><rsub|i>=f<around*|(|x|)>\<wedge\>f<rsub|i>=g<around*|(|x|)>
+        </equation*>
+
+        Further as <math|f<rprime|'><rsub|i>=f<around*|(|x|)>\<subseteq\>f<around*|(|X|)><below|\<subseteq\>|hypothesis><around*|[|0,\<infty\>|[>>
+        it follows that <math|f<rprime|'><rsub|i>=max<around*|(|f<rprime|'><rsub|i>,0|)>=f<rsub|i>>
+        so that <math|f<around*|(|x|)>=g<around*|(|x|)>>.
+
+        <item*|<math|x\<in\>X\\<around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)>>>Then
+        using [theorem: <reference|simple function property>] we have that
+        <math|f<around*|(|x|)>=0=g<around*|(|x|)>=0>
+      </description>
+
+      As in all cases we have <math|f<around*|(|x|)>=g<around*|(|x|)>> it
+      follows that <math|f=g> hence we have that\ 
+
+      <\equation*>
+        f=<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<cdot\>\<cal-X\><rsub|A<rsub|i>><text|
+        where ><around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\><around*|[|0,\<infty\>|[><text|
+        and ><around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\><text|
+        is pairwise disjoint>
+      </equation*>
+
+      <item*|<math|3\<Rightarrow\>1>>Using [theorem: <reference|simple
+      function measurable (0)>] it follows that
+      <math|f\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]>>. Let <math|x\<in\>X>
+      then we have\ 
+
+      <\equation*>
+        f<around*|(|x|)>\<equallim\><rsub|<text|[theorem: <reference|simple
+        function measurable (0)>]>><choice|<tformat|<table|<row|<cell|f<rsub|i>\<in\><around*|[|0,\<infty\>|[><text|
+        if >x\<in\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>>>|<row|<cell|0\<in\><around*|[|0,\<infty\>|[><text|
+        if >x\<in\>X\\<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>>>>>>\<in\><around*|[|0,\<infty\>|[>
+      </equation*>
+
+      so that we have additional <math|f<around*|(|X|)>\<subseteq\><around*|[|0,\<infty\>|[>>.
+      Hence we have\ 
+
+      <\equation*>
+        f\<in\>\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>
       </equation*>
     </description>
   </proof>
@@ -27328,8 +27618,9 @@
 
   <\proof>
     As <math|f\<in\>\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>> we have by
-    [definition: <reference|simple function measurable>] that <math|f> is
-    <math|\<cal-A\>>-measurable, hence <math|<rigid|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>>
+    [definition: <reference|simple function measurable definition (2)>] that
+    <math|f> is <math|\<cal-A\>>-measurable, hence
+    <math|<rigid|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>>
     and <math|f<around*|(|X|)>\<subseteq\><around*|[|0,\<infty\>|[>\<subseteq\><around*|[|0,\<infty\>|]>>
     so that
 
@@ -30584,8 +30875,9 @@
     then\ 
 
     <\equation*>
-      <below|lim|n\<rightarrow\>\<infty\>><big|int><rsup|+>f d\<mu\><text|
-      exists and ><big|int><rsup|+>f d\<mu\>=<below|lim|n\<rightarrow\>\<infty\>><big|int><rsup|+>f<rsub|n>d\<mu\>
+      <below|lim|n\<rightarrow\>\<infty\>><big|int><rsup|+>f<rsub|n>
+      d\<mu\><text| exists and ><big|int><rsup|+>f
+      d\<mu\>=<below|lim|n\<rightarrow\>\<infty\>><big|int><rsup|+>f<rsub|n>d\<mu\>
     </equation*>
   </theorem>
 
@@ -33143,7 +33435,7 @@
   <math|p=\<infty\>>.
 
   <\definition>
-    <index|<math|\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>>Let
+    <label|LP spaces (@@)><index|<math|\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>>Let
     <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a measure
     space then <math|\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
     where <math|\<bbb-K\>=\<bbb-R\>> or <math|\<bbb-C\>> is defined by\ 
@@ -33155,7 +33447,7 @@
       ><around*|\||f<around*|(|x|)>|\|>\<leqslant\>M|}>>
 
       <item>If <math|\<bbb-K\>=\<bbb-C\>> then
-      <math|\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>=<around*|{|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-R\>|]>\|\<exists\>M\<in\>\<bbb-R\><rsup|+><text|
+      <math|\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>=<around*|{|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-C\>|]>\|\<exists\>M\<in\>\<bbb-R\><rsup|+><text|
       such that >\<forall\>x\<in\>X<text|
       ><around*|\||f<around*|(|x|)>|\|>\<leqslant\>M|}>>
     </enumerate>
@@ -33330,7 +33622,7 @@
   <\theorem>
     <label|LP spaces absolute value>Let <math|p\<in\><around*|[|1,\<infty\>|]>>
     and <math|f\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
-    then <math|<around*|\||f|\|>\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+    then <math|<around*|\||f|\|>\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>>
   </theorem>
 
   <\proof>
@@ -33350,13 +33642,13 @@
 
       Using [theorems: <reference|measure integral f+ f- are measurable>,
       <reference|complex measurable function absolute value>] it follows that
-      <math|<around*|\||f|\|>\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-K\>|]>>,
+      <math|<around*|\||f|\|>\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-R\>|]>>,
       further <math|\<forall\>x\<in\>X> we have
       <math|<around*|\||<around*|(|<around*|\||f<around*|(|x|)>|\|>|)>|\|>=<around*|\||f<around*|(|x|)>|\|>\<leqslant\>M>.
       Hence we have by definition that\ 
 
       <\equation*>
-        <around*|\||f|\|>\<in\>\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>
+        <around*|\||f|\|>\<in\>\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>
       </equation*>
 
       <item*|<math|p\<in\><around*|[|1,\<infty\>|[>>>As
@@ -33365,18 +33657,18 @@
 
       <\equation*>
         f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-K\>|]><text| and
-        ><around*|\||f|\|><rsup|p>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>
+        ><around*|\||f|\|><rsup|p>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>
       </equation*>
 
       Using [theorems: <reference|measure integral f+ f- are measurable>,
       <reference|complex measurable function absolute value>] it follows that
-      <math|<around*|\||f|\|>\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-K\>|]>>,
+      <math|<around*|\||f|\|>\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-R\>|]>>,
       further as <math|<around*|\||<around*|(|<around*|\||f|\|>|)>|\|><rsup|p>=<around*|\||f|\|><rsup|p>>
-      it follows that <math|<around*|\||<around*|(|<around*|\||f|\|>|)>|\|><rsup|p>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>.
+      it follows that <math|<around*|\||<around*|(|<around*|\||f|\|>|)>|\|><rsup|p>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>>.
       Hence\ 
 
       <\equation*>
-        <around*|\||f|\|>\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>
+        <around*|\||f|\|>\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>
       </equation*>
     </description>
   </proof>
@@ -34169,7 +34461,54 @@
     </equation*>
   </proof>
 
-  We are now read to proves that <math|<around*|\<langle\>|\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>,<around*|\<\|\|\>||\<\|\|\>><rsub|p>|\<rangle\>>>
+  <\theorem>
+    <label|LP spaces finite sum>Let <math|p\<in\><around*|[|1,\<infty\>|]>>,
+    <math|n\<in\>\<bbb-N\>> and <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+    then <math|<rigid|<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>>
+    and <math|<around*|\<\|\|\>|<big|sum><rsub|i=1><rsup|n>f<rsub|i>|\<\|\|\>><rsub|p>\<leqslant\><big|sum><rsub|i=1><rsup|n><around*|\<\|\|\>|f<rsub|i>|\<\|\|\>><rsub|p>>'
+  </theorem>
+
+  <\proof>
+    This is easily proved by mathematical induction. So let
+
+    <\equation*>
+      \<cal-S\>=<around*|{|n\<in\>\<bbb-N\>\|If
+      <around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]><text|
+      then ><big|sum><rsub|i=1><rsup|n>f<rsub|i>\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]><text|
+      and ><around*|\<\|\|\>|<big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|i>|\<\|\|\>><rsub|p>\<leqslant\><big|sum><rsub|i=1><rsup|n><around*|\<\|\|\>|f<rsub|i>|\<\|\|\>><rsub|p>|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|1\<in\>\<cal-S\>>>If <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,1|}>>\<subseteq\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+      then <math|<big|sum><rsub|i=1><rsup|1>f<rsub|i>=f<rsub|1>\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+      and
+
+      <\equation*>
+        <around*|\<\|\|\>|<big|sum><rsub|i=1><rsup|1>f<rsub|i>|\<\|\|\>><rsub|p>=<around*|\<\|\|\>|f<rsub|1>|\<\|\|\>><rsub|p>=<big|sum><rsub|i=1><rsup|1><around*|\<\|\|\>|f<rsub|i>|\<\|\|\>><rsub|p>
+      </equation*>
+
+      proving that <math|1\<in\>\<cal-S\>>.
+
+      <item*|<math|n\<in\>\<cal-S\>\<Rightarrow\>n+1\<in\>\<cal-S\>>>Let
+      <math|<around*|{|f<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>\<subseteq\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+      then we have as <math|n\<in\>\<cal-S\>> that
+      <math|<big|sum><rsub|i=1><rsup|n>f<rsub|i>\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+      that by [theorem: <reference|LP vector space>]
+      <math|<big|sum><rsub|i=1><rsup|n+1>f<rsub|i>=<big|sum><rsub|i=1><rsup|n>f<rsub|i>+f<rsub|n+1>\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+      and\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|<big|sum><rsub|i=1><rsup|n+1>f<rsub|i>|\<\|\|\>><rsub|p>>|<cell|=>|<cell|<around*|\<\|\|\>|<big|sum><rsub|i=1><rsup|n>f<rsub|i>+f<rsub|n+1>|\<\|\|\>><rsub|p>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[theorem:
+        <reference|LP spaces Minkowski's Inequality>]>>>|<cell|<around*|\<\|\|\>|<big|sum><rsub|i=1><rsup|n>f<rsub|i>|\<\|\|\>><rsub|p>+<around*|\<\|\|\>|f<rsub|n+1>|\<\|\|\>><rsub|p>>>|<row|<cell|>|<cell|\<leqslant\><rsub|n\<in\>\<cal-S\>>>|<cell|<big|sum><rsub|i=1><rsup|n><around*|\<\|\|\>|f<rsub|i>|\<\|\|\>><rsub|p>+<around*|\<\|\|\>|f<rsub|n+1>|\<\|\|\>><rsub|p>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n+1><around*|\<\|\|\>|f<rsub|i>|\<\|\|\>><rsub|p>>>>>
+      </eqnarray*>
+
+      proving that <math|n+1\<in\>\<cal-S\>>.
+    </description>
+  </proof>
+
+  We are now ready to proves that <math|<around*|\<langle\>|\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>,<around*|\<\|\|\>||\<\|\|\>><rsub|p>|\<rangle\>>>
   is a pseudo normed space.
 
   <\theorem>
@@ -34720,12 +35059,19 @@
   is complete. First we need some lemmas.\ 
 
   <\lemma>
-    <label|lemma 20.476.246>Let <math|p\<in\><around*|[|1,\<infty\>|[>> and
+    <label|lemma 20.476.246>Let <math|p\<in\><around*|[|0,\<infty\>|[>> and
     <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\><around*|[|0,\<infty\>|[>>
     such that <math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>> exist and
     <math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>\<in\>\<bbb-R\>> then
-    <math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p>>
-    exist and <math|<below|lim|i\<rightarrowlim\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p>=<around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)><rsup|p>>.
+
+    <\equation*>
+      <below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p><text|
+      exists and ><below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p>=<around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)><rsup|p>
+    </equation*>
+
+    <\equation*>
+      <below|lim|i\<rightarrow\>\<infty\>><around*|\||x<rsub|i>|\|><rsup|p>=<around*|\||<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|\|><rsup|p>
+    </equation*>
   </lemma>
 
   <\proof>
@@ -34736,6 +35082,26 @@
     <reference|limit and continuity>[ that
     <math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p>=<below|lim|i\<rightarrow\>\<infty\>><around*|(|\<ast\>|)><rsup|p><around*|(|x|)>>
     exist and <math|><math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p>=<below|lim|i\<rightarrow\>\<infty\>><around*|(|\<ast\>|)><rsup|p><around*|(|x|)>=<around*|(|\<ast\>|)><rsup|p><around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)>=<around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)><rsup|p>>.
+    In other words\ 
+
+    <\equation>
+      <label|eq 20.637.247>\<forall\><around*|{|x<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\><around*|[|0,\<infty\>|[><text|
+      we have ><below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p><text|
+      exists and ><below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p>=<around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)><rsup|p>
+    </equation>
+
+    Further as <math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>> exist and
+    <math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>\<in\>\<bbb-R\>> it
+    follows from [theorem: <reference|limit of norm is norm of limit>] we
+    have that for <math|<around*|{|<around*|\||x<rsub|i>|\|>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\><around*|[|0,\<infty\>|[>>
+    <math|<below|lim|i\<rightarrow\>\<infty\>><around*|\||x<rsub|i>|\|>>
+    exist and <math|<below|lim|i\<rightarrow\>\<infty\>><around*|\||x<rsub|i>|\|>=<around*|\||<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|\|>>.
+    Using then [eq: <reference|eq 20.637.247>] it follows that\ 
+
+    <\equation*>
+      <below|lim|i\<rightarrow\>\<infty\>><around*|\||x<rsub|i>|\|><rsup|p><text|
+      exist and ><below|lim|i\<rightarrow\>\<infty\>><around*|\||x<rsub|i>|\|><rsup|p>=<around*|(|<around*|\||<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|\|>|)><rsup|p>=<around*|\||<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|\|><rsup|p>
+    </equation*>
   </proof>
 
   We extend now the above lemma to limits that can be finite or infinite.
@@ -34838,7 +35204,43 @@
   </proof>
 
   <\lemma>
-    <label|lemma 20.478.246>Let <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>>
+    <label|lemma 20.479.246>Let <math|p\<in\><around*|[|1,\<infty\>|]>>,
+    <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be measure
+    space and <math|f\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+    then we have <math|<around*|\<\|\|\>|f|\<\|\|\>><rsub|p>=<around*|\<\|\|\>|<around*|\||f|\|>|\<\|\|\>><rsub|p>>
+
+    <\note>
+      Using [theorem: <reference|LP spaces absolute value>]
+      <math|<around*|\||f|\|>\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+      as is required in this lemma.
+    </note>
+  </lemma>
+
+  <\proof>
+    For <math|p> we have either\ 
+
+    <\description>
+      <item*|<math|p=\<infty\>>>then as <math|<around*|\||f|\|>=<around*|\||<around*|(|<around*|\||f|\|>|)>|\|>>
+      we have that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>>|<cell|=>|<cell|inf<around*|(|<around*|{|M\<in\><around*|[|0,\<infty\>|[><around*|\||<around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<gtr\>M|}><text|
+        is locally >\<mu\><text|-null>|\<nobracket\>>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|inf<around*|(|<around*|{|M\<in\><around*|[|0,\<infty\>|[><around*|\||<around*|{|x\<in\>X\|<around*|\||<around*|\||f|\|><around*|(|x|)>|\|>\<gtr\>M|}><text|
+        is locally >\<mu\><text|-null>|\<nobracket\>>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|(|<around*|\||f|\|>|)>|\<\|\|\>><rsub|\<infty\>>>>>>
+      </eqnarray*>
+
+      <item*|<math|p\<in\><around*|]|1,\<infty\>|[>>>then as
+      <math|<around*|\||f|\|>=<around*|\||<around*|(|<around*|\||f|\|>|)>|\|>>
+      we have that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|f|\<\|\|\>><rsub|p>>|<cell|=>|<cell|<around*|(|<big|int><around*|\||f|\|><rsup|p>|)><rsup|<frac|1|p>>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|int><around*|\||<around*|(|<around*|\||f|\|>|)>|\|><rsup|p>|)><rsup|<frac|1|p>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|(|<around*|\||f|\|>|)>|\<\|\|\>><rsub|p>>>>>
+      </eqnarray*>
+    </description>
+  </proof>
+
+  <\lemma>
+    <label|lemma 20.480.246>Let <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>>
     be a measure space then <math|<around*|\<langle\>|L<rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>,<around*|\<\|\|\>||\<\|\|\>><rsub|L\<infty\>>|\<rangle\>>>
     is a Banach space\ 
   </lemma>
@@ -34865,16 +35267,853 @@
     hence we have proved that\ 
 
     <\equation>
-      \<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text|
+      <label|eq 20.638.246>\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text|
       >\<exists\>N<rsub|\<varepsilon\>>\<in\>\<bbb-N\><text| such that
       >\<forall\>n,m\<in\><around*|{|N<rsub|\<varepsilon\>>,\<ldots\>,\<infty\>|}><text|
       we have ><around*|\<\|\|\>|F<rsub|n>-F<rsub|m>|\<\|\|\>><rsub|\<infty\>>\<less\>\<varepsilon\>
     </equation>
 
-    \;
+    Let <math|n,m\<in\>\<bbb-N\>> then as
+    <math|F<rsub|n>,F<rsub|m>\<in\>\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+    a vector space we have that <math|F<rsub|n>-F<rsub|m>\<in\>\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+    so that by [lemma: <reference|lemma 20.463.246>] that\ 
+
+    <\equation>
+      <label|eq 20.639.246>A<rsub|n,m>=<around*|{|x\<in\>X\|<around*|\||F<rsub|n><around*|(|x|)>-F<rsub|m><around*|(|x|)>|\|>\<gtr\><around*|\<\|\|\>|F<rsub|n>-F<rsub|m>|\<\|\|\>><rsub|\<infty\>>|}><text|
+      is locally >\<mu\><text|-null>
+    </equation>
+
+    Using [theorem: <reference|LP spaces locally m-null set properties>] it
+    follow that\ 
+
+    <\equation>
+      <label|eq 20.640.246>A=<big|cup><rsub|<around*|(|i,j|)>\<in\>\<bbb-N\>>A<rsub|i,j><text|
+      is locally >\<mu\><text|-null>
+    </equation>
+
+    As <math|F<rsub|n>-F<rsub|m>\<in\>\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+    we have by [defnition: <reference|LP spaces (@@)>] that
+    <math|F<rsub|n>-F<rsub|m>\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+    so that by [theorem: <reference|lemma 20.447.245>]
+    <math|<around*|\||F<rsub|n>-F<rsub|m>|\|>\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,\<bbb-R\>|]>>
+    hence <math|<around*|\||F<rsub|n>-F<rsub|m>|\|>> is
+    <math|\<cal-A\>>-measurable so that by [theorem: <reference|measurable
+    function alternative (1)>] <math|A<rsub|n,m>=<around*|{|<around*|\||F<rsub|n>-F<rsub|m>|\|>\<gtr\><around*|\<\|\|\>|F<rsub|n>-F<rsub|m>|\<\|\|\>>|}>\<in\>\<cal-A\><rsub|>>.
+    As <math|\<cal-A\>> is a <math|\<sigma\>>-algebra it follows then that\ 
+
+    <\equation>
+      <label|eq 20.641.246>\<forall\>n,m\<in\>\<bbb-N\><text|
+      >A<rsub|n,m>\<in\>\<cal-A\>\<wedge\>A=<big|cup><rsub|<around*|(|i,j|)>\<in\>\<bbb-N\>*\<times\>\<bbb-N\>>A<rsub|i,j>\<in\>\<cal-A\>\<wedge\>X\\A\<in\>\<cal-A\>
+    </equation>
+
+    Now\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|x\<in\>X\\A>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>n,m\<in\>\<bbb-N\>
+      x\<nin\>A<rsub|n,m>=<around*|{|x\<in\>X\|<around*|\||F<rsub|n><around*|(|x|)>-F<rsub|m><around*|(|x|)>|\|>\<gtr\><around*|\<\|\|\>|F<rsub|n>-F<rsub|m>|\<\|\|\>><rsub|\<infty\>>|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>n,m\<in\>\<bbb-N\><text|
+      \|><around*|\||F<rsub|n><around*|(|x|)>-F<rsub|m><around*|(|x|)>|\|>\<leqslant\><around*|\<\|\|\>|F<rsub|n>-F<rsub|m>|\<\|\|\>><rsub|\<infty\>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|{|x\<in\>X\|\<forall\>n,m\<in\>\<bbb-N\>
+      <text|we have><around*|\||F<rsub|n><around*|(|x|)>-F<rsub|m><around*|(|x|)>|\|>\<leqslant\><around*|\<\|\|\>|F<rsub|n>-F<rsub|m>|\<\|\|\>><rsub|\<infty\>>|)>>>>>
+    </eqnarray*>
+
+    so that\ 
+
+    <\equation>
+      <label|eq 20.642.246>X\\A=<around*|{|x\<in\>X\|\<forall\>n,m\<in\>\<bbb-N\><text|
+      we have ><around*|\||F<rsub|n><around*|(|x|)>-F<rsub|m><around*|(|x|)>|\|>\<leqslant\><around*|\<\|\|\>|F<rsub|n>-F<rsub|m>|\<\|\|\>><rsub|\<infty\>>|)>
+    </equation>
+
+    Let <math|x\<in\>X\\A> and take <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+    then by [eq: <reference|eq 20.638.246>] there exist a
+    <math|N<rsub|\<varepsilon\>>\<in\>\<bbb-N\>> such that
+    <math|\<forall\>n,m\<in\><around*|{|N<rsub|\<varepsilon\>>,\<ldots\>,\<infty\>|}>>
+    we have <math|<around*|\||F<rsub|n><around*|(|x|)>-F<rsub|m><around*|(|x|)>|\|>\<leqslant\><around*|\<\|\|\>|F<rsub|n>-F<rsub|m>|\<\|\|\>><rsub|\<infty\>>\<less\>\<varepsilon\>>
+    which proves that\ 
+
+    <\equation*>
+      \<forall\>x\<in\>X\\A<text| ><around*|{|F<rsub|n><around*|(|x|)>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>\<bbb-K\><text|
+      is a Cauchy sequence>
+    </equation*>
+
+    As <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>> is complete
+    [see examples: <reference|complete set of real numbers>,
+    <reference|complete the complex numbers are complete>] it follows that\ 
+
+    <\equation>
+      <label|eq 20.643.246>\<forall\>x\<in\>X\\A<text|
+      ><below|lim|i\<rightarrow\>\<infty\>>F<rsub|i><around*|(|x|)><text|
+      exist >
+    </equation>
+
+    Define\ 
+
+    <\equation>
+      <label|eq 20.644.246>F:X\<rightarrow\>\<bbb-K\><text| by
+      >F<around*|(|x|)>=<choice|<tformat|<table|<row|<cell|<below|lim|i\<rightarrow\>\<infty\>>F<rsub|i><around*|(|x|)><text|
+      if >x\<in\>X\\A>>|<row|<cell|0<text| if >x\<in\>A>>>>>
+    </equation>
+
+    As <math|\<forall\>i\<in\>\<bbb-N\>> <math|F<rsub|i>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+    it follows that <math|F<rsub|i>\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-K\>|]>>,
+    hence using [theorems: <reference|measurable function charasteristic
+    product>, <reference|complex measurable function properties>] it follows
+    that <math|<around*|{|\<cal-X\><rsub|X\\A>\<cdot\>F<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-K\>|]>>
+    hence\ 
+
+    <\equation>
+      <label|eq 20.645.246><around*|{|\<cal-X\><rsub|X\\A>\<cdot\>F<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-K\>|]>
+    </equation>
+
+    Let <math|x\<in\>X> then we either:\ 
+
+    <\description>
+      <item*|<math|x\<in\>A>>Then <math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|\<cal-X\><rsub|X\\A>\<cdot\>f<rsub|i>|)><around*|(|x|)>=<below|lim|i\<rightarrow\>\<infty\>>0=0=F<around*|(|x|)>>
+
+      <item*|<math|x\<in\>X\\A>>Then <math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|\<cal-X\><rsub|X\\A>\<cdot\>f<rsub|i>|)><around*|(|x|)>=<below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><around*|(|x|)>=F<around*|(|x|)>>
+    </description>
+
+    hence <math|\<forall\>x\<in\>X> we have that
+    <math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|\<cal-X\><rsub|X\\A>\<cdot\>f|)><around*|(|x|)>>
+    exist and <math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|\<cal-X\><rsub|X\\A>\<cdot\>f|)><around*|(|x|)>=F<around*|(|x|)>>.
+    Using then [theorems: <reference|measurable function sup inf limit>,
+    <reference|complex measurable function properties>] together with [eq:
+    <reference|eq 20.645.246>] proves that\ 
+
+    <\equation>
+      <label|eq 20.646.246>F\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-K\>|]>
+    </equation>
+
+    Let <math|x\<in\>X\\A> and take <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>.
+    Let <math|n\<in\><around*|{|N<rsub|<frac|\<varepsilon\>|2>>,\<ldots\>\<infty\>|}>>
+    [see eq: <reference|eq 20.638.246> for the definition of
+    <math|N<rsub|<frac|\<varepsilon\>|2>>>] then by [eq: <reference|eq
+    20.644.246>] there exist a <math|N<rsub|x>\<in\>\<bbb-N\>> such that
+    <math|\<forall\>m\<in\><around*|[|N<rsub|x>,\<ldots\>,\<infty\>|]>> we
+    have <math|<around*|\||F<around*|(|x|)>-F<rsub|m><around*|(|x|)>|\|>\<less\><frac|\<varepsilon\>|2>>.
+    Take <math|N=max<around*|(|N<rsub|<frac|\<varepsilon\>|2>>,N<rsub|x>|)>>
+    then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\||F<around*|(|x|)>-F<rsub|n><around*|(|x|)>|\|>>|<cell|=>|<cell|<around*|\||F<around*|(|x|)>-F<rsub|N><around*|(|x|)>+F<rsub|N><around*|(|x|)>-F<rsub|n><around*|(|x|)>|\|>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\||F<around*|(|x|)>-F<rsub|N><around*|(|x|)>|\|>+<around*|\||F<rsub|N><around*|(|x|)>-F<rsub|n><around*|(|x|)>|\|>>>|<row|<cell|>|<cell|\<less\>>|<cell|<frac|\<varepsilon\>|2>+<around*|\||F<rsub|N><around*|(|x|)>-F<rsub|n><around*|(|x|)>|\|>>>|<row|<cell|>|<cell|<below|\<less\>|<text|[eq:
+      <reference|eq 20.638.246>]>>>|<cell|<frac|\<varepsilon\>|2>+<frac|\<varepsilon\>|2>>>>>
+    </eqnarray*>
+
+    which proves if we take <math|M<rsub|\<varepsilon\>>=N<rsub|<frac|\<varepsilon\>|2>>>
+    that\ 
+
+    <\equation>
+      <label|eq 20.647.246>\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text|
+      >\<exists\>M<rsub|\<varepsilon\>>\<in\>\<bbb-N\><text| such that
+      >\<forall\>n\<in\><around*|{|M<rsub|\<varepsilon\>>,\<ldots\>,\<infty\>|}><text|
+      we have >\<forall\>x\<in\>X\\A<text| that
+      ><around*|\||F<around*|(|x|)>-F<rsub|n><around*|(|x|)>|\|>\<less\>\<varepsilon\>
+    </equation>
+
+    As <math|1\<in\>\<bbb-R\><rsup|+>> we have by the above that
+    <math|\<exists\>M<rsub|1>\<in\>\<bbb-N\>> such that
+    <math|\<forall\>x\<in\>X\\A> we have <math|<around*|\||F<around*|(|x|)>-F<rsub|M<rsub|1>><around*|(|x|)>|\|>\<less\>1>.
+    As <math|F<rsub|M<rsub|1>>\<in\>\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+    it follows from [definition: <reference|LP spaces (@@)>] that there exist
+    a <math|M\<in\><around*|[|0,\<infty\>|[>> such that
+    <math|\<forall\>x\<in\>X> <math|<around*|\||F<rsub|M<rsub|1>><around*|(|x|)>|\|>\<leqslant\>M>.
+    Let <math|x\<in\>X> then we have either:\ 
+
+    <\description>
+      <item*|<math|x\<in\>X\\A>>Then <math|<around*|\||F<around*|(|x|)>|\|>=<around*|\||F<around*|(|x|)>-F<rsub|M<rsub|1>><around*|(|x|)>+F<rsub|M<rsub|1>><around*|(|x|)>|\|>\<leqslant\><around*|\||F<around*|(|x|)>-F<rsub|M<rsub|1>><around*|(|x|)>|\|>+<around*|\||F<rsub|M<rsub|1>><around*|(|x|)>|\|>\<less\>1+M.>
+
+      <item*|<math|x\<in\>A>>Then <math|<around*|\||F<around*|(|x|)>|\|>=0\<leqslant\>1+M>
+    </description>
+
+    Hence <math|F> is bounded so that by [definition: <reference|LP spaces
+    (@@)>] and [eq: <reference|eq 20.646.246>] it follows that
+
+    <\equation>
+      <label|eq 20.648\<point\>246>F\<in\>\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]><text|
+      so that >f=<around*|[|F|]><rsub|\<infty\>>\<in\>L<rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>
+    </equation>
+
+    Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. If
+    <math|n\<in\><around*|{|M<rsub|\<varepsilon\>/2>,\<ldots\>,\<infty\>|}>>
+    then <math|<around*|{|x\<in\>X\|<around*|\||F<around*|(|x|)>-F<rsub|n><around*|(|x|)>|\|>\<gtr\><frac|\<varepsilon\>|2>|}>\<subseteq\>A>
+    [for if <math|x\<in\>X\\A> we have by [eq: <reference|eq 20.647.246>]
+    that <math|<around*|\||F<around*|(|x|)>-F<rsub|n><around*|(|x|)>|\|>\<less\><frac|\<varepsilon\>|\<varepsilon\>>>.
+    As <math|A> is locally <math|\<mu\>>-null [see eq: <reference|eq
+    20.640.246>] it follows from [theorem: <reference|LP spaces locally
+    m-null set properties>] that <math|<around*|{|x\<in\>X\|<around*|\||F<around*|(|x|)>-F<rsub|n><around*|(|x|)>|\|>\<gtr\><frac|\<varepsilon\>|2>|}>>
+    is locally <math|\<mu\>>-null. So <math|<frac|\<varepsilon\>|2>\<in\><around*|{|M\<in\><around*|[|0,\<infty\>|[>\|<around*|{|F<around*|(|x|)>-F<rsub|n><around*|(|x|)>\<gtr\>M|}><text|
+    is locally >\<mu\><text|-null>|}>>. Hence\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|F-F<rsub|n>|\<\|\|\>><rsub|\<infty\>>=inf<around*|(|<around*|{|M\<in\><around*|[|0,\<infty\>|[>\|<around*|{|F<around*|(|x|)>-F<rsub|n><around*|(|x|)>\<gtr\>M|}><text|
+      is locally >\<mu\><text|-null>|}>|)>\<leqslant\><frac|\<varepsilon\>|2>\<less\>\<varepsilon\>
+    </equation*>
+
+    Hence we have proved that\ 
+
+    <\equation>
+      <label|eq 20.649.246>\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text|
+      there exist a <math|N\<in\>\<bbb-N\><text| such that
+      >\<forall\>n\<in\><around*|{|N,\<ldots\>,\<infty\>|}>> we have
+      ><around*|\<\|\|\>|F-F<rsub|n>|\<\|\|\>><rsub|\<infty\>>\<less\>\<varepsilon\>
+    </equation>
+
+    Let <math|n\<in\>\<bbb-N\>> then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|f-f<rsub|n>|\<\|\|\>><rsub|L\<infty\>>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.648\<point\>246>]>>>|<cell|<around*|\<\|\|\>|<around*|[|F|]><rsub|\<infty\>>-<around*|[|F<rsub|n>|]><rsub|\<infty\>>|\<\|\|\>><rsub|L\<infty\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|[|F-F<rsub|n>|]><rsub|\<infty\>>|\<\|\|\>><rsub|L\<infty\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|F=F<rsub|n>|\<\|\|\>><rsub|\<infty\>>>>>>
+    </eqnarray*>
+
+    which combinded with [eq: <reference|eq 20.649.246>] proves that\ 
+
+    <\equation*>
+      \<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text|
+      >\<exists\>N\<in\>\<bbb-N\><text| we have
+      >\<forall\>n\<in\><around*|{|N,\<ldots\>,\<infty\>|}><text| we have
+      ><around*|\<\|\|\>|f-f<rsub|n>|\<\|\|\>><rsub|L\<infty\>>\<less\>\<varepsilon\>
+    </equation*>
+
+    which proves that\ 
+
+    <\equation*>
+      <below|lim|i\<rightarrow\>\<infty\>>f<rsub|i><text| converges in
+      ><around*|\<langle\>|L<rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>,<around*|\<\|\|\>||\<\|\|\>><rsub|L\<infty\>>|\<rangle\>>
+    </equation*>
+
+    so that\ 
+
+    <\equation*>
+      <around*|\<langle\>|L<rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>,<around*|\<\|\|\>||\<\|\|\>><rsub|L\<infty\>>|\<rangle\>><text|
+      is complete>
+    </equation*>
   </proof>
 
-  \;
+  <\lemma>
+    <label|lemma 20.482.247>Let <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>>
+    be a measure space, <math|p\<in\><around*|[|1,\<infty\>|[>> then
+    <math|<around*|\<langle\>|L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>,<around*|\<\|\|\>||\<\|\|\>><rsub|Lp>|\<rangle\>>>
+    is a Banach space.
+  </lemma>
+
+  <\proof>
+    Using [theorem: <reference|LP spaces normed space>] it follows that\ 
+
+    <\equation*>
+      <around*|\<langle\>|L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>,<around*|\<\|\|\>||\<\|\|\>><rsub|Lp>|\<rangle\>><text|
+      is a normed space>
+    </equation*>
+
+    So it remains to prove that <math|<around*|\<langle\>|L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>,<around*|\<\|\|\>||\<\|\|\>><rsub|Lp>|\<rangle\>>>
+    is a Banach space. We use [theorem: <reference|series absolute
+    convergence equals convergence only in Banach space>] stating that a
+    normed space is complete if and only if every absolute convergent series
+    is convergent. So let <math|<around*|{|f<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+    be a absolute convergent series. Then by definition\ 
+
+    <\equation>
+      <label|eq 20.651.247><big|sum><rsub|i=1><rsup|\<infty\>><around*|\<\|\|\>|f|\<\|\|\>><rsub|i><text|
+      converges to a element in ><around*|[|0,\<infty\>|[>\<subseteq\>\<bbb-R\>
+    </equation>
+
+    As <math|<around*|{|f<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+    there exist a <math|<around*|{|F<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+    such that\ 
+
+    <\equation>
+      <label|eq 20.652.247>\<forall\>f<rsub|i>=<around*|[|F<rsub|i>|]><rsub|p>
+    </equation>
+
+    As <math|<around*|{|F<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+    we have using [theorem: <reference|LP spaces absolute value>]
+    <math|<around*|{|<around*|\||F<rsub|i>|\|>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>,
+    hence using [theorem: <reference|LP spaces finite sum>] that\ 
+
+    <\equation>
+      <label|eq 20.653.247><around*|{|<big|sum><rsub|i=1><rsup|n><around*|\||F<rsub|i>|\|>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>
+    </equation>
+
+    So using the definition of <math|><math|\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+    [see definition: <reference|LP spaces>] we have that\ 
+
+    <\equation>
+      <label|eq 20.654\<point\>247>\<forall\>n\<in\>\<bbb-N\><text|
+      ><around*|(|<big|sum><rsub|i=1><rsup|n><around*|\||F<rsub|i>|\|>|)><rsup|p>=<around*|\||<big|sum><rsub|i=1><rsup|n><around*|\||F<rsub|i>|\|>|\|><rsup|p>\<subseteq\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>
+    </equation>
+
+    Using [theorem: <reference|measure integral extension>] we have that\ 
+
+    <\equation>
+      <label|eq 20.655.247>\<forall\>n\<in\>\<bbb-N\><text|
+      ><around*|(|<big|sum><rsub|i=1><rsup|n><around*|\||F<rsub|i>|\|>|)><rsup|p>\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>\<wedge\><big|int><around*|(|<big|sum><rsub|i=1><rsup|n><around*|\||F<rsub|i>|\|>|)><rsup|p>d\<mu\>=<big|int><rsup|+><around*|(|<big|sum><rsub|i=1><rsup|n><around*|\||F<rsub|i>|\|>|)><rsup|p>d\<mu\>\<less\>\<infty\>
+    </equation>
+
+    Given <math|n\<in\>\<bbb-N\>> and <math|x\<in\>X> we have that
+    <math|<big|sum><rsub|i=1><rsup|n><around*|\||F<rsub|i><around*|(|x|)>|\|>\<leqslant\><big|sum><rsub|i=1><rsup|n><around*|\||F<rsub|i><around*|(|x|)>|\|>+<around*|\||F<rsub|n+1><around*|(|x|)>|\|>=<big|sum><rsub|i=1><rsup|n+1><around*|\||F<rsub|i><around*|(|x|)>|\|>>
+    which together with the monotonity of the power function [see theorem:
+    <reference|exp generalized power properties>] proves that
+
+    <\equation>
+      <label|eq 20.656.247>\<forall\>x\<in\>X<text| we have
+      >\<forall\>n\<in\>\<bbb-N\><text| ><big|sum><rsub|i=1><rsup|n><around*|\||F<rsup|i><around*|(|x|)>|\|>\<leqslant\><big|sum><rsub|i=1><rsup|n+1><around*|\||F<rsub|i><around*|(|x|)>|\|>\<wedge\><around*|(|<big|sum><rsub|i=1><rsup|n><around*|\||F<rsup|i><around*|(|x|)>|\|>|)><rsup|p>\<leqslant\><around*|(|<big|sum><rsub|i=1><rsup|n+1><around*|\||F<rsup|i><around*|(|x|)>|\|>|)><rsup|p>
+    </equation>
+
+    Hence using [theorem: <reference|lemma 20.477.246>] it follows that
+    <math|g<around*|(|x|)>\<equallim\><rsub|def><around*|(|<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=1><rsup|n><around*|\||F<rsub|i><around*|(|x|)>|\|>|)><rsup|p>=<around*|(|<big|sum><rsub|i=1><rsup|\<infty\>><around*|\||F<rsub|i><around*|(|x|)>|\|>|)><rsup|p>>
+    is well defined and
+
+    <\equation>
+      <label|eq 20.656.246><label|eq 20.657.247>g<around*|(|x|)>=<around*|(|<big|sum><rsub|i=1><rsup|\<infty\>><around*|\||F<rsub|i><around*|(|x|)>|\|>|)><rsup|p>=<around*|(|<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=1><rsup|n><around*|\||F<rsub|i><around*|(|x|)>|\|>|)><rsup|p>\<equallim\><rsub|<text|[eq:
+      <reference|lemma 20.476.246>]>><below|lim|n\<rightarrow\>\<infty\>><around*|(|<big|sum><rsub|i=1><rsup|n><around*|\||F<rsub|i><around*|(|x|)>|\|>|)><rsup|p>
+    </equation>
+
+    Using the above together with [eq: <reference|eq 20.655.247>] allows us
+    to use [theorem: <reference|measurable function sup inf limit>] giving
+
+    <\equation>
+      <label|eq 20.658.247>g=<below|lim|n\<rightarrow\>\<infty\>><around*|(|<big|sum><rsup|n><rsub|i=1><around*|\||F<rsub|i>|\|>|)><rsup|p>\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+    </equation>
+
+    The conditions for the Monotone Convergence Theorem [see theorem:
+    <reference|Monotone Convergence Theorem (1)>] are now satisfied by [eq:
+    <reference|eq 20.655.247>, <reference|eq 20.656.247>, <reference|eq
+    20.658.247>], hence we have that\ 
+
+    <\equation>
+      <label|eq 20.659.247><below|lim|n\<rightarrow\>\<infty\>><big|int><rsup|+><around*|(|<big|sum><rsup|n><rsub|i=1><around*|\||F<rsub|i>|\|>|)><rsup|p>
+      d\<mu\> <text| exist and ><big|int><rsup|+>g
+      d\<mu\>=<below|lim|n\<rightarrow\>\<infty\>><big|int><rsup|+><around*|(|<big|sum><rsup|n><rsub|i=1><around*|\||F<rsub|i>|\|>|)><rsup|p>d\<mu\>
+    </equation>
+
+    Further, using the monotonicity of the integral [see theorem:
+    <reference|non negative integral scalar product, sum inequality>] on [eq:
+    <reference|eq 20.656.247>] we have\ 
+
+    <\equation>
+      <label|eq 20.660.247>\<forall\>n\<in\>\<bbb-N\>
+      <big|int><rsup|+><around*|(|<big|sum><rsub|i=1><rsup|n><around*|\||F<rsup|i>|\|>|)><rsup|p>d\<mu\>\<leqslant\><big|int><rsup|+><around*|(|<big|sum><rsub|i=1><rsup|n+1><around*|\||F<rsup|i>|\|>|)><rsup|p>d\<mu\>
+    </equation>
+
+    so that by [theorem: <reference|extended limit increasing / decreasing
+    sequence exist>]\ 
+
+    <\equation>
+      <label|eq 20.661.247><below|lim|n\<rightarrow\>\<infty\>><big|int><rsup|+><around*|(|<big|sum><rsup|n><rsub|i=1><around*|\||F<rsub|i>|\|>|)><rsup|p>d\<mu\>=sup<around*|(|<around*|{|<around*|(|<big|sum><rsup|n><rsub|i=1><around*|\||F<rsub|i>|\|>|)><rsup|p>\|n\<in\>\<bbb-N\>|}>|)>
+    </equation>
+
+    Next\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<big|int><rsup|+><around*|(|<big|sum><rsub|i=1><rsup|n><around*|\||F<rsub|i>|\|>|)><rsup|p>d\<mu\>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.655.247>]>>>|<cell|<big|int><around*|(|<big|sum><rsub|i=1><rsup|n><around*|\||F<rsup|i>|\|>|)><rsup|p>d\<mu\>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|\<\|\|\>|<big|sum><rsub|i=1><rsup|n><around*|\||F<rsub|i>|\|>|\<\|\|\>><rsub|p>|)><rsup|p>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[theorem:
+      <reference|exp generalized power properties>],><around*|\<\|\|\>||\<\|\|\>><rsub|p>
+      <text|is a norm>>>|<cell|<around*|(|<big|sum><rsup|n><rsub|i=1><around*|\<\|\|\>|<around*|\||F<rsub|i>|\|>|\<\|\|\>><rsub|p>|)><rsup|p>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+      <reference|lemma 20.479.246>]>>>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|n><around*|\<\|\|\>|F<rsub|i>|\<\|\|\>><rsub|p>|)><rsup|p>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[theorem:
+      <reference|exp generalized power properties>]>>>|<cell|<around*|(|sup<around*|(|<around*|{|<big|sum><rsub|i=1><rsup|n><around*|\<\|\|\>|F<rsub|i>|\<\|\|\>><rsub|p>\|n\<in\>\<bbb-N\>|}>|)>|)><rsup|p>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|extended infinite sum>]>>>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|\<infty\>><around*|\<\|\|\>|F<rsub|i>|\<\|\|\>><rsub|p>|)><rsup|p>>>>>
+    </eqnarray*>
+
+    hence
+
+    <\equation>
+      <label|eq 20.662.247><big|int><rsup|+><around*|(|<big|sum><rsub|i=1><rsup|n><around*|\||F<rsub|i>|\|>|)><rsup|p>d\<mu\>\<leqslant\><around*|(|<big|sum><rsub|i=1><rsup|\<infty\>><around*|\<\|\|\>|F<rsub|i>|\<\|\|\>><rsub|p>|)><rsup|p>
+    </equation>
+
+    Next
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<big|int><rsup|+>g
+      d\<mu\>>|<cell|\<equallim\><rsub|<text|[eq: <reference|eq
+      20.659.247>]>>>|<cell|<below|lim|n\<rightarrow\>\<infty\>><big|int><rsup|+><around*|(|<big|sum><rsup|n><rsub|i=1><around*|\||F<rsub|i>|\|>|)><rsup|p>d\<mu\>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.661.247>]>>>|<cell|sup<around*|(|<around*|{|<big|int><rsup|+><around*|(|<big|sum><rsup|n><rsub|i=1><around*|\||F<rsub|i>|\|>|)><rsup|p>\|n\<in\>\<bbb-N\>|}>|)>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[eq:
+      <reference|eq 20.662.247>]>>>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|\<infty\>><around*|\<\|\|\>|F<rsub|i>|\<\|\|\>><rsub|p>|)><rsup|p>>>|<row|<cell|>|<cell|<below|\<less\>|<text|[eq:
+      <reference|eq 20.651.247>]>>>|<cell|\<infty\>>>>>
+    </eqnarray*>
+
+    which, as also <math|g\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>.<wide|\<bbb-R\>|\<wide-bar\>>|]>>,
+    proves by [theorem: <reference|measure integral extension>] that\ 
+
+    <\equation>
+      <label|eq 20.663.247>g\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+    </equation>
+
+    Using [theorem: <reference|measure integral properties (2)>] it follows
+    from the above that\ 
+
+    <\equation>
+      <label|eq 20.664.247>N=<around*|{|x\<in\>X\|<around*|\||g<around*|(|x|)>|\|>=\<infty\>|}>\<in\>\<cal-A\><infix-and>\<mu\><around*|(|N|)>=\<mu\><around*|(|<around*|{|x\<in\>X\|<around*|\||g<around*|(|x|)>|\|>=\<infty\>|}>|)>=0
+    </equation>
+
+    As <math|g\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    [see eq: <reference|eq 20.658.247>] it follows from [theorem:
+    <reference|measurable function charasteristic product>] that
+    <math|\<cal-X\><rsub|X\\N>\<cdot\>g\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>,
+    from the above we have by [theorem: <reference|almost everywhere and
+    characteristic> that <math|\<cal-X\><rsub|X\\N>\<cdot\>g=g>
+    <math|\<mu\>>-a.e. Finally, as by [eq: <reference|eq 20.663.247>]
+    <math|g\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>,
+    it follows from [theorem: <reference|measure integral and a.e.
+    equalitiy>] that\ 
+
+    <\equation*>
+      \<cal-X\><rsub|X\\N>\<cdot\>g\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+    </equation*>
+
+    Further if <math|x\<in\>X> then <math|<around*|(|\<cal-X\><rsub|X\\N>\<cdot\>g|)><around*|(|x|)>=<choice|<tformat|<table|<row|<cell|g<around*|(|x|)>\<in\>\<bbb-R\><text|
+    if >x\<in\>X\\N>>|<row|<cell|0\<in\>\<bbb-R\><text| if
+    >x\<in\>N>>>>>\<in\>\<bbb-R\>> so that\ 
+
+    <\equation>
+      <label|eq 20.665.247>\<cal-X\><rsub|X\\N>\<cdot\>g\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>=<around*|{|f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>\|f<around*|(|X|)>\<subseteq\>\<bbb-R\>|}>
+    </equation>
+
+    Let <math|x\<in\>X\\N> then <math|<around*|(|<big|sum><rsub|i=1><rsup|\<infty\>><around*|\||F<rsub|i><around*|(|x|)>|\|>|)><rsup|p>\<equallim\><rsub|<text|[eq:
+    <reference|eq 20.657.247>]>>g<around*|(|x|)><below|\<less\>|<text|[eq:
+    <reference|eq 20.664.247>]>>\<infty\>>, hence
+    <math|<big|sum><rsub|i=1><rsup|\<infty\>><around*|\||F<rsub|i><around*|(|x|)>|\|>\<less\>\<infty\>>
+    [otherwise we have <math|<around*|(|<big|sum><rsub|i=1><rsup|\<infty\>><around*|\||F<rsub|i><around*|(|x|)>|\|>|)><rsup|p>=\<infty\><rsup|p>\<equallim\><rsub|def>\<infty\>>].
+    To summarize we have proved that
+
+    <\equation*>
+      \<forall\>x\<in\>X\\N<text| >we have
+      <big|sum><rsub|i=1><rsup|\<infty\>><around*|\||F<rsub|i><around*|(|x|)>|\|>\<less\>\<infty\><rsup|>
+    </equation*>
+
+    Using Dominant Convergence [see theorem: <reference|series absolute
+    dominant convergence>] on the above for the Banach space
+    <math|<around*|\<langle\>|\<bbb-C\>,\<\|\|\>|\<rangle\>>> proves that\ 
+
+    <\equation>
+      <label|eq 20.666.247>\<forall\>x\<in\>X\\N<text|
+      ><big|sum><rsub|i=1><rsup|\<infty\>>F<rsub|i><around*|(|x|)>=<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=1><rsup|n>F<rsub|i><around*|(|x|)>\<in\>\<bbb-K\><text|
+      exist>
+    </equation>
+
+    Define now\ 
+
+    <\equation>
+      <label|eq 20.667.247>F:X\<rightarrow\>\<bbb-K\><text| by
+      >F<around*|(|x|)>=<choice|<tformat|<table|<row|<cell|<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=1><rsup|n>F<rsub|i><around*|(|x|)><text|
+      if >x\<in\>X\\N>>|<row|<cell|0<text| if >x\<in\>N>>>>>
+    </equation>
+
+    As <math|<around*|{|F<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>\<Rightarrowlim\><rsub|<text|[definition:
+    <reference|LP spaces>]>><around*|{|F<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-K\>|]>>,
+    further, using [theorems: <reference|measurable function charasteristic
+    product>,<reference|complex measurable function properties>], it follows
+    that <math|<around*|{|\<cal-X\><rsub|X\\N>\<cdot\>F<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-K\>|]>>.
+    Hence using [theorems: <reference|measurable function sum (finite
+    1)>,<reference|complex measurable function properties>] it follows that\ 
+
+    <\equation>
+      <label|eq 20.668.247><around*|{|<big|sum><rsub|i=1><rsup|n>F<rsub|i>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-K\>|]><text|
+      and ><around*|{|<big|sum><rsub|i=1><rsup|n><around*|(|\<cal-X\><rsub|X\\A>\<cdot\>F<rsub|i>|)>|}>\<subseteq\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-K\>|]>
+    </equation>
+
+    If <math|x\<in\>X> then\ 
+
+    <\equation>
+      <label|eq 20.669.247><below|lim|n\<rightarrow\>\<infty\>><around*|(|<big|sum><rsub|i=1><rsup|n><around*|(|\<cal-X\><rsub|X\\N>\<cdot\>F<rsub|i>|)><around*|(|x|)>|)>=<choice|<tformat|<table|<row|<cell|<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=1><rsup|n>F<rsub|i><around*|(|x|)><text|
+      if >x\<in\>X\\N>>|<row|<cell|<below|lim|i\<rightarrow\>> 0<text| if
+      >x\<in\>N>>>>>=F<around*|(|x|)>
+    </equation>
+
+    So using [theorems: <reference|measurable function sup inf limit>,
+    <reference|complex measurable function properties>] it follows that\ 
+
+    <\equation>
+      <label|eq 20.670.247>F\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-K\>|]><text|
+      and by [lemma: <reference|lemma 20.447.245>] that
+      <math|<around*|\||F|\|><rsup|p>\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-K\>|]>>>
+    </equation>
+
+    Let <math|n\<in\>\<bbb-N\>> then for <math|x\<in\>X> we have either:
+
+    <\description>
+      <item*|<math|x\<in\>X\\N>>Then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\||<big|sum><rsub|i=1><rsup|n><around*|(|\<cal-X\><rsub|X\\N>\<cdot\>F<rsub|i>|)>|\|><rsup|p>>|<cell|=>|<cell|<around*|\||<big|sum><rsub|i=1><rsup|n>F<rsub|i><around*|(|x|)>|\|><rsup|p>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[theorem:
+        <reference|exp generalized power properties>]>>>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|n><around*|\||F<rsub|i><around*|(|x|)>|\|>|)><rsup|p>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[theorem:
+        <reference|exp generalized power properties>]>>>|<cell|<around*|(|sup<around*|(|<around*|{|<big|sum><rsub|i=1><rsup|n><around*|\||F<rsub|i><around*|(|x|)>|\|>\|n\<in\>\<bbb-N\>|}>|)>|)><rsup|p>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|extended infinite sum>]>>>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|\<infty\>><around*|\||F<rsub|i><around*|(|x|)>|\|>|)><rsup|p>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 20.657.247>]>>>|<cell|g<around*|(|x|)>>>>>
+      </eqnarray*>
+
+      Next
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\||F<around*|(|x|)>|\|><rsup|p>>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 20.669.247>]>>>|<cell|<around*|\||<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=1><rsup|n>F<rsub|i><around*|(|x|)>|\|><rsup|p>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+        <reference|lemma 20.476.246>]>>>|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|\||<big|sum><rsub|i=1><rsup|n>F<rsub|i><around*|(|x|)>|\|><rsup|p>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[theorem:
+        <reference|limit and lower or upper
+        bound>]>>>|<cell|g<around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<cal-X\><rsub|X\\N>\<cdot\>g|)><around*|(|x|)>>>>>
+      </eqnarray*>
+
+      <item*|<math|x\<in\>N>>Then <math|<around*|\||F<around*|(|x|)>|\|><rsup|p>\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.667.247>]>>0\<leqslant\><around*|(|\<cal-X\><rsub|X\\N>\<cdot\>g|)><around*|(|x|)>>
+    </description>
+
+    So we have that
+
+    <\equation>
+      <label|eq 20.671.247>\<forall\>x\<in\>X<text| we have
+      ><around*|\||F<around*|(|x|)>|\|><rsup|p>\<leqslant\><around*|(|\<cal-X\><rsub|X\\N>\<cdot\>g|)><around*|(|x|)>
+    </equation>
+
+    As <math|<around*|(|\<cal-X\><rsub|X\\N>\<cdot\>g|)><around*|(|x|)>\<in\>\<cal-L\><rsup|><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>>
+    [see eq: <reference|eq 20.665.247>], <math|<around*|\||F<around*|(|x|)>|\|><rsup|p>\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-K\>|]>>
+    [see eq: <reference|eq 20.670.247>] it follows from the above and
+    [theorem: <reference|measure integral domination theorem>[ that
+
+    <\equation>
+      <label|eq 20.672.247><around*|\||F<around*|(|x|)>|\|><rsup|p>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+    </equation>
+
+    which as <math|F\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-K\>|]>> [see
+    eq: <reference|eq 20.670.247>] proves that\ 
+
+    <\equation>
+      <label|eq 20.673.247>F\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>
+    </equation>
+
+    Let <math|x\<in\>X\\N> then given <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+    we have, as <math|F<around*|(|x|)>\<equallim\><rsub|<text|[eq:
+    <reference|eq 20.667.247>]>><below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=1><rsup|n>F<rsub|i><around*|(|x|)>>
+    so that by [theorem: <reference|sequence convergence equivalences>]
+    <math|<below|lim|n\<rightarrow\>\<infty\>><around*|\||F<around*|(|x|)>-<big|sum><rsup|n><rsub|1>F<rsub|i><around*|(|x|)>|\|>=0>
+    which using [lemma: <reference|lemma 20.476.246>]
+    <math|<below|lim|n\<rightarrow\>\<infty\>><around*|\||F<around*|(|x|)>-<big|sum><rsup|n><rsub|1>F<rsub|i><around*|(|x|)>|\|><rsup|p>=0<rsup|p>\<equallim\><rsub|p\<neq\>1>0>.
+    As <math|\<mu\><around*|(|N|)>=0> it follows\ 
+
+    <\equation>
+      <label|eq 20.674.247><below|lim|n\<rightarrow\>\<infty\>><around*|\||F-<big|sum><rsub|i=1><rsup|n>F<rsub|i>|\|><rsup|p>=C<rsub|0><text|
+      >\<mu\><text|-a.e.>
+    </equation>
+
+    Further, as <math|F,<big|sum><rsub|i=1><rsup|n>F<rsub|i>\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-K\>|]>>
+    [see eqs: <reference|eq 20.668.247>, <reference|eq 20.670.247>] it
+    follows from [theorems: <reference|measurable function properties (1)>,
+    <reference|complex measurable function properties>] that
+    <math|<around*|{|F-<big|sum><rsub|i=1><rsup|n>F<rsub|i>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-K\>|]>>,
+    applying then [theorem: <reference|lemma 20.447.245>] \ gives\ 
+
+    <\equation>
+      <label|eq 20.675.247><around*|{|<around*|\||F-<big|sum><rsub|i=1><rsup|n>F<rsub|i>|\|><rsup|p>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,\<bbb-R\>|]>
+    </equation>
+
+    If <math|x\<in\>X\\N> then given <math|n\<in\>\<bbb-N\>> we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\||F<around*|(|x|)>-<big|sum><rsub|i=1><rsup|n>F<rsub|i><around*|(|x|)>|\|>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.667.247>]>>>|<cell|<around*|\||<big|sum><rsub|i=1><rsup|\<infty\>>F<rsub|i><around*|(|x|)>-<big|sum><rsub|i=1><rsup|n>F<rsub|i><around*|(|x|)>|\|>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|series partition series>]>>>|<cell|<around*|\||<big|sum><rsub|i=n+1><rsup|\<infty\>>F<rsub|i><around*|(|x|)>|\|>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[theorem:
+      <reference|series dominant convergence>]>>>|<cell|<big|sum><rsub|i=n+1><rsup|\<infty\>><around*|\||F<rsub|i><around*|(|x|)>|\|>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>><around*|\||F<rsub|i><around*|(|x|)>|\|>>>>>
+    </eqnarray*>
+
+    which using [theorem: <reference|exp generalized power properties>]
+    <math|<around*|\||F<around*|(|x|)>-<big|sum><rsub|i=1><rsup|n>F<rsub|i><around*|(|x|)>|\|><rsup|p>\<leqslant\><around*|(|<big|sum><rsub|i=1><rsup|\<infty\>><around*|\||F<rsub|i><around*|(|x|)>|\|>|)><rsup|p>\<equallim\><rsub|<text|[eq:
+    <reference|eq 20.657.247>]>>g<around*|(|x|)>>. As
+    <math|\<mu\><around*|(|N|)>=0> it follows that\ 
+
+    <\equation>
+      <label|eq 20.676.247>\<forall\>n\<in\>\<bbb-N\><text| we have
+      ><around*|\||F-<big|sum><rsub|i=1><rsup|n>F<rsub|i>|\|><rsup|p>\<leqslant\>g<text|
+      >\<mu\><text|-a.e.>
+    </equation>
+
+    So all the conditions for the Lebesgue Dominant Convergence Theorem [see
+    theorem: <reference|Lebesgue's Dominated Convergence Theorem>] are
+    satisfied [see eqs: <reference|eq 20.663.247>, <reference|eq 20.675.247>,
+    <reference|eq 20.674.247> and <reference|eq 20.676.247>], hence we have
+    that\ 
+
+    <\equation*>
+      <below|lim|n\<rightarrow\>\<infty\>><big|int><around*|\||F-<big|sum><rsub|I=1><rsup|n>F<rsub|i>|\|><rsup|p>d\<mu\>=<big|int><around*|(|<below|lim|n\<rightarrow\>\<infty\>><around*|\||F-<big|sum><rsub|i=1><rsup|n>F<rsub|i>|\|><rsup|p>|)>d\<mu\><below|=|<text|[eq:
+      <reference|eq 20.674.247>]>><big|int>C<rsub|0>d\<mu\>\<equallim\><rsub|<text|[example:
+      <reference|measure integral of zero function (1)>]>>0
+    </equation*>
+
+    proving
+
+    <\equation*>
+      <below|lim|n\<rightarrow\>\<infty\>><around*|(|<around*|\<\|\|\>|F-<big|sum><rsub|i=1><rsup|n>F<rsub|i>|\<\|\|\>><rsub|p>|)><rsup|p>=0
+    </equation*>
+
+    Using [lemma: <reference|lemma 20.476.246>] it follows then that
+
+    <\equation*>
+      <below|lim|n\<rightarrow\>\<infty\>><around*|(|<around*|(|<around*|\<\|\|\>|F-<big|sum><rsub|i=1><rsup|n>F<rsub|i>|\<\|\|\>><rsub|p>|)><rsup|p>|)><rsup|1/p><text|
+      exist and ><below|lim|n\<rightarrow\>\<infty\>><around*|(|<around*|(|<around*|\<\|\|\>|F-<big|sum><rsub|i=1><rsup|n>F<rsub|i>|\<\|\|\>><rsub|p>|)><rsup|p>|)><rsup|1/p>=0<rsup|1/p>=0
+    </equation*>
+
+    which proves that\ 
+
+    <\equation>
+      <label|eq 20.677.247><below|lim|n\<rightarrow\>\<infty\>><around*|\<\|\|\>|F-<big|sum><rsub|i=1><rsup|n>F<rsub|i>|\<\|\|\>><rsub|p>=0
+    </equation>
+
+    As <math|F\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+    [see <reference|eq 20.673.247>] we have
+    <math|<around*|[|F|]><rsub|p>\<in\>L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>.
+    Let <math|n\<in\>\<bbb-N\>> then we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|<around*|[|F|]><rsub|p>-<big|sum><rsub|i=1><rsup|n>f<rsub|i>|\<\|\|\>><rsub|Lp>>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|[|F|]><rsub|p>-<big|sum><rsub|i=1><rsup|n><around*|[|F<rsub|i>|]><rsub|p>|\<\|\|\>><rsub|Lp>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|[|F-<big|sum><rsub|i=1><rsup|n>F<rsub|i>|]><rsub|p>|\<\|\|\>><rsub|Lp>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|F-<big|sum><rsub|i=1><rsup|n>F<rsub|i>|\<\|\|\>><rsub|p>>>>>
+    </eqnarray*>
+
+    so that by [eq: <reference|eq 20.677.247>] we have that
+    \ <math|<below|lim|n\<rightarrow\>\<infty\>><around*|\<\|\|\>|<around*|[|F|]><rsub|p>-<big|sum><rsub|i=1><rsup|n>f<rsub|i>|\<\|\|\>><rsub|Lp>=0>.
+    Hence using [theorem: <reference|sequence convergence equivalences>] it
+    follows that\ 
+
+    <\equation*>
+      <big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|i><text| converges and
+      ><big|sum><rsub|i=1><rsup|n>f<rsub|i>=<around*|[|F|]><rsub|p>\<in\>L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>
+    </equation*>
+
+    In other words we have proved that every absolute convergent series
+    converges which by [theorem: <reference|series absolute convergence
+    equals convergence only in Banach space>] proves that
+
+    <\equation*>
+      <around*|\<langle\>|L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>,<around*|\<\|\|\>||\<\|\|\>><rsub|p>|\<rangle\>><text|
+      is a Banach space>
+    </equation*>
+  </proof>
+
+  Summarizing the previous lemma's we have\ 
+
+  <\theorem>
+    <label|LP spaces are Banach spaces>Let
+    <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a measure
+    space and <math|p\<in\><around*|[|1,\<infty\>|]>> then
+    <math|<around*|\<langle\>|L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>,<around*|\<\|\|\>||\<\|\|\>><rsub|Lp>|\<rangle\>>>
+    is a Banach space.
+  </theorem>
+
+  <\proof>
+    This follows from [lemma: <reference|lemma 20.480.246>] and [lemma:
+    <reference|lemma 20.482.247>].
+  </proof>
+
+  <subsubsection|Density>
+
+  We show now that <math|\<cal-S\><around*|[|X,\<cal-A\>|]>> is dense in
+  <math|\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>> [see
+  theorem: <reference|normed dense set>]. First we prove this for the case
+  where <math|p\<in\><around*|[|1,\<infty\>|[>>.
+
+  <\theorem>
+    <label|LP space density (1)>Let <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>>
+    be a measure space, <math|p\<in\><around*|[|1,\<infty\>|[>> and
+    <math|f\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>>
+    then <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+> there exist a
+    g\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]><big|cap>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>>
+    such that <math|<around*|\<\|\|\>|f-g|\<\|\|\>><rsub|p>\<less\>\<varepsilon\>>.
+  </theorem>
+
+  <\proof>
+    If <math|f\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>>
+    then <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-R\>|]>> so that
+    using [theorem: <reference|measure integral f+ f- are measurable>] we
+    have <math|<rigid|f<rsup|+>,f<rsup|-1>\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,\<bbb-R\>|]>>>.
+    Using [theorem: <reference|non negative function as limit of simple
+    functions>] there exists <math|<around*|{|h<rsub|n>|}><rsub|n\<in\>\<bbb-N\>>,<around*|{|g<rsub|n>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>>
+    with\ 
+
+    <\equation>
+      <label|eq 20.678.247>\<forall\>x\<in\>X<text| we have
+      >\<forall\>n\<in\>\<bbb-N\><text| that
+      >h<rsub|n><around*|(|x|)>\<leqslant\>h<rsub|n+1><around*|(|x|)>\<wedge\>g<rsub|n><around*|(|x|)>\<leqslant\>g<rsub|n+1><around*|(|x|)>
+    </equation>
+
+    such that\ 
+
+    <\equation>
+      <label|eq 20.679.247>f<rsup|+>=<below|lim|n\<rightarrow\>\<infty\>>h<rsub|n><below|=|<text|[theorem:
+      <reference|extended limit increasing / decreasing sequence
+      exist>]>>sup<around*|(|<around*|{|h<rsub|n>\|n\<in\>\<bbb-N\>|}>|)>\<wedge\>f<rsup|->=<below|lim|n\<rightarrow\>\<infty\>>g<rsub|n><below|=|<text|[theorem:
+      <reference|extended limit increasing / decreasing sequence
+      exist>]>>sup<around*|(|<around*|{|g<rsub|n>\|n\<in\>\<bbb-N\>|}>|)>
+    </equation>
+
+    Define now\ 
+
+    <\equation*>
+      <around*|{|f<rsub|n>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>\<cal-S\><around*|[|X,\<cal-A\>|]><below|\<subseteq\>|<text|[definition:
+      <reference|simple function measurable definition
+      (1)>]>>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+      by >f<rsub|n>=h<rsub|n>-g<rsub|n><below|\<in\>|<text|[theorem:
+      <reference|simple function measurable sum and scalar product>]
+      >>\<cal-S\><around*|[|X,\<cal-A\>|]>
+    </equation*>
+
+    Given <math|x\<in\>X> we have <math|\<forall\>n\<in\>\<bbb-N\>>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\||f<rsub|n><around*|(|x|)>|\|>>|<cell|\<leqslant\>>|<cell|<around*|\||<around*|(|h<rsub|n>-g<rsub|n>|)><around*|(|x|)>|\|>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\||h<rsub|n><around*|(|x|)>|\|>+<around*|\||g<rsub|n><around*|(|x|)>|\|>>>|<row|<cell|>|<cell|\<equallim\><rsub|0\<leqslant\>h<rsub|n><around*|(|x|)>,g<rsub|n><around*|(|x|)>>>|<cell|h<rsub|n><around*|(|x|)>+g<rsub|n><around*|(|x|)>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[eq:
+      <reference|eq 20.679.247>]>>>|<cell|f<rsup|+><around*|(|x|)>+f<rsup|-><around*|(|x|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|measure integral f+ f- alternative>]>>>|<cell|<around*|\||f<around*|(|x|)>|\|>>>>>
+    </eqnarray*>
+
+    So we can use [lemma: <reference|lemma 20.448.245>] giving\ 
+
+    <\equation>
+      <label|eq 20.680.247.1>f<rsub|n>\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]><below|\<Rightarrow\>|f\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>>f<rsub|n>-f\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>
+    </equation>
+
+    Hence we have by definition
+
+    <\equation>
+      <label|eq 20.680.247>\<forall\>n\<in\>\<bbb-N\><text|
+      ><around*|\||f<rsub|n>-f|\|><rsup|p>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>\<Rightarrow\><around*|\||f<rsub|n>-f|\|><rsup|p>\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,\<bbb-R\>|]>
+    </equation>
+
+    Further we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\||f<rsub|n><around*|(|x|)>-f<around*|(|x|)>|\|>>|<cell|=>|<cell|<around*|\||h<rsub|n><around*|(|x|)>-g<rsub|n><around*|(|x|)>-f<around*|(|x|)>|\|>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|measure integral f+ f- alternative>]>>>|<cell|<around*|\||h<rsub|n><around*|(|x|)>-g<rsub|n><around*|(|x|)>-<around*|(|f<rsup|+><around*|(|x|)>-f<rsup|-><around*|(|x|)>|)>|\|>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\||h<rsub|n><around*|(|x|)>-f<rsup|+><around*|(|x|)>|\|>+<around*|\||g<rsub|n><around*|(|x|)>-f<rsup|-><around*|(|X|)>|\|>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+      <reference|eq 20.679.247>]>>>|<cell|f<rsup|+><around*|(|x|)>-h<rsub|n><around*|(|x|)>+f<rsup|-><around*|(|x|)>-g<rsub|n><around*|(|x|)>>>|<row|<cell|>|<cell|<below|\<leqslant\>|0\<leqslant\>h<rsub|n><around*|(|x|)>,g<rsub|n><around*|(|x|)>>>|<cell|f<rsup|+><around*|(|x|)>+f<rsup|-><around*|(|x|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|measure integral f+ f- alternative>]>>>|<cell|<around*|\||f<around*|(|x|)>|\|>>>>>
+    </eqnarray*>
+
+    which as the power function is monotone [see theorem: <reference|exp
+    generalized power properties>] that
+
+    <\equation>
+      <label|eq 20.681.247>\<forall\>x\<in\>X<text| we have
+      >\<forall\>n\<in\>\<bbb-N\><text| that
+      ><around*|\||<around*|(|f<rsub|n>-f|)><around*|(|x|)>|\|><rsup|p>\<leqslant\><around*|\||f<around*|(|x|)>|\|><rsup|p>
+    </equation>
+
+    Let <math|x\<in\>X> then as <math|f<around*|(|x|)>\<in\>\<bbb-R\>> we
+    have that <math|f<rsup|+><around*|(|x|)>,f<rsup|-><around*|(|x|)>\<in\>\<bbb-R\>>
+    so that by [eq: <reference|eq 20.679.247>] that
+    <math|<below|lim|n\<rightarrow\>\<infty\>>h<rsub|n><around*|(|x|)>,<below|lim|n\<rightarrow\>\<infty\>>g<rsub|n><around*|(|x|)>\<in\>\<bbb-R\>>
+    so that
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<below|lim|n\<rightarrow\>\<infty\>>f<rsub|n><around*|(|x|)>>|<cell|=>|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|h<rsub|n><around*|(|x|)>-g<rsub|n><around*|(|x|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorems:
+      <reference|limit a.x_n>,<reference|limit x_n+y_n>]>
+      >>|<cell|<below|lim|n\<rightarrow\>\<infty\>>h<rsub|n><around*|(|x|)>-<below|lim|n\<rightarrow\>\<infty\>>g<rsub|n><around*|(|x|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.679.247>]>>>|<cell|f<rsup|+><around*|(|x|)>-f<rsup|-><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|x|)>>>>>
+    </eqnarray*>
+
+    which, using [theorem: <reference|sequence convergence equivalences>]
+    proves that <math|<below|lim|n\<rightarrow\>\<infty\>><around*|\||f<rsub|n><around*|(|x|)>-f<around*|(|x|)>|\|>=0>.
+    Using [lemma: <reference|lemma 20.476.246>] we have\ 
+
+    <\equation>
+      <label|eq 20.682.247><below|lim|n\<rightarrow\>\<infty\>><around*|\||<around*|(|f<rsub|n>-f|)><around*|(|x|)>|\|><rsup|p>=0<text|
+      or ><below|lim|n\<rightarrow\>\<infty\>><around*|\||f<rsub|n>-f|\|><rsup|p>=C<rsub|0>
+    </equation>
+
+    As <math|f\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>>
+    we have by definition that\ 
+
+    <\equation>
+      <label|eq 20.683.247><around*|\||f|\|><rsup|p>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>
+    </equation>
+
+    The conditions for the Lebesgue Dominant Convergence Theorem [theorem:
+    <reference|Lebesgue's Dominated Convergence Theorem>] are now satisfied
+    by the fact that <math|C<rsub|0>\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-R\>|]>>
+    [see example: <reference|measurable function constant function>] and
+    [eqs: <reference|eq 20.680.247>, <reference|eq 20.681.247>, <reference|eq
+    20.683.247>]. Hence by applying this theorem we get\ 
+
+    <\equation*>
+      <below|lim|n\<rightarrow\>\<infty\>><big|int><around*|\||f<rsub|n>-f|\|><rsup|p>d\<mu\>=<big|int><around*|(|<below|lim|n\<rightarrow\>\<infty\>><around*|\||f<rsub|n>-f|\|><rsup|p>|)>d\<mu\>=<big|int>C<rsub|0>d\<mu\>=0
+    </equation*>
+
+    so that\ 
+
+    <\equation*>
+      <below|lim|n\<rightarrow\>\<infty\>><around*|(|<around*|\<\|\|\>|f<rsub|n>-f|\<\|\|\>><rsub|p>|)><rsup|p>=0
+    </equation*>
+
+    So given <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there exist a
+    <math|N\<in\>\<bbb-N\>> such that <math|<around*|(|<around*|\<\|\|\>|f<rsub|N>-f|\<\|\|\>><rsub|p>|)><rsup|p>\<less\>\<varepsilon\><rsup|p>>.
+    Hence using [theorem: <reference|exp generalized power properties>] we
+    have that <math|<around*|\<\|\|\>|f<rsub|N>-f|\<\|\|\>><rsub|p>=<around*|(|<around*|(|<around*|\<\|\|\>|f<rsub|N>-f|\<\|\|\>><rsub|p>|)><rsup|p>|)><rsup|1/p>\<less\><around*|(|\<varepsilon\><rsup|p>|)><rsup|1/p>=\<varepsilon\>>.
+    Further we have <math|f<rsub|N>\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]>>
+    and by [eq: <reference|eq 20.680.247.1>]
+    <math|f<rsub|N>\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>>.
+    Hence we have proved that\ 
+
+    <\equation*>
+      \<forall\>\<varepsilon\>\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]><text|
+      there exist a <math|g\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]><big|cap>\<cal-L\><rsup|p><around*|(|X,\<cal-A\>,\<mu\>,\<bbb-R\>|)><text|
+      such that ><around*|\<\|\|\>|g-f|\<\|\|\>><rsub|p>\<less\>\<varepsilon\>>>
+    </equation*>
+  </proof>
+
+  We have a similar theorem for <math|p=\<infty\>>, first we need a little
+  lemma.
+
+  <\lemma>
+    <label|lemma 20.491.248>Let <math|a,b\<in\>\<bbb-R\>> with
+    <math|a\<leqslant\>b> then given <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+    there exists a <math|n\<in\><around*|{|2,\<ldots\>,\<infty\>|}>> and
+    <math|<around*|{|a<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-R\>>
+    such that <math|<around*|[|a,b|]>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>><around*|[|a<rsub|i><rsub|>,a<rsub|i+1>|[>>
+    and <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n-1|}>>
+    <math|a<rsub|i>\<less\>a<rsub|i+1>> and
+    <math|a<rsub|i+1>-a<rsub|i>\<less\>\<varepsilon\>>.
+  </lemma>
+
+  <\proof>
+    Take <math|l=b-a>. As <math|\<varepsilon\>\<gtr\>0> we have by [theorem:
+    <reference|complex Archimedean property consequence (1)>] that there
+    exists a <math|N\<in\>\<bbb-N\><rsub|0>> such that
+    <math|<frac|2\<cdot\>l|\<varepsilon\>>\<less\>N> or
+    <math|l\<less\>N\<cdot\><frac|\<varepsilon\>|2>>. Define now
+    <math|n=N+1>, so that <math|n\<in\><around*|{|2,\<ldots\>,\<infty\>|}>>
+    and <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|a<rsub|i>=a+<around*|(|i-1|)>\<cdot\><frac|\<varepsilon\>|2>>. Then
+    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n-1|}>> we have
+
+    <\equation*>
+      a<rsub|i>=a+<around*|(|i-1|)>\<cdot\><frac|\<varepsilon\>|2>\<less\>a+i\<cdot\><frac|\<varepsilon\>|2>=a<rsub|i+1>
+    </equation*>
+
+    and
+
+    <\equation*>
+      a<rsub|i+1>-a<rsub|i>=a+i\<cdot\><frac|\<varepsilon\>|2>-a-<around*|(|i-1|)>\<cdot\><frac|\<varepsilon\>|2>=<frac|\<varepsilon\>|2>\<less\>\<varepsilon\>.
+    </equation*>
+
+    Further <math|a<rsub|1>=a> and <math|a<rsub|n>=a+<around*|(|n-1|)>\<cdot\><frac|\<varepsilon\>|2>=a+N\<cdot\><frac|\<varepsilon\>|2>\<gtr\>a+l=b>
+    so that\ 
+
+    <\equation*>
+      b\<less\>a<rsub|n>
+    </equation*>
+
+    Given <math|x\<in\><around*|[|a,b|]>> then
+    <math|a\<leqslant\>x\<leqslant\>b>, define
+    <math|I<rsub|x>=<around*|{|i\<in\><around*|{|1,\<ldots\>,n-1|}>\|a<rsub|i>\<leqslant\>x|}>>.
+    Then as <math|a<rsub|1>=a> we have that the finite set <math|I<rsub|x>>
+    is not empty so that <math|m=max<around*|(|I<rsub|x>|)>> is well defined.
+    We have now two cases to consider:
+
+    <\description>
+      <item*|<math|m=n-1>>Then <math|a<rsub|n-1>\<leqslant\>x> and as
+      <math|x\<leqslant\>b\<less\>a<rsub|n>> it follows that
+      <math|x\<in\><around*|[|a<rsub|n-1>,a<rsub|n>|[>=<around*|[|a<rsub|m>,a<rsub|m+1>|[>>
+
+      <item*|<math|m\<less\>n-1>>Then <math|a<rsub|m>\<leqslant\>x> and as
+      <math|m+1\<leqslant\>n-1> we must have <math|x\<less\>a<rsub|m+1>>
+      proving that <rigid|<math|x\<in\><around*|[|a<rsub|m>,a<rsub|m+1>|[>>>
+    </description>
+
+    So we conclude that <math|x\<in\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>><around*|[|a<rsub|i>,a<rsub|i+1>|[>>
+    or that\ 
+
+    <\equation*>
+      <around*|[|a,b|]>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>><around*|[|a<rsub|i>,a<rsub|i+1>|[>
+    </equation*>
+  </proof>
 
   \;
 
@@ -34898,32 +36137,36 @@
 
 <\references>
   <\collection>
-    <associate|Beppo Levi's Theorem|<tuple|20.423|?>>
+    <associate|Beppo Levi's Theorem|<tuple|20.429|?>>
     <associate|Constructing measures and sigma alegebra|<tuple|20.4.4|?>>
-    <associate|Fatou's lemma|<tuple|20.426|?>>
-    <associate|Holder's Inequality|<tuple|20.465|?>>
-    <associate|LP spaces|<tuple|20.446|?>>
-    <associate|LP spaces LP norm is zero|<tuple|20.459|?>>
-    <associate|LP spaces Minkowski's Inequality|<tuple|20.466|?>>
-    <associate|LP spaces absolute value|<tuple|20.457|?>>
-    <associate|LP spaces are pseudo normed|<tuple|20.468|?>>
-    <associate|LP spaces canonical example|<tuple|20.447|?>>
-    <associate|LP spaces empty set is locally m-null|<tuple|20.461|?>>
-    <associate|LP spaces locally m-null set properties|<tuple|20.462|?>>
-    <associate|LP spaces locally u-null sets|<tuple|20.460|?>>
-    <associate|LP spaces neutral element|<tuple|20.448|?>>
-    <associate|LP spaces normed space|<tuple|20.475|?>>
-    <associate|LP spaces null sets is a subspace|<tuple|20.473|?>>
-    <associate|LP spaces p-norm (1)|<tuple|20.458|?>>
-    <associate|LP spaces p-norm (2)|<tuple|20.463|?>>
-    <associate|LP spaces p-null set|<tuple|20.471|?>>
-    <associate|LP spaces p-null set (1)|<tuple|20.472|?>>
-    <associate|LP spaces sum scalar product|<tuple|20.452|?>>
-    <associate|LP spaces sum scalar product (1)|<tuple|20.455|?>>
-    <associate|LP vector space|<tuple|20.456|?>>
-    <associate|Lebesgue's Dominated Convergence Theorem|<tuple|20.429|?>>
-    <associate|Monotone Convergence Theorem (1)|<tuple|20.419|?>>
-    <associate|Monotone Convergence Theorem (2)|<tuple|20.422|?>>
+    <associate|Fatou's lemma|<tuple|20.432|?>>
+    <associate|Holder's Inequality|<tuple|20.471|?>>
+    <associate|LP space density (1)|<tuple|20.490|?>>
+    <associate|LP spaces|<tuple|20.452|?>>
+    <associate|LP spaces (@@)|<tuple|20.460|?>>
+    <associate|LP spaces LP norm is zero|<tuple|20.465|?>>
+    <associate|LP spaces Minkowski's Inequality|<tuple|20.472|?>>
+    <associate|LP spaces absolute value|<tuple|20.463|?>>
+    <associate|LP spaces are Banach spaces|<tuple|20.489|?>>
+    <associate|LP spaces are pseudo normed|<tuple|20.475|?>>
+    <associate|LP spaces canonical example|<tuple|20.453|?>>
+    <associate|LP spaces empty set is locally m-null|<tuple|20.467|?>>
+    <associate|LP spaces finite sum|<tuple|20.474|?>>
+    <associate|LP spaces locally m-null set properties|<tuple|20.468|?>>
+    <associate|LP spaces locally u-null sets|<tuple|20.466|?>>
+    <associate|LP spaces neutral element|<tuple|20.454|?>>
+    <associate|LP spaces normed space|<tuple|20.482|?>>
+    <associate|LP spaces null sets is a subspace|<tuple|20.480|?>>
+    <associate|LP spaces p-norm (1)|<tuple|20.464|?>>
+    <associate|LP spaces p-norm (2)|<tuple|20.469|?>>
+    <associate|LP spaces p-null set|<tuple|20.478|?>>
+    <associate|LP spaces p-null set (1)|<tuple|20.479|?>>
+    <associate|LP spaces sum scalar product|<tuple|20.458|?>>
+    <associate|LP spaces sum scalar product (1)|<tuple|20.461|?>>
+    <associate|LP vector space|<tuple|20.462|?>>
+    <associate|Lebesgue's Dominated Convergence Theorem|<tuple|20.435|?>>
+    <associate|Monotone Convergence Theorem (1)|<tuple|20.425|?>>
+    <associate|Monotone Convergence Theorem (2)|<tuple|20.428|?>>
     <associate|almost everywhere|<tuple|20.349|?>>
     <associate|almost everywhere and characteristic|<tuple|20.351|?>>
     <associate|almost everywhere f=g \<less\>=\<gtr\> f-g=0|<tuple|20.353|?>>
@@ -34970,6 +36213,7 @@
     <associate|auto-126|<tuple|<with|mode|<quote|math>|\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>|?>>
     <associate|auto-127|<tuple|<with|mode|<quote|math>|\<cal-N\><rsup|p>>|?>>
     <associate|auto-128|<tuple|20.6.6.2|?>>
+    <associate|auto-129|<tuple|20.6.6.3|?>>
     <associate|auto-13|<tuple|limit in <with|mode|<quote|math>|<wide|\<bbb-R\>|\<wide-bar\>>>|?>>
     <associate|auto-14|<tuple|<with|mode|<quote|math>|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>>|?>>
     <associate|auto-15|<tuple|20.1.5|?>>
@@ -35072,16 +36316,16 @@
     <associate|auto-98|<tuple|20.6|?>>
     <associate|auto-99|<tuple|20.6.1|?>>
     <associate|charasteristic function|<tuple|20.346|?>>
-    <associate|complex integral|<tuple|20.439|?>>
-    <associate|complex integral alternative|<tuple|20.443|?>>
-    <associate|complex integral of zero function|<tuple|20.440|?>>
-    <associate|complex integral property|<tuple|20.442|?>>
-    <associate|complex measurable function|<tuple|20.431|?>>
-    <associate|complex measurable function absolute value|<tuple|20.438|?>>
-    <associate|complex measurable function alternative|<tuple|20.435|?>>
-    <associate|complex measurable function condition|<tuple|20.433|?>>
-    <associate|complex measurable function properties|<tuple|20.437|?>>
-    <associate|complex measurable space|<tuple|20.430|?>>
+    <associate|complex integral|<tuple|20.445|?>>
+    <associate|complex integral alternative|<tuple|20.449|?>>
+    <associate|complex integral of zero function|<tuple|20.446|?>>
+    <associate|complex integral property|<tuple|20.448|?>>
+    <associate|complex measurable function|<tuple|20.437|?>>
+    <associate|complex measurable function absolute value|<tuple|20.444|?>>
+    <associate|complex measurable function alternative|<tuple|20.441|?>>
+    <associate|complex measurable function condition|<tuple|20.439|?>>
+    <associate|complex measurable function properties|<tuple|20.443|?>>
+    <associate|complex measurable space|<tuple|20.436|?>>
     <associate|corollary 20.111.218|<tuple|20.118|?>>
     <associate|eq 15.81.439|<tuple|20.393|?>>
     <associate|eq 18.10.021|<tuple|20.84|?>>
@@ -35695,7 +36939,55 @@
     <associate|eq 20.634.246|<tuple|20.634|?>>
     <associate|eq 20.635.246|<tuple|20.635|?>>
     <associate|eq 20.636.246|<tuple|20.636|?>>
-    <associate|eq 20.637.246|<tuple|20.637|?>>
+    <associate|eq 20.637.246|<tuple|20.638|?>>
+    <associate|eq 20.637.247|<tuple|20.637|?>>
+    <associate|eq 20.638.246|<tuple|20.639|?>>
+    <associate|eq 20.639.246|<tuple|20.640|?>>
+    <associate|eq 20.640.246|<tuple|20.641|?>>
+    <associate|eq 20.641.246|<tuple|20.642|?>>
+    <associate|eq 20.642.246|<tuple|20.643|?>>
+    <associate|eq 20.643.246|<tuple|20.644|?>>
+    <associate|eq 20.644.246|<tuple|20.645|?>>
+    <associate|eq 20.645.246|<tuple|20.646|?>>
+    <associate|eq 20.646.246|<tuple|20.647|?>>
+    <associate|eq 20.647.246|<tuple|20.648|?>>
+    <associate|eq 20.648\<point\>246|<tuple|20.649|?>>
+    <associate|eq 20.649.246|<tuple|20.650|?>>
+    <associate|eq 20.651.247|<tuple|20.651|?>>
+    <associate|eq 20.652.247|<tuple|20.652|?>>
+    <associate|eq 20.653.247|<tuple|20.653|?>>
+    <associate|eq 20.654\<point\>247|<tuple|20.654|?>>
+    <associate|eq 20.655.247|<tuple|20.655|?>>
+    <associate|eq 20.656.246|<tuple|20.657|?>>
+    <associate|eq 20.656.247|<tuple|20.656|?>>
+    <associate|eq 20.657.247|<tuple|20.657|?>>
+    <associate|eq 20.658.247|<tuple|20.658|?>>
+    <associate|eq 20.659.247|<tuple|20.659|?>>
+    <associate|eq 20.660.247|<tuple|20.660|?>>
+    <associate|eq 20.661.247|<tuple|20.661|?>>
+    <associate|eq 20.662.247|<tuple|20.662|?>>
+    <associate|eq 20.663.247|<tuple|20.663|?>>
+    <associate|eq 20.664.247|<tuple|20.664|?>>
+    <associate|eq 20.665.247|<tuple|20.665|?>>
+    <associate|eq 20.666.247|<tuple|20.666|?>>
+    <associate|eq 20.667.247|<tuple|20.667|?>>
+    <associate|eq 20.668.247|<tuple|20.668|?>>
+    <associate|eq 20.669.247|<tuple|20.669|?>>
+    <associate|eq 20.670.247|<tuple|20.670|?>>
+    <associate|eq 20.671.247|<tuple|20.671|?>>
+    <associate|eq 20.672.247|<tuple|20.672|?>>
+    <associate|eq 20.673.247|<tuple|20.673|?>>
+    <associate|eq 20.674.247|<tuple|20.674|?>>
+    <associate|eq 20.675.247|<tuple|20.675|?>>
+    <associate|eq 20.676.247|<tuple|20.676|?>>
+    <associate|eq 20.677.247|<tuple|20.677|?>>
+    <associate|eq 20.678.247|<tuple|20.678|?>>
+    <associate|eq 20.679.247|<tuple|20.679|?>>
+    <associate|eq 20.680.247|<tuple|20.681|?>>
+    <associate|eq 20.680.247.1|<tuple|20.680|?>>
+    <associate|eq 20.681.247|<tuple|20.682|?>>
+    <associate|eq 20.682.247|<tuple|20.683|?>>
+    <associate|eq 20.683.247|<tuple|20.684|?>>
     <associate|eq 20.7.155|<tuple|20.7|?>>
     <associate|eq 20.76.200|<tuple|20.97|?>>
     <associate|eq 20.77.200|<tuple|20.98|?>>
@@ -35846,15 +37138,18 @@
     <associate|lemma 20.287.224|<tuple|20.287|?>>
     <associate|lemma 20.298.246|<tuple|20.298|?>>
     <associate|lemma 20.309.227|<tuple|20.325|?>>
-    <associate|lemma 20.351.229|<tuple|20.368|?>>
-    <associate|lemma 20.377.232|<tuple|20.391|?>>
-    <associate|lemma 20.447.245|<tuple|20.449|?>>
-    <associate|lemma 20.448.245|<tuple|20.450|?>>
-    <associate|lemma 20.449.245|<tuple|20.451|?>>
-    <associate|lemma 20.463.246|<tuple|20.464|?>>
-    <associate|lemma 20.476.246|<tuple|20.476|?>>
-    <associate|lemma 20.477.246|<tuple|20.477|?>>
-    <associate|lemma 20.478.246|<tuple|20.478|?>>
+    <associate|lemma 20.351.229|<tuple|20.374|?>>
+    <associate|lemma 20.377.232|<tuple|20.397|?>>
+    <associate|lemma 20.447.245|<tuple|20.455|?>>
+    <associate|lemma 20.448.245|<tuple|20.456|?>>
+    <associate|lemma 20.449.245|<tuple|20.457|?>>
+    <associate|lemma 20.463.246|<tuple|20.470|?>>
+    <associate|lemma 20.476.246|<tuple|20.483|?>>
+    <associate|lemma 20.477.246|<tuple|20.484|?>>
+    <associate|lemma 20.479.246|<tuple|20.485|?>>
+    <associate|lemma 20.480.246|<tuple|20.487|?>>
+    <associate|lemma 20.482.247|<tuple|20.488|?>>
+    <associate|lemma 20.491.248|<tuple|20.491|?>>
     <associate|lemma 20.78.156|<tuple|20.85|?>>
     <associate|lemma 20.80.156|<tuple|20.87|?>>
     <associate|lemma 20.90.156|<tuple|20.101|?>>
@@ -35969,28 +37264,28 @@
     <associate|measure generated sigma algebra on R|<tuple|20.261|?>>
     <associate|measure half open intervals in R^n|<tuple|20.168|?>>
     <associate|measure halfo open spaces|<tuple|20.182|?>>
-    <associate|measure integral|<tuple|20.399|?>>
-    <associate|measure integral (1)|<tuple|20.404|?>>
-    <associate|measure integral alternative|<tuple|20.410|?>>
-    <associate|measure integral alternative (1)|<tuple|20.418|?>>
-    <associate|measure integral and a.e. equalitiy|<tuple|20.411|?>>
-    <associate|measure integral difference|<tuple|20.408|?>>
-    <associate|measure integral domination theorem|<tuple|20.412|?>>
-    <associate|measure integral extension|<tuple|20.403|?>>
-    <associate|measure integral f+ f-|<tuple|20.394|?>>
-    <associate|measure integral f+ f- alternative|<tuple|20.396|?>>
-    <associate|measure integral f+ f- are measurable|<tuple|20.397|?>>
-    <associate|measure integral f+ f- properties|<tuple|20.398|?>>
-    <associate|measure integral measure construction|<tuple|20.425|?>>
+    <associate|measure integral|<tuple|20.405|?>>
+    <associate|measure integral (1)|<tuple|20.410|?>>
+    <associate|measure integral alternative|<tuple|20.416|?>>
+    <associate|measure integral alternative (1)|<tuple|20.424|?>>
+    <associate|measure integral and a.e. equalitiy|<tuple|20.417|?>>
+    <associate|measure integral difference|<tuple|20.414|?>>
+    <associate|measure integral domination theorem|<tuple|20.418|?>>
+    <associate|measure integral extension|<tuple|20.409|?>>
+    <associate|measure integral f+ f-|<tuple|20.400|?>>
+    <associate|measure integral f+ f- alternative|<tuple|20.402|?>>
+    <associate|measure integral f+ f- are measurable|<tuple|20.403|?>>
+    <associate|measure integral f+ f- properties|<tuple|20.404|?>>
+    <associate|measure integral measure construction|<tuple|20.431|?>>
     <associate|measure integral of almost zero function is
-    zero|<tuple|20.407|?>>
-    <associate|measure integral of zero function (1)|<tuple|20.402|?>>
-    <associate|measure integral properties|<tuple|20.409|?>>
-    <associate|measure integral properties (1)|<tuple|20.415|?>>
-    <associate|measure integral properties (2)|<tuple|20.417|?>>
-    <associate|measure integral sigma finite|<tuple|20.413|?>>
-    <associate|measure integral to measure over|<tuple|20.406|?>>
-    <associate|measure integral zero is a.e. zero|<tuple|20.414|?>>
+    zero|<tuple|20.413|?>>
+    <associate|measure integral of zero function (1)|<tuple|20.408|?>>
+    <associate|measure integral properties|<tuple|20.415|?>>
+    <associate|measure integral properties (1)|<tuple|20.421|?>>
+    <associate|measure integral properties (2)|<tuple|20.423|?>>
+    <associate|measure integral sigma finite|<tuple|20.419|?>>
+    <associate|measure integral to measure over|<tuple|20.412|?>>
+    <associate|measure integral zero is a.e. zero|<tuple|20.420|?>>
     <associate|measure length definition|<tuple|20.267|?>>
     <associate|measure length of union of pairwise half opem
     intervals|<tuple|20.269|?>>
@@ -36056,36 +37351,41 @@
     <associate|measure {empty set} is a ring|<tuple|20.128|?>>
     <associate|measure {emptyset,set} is a measure|<tuple|20.132|?>>
     <associate|non negative function as limit of simple
-    functions|<tuple|20.383|?>>
-    <associate|non negative integral|<tuple|20.375|?>>
-    <associate|non negative integral (1)|<tuple|20.378|?>>
-    <associate|non negative integral alternative|<tuple|20.386|?>>
-    <associate|non negative integral and a.e. equality|<tuple|20.388|?>>
-    <associate|non negative integral characteristics|<tuple|20.382|?>>
-    <associate|non negative integral constant|<tuple|20.381|?>>
-    <associate|non negative integral finite integral|<tuple|20.392|?>>
-    <associate|non negative integral finite sum|<tuple|20.390|?>>
-    <associate|non negative integral is a extension|<tuple|20.380|?>>
-    <associate|non negative integral limit|<tuple|20.384|?>>
+    functions|<tuple|20.389|?>>
+    <associate|non negative integral|<tuple|20.381|?>>
+    <associate|non negative integral (1)|<tuple|20.384|?>>
+    <associate|non negative integral alternative|<tuple|20.392|?>>
+    <associate|non negative integral and a.e. equality|<tuple|20.394|?>>
+    <associate|non negative integral characteristics|<tuple|20.388|?>>
+    <associate|non negative integral constant|<tuple|20.387|?>>
+    <associate|non negative integral finite integral|<tuple|20.398|?>>
+    <associate|non negative integral finite sum|<tuple|20.396|?>>
+    <associate|non negative integral is a extension|<tuple|20.386|?>>
+    <associate|non negative integral limit|<tuple|20.390|?>>
     <associate|non negative integral scalar product, sum
-    inequality|<tuple|20.389|?>>
-    <associate|non negative integral zero a.e. function|<tuple|20.387|?>>
-    <associate|non negative measurable function|<tuple|20.373|?>>
+    inequality|<tuple|20.395|?>>
+    <associate|non negative integral zero a.e. function|<tuple|20.393|?>>
+    <associate|non negative measurable function|<tuple|20.379|?>>
     <associate|note 20.198.210|<tuple|20.224|?>>
     <associate|simple function|<tuple|20.356|?>>
-    <associate|simple function 2 point measurability|<tuple|20.362|?>>
+    <associate|simple function 2 point measurability|<tuple|20.368|?>>
     <associate|simple function alternative|<tuple|20.357|?>>
-    <associate|simple function constant|<tuple|20.360|?>>
-    <associate|simple function integral|<tuple|20.365|?>>
-    <associate|simple function integral constant function|<tuple|20.367|?>>
+    <associate|simple function constant|<tuple|20.362|?>>
+    <associate|simple function integral|<tuple|20.371|?>>
+    <associate|simple function integral constant function|<tuple|20.373|?>>
     <associate|simple function integral monotone convergence
-    theorem|<tuple|20.371|?>>
-    <associate|simple function integral properties|<tuple|20.369|?>>
-    <associate|simple function integral properties (1)|<tuple|20.370|?>>
-    <associate|simple function measurable|<tuple|20.359|?>>
-    <associate|simple function measurable (1)|<tuple|20.361|?>>
+    theorem|<tuple|20.377|?>>
+    <associate|simple function integral properties|<tuple|20.375|?>>
+    <associate|simple function integral properties (1)|<tuple|20.376|?>>
+    <associate|simple function measurable (0)|<tuple|20.363|?>>
+    <associate|simple function measurable (1)|<tuple|20.367|?>>
+    <associate|simple function measurable definition (1)|<tuple|20.360|?>>
+    <associate|simple function measurable definition (2)|<tuple|20.365|?>>
+    <associate|simple function measurable sum and scalar
+    product|<tuple|20.364|?>>
     <associate|simple function property|<tuple|20.358|?>>
-    <associate|simple function representation|<tuple|20.363|?>>
+    <associate|simple function representation|<tuple|20.369|?>>
+    <associate|simple function sum scalar product|<tuple|20.359|?>>
   </collection>
 </references>
 
@@ -36279,11 +37579,11 @@
       <tuple|<tuple|<with|mode|<quote|math>|<big|int><rsup|\<bbb-C\>>f
       d\<mu\>>>|<pageref|auto-122>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>>|<pageref|auto-124>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>>|<pageref|auto-125>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>>|<pageref|auto-125>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>>|<pageref|auto-126>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<cal-N\><rsup|p>>>|<pageref|auto-126>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-N\><rsup|p>>>|<pageref|auto-127>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|20<space|2spc>Measures
@@ -36460,6 +37760,21 @@
       and <with|mode|<quote|math>|L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-123>>
+
+      <with|par-left|<quote|2tab>|20.6.6.1<space|2spc>Definition of
+      <with|mode|<quote|math>|\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+      and <with|mode|<quote|math>|L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-124>>
+
+      <with|par-left|<quote|2tab>|20.6.6.2<space|2spc>The Banach space
+      <with|mode|<quote|math>|<around*|\<langle\>|L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>,<around*|\<\|\|\>||\<\|\|\>><rsub|Lp>|\<rangle\>>>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-128>>
+
+      <with|par-left|<quote|2tab>|20.6.6.3<space|2spc>Density
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-129>>
     </associate>
   </collection>
 </auxiliary>

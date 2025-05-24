@@ -17393,12 +17393,12 @@
     is a Banach space.
   </proof>
 
-  <\corollary>
+  <\theorem>
     <label|complete the complex numbers are complete>The normed space
     <math|<around*|\<langle\>|\<bbb-C\>,\<\|\|\>|\<rangle\>>> is a Banach
     space [where <math|<around*|\<langle\>|\<bbb-C\>,\<\|\|\>|\<rangle\>>> is
     defined in [example: <reference|normed complex numbers>]
-  </corollary>
+  </theorem>
 
   <\proof>
     To avoid any confusion between the norm on <math|\<bbb-R\>> and
@@ -17969,7 +17969,7 @@
       <item*|<math|\<Leftarrow\>>>Given <math|\<varepsilon\>\<gtr\>0> there
       exists a <math|N\<in\>\<bbb-N\> > such that if <math|n\<geqslant\>N> we
       have <math|\<forall\>x\<in\>X> that
-      <math|<around*|\<\|\|\>|f<around*|(|x|)>-f<around*|(|x|)>|\<\|\|\>>\<less\>\<varepsilon\>>
+      <math|<around*|\<\|\|\>|f<rsub|n><around*|(|x|)>-f<around*|(|x|)>|\<\|\|\>>\<less\>\<varepsilon\>>
       proving that <math|\<varepsilon\>> is a upper bound of
       <math|<around*|{|<around*|\<\|\|\>|f<rsub|n><around*|(|x|)>-f<around*|(|x|)>|\<\|\|\>>\|x\<in\>X|}>>
       so that
@@ -22683,7 +22683,7 @@
     <associate|eq 14.256.166|<tuple|14.260|?>>
     <associate|eq 14.257.166|<tuple|14.261|?>>
     <associate|eq 14.259.167|<tuple|14.262|?>>
-    <associate|eq 14.26.146|<tuple|14.26|?>>
+    <associate|eq 14.26.146|<tuple|14.34|?>>
     <associate|eq 14.26.246|<tuple|14.26|?>>
     <associate|eq 14.260.167|<tuple|14.263|?>>
     <associate|eq 14.261.167|<tuple|14.264|?>>
@@ -22699,7 +22699,7 @@
     <associate|eq 14.27.246|<tuple|14.27|?>>
     <associate|eq 14.28.147|<tuple|14.36|?>>
     <associate|eq 14.28.246|<tuple|14.28|?>>
-    <associate|eq 14.29.146|<tuple|14.29|?>>
+    <associate|eq 14.29.146|<tuple|14.38|?>>
     <associate|eq 14.29.147|<tuple|14.37|?>>
     <associate|eq 14.29.246|<tuple|14.29|?>>
     <associate|eq 14.3.146|<tuple|14.5|?>>

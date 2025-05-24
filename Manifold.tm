@@ -108,6 +108,8 @@
     <item>Rewrite started/
 
     <item>Check Extended Real Numbers started
+
+    <item>Base et must be non empty [Check this]
   </enumerate>
 
   <section|Manifold.tm>
@@ -120,7 +122,7 @@
     <associate|chapter-nr|20>
     <associate|page-first|1143>
     <associate|section-nr|6>
-    <associate|subsection-nr|5>
+    <associate|subsection-nr|6>
   </collection>
 </initial>
 
