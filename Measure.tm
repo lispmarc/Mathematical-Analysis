@@ -12182,11 +12182,23 @@
       closure>]>>>|<cell|\<sigma\><around*|[|<around*|{|C\|C is closed in
       \<cal-T\><rsub|<wide|\<bbb-R\>|\<wide-bar\>>>|}>|]>>>|<row|<cell|>|<cell|=>|<cell|\<sigma\><around*|[|<around*|{|<around*|]|a,\<infty\>|]>\|a\<in\>\<bbb-R\>|}>|]>>>|<row|<cell|>|<cell|=>|<cell|<around*|{|U\<subseteq\>\<cal-P\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>\|U<big|cap>\<bbb-R\>\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>|}>>>>>
     </eqnarray*>
+
+    Further we have that\ 
+
+    <\equation*>
+      \<cal-B\><around*|[|\<bbb-R\>|]>\<subseteq\>\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>
+    </equation*>
   </theorem>
 
   <\proof>
-    This follows from [lemma: <reference|lemma 20.153.227 >] and [lemma:
-    <reference|lemma 20.153.227 >].
+    The first part of the theorem follows from [lemma: <reference|lemma
+    20.153.227 >] and [lemma: <reference|lemma 20.153.227 >]. For the last
+    part. Let <math|A\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>> then
+    <math|A\<subseteq\>\<bbb-R\>\<subseteq\><wide|\<bbb-R\>|\<wide-bar\>>> so
+    that <math|A\<in\>\<cal-P\><around*|(|<wide|\<bbb-R\>|\<wide-bar\>>|)>>
+    and <math|A=A<big|cap>R\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>> hence
+    <math|A\<in\><around*|{|U\<subseteq\>\<cal-P\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>\|U<big|cap>\<bbb-R\>\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>|}>=\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>>.
+    Hence we have <math|\<cal-B\><around*|[|\<bbb-R\>|]>\<subseteq\>\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>>.
   </proof>
 
   <subsection|Borel algebra on <math|\<bbb-R\><rsup|n>>>
@@ -35977,8 +35989,8 @@
       <reference|measure integral f+ f- alternative>]>>>|<cell|<around*|\||f<around*|(|x|)>|\|>>>>>
     </eqnarray*>
 
-    which as the power function is monotone [see theorem: <reference|exp
-    generalized power properties>] that
+    which, as the power function is monotone [see theorem: <reference|exp
+    generalized power properties>], results in
 
     <\equation>
       <label|eq 20.681.247>\<forall\>x\<in\>X<text| we have
@@ -35988,8 +36000,9 @@
 
     Let <math|x\<in\>X> then as <math|f<around*|(|x|)>\<in\>\<bbb-R\>> we
     have that <math|f<rsup|+><around*|(|x|)>,f<rsup|-><around*|(|x|)>\<in\>\<bbb-R\>>
-    so that by [eq: <reference|eq 20.679.247>] that
-    <math|<below|lim|n\<rightarrow\>\<infty\>>h<rsub|n><around*|(|x|)>,<below|lim|n\<rightarrow\>\<infty\>>g<rsub|n><around*|(|x|)>\<in\>\<bbb-R\>>
+    so that by [eq: <reference|eq 20.679.247>]
+    <math|<below|lim|n\<rightarrow\>\<infty\>>h<rsub|n><around*|(|x|)>\<in\>\<bbb-R\>>
+    and <math|<below|lim|n\<rightarrow\>\<infty\>>g<rsub|n><around*|(|x|)>\<in\>\<bbb-R\>>
     so that
 
     <\eqnarray*>
@@ -36023,10 +36036,11 @@
     20.683.247>]. Hence by applying this theorem we get\ 
 
     <\equation*>
-      <below|lim|n\<rightarrow\>\<infty\>><big|int><around*|\||f<rsub|n>-f|\|><rsup|p>d\<mu\>=<big|int><around*|(|<below|lim|n\<rightarrow\>\<infty\>><around*|\||f<rsub|n>-f|\|><rsup|p>|)>d\<mu\>=<big|int>C<rsub|0>d\<mu\>=0
+      <below|lim|n\<rightarrow\>\<infty\>><big|int><around*|\||f<rsub|n>-f|\|><rsup|p>d\<mu\>=<big|int><around*|(|<below|lim|n\<rightarrow\>\<infty\>><around*|\||f<rsub|n>-f|\|><rsup|p>|)>d\<mu\>\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.682.247>]>><big|int>C<rsub|0>d\<mu\>=0
     </equation*>
 
-    so that\ 
+    proving\ 
 
     <\equation*>
       <below|lim|n\<rightarrow\>\<infty\>><around*|(|<around*|\<\|\|\>|f<rsub|n>-f|\<\|\|\>><rsub|p>|)><rsup|p>=0
@@ -36115,9 +36129,476 @@
     </equation*>
   </proof>
 
-  \;
+  <\theorem>
+    <label|LP space density (2)>Let <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>>
+    be a measure space and <math|f\<in\>\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>>
+    then <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there exist a
+    <math|g\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]>> such that
+    <math|<around*|\<\|\|\>|f-g|\<\|\|\>>\<less\>\<varepsilon\>>.
+  </theorem>
 
-  \;
+  <\proof>
+    Let <math|f\<in\>\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>>
+    and take <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. Using [lemma:
+    <reference|lemma 20.491.248>] there exists a
+    <math|n\<in\><around*|{|2,\<ldots\>,\<infty\>|}>> and a family
+    <math|<around*|{|a<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-R\>>
+    with\ 
+
+    <\equation>
+      <label|eq 20.685.248><around*|]|-<around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>,<around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>|]>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>><around*|[|a<rsub|i>,a<rsub|i+1>|[><text|
+      and >\<forall\>i\<in\><around*|{|1,\<ldots\>,n-1|}><text|
+      >a<rsub|i>\<less\>a<rsub|i+1>\<wedge\>a<rsub|i+1>-a<rsub|i>\<less\><frac|\<varepsilon\>|2>
+    </equation>
+
+    Let <math|i\<in\><around*|{|1,\<ldots\>,n-1|}>> then
+    <math|<around*|[|a<rsub|i>,a<rsub|i+1>|[>\<in\>\<cal-I\><rsub|<around*|[||[>>\<subseteq\>\<sigma\><around*|[|\<cal-I\><rsub|<around*|[||[>>|]>\<equallim\><rsub|<text|[theorem:
+    <reference|measure Borel algebra on R>]>>\<cal-B\><around*|[|\<bbb-R\>|]><below|\<subseteq\>|<text|[theorem:
+    <reference|measure Borel algebra on the extended real numbers
+    (1)>]>>\<cal-B\><around*|[|<wide|\<bbb-R\>|\<wide-bar\>>|]>>. As
+    <math|f\<in\>\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>>
+    hence <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-R\>|]>> it
+    follows that <math|f> is <math|\<cal-A\>>-measurable so that
+    <math|f<rsup|-1><around*|(|<around*|[|a<rsub|i>,a<rsub|i-1>|[>|)>\<in\>\<b-A\>>.
+    Hence we have that we can define
+
+    <\equation>
+      <label|eq 20.686.248><around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>\<subseteq\>\<cal-A\><text|
+      by >A<rsub|i>=f<rsup|-1><around*|(|<around*|[|a<rsub|i>,a<rsub|i-1>|[>|)>
+    </equation>
+
+    Next
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|f<rsup|-1><around*|(|<around*|]|-<around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>,<around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>|]>|)>>|<cell|<below|\<subseteq\>|<text|[eq:
+      <reference|eq 20.685.248>]>>>|<cell|f<rsup|-1><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>><around*|[|a<rsub|i>,a<rsub|i+1>|[>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>f<rsup|-1><around*|(|<around*|[|a<rsub|i>,a<rsub|i+1>|[>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.686.248>]>>>|<cell|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>A<rsub|i>>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation>
+      <label|eq 20.687.248>f<rsup|-1><around*|(|<around*|[|-<around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>,<around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>|]>|)>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>A<rsub|i>\<in\>\<cal-A\>
+    </equation>
+
+    Let <math|i,j\<in\><around*|{|1,\<ldots\>,n-1|}>> with <math|i\<neq\>j>
+    then we may assume without loss of generality that <math|i\<less\>j>
+    [otherwise switch <math|i> and <math|j>]. Assume that
+    <math|x\<in\>A<rsub|i><big|cap>A<rsub|j>> then
+    <math|f<around*|(|x|)>\<in\><around*|[|a<rsub|i>,a<rsub|i+1>|[><big|cap><around*|[|a<rsub|j>,a<rsub|j+1>|[>>
+    so that <math|a<rsub|i>\<leqslant\>f<around*|(|x|)>\<less\>a<rsub|i+1>\<leqslant\>a<rsub|j>\<leqslant\>f<around*|(|x|)>\<less\>a<rsub|j+1>>
+    leading to the contradiction <math|f<around*|(|x|)>\<less\>f<around*|(|x|)>>.
+    Hence the assumption is wrong and we must have that
+    <math|A<rsub|i><big|cap>A<rsub|j>=\<varnothing\>>. So its provesd that\ 
+
+    <\equation>
+      <label|eq 20.688.248><around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>><text|
+      is pairwise disjoint>
+    </equation>
+
+    Using then [theorem: <reference|simple function measurable (0)>] we have
+    that
+
+    <\equation>
+      <label|eq 20.689.248>g=<big|sum><rsub|i=1><rsup|n-1>a<rsub|i>\<cdot\>\<cal-X\><rsub|A<rsub|i>>\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]>
+    </equation>
+
+    If <math|x\<in\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>A<rsub|i>>
+    then by [eq: <reference|eq 20.688.248>] there exist a unique
+    <math|i\<in\><around*|{|1,\<ldots\>,n-1|}>> such that
+    <math|x\<in\>A<rsub|i>> from which it follows that
+    <math|f<around*|(|x|)>\<in\><around*|[|a<rsub|i>,a<rsub|i+1>|[>\<Rightarrow\>a<rsub|i>\<leqslant\>f<around*|(|x|)>\<less\>a<rsub|i+1>>
+    so that <math|0\<leqslant\>f<around*|(|x|)>-a<rsub|i>\<leqslant\>a<rsub|i+1>-a<rsub|i>=<frac|\<varepsilon\>|2>>.
+    As <math|g<around*|(|x|)>\<equallim\><rsub|<text|[theorem:
+    <reference|simple function property>]>>a<rsub|i>> it follows that
+    <math|<around*|\||f<around*|(|x|)>-g<around*|(|x|)>|\|>\<less\><frac|\<varepsilon\>|2>>.
+    Hence\ 
+
+    <\equation>
+      <label|eq 20.690.248>\<forall\>x\<in\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>A<rsub|i><text|
+      we have ><around*|\||f<around*|(|x|)>-g<around*|(|x|)>|\|>\<less\><frac|\<varepsilon\>|2>
+    </equation>
+
+    If <math|x\<in\><around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>-g<around*|(|x|)>|\|>\<gtr\><frac|\<varepsilon\>|2>|}>>
+    then using the above we must have that
+    <math|x\<in\>X\\<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>A<rsub|i>>.
+    Using [eq: <reference|eq 20.687.248>] it follows that
+    <math|x\<nin\>f<rsup|-1><around*|(|<around*|[|-<around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>,<around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>|]>|)>>
+    so that <math|f<around*|(|x|)>\<nin\><around*|[|-<around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>,<around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>|]>>
+    hence <math|f<around*|(|x|)>\<less\>-<around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>\<vee\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>\<less\>f<around*|(|x|)>>
+    from which we conclude that <math|<around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>\<less\><around*|\||f<around*|(|x|)>|\|>>.
+    So that\ 
+
+    <\equation>
+      <label|eq 20.691.248><around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>-g<around*|(|x|)>|\|>\<gtr\><frac|\<varepsilon\>|2>|}>\<subseteq\><around*|{|x\<in\>X\|<around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>\<less\><around*|\||f<around*|(|x|)>|\|>|}>
+    </equation>
+
+    As <math|f\<in\>\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>>
+    we have by [lemma: <reference|lemma 20.463.246>] that
+    <math|<around*|{|x\<in\>X\|<around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>\<less\><around*|\||f<around*|(|x|)>|\|>|}>>
+    is locally <math|\<mu\>>-null so that by [theorem: <reference|LP spaces
+    locally m-null set properties>] <math|<around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>-g<around*|(|x|)>|\|>\<gtr\><frac|\<varepsilon\>|2>|}>>
+    is locally <math|\<mu\>>-null. So we have that
+    <math|<frac|\<varepsilon\>|2>\<in\><around*|{|M\<in\><around*|[|0,\<infty\>|[>\|<around*|{|x\<in\>X\|<around*|\||<around*|(|f-g|)><around*|(|x|)>\<gtr\>M|\|>|}><text|
+    is locally >\<mu\><text|-null>|}>> so that\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|f-g|\<\|\|\>><rsub|\<infty\>>=inf<around*|(|<around*|{|M\<in\><around*|[|0,\<infty\>|[>\|<around*|{|x\<in\>X\|<around*|\||<around*|(|f-g|)><around*|(|x|)>\<gtr\>M|\|>|}><text|
+      is locally >\<mu\><text|-null>|}>|)>\<leqslant\><frac|\<varepsilon\>|2>\<less\>\<varepsilon\>
+    </equation*>
+
+    In other words\ 
+
+    <\equation*>
+      \<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text| there exist a
+      >g\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]><text| such that
+      ><around*|\<\|\|\>|f-g|\<\|\|\>><rsub|\<infty\>>\<less\>\<varepsilon\>
+    </equation*>
+  </proof>
+
+  The two previous theorem motivates the following definition
+
+  <\definition>
+    Let <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a
+    measure space and <math|p\<in\><around*|[|1,\<infty\>|]>> then we define
+
+    <\equation*>
+      \<cal-S\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>=<choice|<tformat|<table|<row|<cell|<around*|{|<around*|[|f|]><rsub|\<infty\>>\|f\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]><text|
+      if >p=\<infty\>|}>>>|<row|<cell|<around*|{|<around*|[|f|]><rsub|p>\|f\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]><big|cap>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>|}><text|
+      if >p\<in\><around*|[|1,\<infty\>|[>>>>>>\<subseteq\>L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>
+    </equation*>
+
+    <\note>
+      If <math|f\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]>> then <math|f> is
+      <math|\<cal-A\>>-measurable and <math|f<around*|(|X|)>> is a finite
+      set. Hence <math|f> is bounded above by
+      <math|M=<around*|{|<around*|\||y|\|>\|y\<in\>f<around*|(|X|)>|}>>
+      proving that <math|\<cal-S\><around*|[|X,\<cal-A\>|]>\<subseteq\>\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>>
+    </note>
+  </definition>
+
+  Using this definition we can summarize the two previous theorems
+
+  <\theorem>
+    <label|LP spaces density>Let <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>>
+    be ameasure space, <math|p\<in\><around*|[|1,\<infty\>|]>> and
+    <math|f\<in\>L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>> then
+    <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there exist a
+    <math|g\<in\>\<cal-S\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>>
+    such that <math|<around*|\<\|\|\>|f-g|\<\|\|\>><rsub|Lp>\<less\>\<varepsilon\>>
+
+    <\note>
+      Using the topological space <math|<around*|\<langle\>|L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>,<around*|\<\|\|\>||\<\|\|\>><rsub|Lp>|\<rangle\>>>
+      we have by [theorem: <reference|normed dense set>] that
+      <math|\<cal-S\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>> is
+      dense in <math|L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>>. So
+      that by definition of dense subsets [see definition:
+      <reference|topology dense set>] we have\ 
+
+      <\equation*>
+        <wide|S<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>|\<wide-bar\>>=L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>
+      </equation*>
+    </note>
+  </theorem>
+
+  <\proof>
+    Let <math|p\<in\><around*|[|1,\<ldots\>,\<infty\>|]>> then we have
+    either:
+
+    <\description>
+      <item*|<math|p=\<infty\>>>As <math|f\<in\>L<rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>>
+      there exists a <math|F\<in\>\<cal-L\><rsup|\<infty\>><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>
+      such that f=<around*|[|F|]><rsub|\<infty\>>>. Using [theorem:
+      <reference|LP space density (2)>] there exists a
+      <math|G\<in\>S<around*|[|X,\<cal-A\>|]>> such that
+      <math|<around*|\<\|\|\>|F-G|\<\|\|\>><rsub|\<infty\>>\<less\>\<varepsilon\>>.
+      Tak<rigid|e <math|g=<around*|[|G|]><rsub|\<varepsilon\>>\<in\>\<cal-S\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>>>
+      then we have
+
+      <\equation*>
+        <around*|\<\|\|\>|f-g|\<\|\|\>><rsub|L\<infty\>>=<around*|\<\|\|\>|<around*|[|F|]><rsub|\<infty\>>-<around*|[|G|]><rsub|\<infty\>>|\<\|\|\>><rsub|L\<infty\>>=<around*|\<\|\|\>|<around*|[|F-G|]><rsub|\<infty\>>|\<\|\|\>><rsub|L\<infty\>>=<around*|\<\|\|\>|F-G|\<\|\|\>><rsub|\<infty\>>\<less\>\<varepsilon\>
+      </equation*>
+
+      <item*|<math|p\<in\><around*|[|1,\<infty\>|[>>>As
+      <math|f\<in\>L<rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>> there
+      exists a <math|F\<in\>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>>
+      such that <math|f=<around*|[|F|]><rsub|p> >. Using [theorem:
+      <reference|LP space density (1)>] there exists a
+      <math|G\<in\>\<cal-S\><around*|[|X,\<cal-A\>|]><big|cap>\<cal-L\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>>
+      such that <math|<around*|\<\|\|\>|F-G|\<\|\|\>><rsub|p>\<less\>\<infty\>>.
+      Take <math|g=<around*|[|G|]><rsub|p>\<in\>\<cal-S\><rsup|p><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>>
+      then we have\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|f-g|\<\|\|\>><rsub|Lp>=<around*|\<\|\|\>|<around*|[|F|]><rsub|p>-<around*|[|G|]><rsub|p>|\<\|\|\>><rsub|Lp>=<around*|\<\|\|\>|<around*|[|F-G|]><rsub|p>|\<\|\|\>><rsub|L<rsup|p>>=<around*|\<\|\|\>|F-G|\<\|\|\>><rsub|p>\<less\>\<varepsilon\>
+      </equation*>
+    </description>
+  </proof>
+
+  <section|Signed and complex measures>
+
+  Up to now a measure <math|\<mu\>> is defined to be non negative real valued
+  function. In this section we extend this to measures that are real or
+  complex.
+
+  <subsection|Signed measures>
+
+  First we must extend the concept of finite sums in
+  <math|<wide|\<bbb-R\>|\<wide-bar\>>> and ensure that they are always well
+  defined. The problem is that <math|-\<infty\>+\<infty\>> and
+  <math|\<infty\>+<around*|(|-\<infty\>|)>> is not defined in
+  <math|<wide|\<bbb-R\>|\<wide-bar\>>>. To avoid this we restrict ourselve to
+  the subsets <math|\<bbb-R\><big|cup><around*|{|\<infty\>|}>> or
+  <math|\<bbb-R\><big|cup><around*|{|-\<infty\>|}>. >
+
+  <\definition>
+    We define\ 
+
+    <\equation*>
+      \<bbb-R\><rsub|\<infty\>>=\<bbb-R\><big|cup><around*|{|\<infty\>|}>
+    </equation*>
+
+    <\equation*>
+      \<bbb-R\><rsub|-\<infty\>>=\<bbb-R\><big|cup><around*|{|\<infty\>|}>
+    </equation*>
+  </definition>
+
+  <\theorem>
+    <label|signed semi groups>Using the definition of <math|+> in
+    <math|<wide|\<bbb-R\>|\<bar\>>> restricted to
+    <math|\<bbb-R\><rsub|\<infty\>>>, <math|\<bbb-R\><rsub|-\<infty\>>>we
+    have the following\ 
+
+    <\enumerate>
+      <item><math|<around*|\<langle\>|\<bbb-R\><rsub|\<infty\>>,+|\<rangle\>>>
+      is a Abelian semigroup\ 
+
+      <item><math|<around*|\<langle\>|\<bbb-R\><rsub|-\<infty\>>,+|\<rangle\>>>
+      is a Abelian semigroup
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>We must prove the axioms of a Abelian semi group:
+
+      <\description>
+        <item*|associativity>Let <math|x,y,z\<in\>\<bbb-R\><rsub|\<infty\>>>
+        then we have for <math|x,y,z\<in\>\<bbb-R\><rsub|\<infty\>>> either:
+
+        <\description>
+          <item*|<math|x\<in\>\<bbb-R\>\<wedge\>y\<in\>\<bbb-R\>\<wedge\>z\<in\>\<bbb-R\>>>then
+          using the properties of <math|+> in <math|\<bbb-R\>> we have\ 
+
+          <\equation*>
+            <around*|(|x+y|)>+z=x+<around*|(|y+z|)>
+          </equation*>
+
+          <item*|<math|x\<in\>\<bbb-R\>\<wedge\>y\<in\>\<bbb-R\>\<wedge\>z=\<infty\>>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|<around*|(|x+y|)>+z>|<cell|=>|<cell|<around*|(|x+y|)>+\<infty\>>>|<row|<cell|>|<cell|=>|<cell|\<infty\>>>|<row|<cell|>|<cell|=>|<cell|x+\<infty\>>>|<row|<cell|>|<cell|=>|<cell|x+<around*|(|y+\<infty\>|)>>>|<row|<cell|>|<cell|=>|<cell|x+<around*|(|y+z|)>>>>>
+          </eqnarray*>
+
+          <item*|<math|x\<in\>\<bbb-R\>\<wedge\>y=\<infty\>\<wedge\>z\<in\>\<bbb-R\>>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|<around*|(|x+y|)>+z>|<cell|=>|<cell|<around*|(|x+\<infty\>|)>+z>>|<row|<cell|>|<cell|=>|<cell|\<infty\>+z>>|<row|<cell|>|<cell|=>|<cell|\<infty\>>>|<row|<cell|>|<cell|=>|<cell|x+\<infty\>>>|<row|<cell|>|<cell|=>|<cell|x+<around*|(|y+\<infty\>|)>>>|<row|<cell|>|<cell|=>|<cell|x+<around*|(|y+z|)>>>>>
+          </eqnarray*>
+
+          <item*|<math|x\<in\>\<bbb-R\>\<wedge\>y=\<infty\>\<wedge\>z=\<infty\>>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|<around*|(|x+y|)>+z>|<cell|=>|<cell|<around*|(|x+\<infty\>|)>+\<infty\>>>|<row|<cell|>|<cell|=>|<cell|\<infty\>>>|<row|<cell|>|<cell|=>|<cell|x+\<infty\>>>|<row|<cell|>|<cell|=>|<cell|x+<around*|(|\<infty\>+\<infty\>|)>>>|<row|<cell|>|<cell|=>|<cell|x+<around*|(|y+z|)>>>>>
+          </eqnarray*>
+
+          <item*|<math|x=\<infty\>\<wedge\>y\<in\>\<bbb-R\>\<wedge\>z\<in\>\<bbb-R\>>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|<around*|(|x+y|)>+z>|<cell|=>|<cell|<around*|(|\<infty\>+y|)>+z>>|<row|<cell|>|<cell|=>|<cell|\<infty\>+z>>|<row|<cell|>|<cell|=>|<cell|\<infty\>>>|<row|<cell|>|<cell|=>|<cell|\<infty\>+<around*|(|y+z|)>>>|<row|<cell|>|<cell|=>|<cell|x+<around*|(|y+z|)>>>>>
+          </eqnarray*>
+
+          <item*|<math|x=\<infty\>\<wedge\>y\<in\>\<bbb-R\>\<wedge\>z=\<infty\>>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|<around*|(|x+y|)>+z>|<cell|=>|<cell|<around*|(|\<infty\>+y|)>+\<infty\>>>|<row|<cell|>|<cell|=>|<cell|\<infty\>>>|<row|<cell|>|<cell|=>|<cell|\<infty\>+<around*|(|y+z|)>>>|<row|<cell|>|<cell|=>|<cell|x+<around*|(|y+z|)>>>>>
+          </eqnarray*>
+
+          <item*|<math|x=\<infty\>\<wedge\>y=\<infty\>\<wedge\>z\<in\>\<bbb-R\>>>Then
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|<around*|(|x+y|)>+z>|<cell|=>|<cell|<around*|(|\<infty\>+\<infty\>|)>+z>>|<row|<cell|>|<cell|=>|<cell|\<infty\>+z>>|<row|<cell|>|<cell|=>|<cell|\<infty\>>>|<row|<cell|>|<cell|=>|<cell|\<infty\>+<around*|(|y+z|)>>>|<row|<cell|>|<cell|=>|<cell|x+<around*|(|y+z|)>>>>>
+          </eqnarray*>
+
+          <item*|<math|x=\<infty\>\<wedge\>y=\<infty\>\<wedge\>z=\<infty\>>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|<around*|(|x+y|)>+z>|<cell|=>|<cell|<around*|(|\<infty\>+\<infty\>|)>+\<infty\>>>|<row|<cell|>|<cell|=>|<cell|\<infty\>>>|<row|<cell|>|<cell|=>|<cell|\<infty\>+<around*|(|y+z|)>>>|<row|<cell|>|<cell|=>|<cell|x+<around*|(|y+z|)>>>>>
+          </eqnarray*>
+        </description>
+
+        <item*|neutral element>Then we have for
+        <math|x\<in\>\<bbb-R\><rsub|\<infty\>>> either
+
+        <\description>
+          <item*|<math|x\<in\>\<bbb-R\>>>then using the properties of
+          <math|+> in the real numbers we have
+
+          <\equation*>
+            x+0=x=0+x
+          </equation*>
+
+          <item*|<math|x=\<infty\>>>then
+
+          <\equation*>
+            x+0=\<infty\>+0=\<infty\>=0=0+\<infty\>=0+x
+          </equation*>
+        </description>
+
+        <item*|commutativity>Then we have for
+        <math|x,y\<in\>\<bbb-R\><rsub|\<infty\>>> either
+
+        <\description>
+          <item*|<math|x\<in\>\<bbb-R\>\<wedge\>y\<in\>\<bbb-R\>>>Then using
+          the properties of <math|+> in <math|\<bbb-R\>> we have\ 
+
+          <\equation*>
+            x+y=y+x
+          </equation*>
+
+          <item*|<math|x\<in\>\<bbb-R\>\<wedge\>y=\<infty\>>>Then\ 
+
+          <\equation*>
+            x+y=x+\<infty\>=\<infty\>=\<infty\>+x=y+x
+          </equation*>
+
+          <item*|<math|x=\<infty\>\<wedge\>y\<in\>\<bbb-R\>>>Then
+
+          <\equation*>
+            x+y=\<infty\>+y=\<infty\>=y+\<infty\>=y+x
+          </equation*>
+
+          <item*|<math|x=\<infty\>\<wedge\>y=\<infty\>>>Then
+
+          <\equation*>
+            x+y=\<infty\>+\<infty\>=\<infty\>=\<infty\>+\<infty\>=y+x
+          </equation*>
+        </description>
+      </description>
+
+      <item>We must prove the axioms of a Abelian semi group:\ 
+
+      <\description>
+        <item*|associativity>Let <math|x,y,z\<in\>\<bbb-R\><rsub|-\<infty\>>>
+        then we have vor <math|x,y,z\<in\>\<bbb-R\><rsub|-\<infty\>>> either:
+
+        <\description>
+          <item*|<math|x\<in\>\<bbb-R\>\<wedge\>y\<in\>\<bbb-R\>\<wedge\>z\<in\>\<bbb-R\>>>Then
+          using the properties of <math|+> in <math|\<bbb-R\>> we have\ 
+
+          <\equation*>
+            <around*|(|x+y|)>+z=x+<around*|(|y+z|)>
+          </equation*>
+
+          <item*|<math|x\<in\>\<bbb-R\>\<wedge\>y\<in\>\<bbb-R\>\<wedge\>z=-\<infty\>>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|<around*|(|x+y|)>+z>|<cell|=>|<cell|<around*|(|x+y|)>+<around*|(|-\<infty\>|)>>>|<row|<cell|>|<cell|=>|<cell|-\<infty\>>>|<row|<cell|>|<cell|=>|<cell|x+<around*|(|-\<infty\>|)>>>|<row|<cell|>|<cell|=>|<cell|x+<around*|(|y+<around*|(|-\<infty\>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|x+<around*|(|y+z|)>>>>>
+          </eqnarray*>
+
+          <item*|<math|x\<in\>\<bbb-R\>\<wedge\>y=-\<infty\>\<wedge\>z\<in\>\<bbb-R\>>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|<around*|(|x+y|)>+z>|<cell|=>|<cell|<around*|(|x+<around*|(|-\<infty\>|)>|)>+z>>|<row|<cell|>|<cell|=>|<cell|-\<infty\>+z>>|<row|<cell|>|<cell|=>|<cell|-\<infty\>>>|<row|<cell|>|<cell|=>|<cell|x+<around*|(|-\<infty\>|)>>>|<row|<cell|>|<cell|=>|<cell|x+<around*|(|y+<around*|(|-\<infty\>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|x+<around*|(|y+z|)>>>>>
+          </eqnarray*>
+
+          <item*|<math|x\<in\>\<bbb-R\>\<wedge\>y=-\<infty\>\<wedge\>z=-\<infty\>>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|<around*|(|x+y|)>+z>|<cell|=>|<cell|<around*|(|x+<around*|(|-\<infty\>|)>|)>+<around*|(|-\<infty\>|)>>>|<row|<cell|>|<cell|=>|<cell|-\<infty\>>>|<row|<cell|>|<cell|=>|<cell|x+<around*|(|-\<infty\>|)>>>|<row|<cell|>|<cell|=>|<cell|x+<around*|(|-\<infty\>+<around*|(|-\<infty\>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|x+<around*|(|y+z|)>>>>>
+          </eqnarray*>
+
+          <item*|<math|x=-\<infty\>\<wedge\>y\<in\>\<bbb-R\>\<wedge\>z\<in\>\<bbb-R\>>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|<around*|(|x+y|)>+z>|<cell|=>|<cell|<around*|(|-\<infty\>+y|)>+z>>|<row|<cell|>|<cell|=>|<cell|-\<infty\>+z>>|<row|<cell|>|<cell|=>|<cell|-\<infty\>>>|<row|<cell|>|<cell|=>|<cell|-\<infty\>+<around*|(|y+z|)>>>|<row|<cell|>|<cell|=>|<cell|x+<around*|(|y+z|)>>>>>
+          </eqnarray*>
+
+          <item*|<math|x=-\<infty\>\<wedge\>y\<in\>\<bbb-R\>\<wedge\>z=-\<infty\>>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|<around*|(|x+y|)>+z>|<cell|=>|<cell|<around*|(|-\<infty\>+y|)>+<around*|(|-\<infty\>|)>>>|<row|<cell|>|<cell|=>|<cell|-\<infty\>>>|<row|<cell|>|<cell|=>|<cell|-\<infty\>+<around*|(|y+z|)>>>|<row|<cell|>|<cell|=>|<cell|x+<around*|(|y+z|)>>>>>
+          </eqnarray*>
+
+          <item*|<math|x=-\<infty\>\<wedge\>y=-\<infty\>\<wedge\>z\<in\>\<bbb-R\>>>Then
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|<around*|(|x+y|)>+z>|<cell|=>|<cell|<around*|(|-\<infty\>+<around*|(|-\<infty\>|)>|)>+z>>|<row|<cell|>|<cell|=>|<cell|-\<infty\>+z>>|<row|<cell|>|<cell|=>|<cell|-\<infty\>>>|<row|<cell|>|<cell|=>|<cell|-\<infty\>+<around*|(|y+z|)>>>|<row|<cell|>|<cell|=>|<cell|x+<around*|(|y+z|)>>>>>
+          </eqnarray*>
+
+          <item*|<math|x=-\<infty\>\<wedge\>y=-\<infty\>\<wedge\>z=-\<infty\>>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|<around*|(|x+y|)>+z>|<cell|=>|<cell|<around*|(|-\<infty\>+<around*|(|-\<infty\>|)>|)>+<around*|(|-\<infty\>|)>>>|<row|<cell|>|<cell|=>|<cell|-\<infty\>>>|<row|<cell|>|<cell|=>|<cell|-\<infty\>+<around*|(|y+z|)>>>|<row|<cell|>|<cell|=>|<cell|x+<around*|(|y+z|)>>>>>
+          </eqnarray*>
+        </description>
+
+        <item*|netural element>Then we have for
+        <math|x\<in\>\<bbb-R\><rsub|-\<infty\>>> either
+
+        <\description>
+          <item*|<math|x\<in\>\<bbb-R\>>>Then using the properties of
+          <math|+> in the real numbers we have
+
+          <\equation*>
+            x+0=x=0+x
+          </equation*>
+
+          <item*|<math|x=-\<infty\>>>Then
+
+          <\equation*>
+            x+0=-\<infty\>+0=-\<infty\>=0=0+<around*|(|-\<infty\>|)>=0+x
+          </equation*>
+        </description>
+
+        <item*|commutativity>Then we have for
+        <math|x,y\<in\>\<bbb-R\><rsub|\<infty\>>> either
+
+        <\description>
+          <item*|<math|x\<in\>\<bbb-R\>\<wedge\>y\<in\>\<bbb-R\>>>Then using
+          the properties of <math|+> in <math|\<bbb-R\>> we have\ 
+
+          <\equation*>
+            x+y=y+x
+          </equation*>
+
+          <item*|<math|x\<in\>\<bbb-R\>\<wedge\>y=-\<infty\>>>Then\ 
+
+          <\equation*>
+            x+y=x+<around*|(|-\<infty\>|)>=-\<infty\>=-\<infty\>+x=y+x
+          </equation*>
+
+          <item*|<math|x=-\<infty\>\<wedge\>y\<in\>\<bbb-R\>>>Then
+
+          <\equation*>
+            x+y=-\<infty\>+y=-\<infty\>=y+<around*|(|-\<infty\>|)>=y+x
+          </equation*>
+
+          <item*|<math|x=-\<infty\>\<wedge\>y=-\<infty\>>>Then
+
+          <\equation*>
+            x+y=-\<infty\>+<around*|(|-\<infty\>|)>=-\<infty\>=-\<infty\>+<around*|(|-\<infty\>|)>=y+x
+          </equation*>
+        </description>
+      </description>
+    </enumerate>
+  </proof>
+
+  As <math|<around*|\<langle\>|\<bbb-R\><rsub|\<infty\>>,+|\<rangle\>>> and
+  <math|<around*|\<langle\>|\<bbb-R\><rsub|\<infty\>>,+|\<rangle\>>> are semi
+  groups we can now use [section: <reference|section sums and products>].
 
   \;
 
@@ -36141,7 +36622,9 @@
     <associate|Constructing measures and sigma alegebra|<tuple|20.4.4|?>>
     <associate|Fatou's lemma|<tuple|20.432|?>>
     <associate|Holder's Inequality|<tuple|20.471|?>>
+    <associate|LP density|<tuple|20.495|?>>
     <associate|LP space density (1)|<tuple|20.490|?>>
+    <associate|LP space density (2)|<tuple|20.492|?>>
     <associate|LP spaces|<tuple|20.452|?>>
     <associate|LP spaces (@@)|<tuple|20.460|?>>
     <associate|LP spaces LP norm is zero|<tuple|20.465|?>>
@@ -36150,6 +36633,7 @@
     <associate|LP spaces are Banach spaces|<tuple|20.489|?>>
     <associate|LP spaces are pseudo normed|<tuple|20.475|?>>
     <associate|LP spaces canonical example|<tuple|20.453|?>>
+    <associate|LP spaces density|<tuple|20.495|?>>
     <associate|LP spaces empty set is locally m-null|<tuple|20.467|?>>
     <associate|LP spaces finite sum|<tuple|20.474|?>>
     <associate|LP spaces locally m-null set properties|<tuple|20.468|?>>
@@ -36215,6 +36699,8 @@
     <associate|auto-128|<tuple|20.6.6.2|?>>
     <associate|auto-129|<tuple|20.6.6.3|?>>
     <associate|auto-13|<tuple|limit in <with|mode|<quote|math>|<wide|\<bbb-R\>|\<wide-bar\>>>|?>>
+    <associate|auto-130|<tuple|20.7|?>>
+    <associate|auto-131|<tuple|20.7.1|?>>
     <associate|auto-14|<tuple|<with|mode|<quote|math>|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>>|?>>
     <associate|auto-15|<tuple|20.1.5|?>>
     <associate|auto-16|<tuple|<with|mode|<quote|math>|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i><with|mode|<quote|text>|
@@ -36988,6 +37474,13 @@
     <associate|eq 20.681.247|<tuple|20.682|?>>
     <associate|eq 20.682.247|<tuple|20.683|?>>
     <associate|eq 20.683.247|<tuple|20.684|?>>
+    <associate|eq 20.685.248|<tuple|20.685|?>>
+    <associate|eq 20.686.248|<tuple|20.686|?>>
+    <associate|eq 20.687.248|<tuple|20.687|?>>
+    <associate|eq 20.688.248|<tuple|20.688|?>>
+    <associate|eq 20.689.248|<tuple|20.689|?>>
+    <associate|eq 20.690.248|<tuple|20.690|?>>
+    <associate|eq 20.691.248|<tuple|20.691|?>>
     <associate|eq 20.7.155|<tuple|20.7|?>>
     <associate|eq 20.76.200|<tuple|20.97|?>>
     <associate|eq 20.77.200|<tuple|20.98|?>>
@@ -37150,6 +37643,7 @@
     <associate|lemma 20.480.246|<tuple|20.487|?>>
     <associate|lemma 20.482.247|<tuple|20.488|?>>
     <associate|lemma 20.491.248|<tuple|20.491|?>>
+    <associate|lemma 20.492.478|<tuple|20.492|?>>
     <associate|lemma 20.78.156|<tuple|20.85|?>>
     <associate|lemma 20.80.156|<tuple|20.87|?>>
     <associate|lemma 20.90.156|<tuple|20.101|?>>
@@ -37367,6 +37861,7 @@
     <associate|non negative integral zero a.e. function|<tuple|20.393|?>>
     <associate|non negative measurable function|<tuple|20.379|?>>
     <associate|note 20.198.210|<tuple|20.224|?>>
+    <associate|signed semi groups|<tuple|20.498|?>>
     <associate|simple function|<tuple|20.356|?>>
     <associate|simple function 2 point measurability|<tuple|20.368|?>>
     <associate|simple function alternative|<tuple|20.357|?>>
