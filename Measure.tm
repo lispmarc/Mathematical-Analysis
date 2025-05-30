@@ -1120,11 +1120,10 @@
   following theorems shows what is possible.
 
   <\theorem>
-    <label|extended 0\<less\>=x and 0\<less\>=y then
-    x\<less\>=x-y\<less\>=x>Let <math|x,y\<in\><wide|\<bbb-R\>|\<wide-bar\>>>
-    be such that <math|0\<leqslant\>x\<wedge\>0\<leqslant\>y> and one of
-    <math|x,y> is finite [so that <math|x-y> is well defined] then
-    <math|x-y\<leqslant\>x>
+    <label|extended 0\<less\>=x and 0\<less\>=y then x-y\<less\>=x>Let
+    <math|x,y\<in\><wide|\<bbb-R\>|\<wide-bar\>>> be such that
+    <math|0\<leqslant\>x\<wedge\>0\<leqslant\>y> and one of <math|x,y> is
+    finite [so that <math|x-y> is well defined] then <math|x-y\<leqslant\>x>
   </theorem>
 
   <\proof>
@@ -37023,8 +37022,7 @@
   <math|\<bbb-R\><rsub|\<infty\>>> or <math|\<bbb-R\><rsub|->>. Unfortunately
   this comes at a cost, in contrast to the sum of non negative extended real
   numbers the infinite sum of elements in <math|\<bbb-R\><rsub|\<infty\>>> or
-  <math|\<bbb-R\><rsub|\<infty\>>> is not guaranteed to exist. We have for
-  the finite sums the following properties.
+  <math|\<bbb-R\><rsub|\<infty\>>> is not guaranteed to exist.\ 
 
   <\definition>
     Let <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<bbb-R\><rsub|\<infty\>>\<subseteq\><wide|\<bbb-R\>|\<wide-bar\>>>
@@ -38213,7 +38211,7 @@
   </proof>
 
   <\lemma>
-    <label|eq 20.513.248>Let <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>>
+    <label|lemma 20.513.248>Let <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>>
     be a measurable space and <math|\<mu\>:\<cal-A\>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>>
     a signed measure on <math|\<cal-A\>> then we have for the signed measure
     <math|-\<mu\>:\<cal-A\>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>>
@@ -38480,7 +38478,7 @@
     Define\ 
 
     <\equation>
-      <label|eq 20.742.248>B<rsub|\<infty\>>=<big|sqcup><rsub|n\<in\>\<bbb-N\>>B<rsub|n>\<in\>\<cal-A\><text|
+      <label|eq 20.724.148>B<rsub|\<infty\>>=<big|sqcup><rsub|n\<in\>\<bbb-N\>>B<rsub|n>\<in\>\<cal-A\><text|
       and >B=A\\B<rsub|\<infty\>>\<in\>\<cal-A\><text| then >B\<subseteq\>A
     </equation>
 
@@ -38690,7 +38688,8 @@
   </proof>
 
   <\theorem>
-    <label|Hahn Decomposition Theorem><dueto|Hahn Decomposition Theorem>Let
+    <label|Hahn Decomposition Theorem><index|Hahn Decomposition
+    Theorem><dueto|Hahn Decomposition Theorem>Let
     <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>> be a measurable space
     and <math|<rigid|\<mu\>:\<cal-A\>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>>>
     a signed measure on <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>>.
@@ -38866,18 +38865,446 @@
       </equation>
 
       To summarize we have by [eqs: <reference|eq 20.735.248>, <reference|eq
-      20.742.248>] and <math|P=X\\N> that\ 
+      20.742.248>] and <math|P=X\\N> that for a signed measure
+      <math|\<mu\>:\<cal-A\>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>> with
+      <math|<around*|{|\<mu\><around*|(|A|)>\|A\<in\>\<cal-A\>|}>\<subseteq\>\<bbb-R\><rsub|+1>>
+      we have
 
       <\equation*>
         N<text| is a negative set for <math|\<mu\><text|, >P<text| is a
-        positive set for >\<mu\><text| and >X=P<big|cup>N>>
+        positive set for >\<mu\><text|, <math|\<varnothing\>=P<big|cap>N> and
+        >X=P<big|cup>N>>
       </equation*>
 
-      <item*|<math|<around*|{|\<mu\><around*|(|A|)>\|A\<in\>\<cal-A\>|}>\<subseteq\>\<bbb-R\><rsub|-\<infty\>>>>
+      <item*|<math|<around*|{|\<mu\><around*|(|A|)>\|A\<in\>\<cal-A\>|}>\<subseteq\>\<bbb-R\><rsub|-\<infty\>>>>Using
+      [lemma: <reference|lemma 20.513.248>] we have that
+      <math|\<nu\>=<around*|(|-\<mu\>|)>:\<cal-A\>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>>
+      is a signed measure on <math|\<cal-A\>>. Further if
+      <math|x\<in\><around*|{|\<nu\><around*|(|A|)>\|A\<in\>\<cal-A\>|}>>
+      then <math|\<exists\>A\<in\>\<cal-A\>> such that
+      <math|x=\<nu\><around*|(|A|)>=-\<mu\><around*|(|A|)>\<subseteq\>\<bbb-R\><rsub|-\<infty\>>>.
+      For <math|\<mu\><around*|(|A|)>> we have either
+      <math|x=\<mu\><around*|(|A|)>\<in\>\<bbb-R\>\<Rightarrow\>-\<mu\><around*|(|A|)>\<in\>\<bbb-R\>>
+      or <math|\<mu\><around*|(|A|)>=-\<infty\>\<Rightarrow\>x=-\<mu\><around*|(|A|)>=\<infty\>>
+      which proves that <math|<around*|{|\<nu\><around*|(|A|)>\|A\<in\>\<cal-A\>|}>\<subseteq\>\<bbb-R\><rsub|\<infty\>>>.
+      \ Using then the previous case [see eq: <reference|eq 20.742.248>]
+      there exist a positive set <math|N> for <math|\<nu\>> and a negative
+      set <math|P> for <math|\<nu\>> such that
+      <math|P<big|cap>N=\<varnothing\>> and <math|X=P<big|cup>N>. Using
+      [lemma: <reference|lemma 20.513.248>] it follows that <math|P> is a
+      positive set for <math|-\<nu\>=-<around*|(|-\<mu\>|)>=\<mu\>> and
+      <math|N> is a negative set for <math|-\<nu\>=-<around*|(|-\<mu\>|)>=\<mu\>>.
+      Which conclude the prove for this case.
+    </description>
+  </proof>
+
+  The Hahn Decompositions allows us to write every signed measure as the
+  difference of two measures.
+
+  <\theorem>
+    <label|Jordon Decomposition theorem>Let
+    <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>> be a measurable space
+    and <math|\<mu\>:\<cal-A\>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>> a
+    signed measure on <math|\<cal-A\>>. Then for every Hahn decomposition
+    <math|<around*|(|P,N|)>> of <math|\<mu\>> we have that
+
+    <\equation*>
+      \<forall\>A\<in\>\<cal-A\><text| we have
+      >\<mu\><around*|(|A<big|cap>P|)>\<subset\><around*|[|0,\<infty\>|]>\<wedge\>-\<mu\><around*|(|A<big|cap>N|)>\<subseteq\><around*|[|0,\<infty\>|]>
+    </equation*>
+
+    <\equation*>
+      \<mu\><rsup|+>:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|]><text|
+      defined by >\<mu\><rsup|+><around*|(|A|)>=\<mu\><around*|(|A<big|cap>P|)><text|
+      is a measure on >\<cal-A\>
+    </equation*>
+
+    <\equation*>
+      \<mu\><rsup|->:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|]><text|
+      defined by >\<mu\><rsup|-><around*|(|A|)>=-\<mu\><around*|(|A<big|cap>N|)><text|
+      is a measure on >\<cal-A\>
+    </equation*>
+
+    <\equation*>
+      \<mu\><rsup|+><text| or >\<mu\><rsup|-><text| is finite>
+    </equation*>
+
+    <\equation*>
+      \<forall\>A\<in\>\<cal-A\><text| we have
+      >\<mu\><around*|(|A|)>=\<mu\><rsup|+><around*|(|A|)>-\<mu\><rsup|-><around*|(|A|)>
+    </equation*>
+
+    Further we have that\ 
+
+    <\equation*>
+      \<forall\>A\<in\>\<cal-A\><text| >\<mu\><rsup|+><around*|(|A|)>=sup<around*|(|<around*|{|\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\>\<wedge\>B\<subseteq\>A|}>|)><text|
+      and >\<mu\><rsup|-><around*|(|A|)>=sup<around*|(|<around*|{|-\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\>\<wedge\>B\<subseteq\>A|}>|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Let <math|A\<in\>\<cal-A\>>. As <math|P> is a positive set for
+    <math|\<mu\>> and <math|N> is a negative set for <math|N> we have that
+    <math|N,P\<in\>\<cal-A\>> so that <math|A<big|cap>P,A<big|cap>N\<in\>\<cal-A\>>
+    and as <math|A<big|cap>P\<subseteq\>P>, <math|A<big|cap>N\<subseteq\>N>
+    it follows that <math|0\<leqslant\>\<mu\><around*|(|A<big|cap>P|)>> and
+    <math|\<mu\><around*|(|A<big|cap>N|)>\<leqslant\>0> so that\ 
+
+    <\equation>
+      <label|eq 20.743.248>\<forall\>A\<in\>\<cal-A\><text| we have
+      >\<mu\><around*|(|A<big|cap>P|)>\<subset\><around*|[|0,\<infty\>|]>\<wedge\>-\<mu\><around*|(|A<big|cap>N|)>\<subseteq\><around*|[|0,\<infty\>|]>
+    </equation>
+
+    Further we have\ 
+
+    <\equation*>
+      \<mu\><rsup|+><around*|(|\<varnothing\>|)>=\<mu\><around*|(|\<varnothing\><big|cap>P|)>=\<mu\><around*|(|\<varnothing\>|)>=0<text|
+      and >\<mu\><rsup|-><around*|(|\<varnothing\>|)>=-\<mu\><around*|(|\<varnothing\><big|cap>N|)>=-\<mu\><around*|(|\<varnothing\>|)>=0
+    </equation*>
+
+    and for every <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\>>
+    pairwise disjoint that
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<mu\><rsup|+><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>>|<cell|=>|<cell|\<mu\><around*|(|<around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)><big|cap>P|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>><around*|(|A<rsub|i><big|cap>P|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|i><big|cap>P|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><rsup|+><around*|(|A<rsub|i>|)>>>|<row|<cell|\<mu\><rsup|-><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>>|<cell|=>|<cell|-\<mu\><around*|(|<around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)><big|cap>N|)>>>|<row|<cell|>|<cell|=>|<cell|-\<mu\><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>><around*|(|A<rsub|i><big|cap>N|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|-1|)>\<cdot\><big|sum><rsub|i-1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|i><big|cap>N|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|-1|)>\<cdot\><below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=1><rsup|n>\<mu\><around*|(|A<rsub|i><big|cap>N|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|extended limit properties>]>>>|<cell|<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=1><rsup|n><around*|(|-\<mu\><around*|(|A<rsub|i><big|cap>N|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=1><rsup|n>\<mu\><rsup|-><around*|(|A<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><rsup|-><around*|(|A<rsub|i>|)>>>>>
+    </eqnarray*>
+
+    Which proves that\ 
+
+    <\equation>
+      <label|eq 20.744.248>\<mu\><rsup|+>:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|]><text|
+      and >\<mu\><rsup|->:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|]><text|
+      are measures >
+    </equation>
+
+    For <math|\<mu\>> we have either:\ 
+
+    <\description>
+      <item*|<math|<around*|{|\<mu\><around*|(|A|)>\|A\<in\>\<cal-A\>|}>\<subseteq\>\<bbb-R\><rsub|\<infty\>>>>Suppose
+      that there exist a <math|A\<in\>\<cal-A\>> such that
+      <math|\<mu\><rsup|-><around*|(|A|)>=\<infty\>> then
+      <math|\<infty\>=-\<mu\><around*|(|A<big|cap>N|)>\<Rightarrow\>\<mu\><around*|(|A<big|cap>N|)>=-\<infty\>>
+      contradicting <math|<around*|{|\<mu\><around*|(|A|)>\|A\<in\>\<cal-A\>|}>\<subseteq\>\<bbb-R\><rsub|\<infty\>>>.
+      Hence we have that <math|\<forall\>A\<in\>\<cal-A\>>
+      <math|\<mu\><rsup|-><around*|(|A|)>\<subset\><around*|[|0,\<infty\>|[>>,
+      in other words <math|\<mu\><rsup|->> is finite.
+
+      <item*|<math|<around*|{|\<mu\><around*|(|A|)>\|A\<in\>\<cal-A\>|}>\<subseteq\>\<bbb-R\><rsub|-\<infty\>>>>Suppose
+      that there exist a <math|A\<in\>\<cal-A\>> such that
+      <math|\<mu\><rsup|+><around*|(|A|)>=\<infty\>> then
+      <math|\<mu\><around*|(|A<big|cap>N|)>=\<infty\>> contradicting
+      <math|<around*|{|\<mu\><around*|(|A|)>\|A\<in\>\<cal-A\>|}>\<subseteq\>\<bbb-R\><rsub|-\<infty\>>>.
+      Hence we have that <math|\<forall\>A\<in\>\<cal-A\>>
+      <math|\<mu\><around*|(|A|)>\<subset\><around*|[|0,\<infty\>|[>>, in
+      other words <math|\<mu\>> is finite.
     </description>
 
-    \;
+    Hence we have that\ 
+
+    <\equation>
+      <label|eq 20.745.248>\<mu\><rsup|+><text| is finite or
+      >\<mu\><rsup|-><text| is finite>
+    </equation>
+
+    Let <math|A\<in\>\<cal-A\>> then as <math|X=P<big|sqcup>N> and
+    <math|P<big|cap>N=\<varnothing\>> we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<mu\><around*|(|A|)>>|<cell|=>|<cell|\<mu\><around*|(|A<big|cap>X|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><around*|(|A<around*|(|<big|cap><around*|(|P<big|sqcup>N|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><around*|(|<around*|(|A<big|cap>P|)><big|cup><around*|(|A<big|cap>N|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|P<big|cap>N=\<varnothing\>>>|<cell|\<mu\><around*|(|A<big|cap>P|)>+\<mu\><around*|(|A<big|cap>N|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><rsup|+><around*|(|A|)>-\<mu\><rsup|-><around*|(|A|)>>>>>
+    </eqnarray*>
+
+    Hence we have\ 
+
+    <\equation>
+      <label|eq 20.746.248>\<forall\>A\<in\>\<cal-A\><text| we have
+      >\<mu\><around*|(|A|)>=\<mu\><rsup|+><around*|(|A|)>-\<mu\><rsup|-><around*|(|A|)>
+    </equation>
+
+    So the only thing left to prove is that we can define
+    <math|\<mu\><rsup|+>> and <math|\<mu\><rsup|->> in terms of the
+    supremums. Let <math|A\<in\>\<cal-A\>> then if <math|B\<in\>\<Alpha\>>
+    with <math|B\<subseteq\>A> we have\ 
+
+    <\equation*>
+      \<mu\><around*|(|B|)>\<equallim\><rsub|<text|[eq: <reference|eq
+      20.746.248>]>>\<mu\><rsup|+><around*|(|B|)>-\<mu\><rsup|-><around*|(|B|)><below|\<leqslant\>|<text|[eq:
+      <reference|eq 20.745.248>]>\<wedge\><text|[theorem: <reference|extended
+      0\<less\>=x and 0\<less\>=y then x-y\<less\>=x>]>>\<mu\><rsup|+><around*|(|B|)><below|\<leqslant\>|<text|[theorem:
+      <reference|measure measure space properties
+      (1)>]>>\<mu\><rsup|+><around*|(|A|)>
+    </equation*>
+
+    so that\ 
+
+    <\equation>
+      <label|eq 20.747.248>sup<around*|(|<around*|{|\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\>\<wedge\>B\<subseteq\>A|}>|)>\<leqslant\>\<mu\><rsup|+><around*|(|A|)>
+    </equation>
+
+    Further as <math|A<big|cap>P\<in\>\<cal-A\>> and
+    <math|A<big|cap>P\<subseteq\>A> and <math|\<mu\><rsup|+><around*|(|A|)>=\<mu\><around*|(|A<big|cap>P|)>>
+    it follows that <math|<rigid|\<mu\><rsup|+><around*|(|A|)>\<in\><around*|{|\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\>\<wedge\>B\<subseteq\>A|}>>>
+    so that <math|\<mu\><rsup|+><around*|(|A|)>\<leqslant\>sup<around*|(|<around*|{|\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\>\<wedge\>B\<subseteq\>A|}>|)>>
+    which combined with [eq: <reference|eq 20.747.248>] proves that
+    <math|\<mu\><rsup|+><around*|(|A|)>=sup<around*|(|<around*|{|\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\>\<wedge\>B\<subseteq\>A|}>|)>>.
+    Hence\ 
+
+    <\equation>
+      <label|eq 20.748.248>\<forall\>A\<in\>\<cal-A\><text| we have
+      >\<mu\><rsup|+><around*|(|<around*|(|A|)>|)>=sup<around*|(|<around*|{|\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\>\<wedge\>B\<subseteq\>A|}>|)>
+    </equation>
+
+    Similar, let <math|A\<in\>\<cal-A\>> then if <math|B\<in\>\<cal-A\>> with
+    <math|B\<subseteq\>A> we have\ 
+
+    <\equation*>
+      -\<mu\><around*|(|B|)>\<equallim\><rsub|<text|[eq: <reference|eq
+      20.746.248>]>>\<mu\><rsup|-><around*|(|B|)>-\<mu\><rsup|+><around*|(|B|)><below|\<leqslant\>|<text|[eq:
+      <reference|eq 20.745.248>]>\<wedge\><text|[theorem: <reference|extended
+      0\<less\>=x and 0\<less\>=y then x-y\<less\>=x>]>>\<mu\><rsup|-><around*|(|B|)><below|\<leqslant\>|<text|[theorem:
+      <reference|measure measure space properties
+      (1)>]>>\<mu\><rsup|+><around*|(|A|)>
+    </equation*>
+
+    so that\ 
+
+    <\equation>
+      <label|eq 20.749.248>sup<around*|(|<around*|{|-\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\>\<wedge\>B\<subseteq\>A|}>|)>\<leqslant\>\<mu\><rsup|+><around*|(|A|)>
+    </equation>
+
+    Further as <math|A<big|cap>N\<in\>\<cal-A\>>,
+    <math|A<big|cap>N\<subseteq\>A> and <math|\<mu\><rsup|-><around*|(|A|)>=-\<mu\><around*|(|N<big|cap>A|)>>,
+    we have that <rigid|<math|\<mu\><rsup|-><around*|(|A|)>\<in\><around*|{|-\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\><text|
+    and >B\<subseteq\>A|}>>> so that <math|\<mu\><rsup|-><around*|(|A|)>\<leqslant\>sup<around*|(|<around*|{|-\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\><text|
+    and >B\<subseteq\>A|}>|)>>. Combining this with [eq: <reference|eq
+    20.749.248>] proves that <math|\<mu\><rsup|-><around*|(|A|)>=sup<around*|(|<around*|{|-\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\>\<wedge\>B\<subseteq\>A|}>|)>>
+    Hence\ 
+
+    <\equation>
+      \<forall\>A\<in\>\<cal-A\><text| we have
+      >\<mu\><rsup|-><around*|(|A|)>=sup<around*|(|<around*|{|-\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\>\<wedge\>B\<subseteq\>A|}>|)>
+    </equation>
   </proof>
+
+  <\theorem>
+    <label|Jordon Decomposition><index|Jordon Decomposition><dueto|Jordon
+    Decomposition>Let <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>> be a
+    measurable space and <math|\<mu\>:\<cal-A\>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>>
+    a signed measure then\ 
+
+    <\equation*>
+      \<forall\>A\<in\>\<cal-A\><text| we have
+      >sup<around*|(|<around*|{|\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\>\<wedge\>B\<subseteq\>A|}>|)>\<subseteq\><around*|[|0,\<infty\>|]><text|
+      and >sup<around*|(|<around*|{|-\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\>\<wedge\>B\<subseteq\>A|}>|)>\<subseteq\><around*|[|0,\<infty\>|]>
+    </equation*>
+
+    <\equation*>
+      \<mu\><rsup|+>:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|]><text|
+      defined by >\<mu\><rsup|+><around*|(|A|)>=sup<around*|(|<around*|{|\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\>\<wedge\>B\<subseteq\>A|}>|)><text|
+      is a measure on >\<cal-A\>
+    </equation*>
+
+    <\equation*>
+      \<mu\><rsup|->:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|]><text|
+      defined by >\<mu\><rsup|-><around*|(|A|)>=sup<around*|(|<around*|{|-\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\>\<wedge\>B\<subseteq\>A|}>|)><text|
+      is a measure on >\<cal-A\>
+    </equation*>
+
+    <\equation*>
+      \<mu\><rsup|+><text| or >\<mu\><rsup|-><text| is finite>
+    </equation*>
+
+    <\equation*>
+      \<mu\>=\<mu\><rsup|+>-\<mu\><rsup|->
+    </equation*>
+
+    The pair <math|<around*|(|\<mu\><rsup|+>,\<mu\><rsup|->|)>> is called a
+    <with|font-series|bold|Jordon Decomposition> of <math|\<mu\>>.
+    <math|\<mu\><rsup|+>> is called the <with|font-series|bold|positive part
+    of <math|\<mu\>>> and <math|\<mu\><rsup|->> is called the
+    <with|font-series|bold|negative part of <math|\<mu\>>.> \ The function\ 
+
+    <\equation*>
+      <around*|\||\<mu\>|\|>=\<mu\><rsup|+>+\<mu\><rsup|->:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|]><text|
+      is a measure and >\<forall\>A\<in\>\<cal-A\><text| we have
+      ><around*|\||\<mu\><around*|(|A|)>|\|>\<leqslant\><around*|\||\<mu\>|\|><around*|(|A|)>
+    </equation*>
+
+    The <with|font-series|bold|total variation> of the signed measure
+    <math|\<mu\>> noted as <math|<around*|\<\|\|\>|\<mu\>|\<\|\|\>>> is
+    defined to be\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|\<mu\>|\<\|\|\>>=<around*|\||\<mu\>|\|><around*|(|X|)>=\<mu\><rsup|+><around*|(|X|)>+\<mu\><rsup|-><around*|(|X|)>
+    </equation*>
+
+    Further if there exists a measure <math|\<nu\>> on
+    <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>> such that
+    <math|\<forall\>A\<in\>\<cal-A\>> we have that
+    <math|<around*|\||\<mu\><around*|(|A|)>|\|>\<leqslant\>\<nu\><around*|(|A|)>>
+    then <math|\<forall\>A\<in\>\<cal-A\>> we have that
+    <math|<around*|\||\<mu\>|\|><around*|(|A|)>\<leqslant\>\<nu\><around*|(|A|)>>.
+    In other words <math|<around*|\||\<mu\>|\|>> is the smallest positive
+    measure such that <math|\<forall\>A\<in\>\<cal-A\>> we have
+    <math|<around*|\||\<mu\><around*|(|A|)>|\|>\<less\>\<nu\><around*|(|A|)>>.
+  </theorem>
+
+  <\proof>
+    Using the Hahn Decomposition Theorem [see theorem: <reference|Hahn
+    Decomposition Theorem>] there exist a Hahn Decomposition
+    <math|<around*|(|P,N|)>> of <math|\<mu\>>. Using the previous theorem
+    [theorem: <reference|Jordon Decomposition theorem>] we have that\ 
+
+    <\equation>
+      <label|eq 20.751.248>\<forall\>A\<in\>\<cal-A\><text| we have
+      >\<mu\><around*|(|A<big|cap>P|)>\<subset\><around*|[|0,\<infty\>|]>\<wedge\>-\<mu\><around*|(|A<big|cap>N|)>\<subseteq\><around*|[|0,\<infty\>|]>
+    </equation>
+
+    <\equation>
+      <label|eq 20.752.248>\<mu\><rsup|+>:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|]><text|
+      defined by >\<mu\><rsup|+><around*|(|A|)>=\<mu\><around*|(|A<big|cap>P|)><text|
+      is a measure on >\<cal-A\>
+    </equation>
+
+    <\equation>
+      <label|eq 20.753.248>\<mu\><rsup|->:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|]><text|
+      defined by >\<mu\><rsup|-><around*|(|A|)>=-\<mu\><around*|(|A<big|cap>N|)><text|
+      is a measure on >\<cal-A\>
+    </equation>
+
+    <\equation>
+      <label|eq 20.754.248>\<mu\><rsup|+><text| or >\<mu\><rsup|-><text| is
+      finite>
+    </equation>
+
+    <\equation>
+      <label|eq 20.755.243>\<forall\>A\<in\>\<cal-A\><text| we have
+      >\<mu\><around*|(|A|)>=\<mu\><rsup|+><around*|(|A|)>-\<mu\><rsup|-><around*|(|A|)>
+    </equation>
+
+    <\equation>
+      <label|eq 20.756.248>\<forall\>A\<in\>\<cal-A\><text|
+      >\<mu\><rsup|+><around*|(|A|)>=sup<around*|(|<around*|{|\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\>\<wedge\>B\<subseteq\>A|}>|)><text|
+      and >\<mu\><rsup|-><around*|(|A|)>=sup<around*|(|<around*|{|-\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\>\<wedge\>B\<subseteq\>A|}>|)>
+    </equation>
+
+    Applying [eq: <reference|eq 20.756.248>] on [eqs: <reference|eq
+    20.751.248>, <reference|eq 20.752.248>, <reference|eq 20.753.248>,
+    <reference|eq 20.754.248> and <reference|eq 20.755.243>] we have that
+
+    <\equation*>
+      \<forall\>A\<in\>\<cal-A\><text| \ >sup<around*|(|<around*|{|\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\>\<wedge\>B\<subseteq\>A|}>|)>\<subseteq\><around*|[|0,\<infty\>|]><text|
+      and >sup<around*|(|<around*|{|-\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\>\<wedge\>B\<subseteq\>A|}>|)>\<subseteq\><around*|[|0,\<infty\>|]><text|>
+    </equation*>
+
+    <\equation*>
+      \<mu\><rsup|+>:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|]><text|
+      defined by >\<mu\><rsup|+><around*|(|A|)>=sup<around*|(|<around*|{|\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\>\<wedge\>B\<subseteq\>A|}>|)>=\<mu\><around*|(|A<big|cap>P|)><text|
+      is a measure on >\<cal-A\>
+    </equation*>
+
+    <\equation*>
+      \<mu\><rsup|->:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|]><text|
+      defined by >\<mu\><rsup|-><around*|(|A|)>=sup<around*|(|<around*|{|-\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\>\<wedge\>B\<subseteq\>A|}>|)>=-\<mu\><around*|(|A<big|cap>N|)><text|
+      is a measure on >\<cal-A\><text|>
+    </equation*>
+
+    <\equation*>
+      \<mu\><rsup|+><text| or >\<mu\><rsup|-><text| is finite>
+    </equation*>
+
+    <\equation*>
+      \<forall\>A\<in\>\<cal-A\><text| we have
+      >\<mu\><around*|(|A|)>=\<mu\><rsup|+><around*|(|A|)>-\<mu\><rsup|-><around*|(|A|)>
+    </equation*>
+
+    As <math|\<mu\><rsup|+>>, <math|\<mu\><rsup|->> are measures on
+    <math|\<cal-A\>> we have by [theorem: <reference|measure sum amd scalar
+    product of measures>] that\ 
+
+    <\equation*>
+      <around*|\||\<mu\>|\|>=\<mu\><rsup|+>+\<mu\><rsup|->:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|]><text|
+      is a measure on >\<cal-A\>
+    </equation*>
+
+    Let <math|A\<in\>\<cal-A\>> then
+
+    <\equation*>
+      <around*|\||\<mu\><around*|(|A|)>|\|>=<around*|\||\<mu\><rsup|+><around*|(|A|)>-\<mu\><rsup|-><around*|(|A|)>|\|>\<leqslant\><around*|\||\<mu\><rsup|+><around*|(|A|)>|\|>+<around*|\||\<mu\><rsup|-><around*|(|A|)>|\|>\<equallim\><rsub|0\<leqslant\>\<mu\><rsup|+><around*|(|A|)>,\<mu\><rsup|-><around*|(|A|)>>\<mu\><rsup|+><around*|(|A|)>+\<mu\><rsup|-><around*|(|A|)>=<around*|\||\<mu\>|\|><around*|(|A|)>
+    </equation*>
+
+    which proves that\ 
+
+    <\equation*>
+      \<forall\>A\<in\>\<cal-A\><text| we have
+      ><around*|\||\<mu\><around*|(|A|)>|\|>\<leqslant\><around*|\||\<mu\>|\|><around*|(|A|)>
+    </equation*>
+
+    Let <math|\<nu\>> be a measure on <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>>
+    such that <math|\<forall\>A\<in\>\<cal-A\>> we have
+    <math|<around*|\||\<mu\><around*|(|A|)>|\|>\<less\>\<nu\><around*|(|A|)>>.
+    If <math|A\<in\>\<cal-A\>> then we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<mu\><rsup|+><around*|(|A|)>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.752.248>]>>>|<cell|\<mu\><around*|(|A<big|cap>P|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|0\<leqslant\>\<mu\><rsup|+><around*|(|A|)>>>|<cell|<around*|\||\<mu\><around*|(|A<big|cap>P|)>|\|>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|\<nu\><around*|(|A<big|cap>P|)>>>|<row|<cell|\<mu\><rsup|-><around*|(|A|)>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.753.248>]>>>|<cell|-\<mu\><around*|(|A<big|cap>N|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|0\<leqslant\>\<mu\><rsup|-><around*|(|A|)>>>|<cell|<around*|\||\<mu\><around*|(|A<big|cap>N|)>|\|>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|\<nu\><around*|(|A<big|cap>N|)>>>>>
+    </eqnarray*>
+
+    So that\ 
+
+    <\equation*>
+      <around*|\||\<mu\>|\|><around*|(|A|)>=\<mu\><rsup|+><around*|(|A|)>+\<mu\><rsup|-><around*|(|A|)>\<leqslant\>\<nu\><around*|(|A<big|cap>P|)>+\<nu\><around*|(|A<big|cap>N|)>\<equallim\><rsub|N<big|cap>P=\<emptyset\>>\<nu\><around*|(|A|)>
+    </equation*>
+
+    proving that\ 
+
+    <\equation*>
+      \<forall\>A\<in\>\<cal-A\><text| we have
+      ><around*|\||\<mu\>|\|><around*|(|A|)>\<leqslant\>\<nu\><around*|(|A|)>
+    </equation*>
+  </proof>
+
+  <subsection|Complex Measure>
+
+  Just as we defined signed measures it is possible to define complex
+  measures.
+
+  <\definition>
+    <label|complex measure><index|complex measure>Let
+    <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>> be a measurable space
+    then a function <math|\<mu\>:\<cal-A\>\<rightarrow\>\<bbb-C\>> is a
+    <with|font-series|bold|complex measure> if
+
+    <\enumerate>
+      <item><math|\<mu\><around*|(|\<emptyset\>|)>=0>
+
+      <item><math|\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\><rsub|0>>\<subseteq\>\<cal-A\>>
+      paiwise disjoint we have\ 
+
+      <\equation*>
+        <big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|i>|)>=<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|i=1><rsup|n>\<mu\><around*|(|A<rsub|i>|)><text|
+        exists >
+      </equation*>
+
+      and
+
+      <\equation*>
+        \<mu\><around*|(|<big|cup><rsub|i=1><rsup|\<infty\>>A<rsub|i>|)>=<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|i>|)>
+      </equation*>
+
+      \ 
+    </enumerate>
+
+    <\note>
+      As <math|\<forall\>A\<in\>\<cal-A\>> we have that
+      <math|\<mu\><around*|(|A|)>\<in\>\<bbb-C\>> it follows that
+      <math|Img<around*|(|\<mu\><around*|(|A|)>|)>,Re<around*|(|\<mu\><around*|(|A|)>|)>\<in\>\<bbb-R\>>,
+      or the real and imaginary parts are finite.
+    </note>
+  </definition>
+
+  \;
 
   \;
 
@@ -38902,6 +39329,8 @@
     <associate|Fatou's lemma|<tuple|20.433|?>>
     <associate|Hahn Decomposition Theorem|<tuple|20.520|?>>
     <associate|Holder's Inequality|<tuple|20.472|?>>
+    <associate|Jordon Decomposition|<tuple|20.522|?>>
+    <associate|Jordon Decomposition theorem|<tuple|20.521|?>>
     <associate|LP space density (1)|<tuple|20.491|?>>
     <associate|LP space density (2)|<tuple|20.493|?>>
     <associate|LP spaces|<tuple|20.453|?>>
@@ -38981,6 +39410,10 @@
     <associate|auto-130|<tuple|20.7|?>>
     <associate|auto-131|<tuple|20.7.1|?>>
     <associate|auto-132|<tuple|20.7.2|?>>
+    <associate|auto-133|<tuple|Hahn Decomposition Theorem|?>>
+    <associate|auto-134|<tuple|Jordon Decomposition|?>>
+    <associate|auto-135|<tuple|20.7.3|?>>
+    <associate|auto-136|<tuple|complex measure|?>>
     <associate|auto-14|<tuple|<with|mode|<quote|math>|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>>|?>>
     <associate|auto-15|<tuple|20.1.5|?>>
     <associate|auto-16|<tuple|<with|mode|<quote|math>|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i><with|mode|<quote|text>|
@@ -39092,6 +39525,7 @@
     <associate|complex measurable function condition|<tuple|20.440|?>>
     <associate|complex measurable function properties|<tuple|20.444|?>>
     <associate|complex measurable space|<tuple|20.437|?>>
+    <associate|complex measure|<tuple|20.523|?>>
     <associate|corollary 20.111.218|<tuple|20.119|?>>
     <associate|eq 15.81.439|<tuple|20.393|?>>
     <associate|eq 18.10.021|<tuple|20.84|?>>
@@ -39556,7 +39990,6 @@
     <associate|eq 20.51.156|<tuple|20.52|?>>
     <associate|eq 20.510.231|<tuple|20.500|?>>
     <associate|eq 20.511.231|<tuple|20.501|?>>
-    <associate|eq 20.513.248|<tuple|20.514|?>>
     <associate|eq 20.515.232|<tuple|20.522|?>>
     <associate|eq 20.515.233|<tuple|20.517|?>>
     <associate|eq 20.516.232|<tuple|20.523|?>>
@@ -39794,6 +40227,7 @@
     <associate|eq 20.721.248|<tuple|20.721|?>>
     <associate|eq 20.722.248|<tuple|20.722|?>>
     <associate|eq 20.723.248|<tuple|20.723|?>>
+    <associate|eq 20.724.148|<tuple|20.724|?>>
     <associate|eq 20.725.248|<tuple|20.725|?>>
     <associate|eq 20.726.248|<tuple|20.726|?>>
     <associate|eq 20.727.248|<tuple|20.727|?>>
@@ -39812,6 +40246,19 @@
     <associate|eq 20.740.248|<tuple|20.740|?>>
     <associate|eq 20.741.248|<tuple|20.741|?>>
     <associate|eq 20.742.248|<tuple|20.742|?>>
+    <associate|eq 20.743.248|<tuple|20.743|?>>
+    <associate|eq 20.744.248|<tuple|20.744|?>>
+    <associate|eq 20.745.248|<tuple|20.745|?>>
+    <associate|eq 20.746.248|<tuple|20.746|?>>
+    <associate|eq 20.747.248|<tuple|20.747|?>>
+    <associate|eq 20.748.248|<tuple|20.748|?>>
+    <associate|eq 20.749.248|<tuple|20.749|?>>
+    <associate|eq 20.751.248|<tuple|20.751|?>>
+    <associate|eq 20.752.248|<tuple|20.752|?>>
+    <associate|eq 20.753.248|<tuple|20.753|?>>
+    <associate|eq 20.754.248|<tuple|20.754|?>>
+    <associate|eq 20.755.243|<tuple|20.755|?>>
+    <associate|eq 20.756.248|<tuple|20.756|?>>
     <associate|eq 20.76.200|<tuple|20.97|?>>
     <associate|eq 20.77.200|<tuple|20.98|?>>
     <associate|eq 20.78.200|<tuple|20.99|?>>
@@ -39836,7 +40283,7 @@
     <associate|eq 20.99.200|<tuple|20.142|?>>
     <associate|extended -(x.y)|<tuple|20.36|?>>
     <associate|extended 0\<less\>=x and 0\<less\>=y then
-    x\<less\>=x-y\<less\>=x|<tuple|20.27|?>>
+    x-y\<less\>=x|<tuple|20.27|?>>
     <associate|extended 0\<less\>=y and z=x+y then
     x\<less\>=z|<tuple|20.32|?>>
     <associate|extended 0\<less\>x and 0\<less\>=y then
@@ -39974,6 +40421,7 @@
     <associate|lemma 20.480.246|<tuple|20.488|?>>
     <associate|lemma 20.482.247|<tuple|20.489|?>>
     <associate|lemma 20.491.248|<tuple|20.492|?>>
+    <associate|lemma 20.513.248|<tuple|20.514|?>>
     <associate|lemma 20.514.248|<tuple|20.515|?>>
     <associate|lemma 20.515.248|<tuple|20.516|?>>
     <associate|lemma 20.516.248|<tuple|20.517|?>>
@@ -39981,8 +40429,6 @@
     <associate|lemma 20.80.156|<tuple|20.88|?>>
     <associate|lemma 20.90.156|<tuple|20.102|?>>
     <associate|lemma 20.95.156|<tuple|20.107|?>>
-    <associate|lemma20.514.248|<tuple|20.515|?>>
-    <associate|limit based on supremum and infinnum|<tuple|20.80|?>>
     <associate|measurable function|<tuple|20.311|?>>
     <associate|measurable function (1)|<tuple|20.317|?>>
     <associate|measurable function (2)|<tuple|20.319|?>>
