@@ -39125,18 +39125,23 @@
     </equation*>
 
     <\equation*>
-      \<mu\><rsup|+><text| or >\<mu\><rsup|-><text| is finite>
+      \<mu\><rsup|+><text| or >\<mu\><rsup|-><text| are finite>
     </equation*>
 
     <\equation*>
       \<mu\>=\<mu\><rsup|+>-\<mu\><rsup|->
     </equation*>
 
-    The pair <math|<around*|(|\<mu\><rsup|+>,\<mu\><rsup|->|)>> is called a
-    <with|font-series|bold|Jordon Decomposition> of <math|\<mu\>>.
-    <math|\<mu\><rsup|+>> is called the <with|font-series|bold|positive part
-    of <math|\<mu\>>> and <math|\<mu\><rsup|->> is called the
-    <with|font-series|bold|negative part of <math|\<mu\>>.> \ The function\ 
+    Further there exist a Hahn Decomposition <math|<around*|(|P,N|)>> of
+    <math|\<mu\>> such that\ 
+
+    <\equation*>
+      \<forall\>A\<in\>\<cal-A\><text| we have
+      >\<mu\><rsup|+><around*|(|A|)>=\<mu\><around*|(|A|)><text| and
+      >\<mu\><rsup|-><around*|(|A<big|cap>P|)>=-\<mu\><around*|(|A<big|cap>N|)>
+    </equation*>
+
+    The function\ 
 
     <\equation*>
       <around*|\||\<mu\>|\|>=\<mu\><rsup|+>+\<mu\><rsup|->:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|]><text|
@@ -39144,12 +39149,12 @@
       ><around*|\||\<mu\><around*|(|A|)>|\|>\<leqslant\><around*|\||\<mu\>|\|><around*|(|A|)>
     </equation*>
 
-    The <with|font-series|bold|total variation> of the signed measure
-    <math|\<mu\>> noted as <math|<around*|\<\|\|\>|\<mu\>|\<\|\|\>>> is
-    defined to be\ 
+    For every Hahn Decomposition <math|<around*|(|P<rprime|'>,N<rprime|'>|)>>
+    of <math|\<mu\>> we have\ 
 
     <\equation*>
-      <around*|\<\|\|\>|\<mu\>|\<\|\|\>>=<around*|\||\<mu\>|\|><around*|(|X|)>=\<mu\><rsup|+><around*|(|X|)>+\<mu\><rsup|-><around*|(|X|)>
+      \<forall\>A\<in\>\<cal-A\><text| we have
+      >\<mu\><rsup|+><around*|(|A|)>=\<mu\><around*|(|A<big|cap>P<rprime|'>|)>\<wedge\>\<mu\><rsup|-><around*|(|A|)>=-\<mu\><around*|(|A<big|cap>N<rprime|'>|)>
     </equation*>
 
     Further if there exists a measure <math|\<nu\>> on
@@ -39161,6 +39166,19 @@
     In other words <math|<around*|\||\<mu\>|\|>> is the smallest positive
     measure such that <math|\<forall\>A\<in\>\<cal-A\>> we have
     <math|<around*|\||\<mu\><around*|(|A|)>|\|>\<less\>\<nu\><around*|(|A|)>>.
+    The pair <math|<around*|(|\<mu\><rsup|+>,\<mu\><rsup|->|)>> is called a
+    <with|font-series|bold|Jordon Decomposition> of <math|\<mu\>>.
+    <math|\<mu\><rsup|+>> is called the <with|font-series|bold|positive part
+    of <math|\<mu\>>> and <math|\<mu\><rsup|->> is called the
+    <with|font-series|bold|negative part of <math|\<mu\>>.> The function
+    <math|<around*|\||f|\|>> is called the <with|font-series|bold|variation
+    of <math|\<mu\>>>. the <with|font-series|bold|total variation> of the
+    signed measure <math|\<mu\>> noted as
+    <math|<around*|\<\|\|\>|\<mu\>|\<\|\|\>>> is defined to be\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|\<mu\>|\<\|\|\>>=<around*|\||\<mu\>|\|><around*|(|X|)>=\<mu\><rsup|+><around*|(|X|)>+\<mu\><rsup|-><around*|(|X|)>
+    </equation*>
   </theorem>
 
   <\proof>
@@ -39252,6 +39270,18 @@
     <\equation*>
       \<forall\>A\<in\>\<cal-A\><text| we have
       ><around*|\||\<mu\><around*|(|A|)>|\|>\<leqslant\><around*|\||\<mu\>|\|><around*|(|A|)>
+    </equation*>
+
+    Further if <math|<around*|(|P<rprime|'>,N<rprime|'>|)>> is any Hahn
+    Decomposition of <math|\<mu\>> we have by [theorem: <reference|Jordon
+    Decomposition theorem>] that\ 
+
+    <\equation*>
+      \<mu\><rsup|+><around*|(|A|)>=sup<around*|(|<around*|{|\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\>\<wedge\>B\<subseteq\>A|}>|)>=\<mu\><around*|(|A<big|cap>P<rprime|'>|)><rsup|>
+    </equation*>
+
+    <\equation*>
+      \<mu\><rsup|-><around*|(|A|)>=sup<around*|(|<around*|{|-\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\>\<wedge\>B\<subseteq\>A|}>|)>=\<mu\><around*|(|A<big|cap>N<rprime|'>|)>
     </equation*>
 
     Let <math|\<nu\>> be a measure on <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>>
@@ -40133,7 +40163,7 @@
     proving that\ 
 
     <\equation>
-      <label|eq 20.774.248>A<big|cup>B=<big|cup><rsub|i=1><rsup|n+m>C<rsub|i>
+      <label|eq 20.775.248>A<big|cup>B=<big|cup><rsub|i=1><rsup|n+m>C<rsub|i>
     </equation>
 
     Further If <math|i,j\<in\><around*|{|1,\<ldots\>,n+m|}>> with
@@ -40156,7 +40186,7 @@
     combining this with [eq: <reference|eq 20.774.248>] gives
 
     <\equation>
-      <label|eq 20.775.248><around*|{|C<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\><text|
+      <label|eq 20.776.248><around*|{|C<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\><text|
       is pairwise disjoint >
     </equation>
 
@@ -40164,7 +40194,7 @@
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|<big|sum><rsub|i=1><rsup|n><around*|\||\<mu\><around*|(|A<rsub|i>|)>|\|>+<big|sum><rsub|i=1><rsup|m><around*|\||\<mu\><around*|(|B<rsub|i>|)>|\|>>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n><around*|\||\<mu\><around*|(|C<rsub|i>|)>|\|>+<big|sum><rsub|i=1><rsup|m><around*|\||\<mu\><around*|(|C<rsub|i+n>|)>|\|>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n><around*|\||\<mu\><around*|(|C<rsub|i>|)>|\|>+<big|sum><rsub|i=n+1><rsup|n+m><around*|\||\<mu\><around*|(|C<rsub|i>|)>|\|>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n+m><around*|\||\<mu\><around*|(|C<rsub|i>|)>|\|>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|sup<around*|(|<around*|{|<big|sum><rsub|i=1><rsup|n><around*|\||\<mu\><around*|(|C<rsub|i>|)>|\|>\|n\<in\>\<bbb-N\><rsub|0>\<wedge\><around*|{|C<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\>\<wedge\><big|sqcup><rsub|i=1><rsup|n>C<rsub|i>=A<big|cup>B|}>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||\<mu\>|\|><around*|(|A<big|sqcup>B|)><eq-number><label|eq
-      20.776.248>>>>>
+      20.777.248>>>>>
     </eqnarray*>
 
     Then as <math|<big|sum><rsub|i=1><rsup|m><around*|\||\<mu\><around*|(|B<rsub|i>|)>|\|>\<in\>\<bbb-R\>>
@@ -40586,17 +40616,278 @@
     </description>
   </proof>
 
-  Next we prove that <math|<around*|\<langle\>|M<around*|(|X,\<cal-A\>,\<bbb-K\>|)>,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+  Next we prove that <math|<around*|\<langle\>|M<around*|[|X,\<cal-A\>,\<bbb-K\>|]>,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
   is a normed space.
 
   <\theorem>
-    <label|space of measures normed space><math|<around*|\<langle\>|M<around*|(|X,\<cal-A\>,\<bbb-R\>|)>,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    <label|space of measures normed space real case>Let
+    <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>> be a measurable space
+    then <around*|\<langle\>|M<around*|[|X,\<cal-A\>,\<bbb-R\>|]>,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
     is a normed space
   </theorem>
 
   <\proof>
-    \;
+    Let <math|\<mu\>\<in\>M<around*|[|X,\<cal-A\>,\<bbb-R\>|]>> and let
+    <math|<around*|(|\<mu\><rsup|+>,\<mu\><rsup|->|)>> be the Jordon
+    Decompsition of <math|\<mu\>> and <math|<rigid|<around*|(|<around*|(|\<alpha\>\<cdot\>\<mu\>|)><rsup|+>,<around*|(|\<alpha\>\<cdot\>\<mu\>|)><rsup|->|)>>>
+    be the Jordon Decomposition of <math|\<alpha\>\<cdot\>\<mu\>> [see
+    theorem: <reference|Jordon Decomposition> for the existence]. Let further
+    <math|<rigid|<around*|(|P,N|)>>> be a Hahn Decomposition of <math|\<mu\>>
+    [see theorem: <reference|Hahn Decomposition Theorem>]. First we consider
+    the cases where <math|\<alpha\>\<in\><around*|[|0,\<infty\>|]>>.\ 
+
+    <\description>
+      <item*|<math|0\<leqslant\>\<alpha\>>>Let <math|A\<in\>\<cal-A\>> with
+      <math|A\<subseteq\>P> a positive set then we have
+      <math|0\<leqslant\>\<mu\><around*|(|A|)>> so that
+      <math|<rigid|0<below|\<leqslant\>|0\<leqslant\>\<alpha\>>\<alpha\>\<cdot\>\<mu\><around*|(|A|)>=<around*|(|\<alpha\>\<cdot\>\<mu\>|)><around*|(|A|)>>>
+      which proves by [definition: <reference|signed measure
+      positive/negative set>] that <math|P> is a positive set for
+      <math|\<alpha\>\<cdot\>\<mu\>>. Let <math|A\<in\>\<cal-A\>> with
+      <math|A\<subseteq\>N> a negative set then we have
+      <math|\<mu\><around*|(|A|)>\<leqslant\>0> so that
+      <rigid|<math|<around*|(|\<alpha\>\<cdot\>\<mu\>|)><around*|(|A|)>=\<alpha\>\<cdot\>\<mu\><around*|(|A|)><below|\<leqslant\>|0\<leqslant\>\<alpha\>>>0>
+      which proves that <math|N> is a negative set for
+      <math|\<alpha\>\<cdot\>\<mu\>>. Hence we have that\ 
+
+      <\equation*>
+        <around*|(|P,N|)><text| is a Hahn Decomposition of
+        >\<alpha\>\<cdot\>\<mu\>
+      </equation*>
+
+      Then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<alpha\>\<cdot\>\<mu\>|\<\|\|\>>>|<cell|=>|<cell|<around*|\||\<alpha\>\<cdot\>\<mu\>|\|><around*|(|X|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<alpha\>\<cdot\>\<mu\>|)><rsup|+><around*|(|X|)>+<around*|(|\<alpha\>\<cdot\>\<mu\>|)><rsup|-><around*|(|X|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|Jordon Decomposition>]>>>|<cell|<around*|(|\<alpha\>\<cdot\>\<mu\>|)><around*|(|X<big|cap>P|)>-<around*|(|\<alpha\>\<cdot\>\<mu\>|)><around*|(|X<big|cap>N|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\>\<mu\><around*|(|X<big|cap>P|)>-\<alpha\>\<cdot\>\<mu\><around*|(|X<big|cap>N|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\><around*|(|\<mu\><around*|(|X<big|cap>P|)>-\<mu\><around*|(|X<big|cap>N|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\><around*|(|\<mu\><rsup|+><around*|(|X|)>+\<mu\><rsup|-><around*|(|X|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\><around*|\||\<mu\>|\|><around*|(|X|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\><around*|\<\|\|\>|\<mu\>|\<\|\|\>>>>|<row|<cell|>|<cell|<below|=|0\<leqslant\>\<alpha\>>>|<cell|<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|\<mu\>|\<\|\|\>>>>>>
+      </eqnarray*>
+
+      \ <item*|<math|\<alpha\>\<less\>0>>Then if <math|A\<in\>\<cal-A\>> with
+      <math|A\<subseteq\>P> a positive set for <math|\<mu\>> then
+      <math|0\<leqslant\>\<mu\><around*|(|A|)>> so that
+      <math|<around*|(|\<alpha\>\<cdot\>\<mu\>|)><around*|(|A|)>=\<alpha\>\<cdot\>\<mu\><around*|(|A|)><below|\<leqslant\>|\<alpha\>\<less\>0>0>
+      which proves that <math|P> is a negative set for
+      <math|\<alpha\>\<cdot\>\<mu\>>. Likewise if <math|A\<in\>\<cal-A\>>
+      with <math|A\<subseteq\>N> a negative set for <math|\<mu\>> then
+      <math|\<mu\><around*|(|A|)>\<leqslant\>0> so that
+      <math|0<below|\<leqslant\>|\<alpha\>\<less\>0>\<alpha\>\<cdot\>\<mu\><around*|(|A|)>=<around*|(|\<alpha\>\<cdot\>\<mu\>|)><around*|(|A|)>>
+      which proves that <math|N> is a positive set for
+      <math|\<alpha\>\<cdot\>\<mu\>>. Hence\ 
+
+      <\equation*>
+        <around*|(|N,P|)><text| is a Hahn Decomposition of
+        <math|\<alpha\>\<cdot\>\<mu\>>>
+      </equation*>
+
+      Then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<alpha\>\<cdot\>\<mu\>|\<\|\|\>>>|<cell|=>|<cell|<around*|\||\<alpha\>\<cdot\>\<mu\>|\|><around*|(|X|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<alpha\>\<cdot\>\<mu\>|)><rsup|+><around*|(|X|)>+<around*|(|\<alpha\>\<cdot\>\<mu\>|)><rsup|-><around*|(|X|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<alpha\>\<cdot\>\<mu\>|)><around*|(|X<big|cap>N|)>-<around*|(|\<alpha\>\<cdot\>\<mu\>|)><around*|(|X<big|cap>P|)>>>|<row|<cell|>|<cell|=>|<cell|\<alpha\>\<cdot\>\<mu\><around*|(|X<big|cap>N|)>-\<alpha\>\<cdot\>\<mu\><around*|(|X<big|cap>P|)>>>|<row|<cell|>|<cell|=>|<cell|-\<alpha\>\<cdot\><around*|(|\<mu\><around*|(|X<big|cap>P|)>-\<mu\><around*|(|X<big|cap>N|)>|)>>>|<row|<cell|>|<cell|<below|=|\<alpha\>\<leqslant\>0>>|<cell|<around*|\||\<alpha\>|\|>\<cdot\><around*|(|\<mu\><around*|(|X<big|cap>P|)>-\<mu\><around*|(|X<big|cap>N|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||\<alpha\>|\|>\<cdot\><around*|(|\<mu\><rsup|+><around*|(|X|)>+\<mu\><rsup|-><around*|(|X|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|\<mu\>|\<\|\|\>>>>>>
+      </eqnarray*>
+    </description>
+
+    So we have proved that\ 
+
+    <\equation>
+      <label|eq 20.787.248>\<forall\>\<mu\>\<in\>M<around*|[|X,\<cal-A\>,\<bbb-R\>|]><text|
+      we have >\<forall\>\<alpha\>\<in\>\<bbb-R\><text| that
+      ><around*|\<\|\|\>|\<alpha\>\<cdot\>\<mu\>|\<\|\|\>>=<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|\<mu\>|\<\|\|\>>
+    </equation>
+
+    Let <math|\<mu\><rsub|1>,\<mu\><rsub|2>\<in\>M<around*|[|X,\<cal-A\>,\<bbb-R\>|]>>
+    then <math|\<mu\><rsub|1>,\<mu\><rsub|2>> are finite and
+    <math|\<mu\><rsub|1>+\<mu\><rsub|2>\<in\>M<around*|[|X,\<cal-A\>,\<bbb-R\>|]>>.
+    By the Hahn Decomposition Theorem [see theorem: <reference|Hahn
+    Decomposition Theorem>] there exists Hahn docompositions
+    <math|<around*|(|P<rsub|1>,N<rsub|1>|)>>,
+    <math|<around*|(|P<rsub|2>,N<rsub|2>|)>,<around*|(|P<rsub|12>,N<rsub|12>|)>>
+    of <math|\<mu\><rsub|1>>, <math|\<mu\><rsub|2>,\<mu\><rsub|1>+\<mu\><rsub|2>>
+    respectively. Then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<mu\><rsub|1><around*|(|P<rsub|12>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|Jordon Decomposition>]>>>|<cell|<around*|(|\<mu\><rsub|1>|)><rsup|+><around*|(|P<rsub|12>|)>-<around*|(|\<mu\><rsub|1>|)><rsup|-><around*|(|P<rsub|12>|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><rsub|1><around*|(|P<rsub|12><big|cap>P<rsub|1>|)>+\<mu\><rsub|1><around*|(|P<rsub|12><big|cap>N<rsub|1>|)>>>|<row|<cell|>|<cell|<below|\<leqslant\>|P<rsub|12><big|cap>N<rsub|1>\<subseteq\>N<rsub|1>\<Rightarrow\>\<mu\><rsub|1><around*|(|P<rsub|12><big|cap>N<rsub|1>|)>\<leqslant\>0\<wedge\>\<mu\><rsub|1><text|
+      is finite>>>|<cell|\<mu\><rsub|1><around*|(|P<rsub|12><big|cap>P<rsub|1>|)>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[lemma:
+      <reference|lemma 20.514.248>]>>>|<cell|\<mu\><rsub|1><around*|(|P<rsub|1>|)><eq-number><label|eq
+      20.788.248>>>|<row|<cell|\<mu\><rsub|1><around*|(|N<rsub|12>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|Jordon Decomposition>]>>>|<cell|<around*|(|\<mu\><rsub|1>|)><rsup|+><around*|(|N<rsub|12>|)>-<around*|(|\<mu\><rsub|1>|)><rsup|-><around*|(|N<rsub|12>|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><rsub|1><around*|(|N<rsub|12><big|cap>P<rsub|1>|)>+\<mu\><rsub|1><around*|(|N<rsub|12><big|cap>N<rsub|1>|)>>>|<row|<cell|>|<cell|<below|\<geqslant\>|P<rsub|12><big|cap>P<rsub|1>\<subseteq\>N<rsub|1>\<Rightarrow\>\<mu\><rsub|1><around*|(|P<rsub|12><big|cap>P<rsub|1>|)>\<geqslant\>0\<wedge\>\<mu\><rsub|1><text|
+      is finite>>>|<cell|\<mu\><rsub|1><around*|(|N<rsub|12><big|cap>N<rsub|1>|)>>>|<row|<cell|>|<cell|<below|\<geqslant\>|<text|[lemma:
+      <reference|lemma 20.514.248>]>>>|<cell|\<mu\><rsub|1><around*|(|N<rsub|1>|)><eq-number><label|eq
+      20.789.248>>>|<row|<cell|\<mu\><rsub|2><around*|(|P<rsub|12>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|Jordon Decomposition>]>>>|<cell|<around*|(|\<mu\><rsub|2>|)><rsup|+><around*|(|P<rsub|12>|)>-<around*|(|\<mu\><rsub|2>|)><rsup|-><around*|(|P<rsub|12>|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><rsub|2><around*|(|P<rsub|12><big|cap>P<rsub|2>|)>+\<mu\><rsub|2><around*|(|P<rsub|12><big|cap>N<rsub|2>|)>>>|<row|<cell|>|<cell|<below|\<leqslant\>|P<rsub|12><big|cap>N<rsub|2>\<subseteq\>N<rsub|2>\<Rightarrow\>\<mu\><rsub|1><around*|(|P<rsub|12><big|cap>N<rsub|2>|)>\<leqslant\>0\<wedge\>\<mu\><rsub|2><text|
+      is finite>>>|<cell|\<mu\><rsub|2><around*|(|P<rsub|12><big|cap>P<rsub|2>|)>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[lemma:
+      <reference|lemma 20.514.248>]>>>|<cell|\<mu\><rsub|2><around*|(|P<rsub|2>|)><eq-number><label|eq
+      20.790.248>>>|<row|<cell|\<mu\><rsub|2><around*|(|N<rsub|12>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|Jordon Decomposition>]>>>|<cell|<around*|(|\<mu\><rsub|2>|)><rsup|+><around*|(|N<rsub|12>|)>-<around*|(|\<mu\><rsub|2>|)><rsup|-><around*|(|N<rsub|12>|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><rsub|2><around*|(|N<rsub|12><big|cap>P<rsub|2>|)>+\<mu\><rsub|2><around*|(|N<rsub|12><big|cap>N<rsub|2>|)>>>|<row|<cell|>|<cell|<below|\<geqslant\>|P<rsub|12><big|cap>P<rsub|2>\<subseteq\>N<rsub|2>\<Rightarrow\>\<mu\><rsub|2><around*|(|P<rsub|12><big|cap>P<rsub|2>|)>\<geqslant\>0\<wedge\>\<mu\><rsub|2><text|
+      is finite>>>|<cell|\<mu\><rsub|2><around*|(|N<rsub|12><big|cap>N<rsub|2>|)>>>|<row|<cell|>|<cell|<below|\<geqslant\>|<text|[lemma:
+      <reference|lemma 20.514.248>]>>>|<cell|\<mu\><rsub|2><around*|(|N<rsub|2>|)><eq-number><label|eq
+      20.789.248>>>>>
+    </eqnarray*>
+
+    Now
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<mu\><rsub|1>+\<mu\><rsub|2>|\<\|\|\>>>|<cell|=>|<cell|<around*|\||\<mu\><rsub|1>+\<mu\><rsub|2>|\|><around*|(|X|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<mu\><rsub|1>+\<mu\><rsub|2>|)><rsup|+><around*|(|X|)>+<around*|(|\<mu\><rsub|1>+\<mu\><rsub|2>|)><rsup|-><around*|(|X|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<mu\><rsub|1>+\<mu\><rsub|2>|)><around*|(|X<big|cap>P<rsub|12>|)>-<around*|(|\<mu\><rsub|1>+\<mu\><rsub|2>|)><around*|(|X<big|cap>N<rsub|12>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<mu\><rsub|1>+\<mu\><rsub|2>|)><around*|(|P<rsub|12>|)>-<around*|(|\<mu\><rsub|1>+\<mu\><rsub|2>|)><around*|(|N<rsub|12>|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><rsub|1><around*|(|P<rsub|12>|)>+\<mu\><rsub|2><around*|(|P<rsub|12>|)>-\<mu\><rsub|1><around*|(|N<rsub|12>|)>-\<mu\><rsub|2><around*|(|N<rsub|12>|)>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[eqs:
+      <reference|eq 20.789.248>, <reference|eq
+      20.791.231>]>>>|<cell|\<mu\><rsub|1><around*|(|P<rsub|12>|)>+\<mu\><rsub|2><around*|(|P<rsub|12>|)>-\<mu\><rsub|1><around*|(|N<rsub|1>|)>-\<mu\><rsub|2><around*|(|N<rsub|2>|)>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[eqs:
+      <reference|eq 20.788.248>>,<reference|eq
+      20.790.248>>>|<cell|\<mu\><rsub|1><around*|(|P<rsub|1>|)>-\<mu\><rsub|1><around*|(|N<rsub|1>|)>+\<mu\><rsub|2><around*|(|P<rsub|2>|)>-\<mu\><rsub|2><around*|(|N<rsub|2>|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><rsub|1><around*|(|X<big|cap>P<rsub|1>|)>-\<mu\><rsub|1><around*|(|X<big|cap>N<rsub|1>|)>+\<mu\><rsub|2><around*|(|X<big|cap>P<rsub|2>|)>-\<mu\><rsub|2><around*|(|X<big|cap>N<rsub|2>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<mu\><rsub|1>|)><rsup|+><around*|(|X|)>+<around*|(|\<mu\><rsub|1>|)><rsup|-><around*|(|X|)>+<around*|(|\<mu\><rsub|2>|)><rsup|+><around*|(|X|)>+<around*|(|\<mu\><rsub|2>|)><rsup|+><around*|(|X|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||\<mu\><rsub|1>|\|><around*|(|X|)>+<around*|\||\<mu\><rsub|2>|\|><around*|(|X|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|\<mu\><rsub|1>|\<\|\|\>>+<around*|\<\|\|\>|\<mu\><rsub|2>|\<\|\|\>>>>>>
+    </eqnarray*>
+
+    Hence we have proved the triangular inequality
+
+    <\equation>
+      <label|eq 20.792.248>\<forall\>\<mu\><rsub|1>,\<mu\><rsub|2>\<in\>M<around*|[|X,\<cal-A\>,\<bbb-R\>|]><text|
+      we have ><around*|\<\|\|\>|\<mu\><rsub|1>+\<mu\><rsub|2>|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|\<mu\><rsub|1>|\<\|\|\>>+<around*|\<\|\|\>|\<mu\><rsub|2>|\<\|\|\>>
+    </equation>
+
+    Let <math|\<mu\>\<in\>M<around*|[|X,\<cal-A\>,\<bbb-R\>|]>> be such that
+    <math|<around*|\<\|\|\>|\<mu\>|\<\|\|\>>=0> then we have
+    <math|\<forall\>A\<in\>\<cal-A\>> that
+
+    <\equation*>
+      <around*|\||\<mu\><around*|(|A|)>|\|><below|\<leqslant\>|<text|[theorem:
+      <reference|Jordon Decomposition>]>><around*|\||\<mu\>|\|><around*|(|A|)><below|=|<text|[theorem:
+      <reference|measure measure space properties
+      (1)>]>\<wedge\><around*|\||\<mu\>|\|><text| is a
+      measure>><around*|\||\<mu\>|\|><around*|(|X|)>=<around*|\<\|\|\>|\<mu\>|\<\|\|\>>=0=C<rsub|0><around*|(|A|)>
+    </equation*>
+
+    So that\ 
+
+    <\equation>
+      <label|eq 20.793.248><text|If ><around*|\<\|\|\>|\<mu\>|\<\|\|\>>=0<text|
+      then >\<mu\>=C<rsub|0><text| the neutral element in
+      >M<around*|[|X,\<cal-A\>,\<bbb-R\>|]>
+    </equation>
+
+    Let <math|\<mu\>\<in\>M<around*|[|X,\<cal-A\>,\<bbb-R\>|]>> then by
+    [theorem: <reference|Jordon Decomposition>] <math|<around*|\||\<mu\>|\|>>
+    is a measure so that <math|<around*|\<\|\|\>|\<mu\>|\<\|\|\>>=<around*|\||\<mu\>|\|><around*|(|X|)>\<in\><around*|[|0,\<infty\>|]>>,
+    this together with [eqs: <reference|eq 20.787.248>, <reference|eq
+    20.792.248> and <reference|eq 20.793.248>] proves that
+
+    <\equation*>
+      <around*|\<\|\|\>||\<\|\|\>><text| is a norm on
+      >M<around*|[|X,\<cal-A\>,\<bbb-R\>|]>
+    </equation*>
   </proof>
+
+  Next we prove the same for the vector space
+  <math|<around*|\<langle\>|M<around*|[|X,\<cal-A\>,\<bbb-C\>|]>,+,\<cdot\>|\<rangle\>>>
+
+  <\theorem>
+    <label|space of measures normed space complex case>Let
+    <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>> be a measurable space
+    then <around*|\<langle\>|M<around*|[|X,\<cal-A\>,\<bbb-C\>|]>,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    is a normed space.
+  </theorem>
+
+  <\proof>
+    Let <math|\<mu\>\<in\>M<around*|[|X,\<cal-A\>,\<bbb-C\>|]>> then by
+    [theorem: <reference|complex measure variation is a measure>] it follows
+    that <math|<around*|\||\<mu\>|\|>> is a finite measure, hence we have
+    that <math|<around*|\<\|\|\>|\<mu\>|\<\|\|\>>=<around*|\||\<mu\>|\|><around*|(|X|)>\<in\><around*|[|0,\<infty\>|]>>
+    hence
+
+    <\equation>
+      <label|eq 20.794.248>\<forall\>\<mu\>\<in\>M<around*|[|X,\<cal-A\>,\<bbb-C\>|]><text|
+      we have ><around*|\<\|\|\>|\<mu\>|\<\|\|\>>\<in\><around*|[|0,\<infty\>|]>
+    </equation>
+
+    Let <math|\<mu\>\<in\>M<around*|[|X,\<cal-A\>,\<bbb-C\>|]>> and
+    <math|\<alpha\>\<in\>\<bbb-C\>> then we have have as by \ [theorem:
+    <reference|complex measure variation is a measure>]
+    <math|<around*|\||\<mu\>|\|>> is a finite measure we have that\ 
+
+    <\equation>
+      <label|eq 20.795.248><around*|\||\<mu\>|\|><around*|(|X|)>=sup<around*|(|<around*|(|<around*|{|<big|sum><rsub|i=1><rsup|n><around*|\||\<mu\><around*|(|A<rsub|i>|)>|\|>\|n\<in\>\<bbb-N\>\<wedge\><around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\>\<wedge\>X=<big|sqcup><rsub|i=<around*|{|1,\<ldots\>,n|}>>A<rsub|i>|}>|)>|)>\<in\>\<bbb-R\>
+    </equation>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<alpha\>\<cdot\>\<mu\>|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\||\<alpha\>\<cdot\>\<mu\>|\|><around*|(|X|)>>|<cell|\<equallim\><rsub|<text|[definition:
+      <reference|complex measure variation>]>>>|<cell|>>|<row|<cell|sup<around*|(|<around*|{|<big|sum><rsub|i=1><rsup|n><around*|\||<around*|(|\<alpha\>\<cdot\>\<mu\>|)><around*|(|A<rsub|i>|)>|\|>\|n\<in\>\<bbb-N\>\<wedge\><around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\>\<wedge\>X=<big|sqcup><rsub|i=<around*|{|1,\<ldots\>,n|}>>A<rsub|i>|}>|)>>|<cell|=>|<cell|>>|<row|<cell|sup<around*|(|<around*|{|<around*|\||\<alpha\>|\|>\<cdot\><big|sum><rsub|i=1><rsup|n><around*|\||\<mu\><around*|(|A<rsub|i>|)>|\|>\|n\<in\>\<bbb-N\>\<wedge\><around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\>\<wedge\>X=<big|sqcup><rsub|i=<around*|{|1,\<ldots\>,n|}>>A<rsub|i>|}>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|complex sup(a.x) inf(a.x)>]>\<wedge\><text|[eq:
+      <reference|eq 20.795.248>]>>>|<cell|>>|<row|<cell|<around*|\||\<alpha\>|\|>\<cdot\>sup<around*|(|<around*|{|<big|sum><rsub|i=1><rsup|n><around*|\||\<mu\><around*|(|A<rsub|i>|)>|\|>\|n\<in\>\<bbb-N\>\<wedge\><around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\>\<wedge\>X=<big|sqcup><rsub|i=<around*|{|1,\<ldots\>,n|}>>A<rsub|i>|}>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|\||\<alpha\>|\|>\<cdot\><around*|\||\<mu\>|\|><around*|(|X|)>>|<cell|>|<cell|>>|<row|<cell|<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|\<mu\>|\<\|\|\>>>|<cell|>|<cell|>>>>
+    </eqnarray*>
+
+    whic proves that\ 
+
+    <\equation>
+      <label|eq 20.796.248>\<forall\>\<mu\>\<in\>M<around*|[|X,\<cal-A\>,\<bbb-C\>|]><text|
+      we have >\<forall\>\<alpha\>\<in\>\<bbb-C\><text| that
+      ><around*|\<\|\|\>|\<alpha\>\<cdot\>\<mu\>|\<\|\|\>>=<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|\<mu\>|\<\|\|\>>
+    </equation>
+
+    Let <math|\<mu\><rsub|1>,\<mu\><rsub|2>\<in\>M<around*|[|X,\<cal-A\>,\<bbb-C\>|]>>
+    and
+
+    <\equation*>
+      x\<in\><around*|{|<big|sum><rsub|i=1><rsup|n><around*|\||<around*|(|\<mu\><rsub|1>+\<mu\><rsub|2>|)><around*|(|A<rsub|i>|)>|\|>\|n\<in\>\<bbb-N\>\<wedge\><around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\>\<wedge\>X=<big|sqcup><rsub|i=<around*|{|1,\<ldots\>,n|}>>A<rsub|i>|}>
+    </equation*>
+
+    then <math|\<exists\><around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>>
+    pairwise disjoint with <math|X=<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>>
+    such that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|x>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n><around*|\||<around*|(|\<mu\><rsub|1>+\<mu\><rsub|2>|)><around*|(|A<rsub|i>|)>|\|>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n><around*|\||\<mu\><rsub|1><around*|(|A<rsub|i>|)>+\<mu\><rsub|2><around*|(|A<rsub|i>|)>|\|>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<big|sum><rsub|i=1><rsup|n><around*|(|<around*|\||\<mu\><rsub|1><around*|(|A<rsub|i>|)>|\|>+<around*|\||\<mu\><rsub|2><around*|(|A<rsub|i>|)>|\|>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n><around*|\||\<mu\><rsub|1><around*|(|A<rsub|i>|)>|\|>+<big|sum><rsub|i=1><rsup|n><around*|\||\<mu\><rsub|2><around*|(|A<rsub|i>|)>|\|>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|sup<around*|(|<around*|{|<big|sum><rsub|i=1><rsup|n><around*|\||\<mu\><rsub|1><around*|(|A<rsub|i>|)>|\|>\|m\<in\>\<bbb-N\>\<wedge\><around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\>\<wedge\>X=<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|}>|)>+sup<around*|(|<around*|{|<big|sum><rsub|i=1><rsup|n><around*|\||\<mu\><rsub|2><around*|(|A<rsub|i>|)>|\|>\|m\<in\>\<bbb-N\>\<wedge\><around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\>\<wedge\>X=<big|sqcup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|\<mu\><rsub|1>|\<\|\|\>>+<around*|\<\|\|\>|\<mu\><rsub|2>|\<\|\|\>>>>>>
+    </eqnarray*>
+
+    Hence <math|<around*|\<\|\|\>|\<mu\><rsub|1>|\<\|\|\>>+<around*|\<\|\|\>|\<mu\><rsub|2>|\<\|\|\>>>
+    is a upper bound for
+
+    <\equation*>
+      <around*|{|<big|sum><rsub|i=1><rsup|n><around*|\||<around*|(|\<mu\><rsub|1>+\<mu\><rsub|2>|)><around*|(|A<rsub|i>|)>|\|>\|n\<in\>\<bbb-N\>\<wedge\><around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\>\<wedge\>X=<big|sqcup><rsub|i=<around*|{|1,\<ldots\>,n|}>>A<rsub|i>|}>
+    </equation*>
+
+    so that\ 
+
+    <\equation*>
+      sup<around*|(|<around*|{|<big|sum><rsub|i=1><rsup|n><around*|\||<around*|(|\<mu\><rsub|1>+\<mu\><rsub|2>|)><around*|(|A<rsub|i>|)>|\|>\|n\<in\>\<bbb-N\>\<wedge\><around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\>\<wedge\>X=<big|sqcup><rsub|i=<around*|{|1,\<ldots\>,n|}>>A<rsub|i>|}>|)>\<leqslant\><around*|\<\|\|\>|\<mu\><rsub|1>|\<\|\|\>>+<around*|\<\|\|\>|\<mu\><rsub|2>|\<\|\|\>>
+    </equation*>
+
+    which proves that\ 
+
+    <\equation>
+      <label|eq 20.797.248>\<forall\>\<mu\><rsub|1>,\<mu\><rsub|2>\<in\>M<around*|[|X,\<cal-A\>,\<bbb-C\>|]><text|
+      we have ><around*|\<\|\|\>|\<mu\><rsub|1>+\<mu\><rsub|2>|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|\<mu\><rsub|1>|\<\|\|\>>+<around*|\<\|\|\>|\<mu\><rsub|2>|\<\|\|\>>
+    </equation>
+
+    Further if <math|\<mu\>\<in\>M<around*|[|X,\<cal-A\>,\<bbb-C\>|]>> such
+    that <math|<around*|\<\|\|\>|\<mu\>|\<\|\|\>>=0> then we have for
+    <math|A\<in\>\<cal-A\>> that
+
+    <\equation*>
+      <around*|\||\<mu\><around*|(|A|)>|\|><below|\<leqslant\>|<text|[theorem:
+      <reference|complex measure variation is a
+      measure>]>><around*|\||\<mu\>|\|><around*|(|A|)><below|=|<text|[theorem:
+      <reference|measure measure space properties
+      (1)>]>\<wedge\><around*|\||\<mu\>|\|><text| is a
+      measure>><around*|\||\<mu\>|\|><around*|(|X|)>=<around*|\<\|\|\>|\<mu\>|\<\|\|\>>=0=C<rsub|0><around*|(|A|)>
+    </equation*>
+
+    it follows that\ 
+
+    <\equation>
+      <label|eq 20.798.248><text|If ><around*|\<\|\|\>|\<mu\>|\<\|\|\>>=0<text|
+      then >\<mu\>=C<rsub|0><text| the neutral element in
+      >M<around*|[|X,\<cal-A\>,\<bbb-R\>|]>
+    </equation>
+
+    From [eqs: <reference|eq 20.794.248>, <reference|eq 20.796.248>,
+    <reference|eq 20.797.248> and <reference|eq 20.798.248>] it follows that\ 
+
+    <\equation*>
+      <around*|\<\|\|\>||\<\|\|\>><text| is a norm on
+      >M<around*|(|X,\<cal-A\>,\<bbb-C\>|)>
+    </equation*>
+  </proof>
+
+  Next we prove that <math|<around*|\<langle\>|M<around*|[|X,\<cal-A\>,\<bbb-K\>|]>,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+  is not only a normed space but also a Banach space.
+
+  \;
 </body>
 
 <\initial>
@@ -41508,7 +41799,7 @@
     <associate|eq 20.700.248|<tuple|20.700|?>>
     <associate|eq 20.701.248|<tuple|20.701|?>>
     <associate|eq 20.702.248|<tuple|20.702|?>>
-    <associate|eq 20.703.248|<tuple|20.703|?>>
+    <associate|eq 20.703.248|<tuple|20.793|?>>
     <associate|eq 20.704.248|<tuple|20.704|?>>
     <associate|eq 20.705.248|<tuple|20.705|?>>
     <associate|eq 20.706.248|<tuple|20.706|?>>
@@ -41579,9 +41870,10 @@
     <associate|eq 20.771.248|<tuple|20.771|?>>
     <associate|eq 20.772.248|<tuple|20.772|?>>
     <associate|eq 20.773.248|<tuple|20.773|?>>
-    <associate|eq 20.774.248|<tuple|20.775|?>>
-    <associate|eq 20.775.248|<tuple|20.776|?>>
-    <associate|eq 20.776.248|<tuple|20.777|?>>
+    <associate|eq 20.774.248|<tuple|20.774|?>>
+    <associate|eq 20.775.248|<tuple|20.775|?>>
+    <associate|eq 20.776.248|<tuple|20.776|?>>
+    <associate|eq 20.777.248|<tuple|20.777|?>>
     <associate|eq 20.778.248|<tuple|20.778|?>>
     <associate|eq 20.779.248|<tuple|20.779|?>>
     <associate|eq 20.78.200|<tuple|20.99|?>>
@@ -41592,8 +41884,19 @@
     <associate|eq 20.784.248|<tuple|20.784|?>>
     <associate|eq 20.785.248|<tuple|20.785|?>>
     <associate|eq 20.786.248|<tuple|20.786|?>>
+    <associate|eq 20.787.248|<tuple|20.787|?>>
+    <associate|eq 20.788.248|<tuple|20.788|?>>
+    <associate|eq 20.789.248|<tuple|20.791|?>>
     <associate|eq 20.79.200|<tuple|20.100|?>>
+    <associate|eq 20.790.248|<tuple|20.790|?>>
     <associate|eq 20.791.231|<tuple|20.508|?>>
+    <associate|eq 20.792.248|<tuple|20.792|?>>
+    <associate|eq 20.793.248|<tuple|20.793|?>>
+    <associate|eq 20.794.248|<tuple|20.794|?>>
+    <associate|eq 20.795.248|<tuple|20.795|?>>
+    <associate|eq 20.796.248|<tuple|20.796|?>>
+    <associate|eq 20.797.248|<tuple|20.797|?>>
+    <associate|eq 20.798.248|<tuple|20.798|?>>
     <associate|eq 20.8.155|<tuple|20.8|?>>
     <associate|eq 20.80.200|<tuple|20.101|?>>
     <associate|eq 20.81.200|<tuple|20.102|?>>
@@ -42008,6 +42311,8 @@
     <associate|space of measures|<tuple|20.534|?>>
     <associate|space of measures is a vector space|<tuple|20.536|?>>
     <associate|space of measures normed space|<tuple|20.537|?>>
+    <associate|space of measures normed space complex case|<tuple|20.538|?>>
+    <associate|space of measures normed space real case|<tuple|20.537|?>>
     <associate|space of measures total variation is finite|<tuple|20.535|?>>
   </collection>
 </references>
@@ -42213,6 +42518,10 @@
       <tuple|<tuple|Jordon Decomposition>|<pageref|auto-135>>
 
       <tuple|<tuple|complex measure>|<pageref|auto-138>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|M<around*|[|X,\<cal-A\>,\<bbb-R\>|]>>>|<pageref|auto-141>>
+
+      <tuple|<tuple|<with|mode|<quote|math>|M<around*|(|X,\<cal-A\>,\<bbb-C\>|)>>>|<pageref|auto-142>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|20<space|2spc>Measures
@@ -42432,6 +42741,10 @@
       <with|par-left|<quote|2tab>|20.7.2.2<space|2spc>Jordan decomposition of
       a complex measure <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-139>>
+
+      <with|par-left|<quote|1tab>|20.7.3<space|2spc>Banach space of signed
+      (complex) measures <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-140>>
     </associate>
   </collection>
 </auxiliary>
