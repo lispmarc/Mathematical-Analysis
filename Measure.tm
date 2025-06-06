@@ -41776,11 +41776,39 @@
     <math|\<cal-X\><rsub|A>\<cdot\>f=0> <math|\<mu\>>-a.e.. Using [theorem:
     <reference|non negative integral zero a.e. function>] it follows that
     <math|\<nu\><around*|(|A|)>=<big|int><rsup|+><around*|(|\<cal-X\><rsub|A>\<cdot\>f|)>d\<mu\>=0>.
-    </proof>
+  </proof>
 
   The following lemma explains why we use the name absolute continuity for
   <math|\<nu\>\<ll\>\<mu\>> and shows the similarity with absolute continuity
   on functions based on the <math|\<mu\>> <math|\<delta\>> definition.
+
+  <\lemma>
+    <label|lemma 20.555.149>Let <math|n\<in\>\<bbb-N\>> then
+    <math|<big|sum><rsub|k=n><rsup|\<infty\>><frac|1|2<rsup|k>>=<frac|1|2<rsup|n-1>>>
+  </lemma>
+
+  <\proof>
+    For <math|n\<in\>\<bbb-N\>> we have either:\ 
+
+    <\description>
+      <item*|<math|n=1>>Then <math|<big|sum><rsub|k=n><rsup|\<infty\>><frac|1|2<rsup|k>>=<big|sum><rsub|k=1><rsup|\<infty\>><frac|1|2<rsup|k>>\<equallim\><rsub|<text|[example:
+      <reference|series power series in R>]>><frac|<frac|1|2>|1-<frac|1|2>>=1=<frac|1|2<rsup|1-1>>=<frac|1|2<rsup|n-1>>>
+
+      <item*|<math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>>Then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|1>|<cell|\<equallim\><rsub|<text|[example:
+        <reference|series power series in
+        R>]>>>|<cell|<big|sum><rsub|k=1><rsup|\<infty\>><frac|1|2<rsup|k>>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+        <reference|series partition series>]>>>|<cell|<big|sum><rsub|k=1><rsup|n-1><frac|1|2<rsup|k>>+<big|sum><rsub|k=n><rsup|\<infty\>><frac|1|2<rsup|k>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+        <reference|sum of powers lemma>]>>>|<cell|<frac|1|2>\<cdot\><around*|(|<frac|1-<frac|1|2<rsup|n-1>>|1-<frac|1|2>>|)>+<big|sum><rsub|k=n><rsup|\<infty\>><frac|1|2<rsup|k>>>>|<row|<cell|>|<cell|=>|<cell|1-<frac|1|2<rsup|n-1>>+<big|sum><rsub|k=n><rsup|\<infty\>><frac|1|2<rsup|k>>>>>>
+      </eqnarray*>
+
+      which proves that <math|<big|sum><rsub|k=n><rsup|\<infty\>><frac|1|2<rsup|k>>=<frac|1|2<rsup|n-1>>>.
+    </description>
+
+    \;
+  </proof>
 
   <\theorem>
     <label|Radon-Nikodym absolute continuity alternative>Let
@@ -41789,7 +41817,7 @@
     >on <math|\<cal-A\>> then we have
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|>|<cell|\<nu\>\<leqslant\>\<mu\>>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text|
+      <tformat|<table|<row|<cell|>|<cell|\<nu\>\<ll\>\<mu\>>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text|
       >\<exists\>\<delta\>\<in\>\<bbb-R\><rsup|+><text| such that
       >\<forall\>A\<in\>\<cal-A\><text| with
       >\<mu\><around*|(|A|)>\<less\>\<delta\><text| we have
@@ -41798,8 +41826,119 @@
   </theorem>
 
   <\proof>
-    \;
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>We prove this by contradiction. So asssume
+      that there exist a <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> such
+      that <math|\<forall\>\<delta\>\<in\>\<bbb-R\><rsup|+>> there exist
+      <math|A\<in\>\<cal-A\>> with <math|\<mu\><around*|(|A|)>\<less\>\<delta\>>
+      such that <math|\<varepsilon\>\<leqslant\>\<nu\><around*|(|A|)>>. More
+      specific <math|\<forall\>k\<in\>\<bbb-N\>> there exist a
+      <math|A<rsub|k>\<in\>\<cal-A\>> with
+      <math|\<mu\><around*|(|A<rsub|k>|)>\<less\><frac|1|2<rsup|k>>> such
+      that <math|\<varepsilon\>\<leqslant\>\<nu\><around*|(|A<rsub|k>|)>>.
+      Define now\ 
+
+      <\equation*>
+        <around*|{|B<rsub|n>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><text|
+        by >B<rsub|n>=<big|cup><rsub|k\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>A<rsub|k><text|
+        and >B=<big|cap><rsub|k\<in\>\<bbb-N\>>B<rsub|k>\<in\>\<cal-A\>
+      </equation*>
+
+      Then we have <math|\<forall\>n\<in\>\<bbb-N\>> that
+
+      <\equation*>
+        B<rsub|n+1>=<big|cup><rsub|k\<in\><around*|{|n+1,\<ldots\>,\<infty\>|}>>A<rsub|k><below|\<subseteq\>|<text|[theorem:
+        <reference|family properties (2)>]>><big|cup><rsub|k\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>A<rsub|k>=B<rsub|n>
+      </equation*>
+
+      Further we have\ 
+
+      <\equation*>
+        \<mu\><around*|(|B<rsub|1>|)>=\<mu\><around*|(|<big|cup><rsub|k\<in\>\<bbb-N\>>A<rsub|k>|)><below|\<leqslant\>|<text|[theorem:
+        <reference|measure measure space properties
+        (2)>]>><big|sum><rsub|k=1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|k>|)><below|\<leqslant\>|<text|[theorem:
+        <reference|extended infinite sum properties>]>><big|sum><rsub|k=1><rsup|\<infty\>><frac|1|2<rsup|k>>\<equallim\><rsub|<text|[example:
+        <reference|series power series in R>]>>1\<less\>\<infty\>
+      </equation*>
+
+      Hence we can use [theorem: <reference|measure measure space properties
+      (3)>] to get\ 
+
+      <\equation>
+        <label|eq 20.817.249>\<mu\><around*|(|B|)>=\<mu\><around*|(|<big|cap><rsub|k\<in\>\<bbb-N\>>B<rsub|k>|)>=<below|lim|k\<rightarrow\>\<infty\>>\<mu\><around*|(|B<rsub|k>|)>=inf<around*|(|<around*|{|\<mu\><around*|(|B<rsub|i>|)>\|i\<in\>\<bbb-N\>|}>|)>
+      </equation>
+
+      Further, as <math|\<nu\>> is finite, we have by \ [theorem:
+      <reference|measure measure space properties (3)>] that\ 
+
+      <\equation>
+        <label|eq 20.818.249>\<nu\><around*|(|B|)>=\<nu\><around*|(|<big|cap><rsub|k\<in\>\<bbb-N\>>B<rsub|k>|)>=<below|lim|k\<rightarrow\>\<infty\>>\<nu\><around*|(|B<rsub|k>|)>=inf<around*|(|<around*|{|\<nu\><around*|(|B<rsub|i>|)>\|i\<in\>\<bbb-N\>|}>|)>
+      </equation>
+
+      Also for <math|n\<in\>\<bbb-N\>> we have\ 
+
+      <\equation*>
+        \<mu\><around*|(|B<rsub|n>|)>=\<mu\><around*|(|<big|cup><rsub|k\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>A<rsub|k>|)><below|\<leqslant\>|<text|[theorem:
+        <reference|measure measure space properties
+        (2)>]>><big|sum><rsub|k=n><rsup|\<infty\>>\<mu\><around*|(|A<rsub|k>|)><below|\<leqslant\>|<text|[lemma:
+        <reference|lemma 20.555.149>]>><frac|1|2<rsup|n-1>>
+      </equation*>
+
+      so that by [example: <reference|limit b^n>[ and [theorem:
+      <reference|limit sequence dominated by a sequence converting to 0>]
+      <math|<below|lim|k\<rightarrow\>\<infty\>>\<mu\><around*|(|B<rsub|k>|)>=0>
+      which combined with [eq: <reference|eq 20.817.249>] gives
+      <math|\<mu\><around*|(|B|)>=0>. As <math|\<nu\>\<ll\>\<mu\>> we must
+      have also\ 
+
+      <\equation>
+        <label|eq 20.819.249>\<nu\><around*|(|B|)>=0
+      </equation>
+
+      Now <math|\<forall\>n\<in\>\<bbb-N\>> we have
+      <math|A<rsub|n>\<subseteq\><big|cup><rsub|k\<in\><around*|{|n,\<ldots\>,\<infty\>|}>>A<rsub|n>=B<rsub|n>>
+      so that <math|\<varepsilon\>\<leqslant\>\<nu\><around*|(|A<rsub|n>|)>\<leqslant\>\<nu\><around*|(|B<rsub|n>|)>>.
+      Hence <math|\<varepsilon\>> is a lower bound of
+      <math|<around*|{|\<nu\><around*|(|B<rsub|n>|)>\|n\<in\>\<bbb-N\>|}>>
+      from which it follows that <math|0\<less\>\<varepsilon\>\<leqslant\>inf<around*|(|<around*|{|\<nu\><around*|(|B<rsub|n>|)>\|n\<in\>\<bbb-N\>|}>|)>\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.818.249>]>>\<nu\><around*|(|B|)>> which contradicts
+      [eq: <reference|eq 20.819.249>]. So the assumption is wrong and we must
+      have that
+
+      <\equation*>
+        \<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+><text|
+        >\<exists\>\<delta\>\<in\>\<bbb-R\><rsup|+><text| such that
+        >\<forall\>A\<in\>\<cal-A\><text| with
+        >\<mu\><around*|(|A|)>\<less\>\<delta\><text| we have
+        >\<nu\><around*|(|A|)>\<less\>\<varepsilon\>
+      </equation*>
+
+      <item*|<math|\<Leftarrow\>>>Let <math|A\<in\>\<cal-A\>> such that
+      <math|\<mu\><around*|(|A|)>=0> and assume that
+      <math|0\<less\>\<nu\><around*|(|A|)>\<in\>\<bbb-R\><rsup|+>>. Then by
+      the hypothesis there exists a <math|\<delta\>\<gtr\>0> such if
+      <math|\<mu\><around*|(|A|)>\<less\>\<delta\>> then
+      <math|\<nu\><around*|(|A|)>\<less\>\<nu\><around*|(|A|)>> a
+      contradiction. Hence the assumption is wrong and we must have
+      <math|\<nu\><around*|(|A|)>=0> which proves that
+
+      <\equation*>
+        \<nu\>\<ll\>\<mu\>
+      </equation*>
+    </description>
   </proof>
+
+  We are now ready to prove the Radon-Nikodym theorem. This theorem states
+  that given a measurable space <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>>
+  and two <math|\<sigma\>>-finite measures <math|\<mu\>,\<nu\>> on
+  <math|\<cal-A\>> such that <math|\<nu\>\<ll\>\<mu\>> then there exist a
+  <math|\<mu\>>-a-e. unique non negative measurable function <math|h> such
+  that <math|\<nu\><around*|(|A|)>=<big|int><rsup|+><rsub|A>h
+  d\<mu\>=<big|int><rsup|+><around*|(|\<cal-X\><rsub|A>\<cdot\>h|)>d\<mu\>>.
+
+  \;
 </body>
 
 <\initial>
@@ -41855,7 +41994,7 @@
     <associate|Monotone Convergence Theorem (2)|<tuple|20.430|?>>
     <associate|Radon-Nikodym absolute continuity|<tuple|20.552|?>>
     <associate|Radon-Nikodym absolute continuity
-    alternative|<tuple|20.555|?>>
+    alternative|<tuple|20.556|?>>
     <associate|Radon-Nikodym absolute continuity trivial
     example|<tuple|20.553|?>>
     <associate|Radon-Nikodym integral example|<tuple|20.554|?>>
@@ -42836,14 +42975,19 @@
     <associate|eq 20.808.248|<tuple|20.809|?>>
     <associate|eq 20.81.200|<tuple|20.102|?>>
     <associate|eq 20.810.248|<tuple|20.811|?>>
+    <associate|eq 20.810.249|<tuple|20.819|?>>
     <associate|eq 20.811.248|<tuple|20.812|?>>
     <associate|eq 20.813.248|<tuple|20.813|?>>
     <associate|eq 20.814.248|<tuple|20.814|?>>
     <associate|eq 20.815.248|<tuple|20.815|?>>
     <associate|eq 20.816.248|<tuple|20.816|?>>
+    <associate|eq 20.817.249|<tuple|20.817|?>>
+    <associate|eq 20.818.249|<tuple|20.818|?>>
+    <associate|eq 20.819.249|<tuple|20.819|?>>
     <associate|eq 20.82.200|<tuple|20.103|?>>
     <associate|eq 20.83.200|<tuple|20.104|?>>
     <associate|eq 20.84.200|<tuple|20.105|?>>
+    <associate|eq 20.847.249|<tuple|20.817|?>>
     <associate|eq 20.85.200|<tuple|20.106|?>>
     <associate|eq 20.86.200|<tuple|20.107|?>>
     <associate|eq 20.87.200|<tuple|20.108|?>>
@@ -42999,6 +43143,7 @@
     <associate|lemma 20.514.248|<tuple|20.517|?>>
     <associate|lemma 20.515.248|<tuple|20.518|?>>
     <associate|lemma 20.516.248|<tuple|20.519|?>>
+    <associate|lemma 20.555.149|<tuple|20.555|?>>
     <associate|lemma 20.78.156|<tuple|20.86|?>>
     <associate|lemma 20.80.156|<tuple|20.88|?>>
     <associate|lemma 20.90.156|<tuple|20.102|?>>
@@ -43699,6 +43844,10 @@
       <with|par-left|<quote|2tab>|20.7.3.1<space|2spc>Integrals based on
       signed or complex measures. <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-143>>
+
+      <with|par-left|<quote|2tab>|20.7.3.2<space|2spc>Radon-Nikodym Theorem
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-146>>
     </associate>
   </collection>
 </auxiliary>
