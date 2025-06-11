@@ -23913,7 +23913,7 @@
     <\note>
       As <math|\<forall\>x\<in\>A> we have
       <math|<around*|(|f<rsub|A\<uparrow\>X>|)><rsub|\|A><around*|(|x|)>=f<rsub|A\<uparrow\>X><around*|(|x|)>\<equallim\><rsub|x\<in\>A>f<around*|(|x|)>>
-      it follows that <math|<around*|(|f<rsub|A\<uparrow\>X>|)><rsub|A>=f>
+      it follows that <math|<around*|(|f<rsub|A\<uparrow\>X>|)><rsub|\|A>=f>
     </note>
 
     <\note>
@@ -33287,7 +33287,41 @@
           d\<mu\><rsub|\|\<cal-A\><rsub|\|A>> >>>>
         </eqnarray*>
 
-        <item*|<math|b\<Rightarrow\>a>>TODO
+        <item*|<math|b\<Rightarrow\>a>>As <math|f<rsub|A\<uparrow\>X>> is
+        <math|\<mu\>>-integrable we have by definition that\ 
+
+        <\equation*>
+          f<rsub|A\<uparrow\>X>\<in\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>\<Rightarrowlim\><rsub|<text|[theorem:
+          <reference|measure integral f+ f- are
+          measurable>]>><around*|(|f<rsub|A\<uparrow\>X>|)><rsup|+>,<around*|(|f<rsub|A\<uparrow\>X>|)><rsup|->\<in\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+        </equation*>
+
+        <\equation*>
+          <big|int><rsup|+><around*|(|f<rsub|A\<uparrow\>X>|)><rsup|+>d\<mu\>\<less\>\<infty\>\<wedge\><big|int><rsup|+><around*|(|f<rsub|A\<uparrow\>X>|)><rsup|->d\<mu\>\<less\>\<infty\>
+        </equation*>
+
+        Inserting <math|<around*|(|f<rsub|A\<uparrow\>X>|)><rsup|+>\<equallim\><rsub|<text|[theorem:
+        <reference|measure integral f+ f-
+        properties>(5)]>><around*|(|f<rsup|+>|)><rsub|A\<uparrow\>X>> and
+        <math|<around*|(|f<rsub|A\<uparrow\>X>|)><rsup|->\<equallim\><rsub|<text|[theorem:
+        <reference|measure integral f+ f-
+        properties>(5)]>><around*|(|f<rsup|->|)><rsub|A\<uparrow\>X>> in the
+        above gives
+
+        <\equation>
+          <label|eq 20.624.250>f<rsub|A\<uparrow\>X>,<around*|(|f<rsup|+>|)><rsub|A\<uparrow\>X>,<around*|(|f<rsup|->|)><rsub|A\<uparrow\>X>\<in\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+        </equation>
+
+        <\equation>
+          <label|eq 20.625.250><big|int><rsup|+><around*|(|f<rsup|+>|)><rsub|A\<uparrow\>X>d\<mu\>\<less\>\<infty\>\<wedge\><big|int><rsup|+><around*|(|f<rsup|->|)><rsub|A\<uparrow\>X>d\<mu\>\<less\>\<infty\>
+        </equation>
+
+        Uisng [theorem: <reference|measurable function extension>] on [eq:
+        <reference|eq 20.624.250>] gives\ 
+
+        <\equation*>
+          f,f<rsup|+>,f<rsup|->\<in\>\<cal-M\><around*|[||]>
+        </equation*>
       </description>
     </enumerate>
 
@@ -43233,10 +43267,10 @@
 
 <\references>
   <\collection>
-    <associate|20.809.248|<tuple|20.842|?>>
+    <associate|20.809.248|<tuple|20.844|?>>
     <associate|Beppo Levi's Theorem|<tuple|20.436|?>>
     <associate|Constructing measures and sigma alegebra|<tuple|20.4.4|?>>
-    <associate|EQ 20.766.248|<tuple|20.799|?>>
+    <associate|EQ 20.766.248|<tuple|20.801|?>>
     <associate|Fatou's lemma|<tuple|20.439|?>>
     <associate|Hahn Decomposition Theorem|<tuple|20.530|?>>
     <associate|Holder's Inequality|<tuple|20.481|?>>
@@ -44023,279 +44057,281 @@
     <associate|eq 20.587.240|<tuple|20.597|?>>
     <associate|eq 20.59.203|<tuple|20.66|?>>
     <associate|eq 20.59.212|<tuple|20.59|?>>
-    <associate|eq 20.590.241|<tuple|20.624|?>>
-    <associate|eq 20.591.241|<tuple|20.625|?>>
-    <associate|eq 20.592.241|<tuple|20.626|?>>
-    <associate|eq 20.594.244|<tuple|20.627|?>>
-    <associate|eq 20.595.244|<tuple|20.628|?>>
-    <associate|eq 20.596.244|<tuple|20.629|?>>
-    <associate|eq 20.597.245|<tuple|20.630|?>>
-    <associate|eq 20.598.245|<tuple|20.631|?>>
+    <associate|eq 20.590.241|<tuple|20.626|?>>
+    <associate|eq 20.591.241|<tuple|20.627|?>>
+    <associate|eq 20.592.241|<tuple|20.628|?>>
+    <associate|eq 20.594.244|<tuple|20.629|?>>
+    <associate|eq 20.595.244|<tuple|20.630|?>>
+    <associate|eq 20.596.244|<tuple|20.631|?>>
+    <associate|eq 20.597.245|<tuple|20.632|?>>
+    <associate|eq 20.598.245|<tuple|20.633|?>>
     <associate|eq 20.598.249|<tuple|20.598|?>>
-    <associate|eq 20.599.245|<tuple|20.632|?>>
+    <associate|eq 20.599.245|<tuple|20.634|?>>
     <associate|eq 20.599.249|<tuple|20.599|?>>
     <associate|eq 20.6.155|<tuple|20.6|?>>
     <associate|eq 20.60.203|<tuple|20.67|?>>
     <associate|eq 20.60.218|<tuple|20.60|?>>
-    <associate|eq 20.600.245|<tuple|20.633|?>>
-    <associate|eq 20.601.245|<tuple|20.634|?>>
-    <associate|eq 20.602.245|<tuple|20.635|?>>
-    <associate|eq 20.603.245|<tuple|20.636|?>>
+    <associate|eq 20.600.245|<tuple|20.635|?>>
+    <associate|eq 20.601.245|<tuple|20.636|?>>
+    <associate|eq 20.602.245|<tuple|20.637|?>>
+    <associate|eq 20.603.245|<tuple|20.638|?>>
     <associate|eq 20.603.249|<tuple|20.600|?>>
-    <associate|eq 20.604.245|<tuple|20.637|?>>
+    <associate|eq 20.604.245|<tuple|20.639|?>>
     <associate|eq 20.604.249|<tuple|20.601|?>>
-    <associate|eq 20.605.246|<tuple|20.638|?>>
+    <associate|eq 20.605.246|<tuple|20.640|?>>
     <associate|eq 20.605.249|<tuple|20.602|?>>
-    <associate|eq 20.606.246|<tuple|20.639|?>>
+    <associate|eq 20.606.246|<tuple|20.641|?>>
     <associate|eq 20.606.249|<tuple|20.603|?>>
-    <associate|eq 20.607.246|<tuple|20.640|?>>
+    <associate|eq 20.607.246|<tuple|20.642|?>>
     <associate|eq 20.607.249|<tuple|20.604|?>>
     <associate|eq 20.607.250|<tuple|20.607|?>>
-    <associate|eq 20.608.246|<tuple|20.641|?>>
+    <associate|eq 20.608.246|<tuple|20.643|?>>
     <associate|eq 20.608.249|<tuple|20.605|?>>
     <associate|eq 20.608.250|<tuple|20.608|?>>
-    <associate|eq 20.609.246|<tuple|20.642|?>>
+    <associate|eq 20.609.246|<tuple|20.644|?>>
     <associate|eq 20.609.249|<tuple|20.606|?>>
     <associate|eq 20.609.250|<tuple|20.609|?>>
     <associate|eq 20.61.204|<tuple|20.68|?>>
     <associate|eq 20.61.218|<tuple|20.61|?>>
-    <associate|eq 20.610.246|<tuple|20.643|?>>
+    <associate|eq 20.610.246|<tuple|20.645|?>>
     <associate|eq 20.610.250|<tuple|20.610|?>>
-    <associate|eq 20.611.246|<tuple|20.644|?>>
+    <associate|eq 20.611.246|<tuple|20.646|?>>
     <associate|eq 20.611.250|<tuple|20.611|?>>
-    <associate|eq 20.612.246|<tuple|20.645|?>>
+    <associate|eq 20.612.246|<tuple|20.647|?>>
     <associate|eq 20.612.250|<tuple|20.612|?>>
-    <associate|eq 20.613.246|<tuple|20.646|?>>
+    <associate|eq 20.613.246|<tuple|20.648|?>>
     <associate|eq 20.613.250|<tuple|20.613|?>>
-    <associate|eq 20.614.246|<tuple|20.647|?>>
+    <associate|eq 20.614.246|<tuple|20.649|?>>
     <associate|eq 20.614.250|<tuple|20.614|?>>
-    <associate|eq 20.615.246|<tuple|20.648|?>>
+    <associate|eq 20.615.246|<tuple|20.650|?>>
     <associate|eq 20.615.250|<tuple|20.615|?>>
-    <associate|eq 20.616.246|<tuple|20.649|?>>
+    <associate|eq 20.616.246|<tuple|20.651|?>>
     <associate|eq 20.616.250|<tuple|20.616|?>>
-    <associate|eq 20.617.247|<tuple|20.650|?>>
+    <associate|eq 20.617.247|<tuple|20.652|?>>
     <associate|eq 20.617.250|<tuple|20.617|?>>
-    <associate|eq 20.618.247|<tuple|20.651|?>>
+    <associate|eq 20.618.247|<tuple|20.653|?>>
     <associate|eq 20.618.250|<tuple|20.618|?>>
-    <associate|eq 20.619.246|<tuple|20.652|?>>
+    <associate|eq 20.619.246|<tuple|20.654|?>>
     <associate|eq 20.619.250|<tuple|20.619|?>>
     <associate|eq 20.62.204|<tuple|20.69|?>>
     <associate|eq 20.62.218|<tuple|20.62|?>>
-    <associate|eq 20.620.246|<tuple|20.653|?>>
+    <associate|eq 20.620.246|<tuple|20.655|?>>
     <associate|eq 20.620.250|<tuple|20.620|?>>
-    <associate|eq 20.621.246|<tuple|20.654|?>>
+    <associate|eq 20.621.246|<tuple|20.656|?>>
     <associate|eq 20.621.250|<tuple|20.621|?>>
-    <associate|eq 20.622.246|<tuple|20.655|?>>
+    <associate|eq 20.622.246|<tuple|20.657|?>>
     <associate|eq 20.622.250|<tuple|20.622|?>>
-    <associate|eq 20.623.246|<tuple|20.656|?>>
+    <associate|eq 20.623.246|<tuple|20.658|?>>
     <associate|eq 20.623.250|<tuple|20.623|?>>
-    <associate|eq 20.624.246|<tuple|20.657|?>>
-    <associate|eq 20.625.246|<tuple|20.658|?>>
-    <associate|eq 20.626.246|<tuple|20.659|?>>
-    <associate|eq 20.627.246|<tuple|20.660|?>>
-    <associate|eq 20.628.246|<tuple|20.661|?>>
-    <associate|eq 20.629.246|<tuple|20.662|?>>
+    <associate|eq 20.624.246|<tuple|20.659|?>>
+    <associate|eq 20.624.250|<tuple|20.624|?>>
+    <associate|eq 20.625.246|<tuple|20.625|?>>
+    <associate|eq 20.625.250|<tuple|20.625|?>>
+    <associate|eq 20.626.246|<tuple|20.661|?>>
+    <associate|eq 20.627.246|<tuple|20.662|?>>
+    <associate|eq 20.628.246|<tuple|20.663|?>>
+    <associate|eq 20.629.246|<tuple|20.664|?>>
     <associate|eq 20.63.204|<tuple|20.70|?>>
     <associate|eq 20.63.218|<tuple|20.63|?>>
-    <associate|eq 20.630.249|<tuple|20.663|?>>
-    <associate|eq 20.631.246|<tuple|20.664|?>>
-    <associate|eq 20.632.246|<tuple|20.665|?>>
-    <associate|eq 20.633.246|<tuple|20.666|?>>
-    <associate|eq 20.634.246|<tuple|20.667|?>>
-    <associate|eq 20.635.246|<tuple|20.668|?>>
-    <associate|eq 20.636.246|<tuple|20.669|?>>
-    <associate|eq 20.637.246|<tuple|20.671|?>>
-    <associate|eq 20.637.247|<tuple|20.670|?>>
-    <associate|eq 20.638.246|<tuple|20.672|?>>
-    <associate|eq 20.639.246|<tuple|20.673|?>>
-    <associate|eq 20.640.246|<tuple|20.674|?>>
-    <associate|eq 20.641.246|<tuple|20.675|?>>
-    <associate|eq 20.642.246|<tuple|20.676|?>>
-    <associate|eq 20.643.246|<tuple|20.677|?>>
-    <associate|eq 20.644.246|<tuple|20.678|?>>
-    <associate|eq 20.645.246|<tuple|20.679|?>>
-    <associate|eq 20.646.246|<tuple|20.680|?>>
-    <associate|eq 20.647.246|<tuple|20.681|?>>
-    <associate|eq 20.648\<point\>246|<tuple|20.682|?>>
-    <associate|eq 20.649.246|<tuple|20.683|?>>
-    <associate|eq 20.651.247|<tuple|20.684|?>>
-    <associate|eq 20.652.247|<tuple|20.685|?>>
-    <associate|eq 20.653.247|<tuple|20.686|?>>
-    <associate|eq 20.654\<point\>247|<tuple|20.687|?>>
-    <associate|eq 20.655.247|<tuple|20.688|?>>
-    <associate|eq 20.656.246|<tuple|20.690|?>>
-    <associate|eq 20.656.247|<tuple|20.689|?>>
-    <associate|eq 20.657.247|<tuple|20.690|?>>
-    <associate|eq 20.658.247|<tuple|20.691|?>>
-    <associate|eq 20.659.247|<tuple|20.692|?>>
-    <associate|eq 20.660.247|<tuple|20.693|?>>
-    <associate|eq 20.661.247|<tuple|20.694|?>>
-    <associate|eq 20.662.247|<tuple|20.695|?>>
-    <associate|eq 20.663.247|<tuple|20.696|?>>
-    <associate|eq 20.664.247|<tuple|20.697|?>>
-    <associate|eq 20.665.247|<tuple|20.698|?>>
-    <associate|eq 20.666.247|<tuple|20.699|?>>
-    <associate|eq 20.667.247|<tuple|20.700|?>>
-    <associate|eq 20.668.247|<tuple|20.701|?>>
-    <associate|eq 20.669.247|<tuple|20.702|?>>
-    <associate|eq 20.670.247|<tuple|20.703|?>>
-    <associate|eq 20.671.247|<tuple|20.704|?>>
-    <associate|eq 20.672.247|<tuple|20.705|?>>
-    <associate|eq 20.673.247|<tuple|20.706|?>>
-    <associate|eq 20.674.247|<tuple|20.707|?>>
-    <associate|eq 20.675.247|<tuple|20.708|?>>
-    <associate|eq 20.676.247|<tuple|20.709|?>>
-    <associate|eq 20.677.247|<tuple|20.710|?>>
-    <associate|eq 20.678.247|<tuple|20.711|?>>
-    <associate|eq 20.679.247|<tuple|20.712|?>>
-    <associate|eq 20.680.247|<tuple|20.714|?>>
-    <associate|eq 20.680.247.1|<tuple|20.713|?>>
-    <associate|eq 20.681.247|<tuple|20.715|?>>
-    <associate|eq 20.682.247|<tuple|20.716|?>>
-    <associate|eq 20.683.247|<tuple|20.717|?>>
-    <associate|eq 20.685.248|<tuple|20.718|?>>
-    <associate|eq 20.686.248|<tuple|20.719|?>>
-    <associate|eq 20.687.248|<tuple|20.720|?>>
-    <associate|eq 20.688.248|<tuple|20.721|?>>
-    <associate|eq 20.689.248|<tuple|20.722|?>>
-    <associate|eq 20.690.248|<tuple|20.723|?>>
-    <associate|eq 20.691.248|<tuple|20.724|?>>
-    <associate|eq 20.692.248|<tuple|20.725|?>>
-    <associate|eq 20.693.248|<tuple|20.726|?>>
-    <associate|eq 20.694.248|<tuple|20.727|?>>
-    <associate|eq 20.695.248|<tuple|20.728|?>>
-    <associate|eq 20.696.248|<tuple|20.729|?>>
-    <associate|eq 20.698.248|<tuple|20.731|?>>
-    <associate|eq 20.699.248|<tuple|20.732|?>>
+    <associate|eq 20.630.249|<tuple|20.665|?>>
+    <associate|eq 20.631.246|<tuple|20.666|?>>
+    <associate|eq 20.632.246|<tuple|20.667|?>>
+    <associate|eq 20.633.246|<tuple|20.668|?>>
+    <associate|eq 20.634.246|<tuple|20.669|?>>
+    <associate|eq 20.635.246|<tuple|20.670|?>>
+    <associate|eq 20.636.246|<tuple|20.671|?>>
+    <associate|eq 20.637.246|<tuple|20.673|?>>
+    <associate|eq 20.637.247|<tuple|20.672|?>>
+    <associate|eq 20.638.246|<tuple|20.674|?>>
+    <associate|eq 20.639.246|<tuple|20.675|?>>
+    <associate|eq 20.640.246|<tuple|20.676|?>>
+    <associate|eq 20.641.246|<tuple|20.677|?>>
+    <associate|eq 20.642.246|<tuple|20.678|?>>
+    <associate|eq 20.643.246|<tuple|20.679|?>>
+    <associate|eq 20.644.246|<tuple|20.680|?>>
+    <associate|eq 20.645.246|<tuple|20.681|?>>
+    <associate|eq 20.646.246|<tuple|20.682|?>>
+    <associate|eq 20.647.246|<tuple|20.683|?>>
+    <associate|eq 20.648\<point\>246|<tuple|20.684|?>>
+    <associate|eq 20.649.246|<tuple|20.685|?>>
+    <associate|eq 20.651.247|<tuple|20.686|?>>
+    <associate|eq 20.652.247|<tuple|20.687|?>>
+    <associate|eq 20.653.247|<tuple|20.688|?>>
+    <associate|eq 20.654\<point\>247|<tuple|20.689|?>>
+    <associate|eq 20.655.247|<tuple|20.690|?>>
+    <associate|eq 20.656.246|<tuple|20.692|?>>
+    <associate|eq 20.656.247|<tuple|20.691|?>>
+    <associate|eq 20.657.247|<tuple|20.692|?>>
+    <associate|eq 20.658.247|<tuple|20.693|?>>
+    <associate|eq 20.659.247|<tuple|20.694|?>>
+    <associate|eq 20.660.247|<tuple|20.695|?>>
+    <associate|eq 20.661.247|<tuple|20.696|?>>
+    <associate|eq 20.662.247|<tuple|20.697|?>>
+    <associate|eq 20.663.247|<tuple|20.698|?>>
+    <associate|eq 20.664.247|<tuple|20.699|?>>
+    <associate|eq 20.665.247|<tuple|20.700|?>>
+    <associate|eq 20.666.247|<tuple|20.701|?>>
+    <associate|eq 20.667.247|<tuple|20.702|?>>
+    <associate|eq 20.668.247|<tuple|20.703|?>>
+    <associate|eq 20.669.247|<tuple|20.704|?>>
+    <associate|eq 20.670.247|<tuple|20.705|?>>
+    <associate|eq 20.671.247|<tuple|20.706|?>>
+    <associate|eq 20.672.247|<tuple|20.707|?>>
+    <associate|eq 20.673.247|<tuple|20.708|?>>
+    <associate|eq 20.674.247|<tuple|20.709|?>>
+    <associate|eq 20.675.247|<tuple|20.710|?>>
+    <associate|eq 20.676.247|<tuple|20.711|?>>
+    <associate|eq 20.677.247|<tuple|20.712|?>>
+    <associate|eq 20.678.247|<tuple|20.713|?>>
+    <associate|eq 20.679.247|<tuple|20.714|?>>
+    <associate|eq 20.680.247|<tuple|20.716|?>>
+    <associate|eq 20.680.247.1|<tuple|20.715|?>>
+    <associate|eq 20.681.247|<tuple|20.717|?>>
+    <associate|eq 20.682.247|<tuple|20.718|?>>
+    <associate|eq 20.683.247|<tuple|20.719|?>>
+    <associate|eq 20.685.248|<tuple|20.720|?>>
+    <associate|eq 20.686.248|<tuple|20.721|?>>
+    <associate|eq 20.687.248|<tuple|20.722|?>>
+    <associate|eq 20.688.248|<tuple|20.723|?>>
+    <associate|eq 20.689.248|<tuple|20.724|?>>
+    <associate|eq 20.690.248|<tuple|20.725|?>>
+    <associate|eq 20.691.248|<tuple|20.726|?>>
+    <associate|eq 20.692.248|<tuple|20.727|?>>
+    <associate|eq 20.693.248|<tuple|20.728|?>>
+    <associate|eq 20.694.248|<tuple|20.729|?>>
+    <associate|eq 20.695.248|<tuple|20.730|?>>
+    <associate|eq 20.696.248|<tuple|20.731|?>>
+    <associate|eq 20.698.248|<tuple|20.733|?>>
+    <associate|eq 20.699.248|<tuple|20.734|?>>
     <associate|eq 20.7.155|<tuple|20.7|?>>
-    <associate|eq 20.700.248|<tuple|20.733|?>>
-    <associate|eq 20.701.248|<tuple|20.734|?>>
-    <associate|eq 20.702.248|<tuple|20.735|?>>
-    <associate|eq 20.703.248|<tuple|20.736|?>>
-    <associate|eq 20.704.248|<tuple|20.737|?>>
-    <associate|eq 20.705.248|<tuple|20.738|?>>
-    <associate|eq 20.706.248|<tuple|20.739|?>>
-    <associate|eq 20.707.248|<tuple|20.740|?>>
-    <associate|eq 20.708.248|<tuple|20.741|?>>
-    <associate|eq 20.709.248|<tuple|20.742|?>>
-    <associate|eq 20.710.248|<tuple|20.743|?>>
-    <associate|eq 20.711.248|<tuple|20.744|?>>
-    <associate|eq 20.712.248|<tuple|20.745|?>>
-    <associate|eq 20.713.248|<tuple|20.746|?>>
-    <associate|eq 20.714.248|<tuple|20.747|?>>
-    <associate|eq 20.715.248|<tuple|20.748|?>>
-    <associate|eq 20.716.248|<tuple|20.749|?>>
-    <associate|eq 20.717.248|<tuple|20.750|?>>
-    <associate|eq 20.718.248|<tuple|20.751|?>>
-    <associate|eq 20.719.248|<tuple|20.752|?>>
-    <associate|eq 20.720.248|<tuple|20.753|?>>
-    <associate|eq 20.721.248|<tuple|20.754|?>>
-    <associate|eq 20.722.248|<tuple|20.755|?>>
-    <associate|eq 20.723.248|<tuple|20.756|?>>
-    <associate|eq 20.724.148|<tuple|20.757|?>>
-    <associate|eq 20.725.248|<tuple|20.758|?>>
-    <associate|eq 20.726.248|<tuple|20.759|?>>
-    <associate|eq 20.727.248|<tuple|20.760|?>>
-    <associate|eq 20.728.248|<tuple|20.761|?>>
-    <associate|eq 20.729.248|<tuple|20.762|?>>
-    <associate|eq 20.730.248|<tuple|20.763|?>>
-    <associate|eq 20.731.248|<tuple|20.764|?>>
-    <associate|eq 20.732.248|<tuple|20.765|?>>
-    <associate|eq 20.733.248|<tuple|20.766|?>>
-    <associate|eq 20.734.248|<tuple|20.767|?>>
-    <associate|eq 20.735.248|<tuple|20.768|?>>
-    <associate|eq 20.736.248|<tuple|20.769|?>>
-    <associate|eq 20.737.248|<tuple|20.770|?>>
-    <associate|eq 20.738.248|<tuple|20.771|?>>
-    <associate|eq 20.739.248|<tuple|20.772|?>>
-    <associate|eq 20.740.248|<tuple|20.773|?>>
-    <associate|eq 20.741.248|<tuple|20.774|?>>
-    <associate|eq 20.742.248|<tuple|20.775|?>>
-    <associate|eq 20.743.248|<tuple|20.776|?>>
-    <associate|eq 20.744.248|<tuple|20.777|?>>
-    <associate|eq 20.745.248|<tuple|20.778|?>>
-    <associate|eq 20.746.248|<tuple|20.779|?>>
-    <associate|eq 20.747.248|<tuple|20.780|?>>
-    <associate|eq 20.748.248|<tuple|20.781|?>>
-    <associate|eq 20.749.248|<tuple|20.782|?>>
-    <associate|eq 20.751.248|<tuple|20.784|?>>
-    <associate|eq 20.752.248|<tuple|20.785|?>>
-    <associate|eq 20.753.248|<tuple|20.786|?>>
-    <associate|eq 20.754.248|<tuple|20.787|?>>
-    <associate|eq 20.755.243|<tuple|20.788|?>>
-    <associate|eq 20.756.248|<tuple|20.789|?>>
-    <associate|eq 20.757.248|<tuple|20.790|?>>
-    <associate|eq 20.758.248|<tuple|20.791|?>>
-    <associate|eq 20.759.248|<tuple|20.792|?>>
+    <associate|eq 20.700.248|<tuple|20.735|?>>
+    <associate|eq 20.701.248|<tuple|20.736|?>>
+    <associate|eq 20.702.248|<tuple|20.737|?>>
+    <associate|eq 20.703.248|<tuple|20.738|?>>
+    <associate|eq 20.704.248|<tuple|20.739|?>>
+    <associate|eq 20.705.248|<tuple|20.740|?>>
+    <associate|eq 20.706.248|<tuple|20.741|?>>
+    <associate|eq 20.707.248|<tuple|20.742|?>>
+    <associate|eq 20.708.248|<tuple|20.743|?>>
+    <associate|eq 20.709.248|<tuple|20.744|?>>
+    <associate|eq 20.710.248|<tuple|20.745|?>>
+    <associate|eq 20.711.248|<tuple|20.746|?>>
+    <associate|eq 20.712.248|<tuple|20.747|?>>
+    <associate|eq 20.713.248|<tuple|20.748|?>>
+    <associate|eq 20.714.248|<tuple|20.749|?>>
+    <associate|eq 20.715.248|<tuple|20.750|?>>
+    <associate|eq 20.716.248|<tuple|20.751|?>>
+    <associate|eq 20.717.248|<tuple|20.752|?>>
+    <associate|eq 20.718.248|<tuple|20.753|?>>
+    <associate|eq 20.719.248|<tuple|20.754|?>>
+    <associate|eq 20.720.248|<tuple|20.755|?>>
+    <associate|eq 20.721.248|<tuple|20.756|?>>
+    <associate|eq 20.722.248|<tuple|20.757|?>>
+    <associate|eq 20.723.248|<tuple|20.758|?>>
+    <associate|eq 20.724.148|<tuple|20.759|?>>
+    <associate|eq 20.725.248|<tuple|20.760|?>>
+    <associate|eq 20.726.248|<tuple|20.761|?>>
+    <associate|eq 20.727.248|<tuple|20.762|?>>
+    <associate|eq 20.728.248|<tuple|20.763|?>>
+    <associate|eq 20.729.248|<tuple|20.764|?>>
+    <associate|eq 20.730.248|<tuple|20.765|?>>
+    <associate|eq 20.731.248|<tuple|20.766|?>>
+    <associate|eq 20.732.248|<tuple|20.767|?>>
+    <associate|eq 20.733.248|<tuple|20.768|?>>
+    <associate|eq 20.734.248|<tuple|20.769|?>>
+    <associate|eq 20.735.248|<tuple|20.770|?>>
+    <associate|eq 20.736.248|<tuple|20.771|?>>
+    <associate|eq 20.737.248|<tuple|20.772|?>>
+    <associate|eq 20.738.248|<tuple|20.773|?>>
+    <associate|eq 20.739.248|<tuple|20.774|?>>
+    <associate|eq 20.740.248|<tuple|20.775|?>>
+    <associate|eq 20.741.248|<tuple|20.776|?>>
+    <associate|eq 20.742.248|<tuple|20.777|?>>
+    <associate|eq 20.743.248|<tuple|20.778|?>>
+    <associate|eq 20.744.248|<tuple|20.779|?>>
+    <associate|eq 20.745.248|<tuple|20.780|?>>
+    <associate|eq 20.746.248|<tuple|20.781|?>>
+    <associate|eq 20.747.248|<tuple|20.782|?>>
+    <associate|eq 20.748.248|<tuple|20.783|?>>
+    <associate|eq 20.749.248|<tuple|20.784|?>>
+    <associate|eq 20.751.248|<tuple|20.786|?>>
+    <associate|eq 20.752.248|<tuple|20.787|?>>
+    <associate|eq 20.753.248|<tuple|20.788|?>>
+    <associate|eq 20.754.248|<tuple|20.789|?>>
+    <associate|eq 20.755.243|<tuple|20.790|?>>
+    <associate|eq 20.756.248|<tuple|20.791|?>>
+    <associate|eq 20.757.248|<tuple|20.792|?>>
+    <associate|eq 20.758.248|<tuple|20.793|?>>
+    <associate|eq 20.759.248|<tuple|20.794|?>>
     <associate|eq 20.76.200|<tuple|20.97|?>>
-    <associate|eq 20.760.248|<tuple|20.793|?>>
-    <associate|eq 20.761.248|<tuple|20.794|?>>
-    <associate|eq 20.762.248|<tuple|20.795|?>>
-    <associate|eq 20.763.248|<tuple|20.796|?>>
-    <associate|eq 20.764.248|<tuple|20.797|?>>
-    <associate|eq 20.765.248|<tuple|20.798|?>>
-    <associate|eq 20.767.248|<tuple|20.800|?>>
-    <associate|eq 20.768.248|<tuple|20.801|?>>
-    <associate|eq 20.769.248|<tuple|20.802|?>>
+    <associate|eq 20.760.248|<tuple|20.795|?>>
+    <associate|eq 20.761.248|<tuple|20.796|?>>
+    <associate|eq 20.762.248|<tuple|20.797|?>>
+    <associate|eq 20.763.248|<tuple|20.798|?>>
+    <associate|eq 20.764.248|<tuple|20.799|?>>
+    <associate|eq 20.765.248|<tuple|20.800|?>>
+    <associate|eq 20.767.248|<tuple|20.802|?>>
+    <associate|eq 20.768.248|<tuple|20.803|?>>
+    <associate|eq 20.769.248|<tuple|20.804|?>>
     <associate|eq 20.77.200|<tuple|20.98|?>>
-    <associate|eq 20.770.248|<tuple|20.803|?>>
-    <associate|eq 20.771.248|<tuple|20.804|?>>
-    <associate|eq 20.772.248|<tuple|20.805|?>>
-    <associate|eq 20.773.248|<tuple|20.806|?>>
-    <associate|eq 20.774.248|<tuple|20.807|?>>
-    <associate|eq 20.775.248|<tuple|20.808|?>>
-    <associate|eq 20.776.248|<tuple|20.809|?>>
-    <associate|eq 20.777.248|<tuple|20.810|?>>
-    <associate|eq 20.778.248|<tuple|20.811|?>>
-    <associate|eq 20.779.248|<tuple|20.812|?>>
+    <associate|eq 20.770.248|<tuple|20.805|?>>
+    <associate|eq 20.771.248|<tuple|20.806|?>>
+    <associate|eq 20.772.248|<tuple|20.807|?>>
+    <associate|eq 20.773.248|<tuple|20.808|?>>
+    <associate|eq 20.774.248|<tuple|20.809|?>>
+    <associate|eq 20.775.248|<tuple|20.810|?>>
+    <associate|eq 20.776.248|<tuple|20.811|?>>
+    <associate|eq 20.777.248|<tuple|20.812|?>>
+    <associate|eq 20.778.248|<tuple|20.813|?>>
+    <associate|eq 20.779.248|<tuple|20.814|?>>
     <associate|eq 20.78.200|<tuple|20.99|?>>
-    <associate|eq 20.780.248|<tuple|20.813|?>>
-    <associate|eq 20.781.248|<tuple|20.814|?>>
-    <associate|eq 20.782.248|<tuple|20.815|?>>
-    <associate|eq 20.783.248|<tuple|20.816|?>>
-    <associate|eq 20.784.248|<tuple|20.817|?>>
-    <associate|eq 20.785.248|<tuple|20.818|?>>
-    <associate|eq 20.786.248|<tuple|20.819|?>>
-    <associate|eq 20.787.248|<tuple|20.820|?>>
-    <associate|eq 20.788.248|<tuple|20.821|?>>
-    <associate|eq 20.789.248|<tuple|20.822|?>>
+    <associate|eq 20.780.248|<tuple|20.815|?>>
+    <associate|eq 20.781.248|<tuple|20.816|?>>
+    <associate|eq 20.782.248|<tuple|20.817|?>>
+    <associate|eq 20.783.248|<tuple|20.818|?>>
+    <associate|eq 20.784.248|<tuple|20.819|?>>
+    <associate|eq 20.785.248|<tuple|20.820|?>>
+    <associate|eq 20.786.248|<tuple|20.821|?>>
+    <associate|eq 20.787.248|<tuple|20.822|?>>
+    <associate|eq 20.788.248|<tuple|20.823|?>>
+    <associate|eq 20.789.248|<tuple|20.824|?>>
     <associate|eq 20.79.200|<tuple|20.100|?>>
-    <associate|eq 20.790.248|<tuple|20.823|?>>
+    <associate|eq 20.790.248|<tuple|20.825|?>>
     <associate|eq 20.791.231|<tuple|20.515|?>>
-    <associate|eq 20.791.248|<tuple|20.824|?>>
-    <associate|eq 20.792.248|<tuple|20.825|?>>
-    <associate|eq 20.793.248|<tuple|20.826|?>>
-    <associate|eq 20.794.248|<tuple|20.827|?>>
-    <associate|eq 20.795.248|<tuple|20.828|?>>
-    <associate|eq 20.796.248|<tuple|20.829|?>>
-    <associate|eq 20.797.248|<tuple|20.830|?>>
-    <associate|eq 20.798.248|<tuple|20.831|?>>
-    <associate|eq 20.799.248|<tuple|20.832|?>>
+    <associate|eq 20.791.248|<tuple|20.826|?>>
+    <associate|eq 20.792.248|<tuple|20.827|?>>
+    <associate|eq 20.793.248|<tuple|20.828|?>>
+    <associate|eq 20.794.248|<tuple|20.829|?>>
+    <associate|eq 20.795.248|<tuple|20.830|?>>
+    <associate|eq 20.796.248|<tuple|20.831|?>>
+    <associate|eq 20.797.248|<tuple|20.832|?>>
+    <associate|eq 20.798.248|<tuple|20.833|?>>
+    <associate|eq 20.799.248|<tuple|20.834|?>>
     <associate|eq 20.8.155|<tuple|20.8|?>>
     <associate|eq 20.80.200|<tuple|20.101|?>>
-    <associate|eq 20.800.248|<tuple|20.833|?>>
-    <associate|eq 20.801.248|<tuple|20.834|?>>
-    <associate|eq 20.802.248|<tuple|20.835|?>>
-    <associate|eq 20.803.248|<tuple|20.836|?>>
-    <associate|eq 20.804.248|<tuple|20.837|?>>
-    <associate|eq 20.805.248|<tuple|20.838|?>>
-    <associate|eq 20.806.248|<tuple|20.839|?>>
-    <associate|eq 20.807.248|<tuple|20.840|?>>
-    <associate|eq 20.808.248|<tuple|20.841|?>>
+    <associate|eq 20.800.248|<tuple|20.835|?>>
+    <associate|eq 20.801.248|<tuple|20.836|?>>
+    <associate|eq 20.802.248|<tuple|20.837|?>>
+    <associate|eq 20.803.248|<tuple|20.838|?>>
+    <associate|eq 20.804.248|<tuple|20.839|?>>
+    <associate|eq 20.805.248|<tuple|20.840|?>>
+    <associate|eq 20.806.248|<tuple|20.841|?>>
+    <associate|eq 20.807.248|<tuple|20.842|?>>
+    <associate|eq 20.808.248|<tuple|20.843|?>>
     <associate|eq 20.81.200|<tuple|20.102|?>>
-    <associate|eq 20.810.248|<tuple|20.843|?>>
-    <associate|eq 20.811.248|<tuple|20.844|?>>
-    <associate|eq 20.813.248|<tuple|20.845|?>>
-    <associate|eq 20.814.248|<tuple|20.846|?>>
-    <associate|eq 20.815.248|<tuple|20.847|?>>
-    <associate|eq 20.816.248|<tuple|20.848|?>>
-    <associate|eq 20.817.249|<tuple|20.849|?>>
-    <associate|eq 20.818.249|<tuple|20.850|?>>
-    <associate|eq 20.819.249|<tuple|20.851|?>>
+    <associate|eq 20.810.248|<tuple|20.845|?>>
+    <associate|eq 20.811.248|<tuple|20.846|?>>
+    <associate|eq 20.813.248|<tuple|20.847|?>>
+    <associate|eq 20.814.248|<tuple|20.848|?>>
+    <associate|eq 20.815.248|<tuple|20.849|?>>
+    <associate|eq 20.816.248|<tuple|20.850|?>>
+    <associate|eq 20.817.249|<tuple|20.851|?>>
+    <associate|eq 20.818.249|<tuple|20.852|?>>
+    <associate|eq 20.819.249|<tuple|20.853|?>>
     <associate|eq 20.82.200|<tuple|20.103|?>>
-    <associate|eq 20.820.249|<tuple|20.852|?>>
-    <associate|eq 20.821.249|<tuple|20.853|?>>
-    <associate|eq 20.822.249|<tuple|20.854|?>>
+    <associate|eq 20.820.249|<tuple|20.854|?>>
+    <associate|eq 20.821.249|<tuple|20.855|?>>
+    <associate|eq 20.822.249|<tuple|20.856|?>>
     <associate|eq 20.83.200|<tuple|20.104|?>>
     <associate|eq 20.84.200|<tuple|20.105|?>>
     <associate|eq 20.85.200|<tuple|20.106|?>>
