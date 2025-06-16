@@ -6129,6 +6129,470 @@
 
     \;
   </proof>
+
+  \;
+
+  \;
+
+  \;
+
+  <\equation>
+    <label|eq 20.507.231><around*|{|f<rsub|n>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>
+  </equation>
+
+  \;
+
+  \;
+
+  \;
+
+  <\theorem>
+    <label|non negative function as limit of simple functions>Let
+    <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>> be a measurable space
+    and <math|f\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    then there exists a sequence <math|<around*|{|f<rsub|k>|}><rsub|k\<in\>\<bbb-N\>>\<subseteq\>\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|[>>
+    such that <math|\<forall\>x\<in\>X> we have
+
+    <\equation*>
+      \<forall\>n\<in\>\<bbb-N\><text| we have
+      >f<rsub|n><around*|(|x|)>\<leqslant\>f<rsub|n+1><around*|(|x|)>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      <below|lim|n\<rightarrow\>\<infty\>>f<rsub|n><around*|(|x|)><text|
+      exists and >f<around*|(|x|)>=<below|lim|n\<rightarrow\>\<infty\>>f<rsub|n><around*|(|x|)>=sup<around*|(|<around*|{|f<rsub|n><around*|(|x|)>\|n\<in\>\<bbb-N\>|}>|)>
+    </equation*>
+
+    In other words we have that\ 
+
+    <\equation*>
+      f=<below|lim|n\<rightarrow\>\<infty\>>f<rsub|n>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    The strategy of the proof is, given <math|n\<in\>\<bbb-N\>>, to divide
+    <math|f<around*|(|X|)><big|cap><around*|[|0,n|[>> in
+    <math|n\<cdot\>2<rsup|n>> intervals of the form
+    <math|<around*|[|<frac|k-1|2<rsup|n>>,<frac|k|2<rsup|n>>|[>> and
+    aproximate <math|f> by <math|f<rsub|n>> where
+
+    <\equation*>
+      f<rsub|n><around*|(|x|)>=<choice|<tformat|<table|<row|<cell|<frac|k-1|2<rsup|n>><text|
+      if >x\<in\>f<around*|(|X|)><big|cap><around*|[|0,n|[><text| where
+      >k<text| satisfies> x\<in\>f<rsup|-1><around*|(|<around*|[|<frac|k-1|2<rsup|n>>,<frac|k|2<rsup|n>>|[>|)>>>|<row|<cell|n<text|
+      if >x\<in\>X\\<around*|(|<big|cup><rsub|k\<in\>I<rsub|n>>A<rsub|n,k>|)>>>>>>
+    </equation*>
+
+    and prove that <math|f=<below|lim|n\<rightarrow\>\<infty\>>f<rsub|n>>
+    \ The following illustrates this for <math|n=2> and <math|X=\<bbb-R\>>
+    here
+
+    <\equation*>
+      <block*|<tformat|<twith|table-lborder|0ln>|<table|<row|<cell|x>|<cell|\<in\>>|<cell|f<rsup|-1><around*|(|<around*|[|0,1/4|[>|)>>|<cell|\<Rightarrow\>>|<cell|f<rsub|2><around*|(|x|)>=0/4>>|<row|<cell|x>|<cell|\<in\>>|<cell|f<rsup|-1><around*|(|<around*|[|1/4,2/4|[>|)>>|<cell|\<Rightarrow\>>|<cell|f<rsub|2><around*|(|x|)>=1/4>>|<row|<cell|x>|<cell|\<in\>>|<cell|f<rsup|-1><around*|(|<around*|[|2/4,3/4|[>|)>>|<cell|\<Rightarrow\>>|<cell|f<rsub|2><around*|(|x|)>=2/4>>|<row|<cell|x>|<cell|\<in\>>|<cell|f<rsup|-1><around*|(|<around*|[|3/4,4/4|[>|)>>|<cell|\<Rightarrow\>>|<cell|f<rsub|2><around*|(|x|)>=3/4>>|<row|<cell|x>|<cell|\<in\>>|<cell|f<rsup|-1><around*|(|<around*|[|4/4,5/4|[>|)>>|<cell|\<Rightarrow\>>|<cell|f<rsub|2><around*|(|x|)>=4/4>>|<row|<cell|x>|<cell|\<in\>>|<cell|f<rsup|-1><around*|(|<around*|[|5/4,6/4|[>|)>>|<cell|\<Rightarrow\>>|<cell|f<rsub|2><around*|(|x|)>=5/4>>|<row|<cell|x>|<cell|\<in\>>|<cell|f<rsup|-1><around*|(|<around*|[|6/4,7/4|[>|)>>|<cell|\<Rightarrow\>>|<cell|f<rsub|2><around*|(|x|)>=6/4>>|<row|<cell|x>|<cell|\<in\>>|<cell|f<rsup|-1><around*|(|<around*|[|7/4,8/4|[>|)>>|<cell|\<Rightarrow\>>|<cell|f<rsub|2><around*|(|x|)>=7/4>>|<row|<cell|x>|<cell|\<in\>>|<cell|f<rsup|-1><around*|(|<around*|[|8/4,\<infty\>|[>|)>>|<cell|\<Rightarrow\>>|<cell|f<rsub|2><around*|(|x|)>=2>>>>>
+    </equation*>
+
+    so that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|f<rsub|2>>|<cell|=>|<cell|\<cal-X\><rsub|f<rsup|-1><around*|(|<around*|[|0,<frac|1|4>|[>|)>>\<cdot\><frac|0|4>+\<cal-X\><rsub|f<rsup|-1><around*|(|<around*|[|<frac|1|4>,<frac|2|4>|[>|)>>\<cdot\><frac|1|4>+\<cal-X\><rsub|f<rsup|-1><around*|(|<around*|[|<frac|2|4>,<frac|3|4>|[>|)>>\<cdot\><frac|2|4>+\<cal-X\><rsub|f<rsup|-1><around*|(|<around*|[|<frac|3|4>,<frac|4|4>|[>|)>>\<cdot\><frac|3|4>+\<cal-X\><rsub|f<rsup|-1><around*|(|<around*|[|<frac|4|4>,<frac|5|4>|[>|)>>\<cdot\><frac|4|4>+\<cal-X\><rsub|f<rsup|-1><around*|(|<around*|[|<frac|5|4>,<frac|6|4>|[>|)>>\<cdot\><frac|5|4>+\<cal-X\><rsub|f<rsup|-1><around*|(|<around*|[|<frac|6|4>,<frac|7|4>|[>|)>>\<cdot\><frac|7|4>+\<cal-X\><rsub|f<rsup|-1><around*|(|<around*|[|<frac|7|4>,<frac|8|4>|[>|)>>\<cdot\><frac|7|4>+\<cal-X\><rsub|f<rsup|-1><around*|(|<around*|[|<frac|8|4>,\<infty\>|[>|)>>\<cdot\><frac|8|4><eq-number><label|eq
+      20.490.249>>>>>
+    </eqnarray*>
+
+    \;
+
+    <small-figure|<with|gr-mode|<tuple|edit|line>|gr-frame|<tuple|scale|1cm|<tuple|0.410009gw|0.539996gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|2>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|2>|gr-auto-crop|true|gr-color|red|gr-snap|<tuple>|gr-arrow-begin|o|gr-line-width|2ln|gr-arrow-end|\<less\>|<graphics||<text-at|<math|>|<point|-4.4|0.4>>|<with|dash-style|10|<line|<point|-4|-3.2>|<point|8.0|-3.2>>>|<with|dash-style|10|<line|<point|-4|-2.4>|<point|8.0|-2.4>>>|<with|dash-style|10|<line|<point|-4|-0.8>|<point|8.0|-0.8>>>|<with|dash-style|10|<line|<point|-4|1.6>|<point|8.0|1.6>>>|<with|dash-style|10|<line|<point|-4|2.4>|<point|8.0|2.4>>>|<text-at|<math|1/4>|<point|-5|-3.2>>|<text-at|<math|2/4>|<point|-5|-2.4>>|<text-at|<math|3/4>|<point|-5|-1.6>>|<text-at|4/4|<point|-5|-0.8>>|<text-at|<math|5/4>|<point|-5|0>>|<text-at|<math|6/4>|<point|-5|0.8>>|<text-at|<math|7/4>|<point|-5|1.6>>|<text-at|<math|8/4>|<point|-5|2.4>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|<text-at|<math|0/4>|<point|-5|-4>>>|<with|color|red|arrow-end|\<less\>|dash-style|10|line-width|2ln|arrow-begin|o|<line|<point|-4|-4>|<point|-3.6|-4.0>>>|<with|color|red|line-width|2ln|arrow-begin|o|arrow-end|\<less\>|<line|<point|-3.6|-3.2>|<point|-3.0|-3.2>>>|<with|color|red|line-width|2ln|arrow-begin|o|arrow-end|\<less\>|<line|<point|-3|-2.4>|<point|-2.0|-2.4>>>|<with|color|red|line-width|2ln|arrow-begin|o|arrow-end|\<less\>|<line|<point|-2|-1.6>|<point|2.0|-1.6>>>|<with|color|red|line-width|2ln|arrow-begin|o|arrow-end|\<less\>|<line|<point|2|-0.8>|<point|3.2|-0.8>>>|<with|color|red|line-width|2ln|arrow-begin|o|arrow-end|\<less\>|<line|<point|3.2|0>|<point|4.0|0.0>>>|<with|color|blue|dash-style|10|<line|<point|7.6|1.6>|<point|7.6|-4.0>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|<text-at|<math|<with|font-series|bold|>>|<point|-2|3.4>>>|<with|color|blue|dash-style|10|<line|<point|7.2|2.4>|<point|7.2|-4.0>>>|<with|color|blue|dash-style|10|<line|<point|4.66401|2.4>|<point|4.6|-4.0>>>|<with|color|red|arrow-end|\<less\>|line-width|2ln|arrow-begin|o|<line|<point|4.66401|2.4>|<point|7.2|2.4>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|dash-style|10|<line|<point|-4|0.8>|<point|8.0|0.8>>>|<with|color|red|arrow-end|\<less\>|line-width|2ln|arrow-begin|o|<line|<point|7.6|0>|<point|8.0|0.0>>>|<with|line-width|2ln|<smooth|<point|-4|-4>|<point|-3.6|-3.2>|<point|-3.0|-2.4>|<point|-2.0|-1.6>|<point|2.0|-0.8>|<point|3.2|0.0>|<point|4.0|0.8>|<point|4.6|2.4>|<point|6.0|3.2>|<point|7.2|2.4>|<point|7.6|0.8>|<point|8.0|0.0>>>|<with|color|blue|dash-style|10|<smooth|<point|3.98431|0.8>|<point|3.92462627331658|-4.08966133086387>>>|<with|color|blue|dash-style|10|<smooth|<point|3.2|0>|<point|3.17809895488821|-4.08966133086387>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|dash-style|10|<smooth|<point|8|0>|<point|-4.01213784892181|-0.0230519910041011>>>|<with|color|blue|dash-style|10|<line|<point|1.99945|-0.8>|<point|1.96008069850509|-4.07001587511576>>>|<with|color|blue|dash-style|10|<line|<point|-0.0267421371674196|-1.19818878909354>|<point|0.0|-4.0>>>|<with|color|blue|dash-style|10|<line|<point|-2|-1.6>|<point|-1.96901045111787|-4.07001587511576>>>|<with|color|blue|dash-style|10|<line|<point|-3.03442803818049|-2.4>|<point|-3.0|-4.0>>>|<with|color|blue|dash-style|10|<line|<point|-3.6202|-3.2>|<point|-3.6|-4.0>>>|<with|color|blue|dash-style|10|<line|<point|4.26597|1.6>|<point|4.18616880539754|-4.06682431538563>>>|<with|color|blue|dash-style|10|<line|<point|7.47761|1.56977>|<point|7.49818097631962|-3.98453829871676>>>|<with|color|red|arrow-end|\<less\>|line-width|2ln|arrow-begin|o|<line|<point|4.0216|0.808622>|<point|4.26845482206641|0.829193676412224>>>|<with|color|red|arrow-end|\<less\>|line-width|2ln|arrow-begin|o|<line|<point|4.3096|1.56977>|<point|4.65931340124355|1.56976782643207>>>|<with|color|red|arrow-end|\<less\>|line-width|2ln|arrow-begin|o|<line|<point|7.21018|1.59034>|<point|7.41589495965075|1.59033933059929>>>|<with|color|red|arrow-end|\<less\>|line-width|2ln|arrow-begin|o|<line|<point|7.45704|0.829194>|<point|7.55989548882127|0.808622172245006>>>>>|<label|figure
+    20.6.234><math|f> apprimated by <math|f<rsub|2>>>
+
+    \;
+
+    Now for the details of the proof. Define\ 
+
+    <\equation>
+      <label|eq 20.500.231><around*|{|I<rsub|n>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>\<cal-P\><around*|(|\<bbb-N\>|)><text|
+      by >I<rsub|n>=<around*|{|i\<in\>\<bbb-N\>\|i\<leqslant\>n\<cdot\>2<rsup|n>|}>=<around*|{|1,\<ldots\>,n\<cdot\>2<rsup|n>|}>
+    </equation>
+
+    Let <math|n\<in\>\<bbb-N\>>. Define for <math|k\<in\>I<rsub|n>>\ 
+
+    <\equation>
+      <label|eq 20.501.231>A<rsub|n,k>=<around*|{|x\<in\>X\|<frac|k-1|2<rsup|n>>\<leqslant\>f<around*|(|x|)>\<less\><frac|k|n>|}>=f<rsup|-1><around*|(|<around*|[|<frac|k-1|2<rsup|n>>,<frac|k|2<rsup|n>>|[>|)>
+    </equation>
+
+    Then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|x\<in\>A<rsub|n,k>>|<cell|\<Leftrightarrow\>>|<cell|<frac|k-1|2<rsup|n>>\<leqslant\>x\<wedge\>x\<less\><frac|k|2<rsup|n>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|{|f\<geqslant\><frac|k-1|2<rsup|n>>|}>\<wedge\>x\<in\><around*|{|f\<less\><frac|k|2<rsup|n>>|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|{|f\<geqslant\><frac|k-1|2<rsup|n>>|}><big|cap><around*|{|f\<less\><frac|k|2<rsup|n>>|}>>>>>
+    </eqnarray*>
+
+    which proves that\ 
+
+    <\equation>
+      <label|eq 20.502.231>A<rsub|n,k>=<around*|{|f\<geqslant\><frac|k-1|2<rsup|n>>|}><big|cap><around*|{|f\<less\><frac|k|2<rsup|n>>|}>
+    </equation>
+
+    As <math|f> is <math|\<cal-A\>>-measurable it follows from [theorem:
+    <reference|measurable function alternative (1)>] that
+    <math|<around*|{|f\<geqslant\><frac|k-1|2<rsup|n>>|}>,<around*|{|f\<less\><frac|k|2<rsup|n>>|}>\<in\>\<cal-A\>>
+    so that\ 
+
+    <\equation>
+      <label|eq 20.503.231>\<forall\>k\<in\>I<rsub|n> we have
+      A<rsub|n,k>\<in\>\<cal-A\><text|>
+    </equation>
+
+    As <math|I<rsub|n>=<around*|{|1,\<ldots\>,n\<cdot\>2<rsup|n>|}>> is
+    finite hence countable it follows from [theorem: <reference|measure
+    countable union is in sigma algebra>] that
+
+    <\equation>
+      <label|eq 20.504.231><big|cup><rsub|k\<in\>I<rsub|n>>A<rsub|n,k>\<in\>\<cal-A\>
+    </equation>
+
+    Let <math|l,k\<in\>I<rsub|n>> with <math|l\<neq\>k> then we may assume
+    that <math|l\<less\>k\<Rightarrow\>l\<leqslant\>k-1> [otherwise
+    interchange <math|l> and <math|k>]. Assume that
+    <math|x\<in\>A<rsub|n,k><big|cap>A<rsub|n,l>> then
+    <math|<frac|l-1|2<rsup|n>>\<leqslant\>f<around*|(|x|)>\<less\><frac|l|2<rsup|n>>\<leqslant\><frac|k-1|2<rsup|n>>\<leqslant\>f<around*|(|x|)>\<less\><frac|k|2<rsup|n>>>
+    leading to the contradiction <math|f<around*|(|x|)>\<less\>f<around*|(|x|)>>,
+    hence the assumption is wrong and we have that
+    <math|><math|A<rsub|n,k><big|cap>A<rsub|n,l>=\<varnothing\>>. In other
+    words we have proved that
+
+    <\equation>
+      <label|eq 20.505.231><around*|{|A<rsub|n,k>|}><rsub|k\<in\>I<rsub|n>><text|
+      is pairwise disjoint>
+    </equation>
+
+    Given <math|n\<in\>\<bbb-N\>> define
+
+    <\equation*>
+      <around*|{|B<rsub|n,k>|}><rsub|k\<in\><around*|{|1,\<ldots\>,n\<cdot\>2<rsup|n>+1|}>>\<subseteq\>\<cal-A\><text|
+      by >B<rsub|n,k>=<choice|<tformat|<table|<row|<cell|A<rsub|n,k><text| if
+      >k\<in\><around*|{|1,\<ldots\>,n\<cdot\>2<rsup|n>|}>=I<rsub|n>>>|<row|<cell|X\\<around*|(|<big|sqcup><rsub|i\<in\>I<rsub|n>>A<rsub|n,k>|)><text|
+      if >k=n\<cdot\>2<rsup|n>+1>>>>><below|\<in\>|<text|[eq: <reference|eq
+      20.503.231>, <reference|eq 20.504.231>]>>\<cal-A\>
+    </equation*>
+
+    <\equation*>
+      <around*|{|f<rsub|n,k>|}><rsub|k\<in\><around*|{|1,\<ldots\>,n\<cdot\>2<rsup|n>+1|}>>\<subseteq\><around*|[|0,\<infty\>|[><text|
+      by >f<rsub|n,k>=<choice|<tformat|<table|<row|<cell|<frac|k-1|2<rsup|n>><text|
+      if >k\<in\><around*|{|1,\<ldots\>,n\<cdot\>2<rsup|k>|}>=I<rsub|n>>>|<row|<cell|n<text|
+      if >k=n\<cdot\>2<rsup|n>+1>>>>>
+    </equation*>
+
+    Using [lemma: <reference|lemma 20.371.262>] together with [eq:
+    <reference|eq 20.505.231>] it follows then that\ 
+
+    <\equation>
+      <label|eq 20.503.261><around*|{|B<rsub|n,k>|}><rsub|k\<in\><around*|{|1,\<ldots\>,n\<cdot\>2<rsup|n>+1|}>>\<subseteq\>\<cal-A\><text|
+      is pairwise disjoint and ><big|sqcup><rsub|k\<in\><around*|{|1,\<ldots\>,n\<cdot\>2<rsup|n>+1|}>>B<rsub|n,k>=X
+    </equation>
+
+    Define now\ 
+
+    <\equation>
+      <label|eq 20.504.261>f<rsub|n>:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+      by >f<rsub|n>=<big|sum><rsub|i=1><rsup|n\<cdot\>2<rsup|n>+1>f<rsub|n,k>\<cdot\>\<cal-X\><rsub|X,B<rsub|n,k>>
+    </equation>
+
+    Using then [theorem: <reference|simple function measurable (1)>] together
+    with [eq: <reference|eq 20.503.261>] proves that\ 
+
+    <\equation>
+      <label|eq 20.507.231><around*|{|f<rsub|n>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>
+    </equation>
+
+    \;
+
+    Define the following functions [one for each <math|n\<in\>\<bbb-N\>>]
+
+    <\equation>
+      <label|eq 20.506.231>f<rsub|n>:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+      where >f<rsub|n><around*|(|x|)>=<choice|<tformat|<table|<row|<cell|<frac|k-1|2<rsup|n>><text|
+      if >x\<in\>A<rsub|n,k>>>|<row|<cell|n<text| if
+      >x\<in\>X\\<around*|(|<big|sqcup><rsub|k\<in\>I<rsub|n>>A<rsub|n,k>|)>>>>>>\<in\><around*|[|0,\<infty\>|[>
+    </equation>
+
+    <\note>
+      <math|f<rsub|n>> is a well defined function because:\ 
+
+      <\enumerate>
+        <item>Define the \ <math|f<rsub|n>=<around*|(|<big|cup><rsub|k\<in\>I<rsub|n>><around*|(|A<rsub|n,k>\<times\><around*|{|<frac|k-1|2<rsup|n>>|}>|)>|)><big|cup><around*|(|<around*|(|X\\<around*|(|<big|sqcup><rsub|k\<in\>I<rsub|n>>A<rsub|n,k>|)>|)>\<times\><around*|{|n|}>|)>\<subseteq\>X\<times\>\<bbb-R\>>
+
+        <item>Let <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>f<rsub|n>>
+        then for <math|x> we have either:\ 
+
+        <\description>
+          <item*|<math|x\<in\><big|cup><rsub|k\<in\>I<rsub|n>>A<rsub|n,k>>>Then
+          <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\><big|cup><rsub|k\<in\>I<rsub|n>><around*|(|A<rsub|n,k>\<times\><around*|{|<frac|k-1|2<rsup|n>>|}>|)>>
+          so there exist a <math|k<rsub|1>,k<rsub|2>\<in\>I<rsub|n>> such
+          that <math|<around*|(|x,y|)>\<in\>A<rsub|n,k<rsub|1>>\<times\><around*|{|<frac|k<rsub|1>-1|2<rsup|n>>|}>\<wedge\><around*|(|x,y<rprime|'>|)>\<in\>A<rsub|n,k<rsub|2>>\<times\><around*|{|<frac|k<rsub|2>-1|2<rsup|n>>|}>>.
+          Assume that <math|k<rsub|1>\<neq\>k<rsub|2>> then we have
+          <math|x\<in\>A<rsub|n,k<rsub|1>><big|cap>A<rsub|n,k<rsub|2>>=\<varnothing\>>
+          a contradiction. So we must have that <math|k<rsub|1>=k<rsub|2>> so
+          that <math|y=<frac|k<rsub|1>-1|2<rsup|n>>=<frac|k<rsub|2>-1|2<rsup|n>>=y<rprime|'>>.\ 
+
+          <item*|<math|x\<in\>X\\<around*|(|<big|sqcup><rsub|k\<in\>I<rsub|n>>A<rsub|n,k>|)>>>Then
+          <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\><around*|(|X\\<around*|(|<big|sqcup><rsub|k\<in\>I<rsub|n>>A<rsub|n,k>|)>|)>\<times\><around*|{|n|}>>
+          so that <math|y=n=y<rprime|'>>
+        </description>
+
+        As in all cases we <math|y=y<rprime|'>> it follows that
+        <math|f<rsub|n>:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>> is
+        indeed a well defined function.
+      </enumerate>
+    </note>
+
+    \;
+
+    Let <math|n\<in\>\<bbb-N\>> and take <math|x\<in\>f<rsup|-1><around*|(|<around*|[|0,n|[>|)>>
+    then <math|0\<leqslant\>f<around*|(|x|)>\<less\>n>. Define
+    <math|B<rsub|x>=<around*|{|k\<in\>I<rsub|n>\|f<around*|(|x|)>\<less\><frac|k|2<rsup|n>>|}>\<subseteq\>I<rsub|n>>
+    a finite set. As <math|n\<cdot\>2<rsup|n>\<in\>I<rsub|n>> and
+    <math|f<around*|(|x|)>\<less\>n=<frac|n\<cdot\>2<rsup|n>|2<rsup|n>>> we
+    have that <math|n\<cdot\>2<rsup|n>\<in\>B<rsub|x>> so that
+    <math|B<rsub|x>\<neq\>\<varnothing\>>. Hence
+    <math|l=min<around*|(|B<rsub|x>|)>> exist. There are two possible cases
+    for <math|l>
+
+    <\description>
+      <item*|<math|l=1>>Then <math|<frac|1-1|2<rsup|n>>=0\<leqslant\>f<around*|(|x|)>\<less\><frac|1|2<rsup|n>>>
+      so that <math|x\<in\>A<rsub|n,1>\<subseteq\><big|cup><rsub|k\<in\>I<rsub|n>>A<rsub|n,k>>
+
+      <item*|<math|1\<less\>l>>Then <math|1\<leqslant\>l-1\<less\>l\<leqslant\>n\<cdot\>2<rsup|n>>
+      so that <math|l-1\<in\>I<rsub|n>>. As
+      <math|l-1\<less\>l=min<around*|(|B<rsub|x>|)>> we must have that
+      <math|<frac|l-1|2<rsup|n>>\<leqslant\>f<around*|(|x|)>\<less\><frac|l|2<rsup|n>>>
+      so that <math|x\<in\>A<rsub|n,l>\<subseteq\><big|cup><rsub|k\<in\>I<rsub|n>>A<rsub|n,k>>
+    </description>
+
+    So we have proved that <math|f<rsup|-1><around*|(|<around*|[|0,n|[>|)>\<subseteq\><big|cup><rsub|k\<in\>I<rsub|n>>A<rsub|n,k>>.
+    For the opposite inclusion, we have for <math|k\<in\>I<rsub|n>> that
+    <math|<rigid|A<rsub|n,k>=f<rsup|-1><around*|(|<around*|[|<frac|k-1|2<rsup|n>>,<frac|k|2<rsup|n>>|[>|)><below|\<subseteq\>|<frac|k|2<rsup|n>>\<leqslant\><frac|n\<cdot\>2<rsup|n>|2<rsup|n>>>f<rsup|-1><around*|(|<around*|[|0,1|[>|)>>>.
+    So it follows that <math|<big|cup><rsub|k\<in\>I<rsub|n>>A<rsub|n,k>=f<rsup|-1><around*|(|<around*|[|0,1|[>|)>>.
+    Summarized we have
+
+    <\equation>
+      <label|eq 20.508.231>\<forall\>n\<in\>\<bbb-N\><text| we have
+      >f<rsup|-1><around*|(|<around*|[|0,n|[>|)>=<big|cup><rsub|k\<in\>I<rsub|n>>A<rsub|n,k>
+    </equation>
+
+    Let <math|x\<in\>X> and <math|n\<in\>\<bbb-N\>> then we have to check the
+    following possible cases
+
+    <\description>
+      <item*|<math|f<around*|(|x|)>\<less\>n>>Then
+      <math|x\<in\>f<rsup|-1><around*|(|<around*|[|0,n|[>|)>\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.508.231>]>><big|cup><rsub|k\<in\>I<rsub|n>>A<rsub|n,k>>
+      hence there exist a <math|k\<in\>I<rsub|n>> [which is unique by [eq:
+      <reference|eq 20.505.231>]] such that <math|x\<in\>A<rsub|n,k>>, hence
+      using the definition of <math|f<rsub|n>> [see eq: <reference|eq
+      20.506.231>] it follows that <math|f<rsub|n><around*|(|x|)>=<frac|k-1|2<rsup|n>>>.
+      As <math|x\<in\>A<rsub|n,k>> we have also
+      <math|<frac|k-1|2<rsup|n>>\<leqslant\>f<around*|(|x|)>\<less\><frac|k|2<rsup|n>>>
+      so that\ 
+
+      <\equation*>
+        f<rsub|n><around*|(|x|)>\<leqslant\>f<around*|(|x|)><text| and
+        ><text| >f<rsub|n><around*|(|x|)>=<frac|k-1|2<rsup|n>>\<leqslant\>f<around*|(|x|)>\<less\><frac|k|2<rsup|n>>
+      </equation*>
+
+      <item*|<math|n\<leqslant\>f<around*|(|x|)>>>Then
+      <math|x\<nin\>f<rsup|-1><around*|(|<around*|[|0,n|[>|)>\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.508.231>]>><big|cup><rsub|k\<in\>I<rsub|n>>A<rsub|n,k>>
+      so that <math|x\<in\>X\\<big|cup><rsub|k\<in\>I<rsub|n>>A<rsub|n,k>>
+      and from [eq: <reference|eq 20.506.231>] we have that
+
+      <\equation*>
+        f<rsub|n><around*|(|x|)>=n<text| and
+        <math|f<rsub|n><around*|(|x|)>\<leqslant\>f<around*|(|x|)>>>
+      </equation*>
+    </description>
+
+    Summarizing the above we have three results
+
+    <\equation>
+      <label|eq 20.509.231>\<forall\>x\<in\>X<text| we have
+      >f<rsub|n><around*|(|x|)>\<leqslant\>f<around*|(|x|)>
+    </equation>
+
+    <\equation>
+      <label|eq 20.510.231>\<forall\>x\<in\>X<text|,
+      <math|\<forall\>n\<in\>\<bbb-N\>> with >f<around*|(|x|)>\<less\>n<text|
+      there exist a >k\<in\>I<rsub|n><text| with
+      >f<rsub|n><around*|(|x|)>=<frac|k-1|2<rsup|n>>\<leqslant\>f<around*|(|x|)>\<less\><frac|k|2>
+    </equation>
+
+    <\equation>
+      <label|eq 20.511.231>\<forall\>x\<in\>X<text|,
+      >\<forall\>n\<in\>\<bbb-N\><text| with
+      >n\<leqslant\>f<around*|(|x|)><text| we have
+      >f<rsub|n><around*|(|x|)>=n
+    </equation>
+
+    Next we show that <math|<around*|{|f<rsub|n>|}><rsub|n\<in\>\<bbb-N\>>>
+    is increasing. Let <math|x\<in\>X> then we have for
+    <math|n\<in\>\<bbb-N\>> either:
+
+    <\description>
+      <item*|<math|f<around*|(|x|)>\<less\>n>>Then
+      <math|f<around*|(|x|)>\<less\>n,n+1> so using [eq: <reference|eq
+      20.510.231>] there exists <math|k\<in\>I<rsub|n>,l\<in\>I<rsub|n+1>>
+      such that
+
+      <\equation*>
+        f<rsub|n><around*|(|x|)>=<frac|k-1|2<rsup|n>>\<leqslant\>f<around*|(|x|)>\<less\><frac|k|2<rsup|n>>\<wedge\>f<rsub|n+1><around*|(|x|)>=<frac|l-1|2<rsup|n+1>>\<leqslant\>f<around*|(|x|)>\<less\><frac|l|2<rsup|n+1>>
+      </equation*>
+
+      From this it follows that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<frac|k-1|2<rsup|n>>\<less\><frac|l-1|2<rsup|n+1>>>|<cell|\<Rightarrow\>>|<cell|<frac|2\<cdot\>k-2|2<rsup|n+1>>\<less\><frac|l|2<rsup|n+1>>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|2\<cdot\>k-2\<less\>l>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|2\<cdot\>k-2\<leqslant\>l-1>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|<frac|2\<cdot\>k-2|2<rsup|n+1>>\<leqslant\><frac|l-1|2<rsup|n+1>>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|<frac|k-1|2<rsup|n>>\<leqslant\><frac|l-1|2<rsup|n+1>>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|f<rsub|n><around*|(|x|)>\<leqslant\>f<rsub|n+1><around*|(|x|)>>>>>
+      </eqnarray*>
+
+      proving
+
+      <\equation*>
+        f<rsub|n><around*|(|x|)>\<leqslant\>f<rsub|n+1><around*|(|x|)>
+      </equation*>
+
+      <item*|<math|n\<leqslant\>f<around*|(|x|)>\<less\>n+1>>Then by [eq:
+      <reference|eq 20.509.231>] <math|f<rsub|n><around*|(|x|)>=n> and by
+      [eq: <reference|eq 20.510.231>] there exist a <math|k\<in\>I<rsub|n+1>>
+      such that <math|f<rsub|n+1><around*|(|x|)>=*<frac|k-1|2<rsup|n+1>>\<leqslant\>f<around*|(|x|)>\<less\><frac|k|2<rsup|n+1>>>.
+      As <math|n\<leqslant\>f<around*|(|x|)>> it follows that
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|n\<less\><frac|k|2<rsup|n+1>>>|<cell|\<Rightarrow\>>|<cell|n\<cdot\>2<rsup|n+1>\<less\>k>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|n\<cdot\>2<rsup|n+1>\<leqslant\>k-1>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|n\<leqslant\><frac|k-1|2<rsup|n+1>>>>|<row|<cell|>|<cell|\<Rightarrow\>>|<cell|f<rsub|n><around*|(|x|)>\<leqslant\>f<rsub|n+1><around*|(|x|)>>>>>
+      </eqnarray*>
+
+      proving\ 
+
+      <\equation*>
+        f<rsub|n><around*|(|x|)>\<leqslant\>f<rsub|n+1><around*|(|x|)>
+      </equation*>
+
+      <item*|<math|n+1\<leqslant\>f<around*|(|x|)>>>Then
+      <math|n,n+1\<leqslant\>f<around*|(|x|)>> so that by [eq: <reference|eq
+      20.509.231>] <math|f<rsub|n><around*|(|x|)>=n\<less\>n+1=f<rsub|n+1><around*|(|x|)>>
+      so that we have again\ 
+
+      <\equation*>
+        f<rsub|n><around*|(|x|)>\<leqslant\>f<rsub|n+1><around*|(|x|)>
+      </equation*>
+    </description>
+
+    So we have proved that\ 
+
+    <\equation>
+      <label|eq 20.500.232>\<forall\>x\<in\>X<text| we have
+      >\<forall\>n\<in\>\<bbb-N\><text| that
+      >f<rsub|n><around*|(|x|)>\<leqslant\>f<rsub|n+1><around*|(|x|)>
+    </equation>
+
+    Using then [theorem: <reference|extended limit increasing / decreasing
+    sequence exist>] on the above it follows that\ 
+
+    <\equation>
+      <label|eq 20.501.232>\<forall\>x\<in\>X<text|
+      ><below|lim|n\<rightarrow\>\<infty\>>f<rsub|n><around*|(|x|)><text|
+      exists and ><below|lim|n\<rightarrow\>\<infty\>>f<rsub|n><around*|(|x|)>=sup<around*|(|<around*|{|f<rsub|n><around*|(|x|)>\|n\<in\>\<bbb-N\>|}>|)>
+    </equation>
+
+    Let <math|x\<in\>X>. Using [eq: <reference|eq 20.509.231>] we have that
+    <math|\<forall\>n\<in\>\<bbb-N\>> <math|f<rsub|n><around*|(|x|)>\<leqslant\>f<around*|(|x|)>>
+    so that\ 
+
+    <\equation>
+      <label|eq 20.502.232>sup<around*|(|<around*|{|f<rsub|n><around*|(|x|)>\|n\<in\>\<bbb-N\>|}>|)>\<leqslant\>f<around*|(|x|)>
+    </equation>
+
+    For the opposite inclusion. Assume that
+    <math|><math|sup<around*|(|<around*|{|f<rsub|n><around*|(|x|)>\|n\<in\>\<bbb-N\><rsub|0>|}>|)>\<less\>f<around*|(|x|)>>
+    then
+
+    <\equation*>
+      sup<around*|(|<around*|{|f<rsub|n><around*|(|x|)>\|n\<in\>\<bbb-N\><rsub|0>|}>|)>\<in\>\<bbb-R\>
+    </equation*>
+
+    and for <math|f<around*|(|x|)>> we have either:\ 
+
+    <\description>
+      <item*|<math|f<around*|(|x|)>=\<infty\>>>By [theorem:
+      <reference|complex Archimedean property consequence (1)>] there exist a
+      <math|n\<in\>\<bbb-N\>> such that <math|sup<around*|(|<around*|{|f<rsub|n><around*|(|x|)>\|n\<in\>\<bbb-N\><rsub|0>|}>|)>\<less\>n\<less\>\<infty\>=f<around*|(|x|)>>.
+      Using then [eq: <reference|eq 20.511.231>] we have
+      <math|f<rsub|n><around*|(|x|)>=n> so that
+      <math|n=f<rsub|n><around*|(|x|)>\<leqslant\>sup<around*|(|<around*|{|f<rsub|n><around*|(|x|)>\|n\<in\>\<bbb-N\><rsub|0>|}>|)>\<less\>n>
+      leading to the contradiction <math|n\<less\>n>.
+
+      <item*|<math|f<around*|(|x|)>\<less\>\<infty\>>>As
+      <math|f<around*|(|x|)>-sup<around*|(|<around*|{|f<rsub|n><around*|(|x|)>\|n\<in\>\<bbb-N\>|}>|)>\<gtr\>0>.
+      there exist by [theorem: <reference|complex 0\<less\>x^n\<less\>e>] a
+      <math|n<rsub|1>\<in\>\<bbb-N\>> such that
+
+      <\equation*>
+        <frac|1|2<rsup|n<rsub|1>>>\<less\>f<around*|(|x|)>-sup<around*|(|<around*|{|f<rsub|n><around*|(|x|)>\|n\<in\>\<bbb-N\>|}>|)>
+      </equation*>
+
+      Further using [theorem: <reference|complex Archimedean property
+      consequence (1)>] there exist a <math|n<rsub|2>\<in\>\<bbb-N\>> such
+      that <math|f<around*|(|x|)>\<less\>n<rsub|2>>. Let
+      <rigid|<math|n=max<around*|(|n<rsub|1>,n<rsub|2>|)>>> then
+      <math|f<around*|(|x|)>\<less\>n> so that by [eq: <reference|eq
+      20.510.231>] there exist a <math|k\<in\>I<rsub|n>> such that
+      <math|f<rsub|n><around*|(|x|)>=<frac|k-1|2<rsup|n>>\<leqslant\>f<around*|(|x|)>\<less\><frac|k|2<rsup|n>>>.
+      Then <math|f<around*|(|x|)>-f<rsub|n><around*|(|x|)>\<less\><frac|k|2<rsup|n>>-<frac|k-1|2<rsup|n>>=<frac|1|2<rsup|n>>\<less\><frac|1|2<rsup|n<rsub|1>>>\<less\>f<around*|(|x|)>-sup<around*|(|<around*|{|f<rsub|n><around*|(|x|)>\|n\<in\>\<bbb-N\>|}>|)>>
+      so that <math|<rigid|sup<around*|(|<around*|{|f<rsub|n><around*|(|x|)>\|n\<in\>\<bbb-N\>|}>|)>\<less\>f<rsub|n><around*|(|x|)>>>
+      which as <math|f<rsub|n><around*|(|x|)>\<leqslant\>sup<around*|(|<around*|{|f<rsub|n><around*|(|x|)>\|n\<in\>\<bbb-N\>|}>|)>>
+      is a contradiction.\ 
+    </description>
+
+    As in all cases we reach a contradiction the assumption is invalid and we
+    must have that <math|<rigid|f<around*|(|x|)>\<leqslant\>sup<around*|(|<around*|{|f<rsub|n><around*|(|x|)><around*|\||n\<in\>\<bbb-N\>|\<nobracket\>>|}>|)>>>
+    which combined with [eq: <reference|eq 20.502.232>] proves that
+    <math|<rigid|f<around*|(|x|)>=sup<around*|(|<around*|{|f<rsub|n><around*|(|x|)><around*|\||n\<in\>\<bbb-N\>|\<nobracket\>>|}>|)>>>,
+    hence using [eq: <reference|eq 20.501.232>] we have\ 
+
+    <\equation*>
+      \<forall\>x\<in\>X<text| we have ><below|lim|n\<rightarrow\>\<infty\>>f<rsub|n><around*|(|x|)><text|
+      exist and >f<around*|(|x|)>=<below|lim|n\<rightarrow\>\<infty\>>f<rsub|n><around*|(|x|)>=sup<around*|(|<around*|{|f<rsub|n><around*|(|x|)>\|n\<in\>\<bbb-N\>|}>|)>
+    </equation*>
+  </proof>
+
+  \;
+
+  <small-figure|<with|gr-mode|<tuple|edit|line>|gr-frame|<tuple|scale|1cm|<tuple|0.410009gw|0.539996gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|2>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|2>|gr-auto-crop|true|gr-color|red|gr-snap|<tuple>|gr-arrow-begin|o|gr-line-width|2ln|gr-arrow-end|\<less\>|gr-fill-color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/ridged-brushed-medium.png|1gu|>|<graphics||<text-at|<math|>|<point|-4.4|0.4>>|<with|dash-style|10|<line|<point|-4|-3.2>|<point|8.0|-3.2>>>|<with|dash-style|10|<line|<point|-4|-2.4>|<point|8.0|-2.4>>>|<with|dash-style|10|<line|<point|-4|-0.8>|<point|8.0|-0.8>>>|<with|dash-style|10|<line|<point|-4|1.6>|<point|8.0|1.6>>>|<with|dash-style|10|<line|<point|-4|2.4>|<point|8.0|2.4>>>|<text-at|<math|1/4>|<point|-5|-3.2>>|<text-at|<math|2/4>|<point|-5|-2.4>>|<text-at|<math|3/4>|<point|-5|-1.6>>|<text-at|4/4|<point|-5|-0.8>>|<text-at|<math|5/4>|<point|-5|0>>|<text-at|<math|6/4>|<point|-5|0.8>>|<text-at|<math|7/4>|<point|-5|1.6>>|<text-at|<math|8/4>|<point|-5|2.4>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|<text-at|<math|0/4>|<point|-5|-4>>>|<with|color|red|arrow-end|\<less\>|dash-style|10|line-width|2ln|arrow-begin|o|<line|<point|-4|-4>|<point|-3.6|-4.0>>>|<with|color|red|line-width|2ln|arrow-begin|o|arrow-end|\<less\>|<line|<point|-3.6|-3.2>|<point|-3.0|-3.2>>>|<with|color|red|line-width|2ln|arrow-begin|o|arrow-end|\<less\>|<line|<point|-3|-2.4>|<point|-2.0|-2.4>>>|<with|color|red|line-width|2ln|arrow-begin|o|arrow-end|\<less\>|<line|<point|-2|-1.6>|<point|2.0|-1.6>>>|<with|color|red|line-width|2ln|arrow-begin|o|arrow-end|\<less\>|<line|<point|2|-0.8>|<point|3.2|-0.8>>>|<with|color|red|line-width|2ln|arrow-begin|o|arrow-end|\<less\>|<line|<point|3.2|0>|<point|4.0|0.0>>>|<with|color|blue|dash-style|10|<line|<point|7.6|1.6>|<point|7.6|-4.0>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|<text-at|<math|<with|font-series|bold|>>|<point|-2|3.4>>>|<with|color|blue|dash-style|10|<line|<point|7.2|2.4>|<point|7.2|-4.0>>>|<with|color|blue|dash-style|10|<line|<point|4.66401|2.4>|<point|4.6|-4.0>>>|<with|color|red|arrow-end|\<less\>|line-width|2ln|arrow-begin|o|<line|<point|4.66401|2.4>|<point|7.2|2.4>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|dash-style|10|<line|<point|-4|0.8>|<point|8.0|0.8>>>|<with|color|red|arrow-end|\<less\>|line-width|2ln|arrow-begin|o|<line|<point|7.6|0>|<point|8.0|0.0>>>|<with|line-width|2ln|<smooth|<point|-4|-4>|<point|-3.6|-3.2>|<point|-3.0|-2.4>|<point|-2.0|-1.6>|<point|2.0|-0.8>|<point|3.2|0.0>|<point|4.0|0.8>|<point|4.6|2.4>|<point|6.0|3.2>|<point|7.2|2.4>|<point|7.6|0.8>|<point|8.0|0.0>>>|<with|color|blue|dash-style|10|<smooth|<point|3.98431|0.8>|<point|3.92462627331658|-4.08966133086387>>>|<with|color|blue|dash-style|10|<smooth|<point|3.2|0>|<point|3.17809895488821|-4.08966133086387>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|dash-style|10|<smooth|<point|8|0>|<point|-4.01213784892181|-0.0230519910041011>>>|<with|color|blue|dash-style|10|<line|<point|1.99945|-0.8>|<point|1.96008069850509|-4.07001587511576>>>|<with|color|blue|dash-style|10|<line|<point|-0.0267421371674196|-1.19818878909354>|<point|0.0|-4.0>>>|<with|color|blue|dash-style|10|<line|<point|-2|-1.6>|<point|-1.96901045111787|-4.07001587511576>>>|<with|color|blue|dash-style|10|<line|<point|-3.03442803818049|-2.4>|<point|-3.0|-4.0>>>|<with|color|blue|dash-style|10|<line|<point|-3.6202|-3.2>|<point|-3.6|-4.0>>>|<with|color|blue|dash-style|10|<line|<point|4.26597|1.6>|<point|4.18616880539754|-4.06682431538563>>>|<with|color|blue|dash-style|10|<line|<point|7.47761|1.56977>|<point|7.49818097631962|-3.98453829871676>>>|<with|color|red|arrow-end|\<less\>|line-width|2ln|arrow-begin|o|<line|<point|4.0216|0.808622>|<point|4.26845482206641|0.829193676412224>>>|<with|color|red|arrow-end|\<less\>|line-width|2ln|arrow-begin|o|<line|<point|4.3096|1.56977>|<point|4.65931340124355|1.56976782643207>>>|<with|color|red|arrow-end|\<less\>|line-width|2ln|arrow-begin|o|<line|<point|7.21018|1.59034>|<point|7.41589495965075|1.59033933059929>>>|<with|color|red|arrow-end|\<less\>|line-width|2ln|arrow-begin|o|<line|<point|7.45704|0.829194>|<point|7.55989548882127|0.808622172245006>>>>>|<label|figure
+  20.6.234><math|f> apprimated by <math|f<rsub|2>>>
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
+  <small-figure|<with|gr-mode|<tuple|edit|line>|gr-frame|<tuple|scale|1cm|<tuple|0.410009gw|0.539996gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|2>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|2>|gr-auto-crop|true|gr-snap|<tuple|grid
+  point>|gr-dash-style|10|<graphics||<text-at|<math|>|<point|-4.4|0.4>>|<with|dash-style|10|<line|<point|-4|-3.2>|<point|8.0|-3.2>>>|<with|dash-style|10|<line|<point|-4|-2.4>|<point|8.0|-2.4>>>|<with|dash-style|10|<line|<point|-4|-0.8>|<point|8.0|-0.8>>>|<with|dash-style|10|<line|<point|-4|1.6>|<point|8.0|1.6>>>|<with|dash-style|10|<line|<point|-4|2.4>|<point|8.0|2.4>>>|<text-at|<math|1/4>|<point|-5|-3.2>>|<text-at|<math|2/4>|<point|-5|-2.4>>|<text-at|<math|3/4>|<point|-5|-1.6>>|<text-at|4/4|<point|-5|-0.8>>|<text-at|<math|5/4>|<point|-5|0>>|<text-at|<math|6/4>|<point|-5|0.8>>|<text-at|<math|7/4>|<point|-5|1.6>>|<text-at|<math|8/4>|<point|-5|2.4>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|<text-at|<math|0/4>|<point|-5|-4>>>|<with|color|red|arrow-end|\<less\>|dash-style|10|line-width|2ln|arrow-begin|o|<line|<point|-4|-4>|<point|-3.6|-4.0>>>|<with|color|red|line-width|2ln|arrow-begin|o|arrow-end|\<less\>|<line|<point|-3.6|-3.2>|<point|-3.0|-3.2>>>|<with|color|red|line-width|2ln|arrow-begin|o|arrow-end|\<less\>|<line|<point|-3|-2.4>|<point|-2.0|-2.4>>>|<with|color|red|line-width|2ln|arrow-begin|o|arrow-end|\<less\>|<line|<point|-2|-1.6>|<point|2.0|-1.6>>>|<with|color|red|line-width|2ln|arrow-begin|o|arrow-end|\<less\>|<line|<point|2|-0.8>|<point|3.2|-0.8>>>|<with|color|red|line-width|2ln|arrow-begin|o|arrow-end|\<less\>|<line|<point|3.2|0>|<point|4.0|0.0>>>|<with|color|blue|dash-style|10|<line|<point|7.6|1.6>|<point|7.6|-4.0>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|<text-at|<math|<with|font-series|bold|>>|<point|-2|3.4>>>|<with|color|blue|dash-style|10|<line|<point|7.2|2.4>|<point|7.2|-4.0>>>|<with|color|blue|dash-style|10|<line|<point|4.66401|2.4>|<point|4.6|-4.0>>>|<with|color|red|arrow-end|\<less\>|line-width|2ln|arrow-begin|o|<line|<point|4.66401|2.4>|<point|7.2|2.4>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|dash-style|10|<line|<point|-4|0.8>|<point|8.0|0.8>>>|<with|color|red|arrow-end|\<less\>|line-width|2ln|arrow-begin|o|<line|<point|7.6|0>|<point|8.0|0.0>>>|<with|line-width|2ln|<smooth|<point|-4|-4>|<point|-3.6|-3.2>|<point|-3.0|-2.4>|<point|-2.0|-1.6>|<point|2.0|-0.8>|<point|3.2|0.0>|<point|4.0|0.8>|<point|4.6|2.4>|<point|6.0|3.2>|<point|7.2|2.4>|<point|7.6|0.8>|<point|8.0|0.0>>>|<with|color|blue|dash-style|10|<smooth|<point|3.98431|0.8>|<point|3.92462627331658|-4.08966133086387>>>|<with|color|blue|dash-style|10|<smooth|<point|3.2|0>|<point|3.17809895488821|-4.08966133086387>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|dash-style|10|<smooth|<point|8|0>|<point|-4.01213784892181|-0.0230519910041011>>>|<with|color|blue|dash-style|10|<line|<point|1.99945|-0.8>|<point|1.96008069850509|-4.07001587511576>>>|<with|color|blue|dash-style|10|<line|<point|-0.0267421371674196|-1.19818878909354>|<point|0.0|-4.0>>>|<with|color|blue|dash-style|10|<line|<point|-2|-1.6>|<point|-1.96901045111787|-4.07001587511576>>>|<with|color|blue|dash-style|10|<line|<point|-3.03442803818049|-2.4>|<point|-3.0|-4.0>>>|<with|color|blue|dash-style|10|<line|<point|-3.6202|-3.2>|<point|-3.6|-4.0>>>|<with|color|blue|dash-style|10|<line|<point|4.26597|1.6>|<point|4.18616880539754|-4.06682431538563>>>|<with|color|blue|dash-style|10|<line|<point|7.47761|1.56977>|<point|7.49818097631962|-3.98453829871676>>>|<with|color|red|arrow-end|\<less\>|line-width|2ln|arrow-begin|o|<line|<point|4.0216|0.808622>|<point|4.26845482206641|0.829193676412224>>>|<with|color|red|arrow-end|\<less\>|line-width|2ln|arrow-begin|o|<line|<point|4.3096|1.56977>|<point|4.65931340124355|1.56976782643207>>>|<with|color|red|arrow-end|\<less\>|line-width|2ln|arrow-begin|o|<line|<point|7.21018|1.59034>|<point|7.41589495965075|1.59033933059929>>>|<with|color|red|arrow-end|\<less\>|line-width|2ln|arrow-begin|o|<line|<point|7.45704|0.829194>|<point|7.55989548882127|0.808622172245006>>>|<with|color|none|arrow-end|\<less\>|fill-color|light
+  grey|line-width|0.5ln|arrow-begin|o|<cline|<point|-3.59556|-4.0471>|<point|-2.99899126868633|-3.9853816642413>|<point|-3.61613639370287|-4.00595316840852>|<point|-3.59556488953565|-3.20366450588702>|<point|-2.99899126868633|-3.1830930017198>|<point|-3.06070578118799|-4.02652467257574>>>|<with|color|none|arrow-end|\<less\>|fill-color|light
+  grey|line-width|0.5ln|arrow-begin|o|<cline|<point|-3.06071|-4.00595>|<point|-3.04013427702077|-3.9853816642413>|<point|-1.99098756449266|-2.42194734753274>>>|<with|color|none|arrow-end|\<less\>|fill-color|light
+  grey|line-width|0.5ln|arrow-begin|o|<cline|<point|-2.99899|-3.98538>|<point|-3.0|-4.0>|<point|-3.0|-2.4>|<point|-2.0|-2.4>|<point|-2.0|-4.0>>>|<with|color|none|arrow-end|\<less\>|fill-color|light
+  grey|line-width|0.5ln|arrow-begin|o|<cline|<point|-2|-4>|<point|-2.0|-1.6>|<point|2.0|-1.6>|<point|2.0|-4.0>>>|<with|color|none|arrow-end|\<less\>|fill-color|light
+  grey|line-width|0.5ln|arrow-begin|o|<cline|<point|2|-4>|<point|2.0|-0.8>|<point|3.2|-0.8>|<point|3.2|-4.0>>>|<with|color|none|arrow-end|\<less\>|fill-color|light
+  grey|line-width|0.5ln|arrow-begin|o|<cline|<point|3.2|-4>|<point|3.2|0.0>|<point|4.0|0.0>|<point|4.0|-4.0>>>|<with|color|none|arrow-end|\<less\>|fill-color|light
+  grey|line-width|0.5ln|arrow-begin|o|<cline|<point|4|-4>|<point|4.0|0.8>|<point|4.2|0.8>|<point|4.2|-4.0>>>|<with|color|none|arrow-end|\<less\>|fill-color|light
+  grey|line-width|0.5ln|arrow-begin|o|<cline|<point|4.2|-4>|<point|4.2|1.6>|<point|4.6|1.6>|<point|4.6|-4.0>>>|<with|color|none|arrow-end|\<less\>|fill-color|light
+  grey|line-width|0.5ln|arrow-begin|o|<cline|<point|4.6|-4>|<point|4.6|2.4>|<point|7.2|2.4>|<point|7.2|-4.0>>>|<with|color|none|arrow-end|\<less\>|fill-color|light
+  grey|line-width|0.5ln|arrow-begin|o|<cline|<point|7.2|-4>|<point|7.2|1.6>|<point|7.4|1.6>|<point|7.4|-4.0>>>|<with|color|none|arrow-end|\<less\>|fill-color|light
+  grey|line-width|0.5ln|arrow-begin|o|<cline|<point|7.4|0.8>|<point|7.4|-4.0>|<point|7.6|-4.0>|<point|7.6|0.8>>>|<with|color|none|arrow-end|\<less\>|fill-color|light
+  grey|line-width|0.5ln|arrow-begin|o|<cline|<point|7.6|-4>|<point|7.6|0.0>|<point|8.0|0.0>|<point|8.0|-4.0>>>|<with|color|blue|dash-style|10|<line|<point|-3.6|-4>|<point|-3.6|-3.2>>>|<with|color|blue|dash-style|10|<line|<point|-3|-4>|<point|-3.0|-2.4>>>|<with|color|blue|dash-style|10|<line|<point|-2|-1.6>|<point|-2.0|-4.0>>>|<with|color|blue|dash-style|10|<line|<point|2|-0.8>|<point|2.0|-4.0>>>|<with|color|blue|dash-style|10|<line|<point|3.2|0>|<point|3.2|-4.0>>>|<with|color|blue|dash-style|10|<line|<point|4|0.8>|<point|4.0|-4.0>>>|<with|color|blue|dash-style|10|<line|<point|4.20104|1.54835>|<point|4.2|-4.0>>>|<with|color|blue|dash-style|10|<line|<point|4.6|2.4>|<point|4.6|-4.0>>>|<with|color|blue|dash-style|10|<line|<point|7.2|2.4>|<point|7.2|-4.0>>>|<with|color|blue|dash-style|10|<line|<point|7.4|1.6>|<point|7.4|-4.0>>>|<with|color|blue|dash-style|10|<line|<point|7.6|0.8>|<point|7.6|-4.0>>>|<with|color|blue|dash-style|10|<line|<point|8|0>|<point|8.0|-4.0>>>|<with|dash-style|10|<line|<point|-2|-1.6>|<point|-4.0|-1.6>>>>>|<label|figure
+  20.6.234><math|f> apprimated by <math|f<rsub|2>>>
+
+  \;
 </body>
 
 <\initial>
@@ -6144,6 +6608,9 @@
     <associate|auto-3|<tuple|<with|mode|<quote|math>|<around*|(|i\<rightarrow\>x|)>>|18>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|\<Delta\><rsub|i,j>>|19>>
     <associate|auto-5|<tuple|1|23>>
+    <associate|auto-6|<tuple|1|67>>
+    <associate|auto-7|<tuple|2|?>>
+    <associate|auto-8|<tuple|3|?>>
     <associate|complete open mapping theorem|<tuple|5|5>>
     <associate|conjecture 16.245.134|<tuple|32|38>>
     <associate|conjecture 16.246.135|<tuple|33|39>>
@@ -6287,10 +6754,10 @@
     <associate|eq 16.46.185|<tuple|60|23>>
     <associate|eq 16.47.185|<tuple|61|23>>
     <associate|eq 18.283.124|<tuple|78|31>>
-    <associate|eq 19.536.038|<tuple|186|63>>
+    <associate|eq 19.536.038|<tuple|186|64>>
     <associate|eq 20.201.217|<tuple|156|58>>
     <associate|eq 20.208.204|<tuple|140|52>>
-    <associate|eq 20.209.204|<tuple|141|52>>
+    <associate|eq 20.209.204|<tuple|141|53>>
     <associate|eq 20.210.204|<tuple|142|53>>
     <associate|eq 20.211.204|<tuple|143|53>>
     <associate|eq 20.212.204|<tuple|144|53>>
@@ -6302,21 +6769,39 @@
     <associate|eq 20.218.204|<tuple|150|55>>
     <associate|eq 20.219.204|<tuple|151|55>>
     <associate|eq 20.220.204|<tuple|152|55>>
-    <associate|eq 20.324.224|<tuple|157|58>>
+    <associate|eq 20.324.224|<tuple|157|59>>
     <associate|eq 20.325.224|<tuple|158|59>>
     <associate|eq 20.326\<point\>224|<tuple|159|59>>
-    <associate|eq 20.422.227|<tuple|160|59>>
+    <associate|eq 20.422.227|<tuple|160|60>>
     <associate|eq 20.443.229|<tuple|161|60>>
     <associate|eq 20.444.229|<tuple|162|60>>
     <associate|eq 20.445.229|<tuple|163|60>>
+    <associate|eq 20.490.249|<tuple|201|67>>
+    <associate|eq 20.500.231|<tuple|202|68>>
+    <associate|eq 20.500.232|<tuple|216|71>>
+    <associate|eq 20.501.231|<tuple|203|68>>
+    <associate|eq 20.501.232|<tuple|217|71>>
+    <associate|eq 20.502.231|<tuple|204|68>>
+    <associate|eq 20.502.232|<tuple|218|71>>
+    <associate|eq 20.503.231|<tuple|205|68>>
+    <associate|eq 20.503.261|<tuple|208|68>>
+    <associate|eq 20.504.231|<tuple|206|68>>
+    <associate|eq 20.504.261|<tuple|209|69>>
+    <associate|eq 20.505.231|<tuple|207|68>>
+    <associate|eq 20.506.231|<tuple|211|69>>
+    <associate|eq 20.507.231|<tuple|210|69>>
+    <associate|eq 20.508.231|<tuple|212|69>>
+    <associate|eq 20.509.231|<tuple|213|70>>
+    <associate|eq 20.510.231|<tuple|214|70>>
+    <associate|eq 20.511.231|<tuple|215|70>>
     <associate|eq 20.568.240|<tuple|164|61>>
     <associate|eq 20.569.240|<tuple|165|61>>
     <associate|eq 20.570.240|<tuple|166|61>>
     <associate|eq 20.571.240|<tuple|167|61>>
     <associate|eq 20.572.240|<tuple|168|61>>
     <associate|eq 20.573.240|<tuple|169|61>>
-    <associate|eq 20.574.240|<tuple|170|61>>
-    <associate|eq 20.575.240|<tuple|171|61>>
+    <associate|eq 20.574.240|<tuple|170|62>>
+    <associate|eq 20.575.240|<tuple|171|62>>
     <associate|eq 20.576.240|<tuple|172|62>>
     <associate|eq 20.577.240|<tuple|173|62>>
     <associate|eq 20.578.240|<tuple|174|62>>
@@ -6331,13 +6816,13 @@
     <associate|eq 20.653.246|<tuple|183|63>>
     <associate|eq 20.654.246|<tuple|184|63>>
     <associate|eq 20.655.246|<tuple|185|63>>
-    <associate|eq 20.656.246|<tuple|186|63>>
-    <associate|eq 20.657.246|<tuple|187|63>>
+    <associate|eq 20.656.246|<tuple|186|64>>
+    <associate|eq 20.657.246|<tuple|187|64>>
     <associate|eq 20.658.246|<tuple|188|64>>
     <associate|eq 20.659.246|<tuple|189|64>>
     <associate|eq 20.660.246|<tuple|190|64>>
     <associate|eq 20.661.246|<tuple|191|64>>
-    <associate|eq 20.662.246|<tuple|192|64>>
+    <associate|eq 20.662.246|<tuple|192|65>>
     <associate|eq 20.663.246|<tuple|193|65>>
     <associate|eq 20.664.246|<tuple|194|65>>
     <associate|eq 20.665.246|<tuple|195|65>>
@@ -6345,6 +6830,7 @@
     <associate|eq 20.667.246|<tuple|197|65>>
     <associate|eq 20.669.247|<tuple|198|65>>
     <associate|eq 20.670.247|<tuple|199|66>>
+    <associate|figure 20.6.234|<tuple|3|67>>
     <associate|lemma 14.360.158|<tuple|10|10>>
     <associate|lemma 14.364.159|<tuple|14|13>>
     <associate|lemma 16.104.194|<tuple|23|23>>
@@ -6361,10 +6847,12 @@
     <associate|lemma 20.206.204|<tuple|41|52>>
     <associate|lemma 20.207.204|<tuple|42|53>>
     <associate|lemma 20.208.204|<tuple|43|54>>
-    <associate|lemma 20.209.204|<tuple|44|54>>
+    <associate|lemma 20.209.204|<tuple|44|55>>
     <associate|lemma 20.211.204|<tuple|46|56>>
     <associate|lemma 20.470.246|<tuple|50|63>>
-    <associate|measure length function is a pre-measure|<tuple|47|56>>
+    <associate|measure length function is a pre-measure|<tuple|47|57>>
+    <associate|non negative function as limit of simple
+    functions|<tuple|51|66>>
     <associate|series absolute convergence alternative
     definition|<tuple|11|11>>
     <associate|series absolute convergence commutativity countable
@@ -6387,6 +6875,10 @@
 
 <\auxiliary>
   <\collection>
+    <\associate|figure>
+      <tuple|normal|<surround|<hidden-binding|<tuple>|1>||<with|mode|<quote|math>|f>
+      apprimated by <with|mode|<quote|math>|f<rsub|2>>>|<pageref|auto-6>>
+    </associate>
     <\associate|idx>
       <tuple|<tuple|open mapping theorem>|<pageref|auto-1>>
 
