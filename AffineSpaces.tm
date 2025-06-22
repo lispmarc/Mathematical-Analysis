@@ -32,7 +32,9 @@
       <item><math|\<forall\>P\<in\>A<rsup|n>>,
       <math|\<forall\><wide|v|\<vect\>>\<in\>V> there exist a
       <with|font-series|bold|unique> <math|Q\<in\>A<rsup|n>> such that
-      <math|<wide|v|\<vect\>>=P\<ominus\>Q>\ 
+      <math|<wide|v|\<vect\>>=Q\<ominus\>P>. In other words if
+      <math|<rigid|Q\<ominus\>P=<wide|v|\<vect\>>=Q<rprime|'>\<ominus\>P>>
+      then <math|Q=Q<rprime|'>>.
     </enumerate>
 
     <\notation>
@@ -48,22 +50,118 @@
         <math|<wide|v|\<vect\>>>, <math|<wide|u|\<vect\>>>,
         <math|<wide|v<rsub|1>|\<vect\>>> etc.
 
-        <item>If <math|<around*|(|p,<wide|v|\<vect\>>|)>\<in\>A<rsup|n>\<times\>V>
-        then <with|font-series|bold|unique> point <math|Q\<in\>A<rsup|n>>
-        such that <math|<wide|v|\<vect\>>=P\<ominus\>Q> is noted as
+        <item>If <math|<around*|(|P,<wide|v|\<vect\>>|)>\<in\>A<rsup|n>\<times\>V>
+        then the <with|font-series|bold|unique> point <math|Q\<in\>A<rsup|n>>
+        such that <math|<wide|v|\<vect\>>=Q\<ominus\>P> is noted as
         <math|P\<oplus\><wide|v|\<vect\>>>. Using this notation we have that
         <math|P\<oplus\><wide|v|\<vect\>>\<in\>A<rsup|n>> and
-        <math|P\<ominus\><around*|(|P\<oplus\><wide|v|\<vect\>>|)>=<wide|v|\<vect\>>>
-        <math|\<forall\><around*|(|P,<wide|v|\<vect\>>|)>\<in\>A<rsup|n>\<times\>V>
+        <math|<around*|(|P\<oplus\><wide|v|\<vect\>>|)>\<ominus\>P=<wide|v|\<vect\>>>
+        <math|\<forall\><around*|(|P,<wide|v|\<vect\>>|)>\<in\>A<rsup|n>\<times\>V>.
 
         <item>The operators <math|+,\<cdot\>,-> are always the traditional
         operators in the vector space <math|<around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>>
         and the field <math|<around*|\<langle\>|\<bbb-R\>,+,\<cdot\>|\<rangle\>>>.
       </enumerate>
     </notation>
-
-    \;
   </definition>
+
+  We define now the concept of a line in a affine space.
+
+  <\definition>
+    <label|affine space line and segment>Let
+    <math|<around*|\<langle\>|A<rsup|n>,V|\<rangle\>>> be a affine space,
+    <math|O\<in\>A<rsup|n>>, <math|<wide|v|\<vect\>>\<in\>V> then a
+    <with|font-series|bold|line <math|l> with origin O and tangent vector
+    <math|<wide|v |\<vect\>>>> is the map
+
+    <\equation*>
+      l:\<bbb-R\>\<rightarrow\>A<rsup|n><text| defined by
+      >l<around*|(|t|)>=O\<oplus\><around*|(|t\<cdot\><wide|v|\<vect\>>|)>
+    </equation*>
+
+    If <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b> then the maps
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|l<rsub|\|<around*|[|a,b|]>>:<around*|[|a,b|]>\<rightarrow\>A<rsup|n>>|<cell|>>|<row|<cell|>|<cell|l<rsub|\|<around*|[|a,b|]>>:<around*|]|a,b|]>\<rightarrow\>A<rsup|n>>|<cell|>>|<row|<cell|>|<cell|l<rsub|\|<around*|[|a,b|]>>:<around*|[|a,b|[>\<rightarrow\>A<rsup|n>>|<cell|>>|<row|<cell|>|<cell|l<rsub|\|<around*|[|a,b|]>>:<around*|]|a,b|[>\<rightarrow\>A<rsup|n>>|<cell|>>>>
+    </eqnarray*>
+
+    are called segments of the line <math|l>.
+  </definition>
+
+  <\theorem>
+    <label|affine space zero vector>Let <math|n\<in\>\<bbb-N\><infix-and><around*|\<langle\>|A<rsup|n>,V|\<rangle\>>>
+    a affine space then <math|\<forall\>P\<in\>A<rsup|n>> we have that
+    <math|P\<ominus\>P=<wide|0|\<vect\>>> where <math|<wide|0|\<vect\>>> is
+    the neutral element in <math|V>.
+  </theorem>
+
+  <\proof>
+    Let <math|P\<in\>A<rsup|n>> then <math|\<forall\><wide|v|\<vect\>>\<in\>V>
+    we have
+
+    <\equation*>
+      <around*|(|P\<ominus\>P|)>+<wide|v|\<vect\>>=<around*|(|P\<ominus\>P|)>+<around*|(|<around*|(|P\<oplus\><wide|v|\<vect\>>|)>\<ominus\>P|)>=<around*|(|<around*|(|P\<oplus\><wide|v|\<vect\>>|)>\<ominus\>P|)>+<around*|(|P\<ominus\>P|)>=<around*|(|P\<oplus\><wide|v|\<vect\>>|)>\<ominus\>P=<wide|v|\<vect\>>
+    </equation*>
+
+    which proves that <math|P\<ominus\>P=<wide|0|\<vect\>>>.
+  </proof>
+
+  <\theorem>
+    <label|affine space P-Q=-(Q-P)>Let <math|n\<in\>\<bbb-N\>,<around*|\<langle\>|A<rsup|n>,V|\<rangle\>>>
+    a affine space and <math|P,Q\<in\>\<cal-A\><rsup|n>> then
+    <math|<around*|(|P\<ominus\>Q|)>=-<around*|(|Q\<ominus\>P|)>> where
+    <math|-<around*|(|Q\<ominus\>P|)>> is the additive inverse of the vector
+    <math|Q\<ominus\>P>.
+  </theorem>
+
+  <\proof>
+    As <math|<around*|(|P\<ominus\>Q|)>+<around*|(|Q\<ominus\>P|)>=P\<ominus\>P\<equallim\><rsub|<text|[theorem:
+    <reference|affine space zero vector>]>><wide|0|\<vect\>>> it follows that
+    <math|<around*|(|P\<ominus\>Q|)>=-<around*|(|Q\<ominus\>P|)>>.
+  </proof>
+
+  <\theorem>
+    <label|affine space associativity>Let
+    <math|n\<in\>\<bbb-N\>,<around*|\<langle\>|A<rsup|n>,V|\<rangle\>>> a
+    affine space, <math|P\<in\>A<rsup|n>> and
+    <math|<wide|v|\<vect\>>,<wide|u|\<vect\>>\<in\>V> then we have\ 
+
+    <\equation*>
+      <around*|(|P\<oplus\><wide|v|\<vect\>>|)>\<oplus\><wide|u|\<vect\>>=P\<oplus\><around*|(|<wide|v|\<vect\>>+<wide|u|\<vect\>>|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    As <math|<wide|u|\<vect\>>=<around*|(|<around*|(|P\<oplus\><wide|v|\<vect\>>|)>\<oplus\><wide|u|\<vect\>>|)>\<ominus\><around*|(|P\<oplus\><wide|v|\<vect\>>|)>>
+    and <math|<wide|v|\<vect\>>=<around*|(|P\<oplus\><wide|v|\<vect\>>|)>\<ominus\>P>
+    we have that
+
+    <\equation*>
+      <wide|v|\<vect\>>+<wide|u|\<vect\>>=<wide|u|\<vect\>>+<wide|v|\<vect\>>=<around*|(|<around*|(|<around*|(|P\<oplus\><wide|v|\<vect\>>|)>\<oplus\><wide|u|\<vect\>>|)>\<ominus\><around*|(|P\<oplus\><wide|v|\<vect\>>|)>|)>+<around*|(|<around*|(|P\<oplus\><wide|v|\<vect\>>|)>\<ominus\>P|)>=<around*|(|<around*|(|P\<oplus\><wide|v|\<vect\>>|)>\<oplus\><wide|u|\<vect\>>|)>\<ominus\>P
+    </equation*>
+
+    as also <math|<around*|(|P\<oplus\><around*|(|<wide|v|\<vect\>>+<wide|u|\<vect\>>|)>|)>\<ominus\>P=<wide|v|\<vect\>>+<wide|u|\<vect\>>>
+    we have by uniqueness that\ 
+
+    <\equation*>
+      <around*|(|P\<oplus\><wide|v|\<vect\>>|)>\<oplus\><wide|u|\<vect\>>=P\<oplus\><around*|(|<wide|v|\<vect\>>+<wide|u|\<vect\>>|)>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|affine space P-Q=(P+u)-(Q+u)>Let
+    <math|n\<in\>\<bbb-N\>,<around*|\<langle\>|A<rsup|n>,V|\<rangle\>>> a
+    affine space, <math|P,Q\<in\>\<cal-A\><rsup|n>> and
+    <math|<wide|v|\<vect\>>\<in\>V> then\ 
+
+    <\equation*>
+      P\<ominus\>Q=<around*|(|P\<oplus\><wide|v|\<vect\>>|)>\<ominus\><around*|(|Q\<oplus\><wide|v|\<vect\>>|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    We have
+  </proof>
 
   \;
 </body>
@@ -81,6 +179,11 @@
 <\references>
   <\collection>
     <associate|affine space|<tuple|21.1|?>>
+    <associate|affine space P-Q=(P+u)-(Q+u)|<tuple|21.7|?>>
+    <associate|affine space P-Q=-(Q-P)|<tuple|21.5|?>>
+    <associate|affine space associativity|<tuple|21.6|?>>
+    <associate|affine space line and segment|<tuple|21.3|?>>
+    <associate|affine space zero vector|<tuple|21.4|?>>
     <associate|auto-1|<tuple|21|?>>
     <associate|auto-2|<tuple|21.1|?>>
   </collection>

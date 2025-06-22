@@ -36483,8 +36483,6 @@
     </note>
   </theorem>
 
-  TODO subspace
-
   <\proof>
     By [definitions: <reference|LP spaces p-norm (1)>, <reference|LP spaces
     p-norm (2)>] we have that\ 
@@ -36529,8 +36527,8 @@
         <item*|<math|\<alpha\>=0>>As <math|<around*|{|x\<in\>X\|<around*|\||\<alpha\>\<cdot\>f|\|><around*|(|x|)>\<gtr\>0|}>=\<varnothing\>>
         [for if <math|<around*|\||\<alpha\>\<cdot\>f|\|><around*|(|x|)>\<gtr\>M>
         then we have <math|0=<around*|\||\<alpha\>\<cdot\>f<around*|(|x|)>|\|>=<around*|\||\<alpha\>\<cdot\>f|\|><around*|(|x|)>\<gtr\>M\<geqslant\>0>
-        a contradicton] and by [example: <reference|LP spaces empty set is
-        locally m-null>]\ 
+        a contradicton] we have by [example: <reference|LP spaces empty set
+        is locally m-null>] that
 
         <\equation*>
           <around*|{|x\<in\>X\|<around*|\||\<alpha\>\<cdot\>f|\|><around*|(|x|)>\<gtr\>0|}><text|
@@ -36545,7 +36543,7 @@
           is locally >\<mu\><text|-null>|}>|)>\<leqslant\>0
         </equation*>
 
-        hence\ 
+        which proves that
 
         <\equation*>
           <around*|\<\|\|\>|\<alpha\>\<cdot\>f|\<\|\|\>><rsub|\<infty\>>=0=<around*|\||\<alpha\>|\|>\<cdot\><around*|\<\|\|\>|f|\<\|\|\>><rsub|\<infty\>>
@@ -36555,13 +36553,13 @@
         <math|M\<in\><around*|[|0,\<infty\>|[>> then we have\ 
 
         <\eqnarray*>
-          <tformat|<table|<row|<cell|x\<in\><around*|{|x\<in\>X\|<around*|\||<around*|(|\<alpha\>\<cdot\>f|)><around*|(|x|)>|\|>\<gtr\>M|}>>|<cell|\<Leftrightarrow\>>|<cell|<around*|\||\<alpha\>\<cdot\>f<around*|(|x|)>|\|>\<gtr\>M>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|\||\<alpha\>|\|>\<cdot\><around*|\||f<around*|(|x|)>|\|>\<gtr\>M>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|<around*|\||\<alpha\>|\|>\<neq\>0>>|<cell|<around*|\||f<around*|(|x|)>|\|>\<gtr\><frac|M|<around*|\||\<alpha\>|\|>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<gtr\><frac|M|\<alpha\>>|}>>>>>
+          <tformat|<table|<row|<cell|x\<in\><around*|{|x\<in\>X\|<around*|\||<around*|(|\<alpha\>\<cdot\>f|)><around*|(|x|)>|\|>\<gtr\>M|}>>|<cell|\<Leftrightarrow\>>|<cell|<around*|\||\<alpha\>\<cdot\>f<around*|(|x|)>|\|>\<gtr\>M>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|\||\<alpha\>|\|>\<cdot\><around*|\||f<around*|(|x|)>|\|>\<gtr\>M>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|<around*|\||\<alpha\>|\|>\<neq\>0>>|<cell|<around*|\||f<around*|(|x|)>|\|>\<gtr\><frac|M|<around*|\||\<alpha\>|\|>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<gtr\><frac|M|<around*|\||\<alpha\>|\|>>|}>>>>>
         </eqnarray*>
 
         proving that\ 
 
         <\equation>
-          <label|eq 20.628.246><around*|{|x\<in\>X\|<around*|\||<around*|(|\<alpha\>\<cdot\>f|)><around*|(|x|)>|\|>\<gtr\>M|}>=<around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<gtr\><frac|M|\<alpha\>>|}>
+          <label|eq 20.628.246><around*|{|x\<in\>X\|<around*|\||<around*|(|\<alpha\>\<cdot\>f|)><around*|(|x|)>|\|>\<gtr\>M|}>=<around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<gtr\><frac|M|<around*|\||\<alpha\>|\|>>|}>
         </equation>
 
         Define\ 
@@ -36573,11 +36571,11 @@
         </eqnarray*>
 
         If <math|M\<in\>A> then <math|<around*|{|x\<in\>X\|<around*|\||\<alpha\>\<cdot\>f<around*|(|x|)>|\|>\<gtr\>M|}><text|
-        is locally >\<mu\><text|-null>> so using [eq: <reference|eq
+        is locally >\<mu\><text|-null>> and using [eq: <reference|eq
         20.628.246>] we have that <math|<around*|{|x\<in\>X\|<around*|\||f<around*|(|x|)>|\|>\<gtr\><frac|M|<around*|\||\<alpha\>|\|>>|}>>
-        <math|<text| is locally >\<mu\><text|-null>> hence
+        is locally <math|\<mu\>>-null. Hence
         <math|M<rprime|'>=<frac|M|<around*|\||\<alpha\>|\|>>\<in\>B> or
-        <math|M\<in\><around*|{|<around*|\||\<alpha\>|\|>\<cdot\>M<rprime|'>\|M<rprime|'>\<in\>B|}>>
+        <math|<rigid|M\<in\><around*|{|<around*|\||\<alpha\>|\|>\<cdot\>M<rprime|'>\|M<rprime|'>\<in\>B|}>>>
         giving\ 
 
         <\equation>
@@ -36593,7 +36591,7 @@
         we have then that <math|<around*|{|x\<in\>X\|<around*|\||<around*|(|\<alpha\>\<cdot\>f|)><around*|(|x|)>|\|>\<gtr\>M|}>>
         is locally <math|\<mu\>>-null or <math|M\<in\>A>, proving that
         <math|<around*|{|<around*|\||\<alpha\>|\|>\<cdot\>M<rprime|'>\|M<rprime|'>\<in\>B|}>\<subseteq\>A>.
-        Using [eq: <reference|eq 20.629.246> we have then that\ 
+        Combining this with [eq: <reference|eq 20.629.246> proves that\ 
 
         <\equation>
           <label|eq 20.630.249>A=<around*|{|<around*|\||a|\|>\<cdot\>M<rprime|'>\|M<rprime|'>\<in\>B|}>
@@ -36635,9 +36633,10 @@
   It would be nice that <math|<around*|\<\|\|\>||\<\|\|\>>p> is actually a
   norm. To do this we consider first the sub space of
   <math|\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-K\>|]>> consisted of
-  functions <math|f> with <math|<around*|\<\|\|\>||\<\|\|\>><rsub|p>> and
-  construct then factor space [see theorem: <reference|vector space factor
-  space>].
+  functions <math|f> with <math|<around*|\<\|\|\>|f|\<\|\|\>><rsub|p>=0> and
+  use this sub space to construct the factor space [see theorem:
+  <reference|vector space factor space>]. This will allows us to define a
+  norm on this factor space based on the pseudo norm.
 
   <\definition>
     <label|LP spaces p-null set><index|<math|\<cal-N\><rsup|p>>>Let
@@ -36651,6 +36650,8 @@
   </definition>
 
   We have the following equivalences of <math|p>-null sets.
+
+  TODO subspace
 
   <\theorem>
     <label|LP spaces p-null set (1)>Let <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>>
