@@ -6593,6 +6593,107 @@
   20.6.234><math|f> apprimated by <math|f<rsub|2>>>
 
   \;
+
+  \;
+
+  \;
+
+  \;
+
+  <\lemma>
+    <label|lemma 20.477.246>Let <math|p\<in\><around*|[|1,\<infty\>|[>> and
+    <math|<around*|{|x<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\><around*|[|0,\<infty\>|[>>
+    be such that <math|\<forall\>i\<in\>\<bbb-N\>> we have
+    <math|x<rsub|i>\<leqslant\>x<rsub|i+1>> then we have\ 
+
+    <\equation*>
+      <below|lim|i\<rightarrow\>\<infty\>>x<rsub|i><text| and
+      ><below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|<around*|[|p|]>><text|
+      exists where ><below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>,<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|<around*|[|p|]>>\<in\><around*|[|0,\<infty\>|]>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      sup<around*|(|<around*|{|<around*|(|x<rsub|i>|)><rsup|<around*|[|p|]>>\|i\<in\>\<bbb-N\><rsub|0>|}>|)>=<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|<rsub|i>>|)><rsup|<around*|[|p|]>>=<around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)><rsup|<around*|[|p|]>>=<around*|(|sup<around*|(|<around*|{|x<rsub|i>\|i\<in\>\<bbb-N\><rsub|0>|}>|)>|)><rsup|<around*|[|p|]>>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    As <math|\<forall\>i\<in\>\<bbb-N\>> we have
+    <math|0\<leqslant\>x<rsub|i>\<leqslant\>x<rsub|i+1>> it follows from
+    [lemma: <reference|lemma 20.505.265>] that
+    <math|0\<leqslant\><around*|(|x<rsub|i>|)><rsup|<around*|[|p|]>>\<leqslant\><around*|(|x<rsub|i+1>|)><rsup|<around*|[|p|]>>>
+    so that by [theorems: <reference|extended limit increasing / decreasing
+    sequence exist>,<reference|extended limit properties>] it follows that\ 
+
+    <\equation*>
+      <below|lim|i\<rightarrow\>\<infty\>>x<rsub|i><text| exist,
+      ><below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|<around*|[|p|]>><text|
+      exist, >0\<leqslant\><below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>=sup<around*|(|<around*|{|x<rsub|i>\|i\<in\>\<bbb-N\>|}>|)><text|
+      and >0\<leqslant\><below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|<around*|[|p|]>>=sup<around*|(|<around*|{|<around*|(|x<rsub|i>|)><rsup|<around*|[|p|]>>\|i\<in\>\<bbb-N\>|}>|)>
+    </equation*>
+
+    Let <math|i\<in\>\<bbb-N\>> then for <math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>>
+    we have either:\ 
+
+    <\description>
+      <item*|<math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>=\<infty\>>>Then
+      <math|<around*|(|x<rsub|i>|)><rsup|<around*|[|p|]>>\<leqslant\>\<infty\>=\<infty\><rsup|<around*|[|p|]>>=<around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)><rsup|<around*|[|p|]>>>
+
+      <item*|<math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>\<neq\>\<infty\>>>Then
+      as <math|x<rsub|i>,sup<around*|(|<around*|{|x<rsub|i>\|i\<in\>\<bbb-N\>|}>|)>\<in\><around*|[|0,\<infty\>|[>>
+      and <math|x<rsub|i>\<leqslant\>sup<around*|(|<around*|{|x<rsub|i>\|i\<in\>\<bbb-N\>|}>|)>>
+      we have by [theorem: <reference|exp generalized power properties>]
+
+      <\equation*>
+        <around*|(|x<rsub|i>|)><rsup|<around*|[|p|]>>=<around*|(|x<rsub|i>|)><rsup|p>\<leqslant\><around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)><rsup|p>=<around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)><rsup|<around*|[|p|]>>
+      </equation*>
+    </description>
+
+    which proves that <math|\<forall\>i\<in\>\<bbb-N\><text|
+    ><around*|(|x<rsub|i>|)><rsup|<around*|[|p|]>>\<leqslant\><around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)><rsup|<around*|[|p|]>>>.
+    In other words <math|<around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)><rsup|<around*|[|p|]>>>
+    is a upper bound of <math|<around*|{|<around*|(|x<rsub|i>|)><rsup|<around*|[|p|]>>\|i\<in\>\<bbb-N\>|}>>
+    from which it follows that
+
+    <\equation>
+      <label|eq 20.637.246><below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|<around*|[|p|]>>=sup<around*|(|<around*|{|<around*|(|x<rsub|i>|)><rsup|<around*|[|p|]>>\|i\<in\>\<bbb-N\>|}>|)>\<leqslant\><around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)><rsup|<around*|[|p|]>>
+    </equation>
+
+    For <math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|<around*|[|p|]>>>
+    we have the following cases to examine:
+
+    <\description>
+      <item*|<math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|<around*|[|p|]>>=\<infty\>>>Then
+      <math|><math|\<infty\>=<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|<around*|[|p|]>><below|\<leqslant\>|<text|[eq:
+      <reference|eq 20.637.246>]>><around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)><rsup|<around*|[|p|]>>\<leqslant\>\<infty\>>
+      so that\ 
+
+      <\equation*>
+        <below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|<around*|[|p|]>>=<around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)><rsup|<around*|[|p|]>>=\<infty\>
+      </equation*>
+
+      <item*|<math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|<around*|[|p|]>>\<neq\>\<infty\>>>Then
+      <math|\<forall\>i\<in\>\<bbb-N\>> we have
+      <math|<around*|(|x<rsub|i><rsup|>|)><rsup|<around*|[|p|]>>\<leqslant\>sup<around*|(|<around*|{|<around*|(|x<rsub|i>|)><rsup|<around*|[|p|]>>\|i\<in\>\<bbb-N\>|}>|)>=<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|<around*|[|p|]>>\<less\>\<infty\>>
+      so that <math|<around*|(|x<rsub|i>|)><rsup|p>,<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|<around*|[|p|]>>\<in\><around*|[|0,1|[>>
+      by [theorem: <reference|exp generalized power>]
+      <math|x<rsub|i>\<leqslant\><around*|(|<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p>|)><rsup|<frac|1|p>>>
+      hence <math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>=sup<around*|(|<around*|{|x<rsub|i>\|i\<in\>\<bbb-N\>|}>|)>\<leqslant\><around*|(|<below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p>|)><rsup|<frac|1|p>>\<less\>\<infty\>>.
+      Hence using [lemma: <reference|lemma 20.476.246>] it follows that\ 
+
+      <\equation*>
+        <below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p>=<around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)><rsup|p>
+      </equation*>
+    </description>
+
+    So in all cases we have\ 
+
+    <\equation*>
+      <below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p>=<around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)><rsup|p>
+    </equation*>
+  </proof>
 </body>
 
 <\initial>
@@ -6609,8 +6710,8 @@
     <associate|auto-4|<tuple|<with|mode|<quote|math>|\<Delta\><rsub|i,j>>|19>>
     <associate|auto-5|<tuple|1|23>>
     <associate|auto-6|<tuple|1|67>>
-    <associate|auto-7|<tuple|2|?>>
-    <associate|auto-8|<tuple|3|?>>
+    <associate|auto-7|<tuple|2|71>>
+    <associate|auto-8|<tuple|3|72>>
     <associate|complete open mapping theorem|<tuple|5|5>>
     <associate|conjecture 16.245.134|<tuple|32|38>>
     <associate|conjecture 16.246.135|<tuple|33|39>>
@@ -6754,10 +6855,10 @@
     <associate|eq 16.46.185|<tuple|60|23>>
     <associate|eq 16.47.185|<tuple|61|23>>
     <associate|eq 18.283.124|<tuple|78|31>>
-    <associate|eq 19.536.038|<tuple|186|64>>
+    <associate|eq 19.536.038|<tuple|186|63>>
     <associate|eq 20.201.217|<tuple|156|58>>
     <associate|eq 20.208.204|<tuple|140|52>>
-    <associate|eq 20.209.204|<tuple|141|53>>
+    <associate|eq 20.209.204|<tuple|141|52>>
     <associate|eq 20.210.204|<tuple|142|53>>
     <associate|eq 20.211.204|<tuple|143|53>>
     <associate|eq 20.212.204|<tuple|144|53>>
@@ -6769,16 +6870,16 @@
     <associate|eq 20.218.204|<tuple|150|55>>
     <associate|eq 20.219.204|<tuple|151|55>>
     <associate|eq 20.220.204|<tuple|152|55>>
-    <associate|eq 20.324.224|<tuple|157|59>>
+    <associate|eq 20.324.224|<tuple|157|58>>
     <associate|eq 20.325.224|<tuple|158|59>>
     <associate|eq 20.326\<point\>224|<tuple|159|59>>
-    <associate|eq 20.422.227|<tuple|160|60>>
+    <associate|eq 20.422.227|<tuple|160|59>>
     <associate|eq 20.443.229|<tuple|161|60>>
     <associate|eq 20.444.229|<tuple|162|60>>
     <associate|eq 20.445.229|<tuple|163|60>>
     <associate|eq 20.490.249|<tuple|201|67>>
-    <associate|eq 20.500.231|<tuple|202|68>>
-    <associate|eq 20.500.232|<tuple|216|71>>
+    <associate|eq 20.500.231|<tuple|202|67>>
+    <associate|eq 20.500.232|<tuple|216|70>>
     <associate|eq 20.501.231|<tuple|203|68>>
     <associate|eq 20.501.232|<tuple|217|71>>
     <associate|eq 20.502.231|<tuple|204|68>>
@@ -6786,7 +6887,7 @@
     <associate|eq 20.503.231|<tuple|205|68>>
     <associate|eq 20.503.261|<tuple|208|68>>
     <associate|eq 20.504.231|<tuple|206|68>>
-    <associate|eq 20.504.261|<tuple|209|69>>
+    <associate|eq 20.504.261|<tuple|209|68>>
     <associate|eq 20.505.231|<tuple|207|68>>
     <associate|eq 20.506.231|<tuple|211|69>>
     <associate|eq 20.507.231|<tuple|210|69>>
@@ -6800,8 +6901,8 @@
     <associate|eq 20.571.240|<tuple|167|61>>
     <associate|eq 20.572.240|<tuple|168|61>>
     <associate|eq 20.573.240|<tuple|169|61>>
-    <associate|eq 20.574.240|<tuple|170|62>>
-    <associate|eq 20.575.240|<tuple|171|62>>
+    <associate|eq 20.574.240|<tuple|170|61>>
+    <associate|eq 20.575.240|<tuple|171|61>>
     <associate|eq 20.576.240|<tuple|172|62>>
     <associate|eq 20.577.240|<tuple|173|62>>
     <associate|eq 20.578.240|<tuple|174|62>>
@@ -6810,19 +6911,20 @@
     <associate|eq 20.581.240|<tuple|177|62>>
     <associate|eq 20.582.240|<tuple|178|62>>
     <associate|eq 20.583.240|<tuple|179|62>>
+    <associate|eq 20.637.246|<tuple|219|?>>
     <associate|eq 20.650.246|<tuple|180|63>>
     <associate|eq 20.651.246|<tuple|181|63>>
     <associate|eq 20.652.246|<tuple|182|63>>
     <associate|eq 20.653.246|<tuple|183|63>>
     <associate|eq 20.654.246|<tuple|184|63>>
     <associate|eq 20.655.246|<tuple|185|63>>
-    <associate|eq 20.656.246|<tuple|186|64>>
-    <associate|eq 20.657.246|<tuple|187|64>>
+    <associate|eq 20.656.246|<tuple|186|63>>
+    <associate|eq 20.657.246|<tuple|187|63>>
     <associate|eq 20.658.246|<tuple|188|64>>
     <associate|eq 20.659.246|<tuple|189|64>>
     <associate|eq 20.660.246|<tuple|190|64>>
     <associate|eq 20.661.246|<tuple|191|64>>
-    <associate|eq 20.662.246|<tuple|192|65>>
+    <associate|eq 20.662.246|<tuple|192|64>>
     <associate|eq 20.663.246|<tuple|193|65>>
     <associate|eq 20.664.246|<tuple|194|65>>
     <associate|eq 20.665.246|<tuple|195|65>>
@@ -6830,7 +6932,7 @@
     <associate|eq 20.667.246|<tuple|197|65>>
     <associate|eq 20.669.247|<tuple|198|65>>
     <associate|eq 20.670.247|<tuple|199|66>>
-    <associate|figure 20.6.234|<tuple|3|67>>
+    <associate|figure 20.6.234|<tuple|3|72>>
     <associate|lemma 14.360.158|<tuple|10|10>>
     <associate|lemma 14.364.159|<tuple|14|13>>
     <associate|lemma 16.104.194|<tuple|23|23>>
@@ -6847,10 +6949,11 @@
     <associate|lemma 20.206.204|<tuple|41|52>>
     <associate|lemma 20.207.204|<tuple|42|53>>
     <associate|lemma 20.208.204|<tuple|43|54>>
-    <associate|lemma 20.209.204|<tuple|44|55>>
+    <associate|lemma 20.209.204|<tuple|44|54>>
     <associate|lemma 20.211.204|<tuple|46|56>>
     <associate|lemma 20.470.246|<tuple|50|63>>
-    <associate|measure length function is a pre-measure|<tuple|47|57>>
+    <associate|lemma 20.477.246|<tuple|53|?>>
+    <associate|measure length function is a pre-measure|<tuple|47|56>>
     <associate|non negative function as limit of simple
     functions|<tuple|51|66>>
     <associate|series absolute convergence alternative
@@ -6878,6 +6981,12 @@
     <\associate|figure>
       <tuple|normal|<surround|<hidden-binding|<tuple>|1>||<with|mode|<quote|math>|f>
       apprimated by <with|mode|<quote|math>|f<rsub|2>>>|<pageref|auto-6>>
+
+      <tuple|normal|<surround|<hidden-binding|<tuple>|2>||<with|mode|<quote|math>|f>
+      apprimated by <with|mode|<quote|math>|f<rsub|2>>>|<pageref|auto-7>>
+
+      <tuple|normal|<surround|<hidden-binding|<tuple>|3>||<with|mode|<quote|math>|f>
+      apprimated by <with|mode|<quote|math>|f<rsub|2>>>|<pageref|auto-8>>
     </associate>
     <\associate|idx>
       <tuple|<tuple|open mapping theorem>|<pageref|auto-1>>
