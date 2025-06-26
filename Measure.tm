@@ -39325,8 +39325,6 @@
     </enumerate>
   </proof>
 
-  TODO subspace
-
   <\theorem>
     <label|signed measure properties (2)>Let
     <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>> be a measurable space
@@ -39459,9 +39457,9 @@
         \<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=<below|lim|n\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|n>|)>
       </equation*>
 
-      <item>TODO First we consider the case where <math|k=1>. So let
+      <item>First we consider the case where <math|k=1>. So let
       <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
-      such that <math|\<mu\><around*|(|A<rsub|1>|)>\<in\>\<bbb-R\>> and
+      be such that <math|\<mu\><around*|(|A<rsub|1>|)>\<in\>\<bbb-R\>> and
       <math|\<forall\>i\<in\>\<bbb-N\>> we have
       <math|A<rsub|i+1>\<subseteq\>A<rsub|i>>. Then
       <math|\<forall\>i\<in\>\<bbb-N\>> we have
@@ -39485,7 +39483,7 @@
       so that\ 
 
       <\equation*>
-        \<forall\>i\<in\>\<bbb-N\><text| we hae
+        \<forall\>i\<in\>\<bbb-N\><text| we have
         >B<rsub|i>\<subseteq\>B<rsub|i+1>
       </equation*>
 
@@ -39502,7 +39500,7 @@
         <tformat|<table|<row|<cell|A<rsub|1>\\<around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|family de Morgan>]>>>|<cell|<big|cap><rsub|i\<in\>\<bbb-N\>><around*|(|A<rsub|1>\\B<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|cap><rsub|i\<in\>\<bbb-N\>><around*|(|A<rsub|1>\\<around*|(|A<rsub|1>\\A<rsub|i>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|class inclusion and union and
-        intersection>}>\<wedge\>A<rsub|i>\<subseteq\>A<rsub|1>>>|<cell|<big|cap><rsub|i\<in\>\<bbb-N\>>Ai>>>>
+        intersection>}>\<wedge\>A<rsub|i>\<subseteq\>A<rsub|1>>>|<cell|<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>>>>>
       </eqnarray*>
 
       so that\ 
@@ -39518,12 +39516,13 @@
       from [theorem: <reference|signed measure properties (1)>] that\ 
 
       <\equation>
-        <label|eq 20.712.248>\<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>|)>\<in\>\<bbb-R\><text|
+        <label|eq 20.712.248>\<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>|)>\<in\>\<bbb-R\><text|,
+        ><big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>\<subseteq\>A<rsub|1><text|
         and >\<forall\>i\<in\>\<bbb-N\><text|
         >\<mu\><around*|(|B<rsub|i>|)>\<in\>\<bbb-R\>
       </equation>
 
-      Next\ 
+      Next
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|\<mu\><around*|(|<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>>|<cell|\<equallim\><rsub|<text|[eq:
@@ -39541,17 +39540,17 @@
       <\equation>
         <label|eq 20.713.248>\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><text|
         with >\<mu\><around*|(|A<rsub|1>|)>\<in\>\<bbb-R\><text| and
-        >\<forall\>i\<in\>\<bbb-N\><text| we have
-        >A<rsub|i+1>\<subseteq\>A<rsub|i><text| we have
-        ><rigid|\<mu\><around*|(|<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|i>|)>>
+        >\<forall\>i\<in\>\<bbb-N\><text|
+        >A<rsub|i+1>\<subseteq\>A<rsub|i><text|
+        \ ><rigid|\<mu\><around*|(|<big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|i>|)>>
       </equation>
 
       We consider now the general cases where <math|1\<leqslant\>k>. So let
       <math|<around*|{|C<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
-      such that <math|\<forall\>i\<in\>\<bbb-N\>>
-      <math|C<rsub|i+1>\<subseteq\>C<rsub|i>> and
-      <math|\<exists\>k\<in\>\<bbb-N\>> with
-      <math|\<mu\><around*|(|C<rsub|k>|)>\<in\>\<bbb-R\>>. Define\ 
+      \ be such that <math|\<exists\>k\<in\>\<bbb-N\>> with
+      <math|\<mu\><around*|(|C<rsub|k>|)>\<in\>\<bbb-R\>> and
+      <math|\<forall\>i\<in\>\<bbb-N\>> <math|C<rsub|i+1>\<subseteq\>C<rsub|i>>.
+      Define\ 
 
       <\equation*>
         <around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><text|
@@ -39572,8 +39571,7 @@
       If <math|x\<in\><big|cap><rsub|i\<in\>\<bbb-N\>>C<rsub|i>> then
       <math|\<forall\>i\<in\>\<bbb-N\>> we have, as
       <math|i+<around*|(|k-1|)>\<in\>\<bbb-N\>>, that
-      <math|x\<in\>C<rsub|i+<around*|(|k-1|)>>=A<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>>
-      proving that\ 
+      <math|x\<in\>C<rsub|i+<around*|(|k-1|)>>=A<rsub|i>> proving that\ 
 
       <\equation>
         <label|eq 20.715.248><big|cap><rsub|i\<in\>\<bbb-N\>>C<rsub|i>\<subseteq\><big|cap><rsub|i\<in\>\<bbb-N\>>A<rsub|i>
@@ -39586,7 +39584,7 @@
       <\description>
         <item*|<math|j\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>Then
         <math|j-<around*|(|k-1|)>\<in\>\<bbb-N\>> so that
-        <math|x\<in\>A<rsub|j-<around*|(|k-1|)>>=C<rsub|<around*|(|j-<around*|(|k-1|)>+<around*|(|k-1|)>|)>>=C<rsub|j>>
+        <math|x\<in\>A<rsub|j-<around*|(|k-1|)>>=C<rsub|j-<around*|(|k-1|)>+<around*|(|k-1|)>>=C<rsub|j>>
 
         <item*|<math|j\<in\><around*|{|1,\<ldots\>,k-1|}>>>Then
         <math|j\<less\>k> so that <math|C<rsub|k>\<subseteq\>C<rsub|j>>, as
@@ -39636,7 +39634,12 @@
       with <math|\<forall\>i\<in\>\<bbb-N\>>
       <math|A<rsub|i>\<subseteq\>A<rsub|i+1>> we have that
       <math|<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|i>|)>>
-      exists and \ <math|\<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\><rsub|0>>A<rsub|i>|)>=<below|lim|n\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|n>|)>>
+      exists and
+
+      <\equation*>
+        \<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\><rsub|0>>A<rsub|i>|)>=<below|lim|n\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|n>|)>
+      </equation*>
+
       then <math|\<mu\>> is a signed measure on <math|\<cal-A\>>.
 
       <item>If <math|\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
@@ -39686,7 +39689,8 @@
         by >B<rsub|i>=<big|cup><rsub|j\<in\><around*|{|i,\<ldots\>,\<infty\>|}>>A<rsub|j>\<in\>\<cal-A\>
       </equation*>
 
-      Let <math|i\<in\>\<bbb-N\>> then <math|B<rsub|i+1>=<big|cup><rsub|j\<in\><around*|{|i+1,\<ldots\>,\<infty\>|}>>A<rsub|j>\<subseteq\><big|cup><rsub|j\<in\><around*|{|i,\<ldots\>,\<infty\>|}>>A<rsub|j>=B<rsub|i>>
+      Let <math|i\<in\>\<bbb-N\>> then <math|B<rsub|i+1>=<big|cup><rsub|j\<in\><around*|{|i+1,\<ldots\>,\<infty\>|}>>A<rsub|j><below|\<subseteq\>|<text|[theorem:
+      <reference|family properties (2)>]>><big|cup><rsub|j\<in\><around*|{|i,\<ldots\>,\<infty\>|}>>A<rsub|j>=B<rsub|i>>
       so that\ 
 
       <\equation>
@@ -39722,7 +39726,7 @@
       then there exist a <math|i\<in\><around*|{|1,\<ldots\>,k|}>> and a
       <math|j\<in\><around*|{|k+1,\<ldots\>,\<infty\>|}>> such that
       <math|x\<in\>A<rsub|i>\<wedge\>x\<in\>A<rsub|j>\<Rightarrow\>x\<in\>A<rsub|i><big|cap>A<rsub|j>>.
-      However as <math|i\<in\><around*|{|1,\<ldots\>,k|}>\<wedge\>j\<in\><around*|{|k+1,\<ldots\>,\<infty\>|}>>
+      However as <math|<rigid|i\<in\><around*|{|1,\<ldots\>,k|}>\<wedge\>j\<in\><around*|{|k+1,\<ldots\>,\<infty\>|}>>>
       we have <math|i\<leqslant\>k\<less\>k+1\<less\>j\<Rightarrow\>i\<neq\>j>
       so that <math|A<rsub|i><big|cap>A<rsub|j>=\<varnothing\>> and we reach
       a contradiction. Hence we have\ 
@@ -39741,21 +39745,21 @@
       By <math|<around*|(|c|)>> [finite additivity] we have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|\<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>>|<cell|=>|<cell|\<mu\><around*|(|<around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>A<rsub|i>|)><big|cup><around*|(|<big|cup><rsub|i\<in\><around*|{|k+1,\<ldots\>,\<infty\>|}>>A<rsub|i>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>A<rsub|i>|)>+\<mu\><around*|(|<big|cup><rsub|i\<in\><around*|{|k+1,\<ldots\>,\<infty\>|}>>A<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>A<rsub|i>|)>+\<mu\><around*|(|B<rsub|k+1>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|c|)>>>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|k>\<mu\><around*|(|A<rsub|i>|)>|)>+\<mu\><around*|(|B<rsub|k+1>|)>>>>>
+        <tformat|<table|<row|<cell|\<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>>|<cell|=>|<cell|\<mu\><around*|(|<around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>A<rsub|i>|)><big|cup><around*|(|<big|cup><rsub|i\<in\><around*|{|k+1,\<ldots\>,\<infty\>|}>>A<rsub|i>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>A<rsub|i>|)>+\<mu\><around*|(|<big|cup><rsub|i\<in\><around*|{|k+1,\<ldots\>,\<infty\>|}>>A<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>A<rsub|i>|)>+\<mu\><around*|(|B<rsub|k+1>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|c|)>>>|<cell|\<mu\><around*|(|<big|sum><rsub|i=1><rsup|k>\<mu\><around*|(|A<rsub|i>|)>|)>+\<mu\><around*|(|B<rsub|k+1>|)>>>>>
       </eqnarray*>
 
       which proves that\ 
 
       <\equation>
         <label|eq 20.720.248>\<forall\>k\<in\>\<bbb-N\><text| we have
-        >\<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=<around*|(|<big|sum><rsub|i=1><rsup|k>\<mu\><around*|(|A<rsub|i>|)>|)>+\<mu\><around*|(|B<rsub|k+1>|)>
+        >\<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=\<mu\><around*|(|<big|sum><rsub|i=1><rsup|k>\<mu\><around*|(|A<rsub|i>|)>|)>+\<mu\><around*|(|B<rsub|k+1>|)>
       </equation>
 
       For <math|\<mu\>> we have now either:\ 
 
       <\description>
-        <item*|<math|<around*|{|\<mu\><around*|(|A|)>\|A\<in\>\<cal-A\>|}>\<subseteq\>\<bbb-R\><rsub|\<infty\>>>>For
-        <math|\<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>>
+        <item*|<math|<around*|{|\<mu\><around*|(|A|)>\|A\<in\>\<cal-A\>|}>\<subseteq\>\<bbb-R\><rsub|\<infty\>>>>Then
+        for <math|\<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>>
         we have either:\ 
 
         <\description>
@@ -39840,7 +39844,7 @@
           <math|N\<in\>\<bbb-N\>> such that
           <math|\<forall\>n\<in\><around*|{|N,\<ldots\>,\<infty\>|}>>
           <math|<around*|\||\<mu\><around*|(|B<rsub|n+1>|)>|\|>\<less\>1>. So
-          we have <math|\<forall\>n\<in\><around*|{|N,\<ldots\>,\<infty\>|}>>
+          we have <rigid|<math|\<forall\>n\<in\><around*|{|N,\<ldots\>,\<infty\>|}>>>
           that <math|\<mu\><around*|(|B<rsub|n+1>|)>\<in\>\<bbb-R\>> which
           combined with [eq: <reference|eq 20.720.248>] proves that
           <math|\<forall\>n\<in\><around*|{|N,\<ldots\>,\<infty\>|}>>
@@ -39874,10 +39878,10 @@
   <subsubsection|Hahn and Jordan decomposition>
 
   In [theorem: <reference|signed measure as a difference of measures>] we
-  have showed that for two measures where one of them is finite the
+  have showed that for two measures, where one of them is finite, the
   difference of these measures is a signed measure. In this section we want
   to show that every signed measure can be written as the difference of two
-  measures.
+  measures.\ 
 
   <\definition>
     <label|signed measure positive/negative set>Let
@@ -40004,7 +40008,7 @@
       <math|A=<around*|(|A\\B|)><big|sqcup>B>, hence
 
       <\equation*>
-        \<mu\><around*|(|A|)>=\<mu\><around*|(|B\\A|)>+\<mu\><around*|(|B|)>
+        \<mu\><around*|(|A|)>=\<mu\><around*|(|A\\B|)>+\<mu\><around*|(|B|)>
       </equation*>
 
       For <math|\<mu\><around*|(|A|)>> we have now as
@@ -40014,9 +40018,10 @@
         <item*|<math|\<mu\><around*|(|A|)>=\<infty\>>>then
         <math|\<mu\><around*|(|B|)>\<leqslant\>\<mu\><around*|(|A|)>>.
 
-        <item*|<math|\<mu\><around*|(|A|)>\<less\>\<infty\>>>then we have
-        <math|\<mu\><around*|(|B\\A|)>\<less\>\<infty\>> and
-        <math|\<mu\>*<around*|(|B|)>\<less\>\<infty\>> so that
+        <item*|<math|\<mu\><around*|(|A|)>\<less\>\<infty\>>>then we have by
+        [theorem: <reference|signed measure properties (1)>] that
+        <math|\<mu\><around*|(|A\\B|)>\<in\>\<bbb-R\>> and
+        <math|\<mu\>*<around*|(|B|)>\<in\>\<bbb-R\>> so that
         <math|\<mu\><around*|(|B|)>=\<mu\><around*|(|A|)>-\<mu\><around*|(|B\\A|)>>
         giving <math|\<mu\><around*|(|B|)>\<leqslant\>\<mu\><around*|(|A|)>>.
       </description>
@@ -40035,7 +40040,7 @@
       <math|A=<around*|(|A\\B|)><big|sqcup>B>, hence
 
       <\equation*>
-        \<mu\><around*|(|A|)>=\<mu\><around*|(|B\\A|)>+\<mu\><around*|(|B|)>
+        \<mu\><around*|(|A|)>=\<mu\><around*|(|A\\B|)>+\<mu\><around*|(|B|)>
       </equation*>
 
       For <math|\<mu\><around*|(|A|)>\<leqslant\>0 we have now as
@@ -40045,13 +40050,15 @@
         <item*|<math|\<mu\><around*|(|A|)>=-\<infty\>>>then
         <math|\<mu\><around*|(|A|)>\<leqslant\>\<mu\><around*|(|B|)>>
 
-        <item*|<math|-\<infty\>\<less\>\<mu\><around*|(|A|)>>>then
-        <math|-\<infty\>\<less\>\<mu\><around*|(|A\\B|)>> and
-        <math|-\<infty\>\<less\>\<mu\><around*|(|B|)>> so that
-        <math|\<mu\><around*|(|A|)>\<leqslant\>\<mu\><around*|(|B|)>>
+        <item*|<math|-\<infty\>\<less\>\<mu\><around*|(|A|)>>>then by
+        \ [theorem: <reference|signed measure properties (1)>]
+        <math|\<mu\><around*|(|A\\B|)>\<in\>\<bbb-R\>> and
+        <math|\<mu\><around*|(|B|)>\<in\>\<bbb-R\>> so that, as
+        <math|<rigid|\<mu\><around*|(|A\\B|)>\<leqslant\>0>>, that
+        <math|\<mu\><around*|(|A|)>=\<mu\><around*|(|A\\B|)>+\<mu\><around*|(|B|)>\<leqslant\>\<mu\><around*|(|B|)>>.
       </description>
 
-      So in all cases we have <math|\<mu\><around*|(|A|)>\<leqslant\>\<mu\><around*|(|B|)>>
+      So in all cases we have <math|\<mu\><around*|(|A|)>\<leqslant\>\<mu\><around*|(|B|)>>.
     </enumerate>
   </proof>
 
@@ -40074,14 +40081,14 @@
 
     <\equation>
       <label|eq 20.721.248>\<delta\><rsub|1>=sup<around*|(|<around*|{|\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\>\<wedge\>B\<subseteq\>A|}>|)><text|
-      exist and >0\<leqslant\>\<delta\><rsub|1>
+      exist and >0\<leqslant\>\<delta\><rsub|1>\<in\><wide|\<bbb-R\>|\<wide-bar\>>
     </equation>
 
     For <math|\<delta\><rsub|1>> we have now two possible cases:
 
     <\description>
       <item*|<math|\<delta\><rsub|1>=\<infty\>>>Then
-      <math|0\<leqslant\>min<around*|(|<frac|\<delta\><rsub|1>|2>,1|)>\<less\>1\<less\>\<infty\>=\<delta\><rsub|1>>
+      <math|0\<leqslant\>min<around*|(|<frac|\<delta\><rsub|1>|2>,1|)>=1\<less\>\<infty\>=\<delta\><rsub|1>>
 
       <item*|<math|\<delta\><rsub|1>\<less\>\<infty\>>>Then
       <math|0\<leqslant\>min<around*|(|<frac|\<delta\><rsub|1>|2>,1|)>\<less\><frac|\<delta\><rsub|1>|2>\<less\>\<delta\><rsub|1>>
@@ -40094,7 +40101,7 @@
     </equation*>
 
     so that there exist <math|A<rsub|1>\<in\><around*|{|B\<in\>\<cal-B\>\|B\<subseteq\>A|}>>
-    and <math|min<around*|(|<frac|\<delta\><rsub|1>|2>,1|)>\<less\>\<mu\><around*|(|A<rsub|1>|)>\<leqslant\>\<delta\><rsub|1>>.
+    with <math|min<around*|(|<frac|\<delta\><rsub|1>|2>,1|)>\<less\>\<mu\><around*|(|A<rsub|1>|)>\<leqslant\>\<delta\><rsub|1>>.
     Define now
 
     <\equation*>
@@ -40110,7 +40117,7 @@
 
       <\equation*>
         B<rsub|1>\<in\>\<cal-A\>\<wedge\>B<rsub|1>\<subseteq\>A<text| and
-        >min<around*|(|<frac|\<delta\><rsub|1>|2>,1|)>\<less\>\<mu\><around*|(|A<rsub|1>|)>\<leqslant\>\<delta\><rsub|1>
+        >0\<leqslant\>min<around*|(|<frac|\<rho\><rsub|1>|2>,1|)>\<less\>\<mu\><around*|(|A<rsub|1>|)>\<leqslant\>\<rho\><rsub|1>
       </equation*>
 
       <item*|<math|n\<in\><around*|{|2,\<ldots\>,\<infty\>|}>>>Then
@@ -40132,7 +40139,7 @@
 
       <\description>
         <item*|<math|\<rho\><rsub|n>=\<infty\>>>Then
-        <math|0\<leqslant\>min<around*|(|<frac|\<rho\><rsub|n>|2>,1|)>\<leqslant\>1\<less\>\<infty\>=\<rho\><rsub|n>>
+        <math|0\<leqslant\>min<around*|(|<frac|\<rho\><rsub|n>|2>,1|)>=1\<less\>\<infty\>=\<rho\><rsub|n>>
 
         <item*|<math|\<rho\><rsub|n>\<less\>\<infty\>>>Then
         <math|0\<leqslant\>min<around*|(|<frac|\<rho\><rsub|n>|2>,1|)>\<leqslant\><frac|\<rho\><rsub|n>|2>\<less\>\<rho\><rsub|n>>
@@ -40149,31 +40156,36 @@
       so that\ 
 
       <\equation*>
-        B\<in\>\<cal-A\>\<wedge\>B\<subseteq\>A\\<around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>B<rsub|i>|)><text|
+        B<rsub|n>\<in\>\<cal-A\>\<wedge\>B<rsub|n>\<subseteq\>A\\<around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>B<rsub|i>|)><text|
         and >0\<leqslant\>min<around*|(|<frac|\<rho\><rsub|n>|2>,1|)>\<less\>\<mu\><around*|(|B<rsub|n>|)>\<leqslant\>\<rho\><rsub|n>
       </equation*>
     </description>
 
-    So the constructed sequence <math|<around*|{|<around*|(|\<rho\><rsub|n>,B<rsub|n>|)>|}><rsub|n\<in\>\<bbb-N\>>>
-    satisfies that <math|\<forall\>n\<in\>\<bbb-N\>>
+    So we have constructed a sequence <math|<around*|{|<around*|(|\<rho\><rsub|n>,B<rsub|n>|)>|}><rsub|n\<in\>\<bbb-N\>>>
+    such that <math|\<forall\>n\<in\>\<bbb-N\>>
 
     <\equation>
-      <label|eq 20.722.248>\<rho\><rsub|n>=<choice|<tformat|<table|<row|<cell|sup<around*|(|<around*|{|\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\>\<wedge\>B\<subseteq\>A|}>|)>
+      <label|eq 20.775.265>\<rho\><rsub|n>=<choice|<tformat|<table|<row|<cell|sup<around*|(|<around*|{|\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\>\<wedge\>B\<subseteq\>A|}>|)>
       if n=1>>|<row|<cell|sup<around*|(|<around*|{|\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\>\<wedge\>B\<subseteq\>A\\<around*|(|<big|cup><rsub|k\<in\><around*|{|1,\<ldots\>,n-1|}>>B<rsub|i>|)>|}>|)><text|
-      if >i\<in\><around*|{|2,\<ldots\>,n|}>>>>>><text| and
-      ><rigid|B<rsub|n>\<in\><choice|<tformat|<table|<row|<cell|<around*|{|B\<in\>\<cal-A\>\|B\<subseteq\>A|}><text|
+      if >i\<in\><around*|{|2,\<ldots\>,n|}>>>>>>
+    </equation>
+
+    <\equation>
+      <label|eq 20.776.265>B<rsub|n>=<choice|<tformat|<table|<row|<cell|<around*|{|B\<in\>\<cal-A\>\|B\<subseteq\>A|}><text|
       if >n=1>>|<row|<cell|<around*|{|B\<in\>\<cal-A\>\|B\<subseteq\>A\\<around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>B<rsub|i>|)>|}><text|
-      if >i\<in\><around*|{|2,\<ldots\>,n|}>>>>>><text| and
-      >>0\<leqslant\>min<around*|(|<frac|\<rho\><rsub|n>|2>,1|)>\<less\>\<mu\><around*|(|B<rsub|n>|)>\<leqslant\>\<rho\><rsub|n>
+      if >i\<in\><around*|{|2,\<ldots\>,n|}>>>>>>
+    </equation>
+
+    <\equation>
+      <label|eq 20.777.265>0\<leqslant\>min<around*|(|<frac|\<rho\><rsub|n>|2>,1|)>\<less\>\<mu\><around*|(|B<rsub|n>|)>\<leqslant\>\<rho\><rsub|n>
     </equation>
 
     Let <math|i,j\<in\>\<bbb-N\>> with <math|i\<neq\>j> then we may always
     assume that <math|i\<less\>j> [otherwise exchange <math|i> and <math|j>].
-    Let <math|x\<in\>B<rsub|i><big|cap>B<rsub|j>> then as
-    <math|i\<leqslant\>j-1> we have from <math|x\<in\>B<rsub|j>=A\\<around*|(|<big|cup><rsub|k\<in\><around*|{|1,\<ldots\>,j-1|}>>A<rsub|k>|)>>
-    that <math|x\<in\>B<rsub|i>> contradicting
-    <math|x\<in\>B<rsub|i><big|cap>B<rsub|j>> hence we must have that
-    <math|B<rsub|i><big|cap>B<rsub|j>=\<varnothing\>>. This proves that\ 
+    Then as <math|i\<leqslant\>j-1> we have that
+    <math|B<rsub|j>\<subseteq\>A\\<around*|(|<big|cup><rsub|k\<in\><around*|{|1,\<ldots\>,j-1|}>>B<rsub|k>|)>\<subseteq\>A\<subseteq\>A\\B<rsub|i>>
+    so that <math|B<rsub|j><big|cap>B<rsub|i>\<subseteq\><around*|(|A\\B<rsub|i>|)><big|cap>B<rsub|i>=\<varnothing\>>
+    which proves that\ 
 
     <\equation>
       <label|eq 20.723.248><around*|{|B<rsub|n>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><text|
@@ -40189,21 +40201,28 @@
 
     We will prove now that <math|B> is the required negative set. As
     <math|\<forall\>n\<in\>\<bbb-N\>> we have from [eq: <reference|eq
-    20.722.248>] that
+    20.777.265>] that
 
     <\equation*>
       0\<leqslant\>min<around*|(|<frac|\<delta\><rsub|1>|2>,1|)>\<less\>\<mu\><around*|(|B<rsub|1>|)>\<leqslant\><big|sum><rsub|i=1><rsup|n>\<mu\><around*|(|B<rsub|i>|)>\<leqslant\>sup<around*|(|<around*|{|<big|sum><rsub|i=1><rsup|n>\<mu\><around*|(|B<rsub|i>|)>\|n\<in\>\<bbb-N\>|}>|)>=<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|B<rsub|i>|)>
     </equation*>
 
     so that <math|0\<less\><big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|B<rsub|i>|)>>.
-    As further <math|\<mu\>> is a signed measure we have from [eq:
-    <reference|eq 20.723.248> that\ 
+    As further <math|\<mu\>> is a signed measure we have
+
+    <\equation*>
+      0\<less\><big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|B<rsub|i>|)><below|=|<text|[eq:
+      <reference|eq 20.723.248>]>>\<mu\><around*|(|<big|sqcup><rsub|n\<in\>\<bbb-N\>>B<rsub|n>|)>\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.724.148>]>>\<mu\><around*|(|B<rsub|\<infty\>>|)>
+    </equation*>
+
+    so that
 
     <\equation>
       <label|eq 20.725.248>0\<less\><big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|B<rsub|i>|)>=\<mu\><around*|(|B<rsub|\<infty\>>|)>
     </equation>
 
-    Using [eq: <reference|eq 20.722.248>] we have
+    Using [eq: <reference|eq 20.776.265>] we have
     <math|\<forall\>i\<in\>\<bbb-N\>> that <math|B<rsub|i>\<subseteq\>A> so
     that <math|B<rsub|\<infty\>>\<subseteq\>A> hence
     <math|A=<around*|(|A\\B<rsub|\<infty\>>|)><big|sqcup>B<rsub|\<infty\>>=B<big|sqcup>B<rsub|\<infty\>>>
@@ -40223,31 +40242,41 @@
       >\<mu\><around*|(|B|)>\<leqslant\>\<mu\><around*|(|A|)>
     </equation>
 
-    The proves the last part of the lemma, the only thing that still must be
-    proved is that <math|B> is a negative set for <math|\<mu\>>. As
-    <math|0\<less\>\<mu\><around*|(|B<rsub|\<infty\>>|)>\<leqslant\>\<mu\><around*|(|A|)>\<less\>\<infty\>>
-    it follows that <math|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|B<rsub|i>|)>\<equallim\><rsub|<text|[eq:
-    <reference|eq 20.725.248>]>>\<mu\><around*|(|B<rsub|\<infty\>>|)>\<in\>\<bbb-R\>>
-    it follows from [theorem: <reference|series terms converges to zero>]
-    that\ 
+    This proves the last part of the lemma, the only thing that still must be
+    proved is that <math|B> is a negative set for <math|\<mu\>>.\ 
+
+    As by [eq: <reference|eq 20.776.265>] <math|\<forall\>n\<in\>\<bbb-N\>>
+    <math|B<rsub|n>\<subseteq\>A> it follows that
+    <math|B<rsub|\<infty\>>=<big|cup><rsub|n\<in\>\<bbb-N\>>B<rsub|n>\<subseteq\>A>,
+    further by the hypothesis <math|\<mu\><around*|(|A|)>\<in\>\<bbb-R\>>, so
+    using [theorem: <reference|signed measure properties (1)>] we have
+    <math|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|B<rsub|i>|)>=\<mu\><around*|(|B<rsub|\<infty\>>|)>\<in\>\<bbb-R\>>,
+    applying then [theorem: <reference|series terms converges to zero>]
+    proves that
 
     <\equation*>
       <below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|B<rsub|i>|)>=0
     </equation*>
 
-    Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there exist a
-    <math|N\<in\>\<bbb-N\>> such that <math|\<forall\>n\<in\><around*|{|N,\<ldots\>,\<infty\>|}>>
-    <math|\<mu\><around*|(|B<rsub|n>|)>\<equallim\><rsub|<text|[eq:
-    <reference|eq 20.722.248>]>><around*|\||\<mu\><around*|(|B<rsub|n>|)>-0|\|>\<less\>min<around*|(|<frac|\<varepsilon\>|2>,<frac|1|2>|)>>.
-    So that <math|min<around*|(|<frac|\<rho\><rsub|n>|2>,1|)>\<leqslant\>\<mu\><around*|(|B<rsub|n>|)>\<less\>min<around*|(|<frac|\<varepsilon\>|2>,<frac|1|2>|)>>
+    Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then, using the above,
+    there exist a <math|N\<in\>\<bbb-N\>> such that
+    <math|\<forall\>n\<in\><around*|{|N,\<ldots\>,\<infty\>|}>>
+
+    <\equation*>
+      \<mu\><around*|(|B<rsub|n>|)>\<equallim\><rsub|<text|[<reference|eq
+      20.777.265>]>><around*|\||\<mu\><around*|(|B<rsub|n>|)>-0|\|>\<less\>min<around*|(|<frac|\<varepsilon\>|2>,<frac|1|2>|)>.
+    </equation*>
+
+    Using [eq: <reference|eq 20.777.265>]
+    <math|min<around*|(|<frac|\<rho\><rsub|n>|2>,1|)>\<leqslant\>\<mu\><around*|(|B<rsub|n>|)>>
     so that <math|min<around*|(|<frac|\<rho\><rsub|n>|2>,1|)>\<leqslant\>min<around*|(|<frac|\<varepsilon\>|2>,<frac|1|2>|)>>.
     Assume that <math|1\<less\><frac|\<rho\><rsub|n>|2>> then
     <math|min<around*|(|<frac|\<rho\><rsub|n>|2>,1|)>=1\<less\>min<around*|(|<frac|\<varepsilon\>|2>,<frac|1|2>|)>\<leqslant\><frac|1|2>>
     giving the contradiction <math|1\<leqslant\><frac|1|2>>. Hence must have
     <math|<frac|\<rho\><rsub|n>|2>\<leqslant\>1> so that
     <math|<frac|\<rho\><rsub|n>|2>=min<around*|(|<frac|\<rho\><rsub|n>|2>,1|)>\<less\>min<around*|(|<frac|\<varepsilon\>|2>,<frac|1|2>|)>\<leqslant\><frac|\<varepsilon\>|2>>
-    giving <math|<around*|\||\<rho\><rsub|n>-0|\|>=\<rho\><rsub|n>\<less\>\<varepsilon\>>.
-    So we conclude that\ 
+    from which it follows that <math|<around*|\||\<rho\><rsub|n>-0|\|>=\<rho\><rsub|n>\<less\>\<varepsilon\>>.
+    This proves that\ 
 
     <\equation>
       <label|eq 20.728.248><below|lim|i\<rightarrow\>\<infty\>>\<rho\><rsub|n>=0
@@ -40259,10 +40288,14 @@
     <\description>
       <item*|<math|n=1>>Then as <math|B<rsub|1>\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>=B<rsub|\<infty\>>>
       we have that <math|B=A\\B<rsub|\<infty\>>\<subseteq\>A\\B<rsub|1>\<subseteq\>A>
-      so that <math|E\<subseteq\>A> proving that
-      <math|E\<in\><around*|{|B\<in\>\<cal-A\>\|B\<subseteq\>A|}>> so that
-      <math|\<mu\><around*|(|E|)>\<leqslant\>sup<around*|(|<around*|{|\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\>\<wedge\>B\<subseteq\>A|}>|)>\<equallim\><rsub|<text|[eq:
-      <reference|eq 20.722.248>]>>\<rho\><rsub|1>>
+      so that <math|E\<subseteq\>A> which proves that
+      <math|E\<in\><around*|{|B\<in\>\<cal-A\>\|B\<subseteq\>A|}>>. From this
+      it follows that
+
+      <\equation*>
+        \<mu\><around*|(|E|)>\<leqslant\>sup<around*|(|<around*|{|\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\>\<wedge\>B\<subseteq\>A|}>|)>\<equallim\><rsub|<text|[eq:
+        <reference|eq 20.775.265>]>>\<rho\><rsub|1>
+      </equation*>
 
       <item*|<math|n\<in\><around*|{|2,\<ldots\>,\<infty\>|}>>>Then as
       <math|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>B<rsub|i>\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>=B<rsub|\<infty\>>>
@@ -40276,7 +40309,7 @@
       Hence\ 
 
       <\equation*>
-        \<mu\><around*|(|A|)>\<leqslant\>sup<around*|(|<around*|{|\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\>\<wedge\>B\<subseteq\>\\<around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>B<rsub|i>|)>|}>|)>=\<rho\><rsub|n>
+        \<mu\><around*|(|E|)>\<leqslant\>sup<around*|(|<around*|{|\<mu\><around*|(|B|)>\|B\<in\>\<cal-A\>\<wedge\>B\<subseteq\>\\<around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>B<rsub|i>|)>|}>|)>=\<rho\><rsub|n>
       </equation*>
     </description>
 
@@ -40292,7 +40325,9 @@
     <reference|eq 20.728.248>]>>0> there exist a <math|N\<in\>\<bbb-N\>> such
     that <math|\<rho\><rsub|n>=<around*|\||\<rho\><rsub|n>-0|\|>\<less\>\<mu\><around*|(|E|)>>
     contradicting [eq: <reference|eq 20.729.248>]. Hence we must have that
-    <math|\<mu\><around*|(|E|)>\<leqslant\>0>. So we have proved that
+    <math|\<mu\><around*|(|E|)>\<leqslant\>0>. So the assumption is false and
+    we must have that <math|\<mu\>*<around*|(|E|)>\<leqslant\>0>. In other
+    words we have proved that
 
     <\equation*>
       \<forall\>E\<in\>\<cal-A\><text| with >E\<subseteq\>B<text| we have
@@ -40380,7 +40415,7 @@
       \<mu\><around*|(|P<rsub|1><big|cap>N<rsub|2>|)>=0
     </equation*>
 
-    Likewise, as <math|P<rsub|2><big|cap>N<rsub|2>\<in\>\<cal-A\>>,
+    Likewise, as <math|P<rsub|2><big|cap>N<rsub|1>\<in\>\<cal-A\>>,
     <math|P<rsub|2><big|cap>N<rsub|1>\<subseteq\>P<rsub|2>>,<math|P<rsub|2><big|cap>N<rsub|1>\<subseteq\>N<rsub|1>,>
     <math|P<rsub|2>> a positive set for <math|\<mu\>> and <math|N<rsub|1>> a
     negative set for <math|\<mu\>>, we have
@@ -40432,7 +40467,7 @@
       exist a sequence <math|<around*|{|A<rsub|n>|}><rsub|n\<in\>\<bbb-N\>>>
       of negative sets for <math|\<mu\>> such that
       <math|\<forall\>n\<in\>\<bbb-N\>> we have
-      <math|\<mu\><around*|(|A<rsub|n>|)>=x<rsub|n>>. Hence we have\ 
+      <math|\<mu\><around*|(|A<rsub|n>|)>=x<rsub|n>> so that\ 
 
       <\equation>
         <label|eq 20.731.248><below|lim|n\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|n>|)><text|
@@ -40493,12 +40528,12 @@
         is a negative set for >\<mu\>|}>|)>\<leqslant\>\<mu\><around*|(|N|)>
       </equation>
 
-      Further given <math|n\<in\>\<bbb-N\>> <math|A<rsub|n>\<in\>\<cal-A\>>
-      and <math|A<rsub|n>\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>=N>
-      and <math|N> is a negative set it follows from [theorem:
+      Further given <math|n\<in\>\<bbb-N\>> <math|A<rsub|n>\<in\>\<cal-A\>>,
+      <math|A<rsub|n>\<subseteq\><big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>=N>
+      and <math|N> is a negative set. So it follows from [theorem:
       <reference|lemma 20.514.248>] <math|\<mu\><around*|(|N|)>\<leqslant\>\<mu\><around*|(|A<rsub|n>|)>>.
-      Using [theorem: <reference|extended limit properties>] it follows that
-      <rigid|<math|\<mu\><around*|(|N|)>\<leqslant\><below|lim|n\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|n>|)>\<equallim\><rsub|<text|[eq:
+      Using [theorem: <reference|extended limit properties>] it follows then
+      that <rigid|<math|\<mu\><around*|(|N|)>\<leqslant\><below|lim|n\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|n>|)>\<equallim\><rsub|<text|[eq:
       <reference|eq 20.731.248>]>>L>> which combined with [eq: <reference|eq
       20.736.248>]\ 
 
@@ -40523,9 +40558,10 @@
       <math|C\<in\>\<cal-A\>> with <math|C\<subseteq\>P> such that
       <math|\<mu\><around*|(|C|)>\<less\>0>. As
       <math|<rigid|\<mu\><around*|(|C|)>\<in\><around*|{|\<mu\><around*|(|A|)>\|A\<in\>\<cal-A\>|}>\<subseteq\>\<bbb-R\><rsub|\<infty\>>>>
-      we have <math|\<mu\><around*|(|C|)>\<neq\>-\<infty\>>. Using [lemma:
-      <reference|lemma 20.515.248>] there exist a negative set <math|B> for
-      <math|\<mu\>> such that\ 
+      we have <math|\<mu\><around*|(|C|)>\<neq\>-\<infty\>> so that
+      <math|-\<infty\>\<less\>\<mu\><around*|(|C|)>\<less\>0>. Using then
+      [lemma: <reference|lemma 20.515.248>] it follows that there exist a
+      negative set <math|B> for <math|\<mu\>> such that\ 
 
       <\equation>
         <label|eq 20.739.248>B\<subseteq\>C<text| and
@@ -40568,11 +40604,7 @@
         <label|eq 20.742.248>P<text| is a positive set for <math|\<mu\>>>
       </equation>
 
-      To summarize we have by [eqs: <reference|eq 20.735.248>, <reference|eq
-      20.742.248>] and <math|P=X\\N> that for a signed measure
-      <math|\<mu\>:\<cal-A\>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>> with
-      <math|<around*|{|\<mu\><around*|(|A|)>\|A\<in\>\<cal-A\>|}>\<subseteq\>\<bbb-R\><rsub|+1>>
-      we have
+      To summarize
 
       <\equation*>
         N<text| is a negative set for <math|\<mu\><text|, >P<text| is a
@@ -40585,25 +40617,25 @@
       <math|\<nu\>=<around*|(|-\<mu\>|)>:\<cal-A\>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>>
       is a signed measure on <math|\<cal-A\>>. Further if
       <math|x\<in\><around*|{|\<nu\><around*|(|A|)>\|A\<in\>\<cal-A\>|}>>
-      then <math|\<exists\>A\<in\>\<cal-A\>> such that
-      <math|x=\<nu\><around*|(|A|)>=-\<mu\><around*|(|A|)>\<subseteq\>\<bbb-R\><rsub|-\<infty\>>>.
-      For <math|\<mu\><around*|(|A|)>> we have either
-      <math|x=\<mu\><around*|(|A|)>\<in\>\<bbb-R\>\<Rightarrow\>-\<mu\><around*|(|A|)>\<in\>\<bbb-R\>>
-      or <math|\<mu\><around*|(|A|)>=-\<infty\>\<Rightarrow\>x=-\<mu\><around*|(|A|)>=\<infty\>>
-      which proves that <math|<around*|{|\<nu\><around*|(|A|)>\|A\<in\>\<cal-A\>|}>\<subseteq\>\<bbb-R\><rsub|\<infty\>>>.
-      \ Using then the previous case [see eq: <reference|eq 20.742.248>]
-      there exist a positive set <math|N> for <math|\<nu\>> and a negative
-      set <math|P> for <math|\<nu\>> such that
+      then there exist a <math|A\<in\>\<cal-A\>> such that
+      <math|x=\<nu\><around*|(|A|)>=-\<mu\><around*|(|A|)>>. As we have
+      either <math|\<mu\><around*|(|A|)>\<in\>\<bbb-R\>\<Rightarrow\>-\<mu\><around*|(|A|)>\<in\>\<bbb-R\>>
+      or <math|\<mu\><around*|(|A|)>=-\<infty\>\<Rightarrow\>-\<mu\><around*|(|A|)>=\<infty\>>
+      it follows that <math|<around*|{|\<nu\><around*|(|A|)>\|A\<in\>\<cal-A\>|}>>.
+      \ Using then the previous case [see eq: <reference|eq 20.742.248>] for
+      <math|\<nu\>> there exist a positive set <math|N> for <math|\<nu\>> and
+      a negative set <math|P> for <math|\<nu\>> such that
       <math|P<big|cap>N=\<varnothing\>> and <math|X=P<big|cup>N>. Using
       [lemma: <reference|lemma 20.513.248>] it follows that <math|P> is a
       positive set for <math|-\<nu\>=-<around*|(|-\<mu\>|)>=\<mu\>> and
       <math|N> is a negative set for <math|-\<nu\>=-<around*|(|-\<mu\>|)>=\<mu\>>.
-      Which conclude the prove for this case.
-    </description>
+      </description>
   </proof>
 
   The Hahn Decompositions allows us to write every signed measure as the
   difference of two measures.
+
+  TODO subspace
 
   <\theorem>
     <label|Jordon Decomposition theorem>Let
@@ -43892,10 +43924,10 @@
 
 <\references>
   <\collection>
-    <associate|20.809.248|<tuple|20.862|?>>
+    <associate|20.809.248|<tuple|20.864|?>>
     <associate|Beppo Levi's Theorem|<tuple|20.451|?>>
     <associate|Constructing measures and sigma alegebra|<tuple|20.4.4|?>>
-    <associate|EQ 20.766.248|<tuple|20.819|?>>
+    <associate|EQ 20.766.248|<tuple|20.821|?>>
     <associate|Fatou's lemma|<tuple|20.454|?>>
     <associate|Hahn Decomposition Theorem|<tuple|20.544|?>>
     <associate|Holder's Inequality|<tuple|20.493|?>>
@@ -44872,112 +44904,114 @@
     <associate|eq 20.719.248|<tuple|20.772|?>>
     <associate|eq 20.720.248|<tuple|20.773|?>>
     <associate|eq 20.721.248|<tuple|20.774|?>>
-    <associate|eq 20.722.248|<tuple|20.775|?>>
-    <associate|eq 20.723.248|<tuple|20.776|?>>
-    <associate|eq 20.724.148|<tuple|20.777|?>>
-    <associate|eq 20.725.248|<tuple|20.778|?>>
-    <associate|eq 20.726.248|<tuple|20.779|?>>
-    <associate|eq 20.727.248|<tuple|20.780|?>>
-    <associate|eq 20.728.248|<tuple|20.781|?>>
-    <associate|eq 20.729.248|<tuple|20.782|?>>
-    <associate|eq 20.730.248|<tuple|20.783|?>>
-    <associate|eq 20.731.248|<tuple|20.784|?>>
-    <associate|eq 20.732.248|<tuple|20.785|?>>
-    <associate|eq 20.733.248|<tuple|20.786|?>>
-    <associate|eq 20.734.248|<tuple|20.787|?>>
-    <associate|eq 20.735.248|<tuple|20.788|?>>
-    <associate|eq 20.736.248|<tuple|20.789|?>>
-    <associate|eq 20.737.248|<tuple|20.790|?>>
-    <associate|eq 20.738.248|<tuple|20.791|?>>
-    <associate|eq 20.739.248|<tuple|20.792|?>>
-    <associate|eq 20.740.248|<tuple|20.793|?>>
-    <associate|eq 20.741.248|<tuple|20.794|?>>
-    <associate|eq 20.742.248|<tuple|20.795|?>>
-    <associate|eq 20.743.248|<tuple|20.796|?>>
-    <associate|eq 20.744.248|<tuple|20.797|?>>
-    <associate|eq 20.745.248|<tuple|20.798|?>>
-    <associate|eq 20.746.248|<tuple|20.799|?>>
-    <associate|eq 20.747.248|<tuple|20.800|?>>
-    <associate|eq 20.748.248|<tuple|20.801|?>>
-    <associate|eq 20.749.248|<tuple|20.802|?>>
-    <associate|eq 20.751.248|<tuple|20.804|?>>
-    <associate|eq 20.752.248|<tuple|20.805|?>>
-    <associate|eq 20.753.248|<tuple|20.806|?>>
-    <associate|eq 20.754.248|<tuple|20.807|?>>
-    <associate|eq 20.755.243|<tuple|20.808|?>>
-    <associate|eq 20.756.248|<tuple|20.809|?>>
-    <associate|eq 20.757.248|<tuple|20.810|?>>
-    <associate|eq 20.758.248|<tuple|20.811|?>>
-    <associate|eq 20.759.248|<tuple|20.812|?>>
+    <associate|eq 20.723.248|<tuple|20.778|?>>
+    <associate|eq 20.724.148|<tuple|20.779|?>>
+    <associate|eq 20.725.248|<tuple|20.780|?>>
+    <associate|eq 20.726.248|<tuple|20.781|?>>
+    <associate|eq 20.727.248|<tuple|20.782|?>>
+    <associate|eq 20.728.248|<tuple|20.783|?>>
+    <associate|eq 20.729.248|<tuple|20.784|?>>
+    <associate|eq 20.730.248|<tuple|20.785|?>>
+    <associate|eq 20.731.248|<tuple|20.786|?>>
+    <associate|eq 20.732.248|<tuple|20.787|?>>
+    <associate|eq 20.733.248|<tuple|20.788|?>>
+    <associate|eq 20.734.248|<tuple|20.789|?>>
+    <associate|eq 20.735.248|<tuple|20.790|?>>
+    <associate|eq 20.736.248|<tuple|20.791|?>>
+    <associate|eq 20.737.248|<tuple|20.792|?>>
+    <associate|eq 20.738.248|<tuple|20.793|?>>
+    <associate|eq 20.739.248|<tuple|20.794|?>>
+    <associate|eq 20.740.248|<tuple|20.795|?>>
+    <associate|eq 20.741.248|<tuple|20.796|?>>
+    <associate|eq 20.742.248|<tuple|20.797|?>>
+    <associate|eq 20.743.248|<tuple|20.798|?>>
+    <associate|eq 20.744.248|<tuple|20.799|?>>
+    <associate|eq 20.745.248|<tuple|20.800|?>>
+    <associate|eq 20.746.248|<tuple|20.801|?>>
+    <associate|eq 20.747.248|<tuple|20.802|?>>
+    <associate|eq 20.748.248|<tuple|20.803|?>>
+    <associate|eq 20.749.248|<tuple|20.804|?>>
+    <associate|eq 20.751.248|<tuple|20.806|?>>
+    <associate|eq 20.752.248|<tuple|20.807|?>>
+    <associate|eq 20.753.248|<tuple|20.808|?>>
+    <associate|eq 20.754.248|<tuple|20.809|?>>
+    <associate|eq 20.755.243|<tuple|20.810|?>>
+    <associate|eq 20.756.248|<tuple|20.811|?>>
+    <associate|eq 20.757.248|<tuple|20.812|?>>
+    <associate|eq 20.758.248|<tuple|20.813|?>>
+    <associate|eq 20.759.248|<tuple|20.814|?>>
     <associate|eq 20.76.200|<tuple|20.97|?>>
-    <associate|eq 20.760.248|<tuple|20.813|?>>
-    <associate|eq 20.761.248|<tuple|20.814|?>>
-    <associate|eq 20.762.248|<tuple|20.815|?>>
-    <associate|eq 20.763.248|<tuple|20.816|?>>
-    <associate|eq 20.764.248|<tuple|20.817|?>>
-    <associate|eq 20.765.248|<tuple|20.818|?>>
-    <associate|eq 20.767.248|<tuple|20.820|?>>
-    <associate|eq 20.768.248|<tuple|20.821|?>>
-    <associate|eq 20.769.248|<tuple|20.822|?>>
+    <associate|eq 20.760.248|<tuple|20.815|?>>
+    <associate|eq 20.761.248|<tuple|20.816|?>>
+    <associate|eq 20.762.248|<tuple|20.817|?>>
+    <associate|eq 20.763.248|<tuple|20.818|?>>
+    <associate|eq 20.764.248|<tuple|20.819|?>>
+    <associate|eq 20.765.248|<tuple|20.820|?>>
+    <associate|eq 20.767.248|<tuple|20.822|?>>
+    <associate|eq 20.768.248|<tuple|20.823|?>>
+    <associate|eq 20.769.248|<tuple|20.824|?>>
     <associate|eq 20.77.200|<tuple|20.98|?>>
-    <associate|eq 20.770.248|<tuple|20.823|?>>
-    <associate|eq 20.771.248|<tuple|20.824|?>>
-    <associate|eq 20.772.248|<tuple|20.825|?>>
-    <associate|eq 20.773.248|<tuple|20.826|?>>
-    <associate|eq 20.774.248|<tuple|20.827|?>>
-    <associate|eq 20.775.248|<tuple|20.828|?>>
-    <associate|eq 20.776.248|<tuple|20.829|?>>
-    <associate|eq 20.777.248|<tuple|20.830|?>>
-    <associate|eq 20.778.248|<tuple|20.831|?>>
-    <associate|eq 20.779.248|<tuple|20.832|?>>
+    <associate|eq 20.770.248|<tuple|20.825|?>>
+    <associate|eq 20.771.248|<tuple|20.826|?>>
+    <associate|eq 20.772.248|<tuple|20.827|?>>
+    <associate|eq 20.773.248|<tuple|20.828|?>>
+    <associate|eq 20.774.248|<tuple|20.829|?>>
+    <associate|eq 20.775.248|<tuple|20.830|?>>
+    <associate|eq 20.775.265|<tuple|20.775|?>>
+    <associate|eq 20.776.248|<tuple|20.831|?>>
+    <associate|eq 20.776.265|<tuple|20.776|?>>
+    <associate|eq 20.777.248|<tuple|20.832|?>>
+    <associate|eq 20.777.265|<tuple|20.777|?>>
+    <associate|eq 20.778.248|<tuple|20.833|?>>
+    <associate|eq 20.779.248|<tuple|20.834|?>>
     <associate|eq 20.78.200|<tuple|20.99|?>>
-    <associate|eq 20.780.248|<tuple|20.833|?>>
-    <associate|eq 20.781.248|<tuple|20.834|?>>
-    <associate|eq 20.782.248|<tuple|20.835|?>>
-    <associate|eq 20.783.248|<tuple|20.836|?>>
-    <associate|eq 20.784.248|<tuple|20.837|?>>
-    <associate|eq 20.785.248|<tuple|20.838|?>>
-    <associate|eq 20.786.248|<tuple|20.839|?>>
-    <associate|eq 20.787.248|<tuple|20.840|?>>
-    <associate|eq 20.788.248|<tuple|20.841|?>>
-    <associate|eq 20.789.248|<tuple|20.842|?>>
+    <associate|eq 20.780.248|<tuple|20.835|?>>
+    <associate|eq 20.781.248|<tuple|20.836|?>>
+    <associate|eq 20.782.248|<tuple|20.837|?>>
+    <associate|eq 20.783.248|<tuple|20.838|?>>
+    <associate|eq 20.784.248|<tuple|20.839|?>>
+    <associate|eq 20.785.248|<tuple|20.840|?>>
+    <associate|eq 20.786.248|<tuple|20.841|?>>
+    <associate|eq 20.787.248|<tuple|20.842|?>>
+    <associate|eq 20.788.248|<tuple|20.843|?>>
+    <associate|eq 20.789.248|<tuple|20.844|?>>
     <associate|eq 20.79.200|<tuple|20.100|?>>
-    <associate|eq 20.790.248|<tuple|20.843|?>>
+    <associate|eq 20.790.248|<tuple|20.845|?>>
     <associate|eq 20.791.231|<tuple|20.532|?>>
-    <associate|eq 20.791.248|<tuple|20.844|?>>
-    <associate|eq 20.792.248|<tuple|20.845|?>>
-    <associate|eq 20.793.248|<tuple|20.846|?>>
-    <associate|eq 20.794.248|<tuple|20.847|?>>
-    <associate|eq 20.795.248|<tuple|20.848|?>>
-    <associate|eq 20.796.248|<tuple|20.849|?>>
-    <associate|eq 20.797.248|<tuple|20.850|?>>
-    <associate|eq 20.798.248|<tuple|20.851|?>>
-    <associate|eq 20.799.248|<tuple|20.852|?>>
+    <associate|eq 20.791.248|<tuple|20.846|?>>
+    <associate|eq 20.792.248|<tuple|20.847|?>>
+    <associate|eq 20.793.248|<tuple|20.848|?>>
+    <associate|eq 20.794.248|<tuple|20.849|?>>
+    <associate|eq 20.795.248|<tuple|20.850|?>>
+    <associate|eq 20.796.248|<tuple|20.851|?>>
+    <associate|eq 20.797.248|<tuple|20.852|?>>
+    <associate|eq 20.798.248|<tuple|20.853|?>>
+    <associate|eq 20.799.248|<tuple|20.854|?>>
     <associate|eq 20.8.155|<tuple|20.8|?>>
     <associate|eq 20.80.200|<tuple|20.101|?>>
-    <associate|eq 20.800.248|<tuple|20.853|?>>
-    <associate|eq 20.801.248|<tuple|20.854|?>>
-    <associate|eq 20.802.248|<tuple|20.855|?>>
-    <associate|eq 20.803.248|<tuple|20.856|?>>
-    <associate|eq 20.804.248|<tuple|20.857|?>>
-    <associate|eq 20.805.248|<tuple|20.858|?>>
-    <associate|eq 20.806.248|<tuple|20.859|?>>
-    <associate|eq 20.807.248|<tuple|20.860|?>>
-    <associate|eq 20.808.248|<tuple|20.861|?>>
+    <associate|eq 20.800.248|<tuple|20.855|?>>
+    <associate|eq 20.801.248|<tuple|20.856|?>>
+    <associate|eq 20.802.248|<tuple|20.857|?>>
+    <associate|eq 20.803.248|<tuple|20.858|?>>
+    <associate|eq 20.804.248|<tuple|20.859|?>>
+    <associate|eq 20.805.248|<tuple|20.860|?>>
+    <associate|eq 20.806.248|<tuple|20.861|?>>
+    <associate|eq 20.807.248|<tuple|20.862|?>>
+    <associate|eq 20.808.248|<tuple|20.863|?>>
     <associate|eq 20.81.200|<tuple|20.102|?>>
-    <associate|eq 20.810.248|<tuple|20.863|?>>
-    <associate|eq 20.811.248|<tuple|20.864|?>>
-    <associate|eq 20.813.248|<tuple|20.865|?>>
-    <associate|eq 20.814.248|<tuple|20.866|?>>
-    <associate|eq 20.815.248|<tuple|20.867|?>>
-    <associate|eq 20.816.248|<tuple|20.868|?>>
-    <associate|eq 20.817.249|<tuple|20.869|?>>
-    <associate|eq 20.818.249|<tuple|20.870|?>>
-    <associate|eq 20.819.249|<tuple|20.871|?>>
+    <associate|eq 20.810.248|<tuple|20.865|?>>
+    <associate|eq 20.811.248|<tuple|20.866|?>>
+    <associate|eq 20.813.248|<tuple|20.867|?>>
+    <associate|eq 20.814.248|<tuple|20.868|?>>
+    <associate|eq 20.815.248|<tuple|20.869|?>>
+    <associate|eq 20.816.248|<tuple|20.870|?>>
+    <associate|eq 20.817.249|<tuple|20.871|?>>
+    <associate|eq 20.818.249|<tuple|20.872|?>>
+    <associate|eq 20.819.249|<tuple|20.873|?>>
     <associate|eq 20.82.200|<tuple|20.103|?>>
-    <associate|eq 20.820.249|<tuple|20.872|?>>
-    <associate|eq 20.821.249|<tuple|20.873|?>>
-    <associate|eq 20.822.249|<tuple|20.874|?>>
+    <associate|eq 20.820.249|<tuple|20.874|?>>
+    <associate|eq 20.821.249|<tuple|20.875|?>>
+    <associate|eq 20.822.249|<tuple|20.876|?>>
     <associate|eq 20.83.200|<tuple|20.104|?>>
     <associate|eq 20.84.200|<tuple|20.105|?>>
     <associate|eq 20.85.200|<tuple|20.106|?>>
