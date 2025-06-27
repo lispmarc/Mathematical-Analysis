@@ -15512,11 +15512,12 @@
       converges in ><around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>
     </equation*>
 
-    Further if <math|><math|<around*|{|z<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
-    converges then\ 
+    Further if <math|<around*|{|Re<around*|(|z<rsub|n>|)>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>,<around*|{|Img<around*|(|z<rsub|n>|)>|}><rsub|n\<in\><around*|{|k,\<ldots\>\<infty\>|}>>>
+    converges [or equivalently \ <math|><math|<around*|{|z<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
+    converges] then we have that\ 
 
     <\equation*>
-      <below|lim|n\<rightarrow\>\<infty\>>z<rsub|n>=<below|lim|n\<rightarrow\>\<infty\>>Re<around*|(|z<rsub|n>|)>+<below|lim|n\<rightarrow\>\<infty\>>Img<around*|(|z<rsub|n>|)>
+      <below|lim|n\<rightarrow\>\<infty\>>z<rsub|n>=<below|lim|n\<rightarrow\>\<infty\>>Re<around*|(|z<rsub|n>|)>+i\<cdot\><below|lim|n\<rightarrow\>\<infty\>>Img<around*|(|z<rsub|n>|)>
     </equation*>
   </theorem>
 
@@ -15547,11 +15548,7 @@
       proving that <math|<around*|{|Re<around*|(|z<rsub|n>|)>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
       converges to <math|Re<around*|(|x|)>> and
       <math|<around*|{|Img<around*|(|z<rsub|n>|)>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
-      converges to <math|Img<around*|(|z|)>>, Hence\ 
-
-      <\equation*>
-        <below|lim|n\<rightarrow\>\<infty\>>z<rsub|n>=<below|lim|n\<rightarrow\>\<infty\>>Re<around*|(|z<rsub|n>|)>+<below|lim|n\<rightarrow\>\<infty\>>Img<around*|(|z<rsub|n>|)>
-      </equation*>
+      converges to <math|Img<around*|(|z|)>>.\ 
 
       <item*|<math|\<Leftarrow\>>>As <math|<around*|{|Re<around*|(|z<rsub|n>|)>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
       and <math|<around*|{|Img<around*|(|z<rsub|n>|)>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
@@ -15572,8 +15569,14 @@
       </equation*>
 
       proving that <math|><math|<around*|{|z<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
-      converges to <math|z>.
+      converges to <math|z>. Further
+
+      <\equation*>
+        <below|lim|n\<rightarrow\>\<infty\>>z<rsub|n>=<below|z=x+i\<cdot\>y=<below|lim|n\<rightarrow\>\<infty\>>Re<around*|(|z<rsub|n>|)>+i\<cdot\><below|lim|n\<rightarrow\>\<infty\>>|>Img<around*|(|z<rsub|n>|)>
+      </equation*>
     </description>
+
+    \;
   </proof>
 
   <\theorem>
@@ -22216,7 +22219,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|13>
-    <associate|page-first|515>
+    <associate|page-first|?>
     <associate|page-medium|papyrus>
     <associate|par-first|0tab>
     <associate|section-nr|0>
