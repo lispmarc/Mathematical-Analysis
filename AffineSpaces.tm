@@ -69,10 +69,11 @@
 
   <\definition>
     <label|affine space line and segment>Let
-    <math|<around*|\<langle\>|A<rsup|n>,V|\<rangle\>>> be a affine space,
-    <math|O\<in\>A<rsup|n>>, <math|<wide|v|\<vect\>>\<in\>V> then a
-    <with|font-series|bold|line <math|l> with origin O and tangent vector
-    <math|<wide|v |\<vect\>>>> is the map
+    <math|<around*|\<langle\>|A<rsup|n>,V|\<rangle\>>> be a real affine space
+    of dimension <math|n>, <math|O\<in\>A<rsup|n>>,
+    <math|<wide|v|\<vect\>>\<in\>V> then a <with|font-series|bold|line
+    <math|l> with origin O and tangent vector <math|<wide|v |\<vect\>>>> is
+    the map
 
     <\equation*>
       l:\<bbb-R\>\<rightarrow\>A<rsup|n><text| defined by
@@ -90,7 +91,8 @@
 
   <\theorem>
     <label|affine space zero vector>Let <math|n\<in\>\<bbb-N\><infix-and><around*|\<langle\>|A<rsup|n>,V|\<rangle\>>>
-    a affine space then <math|\<forall\>P\<in\>A<rsup|n>> we have that
+    a real affine space of dimension <math|n> then
+    <math|\<forall\>P\<in\>A<rsup|n>> we have that
     <math|P\<ominus\>P=<wide|0|\<vect\>>> where <math|<wide|0|\<vect\>>> is
     the neutral element in <math|V>.
   </theorem>
@@ -108,10 +110,11 @@
 
   <\theorem>
     <label|affine space P-Q=-(Q-P)>Let <math|n\<in\>\<bbb-N\>,<around*|\<langle\>|A<rsup|n>,V|\<rangle\>>>
-    a affine space and <math|P,Q\<in\>\<cal-A\><rsup|n>> then
-    <math|<around*|(|P\<ominus\>Q|)>=-<around*|(|Q\<ominus\>P|)>> where
-    <math|-<around*|(|Q\<ominus\>P|)>> is the additive inverse of the vector
-    <math|Q\<ominus\>P>.
+    a real affine space of dimension <math|n> and
+    <math|P,Q\<in\>\<cal-A\><rsup|n>> then
+    <math|<rigid|<around*|(|P\<ominus\>Q|)>=-<around*|(|Q\<ominus\>P|)>>>
+    where <math|-<around*|(|Q\<ominus\>P|)>> is the additive inverse of the
+    vector <math|Q\<ominus\>P>.
   </theorem>
 
   <\proof>
@@ -123,7 +126,7 @@
   <\theorem>
     <label|affine space associativity>Let
     <math|n\<in\>\<bbb-N\>,<around*|\<langle\>|A<rsup|n>,V|\<rangle\>>> a
-    affine space, <math|P\<in\>A<rsup|n>> and
+    real affine space of dimension <math|n>, <math|P\<in\>A<rsup|n>> and
     <math|<wide|v|\<vect\>>,<wide|u|\<vect\>>\<in\>V> then we have\ 
 
     <\equation*>
@@ -151,8 +154,9 @@
   <\theorem>
     <label|affine space P-Q=(P+u)-(Q+u)>Let
     <math|n\<in\>\<bbb-N\>,<around*|\<langle\>|A<rsup|n>,V|\<rangle\>>> a
-    affine space, <math|P,Q\<in\>\<cal-A\><rsup|n>> and
-    <math|<wide|v|\<vect\>>\<in\>V> then\ 
+    real affine space of dimension <math|n>,
+    <math|P,Q\<in\>\<cal-A\><rsup|n>> and <math|<wide|v|\<vect\>>\<in\>V>
+    then\ 
 
     <\equation*>
       P\<ominus\>Q=<around*|(|P\<oplus\><wide|v|\<vect\>>|)>\<ominus\><around*|(|Q\<oplus\><wide|v|\<vect\>>|)>
@@ -172,9 +176,97 @@
     </eqnarray*>
   </proof>
 
-  \;
+  <\definition>
+    <label|affine space local coordinate system><dueto|Local Coordinate
+    System>Let <math|<around*|\<langle\>|A<rsup|n>,V|\<rangle\>>> be a real
+    affine space of dimension <math|n> then a <with|font-series|bold|local
+    coordinate system> on <math|<around*|\<langle\>|A<rsup|n>,V|\<rangle\>>>is
+    a mapping\ 
 
-  \;
+    <\equation*>
+      \<psi\>:U\<rightarrow\>\<bbb-R\><rsup|n>
+    </equation*>
+
+    where <math|U\<subseteq\>A<rsup|n>> and <math|\<psi\><around*|(|U|)>> is
+    a open set in <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<\|\|\><rsub|n>|\<rangle\>>>
+    and <math|\<psi\>> is injective. If <math|U=A<rsup|n>> then
+    <math|\<psi\>> is called a <with|font-series|bold|global coordinate
+    system> on <math|<around*|\<langle\>|A<rsup|n>,V|\<rangle\>>> Let
+    <math|i\<in\><around*|{|1,\<ldots\>,n|}>> then
+    <math|\<pi\><rsub|i>\<circ\>\<psi\>:U\<rightarrow\>\<bbb-R\>> is called
+    the <math|i>-the coordinate function of <math|\<psi\>>.
+  </definition>
+
+  We prove now that every real affine space of dimension <math|n> has a
+  <with|font-series|bold|global coordinate system>.
+
+  <\theorem>
+    Let <math|<around*|\<langle\>|A<rsup|n>,V|\<rangle\>>> be a \ a real
+    affine space of dimension <math|n>, <math|O\<in\>A<rsup|n>> the set of
+    points and <math|E=<around*|{|<wide|e<rsub|1>|\<vect\>>,\<ldots\>,<wide|e<rsub|n>|\<vect\>>|}>>
+    a basis for <math|V> the set of displacements then\ 
+
+    <\equation*>
+      \<psi\><rsub|O,E>:A<rsup|n>\<rightarrow\>\<bbb-R\><rsup|n><text|
+      defined by <math|\<psi\><rsub|O,E><around*|(|P|)>=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>
+      where ><around*|(|P\<ominus\>O|)>=<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\><wide|e<rsub|i>|\<vect\>>
+    </equation*>
+
+    is a bijection that is a <with|font-series|bold|global coordinate system>
+    on <math|<around*|\<langle\>|A<rsup|n>,V|\<rangle\>>>. We call this
+    <with|font-series|bold|global coordinate system >a
+    <with|font-series|bold|Cartesion coordinate system>
+    <with|font-series|bold|with origin <math|O> and axes
+    <math|e<rsub|1>,\<ldots\>,e<rsub|n>>>.\ 
+  </theorem>
+
+  <\note>
+    Although this theorem ensures that every real affine space of dimension
+    <math|n> has at least one global coordinate system not every local
+    coordinate system should be a Cartesion coordinate system. These local
+    coordinate systems that are not Cartesion are called
+    <with|font-series|bold|curvilinear coordinate systems>.
+  </note>
+
+  <\proof>
+    Let <math|P\<in\>A<rsup|n>> then <math|P\<ominus\>O\<in\>V> so there
+    exist by [theorem: <reference|basis finite alternative (2)>] a
+    <with|font-series|bold|unique ><math|<around*|{|x<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-R\>>
+    such that <math|<around*|(|P\<ominus\>O|)>=<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\><wide|e<rsub|i>|\<vect\>>>.
+    Hence the function\ 
+
+    <\equation*>
+      \<psi\><rsub|O,E>:A<rsup|n>\<rightarrow\>\<bbb-R\><rsup|n><text|
+      defined by <math|\<psi\><rsub|O,E><around*|(|P|)>=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>
+      where ><around*|(|P\<ominus\>O|)>=<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\><wide|e<rsub|i>|\<vect\>>
+    </equation*>
+
+    is well defined. We prove now that\ 
+
+    <\equation*>
+      \<psi\><rsub|O,E><text| is bijective>
+    </equation*>
+
+    <\description>
+      <item*|injectivity>If <math|\<psi\><rsub|O,E><around*|(|P<rsub|1>|)>=\<psi\><rsub|O,E><around*|(|P<rsub|2>|)>=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>
+      then <math|<around*|(|P<rsub|1>\<ominus\>O|)>=<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\><wide|e<rsub|i>|\<vect\>>=<around*|(|P<rsub|2>\<ominus\>O|)>>
+      and by the uniqeness in [defintion: <reference|affine space>] it
+      follows that <math|P<rsub|1>=P<rsub|2>>.
+
+      <item*|surjectivity>If <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>\<bbb-R\><rsup|n>>
+      then for <math|P=O\<oplus\><around*|(|<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\><wide|e<rsub|i>|\<vect\>>|)>>
+      we have that <math|P\<ominus\>O=<big|sum><rsub|i=1><rsup|n>x<rsub|i>\<cdot\><wide|e<rsub|i>|\<vect\>>>
+      so that <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>=\<psi\><rsub|O,E><around*|(|P|)>>
+      proving surjectivity
+    </description>
+
+    Because of <math|surjectivity> we have that
+    <math|\<psi\><rsub|O,P><around*|(|A<rsup|n>|)>=\<bbb-R\><rsup|n>> a open
+    set in <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<shortmid\>\<\|\|\><rsub|n>|\<rangle\>>>.
+    So by [definition: <reference|affine space local coordinate system>]
+    <math|\<psi\><rsub|O,E>> is a global coordinate system on
+    <math|<around*|\<langle\>|A<rsup|n>,V|\<rangle\>>>.
+  </proof>
 </body>
 
 <\initial>
@@ -194,9 +286,11 @@
     <associate|affine space P-Q=-(Q-P)|<tuple|21.5|?>>
     <associate|affine space associativity|<tuple|21.6|?>>
     <associate|affine space line and segment|<tuple|21.3|?>>
+    <associate|affine space local coordinate system|<tuple|21.8|?>>
     <associate|affine space zero vector|<tuple|21.4|?>>
     <associate|auto-1|<tuple|21|?>>
     <associate|auto-2|<tuple|21.1|?>>
+    <associate|eq 21.1.1|<tuple|21.1|?>>
   </collection>
 </references>
 

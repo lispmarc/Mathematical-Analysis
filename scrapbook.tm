@@ -6694,6 +6694,29 @@
       <below|lim|i\<rightarrow\>\<infty\>><around*|(|x<rsub|i>|)><rsup|p>=<around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i>|)><rsup|p>
     </equation*>
   </proof>
+
+  \;
+
+  \;
+
+  <\note>
+    In contrast with the definition of <math|\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>>
+    <math|f\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    can in principle atain the value <math|\<infty\>>.
+  </note>
+
+  <\note>
+    If <math|f\<in\>\<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>> then
+    <math|f\<in\>\<cal-S\><around*|[|X|]>>,
+    <math|f<around*|(|X|)>\<subset\><around*|[|0,\<infty\>|[>> and
+    <math|f\<in\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    so that <math|<rigid|f\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,\<bbb-R\>|]>>>
+    which proves that\ 
+
+    <\equation*>
+      \<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>\<subseteq\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-R\>|]>\<subseteq\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+    </equation*>
+  </note>
 </body>
 
 <\initial>
@@ -6911,7 +6934,7 @@
     <associate|eq 20.581.240|<tuple|177|62>>
     <associate|eq 20.582.240|<tuple|178|62>>
     <associate|eq 20.583.240|<tuple|179|62>>
-    <associate|eq 20.637.246|<tuple|219|?>>
+    <associate|eq 20.637.246|<tuple|219|73>>
     <associate|eq 20.650.246|<tuple|180|63>>
     <associate|eq 20.651.246|<tuple|181|63>>
     <associate|eq 20.652.246|<tuple|182|63>>
@@ -6952,7 +6975,7 @@
     <associate|lemma 20.209.204|<tuple|44|54>>
     <associate|lemma 20.211.204|<tuple|46|56>>
     <associate|lemma 20.470.246|<tuple|50|63>>
-    <associate|lemma 20.477.246|<tuple|53|?>>
+    <associate|lemma 20.477.246|<tuple|53|72>>
     <associate|measure length function is a pre-measure|<tuple|47|56>>
     <associate|non negative function as limit of simple
     functions|<tuple|51|66>>

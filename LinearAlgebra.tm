@@ -7513,7 +7513,7 @@
     finite set then
 
     <\equation*>
-      B<text| is a basis of ><around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>
+      E<text| is a basis of ><around*|\<langle\>|V,+,\<cdot\>|\<rangle\>>
     </equation*>
 
     <\equation*>
@@ -24998,7 +24998,7 @@
   <\collection>
     <associate|chapter-nr|10>
     <associate|item-nr|4>
-    <associate|page-first|341>
+    <associate|page-first|?>
     <associate|page-medium|papyrus>
     <associate|par-first|0tab>
     <associate|section-nr|5>
@@ -25468,7 +25468,6 @@
     <associate|finite distinct set index bijection|<tuple|11.90|?>>
     <associate|finite distinct set properties|<tuple|11.83|?>>
     <associate|lemma 11.216.205|<tuple|11.228|?>>
-    <associate|lemma 11.49.224|<tuple|11.49|?>>
     <associate|linear (in)dependency properties (1)|<tuple|11.121|?>>
     <associate|linear Steinitz (1)|<tuple|11.123|?>>
     <associate|linear Steinitz (2)|<tuple|11.124|?>>
