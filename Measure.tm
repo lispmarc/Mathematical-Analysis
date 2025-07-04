@@ -45673,6 +45673,109 @@
     </enumerate>
   </proof>
 
+  For the Riemann Integral on a Banach space [see definition:
+  <reference|riemann integral>] we have the Fundamental Theorem of Analysis
+  [see theorem: <reference|diff fundamental theorem of calculus (2)>]. \ This
+  states that if a function <math|F:<around*|[|a,b|]>\<rightarrow\>X> [where
+  <math|X> is a Banach space] has a derivate <math|F<rprime|'>> on
+  <math|<around*|[|a,b|]>> then <math|<big|int><rsub|a><rsup|b>F<rprime|'>=F<around*|(|b|)>-F<around*|(|a|)>>.
+  If we take the usual notation of <math|F<rprime|'>=<frac|d F|d x>> for the
+  derivative and <math|<big|int><rsub|a><rsup|b>f d x> the Riemann integral
+  this becomes <math|>
+
+  <\equation*>
+    l<around*|(|<around*|[|F<around*|(|a|)>-F<around*|(|b|)>|]>|)>=F<around*|(|b|)>-F<around*|(|a|)>=<big|int><rsub|a><rsup|b><frac|d
+    F|d x> d x
+  </equation*>
+
+  where <math|l<around*|(|<around*|[|F<around*|(|a|)>-F<around*|(|b|)>|]>|)>>
+  is the measure of the interval <math|<around*|[|F<around*|(|a|)>-F<around*|(|b|)>|]>>.
+  Compare this with the Radon-Nikodym theorem which says that for measures
+  <math|v,\<mu\>> with <math|\<nu\>\<ll\>\<mu\>> there exist a integrable
+  function <math|h> such that\ 
+
+  <\equation*>
+    \<nu\><around*|(|A|)>=<big|int><rsub|A>h d\<mu\>
+  </equation*>
+
+  Hence it seems logical to consider <math|f> as a kind of derivate and write
+  <math|f> as follows <math|f=<frac|d \<nu\>|d \<mu\>>> so that we have\ 
+
+  <\equation*>
+    \<nu\><around*|(|A|)>=<big|int><rsub|A><frac|d \<nu\>|d \<mu\>>d\<mu\>
+  </equation*>
+
+  This motivates the definition of the Radon-Nikodym derivative.
+
+  <\definition>
+    <label|Radon-Nikodym derivative>Let <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>>
+    be a measurable space, <math|\<mu\>> a <math|\<sigma\>>-finite measure on
+    <math|\<cal-A\>> then we have the following definitions:
+
+    <\enumerate>
+      <item>If <math|\<nu\>> is a <math|\<sigma\>>-finite measure on
+      <math|\<cal-A\>> then a Radon-Nikodym derivative of <math|\<nu\>> with
+      repsect to <math|\<mu\>> is a <math|f\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,\<bbb-R\>|]>>
+      such that <math|\<forall\>\<in\>\<cal-A\>> we have
+
+      <\equation*>
+        \<nu\><around*|(|A|)>=<big|int><rsub|A><rsup|+>f d\<mu\>
+      </equation*>
+
+      <item>If <math|\<nu\>> is a finite signed measure on <math|\<cal-A\>>
+      then a Radon-Nikodym derivative of <math|\<nu\>> with repect to
+      <math|\<mu\>> is a <math|f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-R\>|]>>
+      such that <math|\<forall\>A\<in\>\<cal-A\>> we have
+
+      <\equation*>
+        \<nu\><around*|(|A|)>=<big|int><rsub|A>f d\<mu\>
+      </equation*>
+
+      <item>If <math|\<nu\>> is a complex measure on <math|\<cal-A\>> then a
+      Radon-Nikodym derivative of <math|\<nu\>> with repect to <math|\<mu\>>
+      is a <math|f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>>
+      such that <math|\<forall\>A\<in\>\<cal-A\>> we have
+
+      <\equation*>
+        \<nu\><around*|(|A|)>=<big|int><rsup|\<bbb-C\>><rsub|A>f d\<mu\>
+      </equation*>
+    </enumerate>
+
+    <\note>
+      Using [theorems: <reference|Radon-Nikodym Theorem>,
+      <reference|Radon-Nikodym signed/complex>] it follows that if
+      <math|\<nu\>\<ll\>\<mu\>> then there exist a Radon-Nikodym derivative
+      of <math|\<nu\>> with respect to <math|\<mu\>>.
+    </note>
+
+    <\note>
+      A Radon-Nikodym derivative of <math|\<nu\>> with respect to
+      <math|\<mu\>> is noted by <math|<frac|d \<nu\>|d\<mu\>>>. Be aware that
+      this notation is misleading as it suggest that there exist only on
+      Radon-Nikodym while [theorems: <reference|Radon-Nikodym Theorem>,
+      <reference|Radon-Nikodym signed/complex>] ensure existance but not
+      uniqueness. The best way to think of this notation is that
+      <math|f=<frac|d \<nu\>|d \<mu\>>> is the same as saying that <math|f>
+      is a Radon-Nikodym derivative so that\ 
+
+      <\equation*>
+        \<forall\>A\<in\>\<cal-A\><text| we have
+        >\<nu\><around*|(|A|)>=<choice|<tformat|<table|<row|<cell|<big|int><rsup|+><rsub|A>f
+        d\<mu\><text| if >\<nu\><text| is a >\<sigma\><text|-finite
+        measure>>>|<row|<cell|<big|int><rsub|A>f d\<mu\><text| if
+        >\<nu\><text| is a >\<sigma\><text|-finite
+        measure>>>|<row|<cell|<big|int><rsup|\<bbb-C\>><rsub|A>f
+        d\<mu\><text| if >\<nu\><text| is a complex measure>>>>>>
+      </equation*>
+
+      Using this interpretation we have that if <math|f=<frac|d \<nu\>|d
+      \<mu\>>> and <math|g=<frac|d \<nu\>|d\<mu\>>> then using [lemmas:
+      <reference|lemma 20.559.249>, <reference|lemma 20.594.271> and
+      <reference|lemma 20.595.271>] we have that <math|f=g>
+      <math|\<mu\>>-a.e.
+    </note>
+  </definition>
+
   \;
 </body>
 
@@ -45736,6 +45839,7 @@
     equivalence|<tuple|20.593|?>>
     <associate|Radon-Nikodym absolute continuity trivial
     example|<tuple|20.583|?>>
+    <associate|Radon-Nikodym derivative|<tuple|20.597|?>>
     <associate|Radon-Nikodym integral example|<tuple|20.584|?>>
     <associate|Radon-Nikodym signed/complex|<tuple|20.596|?>>
     <associate|almost everywhere|<tuple|20.364|?>>
@@ -45935,7 +46039,6 @@
     <associate|corollary 20.111.218|<tuple|20.119|?>>
     <associate|denumerable union properties|<tuple|20.120|?>>
     <associate|eq 15.81.439|<tuple|20.395|?>>
-    <associate|eq 17.764.043|<tuple|20.916|?>>
     <associate|eq 18.10.021|<tuple|20.86|?>>
     <associate|eq 18.11.021|<tuple|20.87|?>>
     <associate|eq 18.12.021|<tuple|20.88|?>>
@@ -45960,12 +46063,6 @@
     <associate|eq 19.10.039|<tuple|20.64|?>>
     <associate|eq 19.11.039|<tuple|20.65|?>>
     <associate|eq 19.759.043|<tuple|20.911|?>>
-    <associate|eq 19.761.043|<tuple|20.913|?>>
-    <associate|eq 19.762.043|<tuple|20.914|?>>
-    <associate|eq 19.763.403|<tuple|20.915|?>>
-    <associate|eq 19.765.043|<tuple|20.917|?>>
-    <associate|eq 19.766.043|<tuple|20.918|?>>
-    <associate|eq 19.767.043|<tuple|20.919|?>>
     <associate|eq 20.1.155|<tuple|20.1|?>>
     <associate|eq 20.10.155|<tuple|20.10|?>>
     <associate|eq 20.100.200|<tuple|20.145|?>>
@@ -46942,7 +47039,6 @@
     y\<less\>\<gtr\>@@|<tuple|20.11|?>>
     <associate|figure 20.6.234|<tuple|20.6|?>>
     <associate|figure 20.7.234|<tuple|20.7|?>>
-    <associate|label 19.363.274|<tuple|20.594|?>>
     <associate|label 20.147.200|<tuple|20.190|?>>
     <associate|label 20.252.221|<tuple|20.279|?>>
     <associate|lemma 20.102.202|<tuple|20.114|?>>
@@ -47005,7 +47101,6 @@
     <associate|lemma 20.557.249|<tuple|20.587|?>>
     <associate|lemma 20.558.249|<tuple|20.588|?>>
     <associate|lemma 20.559.249|<tuple|20.589|?>>
-    <associate|lemma 20.591.271|<tuple|20.595|?>>
     <associate|lemma 20.594.271|<tuple|20.594|?>>
     <associate|lemma 20.595.271|<tuple|20.595|?>>
     <associate|lemma 20.78.156|<tuple|20.86|?>>
