@@ -268,7 +268,7 @@
     is well defined. We prove now that\ 
 
     <\equation*>
-      x<text| is bijective>
+      <around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)><text| is bijective>
     </equation*>
 
     <\description>
@@ -297,7 +297,7 @@
     </description>
 
     Because of <math|surjectivity> we have that
-    <math|\<psi\><rsub|O,P><around*|(|\<bbb-A\><rsup|n>|)>=\<bbb-R\><rsup|n>>
+    <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)><around*|(|\<bbb-A\><rsup|n>|)>=\<bbb-R\><rsup|n>>
     a open set in <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,\<shortmid\>\<\|\|\><rsub|n>|\<rangle\>>>.
     So by [definition: <reference|affine space local coordinate system>]
     <math|\<psi\><rsub|O,E>> is a global coordinate system on
@@ -313,7 +313,27 @@
     be a real affine space of dimension <math|n> and
     <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>>,
     <math|E<rprime|'>=<around*|{|e<rprime|'><rsub|1>,\<ldots\>,e<rprime|'><rsub|n>|}>>
-    are two bases of <math|V> then <math|>there exist\ 
+    are two bases of <math|V> and\ 
+
+    <\equation*>
+      x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>:\<bbb-A\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|n><text|
+      a Cartesian coodinate system with origin
+      <math|O\<in\>\<bbb-A\><rsup|n><text| and axes >E>>
+    </equation*>
+
+    <\equation*>
+      y=<around*|(|y<rsub|1>,\<ldots\>,y<rsub|n>|)>:\<bbb-A\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|n><text|
+      a Cartesian coodinate system with origin
+      <math|O<rprime|'>\<in\>\<bbb-A\><rsup|n><text| and axes >E<rprime|'>>>
+    </equation*>
+
+    then by\ 
+
+    then we have\ 
+
+    <\enumerate>
+      <item><math|>
+    </enumerate>
   </theorem>
 
   Next we introduce the concept of transformations that preserves the affine
