@@ -6717,6 +6717,37 @@
       \<cal-S\><rsup|+><around*|[|X,\<cal-A\>|]>\<subseteq\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-R\>|]>\<subseteq\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
     </equation*>
   </note>
+
+  \;
+
+  so that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,m|}>>
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|<around*|(|f<rsub|2><around*|(|\<psi\><around*|(|P|)>|)>|)><rsub|i>-<around*|(|f<rsub|2><around*|(|\<psi\><around*|(|P|)>|)>|)><rsub|i>>|<cell|=>|<cell|<around*|(|f<rsub|2><around*|(|\<psi\><around*|(|f<rsub|1><rsup|-1><around*|(|p<rsub|1>,\<ldots\>,p<rsub|n>|)>|)>|)>|)><rsub|i>-<around*|(|f<rsub|2><around*|(|\<psi\><around*|(|f<rsub|1><rsup|-1><around*|(|q<rsub|1>,\<ldots\>,q<rsub|n>|)>|)>|)>|)><rsub|i>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|f<rsub|2>\<circ\>\<psi\>\<circ\>f<rsub|1><rsup|-1>|)><around*|(|p<rsub|1>,\<ldots\>,p<rsub|n>|)>|)><rsub|i>-<around*|(|<around*|(|f<rsub|2>\<circ\>\<psi\>\<circ\>f<rsub|1><rsup|-1>|)><around*|(|q<rsub|1>,\<ldots\>,q<rsub|n>|)>|)><rsub|i>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+    <reference|eq 21.23.173>]>>>|<cell|c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\>p<rsub|j>-<around*|(|c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\>q<rsub|j>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\>p<rsub|j>-<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\>q<rsub|j>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|p<rsub|j>-q<rsub|j>|)>>>>>
+  </eqnarray*>
+
+  hence\ 
+
+  <\equation>
+    <label|eq 21.27.273>\<forall\>i\<in\><around*|{|1,\<ldots\>,m|}><text| we
+    have ><around*|(|f<rsub|2><around*|(|\<psi\><around*|(|P|)>|)>|)><rsub|i>-<around*|(|f<rsub|2><around*|(|\<psi\><around*|(|P|)>|)>|)><rsub|i>=<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|p<rsub|j>-q<rsub|j>|)>
+  </equation>
+
+  \;
+
+  so that\ 
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|<around*|(|f<rsub|2><around*|(|\<psi\><around*|(|P\<oplus\><rsub|1><wide|v|\<vect\>>|)>|)>-f<rsub|2><around*|(|\<psi\><around*|(|Q\<oplus\><rsub|1><wide|v|\<vect\>>|)>|)>|)><rsub|i>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|f<rsub|2><around*|(|\<psi\><around*|(|P\<oplus\><rsub|1><wide|v|\<vect\>>|)>|)>|)><rsub|i>-<around*|(|f<rsub|2><around*|(|\<psi\><around*|(|Q\<oplus\><rsub|1><wide|v|\<vect\>>|)>|)>|)><rsub|i>>|<cell|=>|<cell|>>|<row|<cell|c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|v<rsub|i>+p<rsub|i>|)>-<around*|(|c<rsub|i>+<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|v<rsub|i>+q<rsub|i>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|v<rsub|i>+p<rsub|i>|)>-<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|v<rsub|i>+q<rsub|i>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|j=1><rsup|n><around*|(|M<rsub|i,j>\<cdot\><around*|(|v<rsub|i>+p<rsub|i>|)>-M<rsub|i,j>\<cdot\><around*|(|v<rsub|i>+q<rsub|i>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|j=1><rsup|n>M<rsub|i,j>\<cdot\><around*|(|p<rsub|i>-q<rsub|i>|)>>|<cell|<below|=|<text|[eq:
+    <reference|eq 21.27.273>]>>>|<cell|>>|<row|<cell|<around*|(|f<rsub|2><around*|(|\<psi\><around*|(|P|)>|)>|)><rsub|i>-<around*|(|f<rsub|2><around*|(|\<psi\><around*|(|P|)>|)>|)><rsub|i>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|f<rsub|2><around*|(|\<psi\><around*|(|P|)>|)>-f<rsub|2><around*|(|\<psi\><around*|(|P|)>|)>|)><rsub|i>>|<cell|>|<cell|>>>>
+  </eqnarray*>
+
+  Hence we have\ 
+
+  <\equation>
+    <label|eq 21.30.273>f<rsub|2><around*|(|\<psi\><around*|(|P\<oplus\><rsub|1><wide|v|\<vect\>>|)>|)>-f<rsub|2><around*|(|\<psi\><around*|(|Q\<oplus\><rsub|1><wide|v|\<vect\>>|)>|)>=f<rsub|2><around*|(|\<psi\><around*|(|P|)>|)>-f<rsub|2><around*|(|\<psi\><around*|(|P|)>|)>
+  </equation>
 </body>
 
 <\initial>
@@ -6955,6 +6986,8 @@
     <associate|eq 20.667.246|<tuple|197|65>>
     <associate|eq 20.669.247|<tuple|198|65>>
     <associate|eq 20.670.247|<tuple|199|66>>
+    <associate|eq 21.27.273|<tuple|220|?>>
+    <associate|eq 21.30.273|<tuple|221|?>>
     <associate|figure 20.6.234|<tuple|3|72>>
     <associate|lemma 14.360.158|<tuple|10|10>>
     <associate|lemma 14.364.159|<tuple|14|13>>

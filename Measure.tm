@@ -11110,98 +11110,109 @@
 
   We introduce now the concept of a measurable supspace.
 
-  \;
-
   <\theorem>
     <label|measure sub measure space>Let <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>>
-    be a measurable space and <math|A\<in\>\<cal-A\>> then for
-    <math|\<cal-A\><rsub|\|A>> defined by
+    be a measurable space and <math|B\<subseteq\>X> then
+    <math|\<cal-A\><rsub|\|B>> defined by
 
     <\equation*>
-      \<cal-A\><rsub|\|A>=<around*|{|B\<in\>\<cal-A\>\|B\<subseteq\>A|}>\<subseteq\>\<cal-A\>
+      \<cal-A\><rsub|\|B>=<around*|{|B<big|cap>A\|A\<in\>\<cal-A\>|}>
     </equation*>
 
-    we have
+    is a <math|\<sigma\>>-algebra on <math|B> called the
+    <with|font-series|bold|trace of <math|\<cal-A\>> in <math|>B>. If
+    additional <math|B\<in\>\<cal-A\>> then we have that\ 
 
-    <\enumerate>
-      <item><math|\<cal-A\><rsub|\|A>=<around*|{|A<big|cap>B\|B\<in\>\<cal-A\>|}>>
+    <\equation*>
+      \<cal-A\><rsub|\|B>\<subseteq\>\<cal-A\>
+    </equation*>
 
-      <item><math|\<cal-A\><rsub|\|A><text| is a >\<sigma\>>-algebra on
-      <math|A> making <math|<around*|\<langle\>|A,\<cal-A\><rsub|\|A>|\<rangle\>>>
-      a measurable space
-    </enumerate>
+    and\ 
 
-    A measurable subspace of <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>>
-    is every measurable space of the form
-    <math|<around*|\<langle\>|A,\<cal-A\><rsub|\|A>|\<rangle\>>> where
-    <math|A\<in\>\<cal-A\>>.
+    <\equation*>
+      \<cal-A\><rsub|\|B>=<around*|{|A\<in\>\<cal-A\>\|A\<subseteq\>B|}>
+    </equation*>
 
     <\note>
-      If <math|A=X> then we have <math|\<cal-A\><rsub|\|X>=<around*|{|X<big|cap>B\|B\<in\>\<cal-A\>|}>=<around*|{|B\|B\<in\>\<cal-A\>|}>=\<cal-A\>>
+      If <math|B=X> then we have <math|\<cal-A\><rsub|\|X>=<around*|{|X<big|cap>A\|A\<in\>\<cal-A\>|}>=<around*|{|A\|A\<in\>\<cal-A\>|}>=\<cal-A\>>
       so that we have <math|<around*|\<langle\>|X,\<cal-A\><rsub|\|X>|\<rangle\>>=<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>>.
     </note>
   </theorem>
 
   <\proof>
-    \ 
+    As <math|X\<in\>\<cal-A\>> and <math|B=B<big|cap>X> it follows that\ 
 
-    <\enumerate>
-      <item>If <math|B\<in\>\<cal-A\><rsub|\|A>> then we have
-      <math|B\<in\>\<cal-A\>> and <math|B\<subseteq\>A\<Rightarrow\>B=B<big|cap>A>
-      so that <math|B\<in\><around*|{|A<big|cap>B\|B\<in\>\<cal-A\>|}>> which
-      proves that
+    <\equation*>
+      B\<in\>\<cal-A\><rsub|\|B>
+    </equation*>
 
-      <\equation*>
-        \<cal-A\><rsub|\|A>\<subseteq\><around*|{|A<big|cap>B\|B\<in\>\<cal-A\>|}>
-      </equation*>
+    Let <math|C\<in\>\<cal-A\><rsub|\|B>> then there exist a
+    <math|C<rprime|'>\<in\>\<cal-A\>> such that
+    <math|C=B<big|cap>C<rprime|'>>. As <math|\<cal-A\>> is a
+    <math|\<sigma\>>-algebra we have that
+    <math|X\\C<rprime|'>\<in\>\<cal-A\>>, as further
 
-      Further if <math|B\<in\><around*|{|A<big|cap>B\|B\<in\>\<cal-A\>|}>>
-      then there exist a <math|B<rprime|'>\<in\>\<cal-A\>> such that
-      <math|B=A<big|cap>B<rprime|'>>. As <math|A\<in\>\<cal-A\>> we have that
-      <math|B=A<big|cap>B<rprime|'>\<in\>\<cal-A\>>, further
-      <math|B=A<big|cap>B<rprime|'>\<subseteq\>A>, hence we have that
-      <math|B\<in\>\<cal-A\><rsub|\|A>> proving that
-
-      <\equation*>
-        <around*|{|A<big|cap>B\|B\<in\>\<cal-A\>|}>\<subseteq\>\<cal-A\><rsub|\|A>
-      </equation*>
-
-      <item>As <math|A\<in\>A> and <math|A\<subseteq\>A> we have that\ 
-
-      <\equation*>
-        A\<in\>\<cal-A\><rsub|\|A>
-      </equation*>
-
-      Let <math|C\<in\>\<cal-A\><rsub|\|A>> then <math|C\<in\>\<cal-A\>> and
-      <math|C\<subseteq\>A>. As also <math|A\<in\>\<cal-A\>> it follows from
-      [theorems: <reference|measure sigma algebra equivalences>(2)] that
-      <math|A<big|cap><around*|(|X\\C|)>\<in\>\<cal-A\>>. Further
-      <math|A<big|cap><around*|(|X\\C|)>\<equallim\><rsub|<text|[theorem:
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|B\\C>|<cell|=>|<cell|B\\<around*|(|B<big|cap>C<rprime|'>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|class set difference and union ,
+      intersection>]>>>|<cell|<around*|(|B\\B|)><big|cup><around*|(|B\\C<rprime|'>|)>>>|<row|<cell|>|<cell|=>|<cell|B\\C<rprime|'>>>|<row|<cell|>|<cell|\<equallim\><rsub|B\<subseteq\>X>>|<cell|<around*|(|B<big|cap>X|)>\\C<rprime|'>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
       <reference|class intersection, union,
-      inclusion>]>><around*|(|A<big|cap>X|)>\\C\<equallim\><rsub|A\<subseteq\>X>A\\C>
-      so that <math|A\\C\<in\>\<cal-A\>> which, as <math|A\\C\<subseteq\>C>
-      proves that <math|A\\C\<in\>\<cal-A\><rsub|\|A>>. Hence we have proved
-      that\ 
+      inclusion>]>>>|<cell|B<big|cap><around*|(|X\\C<rprime|'>|)>>>>>
+    </eqnarray*>
 
-      <\equation*>
-        \<forall\>C\<in\>\<cal-A\><rsub|\|A><text| we have
-        >A\\C\<in\>\<cal-A\><rsub|\|A>
-      </equation*>
+    which proves that <math|B\\C\<in\>\<cal-A\><rsub|\|B>>. Hence we have
+    that\ 
 
-      Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><rsub|\|A>>
-      then <math|\<forall\>i\<in\>\<bbb-N\>> we have
-      <math|A<rsub|i>\<in\>\<cal-A\>> and <math|A<rsub|i>\<subseteq\>A> so it
-      follows that <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<subseteq\>A>
-      and, as <math|\<cal-A\>> is a <math|\<sigma\>>-algebra, that
-      <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>>. Hence
-      <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\><rsub|\|A>>
-      in other words\ 
+    <\equation*>
+      \<forall\>C\<in\>\<cal-A\><rsub|\|B><text| we have that
+      >B\\C\<in\>\<cal-A\><rsub|\|B>
+    </equation*>
 
-      <\equation*>
-        \<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><rsub|\|A><text|
-        we have ><big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\><rsub|\|A>
-      </equation*>
-    </enumerate>
+    Let <math|<around*|{|C<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><rsub|\|B>>
+    then there exist a <math|<around*|{|C<rprime|'><rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
+    such that <math|\<forall\>i\<in\>\<bbb-N\>>
+    <math|C<rsub|i>=B<big|cap>C<rsub|i><rprime|'>>. As <math|\<cal-A\>> is a
+    <math|\<sigma\>>-algebra we have that
+    <math|<big|cup><rsub|i\<in\>\<bbb-N\>>C<rprime|'><rsub|i>\<in\>\<cal-A\>>.
+    Now <math|<big|cup><rsub|i\<in\>\<bbb-N\>>C<rsub|i>=<big|cup><rsub|i\<in\>\<bbb-N\>><around*|(|B<big|cap>C<rprime|'><rsub|i>|)><below|=|<text|[theorem:
+    <reference|family distributivity>]>>B<big|cap><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>C<rprime|'><rsub|i>|)>>
+    so that <math|<big|cup><rsub|i\<in\>\<bbb-N\>>C<rsub|i>\<in\>\<cal-A\><rsub|\|B>>.
+    Hence we have that\ 
+
+    <\equation*>
+      \<forall\><around*|{|C<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><rsub|\|B><text|
+      we have ><big|cup><rsub|i\<in\>\<bbb-N\>>C<rsub|i>\<in\>\<cal-A\><rsub|\|B>
+    </equation*>
+
+    So all the conditions for a <math|\<sigma\>>-algebra are satisfied which
+    allows us to conclude that\ 
+
+    <\equation*>
+      \<cal-A\><rsub|\|B><text| is a >\<sigma\><text|-algebra>
+    </equation*>
+
+    Assume now that additional <math|B\<in\>\<cal-A\>>. If
+    <math|C\<in\>\<cal-A\><rsub|\|B>> then there exist a
+    <math|C<rprime|'>\<in\>\<cal-A\>> such that
+    <math|C=B<big|cap>C<rprime|'>>, further by [theorems: <reference|measure
+    sigma algebra equivalences>, <reference|measure algebra properties>]
+    <math|B<big|cap>C<rprime|'>\<in\>\<cal-A\>> so that
+    <math|C\<in\>\<cal-A\>>. Hence we have that\ 
+
+    <\equation*>
+      \<cal-A\><rsub|\|B>\<subseteq\>\<cal-A\>
+    </equation*>
+
+    If <math|C\<in\>\<cal-A\><rsub|\|B>> then by the above
+    <math|C\<in\>\<cal-A\>> and <math|C=B<big|cap>C<rprime|'>\<subseteq\>B>
+    so that <math|C\<in\><around*|{|A\<in\>\<cal-A\>\|A\<subseteq\>B|}>>.
+    Further if <math|C\<in\><around*|{|A\<in\>\<cal-A\>\|A\<subseteq\>B|}>>
+    then <math|C\<in\>A> and <math|C\<equallim\><rsub|C\<subseteq\>B>B<big|cap>C>
+    so that <math|C\<in\>\<cal-A\><rsub|\|B>>. Hence we have\ 
+
+    <\equation*>
+      \<cal-A\><rsub|\|B>=<around*|{|A\<in\>\<cal-A\>\|A\<subseteq\>B|}>
+    </equation*>
   </proof>
 
   A special case of a <math|\<sigma\>>-algebra in the context of topological
@@ -45776,6 +45787,410 @@
     </note>
   </definition>
 
+  <section|Product measures>
+
+  In this section we examine how given a finite family of measurable spaces
+  we can define a <math|\<sigma\>>-algebra and measure on the product of
+  these spaces. The prime objective is to show how a integral on the product
+  of these spaces can be calculated based on the integrals on the measurable
+  spaces.
+
+  <subsection|Product of <math|\<sigma\>>-algebras>
+
+  Given a finite family <math|<around*|{|<around*|\<langle\>|X<rsub|i>,\<cal-A\><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+  of measurable spaces we show how a <math|\<sigma\>>-algebra can be defined
+  on <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>.
+  First we show how given a family <math|<around*|{|<around*|\<langle\>|X<rsub|i>,\<cal-A\><rsub|i>|\<rangle\>>|}><rsub|i\<in\>I>>
+  of measurable spaces, s set <math|X> and a family of mappings
+  <math|<around*|{|f<rsub|i>:X\<rightarrow\>X<rsub|i>|}><rsub|i\<in\>I>> \ we
+  can define on <math|X> a <math|\<sigma\>>-algebra such that <math|>these
+  mappings are measurable.
+
+  <\definition>
+    <label|product >Let <math|X,Y> be sets, <math|f:X\<rightarrow\>Y> a
+    function and <math|\<cal-A\>\<subseteq\>\<cal-P\><around*|(|Y|)>> then\ 
+
+    <\equation*>
+      f<rsup|-1><around*|[|\<cal-A\>|]>=<around*|{|f<rsup|-1><around*|(|A|)>\|A\<in\>\<cal-A\>|}>\<subseteq\>\<cal-P\><around*|(|X|)>
+    </equation*>
+
+    In other words <math|f<rsup|-1><around*|[|\<cal-A\>|]>> is the set of
+    pre-images by <math|f> of sets in <math|\<cal-A\>>
+  </definition>
+
+  <\definition>
+    <label|product generated sigma algebra>Let <math|I> be a set,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,\<cal-A\><rsub|i>|\<rangle\>>|}><rsub|i\<in\>I>>
+    a family of measurable sets, <math|X> a set and
+    <math|<rigid|<around*|{|f<rsub|i>:X\<rightarrow\>X<rsub|i>|}><rsub|i\<in\>I>>>
+    a family of functions then we define the <math|\<sigma\>>-algebra
+    <math|\<sigma\><around*|[|f<rsub|i>\|i\<in\>I|]>> on <math|X> by\ 
+
+    <\equation*>
+      \<sigma\><around*|[|f<rsub|i>\|i\<in\>I|]>=\<sigma\><around*|[|<big|cup><rsub|i\<in\>I>f<rsup|-1><rsub|i><around*|[|\<cal-A\><rsub|i>|]>|]>
+    </equation*>
+  </definition>
+
+  The benefit of the above <math|\<sigma\>>-algebra is that it is the
+  smallest <math|\<sigma\>>-algebra on <math|X> such that every
+  <math|f<rsub|i>> is measurable.
+
+  <\theorem>
+    <label|product generated sigma algebra (1)>Let <math|I> be a set,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,\<cal-A\><rsub|i>|\<rangle\>>|}><rsub|i\<in\>I>>
+    a family of measurable sets, <math|X> a set and
+    <math|<rigid|<around*|{|f<rsub|i>:X\<rightarrow\>X<rsub|i>|}><rsub|i\<in\>I>>>
+    a family of functions then we have for the <math|\<sigma\>>-algebra on
+    <math|\<sigma\><around*|[|f<rsub|i>\|i\<in\>I|]>> on <math|X> that\ 
+
+    <\equation*>
+      \<forall\>i\<in\>I<text| >f<rsub|i>:X\<rightarrow\>X<rsub|i><text| is
+      >\<sigma\><around*|[|f<rsub|i>\|i\<in\>I|]>,\<cal-A\><rsub|i><text|-measurable>
+    </equation*>
+
+    Further if <math|\<cal-A\>> is another <math|\<sigma\>>-algebra on
+    <math|X> such that <math|\<forall\>i\<in\>I>
+    <math|f<rsub|i>:X\<rightarrow\>X<rsub|i>> is
+    <math|\<cal-A\>,\<cal-A\><rsub|i>>-measurable then
+
+    <\equation*>
+      \<sigma\><around*|[|f<rsub|i>\|i\<in\>I|]>\<subseteq\>\<cal-A\>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Let <math|i\<in\>I> then <math|\<forall\>A\<in\>\<cal-A\><rsub|i>> we
+    have that
+
+    <\equation*>
+      f<rsup|-1><rsub|i><around*|(|A|)>\<in\><around*|{|f<rsup|-1><around*|(|A|)>\|A\<in\>\<cal-A\><rsub|i>|}>=f<rsup|-1><around*|[|\<cal-A\><rsub|i>|]>\<subset\><big|cup><rsub|i\<in\>I>f<rsub|i><rsup|-1><around*|[|\<cal-A\><rsub|i>|]>\<subseteq\>\<sigma\><around*|[|<big|cup><rsub|i\<in\>I>f<rsup|-1><rsub|i><around*|[|\<cal-A\><rsub|i>|]>|]>=\<sigma\><around*|[|f<rsub|i>\|i\<in\>I|]>
+    </equation*>
+
+    which proves that <math|f<rsub|i>=\<sigma\><around*|[|f<rsub|i>\|i\<in\>I|]>,\<cal-A\><rsub|i><text|-measurable>>.
+    Hence\ 
+
+    <\equation*>
+      \<forall\>i\<in\>I<text| >f<rsub|i>:X\<rightarrow\>X<rsub|i><text| is
+      >\<sigma\><around*|[|f<rsub|i>\|i\<in\>I|]>,\<cal-A\><rsub|i><text|-measurable>
+    </equation*>
+
+    Let <math|\<cal-A\>> be another <math|\<sigma\>>-algebra on <math|X> such
+    that <math|\<forall\>i\<in\>I> <math|f<rsub|i>:X\<rightarrow\>X<rsub|i>>
+    is <math|\<cal-A\>,\<cal-A\><rsub|i>>-measurable. Let
+    <math|A\<in\><big|cup><rsub|i\<in\>I>f<rsup|-1><rsub|i><around*|[|\<cal-A\><rsub|i>|]>>
+    then there exist a <math|i\<in\>I> such that
+    <math|A\<in\>f<rsup|-1><rsub|i><around*|[|\<cal-A\><rsub|i>|]>=<around*|{|f<rsup|-1><rsub|i><around*|(|A|)>\|A\<in\>\<cal-A\><rsub|i>|}>>
+    then <math|\<exists\>A<rprime|'>\<in\>\<cal-A\><rsub|i>> such that
+    <math|A=f<rsup|-1><rsub|i><around*|(|A<rprime|'>|)>>. As <math|f<rsub|i>>
+    is <math|\<cal-A\>,\<cal-A\><rsub|i>>-measurable it follows that
+    <math|f<rsup|-1><rsub|i><around*|(|A<rprime|'>|)>\<in\>\<cal-A\>> so that
+    <math|A\<in\>\<cal-A\>>. Hence we have that
+    <math|><math|<big|cup><rsub|i\<in\>I>f<rsup|-1><rsub|i><around*|[|\<cal-A\><rsub|i>|]>\<subseteq\>\<cal-A\>>
+    so that\ 
+
+    <\equation*>
+      \<sigma\><around*|[|f<rsub|i>\|i\<in\>I|]>=\<sigma\><around*|[|<big|cup><rsub|i\<in\>I>f<rsup|-1><rsub|i><around*|[|\<cal-A\><rsub|i>|]>|]>\<subseteq\>\<cal-A\>
+    </equation*>
+  </proof>
+
+  We are now ready to define the product of <math|\<sigma\>>-algebras.
+
+  <\definition>
+    <label|product algebra>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,\<cal-A\><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    be a finite family of measurable spaces then the product
+    <math|\<sigma\>>-algebra on <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+    noted as <math|\<cal-A\><rsub|1>\<otimes\>\<cdots\>\<otimes\>\<cal-A\><rsub|n>>
+    is defined by\ 
+
+    <\equation*>
+      \<cal-A\><rsub|1>\<otimes\>\<cdots\>\<otimes\>\<cal-A\><rsub|n>=\<sigma\><around*|[|\<pi\><rsub|i>:i\<in\><around*|{|1,\<ldots\>,n|}>|]>
+    </equation*>
+
+    where <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|\<pi\><rsub|i>:<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>\<rightarrow\>X<rsub|i>>
+    is the <math|i>-the projection map defined by
+    <math|\<pi\><rsub|i><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>=x<rsub|i>>
+    [see definition: <reference|product projection function>]. The measurable
+    space\ 
+
+    <\equation*>
+      <around*|\<langle\>|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>,\<cal-A\><rsub|1>\<otimes\>\<cdots\>\<otimes\>\<cal-A\><rsub|n>|\<rangle\>>
+    </equation*>
+
+    is called the <with|font-series|bold|product> of the measurable spaces
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,\<cal-A\><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>.
+  </definition>
+
+  A imediate consequence of [theorem: <reference|product generated sigma
+  algebra (1)>] it the following
+
+  <\theorem>
+    <label|product algebra properties (1)>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,\<cal-A\><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    be a finite family of measurable spaces then
+
+    <\equation*>
+      \<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      >\<pi\><rsub|i>:<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>\<rightarrow\>X<rsub|i><text|
+      is >\<cal-A\><rsub|1>\<otimes\>\<cdots\>\<otimes\>\<cal-A\><rsub|n>,\<cal-A\><rsub|i>-measurable.
+    </equation*>
+
+    Further if <math|\<cal-A\>> is another <math|\<sigma\>>-algebra on
+    <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>> such
+    that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|\<pi\><rsub|i>> is <math|\<cal-A\>,\<cal-A\><rsub|i>>-measurable
+    then\ 
+
+    <\equation*>
+      \<cal-A\><rsub|1>\<otimes\>\<cdots\>\<otimes\>\<cal-A\><rsub|n>\<subseteq\>\<cal-A\>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    This follows directly from [definition: <reference|product algebra>] and
+    \ [theorem: <reference|product generated sigma algebra (1)>].
+  </proof>
+
+  <\theorem>
+    <label|product algebra equivalences>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,\<cal-A\><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    be a finite family of measurable spaces such that
+    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|\<cal-A\><rsub|i>=\<sigma\><around*|[|\<cal-E\><rsub|i>|]>> and
+    there exist a <math|<around*|{|E<rsub|i,k>|}><rsub|k\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
+    such that <math|\<forall\>k\<in\>\<bbb-N\>>
+    <math|E<rsub|i,k>\<subseteq\>E<rsub|i,k+1>> and
+    <math|X<rsub|i>=<big|cup><rsub|k\<in\>\<bbb-N\>>E<rsub|i,k>> then we have
+    that\ 
+
+    <\equation*>
+      \<cal-A\><rsub|1>\<otimes\>\<cdots\>\<otimes\>\<cal-A\><rsub|n>=\<sigma\><around*|[|<around*|{|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i>\|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      >E<rsub|i>\<in\>\<cal-E\><rsub|i>|}>|]>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    First we prove that for any <math|\<sigma\>>-algebra on
+    <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>> we
+    have\ 
+
+    <\equation>
+      <label|eq 20.918.249>\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      >\<pi\><rsub|i><text| is >\<cal-A\>,\<cal-A\><rsub|i><text|-measurable
+      >\<Leftrightarrow\><text| ><around*|{|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i>\|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      >E<rsub|i>\<in\>\<cal-E\><rsub|i>|}>\<subseteq\>\<cal-A\>
+    </equation>
+
+    <\proof>
+      We have
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>Let <math|E\<in\><text|
+        ><around*|{|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i>\|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+        >E<rsub|i>\<in\>\<cal-E\><rsub|i>|}>> then
+        <math|E=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i>>
+        where <rigid|<math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+        <math|E<rsub|i>\<in\>\<cal-E\><rsub|i>>>. Now\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>E=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i>>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>
+          x<rsub|i>\<in\>E<rsub|i>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|x<rsub|i>=\<pi\><rsub|i><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>>>|<cell|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>
+          \<pi\><rsub|i><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>E<rsub|i>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+          ><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>\<pi\><rsup|-1><rsub|i><around*|(|E<rsub|i>|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<pi\><rsup|-1><rsub|i><around*|(|E<rsub|i>|)>>>>>
+        </eqnarray*>
+
+        which proves that\ 
+
+        <\equation*>
+          E=<big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<pi\><rsup|-1><rsub|i><around*|(|E<rsub|i>|)>
+        </equation*>
+
+        As <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+        <math|E<rsub|i>\<in\>\<cal-E\><rsub|i>\<subseteq\>\<cal-A\><rsub|i>>
+        and <math|\<pi\><rsub|i>> is <math|\<cal-A\>,\<cal-A\><rsub|i>>-measurable
+        we have that <math|\<pi\><rsup|-1><rsub|i><around*|(|E<rsub|i>|)>\<in\>\<cal-A\>>.
+        So it follows from the above and [theorems: <reference|measure sigma
+        algebra equivalences>, <reference|measure algebra properties>] that
+        <math|E\<in\>\<cal-A\>>. Hence we have proved that\ 
+
+        <\equation*>
+          <text| ><around*|{|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i>\|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+          >E<rsub|i>\<in\>\<cal-A\><rsub|i>|}>\<subseteq\>\<cal-A\>
+        </equation*>
+
+        <\equation*>
+          \;
+        </equation*>
+
+        <item*|<math|\<Leftarrow\>>>Fix <math|j\<in\><around*|{|1,\<ldots\>,n|}>
+        > and take <math|E\<in\>\<cal-A\><rsub|i>>. Define\ 
+
+        <\equation*>
+          <around*|{|F<rsub|k>|}><rsub|k\<in\>\<bbb-N\>><text| by
+          >F<rsub|k>=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>F<rsub|k,i><text|
+          where >F<rsub|k,i>=<choice|<tformat|<table|<row|<cell|E\<in\>\<cal-E\><rsub|j><text|
+          if >i=j>>|<row|<cell|E<rsub|i,k>\<in\>\<cal-E\><rsub|i><text| if
+          >i\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|j|}><rsub|>>>>>>\<in\>\<cal-E\><rsub|i>
+        </equation*>
+
+        Then we have as <math|\<forall\>k\<in\>\<bbb-N\>>
+        <math|F<rsub|k>=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>F<rsub|k,i>>
+        and <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+        <math|F<rsub|k,i>\<in\>\<cal-E\><rsub|i>> that
+        <math|<rigid|F<rsub|k>\<in\><text|
+        ><around*|{|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i>\|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+        >E<rsub|i>\<in\>\<cal-E\><rsub|i>|}>>\<subseteq\>\<cal-A\>>, hence\ 
+
+        <\equation>
+          <label|eq 20.919.279><around*|{|F<rsub|k>|}><rsub|k\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>
+        </equation>
+
+        Further we have <math|\<forall\>k\<in\>\<bbb-N\>> that
+        <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+        <math|F<rsub|k,i>=<choice|<tformat|<table|<row|<cell|E=F<rsub|k+1,i><text|
+        if >i=j>>|<row|<cell|E<rsub|i,k>\<subseteq\>E<rsub|i,k+1><text| if
+        >i\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|j|}><rsub|>>>>>>\<subseteq\>F<rsub|k+1,i>>
+        so that by [theorem: <reference|product inclusion>]
+        <math|F<rsub|k>=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>F<rsub|k,i>\<subseteq\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>F<rsub|k+1,i>>.
+        To summarize\ 
+
+        <\equation>
+          <label|eq 20.290.279>\<forall\>k\<in\>\<bbb-N\><text|
+          >F<rsub|k>\<subseteq\>F<rsub|k+1>
+        </equation>
+
+        Define\ 
+
+        <\equation*>
+          G=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>G<rsub|i><text|
+          where >G<rsub|i>=<choice|<tformat|<table|<row|<cell|E<text| if
+          >i=j>>|<row|<cell|X<rsub|i><text| if
+          >i\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|j|}>>>>>>
+        </equation*>
+
+        Let <math|k\<in\>\<bbb-N\>> then <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+        <math|F<rsub|k,i>=<choice|<tformat|<table|<row|<cell|E=G<rsub|i><text|
+        if >i=j>>|<row|<cell|E<rsub|i,k>\<subseteq\>X<rsub|i>=G<rsub|i><text|
+        if >i\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|j|}>>>>>>\<subseteq\>G<rsub|i>>
+        so that by [theorem: <reference|product inclusion>] we have
+        <math|F<rsub|k>\<subseteq\>G> from which it follows that\ 
+
+        <\equation>
+          <label|eq 20.921.279><big|cup><rsub|k\<in\>\<bbb-N\>>F<rsub|k>\<subseteq\>G
+        </equation>
+
+        Let <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>G>. Take
+        <math|i\<in\><around*|{|1,\<ldots\>,n|}>> then we have either:\ 
+
+        <\description>
+          <item*|<math|i=j>>Then <math|x<rsub|i>\<in\>G<rsub|i>=E=F<rsub|1,i>>
+          so if we take <math|k<rsub|i>=1> we have
+          <math|x<rsub|i>\<in\>F<rsub|k<rsub|1>,i>>
+
+          <item*|<math|i\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|j|}>>>Then
+          as <math|x<rsub|i>\<in\>G<rsub|i>=X<rsub|i>=<big|cup><rsub|k\<in\>\<bbb-N\>>E<rsub|i,k>>
+          there exist a <math|k<rsub|i>\<in\>\<bbb-N\>> such that
+          <math|x<rsub|i>\<in\>E<rsub|i,k<rsub|i>>=F<rsub|k<rsub|i>,i>>
+        </description>
+
+        Hence if we take <math|k=max<around*|(|<around*|{|k<rsub|i>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>>
+        then <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have
+        <math|x<rsub|i>\<in\>F<rsub|k<rsub|i>,i><below|\<subseteq\>|<text|[eq:
+        <reference|eq 20.921.279>]>>F<rsub|k,i><rsub|>> so that
+        <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>F<rsub|k,i>=F<rsub|k>\<subseteq\><big|cup><rsub|k\<in\>\<bbb-N\>>F<rsub|k>>.
+        Hence <math|G\<subseteq\><big|cup><rsub|k\<in\>\<bbb-N\>>F<rsub|k>>
+        which combined with [eq: <reference|eq 20.921.279>] proves that\ 
+
+        <\equation*>
+          G=<big|cup><rsub|k\<in\>\<bbb-N\>>F<rsub|k>
+        </equation*>
+
+        As by [eq: <reference|eq 20.920.279>] it follows from the above that\ 
+
+        <\equation*>
+          G\<in\>\<cal-A\>
+        </equation*>
+
+        Now if <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>G> then
+        <math|\<pi\><rsub|j><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>=x<rsub|j>\<in\>G<rsub|j>=E>
+        so that <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>\<pi\><rsup|-1><rsub|j><around*|(|E|)>>.
+        Likewise if <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>\<pi\><rsup|-1><rsub|j><around*|(|E|)>\<subseteq\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+        then <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|j|}>>
+        we have <math|x<rsub|i>\<in\>X<rsub|i>=G<rsub|i>> and for <math|i=j>
+        <math|x<rsub|i>\<in\>E=G<rsub|i>> so that <math|x\<in\>G>. Hence we
+        must conclude that <math|\<pi\><rsup|-1><rsub|j><around*|(|E|)>=G\<in\>\<cal-A\>>.
+        So we have have proved that\ 
+
+        <\equation*>
+          \<forall\>j\<in\><around*|{|1,\<ldots\>,n|}><text| we have
+          >\<forall\>E\<in\>\<cal-A\><rsub|j> that
+          \<pi\><rsup|-1><rsub|j><around*|(|E|)>\<in\>\<cal-A\>
+        </equation*>
+
+        \ In other words\ 
+
+        <\equation*>
+          \<forall\>j\<in\><around*|{|1,\<ldots\>,n|}><text|
+          <math|\<pi\><rsub|j><text| is >\<cal-A\>,\<cal-A\><rsub|i><text|-measurable>>>
+        </equation*>
+      </description>
+    </proof>
+
+    As <math|><math|\<cal-A\><rsub|1>\<otimes\>\<cdots\>\<otimes\>\<cal-A\><rsub|n>>
+    is a <math|\<sigma\>>-algebra on <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+    so that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|\<pi\><rsub|i>> is <math|\<cal-A\>,\<cal-A\><rsub|i>>-measurable
+    [see theorem: <reference|product algebra properties (1)>] it follow from
+    [eq: <reference|eq 20.918.249>] that\ 
+
+    <\equation*>
+      <around*|{|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i>\|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      >E<rsub|i>\<in\>\<cal-E\><rsub|i>|}>\<subseteq\>\<cal-A\><rsub|1>\<otimes\>\<cdots\>\<otimes\>\<cal-A\><rsub|n>
+    </equation*>
+
+    hence\ 
+
+    <\equation>
+      <label|eq 20.922.279>\<sigma\><around*|[|<around*|{|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i>\|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      >E<rsub|i>\<in\>\<cal-E\><rsub|i>|}>|]>\<subseteq\>\<cal-A\><rsub|1>\<otimes\>\<cdots\>\<otimes\>\<cal-A\><rsub|n>
+    </equation>
+
+    Take <math|\<cal-B\>=\<sigma\><around*|[|<around*|{|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i>\|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+    >E<rsub|i>\<in\>\<cal-E\><rsub|i>|}>|]>> then as
+
+    <\equation*>
+      <around*|{|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i>\|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      >E<rsub|i>\<in\>\<cal-E\><rsub|i>|}>\<subseteq\>\<cal-B\>
+    </equation*>
+
+    a <math|\<sigma\>>-algebra it follows from [eq: <reference|eq
+    20.918.249>] that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|\<pi\><rsub|i><text| is >\<cal-B\>,\<cal-A\><rsub|i>>=measurable.
+    Hence using [theorem: <reference|product generated sigma algebra (1)>]
+    and [definition: <reference|product algebra>] it follows that
+    <math|\<cal-A\><rsub|1>\<otimes\>\<cdots\>\<otimes\>\<cal-A\><rsub|n>\<subset\>-\<cal-B\>>
+    or\ 
+
+    <\equation*>
+      \<sigma\><around*|[|<around*|{|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i>\|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      >E<rsub|i>\<in\>\<cal-E\><rsub|i>|}>|]>\<subseteq\>\<cal-A\><rsub|1>\<otimes\>\<cdots\>\<otimes\>\<cal-A\><rsub|n>
+    </equation*>
+
+    which combined with [eq: <reference|eq 20.922.279>] proves that\ 
+
+    <\equation*>
+      \<cal-A\><rsub|1>\<otimes\>\<cdots\>\<otimes\>\<cal-A\><rsub|n>=\<sigma\><around*|[|<around*|{|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i>\|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      >E<rsub|i>\<in\>\<cal-E\><rsub|i>|}>|]>
+    </equation*>
+
+    \;
+  </proof>
+
+  \;
+
+  \;
+
   \;
 </body>
 
@@ -45784,7 +46199,7 @@
     <associate|chapter-nr|19>
     <associate|item-nr|>
     <associate|last-item-nr|2>
-    <associate|page-first|?>
+    <associate|page-first|1221>
     <associate|section-nr|1>
     <associate|subsection-nr|7>
   </collection>
@@ -45915,6 +46330,8 @@
     <associate|auto-15|<tuple|20.1.5|?>>
     <associate|auto-150|<tuple|absolute continuity of signed measures|?>>
     <associate|auto-151|<tuple|absolute continuity of complex measures|?>>
+    <associate|auto-152|<tuple|20.8|?>>
+    <associate|auto-153|<tuple|20.8.1|?>>
     <associate|auto-16|<tuple|<with|mode|<quote|math>|<big|sum><rsub|i=k><rsup|\<infty\>>x<rsub|i><with|mode|<quote|text>|
     in >\<bbb-R\>>|?>>
     <associate|auto-17|<tuple|20.2|?>>
@@ -46289,6 +46706,7 @@
     <associate|eq 20.28.156|<tuple|20.28|?>>
     <associate|eq 20.284.221|<tuple|20.310|?>>
     <associate|eq 20.29.156|<tuple|20.29|?>>
+    <associate|eq 20.290.279|<tuple|20.920|?>>
     <associate|eq 20.295.220|<tuple|20.324|?>>
     <associate|eq 20.296.220|<tuple|20.325|?>>
     <associate|eq 20.297.220|<tuple|20.328|?>>
@@ -46942,6 +47360,12 @@
     <associate|eq 20.914.271|<tuple|20.914|?>>
     <associate|eq 20.915.271|<tuple|20.915|?>>
     <associate|eq 20.916.271|<tuple|20.916|?>>
+    <associate|eq 20.918.249|<tuple|20.918|?>>
+    <associate|eq 20.919.279|<tuple|20.919|?>>
+    <associate|eq 20.920.279|<tuple|20.921|?>>
+    <associate|eq 20.921.279|<tuple|20.921|?>>
+    <associate|eq 20.922.249|<tuple|20.922|?>>
+    <associate|eq 20.922.279|<tuple|20.922|?>>
     <associate|eq 20.93.200|<tuple|20.138|?>>
     <associate|eq 20.94.200|<tuple|20.139|?>>
     <associate|eq 20.95.200|<tuple|20.140|?>>
@@ -47329,6 +47753,12 @@
     <associate|non negative integral zero a.e. function|<tuple|20.413|?>>
     <associate|non negative measurable function|<tuple|20.327|?>>
     <associate|note 20.198.210|<tuple|20.227|?>>
+    <associate|product |<tuple|20.600|?>>
+    <associate|product algebra|<tuple|20.603|?>>
+    <associate|product algebra equivalences|<tuple|20.605|?>>
+    <associate|product algebra properties (1)|<tuple|20.604|?>>
+    <associate|product generated sigma algebra|<tuple|20.601|?>>
+    <associate|product generated sigma algebra (1)|<tuple|20.602|?>>
     <associate|signed measure|<tuple|20.534|?>>
     <associate|signed measure Hahn Decomposition|<tuple|20.549|?>>
     <associate|signed measure Hahn Decomposition condition|<tuple|20.550|?>>
@@ -47842,6 +48272,14 @@
       <with|par-left|<quote|2tab>|20.7.3.2<space|2spc>Radon-Nikodym Theorem
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-148>>
+
+      20.8<space|2spc>Product measures <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-152>
+
+      <with|par-left|<quote|1tab>|20.8.1<space|2spc>Product of
+      <with|mode|<quote|math>|\<sigma\>>-algebras
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-153>>
     </associate>
   </collection>
 </auxiliary>
