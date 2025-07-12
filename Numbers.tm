@@ -14284,6 +14284,23 @@
 
   \;
 
+  Another implicit convention that wil be used in this book concerns the
+  finite power of sets where we extend the notation suggested in [theorem:
+  <reference|product and power>]
+
+  <\definition>
+    <label|finite power of a set>Let <math|A> be a set,
+    <math|n\<in\>\<bbb-N\>> then\ 
+
+    <\equation*>
+      A<rsup|n>=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i><text|
+      where >\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      <math|A<rsub|i>=A>>
+    </equation*>
+  </definition>
+
+  \;
+
   \;
 
   \;
@@ -14308,7 +14325,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|6>
-    <associate|page-first|161>
+    <associate|page-first|205>
     <associate|par-first|0tab>
     <associate|project-flag|false>
     <associate|section-nr|3>
@@ -14675,6 +14692,7 @@
     <associate|eq 9.90.047|<tuple|9.84|?>>
     <associate|extended reals existence|<tuple|10.98|?>>
     <associate|field with characteristics zero|<tuple|10.47|?>>
+    <associate|finite power of a set|<tuple|10.99|?>>
     <associate|integeres order|<tuple|7.21|?>>
     <associate|integers|<tuple|7.2|?>>
     <associate|integers 0\<less\>1 and 0\<less\>2|<tuple|7.25|?>>
