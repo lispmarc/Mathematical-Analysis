@@ -14538,7 +14538,7 @@
     <\enumerate>
       <item>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
       satisfies <math|\<forall\>i\<in\>\<bbb-N\>>
-      <math|A<rsub|i>\<leqslant\>A<rsub|i+1>> then
+      <math|A<rsub|i>\<subseteq\>A<rsub|i+1>> then
 
       <\equation*>
         \<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\><rsub|0>>A<rsub|i>|)>=<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|i>|)>=sup<around*|(|<around*|{|\<mu\><around*|(|A<rsub|i>|)>\|i\<in\>\<bbb-N\>|}>|)>
@@ -14546,7 +14546,7 @@
 
       <item><math|\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
       satisfies <math|\<forall\>i\<in\>\<bbb-N\>>
-      <math|A<rsub|i+1>\<leqslant\>A<rsub|i>> and
+      <math|A<rsub|i+1>\<subseteq\>A<rsub|i>> and
       <math|\<exists\>k\<in\>\<bbb-N\>> such that
       <math|\<mu\><around*|(|A<rsub|k>|)>\<less\>\<infty\>> then\ 
 
@@ -15955,7 +15955,7 @@
 
   <\theorem>
     <label|measure uniqueness of extension of a measure>Let <math|X> be a
-    set, <math|\<cal-G\>\<subseteq\>\<cal-P\><around*|(|X|)>> such that:\ 
+    set, <math|\<cal-G\>\<subseteq\>\<cal-P\><around*|(|X|)>> such that\ 
 
     <\enumerate>
       <item><math|\<forall\>A,B\<in\>\<cal-G\>> we have
@@ -15964,17 +15964,24 @@
 
       <item><math|\<exists\><around*|{|G<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-G\>>
       such that <math|\<forall\>i\<in\>\<bbb-N\>> we have
-      <math|G<rsub|i>\<subseteq\>G<rsub|i+1><text|,
-      >\<mu\><around*|(|G<rsub|i>|)>\<less\>\<infty\>> and
-      <math|<big|cup><rsub|i\<in\>\<bbb-N\>>G<rsub|i>=X>\ 
+      <math|G<rsub|i>\<subseteq\>G<rsub|i+1><text|>> and
+      <math|<big|cup><rsub|i\<in\>\<bbb-N\>>G<rsub|i>=X>
     </enumerate>
 
-    Then if <math|\<mu\>:\<sigma\><around*|[|\<cal-G\>|]>\<rightarrow\><around*|[|0,\<infty\>|]>>
-    and <math|\<nu\>:\<sigma\><around*|[|\<cal-G\>|]>\<rightarrow\><around*|[|0,\<infty\>|]>>
-    are two measures defined on <math|\<sigma\><around*|[|\<cal-G\>|]>> [the
-    <math|\<sigma\>>-algebra generated from <math|\<cal-G\>>] such that
-    <math|\<forall\>A\<in\>\<cal-G\><text| we have
-    >\<mu\><around*|(|A|)>=\<nu\><around*|(|A|)>> then
+    and <math|\<mu\>,\<nu\>> a measures on
+    <math|\<sigma\><around*|[|\<cal-G\>|]>> such that\ 
+
+    <\enumerate>
+      <item><math|\<forall\>A\<in\>\<cal-G\>>
+      <math|\<mu\><around*|(|A|)>=\<nu\><around*|(|A|)>>
+
+      <item><math|\<forall\>i\<in\>\<bbb-N\>
+      \<mu\><around*|(|G<rsub|i>|)>\<less\>\<infty\>> [hence as
+      <math|G<rsub|i>\<in\>\<cal-G\>> we have also
+      <math|\<nu\><around*|(|G<rsub|i>|)>\<less\>\<infty\>>]
+    </enumerate>
+
+    then we have that\ 
 
     <\equation*>
       \<mu\>=\<nu\>
@@ -46458,11 +46465,18 @@
       >\<mu\><around*|(|F<rsub|k>|)>=\<mu\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>F<rsub|i,k>|)>=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<mu\><rsub|i><around*|(|F<rsub|i,k>|)>=\<nu\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>F<rsub|i,k>|)>=\<mu\><around*|(|F<rsub|k>|)>
     </equation>
 
+    As <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|\<mu\><rsub|i>> is finite we have from the above that\ 
+
+    <\equation>
+      <label|eq 20.931.279>\<forall\>k\<in\>\<bbb-N\><text|
+      <math|\<mu\><around*|(|F<rsub|k>|)>\<less\>\<infty\>>>
+    </equation>
+
     The conditions for [theorem: <reference|measure uniqueness of extension
     of a measure>] are fulfilled by \ [eqs: <reference|eq 20.926.279>,
     <reference|eq 20.927.279>, <reference|eq 20.928.279>, <reference|eq
-    20.929.279> and <reference|eq 20.930.279>] and the fact that
-    <math|\<forall\>i\<in\>\<bbb-N\>> <math|\<mu\><rsub|i>> is finite, so
+    20.929.279> ,<reference|eq 20.930.279> and <reference|eq 20.931.279>], so
     using this theorem it follows that\ 
 
     <\equation*>
@@ -46476,7 +46490,403 @@
   <math|\<cal-A\><rsub|1>\<otimes\>\<cdots\>\<otimes\>\<cal-A\><rsub|n>>
   satisfying [eq: <reference|eq 20.925.279>] only that if such measure exist
   then it is unique. The remaining part of this section is to prove that such
-  a measure exist.
+  a measure exist. We first prove existence for <math|n=2>. First we
+  introduce the idea of a section of a set/
+
+  <\definition>
+    Let <math|<around*|{|X<rsub|i>|}><rsub|i\<in\><around*|{|1,2|}>>> be a
+    family of two sets let <math|A\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>>
+    then we define
+
+    <\equation*>
+      \<forall\>x\<in\>X<rsub|1><text| >A<rsup|><rsub|<around*|[|1,x|]>>=<around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>A|}>\<subseteq\>X<rsub|2>
+    </equation*>
+
+    <\equation*>
+      \<forall\>y\<in\>X<rsub|2><text| >A<rsub|<around*|[|2,y|]>>=<around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>A|}>\<subseteq\>X<rsub|1>
+    </equation*>
+
+    We call <math|A<rsub|<around*|[|1,x|]>>> the <math|1,x>-section of
+    <math|A> and <math|A<rsub|2,y>> the <math|2,y>-section of <math|A>
+
+    <\note>
+      <math|X<rsub|1>\<cdot\>X<rsub|2>> is a short notation for
+      <math|<big|prod><rsub|i\<in\><around*|{|1,2|}>>X<rsub|i>>
+    </note>
+  </definition>
+
+  <\lemma>
+    <label|lemma 20.613.279>Let <math|<around*|{|X<rsub|i>|}><rsub|i\<in\><around*|{|1,2|}>>>
+    be a family of two sets then we have:
+
+    <\enumerate>
+      <item><math|\<forall\>x\<in\>X<rsub|1>>
+      <math|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)><rsub|<around*|[|1,x|]>>=X<rsub|2>>
+
+      <item><math|\<forall\>y\<in\>X<rsub|2>>
+      <math|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)><rsub|<around*|[|2,y|]>>=X<rsub|1>>
+
+      <item><math|\<forall\>x\<in\>X<rsub|1>,>
+      <math|\<forall\>B\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>>
+      <math|<around*|(|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B|)><rsub|<around*|[|1,x|]>>=X<rsub|2>\\B<rsub|<around*|[|1,x|]>>>
+
+      <item><math|\<forall\>y\<in\>X<rsub|1>,>
+      <math|\<forall\>B\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>>
+      <math|<around*|(|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B|)><rsub|<around*|[|2,y|]>>=X<rsub|1>\\B<rsub|<around*|[|2,y|]>>>
+
+      <item>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>>,
+      <math|x\<in\>X<rsub|1>> then <math|<around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)><rsub|<around*|[|1,x|]>>=<big|cup><rsub|i\<in\>I><around*|(|A<rsub|i>|)><rsub|<around*|[|1,x|]>>>
+
+      <item>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>>,
+      <math|y\<in\>X<rsub|2>> then <math|<around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)><rsub|<around*|[|2,y|]>>=<big|cup><rsub|i\<in\>I><around*|(|A<rsub|i>|)><rsub|<around*|[|2,y|]>>>
+
+      <item>Let <math|A<rsub|1>\<subseteq\>X<rsub|1>>,
+      <math|A<rsub|2>\<subseteq\>X<rsub|2>> then we have
+
+      <\enumerate>
+        <item><math|\<forall\>x\<in\>X<rsub|1><text| we have
+        ><around*|(|A<rsub|1>\<times\>A<rsub|2>|)><rsub|<around*|[|1,x|]>>=<choice|<tformat|<table|<row|<cell|A<rsub|2><text|
+        if >x\<in\>A<rsub|1>>>|<row|<cell|\<varnothing\><text| if
+        >x\<in\>X<rsub|1>\\A<rsub|1>>>>>>>
+
+        <item><math|\<forall\>y\<in\>X<rsub|2><text| we have
+        ><around*|(|A<rsub|1>\<times\>A<rsub|2>|)><rsub|<around*|[|2,y|]>>=<choice|<tformat|<table|<row|<cell|A<rsub|1><text|
+        if >y\<in\>A<rsub|2>>>|<row|<cell|\<varnothing\><text| if
+        >y\<in\>X<rsub|2>\\A<rsub|2>>>>>>>
+      </enumerate>
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|x\<in\>X<rsub|1>>. If <math|y\<in\>X<rsub|2>> then
+      <math|<around*|(|x,y|)>\<in\>X<rsub|1>\<cdot\>X<rsub|2>> so that
+      <math|y\<in\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>X<rsub|1>\<cdot\>X<rsub|2>|}>=<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)><rsub|<around*|[|1,x|]>>>.
+      Hence <math|X<rsub|2>\<subseteq\><around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)><rsub|<around*|[|1,x|]>>>
+      and as by definition <math|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)><rsub|<around*|[|1,x|]>>\<subseteq\>X<rsub|2>>
+      it follows that\ 
+
+      <\equation*>
+        <around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)><rsub|<around*|[|1,x|]>>=X<rsub|2>
+      </equation*>
+
+      <item>Let <math|y\<in\>X<rsub|2>>. If <math|x\<in\>X<rsub|1>> then
+      <math|<around*|(|x,y|)>\<in\>X<rsub|1>\<cdot\>X<rsub|2>> so that
+      <math|x\<in\><around*|{|x\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>X<rsub|1>\<cdot\>X<rsub|2>|}>=<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)><rsub|<around*|[|2,y|]>>>.
+      Hence <math|X<rsub|1>\<subseteq\><around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)><rsub|<around*|[|2,y|]>>>
+      and as by definition <math|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)><rsub|<around*|[|1,y|]>>\<subseteq\>X<rsub|1>>
+      it follows that\ 
+
+      <\equation*>
+        <around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)><rsub|<around*|[|1,y|]>>=X<rsub|1>
+      </equation*>
+
+      <item>Let <math|x\<in\>X<rsub|1>> and
+      <math|B\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>>. Then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|y\<in\><around*|(|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B|)><rsub|<around*|[|1,x|]>>>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>X<rsub|2>\<wedge\><around*|(|x,y|)>\<in\><around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|x\<in\>X<rsub|1>>>|<cell|y\<in\>X<rsub|2>\<wedge\><around*|(|x,y|)>\<nin\>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>X<rsub|2>\<wedge\>y\<nin\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>B|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>X<rsub|2>\<wedge\>x\<nin\>B<rsub|<around*|[|1,x|]>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>X<rsub|2>\\B<rsub|<around*|[|1,x|]>>>>>>
+      </eqnarray*>
+
+      so that\ 
+
+      <\equation*>
+        <around*|(|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B|)><rsub|<around*|[|1,x|]>>=X<rsub|2>\\B<rsub|<around*|[|1,x|]>>
+      </equation*>
+
+      <item>Let <math|y\<in\>X<rsub|2>> and
+      <math|B\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>>. Then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<in\><around*|(|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B|)><rsub|<around*|[|2,y|]>>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X<rsub|1>\<wedge\><around*|(|x,y|)>\<in\><around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|y\<in\>X<rsub|2>>>|<cell|x\<in\>X<rsub|1>\<wedge\><around*|(|x,y|)>\<nin\>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X<rsub|1>\<wedge\>x\<nin\><around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>B|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X<rsub|1>\<wedge\>x\<nin\>B<rsub|<around*|[|2,y|]>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X<rsub|1>\\B<rsub|<around*|[|2,y|]>>>>>>
+      </eqnarray*>
+
+      so that\ 
+
+      <\equation*>
+        <around*|(|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B|)><rsub|<around*|[|2,y|]>>=X<rsub|1>\\B<rsub|<around*|[|2,y|]>>
+      </equation*>
+
+      <item>Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>>
+      and <math|x\<in\>X<rsub|1>> then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|y\<in\><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)><rsub|<around*|[|1,x|]>>>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>X<rsub|2>\<wedge\><around*|(|x,y|)>\<in\><big|cup><rsub|i\<in\>I>A<rsub|i>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>X<rsub|2>\<wedge\>\<exists\>i\<in\>I<text|
+        such that ><around*|(|x,y|)>\<in\>A<rsub|i>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>i\<in\>I<text|
+        such that >y\<in\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>A<rsub|i>|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>i\<in\>I<text|
+        such that >y\<in\><around*|(|A<rsub|i>|)><rsub|<around*|[|1,x|]>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><big|cup><rsub|i\<in\>I><around*|(|A<rsub|i>|)><rsub|<around*|[|1,x|]>>>>>>
+      </eqnarray*>
+
+      so that\ 
+
+      <\equation*>
+        <around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)><rsub|<around*|[|1,x|]>>=<big|cup><rsub|i\<in\>I><around*|(|A<rsub|i>|)><rsub|<around*|[|1,x|]>>
+      </equation*>
+
+      <item>Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>>
+      and <math|y\<in\>X<rsub|2>> then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<in\><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)><rsub|<around*|[|2,y|]>>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X<rsub|1>\<wedge\><around*|(|x,y|)>\<in\><big|cup><rsub|i\<in\>I>A<rsub|i>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X<rsub|1>\<wedge\>\<exists\>i\<in\>I<text|
+        such that ><around*|(|x,y|)>\<in\>A<rsub|i>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>i\<in\>I<text|
+        such that >x\<in\><around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>A<rsub|i>|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>i\<in\>I<text|
+        such that >c\<in\><around*|(|A<rsub|i>|)><rsub|<around*|[|2,y|]>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><big|cup><rsub|i\<in\>I><around*|(|A<rsub|i>|)><rsub|<around*|[|2,y|]>>>>>>
+      </eqnarray*>
+
+      so that\ 
+
+      <\equation*>
+        <around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)><rsub|<around*|[|2,y|]>>=<big|cup><rsub|i\<in\>I><around*|(|A<rsub|i>|)><rsub|<around*|[|2,y|]>>
+      </equation*>
+
+      <item>Let <math|A<rsub|1>\<subseteq\>X<rsub|1>>,
+      <math|A<rsub|2>\<subseteq\>X<rsub|2>> then we have:\ 
+
+      <\enumerate>
+        <item>Let <math|x\<in\>X<rsub|1>> then we have either:\ 
+
+        <\description>
+          <item*|<math|x\<in\>A<rsub|1>>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|y\<in\><around*|(|A<rsub|1>\<cdot\>A<rsub|2>|)><rsub|<around*|[|1,x|]>>>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>X<rsub|2>\<wedge\><around*|(|x,y|)>\<in\>A<rsub|1>\<cdot\>A<rsub|2>>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|x\<in\>A<rsub|1>\<wedge\>A<rsub|2>\<subseteq\>X<rsub|2>>>|<cell|y\<in\>A<rsub|2>>>>>
+          </eqnarray*>
+
+          which proves that\ 
+
+          <\equation*>
+            <around*|(|A<rsub|1>\<cdot\>A<rsub|2>|)><rsub|<around*|[|1,x|]>>=A<rsub|2>
+          </equation*>
+
+          <item*|<math|x\<in\>X<rsub|1>\\A<rsub|1>>>Then if
+          <math|y\<in\><around*|(|A<rsub|1>\<cdot\>A<rsub|2>|)><rsub|<around*|[|1,x|]>>>
+          we have that <math|<around*|(|x,y|)>\<in\>A<rsub|1>\<cdot\>A<rsub|2>\<Rightarrow\>x\<in\>A<rsub|1>>
+          which contradicts with <math|x\<in\>X<rsub|1>\\A<rsub|1>>. Hence we
+          must have that\ 
+
+          <\equation*>
+            <around*|(|A<rsub|1>\<cdot\>A<rsub|2>|)><rsub|<around*|[|1,x|]>>=\<varnothing\>
+          </equation*>
+        </description>
+
+        <item>Let <math|y\<in\>X<rsub|2>> then we have either:\ 
+
+        <\description>
+          <item*|<math|y\<in\>A<rsub|2>>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|x\<in\><around*|(|A<rsub|1>\<cdot\>A<rsub|2>|)><rsub|<around*|[|2,y|]>>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X<rsub|1>\<wedge\><around*|(|x,y|)>\<in\>A<rsub|1>\<cdot\>A<rsub|2>>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|y\<in\>A<rsub|2>\<wedge\>A<rsub|1>\<subseteq\>X<rsub|1>>>|<cell|x\<in\>A<rsub|1>>>>>
+          </eqnarray*>
+
+          which proves that\ 
+
+          <\equation*>
+            <around*|(|A<rsub|1>\<cdot\>A<rsub|2>|)><rsub|<around*|[|2,y|]>>=A<rsub|1>
+          </equation*>
+
+          <item*|<math|y\<in\>X<rsub|2>\\A<rsub|2>>>Then if
+          <math|x\<in\><around*|(|A<rsub|1>\<cdot\>A<rsub|2>|)><rsub|<around*|[|2,y|]>>>
+          we have that <math|<around*|(|x,y|)>\<in\>A<rsub|1>\<cdot\>A<rsub|2>\<Rightarrow\>y\<in\>A<rsub|2>>
+          which contradicts with <math|y\<in\>X<rsub|2>\\A<rsub|2>>. Hence we
+          must have that\ 
+
+          <\equation*>
+            <around*|(|A<rsub|1>\<cdot\>A<rsub|2>|)><rsub|<around*|[|2,y|]>>=\<varnothing\>
+          </equation*>
+        </description>
+      </enumerate>
+    </enumerate>
+
+    \;
+  </proof>
+
+  <\lemma>
+    <label|lemma 20.614.279>Let <math|<around*|\<langle\>|X<rsub|1>,\<cal-A\><rsub|1>|\<rangle\>>>,
+    <math|<around*|\<langle\>|X<rsub|2>,\<cal-A\><rsub|2>|\<rangle\>>> be two
+    measurable spaces and <math|A\<subseteq\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>>
+    then we have
+
+    <\enumerate>
+      <item><math|\<forall\>x\<in\>X<rsub|1><text|
+      >A<rsub|<around*|[|1,x|]>>\<in\>\<cal-A\><rsub|2>>
+
+      <item><math|\<forall\>y\<in\>X<rsub|2><text|
+      >A<rsub|<around*|[|2,y|]>>\<in\>\<cal-A\><rsub|1>>
+    </enumerate>
+
+    <\note>
+      As <math|\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>> is a
+      <math|\<sigma\>>-algebra on <math|X<rsub|1>\<cdot\>X<rsub|2>=<big|prod><rsub|i\<in\><around*|{|1,2|}>>X<rsub|i>>
+      so that <math|A\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>> as is required
+      for this lemma to make sense. \ 
+    </note>
+  </lemma>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|x\<in\>X<rsub|1>> and define
+
+      <\equation>
+        <label|eq 20.932.279>\<cal-B\>=<around*|{|A\<subseteq\>\<cal-P\><around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\|A<rsub|<around*|[|1,x|]>>\<in\>\<cal-A\><rsub|2>|}>
+      </equation>
+
+      Using [lemma: <reference|lemma 20.613.279>] we have that
+      <math|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)><rsub|<around*|[|1,x|]>>=X<rsub|2>\<in\>\<cal-A\><rsub|2>>
+      which proves that\ 
+
+      <\equation>
+        <label|eq 20.933.279>X<rsub|1>\<cdot\>X<rsub|2>\<in\>B
+      </equation>
+
+      Further if <math|B\<in\>\<cal-B\>> then
+      <math|B<rsub|<around*|[|1,x|]>>\<in\>\<cal-A\><rsub|2>> and by [lemma:
+      <reference|lemma 20.613.279>] <math|<around*|(|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B|)><rsub|<around*|[|1,x|]>>=X<rsub|2>\\B<rsub|<around*|[|1,x|]>>\<in\>\<cal-A\><rsub|2>>
+      so \ that <math|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B\<in\>\<cal-B\>>.
+      Hence\ 
+
+      <\equation>
+        <label|eq 20.934.279>\<forall\>B\<in\>\<cal-B\><text| we have that
+        ><around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B\<in\>\<cal-B\>
+      </equation>
+
+      \ Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-B\>>
+      then <math|<around*|{|<around*|(|A<rsub|i>|)><rsub|<around*|[|1,x|]>>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><rsub|2>>
+      so that <math|<big|cup><rsub|i\<in\>\<bbb-N\>><around*|(|A<rsub|i>|)><rsub|<around*|[|1,x|]>>\<in\>\<cal-A\><rsub|2>>.
+      As by [lemma: <reference|lemma 20.613.279>]
+      <math|<around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)><rsub|<around*|[|1,x|]>>=<big|cup><rsub|i\<in\>\<bbb-N\>><around*|(|A<rsub|i>|)><rsub|<around*|[|1,x|]>>>
+      it follows that <math|<around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)><rsub|<around*|[|1,x|]>>\<in\>\<cal-A\><rsub|2>>
+      hence <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-B\>>.
+      So\ 
+
+      <\equation>
+        <label|eq 20.935.279>\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-B\><text|
+        we have ><big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-B\>
+      </equation>
+
+      Combining [eqs: <reference|eq 20.933.279>, <reference|eq 20.934.279>,
+      <reference|eq 20.935.279>] proves that\ 
+
+      <\equation>
+        <label|eq 20.936.279>\<cal-B\><text| is a >\<sigma\><text|-algebra on
+        >X<rsub|1>\<cdot\>X<rsub|2>
+      </equation>
+
+      Let <math|><math|E<rsub|1>\<cdot\>E<rsub|2>\<in\><around*|{|<big|prod><rsub|i\<in\><around*|{|1,2|}>>E<rsub|i>\|\<forall\>i\<in\><around*|{|1,2|}><text|
+      >E<rsub|i>\<in\>\<cal-A\><rsub|i>|}>> then
+      <math|E<rsub|1>\<in\>\<cal-A\><rsub|1>\<wedge\>E<rsub|2>\<in\>\<cal-A\><rsub|2>>.
+      Using \ [lemma: <reference|lemma 20.613.279>] we have then that
+      <math|<around*|(|A<rsub|1>\<cdot\>A<rsub|2>|)><rsub|<around*|[|1,x|]>>=<choice|<tformat|<table|<row|<cell|E<rsub|2>\<in\>\<cal-A\><rsub|2><text|
+      if >x\<in\>E<rsub|1>>>|<row|<cell|\<varnothing\>\<in\>\<cal-A\><rsub|2><text|
+      if >x\<in\>X<rsub|1>\\E<rsub|1>>>>>>\<in\>\<cal-A\><rsub|2>> so that
+      <math|E<rsub|1>\<cdot\>E<rsub|2>\<in\>\<cal-B\>>. So we have proved
+      that\ 
+
+      <\equation*>
+        <around*|{|<big|prod><rsub|i\<in\><around*|{|1,2|}>>E<rsub|i>\|\<forall\>i\<in\><around*|{|1,2|}><text|
+        >E<rsub|i>\<in\>\<cal-A\><rsub|i>|}>\<subseteq\>\<cal-B\>
+      </equation*>
+
+      As by [corollary: <reference|product algebra equivalences (1)>]
+      <math|\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>=\<sigma\><around*|[|<around*|{|<big|prod><rsub|i\<in\><around*|{|1,2|}>>E<rsub|i>\|\<forall\>i\<in\><around*|{|1,2|}><text|
+      >E<rsub|i>\<in\>\<cal-A\><rsub|i>|}>|]>> we have using the above, [eq:
+      <reference|eq 20.936.279>] and [theorem: <reference|measure generated
+      sigma algebra>] that\ 
+
+      <\equation*>
+        \<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>\<subseteq\>B
+      </equation*>
+
+      Hence <math|\<forall\>A\<in\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>>
+      we have <math|A\<in\>\<cal-B\>> so that
+
+      <\equation*>
+        A<rsub|<around*|[|1,x|]>>\<in\>\<cal-A\><rsub|2>
+      </equation*>
+
+      <item>Let <math|y\<in\>X<rsub|2>> and define
+
+      <\equation>
+        <label|eq 20.937.279>\<cal-B\>=<around*|{|A\<subseteq\>\<cal-P\><around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\|A<rsub|<around*|[|2,y|]>>\<in\>\<cal-A\><rsub|1>|}>
+      </equation>
+
+      Using [lemma: <reference|lemma 20.613.279>] we have that
+      <math|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)><rsub|<around*|[|2,y|]>>=X<rsub|1>\<in\>\<cal-A\><rsub|<lprime|`>>>
+      which proves that\ 
+
+      <\equation>
+        <label|eq 20.938.279>X<rsub|1>\<cdot\>X<rsub|2>\<in\>B
+      </equation>
+
+      Further if <math|B\<in\>\<cal-B\>> then
+      <math|B<rsub|<around*|[|2,y|]>>\<in\>\<cal-A\><rsub|1>> and by [lemma:
+      <reference|lemma 20.613.279>] <math|<around*|(|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B|)><rsub|<around*|[|2,y|]>>=X<rsub|1>\\B<rsub|<around*|[|2,y|]>>\<in\>\<cal-A\><rsub|1>>
+      so \ that <math|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B\<in\>\<cal-B\>>.
+      Hence\ 
+
+      <\equation>
+        <label|eq 20.939.279>\<forall\>B\<in\>\<cal-B\><text| we have that
+        ><around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B\<in\>\<cal-B\>
+      </equation>
+
+      \ Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-B\>>
+      then <math|<around*|{|<around*|(|A<rsub|i>|)><rsub|<around*|[|2,y|]>>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><rsub|1>>
+      so that <math|<big|cup><rsub|i\<in\>\<bbb-N\>><around*|(|A<rsub|i>|)><rsub|<around*|[|2,y|]>>\<in\>\<cal-A\><rsub|1>>.
+      As by [lemma: <reference|lemma 20.613.279>]
+      <math|<around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)><rsub|<around*|[|2,y|]>>=<big|cup><rsub|i\<in\>\<bbb-N\>><around*|(|A<rsub|i>|)><rsub|<around*|[|2,y|]>>>
+      it follows that <math|<around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)><rsub|<around*|[|2,y|]>>\<in\>\<cal-A\><rsub|1>>
+      hence <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-B\>>.
+      So\ 
+
+      <\equation>
+        <label|eq 20.940.279>\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-B\><text|
+        we have ><big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-B\>
+      </equation>
+
+      Combining [eqs: <reference|eq 20.938.279>, <reference|eq 20.939.279>,
+      <reference|eq 20.940.279>] proves that\ 
+
+      <\equation>
+        <label|eq 20.941.279>\<cal-B\><text| is a >\<sigma\><text|-algebra on
+        >X<rsub|1>\<cdot\>X<rsub|2>
+      </equation>
+
+      Let <math|><math|E<rsub|1>\<cdot\>E<rsub|2>\<in\><around*|{|<big|prod><rsub|i\<in\><around*|{|1,2|}>>E<rsub|i>\|\<forall\>i\<in\><around*|{|1,2|}><text|
+      >E<rsub|i>\<in\>\<cal-A\><rsub|i>|}>> then
+      <math|E<rsub|1>\<in\>\<cal-A\><rsub|1>\<wedge\>E<rsub|2>\<in\>\<cal-A\><rsub|2>>.
+      Using \ [lemma: <reference|lemma 20.613.279>] we have then that
+      <math|<around*|(|A<rsub|1>\<cdot\>A<rsub|2>|)><rsub|<around*|[|2,y|]>>=<choice|<tformat|<table|<row|<cell|E<rsub|1>\<in\>\<cal-A\><rsub|1><text|
+      if >x\<in\>E<rsub|2>>>|<row|<cell|\<varnothing\>\<in\>\<cal-A\><rsub|1><text|
+      if >x\<in\>X<rsub|1>\\E<rsub|2>>>>>>\<in\>\<cal-A\><rsub|1>> so that
+      <math|E<rsub|1>\<cdot\>E<rsub|2>\<in\>\<cal-B\>>. So we have proved
+      that\ 
+
+      <\equation*>
+        <around*|{|<big|prod><rsub|i\<in\><around*|{|1,2|}>>E<rsub|i>\|\<forall\>i\<in\><around*|{|1,2|}><text|
+        >E<rsub|i>\<in\>\<cal-A\><rsub|i>|}>\<subseteq\>\<cal-B\>
+      </equation*>
+
+      As by [corollary: <reference|product algebra equivalences (1)>]
+      <math|\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>=\<sigma\><around*|[|<around*|{|<big|prod><rsub|i\<in\><around*|{|1,2|}>>E<rsub|i>\|\<forall\>i\<in\><around*|{|1,2|}><text|
+      >E<rsub|i>\<in\>\<cal-A\><rsub|i>|}>|]>> we have using the above, [eq:
+      <reference|eq 20.941.279>] and [theorem: <reference|measure generated
+      sigma algebra>] that\ 
+
+      <\equation*>
+        \<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>\<subseteq\>B
+      </equation*>
+
+      Hence <math|\<forall\>A\<in\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>>
+      we have <math|A\<in\>\<cal-B\>> so that
+
+      <\equation*>
+        A<rsub|<around*|[|2,y|]>>\<in\>\<cal-A\><rsub|1>
+      </equation*>
+    </enumerate>
+  </proof>
 
   \ 
 
@@ -46490,7 +46900,7 @@
     <associate|chapter-nr|19>
     <associate|item-nr|>
     <associate|last-item-nr|2>
-    <associate|page-first|1221>
+    <associate|page-first|1223>
     <associate|section-nr|1>
     <associate|subsection-nr|7>
   </collection>
@@ -46999,7 +47409,6 @@
     <associate|eq 20.284.221|<tuple|20.310|?>>
     <associate|eq 20.29.156|<tuple|20.29|?>>
     <associate|eq 20.290.279|<tuple|20.920|?>>
-    <associate|eq 20.293.279|<tuple|20.924|?>>
     <associate|eq 20.294.279|<tuple|20.924|?>>
     <associate|eq 20.295.220|<tuple|20.324|?>>
     <associate|eq 20.296.220|<tuple|20.325|?>>
@@ -47666,7 +48075,18 @@
     <associate|eq 20.929.279|<tuple|20.929|?>>
     <associate|eq 20.93.200|<tuple|20.138|?>>
     <associate|eq 20.930.279|<tuple|20.930|?>>
+    <associate|eq 20.931.279|<tuple|20.931|?>>
+    <associate|eq 20.932.279|<tuple|20.932|?>>
+    <associate|eq 20.933.279|<tuple|20.933|?>>
+    <associate|eq 20.934.279|<tuple|20.934|?>>
+    <associate|eq 20.935.279|<tuple|20.935|?>>
+    <associate|eq 20.936.279|<tuple|20.936|?>>
+    <associate|eq 20.937.279|<tuple|20.937|?>>
+    <associate|eq 20.938.279|<tuple|20.938|?>>
+    <associate|eq 20.939.279|<tuple|20.939|?>>
     <associate|eq 20.94.200|<tuple|20.139|?>>
+    <associate|eq 20.940.279|<tuple|20.940|?>>
+    <associate|eq 20.941.279|<tuple|20.941|?>>
     <associate|eq 20.95.200|<tuple|20.140|?>>
     <associate|eq 20.96.200|<tuple|20.141|?>>
     <associate|eq 20.97.200|<tuple|20.142|?>>
@@ -47826,6 +48246,8 @@
     <associate|lemma 20.559.249|<tuple|20.590|?>>
     <associate|lemma 20.594.271|<tuple|20.595|?>>
     <associate|lemma 20.595.271|<tuple|20.596|?>>
+    <associate|lemma 20.613.279|<tuple|20.613|?>>
+    <associate|lemma 20.614.279|<tuple|20.614|?>>
     <associate|lemma 20.78.156|<tuple|20.86|?>>
     <associate|lemma 20.80.156|<tuple|20.88|?>>
     <associate|lemma 20.90.156|<tuple|20.102|?>>
@@ -48583,6 +49005,10 @@
       <with|mode|<quote|math>|\<sigma\>>-algebras
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-153>>
+
+      <with|par-left|<quote|1tab>|20.8.2<space|2spc>Product measures
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-154>>
     </associate>
   </collection>
 </auxiliary>
