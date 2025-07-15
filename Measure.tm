@@ -14123,6 +14123,140 @@
     measure on <math|\<cal-A\>>.
   </definition>
 
+  <\theorem>
+    <label|measure countable union pairwise>Let
+    <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a measure
+    space and <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
+    then there exist a <with|font-series|bold|pairwise disjoint family>
+    <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
+    such that
+
+    <\equation*>
+      \<forall\>i\<in\>\<bbb-N\><text| we have
+      >B<rsub|i>\<subseteq\>A<rsub|i>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      <big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>=<big|sqcup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Using [lemma: <reference|lemma 20.161.201>] we have for
+    <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>> defined by
+
+    <\equation*>
+      B<rsub|i>=<choice|<tformat|<table|<row|<cell|A<rsub|1><text| if
+      >i=1>>|<row|<cell|A<rsub|i>\\<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,i-1|}>>A<rsub|j><text|
+      if >i\<in\><around*|{|2,\<ldots\>,\<infty\>|}>>>>>>
+    </equation*>
+
+    that\ 
+
+    <\equation*>
+      \<forall\>i\<in\>\<bbb-N\><text| we have
+      >B<rsub|i>\<subseteq\>A<rsub|i>
+    </equation*>
+
+    <\equation*>
+      <big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>=<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>
+    </equation*>
+
+    and
+
+    <\equation*>
+      \<forall\>i,j\<in\>\<bbb-N\><text| with >i\<neq\>j<text| then
+      >B<rsub|i><big|cap>B<rsub|j>\<neq\>\<varnothing\>
+    </equation*>
+
+    Let <math|i\<in\>\<bbb-N\>> then we have either:
+
+    <\description>
+      <item*|<math|i=1>>Then <math|B<rsub|i>=B<rsub|1>=A<rsub|1>\<in\>\<cal-A\>>
+
+      <item*|<math|1\<less\>i>>Then by [theorems: <reference|measure sigma
+      algebra equivalences>, <reference|measure algebra properties>]
+      <math|B<rsub|i>=A<rsub|i>\\<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,i-1|}>>A<rsub|j>\<in\>\<cal-A\>>
+    </description>
+
+    so that\ 
+
+    <\equation*>
+      <around*|{|B<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>
+    </equation*>
+  </proof>
+
+  <\theorem>
+    <label|measure measure space properties (2)>Let
+    <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a measure
+    space then for every <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
+    we have\ 
+
+    <\equation*>
+      \<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>\<leqslant\><big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|i>|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Using [theorem: <reference|measure countable union pairwise>] there
+    exists a <with|font-series|bold|pairwise disjoint >family
+    <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
+    such that\ 
+
+    <\equation>
+      <label|eq 20.113.201>\<forall\>i\<in\>\<bbb-N\><text|
+      >B<rsub|i>\<subseteq\>A<rsub|i><text| and
+      ><big|sqcup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>=<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>
+    </equation>
+
+    So\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.113.201>]>>>|<cell|\<mu\><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|B<rsub|i>|)>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[eq:
+      <reference|eq 20.113.201>]>\<wedge\><text|[theorem: <reference|extended
+      infinite sum properties>]>>>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|i>|)>>>>>
+    </eqnarray*>
+  </proof>
+
+  <\corollary>
+    <label|measure measure space properties (4)>Let
+    <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a measure
+    space, <math|n\<in\>\<bbb-N\>> then for every
+    <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<cal-A\>>
+    we have\ 
+
+    <\equation*>
+      \<mu\><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)>\<leqslant\><big|sum><rsub|i=1><rsup|n>\<mu\><around*|(|A<rsub|i>|)>
+    </equation*>
+  </corollary>
+
+  <\proof>
+    Define
+
+    <\equation*>
+      <around*|{|B<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><text|
+      by >B<rsub|i>=<choice|<tformat|<table|<row|<cell|A<rsub|i><text| if
+      >i\<in\><around*|{|1,\<ldots\>,n|}>>>|<row|<cell|\<varnothing\><text|
+      if >i\<in\>\<bbb-N\>\\<around*|{|1,\<ldots\>,n|}>>>>>>
+    </equation*>
+
+    then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<mu\><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>|)>>|<cell|=>|<cell|\<mu\><around*|(|<around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>|)><big|cup>\<varnothing\>|)>>>|<row|<cell|>|<cell|=>|<cell|\<mu\><around*|(|<around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>|)><big|cup><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>\\<around*|{|1,\<ldots\>,n|}>>B<rsub|i>|)>|)>>>|<row|<cell|>|<cell|<below|\<equallim\>|<text|[theorem:
+      <reference|family properties (2)>]>>>|<cell|\<mu\><around*|(|<big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>B<rsub|i>|)>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[theorem:
+      <reference|measure measure space properties
+      (2)>]>>>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|B<rsub|i>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|extended series and index
+      translation>]>>>|<cell|<big|sum><rsub|i=1><rsup|n>\<mu\><around*|(|B<rsub|i>|)>+<big|sum><rsub|i=n+1><rsup|\<infty\>>\<mu\><around*|(|B<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n>\<mu\><around*|(|A<rsub|i>|)>>>>>
+    </eqnarray*>
+
+    \;
+  </proof>
+
   Once we have defined a measure space we can define <math|\<sigma\>>-finite
   sets and <math|\<sigma\>>-finite measures.
 
@@ -14137,12 +14271,12 @@
     <math|A=<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>>.
   </definition>
 
-  We can refine the above condition to disjoint sets.
+  We can refine the above condition to disjoint sets or increasing sets.\ 
 
   <\theorem>
     <label|measure sigma finite disjoint>Let
-    <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be measure
-    space and <math|A\<subseteq\>X> then we have\ 
+    <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a measure
+    space and <math|A\<subseteq\>X> then we have:\ 
 
     <\equation*>
       A<text| is >\<sigma\><text|-finite under >\<mu\><text|
@@ -14183,6 +14317,57 @@
 
       <item*|<math|\<Leftarrow\>>>This is trivial.
     </description>
+  </proof>
+
+  <\theorem>
+    <label|measure sigma finite increasing>Let
+    <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a measure
+    space and <math|A\<subseteq\>X> then we have:\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|A<text| is >\<sigma\><text|-finite
+      under >\<mu\>>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|\<exists\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><text|
+      with >\<forall\>i\<in\>\<bbb-N\><text|
+      >\<mu\><around*|(|A<rsub|i>|)>\<leqslant\>\<mu\><around*|(|A<rsub|i+1>|)>\<wedge\>\<mu\><around*|(|A<rsub|i>|)>\<less\>\<infty\><text|
+      such that >A=<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>>|<cell|>>>>
+    </eqnarray*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>As <math|A> is <math|\<sigma\>>-finite
+      there exist a <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
+      such that <math|A=<big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>>. Define
+      now\ 
+
+      <\equation*>
+        <around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><text|
+        by >A<rsub|i>=<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,i|}>>B<rsub|j><below|\<in\>|<text|[theore:
+        <reference|measure countable union is in sigma algebra>]>>\<cal-A\>
+      </equation*>
+
+      Using [lemma: <reference|lemma 20.102.202>] it follows that\ 
+
+      <\equation*>
+        \<forall\>i\<in\>\<bbb-N\><text| >A<rsub|i>\<subseteq\>A<rsub|i+1><text|
+        and ><big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>=<big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>=A
+      </equation*>
+
+      Finally we have also\ 
+
+      <\equation*>
+        \<forall\>i\<in\>\<bbb-N\><text| that
+        >\<mu\><around*|(|A<rsub|i>|)>=\<mu\><around*|(|<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,i|}>>B<rsub|i>|)><below|\<leqslant\>|<text|[corollary:
+        <reference|measure measure space properties
+        (4)>]>><big|sum><rsub|j=1><rsup|j>\<mu\><around*|(|B<rsub|j>|)>\<less\>\<infty\>
+      </equation*>
+
+      <item*|<math|\<Leftarrow\>>>This is trivial
+    </description>
+
+    \;
   </proof>
 
   <\definition>
@@ -14226,6 +14411,24 @@
         \<alpha\>\<cdot\>\<mu\>:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|]><text|
         defined by ><around*|(|\<alpha\>\<cdot\>\<mu\>|)><around*|(|A|)>=\<alpha\>\<cdot\>\<mu\><around*|(|A|)>
       </equation*>
+
+      is a measure on <math|\<cal-A\>>.
+
+      <item>If <math|\<mu\>:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|]>>
+      is a measure and <math|B\<in\>\<cal-A\>> then
+
+      <\equation*>
+        \<mu\><rsub|B>:\<cal-A\>\<rightarrow\><around*|[|0,\<infty\>|]><text|
+        defined by >\<mu\><rsub|B><around*|(|A|)>=\<mu\><around*|(|A<big|cap>B|)>
+      </equation*>
+
+      is a measure on <math|\<cal-A\>>.\ 
+
+      <\note>
+        As <math|A,B\<in\>\<cal-A\>> we have
+        <math|A<big|cap>B\<in\>\<cal-A\>> so that <math|\<mu\><rsub|B>> is
+        well defined.
+      </note>
     </enumerate>
   </theorem>
 
@@ -14264,7 +14467,22 @@
       </eqnarray*>
 
       proving that <math|\<alpha\>\<cdot\>\<mu\>> is a measure.
+
+      <item>First we have\ 
+
+      <\equation*>
+        \<mu\><rsub|B><around*|(|\<varnothing\>|)>=\<mu\><around*|(|\<varnothing\><big|cap>B|)>=\<mu\><around*|(|\<varnothing\>|)>=0
+      </equation*>
+
+      Secondly if <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\><rsub|0>>\<subseteq\>\<cal-A\>>
+      is pairwise disjoint then\ 
+
+      <\equation*>
+        \<mu\><rsub|B><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=\<mu\><around*|(|<around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)><big|cap>B|)>=\<mu\><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>><around*|(|A<rsub|i><big|cap>B|)>|)>=<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|i><big|cap>B|)>=<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><rsub|B><around*|(|A<rsub|i>|)>
+      </equation*>
     </enumerate>
+
+    \;
   </proof>
 
   <\theorem>
@@ -14396,8 +14614,6 @@
     </enumerate>
   </proof>
 
-  \;
-
   <\definition>
     <label|measure finite measure><index|finite measure>Let
     <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a measure
@@ -14433,104 +14649,6 @@
   </proof>
 
   <\theorem>
-    <label|measure countable union pairwise>Let
-    <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a measure
-    space and <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
-    then there exist a <with|font-series|bold|pairwise disjoint family>
-    <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
-    such that
-
-    <\equation*>
-      \<forall\>i\<in\>\<bbb-N\><text| we have
-      >B<rsub|i>\<subseteq\>A<rsub|i>
-    </equation*>
-
-    and\ 
-
-    <\equation*>
-      <big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>=<big|sqcup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>
-    </equation*>
-  </theorem>
-
-  <\proof>
-    Using [lemma: <reference|lemma 20.161.201>] we have for
-    <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>> defined by
-
-    <\equation*>
-      B<rsub|i>=<choice|<tformat|<table|<row|<cell|A<rsub|1><text| if
-      >i=1>>|<row|<cell|A<rsub|i>\\<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,i-1|}>>A<rsub|j><text|
-      if >i\<in\><around*|{|2,\<ldots\>,\<infty\>|}>>>>>>
-    </equation*>
-
-    that\ 
-
-    <\equation*>
-      \<forall\>i\<in\>\<bbb-N\><text| we have
-      >B<rsub|i>\<subseteq\>A<rsub|i>
-    </equation*>
-
-    <\equation*>
-      <big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>=<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>
-    </equation*>
-
-    and
-
-    <\equation*>
-      \<forall\>i,j\<in\>\<bbb-N\><text| with >i\<neq\>j<text| then
-      >B<rsub|i><big|cap>B<rsub|j>\<neq\>\<varnothing\>
-    </equation*>
-
-    Let <math|i\<in\>\<bbb-N\>> then we have either:
-
-    <\description>
-      <item*|<math|i=1>>Then <math|B<rsub|i>=B<rsub|1>=A<rsub|1>\<in\>\<cal-A\>>
-
-      <item*|<math|1\<less\>i>>Then by [theorems: <reference|measure sigma
-      algebra equivalences>, <reference|measure algebra properties>]
-      <math|B<rsub|i>=A<rsub|i>\\<big|cup><rsub|j\<in\><around*|{|1,\<ldots\>,i-1|}>>A<rsub|j>\<in\>\<cal-A\>>
-    </description>
-
-    so that\ 
-
-    <\equation*>
-      <around*|{|B<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>
-    </equation*>
-  </proof>
-
-  <\theorem>
-    <label|measure measure space properties (2)>Let
-    <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a measure
-    space then for every <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
-    we have\ 
-
-    <\equation*>
-      \<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>\<leqslant\><big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|i>|)>
-    </equation*>
-  </theorem>
-
-  <\proof>
-    Using [theorem: <reference|measure countable union pairwise>] there
-    exists a <with|font-series|bold|pairwise disjoint >family
-    <math|<around*|{|B<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
-    such that\ 
-
-    <\equation>
-      <label|eq 20.113.201>\<forall\>i\<in\>\<bbb-N\><text|
-      >B<rsub|i>\<subseteq\>A<rsub|i><text| and
-      ><big|sqcup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>=<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>
-    </equation>
-
-    So\ 
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|\<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>>|<cell|\<equallim\><rsub|<text|[eq:
-      <reference|eq 20.113.201>]>>>|<cell|\<mu\><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|B<rsub|i>|)>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[eq:
-      <reference|eq 20.113.201>]>\<wedge\><text|[theorem: <reference|extended
-      infinite sum properties>]>>>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|i>|)>>>>>
-    </eqnarray*>
-  </proof>
-
-  <\theorem>
     <label|measure measure space properties (3)>Let
     <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a measure
     space then\ 
@@ -14541,7 +14659,7 @@
       <math|A<rsub|i>\<subseteq\>A<rsub|i+1>> then
 
       <\equation*>
-        \<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\><rsub|0>>A<rsub|i>|)>=<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|i>|)>=sup<around*|(|<around*|{|\<mu\><around*|(|A<rsub|i>|)>\|i\<in\>\<bbb-N\>|}>|)>
+        \<mu\><around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=<below|lim|i\<rightarrow\>\<infty\>>\<mu\><around*|(|A<rsub|i>|)>=sup<around*|(|<around*|{|\<mu\><around*|(|A<rsub|i>|)>\|i\<in\>\<bbb-N\>|}>|)>
       </equation*>
 
       <item><math|\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
@@ -23930,8 +24048,8 @@
 
     <\equation*>
       f<rsub|A\<uparrow\>X>:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
-      by >f<rsub|A\<uparrow\>X>=f<rsub|A\<uparrow\>X><text| [see definition:
-      <reference|measurable function extension (1)>]>
+      by >f<rsub|A\<uparrow\>X>=f<rsub|A\<uparrow\><rsup|0>X><text| [see
+      definition: <reference|measurable function extension (1)>]>
     </equation*>
 
     so that\ 
@@ -46526,13 +46644,18 @@
       <item><math|\<forall\>y\<in\>X<rsub|2>>
       <math|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)><rsub|<around*|[|2,y|]>>=X<rsub|1>>
 
-      <item><math|\<forall\>x\<in\>X<rsub|1>,>
-      <math|\<forall\>B\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>>
-      <math|<around*|(|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B|)><rsub|<around*|[|1,x|]>>=X<rsub|2>\\B<rsub|<around*|[|1,x|]>>>
+      <item><math|\<forall\>x\<in\>X<rsub|1><text| that
+      <math|\<varnothing\><rsub|<around*|[|1,x|]>>=\<varnothing\>> and
+      <math|\<forall\>y\<in\>X<rsub|2>> we have
+      <math|\<varnothing\><rsub|<around*|[|2,y|]>>=\<varnothing\>>>>
 
-      <item><math|\<forall\>y\<in\>X<rsub|1>,>
-      <math|\<forall\>B\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>>
-      <math|<around*|(|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B|)><rsub|<around*|[|2,y|]>>=X<rsub|1>\\B<rsub|<around*|[|2,y|]>>>
+      <item><math|\<forall\>x\<in\>X<rsub|1>,>
+      <math|\<forall\>A,B\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>>
+      <math|<around*|(|A\\B|)><rsub|<around*|[|1,x|]>>=A<rsub|<around*|[|1,x|]>>\\B<rsub|<around*|[|1,x|]>>>
+
+      <item><math|\<forall\>y\<in\>X<rsub|2>,>
+      <math|\<forall\>A,B\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>>
+      <math|<around*|(|A\\B|)><rsub|<around*|[|2,y|]>>=A<rsub|<around*|[|2,y|]>>\\B<rsub|<around*|[|2,y|]>>>
 
       <item>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>>,
       <math|x\<in\>X<rsub|1>> then <math|<around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)><rsub|<around*|[|1,x|]>>=<big|cup><rsub|i\<in\>I><around*|(|A<rsub|i>|)><rsub|<around*|[|1,x|]>>>
@@ -46554,6 +46677,12 @@
         if >y\<in\>A<rsub|2>>>|<row|<cell|\<varnothing\><text| if
         >y\<in\>X<rsub|2>\\A<rsub|2>>>>>>>
       </enumerate>
+
+      <item>Let <math|A,B\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>> and
+      <math|x\<in\>X<rsub|1>> then <math|<around*|(|A<big|cap>B|)><rsub|<around*|[|1,x|]>>=A<rsub|<around*|[|1,x|]>><big|cap>A<rsub|<around*|[|1,x|]>>>
+
+      <item>Let <math|A,B\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>> and
+      <math|y\<in\>X<rsub|2>> then <math|<around*|(|A<big|cap>B|)><rsub|<around*|[|2,y|]>>=A<rsub|<around*|[|2,y|]>><big|cap>A<rsub|<around*|[|2,y|]>>>
     </enumerate>
   </lemma>
 
@@ -46583,30 +46712,34 @@
         <around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)><rsub|<around*|[|1,y|]>>=X<rsub|1>
       </equation*>
 
+      <item>Let <math|x\<in\>X<rsub|1>> then
+      <math|\<varnothing\><rsub|<around*|[|1,x|]>>=<around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>\<varnothing\>|}>=\<varnothing\>>.
+      Let <math|y\<in\>X<rsub|2>> then <rigid|<math|\<varnothing\><rsub|<around*|[|2,y|]>>=<around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>\<varnothing\>|}>=\<varnothing\>>.>
+
       <item>Let <math|x\<in\>X<rsub|1>> and
-      <math|B\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>>. Then we have\ 
+      <math|A,B\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>>. Then we have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|y\<in\><around*|(|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B|)><rsub|<around*|[|1,x|]>>>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>X<rsub|2>\<wedge\><around*|(|x,y|)>\<in\><around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|x\<in\>X<rsub|1>>>|<cell|y\<in\>X<rsub|2>\<wedge\><around*|(|x,y|)>\<nin\>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>X<rsub|2>\<wedge\>y\<nin\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>B|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>X<rsub|2>\<wedge\>x\<nin\>B<rsub|<around*|[|1,x|]>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>X<rsub|2>\\B<rsub|<around*|[|1,x|]>>>>>>
+        <tformat|<table|<row|<cell|y\<in\><around*|(|A\\B|)><rsub|<around*|[|1,x|]>>>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>A\\B|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>X<rsub|2>\<wedge\><around*|(|x,y|)>\<in\>A\\B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>X<rsub|2>\<wedge\><around*|(|x,y|)>\<in\>A\<wedge\><around*|(|x,y|)>\<nin\>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>A|}>\<wedge\>y\<nin\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>B|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>A<rsub|<around*|[|1,x|]>>\<wedge\>y\<nin\>B<rsub|<around*|[|1,x|]>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>A<rsub|<around*|[|1,x|]>>/B<rsub|<around*|[|1,x|]>>>>>>
       </eqnarray*>
 
       so that\ 
 
       <\equation*>
-        <around*|(|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B|)><rsub|<around*|[|1,x|]>>=X<rsub|2>\\B<rsub|<around*|[|1,x|]>>
+        <around*|(|A\\B|)><rsub|<around*|[|1,x|]>>=A<rsub|<around*|[|1,x|]>>\\B<rsub|<around*|[|1,x|]>>
       </equation*>
 
       <item>Let <math|y\<in\>X<rsub|2>> and
       <math|B\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>>. Then we have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|x\<in\><around*|(|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B|)><rsub|<around*|[|2,y|]>>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X<rsub|1>\<wedge\><around*|(|x,y|)>\<in\><around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|y\<in\>X<rsub|2>>>|<cell|x\<in\>X<rsub|1>\<wedge\><around*|(|x,y|)>\<nin\>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X<rsub|1>\<wedge\>x\<nin\><around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>B|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X<rsub|1>\<wedge\>x\<nin\>B<rsub|<around*|[|2,y|]>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X<rsub|1>\\B<rsub|<around*|[|2,y|]>>>>>>
+        <tformat|<table|<row|<cell|x\<in\><around*|(|A\\B|)><rsub|<around*|[|2,y|]>>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>A\\B|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X<rsub|1>\<wedge\><around*|(|x,y|)>\<in\>A\\B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X<rsub|1>\<wedge\><around*|(|x,y|)>\<in\>A\<wedge\><around*|(|x,y|)>\<nin\>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>A|}>\<wedge\>x\<nin\><around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>B|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>A<rsub|<around*|[|2,y|]>>\<wedge\>x\<nin\>B<rsub|<around*|[|2,y|]>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>A<rsub|<around*|[|2,y|]>>/B<rsub|<around*|[|2,y|]>>>>>>
       </eqnarray*>
 
       so that\ 
 
       <\equation*>
-        <around*|(|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B|)><rsub|<around*|[|2,y|]>>=X<rsub|1>\\B<rsub|<around*|[|2,y|]>>
+        <around*|(|A\\B|)><rsub|<around*|[|2,y|]>>=A<rsub|<around*|[|2,y|]>>\\B<rsub|<around*|[|2,y|]>>
       </equation*>
 
       <item>Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>>
@@ -46697,6 +46830,32 @@
           </equation*>
         </description>
       </enumerate>
+
+      <item>Let <math|x\<in\>X<rsub|1>>, <math|A,B\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>>
+      then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|y\<in\><around*|(|A<big|cap>B|)><rsub|<around*|[|1,x|]>>>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>A<big|cap>B|}>>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|x\<in\>X<rsub|1>>>|<cell|<around*|(|x,y|)>\<in\>A<big|cap>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|x,y|)>\<in\>A\<wedge\><around*|(|x,y|)>\<in\>B>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|x\<in\>X<rsub|1>>>|<cell|y\<in\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>A|}>\<wedge\>y\<in\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>B|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>A<rsub|<around*|[|1,x|]>>\<wedge\>y\<in\>B<rsub|<around*|[|1,x|]>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>A<rsub|<around*|[|1,x|]>><big|cap>B<rsub|<around*|[|1,x|]>>>>>>
+      </eqnarray*>
+
+      which proves that\ 
+
+      <\equation*>
+        <around*|(|A<big|cap>B|)><rsub|<around*|[|1,x|]>>=A<rsub|<around*|[|1,x|]>><big|cap>B<rsub|<around*|[|1,x|]>>
+      </equation*>
+
+      <item>Let <math|y\<in\>X<rsub|2>>, <math|A,B\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>>
+      then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<in\><around*|(|A<big|cap>B|)><rsub|<around*|[|2,y|]>>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>A<big|cap>B|}>>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|y\<in\>X<rsub|2>>>|<cell|<around*|(|x,y|)>\<in\>A<big|cap>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|x,y|)>\<in\>A\<wedge\><around*|(|x,y|)>\<in\>B>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|y\<in\>X<rsub|2>>>|<cell|x\<in\><around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>A|}>\<wedge\>x\<in\><around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>B|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>A<rsub|<around*|[|2,y|]>>\<wedge\>x\<in\>B<rsub|<around*|[|2,y|]>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>A<rsub|<around*|[|2,y|]>><big|cap>B<rsub|<around*|[|2,y|]>>>>>>
+      </eqnarray*>
+
+      which proves that\ 
+
+      <\equation*>
+        <around*|(|A<big|cap>B|)><rsub|<around*|[|2,y|]>>=A<rsub|<around*|[|2,y|]>><big|cap>B<rsub|<around*|[|2,y|]>>
+      </equation*>
     </enumerate>
 
     \;
@@ -46888,6 +47047,633 @@
     </enumerate>
   </proof>
 
+  <\lemma>
+    <label|lemma 20.619.279>Let <math|<around*|\<langle\>|X<rsub|1>,\<cal-A\><rsub|1>,\<mu\><rsub|1>|\<rangle\>>>,
+    <math|<around*|\<langle\>|X<rsub|2>,\<cal-A\><rsub|2>,\<mu\><rsub|2>|\<rangle\>>>
+    be two measure spaces where <math|\<mu\><rsub|1>>, <math|\<mu\><rsub|2>>
+    are finite measures then we have <math|\<forall\>Q\<in\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>>
+    that\ 
+
+    <\enumerate>
+      <item><math|f<rsub|1,Q>:X<rsub|1>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>>
+      defined by <math|f<rsub|1,Q><around*|(|x|)>=\<mu\><rsub|2><around*|(|Q<rsub|<around*|[|1,x|]>>|)>>
+      we have that <math|f<rsub|1,Q>\<in\>\<cal-M\><rsup|><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+
+      <item><math|f<rsub|2,Q>:X<rsub|2>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>>
+      defined by <math|f<rsub|2,Q><around*|(|x|)>=\<mu\><rsub|1><around*|(|Q<rsub|<around*|[|2,x|]>>|)>>
+      we have that \ <math|f<rsub|2,Q>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    </enumerate>
+
+    <\note>
+      As <math|\<mu\><rsub|1>>, <math|\<mu\><rsub|2>> are finite measures it
+      follows that <math|><math|f<rsub|1,Q><around*|(|X<rsub|1>|)>\<subseteq\><around*|[|0,\<infty\>|[>\<wedge\>f<rsub|2,Q><around*|(|X<rsub|2>|)>\<subseteq\><around*|[|0,\<infty\>|[>>
+    </note>
+  </lemma>
+
+  <\proof>
+    \ We use the concept of Dynkin systems to prove this theorem.
+
+    <\enumerate>
+      <item>Let <math|x\<in\>X<rsub|1>> then we have
+      <math|f<rsub|1,X<rsub|1>\<cdot\>X<rsub|2>><around*|(|x|)>=\<mu\><rsub|2><around*|(|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)><rsub|<around*|[|1,x|]>>|)>\<equallim\><rsub|<text|[lemma:
+      <reference|lemma 20.613.279>]>>\<mu\><rsub|2><around*|(|X<rsub|2>|)>\<in\>\<bbb-R\>>
+      so that
+
+      <\equation>
+        <label|eq 20.942.279>f<rsub|1,X<rsub|1>\<cdot\>X<rsub|2>>=C<rsub|\<mu\><rsub|2><around*|(|X<rsub|2>|)>>
+      </equation>
+
+      which by [example: <reference|measurable function constant function>]
+      proves that\ 
+
+      <\equation>
+        <label|eq 20.943.279>f<rsub|1,X<rsub|1>\<cdot\>X<rsub|2>>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,\<bbb-R\>|]>
+      </equation>
+
+      Let <math|A,B\<in\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>> then
+      for <math|x\<in\>X<rsub|1>> we have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|f<rsub|1,A\\B><around*|(|x|)>>|<cell|=>|<cell|\<mu\><rsub|2><around*|(|<around*|(|A\\B|)><rsub|<around*|[|1,x|]>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+        <reference|lemma 20.613.279>]>><rsub|<text|>>>|<cell|\<mu\><rsub|2><around*|(|A<rsub|<around*|[|1,x|]>>\\B<rsub|<around*|[|1,x|]>>|)>>>|<row|<cell|>|<cell|<below|\<equallim\>|<text|[theorem:
+        <reference|measure measure space properties
+        (1)>]>\<wedge\>\<mu\><rsub|2><text| is
+        finite>>>|<cell|\<mu\><rsub|2><around*|(|A<rsub|<around*|[|1,x|]>>|)>-\<mu\><rsub|2><around*|(|B<rsub|<around*|[|1,x|]>>|)>>>|<row|<cell|>|<cell|=>|<cell|f<rsub|1,A><around*|(|x|)>-f<rsub|1,B><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|f<rsub|1,A>-f<rsub|1,B>|)><around*|(|x|)>>>>>
+      </eqnarray*>
+
+      which proves that\ 
+
+      <\equation>
+        <label|eq 20.944.279>\<forall\>A,B\<in\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2><text|
+        we have >f<rsub|1,A\\B>=f<rsub|1,A>-f<rsub|1,B>
+      </equation>
+
+      In the special cases where <math|A=X<rsub|1>\<cdot\>X<rsub|2>><space|1em>the
+      above becomes \ 
+
+      <\equation>
+        <label|eq 20.945.279>\<forall\>A\<in\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2><text|
+        then >f<rsub|1,<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\A>=f<rsub|1,X<rsub|1>\<cdot\>X<rsub|2>>-f<rsub|1,A>
+      </equation>
+
+      Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>>
+      be pairwise disjoint. Let <math|x\<in\>X<rsub|1>> and
+      <math|i,j\<in\>\<bbb-N\>> with <math|i\<neq\>j> then we have
+      \ <math|<around*|(|A<rsub|i>|)><rsub|<around*|[|1,x|]>><big|cap><around*|(|A<rsub|j>|)><rsub|<around*|[|1,x|]>>\<equallim\><rsub|<text|[lemma:
+      <reference|lemma 20.613.279>]>><rsub|<text|>><around*|(|A<rsub|i><big|cap>A<rsub|j>|)><rsub|<around*|[|1,x|]>>=\<varnothing\><rsub|<around*|[|1,x|]>>\<equallim\><rsub|<text|[lemma:
+      <reference|lemma 20.613.279>]>><rsub|<text|>>\<varnothing\>>. Hence
+
+      <\equation>
+        <label|eq 20.946.279>\<forall\>x\<in\>X<rsub|1><text| we have
+        ><around*|{|<around*|(|A<rsub|i>|)><rsub|<around*|[|1,x|]>>|}><rsub|i\<in\>\<bbb-N\>><text|
+        is pairwise disjoint>
+      </equation>
+
+      So for <math|x\<in\>X<rsub|1>> we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|f<rsub|1,<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>><around*|(|x|)>>|<cell|=>|<cell|\<mu\><rsub|2><around*|(|<around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)><rsub|<around*|[|1,x|]>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+        <reference|lemma 20.613.279>]>><rsub|<text|>>>|<cell|\<mu\><rsub|2><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>><around*|(|A<rsub|i>|)><rsub|<around*|[|1,x|]>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 20.946.279>]>\<wedge\>\<mu\><rsub|2><text| is a
+        measure>>>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><rsub|2><around*|(|<around*|(|A<rsub|i>|)><rsub|<around*|[|1,x|]>>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|1,A<rsub|i>><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|1,A<rsub|i>>|)><around*|(|x|)>>>>>
+      </eqnarray*>
+
+      which proves that\ 
+
+      <\equation>
+        <label|eq 20.947.279>\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2><text|
+        pairwise disjoint we have >f<rsub|1,<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>>=<big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|1,A<rsub|i>>
+      </equation>
+
+      Define now
+
+      <\equation*>
+        \<cal-D\>=<around*|{|D\<in\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>\|f<rsub|1,D>\<in\>\<cal-M\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>|}>
+      </equation*>
+
+      Using [eq: <reference|eq 20.943.279>] it follows that\ 
+
+      <\equation>
+        <label|eq 20.948.279>X<rsub|1>\<cdot\>X<rsub|2>\<in\>\<cal-D\>
+      </equation>
+
+      If <math|A\<in\>\<cal-D\>> then <math|f<rsub|1,A>\<in\>\<cal-M\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>,
+      further by [eq: <reference|eq 20.943.279>]
+      <math|f<rsub|1,X<rsub|1>\<cdot\>X<rsub|2>>\<in\>\<cal-M\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+      so that by [theorem: <reference|measurable function properties (1)>]
+      <math|f<rsub|1,<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\Q>\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.945.279>]>>f<rsub|1,X<rsub|1>\<cdot\>X<rsub|2>>-f<rsub|1,A>\<in\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>.
+      Hence\ 
+
+      <\equation>
+        <label|eq 20.949.279>\<forall\>A\<in\>\<cal-D\><text| we have that
+        ><around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\A\<in\>\<cal-D\>
+      </equation>
+
+      Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-D\>>
+      be pairwise disjoint then <math|\<forall\>i\<in\>\<bbb-N\>> we have
+      that <math|f<rsub|1,A<rsub|i>>\<in\>\<cal-M\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>,
+      as <math|\<forall\>x\<in\>X<rsub|1>>
+      <math|f<rsub|1,A<rsub|i>><around*|(|x|)>=\<mu\><rsub|2><around*|(|A<rsub|<around*|[|1,x|]>>|)>\<in\><around*|[|0,\<infty\>|[>>
+      it follows that <math|f<rsub|1,A<rsub|i>>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>.
+      Using Beppo's \ [theorem: <reference|Beppo Levi's Theorem>] it follows
+      that <math|<big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|1,A<rsub|i>>\<in\>\<cal-M\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>,
+      hence, as <math|f<rsub|1,<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>>\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.947.279>]>><big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|1,A<rsub|i>>>,
+      it follows that <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-D\>>.
+      To summarize
+
+      <\equation>
+        <label|eq 20.950.279>\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-D\><text|
+        pairwise disjoing we have ><big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-D\>
+      </equation>
+
+      By [eqs: <reference|eq 20.948.279>, <reference|eq 20.949.279>,
+      <reference|eq 20.950.279>] it follows by [definition:
+      <reference|measure Dynkin system>] that\ 
+
+      <\equation>
+        <label|eq 20.951.279>\<cal-D\><text| is a >Dynkin system
+      </equation>
+
+      Take\ 
+
+      <\equation*>
+        \<cal-E\>=<around*|{|<big|prod><rsub|i\<in\><around*|{|1,2|}>>E<rsub|i>\|\<forall\>i\<in\><around*|{|1,2|}><text|
+        >E<rsub|i>\<in\>\<cal-A\><rsub|i>|}><below|\<subseteq\>|<text|[theorem:
+        <reference|product algebra equivalences>]>>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>
+      </equation*>
+
+      Let <math|E=E<rsub|1>\<cdot\>E<rsub|2>\<in\>\<cal-E\>> then
+      <math|\<forall\>x\<in\>X<rsub|1>> we have either:\ 
+
+      <\description>
+        <item*|<math|x\<in\>E<rsub|1>>>Then by [lemma: <reference|lemma
+        20.613.279>] we have that <math|<around*|(|E<rsub|1>\<cdot\>E<rsub|2>|)><rsub|<around*|[|1,x|]>>=E<rsub|2>>
+        so that\ 
+
+        <\equation*>
+          f<rsub|1,E<rsub|1>\<cdot\>E<rsub|2>><around*|(|x|)>=\<mu\><rsub|2><around*|(|<around*|(|E<rsub|1>\<cdot\>E<rsub|2>|)><rsub|<around*|[|1,x|]>>|)>=\<mu\><rsub|2><around*|(|E<rsub|2>|)>=\<mu\><rsub|2><around*|(|E<rsub|2>|)>\<cdot\>\<cal-X\><rsub|X<rsub|1,>E<rsub|1>><around*|(|x|)>
+        </equation*>
+
+        <item*|<math|x\<in\>X<rsub|1>\\E<rsub|1>>>Then [lemma:
+        <reference|lemma 20.613.279>] we have that
+        <math|<around*|(|E<rsub|1>\<cdot\>E<rsub|2>|)><rsub|<around*|[|1,x|]>>=\<varnothing\>>
+        so that\ 
+
+        <\equation*>
+          f<rsub|1,E<rsub|1>\<cdot\>E<rsub|2>><around*|(|x|)>=\<mu\><rsub|2><around*|(|<around*|(|E<rsub|1>\<cdot\>E<rsub|2>|)><rsub|<around*|[|1,x|]>>|)>=\<mu\><rsub|2><around*|(|0|)>=\<mu\><rsub|2><around*|(|E<rsub|2>|)>\<cdot\>\<cal-X\><rsub|X<rsub|1>,E<rsub|1>><around*|(|x|)>
+        </equation*>
+      </description>
+
+      hence we have that\ 
+
+      <\equation*>
+        f<rsub|1,E<rsub|1>\<cdot\>E<rsub|2>>=\<mu\><rsub|2><around*|(|E<rsub|2>|)>\<cdot\>\<cal-X\><rsub|X<rsub|1>,E<rsub|1>>
+      </equation*>
+
+      As <math|E<rsub|1>\<in\>\<cal-A\><rsub|1>> it follows from [theorems:
+      <reference|measurable function charasteristic>,<reference|measurable
+      function product with scalar>] \ that
+
+      <\equation*>
+        f<rsub|1,E<rsub|1>\<cdot\>E<rsub|2>>=\<mu\><rsub|2><around*|(|E<rsub|2>|)>\<cdot\>\<cal-X\><rsub|X<rsub|1>,E<rsub|1>>\<in\>\<cal-M\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      </equation*>
+
+      which proves that <math|E=E<rsub|1>\<cdot\>E<rsub|2>\<in\>\<cal-D\>>.
+      Hence we have proved that
+
+      <\equation>
+        <label|eq 20.952.279>\<cal-E\>\<subseteq\>\<cal-D\>
+      </equation>
+
+      If <math|E=E<rsub|1>\<cdot\>E<rsub|2>,F=F<rsub|1>\<cdot\>F<rsub|2>\<in\>\<cal-E\>>
+      then we have that <math|E<rsub|1>,F<rsub|1>\<in\>\<cal-A\><rsub|1>> and
+      <math|E<rsub|2>,F<rsub|2>\<in\>\<cal-A\><rsub|2>> then we have\ 
+
+      <\equation*>
+        E<big|cap>F\<equallim\><rsub|<text|[theorem: <reference|product and
+        intersection>]>><around*|(|E<rsub|1><big|cap>F<rsub|1>|)>\<cdot\><around*|(|E<rsub|2><big|cap>F<rsub|2>|)>
+      </equation*>
+
+      which, as <math|E<rsub|1><big|cap>F<rsub|1>\<in\>\<cal-A\><rsub|i>>,
+      <math|E<rsub|2><big|cap>F<rsub|2>\<in\>\<cal-A\><rsub|2>>, proves that
+      <math|E<big|cap>F\<in\>\<cal-E\>>. Hence we have\ 
+
+      <\equation>
+        <label|eq 20.953.279>\<forall\>E,F\<in\>\<cal-E\><text| we have
+        >E<big|cap>F\<in\>\<cal-E\>
+      </equation>
+
+      Using then [theorem: <reference|measure Dynkin system condition for
+      sigma algebra (1)>] on [eq: <reference|eq 20.952.279>, <reference|eq
+      20.953.279>] gives
+
+      <\equation*>
+        \<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>=\<sigma\><around*|[|<big|prod><rsub|i\<in\><around*|{|1,2|}>>E<rsub|i>\|\<forall\>i\<in\><around*|{|1,2|}><text|
+        >E<rsub|i>\<in\>\<cal-A\><rsub|i>|]>=\<sigma\><around*|[|\<cal-E\>|]>=\<delta\><around*|[|\<cal-E\>|]>
+      </equation*>
+
+      As <math|\<cal-E\>\<subseteq\>\<cal-D\>> and <math|\<cal-D\>> is a
+      Dynkin system [see eq: <reference|eq 20.951.279>] we have by [theorem:
+      <reference|measure Dynkin system generated>[ that
+      <math|\<delta\><around*|[|\<cal-E\>|]>\<subseteq\>\<cal-D\>> so that
+      <math|\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>\<subseteq\>\<cal-D\>>.
+      Hence we have that\ 
+
+      <\equation*>
+        \<forall\>Q\<in\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2><text|
+        we have >Q\<in\>\<cal-D\><text| so that
+        >f<rsub|1,Q>\<in\>\<cal-M\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      </equation*>
+
+      <item>Let <math|x\<in\>X<rsub|2>> then we have
+      <math|f<rsub|2,X<rsub|1>\<cdot\>X<rsub|2>><around*|(|x|)>=\<mu\><rsub|1><around*|(|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)><rsub|<around*|[|2,x|]>>|)>\<equallim\><rsub|<text|[lemma:
+      <reference|lemma 20.613.279>]>>\<mu\><rsub|1><around*|(|X<rsub|1>|)>\<in\>\<bbb-R\>>
+      so that
+
+      <\equation>
+        <label|eq 20.954.280>f<rsub|2,X<rsub|1>\<cdot\>X<rsub|2>>=C<rsub|\<mu\><rsub|1><around*|(|X<rsub|1>|)>>
+      </equation>
+
+      which by [example: <reference|measurable function constant function>]
+      proves that\ 
+
+      <\equation>
+        <label|eq 20.955.280>f<rsub|2,X<rsub|1>\<cdot\>X<rsub|2>>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,\<bbb-R\>|]>
+      </equation>
+
+      Let <math|A,B\<in\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>> then
+      for <math|x\<in\>X<rsub|2>> we have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|f<rsub|2,A\\B><around*|(|x|)>>|<cell|=>|<cell|\<mu\><rsub|2><around*|(|<around*|(|A\\B|)><rsub|<around*|[|2,x|]>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+        <reference|lemma 20.613.279>]>><rsub|<text|>>>|<cell|\<mu\><rsub|2><around*|(|A<rsub|<around*|[|2,x|]>>\\B<rsub|<around*|[|2,x|]>>|)>>>|<row|<cell|>|<cell|<below|\<equallim\>|<text|[theorem:
+        <reference|measure measure space properties
+        (1)>]>\<wedge\>\<mu\><rsub|1><text| is
+        finite>>>|<cell|\<mu\><rsub|2><around*|(|A<rsub|<around*|[|2,x|]>>|)>-\<mu\><rsub|2><around*|(|B<rsub|<around*|[|2,x|]>>|)>>>|<row|<cell|>|<cell|=>|<cell|f<rsub|2,A><around*|(|x|)>-f<rsub|2,B><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|f<rsub|2,A>-f<rsub|2,B>|)><around*|(|x|)>>>>>
+      </eqnarray*>
+
+      which proves that\ 
+
+      <\equation>
+        <label|eq 20.956.280>\<forall\>A,B\<in\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2><text|
+        we have >f<rsub|2,A\\B>=f<rsub|2,A>-f<rsub|2,B>
+      </equation>
+
+      In the special cases where <math|A=X<rsub|1>\<cdot\>X<rsub|2>><space|1em>the
+      above becomes \ 
+
+      <\equation>
+        <label|eq 20.957.280>\<forall\>A\<in\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2><text|
+        then >f<rsub|2,<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\A>=f<rsub|2,X<rsub|1>\<cdot\>X<rsub|2>>-f<rsub|2,A>
+      </equation>
+
+      Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>>
+      be pairwise disjoint. Let <math|x\<in\>X<rsub|2>> and
+      <math|i,j\<in\>\<bbb-N\>> with <math|i\<neq\>j> then we have
+      \ <math|<around*|(|A<rsub|i>|)><rsub|<around*|[|2,x|]>><big|cap><around*|(|A<rsub|j>|)><rsub|<around*|[|2,x|]>>\<equallim\><rsub|<text|[lemma:
+      <reference|lemma 20.613.279>]>><rsub|<text|>><around*|(|A<rsub|i><big|cap>A<rsub|j>|)><rsub|<around*|[|2,x|]>>=\<varnothing\><rsub|<around*|[|2,x|]>>\<equallim\><rsub|<text|[lemma:
+      <reference|lemma 20.613.279>]>><rsub|<text|>>\<varnothing\>>. Hence
+
+      <\equation>
+        <label|eq 20.958.280>\<forall\>x\<in\>X<rsub|2><text| we have
+        ><around*|{|<around*|(|A<rsub|2>|)><rsub|<around*|[|1,x|]>>|}><rsub|i\<in\>\<bbb-N\>><text|
+        is pairwise disjoint>
+      </equation>
+
+      So for <math|x\<in\>X<rsub|2>> we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|f<rsub|2,<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>><around*|(|x|)>>|<cell|=>|<cell|\<mu\><rsub|1><around*|(|<around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)><rsub|<around*|[|2,x|]>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+        <reference|lemma 20.613.279>]>><rsub|<text|>>>|<cell|\<mu\><rsub|1><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>><around*|(|A<rsub|i>|)><rsub|<around*|[|2,x|]>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 20.958.280>]>\<wedge\>\<mu\><rsub|1><text| is a
+        measure>>>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><rsub|1><around*|(|<around*|(|A<rsub|i>|)><rsub|<around*|[|1,x|]>>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|2,A<rsub|i>><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|2,A<rsub|i>>|)><around*|(|x|)>>>>>
+      </eqnarray*>
+
+      which proves that\ 
+
+      <\equation>
+        <label|eq 20.959.280>\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2><text|
+        pairwise disjoint we have >f<rsub|2,<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>>=<big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|2,A<rsub|i>>
+      </equation>
+
+      Define now
+
+      <\equation*>
+        \<cal-D\>=<around*|{|D\<in\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>\|f<rsub|2,D>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>|}>
+      </equation*>
+
+      Using [eq: <reference|eq 20.955.280>] it follows that\ 
+
+      <\equation>
+        <label|eq 20.960.280>X<rsub|1>\<cdot\>X<rsub|2>\<in\>\<cal-D\>
+      </equation>
+
+      If <math|A\<in\>\<cal-D\>> then <math|f<rsub|2,A>\<in\>\<cal-M\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>,
+      further by [eq: <reference|eq 20.955.280>]
+      <math|f<rsub|2,X<rsub|1>\<cdot\>X<rsub|2>>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+      so that by [theorem: <reference|measurable function properties (1)>]
+      <math|f<rsub|2,<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\Q>\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.957.280>]>>f<rsub|2,X<rsub|1>\<cdot\>X<rsub|2>>-f<rsub|2,A>\<in\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>.
+      Hence\ 
+
+      <\equation>
+        <label|eq 20.961.280>\<forall\>A\<in\>\<cal-D\><text| we have that
+        ><around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\A\<in\>\<cal-D\>
+      </equation>
+
+      Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-D\>>
+      be pairwise disjoint then <math|\<forall\>i\<in\>\<bbb-N\>> we have
+      that <math|f<rsub|2,A<rsub|i>>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>,
+      as <math|\<forall\>x\<in\>X<rsub|2>>
+      <math|f<rsub|2,A<rsub|i>><around*|(|x|)>=\<mu\><rsub|1><around*|(|A<rsub|<around*|[|2,x|]>>|)>\<in\><around*|[|0,\<infty\>|[>>
+      it follows that <math|f<rsub|2,A<rsub|i>>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>.
+      Using Beppo's \ [theorem: <reference|Beppo Levi's Theorem>] it follows
+      that <math|<big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|2,A<rsub|i>>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>,
+      hence, as <math|f<rsub|2,<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>>\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.961.280>]>><big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|2,A<rsub|i>>>,
+      it follows that <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-D\>>.
+      To summarize
+
+      <\equation>
+        <label|eq 20.962.280>\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-D\><text|
+        pairwise disjoing we have ><big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-D\>
+      </equation>
+
+      By [eqs: <reference|eq 20.960.280>, <reference|eq 20.961.280>,
+      <reference|eq 20.962.280>] it follows by [definition:
+      <reference|measure Dynkin system>] that\ 
+
+      <\equation>
+        <label|eq 20.963.280>\<cal-D\><text| is a >Dynkin system
+      </equation>
+
+      Take\ 
+
+      <\equation*>
+        \<cal-E\>=<around*|{|<big|prod><rsub|i\<in\><around*|{|1,2|}>>E<rsub|i>\|\<forall\>i\<in\><around*|{|1,2|}><text|
+        >E<rsub|i>\<in\>\<cal-A\><rsub|i>|}><below|\<subseteq\>|<text|[theorem:
+        <reference|product algebra equivalences>]>>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>
+      </equation*>
+
+      Let <math|E=E<rsub|1>\<cdot\>E<rsub|2>\<in\>\<cal-E\>> then
+      <math|\<forall\>x\<in\>X<rsub|2>> we have either:\ 
+
+      <\description>
+        <item*|<math|x\<in\>E<rsub|2>>>Then by [lemma: <reference|lemma
+        20.613.279>] we have that <math|<around*|(|E<rsub|1>\<cdot\>E<rsub|2>|)><rsub|<around*|[|2,x|]>>=E<rsub|1>>
+        so that\ 
+
+        <\equation*>
+          f<rsub|2,E<rsub|1>\<cdot\>E<rsub|2>><around*|(|x|)>=\<mu\><rsub|1><around*|(|<around*|(|E<rsub|1>\<cdot\>E<rsub|2>|)><rsub|<around*|[|2,x|]>>|)>=\<mu\><rsub|1><around*|(|E<rsub|1>|)>=\<mu\><rsub|1><around*|(|E<rsub|1>|)>\<cdot\>\<cal-X\><rsub|X<rsub|2>,E<rsub|2>><around*|(|x|)>
+        </equation*>
+
+        <item*|<math|x\<in\>X<rsub|2>\\E<rsub|2>>>Then [lemma:
+        <reference|lemma 20.613.279>] we have that
+        <math|<around*|(|E<rsub|1>\<cdot\>E<rsub|2>|)><rsub|<around*|[|2,x|]>>=\<varnothing\>>
+        so that\ 
+
+        <\equation*>
+          f<rsub|2,E<rsub|1>\<cdot\>E<rsub|2>><around*|(|x|)>=\<mu\><rsub|1><around*|(|<around*|(|E<rsub|1>\<cdot\>E<rsub|2>|)><rsub|<around*|[|2,x|]>>|)>=\<mu\><rsub|1><around*|(|\<varnothing\>|)>=\<mu\><rsub|1><around*|(|E<rsub|1>|)>\<cdot\>\<cal-X\><rsub|X<rsub|2>,E<rsub|2>><around*|(|x|)>
+        </equation*>
+      </description>
+
+      hence we have that\ 
+
+      <\equation*>
+        f<rsub|2,E<rsub|1>\<cdot\>E<rsub|2>>=\<mu\><rsub|1><around*|(|E<rsub|1>|)>\<cdot\>\<cal-X\><rsub|X<rsub|2>,E<rsub|2>>
+      </equation*>
+
+      As <math|E<rsub|1>\<in\>\<cal-A\><rsub|1>> it follows from [theorems:
+      <reference|measurable function charasteristic>,<reference|measurable
+      function product with scalar>] \ that
+
+      <\equation*>
+        f<rsub|2,E<rsub|1>\<cdot\>E<rsub|2>>=\<mu\><rsub|1><around*|(|E<rsub|1>|)>\<cdot\>\<cal-X\><rsub|X<rsub|2>,E<rsub|2>>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      </equation*>
+
+      which proves that <math|E=E<rsub|1>\<cdot\>E<rsub|2>\<in\>\<cal-D\>>.
+      Hence we have proved that
+
+      <\equation>
+        <label|eq 20.964.280>\<cal-E\>\<subseteq\>\<cal-D\>
+      </equation>
+
+      If <math|E=E<rsub|1>\<cdot\>E<rsub|2>,F=F<rsub|1>\<cdot\>F<rsub|2>\<in\>\<cal-E\>>
+      then we have that <math|E<rsub|1>,F<rsub|1>\<in\>\<cal-A\><rsub|1>> and
+      <math|E<rsub|2>,F<rsub|2>\<in\>\<cal-A\><rsub|2>> then we have\ 
+
+      <\equation*>
+        E<big|cap>F\<equallim\><rsub|<text|[theorem: <reference|product and
+        intersection>]>><around*|(|E<rsub|1><big|cap>F<rsub|1>|)>\<cdot\><around*|(|E<rsub|2><big|cap>F<rsub|2>|)>
+      </equation*>
+
+      which, as <math|E<rsub|1><big|cap>F<rsub|1>\<in\>\<cal-A\><rsub|i>>,
+      <math|E<rsub|2><big|cap>F<rsub|2>\<in\>\<cal-A\><rsub|2>>, proves that
+      <math|E<big|cap>F\<in\>\<cal-E\>>. Hence we have\ 
+
+      <\equation>
+        <label|eq 20.965.280>\<forall\>E,F\<in\>\<cal-E\><text| we have
+        >E<big|cap>F\<in\>\<cal-E\>
+      </equation>
+
+      Using then [theorem: <reference|measure Dynkin system condition for
+      sigma algebra (1)>] on [eq: <reference|eq 20.964.280>, <reference|eq
+      20.965.280>] gives
+
+      <\equation*>
+        \<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>=\<sigma\><around*|[|<big|prod><rsub|i\<in\><around*|{|1,2|}>>E<rsub|i>\|\<forall\>i\<in\><around*|{|1,2|}><text|
+        >E<rsub|i>\<in\>\<cal-A\><rsub|i>|]>=\<sigma\><around*|[|\<cal-E\>|]>=\<delta\><around*|[|\<cal-E\>|]>
+      </equation*>
+
+      As <math|\<cal-E\>\<subseteq\>\<cal-D\>> and <math|\<cal-D\>> is a
+      Dynkin system [see eq: <reference|eq 20.963.280>] we have by [theorem:
+      <reference|measure Dynkin system generated>[ that
+      <math|\<delta\><around*|[|\<cal-E\>|]>\<subseteq\>\<cal-D\>> so that
+      <math|\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>\<subseteq\>\<cal-D\>>.
+      Hence we have that\ 
+
+      <\equation*>
+        \<forall\>Q\<in\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2><text|
+        we have >Q\<in\>\<cal-D\><text| so that
+        >f<rsub|2,Q>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  We extend now the previous lemma to the case of <math|\<sigma\>>-finite
+  measures.
+
+  <\lemma>
+    Let <math|<around*|\<langle\>|X<rsub|1>,\<cal-A\><rsub|1>,\<mu\><rsub|1>|\<rangle\>>>,
+    <math|<around*|\<langle\>|X<rsub|2>,\<cal-A\><rsub|2>,\<mu\><rsub|2>|\<rangle\>>>
+    be two measure spaces where <math|\<mu\><rsub|1>>, <math|\<mu\><rsub|2>>
+    are <math|\<sigma\>>-finite measures [see definition: \ measures then we
+    have <math|\<forall\>Q\<in\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>>
+    that\ 
+
+    <\enumerate>
+      <item><math|f<rsub|1,Q>:X<rsub|1>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>>
+      defined by <math|f<rsub|1,Q><around*|(|x|)>=\<mu\><rsub|2><around*|(|Q<rsub|<around*|[|1,x|]>>|)>>
+      we have that <math|f<rsub|1,Q>\<in\>\<cal-M\><rsup|><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+
+      <item><math|f<rsub|2,Q>:X<rsub|2>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>>
+      defined by <math|f<rsub|2,Q><around*|(|x|)>=\<mu\><rsub|1><around*|(|Q<rsub|<around*|[|2,x|]>>|)>>
+      we have that \ <math|f<rsub|2,Q>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>As <math|\<mu\><rsub|2>> is <math|\<sigma\>>-finite it follows
+      from [definition: <reference|measure sigma finite measure>] and
+      [theorem: <reference|measure sigma finite increasing>] that there exist
+      a sequence <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><rsub|2>>
+      such that <math|\<forall\>i\<in\>\<bbb-N\>>
+      <math|A<rsub|i>\<subseteq\>A<rsub|i+1>>,
+      <math|\<mu\><rsub|2><around*|(|A<rsub|i>|)>\<less\>\<infty\>> and
+      <math|X<rsub|2>=<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>>. Let
+      <math|i\<in\>\<bbb-N\>> and define the measure [see theorem:
+      <reference|measure sum and scalar product of measures>(2)]
+
+      <\equation>
+        <label|eq 20.954.279>\<mu\><rsub|i,2>:\<cal-A\><rsub|2>\<rightarrow\><around*|[|0,\<infty\>|]><text|
+        by >\<mu\><rsub|i,2><around*|(|A|)>=\<mu\><rsub|2><around*|(|A<rsub|i><big|cap>A|)>\<leqslant\>\<mu\><rsub|2><around*|(|A<rsub|i>|)>\<less\>\<infty\>
+      </equation>
+
+      then <math|\<mu\><rsub|2>> is a finite measure and we can apply the
+      previous lemma [lemma: <reference|lemma 20.619.279>] which proves that
+      <math|\<forall\>Q\<in\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>> we
+      have for the function
+
+      <\equation>
+        <label|eq 20.955.279>f<rsub|i,1,Q>:X<rsub|1>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+        defined by >f<rsub|i,1,Q><around*|(|x|)>=\<mu\><rsub|2,i><around*|(|Q<rsub|<around*|[|1,x|]>>|)>\<equallim\><rsub|<text|[eq:
+        <reference|eq 20.954.279>]>>\<mu\><rsub|2><around*|(|A<rsub|i><big|cap>Q<rsub|<around*|[|1,x|]>>|)>
+      </equation>
+
+      that
+
+      <\equation>
+        <label|eq 20.956.279>f<rsub|i,1,Q>\<in\>\<cal-M\><around*|[|X<rsub|1>.\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      </equation>
+
+      Let <math|Q\<in\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>> and take
+      <math|x\<in\>X<rsub|1>> then we have for
+      <math|<around*|{|A<rsub|i><big|cap>Q<rsub|<around*|[|1,x|]>>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><rsub|2>>
+      that <math|\<forall\>i\<in\>\<bbb-N\>>
+      <math|A<rsub|i><big|cap>Q<rsub|<around*|[|1,x|]>>\<subseteq\>A<rsub|i+1><big|cap>Q<rsub|<around*|[|1,x|]>>>
+      and <math|Q<rsub|<around*|[|1,x|]>>=X<rsub|2><big|cap>Q<rsub|<around*|[|1,x|]>>=<around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)><big|cap>Q<rsub|<around*|[|1,x|]>>=<big|cup><rsub|i\<in\>\<bbb-N\>><around*|(|A<rsub|i><big|cap>Q<rsub|<around*|[|1,x|]>>|)>>.
+      Using then [theorem: <reference|measure measure space properties (3)>]
+      it follows that\ 
+
+      <\equation>
+        <label|eq 20.957.279>\<mu\><rsub|2><around*|(|Q<rsub|<around*|[|1,x|]>>|)>=sup<around*|(|<around*|{|\<mu\><rsub|2><around*|(|A<rsub|i><big|cap>Q<rsub|<around*|[|1,x|]>>|)>\|i\<in\>\<bbb-N\>|}>|)>\<equallim\><rsub|<text|[eq:
+        <reference|eq 20.955.279>]>>sup<around*|(|<around*|{|f<rsub|i,1,Q><around*|(|x|)>\|i\<in\>\<bbb-N\>|}>|)>
+      </equation>
+
+      Define now\ 
+
+      <\equation*>
+        f<rsub|1,Q>:X<rsub|1>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+        by <math|f<rsub|1,Q><around*|(|x|)>=\<mu\><rsub|2><around*|(|Q<rsub|<around*|[|1,x|]>>|)>>>
+      </equation*>
+
+      then we have by [eq: <reference|eq 20.957.279>] that
+      <math|f<rsub|1,Q><around*|(|x|)>=sup<around*|(|<around*|{|f<rsub|i,1,Q><around*|(|x|)>\|i\<in\>\<bbb-N\>|}>|)>>,
+      hence\ 
+
+      <\equation*>
+        f<rsub|1,Q>=sup<around*|(|<around*|{|f<rsub|i,1,Q>\|i\<in\>\<bbb-N\>|}>|)>
+      </equation*>
+
+      As <math|\<forall\>i\<in\>\<bbb-N\>>
+      <math|f<rsub|i,1,Q>\<in\>\<cal-M\><around*|[|X<rsub|1>.\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+      it follows using [theorem: <reference|measurable function sup inf
+      limit>] that\ 
+
+      <\equation*>
+        f<rsub|1,Q>\<in\>\<cal-M\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      </equation*>
+
+      <item>As <math|\<mu\><rsub|1>> is <math|\<sigma\>>-finite it follows
+      from [definition: <reference|measure sigma finite measure>] and
+      [theorem: <reference|measure sigma finite increasing>] that there exist
+      a sequence <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><rsub|1>>
+      such that <math|\<forall\>i\<in\>\<bbb-N\>>
+      <math|A<rsub|i>\<subseteq\>A<rsub|i+1>>,
+      <math|\<mu\><rsub|1><around*|(|A<rsub|i>|)>\<less\>\<infty\>> and
+      <math|X<rsub|1>=<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>>. Let
+      <math|i\<in\>\<bbb-N\>> and define the measure [see theorem:
+      <reference|measure sum and scalar product of measures>(2)]
+
+      <\equation>
+        <label|eq 20.970.280>\<mu\><rsub|i,1>:\<cal-A\><rsub|1>\<rightarrow\><around*|[|0,\<infty\>|]><text|
+        by >\<mu\><rsub|i,1><around*|(|A|)>=\<mu\><rsub|1><around*|(|A<rsub|i><big|cap>A|)>\<leqslant\>\<mu\><rsub|1><around*|(|A<rsub|i>|)>\<less\>\<infty\>
+      </equation>
+
+      then <math|\<mu\><rsub|2>> is a finite measure and we can apply the
+      previous lemma [lemma: <reference|lemma 20.619.279>] which proves that
+      <math|\<forall\>Q\<in\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>> we
+      have for the function
+
+      <\equation>
+        <label|eq 20.971.280>f<rsub|i,2,Q>:X<rsub|1>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+        defined by >f<rsub|i,2,Q><around*|(|x|)>=\<mu\><rsub|2,i><around*|(|Q<rsub|<around*|[|2,x|]>>|)>\<equallim\><rsub|<text|[eq:
+        <reference|eq 20.970.280>]>>\<mu\><rsub|2><around*|(|A<rsub|i><big|cap>Q<rsub|<around*|[|2,x|]>>|)>
+      </equation>
+
+      that\ 
+
+      <\equation>
+        <label|eq 20.972.280>f<rsub|i,2,Q>\<in\>\<cal-M\><around*|[|X<rsub|2>.\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      </equation>
+
+      Let <math|Q\<in\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>> and take
+      <math|x\<in\>X<rsub|2>> then we have for
+      <math|<around*|{|A<rsub|i><big|cap>Q<rsub|<around*|[|2,x|]>>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><rsub|1>>
+      that <math|\<forall\>i\<in\>\<bbb-N\>>
+      <math|A<rsub|i><big|cap>Q<rsub|<around*|[|2,x|]>>\<subseteq\>A<rsub|i+1><big|cap>Q<rsub|<around*|[|2,x|]>>>
+      and <math|Q<rsub|<around*|[|2,x|]>>=X<rsub|1><big|cap>Q<rsub|<around*|[|2,x|]>>=<around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)><big|cap>Q<rsub|<around*|[|2,x|]>>=<big|cup><rsub|i\<in\>\<bbb-N\>><around*|(|A<rsub|i><big|cap>Q<rsub|<around*|[|2,x|]>>|)>>.
+      Using then [theorem: <reference|measure measure space properties (3)>]
+      it follows that\ 
+
+      <\equation>
+        <label|eq 20.973.280>\<mu\><rsub|1><around*|(|Q<rsub|<around*|[|2,x|]>>|)>=sup<around*|(|<around*|{|\<mu\><rsub|1><around*|(|A<rsub|i><big|cap>Q<rsub|<around*|[|2,x|]>>|)>\|i\<in\>\<bbb-N\>|}>|)>\<equallim\><rsub|<text|[eq:
+        <reference|eq 20.971.280>]>>sup<around*|(|<around*|{|f<rsub|i,2,Q><around*|(|x|)>\|i\<in\>\<bbb-N\>|}>|)>
+      </equation>
+
+      Define now\ 
+
+      <\equation*>
+        f<rsub|2,Q>:X<rsub|2>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+        by <math|f<rsub|2,Q><around*|(|x|)>=\<mu\><rsub|1><around*|(|Q<rsub|<around*|[|2,x|]>>|)>>>
+      </equation*>
+
+      then we have by [eq: <reference|eq 20.973.280>] that
+      <math|f<rsub|2,Q><around*|(|x|)>=sup<around*|(|<around*|{|f<rsub|i,2,Q><around*|(|x|)>\|i\<in\>\<bbb-N\>|}>|)>>,
+      hence\ 
+
+      <\equation*>
+        f<rsub|2,Q>=sup<around*|(|<around*|{|f<rsub|i,2,Q>\|i\<in\>\<bbb-N\>|}>|)>
+      </equation*>
+
+      As <math|\<forall\>i\<in\>\<bbb-N\>>
+      <math|f<rsub|i,2,Q>\<in\>\<cal-M\><around*|[|X<rsub|2>.\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+      it follows using [theorem: <reference|measurable function sup inf
+      limit>] that\ 
+
+      <\equation*>
+        f<rsub|2,Q>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      </equation*>
+    </enumerate>
+
+    \;
+  </proof>
+
   \ 
 
   \;
@@ -46909,63 +47695,63 @@
 <\references>
   <\collection>
     <associate|20.809.248|<tuple|20.859|?>>
-    <associate|Beppo Levi's Theorem|<tuple|20.455|?>>
+    <associate|Beppo Levi's Theorem|<tuple|20.458|?>>
     <associate|Constructing measures and sigma alegebra|<tuple|20.4.4|?>>
-    <associate|Fatou's lemma|<tuple|20.458|?>>
-    <associate|Hahn Decomposition Theorem|<tuple|20.552|?>>
-    <associate|Holder's Inequality|<tuple|20.501|?>>
-    <associate|Jordon Decomposition|<tuple|20.554|?>>
-    <associate|Jordon Decomposition complex measures|<tuple|20.562|?>>
-    <associate|Jordon Decomposition theorem|<tuple|20.553|?>>
-    <associate|LP space density (1)|<tuple|20.522|?>>
-    <associate|LP space density (2)|<tuple|20.524|?>>
-    <associate|LP space power extension|<tuple|20.514|?>>
-    <associate|LP spaces|<tuple|20.482|?>>
-    <associate|LP spaces (@@)|<tuple|20.490|?>>
-    <associate|LP spaces LP norm is zero|<tuple|20.495|?>>
-    <associate|LP spaces Minkowski's Inequality|<tuple|20.502|?>>
-    <associate|LP spaces absolute value|<tuple|20.493|?>>
-    <associate|LP spaces are Banach spaces|<tuple|20.521|?>>
-    <associate|LP spaces are pseudo normed|<tuple|20.505|?>>
-    <associate|LP spaces canonical example|<tuple|20.483|?>>
-    <associate|LP spaces density|<tuple|20.527|?>>
-    <associate|LP spaces empty set is locally m-null|<tuple|20.497|?>>
-    <associate|LP spaces finite sum|<tuple|20.504|?>>
-    <associate|LP spaces locally m-null set properties|<tuple|20.498|?>>
-    <associate|LP spaces locally u-null sets|<tuple|20.496|?>>
-    <associate|LP spaces neutral element|<tuple|20.484|?>>
-    <associate|LP spaces normed space|<tuple|20.512|?>>
-    <associate|LP spaces null sets is a subspace|<tuple|20.510|?>>
-    <associate|LP spaces p-norm (1)|<tuple|20.494|?>>
-    <associate|LP spaces p-norm (2)|<tuple|20.499|?>>
-    <associate|LP spaces p-null set|<tuple|20.508|?>>
-    <associate|LP spaces p-null set (1)|<tuple|20.509|?>>
-    <associate|LP spaces sum scalar product|<tuple|20.488|?>>
-    <associate|LP spaces sum scalar product (1)|<tuple|20.491|?>>
-    <associate|LP vector space|<tuple|20.492|?>>
-    <associate|Lebesgue's Dominated Convergence Theorem|<tuple|20.461|?>>
-    <associate|Monotone Convergence Theorem (1)|<tuple|20.451|?>>
-    <associate|Monotone Convergence Theorem (2)|<tuple|20.454|?>>
-    <associate|Radon-Nikodym (finite case)|<tuple|20.591|?>>
-    <associate|Radon-Nikodym Theorem|<tuple|20.592|?>>
-    <associate|Radon-Nikodym absolute continuity|<tuple|20.583|?>>
+    <associate|Fatou's lemma|<tuple|20.461|?>>
+    <associate|Hahn Decomposition Theorem|<tuple|20.555|?>>
+    <associate|Holder's Inequality|<tuple|20.504|?>>
+    <associate|Jordon Decomposition|<tuple|20.557|?>>
+    <associate|Jordon Decomposition complex measures|<tuple|20.565|?>>
+    <associate|Jordon Decomposition theorem|<tuple|20.556|?>>
+    <associate|LP space density (1)|<tuple|20.525|?>>
+    <associate|LP space density (2)|<tuple|20.527|?>>
+    <associate|LP space power extension|<tuple|20.517|?>>
+    <associate|LP spaces|<tuple|20.485|?>>
+    <associate|LP spaces (@@)|<tuple|20.493|?>>
+    <associate|LP spaces LP norm is zero|<tuple|20.498|?>>
+    <associate|LP spaces Minkowski's Inequality|<tuple|20.505|?>>
+    <associate|LP spaces absolute value|<tuple|20.496|?>>
+    <associate|LP spaces are Banach spaces|<tuple|20.524|?>>
+    <associate|LP spaces are pseudo normed|<tuple|20.508|?>>
+    <associate|LP spaces canonical example|<tuple|20.486|?>>
+    <associate|LP spaces density|<tuple|20.530|?>>
+    <associate|LP spaces empty set is locally m-null|<tuple|20.500|?>>
+    <associate|LP spaces finite sum|<tuple|20.507|?>>
+    <associate|LP spaces locally m-null set properties|<tuple|20.501|?>>
+    <associate|LP spaces locally u-null sets|<tuple|20.499|?>>
+    <associate|LP spaces neutral element|<tuple|20.487|?>>
+    <associate|LP spaces normed space|<tuple|20.515|?>>
+    <associate|LP spaces null sets is a subspace|<tuple|20.513|?>>
+    <associate|LP spaces p-norm (1)|<tuple|20.497|?>>
+    <associate|LP spaces p-norm (2)|<tuple|20.502|?>>
+    <associate|LP spaces p-null set|<tuple|20.511|?>>
+    <associate|LP spaces p-null set (1)|<tuple|20.512|?>>
+    <associate|LP spaces sum scalar product|<tuple|20.491|?>>
+    <associate|LP spaces sum scalar product (1)|<tuple|20.494|?>>
+    <associate|LP vector space|<tuple|20.495|?>>
+    <associate|Lebesgue's Dominated Convergence Theorem|<tuple|20.464|?>>
+    <associate|Monotone Convergence Theorem (1)|<tuple|20.454|?>>
+    <associate|Monotone Convergence Theorem (2)|<tuple|20.457|?>>
+    <associate|Radon-Nikodym (finite case)|<tuple|20.594|?>>
+    <associate|Radon-Nikodym Theorem|<tuple|20.595|?>>
+    <associate|Radon-Nikodym absolute continuity|<tuple|20.586|?>>
     <associate|Radon-Nikodym absolute continuity
-    alternative|<tuple|20.587|?>>
+    alternative|<tuple|20.590|?>>
     <associate|Radon-Nikodym absolute continuity
-    equivalence|<tuple|20.594|?>>
+    equivalence|<tuple|20.597|?>>
     <associate|Radon-Nikodym absolute continuity trivial
-    example|<tuple|20.584|?>>
-    <associate|Radon-Nikodym derivative|<tuple|20.598|?>>
-    <associate|Radon-Nikodym integral example|<tuple|20.585|?>>
-    <associate|Radon-Nikodym signed/complex|<tuple|20.597|?>>
-    <associate|almost everywhere|<tuple|20.365|?>>
-    <associate|almost everywhere and characteristic|<tuple|20.367|?>>
-    <associate|almost everywhere complex functions|<tuple|20.467|?>>
-    <associate|almost everywhere f=g \<less\>=\<gtr\> f-g=0|<tuple|20.369|?>>
-    <associate|almost everywhere functions|<tuple|20.366|?>>
-    <associate|almost everywhere limit is measurable|<tuple|20.372|?>>
-    <associate|almost everywhere measurability|<tuple|20.371|?>>
-    <associate|almost everywhere transitivity|<tuple|20.368|?>>
+    example|<tuple|20.587|?>>
+    <associate|Radon-Nikodym derivative|<tuple|20.601|?>>
+    <associate|Radon-Nikodym integral example|<tuple|20.588|?>>
+    <associate|Radon-Nikodym signed/complex|<tuple|20.600|?>>
+    <associate|almost everywhere|<tuple|20.368|?>>
+    <associate|almost everywhere and characteristic|<tuple|20.370|?>>
+    <associate|almost everywhere complex functions|<tuple|20.470|?>>
+    <associate|almost everywhere f=g \<less\>=\<gtr\> f-g=0|<tuple|20.372|?>>
+    <associate|almost everywhere functions|<tuple|20.369|?>>
+    <associate|almost everywhere limit is measurable|<tuple|20.375|?>>
+    <associate|almost everywhere measurability|<tuple|20.374|?>>
+    <associate|almost everywhere transitivity|<tuple|20.371|?>>
     <associate|auto-1|<tuple|20|?>>
     <associate|auto-10|<tuple|20.1.4|?>>
     <associate|auto-100|<tuple|<with|mode|<quote|math>|<big|int><rsup|S>f>|?>>
@@ -47131,30 +47917,30 @@
     <associate|auto-97|<tuple|simple function|?>>
     <associate|auto-98|<tuple|20.5|?>>
     <associate|auto-99|<tuple|integral of a simple function|?>>
-    <associate|charasteristic function|<tuple|20.358|?>>
-    <associate|complex integral|<tuple|20.472|?>>
-    <associate|complex integral alternative|<tuple|20.479|?>>
+    <associate|charasteristic function|<tuple|20.361|?>>
+    <associate|complex integral|<tuple|20.475|?>>
+    <associate|complex integral alternative|<tuple|20.482|?>>
     <associate|complex integral characteristics
-    multiplication|<tuple|20.474|?>>
-    <associate|complex integral of zero function|<tuple|20.473|?>>
-    <associate|complex integral property|<tuple|20.478|?>>
+    multiplication|<tuple|20.477|?>>
+    <associate|complex integral of zero function|<tuple|20.476|?>>
+    <associate|complex integral property|<tuple|20.481|?>>
     <associate|complex integral real integrable functions are complex
-    integrable|<tuple|20.477|?>>
-    <associate|complex measurable function|<tuple|20.463|?>>
-    <associate|complex measurable function absolute value|<tuple|20.471|?>>
-    <associate|complex measurable function alternative|<tuple|20.468|?>>
-    <associate|complex measurable function condition|<tuple|20.465|?>>
-    <associate|complex measurable function properties|<tuple|20.470|?>>
-    <associate|complex measurable space|<tuple|20.462|?>>
-    <associate|complex measure|<tuple|20.555|?>>
-    <associate|complex measure condition|<tuple|20.561|?>>
-    <associate|complex measure finite addivity|<tuple|20.559|?>>
-    <associate|complex measure integral complex function|<tuple|20.581|?>>
-    <associate|complex measure integral real function|<tuple|20.579|?>>
-    <associate|complex measure properties|<tuple|20.560|?>>
-    <associate|complex measure real/imaginare part|<tuple|20.557|?>>
-    <associate|complex measure variation|<tuple|20.563|?>>
-    <associate|complex measure variation is a measure|<tuple|20.565|?>>
+    integrable|<tuple|20.480|?>>
+    <associate|complex measurable function|<tuple|20.466|?>>
+    <associate|complex measurable function absolute value|<tuple|20.474|?>>
+    <associate|complex measurable function alternative|<tuple|20.471|?>>
+    <associate|complex measurable function condition|<tuple|20.468|?>>
+    <associate|complex measurable function properties|<tuple|20.473|?>>
+    <associate|complex measurable space|<tuple|20.465|?>>
+    <associate|complex measure|<tuple|20.558|?>>
+    <associate|complex measure condition|<tuple|20.564|?>>
+    <associate|complex measure finite addivity|<tuple|20.562|?>>
+    <associate|complex measure integral complex function|<tuple|20.584|?>>
+    <associate|complex measure integral real function|<tuple|20.582|?>>
+    <associate|complex measure properties|<tuple|20.563|?>>
+    <associate|complex measure real/imaginare part|<tuple|20.560|?>>
+    <associate|complex measure variation|<tuple|20.566|?>>
+    <associate|complex measure variation is a measure|<tuple|20.568|?>>
     <associate|corollary 20.111.218|<tuple|20.119|?>>
     <associate|denumerable union properties|<tuple|20.120|?>>
     <associate|eq 15.81.439|<tuple|20.395|?>>
@@ -48087,9 +48873,42 @@
     <associate|eq 20.94.200|<tuple|20.139|?>>
     <associate|eq 20.940.279|<tuple|20.940|?>>
     <associate|eq 20.941.279|<tuple|20.941|?>>
+    <associate|eq 20.942.279|<tuple|20.942|?>>
+    <associate|eq 20.943.279|<tuple|20.943|?>>
+    <associate|eq 20.944.279|<tuple|20.944|?>>
+    <associate|eq 20.945.279|<tuple|20.945|?>>
+    <associate|eq 20.946.279|<tuple|20.946|?>>
+    <associate|eq 20.947.279|<tuple|20.947|?>>
+    <associate|eq 20.948.279|<tuple|20.948|?>>
+    <associate|eq 20.949.279|<tuple|20.949|?>>
     <associate|eq 20.95.200|<tuple|20.140|?>>
+    <associate|eq 20.950.279|<tuple|20.950|?>>
+    <associate|eq 20.951.279|<tuple|20.951|?>>
+    <associate|eq 20.952.279|<tuple|20.952|?>>
+    <associate|eq 20.953.279|<tuple|20.953|?>>
+    <associate|eq 20.954.279|<tuple|20.966|?>>
+    <associate|eq 20.954.280|<tuple|20.954|?>>
+    <associate|eq 20.955.279|<tuple|20.967|?>>
+    <associate|eq 20.955.280|<tuple|20.955|?>>
+    <associate|eq 20.956.279|<tuple|20.968|?>>
+    <associate|eq 20.956.280|<tuple|20.956|?>>
+    <associate|eq 20.957.279|<tuple|20.969|?>>
+    <associate|eq 20.957.280|<tuple|20.957|?>>
+    <associate|eq 20.958.280|<tuple|20.958|?>>
+    <associate|eq 20.959.280|<tuple|20.959|?>>
     <associate|eq 20.96.200|<tuple|20.141|?>>
+    <associate|eq 20.96.280|<tuple|20.961|?>>
+    <associate|eq 20.960.280|<tuple|20.960|?>>
+    <associate|eq 20.961.280|<tuple|20.961|?>>
+    <associate|eq 20.962.280|<tuple|20.962|?>>
+    <associate|eq 20.963.280|<tuple|20.963|?>>
+    <associate|eq 20.964.280|<tuple|20.964|?>>
+    <associate|eq 20.965.280|<tuple|20.965|?>>
     <associate|eq 20.97.200|<tuple|20.142|?>>
+    <associate|eq 20.970.280|<tuple|20.970|?>>
+    <associate|eq 20.971.280|<tuple|20.971|?>>
+    <associate|eq 20.972.280|<tuple|20.972|?>>
+    <associate|eq 20.973.280|<tuple|20.973|?>>
     <associate|eq 20.98.200|<tuple|20.143|?>>
     <associate|eq 20.99.200|<tuple|20.144|?>>
     <associate|extended -(x.y)|<tuple|20.36|?>>
@@ -48183,7 +49002,7 @@
     <associate|figure 20.6.234|<tuple|20.6|?>>
     <associate|figure 20.7.234|<tuple|20.7|?>>
     <associate|label 20.147.200|<tuple|20.191|?>>
-    <associate|label 20.252.221|<tuple|20.280|?>>
+    <associate|label 20.252.221|<tuple|20.283|?>>
     <associate|lemma 20.102.202|<tuple|20.114|?>>
     <associate|lemma 20.109.213|<tuple|20.117|?>>
     <associate|lemma 20.110.214|<tuple|20.118|?>>
@@ -48201,102 +49020,103 @@
     <associate|lemma 20.153.227 |<tuple|20.163|?>>
     <associate|lemma 20.158.223|<tuple|20.174|?>>
     <associate|lemma 20.161.201|<tuple|20.113|?>>
-    <associate|lemma 20.172.1|<tuple|20.220|?>>
+    <associate|lemma 20.172.1|<tuple|20.223|?>>
     <associate|lemma 20.183.240|<tuple|20.187|?>>
     <associate|lemma 20.184.240|<tuple|20.188|?>>
-    <associate|lemma 20.204.217|<tuple|20.234|?>>
-    <associate|lemma 20.225.220|<tuple|20.254|?>>
-    <associate|lemma 20.226.220|<tuple|20.255|?>>
-    <associate|lemma 20.228.220|<tuple|20.256|?>>
-    <associate|lemma 20.229.220|<tuple|20.257|?>>
-    <associate|lemma 20.246.220|<tuple|20.274|?>>
-    <associate|lemma 20.248.220|<tuple|20.275|?>>
-    <associate|lemma 20.256.220|<tuple|20.282|?>>
-    <associate|lemma 20.268.224|<tuple|20.292|?>>
-    <associate|lemma 20.269.224|<tuple|20.293|?>>
-    <associate|lemma 20.270.225|<tuple|20.294|?>>
-    <associate|lemma 20.271.225|<tuple|20.295|?>>
-    <associate|lemma 20.272.226|<tuple|20.297|?>>
-    <associate|lemma 20.286.226|<tuple|20.311|?>>
-    <associate|lemma 20.287.224|<tuple|20.291|?>>
-    <associate|lemma 20.298.246|<tuple|20.302|?>>
-    <associate|lemma 20.309.227|<tuple|20.340|?>>
-    <associate|lemma 20.349.249|<tuple|20.361|?>>
-    <associate|lemma 20.351.229|<tuple|20.393|?>>
-    <associate|lemma 20.371.262|<tuple|20.379|?>>
-    <associate|lemma 20.377.232|<tuple|20.418|?>>
-    <associate|lemma 20.447.245|<tuple|20.485|?>>
-    <associate|lemma 20.448.245|<tuple|20.486|?>>
-    <associate|lemma 20.449.245|<tuple|20.487|?>>
-    <associate|lemma 20.463.246|<tuple|20.500|?>>
-    <associate|lemma 20.476.246|<tuple|20.513|?>>
-    <associate|lemma 20.477.246|<tuple|20.516|?>>
-    <associate|lemma 20.479.246|<tuple|20.517|?>>
-    <associate|lemma 20.480.246|<tuple|20.519|?>>
-    <associate|lemma 20.482.247|<tuple|20.520|?>>
-    <associate|lemma 20.491.248|<tuple|20.523|?>>
-    <associate|lemma 20.505.265|<tuple|20.515|?>>
-    <associate|lemma 20.513.248|<tuple|20.546|?>>
-    <associate|lemma 20.514.248|<tuple|20.547|?>>
-    <associate|lemma 20.515.248|<tuple|20.548|?>>
-    <associate|lemma 20.516.248|<tuple|20.549|?>>
-    <associate|lemma 20.555.149|<tuple|20.586|?>>
-    <associate|lemma 20.557.249|<tuple|20.588|?>>
-    <associate|lemma 20.558.249|<tuple|20.589|?>>
-    <associate|lemma 20.559.249|<tuple|20.590|?>>
-    <associate|lemma 20.594.271|<tuple|20.595|?>>
-    <associate|lemma 20.595.271|<tuple|20.596|?>>
-    <associate|lemma 20.613.279|<tuple|20.613|?>>
-    <associate|lemma 20.614.279|<tuple|20.614|?>>
+    <associate|lemma 20.204.217|<tuple|20.237|?>>
+    <associate|lemma 20.225.220|<tuple|20.257|?>>
+    <associate|lemma 20.226.220|<tuple|20.258|?>>
+    <associate|lemma 20.228.220|<tuple|20.259|?>>
+    <associate|lemma 20.229.220|<tuple|20.260|?>>
+    <associate|lemma 20.246.220|<tuple|20.277|?>>
+    <associate|lemma 20.248.220|<tuple|20.278|?>>
+    <associate|lemma 20.256.220|<tuple|20.285|?>>
+    <associate|lemma 20.268.224|<tuple|20.295|?>>
+    <associate|lemma 20.269.224|<tuple|20.296|?>>
+    <associate|lemma 20.270.225|<tuple|20.297|?>>
+    <associate|lemma 20.271.225|<tuple|20.298|?>>
+    <associate|lemma 20.272.226|<tuple|20.300|?>>
+    <associate|lemma 20.286.226|<tuple|20.314|?>>
+    <associate|lemma 20.287.224|<tuple|20.294|?>>
+    <associate|lemma 20.298.246|<tuple|20.305|?>>
+    <associate|lemma 20.309.227|<tuple|20.343|?>>
+    <associate|lemma 20.349.249|<tuple|20.364|?>>
+    <associate|lemma 20.351.229|<tuple|20.396|?>>
+    <associate|lemma 20.371.262|<tuple|20.382|?>>
+    <associate|lemma 20.377.232|<tuple|20.421|?>>
+    <associate|lemma 20.447.245|<tuple|20.488|?>>
+    <associate|lemma 20.448.245|<tuple|20.489|?>>
+    <associate|lemma 20.449.245|<tuple|20.490|?>>
+    <associate|lemma 20.463.246|<tuple|20.503|?>>
+    <associate|lemma 20.476.246|<tuple|20.516|?>>
+    <associate|lemma 20.477.246|<tuple|20.519|?>>
+    <associate|lemma 20.479.246|<tuple|20.520|?>>
+    <associate|lemma 20.480.246|<tuple|20.522|?>>
+    <associate|lemma 20.482.247|<tuple|20.523|?>>
+    <associate|lemma 20.491.248|<tuple|20.526|?>>
+    <associate|lemma 20.505.265|<tuple|20.518|?>>
+    <associate|lemma 20.513.248|<tuple|20.549|?>>
+    <associate|lemma 20.514.248|<tuple|20.550|?>>
+    <associate|lemma 20.515.248|<tuple|20.551|?>>
+    <associate|lemma 20.516.248|<tuple|20.552|?>>
+    <associate|lemma 20.555.149|<tuple|20.589|?>>
+    <associate|lemma 20.557.249|<tuple|20.591|?>>
+    <associate|lemma 20.558.249|<tuple|20.592|?>>
+    <associate|lemma 20.559.249|<tuple|20.593|?>>
+    <associate|lemma 20.594.271|<tuple|20.598|?>>
+    <associate|lemma 20.595.271|<tuple|20.599|?>>
+    <associate|lemma 20.613.279|<tuple|20.616|?>>
+    <associate|lemma 20.614.279|<tuple|20.617|?>>
+    <associate|lemma 20.619.279|<tuple|20.619|?>>
     <associate|lemma 20.78.156|<tuple|20.86|?>>
     <associate|lemma 20.80.156|<tuple|20.88|?>>
     <associate|lemma 20.90.156|<tuple|20.102|?>>
     <associate|lemma 20.95.156|<tuple|20.107|?>>
-    <associate|measurable function|<tuple|20.314|?>>
-    <associate|measurable function (1)|<tuple|20.327|?>>
-    <associate|measurable function (4)|<tuple|20.331|?>>
-    <associate|measurable function (5)|<tuple|20.332|?>>
-    <associate|measurable function Borel|<tuple|20.324|?>>
-    <associate|measurable function alternative (1)|<tuple|20.341|?>>
-    <associate|measurable function and continuity|<tuple|20.342|?>>
+    <associate|measurable function|<tuple|20.317|?>>
+    <associate|measurable function (1)|<tuple|20.330|?>>
+    <associate|measurable function (4)|<tuple|20.334|?>>
+    <associate|measurable function (5)|<tuple|20.335|?>>
+    <associate|measurable function Borel|<tuple|20.327|?>>
+    <associate|measurable function alternative (1)|<tuple|20.344|?>>
+    <associate|measurable function and continuity|<tuple|20.345|?>>
     <associate|measurable function and generated sigma
-    algebra|<tuple|20.338|?>>
-    <associate|measurable function charasteristic|<tuple|20.360|?>>
-    <associate|measurable function charasteristic product|<tuple|20.362|?>>
+    algebra|<tuple|20.341|?>>
+    <associate|measurable function charasteristic|<tuple|20.363|?>>
+    <associate|measurable function charasteristic product|<tuple|20.365|?>>
     <associate|measurable function charasteristic
-    properties|<tuple|20.359|?>>
-    <associate|measurable function comparisation|<tuple|20.343|?>>
-    <associate|measurable function comparisation definition|<tuple|20.339|?>>
-    <associate|measurable function composition|<tuple|20.317|?>>
-    <associate|measurable function constant function|<tuple|20.316|?>>
-    <associate|measurable function extension|<tuple|20.337|?>>
-    <associate|measurable function extension (1)|<tuple|20.320|?>>
-    <associate|measurable function extension (2)|<tuple|20.323|?>>
-    <associate|measurable function extension (3)|<tuple|20.335|?>>
-    <associate|measurable function extension (4)|<tuple|20.336|?>>
-    <associate|measurable function extension definition|<tuple|20.333|?>>
-    <associate|measurable function in sub space|<tuple|20.363|?>>
-    <associate|measurable function in sub space (1)|<tuple|20.364|?>>
-    <associate|measurable function limit|<tuple|20.357|?>>
-    <associate|measurable function min and max|<tuple|20.354|?>>
-    <associate|measurable function min and max (1)|<tuple|20.355|?>>
-    <associate|measurable function product with scalar|<tuple|20.351|?>>
-    <associate|measurable function properties (1)|<tuple|20.353|?>>
-    <associate|measurable function real or extended|<tuple|20.330|?>>
-    <associate|measurable function restriction (1)|<tuple|20.318|?>>
-    <associate|measurable function restriction (2)|<tuple|20.319|?>>
-    <associate|measurable function sum|<tuple|20.344|?>>
-    <associate|measurable function sum (finite 1)|<tuple|20.350|?>>
-    <associate|measurable function sum (finite)|<tuple|20.347|?>>
-    <associate|measurable function sum finite|<tuple|20.349|?>>
-    <associate|measurable function sup inf limit|<tuple|20.356|?>>
+    properties|<tuple|20.362|?>>
+    <associate|measurable function comparisation|<tuple|20.346|?>>
+    <associate|measurable function comparisation definition|<tuple|20.342|?>>
+    <associate|measurable function composition|<tuple|20.320|?>>
+    <associate|measurable function constant function|<tuple|20.319|?>>
+    <associate|measurable function extension|<tuple|20.340|?>>
+    <associate|measurable function extension (1)|<tuple|20.323|?>>
+    <associate|measurable function extension (2)|<tuple|20.326|?>>
+    <associate|measurable function extension (3)|<tuple|20.338|?>>
+    <associate|measurable function extension (4)|<tuple|20.339|?>>
+    <associate|measurable function extension definition|<tuple|20.336|?>>
+    <associate|measurable function in sub space|<tuple|20.366|?>>
+    <associate|measurable function in sub space (1)|<tuple|20.367|?>>
+    <associate|measurable function limit|<tuple|20.360|?>>
+    <associate|measurable function min and max|<tuple|20.357|?>>
+    <associate|measurable function min and max (1)|<tuple|20.358|?>>
+    <associate|measurable function product with scalar|<tuple|20.354|?>>
+    <associate|measurable function properties (1)|<tuple|20.356|?>>
+    <associate|measurable function real or extended|<tuple|20.333|?>>
+    <associate|measurable function restriction (1)|<tuple|20.321|?>>
+    <associate|measurable function restriction (2)|<tuple|20.322|?>>
+    <associate|measurable function sum|<tuple|20.347|?>>
+    <associate|measurable function sum (finite 1)|<tuple|20.353|?>>
+    <associate|measurable function sum (finite)|<tuple|20.350|?>>
+    <associate|measurable function sum finite|<tuple|20.352|?>>
+    <associate|measurable function sup inf limit|<tuple|20.359|?>>
     <associate|measure A.B minus C.D|<tuple|20.109|?>>
     <associate|measure Borel algebra|<tuple|20.151|?>>
     <associate|measure Borel algebra and closure|<tuple|20.152|?>>
     <associate|measure Borel algebra on R|<tuple|20.158|?>>
     <associate|measure Borel algebra on R^n|<tuple|20.165|?>>
     <associate|measure Borel algebra on R^n (equivalences
-    1)|<tuple|20.288|?>>
+    1)|<tuple|20.291|?>>
     <associate|measure Borel algebra on R^n (equivalences
     2)|<tuple|20.189|?>>
     <associate|measure Borel algebra on R^n (equivalences)|<tuple|20.185|?>>
@@ -48304,51 +49124,51 @@
     numbers|<tuple|20.159|?>>
     <associate|measure Borel algebra on the extended real numbers
     (1)|<tuple|20.164|?>>
-    <associate|measure Caratheodory|<tuple|20.215|?>>
+    <associate|measure Caratheodory|<tuple|20.218|?>>
     <associate|measure Caratheodory produces complete measure
-    space|<tuple|20.307|?>>
+    space|<tuple|20.310|?>>
     <associate|measure Dyadic cubes|<tuple|20.178|?>>
     <associate|measure Dyadic cubes properties|<tuple|20.181|?>>
-    <associate|measure Dynkin system|<tuple|20.216|?>>
-    <associate|measure Dynkin system P(X)|<tuple|20.219|?>>
+    <associate|measure Dynkin system|<tuple|20.219|?>>
+    <associate|measure Dynkin system P(X)|<tuple|20.222|?>>
     <associate|measure Dynkin system condition for sigma
-    algebra|<tuple|20.222|?>>
+    algebra|<tuple|20.225|?>>
     <associate|measure Dynkin system condition for sigma algebra
-    (1)|<tuple|20.223|?>>
-    <associate|measure Dynkin system generated|<tuple|20.221|?>>
-    <associate|measure Dynkin system properties|<tuple|20.218|?>>
-    <associate|measure Lebesgue measure space on R|<tuple|20.276|?>>
-    <associate|measure Lebesgue measure space on R^n|<tuple|20.299|?>>
-    <associate|measure Lebesgue measure spaces are complete|<tuple|20.308|?>>
+    (1)|<tuple|20.226|?>>
+    <associate|measure Dynkin system generated|<tuple|20.224|?>>
+    <associate|measure Dynkin system properties|<tuple|20.221|?>>
+    <associate|measure Lebesgue measure space on R|<tuple|20.279|?>>
+    <associate|measure Lebesgue measure space on R^n|<tuple|20.302|?>>
+    <associate|measure Lebesgue measure spaces are complete|<tuple|20.311|?>>
     <associate|measure P(X) is a algebra|<tuple|20.135|?>>
     <associate|measure P(X) is a ring|<tuple|20.131|?>>
     <associate|measure P(X) is a sigma algebra|<tuple|20.143|?>>
-    <associate|measure R^n alternative definition|<tuple|20.286|?>>
+    <associate|measure R^n alternative definition|<tuple|20.289|?>>
     <associate|measure [a,b[ in R^n|<tuple|20.169|?>>
-    <associate|measure additive function monotone|<tuple|20.236|?>>
+    <associate|measure additive function monotone|<tuple|20.239|?>>
     <associate|measure additive set function|<tuple|20.122|?>>
     <associate|measure algebra|<tuple|20.133|?>>
     <associate|measure algebra equavalent definition|<tuple|20.137|?>>
     <associate|measure algebra properties|<tuple|20.136|?>>
-    <associate|measure alternative definition for a content|<tuple|20.246|?>>
+    <associate|measure alternative definition for a content|<tuple|20.249|?>>
     <associate|measure begin end|<tuple|20.176|?>>
-    <associate|measure begin end (R)|<tuple|20.266|?>>
+    <associate|measure begin end (R)|<tuple|20.269|?>>
     <associate|measure borel algebrat on R|<tuple|20.153|?>>
     <associate|measure bounded intervals|<tuple|20.154|?>>
-    <associate|measure compact class approximation|<tuple|20.250|?>>
-    <associate|measure compact class approximation (1)|<tuple|20.251|?>>
-    <associate|measure compact class approximation (2)|<tuple|20.260|?>>
-    <associate|measure compact class approximation (3)|<tuple|20.261|?>>
-    <associate|measure complete measure|<tuple|20.305|?>>
-    <associate|measure complete measure characterization|<tuple|20.306|?>>
-    <associate|measure completing of a measure space|<tuple|20.312|?>>
-    <associate|measure completion of a measure space|<tuple|20.309|?>>
+    <associate|measure compact class approximation|<tuple|20.253|?>>
+    <associate|measure compact class approximation (1)|<tuple|20.254|?>>
+    <associate|measure compact class approximation (2)|<tuple|20.263|?>>
+    <associate|measure compact class approximation (3)|<tuple|20.264|?>>
+    <associate|measure complete measure|<tuple|20.308|?>>
+    <associate|measure complete measure characterization|<tuple|20.309|?>>
+    <associate|measure completing of a measure space|<tuple|20.315|?>>
+    <associate|measure completion of a measure space|<tuple|20.312|?>>
     <associate|measure condition for a algebra to be a sigma
     algebra|<tuple|20.145|?>>
-    <associate|measure content|<tuple|20.243|?>>
-    <associate|measure content extension|<tuple|20.259|?>>
-    <associate|measure content on R^n|<tuple|20.296|?>>
-    <associate|measure content properties|<tuple|20.247|?>>
+    <associate|measure content|<tuple|20.246|?>>
+    <associate|measure content extension|<tuple|20.262|?>>
+    <associate|measure content on R^n|<tuple|20.299|?>>
+    <associate|measure content properties|<tuple|20.250|?>>
     <associate|measure countable additive set function|<tuple|20.124|?>>
     <associate|measure countable additivity implies
     additivity|<tuple|20.192|?>>
@@ -48358,178 +49178,180 @@
     <associate|measure countable sub-additivity implies
     sub-additivity|<tuple|20.128|?>>
     <associate|measure countable union is in sigma algebra|<tuple|20.144|?>>
-    <associate|measure countable union pairwise|<tuple|20.206|?>>
-    <associate|measure extending pre-measure to a measure|<tuple|20.240|?>>
-    <associate|measure finite measure|<tuple|20.204|?>>
-    <associate|measure finite product of semi-rings|<tuple|20.284|?>>
-    <associate|measure finite product of semi-rings (1)|<tuple|20.285|?>>
-    <associate|measure generated ring|<tuple|20.252|?>>
+    <associate|measure countable union pairwise|<tuple|20.196|?>>
+    <associate|measure extending pre-measure to a measure|<tuple|20.243|?>>
+    <associate|measure finite measure|<tuple|20.209|?>>
+    <associate|measure finite product of semi-rings|<tuple|20.287|?>>
+    <associate|measure finite product of semi-rings (1)|<tuple|20.288|?>>
+    <associate|measure generated ring|<tuple|20.255|?>>
     <associate|measure generated sigma algebra|<tuple|20.147|?>>
     <associate|measure generated sigma algebra (1)|<tuple|20.148|?>>
-    <associate|measure generated sigma algebra on R|<tuple|20.265|?>>
+    <associate|measure generated sigma algebra on R|<tuple|20.268|?>>
     <associate|measure half open intervals in R^n|<tuple|20.172|?>>
     <associate|measure halfo open spaces|<tuple|20.186|?>>
-    <associate|measure integral|<tuple|20.428|?>>
-    <associate|measure integral (1)|<tuple|20.433|?>>
-    <associate|measure integral alternative|<tuple|20.441|?>>
-    <associate|measure integral alternative (1)|<tuple|20.450|?>>
-    <associate|measure integral and a.e. equalitiy|<tuple|20.442|?>>
-    <associate|measure integral difference|<tuple|20.438|?>>
-    <associate|measure integral domination theorem|<tuple|20.443|?>>
-    <associate|measure integral extension|<tuple|20.432|?>>
-    <associate|measure integral f+ f-|<tuple|20.422|?>>
-    <associate|measure integral f+ f- alternative|<tuple|20.424|?>>
-    <associate|measure integral f+ f- are measurable|<tuple|20.425|?>>
-    <associate|measure integral f+ f- properties|<tuple|20.427|?>>
-    <associate|measure integral measure construction|<tuple|20.457|?>>
+    <associate|measure integral|<tuple|20.431|?>>
+    <associate|measure integral (1)|<tuple|20.436|?>>
+    <associate|measure integral alternative|<tuple|20.444|?>>
+    <associate|measure integral alternative (1)|<tuple|20.453|?>>
+    <associate|measure integral and a.e. equalitiy|<tuple|20.445|?>>
+    <associate|measure integral difference|<tuple|20.441|?>>
+    <associate|measure integral domination theorem|<tuple|20.446|?>>
+    <associate|measure integral extension|<tuple|20.435|?>>
+    <associate|measure integral f+ f-|<tuple|20.425|?>>
+    <associate|measure integral f+ f- alternative|<tuple|20.427|?>>
+    <associate|measure integral f+ f- are measurable|<tuple|20.428|?>>
+    <associate|measure integral f+ f- properties|<tuple|20.430|?>>
+    <associate|measure integral measure construction|<tuple|20.460|?>>
     <associate|measure integral of almost zero function is
-    zero|<tuple|20.437|?>>
-    <associate|measure integral of zero function (1)|<tuple|20.431|?>>
-    <associate|measure integral on sub measure spaces|<tuple|20.436|?>>
-    <associate|measure integral properties|<tuple|20.439|?>>
-    <associate|measure integral properties (1)|<tuple|20.447|?>>
-    <associate|measure integral properties (2)|<tuple|20.449|?>>
-    <associate|measure integral sigma finite|<tuple|20.445|?>>
-    <associate|measure integral to measure over|<tuple|20.435|?>>
-    <associate|measure integral zero is a.e. zero|<tuple|20.446|?>>
-    <associate|measure length definition|<tuple|20.271|?>>
+    zero|<tuple|20.440|?>>
+    <associate|measure integral of zero function (1)|<tuple|20.434|?>>
+    <associate|measure integral on sub measure spaces|<tuple|20.439|?>>
+    <associate|measure integral properties|<tuple|20.442|?>>
+    <associate|measure integral properties (1)|<tuple|20.450|?>>
+    <associate|measure integral properties (2)|<tuple|20.452|?>>
+    <associate|measure integral sigma finite|<tuple|20.448|?>>
+    <associate|measure integral to measure over|<tuple|20.438|?>>
+    <associate|measure integral zero is a.e. zero|<tuple|20.449|?>>
+    <associate|measure length definition|<tuple|20.274|?>>
     <associate|measure length of union of pairwise half opem
-    intervals|<tuple|20.273|?>>
-    <associate|measure measurable set equivalences|<tuple|20.213|?>>
-    <associate|measure measurable sets|<tuple|20.212|?>>
-    <associate|measure measurable sets properties|<tuple|20.214|?>>
+    intervals|<tuple|20.276|?>>
+    <associate|measure measurable set equivalences|<tuple|20.216|?>>
+    <associate|measure measurable sets|<tuple|20.215|?>>
+    <associate|measure measurable sets properties|<tuple|20.217|?>>
     <associate|measure measurable space|<tuple|20.140|?>>
-    <associate|measure measure conditions|<tuple|20.209|?>>
+    <associate|measure measure conditions|<tuple|20.212|?>>
     <associate|measure measure definition|<tuple|20.193|?>>
-    <associate|measure measure on A\|B|<tuple|20.201|?>>
+    <associate|measure measure on A\|B|<tuple|20.206|?>>
     <associate|measure measure space|<tuple|20.195|?>>
-    <associate|measure measure space properties (1)|<tuple|20.203|?>>
-    <associate|measure measure space properties (2)|<tuple|20.207|?>>
-    <associate|measure measure space properties (3)|<tuple|20.208|?>>
+    <associate|measure measure space properties (1)|<tuple|20.208|?>>
+    <associate|measure measure space properties (2)|<tuple|20.197|?>>
+    <associate|measure measure space properties (3)|<tuple|20.211|?>>
+    <associate|measure measure space properties (4)|<tuple|20.198|?>>
     <associate|measure monotone|<tuple|20.121|?>>
-    <associate|measure null set|<tuple|20.301|?>>
-    <associate|measure null set properties|<tuple|20.304|?>>
-    <associate|measure on sub sigma algebra|<tuple|20.200|?>>
+    <associate|measure null set|<tuple|20.304|?>>
+    <associate|measure null set properties|<tuple|20.307|?>>
+    <associate|measure on sub sigma algebra|<tuple|20.205|?>>
     <associate|measure order on R^n|<tuple|20.166|?>>
-    <associate|measure order on half open intervals|<tuple|20.272|?>>
-    <associate|measure outer measure|<tuple|20.210|?>>
-    <associate|measure outer measure construction|<tuple|20.227|?>>
+    <associate|measure order on half open intervals|<tuple|20.275|?>>
+    <associate|measure outer measure|<tuple|20.213|?>>
+    <associate|measure outer measure construction|<tuple|20.230|?>>
     <associate|measure outer measure construction from
-    pre-measure|<tuple|20.239|?>>
-    <associate|measure outer measure is finite subadditive|<tuple|20.211|?>>
+    pre-measure|<tuple|20.242|?>>
+    <associate|measure outer measure is finite subadditive|<tuple|20.214|?>>
     <associate|measure pairwise disjoint|<tuple|20.110|?>>
     <associate|measure pairwise disjoint sets and
     bijections|<tuple|20.112|?>>
-    <associate|measure pre-measure|<tuple|20.232|?>>
-    <associate|measure pre-measure equivalences|<tuple|20.248|?>>
-    <associate|measure pre-measure is a content|<tuple|20.245|?>>
-    <associate|measure pre-measure is additive|<tuple|20.235|?>>
+    <associate|measure pre-measure|<tuple|20.235|?>>
+    <associate|measure pre-measure equivalences|<tuple|20.251|?>>
+    <associate|measure pre-measure is a content|<tuple|20.248|?>>
+    <associate|measure pre-measure is additive|<tuple|20.238|?>>
     <associate|measure pre-measure is countable
-    sub-additive|<tuple|20.238|?>>
-    <associate|measure pre-measure monotonity|<tuple|20.237|?>>
-    <associate|measure product of two semi-rings|<tuple|20.278|?>>
-    <associate|measure proto-measure|<tuple|20.226|?>>
-    <associate|measure proto-ring|<tuple|20.225|?>>
+    sub-additive|<tuple|20.241|?>>
+    <associate|measure pre-measure monotonity|<tuple|20.240|?>>
+    <associate|measure product of two semi-rings|<tuple|20.281|?>>
+    <associate|measure proto-measure|<tuple|20.229|?>>
+    <associate|measure proto-ring|<tuple|20.228|?>>
     <associate|measure ring|<tuple|20.129|?>>
-    <associate|measure ring is a semi-ring|<tuple|20.242|?>>
+    <associate|measure ring is a semi-ring|<tuple|20.245|?>>
     <associate|measure ring properties|<tuple|20.132|?>>
-    <associate|measure semi-ring|<tuple|20.229|?>>
-    <associate|measure semi-ring bijection|<tuple|20.281|?>>
-    <associate|measure semi-ring on R^n|<tuple|20.287|?>>
-    <associate|measure semi-ring on the set of real numbers|<tuple|20.264|?>>
+    <associate|measure semi-ring|<tuple|20.232|?>>
+    <associate|measure semi-ring bijection|<tuple|20.284|?>>
+    <associate|measure semi-ring on R^n|<tuple|20.290|?>>
+    <associate|measure semi-ring on the set of real numbers|<tuple|20.267|?>>
     <associate|measure semi-ring on the set of real numbers
-    (1)|<tuple|20.263|?>>
-    <associate|measure semi-ring to ring|<tuple|20.258|?>>
+    (1)|<tuple|20.266|?>>
+    <associate|measure semi-ring to ring|<tuple|20.261|?>>
     <associate|measure sigma algebra|<tuple|20.138|?>>
     <associate|measure sigma algebra equivalences|<tuple|20.141|?>>
     <associate|measure sigma algebra intersection|<tuple|20.146|?>>
-    <associate|measure sigma finite disjoint|<tuple|20.197|?>>
-    <associate|measure sigma finite measure|<tuple|20.198|?>>
-    <associate|measure sigma finite set|<tuple|20.196|?>>
+    <associate|measure sigma finite disjoint|<tuple|20.200|?>>
+    <associate|measure sigma finite increasing|<tuple|20.201|?>>
+    <associate|measure sigma finite measure|<tuple|20.202|?>>
+    <associate|measure sigma finite set|<tuple|20.199|?>>
     <associate|measure sub measure space|<tuple|20.149|?>>
     <associate|measure sub-additive set function|<tuple|20.123|?>>
-    <associate|measure sum and scalar product of measures|<tuple|20.199|?>>
+    <associate|measure sum and scalar product of measures|<tuple|20.203|?>>
     <associate|measure union intersection stable|<tuple|20.116|?>>
-    <associate|measure uniqueness of extension of a measure|<tuple|20.224|?>>
-    <associate|measure volume function|<tuple|20.289|?>>
-    <associate|measure volume is a pre-measure|<tuple|20.298|?>>
+    <associate|measure uniqueness of extension of a measure|<tuple|20.227|?>>
+    <associate|measure volume function|<tuple|20.292|?>>
+    <associate|measure volume is a pre-measure|<tuple|20.301|?>>
     <associate|measure {empty set} is a ring|<tuple|20.130|?>>
     <associate|measure {emptyset,set} is a measure|<tuple|20.134|?>>
     <associate|non negative function as limit of simple
-    functions|<tuple|20.409|?>>
-    <associate|non negative integral|<tuple|20.398|?>>
-    <associate|non negative integral (1)|<tuple|20.404|?>>
-    <associate|non negative integral alternative|<tuple|20.413|?>>
-    <associate|non negative integral and a.e. equality|<tuple|20.417|?>>
-    <associate|non negative integral characteristics|<tuple|20.403|?>>
-    <associate|non negative integral constant|<tuple|20.402|?>>
-    <associate|non negative integral finite integral|<tuple|20.420|?>>
-    <associate|non negative integral finite sum|<tuple|20.416|?>>
-    <associate|non negative integral is a extension|<tuple|20.401|?>>
-    <associate|non negative integral limit|<tuple|20.411|?>>
+    functions|<tuple|20.412|?>>
+    <associate|non negative integral|<tuple|20.401|?>>
+    <associate|non negative integral (1)|<tuple|20.407|?>>
+    <associate|non negative integral alternative|<tuple|20.416|?>>
+    <associate|non negative integral and a.e. equality|<tuple|20.420|?>>
+    <associate|non negative integral characteristics|<tuple|20.406|?>>
+    <associate|non negative integral constant|<tuple|20.405|?>>
+    <associate|non negative integral finite integral|<tuple|20.423|?>>
+    <associate|non negative integral finite sum|<tuple|20.419|?>>
+    <associate|non negative integral is a extension|<tuple|20.404|?>>
+    <associate|non negative integral limit|<tuple|20.414|?>>
     <associate|non negative integral scalar product, sum
-    inequality|<tuple|20.415|?>>
-    <associate|non negative integral sub measure space (1)|<tuple|20.406|?>>
-    <associate|non negative integral sub measure space (2)|<tuple|20.408|?>>
-    <associate|non negative integral sub measure space (3)|<tuple|20.407|?>>
-    <associate|non negative integral zero a.e. function|<tuple|20.414|?>>
-    <associate|non negative measurable function|<tuple|20.328|?>>
-    <associate|note 20.198.210|<tuple|20.228|?>>
-    <associate|product |<tuple|20.601|?>>
-    <associate|product algebra|<tuple|20.604|?>>
-    <associate|product algebra equivalences|<tuple|20.607|?>>
-    <associate|product algebra equivalences (1)|<tuple|20.608|?>>
-    <associate|product algebra measure|<tuple|20.610|?>>
-    <associate|product algebra on Borel algebras of R|<tuple|20.609|?>>
-    <associate|product algebra properties (1)|<tuple|20.606|?>>
-    <associate|product generated sigma algebra|<tuple|20.602|?>>
-    <associate|product generated sigma algebra (1)|<tuple|20.603|?>>
-    <associate|signed measure|<tuple|20.535|?>>
-    <associate|signed measure Hahn Decomposition|<tuple|20.550|?>>
-    <associate|signed measure Hahn Decomposition condition|<tuple|20.551|?>>
-    <associate|signed measure as a difference of measures|<tuple|20.538|?>>
-    <associate|signed measure conditions|<tuple|20.543|?>>
-    <associate|signed measure empty set is positive/negatie|<tuple|20.545|?>>
-    <associate|signed measure finite addivity|<tuple|20.540|?>>
-    <associate|signed measure finite measure|<tuple|20.537|?>>
-    <associate|signed measure finite sum distributivity|<tuple|20.531|?>>
-    <associate|signed measure integral complex function|<tuple|20.577|?>>
-    <associate|signed measure intgral real function|<tuple|20.575|?>>
-    <associate|signed measure positive/negative set|<tuple|20.544|?>>
-    <associate|signed measure product with scalar|<tuple|20.539|?>>
-    <associate|signed measure properties (1)|<tuple|20.541|?>>
-    <associate|signed measure properties (2)|<tuple|20.542|?>>
-    <associate|signed semi groups|<tuple|20.530|?>>
-    <associate|simple function|<tuple|20.373|?>>
-    <associate|simple function 2 point measurability|<tuple|20.387|?>>
-    <associate|simple function alternative|<tuple|20.374|?>>
-    <associate|simple function constant|<tuple|20.385|?>>
-    <associate|simple function integral|<tuple|20.390|?>>
-    <associate|simple function integral constant function|<tuple|20.392|?>>
+    inequality|<tuple|20.418|?>>
+    <associate|non negative integral sub measure space (1)|<tuple|20.409|?>>
+    <associate|non negative integral sub measure space (2)|<tuple|20.411|?>>
+    <associate|non negative integral sub measure space (3)|<tuple|20.410|?>>
+    <associate|non negative integral zero a.e. function|<tuple|20.417|?>>
+    <associate|non negative measurable function|<tuple|20.331|?>>
+    <associate|note 20.198.210|<tuple|20.231|?>>
+    <associate|product |<tuple|20.604|?>>
+    <associate|product algebra|<tuple|20.607|?>>
+    <associate|product algebra equivalences|<tuple|20.610|?>>
+    <associate|product algebra equivalences (1)|<tuple|20.611|?>>
+    <associate|product algebra measure|<tuple|20.613|?>>
+    <associate|product algebra on Borel algebras of R|<tuple|20.612|?>>
+    <associate|product algebra properties (1)|<tuple|20.609|?>>
+    <associate|product generated sigma algebra|<tuple|20.605|?>>
+    <associate|product generated sigma algebra (1)|<tuple|20.606|?>>
+    <associate|signed measure|<tuple|20.538|?>>
+    <associate|signed measure Hahn Decomposition|<tuple|20.553|?>>
+    <associate|signed measure Hahn Decomposition condition|<tuple|20.554|?>>
+    <associate|signed measure as a difference of measures|<tuple|20.541|?>>
+    <associate|signed measure conditions|<tuple|20.546|?>>
+    <associate|signed measure empty set is positive/negatie|<tuple|20.548|?>>
+    <associate|signed measure finite addivity|<tuple|20.543|?>>
+    <associate|signed measure finite measure|<tuple|20.540|?>>
+    <associate|signed measure finite sum distributivity|<tuple|20.534|?>>
+    <associate|signed measure integral complex function|<tuple|20.580|?>>
+    <associate|signed measure intgral real function|<tuple|20.578|?>>
+    <associate|signed measure positive/negative set|<tuple|20.547|?>>
+    <associate|signed measure product with scalar|<tuple|20.542|?>>
+    <associate|signed measure properties (1)|<tuple|20.544|?>>
+    <associate|signed measure properties (2)|<tuple|20.545|?>>
+    <associate|signed semi groups|<tuple|20.533|?>>
+    <associate|simple function|<tuple|20.376|?>>
+    <associate|simple function 2 point measurability|<tuple|20.390|?>>
+    <associate|simple function alternative|<tuple|20.377|?>>
+    <associate|simple function constant|<tuple|20.388|?>>
+    <associate|simple function integral|<tuple|20.393|?>>
+    <associate|simple function integral constant function|<tuple|20.395|?>>
     <associate|simple function integral monotone convergence
-    theorem|<tuple|20.396|?>>
-    <associate|simple function integral properties|<tuple|20.394|?>>
-    <associate|simple function integral properties (1)|<tuple|20.395|?>>
-    <associate|simple function measurable (0)|<tuple|20.380|?>>
-    <associate|simple function measurable (1)|<tuple|20.386|?>>
-    <associate|simple function measurable definition (1)|<tuple|20.377|?>>
-    <associate|simple function measurable definition (2)|<tuple|20.382|?>>
+    theorem|<tuple|20.399|?>>
+    <associate|simple function integral properties|<tuple|20.397|?>>
+    <associate|simple function integral properties (1)|<tuple|20.398|?>>
+    <associate|simple function measurable (0)|<tuple|20.383|?>>
+    <associate|simple function measurable (1)|<tuple|20.389|?>>
+    <associate|simple function measurable definition (1)|<tuple|20.380|?>>
+    <associate|simple function measurable definition (2)|<tuple|20.385|?>>
     <associate|simple function measurable sum and scalar
-    product|<tuple|20.381|?>>
-    <associate|simple function property|<tuple|20.375|?>>
-    <associate|simple function representation|<tuple|20.388|?>>
-    <associate|simple function sum scalar product|<tuple|20.376|?>>
-    <associate|space of measures|<tuple|20.566|?>>
+    product|<tuple|20.384|?>>
+    <associate|simple function property|<tuple|20.378|?>>
+    <associate|simple function representation|<tuple|20.391|?>>
+    <associate|simple function sum scalar product|<tuple|20.379|?>>
+    <associate|space of measures|<tuple|20.569|?>>
     <associate|space of measures bounded functions are
-    integrable|<tuple|20.574|?>>
+    integrable|<tuple|20.577|?>>
     <associate|space of measures bounded measurable
-    functions|<tuple|20.572|?>>
-    <associate|space of measures bounded normed space|<tuple|20.573|?>>
-    <associate|space of measures is a Banach space|<tuple|20.571|?>>
-    <associate|space of measures is a vector space|<tuple|20.568|?>>
-    <associate|space of measures normed space complex case|<tuple|20.570|?>>
-    <associate|space of measures normed space real case|<tuple|20.569|?>>
-    <associate|space of measures total variation is finite|<tuple|20.567|?>>
+    functions|<tuple|20.575|?>>
+    <associate|space of measures bounded normed space|<tuple|20.576|?>>
+    <associate|space of measures is a Banach space|<tuple|20.574|?>>
+    <associate|space of measures is a vector space|<tuple|20.571|?>>
+    <associate|space of measures normed space complex case|<tuple|20.573|?>>
+    <associate|space of measures normed space real case|<tuple|20.572|?>>
+    <associate|space of measures total variation is finite|<tuple|20.570|?>>
   </collection>
 </references>
 

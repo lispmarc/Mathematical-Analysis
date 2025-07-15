@@ -6748,6 +6748,240 @@
   <\equation>
     <label|eq 21.30.273>f<rsub|2><around*|(|\<psi\><around*|(|P\<oplus\><rsub|1><wide|v|\<vect\>>|)>|)>-f<rsub|2><around*|(|\<psi\><around*|(|Q\<oplus\><rsub|1><wide|v|\<vect\>>|)>|)>=f<rsub|2><around*|(|\<psi\><around*|(|P|)>|)>-f<rsub|2><around*|(|\<psi\><around*|(|P|)>|)>
   </equation>
+
+  \;
+
+  \;
+
+  \;
+
+  <\lemma>
+    <label|lemma 20.613.279>Let <math|<around*|{|X<rsub|i>|}><rsub|i\<in\><around*|{|1,2|}>>>
+    be a family of two sets then we have:
+
+    <\enumerate>
+      <item><math|\<forall\>x\<in\>X<rsub|1>>
+      <math|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)><rsub|<around*|[|1,x|]>>=X<rsub|2>>
+
+      <item><math|\<forall\>y\<in\>X<rsub|2>>
+      <math|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)><rsub|<around*|[|2,y|]>>=X<rsub|1>>
+
+      <item><math|\<forall\>x\<in\>X<rsub|1><text| that
+      <math|\<varnothing\><rsub|<around*|[|1,x|]>>=\<varnothing\>> and
+      <math|\<forall\>y\<in\>X<rsub|2>> we have
+      <math|\<varnothing\><rsub|<around*|[|2,y|]>>=\<varnothing\>>>>
+
+      <item><math|\<forall\>x\<in\>X<rsub|1>,>
+      <math|\<forall\>B\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>>
+      <math|<around*|(|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B|)><rsub|<around*|[|1,x|]>>=X<rsub|2>\\B<rsub|<around*|[|1,x|]>>>
+
+      <item><math|\<forall\>y\<in\>X<rsub|1>,>
+      <math|\<forall\>B\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>>
+      <math|<around*|(|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B|)><rsub|<around*|[|2,y|]>>=X<rsub|1>\\B<rsub|<around*|[|2,y|]>>>
+
+      <item>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>>,
+      <math|x\<in\>X<rsub|1>> then <math|<around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)><rsub|<around*|[|1,x|]>>=<big|cup><rsub|i\<in\>I><around*|(|A<rsub|i>|)><rsub|<around*|[|1,x|]>>>
+
+      <item>If <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>>,
+      <math|y\<in\>X<rsub|2>> then <math|<around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)><rsub|<around*|[|2,y|]>>=<big|cup><rsub|i\<in\>I><around*|(|A<rsub|i>|)><rsub|<around*|[|2,y|]>>>
+
+      <item>Let <math|A<rsub|1>\<subseteq\>X<rsub|1>>,
+      <math|A<rsub|2>\<subseteq\>X<rsub|2>> then we have
+
+      <\enumerate>
+        <item><math|\<forall\>x\<in\>X<rsub|1><text| we have
+        ><around*|(|A<rsub|1>\<times\>A<rsub|2>|)><rsub|<around*|[|1,x|]>>=<choice|<tformat|<table|<row|<cell|A<rsub|2><text|
+        if >x\<in\>A<rsub|1>>>|<row|<cell|\<varnothing\><text| if
+        >x\<in\>X<rsub|1>\\A<rsub|1>>>>>>>
+
+        <item><math|\<forall\>y\<in\>X<rsub|2><text| we have
+        ><around*|(|A<rsub|1>\<times\>A<rsub|2>|)><rsub|<around*|[|2,y|]>>=<choice|<tformat|<table|<row|<cell|A<rsub|1><text|
+        if >y\<in\>A<rsub|2>>>|<row|<cell|\<varnothing\><text| if
+        >y\<in\>X<rsub|2>\\A<rsub|2>>>>>>>
+      </enumerate>
+
+      <item>Let <math|A,B\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>> and
+      <math|x\<in\>X<rsub|1>> then <math|<around*|(|A<big|cap>B|)><rsub|<around*|[|1,x|]>>=A<rsub|<around*|[|1,x|]>><big|cap>A<rsub|<around*|[|1,x|]>>>
+
+      <item>Let <math|A,B\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>> and
+      <math|y\<in\>X<rsub|2>> then <math|<around*|(|A<big|cap>B|)><rsub|<around*|[|2,y|]>>=A<rsub|<around*|[|2,y|]>><big|cap>A<rsub|<around*|[|2,y|]>>>
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|x\<in\>X<rsub|1>>. If <math|y\<in\>X<rsub|2>> then
+      <math|<around*|(|x,y|)>\<in\>X<rsub|1>\<cdot\>X<rsub|2>> so that
+      <math|y\<in\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>X<rsub|1>\<cdot\>X<rsub|2>|}>=<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)><rsub|<around*|[|1,x|]>>>.
+      Hence <math|X<rsub|2>\<subseteq\><around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)><rsub|<around*|[|1,x|]>>>
+      and as by definition <math|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)><rsub|<around*|[|1,x|]>>\<subseteq\>X<rsub|2>>
+      it follows that\ 
+
+      <\equation*>
+        <around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)><rsub|<around*|[|1,x|]>>=X<rsub|2>
+      </equation*>
+
+      <item>Let <math|y\<in\>X<rsub|2>>. If <math|x\<in\>X<rsub|1>> then
+      <math|<around*|(|x,y|)>\<in\>X<rsub|1>\<cdot\>X<rsub|2>> so that
+      <math|x\<in\><around*|{|x\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>X<rsub|1>\<cdot\>X<rsub|2>|}>=<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)><rsub|<around*|[|2,y|]>>>.
+      Hence <math|X<rsub|1>\<subseteq\><around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)><rsub|<around*|[|2,y|]>>>
+      and as by definition <math|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)><rsub|<around*|[|1,y|]>>\<subseteq\>X<rsub|1>>
+      it follows that\ 
+
+      <\equation*>
+        <around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)><rsub|<around*|[|1,y|]>>=X<rsub|1>
+      </equation*>
+
+      <item>Let <math|x\<in\>X<rsub|1>> then
+      <math|\<varnothing\><rsub|<around*|[|1,x|]>>=<around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>\<varnothing\>|}>=\<varnothing\>>.
+      Let <math|y\<in\>X<rsub|2>> then <rigid|<math|\<varnothing\><rsub|<around*|[|2,y|]>>=<around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>\<varnothing\>|}>=\<varnothing\>>.>
+
+      <item>Let <math|x\<in\>X<rsub|1>> and
+      <math|B\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>>. Then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|y\<in\><around*|(|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B|)><rsub|<around*|[|1,x|]>>>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>X<rsub|2>\<wedge\><around*|(|x,y|)>\<in\><around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|x\<in\>X<rsub|1>>>|<cell|y\<in\>X<rsub|2>\<wedge\><around*|(|x,y|)>\<nin\>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>X<rsub|2>\<wedge\>y\<nin\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>B|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>X<rsub|2>\<wedge\>x\<nin\>B<rsub|<around*|[|1,x|]>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>X<rsub|2>\\B<rsub|<around*|[|1,x|]>>>>>>
+      </eqnarray*>
+
+      so that\ 
+
+      <\equation*>
+        <around*|(|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B|)><rsub|<around*|[|1,x|]>>=X<rsub|2>\\B<rsub|<around*|[|1,x|]>>
+      </equation*>
+
+      <item>Let <math|y\<in\>X<rsub|2>> and
+      <math|B\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>>. Then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<in\><around*|(|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B|)><rsub|<around*|[|2,y|]>>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X<rsub|1>\<wedge\><around*|(|x,y|)>\<in\><around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|y\<in\>X<rsub|2>>>|<cell|x\<in\>X<rsub|1>\<wedge\><around*|(|x,y|)>\<nin\>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X<rsub|1>\<wedge\>x\<nin\><around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>B|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X<rsub|1>\<wedge\>x\<nin\>B<rsub|<around*|[|2,y|]>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X<rsub|1>\\B<rsub|<around*|[|2,y|]>>>>>>
+      </eqnarray*>
+
+      so that\ 
+
+      <\equation*>
+        <around*|(|<around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>\\B|)><rsub|<around*|[|2,y|]>>=X<rsub|1>\\B<rsub|<around*|[|2,y|]>>
+      </equation*>
+
+      <item>Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>>
+      and <math|x\<in\>X<rsub|1>> then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|y\<in\><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)><rsub|<around*|[|1,x|]>>>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>X<rsub|2>\<wedge\><around*|(|x,y|)>\<in\><big|cup><rsub|i\<in\>I>A<rsub|i>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>X<rsub|2>\<wedge\>\<exists\>i\<in\>I<text|
+        such that ><around*|(|x,y|)>\<in\>A<rsub|i>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>i\<in\>I<text|
+        such that >y\<in\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>A<rsub|i>|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>i\<in\>I<text|
+        such that >y\<in\><around*|(|A<rsub|i>|)><rsub|<around*|[|1,x|]>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><big|cup><rsub|i\<in\>I><around*|(|A<rsub|i>|)><rsub|<around*|[|1,x|]>>>>>>
+      </eqnarray*>
+
+      so that\ 
+
+      <\equation*>
+        <around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)><rsub|<around*|[|1,x|]>>=<big|cup><rsub|i\<in\>I><around*|(|A<rsub|i>|)><rsub|<around*|[|1,x|]>>
+      </equation*>
+
+      <item>Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|X<rsub|1>\<cdot\>X<rsub|2>|)>>
+      and <math|y\<in\>X<rsub|2>> then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<in\><around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)><rsub|<around*|[|2,y|]>>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X<rsub|1>\<wedge\><around*|(|x,y|)>\<in\><big|cup><rsub|i\<in\>I>A<rsub|i>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X<rsub|1>\<wedge\>\<exists\>i\<in\>I<text|
+        such that ><around*|(|x,y|)>\<in\>A<rsub|i>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>i\<in\>I<text|
+        such that >x\<in\><around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>A<rsub|i>|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>i\<in\>I<text|
+        such that >c\<in\><around*|(|A<rsub|i>|)><rsub|<around*|[|2,y|]>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><big|cup><rsub|i\<in\>I><around*|(|A<rsub|i>|)><rsub|<around*|[|2,y|]>>>>>>
+      </eqnarray*>
+
+      so that\ 
+
+      <\equation*>
+        <around*|(|<big|cup><rsub|i\<in\>I>A<rsub|i>|)><rsub|<around*|[|2,y|]>>=<big|cup><rsub|i\<in\>I><around*|(|A<rsub|i>|)><rsub|<around*|[|2,y|]>>
+      </equation*>
+
+      <item>Let <math|A<rsub|1>\<subseteq\>X<rsub|1>>,
+      <math|A<rsub|2>\<subseteq\>X<rsub|2>> then we have:\ 
+
+      <\enumerate>
+        <item>Let <math|x\<in\>X<rsub|1>> then we have either:\ 
+
+        <\description>
+          <item*|<math|x\<in\>A<rsub|1>>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|y\<in\><around*|(|A<rsub|1>\<cdot\>A<rsub|2>|)><rsub|<around*|[|1,x|]>>>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>X<rsub|2>\<wedge\><around*|(|x,y|)>\<in\>A<rsub|1>\<cdot\>A<rsub|2>>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|x\<in\>A<rsub|1>\<wedge\>A<rsub|2>\<subseteq\>X<rsub|2>>>|<cell|y\<in\>A<rsub|2>>>>>
+          </eqnarray*>
+
+          which proves that\ 
+
+          <\equation*>
+            <around*|(|A<rsub|1>\<cdot\>A<rsub|2>|)><rsub|<around*|[|1,x|]>>=A<rsub|2>
+          </equation*>
+
+          <item*|<math|x\<in\>X<rsub|1>\\A<rsub|1>>>Then if
+          <math|y\<in\><around*|(|A<rsub|1>\<cdot\>A<rsub|2>|)><rsub|<around*|[|1,x|]>>>
+          we have that <math|<around*|(|x,y|)>\<in\>A<rsub|1>\<cdot\>A<rsub|2>\<Rightarrow\>x\<in\>A<rsub|1>>
+          which contradicts with <math|x\<in\>X<rsub|1>\\A<rsub|1>>. Hence we
+          must have that\ 
+
+          <\equation*>
+            <around*|(|A<rsub|1>\<cdot\>A<rsub|2>|)><rsub|<around*|[|1,x|]>>=\<varnothing\>
+          </equation*>
+        </description>
+
+        <item>Let <math|y\<in\>X<rsub|2>> then we have either:\ 
+
+        <\description>
+          <item*|<math|y\<in\>A<rsub|2>>>Then\ 
+
+          <\eqnarray*>
+            <tformat|<table|<row|<cell|x\<in\><around*|(|A<rsub|1>\<cdot\>A<rsub|2>|)><rsub|<around*|[|2,y|]>>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>X<rsub|1>\<wedge\><around*|(|x,y|)>\<in\>A<rsub|1>\<cdot\>A<rsub|2>>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|y\<in\>A<rsub|2>\<wedge\>A<rsub|1>\<subseteq\>X<rsub|1>>>|<cell|x\<in\>A<rsub|1>>>>>
+          </eqnarray*>
+
+          which proves that\ 
+
+          <\equation*>
+            <around*|(|A<rsub|1>\<cdot\>A<rsub|2>|)><rsub|<around*|[|2,y|]>>=A<rsub|1>
+          </equation*>
+
+          <item*|<math|y\<in\>X<rsub|2>\\A<rsub|2>>>Then if
+          <math|x\<in\><around*|(|A<rsub|1>\<cdot\>A<rsub|2>|)><rsub|<around*|[|2,y|]>>>
+          we have that <math|<around*|(|x,y|)>\<in\>A<rsub|1>\<cdot\>A<rsub|2>\<Rightarrow\>y\<in\>A<rsub|2>>
+          which contradicts with <math|y\<in\>X<rsub|2>\\A<rsub|2>>. Hence we
+          must have that\ 
+
+          <\equation*>
+            <around*|(|A<rsub|1>\<cdot\>A<rsub|2>|)><rsub|<around*|[|2,y|]>>=\<varnothing\>
+          </equation*>
+        </description>
+      </enumerate>
+
+      <item>Let <math|x\<in\>X<rsub|1>>, <math|A,B\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>>
+      then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|y\<in\><around*|(|A<big|cap>B|)><rsub|<around*|[|1,x|]>>>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>A<big|cap>B|}>>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|x\<in\>X<rsub|1>>>|<cell|<around*|(|x,y|)>\<in\>A<big|cap>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|x,y|)>\<in\>A\<wedge\><around*|(|x,y|)>\<in\>B>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|x\<in\>X<rsub|1>>>|<cell|y\<in\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>A|}>\<wedge\>y\<in\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>B|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>A<rsub|<around*|[|1,x|]>>\<wedge\>y\<in\>B<rsub|<around*|[|1,x|]>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>A<rsub|<around*|[|1,x|]>><big|cap>B<rsub|<around*|[|1,x|]>>>>>>
+      </eqnarray*>
+
+      which proves that\ 
+
+      <\equation*>
+        <around*|(|A<big|cap>B|)><rsub|<around*|[|1,x|]>>=A<rsub|<around*|[|1,x|]>><big|cap>B<rsub|<around*|[|1,x|]>>
+      </equation*>
+
+      <item>Let <math|y\<in\>X<rsub|2>>, <math|A,B\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>>
+      then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|x\<in\><around*|(|A<big|cap>B|)><rsub|<around*|[|2,y|]>>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>A<big|cap>B|}>>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|y\<in\>X<rsub|2>>>|<cell|<around*|(|x,y|)>\<in\>A<big|cap>B>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|x,y|)>\<in\>A\<wedge\><around*|(|x,y|)>\<in\>B>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|y\<in\>X<rsub|2>>>|<cell|x\<in\><around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>A|}>\<wedge\>x\<in\><around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>B|}>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>A<rsub|<around*|[|2,y|]>>\<wedge\>x\<in\>B<rsub|<around*|[|2,y|]>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>A<rsub|<around*|[|2,y|]>><big|cap>B<rsub|<around*|[|2,y|]>>>>>>
+      </eqnarray*>
+
+      which proves that\ 
+
+      <\equation*>
+        <around*|(|A<big|cap>B|)><rsub|<around*|[|2,y|]>>=A<rsub|<around*|[|2,y|]>><big|cap>B<rsub|<around*|[|2,y|]>>
+      </equation*>
+    </enumerate>
+
+    \;
+  </proof>
 </body>
 
 <\initial>
@@ -6986,8 +7220,8 @@
     <associate|eq 20.667.246|<tuple|197|65>>
     <associate|eq 20.669.247|<tuple|198|65>>
     <associate|eq 20.670.247|<tuple|199|66>>
-    <associate|eq 21.27.273|<tuple|220|?>>
-    <associate|eq 21.30.273|<tuple|221|?>>
+    <associate|eq 21.27.273|<tuple|220|74>>
+    <associate|eq 21.30.273|<tuple|221|74>>
     <associate|figure 20.6.234|<tuple|3|72>>
     <associate|lemma 14.360.158|<tuple|10|10>>
     <associate|lemma 14.364.159|<tuple|14|13>>
@@ -7009,6 +7243,7 @@
     <associate|lemma 20.211.204|<tuple|46|56>>
     <associate|lemma 20.470.246|<tuple|50|63>>
     <associate|lemma 20.477.246|<tuple|53|72>>
+    <associate|lemma 20.613.279|<tuple|56|?>>
     <associate|measure length function is a pre-measure|<tuple|47|56>>
     <associate|non negative function as limit of simple
     functions|<tuple|51|66>>
