@@ -28921,7 +28921,8 @@
   <\example>
     <label|non negative integral constant>Let
     <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>> be a measure
-    space, <math|a\<in\>\<bbb-R\>> then <math|C<rsub|a>\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,\<bbb-R\>|]>>
+    space, <math|a\<in\><around*|[|0,\<infty\>|]>> then
+    <math|C<rsub|a>\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,\<bbb-R\>|]>>
     and\ 
 
     <\equation*>
@@ -46475,7 +46476,7 @@
     <math|<around*|{|<around*|\<langle\>|X<rsub|i>,\<cal-A\><rsub|i>,\<mu\><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
     a finite family of measure spaces such that
     <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have that
-    <math|\<mu\><rsub|i>> is finite and <math|\<exists\>\<cal-E\><rsub|i>\<subseteq\>\<cal-P\><around*|(|X|)>>
+    <math|\<exists\>\<cal-E\><rsub|i>\<subseteq\>\<cal-P\><around*|(|X|)>>
     such that\ 
 
     <\enumerate>
@@ -46487,7 +46488,8 @@
 
       <item><math|\<exists\><around*|{|E<rsub|i,k>|}><rsub|k\<in\>\<bbb-N\>>\<subseteq\>\<cal-E\><rsub|i>>
       such that <math|\<forall\>k\<in\>\<bbb-N\>> we have
-      <math|E<rsub|i,k>\<subseteq\>E<rsub|i,k+1>> and
+      <math|E<rsub|i,k>\<subseteq\>E<rsub|i,k+1>>,
+      <math|\<mu\><rsub|i><around*|(|A<rsub|i,k>|)>\<less\>\<infty\>> and
       <math|X<rsub|i>=<big|cup><rsub|k\<in\>\<bbb-N\>>E<rsub|i,k>>
     </enumerate>
 
@@ -46551,7 +46553,7 @@
 
     then we have by [theorem: <reference|product inclusion>] and the fact
     that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
-    <math|\<forall\>k\<in\>\<bbb-N\>> <math|F<rsub|i,k>\<subseteq\>F<rsub|i,k+1>>
+    <math|\<forall\>k\<in\>\<bbb-N\>> <math|E<rsub|i,k>\<subseteq\>E<rsub|i,k+1>>
     we have that\ 
 
     <\equation>
@@ -46580,11 +46582,13 @@
 
     <\equation>
       <label|eq 20.930.279>\<forall\>k\<in\>\<bbb-N\><text|
-      >\<mu\><around*|(|F<rsub|k>|)>=\<mu\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>F<rsub|i,k>|)>=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<mu\><rsub|i><around*|(|F<rsub|i,k>|)>=\<nu\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>F<rsub|i,k>|)>=\<mu\><around*|(|F<rsub|k>|)>
+      >\<mu\><around*|(|F<rsub|k>|)>=\<mu\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i,k>|)>=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<mu\><rsub|i><around*|(|E<rsub|i,k>|)>=\<nu\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i,k>|)>=\<mu\><around*|(|F<rsub|k>|)>
     </equation>
 
-    As <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
-    <math|\<mu\><rsub|i>> is finite we have from the above that\ 
+    As <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have
+    <math|\<forall\>k\<in\>\<bbb-N\>> that
+    <math|\<mu\><rsub|i><around*|(|A<rsub|i,k>|)>> is finite we have from the
+    above that\ 
 
     <\equation>
       <label|eq 20.931.279>\<forall\>k\<in\>\<bbb-N\><text|
@@ -46602,14 +46606,82 @@
     </equation*>
   </proof>
 
-  \;
+  <\corollary>
+    <label|product algebra measure (1)>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|{|<around*|\<langle\>|X<rsub|i>,\<cal-A\><rsub|i>,\<mu\><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of measure spaces such that
+    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> <math|\<mu\><rsub|i>>
+    is <math|\<sigma\>>-finite and <math|\<mu\>,\<nu\>> are two measures on
+    <math|\<cal-A\><rsub|1>\<otimes\>\<cdots\>\<otimes\>\<cal-A\><rsub|n>>
+    such that\ 
+
+    <\equation*>
+      \<forall\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i>\<in\><around*|{|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i>\|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      >E<rsub|i>\<in\>\<cal-A\><rsub|i>|}>
+    </equation*>
+
+    we have\ 
+
+    <\equation*>
+      \<mu\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i>|)>=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<mu\><rsub|i><around*|(|E<rsub|i>|)>=\<nu\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i>|)>
+    </equation*>
+  </corollary>
+
+  <\proof>
+    For <math|i\<in\><around*|{|1,\<ldots\>,n|}>> take
+    <math|\<varepsilon\><rsub|i>=\<cal-A\><rsub|i>> then
+
+    <\equation*>
+      \<sigma\><around*|[|\<varepsilon\><rsub|i>|]>=\<sigma\><around*|[|\<cal-A\><rsub|i>|]>=\<cal-A\><rsub|i>
+    </equation*>
+
+    and trivially we have\ 
+
+    <\equation*>
+      \<forall\>A,B\<in\>\<cal-E\><rsub|i>=\<cal-A\><rsub|i><text| we have
+      >A<big|cap>B\<in\>\<cal-A\><rsub|i>=\<cal-E\><rsub|i><text| [in other
+      words <math|\<cal-E\><rsub|i>> is <math|\<cap\>>-stable]>
+    </equation*>
+
+    As <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|\<mu\><rsub|i>> is <math|\<sigma\>>-finite [theorem:
+    <reference|measure sigma finite increasing>] we have that
+    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> there exist a\ 
+
+    <\equation*>
+      <around*|{|E<rsub|i,k>|}><rsub|k\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><rsub|i>=\<cal-E\><rsub|i><text|
+      with >\<forall\>k\<in\>\<bbb-N\><text| we have
+      >E<rsub|i,k>\<subseteq\>E<rsub|i,k+1>\<wedge\>\<mu\><rsub|i><around*|(|E<rsub|i,k>|)>\<less\>\<infty\><text|
+      and >X<rsub|i>=<big|cup><rsub|k\<in\>\<bbb-N\>>E<rsub|i,k>
+    </equation*>
+
+    By the hypothesis we have \ <math|>
+
+    <\equation*>
+      \<forall\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i>\<in\><around*|{|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i>\|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      >E<rsub|i>\<in\>\<cal-A\><rsub|i>=\<cal-E\><rsub|i>|}>
+    </equation*>
+
+    we have\ 
+
+    <\equation*>
+      \<mu\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i>|)>=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<mu\><rsub|i><around*|(|E<rsub|i>|)>=\<nu\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>E<rsub|i>|)>
+    </equation*>
+
+    Hence all the conditions for [theorem: <reference|product algebra
+    measure>] are satisfied so that we have\ 
+
+    <\equation*>
+      \<mu\>=\<nu\>
+    </equation*>
+  </proof>
 
   This theorem does not prove existence of a measure on
   <math|\<cal-A\><rsub|1>\<otimes\>\<cdots\>\<otimes\>\<cal-A\><rsub|n>>
   satisfying [eq: <reference|eq 20.925.279>] only that if such measure exist
   then it is unique. The remaining part of this section is to prove that such
   a measure exist. We first prove existence for <math|n=2>. First we
-  introduce the idea of a section of a set/
+  introduce the idea of a section of a set.
 
   <\definition>
     Let <math|<around*|{|X<rsub|i>|}><rsub|i\<in\><around*|{|1,2|}>>> be a
@@ -47506,7 +47578,7 @@
   measures.
 
   <\lemma>
-    Let <math|<around*|\<langle\>|X<rsub|1>,\<cal-A\><rsub|1>,\<mu\><rsub|1>|\<rangle\>>>,
+    <label|lemma 20.621.280>Let <math|<around*|\<langle\>|X<rsub|1>,\<cal-A\><rsub|1>,\<mu\><rsub|1>|\<rangle\>>>,
     <math|<around*|\<langle\>|X<rsub|2>,\<cal-A\><rsub|2>,\<mu\><rsub|2>|\<rangle\>>>
     be two measure spaces where <math|\<mu\><rsub|1>>, <math|\<mu\><rsub|2>>
     are <math|\<sigma\>>-finite measures [see definition: \ measures then we
@@ -47670,9 +47742,597 @@
         f<rsub|2,Q>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
       </equation*>
     </enumerate>
-
-    \;
   </proof>
+
+  In the following we use the following convention to simplify notation
+
+  <\convention>
+    \ <label|integral convention>Let <math|<around*|\<langle\>|X,\<cal-A\>,\<mu\>|\<rangle\>>>
+    be a measurable space then we use the following simplifying conventions
+
+    <\enumerate>
+      <item>The notation
+
+      <\equation*>
+        <big|int><rsup|+>E<around*|(|x|)>\<mu\><around*|(|d x|)>
+      </equation*>
+
+      is equivalent with saying that for the function defined by\ 
+
+      <\equation*>
+        f:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text| where
+        >f<around*|(|x|)>=E<around*|(|x|)>
+      </equation*>
+
+      we have that\ 
+
+      <\equation*>
+        f\<in\>\<cal-M\><rsup|+><around*|[|X,A,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      </equation*>
+
+      and\ 
+
+      <\equation*>
+        <big|int><rsup|+>E<around*|(|x|)>\<mu\><around*|(|d x|)>=<big|int>f
+        d\<mu\>
+      </equation*>
+
+      <item>The notation
+
+      <\equation*>
+        <big|int>E<around*|(|x|)>\<mu\><around*|(|d x|)>
+      </equation*>
+
+      is equivalent with saying that for the function defined by\ 
+
+      <\equation*>
+        f:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text| where
+        >f<around*|(|x|)>=E<around*|(|x|)>
+      </equation*>
+
+      we have that\ 
+
+      <\equation*>
+        f\<in\>\<cal-L\><around*|[|X,A,\<mu\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      </equation*>
+
+      and\ 
+
+      <\equation*>
+        <big|int>E<around*|(|x|)>\<mu\><around*|(|d x|)>=<big|int>f d\<mu\>
+      </equation*>
+
+      <item>The notation
+
+      <\equation*>
+        <big|int><rsup|\<bbb-C\>>E<around*|(|x|)>\<mu\><around*|(|d x|)>
+      </equation*>
+
+      is equivalent with saying that for the function defined by\ 
+
+      <\equation*>
+        f:X\<rightarrow\>\<bbb-C\><text| where
+        >f<around*|(|x|)>=E<around*|(|x|)>
+      </equation*>
+
+      we have that\ 
+
+      <\equation*>
+        f\<in\>\<cal-L\><around*|[|X,\<cal-A\>,\<mu\>,\<bbb-C\>|]>
+      </equation*>
+
+      and\ 
+
+      <\equation*>
+        <big|int><rsup|\<bbb-C\>>E<around*|(|x|)>\<mu\><around*|(|d
+        x|)>=<big|int><rsup|\<bbb-C\>>f d\<mu\>
+      </equation*>
+    </enumerate>
+  </convention>
+
+  <\theorem>
+    <label|product measure (1)>Let <math|<around*|\<langle\>|X<rsub|1>,\<cal-A\><rsub|1>,\<mu\><rsub|1>|\<rangle\>>>,
+    <math|<around*|\<langle\>|X<rsub|2>,\<cal-A\><rsub|2>,\<mu\><rsub|2>|\<rangle\>>>
+    be two measure spaces where <math|\<mu\><rsub|1>>, <math|\<mu\><rsub|2>>
+    are <with|font-series|bold|<math|\<sigma\>>-finite> then there exist a
+    measure\ 
+
+    <\equation*>
+      \<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>:\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>\<rightarrow\><around*|[|0,\<infty\>|]>
+    </equation*>
+
+    such that:\ 
+
+    <\equation*>
+      \<mu\><rsub|1>\<otimes\>\<mu\><rsub|2><text| is
+      >\<sigma\><text|-finite>
+    </equation*>
+
+    <\equation*>
+      \<forall\>A<rsub|1>\<in\>\<cal-A\><rsub|1><text|,
+      >\<forall\>A<rsub|2>\<in\>\<cal-A\><rsub|2><text| we have
+      ><around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)><around*|(|A<rsub|1>\<cdot\>A<rsub|2>|)>=\<mu\><rsub|1><around*|(|A<rsub|1>|)>\<cdot\>\<mu\><rsub|2><around*|(|A<rsub|2>|)>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      \<forall\>Q\<in\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2><text| we
+      have ><around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)><around*|(|A|)>=<big|int><rsup|+>\<mu\><rsub|2><around*|(|Q<rsub|<around*|[|1,x|]>>|)>\<mu\><rsub|1><around*|(|d
+      x|)>=<big|int><rsup|+>\<mu\><rsub|1><around*|(|Q<rsub|<around*|[|2,x|]>>|)>\<mu\><rsub|2><around*|(|d
+      x|)>
+    </equation*>
+
+    Further if there exist another measure
+
+    <\equation*>
+      \<pi\>:\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>\<rightarrow\><around*|[|0,\<infty\>|]><text|
+      >
+    </equation*>
+
+    such that\ 
+
+    <\equation*>
+      \<forall\>A<rsub|1>\<in\>\<cal-A\><rsub|1><text|,
+      >\<forall\>A<rsub|2>\<in\>\<cal-A\><rsub|2><text| we have
+      >\<pi\><around*|(|A<rsub|1>\<cdot\>A<rsub|2>|)>=\<mu\><rsub|1><around*|(|A<rsub|1>|)>\<cdot\>\<mu\><rsub|2><around*|(|A<rsub|2>|)>
+    </equation*>
+
+    then\ 
+
+    <\equation*>
+      \<pi\>=\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>
+    </equation*>
+
+    The measure <math|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>> on
+    <math|\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>> is called the product
+    measure of <math|\<mu\><rsub|1>> and <math|\<mu\><rsub|2>>.
+
+    <\note>
+      Let <math|A<rsub|1>\<in\>\<cal-A\><rsub|1>>,
+      <math|A<rsub|2>\<in\>\<cal-A\><rsub|2>> then by [theorem:
+      <reference|product algebra equivalences>]
+      <math|A<rsub|1>\<cdot\>A<rsub|2>\<in\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>>
+      so that <math|<rigid|<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)><around*|(|A<rsub|1>\<cdot\>A<rsub|2>|)>>>
+      is well defined.
+    </note>
+
+    <\note>
+      We use the previous convation [see convention: <reference|integral
+      convention>] here, so\ 
+
+      <\equation*>
+        \<forall\>Q\<in\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2><text|
+        we have ><around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)><around*|(|Q|)>=<big|int><rsup|+>\<mu\><rsub|2><around*|(|Q<rsub|<around*|[|1,x|]>>|)>\<mu\><rsub|1><around*|(|d
+        x|)>=<big|int><rsup|+>\<mu\><rsub|1><around*|(|Q<rsub|<around*|[|2,x|]>>|)>\<mu\><rsub|2><around*|(|d
+        x|)>
+      </equation*>
+
+      in the above is equivalent with the following. For the functions\ 
+
+      <\equation*>
+        f<rsub|1,Q>:X<rsub|1>\<rightarrow\><op|<wide|\<bbb-R\>|\<wide-bar\>>>
+        defined by f<rsub|1,Q><around*|(|x|)>=\<mu\><rsub|2><around*|(|Q<rsub|<around*|[|1,x|]>>|)>
+      </equation*>
+
+      <\equation*>
+        f<rsub|2,Q>:X<rsub|2>\<rightarrow\><op|<wide|\<bbb-R\>|\<wide-bar\>>>
+        defined by f<rsub|2,Q><around*|(|x|)>=\<mu\><rsub|1><around*|(|Q<rsub|<around*|[|2,x|]>>|)>
+      </equation*>
+
+      we have that\ 
+
+      <\equation*>
+        f<rsub|1,Q>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>\<wedge\>f<rsub|2,Q>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+      </equation*>
+
+      and\ 
+
+      <\equation*>
+        <around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)><around*|(|A|)>=<big|int><rsup|+>f<rsub|1,Q>d\<mu\><rsub|1>=<big|int><rsup|+>f<rsub|2,Q>d\<mu\><rsub|2>
+      </equation*>
+    </note>
+  </theorem>
+
+  <\proof>
+    Let <math|Q\<in\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>> and define\ 
+
+    <\equation*>
+      f<rsub|1,Q>:X<rsub|1>\<rightarrow\><op|<wide|\<bbb-R\>|\<wide-bar\>>>
+      defined by f<rsub|1,Q><around*|(|x|)>=\<mu\><rsub|2><around*|(|Q<rsub|<around*|[|1,x|]>>|)>
+    </equation*>
+
+    <\equation*>
+      f<rsub|2,Q>:X<rsub|2>\<rightarrow\><op|<wide|\<bbb-R\>|\<wide-bar\>>>
+      defined by f<rsub|2,Q><around*|(|x|)>=\<mu\><rsub|1><around*|(|Q<rsub|<around*|[|2,x|]>>|)>
+    </equation*>
+
+    \ then by [lemma: <reference|lemma 20.621.280>] we have that\ 
+
+    <\equation>
+      <label|eq 20.974.280>f<rsub|1,Q>\<in\>\<cal-M\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>\<wedge\>f<rsub|2,Q>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+    </equation>
+
+    As <math|\<forall\>x\<in\>X<rsub|1>> <math|f<rsub|1,Q><around*|(|x|)>=\<mu\><rsub|2><around*|(|Q<rsub|<around*|[|1,x|]>>|)>\<in\><around*|[|0,\<infty\>|]>>
+    and <math|\<forall\>x\<in\>X<rsub|2>>
+    <math|f<rsub|2,Q>=\<mu\><rsub|1><around*|(|Q<rsub|<around*|[|2,x|]>>|)>\<in\><around*|[|0,\<infty\>|]>>
+    it follows from the above that\ 
+
+    <\equation>
+      <label|eq 20.975.280>f<rsub|1,Q>\<in\>\<cal-M\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>\<wedge\>f<rsub|2,Q>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+    </equation>
+
+    So we can define the function\ 
+
+    <\equation>
+      <label|eq 20.976.280><around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>:\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>\<rightarrow\><around*|[|0,\<infty\>|]><text|
+      by ><around*|(|\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>|)><around*|(|Q|)>=<big|int><rsup|+>f<rsub|1,Q>d\<mu\><rsub|1>\<equallim\><rsub|notation><big|int><rsup|+>\<mu\><rsub|2><around*|(|Q<rsub|<around*|[|1,x|]>>|)>\<mu\><rsub|1><around*|(|d
+      x|)>
+    </equation>
+
+    Let <math|x\<in\>X<rsub|1>> then <math|f<rsub|1,\<varnothing\>><around*|(|x|)>=\<mu\><rsub|2><around*|(|\<varnothing\><rsub|<around*|[|1,x|]>>|)>\<equallim\><rsub|<text|[theorem:
+    <reference|lemma 20.613.279>]>>\<mu\><rsub|2><around*|(|\<varnothing\>|)>=0>
+    which proves that <math|f<rsub|1,\<varnothing\>>=C<rsub|0>>. Applying
+    then [theorem: <reference|non negative integral constant>] we have that
+    <math|<big|int><rsup|+>f<rsub|1,\<varnothing\>>d\<mu\><rsub|1>=<big|int><rsup|+>C<rsub|0>d\<mu\><rsub|1>=0\<cdot\>\<mu\><rsub|1><around*|(|X<rsub|1>|)>=0>
+    which proves that\ 
+
+    <\equation>
+      <label|eq 20.977.280><around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)><around*|(|\<varnothing\>|)>=0
+    </equation>
+
+    Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>>
+    be pairwise disjoint and take <math|x\<in\>X<rsub|1>>. Let
+    <math|i,j\<in\>\<bbb-N\>> with <math|i\<neq\>j> then
+
+    <\equation*>
+      <around*|(|A<rsub|i>|)><rsub|<around*|[|1,x|]>><big|cap><around*|(|A<rsub|j>|)><rsub|<around*|[|1,x|]>>\<equallim\><rsub|<text|[theorem:
+      <reference|lemma 20.613.279>]>><around*|(|A<rsub|i><big|cap>A<rsub|j>|)><rsub|<around*|[|1,x|]>>=\<varnothing\><rsub|<around*|[|1,x|]>>\<equallim\><rsub|<text|[theorem:
+      <reference|lemma 20.613.279>]>>\<varnothing\>
+    </equation*>
+
+    which proves that\ 
+
+    <\equation>
+      <label|eq 20.978.280><around*|{|<around*|(|A<rsub|i>|)><rsub|<around*|[|1,x|]>>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><rsub|2><text|
+      is pairwise disjoint>
+    </equation>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|f<rsub|1,<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>><around*|(|x|)>>|<cell|=>|<cell|\<mu\><rsub|2><around*|(|<around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)><rsub|<around*|[|1,x|]>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|lemma 20.613.279>]>>>|<cell|\<mu\><rsub|2><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>><around*|(|A<rsub|i>|)><rsub|<around*|[|1,x|]>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.978.280>]>>>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><rsub|2><around*|(|<around*|(|A<rsub|i>|)><rsub|<around*|[|1,x|]>>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|1,A<rsub|i>><around*|(|x|)>>>>>
+    </eqnarray*>
+
+    so that\ 
+
+    <\equation*>
+      f<rsub|1,<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>>=<big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|1,A<rsub|i>>
+    </equation*>
+
+    Using the Beppo's Levi theorem [see theorem: <reference|Beppo Levi's
+    Theorem>] we have that\ 
+
+    <\equation*>
+      <big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|1,A<rsub|i>>\<in\>\<cal-M\><rsup|+><around*|(|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|)>
+    </equation*>
+
+    and
+
+    <\equation*>
+      <around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=<big|int><rsup|+>f<rsub|1,<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>>d\<mu\><rsub|1>=<big|int><rsup|+><around*|(|<big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|1,A<rsub|i>>|)>d\<mu\><rsub|1>=<big|sum><rsub|i=1><rsup|\<infty\>><big|int><rsup|+>f<rsub|1,\<Alpha\><rsub|i>>d\<mu\><rsub|1>=<big|sum><rsub|i=1><rsup|\<infty\>><around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)><around*|(|A<rsub|i>|)>
+    </equation*>
+
+    Hence we have\ 
+
+    <\equation*>
+      \<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2><text|
+      pairwise disjoint then ><around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=<big|sum><rsub|i=1><rsup|\<infty\>><around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)><around*|(|A<rsub|i>|)>
+    </equation*>
+
+    The above together with [eq: <reference|eq 20.977.280>] proves that
+    <math|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>> is a measure on
+    <math|\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>>. To summarize\ 
+
+    <\equation>
+      <label|eq 20.979.280><around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>:\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>\<rightarrow\><around*|[|0,\<infty\>|]><text|
+      defined by ><around*|(|\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>|)><around*|(|Q|)>=<big|int><rsup|+>f<rsub|1,Q>d\<mu\><rsub|1><text|
+      is a measure on >\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>
+    </equation>
+
+    Let <math|A<rsub|1>\<in\>\<cal-A\><rsub|1>>,
+    <math|A<rsub|2>\<in\>\<cal-A\><rsub|2>> then we have for
+    <math|x\<in\>X<rsub|1>> that either:\ 
+
+    <\description>
+      <item*|<math|x\<in\>A<rsub|1>>>Then
+      <math|f<rsub|1,A<rsub|1>\<cdot\>A<rsub|2>><around*|(|x|)>=\<mu\><rsub|2><around*|(|<around*|[|A<rsub|1>\<cdot\>A<rsub|2>|]><rsub|<around*|[|1,x|]>>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|lemma 20.613.279>]>>\<mu\><rsub|2><around*|(|A<rsub|2>|)>=\<mu\><rsub|2><around*|(|A<rsub|2>|)>\<cdot\>\<cal-X\><rsub|X<rsub|1>,A<rsub|1>><around*|(|x|)>>
+
+      <item*|<math|x\<in\>X<rsub|1>\\A<rsub|1>>>Then
+      <math|f<rsub|1,A<rsub|1>\<cdot\>A<rsub|2>><around*|(|x|)>=\<mu\><rsub|2><around*|(|<around*|[|A<rsub|1>\<cdot\>A<rsub|2>|]><rsub|<around*|[|1,x|]>>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|lemma 20.613.279>]>>\<mu\><rsub|2><around*|(|\<varnothing\>|)>=\<mu\><rsub|2><around*|(|A<rsub|2>|)>\<cdot\>\<cal-X\><rsub|X<rsub|1>,A<rsub|1>><around*|(|x|)>>
+    </description>
+
+    which proves that
+
+    <\equation*>
+      f<rsub|1,A<rsub|1>\<cdot\>A<rsub|2>>=\<mu\><rsub|2><around*|(|A<rsub|2>|)>\<cdot\>\<cal-X\><rsub|X<rsub|1>,A<rsub|1>>
+    </equation*>
+
+    Then
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)><around*|(|A<rsub|1>\<cdot\>A<rsub|2>|)>>|<cell|=>|<cell|<big|int><rsup|+>f<rsub|1,A<rsub|1>\<cdot\>A<rsub|2>>d\<mu\><rsub|1>>>|<row|<cell|>|<cell|=>|<cell|<big|int><rsup|+><around*|(|\<mu\><rsub|2><around*|(|A<rsub|2>|)>\<cdot\>\<cal-X\><rsub|X<rsub|1>,A<rsub|1>>|)>d\<mu\><rsub|1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[example:
+      <reference|non negative integral characteristics>]>>>|<cell|\<mu\><rsub|2><around*|(|A<rsub|2>|)>\<cdot\>\<mu\><rsub|1><around*|(|A<rsub|1>|)>>>>>
+    </eqnarray*>
+
+    To summarize we have\ 
+
+    <\equation>
+      <label|eq 20.980.280>\<forall\>A<rsub|1>\<in\>\<cal-A\><rsub|1>,\<forall\>A<rsub|2>\<in\>\<cal-A\><rsub|2><text|
+      we have ><around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)><around*|(|A<rsub|1>\<cdot\>A<rsub|2>|)>=\<mu\><rsub|1><around*|(|A<rsub|1>|)>\<cdot\>\<mu\><rsub|12><around*|(|A<rsub|2>|)>
+    </equation>
+
+    Now if <math|\<pi\>> is another measure on
+    <math|\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>> such that
+    <math|\<forall\>A<rsub|1>\<in\>\<cal-A\><rsub|1>,\<forall\>A<rsub|2>\<in\>\<cal-A\><rsub|2><text|>>
+    we have <math|<rigid|\<pi\><around*|(|A<rsub|1>\<cdot\>A<rsub|2>|)>=\<pi\><rsub|1><around*|(|A<rsub|1>|)>\<cdot\>\<pi\><around*|(|A<rsub|2>|)>>>
+    then by [corollary: <reference|product algebra measure (1)>]\ 
+
+    <\equation>
+      <label|eq 20.981.280>\<pi\>=\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>
+    </equation>
+
+    As <math|\<mu\><rsub|1>,\<mu\><rsub|2>> are <math|\<sigma\>>-finite there
+    exist by [theorem: <reference|measure sigma finite increasing>] there
+    exist <math|\<forall\>i\<in\><around*|{|1,2|}>> a
+
+    <\equation>
+      <label|eq 20.982.280><around*|{|E<rsub|i,k>|}><rsub|k\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><rsub|i><text|
+      with >\<forall\>k\<in\>\<bbb-N\><text|
+      >E<rsub|i,k>\<subseteq\>E<rsub|i,k+1>\<wedge\>\<mu\><around*|(|E<rsub|i,k>|)>\<less\>\<infty\><text|
+      and >X<rsub|i>=<big|cup><rsub|k\<in\>\<bbb-N\>>E<rsub|i,k>
+    </equation>
+
+    Let <math|x=<around*|(|x<rsub|1>,x<rsub|2>|)>\<in\>X<rsub|1>\<cdot\>X<rsub|2>>
+    then <math|x<rsub|1>\<in\>X<rsub|1>\<wedge\>x<rsub|2>\<in\>X<rsub|2>>
+    then by the above there exist <math|k,l\<in\>\<bbb-N\>> such that
+    <math|x<rsub|1>\<in\>E<rsub|1,k>\<wedge\>x<rsub|2>\<in\>E<rsub|2,k>> so
+    that <math|x=<around*|(|x<rsub|1>,x<rsub|2>|)>\<in\>E<rsub|1,max<around*|(|k,l|)>>\<cdot\>E<rsub|2,max<around*|(|k,l|)>>\<subseteq\><big|cup><rsub|k\<in\>\<bbb-N\>><around*|(|E<rsub|1,k>\<cdot\>E<rsub|2,k>|)>>.
+    As also <math|\<forall\>k\<in\>\<bbb-N\>>
+    <math|E<rsub|1,k>\<cdot\>E<rsub|2,k>\<subseteq\>X<rsub|1>\<cdot\>X<rsub|2>>
+    it follows that\ 
+
+    <\equation>
+      <label|eq 20.983.280><big|cup><rsub|k\<in\>\<bbb-N\>>E<rsub|1,k>\<cdot\>E<rsub|2,k>=X<rsub|1>\<cdot\>X<rsub|2>
+    </equation>
+
+    Further <math|\<forall\>k\<in\>\<bbb-N\>> we have by [theorem:
+    <reference|product algebra equivalences>] <math|>that
+    <math|E<rsub|1,k>\<cdot\>E<rsub|2,k>\<in\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>>
+    and by [eqs: <reference|eq 20.980.280>, <reference|eq 20.982.280>] that
+    <math|<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)><around*|(|E<rsub|1,k>\<cdot\>E<rsub|2,k>|)>=\<mu\><rsub|1><around*|(|E<rsub|1,k>|)>\<cdot\>\<mu\><rsub|2><around*|(|E<rsub|2,k>|)>\<less\>\<infty\>>,
+    hence, taking in account [eq: <reference|eq 20.983.280>], we have
+
+    <\equation*>
+      \<mu\><rsub|1>\<otimes\>\<mu\><rsub|2><text| is
+      >\<sigma\><text|-finite>
+    </equation*>
+
+    Finally the only thing left to prove is that
+    <math|><math|<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)><around*|(|Q|)>=<big|int><rsup|+>\<mu\><rsub|1><around*|(|Q<rsub|<around*|[|2,x|]>>|)>\<mu\><rsub|2><around*|(|d
+    x|)>>. Define now\ 
+
+    <\equation*>
+      \<pi\>:\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>\<rightarrow\><around*|[|0,\<infty\>|]><text|
+      by >\<pi\><around*|(|Q|)>=<big|int><rsup|+>f<rsub|2,Q>d\<mu\><rsub|2><below|\<equallim\>|notation><big|int><rsup|+><rsub|>\<mu\><rsub|1><around*|(|Q<rsub|<around*|[|2,x|]>>|)>\<mu\><rsub|2><around*|(|d
+      x|)>
+    </equation*>
+
+    Let <math|x\<in\>X<rsub|2>> then <math|f<rsub|2,\<varnothing\>><around*|(|x|)>=\<mu\><rsub|1><around*|(|\<varnothing\><rsub|<around*|[|2,x|]>>|)>\<equallim\><rsub|<text|[theorem:
+    <reference|lemma 20.613.279>]>>\<mu\><rsub|1><around*|(|\<varnothing\>|)>=0>
+    which proves that <math|f<rsub|2,\<varnothing\>>=C<rsub|0>>. Applying
+    then [theorem: <reference|non negative integral constant>] we have that
+    <math|<big|int><rsup|+>f<rsub|2,\<varnothing\>>d\<mu\><rsub|2>=<big|int><rsup|+>C<rsub|0>d\<mu\><rsub|2>=0\<cdot\>\<mu\><rsub|2><around*|(|X<rsub|2>|)>=0>
+    which proves that\ 
+
+    <\equation>
+      <label|eq 20.984.280>\<pi\><around*|(|\<varnothing\>|)>=0
+    </equation>
+
+    Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>>
+    be pairwise disjoint and take <math|x\<in\>X<rsub|2>>. Let
+    <math|i,j\<in\>\<bbb-N\>> with <math|i\<neq\>j> then
+
+    <\equation*>
+      <around*|(|A<rsub|i>|)><rsub|<around*|[|2,x|]>><big|cap><around*|(|A<rsub|j>|)><rsub|<around*|[|2,x|]>>\<equallim\><rsub|<text|[theorem:
+      <reference|lemma 20.613.279>]>><around*|(|A<rsub|i><big|cap>A<rsub|j>|)><rsub|<around*|[|2,x|]>>=\<varnothing\><rsub|<around*|[|2,x|]>>\<equallim\><rsub|<text|[theorem:
+      <reference|lemma 20.613.279>]>>\<varnothing\>
+    </equation*>
+
+    which proves that\ 
+
+    <\equation>
+      <label|eq 20.985.280><around*|{|<around*|(|A<rsub|i>|)><rsub|<around*|[|2,x|]>>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><rsub|1><text|
+      is pairwise disjoint>
+    </equation>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|f<rsub|2,<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>><around*|(|x|)>>|<cell|=>|<cell|\<mu\><rsub|1><around*|(|<around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)><rsub|<around*|[|2,x|]>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|lemma 20.613.279>]>>>|<cell|\<mu\><rsub|1><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>><around*|(|A<rsub|i>|)><rsub|<around*|[|2,x|]>>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.985.280>]>>>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><rsub|2><around*|(|<around*|(|A<rsub|i>|)><rsub|<around*|[|2,x|]>>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|2,A<rsub|i>><around*|(|x|)>>>>>
+    </eqnarray*>
+
+    so that\ 
+
+    <\equation*>
+      f<rsub|2,<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>>=<big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|2,A<rsub|i>>
+    </equation*>
+
+    Using the Beppo's Levi theorem [see theorem: <reference|Beppo Levi's
+    Theorem>] we have that\ 
+
+    <\equation*>
+      <big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|2,A<rsub|i>>\<in\>\<cal-M\><rsup|+><around*|(|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|)>
+    </equation*>
+
+    and
+
+    <\equation*>
+      \<pi\><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=<big|int><rsup|+>f<rsub|2,<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>>d\<mu\><rsub|2>=<big|int><rsup|+><around*|(|<big|sum><rsub|i=1><rsup|\<infty\>>f<rsub|2,A<rsub|i>>|)>d\<mu\><rsub|2>=<big|sum><rsub|i=1><rsup|\<infty\>><big|int><rsup|+>f<rsub|2,\<Alpha\><rsub|i>>d\<mu\><rsub|2>=<big|sum><rsub|i=1><rsup|\<infty\>>\<pi\><around*|(|A<rsub|i>|)>
+    </equation*>
+
+    Hence we have\ 
+
+    <\equation*>
+      \<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2><text|
+      pairwise disjoint then >\<pi\><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=<big|sum><rsub|i=1><rsup|\<infty\>>\<pi\><around*|(|A<rsub|i>|)>
+    </equation*>
+
+    The above together with [eq: <reference|eq 20.985.280>] proves that
+    <math|\<pi\>> is a measure on <math|\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>>.
+    To summarize\ 
+
+    <\equation>
+      <label|eq 20.986.280>\<pi\>:\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>\<rightarrow\><around*|[|0,\<infty\>|]><text|
+      defined by ><around*|(|\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>|)><around*|(|Q|)>=<big|int><rsup|+>f<rsub|2,Q>d\<mu\><rsub|2><text|
+      is a measure on >\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>
+    </equation>
+
+    Let <math|A<rsub|1>\<in\>\<cal-A\><rsub|1>>,
+    <math|A<rsub|2>\<in\>\<cal-A\><rsub|2>> then we have for
+    <math|x\<in\>X<rsub|2>> that either:\ 
+
+    <\description>
+      <item*|<math|x\<in\>A<rsub|2>>>Then
+      <math|f<rsub|2,A<rsub|1>\<cdot\>A<rsub|2>><around*|(|x|)>=\<mu\><rsub|1><around*|(|<around*|[|A<rsub|1>\<cdot\>A<rsub|2>|]><rsub|<around*|[|2,x|]>>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|lemma 20.613.279>]>>\<mu\><rsub|1><around*|(|A<rsub|1>|)>=\<mu\><rsub|1><around*|(|A<rsub|1>|)>\<cdot\>\<cal-X\><rsub|X<rsub|2>,A<rsub|2>><around*|(|x|)>>
+
+      <item*|<math|x\<in\>X<rsub|2>\\A<rsub|2>>>Then
+      <math|f<rsub|2,A<rsub|1>\<cdot\>A<rsub|2>><around*|(|x|)>=\<mu\><rsub|1><around*|(|<around*|[|A<rsub|1>\<cdot\>A<rsub|2>|]><rsub|<around*|[|2,x|]>>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|lemma 20.613.279>]>>\<mu\><rsub|1><around*|(|\<varnothing\>|)>=\<mu\><rsub|1><around*|(|A<rsub|1>|)>\<cdot\>\<cal-X\><rsub|X<rsub|2>,A<rsub|2>><around*|(|x|)>>
+    </description>
+
+    which proves that
+
+    <\equation*>
+      f<rsub|2,A<rsub|1>\<cdot\>A<rsub|2>>=\<mu\><rsub|1><around*|(|A<rsub|1>|)>\<cdot\>\<cal-X\><rsub|X<rsub|2>,A<rsub|2>>
+    </equation*>
+
+    Then
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<pi\><around*|(|A<rsub|1>\<cdot\>A<rsub|2>|)>>|<cell|=>|<cell|<big|int><rsup|+>f<rsub|2,A<rsub|1>\<cdot\>A<rsub|2>>d\<mu\><rsub|2>>>|<row|<cell|>|<cell|=>|<cell|<big|int><rsup|+><around*|(|\<mu\><rsub|1><around*|(|A<rsub|1>|)>\<cdot\>\<cal-X\><rsub|X<rsub|1>,A<rsub|1>>|)>d\<mu\><rsub|2>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[example:
+      <reference|non negative integral characteristics>]>>>|<cell|\<mu\><rsub|1><around*|(|A<rsub|1>|)>\<cdot\>\<mu\><rsub|2><around*|(|A<rsub|2>|)>>>>>
+    </eqnarray*>
+
+    To summarize we have\ 
+
+    <\equation>
+      <label|eq 20.987.280>\<forall\>A<rsub|1>\<in\>\<cal-A\><rsub|1>,\<forall\>A<rsub|2>\<in\>\<cal-A\><rsub|2><text|
+      we have >\<pi\><around*|(|A<rsub|1>\<cdot\>A<rsub|2>|)>=\<mu\><rsub|1><around*|(|A<rsub|1>|)>\<cdot\>\<mu\><rsub|2><around*|(|A<rsub|2>|)>
+    </equation>
+
+    Hence using [eqs: <reference|eq 20.986.280>, <reference|eq 20.987.280>
+    and <reference|eq 20.981.280>] we have that
+    <math|\<pi\>=\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>> or using the
+    definition of <math|\<pi\>> that\ 
+
+    <\equation*>
+      \<forall\>Q\<in\>\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2><text| we
+      have ><around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>=<big|int><rsup|+>f<rsub|2,A<rsub|1>\<cdot\>A<rsub|2>>d\<mu\><rsub|2>\<equallim\><rsub|notation><big|int><rsup|+>\<mu\><rsub|1><around*|(|Q<rsub|<around*|[|2,x|]>>|)>\<mu\><rsub|2><around*|(|d
+      x|)>
+    </equation*>
+  </proof>
+
+  Having defined product measures it is time to define the integral of
+  product measures. First we define sections of functions.
+
+  <\definition>
+    Let <math|X<rsub|1>,Y<rsub|1>,Z> be sets and
+    <math|f:X<rsub|1>\<circ\>X<rsub|2>\<rightarrow\>Z> a function then we
+    define:
+
+    <\enumerate>
+      <item><math|\<forall\>x\<in\>X<rsub|1>>
+      <math|f<rsub|1,x>:X<rsub|2>\<rightarrow\>Z<text| where
+      >f<rsub|1,x><around*|(|y|)>=f<around*|(|x,y|)>>
+
+      <item><math|\<forall\>y\<in\>X<rsub|2>>
+      <math|f<rsub|2,y>:X\<rightarrow\>Z> where
+      <math|f<rsub|2,y><around*|(|y|)>=f<around*|(|x,y|)>>
+    </enumerate>
+  </definition>
+
+  Applying the above definition on charasteristic function we have.
+
+  <\lemma>
+    <label|lemma 20.628.280>Let <math|X<rsub|1>,X<rsub|2>,Z> be sets then we
+    have:\ 
+
+    <\enumerate>
+      <item><math|\<forall\>Q\<subseteq\>X<rsub|1>*\<cdot\>X<rsub|2>> we have
+      <math|\<forall\>x\<in\>X<rsub|1>> that
+      <math|<around*|(|\<cal-X\><rsub|X<rsub|1>\<cdot\>X<rsub|2>,Q>|)><rsub|1,x>=\<cal-X\><rsub|X<rsub|2>,Q<rsub|<around*|[|1,x|]>>>>
+
+      <item><math|\<forall\>Q\<subseteq\>X<rsub|1>*\<cdot\>X<rsub|2>> we have
+      <math|\<forall\>y\<in\>X<rsub|2>> that
+      <math|<around*|(|\<cal-X\><rsub|X<rsub|1>\<cdot\>X<rsub|2>,Q>|)><rsub|2,y>=\<cal-X\><rsub|X<rsub|1>,Q<rsub|<around*|[|2,y|]>>>>
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|y\<in\>X<rsub|2>> then we have either:\ 
+
+      <\description>
+        <item*|<math|y\<in\>Q<rsub|<around*|[|1,x|]>>>>Then
+        <math|y\<in\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>Q|}>>
+        so that <math|<around*|(|x,y|)>\<in\>Q> hence we have that
+
+        <\equation*>
+          <around*|(|\<cal-X\><rsub|X<rsub|1>\<cdot\>X<rsub|2>,Q>|)><rsub|1,x><around*|(|y|)>=\<cal-X\><rsub|X<rsub|1>\<cdot\>X<rsub|2>,Q><around*|(|x,y|)>=1=\<cal-X\><rsub|X<rsub|2>,Q<rsub|<around*|[|1,x|]>>><around*|(|y|)><rsub|>
+        </equation*>
+
+        <item*|<math|y\<in\>X<rsub|2>\\Q<rsub|<around*|[|1,x|]>>>>Then
+        <math|y\<nin\><around*|{|y\<in\>X<rsub|2>\|<around*|(|x,y|)>\<in\>Q|}>>
+        so that <math|<around*|(|x,y|)>\<nin\>Q> hence\ 
+
+        <\equation*>
+          <around*|(|\<cal-X\><rsub|X<rsub|1>\<cdot\>X<rsub|2>,Q>|)><rsub|1,x><around*|(|y|)>=\<cal-X\><rsub|X<rsub|1>\<cdot\>X<rsub|2>,Q><around*|(|x,y|)>=0=\<cal-X\><rsub|X<rsub|2>,Q<rsub|<around*|[|1,x|]>>><around*|(|y|)>
+        </equation*>
+      </description>
+
+      which proves that <math|<around*|(|\<cal-X\><rsub|X<rsub|1>\<cdot\>X<rsub|2>,Q>|)><rsub|1,x>=\<cal-X\><rsub|X<rsub|2>,Q<rsub|<around*|[|1,x|]>>>>.
+
+      <item>Let <math|x\<in\>X<rsub|1>> then we have either:\ 
+
+      <\description>
+        <item*|<math|x\<in\>Q<rsub|<around*|[|2,y|]>>>>Then
+        <math|x\<in\><around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>Q|}>>
+        so that <math|<around*|(|x,y|)>\<in\>Q> hence we have that
+
+        <\equation*>
+          <around*|(|\<cal-X\><rsub|X<rsub|1>\<cdot\>X<rsub|2>,Q>|)><rsub|2,y><around*|(|x|)>=\<cal-X\><rsub|X<rsub|1>\<cdot\>X<rsub|2>,Q><around*|(|x,y|)>=1=\<cal-X\><rsub|X<rsub|1>,Q<rsub|<around*|[|2,y|]>>><around*|(|x|)><rsub|>
+        </equation*>
+
+        <item*|<math|x\<in\>X<rsub|1>\\Q<rsub|<around*|[|2,y|]>>>>Then
+        <math|x\<nin\><around*|{|x\<in\>X<rsub|1>\|<around*|(|x,y|)>\<in\>Q|}>>
+        so that <math|<around*|(|x,y|)>\<nin\>Q> hence\ 
+
+        <\equation*>
+          <around*|(|\<cal-X\><rsub|X<rsub|1>\<cdot\>X<rsub|2>,Q>|)><rsub|2,y><around*|(|x|)>=\<cal-X\><rsub|X<rsub|1>\<cdot\>X<rsub|2>,Q><around*|(|x,y|)>=0=\<cal-X\><rsub|X<rsub|1>,Q<rsub|<around*|[|2,y|]>>><around*|(|x|)>
+        </equation*>
+      </description>
+
+      which proves that <math|<around*|(|\<cal-X\><rsub|X<rsub|1>\<cdot\>X<rsub|2>,Q>|)><rsub|2,y>=\<cal-X\><rsub|X<rsub|1>,Q<rsub|<around*|[|2,y|]>>>>.
+    </enumerate>
+  </proof>
+
+  \;
 
   \ 
 
@@ -48897,7 +49557,6 @@
     <associate|eq 20.958.280|<tuple|20.958|?>>
     <associate|eq 20.959.280|<tuple|20.959|?>>
     <associate|eq 20.96.200|<tuple|20.141|?>>
-    <associate|eq 20.96.280|<tuple|20.961|?>>
     <associate|eq 20.960.280|<tuple|20.960|?>>
     <associate|eq 20.961.280|<tuple|20.961|?>>
     <associate|eq 20.962.280|<tuple|20.962|?>>
@@ -48909,7 +49568,21 @@
     <associate|eq 20.971.280|<tuple|20.971|?>>
     <associate|eq 20.972.280|<tuple|20.972|?>>
     <associate|eq 20.973.280|<tuple|20.973|?>>
+    <associate|eq 20.974.280|<tuple|20.974|?>>
+    <associate|eq 20.975.280|<tuple|20.975|?>>
+    <associate|eq 20.976.280|<tuple|20.976|?>>
+    <associate|eq 20.977.280|<tuple|20.977|?>>
+    <associate|eq 20.978.280|<tuple|20.978|?>>
+    <associate|eq 20.979.280|<tuple|20.979|?>>
     <associate|eq 20.98.200|<tuple|20.143|?>>
+    <associate|eq 20.980.280|<tuple|20.980|?>>
+    <associate|eq 20.981.280|<tuple|20.981|?>>
+    <associate|eq 20.982.280|<tuple|20.982|?>>
+    <associate|eq 20.983.280|<tuple|20.983|?>>
+    <associate|eq 20.984.280|<tuple|20.984|?>>
+    <associate|eq 20.985.280|<tuple|20.985|?>>
+    <associate|eq 20.986.280|<tuple|20.986|?>>
+    <associate|eq 20.987.280|<tuple|20.987|?>>
     <associate|eq 20.99.200|<tuple|20.144|?>>
     <associate|extended -(x.y)|<tuple|20.36|?>>
     <associate|extended 0\<less\>=x and 0\<less\>=y then
@@ -49001,6 +49674,7 @@
     y\<less\>\<gtr\>@@|<tuple|20.11|?>>
     <associate|figure 20.6.234|<tuple|20.6|?>>
     <associate|figure 20.7.234|<tuple|20.7|?>>
+    <associate|integral convention|<tuple|20.623|?>>
     <associate|label 20.147.200|<tuple|20.191|?>>
     <associate|label 20.252.221|<tuple|20.283|?>>
     <associate|lemma 20.102.202|<tuple|20.114|?>>
@@ -49065,9 +49739,11 @@
     <associate|lemma 20.559.249|<tuple|20.593|?>>
     <associate|lemma 20.594.271|<tuple|20.598|?>>
     <associate|lemma 20.595.271|<tuple|20.599|?>>
-    <associate|lemma 20.613.279|<tuple|20.616|?>>
-    <associate|lemma 20.614.279|<tuple|20.617|?>>
-    <associate|lemma 20.619.279|<tuple|20.619|?>>
+    <associate|lemma 20.613.279|<tuple|20.617|?>>
+    <associate|lemma 20.614.279|<tuple|20.618|?>>
+    <associate|lemma 20.619.279|<tuple|20.620|?>>
+    <associate|lemma 20.621.280|<tuple|20.622|?>>
+    <associate|lemma 20.628.280|<tuple|20.628|?>>
     <associate|lemma 20.78.156|<tuple|20.86|?>>
     <associate|lemma 20.80.156|<tuple|20.88|?>>
     <associate|lemma 20.90.156|<tuple|20.102|?>>
@@ -49302,10 +49978,12 @@
     <associate|product algebra equivalences|<tuple|20.610|?>>
     <associate|product algebra equivalences (1)|<tuple|20.611|?>>
     <associate|product algebra measure|<tuple|20.613|?>>
+    <associate|product algebra measure (1)|<tuple|20.614|?>>
     <associate|product algebra on Borel algebras of R|<tuple|20.612|?>>
     <associate|product algebra properties (1)|<tuple|20.609|?>>
     <associate|product generated sigma algebra|<tuple|20.605|?>>
     <associate|product generated sigma algebra (1)|<tuple|20.606|?>>
+    <associate|product measure (1)|<tuple|20.624|?>>
     <associate|signed measure|<tuple|20.538|?>>
     <associate|signed measure Hahn Decomposition|<tuple|20.553|?>>
     <associate|signed measure Hahn Decomposition condition|<tuple|20.554|?>>
