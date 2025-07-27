@@ -40922,7 +40922,74 @@
     <\description>
       <item*|<math|X\\U=\<varnothing\>>>Then <math|U=X\<in\>\<cal-A\>>
 
-      <item*|<math|X\\U\<neq\>\<varnothing\>>>TODO
+      <item*|<math|X\\U\<neq\>\<varnothing\>>>Consider the disance function
+      [see definition: <reference|normed distinct function>]
+
+      <\equation*>
+        \<delta\><rsub|X\\U>:X\<rightarrow\>\<bbb-R\><text| where
+        >\<delta\><rsub|X\\U><around*|(|x|)>=inf<around*|(|<around*|{|<around*|\<\|\|\>|x-y|\<\|\|\>>\|y\<in\>X\\U|}>|)>
+      </equation*>
+
+      Define now
+
+      <\equation*>
+        <around*|{|F<rsub|n>|}><rsub|n\<in\>\<bbb-N\>><text| by
+        >\<delta\><rsup|-1><rsub|X\\U><around*|(|<around*|[|<frac|1|n>,\<infty\>|[>|)>
+      </equation*>
+
+      Let <math|n\<in\>\<bbb-N\>>. Using the fact that
+      <math|<around*|[|<frac|1|n>,\<infty\>|[>> is closed in
+      <math|\<cal-T\><rsub|<around*|\|||\|>>> [see theorem: <reference|normed
+      generalized intervals that are open>], <math|\<delta\><rsub|X\\U>> is
+      continuous [see theorem: <reference|continuity distance function is
+      Lipschitz>] it follows from [theorem: <reference|continuity
+      equivalences>] that <math|F<rsub|n>> is a closed set. Further if
+      <math|x\<in\>F<rsub|n>> then <math|\<delta\><rsub|X\\U><around*|(|x|)>\<in\><around*|[|<frac|1|n>,\<infty\>|[>>
+      so that <math|<frac|1|n+1>\<less\><frac|1|n>\<leqslant\>\<delta\><rsub|X\\U><around*|(|x|)>\<Rightarrow\>\<delta\><rsub|X\\U><around*|(|x|)>\<in\><around*|[|<frac|1|n>,\<infty\>|[>>
+      or <math|x\<in\>F<rsub|n+1>>. To summarise\ 
+
+      <\equation>
+        <label|eq 21.1001.285>\<forall\>n\<in\>\<bbb-N\><text| we have
+        >F<rsub|n><text| is closed and >F<rsub|n>\<subseteq\>F<rsub|n+1>
+      </equation>
+
+      If <math|x\<in\>F<rsub|n>> then <math|0\<less\><frac|1|n>\<leqslant\>\<delta\><rsub|X\\U><around*|(|x|)>>.
+      Assume that <math|x\<in\>X\\U> then
+      <math|0\<in\><around*|{|<around*|\<\|\|\>|x-y|\<\|\|\>>\|y\<in\>X\\Y|}>>
+      so that <math|\<delta\><rsub|X\\U><around*|(|x|)>=inf<around*|(|<around*|{|<around*|\<\|\|\>|x-y|\<\|\|\>>\|y\<in\>X\\U|}>|)>\<leqslant\>0>
+      contradicting <math|0\<less\>\<delta\><rsub|X\\U><around*|(|x|)>>,
+      hence the assumption is false and we must have that <math|x\<nin\>X\\U>
+      which proves that <math|x\<in\>U>. So we conclude that\ 
+
+      <\equation>
+        <label|eq 21.1002.285>\<forall\>n\<in\>\<bbb-N\><text|
+        >F<rsub|n>\<subseteq\>U<text| from which it follows that
+        ><big|cup><rsub|n\<in\>\<bbb-N\>>F<rsub|n>\<subseteq\>U
+      </equation>
+
+      If now <math|x\<in\>U> then there exist a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,\<delta\>|)>\<subseteq\>U>,
+      hence <math|\<forall\>y\<in\>X\\U> we have that
+      <math|y\<nin\>B<rsub|<around*|\<\|\|\>||\<\|\|\>>><around*|(|x,\<delta\>|)>\<Rightarrow\>\<delta\>\<leqslant\><around*|\<\|\|\>|x-y|\<\|\|\>>>
+      so that <math|\<delta\>> is a lower bound for
+      <math|<around*|{|<around*|\<\|\|\>|x-y|\<\|\|\>>\|y\<in\>X\\U|}>>. In
+      other words\ 
+
+      <\equation*>
+        0\<less\>\<delta\>\<leqslant\>\<delta\><rsub|X\\Y><around*|(|x|)>=inf<around*|(|<around*|{|<around*|\<\|\|\>|x-y|\<\|\|\>>\|y\<in\>X\\U|}>|)>
+      </equation*>
+
+      Using the Archimedean property of the real numbers [see theorem:
+      <reference|complex Archimedean property consequence (1)>] there exist a
+      <math|n\<in\>\<bbb-N\>> such that <math|0\<less\><frac|1|n>\<less\>\<delta\>\<leqslant\>\<delta\><rsub|X\\Y><around*|(|x|)>>,
+      hence <math|x\<in\>\<delta\><rsup|-1><rsub|X\\Y><around*|(|<around*|[|<frac|1|n>,\<infty\>|[>|)>=F<rsub|n>\<subseteq\><big|cup><rsub|n\<in\>\<bbb-N\>>F<rsub|n>>,
+      this proves that <math|U\<subseteq\><big|cup><rsub|n\<in\>\<bbb-N\>>F<rsub|n>>
+      which combined with [eq: <reference|eq 21.1002.285>] results in\ 
+
+      <\equation>
+        <label|eq 21.1003.285>U=<big|cup><rsub|n\<in\>\<bbb-N\>>F<rsub|n>
+      </equation>
     </description>
 
     \ 
@@ -40952,7 +41019,7 @@
     <associate|chapter-nr|20>
     <associate|item-nr|>
     <associate|last-item-nr|2>
-    <associate|page-first|1293>
+    <associate|page-first|1295>
     <associate|section-nr|5>
     <associate|subsection-nr|0>
   </collection>
@@ -42179,6 +42246,9 @@
     <associate|eq 20.997.280|<tuple|21.947|?>>
     <associate|eq 20.999.280|<tuple|21.948|?>>
     <associate|eq 21.1000.285|<tuple|21.1000|?>>
+    <associate|eq 21.1001.285|<tuple|21.1001|?>>
+    <associate|eq 21.1002.285|<tuple|21.1002|?>>
+    <associate|eq 21.1003.285|<tuple|21.1003|?>>
     <associate|eq 21.530.285|<tuple|21.530|?>>
     <associate|eq 21.991.285|<tuple|21.991|?>>
     <associate|eq 21.992.285|<tuple|21.992|?>>
@@ -42982,6 +43052,10 @@
       <with|mode|<quote|math>|\<bbb-R\><rsup|n>>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-141>
+
+      <with|par-left|<quote|1tab>|21.8.1<space|2spc>Regularity and Radon
+      measures <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-142>>
     </associate>
   </collection>
 </auxiliary>
