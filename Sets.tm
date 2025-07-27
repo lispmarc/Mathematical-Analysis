@@ -828,6 +828,9 @@
       <item><math|<around*|(|A\\B|)><big|cup>A=A>
 
       <item><math|<around*|(|A\\B|)><big|cap>A=A\\B>
+
+      <item>If <math|B,C\<subseteq\>A> then
+      <math|<around*|(|A\\B|)>\\<around*|(|A\\C|)>-C\\B>
     </enumerate>
   </theorem>
 
@@ -930,6 +933,24 @@
       <item>Using [theorem: <reference|class intersection, union, inclusion>]
       we have <math|<around*|(|A\\B|)>\<subseteq\>A> so that by (2)
       <math|<around*|(|A\\B|)><big|cap>A=A\\B>
+
+      <item>We have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|A\\B|)>\\<around*|(|A\\C|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class difference>]>>>|<cell|<around*|(|A\\B|)><big|cap><around*|(|A\\C|)><rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class difference>]>>>|<cell|<around*|(|A<big|cap>B<rsup|c>|)><big|cap><around*|(|A<big|cap>C<rsup|c>|)><rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class de Morgan's law>]>>>|<cell|<around*|(|A<big|cap>B<rsup|c>|)><big|cap><around*|(|A<rsup|c><big|cup><around*|(|C<rsup|c>|)><rsup|c>|)>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+        <reference|class complement of comploment>]>>>|<cell|<around*|(|A<big|cap>B<rsup|c>|)><big|cap><around*|(|A<rsup|c><big|cup>C|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class class commutative,idempotent,associative,distributivity>]>>>|<cell|<around*|(|<around*|(|A<big|cap>B<rsup|c>|)><big|cap>A<rsup|c>|)><big|cup><around*|(|<around*|(|A<big|cap>B<rsup|c>|)><big|cap>C|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class class commutative,idempotent,associative,distributivity>]>>>|<cell|<around*|(|B<rsup|c><big|cap><around*|(|A<big|cap>A<rsup|c>|)>|)><big|cup><around*|(|<around*|(|A<big|cap>C|)><big|cap>B<rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class subset and complement>]>>>|<cell|<around*|(|B<rsup|c><big|cap>\<varnothing\>|)><big|cup><around*|(|<around*|(|A<big|cap>C|)><big|cap>B<rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class universal and empotyset
+        properties>]>>>|<cell|<around*|(|A<big|cap>C|)><big|cap>B<rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class inclusion and union and
+        intersection>]>>>|<cell|C<big|cap>B<rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class difference>]>>>|<cell|C\\B>>>>
+      </eqnarray*>
     </enumerate>
 
     \;

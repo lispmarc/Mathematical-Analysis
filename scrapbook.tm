@@ -6982,6 +6982,849 @@
 
     \;
   </proof>
+
+  <\proof>
+    Let <math|x\<in\>X<rsub|1>> then we have
+    <math|\<forall\>y\<in\>X<rsub|2>> that
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|<around*|\||f|\|><rsub|<around*|[|1,x|]>><around*|(|y|)>=<around*|\||f|\|><around*|(|x,y|)>=<around*|\||f<around*|(|x,y|)>|\|>=<around*|\||f<rsub|<around*|[|1,x|]>><around*|(|y|)>|\|>=<around*|\||f<rsub|<around*|[|1,x|]>>|\|><around*|(|y|)>>|<cell|>>|<row|<cell|>|<cell|<around*|(|f<rsup|+>|)><rsub|<around*|[|1,x|]>><around*|(|y|)>=f<rsup|+><around*|(|x,y|)>=max<around*|(|f<around*|(|x,y|)>,0|)>=max<around*|(|f<rsub|<around*|[|1,x|]>><around*|(|y|)>,0|)>=<around*|(|f<rsub|<around*|[|1,x|]>>|)><rsup|+><around*|(|y|)>>|<cell|>>|<row|<cell|>|<cell|<around*|(|f<rsup|->|)><rsub|<around*|[|1,x|]>><around*|(|y|)>=f<rsup|-><around*|(|x,y|)>=-min<around*|(|f<around*|(|x,y|)>,0|)>=-min<around*|(|f<rsub|<around*|[|1,x|]>><around*|(|y|)>,0|)>=<around*|(|f<rsub|<around*|[|1,x|]>>|)><rsup|-><around*|(|y|)>>|<cell|>>>>
+    </eqnarray*>
+
+    so we have\ 
+
+    <\equation>
+      <label|eq 20.1012.280>\<forall\>x\<in\>X<rsub|1><text| we have
+      ><around*|\||f|\|><rsub|<around*|[|1,x|]>>=<around*|\||f<rsub|<around*|[|1,x|]>>|\|>\<wedge\><around*|(|f<rsup|+>|)><rsub|<around*|[|1,x|]>>=<around*|(|f<rsub|<around*|[|1,x|]>>|)><rsup|+>\<wedge\><around*|(|f<rsup|->|)><rsub|<around*|[|1,x|]>>=<around*|(|f<rsub|<around*|[|1,x|]>>|)><rsup|->
+    </equation>
+
+    Likewise if <math|x\<in\>X<rsub|2>> then have
+    <math|\<forall\>y\<in\>X<rsub|1>> that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|<around*|\||f|\|><rsub|<around*|[|2,x|]>><around*|(|y|)>=<around*|\||f|\|><around*|(|y,x|)>=<around*|\||f<around*|(|y,x|)>|\|>=<around*|\||f<rsub|<around*|[|2,y|]>><around*|(|y|)>|\|>=<around*|\||f<rsub|<around*|[|2,x|]>>|\|><around*|(|y|)>>|<cell|>>|<row|<cell|>|<cell|<around*|(|f<rsup|+>|)><rsub|<around*|[|2,x|]>><around*|(|y|)>=f<rsup|+><around*|(|y,x|)>=max<around*|(|f<around*|(|y,x|)>,0|)>=max<around*|(|f<rsub|<around*|[|2,x|]>><around*|(|y|)>,0|)>=<around*|(|f<rsub|<around*|[|2,x|]>>|)><rsup|+><around*|(|y|)>>|<cell|>>|<row|<cell|>|<cell|<around*|(|f<rsup|->|)><rsub|<around*|[|2,x|]>><around*|(|y|)>=f<rsup|-><around*|(|y,x|)>=-min<around*|(|f<around*|(|y,x|)>,0|)>=-min<around*|(|f<rsub|<around*|[|2,x|]>><around*|(|y|)>,0|)>=<around*|(|f<rsub|<around*|[|2,x|]>>|)><rsup|-><around*|(|y|)>>|<cell|>>>>
+    </eqnarray*>
+
+    which proves that\ 
+
+    <\equation>
+      <label|eq 20.1013.280><label|eq 20.1012.280>\<forall\>x\<in\>X<rsub|2><text|
+      we have ><around*|\||f|\|><rsub|<around*|[|2,x|]>>=<around*|\||f<rsub|<around*|[|2,x|]>>|\|>\<wedge\><around*|(|f<rsup|+>|)><rsub|<around*|[|2,x|]>>=<around*|(|f<rsub|<around*|[|2,x|]>>|)><rsup|+>\<wedge\><around*|(|f<rsup|->|)><rsub|<around*|[|2,x|]>>=<around*|(|f<rsub|<around*|[|2,x|]>>|)><rsup|->
+    </equation>
+
+    As <math|f\<in\>\<cal-L\><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>,\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>\<subseteq\>\<cal-M\><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    it follows from [theorem: <reference|measure integral alternative>] that
+
+    <\equation>
+      <label|eq 20.1014.280><around*|\||f|\|>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+      and ><big|int><rsup|+><around*|\||f
+      |\|>d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>\<less\>\<infty\>
+    </equation>
+
+    and by [lemma: <reference|lemma 20.629.280>] that
+
+    <\equation>
+      <label|eq 20.1015.280>\<forall\>x\<in\>X<rsub|1><text|
+      >f<rsub|<around*|[|1,x|]>>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+      and >\<forall\>x\<in\>X<text| >f<rsub|<around*|[|2.x|]>>\<in\>\<cal-M\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+    </equation>
+
+    Using then Tonelli's theorem [see theorem: <reference|Tonelli theorem
+    (1)>] we have that\ 
+
+    <\equation>
+      <label|eq 20.1016.280>I<rsub|1>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+      where >I<rsub|1>:X<rsub|2>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+      by >I<rsub|1><around*|(|x|)>=<big|int><rsup|+><around*|\||f|\|><rsub|<around*|[|2,x|]>>d\<mu\><rsub|1>\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.1013.280>]>><big|int><rsup|+><around*|\||f<rsub|<around*|[|2,x|]>>|\|>d\<mu\><rsub|1>
+    </equation>
+
+    <\equation>
+      <label|eq 20.2017.280>I<rsub|2>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+      where >I<rsub|2>:X<rsub|1>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+      by >I<rsub|2><around*|(|x|)>=<big|int><rsup|+><around*|\||f|\|><rsub|<around*|[|1,x|]>>d\<mu\><rsub|2>\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.1012.280>]>><big|int><rsup|+><around*|\||f<rsub|<around*|[|1,x|]>>|\|>d\<mu\><rsub|2>
+    </equation>
+
+    <\equation>
+      <label|eq 20.1018.280><big|int><rsup|+>I<rsub|1>d\<mu\><rsub|2>=<big|int><rsup|+>I<rsub|2>d\<mu\><rsub|1>=<big|int><rsup|+><around*|\||f|\|>
+      d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)><below|\<less\>|<text|[eq:
+      <reference|eq 20.1014.280>]>>\<infty\>
+    </equation>
+
+    So <math|I<rsub|1>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>\<wedge\><big|int><rsup|+>I<rsub|1>d\<mu\><rsub|2>\<less\>\<infty\>>
+    and <math|I<rsub|2>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>\<wedge\><rsup|><big|int><rsup|+>I<rsub|2>d\<mu\><rsub|1>\<less\>\<infty\>>
+    which proves that <math|I<rsub|1>\<in\>\<cal-L\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,\<mu\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>\<wedge\>I<rsub|2>\<in\>\<cal-L\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,\<mu\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>.
+    Hence using [theorem: <reference|measure integral properties (2)>] and
+    the fact that <math|I<rsub|1>> and <math|I<rsub|2>> are non negatuve we
+    have that\ 
+
+    <\equation*>
+      N<rsub|1>=<around*|{|x\<in\>X<rsub|1>\|I<rsub|2><around*|(|x|)>=\<infty\>|}>\<in\>\<cal-A\><rsub|1><text|
+      and >\<mu\><rsub|1><around*|(|<around*|{|x\<in\>X<rsub|1>\|I<rsub|2><around*|(|x|)>=\<infty\>|}>|)>=0
+    </equation*>
+
+    <\equation*>
+      N<rsub|2>=<around*|{|x\<in\>X<rsub|2>\|I<rsub|1><around*|(|x|)>=\<infty\>|}>\<in\>\<cal-A\><rsub|2><text|
+      and >\<mu\><rsub|2><around*|(|<around*|{|x\<in\>X<rsub|2>\|I<rsub|1><around*|(|x|)>=\<infty\>|}>|)>=0
+    </equation*>
+
+    Define now\ 
+
+    <\equation*>
+      D<rsub|1>=<around*|{|x\<in\>X<rsub|1>\|f<rsub|<around*|[|1,x|]>>\<nin\>\<cal-L\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,\<mu\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>|}><text|
+      and >D<rsub|2>=<around*|{|x\<in\>X<rsub|2>\|f<rsub|<around*|[|2,x|]>>\<nin\>\<cal-L\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,\<mu\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>|}>
+    </equation*>
+
+    Let <math|x\<in\>D<rsub|1>> then, as by [eq: <reference|eq 20.1015.280>]
+    <math|f<rsub|<around*|[|1,x|]>>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>,
+    it follows from [theorem: <reference|measure integral alternative>] that
+    <math|I<rsub|2><around*|(|x|)><below|=|<text|[eq: <reference|eq
+    20.2017.280>]>><big|int><rsup|+><around*|\||f<rsub|<around*|[|1,x|]>>|\|>d\<mu\><rsub|2>=\<infty\>>
+    so that <math|x\<in\>N<rsub|1>> which proves that
+    <math|D<rsub|1>\<subseteq\>N<rsub|1>>. Likewise if
+    <math|x\<in\>D<rsub|2>> then, as by [eq: <reference|eq 20.1015.280>]
+    <math|f<rsub|<around*|[|2,x|]>>\<in\>\<cal-M\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>,
+    it follows from [theorem: <reference|measure integral alternative>] that
+    <math|I<rsub|1><around*|(|x|)><below|=|<text|[eq: <reference|eq
+    20.2017.280>]>><big|int><rsup|+><around*|\||f<rsub|<around*|[|2,x|]>>|\|>d\<mu\><rsub|1>=\<infty\>>
+    so that <math|x\<in\>N<rsub|2>> which proves that
+    <math|D<rsub|2>\<subseteq\>N<rsub|2>>. To summarize we have proved that\ 
+
+    <\equation>
+      <label|eq 20.1019.280>D<rsub|1>=<around*|{|x\<in\>X<rsub|1>\|f<rsub|<around*|[|1,x|]>>\<nin\>\<cal-L\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,\<mu\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>|}>\<subseteq\>N<rsub|1><text|
+      with >N<rsub|1>\<in\>\<cal-A\><rsub|1>\<wedge\>\<mu\><rsub|1><around*|(|N<rsub|1>|)>=0<text|>
+    </equation>
+
+    <\equation>
+      <label|eq 20.1020.280>D<rsub|2>=<around*|{|x\<in\>X<rsub|2>\|f<rsub|<around*|[|2,x|]>>\<nin\>\<cal-L\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,\<mu\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>|}>\<subseteq\>N<rsub|2><text|
+      with >N<rsub|2>\<in\>\<cal-A\><rsub|2>\<wedge\>\<mu\><rsub|2><around*|(|N<rsub|2>|)>=0
+    </equation>
+
+    Define now\ 
+
+    \;
+  </proof>
+
+  \;
+
+  <\theorem>
+    <label|measurable function sum>Let <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>>
+    be a measurable space, <math|f,g\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    then <math|f+g\<in\><rigid|\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>>
+    where <math|f+g> is defined pointwise by\ 
+
+    <\equation*>
+      f+g:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text| where
+      ><around*|(|f+g|)><around*|(|x|)>=f<around*|(|x|)>+g<around*|(|x|)>
+    </equation*>
+
+    <\note>
+      The condition <math|f,g\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+      is neccesary to ensure that <math|\<forall\>x\<in\>X>
+      <math|f<around*|(|x|)>+g<around*|(|x|)>> is well defined and
+      <math|0\<leqslant\>f<around*|(|x|)>+g<around*|(|x|)>>.
+    </note>
+
+    <\note>
+      If <math|f,g\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,\<bbb-R\>|]>>
+      then <math|f,g\<in\>\<cal-M\><around*|[|X,\<cal-A\>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+      and <math|f<around*|(|X|)>\<subseteq\><around*|[|0,\<infty\>|[>>,
+      <math|<rigid|g<around*|(|X|)>\<subseteq\><around*|[|0,\<infty\>|[>>\<Rightarrow\><around*|(|f+g|)><around*|(|X|)>\<subseteq\><around*|[|0,\<infty\>|[>>
+      so that <math|f+g\<in\>\<cal-M\><rsup|+><around*|[|X,\<cal-A\>,\<bbb-R\>|]>>
+    </note>
+  </theorem>
+
+  <\proof>
+    Let <math|x\<in\>\<bbb-R\>>. If <math|t\<in\><around*|{|f+g\<less\>x|}>>
+    then <math|f<around*|(|t|)>+g<around*|(|t|)>\<less\>x>. As
+    <math|0\<leqslant\>f<around*|(|t|)>+g<around*|(|t|)>\<less\>x\<in\>\<bbb-R\>>
+    <math|f<around*|(|t|)>,g<around*|(|t|)>\<in\>\<bbb-R\>> so that
+    <math|f<around*|(|t|)>\<less\>x-g<around*|(|t|)>>. Using the density of
+    <math|\<bbb-Q\>> in <math|\<bbb-R\>> [see theorem: <reference|complex
+    densitiy theorem>] there exists a <math|q\<in\>\<bbb-Q\>> such that
+    <math|f<around*|(|t|)>\<less\>q\<less\>x-g<around*|(|t|)>> hence
+
+    <\equation*>
+      f<around*|(|t|)>\<less\>q\<wedge\>g<around*|(|t|)>\<less\>x-q\<Rightarrow\>t\<in\><around*|{|f\<less\>q|}><big|cap><around*|{|g\<less\>x-q|}>\<subseteq\><big|cup><rsub|q\<in\>\<bbb-Q\>><around*|(|<around*|{|f\<less\>q|}><big|cap><around*|{|g\<less\>x-q|}>|)>
+    </equation*>
+
+    which proves that\ 
+
+    <\equation>
+      <label|eq 20.422.227><around*|{|f+g\<less\>x|}>\<subseteq\><big|cup><rsub|q\<in\>\<bbb-Q\>><around*|(|<around*|{|f\<less\>q|}><big|cap><around*|{|g\<less\>x-q|}>|)>
+    </equation>
+
+    If <math|t\<in\><big|cup><rsub|q\<in\>\<bbb-Q\>><around*|(|<around*|{|f\<less\>q|}><big|cap><around*|{|g\<less\>x-q|}>|)>>
+    then there exists a <math|q\<in\>\<bbb-Q\>> such that
+    <math|<rigid|t\<in\><around*|{|f\<less\>q|}><big|cap><around*|{|g\<less\>x-q|}>>>
+    hence <math|f<around*|(|t|)>\<less\>q\<wedge\>g<around*|(|t|)>\<less\>x-q\<Rightarrow\>f<around*|(|t|)>+g<around*|(|t|)>\<less\>x-q+q=x>
+    or <math|t\<in\><around*|{|f+g\<less\>x|}>>. So
+    <math|<rigid|<big|cup><rsub|q\<in\>\<bbb-Q\>><around*|(|<around*|{|f\<less\>q|}><big|cap><around*|{|g\<less\>x-q|}>|)>\<subseteq\><around*|{|f+g\<less\>x|}>>>
+    which combined with [eq: <reference|eq 20.422.227>] results in\ 
+
+    <\equation*>
+      <around*|{|f+g\<less\>x|}>=<big|cup><rsub|q\<in\>\<bbb-Q\>><around*|(|<around*|{|f\<less\>q|}><big|cap><around*|{|g\<less\>x-q|}>|)>
+    </equation*>
+
+    Let <math|q\<in\>\<bbb-Q\>> then as <math|f,g> is
+    <math|\<cal-A\>>-measurable <rigid|<math|<around*|{|f\<less\>q|}>,<around*|{|g\<less\>x-q|}>\<in\>\<cal-A\>\<Rightarrow\><around*|{|f\<less\>q|}><big|cap><around*|{|g\<less\>x-q|}>\<in\>\<cal-A\>>,>
+    using [theorem: <reference|measure countable union is in sigma algebra>]
+    and the fact that <math|\<bbb-Q\>> is countable [see theorem:
+    <reference|complex embedding>] it follows that
+    <rigid|<math|<big|cup><rsub|q\<in\>\<bbb-Q\>><around*|(|<around*|{|f\<less\>q|}><big|cap><around*|{|g\<less\>x-q|}>|)>\<in\>\<cal-A\>>>
+    hence we have\ 
+
+    <\equation*>
+      <around*|{|f+g\<less\>x|}>\<in\>\<cal-A\>
+    </equation*>
+
+    As <math|x\<in\>\<bbb-R\>> was choosen arbitrary it follows from the
+    above that <math|f+g> is <math|\<cal-A\>>-measurable.
+  </proof>
+
+  The sum of real valued measurable functions is also defined for real valued
+  functions
+
+  TODO extend this to if <math|\<forall\>x\<in\>X>
+  <math|f<around*|(|x|)>+g<around*|(|x|)>> is defined\ 
+
+  <\theorem>
+    <label|measurable function sum (finite)>Let
+    <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>> be a measurable space,
+    <math|f,g\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-R\>|]>> then
+    <math|f+g\<in\>\<cal-M\><around*|[|X,\<cal-A\>,\<bbb-R\>|]>> where
+    <math|f+g> is defined pointwise by\ 
+
+    <\equation*>
+      f+g:X\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text| where
+      ><around*|(|f+g|)><around*|(|x|)>=f<around*|(|x|)>+g<around*|(|x|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    Let <math|x\<in\>\<bbb-R\>>. If <math|t\<in\><around*|{|f+g\<less\>x|}>>
+    then <math|f<around*|(|t|)>+g<around*|(|t|)>\<less\>x>. As
+    <math|f<around*|(|t|)>,g<around*|(|t|)>\<in\>\<bbb-R\>> we have
+    <math|f<around*|(|t|)>\<less\>x-g<around*|(|t|)>>. Using the density of
+    <math|\<bbb-Q\>> in <math|\<bbb-R\>> [see theorem: <reference|complex
+    densitiy theorem>] there exists a <math|q\<in\>\<bbb-Q\>> such that
+    <math|f<around*|(|t|)>\<less\>q\<less\>x-g<around*|(|t|)>> hence
+
+    <\equation*>
+      f<around*|(|t|)>\<less\>q\<wedge\>g<around*|(|t|)>\<less\>x-q\<Rightarrow\>t\<in\><around*|{|f\<less\>q|}><big|cap><around*|{|g\<less\>x-q|}>\<subseteq\><big|cup><rsub|q\<in\>\<bbb-Q\>><around*|(|<around*|{|f\<less\>q|}><big|cap><around*|{|g\<less\>x-q|}>|)>
+    </equation*>
+
+    which proves that\ 
+
+    <\equation>
+      <label|eq 20.421.227><around*|{|f+g\<less\>x|}>\<subseteq\><big|cup><rsub|q\<in\>\<bbb-Q\>><around*|(|<around*|{|f\<less\>q|}><big|cap><around*|{|g\<less\>x-q|}>|)>
+    </equation>
+
+    If <math|t\<in\><big|cup><rsub|q\<in\>\<bbb-Q\>><around*|(|<around*|{|f\<less\>q|}><big|cap><around*|{|g\<less\>x-q|}>|)>>
+    then there exists a <math|q\<in\>\<bbb-Q\>> such that
+    <math|t<rigid|\<in\><around*|{|f\<less\>q|}><big|cap><around*|{|g\<less\>x-q|}>>>
+    hence <math|f<around*|(|t|)>\<less\>q\<wedge\>g<around*|(|t|)>\<less\>x-q\<Rightarrow\>f<around*|(|t|)>+g<around*|(|t|)>\<less\>x-q+q=x>
+    or <math|t\<in\><around*|{|f+g\<less\>x|}>>. So
+    <math|<rigid|<big|cup><rsub|q\<in\>\<bbb-Q\>><around*|(|<around*|{|f\<less\>q|}><big|cap><around*|{|g\<less\>x-q|}>|)>\<subseteq\><around*|{|f+g\<less\>x|}>>>
+    which combined with [eq: <reference|eq 20.421.227>] results in\ 
+
+    <\equation*>
+      <around*|{|f+g\<less\>x|}>=<big|cup><rsub|q\<in\>\<bbb-Q\>><around*|(|<around*|{|f\<less\>q|}><big|cap><around*|{|g\<less\>x-q|}>|)>
+    </equation*>
+
+    Let <math|q\<in\>\<bbb-Q\>> then as <math|f,g> is
+    <math|\<cal-A\>>-measurable <rigid|<math|<around*|{|f\<less\>q|}>,<around*|{|g\<less\>x-q|}>\<in\>\<cal-A\>\<Rightarrow\><around*|{|f\<less\>q|}><big|cap><around*|{|g\<less\>x-q|}>\<in\>\<cal-A\>>>,
+    using [theorem: <reference|measure countable union is in sigma algebra>]
+    and the fact that <math|\<bbb-Q\>> is countable [see theorem:
+    <reference|complex embedding>] it follows that
+    <rigid|<math|<big|cup><rsub|q\<in\>\<bbb-Q\>><around*|(|<around*|{|f\<less\>q|}><big|cap><around*|{|g\<less\>x-q|}>|)>\<in\>\<cal-A\>>>
+    hence we have\ 
+
+    <\equation*>
+      <around*|{|f+g\<less\>x|}>\<in\>\<cal-A\>
+    </equation*>
+
+    As <math|x\<in\>\<bbb-R\>> was choosen arbitrary it follows from the
+    above that <math|f+g> is <math|\<cal-A\>>-measurable.
+  </proof>
+
+  \;
+
+  <\theorem>
+    <label|Fubini's Theorem><dueto|Fubini's Theorem>Let
+    <math|<around*|\<langle\>|X<rsub|1>,\<cal-A\><rsub|1>,\<mu\><rsub|1>|\<rangle\>>>,
+    <math|<around*|\<langle\>|X<rsub|2>,\<cal-A\><rsub|2>,\<mu\><rsub|2>|\<rangle\>>>
+    be measurable spaces where <math|\<mu\><rsub|1>,\<mu\><rsub|2>> are
+    <math|\<sigma\>>-finite measures and <math|f\<in\>\<cal-L\><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>,\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    then\ 
+
+    <\enumerate>
+      <item><math|D<rsub|1>=<around*|{|x\<in\>X<rsub|1>\|f<around*|(|x,.|)>\<nin\>\<cal-L\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,\<mu\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>|}>\<in\>\<cal-A\><rsub|1><text|
+      and <math|\<mu\><rsub|2><around*|(|D<rsub|1>|)>=0>>>\ 
+
+      <item><math|D<rsub|2>=<around*|{|x\<in\>X<rsub|2>\|f<around*|(|.,x|)>\<nin\>\<cal-L\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,\<mu\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>|}>\<in\>\<cal-A\><rsub|2><text|
+      and >\<mu\><rsub|1><around*|(|D<rsub|1>|)>=0>
+
+      <item>We have for the function\ 
+
+      <\equation*>
+        I<rsub|f,1>:X<rsub|2>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+        defined by >I<rsub|f,1><around*|(|x|)>=<choice|<tformat|<table|<row|<cell|<big|int>f<around*|(|.,x|)>d\<mu\><rsub|1><text|
+        if >x\<in\>X<rsub|2>\\D<rsub|1>>>|<row|<cell|0<text| if
+        >x\<in\>D<rsub|1>>>>>>
+      </equation*>
+
+      that
+
+      <\equation*>
+        I<rsub|f,1>\<in\>\<cal-L\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,\<mu\><rsub|2>,\<bbb-R\>|]>
+      </equation*>
+
+      and\ 
+
+      <\equation*>
+        <big|int>f d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>=<big|int>I<rsub|f,1>d\<mu\><rsub|2>
+      </equation*>
+
+      <item>We have for the function\ 
+
+      <\equation*>
+        I<rsub|f,2>:X<rsub|1>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+        defined by >I<rsub|f,2><around*|(|x|)>=<choice|<tformat|<table|<row|<cell|<big|int>f<around*|(|x,.|)>d\<mu\><rsub|2><text|
+        if >x\<in\>X<rsub|1>\\D<rsub|2>>>|<row|<cell|0<text| if
+        >x\<in\>D<rsub|1>>>>>>
+      </equation*>
+
+      that
+
+      <\equation*>
+        I<rsub|f,2>\<in\>\<cal-L\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,\<mu\><rsub|1>,\<bbb-R\>|]>
+      </equation*>
+
+      and\ 
+
+      <\equation*>
+        <big|int>f d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>=<big|int>I<rsub|f,2>d\<mu\><rsub|1>
+      </equation*>
+    </enumerate>
+
+    <\note>
+      Using the convention [convention: <reference|integral convention>] the
+      theorem can be restated in a slightly less exaxt form as:\ 
+
+      <\equation*>
+        f<around*|(|x,.|)>\<in\>\<cal-L\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,\<mu\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+        >\<mu\><rsub|1><text|-a.e.>
+      </equation*>
+
+      <\equation*>
+        f<around*|(|.,x|)>\<in\>\<cal-L\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,\<mu\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+        >\<mu\><rsub|2><text|-a.e.>
+      </equation*>
+
+      <\equation*>
+        <big|int>f d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>=<big|int><around*|(|<big|int>f<around*|(|x,.|)>d\<mu\><rsub|2>|)>\<mu\><rsub|1><around*|(|d
+        x|)>=<big|int><around*|(|<big|int>f<around*|(|x,y|)>\<mu\><rsub|2><around*|(|d
+        y|)>|)>\<mu\><rsub|1><around*|(|d x|)>
+      </equation*>
+
+      <\equation*>
+        <big|int>f d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>=<big|int><around*|(|<big|int>f<around*|(|.,x|)>d\<mu\><rsub|1>|)>\<mu\><rsub|2><around*|(|d
+        x|)>=<big|int><around*|(|<big|int>f<around*|(|x,y|)>\<mu\><rsub|1><around*|(|d
+        x|)>|)>\<mu\><rsub|2><around*|(|d y|)>
+      </equation*>
+    </note>
+  </theorem>
+
+  <\proof>
+    Let <math|x\<in\>X<rsub|1>> then we have for <math|y\<in\>X<rsub|2>> that
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|<around*|(|f<around*|(|x,.|)>|)><rsup|+><around*|(|y|)>=max<around*|(|f<around*|(|x,.|)><around*|(|y|)>,0|)>=max<around*|(|f<around*|(|x,y|)>,0|)>=f<rsup|+><around*|(|x,y|)>=<around*|(|f<rsup|+>|)><around*|(|x,.|)><around*|(|y|)>>|<cell|>>|<row|<cell|>|<cell|<around*|(|f<around*|(|x,.|)>|)><rsup|-><around*|(|y|)>=-min<around*|(|f<around*|(|x,.|)><around*|(|y|)>,0|)>=-min<around*|(|f<around*|(|x,y|)>,0|)>=f<rsup|-><around*|(|x,y|)>=<around*|(|f<rsup|->|)><around*|(|x,.|)><around*|(|y|)>>|<cell|>>>>
+    </eqnarray*>
+
+    Likewise for <math|x\<in\>X<rsub|2>> we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|<around*|(|f<around*|(|.,x|)>|)><rsup|+><around*|(|y|)>=max<around*|(|f<around*|(|.,x|)><around*|(|y|)>,0|)>=max<around*|(|f<around*|(|y,x|)>,0|)>=f<rsup|+><around*|(|y,x|)>=<around*|(|f<rsup|+>|)><around*|(|.,x|)><around*|(|y|)>>|<cell|>>|<row|<cell|>|<cell|<around*|(|f<around*|(|.,x|)>|)><rsup|-><around*|(|y|)>=-min<around*|(|f<around*|(|.,x|)><around*|(|y|)>,0|)>=-min<around*|(|f<around*|(|y,x|)>,0|)>=f<rsup|-><around*|(|y,x|)>=<around*|(|f<rsup|->|)><around*|(|.,x|)><around*|(|y|)>>|<cell|>>>>
+    </eqnarray*>
+
+    which proves that\ 
+
+    <\equation>
+      <label|eq 20.1012.280>\<forall\>x\<in\>X<rsub|1><text| we have
+      ><around*|(|f<around*|(|x,.|)>|)><rsup|+>=<around*|(|f<rsup|+>|)><rsup|><around*|(|x,.|)><text|
+      and ><around*|(|f<around*|(|x,.|)>|)><rsup|->=<around*|(|f<rsup|->|)><around*|(|x,.|)>
+    </equation>
+
+    <\equation>
+      <label|eq 20.1013.280>\<forall\>x\<in\>X<rsub|2><text| we have
+      ><around*|(|f<around*|(|.,x|)>|)><rsup|+>=<around*|(|f<rsup|+>|)><rsup|><around*|(|.,x|)><text|
+      and ><around*|(|f<around*|(|.,x|)>|)><rsup|->=<around*|(|f<rsup|->|)><around*|(|.,x|)>
+    </equation>
+
+    As <math|f\<in\>\<cal-L\><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>,\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    we have by definition of the integral [see definition: <reference|measure
+    integral> that\ 
+
+    <\equation>
+      <label|eq 20.1014.280>f<rsup|+>,f<rsup|->\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+      and ><big|int><rsup|+>f<rsup|+>d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>\<less\>\<infty\>\<wedge\><big|int><rsup|+>f<rsup|->d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>\<less\>\<infty\>
+    </equation>
+
+    Using [lemma: <reference|lemma 20.629.280>] on the above it follows that\ 
+
+    <\equation>
+      \<forall\>x\<in\>X<rsub|1><text| ><around*|(|f<rsup|+>|)><around*|(|x,.|)>,<around*|(|f<rsup|->|)><around*|(|x,.|)>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|>
+    </equation>
+
+    <\equation>
+      \<forall\>x\<in\>X<rsub|2><text| ><around*|(|f<rsup|+>|)><around*|(|.,x|)>,<around*|(|f<rsup|->|)><around*|(|.,x|)>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+    </equation>
+
+    As <math|f<rsup|+>,f<rsup|->\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    [see eq: <reference|eq 20.1014.280>] it follows from Tonelli's theorem
+    [see theorem: <reference|Tonelli theorem (1)>] that
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|I<rsub|f<rsup|+>,1>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|R|\<wide-bar\>>|]><text|
+      where >I<rsub|f<rsup|+>,1>:X<rsub|2>\<rightarrow\><wide|\<bbb-R\><text|>|\<wide-bar\>><text|
+      by >I<rsub|f<rsup|+>,1><around*|(|x|)>=<big|int><rsup|+><around*|(|f<rsup|+>|)><around*|(|.,x|)>d\<mu\><rsub|1>>|<cell|<eq-number><label|eq
+      20.1017.280>>>|<row|<cell|>|<cell|I<rsub|f<rsup|->,1>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|R|\<wide-bar\>>|]><text|
+      where >I<rsub|f<rsup|->,1>:X<rsub|2>\<rightarrow\><wide|\<bbb-R\><text|>|\<wide-bar\>><text|
+      by >I<rsub|f<rsup|->,1><around*|(|x|)>=<big|int><rsup|+><around*|(|f<rsup|->|)><around*|(|.,x|)>d\<mu\><rsub|1>>|<cell|<eq-number><label|eq
+      20.1018.280>>>|<row|<cell|>|<cell|I<rsub|f<rsup|+>,2>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+      where >I<rsub|f<rsup|+>,2>:X<rsub|1>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+      by >I<rsub|f<rsup|+>,2><around*|(|x|)>=<big|int><rsup|+><around*|(|f<rsup|+>|)><around*|(|x,.|)>d\<mu\><rsub|2>>|<cell|<eq-number><label|eq
+      20.1019.280>>>|<row|<cell|>|<cell|I<rsub|f<rsup|->,2>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+      where >I<rsub|f<rsup|->,2>:X<rsub|1>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+      by >I<rsub|f<rsup|->,2><around*|(|x|)>=<big|int><rsup|+><around*|(|f<rsup|->|)><around*|(|x,.|)>d\<mu\><rsub|2>>|<cell|<eq-number><text|><label|eq
+      20.1020.280>>>|<row|<cell|>|<cell|<big|int><rsup|+>I<rsub|f<rsup|+>,1>d\<mu\><rsub|2>=<big|int><rsup|+>I<rsub|f<rsup|+>,2>d\<mu\><rsub|1>=<big|int>f<rsup|+>d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>\<less\>\<infty\>>|<cell|<eq-number><label|eq
+      20.1021.280>>>|<row|<cell|>|<cell|<big|int><rsup|+>I<rsub|f<rsup|->,1>d\<mu\><rsub|2>=<big|int><rsup|+>I<rsub|f<rsup|->,2>d\<mu\><rsub|1>=<big|int>f<rsup|->d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>\<less\>\<infty\>>|<cell|<eq-number><label|eq
+      20.1022.280>>>>>
+    </eqnarray*>
+
+    Using [theorem: <reference|measure integral extension>] on the above we
+    have that <math|I<rsub|f<rsup|+>,1>,I<rsub|f<rsup|->,1>\<in\>\<cal-L\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    and <math|<rigid|I<rsub|f<rsup|+>,2>,I<rsub|f<rsup|->,2>\<in\>\<cal-L\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>>
+    so that by [theorem: <reference|non negative integral finite integral>]
+    it follows that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|N<rsub|f<rsup|+>,1>=<around*|{|x\<in\>X<rsub|2>\|I<rsub|f<rsup|+>,1><around*|(|x|)>=\<infty\>|}>\<wedge\>\<mu\><rsub|2><around*|(|N<rsub|f<rsup|+>,1>|)>=0>|<cell|<eq-number><label|eq
+      20.1023.280>>>|<row|<cell|>|<cell|N<rsub|f<rsup|->,1>=<around*|{|x\<in\>X<rsub|2>\|I<rsub|f<rsup|->,1><around*|(|x|)>=\<infty\>|}>\<wedge\>\<mu\><rsub|2><around*|(|N<rsub|f<rsup|->,1>|)>=0>|<cell|<eq-number><label|eq
+      20.1024.280>>>|<row|<cell|>|<cell|N<rsub|f<rsup|+>,2>=<around*|{|x\<in\>X<rsub|1>\|I<rsub|f<rsup|+>,2><around*|(|x|)>=\<infty\>|}>\<wedge\>\<mu\><rsub|1><around*|(|N<rsub|f<rsup|+>,2>|)>=0>|<cell|<eq-number><label|eq
+      20.1025.280>>>|<row|<cell|>|<cell|N<rsub|f<rsup|->,2>=<around*|{|x\<in\>X<rsub|1>\|I<rsub|f<rsup|->,2><around*|(|x|)>=\<infty\>|}>\<wedge\>\<mu\><rsub|1><around*|(|N<rsub|f<rsup|->,2>|)>=0>|<cell|<eq-number><label|eq
+      20.1026.280>>>>>
+    </eqnarray*>
+
+    Further as <math|f\<in\>\<cal-L\><around*|{|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>,\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|}>\<Rightarrow\>\<cal-M\><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    we have by [lemma: <reference|lemma 20.629.280>] that\ 
+
+    <\equation>
+      <label|eq 20.1027.280>\<forall\>x\<in\>X<rsub|1><text|
+      >f<around*|(|x,.|)>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+      and >\<forall\>x\<in\>X<rsub|2><text|
+      >f<around*|(|.,x|)>\<in\>\<cal-M\><around*|[|X<rsub|1>\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+    </equation>
+
+    Define
+
+    <\equation*>
+      D<rsub|1>=<around*|{|x\<in\>X<rsub|1>\|f<around*|(|x,.|)>\<nin\>\<cal-L\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,\<mu\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>|}>
+    </equation*>
+
+    <\equation*>
+      D<rsub|2>=<around*|{|x\<in\>X<rsub|2>\|f<around*|(|.,x|)>\<nin\>\<cal-L\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,\<mu\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>|}>
+    </equation*>
+
+    For <math|D<rsub|1>> we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|x\<in\>D<rsub|1>>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|f<around*|(|x,.|)>\<nin\>\<cal-L\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,\<mu\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>|<cell|>>|<row|<cell|>|<cell|<below|\<Updownarrow\>|f<around*|(|x,.|)>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+      by [eq: <reference|eq 20.1027.280>]>>>|<cell|>>|<row|<cell|>|<cell|<big|int><rsup|+><around*|(|f<around*|(|x,.|)>|)><rsup|+>d\<mu\><rsub|2>=\<infty\><text|
+      or ><big|int><rsup|+><around*|(|f<around*|(|x,.|)>|)><rsup|->d\<mu\><rsub|2>=\<infty\>>|<cell|>>|<row|<cell|>|<cell|<below|\<Updownarrow\>|<text|[eqs:
+      <reference|eq 20.1012.280>]>>>|<cell|>>|<row|<cell|>|<cell|<big|int><rsup|+><around*|(|f<rsup|+>|)><around*|(|x,.|)>d\<mu\><rsub|2>=\<infty\><text|
+      or ><big|int><rsup|+><around*|(|f<rsup|->|)><around*|(|x,.|)>d\<mu\><rsub|2>=\<infty\>>|<cell|>>|<row|<cell|>|<cell|<below|\<Updownarrow\>|<text|[eqs:
+      <reference|eq 20.1019.280>, <reference|eq
+      20.1020.280>]>>>|<cell|>>|<row|<cell|>|<cell|I<rsub|f<rsup|+>,2><around*|(|x|)>=\<infty\><text|
+      or >I<rsub|f<rsup|->,2><around*|(|x|)>=\<infty\>>|<cell|>>|<row|<cell|>|<cell|<below|\<Updownarrow\>|<text|[eqs:
+      <reference|eq 20.1025.280>,<reference|eq
+      20.1026.280>]>>>|<cell|>>|<row|<cell|>|<cell|x\<in\>N<rsub|f<rsup|+>,2><big|cup>N<rsub|f<rsup|->,2>>|<cell|>>>>
+    </eqnarray*>
+
+    So we have that\ 
+
+    <\equation>
+      <label|eq 20.1028.280>D<rsub|1>\<in\>\<cal-A\><rsub|1><text| and
+      >\<mu\><rsub|1><around*|(|D<rsub|1>|)>=0
+    </equation>
+
+    For <math|D<rsub|2>> we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|x\<in\>D<rsub|2>>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|f<around*|(|.,x|)>\<nin\>\<cal-L\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,\<mu\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>|<cell|>>|<row|<cell|>|<cell|<below|\<Updownarrow\>|f<around*|(|x,.|)>\<in\>\<cal-M\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+      by [eq: <reference|eq 20.1027.280>]>>>|<cell|>>|<row|<cell|>|<cell|<big|int><rsup|+><around*|(|f<around*|(|.,x|)>|)><rsup|+>d\<mu\><rsub|1>=\<infty\><text|
+      or ><big|int><rsup|+><around*|(|f<around*|(|.,x|)>|)><rsup|->d\<mu\><rsub|1>=\<infty\>>|<cell|>>|<row|<cell|>|<cell|<below|\<Updownarrow\>|<text|[eqs:
+      <reference|eq 20.1013.280>]>>>|<cell|>>|<row|<cell|>|<cell|<big|int><rsup|+><around*|(|f<rsup|+>|)><around*|(|.,x|)>d\<mu\><rsub|1>=\<infty\><text|
+      or ><big|int><rsup|+><around*|(|f<rsup|->|)><around*|(|.,x|)>d\<mu\><rsub|1>=\<infty\>>|<cell|>>|<row|<cell|>|<cell|<below|\<Updownarrow\>|<text|[eqs:
+      <reference|eq 20.1017.280>, <reference|eq
+      20.1018.280>]>>>|<cell|>>|<row|<cell|>|<cell|I<rsub|f<rsup|+>,1><around*|(|x|)>=\<infty\><text|
+      or >I<rsub|f<rsup|->,1><around*|(|x|)>=\<infty\>>|<cell|>>|<row|<cell|>|<cell|<below|\<Updownarrow\>|<text|[eqs:
+      <reference|eq 20.1023.280>,<reference|eq
+      20.1024.280>]>>>|<cell|>>|<row|<cell|>|<cell|x\<in\>N<rsub|f<rsup|+>,1><big|cup>N<rsub|f<rsup|->,1>>|<cell|>>>>
+    </eqnarray*>
+
+    So we have that\ 
+
+    <\equation>
+      <label|eq 20.1029.280>D<rsub|2>\<in\>\<cal-A\><rsub|2><text| and
+      >\<mu\><rsub|2><around*|(|D<rsub|2>|)>=0
+    </equation>
+
+    Define now\ 
+
+    <\equation*>
+      I<rsub|f,1>:X<rsub|2>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+      by >I<rsub|f,1><around*|(|x|)>=<choice|<tformat|<table|<row|<cell|<big|int>f<around*|(|.,x|)>d\<mu\><rsub|1><text|
+      if >x\<in\>X<rsub|2>\\D<rsub|1>>>|<row|<cell|0<text| if
+      >x\<in\>D<rsub|1>>>>>>
+    </equation*>
+
+    <\equation*>
+      I<rsub|f,2>:X<rsub|1>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+      by >I<rsub|f,2<rsub|>><around*|(|x|)>=<choice|<tformat|<table|<row|<cell|<big|int><around*|(|x,.|)>d\<mu\><rsub|2><text|
+      if >x\<in\>X<rsub|1>\\D<rsub|2>>>|<row|<cell|0<text| if
+      >x\<in\>D<rsub|2>>>>>>
+    </equation*>
+
+    As by [eqs: <reference|eq 20.1017.280>,<reference|eq 20.1018.280>]
+    <math|I<rsub|f<rsup|+>,1>,I<rsub|f<rsup|->,1>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    it follows from\ 
+  </proof>
+
+  \;
+
+  <\theorem>
+    <label|Fubini's theorem><dueto|Fubini's Theorem>Let
+    <math|<around*|\<langle\>|X<rsub|1>,\<cal-A\><rsub|1>,\<mu\><rsub|1>|\<rangle\>>>,
+    <math|<around*|\<langle\>|X<rsub|2>,\<cal-A\><rsub|2>,\<mu\><rsub|2>|\<rangle\>>>
+    be measurable spaces whee <math|\<mu\><rsub|1>,\<mu\><rsub|2>> is
+    <math|\<sigma\>>-finite and <math|f\<in\>\<cal-L\><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>,\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|]>>
+    then we have \ 
+
+    <\equation*>
+      D<rsub|1>=<around*|{|x\<in\>X<rsub|1>\|f<around*|(|x,.|)>\<in\>\<cal-L\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,\<mu\><rsub|2>|]>|}>\<wedge\>\<mu\><rsub|1><around*|(|X<rsub|1>\\D<rsub|1>|)>=0
+    </equation*>
+
+    <\equation*>
+      D<rsub|2>=<around*|{|x\<in\>X<rsub|2>\|f<around*|(|.,x|)>\<in\>\<cal-L\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,\<mu\><rsub|1>|]>|}>\<wedge\>\<mu\><rsub|2><around*|(|X<rsub|2>\\D<rsub|2>|)>=0
+    </equation*>
+
+    <\equation*>
+      I<rsub|f,1>\<in\>\<cal-L\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,\<mu\><rsub|1>|]><text|
+      where >I<rsub|f,1>:X<rsub|1>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>
+      <text|is defined by >I<rsub|f,1><around*|(|x|)>=<choice|<tformat|<table|<row|<cell|<big|int>f<around*|(|x,.|)>d\<mu\><rsub|2><text|
+      if <math|x\<in\>D<rsub|1>>>>>|<row|<cell|0<text| if
+      >x\<in\>X<rsub|1>\\D<rsub|1>>>>>>
+    </equation*>
+
+    <\equation*>
+      I<rsub|f,2>\<in\>\<cal-L\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,\<mu\><rsub|2>|]><text|
+      where >I<rsub|f,2>:X<rsub|2>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>>
+      <text|is defined by >I<rsub|f,2><around*|(|x|)>=<choice|<tformat|<table|<row|<cell|<big|int>f<around*|(|.,x|)>d\<mu\><rsub|1><text|
+      if <math|x\<in\>D<rsub|2>>>>>|<row|<cell|0<text| if
+      >x\<in\>X<rsub|2>\\D<rsub|2>>>>>>
+    </equation*>
+
+    <\equation*>
+      <big|int>I<rsub|f,1>d\<mu\><rsub|1>=<big|int>I<rsub|f,2>d\<mu\><rsub|2>=<big|int>f
+      d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    As <math|f\<in\>\<cal-L\><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>,\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|]>>
+    we have by definition [theorem: <reference|measure integral>] that\ 
+
+    <\equation>
+      <label|eq 20.1010.281>f\<in\>\<cal-M\><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>\<wedge\>f<rsup|+>,f<rsup|->\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+    </equation>
+
+    <\equation>
+      <label|eq 20.1011.281><big|int><rsup|+>f<rsup|+>d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>\<less\>\<infty\><text|
+      and ><big|int><rsup|+>f<rsup|->d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>\<less\>\<infty\>
+    </equation>
+
+    <\equation>
+      <big|int>f d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>=<big|int>f
+      <rsup|+>d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>-<big|int>f<rsup|->
+      d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)>
+    </equation>
+
+    Using Tonelli's Theorem [theorem: <reference|Tonelli theorem (1)>] on
+    [eq: <reference|eq 20.1010.281>] proves that\ 
+
+    <\equation>
+      \<forall\>x\<in\>X<rsub|1><text| ><around*|(|f<rsup|+>|)><around*|(|x,.|)>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+      and >\<forall\>x\<in\>X<rsub|2><text|
+      ><around*|(|f<rsup|->|)><around*|(|.,x|)>\<in\>\<cal-M\><rsup|+><around*|(|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|)>
+    </equation>
+
+    <\equation>
+      <label|eq 20.1014.281>I<rsup|+><rsub|f,1>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+      where >I<rsup|+><rsub|f,1>:X<rsub|1>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+      is defined by >I<rsub|f,1><rsup|+><around*|(|x|)>=<big|int><rsup|+><around*|(|f<rsup|+>|)><around*|(|x,.|)>d\<mu\><rsub|2>
+    </equation>
+
+    <\equation>
+      <label|eq 20.1015.281>I<rsup|+><rsub|f,2>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+      where >I<rsup|+><rsub|f,2>:X<rsub|2>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+      is defined by >I<rsub|f,2><rsup|+><around*|(|x|)>=<big|int><rsup|+><around*|(|f<rsup|+>|)><around*|(|.,x|)>d\<mu\><rsub|1>
+    </equation>
+
+    <\equation>
+      <label|eq 20.1016.281>I<rsup|-><rsub|f,1>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+      where >I<rsup|-><rsub|f,1>:X<rsub|1>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+      is defined by >I<rsub|f,1><rsup|-><around*|(|x|)>=<big|int><rsup|+><around*|(|f<rsup|->|)><around*|(|x,.|)>d\<mu\><rsub|2>
+    </equation>
+
+    <\equation>
+      <label|eq 20.1017.281>I<rsup|-><rsub|f,2>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+      where >I<rsup|-><rsub|f,2>:X<rsub|2>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+      is defined by >I<rsub|f,2><rsup|-><around*|(|x|)>=<big|int><rsup|+><around*|(|f<rsup|->|)><around*|(|.,x|)>d\<mu\><rsub|1>
+    </equation>
+
+    <\equation>
+      <label|eq 20.1018.281><big|int><rsup|+>I<rsup|+><rsub|f,1>d\<mu\><rsub|1>=<big|int><rsup|+>I<rsup|+><rsub|f,2>d\<mu\><rsub|1>=<big|int><rsup|+>f<rsup|+>d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)><below|\<less\>|<text|[eq:
+      <reference|eq 20.1011.281>]>>\<infty\>
+    </equation>
+
+    <\equation*>
+      \;
+    </equation*>
+
+    <\equation>
+      <label|eq 20.1019.281><big|int><rsup|+>I<rsup|-><rsub|f,1>d\<mu\><rsub|1>=<big|int><rsup|->I<rsup|-><rsub|f,2>d\<mu\><rsub|1>=<big|int><rsup|->f<rsup|->d<around*|(|\<mu\><rsub|1>\<otimes\>\<mu\><rsub|2>|)><below|\<less\>|<text|[eq:
+      <reference|eq 20.1011.281>]>>\<infty\>
+    </equation>
+
+    Using [theorem: <reference|non negative integral finite integral>] on
+    [eqs: <reference|eq 20.1014.281>, <reference|eq 20.1015.281>,
+    <reference|eq 20.1016.281>, <reference|eq 20.1017.281>] and [eqs:
+    <reference|eq 20.1018.281>, <reference|eq 20.1019.281>] results in\ 
+
+    <\equation>
+      <label|eq 20.1020.281>N<rsup|+><rsub|f,1>=<around*|{|x\<in\>X<rsub|1>\|I<rsup|+><rsub|f,1><around*|(|x|)>\<neq\>\<infty\>|}>\<in\>\<cal-A\><rsub|1>\<wedge\>\<mu\><around*|(|X<rsub|1>\\N<rsup|+><rsub|f,1>|)>=0
+    </equation>
+
+    <\equation>
+      <label|eq 20.1021.281>N<rsup|+><rsub|f,2>=<around*|{|x\<in\>X<rsub|2>\|I<rsup|+><rsub|f,2><around*|(|x|)>\<neq\>\<infty\>|}>\<in\>\<cal-A\><rsub|2>\<wedge\>\<mu\><around*|(|X<rsub|2>\\N<rsub|f,1><rsup|+>|)>=0
+    </equation>
+
+    <\equation>
+      <label|eq 20.1022.281>N<rsup|-><rsub|f,1>=<around*|{|x\<in\>X<rsub|1>\|I<rsup|-><rsub|f,1><around*|(|x|)>\<neq\>\<infty\>|}>\<in\>\<cal-A\><rsub|1>\<wedge\>\<mu\><around*|(|X<rsub|1>\\N<rsub|f,1><rsup|+>|)>=0
+    </equation>
+
+    <\equation>
+      <label|eq 20.1023.281>N<rsup|-><rsub|f,2>=<around*|{|x\<in\>X<rsub|2>\|I<rsup|-><rsub|f,2><around*|(|x|)>\<neq\>\<infty\>|}>\<in\>\<cal-A\><rsub|2>\<wedge\>\<mu\><around*|(|X<rsub|2>\\N<rsub|f,2><rsup|->|)>=0
+    </equation>
+
+    As <math|f\<in\>\<cal-M\><around*|[|X<rsub|1>\<cdot\>X<rsub|2>,\<cal-A\><rsub|1>\<otimes\>\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    [see eq: <reference|eq 20.1010.281>] it follows from [lemma:
+    <reference|lemma 20.629.280>] that\ 
+
+    <\equation>
+      <label|eq 20.1024.281>\<forall\>x\<in\>X<rsub|1><text|
+      >f<around*|(|x,.|)>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+      and >\<forall\>x\<in\>X<rsub|2><text|
+      >f<around*|(|.,x|)>\<in\>\<cal-M\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+    </equation>
+
+    Now we have the following equivalences
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|x\<in\>D<rsub|1>=<around*|{|x\<in\>X<rsub|1>\|f<around*|(|x,.|)>\<in\>\<cal-L\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,\<mu\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>|}>>|<cell|>>|<row|<cell|>|<cell|<below|\<Updownarrow\>|<text|<math|f<around*|(|x,.|)>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+      by [eq: <reference|eq 20.1024.281>]>>>>>|<cell|>>|<row|<cell|>|<cell|<big|int><rsup|+><around*|(|f<around*|(|x,.|)>|)><rsup|+>d\<mu\><rsub|2>\<less\>\<infty\>\<wedge\><big|int><rsup|+><around*|(|f<around*|(|x,.|)>|)><rsup|->d\<mu\><rsub|2>\<less\>\<infty\>>|<cell|>>|<row|<cell|>|<cell|<below|\<Updownarrow\>|<text|[lemma:
+      <reference|lemma 20.635.281>]>>>|<cell|>>|<row|<cell|>|<cell|<big|int><rsup|+><around*|(|f<rsup|+>|)><around*|(|x,.|)>d\<mu\><rsub|2>\<less\>\<infty\>\<wedge\><big|int><rsup|+><around*|(|f<rsup|->|)><around*|(|x,.|)>d\<mu\><rsub|2>\<less\>\<infty\>>|<cell|>>|<row|<cell|>|<cell|<below|\<Updownarrow\>|<text|[eqs:
+      <reference|eq 20.1014.281>, <reference|eq
+      20.1016.281>]>>>|<cell|>>|<row|<cell|>|<cell|I<rsup|+><rsub|f,1><around*|(|x|)>\<less\>\<infty\>\<wedge\>I<rsup|-><rsub|f,1><around*|(|x|)>\<less\>\<infty\>>|<cell|>>|<row|<cell|>|<cell|<below|\<Updownarrow\>|<text|[eqs:
+      <reference|eq 20.1020.281>, <reference|eq
+      20.1022.281>]>>>|<cell|>>|<row|<cell|>|<cell|x\<in\>N<rsup|+><rsub|f,1><big|cap>N<rsup|-><rsub|f,1>>|<cell|>>>>
+    </eqnarray*>
+
+    and
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|x\<in\>D<rsub|2>=<around*|{|x\<in\>X<rsub|2>\|f<around*|(|.,x|)>\<in\>\<cal-L\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,\<mu\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>|}>>|<cell|>>|<row|<cell|>|<cell|<below|\<Updownarrow\>|<text|<math|f<around*|(|.,x|)>\<in\>\<cal-M\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]><text|
+      by [eq: <reference|eq 20.1024.281>]>>>>>|<cell|>>|<row|<cell|>|<cell|<big|int><rsup|+><around*|(|f<around*|(|.,x|)>|)><rsup|+>d\<mu\><rsub|1>\<less\>\<infty\>\<wedge\><big|int><rsup|+><around*|(|f<around*|(|.,x|)>|)><rsup|->d\<mu\><rsub|1>\<less\>\<infty\>>|<cell|>>|<row|<cell|>|<cell|<below|\<Updownarrow\>|<text|[lemma:
+      <reference|lemma 20.635.281>]>>>|<cell|>>|<row|<cell|>|<cell|<big|int><rsup|+><around*|(|f<rsup|+>|)><around*|(|.,x|)>d\<mu\><rsub|1>\<less\>\<infty\>\<wedge\><big|int><rsup|+><around*|(|f<rsup|->|)><around*|(|.,x|)>d\<mu\><rsub|1>\<less\>\<infty\>>|<cell|>>|<row|<cell|>|<cell|<below|\<Updownarrow\>|<text|[eqs:
+      <reference|eq 20.1015.281>, <reference|eq
+      20.1017.281>]>>>|<cell|>>|<row|<cell|>|<cell|I<rsup|+><rsub|f,2><around*|(|x|)>\<less\>\<infty\>\<wedge\>I<rsup|-><rsub|f,2><around*|(|x|)>\<less\>\<infty\>>|<cell|>>|<row|<cell|>|<cell|<below|\<Updownarrow\>|<text|[eqs:
+      <reference|eq 20.1021.281>, <reference|eq
+      20.1023.281>]>>>|<cell|>>|<row|<cell|>|<cell|x\<in\>N<rsup|+><rsub|f,2><big|cap>N<rsup|-><rsub|f,2>>|<cell|>>>>
+    </eqnarray*>
+
+    Using the above if follows that\ 
+
+    <\equation>
+      <label|eq 20.1025.281>D<rsub|1>=N<rsup|+><rsub|f,1><big|cap>N<rsup|-><rsub|f,1><text|
+      and >D<rsub|2>=N<rsup|+><rsub|f,2><big|cap>N<rsup|-><rsub|f,2>
+    </equation>
+
+    Now <math|><math|X<rsub|1>\\<around*|(|N<rsup|+><rsub|f,1><big|cap>N<rsup|-><rsub|f,1>|)>\<in\>\<cal-A\><rsub|1>>,
+    <math|X<rsub|2>\\<around*|(|N<rsup|+><rsub|f,2><big|cap>N<rsup|-><rsub|f,2>|)>\<in\>\<cal-A\><rsub|2>>
+    and\ 
+
+    <\equation*>
+      \<mu\><rsub|1><around*|(|X<rsub|1>\\<around*|(|N<rsup|+><rsub|f,1><big|cap>N<rsup|-><rsub|f,1>|)>|)>=\<mu\><rsub|1><around*|(|<around*|(|X<rsub|1>\\N<rsup|+><rsub|f,1>|)><big|cup><around*|(|X<rsub|1>\\N<rsup|-><rsub|f,1>|)>|)>\<leqslant\>\<mu\><rsub|1><around*|(|X<rsub|1>\\N<rsup|+><rsub|f,1>|)>+\<mu\><rsub|1><around*|(|X<rsub|1>\\N<rsup|-><rsub|f,1>|)>=0<text|
+      and>
+    </equation*>
+
+    <\equation*>
+      \<mu\><rsub|2><around*|(|X<rsub|2>\\<around*|(|N<rsup|+><rsub|f,2><big|cap>N<rsup|-><rsub|f,2>|)>|)>=\<mu\><rsub|2><around*|(|<around*|(|X<rsub|2>\\N<rsup|+><rsub|f,2>|)><big|cup><around*|(|X<rsub|2>\\N<rsup|-><rsub|f,2>|)>|)>\<leqslant\>\<mu\><rsub|2><around*|(|X<rsub|2>\\N<rsup|+><rsub|f,2>|)>+\<mu\><rsub|2><around*|(|X<rsub|2>\\N<rsup|-><rsub|f,2>|)>=0
+    </equation*>
+
+    which combined with [eq: <reference|eq 20.1025.281>] proves that\ 
+
+    <\equation>
+      <label|eq 20.1026.281>D<rsub|1>=<around*|{|x\<in\>X<rsub|1>\|f<around*|(|x,.|)>\<in\>\<cal-L\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,\<mu\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>|}>\<in\>\<cal-A\><rsub|1><text|
+      and >\<mu\><rsub|1><around*|(|X<rsub|1>\\D<rsub|1>|)>=0
+    </equation>
+
+    <\equation>
+      <label|eq 20.1027.281>D<rsub|2>=<around*|{|x\<in\>X<rsub|2>\|f<around*|(|.,x|)>\<in\>\<cal-L\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,\<mu\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>|}>\<in\>\<cal-A\><rsub|2><text|
+      and >\<mu\><rsub|2><around*|(|X<rsub|2>\\D<rsub|2>|)>=0
+    </equation>
+
+    The above allows us to define\ 
+
+    <\equation>
+      <label|eq 20.1028.281>I<rsub|f,1>:X<rsub|1>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+      by >I<rsub|f,1><around*|(|x|)>=<choice|<tformat|<table|<row|<cell|<big|int>f<around*|(|x,.|)>d\<mu\><rsub|2><text|
+      if >x\<in\>D<rsub|1>>>|<row|<cell|0>>>>>
+    </equation>
+
+    <\equation>
+      <label|eq 20.1029.281>I<rsub|f,2>:X<rsub|2>\<rightarrow\><wide|\<bbb-R\>|\<wide-bar\>><text|
+      by >I<rsub|f,2><around*|(|x|)>=<choice|<tformat|<table|<row|<cell|<big|int>f<around*|(|.,x|)>d\<mu\><rsub|1><text|
+      if >x\<in\>D<rsub|2>>>|<row|<cell|0>>>>>
+    </equation>
+
+    As by [eqs: <reference|eq 20.1014.281>, <reference|eq 20.1016.281>] and
+    [eqs: <reference|eq 20.1015.281>, <reference|eq 20.1017.281>]
+    <math|I<rsup|+><rsub|f,1>>, <math|I<rsup|-><rsub|f,1>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>
+    and <rigid|<math|I<rsup|+><rsub|f,2>>,
+    <math|I<rsup|-><rsub|f,2>\<in\>\<cal-M\><rsup|+><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>>>
+    it follows from [theorem: <reference|measurable function restriction
+    (1)>] and [eqs: <reference|eq 20.1026.281>,<reference|eq 20.1027.281>]
+    that
+
+    <\equation>
+      <label|eq 20.1030.281><around*|(|I<rsup|+><rsub|f,1>|)><rsub|\|D<rsub|1>>,<around*|(|I<rsup|-><rsub|f,1>|)><rsub|\|D<rsub|1>>\<in\>\<cal-M\><rsup|+><around*|[|D<rsub|1>,<around*|(|\<cal-A\><rsub|1>|)><rsub|\|D<rsub|1>>,<wide|\<bbb-R\>|\<wide-bar\>>|]>\<wedge\><around*|(|I<rsup|+><rsub|f,2>|)><rsub|\|D<rsub|2>>,<around*|(|I<rsup|-><rsub|f,2>|)><rsub|\|D<rsub|2>>\<in\>\<cal-M\><rsup|+><around*|[|D<rsub|2>,<around*|(|\<cal-A\><rsub|2>|)><rsub|\|D<rsub|2>>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+    </equation>
+
+    Further we have <math|\<forall\>x\<in\>D<rsub|1>\<equallim\><rsub|<text|[eq:
+    <reference|eq 20.1025.281>]>>N<rsup|+><rsub|f,1><big|cap>N<rsup|-><rsub|f,1>>
+    so that\ 
+
+    <\equation*>
+      <around*|(|I<rsup|+><rsub|f,1>|)><rsub|\|D<rsub|1>><around*|(|x|)>=I<rsup|+><rsub|f,1><around*|(|x|)>\<less\>\<infty\>\<wedge\><around*|(|I<rsup|-><rsub|f,1>|)><rsub|\|D<rsub|1>><around*|(|x|)>=I<rsup|-><rsub|f,1><around*|(|x|)>\<less\>\<infty\>
+    </equation*>
+
+    proving that <math|<around*|(|I<rsup|+><rsub|f,1>|)><rsub|\|D<rsub|1>>-<around*|(|I<rsup|-><rsub|f,1>|)><rsub|\|D<rsub|1>>>
+    is well defined. This together with [eq: <reference|eq 20.1030.281>]
+    allows us to use [theorem: <reference|measurable function properties
+    (1)>] from which it follows that\ 
+
+    <\equation>
+      <label|eq 20.1031.281><around*|(|I<rsup|+><rsub|f,1>-I<rsup|-><rsub|f,1>|)><rsub|\|D<rsub|1>>=<around*|(|I<rsup|+><rsub|f,1>|)><rsub|\|D<rsub|1>>-<around*|(|I<rsup|-><rsub|f,1>|)><rsub|\|D<rsub|1>>\<in\>\<cal-M\><around*|[|D<rsub|1><rsub|1><rsub|1>,<around*|(|\<cal-A\><rsub|1>|)><rsub|\|D<rsub|1>>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+    </equation>
+
+    Likewise we have <math|\<forall\>x\<in\>D<rsub|2>\<equallim\><rsub|<text|[eq:
+    <reference|eq 20.1025.281>]>>N<rsup|+><rsub|f,2><big|cap>N<rsup|-><rsub|f,2>>
+    so that\ 
+
+    <\equation*>
+      <around*|(|I<rsup|+><rsub|f,2>|)><rsub|\|D<rsub|1>><around*|(|x|)>=I<rsup|+><rsub|f,2><around*|(|x|)>\<less\>\<infty\>\<wedge\><around*|(|I<rsup|-><rsub|f,2>|)><rsub|\|D<rsub|2>><around*|(|x|)>=I<rsup|-><rsub|f,2><around*|(|x|)>\<less\>\<infty\>
+    </equation*>
+
+    proving that <math|<around*|(|I<rsup|+><rsub|f,2>|)><rsub|\|D<rsub|2>>-<around*|(|I<rsup|-><rsub|f,2>|)><rsub|\|D<rsub|2>>>
+    is well defined. This together with [eq: <reference|eq 20.1030.281>]
+    allows us to use [theorem: <reference|measurable function properties
+    (1)>] from which it follows that\ 
+
+    <\equation>
+      <label|eq 20.1032.281><around*|(|I<rsup|+><rsub|f,1>-I<rsup|-><rsub|f,1>|)><rsub|\|D<rsub|1>>=<around*|(|I<rsup|+><rsub|f,1>|)><rsub|\|D<rsub|1>>-<around*|(|I<rsup|-><rsub|f,1>|)><rsub|\|D<rsub|1>>\<in\>\<cal-M\><around*|[|D<rsub|2>,<around*|(|\<cal-A\><rsub|2>|)><rsub|<around*|\||D<rsub|2>|\|>>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+    </equation>
+
+    Using now [theorem: <reference|measurable function extension>] on [eqs:
+    <reference|eq 20.1031.281>,<reference|eq 20.1032.281>] proves that\ 
+
+    <\equation>
+      <label|eq 20.1033.281><around*|(|<around*|(|I<rsup|+><rsub|f,1>-I<rsup|-><rsub|f,1>|)><rsub|\|D<rsub|1>>|)><rsub|D<rsub|1>\<uparrow\>X<rsub|1>>\<in\>\<cal-M\><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>\<wedge\><around*|(|<around*|(|I<rsup|+><rsub|f,1>-I<rsup|-><rsub|f,1>|)><rsub|\|D<rsub|2>>|)><rsub|D<rsub|2>\<uparrow\>X<rsub|2>>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+    </equation>
+
+    Let <math|x\<in\>X<rsub|1>> then we have either:\ 
+
+    <\description>
+      <item*|<math|x\<in\>D<rsub|1>>><math|>Then
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|<around*|(|I<rsup|+><rsub|f,1>-I<rsup|-><rsub|f,1>|)><rsub|\|D<rsub|1>>|)><rsub|D<rsub|1>\<uparrow\>X<rsub|1>><around*|(|x|)>>|<cell|=>|<cell|<around*|(|I<rsup|+><rsub|f,1>-I<rsup|-><rsub|f,1>|)><rsub|\|D<rsub|1>><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|I<rsup|+><rsub|f,1>-I<rsup|-><rsub|f,1>|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|I<rsup|+><rsub|f,1><around*|(|x|)>-I<rsup|-><rsub|f,1><around*|(|x|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eqs:
+        <reference|eq 20.1014.281>, <reference|eq
+        20.1016.281>]>>>|<cell|<big|int><rsup|+><around*|(|f<rsup|+>|)><around*|(|x,.|)>d\<mu\><rsub|2>-<big|int><rsup|+><around*|(|f<rsup|->|)><around*|(|x,.|)>d\<mu\><rsub|2>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+        <reference|lemma 20.635.281>]>>>|<cell|<big|int><rsup|+><around*|(|f<around*|(|x,.|)>|)><rsup|+>d\<mu\><rsub|2>-<big|int><rsup|+><around*|(|f<around*|(|x,.|)>|)><rsup|->d\<mu\><rsub|2>>>|<row|<cell|>|<cell|\<equallim\><rsub|x\<in\>D<rsub|1>\<wedge\>definition
+        <big|int>>>|<cell|<big|int>f<around*|(|x,.|)>d\<mu\><rsub|2>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 20.1028.281>]>>>|<cell|I<rsub|f,1><around*|(|x|)>>>>>
+      </eqnarray*>
+
+      <item*|<math|x\<in\>X<rsub|1>\\D<rsub|1>>>Then
+      <math|<around*|(|<around*|(|I<rsup|+><rsub|f,1>-I<rsup|-><rsub|f,1>|)><rsub|\|D<rsub|1>>|)><rsub|D<rsub|1>\<uparrow\>X<rsub|1>><around*|(|x|)>=0\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.1028.281>]>>I<rsub|f,1><around*|(|x|)>>
+    </description>
+
+    Further if \ <math|x\<in\>X<rsub|2>> then we have either:\ 
+
+    <\description>
+      <item*|<math|x\<in\>D<rsub|2>>><math|>Then
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|<around*|(|I<rsup|+><rsub|f,2>-I<rsup|-><rsub|f,2>|)><rsub|\|D<rsub|2>>|)><rsub|D<rsub|2>\<uparrow\>X<rsub|2>><around*|(|x|)>>|<cell|=>|<cell|<around*|(|I<rsup|+><rsub|f,2>-I<rsup|-><rsub|f,2>|)><rsub|\|D<rsub|2>><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<around*|(|I<rsup|+><rsub|f,1>-I<rsup|-><rsub|f,1>|)><around*|(|x|)>>|<row|<cell|>|<cell|=>|<cell|I<rsup|+><rsub|f,1><around*|(|x|)>-I<rsup|-><rsub|f,1><around*|(|x|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eqs:
+        <reference|eq 20.1015.281>, <reference|eq
+        20.1017.281>]>>>|<cell|<big|int><rsup|+><around*|(|f<rsup|+>|)><around*|(|.,x|)>d\<mu\><rsub|1>-<big|int><rsup|+><around*|(|f<rsup|->|)><around*|(|.,x|)>d\<mu\><rsub|1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+        <reference|lemma 20.635.281>]>>>|<cell|<big|int><rsup|+><around*|(|f<around*|(|.,x|)>|)><rsup|+>d\<mu\><rsub|1>-<big|int><rsup|+><around*|(|f<around*|(|.,x|)>|)><rsup|->d\<mu\><rsub|1>>>|<row|<cell|>|<cell|\<equallim\><rsub|x\<in\>D<rsub|2>\<wedge\>definition
+        <big|int>>>|<cell|<big|int>f<around*|(|.,x|)>d\<mu\><rsub|1>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 20.1029.281>]>>>|<cell|I<rsub|f,2><around*|(|x|)>>>>>
+      </eqnarray*>
+
+      <item*|<math|x\<in\>X<rsub|2>\\D<rsub|2>>>Then
+      <math|<around*|(|<around*|(|I<rsup|+><rsub|f,2>-I<rsup|-><rsub|f,2>|)><rsub|\|D<rsub|2>>|)><rsub|D<rsub|2>\<uparrow\>X<rsub|2>><around*|(|x|)>=0\<equallim\><rsub|<text|[eq:
+      <reference|eq 20.1029.281>]>>I<rsub|f,2><around*|(|x|)>>
+    </description>
+
+    From the above it follows that\ 
+
+    <\equation>
+      <label|eq 20.1034.281>I<rsub|f,1>=<around*|(|<around*|(|I<rsup|+><rsub|f,1>-I<rsup|-><rsub|f,1>|)><rsub|\|D<rsub|1>>|)><rsub|D<rsub|1>\<uparrow\>X<rsub|1>><text|
+      and >I<rsub|f,2>=<around*|(|<around*|(|I<rsup|+><rsub|f,2>-I<rsup|-><rsub|f,2>|)><rsub|\|D<rsub|1>>|)><rsub|D<rsub|1>\<uparrow\>X<rsub|1>>
+    </equation>
+
+    Which combined with [eq: <reference|eq 20.1033.281>] proves that\ 
+
+    <\equation>
+      <label|eq 20.1035.281>I<rsub|f,1>\<in\>\<cal-M\><rsub|><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>\<wedge\>I<rsub|f,2>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
+    </equation>
+
+    Take\ 
+
+    <\equation*>
+      \;
+    </equation*>
+
+    \;
+  </proof>
 </body>
 
 <\initial>
@@ -6992,6 +7835,8 @@
 
 <\references>
   <\collection>
+    <associate|Fubini's Theorem|<tuple|61|80>>
+    <associate|Fubini's theorem|<tuple|63|?>>
     <associate|auto-1|<tuple|open mapping theorem|5>>
     <associate|auto-2|<tuple|sum over a countable set|8>>
     <associate|auto-3|<tuple|<with|mode|<quote|math>|<around*|(|i\<rightarrow\>x|)>>|18>>
@@ -7144,7 +7989,50 @@
     <associate|eq 16.47.185|<tuple|61|23>>
     <associate|eq 18.283.124|<tuple|78|31>>
     <associate|eq 19.536.038|<tuple|186|63>>
+    <associate|eq 20.1010.281|<tuple|251|?>>
+    <associate|eq 20.1011.281|<tuple|252|?>>
+    <associate|eq 20.1012.280|<tuple|233|81>>
+    <associate|eq 20.1013.280|<tuple|234|81>>
+    <associate|eq 20.1014.280|<tuple|235|81>>
+    <associate|eq 20.1014.281|<tuple|255|?>>
+    <associate|eq 20.1015.280|<tuple|225|78>>
+    <associate|eq 20.1015.281|<tuple|256|?>>
+    <associate|eq 20.1016.280|<tuple|226|78>>
+    <associate|eq 20.1016.281|<tuple|257|?>>
+    <associate|eq 20.1017.280|<tuple|238|81>>
+    <associate|eq 20.1017.281|<tuple|258|?>>
+    <associate|eq 20.1018.280|<tuple|239|81>>
+    <associate|eq 20.1018.281|<tuple|259|?>>
+    <associate|eq 20.1019.280|<tuple|240|81>>
+    <associate|eq 20.1019.281|<tuple|260|?>>
+    <associate|eq 20.1020.280|<tuple|241|81>>
+    <associate|eq 20.1020.281|<tuple|261|?>>
+    <associate|eq 20.1021.280|<tuple|242|81>>
+    <associate|eq 20.1021.281|<tuple|262|?>>
+    <associate|eq 20.1022.280|<tuple|243|81>>
+    <associate|eq 20.1022.281|<tuple|263|?>>
+    <associate|eq 20.1023.280|<tuple|244|81>>
+    <associate|eq 20.1023.281|<tuple|264|?>>
+    <associate|eq 20.1024.280|<tuple|245|81>>
+    <associate|eq 20.1024.281|<tuple|265|?>>
+    <associate|eq 20.1025.280|<tuple|246|81>>
+    <associate|eq 20.1025.281|<tuple|266|?>>
+    <associate|eq 20.1026.280|<tuple|247|81>>
+    <associate|eq 20.1026.281|<tuple|267|?>>
+    <associate|eq 20.1027.280|<tuple|248|82>>
+    <associate|eq 20.1027.281|<tuple|268|?>>
+    <associate|eq 20.1028.280|<tuple|249|82>>
+    <associate|eq 20.1028.281|<tuple|269|?>>
+    <associate|eq 20.1029.280|<tuple|250|83>>
+    <associate|eq 20.1029.281|<tuple|270|?>>
+    <associate|eq 20.1030.281|<tuple|271|?>>
+    <associate|eq 20.1031.281|<tuple|272|?>>
+    <associate|eq 20.1032.281|<tuple|273|?>>
+    <associate|eq 20.1033.281|<tuple|274|?>>
+    <associate|eq 20.1034.281|<tuple|275|?>>
+    <associate|eq 20.1035.281|<tuple|276|?>>
     <associate|eq 20.201.217|<tuple|156|58>>
+    <associate|eq 20.2017.280|<tuple|227|78>>
     <associate|eq 20.208.204|<tuple|140|52>>
     <associate|eq 20.209.204|<tuple|141|52>>
     <associate|eq 20.210.204|<tuple|142|53>>
@@ -7161,7 +8049,8 @@
     <associate|eq 20.324.224|<tuple|157|58>>
     <associate|eq 20.325.224|<tuple|158|59>>
     <associate|eq 20.326\<point\>224|<tuple|159|59>>
-    <associate|eq 20.422.227|<tuple|160|59>>
+    <associate|eq 20.421.227|<tuple|232|79>>
+    <associate|eq 20.422.227|<tuple|231|79>>
     <associate|eq 20.443.229|<tuple|161|60>>
     <associate|eq 20.444.229|<tuple|162|60>>
     <associate|eq 20.445.229|<tuple|163|60>>
@@ -7243,7 +8132,9 @@
     <associate|lemma 20.211.204|<tuple|46|56>>
     <associate|lemma 20.470.246|<tuple|50|63>>
     <associate|lemma 20.477.246|<tuple|53|72>>
-    <associate|lemma 20.613.279|<tuple|56|?>>
+    <associate|lemma 20.613.279|<tuple|56|74>>
+    <associate|measurable function sum|<tuple|57|78>>
+    <associate|measurable function sum (finite)|<tuple|60|79>>
     <associate|measure length function is a pre-measure|<tuple|47|56>>
     <associate|non negative function as limit of simple
     functions|<tuple|51|66>>
