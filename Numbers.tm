@@ -10571,6 +10571,8 @@
       <item>For <math|y\<in\>\<bbb-R\><rsub|\<bbb-C\>>> with
       <math|x\<less\>y> we have htat <math|\<exists\>n\<in\>\<bbb-N\><rsub|\<bbb-C\>>>
       such that <math|x\<less\>x+<frac|1|n>\<less\>y>
+
+      <item><math|\<bbb-R\><rsub|\<bbb-C\>>=<big|cup><rsub|n\<in\>\<bbb-N\><rsub|\<bbb-C\>>><around*|]|-n,n|[>>
     </enumerate>
   </corollary>
 
@@ -10632,6 +10634,21 @@
       (7) there exist a <math|n\<in\>\<bbb-N\><rsub|\<bbb-C\>>> such that
       <math|0\<less\><frac|1|n>\<less\>y-x> hence
       <math|x=0+x\<less\><frac|1|n>+x\<less\><around*|(|y-x|)>+x=y>.
+
+      <item>Let <math|x\<in\>\<bbb-R\><rsub|\<bbb-C\>>> then by (1),(2) there
+      exists <math|n<rsub|1>,n<rsub|2>\<in\>\<bbb-N\><rsub|0,\<bbb-C\>>> such
+      that <math|x\<leqslant\>n<rsub|1>> and <math|-n<rsub|2>\<leqslant\>x>.
+      Take <math|n=max<around*|(|n<rsub|1>,n<rsub|2>|)>+1> then we have
+      <math|0\<leqslant\>n<rsub|1>,n<rsub|2>\<leqslant\>max<around*|(|n<rsub|1>,n<rsub|2>|)>\<less\>max<around*|(|n<rsub|1>,n<rsub|2>|)>+1=n><math|>
+      so that <math|n\<in\>\<bbb-N\><rsub|\<bbb-C\>>> and
+      <math|-n\<less\>-n<rsub|1>\<leqslant\>x\<leqslant\>n<rsub|2>\<less\>n\<Rightarrow\>x\<in\><around*|]|-n,n|[>>.
+      Hence <math|\<bbb-R\>\<subseteq\><big|cup><rsub|n\<in\>\<bbb-N\><rsub|\<bbb-C\>>><around*|]|-n,n|[>>
+      which as <math|\<forall\>n\<in\>\<bbb-N\><rsub|\<bbb-C\>>> we
+      <math|<around*|]|-n,n|[>\<subseteq\>\<bbb-R\>> proves that\ 
+
+      <\equation*>
+        \<bbb-R\>=<big|cup><rsub|n\<in\>\<bbb-N\>><around*|]|-n,n|[>
+      </equation*>
     </enumerate>
   </proof>
 
@@ -10944,8 +10961,6 @@
       </equation*>
     </enumerate>
   </proof>
-
-  \;
 
   <subsection|Recursion and mathematical induction in <math|\<bbb-C\>>>
 
