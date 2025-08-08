@@ -7667,7 +7667,7 @@
     </equation*>
 
     is Lipschitz continuous [hence by [theorem: <reference|continuity
-    Lispschitz implies uniform continuity>] absolute continuous and uniform
+    Lispschitz implies uniform continuity>] continuous and uniform
     continuous]
   </theorem>
 
@@ -22219,7 +22219,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|13>
-    <associate|page-first|?>
+    <associate|page-first|677>
     <associate|page-medium|papyrus>
     <associate|par-first|0tab>
     <associate|section-nr|0>
