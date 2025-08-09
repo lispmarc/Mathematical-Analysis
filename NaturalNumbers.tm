@@ -1886,9 +1886,9 @@
       0\<neq\>1
     </equation*>
 
-    where <math|1> is the neutral element for <math|\<odot\>>. In other words
-    <math|<around*|\<langle\>|F,\<oplus\>,\<odot\>|\<rangle\>>> is a field
-    iff\ 
+    where <math|1> is the neutral element for <math|\<odot\>>. \ In other
+    words <math|<around*|\<langle\>|F,\<oplus\>,\<odot\>|\<rangle\>>> is a
+    field iff\ 
 
     <\enumerate>
       <item><math|F> is a set
@@ -1933,8 +1933,6 @@
       </description>
 
       <item><math|1\<neq\>0>
-
-      <math|\<odot\>> is called the multiplication operator of the field.
     </enumerate>
   </definition>
 
@@ -10104,7 +10102,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|3>
-    <associate|page-first|129>
+    <associate|page-first|131>
     <associate|page-medium|papyrus>
     <associate|par-first|0tab>
     <associate|project-flag|false>
@@ -10489,7 +10487,6 @@
     <associate|set is infinitie if it contains a infinite
     subset|<tuple|6.32|187>>
     <associate|set of finite family is finite|<tuple|6.46|193>>
-    <associate|sorting of a finite set|<tuple|6.52|?>>
     <associate|sub-semi-group|<tuple|4.12|129>>
     <associate|subring|<tuple|4.35|135>>
     <associate|subset of finite sets|<tuple|6.43|192>>

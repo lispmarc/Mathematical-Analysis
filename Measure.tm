@@ -9,8 +9,6 @@
 
   <section|Preliminaries>
 
-  TODO
-
   <\theorem>
     <label|cardinality of a product of sets>Let <math|n\<in\>\<bbb-N\>> and
     <math|<around*|{|A<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
@@ -44033,6 +44031,147 @@
     </equation*>
   </proof>
 
+  <subsection|Borel measures and linear transformations>
+
+  We want to examine how <math|\<lambda\>> and <math|\<lambda\><rsup|n>>
+  behaves under a linear isomorphism. For this we must ensure that for a
+  linear isomorphism <math|T> and <math|A\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>>
+  [or <math|A\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>> that
+  <math|\<lambda\><around*|(|T<around*|(|A|)>|)>> [or
+  <math|\<lambda\><rsup|n><around*|(|T<around*|(|A|)>|)>>] is well defined,
+  in other words we require that <math|T<around*|(|A|)>\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>>
+  [or <math|T<around*|(|A|)>\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>].
+  As by [corollaries: <reference|continuity homemorphism between K>,
+  <reference|continuity homemorphism between powers of R>] linear
+  isomorphisms are homeomorphisms it is enough to prove the result for
+  homeomorphisms instead of linear isomorphisms. This is done in the next
+  theorem.
+
+  <\theorem>
+    <label|measurability of image of a measurable set by a homeomorphism>Let
+    <math|<around*|\<langle\>|X,\<cal-T\><rsub|X>|\<rangle\>>> and
+    <math|<around*|\<langle\>|Y,\<cal-T\><rsub|Y>|\<rangle\>>> be two
+    topological spaces, <math|T:X\<rightarrow\>Y> a homeomorphism [see
+    definition: <reference|continuity homeomorphism>] then
+    <math|\<forall\>A\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]>> we
+    have <math|T<around*|(|A|)>\<in\>\<cal-B\><around*|[|Y,\<cal-T\><rsub|Y>|]>>.
+  </theorem>
+
+  <\proof>
+    Let
+
+    <\equation*>
+      \<cal-A\>=<around*|{|A\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]>\|T<around*|(|A|)>\<in\>\<cal-B\><around*|[|Y,\<cal-T\><rsub|Y>|]>|}>
+    </equation*>
+
+    then we have, as <math|\<varnothing\>\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]>>
+    and <math|T<around*|(|\<varnothing\>|)>=\<varnothing\>\<in\>\<cal-B\><around*|[|Y,\<cal-T\><rsub|Y>|]>>,
+    that
+
+    <\equation>
+      <label|eq 21.1074.291>\<varnothing\>\<in\>\<cal-A\>
+    </equation>
+
+    Let <math|A\<in\>\<cal-A\>> then <math|A\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]>\<Rightarrow\>X\\A\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]>>
+    and <math|T<around*|(|A|)>\<in\>\<cal-B\><around*|[|Y,\<cal-T\><rsub|Y>|]>>.
+    As <math|T> is a bijective hence injective we have that
+    <math|T<around*|(|X\\A|)>\<equallim\><rsub|<text|[theorem:
+    <reference|function properties (1)>]>>T<around*|(|X|)>\\T<around*|(|Y|)><below|=|T<text|
+    is surjective>>Y\\T<around*|(|A|)><below|\<in\>|T<around*|(|A|)>\<in\>\<cal-B\><around*|[|Y,\<cal-T\><rsub|Y>|]>>\<cal-B\><around*|[|Y,\<cal-T\><rsub|Y>|]>>.
+    This proves that <math|X\\A\<in\>A> hence we have\ 
+
+    <\equation>
+      <label|eq 21.1075.291>\<forall\>A\<in\>\<cal-A\><text| we have
+      >X\\A\<in\>\<cal-A\>
+    </equation>
+
+    Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\>>
+    then <math|\<forall\>i\<in\>\<bbb-N\>> we have
+    <math|A<rsub|i>\<in\>\<cal-A\>> so that
+    <math|A<rsub|i>\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]>> and
+    <math|T<around*|(|A<rsub|i>|)>\<in\>\<cal-B\><around*|(|Y,\<cal-T\><rsub|Y>|)>>.
+    Hence we have that <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]>>
+    and <math|T<around*|(|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>\<equallim\><rsub|<text|[theorem:
+    <reference|family image and preimage>]>><big|cup><rsub|i\<in\>\<bbb-N\>>T<around*|(|A<rsub|i>|)>\<in\>\<cal-B\><around*|[|Y,\<cal-T\><rsub|Y>|]>>
+    which proves that <math|<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>>.
+    In other words we have\ 
+
+    <\equation>
+      <label|eq 21.1076.291>\<forall\><around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-A\><text|
+      we have ><big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>\<in\>\<cal-A\>
+    </equation>
+
+    From [eqs: <reference|eq 21.1074.291>, <reference|eq 21.1075.291>,
+    <reference|eq 21.1076.291>] it follows by definition that
+
+    <\equation>
+      <label|eq 21.1077.291>\<cal-A\><text| is a >\<sigma\><text|-algebra on
+      >X
+    </equation>
+
+    Let <math|A\<in\>\<cal-T\><rsub|X>\<Rightarrow\>A\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]>>
+    then as <math|T> is a homeomorphism, hence open, we have that
+    <math|<rigid|T<around*|(|A|)>\<in\>\<cal-T\><rsub|Y>\<in\>\<cal-B\><around*|[|Y,\<cal-T\><rsub|Y>|]>>>
+    which proves that <math|A\<in\>\<cal-A\>>. Hence we have\ 
+
+    <\equation>
+      <label|eq 21.1078.291>\<cal-T\><rsub|X>\<subseteq\>\<cal-A\>
+    </equation>
+
+    Using [theorem: <reference|measure generated sigma algebra>] on [eqs:
+    <reference|eq 21.1077.291>, <reference|eq 21.1078.291>] proves that\ 
+
+    <\equation*>
+      \<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]>=\<sigma\><around*|[|\<cal-T\><rsub|X>|]>\<subseteq\>\<cal-A\>
+    </equation*>
+
+    Hence
+
+    <\equation*>
+      \<forall\>A\<in\>\<cal-B\><around*|[|X,\<cal-T\><rsub|X>|]><text| we
+      have >A\<in\>\<cal-A\><text| so that
+      >T<around*|(|A|)>\<in\>\<cal-B\><around*|[|Y,\<cal-T\><rsub|Y>|]>
+    </equation*>
+  </proof>
+
+  Applying the above theorem on the cases of linear isomorphisms between
+  <math|\<bbb-R\>> and <math|\<bbb-R\>> or between <math|\<bbb-R\><rsup|n>>
+  and <math|\<bbb-R\><rsup|n>> gives.
+
+  <\theorem>
+    <label|measurability of image of a measurable set by a isomorphism>We
+    have\ 
+
+    <\enumerate>
+      <item>If <math|T:\<bbb-R\>\<rightarrow\>\<bbb-R\>> is a linear
+      isomorphism then <math|\<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>>
+      we have that <math|T<around*|(|A|)>\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>>
+
+      <item>Let <math|n\<in\>\<bbb-N\>> and
+      <math|T:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|n>> a linear
+      isomorphism then <math|\<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>
+      we have that <math|T<around*|(|A|)>\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Using [corollary: <reference|continuity homemorphism between K>]
+      it follows that <math|T> is a homeomorphism. Hence by [theorem:
+      <reference|measurability of image of a measurable set by a
+      homeomorphism>] we have <math|\<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>>
+      that <math|T<around*|(|A|)>\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>>.
+
+      <item>Using [corollary: <reference|continuity homemorphism between
+      powers of R>] it follows that <math|T> is a homeomorphism. Hence by
+      [theorem: <reference|measurability of image of a measurable set by a
+      homeomorphism>] we have <math|\<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>
+      that <math|T<around*|(|A|)>\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>.
+    </enumerate>
+  </proof>
+
   \;
 
   \;
@@ -44202,6 +44341,7 @@
     <associate|auto-148|<tuple|<with|mode|<quote|math>|\<cal-D\><rsub|n>>|?>>
     <associate|auto-149|<tuple|<with|mode|<quote|math>|\<cal-D\>>|?>>
     <associate|auto-15|<tuple|21.2.1|?>>
+    <associate|auto-150|<tuple|21.8.2|?>>
     <associate|auto-16|<tuple|Borel algebra|?>>
     <associate|auto-17|<tuple|<with|mode|<quote|math>|\<cal-B\><around*|[|X,\<cal-T\>|]>>|?>>
     <associate|auto-18|<tuple|21.2.1.1|?>>
@@ -45383,6 +45523,11 @@
     <associate|eq 21.1071.291|<tuple|21.1071|?>>
     <associate|eq 21.1072.291|<tuple|21.1072|?>>
     <associate|eq 21.1073.291|<tuple|21.1073|?>>
+    <associate|eq 21.1074.291|<tuple|21.1074|?>>
+    <associate|eq 21.1075.291|<tuple|21.1075|?>>
+    <associate|eq 21.1076.291|<tuple|21.1076|?>>
+    <associate|eq 21.1077.291|<tuple|21.1077|?>>
+    <associate|eq 21.1078.291|<tuple|21.1078|?>>
     <associate|eq 21.991.285|<tuple|21.993|?>>
     <associate|eq 21.992.285|<tuple|21.994|?>>
     <associate|eq 21.992.285.1|<tuple|21.994|?>>
@@ -45474,6 +45619,10 @@
     <associate|lemma 21.558.288|<tuple|21.559|?>>
     <associate|lemma 21.562.291|<tuple|21.563|?>>
     <associate|lemma 21.563.291|<tuple|21.564|?>>
+    <associate|measurability of image of a measurable set by a
+    homeomorphism|<tuple|21.568|?>>
+    <associate|measurability of image of a measurable set by a
+    isomorphism|<tuple|21.569|?>>
     <associate|measurable function|<tuple|21.216|?>>
     <associate|measurable function (1)|<tuple|21.229|?>>
     <associate|measurable function (4)|<tuple|21.233|?>>
@@ -45631,7 +45780,6 @@
     <associate|measure measurable sets|<tuple|21.114|?>>
     <associate|measure measurable sets properties|<tuple|21.116|?>>
     <associate|measure measurable space|<tuple|21.33|?>>
-    <associate|measure measure and countable sets|<tuple|21.93|?>>
     <associate|measure measure conditions|<tuple|21.111|?>>
     <associate|measure measure definition|<tuple|21.92|?>>
     <associate|measure measure finite|<tuple|21.109|?>>
@@ -46241,6 +46389,10 @@
       <with|par-left|<quote|2tab>|21.8.1.3<space|2spc>Translation invariance
       and Radon Measures <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-146>>
+
+      <with|par-left|<quote|1tab>|21.8.2<space|2spc>Borel measures and linear
+      transformations <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-150>>
     </associate>
   </collection>
 </auxiliary>
