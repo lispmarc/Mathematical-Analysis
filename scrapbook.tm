@@ -7817,14 +7817,328 @@
       <label|eq 20.1035.281>I<rsub|f,1>\<in\>\<cal-M\><rsub|><around*|[|X<rsub|1>,\<cal-A\><rsub|1>,<wide|\<bbb-R\>|\<wide-bar\>>|]>\<wedge\>I<rsub|f,2>\<in\>\<cal-M\><around*|[|X<rsub|2>,\<cal-A\><rsub|2>,<wide|\<bbb-R\>|\<wide-bar\>>|]>
     </equation>
 
-    Take\ 
-
     <\equation*>
       \;
     </equation*>
 
     \;
   </proof>
+
+  \;
+
+  Applying the above theorem on the cases of linear isomorphisms between
+  <math|\<bbb-R\>> and <math|\<bbb-R\>> or between <math|\<bbb-R\><rsup|n>>
+  and <math|\<bbb-R\><rsup|n>> gives.
+
+  <\theorem>
+    <label|measurability of image of a measurable set by a isomorphism>We
+    have\ 
+
+    <\enumerate>
+      <item>If <math|T:\<bbb-R\>\<rightarrow\>\<bbb-R\>> is a linear
+      isomorphism then <math|\<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>>
+      we have that <math|T<around*|(|A|)>\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>>
+
+      <item>Let <math|n\<in\>\<bbb-N\>> and
+      <math|T:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|n>> a linear
+      isomorphism then <math|\<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>
+      we have that <math|T<around*|(|A|)>\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Using [corollary: <reference|continuity homemorphism between K>]
+      it follows that <math|T> is a homeomorphism. Hence by [theorem:
+      <reference|measurability of image of a measurable set by a
+      homeomorphism>] we have <math|\<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>>
+      that <math|T<around*|(|A|)>\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>>.
+
+      <item>Using [corollary: <reference|continuity homemorphism between
+      powers of R>] it follows that <math|T> is a homeomorphism. Hence by
+      [theorem: <reference|measurability of image of a measurable set by a
+      homeomorphism>] we have <math|\<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>
+      that <math|T<around*|(|A|)>\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>.
+    </enumerate>
+  </proof>
+
+  We see now how the Borel measures <math|\<lambda\>> and
+  <math|\<lambda\><rsup|n>> behaves under a linear transformation. First we
+  need a little lemma.
+
+  <\theorem>
+    <label|measure Borel measure of T(A)>Let
+    <math|T:\<bbb-R\>\<rightarrow\>\<bbb-R\>> be a linear isomorphism then we
+    have <math|\<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>> that
+
+    <\equation*>
+      \<lambda\><around*|(|T<around*|(|A|)>|)>=\<lambda\><around*|(|T<around*|(|<around*|[|0,1|[>|)>|)>\<cdot\>\<lambda\><around*|(|A|)>
+    </equation*>
+
+    <\note>
+      We use the previous theorem [theorem: <reference|measurability of image
+      of a measurable set by a isomorphism>] to ensure that
+      <math|T<around*|(|<around*|[|0,1|[>|)>>,
+      <math|T<around*|(|A|)>\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>> so that
+      <math|\<lambda\><around*|(|T<around*|(|A|)>|)>>,
+      <math|\<lambda\><around*|(|T<around*|(|<around*|[|0,1|[>|)>|)>> is well
+      defined.
+    </note>
+  </theorem>
+
+  <\proof>
+    First we prove that\ 
+
+    <\equation*>
+      \<mu\>:\<cal-B\><around*|[|\<bbb-R\>|]>\<rightarrow\><around*|[|0,\<infty\>|]><text|
+      defined by >\<mu\><around*|(|A|)>=\<lambda\><around*|(|T<around*|(|A|)>|)><text|>
+    </equation*>
+
+    is a translation invariant Radon measure. First\ 
+
+    <\equation>
+      <label|eq 21.1079.291>\<mu\><around*|(|\<varnothing\>|)>=\<lambda\>*<around*|(|T<around*|(|\<varnothing\>|)>|)>=\<lambda\><around*|(|\<varnothing\>|)>=0
+    </equation>
+
+    Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-B\><around*|[|\<bbb-R\>|]>>
+    be pairwise disjoint. Given <math|i,j\<in\>\<bbb-N\>> with
+    <math|i\<neq\>j> and assume that <math|<rigid|T<around*|(|A<rsub|i>|)><big|cap>T<around*|(|A<rsub|j>|)>\<neq\>\<varnothing\>>>,
+    then there exist a <math|x\<in\>T<around*|(|A<rsub|i>|)><big|cap>T<around*|(|A<rsub|j>|)>>,
+    so there exist <math|a\<in\>A<rsub|i>> and <math|b\<in\>A<rsub|j>> such
+    that <math|T<around*|(|a|)>=x=T<around*|(|b|)>>, as <math|T> is a
+    bijection it follows that <math|a=b> so that
+    <math|a\<in\>A<rsub|i><big|cap>A<rsub|j>=\<varnothing\>> a contradiction,
+    hence we must have that <math|<rigid|T<around*|(|A<rsub|i>|)><big|cap>T<around*|(|A<rsub|j>|)>=\<varnothing\>>>.
+    Hence we have that\ 
+
+    <\equation*>
+      <around*|{|T<around*|(|A<rsub|i>|)>|}><rsub|i\<in\>\<bbb-N\>><below|\<subseteq\>|<text|
+      [theorem: <reference|measurability of image of a measurable set by a
+      isomorphism>]>>\<cal-B\><around*|[|\<bbb-R\>|]><text| is pairwise
+      disjoint>
+    </equation*>
+
+    So we have\ 
+
+    <\equation*>
+      \<mu\><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=\<lambda\><around*|(|T<around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|family image and preimage>]>>\<lambda\>*<around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>T<around*|(|A<rsub|i>|)>|)>=<big|sum><rsub|i=1><rsup|\<infty\>>\<lambda\><around*|(|T<around*|(|A<rsub|i>|)>|)>=<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|i>|)>
+    </equation*>
+
+    which together with [eq: <reference|eq 21.1079.291>] proves that\ 
+
+    <\equation*>
+      \<mu\><text| is a measure on >\<cal-B\><around*|[|\<bbb-R\>|]>
+    </equation*>
+
+    As <math|T:\<bbb-R\>\<rightarrow\>\<bbb-R\>> is a linear isomorphism it
+    follows from [theorem: <reference|continuity homemorphism between K>]
+    <math|T> is a homeomorphism. Let <math|x\<in\>\<bbb-R\>> then as
+    <math|\<lambda\>> is locally finite [see theorem: <reference|Borel
+    measure on R and R^n are locally finite>] there exist a open set <math|V>
+    such that <math|T<around*|(|x|)>\<in\>V> and
+    <math|\<lambda\><around*|(|V|)>\<less\>\<infty\>>, take
+    <math|U=T<rsup|-1><around*|(|V|)>> then <math|U> is open [as <math|T> is
+    continuous] and <math|x\<in\>U>, further
+    <math|\<mu\><around*|(|U|)>=\<lambda\><around*|(|T<around*|(|U|)>|)>=\<lambda\><around*|(|T<around*|(|T<rsup|-1><around*|(|V|)>|)>|)>\<equallim\><rsub|<text|[theorem:
+    <reference|function preimage of image>]>>\<lambda\><around*|(|V|)>\<less\>\<infty\>>.
+    In other words given <math|x\<in\>\<bbb-R\>> we found a open set <math|U>
+    with <math|x\<in\>U> and <math|\<mu\><around*|(|U|)>\<less\>\<infty\>>
+    which proves by definition that <math|\<mu\>> is locally finite. Applying
+    then [theorem: <reference|measurable locally finiteness>] it follows that
+    <math|\<mu\>> is also compact finite so that by [theorem:
+    <reference|measure Radon condition>] which proves by [definition:
+    <reference|Radon measure>] that\ 
+
+    <\equation*>
+      \<mu\><text| is a Radon measure>
+    </equation*>
+
+    Next let <math|x\<in\>\<bbb-R\>> and <math|A\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>>
+    then we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|y\<in\>T<around*|(|A+x|)>>|<cell|\<Leftrightarrow\>>|<cell|y=T<around*|(|a+x|)><text|
+      where >a\<in\>A>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|T<text|
+      is linear>>>|<cell|y=T<around*|(|a|)>+T<around*|(|x|)><text| where
+      >a\<in\>A>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y=b+T<around*|(|x|)>
+      where \ b\<in\>T<around*|(|A|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>T<around*|(|A|)>+T<around*|(|x|)>>>>>
+    </eqnarray*>
+
+    which proves that <math|T<around*|(|A+x|)>=T<around*|(|A|)>+T<around*|(|x|)>>.
+    Hence we have
+
+    <\equation*>
+      \<mu\><around*|(|A+x|)>=\<lambda\><around*|(|T<around*|(|A+x|)>|)>=\<lambda\><around*|(|T<around*|(|A|)>+T<around*|(|x|)>|)>\<equallim\><rsub|\<lambda\><text|
+      is translation invariant>>\<lambda\><around*|(|T<around*|(|A|)>|)>=\<mu\><around*|(|A|)>
+    </equation*>
+
+    which proves that\ 
+
+    <\equation*>
+      \<lambda\><text| is translation invariant>
+    </equation*>
+
+    Finally using [theorem: <reference|measure Radon and Borel measure on R>]
+    we have that
+
+    <\equation*>
+      \<lambda\><around*|(|T<around*|(|A|)>|)>=\<mu\><around*|(|A|)>=\<mu\><around*|(|<around*|[|0,1|[>|)>\<cdot\>\<lambda\><around*|(|A|)>=\<mu\><around*|(|T<around*|(|<around*|[|0,1|[>|)>|)>\<cdot\>\<lambda\><around*|(|A|)>
+    </equation*>
+
+    which proves that\ 
+
+    <\equation*>
+      \<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\>|]><text| we have
+      >\<lambda\><around*|(|T<around*|(|A|)>|)>=\<mu\><around*|(|T<around*|(|<around*|[|0,1|[>|)>|)>\<cdot\>\<lambda\><around*|(|A|)>
+    </equation*>
+  </proof>
+
+  In as similar fashion we can extend the previous theorem to
+  <math|\<lambda\><rsup|n>>.
+
+  <\theorem>
+    <label|measure Borel measure of T(A)(1)>Let <math|n\<in\>\<bbb-N\>>,
+    <math|T:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|n>> be a linear
+    isomorphism then we have <math|\<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>
+    that
+
+    <\equation*>
+      \<lambda\><rsup|n><around*|(|T<around*|(|A|)>|)>=\<lambda\><rsup|n><around*|(|T<around*|(|<around*|[|0,1<rsup|n>|[>|)>|)>\<cdot\>\<lambda\><rsup|n><around*|(|A|)>
+    </equation*>
+
+    <\note>
+      We use the previous [theorem: <reference|measurability of image of a
+      measurable set by a isomorphism>] to ensure that
+      <math|T<around*|(|<around*|[|0,1|[>|)>>,
+      <math|T<around*|(|A|)>\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>
+      so that <math|\<lambda\><around*|(|T<around*|(|A|)>|)>>,
+      <math|\<lambda\><around*|(|T<around*|(|<around*|[|0,1|[>|)>|)>> is well
+      defined.
+    </note>
+  </theorem>
+
+  <\proof>
+    First we prove that\ 
+
+    <\equation*>
+      \<mu\>:\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>\<rightarrow\><around*|[|0,\<infty\>|]><text|
+      defined by >\<mu\><around*|(|A|)>=\<lambda\><around*|(|T<around*|(|A|)>|)><text|>
+    </equation*>
+
+    is a translation invariant Radon measure. First\ 
+
+    <\equation>
+      <label|eq 21.1080.291>\<mu\><around*|(|\<varnothing\>|)>=\<lambda\>*<around*|(|T<around*|(|\<varnothing\>|)>|)>=\<lambda\><around*|(|\<varnothing\>|)>=0
+    </equation>
+
+    Let <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>
+    be pairwise disjoint. Given <math|i,j\<in\>\<bbb-N\>> with
+    <math|i\<neq\>j> and assume that <math|<rigid|T<around*|(|A<rsub|i>|)><big|cap>T<around*|(|A<rsub|j>|)>\<neq\>\<varnothing\>>>,
+    then there exist a <math|x\<in\>T<around*|(|A<rsub|i>|)><big|cap>T<around*|(|A<rsub|j>|)>>,
+    so there exist <math|a\<in\>A<rsub|i>> and <math|b\<in\>A<rsub|j>> such
+    that <math|T<around*|(|a|)>=x=T<around*|(|b|)>>, as <math|T> is a
+    bijection it follows that <math|a=b> so that
+    <math|a\<in\>A<rsub|i><big|cap>A<rsub|j>=\<varnothing\>> a contradiction,
+    hence we must have that <math|<rigid|T<around*|(|A<rsub|i>|)><big|cap>T<around*|(|A<rsub|j>|)>=\<varnothing\>>>.
+    Hence we have that\ 
+
+    <\equation*>
+      <around*|{|T<around*|(|A<rsub|i>|)>|}><rsub|i\<in\>\<bbb-N\>><below|\<subseteq\>|<text|
+      [theorem: <reference|measurability of image of a measurable set by a
+      isomorphism>]>>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]><text| is
+      pairwise disjoint>
+    </equation*>
+
+    So we have\ 
+
+    <\equation*>
+      \<mu\><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>=\<lambda\><around*|(|T<around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>|)>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|family image and preimage>]>>\<lambda\>*<around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>T<around*|(|A<rsub|i>|)>|)>=<big|sum><rsub|i=1><rsup|\<infty\>>\<lambda\><around*|(|T<around*|(|A<rsub|i>|)>|)>=<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|A<rsub|i>|)>
+    </equation*>
+
+    which together with [eq: <reference|eq 21.1079.291>] proves that\ 
+
+    <\equation*>
+      \<mu\><text| is a measure on >\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>
+    </equation*>
+
+    As <math|T:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|n>> is a linear
+    isomorphism it follows from [theorem: <reference|continuity homemorphism
+    between K>] <math|T> is a homeomorphism. Let
+    <math|x\<in\>\<bbb-R\><rsup|n>> then as <math|\<lambda\><rsup|n>> is
+    locally finite [see theorem: <reference|Borel measure on R and R^n are
+    locally finite>] there exist a open set <math|V> such that
+    <math|T<around*|(|x|)>\<in\>V> and <math|\<lambda\><around*|(|V|)>\<less\>\<infty\>>,
+    take <math|U=T<rsup|-1><around*|(|V|)>> then <math|U> is open [as
+    <math|T> is continuous] and <math|x\<in\>U>, further
+    <math|\<mu\><around*|(|U|)>=\<lambda\><rsup|n><around*|(|T<around*|(|U|)>|)>=\<lambda\><rsup|n><around*|(|T<around*|(|T<rsup|-1><around*|(|V|)>|)>|)>\<equallim\><rsub|<text|[theorem:
+    <reference|function preimage of image>]>>\<lambda\><rsup|n><around*|(|V|)>\<less\>\<infty\>>.
+    In other words given <math|x\<in\>\<bbb-R\><rsup|n>> we found a open set
+    <math|U> with <math|x\<in\>U> and <math|\<mu\><around*|(|U|)>\<less\>\<infty\>>
+    which proves by definition that <math|\<mu\>> is locally finite. Applying
+    then [theorem: <reference|measurable locally finiteness>] it follows that
+    <math|\<mu\>> is also compact finite so that by [theorem:
+    <reference|measure Radon condition>] which proves by [definition:
+    <reference|Radon measure>] that\ 
+
+    <\equation*>
+      \<mu\><text| is a Radon measure>
+    </equation*>
+
+    Next let <math|x\<in\>\<bbb-R\><rsup|n>> and
+    <math|A\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>> then we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|y\<in\>T<around*|(|A+x|)>>|<cell|\<Leftrightarrow\>>|<cell|y=T<around*|(|a+x|)><text|
+      where >a\<in\>A>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|T<text|
+      is linear>>>|<cell|y=T<around*|(|a|)>+T<around*|(|x|)><text| where
+      >a\<in\>A>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y=b+T<around*|(|x|)>
+      where \ b\<in\>T<around*|(|A|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\>T<around*|(|A|)>+T<around*|(|x|)>>>>>
+    </eqnarray*>
+
+    which proves that <math|T<around*|(|A+x|)>=T<around*|(|A|)>+T<around*|(|x|)>>.
+    Hence we have
+
+    <\equation*>
+      \<mu\><around*|(|A+x|)>=\<lambda\><rsup|n><around*|(|T<around*|(|A+x|)>|)>=\<lambda\><rsup|n><around*|(|T<around*|(|A|)>+T<around*|(|x|)>|)>\<equallim\><rsub|\<lambda\><text|
+      is translation invariant>>\<lambda\><rsup|n><around*|(|T<around*|(|A|)>|)>=\<mu\><around*|(|A|)>
+    </equation*>
+
+    which proves that\ 
+
+    <\equation*>
+      \<lambda\><rsup|n><text| is translation invariant>
+    </equation*>
+
+    Finally using [theorem: <reference|measure Radon and Borel measure on
+    R^n>] we have that
+
+    <\equation*>
+      \<lambda\><rsup|n><around*|(|T<around*|(|A|)>|)>=\<mu\><around*|(|A|)>=\<mu\><around*|(|<around*|[|0,1|[><rsup|n>|)>\<cdot\>\<lambda\><rsup|n><around*|(|A|)>=\<mu\><around*|(|T<around*|(|<around*|[|0,1|[>|)><rsup|n>|)>\<cdot\>\<lambda\><rsup|n><around*|(|A|)>
+    </equation*>
+
+    which proves that\ 
+
+    <\equation*>
+      \<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]><text| we have
+      >\<lambda\><rsup|n><around*|(|T<around*|(|A|)>|)>=\<mu\><around*|(|T<around*|(|<around*|[|0,1|[><rsup|n>|)>|)>\<cdot\>\<lambda\><rsup|n><around*|(|A|)>
+    </equation*>
+  </proof>
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
+  \;
 </body>
 
 <\initial>
@@ -7836,7 +8150,7 @@
 <\references>
   <\collection>
     <associate|Fubini's Theorem|<tuple|61|80>>
-    <associate|Fubini's theorem|<tuple|63|?>>
+    <associate|Fubini's theorem|<tuple|63|83>>
     <associate|auto-1|<tuple|open mapping theorem|5>>
     <associate|auto-2|<tuple|sum over a countable set|8>>
     <associate|auto-3|<tuple|<with|mode|<quote|math>|<around*|(|i\<rightarrow\>x|)>>|18>>
@@ -7989,48 +8303,48 @@
     <associate|eq 16.47.185|<tuple|61|23>>
     <associate|eq 18.283.124|<tuple|78|31>>
     <associate|eq 19.536.038|<tuple|186|63>>
-    <associate|eq 20.1010.281|<tuple|251|?>>
-    <associate|eq 20.1011.281|<tuple|252|?>>
+    <associate|eq 20.1010.281|<tuple|251|83>>
+    <associate|eq 20.1011.281|<tuple|252|83>>
     <associate|eq 20.1012.280|<tuple|233|81>>
     <associate|eq 20.1013.280|<tuple|234|81>>
     <associate|eq 20.1014.280|<tuple|235|81>>
-    <associate|eq 20.1014.281|<tuple|255|?>>
+    <associate|eq 20.1014.281|<tuple|255|83>>
     <associate|eq 20.1015.280|<tuple|225|78>>
-    <associate|eq 20.1015.281|<tuple|256|?>>
+    <associate|eq 20.1015.281|<tuple|256|83>>
     <associate|eq 20.1016.280|<tuple|226|78>>
-    <associate|eq 20.1016.281|<tuple|257|?>>
+    <associate|eq 20.1016.281|<tuple|257|83>>
     <associate|eq 20.1017.280|<tuple|238|81>>
-    <associate|eq 20.1017.281|<tuple|258|?>>
+    <associate|eq 20.1017.281|<tuple|258|83>>
     <associate|eq 20.1018.280|<tuple|239|81>>
-    <associate|eq 20.1018.281|<tuple|259|?>>
+    <associate|eq 20.1018.281|<tuple|259|83>>
     <associate|eq 20.1019.280|<tuple|240|81>>
-    <associate|eq 20.1019.281|<tuple|260|?>>
+    <associate|eq 20.1019.281|<tuple|260|83>>
     <associate|eq 20.1020.280|<tuple|241|81>>
-    <associate|eq 20.1020.281|<tuple|261|?>>
+    <associate|eq 20.1020.281|<tuple|261|84>>
     <associate|eq 20.1021.280|<tuple|242|81>>
-    <associate|eq 20.1021.281|<tuple|262|?>>
+    <associate|eq 20.1021.281|<tuple|262|84>>
     <associate|eq 20.1022.280|<tuple|243|81>>
-    <associate|eq 20.1022.281|<tuple|263|?>>
+    <associate|eq 20.1022.281|<tuple|263|84>>
     <associate|eq 20.1023.280|<tuple|244|81>>
-    <associate|eq 20.1023.281|<tuple|264|?>>
+    <associate|eq 20.1023.281|<tuple|264|84>>
     <associate|eq 20.1024.280|<tuple|245|81>>
-    <associate|eq 20.1024.281|<tuple|265|?>>
+    <associate|eq 20.1024.281|<tuple|265|84>>
     <associate|eq 20.1025.280|<tuple|246|81>>
-    <associate|eq 20.1025.281|<tuple|266|?>>
+    <associate|eq 20.1025.281|<tuple|266|85>>
     <associate|eq 20.1026.280|<tuple|247|81>>
-    <associate|eq 20.1026.281|<tuple|267|?>>
-    <associate|eq 20.1027.280|<tuple|248|82>>
-    <associate|eq 20.1027.281|<tuple|268|?>>
+    <associate|eq 20.1026.281|<tuple|267|85>>
+    <associate|eq 20.1027.280|<tuple|248|81>>
+    <associate|eq 20.1027.281|<tuple|268|85>>
     <associate|eq 20.1028.280|<tuple|249|82>>
-    <associate|eq 20.1028.281|<tuple|269|?>>
-    <associate|eq 20.1029.280|<tuple|250|83>>
-    <associate|eq 20.1029.281|<tuple|270|?>>
-    <associate|eq 20.1030.281|<tuple|271|?>>
-    <associate|eq 20.1031.281|<tuple|272|?>>
-    <associate|eq 20.1032.281|<tuple|273|?>>
-    <associate|eq 20.1033.281|<tuple|274|?>>
-    <associate|eq 20.1034.281|<tuple|275|?>>
-    <associate|eq 20.1035.281|<tuple|276|?>>
+    <associate|eq 20.1028.281|<tuple|269|85>>
+    <associate|eq 20.1029.280|<tuple|250|82>>
+    <associate|eq 20.1029.281|<tuple|270|85>>
+    <associate|eq 20.1030.281|<tuple|271|85>>
+    <associate|eq 20.1031.281|<tuple|272|85>>
+    <associate|eq 20.1032.281|<tuple|273|85>>
+    <associate|eq 20.1033.281|<tuple|274|85>>
+    <associate|eq 20.1034.281|<tuple|275|86>>
+    <associate|eq 20.1035.281|<tuple|276|86>>
     <associate|eq 20.201.217|<tuple|156|58>>
     <associate|eq 20.2017.280|<tuple|227|78>>
     <associate|eq 20.208.204|<tuple|140|52>>
@@ -8109,6 +8423,8 @@
     <associate|eq 20.667.246|<tuple|197|65>>
     <associate|eq 20.669.247|<tuple|198|65>>
     <associate|eq 20.670.247|<tuple|199|66>>
+    <associate|eq 21.1079.291|<tuple|277|?>>
+    <associate|eq 21.1080.291|<tuple|278|?>>
     <associate|eq 21.27.273|<tuple|220|74>>
     <associate|eq 21.30.273|<tuple|221|74>>
     <associate|figure 20.6.234|<tuple|3|72>>
@@ -8133,8 +8449,12 @@
     <associate|lemma 20.470.246|<tuple|50|63>>
     <associate|lemma 20.477.246|<tuple|53|72>>
     <associate|lemma 20.613.279|<tuple|56|74>>
+    <associate|measurability of image of a measurable set by a
+    isomorphism|<tuple|64|?>>
     <associate|measurable function sum|<tuple|57|78>>
     <associate|measurable function sum (finite)|<tuple|60|79>>
+    <associate|measure Borel measure of T(A)|<tuple|65|?>>
+    <associate|measure Borel measure of T(A)(1)|<tuple|67|?>>
     <associate|measure length function is a pre-measure|<tuple|47|56>>
     <associate|non negative function as limit of simple
     functions|<tuple|51|66>>
