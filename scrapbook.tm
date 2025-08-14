@@ -8132,7 +8132,116 @@
 
   \;
 
+  <\lemma>
+    <label|lemma 21.578.291>Let <math|n\<in\>\<bbb-N\>>,
+    <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> the canonical basis
+    in <math|\<bbb-R\><rsup|n>> [see example: <reference|basis F^n>],
+    <math|<rigid|T:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|n>>> a
+    linear isomorphism such that <math|\<forall\>i,j\<in\><around*|{|1,\<ldots\>,n|}>>
+    we have <math|\<cal-M\><around*|(|T;E,E|)><rsub|i,j>=\<delta\><rsub|i,j>\<cdot\>M<rsub|i,i>>
+    where <math|0\<leqslant\>M<rsub|i,i>> then we have\ 
+
+    <\equation*>
+      \<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]><text| we have
+      >\<lambda\><rsup|n><around*|(|T<around*|(|A|)>|)>=<around*|\||det<around*|(|T|)>|\|>\<cdot\>\<lambda\><rsup|n><around*|(|A|)>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    Using the previous [theorem: <reference|measure Borel measure of T(A)
+    (1)>] we have that\ 
+
+    <\equation>
+      <label|eq 21.1081.291>\<lambda\><rsup|n><around*|(|T<around*|(|A|)>|)>=\<lambda\><rsup|n><around*|(|T<around*|(|<around*|[|0,1|[><rsup|n>|)>|)>\<cdot\>\<lambda\><rsup|n><around*|(|A|)>
+    </equation>
+
+    As <math|T:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|n>> is a linear
+    isomorphism we have\ 
+
+    <\equation>
+      <label|eq 21.1082.291>0<below|\<neq\>|<text|[theorem:
+      <reference|determinant det(L) properties>]>>det<around*|(|L|)>\<equallim\><rsub|<text|[theoremL
+      <reference|determinant of matrix and linear
+      transformation>]>>det<around*|(|\<cal-M\><around*|(|T;E,E|)>|)>\<equallim\><rsub|<text|[theorem:
+      <reference|matrix determinant of a diagonal
+      matrix>]>><big|prod><rsub|i=1><rsup|n>M<rsub|i,i>
+    </equation>
+
+    From the above it follows that\ 
+
+    <\equation>
+      <label|eq 21.1083.291>\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      >0\<less\>M<rsub|i,i>
+    </equation>
+
+    Define\ 
+
+    <\equation*>
+      M\<in\>\<bbb-R\><rsup|n><text| by >M=<around*|(|M<rsub|1,1>,\<ldots\>,M<rsub|n,n>|)><text|
+      in other words >\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text| we
+      have >M<rsub|i>=M<rsub|i,i>
+    </equation*>
+
+    Using the relation between a linear transformation and its matrix we have\ 
+
+    <\equation>
+      <label|eq 21.1084.291>\<forall\>x\<in\>\<bbb-R\><rsup|n><text| we have
+      >T<around*|(|x|)>=\<equallim\><rsub|<text|[example: <reference|matrix
+      linear map application (1)>]>><big|sum><rsub|j=1><rsup|n>\<cal-M\><around*|(|T;E,E|)>=<big|sum><rsub|j=1><rsup|n>\<delta\><rsub|j,i>\<cdot\>M<rsub|i,i>\<cdot\>x<rsub|j>=M<rsub|i,i>\<cdot\>x<rsub|i>
+    </equation>
+
+    Now we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|y\<in\>T<around*|(|<around*|[|0,1|[><rsup|n>|)>>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>x\<in\><around*|[|0,1|[><rsup|n><text|
+      such that >y=T<around*|(|x|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\>x\<in\>\<bbb-R\><rsup|n><text|
+      such that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+      <math|0\<leqslant\>x<rsub|i>\<less\>1<text| and
+      >y=T<around*|(|x|)>>>>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|<text|[eq:
+      <reference|eq 21.1084.291>]>>>|<cell|\<exists\>x\<in\>\<bbb-R\><rsup|n><text|
+      such that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+      <math|0\<leqslant\>x<rsub|i>\<less\>1<text| and
+      >y<rsub|i>=M<rsub|i,i>\<cdot\>x<rsub|i>>>>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|0\<neq\>M<rsub|i,i>>>|<cell|<text|<math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+      <math|0\<leqslant\><frac|y<rsub|i>|M<rsub|i,i>>\<less\>1>>>>|<row|<cell|>|<cell|\<Leftrightarrowlim\><rsub|0\<less\>M<rsub|i,i>>>|<cell|<text|<math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+      <math|0\<leqslant\>y<rsub|i>\<less\>M<rsub|i,i>>>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|y\<in\><around*|[|0,M|[>>>>>
+    </eqnarray*>
+
+    which proves that\ 
+
+    <\equation>
+      <label|eq 21.1085.291>T<around*|(|<around*|[|0,1|[><rsup|n>|)>=<around*|[|0,M|[>
+    </equation>
+
+    Hence we have\ 
+
+    <\equation*>
+      \<lambda\><rsup|n><around*|(|t<around*|(|<around*|[|0,1<rsup|n>|[>|)>|)>=\<lambda\><rsup|n><around*|(|<around*|[|0,M|[>|)>=vol<rsup|n><around*|(|<around*|[|0,M|[>|)>=<big|prod><rsub|i=1><rsup|n><around*|(|M<rsub|i>-0|)>=<big|prod><rsub|i=1><rsup|n>M<rsub|i,i>\<equallim\><rsub|<text|[eq:
+      <reference|eq 21.1082.291>]>>det<around*|(|L|)>
+    </equation*>
+
+    Substituring this result in [eq: <reference|eq 21.1081.291>] it follows
+    that\ 
+
+    <\equation*>
+      \<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]><text| we have
+      >\<lambda\><rsup|n><around*|(|T<around*|(|A|)>|)>=det<around*|(|L|)>\<cdot\>\<lambda\><rsup|n><around*|(|A|)>
+    </equation*>
+  </proof>
+
   \;
+
+  s by [theorem: <reference|spectral unitary operator properties>]
+  <math|U<rsup|-1>> is a isomorphism we have by [theorem: <reference|Lebesgue
+  borel measures are Radon measures>,<reference|measure create a new measure
+  based on a measure and a linear isomorphism>] we have that\ 
+
+  <\equation>
+    <label|eq 21.1087.291>\<lambda\><rsup|n><around*|[|U<rsup|-1>|]>:\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>\<rightarrow\><around*|[|0,\<infty\>|]><text|
+    defined by >\<lambda\><rsup|n><around*|[|U<rsup|-1>|]><around*|(|A|)>=\<lambda\><rsup|n><around*|(|<around*|(|U<rsup|-1>|)><around*|(|A|)>|)><text|
+    is a Radon measure>
+  </equation>
+
+  and by [theorem: <reference|measure Borel measure of T(A) (1)>]\ 
 
   \;
 
@@ -8342,7 +8451,7 @@
     <associate|eq 20.1030.281|<tuple|271|85>>
     <associate|eq 20.1031.281|<tuple|272|85>>
     <associate|eq 20.1032.281|<tuple|273|85>>
-    <associate|eq 20.1033.281|<tuple|274|85>>
+    <associate|eq 20.1033.281|<tuple|274|86>>
     <associate|eq 20.1034.281|<tuple|275|86>>
     <associate|eq 20.1035.281|<tuple|276|86>>
     <associate|eq 20.201.217|<tuple|156|58>>
@@ -8423,8 +8532,14 @@
     <associate|eq 20.667.246|<tuple|197|65>>
     <associate|eq 20.669.247|<tuple|198|65>>
     <associate|eq 20.670.247|<tuple|199|66>>
-    <associate|eq 21.1079.291|<tuple|277|?>>
-    <associate|eq 21.1080.291|<tuple|278|?>>
+    <associate|eq 21.1079.291|<tuple|277|87>>
+    <associate|eq 21.1080.291|<tuple|278|88>>
+    <associate|eq 21.1081.291|<tuple|279|90>>
+    <associate|eq 21.1082.291|<tuple|280|90>>
+    <associate|eq 21.1083.291|<tuple|281|90>>
+    <associate|eq 21.1084.291|<tuple|282|90>>
+    <associate|eq 21.1085.291|<tuple|283|90>>
+    <associate|eq 21.1087.291|<tuple|284|?>>
     <associate|eq 21.27.273|<tuple|220|74>>
     <associate|eq 21.30.273|<tuple|221|74>>
     <associate|figure 20.6.234|<tuple|3|72>>
@@ -8449,12 +8564,13 @@
     <associate|lemma 20.470.246|<tuple|50|63>>
     <associate|lemma 20.477.246|<tuple|53|72>>
     <associate|lemma 20.613.279|<tuple|56|74>>
+    <associate|lemma 21.578.291|<tuple|69|90>>
     <associate|measurability of image of a measurable set by a
-    isomorphism|<tuple|64|?>>
+    isomorphism|<tuple|64|87>>
     <associate|measurable function sum|<tuple|57|78>>
     <associate|measurable function sum (finite)|<tuple|60|79>>
-    <associate|measure Borel measure of T(A)|<tuple|65|?>>
-    <associate|measure Borel measure of T(A)(1)|<tuple|67|?>>
+    <associate|measure Borel measure of T(A)|<tuple|65|87>>
+    <associate|measure Borel measure of T(A)(1)|<tuple|67|88>>
     <associate|measure length function is a pre-measure|<tuple|47|56>>
     <associate|non negative function as limit of simple
     functions|<tuple|51|66>>

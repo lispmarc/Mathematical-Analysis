@@ -1656,7 +1656,7 @@
     <with|font-series|bold|unique> mapping\ 
 
     <\equation*>
-      L<rsup|\<ast\>>\<in\>Hom<around*|(|Y,Z|)>
+      L<rsup|\<ast\>>\<in\>Hom<around*|(|Y,X|)>
     </equation*>
 
     such that for <math|y\<in\>Y> <math|L<rsup|\<ast\>><around*|(|y|)>> we
@@ -3484,7 +3484,7 @@
   <\example>
     <label|spectral identy map is self-adjoint>Let
     <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
-    be a real [or compact] finite dimensional inner product space then
+    be a real [or complex] finite dimensional inner product space then
     <math|Id<rsub|X>> is a self-adjoint transformation.
   </example>
 
@@ -3718,6 +3718,8 @@
       <math|U=<around*|(|U<rsup|\<ast\>>|)><rsup|-1>> and
       <math|U<rsup|\<ast\>>>, <math|U<rsup|-1>> are unitary.
 
+      <item><math|U<text| is a linear isomorphism>>
+
       <item><math|U> is a linear isometric isomorphism [in the normed space
       with norm <math|<around*|\<\|\|\>|x|\<\|\|\>>=<sqrt|<around*|\<langle\>|x,x|\<rangle\>>>>]
     </enumerate>
@@ -3738,6 +3740,9 @@
       </equation*>
 
       proving that <math|U<rsup|\<ast\>>=U<rsup|-1>> is unitary.
+
+      <item>As by (1) <math|U> is a bijection and by definition <math|U> is
+      linear it follows that <math|U> is a linear isomorphism.
 
       <item>Using <math|<around*|(|1|)>> we have that <math|U> is a
       bijection, further <math|\<forall\>x\<in\>X> we have that\ 
@@ -5330,7 +5335,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|17>
-    <associate|page-first|1121>
+    <associate|page-first|1139>
     <associate|page-medium|papyrus>
     <associate|par-first|0tab>
     <associate|section-nr|1>
