@@ -97,6 +97,10 @@
       <math|<around*|\<langle\>|x,y|\<rangle\>>=<around*|\<langle\>|x,z|\<rangle\>>>
       then <math|y=z>
 
+      <item>Let <math|y,z\<in\>X> then if <math|\<forall\>x\<in\>X> we have
+      <math|<around*|\<langle\>|y,x|\<rangle\>>=<around*|\<langle\>|z,x|\<rangle\>>>
+      then <math|y=z>
+
       <item><math|\<forall\>x,y\<in\>X> and <math|\<alpha\>\<in\>\<bbb-R\>>
       then
 
@@ -131,6 +135,16 @@
 
       so that <math|<around*|\<langle\>|z-y,z-y|\<rangle\>>=0>. Hence
       <math|z-y>=0 or <math|z=y>.
+
+      <item>Let <math|z,y\<in\>X> and assume that <math|\<forall\>x\<in\>X>
+      we have <math|<around*|\<langle\>|y,x|\<rangle\>>=<around*|\<langle\>|z,x|\<rangle\>>>
+      then we have
+
+      <\equation*>
+        <around*|\<langle\>|x,y|\<rangle\>>=<around*|\<langle\>|y,x|\<rangle\>>=<around*|\<langle\>|z,x|\<rangle\>>=<around*|\<langle\>|x,z|\<rangle\>>
+      </equation*>
+
+      so that by (3) we have <math|z=y>.
 
       \ <item>Given <math|x,y\<in\>X> and <math|\<alpha\>\<in\>\<bbb-R\>> we
       have:
@@ -336,6 +350,10 @@
       <math|<around*|\<langle\>|x,y|\<rangle\>>=<around*|\<langle\>|x,z|\<rangle\>>>
       then <math|y=z>
 
+      <item>Let <math|y,z\<in\>X> then if <math|\<forall\>x\<in\>X> we have
+      <math|<around*|\<langle\>|y,x|\<rangle\>>=<around*|\<langle\>|z,x|\<rangle\>>>
+      then <math|y=z>
+
       <item><math|\<forall\>x\<in\>X> we have
       <math|<around*|\<langle\>|x,0|\<rangle\>>=<around*|\<langle\>|0,x|\<rangle\>>=0>
 
@@ -376,6 +394,16 @@
       so that <math|<around*|\<langle\>|z-y,z-y|\<rangle\>>=0>. Hence
       <math|z-y>=0 or <math|z=y>.
 
+      <item>Let <math|y,z\<in\>X> and assume that <math|\<forall\>x\<in\>X>
+      we have that <math|<around*|\<langle\>|y,x|\<rangle\>>=<around*|\<langle\>|z,x|\<rangle\>>>
+      then we have\ 
+
+      <\equation*>
+        <around*|\<langle\>|x,y|\<rangle\>>=<wide|<around*|\<langle\>|y,x|\<rangle\>>|\<wide-bar\>>=<wide|<around*|\<langle\>|z,x|\<rangle\>>|\<wide-bar\>>=<around*|\<langle\>|x,z|\<rangle\>>
+      </equation*>
+
+      so that by (3) <math|y=z>.
+
       <item><math|\<forall\>x\<in\>X> we have
       <math|<around*|\<langle\>|0,x|\<rangle\>>=<around*|\<langle\>|0\<cdot\>0,x|\<rangle\>>=0\<cdot\><around*|\<langle\>|0,x|\<rangle\>>=0>
       and <math|<around*|\<langle\>|x,0|\<rangle\>>=<wide|<around*|\<langle\>|0,x|\<rangle\>>|\<wide-bar\>>=<wide|0|\<wide-bar\>>=0>
@@ -390,6 +418,8 @@
         <reference|complex conjugate properties>]>><wide|\<alpha\>|\<wide-bar\>>\<cdot\><wide|<around*|\<langle\>|y,x|\<rangle\>>|\<wide-bar\>>=<wide|\<alpha\>|\<wide-bar\>>\<cdot\><around*|\<langle\>|x,y|\<rangle\>>>
       </enumerate>
     </enumerate>
+
+    \;
   </proof>
 
   We can use mathematical induction to extend [theorems: <reference|inner
@@ -2706,8 +2736,6 @@
     eigenvector <math|w> with eigenvalue <math|\<lambda\><rsub|l>>.
   </proof>
 
-  TODO some theorems about eigenvalues
-
   <\definition>
     <label|spectral eigenspace><index|eigenspace><index|<math|E<around*|(|L,\<lambda\>|)>>><dueto|eigenspace>Let
     <math|X> be a vector space over a field <math|\<cal-F\>> and
@@ -3635,12 +3663,96 @@
   </proof>
 
   <\definition>
+    <label|inner linear isometry>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
+    be normed spaces then <math|L\<in\>Hom<around*|(|X,Y|)>> is a
+    <with|font-series|bold|linear isometry> if <math|\<forall\>x\<in\>X>
+    <math|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>.
+    Is additional <math|L> is a bijection [so that <math|L> is a linear
+    isomorphism] then <math|L> is called a <with|font-series|bold|linear
+    isometric isomorphism>
+  </definition>
+
+  <\theorem>
+    <label|inner linear isometry is injective>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
+    be normed spaces and <math|L\<in\>Hom<around*|(|X,Y|)>> a linear isometry
+    then <math|L> is injective.
+  </theorem>
+
+  <\proof>
+    If <math|L<around*|(|x|)>=L<around*|(|y|)>> then
+    <math|L<around*|(|x-y|)>=L<around*|(|x|)>-L<around*|(|y|)>=0> so that
+    <math|<around*|\<\|\|\>|x-y|\<\|\|\>><rsub|X>=<around*|\<\|\|\>|L<around*|(|x-u|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|0|\<\|\|\>><rsub|y>=0>
+    so that <math|x=y>.
+  </proof>
+
+  <\theorem>
+    <label|inner linear isometry inverse>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
+    be normed spaces and <math|L\<in\>Hom<around*|(|X,Y|)>> a linear
+    isometric isomorphism then <math|L<rsup|-1>\<in\>Hom<around*|(|Y,X|)>> is
+    a linear isometric isomorphism.
+  </theorem>
+
+  <\proof>
+    Using [theorem: <reference|linear mapping inverse of a isomorphism>]
+    <math|L<rsup|-1>> is a linear isomorphism [hence linear and bijective].
+    Let <math|y\<in\>Y> then <math|L<rsup|-1><around*|(|y|)>\<in\>X> so that
+    <math|<around*|\<\|\|\>|L<rsup|-1><around*|(|y|)>|\<\|\|\>><rsub|X>=<around*|\<\|\|\>|L<around*|(|L<rsup|-1><around*|(|y|)>|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|y|\<\|\|\>><rsub|Y>>.
+  </proof>
+
+  <\definition>
     <label|spectral unitary operator><index|unitary operator>Let
     <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
     be a real [or complex] finite dimensional inner product space then
     <math|U\<in\>Hom<around*|(|X|)>> is <with|font-series|bold|unitary >if
     <math|U<rsup|\<ast\>>\<circ\>U=Id<rsub|X>=U\<circ\>U<rsup|\<ast\>>>.
   </definition>
+
+  Actually the above definition can be simplified as is shown in the
+  following theorem.
+
+  <\theorem>
+    <label|spectral unitary operator (1)>Let
+    <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
+    be a real [or complext] finite dimensional inner product space and
+    <math|U\<in\>Hom<around*|(|x|)>> then\ 
+
+    <\equation*>
+      U<text| is unitary >\<Leftrightarrow\><text|
+      >U<rsup|\<ast\>>\<circ\>U=Id<rsub|X>
+    </equation*>
+
+    <\proof>
+      \ 
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>This is trivial given the definition of
+        a unitary operator.
+
+        <item*|<math|\<Leftarrow\>>>Let <math|x\<in\>ker<around*|(|U|)>> then
+        <math|U<around*|(|x|)>=0> so that
+
+        <\equation*>
+          x=Id<rsub|X><around*|(|x|)>=<around*|(|U<rsup|\<ast\>>\<circ\>U|)><around*|(|x|)>=U<rsup|\<ast\>><around*|(|U<around*|(|x|)>|)>=U<rsup|\<times\>><around*|(|0|)>\<equallim\><rsub|U<rsup|\<ast\>>\<in\>hom<around*|(|X|)>>0
+        </equation*>
+
+        which proves that <math|U> is injective. Applying then [corollary:
+        <reference|linear mapping injective transformation>] prove that\ 
+
+        <\equation*>
+          U<text| is a linear isomorphism (hence bijective)>
+        </equation*>
+
+        So we have that <math|U<rsup|-1>=Id<rsub|X>\<circ\>U<rsup|-1>=<around*|(|U<rsup|\<ast\>>\<circ\>U|)>\<circ\>U<rsup|-1>=U<rsup|\<ast\>>\<circ\><around*|(|U\<circ\>U<rsup|-1>|)>=U<rsup|\<ast\>>\<circ\>Id<rsub|x>=U<rsup|\<ast\>>>
+        from which it follows that <math|U\<circ\>U<rsup|\<ast\>>=U\<circ\>U<rsup|-1>=Id<rsub|X>>.
+        Hence <math|U> is a unitary operator by definiton.
+      </description>
+    </proof>
+  </theorem>
 
   <\theorem>
     <label|spectral unitary operator alternative>Let
@@ -3662,16 +3774,16 @@
       <item*|<math|\<Rightarrow\>>>Let <math|x,y\<in\>X> then we have
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<around*|\<langle\>|x,y|\<rangle\>>>|<cell|=>|<cell|<around*|\<langle\>|Id<rsub|X><around*|(|x|)>,y|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|<around*|(|U<rsup|\<ast\>>\<circ\>U|)><around*|(|x|)>,y|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|U<rsup|\<ast\>><around*|(|U<around*|(|x|)>|)>,y|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|U<around*|(|x|)>,U<around*|(|y|)>|\<rangle\>>>>>>
+        <tformat|<table|<row|<cell|<around*|\<langle\>|x,y|\<rangle\>>>|<cell|=>|<cell|<around*|\<langle\>|x,Id<rsub|X><around*|(|y|)>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|x,<around*|(|U<rsup|\<ast\>>\<circ\>U|)><around*|(|y|)>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|x,U<rsup|\<ast\>><around*|(|U<around*|(|y|)>|)>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|U<around*|(|x|)>,U<around*|(|y|)>|\<rangle\>>>>>>
       </eqnarray*>
 
-      <item*|<math|\<Leftarrow\>>>Given <math|x,y\<in\>X> we have\ 
+      <item*|<math|\<Leftarrow\>>>Given <math|x,y\<in\>X> we have
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|<around*|\<langle\>|x,<around*|(|U<rsup|\<ast\>>\<circ\>U|)><around*|(|y|)>|\<rangle\>>>|<cell|=>|<cell|<around*|\<langle\>|x,U<rsup|\<ast\>><around*|(|U<around*|(|x|)>|)>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|U<around*|(|x|)>,U<around*|(|x|)>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|x,y|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|x,Id<rsub|X><around*|(|y|)>|\<rangle\>>>>>>
       </eqnarray*>
 
-      Hence we have given <math|y\<in\>Y> for
+      Hence we have given <math|y\<in\>X> for
       <math|<around*|(|U<rsup|\<ast\>>\<circ\>U|)><around*|(|y|)>,Id<rsub|X><around*|(|y|)>>
       that <math|\<forall\>x\<in\>X> <math|<rigid|<around*|\<langle\>|x,<around*|(|U<rsup|\<ast\>>\<circ\>U|)><around*|(|y|)>|\<rangle\>>=<around*|\<langle\>|x,Id<rsub|X><around*|(|y|)>|\<rangle\>>>>
       so that by [theorems: <reference|inner real inner product space
@@ -3683,29 +3795,12 @@
         <label|eq 18.20.147>U<rsup|\<ast\>>\<circ\>U=Id<rsub|X>
       </equation>
 
-      Further given <math|x,y\<in\>X> we have also\ 
-
-      <\eqnarray*>
-        <tformat|<table|<row|<cell|<around*|\<langle\>|x,<around*|(|U\<circ\>U<rsup|\<ast\>>|)><around*|(|y|)>|\<rangle\>>>|<cell|=>|<cell|<around*|\<langle\>|x,U<around*|(|U<rsup|\<ast\>>|)><around*|(|y|)>|\<rangle\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|inner adjoint of adjoint>]>>>|<cell|<around*|\<langle\>|x,<around*|(|U<rsup|\<ast\>>|)><rsup|\<ast\>><around*|(|U<rsup|\<ast\>><around*|(|y|)>|)>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|U<rsup|\<ast\>><around*|(|x|)>,U<rsup|\<ast\>><around*|(|y|)>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|x,y|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|x,Id<rsub|X><around*|(|y|)>|\<rangle\>>>>>>
-      </eqnarray*>
-
-      Hence we have given <math|y\<in\>Y> for
-      <math|<around*|(|U\<circ\>U<rsup|\<ast\>>|)><around*|(|y|)>,Id<rsub|X><around*|(|y|)>>
-      that <math|\<forall\>x\<in\>X> <math|<rigid|<around*|\<langle\>|x,<around*|(|U\<circ\>U<rsup|\<ast\>>|)><around*|(|y|)>|\<rangle\>>=<around*|\<langle\>|x,Id<rsub|X><around*|(|y|)>|\<rangle\>>>>
-      so that by [theorems: <reference|inner real inner product space
-      properties>, <reference|inner complex inner product properties>]
-      <math|><math|<around*|(|U\<circ\>U<rsup|\<ast\>>|)><around*|(|y|)>=Id<rsub|X><around*|(|y|)>>
-      which proves that\ 
-
-      <\equation>
-        <label|eq 18.21.147>U\<circ\>U<rsup|\<ast\>>=Id<rsub|X>
-      </equation>
-
-      From [eqs: <reference|eq 18.20.147>,<reference|eq 18.21.147>] it
-      follows that <math|U> is unitary.
+      Applying then [theorerm: <reference|spectral unitary operator (1)>]
+      proves that <math|U> is a unitary operator.
     </description>
   </proof>
+
+  There is a relation between a unitary operators and linear isometries.
 
   <\theorem>
     <label|spectral unitary operator properties>Let
@@ -3741,8 +3836,9 @@
 
       proving that <math|U<rsup|\<ast\>>=U<rsup|-1>> is unitary.
 
-      <item>As by (1) <math|U> is a bijection and by definition <math|U> is
-      linear it follows that <math|U> is a linear isomorphism.
+      <item>As <math|U<rsup|\<ast\>>\<circ\>U=Id<rsub|X>=U\<circ\>U<rsup|\<ast\>>>
+      it follows that <math|U> is a bijection, hense as <math|U> is linear it
+      follows that <math|U> is a linear isomorphism.
 
       <item>Using <math|<around*|(|1|)>> we have that <math|U> is a
       bijection, further <math|\<forall\>x\<in\>X> we have that\ 
@@ -3780,7 +3876,7 @@
       In general <math|i\<cdot\>Id<rsub|X>> is not a self-adjoint operator,
       for if <math|i\<cdot\>Id<rsub|X>> was a self-adjoint operator then we
       would have <math|i\<cdot\><around*|\<langle\>|x,y|\<rangle\>>=<around*|\<langle\>|i\<cdot\>Id<rsub|X><around*|(|x|)>,y|\<rangle\>>=<around*|\<langle\>|x,<around*|(|i\<cdot\>Id<rsub|X>|)><rsup|\<ast\>><around*|(|y|)>|\<rangle\>>=<around*|\<langle\>|x,i\<cdot\>Id<rsub|X><around*|(|y|)>|\<rangle\>>=-i\<cdot\><around*|\<langle\>|x,y|\<rangle\>>>
-      form which it would follow that <math|<around*|\<langle\>|x,y|\<rangle\>>=0>
+      from which it would follow that <math|<around*|\<langle\>|x,y|\<rangle\>>=0>
       for every <math|x,y\<in\>X>. This can only be true if <math|X> is the
       trivial vector space <math|<around*|{|0|}>>. Hence in general it is not
       true that a unitary operator is self-adjoint.
@@ -3813,7 +3909,8 @@
   </proof>
 
   <\theorem>
-    Let <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
+    <label|spectral determinant unitary transfrom>Let
+    <math|<around*|\<langle\>|X,<around*|\<langle\>||\<rangle\>>|\<rangle\>>>
     be a real [or complex] finite dimensional inner product space and
     <math|U\<in\>Hom<around*|(|X|)>> a unitary transformation then
     <math|det<around*|(|U<rsup|\<star\>>|)>\<equallim\><rsub|<text|[theorem:
@@ -5392,7 +5489,7 @@
     <associate|eq 18.11.146|<tuple|18.11|?>>
     <associate|eq 18.12.146|<tuple|18.12|?>>
     <associate|eq 18.13.146|<tuple|18.13|?>>
-    <associate|eq 18.130.148|<tuple|18.34|?>>
+    <associate|eq 18.130.148|<tuple|18.33|?>>
     <associate|eq 18.14.146|<tuple|18.17|?>>
     <associate|eq 18.14.150|<tuple|18.14|?>>
     <associate|eq 18.15.146|<tuple|18.18|?>>
@@ -5405,27 +5502,26 @@
     <associate|eq 18.2.146|<tuple|18.3|?>>
     <associate|eq 18.2.146.1|<tuple|18.2|?>>
     <associate|eq 18.20.147|<tuple|18.23|?>>
-    <associate|eq 18.21.147|<tuple|18.24|?>>
-    <associate|eq 18.22.147|<tuple|18.25|?>>
-    <associate|eq 18.23.148|<tuple|18.27|?>>
-    <associate|eq 18.23.149|<tuple|18.26|?>>
-    <associate|eq 18.24.148|<tuple|18.28|?>>
-    <associate|eq 18.25.148|<tuple|18.29|?>>
-    <associate|eq 18.26.148|<tuple|18.30|?>>
-    <associate|eq 18.27.148|<tuple|18.31|?>>
-    <associate|eq 18.28.148|<tuple|18.32|?>>
-    <associate|eq 18.29.148|<tuple|18.33|?>>
+    <associate|eq 18.22.147|<tuple|18.24|?>>
+    <associate|eq 18.23.148|<tuple|18.26|?>>
+    <associate|eq 18.23.149|<tuple|18.25|?>>
+    <associate|eq 18.24.148|<tuple|18.27|?>>
+    <associate|eq 18.25.148|<tuple|18.28|?>>
+    <associate|eq 18.26.148|<tuple|18.29|?>>
+    <associate|eq 18.27.148|<tuple|18.30|?>>
+    <associate|eq 18.28.148|<tuple|18.31|?>>
+    <associate|eq 18.29.148|<tuple|18.32|?>>
     <associate|eq 18.3.146|<tuple|18.4|?>>
-    <associate|eq 18.31.148|<tuple|18.35|?>>
-    <associate|eq 18.32.148|<tuple|18.36|?>>
-    <associate|eq 18.33.148|<tuple|18.37|?>>
-    <associate|eq 18.34.148|<tuple|18.38|?>>
-    <associate|eq 18.35.148|<tuple|18.39|?>>
-    <associate|eq 18.36.148|<tuple|18.40|?>>
-    <associate|eq 18.37.148|<tuple|18.41|?>>
-    <associate|eq 18.39.149|<tuple|18.42|?>>
+    <associate|eq 18.31.148|<tuple|18.34|?>>
+    <associate|eq 18.32.148|<tuple|18.35|?>>
+    <associate|eq 18.33.148|<tuple|18.36|?>>
+    <associate|eq 18.34.148|<tuple|18.37|?>>
+    <associate|eq 18.35.148|<tuple|18.38|?>>
+    <associate|eq 18.36.148|<tuple|18.39|?>>
+    <associate|eq 18.37.148|<tuple|18.40|?>>
+    <associate|eq 18.39.149|<tuple|18.41|?>>
     <associate|eq 18.4.146|<tuple|18.6|?>>
-    <associate|eq 18.40.149|<tuple|18.43|?>>
+    <associate|eq 18.40.149|<tuple|18.42|?>>
     <associate|eq 18.5.146|<tuple|18.7|?>>
     <associate|eq 18.5.146.2|<tuple|18.5|?>>
     <associate|eq 18.8.146|<tuple|18.8|?>>
@@ -5455,6 +5551,9 @@
     <associate|inner hermitian matrix|<tuple|18.45|?>>
     <associate|inner linear function from inner product|<tuple|18.35|?>>
     <associate|inner linear independence and orthogonality|<tuple|18.28|?>>
+    <associate|inner linear isometry|<tuple|18.91|?>>
+    <associate|inner linear isometry inverse|<tuple|18.93|?>>
+    <associate|inner linear isometry is injective|<tuple|18.92|?>>
     <associate|inner matrix of adjoint operator|<tuple|18.50|?>>
     <associate|inner matrix of linear mapping|<tuple|18.30|?>>
     <associate|inner orthogonality|<tuple|18.25|?>>
@@ -5473,22 +5572,23 @@
     <associate|inner real product space construction|<tuple|18.14|?>>
     <associate|inner symmetric matrix|<tuple|18.44|?>>
     <associate|inner unitary matrix|<tuple|18.47|?>>
-    <associate|lemma 18.95.148|<tuple|18.107|?>>
+    <associate|lemma 18.95.148|<tuple|18.111|?>>
     <associate|spectral L^n is linear|<tuple|18.57|?>>
     <associate|spectral L^n+m=L^noL^m|<tuple|18.56|?>>
     <associate|spectral P[L] is a abelian semi group|<tuple|18.65|?>>
     <associate|spectral Schur's theorem|<tuple|18.82|?>>
-    <associate|spectral change of base|<tuple|18.99|?>>
-    <associate|spectral complex spectral theorem|<tuple|18.105|?>>
+    <associate|spectral change of base|<tuple|18.103|?>>
+    <associate|spectral complex spectral theorem|<tuple|18.109|?>>
     <associate|spectral composition and permutations|<tuple|18.66|?>>
     <associate|spectral composition of injective linear
     mappings|<tuple|18.58|?>>
-    <associate|spectral coordinate transformation|<tuple|18.98|?>>
+    <associate|spectral coordinate transformation|<tuple|18.102|?>>
+    <associate|spectral determinant unitary transfrom|<tuple|18.100|?>>
     <associate|spectral diagnolizing operator is
     self-adjoint|<tuple|18.88|?>>
     <associate|spectral diagonal matrix|<tuple|18.83|?>>
     <associate|spectral diagonalization of a self-adjoint operator
-    (real)|<tuple|18.115|?>>
+    (real)|<tuple|18.119|?>>
     <associate|spectral distinct eigenvalues and linear
     independence|<tuple|18.74|?>>
     <associate|spectral eigen values of a self-adjoint operator are
@@ -5499,49 +5599,50 @@
     <associate|spectral eigenvectors exist in a finite dimensional complex
     space|<tuple|18.70|?>>
     <associate|spectral every self-adjoint an unitary operator are
-    normal|<tuple|18.102|?>>
+    normal|<tuple|18.106|?>>
     <associate|spectral factorization of polynomial
     operators|<tuple|18.67|?>>
     <associate|spectral finite product of polynomial|<tuple|18.63|?>>
     <associate|spectral identy map is self-adjoint|<tuple|18.86|?>>
-    <associate|spectral identy map is unitary|<tuple|18.94|?>>
+    <associate|spectral identy map is unitary|<tuple|18.98|?>>
     <associate|spectral invariant sub-space|<tuple|18.77|?>>
     <associate|spectral linear operator|<tuple|18.52|?>>
     <associate|spectral linear operator isomorphism|<tuple|18.53|?>>
     <associate|spectral matrices of self adjoint transformations are
     Hermitian|<tuple|18.87|?>>
-    <associate|spectral normal operator|<tuple|18.101|?>>
-    <associate|spectral normal operator alternative|<tuple|18.103|?>>
+    <associate|spectral normal operator|<tuple|18.105|?>>
+    <associate|spectral normal operator alternative|<tuple|18.107|?>>
     <associate|spectral number of eigenvalues|<tuple|18.75|?>>
-    <associate|spectral operator mapping bases is unitary|<tuple|18.100|?>>
-    <associate|spectral orthogonal complement|<tuple|18.110|?>>
+    <associate|spectral operator mapping bases is unitary|<tuple|18.104|?>>
+    <associate|spectral orthogonal complement|<tuple|18.114|?>>
     <associate|spectral orthogonal complement and linear
-    operator|<tuple|18.113|?>>
-    <associate|spectral orthogonal complement properties|<tuple|18.111|?>>
+    operator|<tuple|18.117|?>>
+    <associate|spectral orthogonal complement properties|<tuple|18.115|?>>
     <associate|spectral orthonormalization and
-    diagonlization|<tuple|18.104|?>>
+    diagonlization|<tuple|18.108|?>>
     <associate|spectral polynomial operator|<tuple|18.59|?>>
     <associate|spectral polynomial operator composition and polynomial
     product|<tuple|18.61|?>>
-    <associate|spectral real spectral theorem|<tuple|18.114|?>>
+    <associate|spectral real spectral theorem|<tuple|18.118|?>>
     <associate|spectral self adjoint transformation|<tuple|18.85|?>>
     <associate|spectral self-adjoint operator condition for operator to be
     zero|<tuple|18.90|?>>
     <associate|spectral self-adjoint operators have a eigenvector with real
-    eigenvalues|<tuple|18.108|?>>
+    eigenvalues|<tuple|18.112|?>>
     <associate|spectral sum of eigenspaces|<tuple|18.76|?>>
-    <associate|spectral theorem direct sum|<tuple|18.112|?>>
-    <associate|spectral theorema diagonalization|<tuple|18.106|?>>
-    <associate|spectral unitary operator|<tuple|18.91|?>>
-    <associate|spectral unitary operator alternative|<tuple|18.92|?>>
+    <associate|spectral theorem direct sum|<tuple|18.116|?>>
+    <associate|spectral theorema diagonalization|<tuple|18.110|?>>
+    <associate|spectral unitary operator|<tuple|18.94|?>>
+    <associate|spectral unitary operator (1)|<tuple|18.95|?>>
+    <associate|spectral unitary operator alternative|<tuple|18.96|?>>
     <associate|spectral unitary operator has a unitary
-    matrix|<tuple|18.97|?>>
-    <associate|spectral unitary operator properties|<tuple|18.93|?>>
+    matrix|<tuple|18.101|?>>
+    <associate|spectral unitary operator properties|<tuple|18.97|?>>
     <associate|spectral upper triangular conditions|<tuple|18.80|?>>
     <associate|spectral upper triangular matrix|<tuple|18.78|?>>
     <associate|spectral upper triangular matrix for a linear
     operator|<tuple|18.81|?>>
-    <associate|spectrum diagonalization of a matrix|<tuple|18.116|?>>
+    <associate|spectrum diagonalization of a matrix|<tuple|18.120|?>>
   </collection>
 </references>
 

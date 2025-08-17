@@ -8245,9 +8245,143 @@
 
   \;
 
-  \;
+  <\lemma>
+    <label|lemma 21.579.291>Let <math|n\<in\>\<bbb-N\>>,
+    <math|U:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\><rsup|n>> be a unitary
+    transformation [using the canonical inner product defined in [example:
+    <reference|inner product on R^n>]] then we have that\ 
 
-  \;
+    <\equation*>
+      \<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\>|]><text| we have
+      >\<lambda\><rsup|n><around*|(|<around*|(|U<rsup|-1>|)><around*|(|A|)>|)>=\<lambda\><rsup|n><around*|(|A|)>
+    </equation*>
+
+    <\note>
+      <label|note 21.580.291>Using [theorem: <reference|spectral unitary
+      operator properties>] <math|U<rsup|-1>> is a linear isomorphism, hence
+      by [theorem: <reference|continuity homemorphism between K>]
+      <math|U<rsup|-1>> is a homeomorphism so that by [theorem:
+      <reference|measurability of image of a measurable set by a
+      homeomorphism>] <math|<rigid|U<rsup|-1><around*|(|A|)>\<in\>\<cal-B\><around*|[|\<bbb-R\>|]>>>
+      from which it follows that <math|\<lambda\><around*|(|U<rsup|-1><around*|(|A|)>|)>>
+      is well defined.
+    </note>
+  </lemma>
+
+  <\proof>
+    First note that by [theorem: <reference|normed norm on finite dimensional
+    spaces are equivalent>] all norms on <math|\<bbb-R\><rsup|n>> are
+    equivalent, so if <math|<around*|\<\|\|\>||\<\|\|\>><rsub|n>> is the
+    canonical norm on <math|\<bbb-R\>> [see example: <reference|normed
+    maximum norm R^n>] and <math|<around*|\<\|\|\>||\<\|\|\>><rsub|e>> is the
+    Euclidean norm on <math|\<bbb-R\>> \ [definition: <reference|inner
+    euclidean norm real numbers>] then\ 
+
+    <\equation>
+      <label|eq 21.1086.291>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>=\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>>
+    </equation>
+
+    As by [theorem: <reference|spectral unitary operator properties>]
+    <math|U<rsup|-1>> is a isomorphism we have by [theorem:
+    <reference|measure Borel measure of T(A) (1)>] that
+
+    <\equation>
+      <label|eq 21.1087.291>\<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\>|]><text|
+      we have >\<lambda\><rsup|n><around*|(|<around*|(|U<rsup|-1>|)><around*|(|A|)>|)>=\<kappa\>\<cdot\>\<lambda\><rsup|n><around*|(|A|)><text|
+      where >\<kappa\>=\<lambda\><rsup|n><around*|(|<around*|(|U<rsup|-1>|)><around*|(|<around*|[|0,1|[><rsup|n>|)>|)>
+    </equation>
+
+    Take the open ball <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>=<around*|{|x\<in\>\<bbb-R\><rsup|n>\|<around*|\<\|\|\>|x|\<\|\|\>><rsub|e>\<less\>1|}>\<in\>\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>>=\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>\<subseteq\>\<cal-B\><around*|[|\<bbb-R\><rsup|n>|]>>
+    then by the above we have\ 
+
+    <\equation>
+      <label|eq 21.1088.291>\<lambda\><rsup|n><around*|(|<around*|(|U<rsup|-1>|)><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>|)>|)>=\<kappa\>\<cdot\>\<lambda\><rsup|n><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>|)>
+    </equation>
+
+    Further we have by [theorem: <reference|spectral unitary operator
+    properties>] that
+
+    <\equation>
+      <label|eq 21.1089.291>U<text| is a >linear isometry
+    </equation>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>>|<cell|\<Leftrightarrow\>>|<cell|<around*|\<\|\|\>|x|\<\|\|\>><rsub|e>\<less\>1>>|<row|<cell|>|<cell|<below|\<Leftrightarrow\>|<text|[eq:
+      <reference|eq 21.1089.291>]>>>|<cell|<around*|\<\|\|\>|U<around*|(|x|)>|\<\|\|\>><rsub|e>\<less\>1>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|U<around*|(|x|)>\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|U<rsup|-1>|)><around*|(|U<around*|(|x|)>|)>\<in\>U<rsup|-1><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>U<rsup|-1><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>|)>>>>>
+    </eqnarray*>
+
+    which proves that <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>=U<rsup|-1><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>|)>>.
+    Substituting this in [eq: <reference|eq 21.1088.291>] gives\ 
+
+    <\equation>
+      <label|eq 21.1090.291>\<lambda\><rsup|n><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>|)>=\<kappa\>\<cdot\>\<lambda\><rsup|n><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>|)>
+    </equation>
+
+    Let <math|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>>
+    then we have <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|e>\<less\>1>. Let
+    <math|i\<in\><around*|{|1,\<ldots\>,n|}>> then we have
+
+    <\equation*>
+      -x<rsub|i>,x<rsub|i><below|\<leqslant\>|<text|[theorem:
+      <reference|complex sqrt x\<less\>sqrt
+      x^2>]>><around*|\||x<rsub|i>|\|>=<sqrt|x<rsub|i><rsup|2>><below|\<leqslant\>|<text|[theoren:
+      <reference|complex root is strictly
+      increasing>]>><sqrt|<big|sum><rsub|i=1><rsup|n>x<rsub|i><rsup|2>>=<around*|\<\|\|\>|x|\<\|\|\>><rsub|e>\<less\>1
+    </equation*>
+
+    so that <math|-1\<less\>x<rsub|i>\<less\>1> or
+    <math|x<rsub|i>\<in\><around*|[|-1,1|[>>. Hence we have proved that
+    <math|x\<in\><around*|[|-1,1|[><rsup|n>> so that
+    \ <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>\<subseteq\><around*|[|-1,1|[><rsup|n>>
+    from which it follows that <math|\<lambda\><rsup|n><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>|)>\<leqslant\>\<lambda\><rsup|n><around*|(|<around*|[|-1,1|[><rsup|n>|)><below|=|<text|[theorem:
+    <reference|measure Lebesgue measure space on
+    R^n>]>>vol<rsup|n><around*|(|<around*|[|-1,1|[>|)>=2<rsup|n>\<less\>\<infty\>>.
+    In other words <math|>
+
+    <\equation>
+      <label|eq 21.1091.291>\<lambda\><rsup|n><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>|)>\<less\>\<infty\>
+    </equation>
+
+    Further if <math|x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|0,<frac|1|<sqrt|n>>|[>>
+    then <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>we have
+    <math|0\<less\>x<rsub|i>\<less\><frac|1|<sqrt|n>>> so that
+
+    <\equation*>
+      <around*|\<\|\|\>|x|\<\|\|\>><rsub|e>=<sqrt|<big|sum><rsub|i=1><rsup|n>x<rsub|i><rsup|2>><below|\<leqslant\>|<text|[theorem:
+      <reference|complex root is strictly
+      increasing>]>><sqrt|<big|sum><rsub|i=1><rsup|n><frac|1|n>>=<sqrt|n\<cdot\><frac|1|n>>=1
+    </equation*>
+
+    which prove that <math|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|0,<frac|1|<sqrt|n>>|[>\<subseteq\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>>
+    so that\ 
+
+    <\equation*>
+      0\<less\>n\<cdot\><frac|1|<sqrt|n>>=vol<rsup|n><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|0,<frac|1|<sqrt|n>>|[>|)>=\<lambda\><rsup|n><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|0,<frac|1|<sqrt|n>>|[>|)>\<leqslant\>\<lambda\><rsup|n><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>|)>
+    </equation*>
+
+    Hence\ 
+
+    <\equation>
+      <label|eq 21.1092.291>0\<less\>\<lambda\><rsup|n><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>|)>
+    </equation>
+
+    the above together with [eq: <reference|eq 21.1091.291>] allows us to
+    multiply both sides of [eq: <reference|eq 21.1090.291>] by
+    <math|<frac|1|\<lambda\><rsup|n><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|e>><around*|(|0,1|)>|)>>>
+    to get <math|\<kappa\>=1>. Substituting this in [eq: <reference|eq
+    21.1087.291>] gives\ 
+
+    <\equation*>
+      \<forall\>A\<in\>\<cal-B\><around*|[|\<bbb-R\>|]><text| we have
+      >\<lambda\><rsup|n><around*|(|<around*|(|U<rsup|-1>|)><around*|(|A|)>|)>=\<lambda\><rsup|n><around*|(|A|)>
+    </equation*>
+  </proof>
+
+  <\equation*>
+    \<forall\>x\<in\>\<bbb-R\><rsup|n><text|
+    ><around*|(|f\<circ\>T|)><around*|(|x|)>=f<around*|(|T<around*|(|x|)>|)><below|=|<text|[eq:
+    <reference|eq 21.1110.291>]>><below|lim|n\<rightarrow\>\<infty\>>f<rsub|n><around*|(|T<around*|(|x|)>|)>=<below|lim|n\<rightarrow\>\<infty\>><around*|(|f<rsub|n>\<circ\>T|)><around*|(|x|)>
+  </equation*>
 </body>
 
 <\initial>
@@ -8539,7 +8673,13 @@
     <associate|eq 21.1083.291|<tuple|281|90>>
     <associate|eq 21.1084.291|<tuple|282|90>>
     <associate|eq 21.1085.291|<tuple|283|90>>
-    <associate|eq 21.1087.291|<tuple|284|?>>
+    <associate|eq 21.1086.291|<tuple|285|91>>
+    <associate|eq 21.1087.291|<tuple|286|91>>
+    <associate|eq 21.1088.291|<tuple|287|91>>
+    <associate|eq 21.1089.291|<tuple|288|91>>
+    <associate|eq 21.1090.291|<tuple|289|91>>
+    <associate|eq 21.1091.291|<tuple|290|92>>
+    <associate|eq 21.1092.291|<tuple|291|92>>
     <associate|eq 21.27.273|<tuple|220|74>>
     <associate|eq 21.30.273|<tuple|221|74>>
     <associate|figure 20.6.234|<tuple|3|72>>
@@ -8565,6 +8705,7 @@
     <associate|lemma 20.477.246|<tuple|53|72>>
     <associate|lemma 20.613.279|<tuple|56|74>>
     <associate|lemma 21.578.291|<tuple|69|90>>
+    <associate|lemma 21.579.291|<tuple|70|91>>
     <associate|measurability of image of a measurable set by a
     isomorphism|<tuple|64|87>>
     <associate|measurable function sum|<tuple|57|78>>
@@ -8574,6 +8715,7 @@
     <associate|measure length function is a pre-measure|<tuple|47|56>>
     <associate|non negative function as limit of simple
     functions|<tuple|51|66>>
+    <associate|note 21.580.291|<tuple|71|91>>
     <associate|series absolute convergence alternative
     definition|<tuple|11|11>>
     <associate|series absolute convergence commutativity countable
