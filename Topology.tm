@@ -8336,9 +8336,10 @@
     and <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     be normed spaces over <math|\<bbb-K\>> then <math|L<around*|(|X,Y|)>> is
     a subspace of the vector space <math|Hom<around*|(|X,Y|)>> [see theorem:
-    <reference|linear mapping Hom(X,Y)>]. Hence by [theorem:
-    <reference|vector space sub-space is a vector space>]
-    <math|L<around*|(|X,Y|)>> is a vector space.
+    <reference|linear mapping Hom(X,Y)>] with neutral element
+    <math|C<rsub|0>>. Hence by [theorem: <reference|vector space sub-space is
+    a vector space>] <math|L<around*|(|X,Y|)>> is a vector space with neutral
+    element <math|C<rsub|0>>.
   </theorem>
 
   <\proof>
@@ -8348,7 +8349,7 @@
     Further as <math|C<rsub|0>> is continuous [see theorem:
     <reference|continuity constant function>] we have that
     <math|C<rsub|0>\<in\>L<around*|(|X,Y|)>> hence
-    <math|L<around*|(|X,Y|)>=\<varnothing\>>.
+    <math|L<around*|(|X,Y|)>\<neq\>\<varnothing\>>.
   </proof>
 
   We examine now the conditions for a linear mapping to be continuous in the
@@ -8374,6 +8375,18 @@
       <item><math|\<exists\>M\<in\>\<bbb-R\><rsub|0><rsup|+>> such that
       <math|\<forall\>x\<in\>X> we have <math|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>M\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>
     </enumerate>
+
+    <\note>
+      Because of (3) elements of <math|L<around*|(|X,Y|)>> are sometimes
+      called bounded linear functions instead of linear continuous functions.
+    </note>
+
+    <\note>
+      If <math|Y=\<bbb-K\>> and <math|<around*|\<\|\|\>||\<\|\|\>><rsub|Y>=<around*|\|||\|>>
+      [the absolute value norm on <math|\<bbb-K\>>] then elements of
+      <math|L<around*|(|X,\<bbb-K\>|)>> are called continuous linear
+      functionals or bounded linear functionals.
+    </note>
   </theorem>
 
   <\proof>
@@ -8998,6 +9011,13 @@
       with ><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>=1|}>>>|<row|<cell|A<rsub|L,u>>|<cell|=>|<cell|<around*|{|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>><rsub|Y>\|x\<in\>X<text|
       with ><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>\<leqslant\>1|}>>>>>
     </eqnarray*>
+
+    <\note>
+      If there exist a <math|M\<in\>\<bbb-R\><rsup|+><rsub|0>> such that
+      <math|\<forall\>x\<in\>X> we have <math|<around*|\<\|\|\>|L<around*|(|x|)>|\<\|\|\>>\<leqslant\>M>
+      then <math|M\<in\>A<rsub|L.r>> so that
+      <math|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,Y|)>>=inf<around*|(|A<rsub|L,r>|)>\<leqslant\>M>.
+    </note>
   </theorem>
 
   <\proof>
@@ -9230,6 +9250,8 @@
       proving that <math|L> is open.
     </description>
   </proof>
+
+  TODO place Hahn-Banach theorem here
 
   <section|Multilinear mappings and continuity>
 
@@ -15523,6 +15545,136 @@
       <\equation*>
         <below|lim|n\<rightarrow\>\<infty\>><around*|(|\<alpha\>\<cdot\>x<rsub|n>|)>=\<alpha\>\<cdot\><below|x|>
       </equation*>
+    </description>
+  </proof>
+
+  <\theorem>
+    <label|limit of a product of sequences>Let
+    <math|k\<in\>\<bbb-N\><rsub|0>>, <math|<around*|{|x<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>,<around*|{|y<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>\<bbb-K\>>
+    such that <math|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>> and
+    <math|<below|lim|n\<rightarrow\>\<infty\>>y<rsub|n>> exists then
+    <math|<below|lim|n\<rightarrow\>\<infty\>><around*|(|x<rsub|n>\<cdot\>y<rsub|n>|)>>
+    exist and <math|<below|lim|n\<rightarrow\>\<infty\>><around*|(|x<rsub|n>\<cdot\>y<rsub|n>|)>=<around*|(|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>|)>\<cdot\><around*|(|<below|lim|n\<rightarrow\>\<infty\>>y<rsub|n>|)>>
+  </theorem>
+
+  <\proof>
+    \ Let <math|x=<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>> and
+    <math|y=<below|lim|n\<rightarrow\>\<infty\>>y<rsub|n>> and take
+    <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. As
+    <math|x=<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>> there exists a
+    <math|<rigid|N<rsub|1>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>> such
+    that\ 
+
+    <\equation>
+      <label|eq 14.171.193>\<forall\>n\<geqslant\>N<rsub|1><text| we have
+      ><around*|\||x<rsub|n>-x|\|>\<less\>1\<Rightarrow\><around*|\||x<rsub|n>|\|>=<around*|\||x<rsub|n>-x+x|\|>\<leqslant\><around*|\||x<rsub|n>-x|\|>+<around*|\||x|\|>\<less\>1+<around*|\||x|\|>
+    </equation>
+
+    Further as <math|1+<around*|\||y|\|>\<in\>\<bbb-R\><rsup|+>> there exist
+    a <math|N<rsub|2>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that\ 
+
+    <\equation>
+      <label|eq 14.172.293>\<forall\>n\<geqslant\>N<rsub|2><text| we have
+      ><around*|\||x<rsub|n>-x|\|>\<less\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\||y|\|>|)>>
+    </equation>
+
+    As <math|><math|y=<below|lim|n\<rightarrow\>\<infty\>>y<rsub|n>> and
+    <math|1+<around*|\||x|\|>\<in\>\<bbb-R\><rsup|+>> there exist a
+    <math|N<rsub|3>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that\ 
+
+    <\equation>
+      <label|eq 14.173.293>\<forall\>n\<geqslant\>N<rsub|3><text| we have
+      <math|<around*|\||y<rsub|n>-y|\|>\<less\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\||x|\|>|)>>>>
+    </equation>
+
+    Let <math|N=max<around*|(|N<rsub|1>,N<rsub|2>,N<rsub|3>|)>> then we have
+    <math|\<forall\>n\<geqslant\>N> we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\||x<rsub|n>\<cdot\>y<rsub|n>-x\<cdot\>y|\|>>|<cell|=>|<cell|<around*|\||x<rsub|n>\<cdot\>y<rsub|n>-x<rsub|n>\<cdot\>y+x<rsub|n>\<cdot\>y-x\<cdot\>y|\|>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||x<rsub|n>\<cdot\><around*|(|y<rsub|n>-y|)>+<around*|(|x<rsub|n>-x|)>\<cdot\>y|\|>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\||x<rsub|n>\<cdot\><around*|(|y<rsub|n>-y|)>|\|>+<around*|\||<around*|(|x<rsub|n>-x|)>\<cdot\>y|\|>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||x<rsub|n>|\|>\<cdot\><around*|\||y<rsub|n>-y|\|>+<around*|\||y|\|>\<cdot\><around*|\||x<rsub|n>-x|\|>>>|<row|<cell|>|<cell|<below|\<less\>|<text|[eqs:
+      <reference|eq 14.172.293>, <reference|eq
+      14.173.293>]>>>|<cell|<around*|\||x<rsub|n>|\|>\<cdot\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\||x|\|>|)>>+<around*|\||y|\|>\<cdot\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\||y|\|>|)>>>>|<row|<cell|>|<cell|\<less\>>|<cell|<around*|\||x<rsub|n>|\|>\<cdot\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\||x|\|>|)>>+<frac|\<varepsilon\>|2>>>|<row|<cell|>|<cell|<below|\<less\>|<text|[eq:
+      <reference|eq 14.171.193>]>>>|<cell|<around*|(|1+<around*|\||x|\|>|)>\<cdot\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\||x|\|>|)>>+<frac|\<varepsilon\>|2>>>|<row|<cell|>|<cell|=>|<cell|<frac|\<varepsilon\>|2>+<frac|\<varepsilon\>|2>>>|<row|<cell|>|<cell|=>|<cell|\<varepsilon\>>>>>
+    </eqnarray*>
+
+    which proves that\ 
+
+    <\equation*>
+      <below|lim|n\<rightarrow\>\<infty\>><around*|(|x<rsub|n>\<cdot\>y<rsub|n>|)><text|
+      exist and ><below|lim|n\<rightarrow\>\<infty\>><around*|(|x<rsub|n>\<cdot\>y<rsub|n>|)>=x\<cdot\>y=<around*|(|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>|)>\<cdot\><around*|(|<below|lim|n\<rightarrow\>\<infty\>>y<rsub|n>|)>
+    </equation*>
+  </proof>
+
+  <\corollary>
+    <label|limit of a finite product of sequences>Let
+    <math|k\<in\>\<bbb-N\><rsub|0>>, <math|n\<in\>\<bbb-N\>> and
+    <math|<around*|{|x<rsub|i,j>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>\<bbb-K\>>
+    where <math|j\<in\><around*|{|1,\<ldots\>,n|}>> such that
+    <math|\<forall\>j\<in\><around*|{|1,\<ldots\>,n|}>> we have that
+    <math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i,j>> exist then
+    <math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i,j>|)>>
+    exist and <math|>
+
+    <\equation*>
+      <below|lim|i\<rightarrow\>\<infty\>><around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i,j>|)>=<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i,j>|)>
+    </equation*>
+  </corollary>
+
+  <\proof>
+    We use induction to prove this so let\ 
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\>\|<text|If
+      ><around*|{|x<rsub|i,j>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>\<bbb-K\><text|
+      satsifies that >\<forall\>j\<in\><around*|{|1,\<ldots\>,n|}><text|
+      <math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i,j><text| exist then
+      <math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i,j>|)><text|
+      exist and >>>>><below|lim|i\<rightarrow\>\<infty\>><around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i,j>|)>=<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i,j>|)>|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|1\<in\>S>>If <math|<around*|{|x<rsub|i,j>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
+      satisfies that for <math|j\<in\><around*|{|1|}>>
+      <math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i,j>> exist then we
+      have as <math|<rigid|<big|prod><rsub|j\<in\><around*|{|1|}>>x<rsub|i,j>=x<rsub|i,1>>>
+      that <math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|<big|prod><rsub|j\<in\><around*|{|1|}>>x<rsub|i,j>|)>>
+      exist and
+
+      <\equation*>
+        <below|lim|i\<rightarrow\>\<infty\>><around*|(|<big|prod><rsub|j\<in\><around*|{|1|}>>x<rsub|i,j>|)>=<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i,1>=<big|prod><rsub|j\<in\><around*|{|1|}>><around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i,j>|)>
+      </equation*>
+
+      which proves that <math|1\<in\>S>
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+      <math|<around*|{|x<rsub|i,j>|}><rsub|i\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
+      be such that for <math|j\<in\><around*|{|1,\<ldots\>,n+1|}>>
+      <math|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i,j>> exist. Then as
+      <math|n\<in\>S> we have that <math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i,j><rsub|>|)>>
+      exist and <math|<below|lim|i\<rightarrow\>\<infty\>><around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i,j><rsub|>|)>=<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i,j>|)>>.
+      Hence using [theorem: <reference|limit of a product of sequences>] we
+      have that
+
+      <\equation*>
+        <below|lim|i\<rightarrow\>\<infty\>><around*|(|<around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i,j>|)>|)>\<cdot\>x<rsub|i,n+1>|)>
+      </equation*>
+
+      exist and\ 
+
+      <\equation*>
+        <below|lim|i\<rightarrow\>\<infty\>><around*|(|<around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>><around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i,j>|)>|)>\<cdot\>x<rsub|i,n+1>|)>=<around*|(|<below|lim|i\<rightarrow\>\<infty\>><around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>x<rsub|i,j><rsub|>|)>|)>\<cdot\><below|lim|i\<rightarrow\>\<infty\>>x<rsub|i,n+1>
+      </equation*>
+
+      So that\ 
+
+      <\equation*>
+        <below|lim|i\<rightarrow\>\<infty\>><around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n+1|}>>x<rsub|i,j>|)><text|
+        exist and ><below|lim|i\<rightarrow\>\<infty\>><around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n+1|}>>x<rsub|i,j>|)>=<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n+1|}>><around*|(|<below|lim|i\<rightarrow\>\<infty\>>x<rsub|i,j>|)>
+      </equation*>
+
+      which proves that <math|n+1\<in\>\<cal-S\>>
     </description>
   </proof>
 
@@ -22250,13 +22402,564 @@
     </description>
   </proof>
 
+  <\lemma>
+    <label|lemma 14.409.294>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a real normed linear space, <math|Y\<subseteq\>X> a sub space of
+    <math|X> and <math|x\<in\>X\\Y>. Consider
+
+    <\equation*>
+      <around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|\|Y>|\<rangle\>><text|
+      the normed space based on the sub-space norm
+      <math|<around*|\<\|\|\>||\<\|\|\>><rsub|\|Y>> [see theorem:
+      <reference|normed sub space topology>]>
+    </equation*>
+
+    <\equation*>
+      Y<rsub|x>=span<around*|(|Y<big|cup><around*|{|x|}>|)><text| [which by
+      [theorem: <reference|linear span is a sub-space>] is a sub-space of
+      <math|X>]>
+    </equation*>
+
+    <\equation*>
+      <around*|\<langle\>|Y<rsub|x>,<around*|\<\|\|\>||\<\|\|\>><rsub|\|Y<rsub|x>>|\<rangle\>><text|
+      the normed space based on the sub-space norm
+      ><around*|\<\|\|\>||\<\|\|\>><rsub|\|Y<rsub|x>><text| [see theorem:
+      <reference|normed sub space topology>]>
+    </equation*>
+
+    then for every <math|L\<in\>L<around*|(|Y,\<bbb-R\>|)>> there exist a
+    <math|L<rsub|x>\<in\>L<around*|(|Y<rsub|x>,\<bbb-R\>|)>> such that\ 
+
+    <\equation*>
+      <around*|(|L<rsub|x>|)><rsub|\|Y>=L<text| and
+      ><around*|\<\|\|\>|L<rsub|x>|\<\|\|\>><rsub|L<around*|(|Y<rsub|x>,\<bbb-R\>|)>>=<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>
+    </equation*>
+
+    In other words every continuous linear functionals on <math|Y> can be
+    extended to a sub-space, one dimensional larger, perserving the operator
+    norm.\ 
+  </lemma>
+
+  <\proof>
+    For <math|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>>
+    we have either:\ 
+
+    <\description>
+      <item*|<math|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>=0>>Then
+      <math|L> must be the neutral ekement of
+      <math|L<around*|(|Y,\<bbb-R\>|)>>, take then <math|L<rsub|x>> the
+      neutral element in <math|L<around*|(|Y<rsub|x>,\<bbb-R\>|)>>, then\ 
+
+      <\equation*>
+        L<rsub|x>\<in\>L<around*|(|Y<rsub|x>,\<bbb-R\>|)>
+      </equation*>
+
+      \ and we have by the properies of norms that
+
+      <\equation*>
+        <around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>=0=<around*|\<\|\|\>|L<rsub|x>|\<\|\|\>><rsub|L<around*|(|Y<rsub|x>,\<bbb-R\>|)>><rsub|>
+      </equation*>
+
+      Further <math|\<forall\>y\<in\>Y> we have
+      <math|L<rsub|x><around*|(|y|)><below|=|<text|[theorem:
+      <reference|continuity L(X,Y) is a subspace of
+      Hom(X,Y)>]>>0<below|=|<text|[theorem: <reference|continuity L(X,Y) is a
+      subspace of Hom(X,Y)>]>>L<around*|(|y|)>> which proves that\ 
+
+      <\equation*>
+        <around*|(|L<rsub|x>|)><rsub|\|Y>=L
+      </equation*>
+
+      <item*|<math|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>\<neq\>0>>Define
+      then <math|K\<in\>L<around*|(|Y,\<bbb-R\>|)>> by\ 
+
+      <\equation>
+        <label|eq 14.277.294>K=<frac|1|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>>\<cdot\>L
+      </equation>
+
+      so that we have\ 
+
+      <\equation>
+        <label|eq 14.278.294><around*|\<\|\|\>|K|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>=<around*|\<\|\|\>|<frac|1|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>>\<cdot\>L|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>=<frac|1|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>=1
+      </equation>
+
+      Let <math|u,v\<in\>Y> then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|K<around*|(|u|)>+K<around*|(|v|)>>|<cell|\<leqslant\>>|<cell|<around*|\||K<around*|(|u|)>+K<around*|(|v|)>|\|>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||K<around*|(|u+v|)>|\|>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|K|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>\<cdot\><around*|\<\|\|\>|u+v|\<\|\|\>><rsub|\|Y>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+        <reference|eq 14.278.294>]>>>|<cell|<around*|\<\|\|\>|u+v|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|u+v|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|u-x+x+v|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|u-x|\<\|\|\>>+<around*|\<\|\|\>|x+v|\<\|\|\>>>>>>
+      </eqnarray*>
+
+      so that\ 
+
+      <\equation*>
+        \<forall\>u,v\<in\>Y<text| we have
+        >K*<around*|(|u|)>-<around*|\<\|\|\>|u-x|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|v+x|\<\|\|\>>-K<around*|(|v|)>
+      </equation*>
+
+      Define <math|S=<around*|{|K<around*|(|u|)>-<around*|\<\|\|\>|u-x|\<\|\|\>>\|u\<in\>Y|}>>.
+      Then by the above it follows that <math|S<rsub|v>> is bounded above by
+      <math|> <math|<around*|\<\|\|\>|v+x|\<\|\|\>>-K<around*|(|v|)>>
+      <math|\<forall\>v\<in\>Y>, further <math|0\<in\>Y\<Rightarrow\>Y\<neq\>\<varnothing\>>
+      <math|>from which it follows that <math|S\<neq\>\<varnothing\>>. Hence
+      using the conditional completeness of <math|\<bbb-R\>> [see theorem:
+      <reference|complex RC is conditional complete>] we have that\ 
+
+      <\equation>
+        <label|eq 14.279.294>M=sup<around*|(|S|)>=sup<around*|(|<around*|{|K<around*|(|u|)>-<around*|\<\|\|\>|u-x|\<\|\|\>>\|u\<in\>Y|}>|)><text|
+        exist and >M\<leqslant\><around*|\<\|\|\>|v+x|\<\|\|\>>-K<around*|(|v|)><text|
+        >\<forall\>v\<in\>Y
+      </equation>
+
+      Now \ <math|\<forall\>y\<in\>Y<rsub|x>=span<around*|(|Y<big|cup><around*|{|x|}>|)>>
+      we have by [theorem: <reference|vector space extending one dimension>]
+      that there exist <with|font-series|bold|unique> <math|z<rsub|y>\<in\>Y>
+      and <math|\<lambda\><rsub|y>\<in\>\<bbb-R\>> such that
+      <math|y=z<rsub|y>+\<lambda\><rsub|i>\<cdot\>x> which allows use to
+      define the function
+
+      <\equation*>
+        K<rsub|x>:Y<rsub|x>\<rightarrow\>\<bbb-R\><text| by
+        >K<rsub|x><around*|(|y|)>=\<lambda\><rsub|y>\<cdot\>M+K<around*|(|z<rsub|y>|)><text|
+        where >\<lambda\><rsub|y>\<in\>\<bbb-R\>,z<rsub|y>\<in\>Y<text| are
+        such that <math|y=z<rsub|y>+\<lambda\><rsub|y>\<cdot\>x>>
+      </equation*>
+
+      Let <math|u,v\<in\>Y<rsub|x>> and <math|\<alpha\>\<in\>\<bbb-R\>> then
+      <math|u=z<rsub|u>+\<lambda\><rsub|y>\<cdot\>x>,
+      <math|v=z<rsub|v>+\<lambda\><rsub|y>\<cdot\>x> and
+
+      <\equation*>
+        u+\<alpha\>\<cdot\>v=<around*|(|z<rsub|u>+\<alpha\>\<cdot\>z<rsub|v>|)>+<around*|(|\<lambda\><rsub|u>+\<alpha\>\<cdot\>\<lambda\><rsub|v>|)>\<cdot\>x
+      </equation*>
+
+      so that
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|K<rsub|x><around*|(|u+\<alpha\>\<cdot\>v|)>>|<cell|=>|<cell|<around*|(|\<lambda\><rsub|u>+\<alpha\>\<cdot\>\<lambda\><rsub|v>|)>\<cdot\>M+K<around*|(|z<rsub|u>+\<alpha\>\<cdot\>z<rsub|v>|)>>>|<row|<cell|>|<cell|=>|<cell|\<lambda\><rsub|u>\<cdot\>M+K<around*|(|z<rsub|u>|)>+\<alpha\>\<cdot\>\<lambda\><rsub|v>\<cdot\>M+\<alpha\>\<cdot\>K<around*|(|z<rsub|v>|)>>>|<row|<cell|>|<cell|=>|<cell|K<rsub|x><around*|(|u|)>+\<alpha\>\<cdot\>K<rsub|x><around*|(|v|)>>>>>
+      </eqnarray*>
+
+      which prove that\ 
+
+      <\equation>
+        <label|eq 14.280.294>K<rsub|x>\<in\>Hom<around*|(|Y<rsub|x>,\<bbb-R\>|)>
+      </equation>
+
+      Let <math|u\<in\>Y> then <math|K<around*|(|u|)>-<around*|\<\|\|\>|u-x|\<\|\|\>><below|\<leqslant\>|<text|[eq:
+      <reference|eq 14.279.294>]>>M> and <math|M<below|\<leqslant\>|<text|[eq:
+      <reference|eq 14.279.294>]>><around*|\<\|\|\>|u+x|\<\|\|\>>-K<around*|(|u|)>>
+      so that\ 
+
+      <\equation>
+        <label|eq 14.281.294>\<forall\>u\<in\>Y<text| we have
+        >K<around*|(|u|)>-M\<leqslant\><around*|\<\|\|\>|u-x|\<\|\|\>>\<wedge\>M+K<around*|(|u|)>\<leqslant\><around*|\<\|\|\>|u+x|\<\|\|\>>
+      </equation>
+
+      If <math|\<lambda\>\<in\>\<bbb-R\><rsup|+>> then
+      <math|\<forall\>u\<in\>Y> we have <math|<frac|1|\<lambda\>>\<cdot\>\<mu\>\<in\>Y>
+      so that by [eq: <reference|eq 14.281.294>]\ 
+
+      <\equation*>
+        K<around*|(|<frac|1|\<lambda\>>\<cdot\>u|)>-M\<leqslant\><around*|\<\|\|\>|<frac|1|\<lambda\>>\<cdot\>u-x|\<\|\|\>>\<wedge\>M+K<around*|(|<frac|1|\<lambda\>>\<cdot\>u|)>\<leqslant\><around*|\<\|\|\>|<frac|1|\<lambda\>>\<cdot\>u+x|\<\|\|\>>
+      </equation*>
+
+      which after multiplying both sides of the above by <math|\<lambda\>>
+      taking in account that <math|0\<less\>\<lambda\>> we have
+
+      <\equation*>
+        K<around*|(|u|)>-\<lambda\>\<cdot\>M\<leqslant\><around*|\<\|\|\>|u-\<lambda\>\<cdot\>x|\<\|\|\>>\<wedge\>\<lambda\>\<cdot\>M+K<around*|(|u|)>\<leqslant\><around*|\<\|\|\>|u+\<lambda\>\<cdot\>x|\<\|\|\>>
+      </equation*>
+
+      which proves that\ 
+
+      <\equation>
+        <label|eq 14.282.294>\<forall\>\<lambda\>\<in\>\<bbb-R\><rsup|+<text|
+        >>\<forall\>u\<in\>Y<text| we have
+        >K<around*|(|u|)>-\<lambda\>\<cdot\>M\<leqslant\><around*|\<\|\|\>|u-\<lambda\>\<cdot\>x|\<\|\|\>>\<wedge\>\<lambda\>\<cdot\>M+K<around*|(|u|)>\<leqslant\><around*|\<\|\|\>|u+\<lambda\>\<cdot\>x|\<\|\|\>>
+      </equation>
+
+      As <math|\<forall\>u\<in\>Y> we have <math|-u\<in\>Y> so it follows
+      from [eq: <reference|eq 14.282.294>] that\ 
+
+      <\equation>
+        <label|eq 14.283.294>\<forall\>\<lambda\>\<in\>\<bbb-R\><rsup|+<text|
+        >>\<forall\>u\<in\>Y<text| we have
+        >-<around*|(|K<around*|(|u|)>+\<lambda\>\<cdot\>M|)>\<leqslant\><around*|\<\|\|\>|-u-\<lambda\>\<cdot\>x|\<\|\|\>>=<around*|\<\|\|\>|u+\<lambda\>\<cdot\>x|\<\|\|\>>
+      </equation>
+
+      Let <math|\<lambda\>\<in\>\<bbb-R\><rsup|->> then
+      <math|-\<lambda\>\<in\>\<bbb-R\><rsup|+>> so using [eqs: <reference|eq
+      14.282.294>] we have\ 
+
+      <\equation>
+        <label|eq 14.284.294>\<forall\>\<lambda\>\<in\>\<bbb-R\><rsup|-<text|
+        >>\<forall\>u\<in\>Y<text| we have
+        >K<around*|(|u|)>+\<lambda\>\<cdot\>M\<leqslant\><around*|\<\|\|\>|u+\<lambda\>\<cdot\>x|\<\|\|\>>\<wedge\>-\<lambda\>\<cdot\>M+K<around*|(|u|)>\<leqslant\><around*|\<\|\|\>|u-\<lambda\>\<cdot\>x|\<\|\|\>>
+      </equation>
+
+      As <math|\<forall\>u\<in\>Y> we have <math|-u\<in\>Y> so it follows
+      from [eq: <reference|eq 14.284.294>] that\ 
+
+      <\equation>
+        <label|eq 14.285.294>\<forall\>\<lambda\>\<in\>\<bbb-R\><rsup|-<text|
+        >>\<forall\>u\<in\>Y<text| we have
+        >-<around*|(|\<lambda\>\<cdot\>M+K<around*|(|u|)>|)>\<leqslant\><around*|\<\|\|\>|-u-\<lambda\>\<cdot\>x|\<\|\|\>>=<around*|\<\|\|\>|u+\<lambda\>\<cdot\>x|\<\|\|\>>
+      </equation>
+
+      We use the above now in caluculating the value of
+      <math|<around*|\||K<rsub|x><around*|(|y|)>|\|>>. Let
+      <math|y\<in\>Y<rsub|x>> then there exist unique <math|z<rsub|y>\<in\>Y>
+      and <math|\<lambda\><rsub|y>\<in\>\<bbb-R\>> such that
+      <math|y=z<rsub|y>+\<lambda\><rsub|y>\<cdot\>x> so that\ 
+
+      <\equation*>
+        K<rsub|x><around*|(|y|)>=\<lambda\><rsub|y>\<cdot\>M+K<around*|(|z<rsub|y>|)>
+      </equation*>
+
+      For <math|\<lambda\><rsub|y>> we have either:\ 
+
+      <\description>
+        <item*|<math|\<lambda\><rsub|y>=0>>Then <math|y=z<rsub|y>> and
+
+        <\equation*>
+          <around*|\||K<rsub|x><around*|(|y|)>|\|>=<around*|\||K<around*|(|z<rsub|y>|)>+0\<cdot\>M|\|>=<around*|\||K<around*|(|z<rsub|y>|)>|\|>\<leqslant\><around*|\<\|\|\>|K|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>\<cdot\><around*|\<\|\|\>|z<rsub|y>|\<\|\|\>><rsub|\|Y><below|=|<text|[eq:
+          <reference|eq 14.278.294>]>><around*|\<\|\|\>|z<rsub|y>|\<\|\|\>>=<around*|\<\|\|\>|y|\<\|\|\>>
+        </equation*>
+
+        <item*|<math|0\<less\>\<lambda\><rsub|y>>>Then
+
+        <\equation*>
+          K<rsub|x><around*|(|y|)>=\<lambda\><rsub|y>\<cdot\>M+K<around*|(|z<rsub|y>|)><below|\<leqslant\>|<text|[eq:
+          <reference|eq 14.282.294>>><around*|\<\|\|\>|z<rsub|y>+\<lambda\><rsub|y>\<cdot\>x|\<\|\|\>>=<around*|\<\|\|\>|y|\<\|\|\>>
+        </equation*>
+
+        and\ 
+
+        <\equation*>
+          -K<rsub|x><around*|(|y|)>=-<around*|(|\<lambda\><rsub|y>\<cdot\>M-K<around*|(|z<rsub|y>|)>|)><below|\<leqslant\>|<text|[eq:
+          <reference|eq 14.283.294>]>><around*|\<\|\|\>|z<rsub|y>+\<lambda\><rsub|y>\<cdot\>x|\<\|\|\>>=<around*|\<\|\|\>|y|\<\|\|\>>
+        </equation*>
+
+        which proves that\ 
+
+        <\equation*>
+          <around*|\||K<rsub|x><around*|(|y|)>|\|>\<leqslant\><around*|\<\|\|\>|y|\<\|\|\>>
+        </equation*>
+
+        <item*|<math|\<lambda\><rsub|y>\<less\>0>>Then
+
+        <\equation*>
+          K<rsub|x><around*|(|y|)>=\<lambda\><rsub|y>\<cdot\>M+K<around*|(|z<rsub|y>|)><below|\<leqslant\>|<text|[eq:
+          <reference|eq 14.284.294>>><around*|\<\|\|\>|z<rsub|y>+\<lambda\><rsub|y>\<cdot\>x|\<\|\|\>>=<around*|\<\|\|\>|y|\<\|\|\>>
+        </equation*>
+
+        and\ 
+
+        <\equation*>
+          -K<rsub|x><around*|(|y|)>=-<around*|(|\<lambda\><rsub|y>\<cdot\>M-K<around*|(|z<rsub|y>|)>|)><below|\<leqslant\>|<text|[eq:
+          <reference|eq 14.285.294>]>><around*|\<\|\|\>|z<rsub|y>+\<lambda\><rsub|y>\<cdot\>x|\<\|\|\>>=<around*|\<\|\|\>|y|\<\|\|\>>
+        </equation*>
+
+        which proves that\ 
+
+        <\equation*>
+          <around*|\||K<rsub|x><around*|(|y|)>|\|>\<leqslant\><around*|\<\|\|\>|y|\<\|\|\>>
+        </equation*>
+      </description>
+
+      So we have proved that <math|\<forall\>y\<in\>Y<rsub|x>>
+      \ <math|<around*|\||K<rsub|x><around*|(|y|)>|\|>\<leqslant\><around*|\<\|\|\>|y|\<\|\|\>>=<around*|\<\|\|\>|y|\<\|\|\>><rsub|\|Y<rsub|x>>>
+      which proves by [theorem: <reference|continuity norm on L(X,Y)>] that\ 
+
+      <\equation>
+        <label|eq 14.286.294><around*|\<\|\|\>|K<rsub|x>|\<\|\|\>><rsub|L<around*|(|Y<rsub|x>,\<bbb-R\>|)>>\<leqslant\>1
+      </equation>
+
+      which together with [eq: <reference|eq 14.280.294>] proves by [theorem:
+      <reference|continuity linear mapping (1)>] that\ 
+
+      <\equation>
+        <label|eq 14.287.294>K<rsub|x>\<in\>L<around*|(|Y<rsub|x>,\<bbb-R\>|)>
+      </equation>
+
+      Let <math|y\<in\>Y> then <math|y=y+0=y+0\<cdot\>x> so that
+      <math|K<rsub|x><around*|(|y|)>=0\<cdot\>M+K<around*|(|y|)>=K<around*|(|y|)>>
+      which proves that\ 
+
+      <\equation>
+        <label|eq 14.288.294><around*|(|K<rsub|x>|)><rsub|\|Y>=K
+      </equation>
+
+      Assume now that <math|<around*|\<\|\|\>|K<rsub|x>|\<\|\|\>><rsub|L<around*|(|X,y|)>><rsub|>\<less\>1>
+      then there exist a <math|\<delta\>\<in\>\<bbb-R\>> such that
+      <math|><math|<around*|\<\|\|\>|K<rsub|x>|\<\|\|\>><rsub|L<around*|(|X,y|)>><rsub|>\<less\>\<delta\>\<less\>1>.
+      As <math|\<forall\>y\<in\>Y> we have
+      <math|<around*|\||K<around*|(|y|)>|\|>=<around*|\||K<rsub|x><around*|(|y|)>|\|><below|\<leqslant\>|<text|[eq:
+      <reference|eq 14.286.294>]>><around*|\<\|\|\>|y|\<\|\|\>>=<around*|\<\|\|\>|y<rsub|>|\<\|\|\>><rsub|\|Y>>
+      it follows from [theorem: <reference|continuity norm on L(X,Y)>] that
+      <math|<around*|\<\|\|\>|K|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>\<leqslant\>\<delta\>\<less\>1>
+      which contradicts <math|<around*|\<\|\|\>|K|\<\|\|\>><rsub|L<around*|(|X,Y|)>>=1>.
+      Hence we must have that\ 
+
+      <\equation>
+        <label|eq 14.289.294><around*|\<\|\|\>|K<rsub|x>|\<\|\|\>><rsub|L<around*|(|Y<rsub|x>,\<bbb-R\>|)>>=1
+      </equation>
+
+      Let <math|L<rsub|x>=<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>\<cdot\>K<rsub|x>>
+      then as <math|L<around*|(|Y<rsub|x>,\<bbb-R\>|)>> is a vector space it
+      follows from [eq: <reference|eq 14.287.294>] that\ 
+
+      <\equation*>
+        L<rsub|x>\<in\>L<around*|(|Y<rsub|x>,\<bbb-R\>|)>
+      </equation*>
+
+      Further we have
+
+      <\equation*>
+        <around*|\<\|\|\>|L<rsub|x>|\<\|\|\>><rsub|L<around*|(|Y<rsub|x>,\<bbb-R\>|)>>=<around*|\<\|\|\>|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>\<cdot\>K<rsub|x>|\<\|\|\>><rsub|L<around*|(|Y<rsub|x>,\<bbb-R\>|)>>=<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>\<cdot\><around*|\<\|\|\>|K<rsub|x>|\<\|\|\>><rsub|L<around*|(|Y<rsub|x>,\<bbb-R\>|)>>\<equallim\><rsub|<text|[eq:
+        <reference|eq 14.289.294>]>><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>
+      </equation*>
+
+      Finally <math|\<forall\>y\<in\>Y> we have
+
+      <\equation*>
+        L<rsub|x><around*|(|y|)>=<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>\<cdot\>K<rsub|x><around*|(|y|)><below|=|<text|[eq:
+        <reference|eq 14.288.294>]>><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>\<cdot\>K<around*|(|y|)>\<equallim\><rsub|<text|[eq:
+        <reference|eq 14.277.294>]>>L<around*|(|y|)>
+      </equation*>
+
+      from which it follows that\ 
+
+      <\equation*>
+        <around*|(|L<rsub|x>|)><rsub|\|Y>=L
+      </equation*>
+    </description>
+  </proof>
+
+  We use now Zorn's lemma to extend the above lemma to the Hahn-Banach
+  theorem. We start with creating a partial ordered set.
+
+  <\definition>
+    Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a normed space, <math|Y> a sub-space of <math|X> and
+    <math|L\<in\>L<around*|(|Y,\<bbb-R\>|)>> then we define\ 
+
+    <\equation*>
+      \<cal-E\><rsub|X,Y,L>=<around*|{|<around*|(|Z,K|)>\|Z<text| is a
+      sub-space of >X<text|, >K\<in\>L<around*|(|Z,\<bbb-R\>|)><text| with
+      ><tabular|<tformat|<table|<row|<cell|Y\<subseteq\>Z>>|<row|<cell|K<rsub|\|Y>=L>>|<row|<cell|<around*|\<\|\|\>|K|\<\|\|\>><rsub|L<around*|(|Z,\<bbb-R\>|)>>=<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>>>>>>|}>
+    </equation*>
+  </definition>
+
+  We define now a partial order on <math|\<cal-E\><rsub|X,Y,L>>.
+
+  <\lemma>
+    <label|lemma 14.414.294>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a normed space, <math|Y> a sub-space of <math|X> and
+    <math|L\<in\>L<around*|(|Y,\<bbb-R\>|)>> then if we definine
+    <math|\<preccurlyeq\>\<in\>\<cal-E\><rsub|X,Y,L>\<times\>\<cal-E\><rsub|X,Y,L>>
+    by\ 
+
+    <\equation*>
+      <around*|(|Z,K|)>\<preccurlyeq\><around*|(|Z<rprime|'>,K<rprime|'>|)><text|
+      >\<Leftrightarrow\><text| >Z\<subseteq\>Z<rsub|i><text| and
+      >K<rprime|'><rsub|\|Z>=K
+    </equation*>
+
+    then <math|\<preccurlyeq\>> is a partial order on
+    <math|\<cal-E\><rsub|X,Y,L>> [see definitions: <reference|order order
+    relation>, <reference|order partial ordered class>].\ 
+  </lemma>
+
+  <\proof>
+    We have\ 
+
+    <\description>
+      <item*|reflexivity>Let <math|<around*|(|Z,K|)>\<in\>\<cal-E\><rsub|X,Y,L>>
+      then we have triviall <math|Z\<subseteq\>Z> and <math|K<rsub|\|Z>=K>
+      which proves that\ 
+
+      <\equation*>
+        <around*|(|Z,K|)>\<preccurlyeq\><around*|(|Z,K|)>
+      </equation*>
+
+      <item*|anti-symmetry>If <math|<around*|(|Z,K|)>\<prec\><around*|(|Z<rprime|'>,K<rprime|'>|)>>
+      and <math|<around*|(|Z<rprime|'>,K<rprime|'>|)>\<preccurlyeq\><around*|(|Z,K|)>>
+      then we have <math|Z\<subseteq\>Z<rprime|'>\<wedge\>Z<rprime|'>\<subseteq\>Z>
+      so that \ <math|Z=Z<rprime|'>>. Further
+      <math|\<forall\>y\<in\>Z=Z<rprime|'>> we have
+      <math|K<around*|(|y|)>=<around*|(|K<rprime|'>|)><rsub|\|Z><around*|(|y|)>=K<rprime|'><around*|(|y|)>>
+      so that <math|K=K<rprime|'>>. Hence we have that
+      <math|<around*|(|Z,K|)>=<around*|(|Z<rprime|'>,K<rprime|'>|)>>.
+
+      <item*|transitivity>If <math|<around*|(|Z,K|)>\<preccurlyeq\><around*|(|Z<rprime|'>,K<rprime|'>|)>\<wedge\><around*|(|Z<rprime|'>,K<rprime|'>|)>\<preccurlyeq\><around*|(|Z<rprime|''>,K<rprime|''>|)>>
+      then we have <math|Z\<subseteq\>Z<rprime|'>\<subseteq\>Z<rprime|''>>
+      proving that <math|Z\<subseteq\>Z<rprime|''>>. Further we have that
+      <math|K=<around*|(|K<rprime|'>|)><rsub|\|Z>> and
+      <math|K<rprime|'>=<around*|(|K<rprime|''>|)><rsub|\|Z<rprime|'>>> so
+      that <math|\<forall\>y\<in\>Z> we have\ 
+
+      <\equation*>
+        K<around*|(|y|)>=<around*|(|K<rprime|'>|)><rsub|\|Z><around*|(|y|)>=K<rprime|'><around*|(|y|)>=<around*|(|K<rprime|''>|)><rsub|\|Z<rprime|'>>=K<rprime|''><around*|(|y|)>
+      </equation*>
+
+      which proves that <math|K=<around*|(|K<rprime|''>|)><rsub|\|Z>>. Hence
+      we have <math|<around*|(|K,Z|)>\<preccurlyeq\><around*|(|X<rprime|''>,Z<rprime|''>|)>>.
+    </description>
+  </proof>
+
+  <\lemma>
+    <label|lemma 14.415.294>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a normed space, <math|Y> a sub-space of <math|X> and
+    <math|L\<in\>L<around*|(|Y,\<bbb-R\>|)>> then for the partial ordered set
+    <math|<around*|\<langle\>|\<cal-E\><rsub|X,K,L>,\<preccurlyeq\>|\<rangle\>>>
+    we have that every <with|font-series|bold|chain>
+    \ <math|\<cal-F\>\<subseteq\>\<cal-E\><rsub|X,Y,L>> has a upper bound in
+    <math|\<cal-E\><rsub|X,Y,L>>.
+  </lemma>
+
+  <\proof>
+    Let <math|\<cal-F\>> be a chain in <math|\<cal-E\><rsub|X,Y,L>> and
+    define\ 
+
+    <\equation>
+      <label|eq 14.290.294>R=<big|cup><rsub|<around*|(|Z,K|)>\<in\>\<cal-F\>>Z
+    </equation>
+
+    As <math|\<forall\><around*|(|Z,K|)>\<in\>\<cal-F\>> <math|Z> is a vector
+    space we have <math|0\<in\>Z> so that <math|0\<in\>R> which proves that\ 
+
+    <\equation>
+      <label|eq 14.291.294>R\<neq\>0
+    </equation>
+
+    Let <math|x,y\<in\>R> and <math|\<alpha\>\<in\>\<bbb-R\>> then there
+    exists <math|<around*|(|Z<rsub|x>,K<rsub|x>|)>,<around*|(|Z<rsub|y>,K<rsub|y>|)>\<in\>\<cal-F\>>
+    such that <math|x\<in\>Z<rsub|x>\<wedge\>y\<in\>Z<rsub|y>>. As
+    <math|\<cal-F\>> is a chain we have either:\ 
+
+    <\description>
+      <item*|<math|<around*|(|Z<rsub|x>,K<rsub|x>|)>\<preccurlyeq\><around*|(|Z<rsub|y>,K<rsub|y>|)>>>Then
+      <math|Z<rsub|x>\<subseteq\>Z<rsub|y>> so that
+      <math|x,y\<in\>Z<rsub|y>\<Rightarrow\>x+\<alpha\>\<cdot\>y\<in\>Z<rsub|y>\<subseteq\>R>.
+
+      <item*|<math|<around*|(|Z<rsub|y>,K<rsub|y>|)>\<preccurlyeq\><around*|(|Z<rsub|x>,K<rsub|x>|)>>>Then
+      <math|Z<rsub|y>\<subseteq\>Z<rsub|x>> so that
+      <math|x,y\<in\>Z<rsub|x>\<Rightarrow\>x+\<alpha\>\<cdot\>y\<in\>Z<rsub|x>\<subseteq\>R>.
+    </description>
+
+    so in all cases we have <math|x+\<alpha\>\<cdot\>y\<in\>R>. This together
+    with [eq: <reference|eq 14.291.294>] proves [see theorem:
+    <reference|vector space subspace>] that\ 
+
+    <\equation>
+      <label|eq 14.292.294>R<text| is a real vector space>
+    </equation>
+
+    Further we have <math|\<forall\><around*|(|Z,K|)>\<in\>\<cal-F\>\<subseteq\>\<cal-E\><rsub|X,Y,L>>
+    that <math|Y\<subseteq\>Z> so that we have\ 
+
+    <\equation>
+      <label|eq 14.293.291>Y\<subseteq\>\<bbb-R\>
+    </equation>
+
+    Define now <math|G=<big|cup><rsub|<around*|(|Z,K|)>\<in\>\<cal-F\>>K\<subseteq\>R\<times\>\<bbb-R\>>
+    [note that as <math|K> is a function from <math|Z> to <math|\<bbb-R\>>
+    <math|K\<subseteq\>Z\<times\>\<bbb-R\>\<subseteq\>R\<times\>\<bbb-R\>>].
+    If <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>G> then there
+    exist <math|<around*|(|Z<rsub|1>,K<rsub|1>|)>,<around*|(|Z<rsub|2>,K<rsub|2>|)>\<in\>\<cal-F\>>
+    such that <math|<around*|(|x,y|)>\<in\>K<rsub|1>\<wedge\><around*|(|x,y<rprime|'>|)>\<in\>K<rsub|2>>
+    or using the definition of functions that
+    <math|y=K<rsub|1><around*|(|x|)>\<wedge\>y<rprime|'>=K<rsub|2><around*|(|x|)>>,
+    further we have <math|x\<in\>Z<rsub|1><big|cap>Z<rsub|2>>. As
+    <math|\<cal-F\>> is a chain we have either:
+
+    <\description>
+      <item*|<math|<around*|(|Z<rsub|1>,K<rsub|1>|)>\<preccurlyeq\><around*|(|Z<rsub|2>,K<rsub|2>|)>>>Then
+      <math|K<rsub|1>=<around*|(|K<rsub|2>|)><rsub|\|Z<rsub|1>>> so that
+      <math|y=K<rsub|1><around*|(|x|)>=<around*|(|K<rsub|2>|)><rsub|\|Z<rsub|1>><around*|(|x|)>=K<rsub|2><around*|(|x|)>=y<rprime|'>>
+
+      <item*|<math|<around*|(|Z<rsub|2>,K<rsub|2>|)>\<preccurlyeq\><around*|(|Z<rsub|1>,K<rsub|1>|)>>>Then
+      <math|K<rsub|2>=<around*|(|X<rsub|1>|)><rsub|\|Z<rsub|2>>> so that
+      <math|y=K<rsub|1><around*|(|x|)>=<around*|(|K<rsub|1>|)><rsub|\|Z<rsub|2>><around*|(|x|)><rsub|>=K<rsub|2><around*|(|x|)>=y<rprime|'>>
+    </description>
+
+    so in all cases we have <math|y=y<rprime|'>> which proves that\ 
+
+    <\equation*>
+      G:R\<rightarrow\>\<bbb-R\><text| is a partial function>
+    </equation*>
+
+    If <math|x\<in\>R> then there exist a
+    <math|<around*|(|Z,K|)>\<in\>\<cal-F\>> such that
+    <math|x\<in\>Z=dom<around*|(|K|)>> so there exist a
+    <math|y\<in\>\<bbb-R\>> such that <math|<around*|(|x,y|)>\<in\>K> which
+    proves that <math|x\<in\>dom<around*|(|G|)>>. Hence using [theorem:
+    <reference|function condition (1)>[ it follows that\ 
+
+    <\equation>
+      <label|eq 14.294.294>G:R\<rightarrow\>\<bbb-R\><text| is a function>
+    </equation>
+
+    If <math|x\<in\>R> then\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|y=G<around*|(|x|)>>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|x,y|)>\<in\>G>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\><around*|(|Z,K|)>\<in\>\<cal-F\><text|
+      with ><around*|(|x,y|)>\<in\>K>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\><around*|(|Z,K|)>\<in\>\<cal-F\><text|
+      with <math|x\<in\>Z\<wedge\>y=K<around*|(|x|)>>>>>>>
+    </eqnarray*>
+
+    so we have\ 
+
+    <\equation>
+      <label|eq 14.295.294>G:R\<rightarrow\>\<bbb-R\><text| is defined by
+      >G<around*|(|x|)>=K*<around*|(|z|)> where
+      <around*|(|Z,K|)>\<in\>\<cal-F\>\<wedge\>x\<in\>Z
+    </equation>
+
+    Let <math|x,y\<in\>R> and <math|\<alpha\>\<in\>\<bbb-R\>> then there
+    exists <math|<around*|(|Z<rsub|1>,K<rsub|1><rsub|>|)>,<around*|(|Z<rsub|2>,K<rsub|2>|)>\<in\>\<cal-F\>>
+    such that <math|x\<in\>Z<rsub|1>\<wedge\>y\<in\>Z<rsub|2>>. As
+    <math|\<cal-F\>> is a chain we have either:\ 
+
+    <\description>
+      <item*|<math|<around*|(|Z<rsub|1>,K<rsub|1>|)>\<preccurlyeq\><around*|(|Z<rsub|2>,K<rsub|2>|)>>>Then
+      <math|x,y\<in\>Z<rsub|2>\<Rightarrow\>x+\<alpha\>\<cdot\>y\<in\>Z<rsub|2>>
+      so that
+
+      <\equation*>
+        G<around*|(|x+\<alpha\>\<cdot\>y|)>=K<rsub|2><around*|(|x+\<alpha\>\<cdot\>y|)>=K<rsub|2><around*|(|x|)>+\<alpha\>\<cdot\>K<rsub|2><around*|(|y|)>=G<around*|(|x|)>+\<alpha\>\<cdot\>G<around*|(|y|)>
+      </equation*>
+
+      <item*|<math|<around*|(|Z<rsub|2>,K<rsub|2>|)>\<preccurlyeq\><around*|(|Z<rsub|1>,K<rsub|1>|)>>>Then
+      <math|x,y\<in\>Z<rsub|1>\<Rightarrow\>x+\<alpha\>\<cdot\>y\<in\>Z<rsub|1>>
+      so that
+
+      <\equation*>
+        G<around*|(|x+\<alpha\>\<cdot\>y|)>=K<rsub|1><around*|(|x+\<alpha\>\<cdot\>y|)>=K<rsub|1><around*|(|x|)>+\<alpha\>\<cdot\>K<rsub|1><around*|(|y|)>=G<around*|(|x|)>+\<alpha\>\<cdot\>G<around*|(|y|)>
+      </equation*>
+    </description>
+
+    which proves that <math|G> is a linear function. Hence
+
+    <\equation>
+      <label|eq 14.296.294>G\<in\>L<around*|(|R,\<bbb-R\>|)>
+    </equation>
+
+    \;
+  </proof>
+
+  \;
+
+  \;
+
   \;
 </body>
 
 <\initial>
   <\collection>
     <associate|chapter-nr|13>
-    <associate|page-first|679>
+    <associate|page-first|681>
     <associate|page-medium|papyrus>
     <associate|par-first|0tab>
     <associate|section-nr|0>
@@ -22381,98 +23084,98 @@
     <associate|auto-97|<tuple|Banach space|?>>
     <associate|auto-98|<tuple|14.10.1|?>>
     <associate|auto-99|<tuple|14.10.2|?>>
-    <associate|bounded B(X,Y) is a normed space|<tuple|14.347|?>>
-    <associate|bounded function|<tuple|14.345|?>>
-    <associate|bounded function B(X,Y) is a vector space|<tuple|14.346|?>>
-    <associate|bounded uniform convergence and continuity|<tuple|14.350|?>>
+    <associate|bounded B(X,Y) is a normed space|<tuple|14.352|?>>
+    <associate|bounded function|<tuple|14.350|?>>
+    <associate|bounded function B(X,Y) is a vector space|<tuple|14.351|?>>
+    <associate|bounded uniform convergence and continuity|<tuple|14.355|?>>
     <associate|bounded uniform convergence is convergence in supremum
-    nrom|<tuple|14.351|?>>
+    nrom|<tuple|14.356|?>>
     <associate|closed set properties|<tuple|14.21|?>>
     <associate|compact Hausdorff space is regular and
-    compact|<tuple|14.242|?>>
-    <associate|compact Heine Borel (1)|<tuple|14.238|?>>
-    <associate|compact Heine Borel (2)|<tuple|14.284|?>>
-    <associate|compact Heine-Borel (1)|<tuple|14.279|?>>
-    <associate|compact Heine-Borel complex|<tuple|14.283|?>>
-    <associate|compact Heine-Borel general form|<tuple|14.285|?>>
-    <associate|compact Tychonoff's|<tuple|14.275|?>>
-    <associate|compact Tychonoff's (1)|<tuple|14.276|?>>
-    <associate|compact and basis|<tuple|14.228|?>>
-    <associate|compact and bounded|<tuple|14.233|?>>
-    <associate|compact and bounded (1)|<tuple|14.234|?>>
-    <associate|compact and continuous functions|<tuple|14.235|?>>
-    <associate|compact class|<tuple|14.245|?>>
-    <associate|compact class and sets of compact sets|<tuple|14.246|?>>
-    <associate|compact closed bounded sets in R are compact|<tuple|14.239|?>>
+    compact|<tuple|14.245|?>>
+    <associate|compact Heine Borel (1)|<tuple|14.241|?>>
+    <associate|compact Heine Borel (2)|<tuple|14.287|?>>
+    <associate|compact Heine-Borel (1)|<tuple|14.282|?>>
+    <associate|compact Heine-Borel complex|<tuple|14.286|?>>
+    <associate|compact Heine-Borel general form|<tuple|14.288|?>>
+    <associate|compact Tychonoff's|<tuple|14.278|?>>
+    <associate|compact Tychonoff's (1)|<tuple|14.279|?>>
+    <associate|compact and basis|<tuple|14.231|?>>
+    <associate|compact and bounded|<tuple|14.236|?>>
+    <associate|compact and bounded (1)|<tuple|14.237|?>>
+    <associate|compact and continuous functions|<tuple|14.238|?>>
+    <associate|compact class|<tuple|14.248|?>>
+    <associate|compact class and sets of compact sets|<tuple|14.249|?>>
+    <associate|compact closed bounded sets in R are compact|<tuple|14.242|?>>
     <associate|compact compact implies limit point
-    compactness|<tuple|14.244|?>>
+    compactness|<tuple|14.247|?>>
     <associate|compact continuous function on a compact is uniform
-    continuous|<tuple|14.247|?>>
-    <associate|compact empty set|<tuple|14.229|?>>
+    continuous|<tuple|14.250|?>>
+    <associate|compact empty set|<tuple|14.232|?>>
     <associate|compact every closed subset of a compact set is
-    compact|<tuple|14.237|?>>
-    <associate|compact extreme value theorem|<tuple|14.241|?>>
-    <associate|compact finite union of compact sets|<tuple|14.231|?>>
+    compact|<tuple|14.240|?>>
+    <associate|compact extreme value theorem|<tuple|14.244|?>>
+    <associate|compact finite union of compact sets|<tuple|14.234|?>>
     <associate|compact image of a cmpact set by a continuous
-    function|<tuple|14.240|?>>
-    <associate|compact isometric isomorphism|<tuple|14.282|?>>
-    <associate|compact limit point compact|<tuple|14.243|?>>
-    <associate|compact rectangles are compact|<tuple|14.278|?>>
-    <associate|compact set|<tuple|14.225|?>>
-    <associate|compact set alternative definition|<tuple|14.227|?>>
-    <associate|compact set is closed in a Hausdorff space|<tuple|14.236|?>>
-    <associate|compact singleton|<tuple|14.230|?>>
-    <associate|compact space|<tuple|14.224|?>>
-    <associate|compact space is compact subset|<tuple|14.226|?>>
-    <associate|compact subspace equivalences|<tuple|14.232|?>>
-    <associate|complete Baire Category|<tuple|14.392|?>>
-    <associate|complete Cauchy metric|<tuple|14.326|?>>
-    <associate|complete Cauchy normed|<tuple|14.327|?>>
-    <associate|complete Cauchy sequence is bounded (2)|<tuple|14.329|?>>
-    <associate|complete L(X,Y) is Banach|<tuple|14.342|?>>
-    <associate|complete L(X1,..,Xn;Y) is Banach|<tuple|14.343|?>>
-    <associate|complete L^n(X;Y) is Banach|<tuple|14.344|?>>
-    <associate|complete R^n is complete|<tuple|14.339|?>>
+    function|<tuple|14.243|?>>
+    <associate|compact isometric isomorphism|<tuple|14.285|?>>
+    <associate|compact limit point compact|<tuple|14.246|?>>
+    <associate|compact rectangles are compact|<tuple|14.281|?>>
+    <associate|compact set|<tuple|14.228|?>>
+    <associate|compact set alternative definition|<tuple|14.230|?>>
+    <associate|compact set is closed in a Hausdorff space|<tuple|14.239|?>>
+    <associate|compact singleton|<tuple|14.233|?>>
+    <associate|compact space|<tuple|14.227|?>>
+    <associate|compact space is compact subset|<tuple|14.229|?>>
+    <associate|compact subspace equivalences|<tuple|14.235|?>>
+    <associate|complete Baire Category|<tuple|14.397|?>>
+    <associate|complete Cauchy metric|<tuple|14.331|?>>
+    <associate|complete Cauchy normed|<tuple|14.332|?>>
+    <associate|complete Cauchy sequence is bounded (2)|<tuple|14.334|?>>
+    <associate|complete L(X,Y) is Banach|<tuple|14.347|?>>
+    <associate|complete L(X1,..,Xn;Y) is Banach|<tuple|14.348|?>>
+    <associate|complete L^n(X;Y) is Banach|<tuple|14.349|?>>
+    <associate|complete R^n is complete|<tuple|14.344|?>>
     <associate|complete bounded functions to a complete space are
-    complete|<tuple|14.352|?>>
+    complete|<tuple|14.357|?>>
     <associate|complete closed subset of a complete space is
-    complete|<tuple|14.337|?>>
-    <associate|complete compact spaces are complete|<tuple|14.336|?>>
+    complete|<tuple|14.342|?>>
+    <associate|complete compact spaces are complete|<tuple|14.341|?>>
     <associate|complete continuous linear isomorphism is a
-    homeomorphism|<tuple|14.396|?>>
-    <associate|complete convergence implies Cauchy|<tuple|14.330|?>>
+    homeomorphism|<tuple|14.401|?>>
+    <associate|complete convergence implies Cauchy|<tuple|14.335|?>>
     <associate|complete every finite dimensional normed space is a Banach
-    space|<tuple|14.340|?>>
+    space|<tuple|14.345|?>>
     <associate|complete limit point of a Cauchy sequence is unique in a
-    metric space|<tuple|14.335|?>>
-    <associate|complete open mapping theorem|<tuple|14.395|?>>
-    <associate|complete product of Banach spaces|<tuple|14.333|?>>
-    <associate|complete sequence and limit point|<tuple|14.334|?>>
-    <associate|complete set of real numbers|<tuple|14.338|?>>
-    <associate|complete space|<tuple|14.332|?>>
-    <associate|complete the complex numbers are complete|<tuple|14.341|?>>
-    <associate|complete uniform convergion|<tuple|14.348|?>>
-    <associate|connected alternative definition|<tuple|14.400|?>>
-    <associate|connected closed interval is connected|<tuple|14.403|?>>
-    <associate|connected disconnected space|<tuple|14.398|?>>
-    <associate|connected generalized intervals|<tuple|14.404|?>>
+    metric space|<tuple|14.340|?>>
+    <associate|complete open mapping theorem|<tuple|14.400|?>>
+    <associate|complete product of Banach spaces|<tuple|14.338|?>>
+    <associate|complete sequence and limit point|<tuple|14.339|?>>
+    <associate|complete set of real numbers|<tuple|14.343|?>>
+    <associate|complete space|<tuple|14.337|?>>
+    <associate|complete the complex numbers are complete|<tuple|14.346|?>>
+    <associate|complete uniform convergion|<tuple|14.353|?>>
+    <associate|connected alternative definition|<tuple|14.405|?>>
+    <associate|connected closed interval is connected|<tuple|14.408|?>>
+    <associate|connected disconnected space|<tuple|14.403|?>>
+    <associate|connected generalized intervals|<tuple|14.409|?>>
     <associate|connected image by a real continuous function of a closed
-    interval is a closed interval|<tuple|14.405|?>>
+    interval is a closed interval|<tuple|14.410|?>>
     <associate|connected image of a connected set by a continuous function is
-    connected|<tuple|14.402|?>>
-    <associate|connected intermediate value theorem|<tuple|14.406|?>>
-    <associate|connected set|<tuple|14.401|?>>
-    <associate|connected space|<tuple|14.397|?>>
+    connected|<tuple|14.407|?>>
+    <associate|connected intermediate value theorem|<tuple|14.411|?>>
+    <associate|connected set|<tuple|14.406|?>>
+    <associate|connected space|<tuple|14.402|?>>
     <associate|continuity 1/f is continuous|<tuple|14.151|?>>
     <associate|continuity 1/f^2 is continuous|<tuple|14.152|?>>
-    <associate|continuity K^n|<tuple|14.194|?>>
-    <associate|continuity K^n norm|<tuple|14.201|?>>
+    <associate|continuity K^n|<tuple|14.197|?>>
+    <associate|continuity K^n norm|<tuple|14.204|?>>
     <associate|continuity L(X,L(Y,Z)) is isometric with
-    L(X,Y;Z)|<tuple|14.204|?>>
+    L(X,Y;Z)|<tuple|14.207|?>>
     <associate|continuity L(X,Y) is a subspace of Hom(X,Y)|<tuple|14.177|?>>
-    <associate|continuity L^n(X;Y)|<tuple|14.200|?>>
+    <associate|continuity L^n(X;Y)|<tuple|14.203|?>>
     <associate|continuity L^n+1(X;Y) is isomorph with
-    L(X,L^n(X;Y))|<tuple|14.205|?>>
+    L(X,L^n(X;Y))|<tuple|14.208|?>>
     <associate|continuity Lispschitz condition|<tuple|14.160|?>>
     <associate|continuity Lispschitz implies uniform
     continuity|<tuple|14.161|?>>
@@ -22483,20 +23186,19 @@
     <associate|continuity and subspace topology (4)|<tuple|14.134|?>>
     <associate|continuity at a point|<tuple|14.124|?>>
     <associate|continuity composition|<tuple|14.140|?>>
-    <associate|continuity composition is multilinear|<tuple|14.203|?>>
+    <associate|continuity composition is multilinear|<tuple|14.206|?>>
     <associate|continuity composition of continuous linear
-    mapping|<tuple|14.191|?>>
+    mapping|<tuple|14.194|?>>
     <associate|continuity composition of multilinear and linear
-    mapping|<tuple|14.202|?>>
+    mapping|<tuple|14.205|?>>
     <associate|continuity constant function|<tuple|14.132|?>>
     <associate|continuity continuous function|<tuple|14.130|?>>
     <associate|continuity continuous function (1)|<tuple|14.131|?>>
     <associate|continuity distance function is Lipschitz|<tuple|14.165|?>>
     <associate|continuity equivalences|<tuple|14.138|?>>
     <associate|continuity function partial application|<tuple|14.143|?>>
-    <associate|continuity homemorphism between K|<tuple|14.180|?>>
-    <associate|continuity homemorphism between powers of K|<tuple|14.180|?>>
-    <associate|continuity homemorphism between powers of R|<tuple|14.182|?>>
+    <associate|continuity homemorphism between K|<tuple|14.182|?>>
+    <associate|continuity homemorphism between powers of R|<tuple|14.184|?>>
     <associate|continuity homeomorphism|<tuple|14.166|?>>
     <associate|continuity homeomorphism (1)|<tuple|14.167|?>>
     <associate|continuity homeomorphism and restriction|<tuple|14.170|?>>
@@ -22504,7 +23206,7 @@
     space|<tuple|14.174|?>>
     <associate|continuity homeomorphism composition|<tuple|14.169|?>>
     <associate|continuity identity function|<tuple|14.133|?>>
-    <associate|continuity identity function norm|<tuple|14.188|?>>
+    <associate|continuity identity function norm|<tuple|14.191|?>>
     <associate|continuity identity map is linear and
     continuous|<tuple|14.176|?>>
     <associate|continuity in a metric space|<tuple|14.127|?>>
@@ -22515,18 +23217,18 @@
     <associate|continuity inverse of a homeomorphism|<tuple|14.168|?>>
     <associate|continuity isometry is a homeomorphism|<tuple|14.171|?>>
     <associate|continuity linear mapping (1)|<tuple|14.178|?>>
-    <associate|continuity linear mapping between K|<tuple|14.179|?>>
-    <associate|continuity linear mapping between R^n|<tuple|14.181|?>>
-    <associate|continuity multilinear mapping (1)|<tuple|14.193|?>>
-    <associate|continuity multilinear mapping (2) norm|<tuple|14.197|?>>
-    <associate|continuity multilinear mappings vector space|<tuple|14.196|?>>
-    <associate|continuity norm L(x)=a.x|<tuple|14.189|?>>
+    <associate|continuity linear mapping between K|<tuple|14.181|?>>
+    <associate|continuity linear mapping between R^n|<tuple|14.183|?>>
+    <associate|continuity multilinear mapping (1)|<tuple|14.196|?>>
+    <associate|continuity multilinear mapping (2) norm|<tuple|14.200|?>>
+    <associate|continuity multilinear mappings vector space|<tuple|14.199|?>>
+    <associate|continuity norm L(x)=a.x|<tuple|14.192|?>>
     <associate|continuity norm is continuous|<tuple|14.153|?>>
     <associate|continuity norm is uniform continuous|<tuple|14.157|?>>
     <associate|continuity norm of continuous linear mapping
-    (1)|<tuple|14.183|?>>
-    <associate|continuity norm of projection operator|<tuple|14.190|?>>
-    <associate|continuity norm on L(X,Y)|<tuple|14.187|?>>
+    (1)|<tuple|14.185|?>>
+    <associate|continuity norm of projection operator|<tuple|14.193|?>>
+    <associate|continuity norm on L(X,Y)|<tuple|14.189|?>>
     <associate|continuity of finite sum of continuous
     functions|<tuple|14.147|?>>
     <associate|continuity of power function|<tuple|14.150|?>>
@@ -22534,14 +23236,14 @@
     <associate|continuity of sum (1)|<tuple|14.162|?>>
     <associate|continuity of sum of continuous functions|<tuple|14.146|?>>
     <associate|continuity open function|<tuple|14.139|?>>
-    <associate|continuity open linear mapping|<tuple|14.192|?>>
-    <associate|continuity operator norm|<tuple|14.184|?>>
-    <associate|continuity operator norm (1)|<tuple|14.185|?>>
-    <associate|continuity operator norm (2)|<tuple|14.186|?>>
+    <associate|continuity open linear mapping|<tuple|14.195|?>>
+    <associate|continuity operator norm|<tuple|14.186|?>>
+    <associate|continuity operator norm (1)|<tuple|14.187|?>>
+    <associate|continuity operator norm (2)|<tuple|14.188|?>>
     <associate|continuity operator norm of multilinear
-    mappings|<tuple|14.198|?>>
+    mappings|<tuple|14.201|?>>
     <associate|continuity operator norm of multilinear mappings
-    (1)|<tuple|14.199|?>>
+    (1)|<tuple|14.202|?>>
     <associate|continuity power of continuous functions|<tuple|14.149|?>>
     <associate|continuity product and continuous functions|<tuple|14.142|?>>
     <associate|continuity product of continuous functions|<tuple|14.148|?>>
@@ -22620,131 +23322,154 @@
     <associate|eq 14.146.153|<tuple|14.166|?>>
     <associate|eq 14.147.153|<tuple|14.168|?>>
     <associate|eq 14.148.153|<tuple|14.169|?>>
-    <associate|eq 14.149\<point\>153|<tuple|14.193|?>>
+    <associate|eq 14.149\<point\>153|<tuple|14.196|?>>
     <associate|eq 14.15.146|<tuple|14.19|?>>
-    <associate|eq 14.150.153|<tuple|14.194|?>>
-    <associate|eq 14.150.154|<tuple|14.181|?>>
-    <associate|eq 14.150.155|<tuple|14.176|?>>
-    <associate|eq 14.150.158|<tuple|14.171|?>>
-    <associate|eq 14.151.153|<tuple|14.195|?>>
-    <associate|eq 14.151.154|<tuple|14.184|?>>
-    <associate|eq 14.151.155|<tuple|14.182|?>>
-    <associate|eq 14.151.156|<tuple|14.177|?>>
-    <associate|eq 14.151.158|<tuple|14.172|?>>
-    <associate|eq 14.152.153|<tuple|14.196|?>>
-    <associate|eq 14.152.155|<tuple|14.183|?>>
-    <associate|eq 14.152.156|<tuple|14.178|?>>
-    <associate|eq 14.152.158|<tuple|14.173|?>>
-    <associate|eq 14.153.155|<tuple|14.179|?>>
-    <associate|eq 14.153.158|<tuple|14.174|?>>
-    <associate|eq 14.154.155|<tuple|14.185|?>>
-    <associate|eq 14.154.156|<tuple|14.180|?>>
-    <associate|eq 14.154.158|<tuple|14.175|?>>
-    <associate|eq 14.155.155|<tuple|14.186|?>>
-    <associate|eq 14.156.155|<tuple|14.187|?>>
+    <associate|eq 14.150.153|<tuple|14.197|?>>
+    <associate|eq 14.150.154|<tuple|14.184|?>>
+    <associate|eq 14.150.155|<tuple|14.179|?>>
+    <associate|eq 14.150.158|<tuple|14.174|?>>
+    <associate|eq 14.151.153|<tuple|14.198|?>>
+    <associate|eq 14.151.154|<tuple|14.187|?>>
+    <associate|eq 14.151.155|<tuple|14.185|?>>
+    <associate|eq 14.151.156|<tuple|14.180|?>>
+    <associate|eq 14.151.158|<tuple|14.175|?>>
+    <associate|eq 14.152.153|<tuple|14.199|?>>
+    <associate|eq 14.152.155|<tuple|14.186|?>>
+    <associate|eq 14.152.156|<tuple|14.181|?>>
+    <associate|eq 14.152.158|<tuple|14.176|?>>
+    <associate|eq 14.153.155|<tuple|14.182|?>>
+    <associate|eq 14.153.158|<tuple|14.177|?>>
+    <associate|eq 14.154.155|<tuple|14.188|?>>
+    <associate|eq 14.154.156|<tuple|14.183|?>>
+    <associate|eq 14.154.158|<tuple|14.178|?>>
+    <associate|eq 14.155.155|<tuple|14.189|?>>
+    <associate|eq 14.156.155|<tuple|14.190|?>>
     <associate|eq 14.156.170|<tuple|14.170|?>>
-    <associate|eq 14.157.155|<tuple|14.188|?>>
-    <associate|eq 14.158.155|<tuple|14.189|?>>
-    <associate|eq 14.159.155|<tuple|14.190|?>>
+    <associate|eq 14.157.155|<tuple|14.191|?>>
+    <associate|eq 14.158.155|<tuple|14.192|?>>
+    <associate|eq 14.159.155|<tuple|14.193|?>>
     <associate|eq 14.16.146|<tuple|14.20|?>>
-    <associate|eq 14.160.155|<tuple|14.191|?>>
-    <associate|eq 14.161.155|<tuple|14.192|?>>
+    <associate|eq 14.160.155|<tuple|14.194|?>>
+    <associate|eq 14.161.155|<tuple|14.195|?>>
     <associate|eq 14.163.155|<tuple|14.167|?>>
     <associate|eq 14.17.146|<tuple|14.21|?>>
-    <associate|eq 14.171.156|<tuple|14.197|?>>
-    <associate|eq 14.172.156|<tuple|14.198|?>>
-    <associate|eq 14.173.156|<tuple|14.199|?>>
-    <associate|eq 14.174.156|<tuple|14.200|?>>
-    <associate|eq 14.175.156|<tuple|14.201|?>>
-    <associate|eq 14.176.156|<tuple|14.203|?>>
-    <associate|eq 14.177.156|<tuple|14.204|?>>
-    <associate|eq 14.178.156|<tuple|14.205|?>>
-    <associate|eq 14.179.156|<tuple|14.206|?>>
+    <associate|eq 14.171.156|<tuple|14.200|?>>
+    <associate|eq 14.171.193|<tuple|14.171|?>>
+    <associate|eq 14.172.156|<tuple|14.201|?>>
+    <associate|eq 14.172.293|<tuple|14.172|?>>
+    <associate|eq 14.173.156|<tuple|14.202|?>>
+    <associate|eq 14.173.293|<tuple|14.173|?>>
+    <associate|eq 14.174.156|<tuple|14.203|?>>
+    <associate|eq 14.175.156|<tuple|14.204|?>>
+    <associate|eq 14.176.156|<tuple|14.206|?>>
+    <associate|eq 14.177.156|<tuple|14.207|?>>
+    <associate|eq 14.178.156|<tuple|14.208|?>>
+    <associate|eq 14.179.156|<tuple|14.209|?>>
     <associate|eq 14.18.146|<tuple|14.22|?>>
-    <associate|eq 14.180.156|<tuple|14.207|?>>
-    <associate|eq 14.181.156|<tuple|14.208|?>>
-    <associate|eq 14.182.156|<tuple|14.209|?>>
-    <associate|eq 14.183.156|<tuple|14.210|?>>
-    <associate|eq 14.184.156|<tuple|14.211|?>>
-    <associate|eq 14.185.156|<tuple|14.212|?>>
-    <associate|eq 14.186.156|<tuple|14.213|?>>
-    <associate|eq 14.187.156|<tuple|14.214|?>>
-    <associate|eq 14.188.156|<tuple|14.215|?>>
-    <associate|eq 14.188.170|<tuple|14.202|?>>
-    <associate|eq 14.189.156|<tuple|14.216|?>>
+    <associate|eq 14.180.156|<tuple|14.210|?>>
+    <associate|eq 14.181.156|<tuple|14.211|?>>
+    <associate|eq 14.182.156|<tuple|14.212|?>>
+    <associate|eq 14.183.156|<tuple|14.213|?>>
+    <associate|eq 14.184.156|<tuple|14.214|?>>
+    <associate|eq 14.185.156|<tuple|14.215|?>>
+    <associate|eq 14.186.156|<tuple|14.216|?>>
+    <associate|eq 14.187.156|<tuple|14.217|?>>
+    <associate|eq 14.188.156|<tuple|14.218|?>>
+    <associate|eq 14.188.170|<tuple|14.205|?>>
+    <associate|eq 14.189.156|<tuple|14.219|?>>
     <associate|eq 14.19.146|<tuple|14.23|?>>
-    <associate|eq 14.190.156|<tuple|14.217|?>>
-    <associate|eq 14.191.156|<tuple|14.218|?>>
-    <associate|eq 14.192.156|<tuple|14.219|?>>
-    <associate|eq 14.193.156|<tuple|14.220|?>>
-    <associate|eq 14.199.156|<tuple|14.226|?>>
-    <associate|eq 14.199.157|<tuple|14.225|?>>
+    <associate|eq 14.190.156|<tuple|14.220|?>>
+    <associate|eq 14.191.156|<tuple|14.221|?>>
+    <associate|eq 14.192.156|<tuple|14.222|?>>
+    <associate|eq 14.193.156|<tuple|14.223|?>>
+    <associate|eq 14.199.156|<tuple|14.229|?>>
+    <associate|eq 14.199.157|<tuple|14.228|?>>
     <associate|eq 14.2.145|<tuple|14.4|?>>
     <associate|eq 14.20.146|<tuple|14.24|?>>
-    <associate|eq 14.200.156|<tuple|14.227|?>>
-    <associate|eq 14.201.156|<tuple|14.228|?>>
-    <associate|eq 14.203.158|<tuple|14.229|?>>
-    <associate|eq 14.204.158|<tuple|14.230|?>>
-    <associate|eq 14.205.158|<tuple|14.231|?>>
-    <associate|eq 14.206.158|<tuple|14.232|?>>
-    <associate|eq 14.207.158|<tuple|14.233|?>>
-    <associate|eq 14.207.172|<tuple|14.221|?>>
-    <associate|eq 14.208.158|<tuple|14.234|?>>
-    <associate|eq 14.208.172|<tuple|14.222|?>>
-    <associate|eq 14.209.172|<tuple|14.223|?>>
-    <associate|eq 14.209.528|<tuple|14.235|?>>
+    <associate|eq 14.200.156|<tuple|14.230|?>>
+    <associate|eq 14.201.156|<tuple|14.231|?>>
+    <associate|eq 14.203.158|<tuple|14.232|?>>
+    <associate|eq 14.204.158|<tuple|14.233|?>>
+    <associate|eq 14.205.158|<tuple|14.234|?>>
+    <associate|eq 14.206.158|<tuple|14.235|?>>
+    <associate|eq 14.207.158|<tuple|14.236|?>>
+    <associate|eq 14.207.172|<tuple|14.224|?>>
+    <associate|eq 14.208.158|<tuple|14.237|?>>
+    <associate|eq 14.208.172|<tuple|14.225|?>>
+    <associate|eq 14.209.172|<tuple|14.226|?>>
+    <associate|eq 14.209.528|<tuple|14.238|?>>
     <associate|eq 14.21.146|<tuple|14.25|?>>
-    <associate|eq 14.210.158|<tuple|14.236|?>>
-    <associate|eq 14.210.172|<tuple|14.224|?>>
+    <associate|eq 14.210.158|<tuple|14.239|?>>
+    <associate|eq 14.210.172|<tuple|14.227|?>>
     <associate|eq 14.22.146|<tuple|14.30|?>>
-    <associate|eq 14.228.171|<tuple|14.246|?>>
-    <associate|eq 14.229.171|<tuple|14.247|?>>
+    <associate|eq 14.228.171|<tuple|14.249|?>>
+    <associate|eq 14.229.171|<tuple|14.250|?>>
     <associate|eq 14.23.146|<tuple|14.31|?>>
-    <associate|eq 14.230.171|<tuple|14.248|?>>
-    <associate|eq 14.234.164|<tuple|14.237|?>>
-    <associate|eq 14.235.164|<tuple|14.238|?>>
-    <associate|eq 14.236.164|<tuple|14.239|?>>
-    <associate|eq 14.237.164|<tuple|14.240|?>>
-    <associate|eq 14.238.164|<tuple|14.241|?>>
-    <associate|eq 14.239.164|<tuple|14.243|?>>
-    <associate|eq 14.239.165|<tuple|14.242|?>>
+    <associate|eq 14.230.171|<tuple|14.251|?>>
+    <associate|eq 14.234.164|<tuple|14.240|?>>
+    <associate|eq 14.235.164|<tuple|14.241|?>>
+    <associate|eq 14.236.164|<tuple|14.242|?>>
+    <associate|eq 14.237.164|<tuple|14.243|?>>
+    <associate|eq 14.238.164|<tuple|14.244|?>>
+    <associate|eq 14.239.164|<tuple|14.246|?>>
+    <associate|eq 14.239.165|<tuple|14.245|?>>
     <associate|eq 14.24.146|<tuple|14.32|?>>
-    <associate|eq 14.240.164|<tuple|14.245|?>>
-    <associate|eq 14.245.166|<tuple|14.249|?>>
-    <associate|eq 14.246.166|<tuple|14.250|?>>
-    <associate|eq 14.247.166|<tuple|14.251|?>>
-    <associate|eq 14.248.166|<tuple|14.252|?>>
-    <associate|eq 14.249.166|<tuple|14.253|?>>
+    <associate|eq 14.240.164|<tuple|14.248|?>>
+    <associate|eq 14.245.166|<tuple|14.252|?>>
+    <associate|eq 14.246.166|<tuple|14.253|?>>
+    <associate|eq 14.247.166|<tuple|14.254|?>>
+    <associate|eq 14.248.166|<tuple|14.255|?>>
+    <associate|eq 14.249.166|<tuple|14.256|?>>
     <associate|eq 14.25.146|<tuple|14.33|?>>
-    <associate|eq 14.250.166|<tuple|14.254|?>>
-    <associate|eq 14.251.166|<tuple|14.255|?>>
-    <associate|eq 14.251.173|<tuple|14.265|?>>
-    <associate|eq 14.252.166|<tuple|14.256|?>>
-    <associate|eq 14.253.166|<tuple|14.257|?>>
-    <associate|eq 14.254.166|<tuple|14.258|?>>
-    <associate|eq 14.255.166|<tuple|14.259|?>>
-    <associate|eq 14.256.166|<tuple|14.260|?>>
-    <associate|eq 14.257.166|<tuple|14.261|?>>
-    <associate|eq 14.259.167|<tuple|14.262|?>>
+    <associate|eq 14.250.166|<tuple|14.257|?>>
+    <associate|eq 14.251.166|<tuple|14.258|?>>
+    <associate|eq 14.251.173|<tuple|14.268|?>>
+    <associate|eq 14.252.166|<tuple|14.259|?>>
+    <associate|eq 14.253.166|<tuple|14.260|?>>
+    <associate|eq 14.254.166|<tuple|14.261|?>>
+    <associate|eq 14.255.166|<tuple|14.262|?>>
+    <associate|eq 14.256.166|<tuple|14.263|?>>
+    <associate|eq 14.257.166|<tuple|14.264|?>>
+    <associate|eq 14.259.167|<tuple|14.265|?>>
     <associate|eq 14.26.146|<tuple|14.34|?>>
     <associate|eq 14.26.246|<tuple|14.26|?>>
-    <associate|eq 14.260.167|<tuple|14.263|?>>
-    <associate|eq 14.261.167|<tuple|14.264|?>>
-    <associate|eq 14.262.167|<tuple|14.266|?>>
-    <associate|eq 14.263.167|<tuple|14.267|?>>
-    <associate|eq 14.264.167|<tuple|14.268|?>>
-    <associate|eq 14.265.167|<tuple|14.269|?>>
-    <associate|eq 14.266.167|<tuple|14.270|?>>
-    <associate|eq 14.267.167|<tuple|14.271|?>>
-    <associate|eq 14.268.167|<tuple|14.272|?>>
-    <associate|eq 14.269.167|<tuple|14.273|?>>
+    <associate|eq 14.260.167|<tuple|14.266|?>>
+    <associate|eq 14.261.167|<tuple|14.267|?>>
+    <associate|eq 14.262.167|<tuple|14.269|?>>
+    <associate|eq 14.263.167|<tuple|14.270|?>>
+    <associate|eq 14.264.167|<tuple|14.271|?>>
+    <associate|eq 14.265.167|<tuple|14.272|?>>
+    <associate|eq 14.266.167|<tuple|14.273|?>>
+    <associate|eq 14.267.167|<tuple|14.274|?>>
+    <associate|eq 14.268.167|<tuple|14.275|?>>
+    <associate|eq 14.269.167|<tuple|14.276|?>>
     <associate|eq 14.27.146|<tuple|14.35|?>>
     <associate|eq 14.27.246|<tuple|14.27|?>>
+    <associate|eq 14.277.294|<tuple|14.277|?>>
+    <associate|eq 14.278.294|<tuple|14.278|?>>
+    <associate|eq 14.279.294|<tuple|14.279|?>>
     <associate|eq 14.28.147|<tuple|14.36|?>>
     <associate|eq 14.28.246|<tuple|14.28|?>>
+    <associate|eq 14.280.294|<tuple|14.280|?>>
+    <associate|eq 14.281.294|<tuple|14.281|?>>
+    <associate|eq 14.282.294|<tuple|14.282|?>>
+    <associate|eq 14.283.294|<tuple|14.283|?>>
+    <associate|eq 14.284.294|<tuple|14.284|?>>
+    <associate|eq 14.285.294|<tuple|14.285|?>>
+    <associate|eq 14.286.294|<tuple|14.286|?>>
+    <associate|eq 14.287.294|<tuple|14.287|?>>
+    <associate|eq 14.288.294|<tuple|14.288|?>>
+    <associate|eq 14.289.294|<tuple|14.289|?>>
     <associate|eq 14.29.146|<tuple|14.38|?>>
     <associate|eq 14.29.147|<tuple|14.37|?>>
     <associate|eq 14.29.246|<tuple|14.29|?>>
+    <associate|eq 14.290.294|<tuple|14.290|?>>
+    <associate|eq 14.291.294|<tuple|14.291|?>>
+    <associate|eq 14.292.294|<tuple|14.292|?>>
+    <associate|eq 14.293.291|<tuple|14.293|?>>
+    <associate|eq 14.294.294|<tuple|14.294|?>>
+    <associate|eq 14.295.294|<tuple|14.295|?>>
+    <associate|eq 14.296.294|<tuple|14.296|?>>
     <associate|eq 14.3.146|<tuple|14.5|?>>
     <associate|eq 14.30.146|<tuple|14.39|?>>
     <associate|eq 14.31.146|<tuple|14.40|?>>
@@ -22825,77 +23550,82 @@
     <associate|eq 14.98.150|<tuple|14.108|?>>
     <associate|eq 14.99.150|<tuple|14.109|?>>
     <associate|eq: 14.124.176.1|<tuple|14.132|?>>
-    <associate|filter base|<tuple|14.248|?>>
-    <associate|filter base accumulating alternative|<tuple|14.257|?>>
-    <associate|filter base and compactness|<tuple|14.274|?>>
-    <associate|filter base and continuity|<tuple|14.267|?>>
-    <associate|filter base and continuity at a point|<tuple|14.266|?>>
+    <associate|filter base|<tuple|14.251|?>>
+    <associate|filter base accumulating alternative|<tuple|14.260|?>>
+    <associate|filter base and compactness|<tuple|14.277|?>>
+    <associate|filter base and continuity|<tuple|14.270|?>>
+    <associate|filter base and continuity at a point|<tuple|14.269|?>>
     <associate|filter base and properties of subordinate and
-    inclusion|<tuple|14.261|?>>
-    <associate|filter base closure and on relation|<tuple|14.264|?>>
-    <associate|filter base convergence and Hausdorf|<tuple|14.256|?>>
-    <associate|filter base convergence properties|<tuple|14.262|?>>
-    <associate|filter base converging and acummulating|<tuple|14.255|?>>
-    <associate|filter base finite intersection|<tuple|14.249|?>>
-    <associate|filter base finite intersection property|<tuple|14.254|?>>
-    <associate|filter base function preserves maximality|<tuple|14.273|?>>
-    <associate|filter base inclusion|<tuple|14.260|?>>
-    <associate|filter base mapping|<tuple|14.265|?>>
-    <associate|filter base maximal condition|<tuple|14.270|?>>
-    <associate|filter base maximal existence|<tuple|14.271|?>>
+    inclusion|<tuple|14.264|?>>
+    <associate|filter base closure and on relation|<tuple|14.267|?>>
+    <associate|filter base convergence and Hausdorf|<tuple|14.259|?>>
+    <associate|filter base convergence properties|<tuple|14.265|?>>
+    <associate|filter base converging and acummulating|<tuple|14.258|?>>
+    <associate|filter base finite intersection|<tuple|14.252|?>>
+    <associate|filter base finite intersection property|<tuple|14.257|?>>
+    <associate|filter base function preserves maximality|<tuple|14.276|?>>
+    <associate|filter base inclusion|<tuple|14.263|?>>
+    <associate|filter base mapping|<tuple|14.268|?>>
+    <associate|filter base maximal condition|<tuple|14.273|?>>
+    <associate|filter base maximal existence|<tuple|14.274|?>>
     <associate|filter base maximal filter base and
-    convergence|<tuple|14.272|?>>
-    <associate|filter base maximum filter base|<tuple|14.269|?>>
+    convergence|<tuple|14.275|?>>
+    <associate|filter base maximum filter base|<tuple|14.272|?>>
     <associate|filter base neighborhood filter and
-    converging|<tuple|14.258|?>>
-    <associate|filter base neighborhood filter base|<tuple|14.251|?>>
+    converging|<tuple|14.261|?>>
+    <associate|filter base neighborhood filter base|<tuple|14.254|?>>
     <associate|filter base neighborhood filter base is a filter
-    base|<tuple|14.252|?>>
-    <associate|filter base on a subset|<tuple|14.263|?>>
-    <associate|filter base projection operator|<tuple|14.268|?>>
-    <associate|filter base subordinate|<tuple|14.259|?>>
-    <associate|filter base trivial|<tuple|14.250|?>>
-    <associate|filter base union and intersection|<tuple|14.253|?>>
-    <associate|lemma 14.342.156|<tuple|14.375|?>>
-    <associate|lemma 14.344.156|<tuple|14.376|?>>
-    <associate|lemma 14.345.156|<tuple|14.377|?>>
-    <associate|lemma 14.356.158|<tuple|14.386|?>>
-    <associate|lemma 14.376|<tuple|14.391|?>>
-    <associate|lemma 14.381.166|<tuple|14.393|?>>
-    <associate|lemma 14.382.166|<tuple|14.394|?>>
-    <associate|lemma 14.387.166|<tuple|14.399|?>>
-    <associate|limit (-1)^/i|<tuple|14.311|?>>
-    <associate|limit (a+n)/(b+n)|<tuple|14.301|?>>
-    <associate|limit 1/(a+i)|<tuple|14.300|?>>
-    <associate|limit a.x_n|<tuple|14.305|?>>
-    <associate|limit and continuity|<tuple|14.315|?>>
-    <associate|limit and continuity in metric space|<tuple|14.316|?>>
-    <associate|limit and equivalent norms|<tuple|14.328|?>>
-    <associate|limit and lower or upper bound|<tuple|14.308|?>>
-    <associate|limit b^n|<tuple|14.299|?>>
-    <associate|limit complex conjugate|<tuple|14.307|?>>
-    <associate|limit complex numbers condition|<tuple|14.306|?>>
-    <associate|limit constant sequence|<tuple|14.298|?>>
-    <associate|limit convergence implies bounded|<tuple|14.309|?>>
-    <associate|limit increasing decreasing (1)|<tuple|14.320|?>>
-    <associate|limit increasing descending sequences|<tuple|14.319|?>>
+    base|<tuple|14.255|?>>
+    <associate|filter base on a subset|<tuple|14.266|?>>
+    <associate|filter base projection operator|<tuple|14.271|?>>
+    <associate|filter base subordinate|<tuple|14.262|?>>
+    <associate|filter base trivial|<tuple|14.253|?>>
+    <associate|filter base union and intersection|<tuple|14.256|?>>
+    <associate|lemma 14.342.156|<tuple|14.380|?>>
+    <associate|lemma 14.344.156|<tuple|14.381|?>>
+    <associate|lemma 14.345.156|<tuple|14.382|?>>
+    <associate|lemma 14.356.158|<tuple|14.391|?>>
+    <associate|lemma 14.376|<tuple|14.396|?>>
+    <associate|lemma 14.381.166|<tuple|14.398|?>>
+    <associate|lemma 14.382.166|<tuple|14.399|?>>
+    <associate|lemma 14.387.166|<tuple|14.404|?>>
+    <associate|lemma 14.409.294|<tuple|14.412|?>>
+    <associate|lemma 14.414.294|<tuple|14.414|?>>
+    <associate|lemma 14.415.294|<tuple|14.415|?>>
+    <associate|limit (-1)^/i|<tuple|14.316|?>>
+    <associate|limit (a+n)/(b+n)|<tuple|14.304|?>>
+    <associate|limit 1/(a+i)|<tuple|14.303|?>>
+    <associate|limit a.x_n|<tuple|14.308|?>>
+    <associate|limit and continuity|<tuple|14.320|?>>
+    <associate|limit and continuity in metric space|<tuple|14.321|?>>
+    <associate|limit and equivalent norms|<tuple|14.333|?>>
+    <associate|limit and lower or upper bound|<tuple|14.313|?>>
+    <associate|limit b^n|<tuple|14.302|?>>
+    <associate|limit complex conjugate|<tuple|14.312|?>>
+    <associate|limit complex numbers condition|<tuple|14.311|?>>
+    <associate|limit constant sequence|<tuple|14.301|?>>
+    <associate|limit convergence implies bounded|<tuple|14.314|?>>
+    <associate|limit increasing decreasing (1)|<tuple|14.325|?>>
+    <associate|limit increasing descending sequences|<tuple|14.324|?>>
     <associate|limit limit of sequence limited by another
-    sequence|<tuple|14.312|?>>
-    <associate|limit limsup liminf|<tuple|14.321|?>>
-    <associate|limit limsup liminf (equivalent definition)|<tuple|14.323|?>>
-    <associate|limit limsup liminf and limit|<tuple|14.324|?>>
-    <associate|limit limsup liminf inequality|<tuple|14.322|?>>
-    <associate|limit limsup liminf properties|<tuple|14.325|?>>
-    <associate|limit of norm is norm of limit|<tuple|14.318|?>>
+    sequence|<tuple|14.317|?>>
+    <associate|limit limsup liminf|<tuple|14.326|?>>
+    <associate|limit limsup liminf (equivalent definition)|<tuple|14.328|?>>
+    <associate|limit limsup liminf and limit|<tuple|14.329|?>>
+    <associate|limit limsup liminf inequality|<tuple|14.327|?>>
+    <associate|limit limsup liminf properties|<tuple|14.330|?>>
+    <associate|limit of a finite product of sequences|<tuple|14.310|?>>
+    <associate|limit of a product of sequences|<tuple|14.309|?>>
+    <associate|limit of norm is norm of limit|<tuple|14.323|?>>
     <associate|limit of sequence of non negatieve real numbers is
-    positive|<tuple|14.313|?>>
+    positive|<tuple|14.318|?>>
     <associate|limit sequence dominated by a sequence converting to
-    0|<tuple|14.302|?>>
+    0|<tuple|14.305|?>>
     <associate|limit sequence limited by a convergent real
-    sequence|<tuple|14.310|?>>
-    <associate|limit x_n+a|<tuple|14.303|?>>
-    <associate|limit x_n+y_n|<tuple|14.304|?>>
-    <associate|metric Banach fixed point theorem|<tuple|14.390|?>>
+    sequence|<tuple|14.315|?>>
+    <associate|limit x_n+a|<tuple|14.306|?>>
+    <associate|limit x_n+y_n|<tuple|14.307|?>>
+    <associate|metric Banach fixed point theorem|<tuple|14.395|?>>
     <associate|metric ball image preimage|<tuple|14.73|?>>
     <associate|metric bounded set|<tuple|14.75|?>>
     <associate|metric bounded set inclusion|<tuple|14.77|?>>
@@ -22903,8 +23633,8 @@
     <associate|metric closed balls are closed|<tuple|14.65|?>>
     <associate|metric closed open balls are bounded|<tuple|14.78|?>>
     <associate|metric composition of isometries|<tuple|14.72|?>>
-    <associate|metric contraction|<tuple|14.388|?>>
-    <associate|metric contractions are continuous|<tuple|14.389|?>>
+    <associate|metric contraction|<tuple|14.393|?>>
+    <associate|metric contractions are continuous|<tuple|14.394|?>>
     <associate|metric dense set|<tuple|14.81|?>>
     <associate|metric empty set is bounded|<tuple|14.76|?>>
     <associate|metric equivalent metrics|<tuple|14.67|?>>
@@ -22923,7 +23653,7 @@
     <associate|metric subtopology|<tuple|14.66|?>>
     <associate|metric topology|<tuple|14.63|?>>
     <associate|metric topology (1)|<tuple|14.64|?>>
-    <associate|multilinear continuous mapping space|<tuple|14.195|?>>
+    <associate|multilinear continuous mapping space|<tuple|14.198|?>>
     <associate|normed absolute value norm differences|<tuple|14.87|?>>
     <associate|normed all norms in the set of complex numbers are
     equivalent|<tuple|14.117|?>>
@@ -22939,7 +23669,7 @@
     <associate|normed dense set|<tuple|14.111|?>>
     <associate|normed distinct function|<tuple|14.163|?>>
     <associate|normed equivalent norms|<tuple|14.113|?>>
-    <associate|normed equivalent norms in R^n|<tuple|14.280|?>>
+    <associate|normed equivalent norms in R^n|<tuple|14.283|?>>
     <associate|normed finer topologies|<tuple|14.112|?>>
     <associate|normed generalized intervals that are open|<tuple|14.100|?>>
     <associate|normed isometry|<tuple|14.122|?>>
@@ -22949,7 +23679,7 @@
     <associate|normed isometry is injective|<tuple|14.119|?>>
     <associate|normed linear isometry|<tuple|14.118|?>>
     <associate|normed linear mappings between finite dimensional spaces are
-    continuous|<tuple|14.286|?>>
+    continuous|<tuple|14.289|?>>
     <associate|normed maximum norm|<tuple|14.94|?>>
     <associate|normed maximum norm R^n|<tuple|14.95|?>>
     <associate|normed norm|<tuple|14.85|?>>
@@ -22957,7 +23687,7 @@
     <associate|normed norm equivalence condition|<tuple|14.115|?>>
     <associate|normed norm of zero|<tuple|14.84|?>>
     <associate|normed norm on finite dimensional spaces are
-    equivalent|<tuple|14.281|?>>
+    equivalent|<tuple|14.284|?>>
     <associate|normed open generalized intervals|<tuple|14.101|?>>
     <associate|normed open set as union of intervals|<tuple|14.104|?>>
     <associate|normed open set as union of intervals (1)|<tuple|14.105|?>>
@@ -22970,71 +23700,71 @@
     <associate|normed sup(S) and inf(S)|<tuple|14.106|?>>
     <associate|normed topology|<tuple|14.92|?>>
     <associate|normed triangle inequality|<tuple|14.86|?>>
-    <associate|separation Hausdorff|<tuple|14.206|?>>
+    <associate|separation Hausdorff|<tuple|14.209|?>>
     <associate|separation Hausdorff every finite set is
-    closed|<tuple|14.209|?>>
-    <associate|separation a metric space is first countable|<tuple|14.220|?>>
-    <associate|separation conditions|<tuple|14.216|?>>
-    <associate|separation first countable topological space|<tuple|14.219|?>>
+    closed|<tuple|14.212|?>>
+    <associate|separation a metric space is first countable|<tuple|14.223|?>>
+    <associate|separation conditions|<tuple|14.219|?>>
+    <associate|separation first countable topological space|<tuple|14.222|?>>
     <associate|separation fundamental system of neighborhoods of
-    x|<tuple|14.218|?>>
-    <associate|separation metric spaces are Hausdorff|<tuple|14.207|?>>
-    <associate|separation metric spaces are regular|<tuple|14.211|?>>
-    <associate|separation neighbors|<tuple|14.217|?>>
-    <associate|separation normal topological space|<tuple|14.215|?>>
-    <associate|separation regular topological space|<tuple|14.210|?>>
+    x|<tuple|14.221|?>>
+    <associate|separation metric spaces are Hausdorff|<tuple|14.210|?>>
+    <associate|separation metric spaces are regular|<tuple|14.214|?>>
+    <associate|separation neighbors|<tuple|14.220|?>>
+    <associate|separation normal topological space|<tuple|14.218|?>>
+    <associate|separation regular topological space|<tuple|14.213|?>>
     <associate|separation regularity and non empty open
-    sets|<tuple|14.213|?>>
+    sets|<tuple|14.216|?>>
     <associate|separation regularity and non empty open sets
-    (1)|<tuple|14.214|?>>
+    (1)|<tuple|14.217|?>>
     <associate|separation second countability implies first
-    countability|<tuple|14.223|?>>
+    countability|<tuple|14.226|?>>
     <associate|separation second countable topological
-    space|<tuple|14.222|?>>
-    <associate|sequence|<tuple|14.288|?>>
-    <associate|sequence convergence|<tuple|14.292|?>>
-    <associate|sequence convergence equivalences|<tuple|14.297|?>>
-    <associate|sequence convergence in metric space|<tuple|14.296|?>>
-    <associate|sequence increasing decreasing|<tuple|14.289|?>>
-    <associate|sequence increasing decreasing consequence|<tuple|14.290|?>>
-    <associate|sequence increasing decreasing sets|<tuple|14.291|?>>
-    <associate|sequence limit|<tuple|14.294|?>>
-    <associate|sequence limit definition|<tuple|14.295|?>>
-    <associate|sequence limit start value|<tuple|14.293|?>>
-    <associate|serie sum and scalar product|<tuple|14.362|?>>
-    <associate|series|<tuple|14.353|?>>
-    <associate|series absolute convergence|<tuple|14.379|?>>
-    <associate|series absolute convergence commutativity|<tuple|14.387|?>>
+    space|<tuple|14.225|?>>
+    <associate|sequence|<tuple|14.291|?>>
+    <associate|sequence convergence|<tuple|14.295|?>>
+    <associate|sequence convergence equivalences|<tuple|14.300|?>>
+    <associate|sequence convergence in metric space|<tuple|14.299|?>>
+    <associate|sequence increasing decreasing|<tuple|14.292|?>>
+    <associate|sequence increasing decreasing consequence|<tuple|14.293|?>>
+    <associate|sequence increasing decreasing sets|<tuple|14.294|?>>
+    <associate|sequence limit|<tuple|14.297|?>>
+    <associate|sequence limit definition|<tuple|14.298|?>>
+    <associate|sequence limit start value|<tuple|14.296|?>>
+    <associate|serie sum and scalar product|<tuple|14.367|?>>
+    <associate|series|<tuple|14.358|?>>
+    <associate|series absolute convergence|<tuple|14.384|?>>
+    <associate|series absolute convergence commutativity|<tuple|14.392|?>>
     <associate|series absolute convergence equals convergence only in Banach
-    space|<tuple|14.384|?>>
-    <associate|series absolute convergence equivalences|<tuple|14.385|?>>
+    space|<tuple|14.389|?>>
+    <associate|series absolute convergence equivalences|<tuple|14.390|?>>
     <associate|series absolute convergence implies
-    convergence|<tuple|14.382|?>>
-    <associate|series absolute dominant convergence|<tuple|14.380|?>>
-    <associate|series absolute dominant convergence (1)|<tuple|14.381|?>>
+    convergence|<tuple|14.387|?>>
+    <associate|series absolute dominant convergence|<tuple|14.385|?>>
+    <associate|series absolute dominant convergence (1)|<tuple|14.386|?>>
     <associate|series convergence condition in a Banach
-    space|<tuple|14.358|?>>
-    <associate|series converging of upper series|<tuple|14.361|?>>
-    <associate|series dominant convergence|<tuple|14.383|?>>
-    <associate|series non negative numbers associativity|<tuple|14.378|?>>
-    <associate|series non negative numbers commutativity|<tuple|14.366|?>>
+    space|<tuple|14.363|?>>
+    <associate|series converging of upper series|<tuple|14.366|?>>
+    <associate|series dominant convergence|<tuple|14.388|?>>
+    <associate|series non negative numbers associativity|<tuple|14.383|?>>
+    <associate|series non negative numbers commutativity|<tuple|14.371|?>>
     <associate|series non negative numbers countable sum equivalent
-    definition|<tuple|14.373|?>>
-    <associate|series non negative numbers countable sums|<tuple|14.369|?>>
+    definition|<tuple|14.378|?>>
+    <associate|series non negative numbers countable sums|<tuple|14.374|?>>
     <associate|series non negative numbers countable sums
-    inclusion|<tuple|14.372|?>>
-    <associate|series non negative numbers denumerable sum|<tuple|14.367|?>>
-    <associate|series non negative numbers equivalences|<tuple|14.364|?>>
+    inclusion|<tuple|14.377|?>>
+    <associate|series non negative numbers denumerable sum|<tuple|14.372|?>>
+    <associate|series non negative numbers equivalences|<tuple|14.369|?>>
     <associate|series non negative numbers strict positive
-    term|<tuple|14.365|?>>
-    <associate|series of all zeroes|<tuple|14.374|?>>
-    <associate|series of complex numbers|<tuple|14.363|?>>
-    <associate|series partition series|<tuple|14.360|?>>
-    <associate|series power series in R|<tuple|14.356|?>>
-    <associate|series terms converges to zero|<tuple|14.357|?>>
-    <associate|series translation start|<tuple|14.359|?>>
-    <associate|sum of a countable set|<tuple|14.368|?>>
-    <associate|sum of powers lemma|<tuple|14.355|?>>
+    term|<tuple|14.370|?>>
+    <associate|series of all zeroes|<tuple|14.379|?>>
+    <associate|series of complex numbers|<tuple|14.368|?>>
+    <associate|series partition series|<tuple|14.365|?>>
+    <associate|series power series in R|<tuple|14.361|?>>
+    <associate|series terms converges to zero|<tuple|14.362|?>>
+    <associate|series translation start|<tuple|14.364|?>>
+    <associate|sum of a countable set|<tuple|14.373|?>>
+    <associate|sum of powers lemma|<tuple|14.360|?>>
     <associate|topology Baire space|<tuple|14.53|?>>
     <associate|topology Baire space alternative definition|<tuple|14.55|?>>
     <associate|topology Baire space empty set|<tuple|14.54|?>>
@@ -23086,7 +23816,7 @@
     <associate|topology subspace topology|<tuple|14.8|?>>
     <associate|topology subspace topology open subset|<tuple|14.11|?>>
     <associate|topology subsubspace topology|<tuple|14.10|?>>
-    <associate|xn\<less\>yn=\<gtr\>limxn\<less\>limyn|<tuple|14.314|?>>
+    <associate|xn\<less\>yn=\<gtr\>limxn\<less\>limyn|<tuple|14.319|?>>
   </collection>
 </references>
 

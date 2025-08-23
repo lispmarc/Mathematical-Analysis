@@ -8382,6 +8382,358 @@
     ><around*|(|f\<circ\>T|)><around*|(|x|)>=f<around*|(|T<around*|(|x|)>|)><below|=|<text|[eq:
     <reference|eq 21.1110.291>]>><below|lim|n\<rightarrow\>\<infty\>>f<rsub|n><around*|(|T<around*|(|x|)>|)>=<below|lim|n\<rightarrow\>\<infty\>><around*|(|f<rsub|n>\<circ\>T|)><around*|(|x|)>
   </equation*>
+
+  ---------------------------------------------------------------------------------------------------------
+
+  \;
+
+  <\definition>
+    <label|Holder continuity><dueto|Hölder continuity>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|\<alpha\>\<in\><around*|]|0,1|]>>,
+    <math|C\<in\><around*|[|0,\<infty\>|[>> then a function
+    <math|f:X\<rightarrow\>Y> is a Hölder continuous function of index
+    <math|\<alpha\>> with Hölder constant <math|C> if
+
+    <\equation*>
+      \<forall\>x,y\<in\>X<text| we have ><around*|\<\|\|\>|f<around*|(|x|)>-f<around*|(|y|)>|\<\|\|\>><rsub|Y>\<leqslant\>C\<cdot\><around*|(|<around*|\<\|\|\>|x-y|\<\|\|\>><rsub|X>|)><rsup|\<alpha\>>
+    </equation*>
+  </definition>
+
+  <\theorem>
+    <label|Holder continuity implies continuity>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|\<alpha\>\<in\><around*|]|0,1|]>>,
+    <math|C\<in\><around*|[|0,\<infty\>|[>> and <math|f:X\<rightarrow\>Y> a
+    Hölder continuous function of index <math|\<alpha\>> with Hölder constant
+    <math|C> then <math|f> is continuous.
+  </theorem>
+
+  <\proof>
+    As <math|f> is Hölder continuous we have that
+
+    <\equation*>
+      \<forall\>x,y\<in\>X<text| we have ><around*|\<\|\|\>|f<around*|(|x|)>-f<around*|(|y|)>|\<\|\|\>><rsub|Y>\<leqslant\>C\<cdot\><around*|(|<around*|\<\|\|\>|x-y|\<\|\|\>><rsub|X>|)><rsup|\<alpha\>>
+    </equation*>
+
+    Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then as
+    <math|0\<less\>\<alpha\>> we can take take then
+    <math|\<delta\>=<around*|(|<frac|\<varepsilon\>|C+1>|)><rsup|<frac|1|\<alpha\>>>\<in\>\<bbb-R\><rsup|+>>.
+    If then <math|<around*|\<\|\|\>|x-y|\<\|\|\>><rsub|X>\<less\>\<delta\>>
+    we have\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|f<around*|(|x|)>-f<around*|(|y|)>|\<\|\|\>><rsub|Y>\<leqslant\>C\<cdot\><around*|(|<around*|\<\|\|\>|x-y|\<\|\|\>><rsub|X>|)><rsup|\<alpha\>><below|\<less\>|<text|[theorem:
+      <reference|exp generalized power properties>]>>C\<cdot\>\<delta\><rsup|<frac|1|\<alpha\>>><below|=|<text|[theoren:
+      <reference|exp generalized power properties>]>>C\<cdot\><around*|(|<frac|\<varepsilon\>|C+1>|)><rsup|<frac|1|\<alpha\>>\<cdot\>\<alpha\>>=C\<cdot\><frac|\<varepsilon\>|C+1>\<less\>\<varepsilon\><rsup|>
+    </equation*>
+
+    which proves that <math|f> is continuous.
+  </proof>
+
+  <\lemma>
+    <label|lemma 21.587.292>Let <math|n,m\<in\>\<bbb-N\>>,
+    <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,<around*|\<\|\|\>||\<\|\|\>><rsub|n>|\<rangle\>>>,
+    <math|<around*|\<langle\>|\<bbb-R\><rsup|m>,<around*|\<\|\|\>||\<\|\|\>><rsub|m>|\<rangle\>>>
+    the normed space equiped with the canonical maximum norm [see
+    <reference|normed maximum norm R^n>],
+    <math|\<alpha\>\<in\><around*|[|0,1|[>>,
+    <math|C\<in\><around*|[|0,\<infty\>|[>> and
+    <math|f:\<bbb-R\><rsup|n>\<rightarrow\>R<rsup|m>> a Hölder continuous
+    function of index <math|\<alpha\>> with Hölder constant <math|C> then we
+    have <math|\<forall\>c\<in\>\<bbb-R\><rsup|n>> and
+    <math|s\<in\>\<bbb-R\><rsup|+>> that\ 
+
+    <\equation*>
+      f<around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|c<rsub|i>-s,c<rsub|i>+s|]>|)>\<subseteq\>C\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|[|f<rsub|i><around*|(|c|)>-C\<cdot\>s<rsup|\<alpha\>>,f<rsub|i><around*|(|c|)>+C\<cdot\>s<rsup|\<alpha\>>|]>
+    </equation*>
+
+    where <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|f<rsub|i>=\<pi\><rsub|i>\<circ\>f>. In particular if
+    <math|I=<around*|[|a,b|]>> such that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|b<rsub|i>-a<rsub|i>=l\<in\><around*|[|0,\<infty\>|[>> and
+    <math|f<around*|(|I|)>\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|m>|]>>
+    then we have\ 
+
+    <\equation*>
+      \<lambda\><rsup|m><around*|(|I|)>\<leqslant\><around*|(|2<rsup|1-\<alpha\>>\<cdot\>C|)><rsup|m>\<cdot\><around*|(|\<lambda\><rsup|n><around*|(|I|)>|)><rsup|\<alpha\>\<cdot\>m/n>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    As <math|f> is a \ Hölder continuous function of index <math|\<alpha\>>
+    with Hölder constnat <math|C> we have\ 
+
+    <\equation>
+      <label|eq 21.1121.292>\<forall\>x,y\<in\>\<bbb-R\><rsup|n><text| we
+      have ><around*|\<\|\|\>|f<around*|(|x|)>-f<around*|(|y|)>|\<\|\|\>><rsub|m>\<leqslant\>C\<cdot\><around*|(|<around*|\<\|\|\>|x-y|\<\|\|\>><rsub|n>|)><rsup|\<alpha\>>
+    </equation>
+
+    \ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|x\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|c<rsub|i>-s,c<rsub|i>+s|]>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>\<bbb-R\><rsup|n><text|
+      and >\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      >x<rsub|i>\<in\><around*|[|c<rsub|i>-s,c<rsub|i>+s|[>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>\<bbb-R\><rsup|n><text|
+      and >\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      >c<rsub|i>-s\<leqslant\>x<rsub|i>\<leqslant\>c<rsub|i>+s>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>\<bbb-R\><rsup|n><text|
+      and >\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>
+      c<rsub|i>-x<rsub|i>\<less\>s\<wedge\>x<rsub|i>-c<rsub|i>\<less\>s>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>\<bbb-R\><rsup|n><text|
+      and >\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>
+      <around*|\||c<rsub|i>-x<rsub|i>|\|>\<less\>s>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>\<bbb-R\><rsup|n><text|
+      and ><around*|\<\|\|\>|c-x|\<\|\|\>><rsub|n>\<less\>s>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|{|x\<in\>\<bbb-R\><rsup|n>\|<around*|\<\|\|\>|c-x|\<\|\|\>><rsub|m>|}>>>>>
+    </eqnarray*>
+
+    which proves that\ 
+
+    <\equation*>
+      <big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|c<rsub|i>-s,c<rsub|i>+s|]>=<around*|{|x\<in\>\<bbb-R\><rsup|n>\|<around*|\<\|\|\>|c-x|\<\|\|\>><rsub|m>\<leqslant\>s|}>
+    </equation*>
+
+    So if <math|y\<in\>f<around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|c<rsub|i>-s,c<rsub|i>+s|]>|)>>
+    then <math|\<exists\>x\<in\>\<bbb-R\><rsup|n>> with
+    <math|<around*|\<\|\|\>|c-x|\<\|\|\>><rsub|m>\<leqslant\>s> such that
+    <math|y=f<around*|(|x|)>>. Using then [eq: <reference|eq 21.1121.292>]
+    gives\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|f<around*|(|c|)>-f<around*|(|x|)>|\<\|\|\>><rsub|m>\<leqslant\>C\<cdot\><around*|(|<around*|\<\|\|\>|c-x|\<\|\|\>><rsub|n>|)><rsup|\<alpha\>>
+    </equation*>
+
+    Hence given <math|i\<in\><around*|{|1,\<ldots\>,m|}>> we have\ 
+
+    <\equation*>
+      f<rsub|i><around*|(|c|)>-f<rsub|i><around*|(|x|)>,f<rsub|i><around*|(|x|)>-f<rsub|i><around*|(|c|)>\<leqslant\><around*|\||f<rsub|i><around*|(|c|)>-f<rsub|i><around*|(|x|)>|\|>\<leqslant\><around*|\<\|\|\>|f<around*|(|c|)>-f<around*|(|x|)>|\<\|\|\>><rsub|m>\<leqslant\>C\<cdot\><around*|(|<around*|\<\|\|\>|c-x|\<\|\|\>><rsub|n>|)><rsup|\<alpha\>><below|\<leqslant\>|<text|[theorem:
+      <reference|exp generalized power properties>]>>C\<cdot\>s<rsup|\<alpha\>>
+    </equation*>
+
+    so that <math|f<rsub|i><around*|(|c|)>-C\<cdot\>s<rsup|\<alpha\>>\<leqslant\>f<rsub|i><around*|(|x|)>\<leqslant\>f<rsub|i><around*|(|c|)>+C\<cdot\>s<rsup|\<alpha\>>>
+    or <math|y<rsub|i>=f<rsub|i><around*|(|x|)>\<in\><around*|[|f<rsub|i><around*|(|c|)>-C\<cdot\>s<rsup|\<alpha\>>,f<rsub|i><around*|(|c|)>+C\<cdot\>s<rsup|\<alpha\>>|]>>.
+    Hence we have <math|y\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|[|f<rsub|i><around*|(|c|)>-C\<cdot\>s<rsup|\<alpha\>>,f<rsub|i><around*|(|c|)>+C\<cdot\>s<rsup|\<alpha\>>|]>>
+    which proves that\ 
+
+    <\equation>
+      <label|eq 21.1122.292>f<around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|c<rsub|i>-s,c<rsub|i>+s|]>|)>\<subseteq\>C\<cdot\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|[|f<rsub|i><around*|(|c<rsub|i>|)>-C\<cdot\>s<rsup|\<alpha\>>,f<rsub|i><around*|(|c<rsub|i>|)>+C\<cdot\>s<rsup|\<alpha\>>|]>
+    </equation>
+
+    Let <math|I=<around*|[|a,b|]>> such that
+    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|b<rsub|i>-a<rsub|i>=l\<in\><around*|[|0,\<infty\>|[>> and
+    <math|f<around*|(|I|)>\<in\>\<cal-B\><around*|[|\<bbb-R\><rsup|m>|]>>.
+    Then we have <rigid|<math|\<lambda\><rsup|n><around*|(|I|)>=<big|prod><rsub|i=1><rsup|n><around*|(|b<rsub|i>-a<rsub|i>|)>=l<rsup|n>>>
+    so that by [theorem: <reference|exp generalized power properties>]
+
+    <\equation>
+      <label|eq 21.1123.292>l=<around*|(|\<lambda\><rsup|n><around*|(|I|)>|)><rsup|<frac|1|n>>
+    </equation>
+
+    Let <math|i\<in\><around*|{|1,\<ldots\>,n|}>> then
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i>,b<rsub|i>|]>>|<cell|=>|<cell|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|<around*|(|a<rsub|i>+<frac|b<rsub|i>-a<rsub|i>|2>|)>-<frac|b<rsub|i>-a<rsub|i>|2>,<around*|(|a<rsub|i>+<frac|b<rsub|i>-a<rsub|i>|2>|)>+<frac|b<rsub|i>-a<rsub|i>|2>|]>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|<around*|(|a<rsub|i>+<frac|l|2>|)>-<frac|l|2>,<around*|(|a<rsub|i>+<frac|l|2>|)>+<frac|l|2>|]><eq-number><label|eq
+      21.1124.292>>>>>
+    </eqnarray*>
+
+    Hence we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<lambda\><rsup|m><around*|(|I|)>>|<cell|=>|<cell|\<lambda\><rsup|m><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|a<rsub|i>,b<rsub|i>|]>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 21.1124.292>]>>>|<cell|\<lambda\><rsup|m><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><around*|[|<around*|(|a<rsub|i>+<frac|l|2>|)>-<frac|l|2>,<around*|(|a<rsub|i>+<frac|l|2>|)>+<frac|l|2>|]>|)>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[eq:
+      <reference|eq 21.1122.292>]>>>|<cell|\<lambda\><rsup|m><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>><around*|[|f<rsub|i><around*|(|a<rsub|i>+<frac|l|2>|)>-C\<cdot\><around*|(|<frac|l|2>|)><rsup|\<alpha\>>,f<rsub|i><around*|(|a<rsub|i>+<frac|l|2>|)>+C\<cdot\><around*|(|<frac|l|2>|)><rsup|\<alpha\>>|]>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|prod><rsub|i=1><rsup|m><around*|(|2\<cdot\>C<around*|(|<frac|l|2>|)><rsup|\<alpha\>>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|2\<cdot\>C<around*|(|<frac|l|2>|)><rsup|\<alpha\>>|)><rsup|m>>>|<row|<cell|>|<cell|=>|<cell|<frac|2<rsup|m>|2<rsup|\<alpha\>\<cdot\>m>>\<cdot\>C<rsup|m>\<cdot\>f<rsup|\<alpha\>\<cdot\>m>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+      <reference|eq 21.1123.292>]>>>|<cell|<frac|2<rsup|m>|2<rsup|\<alpha\>\<cdot\>m>>\<cdot\>C<rsup|m>\<cdot\><around*|(|\<lambda\><rsup|n><around*|(|I|)><rsup|<frac|1|n>>|)><rsup|\<alpha\>\<cdot\>m>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|exp generalized power properties>]>>>|<cell|<around*|(|2<rsup|<around*|(|1-\<alpha\>|)>>\<cdot\>C|)><rsup|m><around*|(|\<lambda\><rsup|n><around*|(|I|)>|)><rsup|\<alpha\>\<cdot\><frac|m|n>>>>>>
+    </eqnarray*>
+  </proof>
+
+  <\lemma>
+    <label|lemma 21.590.292>Let <math|<around*|\<langle\>|X,\<cal-A\>|\<rangle\>>>
+    be a measurable spaces, <math|\<cal-S\>> a semi-ring [see definition:
+    <reference|measure semi-ring>] such that
+    <math|\<sigma\><around*|[|S|]>=\<cal-A\>> and <math|\<mu\>,\<nu\>> two
+    measures on <math|\<cal-A\>> such that <math|\<forall\>A\<in\>\<cal-S\>>
+    we have <math|\<mu\><around*|(|A|)>\<leqslant\>\<nu\><around*|(|A|)>\<less\>\<infty\>>.
+    If there exist a <math|<around*|{|A<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-S\>>
+    such that <math|X=<big|cup><rsub|i\<in\>\<bbb-N\>>A<rsub|i>> and
+    <math|\<forall\>i\<in\>\<bbb-N\>> <math|A<rsub|i>\<leqslant\>A<rsub|i+1>>
+    then we have
+
+    <\equation*>
+      \<forall\>A\<in\>\<cal-A\><text| we have
+      >\<mu\><around*|(|A|)>\<leqslant\>\<nu\><around*|(|A|)>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    As <math|\<forall\>A\<in\>\<cal-S\>> we have
+    <math|\<mu\><around*|(|A|)>\<leqslant\>\<nu\><around*|(|A|)>\<less\>\<infty\>>
+    we can define\ 
+
+    <\equation>
+      <label|eq 21.1125.292>\<rho\>:\<cal-S\>\<rightarrow\><around*|[|0,\<infty\>|]><text|
+      by >\<rho\><around*|(|A|)>=\<nu\><around*|(|A|)>-\<mu\><around*|(|A|)>
+    </equation>
+
+    As <math|\<mu\>,\<nu\>> are measures we have that\ 
+
+    <\equation*>
+      \<rho\><around*|(|\<varnothing\>|)>=\<nu\><around*|(|\<varnothing\>|)>-\<mu\><around*|(|\<varnothing\>|)>=0-0=0
+    </equation*>
+
+    and <math|\<forall\><around*|{|B<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-S\>>
+    pairwise disjoint such that <math|<big|cup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>\<in\>\<cal-S\>>
+    we have as <math|0\<leqslant\>\<nu\><around*|(|A|)>-\<mu\><around*|(|A|)>\<less\>\<infty\>>
+    that by [theorem: <reference|extended infinite sum properties>] that
+
+    <\equation*>
+      \<rho\><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>|)>=\<nu\><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>|)>-\<mu\><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>|)>=<big|sum><rsub|i=1><rsup|\<infty\>>\<nu\><around*|(|B<rsub|i>|)>-<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|B<rsub|i>|)>=<big|sum><rsub|i=1><rsup|\<infty\>><around*|(|\<nu\><around*|(|B<rsub|i>|)>-\<mu\><around*|(|B<rsub|i>|)>|)>=<big|sum><rsub|i=1><rsup|\<infty\>>\<rho\><around*|(|B<rsub|i>|)>
+    </equation*>
+
+    which proves [see definition: <reference|measure pre-measure>] that\ 
+
+    <\equation*>
+      \<rho\><text| is a pre-measure on >\<b-S\>
+    </equation*>
+
+    By [theorem: <reference|measure extending pre-measure to a measure>] we
+    can extend <math|\<rho\>> to a <with|font-series|bold|unique> measure
+    <math|<wide|\<rho\>|~>> on <math|\<sigma\><around*|[|\<cal-S\>|]>=\<cal-A\>>.
+    In other words
+
+    <\equation>
+      <label|eq 21.1126.292><wide|\<rho\>|~><text| is a measure on
+      >\<cal-A\>=\<sigma\><around*|[|\<cal-S\>|]><text| such that
+      ><around*|(|<wide|\<rho\>|~>|)><rsub|\|\<cal-S\>>=\<rho\>
+    </equation>
+
+    and\ 
+
+    <\equation>
+      <label|eq 21.1127.292>If \<tau\><text| is a other measure on
+      <math|\<cal-A\><text| such that >>>\<tau\><rsub|\|\<cal-S\>>=\<rho\><text|
+      then >\<tau\>=\<rho\>
+    </equation>
+
+    Define\ 
+
+    <\equation>
+      <label|eq 21.1128.292>\<omega\>:\<cal-S\>\<rightarrow\><around*|[|0,\<infty\>|]><text|
+      by >\<omega\><around*|(|A|)>=\<rho\><around*|(|A|)>+\<mu\><around*|(|A|)>
+    </equation>
+
+    then we we have that
+
+    <\equation*>
+      \<omega\><around*|(|\<varnothing\>|)>=\<rho\><around*|(|\<varnothing\>|)>+\<mu\><around*|(|\<varnothing\>|)>=0+0=0
+    </equation*>
+
+    and <math|\<forall\><around*|{|B<rsub|i>|}><rsub|i\<in\>\<bbb-N\>>\<subseteq\>\<cal-S\>>
+    such that <math|<big|sqcup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>\<in\>\<cal-S\>>
+    then we have, as <math|\<mu\>> and <math|<wide|\<rho\>|~>> are measures
+    on <math|\<cal-A\>=\<sigma\><around*|[|\<cal-S\>|]>>, that
+    <math|\<mu\><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>|)>=<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|B<rsub|i>|)>>
+    and <math|\<rho\><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>|)>\<equallim\><rsub|<text|[eq:
+    <reference|eq 21.1127.292>]>><wide|\<rho\>|~><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>|)>=<big|sum><rsub|i=1><rsup|\<infty\>><wide|\<rho\>|~><around*|(|B<rsub|i>|)>\<equallim\><rsub|<text|[eq:
+    <reference|eq 21.1127.292>]>><big|sum><rsub|i=1><rsup|\<infty\>>\<rho\><around*|(|B<rsub|i>|)>>.
+    Hence using \ [theorem: <reference|extended infinite sum properties>] we
+    have that\ 
+
+    <\equation*>
+      \<omega\><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>|)>=\<rho\><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>|)>+\<mu\><around*|(|<big|sqcup><rsub|i\<in\>\<bbb-N\>>B<rsub|i>|)>=<big|sum><rsub|i=1><rsup|\<infty\>>\<rho\><around*|(|B<rsub|i>|)>+<big|sum><rsub|i=1><rsup|\<infty\>>\<mu\><around*|(|B<rsub|i>|)>=<big|sum><rsub|i=1><rsup|\<infty\>><around*|(|\<rho\><around*|(|B<rsub|i>|)>+\<mu\><around*|(|B<rsub|i>|)>|)>=<big|sum><rsub|i=1><rsup|\<infty\>>\<omega\><around*|(|B<rsub|i>|)>
+    </equation*>
+
+    which proves [see definition: <reference|measure pre-measure>] that\ 
+
+    <\equation*>
+      \<omega\><text| is a pre-measure on >\<cal-S\>
+    </equation*>
+
+    By [theorem: <reference|measure extending pre-measure to a measure>] we
+    can extend <math|\<omega\>> to a <with|font-series|bold|unique >measure
+    <math|<wide|\<omega\>|~>> on <math|\<sigma\><around*|[|S|]>=\<cal-A\>>.
+    In other words\ 
+
+    <\equation>
+      <label|eq 21.1129.292><wide|\<omega\>|~><text| is a measure on
+      >\<cal-A\><text| and ><around*|(|<wide|\<omega\>|~>|)><rsub|\|\<cal-S\>>=\<omega\>
+    </equation>
+
+    and\ 
+
+    <\equation>
+      <label|eq 21.1130.292><text|If >\<tau\><text| is a other measure on
+      >\<cal-A\><text| such that >\<tau\><rsub|\|\<cal-S\>>=\<omega\><text|
+      then >\<tau\>=\<omega\>
+    </equation>
+
+    As <math|\<forall\>A\<in\>\<cal-S\>> we have
+    <math|><math|\<omega\><around*|(|A|)>=\<rho\><around*|(|A|)>+\<mu\><around*|(|A|)>\<equallim\><rsub|<text|[eq:
+    <reference|eq 21.1125.292>]>>\<nu\><around*|(|A|)>-\<mu\><around*|(|A|)>+\<mu\><around*|(|A|)>=\<nu\><around*|(|A|)>=\<nu\><rsub|\|\<cal-S\>><around*|(|A|)>>
+    it follows that <math|><math|\<nu\><rsub|\|\<cal-S\>>=\<omega\>>, hence
+    using [eq: <reference|eq 21.1130.292>] it follows that\ 
+
+    <\equation>
+      <label|eq 21.1131.292><wide|\<omega\>|~>=\<nu\>
+    </equation>
+
+    As <math|\<mu\>,<wide|\<rho\>|~>> are measures on
+    <math|\<cal-A\>=\<sigma\><around*|[|\<cal-S\>|]>> we have by [theorem:
+    <reference|measure sum and scalar product of measures>] that
+    <math|<wide|\<rho\>|~>+\<mu\>> is a measure on
+    <math|\<cal-A\>=\<sigma\><around*|[|\<cal-S\>|]>>. Further we have
+    <math|\<forall\>A\<in\>\<cal-S\>> that
+
+    <\equation*>
+      <around*|(|<wide|\<rho\>|~>+\<mu\>|)><rsub|\|\<cal-S\>>=<around*|(|<wide|\<rho\>|~>+\<mu\>|)><around*|(|A|)>=<wide|\<rho\>|~><around*|(|A|)>+\<mu\><around*|(|A|)><below|=|<text|[eq:
+      <reference|eq 21.1126.292>]>>\<rho\><around*|(|A|)>+\<mu\><around*|(|A|)><below|=|<text|[eq
+      <reference|eq 21.1128.292>]>>\<omega\><around*|(|A|)>
+    </equation*>
+
+    so that <math|<around*|(|<wide|\<rho\>|~>+\<mu\>|)><rsub|\|\<cal-S\>>=\<omega\>>.
+    Hence using [eq: <reference|eq 21.1130.292>] it follows that\ 
+
+    <\equation*>
+      <wide|\<rho\>|~>+\<mu\>=\<omega\><below|=|<text|[eq: <reference|eq
+      21.1131.292>]>>\<nu\>
+    </equation*>
+
+    Let <math|A\<in\>\<cal-A\>> then we have either:\ 
+
+    <\description>
+      <item*|<math|\<mu\><around*|(|A|)>=\<infty\>>>Then we have
+      <math|\<nu\><around*|(|A|)>=<wide|\<rho\>|~><around*|(|A|)>+\<mu\><around*|(|A|)>=<wide|\<rho\>|~><around*|(|A|)>+\<infty\>=\<infty\>>
+      so that <math|\<nu\><around*|(|A|)>=\<infty\>> hence
+      <math|<rigid|\<mu\><around*|(|A|)>=\<infty\>\<leqslant\>\<infty\>=\<nu\><around*|(|A|)>>>
+      so that in this case we have <math|\<mu\><around*|(|A|)>\<leqslant\>\<nu\><around*|(|A|)>>.
+
+      <item*|<math|\<mu\><around*|(|A|)>\<less\>\<infty\>>>Then from
+      <math|\<nu\><around*|(|A|)>=<wide|\<rho\>|~><around*|(|A|)>+\<mu\><around*|(|A|)>>
+      we have by [theorem: <reference|extended x+z=y+z=\<gtr\>x-y>] that
+      <rigid|<math|\<nu\><around*|(|A|)>-\<mu\><around*|(|A|)>=<wide|\<rho\>|~><around*|(|A|)>\<geqslant\>0>>
+      so that <math|\<mu\><around*|(|A|)>\<less\>\<nu\><around*|(|A|)>>.
+    </description>
+
+    hence we have proved that
+
+    <\equation*>
+      \<forall\>A\<in\>\<cal-A\><text| we have
+      >\<mu\><around*|(|A|)>\<leqslant\>\<mu\><around*|(|A|)>
+    </equation*>
+  </proof>
+
+  <\lemma>
+    <label|lemma 21.591.>Let <math|n\<in\>\<bbb-N\>>,
+    <math|I\<in\>\<cal-R\><rsup|n><rsub|<around*|[||[>>> and
+    <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then there exists
+    <math|\<delta\>\<in\>\<bbb-R\><rsup|+>,N\<in\>\<bbb-N\>>,
+    <math|<rigid|<around*|{|<around*|[|a<rsub|i>,b<rsub|i>|[>|}><rsub|i\<in\><around*|{|1,\<ldots\>,N|}>>\<subseteq\>\<cal-R\><rsup|n><rsub|<around*|[||[>>>>
+    pairwise disjoint such that\ 
+
+    <\equation*>
+      \<forall\>j\<in\><around*|{|1,\<ldots\>,n|}>
+    </equation*>
+  </lemma>
 </body>
 
 <\initial>
@@ -8394,6 +8746,8 @@
   <\collection>
     <associate|Fubini's Theorem|<tuple|61|80>>
     <associate|Fubini's theorem|<tuple|63|83>>
+    <associate|Holder continuity|<tuple|72|?>>
+    <associate|Holder continuity implies continuity|<tuple|73|?>>
     <associate|auto-1|<tuple|open mapping theorem|5>>
     <associate|auto-2|<tuple|sum over a countable set|8>>
     <associate|auto-3|<tuple|<with|mode|<quote|math>|<around*|(|i\<rightarrow\>x|)>>|18>>
@@ -8680,6 +9034,17 @@
     <associate|eq 21.1090.291|<tuple|289|91>>
     <associate|eq 21.1091.291|<tuple|290|92>>
     <associate|eq 21.1092.291|<tuple|291|92>>
+    <associate|eq 21.1121.292|<tuple|292|?>>
+    <associate|eq 21.1122.292|<tuple|293|?>>
+    <associate|eq 21.1123.292|<tuple|294|?>>
+    <associate|eq 21.1124.292|<tuple|295|?>>
+    <associate|eq 21.1125.292|<tuple|296|?>>
+    <associate|eq 21.1126.292|<tuple|297|?>>
+    <associate|eq 21.1127.292|<tuple|298|?>>
+    <associate|eq 21.1128.292|<tuple|299|?>>
+    <associate|eq 21.1129.292|<tuple|300|?>>
+    <associate|eq 21.1130.292|<tuple|301|?>>
+    <associate|eq 21.1131.292|<tuple|302|?>>
     <associate|eq 21.27.273|<tuple|220|74>>
     <associate|eq 21.30.273|<tuple|221|74>>
     <associate|figure 20.6.234|<tuple|3|72>>
@@ -8706,6 +9071,9 @@
     <associate|lemma 20.613.279|<tuple|56|74>>
     <associate|lemma 21.578.291|<tuple|69|90>>
     <associate|lemma 21.579.291|<tuple|70|91>>
+    <associate|lemma 21.587.292|<tuple|74|?>>
+    <associate|lemma 21.590.292|<tuple|75|?>>
+    <associate|lemma 21.591.|<tuple|76|?>>
     <associate|measurability of image of a measurable set by a
     isomorphism|<tuple|64|87>>
     <associate|measurable function sum|<tuple|57|78>>
