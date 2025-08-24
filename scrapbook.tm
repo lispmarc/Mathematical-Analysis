@@ -8734,6 +8734,149 @@
       \<forall\>j\<in\><around*|{|1,\<ldots\>,n|}>
     </equation*>
   </lemma>
+
+  -------------------------------------------------------------------------------------
+
+  <\proof>
+    If <math|\<cal-F\>=\<varnothing\>> then we have
+    <math|\<forall\><around*|(|Z,Y|)>\<in\>\<cal-F\>> that
+    <math|<around*|(|Z,Y|)>\<preccurlyeq\><around*|(|Y,L|)>> vacuously which
+    as <math|<around*|(|Y,L|)>\<in\>\<cal-E\><rsub|X,Y,L>> proves that
+    <math|\<cal-F\>=\<varnothing\>> has a upper bound in
+    <math|\<cal-E\><rsub|X,Y,L>>. So we only have to prove the lemma for the
+    case where <math|\<cal-F\>\<neq\>\<varnothing\>>.\ 
+
+    Let <math|\<cal-F\>> be a chain in <math|\<cal-E\><rsub|X,Y,L>> and
+    define\ 
+
+    <\equation>
+      <label|eq 14.290.294>R=<big|cup><rsub|<around*|(|Z,K|)>\<in\>\<cal-F\>>Z
+    </equation>
+
+    As <math|\<forall\><around*|(|Z,K|)>\<in\>\<cal-F\>> <math|Z> is a vector
+    space we have <math|0\<in\>Z> so that <math|0\<in\>R> which proves that\ 
+
+    <\equation>
+      <label|eq 14.291.294>R\<neq\>0
+    </equation>
+
+    Let <math|x,y\<in\>R> and <math|\<alpha\>\<in\>\<bbb-R\>> then there
+    exists <math|<around*|(|Z<rsub|x>,K<rsub|x>|)>,<around*|(|Z<rsub|y>,K<rsub|y>|)>\<in\>\<cal-F\>>
+    such that <math|x\<in\>Z<rsub|x>\<wedge\>y\<in\>Z<rsub|y>>. As
+    <math|\<cal-F\>> is a chain we have either:\ 
+
+    <\description>
+      <item*|<math|<around*|(|Z<rsub|x>,K<rsub|x>|)>\<preccurlyeq\><around*|(|Z<rsub|y>,K<rsub|y>|)>>>Then
+      <math|Z<rsub|x>\<subseteq\>Z<rsub|y>> so that
+      <math|x,y\<in\>Z<rsub|y>\<Rightarrow\>x+\<alpha\>\<cdot\>y\<in\>Z<rsub|y>\<subseteq\>R>.
+
+      <item*|<math|<around*|(|Z<rsub|y>,K<rsub|y>|)>\<preccurlyeq\><around*|(|Z<rsub|x>,K<rsub|x>|)>>>Then
+      <math|Z<rsub|y>\<subseteq\>Z<rsub|x>> so that
+      <math|x,y\<in\>Z<rsub|x>\<Rightarrow\>x+\<alpha\>\<cdot\>y\<in\>Z<rsub|x>\<subseteq\>R>.
+    </description>
+
+    so in all cases we have <math|x+\<alpha\>\<cdot\>y\<in\>R>. This together
+    with [eq: <reference|eq 14.291.294>] proves [see theorem:
+    <reference|vector space subspace>] that\ 
+
+    <\equation>
+      <label|eq 14.292.294>R<text| is a real vector space>
+    </equation>
+
+    Further we have <math|\<forall\><around*|(|Z,K|)>\<in\>\<cal-F\>\<subseteq\>\<cal-E\><rsub|X,Y,L>>
+    that <math|Y\<subseteq\>Z> so that we have\ 
+
+    <\equation>
+      <label|eq 14.293.291>Y\<subseteq\>\<bbb-R\>
+    </equation>
+
+    Define now <math|G=<big|cup><rsub|<around*|(|Z,K|)>\<in\>\<cal-F\>>K\<subseteq\>R\<times\>\<bbb-R\>>
+    [note that as <math|K> is a function from <math|Z> to <math|\<bbb-R\>>
+    <math|K\<subseteq\>Z\<times\>\<bbb-R\>\<subseteq\>R\<times\>\<bbb-R\>>].
+    If <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>G> then there
+    exist <math|<around*|(|Z<rsub|1>,K<rsub|1>|)>,<around*|(|Z<rsub|2>,K<rsub|2>|)>\<in\>\<cal-F\>>
+    such that <math|<around*|(|x,y|)>\<in\>K<rsub|1>\<wedge\><around*|(|x,y<rprime|'>|)>\<in\>K<rsub|2>>
+    or using the definition of functions that
+    <math|y=K<rsub|1><around*|(|x|)>\<wedge\>y<rprime|'>=K<rsub|2><around*|(|x|)>>,
+    further we have <math|x\<in\>Z<rsub|1><big|cap>Z<rsub|2>>. As
+    <math|\<cal-F\>> is a chain we have either:
+
+    <\description>
+      <item*|<math|<around*|(|Z<rsub|1>,K<rsub|1>|)>\<preccurlyeq\><around*|(|Z<rsub|2>,K<rsub|2>|)>>>Then
+      <math|K<rsub|1>=<around*|(|K<rsub|2>|)><rsub|\|Z<rsub|1>>> so that
+      <math|y=K<rsub|1><around*|(|x|)>=<around*|(|K<rsub|2>|)><rsub|\|Z<rsub|1>><around*|(|x|)>=K<rsub|2><around*|(|x|)>=y<rprime|'>>
+
+      <item*|<math|<around*|(|Z<rsub|2>,K<rsub|2>|)>\<preccurlyeq\><around*|(|Z<rsub|1>,K<rsub|1>|)>>>Then
+      <math|K<rsub|2>=<around*|(|X<rsub|1>|)><rsub|\|Z<rsub|2>>> so that
+      <math|y=K<rsub|1><around*|(|x|)>=<around*|(|K<rsub|1>|)><rsub|\|Z<rsub|2>><around*|(|x|)><rsub|>=K<rsub|2><around*|(|x|)>=y<rprime|'>>
+    </description>
+
+    so in all cases we have <math|y=y<rprime|'>> which proves that\ 
+
+    <\equation*>
+      G:R\<rightarrow\>\<bbb-R\><text| is a partial function>
+    </equation*>
+
+    If <math|x\<in\>R> then there exist a
+    <math|<around*|(|Z,K|)>\<in\>\<cal-F\>> such that
+    <math|x\<in\>Z=dom<around*|(|K|)>> so there exist a
+    <math|y\<in\>\<bbb-R\>> such that <math|<around*|(|x,y|)>\<in\>K> which
+    proves that <math|x\<in\>dom<around*|(|G|)>>. Hence using [theorem:
+    <reference|function condition (1)>[ it follows that\ 
+
+    <\equation>
+      <label|eq 14.294.294>G:R\<rightarrow\>\<bbb-R\><text| is a function>
+    </equation>
+
+    If <math|x\<in\>R> then\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|y=G<around*|(|x|)>>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|x,y|)>\<in\>G>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\><around*|(|Z,K|)>\<in\>\<cal-F\><text|
+      with ><around*|(|x,y|)>\<in\>K>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<exists\><around*|(|Z,K|)>\<in\>\<cal-F\><text|
+      with <math|x\<in\>Z\<wedge\>y=K<around*|(|x|)>>>>>>>
+    </eqnarray*>
+
+    so we have\ 
+
+    <\equation>
+      <label|eq 14.295.294>G:R\<rightarrow\>\<bbb-R\><text| is defined by
+      >G<around*|(|x|)>=K*<around*|(|z|)> where
+      <around*|(|Z,K|)>\<in\>\<cal-F\>\<wedge\>x\<in\>Z
+    </equation>
+
+    Let <math|x,y\<in\>R> and <math|\<alpha\>\<in\>\<bbb-R\>> then there
+    exists <math|<around*|(|Z<rsub|1>,K<rsub|1><rsub|>|)>,<around*|(|Z<rsub|2>,K<rsub|2>|)>\<in\>\<cal-F\>>
+    such that <math|x\<in\>Z<rsub|1>\<wedge\>y\<in\>Z<rsub|2>>. As
+    <math|\<cal-F\>> is a chain we have either:\ 
+
+    <\description>
+      <item*|<math|<around*|(|Z<rsub|1>,K<rsub|1>|)>\<preccurlyeq\><around*|(|Z<rsub|2>,K<rsub|2>|)>>>Then
+      <math|x,y\<in\>Z<rsub|2>\<Rightarrow\>x+\<alpha\>\<cdot\>y\<in\>Z<rsub|2>>
+      so that
+
+      <\equation*>
+        G<around*|(|x+\<alpha\>\<cdot\>y|)>=K<rsub|2><around*|(|x+\<alpha\>\<cdot\>y|)>=K<rsub|2><around*|(|x|)>+\<alpha\>\<cdot\>K<rsub|2><around*|(|y|)>=G<around*|(|x|)>+\<alpha\>\<cdot\>G<around*|(|y|)>
+      </equation*>
+
+      <item*|<math|<around*|(|Z<rsub|2>,K<rsub|2>|)>\<preccurlyeq\><around*|(|Z<rsub|1>,K<rsub|1>|)>>>Then
+      <math|x,y\<in\>Z<rsub|1>\<Rightarrow\>x+\<alpha\>\<cdot\>y\<in\>Z<rsub|1>>
+      so that
+
+      <\equation*>
+        G<around*|(|x+\<alpha\>\<cdot\>y|)>=K<rsub|1><around*|(|x+\<alpha\>\<cdot\>y|)>=K<rsub|1><around*|(|x|)>+\<alpha\>\<cdot\>K<rsub|1><around*|(|y|)>=G<around*|(|x|)>+\<alpha\>\<cdot\>G<around*|(|y|)>
+      </equation*>
+    </description>
+
+    which proves that <math|G> is a linear function. Hence
+
+    <\equation>
+      <label|eq 14.296.294>G\<in\>L<around*|(|R,\<bbb-R\>|)>
+    </equation>
+
+    Let <math|y\<in\>Y> then\ 
+
+    \;
+  </proof>
 </body>
 
 <\initial>
@@ -8746,8 +8889,8 @@
   <\collection>
     <associate|Fubini's Theorem|<tuple|61|80>>
     <associate|Fubini's theorem|<tuple|63|83>>
-    <associate|Holder continuity|<tuple|72|?>>
-    <associate|Holder continuity implies continuity|<tuple|73|?>>
+    <associate|Holder continuity|<tuple|72|92>>
+    <associate|Holder continuity implies continuity|<tuple|73|92>>
     <associate|auto-1|<tuple|open mapping theorem|5>>
     <associate|auto-2|<tuple|sum over a countable set|8>>
     <associate|auto-3|<tuple|<with|mode|<quote|math>|<around*|(|i\<rightarrow\>x|)>>|18>>
@@ -8812,6 +8955,13 @@
     <associate|eq 14.252.165|<tuple|20|7>>
     <associate|eq 14.253.165|<tuple|21|7>>
     <associate|eq 14.254.165|<tuple|22|7>>
+    <associate|eq 14.290.294|<tuple|303|?>>
+    <associate|eq 14.291.294|<tuple|304|?>>
+    <associate|eq 14.292.294|<tuple|305|?>>
+    <associate|eq 14.293.291|<tuple|306|?>>
+    <associate|eq 14.294.294|<tuple|307|?>>
+    <associate|eq 14.295.294|<tuple|308|?>>
+    <associate|eq 14.296.294|<tuple|309|?>>
     <associate|eq 14.75.149|<tuple|43|19>>
     <associate|eq 14.76.149|<tuple|44|20>>
     <associate|eq 14.77.149|<tuple|45|20>>
@@ -9032,19 +9182,19 @@
     <associate|eq 21.1088.291|<tuple|287|91>>
     <associate|eq 21.1089.291|<tuple|288|91>>
     <associate|eq 21.1090.291|<tuple|289|91>>
-    <associate|eq 21.1091.291|<tuple|290|92>>
-    <associate|eq 21.1092.291|<tuple|291|92>>
-    <associate|eq 21.1121.292|<tuple|292|?>>
-    <associate|eq 21.1122.292|<tuple|293|?>>
-    <associate|eq 21.1123.292|<tuple|294|?>>
-    <associate|eq 21.1124.292|<tuple|295|?>>
-    <associate|eq 21.1125.292|<tuple|296|?>>
-    <associate|eq 21.1126.292|<tuple|297|?>>
-    <associate|eq 21.1127.292|<tuple|298|?>>
-    <associate|eq 21.1128.292|<tuple|299|?>>
-    <associate|eq 21.1129.292|<tuple|300|?>>
-    <associate|eq 21.1130.292|<tuple|301|?>>
-    <associate|eq 21.1131.292|<tuple|302|?>>
+    <associate|eq 21.1091.291|<tuple|290|91>>
+    <associate|eq 21.1092.291|<tuple|291|91>>
+    <associate|eq 21.1121.292|<tuple|292|92>>
+    <associate|eq 21.1122.292|<tuple|293|93>>
+    <associate|eq 21.1123.292|<tuple|294|93>>
+    <associate|eq 21.1124.292|<tuple|295|93>>
+    <associate|eq 21.1125.292|<tuple|296|94>>
+    <associate|eq 21.1126.292|<tuple|297|94>>
+    <associate|eq 21.1127.292|<tuple|298|94>>
+    <associate|eq 21.1128.292|<tuple|299|94>>
+    <associate|eq 21.1129.292|<tuple|300|94>>
+    <associate|eq 21.1130.292|<tuple|301|95>>
+    <associate|eq 21.1131.292|<tuple|302|95>>
     <associate|eq 21.27.273|<tuple|220|74>>
     <associate|eq 21.30.273|<tuple|221|74>>
     <associate|figure 20.6.234|<tuple|3|72>>
@@ -9069,11 +9219,11 @@
     <associate|lemma 20.470.246|<tuple|50|63>>
     <associate|lemma 20.477.246|<tuple|53|72>>
     <associate|lemma 20.613.279|<tuple|56|74>>
-    <associate|lemma 21.578.291|<tuple|69|90>>
-    <associate|lemma 21.579.291|<tuple|70|91>>
-    <associate|lemma 21.587.292|<tuple|74|?>>
-    <associate|lemma 21.590.292|<tuple|75|?>>
-    <associate|lemma 21.591.|<tuple|76|?>>
+    <associate|lemma 21.578.291|<tuple|69|89>>
+    <associate|lemma 21.579.291|<tuple|70|90>>
+    <associate|lemma 21.587.292|<tuple|74|92>>
+    <associate|lemma 21.590.292|<tuple|75|94>>
+    <associate|lemma 21.591.|<tuple|76|95>>
     <associate|measurability of image of a measurable set by a
     isomorphism|<tuple|64|87>>
     <associate|measurable function sum|<tuple|57|78>>
