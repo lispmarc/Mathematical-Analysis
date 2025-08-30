@@ -8877,6 +8877,163 @@
 
     \;
   </proof>
+
+  -----------------------------------------------------------------\U
+
+  \;
+
+  <\lemma>
+    <label|lemma 21.589.295>Let <math|m\<in\>\<bbb-N\>>,
+    <math|a\<in\>\<bbb-R\><rsup|n>> and <math|\<delta\>\<in\>\<bbb-R\><rsup|+>>
+    then <math|\<cal-B\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>><around*|(|a,\<delta\>|)>=<around*|]|a-\<delta\>,a+\<delta\>|[>>
+    and <math|<wide|\<cal-B\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>><around*|(|a,\<delta\>|)>|\<wide-bar\>>=<around*|[|a,b|]>>
+  </lemma>
+
+  <\proof>
+    We have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|x\<in\>\<cal-B\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>><around*|(|a,\<delta\>|)>>|<cell|\<Leftrightarrow\>>|<cell|<around*|\<\|\|\>|x-a|\<\|\|\>><rsub|n>\<less\>\<delta\>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|max<around*|(|<around*|\||x<rsub|i>-a<rsub|i>|\|>\|i\<in\><around*|{|1,\<ldots\>,n|}>|)>\<less\>\<delta\>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>
+      <around*|\||x<rsub|i>-a<rsub|i>|\|>\<less\>\<delta\>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      >x<rsub|i>-a<rsub|i>,a<rsub|i>-x<rsub|i>\<less\>\<delta\>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>
+      a<rsub|i>-\<delta\>\<less\>x<rsub|i>\<less\>a<rsub|i>+\<delta\>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|]|a-\<delta\>,a+\<delta\>|[>>>|<row|<cell|x\<in\><wide|\<cal-B\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>><around*|(|a,\<delta\>|)>|\<wide-bar\>>>|<cell|\<Leftrightarrow\>>|<cell|<around*|\<\|\|\>|x-a|\<\|\|\>><rsub|n>\<leqslant\>\<delta\>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|max<around*|(|<around*|\||x<rsub|i>-a<rsub|i>|\|>\|i\<in\><around*|{|1,\<ldots\>,n|}>|)>\<leqslant\>\<delta\>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>
+      <around*|\||x<rsub|i>-a<rsub|i>|\|>\<leqslant\>\<delta\>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      >x<rsub|i>-a<rsub|i>,a<rsub|i>-x<rsub|i>\<leqslant\>\<delta\>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>
+      a<rsub|i>-\<delta\>\<leqslant\>x<rsub|i>\<leqslant\>a<rsub|i>+\<delta\>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|[|a-\<delta\>,a+\<delta\>|]>>>>>
+    </eqnarray*>
+  </proof>
+
+  \;
+
+  ----------------------------------------------------------------------\V
+
+  <\lemma>
+    Let <math|n\<in\>\<bbb-N\>>, <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+    then there exist a <math|<around*|{|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>><around*|(|x<rsub|i>,\<delta\><rsub|i>|)>|}><rsub|i\<in\>\<bbb-N\>>>
+    such that <math|>
+  </lemma>
+
+  <\lemma>
+    Let <math|n\<in\>\<bbb-N\>>, <math|U> a open set in
+    <math|\<cal-T\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>> and
+    <math|T:U\<rightarrow\>\<bbb-R\><rsup|n>> a function that is
+    <math|C<rsup|1>> on <math|U> [see definitions: <reference|diff class
+    C^n>,<reference|diff C^n on a set>]. Let <math|E\<subseteq\>U> such that
+    <math|<around*|(|\<lambda\><rsup|n>|)><rsup|\<ast\>><around*|(|E|)>=0>
+    where <math|<around*|(|\<lambda\><rsup|n>|)><rsup|\<star\>>> is the outer
+    measure definted in [definition: <reference|measure Lebesgue measure
+    space on R^n>] then we have\ 
+
+    <\equation*>
+      T<around*|(|E|)>\<in\>\<cal-L\><rsup|n><around*|[|\<bbb-R\><rsup|n>|]>
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      <wide|\<lambda\><rsup|n>|\<wide-bar\>><around*|(|T<around*|(|E|)>|)>=0
+    </equation*>
+
+    where <math|><math|<wide|\<lambda\><rsup|n>|\<wide-bar\>>> is the
+    Lebesgue measure on the set of <math|\<cal-L\><rsup|n><around*|[|\<bbb-R\><rsup|n>|]>>
+    measurable sets.\ 
+  </lemma>
+
+  <\proof>
+    Let <math|E\<subseteq\>U> such that <math|<around*|(|\<lambda\><rsup|n>|)><rsup|\<ast\>><around*|(|E|)>=0>.
+    Given <math|m,p\<in\>\<bbb-N\>> define\ 
+
+    <\equation>
+      <label|eq 21.1127\<point\>300>E<rsub|m,p>=<around*|{|y\<in\>E\|\<forall\>x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>><around*|(|y,<frac|1|p>|)><text|
+      we have ><around*|\<\|\|\>|T<around*|(|x|)>-T<around*|(|y|)>|\<\|\|\>><rsub|n>\<leqslant\><around*|\<\|\|\>|x-y|\<\|\|\>><rsub|n>|}>
+    </equation>
+
+    Let <math|y\<in\>U> then as \ <math|T> is <math|C<rsup|1>> on <math|U> T
+    is differentiable at <math|y>. Then given
+    <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> we have by [theorem:
+    <reference|diff differentiability alternative definitions>] a
+    <math|\<delta\><rsub|1>\<in\>\<bbb-R\><rsup|+>> such that
+    <math|\<forall\>x\<in\>U> with <math|0\<less\><around*|\<\|\|\>|x-y|\<\|\|\>><rsub|n>\<less\>\<delta\><rsub|1>>
+    we have\ 
+
+    <\equation>
+      <label|eq 21.1128\<point\>300><frac|<around*|\<\|\|\>|T<around*|(|y|)>-T<around*|(|x|)>-D<rsub|y>T<around*|(|x-y|)>|\<\|\|\>><rsub|n>|<around*|\<\|\|\>|x-y|\<\|\|\>><rsub|n>>\<less\>\<varepsilon\>
+    </equation>
+
+    hence we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|T<around*|(|y|)>-T<around*|(|x|)><rsub|n>|\<\|\|\>>>|<cell|=>|<cell|<around*|\<\|\|\>|T<around*|(|y|)>-T<around*|(|x|)>-D<rsub|y>T<around*|(|x-y|)>+D<rsub|y>T<around*|(|x-y|)>|\<\|\|\>><rsub|n>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|T<around*|(|y|)>-T<around*|(|x|)>-D<rsub|y>T<around*|(|x-y|)>|\<\|\|\>><rsub|n>+<around*|\<\|\|\>|D<rsub|y>T<around*|(|x-y|)>|\<\|\|\>><rsub|n>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|T<around*|(|y|)>-T<around*|(|x|)>-D<rsub|y>T<around*|(|x-y|)>|\<\|\|\>><rsub|n>+<around*|\<\|\|\>|D<rsub|y>T|\<\|\|\>><rsub|L<around*|(|\<bbb-R\><rsup|n>,\<bbb-R\><rsup|m>|)>>\<cdot\><around*|\<\|\|\>|x-y|\<\|\|\>><rsub|n>>>|<row|<cell|>|<cell|<below|\<less\>|<text|[eq:
+      <reference|eq 21.1128\<point\>300>]>>>|<cell|\<varepsilon\>\<cdot\><around*|\<\|\|\>|x-y|\<\|\|\>>+<around*|\<\|\|\>|D<rsub|y>T|\<\|\|\>><rsub|L<around*|(|\<bbb-R\><rsup|n>,\<bbb-R\><rsup|m>|)>>\<cdot\><around*|\<\|\|\>|x-y|\<\|\|\>><rsub|n>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<varepsilon\>+<around*|\<\|\|\>|D<rsub|y>T|\<\|\|\>><rsub|L<around*|(|\<bbb-R\><rsup|n>,\<bbb-R\><rsup|m>|)>>|)>\<cdot\><around*|\<\|\|\>|x-y|\<\|\|\>><rsub|n>>>|<row|<cell|>|<cell|=>|<cell|M<around*|(|y,\<varepsilon\>|)>\<cdot\><around*|\<\|\|\>|x-y|\<\|\|\>><rsub|n><text|
+      where >M<around*|(|y,\<varepsilon\>|)>=\<varepsilon\>+<around*|\<\|\|\>|D<rsub|y>T|\<\|\|\>><rsub|L<around*|(|\<bbb-R\><rsup|n>,\<bbb-R\><rsup|m>|)>><eq-number><label|eq
+      21.1229.300>>>>>
+    </eqnarray*>
+
+    As <math|y\<in\>U> and <math|U> is open there exist a
+    <math|\<delta\><rsub|2>\<in\>\<bbb-R\><rsup|+>> such that
+    <math|\<cal-B\><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>><around*|(|y,\<delta\><rsub|1>|)>\<in\>U>.
+    Using the Using the Archimedean property of the real numbers [see
+    theorem: <reference|complex Archimedean property consequence (1)>] we can
+    find <math|m,p\<in\>\<bbb-N\>> such that
+    <math|M<around*|(|y,\<varepsilon\>|)>\<leqslant\>m> and
+    <math|<frac|1|p>\<less\>min<around*|(|\<delta\><rsub|1>,\<delta\><rsub|2>|)>>.
+    If <math|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>><around*|(|y,<frac|1|p>|)>>
+    then we have either:\ 
+
+    <\description>
+      <item*|<math|x=y>>Then <math|<around*|\<\|\|\>|T<around*|(|x|)>-T<around*|(|y|)>|\<\|\|\>><rsub|n>=0\<leqslant\>0=m\<cdot\><around*|\<\|\|\>|x-y|\<\|\|\>><rsub|n>>
+
+      <item*|<math|x\<neq\>y>>Then <math|0\<less\><around*|\<\|\|\>|x-y|\<\|\|\>><rsub|n>\<less\><frac|1|p>\<less\>\<delta\>>
+      so that <math|<around*|\<\|\|\>|T<around*|(|x|)>-T<around*|(|y|)>|\<\|\|\>><rsub|n><below|\<less\>M<around*|(|y,\<varepsilon\>|)>\<cdot\><around*|\<\|\|\>|x-y|\<\|\|\>><rsub|n>\<leqslant\>m\<cdot\><around*|\<\|\|\>|x-y|\<\|\|\>><rsub|n>|>><math|>
+    </description>
+
+    This proves that that <math|\<forall\>x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>><around*|(|y,<frac|1|p>|)>>
+    we have <math|<around*|\<\|\|\>|T<around*|(|x|)>-T<around*|(|y|)>|\<\|\|\>><rsub|n>\<leqslant\>m\<cdot\><around*|\<\|\|\>|x-y|\<\|\|\>><rsub|n>>
+    or <math|y\<in\>E<rsub|m,p>> [see eq: <reference|eq
+    21.1127\<point\>300>], hence we must conclude that
+    <math|E\<subseteq\><big|cup><rsub|<around*|(|m,p|)>\<in\>\<bbb-N\>\<times\>\<bbb-N\>>E<rsub|m,p>>.
+    As trivial <math|E<rsub|m,p>\<subseteq\>E> it follows that\ 
+
+    <\equation>
+      <label|eq 21.1130.300>E=<big|cup><rsub|<around*|(|m,p|)>\<in\>\<bbb-N\>\<times\>\<bbb-N\>>E<rsub|m,p>
+    </equation>
+
+    As <math|<around*|(|\<lambda\><rsup|n>|)><rsup|\<ast\>>> is a outer
+    measure and <math|\<forall\>m,p\<in\>\<bbb-N\>> we have
+    <math|E<rsub|m,p>\<subseteq\>E> it follows that
+    <math|<around*|(|\<lambda\><rsup|n>|)><rsup|\<ast\>><around*|(|E<rsub|m,p>|)>\<leqslant\><around*|(|\<lambda\><rsup|n>|)><rsup|\<ast\>><around*|(|E|)>=0>
+    which proves that\ 
+
+    <\equation*>
+      \<forall\><around*|(|m,p|)>\<in\>\<bbb-N\>\<times\>\<bbb-N\><text| we
+      have ><around*|(|\<lambda\><rsup|n>|)><rsup|\<ast\>><around*|(|E<rsub|m,p>|)>=0
+    </equation*>
+
+    \;
+  </proof>
+
+  <\lemma>
+    Let <math|n\<in\>\<bbb-N\>>, <math|a,b\<in\>\<bbb-R\><rsup|n>> with
+    <math|a\<leqslant\>b>, <math|\<varepsilon\>,\<delta\>\<in\>\<bbb-R\><rsup|\<ast\>>>
+    then there exist a <math|m\<in\>\<bbb-N\>> and a
+    <math|<around*|{|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|i>><around*|(|x<rsub|i>,\<delta\><rsub|i>|)>|}><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>>
+    such that:
+
+    <\enumerate>
+      <item><math|\<forall\>i\<in\>\<bbb-N\>>
+      <math|\<delta\><rsub|i>\<less\>\<delta\>>
+
+      <item><math|<around*|[|a,b|[>\<subseteq\><big|cup><rsub|i\<in\><around*|{|1,\<ldots\>,m|}>>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>><around*|(|x<rsub|i>,\<delta\><rsub|i>|)>>
+
+      <item><math|<big|sum><rsub|i=1><rsup|n><wide|\<lambda\>|\<wide-bar\>><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|n>><around*|(|x<rsub|i>,\<delta\><rsub|i>|)>|)>\<less\>vol<rsup|n><around*|(|<around*|[|a,b|[>|)>+\<varepsilon\>>
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    Let <math|i\<in\><around*|{|1,\<ldots\>,n|}>> then there\ 
+  </proof>
+
+  \;
 </body>
 
 <\initial>
@@ -8955,13 +9112,13 @@
     <associate|eq 14.252.165|<tuple|20|7>>
     <associate|eq 14.253.165|<tuple|21|7>>
     <associate|eq 14.254.165|<tuple|22|7>>
-    <associate|eq 14.290.294|<tuple|303|?>>
-    <associate|eq 14.291.294|<tuple|304|?>>
-    <associate|eq 14.292.294|<tuple|305|?>>
-    <associate|eq 14.293.291|<tuple|306|?>>
-    <associate|eq 14.294.294|<tuple|307|?>>
-    <associate|eq 14.295.294|<tuple|308|?>>
-    <associate|eq 14.296.294|<tuple|309|?>>
+    <associate|eq 14.290.294|<tuple|303|95>>
+    <associate|eq 14.291.294|<tuple|304|95>>
+    <associate|eq 14.292.294|<tuple|305|96>>
+    <associate|eq 14.293.291|<tuple|306|96>>
+    <associate|eq 14.294.294|<tuple|307|96>>
+    <associate|eq 14.295.294|<tuple|308|96>>
+    <associate|eq 14.296.294|<tuple|309|96>>
     <associate|eq 14.75.149|<tuple|43|19>>
     <associate|eq 14.76.149|<tuple|44|20>>
     <associate|eq 14.77.149|<tuple|45|20>>
@@ -9191,10 +9348,14 @@
     <associate|eq 21.1125.292|<tuple|296|94>>
     <associate|eq 21.1126.292|<tuple|297|94>>
     <associate|eq 21.1127.292|<tuple|298|94>>
+    <associate|eq 21.1127\<point\>300|<tuple|310|?>>
     <associate|eq 21.1128.292|<tuple|299|94>>
+    <associate|eq 21.1128\<point\>300|<tuple|311|?>>
     <associate|eq 21.1129.292|<tuple|300|94>>
     <associate|eq 21.1130.292|<tuple|301|95>>
+    <associate|eq 21.1130.300|<tuple|313|?>>
     <associate|eq 21.1131.292|<tuple|302|95>>
+    <associate|eq 21.1229.300|<tuple|312|?>>
     <associate|eq 21.27.273|<tuple|220|74>>
     <associate|eq 21.30.273|<tuple|221|74>>
     <associate|figure 20.6.234|<tuple|3|72>>
@@ -9222,6 +9383,7 @@
     <associate|lemma 21.578.291|<tuple|69|89>>
     <associate|lemma 21.579.291|<tuple|70|90>>
     <associate|lemma 21.587.292|<tuple|74|92>>
+    <associate|lemma 21.589.295|<tuple|77|97>>
     <associate|lemma 21.590.292|<tuple|75|94>>
     <associate|lemma 21.591.|<tuple|76|95>>
     <associate|measurability of image of a measurable set by a

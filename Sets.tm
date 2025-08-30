@@ -9287,8 +9287,7 @@
   </definition>
 
   <\theorem>
-    <label|order comparable property><label|order comparable
-    property><index|comparable elements>Let
+    <label|order comparable property><index|comparable elements>Let
     <math|<around*|\<langle\>|A,\<leqslant\>|\<rangle\>>> be a partial
     ordered class and <math|x,y\<in\>A> comparable elements then we have
     either <math|x\<leqslant\>y> or <math|y\<less\>x>
@@ -15337,6 +15336,7 @@
     <associate|order chain is a totally ordered class|<tuple|3.43|?>>
     <associate|order comparable|<tuple|3.38|?>>
     <associate|order comparable property|<tuple|3.39|?>>
+    <associate|order comparable property (1)|<tuple|3.39|?>>
     <associate|order composition of functions|<tuple|3.52|?>>
     <associate|order condition for isomorphism|<tuple|3.54|?>>
     <associate|order condition for isomorphism in a totallu ordered

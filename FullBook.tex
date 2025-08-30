@@ -9,31 +9,61 @@
 
 \begin{document}
 
-\title{Analysis}
+Of course. This is a topic that moves from standard graduate textbooks into more specialized literature. The definitions are often presented in the context of "differentiability on subsets" or as a precursor to concepts in non-smooth analysis and optimization theory, where functions are frequently defined on closed sets.
 
-\author{
-  Marc Mertens
-  \tmemail{marc.lisp@gmail.com}
-}
+Here are recommendations for texts where you can find rigorous treatments, along with explanations of what to look for in each.
 
-\date{February 21, 2024}
+1. Advanced Calculus and Analysis Texts
+These books bridge the gap between standard multivariable calculus and more advanced analysis, often taking care to define concepts on arbitrary domains.
 
-\maketitle
+"Advanced Calculus" by Gerald B. Folland
 
-{\tableofcontents}
+Why it's good: Folland is renowned for his clarity and rigor. In Chapter 2 (Differential Calculus), he explicitly defines differentiability for a function f defined on an arbitrary subset E of a normed space.
 
-\
+What to look for: He defines the derivative at a point a ∈ E by requiring that a be an interior point of E relative to some affine subspace. This is a sophisticated and precise way of capturing the idea that you can approach a from enough directions within E to define a unique linear map. He then proves the uniqueness of the derivative under this condition. This formulation directly generalizes the open set case (where the affine subspace is the whole space) and the endpoint case (where the affine subspace is the real line).
 
-\
+"Analysis II" by Herbert Amann and Joachim Escher
 
-\
+Why it's good: This is a comprehensive and modern treatment of analysis. The authors are very careful with definitions and domains.
 
-\
+What to look for: They often define concepts for functions f : X ⊇ U → Y where U is an arbitrary subset. They will then state theorems with the explicit hypothesis that a point is in the interior of U when necessary. This approach forces the reader to always consider the domain, making the compatibility with open sets self-evident. Proofs of uniqueness and linearity of the derivative are done under the assumption that the point is interior to the domain, which is the condition required for the limit to be well-defined in all directions.
 
-\
+2. Functional Analysis Texts
+These texts focus on the general theory in infinite-dimensional spaces, where the domain of a function (especially an operator) is not always open.
 
-\
+"Introductory Functional Analysis with Applications" by Erwin Kreyszig
 
-\printindex
+Why it's good: While it starts gently, Kreyszig is very precise. He defines the Fréchet derivative at a point x0 by requiring that the function is defined on a neighborhood of x0. This is the standard definition.
+
+How to use it: This book is excellent for understanding the proofs of uniqueness and the algebraic properties (chain rule, sum rule) in the "open set" setting. Mastering these proofs is a prerequisite for understanding how they might be generalized. The logic of the uniqueness proof (assuming two derivatives A and B and showing A-B=0) is the same core idea used in the more general case, but it relies critically on the ability to approach x0 from every direction.
+
+3. Specialized Texts on Nonlinear Analysis and Optimization
+This is where you will find the most explicit and general definitions, as dealing with constraints (e.g., x ≥ 0) inherently means working on closed sets.
+
+"Nonlinear Analysis" by Ralph E. Showalter (Monographs in Mathematics)
+
+Why it's good: This monograph is written with a high degree of care for technical details. Showalter often defines concepts for functions on subsets and uses the idea of the tangent cone (or contingent cone) explicitly.
+
+What to look for: The definition of the Fréchet derivative will be given in a limit form where h -> 0 with the constraint that x + h remains in the domain D. The uniqueness is guaranteed precisely when the tangent cone at the point is dense enough in the space (e.g., if it is the whole space, which is true for open sets). This provides a beautiful and deep generalization: differentiability requires a linear approximation that is good for all directions in the tangent cone of the domain.
+
+"Optimization and Nonlinear Analysis" by Alexander Ioffe and Vladimir Tikhomirov
+
+Why it's good: This is a classic text in the field. The authors are masters of this topic. They rigorously deal with differentiation on sets that are not open, as optimization problems are naturally posed on admissible sets (e.g., {x : g(x) ≤ 0}).
+
+What to look for: They will use the formalism of the tangent cone T_S(x) (the set of all directions v for which there exists sequences t_n -> 0+ and v_n -> v such that x + t_n v_n ∈ S). The derivative is then defined as a linear map A that satisfies:
+lim_{t->0+, v->u} [f(x + t v) - f(x) - t A(u)] / t = 0 for all u ∈ T_S(x).
+This is the most rigorous and general definition you will commonly find. The proof that this reduces to the standard definition when S is open is immediate because for an open set, T_S(x) is the whole space.
+
+How to Find the Proofs in These Texts
+Uniqueness: The standard proof assumes two candidates for the derivative, A and B. You consider the difference:
+|| (A - B)(h) || / ||h|| = || (f(x+h)-f(x)-A(h)) - (f(x+h)-f(x)-B(h)) ) || / ||h||
+By the triangle inequality, this is ≤ [o(||h||) + o(||h||)] / ||h|| -> 0.
+The critical step is concluding that (A-B)(h) = o(||h||) for all h in the tangent cone implies A = B. This is true if the tangent cone is a dense subset of the space. Since for an open set the tangent cone is the whole space, the proof holds. Books like Showalter's or Ioffe's will state this condition explicitly.
+
+Compatibility with Open Sets: This is often the easiest part to prove. If S is open, then for any point x ∈ S, there exists a ball B(x, δ) contained in S. Therefore, the set of allowable directions h is a full ball around 0. The general definition, which involves a limit over all sequences h_n -> 0 such that x+h_n ∈ S, now becomes a limit over all sequences converging to 0 (since for ||h_n|| < δ, this condition is automatically satisfied). This is verbatim the standard definition. Any text that gives the general definition will immediately note this.
+
+For a self-learner, I would recommend starting with Folland's Advanced Calculus for a very clear and rigorous exposition that hits the perfect sweet spot. If your interests lean heavily towards optimization, then diving into Ioffe & Tikhomirov or a modern text on variational analysis afterwards would be the natural next step.
+
+
 
 \end{document}

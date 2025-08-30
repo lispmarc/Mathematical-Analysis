@@ -263,7 +263,8 @@
     \ [lemma: <reference|lemma 16.5.178>] requires that <math|U> is a open
     set. Hence, as [lemma: <reference|lemma 16.5.178>] is used in the
     definition below of the derivative to ensure uniqueness of the derivative
-    at a point, the domain of functions with a derivative must be open.
+    at a point, the domain of functions with a derivative must be open. We
+    want to\ 
   </note>
 
   <\definition>
@@ -5949,7 +5950,7 @@
     <math|n\<in\>\<bbb-N\><rsub|0>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     normed spaces, <math|U,V> open sets in <math|X> with
-    <math|x\<in\>V\<subseteq\>UU>, <math|f:U\<rightarrow\>Y> a function then\ 
+    <math|x\<in\>V\<subseteq\>U>, <math|f:U\<rightarrow\>Y> a function then\ 
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|>|<cell|f<text| is >C<rsup|n><text| at
@@ -22685,6 +22686,215 @@
     16.446.145>].
   </proof>
 
+  <\definition>
+    <label|diff Frechet approximation><dueto|Fréchet approximation>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|A\<subseteq\>X>, <math|a\<in\>A>,
+    <math|L\<in\>L<around*|(|X,Y|)>> and <math|f:A\<rightarrow\>Y> a function
+    then <math|L> is a <with|font-series|bold|Fréchet approximation of >f at
+    <math|x> if <math|\<forall\>\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> there
+    exist a <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that\ 
+
+    <\equation*>
+      <text|<math|\<forall\>h\<in\>X<text| with
+      >x+h\<in\>A\<wedge\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\><text|
+      ><around*|\<\|\|\>|f<around*|(|x+h|)>-f<around*|(|x|)>-L<around*|(|h|)>|\<\|\|\>><rsub|Y>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>>
+    </equation*>
+  </definition>
+
+  We want now to find the set in <math|X> where two Fréchet approximations of
+  a function coincide. For this we introduce the concept of a tangent cone.\ 
+
+  <\definition>
+    <label|diff tangent cone><dueto|Tangent Cone>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
+    a normed space, <math|A\<subseteq\>X> and <math|a\<in\>A> then the
+    <with|font-series|bold|tangent cone of A at a noted as
+    <math|T<rsub|A><around*|(|a|)>>> is defined by\ 
+
+    <\equation*>
+      T<rsub|A><around*|(|a|)>=<around*|{|x\<in\>X\|\<exists\><around*|{|\<lambda\><rsub|n>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>\<bbb-R\><rsup|+>,\<exists\><around*|{|x<rsub|n>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>X<text|
+      such that ><tabular*|<tformat|<table|<row|<cell|\<forall\>n\<in\>\<bbb-N\>
+      <text| >\<lambda\><rsub|n+1>\<leqslant\>\<lambda\><rsub|n>\<wedge\>a+\<lambda\><rsub|n>\<cdot\>x<rsub|n>\<in\>A>>|<row|<cell|<below|lim|n\<rightarrow\>\<infty\>>\<lambda\><rsub|0><text|
+      exist and ><below|lim|n\<rightarrow\>\<infty\>>\<lambda\><rsub|n>=0>>|<row|<cell|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n><text|
+      exist and ><below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>=x>>>>>
+      \ <rsub|>|}>
+    </equation*>
+
+    \ 
+  </definition>
+
+  <\lemma>
+    <label|lemma 16.278.298>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|A\<subseteq\>X>, <math|a\<in\>A> and
+    <math|L<rsub|1>,L<rsub|2>\<in\>L<around*|(|X,Y|)>> such that
+    <math|L<rsub|1>> and <math|L<rsub|2>> are Fréchet approximations of
+    <math|f> at <math|a> then <math|\<forall\>x\<in\><wide|span<around*|(|T<rsub|A><around*|(|a|)>|)>|\<wide-bar\>>>
+    we have <math|L<rsub|1><around*|(|x|)>=L<rsub|2><around*|(|x|)>>.
+  </lemma>
+
+  <\proof>
+    Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> then, as
+    <math|L<rsub|1>> and <math|L<rsub|2>> are Fréchet approximations of
+    <math|f> at <math|a>, there exist <math|\<delta\><rsub|1>,\<delta\><rsub|2>\<in\>\<bbb-R\><rsup|+>>
+    such that\ 
+
+    <\equation>
+      <\text>
+        <math|<label|eq 16.463.298>\<forall\>h\<in\>X<text| with
+        >x+h\<in\>A\<wedge\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\><rsub|1><text|
+        ><around*|\<\|\|\>|f<around*|(|a+h|)>-f<around*|(|a|)>-L<rsub|1><around*|(|h|)>|\<\|\|\>><rsub|Y>\<leqslant\><frac|\<varepsilon\>|2>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>
+      </text>
+    </equation>
+
+    <\equation>
+      <text|<math|<label|eq 16.464.298>\<forall\>h\<in\>X<text| with
+      >x+h\<in\>A\<wedge\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\><rsub|2><text|
+      ><around*|\<\|\|\>|f<around*|(|a+h|)>-f<around*|(|a|)>-L<rsub|2><around*|(|h|)>|\<\|\|\>><rsub|Y>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>>
+    </equation>
+
+    Take <math|\<delta\>=min<around*|(|\<delta\><rsub|1>,\<delta\><rsub|2>|)>>
+    then we have <math|\<forall\>h\<in\>X<text| with
+    >x+h\<in\>A\<wedge\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\>>
+    that
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|<around*|(|L<rsub|1>-L<rsub|2>|)><around*|(|h|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|<around*|\<\|\|\>|L<rsub|1><around*|(|h|)>-L<rsub|2><around*|(|h|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|f<around*|(|a+h|)>-f<around*|(|a|)>-L<rsub|2><around*|(|h|)>-<around*|(|f<around*|(|a+h|)>-f<around*|(|a|)>-L<rsub|1><around*|(|h|)>|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|f<around*|(|a+h|)>-f<around*|(|a|)>-L<rsub|2><around*|(|h|)>|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|f<around*|(|a+h|)>-f<around*|(|a|)>-L<rsub|1><around*|(|h|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[eqs:
+      <reference|eq 16.463.298>, <reference|eq
+      16.464.298>]>>>|<cell|<frac|\<varepsilon\>|2>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>+<frac|\<varepsilon\>|2>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>>|<row|<cell|>|<cell|=>|<cell|\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>>>>
+    </eqnarray*>
+
+    in other words
+
+    <\equation>
+      <label|eq 16.465.298>\<forall\>h\<in\>X<text| with
+      >x+h\<in\>A\<wedge\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>\<less\>\<delta\><text|
+      we have ><around*|\<\|\|\>|<around*|(|L<rsub|1>-L<rsub|2>|)><around*|(|h|)>|\<\|\|\>><rsub|Y>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>
+    </equation>
+
+    Let <math|x\<in\>T<rsub|A><around*|(|a|)>> then <math|>there exist
+    <math|<around*|{|\<lambda\><rsub|n>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>\<bbb-R\><rsup|+>,\<exists\><around*|{|x<rsub|n>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>X>
+    such that <math|x=<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>>,
+    <math|<below|lim|n\<rightarrow\>\<infty\>>\<lambda\><rsub|n>=0> and
+    <math|\<forall\>n\<in\>\<bbb-N\>> <math|\<lambda\><rsub|n+1>\<leqslant\>\<lambda\><rsub|n>\<wedge\>a+\<lambda\><rsub|n>\<cdot\>x<rsub|n>\<in\>A>.
+    As <math|x=<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>> there exist by
+    [theorem: <reference|limit convergence implies bounded>] a
+    <math|M\<in\>\<bbb-R\><rsup|+>> such that\ 
+
+    <\equation*>
+      \<forall\>n\<in\>\<bbb-N\><text| ><around*|\<\|\|\>|x<rsub|n>|\<\|\|\>><rsub|X>\<leqslant\>M
+    </equation*>
+
+    From <math|<below|lim|n\<rightarrow\>\<infty\>>\<lambda\><rsub|n>=0>
+    there exist a <math|N\<in\>\<bbb-N\>> such that
+    <math|<around*|\||\<lambda\><rsub|n>|\|>=<around*|\||\<lambda\><rsub|n>-0|\|>\<less\><frac|\<delta\>|2\<cdot\>M>>
+    <math|\<forall\>n\<in\><around*|{|N<rsub|1>,\<ldots\>,\<infty\>|}>> hence
+    we have that
+
+    <\equation>
+      \<forall\>n\<in\><around*|{|N<rsub|1>,\<ldots\>,\<infty\>|}><text|
+      ><around*|\<\|\|\>|\<lambda\><rsub|n>\<cdot\>x<rsub|n>|\<\|\|\>><rsub|X>=<around*|\||\<lambda\><rsub|n>|\|>\<cdot\><around*|\<\|\|\>|x<rsub|n>|\<\|\|\>><rsub|x>\<leqslant\><around*|\||\<lambda\><rsub|n>|\|>\<cdot\>M\<less\><frac|\<delta\>|M>\<cdot\>M\<less\>\<delta\>
+    </equation>
+
+    Further as <math|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>=x> there
+    exist a <math|N<rsub|2>\<in\>\<bbb-N\>> such that
+    <math|\<forall\>n\<in\><around*|{|N<rsub|1>,\<ldots\>,\<infty\>|}>> we
+    have <math|<around*|\<\|\|\>|x<rsub|n>-x|\<\|\|\>><rsub|X>\<less\>1>. So
+    if we take <math|N=max<around*|(|N<rsub|1>,N<rsub|2>|)>> then we have\ 
+
+    <\equation>
+      <label|eq 16.467.298>\<forall\>n\<in\><around*|{|N,\<ldots\>,\<infty\>|}><text|
+      ><around*|\||\<lambda\><rsub|n>\<cdot\>x<rsub|n>|\|>\<less\>\<delta\><text|
+      and ><around*|\<\|\|\>|x<rsub|n>-x|\<\|\|\>><rsub|X>\<less\>1
+    </equation>
+
+    If <math|n\<in\><around*|{|N,\<ldots\>,\<infty\>|}>> then from the above
+    and the fact that <math|\<forall\>n\<in\>\<bbb-N\>>
+    <math|a+\<lambda\><rsub|n>\<cdot\>x<rsub|n>\<in\>A> it follow by [eq:
+    <reference|eq 16.465.298>]\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|<around*|(|L<rsub|1>-L<rsub|2>|)><around*|(|\<lambda\><rsub|n>\<cdot\>x<rsub|n>|)>|\<\|\|\>><rsub|Y>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|\<lambda\><rsub|n>\<cdot\>x<rsub|n>|\<\|\|\>><rsub|X>\<equallim\><rsub|0\<less\>\<lambda\><rsub|n>>\<varepsilon\>\<cdot\>\<lambda\><rsub|n>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|n>
+    </equation*>
+
+    hence we have <math|\<lambda\><rsub|n>\<cdot\><around*|\<\|\|\>|<around*|(|L<rsub|1>-L<rsub|2>|)><around*|(|x<rsub|n>|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|\<lambda\>\<cdot\><around*|(|L<rsub|1>-L<rsub|2>|)><around*|(|x<rsub|n>|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|<around*|(|L<rsub|1>-L<rsub|2>|)><around*|(|\<lambda\><rsub|n>\<cdot\>x<rsub|n>|)>|\<\|\|\>><rsub|Y>\<leqslant\>\<varepsilon\>\<cdot\>\<lambda\><rsub|n>\<cdot\><around*|\<\|\|\>|x<rsub|n>|\<\|\|\>>>.
+    After dividing both sides by <math|\<lambda\><rsub|n>> this gives\ 
+
+    <\equation>
+      <label|eq 16.468.298>\<forall\>n\<in\><around*|{|N,\<ldots\>,\<infty\>|}><text|
+      we have ><around*|\<\|\|\>|<around*|(|L<rsub|1>-L<rsub|2>|)><around*|(|x<rsub|n>|)>|\<\|\|\>><rsub|Y>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|x<rsub|n>|\<\|\|\>><rsub|X>=<rsub|><around*|\<\|\|\>|\<varepsilon\>\<cdot\>x<rsub|n>|\<\|\|\>><rsub|X>
+    </equation>
+
+    As <math|L<rsub|1>-L<rsub|2>\<in\>L<around*|(|X,Y|)>> hence continuous we
+    have by [theorem: <reference|limit and continuity>] and the fact that
+    <math|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>=x> that
+    <math|<below|lim|n\<rightarrow\>\<infty\>><around*|(|L<rsub|1>-L<rsub|2>|)><around*|(|x<rsub|n>|)>=<around*|(|L<rsub|1>-L<rsub|2>|)><around*|(|x|)>>.
+    Using then [theorem: <reference|limit of norm is norm of limit>] it
+    follows that\ 
+
+    <\equation>
+      <label|eq 16.469.298><below|lim|n\<rightarrow\>\<infty\>><around*|\<\|\|\>|<around*|(|L<rsub|1>-L<rsub|2>|)><around*|(|x<rsub|n>|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|<around*|(|L<rsub|1>-L<rsub|2>|)><around*|(|x|)>|\<\|\|\>><rsub|Y>
+    </equation>
+
+    Using [theorems: <reference|sequence limit start value>, <reference|limit
+    limit of sequence limited by another sequence>] on [eq: <reference|eq
+    16.468.298>] it follows that\ 
+
+    <\equation*>
+      <below|lim|n\<rightarrow\>\<circ\>><around*|\<\|\|\>|<around*|(|L<rsub|1>-L<rsub|2>|)><around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\><below|lim|n\<rightarrow\>\<infty\>><around*|\<\|\|\>|\<varepsilon\>\<cdot\>x<rsub|n>|\<\|\|\>><rsub|X>=\<varepsilon\>\<cdot\><below|lim|n\<rightarrow\>\<infty\>><around*|\<\|\|\>|x<rsub|n>|\<\|\|\>><rsub|X>=\<varepsilon\>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>
+    </equation*>
+
+    Combining this with [eq: <reference|eq 16.469.298>] proves that
+    <math|<around*|\<\|\|\>|<around*|(|L<rsub|1>-L<rsub|2>|)><around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>.
+    As <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>> was chosen arbitrary it
+    follows using [theorem: <reference|complex Archimedean property
+    consequence (2)>] that <math|<around*|\<\|\|\>|<around*|(|L<rsub|1>-L<rsub|2>|)><around*|(|x|)>|\<\|\|\>><rsub|Y>=0>,
+    hence we must have <math|<around*|(|L<rsub|1>-L<rsub|2>|)><around*|(|x|)>=0>.
+    Summarized\ 
+
+    <\equation>
+      <label|eq 16.470.298>\<forall\>x\<in\>T<rsub|A><around*|(|a|)><text| we
+      have ><around*|(|L<rsub|1>-L<rsub|2>|)><around*|(|x|)>=0
+    </equation>
+
+    Let now <math|x\<in\>span<around*|(|T<rsub|A><around*|(|a|)>|)>> then
+    there exists <math|n\<in\>\<bbb-N\>,<around*|{|\<alpha\><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-K\>>
+    and <math|<around*|{|x<rsub|n>|}><rsub|n\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>T<rsub|A><around*|(|a|)>>
+    <math|>such that <math|x=<big|sum><rsub|i=1><rsup|n>\<alpha\><rsub|i>\<cdot\>x<rsub|i>>
+    [see theorem: <reference|linear span (1)>]. Then we have
+
+    <\equation*>
+      <around*|(|L<rsub|1>-L<rsub|2>|)><around*|(|x|)>=<around*|(|L<rsub|1>-L<rsub|2>|)><around*|(|<big|sum><rsub|i=1><rsup|n>\<alpha\><rsub|i>\<cdot\>x<rsub|i>|)>=<big|sum><rsub|i=1><rsup|n>\<alpha\>\<cdot\><around*|(|L<rsub|1>-L<rsub|2>|)><around*|(|x<rsub|i>|)>\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.470.298>]>><big|sum><rsub|i=1><rsup|n>\<alpha\><rsub|i>\<cdot\>0=0
+    </equation*>
+
+    Hence we have\ 
+
+    <\equation*>
+      \<forall\>x\<in\>span<around*|(|T<rsub|A><around*|(|a|)>|)><text| that
+      ><around*|(|L<rsub|1>-L<rsub|2>|)><around*|(|x|)>=0
+    </equation*>
+
+    Let <math|x\<in\><wide|span<around*|(|T<rsub|A><around*|(|a|)>|)>|\<wide-bar\>>>
+    then by [theorem: <inactive|<reference|>>
+
+    <\equation*>
+      \;
+    </equation*>
+
+    \;
+  </proof>
+
+  \;
+
+  \;
+
+  \;
+
+  \ 
+
   \;
 
   \;
@@ -22697,7 +22907,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|15>
-    <associate|page-first|889>
+    <associate|page-first|891>
     <associate|par-first|0tab>
     <associate|par-mode|justify>
     <associate|section-nr|0>
@@ -22707,6 +22917,7 @@
 
 <\references>
   <\collection>
+    <associate||<tuple|16.276|?>>
     <associate|auto-1|<tuple|16|?>>
     <associate|auto-10|<tuple|<with|mode|<quote|math>|\<varepsilon\>>-mapping|?>>
     <associate|auto-11|<tuple|16.1.4|?>>
@@ -22777,6 +22988,7 @@
     <associate|auto-69|<tuple|implicit function theorem (1)|?>>
     <associate|auto-7|<tuple|<with|mode|<quote|math>|f<rprime|'><around*|(|x|)>>|?>>
     <associate|auto-70|<tuple|implict function theorem (2)|?>>
+    <associate|auto-71|<tuple|16.7|?>>
     <associate|auto-8|<tuple|16.1.3|?>>
     <associate|auto-9|<tuple|differentiability|?>>
     <associate|conjecture 16.245.136|<tuple|16.265|?>>
@@ -22799,6 +23011,7 @@
     <associate|diff C^n on a set|<tuple|16.109|?>>
     <associate|diff C^n on a set condition|<tuple|16.110|?>>
     <associate|diff D^f=D^(n-1)D^1f|<tuple|16.123|?>>
+    <associate|diff Frechet approximation|<tuple|16.276|?>>
     <associate|diff Frechet differentation implies partial differentiability
     |<tuple|16.53|?>>
     <associate|diff GL(X) is a group|<tuple|16.245|?>>
@@ -22950,7 +23163,6 @@
     <associate|diff local diffeomorphism|<tuple|16.262|?>>
     <associate|diff mean value theorem (0)|<tuple|16.176|?>>
     <associate|diff mean value theorem (1)|<tuple|16.173|?>>
-    <associate|diff mean value theorem (1,1)|<tuple|16.174|?>>
     <associate|diff mean value theorem (2)|<tuple|16.176|?>>
     <associate|diff mean value theorem (2.1)|<tuple|16.181|?>>
     <associate|diff mean value theorem (3)|<tuple|16.182|?>>
@@ -22987,6 +23199,7 @@
     <associate|diff scalar product function has a derivate|<tuple|16.15|?>>
     <associate|diff second derivate convex concave|<tuple|16.158|?>>
     <associate|diff space of toplinear isomorphism|<tuple|16.244|?>>
+    <associate|diff tangent cone|<tuple|16.277|?>>
     <associate|diff toplinear isomorphism between Banach
     spaces|<tuple|16.243|?>>
     <associate|diff translation is infinite differentiable|<tuple|16.134|?>>
@@ -22997,6 +23210,8 @@
     <associate|diff vector functions (1)|<tuple|16.66|?>>
     <associate|diff vector functions (2)|<tuple|16.68|?>>
     <associate|diff vector functions and linearity|<tuple|16.65|?>>
+    <associate|ediff|<tuple|16.276|?>>
+    <associate|ediff (1)|<tuple|16.277|?>>
     <associate|eq 14.411.143|<tuple|16.426|?>>
     <associate|eq 16.1.177|<tuple|16.2|?>>
     <associate|eq 16.1.194|<tuple|16.1|?>>
@@ -23384,7 +23599,14 @@
     <associate|eq 16.45.153|<tuple|16.45|?>>
     <associate|eq 16.45.188|<tuple|16.49|?>>
     <associate|eq 16.46.188|<tuple|16.50|?>>
+    <associate|eq 16.463.298|<tuple|16.463|?>>
+    <associate|eq 16.464.298|<tuple|16.464|?>>
+    <associate|eq 16.465.298|<tuple|16.465|?>>
+    <associate|eq 16.467.298|<tuple|16.467|?>>
+    <associate|eq 16.468.298|<tuple|16.468|?>>
+    <associate|eq 16.469.298|<tuple|16.469|?>>
     <associate|eq 16.47.188|<tuple|16.51|?>>
+    <associate|eq 16.470.298|<tuple|16.470|?>>
     <associate|eq 16.48.188|<tuple|16.52|?>>
     <associate|eq 16.49.189|<tuple|16.53|?>>
     <associate|eq 16.5.178|<tuple|16.6|?>>
@@ -23454,6 +23676,8 @@
     <associate|eq 16.91.199|<tuple|16.116|?>>
     <associate|eq 16.92.194|<tuple|16.127|?>>
     <associate|eq 16.95.181|<tuple|16.95|?>>
+    <associate|extend diff|<tuple|16.276|?>>
+    <associate|extend diff is diff on open sets|<tuple|16.278|?>>
     <associate|inverse function and derivate|<tuple|16.272|?>>
     <associate|lemma 16.101.194|<tuple|16.145|?>>
     <associate|lemma 16.104.194|<tuple|16.190|?>>
@@ -23487,6 +23711,7 @@
     <associate|lemma 16.23.181|<tuple|16.70|?>>
     <associate|lemma 16.24.178|<tuple|16.46|?>>
     <associate|lemma 16.254.143|<tuple|16.273|?>>
+    <associate|lemma 16.278.298|<tuple|16.278|?>>
     <associate|lemma 16.5.178|<tuple|16.10|?>>
     <associate|lemma 16.51.186|<tuple|16.83|?>>
     <associate|lemma 16.53.186|<tuple|16.85|?>>
@@ -23726,6 +23951,10 @@
       16.6<space|2spc>Inverse Function Theorem
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-61>
+
+      16.7<space|2spc>Differentiation on non open sets
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-71>
     </associate>
   </collection>
 </auxiliary>

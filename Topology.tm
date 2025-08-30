@@ -9259,8 +9259,6 @@
     </description>
   </proof>
 
-  TODO Check the Hahn-Banach theorem
-
   <subsection|The Hahn-Banach theorem>
 
   We prove now a important result in functional analysis, the Hahn-Banach
@@ -9303,7 +9301,8 @@
       ><around*|\<\|\|\>|L<rsub|x>|\<\|\|\>><rsub|L<around*|(|Y<rsub|x>,\<bbb-R\>|)>>=<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>
     </equation*>
 
-    In other words every continuous linear functionals on <math|Y> can be
+    In other words if <math|Y> is a <with|font-series|bold|proper> subset of
+    <math|X> then every continuous linear functionals on <math|Y> can be
     extended to a sub-space, one dimensional larger, perserving the operator
     norm.\ 
   </lemma>
@@ -9339,7 +9338,8 @@
       </equation*>
 
       <item*|<math|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>\<neq\>0>>Define
-      then <math|K\<in\>L<around*|(|Y,\<bbb-R\>|)>> by\ 
+      then <math|K\<in\>L<around*|(|Y,\<bbb-R\>|)>> [note that
+      <math|L<around*|(|X,\<bbb-R\>|)>> is a vector space] by\ 
 
       <\equation>
         <label|eq 14.277.294>K=<frac|1|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>>\<cdot\>L
@@ -9355,7 +9355,7 @@
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|K<around*|(|u|)>+K<around*|(|v|)>>|<cell|\<leqslant\>>|<cell|<around*|\||K<around*|(|u|)>+K<around*|(|v|)>|\|>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||K<around*|(|u+v|)>|\|>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|K|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>\<cdot\><around*|\<\|\|\>|u+v|\<\|\|\>><rsub|\|Y>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
-        <reference|eq 14.278.294>]>>>|<cell|<around*|\<\|\|\>|u+v|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|u+v|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|u-x+x+v|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|u-x|\<\|\|\>>+<around*|\<\|\|\>|x+v|\<\|\|\>>>>>>
+        <reference|eq 14.278.294>]>>>|<cell|<around*|\<\|\|\>|u+v|\<\|\|\>><rsub|\|Y>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|u+v|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|u-x+x+v|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|u-x|\<\|\|\>>+<around*|\<\|\|\>|x+v|\<\|\|\>>>>>>
       </eqnarray*>
 
       so that\ 
@@ -9394,8 +9394,8 @@
       </equation*>
 
       Let <math|u,v\<in\>Y<rsub|x>> and <math|\<alpha\>\<in\>\<bbb-R\>> then
-      <math|u=z<rsub|u>+\<lambda\><rsub|y>\<cdot\>x>,
-      <math|v=z<rsub|v>+\<lambda\><rsub|y>\<cdot\>x> and
+      <math|u=z<rsub|u>+\<lambda\><rsub|u>\<cdot\>x>,
+      <math|v=z<rsub|v>+\<lambda\><rsub|v>\<cdot\>x> and
 
       <\equation*>
         u+\<alpha\>\<cdot\>v=<around*|(|z<rsub|u>+\<alpha\>\<cdot\>z<rsub|v>|)>+<around*|(|\<lambda\><rsub|u>+\<alpha\>\<cdot\>\<lambda\><rsub|v>|)>\<cdot\>x
@@ -9431,8 +9431,8 @@
         K<around*|(|<frac|1|\<lambda\>>\<cdot\>u|)>-M\<leqslant\><around*|\<\|\|\>|<frac|1|\<lambda\>>\<cdot\>u-x|\<\|\|\>>\<wedge\>M+K<around*|(|<frac|1|\<lambda\>>\<cdot\>u|)>\<leqslant\><around*|\<\|\|\>|<frac|1|\<lambda\>>\<cdot\>u+x|\<\|\|\>>
       </equation*>
 
-      which after multiplying both sides of the above by <math|\<lambda\>>
-      taking in account that <math|0\<less\>\<lambda\>> we have
+      which after multiplying both sides of the above by <math|\<lambda\>>,
+      taking in account that <math|0\<less\>\<lambda\>>, we have
 
       <\equation*>
         K<around*|(|u|)>-\<lambda\>\<cdot\>M\<leqslant\><around*|\<\|\|\>|u-\<lambda\>\<cdot\>x|\<\|\|\>>\<wedge\>\<lambda\>\<cdot\>M+K<around*|(|u|)>\<leqslant\><around*|\<\|\|\>|u+\<lambda\>\<cdot\>x|\<\|\|\>>
@@ -9491,7 +9491,7 @@
 
         <\equation*>
           <around*|\||K<rsub|x><around*|(|y|)>|\|>=<around*|\||K<around*|(|z<rsub|y>|)>+0\<cdot\>M|\|>=<around*|\||K<around*|(|z<rsub|y>|)>|\|>\<leqslant\><around*|\<\|\|\>|K|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>\<cdot\><around*|\<\|\|\>|z<rsub|y>|\<\|\|\>><rsub|\|Y><below|=|<text|[eq:
-          <reference|eq 14.278.294>]>><around*|\<\|\|\>|z<rsub|y>|\<\|\|\>>=<around*|\<\|\|\>|y|\<\|\|\>>
+          <reference|eq 14.278.294>]>><around*|\<\|\|\>|z<rsub|y>|\<\|\|\>><rsub|\|Y>=<around*|\<\|\|\>|z<rsub|y>|\<\|\|\>>=<around*|\<\|\|\>|y|\<\|\|\>>
         </equation*>
 
         <item*|<math|0\<less\>\<lambda\><rsub|y>>>Then
@@ -9537,17 +9537,12 @@
 
       So we have proved that <math|\<forall\>y\<in\>Y<rsub|x>>
       \ <math|<around*|\||K<rsub|x><around*|(|y|)>|\|>\<leqslant\><around*|\<\|\|\>|y|\<\|\|\>>=<around*|\<\|\|\>|y|\<\|\|\>><rsub|\|Y<rsub|x>>>
-      which proves by [theorem: <reference|continuity norm on L(X,Y)>] that\ 
+      which proves by [theorems: <reference|continuity linear mapping
+      (1)>,<reference|continuity norm on L(X,Y)>] that\ 
 
       <\equation>
-        <label|eq 14.286.294><around*|\<\|\|\>|K<rsub|x>|\<\|\|\>><rsub|L<around*|(|Y<rsub|x>,\<bbb-R\>|)>>\<leqslant\>1
-      </equation>
-
-      which together with [eq: <reference|eq 14.280.294>] proves by [theorem:
-      <reference|continuity linear mapping (1)>] that\ 
-
-      <\equation>
-        <label|eq 14.287.294>K<rsub|x>\<in\>L<around*|(|Y<rsub|x>,\<bbb-R\>|)>
+        <label|eq 14.286.294>K<rsub|x>\<in\>L<around*|(|Y<rsub|x>,\<bbb-R\>|)><text|
+        and ><around*|\<\|\|\>|K<rsub|x>|\<\|\|\>><rsub|L<around*|(|Y<rsub|x>,\<bbb-R\>|)>>\<leqslant\>1
       </equation>
 
       Let <math|y\<in\>Y> then <math|y=y+0=y+0\<cdot\>x> so that
@@ -9558,14 +9553,11 @@
         <label|eq 14.288.294><around*|(|K<rsub|x>|)><rsub|\|Y>=K
       </equation>
 
-      Assume now that <math|<around*|\<\|\|\>|K<rsub|x>|\<\|\|\>><rsub|L<around*|(|X,y|)>><rsub|>\<less\>1>
-      then there exist a <math|\<delta\>\<in\>\<bbb-R\>> such that
-      <math|><math|<around*|\<\|\|\>|K<rsub|x>|\<\|\|\>><rsub|L<around*|(|X,y|)>><rsub|>\<less\>\<delta\>\<less\>1>.
+      Assume now that <math|<around*|\<\|\|\>|K<rsub|x>|\<\|\|\>><rsub|L<around*|(|X,\<bbb-R\>|)>><rsub|>\<less\>1>.
       As <math|\<forall\>y\<in\>Y> we have
-      <math|<around*|\||K<around*|(|y|)>|\|>=<around*|\||K<rsub|x><around*|(|y|)>|\|><below|\<leqslant\>|<text|[eq:
-      <reference|eq 14.286.294>]>><around*|\<\|\|\>|y|\<\|\|\>>=<around*|\<\|\|\>|y<rsub|>|\<\|\|\>><rsub|\|Y>>
+      <math|<around*|\||K<around*|(|y|)>|\|>=<around*|\||K<rsub|x><around*|(|y|)>|\|>\<leqslant\><around*|\<\|\|\>|K<rsub|x>|\<\|\|\>><rsub|L<around*|(|Y<rsub|x>,\<bbb-R\>|)>>\<cdot\><around*|\<\|\|\>|y|\<\|\|\>><rsub|Y<rsub|x>><rsub|\|>>
       it follows from [theorem: <reference|continuity norm on L(X,Y)>] that
-      <math|<around*|\<\|\|\>|K|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>\<leqslant\>\<delta\>\<less\>1>
+      <math|<around*|\<\|\|\>|K|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>\<leqslant\><around*|\<\|\|\>|K<rsub|x>|\<\|\|\>><rsub|L<around*|(|Y<rsub|x>,\<bbb-R\>|)>>\<less\>1>
       which contradicts <math|<around*|\<\|\|\>|K|\<\|\|\>><rsub|L<around*|(|X,Y|)>>=1>.
       Hence we must have that\ 
 
@@ -9575,7 +9567,7 @@
 
       Let <math|L<rsub|x>=<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>\<cdot\>K<rsub|x>>
       then as <math|L<around*|(|Y<rsub|x>,\<bbb-R\>|)>> is a vector space it
-      follows from [eq: <reference|eq 14.287.294>] that\ 
+      follows from [eq: <reference|eq 14.286.294>] that\ 
 
       <\equation*>
         L<rsub|x>\<in\>L<around*|(|Y<rsub|x>,\<bbb-R\>|)>
@@ -9619,12 +9611,13 @@
     </equation*>
 
     <\note>
-      As <math|Y\<subseteq\>Y>, <math|L\<in\><around*|(|Y,\<bbb-R\>|)>,L<rsub|\|Y>=L>
-      and <math|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>=<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>>
+      As <math|Y\<subseteq\>Y\<subseteq\>X>,
+      <math|L\<in\><around*|(|Y,\<bbb-R\>|)>,L<rsub|\|Y>=L> and
+      <math|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>=<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|Y,\<bbb-R\>|)>>>
       it follows that
 
       <\equation*>
-        <around*|(|Y,L|)>\<in\>\<cal-E\><rsub|X\<less\>Y,L>.
+        <around*|(|Y,L|)>\<in\>\<cal-E\><rsub|X,Y,L>
       </equation*>
     </note>
   </definition>
@@ -9646,7 +9639,9 @@
 
     then <math|\<preccurlyeq\>> is a partial order on
     <math|\<cal-E\><rsub|X,Y,L>> [see definitions: <reference|order order
-    relation>, <reference|order partial ordered class>].\ 
+    relation>, <reference|order partial ordered class>] making
+    <math|<around*|\<langle\>|\<cal-E\><rsub|X,Y,L>,\<preccurlyeq\>|\<rangle\>>>
+    a partial ordered set.
   </lemma>
 
   <\proof>
@@ -9697,13 +9692,13 @@
   </lemma>
 
   <\proof>
-    Let <math|\<cal-F\>> be a chain in <math|\<cal-E\><rsub|X,Y,L>> then we
-    have either:\ 
+    Let <math|\<cal-F\>> be a chain in <math|\<cal-E\><rsub|X,Y,L>> we have
+    either:\ 
 
     <\description>
       <item*|<math|\<cal-F\>=\<varnothing\>>>Then we have
-      <math|\<forall\><around*|(|Z,Y|)>\<in\>\<cal-F\>> that
-      <math|<around*|(|Z,Y|)>\<preccurlyeq\><around*|(|Y,L|)>> vacuously
+      <math|\<forall\><around*|(|Z,K|)>\<in\>\<cal-F\>> that
+      <math|<around*|(|Z,K|)>\<preccurlyeq\><around*|(|Y,L|)>> vacuously
       which as <math|<around*|(|Y,L|)>\<in\>\<cal-E\><rsub|X,Y,L>> proves
       that <math|\<cal-F\>=\<varnothing\>> has a upper bound in
       <math|\<cal-E\><rsub|X,Y,L>>.\ 
@@ -9753,8 +9748,8 @@
       </equation>
 
       Define now <math|G=<big|cup><rsub|<around*|(|Z,K|)>\<in\>\<cal-F\>>K\<subseteq\>R\<times\>\<bbb-R\>>
-      [note that as <math|K> is a function from <math|Z> to <math|\<bbb-R\>>
-      <rigid|<math|K\<subseteq\>Z\<times\>\<bbb-R\>\<subseteq\>R\<times\>\<bbb-R\>>]>.
+      [note that as <math|K> is a function from <math|Z> to <math|\<bbb-R\>
+      so that> <rigid|<math|K\<subseteq\>Z\<times\>\<bbb-R\>\<subseteq\>R\<times\>\<bbb-R\>>]>.
       If <math|<around*|(|x,y|)>,<around*|(|x,y<rprime|'>|)>\<in\>G> then
       there exist <math|<around*|(|Z<rsub|1>,K<rsub|1>|)>,<around*|(|Z<rsub|2>,K<rsub|2>|)>\<in\>\<cal-F\>>
       such that <math|<around*|(|x,y|)>\<in\>K<rsub|1>\<wedge\><around*|(|x,y<rprime|'>|)>\<in\>K<rsub|2>>
@@ -9782,8 +9777,9 @@
       If <math|x\<in\>R> then there exist a
       <math|<around*|(|Z,K|)>\<in\>\<cal-F\>> such that
       <math|x\<in\>Z=dom<around*|(|K|)>> so there exist a
-      <math|y\<in\>\<bbb-R\>> such that <math|<around*|(|x,y|)>\<in\>K> which
-      proves that <math|x\<in\>dom<around*|(|G|)>>. Hence using [theorem:
+      <math|y\<in\>\<bbb-R\>> such that <math|<around*|(|x,y|)>\<in\>K\<subseteq\><big|cup><rsub|<around*|(|Z,K|)>\<in\>\<cal-F\>>K=G>
+      which proves that <math|x\<in\>dom<around*|(|G|)>>. Hence
+      <math|R\<subseteq\>dom<around*|(|G|)>> and using [theorem:
       <reference|function condition (1)>[ it follows that\ 
 
       <\equation>
@@ -9838,9 +9834,10 @@
       As <math|\<cal-F\>\<neq\>\<varnothing\>> there exist a
       <math|<around*|(|Z<rsub|0>,K<rsub|0>|)>\<in\>\<cal-F\>\<subseteq\>\<cal-E\><rsub|X,Y,L>>
       so that <math|<around*|(|K<rsub|0>|)><rsub|\|Y>=L>. Hence
-      <math|\<forall\>x\<in\>Y> we have <math|L<around*|(|x|)>=K<rsub|0><around*|(|x|)>>
-      so that by [eq: <reference|eq 14.295.294>]
-      <math|L<around*|(|x|)>=G<around*|(|x|)>> which proves that\ 
+      <math|\<forall\>x\<in\>Y\<subseteq\>Z<rsub|0>> we have
+      <math|L<around*|(|x|)>=K<rsub|0><around*|(|x|)>> so that by [eq:
+      <reference|eq 14.295.294>] <math|L<around*|(|x|)>=G<around*|(|x|)>>
+      which proves that\ 
 
       <\equation>
         <label|eq 14.297.294>G<rsub|\|Y>=L
@@ -9930,9 +9927,10 @@
 
     Assume now that <math|Z<rsub|m>\<neq\>X> then there exist a
     <math|x\<in\>X\\Z<rsub|m>> and we can use [lemma: <reference|lemma
-    14.413.294>] that for <math|Z=span<around*|(|Z<rsub|m><big|cup><around*|{|x|}>|)>>
-    a sub space of <math|X> there exist a
-    <math|K\<in\>L<around*|(|Z,\<bbb-R\>|)>> such that\ 
+    14.413.294>] from which it follows that for
+    <math|Z=span<around*|(|Z<rsub|m><big|cup><around*|{|x|}>|)>,> a sub space
+    of <math|X>, there exist a <math|K\<in\>L<around*|(|Z,\<bbb-R\>|)>> such
+    that\ 
 
     <\equation>
       <label|eq 14.302.294>K<rsub|\|Z<rsub|m>>=K<rsub|m><text| and
@@ -9952,18 +9950,17 @@
 
     which proves that\ 
 
-    <\equation>
-      <label|eq 14.303.294>Y\<subseteq\>Z<text| where >Z<text| is a sub-space
-      of >X
-    </equation>
+    <\equation*>
+      Y\<subseteq\>Z<text| where >Z<text| is a sub-space of >X
+    </equation*>
 
     Further <math|\<forall\>x\<in\>Y> we have
     <math|L<around*|(|x|)>\<equallim\><rsub|<around*|(|K<rsub|m>|)><rsub|\|Y>=L>K<rsub|m><around*|(|x|)><below|=|<text|[eq:
     <reference|eq 14.302.294>]>>K<around*|(|x|)>> so that\ 
 
-    <\equation>
-      <label|eq 14.303.294>K<rsub|\|Y>=L
-    </equation>
+    <\equation*>
+      K<rsub|\|Y>=L
+    </equation*>
 
     and
 
@@ -9981,8 +9978,8 @@
     14.416.294>] we must then have that <math|Z\<subseteq\>Z<rsub|m>>. Now
     <math|x\<in\>span<around*|(|Z<rsub|m>,<around*|{|x|}>|)>=Z\<subseteq\>Z<rsub|m>>
     which contradicts with the face that <math|x\<in\>X\\Z<rsub|m>>, hence
-    our assumption is wrong and we must have that <math|Z<rsub|m>=X>. Hence
-    we have by [eq: <reference|eq 14.301.294>] that
+    our assumption is wrong and we must have that <math|Z<rsub|m>=X>. So we
+    have by [eq: <reference|eq 14.301.294>] that
 
     <\equation*>
       K<rsub|m>\<in\>L<around*|(|Z,\<bbb-R\>|)><text|
@@ -16681,40 +16678,45 @@
 
   <\theorem>
     <label|limit limit of sequence limited by another sequence>Let
-    <math|k\<in\>\<bbb-N\><rsub|0>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
-    a normed space, <math|<around*|{|x<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>X>,
-    <math|<around*|{|y<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>\<infty\>|}>>\<subseteq\>X>
+    <math|k\<in\>\<bbb-N\><rsub|0>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed space, <math|<around*|{|x<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>X>,
+    <math|<around*|{|y<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>\<infty\>|}>>\<subseteq\>Y>
     convergent sequences such that <math|\<forall\>n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
-    <math|<around*|\<\|\|\>|x<rsub|n>|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|y<rsub|n>|\<\|\|\>>>
-    then <math|<around*|\<\|\|\>|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|<below|lim|n\<rightarrow\>\<infty\>>y<rsub|n>|\<\|\|\>>>
+    <math|<around*|\<\|\|\>|x<rsub|n>|\<\|\|\>><rsub|X>\<leqslant\><around*|\<\|\|\>|y<rsub|n>|\<\|\|\>><rsub|Y>>
+    then
+
+    <\equation*>
+      <around*|\<\|\|\>|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>|\<\|\|\>><rsub|X>\<leqslant\><around*|\<\|\|\>|<below|lim|n\<rightarrow\>\<infty\>>y<rsub|n>|\<\|\|\>><rsub|Y>
+    </equation*>
   </theorem>
 
   <\proof>
     Let <math|x=<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>>,
     <math|y=<below|lim|n\<rightarrow\>\<infty\>>y<rsub|n>> and assume that
-    <math|<around*|\<\|\|\>|y|\<\|\|\>>\<less\><around*|\<\|\|\>|x|\<\|\|\>>>
-    so that <math|\<varepsilon\>=<around*|\<\|\|\>|x|\<\|\|\>>-<around*|\<\|\|\>|y|\<\|\|\>>\<in\>\<bbb-R\><rsup|+>>.
+    <math|<around*|\<\|\|\>|y|\<\|\|\>><rsub|Y>\<less\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>
+    so that <math|\<varepsilon\>=<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>-<around*|\<\|\|\>|y|\<\|\|\>><rsub|Y>\<in\>\<bbb-R\><rsup|+>>.
     Find <math|N<rsub|1>,N<rsub|2>\<in\><around*|{|k,\<ldots\>\<infty\>|}>>
     such that <math|\<forall\>n\<geqslant\>N<rsub|1>>
-    <math|<around*|\<\|\|\>|x<rsub|n>-x|\<\|\|\>>\<less\><frac|\<varepsilon\>|2>>
+    <math|<around*|\<\|\|\>|x<rsub|n>-x|\<\|\|\>><rsub|X>\<less\><frac|\<varepsilon\>|2>>
     and <math|\<forall\>m\<gtr\>N<rsub|2>>
-    <math|<around*|\<\|\|\>|y<rsub|m>-y|\<\|\|\>>\<less\><frac|\<varepsilon\>|2>>.
+    <math|<around*|\<\|\|\>|y<rsub|m>-y|\<\|\|\>><rsub|Y>\<less\><frac|\<varepsilon\>|2>>.
     Take <math|N=max<around*|(|N<rsub|1>,N<rsub|2>|)>> then we have:
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|<around*|\<\|\|\>|x|\<\|\|\>>>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|x<rsub|N>-x|\<\|\|\>>+<around*|\<\|\|\>|x<rsub|N>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|x<rsub|N>-x|\<\|\|\>>+<around*|\<\|\|\>|y<rsub|N>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|x<rsub|N>-x|\<\|\|\>>+<around*|\<\|\|\>|y<rsub|N>-y|\<\|\|\>>+<around*|\<\|\|\>|y|\<\|\|\>>>>|<row|<cell|>|<cell|\<less\>>|<cell|<frac|\<varepsilon\>|2>+<frac|\<varepsilon\>|2>+<around*|\<\|\|\>|y|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|\<varepsilon\>+<around*|\<\|\|\>|y|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|x|\<\|\|\>>>>>>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|x<rsub|N>-x|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|x<rsub|N>|\<\|\|\>><rsub|X>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|x<rsub|N>-x|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|y<rsub|N>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|x<rsub|N>-x|\<\|\|\>><rsub|X>+<around*|\<\|\|\>|y<rsub|N>-y|\<\|\|\>><rsub|Y>+<around*|\<\|\|\>|y|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|\<less\>>|<cell|<frac|\<varepsilon\>|2>+<frac|\<varepsilon\>|2>+<around*|\<\|\|\>|y|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|=>|<cell|\<varepsilon\>+<around*|\<\|\|\>|y|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>>>>
     </eqnarray*>
 
-    giving the contradiction <math|<around*|\<\|\|\>|x|\<\|\|\>>\<less\><around*|\<\|\|\>|x|\<\|\|\>>>.
+    giving the contradiction <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>\<less\><around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>.
     So the assumption is wrong and we must have that
-    <math|<around*|\<\|\|\>|x|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|y|\<\|\|\>>>.
+    <math|<rigid|<around*|\<\|\|\>|x|\<\|\|\>>\<leqslant\><around*|\<\|\|\>|y|\<\|\|\>>>>.
   </proof>
 
   <\theorem>
     <label|limit of sequence of non negatieve real numbers is positive>Let
     <math|k\<in\>\<bbb-N\><rsub|0>>, <math|<around*|{|x<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\><around*|[|0,\<infty\>|[>>
     a convergent sequence of non negative numbers then
-    <math|0\<leqslant\><below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>>
+    <math|0\<leqslant\><below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>>.
   </theorem>
 
   <\proof>
@@ -23090,6 +23092,57 @@
     </equation*>
   </proof>
 
+  <\theorem>
+    <label|connected intermediate value theorem><index|intermediate value
+    theorem><dueto|Intermediate Value Theorem>Let
+    <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>> be the normed
+    space of real numbers, <math|a,b\<in\>\<bbb-R\>> with
+    <math|a\<leqslant\>b> and <math|f:<around*|[|a,b|]>\<rightarrow\>\<bbb-R\>>
+    a continuous function then we have:
+
+    <\enumerate>
+      <item>If <math|y\<in\>\<bbb-R\>> satisfies
+      <math|f<around*|(|a|)>\<less\>y\<less\>f<around*|(|b|)>> then there
+      exist a <math|x\<in\><around*|[|a,b|]>> such that
+      <math|y=f<around*|(|x|)>>.
+
+      <item>If <math|y\<in\>\<bbb-R\>> satisfies
+      <math|f<around*|(|b|)>\<less\>y\<less\>f<around*|(|a|)>> then there
+      exist a <math|x\<in\><around*|[|a,b|]>> such that
+      <math|y=f<around*|(|x|)>>.
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    Using [lemma: <reference|connected image by a real continuous function of
+    a closed interval is a closed interval>] we have that
+    <math|f<around*|(|<around*|[|a,b|]>|)>=<around*|[|c,d|]>>, hence
+    <math|f<around*|(|a|)>,f<around*|(|b|)>\<in\><around*|[|c,d|]>>. Let
+    <math|y\<in\>\<bbb-R\>> then we have:
+
+    <\description>
+      <item*|<math|f<around*|(|a|)>\<less\>y\<less\>f<around*|(|b|)>>>Then
+      <math|y\<in\><around*|[|f<around*|(|a|)>,f<around*|(|b|)>|]>> and
+      <math|f<around*|(|a|)>\<less\>f<around*|(|b|)>> where
+      <math|f<around*|(|a|)>,f<around*|(|b|)>\<in\><around*|[|c,d|]>>. As
+      <math|<around*|[|c,d|]>> is a generalized interval it follows from
+      [theorem: <reference|interval generalized interval>] that
+      <math|<around*|[|f<around*|(|a|)>,f<around*|(|b|)>|]>\<subseteq\><around*|[|c,d|]>=f<around*|(|<around*|[|a,b|]>|)>>.
+      Hence <math|y\<in\>f<around*|(|<around*|[|a,b|]>|)>> so there exist a
+      <math|x\<in\><around*|[|a,b|]>> such that <math|y=f<around*|(|x|)>>.
+
+      <item*|<math|f<around*|(|b|)>\<less\>y\<less\>f<around*|(|a|)>>>Then
+      <math|y\<in\><around*|[|f<around*|(|b|)>,f<around*|(|a|)>|]>> and
+      <math|f<around*|(|b|)>\<less\>f<around*|(|a|)>> where
+      <math|f<around*|(|a|)>,f<around*|(|b|)>\<in\><around*|[|c,d|]>>. As
+      <math|<around*|[|c,d|]>> is a generalized interval it follows from
+      [theorem: <reference|interval generalized interval>] that
+      <math|<around*|[|f<around*|(|b|)>,f<around*|(|a|)>|]>\<subseteq\><around*|[|c,d|]>=f<around*|(|<around*|[|a,b|]>|)>>.
+      Hence <math|y\<in\>f<around*|(|<around*|[|a,b|]>|)>> so there exist a
+      <math|x\<in\><around*|[|a,b|]>> such that <math|y=f<around*|(|x|)>>.
+    </description>
+  </proof>
+
   \;
 
   \;
@@ -23114,7 +23167,7 @@
 
 <\references>
   <\collection>
-    <associate|Hahn-Banach theorem|<tuple|14.419|?>>
+    <associate|Hahn-Banach theorem|<tuple|14.202|?>>
     <associate|auto-1|<tuple|14|?>>
     <associate|auto-10|<tuple|<with|mode|<quote|math>|A<rprime|'>>|?>>
     <associate|auto-100|<tuple|14.10.2|?>>
@@ -23403,230 +23456,228 @@
     <associate|continuity uniform continuity (1)|<tuple|14.155|?>>
     <associate|continuity universal continuity implies
     continuity|<tuple|14.156|?>>
-    <associate|definition 14.414.294|<tuple|14.419|?>>
+    <associate|definition 14.414.294|<tuple|14.198|?>>
     <associate|eq 14.1.145|<tuple|14.3|?>>
     <associate|eq 14.1.162|<tuple|14.2|?>>
     <associate|eq 14.1.167|<tuple|14.1|?>>
     <associate|eq 14.10.146|<tuple|14.14|?>>
-    <associate|eq 14.100.150|<tuple|14.138|?>>
-    <associate|eq 14.101.150|<tuple|14.139|?>>
-    <associate|eq 14.102.150|<tuple|14.140|?>>
-    <associate|eq 14.103.150|<tuple|14.141|?>>
-    <associate|eq 14.104.150|<tuple|14.142|?>>
-    <associate|eq 14.105.150|<tuple|14.143|?>>
-    <associate|eq 14.106.150|<tuple|14.144|?>>
-    <associate|eq 14.107.150|<tuple|14.146|?>>
-    <associate|eq 14.109.150|<tuple|14.149|?>>
+    <associate|eq 14.100.150|<tuple|14.135|?>>
+    <associate|eq 14.101.150|<tuple|14.136|?>>
+    <associate|eq 14.102.150|<tuple|14.137|?>>
+    <associate|eq 14.103.150|<tuple|14.138|?>>
+    <associate|eq 14.104.150|<tuple|14.139|?>>
+    <associate|eq 14.105.150|<tuple|14.140|?>>
+    <associate|eq 14.106.150|<tuple|14.141|?>>
+    <associate|eq 14.107.150|<tuple|14.143|?>>
+    <associate|eq 14.109.150|<tuple|14.146|?>>
     <associate|eq 14.11.146|<tuple|14.15|?>>
-    <associate|eq 14.111.169|<tuple|14.147|?>>
-    <associate|eq 14.111.183|<tuple|14.145|?>>
-    <associate|eq 14.112.152|<tuple|14.152|?>>
-    <associate|eq 14.112.169|<tuple|14.148|?>>
-    <associate|eq 14.113.152|<tuple|14.153|?>>
-    <associate|eq 14.114.151|<tuple|14.150|?>>
-    <associate|eq 14.114.152|<tuple|14.154|?>>
-    <associate|eq 14.115.151|<tuple|14.151|?>>
-    <associate|eq 14.115.152|<tuple|14.156|?>>
-    <associate|eq 14.115.154|<tuple|14.155|?>>
-    <associate|eq 14.116.152|<tuple|14.157|?>>
-    <associate|eq 14.117.152|<tuple|14.158|?>>
-    <associate|eq 14.118.152|<tuple|14.165|?>>
-    <associate|eq 14.119.152|<tuple|14.166|?>>
+    <associate|eq 14.111.169|<tuple|14.144|?>>
+    <associate|eq 14.111.183|<tuple|14.142|?>>
+    <associate|eq 14.112.152|<tuple|14.149|?>>
+    <associate|eq 14.112.169|<tuple|14.145|?>>
+    <associate|eq 14.113.152|<tuple|14.150|?>>
+    <associate|eq 14.114.151|<tuple|14.147|?>>
+    <associate|eq 14.114.152|<tuple|14.151|?>>
+    <associate|eq 14.115.151|<tuple|14.148|?>>
+    <associate|eq 14.115.152|<tuple|14.153|?>>
+    <associate|eq 14.115.154|<tuple|14.152|?>>
+    <associate|eq 14.116.152|<tuple|14.154|?>>
+    <associate|eq 14.117.152|<tuple|14.155|?>>
+    <associate|eq 14.118.152|<tuple|14.162|?>>
+    <associate|eq 14.119.152|<tuple|14.163|?>>
     <associate|eq 14.12.146|<tuple|14.16|?>>
-    <associate|eq 14.120.152|<tuple|14.167|?>>
-    <associate|eq 14.121.152|<tuple|14.168|?>>
-    <associate|eq 14.122.152|<tuple|14.169|?>>
-    <associate|eq 14.123.152|<tuple|14.170|?>>
-    <associate|eq 14.123.170|<tuple|14.159|?>>
-    <associate|eq 14.124.152|<tuple|14.172|?>>
-    <associate|eq 14.124.153|<tuple|14.171|?>>
-    <associate|eq 14.124.176|<tuple|14.161|?>>
-    <associate|eq 14.125.152|<tuple|14.173|?>>
-    <associate|eq 14.125.176|<tuple|14.162|?>>
-    <associate|eq 14.126.176|<tuple|14.163|?>>
-    <associate|eq 14.127.153|<tuple|14.174|?>>
-    <associate|eq 14.127.176|<tuple|14.164|?>>
-    <associate|eq 14.128.153|<tuple|14.175|?>>
-    <associate|eq 14.129.153|<tuple|14.176|?>>
+    <associate|eq 14.120.152|<tuple|14.164|?>>
+    <associate|eq 14.121.152|<tuple|14.165|?>>
+    <associate|eq 14.122.152|<tuple|14.166|?>>
+    <associate|eq 14.123.152|<tuple|14.167|?>>
+    <associate|eq 14.123.170|<tuple|14.156|?>>
+    <associate|eq 14.124.152|<tuple|14.169|?>>
+    <associate|eq 14.124.153|<tuple|14.168|?>>
+    <associate|eq 14.124.176|<tuple|14.158|?>>
+    <associate|eq 14.125.152|<tuple|14.170|?>>
+    <associate|eq 14.125.176|<tuple|14.159|?>>
+    <associate|eq 14.126.176|<tuple|14.160|?>>
+    <associate|eq 14.127.153|<tuple|14.171|?>>
+    <associate|eq 14.127.176|<tuple|14.161|?>>
+    <associate|eq 14.128.153|<tuple|14.172|?>>
+    <associate|eq 14.129.153|<tuple|14.173|?>>
     <associate|eq 14.13.146|<tuple|14.17|?>>
-    <associate|eq 14.130.153|<tuple|14.177|?>>
-    <associate|eq 14.131.153|<tuple|14.178|?>>
-    <associate|eq 14.132.153|<tuple|14.180|?>>
-    <associate|eq 14.133.153|<tuple|14.181|?>>
-    <associate|eq 14.134.153|<tuple|14.182|?>>
-    <associate|eq 14.135.153|<tuple|14.183|?>>
-    <associate|eq 14.136.153|<tuple|14.184|?>>
-    <associate|eq 14.137.153|<tuple|14.185|?>>
-    <associate|eq 14.138.153|<tuple|14.186|?>>
-    <associate|eq 14.138.170|<tuple|14.179|?>>
-    <associate|eq 14.139.153|<tuple|14.187|?>>
+    <associate|eq 14.130.153|<tuple|14.174|?>>
+    <associate|eq 14.131.153|<tuple|14.175|?>>
+    <associate|eq 14.132.153|<tuple|14.177|?>>
+    <associate|eq 14.133.153|<tuple|14.178|?>>
+    <associate|eq 14.134.153|<tuple|14.179|?>>
+    <associate|eq 14.135.153|<tuple|14.180|?>>
+    <associate|eq 14.136.153|<tuple|14.181|?>>
+    <associate|eq 14.137.153|<tuple|14.182|?>>
+    <associate|eq 14.138.153|<tuple|14.183|?>>
+    <associate|eq 14.138.170|<tuple|14.176|?>>
+    <associate|eq 14.139.153|<tuple|14.184|?>>
     <associate|eq 14.14.146|<tuple|14.18|?>>
-    <associate|eq 14.140.153|<tuple|14.188|?>>
-    <associate|eq 14.141.153|<tuple|14.189|?>>
-    <associate|eq 14.142.153|<tuple|14.190|?>>
-    <associate|eq 14.143.153|<tuple|14.191|?>>
-    <associate|eq 14.144.153|<tuple|14.192|?>>
-    <associate|eq 14.145.153|<tuple|14.193|?>>
-    <associate|eq 14.146.153|<tuple|14.194|?>>
-    <associate|eq 14.147.153|<tuple|14.196|?>>
-    <associate|eq 14.148.153|<tuple|14.197|?>>
-    <associate|eq 14.149\<point\>153|<tuple|14.224|?>>
+    <associate|eq 14.140.153|<tuple|14.185|?>>
+    <associate|eq 14.141.153|<tuple|14.186|?>>
+    <associate|eq 14.142.153|<tuple|14.187|?>>
+    <associate|eq 14.143.153|<tuple|14.188|?>>
+    <associate|eq 14.144.153|<tuple|14.189|?>>
+    <associate|eq 14.145.153|<tuple|14.190|?>>
+    <associate|eq 14.146.153|<tuple|14.191|?>>
+    <associate|eq 14.147.153|<tuple|14.193|?>>
+    <associate|eq 14.148.153|<tuple|14.194|?>>
+    <associate|eq 14.149\<point\>153|<tuple|14.221|?>>
     <associate|eq 14.15.146|<tuple|14.19|?>>
-    <associate|eq 14.150.153|<tuple|14.225|?>>
-    <associate|eq 14.150.154|<tuple|14.212|?>>
-    <associate|eq 14.150.155|<tuple|14.207|?>>
-    <associate|eq 14.150.158|<tuple|14.202|?>>
-    <associate|eq 14.151.153|<tuple|14.226|?>>
-    <associate|eq 14.151.154|<tuple|14.215|?>>
-    <associate|eq 14.151.155|<tuple|14.213|?>>
-    <associate|eq 14.151.156|<tuple|14.208|?>>
-    <associate|eq 14.151.158|<tuple|14.203|?>>
-    <associate|eq 14.152.153|<tuple|14.227|?>>
-    <associate|eq 14.152.155|<tuple|14.214|?>>
-    <associate|eq 14.152.156|<tuple|14.209|?>>
-    <associate|eq 14.152.158|<tuple|14.204|?>>
-    <associate|eq 14.153.155|<tuple|14.210|?>>
-    <associate|eq 14.153.158|<tuple|14.205|?>>
-    <associate|eq 14.154.155|<tuple|14.216|?>>
-    <associate|eq 14.154.156|<tuple|14.211|?>>
-    <associate|eq 14.154.158|<tuple|14.206|?>>
-    <associate|eq 14.155.155|<tuple|14.217|?>>
-    <associate|eq 14.156.155|<tuple|14.218|?>>
-    <associate|eq 14.156.170|<tuple|14.198|?>>
-    <associate|eq 14.157.155|<tuple|14.219|?>>
-    <associate|eq 14.158.155|<tuple|14.220|?>>
-    <associate|eq 14.159.155|<tuple|14.221|?>>
+    <associate|eq 14.150.153|<tuple|14.222|?>>
+    <associate|eq 14.150.154|<tuple|14.209|?>>
+    <associate|eq 14.150.155|<tuple|14.204|?>>
+    <associate|eq 14.150.158|<tuple|14.199|?>>
+    <associate|eq 14.151.153|<tuple|14.223|?>>
+    <associate|eq 14.151.154|<tuple|14.212|?>>
+    <associate|eq 14.151.155|<tuple|14.210|?>>
+    <associate|eq 14.151.156|<tuple|14.205|?>>
+    <associate|eq 14.151.158|<tuple|14.200|?>>
+    <associate|eq 14.152.153|<tuple|14.224|?>>
+    <associate|eq 14.152.155|<tuple|14.211|?>>
+    <associate|eq 14.152.156|<tuple|14.206|?>>
+    <associate|eq 14.152.158|<tuple|14.201|?>>
+    <associate|eq 14.153.155|<tuple|14.207|?>>
+    <associate|eq 14.153.158|<tuple|14.202|?>>
+    <associate|eq 14.154.155|<tuple|14.213|?>>
+    <associate|eq 14.154.156|<tuple|14.208|?>>
+    <associate|eq 14.154.158|<tuple|14.203|?>>
+    <associate|eq 14.155.155|<tuple|14.214|?>>
+    <associate|eq 14.156.155|<tuple|14.215|?>>
+    <associate|eq 14.156.170|<tuple|14.195|?>>
+    <associate|eq 14.157.155|<tuple|14.216|?>>
+    <associate|eq 14.158.155|<tuple|14.217|?>>
+    <associate|eq 14.159.155|<tuple|14.218|?>>
     <associate|eq 14.16.146|<tuple|14.20|?>>
-    <associate|eq 14.160.155|<tuple|14.222|?>>
-    <associate|eq 14.161.155|<tuple|14.223|?>>
-    <associate|eq 14.163.155|<tuple|14.195|?>>
+    <associate|eq 14.160.155|<tuple|14.219|?>>
+    <associate|eq 14.161.155|<tuple|14.220|?>>
+    <associate|eq 14.163.155|<tuple|14.192|?>>
     <associate|eq 14.17.146|<tuple|14.21|?>>
-    <associate|eq 14.171.156|<tuple|14.228|?>>
-    <associate|eq 14.171.193|<tuple|14.199|?>>
-    <associate|eq 14.172.156|<tuple|14.229|?>>
-    <associate|eq 14.172.293|<tuple|14.200|?>>
-    <associate|eq 14.173.156|<tuple|14.230|?>>
-    <associate|eq 14.173.293|<tuple|14.201|?>>
-    <associate|eq 14.174.156|<tuple|14.231|?>>
-    <associate|eq 14.175.156|<tuple|14.232|?>>
-    <associate|eq 14.176.156|<tuple|14.234|?>>
-    <associate|eq 14.177.156|<tuple|14.235|?>>
-    <associate|eq 14.178.156|<tuple|14.236|?>>
-    <associate|eq 14.179.156|<tuple|14.237|?>>
+    <associate|eq 14.171.156|<tuple|14.225|?>>
+    <associate|eq 14.171.193|<tuple|14.196|?>>
+    <associate|eq 14.172.156|<tuple|14.226|?>>
+    <associate|eq 14.172.293|<tuple|14.197|?>>
+    <associate|eq 14.173.156|<tuple|14.227|?>>
+    <associate|eq 14.173.293|<tuple|14.198|?>>
+    <associate|eq 14.174.156|<tuple|14.228|?>>
+    <associate|eq 14.175.156|<tuple|14.229|?>>
+    <associate|eq 14.176.156|<tuple|14.231|?>>
+    <associate|eq 14.177.156|<tuple|14.232|?>>
+    <associate|eq 14.178.156|<tuple|14.233|?>>
+    <associate|eq 14.179.156|<tuple|14.234|?>>
     <associate|eq 14.18.146|<tuple|14.22|?>>
-    <associate|eq 14.180.156|<tuple|14.238|?>>
-    <associate|eq 14.181.156|<tuple|14.239|?>>
-    <associate|eq 14.182.156|<tuple|14.240|?>>
-    <associate|eq 14.183.156|<tuple|14.241|?>>
-    <associate|eq 14.184.156|<tuple|14.242|?>>
-    <associate|eq 14.185.156|<tuple|14.243|?>>
-    <associate|eq 14.186.156|<tuple|14.244|?>>
-    <associate|eq 14.187.156|<tuple|14.245|?>>
-    <associate|eq 14.188.156|<tuple|14.246|?>>
-    <associate|eq 14.188.170|<tuple|14.233|?>>
-    <associate|eq 14.189.156|<tuple|14.247|?>>
+    <associate|eq 14.180.156|<tuple|14.235|?>>
+    <associate|eq 14.181.156|<tuple|14.236|?>>
+    <associate|eq 14.182.156|<tuple|14.237|?>>
+    <associate|eq 14.183.156|<tuple|14.238|?>>
+    <associate|eq 14.184.156|<tuple|14.239|?>>
+    <associate|eq 14.185.156|<tuple|14.240|?>>
+    <associate|eq 14.186.156|<tuple|14.241|?>>
+    <associate|eq 14.187.156|<tuple|14.242|?>>
+    <associate|eq 14.188.156|<tuple|14.243|?>>
+    <associate|eq 14.188.170|<tuple|14.230|?>>
+    <associate|eq 14.189.156|<tuple|14.244|?>>
     <associate|eq 14.19.146|<tuple|14.23|?>>
-    <associate|eq 14.190.156|<tuple|14.248|?>>
-    <associate|eq 14.191.156|<tuple|14.249|?>>
-    <associate|eq 14.192.156|<tuple|14.250|?>>
-    <associate|eq 14.193.156|<tuple|14.251|?>>
-    <associate|eq 14.199.156|<tuple|14.257|?>>
-    <associate|eq 14.199.157|<tuple|14.256|?>>
+    <associate|eq 14.190.156|<tuple|14.245|?>>
+    <associate|eq 14.191.156|<tuple|14.246|?>>
+    <associate|eq 14.192.156|<tuple|14.247|?>>
+    <associate|eq 14.193.156|<tuple|14.248|?>>
+    <associate|eq 14.199.156|<tuple|14.254|?>>
+    <associate|eq 14.199.157|<tuple|14.253|?>>
     <associate|eq 14.2.145|<tuple|14.4|?>>
     <associate|eq 14.20.146|<tuple|14.24|?>>
-    <associate|eq 14.200.156|<tuple|14.258|?>>
-    <associate|eq 14.201.156|<tuple|14.259|?>>
-    <associate|eq 14.203.158|<tuple|14.260|?>>
-    <associate|eq 14.204.158|<tuple|14.261|?>>
-    <associate|eq 14.205.158|<tuple|14.262|?>>
-    <associate|eq 14.206.158|<tuple|14.263|?>>
-    <associate|eq 14.207.158|<tuple|14.264|?>>
-    <associate|eq 14.207.172|<tuple|14.252|?>>
-    <associate|eq 14.208.158|<tuple|14.265|?>>
-    <associate|eq 14.208.172|<tuple|14.253|?>>
-    <associate|eq 14.209.172|<tuple|14.254|?>>
-    <associate|eq 14.209.528|<tuple|14.266|?>>
+    <associate|eq 14.200.156|<tuple|14.255|?>>
+    <associate|eq 14.201.156|<tuple|14.256|?>>
+    <associate|eq 14.203.158|<tuple|14.257|?>>
+    <associate|eq 14.204.158|<tuple|14.258|?>>
+    <associate|eq 14.205.158|<tuple|14.259|?>>
+    <associate|eq 14.206.158|<tuple|14.260|?>>
+    <associate|eq 14.207.158|<tuple|14.261|?>>
+    <associate|eq 14.207.172|<tuple|14.249|?>>
+    <associate|eq 14.208.158|<tuple|14.262|?>>
+    <associate|eq 14.208.172|<tuple|14.250|?>>
+    <associate|eq 14.209.172|<tuple|14.251|?>>
+    <associate|eq 14.209.528|<tuple|14.263|?>>
     <associate|eq 14.21.146|<tuple|14.25|?>>
-    <associate|eq 14.210.158|<tuple|14.267|?>>
-    <associate|eq 14.210.172|<tuple|14.255|?>>
+    <associate|eq 14.210.158|<tuple|14.264|?>>
+    <associate|eq 14.210.172|<tuple|14.252|?>>
     <associate|eq 14.22.146|<tuple|14.30|?>>
-    <associate|eq 14.228.171|<tuple|14.277|?>>
-    <associate|eq 14.229.171|<tuple|14.278|?>>
+    <associate|eq 14.228.171|<tuple|14.274|?>>
+    <associate|eq 14.229.171|<tuple|14.275|?>>
     <associate|eq 14.23.146|<tuple|14.31|?>>
-    <associate|eq 14.230.171|<tuple|14.279|?>>
-    <associate|eq 14.234.164|<tuple|14.268|?>>
-    <associate|eq 14.235.164|<tuple|14.269|?>>
-    <associate|eq 14.236.164|<tuple|14.270|?>>
-    <associate|eq 14.237.164|<tuple|14.271|?>>
-    <associate|eq 14.238.164|<tuple|14.272|?>>
-    <associate|eq 14.239.164|<tuple|14.274|?>>
-    <associate|eq 14.239.165|<tuple|14.273|?>>
+    <associate|eq 14.230.171|<tuple|14.276|?>>
+    <associate|eq 14.234.164|<tuple|14.265|?>>
+    <associate|eq 14.235.164|<tuple|14.266|?>>
+    <associate|eq 14.236.164|<tuple|14.267|?>>
+    <associate|eq 14.237.164|<tuple|14.268|?>>
+    <associate|eq 14.238.164|<tuple|14.269|?>>
+    <associate|eq 14.239.164|<tuple|14.271|?>>
+    <associate|eq 14.239.165|<tuple|14.270|?>>
     <associate|eq 14.24.146|<tuple|14.32|?>>
-    <associate|eq 14.240.164|<tuple|14.276|?>>
-    <associate|eq 14.245.166|<tuple|14.280|?>>
-    <associate|eq 14.246.166|<tuple|14.281|?>>
-    <associate|eq 14.247.166|<tuple|14.282|?>>
-    <associate|eq 14.248.166|<tuple|14.283|?>>
-    <associate|eq 14.249.166|<tuple|14.284|?>>
+    <associate|eq 14.240.164|<tuple|14.273|?>>
+    <associate|eq 14.245.166|<tuple|14.277|?>>
+    <associate|eq 14.246.166|<tuple|14.278|?>>
+    <associate|eq 14.247.166|<tuple|14.279|?>>
+    <associate|eq 14.248.166|<tuple|14.280|?>>
+    <associate|eq 14.249.166|<tuple|14.281|?>>
     <associate|eq 14.25.146|<tuple|14.33|?>>
-    <associate|eq 14.250.166|<tuple|14.285|?>>
-    <associate|eq 14.251.166|<tuple|14.286|?>>
-    <associate|eq 14.251.173|<tuple|14.296|?>>
-    <associate|eq 14.252.166|<tuple|14.287|?>>
-    <associate|eq 14.253.166|<tuple|14.288|?>>
-    <associate|eq 14.254.166|<tuple|14.289|?>>
-    <associate|eq 14.255.166|<tuple|14.290|?>>
-    <associate|eq 14.256.166|<tuple|14.291|?>>
-    <associate|eq 14.257.166|<tuple|14.292|?>>
-    <associate|eq 14.259.167|<tuple|14.293|?>>
+    <associate|eq 14.250.166|<tuple|14.282|?>>
+    <associate|eq 14.251.166|<tuple|14.283|?>>
+    <associate|eq 14.251.173|<tuple|14.293|?>>
+    <associate|eq 14.252.166|<tuple|14.284|?>>
+    <associate|eq 14.253.166|<tuple|14.285|?>>
+    <associate|eq 14.254.166|<tuple|14.286|?>>
+    <associate|eq 14.255.166|<tuple|14.287|?>>
+    <associate|eq 14.256.166|<tuple|14.288|?>>
+    <associate|eq 14.257.166|<tuple|14.289|?>>
+    <associate|eq 14.259.167|<tuple|14.290|?>>
     <associate|eq 14.26.146|<tuple|14.34|?>>
     <associate|eq 14.26.246|<tuple|14.26|?>>
-    <associate|eq 14.260.167|<tuple|14.294|?>>
-    <associate|eq 14.261.167|<tuple|14.295|?>>
-    <associate|eq 14.262.167|<tuple|14.297|?>>
-    <associate|eq 14.263.167|<tuple|14.298|?>>
-    <associate|eq 14.264.167|<tuple|14.299|?>>
-    <associate|eq 14.265.167|<tuple|14.300|?>>
-    <associate|eq 14.266.167|<tuple|14.301|?>>
-    <associate|eq 14.267.167|<tuple|14.302|?>>
-    <associate|eq 14.268.167|<tuple|14.303|?>>
-    <associate|eq 14.269.167|<tuple|14.304|?>>
+    <associate|eq 14.260.167|<tuple|14.291|?>>
+    <associate|eq 14.261.167|<tuple|14.292|?>>
+    <associate|eq 14.262.167|<tuple|14.294|?>>
+    <associate|eq 14.263.167|<tuple|14.295|?>>
+    <associate|eq 14.264.167|<tuple|14.296|?>>
+    <associate|eq 14.265.167|<tuple|14.297|?>>
+    <associate|eq 14.266.167|<tuple|14.298|?>>
+    <associate|eq 14.267.167|<tuple|14.299|?>>
+    <associate|eq 14.268.167|<tuple|14.300|?>>
+    <associate|eq 14.269.167|<tuple|14.301|?>>
     <associate|eq 14.27.146|<tuple|14.35|?>>
     <associate|eq 14.27.246|<tuple|14.27|?>>
-    <associate|eq 14.277.294|<tuple|14.305|?>>
-    <associate|eq 14.278.294|<tuple|14.306|?>>
-    <associate|eq 14.279.294|<tuple|14.307|?>>
+    <associate|eq 14.277.294|<tuple|14.73|?>>
+    <associate|eq 14.278.294|<tuple|14.74|?>>
+    <associate|eq 14.279.294|<tuple|14.75|?>>
     <associate|eq 14.28.147|<tuple|14.36|?>>
     <associate|eq 14.28.246|<tuple|14.28|?>>
-    <associate|eq 14.280.294|<tuple|14.308|?>>
-    <associate|eq 14.281.294|<tuple|14.309|?>>
-    <associate|eq 14.282.294|<tuple|14.310|?>>
-    <associate|eq 14.283.294|<tuple|14.311|?>>
-    <associate|eq 14.284.294|<tuple|14.312|?>>
-    <associate|eq 14.285.294|<tuple|14.313|?>>
-    <associate|eq 14.286.294|<tuple|14.314|?>>
-    <associate|eq 14.287.294|<tuple|14.315|?>>
-    <associate|eq 14.288.294|<tuple|14.316|?>>
-    <associate|eq 14.289.294|<tuple|14.317|?>>
+    <associate|eq 14.280.294|<tuple|14.76|?>>
+    <associate|eq 14.281.294|<tuple|14.77|?>>
+    <associate|eq 14.282.294|<tuple|14.78|?>>
+    <associate|eq 14.283.294|<tuple|14.79|?>>
+    <associate|eq 14.284.294|<tuple|14.80|?>>
+    <associate|eq 14.285.294|<tuple|14.81|?>>
+    <associate|eq 14.286.294|<tuple|14.82|?>>
+    <associate|eq 14.288.294|<tuple|14.83|?>>
+    <associate|eq 14.289.294|<tuple|14.84|?>>
     <associate|eq 14.29.146|<tuple|14.38|?>>
     <associate|eq 14.29.147|<tuple|14.37|?>>
     <associate|eq 14.29.246|<tuple|14.29|?>>
-    <associate|eq 14.290.294|<tuple|14.305|?>>
-    <associate|eq 14.291.294|<tuple|14.306|?>>
-    <associate|eq 14.292.294|<tuple|14.307|?>>
-    <associate|eq 14.293.291|<tuple|14.308|?>>
-    <associate|eq 14.294.294|<tuple|14.309|?>>
-    <associate|eq 14.295.294|<tuple|14.310|?>>
-    <associate|eq 14.296.294|<tuple|14.311|?>>
-    <associate|eq 14.297.294|<tuple|14.312|?>>
-    <associate|eq 14.298.294|<tuple|14.313|?>>
-    <associate|eq 14.299.294|<tuple|14.314|?>>
+    <associate|eq 14.290.294|<tuple|14.85|?>>
+    <associate|eq 14.291.294|<tuple|14.86|?>>
+    <associate|eq 14.292.294|<tuple|14.87|?>>
+    <associate|eq 14.293.291|<tuple|14.88|?>>
+    <associate|eq 14.294.294|<tuple|14.89|?>>
+    <associate|eq 14.295.294|<tuple|14.90|?>>
+    <associate|eq 14.296.294|<tuple|14.91|?>>
+    <associate|eq 14.297.294|<tuple|14.92|?>>
+    <associate|eq 14.298.294|<tuple|14.93|?>>
+    <associate|eq 14.299.294|<tuple|14.94|?>>
     <associate|eq 14.3.146|<tuple|14.5|?>>
     <associate|eq 14.30.146|<tuple|14.39|?>>
-    <associate|eq 14.300.294|<tuple|14.315|?>>
-    <associate|eq 14.301.294|<tuple|14.305|?>>
-    <associate|eq 14.302.294|<tuple|14.306|?>>
-    <associate|eq 14.303.294|<tuple|14.308|?>>
+    <associate|eq 14.300.294|<tuple|14.95|?>>
+    <associate|eq 14.301.294|<tuple|14.96|?>>
+    <associate|eq 14.302.294|<tuple|14.97|?>>
     <associate|eq 14.31.146|<tuple|14.40|?>>
     <associate|eq 14.32.146|<tuple|14.41|?>>
     <associate|eq 14.33.146|<tuple|14.42|?>>
@@ -23662,49 +23713,49 @@
     <associate|eq 14.61.148|<tuple|14.70|?>>
     <associate|eq 14.62.148|<tuple|14.71|?>>
     <associate|eq 14.63.148|<tuple|14.72|?>>
-    <associate|eq 14.64.148|<tuple|14.101|?>>
-    <associate|eq 14.65.148|<tuple|14.102|?>>
-    <associate|eq 14.66.148|<tuple|14.103|?>>
-    <associate|eq 14.67.148|<tuple|14.104|?>>
-    <associate|eq 14.68.148|<tuple|14.105|?>>
-    <associate|eq 14.69.148|<tuple|14.106|?>>
+    <associate|eq 14.64.148|<tuple|14.98|?>>
+    <associate|eq 14.65.148|<tuple|14.99|?>>
+    <associate|eq 14.66.148|<tuple|14.100|?>>
+    <associate|eq 14.67.148|<tuple|14.101|?>>
+    <associate|eq 14.68.148|<tuple|14.102|?>>
+    <associate|eq 14.69.148|<tuple|14.103|?>>
     <associate|eq 14.7.146|<tuple|14.11|?>>
-    <associate|eq 14.70.148|<tuple|14.107|?>>
-    <associate|eq 14.71.148|<tuple|14.108|?>>
-    <associate|eq 14.72.148|<tuple|14.109|?>>
-    <associate|eq 14.73.148|<tuple|14.110|?>>
-    <associate|eq 14.74.148|<tuple|14.111|?>>
-    <associate|eq 14.75.149|<tuple|14.112|?>>
-    <associate|eq 14.76.149|<tuple|14.113|?>>
-    <associate|eq 14.77.149|<tuple|14.114|?>>
-    <associate|eq 14.78.149|<tuple|14.115|?>>
-    <associate|eq 14.79.149|<tuple|14.116|?>>
+    <associate|eq 14.70.148|<tuple|14.104|?>>
+    <associate|eq 14.71.148|<tuple|14.105|?>>
+    <associate|eq 14.72.148|<tuple|14.106|?>>
+    <associate|eq 14.73.148|<tuple|14.107|?>>
+    <associate|eq 14.74.148|<tuple|14.108|?>>
+    <associate|eq 14.75.149|<tuple|14.109|?>>
+    <associate|eq 14.76.149|<tuple|14.110|?>>
+    <associate|eq 14.77.149|<tuple|14.111|?>>
+    <associate|eq 14.78.149|<tuple|14.112|?>>
+    <associate|eq 14.79.149|<tuple|14.113|?>>
     <associate|eq 14.8.146|<tuple|14.12|?>>
     <associate|eq 14.8.163|<tuple|14.9|?>>
-    <associate|eq 14.80.149|<tuple|14.117|?>>
-    <associate|eq 14.81.150|<tuple|14.118|?>>
-    <associate|eq 14.82.149|<tuple|14.119|?>>
-    <associate|eq 14.83.150|<tuple|14.120|?>>
-    <associate|eq 14.84.149|<tuple|14.121|?>>
-    <associate|eq 14.85.150|<tuple|14.122|?>>
-    <associate|eq 14.86.150|<tuple|14.123|?>>
-    <associate|eq 14.87.150|<tuple|14.124|?>>
-    <associate|eq 14.88.150|<tuple|14.125|?>>
-    <associate|eq 14.89.150|<tuple|14.126|?>>
+    <associate|eq 14.80.149|<tuple|14.114|?>>
+    <associate|eq 14.81.150|<tuple|14.115|?>>
+    <associate|eq 14.82.149|<tuple|14.116|?>>
+    <associate|eq 14.83.150|<tuple|14.117|?>>
+    <associate|eq 14.84.149|<tuple|14.118|?>>
+    <associate|eq 14.85.150|<tuple|14.119|?>>
+    <associate|eq 14.86.150|<tuple|14.120|?>>
+    <associate|eq 14.87.150|<tuple|14.121|?>>
+    <associate|eq 14.88.150|<tuple|14.122|?>>
+    <associate|eq 14.89.150|<tuple|14.123|?>>
     <associate|eq 14.9.146|<tuple|14.13|?>>
     <associate|eq 14.9.164|<tuple|14.10|?>>
-    <associate|eq 14.90.150|<tuple|14.127|?>>
-    <associate|eq 14.91.150|<tuple|14.129|?>>
-    <associate|eq 14.92.150|<tuple|14.130|?>>
-    <associate|eq 14.93.150|<tuple|14.131|?>>
-    <associate|eq 14.94.150|<tuple|14.132|?>>
-    <associate|eq 14.94.183|<tuple|14.128|?>>
-    <associate|eq 14.95.150|<tuple|14.133|?>>
-    <associate|eq 14.96.150|<tuple|14.134|?>>
-    <associate|eq 14.97.150|<tuple|14.135|?>>
-    <associate|eq 14.98.150|<tuple|14.136|?>>
-    <associate|eq 14.99.150|<tuple|14.137|?>>
-    <associate|eq: 14.124.176.1|<tuple|14.160|?>>
+    <associate|eq 14.90.150|<tuple|14.124|?>>
+    <associate|eq 14.91.150|<tuple|14.126|?>>
+    <associate|eq 14.92.150|<tuple|14.127|?>>
+    <associate|eq 14.93.150|<tuple|14.128|?>>
+    <associate|eq 14.94.150|<tuple|14.129|?>>
+    <associate|eq 14.94.183|<tuple|14.125|?>>
+    <associate|eq 14.95.150|<tuple|14.130|?>>
+    <associate|eq 14.96.150|<tuple|14.131|?>>
+    <associate|eq 14.97.150|<tuple|14.132|?>>
+    <associate|eq 14.98.150|<tuple|14.133|?>>
+    <associate|eq 14.99.150|<tuple|14.134|?>>
+    <associate|eq: 14.124.176.1|<tuple|14.157|?>>
     <associate|filter base|<tuple|14.258|?>>
     <associate|filter base accumulating alternative|<tuple|14.267|?>>
     <associate|filter base and compactness|<tuple|14.284|?>>
@@ -23744,10 +23795,9 @@
     <associate|lemma 14.381.166|<tuple|14.405|?>>
     <associate|lemma 14.382.166|<tuple|14.406|?>>
     <associate|lemma 14.387.166|<tuple|14.411|?>>
-    <associate|lemma 14.409.294|<tuple|14.413|?>>
     <associate|lemma 14.413.294|<tuple|14.197|?>>
-    <associate|lemma 14.416.294|<tuple|14.421|?>>
-    <associate|lemma 14.417.294|<tuple|14.419|?>>
+    <associate|lemma 14.416.294|<tuple|14.200|?>>
+    <associate|lemma 14.417.294|<tuple|14.201|?>>
     <associate|limit (-1)^/i|<tuple|14.323|?>>
     <associate|limit (a+n)/(b+n)|<tuple|14.311|?>>
     <associate|limit 1/(a+i)|<tuple|14.310|?>>
@@ -24049,101 +24099,101 @@
 
       <tuple|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>||\<\|\|\>><rsub|L<around*|(|X,Y|)>>>>|<pageref|auto-47>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>|<pageref|auto-49>>
+      <tuple|<tuple|<with|mode|<quote|math>|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>|<pageref|auto-50>>
 
-      <tuple|<tuple|operator norm of multlinear mapping>|<pageref|auto-50>>
+      <tuple|<tuple|operator norm of multlinear mapping>|<pageref|auto-51>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>>|<pageref|auto-51>>
+      <tuple|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>>|<pageref|auto-52>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|L<around*|(|X<rsup|n>;Y|)>>>|<pageref|auto-52>>
+      <tuple|<tuple|<with|mode|<quote|math>|L<around*|(|X<rsup|n>;Y|)>>>|<pageref|auto-53>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsup|n>;Y|)>>>>|<pageref|auto-53>>
+      <tuple|<tuple|<with|mode|<quote|math>|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X<rsup|n>;Y|)>>>>|<pageref|auto-54>>
 
-      <tuple|<tuple|Hausdorff topological space>|<pageref|auto-55>>
+      <tuple|<tuple|Hausdorff topological space>|<pageref|auto-56>>
 
-      <tuple|<tuple|regular topological space>|<pageref|auto-56>>
+      <tuple|<tuple|regular topological space>|<pageref|auto-57>>
 
-      <tuple|<tuple|normal topological space>|<pageref|auto-57>>
+      <tuple|<tuple|normal topological space>|<pageref|auto-58>>
 
-      <tuple|<tuple|neighborhood>|<pageref|auto-58>>
+      <tuple|<tuple|neighborhood>|<pageref|auto-59>>
 
-      <tuple|<tuple|open neighborhood>|<pageref|auto-59>>
+      <tuple|<tuple|open neighborhood>|<pageref|auto-60>>
 
-      <tuple|<tuple|fundamental system of neighborhoods>|<pageref|auto-60>>
+      <tuple|<tuple|fundamental system of neighborhoods>|<pageref|auto-61>>
 
-      <tuple|<tuple|first countable topological space>|<pageref|auto-61>>
+      <tuple|<tuple|first countable topological space>|<pageref|auto-62>>
 
-      <tuple|<tuple|second countable topological space>|<pageref|auto-62>>
+      <tuple|<tuple|second countable topological space>|<pageref|auto-63>>
 
-      <tuple|<tuple|compact space>|<pageref|auto-64>>
+      <tuple|<tuple|compact space>|<pageref|auto-65>>
 
-      <tuple|<tuple|compact set>|<pageref|auto-65>>
-
-      <tuple|<tuple|extreme value theorem>|<pageref|auto-66>>
+      <tuple|<tuple|compact set>|<pageref|auto-66>>
 
       <tuple|<tuple|extreme value theorem>|<pageref|auto-67>>
 
-      <tuple|<tuple|limit point compactness>|<pageref|auto-68>>
+      <tuple|<tuple|extreme value theorem>|<pageref|auto-68>>
 
-      <tuple|<tuple|compact class>|<pageref|auto-69>>
+      <tuple|<tuple|limit point compactness>|<pageref|auto-69>>
 
-      <tuple|<tuple|filter base>|<pageref|auto-72>>
+      <tuple|<tuple|compact class>|<pageref|auto-70>>
 
-      <tuple|<tuple|neighborhood filter base>|<pageref|auto-73>>
+      <tuple|<tuple|filter base>|<pageref|auto-73>>
 
-      <tuple|<tuple|converging to a point>|<pageref|auto-74>>
+      <tuple|<tuple|neighborhood filter base>|<pageref|auto-74>>
 
-      <tuple|<tuple|accumaling at a point>|<pageref|auto-75>>
+      <tuple|<tuple|converging to a point>|<pageref|auto-75>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<frak-U\>\<rightarrow\>x>>|<pageref|auto-76>>
+      <tuple|<tuple|accumaling at a point>|<pageref|auto-76>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<frak-U\>\<succ\>x>>|<pageref|auto-77>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<frak-U\>\<rightarrow\>x>>|<pageref|auto-77>>
 
-      <tuple|<tuple|subordinate filter bases>|<pageref|auto-78>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<frak-U\>\<succ\>x>>|<pageref|auto-78>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<frak-W\>\<geqslant\>\<frak-U\>>>|<pageref|auto-79>>
+      <tuple|<tuple|subordinate filter bases>|<pageref|auto-79>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<frak-U\>\<ll\>\<frak-W\>>>|<pageref|auto-80>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<frak-W\>\<geqslant\>\<frak-U\>>>|<pageref|auto-80>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<frak-U\>\<sqsubseteq\>\<frak-W\>>>|<pageref|auto-81>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<frak-U\>\<ll\>\<frak-W\>>>|<pageref|auto-81>>
 
-      <tuple|<tuple|ultra filter>|<pageref|auto-82>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<frak-U\>\<sqsubseteq\>\<frak-W\>>>|<pageref|auto-82>>
 
-      <tuple|<tuple|maximum filter base>|<pageref|auto-83>>
+      <tuple|<tuple|ultra filter>|<pageref|auto-83>>
 
-      <tuple|<tuple|Tychonoff's theorem>|<pageref|auto-85>>
+      <tuple|<tuple|maximum filter base>|<pageref|auto-84>>
+
+      <tuple|<tuple|Tychonoff's theorem>|<pageref|auto-86>>
 
       <tuple|<tuple|<with|mode|<quote|math>|<below|lim
-      sup|n\<rightarrow\>\<infty\>> x<rsub|n>>>|<pageref|auto-91>>
+      sup|n\<rightarrow\>\<infty\>> x<rsub|n>>>|<pageref|auto-92>>
 
       <tuple|<tuple|<with|mode|<quote|math>|<below|lim
-      inf|n\<rightarrow\>\<infty\>> x<rsub|n>>>|<pageref|auto-92>>
-
-      <tuple|<tuple|Cauchy sequence>|<pageref|auto-94>>
+      inf|n\<rightarrow\>\<infty\>> x<rsub|n>>>|<pageref|auto-93>>
 
       <tuple|<tuple|Cauchy sequence>|<pageref|auto-95>>
 
-      <tuple|<tuple|complete space>|<pageref|auto-96>>
+      <tuple|<tuple|Cauchy sequence>|<pageref|auto-96>>
 
-      <tuple|<tuple|Banach space>|<pageref|auto-97>>
+      <tuple|<tuple|complete space>|<pageref|auto-97>>
 
-      <tuple|<tuple|bounded uniform convergence>|<pageref|auto-100>>
+      <tuple|<tuple|Banach space>|<pageref|auto-98>>
 
-      <tuple|<tuple|series>|<pageref|auto-102>>
+      <tuple|<tuple|bounded uniform convergence>|<pageref|auto-101>>
 
-      <tuple|<tuple|absolute convergence>|<pageref|auto-105>>
+      <tuple|<tuple|series>|<pageref|auto-103>>
 
-      <tuple|<tuple|dominant convergence>|<pageref|auto-106>>
+      <tuple|<tuple|absolute convergence>|<pageref|auto-106>>
 
-      <tuple|<tuple|Baire Category theorem>|<pageref|auto-108>>
+      <tuple|<tuple|dominant convergence>|<pageref|auto-107>>
 
-      <tuple|<tuple|open mapping theorem>|<pageref|auto-109>>
+      <tuple|<tuple|Baire Category theorem>|<pageref|auto-109>>
 
-      <tuple|<tuple|connected space>|<pageref|auto-111>>
+      <tuple|<tuple|open mapping theorem>|<pageref|auto-110>>
 
-      <tuple|<tuple|disconnected space>|<pageref|auto-112>>
+      <tuple|<tuple|connected space>|<pageref|auto-112>>
 
-      <tuple|<tuple|intermediate value theorem>|<pageref|auto-113>>
+      <tuple|<tuple|disconnected space>|<pageref|auto-113>>
+
+      <tuple|<tuple|intermediate value theorem>|<pageref|auto-114>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|14<space|2spc>Topology>
@@ -24191,76 +24241,80 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-45>
 
+      <with|par-left|<quote|1tab>|14.5.1<space|2spc>The Hahn-Banach theorem
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-48>>
+
       14.6<space|2spc>Multilinear mappings and continuity
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-48>
+      <no-break><pageref|auto-49>
 
       14.7<space|2spc>Separation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-54>
+      <no-break><pageref|auto-55>
 
       14.8<space|2spc>Compact Spaces <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-63>
+      <no-break><pageref|auto-64>
 
       <with|par-left|<quote|1tab>|14.8.1<space|2spc>Product of Compact sets
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-70>>
+      <no-break><pageref|auto-71>>
 
       <with|par-left|<quote|2tab>|14.8.1.1<space|2spc>Filter bases
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-71>>
+      <no-break><pageref|auto-72>>
 
       <with|par-left|<quote|2tab>|14.8.1.2<space|2spc>Tychonoff's theorem
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-84>>
+      <no-break><pageref|auto-85>>
 
       <with|par-left|<quote|2tab>|14.8.1.3<space|2spc>Consequences of
       Tychonoff's Theorem <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-86>>
+      <no-break><pageref|auto-87>>
 
       14.9<space|2spc>Convergence <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-87>
+      <no-break><pageref|auto-88>
 
       <with|par-left|<quote|1tab>|14.9.1<space|2spc>Sequences and limits
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-88>>
+      <no-break><pageref|auto-89>>
 
       <with|par-left|<quote|1tab>|14.9.2<space|2spc>Properties of the limit
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-89>>
+      <no-break><pageref|auto-90>>
 
       <with|par-left|<quote|1tab>|14.9.3<space|2spc>Sequences of real numbers
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-90>>
+      <no-break><pageref|auto-91>>
 
       14.10<space|2spc>Complete spaces <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-93>
+      <no-break><pageref|auto-94>
 
       <with|par-left|<quote|1tab>|14.10.1<space|2spc>Examples of complete
       spaces <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-98>>
+      <no-break><pageref|auto-99>>
 
       <with|par-left|<quote|1tab>|14.10.2<space|2spc>Uniform convergence and
       Bounded functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-99>>
+      <no-break><pageref|auto-100>>
 
       <with|par-left|<quote|1tab>|14.10.3<space|2spc>Series
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-101>>
+      <no-break><pageref|auto-102>>
 
       <with|par-left|<quote|2tab>|14.10.3.1<space|2spc>Series of non negative
       numbers <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-103>>
+      <no-break><pageref|auto-104>>
 
       <with|par-left|<quote|2tab>|14.10.3.2<space|2spc>Absolute Convergent
       Series <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-104>>
+      <no-break><pageref|auto-105>>
 
       <with|par-left|<quote|1tab>|14.10.4<space|2spc>Properties of complete
       spaces. <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-107>>
+      <no-break><pageref|auto-108>>
 
       14.11<space|2spc>Connected Sets <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-110>
+      <no-break><pageref|auto-111>
     </associate>
   </collection>
 </auxiliary>

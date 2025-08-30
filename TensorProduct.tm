@@ -4064,8 +4064,7 @@
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|\<Gamma\><around*|(|k,l+1|)>>|<cell|=>|<cell|\<Gamma\><around*|(|k,l|)><big|cup><around*|(|<around*|{|1,\<ldots\>,k|}>\<cdot\><around*|{|l+1|}>|)>\<wedge\>\<Gamma\><around*|(|k,l|)><big|cap><around*|(|<around*|{|1,\<ldots\>,k|}>\<cdot\><around*|{|l+1|}>|)>=\<varnothing\>>>|<row|<cell|V\<otimes\>W<rprime|'>>|<cell|\<equallim\><rsub|<text|[eq:
-        <reference|eq 13.75.133>]>>>|<cell|<big|oplus><rsub|\<gamma\>\<in\>\<Gamma\><around*|(|k,l|)>>V<rsub|\<gamma\><around*|(|1|)>>\<otimes\>W<rsub|\<gamma\><around*|(|2|)>>>>|<row|<cell|<label|eq
-        13.78.133>V\<otimes\>W<rsub|l+1>>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 13.75.133>]>>>|<cell|<big|oplus><rsub|\<gamma\>\<in\>\<Gamma\><around*|(|k,l|)>>V<rsub|\<gamma\><around*|(|1|)>>\<otimes\>W<rsub|\<gamma\><around*|(|2|)>>>>|<row|<cell|V\<otimes\>W<rsub|l+1>>|<cell|\<equallim\><rsub|<text|[eq:
         <reference|eq 13.78.133>]>>>|<cell|<big|oplus><rsub|\<gamma\>\<in\><around*|{|1,\<ldots\>,k|}>\<cdot\><around*|{|l+1|}>>V<rsub|\<gamma\><around*|(|1|)>>\<otimes\>W<rsub|\<gamma\><around*|(|2|)>>>>|<row|<cell|V\<otimes\>W>|<cell|\<equallim\><rsub|<text|[eq:
         <reference|eq 13.74.133>]>>>|<cell|<around*|(|V\<otimes\>W<rprime|'>|)>\<oplus\><around*|(|V\<otimes\>W<rsub|l+1>|)>>>>>
       </eqnarray*>
@@ -4469,7 +4468,7 @@
         Combining this with [eq: <reference|eq 13.111.144>] results in\ 
 
         <\equation*>
-          P=<label|eq 13.111.144>span<around*|(|\<nu\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>|)>|)>
+          P=span<around*|(|\<nu\><around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>|)>|)>
         </equation*>
 
         <item>Let <math|\<varphi\>\<in\>Hom<around*|(|V<rsub|1>,\<ldots\>,V<rsub|n>;P|)>=Hom<around*|(|span<around*|(|<around*|{|e<rsub|1>|}>|)>,\<ldots\>,span<around*|(|<around*|{|e<rsub|n>|}>|)>;U|)>>.
@@ -4757,7 +4756,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|12>
-    <associate|page-first|623>
+    <associate|page-first|633>
     <associate|par-first|0tab>
     <associate|section-nr|0>
     <associate|subsection-nr|0>
