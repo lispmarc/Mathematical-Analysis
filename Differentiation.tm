@@ -22686,6 +22686,8 @@
     16.446.145>].
   </proof>
 
+  One candidate to extend the concept of derivating is\ 
+
   <\definition>
     <label|diff Frechet approximation><dueto|Fréchet approximation>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
@@ -22872,19 +22874,30 @@
 
     Hence we have\ 
 
-    <\equation*>
-      \<forall\>x\<in\>span<around*|(|T<rsub|A><around*|(|a|)>|)><text| that
-      ><around*|(|L<rsub|1>-L<rsub|2>|)><around*|(|x|)>=0
-    </equation*>
+    <\equation>
+      <label|eq 16.471.298>\<forall\>x\<in\>span<around*|(|T<rsub|A><around*|(|a|)>|)><text|
+      that ><around*|(|L<rsub|1>-L<rsub|2>|)><around*|(|x|)>=0
+    </equation>
 
     Let <math|x\<in\><wide|span<around*|(|T<rsub|A><around*|(|a|)>|)>|\<wide-bar\>>>
-    then by [theorem: <inactive|<reference|>>
+    then by [theorem: <reference|limit and closure in a metric space>] there
+    exist a sequence <math|<around*|{|x<rsub|n>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>span<around*|(|T<rsub|A><around*|(|a|)>|)>>
+    such that <math|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>=x>. As
+    <math|L<rsub|1>-L<rsub|2>> is continous we have by [theorem:
+    <reference|limit and continuity>] that\ 
 
     <\equation*>
-      \;
+      <around*|(|L<rsub|1>-L<rsub|2>|)><around*|(|x|)><below|=|<text|[theorem:
+      <reference|limit and continuity>] >><below|lim|n\<rightarrow\>\<infty\>><around*|(|L<rsub|1>-L<rsub|2>|)><around*|(|x<rsub|n>|)><below|=|<around*|[|eq:<reference|eq
+      16.471.298>|]>><below|lim|n\<rightarrow\>\<infty\>>0=0
     </equation*>
 
-    \;
+    In other words we have\ 
+
+    <\equation*>
+      \<forall\>x\<in\><wide|span<around*|(|T<rsub|A><around*|(|a|)>|)>|\<wide-bar\>>
+      we have L<rsub|1><around*|(|x|)>=L<rsub|2><around*|(|x|)>
+    </equation*>
   </proof>
 
   \;
@@ -22917,7 +22930,6 @@
 
 <\references>
   <\collection>
-    <associate||<tuple|16.276|?>>
     <associate|auto-1|<tuple|16|?>>
     <associate|auto-10|<tuple|<with|mode|<quote|math>|\<varepsilon\>>-mapping|?>>
     <associate|auto-11|<tuple|16.1.4|?>>
@@ -22988,7 +23000,6 @@
     <associate|auto-69|<tuple|implicit function theorem (1)|?>>
     <associate|auto-7|<tuple|<with|mode|<quote|math>|f<rprime|'><around*|(|x|)>>|?>>
     <associate|auto-70|<tuple|implict function theorem (2)|?>>
-    <associate|auto-71|<tuple|16.7|?>>
     <associate|auto-8|<tuple|16.1.3|?>>
     <associate|auto-9|<tuple|differentiability|?>>
     <associate|conjecture 16.245.136|<tuple|16.265|?>>
@@ -23210,8 +23221,6 @@
     <associate|diff vector functions (1)|<tuple|16.66|?>>
     <associate|diff vector functions (2)|<tuple|16.68|?>>
     <associate|diff vector functions and linearity|<tuple|16.65|?>>
-    <associate|ediff|<tuple|16.276|?>>
-    <associate|ediff (1)|<tuple|16.277|?>>
     <associate|eq 14.411.143|<tuple|16.426|?>>
     <associate|eq 16.1.177|<tuple|16.2|?>>
     <associate|eq 16.1.194|<tuple|16.1|?>>
@@ -23607,6 +23616,7 @@
     <associate|eq 16.469.298|<tuple|16.469|?>>
     <associate|eq 16.47.188|<tuple|16.51|?>>
     <associate|eq 16.470.298|<tuple|16.470|?>>
+    <associate|eq 16.471.298|<tuple|16.471|?>>
     <associate|eq 16.48.188|<tuple|16.52|?>>
     <associate|eq 16.49.189|<tuple|16.53|?>>
     <associate|eq 16.5.178|<tuple|16.6|?>>
@@ -23676,8 +23686,6 @@
     <associate|eq 16.91.199|<tuple|16.116|?>>
     <associate|eq 16.92.194|<tuple|16.127|?>>
     <associate|eq 16.95.181|<tuple|16.95|?>>
-    <associate|extend diff|<tuple|16.276|?>>
-    <associate|extend diff is diff on open sets|<tuple|16.278|?>>
     <associate|inverse function and derivate|<tuple|16.272|?>>
     <associate|lemma 16.101.194|<tuple|16.145|?>>
     <associate|lemma 16.104.194|<tuple|16.190|?>>
@@ -23951,10 +23959,6 @@
       16.6<space|2spc>Inverse Function Theorem
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-61>
-
-      16.7<space|2spc>Differentiation on non open sets
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-71>
     </associate>
   </collection>
 </auxiliary>

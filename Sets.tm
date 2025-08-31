@@ -11977,7 +11977,15 @@
       <math|A<rsub|i>\<neq\>\<varnothing\>>] where <math|I,\<cal-A\>> are
       sets then there exists a function <math|f:I\<rightarrow\><big|cup><rsub|i\<in\>I>A<rsub|i>>
       such that <math|\<forall\>i\<in\>I> we have
-      <math|f<around*|(|i|)>\<in\>A<rsub|i>>
+      <math|f<around*|(|i|)>\<in\>A<rsub|i>>.
+
+      <\note>
+        Using the definition of a family [see definition: <reference|family>]
+        this is equivalent with saying that there exist a family
+        <math|<around*|{|f<rsub|i>|}><rsub|i\<in\>I>\<subseteq\><big|cup><rsub|i\<in\>I>A<rsub|i>>
+        such that <math|\<forall\>i\<in\>I> we have
+        <math|f<rsub|i>\<in\>A<rsub|i>>.\ 
+      </note>
     </enumerate>
   </theorem>
 
@@ -14986,34 +14994,34 @@
     <associate|cartesian product of the empty set|<tuple|1.49|?>>
     <associate|cartesian product properties (1)|<tuple|1.52|?>>
     <associate|cartesian product with enpty set|<tuple|1.50|?>>
-    <associate|choice Axiom of choice consequences|<tuple|3.134|?>>
-    <associate|choice Hausdorff maximal principle|<tuple|3.125|?>>
-    <associate|choice Hausdorff's Maximal Principle|<tuple|3.126|?>>
-    <associate|choice Hausdorff's implies Zorn's|<tuple|3.128|?>>
+    <associate|choice Axiom of choice consequences|<tuple|3.135|?>>
+    <associate|choice Hausdorff maximal principle|<tuple|3.126|?>>
+    <associate|choice Hausdorff's Maximal Principle|<tuple|3.127|?>>
+    <associate|choice Hausdorff's implies Zorn's|<tuple|3.129|?>>
     <associate|choice P'(A)|<tuple|3.101|?>>
     <associate|choice P'(A) is a set|<tuple|3.102|?>>
-    <associate|choice Zorn implies welll ordering|<tuple|3.129|?>>
-    <associate|choice Zorn's lemma|<tuple|3.127|?>>
-    <associate|choice Zorn's lemma for pre-order|<tuple|3.135|?>>
+    <associate|choice Zorn implies welll ordering|<tuple|3.130|?>>
+    <associate|choice Zorn's lemma|<tuple|3.128|?>>
+    <associate|choice Zorn's lemma for pre-order|<tuple|3.136|?>>
     <associate|choice axiom of choice equivalences (1)|<tuple|3.106|?>>
     <associate|choice choice function|<tuple|3.103|?>>
-    <associate|choice existence of successor|<tuple|3.115|?>>
-    <associate|choice family on preimage|<tuple|3.137|?>>
-    <associate|choice function generating|<tuple|3.107|?>>
-    <associate|choice function to injection/bijection|<tuple|3.136|?>>
-    <associate|choice intersection of p-sewuences|<tuple|3.118|?>>
-    <associate|choice lemma p-sequence|<tuple|3.116|?>>
-    <associate|choice lemma p-sequence generation|<tuple|3.121|?>>
-    <associate|choice lemma properties of select|<tuple|3.122|?>>
-    <associate|choice lemma property of select elements|<tuple|3.120|?>>
+    <associate|choice existence of successor|<tuple|3.116|?>>
+    <associate|choice family on preimage|<tuple|3.138|?>>
+    <associate|choice function generating|<tuple|3.108|?>>
+    <associate|choice function to injection/bijection|<tuple|3.137|?>>
+    <associate|choice intersection of p-sewuences|<tuple|3.119|?>>
+    <associate|choice lemma p-sequence|<tuple|3.117|?>>
+    <associate|choice lemma p-sequence generation|<tuple|3.122|?>>
+    <associate|choice lemma properties of select|<tuple|3.123|?>>
+    <associate|choice lemma property of select elements|<tuple|3.121|?>>
     <associate|choice lemma select elements froms a
-    p-sewuence|<tuple|3.123|?>>
-    <associate|choice lemma upper bound of chain|<tuple|3.131|?>>
-    <associate|choice lemma well ordering lemma (1)|<tuple|3.130|?>>
-    <associate|choice product equality|<tuple|3.113|?>>
-    <associate|choice product inclusion (1)|<tuple|3.111|?>>
-    <associate|choice product sets empty condition|<tuple|3.110|?>>
-    <associate|choice well-order implies Axiom of Choice|<tuple|3.132|?>>
+    p-sewuence|<tuple|3.124|?>>
+    <associate|choice lemma upper bound of chain|<tuple|3.132|?>>
+    <associate|choice lemma well ordering lemma (1)|<tuple|3.131|?>>
+    <associate|choice product equality|<tuple|3.114|?>>
+    <associate|choice product inclusion (1)|<tuple|3.112|?>>
+    <associate|choice product sets empty condition|<tuple|3.111|?>>
+    <associate|choice well-order implies Axiom of Choice|<tuple|3.133|?>>
     <associate|class absorption laws|<tuple|1.26|?>>
     <associate|class class commutative,idempotent,associative,distributivity|<tuple|1.30|?>>
     <associate|class complement of comploment|<tuple|1.27|?>>
@@ -15323,20 +15331,19 @@
     <associate|function surjection condition|<tuple|2.52|?>>
     <associate|function trivial bijection|<tuple|2.66|?>>
     <associate|function: A^B and sets|<tuple|2.36|?>>
-    <associate|generalized intervals and boundaries|<tuple|3.144|?>>
-    <associate|interval and inf or sup|<tuple|3.142|?>>
-    <associate|interval condition to be empty|<tuple|3.139|?>>
-    <associate|interval generalized condition (1)|<tuple|3.143|?>>
-    <associate|interval generalized interval|<tuple|3.140|?>>
-    <associate|interval generalized interval condition|<tuple|3.141|?>>
-    <associate|interval interval|<tuple|3.138|?>>
+    <associate|generalized intervals and boundaries|<tuple|3.145|?>>
+    <associate|interval and inf or sup|<tuple|3.143|?>>
+    <associate|interval condition to be empty|<tuple|3.140|?>>
+    <associate|interval generalized condition (1)|<tuple|3.144|?>>
+    <associate|interval generalized interval|<tuple|3.141|?>>
+    <associate|interval generalized interval condition|<tuple|3.142|?>>
+    <associate|interval interval|<tuple|3.139|?>>
     <associate|order A isomorphism B|<tuple|3.50|?>>
     <associate|order a\<less\>=b\<less\>=c|<tuple|3.30|?>>
     <associate|order chain|<tuple|3.41|?>>
     <associate|order chain is a totally ordered class|<tuple|3.43|?>>
     <associate|order comparable|<tuple|3.38|?>>
     <associate|order comparable property|<tuple|3.39|?>>
-    <associate|order comparable property (1)|<tuple|3.39|?>>
     <associate|order composition of functions|<tuple|3.52|?>>
     <associate|order condition for isomorphism|<tuple|3.54|?>>
     <associate|order condition for isomorphism in a totallu ordered
@@ -15433,9 +15440,9 @@
     <associate|product of a empty set is empty|<tuple|2.138|?>>
     <associate|product of family with one element|<tuple|2.139|?>>
     <associate|product of family with two classes|<tuple|2.140|?>>
-    <associate|product product is not empty|<tuple|3.109|?>>
+    <associate|product product is not empty|<tuple|3.110|?>>
     <associate|product projection function|<tuple|2.148|?>>
-    <associate|product projection is surjective|<tuple|3.108|?>>
+    <associate|product projection is surjective|<tuple|3.109|?>>
     <associate|product sub-product|<tuple|2.146|?>>
     <associate|relation|<tuple|3.1|?>>
     <associate|relation properties|<tuple|3.4|?>>
