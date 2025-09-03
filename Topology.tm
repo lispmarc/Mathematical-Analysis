@@ -6282,28 +6282,28 @@
 
   <\proof>
     Note that using [theorem: <reference|normed sub space topology>] the norm
-    for the subspace topology <math|<around*|(|<around*|\<\|\|\>||\<\|\|\>><rsub|X>|)><rsub|\|U\<times\>*U>>
+    for the subspace topology <math|<around*|(|<around*|\<\|\|\>||\<\|\|\>><rsub|X>|)><rsub|\|U>>
     is defined by <math|\<forall\>x\<in\>U>
-    <math|<around*|(|<around*|\<\|\|\>||\<\|\|\>><rsub|X>|)><rsub|\|U\<times\>*U><around*|(|x|)>=<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>.
+    <math|<around*|(|<around*|\<\|\|\>||\<\|\|\>><rsub|X>|)><rsub|\|U\<times\>><around*|(|x|)>=<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>>.
 
     <\description>
       <item*|<math|\<Rightarrow\>>>Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
       then by [theorem: <reference|continuity in a normed space>] there exist
       a <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
       <math|\<forall\>y\<in\>U> satisfying
-      <math|><math|<around*|(|<around*|\<\|\|\>|x-y|\<\|\|\>><rsub|X>|)><rsub|\|U\<times\>*U>\<less\>\<delta\>>
+      <rigid|<math|><math|<around*|(|<around*|\<\|\|\>|x-y|\<\|\|\>><rsub|X>|)><rsub|\|U>\<less\>\<delta\>>>
       we have <math|<around*|\<\|\|\>|<around*|(|x|)>-f<around*|(|y|)>|\<\|\|\>><rsub|Y>\<less\>\<varepsilon\>>.
       If <math|y\<in\>U> satisfies <math|<around*|\<\|\|\>|x-y|\<\|\|\>><rsub|X>\<less\>\<delta\>>
-      then <math|<around*|(|<around*|\<\|\|\>|x-y|\<\|\|\>><rsub|X>|)><rsub|\|U\<times\>*U>\<less\>\<delta\>>
+      then <math|<rigid|<around*|(|<around*|\<\|\|\>|x-y|\<\|\|\>><rsub|X>|)><rsub|\|U>\<less\>\<delta\>>>
       so that <math|<around*|\<\|\|\>|f<around*|(|x|)>-f<around*|(|y|)>|\<\|\|\>><rsub|Y>\<less\>\<varepsilon\>>.
 
       <item*|<math|\<Leftarrow\>>>Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
       then there exist a <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
       <math|\<forall\>y\<in\>U> with <math|<around*|\<\|\|\>|x-y|\<\|\|\>><rsub|X>\<less\>\<delta\>>
-      we have <math|<around*|\<\|\|\>|f<around*|(|x|)>-f<around*|(|y|)>|\<\|\|\>><rsub|Y>\<less\>\<varepsilon\>>.
-      Hence if <math|><math|<around*|(|<around*|\<\|\|\>|x-y|\<\|\|\>><rsub|X>|)><rsub|\|U\<times\>*U>\<less\>\<delta\>>
+      we have <math|<rigid|<around*|\<\|\|\>|f<around*|(|x|)>-f<around*|(|y|)>|\<\|\|\>><rsub|Y>\<less\>\<varepsilon\>>>.
+      Hence if <math|><math|<around*|(|<around*|\<\|\|\>|x-y|\<\|\|\>><rsub|X>|)><rsub|\|U>\<less\>\<delta\>>
       we have <math|<around*|\<\|\|\>|x-y|\<\|\|\>><rsub|X>\<less\>\<delta\>>
-      so that <math|<around*|\<\|\|\>|f<around*|(|x|)>-f<around*|(|y|)>|\<\|\|\>><rsub|Y>\<less\>\<varepsilon\>>,
+      so that <math|<rigid|<around*|\<\|\|\>|f<around*|(|x|)>-f<around*|(|y|)>|\<\|\|\>><rsub|Y>\<less\>\<varepsilon\>>>,
       so that, using [theorem: <reference|continuity in a normed space>],
       \ <math|f:U\<rightarrow\>Y> is continuous.
     </description>
@@ -15919,7 +15919,61 @@
     </description>
   </proof>
 
-  We can reformulate the above theorem to a limit to <math|0> in
+  If norms in a normed space are equivalent then the limit is independent of
+  the chosen norm.
+
+  <\theorem>
+    <label|limit is independent of the norm>If <math|X> is a set,
+    <math|k\<in\>\<bbb-N\><rsub|0>> and <math|<around*|\<\|\|\>||\<\|\|\>><rsub|1>>,
+    <math|<around*|\<\|\|\>||\<\|\|\>><rsub|2>> are equivalent norms and
+    <math|<around*|{|x<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
+    then we have\ 
+
+    <\equation*>
+      x=<below|lim|n\<rightarrowlim\>\<infty\>>x<rsub|n><text| using
+      ><around*|\<\|\|\>||\<\|\|\>><rsub|1>\<Leftrightarrow\><text|
+      >x=<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n><text| using
+      ><around*|\<\|\|\>||\<\|\|\>><rsub|2>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    As <math|<around*|\<\|\|\>||\<\|\|\>><rsub|1>> and
+    <math|<around*|\<\|\|\>||\<\|\|\>><rsub|2>> are equivalent it follows
+    from [theorem: <reference|normed norm equivalence condition>] that
+    <math|\<exists\>M<rsub|1>,M<rsub|2>\<in\>\<bbb-R\><rsup|+>> such that\ 
+
+    <\equation>
+      <label|eq 14.196.198>\<forall\>x\<in\>X<text| we have
+      >M<rsub|1>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|1>\<leqslant\><around*|\<\|\|\>|x|\<\|\|\>><rsub|2>\<leqslant\>M<rsub|2>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>><rsub|1>
+    </equation>
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>.
+      As <math|x=<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>> using
+      <math|<around*|\<\|\|\>||\<\|\|\>><rsub|1>> there exist a
+      <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
+      <math|\<forall\>n\<in\><around*|{|N,\<ldots\>,\<infty\>|}>> we have
+      <math|<around*|\<\|\|\>|x<rsub|n>-x|\<\|\|\>><rsub|1>\<less\><frac|\<varepsilon\>|M<rsub|2>>>,
+      hence \ <math|<around*|\<\|\|\>|x-x<rsub|n>|\<\|\|\>><rsub|2><below|\<leqslant\>|<text|[eq:
+      <reference|eq 14.196.198>]>>M<rsub|2>\<cdot\><around*|\<\|\|\>|x-x<rsub|n>|\<\|\|\>><rsub|1>\<less\>M<rsub|2>\<cdot\><frac|\<varepsilon\>|M<rsub|2>>=\<varepsilon\>>,
+      which proves that <math|x=<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>>
+      using <math|<around*|\<\|\|\>||\<\|\|\>><rsub|2>>.
+
+      <item*|<math|\<Leftarrow\>>>Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>.
+      As <math|x=<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>> using
+      <math|<around*|\<\|\|\>||\<\|\|\>><rsub|2>> there exist a
+      <math|N\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that
+      <math|\<forall\>n\<in\><around*|{|N,\<ldots\>,\<infty\>|}>> we have
+      <math|<around*|\<\|\|\>|x<rsub|n>-x|\<\|\|\>><rsub|2>\<less\>M<rsub|1>\<cdot\>\<varepsilon\>>,
+      hence \ <math|<around*|\<\|\|\>|x-x<rsub|n>|\<\|\|\>><rsub|1><below|\<leqslant\>|<text|[eq:
+      <reference|eq 14.196.198>]>><frac|1|M<rsub|1>>\<cdot\><around*|\<\|\|\>|x-x<rsub|n>|\<\|\|\>><rsub|2>\<less\><frac|1|M<rsub|1>>\<cdot\>M<rsub|1>\<cdot\>\<varepsilon\>=\<varepsilon\>>,
+      which proves that <math|x=<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>>
+      using <math|<around*|\<\|\|\>||\<\|\|\>><rsub|1>>.
+    </description>
+  </proof>
+
+  We can reformulate every limit to a element to a limit to <math|0> in
   <math|\<bbb-R\>>.
 
   <\theorem>
@@ -23369,12 +23423,12 @@
     <associate|auto-97|<tuple|complete space|?>>
     <associate|auto-98|<tuple|Banach space|?>>
     <associate|auto-99|<tuple|14.10.1|?>>
-    <associate|bounded B(X,Y) is a normed space|<tuple|14.362|?>>
-    <associate|bounded function|<tuple|14.360|?>>
-    <associate|bounded function B(X,Y) is a vector space|<tuple|14.361|?>>
-    <associate|bounded uniform convergence and continuity|<tuple|14.365|?>>
+    <associate|bounded B(X,Y) is a normed space|<tuple|14.363|?>>
+    <associate|bounded function|<tuple|14.361|?>>
+    <associate|bounded function B(X,Y) is a vector space|<tuple|14.362|?>>
+    <associate|bounded uniform convergence and continuity|<tuple|14.366|?>>
     <associate|bounded uniform convergence is convergence in supremum
-    nrom|<tuple|14.366|?>>
+    nrom|<tuple|14.367|?>>
     <associate|closed set properties|<tuple|14.21|?>>
     <associate|compact Hausdorff space is regular and
     compact|<tuple|14.253|?>>
@@ -23413,44 +23467,44 @@
     <associate|compact space|<tuple|14.235|?>>
     <associate|compact space is compact subset|<tuple|14.237|?>>
     <associate|compact subspace equivalences|<tuple|14.243|?>>
-    <associate|complete Baire Category|<tuple|14.407|?>>
-    <associate|complete Cauchy metric|<tuple|14.341|?>>
-    <associate|complete Cauchy normed|<tuple|14.342|?>>
-    <associate|complete Cauchy sequence is bounded (2)|<tuple|14.344|?>>
-    <associate|complete L(X,Y) is Banach|<tuple|14.357|?>>
-    <associate|complete L(X1,..,Xn;Y) is Banach|<tuple|14.358|?>>
-    <associate|complete L^n(X;Y) is Banach|<tuple|14.359|?>>
-    <associate|complete R^n is complete|<tuple|14.354|?>>
+    <associate|complete Baire Category|<tuple|14.408|?>>
+    <associate|complete Cauchy metric|<tuple|14.342|?>>
+    <associate|complete Cauchy normed|<tuple|14.343|?>>
+    <associate|complete Cauchy sequence is bounded (2)|<tuple|14.345|?>>
+    <associate|complete L(X,Y) is Banach|<tuple|14.358|?>>
+    <associate|complete L(X1,..,Xn;Y) is Banach|<tuple|14.359|?>>
+    <associate|complete L^n(X;Y) is Banach|<tuple|14.360|?>>
+    <associate|complete R^n is complete|<tuple|14.355|?>>
     <associate|complete bounded functions to a complete space are
-    complete|<tuple|14.367|?>>
+    complete|<tuple|14.368|?>>
     <associate|complete closed subset of a complete space is
-    complete|<tuple|14.352|?>>
-    <associate|complete compact spaces are complete|<tuple|14.351|?>>
+    complete|<tuple|14.353|?>>
+    <associate|complete compact spaces are complete|<tuple|14.352|?>>
     <associate|complete continuous linear isomorphism is a
-    homeomorphism|<tuple|14.411|?>>
-    <associate|complete convergence implies Cauchy|<tuple|14.345|?>>
+    homeomorphism|<tuple|14.412|?>>
+    <associate|complete convergence implies Cauchy|<tuple|14.346|?>>
     <associate|complete every finite dimensional normed space is a Banach
-    space|<tuple|14.355|?>>
+    space|<tuple|14.356|?>>
     <associate|complete limit point of a Cauchy sequence is unique in a
-    metric space|<tuple|14.350|?>>
-    <associate|complete open mapping theorem|<tuple|14.410|?>>
-    <associate|complete product of Banach spaces|<tuple|14.348|?>>
-    <associate|complete sequence and limit point|<tuple|14.349|?>>
-    <associate|complete set of real numbers|<tuple|14.353|?>>
-    <associate|complete space|<tuple|14.347|?>>
-    <associate|complete the complex numbers are complete|<tuple|14.356|?>>
-    <associate|complete uniform convergion|<tuple|14.363|?>>
-    <associate|connected alternative definition|<tuple|14.415|?>>
-    <associate|connected closed interval is connected|<tuple|14.418|?>>
-    <associate|connected disconnected space|<tuple|14.413|?>>
-    <associate|connected generalized intervals|<tuple|14.419|?>>
+    metric space|<tuple|14.351|?>>
+    <associate|complete open mapping theorem|<tuple|14.411|?>>
+    <associate|complete product of Banach spaces|<tuple|14.349|?>>
+    <associate|complete sequence and limit point|<tuple|14.350|?>>
+    <associate|complete set of real numbers|<tuple|14.354|?>>
+    <associate|complete space|<tuple|14.348|?>>
+    <associate|complete the complex numbers are complete|<tuple|14.357|?>>
+    <associate|complete uniform convergion|<tuple|14.364|?>>
+    <associate|connected alternative definition|<tuple|14.416|?>>
+    <associate|connected closed interval is connected|<tuple|14.419|?>>
+    <associate|connected disconnected space|<tuple|14.414|?>>
+    <associate|connected generalized intervals|<tuple|14.420|?>>
     <associate|connected image by a real continuous function of a closed
-    interval is a closed interval|<tuple|14.420|?>>
+    interval is a closed interval|<tuple|14.421|?>>
     <associate|connected image of a connected set by a continuous function is
-    connected|<tuple|14.417|?>>
-    <associate|connected intermediate value theorem|<tuple|14.421|?>>
-    <associate|connected set|<tuple|14.416|?>>
-    <associate|connected space|<tuple|14.412|?>>
+    connected|<tuple|14.418|?>>
+    <associate|connected intermediate value theorem|<tuple|14.422|?>>
+    <associate|connected set|<tuple|14.417|?>>
+    <associate|connected space|<tuple|14.413|?>>
     <associate|continuity 1/f is continuous|<tuple|14.152|?>>
     <associate|continuity 1/f^2 is continuous|<tuple|14.153|?>>
     <associate|continuity K^n|<tuple|14.205|?>>
@@ -23608,127 +23662,128 @@
     <associate|eq 14.146.153|<tuple|14.191|?>>
     <associate|eq 14.147.153|<tuple|14.193|?>>
     <associate|eq 14.148.153|<tuple|14.194|?>>
-    <associate|eq 14.149\<point\>153|<tuple|14.221|?>>
+    <associate|eq 14.149\<point\>153|<tuple|14.222|?>>
     <associate|eq 14.15.146|<tuple|14.19|?>>
-    <associate|eq 14.150.153|<tuple|14.222|?>>
-    <associate|eq 14.150.154|<tuple|14.209|?>>
-    <associate|eq 14.150.155|<tuple|14.204|?>>
-    <associate|eq 14.150.158|<tuple|14.199|?>>
-    <associate|eq 14.151.153|<tuple|14.223|?>>
-    <associate|eq 14.151.154|<tuple|14.212|?>>
-    <associate|eq 14.151.155|<tuple|14.210|?>>
-    <associate|eq 14.151.156|<tuple|14.205|?>>
-    <associate|eq 14.151.158|<tuple|14.200|?>>
-    <associate|eq 14.152.153|<tuple|14.224|?>>
-    <associate|eq 14.152.155|<tuple|14.211|?>>
-    <associate|eq 14.152.156|<tuple|14.206|?>>
-    <associate|eq 14.152.158|<tuple|14.201|?>>
-    <associate|eq 14.153.155|<tuple|14.207|?>>
-    <associate|eq 14.153.158|<tuple|14.202|?>>
-    <associate|eq 14.154.155|<tuple|14.213|?>>
-    <associate|eq 14.154.156|<tuple|14.208|?>>
-    <associate|eq 14.154.158|<tuple|14.203|?>>
-    <associate|eq 14.155.155|<tuple|14.214|?>>
-    <associate|eq 14.156.155|<tuple|14.215|?>>
+    <associate|eq 14.150.153|<tuple|14.223|?>>
+    <associate|eq 14.150.154|<tuple|14.210|?>>
+    <associate|eq 14.150.155|<tuple|14.205|?>>
+    <associate|eq 14.150.158|<tuple|14.200|?>>
+    <associate|eq 14.151.153|<tuple|14.224|?>>
+    <associate|eq 14.151.154|<tuple|14.213|?>>
+    <associate|eq 14.151.155|<tuple|14.211|?>>
+    <associate|eq 14.151.156|<tuple|14.206|?>>
+    <associate|eq 14.151.158|<tuple|14.201|?>>
+    <associate|eq 14.152.153|<tuple|14.225|?>>
+    <associate|eq 14.152.155|<tuple|14.212|?>>
+    <associate|eq 14.152.156|<tuple|14.207|?>>
+    <associate|eq 14.152.158|<tuple|14.202|?>>
+    <associate|eq 14.153.155|<tuple|14.208|?>>
+    <associate|eq 14.153.158|<tuple|14.203|?>>
+    <associate|eq 14.154.155|<tuple|14.214|?>>
+    <associate|eq 14.154.156|<tuple|14.209|?>>
+    <associate|eq 14.154.158|<tuple|14.204|?>>
+    <associate|eq 14.155.155|<tuple|14.215|?>>
+    <associate|eq 14.156.155|<tuple|14.216|?>>
     <associate|eq 14.156.170|<tuple|14.195|?>>
-    <associate|eq 14.157.155|<tuple|14.216|?>>
-    <associate|eq 14.158.155|<tuple|14.217|?>>
-    <associate|eq 14.159.155|<tuple|14.218|?>>
+    <associate|eq 14.157.155|<tuple|14.217|?>>
+    <associate|eq 14.158.155|<tuple|14.218|?>>
+    <associate|eq 14.159.155|<tuple|14.219|?>>
     <associate|eq 14.16.146|<tuple|14.20|?>>
-    <associate|eq 14.160.155|<tuple|14.219|?>>
-    <associate|eq 14.161.155|<tuple|14.220|?>>
+    <associate|eq 14.160.155|<tuple|14.220|?>>
+    <associate|eq 14.161.155|<tuple|14.221|?>>
     <associate|eq 14.163.155|<tuple|14.192|?>>
     <associate|eq 14.17.146|<tuple|14.21|?>>
-    <associate|eq 14.171.156|<tuple|14.225|?>>
-    <associate|eq 14.171.193|<tuple|14.196|?>>
-    <associate|eq 14.172.156|<tuple|14.226|?>>
-    <associate|eq 14.172.293|<tuple|14.197|?>>
-    <associate|eq 14.173.156|<tuple|14.227|?>>
-    <associate|eq 14.173.293|<tuple|14.198|?>>
-    <associate|eq 14.174.156|<tuple|14.228|?>>
-    <associate|eq 14.175.156|<tuple|14.229|?>>
-    <associate|eq 14.176.156|<tuple|14.231|?>>
-    <associate|eq 14.177.156|<tuple|14.232|?>>
-    <associate|eq 14.178.156|<tuple|14.233|?>>
-    <associate|eq 14.179.156|<tuple|14.234|?>>
+    <associate|eq 14.171.156|<tuple|14.226|?>>
+    <associate|eq 14.171.193|<tuple|14.197|?>>
+    <associate|eq 14.172.156|<tuple|14.227|?>>
+    <associate|eq 14.172.293|<tuple|14.198|?>>
+    <associate|eq 14.173.156|<tuple|14.228|?>>
+    <associate|eq 14.173.293|<tuple|14.199|?>>
+    <associate|eq 14.174.156|<tuple|14.229|?>>
+    <associate|eq 14.175.156|<tuple|14.230|?>>
+    <associate|eq 14.176.156|<tuple|14.232|?>>
+    <associate|eq 14.177.156|<tuple|14.233|?>>
+    <associate|eq 14.178.156|<tuple|14.234|?>>
+    <associate|eq 14.179.156|<tuple|14.235|?>>
     <associate|eq 14.18.146|<tuple|14.22|?>>
-    <associate|eq 14.180.156|<tuple|14.235|?>>
-    <associate|eq 14.181.156|<tuple|14.236|?>>
-    <associate|eq 14.182.156|<tuple|14.237|?>>
-    <associate|eq 14.183.156|<tuple|14.238|?>>
-    <associate|eq 14.184.156|<tuple|14.239|?>>
-    <associate|eq 14.185.156|<tuple|14.240|?>>
-    <associate|eq 14.186.156|<tuple|14.241|?>>
-    <associate|eq 14.187.156|<tuple|14.242|?>>
-    <associate|eq 14.188.156|<tuple|14.243|?>>
-    <associate|eq 14.188.170|<tuple|14.230|?>>
-    <associate|eq 14.189.156|<tuple|14.244|?>>
+    <associate|eq 14.180.156|<tuple|14.236|?>>
+    <associate|eq 14.181.156|<tuple|14.237|?>>
+    <associate|eq 14.182.156|<tuple|14.238|?>>
+    <associate|eq 14.183.156|<tuple|14.239|?>>
+    <associate|eq 14.184.156|<tuple|14.240|?>>
+    <associate|eq 14.185.156|<tuple|14.241|?>>
+    <associate|eq 14.186.156|<tuple|14.242|?>>
+    <associate|eq 14.187.156|<tuple|14.243|?>>
+    <associate|eq 14.188.156|<tuple|14.244|?>>
+    <associate|eq 14.188.170|<tuple|14.231|?>>
+    <associate|eq 14.189.156|<tuple|14.245|?>>
     <associate|eq 14.19.146|<tuple|14.23|?>>
-    <associate|eq 14.190.156|<tuple|14.245|?>>
-    <associate|eq 14.191.156|<tuple|14.246|?>>
-    <associate|eq 14.192.156|<tuple|14.247|?>>
-    <associate|eq 14.193.156|<tuple|14.248|?>>
-    <associate|eq 14.199.156|<tuple|14.254|?>>
-    <associate|eq 14.199.157|<tuple|14.253|?>>
+    <associate|eq 14.190.156|<tuple|14.246|?>>
+    <associate|eq 14.191.156|<tuple|14.247|?>>
+    <associate|eq 14.192.156|<tuple|14.248|?>>
+    <associate|eq 14.193.156|<tuple|14.249|?>>
+    <associate|eq 14.196.198|<tuple|14.196|?>>
+    <associate|eq 14.199.156|<tuple|14.255|?>>
+    <associate|eq 14.199.157|<tuple|14.254|?>>
     <associate|eq 14.2.145|<tuple|14.4|?>>
     <associate|eq 14.20.146|<tuple|14.24|?>>
-    <associate|eq 14.200.156|<tuple|14.255|?>>
-    <associate|eq 14.201.156|<tuple|14.256|?>>
-    <associate|eq 14.203.158|<tuple|14.257|?>>
-    <associate|eq 14.204.158|<tuple|14.258|?>>
-    <associate|eq 14.205.158|<tuple|14.259|?>>
-    <associate|eq 14.206.158|<tuple|14.260|?>>
-    <associate|eq 14.207.158|<tuple|14.261|?>>
-    <associate|eq 14.207.172|<tuple|14.249|?>>
-    <associate|eq 14.208.158|<tuple|14.262|?>>
-    <associate|eq 14.208.172|<tuple|14.250|?>>
-    <associate|eq 14.209.172|<tuple|14.251|?>>
-    <associate|eq 14.209.528|<tuple|14.263|?>>
+    <associate|eq 14.200.156|<tuple|14.256|?>>
+    <associate|eq 14.201.156|<tuple|14.257|?>>
+    <associate|eq 14.203.158|<tuple|14.258|?>>
+    <associate|eq 14.204.158|<tuple|14.259|?>>
+    <associate|eq 14.205.158|<tuple|14.260|?>>
+    <associate|eq 14.206.158|<tuple|14.261|?>>
+    <associate|eq 14.207.158|<tuple|14.262|?>>
+    <associate|eq 14.207.172|<tuple|14.250|?>>
+    <associate|eq 14.208.158|<tuple|14.263|?>>
+    <associate|eq 14.208.172|<tuple|14.251|?>>
+    <associate|eq 14.209.172|<tuple|14.252|?>>
+    <associate|eq 14.209.528|<tuple|14.264|?>>
     <associate|eq 14.21.146|<tuple|14.25|?>>
-    <associate|eq 14.210.158|<tuple|14.264|?>>
-    <associate|eq 14.210.172|<tuple|14.252|?>>
+    <associate|eq 14.210.158|<tuple|14.265|?>>
+    <associate|eq 14.210.172|<tuple|14.253|?>>
     <associate|eq 14.22.146|<tuple|14.30|?>>
-    <associate|eq 14.228.171|<tuple|14.274|?>>
-    <associate|eq 14.229.171|<tuple|14.275|?>>
+    <associate|eq 14.228.171|<tuple|14.275|?>>
+    <associate|eq 14.229.171|<tuple|14.276|?>>
     <associate|eq 14.23.146|<tuple|14.31|?>>
-    <associate|eq 14.230.171|<tuple|14.276|?>>
-    <associate|eq 14.234.164|<tuple|14.265|?>>
-    <associate|eq 14.235.164|<tuple|14.266|?>>
-    <associate|eq 14.236.164|<tuple|14.267|?>>
-    <associate|eq 14.237.164|<tuple|14.268|?>>
-    <associate|eq 14.238.164|<tuple|14.269|?>>
-    <associate|eq 14.239.164|<tuple|14.271|?>>
-    <associate|eq 14.239.165|<tuple|14.270|?>>
+    <associate|eq 14.230.171|<tuple|14.277|?>>
+    <associate|eq 14.234.164|<tuple|14.266|?>>
+    <associate|eq 14.235.164|<tuple|14.267|?>>
+    <associate|eq 14.236.164|<tuple|14.268|?>>
+    <associate|eq 14.237.164|<tuple|14.269|?>>
+    <associate|eq 14.238.164|<tuple|14.270|?>>
+    <associate|eq 14.239.164|<tuple|14.272|?>>
+    <associate|eq 14.239.165|<tuple|14.271|?>>
     <associate|eq 14.24.146|<tuple|14.32|?>>
-    <associate|eq 14.240.164|<tuple|14.273|?>>
-    <associate|eq 14.245.166|<tuple|14.277|?>>
-    <associate|eq 14.246.166|<tuple|14.278|?>>
-    <associate|eq 14.247.166|<tuple|14.279|?>>
-    <associate|eq 14.248.166|<tuple|14.280|?>>
-    <associate|eq 14.249.166|<tuple|14.281|?>>
+    <associate|eq 14.240.164|<tuple|14.274|?>>
+    <associate|eq 14.245.166|<tuple|14.278|?>>
+    <associate|eq 14.246.166|<tuple|14.279|?>>
+    <associate|eq 14.247.166|<tuple|14.280|?>>
+    <associate|eq 14.248.166|<tuple|14.281|?>>
+    <associate|eq 14.249.166|<tuple|14.282|?>>
     <associate|eq 14.25.146|<tuple|14.33|?>>
-    <associate|eq 14.250.166|<tuple|14.282|?>>
-    <associate|eq 14.251.166|<tuple|14.283|?>>
-    <associate|eq 14.251.173|<tuple|14.293|?>>
-    <associate|eq 14.252.166|<tuple|14.284|?>>
-    <associate|eq 14.253.166|<tuple|14.285|?>>
-    <associate|eq 14.254.166|<tuple|14.286|?>>
-    <associate|eq 14.255.166|<tuple|14.287|?>>
-    <associate|eq 14.256.166|<tuple|14.288|?>>
-    <associate|eq 14.257.166|<tuple|14.289|?>>
-    <associate|eq 14.259.167|<tuple|14.290|?>>
+    <associate|eq 14.250.166|<tuple|14.283|?>>
+    <associate|eq 14.251.166|<tuple|14.284|?>>
+    <associate|eq 14.251.173|<tuple|14.294|?>>
+    <associate|eq 14.252.166|<tuple|14.285|?>>
+    <associate|eq 14.253.166|<tuple|14.286|?>>
+    <associate|eq 14.254.166|<tuple|14.287|?>>
+    <associate|eq 14.255.166|<tuple|14.288|?>>
+    <associate|eq 14.256.166|<tuple|14.289|?>>
+    <associate|eq 14.257.166|<tuple|14.290|?>>
+    <associate|eq 14.259.167|<tuple|14.291|?>>
     <associate|eq 14.26.146|<tuple|14.34|?>>
     <associate|eq 14.26.246|<tuple|14.26|?>>
-    <associate|eq 14.260.167|<tuple|14.291|?>>
-    <associate|eq 14.261.167|<tuple|14.292|?>>
-    <associate|eq 14.262.167|<tuple|14.294|?>>
-    <associate|eq 14.263.167|<tuple|14.295|?>>
-    <associate|eq 14.264.167|<tuple|14.296|?>>
-    <associate|eq 14.265.167|<tuple|14.297|?>>
-    <associate|eq 14.266.167|<tuple|14.298|?>>
-    <associate|eq 14.267.167|<tuple|14.299|?>>
-    <associate|eq 14.268.167|<tuple|14.300|?>>
-    <associate|eq 14.269.167|<tuple|14.301|?>>
+    <associate|eq 14.260.167|<tuple|14.292|?>>
+    <associate|eq 14.261.167|<tuple|14.293|?>>
+    <associate|eq 14.262.167|<tuple|14.295|?>>
+    <associate|eq 14.263.167|<tuple|14.296|?>>
+    <associate|eq 14.264.167|<tuple|14.297|?>>
+    <associate|eq 14.265.167|<tuple|14.298|?>>
+    <associate|eq 14.266.167|<tuple|14.299|?>>
+    <associate|eq 14.267.167|<tuple|14.300|?>>
+    <associate|eq 14.268.167|<tuple|14.301|?>>
+    <associate|eq 14.269.167|<tuple|14.302|?>>
     <associate|eq 14.27.146|<tuple|14.35|?>>
     <associate|eq 14.27.246|<tuple|14.27|?>>
     <associate|eq 14.277.294|<tuple|14.73|?>>
@@ -23872,52 +23927,53 @@
     <associate|filter base subordinate|<tuple|14.270|?>>
     <associate|filter base trivial|<tuple|14.261|?>>
     <associate|filter base union and intersection|<tuple|14.264|?>>
-    <associate|lemma 14.342.156|<tuple|14.390|?>>
-    <associate|lemma 14.344.156|<tuple|14.391|?>>
-    <associate|lemma 14.345.156|<tuple|14.392|?>>
-    <associate|lemma 14.356.158|<tuple|14.401|?>>
-    <associate|lemma 14.376|<tuple|14.406|?>>
-    <associate|lemma 14.381.166|<tuple|14.408|?>>
-    <associate|lemma 14.382.166|<tuple|14.409|?>>
-    <associate|lemma 14.387.166|<tuple|14.414|?>>
+    <associate|lemma 14.342.156|<tuple|14.391|?>>
+    <associate|lemma 14.344.156|<tuple|14.392|?>>
+    <associate|lemma 14.345.156|<tuple|14.393|?>>
+    <associate|lemma 14.356.158|<tuple|14.402|?>>
+    <associate|lemma 14.376|<tuple|14.407|?>>
+    <associate|lemma 14.381.166|<tuple|14.409|?>>
+    <associate|lemma 14.382.166|<tuple|14.410|?>>
+    <associate|lemma 14.387.166|<tuple|14.415|?>>
     <associate|lemma 14.413.294|<tuple|14.198|?>>
     <associate|lemma 14.416.294|<tuple|14.201|?>>
     <associate|lemma 14.417.294|<tuple|14.202|?>>
-    <associate|limit (-1)^/i|<tuple|14.326|?>>
-    <associate|limit (a+n)/(b+n)|<tuple|14.312|?>>
-    <associate|limit 1/(a+i)|<tuple|14.311|?>>
-    <associate|limit a.x_n|<tuple|14.318|?>>
-    <associate|limit and closure in a metric space|<tuple|14.313|?>>
-    <associate|limit and continuity|<tuple|14.330|?>>
-    <associate|limit and continuity in metric space|<tuple|14.331|?>>
-    <associate|limit and equivalent norms|<tuple|14.343|?>>
-    <associate|limit and lower or upper bound|<tuple|14.323|?>>
-    <associate|limit b^n|<tuple|14.310|?>>
-    <associate|limit complex conjugate|<tuple|14.322|?>>
-    <associate|limit complex numbers condition|<tuple|14.321|?>>
-    <associate|limit constant sequence|<tuple|14.309|?>>
-    <associate|limit convergence implies bounded|<tuple|14.324|?>>
-    <associate|limit increasing decreasing (1)|<tuple|14.335|?>>
-    <associate|limit increasing descending sequences|<tuple|14.334|?>>
+    <associate|limit (-1)^/i|<tuple|14.327|?>>
+    <associate|limit (a+n)/(b+n)|<tuple|14.313|?>>
+    <associate|limit 1/(a+i)|<tuple|14.312|?>>
+    <associate|limit a.x_n|<tuple|14.319|?>>
+    <associate|limit and closure in a metric space|<tuple|14.314|?>>
+    <associate|limit and continuity|<tuple|14.331|?>>
+    <associate|limit and continuity in metric space|<tuple|14.332|?>>
+    <associate|limit and equivalent norms|<tuple|14.344|?>>
+    <associate|limit and lower or upper bound|<tuple|14.324|?>>
+    <associate|limit b^n|<tuple|14.311|?>>
+    <associate|limit complex conjugate|<tuple|14.323|?>>
+    <associate|limit complex numbers condition|<tuple|14.322|?>>
+    <associate|limit constant sequence|<tuple|14.310|?>>
+    <associate|limit convergence implies bounded|<tuple|14.325|?>>
+    <associate|limit increasing decreasing (1)|<tuple|14.336|?>>
+    <associate|limit increasing descending sequences|<tuple|14.335|?>>
+    <associate|limit is independent of the norm|<tuple|14.308|?>>
     <associate|limit limit of sequence limited by another
-    sequence|<tuple|14.327|?>>
-    <associate|limit limsup liminf|<tuple|14.336|?>>
-    <associate|limit limsup liminf (equivalent definition)|<tuple|14.338|?>>
-    <associate|limit limsup liminf and limit|<tuple|14.339|?>>
-    <associate|limit limsup liminf inequality|<tuple|14.337|?>>
-    <associate|limit limsup liminf properties|<tuple|14.340|?>>
-    <associate|limit of a finite product of sequences|<tuple|14.320|?>>
-    <associate|limit of a product of sequences|<tuple|14.319|?>>
-    <associate|limit of norm is norm of limit|<tuple|14.333|?>>
+    sequence|<tuple|14.328|?>>
+    <associate|limit limsup liminf|<tuple|14.337|?>>
+    <associate|limit limsup liminf (equivalent definition)|<tuple|14.339|?>>
+    <associate|limit limsup liminf and limit|<tuple|14.340|?>>
+    <associate|limit limsup liminf inequality|<tuple|14.338|?>>
+    <associate|limit limsup liminf properties|<tuple|14.341|?>>
+    <associate|limit of a finite product of sequences|<tuple|14.321|?>>
+    <associate|limit of a product of sequences|<tuple|14.320|?>>
+    <associate|limit of norm is norm of limit|<tuple|14.334|?>>
     <associate|limit of sequence of non negatieve real numbers is
-    positive|<tuple|14.328|?>>
+    positive|<tuple|14.329|?>>
     <associate|limit sequence dominated by a sequence converting to
-    0|<tuple|14.315|?>>
+    0|<tuple|14.316|?>>
     <associate|limit sequence limited by a convergent real
-    sequence|<tuple|14.325|?>>
-    <associate|limit x_n+a|<tuple|14.316|?>>
-    <associate|limit x_n+y_n|<tuple|14.317|?>>
-    <associate|metric Banach fixed point theorem|<tuple|14.405|?>>
+    sequence|<tuple|14.326|?>>
+    <associate|limit x_n+a|<tuple|14.317|?>>
+    <associate|limit x_n+y_n|<tuple|14.318|?>>
+    <associate|metric Banach fixed point theorem|<tuple|14.406|?>>
     <associate|metric ball image preimage|<tuple|14.74|?>>
     <associate|metric bounded set|<tuple|14.76|?>>
     <associate|metric bounded set inclusion|<tuple|14.78|?>>
@@ -23925,8 +23981,8 @@
     <associate|metric closed balls are closed|<tuple|14.66|?>>
     <associate|metric closed open balls are bounded|<tuple|14.79|?>>
     <associate|metric composition of isometries|<tuple|14.73|?>>
-    <associate|metric contraction|<tuple|14.403|?>>
-    <associate|metric contractions are continuous|<tuple|14.404|?>>
+    <associate|metric contraction|<tuple|14.404|?>>
+    <associate|metric contractions are continuous|<tuple|14.405|?>>
     <associate|metric dense set|<tuple|14.82|?>>
     <associate|metric empty set is bounded|<tuple|14.77|?>>
     <associate|metric equivalent metrics|<tuple|14.68|?>>
@@ -24015,7 +24071,7 @@
     space|<tuple|14.233|?>>
     <associate|sequence|<tuple|14.299|?>>
     <associate|sequence convergence|<tuple|14.303|?>>
-    <associate|sequence convergence equivalences|<tuple|14.308|?>>
+    <associate|sequence convergence equivalences|<tuple|14.309|?>>
     <associate|sequence convergence in metric space|<tuple|14.307|?>>
     <associate|sequence increasing decreasing|<tuple|14.300|?>>
     <associate|sequence increasing decreasing consequence|<tuple|14.301|?>>
@@ -24023,40 +24079,40 @@
     <associate|sequence limit|<tuple|14.305|?>>
     <associate|sequence limit definition|<tuple|14.306|?>>
     <associate|sequence limit start value|<tuple|14.304|?>>
-    <associate|serie sum and scalar product|<tuple|14.377|?>>
-    <associate|series|<tuple|14.368|?>>
-    <associate|series absolute convergence|<tuple|14.394|?>>
-    <associate|series absolute convergence commutativity|<tuple|14.402|?>>
+    <associate|serie sum and scalar product|<tuple|14.378|?>>
+    <associate|series|<tuple|14.369|?>>
+    <associate|series absolute convergence|<tuple|14.395|?>>
+    <associate|series absolute convergence commutativity|<tuple|14.403|?>>
     <associate|series absolute convergence equals convergence only in Banach
-    space|<tuple|14.399|?>>
-    <associate|series absolute convergence equivalences|<tuple|14.400|?>>
+    space|<tuple|14.400|?>>
+    <associate|series absolute convergence equivalences|<tuple|14.401|?>>
     <associate|series absolute convergence implies
-    convergence|<tuple|14.397|?>>
-    <associate|series absolute dominant convergence|<tuple|14.395|?>>
-    <associate|series absolute dominant convergence (1)|<tuple|14.396|?>>
+    convergence|<tuple|14.398|?>>
+    <associate|series absolute dominant convergence|<tuple|14.396|?>>
+    <associate|series absolute dominant convergence (1)|<tuple|14.397|?>>
     <associate|series convergence condition in a Banach
-    space|<tuple|14.373|?>>
-    <associate|series converging of upper series|<tuple|14.376|?>>
-    <associate|series dominant convergence|<tuple|14.398|?>>
-    <associate|series non negative numbers associativity|<tuple|14.393|?>>
-    <associate|series non negative numbers commutativity|<tuple|14.381|?>>
+    space|<tuple|14.374|?>>
+    <associate|series converging of upper series|<tuple|14.377|?>>
+    <associate|series dominant convergence|<tuple|14.399|?>>
+    <associate|series non negative numbers associativity|<tuple|14.394|?>>
+    <associate|series non negative numbers commutativity|<tuple|14.382|?>>
     <associate|series non negative numbers countable sum equivalent
-    definition|<tuple|14.388|?>>
-    <associate|series non negative numbers countable sums|<tuple|14.384|?>>
+    definition|<tuple|14.389|?>>
+    <associate|series non negative numbers countable sums|<tuple|14.385|?>>
     <associate|series non negative numbers countable sums
-    inclusion|<tuple|14.387|?>>
-    <associate|series non negative numbers denumerable sum|<tuple|14.382|?>>
-    <associate|series non negative numbers equivalences|<tuple|14.379|?>>
+    inclusion|<tuple|14.388|?>>
+    <associate|series non negative numbers denumerable sum|<tuple|14.383|?>>
+    <associate|series non negative numbers equivalences|<tuple|14.380|?>>
     <associate|series non negative numbers strict positive
-    term|<tuple|14.380|?>>
-    <associate|series of all zeroes|<tuple|14.389|?>>
-    <associate|series of complex numbers|<tuple|14.378|?>>
-    <associate|series partition series|<tuple|14.375|?>>
-    <associate|series power series in R|<tuple|14.371|?>>
-    <associate|series terms converges to zero|<tuple|14.372|?>>
-    <associate|series translation start|<tuple|14.374|?>>
-    <associate|sum of a countable set|<tuple|14.383|?>>
-    <associate|sum of powers lemma|<tuple|14.370|?>>
+    term|<tuple|14.381|?>>
+    <associate|series of all zeroes|<tuple|14.390|?>>
+    <associate|series of complex numbers|<tuple|14.379|?>>
+    <associate|series partition series|<tuple|14.376|?>>
+    <associate|series power series in R|<tuple|14.372|?>>
+    <associate|series terms converges to zero|<tuple|14.373|?>>
+    <associate|series translation start|<tuple|14.375|?>>
+    <associate|sum of a countable set|<tuple|14.384|?>>
+    <associate|sum of powers lemma|<tuple|14.371|?>>
     <associate|topology Baire space|<tuple|14.54|?>>
     <associate|topology Baire space alternative definition|<tuple|14.56|?>>
     <associate|topology Baire space empty set|<tuple|14.55|?>>
@@ -24109,7 +24165,7 @@
     <associate|topology subspace topology|<tuple|14.8|?>>
     <associate|topology subspace topology open subset|<tuple|14.11|?>>
     <associate|topology subsubspace topology|<tuple|14.10|?>>
-    <associate|xn\<less\>yn=\<gtr\>limxn\<less\>limyn|<tuple|14.329|?>>
+    <associate|xn\<less\>yn=\<gtr\>limxn\<less\>limyn|<tuple|14.330|?>>
   </collection>
 </references>
 

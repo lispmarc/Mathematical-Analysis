@@ -923,7 +923,7 @@
     <label|diff constant function is differentiable>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>,
-    <math|y\<in\>Y> <math|U> a open set in <math|X> then
+    <math|y\<in\>Y> \ <math|U> a open set in <math|X> then
     <math|\<forall\>x\<in\>U> we have that
 
     <\equation*>
@@ -22920,7 +22920,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|15>
-    <associate|page-first|891>
+    <associate|page-first|893>
     <associate|par-first|0tab>
     <associate|par-mode|justify>
     <associate|section-nr|0>
