@@ -1969,6 +1969,8 @@
     </equation*>
   </proof>
 
+  TODO
+
   \;
 
   The following corollary is needed later to extend the chain rule to higher
@@ -19438,8 +19440,6 @@
     </equation*>
   </proof>
 
-  TODO
-
   <\theorem>
     <label|diff inverse mapping on GL(X)>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
@@ -22920,7 +22920,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|15>
-    <associate|page-first|893>
+    <associate|page-first|891>
     <associate|par-first|0tab>
     <associate|par-mode|justify>
     <associate|section-nr|0>
