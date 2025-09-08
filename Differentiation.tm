@@ -2458,8 +2458,6 @@
     </description>
   </proof>
 
-  TODO
-
   <\corollary>
     <label|diff partial differentiation is local (1)>Let
     <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
@@ -3089,6 +3087,8 @@
       <math|i>-partial derivative at <math|x>.
     </description>
   </proof>
+
+  TODO
 
   Using the above definition it is easy to prove that partial derivatives are
   local.
