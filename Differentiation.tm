@@ -3088,8 +3088,6 @@
     </description>
   </proof>
 
-  TODO
-
   Using the above definition it is easy to prove that partial derivatives are
   local.
 
@@ -5402,6 +5400,8 @@
       </equation*>
     </enumerate>
   </proof>
+
+  TODO
 
   <subsection|Higher order Fréchet differentiation>
 
