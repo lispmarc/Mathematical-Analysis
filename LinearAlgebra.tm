@@ -3941,8 +3941,10 @@
     This function has the following properties:
 
     <\enumerate>
-      <item><math|\<pi\><rsub|Y>\<in\>Hom<around*|(|X,X\<over\>Y|)>> [or
-      <math|\<pi\><rsub|Y>> is linear]
+      <item><math|\<forall\>x,y\<in\>X> and <math|\<forall\>\<alpha\>\<in\>F>
+      we have <math|\<pi\><rsub|Y><around*|(|x+y|)>=\<pi\><rsub|Y><around*|(|x|)>+\<pi\><rsub|Y><around*|(|y|)>>
+      and <math|\<pi\><rsub|Y><around*|(|\<alpha\>\<cdot\>x|)>=\<alpha\>\<cdot\>.\<pi\><rsub|Y><around*|(|x|)>>
+      [in other words <math|\<pi\><rsub|Y>> is linear]
 
       <item><math|\<pi\><rsub|Y><around*|(|X|)>=X\\Y> [surjectivity]
 
@@ -26034,7 +26036,6 @@
     <associate|product of family of elements with a zero in|<tuple|11.54|?>>
     <associate|rank|<tuple|11.334|?>>
     <associate|section sums and products|<tuple|11.1|?>>
-    <associate|sub-spaces of R,C,Q|<tuple|11.67|?>>
     <associate|sum alternative definition|<tuple|11.4|?>>
     <associate|sum alternative definition (1)|<tuple|11.15|?>>
     <associate|sum alternative definition (2)|<tuple|11.22|?>>
