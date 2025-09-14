@@ -16704,51 +16704,55 @@
 
   <\theorem>
     <label|limit of a product of sequences>Let
-    <math|k\<in\>\<bbb-N\><rsub|0>>, <math|<around*|{|x<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>,<around*|{|y<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>\<bbb-K\>>
-    such that <math|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>> and
-    <math|<below|lim|n\<rightarrow\>\<infty\>>y<rsub|n>> exists then
-    <math|<below|lim|n\<rightarrow\>\<infty\>><around*|(|x<rsub|n>\<cdot\>y<rsub|n>|)>>
-    exist and <math|<below|lim|n\<rightarrow\>\<infty\>><around*|(|x<rsub|n>\<cdot\>y<rsub|n>|)>=<around*|(|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>|)>\<cdot\><around*|(|<below|lim|n\<rightarrow\>\<infty\>>y<rsub|n>|)>>
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
+    a normed space, <math|k\<in\>\<bbb-N\><rsub|0>>,
+    <math|<around*|{|\<lambda\><rsub|n>|}><rsub|n\<in\>\<bbb-N\>>\<subseteq\>\<bbb-K\>>
+    and <math|<around*|{|x<rsub|n>|}><rsub|n\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>\<subseteq\>X>
+    such that <math|<below|lim|n\<rightarrow\>\<infty\>>\<lambda\><rsub|n>>
+    and <math|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>> exists then
+    <math|<below|lim|n\<rightarrow\>\<infty\>><around*|(|\<lambda\><rsub|n>\<cdot\>x<rsub|n>|)>>
+    exist and <rigid|<math|<below|lim|n\<rightarrow\>\<infty\>><around*|(|\<lambda\><rsub|n>\<cdot\>x<rsub|n>|)>=<around*|(|<below|lim|n\<rightarrow\>\<infty\>>\<lambda\><rsub|n>|)>\<cdot\><around*|(|<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>|)>>>.
   </theorem>
 
   <\proof>
-    \ Let <math|x=<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>> and
-    <math|y=<below|lim|n\<rightarrow\>\<infty\>>y<rsub|n>> and take
+    \ Let <math|\<lambda\>=<below|lim|n\<rightarrow\>\<infty\>>\<lambda\><rsub|n>>
+    and <math|x=<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>> and take
     <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. As
-    <math|x=<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>> there exists a
-    <math|<rigid|N<rsub|1>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>> such
-    that\ 
+    <math|\<lambda\>=<below|lim|n\<rightarrow\>\<infty\>>\<lambda\><rsub|n>>
+    there exists a <math|<rigid|N<rsub|1>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>>
+    such that\ 
 
     <\equation>
       <label|eq 14.171.193>\<forall\>n\<geqslant\>N<rsub|1><text| we have
-      ><around*|\||x<rsub|n>-x|\|>\<less\>1\<Rightarrow\><around*|\||x<rsub|n>|\|>=<around*|\||x<rsub|n>-x+x|\|>\<leqslant\><around*|\||x<rsub|n>-x|\|>+<around*|\||x|\|>\<less\>1+<around*|\||x|\|>
+      ><around*|\||\<lambda\><rsub|n>-\<lambda\>|\|>\<less\>1\<Rightarrow\><around*|\||\<lambda\><rsub|n>|\|>=<around*|\||\<lambda\><rsub|n>-\<lambda\>+\<lambda\>|\|>\<leqslant\><around*|\||\<lambda\><rsub|n>-\<lambda\>|\|>+<around*|\||\<lambda\>|\|>\<less\>1+<around*|\||\<lambda\>|\|>
     </equation>
 
-    Further as <math|1+<around*|\||y|\|>\<in\>\<bbb-R\><rsup|+>> there exist
-    a <math|N<rsub|2>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that\ 
+    Further as <math|1+<around*|\<\|\|\>|x|\<\|\|\>>\<in\>\<bbb-R\><rsup|+>>
+    there exist a <math|N<rsub|2>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>>
+    such that\ 
 
     <\equation>
       <label|eq 14.172.293>\<forall\>n\<geqslant\>N<rsub|2><text| we have
-      ><around*|\||x<rsub|n>-x|\|>\<less\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\||y|\|>|)>>
+      ><around*|\||\<lambda\><rsub|n>-\<lambda\>|\|>\<less\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\<\|\|\>|x|\<\|\|\>>|)>>
     </equation>
 
-    As <math|><math|y=<below|lim|n\<rightarrow\>\<infty\>>y<rsub|n>> and
-    <math|1+<around*|\||x|\|>\<in\>\<bbb-R\><rsup|+>> there exist a
+    As <math|><math|x=<below|lim|n\<rightarrow\>\<infty\>>x<rsub|n>> and
+    <math|1+<around*|\||\<lambda\>|\|>\<in\>\<bbb-R\><rsup|+>> there exist a
     <math|N<rsub|3>\<in\><around*|{|k,\<ldots\>,\<infty\>|}>> such that\ 
 
     <\equation>
       <label|eq 14.173.293>\<forall\>n\<geqslant\>N<rsub|3><text| we have
-      <math|<around*|\||y<rsub|n>-y|\|>\<less\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\||x|\|>|)>>>>
+      <math|<around*|\<\|\|\>|x<rsub|n>-x|\<\|\|\>>\<less\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\||\<lambda\>|\|>|)>>>>
     </equation>
 
     Let <math|N=max<around*|(|N<rsub|1>,N<rsub|2>,N<rsub|3>|)>> then we have
     <math|\<forall\>n\<geqslant\>N> we have\ 
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|<around*|\||x<rsub|n>\<cdot\>y<rsub|n>-x\<cdot\>y|\|>>|<cell|=>|<cell|<around*|\||x<rsub|n>\<cdot\>y<rsub|n>-x<rsub|n>\<cdot\>y+x<rsub|n>\<cdot\>y-x\<cdot\>y|\|>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||x<rsub|n>\<cdot\><around*|(|y<rsub|n>-y|)>+<around*|(|x<rsub|n>-x|)>\<cdot\>y|\|>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\||x<rsub|n>\<cdot\><around*|(|y<rsub|n>-y|)>|\|>+<around*|\||<around*|(|x<rsub|n>-x|)>\<cdot\>y|\|>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||x<rsub|n>|\|>\<cdot\><around*|\||y<rsub|n>-y|\|>+<around*|\||y|\|>\<cdot\><around*|\||x<rsub|n>-x|\|>>>|<row|<cell|>|<cell|<below|\<less\>|<text|[eqs:
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<lambda\><rsub|n>\<cdot\>x<rsub|n>-\<lambda\>\<cdot\>y|\<\|\|\>>>|<cell|=>|<cell|<around*|\<\|\|\>|\<lambda\><rsub|n>\<cdot\>x<rsub|n>-\<lambda\><rsub|n>\<cdot\>x+\<lambda\><rsub|n>\<cdot\>x-\<lambda\>\<cdot\>x|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|\<lambda\><rsub|n>\<cdot\><around*|(|x<rsub|n>-x|)>+<around*|(|\<lambda\><rsub|n>-\<lambda\>|)>\<cdot\>x|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|\<lambda\><rsub|n>\<cdot\><around*|(|x<rsub|n>-x|)>|\<\|\|\>>+<around*|\<\|\|\>|<around*|(|\<lambda\><rsub|n>-\<lambda\>|)>\<cdot\>x|\<\|\|\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\||\<lambda\><rsub|n>|\|>\<cdot\><around*|\<\|\|\>|x<rsub|n>-x|\<\|\|\>>+<around*|\||\<lambda\><rsub|n>-\<lambda\>|\|>\<cdot\><around*|\<\|\|\>|x|\<\|\|\>>>>|<row|<cell|>|<cell|<below|\<less\>|<text|[eqs:
       <reference|eq 14.172.293>, <reference|eq
-      14.173.293>]>>>|<cell|<around*|\||x<rsub|n>|\|>\<cdot\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\||x|\|>|)>>+<around*|\||y|\|>\<cdot\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\||y|\|>|)>>>>|<row|<cell|>|<cell|\<less\>>|<cell|<around*|\||x<rsub|n>|\|>\<cdot\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\||x|\|>|)>>+<frac|\<varepsilon\>|2>>>|<row|<cell|>|<cell|<below|\<less\>|<text|[eq:
-      <reference|eq 14.171.193>]>>>|<cell|<around*|(|1+<around*|\||x|\|>|)>\<cdot\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\||x|\|>|)>>+<frac|\<varepsilon\>|2>>>|<row|<cell|>|<cell|=>|<cell|<frac|\<varepsilon\>|2>+<frac|\<varepsilon\>|2>>>|<row|<cell|>|<cell|=>|<cell|\<varepsilon\>>>>>
+      14.173.293>]>>>|<cell|<around*|\||\<lambda\><rsub|n>|\|>\<cdot\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\||\<lambda\>|\|>|)>>+<around*|\<\|\|\>|x|\<\|\|\>>\<cdot\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\<\|\|\>|x|\<\|\|\>>|)>>>>|<row|<cell|>|<cell|\<less\>>|<cell|<around*|\||\<lambda\><rsub|n>|\|>\<cdot\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\||\<lambda\>|\|>|)>>+<frac|\<varepsilon\>|2>>>|<row|<cell|>|<cell|<below|\<less\>|<text|[eq:
+      <reference|eq 14.171.193>]>>>|<cell|<around*|(|1+<around*|\||\<lambda\>|\|>|)>\<cdot\><frac|\<varepsilon\>|2\<cdot\><around*|(|1+<around*|\||\<lambda\>|\|>|)>>+<frac|\<varepsilon\>|2>>>|<row|<cell|>|<cell|=>|<cell|<frac|\<varepsilon\>|2>+<frac|\<varepsilon\>|2>>>|<row|<cell|>|<cell|=>|<cell|\<varepsilon\>>>>>
     </eqnarray*>
 
     which proves that\ 
