@@ -9034,6 +9034,8 @@
   </proof>
 
   \;
+
+  \;
 </body>
 
 <\initial>
@@ -9348,14 +9350,14 @@
     <associate|eq 21.1125.292|<tuple|296|94>>
     <associate|eq 21.1126.292|<tuple|297|94>>
     <associate|eq 21.1127.292|<tuple|298|94>>
-    <associate|eq 21.1127\<point\>300|<tuple|310|?>>
+    <associate|eq 21.1127\<point\>300|<tuple|310|97>>
     <associate|eq 21.1128.292|<tuple|299|94>>
-    <associate|eq 21.1128\<point\>300|<tuple|311|?>>
+    <associate|eq 21.1128\<point\>300|<tuple|311|97>>
     <associate|eq 21.1129.292|<tuple|300|94>>
     <associate|eq 21.1130.292|<tuple|301|95>>
-    <associate|eq 21.1130.300|<tuple|313|?>>
+    <associate|eq 21.1130.300|<tuple|313|98>>
     <associate|eq 21.1131.292|<tuple|302|95>>
-    <associate|eq 21.1229.300|<tuple|312|?>>
+    <associate|eq 21.1229.300|<tuple|312|98>>
     <associate|eq 21.27.273|<tuple|220|74>>
     <associate|eq 21.30.273|<tuple|221|74>>
     <associate|figure 20.6.234|<tuple|3|72>>
