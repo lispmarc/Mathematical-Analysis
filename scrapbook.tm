@@ -9035,7 +9035,225 @@
 
   \;
 
-  \;
+  <\proof>
+    <space|1em>
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>We prove this by induction so let\ 
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\>\|<text|If <math|B\<subseteq\>A>,
+        <math|x\<in\>B<rsup|\<circ\>>> and >f<text| is >n<text|-times
+        differentiable at <math|x> then<math|<text|<math|<text| >f<rsub|\|B>>
+        is >n<text|-times differentiable at >x<text| and
+        >D<rsub|x><rsup|<around*|[|n|]>>f<rsub|\|B>=D<rsub|x><rsup|<around*|[|n|]>>f>>|}>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|1\<in\>S>>If <math|f> is <math|1>-times differentiable
+        at <math|x\<in\>B<rsup|\<circ\>>> then by definition <math|f> is
+        Fréchet differentiable at <math|x> and
+        <math|D<rsub|x><rsup|<around*|[|1|]>>f=D<rsub|x>f>. Using [theorem:
+        <reference|diff differentiability is a local property>]
+        <math|f<rsub|\|B>> is Fréchet differentiable at <math|x> and
+        <math|D<rsub|x>f<rsub|\|B>=D<rsub|x>f>. Hence <math|f<rsub|\|B>> is
+        <math|1>-times differentiable at <math|x> and
+
+        <\equation*>
+          D<rsub|x><rsup|<around*|[|1|]>>f<rsub|\|B>=D<rsub|x>f<rsub|\|B>=D<rsub|x>f=D<rsub|x><rsup|1>f.
+        </equation*>
+
+        From this it follows that <math|1\<in\>S>.
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+        <math|B\<subseteq\>A>, <math|x\<in\>B<rsup|\<circ\>>> such that
+        <math|f> is <math|<around*|(|n+1|)>>-times differentiable at
+        <math|x\<in\>B<rsup|\<circ\>>> then by [definition: <reference|diff
+        higher order differentiation>] there exist a open set <math|V> with
+        <math|x\<in\>V\<subseteq\>A> such that <math|\<forall\>y\<in\>V>
+        <math|f> is <math|n>-times differentiable at <math|y> and the
+        function\ 
+
+        <\equation>
+          <label|eq 16.133.6>D<rsup|<around*|[|n|]>><rsub|V>f:V\<rightarrow\>L<rsub|n><around*|(|X;Y|)><text|
+          defined by >D<rsup|<around*|[|n|]>><rsub|V>f<around*|(|y|)>=D<rsup|<around*|[|n|]>><rsub|y>f
+        </equation>
+
+        is Fréchet differentiable at <math|x> with\ 
+
+        <\equation>
+          <label|eq 16.134.6>D<rsup|<around*|[|n+1|]>><rsub|x>f=D<rsub|x><around*|(|D<rsup|<around*|[|n|]>><rsub|V>f|)>
+        </equation>
+
+        As <math|x\<in\>B<rsup|\<circ\>>> there exist a open set <math|U> so
+        that <math|x\<in\>U\<subseteq\>B>. Define <math|W=U<big|cap>V> then
+        <math|\<forall\>y\<in\>W> we have, as <math|W\<subseteq\>V>, that
+        <math|f> is <math|n>-times differentiable at <math|y>, further by
+        [theorem: <reference|topology open set and interior>]
+        <math|y\<in\>W<rsup|0>=W\<subseteq\>V\<subseteq\>A>, hence as
+        <math|n\<in\>S> it follows then that <math|f<rsub|\|W>> is
+        <math|n>-times differentiable at <math|y> with
+
+        <\equation>
+          <label|eq 16.135.6>D<rsup|<around*|[|n|]>><rsub|y>f<rsub|\|W>=D<rsup|<around*|[|n|]>><rsub|y>f
+        </equation>
+
+        So we can define the function\ 
+
+        <\equation>
+          <label|eq 16.136.6>D<rsup|<around*|[|n|]>><rsub|W>f<rsub|\|W>:W\<rightarrow\>L<rsub|n><around*|(|X;Y|)><text|
+          by >D<rsup|<around*|[|n|]>><rsub|W>f<rsub|\|W><around*|(|y|)>=D<rsup|<around*|[|n|]>><rsub|y>f<rsub|\|W><below|=|<text|[eq:
+          <reference|eq 16.135.6>]>>D<rsup|<around*|[|n|]>><rsub|y>f
+        </equation>
+
+        As <math|\<forall\>y\<in\>W> we have
+        <math|D<rsup|<around*|[|n|]>><rsub|W>f<rsub|\|W><around*|(|y|)>\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.136.6>]>>D<rsup|<around*|[|n|]>><rsub|y>f\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.133.6>]>>D<rsup|<around*|[|n|]>><rsub|V>f<around*|(|y|)>>
+        it follows that\ 
+
+        <\equation>
+          <label|eq 16.137.6>D<rsup|<around*|[|n|]>><rsub|W>f<rsub|\|W>=<around*|(|D<rsup|<around*|[|n|]>><rsub|V>f|)><rsub|\|W>
+        </equation>
+
+        As <math|x\<in\>W<below|=|<text|[theorem: <reference|topology open
+        set and interior>]>>W<rsup|\<circ\>>> and
+        <math|D<rsup|<around*|[|n|]>><rsub|V>f> is Fréchet differentiable at
+        <math|x> it follows from [theorem: <reference|diff differentiability
+        is a local property>] that <math|<around*|(|D<rsup|<around*|[|n|]>><rsub|V>f|)><rsub|\|W>>
+        is differentiable at <math|x> and
+        <math|D<rsub|x><around*|(|D<rsup|<around*|[|n|]>><rsub|V>f|)><rsub|\|W>=D<rsub|x><around*|(|D<rsup|<around*|[|n|]>><rsub|V>f|)>>.
+        Combining this result with [eq: <reference|eq 16.137.6>] proves that\ 
+
+        <\equation>
+          <label|eq 16.138.6>D<rsup|<around*|[|n|]>><rsub|W>f<rsub|\|W><text|
+          is differentiable at >x<text| and
+          >D<rsub|x><around*|(|D<rsup|<around*|[|n|]>><rsub|W>f<rsub|\|W>|)>=D<rsub|x><around*|(|D<rsup|<around*|[|n|]>><rsub|V>f|)>
+        </equation>
+
+        By [definition: <reference|diff higher order differentiation>] and
+        the fact that <math|x\<in\>W\<subseteq\>U\<subseteq\>B> it follows
+        then that\ 
+
+        <\equation*>
+          f<rsub|\|B><text| is ><around*|(|n+1|)><text|-times differentiable
+          at >x
+        </equation*>
+
+        with\ 
+
+        <\equation*>
+          D<rsup|<around*|[|n+1|]>><rsub|x>f<rsub|\|B>=D<rsub|x><around*|(|\<cal-W\>|)>\<equallim\><rsub|<text|[eq:
+          <reference|eq 16.138.6>]>>D<rsub|x><around*|(|\<cal-V\>|)>\<equallim\><rsub|<text|[eq:
+          <reference|eq 16.134.6>]>>D<rsup|<around*|[|n+1|]>><rsub|x>f
+        </equation*>
+
+        which proves that <math|n+1>.
+
+        <\equation*>
+          n+1\<in\>S
+        </equation*>
+      </description>
+
+      <item*|<math|\<Leftarrow\>>>We prove this by induction, so let\ 
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\>\|<text|If there exists a
+        >B\<subseteq\>A<text|, <math|x\<in\>B<rsup|0>> such that
+        >f<rsub|\|B><text| is >n<text|-times differential at <math|x> then
+        >f<text| is >n<text|-times differentiable with
+        >D<rsup|<around*|[|n|]>><rsub|x>f=D<rsup|<around*|[|n|]>><rsub|x>f<rsub|\|B>|}>
+      </equation*>
+
+      then we have:\ 
+
+      <\description>
+        <item*|<math|1\<in\>S>>Assume that there exist a
+        <math|B\<subseteq\>A>, <math|x\<in\>B<rsup|\<circ\>>> such that
+        <math|f<rsub|\|B>> is <math|1>-times differentiable at <math|x>.
+        Using [definition: <reference|diff higher order differentiation>]
+        <math|f<rsub|\|B>> is Fréchet differentiable at <math|x> with
+        <math|D<rsup|<around*|[|1|]>><rsub|x>f<rsub|\|B>=D<rsub|x>f<rsub|\|B>>
+        so that by [theorem: <reference|diff differentiability is a local
+        property>] <math|f> is Fréchet differentiable at <math|x> with
+        <math|D<rsub|x>f=D<rsub|x>f<rsub|\|B>>. Hence by [definition:
+        <reference|diff higher order differentiation>] <math|f> is
+        <math|1>-times Fréchet differentiable at <math|x> with
+
+        <\equation*>
+          D<rsup|<around*|[|1|]>><rsub|x>f<below|=|def>D<rsub|x>f=D<rsub|x>f<rsub|\|B><below|=|def>D<rsup|<around*|[|1|]>><rsub|x>f<rsub|\|B>
+        </equation*>
+
+        which proves that <math|1\<in\>S>.
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+        <math|B\<subseteq\>A>, <math|x\<in\>B<rsup|\<circ\>>> such that
+        <math|f<rsub|\|B>> is <math|<around*|(|n+1|)>>-times differentiable
+        at <math|x>. By [definition: <reference|diff higher order
+        differentiation>] there exist a open set <math|V> with
+        <math|x\<in\>V\<subseteq\>B> such that <math|\<forall\>y\<in\>V> we
+        have that <math|f<rsub|\|B>> is <math|n>-times differentiable at
+        <math|y> and the function\ 
+
+        <\equation*>
+          \<cal-V\>:V\<rightarrow\>L<rsub|n><around*|(|X;Y|)><text| defined
+          by >\<cal-V\><around*|(|y|)>=D<rsup|<around*|[|n|]>><rsub|y>f<rsub|\|B>
+        </equation*>
+
+        is Fréchet differentiable at <math|x> and\ 
+
+        <\equation>
+          <label|eq 16.139.6>D<rsup|<around*|[|n+1|]>><rsub|x>f<rsub|\|B>=D<rsub|x>\<cal-V\>
+        </equation>
+
+        As <math|n\<in\>\<cal-S\>> we have
+        <math|\<forall\>y\<in\>V<rsup|\<circ\>><below|=|<text|[theorem:
+        <reference|topology open set and interior>]>>V\<subseteq\>B\<subseteq\>A>
+        that <math|f> is <math|n>-times differentiable at <math|y> with
+
+        <\equation>
+          <label|eq 16.140.6>D<rsup|<around*|[|n|]>><rsub|y>f=D<rsup|<around*|[|n|]>><rsub|y>f<rsub|\|B>
+        </equation>
+
+        Define
+
+        <\equation*>
+          \<cal-W\>:V\<rightarrow\>L<rsub|n><around*|(|X;Y|)><text| by
+          >\<cal-W\><around*|(|y|)>=D<rsup|<around*|[|n|]>><rsub|y>f
+        </equation*>
+
+        then <math|\<forall\>y\<in\>V> we have
+        <math|\<cal-W\><around*|(|y|)>=D<rsup|<around*|[|n|]>><rsub|y>f\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.140.6>]>>D<rsup|<around*|[|n|]>><rsub|x>f<rsub|\|B>=\<cal-V\><around*|(|y|)>>
+        which proves that\ 
+
+        <\equation*>
+          \<cal-W\>=\<cal-V\>
+        </equation*>
+
+        Hence <math|\<cal-W\>> is Fréchet differentiable at <math|x> with
+        <math|D<rsub|x>\<cal-W\>=D<rsub|x>\<cal-V\>\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.139.6>]>>D<rsup|<around*|[|n+1|]>><rsub|x>f<rsub|\|B>>.
+        By [definition: <reference|diff higher order differentiation>] it
+        follows that <math|f> is <math|<around*|(|n+1|)>>-times
+        differentiable with\ 
+
+        <\equation*>
+          D<rsup|<around*|[|n+1|]>><rsub|x>f=D<rsub|x>\<cal-W\>=D<rsup|<around*|[|n+1|]>><rsub|x>f<rsub|\|B>
+        </equation*>
+
+        So we have that\ 
+
+        <\equation*>
+          n+1\<in\>\<cal-S\>
+        </equation*>
+      </description>
+    </description>
+
+    \;
+  </proof>
 </body>
 
 <\initial>
@@ -9146,6 +9364,14 @@
     <associate|eq 16.128.194|<tuple|71|26>>
     <associate|eq 16.129.194|<tuple|72|26>>
     <associate|eq 16.130.194|<tuple|73|27>>
+    <associate|eq 16.133.6|<tuple|314|?>>
+    <associate|eq 16.134.6|<tuple|315|?>>
+    <associate|eq 16.135.6|<tuple|316|?>>
+    <associate|eq 16.136.6|<tuple|317|?>>
+    <associate|eq 16.137.6|<tuple|318|?>>
+    <associate|eq 16.138.6|<tuple|319|?>>
+    <associate|eq 16.139.6|<tuple|320|?>>
+    <associate|eq 16.140.6|<tuple|321|?>>
     <associate|eq 16.183.200|<tuple|117|43>>
     <associate|eq 16.184.200|<tuple|118|43>>
     <associate|eq 16.185.200|<tuple|119|43>>
