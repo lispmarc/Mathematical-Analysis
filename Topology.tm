@@ -6735,9 +6735,9 @@
     <math|<around*|\<langle\>|Y,\<cal-T\><rsub|Y>|\<rangle\>>> be topological
     spaces, <math|A\<subseteq\>X>, <math|U\<in\>\<cal-T\><rsub|X>> with
     <math|U\<subseteq\>A>, <math|x\<in\>U> and <math|f:A\<rightarrow\>Y> a
-    function such that <math|f<rsub|\|U>:U\<rightarrow\>Y> is continuous
-    using the topologies <math|<around*|(|\<cal-T\><rsub|X>|)><rsub|\|U>> on
-    <math|U> and <math|\<cal-T\><rsub|Y>> on <math|Y> then <math|f:A-Y> is
+    function such that <math|f<rsub|\|U>:U\<rightarrow\>Y> is continuous at
+    <math|x> using the topologies <math|<around*|(|\<cal-T\><rsub|X>|)><rsub|\|U>>
+    on <math|U> and <math|\<cal-T\><rsub|Y>> on <math|Y> then <math|f:A-Y> is
     continuous at <math|x> using the topologies
     <math|<around*|(|\<cal-T\><rsub|X>|)><rsub|\|A>> on <math|A> and
     <math|\<cal-T\><rsub|Y>> on <math|Y>.

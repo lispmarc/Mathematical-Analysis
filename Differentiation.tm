@@ -5401,7 +5401,7 @@
     </enumerate>
   </proof>
 
-  TODO
+  \;
 
   <subsection|Higher order Fréchet differentiation>
 
@@ -22915,7 +22915,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|15>
-    <associate|page-first|891>
+    <associate|page-first|895>
     <associate|par-first|0tab>
     <associate|par-mode|justify>
     <associate|section-nr|0>
