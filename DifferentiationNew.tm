@@ -10238,22 +10238,20 @@
     </description>
   </proof>
 
-  TODO
-
   <\corollary>
     <label|diff f is of class C^n if D^1f u=is of class C^n-1 (1)>Let
     <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    be two normed spaces, <math|U,V> open sets in <math|X> with
-    <math|x\<in\>V\<subseteq\>U> and <math|f:U\<rightarrow\>Y> a function
-    then we have
+    be two normed spaces, <math|A\<subseteq\>X>, <math|V> a open set in
+    <math|X> with <math|x\<in\>V\<subseteq\>A> and <math|f:A\<rightarrow\>Y>
+    a function then we have
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|>|<cell|f<text| is >C<rsup|n><text| on
       >V>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|f<text|
       is >1<text|-times differentiable on >V<text| and
-      >>|<cell|>>|<row|<cell|>|<cell|D<rsup|<around*|[|1|]>>f:U\<rightarrow\>L<rsub|1><around*|(|X;Y|)>=L<around*|(|X,Y|)><text|
-      defined by >D<rsup|<around*|[|1|]>>f<around*|(|x|)>=D<rsup|<around*|[|1|]>><rsub|x>f<text|
+      >>|<cell|>>|<row|<cell|>|<cell|D<rsup|<around*|[|1|]>><rsub|V>f:V\<rightarrow\>L<rsub|1><around*|(|X;Y|)>=L<around*|(|X,Y|)><text|
+      defined by >D<rsup|<around*|[|1|]>><rsub|V>f<around*|(|x|)>=D<rsup|<around*|[|1|]>><rsub|x>f<text|
       is >C<rsup|n-1><text| on >V>|<cell|>>>>
     </eqnarray*>
   </corollary>
@@ -10265,7 +10263,7 @@
       <item*|<math|\<Rightarrow\>>>Let <math|x\<in\>V> then <math|f> is
       <math|C<rsup|n>> at <math|x> and by the previous corollary [corollary:
       <reference|diff f is of class C^n if D^1f u=is of class C^n-1>] there
-      exist a open <math|V<rsub|x>> with <math|x\<in\>V<rsub|x>\<subseteq\>U>
+      exist a open <math|V<rsub|x>> with <math|x\<in\>V<rsub|x>\<subseteq\>A>
       such that <math|f> is <math|1>-times differentiable on <math|V<rsub|x>>
       and\ 
 
@@ -10279,16 +10277,16 @@
       <math|\<forall\>x\<in\>V> <math|x\<in\>V<rsub|x>>] and we can define\ 
 
       <\equation*>
-        D<rsup|<around*|[|1|]>>f:V\<rightarrow\>L<rsub|1><around*|(|X;Y|)>=L<around*|(|X,Y|)><text|
-        by >D<rsup|<around*|[|1|]>>f<around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y>f
+        D<rsup|<around*|[|1|]>><rsub|V>f:V\<rightarrow\>L<rsub|1><around*|(|X;Y|)>=L<around*|(|X,Y|)><text|
+        by >D<rsup|<around*|[|1|]>><rsub|V>f<around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y>f
       </equation*>
 
       Let <math|x\<in\>V> and take <math|y\<in\>V<rsub|x>> then
-      <math|D<rsup|<around*|[|1|]>><rsub|V<rsub|X>>f<around*|(|y|)>=D<rsub|y><rsup|<around*|[|1|]>>f=D<rsup|<around*|[|1|]>>f<around*|(|x|)>\<equallim\><rsub|y\<in\>V<rsub|x>><around*|(|D<rsup|<around*|[|1|]>>f|)><rsub|\|V<rsub|x>><around*|(|y|)>>
+      <math|D<rsup|<around*|[|1|]>><rsub|V<rsub|X>>f<around*|(|y|)>=D<rsub|y><rsup|<around*|[|1|]>>f=D<rsup|<around*|[|1|]>><rsub|V>f<around*|(|x|)>\<equallim\><rsub|y\<in\>V<rsub|x>><around*|(|D<rsup|<around*|[|1|]>><rsub|V>f|)><rsub|\|V<rsub|x>><around*|(|y|)>>
       proving that\ 
 
       <\equation*>
-        <around*|(|D<rsup|<around*|[|1|]>>f|)><rsub|\|V<rsub|x>>=D<rsup|<around*|[|1|]>><rsub|V<rsub|X>>f
+        <around*|(|D<rsup|<around*|[|1|]>><rsub|V>f|)><rsub|\|V<rsub|x>>=D<rsup|<around*|[|1|]>><rsub|V<rsub|X>>f
       </equation*>
 
       hence as <math|D<rsup|<around*|[|1|]>><rsub|V<rsub|x>>f> is
@@ -10296,16 +10294,17 @@
       <math|<around*|(|D<rsup|<around*|[|1|]>>f|)><rsub|\|V<rsub|x>>> is
       <math|C<rsup|n-1>> at <math|x>. Using locality [see theorem:
       <reference|diff restriction of a function of class C^n>] that
-      <math|D<rsup|<around*|[|1|]>>f> is <math|C<rsup|n-1>> at <math|x>. As
-      <math|x\<in\>V> was chosen arbitrary it follows that
-      <math|D<rsup|<around*|[|1|]>>f> is <math|C<rsup|n-1>> on <math|V>.
+      <math|D<rsup|<around*|[|1|]>><rsub|V>f> is <math|C<rsup|n-1>> at
+      <math|x>. As <math|x\<in\>V> was chosen arbitrary it follows that
+      <math|D<rsup|<around*|[|1|]>><rsub|V>f> is <math|C<rsup|n-1>> on
+      <math|V>.
 
       <item*|<math|\<Leftarrow\>>>By the hypothesis <math|f> is
       <math|1>-times differentiable on <math|V> and
 
       <\equation*>
-        D<rsup|<around*|[|1|]>>f:V\<rightarrow\>L<rsub|1><around*|(|X;Y|)>=L<around*|(|X,Y|)><text|
-        defined by >D<rsup|<around*|[|1|]>>f<around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y>f<text|
+        D<rsup|<around*|[|1|]>><rsub|V>f:V\<rightarrow\>L<rsub|1><around*|(|X;Y|)>=L<around*|(|X,Y|)><text|
+        defined by >D<rsup|<around*|[|1|]>><rsub|V>f<around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y>f<text|
         is >C<rsup|n-1><text| on >V
       </equation*>
 
@@ -10315,6 +10314,444 @@
       <math|f> is <math|C<rsup|n>> on <math|V>.
     </description>
   </proof>
+
+  Just as the Fréchet differential is linear [see theorem: <reference|diff
+  derivate operator is linear>] we have the same for higher order
+  differentials and derivatives.
+
+  <\theorem>
+    <label|diff higher order differential is linear>Let
+    <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    normed spaces, <math|A\<subseteq\>X>, <math|x\<in\>A> then we have:
+
+    <\enumerate>
+      <item>If <math|f:A\<rightarrow\>Y>, <math|g:A\<rightarrow\>Y> are
+      functions such that <math|f,g> are <math|n>-times differentiable at
+      <math|x\<in\>A> then <math|f+g> is <math|n>-times differentiable at
+      <math|x> and <math|D<rsub|x><rsup|<around*|[|n|]>><around*|(|f+g|)>=D<rsub|x><rsup|<around*|[|n|]>>f+D<rsub|x><rsup|<around*|[|n|]>>g>.
+
+      <item>If <math|k\<in\>\<bbb-N\>> and
+      <math|<around*|{|f<rsub|i>:A\<rightarrow\>Y|}><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>>
+      is a family of functions such that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,k|}>>
+      <math|f<rsub|i>> is <math|n>-times differentiable at <math|x\<in\>A>
+      then <math|<big|sum><rsub|i=1><rsup|k>f<rsub|i>> is <math|n>-times
+      differentiable at <math|x> and\ 
+
+      <\equation*>
+        D<rsub|x><rsup|<around*|[|n|]>><around*|(|<big|sum><rsub|i=1><rsup|k>f<rsub|i>|)>=<big|sum><rsub|i=1><rsup|k>D<rsub|x><rsup|<around*|[|n|]>>f
+      </equation*>
+
+      <item>If <math|\<alpha\>\<in\>\<bbb-K\>>, <math|f:A\<rightarrow\>Y> is
+      a function that is <math|n>-times differentiable at <math|x> then
+      <math|\<alpha\>\<cdot\>f> is <math|n>-times differentiable at <math|x>
+      and <math|D<rsub|x><rsup|<around*|[|n|]>><around*|(|\<alpha\>\<cdot\>f|)>=\<alpha\>\<cdot\>D<rsub|x><rsup|<around*|[|n|]>>f>.
+
+      <item>If <math|f:A\<rightarrow\>Y>, <math|g:U\<rightarrow\>Y> are
+      functions that are <math|C<rsup|n>> at <math|x> then <math|f+g> is
+      <math|C<rsup|n>> at <math|x>.
+
+      <item>If <math|k\<in\>\<bbb-N\>> and
+      <math|<around*|{|f<rsub|i>:A\<rightarrow\>Y|}><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>>
+      is a family of functions such that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,k|}>>
+      <math|f<rsup|i>> is is <math|C<rsup|n>> at <math|x> then
+      <math|<big|sum><rsub|i=1><rsup|k>f<rsub|i>> is <math|C<rsup|n>> at
+      <math|x>
+
+      <item>If <math|\<alpha\>\<in\>\<bbb-K\>>, <math|f:A\<rightarrow\>Y> is
+      <math|C<rsup|n>> at <math|x> then <math|\<alpha\>\<cdot\>f> is
+      <math|C<rsup|n>> at <math|x>.
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>We use induction on <math|n> to prove this, so let\ 
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\>\|<text|If >f,g:A\<rightarrow\>Y<text|
+        are >n<text|-times differentiable at >x\<in\>A<text| then
+        <math|f+g<text| is >n<text|-times differentiable at >x<text| and
+        >D<rsub|x><rsup|<around*|[|n|]>><around*|(|f+g|)>=D<rsub|x><rsup|<around*|[|n|]>>f+D<rsub|x><rsup|<around*|[|n|]>>g>>|}>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|1\<in\>S>>If <math|f>, <math|g:A\<rightarrow\>Y> are
+        <math|1>-times differentiable at <math|x> then <math|f,g> are Fréchet
+        differentiable at <math|x\<in\>A> and
+        <math|D<rsub|x><rsup|<around*|[|1|]>>f=D<rsub|x>f>,
+        <math|D<rsub|x><rsup|<around*|[|1|]>>g=D<rsub|x>g>. Using [theorem:
+        <reference|diff derivate operator is linear>] it follows that
+        <math|f+g> is Fréchet differentiable at <math|x> [hence
+        <math|1>-times differentiable at <math|x>] and
+
+        <\equation*>
+          D<rsub|x><rsup|<around*|[|1|]>><around*|(|f+g|)>=D<rsub|x><around*|(|f+g|)>=D<rsub|x>f+D<rsub|x>g=D<rsub|x><rsup|<around*|[|1|]>>f+D<rsub|x><rsup|<around*|[|1|]>>g
+        </equation*>
+
+        Hence we have <math|1\<in\>S>.
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>If <math|f>,<math|g>
+        are <math| <around*|(|n+1|)>>-times differentiable at <math|x> and
+        <math|1\<less\>n+1> then there exist open sets <math|V<rsub|f>>,
+        <math|V<rsub|g>> with <math|x\<in\>V<rsub|f>\<subseteq\>A>,
+        <math|x\<in\>V<rsub|g>\<subseteq\>A> such that
+        <math|\<forall\>y\<in\>V<rsub|f>> <math|f> is <math|n>-times
+        differentiable at <math|y> and <math|\<forall\>y\<in\>V<rsub|g>>
+        <math|g> is <math|n>-times differentiable at <math|x>. Further we
+        have that\ 
+
+        <\equation*>
+          D<rsup|<around*|[|n|]>><rsub|V<rsub|f>>f:V<rsub|f>\<rightarrow\>L<rsub|n><around*|(|X;Y|)><text|
+          defined by >D<rsup|<around*|[|n|]>><rsub|V<rsub|f>>f<around*|(|y|)>=D<rsub|y><rsup|<around*|[|n|]>>f
+        </equation*>
+
+        and\ 
+
+        <\equation*>
+          D<rsup|<around*|[|n|]>><rsub|V<rsub|g>>g:V<rsub|g>\<rightarrow\>L<rsub|n><around*|(|X;Y|)><text|
+          defined by >D<rsup|<around*|[|n|]>><rsub|V<rsub|g>>g<around*|(|y|)>=D<rsub|y><rsup|n>g
+        </equation*>
+
+        are differentiable at <math|x> with
+        <math|D<rsub|x><rsup|<around*|[|n+1|]>>f=D<rsub|x><rsup|><around*|(|D<rsup|<around*|[|n|]>><rsub|V<rsub|f>>f|)>>
+        and <math|D<rsub|x><rsup|<around*|[|n+1|]>>g=D<rsub|x><around*|(|D<rsup|<around*|[|n|]>><rsub|V<rsub|g>>g|)>>.
+        Take <math|V=V<rsub|f><big|cap>V<rsub|g>> then if
+        <math|y\<in\>V\<subseteq\>A> we have
+        <math|\<forall\>y\<in\>V<rsub|1><big|cap>V<rsub|2>> that <math|f>,
+        <math|g> are <math|n>-times differentiable at <math|y>. As
+        <math|n\<in\>S> it follows that <math|f+g> is <math|n>-times
+        differentiable at <math|y> and <rigid|<math|D<rsub|y><rsup|<around*|[|n|]>><around*|(|f+g|)>=D<rsup|<around*|[|n|]>><rsub|y>f+D<rsub|y><rsup|<around*|[|n|]>>g>>.
+        This allows us to define\ 
+
+        <\equation*>
+          D<rsup|<around*|[|n|]>><rsub|V><around*|(|f+g|)>:V\<rightarrow\>L<rsub|n><around*|(|X;Y|)><text|
+          where >D<rsup|<around*|[|n|]>><rsub|V><around*|(|f+g|)><around*|(|y|)>=D<rsub|y><rsup|<around*|[|n|]>><around*|(|f+g|)>
+        </equation*>
+
+        and <math|\<forall\>y\<in\>V\<subseteq\>V<rsub|f>,V<rsub|g>> we have
+        that
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|D<rsup|<around*|[|n|]>><rsub|V><around*|(|f+g|)>|)><around*|(|y|)>>|<cell|=>|<cell|D<rsup|<around*|[|n|]>><rsub|y><around*|(|f+g|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|y><rsup|<around*|[|n|]>>f+D<rsub|y><rsup|<around*|[|n|]>>g>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|n|]>><rsub|V<rsub|f>>f<around*|(|y|)>+D<rsup|<around*|[|n|]>><rsub|V<rsub|g>>g<around*|(|y|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|D<rsup|<around*|[|n|]>><rsub|V<rsub|f>>f|)><rsub|\|V><around*|(|y|)>+<around*|(|D<rsup|<around*|[|n|]>><rsub|V<rsub|g>>g|)><rsub|\|V><around*|(|y|)><rsub|>>>>>
+        </eqnarray*>
+
+        proving that\ 
+
+        <\equation>
+          <label|eq 16.77.193.1>D<rsup|<around*|[|n|]>><rsub|V><around*|(|f+g|)>=<around*|(|D<rsup|<around*|[|n|]>><rsub|V<rsub|f>>f|)><rsub|\|V>+<around*|(|D<rsup|<around*|[|n|]>><rsub|V<rsub|g>>g|)><rsub|\|V>
+        </equation>
+
+        As <math|D<rsup|<around*|[|n|]>><rsub|V<rsub|f>>f>,
+        <math|D<rsub|V<rsub|g>><rsup|<around*|[|n|]>>g> are Fréchet
+        differentiable at <math|x> and <math|x\<in\>V<rsub|1><big|cap>V<rsub|2>=V>
+        it follows from [theorem: <reference|diff differentiability is a
+        local property>] that <math|<around*|(|D<rsup|<around*|[|n|]>><rsub|V<rsub|f>>f|)><rsub|\|V>>,
+        <math|<around*|(|D<rsup|<around*|[|n|]>><rsub|V<rsub|g>>g|)><rsub|\|V>>
+        are Fréchet differentiable at <math|x> with\ 
+
+        <\equation*>
+          D<rsub|x><around*|(|D<rsup|<around*|[|n|]>><rsub|V<rsub|f>>f|)><rsub|\|V>=D<rsub|x><around*|(|D<rsup|<around*|[|n|]>><rsub|V<rsub|f>>f|)><text|
+          and >D<rsub|x><around*|(|D<rsup|<around*|[|n|]>><rsub|V<rsub|g>>g|)><rsub|\|V>=D<rsub|x><around*|(|D<rsup|<around*|[|n|]>><rsub|V<rsub|g>>g|)>
+        </equation*>
+
+        Using <math|<around*|[|theorem:<reference|diff derivate operator is
+        linear>|]>> <math|><math|<around*|(|D<rsup|<around*|[|n|]>><rsub|V<rsub|f>>f|)><rsub|\|V>+<around*|(|D<rsup|n><rsub|V<rsub|g>>g|)><rsub|\|V>>
+        is Fréchet differentiable at <math|x> with\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|D<rsub|x><around*|(|<around*|(|D<rsup|<around*|[|n|]>><rsub|V<rsub|f>>f|)><rsub|\|V>+<around*|(|D<rsup|n><rsub|V<rsub|g>>g|)><rsub|\|V>|)>>|<cell|=>|<cell|D<rsub|x><around*|(|D<rsup|<around*|[|n|]>><rsub|V<rsub|f>>f|)><rsub|\|V>+D<rsub|x><around*|(|D<rsup|<around*|[|n|]>><rsub|V<rsub|g>>g|)><rsub|\|V>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|x><around*|(|D<rsup|<around*|[|n|]>><rsub|V<rsub|f>>f|)>+D<rsub|x><around*|(|D<rsup|<around*|[|n|]>><rsub|V<rsub|g>>f|)><eq-number><label|eq
+          16.78.193>>>>>
+        </eqnarray*>
+
+        Which as <math|D<rsup|<around*|[|n|]>><rsub|V><around*|(|f+g|)>\<equallim\><rsub|<text|[eq
+        <reference|eq 16.77.193.1>]>><around*|(|D<rsup|<around*|[|n|]>><rsub|V<rsub|f>>f|)><rsub|\|V>+<around*|(|D<rsup|n><rsub|V<rsub|g>>g|)><rsub|\|V>>
+        proves that <math|D<rsup|<around*|[|n|]>><rsub|V><around*|(|f+g|)>>
+        is Fréchet differentiable at <math|x>, hence by definition <math|f+g>
+        is <math|<around*|(|n+1|)>>-times differentiable at <math|x>. Further
+        we have
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|D<rsub|x><rsup|<around*|[|n+1|]>><around*|(|f+g|)>>|<cell|\<equallim\><rsub|def>>|<cell|D<rsub|x><around*|(|D<rsup|<around*|[|n|]>><rsub|V><around*|(|f+g|)>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|x><around*|(|<around*|(|D<rsup|<around*|[|n|]>><rsub|V<rsub|f>>f|)><rsub|\|V>+<around*|(|D<rsup|n><rsub|V<rsub|g>>g|)><rsub|\|V>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|x><around*|(|D<rsup|<around*|[|n|]>><rsub|V<rsub|f>>f|)>+D<rsub|x><around*|(|D<rsup|<around*|[|n|]>><rsub|V<rsub|g>>f|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|x><rsup|<around*|[|n+1|]>>f+D<rsub|x><rsup|<around*|[|n+1|]>>g>>>>
+        </eqnarray*>
+
+        proving that\ 
+
+        <\equation*>
+          n+1\<in\>S
+        </equation*>
+      </description>
+
+      <item>We prove this by induction on <math|k>, so define\ 
+
+      <\equation*>
+        S=<around*|{|k\<in\>\<bbb-N\>\|<text|If
+        ><around*|{|f<rsub|i>\|A\<rightarrow\>Y|}><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>><text|
+        is a family of >n<text|-times differentiable functions at >x<text|
+        then ><big|sum><rsub|i=1><rsup|k>f<rsub|i><text| is >n<text|-times
+        differentiable at >x<text| with >D<rsub|x><rsup|<around*|[|n|]>><around*|(|<big|sum><rsub|i=1><rsup|k>f<rsub|i>|)>=<big|sum><rsub|i=1><rsup|k>D<rsub|x><rsup|<around*|[|n|]>>f|}>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|1\<in\>S>>If <math|<around*|{|f<rsub|i>\|A\<rightarrow\>Y|}><rsub|i\<in\><around*|{|1|}>>>
+        is a family of <math|n>-times differentiable at <math|x> then as
+        <math|<big|sum><rsub|i=1><rsup|1>f<rsub|i>=f<rsub|1>> and it follows
+        that <math|<big|sum><rsub|i=1><rsup|1>f<rsub|i>> is <math|n>-times
+        differentiable at <math|x>, further\ 
+
+        <\equation*>
+          D<rsub|z><rsup|<around*|[|n|]>><around*|(|<big|sum><rsub|i=1><rsup|1>f<rsub|i>|)>=D<rsub|x><rsup|<around*|[|n|]>>f<rsub|1>=<big|sum><rsub|i=1><rsup|1>D<rsub|x><rsup|<around*|[|n|]>>f<rsub|i>
+        </equation*>
+
+        So it follows that <math|1\<in\>S>.
+
+        <item*|<math|k\<in\>S\<Rightarrow\>k+1\<in\>S>>Let
+        <math|<around*|{|f<rsub|i>:A\<rightarrow\>Y|}><rsub|i\<in\><around*|{|1,\<ldots\>,k+1|}>>>
+        be a family of <math|n>-times differentiable functions at <math|x>
+        then we have as <math|k\<in\>S> that
+        <math|<big|sum><rsub|i=1><rsup|k>f<rsub|i><rsup|>> is <math|n>-times
+        differentiable at <math|x> with <math|D<rsub|x><rsup|<around*|[|n|]>><around*|(|<big|sum><rsub|i=1><rsup|k>f<rsub|i>|)>=<big|sum><rsub|i=1><rsup|k>D<rsub|x><rsup|<around*|[|n|]>>f<rsub|i>>.
+        As also <math|f<rsub|k+1>> is <math|n>-times differentiable at
+        <math|x> it follows from (1) that
+        <math|<big|sum><rsub|i=1><rsup|k+1>f<rsub|i>=<around*|(|<big|sum><rsub|i=1><rsup|k>f<rsub|i>|)>+f<rsub|k+1>>
+        is <math|n>-times differentiable at <math|x> with\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|D<rsub|x><rsup|<around*|[|n|]>><around*|(|<big|sum><rsub|i=1><rsup|k+1>f<rsub|i>|)>>|<cell|=>|<cell|D<rsub|x><rsup|<around*|[|n|]>><around*|(|<big|sum><rsub|i=1><rsup|k>f<rsub|i>+f<rsub|k+1>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<around*|(|1|)>>>|<cell|D<rsub|x><rsup|<around*|[|n|]>><around*|(|<big|sum><rsub|i=1><rsup|k>f<rsub|i>|)>+D<rsub|x><rsup|<around*|[|n|]>>f<rsub|k+1>>>|<row|<cell|>|<cell|\<equallim\><rsub|n\<in\>S>>|<cell|<big|sum><rsub|i=1><rsup|k>D<rsub|x><rsup|<around*|[|n|]>>f<rsub|i>+D<rsub|x><rsup|<around*|[|n|]>>f<rsub|k+1>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|k+1>D<rsub|x><rsup|<around*|[|n|]>>f<rsub|i>>>>>
+        </eqnarray*>
+
+        proving that\ 
+
+        <\equation*>
+          n+1\<in\>S
+        </equation*>
+      </description>
+
+      <item>We use induction on <math|n>, so let\ 
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\>\|<text|If >f:A\<rightarrow\>Y<text| is
+        >n<text|-times differentiable at <math|x\<in\>A<text| then
+        >\<alpha\>\<cdot\>f<text| is >n<text|-times differentiable at
+        >x<text| and >D<rsub|x><rsup|<around*|[|n|]>><around*|(|\<alpha\>\<cdot\>f|)>=\<alpha\>\<cdot\>D<rsub|x><rsup|<around*|[|n|]>>f>>|}>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|1\<in\>S>>If <math|f:A\<rightarrow\>Y> is <math|1>-times
+        differentiable at <math|x> then <math|f> is Fréchet differentiable at
+        <math|x> and <math|D<rsub|x><rsup|<around*|[|1|]>>f=D<rsub|x>f>.
+        Using [theorem: <reference|diff derivate operator is linear>] it
+        follows that <math|\<alpha\>\<cdot\>f> is Fréchet differentiable at
+        <math|x> and <math|D<rsub|x><around*|(|\<alpha\>\<cdot\>f|)>=\<alpha\>\<cdot\>D<rsub|x>f>.
+        Hence <math|\<alpha\>\<cdot\>f> is <math|1>-times differentiable and
+
+        <\equation*>
+          D<rsub|x><rsup|<around*|[|1|]>><around*|(|\<alpha\>\<cdot\>f|)>=D<rsub|x><around*|(|\<alpha\>\<cdot\>f|)>=\<alpha\>\<cdot\>D<rsub|x>f=\<alpha\>\<cdot\>D<rsub|x><rsup|<around*|[|1|]>>f
+        </equation*>
+
+        proving that <math|1\<in\>S>.
+
+        <item*|<math|n\<in\>S=n+1\<in\>S>>If <math|f:A\<rightarrow\>Y> is
+        <math|<around*|(|n+1|)>>-times differentiable at <math|x> then, as
+        <math|1\<less\>n+1>, there exist a open set <math|V> with
+        <math|x\<in\>V\<subseteq\>U> such that <math|\<forall\>y\<in\>V>
+        <math|f> is <math|n>-times differentiable at <math|y> and\ 
+
+        <\equation*>
+          D<rsup|n><rsub|V>f:V\<rightarrow\>L<rsub|n><around*|(|X;Y|)><text|
+          defined by >D<rsup|<around*|[|n|]>><rsub|V>f<around*|(|y|)>=D<rsub|y><rsup|<around*|[|n|]>>f
+        </equation*>
+
+        is Fréchet differentiable at <math|x>, further
+        <math|D<rsub|x><rsup|<around*|[|n+1|]>>f> is defined to be
+        <math|D<rsub|x><around*|(|D<rsup|<around*|[|n|]>><rsub|V>f|)>>. As
+        <math|n\<in\>S> it follows that <math|\<forall\>y\<in\>V>
+        <math|\<alpha\>\<cdot\>f> is <math|n>-times differentiable at
+        <math|y> and\ 
+
+        <\equation>
+          <label|eq 16.79.193>D<rsub|y><rsup|<around*|[|n|]>><around*|(|\<alpha\>\<cdot\>f|)>=\<alpha\>\<cdot\>D<rsub|y><rsup|<around*|[|n|]>>f
+        </equation>
+
+        So if we define
+
+        <\equation*>
+          D<rsup|<around*|[|n|]>><rsub|V><around*|(|\<alpha\>\<cdot\>f|)>:V\<rightarrow\>L<rsub|n><around*|(|X;Y|)><text|
+          by >D<rsup|<around*|[|n|]>><rsub|V><around*|(|\<alpha\>\<cdot\>f|)><around*|(|y|)>=D<rsub|y><rsup|<around*|[|n|]>><around*|(|\<alpha\>\<cdot\>f|)><rsup|>
+        </equation*>
+
+        we have <math|\<forall\>y\<in\>V> that
+        <math|D<rsup|n><rsub|V><around*|(|\<alpha\>\<cdot\>f|)><around*|(|y|)>\<equallim\>D<rsup|<around*|[|n|]>><rsub|y><around*|(|\<alpha\>\<cdot\>f|)>\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.79.193>]>>\<alpha\>\<cdot\>D<rsup|<around*|[|n|]>><rsub|y>f=\<alpha\>\<cdot\>D<rsup|<around*|[|n|]>><rsub|V>f<around*|(|y|)>>
+        proving
+
+        <\equation>
+          <label|eq 16.83.199>D<rsup|<around*|[|n|]>><rsub|V><around*|(|\<alpha\>\<cdot\>f|)>=\<alpha\>\<cdot\>D<rsub|V><rsup|<around*|[|n|]>>f
+        </equation>
+
+        As <math|D<rsup|<around*|[|n|]>><rsub|V>f> is Fréchet differentiable
+        at <math|x> it follows form [theorem: <reference|diff derivate
+        operator is linear>] that <math|\<alpha\>\<cdot\>D<rsup|<around*|[|n|]>><rsub|V>f>
+        is Fréchet differentiable at <math|x> with
+        <math|D<rsub|x><around*|(|\<alpha\>\<cdot\>D<rsup|<around*|[|n|]>><rsub|V>f|)>=\<alpha\>\<cdot\>D<rsub|x><around*|(|D<rsup|<around*|[|n|]>><rsub|V>f|)>=\<alpha\>\<cdot\>D<rsub|x><rsup|<around*|[|n+1|]>>f>.
+        Hence by [eq: <reference|eq 16.83.199>]
+        <math|D<rsup|<around*|[|n|]>><rsub|V><around*|(|\<alpha\>\<cdot\>f|)>>
+        is Fréchet differentiable at <math|x> with
+
+        <\equation*>
+          D<rsub|x><around*|(|D<rsup|<around*|[|n|]>><rsub|V><around*|(|\<alpha\>\<cdot\>f|)>|)>=\<alpha\>\<cdot\>D<rsub|x><rsup|<around*|[|n+1|]>>f
+        </equation*>
+
+        proving that <math|\<alpha\>\<cdot\>f> is
+        <math|<around*|(|n+1|)>>-times differentiable at <math|x> with
+
+        <\equation*>
+          D<rsub|x><rsup|<around*|[|n+1|]>><around*|(|\<alpha\>\<cdot\>f|)>\<equallim\><rsub|def>D<rsub|x><around*|(|D<rsup|<around*|[|n|]>><around*|(|\<alpha\>\<cdot\>f|)>|)>=\<alpha\>\<cdot\>D<rsub|x><rsup|<around*|[|n+1|]>>f
+        </equation*>
+
+        So we conclude that\ 
+
+        <\equation*>
+          n+1\<in\>S
+        </equation*>
+      </description>
+
+      <item>If <math|f:A\<rightarrow\>Y> and <math|g:A\<rightarrow\>Y> are
+      <math|C<rsup|n>> at <math|x\<in\>A> then we have two cases to consider
+      for <math|n>:
+
+      <\description>
+        <item*|<math|n=0>>Then <math|f,g> continuous at <math|x>, and
+        applying [theorem: <reference|continuity of sum of continuous
+        functions>] proves that <math|f+g> is continuous at <math|x>. Hence
+        <math|f+g> is <math|C<rsup|0>> at <math|x>.
+
+        <item*|<math|1\<less\>n>>Then there exists open sets
+        <math|V<rsub|f>>, <math|V<rsub|g>> with
+        <math|x\<in\>V<rsub|f>,V<rsub|g>\<subseteq\>A> such that
+        <math|\<forall\>y\<in\>V<rsub|y>> <math|f> is <math|n>-times
+        differentiable at <math|y>, <math|\<forall\>y\<in\>V<rsub|g>>
+        <math|g> is <math|n>-times differentiable at <math|y> and
+
+        <\equation*>
+          D<rsup|<around*|[|n|]>><rsub|V<rsub|f>>f:V<rsub|f>\<rightarrow\>L<rsub|n><around*|(|X;Y|)><text|
+          defined by >D<rsup|<around*|[|n|]>><rsub|f>f<around*|(|y|)>=D<rsub|y><rsup|<around*|[|n|]>>f
+        </equation*>
+
+        <\equation*>
+          D<rsup|<around*|[|n|]>><rsub|V<rsub|g>>g:V<rsub|g>\<rightarrow\>L<rsub|n><around*|(|X;Y|)><text|
+          defined by >D<rsup|<around*|[|n|]>><rsub|V<rsub|g>>g<around*|(|y|)>=D<rsub|y><rsup|<around*|[|n|]>>g
+        </equation*>
+
+        are continuous at <math|x>. Take <math|V=V<rsub|f><big|cap>V<rsub|g>>
+        then <math|\<forall\>y\<in\>V\<subseteq\>V<rsub|f>,V<rsub|g>> we have
+        by (1) that <math|\<forall\>y\<in\>V> <math|f+g> is <math|n>-times
+        differentiable at <math|y> and that
+        <math|D<rsub|y><rsup|<around*|[|n|]>><around*|(|f+g|)>=D<rsub|y><rsup|<around*|[|n|]>>f+D<rsub|y><rsup|<around*|[|n|]>>g>.
+        So if we define\ 
+
+        <\equation*>
+          D<rsup|<around*|[|n|]>><rsub|V><around*|(|f+g|)>:V\<rightarrow\>L<rsub|n><around*|(|X;Y|)><text|
+          by >D<rsup|<around*|[|n|]>><rsub|V><around*|(|f+g|)><around*|(|y|)>=D<rsub|y><rsup|<around*|[|n|]>><around*|(|f+g|)>
+        </equation*>
+
+        it follows that <math|\<forall\>y\<in\>V>
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|D<rsup|<around*|[|n|]>><rsub|V><around*|(|f+g|)><around*|(|y|)>>|<cell|=>|<cell|D<rsub|y><rsup|<around*|[|n|]>><around*|(|f+g|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|y><rsup|<around*|[|n|]>>f+D<rsub|y><rsup|<around*|[|n|]>>g>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|n|]>><rsub|V<rsub|f>>f<around*|(|y|)>+D<rsup|<around*|[|n|]><rsub|>><rsub|V<rsub|g>>g<around*|(|y|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|y\<in\>V>>|<cell|<around*|(|D<rsup|<around*|[|n|]>><rsub|V<rsub|f>>f|)><rsub|\|V><around*|(|y|)>+<around*|(|D<rsup|<around*|[|n|]>><rsub|V<rsub|g>>g|)><rsub|\|V><around*|(|y|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|D<rsup|<around*|[|n|]>><rsub|V<rsub|f>>f|)><rsub|\|V>+<around*|(|D<rsup|<around*|[|n|]>><rsub|V<rsub|g>>g|)><rsub|\|V>|)><around*|(|y|)>>>>>
+        </eqnarray*>
+
+        so that
+
+        <\equation*>
+          D<rsup|<around*|[|n|]>><rsub|V><around*|(|f+g|)>=<around*|(|D<rsup|<around*|[|n|]>><rsub|V<rsub|f>>f|)><rsub|\|V>+<around*|(|D<rsup|<around*|[|n|]>><rsub|V<rsub|g>>g|)><rsub|\|V>
+        </equation*>
+
+        By [theorems: <reference|continuity of sum of continuous functions>,
+        <reference|continuity and subspace topology (6)>]
+        <math|<around*|(|D<rsup|<around*|[|n|]>><rsub|V<rsub|f>>f|)><rsub|\|V>+<around*|(|D<rsup|<around*|[|n|]>><rsub|V<rsub|g>>g|)><rsub|\|V>>
+        is continuous at <math|x>, so that
+        <math|D<rsup|<around*|[|n|]>><rsub|V><around*|(|f+g|)>> is continuous
+        at <math|x>. Hence <math|f+g> is <math|C<rsup|n>> at <math|x>.
+      </description>
+
+      <item>We use induction to prove this. So let\ 
+
+      <\equation*>
+        S=<around*|{|k\<in\>\<bbb-N\>\|<around*|{|f<rsub|i>:A\<rightarrow\>Y|}><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>><text|
+        are function that are <math|C<rsup|n>> at <math|x> then
+        ><big|sum><rsub|i=1><rsup|k>f<rsub|i><text| is >C<rsup|n><text| at
+        >x|}>
+      </equation*>
+
+      then we have:\ 
+
+      <\description>
+        <item*|<math|1\<in\>S>>As <math|<big|sum><rsub|i=1><rsup|k>f<rsub|i>=f<rsub|1>>
+        and <math|f<rsub|1>> is <math|C<rsup|n>> at <math|x> it follows that
+        <math|<big|sum><rsub|i=1><rsup|1>f<rsub|i>> is <math|C<rsup|n>> at
+        <math|x>.
+
+        <item*|<math|k\<in\>S\<Rightarrow\>k+1\<in\>S>>Let
+        <math|<around*|{|f<rsub|i>:A\<rightarrow\>Y|}><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>>
+        be a family of functions that are <math|C<rsup|n> at x>. As
+        <math|k\<in\>S> <math|<big|sum><rsub|i=1><rsup|k>f<rsub|i>> is
+        <math|C<rsup|n>> at <math|x> and clearly <math|f<rsub|k+1>> is
+        <math|C<rsup|n>> at <math|x> so by (4)
+        <math|f<rsub|k+1>+<big|sum><rsub|i=1><rsup|k>f<rsub|i>> is
+        <math|C<rsup|n>> at <math|x>. Finally as
+        <math|<big|sum><rsub|i=1><rsup|k+1>f<rsub|i>=f<rsub|k+1>+<big|sum><rsub|i=1><rsup|k>f<rsub|i>>
+        it follows that <math|<big|sum><rsub|i=1><rsup|k+1>f<rsub|i>> is
+        <math|C<rsup|n>> at <math|x> which prove that <math|k+1\<in\>S>.
+      </description>
+
+      <item>As <math|f> is <math|C<rsup|n>> at <math|x> there exist a open
+      <math|V> with <math|x\<in\>V\<subseteq\>A> such that
+      <math|\<forall\>y\<in\>V> <math|f> is <math|n>-times differentiable at
+      <math|y> and that the function\ 
+
+      <\equation*>
+        D<rsup|<around*|[|n|]>><rsub|V>f:V\<rightarrow\>L<rsub|n><around*|(|X;Y|)><text|
+        defined by >D<rsup|<around*|[|n|]>><rsub|V>f<around*|(|y|)>=D<rsub|y><rsup|<around*|[|n|]>>f
+      </equation*>
+
+      is continuous at <math|x>. Using (3) we have that
+      <math|\<forall\>y\<in\>V> <math|<around*|(|\<alpha\>\<cdot\>f|)>> is
+      <math|n>-times differentiable at <math|y> and
+      <math|D<rsup|<around*|[|n|]>><rsub|y><around*|(|\<alpha\>\<cdot\>f|)>=\<alpha\>\<cdot\>D<rsup|<around*|[|n|]>><rsub|y>f>.
+      Hence if we define\ 
+
+      <\equation*>
+        D<rsup|<around*|[|n|]>><rsub|V><around*|(|\<alpha\>\<cdot\>f|)>:V\<rightarrow\>L<rsub|n><around*|(|X;Y|)><text|
+        by >D<rsup|<around*|[|n|]>><rsub|V><around*|(|\<alpha\>\<cdot\>f|)><around*|(|y|)>=D<rsub|y><rsup|<around*|[|n|]>><around*|(|\<alpha\>\<cdot\>f|)>
+      </equation*>
+
+      then \ 
+
+      <\equation*>
+        D<rsup|<around*|[|n|]>><around*|(|\<alpha\>\<cdot\>f|)>=\<alpha\>\<cdot\>D<rsup|<around*|[|n|]>>f
+      </equation*>
+
+      Hence, as by [theorem: <reference|continuity of sum of continuous
+      functions>] <math|\<alpha\>\<cdot\>D<rsup|<around*|[|n|]>>f> is
+      continuous at <math|x>, it follows that
+      <math|D<rsup|<around*|[|n|]>><around*|(|\<alpha\>\<cdot\>f|)>> is
+      continuous, proving that <math|\<alpha\>\<cdot\>f> is <math|C<rsup|n>>
+      at <math|x>.
+    </enumerate>
+  </proof>
+
+  TODO
+
+  \;
 
   \;
 
@@ -10444,6 +10881,7 @@
     <associate|diff higher order derivate and differential|<tuple|16.145|?>>
     <associate|diff higher order derivate on a open set|<tuple|16.146|?>>
     <associate|diff higher order derivate on a open set (1)|<tuple|16.148|?>>
+    <associate|diff higher order differential is linear|<tuple|16.158|?>>
     <associate|diff higher order differentiation|<tuple|16.123|?>>
     <associate|diff higher order differentiation (1)|<tuple|16.130|?>>
     <associate|diff higher order differentiation is local|<tuple|16.126|?>>
@@ -10500,7 +10938,6 @@
     <associate|eq 16.11.178|<tuple|16.75|?>>
     <associate|eq 16.12.178|<tuple|16.76|?>>
     <associate|eq 16.121.6|<tuple|16.121|?>>
-    <associate|eq 16.126\<nosymbol\>.11|<tuple|16.193|?>>
     <associate|eq 16.13.178|<tuple|16.77|?>>
     <associate|eq 16.133.7|<tuple|16.133|?>>
     <associate|eq 16.134.7|<tuple|16.134|?>>
@@ -10667,11 +11104,15 @@
     <associate|eq 16.75.3|<tuple|16.93|?>>
     <associate|eq 16.76.193|<tuple|16.196|?>>
     <associate|eq 16.76.6|<tuple|16.86|?>>
+    <associate|eq 16.77.193.1|<tuple|16.204|?>>
     <associate|eq 16.77.198|<tuple|16.195|?>>
+    <associate|eq 16.78.193|<tuple|16.205|?>>
     <associate|eq 16.78.3|<tuple|16.95|?>>
+    <associate|eq 16.79.193|<tuple|16.206|?>>
     <associate|eq 16.79.3|<tuple|16.96|?>>
     <associate|eq 16.8.178|<tuple|16.71|?>>
     <associate|eq 16.82.6|<tuple|16.82|?>>
+    <associate|eq 16.83.199|<tuple|16.207|?>>
     <associate|eq 16.85.181|<tuple|16.171|?>>
     <associate|eq 16.86.181|<tuple|16.173|?>>
     <associate|eq 16.87.181|<tuple|16.174|?>>
