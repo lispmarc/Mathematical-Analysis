@@ -11393,6 +11393,965 @@
     </description>
   </proof>
 
+  <subsection|The chain rule for higher order derivatives>
+
+  The purpose of this section is to prove that the composition of
+  <math|n>-times differentiable functions is again <math|n>-times
+  differentiable. As a preparation for this goal we need to prove and state
+  some supporting lemma's.
+
+  <\lemma>
+    <label|lemma 16.93.193>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Z,<around*|\<\|\|\>||\<\|\|\>><rsub|Z>|\<rangle\>>>
+    be normed spaces, <math|L\<in\>L<around*|(|Y,Z|)>> then if we define
+
+    <\equation*>
+      <around*|(|L\<circ\>\<ast\>|)>:L<around*|(|X,Y|)>\<rightarrow\>L<around*|(|X,Z|)><text|
+      by ><around*|(|L\<circ\>\<ast\>|)><around*|(|T|)>=L\<circ\>T
+    </equation*>
+  </lemma>
+
+  we have that\ 
+
+  <\equation*>
+    <around*|(|L\<circ\>\<ast\>|)>\<in\>L<around*|(|L<around*|(|X,Y|)>,L<around*|(|X,Z|)>|)>
+  </equation*>
+
+  <\proof>
+    First note that if <math|L\<in\>L<around*|(|Y,Z|)>> and
+    <math|T\<in\>L<around*|(|X,Y|)>> then by [theorem: <reference|continuity
+    composition of continuous linear mapping>]
+    <math|L\<circ\>T\<in\>L<around*|(|X,Z|)>> so that
+    <math|<around*|(|\<ast\>\<circ\>L|)>> is indeed a function between
+    <math|L*<around*|(|X,Y|)>> and <math|L<around*|(|X,Z|)>>. Next we need to
+    prove linearity. Let <math|T<rsub|1>,T<rsub|2>\<in\>L<around*|(|X,Y|)>>,
+    <math|\<alpha\>\<in\>\<bbb-K\>> then for <math|z\<in\>X> we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|<around*|(|<around*|\<nobracket\>|L\<circ\>\<ast\>|)><around*|(|T<rsub|1>+\<alpha\>\<cdot\>T<rsub|2>|\<nobracket\>>|)>|)><around*|(|z|)>>|<cell|=>|<cell|<around*|(|L\<circ\><around*|(|T<rsub|1>+\<alpha\>\<cdot\>T<rsub|2>|)>|)><around*|(|z|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|<around*|(|T<rsub|1>+\<alpha\>\<cdot\>T<rsub|2>|)><around*|(|z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|T<rsub|1><around*|(|z|)>+\<alpha\>\<cdot\>T<rsub|2><around*|(|z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|T<rsub|1><around*|(|z|)>|)>+\<alpha\>\<cdot\>L<around*|(|T<rsub|2><around*|(|z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|L\<circ\>T<rsub|1>|)><around*|(|z|)>+\<alpha\>\<cdot\><around*|(|L\<circ\>T<rsub|2>|)><around*|(|z|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|L\<circ\>T<rsub|1>|)>+\<alpha\>\<cdot\><around*|(|L\<circ\>T<rsub|2>|)>|)><around*|(|z|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|L\<circ\>\<ast\>|)><around*|(|T<rsub|1>|)>+\<alpha\>\<cdot\><around*|(|L\<circ\>\<ast\>|)><around*|(|T<rsub|2>|)>|)><around*|(|z|)>>>>>
+    </eqnarray*>
+
+    proving that <math|><math|<around*|(|L\<circ\>\<ast\>|)><around*|(|T<rsub|1>+\<alpha\>\<cdot\>T<rsub|2>|)>=<around*|(|L\<circ\>\<ast\>|)><around*|(|T<rsub|1>|)>+\<alpha\>\<cdot\><around*|(|L\<circ\>\<ast\>|)><around*|(|T<rsub|2>|)>>
+    or\ 
+
+    <\equation*>
+      <around*|(|L\<circ\>\<ast\>|)>\<in\>Hom<around*|(|L<around*|(|X,Y|)>,L<around*|(|X,Z|)>|)>
+    </equation*>
+
+    As for continuity. Let <math|T\<in\>L<around*|(|X,Y|)>> then as
+    <math|L\<in\>L<around*|(|Y,Z|)>> we have by [theorem:
+    <reference|continuity composition of continuous linear mapping>] that\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|<around*|(|L\<circ\>\<ast\>|)><around*|(|T|)>|\<\|\|\>><rsub|L<around*|(|X,Z|)>>=<around*|\<\|\|\>|L\<circ\>T|\<\|\|\>><rsub|L<around*|(|X,Z|)>>\<leqslant\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|Y,Z|)>>\<cdot\><around*|\<\|\|\>|T|\<\|\|\>><rsub|L<around*|(|X,Y|)>>
+    </equation*>
+
+    which proves by [theorem: <reference|continuity linear mapping (1)>] that\ 
+
+    <\equation*>
+      <around*|(|L\<circ\>\<ast\>|)>\<in\>L<around*|(|L<around*|(|X,Y|)>,L<around*|(|X,Z|)>|)>
+    </equation*>
+  </proof>
+
+  <\lemma>
+    <label|lemma 16.96.193>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Z,<around*|\<\|\|\>||\<\|\|\>><rsub|Z>|\<rangle\>>>
+    normed spaces, <math|A\<subseteq\>X>, <math|x\<in\>A>
+    <math|f:A\<rightarrow\>Y> is a function that is <math|n>-times
+    differentiable at <math|x> then <math|L\<circ\>f> is <math|n>-times
+    differentiable at <math|x>.
+  </lemma>
+
+  <\proof>
+    We use induction to prove this, so define
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\>\|<text|If
+      ><around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>,<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>,<around*|\<langle\>|Z,<around*|\<\|\|\>||\<\|\|\>><rsub|Z>|\<rangle\>><text|
+      are normed spaces, >A\<subseteq\>X<text| >x\<in\>A<text|,
+      >f:A\<rightarrow\>Y<text| is \ n-times differentiable at >x<text| and
+      <math|L\<in\>L<around*|(|Y,Z|)>> then >L\<circ\>f<text| is
+      >n<text|-times differentiable at >x|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|1\<in\>S>>If <math|f> is <math|1>-times differentiable at
+      <math|x> then <math|f> is Fréchet differentiable at <math|x>. Hence if
+      <math|<rigid|L\<in\>L<around*|(|Y,Z|)>>> we have by [corollary:
+      <reference|diff composition with a linear mapping>] that
+      <math|L\<circ\>f> is Fréchet differentiable at <math|x>, hence by
+      definition <math|1>-times differentiable at <math|x>, which proves that
+      <math|1\<in\>S>.\ 
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+      <math|f:A\<rightarrow\>Y> be <math|<around*|(|n+1|)>> differentiable at
+      <math|x> and let <math|L\<in\>L<around*|(|Y,Z|)>>. Using the fact that
+      <math|1\<less\>n+1> together with [theorem: <reference|diff
+      D^f=D^(n-1)D^1f>] there exist a open set <math|V> with
+      <math|x\<in\>V\<subseteq\>A> such that <math|\<forall\>y\<in\>V>
+      <math|f> is <math|1>-times differentiable at <math|y> [hence Fréchet
+      differentiable at <math|y>] and\ 
+
+      <\equation>
+        <label|eq 16.86.193>D<rsup|<around*|[|1|]>><rsub|V>f:V\<rightarrow\>L<around*|(|X,Y|)><text|
+        defined by >D<rsup|<around*|[|1|]>><rsub|V><rsup|>f<around*|(|y|)>=D<rsub|y><rsup|<around*|[|1|]>>f\<equallim\><rsub|def>D<rsub|y>f
+      </equation>
+
+      is <math|n>-times differentiable at <math|x>. As <math|f> is Fréchet
+      differentiable at <math|y\<in\>V> we can use [corollary:
+      <reference|diff composition with a linear mapping>] to prove that
+      <math|L\<circ\>f> is Fréchet differentiable at <math|y> and
+      <math|D<rsub|y><around*|(|L\<circ\>f|)>=L\<circ\>D<rsub|y> f>, so by
+      definition
+
+      <\equation>
+        <label|eq 16.87.193>L\<circ\> f<text| is <math|1>-times
+        differentiable at >y\<in\>V \ <text|and
+        >D<rsup|<around*|[|1|]>><rsub|y><around*|(|L\<circ\>f|)>=L\<circ\>D<rsup|<around*|[|1|]>><rsub|y>f
+      </equation>
+
+      So we can define
+
+      <\equation>
+        <label|eq 16.91.199>D<rsup|<around*|[|1|]>><rsub|V><around*|(|L\<circ\>f|)>:V\<rightarrow\>L<around*|(|X,L<around*|(|X,Z|)>|)><text|
+        by >D<rsup|<around*|[|1|]>><rsub|V><around*|(|L\<circ\>f|)><around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y><around*|(|L\<circ\>f|)>
+      </equation>
+
+      Take now <math|<around*|(|L\<circ\>\<ast\>|)>\<in\>L<around*|(|L<around*|(|X,Y|)>,L<around*|(|X,Z|)>|)>>
+      defined by <math|<around*|(|L\<circ\>\<ast\>|)><around*|(|T|)>=L\<circ\>T>
+      [see lemma: <reference|lemma 16.93.193>]. Let <math|y\<in\>V> then
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|<around*|(|L\<circ\>\<ast\>|)>\<circ\>D<rsup|<around*|[|1|]>><rsub|V>f|)><around*|(|y|)>>|<cell|=>|<cell|<around*|(|L\<circ\>\<ast\>|)><around*|(|D
+        <rsup|<around*|[|1|]>>f<around*|(|y|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|L\<circ\>\<ast\>|)><around*|(|D<rsup|<around*|[|1|]>><rsub|y>f|)>>>|<row|<cell|>|<cell|=>|<cell|L\<circ\>D<rsup|<around*|[|1|]>><rsub|y>f>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.87.193>]>>>|<cell|D<rsup|<around*|[|1|]>><rsub|y><around*|(|L\<circ\>f|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.91.199>]>>>|<cell|D<rsup|<around*|[|1|]>><rsub|V><around*|(|L\<circ\>f|)><around*|(|y|)>>>>>
+      </eqnarray*>
+
+      which proves that\ 
+
+      <\equation>
+        <label|eq 16.89.193><around*|(|L\<circ\>\<ast\>|)>\<circ\>D<rsup|<around*|[|1|]>><rsub|V>f=D<rsup|<around*|[|1|]>><rsub|V><around*|(|L\<circ\>f|)>
+      </equation>
+
+      As <math|D<rsup|<around*|[|1|]>><rsub|V>f> is <math|n>-times
+      differentiable at <math|x>, <math|<around*|(|L\<circ\>\<ast\>|)>\<in\>L<around*|(|L<around*|(|X,Y|)>,L<around*|(|X,Z|)>|)>>
+      and <math|n\<in\>S> it follows that
+      <math|<around*|(|L\<circ\>\<ast\>|)>\<circ\>D
+      <rsup|<around*|[|1|]>><rsub|V>f> is <math|n>-times differentiable at
+      <math|x>, hence, using [eq: <reference|eq 16.89.193>], it follows that
+      <math|D<rsup|<around*|[|1|]>><rsub|V><around*|(|L\<circ\>f|)>> is
+      <math|n>-times differentiable at <math|x>. Using [eq: <reference|eq
+      16.87.193>] together with [theorem: <reference|diff D^f=D^(n-1)D^1f>]
+      proves that <math|L\<circ\>f> is <math|<around*|(|n+1|)>>-times
+      differentiable at <math|x>. So\ 
+
+      <\equation*>
+        n+1\<in\>S
+      </equation*>
+    </description>
+  </proof>
+
+  We use a similar proof for functions of class <math|C<rsup|n>>.
+
+  <\lemma>
+    <label|lemma 16.97.193>Let <math|n\<in\>\<bbb-N\><rsub|0>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Z,<around*|\<\|\|\>||\<\|\|\>><rsub|Z>|\<rangle\>>>
+    be normed spaces, <math|A\<subseteq\>X>, <math|x\<in\>A>,
+    <math|<rigid|f:A\<rightarrow\>Y>> is a function that is <math|C<rsup|n>>
+    at <math|x> and <math|L\<in\>L<around*|(|Y,Z|)>> then <math|L\<circ\>f>
+    is <math|C<rsup|n>> at <math|x>.
+  </lemma>
+
+  <\proof>
+    For <math|n\<in\>\<bbb-N\><rsub|0>> we have either:
+
+    <\description>
+      <item*|<math|n=0>>As <math|f> is \ <math|C<rsup|0>> at <math|x>,
+      <math|f> is continuous at <math|x>, hence, as <math|L> is continuous,
+      <math|L\<circ\>f> is continuous at <math|x> [see theorem
+      <reference|continuity composition>], so it follows that
+      <math|L\<circ\>f> is <math|C<rsup|0>> at <math|x>.
+
+      <item*|<math|n\<in\>\<bbb-N\>>>We use induction to prove this, so
+      define
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\>\|<text|If
+        ><around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>,<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>,<around*|\<langle\>|Z,<around*|\<\|\|\>||\<\|\|\>><rsub|Z>|\<rangle\>><text|
+        are normed spaces, >A\<subseteq\>X<text| <math|x\<in\>A>,
+        ><rigid|f:A\<rightarrow\>Y><text| is >C<rsup|n><text| at <math|x> and
+        <math|L\<in\>L<around*|(|Y,Z|)>> then >L\<circ\>f<text| is
+        >C<rsup|n><text| at >x|}>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|1\<in\>S>>If <math|f> is <math|C<rsup|1>> at <math|x>
+        there exist a open set <math|V> with <math|x\<in\>V\<subseteq\>U>
+        such that <math|f> is <math|n>-times differentiable on <math|V>
+        [hence Fréchet differentiable at <math|x>] and the function\ 
+
+        <\equation>
+          <label|eq 16.118.181>D<rsup|<around*|[|1|]>><rsub|V>f:V\<rightarrow\>L<around*|(|X,Y|)><text|
+          defined by >D<rsup|<around*|[|1|]>><rsub|V>f<around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y>f
+        </equation>
+
+        is continuous at <math|x>. Let <math|y\<in\>V> then as <math|f> is
+        Fréchet differentiable at <math|y> it follows from [corollary:
+        <reference|diff composition with a linear mapping>] that
+        <math|L\<circ\>f> is Fréchet differentiable at <math|y> [hence
+        <math|1>-times differentiable at <math|y>] and
+
+        <\equation>
+          <label|eq 16.119.181>D<rsup|<around*|[|1|]>><rsub|y><around*|(|L\<circ\>f|)>=D<rsub|y><around*|(|L\<circ\>f|)>=L\<circ\>D
+          <rsub|y>f=L\<circ\>D<rsup|<around*|[|1|]>><rsub|y>f
+        </equation>
+
+        So <math|L\<circ\>f> is <math|1>-times differentiable on <math|V> and
+        we can define the function\ 
+
+        <\equation>
+          <label|eq 16.120.181>D<rsup|<around*|[|1|]>><rsub|V><around*|(|L\<circ\>f|)>:V\<rightarrow\>L<around*|(|X,Z|)><text|
+          by >D<rsup|<around*|[|1|]>><rsub|V><around*|(|L\<circ\>f|)><around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y><around*|(|L\<circ\>f|)>
+        </equation>
+
+        Let <math|y\<in\>V>then
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|<around*|(|L\<circ\>\<ast\>|)>\<circ\>D<rsup|<around*|[|1|]>><rsub|V>f|)><around*|(|y|)>>|<cell|=>|<cell|<around*|(|L\<circ\>\<ast\>|)><around*|(|D<rsup|<around*|[|1|]>><rsub|V>f<around*|(|y|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L\<circ\>D<rsup|<around*|[|1|]>>f<around*|(|y|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 16.118.181>]>>>|<cell|L\<circ\>D<rsup|<around*|[|1|]>><rsub|y>f>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 16.119.181>]>>>|<cell|D<rsup|<around*|[|1|]>><rsub|y><around*|(|L\<circ\>f|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 16.120.181>]>>>|<cell|D<rsup|<around*|[|1|]>><rsub|V><around*|(|L\<circ\>f|)><around*|(|y|)>>>>>
+        </eqnarray*>
+
+        proving that\ 
+
+        <\equation*>
+          <around*|(|L\<circ\>\<ast\>|)>\<circ\>D<rsup|<around*|[|1|]>><rsub|V>f=D<rsup|<around*|[|1|]>><rsub|V><around*|(|L\<circ\>f|)>
+        </equation*>
+
+        As <math|D<rsup|<around*|[|1|]>><rsub|V>f> is continuous at <math|x>
+        and <math|<around*|(|L\<circ\>\<ast\>|)>> is continuous by [lemma:
+        <reference|lemma 16.93.193>] it follows that
+        <math|D<rsup|<around*|[|1|]>><rsub|V><around*|(|L\<circ\>f|)>> is
+        continuous at <math|x>. So <math|L\<circ\>f> is <math|C<rsup|1>> at
+        <math|x> which proves that <math|1\<in\>S>.
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>If <math|f> is
+        <math|C<rsup|n+1>> at <math|x> then by \ [theorem: <reference|diff f
+        is of class C^n if D^1f u=is of class C^n-1>] there exist a open set
+        <math|V> with <math|x\<in\>V\<subseteq\>U> such that <math|f> is
+        <math|1>-times differentiable on <math|V> [hence Fréchet
+        differentiable on <math|V>] and the function\ 
+
+        <\equation>
+          <label|eq 16.121.181>D<rsup|<around*|[|1|]>><rsub|V>f:V\<rightarrow\>L<around*|(|X,Y|)><text|
+          defined by >D<rsup|<around*|[|1|]>><rsub|V>f<around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y>f<text|
+          is >C<rsup|n><text| on >V
+        </equation>
+
+        Let <math|y\<in\>V> then as <math|f> is Fréchet differentiable at
+        <math|y> it follows from [corollary: <reference|diff composition with
+        a linear mapping>] that <math|L\<circ\>f> is Fréchet differentiable
+        at <math|y> [hence <math|1>-times differentiable at <math|y>] and
+
+        <\equation>
+          <label|eq 16.122.181>D<rsup|<around*|[|1|]>><rsub|y><around*|(|L\<circ\>f|)>=D<rsub|y><around*|(|L\<circ\>f|)>=L\<circ\>D
+          <rsub|y>f=L\<circ\>D<rsup|<around*|[|1|]>><rsub|y>f
+        </equation>
+
+        Define
+
+        <\equation>
+          <label|eq 16.123.181>D<rsup|<around*|[|1|]>><rsub|V><around*|(|L\<circ\>f|)>:V\<rightarrow\>L<around*|(|X,Z|)><text|
+          by >D<rsup|<around*|[|1|]>><rsub|V><around*|(|L\<circ\>f|)><around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y><around*|(|L\<circ\>f|)>
+        </equation>
+
+        then\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|<around*|(|L\<circ\>\<ast\>|)>\<circ\>D<rsup|<around*|[|1|]>><rsub|V>f|)><around*|(|y|)>>|<cell|=>|<cell|<around*|(|L\<circ\>\<ast\>|)><around*|(|D<rsup|<around*|[|1|]>><rsub|V>f<around*|(|y|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L\<circ\>D<rsup|<around*|[|1|]>><rsub|V>f<around*|(|y|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 16.121.181>]>>>|<cell|L\<circ\>D<rsup|<around*|[|1|]>><rsub|y>f>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 16.122.181>]>>>|<cell|D<rsup|<around*|[|1|]>><rsub|y><around*|(|L\<circ\>f|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 16.123.181>]>>>|<cell|D<rsup|<around*|[|1|]>><rsub|V><around*|(|L\<circ\>f|)><around*|(|y|)>>>>>
+        </eqnarray*>
+
+        proving that
+
+        <\equation>
+          <label|eq 16.124.181><around*|(|L\<circ\>\<ast\>|)>\<circ\>D<rsup|<around*|[|1|]>><rsub|V>f=D<rsup|<around*|[|1|]>><rsub|V><around*|(|L\<circ\>f|)>
+        </equation>
+
+        As <math|D<rsup|<around*|[|1|]>><rsub|V>f:V\<rightarrow\>L<around*|(|X,Y|)>>
+        is <math|C<rsup|n>> at <math|x> and
+        <math|<around*|(|L\<circ\>\<ast\>|)>\<in\>L<around*|(|L<around*|(|X,Y|)>,L<around*|(|X,Z|)>|)>>
+        [see lemma: <reference|lemma 16.93.193>] and <math|n\<in\>S> it
+        follows that <math|<around*|(|L\<circ\>\<ast\>|)>\<circ\>D<rsup|<around*|[|1|]>><rsub|V>f>
+        is <math|C<rsup|n>> at <math|x>. Combining this with the above [eq:
+        <reference|eq 16.124.181>] proves that
+        <math|D<rsup|<around*|[|1|]>><around*|(|L\<circ\>f|)>> is
+        <math|C<rsup|n>> at <math|x>. Applying then [theorem: <reference|diff
+        f is of class C^n if D^1f u=is of class C^n-1>] it follows that
+        <math|L\<circ\>f> is <math|C<rsup|n+1>> at <math|x> proving that\ 
+
+        <\equation*>
+          n+1\<in\>S
+        </equation*>
+      </description>
+    </description>
+  </proof>
+
+  <\lemma>
+    <label|lemma 16.98.194>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
+    normed space, <math|<around*|{|<around*|\<langle\>|Y<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces then if we define [see lemma:
+    <reference|diff vector functions and linearity>]
+
+    <\equation*>
+      \<cal-K\>:<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>L<around*|(|X,Y<rsub|i>|)>\<rightarrow\>L<around*|(|X,<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>Y<rsub|i>|)><text|
+      by >\<cal-K\><around*|(|L<rsub|1>,\<ldots\>,L<rsub|n>|)>=<around*|(|L<rsub|1>,\<ldots\>,L<rsub|n>|)><rsub|\<ast\>><rsub|>
+    </equation*>
+
+    \ we have
+
+    <\equation*>
+      \<cal-K\>\<in\>L<around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>L<around*|(|X,Y<rsub|i>|)>,L<around*|(|X,<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>Y<rsub|i>|)>|)>
+    </equation*>
+
+    where <math|<around*|\<langle\>|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>L<around*|(|X,Y<rsub|i>|)>,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    is the normed space with the maximum norm
+    <math|<around*|\<\|\|\>||\<\|\|\>><rsub|max>> defined to be
+    <math|<around*|\<\|\|\>|<around*|(|L<rsub|1>,\<ldots\>,L<rsub|n>|)>|\<\|\|\>><rsub|max>=max<around*|(|<around*|{|<around*|\<\|\|\>|L<rsub|i>|\<\|\|\>><rsub|L<around*|(|X,Y<rsub|i>|)>>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>>
+  </lemma>
+
+  <\proof>
+    Let <math|\<alpha\>\<in\>\<bbb-K\>>, <math|<around*|(|L<rsub|1>,\<ldots\>,L<rsub|n>|)>>,
+    <math|<around*|(|K<rsub|1>,\<ldots\>,K<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>L<around*|(|X,Y<rsub|i>|)>>
+    then we have for <math|x\<in\>X> that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<cal-K\><around*|(|<around*|(|L<rsub|1>,\<ldots\>,L<rsub|n>|)>+\<alpha\>\<cdot\><around*|(|K<rsub|1>\<ldots\>,K<rsub|n>|)>|)><around*|(|x|)>>|<cell|=>|<cell|\<cal-K\><around*|(|<around*|(|L<rsub|1>+\<alpha\>\<cdot\>K<rsub|1>,\<ldots\>,L<rsub|n>+\<alpha\>\<cdot\>K<rsub|n>|)>|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|L<rsub|1>+\<alpha\>\<cdot\>K<rsub|1>,\<ldots\>,L<rsub|n>+\<alpha\>\<cdot\>K<rsub|n>|)><rsub|\<ast\>><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|L<rsub|1>+\<alpha\>\<cdot\>K<rsub|1>|)><around*|(|x|)>,\<ldots\>,<around*|(|L<rsub|n>+\<alpha\>\<cdot\>K<rsub|n>|)><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|L<rsub|1><around*|(|x|)>+\<alpha\>\<cdot\>K<rsub|1><around*|(|x|)>,\<ldots\>,L<rsub|n><around*|(|x|)>+\<alpha\>\<cdot\>K<rsub|n><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|L<rsub|1><around*|(|x|)>,\<ldots\>,L<rsub|n><around*|(|x|)>|)>+\<alpha\>\<cdot\><around*|(|K<rsub|1><around*|(|x|)>,\<ldots\>,K<rsub|n><around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|L<rsub|1>,\<ldots\>,L<rsub|n>|)><rsub|\<ast\>><around*|(|x|)>+\<alpha\>\<cdot\><around*|(|K<rsub|1>,\<ldots\>,K<rsub|n>|)><rsub|\<ast\>><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|\<cal-K\><around*|(|L<rsub|1>,\<ldots\>,L<rsub|n>|)><around*|(|x|)>+\<alpha\>\<cdot\>\<cal-K\><around*|(|K<rsub|1>,\<ldots\>,K<rsub|n>|)><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<cal-K\><around*|(|L<rsub|1>,\<ldots\>,L<rsub|n>|)>+\<alpha\>\<cdot\>\<cal-K\><around*|(|<around*|\<nobracket\>|K<rsub|1>,\<ldots\>,K<rsub|n>|)>|\<nobracket\>>|)><around*|(|x|)>>>>>
+    </eqnarray*>
+
+    proving that <math|\<cal-K\><around*|(|<around*|(|L<rsub|1>,\<ldots\>,L<rsub|n>|)>+\<alpha\>\<cdot\><around*|(|K<rsub|1>\<ldots\>,K<rsub|n>|)>|)>=\<cal-K\><around*|\<nobracket\>|<around*|(|L<rsub|1>,\<ldots\>,L<rsub|n>|\<nobracket\>>|)>+\<alpha\>\<cdot\>\<cal-K\><around*|(|K<rsub|1>,\<ldots\>,K<rsub|n>|)>>.
+    So we have\ 
+
+    <\equation*>
+      \<cal-K\>\<in\>Hom<around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>L<around*|(|X,Y<rsub|i>|)>,L<around*|(|X,<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>Y<rsub|i>|)>|)>
+    </equation*>
+
+    Let <math|><math|<around*|(|L<rsub|1>,\<ldots\>,L<rsub|n>|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>L<around*|(|X,Y<rsub|i>|)>>
+    then we have that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<cal-K\><around*|(|<around*|(|L<rsub|1>,\<ldots\>,L<rsub|n>|)>|)>|\<\|\|\>><rsub|L<around*|(|X,<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>Y<rsub|i>|)>>>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|(|L<rsub|1>,\<ldots\>,L<rsub|n>|)><rsub|\<ast\>>|\<\|\|\>><rsub|L<around*|(|X,<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>Y<rsub|i>|)>>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[lemma:
+      <reference|diff vector functions and
+      linearity>]>><rsub|<text|>>>|<cell|max<around*|(|<around*|{|<around*|\<\|\|\>|L<rsub|i>|\<\|\|\>><rsub|L<around*|(|X,Y<rsub|i>|)>>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|(|L<rsub|1>,\<ldots\>,L<rsub|n>|)>|\<\|\|\>><rsub|max>>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation*>
+      \<cal-K\>\<in\>L<around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>L<around*|(|X,Y<rsub|i>|)>,L<around*|(|X,<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>Y<rsub|i>|)>|)>
+    </equation*>
+
+    \;
+  </proof>
+
+  <\theorem>
+    <label|diff higher order differentiation and vector functions>Let
+    <math|n\<in\>\<bbb-N\>>, <math|k\<in\>\<bbb-N\>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
+    normed space, <math|<around*|{|<around*|\<langle\>|Y<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>>
+    a finite family of normed spaces, <math|A\<subseteq\>X>, <math|x\<in\>A>
+    and <math|f:A\<rightarrow\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>Y<rsub|i>>
+    then we have\ 
+
+    <\equation*>
+      f<text| is >n<text|-times differentiable at >x
+    </equation*>
+
+    <\equation*>
+      \<Updownarrow\>
+    </equation*>
+
+    <\equation*>
+      \<forall\>i\<in\><around*|{|1,\<ldots\>,k|}><text| we have
+      >\<pi\><rsub|i>\<circ\>f<text| is >n<text|-times differentiable at >x
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Using [example: <reference|continuity norm
+      of projection operator>] it follows that
+      <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,k|}>>
+      <math|\<pi\><rsub|i>\<in\>L<around*|(|X,Y<rsub|i>|)>>. So, as <math|f>
+      is <math|n>-times differentiable at <math|x>, it follows from [lemma:
+      <reference|lemma 16.96.193>] that <math|\<pi\><rsub|i>\<circ\>f> is
+      <math|n>-times differentiable at <math|x>.
+
+      <item*|<math|\<Leftarrow\>>>We use induction to prove this, so let\ 
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\>\|<text|Let
+        <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>><text|
+        be a normed space, ><around*|{|<around*|\<langle\>|Y<rsub|i>|\<rangle\>>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>><text|
+        be normed spaces,<math|<text| >A\<subseteq\>X<text| ,>x\<in\>A<text|
+        and >f:A\<rightarrow\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>Y<rsub|j><text|
+        a function such that >\<forall\>i\<in\><around*|{|1,\<ldots\>,k|}>>
+        >\<pi\><rsub|i>\<circ\>f<text| is >n<text|-times differentiable at
+        >x<text| then >f<text| is >n<text|-times differentiable at
+        >x>}>|\<nobracket\>>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|1\<in\>S>>As <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,k|}>>
+        <math|\<pi\><rsub|i>\<circ\>f> is <math|1>-times differentiable at
+        <math|x> it follows that <math|\<pi\><rsub|i>\<circ\>f> is Fréchet
+        differentiable at <math|x>. Hence using [theorem: <reference|diff
+        differential of a vector valued function>] <math|f> is Fréchet
+        differentiable at <math|x> proving that <math|f> is <math|1>-times
+        differentiable at <math|x>. So we conclude that <math|1\<in\>S>.
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+        <math|i\<in\><around*|{|1,\<ldots\>,k|}>> then as
+        <math|\<pi\><rsub|i>\<circ\>f> is <math|<around*|(|n+1|)>>-times
+        differentiable it follows from [theorem: <reference|diff
+        D^f=D^(n-1)D^1f>] that there exist a open set <math|V<rsub|i>> with
+        <math|x\<in\>V<rsub|i>\<subseteq\>A> such that
+        <math|\<forall\>y\<in\>V<rsub|i>> <math|\<pi\><rsub|i>\<circ\>f> is
+        <math|1>-times differentiable at <math|y> and\ 
+
+        <\equation*>
+          D<rsup|<around*|[|1|]>><rsub|V<rsub|i>><around*|(|\<pi\><rsub|i>\<circ\>f|)><rsub|>:V<rsub|i>\<rightarrow\>L<around*|(|X,Y<rsub|i>|)><text|
+          defined by >D<rsub|V<rsub|i>><rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|i>\<circ\>f|)><around*|(|y|)>=D<rsub|y><rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|i>\<circ\>f|)><text|>
+        </equation*>
+
+        is <math|n>-times differentiable at <math|x>. Take
+        <math|V=<big|cap><rsub|j\<in\><around*|{|1,\<ldots\>,k|}>>V<rsub|j>>
+        then <math|x\<in\>V\<subseteq\>A>. As <math|\<forall\>y\<in\>V>
+        <math|y\<in\>V<rsub|i>> so that <math|\<pi\><rsub|i>\<circ\>f> is
+        <math|1>-times differentiable we can define\ 
+
+        <\equation*>
+          D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|i>\<circ\>f|)>:V\<rightarrow\>L<around*|(|X,X<rsub|i>|)><text|
+          by >D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|i>\<circ\>f|)><around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y><around*|(|\<pi\><rsub|i>\<circ\>f|)>=D<rsub|V<rsub|i>><rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|i>\<circ\>f|)><around*|(|y|)>
+        </equation*>
+
+        so that\ 
+
+        <\equation*>
+          D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|i>\<circ\>f|)>=<around*|(|D<rsup|<around*|[|1|]>><rsub|V<rsub|i>><around*|(|\<pi\><rsub|i>\<circ\>f|)>|)><rsub|\|V>
+        </equation*>
+
+        As <math|V> is open we can then use [see theorem: <reference|diff
+        higher order differentiation is local>] to prove that\ 
+
+        <\equation*>
+          D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|i>\<circ\>f|)><text|
+          is >n<text|-tmes differentiable at >x
+        </equation*>
+
+        Now for\ 
+
+        <\equation>
+          <label|eq 16.90.194><around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>:V\<rightarrow\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|X,Y<rsub|i>|)><text|><rsub|>
+        </equation>
+
+        defined by [see definition: <reference|diff vector functions>]
+
+        <\equation*>
+          <around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>><around*|(|y|)>=<around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)><around*|(|y|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)><around*|(|y|)>|)>
+        </equation*>
+
+        we have for <math|y\<in\>V>, <math|i\<in\><around*|{|1,\<ldots\>,k|}>>
+        that\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|\<pi\><rsub|i>\<circ\><around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>|)><around*|(|y|)>>|<cell|=>|<cell|>>|<row|<cell|\<pi\><rsub|i><around*|(|<around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>><around*|(|y|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<pi\><rsub|i><around*|(|<around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)>|)><around*|(|y|)>,\<ldots\>,<around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><around*|(|y|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|i>\<circ\>f|)>|)><around*|(|y|)>>|<cell|>|<cell|>>>>
+        </eqnarray*>
+
+        proving that <math|\<pi\><rsub|i>\<circ\>><math|<around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>=D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|i>\<circ\>f|)>>.
+        Hence, as <math|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|i>\<circ\>f|)>>
+        is <math|n>-times differentiable at <math|x>, we have proved that
+        <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,k|}>>\ 
+
+        <\equation*>
+          \<pi\><rsub|i>\<circ\><around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>:V\<rightarrow\>L<around*|(|X,Y<rsub|i>|)>
+        </equation*>
+
+        is <math|n>-times differentiable at <math|x>. As <math|n\<in\>S> it
+        follows that\ 
+
+        <\equation>
+          <label|eq 16.91.194><around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>><text|
+          is >n<text|-times differentiable at >x
+        </equation>
+
+        As <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,k|}>>
+        <math|\<pi\><rsub|i>\<circ\>f> is <math|1>-times differentiable at
+        <math|y\<in\>V> it follows that <math|\<pi\><rsub|i>\<circ\>f> is
+        Fréchet differentiable at <math|y>, hence using [theorem:
+        <reference|diff differential of a vector valued function>] <math|f>
+        is Fréchet differentiable at <math|y> and
+
+        <\equation>
+          <label|eq 16.92.194>D<rsub|y><rsup|<around*|[|1|]>>f=D<rsub|y>f=<around*|(|D<rsup|><rsub|y><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsub|y><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>\<in\>L<around*|(|X,<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>Y<rsub|i>|)>
+        </equation>
+
+        allowing us to define\ 
+
+        <\equation*>
+          D<rsup|<around*|[|1|]>><rsub|V>f:V\<rightarrow\>L<around*|(|X,<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>Y<rsub|i>|)><text|
+          by >D <rsup|<around*|[|1|]>><rsub|V>f<around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y>f
+        </equation*>
+
+        Using <math|\<cal-K\>:<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|X,Y<rsub|i>|)>\<rightarrow\>L<around*|(|X,<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>Y<rsub|i>|)>>
+        defined in [lemma: <reference|lemma 16.98.194>] we have that for
+        <math|y\<in\>V>
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|\<cal-K\>\<circ\><around*|(|D<rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>|)><around*|(|y|)>>|<cell|=>|<cell|>>|<row|<cell|\<cal-K\><around*|(|<around*|(|D<rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>><around*|(|y|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<cal-K\>*<around*|(|D<rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|1>\<circ\>f|)><around*|(|y|)>,\<ldots\>,D<rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|k>\<circ\>f|)><around*|(|y|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|D<rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|1>\<circ\>f|)><around*|(|y|)>,\<ldots\>,D<rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|k>\<circ\>f|)><around*|(|y|)>|)><rsub|\<ast\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|D<rsup|<around*|[|1|]>><rsub|y><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsub|y><rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|D<rsub|y><rsup|><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsub|y><rsup|><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 16.92.194>>>>|<cell|*>>|<row|<cell|D
+          <rsub|y><rsup|<around*|[|1|]>>f>|<cell|=>|<cell|>>|<row|<cell|<around*|(|D
+          <rsup|<around*|[|1|]>>f|)><around*|(|y|)>>|<cell|>|<cell|>>>>
+        </eqnarray*>
+
+        which proves that\ 
+
+        <\equation*>
+          D<rsup|<around*|[|1|]>> f=\<cal-K\>\<circ\><around*|(|D<rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>
+        </equation*>
+
+        As <math|><math|<around*|(|D<rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>>
+        is <math|n>-times differentiable at <math|x> by [eq: <reference|eq
+        16.91.194>], it follows from [lemmas: <reference|lemma 16.98.194>,
+        <reference|lemma 16.97.193>] that <math|D<rsup|<around*|[|1|]>>f> is
+        <math|n>-times differentiable at <math|x>. Hence using [theorem:
+        <reference|diff D^f=D^(n-1)D^1f>] it follows that\ 
+
+        <\equation*>
+          f<text| is ><around*|(|n+1|)><text|-times differentiable at >x
+        </equation*>
+
+        proving that
+
+        <\equation*>
+          n+1\<in\>S
+        </equation*>
+      </description>
+    </description>
+  </proof>
+
+  We can use a similar proof for <math|C<rsup|n>> functions. \ To simplify
+  this proof we first prove the following lemma:
+
+  <\lemma>
+    <label|lemma 16.139.181>Let <math|n,k\<in\>\<bbb-N\>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
+    normed space, <math|><math|<around*|{|<around*|\<langle\>|Y<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>>
+    a finite family of normed spaces, <math|A\<subseteq\>X>, <math|x\<in\>A>
+    and <math|<around*|{|f<rsub|i>:A\<rightarrow\>Y<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a family of functions that are <math|C<rsup|n>> at <math|x> then there
+    exist a open set <math|V> with <math|x\<in\>V\<subseteq\>A> such that
+    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> <math|f<rsub|i>> is
+    <math|1>-times differentiable on <math|V> and
+    <math|D<rsup|<around*|[|1|]>><rsub|V>f<rsub|i>\<of\>V\<rightarrow\>L<around*|(|X,Y<rsub|i>|)>>
+    defined by <math|D<rsup|<around*|[|1|]>><rsub|V>f<around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y>f<text|
+    is <math|C<rsup|n-1>> at <math|x>>>.
+  </lemma>
+
+  <\proof>
+    Let <math|i\<in\><around*|{|1,\<ldots\>,n|}>> then as <math|f<rsub|i>> is
+    <math|C<rsup|n>> it follows from [theorem: <reference|diff f is of class
+    C^n if D^1f u=is of class C^n-1>] that there exist a open set
+    <math|V<rsub|i>> with <math|x\<in\>V<rsub|i>\<subseteq\>U> such that
+    <math|f<rsub|i>> is <math|1>-times differentiable on <math|V<rsub|i>> and
+    the function\ 
+
+    <\equation*>
+      D<rsub|V<rsub|i>><rsup|<around*|[|1|]>>f<rsub|i>:V<rsub|i>\<rightarrow\>L<around*|(|X,Y<rsub|i>|)><text|
+      defined by >D<rsub|V<rsub|i>><rsup|<around*|[|1|]>>f<around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y>f<text|
+      is >C<rsup|n-1><text| at >x
+    </equation*>
+
+    Take <math|V=<big|cap><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>V<rsub|i>>
+    then <math|x\<in\>V\<subseteq\>A>. Let
+    <math|i\<in\><around*|{|1,\<ldots\>,n|}>> then <math|\<forall\>y\<in\>V>
+    we have <math|y\<in\>V<rsub|i>> so that <math|f<rsub|i>> is
+    <math|1>-times differentiable at <math|y>. Define then the function\ 
+
+    <\equation*>
+      D<rsup|<around*|[|1|]>><rsub|V>f:V\<rightarrow\>L<around*|(|X,Y<rsub|i>|)><text|
+      by >D<rsup|<around*|[|1|]>><rsub|V>f<around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y>f
+    </equation*>
+
+    Then <math|\<forall\>y\<in\>V\<subseteq\>V<rsub|i>> we have
+    <math|D<rsup|<around*|[|1|]>>f<around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y>f=D<rsup|<around*|[|1|]>><rsub|V<rsub|i>>f<around*|(|y|)>>
+    which proves that\ 
+
+    <\equation*>
+      D<rsup|<around*|[|1|]>><rsub|V>f=<around*|(|D<rsup|<around*|[|1|]>><rsub|V<rsub|i>>f|)><rsub|\|V>
+    </equation*>
+
+    As <math|><math|D<rsup|<around*|[|1|]>><rsub|V<rsub|i>>f> is
+    <math|C<rsup|n-1>> at <math|x> and <math|V> is open it follows from
+    [theorem: <reference|diff restriction of a function of class C^n>] that
+    <math|<around*|(|D<rsup|<around*|[|1|]>><rsub|V<rsub|i>>f|)><rsub|\|V>>
+    is <math|C<rsup|n-1>> at <math|x>, hence <math|D<rsup|<around*|[|1|]>>f>
+    is <math|C<rsup|n-1 >> at <math|x>.
+  </proof>
+
+  TODO
+
+  <\theorem>
+    <label|diff higher order differentiation classes>Let
+    <math|n\<in\>\<bbb-N\><rsub|0>>, <math|k\<in\>\<bbb-N\>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
+    normed space, <math|<around*|{|<around*|\<langle\>|Y<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>>
+    a finite family of normed spaces, <math|A\<subseteq\>X>, <math|x\<in\>A>
+    and <math|f:A\<rightarrow\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>Y<rsub|i>>
+    a function then we have\ 
+
+    <\equation*>
+      f<text| is ><text|>C<rsup|n><text| at >x
+    </equation*>
+
+    <\equation*>
+      \<Updownarrow\>
+    </equation*>
+
+    <\equation*>
+      \<forall\>i\<in\><around*|{|1,\<ldots\>,k|}><text| we have
+      >\<pi\><rsub|i>\<circ\>f<text| is >C<rsup|n><text| at >x
+    </equation*>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\description>
+      <item*|<math|\<Rightarrow\>>>Using [example: <reference|continuity norm
+      of projection operator>] it follows that
+      <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,k|}>>
+      <math|\<pi\><rsub|i>\<in\>L<around*|(|<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>Y<rsub|i>,Y<rsub|i>|)>>.
+      So, as <math|f> is <math|C<rsup|n>> at <math|x>, it follows from
+      [lemma: <reference|lemma 16.97.193>] that
+      <math|\<pi\><rsub|1>\<circ\>f> is <math|C<rsup|n>> at <math|x>.
+
+      <item*|<math|\<Leftarrow\>>>If <math|n=0> then
+      <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,k|}>>
+      <math|\<pi\><rsub|i>\<circ\>f> is <math|C<rsup|0>> at <math|x> so that
+      <math|\<pi\><rsub|i>\<circ\>f> is continuous at <math|x>, using
+      \ [theorem: <reference|continuity product and continuous functions>] it
+      follows that <math|f> is continuous at <math|x> proving that <math|f>
+      is <math|C<rsup|0>> at <math|x>. Hence we just have to prove the
+      remaining case where <math|n\<in\>\<bbb-N\>>. For this we will use
+      induction so define\ 
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\>\|<text|If
+        \ <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>><text|
+        is a normed space, ><around*|{|<around*|\<langle\>|Y<rsub|i>|\<rangle\>>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>><text|
+        a family of normed spaces, <math|A\<subseteq\>X<text|,
+        <math|x\<in\>A> and >f:A\<rightarrow\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>Y<rsub|j><text|
+        a function such that >\<forall\>i\<in\><around*|{|1,\<ldots\>,k|}>>
+        >\<pi\><rsub|i>\<circ\>f<text| is >C<rsup|n><text| at <math|x> then
+        >f<text| is >C<rsup|n><text| at >x>}>|\<nobracket\>>
+      </equation*>
+
+      then we have:
+
+      <\description>
+        <item*|<math|1\<in\>S>>Using [lemma: <reference|lemma 16.139.181>]
+        there exist a open set <math|V> with <math|x\<in\>V\<subseteq\>U>
+        such that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,k|}>>
+        <math|\<pi\><rsub|i>\<circ\>f> is <math|1>-times differentiable on
+        <math|V> [hence Fréchet differentiable on <math|V>] and the function
+        \ 
+
+        <\equation>
+          <label|eq 16.128.181>D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|i>\<circ\>f|)>:V\<rightarrow\>L<around*|(|X,Y<rsub|i>|)><text|
+          defined by >D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|i>\<circ\>f|)><around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y><around*|(|\<pi\><rsub|i>\<circ\>f|)>
+        </equation>
+
+        is <math|C<rsup|0>> at <math|x> hence continuous at <math|x>. Let
+        <math|y\<in\>V> then using [theorem <reference|diff differential of a
+        vector valued function>] it follows that <math|f> is Fréchet
+        differentiable at <math|f> [hence <math|f> is <math|1>-times
+        differentiable at <math|y>] and <math|<rigid|D<rsup|><rsub|y>f=<around*|(|D<rsub|y><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsub|y><around*|(|\<pi\><rsub|k>\<circ\>f|)><rsup|>|)><rsub|\<ast\>>>>
+        allowing us to define the function
+
+        <\equation>
+          <label|eq 16.129.181>D<rsup|<around*|[|1|]>><rsub|V>f:V\<rightarrow\>L<around*|(|X,<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>Y<rsub|y>|)><text|
+          by >D<rsup|<around*|[|1|]>><rsub|V>f<around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y>f\<equallim\><rsub|def>D<rsub|y>f
+        </equation>
+
+        that satisfies\ 
+
+        <\equation>
+          <label|eq 16.130.181>\<forall\>y\<in\>V<text|
+          >D<rsup|<around*|[|1|]>><rsup|><rsub|y>f=<around*|(|D<rsub|y><rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsub|y><rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|k>\<circ\>f|)><rsup|>|)><rsub|\<ast\>>
+        </equation>
+
+        Using <math|\<cal-K\>:<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|X,Y<rsub|i>|)>\<rightarrow\>L<around*|(|X,<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>Y<rsub|i>|)>>
+        defined in [lemma: <reference|lemma 16.98.194>] we have for
+        <math|y\<in\>V> that\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|\<cal-K\>\<circ\><around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>|)><around*|(|y|)>>|<cell|=>|<cell|>>|<row|<cell|\<cal-K\><around*|(|<around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>><around*|(|y|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<cal-K\><around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)><around*|(|y|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)><around*|(|y|)>|)>>|<cell|<below|=|<text|[eq:
+          <reference|eq 16.128.181>]>>>|<cell|>>|<row|<cell|\<cal-K\><around*|(|D<rsub|y><rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsub|y><rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|D<rsub|y><rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsub|y><rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 16.130.181>]>>>|<cell|>>|<row|<cell|D<rsub|y><rsup|<around*|[|1|]>>f>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 16.129.181>]>>>|<cell|>>|<row|<cell|D<rsup|<around*|[|1|]>><rsub|V>f<around*|(|y|)>>|<cell|>|<cell|>>>>
+        </eqnarray*>
+
+        proving that\ 
+
+        <\equation>
+          <label|eq 16.131.181>D<rsup|<around*|[|1|]>><rsub|V>f=\<cal-K\>\<circ\><around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>
+        </equation>
+
+        Let <math|i\<in\><around*|{|1,\<ldots\>,n|}>> then
+        <math|\<forall\>y\<in\>V> we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|\<pi\><rsub|i>\<circ\><around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>|)><around*|(|y|)>>|<cell|=>|<cell|>>|<row|<cell|\<pi\><rsub|i><around*|(|<around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>><around*|(|y|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<pi\><rsub|i><around*|(|<around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)><around*|(|y|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)><around*|(|y|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|i>\<circ\>f|)><around*|(|y|)>>|<cell|>|<cell|>>>>
+        </eqnarray*>
+
+        proving that\ 
+
+        <\equation*>
+          \<pi\><rsub|i>\<circ\><around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>=D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|i>\<circ\>f|)>
+        </equation*>
+
+        As <math|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|i>\<circ\>f|)>>
+        is continuous at <math|x> it follows that
+        <math|\<pi\><rsub|i>\<circ\><around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>>
+        is continuous at <math|x>, hence using [theorem:
+        <reference|continuity product and continuous functions>]
+        <math|<around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>>
+        is continuous at <math|x>. As <math|\<cal-K\>> is continuous [see
+        lemma: <reference|lemma 16.98.194>] we conclude from [eq:
+        <reference|eq 16.131.181>] that <math|D<rsup|<around*|[|1|]>><rsub|V>f>
+        is continuous at <math|x>. So <math|f> is <math|C<rsup|1>> at
+        <math|x>.
+
+        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let
+        <math|i\<in\><around*|{|1,\<ldots\>,k|}>> then as
+        <math|\<pi\><rsub|i>\<circ\>f> is <math|C<rsup|n+1>> at <math|x> it
+        follows from [lemma: <reference|lemma 16.139.181>] that there exist a
+        open set <math|V> with <math|x\<in\>V\<subseteq\>U> such that
+        <math|\<pi\><rsub|i>\<circ\>f> is <math|1>-times differentiable on
+        <math|V> and the function\ 
+
+        <\equation>
+          <label|eq 16.132.181>D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|i>\<circ\>f|)>:V\<rightarrow\>L<around*|(|X,Y<rsub|i>|)><text|
+          defined by >D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|i>\<circ\>f|)><around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y><around*|(|\<pi\><rsub|i>\<circ\>f|)><text|
+          is >C<rsup|n><text| at >x
+        </equation>
+
+        Consider now the function [see definition: <reference|diff vector
+        functions>] \ 
+
+        <\equation*>
+          <around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>:V\<rightarrow\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|X,Y<rsub|i>|)>
+        </equation*>
+
+        defined by\ 
+
+        <\equation*>
+          <around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>><around*|(|z|)>=<around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)><around*|(|z|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)><around*|(|z|)>|)>
+        </equation*>
+
+        then we have <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,k|}>> that
+        <math|\<forall\>z\<in\>V>
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|\<pi\><rsub|i>\<circ\><around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>|)><around*|(|z|)>>|<cell|=>|<cell|>>|<row|<cell|\<pi\><rsub|i><around*|(|<around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>><around*|(|z|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<pi\><rsub|i>*<around*|(|<around*|\<nobracket\>|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|\<nobracket\>>|)><around*|(|z|)>,\<ldots\>,<around*|\<nobracket\>|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|\<nobracket\>>|)><around*|(|z|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<nobracket\>|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|i>\<circ\>f|\<nobracket\>>|)><around*|(|z|)>>|<cell|>|<cell|>>>>
+        </eqnarray*>
+
+        proving that
+
+        <\equation*>
+          \<pi\><rsub|i>\<circ\><around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>=D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|i>\<circ\>f|)>
+        </equation*>
+
+        So, as <math|D<rsup|<around*|[|1|]>><rsub|C><around*|(|\<pi\><rsub|i>\<circ\>f|)>>
+        is <math|C<rsup|n>> at <math|x>, we have that
+        <math|\<pi\><rsub|i>\<circ\><around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>>
+        is <math|C<rsup|n>> at <math|x>. As <math|n\<in\>S> it follows that\ 
+
+        <\equation>
+          <label|eq 16.133.181><around*|(|D<rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>><text|
+          is >C<rsup|n><text| at >x
+        </equation>
+
+        Let <math|y\<in\>V> then as <math|\<pi\><rsub|i>\<circ\>f> is
+        <math|1>-time differentiable at <math|y> it is Fréchet differentiable
+        at <math|y> and it follows from [theorem: <reference|diff
+        differential of a vector valued function>] that <math|f> if Fréchet
+        differentiable at <math|y> with <math|<rigid|D<rsub|y>f=<around*|(|D<rsub|y><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsub|y><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>>>.
+        Hence we have that <math|f> is <math|1>-times differentiable on
+        <math|V> and for the function\ 
+
+        <\equation>
+          <label|eq 16.134.181>D<rsup|<around*|[|1|]>><rsub|V>f:V\<rightarrow\>L<around*|(|X,<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>Y<rsub|i>|)><text|
+          where >D<rsup|<around*|[|1|]>><rsub|V>f<around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y>f
+        </equation>
+
+        we have\ 
+
+        <\equation>
+          <label|eq 16.135.181>\<forall\>y\<in\>V<text| that
+          >D<rsup|<around*|[|1|]>><rsub|Y>f<around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y>f=<around*|(|D<rsub|y><rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsub|y><rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>
+        </equation>
+
+        Using <math|\<cal-K\>:<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|X,Y<rsub|i>|)>\<rightarrow\>L<around*|(|X,<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>Y<rsub|i>|)>>
+        defined in [lemma: <reference|lemma 16.98.194>] we have that for
+        <math|y\<in\>V> \ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|\<cal-K\>\<circ\><around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>|)><around*|(|y|)>>|<cell|=>|<cell|>>|<row|<cell|\<cal-K\><around*|(|<around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>><around*|(|y|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<cal-K\><around*|(|<around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)><around*|(|y|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)><around*|(|y|)>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)><around*|(|y|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)><around*|(|y|)>|)><rsub|\<ast\>>>|<cell|<below|=|<text|[eq:
+          <reference|eq 16.132.181>]>>>|<cell|>>|<row|<cell|<around*|(|D<rsub|y><rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsub|y><rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 16.135.181>]>>>|<cell|>>|<row|<cell|<around*|(|D<rsub|V><rsup|<around*|[|1|]>>f|)><around*|(|y|)>>|<cell|>|<cell|>>>>
+        </eqnarray*>
+
+        proving that\ 
+
+        <\equation>
+          <label|eq 16.136.181>D<rsup|<around*|[|1|]>><rsub|V>f=\<cal-K\>\<circ\><around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>
+        </equation>
+
+        As by [eq: <reference|eq 16.133.181>]
+        <math|<around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>>
+        is <math|C<rsup|n>> at <math|x> we have by [lemmas: <reference|lemma
+        16.97.193>, <reference|lemma 16.98.194>] that
+        <math|\<cal-K\>\<circ\><around*|(|D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><rsub|V><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>>
+        is <math|C<rsup|n>> at <math|x>, hence
+        <math|D<rsup|<around*|[|1|]>><rsub|V>f> is
+        <math|C<rsup|<around*|[|n|]>>> at <math|x>. Applying then [theorem:
+        <reference|diff f is of class C^n if D^1f u=is of class C^n-1>]
+        proves that <math|f> is <math|C<rsup|n+1>> at <math|x>, hence\ 
+
+        <\equation*>
+          n+1\<in\>S
+        </equation*>
+      </description>
+    </description>
+  </proof>
+
+  TODO
+
+  <\theorem>
+    <label|continuity function partial application>Let
+    <math|<around*|\<langle\>|X<rsub|1>,\<cal-T\><rsub|1>|\<rangle\>>>,
+    <math|<around*|\<langle\>|X<rsub|2>,\<cal-T\><rsub|2>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,\<cal-T\><rsub|Y>|\<rangle\>>> be topological
+    spaces, <math|<around*|\<langle\>|<big|prod><rsub|i\<in\><around*|{|1,2|}>>X<rsub|i>,\<cal-T\><rsub|product>|\<rangle\>>>
+    the topological space based on the product of <math|X<rsub|1>>,
+    <math|X<rsub|2>> and
+
+    <\equation*>
+      f:<big|prod><rsub|i\<in\><around*|{|1,2|}>>X<rsub|i>\<rightarrow\>Y<text|
+      a continuous function>
+    </equation*>
+
+    then we have
+
+    <\enumerate>
+      <item><math|\<forall\>x\<in\>X<rsub|1>>
+      <math|f<rsub|1><around*|(|x|)>:X<rsub|2>\<rightarrow\>Y> defined by
+      <math|f<rsub|1><around*|(|x|)><around*|(|y|)>=f<around*|(|x,y|)>> is
+      continuous.
+
+      <item><math|\<forall\>x\<in\>X<rsub|2>>
+      <math|f<rsub|2><around*|(|x|)>:X<rsub|1>\<rightarrow\>Y> defined by
+      <math|f<rsub|2><around*|(|x|)><around*|(|y|)>=f<around*|(|y,x|)>> is
+      continuous.
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ First as <math|<around*|{|1,2|}>> is finite we have that
+    <math|\<cal-T\><rsub|product>\<equallim\><rsub|<text|[theorem:
+    <reference|topology product topology and box topology are the same in the
+    finite case>]>>\<cal-T\><rsub|box>>
+
+    so that the basis for <math|\<cal-T\><rsub|product>> is\ 
+
+    <\equation>
+      <label|eq 14.46.147>\<cal-B\>\<equallim\><rsub|<text|[definition:
+      <reference|topology box>>><around*|{|<big|prod><rsub|i\<in\>I>U<rsub|i>\|<around*|{|U<rsub|i>|}><rsub|i\<in\>I>\<subseteq\>\<cal-P\><around*|(|<big|prod><rsub|i\<in\>I>X<rsub|i>|)><text|
+      is a family such that >\<forall\>i\<in\>I<text|
+      >U<rsub|i>\<in\>\<cal-T\><rsub|i>|}>
+    </equation>
+
+    <\enumerate>
+      <item>Let <math|x\<in\>X<rsub|1>> and let
+      <math|V\<in\>\<cal-T\><rsub|Y>> then by continuity of <math|f> we have
+      that <math|f<rsup|-1><around*|(|V|)>\<in\>\<cal-T\><rsub|product>>.
+      Take now <math|y\<in\>f<rsub|1><around*|(|x|)><rsup|-1><around*|(|V|)>>
+      then <math|f<around*|(|x,y|)>=f<rsub|1><around*|(|x|)><around*|(|y|)>\<in\>V>
+      so that <math|<around*|(|x,y|)>\<in\>f<rsup|-1><around*|(|V|)>> and by
+      [eq: <reference|eq 14.46.147>] there exists a
+      <math|U<rsub|1>\<in\>\<cal-T\><rsub|1>>,
+      <math|U<rsub|2>\<in\>\<cal-T\><rsub|2>> such that
+      <math|<around*|(|x,y|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,2|}>>U<rsub|i>\<subseteq\>f<rsup|-1><around*|(|V|)>>.
+      Hence <math|x\<in\>U<rsub|1>> and <math|y\<in\>U<rsub|2>>. If
+      <math|t\<in\>U<rsub|2>> then <math|<around*|(|x,t|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,2|}>>U<rsub|i>\<subseteq\>f<rsup|-1><around*|(|V|)>>
+      hence <math|f<rsub|1><around*|(|x|)><around*|(|t|)>=f<around*|(|x,t|)>\<in\>V>
+      or <math|t\<in\>f<rsub|1><around*|(|x|)><rsup|-1><around*|(|V|)>>
+      proving that <math|y\<in\>U<rsub|2>\<subseteq\>f<rsub|1><around*|(|x|)><rsup|-1><around*|(|V|)>>
+      which by [theorem: <reference|topology open set condition>] proves that
+      <math|f<rsub|1><around*|(|x|)><rsup|-1><around*|(|V|)>> is open. Hence
+      by [theorem: <reference|continuity continuous function (1)>]\ 
+
+      <\equation*>
+        f<rsub|1><around*|(|x|)><text| is continuous>
+      </equation*>
+
+      <item>Let <math|x\<in\>X<rsub|2>> and let
+      <math|V\<in\>\<cal-T\><rsub|Y>> then by continuity of <math|f> we have
+      that <math|f<rsup|-1><around*|(|V|)>\<in\>\<cal-T\><rsub|product>>.
+      Take now <math|y\<in\>f<rsub|2><around*|(|x|)><rsup|-1><around*|(|V|)>>
+      then <math|f<around*|(|y,x|)>=f<rsub|2><around*|(|x|)><around*|(|y|)>\<in\>V>
+      so that <math|<around*|(|y,x|)>\<in\>f<rsup|-1><around*|(|V|)>> and by
+      [eq: <reference|eq 14.46.147>] there exists a
+      <math|U<rsub|1>\<in\>\<cal-T\><rsub|1>>,
+      <math|U<rsub|2>\<in\>\<cal-T\><rsub|2>> such that
+      <math|<around*|(|y,x|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,2|}>>U<rsub|i>\<subseteq\>f<rsup|-1><around*|(|V|)>>.
+      Hence <math|x\<in\>U<rsub|2>> and <math|y\<in\>U<rsub|1>>. If
+      <math|t\<in\>U<rsub|1>> then <math|<around*|(|t,x|)>\<in\><big|prod><rsub|i\<in\><around*|{|1,2|}>>U<rsub|i>\<subseteq\>f<rsup|-1><around*|(|V|)>>
+      hence <math|f<rsub|2><around*|(|x|)><around*|(|t|)>=f<around*|(|t,x|)>\<in\>V>
+      or <math|t\<in\>f<rsub|2><around*|(|x|)><rsup|-1><around*|(|V|)>>
+      proving that <math|y\<in\>U<rsub|1>\<subseteq\>f<rsub|2><around*|(|x|)><rsup|-1><around*|(|V|)>>
+      which by [theorem: <reference|topology open set condition>] proves that
+      <math|f<rsub|2><around*|(|x|)><rsup|-1><around*|(|V|)>> is open. Hence
+      by [theorem: <reference|continuity continuous function (1)>]\ 
+
+      <\equation*>
+        f<rsub|2><around*|(|x|)><text| is continuous>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  \;
+
   \;
 
   \;
@@ -11453,12 +12412,14 @@
     <associate|auto-34|<tuple|16.2.5|?>>
     <associate|auto-35|<tuple|16.2.6|?>>
     <associate|auto-36|<tuple|16.2.7|?>>
+    <associate|auto-37|<tuple|16.2.8|?>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|U<rsub|x>>|?>>
     <associate|auto-5|<tuple|convergence of a function|?>>
     <associate|auto-6|<tuple|<with|mode|<quote|math>|f<rprime|'><around*|(|x|)>>|?>>
     <associate|auto-7|<tuple|16.1.2|?>>
     <associate|auto-8|<tuple|differentiability|?>>
     <associate|auto-9|<tuple|<with|mode|<quote|math>|\<varepsilon\>>-mapping|?>>
+    <associate|continuity function partial application|<tuple|16.176|?>>
     <associate|convergence of a function to a point|<tuple|16.8|?>>
     <associate|corollary 16.50.192|<tuple|16.107|?>>
     <associate|diff Bx(x,d)|<tuple|16.7|?>>
@@ -11533,6 +12494,9 @@
     <associate|diff higher order differential is linear|<tuple|16.158|?>>
     <associate|diff higher order differentiation|<tuple|16.123|?>>
     <associate|diff higher order differentiation (1)|<tuple|16.130|?>>
+    <associate|diff higher order differentiation and vector
+    functions|<tuple|16.173|?>>
+    <associate|diff higher order differentiation classes|<tuple|16.175|?>>
     <associate|diff higher order differentiation is local|<tuple|16.126|?>>
     <associate|diff higher order differentiation on a open
     set|<tuple|16.127|?>>
@@ -11582,6 +12546,7 @@
     <associate|diff vector functions (1)|<tuple|16.94|?>>
     <associate|diff vector functions (2)|<tuple|16.96|?>>
     <associate|diff vector functions and linearity|<tuple|16.93|?>>
+    <associate|eq 14.46.147|<tuple|16.236|?>>
     <associate|eq 16.1.1|<tuple|16.1|?>>
     <associate|eq 16.1.177|<tuple|16.23|?>>
     <associate|eq 16.10.178|<tuple|16.74|?>>
@@ -11594,12 +12559,28 @@
     <associate|eq 16.103.181|<tuple|16.202|?>>
     <associate|eq 16.104.181|<tuple|16.203|?>>
     <associate|eq 16.11.178|<tuple|16.75|?>>
+    <associate|eq 16.118.181|<tuple|16.217|?>>
+    <associate|eq 16.119.181|<tuple|16.218|?>>
     <associate|eq 16.12.178|<tuple|16.76|?>>
+    <associate|eq 16.120.181|<tuple|16.219|?>>
+    <associate|eq 16.121.181|<tuple|16.220|?>>
     <associate|eq 16.121.6|<tuple|16.121|?>>
+    <associate|eq 16.122.181|<tuple|16.221|?>>
+    <associate|eq 16.123.181|<tuple|16.222|?>>
+    <associate|eq 16.124.181|<tuple|16.223|?>>
+    <associate|eq 16.128.181|<tuple|16.227|?>>
+    <associate|eq 16.129.181|<tuple|16.228|?>>
     <associate|eq 16.13.178|<tuple|16.77|?>>
+    <associate|eq 16.130.181|<tuple|16.229|?>>
+    <associate|eq 16.131.181|<tuple|16.230|?>>
+    <associate|eq 16.132.181|<tuple|16.231|?>>
+    <associate|eq 16.133.181|<tuple|16.232|?>>
     <associate|eq 16.133.7|<tuple|16.133|?>>
+    <associate|eq 16.134.181|<tuple|16.233|?>>
     <associate|eq 16.134.7|<tuple|16.134|?>>
+    <associate|eq 16.135.181|<tuple|16.234|?>>
     <associate|eq 16.135.7|<tuple|16.135|?>>
+    <associate|eq 16.136.181|<tuple|16.235|?>>
     <associate|eq 16.136.7|<tuple|16.136|?>>
     <associate|eq 16.137.7|<tuple|16.137|?>>
     <associate|eq 16.138.7|<tuple|16.138|?>>
@@ -11778,12 +12759,19 @@
     <associate|eq 16.85.181|<tuple|16.171|?>>
     <associate|eq 16.85.193|<tuple|16.212|?>>
     <associate|eq 16.86.181|<tuple|16.173|?>>
+    <associate|eq 16.86.193|<tuple|16.213|?>>
     <associate|eq 16.87.181|<tuple|16.174|?>>
+    <associate|eq 16.87.193|<tuple|16.214|?>>
     <associate|eq 16.88.181|<tuple|16.176|?>>
     <associate|eq 16.89.181|<tuple|16.177|?>>
+    <associate|eq 16.89.193|<tuple|16.216|?>>
     <associate|eq 16.9.178|<tuple|16.73|?>>
     <associate|eq 16.90.181|<tuple|16.179|?>>
+    <associate|eq 16.90.194|<tuple|16.224|?>>
     <associate|eq 16.91.158|<tuple|16.197|?>>
+    <associate|eq 16.91.194|<tuple|16.225|?>>
+    <associate|eq 16.91.199|<tuple|16.215|?>>
+    <associate|eq 16.92.194|<tuple|16.226|?>>
     <associate|eq 16.94.6|<tuple|16.94|?>>
     <associate|eq 16.95.181|<tuple|16.191|?>>
     <associate|eq 16.98.6|<tuple|16.98|?>>
@@ -11791,6 +12779,7 @@
     <associate|eq 16.99.6|<tuple|16.99|?>>
     <associate|example 16.35.1|<tuple|16.41|?>>
     <associate|lemma 16.12.1|<tuple|16.15|?>>
+    <associate|lemma 16.139.181|<tuple|16.174|?>>
     <associate|lemma 16.23.181|<tuple|16.98|?>>
     <associate|lemma 16.24.178|<tuple|16.73|?>>
     <associate|lemma 16.37.1|<tuple|16.45|?>>
@@ -11808,6 +12797,10 @@
     <associate|lemma 16.7.1|<tuple|16.10|?>>
     <associate|lemma 16.72.189|<tuple|16.144|?>>
     <associate|lemma 16.83.197|<tuple|16.139|?>>
+    <associate|lemma 16.93.193|<tuple|16.169|?>>
+    <associate|lemma 16.96.193|<tuple|16.170|?>>
+    <associate|lemma 16.97.193|<tuple|16.171|?>>
+    <associate|lemma 16.98.194|<tuple|16.172|?>>
     <associate|normed space are assumed to be non trivial|<tuple|16.1|?>>
     <associate|note 16.103.180|<tuple|16.133|?>>
     <associate|note 16.65.191|<tuple|16.124|?>>
@@ -11931,10 +12924,14 @@
       order differentiation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-35>>
 
-      <with|par-left|<quote|2tab>|16.2.6.1<space|2spc>Examples of
+      <with|par-left|<quote|1tab>|16.2.7<space|2spc>Examples of
       <with|mode|<quote|math>|\<infty\>>-times differentiable functions
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-36>>
+
+      <with|par-left|<quote|1tab>|16.2.8<space|2spc>The chain rule for higher
+      order derivatives <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-37>>
     </associate>
   </collection>
 </auxiliary>

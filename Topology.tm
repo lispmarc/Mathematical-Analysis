@@ -7057,7 +7057,7 @@
     topological space,<math|<around*|{|<around*|\<langle\>|X<rsub|i>,\<cal-T\><rsub|i>|\<rangle\>>|}><rsub|i\<in\>I>>
     be a family of topological spaces, <math|<around*|\<langle\>|<big|prod><rsub|i\<in\>I>X<rsub|i>,\<cal-T\><rsub|product>|\<rangle\>>>
     be the product topological space [see definition: <reference|topology
-    product>] and\ 
+    product>] <math|x\<in\>U> and\ 
 
     <\equation*>
       f:X\<rightarrow\><big|prod><rsub|i\<in\>I>X<rsub|i><text| a function >
@@ -7066,21 +7066,22 @@
     then\ 
 
     <\equation*>
-      f<text| is continuous >\<Leftrightarrow\><text|
+      f<text| is continuous at >x<text| >\<Leftrightarrow\><text|
       >\<forall\>i\<in\>I<text| >f<rsub|i>=\<pi\><rsub|i>\<circ\>f<text| is
-      continuous>
+      continuous> at x
     </equation*>
   </corollary>
 
   <\proof>
-    \ 
+    \ Let <math|x\<in\>X>\ 
 
     <\description>
       <item*|<math|\<Rightarrow\>>>Let <math|i\<in\>I> then as <math|f> is
-      continuous and by [theorem: <reference|continuity projection map is
-      open and continuous>] <math|\<pi\><rsub|i>> is continuous we have by
+      continuous at <math|x> and by [theorem: <reference|continuity
+      projection map is open and continuous>] <math|\<pi\><rsub|i>> is
+      continuous hence continuous at <math|f<around*|(|x|)>> we have by
       [theorem: <reference|continuity composition>] that
-      <math|\<pi\><rsub|i>\<circ\>f> is continuous.
+      <math|\<pi\><rsub|i>\<circ\>f> is continuous at <math|x>.
 
       <item*|<math|\<Leftarrow\>>>Using [definitions: <reference|topology
       product>] we have that the basis for <math|\<cal-T\><rsub|product>> is\ 
@@ -7117,7 +7118,7 @@
         x\<in\>f<rsup|-1><around*|(|S<rsub|i>|)>=f<rsup|-1><around*|(|\<pi\><rsup|-1><rsub|i<rsub|j>><around*|(|U<rsub|j>|)>|)>=<around*|(|\<pi\><rsub|i<rsub|j>>\<circ\>f|)><rsup|-1><around*|(|U<rsub|j>|)>=<around*|(|f<rsub|i<rsub|j>>|)><rsup|-1><around*|(|U<rsub|j>|)>
       </equation*>
 
-      As <math|f<rsub|i<rsub|j>>> is continuous and
+      As <math|f<rsub|i<rsub|j>>> is continuous at <math|x> and
       <math|U<rsub|j>\<in\>\<cal-T\><rsub|j>> we have that
       <math|f<rsub|i<rsub|j>><rsup|-1><around*|(|U<rsub|j>|)>\<in\>\<cal-T\><rsub|X>>
       so, as <math|J> is finite, it follows that, \ if we take
@@ -7145,11 +7146,10 @@
         <reference|eq 14.45.147>]>>>|<cell|V>>>>
       </eqnarray*>
 
-      Hence we have proved that for <math|\<forall\>x\<in\>X> we have
-      <math|\<forall\>V\<in\>\<cal-T\><rsub|product>> with <math|x\<in\>V>
-      there exist a <math|U\<in\>\<cal-T\><rsub|X>> such that <math|x\<in\>U>
-      and <math|f<around*|(|U|)>\<subseteq\>V> which proves that <math|f> is
-      continuous at <math|x>. Hence we have that <math|f> is continuous.
+      Hence we have proved that <math|\<forall\>V\<in\>\<cal-T\><rsub|product>>
+      with <math|x\<in\>V> there exist a <math|U\<in\>\<cal-T\><rsub|X>> such
+      that <math|x\<in\>U> and <math|f<around*|(|U|)>\<subseteq\>V> which
+      proves that <math|f> is continuous at <math|x>.
     </description>
   </proof>
 
