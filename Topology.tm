@@ -11143,7 +11143,7 @@
     be normed spaces over <math|\<bbb-K\>> then if we define\ 
 
     <\equation*>
-      <around*|(|\<circ\>|)>:L<around*|(|Y,Z|)>\<times\>L<around*|(|X,Y|)>\<rightarrow\>L<around*|(|X,Z|)><text|
+      <around*|(|\<circ\>|)>:L<around*|(|Y,Z|)>\<cdot\>L<around*|(|X,Y|)>\<rightarrow\>L<around*|(|X,Z|)><text|
       defined by ><around*|(|\<circ\>|)><around*|(|L<rsub|2>,L<rsub|1>|)>=L<rsub|2>\<circ\>L<rsub|1>
     </equation*>
 
