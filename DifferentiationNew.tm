@@ -371,6 +371,128 @@
     </enumerate>
   </proof>
 
+  <\corollary>
+    <label|topology every element of a generalized interval is a limit
+    point>Let <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>> be
+    the normed space of the real numbers with the absolute value norm then we
+    have\ 
+
+    <\enumerate>
+      <item><math|\<forall\>x\<in\><around*|[|a,\<infty\>|[>> where
+      <math|a\<in\>\<bbb-R\>> <math|x> is a limit point of
+      <math|<around*|[|a,\<infty\>|[>>.
+
+      <item><math|\<forall\>x\<in\><around*|]|a,\<infty\>|[>> where
+      <math|a\<in\>\<bbb-R\>> <math|x> is a limit point of
+      <math|<around*|]|a,\<infty\>|[>>.
+
+      <item><math|\<forall\>x\<in\><around*|]|-\<infty\>,a|]> where>
+      <math|a\<in\>\<bbb-R\>> <math|x> is a limit point of
+      <math|<around*|]|-\<infty\>,a|]>>.
+
+      <item><math|\<forall\>x\<in\><around*|]|-\<infty\>,a|[> where>
+      <math|a\<in\>\<bbb-R\>> <math|x> is a limit point of
+      <math|<around*|]|-\<infty\>,a|[>>.
+
+      <item><math|\<forall\>x\<in\><around*|[|a,b|]>> where
+      <math|a,b\<in\>\<bbb-R\>> where <math|a\<less\>b> <math|x> is a limit
+      point of <math|<around*|[|a,b|]>>.
+
+      <item><math|\<forall\>x\<in\><around*|[|a,b|[>> where
+      <math|a,b\<in\>\<bbb-R\>> where <math|a\<less\>b> <math|x> is a limit
+      point of <math|<around*|[|a,b|[>>.
+
+      <item><math|\<forall\>x\<in\><around*|]|a,b|]>> where
+      <math|a,b\<in\>\<bbb-R\>> where <math|a\<less\>b> <math|x> is a limit
+      point of <math|<around*|]|a,b|]>>.
+
+      <item><math|\<forall\>x\<in\><around*|]|a,b|[>> where
+      <math|a,b\<in\>\<bbb-R\>> where <math|a\<less\>b> <math|x> is a limit
+      point of <math|<around*|]|a,b|[>>.
+    </enumerate>
+  </corollary>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|x\<in\><around*|[|a,\<infty\>|[>> then
+      <math|a\<leqslant\>x>. If <math|U> is a open set with <math|x\<in\>U>
+      then there exist a <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|x\<in\><around*|]|x-\<delta\>,x+\<delta\>|[>\<subseteq\>U>, then
+      <math|x-\<delta\>\<less\>x\<less\>x+<frac|\<delta\>|2>\<less\>x+\<delta\>>
+      and <math|a\<leqslant\>x\<less\>x+<frac|\<delta\>|2>> from which it
+      follows, as <math|x+<frac|\<delta\>|2>\<neq\>x>, that
+      <math|x+<frac|\<delta\>|2>\<in\><around*|(|<around*|[|a,\<infty\>|[>\\<around*|{|x|}>|)><big|cap><around*|]|x-\<delta\>,x+\<delta\>|[>\<subseteq\><around*|(|<around*|[|a,\<infty\>|[>\\<around*|{|x|}>|)><big|cap>U>.
+      Hence <math|<around*|(|<around*|[|a,\<infty\>|[>\\<around*|{|x|}>|)><big|cap>U\<neq\>0>
+      which proves that <math|x> is a limit point of
+      <math|<around*|[|a,\<infty\>|[>>.
+
+      <item>Let <math|x\<in\><around*|]|a,\<infty\>|[>>, using [theorem:
+      <reference|normed generalized intervals that are open>]
+      <math|<around*|]|a,\<infty\>|[>> is a open set so that by [theorem:
+      <reference|topology every element of a open set in a normed space is a
+      limit point>] <math|x> is a limit point of
+      <math|<around*|]|a,\<infty\>|[>>.
+
+      <item>Let <math|x\<in\><around*|]|-\<infty\>,a|]>> then
+      <math|x\<leqslant\>a>. If <math|U> is a open set with <math|x\<in\>U>
+      then there exist a <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+      <math|x\<in\><around*|]|x-\<delta\>,x+\<delta\>|[>>, then
+      <math|x-\<delta\>\<less\>x-<frac|\<delta\>|2>\<less\>x\<less\>x+\<delta\>>
+      and <math|x-<frac|\<delta\>|2>\<less\>x\<leqslant\>a> form which it
+      follows, as <math|x-<frac|\<delta\>|2>\<neq\>x>, that
+      <math|x-<frac|\<delta\>|2>\<in\><around*|(|<around*|]|-\<infty\>,a|]>\\<around*|{|x|}>|)><big|cap><around*|]|x-\<delta\>,x+\<delta\>|[>\<subseteq\><around*|(|<around*|]|-\<infty\>,a|]>\\<around*|{|x|}>|)><big|cap>U>.
+      Hence <math|<around*|(|<around*|]|-\<infty\>,a|]>\\<around*|{|x|}>|)><big|cap>U\<neq\>\<varnothing\>>
+      which proves that <math|x> is a limit point of
+      <math|<around*|]|-\<infty\>,a|]>>.
+
+      <item>Let <math|x\<in\><around*|]|-\<infty\>,a|[>>, using [theorem:
+      <reference|normed generalized intervals that are open>]
+      <math|<around*|]|-\<infty\>,a|[>> is a open set so that by [theorem:
+      <reference|topology every element of a open set in a normed space is a
+      limit point>] <math|x> is a limit point of
+      <math|<around*|]|-\<infty\>,a|[>>.
+
+      <item>Let <math|x\<in\><around*|[|a,b|]>=<around*|[|<around*|(|a+<frac|b-a|2>|)>-<frac|b-a|2>,<around*|(|a+<frac|b-a|2>|)>+<frac|b-a|2>|]>=B<rsub|<around*|\|||\|>><around*|(|a+<frac|b-a|2>,<frac|b-a|2>|)>>
+      so that by [theorem: <reference|topology every element of a open or
+      closed ball is a limit point>] <math|x> is a limit point of
+      <math|<around*|[|a,b|]>>.
+
+      <item>Let <math|x\<in\><around*|[|a,b|[>> then
+      <math|a\<leqslant\>x\<less\>b>. If <math|U> is open with
+      <math|x\<in\>U> then there exist a <math|\<delta\>\<in\>\<bbb-R\><rsup|+>>
+      such that <math|x\<in\><around*|]|x-\<delta\>,x+\<delta\>|[>\<subseteq\>U>.
+      Take <math|\<varepsilon\>=min<around*|(|<frac|<around*|(|b-x|)>|2>,<frac|\<delta\>|2>|)>\<in\>\<bbb-R\><rsup|+>>
+      then we have <math|x\<neq\>x+\<varepsilon\>>,
+      <math|<rigid|a\<leqslant\>x\<less\>x+\<varepsilon\>\<leqslant\>x+<frac|b-x|2>\<less\>x+<around*|(|b-x|)>=b>>
+      and <math|x-\<delta\>\<less\>x\<less\>x+\<varepsilon\>\<less\>x+<frac|\<delta\>|2>\<less\>x+\<delta\>>
+      so that <math|<rigid|x+\<varepsilon\>\<in\><around*|(|<around*|[|a,b|[>\\<around*|{|x|}>|)><big|cap><around*|]|x-\<delta\>,x+\<delta\>|[>\<subseteq\><around*|(|<around*|[|a,b|[>\\<around*|{|x|}>|)><big|cap>U>>.
+      Hence <math|<around*|(|<around*|[|a,b|[>\\<around*|{|x|}>|)><big|cap>U\<neq\>\<varnothing\>>
+      which proves that <math|x> is a limit point of
+      <math|<around*|[|a,b|[>>.
+
+      <item>Let <math|x\<in\><around*|]|a,b|]>> then
+      <math|a\<less\>x\<leqslant\>b>. If <math|U> is open with
+      <math|x\<in\>U> then there exist a <math|\<delta\>\<in\>\<bbb-R\><rsup|+>>
+      such that <math|x\<in\><around*|]|x-\<delta\>,x+\<delta\>|[>\<subseteq\>U>.
+      Take <math|\<varepsilon\>=min<around*|(|<frac|<around*|(|x-a|)>|2>,<frac|\<delta\>|2>|)>\<in\>\<bbb-R\><rsup|+>>
+      then we have <math|<rigid|x\<neq\>x-\<varepsilon\>>>,
+      <math|<rigid|a=x-<around*|(|x-a|)>\<less\>x-<frac|x-a|2>\<leqslant\>x-\<varepsilon\>\<less\>x\<leqslant\>b>>
+      and <math|x-\<delta\>\<less\>x-<frac|\<delta\>|2>\<less\>x\<less\>x+\<delta\>>
+      so that <math|<rigid|x-\<varepsilon\>\<in\><around*|(|<around*|]|a,b|]>\\<around*|{|x|}>|)><big|cap><around*|]|x-\<delta\>,x+\<delta\>|[>\<subseteq\><around*|(|<around*|]|a,b|]>\\<around*|{|x|}>|)><big|cap>U>>.
+      Hence <math|<around*|(|<around*|]|a,b|]>\\<around*|{|x|}>|)><big|cap>U\<neq\>\<varnothing\>>
+      which proves that <math|x> is a limit point of
+      <math|<around*|]|a,b|]>>.
+
+      <item>Let <math|x\<in\><around*|]|a,b|[>>, using [theorem:
+      <reference|normed generalized intervals that are open>]
+      <math|<around*|]|a,b|[>> is a open set so that by [theorem:
+      <reference|topology every element of a open set in a normed space is a
+      limit point>] <math|x> is a limit point of <math|<around*|]|a,b|[>>.
+    </enumerate>
+  </proof>
+
   One more step before can define the derivative of a function we must ensure
   that <math|f<around*|(|x+h|)>> will be well defined and for this we need
   the following theorem.
@@ -444,6 +566,18 @@
       in a normed space is a limit point> or corollary: <reference|topology
       every element of a open or closed ball is a limit point>].
     </note>
+
+    <\note>
+      If <math|A> is of the forms <math|<around*|[|a,b|]>>,
+      <math|<around*|[|a,b|[>>, <math|<around*|]|a,b|]>>,
+      <math|<around*|]|a,b|[>>, <math|<around*|[|a,\<infty\>|[>>,
+      <math|<around*|]|a,\<infty\>|[>>, <math|<around*|]|-\<infty\>,a|]>> or
+      <math|<around*|]|-\<infty\>,a|[>> where <math|a,b\<in\>\<bbb-R\>> with
+      <math|a\<less\>b> then evere element of <math|A> is automatical a limit
+      point of <math|A> [see theorem: <reference|topology every element of a
+      generalized interval is a limit point>] so in those cases the conition
+      that <math|x> is a limit point is automatically satisfied.
+    </note>
   </definition>
 
   If we use the definition of <math|<below|lim|<below|h\<rightarrow\>0|U<rsub|x>>>>
@@ -468,6 +602,35 @@
       >0\<less\><around*|\||h|\|>\<less\>\<delta\><text|
       \ ><around*|\<\|\|\>|<frac|f<around*|(|x+h|)>-f<around*|(|x|)>|h>-f<rprime|'><rsub|z>|\<\|\|\>>\<less\>\<varepsilon\>
     </equation*>
+
+    <\note>
+      As <math|x\<in\>A> and <math|h\<in\>A<rsub|x>\<Rightarrow\>x+h\<in\>A>
+      <math|\<Delta\><rsub|x>f> is well defined. Further as <math|x> is a
+      limit point of <math|A>, <math|0> is a limit point of <math|A<rsub|x>>
+      [see lemma: <reference|lemma 16.12.1>] so the limit if it exist is
+      unique.
+    </note>
+
+    <\note>
+      In case <math|A> is open or <math|A=<wide|B<rsub|<around*|\|||\|>><around*|(|x.\<delta\>|)>|\<wide-bar\>>>
+      or <math|A=<wide|B<rsub|<around*|\|||\|>><around*|(|x,\<delta\>|)>|\<wide-bar\>>>
+      we can leave out the condition that <math|x> is a limit point of
+      <math|A> [see theorem: <reference|topology every element of a open set
+      in a normed space is a limit point> or corollary: <reference|topology
+      every element of a open or closed ball is a limit point>].
+    </note>
+
+    <\note>
+      If <math|A> is of the forms <math|<around*|[|a,b|]>>,
+      <math|<around*|[|a,b|[>>, <math|<around*|]|a,b|]>>,
+      <math|<around*|]|a,b|[>>, <math|<around*|[|a,\<infty\>|[>>,
+      <math|<around*|]|a,\<infty\>|[>>, <math|<around*|]|-\<infty\>,a|]>> or
+      <math|<around*|]|-\<infty\>,a|[>> where <math|a,b\<in\>\<bbb-R\>> with
+      <math|a\<less\>b> then evere element of <math|A> is automatical a limit
+      point of <math|A> [see theorem: <reference|topology every element of a
+      generalized interval is a limit point>] so in those cases the conition
+      that <math|x> is a limit point is automatically satisfied.
+    </note>
   </theorem>
 
   <\proof>
@@ -2957,11 +3120,18 @@
     </equation*>
 
     <\note>
-      If <math|x\<in\>A<rsup|\<circ\>>> or <math|A> is open and
-      <math|x\<in\>A> is open then by [theorems: <reference|topology interior
-      point is a limit point in a normed space>, <reference|topology every
-      element of a open set in a normed space is a limit point>] <math|x> is
-      a limit point of <math|A> hence in these cases we have\ 
+      If <math|x\<in\>A<rsup|\<circ\>>>, <math|A> is open or <math|A> is of
+      the forms <math|<around*|[|a,b|]>>, <math|<around*|[|a,b|[>>,
+      <math|<around*|]|a,b|]>>, <math|<around*|]|a,b|[>>,
+      <math|<around*|[|a,\<infty\>|[>>, <math|<around*|]|a,\<infty\>|[>>,
+      <math|<around*|[|a,\<infty\>|[>>, <math|<around*|]|-\<infty\>,a|]>> or
+      <math|<around*|]|-\<infty\>,a|[>> then by [theorems:
+      <reference|topology interior point is a limit point in a normed space>,
+      <reference|topology every element of a open set in a normed space is a
+      limit point>, <reference|topology every element of a generalized
+      interval is a limit point>] that <math|x> is a limit point of <math|A>
+      and by [theorem: <reference|diff tangent cone and limit point>]
+      <math|S<rsub|A><around*|(|x|)>=\<bbb-R\>>, hence in these cases we have\ 
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|>|<cell|f<text| has a derivative
@@ -8735,13 +8905,18 @@
     </note>
 
     <\note>
-      The condition that in the case of <math|1\<less\>n> there must exist a
-      open set <math|V> with <math|x\<in\>V\<subseteq\>A> implies by
-      [theorem: <reference|topology biggest open subset>] that
-      <math|x\<in\>A<rsup|\<circ\>>> so that <math|x> must be a interior
-      point of <math|A>. Hence if <math|f> is <math|n>-times differentable at
-      <math|x> with <math|1\<less\>n> then <math|x> is a interior point of
-      <math|A>.
+      If <math|x\<in\>A<rsup|\<circ\>>>, <math|A> is open or <math|A> is of
+      the forms <math|<around*|[|a,b|]>>, <math|<around*|[|a,b|[>>,
+      <math|<around*|]|a,b|]>>, <math|<around*|]|a,b|[>>,
+      <math|<around*|[|a,\<infty\>|[>>, <math|<around*|]|a,\<infty\>|[>>,
+      <math|<around*|[|a,\<infty\>|[>>, <math|<around*|]|-\<infty\>,a|]>> or
+      <math|<around*|]|-\<infty\>,a|[>> then by [theorems:
+      <reference|topology interior point is a limit point in a normed space>,
+      <reference|topology every element of a open set in a normed space is a
+      limit point>, <reference|topology every element of a generalized
+      interval is a limit point>] that <math|x> is a limit point of <math|A>
+      automatically, hence in these cases we can leave out the extra
+      condition that <math|x> must be a limit point of <math|x>.
     </note>
   </definition>
 
@@ -8840,6 +9015,21 @@
       <reference|diff higher order differentiation
       (1)>]>>D<rsub|x><rsup|n>f<around*|(|<wide*|1,\<ldots\>,1|\<wide-underbrace\>><rsub|n>|)>
     </equation*>
+
+    <\note>
+      If <math|x\<in\>A<rsup|\<circ\>>>, <math|A> is open or <math|A> is of
+      the forms <math|<around*|[|a,b|]>>, <math|<around*|[|a,b|[>>,
+      <math|<around*|]|a,b|]>>, <math|<around*|]|a,b|[>>,
+      <math|<around*|[|a,\<infty\>|[>>, <math|<around*|]|a,\<infty\>|[>>,
+      <math|<around*|[|a,\<infty\>|[>>, <math|<around*|]|-\<infty\>,a|]>> or
+      <math|<around*|]|-\<infty\>,a|[>> then by [theorems:
+      <reference|topology interior point is a limit point in a normed space>,
+      <reference|topology every element of a open set in a normed space is a
+      limit point>, <reference|topology every element of a generalized
+      interval is a limit point>] that <math|x> is a limit point of <math|A>
+      automatically, hence in these cases we can leave out the extra
+      condition that <math|x> must be a limit point of <math|x>.
+    </note>
   </theorem>
 
   <\proof>
@@ -13270,8 +13460,6 @@
     </description>
   </proof>
 
-  TODO
-
   <\theorem>
     <label|diff Rolle's theorem><dueto|Rolle's theorem>Let
     <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>> be the normed
@@ -13447,26 +13635,37 @@
     <label|diff Lagrange theorem (1)>Let <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>>
     be the normed space of real numbers, \ <math|A\<subseteq\>\<bbb-R\>>,
     <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b> such that
-    <math|<around*|[|a,b|]>\<subseteq\>A<rsup|\<circ\>>> and
+    <math|<around*|[|a,b|]>\<subseteq\>A> and
     <math|f:A\<rightarrow\>\<bbb-R\>> a function that has a derivative at
-    every <math|x\<in\>A<rsup|\<circ\>>> [or equivalently is Fréchet
-    differentiable at every <math|x\<in\>A<rsup|\<circ\>>> [see theorem:
+    every <math|x\<in\><around*|[|a,b|]>> [or equivalently is Fréchet
+    differentiable at every <math|x\<in\><around*|[|a,b|]>> [see theorem:
     <reference|diff derivate and frechet differential>]] then there exist a
     <math|\<xi\>\<in\><around*|]|a,b|[>> such that\ 
 
     <\equation*>
       f<around*|(|b|)>-f<around*|(|a|)>=f<rprime|'><rsub|\<zeta\>>\<cdot\><around*|(|b-a|)>
     </equation*>
+
+    <\note>
+      Let <math|x\<in\><around*|[|a,b|]>> then by [theorem:
+      <reference|topology every element of a generalized interval is a limit
+      point>] <math|x> is a limit point of <math|<around*|[|a,b|]>>, hence
+      <math|x\<in\><around*|[|a,b|]><rprime|'>>. As
+      <math|<around*|[|a,b|]>\<subseteq\>A> we have by [theorem:
+      <reference|topology limit points and subsets>] that
+      <math|<around*|[|a,b|]><rprime|'>\<subseteq\>A<rprime|'>> so that
+      <math|x> is a limit point of <math|A> which is needed for the
+      derivatieve at <math|x> to even exist.
+    </note>
   </corollary>
 
   <\proof>
-    Let <math|x\<in\><around*|[|a,b|]>> then <math|x\<in\>A<rsup|\<circ\>>>
-    so that by the hypothesis <math|f> has a derivative at <math|x>, hence,
-    using [theorem: <reference|diff derivate and frechet differential>]
-    <math|f> is Fréchet differentiable at <math|x>. By [theorem:
-    <reference|diff differentiable function is continuous>] it follows that
-    <math|f> is continuous at <math|x>, hence by [theorem:
-    <reference|continuity and subspace topology (1)>] we have that
+    Let <math|x\<in\><around*|[|a,b|]>> then by the hypothesis <math|f> has a
+    derivative at <math|x>, hence, using [theorem: <reference|diff derivate
+    and frechet differential>] <math|f> is Fréchet differentiable at
+    <math|x>. By [theorem: <reference|diff differentiable function is
+    continuous>] it follows that <math|f> is continuous at <math|x>, hence by
+    [theorem: <reference|continuity and subspace topology (1)>] we have that
     <math|f<rsub|\|<around*|[|A,b|]>>> is continuous at <math|x>. So we have
     proved that\ 
 
@@ -13475,9 +13674,9 @@
     </equation>
 
     Further if <math|x\<in\><around*|]|a,b|[>> then, as
-    <math|<around*|]|a,b|[>\<subseteq\><around*|[|a,b|]>\<subseteq\>A<rsup|0>>,
-    <math|f> has a derivative at <math|x>. As <math|<around*|]|a,b|[>> is
-    open it follows from [theorem: <reference|diff derivative is local>] that
+    <math|<around*|]|a,b|[>\<subseteq\><around*|[|a,b|]>>, <math|f> has a
+    derivative at <math|x>. As <math|<around*|]|a,b|[>> is open it follows
+    from [theorem: <reference|diff derivative is local>] that
     <math|f<rsub|\|<around*|[|a,b|]>>> has a derivative at <math|x> with
     <math|<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'><rsub|x>=f<rprime|'><rsub|x>>.
     Summarized we have\ 
@@ -13509,17 +13708,24 @@
   <\corollary>
     <label|diff increasing decreasing function>Let
     <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>> be the normed
-    space of the real numbers, <math|A\<subseteq\>\<bbb-R\>>, <math|I> a
-    generalized interval [see definition: <reference|interval generalized
-    interval>] such that <math|I\<subseteq\>A<rsup|\<circ\>>> and
+    space of the real numbers, <math|A\<subseteq\>\<bbb-R\>>,
+    <math|I\<subseteq\>A>
+
+    <\equation*>
+      I<text| of the forms ><around*|[|a,b|]>,<around*|[|a,b|[>,<around*|]|a,b|]>,<around*|]|a,b|[>,<around*|[|a,\<infty\>|[>,<around*|]|a,\<infty\>|[>,<around*|]|-\<infty\>,a|]>,<around*|]|-\<infty\>,a|[><text|
+      where >a,b\<in\>\<bbb-R\><text| and >a\<less\>b
+    </equation*>
+
+    and
 
     <\equation*>
       f:A\<rightarrow\>\<bbb-R\>
     </equation*>
 
     a function that has a derivative <math|f<rprime|'><rsub|x>> at every
-    point <math|x\<in\>A<rsup|\<circ\>>> [or equivalently is Fréchet
-    differentiable on <math|A<rsup|\<circ\>>>] then we have:
+    point <math|x\<in\>I> [or equivalently is Fréchet differentiable on
+    <math|I> [see theorem: <reference|diff derivate and frechet
+    differential>] then we have:
 
     <\enumerate>
       <item>If <math|\<forall\>t\<in\>I> <math|0\<less\>f<rprime|'><rsub|t>>
@@ -13534,12 +13740,22 @@
       <item>If <math|\<forall\>t\<in\>I> <math|f<rprime|'><rsub|t>\<leqslant\>0>
       then <math|f> is decreasing on <math|I>.
     </enumerate>
+
+    <\note>
+      Let <math|x\<in\>I> then by [theorem: <reference|topology every element
+      of a generalized interval is a limit point>] <math|x> is a limit point
+      of <math|I>, hence <math|x\<in\>I<rprime|'>>. As <math|I\<subseteq\>A>
+      we have by [theorem: <reference|topology limit points and subsets>]
+      that <math|I<rprime|'>\<subseteq\>A<rprime|'>> so that <math|x> is a
+      limit point of <math|A> which is needed for the derivatieve at <math|x>
+      to even exist.
+    </note>
   </corollary>
 
   <\proof>
     \ Let <math|x,y\<in\>I> with <math|x\<less\>y> then as <math|I> is a
-    generalized interval [see definition: <reference|interval generalized
-    interval>] it follows that <math|<around*|[|x,y|]>\<subseteq\>I\<subseteq\>A<rsup|\<circ\>>>,
+    generalized interval [see theorem: <reference|interval generalized
+    condition (1)>] it follows that <math|<around*|[|x,y|]>\<subseteq\>I\<subseteq\>A>,
     hence by the previous corollary [corollary: <reference|diff Lagrange
     theorem (1)>] there exist a <math|\<zeta\>\<in\><around*|]|x,y|[>> such
     that <math|f<around*|(|y|)>-f<around*|(|x|)>=f<rprime|'><rsub|\<zeta\>>\<cdot\><around*|(|x-y|)>>.
@@ -13766,9 +13982,9 @@
     <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>> be the normed
     space of real numbers, <math|A\<subseteq\>\<bbb-R\>>,
     <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b> and
-    <math|<around*|[|a,b|]>\<subseteq\>A<rsup|\<circ\>>>,
-    <math|f:A\<rightarrow\>\<bbb-R\>> a function such that <math|f> has a
-    <math|2>-the derivative on <math|A<rsup|\<circ\>>> then
+    <math|<around*|[|a,b|]>\<subseteq\>A>, <math|f:A\<rightarrow\>\<bbb-R\>>
+    a function such that <math|f> has a <math|2>-the derivative on
+    <math|<around*|[|a,b|]>> then
 
     <\enumerate>
       <item>If <math|\<forall\>x\<in\><around*|]|a,b|[>>
@@ -13779,6 +13995,18 @@
       <math|f<rsup|<around*|(|2|)>><rsub|x>\<leqslant\>0> then <math|f> is
       concave on <math|<around*|[|a,b|]>>.
     </enumerate>
+
+    <\note>
+      Let <math|x\<in\><around*|[|a,b|]>> then by [theorem:
+      <reference|topology every element of a generalized interval is a limit
+      point>] <math|x> is a limit point of <math|<around*|[|a,b|]>>, hence
+      <math|x\<in\><around*|[|a,b|]><rprime|'>>. As
+      <math|<around*|[|a,b|]>\<subseteq\>A> we have by [theorem:
+      <reference|topology limit points and subsets>] that
+      <math|<around*|[|a,b|]><rprime|'>\<subseteq\>A<rprime|'>> so that
+      <math|x> is a limit point of <math|A> which is needed for the
+      derivatieve at <math|x> to even exist.
+    </note>
   </theorem>
 
   <\proof>
@@ -13901,6 +14129,380 @@
     </enumerate>
   </proof>
 
+  We show now how the concept of convexity or concavity on a interval allows
+  us to determine if we have a minimum or maximum.\ 
+
+  <\theorem>
+    <label|diff derivate and local minimum and maximum>Let
+    <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>> be the normed
+    space of real numbers, <math|A\<subseteq\>\<bbb-R\>>,
+    <math|f:A\<rightarrow\>\<bbb-R\>> a function then we have
+
+    <\enumerate>
+      <item>If there exist a open set <math|V> with
+      <math|x<rsub|0>\<in\>V\<subseteq\>A> such that
+      <math|\<forall\>x\<in\>V> <math|f<rsup|<around*|(|2|)>><rsub|x>> exist
+      and <math|f<rsup|<around*|(|2|)>><rsub|x>\<geqslant\>0> then
+      <math|x<rsub|0>> is a local weak minimum.
+
+      <item>If there exist a open set <math|V> with
+      <math|x<rsub|0>\<in\>V\<subseteq\>A> such that
+      <math|\<forall\>x\<in\>V> <math|f<rsup|<around*|(|2|)>><rsub|x>> exist
+      and <math|f<rsup|<around*|(|2|)>><rsub|x>\<leqslant\>0> then
+      <math|x<rsub|0>> is a local weak maximum.
+    </enumerate>
+
+    <\note>
+      Let <math|x\<in\>V> then by [theorem: <reference|topology every element
+      of a open set in a normed space is a limit point>] <math|x> is a limit
+      point of <math|V>, hence <math|x\<in\>V<rprime|'>>. As
+      <math|V\<subseteq\>A> we have by [theorem: <reference|topology limit
+      points and subsets>] that <math|V<rprime|'>\<subseteq\>A<rprime|'>> so
+      that <math|x> is a limit point of <math|A> which is needed for the
+      derivatieve at <math|x> to even exist.
+    </note>
+  </theorem>
+
+  <\proof>
+    As <math|f> has a <math|2>-the derivative on <math|V> it follows from
+    [theorem: <reference|diff higher order derivate on a open set (1)>] that
+    <math|\<forall\>x\<in\>V> <math|f> has a <math|1>-the derivative at
+    <math|x> and the function
+
+    <\equation*>
+      f<rprime|'>:V\<rightarrow\>X<text| defined by
+      <math|f<rprime|'><around*|(|x|)>=f<rprime|'><rsub|x>>>
+    </equation*>
+
+    has a derivative at every <math|x\<in\>V> and
+    <math|f<rsup|<around*|(|2|)>><rsub|x>=<around*|(|f<rprime|'>|)><rprime|'><rsub|x>>.
+    As <math|x<rsub|0>> is a extremum it follows from [theorem:
+    <reference|diff derivate and local extremum>] that\ 
+
+    <\equation>
+      <label|eq 16.154.141>f<rprime|'><around*|(|x<rsub|0>|)>=0
+    </equation>
+
+    <\enumerate>
+      <item>As <math|V> is open there exists a <math|\<delta\>\<gtr\>0> such
+      that <math|x<rsub|0>\<in\><around*|]|x<rsub|0>-\<delta\>,x<rsub|0>+\<delta\>|[>\<subseteq\>V>
+      hence\ 
+
+      <\equation*>
+        \<forall\>x\<in\><around*|]|x<rsub|0>-\<delta\>,x<rsub|0>+\<delta\>|[>
+        <text|we have> f<rsup|<around*|(|2|)>><around*|(|x|)>\<geqslant\>0
+      </equation*>
+
+      Using [corollary: <reference|diff increasing decreasing function>] it
+      follows that <math|f<rprime|'>> is increasing on
+      <math|<around*|]|x<rsub|0>-\<delta\>,x<rsub|0>+\<delta\>|[>>, hence we
+      have\ 
+
+      <\equation*>
+        \<forall\>x\<in\><around*|]|x<rsub|0>-\<delta\>,x<rsub|0>|]>
+        f<rprime|'><around*|(|x|)>\<leqslant\>f<rprime|'><around*|(|x<rsub|0>|)>\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.154.141>]>>0<text| and
+        >\<forall\>x\<in\><around*|[|x<rsub|0>,x<rsub|0>+\<delta\>|[><text|
+        >0\<equallim\><rsub|<text|[eq: <reference|eq
+        16.154.141>]>>f<rprime|'><around*|(|x<rsub|0>|)>\<leqslant\>f<rprime|'><around*|(|x|)>
+      </equation*>
+
+      So using [corollary: <reference|diff increasing decreasing function>]
+      <math|f> is decreasing on <math|<around*|]|x<rsub|0>-\<delta\>,x<rsub|0>|]>\<Rightarrow\>\<forall\>x\<in\><around*|]|x<rsub|0>-\<delta\>,x<rsub|0>|]>>
+      we have <math|<rigid|f<around*|(|x|)>\<geqslant\>f<around*|(|x<rsub|0>|)>>>
+      and <math|f> is increasing on <math|<around*|[|x<rsub|0>,x<rsub|0>+\<delta\>|[>\<Rightarrow\>\<forall\>x\<in\><around*|[|x<rsub|0>,x<rsub|o>+\<delta\>|[>>
+      we have <math|f<around*|(|x<rsub|0>|)>\<leqslant\>f<around*|(|x|)>>.
+      Hence\ 
+
+      <\equation*>
+        \<forall\>x\<in\><around*|]|x<rsub|0>-\<delta\>,x<rsub|0>+\<delta\>|[>
+        <text|we have> f<around*|(|x<rsub|0>|)>\<leqslant\>f<around*|(|x|)><text|
+        or >x<rsub|0><text| is a local weak minimum>.
+      </equation*>
+
+      <item>As <math|V> is open there exists a <math|\<delta\>\<gtr\>0> such
+      that <math|<around*|]|x<rsub|0>-\<delta\>,x<rsub|0>+\<delta\>|[>\<subseteq\>V>
+      hence\ 
+
+      <\equation*>
+        \<forall\>x\<in\><around*|]|x<rsub|0>-\<delta\>,x<rsub|0>+\<delta\>|[>
+        <text|we have> f<rsup|<around*|(|2|)>><around*|(|x|)>\<leqslant\>0
+      </equation*>
+
+      So using [corollary: <reference|diff increasing decreasing function>]
+      it follows that <math|f<rprime|'>> is decreasing on
+      <math|<around*|]|x<rsub|0>-\<delta\>,x<rsub|0>+\<delta\>|[>>, hence we
+      have\ 
+
+      <\equation*>
+        \<forall\>x\<in\><around*|]|x<rsub|0>-\<delta\>,x<rsub|0>|]>
+        0\<equallim\><rsub|<text|[eq: <reference|eq
+        16.154.141>]>>f<rprime|'><around*|(|x<rsub|0>|)>\<leqslant\>f<rprime|'><around*|(|x|)><text|
+        and >\<forall\>x\<in\><around*|[|x<rsub|0>,x<rsub|0>+\<delta\>|[><text|
+        >f<rprime|'><around*|(|x|)>\<leqslant\>f<rprime|'><around*|(|x<rsub|0>|)>\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.154.141>]>>0
+      </equation*>
+
+      So using [corollary: <reference|diff increasing decreasing function>]
+      <math|f> is increasing on <math|<around*|]|x<rsub|0>-\<delta\>,x<rsub|0>|]>\<Rightarrow\>\<forall\>x\<in\><around*|]|x<rsub|0>-\<delta\>,x<rsub|0>|]>>
+      we have <math|f<around*|(|x<rsub|0>|)>\<geqslant\>f<around*|(|x|)>> and
+      <math|f> is decreasing on <math|<around*|[|x<rsub|0>,x<rsub|0>+\<delta\>|[>\<Rightarrow\>\<forall\>x\<in\><around*|[|x<rsub|0>,x<rsub|o>+\<delta\>|[>>
+      we have <math|f<around*|(|x|)>\<leqslant\>f<around*|(|x<rsub|0>|)>>.
+      Hence\ 
+
+      <\equation*>
+        \<forall\>x\<in\><around*|]|x<rsub|0>-\<delta\>,x<rsub|0>+\<delta\>|[>
+        <text|we have> f<around*|(|x|)>\<leqslant\>f<around*|(|x<rsub|0>|)><text|
+        or >x<rsub|0><text| is a local weak maximum>.
+      </equation*>
+    </enumerate>
+  </proof>
+
+  Actually we can extend the above to a maximum and minimum on a interval
+  instead of a local weak minimum or local weak maximum.
+
+  TODO
+
+  <\theorem>
+    Let <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>> be the
+    normed space of real numbers, <math|A\<subseteq\>X>, <math|a,b\<in\>A>
+    with <math|a\<leqslant\>b>, <math|<around*|[|a,b|]>\<subseteq\>A>,
+    <math|f:A\<rightarrow\>\<bbb-R\>> a function such that <math|f> has a
+    <math|2>-the derivative on <math|A<rsup|\<circ\>>> and that there exist a
+    <math|x<rsub|0>\<in\><around*|[|a,b|]>> with
+    <math|f<rprime|'><around*|(|x<rsub|0>|)>=0> then we have:
+
+    <\enumerate>
+      <item>If <math|\<forall\>x\<in\>U> <math|0\<leqslant\>f<rsup|<around*|(|2|)>><around*|(|x|)>>
+      then <math|\<forall\>x\<in\><around*|[|a,b|]>>
+      <math|f<around*|(|x<rsub|0>|)>\<leqslant\>f<around*|(|x|)>> [in other
+      words <math|f<around*|(|x<rsub|0>|)>> is the minimum of
+      <math|f<around*|(|<around*|[|a,b|]>|)>>.
+
+      <item>If <math|\<forall\>x\<in\>U> <math|0\<leqslant\>f<rsup|<around*|(|2|)>><around*|(|x|)>>
+      then <math|\<forall\>x\<in\><around*|[|a,b|]>>
+      <math|f<around*|(|x<rsub|0>|)>\<leqslant\>f<around*|(|x|)>> [in other
+      words <math|f<around*|(|x<rsub|0>|)>> is the maximum of
+      <math|f<around*|(|<around*|[|a,b|]>|)>>.
+    </enumerate>
+
+    <\note>
+      Let <math|x\<in\>V> then by [theorem: <reference|topology every element
+      of a open set in a normed space is a limit point>] <math|x> is a limit
+      point of <math|V>, hence <math|x\<in\>V<rprime|'>>. As
+      <math|V\<subseteq\>A> we have by [theorem: <reference|topology limit
+      points and subsets>] that <math|V<rprime|'>\<subseteq\>A<rprime|'>> so
+      that <math|x> is a limit point of <math|A> which is needed for the
+      derivatieve at <math|x> to even exist.
+    </note>
+  </theorem>
+
+  <\proof>
+    If <math|a=b> then <math|<around*|[|a,b|]>=<around*|{|x<rsub|0>|}>> and
+    the theorem is trivial true. So we must only prove the theorem for the
+    case <math|a\<less\>b>.
+
+    <\enumerate>
+      <item>From the previous theorem [theorem:<reference|diff derivate and
+      local minimum and maximum>] it follows that <math|x<rsub|0>> is a local
+      weak minimum of <math|f> hence there exist a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that\ 
+
+      <\equation>
+        <label|eq 16.137.195>\<forall\>x\<in\><around*|]|x<rsub|0>-\<delta\>,x<rsub|0>+\<delta\>|[>
+        we have f<around*|(|x<rsub|0>|)>\<leqslant\>f<around*|(|x|)>
+      </equation>
+
+      Assume that there exist a <math|y\<in\><around*|[|a,b|]>> such that
+      <math|f<around*|(|y|)>\<less\>f<around*|(|x<rsub|0>|)>> then
+      <math|y\<neq\>x<rsub|0>>, so we have either:
+
+      <\description>
+        <item*|<math|y\<less\>x<rsub|0>>>Then
+        <math|max<around*|(|x<rsub|0>-\<delta\>,y|)>\<less\>x<rsub|0>> so
+        there exist a <math|z\<in\>\<bbb-R\>> such that
+        <math|x<rsub|0>-\<delta\>,y\<less\>z\<less\>x<rsub|0>> hence by [eq:
+        <reference|eq 16.137.195>] we have\ 
+
+        <\equation>
+          <label|eq 16.138.195>f<around*|(|x<rsub|0>|)>\<leqslant\>f<around*|(|z|)>
+        </equation>
+
+        Further using [theorem: <reference|diff second derivate convex
+        concave>] <math|f> is convex on <math|<around*|[|y,x<rsub|0>|]>> so
+        that
+
+        <\equation>
+          <label|eq 16.139.195>f<around*|(|z|)>\<leqslant\><frac|f<around*|(|y|)>\<cdot\><around*|(|x<rsub|0>-z|)>+f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|z-y|)>|x<rsub|0>-y>
+        </equation>
+
+        As <math|0\<less\>x<rsub|0>-z> and by assumption
+        <math|f<around*|(|y|)>\<less\>f<around*|(|x<rsub|0>|)>> it follows
+        that
+
+        <\equation>
+          <label|eq 16.140.195>f<around*|(|y|)>\<cdot\><around*|(|x<rsub|0>-z|)>\<less\>f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|x<rsub|0>-z|)>
+        </equation>
+
+        Hence we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|f<around*|(|x<rsub|0>|)>>|<cell|=>|<cell|<frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|x<rsub|0>-y|)>|x<rsub|0>-y>>>|<row|<cell|>|<cell|=>|<cell|<frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|x<rsub|0>-z+z-y|)>|x<rsub|0>-y>>>|<row|<cell|>|<cell|=>|<cell|<frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|x<rsub|0>-z|)>+f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|z-y|)>|x<rsub|0>-y>>>|<row|<cell|>|<cell|\<gtr\><rsub|<text|[eq:
+          <reference|eq 16.140.195>]>>>|<cell|<frac|f<around*|(|y|)>\<cdot\><around*|(|x<rsub|0>-z|)>+f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|z-y|)>|x<rsub|0>-y>>>|<row|<cell|>|<cell|\<geqslant\><rsub|<text|[eq:
+          <reference|eq 16.139.195>]>>>|<cell|f<around*|(|z|)>>>|<row|<cell|>|<cell|\<geqslant\><rsub|<text|[eq:
+          <reference|eq 16.138.195>]>>>|<cell|f<around*|(|x<rsub|0>|)>>>>>
+        </eqnarray*>
+
+        leading to the contradiction <math|f<around*|(|x<rsub|0>|)>\<gtr\>f<around*|(|x<rsub|0>|)>>.
+
+        <item*|<math|x<rsub|0>\<less\>y>>Then
+        <math|x<rsub|0>\<less\>min<around*|(|y,x<rsub|0>+\<delta\>|)>> so
+        there exist a <math|z\<in\>\<bbb-R\>> such that
+        <math|x<rsub|0>\<less\>z\<less\>y,x<rsub|0>+\<delta\>> hence by [eq:
+        <reference|eq 16.137.195>] we have\ 
+
+        <\equation>
+          <label|eq 16.141.195>f<around*|(|x<rsub|0>|)>\<leqslant\>f<around*|(|z|)>
+        </equation>
+
+        Further using [theorem: <reference|diff second derivate convex
+        concave>] <math|f> is convex on <math|<around*|[|x<rsub|0>,y|]>> so
+        that
+
+        <\equation>
+          <label|eq 16.142.195>f<around*|(|z|)>\<leqslant\><frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|y-z|)>+f<around*|(|y|)>\<cdot\><around*|(|z-x<rsub|0>|)>|y-x<rsub|0>>
+        </equation>
+
+        As <math|0\<less\>z-x<rsub|0>> and
+        <math|f<around*|(|y|)>\<less\>f<around*|(|x<rsub|0>|)>> [by
+        assumption] we have
+
+        <\equation>
+          <label|eq 16.143.195>f<around*|(|y|)>\<cdot\><around*|(|z-x<rsub|0>|)>\<less\>f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|z-x<rsub|0>|)>
+        </equation>
+
+        Hence we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|f<around*|(|x<rsub|0>|)>>|<cell|=>|<cell|<frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|y-x<rsub|0>|)>|<around*|(|y-x<rsub|0>|)>>>>|<row|<cell|>|<cell|=>|<cell|<frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|y-z+z-x<rsub|0>|)>|<around*|(|y-x<rsub|0>|)>>>>|<row|<cell|>|<cell|=>|<cell|<frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|y-z|)>+f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|z-x<rsub|0>|)>|<around*|(|y-x<rsub|0>|)>>>>|<row|<cell|>|<cell|\<gtr\><rsub|<text|[eq:
+          <reference|eq 16.143.195>]>>>|<cell|<frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|y-z|)>+f<around*|(|y|)>\<cdot\><around*|(|z-x<rsub|0>|)>|<around*|(|y-x<rsub|0>|)>>>>|<row|<cell|>|<cell|\<geqslant\><rsub|<text|[eq:
+          <reference|eq 16.142.195>]>>>|<cell|f*<around*|(|z|)>>>|<row|<cell|>|<cell|\<geqslant\><rsub|<text|[eq:
+          <reference|eq 16.141.195>]>>>|<cell|f<around*|(|x<rsub|0>|)>>>>>
+        </eqnarray*>
+
+        leading to the contradiction <math|f<around*|(|x<rsub|0>|)>\<gtr\>f<around*|(|x<rsub|0>|)>>.
+      </description>
+
+      As in all cases we have a contradiction the assumption must be false,
+      so it follows that\ 
+
+      <\equation*>
+        \<forall\>x\<in\><around*|[|a,b|]><text| we have
+        >f<around*|(|x<rsub|0>|)>\<leqslant\>f<around*|(|x|)>
+      </equation*>
+
+      <item>From the previous theorem [theorem:<reference|diff derivate and
+      local minimum and maximum>] it follows that <math|x<rsub|0>> is a local
+      weak maximum of <math|f> hence there exist a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that\ 
+
+      <\equation>
+        <label|eq 16.144.195>\<forall\>x\<in\><around*|]|x<rsub|0>-\<delta\>,x<rsub|0>+\<delta\>|[>
+        we have f<around*|(|x|)>\<leqslant\>f<around*|(|x<rsub|0>|)>
+      </equation>
+
+      Assume that there exist a <math|y\<in\><around*|[|a,b|]>> such that
+      <math|f<around*|(|x<rsub|0>|)>\<less\>f<around*|(|y|)>> then we can not
+      have <math|y=x<rsub|0>>, hence we must consider the following cases:
+
+      <\description>
+        <item*|<math|y\<less\>x<rsub|0>>>Then
+        <math|max<around*|(|x<rsub|0>-\<delta\>,y|)>\<less\>x<rsub|0>> so
+        there exist a <math|z\<in\>\<bbb-R\>> with
+        <math|x<rsub|0>-\<delta\>,y\<less\>z\<less\>x<rsub|0>>. Applying [eq:
+        <reference|eq 16.144.195>] gives\ 
+
+        <\equation>
+          <label|eq 16.145.195>f<around*|(|z|)>\<leqslant\>f<around*|(|x<rsub|0>|)>
+        </equation>
+
+        Further using [theorem: <reference|diff second derivate convex
+        concave>] <math|f> is concave on <math|<around*|[|y,x<rsub|0>|]>> so
+        that
+
+        <\equation>
+          <label|eq 16.146.195><frac|f<around*|(|y|)>\<cdot\><around*|(|x<rsub|0>-z|)>+f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|z-y|)>|x<rsub|0>-y>\<leqslant\>f<around*|(|z|)>
+        </equation>
+
+        As <math|0\<less\>x<rsub|0>-z> and by the assumption
+        <math|f<around*|(|x<rsub|0>|)>\<less\>f<around*|(|y|)>> it follows
+        that
+
+        <\equation>
+          <label|eq 16.147.195>f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|x<rsub|0>-z|)>\<less\>f<around*|(|y|)>\<cdot\><around*|(|x<rsub|0>-z|)>
+        </equation>
+
+        Hence we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|f<around*|(|x<rsub|0>|)>>|<cell|=>|<cell|<frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|x<rsub|0>-y|)>|x<rsub|0>-y>>>|<row|<cell|>|<cell|=>|<cell|<frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|x<rsub|0>-z+z-y|)>|x<rsub|0>-y>>>|<row|<cell|>|<cell|=>|<cell|<frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|x<rsub|0>-z|)>+f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|z-y|)>|x<rsub|0>-y>>>|<row|<cell|>|<cell|\<less\><rsub|<text|[eq:
+          <reference|eq 16.147.195>]>>>|<cell|<frac|f<around*|(|y|)>\<cdot\><around*|(|x<rsub|0>-z|)>+f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|z-y|)>|x<rsub|0>-y>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[eq:
+          <reference|eq 16.146.195>]>>>|<cell|f<around*|(|z|)>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[eq:
+          <reference|eq 16.145.195>]>>>|<cell|f<around*|(|x<rsub|0>|)>>>>>
+        </eqnarray*>
+
+        leading to the contradiction <math|f<around*|(|x<rsub|0>|)>\<less\>f<around*|(|x<rsub|0>|)>>.
+
+        <item*|<math|x<rsub|0>\<less\>y>>Then
+        <math|x<rsub|0>\<less\>min<around*|(|y,x<rsub|0>+\<delta\>|)>> so
+        there exist a <math|z\<in\>\<bbb-R\>> with
+        <math|x<rsub|0>\<less\>z\<less\>y,x<rsub|0>+\<delta\>>. Applying [eq:
+        <reference|eq 16.144.195>] gives\ 
+
+        <\equation>
+          <label|eq 16.148.195>f<around*|(|z|)>\<leqslant\>f<around*|(|x<rsub|0>|)>
+        </equation>
+
+        Further using [theorem: <reference|diff second derivate convex
+        concave>] <math|f> is concave on <math|<around*|[|x<rsub|0>,y|]>> so
+        that
+
+        <\equation>
+          <label|eq 16.149.195><frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|y-z|)>+f<around*|(|y|)>\<cdot\><around*|(|z-x<rsub|0>|)>|y-x<rsub|0>>\<leqslant\>f<around*|(|z|)>
+        </equation>
+
+        As <math|0\<less\>z-x<rsub|0>> and by assumption
+        <math|f<around*|(|x<rsub|0>|)>\<less\>f<around*|(|y|)>> it follows
+        that\ 
+
+        <\equation>
+          <label|eq 16.150.195>f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|z-x<rsub|0>|)>\<less\>f<around*|(|y|)>\<cdot\><around*|(|z-x<rsub|0>|)>
+        </equation>
+
+        Hence we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|f<around*|(|x<rsub|0>|)>>|<cell|=>|<cell|<frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|y-x<rsub|0>|)>|<around*|(|y-x<rsub|0>|)>>>>|<row|<cell|>|<cell|=>|<cell|<frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|y-z+z-x<rsub|0>|)>|<around*|(|y-x<rsub|0>|)>>>>|<row|<cell|>|<cell|=>|<cell|<frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|y-z|)>+f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|z-x<rsub|0>|)>|<around*|(|y-x<rsub|0>|)>>>>|<row|<cell|>|<cell|\<less\><rsub|<text|[eq:
+          <reference|eq 16.150.195>]>>>|<cell|<frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|y-z|)>+f<around*|(|y|)>\<cdot\><around*|(|z-x<rsub|0>|)>|<around*|(|y-x<rsub|0>|)>>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[eq:
+          <reference|eq 16.149.195>]>>>|<cell|f<around*|(|z|)>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[eq:
+          <reference|eq 16.148.195>]>>>|<cell|f<around*|(|x<rsub|0>|)>>>>>
+        </eqnarray*>
+
+        leading to the contradiction <math|f<around*|(|x<rsub|0>|)>\<less\>f<around*|(|x<rsub|0><rsub|>|)>>.
+      </description>
+
+      As in all cases we have a contradiction the assumption must be false,
+      so it follows that\ 
+
+      <\equation*>
+        \<forall\>x\<in\><around*|[|a,b|]><text| we have
+        >f<around*|(|x|)>\<leqslant\>f<around*|(|x<rsub|0>|)>
+      </equation*>
+    </enumerate>
+  </proof>
+
+  \;
+
   \;
 
   \;
@@ -13980,146 +14582,147 @@
     <associate|auto-8|<tuple|differentiability|?>>
     <associate|auto-9|<tuple|<with|mode|<quote|math>|\<varepsilon\>>-mapping|?>>
     <associate|convergence of a function to a point|<tuple|16.8|?>>
-    <associate|corollary 16.50.192|<tuple|16.107|?>>
+    <associate|corollary 16.50.192|<tuple|16.112|?>>
     <associate|diff Bx(x,d)|<tuple|16.7|?>>
-    <associate|diff C-infinity condition|<tuple|16.136|?>>
-    <associate|diff C^(n+m)|<tuple|16.153|?>>
-    <associate|diff C^1 and derivates|<tuple|16.140|?>>
-    <associate|diff C^1 and derivates (1)|<tuple|16.141|?>>
-    <associate|diff C^n and C^m|<tuple|16.152|?>>
-    <associate|diff C^n on a set|<tuple|16.137|?>>
-    <associate|diff C^n on a set condition|<tuple|16.138|?>>
-    <associate|diff D^f=D^(n-1)D^1f|<tuple|16.155|?>>
-    <associate|diff Frechet approximation|<tuple|16.23|?>>
+    <associate|diff C-infinity condition|<tuple|16.141|?>>
+    <associate|diff C^(n+m)|<tuple|16.159|?>>
+    <associate|diff C^1 and derivates|<tuple|16.145|?>>
+    <associate|diff C^1 and derivates (1)|<tuple|16.146|?>>
+    <associate|diff C^n and C^m|<tuple|16.158|?>>
+    <associate|diff C^n on a set|<tuple|16.142|?>>
+    <associate|diff C^n on a set condition|<tuple|16.143|?>>
+    <associate|diff D^f=D^(n-1)D^1f|<tuple|16.161|?>>
+    <associate|diff Frechet approximation|<tuple|16.28|?>>
     <associate|diff Frechet differentation implies partial differentiability
-    |<tuple|16.80|?>>
-    <associate|diff Jacobian matrix|<tuple|16.97|?>>
-    <associate|diff L(x1:..xn)|<tuple|16.108|?>>
-    <associate|diff L(x1:..xn)=L(1:..:1). product|<tuple|16.112|?>>
-    <associate|diff L_n(X;Y)|<tuple|16.104|?>>
-    <associate|diff Lagrange theorem|<tuple|16.188|?>>
-    <associate|diff Lagrange theorem (1)|<tuple|16.190|?>>
-    <associate|diff Rolle's theorem|<tuple|16.186|?>>
-    <associate|diff SA(a)|<tuple|16.34|?>>
-    <associate|diff SA(a) definition|<tuple|16.33|?>>
+    |<tuple|16.85|?>>
+    <associate|diff Jacobian matrix|<tuple|16.102|?>>
+    <associate|diff L(x1:..xn)|<tuple|16.113|?>>
+    <associate|diff L(x1:..xn)=L(1:..:1). product|<tuple|16.117|?>>
+    <associate|diff L_n(X;Y)|<tuple|16.109|?>>
+    <associate|diff Lagrange theorem|<tuple|16.194|?>>
+    <associate|diff Lagrange theorem (1)|<tuple|16.196|?>>
+    <associate|diff Rolle's theorem|<tuple|16.192|?>>
+    <associate|diff SA(a)|<tuple|16.39|?>>
+    <associate|diff SA(a) definition|<tuple|16.38|?>>
     <associate|diff Ux|<tuple|16.4|?>>
     <associate|diff Ux=-x+U=U-x|<tuple|16.6|?>>
     <associate|diff bilinear mappings are infinite times
-    differentiable|<tuple|16.168|?>>
-    <associate|diff calculus derivate|<tuple|16.19|?>>
-    <associate|diff calculus derivate (1)|<tuple|16.16|?>>
-    <associate|diff chain rule|<tuple|16.67|?>>
-    <associate|diff chain rule (1)|<tuple|16.68|?>>
-    <associate|diff chain rule and partial differential|<tuple|16.85|?>>
-    <associate|diff chain rule calculus|<tuple|16.70|?>>
-    <associate|diff chain rule higher order|<tuple|16.178|?>>
-    <associate|diff chain rule higher order class|<tuple|16.180|?>>
-    <associate|diff class C^@@|<tuple|16.134|?>>
-    <associate|diff class C^n|<tuple|16.132|?>>
-    <associate|diff composition with a linear mapping|<tuple|16.71|?>>
-    <associate|diff cone|<tuple|16.26|?>>
+    differentiable|<tuple|16.174|?>>
+    <associate|diff calculus derivate|<tuple|16.21|?>>
+    <associate|diff calculus derivate (1)|<tuple|16.17|?>>
+    <associate|diff chain rule|<tuple|16.72|?>>
+    <associate|diff chain rule (1)|<tuple|16.73|?>>
+    <associate|diff chain rule and partial differential|<tuple|16.90|?>>
+    <associate|diff chain rule calculus|<tuple|16.75|?>>
+    <associate|diff chain rule higher order|<tuple|16.184|?>>
+    <associate|diff chain rule higher order class|<tuple|16.186|?>>
+    <associate|diff class C^@@|<tuple|16.139|?>>
+    <associate|diff class C^n|<tuple|16.137|?>>
+    <associate|diff composition with a linear mapping|<tuple|16.76|?>>
+    <associate|diff cone|<tuple|16.31|?>>
     <associate|diff constant function and partial
-    differentiation|<tuple|16.81|?>>
-    <associate|diff constant function is differentiable|<tuple|16.42|?>>
+    differentiation|<tuple|16.86|?>>
+    <associate|diff constant function is differentiable|<tuple|16.47|?>>
     <associate|diff constant function is infinitely times
-    differentiable|<tuple|16.161|?>>
-    <associate|diff convex concave|<tuple|16.192|?>>
-    <associate|diff convex/concave alternative|<tuple|16.193|?>>
-    <associate|diff derivate and frechet differential|<tuple|16.59|?>>
-    <associate|diff derivate and local extremum|<tuple|16.184|?>>
-    <associate|diff derivate and local minimum and maximum|<tuple|16.193|?>>
-    <associate|diff derivate of a product of functions|<tuple|16.100|?>>
-    <associate|diff derivate of inverse function|<tuple|16.101|?>>
-    <associate|diff derivate operator is linear|<tuple|16.65|?>>
-    <associate|diff derivative is local|<tuple|16.61|?>>
-    <associate|diff derivative is local (1)|<tuple|16.64|?>>
-    <associate|diff derivative of f/g|<tuple|16.103|?>>
-    <associate|diff differentiability|<tuple|16.35|?>>
+    differentiable|<tuple|16.167|?>>
+    <associate|diff convex concave|<tuple|16.200|?>>
+    <associate|diff convex/concave alternative|<tuple|16.201|?>>
+    <associate|diff derivate and frechet differential|<tuple|16.64|?>>
+    <associate|diff derivate and local extremum|<tuple|16.190|?>>
+    <associate|diff derivate and local minimum and maximum|<tuple|16.204|?>>
+    <associate|diff derivate of a product of functions|<tuple|16.105|?>>
+    <associate|diff derivate of inverse function|<tuple|16.106|?>>
+    <associate|diff derivate operator is linear|<tuple|16.70|?>>
+    <associate|diff derivative is local|<tuple|16.66|?>>
+    <associate|diff derivative is local (1)|<tuple|16.69|?>>
+    <associate|diff derivative of f/g|<tuple|16.108|?>>
+    <associate|diff differentiability|<tuple|16.40|?>>
     <associate|diff differentiability alternative
-    definitions|<tuple|16.52|?>>
+    definitions|<tuple|16.57|?>>
     <associate|diff differentiability alternative definitions
-    (1)|<tuple|16.53|?>>
-    <associate|diff differentiability and K^n|<tuple|16.90|?>>
-    <associate|diff differentiability is a local property|<tuple|16.47|?>>
+    (1)|<tuple|16.58|?>>
+    <associate|diff differentiability and K^n|<tuple|16.95|?>>
+    <associate|diff differentiability is a local property|<tuple|16.52|?>>
     <associate|diff differentiability is a local property
-    (1)|<tuple|16.49|?>>
-    <associate|diff differentiability on a set|<tuple|16.39|?>>
-    <associate|diff differentiable function is continuous|<tuple|16.54|?>>
-    <associate|diff differential of a vector valued function|<tuple|16.95|?>>
-    <associate|diff differential of product of functions|<tuple|16.99|?>>
-    <associate|diff e-mapping|<tuple|16.51|?>>
-    <associate|diff equivalent norms|<tuple|16.46|?>>
+    (1)|<tuple|16.54|?>>
+    <associate|diff differentiability on a set|<tuple|16.44|?>>
+    <associate|diff differentiable function is continuous|<tuple|16.59|?>>
+    <associate|diff differential of a vector valued
+    function|<tuple|16.100|?>>
+    <associate|diff differential of product of functions|<tuple|16.104|?>>
+    <associate|diff e-mapping|<tuple|16.56|?>>
+    <associate|diff equivalent norms|<tuple|16.51|?>>
     <associate|diff f is of class C^n if D^1f u=is of class
-    C^n-1|<tuple|16.157|?>>
+    C^n-1|<tuple|16.163|?>>
     <associate|diff f is of class C^n if D^1f u=is of class C^n-1
-    (1)|<tuple|16.158|?>>
-    <associate|diff f(t)=a.x+y is infinite differentiable|<tuple|16.164|?>>
-    <associate|diff higher order derivate|<tuple|16.142|?>>
-    <associate|diff higher order derivate and differential|<tuple|16.146|?>>
-    <associate|diff higher order derivate is linear|<tuple|16.160|?>>
-    <associate|diff higher order derivate on a open set|<tuple|16.147|?>>
-    <associate|diff higher order derivate on a open set (1)|<tuple|16.149|?>>
-    <associate|diff higher order differential is linear|<tuple|16.159|?>>
-    <associate|diff higher order differential of a product|<tuple|16.179|?>>
+    (1)|<tuple|16.164|?>>
+    <associate|diff f(t)=a.x+y is infinite differentiable|<tuple|16.170|?>>
+    <associate|diff higher order derivate|<tuple|16.147|?>>
+    <associate|diff higher order derivate and differential|<tuple|16.151|?>>
+    <associate|diff higher order derivate is linear|<tuple|16.166|?>>
+    <associate|diff higher order derivate on a open set|<tuple|16.153|?>>
+    <associate|diff higher order derivate on a open set (1)|<tuple|16.155|?>>
+    <associate|diff higher order differential is linear|<tuple|16.165|?>>
+    <associate|diff higher order differential of a product|<tuple|16.185|?>>
     <associate|diff higher order differential of a product
-    (1)|<tuple|16.181|?>>
-    <associate|diff higher order differentiation|<tuple|16.123|?>>
-    <associate|diff higher order differentiation (1)|<tuple|16.130|?>>
+    (1)|<tuple|16.187|?>>
+    <associate|diff higher order differentiation|<tuple|16.128|?>>
+    <associate|diff higher order differentiation (1)|<tuple|16.135|?>>
     <associate|diff higher order differentiation and vector
-    functions|<tuple|16.174|?>>
-    <associate|diff higher order differentiation classes|<tuple|16.176|?>>
-    <associate|diff higher order differentiation is local|<tuple|16.126|?>>
+    functions|<tuple|16.180|?>>
+    <associate|diff higher order differentiation classes|<tuple|16.182|?>>
+    <associate|diff higher order differentiation is local|<tuple|16.131|?>>
     <associate|diff higher order differentiation on a open
-    set|<tuple|16.127|?>>
+    set|<tuple|16.132|?>>
     <associate|diff higher order differentiation on a open set
-    (1)|<tuple|16.128|?>>
-    <associate|diff identity function is differentiable|<tuple|16.44|?>>
+    (1)|<tuple|16.133|?>>
+    <associate|diff identity function is differentiable|<tuple|16.49|?>>
     <associate|diff identity function is infinite times
-    differentiable|<tuple|16.163|?>>
-    <associate|diff increasing decreasing function|<tuple|16.191|?>>
-    <associate|diff inifint=ite differentiable|<tuple|16.129|?>>
+    differentiable|<tuple|16.169|?>>
+    <associate|diff increasing decreasing function|<tuple|16.198|?>>
+    <associate|diff inifint=ite differentiable|<tuple|16.134|?>>
     <associate|diff limit of a function|<tuple|16.11|?>>
     <associate|diff linear mapping is infinite times
-    differentiable|<tuple|16.162|?>>
-    <associate|diff linear mappings are differentiable|<tuple|16.43|?>>
-    <associate|diff linear to multilinear|<tuple|16.120|?>>
-    <associate|diff minimum maximum|<tuple|16.182|?>>
+    differentiable|<tuple|16.168|?>>
+    <associate|diff linear mappings are differentiable|<tuple|16.48|?>>
+    <associate|diff linear to multilinear|<tuple|16.125|?>>
+    <associate|diff minimum maximum|<tuple|16.188|?>>
     <associate|diff multiparameter function to one parameter
-    function|<tuple|16.74|?>>
-    <associate|diff n-times and m-times differentiability|<tuple|16.151|?>>
+    function|<tuple|16.79|?>>
+    <associate|diff n-times and m-times differentiability|<tuple|16.157|?>>
     <associate|diff partial derivate and partial
-    differential|<tuple|16.88|?>>
-    <associate|diff partial derivate definition|<tuple|16.86|?>>
-    <associate|diff partial derivation is local|<tuple|16.89|?>>
+    differential|<tuple|16.93|?>>
+    <associate|diff partial derivate definition|<tuple|16.91|?>>
+    <associate|diff partial derivation is local|<tuple|16.94|?>>
     <associate|diff partial differentiability does not mean
-    differentiaility|<tuple|16.83|?>>
-    <associate|diff partial differential definition|<tuple|16.75|?>>
-    <associate|diff partial differential definition (1)|<tuple|16.77|?>>
-    <associate|diff partial differential properties|<tuple|16.84|?>>
-    <associate|diff partial differentiation is local|<tuple|16.78|?>>
-    <associate|diff partial differentiation is local (1)|<tuple|16.79|?>>
-    <associate|diff power|<tuple|16.102|?>>
+    differentiaility|<tuple|16.88|?>>
+    <associate|diff partial differential definition|<tuple|16.80|?>>
+    <associate|diff partial differential definition (1)|<tuple|16.82|?>>
+    <associate|diff partial differential properties|<tuple|16.89|?>>
+    <associate|diff partial differentiation is local|<tuple|16.83|?>>
+    <associate|diff partial differentiation is local (1)|<tuple|16.84|?>>
+    <associate|diff power|<tuple|16.107|?>>
     <associate|diff projection functon is infinite times
-    differentiable|<tuple|16.167|?>>
-    <associate|diff restriction of a function of class C^n|<tuple|16.135|?>>
-    <associate|diff scalar product function has a derivate|<tuple|16.20|?>>
-    <associate|diff second derivate convex concave|<tuple|16.194|?>>
-    <associate|diff tangent cone|<tuple|16.25|?>>
-    <associate|diff tangent cone and inclusion|<tuple|16.30|?>>
-    <associate|diff tangent cone and limit point|<tuple|16.57|?>>
-    <associate|diff tangent cone and limit point reverse|<tuple|16.58|?>>
-    <associate|diff tangent cone is a cone|<tuple|16.27|?>>
-    <associate|diff tangent cone of inner point|<tuple|16.32|?>>
-    <associate|diff tangent cone of open sets|<tuple|16.31|?>>
-    <associate|diff translation is infinite differentiable|<tuple|16.166|?>>
-    <associate|diff uniqueness of the Frechet aproximation|<tuple|16.28|?>>
-    <associate|diff unprojection|<tuple|16.72|?>>
+    differentiable|<tuple|16.173|?>>
+    <associate|diff restriction of a function of class C^n|<tuple|16.140|?>>
+    <associate|diff scalar product function has a derivate|<tuple|16.25|?>>
+    <associate|diff second derivate convex concave|<tuple|16.202|?>>
+    <associate|diff tangent cone|<tuple|16.30|?>>
+    <associate|diff tangent cone and inclusion|<tuple|16.35|?>>
+    <associate|diff tangent cone and limit point|<tuple|16.62|?>>
+    <associate|diff tangent cone and limit point reverse|<tuple|16.63|?>>
+    <associate|diff tangent cone is a cone|<tuple|16.32|?>>
+    <associate|diff tangent cone of inner point|<tuple|16.37|?>>
+    <associate|diff tangent cone of open sets|<tuple|16.36|?>>
+    <associate|diff translation is infinite differentiable|<tuple|16.172|?>>
+    <associate|diff uniqueness of the Frechet aproximation|<tuple|16.33|?>>
+    <associate|diff unprojection|<tuple|16.77|?>>
     <associate|diff unprojection is infinite times
-    differentiable|<tuple|16.165|?>>
-    <associate|diff vector functions|<tuple|16.91|?>>
-    <associate|diff vector functions (1)|<tuple|16.94|?>>
-    <associate|diff vector functions (2)|<tuple|16.96|?>>
-    <associate|diff vector functions and linearity|<tuple|16.93|?>>
+    differentiable|<tuple|16.171|?>>
+    <associate|diff vector functions|<tuple|16.96|?>>
+    <associate|diff vector functions (1)|<tuple|16.99|?>>
+    <associate|diff vector functions (2)|<tuple|16.101|?>>
+    <associate|diff vector functions and linearity|<tuple|16.98|?>>
     <associate|eq 16.1.1|<tuple|16.1|?>>
     <associate|eq 16.1.177|<tuple|16.23|?>>
     <associate|eq 16.10.178|<tuple|16.74|?>>
@@ -14172,34 +14775,48 @@
     <associate|eq 16.136.181|<tuple|16.235|?>>
     <associate|eq 16.136.195|<tuple|16.271|?>>
     <associate|eq 16.136.7|<tuple|16.136|?>>
+    <associate|eq 16.137.195|<tuple|16.273|?>>
     <associate|eq 16.137.7|<tuple|16.137|?>>
+    <associate|eq 16.138.195|<tuple|16.274|?>>
     <associate|eq 16.138.7|<tuple|16.138|?>>
+    <associate|eq 16.139.195|<tuple|16.275|?>>
     <associate|eq 16.139.7|<tuple|16.139|?>>
     <associate|eq 16.14.178|<tuple|16.78|?>>
     <associate|eq 16.14.7|<tuple|16.142|?>>
+    <associate|eq 16.140.195|<tuple|16.276|?>>
     <associate|eq 16.140.7|<tuple|16.140|?>>
+    <associate|eq 16.141.195|<tuple|16.277|?>>
     <associate|eq 16.141.8|<tuple|16.141|?>>
     <associate|eq 16.142.181|<tuple|16.241|?>>
+    <associate|eq 16.142.195|<tuple|16.278|?>>
     <associate|eq 16.142.7|<tuple|16.143|?>>
     <associate|eq 16.143.181|<tuple|16.242|?>>
+    <associate|eq 16.143.195|<tuple|16.279|?>>
     <associate|eq 16.143.200|<tuple|16.269|?>>
     <associate|eq 16.143.7|<tuple|16.144|?>>
     <associate|eq 16.144.181|<tuple|16.244|?>>
     <associate|eq 16.144.181.1|<tuple|16.243|?>>
+    <associate|eq 16.144.195|<tuple|16.280|?>>
     <associate|eq 16.145.181|<tuple|16.245|?>>
+    <associate|eq 16.145.195|<tuple|16.281|?>>
     <associate|eq 16.145.6|<tuple|16.145|?>>
+    <associate|eq 16.146.195|<tuple|16.282|?>>
     <associate|eq 16.146.6|<tuple|16.146|?>>
     <associate|eq 16.147.181|<tuple|16.246|?>>
+    <associate|eq 16.147.195|<tuple|16.283|?>>
     <associate|eq 16.147.6|<tuple|16.147|?>>
     <associate|eq 16.148.181|<tuple|16.247|?>>
+    <associate|eq 16.148.195|<tuple|16.284|?>>
     <associate|eq 16.148.7|<tuple|16.148|?>>
     <associate|eq 16.149.181|<tuple|16.248|?>>
+    <associate|eq 16.149.195|<tuple|16.285|?>>
     <associate|eq 16.149.7|<tuple|16.149|?>>
     <associate|eq 16.15.1|<tuple|16.17|?>>
     <associate|eq 16.15.178|<tuple|16.79|?>>
     <associate|eq 16.15.5|<tuple|16.6|?>>
     <associate|eq 16.150.152|<tuple|16.266|?>>
     <associate|eq 16.150.181|<tuple|16.249|?>>
+    <associate|eq 16.150.195|<tuple|16.286|?>>
     <associate|eq 16.150.7|<tuple|16.151|?>>
     <associate|eq 16.150.8|<tuple|16.150|?>>
     <associate|eq 16.151.152|<tuple|16.267|?>>
@@ -14207,7 +14824,7 @@
     <associate|eq 16.152.181|<tuple|16.251|?>>
     <associate|eq 16.152.9|<tuple|16.152|?>>
     <associate|eq 16.153.9|<tuple|16.153|?>>
-    <associate|eq 16.154.141|<tuple|16.266|?>>
+    <associate|eq 16.154.141|<tuple|16.272|?>>
     <associate|eq 16.154.181|<tuple|16.253|?>>
     <associate|eq 16.156.9|<tuple|16.156|?>>
     <associate|eq 16.157.9|<tuple|16.157|?>>
@@ -14386,34 +15003,36 @@
     <associate|eq 16.98.6|<tuple|16.98|?>>
     <associate|eq 16.99.4|<tuple|16.114|?>>
     <associate|eq 16.99.6|<tuple|16.99|?>>
-    <associate|example 16.35.1|<tuple|16.41|?>>
-    <associate|lemma 16.101.194|<tuple|16.177|?>>
-    <associate|lemma 16.12.1|<tuple|16.15|?>>
-    <associate|lemma 16.139.181|<tuple|16.175|?>>
-    <associate|lemma 16.23.181|<tuple|16.98|?>>
-    <associate|lemma 16.24.178|<tuple|16.73|?>>
-    <associate|lemma 16.37.1|<tuple|16.45|?>>
-    <associate|lemma 16.50.1|<tuple|16.56|?>>
-    <associate|lemma 16.51.186|<tuple|16.111|?>>
-    <associate|lemma 16.53.186|<tuple|16.113|?>>
-    <associate|lemma 16.54.187|<tuple|16.114|?>>
-    <associate|lemma 16.55.187|<tuple|16.115|?>>
-    <associate|lemma 16.56.187|<tuple|16.116|?>>
-    <associate|lemma 16.57.187|<tuple|16.117|?>>
-    <associate|lemma 16.58.188|<tuple|16.118|?>>
-    <associate|lemma 16.59.188|<tuple|16.119|?>>
-    <associate|lemma 16.61.207|<tuple|16.106|?>>
-    <associate|lemma 16.62.6|<tuple|16.66|?>>
+    <associate|example 16.35.1|<tuple|16.46|?>>
+    <associate|lemma 16.101.194|<tuple|16.183|?>>
+    <associate|lemma 16.12.1|<tuple|16.16|?>>
+    <associate|lemma 16.139.181|<tuple|16.181|?>>
+    <associate|lemma 16.23.181|<tuple|16.103|?>>
+    <associate|lemma 16.24.178|<tuple|16.78|?>>
+    <associate|lemma 16.37.1|<tuple|16.50|?>>
+    <associate|lemma 16.50.1|<tuple|16.61|?>>
+    <associate|lemma 16.51.186|<tuple|16.116|?>>
+    <associate|lemma 16.53.186|<tuple|16.118|?>>
+    <associate|lemma 16.54.187|<tuple|16.119|?>>
+    <associate|lemma 16.55.187|<tuple|16.120|?>>
+    <associate|lemma 16.56.187|<tuple|16.121|?>>
+    <associate|lemma 16.57.187|<tuple|16.122|?>>
+    <associate|lemma 16.58.188|<tuple|16.123|?>>
+    <associate|lemma 16.59.188|<tuple|16.124|?>>
+    <associate|lemma 16.61.207|<tuple|16.111|?>>
+    <associate|lemma 16.62.6|<tuple|16.71|?>>
     <associate|lemma 16.7.1|<tuple|16.10|?>>
-    <associate|lemma 16.72.189|<tuple|16.145|?>>
-    <associate|lemma 16.83.197|<tuple|16.139|?>>
-    <associate|lemma 16.93.193|<tuple|16.170|?>>
-    <associate|lemma 16.96.193|<tuple|16.171|?>>
-    <associate|lemma 16.97.193|<tuple|16.172|?>>
-    <associate|lemma 16.98.194|<tuple|16.173|?>>
+    <associate|lemma 16.72.189|<tuple|16.150|?>>
+    <associate|lemma 16.83.197|<tuple|16.144|?>>
+    <associate|lemma 16.93.193|<tuple|16.176|?>>
+    <associate|lemma 16.96.193|<tuple|16.177|?>>
+    <associate|lemma 16.97.193|<tuple|16.178|?>>
+    <associate|lemma 16.98.194|<tuple|16.179|?>>
     <associate|normed space are assumed to be non trivial|<tuple|16.1|?>>
-    <associate|note 16.103.180|<tuple|16.133|?>>
-    <associate|note 16.65.191|<tuple|16.124|?>>
+    <associate|note 16.103.180|<tuple|16.138|?>>
+    <associate|note 16.65.191|<tuple|16.129|?>>
+    <associate|topology every element of a generalized interval is a limit
+    point|<tuple|16.15|?>>
     <associate|topology every element of a open or closed ball is a limit
     point|<tuple|16.14|?>>
     <associate|topology every element of a open set in a normed space is a
@@ -14429,6 +15048,8 @@
       <tuple|normal|<surround|<hidden-binding|<tuple>|16.1>||>|<pageref|auto-45>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|16.2>||>|<pageref|auto-46>>
+
+      <tuple|normal|<surround|<hidden-binding|<tuple>|16.3>||>|<pageref|auto-49>>
     </associate>
     <\associate|idx>
       <tuple|<tuple|<with|mode|<quote|math>|U<rsub|x>>>|<pageref|auto-4>>
@@ -14482,6 +15103,10 @@
       <tuple|<tuple|local weak maximum>|<pageref|auto-43>>
 
       <tuple|<tuple|local extremum>|<pageref|auto-44>>
+
+      <tuple|<tuple|concave function>|<pageref|auto-47>>
+
+      <tuple|<tuple|convex function>|<pageref|auto-48>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|16<space|2spc>Differentiation
