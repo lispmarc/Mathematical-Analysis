@@ -9528,7 +9528,374 @@
 
   \;
 
-  \;
+  <\theorem>
+    <label|diff derivate and local minimum and maximum>Let
+    <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>> be the normed
+    space of real numbers, <math|A\<subseteq\>\<bbb-R\>>,
+    <math|f:A\<rightarrow\>\<bbb-R\>> a function then we have
+
+    <\enumerate>
+      <item>If there exist a open set <math|V> with
+      <math|x<rsub|0>\<in\>V\<subseteq\>A> such that
+      <math|\<forall\>x\<in\>V> <math|f<rsup|<around*|(|2|)>><rsub|x>> exist
+      and <math|f<rsup|<around*|(|2|)>><rsub|x>\<geqslant\>0> then
+      <math|x<rsub|0>> is a local weak minimum.
+
+      <item>If there exist a open set <math|V> with
+      <math|x<rsub|0>\<in\>V\<subseteq\>A> such that
+      <math|\<forall\>x\<in\>V> <math|f<rsup|<around*|(|2|)>><rsub|x>> exist
+      and <math|f<rsup|<around*|(|2|)>><rsub|x>\<leqslant\>0> then
+      <math|x<rsub|0>> is a local weak maximum.
+    </enumerate>
+
+    <\note>
+      Let <math|x\<in\>V> then by [theorem: <reference|topology every element
+      of a open set in a normed space is a limit point>] <math|x> is a limit
+      point of <math|V>, hence <math|x\<in\>V<rprime|'>>. As
+      <math|V\<subseteq\>A> we have by [theorem: <reference|topology limit
+      points and subsets>] that <math|V<rprime|'>\<subseteq\>A<rprime|'>> so
+      that <math|x> is a limit point of <math|A> which is needed for the
+      derivatieve at <math|x> to even exist.
+    </note>
+  </theorem>
+
+  <\proof>
+    As <math|f> has a <math|2>-the derivative on <math|V> it follows from
+    [theorem: <reference|diff higher order derivate on a open set (1)>] that
+    <math|\<forall\>x\<in\>V> <math|f> has a <math|1>-the derivative at
+    <math|x> and the function
+
+    <\equation*>
+      f<rprime|'>:V\<rightarrow\>X<text| defined by
+      <math|f<rprime|'><around*|(|x|)>=f<rprime|'><rsub|x>>>
+    </equation*>
+
+    has a derivative at every <math|x\<in\>V> and
+    <math|f<rsup|<around*|(|2|)>><rsub|x>=<around*|(|f<rprime|'>|)><rprime|'><rsub|x>>.
+    As <math|x<rsub|0>> is a extremum it follows from [theorem:
+    <reference|diff derivate and local extremum>] that\ 
+
+    <\equation>
+      <label|eq 16.154.141>f<rprime|'><around*|(|x<rsub|0>|)>=0
+    </equation>
+
+    <\enumerate>
+      <item>As <math|V> is open there exists a <math|\<delta\>\<gtr\>0> such
+      that <math|x<rsub|0>\<in\><around*|]|x<rsub|0>-\<delta\>,x<rsub|0>+\<delta\>|[>\<subseteq\>V>
+      hence\ 
+
+      <\equation*>
+        \<forall\>x\<in\><around*|]|x<rsub|0>-\<delta\>,x<rsub|0>+\<delta\>|[>
+        <text|we have> f<rsup|<around*|(|2|)>><around*|(|x|)>\<geqslant\>0
+      </equation*>
+
+      Using [corollary: <reference|diff increasing decreasing function>] it
+      follows that <math|f<rprime|'>> is increasing on
+      <math|<around*|]|x<rsub|0>-\<delta\>,x<rsub|0>+\<delta\>|[>>, hence we
+      have\ 
+
+      <\equation*>
+        \<forall\>x\<in\><around*|]|x<rsub|0>-\<delta\>,x<rsub|0>|]>
+        f<rprime|'><around*|(|x|)>\<leqslant\>f<rprime|'><around*|(|x<rsub|0>|)>\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.154.141>]>>0<text| and
+        >\<forall\>x\<in\><around*|[|x<rsub|0>,x<rsub|0>+\<delta\>|[><text|
+        >0\<equallim\><rsub|<text|[eq: <reference|eq
+        16.154.141>]>>f<rprime|'><around*|(|x<rsub|0>|)>\<leqslant\>f<rprime|'><around*|(|x|)>
+      </equation*>
+
+      So using [corollary: <reference|diff increasing decreasing function>]
+      <math|f> is decreasing on <math|<around*|]|x<rsub|0>-\<delta\>,x<rsub|0>|]>\<Rightarrow\>\<forall\>x\<in\><around*|]|x<rsub|0>-\<delta\>,x<rsub|0>|]>>
+      we have <math|<rigid|f<around*|(|x|)>\<geqslant\>f<around*|(|x<rsub|0>|)>>>
+      and <math|f> is increasing on <math|<around*|[|x<rsub|0>,x<rsub|0>+\<delta\>|[>\<Rightarrow\>\<forall\>x\<in\><around*|[|x<rsub|0>,x<rsub|o>+\<delta\>|[>>
+      we have <math|f<around*|(|x<rsub|0>|)>\<leqslant\>f<around*|(|x|)>>.
+      Hence\ 
+
+      <\equation*>
+        \<forall\>x\<in\><around*|]|x<rsub|0>-\<delta\>,x<rsub|0>+\<delta\>|[>
+        <text|we have> f<around*|(|x<rsub|0>|)>\<leqslant\>f<around*|(|x|)><text|
+        or >x<rsub|0><text| is a local weak minimum>.
+      </equation*>
+
+      <item>As <math|V> is open there exists a <math|\<delta\>\<gtr\>0> such
+      that <math|<around*|]|x<rsub|0>-\<delta\>,x<rsub|0>+\<delta\>|[>\<subseteq\>V>
+      hence\ 
+
+      <\equation*>
+        \<forall\>x\<in\><around*|]|x<rsub|0>-\<delta\>,x<rsub|0>+\<delta\>|[>
+        <text|we have> f<rsup|<around*|(|2|)>><around*|(|x|)>\<leqslant\>0
+      </equation*>
+
+      So using [corollary: <reference|diff increasing decreasing function>]
+      it follows that <math|f<rprime|'>> is decreasing on
+      <math|<around*|]|x<rsub|0>-\<delta\>,x<rsub|0>+\<delta\>|[>>, hence we
+      have\ 
+
+      <\equation*>
+        \<forall\>x\<in\><around*|]|x<rsub|0>-\<delta\>,x<rsub|0>|]>
+        0\<equallim\><rsub|<text|[eq: <reference|eq
+        16.154.141>]>>f<rprime|'><around*|(|x<rsub|0>|)>\<leqslant\>f<rprime|'><around*|(|x|)><text|
+        and >\<forall\>x\<in\><around*|[|x<rsub|0>,x<rsub|0>+\<delta\>|[><text|
+        >f<rprime|'><around*|(|x|)>\<leqslant\>f<rprime|'><around*|(|x<rsub|0>|)>\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.154.141>]>>0
+      </equation*>
+
+      So using [corollary: <reference|diff increasing decreasing function>]
+      <math|f> is increasing on <math|<around*|]|x<rsub|0>-\<delta\>,x<rsub|0>|]>\<Rightarrow\>\<forall\>x\<in\><around*|]|x<rsub|0>-\<delta\>,x<rsub|0>|]>>
+      we have <math|f<around*|(|x<rsub|0>|)>\<geqslant\>f<around*|(|x|)>> and
+      <math|f> is decreasing on <math|<around*|[|x<rsub|0>,x<rsub|0>+\<delta\>|[>\<Rightarrow\>\<forall\>x\<in\><around*|[|x<rsub|0>,x<rsub|o>+\<delta\>|[>>
+      we have <math|f<around*|(|x|)>\<leqslant\>f<around*|(|x<rsub|0>|)>>.
+      Hence\ 
+
+      <\equation*>
+        \<forall\>x\<in\><around*|]|x<rsub|0>-\<delta\>,x<rsub|0>+\<delta\>|[>
+        <text|we have> f<around*|(|x|)>\<leqslant\>f<around*|(|x<rsub|0>|)><text|
+        or >x<rsub|0><text| is a local weak maximum>.
+      </equation*>
+    </enumerate>
+  </proof>
+
+  Actually we can extend the above to a maximum and minimum on a interval
+  instead of a local weak minimum or local weak maximum.
+
+  TODO
+
+  <\theorem>
+    Let <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>> be the
+    normed space of real numbers, <math|A\<subseteq\>X>, <math|a,b\<in\>A>
+    with <math|a\<leqslant\>b>, <math|<around*|[|a,b|]>\<subseteq\>A>,
+    <math|f:A\<rightarrow\>\<bbb-R\>> a function such that <math|f> has a
+    <math|2>-the derivative on <math|A<rsup|\<circ\>>> and that there exist a
+    <math|x<rsub|0>\<in\><around*|[|a,b|]>> with
+    <math|f<rprime|'><around*|(|x<rsub|0>|)>=0> then we have:
+
+    <\enumerate>
+      <item>If <math|\<forall\>x\<in\>U> <math|0\<leqslant\>f<rsup|<around*|(|2|)>><around*|(|x|)>>
+      then <math|\<forall\>x\<in\><around*|[|a,b|]>>
+      <math|f<around*|(|x<rsub|0>|)>\<leqslant\>f<around*|(|x|)>> [in other
+      words <math|f<around*|(|x<rsub|0>|)>> is the minimum of
+      <math|f<around*|(|<around*|[|a,b|]>|)>>.
+
+      <item>If <math|\<forall\>x\<in\>U> <math|0\<leqslant\>f<rsup|<around*|(|2|)>><around*|(|x|)>>
+      then <math|\<forall\>x\<in\><around*|[|a,b|]>>
+      <math|f<around*|(|x<rsub|0>|)>\<leqslant\>f<around*|(|x|)>> [in other
+      words <math|f<around*|(|x<rsub|0>|)>> is the maximum of
+      <math|f<around*|(|<around*|[|a,b|]>|)>>.
+    </enumerate>
+
+    <\note>
+      Let <math|x\<in\>V> then by [theorem: <reference|topology every element
+      of a open set in a normed space is a limit point>] <math|x> is a limit
+      point of <math|V>, hence <math|x\<in\>V<rprime|'>>. As
+      <math|V\<subseteq\>A> we have by [theorem: <reference|topology limit
+      points and subsets>] that <math|V<rprime|'>\<subseteq\>A<rprime|'>> so
+      that <math|x> is a limit point of <math|A> which is needed for the
+      derivatieve at <math|x> to even exist.
+    </note>
+  </theorem>
+
+  <\proof>
+    If <math|a=b> then <math|<around*|[|a,b|]>=<around*|{|x<rsub|0>|}>> and
+    the theorem is trivial true. So we must only prove the theorem for the
+    case <math|a\<less\>b>.
+
+    <\enumerate>
+      <item>From the previous theorem [theorem:<reference|diff derivate and
+      local minimum and maximum>] it follows that <math|x<rsub|0>> is a local
+      weak minimum of <math|f> hence there exist a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that\ 
+
+      <\equation>
+        <label|eq 16.137.195>\<forall\>x\<in\><around*|]|x<rsub|0>-\<delta\>,x<rsub|0>+\<delta\>|[>
+        we have f<around*|(|x<rsub|0>|)>\<leqslant\>f<around*|(|x|)>
+      </equation>
+
+      Assume that there exist a <math|y\<in\><around*|[|a,b|]>> such that
+      <math|f<around*|(|y|)>\<less\>f<around*|(|x<rsub|0>|)>> then
+      <math|y\<neq\>x<rsub|0>>, so we have either:
+
+      <\description>
+        <item*|<math|y\<less\>x<rsub|0>>>Then
+        <math|max<around*|(|x<rsub|0>-\<delta\>,y|)>\<less\>x<rsub|0>> so
+        there exist a <math|z\<in\>\<bbb-R\>> such that
+        <math|x<rsub|0>-\<delta\>,y\<less\>z\<less\>x<rsub|0>> hence by [eq:
+        <reference|eq 16.137.195>] we have\ 
+
+        <\equation>
+          <label|eq 16.138.195>f<around*|(|x<rsub|0>|)>\<leqslant\>f<around*|(|z|)>
+        </equation>
+
+        Further using [theorem: <reference|diff second derivate convex
+        concave>] <math|f> is convex on <math|<around*|[|y,x<rsub|0>|]>> so
+        that
+
+        <\equation>
+          <label|eq 16.139.195>f<around*|(|z|)>\<leqslant\><frac|f<around*|(|y|)>\<cdot\><around*|(|x<rsub|0>-z|)>+f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|z-y|)>|x<rsub|0>-y>
+        </equation>
+
+        As <math|0\<less\>x<rsub|0>-z> and by assumption
+        <math|f<around*|(|y|)>\<less\>f<around*|(|x<rsub|0>|)>> it follows
+        that
+
+        <\equation>
+          <label|eq 16.140.195>f<around*|(|y|)>\<cdot\><around*|(|x<rsub|0>-z|)>\<less\>f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|x<rsub|0>-z|)>
+        </equation>
+
+        Hence we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|f<around*|(|x<rsub|0>|)>>|<cell|=>|<cell|<frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|x<rsub|0>-y|)>|x<rsub|0>-y>>>|<row|<cell|>|<cell|=>|<cell|<frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|x<rsub|0>-z+z-y|)>|x<rsub|0>-y>>>|<row|<cell|>|<cell|=>|<cell|<frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|x<rsub|0>-z|)>+f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|z-y|)>|x<rsub|0>-y>>>|<row|<cell|>|<cell|\<gtr\><rsub|<text|[eq:
+          <reference|eq 16.140.195>]>>>|<cell|<frac|f<around*|(|y|)>\<cdot\><around*|(|x<rsub|0>-z|)>+f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|z-y|)>|x<rsub|0>-y>>>|<row|<cell|>|<cell|\<geqslant\><rsub|<text|[eq:
+          <reference|eq 16.139.195>]>>>|<cell|f<around*|(|z|)>>>|<row|<cell|>|<cell|\<geqslant\><rsub|<text|[eq:
+          <reference|eq 16.138.195>]>>>|<cell|f<around*|(|x<rsub|0>|)>>>>>
+        </eqnarray*>
+
+        leading to the contradiction <math|f<around*|(|x<rsub|0>|)>\<gtr\>f<around*|(|x<rsub|0>|)>>.
+
+        <item*|<math|x<rsub|0>\<less\>y>>Then
+        <math|x<rsub|0>\<less\>min<around*|(|y,x<rsub|0>+\<delta\>|)>> so
+        there exist a <math|z\<in\>\<bbb-R\>> such that
+        <math|x<rsub|0>\<less\>z\<less\>y,x<rsub|0>+\<delta\>> hence by [eq:
+        <reference|eq 16.137.195>] we have\ 
+
+        <\equation>
+          <label|eq 16.141.195>f<around*|(|x<rsub|0>|)>\<leqslant\>f<around*|(|z|)>
+        </equation>
+
+        Further using [theorem: <reference|diff second derivate convex
+        concave>] <math|f> is convex on <math|<around*|[|x<rsub|0>,y|]>> so
+        that
+
+        <\equation>
+          <label|eq 16.142.195>f<around*|(|z|)>\<leqslant\><frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|y-z|)>+f<around*|(|y|)>\<cdot\><around*|(|z-x<rsub|0>|)>|y-x<rsub|0>>
+        </equation>
+
+        As <math|0\<less\>z-x<rsub|0>> and
+        <math|f<around*|(|y|)>\<less\>f<around*|(|x<rsub|0>|)>> [by
+        assumption] we have
+
+        <\equation>
+          <label|eq 16.143.195>f<around*|(|y|)>\<cdot\><around*|(|z-x<rsub|0>|)>\<less\>f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|z-x<rsub|0>|)>
+        </equation>
+
+        Hence we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|f<around*|(|x<rsub|0>|)>>|<cell|=>|<cell|<frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|y-x<rsub|0>|)>|<around*|(|y-x<rsub|0>|)>>>>|<row|<cell|>|<cell|=>|<cell|<frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|y-z+z-x<rsub|0>|)>|<around*|(|y-x<rsub|0>|)>>>>|<row|<cell|>|<cell|=>|<cell|<frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|y-z|)>+f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|z-x<rsub|0>|)>|<around*|(|y-x<rsub|0>|)>>>>|<row|<cell|>|<cell|\<gtr\><rsub|<text|[eq:
+          <reference|eq 16.143.195>]>>>|<cell|<frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|y-z|)>+f<around*|(|y|)>\<cdot\><around*|(|z-x<rsub|0>|)>|<around*|(|y-x<rsub|0>|)>>>>|<row|<cell|>|<cell|\<geqslant\><rsub|<text|[eq:
+          <reference|eq 16.142.195>]>>>|<cell|f*<around*|(|z|)>>>|<row|<cell|>|<cell|\<geqslant\><rsub|<text|[eq:
+          <reference|eq 16.141.195>]>>>|<cell|f<around*|(|x<rsub|0>|)>>>>>
+        </eqnarray*>
+
+        leading to the contradiction <math|f<around*|(|x<rsub|0>|)>\<gtr\>f<around*|(|x<rsub|0>|)>>.
+      </description>
+
+      As in all cases we have a contradiction the assumption must be false,
+      so it follows that\ 
+
+      <\equation*>
+        \<forall\>x\<in\><around*|[|a,b|]><text| we have
+        >f<around*|(|x<rsub|0>|)>\<leqslant\>f<around*|(|x|)>
+      </equation*>
+
+      <item>From the previous theorem [theorem:<reference|diff derivate and
+      local minimum and maximum>] it follows that <math|x<rsub|0>> is a local
+      weak maximum of <math|f> hence there exist a
+      <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that\ 
+
+      <\equation>
+        <label|eq 16.144.195>\<forall\>x\<in\><around*|]|x<rsub|0>-\<delta\>,x<rsub|0>+\<delta\>|[>
+        we have f<around*|(|x|)>\<leqslant\>f<around*|(|x<rsub|0>|)>
+      </equation>
+
+      Assume that there exist a <math|y\<in\><around*|[|a,b|]>> such that
+      <math|f<around*|(|x<rsub|0>|)>\<less\>f<around*|(|y|)>> then we can not
+      have <math|y=x<rsub|0>>, hence we must consider the following cases:
+
+      <\description>
+        <item*|<math|y\<less\>x<rsub|0>>>Then
+        <math|max<around*|(|x<rsub|0>-\<delta\>,y|)>\<less\>x<rsub|0>> so
+        there exist a <math|z\<in\>\<bbb-R\>> with
+        <math|x<rsub|0>-\<delta\>,y\<less\>z\<less\>x<rsub|0>>. Applying [eq:
+        <reference|eq 16.144.195>] gives\ 
+
+        <\equation>
+          <label|eq 16.145.195>f<around*|(|z|)>\<leqslant\>f<around*|(|x<rsub|0>|)>
+        </equation>
+
+        Further using [theorem: <reference|diff second derivate convex
+        concave>] <math|f> is concave on <math|<around*|[|y,x<rsub|0>|]>> so
+        that
+
+        <\equation>
+          <label|eq 16.146.195><frac|f<around*|(|y|)>\<cdot\><around*|(|x<rsub|0>-z|)>+f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|z-y|)>|x<rsub|0>-y>\<leqslant\>f<around*|(|z|)>
+        </equation>
+
+        As <math|0\<less\>x<rsub|0>-z> and by the assumption
+        <math|f<around*|(|x<rsub|0>|)>\<less\>f<around*|(|y|)>> it follows
+        that
+
+        <\equation>
+          <label|eq 16.147.195>f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|x<rsub|0>-z|)>\<less\>f<around*|(|y|)>\<cdot\><around*|(|x<rsub|0>-z|)>
+        </equation>
+
+        Hence we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|f<around*|(|x<rsub|0>|)>>|<cell|=>|<cell|<frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|x<rsub|0>-y|)>|x<rsub|0>-y>>>|<row|<cell|>|<cell|=>|<cell|<frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|x<rsub|0>-z+z-y|)>|x<rsub|0>-y>>>|<row|<cell|>|<cell|=>|<cell|<frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|x<rsub|0>-z|)>+f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|z-y|)>|x<rsub|0>-y>>>|<row|<cell|>|<cell|\<less\><rsub|<text|[eq:
+          <reference|eq 16.147.195>]>>>|<cell|<frac|f<around*|(|y|)>\<cdot\><around*|(|x<rsub|0>-z|)>+f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|z-y|)>|x<rsub|0>-y>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[eq:
+          <reference|eq 16.146.195>]>>>|<cell|f<around*|(|z|)>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[eq:
+          <reference|eq 16.145.195>]>>>|<cell|f<around*|(|x<rsub|0>|)>>>>>
+        </eqnarray*>
+
+        leading to the contradiction <math|f<around*|(|x<rsub|0>|)>\<less\>f<around*|(|x<rsub|0>|)>>.
+
+        <item*|<math|x<rsub|0>\<less\>y>>Then
+        <math|x<rsub|0>\<less\>min<around*|(|y,x<rsub|0>+\<delta\>|)>> so
+        there exist a <math|z\<in\>\<bbb-R\>> with
+        <math|x<rsub|0>\<less\>z\<less\>y,x<rsub|0>+\<delta\>>. Applying [eq:
+        <reference|eq 16.144.195>] gives\ 
+
+        <\equation>
+          <label|eq 16.148.195>f<around*|(|z|)>\<leqslant\>f<around*|(|x<rsub|0>|)>
+        </equation>
+
+        Further using [theorem: <reference|diff second derivate convex
+        concave>] <math|f> is concave on <math|<around*|[|x<rsub|0>,y|]>> so
+        that
+
+        <\equation>
+          <label|eq 16.149.195><frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|y-z|)>+f<around*|(|y|)>\<cdot\><around*|(|z-x<rsub|0>|)>|y-x<rsub|0>>\<leqslant\>f<around*|(|z|)>
+        </equation>
+
+        As <math|0\<less\>z-x<rsub|0>> and by assumption
+        <math|f<around*|(|x<rsub|0>|)>\<less\>f<around*|(|y|)>> it follows
+        that\ 
+
+        <\equation>
+          <label|eq 16.150.195>f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|z-x<rsub|0>|)>\<less\>f<around*|(|y|)>\<cdot\><around*|(|z-x<rsub|0>|)>
+        </equation>
+
+        Hence we have\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|f<around*|(|x<rsub|0>|)>>|<cell|=>|<cell|<frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|y-x<rsub|0>|)>|<around*|(|y-x<rsub|0>|)>>>>|<row|<cell|>|<cell|=>|<cell|<frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|y-z+z-x<rsub|0>|)>|<around*|(|y-x<rsub|0>|)>>>>|<row|<cell|>|<cell|=>|<cell|<frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|y-z|)>+f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|z-x<rsub|0>|)>|<around*|(|y-x<rsub|0>|)>>>>|<row|<cell|>|<cell|\<less\><rsub|<text|[eq:
+          <reference|eq 16.150.195>]>>>|<cell|<frac|f<around*|(|x<rsub|0>|)>\<cdot\><around*|(|y-z|)>+f<around*|(|y|)>\<cdot\><around*|(|z-x<rsub|0>|)>|<around*|(|y-x<rsub|0>|)>>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[eq:
+          <reference|eq 16.149.195>]>>>|<cell|f<around*|(|z|)>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[eq:
+          <reference|eq 16.148.195>]>>>|<cell|f<around*|(|x<rsub|0>|)>>>>>
+        </eqnarray*>
+
+        leading to the contradiction <math|f<around*|(|x<rsub|0>|)>\<less\>f<around*|(|x<rsub|0><rsub|>|)>>.
+      </description>
+
+      As in all cases we have a contradiction the assumption must be false,
+      so it follows that\ 
+
+      <\equation*>
+        \<forall\>x\<in\><around*|[|a,b|]><text| we have
+        >f<around*|(|x|)>\<leqslant\>f<around*|(|x<rsub|0>|)>
+      </equation*>
+    </enumerate>
+  </proof>
 
   \;
 
@@ -9564,6 +9931,7 @@
     countable|<tuple|4|4>>
     <associate|diff (i-\<gtr\>x)|<tuple|17|18>>
     <associate|diff delta function|<tuple|20|19>>
+    <associate|diff derivate and local minimum and maximum|<tuple|81|?>>
     <associate|diff mean value theorem (5)|<tuple|36|45>>
     <associate|diff mean value theorem (6)|<tuple|38|50>>
     <associate|diff mean value theorem (7)|<tuple|39|50>>
@@ -9647,10 +10015,25 @@
     <associate|eq 16.134.6|<tuple|315|99>>
     <associate|eq 16.135.6|<tuple|316|99>>
     <associate|eq 16.136.6|<tuple|317|99>>
+    <associate|eq 16.137.195|<tuple|332|?>>
     <associate|eq 16.137.6|<tuple|318|99>>
+    <associate|eq 16.138.195|<tuple|333|?>>
     <associate|eq 16.138.6|<tuple|319|99>>
+    <associate|eq 16.139.195|<tuple|334|?>>
     <associate|eq 16.139.6|<tuple|320|100>>
+    <associate|eq 16.140.195|<tuple|335|?>>
     <associate|eq 16.140.6|<tuple|321|100>>
+    <associate|eq 16.141.195|<tuple|336|?>>
+    <associate|eq 16.142.195|<tuple|337|?>>
+    <associate|eq 16.143.195|<tuple|338|?>>
+    <associate|eq 16.144.195|<tuple|339|?>>
+    <associate|eq 16.145.195|<tuple|340|?>>
+    <associate|eq 16.146.195|<tuple|341|?>>
+    <associate|eq 16.147.195|<tuple|342|?>>
+    <associate|eq 16.148.195|<tuple|343|?>>
+    <associate|eq 16.149.195|<tuple|344|?>>
+    <associate|eq 16.150.195|<tuple|345|?>>
+    <associate|eq 16.154.141|<tuple|331|?>>
     <associate|eq 16.183.200|<tuple|117|43>>
     <associate|eq 16.184.200|<tuple|118|43>>
     <associate|eq 16.185.200|<tuple|119|43>>
@@ -9712,15 +10095,15 @@
     <associate|eq 16.45.185|<tuple|59|23>>
     <associate|eq 16.46.185|<tuple|60|23>>
     <associate|eq 16.47.185|<tuple|61|23>>
-    <associate|eq 16.52.189|<tuple|322|?>>
-    <associate|eq 16.53.189|<tuple|323|?>>
-    <associate|eq 16.54.189|<tuple|324|?>>
-    <associate|eq 16.55.189|<tuple|325|?>>
-    <associate|eq 16.56.189|<tuple|326|?>>
-    <associate|eq 16.58.189|<tuple|327|?>>
-    <associate|eq 16.59.189|<tuple|328|?>>
-    <associate|eq 16.60.189|<tuple|329|?>>
-    <associate|eq 16.61.189|<tuple|330|?>>
+    <associate|eq 16.52.189|<tuple|322|101>>
+    <associate|eq 16.53.189|<tuple|323|101>>
+    <associate|eq 16.54.189|<tuple|324|101>>
+    <associate|eq 16.55.189|<tuple|325|103>>
+    <associate|eq 16.56.189|<tuple|326|103>>
+    <associate|eq 16.58.189|<tuple|327|103>>
+    <associate|eq 16.59.189|<tuple|328|104>>
+    <associate|eq 16.60.189|<tuple|329|104>>
+    <associate|eq 16.61.189|<tuple|330|104>>
     <associate|eq 18.283.124|<tuple|78|31>>
     <associate|eq 19.536.038|<tuple|186|63>>
     <associate|eq 20.1010.281|<tuple|251|83>>
