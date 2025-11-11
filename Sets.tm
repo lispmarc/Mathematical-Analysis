@@ -28,9 +28,9 @@
   and how to use them. Axiomatic set theory is based on two undefined
   concepts: <with|font-series|bold|class> and the
   <with|font-series|bold|membership> relation between classes (noted as
-  <math|\<in\>>). Intuitive you can think of a class as a collection and
+  <math|\<in\>>). Intuitively you can think of a class as a collection and
   <math|x\<in\>A> to mean that <math|x> is part of the collection where
-  <math|A> stands for. We introduce then axioms that state which are true
+  <math|A> stands for. We introduce then axioms that state what are the true
   statements about these undefined concepts. Further we introduce different
   definitions that helps us to simplify our notation. To start with, we
   define the concept of <math|\<nin\>> [not member of]
@@ -41,22 +41,23 @@
   </definition>
 
   Next we introduce <with|font-series|bold|sets> and
-  <with|font-series|bold|elements>, they are two notation for the same thing,
-  we use <with|font-series|bold|set> if we want to stress that it is a kind
-  of collection and <with|font-series|bold|element> that is also a member of
-  a class in contrast to a class that does not have to be a member. A
-  <with|font-series|bold|set> or <with|font-series|bold|element> is something
-  that is a member of a class.
+  <with|font-series|bold|elements>, which are two concepts for the same
+  thing. We use <with|font-series|bold|set> if we want to stress that it is a
+  kind of collection and <with|font-series|bold|element> that is also a
+  member of a class in contrast to a class that does not have to be a member.
+  A <with|font-series|bold|set> or <with|font-series|bold|element> is
+  something that is a member of a class.
 
   <\definition>
     <label|element is set>We say that a <with|font-series|bold|class>
     <math|x> is a <with|font-series|bold|element> if <math|x\<in\>A> where
     <math|A> is a class. Another name for a <with|font-series|bold|element>
-    is a <with|font-series|bold|set>
+    is a <with|font-series|bold|set>. A <with|font-series|bold|proper> class
+    is a class that is not a element [in other words not a set].
   </definition>
 
   From here on we use the following convention: elements are noted in
-  <with|font-series|bold|lower-case> and classes are noted in
+  <with|font-series|bold|lower-case> and sets and classes are noted in
   <with|font-series|bold|upper-case>. Next we define equality of classes.
 
   <\definition>
@@ -66,11 +67,11 @@
       \<forall\>X<text| we have >A\<in\>X\<Rightarrow\>B\<in\>X\<wedge\>B\<in\>X\<Rightarrow\>A\<in\>X
     </equation*>
 
-    Less formally, two classes <math|A> and <math|B> are equal if every class
-    that contains A or B must contains <math|B> or <math|A>.
+    In other words two classes are equal if they are members of the same
+    classes.
   </definition>
 
-  Once we have defined equality we can define inequality
+  Once we have defined equality we can also define inequality.
 
   <\definition>
     Let <math|A> and <math|B> classes then <math|A\<neq\>B> is equivalent
@@ -107,7 +108,7 @@
 
   <\definition>
     Let <math|A> and <math|B> classes then <math|A> is a proper sub-class of
-    <math|B> noted by <math|A\<subseteq\>B> iff
+    <math|B> noted by <math|A\<subset\>B> iff
 
     <\equation*>
       x\<in\>A\<Rightarrow\>x\<in\>B\<wedge\>A\<neq\>B
@@ -117,6 +118,17 @@
     from <math|B> and every element of <math|A> is also a element of
     <math|B>.
   </definition>
+
+  Given a set [or equivalently a element] <math|A> then we require that all
+  sub-classes of <math|A> are also sets [or equivalently elements] by the
+  axiom of subsets.
+
+  <\axiom>
+    <label|axiom of subsets><index|axiom of subsets><dueto|Axiom of
+    Subsets>Every sub-class of a set is a set
+  </axiom>
+
+  We can now proof the following relations between classes.
 
   <\theorem>
     <label|class properties (1)>Let <math|A,B,C> be classes then the
@@ -144,7 +156,7 @@
       <item><math|x\<in\>A\<Rightarrow\>x\<in\>A> and
       <math|x\<in\>A\<Rightarrow\>x\<in\>A> are obviously true, hence using
       the Axiom of Extent [axiom: <reference|axiom of extent>] it follows
-      that <math|A=A>
+      that <math|A=A>.
 
       <item>As <math|A=B> we have using the Axiom of Extent [axiom:
       <reference|axiom of extent>] that <math|x\<in\>A\<Rightarrow\>x\<in\>B\<wedge\>x\<in\>B\<Rightarrow\>x\<in\>A>
@@ -152,7 +164,7 @@
       Using the Axiom of Extent [axiom: <reference|axiom of extent>] it
       follows that <math|B=A>
 
-      <item>As <math|A=B\<wedge\>B=A> we have by he Axiom of Extent [axiom:
+      <item>As <math|A=B\<wedge\>B=C> we have by he Axiom of Extent [axiom:
       <reference|axiom of extent>] that
 
       <\eqnarray*>
@@ -172,9 +184,9 @@
       <item>From <math|A\<subseteq\>B\<wedge\>B\<subseteq\>A> it follows that
       <math|x\<in\>A\<Rightarrow\>x\<in\>B\<wedge\>x\<in\>B\<Rightarrow\>x\<in\>A>,
       so by the Axiom of Extent [axiom: <reference|axiom of extent>] we have
-      <math|A=b>
+      <math|A=B>
 
-      <item>As <math|A\<subseteq\>B\<wedge\>B\<subseteq\>C> that
+      <item>As <math|A\<subseteq\>B\<wedge\>B\<subseteq\>C> it follows that
       <math|x\<in\>A\<Rightarrow\>x\<in\>B> and
       <math|x\<in\>B\<Rightarrow\>x\<in\>C> proving that
       <math|x\<in\>A\<Rightarrow\>x\<in\>C> or <math|A\<subseteq\>C>
@@ -183,8 +195,6 @@
       extension [axiom: <reference|axiom of extent>] that <math|x\<in\>B>,
       hence <math|A\<subseteq\>B>.
     </enumerate>
-
-    \;
   </proof>
 
   One way to create a new class is to specify a predicate that a object must
@@ -192,9 +202,9 @@
   predicate. The problem with this construction is that it can lead to
   paradoxes like the famous Russell paradox. Consider the predicate
   <math|R<around*|(|x|)>=x\<nin\>x>, this predicate is true for <math|x> if
-  <math|x> is not a member of itself and consider the class that contains all
-  classes that has not them self as member. Does this class contain itself
-  yes or no? If the class contain itself then by definition
+  <math|x> is not a member of itself. Consider now the class that contains
+  all classes that has not them self as member. Does this class contain
+  itself yes or no? If the class contains itself then by definition
   <math|R<around*|(|x|)>> should be true so the class should not contain
   itself leading to a contradiction. If the class does not contain itself
   then it satisfies <math|R<around*|(|x|)>>, hence it is a member of itself
@@ -220,42 +230,77 @@
   which <math|P<around*|(|x|)>> is true, it is not enough that
   <math|P<around*|(|x|)>> is true to belong to <math|C>. A object must belong
   to a class [be a element or equivalently be a set] and
-  <math|P<around*|(|x|)>> must be true to be a member of <math|C>. Let's see
-  how that solves Russell's paradox. Define the class
-  <math|R=<around*|{|x\|x\<nin\>x|}>> [Russel's class] and check if
-  <math|R\<in\>R> or <math|R\<nin\>R> is true:\ 
+  <math|P<around*|(|x|)>> must be true to be a member of <math|C>. The
+  following theorem shows how this solves Russell's paradox.
 
-  <\description>
-    <item*|<math|R\<in\>R>>Then <math|R> is a element and <math|R\<nin\>R>
-    giving the contradiction <math|R\<in\>R\<wedge\>R\<nin\>R>
+  <\theorem>
+    <label|Russell's class>Russell's class defined by
+    <math|R=<around*|{|x\|x\<nin\>x|}>> is not a element [or equivalently a
+    set] so that <math|R\<nin\>R> is true [for if <math|R\<in\>R> then
+    <math|R> is a by definition a element [or equivalently a set].
+  </theorem>
 
-    <item*|<math|R\<nin\>R>>Then <math|R> is not a element or <math|R\<in\>R>
-    which as <math|R\<nin\>R> gives that <math|R> is not a element
-  </description>
+  <\proof>
+    We have the following two possibilities to check:\ 
+
+    <\description>
+      <item*|<math|R\<in\>R>>Then <math|R> is a element and <math|R\<nin\>R>
+      giving the contradiction <math|R\<in\>R\<wedge\>R\<nin\>R>
+
+      <item*|<math|R\<nin\>R>>Then <math|R> is not a element or
+      <math|R\<in\>R> which as <math|R\<nin\>R> proves that <math|R> is not a
+      element
+    </description>
+
+    hence we must have that <math|R> is not a element.
+  </proof>
 
   So we have that <math|R> is not a element and indeed because of this that
   <math|R\<nin\>R>. You can ask yourself if there actually exists elements,
-  none of the axioms up to now can be used to get elements [or equivalent
-  sets], for this we need extra axioms.
-
-  The axiom of construction can be used as a way of creating a sub-class of a
-  given class.
+  none of the axioms up to now can be used to construct elements [or
+  equivalent sets], for this we will need extra axioms.\ 
 
   <\definition>
     Let <math|A> be a class and <math|P<around*|(|x|)>> a predicate then
     <math|<around*|{|x\<in\>A\|P<around*|(|x|)>|}>=<around*|{|x\|x\<in\>A\<wedge\>P<around*|(|x|)>|}>>
   </definition>
 
+  <\theorem>
+    <label|sub class properties>Let <math|A> be a class and
+    <math|P<around*|(|x|)>> a predicate then:\ 
+
+    <\enumerate>
+      <item><math|<around*|{|x\<in\>A\|P<around*|(|x|)>|}>\<subseteq\>A>
+
+      <item>If <math|A> is a set then <math|<around*|{|x\<in\>A\|P<around*|(|x|)>|}>>
+      is a set
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|x\<in\><around*|{|x\<in\>A\|P<around*|(|x|)>|}>\<equallim\><rsub|<text|definition>><around*|{|x\|x\<in\>A\<wedge\>P<around*|(|x|)>|}>>
+      then <math|x\<in\>A> so that <math|<around*|{|x\<in\>A\|P<around*|(|x|)>|}>\<subseteq\>A>.
+
+      <item>If <math|A> is a set then as by (1)
+      <math|<around*|{|x\<in\>A\|P<around*|(|x|)>|}>\<subseteq\>A> it follows
+      from the Axiom of subsets [see axiom: <reference|axiom of subsets>]
+      that <math|<around*|{|x\<in\>A\|P<around*|(|x|)>|}>> is a set.
+    </enumerate>
+  </proof>
+
   Using the axiom of construction [axiom: <reference|axiom of construction>]
-  we can then define the universal class <math|\<cal-U\>>.\ 
+  we can define the universal class <math|\<cal-U\>>.\ 
 
   <\definition>
     <label|universal class><index|<math|\<cal-U\>>><dueto|Universal class>The
     universal class <math|\<cal-U\>> is defined by
-    <math|\<cal-U\>=<around*|{|x\|x=x|}>>
+    <math|\<cal-U\>=<around*|{|x\|x=x|}>>.
   </definition>
 
-  The universal class contains all the elements, as is expressed in the
+  The universal class contains all the elements , as is expressed in the
   following theorem.
 
   <\theorem>
@@ -267,6 +312,34 @@
     Let <math|x> be a element then, as <math|x=x> [see theorem:
     <reference|class properties (1)>] we have that <math|x\<in\>\<cal-U\>>
   </proof>
+
+  The universal class is however a proper class not a set as is show in the
+  following theorem.
+
+  <\theorem>
+    <label|universal class is a proper class><math|\<cal-U\>> is a proper
+    class [in other words <math|\<cal-U\>> is not a set or element].
+  </theorem>
+
+  <\proof>
+    Take Russell's class <math|R=<around*|{|x\|x\<nin\>x|}>>. If
+    <math|x\<in\>R> then by definition <math|x> is a element and
+    <math|x\<equallim\><rsub|<text|[theorem: <reference|class properties
+    (1)>]>>x> so that <math|x\<in\><around*|{|x\|x=x|}>=\<cal-U\>> which
+    proves that\ 
+
+    <\equation*>
+      R\<subseteq\>\<cal-U\>
+    </equation*>
+
+    Assume that <math|\<cal-U\>> is a set then by the above and the axiom of
+    subsets [see axiom: <reference|axiom of subsets>] <math|R> is a set which
+    contradicts the fact that by [theorem: <reference|Russell's class>]
+    <math|R> is not a set. Hence the assumption must be wrong and
+    <math|\<cal-U\>> is not a set [or equivalently a element].
+  </proof>
+
+  <section|Class operations>
 
   We use now the axiom of construction to define the union and intersection
   of two classes.
@@ -331,15 +404,15 @@
     <\enumerate>
       <item>We proof this by contra-position, as
       <math|\<varnothing\>\<subseteq\>A> is equivalent with
-      <math|x\<in\>\<varnothing\>\<Rightarrow\>x\<in\>A>. We must proof that
+      <math|x\<in\>\<varnothing\>\<Rightarrow\>x\<in\>A>, we must proof that
       <math|x\<nin\>A\<Rightarrow\>x\<nin\>\<varnothing\>>. Well if
-      <math|x\<nin\>A> then certainly <math|x\<nin\>\<varnothing\>> [Theorem:
-      <reference|empty set property>] so that
+      <math|x\<nin\>A> then certainly <math|x\<nin\>\<varnothing\>> [by
+      theorem: <reference|empty set property>] so that
       <math|x\<nin\>A\<Rightarrow\>x\<nin\>\<varnothing\>>.
 
       <item>If <math|x\<in\>A> then <math|x> is a element, hence
       <math|x\<in\>\<cal-U\>> by [Theorem: <reference|universal class
-      property>]
+      property>].
 
       <item>By (1) we have <math|\<varnothing\>\<subseteq\>A> which together
       with <math|A\<subseteq\>\<varnothing\>> proves by [theorem:
@@ -402,7 +475,7 @@
 
     <\equation*>
       A\\B=<around*|{|x\|x\<in\>A\<wedge\>x\<nin\>B|}>\<equallim\><rsub|shorter
-      notation><around*|{|x\<in\>A\|x\<in\>B|}>
+      notation><around*|{|x\<in\>A\|x\<nin\>B|}>
     </equation*>
   </definition>
 
@@ -421,195 +494,9 @@
     Let <math|x\<in\>A\\B> then <math|x\<in\>A\<wedge\>x\<nin\>B> so that
     <math|x\<in\>A\<wedge\>x\<in\>B<rsup|c>>, further if
     <math|x\<in\>A<big|cap>B<rsup|c>> then <math|x\<in\>A\<wedge\>x\<nin\>B>.
-    Using then the axiom of extent [axiom: <reference|axiom of extent>].
+    Using then the axiom of extent [axiom: <reference|axiom of extent>]
+    proves the theorem.
   </proof>
-
-  <section|Class operations>
-
-  <\theorem>
-    <label|class intersection, union, inclusion>Let <math|A,B,C> are classes
-    then we have\ 
-
-    <\enumerate>
-      <item><math|A\<subseteq\>A<big|cup>B>
-
-      <item><math|B\<subseteq\>A<big|cup>B>
-
-      <item><math|A<big|cap>B\<subseteq\>A>
-
-      <item><math|A<big|cap>B\<subseteq\>B>
-
-      <item><math|A\\B\<subseteq\>A>
-
-      <item><math|<around*|(|A<big|cup>B|)>\\C=<around*|(|A\\C|)><big|cup><around*|(|B\\C|)>>
-
-      <item><math|<around*|(|A<big|cap>B|)>\\C=<around*|(|A\\C|)><big|cap>B=A<big|cap><around*|(|B\\C|)>>
-
-      <item>If <math|C> is a class such that <math|A\<subseteq\>C> and
-      <math|B\<subseteq\>C> then <math|A<big|cup>B\<subseteq\>C>
-
-      <item>If C is a class such that <math|A\<subseteq\>C> and <math|D> a
-      class such that <math|B\<subseteq\>D> then
-      <math|A<big|cup>B\<subseteq\>C<big|cup>D>
-
-      <item>If <math|C> is a class such that <math|C\<subseteq\>A> and
-      <math|C\<subseteq\>B> then <math|C\<subseteq\>A<big|cap>B>
-
-      <item>If C is a class such that <math|A\<subseteq\>C> and <math|D> a
-      class such that <math|B\<subseteq\>D> then
-      <math|A<big|cap>B\<subseteq\>C<big|cap>D>
-    </enumerate>
-  </theorem>
-
-  <\proof>
-    \ 
-
-    <\enumerate>
-      <item>If <math|x\<in\>A> then <math|x\<in\>A\<vee\>x\<in\>B> proving
-      that <math|x\<in\>A<big|cup>B>, hence <math|A\<subseteq\>A<big|cup>B>
-
-      <item>If <math|x\<in\>B> then <math|x\<in\>A\<vee\>x\<in\>B> proving
-      that <math|x\<in\>A<big|cup>B>, hence <math|B\<subseteq\>A<big|cup>B>
-
-      <item>If <math|x\<in\>A<big|cap>B> then
-      <math|x\<in\>A\<wedge\>x\<in\>B>, hence <math|x\<in\>A> so that
-      <math|x\<in\>A>, hence <math|A<big|cap>B\<subseteq\>A>
-
-      <item>If <math|x\<in\>A<big|cap>B> then
-      <math|x\<in\>A\<wedge\>x\<in\>B>, hence <math|x\<in\>B> so that
-      <math|x\<in\>A>, hence <math|A<big|cap>B\<subseteq\>B>
-
-      <item>If <math|x\<in\>A\\B> then <math|x\<in\>A\<wedge\>x\<nin\>B> so
-      that <math|A\\B\<subseteq\>A>
-
-      <item>We have\ 
-
-      <\eqnarray*>
-        <tformat|<table|<row|<cell|<around*|(|A<big|cup>B|)>\\C>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|class difference>]>>>|<cell|<around*|(|A<big|cup>B|)><big|cap>C<rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|class class commutative,idempotent,associative,distributivity>]>>>|<cell|<around*|(|A<big|cap>C<rsup|c>|)><big|cup><around*|(|B<big|cap>C<rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|class difference>]>>>|<cell|<around*|(|A\\C|)><big|cup><around*|(|B\\C|)>>>>>
-      </eqnarray*>
-
-      <item>\ 
-
-      <\enumerate>
-        <item><math|<around*|(|A<big|cap>B|)>\\C=<around*|(|A<big|cap>B|)><big|cap>C<rsup|c>=A<big|cap><around*|(|B<big|cap>C<rsup|c>|)>=<around*|(|A<big|cap>C<rsup|c>|)><big|cap>B=<around*|(|A\\C|)><big|cap>B>
-
-        <item><math|<around*|(|A<big|cap>B|)>\\C=<around*|(|A<big|cap>B|)><big|cap>C<rsup|c>=A<big|cap><around*|(|B<big|cap>C<rsup|c>|)>=A<big|cap><around*|(|B\\C|)>>
-      </enumerate>
-
-      <item>If <math|x\<in\>A<big|cup>B> then
-      <math|x\<in\>A\<Rightarrowlim\><rsub|A\<subseteq\>C>x\<in\>C> or
-      <math|x\<in\>B\<Rightarrowlim\><rsub|B\<subseteq\>C>x\<in\>C> proving
-      that <math|x\<in\>C>
-
-      <item>Using (1) <math|A\<subseteq\>C<big|cup>D> and
-      <math|B\<subseteq\>C<big|cup>D>, so using (6) we have
-      <math|A<big|cup>B\<subseteq\>C<big|cup>D>
-
-      <item>If <math|x\<in\>C> then <math|x\<in\>A> and <math|x\<in\>B> so
-      that <math|x\<in\>A<big|cap>B>
-
-      <item>If <math|x\<in\>A<big|cap>B> then
-      <math|x\<in\>A\<Rightarrowlim\><rsub|A\<subseteq\>C>x\<in\>C> and
-      <math|x\<in\>B\<Rightarrowlim\><rsub|B\<subseteq\>D>x\<in\>D> hence
-      <math|x\<in\>C<big|cap>D>.
-    </enumerate>
-
-    \;
-  </proof>
-
-  <\theorem>
-    <label|class absorption laws><dueto|Absorption Laws>If <math|A,B> are
-    classes then\ 
-
-    <\enumerate>
-      <item><math|A<big|cup><around*|(|A<big|cap>B|)>=A>
-
-      <item><math|A<big|cap><around*|(|A<big|cup>B|)>=A>
-    </enumerate>
-  </theorem>
-
-  <\proof>
-    \ 
-
-    <\enumerate>
-      <item>By [theorem: <reference|class intersection, union, inclusion> we
-      have <math|A<big|cap>B\<subseteq\>A>, hence using [theorem:
-      <reference|class inclusion and union and intersection>] we have that
-      <math|A<big|cup><around*|(|A<big|cap>B|)>=A>
-
-      <item>By [theorem: <reference|class intersection, union, inclusion>] we
-      have <math|A\<subseteq\>A<big|cup>B>, hence using [theorem:
-      <reference|class inclusion and union and intersection>] we have that
-      <math|A<big|cap><around*|(|A<big|cup>B|)>=A>
-    </enumerate>
-  </proof>
-
-  <\theorem>
-    <label|class complement of comploment>Let <math|A> be a class then
-    <math|<around*|(|A<rsup|c>|)><rsup|c>=A>
-  </theorem>
-
-  <\proof>
-    If <math|x\<in\><around*|(|A<rsup|c>|)><rsup|c>> then <math|x> is a
-    element and <math|x\<nin\>A> then <math|x\<in\>A> [for if
-    <math|x\<nin\>A> we have <math|x\<in\>A<rsup|c>>]. If <math|x\<in\>A>
-    then <math|x\<nin\>A<rsup|c>> so that
-    <math|x\<in\><around*|(|A<rsup|c>|)><rsup|c>>.
-  </proof>
-
-  <\theorem>
-    <label|class de Morgan's law><dueto|DeMorgan's Law>For all classes
-    <math|A,B> we have\ 
-
-    <\enumerate>
-      <item><math|<around*|(|A<big|cup>B|)><rsup|c>=A<rsup|c><big|cap>B<rsup|c>>
-
-      <item><math|<around*|(|A<big|cap>B|)><rsup|c>=A<rsup|c><big|cup>B<rsup|c>>
-    </enumerate>
-  </theorem>
-
-  <\proof>
-    \ 
-
-    <\enumerate>
-      <item>If <math|x\<in\><around*|(|A<big|cup>B|)><rsup|c>> then
-      <math|x\<nin\>A<big|cup>B>, so that
-      <math|\<neg\><around*|(|x\<in\>A\<vee\>x\<in\>B|)>=x\<nin\>A\<wedge\>x\<nin\>B>
-      proving that <math|x\<in\>A<rsup|c><big|cap>B<rsup|c>>. If
-      <math|x\<in\>A<rsup|c><big|cap>B<rsup|c>> then
-      <math|x\<nin\>A\<wedge\>x\<nin\>B=\<neg\><around*|(|x\<in\>A\<vee\>x\<in\>B|)>>,
-      so that <math|x\<nin\>A<big|cup>B> or
-      <math|x\<in\><around*|(|A<big|cup>B|)><rsup|c>>. The proof follows then
-      from the axiom of extent [axiom: <reference|axiom of extent>]
-
-      <item>If <math|x\<in\><around*|(|A<big|cap>B|)><rsup|c>> then
-      <math|x\<nin\>A<big|cap>B>, so that
-      <math|\<neg\><around*|(|x\<in\>A\<wedge\>x\<in\>B|)>=x\<nin\>A\<vee\>x\<nin\>B>
-      proving that <math|x\<in\>A<rsup|c><big|cup>B<rsup|c>>. If
-      <math|x\<in\>A<rsup|c><big|cup>B<rsup|c>> then
-      <math|><math|x\<nin\>A\<vee\>x\<nin\>B=\<neg\><around*|(|x\<in\>A\<wedge\>x\<in\>B|)>>,
-      so that <math|x\<in\><around*|(|A<big|cap>B|)><rsup|c>>. The proof
-      follows then from axiom of extent [axiom: <reference|axiom of extent>]
-    </enumerate>
-  </proof>
-
-  <\theorem>
-    <label|class subset and complement>Let <math|A,B> be classes such that
-    <math|A\<subseteq\>B> then <math|A<big|cap>B<rsup|c>=\<varnothing\>>
-  </theorem>
-
-  <\proof>
-    Assume that <math|x\<in\>A<big|cap>B<rsup|c>> then
-    <math|x\<in\>A\<wedge\>x\<nin\>B>, as <math|A\<subseteq\>B> we have
-    <math|x\<in\>B> so we reach the contradiction
-    <math|x\<in\>B\<wedge\>x\<nin\>B>. Hence
-    <math|A<big|cap>B<rsup|c>=\<varnothing\>>.
-  </proof>
-
-  \;
 
   <\theorem>
     <label|class class commutative,idempotent,associative,distributivity>Let
@@ -698,11 +585,11 @@
         <item>This follows from [axiom: <reference|axiom of extent>] and
 
         <\eqnarray*>
-          <tformat|<table|<row|<cell|x\<in\>A<big|cap><around*|(|B<big|cap>C|)>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>A\<vee\>x\<in\>B<big|cap>C>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>A\<wedge\><around*|(|x\<in\>B\<wedge\>x\<in\>C|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|x\<in\>A\<wedge\>x\<in\>B|)>\<wedge\>x\<in\>C>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>A<big|cap>B\<wedge\>x\<in\>C>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|(|*A<big|cap>B|)><big|cap>C>>>>
+          <tformat|<table|<row|<cell|x\<in\>A<big|cap><around*|(|B<big|cap>C|)>>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>A\<wedge\>x\<in\>B<big|cap>C>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>A\<wedge\><around*|(|x\<in\>B\<wedge\>x\<in\>C|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|(|x\<in\>A\<wedge\>x\<in\>B|)>\<wedge\>x\<in\>C>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\>A<big|cap>B\<wedge\>x\<in\>C>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|x\<in\><around*|(|*A<big|cap>B|)><big|cap>C>>>>
         </eqnarray*>
       </enumerate>
 
-      <item*|Distributivity>\ 
+      <item*|distributivity>\ 
 
       <\enumerate>
         <item>This follows from [axiom: <reference|axiom of extent>] and
@@ -718,6 +605,164 @@
         </eqnarray*>
       </enumerate>
     </description>
+  </proof>
+
+  <\theorem>
+    <label|class intersection, union, inclusion>Let <math|A,B,C> are classes
+    then we have\ 
+
+    <\enumerate>
+      <item><math|A\<subseteq\>A<big|cup>B>
+
+      <item><math|B\<subseteq\>A<big|cup>B>
+
+      <item><math|A<big|cap>B\<subseteq\>A>
+
+      <item><math|A<big|cap>B\<subseteq\>B>
+
+      <item><math|A\\B\<subseteq\>A>
+
+      <item><math|<around*|(|A<big|cup>B|)>\\C=<around*|(|A\\C|)><big|cup><around*|(|B\\C|)>>
+
+      <item><math|<around*|(|A<big|cap>B|)>\\C=<around*|(|A\\C|)><big|cap>B=A<big|cap><around*|(|B\\C|)>>
+
+      <item>If <math|C> is a class such that <math|A\<subseteq\>C> and
+      <math|B\<subseteq\>C> then <math|A<big|cup>B\<subseteq\>C>
+
+      <item>If C is a class such that <math|A\<subseteq\>C> and <math|D> a
+      class such that <math|B\<subseteq\>D> then
+      <math|A<big|cup>B\<subseteq\>C<big|cup>D>
+
+      <item>If <math|C> is a class such that <math|C\<subseteq\>A> and
+      <math|C\<subseteq\>B> then <math|C\<subseteq\>A<big|cap>B>
+
+      <item>If C is a class such that <math|A\<subseteq\>C> and <math|D> a
+      class such that <math|B\<subseteq\>D> then
+      <math|A<big|cap>B\<subseteq\>C<big|cap>D>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|x\<in\>A> then <math|x\<in\>A\<vee\>x\<in\>B> proving
+      that <math|x\<in\>A<big|cup>B>, hence <math|A\<subseteq\>A<big|cup>B>.
+
+      <item>If <math|x\<in\>B> then <math|x\<in\>A\<vee\>x\<in\>B> proving
+      that <math|x\<in\>A<big|cup>B>, hence <math|B\<subseteq\>A<big|cup>B>.
+
+      <item>If <math|x\<in\>A<big|cap>B> then
+      <math|x\<in\>A\<wedge\>x\<in\>B>, hence <math|x\<in\>A> so that
+      <math|A<big|cap>B\<subseteq\>A>.
+
+      <item>If <math|x\<in\>A<big|cap>B> then
+      <math|x\<in\>A\<wedge\>x\<in\>B>, hence <math|x\<in\>B> so that
+      <math|A<big|cap>B\<subseteq\>B>.
+
+      <item>If <math|x\<in\>A\\B> then <math|x\<in\>A\<wedge\>x\<nin\>B>,
+      hence <math|x\<in\>A> so that <math|A\\B\<subseteq\>A>.
+
+      <item>We have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|A<big|cup>B|)>\\C>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class difference>]>>>|<cell|<around*|(|A<big|cup>B|)><big|cap>C<rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class class commutative,idempotent,associative,distributivity>]>>>|<cell|<around*|(|A<big|cap>C<rsup|c>|)><big|cup><around*|(|B<big|cap>C<rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class difference>]>>>|<cell|<around*|(|A\\C|)><big|cup><around*|(|B\\C|)>>>>>
+      </eqnarray*>
+
+      <item>\ 
+
+      <\enumerate>
+        <item><math|<around*|(|A<big|cap>B|)>\\C=<around*|(|A<big|cap>B|)><big|cap>C<rsup|c>\<equallim\><rsub|<text|[theorem:
+        <reference|class class commutative,idempotent,associative,distributivity>]>><around*|(|A<big|cap>C<rsup|c>|)><big|cap>B=<around*|(|A\\C|)><big|cap>B>
+
+        <item><math|<around*|(|A<big|cap>B|)>\\C=<around*|(|A<big|cap>B|)><big|cap>C<rsup|c>\<equallim\><rsub|<text|[theorem:
+        <reference|class class commutative,idempotent,associative,distributivity>]>>A<big|cap><around*|(|B<big|cap>C<rsup|c>|)>=A<big|cap><around*|(|B\\C|)>>
+      </enumerate>
+
+      <item>If <math|x\<in\>A<big|cup>B> then
+      <math|x\<in\>A\<Rightarrowlim\><rsub|A\<subseteq\>C>x\<in\>C> or
+      <math|x\<in\>B\<Rightarrowlim\><rsub|B\<subseteq\>C>x\<in\>C> proving
+      that <math|x\<in\>C>.
+
+      <item>Using (1) <math|A\<subseteq\>C<big|cup>D> and
+      <math|B\<subseteq\>C<big|cup>D>, so using (6) we have
+      <math|A<big|cup>B\<subseteq\>C<big|cup>D>.
+
+      <item>If <math|x\<in\>C> then <math|x\<in\>A> and <math|x\<in\>B> so
+      that <math|x\<in\>A<big|cap>B>.
+
+      <item>If <math|x\<in\>A<big|cap>B> then
+      <math|x\<in\>A\<Rightarrowlim\><rsub|A\<subseteq\>C>x\<in\>C> and
+      <math|x\<in\>B\<Rightarrowlim\><rsub|B\<subseteq\>D>x\<in\>D> hence
+      <math|x\<in\>C<big|cap>D>.
+    </enumerate>
+
+    \;
+  </proof>
+
+  <\theorem>
+    <label|class complement of comploment>Let <math|A> be a class then
+    <math|<around*|(|A<rsup|c>|)><rsup|c>=A>
+  </theorem>
+
+  <\proof>
+    If <math|x\<in\><around*|(|A<rsup|c>|)><rsup|c>> then <math|x> is a
+    element and <math|x\<nin\>A<rsup|c>> then <math|x\<in\>A> [for if
+    <math|x\<nin\>A> we have <math|x\<in\>A<rsup|c>>]. If <math|x\<in\>A>
+    then <math|x\<nin\>A<rsup|c>> [for if <math|x\<in\>A<rsup|c>> then
+    <math|x\<nin\>A>] so that <math|x\<in\><around*|(|A<rsup|c>|)><rsup|c>>.
+  </proof>
+
+  <\theorem>
+    <label|class de Morgan's law><dueto|DeMorgan's Law>For all classes
+    <math|A,B> we have\ 
+
+    <\enumerate>
+      <item><math|<around*|(|A<big|cup>B|)><rsup|c>=A<rsup|c><big|cap>B<rsup|c>>
+
+      <item><math|<around*|(|A<big|cap>B|)><rsup|c>=A<rsup|c><big|cup>B<rsup|c>>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>If <math|x\<in\><around*|(|A<big|cup>B|)><rsup|c>> then
+      <math|x\<nin\>A<big|cup>B>, so that
+      <math|\<neg\><around*|(|x\<in\>A\<vee\>x\<in\>B|)>=x\<nin\>A\<wedge\>x\<nin\>B>
+      proving that <math|x\<in\>A<rsup|c><big|cap>B<rsup|c>>. If
+      <math|x\<in\>A<rsup|c><big|cap>B<rsup|c>> then
+      <math|x\<nin\>A\<wedge\>x\<nin\>B=\<neg\><around*|(|x\<in\>A\<vee\>x\<in\>B|)>>,
+      so that <math|x\<nin\>A<big|cup>B> or
+      <math|x\<in\><around*|(|A<big|cup>B|)><rsup|c>>. The proof follows then
+      from the axiom of extent [axiom: <reference|axiom of extent>]
+
+      <item>If <math|x\<in\><around*|(|A<big|cap>B|)><rsup|c>> then
+      <math|x\<nin\>A<big|cap>B>, so that
+      <math|\<neg\><around*|(|x\<in\>A\<wedge\>x\<in\>B|)>=x\<nin\>A\<vee\>x\<nin\>B>
+      proving that <math|x\<in\>A<rsup|c><big|cup>B<rsup|c>>. If
+      <math|x\<in\>A<rsup|c><big|cup>B<rsup|c>> then
+      <math|><math|x\<nin\>A\<vee\>x\<nin\>B=\<neg\><around*|(|x\<in\>A\<wedge\>x\<in\>B|)>>,
+      so that <math|x\<in\><around*|(|A<big|cap>B|)><rsup|c>>. The proof
+      follows then from axiom of extent [axiom: <reference|axiom of extent>]
+    </enumerate>
+  </proof>
+
+  <\theorem>
+    <label|class subset and complement>Let <math|A,B> be classes such that
+    <math|A\<subseteq\>B> then <math|A<big|cap>B<rsup|c>=\<varnothing\>>
+  </theorem>
+
+  <\proof>
+    Assume that <math|x\<in\>A<big|cap>B<rsup|c>> then
+    <math|x\<in\>A\<wedge\>x\<nin\>B>, as <math|A\<subseteq\>B> we have
+    <math|x\<in\>B> so we reach the contradiction
+    <math|x\<in\>B\<wedge\>x\<nin\>B>. Hence
+    <math|A<big|cap>B<rsup|c>=\<varnothing\>>.
   </proof>
 
   <\theorem>
@@ -766,7 +811,7 @@
     <\enumerate>
       <item><math|\<varnothing\><big|cup>A=A>
 
-      <item><math|\<varnothing\><big|cap>\<varnothing\>=\<varnothing\>>
+      <item><math|\<varnothing\><big|cap>A=\<varnothing\>>
 
       <item><math|A<big|cup>\<cal-U\>=\<cal-U\>>
 
@@ -780,25 +825,52 @@
     \ 
 
     <\enumerate>
-      <item>As <math|\<varnothing\>\<subseteq\>A> [theorem: <reference|class
-      empty set>] we have by [theorem: <reference|class inclusion and union
-      and intersection>] that <math|\<varnothing\><big|cup>A=A>
+      <item>If <math|x\<in\>\<varnothing\><big|cup>A> then
+      <math|x\<in\>\<varnothing\>\<wedge\>x\<in\>A\<Rightarrowlim\><rsub|x\<nin\>\<varnothing\><text|
+      [see theorem: <reference|empty set property>]>>x\<in\>A>, further if
+      <math|x\<in\>A> then <math|x\<in\>A\<vee\>x\<in\>\<varnothing\>> so
+      that <math|x\<in\>\<varnothing\><big|cup>A>. Hence using [axiom:
+      <reference|axiom of extent>] <math|\<varnothing\><big|cup>A=A>.
 
-      <item>As <math|\<varnothing\>\<subseteq\>A> [theorem: <reference|class
-      empty set>] we have by [theorem: <reference|class inclusion and union
-      and intersection>] that <math|\<varnothing\><big|cap>A=A>
+      <item>If <math|x\<in\>\<varnothing\><big|cap>A> then
+      <math|x\<in\>\<varnothing\>\<wedge\>x\<in\>A> leading to
+      <math|x\<in\>\<varnothing\>> which is a contradiction by [theorem:
+      <reference|empty set property>]. Hence using [theorem: <reference|class
+      empty set is unique>] <math|\<varnothing\><big|cap>A=\<varnothing\>>.
 
-      <item>As <math|A\<subseteq\>\<cal-U\>> [theorem <reference|class empty
-      set>] we have by [theorem: <reference|class inclusion and union and
-      intersection>] that <math|A<big|cap>\<cal-U\>=A>
+      <item>If <math|x\<in\>A<big|cup>\<cal-U\>> then we have either:\ 
 
-      <item>As <math|A\<subseteq\>\<cal-U\>> [theorem <reference|class empty
-      set>] we have by [theorem: <reference|class inclusion and union and
-      intersection>] that <math|A<big|cap>\<cal-U\>=A>
+      <\description>
+        <item*|<math|x\<in\>A>>Then <math|x> is a element so that by
+        [theorem: <reference|universal class property>]
+        <math|x\<in\>\<cal-U\>>
+
+        <item*|<math|x\<in\>\<cal-U\>>>Then trivially <math|x\<in\>\<cal-U\>>
+      </description>
+
+      hence we have in all cases that <math|x\<in\>\<cal-U\>>. Further if
+      <math|x\<in\>\<cal-U\>> then clearly
+      <math|x\<in\>\<cal-U\>\<vee\>x\<in\>A\<Rightarrow\>x\<in\>\<cal-U\><big|cup>A>.
+      Hence using [axiom: <reference|axiom of extent>] we have that\ 
+
+      <\equation*>
+        A<big|cup>\<cal-U\>=\<cal-U\>
+      </equation*>
+
+      <item>If <math|x\<in\>A<big|cap>\<cal-U\>> then
+      <math|x\<in\>A\<wedge\>x\<in\>\<cal-U\>\<Rightarrow\>x\<in\>A>, further
+      if <math|x\<in\>A> then <math|x> is a element so that by [theorem:
+      <reference|universal class property>] <math|x\<in\>\<cal-U\>>, hence
+      <math|x\<in\>A<big|cap>\<cal-U\>>. Using [axiom: <reference|axiom of
+      extent>] it follows that\ 
+
+      <\equation*>
+        A<big|cap>\<cal-U\>=A
+      </equation*>
 
       <item>Let <math|x\<in\>A\\A> then <math|x\<in\>A\<wedge\>x\<nin\>A> a
       contradiction, so by [theorem: <reference|class empty set is unique>]
-      we have that <math|A\\A=\<varnothing\>>
+      we have that <rigid|<math|A\\A=\<varnothing\>>>
     </enumerate>
   </proof>
 
@@ -829,8 +901,8 @@
 
       <item><math|<around*|(|A\\B|)><big|cap>A=A\\B>
 
-      <item>If <math|B,C\<subseteq\>A> then
-      <math|<around*|(|A\\B|)>\\<around*|(|A\\C|)>-C\\B>
+      <item>If <math|C\<subseteq\>A> then
+      <math|<around*|(|A\\B|)>\\<around*|(|A\\C|)>=C\\B>
     </enumerate>
   </theorem>
 
@@ -842,23 +914,23 @@
 
       <\description>
         <item*|<math|\<Rightarrow\>>>If <math|x\<in\>A<big|cup>B\<Rightarrow\>x\<in\>A\<Rightarrowlim\><rsub|A\<subseteq\>B>x\<in\>B>
-        and thus <math|A<big|cup>B\<subseteq\>B>. From the previous theorem
-        [theorem: <reference|class intersection, union, inclusion>] we have
-        <math|B\<subseteq\>A<big|cup>B> so by <reference|class properties
-        (1)> we have <math|A<big|cup>B=B>
+        and thus <math|A<big|cup>B\<subseteq\>B>. From theorem [theorem:
+        <reference|class intersection, union, inclusion>] we have
+        <math|B\<subseteq\>A<big|cup>B> so by [theorem: <reference|class
+        properties (1)>] we have <math|A<big|cup>B=B>
 
-        <item*|<math|\<Leftarrow\>>>If <math|A<big|cup>B=B> then
-        <math|x\<in\>A\<Rightarrow\>x\<in\>A<big|cup>B\<Rightarrowlim\><rsub|A<big|cup>B=B>x\<in\>B>
-        and thus <math|A\<subseteq\>B>
+        <item*|<math|\<Leftarrow\>>>If <math|x\<in\>A\<Rightarrow\>x\<in\>A<big|cup>B\<Rightarrowlim\><rsub|A<big|cup>B=B>x\<in\>B>
+        so that <math|A\<subseteq\>B>
       </description>
 
       <item>
 
       <\description>
         <item*|<math|\<Rightarrow\>>>If <math|x\<in\>A\<Rightarrowlim\><rsub|A\<subseteq\>B>x\<in\>B\<Rightarrow\>x\<in\>A\<wedge\>x\<in\>B\<Rightarrow\>x\<in\>A<big|cap>B>
-        proving that <math|A\<subseteq\>A<big|cap>B>. From the previous
-        theorem we have <math|A<big|cap>B\<subseteq\>A> so by [theorem:
-        <reference|class properties (1)>] we have <math|A<big|cap>B=A>
+        proving that <math|A\<subseteq\>A<big|cap>B>. From [theorem:
+        <reference|class intersection, union, inclusion>] we have
+        <math|A<big|cap>B\<subseteq\>A> so that by [theorem: <reference|class
+        properties (1)>] we have <math|A<big|cap>B=A>.
 
         <item*|<math|\<Leftarrow\>>>If <math|A<big|cap>B=A> we have
         <math|x\<in\>A\<Rightarrow\>x\<in\>A<big|cap>B\<Rightarrow\><around*|(|x\<in\>A\<wedge\>x\<in\>B|)>\<Rightarrow\>x\<in\>B>
@@ -946,14 +1018,39 @@
         <reference|class class commutative,idempotent,associative,distributivity>]>>>|<cell|<around*|(|B<rsup|c><big|cap><around*|(|A<big|cap>A<rsup|c>|)>|)><big|cup><around*|(|<around*|(|A<big|cap>C|)><big|cap>B<rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|class subset and complement>]>>>|<cell|<around*|(|B<rsup|c><big|cap>\<varnothing\>|)><big|cup><around*|(|<around*|(|A<big|cap>C|)><big|cap>B<rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|class universal and empotyset
-        properties>]>>>|<cell|<around*|(|A<big|cap>C|)><big|cap>B<rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
-        <reference|class inclusion and union and
-        intersection>]>>>|<cell|C<big|cap>B<rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        properties>]>>>|<cell|\<varnothing\><big|cup><around*|(|<around*|(|A<big|cap>C|)><big|cap>B<rsup|c>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|class universal and empotyset
+        properties>]>>>|<cell|<around*|(|A<big|cap>C|)><big|cap>B<rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|C\<subseteq\>A\<wedge\><around*|(|2|)>>>|<cell|C<big|cap>B<rsup|c>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|class difference>]>>>|<cell|C\\B>>>>
       </eqnarray*>
     </enumerate>
+  </proof>
 
-    \;
+  <\theorem>
+    <label|class absorption laws><dueto|Absorption Laws>If <math|A,B> are
+    classes then\ 
+
+    <\enumerate>
+      <item><math|A<big|cup><around*|(|A<big|cap>B|)>=A>
+
+      <item><math|A<big|cap><around*|(|A<big|cup>B|)>=A>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>By [theorem: <reference|class intersection, union, inclusion> we
+      have <math|A<big|cap>B\<subseteq\>A>, hence using [theorem:
+      <reference|class inclusion and union and intersection>] we have that
+      <rigid|<math|A<big|cup><around*|(|A<big|cap>B|)>=A>>
+
+      <item>By [theorem: <reference|class intersection, union, inclusion>] we
+      have <math|A\<subseteq\>A<big|cup>B>, hence using [theorem:
+      <reference|class inclusion and union and intersection>] we have that
+      <rigid|<math|A<big|cap><around*|(|A<big|cup>B|)>=A>>
+    </enumerate>
   </proof>
 
   If <math|A,B> are classes then <math|x\<in\>A<big|cup>B> if and only
@@ -1033,7 +1130,7 @@
       <math|x\<in\>A<big|cup>B>, hence
 
       <\equation*>
-        A<big|cup><around*|(|B\\A|)>\<subseteq\>A<big|cup>B.
+        A<big|cup><around*|(|B\\A|)>\<subseteq\>A<big|cup>B
       </equation*>
 
       On the other hand if <math|x\<in\>A<big|cup>B> we have either
@@ -1046,8 +1143,8 @@
         A<big|cup>B\<subseteq\>A<big|cup><around*|(|B\\A|)>
       </equation*>
 
-      Sow we conclude that <math|A<big|sqcup><around*|(|B\\A|)>=A<big|cup>B>
-      which combined with (1) gives
+      So that <math|A<big|cup><around*|(|B\\A|)>=A<big|cup>B> which combined
+      with (1) gives
 
       <\equation*>
         A<big|sqcup><around*|(|B\\A|)>=A<big|cup>B
@@ -1100,8 +1197,8 @@
         A<big|cup>B=<around*|(|A\\B|)><big|cup><around*|(|A<big|cap>B|)><big|cup><around*|(|B\\A|)>
       </equation*>
 
-      which as by (2) <math|<around*|(|A\\B|)><big|cap><around*|(|A<big|cap>B|)>=\<varnothing\>=<around*|(|B\\A|)><big|cap><around*|(|A<big|cap>B|)>>
-      we have\ 
+      which, as by (2) <math|<around*|(|A\\B|)><big|cap><around*|(|A<big|cap>B|)>=\<varnothing\>=<around*|(|B\\A|)><big|cap><around*|(|A<big|cap>B|)>>,
+      proves that
 
       <\equation*>
         A<big|cup>B=<around*|(|A\\B|)><big|sqcup><around*|(|A<big|cap>B|)><big|sqcup><around*|(|B\\A|)>
@@ -1143,7 +1240,7 @@
       that
 
       <\equation*>
-        B=<around*|(|A<big|cap>B|)><big|sqcup><around*|(|B\\A|)>=A<big|sqcup><around*|(|B\\A|)>
+        B<below|=|<around*|(|5|)>><around*|(|A<big|cap>B|)><big|sqcup><around*|(|B\\A|)>=A<big|sqcup><around*|(|B\\A|)>
       </equation*>
     </enumerate>
   </proof>
@@ -1238,8 +1335,8 @@
     Lets's consider the following possible cases <math|x,y>:
 
     <\description>
-      <item*|<math|x=y>>Then <math|<around*|{|x,y|}>\<equallim\><rsub|<text|lemma:
-      <reference|element {a,a}={a}>>><around*|{|x|}>=<around*|{|x<rprime|'>,y<rprime|'>|}>>.
+      <item*|<math|x=y>>Then <math|<around*|{|x|}>\<equallim\><rsub|<text|lemma:
+      <reference|element {a,a}={a}>>><around*|{|x,y|}>=<around*|{|x<rprime|'>,y<rprime|'>|}>>.
       From <math|x<rprime|'>\<in\><around*|{|x<rprime|'>,y<rprime|'>|}>=<around*|{|x|}>>
       it follows that <math|x=x<rprime|'>> and from
       <math|y<rprime|'>\<in\><around*|{|x<rprime|'>,y<rprime|'>|}>=<around*|{|x|}>>
@@ -1298,6 +1395,8 @@
       </equation*>
     </description>
   </proof>
+
+  TODO check next
 
   <\lemma>
     <label|element equality of unordered pairs (1)>If
@@ -1772,12 +1871,13 @@
   create new sets like singletons, unordered pairs and pairs. We introduce
   now extra axioms to create new sets given existing sets.
 
-  <\axiom>
-    <label|axiom of subsets><index|axiom of subsets><dueto|Axiom of
-    Subsets>Every sub-class of a set is a set
-  </axiom>
+  \;
+
+  TODO
 
   As a application we proof that the intersection of two sets is a set
+
+  \;
 
   <\theorem>
     <label|set intersection of two sets is aset>Let <math|A,B> be sets then
@@ -14872,8 +14972,9 @@
     <associate|\<less\>A,B,C\<gtr\>=\<less\>D,E,F\<gtr\>=\<gtr\>A=E,B=D,C=F|<tuple|2.5|?>>
     <associate|\<less\>A,B\<gtr\>=\<less\>C,D\<gtr\>=\<gtr\>A=C,B=D|<tuple|2.3|?>>
     <associate|Axiom of Replacement|<tuple|2.55|?>>
+    <associate|Russell's class|<tuple|1.12|?>>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|axiom of pairing|?>>
+    <associate|auto-10|<tuple|1.3|?>>
     <associate|auto-100|<tuple|transfinite induction|?>>
     <associate|auto-101|<tuple|3.4|?>>
     <associate|auto-102|<tuple|<with|mode|<quote|math>|\<cal-P\><rprime|'><around*|(|A|)>>|?>>
@@ -14882,12 +14983,12 @@
     <associate|auto-105|<tuple|Hausdorff's maximality|?>>
     <associate|auto-106|<tuple|Zorn's Lemma|?>>
     <associate|auto-107|<tuple|3.5|?>>
-    <associate|auto-11|<tuple|cartesian product|?>>
-    <associate|auto-12|<tuple|<with|mode|<quote|math>|A\<times\>B>|?>>
-    <associate|auto-13|<tuple|1.4|?>>
-    <associate|auto-14|<tuple|successor set|?>>
-    <associate|auto-15|<tuple|axiom of infinity|?>>
-    <associate|auto-16|<tuple|axiom of subsets|?>>
+    <associate|auto-11|<tuple|axiom of pairing|?>>
+    <associate|auto-12|<tuple|cartesian product|?>>
+    <associate|auto-13|<tuple|<with|mode|<quote|math>|A\<times\>B>|?>>
+    <associate|auto-14|<tuple|1.4|?>>
+    <associate|auto-15|<tuple|successor set|?>>
+    <associate|auto-16|<tuple|axiom of infinity|?>>
     <associate|auto-17|<tuple|axiom of union|?>>
     <associate|auto-18|<tuple|power set|?>>
     <associate|auto-19|<tuple|<with|mode|<quote|math>|\<cal-P\><around*|(|A|)>>|?>>
@@ -14913,7 +15014,7 @@
     <associate|auto-37|<tuple|2.2.4|?>>
     <associate|auto-38|<tuple|<with|mode|<quote|math>|f<rsub|\|C>>|?>>
     <associate|auto-39|<tuple|2.2.5|?>>
-    <associate|auto-4|<tuple|<with|mode|<quote|math>|\<cal-U\>>|3>>
+    <associate|auto-4|<tuple|axiom of subsets|3>>
     <associate|auto-40|<tuple|2.2.6|?>>
     <associate|auto-41|<tuple|2.3|?>>
     <associate|auto-42|<tuple|2.3.1|?>>
@@ -14924,7 +15025,7 @@
     <associate|auto-47|<tuple|2.4|?>>
     <associate|auto-48|<tuple|<with|mode|<quote|math>|<big|prod><rsub|i\<in\>I>A<rsub|i>>|?>>
     <associate|auto-49|<tuple|<with|mode|<quote|math>|\<pi\><rsub|i>>|?>>
-    <associate|auto-5|<tuple|<with|mode|<quote|math>|A<big|cup>B>|5>>
+    <associate|auto-5|<tuple|<with|mode|<quote|math>|\<cal-U\>>|5>>
     <associate|auto-50|<tuple|3|?>>
     <associate|auto-51|<tuple|3.1|?>>
     <associate|auto-52|<tuple|relation|?>>
@@ -14935,7 +15036,7 @@
     <associate|auto-57|<tuple|<with|mode|<quote|math>|R<around*|[|x|]>>|?>>
     <associate|auto-58|<tuple|<with|mode|<quote|math>|A/R>|?>>
     <associate|auto-59|<tuple|3.2.2|?>>
-    <associate|auto-6|<tuple|<with|mode|<quote|math>|A<big|cap>B>|?>>
+    <associate|auto-6|<tuple|1.2|?>>
     <associate|auto-60|<tuple|canonical function|?>>
     <associate|auto-61|<tuple|3.3|?>>
     <associate|auto-62|<tuple|3.3.1|?>>
@@ -14946,7 +15047,7 @@
     <associate|auto-67|<tuple|<with|mode|<quote|math>|\<leqslant\>>|?>>
     <associate|auto-68|<tuple|<with|mode|<quote|math>|\<less\>>|?>>
     <associate|auto-69|<tuple|comparable elements|?>>
-    <associate|auto-7|<tuple|<with|mode|<quote|math>|\<emptyset\>>|?>>
+    <associate|auto-7|<tuple|<with|mode|<quote|math>|A<big|cup>B>|?>>
     <associate|auto-70|<tuple|comparable elements|?>>
     <associate|auto-71|<tuple|totally ordered class|?>>
     <associate|auto-72|<tuple|fully ordered class|?>>
@@ -14957,7 +15058,7 @@
     <associate|auto-77|<tuple|3.3.2|?>>
     <associate|auto-78|<tuple|increasing function|?>>
     <associate|auto-79|<tuple|decreasing function|?>>
-    <associate|auto-8|<tuple|1.2|?>>
+    <associate|auto-8|<tuple|<with|mode|<quote|math>|A<big|cap>B>|?>>
     <associate|auto-80|<tuple|order homomorphism|?>>
     <associate|auto-81|<tuple|<with|mode|<quote|math>|A\<cong\>B>|?>>
     <associate|auto-82|<tuple|3.3.3|?>>
@@ -14968,7 +15069,7 @@
     <associate|auto-87|<tuple|<with|mode|<quote|math>|max<around*|(|A|)>>|?>>
     <associate|auto-88|<tuple|<with|mode|<quote|math>|min<around*|(|A|)>>|?>>
     <associate|auto-89|<tuple|upper bound|?>>
-    <associate|auto-9|<tuple|1.3|?>>
+    <associate|auto-9|<tuple|<with|mode|<quote|math>|\<emptyset\>>|?>>
     <associate|auto-90|<tuple|lower bound|?>>
     <associate|auto-91|<tuple|supremum|?>>
     <associate|auto-92|<tuple|infinum|?>>
@@ -14980,20 +15081,20 @@
     <associate|auto-98|<tuple|immediate successor|?>>
     <associate|auto-99|<tuple|section|?>>
     <associate|axiom of choice|<tuple|3.104|?>>
-    <associate|axiom of construction|<tuple|1.9|?>>
+    <associate|axiom of construction|<tuple|1.10|?>>
     <associate|axiom of extent|<tuple|1.5|2>>
-    <associate|axiom of infinity|<tuple|1.55|?>>
-    <associate|axiom of pairing|<tuple|1.39|?>>
-    <associate|axiom of power|<tuple|1.67|?>>
-    <associate|axiom of subsets|<tuple|1.57|?>>
-    <associate|axiom of union|<tuple|1.64|?>>
+    <associate|axiom of infinity|<tuple|1.59|?>>
+    <associate|axiom of pairing|<tuple|1.43|?>>
+    <associate|axiom of power|<tuple|1.70|?>>
+    <associate|axiom of subsets|<tuple|1.8|?>>
+    <associate|axiom of union|<tuple|1.67|?>>
     <associate|bijection|<tuple|2.62|?>>
     <associate|bijective classes|<tuple|2.63|?>>
-    <associate|cartesian product|<tuple|1.47|?>>
-    <associate|cartesian product and inclusion|<tuple|1.51|?>>
-    <associate|cartesian product of the empty set|<tuple|1.49|?>>
-    <associate|cartesian product properties (1)|<tuple|1.52|?>>
-    <associate|cartesian product with enpty set|<tuple|1.50|?>>
+    <associate|cartesian product|<tuple|1.51|?>>
+    <associate|cartesian product and inclusion|<tuple|1.55|?>>
+    <associate|cartesian product of the empty set|<tuple|1.53|?>>
+    <associate|cartesian product properties (1)|<tuple|1.56|?>>
+    <associate|cartesian product with enpty set|<tuple|1.54|?>>
     <associate|choice Axiom of choice consequences|<tuple|3.135|?>>
     <associate|choice Hausdorff maximal principle|<tuple|3.126|?>>
     <associate|choice Hausdorff's Maximal Principle|<tuple|3.127|?>>
@@ -15022,34 +15123,34 @@
     <associate|choice product inclusion (1)|<tuple|3.112|?>>
     <associate|choice product sets empty condition|<tuple|3.111|?>>
     <associate|choice well-order implies Axiom of Choice|<tuple|3.133|?>>
-    <associate|class absorption laws|<tuple|1.26|?>>
-    <associate|class class commutative,idempotent,associative,distributivity|<tuple|1.30|?>>
-    <associate|class complement of comploment|<tuple|1.27|?>>
-    <associate|class de Morgan's law|<tuple|1.28|?>>
-    <associate|class difference|<tuple|1.24|?>>
-    <associate|class disjoint unions|<tuple|1.35|?>>
-    <associate|class empty set|<tuple|1.18|?>>
-    <associate|class empty set definition|<tuple|1.16|?>>
-    <associate|class empty set is unique|<tuple|1.19|?>>
-    <associate|class general intersection|<tuple|1.63|?>>
-    <associate|class inclusion and union and intersection|<tuple|1.33|?>>
-    <associate|class intersection|<tuple|1.60|?>>
-    <associate|class intersection, union, inclusion|<tuple|1.25|?>>
-    <associate|class not empty sets|<tuple|1.20|?>>
-    <associate|class properties (1)|<tuple|1.8|2>>
-    <associate|class set difference and union , intersection|<tuple|1.31|?>>
-    <associate|class subset and complement|<tuple|1.29|?>>
-    <associate|class trivial union intersection|<tuple|1.61|?>>
-    <associate|class union|<tuple|1.59|?>>
-    <associate|class union{A,B}|<tuple|1.62|?>>
-    <associate|class universal and empotyset properties|<tuple|1.32|?>>
-    <associate|element a=b=\<gtr\>{a}={b}|<tuple|1.37|?>>
-    <associate|element equalitiy of unordered pairs|<tuple|1.42|?>>
-    <associate|element equality of unordered pairs (1)|<tuple|1.43|?>>
+    <associate|class absorption laws|<tuple|1.37|?>>
+    <associate|class class commutative,idempotent,associative,distributivity|<tuple|1.29|?>>
+    <associate|class complement of comploment|<tuple|1.31|?>>
+    <associate|class de Morgan's law|<tuple|1.32|?>>
+    <associate|class difference|<tuple|1.28|?>>
+    <associate|class disjoint unions|<tuple|1.39|?>>
+    <associate|class empty set|<tuple|1.22|?>>
+    <associate|class empty set definition|<tuple|1.20|?>>
+    <associate|class empty set is unique|<tuple|1.23|?>>
+    <associate|class general intersection|<tuple|1.66|?>>
+    <associate|class inclusion and union and intersection|<tuple|1.36|?>>
+    <associate|class intersection|<tuple|1.63|?>>
+    <associate|class intersection, union, inclusion|<tuple|1.30|?>>
+    <associate|class not empty sets|<tuple|1.24|?>>
+    <associate|class properties (1)|<tuple|1.9|2>>
+    <associate|class set difference and union , intersection|<tuple|1.34|?>>
+    <associate|class subset and complement|<tuple|1.33|?>>
+    <associate|class trivial union intersection|<tuple|1.64|?>>
+    <associate|class union|<tuple|1.62|?>>
+    <associate|class union{A,B}|<tuple|1.65|?>>
+    <associate|class universal and empotyset properties|<tuple|1.35|?>>
+    <associate|element a=b=\<gtr\>{a}={b}|<tuple|1.41|?>>
+    <associate|element equalitiy of unordered pairs|<tuple|1.46|?>>
+    <associate|element equality of unordered pairs (1)|<tuple|1.47|?>>
     <associate|element is set|<tuple|1.2|?>>
-    <associate|element {a,a}={a}|<tuple|1.40|?>>
-    <associate|element: {a} is a element|<tuple|1.41|?>>
-    <associate|empty set property|<tuple|1.17|?>>
+    <associate|element {a,a}={a}|<tuple|1.44|?>>
+    <associate|element: {a} is a element|<tuple|1.45|?>>
+    <associate|empty set property|<tuple|1.21|?>>
     <associate|eq 1.1 001|<tuple|1.1|2>>
     <associate|eq 1.2 001|<tuple|1.2|2>>
     <associate|eq 1.3 001|<tuple|1.3|2>>
@@ -15411,8 +15512,8 @@
     <associate|order well ordering and isomorphism (2)|<tuple|3.99|?>>
     <associate|order well ordering and order isomorphism|<tuple|3.85|?>>
     <associate|order well-rodered class|<tuple|3.84|?>>
-    <associate|pair equality of pairs|<tuple|1.46|?>>
-    <associate|pair of elements|<tuple|1.44|?>>
+    <associate|pair equality of pairs|<tuple|1.50|?>>
+    <associate|pair of elements|<tuple|1.48|?>>
     <associate|partial function|<tuple|2.7|?>>
     <associate|partial function associativity|<tuple|2.21|?>>
     <associate|partial function composition of graphs|<tuple|2.18|?>>
@@ -15430,7 +15531,7 @@
     <associate|partial function set domain range|<tuple|2.12|?>>
     <associate|partial functions image/preimage properties|<tuple|2.17|?>>
     <associate|parttial function graph|<tuple|2.6|?>>
-    <associate|power set|<tuple|1.66|?>>
+    <associate|power set|<tuple|1.69|?>>
     <associate|product|<tuple|2.137|?>>
     <associate|product and intersection|<tuple|2.142|?>>
     <associate|product and power|<tuple|2.144|?>>
@@ -15447,18 +15548,20 @@
     <associate|relation|<tuple|3.1|?>>
     <associate|relation properties|<tuple|3.4|?>>
     <associate|relation trivial|<tuple|3.3|?>>
-    <associate|set A*B|<tuple|1.70|?>>
-    <associate|set A*B is subset of P(P(AUB))|<tuple|1.69|?>>
-    <associate|set element proper class|<tuple|1.53|?>>
+    <associate|set A*B|<tuple|1.73|?>>
+    <associate|set A*B is subset of P(P(AUB))|<tuple|1.72|?>>
+    <associate|set element proper class|<tuple|1.57|?>>
     <associate|set emptyset is not set of empty set|<tuple|2.2|?>>
-    <associate|set extending set with new element|<tuple|1.71|?>>
-    <associate|set intersection of two sets is aset|<tuple|1.58|?>>
-    <associate|set restriction of a set of sets|<tuple|1.68|?>>
-    <associate|set successor set|<tuple|1.54|?>>
-    <associate|set union of two sets is a set|<tuple|1.65|?>>
+    <associate|set extending set with new element|<tuple|1.74|?>>
+    <associate|set intersection of two sets is aset|<tuple|1.61|?>>
+    <associate|set restriction of a set of sets|<tuple|1.71|?>>
+    <associate|set successor set|<tuple|1.58|?>>
+    <associate|set union of two sets is a set|<tuple|1.68|?>>
+    <associate|sub class properties|<tuple|1.14|?>>
     <associate|totally ordered class|<tuple|3.40|?>>
-    <associate|universal class|<tuple|1.12|?>>
-    <associate|universal class property|<tuple|1.13|?>>
+    <associate|universal class|<tuple|1.15|?>>
+    <associate|universal class is a proper class|<tuple|1.17|?>>
+    <associate|universal class property|<tuple|1.16|?>>
   </collection>
 </references>
 
