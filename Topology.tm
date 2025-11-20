@@ -6737,8 +6737,8 @@
     <math|U\<subseteq\>A>, <math|x\<in\>U> and <math|f:A\<rightarrow\>Y> a
     function such that <math|f<rsub|\|U>:U\<rightarrow\>Y> is continuous at
     <math|x> using the topologies <math|<around*|(|\<cal-T\><rsub|X>|)><rsub|\|U>>
-    on <math|U> and <math|\<cal-T\><rsub|Y>> on <math|Y> then <math|f:A-Y> is
-    continuous at <math|x> using the topologies
+    on <math|U> and <math|\<cal-T\><rsub|Y>> on <math|Y> then
+    <math|f:A\<rightarrow\>Y> is continuous at <math|x> using the topologies
     <math|<around*|(|\<cal-T\><rsub|X>|)><rsub|\|A>> on <math|A> and
     <math|\<cal-T\><rsub|Y>> on <math|Y>.
   </corollary>
@@ -23660,7 +23660,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|13>
-    <associate|page-first|681>
+    <associate|page-first|683>
     <associate|page-medium|papyrus>
     <associate|par-first|0tab>
     <associate|section-nr|0>
