@@ -9899,7 +9899,41 @@
 
   \;
 
-  \;
+  <\corollary>
+    <label|diff f is of class C^n if D^1f u=is of class C^n-1>Let
+    <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be two normed spaces, a open set <math|A\<subseteq\>X>, <math|x\<in\>A>
+    and <math|f:A\<rightarrow\>Y> a function then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|f<text| is >C<rsup|n><text| at
+      >x>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|\<exists\>V<text|
+      open with >x\<in\>V\<subseteq\>A<text| such that >f<text| is
+      >1<text|-times differentiable on >V>|<cell|>>|<row|<cell|>|<cell|<text|and
+      >D<rsup|<around*|[|1|]>><rsub|V>f:V\<rightarrow\>L<rsub|1><around*|(|X;Y|)>=L<around*|(|X,Y|)><text|
+      defined by >D<rsup|<around*|[|1|]>><rsub|V>f<around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y>f>|<cell|>>|<row|<cell|>|<cell|<text|is
+      >C<rsup|<around*|[|n-1|]>><text| at >x>|<cell|>>>>
+    </eqnarray*>
+  </corollary>
+
+  <\corollary>
+    <label|diff f is of class C^n if D^1f u=is of class C^n-1 (1)>Let
+    <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be two normed spaces, <math|A\<subseteq\>X>, <math|V> a open set in
+    <math|X> with <math|x\<in\>V\<subseteq\>A> and <math|f:A\<rightarrow\>Y>
+    a function then we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|>|<cell|f<text| is >C<rsup|n><text| on
+      >V>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|f<text|
+      is >1<text|-times differentiable on >V<text| and
+      >>|<cell|>>|<row|<cell|>|<cell|D<rsup|<around*|[|1|]>><rsub|V>f:V\<rightarrow\>L<rsub|1><around*|(|X;Y|)>=L<around*|(|X,Y|)><text|
+      defined by >D<rsup|<around*|[|1|]>><rsub|V>f<around*|(|x|)>=D<rsup|<around*|[|1|]>><rsub|x>f<text|
+      is >C<rsup|n-1><text| on >V>|<cell|>>>>
+    </eqnarray*>
+  </corollary>
 </body>
 
 <\initial>
@@ -9931,7 +9965,11 @@
     countable|<tuple|4|4>>
     <associate|diff (i-\<gtr\>x)|<tuple|17|18>>
     <associate|diff delta function|<tuple|20|19>>
-    <associate|diff derivate and local minimum and maximum|<tuple|81|?>>
+    <associate|diff derivate and local minimum and maximum|<tuple|81|104>>
+    <associate|diff f is of class C^n if D^1f u=is of class
+    C^n-1|<tuple|85|?>>
+    <associate|diff f is of class C^n if D^1f u=is of class C^n-1
+    (1)|<tuple|86|?>>
     <associate|diff mean value theorem (5)|<tuple|36|45>>
     <associate|diff mean value theorem (6)|<tuple|38|50>>
     <associate|diff mean value theorem (7)|<tuple|39|50>>
@@ -9981,7 +10019,7 @@
     <associate|eq 14.254.165|<tuple|22|7>>
     <associate|eq 14.290.294|<tuple|303|95>>
     <associate|eq 14.291.294|<tuple|304|95>>
-    <associate|eq 14.292.294|<tuple|305|96>>
+    <associate|eq 14.292.294|<tuple|305|95>>
     <associate|eq 14.293.291|<tuple|306|96>>
     <associate|eq 14.294.294|<tuple|307|96>>
     <associate|eq 14.295.294|<tuple|308|96>>
@@ -10011,29 +10049,29 @@
     <associate|eq 16.128.194|<tuple|71|26>>
     <associate|eq 16.129.194|<tuple|72|26>>
     <associate|eq 16.130.194|<tuple|73|27>>
-    <associate|eq 16.133.6|<tuple|314|99>>
+    <associate|eq 16.133.6|<tuple|314|98>>
     <associate|eq 16.134.6|<tuple|315|99>>
     <associate|eq 16.135.6|<tuple|316|99>>
     <associate|eq 16.136.6|<tuple|317|99>>
-    <associate|eq 16.137.195|<tuple|332|?>>
+    <associate|eq 16.137.195|<tuple|332|105>>
     <associate|eq 16.137.6|<tuple|318|99>>
-    <associate|eq 16.138.195|<tuple|333|?>>
+    <associate|eq 16.138.195|<tuple|333|105>>
     <associate|eq 16.138.6|<tuple|319|99>>
-    <associate|eq 16.139.195|<tuple|334|?>>
+    <associate|eq 16.139.195|<tuple|334|105>>
     <associate|eq 16.139.6|<tuple|320|100>>
-    <associate|eq 16.140.195|<tuple|335|?>>
+    <associate|eq 16.140.195|<tuple|335|105>>
     <associate|eq 16.140.6|<tuple|321|100>>
-    <associate|eq 16.141.195|<tuple|336|?>>
-    <associate|eq 16.142.195|<tuple|337|?>>
-    <associate|eq 16.143.195|<tuple|338|?>>
-    <associate|eq 16.144.195|<tuple|339|?>>
-    <associate|eq 16.145.195|<tuple|340|?>>
-    <associate|eq 16.146.195|<tuple|341|?>>
-    <associate|eq 16.147.195|<tuple|342|?>>
-    <associate|eq 16.148.195|<tuple|343|?>>
-    <associate|eq 16.149.195|<tuple|344|?>>
-    <associate|eq 16.150.195|<tuple|345|?>>
-    <associate|eq 16.154.141|<tuple|331|?>>
+    <associate|eq 16.141.195|<tuple|336|106>>
+    <associate|eq 16.142.195|<tuple|337|106>>
+    <associate|eq 16.143.195|<tuple|338|106>>
+    <associate|eq 16.144.195|<tuple|339|106>>
+    <associate|eq 16.145.195|<tuple|340|107>>
+    <associate|eq 16.146.195|<tuple|341|107>>
+    <associate|eq 16.147.195|<tuple|342|107>>
+    <associate|eq 16.148.195|<tuple|343|107>>
+    <associate|eq 16.149.195|<tuple|344|107>>
+    <associate|eq 16.150.195|<tuple|345|107>>
+    <associate|eq 16.154.141|<tuple|331|104>>
     <associate|eq 16.183.200|<tuple|117|43>>
     <associate|eq 16.184.200|<tuple|118|43>>
     <associate|eq 16.185.200|<tuple|119|43>>
@@ -10098,12 +10136,12 @@
     <associate|eq 16.52.189|<tuple|322|101>>
     <associate|eq 16.53.189|<tuple|323|101>>
     <associate|eq 16.54.189|<tuple|324|101>>
-    <associate|eq 16.55.189|<tuple|325|103>>
-    <associate|eq 16.56.189|<tuple|326|103>>
+    <associate|eq 16.55.189|<tuple|325|102>>
+    <associate|eq 16.56.189|<tuple|326|102>>
     <associate|eq 16.58.189|<tuple|327|103>>
-    <associate|eq 16.59.189|<tuple|328|104>>
-    <associate|eq 16.60.189|<tuple|329|104>>
-    <associate|eq 16.61.189|<tuple|330|104>>
+    <associate|eq 16.59.189|<tuple|328|103>>
+    <associate|eq 16.60.189|<tuple|329|103>>
+    <associate|eq 16.61.189|<tuple|330|103>>
     <associate|eq 18.283.124|<tuple|78|31>>
     <associate|eq 19.536.038|<tuple|186|63>>
     <associate|eq 20.1010.281|<tuple|251|83>>
@@ -10251,10 +10289,10 @@
     <associate|eq 21.1128.292|<tuple|299|94>>
     <associate|eq 21.1128\<point\>300|<tuple|311|97>>
     <associate|eq 21.1129.292|<tuple|300|94>>
-    <associate|eq 21.1130.292|<tuple|301|95>>
+    <associate|eq 21.1130.292|<tuple|301|94>>
     <associate|eq 21.1130.300|<tuple|313|98>>
     <associate|eq 21.1131.292|<tuple|302|95>>
-    <associate|eq 21.1229.300|<tuple|312|98>>
+    <associate|eq 21.1229.300|<tuple|312|97>>
     <associate|eq 21.27.273|<tuple|220|74>>
     <associate|eq 21.30.273|<tuple|221|74>>
     <associate|figure 20.6.234|<tuple|3|72>>
@@ -10282,7 +10320,7 @@
     <associate|lemma 21.578.291|<tuple|69|89>>
     <associate|lemma 21.579.291|<tuple|70|90>>
     <associate|lemma 21.587.292|<tuple|74|92>>
-    <associate|lemma 21.589.295|<tuple|77|97>>
+    <associate|lemma 21.589.295|<tuple|77|96>>
     <associate|lemma 21.590.292|<tuple|75|94>>
     <associate|lemma 21.591.|<tuple|76|95>>
     <associate|measurability of image of a measurable set by a
