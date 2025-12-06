@@ -10784,6 +10784,209 @@
     hence <math|\<sigma\>> is <math|C<rsup|1>> on <math|<around*|[|a,b|]>>.
   </proof>
 
+  <\proof>
+    Take <math|x,y\<in\>C>. Define the function\ 
+
+    <\equation*>
+      \<sigma\>:<around*|[|0,1|]>\<rightarrow\>X<text| by
+      >\<sigma\><around*|(|t|)>=x+t\<cdot\><around*|(|y-x|)>
+    </equation*>
+
+    then by [lemma: <reference|lemma 16.135.200>]\ 
+
+    <\equation>
+      <label|eq 16.284.12>\<sigma\><text| is >C<rsup|1><text| on
+      ><around*|[|0,1|]><text| and >\<forall\>t\<in\><around*|[|0,1|]><text|
+      >D<rsub|t>\<sigma\>=L<text| where >L:\<bbb-R\>\<rightarrow\>X<text| is
+      defined by >L<around*|(|h|)>=h\<cdot\>*<around*|(|y-x|)>
+    </equation>
+
+    Let <math|t\<in\><around*|[|0,1|]>> then as <math|x,y\<in\>C> and
+    <math|C> is convex we have that <math|\<sigma\><around*|(|t|)>=x+t\<cdot\><around*|(|y-x|)>\<in\>C>
+    so that\ 
+
+    <\equation>
+      <label|eq 16.285.12>\<sigma\><around*|(|<around*|[|0,1|]>|)>\<subseteq\>C\<subseteq\>A
+    </equation>
+
+    As <math|f> is <math|C<rsup|1>> on <math|C> and <math|\<sigma\>> is
+    <math|C<rsup|1>> on <math|<around*|[|0,1|]>> we have by [theorem:
+    <reference|diff chain rule higher order class>] that\ 
+
+    <\equation>
+      <label|eq 16.286.12>f\<circ\>\<sigma\>:<around*|[|0,1|]>\<rightarrow\>Y<text|
+      is >C<rsup|1><text| on ><around*|[|0,1|]>
+    </equation>
+
+    and <math|\<forall\>t\<in\><around*|[|0,1|]>> that <math|\<sigma\>> is
+    Fréchet differentiable at <math|t> and <math|f> is differentiable at
+    <math|\<sigma\><around*|(|t|)>> so that by the chain rule [theorem:
+    <reference|diff chain rule>]
+
+    <\equation>
+      <label|eq 16.287.12>\<forall\>t\<in\><around*|[|0,1|]><text|
+      >f\<circ\>\<sigma\><text| is Fréchet differentiable at >t<text| with
+      >D<rsub|t><around*|(|f\<circ\>\<sigma\>|)>=D<rsub|\<sigma\><around*|(|t|)>>f\<circ\>D<rsub|t>\<sigma\>
+    </equation>
+
+    Let <math|t\<in\><around*|[|0,1|]>> then by the above and [theorem:
+    <reference|diff derivate and frechet differential>]
+    <math|f\<circ\>\<sigma\>> has a derivative at <math|t> and\ 
+
+    <\equation*>
+      <around*|(|f\<circ\>\<sigma\>|)><rprime|'><rsub|t>=D<rsub|t><around*|(|f\<circ\>\<sigma\>|)><around*|(|1|)>\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.287.12>]>><around*|(|D<rsub|\<sigma\><around*|(|t|)>>f\<circ\>D<rsub|t>\<sigma\>|)><around*|(|1|)>=D<rsub|\<sigma\><around*|(|t|)>>f<around*|(|D<rsub|\<sigma\>><around*|(|1|)>|)><below|=|<text|[eq:
+      <reference|eq 16.284.12>]>>D<rsub|\<sigma\><around*|(|t|)>>f<around*|(|y-x|)>
+    </equation*>
+
+    hence\ 
+
+    <\equation>
+      <label|eq 16.288.12>\<forall\>t\<in\><around*|[|0,1|]><text| we have
+      ><around*|(|f\<circ\>\<sigma\>|)><rprime|'><rsub|t>=D<rsub|\<sigma\><around*|(|t|)>>f<around*|(|y-x|)>
+    </equation>
+
+    As <math|f\<circ\>\<sigma\>> is <math|C<rsup|1>> on
+    <math|<around*|[|0,1|]>> it follows from [theorem: <reference|diff C^1
+    and derivates (1)>] that\ 
+
+    <\equation*>
+      <around*|(|f\<circ\>\<sigma\>|)><rprime|'>:<around*|[|0,1|]>\<rightarrow\>Y<text|
+      defined by ><around*|(|f\<circ\>\<sigma\>|)><rprime|'><around*|(|t|)>=<around*|(|f\<circ\>\<sigma\>|)><rprime|'><rsub|t><text|
+      is continuous>
+    </equation*>
+
+    Using then the fundamental theorem of calculus [theorem: <reference|diff
+    fundamental theorem of calculus (2)>] that
+
+    <\equation*>
+      <around*|(|f\<circ\>\<sigma\>|)><around*|(|1|)>-<around*|(|f\<circ\>\<sigma\>|)><around*|(|0|)>=<big|int><rsub|0><rsup|1><around*|(|f\<circ\>\<sigma\>|)><rprime|'>
+    </equation*>
+
+    which as <math|f<around*|(|x|)>=f<around*|(|x+0\<cdot\><around*|(|y-x|)>|)>=f<around*|(|\<sigma\><around*|(|0|)>|)>=<around*|(|f\<circ\>\<sigma\>|)><around*|(|0|)>>
+    and <math|f<around*|(|y|)>=f<around*|(|x+1\<cdot\><around*|(|y-x|)>|)>=f<around*|(|\<sigma\><around*|(|1|)>|)>=<around*|(|f\<circ\>\<sigma\>|)><around*|(|1|)>>
+    results in\ 
+
+    <\equation>
+      <label|eq 16.289.12>f<around*|(|x|)>-f<around*|(|y|)>=<big|int><rsub|0><rsup|1><around*|(|f\<circ\>\<sigma\>|)><rprime|'>
+    </equation>
+
+    Now <math|\<forall\>t\<in\><around*|[|0,1|]>> we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|<around*|(|f\<circ\>\<sigma\>|)><rprime|'><around*|(|t|)>|\<\|\|\>><rsub|Y>>|<cell|<below|=|<text|[eq:
+      <reference|eq 16.288.12>]>>>|<cell|<around*|\<\|\|\>|D<rsub|\<sigma\><around*|(|t|)>>f<around*|(|y-x|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|D<rsub|\<sigma\><around*|(|t|)>>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>>>|<row|<cell|>|<cell|<below|\<leqslant\>|t\<in\><around*|[|0,1|]>\<subseteq\>C\<wedge\>hypothesis>>|<cell|k\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>>>>>
+    </eqnarray*>
+
+    Using then [theorem: <reference|rieman integral properties> (4)] on the
+    above gives <math|<big|int><rsub|0><rsup|1><around*|(|f\<circ\>\<sigma\>|)><rprime|'>\<leqslant\><around*|(|k\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>|)>\<cdot\><around*|(|1-0|)>=k\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>>
+    which combined with [eq: <reference|eq 16.289.12>] proves finally that\ 
+
+    <\equation*>
+      f<around*|(|x|)>-f<around*|(|y|)>\<leqslant\>k\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>
+    </equation*>
+  </proof>
+
+  \;
+
+  <\theorem>
+    <label|diff mean value theorem (3)><dueto|Mean Value Theorem (III)>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
+    be a normed space, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    a Banach space, <math|A\<subseteq\>X>, <math|x,y\<in\>X> such that
+    <math|L<rsub|x,y>\<subseteq\>A> and <math|f:A\<rightarrow\>Y> a function
+    such that
+
+    <\enumerate>
+      <item><math|f> is Fréchet differentiable on <math|L<rsub|x,y>>
+
+      <item><math|D f:L<rsub|x,y>\<rightarrow\><around*|(|X,Y|)>> defined by
+      <math|D f<around*|(|z|)>=D<rsub|z>f> is continuous
+    </enumerate>
+
+    then\ 
+
+    <\equation*>
+      sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|\<zeta\>>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\|\<zeta\>\<in\>L<rsub|x,y>|}>|)><text|>
+    </equation*>
+
+    exists and
+
+    <\equation*>
+      <around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|\<zeta\>>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\|\<zeta\>\<in\>L<rsub|x,y>|}>|)>\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    As <math|f> is <math|C<rsup|1>> on <math|A> we have by [theorem:
+    <reference|diff C^n on a set condition>] that <math|f> is <math|1>-times
+    differentiable on <math|A> and that <math|D<rsup|<around*|[|1|]>>f:A\<rightarrow\>L<rsub|1><around*|[|X;Y|]>=L<around*|(|X,Y|)>>
+    defined by <math|D<rsup|<around*|[|1|]>>f<around*|(|x|)>=D<rsup|<around*|[|1|]>><rsub|x>f<below|=|def>D<rsub|x>f>.
+    Hence we have that\ 
+
+    <\equation*>
+      f<text| is >1<text|-times differentiable on >A
+    </equation*>
+
+    and\ 
+
+    <\equation*>
+      D f:A\<rightarrow\>L<around*|(|X,Y|)><text| defined by >D
+      f<around*|(|x|)>=D<rsub|x>f<text| is continuous.>
+    </equation*>
+
+    Further by \ [lemma: <reference|lemma 16.144.201>] <math|L<rsub|x,y>> is
+    compact so that by [theorem: <reference|compact and continuous
+    functions>] <math|D f<around*|(|L<rsub|x,y>|)>> is compact. Applying then
+    [theorem: <reference|compact and bounded>] proves that <math|D
+    f<around*|(|L<rsub|x,y>|)>> is bounded, hence there exist a
+    <math|M\<in\>\<bbb-R\><rsup|+>> such that
+    <math|\<forall\>L<rsub|1>,L<rsub|2>\<in\>D f<around*|(|L<rsub|x,y>|)>> we
+    have \ <math|<around*|\<\|\|\>|L<rsub|1>-L<rsub|2>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<leqslant\>M>.
+    Let <math|\<zeta\>\<in\>L<rsub|x,y>\<subseteq\>A> then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|D
+      f<around*|(|\<zeta\>|)>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>>|<cell|=>|<cell|<around*|\<\|\|\>|D
+      f<around*|(|\<zeta\>|)>-D f<around*|(|x|)>+D
+      f<around*|(|x|)>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|D
+      f<around*|(|\<zeta\>|)>-D f<around*|(|x|)>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>+<around*|\<\|\|\>|D
+      f<around*|(|x|)>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>>>|<row|<cell|>|<cell|<below|\<leqslant\>|\<zeta\>,x\<in\>L<rsub|x,y>\<Rightarrow\>D
+      f<around*|(|x|)>,D f<around*|(|\<zeta\>|)>\<in\>D
+      f<around*|(|L<rsub|x,y>|)>>>|<cell|M+<around*|\<\|\|\>|D
+      f<around*|(|x|)>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>>>>>
+    </eqnarray*>
+
+    proving that <math|<around*|{|<around*|\<\|\|\>|D<rsub|\<zeta\>>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\|\<zeta\>\<in\>L<rsub|x,y>|}>=<around*|{|<around*|\<\|\|\>|D
+    f<around*|(|\<zeta\>|)>|\<\|\|\>>\|\<zeta\>\<in\>L<rsub|x,y>|}>> is
+    bounded above by <math|><math|<rigid|M+<around*|\<\|\|\>|D
+    f<around*|(|x|)>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>>>. As
+    <math|\<bbb-R\>> is conditionally complete [see theorem:
+    <reference|complex RC is conditional complete>] and
+    <math|<rigid|<around*|{|<around*|\<\|\|\>|D<rsub|\<zeta\>>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\|\<zeta\>\<in\>L<rsub|x,y>|}>\<neq\>\<varnothing\>>>
+    [because <math|x\<in\>L<rsub|x,y>\<Rightarrow\>L<rsub|x,y>\<neq\>\<varnothing\>>]
+    it follows that\ 
+
+    <\equation*>
+      sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|\<zeta\>>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\|\<zeta\>\<in\>L<rsub|x,y>|}>|)><text|
+      exist>
+    </equation*>
+
+    As <math|L<rsub|x,y>> is convex [see lemma: <reference|lemma
+    16.144.201>], <math|x,y\<in\>L<rsub|x,y>>,
+    <math|L<rsub|x,y>\<subseteq\>A> and <math|\<forall\>\<zeta\>\<in\>L<rsub|x,y>>
+
+    <\equation*>
+      <around*|\<\|\|\>|D<rsub|\<zeta\>>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<leqslant\>sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|\<zeta\>>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\|\<zeta\>\<in\>L<rsub|x,y>|}>|)><rsub|>
+    </equation*>
+
+    it follows from [theorem: <reference|diff mean value theorem (2)>] that\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|x|)>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<leqslant\>sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|\<zeta\>>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\|\<zeta\>\<in\>L<rsub|x,y>|}>|)>\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>
+    </equation*>
+  </proof>
+
   \;
 </body>
 
@@ -10822,6 +11025,7 @@
     <associate|diff f is of class C^n if D^1f u=is of class C^n-1
     (1)|<tuple|86|108>>
     <associate|diff higher order differentiation classes|<tuple|88|111>>
+    <associate|diff mean value theorem (3)|<tuple|90|?>>
     <associate|diff mean value theorem (5)|<tuple|36|45>>
     <associate|diff mean value theorem (6)|<tuple|38|50>>
     <associate|diff mean value theorem (7)|<tuple|39|50>>
@@ -10967,7 +11171,7 @@
     <associate|eq 16.209.201|<tuple|135|48>>
     <associate|eq 16.211.202|<tuple|136|49>>
     <associate|eq 16.261.222|<tuple|74|29>>
-    <associate|eq 16.277.12|<tuple|377|?>>
+    <associate|eq 16.277.12|<tuple|377|117>>
     <associate|eq 16.280.125.1|<tuple|75|30>>
     <associate|eq 16.280.126|<tuple|100|36>>
     <associate|eq 16.280.127|<tuple|137|51>>
@@ -10978,10 +11182,16 @@
     <associate|eq 16.282.126|<tuple|102|36>>
     <associate|eq 16.282.127|<tuple|139|52>>
     <associate|eq 16.283.126|<tuple|103|36>>
+    <associate|eq 16.284.12|<tuple|378|118>>
     <associate|eq 16.284.124|<tuple|82|31>>
+    <associate|eq 16.285.12|<tuple|379|118>>
     <associate|eq 16.285.124|<tuple|80|31>>
+    <associate|eq 16.286.12|<tuple|380|118>>
     <associate|eq 16.286.124|<tuple|81|31>>
+    <associate|eq 16.287.12|<tuple|381|118>>
+    <associate|eq 16.288.12|<tuple|382|118>>
     <associate|eq 16.288.125|<tuple|83|31>>
+    <associate|eq 16.289.12|<tuple|383|118>>
     <associate|eq 16.289.124|<tuple|84|32>>
     <associate|eq 16.290.126|<tuple|85|32>>
     <associate|eq 16.291.124|<tuple|87|33>>
@@ -11177,7 +11387,7 @@
     <associate|lemma 16.106.194|<tuple|25|26>>
     <associate|lemma 16.107.194|<tuple|26|27>>
     <associate|lemma 16.108.194|<tuple|27|28>>
-    <associate|lemma 16.135.200|<tuple|89|?>>
+    <associate|lemma 16.135.200|<tuple|89|117>>
     <associate|lemma 16.148.201|<tuple|35|44>>
     <associate|lemma 16.190.122|<tuple|28|29>>
     <associate|lemma 16.201.126|<tuple|30|35>>
