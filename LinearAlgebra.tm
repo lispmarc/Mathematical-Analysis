@@ -8860,7 +8860,7 @@
     </equation*>
 
     <math|E=<around*|{|e<rsub|1>,\<ldots\>,e<rsub|n>|}>> is callled the
-    <with|font-series|bold|canonical basis for <math|\<bbb-R\><rsup|n>>.>
+    <with|font-series|bold|canonical basis for <math|F<rsup|n>>.>
   </theorem>
 
   <\proof>
@@ -25325,7 +25325,7 @@
   <\collection>
     <associate|chapter-nr|10>
     <associate|item-nr|4>
-    <associate|page-first|343>
+    <associate|page-first|345>
     <associate|page-medium|papyrus>
     <associate|par-first|0tab>
     <associate|section-nr|5>
