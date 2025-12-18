@@ -21621,7 +21621,7 @@
       <math|<rigid|D<rsub|L>\<tau\>\<in\>L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>>>
       is defined by <math|D<rsub|L>\<tau\><around*|(|H|)>=-L\<circ\>H\<circ\>L>.
 
-      <item>TODO Using (2) we have that <math|\<forall\>L\<in\>\<cal-G\>L<around*|(|X|)>>
+      <item>Using (2) we have that <math|\<forall\>L\<in\>\<cal-G\>L<around*|(|X|)>>
       <math|\<tau\>> has a Fréchet differential <math|D<rsub|L>\<tau\>> at
       <math|L> where <math|<rigid|D<rsub|L>\<tau\>\<in\>L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>>>
       is defined by <math|D<rsub|L>\<tau\><around*|(|H|)>=-L\<circ\>H\<circ\>L>.
@@ -21700,11 +21700,11 @@
       Further if <math|H\<in\>L<around*|(|X,X|)>> then\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<varphi\><rsub|L,K><around*|(|H|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>|<cell|=>|<cell|<around*|\<\|\|\>|-L\<circ\>H\<circ\>K|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|-L\<circ\><around*|(|H\<circ\>K|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[theorem:
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<varphi\><rsub|L,K><around*|(|H|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>|<cell|=>|<cell|<around*|\<\|\|\>|-L\<circ\>H\<circ\>K|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|-L\<circ\><around*|(|H\<circ\>K|)>|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[theorem:
         <reference|continuity composition of continuous linear
-        mapping>]>>>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X\<less\>X|)>>\<cdot\><around*|\<\|\|\>|H\<circ\>K|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[theorem:
+        mapping>]>><rsub|>>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X\<less\>X|)>>\<cdot\><around*|\<\|\|\>|H\<circ\>K|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[theorem:
         <reference|continuity composition of continuous linear
-        mapping>]>>>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X\<less\>X|)>>\<cdot\><around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|K|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|K|\<\|\|\>><rsub|L<around*|(|X,X|)>>|)>\<cdot\><around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>>>
+        mapping>]>><rsub|>>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X\<less\>X|)>>\<cdot\><around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|K|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|K|\<\|\|\>><rsub|L<around*|(|X,X|)>>|)>\<cdot\><around*|\<\|\|\>|H|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>>>
       </eqnarray*>
 
       hence, using [theorems: <reference|continuity linear mapping (1)> and
@@ -21757,8 +21757,8 @@
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<varphi\><around*|(|L,K|)>|\<\|\|\>><rsub|\|L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>><rsub|>>|<cell|\<equallim\><rsub|<text|[eq:
-        <reference|eq 16.343.133>]>>>|<cell|<around*|\<\|\|\>|\<varphi\><rsub|L,K>|\<\|\|\>><rsub|L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>>>>|<row|<cell|>|<cell|\<leqslant\><rsub|<text|[eq:
-        <reference|eq 16.342.133>]>>>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|K|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>>>
+        <reference|eq 16.343.133>]>>>|<cell|<around*|\<\|\|\>|\<varphi\><rsub|L,K>|\<\|\|\>><rsub|L<around*|(|L<around*|(|X,X|)>,L<around*|(|X,X|)>|)>>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[eq:
+        <reference|eq 16.342.133>]>><rsub|>>|<cell|<around*|\<\|\|\>|L|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<cdot\><around*|\<\|\|\>|K|\<\|\|\>><rsub|L<around*|(|X,X|)>>>>>>
       </eqnarray*>
 
       which by [theorem: <reference|continuity multilinear mapping (1)>]
@@ -21780,63 +21780,110 @@
       <math|H\<in\>L<around*|(|X,X|)>> we have\ 
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<around*|(|<around*|(|\<varphi\>\<circ\>\<chi\>\<circ\>\<tau\>|)><around*|(|L|)>|)><around*|(|H|)>>|<cell|=>|<cell|<around*|(|\<varphi\><around*|(|\<chi\><around*|(|\<tau\><around*|(|L|)>|)>|)>|)><around*|(|H|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<varphi\><around*|(|\<chi\><around*|(|L<rsup|-1>|)>|)>|)><around*|(|H|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<varphi\><around*|(|L<rsup|-1>,L<rsup|-1>|)>|)><around*|(|H|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
-        <reference|eq 16.343.133>>>>|<cell|\<varphi\><rsub|L<rsup|-1>,L<rsup|-1>><around*|(|H|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <tformat|<table|<row|<cell|<around*|(|<around*|(|\<varphi\>\<circ\>\<chi\>|)><around*|(|L|)>|)><around*|(|H|)>>|<cell|=>|<cell|<around*|(|\<varphi\><around*|(|\<chi\><around*|(|L|)>|)>|)><around*|(|H|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<varphi\><around*|(|L,L|)>|)><around*|(|H|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.343.133>>>>|<cell|\<varphi\><rsub|L,L><around*|(|H|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
         <reference|eq 16.341.133>]>>>|<cell|-L\<circ\>H\<circ\>L>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
         <reference|eq 16.340.134>]>>>|<cell|D<rsub|L>\<tau\><around*|(|H|)>>>>>
       </eqnarray*>
 
       proving that <math|\<forall\>L\<in\>\<cal-G\>L<around*|(|X|)>>
-      <math|><math|<around*|(|\<varphi\>\<circ\>\<chi\>\<circ\>\<tau\>|)><around*|(|L|)>=D<rsub|L>\<tau\>=D
+      <math|><math|<around*|(|\<varphi\>\<circ\>\<chi\>|)><around*|(|L|)>=D<rsub|L>\<tau\>=D
       <rsup|<around*|[|1|]>>\<tau\><around*|(|L|)>>. Hence we have\ 
 
       <\equation>
         <label|eq 16.346.134.1>D<rsup|<around*|[|1|]>>
-        \<tau\>=\<varphi\>\<circ\>\<chi\>\<circ\>\<tau\>
+        \<tau\>=\<varphi\>\<circ\>\<chi\>
       </equation>
 
-      We use now induction for the final part of the proof for (3). So define\ 
+      As <math|\<varphi\>> and <math|\<chi\>> are <math|C<rsup|\<infty\>>>
+      [see eqs: <reference|eq 16.340.133>, <reference|eq 16.344.133>] it
+      follows from [theorem: <reference|diff chain rule higher order>] that
+      <math|\<varphi\>\<circ\>\<chi\>> is <math|C<rsup|\<infty\>>> on
+      <math|\<cal-G\>L<around*|(|X|)>> so that\ 
 
       <\equation*>
-        S=<around*|{|n\<in\>\<bbb-N\><rsub|0>\|\<tau\><text| is
-        >C<rsup|n><text| on >\<cal-G\>L<around*|(|X|)>|}>
+        D<rsup|<around*|[|1|]>>\<tau\><text| is >C<rsup|\<infty\>><text| on
+        >\<cal-G\>L<around*|(|X|)>
       </equation*>
-
-      then we have:
-
-      <\description>
-        <item*|<math|0\<in\>S>>As <math|\<forall\>L\<in\>\<cal-G\>L<around*|(|X|)>
-        \<tau\>> is Fréchet differentiable at <math|L>, it follows by
-        [theorem: <reference|diff differentiable function is continuous>]
-        that <math|\<tau\>> is continuous. Hence <math|\<tau\>> is
-        <math|C<rsup|0>> on <math|\<cal-G\>L<around*|(|X|)>> proving that
-        <math|0\<in\>S>.
-
-        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>By [eqs: <reference|eq
-        16.340.133>, <reference|eq 16.344.133>] <math|\<varphi\>,\<chi\>> are
-        <math|C<rsup|\<infty\>>> on their domains and, as <math|n\<in\>S>,
-        <math|\<tau\><text| is \ <math|C<rsup|n>>>> on
-        <math|\<cal-G\>L<around*|(|X|)>>. So we can use the chain rule [see
-        theorem: <reference|diff chain rule higher order class>] to prove
-        that <math|\<varphi\>\<circ\>\<chi\>\<circ\>\<tau\>> is
-        <math|C<rsup|n>> on <math|\<cal-G\>L<around*|(|X|)>>. Hence by [eq:
-        <reference|eq 16.346.134.1>] <math|D<rsup|<around*|[|1|]>>\<tau\>> is
-        <math|C<rsup|n>> on <math|\<cal-G\>L<around*|(|X|)>>, which by
-        [theorem: <reference|diff f is of class C^n if D^1f u=is of class
-        C^n-1>] means that <math|\<tau\>> is <math|C<rsup|n+1>> on
-        <math|\<cal-G\>L<around*|(|X|)>>. So that\ 
-
-        <\equation*>
-          n+1\<in\>S
-        </equation*>
-      </description>
-
-      By mathematical induction <math|S=\<bbb-N\>> so that <math|\<tau\>> is
-      <math|C<rsup|\<infty\>>> on <math|\<cal-G\>L<around*|(|X|)>>.
     </enumerate>
-
-    \;
   </proof>
+
+  We introduce now the concept of differentiable functions who have a
+  differentiable inverse.
+
+  <\definition>
+    <label|diff diffeomorphism><index|diff diffeomorphism>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|U> a open set in <math|X>, <math|V> a open set in
+    <math|Y> and <math|f:U\<rightarrow\>V> a function then we say that
+
+    <\enumerate>
+      <item><math|f> is a <with|font-series|bold|diffeomorphism> iff
+
+      <\enumerate>
+        <item><math|f:U\<rightarrow\>V> is a bijection
+
+        <item><math|f:U\<rightarrow\>Y > is differentiable on <math|U>
+
+        <item><math|f<rsup|-1>:V\<rightarrow\>X> is differentiable on
+        <math|V>
+      </enumerate>
+
+      <item><math|f> is a <with|font-series|bold|diffeomorphism of class
+      <math|C<rsup|n>>> where <math|n\<in\>\<bbb-N\><rsub|0><big|cup><around*|{|\<infty\>|}>>
+      iff
+
+      <\enumerate>
+        <item><math|f:U\<rightarrow\>V> is a bijection
+
+        <item><math|f:U\<rightarrow\>Y> is <math|C<rsup|n>> on <math|U>
+
+        <item><math|f<rsup|-1>:V\<rightarrow\>X> is <math|C<rsup|n>> on
+        <math|V>
+      </enumerate>
+    </enumerate>
+  </definition>
+
+  <\example>
+    <label|diff homeomorphism is a diffeomorphism of class C^0>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces then a homeomorphism <math|f:X\<rightarrow\>Y> is a
+    diffeomorphism of class <math|C<rsup|0>>
+  </example>
+
+  <\proof>
+    This follows trivially from the definitions of a homeomorphism
+    [definition: <reference|continuity homeomorphism>] and diffeomorphism of
+    class <math|C<rsup|0>> [definition: <reference|diff diffeomorphism>].
+  </proof>
+
+  <\example>
+    <label|diff linear isomorphism between Banach spaces are
+    diffeomorphisms>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be Banach spaces and <math|L:X\<rightarrow\>Y> a continuous linear
+    isomorphism [in other words <math|L\<in\>L<around*|(|X,Y|)>> and <math|L>
+    is a bijection] then <math|L> is a diffeomorphism of class
+    <math|C<rsup|\<infty\>>>.
+  </example>
+
+  <\proof>
+    First using [theorem: <reference|complete continuous linear isomorphism
+    is a homeomorphism>] is a homeomorphism so that <math|L,L<rsup|-1>> are
+    continuous. Taking in account [theorem: <reference|linear mapping inverse
+    of a isomorphism>] we have also that <math|L<rsup|-1>> is linear. So
+    <math|L\<in\>L<around*|(|X,Y|)>> and <math|L<rsup|-1>\<in\>L<around*|(|Y,X|)>>.
+    Finally by [example: <reference|diff linear mapping is infinite times
+    differentiable>] it follows that <math|L,L<rsup|-1>> are
+    <math|C<rsup|\<infty\>>> on their domains proving that <math|L> is a
+    diffeomorphism of class <math|C<rsup|\<infty\>>>.
+  </proof>
+
+  \;
+
+  \;
 
   \;
 
@@ -21940,6 +21987,7 @@
     <associate|auto-66|<tuple|toplinear isomorphism|?>>
     <associate|auto-67|<tuple|<with|mode|<quote|math>|\<cal-G\>L<around*|(|X|)>>|?>>
     <associate|auto-68|<tuple|<with|mode|<quote|math>|H<rsup|n>>|?>>
+    <associate|auto-69|<tuple|diff diffeomorphism|?>>
     <associate|auto-7|<tuple|16.1.2|?>>
     <associate|auto-8|<tuple|16.1.3|?>>
     <associate|auto-9|<tuple|differentiability|?>>
@@ -22014,6 +22062,7 @@
     <associate|diff derivative is local (1)|<tuple|16.74|?>>
     <associate|diff derivative of constant|<tuple|16.25|?>>
     <associate|diff derivative of f/g|<tuple|16.115|?>>
+    <associate|diff diffeomorphism|<tuple|16.305|?>>
     <associate|diff differentiability|<tuple|16.45|?>>
     <associate|diff differentiability alternative
     definitions|<tuple|16.62|?>>
@@ -22069,6 +22118,8 @@
     <associate|diff higher order partial differentiation|<tuple|16.255|?>>
     <associate|diff higher order partial differentiation is
     symmetric|<tuple|16.263|?>>
+    <associate|diff homeomorphism is a diffeomorphism of class
+    C^0|<tuple|16.306|?>>
     <associate|diff identity function is differentiable|<tuple|16.54|?>>
     <associate|diff identity function is infinite times
     differentiable|<tuple|16.175|?>>
@@ -22077,6 +22128,8 @@
     <associate|diff inverse mapping on GL(X)|<tuple|16.304|?>>
     <associate|diff limit of a function|<tuple|16.11|?>>
     <associate|diff line segment [0,1]|<tuple|16.222|?>>
+    <associate|diff linear isomorphism between Banach spaces are
+    diffeomorphisms|<tuple|16.307|?>>
     <associate|diff linear mapping is infinite times
     differentiable|<tuple|16.174|?>>
     <associate|diff linear mappings are differentiable|<tuple|16.53|?>>
@@ -22450,7 +22503,6 @@
     <associate|eq 16.325.131|<tuple|16.424|?>>
     <associate|eq 16.327.130|<tuple|16.426|?>>
     <associate|eq 16.327.134|<tuple|16.427|?>>
-    <associate|eq 16.327\<point\>134|<tuple|16.428|?>>
     <associate|eq 16.329.131|<tuple|16.428|?>>
     <associate|eq 16.329.133|<tuple|16.429|?>>
     <associate|eq 16.33.1|<tuple|16.43|?>>
