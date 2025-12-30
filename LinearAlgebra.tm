@@ -3008,6 +3008,39 @@
     </enumerate>
   </definition>
 
+  <\example>
+    <label|vector space sub-space example>Let
+    <math|<around*|\<langle\>|V,\<oplus\>,\<odot\>|\<rangle\>>> be a vector
+    space over <math|<around*|\<langle\>|F,+,\<cdot\>|\<rangle\>>>,
+    <math|x\<in\>V> then <math|W=<around*|{|t\<cdot\>x\|t\<in\>F|}>> is a
+    sub-space of <math|V>
+  </example>
+
+  <\proof>
+    Let <math|1> be the multiplicative neutral element in <math|V> then
+    <math|x=1\<odot\>x> which proves that <math|x\<in\>W> hence\ 
+
+    <\equation*>
+      w\<neq\>\<varnothing\>
+    </equation*>
+
+    Let <math|\<alpha\>\<in\>F>, <math|y,z\<in\>W> then there exist
+    <math|\<lambda\><rsub|y>,\<lambda\><rsub|z>\<in\>F> such that
+    <math|y=\<lambda\><rsub|y>\<odot\>x>,
+    <math|z=\<lambda\><rsub|z>\<odot\>x> so that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|y+\<alpha\>\<odot\>z>|<cell|=>|<cell|\<lambda\><rsub|y>\<odot\>x+\<alpha\>\<odot\><around*|(|\<lambda\><rsub|z>\<odot\>x|)>>>|<row|<cell|>|<cell|=>|<cell|\<lambda\><rsub|y>\<odot\>x+<around*|(|\<alpha\>\<cdot\>\<lambda\><rsub|z>|)>\<odot\>x>>|<row|<cell|>|<cell|=>|<cell|\<lambda\><rsub|y>\<odot\>x+<around*|(|\<lambda\><rsub|z>\<cdot\>\<alpha\>|)>\<odot\>x>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<lambda\><rsub|y>+\<lambda\><rsub|z>\<cdot\>\<alpha\>|)>\<odot\>x>>>>
+    </eqnarray*>
+
+    which proves, as <math|><math|\<lambda\><rsub|y>+\<lambda\><rsub|z>\<cdot\>\<alpha\>\<in\>F>,
+    that
+
+    <\equation*>
+      y+\<alpha\>\<odot\>z\<in\>W
+    </equation*>
+  </proof>
+
   <\theorem>
     <label|vector space sub-space is a vector space>Let
     <math|<around*|\<langle\>|V,\<oplus\>,\<odot\>|\<rangle\>>> be a vector
@@ -25325,7 +25358,7 @@
   <\collection>
     <associate|chapter-nr|10>
     <associate|item-nr|4>
-    <associate|page-first|345>
+    <associate|page-first|343>
     <associate|page-medium|papyrus>
     <associate|par-first|0tab>
     <associate|section-nr|5>
@@ -25402,87 +25435,87 @@
     <associate|auto-7|<tuple|permutation|?>>
     <associate|auto-8|<tuple|<with|mode|<quote|math>|\<sigma\>>|?>>
     <associate|auto-9|<tuple|<with|mode|<quote|math>|S<rsub|I>>|?>>
-    <associate|basis|<tuple|11.135|?>>
-    <associate|basis F^n|<tuple|11.166|?>>
-    <associate|basis Kronecker delta|<tuple|11.163|?>>
-    <associate|basis alternative (1)|<tuple|11.138|?>>
-    <associate|basis alternative (2)|<tuple|11.140|?>>
-    <associate|basis alternative (3)|<tuple|11.139|?>>
+    <associate|basis|<tuple|11.136|?>>
+    <associate|basis F^n|<tuple|11.167|?>>
+    <associate|basis Kronecker delta|<tuple|11.164|?>>
+    <associate|basis alternative (1)|<tuple|11.139|?>>
+    <associate|basis alternative (2)|<tuple|11.141|?>>
+    <associate|basis alternative (3)|<tuple|11.140|?>>
     <associate|basis card(S) \<gtr\> dim(V) then S is linear
-    dependent|<tuple|11.160|?>>
-    <associate|basis dimension|<tuple|11.151|?>>
-    <associate|basis dimension of trivial space|<tuple|11.152|?>>
-    <associate|basis dimensionality|<tuple|11.150|?>>
-    <associate|basis exist|<tuple|11.147|?>>
-    <associate|basis existence (1)|<tuple|11.144|?>>
-    <associate|basis extending linear independent set|<tuple|11.145|?>>
-    <associate|basis extending linear independent set (1)|<tuple|11.156|?>>
-    <associate|basis finite alternative (1)|<tuple|11.141|?>>
-    <associate|basis finite alternative (2)|<tuple|11.142|?>>
-    <associate|basis finite dimensional spanning set|<tuple|11.157|?>>
+    dependent|<tuple|11.161|?>>
+    <associate|basis dimension|<tuple|11.152|?>>
+    <associate|basis dimension of trivial space|<tuple|11.153|?>>
+    <associate|basis dimensionality|<tuple|11.151|?>>
+    <associate|basis exist|<tuple|11.148|?>>
+    <associate|basis existence (1)|<tuple|11.145|?>>
+    <associate|basis extending linear independent set|<tuple|11.146|?>>
+    <associate|basis extending linear independent set (1)|<tuple|11.157|?>>
+    <associate|basis finite alternative (1)|<tuple|11.142|?>>
+    <associate|basis finite alternative (2)|<tuple|11.143|?>>
+    <associate|basis finite dimensional spanning set|<tuple|11.158|?>>
     <associate|basis finite dimensional vector space is a linear independent
-    family|<tuple|11.154|?>>
-    <associate|basis finite dimensions|<tuple|11.148|?>>
-    <associate|basis finite scaling|<tuple|11.143|?>>
-    <associate|basis infinite dimensions|<tuple|11.149|?>>
-    <associate|basis of a field|<tuple|11.159|?>>
-    <associate|basis of field examples|<tuple|11.161|?>>
-    <associate|basis of trivial vector space|<tuple|11.137|?>>
-    <associate|basis real complex vector space|<tuple|11.162|?>>
-    <associate|basis reducing spanning set to a basis|<tuple|11.146|?>>
-    <associate|basis span finite family|<tuple|11.153|?>>
-    <associate|basis sub-space|<tuple|11.158|?>>
-    <associate|basis sum of delta|<tuple|11.164|?>>
-    <associate|basis sum of delta (1)|<tuple|11.165|?>>
-    <associate|determinant (y,(x..))|<tuple|11.304|?>>
-    <associate|determinant (y,x1,..,xi-1...)|<tuple|11.301|?>>
-    <associate|determinant adjoint|<tuple|11.319|?>>
+    family|<tuple|11.155|?>>
+    <associate|basis finite dimensions|<tuple|11.149|?>>
+    <associate|basis finite scaling|<tuple|11.144|?>>
+    <associate|basis infinite dimensions|<tuple|11.150|?>>
+    <associate|basis of a field|<tuple|11.160|?>>
+    <associate|basis of field examples|<tuple|11.162|?>>
+    <associate|basis of trivial vector space|<tuple|11.138|?>>
+    <associate|basis real complex vector space|<tuple|11.163|?>>
+    <associate|basis reducing spanning set to a basis|<tuple|11.147|?>>
+    <associate|basis span finite family|<tuple|11.154|?>>
+    <associate|basis sub-space|<tuple|11.159|?>>
+    <associate|basis sum of delta|<tuple|11.165|?>>
+    <associate|basis sum of delta (1)|<tuple|11.166|?>>
+    <associate|determinant (y,(x..))|<tuple|11.305|?>>
+    <associate|determinant (y,x1,..,xi-1...)|<tuple|11.302|?>>
+    <associate|determinant adjoint|<tuple|11.320|?>>
     <associate|determinant adjoint in a one dimensional
-    space|<tuple|11.320|?>>
-    <associate|determinant adjoint properties|<tuple|11.321|?>>
+    space|<tuple|11.321|?>>
+    <associate|determinant adjoint properties|<tuple|11.322|?>>
     <associate|determinant construct of skew symmetric
-    mapping|<tuple|11.288|?>>
-    <associate|determinant definition|<tuple|11.310|?>>
-    <associate|determinant definition (condition)|<tuple|11.309|?>>
-    <associate|determinant definition alternative|<tuple|11.311|?>>
-    <associate|determinant delta upperscore|<tuple|11.316|?>>
-    <associate|determinant delta upperscore property|<tuple|11.318|?>>
-    <associate|determinant det(L) properties|<tuple|11.314|?>>
-    <associate|determinant determinant insert|<tuple|11.302|?>>
-    <associate|determinant determinant underscore|<tuple|11.301|?>>
-    <associate|determinant determinant underscore (1)|<tuple|11.303|?>>
+    mapping|<tuple|11.289|?>>
+    <associate|determinant definition|<tuple|11.311|?>>
+    <associate|determinant definition (condition)|<tuple|11.310|?>>
+    <associate|determinant definition alternative|<tuple|11.312|?>>
+    <associate|determinant delta upperscore|<tuple|11.317|?>>
+    <associate|determinant delta upperscore property|<tuple|11.319|?>>
+    <associate|determinant det(L) properties|<tuple|11.315|?>>
+    <associate|determinant determinant insert|<tuple|11.303|?>>
+    <associate|determinant determinant underscore|<tuple|11.302|?>>
+    <associate|determinant determinant underscore (1)|<tuple|11.304|?>>
     <associate|determinant determinant underscore
-    equivalence|<tuple|11.305|?>>
-    <associate|determinant finite composition|<tuple|11.315|?>>
-    <associate|determinant function and linear mapping|<tuple|11.306|?>>
-    <associate|determinant function and linear mapping (1)|<tuple|11.307|?>>
-    <associate|determinant identity function|<tuple|11.312|?>>
-    <associate|determinant in one dimensional space|<tuple|11.313|?>>
-    <associate|determinant inverse of linear mapping|<tuple|11.322|?>>
-    <associate|determinant lemma 11.261|<tuple|11.317|?>>
-    <associate|determinant mapping|<tuple|11.296|?>>
-    <associate|determinant mapping existence of non trivial|<tuple|11.298|?>>
+    equivalence|<tuple|11.306|?>>
+    <associate|determinant finite composition|<tuple|11.316|?>>
+    <associate|determinant function and linear mapping|<tuple|11.307|?>>
+    <associate|determinant function and linear mapping (1)|<tuple|11.308|?>>
+    <associate|determinant identity function|<tuple|11.313|?>>
+    <associate|determinant in one dimensional space|<tuple|11.314|?>>
+    <associate|determinant inverse of linear mapping|<tuple|11.323|?>>
+    <associate|determinant lemma 11.261|<tuple|11.318|?>>
+    <associate|determinant mapping|<tuple|11.297|?>>
+    <associate|determinant mapping existence of non trivial|<tuple|11.299|?>>
     <associate|determinant non zero determinant mappings are multiples of
-    each other|<tuple|11.300|?>>
-    <associate|determinant of a matrix with unit cross|<tuple|11.375|?>>
+    each other|<tuple|11.301|?>>
+    <associate|determinant of a matrix with unit cross|<tuple|11.376|?>>
     <associate|determinant of matrix and linear
-    transformation|<tuple|11.358|?>>
+    transformation|<tuple|11.359|?>>
     <associate|determinant permutation applied on n-linear
-    function|<tuple|11.286|?>>
+    function|<tuple|11.287|?>>
     <associate|determinant skew symetric functions and determinant
-    function|<tuple|11.299|?>>
+    function|<tuple|11.300|?>>
     <associate|determinant skew symmetric mappings is only determined by
-    values on the basis (1)|<tuple|11.294|?>>
+    values on the basis (1)|<tuple|11.295|?>>
     <associate|determinant skew symmetric mappings is only determined by
-    values on the basis (2)|<tuple|11.295|?>>
-    <associate|determinant skew-symmetric|<tuple|11.284|?>>
-    <associate|determinant skew-symmetric condition|<tuple|11.290|?>>
-    <associate|determinant skew-symmetric condition (1)|<tuple|11.291|?>>
-    <associate|determinant skew-symmetric mapping and basis|<tuple|11.293|?>>
-    <associate|determinant skew-symmetric property (1)|<tuple|11.292|?>>
+    values on the basis (2)|<tuple|11.296|?>>
+    <associate|determinant skew-symmetric|<tuple|11.285|?>>
+    <associate|determinant skew-symmetric condition|<tuple|11.291|?>>
+    <associate|determinant skew-symmetric condition (1)|<tuple|11.292|?>>
+    <associate|determinant skew-symmetric mapping and basis|<tuple|11.294|?>>
+    <associate|determinant skew-symmetric property (1)|<tuple|11.293|?>>
     <associate|determinant skew-symmetric/symmetric n-linear
-    function|<tuple|11.285|?>>
-    <associate|determinant symmetric|<tuple|11.283|?>>
+    function|<tuple|11.286|?>>
+    <associate|determinant symmetric|<tuple|11.284|?>>
     <associate|eq 11.081.94|<tuple|11.118|?>>
     <associate|eq 11.1.054|<tuple|11.1|?>>
     <associate|eq 11.10.054|<tuple|11.15|?>>
@@ -25778,263 +25811,263 @@
     <associate|eq 11.97.125|<tuple|11.101|?>>
     <associate|eq 11.98.094|<tuple|11.135|?>>
     <associate|eq 11.99.094|<tuple|11.136|?>>
-    <associate|faculity|<tuple|11.219|?>>
-    <associate|field (-1).(-1)|<tuple|11.273|?>>
-    <associate|field (-1).f=-f|<tuple|11.275|?>>
-    <associate|field (-1).x=-x|<tuple|11.276|?>>
-    <associate|field (-1)^-1=-1|<tuple|11.274|?>>
-    <associate|field (-1)^n.f|<tuple|11.282|?>>
-    <associate|field -1|<tuple|11.272|?>>
-    <associate|field power|<tuple|11.277|?>>
-    <associate|field power of -1 properties|<tuple|11.280|?>>
-    <associate|field power of 1 or -1|<tuple|11.279|?>>
-    <associate|field power property|<tuple|11.278|?>>
-    <associate|field {-1,1}xF|<tuple|11.281|?>>
-    <associate|finite distinct empty set|<tuple|11.89|?>>
-    <associate|finite distinct set|<tuple|11.83|?>>
-    <associate|finite distinct set existence|<tuple|11.88|?>>
-    <associate|finite distinct set inclusion|<tuple|11.90|?>>
-    <associate|finite distinct set index bijection|<tuple|11.91|?>>
-    <associate|finite distinct set properties|<tuple|11.84|?>>
-    <associate|lemma 11.216.205|<tuple|11.232|?>>
-    <associate|linear (in)dependency properties (1)|<tuple|11.122|?>>
-    <associate|linear Steinitz (1)|<tuple|11.124|?>>
-    <associate|linear Steinitz (2)|<tuple|11.125|?>>
-    <associate|linear Steinitz lemma|<tuple|11.123|?>>
-    <associate|linear combination|<tuple|11.95|?>>
-    <associate|linear combination (1)|<tuple|11.96|?>>
-    <associate|linear combination (3)|<tuple|11.97|?>>
-    <associate|linear dependendent family|<tuple|11.126|?>>
-    <associate|linear dependent family alternative|<tuple|11.127|?>>
-    <associate|linear dependent family alternative (1)|<tuple|11.128|?>>
-    <associate|linear dependent family condition|<tuple|11.129|?>>
-    <associate|linear dependent family set|<tuple|11.130|?>>
-    <associate|linear dependent finite set|<tuple|11.116|?>>
-    <associate|linear dependent set|<tuple|11.113|?>>
-    <associate|linear dependent set alternative condition|<tuple|11.115|?>>
+    <associate|faculity|<tuple|11.220|?>>
+    <associate|field (-1).(-1)|<tuple|11.274|?>>
+    <associate|field (-1).f=-f|<tuple|11.276|?>>
+    <associate|field (-1).x=-x|<tuple|11.277|?>>
+    <associate|field (-1)^-1=-1|<tuple|11.275|?>>
+    <associate|field (-1)^n.f|<tuple|11.283|?>>
+    <associate|field -1|<tuple|11.273|?>>
+    <associate|field power|<tuple|11.278|?>>
+    <associate|field power of -1 properties|<tuple|11.281|?>>
+    <associate|field power of 1 or -1|<tuple|11.280|?>>
+    <associate|field power property|<tuple|11.279|?>>
+    <associate|field {-1,1}xF|<tuple|11.282|?>>
+    <associate|finite distinct empty set|<tuple|11.90|?>>
+    <associate|finite distinct set|<tuple|11.84|?>>
+    <associate|finite distinct set existence|<tuple|11.89|?>>
+    <associate|finite distinct set inclusion|<tuple|11.91|?>>
+    <associate|finite distinct set index bijection|<tuple|11.92|?>>
+    <associate|finite distinct set properties|<tuple|11.85|?>>
+    <associate|lemma 11.216.205|<tuple|11.233|?>>
+    <associate|linear (in)dependency properties (1)|<tuple|11.123|?>>
+    <associate|linear Steinitz (1)|<tuple|11.125|?>>
+    <associate|linear Steinitz (2)|<tuple|11.126|?>>
+    <associate|linear Steinitz lemma|<tuple|11.124|?>>
+    <associate|linear combination|<tuple|11.96|?>>
+    <associate|linear combination (1)|<tuple|11.97|?>>
+    <associate|linear combination (3)|<tuple|11.98|?>>
+    <associate|linear dependendent family|<tuple|11.127|?>>
+    <associate|linear dependent family alternative|<tuple|11.128|?>>
+    <associate|linear dependent family alternative (1)|<tuple|11.129|?>>
+    <associate|linear dependent family condition|<tuple|11.130|?>>
+    <associate|linear dependent family set|<tuple|11.131|?>>
+    <associate|linear dependent finite set|<tuple|11.117|?>>
+    <associate|linear dependent set|<tuple|11.114|?>>
+    <associate|linear dependent set alternative condition|<tuple|11.116|?>>
     <associate|linear dependent set containing neutral
-    element|<tuple|11.114|?>>
-    <associate|linear family finite|<tuple|11.92|?>>
-    <associate|linear independent empty set|<tuple|11.120|?>>
-    <associate|linear independent family|<tuple|11.132|?>>
-    <associate|linear independent family alternative|<tuple|11.133|?>>
-    <associate|linear independent family and basis|<tuple|11.155|?>>
-    <associate|linear independent family set|<tuple|11.134|?>>
-    <associate|linear independent finite set|<tuple|11.119|?>>
-    <associate|linear independent set|<tuple|11.117|?>>
-    <associate|linear independent set alternative|<tuple|11.118|?>>
-    <associate|linear independent singleton|<tuple|11.121|?>>
-    <associate|linear mapping|<tuple|11.167|?>>
-    <associate|linear mapping Hom(X,Y)|<tuple|11.184|?>>
-    <associate|linear mapping Img Re|<tuple|11.172|?>>
-    <associate|linear mapping L(x)=L(y)=\<gtr\>x=y|<tuple|11.187|?>>
-    <associate|linear mapping and basis vectors|<tuple|11.335|?>>
-    <associate|linear mapping and finite sum|<tuple|11.189|?>>
-    <associate|linear mapping basis|<tuple|11.199|?>>
-    <associate|linear mapping change of basis|<tuple|11.337|?>>
-    <associate|linear mapping composition|<tuple|11.179|?>>
-    <associate|linear mapping composition isomorphism|<tuple|11.181|?>>
-    <associate|linear mapping composition properties|<tuple|11.180|?>>
+    element|<tuple|11.115|?>>
+    <associate|linear family finite|<tuple|11.93|?>>
+    <associate|linear independent empty set|<tuple|11.121|?>>
+    <associate|linear independent family|<tuple|11.133|?>>
+    <associate|linear independent family alternative|<tuple|11.134|?>>
+    <associate|linear independent family and basis|<tuple|11.156|?>>
+    <associate|linear independent family set|<tuple|11.135|?>>
+    <associate|linear independent finite set|<tuple|11.120|?>>
+    <associate|linear independent set|<tuple|11.118|?>>
+    <associate|linear independent set alternative|<tuple|11.119|?>>
+    <associate|linear independent singleton|<tuple|11.122|?>>
+    <associate|linear mapping|<tuple|11.168|?>>
+    <associate|linear mapping Hom(X,Y)|<tuple|11.185|?>>
+    <associate|linear mapping Img Re|<tuple|11.173|?>>
+    <associate|linear mapping L(x)=L(y)=\<gtr\>x=y|<tuple|11.188|?>>
+    <associate|linear mapping and basis vectors|<tuple|11.336|?>>
+    <associate|linear mapping and finite sum|<tuple|11.190|?>>
+    <associate|linear mapping basis|<tuple|11.200|?>>
+    <associate|linear mapping change of basis|<tuple|11.338|?>>
+    <associate|linear mapping composition|<tuple|11.180|?>>
+    <associate|linear mapping composition isomorphism|<tuple|11.182|?>>
+    <associate|linear mapping composition properties|<tuple|11.181|?>>
     <associate|linear mapping definition by its values for the basis
-    vectors|<tuple|11.336|?>>
-    <associate|linear mapping dimension theorem|<tuple|11.203|?>>
-    <associate|linear mapping dual space|<tuple|11.185|?>>
-    <associate|linear mapping equivalence|<tuple|11.171|?>>
+    vectors|<tuple|11.337|?>>
+    <associate|linear mapping dimension theorem|<tuple|11.204|?>>
+    <associate|linear mapping dual space|<tuple|11.186|?>>
+    <associate|linear mapping equivalence|<tuple|11.172|?>>
     <associate|linear mapping existance of non-zero linear
-    mapping|<tuple|11.186|?>>
-    <associate|linear mapping extention|<tuple|11.216|?>>
+    mapping|<tuple|11.187|?>>
+    <associate|linear mapping extention|<tuple|11.217|?>>
     <associate|linear mapping finite product of
-    transformations|<tuple|11.183|?>>
-    <associate|linear mapping for independent set|<tuple|11.188|?>>
-    <associate|linear mapping independency|<tuple|11.198|?>>
-    <associate|linear mapping injective transformation|<tuple|11.201|?>>
-    <associate|linear mapping injectivity and kernel|<tuple|11.194|?>>
-    <associate|linear mapping injectivity and surjectivity|<tuple|11.200|?>>
-    <associate|linear mapping inverse of a isomorphism|<tuple|11.177|?>>
-    <associate|linear mapping isomorphic spaces|<tuple|11.202|?>>
-    <associate|linear mapping kernel|<tuple|11.190|?>>
+    transformations|<tuple|11.184|?>>
+    <associate|linear mapping for independent set|<tuple|11.189|?>>
+    <associate|linear mapping independency|<tuple|11.199|?>>
+    <associate|linear mapping injective transformation|<tuple|11.202|?>>
+    <associate|linear mapping injectivity and kernel|<tuple|11.195|?>>
+    <associate|linear mapping injectivity and surjectivity|<tuple|11.201|?>>
+    <associate|linear mapping inverse of a isomorphism|<tuple|11.178|?>>
+    <associate|linear mapping isomorphic spaces|<tuple|11.203|?>>
+    <associate|linear mapping kernel|<tuple|11.191|?>>
     <associate|linear mapping kernel and range are
-    subspaces|<tuple|11.192|?>>
-    <associate|linear mapping linear isomorphism|<tuple|11.175|?>>
-    <associate|linear mapping of neutral element|<tuple|11.170|?>>
-    <associate|linear mapping on a field|<tuple|11.178|?>>
-    <associate|linear mapping projection map|<tuple|11.173|?>>
-    <associate|linear mapping projection mapping|<tuple|11.174|?>>
-    <associate|linear mapping range|<tuple|11.191|?>>
-    <associate|linear mapping rank|<tuple|11.193|?>>
-    <associate|linear mapping rank(L) dimension|<tuple|11.196|?>>
-    <associate|linear mapping restriction|<tuple|11.168|?>>
-    <associate|linear mapping semi-group|<tuple|11.182|?>>
-    <associate|linear mapping span|<tuple|11.195|?>>
-    <associate|linear mapping sum of sets|<tuple|11.169|?>>
-    <associate|linear mapping surjectivity and dim image|<tuple|11.196|?>>
-    <associate|linear mapping surjectivity and injectivity|<tuple|11.204|?>>
-    <associate|linear mapping surjectivity and rank|<tuple|11.197|?>>
-    <associate|linear ordered family and subset|<tuple|11.94|?>>
-    <associate|linear ordered family is finite|<tuple|11.93|?>>
-    <associate|linear span|<tuple|11.99|?>>
-    <associate|linear span (1)|<tuple|11.100|?>>
-    <associate|linear span contains set|<tuple|11.107|?>>
-    <associate|linear span equivalence 0|<tuple|11.105|?>>
-    <associate|linear span equivalence 1|<tuple|11.106|?>>
+    subspaces|<tuple|11.193|?>>
+    <associate|linear mapping linear isomorphism|<tuple|11.176|?>>
+    <associate|linear mapping of neutral element|<tuple|11.171|?>>
+    <associate|linear mapping on a field|<tuple|11.179|?>>
+    <associate|linear mapping projection map|<tuple|11.174|?>>
+    <associate|linear mapping projection mapping|<tuple|11.175|?>>
+    <associate|linear mapping range|<tuple|11.192|?>>
+    <associate|linear mapping rank|<tuple|11.194|?>>
+    <associate|linear mapping rank(L) dimension|<tuple|11.197|?>>
+    <associate|linear mapping restriction|<tuple|11.169|?>>
+    <associate|linear mapping semi-group|<tuple|11.183|?>>
+    <associate|linear mapping span|<tuple|11.196|?>>
+    <associate|linear mapping sum of sets|<tuple|11.170|?>>
+    <associate|linear mapping surjectivity and dim image|<tuple|11.197|?>>
+    <associate|linear mapping surjectivity and injectivity|<tuple|11.205|?>>
+    <associate|linear mapping surjectivity and rank|<tuple|11.198|?>>
+    <associate|linear ordered family and subset|<tuple|11.95|?>>
+    <associate|linear ordered family is finite|<tuple|11.94|?>>
+    <associate|linear span|<tuple|11.100|?>>
+    <associate|linear span (1)|<tuple|11.101|?>>
+    <associate|linear span contains set|<tuple|11.108|?>>
+    <associate|linear span equivalence 0|<tuple|11.106|?>>
+    <associate|linear span equivalence 1|<tuple|11.107|?>>
     <associate|linear span extending a set without changing its
-    span|<tuple|11.112|?>>
-    <associate|linear span is a sub-space|<tuple|11.109|?>>
-    <associate|linear span of empty set|<tuple|11.103|?>>
-    <associate|linear span of span|<tuple|11.111|?>>
-    <associate|linear span off finite family|<tuple|11.101|?>>
-    <associate|linear span properties|<tuple|11.110|?>>
-    <associate|linear span subsets|<tuple|11.108|?>>
-    <associate|linear span({0})|<tuple|11.104|?>>
-    <associate|linerar mapping between R^2 and C|<tuple|11.176|?>>
-    <associate|matrix (+)|<tuple|11.376|?>>
-    <associate|matrix Hom(X,Y) is isomorphic|<tuple|11.344|?>>
-    <associate|matrix [+]|<tuple|11.368|?>>
-    <associate|matrix [+] and transpose (1)|<tuple|11.370|?>>
-    <associate|matrix [+] and transpose (2)|<tuple|11.374|?>>
-    <associate|matrix [+a](x)|<tuple|11.366|?>>
-    <associate|matrix [a+]|<tuple|11.365|?>>
-    <associate|matrix adjoint|<tuple|11.378|?>>
+    span|<tuple|11.113|?>>
+    <associate|linear span is a sub-space|<tuple|11.110|?>>
+    <associate|linear span of empty set|<tuple|11.104|?>>
+    <associate|linear span of span|<tuple|11.112|?>>
+    <associate|linear span off finite family|<tuple|11.102|?>>
+    <associate|linear span properties|<tuple|11.111|?>>
+    <associate|linear span subsets|<tuple|11.109|?>>
+    <associate|linear span({0})|<tuple|11.105|?>>
+    <associate|linerar mapping between R^2 and C|<tuple|11.177|?>>
+    <associate|matrix (+)|<tuple|11.377|?>>
+    <associate|matrix Hom(X,Y) is isomorphic|<tuple|11.345|?>>
+    <associate|matrix [+]|<tuple|11.369|?>>
+    <associate|matrix [+] and transpose (1)|<tuple|11.371|?>>
+    <associate|matrix [+] and transpose (2)|<tuple|11.375|?>>
+    <associate|matrix [+a](x)|<tuple|11.367|?>>
+    <associate|matrix [a+]|<tuple|11.366|?>>
+    <associate|matrix adjoint|<tuple|11.379|?>>
     <associate|matrix adjoint and det of the matrix of a linear
-    transformation|<tuple|11.380|?>>
-    <associate|matrix adjoint matrix linear transformation|<tuple|11.379|?>>
-    <associate|matrix change of basis|<tuple|11.352|?>>
-    <associate|matrix cofactor|<tuple|11.383|?>>
-    <associate|matrix column rank is row rank|<tuple|11.333|?>>
-    <associate|matrix composition|<tuple|11.346|?>>
-    <associate|matrix definition|<tuple|11.323|?>>
-    <associate|matrix delta minus|<tuple|11.367|?>>
-    <associate|matrix determinant|<tuple|11.353|?>>
-    <associate|matrix determinant and adjoint properties|<tuple|11.381|?>>
-    <associate|matrix determinant and delta|<tuple|11.361|?>>
-    <associate|matrix determinant example 1|<tuple|11.354|?>>
-    <associate|matrix determinant of a diagonal matrix|<tuple|11.356|?>>
-    <associate|matrix determinant of transpose|<tuple|11.357|?>>
+    transformation|<tuple|11.381|?>>
+    <associate|matrix adjoint matrix linear transformation|<tuple|11.380|?>>
+    <associate|matrix change of basis|<tuple|11.353|?>>
+    <associate|matrix cofactor|<tuple|11.384|?>>
+    <associate|matrix column rank is row rank|<tuple|11.334|?>>
+    <associate|matrix composition|<tuple|11.347|?>>
+    <associate|matrix definition|<tuple|11.324|?>>
+    <associate|matrix delta minus|<tuple|11.368|?>>
+    <associate|matrix determinant|<tuple|11.354|?>>
+    <associate|matrix determinant and adjoint properties|<tuple|11.382|?>>
+    <associate|matrix determinant and delta|<tuple|11.362|?>>
+    <associate|matrix determinant example 1|<tuple|11.355|?>>
+    <associate|matrix determinant of a diagonal matrix|<tuple|11.357|?>>
+    <associate|matrix determinant of transpose|<tuple|11.358|?>>
     <associate|matrix determinant permutation rows or
-    columns|<tuple|11.363|?>>
-    <associate|matrix determinant propertie|<tuple|11.360|?>>
+    columns|<tuple|11.364|?>>
+    <associate|matrix determinant propertie|<tuple|11.361|?>>
     <associate|matrix diagonal|<tuple|disgonal matrix|?>>
-    <associate|matrix dterminant is zero|<tuple|11.364|?>>
-    <associate|matrix dterminant shortcut|<tuple|11.386|?>>
-    <associate|matrix identity|<tuple|11.324|?>>
-    <associate|matrix inverse|<tuple|11.347|?>>
-    <associate|matrix inverse is unique|<tuple|11.348|?>>
+    <associate|matrix dterminant is zero|<tuple|11.365|?>>
+    <associate|matrix dterminant shortcut|<tuple|11.387|?>>
+    <associate|matrix identity|<tuple|11.325|?>>
+    <associate|matrix inverse|<tuple|11.348|?>>
+    <associate|matrix inverse is unique|<tuple|11.349|?>>
     <associate|matrix inverse matrix inverse linear
-    transformation|<tuple|11.351|?>>
-    <associate|matrix inverse of inverse|<tuple|11.350|?>>
-    <associate|matrix invertability condition|<tuple|11.387|?>>
-    <associate|matrix invertable matrix|<tuple|11.349|?>>
-    <associate|matrix linear map F^n F^m|<tuple|11.345|?>>
-    <associate|matrix linear map application|<tuple|11.340|?>>
-    <associate|matrix linear map application (1)|<tuple|11.341|?>>
-    <associate|matrix linear mapping|<tuple|11.338|?>>
-    <associate|matrix mapping is linear|<tuple|11.342|?>>
+    transformation|<tuple|11.352|?>>
+    <associate|matrix inverse of inverse|<tuple|11.351|?>>
+    <associate|matrix invertability condition|<tuple|11.388|?>>
+    <associate|matrix invertable matrix|<tuple|11.350|?>>
+    <associate|matrix linear map F^n F^m|<tuple|11.346|?>>
+    <associate|matrix linear map application|<tuple|11.341|?>>
+    <associate|matrix linear map application (1)|<tuple|11.342|?>>
+    <associate|matrix linear mapping|<tuple|11.339|?>>
+    <associate|matrix mapping is linear|<tuple|11.343|?>>
     <associate|matrix mapping linear map to a matrix is a
-    bijection|<tuple|11.343|?>>
-    <associate|matrix non singular and isomorphism|<tuple|11.359|?>>
-    <associate|matrix null|<tuple|11.325|?>>
-    <associate|matrix operations|<tuple|11.326|?>>
-    <associate|matrix permutation|<tuple|11.362|?>>
-    <associate|matrix rank|<tuple|11.334|?>>
+    bijection|<tuple|11.344|?>>
+    <associate|matrix non singular and isomorphism|<tuple|11.360|?>>
+    <associate|matrix null|<tuple|11.326|?>>
+    <associate|matrix operations|<tuple|11.327|?>>
+    <associate|matrix permutation|<tuple|11.363|?>>
+    <associate|matrix rank|<tuple|11.335|?>>
     <associate|matrix remove rwows or columns after a specified
-    position|<tuple|11.371|?>>
-    <associate|matrix rows and columns|<tuple|11.332|?>>
-    <associate|matrix semigroup|<tuple|11.329|?>>
-    <associate|matrix transpose|<tuple|11.331|?>>
-    <associate|matrix vector space|<tuple|11.328|?>>
-    <associate|matrix where first row and colum are unit|<tuple|11.373|?>>
-    <associate|matrix[\<less\>m] and [\<gtr\>m]|<tuple|11.372|?>>
-    <associate|multi composition|<tuple|11.268|?>>
-    <associate|multi function of many arguments (1)|<tuple|11.264|?>>
-    <associate|multi induction argument|<tuple|11.263|?>>
-    <associate|multi linear extension|<tuple|11.270|?>>
-    <associate|multi multilinear mappin one argument is 0|<tuple|11.258|?>>
-    <associate|multi multilinear mapping|<tuple|11.257|?>>
-    <associate|multi multilinear mapping alternative|<tuple|11.259|?>>
-    <associate|multi multilinear mapping and linear mapping|<tuple|11.265|?>>
+    position|<tuple|11.372|?>>
+    <associate|matrix rows and columns|<tuple|11.333|?>>
+    <associate|matrix semigroup|<tuple|11.330|?>>
+    <associate|matrix transpose|<tuple|11.332|?>>
+    <associate|matrix vector space|<tuple|11.329|?>>
+    <associate|matrix where first row and colum are unit|<tuple|11.374|?>>
+    <associate|matrix[\<less\>m] and [\<gtr\>m]|<tuple|11.373|?>>
+    <associate|multi composition|<tuple|11.269|?>>
+    <associate|multi function of many arguments (1)|<tuple|11.265|?>>
+    <associate|multi induction argument|<tuple|11.264|?>>
+    <associate|multi linear extension|<tuple|11.271|?>>
+    <associate|multi multilinear mappin one argument is 0|<tuple|11.259|?>>
+    <associate|multi multilinear mapping|<tuple|11.258|?>>
+    <associate|multi multilinear mapping alternative|<tuple|11.260|?>>
+    <associate|multi multilinear mapping and linear mapping|<tuple|11.266|?>>
     <associate|multi multilinear mapping and product of
-    scalars|<tuple|11.269|?>>
+    scalars|<tuple|11.270|?>>
     <associate|multi multilinear mapping from a family of linear
-    mappings|<tuple|11.260|?>>
+    mappings|<tuple|11.261|?>>
     <associate|multi multilinear mapping in a finite dimensional
-    space|<tuple|11.271|?>>
-    <associate|multi n-linear function|<tuple|11.261|?>>
-    <associate|multi product of scalars is multilinear|<tuple|11.262|?>>
-    <associate|multi tupple convention (1)|<tuple|11.255|?>>
-    <associate|multi tupple convention and permutations|<tuple|11.256|?>>
-    <associate|multi zero function|<tuple|11.266|?>>
-    <associate|multilinear mapping sub-space|<tuple|11.267|?>>
-    <associate|nonsingular elementary transformations|<tuple|11.392|?>>
-    <associate|nonsingular transformation|<tuple|11.388|?>>
-    <associate|nonsingular transformation L(n)|<tuple|11.396|?>>
+    space|<tuple|11.272|?>>
+    <associate|multi n-linear function|<tuple|11.262|?>>
+    <associate|multi product of scalars is multilinear|<tuple|11.263|?>>
+    <associate|multi tupple convention (1)|<tuple|11.256|?>>
+    <associate|multi tupple convention and permutations|<tuple|11.257|?>>
+    <associate|multi zero function|<tuple|11.267|?>>
+    <associate|multilinear mapping sub-space|<tuple|11.268|?>>
+    <associate|nonsingular elementary transformations|<tuple|11.393|?>>
+    <associate|nonsingular transformation|<tuple|11.389|?>>
+    <associate|nonsingular transformation L(n)|<tuple|11.397|?>>
     <associate|nonsingular transformation L^n composition
-    (1)|<tuple|11.398|?>>
+    (1)|<tuple|11.399|?>>
     <associate|nonsingular transformation L^n composition
-    (2)|<tuple|11.399|?>>
-    <associate|nonsingular transformation composition|<tuple|11.395|?>>
+    (2)|<tuple|11.400|?>>
+    <associate|nonsingular transformation composition|<tuple|11.396|?>>
     <associate|nonsingular transformation composition and composed
-    of|<tuple|11.400|?>>
-    <associate|nonsingular transformation group|<tuple|11.389|?>>
+    of|<tuple|11.401|?>>
+    <associate|nonsingular transformation group|<tuple|11.390|?>>
     <associate|nonsingular transformation is composed of elementary
-    transformations|<tuple|11.401|?>>
+    transformations|<tuple|11.402|?>>
     <associate|nonsingular transformation is composed of nonsingular
-    elementary transformations|<tuple|11.402|?>>
+    elementary transformations|<tuple|11.403|?>>
     <associate|nonsingular transformations composition of B's
-    (1)|<tuple|11.393|?>>
+    (1)|<tuple|11.394|?>>
     <associate|nonsingular transformations composition of B's
-    (2)|<tuple|11.394|?>>
+    (2)|<tuple|11.395|?>>
     <associate|nonsingular transformations elementary
-    predefinition|<tuple|11.390|?>>
+    predefinition|<tuple|11.391|?>>
     <associate|nonsingular transformations elementary
-    properties|<tuple|11.391|?>>
+    properties|<tuple|11.392|?>>
     <associate|nonsingular transformations extend a elementary
-    transformation|<tuple|11.397|?>>
-    <associate|permutation Pn|<tuple|11.217|?>>
-    <associate|permutation Pn is a group|<tuple|11.223|?>>
-    <associate|permutation Pn is finite|<tuple|11.222|?>>
-    <associate|permutation apply|<tuple|11.234|?>>
-    <associate|permutation apply and composition|<tuple|11.237|?>>
-    <associate|permutation apply and field|<tuple|11.238|?>>
-    <associate|permutation apply identity|<tuple|11.236|?>>
-    <associate|permutation apply in vector space|<tuple|11.235|?>>
-    <associate|permutation apply transposition on phi|<tuple|11.245|?>>
+    transformation|<tuple|11.398|?>>
+    <associate|permutation Pn|<tuple|11.218|?>>
+    <associate|permutation Pn is a group|<tuple|11.224|?>>
+    <associate|permutation Pn is finite|<tuple|11.223|?>>
+    <associate|permutation apply|<tuple|11.235|?>>
+    <associate|permutation apply and composition|<tuple|11.238|?>>
+    <associate|permutation apply and field|<tuple|11.239|?>>
+    <associate|permutation apply identity|<tuple|11.237|?>>
+    <associate|permutation apply in vector space|<tuple|11.236|?>>
+    <associate|permutation apply transposition on phi|<tuple|11.246|?>>
     <associate|permutation as a composition of disjoint
-    transpositions|<tuple|11.231|?>>
-    <associate|permutation bijection|<tuple|11.287|?>>
+    transpositions|<tuple|11.232|?>>
+    <associate|permutation bijection|<tuple|11.288|?>>
     <associate|permutation composition of a family of
-    permutations|<tuple|11.226|?>>
+    permutations|<tuple|11.227|?>>
     <associate|permutation definition|<tuple|11.25|?>>
-    <associate|permutation existence of sign|<tuple|11.247|?>>
-    <associate|permutation extending a permutation (1)|<tuple|11.220|?>>
-    <associate|permutation extending a permutation (2)|<tuple|11.221|?>>
-    <associate|permutation extension (1)|<tuple|11.229|?>>
-    <associate|permutation extension (2)|<tuple|11.230|?>>
+    <associate|permutation existence of sign|<tuple|11.248|?>>
+    <associate|permutation extending a permutation (1)|<tuple|11.221|?>>
+    <associate|permutation extending a permutation (2)|<tuple|11.222|?>>
+    <associate|permutation extension (1)|<tuple|11.230|?>>
+    <associate|permutation extension (2)|<tuple|11.231|?>>
     <associate|permutation group|<tuple|11.26|?>>
-    <associate|permutation index function|<tuple|11.253|?>>
-    <associate|permutation insert function|<tuple|11.251|?>>
-    <associate|permutation insert funtion property|<tuple|11.254|?>>
+    <associate|permutation index function|<tuple|11.254|?>>
+    <associate|permutation insert function|<tuple|11.252|?>>
+    <associate|permutation insert funtion property|<tuple|11.255|?>>
     <associate|permutation on subset|<tuple|11.27|?>>
-    <associate|permutation phi function|<tuple|11.242|?>>
-    <associate|permutation phi function is not zero|<tuple|11.244|?>>
-    <associate|permutation reverse|<tuple|11.218|?>>
-    <associate|permutation sign|<tuple|11.248|?>>
-    <associate|permutation sign calculation|<tuple|11.249|?>>
+    <associate|permutation phi function|<tuple|11.243|?>>
+    <associate|permutation phi function is not zero|<tuple|11.245|?>>
+    <associate|permutation reverse|<tuple|11.219|?>>
+    <associate|permutation sign|<tuple|11.249|?>>
+    <associate|permutation sign calculation|<tuple|11.250|?>>
     <associate|permutation sign of composition of
-    transpositions|<tuple|11.246|?>>
-    <associate|permutation sign properties|<tuple|11.250|?>>
-    <associate|permutation sum|<tuple|11.225|?>>
-    <associate|permutation transosition proeprties|<tuple|11.228|?>>
+    transpositions|<tuple|11.247|?>>
+    <associate|permutation sign properties|<tuple|11.251|?>>
+    <associate|permutation sum|<tuple|11.226|?>>
+    <associate|permutation transosition proeprties|<tuple|11.229|?>>
     <associate|permutation transposition|<tuple|11.28|?>>
-    <associate|permutation transposition 1|<tuple|11.227|?>>
-    <associate|permutation transposition expansion|<tuple|11.233|?>>
+    <associate|permutation transposition 1|<tuple|11.228|?>>
+    <associate|permutation transposition expansion|<tuple|11.234|?>>
     <associate|permutation transposition properties|<tuple|11.29|?>>
-    <associate|permutation transposition symmetry|<tuple|11.239|?>>
-    <associate|permutation transposition symmetry (1)|<tuple|11.240|?>>
-    <associate|permutation transposition symmetry (2)|<tuple|11.241|?>>
+    <associate|permutation transposition symmetry|<tuple|11.240|?>>
+    <associate|permutation transposition symmetry (1)|<tuple|11.241|?>>
+    <associate|permutation transposition symmetry (2)|<tuple|11.242|?>>
     <associate|permutation {0,..,n and transposition|<tuple|11.30|?>>
     <associate|product finite product|<tuple|11.2|?>>
     <associate|product of family of elements with a zero in|<tuple|11.54|?>>
-    <associate|rank|<tuple|11.334|?>>
+    <associate|rank|<tuple|11.335|?>>
     <associate|section sums and products|<tuple|11.1|?>>
     <associate|sum alternative definition|<tuple|11.4|?>>
     <associate|sum alternative definition (1)|<tuple|11.15|?>>
@@ -26079,41 +26112,42 @@
     <associate|sum ring product (1)|<tuple|11.18|?>>
     <associate|sum ring product (2)|<tuple|11.39|?>>
     <associate|vector space|<tuple|11.56|?>>
-    <associate|vector space C real|<tuple|11.65|?>>
-    <associate|vector space F^n|<tuple|11.71|?>>
-    <associate|vector space Q,R,C|<tuple|11.64|?>>
-    <associate|vector space complex/real|<tuple|11.67|?>>
-    <associate|vector space equivalence relation|<tuple|11.76|?>>
-    <associate|vector space extending one dimension|<tuple|11.214|?>>
-    <associate|vector space factor space|<tuple|11.77|?>>
-    <associate|vector space factor space projection|<tuple|11.78|?>>
-    <associate|vector space field|<tuple|11.63|?>>
-    <associate|vector space finite sum (1)|<tuple|11.79|?>>
-    <associate|vector space finite sum (2)|<tuple|11.80|?>>
-    <associate|vector space finite sum (3)|<tuple|11.81|?>>
-    <associate|vector space finite sum (4)|<tuple|11.82|?>>
-    <associate|vector space function space|<tuple|11.68|?>>
-    <associate|vector space internal direct sum|<tuple|11.208|?>>
-    <associate|vector space internal direct sum (function)|<tuple|11.215|?>>
+    <associate|vector space C real|<tuple|11.66|?>>
+    <associate|vector space F^n|<tuple|11.72|?>>
+    <associate|vector space Q,R,C|<tuple|11.65|?>>
+    <associate|vector space complex/real|<tuple|11.68|?>>
+    <associate|vector space equivalence relation|<tuple|11.77|?>>
+    <associate|vector space extending one dimension|<tuple|11.215|?>>
+    <associate|vector space factor space|<tuple|11.78|?>>
+    <associate|vector space factor space projection|<tuple|11.79|?>>
+    <associate|vector space field|<tuple|11.64|?>>
+    <associate|vector space finite sum (1)|<tuple|11.80|?>>
+    <associate|vector space finite sum (2)|<tuple|11.81|?>>
+    <associate|vector space finite sum (3)|<tuple|11.82|?>>
+    <associate|vector space finite sum (4)|<tuple|11.83|?>>
+    <associate|vector space function space|<tuple|11.69|?>>
+    <associate|vector space internal direct sum|<tuple|11.209|?>>
+    <associate|vector space internal direct sum (function)|<tuple|11.216|?>>
     <associate|vector space internal direct sum
-    decomposition|<tuple|11.209|?>>
-    <associate|vector space internal direct sum dimension|<tuple|11.211|?>>
+    decomposition|<tuple|11.210|?>>
+    <associate|vector space internal direct sum dimension|<tuple|11.212|?>>
     <associate|vector space internal direct sum trivial
-    example|<tuple|11.212|?>>
-    <associate|vector space internal sum existence|<tuple|11.213|?>>
-    <associate|vector space power|<tuple|11.69|?>>
-    <associate|vector space power field|<tuple|11.70|?>>
-    <associate|vector space product of vector spaces|<tuple|11.72|?>>
+    example|<tuple|11.213|?>>
+    <associate|vector space internal sum existence|<tuple|11.214|?>>
+    <associate|vector space power|<tuple|11.70|?>>
+    <associate|vector space power field|<tuple|11.71|?>>
+    <associate|vector space product of vector spaces|<tuple|11.73|?>>
     <associate|vector space properties (1)|<tuple|11.58|?>>
-    <associate|vector space set operations|<tuple|11.73|?>>
-    <associate|vector space set propertie|<tuple|11.74|?>>
-    <associate|vector space sub-space is a vector space|<tuple|11.60|?>>
-    <associate|vector space sub-space of a field|<tuple|11.66|?>>
+    <associate|vector space set operations|<tuple|11.74|?>>
+    <associate|vector space set propertie|<tuple|11.75|?>>
+    <associate|vector space sub-space example|<tuple|11.60|?>>
+    <associate|vector space sub-space is a vector space|<tuple|11.61|?>>
+    <associate|vector space sub-space of a field|<tuple|11.67|?>>
     <associate|vector space subspace|<tuple|11.59|?>>
-    <associate|vector space sum of sub-spaces|<tuple|11.207|?>>
-    <associate|vector space sum of subsets|<tuple|11.205|?>>
-    <associate|vector space trivial|<tuple|11.62|?>>
-    <associate|vector spaces product of vector spaces|<tuple|11.75|?>>
+    <associate|vector space sum of sub-spaces|<tuple|11.208|?>>
+    <associate|vector space sum of subsets|<tuple|11.206|?>>
+    <associate|vector space trivial|<tuple|11.63|?>>
+    <associate|vector spaces product of vector spaces|<tuple|11.76|?>>
   </collection>
 </references>
 

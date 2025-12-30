@@ -11,8 +11,6 @@
 
   <subsection|Definition and converge domain>
 
-  TODO cheched untill this
-
   <\definition>
     <label|exp power series><index|power series><index|<math|<big|sum><rsub|i=0><rsup|\<infty\>>a<rsub|i>\<cdot\>z<rsup|i>>><dueto|Power
     Series>A <with|font-series|bold|power series> is a expression of the form
@@ -2796,9 +2794,9 @@
       As <math|<around*|(|\<star\>|)><rsup|<around*|(|1-p|)>>>,
       <math|C<rsub|p>> and <math|Id<rsub|<around*|]|0,\<infty\>|[>>> has a
       derivative at every <math|x\<in\><around*|]|0,\<infty\>|[>> [see
-      examples: <reference|exp derivative of (*)^x>, <reference|diff constant
-      function has a derivative>, <reference|diff identity has a derivative>]
-      it follows that <math|f<rsub|p>> has a derivative at every
+      examples: <reference|exp derivative of (*)^x>, <reference|diff
+      derivative of constant>, <reference|diff derivative of identity
+      function>] it follows that <math|f<rsub|p>> has a derivative at every
       <math|x\<in\><around*|]|0,\<infty\>|[>> and\ 
 
       <\eqnarray*>
@@ -2820,7 +2818,7 @@
       </equation*>
 
       Using [examples: <reference|exp derivative of (*)^x>, <reference|diff
-      constant function has a derivative>] again it follows that
+      derivative of constant>] again it follows that
       <math|*<around*|(|f<rsub|p>|)><rprime|'>> has a derivative at every
       <math|x\<in\><around*|]|0,\<infty\>|[>> and\ 
 
@@ -3403,9 +3401,9 @@
     </equation*>
 
     Let <math|z\<in\>\<bbb-C\> >then by [theorem: <reference|exp
-    derivative>], [examples: <reference|diff identity has a derivative>],
-    [theorem: <reference|diff derivate on [a,b] linearity>] and the chain
-    rule [theorem: <reference|diff chain rule calculus>] it follows that
+    derivative>], [examples: <reference|diff derivative of identity
+    function>], [theorem: <reference|diff (f+g)'=f'+g'>] and the chain rule
+    [theorem: <reference|diff chain rule calculus>] it follows that
     <math|sin> and <math|cos> has a derivative at <math|z> and\ 
 
     <\eqnarray*>
@@ -3499,7 +3497,8 @@
       <reference|exp trigoniometric properties>(2)]>
     </equation*>
 
-    So using [theorem: <reference|diff differentiability on a closed set>] it
+    So using [theorems: <reference|topology every element of a generalized
+    interval is a limit point>, <reference|diff derivative is local>] it
     follows that\ 
 
     <\equation>
@@ -4654,7 +4653,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|18>
-    <associate|page-first|909>
+    <associate|page-first|1229>
     <associate|page-medium|papyrus>
     <associate|section-nr|4>
     <associate|subsection-nr|4>
