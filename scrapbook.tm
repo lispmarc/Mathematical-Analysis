@@ -11159,12 +11159,160 @@
     </equation*>
   </proof>
 
+  We prove this by induction, so define\ 
+
+  <\equation*>
+    S=<around*|{|n\<in\><around*|{|2,\<ldots\>,\<infty\>|}>\|<text|If
+    >f<text| has a >n<text|-the derivative
+    >f<rsup|<around*|(|n|)>><rsub|x><text| at >x\<in\>A<text| then there
+    exist a open <math|V> with <math|x\<in\>V\<subseteq\>A> such that
+    >\<forall\>y\<in\>V<text| >f<text| has a derivative
+    >f<rprime|'><rsub|y><text| at >y<text| and
+    <math|<rigid|f<rprime|'><rsub|V>:V\<rightarrow\>X> defined by
+    >>f<rprime|'><rsub|V><around*|(|y|)>=f<rprime|'><rsub|x><text| has a
+    ><around*|(|n-1|)><text|-the derivative at >x<text| with
+    ><rigid|<around*|(|f<rprime|'><rsub|V>|)><rsup|<around*|(|n-1|)>><rsub|x>=f<rsup|<around*|(|n|)>><rsub|x>>|}>
+  </equation*>
+
+  then we have:\ 
+
+  <\description>
+    <item*|<math|2\<in\>S>>As <math|f> has a <math|2>-the derivative at
+    <math|x> there exist by definition [definition: <reference|diff higher
+    order derivate>] a open set <math|V> with <math|x\<in\>V\<subseteq\>A>
+    such that <math|f> has a <math|1>-the derivative at <math|x> such that\ 
+
+    <\equation*>
+      f<rprime|'>:V\<rightarrow\>X<text| defined by
+      >f<rprime|'><around*|(|y|)>=f<rsup|<around*|(|1|)>><rsub|y><below|=|def>f<rprime|'><rsub|y>
+    </equation*>
+
+    has a derivative [hence a <math|1>-the derivative] at <math|x> with
+    <math|f<rsup|<around*|(|2|)>><rsub|x>=<around*|(|f<rsub|><rprime|'>|)><rprime|'><rsub|x>\<equallim\><rsub|def><around*|(|f<rprime|'>|)><rsup|<around*|(|n|)>><rsub|x>>
+    from which it follows that <math|2\<in\>S>.
+
+    <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>If <math|f> has a
+    <math|<around*|(|n+1|)>>-the derivative at <math|x> it follows by
+    definition that there exists a open set <math|V> with
+    <math|x\<in\>V\<subseteq\>A> such that <math|\<forall\>y\<in\>V> <math|f>
+    has a <math|n>-the derivative at <math|y> and
+
+    <\equation>
+      <label|eq 16.209.304.1>f<rsup|<around*|(|n|)>><rsub|V>:V\<rightarrow\>X<text|
+      where >f<rsup|<around*|(|n|)>><rsub|V><around*|(|y|)>=f<rsup|<around*|(|n|)>><rsub|y><text|
+      has a derivative at x and>f<rsup|<around*|(|n+1|)>><rsub|x>=<around*|(|f<rsup|<around*|(|n|)>><rsub|V>|)><rprime|'><rsub|x>
+    </equation>
+
+    Let <math|y\<in\>V> then as <math|f> has a <math|n>-the derivative at
+    <math|y> and <math|n\<in\>S> there exist a open set <math|V<rsub|y>> such
+    that <math|y\<in\>V<rsub|y>\<subseteq\>A>,
+    <math|\<forall\>z\<in\>V<rsub|y>> <math|f> has a derivative
+    <math|f<rprime|'><rsub|z>> at <math|z> and the function\ 
+
+    <\equation>
+      <label|eq 16.209.304>f<rprime|'><rsub|V<rsub|y>>:V<rsub|y>\<rightarrow\>X<text|
+      defined by >f<rprime|'><rsub|V<rsub|y>><around*|(|z|)>=f<rprime|'><rsub|z>
+    </equation>
+
+    has a <math|<around*|(|n-1|)>>-the derivative at <math|y> with\ 
+
+    <\equation>
+      <label|eq 16.210.304><around*|(|f<rsup|<rprime|'>><rsub|V<rsub|y>>|)><rsup|<around*|(|n-1|)>><rsub|y>=f<rsup|<around*|(|n|)>><rsub|y>
+    </equation>
+
+    Let <math|W<rsub|y>=V<rsub|y><big|cap>V> then
+    <math|y\<in\>W<rsub|y>\<subseteq\>V,V<rsub|y>> then we have by [theorem:
+    <reference|diff higher order derivativing is local>] that
+
+    <\equation>
+      <label|eq 16.211.304><around*|(|f<rprime|'><rsub|V<rsub|y>>|)><rsub|\|W<rsub|y>>:W<rsub|y>\<rightarrow\>X<text|
+      defined by ><around*|(|f<rprime|'><rsub|V<rsub|y>>|)><rsub|\|W<rsub|y>><around*|(|z|)>=f<rprime|'><rsub|V<rsub|y>><around*|(|z|)>=f<rprime|'><rsub|z>
+    </equation>
+
+    has a <math|<around*|(|n-1|)>>-the derivative at <math|y> with\ 
+
+    <\equation>
+      <label|eq 16.212.304><around*|(|<around*|(|f<rprime|'><rsub|V<rsub|y>>|)><rsub|\|W<rsub|y>>|)><rsup|<around*|(|n-1|)>><rsub|y>=<around*|(|f<rprime|'><rsub|V<rsub|y>>|)><rsup|<around*|(|n-1|)>><rsub|y><below|=|<text|[eq:
+      <reference|eq 16.210.304>]>>f<rsup|<around*|(|n|)>><rsub|y>
+    </equation>
+
+    Let <math|y\<in\>V> then as <math|y\<in\>V<rsub|y>> we have
+    <math|y\<in\>V<rsub|y><big|cap>V=W<rsub|y>> it follows that <math|f> has
+    a derivative at <math|y> so that we can define\ 
+
+    <\equation>
+      <label|eq 16.213.304>f<rprime|'><rsub|V>:V\<rightarrow\>X<text| defined
+      by >f<rprime|'><rsub|V><around*|(|y|)>=f<rprime|'><rsub|y>
+    </equation>
+
+    As <math|\<forall\>z\<in\>W<rsub|y>> we have
+    <math|<around*|(|f<rprime|'><rsub|V<rsub|y>>|)><rsub|\|W<rsub|y>><around*|(|z|)><below|=|<text|[eq:
+    <reference|eq 16.210.304>]>>f<rprime|'><rsub|z><below|=|<text|[eq:
+    <reference|eq 16.213.304>]>>f<rprime|'><rsub|V><around*|(|y|)>> which
+    proves that\ 
+
+    <\equation>
+      <label|eq 16.214.304><around*|(|f<rprime|'><rsub|V>|)><rsub|\|W<rsub|y>>=<around*|(|f<rprime|'><rsub|V<rsub|y>>|)><rsub|\|W<rsub|y>>
+    </equation>
+
+    As <math|><math|<around*|(|f<rprime|'><rsub|V<rsub|y>>|)><rsub|\|W<rsub|y>>>
+    has a <math|<around*|(|n-1|)>>-the derivative at <math|y\<in\>W<rsub|y>>
+    it follows from the above that <math|<around*|(|f<rprime|'><rsub|V>|)><rsub|\|W<rsub|y>>>
+    has a <math|<around*|(|n-1|)>>-the derivative at <math|y> with
+
+    <\equation>
+      <label|eq 16.215.304><around*|(|<around*|(|f<rprime|'><rsub|V>|)><rsub|\|W<rsub|y>>|)><rsup|<around*|(|n-1|)>><rsub|y>=<around*|(|<around*|(|f<rprime|'><rsub|V>|)><rsub|\|W<rsub|y>>|)><rsup|<around*|(|n-1|)>><rsub|y>
+    </equation>
+
+    Using now [theorem: <reference|diff higher order derivativing is local>]
+    it follows that <math|f<rprime|'><rsub|V>> has a
+    <math|<around*|(|n-1|)>>-the derivative at <math|y> and\ 
+
+    <\equation>
+      <label|eq 16.216.304><around*|(|f<rprime|'><rsub|V>|)><rsup|<around*|(|n-1|)>><rsub|y>=<around*|(|<around*|(|f<rprime|'><rsub|V>|)><rsub|\|W<rsub|y>>|)><rsup|<around*|(|n-1|)>><rsub|y><below|=|<text|[eq:
+      <reference|eq 16.215.304>]>><around*|(|<around*|(|f<rprime|'><rsub|V>|)><rsub|\|W<rsub|y>>|)><rsup|<around*|(|n-1|)>><rsub|y><below|=|<text|[eq:
+      <reference|eq 16.212.304>]>>f<rsup|<around*|(|n|)>><rsub|y>
+    </equation>
+
+    So we can define\ 
+
+    <\equation*>
+      <around*|(|f<rprime|'><rsub|V>|)><rsup|<around*|(|n-1|)>>:V\<rightarrow\>X<text|
+      where ><around*|(|f<rprime|'><rsub|V>|)><rsup|<around*|(|n-1|)>><around*|(|y|)>=<around*|(|f<rprime|'><rsub|V>|)><rsup|<around*|(|n-1|)>><rsub|y>
+    </equation*>
+
+    As <math|\<forall\>y\<in\>V> <math|><math|<around*|(|f<rprime|'><rsub|V>|)><rsup|<around*|(|n-1|)>><around*|(|y|)>=<around*|(|f<rprime|'><rsub|V>|)><rsup|<around*|(|n-1|)>><rsub|y><below|=|<text|[eq:
+    <reference|eq 16.216.304>]>>f<rsup|<around*|(|n|)>><rsub|y><below|=|<text|[eq:
+    <reference|eq 16.209.304.1>]>><around*|(|f<rsub|V>|)><rsup|<around*|(|n|)>><around*|(|y|)>>
+    it follows that\ 
+
+    <\equation*>
+      <around*|(|f<rprime|'><rsub|V>|)><rsup|<around*|(|n-1|)>>=<around*|(|f<rsub|V>|)><rsup|<around*|(|n|)>>
+    </equation*>
+
+    which, as <math|<around*|(|f<rsub|V>|)><rsup|<around*|(|n|)>>> has a
+    derivative at <math|x>, proves that <math|<around*|(|f<rprime|'><rsub|V>|)><rsup|<around*|(|n-1|)>>>
+    has a derivative at <math|x> with <math|<around*|(|<around*|(|f<rprime|'><rsub|V>|)><rsup|*<around*|(|n-1|)>>|)><rprime|'><rsub|x>=<around*|(|f<rsub|V><rsup|<around*|(|n|)>>|)><rprime|'><rsub|x><below|=|<text|[eq:
+    <reference|eq 16.209.304.1>>>f<rsup|<around*|(|n+1|)>><rsub|x>>. So by
+    definition <math|f<rprime|'><rsub|V>> has a <math|n>-the derivative at
+    <math|x> with <math|<around*|(|f<rprime|'><rsub|V>|)><rsup|<around*|(|n|)>><rsub|x>=<around*|(|<around*|(|f<rprime|'><rsub|V>|)><rsup|*<around*|(|n-1|)>>|)><rprime|'><rsub|x>=f<rsup|<around*|(|n+1|)>><rsub|x>>.
+    Hence as <math|<around*|(|n+1|)>-1=n> it follows that <math|n+1\<in\>S>.
+  </description>
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
   \;
 </body>
 
 <\initial>
   <\collection>
-    <associate|page-medium|paper>
+    <associate|page-medium|papyrus>
   </collection>
 </initial>
 
@@ -11197,7 +11345,7 @@
     <associate|diff f is of class C^n if D^1f u=is of class C^n-1
     (1)|<tuple|86|108>>
     <associate|diff higher order differentiation classes|<tuple|88|111>>
-    <associate|diff mean value theorem (3)|<tuple|90|118>>
+    <associate|diff mean value theorem (3)|<tuple|90|119>>
     <associate|diff mean value theorem (5)|<tuple|36|45>>
     <associate|diff mean value theorem (6)|<tuple|38|50>>
     <associate|diff mean value theorem (7)|<tuple|39|50>>
@@ -11268,17 +11416,17 @@
     <associate|eq 14.88.150|<tuple|56|22>>
     <associate|eq 14.89.150|<tuple|57|22>>
     <associate|eq 14.90.150|<tuple|58|22>>
-    <associate|eq 16.122.194|<tuple|386|25>>
-    <associate|eq 16.123.194|<tuple|387|25>>
-    <associate|eq 16.124.194|<tuple|388|25>>
-    <associate|eq 16.125.194|<tuple|389|25>>
+    <associate|eq 16.122.194|<tuple|386|120>>
+    <associate|eq 16.123.194|<tuple|387|120>>
+    <associate|eq 16.124.194|<tuple|388|121>>
+    <associate|eq 16.125.194|<tuple|389|121>>
     <associate|eq 16.126.194|<tuple|69|26>>
     <associate|eq 16.127.194|<tuple|70|26>>
     <associate|eq 16.128.181|<tuple|355|111>>
     <associate|eq 16.128.194|<tuple|71|26>>
-    <associate|eq 16.129.181|<tuple|356|111>>
+    <associate|eq 16.129.181|<tuple|356|112>>
     <associate|eq 16.129.194|<tuple|72|26>>
-    <associate|eq 16.130.181|<tuple|357|111>>
+    <associate|eq 16.130.181|<tuple|357|112>>
     <associate|eq 16.130.194|<tuple|73|27>>
     <associate|eq 16.131.181|<tuple|358|112>>
     <associate|eq 16.132.181|<tuple|359|112>>
@@ -11288,7 +11436,7 @@
     <associate|eq 16.134.6|<tuple|315|99>>
     <associate|eq 16.135.181|<tuple|362|113>>
     <associate|eq 16.135.6|<tuple|316|99>>
-    <associate|eq 16.136.181|<tuple|363|113>>
+    <associate|eq 16.136.181|<tuple|363|114>>
     <associate|eq 16.136.6|<tuple|317|99>>
     <associate|eq 16.137.195|<tuple|332|105>>
     <associate|eq 16.137.6|<tuple|318|99>>
@@ -11296,7 +11444,7 @@
     <associate|eq 16.138.6|<tuple|319|99>>
     <associate|eq 16.139.195|<tuple|334|105>>
     <associate|eq 16.139.6|<tuple|320|100>>
-    <associate|eq 16.140.195|<tuple|335|105>>
+    <associate|eq 16.140.195|<tuple|335|106>>
     <associate|eq 16.140.6|<tuple|321|100>>
     <associate|eq 16.141.195|<tuple|336|106>>
     <associate|eq 16.142.181|<tuple|364|114>>
@@ -11305,7 +11453,7 @@
     <associate|eq 16.143.195|<tuple|338|106>>
     <associate|eq 16.144.181|<tuple|367|114>>
     <associate|eq 16.144.181.1|<tuple|366|114>>
-    <associate|eq 16.144.195|<tuple|339|106>>
+    <associate|eq 16.144.195|<tuple|339|107>>
     <associate|eq 16.145.181|<tuple|368|114>>
     <associate|eq 16.145.195|<tuple|340|107>>
     <associate|eq 16.146.195|<tuple|341|107>>
@@ -11313,14 +11461,14 @@
     <associate|eq 16.147.195|<tuple|342|107>>
     <associate|eq 16.148.181|<tuple|370|115>>
     <associate|eq 16.148.195|<tuple|343|107>>
-    <associate|eq 16.149.181|<tuple|371|115>>
+    <associate|eq 16.149.181|<tuple|371|116>>
     <associate|eq 16.149.195|<tuple|344|107>>
-    <associate|eq 16.150.181|<tuple|372|115>>
+    <associate|eq 16.150.181|<tuple|372|116>>
     <associate|eq 16.150.195|<tuple|345|107>>
-    <associate|eq 16.151.181|<tuple|373|115>>
-    <associate|eq 16.152.181|<tuple|374|115>>
+    <associate|eq 16.151.181|<tuple|373|116>>
+    <associate|eq 16.152.181|<tuple|374|116>>
     <associate|eq 16.154.141|<tuple|331|104>>
-    <associate|eq 16.154.181|<tuple|376|116>>
+    <associate|eq 16.154.181|<tuple|376|117>>
     <associate|eq 16.183.200|<tuple|117|43>>
     <associate|eq 16.184.200|<tuple|118|43>>
     <associate|eq 16.185.200|<tuple|119|43>>
@@ -11341,8 +11489,17 @@
     <associate|eq 16.207.201.1|<tuple|132|47>>
     <associate|eq 16.208.201|<tuple|134|47>>
     <associate|eq 16.209.201|<tuple|135|48>>
+    <associate|eq 16.209.304|<tuple|391|?>>
+    <associate|eq 16.209.304.1|<tuple|390|?>>
+    <associate|eq 16.210.304|<tuple|392|?>>
     <associate|eq 16.211.202|<tuple|136|49>>
-    <associate|eq 16.226.141|<tuple|385|?>>
+    <associate|eq 16.211.304|<tuple|393|?>>
+    <associate|eq 16.212.304|<tuple|394|?>>
+    <associate|eq 16.213.304|<tuple|395|?>>
+    <associate|eq 16.214.304|<tuple|396|?>>
+    <associate|eq 16.215.304|<tuple|397|?>>
+    <associate|eq 16.216.304|<tuple|398|?>>
+    <associate|eq 16.226.141|<tuple|385|120>>
     <associate|eq 16.261.222|<tuple|74|29>>
     <associate|eq 16.277.12|<tuple|377|117>>
     <associate|eq 16.280.125.1|<tuple|75|30>>
@@ -11355,7 +11512,7 @@
     <associate|eq 16.282.126|<tuple|102|36>>
     <associate|eq 16.282.127|<tuple|139|52>>
     <associate|eq 16.283.126|<tuple|103|36>>
-    <associate|eq 16.284.12|<tuple|378|117>>
+    <associate|eq 16.284.12|<tuple|378|118>>
     <associate|eq 16.284.124|<tuple|82|31>>
     <associate|eq 16.285.12|<tuple|379|118>>
     <associate|eq 16.285.124|<tuple|80|31>>
@@ -11556,7 +11713,7 @@
     <associate|lemma 14.360.158|<tuple|10|10>>
     <associate|lemma 14.364.159|<tuple|14|13>>
     <associate|lemma 16.104.194|<tuple|23|23>>
-    <associate|lemma 16.105.194|<tuple|91|24>>
+    <associate|lemma 16.105.194|<tuple|91|120>>
     <associate|lemma 16.106.194|<tuple|25|26>>
     <associate|lemma 16.107.194|<tuple|26|27>>
     <associate|lemma 16.108.194|<tuple|27|28>>
