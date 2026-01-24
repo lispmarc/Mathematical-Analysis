@@ -13041,7 +13041,175 @@
     </description>
   </proof>
 
-  \;
+  <\description>
+    <item*|<math|x=a>>Then <math|<frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>=f<around*|(|a|)>=f<around*|(|x|)>>.
+    As this result is independent of the sign of
+    <math|<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rsub|x><rsup|<around*|(|2|)>>>
+    we have\ 
+
+    <\equation*>
+      <choice|<tformat|<table|<row|<cell|<frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>\<geqslant\>f<around*|(|x|)><text|
+      if >\<forall\>x\<in\><around*|]|a,b|[>
+      <around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rsub|x><rsup|<around*|(|2|)>>\<geqslant\>0>>|<row|<cell|<frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>\<leqslant\>f<around*|(|x|)><text|
+      if <math|\<forall\>x\<in\><around*|]|a,b|[>
+      >><around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rsup|<around*|(|2|)>><rsub|x>\<leqslant\>0>>>>>
+    </equation*>
+
+    <item*|<math|x=b>>Then <math|<frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>=f<around*|(|b|)>=f<around*|(|x|)>>.
+    As this result is independent of the sign of
+    <math|<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rsup|<around*|(|2|)>><around*|(|x|)>>
+    we have\ 
+
+    <\equation*>
+      <choice|<tformat|<table|<row|<cell|<frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>\<geqslant\>f<around*|(|x|)><text|
+      if >f<rsup|<around*|(|2|)>><rsub|x>\<geqslant\>0>>|<row|<cell|<frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>\<leqslant\>f<around*|(|x|)><text|
+      if >f<rsup|<around*|(|2|)>><rsub|x>\<leqslant\>0>>>>>
+    </equation*>
+
+    <item*|<math|x\<in\><around*|]|a,b|[>>>Then\ 
+
+    <\equation*>
+      <frac|x-a|b-a>+<frac|b-x|b-a>=<frac|x-a+b-x|b-a>=1
+    </equation*>
+
+    so by multiplying both sides by <math|f<around*|(|x|)>> we have
+    <math|f<around*|(|x|)>=<frac|x-a|b-a>\<cdot\>f<around*|(|x|)>+<frac|b-x|b-a>\<cdot\>f<around*|(|x|)>>
+    so that
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>-f<around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>-<frac|x-a|b-a>\<cdot\>f<around*|(|x|)>-<frac|b-x|b-a>\<cdot\>f<around*|(|x|)>>|<cell|>|<cell|>>|<row|<cell|<frac|b-x|b-a>\<cdot\>f<around*|(|a|)>+<frac|x-a|b-a>\<cdot\>f<around*|(|b|)>-<frac|x-a|b-a>\<cdot\>f<around*|(|x|)>-<frac|b-x|b-a>\<cdot\>f<around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|<around*|(|x-a|)>|b-a>\<cdot\><around*|(|f<around*|(|b|)>-f<around*|(|x|)>|)>-<frac|b-x|b-a>\<cdot\><around*|(|f<around*|(|x|)>-f<around*|(|a|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|<around*|(|x-a|)>\<cdot\><around*|(|b-x|)>|b-a>\<cdot\><frac|f<around*|(|b|)>-f<around*|(|x|)>|b-x>-<frac|<around*|(|b-x|)>\<cdot\><around*|(|x-a|)>|b-a>\<cdot\><frac|f<around*|(|x|)>-f<around*|(|a|)>|x-a>>|<cell|=>|<cell|>>|<row|<cell|<frac|<around*|(|x-a|)>\<cdot\><around*|(|b-x|)>|b-a>\<cdot\><around*|(|<frac|f<around*|(|b|)>-f<around*|(|x|)>|b-x>-<frac|f<around*|(|x|)>-f<around*|(|a|)>|x-a>|)>>|<cell|>|<cell|<eq-number><label|eq
+      16.242.310>>>>>
+    </eqnarray*>
+
+    TODO\ 
+
+    Using the definition of higher order derivatives we have that
+    <math|\<forall\>y\<in\><around*|[|a,b|]>>
+    <math|f<rsub|\|<around*|[|a,b|]>>> has a derivative at <math|y> and the
+    function\ 
+
+    <\equation>
+      <label|eq 16.243.310><around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'>:<around*|[|a,b|]>\<rightarrow\>\<bbb-R\><text|
+      defined by ><around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'><around*|(|y|)>=<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'><rsub|y>
+    </equation>
+
+    has a derivative at <math|x> with
+
+    <\equation>
+      <label|eq 16.244.310><around*|(|<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'>|)><rprime|'><rsub|x>=<around*|(|f<rsup|><rsub|\|<around*|[|a,b|]>>|)><rsup|<around*|(|2|)>><rsub|x>
+    </equation>
+
+    As <math|<around*|[|a,x|]>\<subseteq\><around*|[|a,b|]>>,
+    <math|<around*|[|x,b|]>\<subseteq\><around*|[|a,b|]>> we have by
+    Lagrange's theorem [theorem: <reference|diff Lagrange theorem (1)>] that
+    there exists <math|y<rsub|1>\<in\><around*|]|a,x|[>>,
+    <math|y<rsub|2>\<in\><around*|]|x,b|[>> such that\ 
+
+    <\equation*>
+      f<rsub|\|<around*|[|a,b|]>><around*|(|x|)>-f<rsub|\|<around*|[|a,b|]>><around*|(|a|)>=<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'><rsub|y<rsub|1>>\<cdot\><around*|(|x-a|)><text|
+      and >f<rsub|\|<around*|[|a,b|]>><around*|(|b|)>-f<rsub|\|<around*|[|a,b|]>><around*|(|x|)>=<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'><rsub|y<rsub|2>>\<cdot\><around*|(|b-x|)>
+    </equation*>
+
+    which at <math|f<rsub|\|<around*|[|a,b|]>><around*|(|x|)>\<equallim\><rsub|x\<in\><around*|[|a,b|]>>f<around*|(|x|)>>,
+    <math|f<rsub|\|<around*|[|a,b|]>><around*|(|a|)>=a> and
+    <math|f<rsub|\|<around*|[|a,b|]>><around*|(|b|)>=f<around*|(|b|)>> gives\ 
+
+    <\equation>
+      <label|eq 16.245.310>f<around*|(|x|)>-f<around*|(|b|)>=<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'><rsub|y<rsub|1>>\<cdot\><around*|(|x-a|)><text|
+      and >f<around*|(|b|)>-f<around*|(|x|)>=<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'><rsub|y<rsub|2>>\<cdot\><around*|(|b-x|)>
+    </equation>
+
+    Substityting [eq: <reference|eq 16.245.310>] in [eq: <reference|eq
+    16.242.310>] gives\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>-f<around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|<around*|(|x-a|)>\<cdot\><around*|(|b-x|)>|b-a>\<cdot\><around*|(|<frac|<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'><rsub|y<rsub|2>>\<cdot\><around*|(|b-x|)>|b-x>-<frac|<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'><rsub|y<rsub|1>>\<cdot\><around*|(|x-a|)>|x-a>|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|<around*|(|x-a|)>\<cdot\><around*|(|b-x|)>|b-a>\<cdot\><around*|(|<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'><rsub|y<rsub|2>>-<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'><rsub|y<rsub|1>>|)>>|<cell|<below|=|<text|[eq:
+      <reference|eq 16.243.310>]>>>|<cell|>>|<row|<cell|<frac|<around*|(|x-a|)>\<cdot\><around*|(|b-x|)>|b-a>\<cdot\><around*|(|<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'><around*|(|y<rsub|2>|)>-<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'><rsub|><around*|(|y<rsub|1>|)>|)>>|<cell|>|<cell|<eq-number><label|eq
+      16.246.310>>>>>
+    </eqnarray*>
+
+    \;
+
+    \;
+
+    As <math|\<forall\>x\<in\>A<rsup|\<circ\>>> [a open set] <math|f> has a
+    <math|2>-the derivative it follows from [theorem: <reference|diff higher
+    order derivate on a open set (1)>] that <math|f> has a derivative at
+    every <math|x\<in\>A<rsup|\<circ\>>> and the function
+
+    <\equation>
+      <label|eq 16.143.200>f<rprime|'>:A<rsup|\<circ\>>\<rightarrow\>\<bbb-R\><text|
+      where >f<rprime|'><rsub|><around*|(|x|)>=f<rprime|'><rsub|x><text| has
+      >\<forall\>x\<in\>A<rsup|\<circ\>><text| a derivate at >x<text| with
+      <math|f<rsup|<around*|(|2|)>><rsub|x>=<around*|(|f<rprime|'>|)><rprime|'><rsub|x>>>
+    </equation>
+
+    \;
+
+    <math|>As <math|<around*|[|a,x|]>,<around*|[|x,b|]>\<subseteq\><around*|[|a,b|]>\<subseteq\>A<rsup|\<circ\>>>
+    we can apply Lagrange's theorem [corollary: <reference|diff Lagrange
+    theorem (1)>] on to find <math|y<rsub|1>\<in\><around*|]|a,x|[>>,
+    <math|y<rsub|2>\<in\><around*|]|x,b|[>> such that\ 
+
+    <\equation>
+      <label|eq 16.135.195>f<around*|(|x|)>-f<around*|(|a|)>=f<rprime|'><rsub|y<rsub|1>>\<cdot\><around*|(|x-a|)><text|
+      and >f<around*|(|b|)>-f<around*|(|x|)>=f<rprime|'><rsub|y<rsub|2>>\<cdot\><around*|(|b-x|)>
+    </equation>
+
+    Combining [eq: <reference|eq 16.134.195>] and [eq: <reference|eq
+    16.135.195>] gives\ 
+
+    <\equation>
+      <label|eq 16.136.195><frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>-f<around*|(|x|)>=<frac|<around*|(|x-a|)>\<cdot\><around*|(|b-x|)>|b-a>\<cdot\><around*|(|f<rprime|'><around*|(|y<rsub|2>|)>-f<rprime|'><around*|(|y<rsub|1>|)>|)>
+    </equation>
+
+    As <math|y<rsub|1>\<in\><around*|]|a,x|[>>,
+    <math|y<rsub|2>\<in\><around*|]|x,b|[>> we have
+    <math|a\<less\>y<rsub|1>\<less\>x\<less\>y<rsub|2>\<less\>b> so that
+    <math|y<rsub|1>\<less\>y<rsub|2>> and
+    <math|<around*|[|y<rsub|1>,y<rsub|2>|]>\<subseteq\><around*|[|a,b|]>\<subseteq\>A<rsup|\<circ\>>>.
+    Hence using [eq: <reference|eq 16.143.200>] we can apply Lagrange's
+    theorem [theorem: <reference|diff Lagrange theorem (1)>] on
+    <math|f<rprime|'>> to find a <math|z\<in\><around*|]|y<rsub|1>,y<rsub|2>|[>>
+    such that\ 
+
+    <\equation*>
+      f<rprime|'><around*|(|y<rsub|2>|)>-f<rprime|'><around*|(|y<rsub|1>|)>=<around*|(|f<rsup|<around*|(|1|)>>|)><rprime|'><rsub|z>\<cdot\><around*|(|y<rsub|2>-y<rsub|1>|)>=f<rsub|z><rsup|<around*|(|2|)>>\<cdot\><around*|(|y<rsub|2>-y<rsub|1>|)>
+    </equation*>
+
+    substituting this in [eq: <reference|eq 16.136.195>] gives
+
+    <\equation*>
+      <frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>-f<around*|(|x|)>=<frac|<around*|(|x-a|)>\<cdot\><around*|(|b-x|)>|b-a>\<cdot\>f<rsup|<around*|(|2|)>><around*|(|z|)>
+    </equation*>
+
+    Now as <math|x\<in\><around*|[|a,b|]>> we have that
+    <math|<frac|<around*|(|x-a|)>\<cdot\><around*|(|b-x|)>|b-a>\<geqslant\>0>
+    so that\ 
+
+    <\equation*>
+      <choice|<tformat|<table|<row|<cell|<frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>\<geqslant\>f<around*|(|x|)><text|
+      if >\<forall\>x\<in\><around*|]|a,b|[>
+      f<rsup|<around*|(|2|)>><around*|(|x|)>\<geqslant\>0>>|<row|<cell|<frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>\<leqslant\>f<around*|(|x|)><text|
+      if <math|\<forall\>x\<in\><around*|]|a,b|[>
+      >>f<rsup|<around*|(|2|)>><around*|(|x|)>\<leqslant\>0>>>>>
+    </equation*>
+  </description>
+
+  So in all cases we have <math|<choice|<tformat|<table|<row|<cell|<frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>\<geqslant\>f<around*|(|x|)><text|
+  if >\<forall\>x\<in\><around*|]|a,b|[> f<rsup|<around*|(|2|)>><around*|(|x|)>\<geqslant\>0>>|<row|<cell|<frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>\<leqslant\>f<around*|(|x|)><text|
+  if <math|\<forall\>x\<in\><around*|]|a,b|[>
+  >>f<rsup|<around*|(|2|)>><around*|(|x|)>\<leqslant\>0>>>>>> proving that\ 
+
+  <\enumerate>
+    <item>If <math|\<forall\>x\<in\><around*|]|a,b|[>>
+    <math|0\<leqslant\>f<rsup|<around*|(|2|)>><rsup|><around*|(|x|)>> then
+    <math|f> is convex on <math|<around*|[|a,b|]>>
+
+    <item>If <math|\<forall\>x\<in\><around*|]|a,b|[>>
+    <math|f<rsup|<around*|(|2|)>><around*|(|x|)>\<leqslant\>0> then <math|f>
+    is concave on <math|<around*|[|a,b|]>>
+  </enumerate>
 
   \;
 
@@ -13194,8 +13362,10 @@
     <associate|eq 16.134.181|<tuple|361|113>>
     <associate|eq 16.134.6|<tuple|315|99>>
     <associate|eq 16.135.181|<tuple|362|113>>
+    <associate|eq 16.135.195|<tuple|473|?>>
     <associate|eq 16.135.6|<tuple|316|99>>
     <associate|eq 16.136.181|<tuple|363|114>>
+    <associate|eq 16.136.195|<tuple|474|?>>
     <associate|eq 16.136.6|<tuple|317|99>>
     <associate|eq 16.137.195|<tuple|332|105>>
     <associate|eq 16.137.6|<tuple|318|99>>
@@ -13210,6 +13380,7 @@
     <associate|eq 16.142.195|<tuple|337|106>>
     <associate|eq 16.143.181|<tuple|365|114>>
     <associate|eq 16.143.195|<tuple|338|106>>
+    <associate|eq 16.143.200|<tuple|472|?>>
     <associate|eq 16.144.181|<tuple|367|114>>
     <associate|eq 16.144.181.1|<tuple|366|114>>
     <associate|eq 16.144.195|<tuple|339|107>>
@@ -13287,9 +13458,14 @@
     <associate|eq 16.236.300|<tuple|438|?>>
     <associate|eq 16.237.300|<tuple|439|?>>
     <associate|eq 16.238.300|<tuple|440|?>>
+    <associate|eq 16.242.310|<tuple|467|?>>
+    <associate|eq 16.243.310|<tuple|468|?>>
     <associate|eq 16.244.300|<tuple|454|?>>
+    <associate|eq 16.244.310|<tuple|469|?>>
     <associate|eq 16.245.300|<tuple|455|?>>
+    <associate|eq 16.245.310|<tuple|470|?>>
     <associate|eq 16.246.300|<tuple|456|?>>
+    <associate|eq 16.246.310|<tuple|471|?>>
     <associate|eq 16.247.300|<tuple|457|?>>
     <associate|eq 16.248.300|<tuple|458|?>>
     <associate|eq 16.249.300|<tuple|459|?>>
@@ -13598,6 +13774,12 @@
       <tuple|<tuple|<with|mode|<quote|math>|<around*|(|i\<rightarrow\>x|)>>>|<pageref|auto-3>>
 
       <tuple|<tuple|<with|mode|<quote|math>|\<Delta\><rsub|i,j>>>|<pageref|auto-4>>
+
+      <tuple|<tuple|chain rule higher order
+      differentiation>|<pageref|auto-9>>
+
+      <tuple|<tuple|higher order differentiation chain
+      rule>|<pageref|auto-10>>
     </associate>
     <\associate|toc>
       <with|par-left|<quote|2tab>|1<space|2spc>Product of

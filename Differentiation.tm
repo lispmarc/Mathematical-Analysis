@@ -8914,8 +8914,6 @@
     </description>
   </proof>
 
-  TODO recheck this
-
   <\theorem>
     <label|diff higher order derivate and differential>Let
     <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>>
@@ -12508,7 +12506,7 @@
 
           <\equation>
             <label|eq 16.199.310>\<forall\>x\<in\>A<text|
-            >D<rsub|x>f=<around*|(|D<rsub|x><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>D<rsub|x><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>
+            >D<rsup|<around*|[|1|]>><rsub|x>f=D<rsub|x>f=<around*|(|D<rsub|x><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>D<rsub|x><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>
           </equation>
 
           So we can define the function
@@ -12526,7 +12524,7 @@
             <tformat|<table|<row|<cell|<around*|(|\<cal-K\>\<circ\><around*|(|D<rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>|)><around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|\<cal-K\><around*|(|<around*|(|D<rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>><around*|(|x|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<cal-K\><around*|(|D<rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|1>\<circ\>f|)><around*|(|x|)>,\<ldots\>,D<rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|k>\<circ\>f|)><around*|(|x|)>|)>>|<cell|<below|=|<text|[eq:
             <reference|eq 16.198.310>]>>>|<cell|>>|<row|<cell|\<cal-K\><around*|(|D<rsub|x><rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsub|x><rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|D<rsub|x><rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|1>\<circ\>f|)>,\<ldots\>,D<rsub|x><rsup|<around*|[|1|]>><around*|(|\<pi\><rsub|k>\<circ\>f|)>|)><rsub|\<ast\>>>|<cell|\<equallim\><rsub|<text|[eq:
             <reference|eq 16.199.310>]>>>|<cell|>>|<row|<cell|D<rsub|x><rsup|<around*|[|1|]>>f>|<cell|\<equallim\><rsub|<text|[eq:
-            <reference|eq 16.232.300>]>>>|<cell|>>|<row|<cell|D<rsup|<around*|[|1|]>>f<around*|(|x|)>>|<cell|>|<cell|>>>>
+            <reference|eq 16.199.310>]>>>|<cell|>>|<row|<cell|D<rsup|<around*|[|1|]>>f<around*|(|x|)>>|<cell|>|<cell|>>>>
           </eqnarray*>
 
           which proves that\ 
@@ -12700,12 +12698,10 @@
 
   We are now ready to prove the Chain Rules for higher order differentiation.
 
-  TODO review this proof
-
   <\theorem>
     <label|diff chain rule higher order><index|chain rule higher order
     differentiation><index|higher order differentiation chain
-    rule><dueto|General Chain Rule>Let <math|n\<in\>\<bbb-N\>>,
+    rule><dueto|General Chain Rule (1)>Let <math|n\<in\>\<bbb-N\>>,
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>,
     <math|<around*|\<langle\>|Z,<around*|\<\|\|\>||\<\|\|\>><rsub|Z>|\<rangle\>>>
@@ -12722,13 +12718,14 @@
     </equation*>
 
     <\note>
-      If <math|A>, <math|B> are either open or of the form
-      <math|<around*|[|a,\<infty\>|[>>, <math|<around*|]|a,\<infty\>|[>>,
-      <math|<around*|]|-\<infty\>,a|]>>, <math|<around*|]|-\<infty\>,a|[>>,
-      <math|<around*|[|a,b|]>>, <math|<around*|]|a,b|]>>,
-      <math|<around*|[|a,b|[>> or <math|<around*|]|a,b|[>> then by [theorem:
-      <reference|diff tangential spanning set examples>] <math|A>, <math|B>
-      are automatical tangential spanning sets.
+      If <math|A>, <math|B> are either open or non empty subsets of
+      <math|\<bbb-R\>> of the form <math|<around*|[|a,\<infty\>|[>>,
+      <math|<around*|]|a,\<infty\>|[>>, <math|<around*|]|-\<infty\>,a|]>>,
+      <math|<around*|]|-\<infty\>,a|[>>, <math|<around*|[|a,b|]>>,
+      <math|<around*|]|a,b|]>>, <math|<around*|[|a,b|[>> or
+      <math|<around*|]|a,b|[>> then by [theorem: <reference|diff tangential
+      spanning set examples>] <math|A>, <math|B> are automatical tangential
+      spanning sets.
     </note>
   </theorem>
 
@@ -12736,7 +12733,7 @@
     We prove this by induction on <math|n>, so define
 
     <\equation*>
-      S<rsub|X>=<around*|{|n\<in\>\<bbb-N\>\|Let
+      S<rsub|X,A>=<around*|{|n\<in\>\<bbb-N\>\|Let
       <around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>><around*|\<langle\>|Z,<around*|\<\|\|\>||\<\|\|\>><rsub|Z>|\<rangle\>><text|
       be normed spaces, <math|B\<subseteq\>Y> a tangential spanning set,
       <math|f:A\<rightarrow\>Y<text| a function that is >n<text|-times
@@ -12750,16 +12747,16 @@
     then we have:\ 
 
     <\description>
-      <item*|<math|1\<in\>S<rsub|X>>>If <math|f:A\<rightarrow\>Y> is
+      <item*|<math|1\<in\>S<rsub|X,A>>>If <math|f:A\<rightarrow\>Y> is
       <math|1>-times differentiable [hence Fréchet differentiable] at
       <math|x<rsub|0>>, <math|f<around*|(|A|)>\<subseteq\>B> and
       <math|g:B\<rightarrow\>Z> is <math|1>-times differentiable [Fréchet
       differentiable] at <math|f<around*|(|x<rsub|0>|)>> we have by the chain
       rule [theorem: <reference|diff chain rule>] that <math|f\<circ\>g> is
       Fréchet differentiable at <math|x<rsub|0>> hence <math|1>-times
-      differentiable at <math|x<rsub|0>>. So <math|1\<in\>S<rsub|X>>.
+      differentiable at <math|x<rsub|0>>. So <math|1\<in\>S<rsub|X,A>>.
 
-      <item*|<math|n\<in\>S<rsub|X>\<Rightarrow\>n+1\<in\>S<rsub|X>>>Let
+      <item*|<math|n\<in\>S<rsub|X,A>\<Rightarrow\>n+1\<in\>S<rsub|X,A>>>Let
       <math|f:A\<rightarrow\>Y> be <math|<around*|(|n+1|)>>-times
       differentiable at <math|x<rsub|0>>,
       <math|f<around*|(|A|)>\<subseteq\>B> and <math|g:B\<rightarrow\>Z> be
@@ -12780,7 +12777,7 @@
 
       <\equation>
         <label|eq 16.208.310>D<rsup|<around*|[|1|]>>g:B\<rightarrow\>L<around*|(|Y,Z|)><text|
-        by >D<rsup|<around*|[|2|]>>g<around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y>g=D<rsub|y>g<text|
+        by >D<rsup|<around*|[|1|]>>g<around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y>g=D<rsub|y>g<text|
         is >n<text|-times differentiable at >f<around*|(|x<rsub|0>|)>
       </equation>
 
@@ -12813,7 +12810,7 @@
       <\eqnarray*>
         <tformat|<table|<row|<cell|<around*|(|\<pi\><rsub|1>\<circ\>h|)><around*|(|x|)>>|<cell|=>|<cell|\<pi\><rsub|1><around*|(|h<around*|(|x|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
         <reference|eq 16.211.310>]>>>|<cell|\<pi\><rsub|1><around*|(|D<rsup|<around*|[|1|]>><rsub|f<around*|(|x|)>>g,D<rsup|<around*|[|1|]>><rsub|x>f|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|1|]>><rsub|f<around*|(|x|)>>g>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
-        <reference|eq 16.208.310>]>>>|<cell|D<rsup|<around*|[|1|]>>g<around*|(|f<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|D<rsup|<around*|[|1|]>>g|)>\<circ\>f|)><around*|(|x|)>>>|<row|<cell|<around*|(|\<pi\><rsub|2>\<circ\>h|)><around*|(|x|)>>|<cell|=>|<cell|\<pi\><rsub|2><around*|(|h<around*|(|x|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.208.310>]>\<wedge\>f<around*|(|A|)>\<subseteq\>B>>|<cell|D<rsup|<around*|[|1|]>>g<around*|(|f<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|D<rsup|<around*|[|1|]>>g|)>\<circ\>f|)><around*|(|x|)>>>|<row|<cell|<around*|(|\<pi\><rsub|2>\<circ\>h|)><around*|(|x|)>>|<cell|=>|<cell|\<pi\><rsub|2><around*|(|h<around*|(|x|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
         <reference|eq 16.211.310>]>>>|<cell|\<pi\><rsub|1><around*|(|D<rsup|<around*|[|1|]>><rsub|f<around*|(|x|)>>g,D<rsup|<around*|[|1|]>><rsub|x>f|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|1|]>><rsub|x>f>>|<row|<cell|>|<cell|<below|=|<text|[eq:
         <reference|eq 16.207.310>]>>>|<cell|D<rsup|<around*|[|1|]>>f<around*|(|x|)>>>>>
       </eqnarray*>
@@ -12830,8 +12827,8 @@
       m-times derivating>] that <math|f> is <math|n>-times differentiable at
       <math|x<rsub|0>>, further by [eq: <reference|eq 16.208.310>]
       <math|D<rsup|<around*|[|1|]>>g> is <math|n>-times differentiable at
-      <math|f<around*|(|x<rsub|0>|)>> so using the fact that
-      <math|n\<in\>S<rsub|X>> it follows that
+      <math|f<around*|(|x<rsub|0>|)>>, so using the fact that
+      <math|n\<in\>S<rsub|X,A>> it follows that
       <math|<around*|(|D<rsup|<around*|[|1|]>>g|)>\<circ\>f> is
       <math|n>-times differentiable at <math|x<rsub|0>> or using [eq:
       <reference|eq 16.212.310>]\ 
@@ -12841,9 +12838,9 @@
         >x<rsub|0>
       </equation*>
 
-      Further as by [eq: <reference|eq 16.207.310>] <math|D<rsup|1>f> is
-      <math|n>-times differentiable at <math|x<rsub|0>> so that by [eq:
-      <reference|eq 16.212.310>]\ 
+      Further as by [eq: <reference|eq 16.207.310>]
+      <math|D<rsup|<around*|[|1|]>>f> is <math|n>-times differentiable at
+      <math|x<rsub|0>> so that by [eq: <reference|eq 16.212.310>]\ 
 
       <\equation*>
         \<pi\><rsub|2>\<circ\>h<text| is >n<text|-times differentiable at
@@ -12875,15 +12872,15 @@
       Now <math|L<around*|(|Y,Z|)>\<cdot\>L<around*|(|X,Y|)>> is open in
       <math|L<around*|(|Y,Z|)>\<cdot\>L<around*|(|X,Y|)>> so that by
       [theorem: <reference|diff tangential spanning set examples>]
-      <math|L<around*|(|Y,Z|)>\<cdot\>L<around*|(|X,Y|)>><math|> is a
+      <math|<rigid|L<around*|(|Y,Z|)>\<cdot\>L<around*|(|X,Y|)>>><math|> is a
       tangential spanning set, <math|h<around*|(|A|)>\<subseteq\>L<around*|(|Y,Z|)>\<cdot\>L<around*|(|X,Y|)>>,
       <math|<around*|(|\<circ\>|)>> is <math|n>-times differentiable at
       <math|h<around*|(|x<rsub|0>|)>> [see lemma: <reference|lemma
       16.101.194>], <math|h> is <math|n>-times differentiable at
-      <math|x<rsub|0>> [see eq: <reference|eq 16.213.310>] so that as
-      <math|n\<in\>S<rsub|X>> it follows that
+      <math|x<rsub|0>> [see eq: <reference|eq 16.213.310>] so, as
+      <math|n\<in\>S<rsub|X,A>>, it follows that
       <math|<around*|(|\<circ\>|)>\<circ\>h> is <math|n>-times differentiable
-      at <math|x<rsub|0>>. Using this result in [eq: <reference|eq
+      at <math|x<rsub|0>>. Substituting this result in [eq: <reference|eq
       16.214.310>] proves that\ 
 
       <\equation*>
@@ -12901,7 +12898,7 @@
       which proves that\ 
 
       <\equation*>
-        n+1\<in\>S<rsub|X>
+        n+1\<in\>S<rsub|X,A>
       </equation*>
     </description>
   </proof>
@@ -12948,8 +12945,8 @@
     </equation*>
 
     Using [theorem: <reference|diff higher order differentiation and vector
-    functions>] and the fact <math|f,g> are <math|n>-times differentiable it
-    follows that\ 
+    functions>] and the fact <math|f,g> are <math|n>-times differentiable at
+    <math|x> it follows that\ 
 
     <\equation*>
       \<varphi\><text| is >n<text|-times differentiable at >x
@@ -13011,23 +13008,34 @@
     </equation*>
   </proof>
 
-  We can use the same proof technique as is used in the General Chain Rule to
-  prove that the composition of functions that are <math|C<rsup|n>> is
+  We can use the same proof technique as is used in the General Chain Rule
+  [see theorem: <reference|diff chain rule higher order>] to prove that the
+  composition of functions that are of <math|C<rsup|n>> is of class
   <math|C<rsup|n>>.
 
-  TODO
-
   <\theorem>
-    <label|diff chain rule higher order class>Let
-    <math|n\<in\>\<bbb-N\><rsub|0>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <label|diff chain rule higher order class><dueto|General Chain Rule
+    (2)>Let <math|n\<in\>\<bbb-N\><rsub|0>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>,
     <math|<around*|\<langle\>|Z,<around*|\<\|\|\>||\<\|\|\>><rsub|Z>|\<rangle\>>>
     be normed spaces, tangential spanning sets <math|A\<subseteq\>X>,
-    <math|B\<subseteq\>Y> and <math|f:U\<rightarrow\>Y>,
-    <math|g:V\<rightarrow\>Z> functions such that
-    <math|f<around*|(|U|)>\<subseteq\>V>. If <math|f> is of class
+    <math|B\<subseteq\>Y> and <math|f:A\<rightarrow\>Y>,
+    <math|g:B\<rightarrow\>Z> functions such that
+    <math|f<around*|(|A|)>\<subseteq\>B>. If <math|f> is of class
     <math|C<rsup|n>> and <math|g> is of class <math|C<rsup|n>> then
     <math|g\<circ\>f> is of class <math|C<rsup|n>>.
+
+    <\note>
+      If <math|A>, <math|B> are either open or non empty subsets of
+      <math|\<bbb-R\>> of the form <math|<around*|[|a,\<infty\>|[>>,
+      <math|<around*|]|a,\<infty\>|[>>, <math|<around*|]|-\<infty\>,a|]>>,
+      <math|<around*|]|-\<infty\>,a|[>>, <math|<around*|[|a,b|]>>,
+      <math|<around*|]|a,b|]>>, <math|<around*|[|a,b|[>> or
+      <math|<around*|]|a,b|[>> then by [theorem: <reference|diff tangential
+      spanning set examples>] <math|A>, <math|B> are automatical tangential
+      spanning sets.
+    </note>
   </theorem>
 
   <\proof>
@@ -13044,10 +13052,10 @@
       define
 
       <\equation*>
-        S<rsub|X>=<around*|{|n\<in\>\<bbb-N\>\|<text|Let
+        S<rsub|X,A>=<around*|{|n\<in\>\<bbb-N\>\|<text|Let
         ><around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>,<around*|\<langle\>|Z,<around*|\<\|\|\>||\<\|\|\>><rsub|Z>|\<rangle\>><text|
         be normed spaces, >B\<subseteq\>Y<text| a tangential spanning set,
-        ><rigid|f:A\<rightarrow\>Y><text| a function that is of class
+        ><rigid|f:A\<rightarrow\>Y><text| a function of class
         >C<rsup|n><text| with >f<around*|(|A|)>\<subseteq\>B<text| and
         >g:B\<rightarrow\>Z<text| a function of class >C<rsup|n><text| then
         >g\<circ\>f<text| is of class >C<rsup|n>|}>
@@ -13056,7 +13064,7 @@
       then we have:\ 
 
       <\description>
-        <item*|<math|1\<in\>S<rsub|X>>>If <math|f:A\<rightarrow\>Y> is of
+        <item*|<math|1\<in\>S<rsub|X,A>>>If <math|f:A\<rightarrow\>Y> is of
         class <math|C<rsup|1>>, <math|f<around*|(|A|)>\<subseteq\>B>, and
         <math|g:B\<rightarrow\>Z> is of class <math|C<rsup|1>> then <math|f>
         is <math|1>-times differentiable [hence Fréchet differentiable] on
@@ -13075,7 +13083,7 @@
           is continuous>
         </equation>
 
-        Let <math|x\<in\>A> then sing [theorem: <reference|diff chain rule>]
+        Let <math|x\<in\>A> then using [theorem: <reference|diff chain rule>]
         it follows that <math|g\<circ\>f> is Fréchet differentiable at
         <math|x> [hence <math|1>-times differentiable] at <math|x> with
 
@@ -13086,7 +13094,7 @@
         So we can define\ 
 
         <\equation>
-          <label|eq 16.218.310>D<rsup|<around*|[|1|]>><around*|(|g\<circ\>f|)>:A\<Rightarrow\>L<around*|(|X,Z|)><text|
+          <label|eq 16.218.310>D<rsup|<around*|[|1|]>><around*|(|g\<circ\>f|)>:A\<rightarrow\>L<around*|(|X,Z|)><text|
           where >D<rsup|<around*|[|1|]>><around*|(|g\<circ\>f|)><around*|(|x|)>=D<rsup|<around*|[|1|]>><rsub|x><around*|(|g\<circ\>f|)>
         </equation>
 
@@ -13101,7 +13109,7 @@
 
         <\eqnarray*>
           <tformat|<table|<row|<cell|<around*|(|\<pi\><rsub|1>\<circ\>h|)><around*|(|x|)>>|<cell|=>|<cell|\<pi\><rsub|1><around*|(|h<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsub|1><around*|(|D<rsup|<around*|[|1|]>><rsub|f<around*|(|x|)>>g,D<rsup|<around*|[|1|]>><rsub|x>f|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|1|]>><rsub|f<around*|(|x|)>>g>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
-          <reference|eq 16.216.310>]>>>|<cell|D<rsup|<around*|[|1|]>>g<around*|(|f<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|D<rsup|<around*|[|1|]>>g|)>\<circ\>f|)><around*|(|x|)>>>|<row|<cell|<around*|(|\<pi\><rsub|2>\<circ\>h|)><around*|(|x|)>>|<cell|=>|<cell|\<pi\><rsub|2><around*|(|h<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsub|2><around*|(|D<rsup|<around*|[|1|]>><rsub|f<around*|(|x|)>>g,D<rsup|<around*|[|1|]>><rsub|x>f|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|1|]>><rsub|x>f>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 16.216.310>]>\<wedge\>f<around*|(|A|)>\<subseteq\>B>>|<cell|D<rsup|<around*|[|1|]>>g<around*|(|f<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|D<rsup|<around*|[|1|]>>g|)>\<circ\>f|)><around*|(|x|)>>>|<row|<cell|<around*|(|\<pi\><rsub|2>\<circ\>h|)><around*|(|x|)>>|<cell|=>|<cell|\<pi\><rsub|2><around*|(|h<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsub|2><around*|(|D<rsup|<around*|[|1|]>><rsub|f<around*|(|x|)>>g,D<rsup|<around*|[|1|]>><rsub|x>f|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|1|]>><rsub|x>f>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
           <reference|eq 16.215.310>>>>|<cell|D<rsup|<around*|[|1|]>>f<around*|(|x|)>>>>>
         </eqnarray*>
 
@@ -13151,12 +13159,12 @@
         proves that\ 
 
         <\equation*>
-          1\<in\>S
+          1\<in\>S<rsub|X,A>
         </equation*>
 
         <item*|<math|n\<in\>S<rsub|X>\<Rightarrow\>n+1\<in\>S<rsub|X>>>As
         <math|f:A\<rightarrow\>Y> is of class <math|C<rsup|n+1>>,
-        <math|g:B\<rightarrow\>Z> is of class <math|C<rsup|n+>> it follows
+        <math|g:B\<rightarrow\>Z> is of class <math|C<rsup|n+1>> it follows
         from [theorem: <reference|diff f is of class C^n if D^1f u=is of
         class C^n-1 (1)>] that <math|f> is <math|1>-times differentiable on
         <math|A>, <math|g> is <math|1>-times differentiable on <math|B> and\ 
@@ -13188,7 +13196,7 @@
 
         <\equation>
           <label|eq 16.224.310>\<forall\>x\<in\>A<text|
-          >D<rsup|<around*|[|1|]>><around*|(|g\<circ\>f|)><around*|(|x|)>=D<rsub|f<around*|(|x|)>>g\<circ\>D<rsub|x>f
+          >D<rsup|<around*|[|1|]>><around*|(|g\<circ\>f|)><around*|(|x|)>=D<rsub|f<around*|(|x|)>>g\<circ\>D<rsub|x>f=D<rsup|<around*|[|1|]>><rsub|f<around*|(|x|)>>g\<circ\>D<rsup|<around*|[|1|]>><rsub|x>f
         </equation>
 
         Define now the function\ 
@@ -13202,7 +13210,7 @@
 
         <\eqnarray*>
           <tformat|<table|<row|<cell|<around*|(|\<pi\><rsub|1>\<circ\>h|)><around*|(|x|)>>|<cell|=>|<cell|\<pi\><rsub|1><around*|(|h<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsub|1><around*|(|D<rsup|<around*|[|1|]>><rsub|f<around*|(|x|)>>g,D<rsub|x><rsup|<around*|[|1|]>>f|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|1|]>><rsub|f<around*|(|x|)>>g>>|<row|<cell|>|<cell|<below|=|<text|[eq:
-          <reference|eq 16.222.310>]>>>|<cell|D<rsup|<around*|[|1|]>>g<around*|(|f<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|D<rsup|<around*|[|1|]>>g|)>\<circ\>f|)><around*|(|x|)>>>|<row|<cell|<around*|(|\<pi\><rsub|2>\<circ\>h|)><around*|(|x|)>>|<cell|=>|<cell|\<pi\><rsub|2><around*|(|h<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|D<rsup|<around*|[|1|]>><rsub|f<around*|(|x|)>>g,D<rsub|x><rsup|<around*|[|1|]>>f|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|1|]>><rsub|x>f>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|1|]>>f<around*|(|x|)>>>>>
+          <reference|eq 16.222.310>]>\<wedge\>f<around*|(|A|)>\<subseteq\>B>>|<cell|D<rsup|<around*|[|1|]>>g<around*|(|f<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|D<rsup|<around*|[|1|]>>g|)>\<circ\>f|)><around*|(|x|)>>>|<row|<cell|<around*|(|\<pi\><rsub|2>\<circ\>h|)><around*|(|x|)>>|<cell|=>|<cell|\<pi\><rsub|2><around*|(|h<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|D<rsup|<around*|[|1|]>><rsub|f<around*|(|x|)>>g,D<rsub|x><rsup|<around*|[|1|]>>f|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|1|]>><rsub|x>f>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|1|]>>f<around*|(|x|)>>>>>
         </eqnarray*>
 
         proving that\ 
@@ -13214,281 +13222,86 @@
 
         As <math|f> is of class <math|C<rsup|n+1>> we have by [theorem:
         <reference|diff C^n and C^m>] that <math|f> is of class
-        \ <math|C<rsup|n>> TODO , as further
-        <math|D<rsup|<around*|[|1|]>><rsub|V>g> is <math|C<rsup|n>> on
-        <math|V> [see eq: <reference|eq 16.251.300>] and <math|n\<in\>S> it
-        follows that <math|D<rsup|<around*|[|a|]>><rsub|V>g\<circ\>f> is
-        <math|C<rsup|n>> on <math|U>. Using then [eq: <reference|eq
-        16.255.300>] it follows that <math|\<pi\><rsub|1>\<circ\>h> is
-        <math|C<rsup|n>> on <math|U>. As by [eq: <reference|eq 16.250.300>]
-        <math|D<rsup|<around*|[|1|]>><rsub|U>f> is <math|C<rsup|n>> on
-        <math|U> we have also that <math|\<pi\><rsub|2>\<circ\>h> is
-        <math|C<rsup|n>> on <math|U>. Using now [lemma: <reference|diff
-        higher order differentiation classes>] it follows that
-
-        \ 
-      </description>
-    </description>
-
-    \;
-  </proof>
-
-  <\proof>
-    For <math|n\<in\>\<bbb-N\><rsub|0>> we have either:\ 
-
-    <\description>
-      <item*|<math|n=0>>Then as <math|f> is <math|C<rsup|0>> on
-      <math|U=dom<around*|(|f|)>> <math|f> is continuous, likewise as
-      <math|g> is <math|C<rsup|0>> on <math|V=dom<around*|(|g|)>> <math|g> is
-      continuous. Hence using [theorem: <reference|continuity composition
-      (1)>] it follows that <math|g\<circ\>f> is continuous or in other words
-      <math|g\<circ\>f> is <math|C<rsup|0>> on <math|U>.
-
-      <item*|<math|n\<in\>\<bbb-N\>>>We use induction to prove this case, so
-      define\ 
-
-      <\equation*>
-        S=<around*|{|n\<in\>\<bbb-N\>\|<text|If
-        ><around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>,<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>,<around*|\<langle\>|Z,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>><text|
-        are normed spaces, >U<text| a open set in >X<text|, >V<text| a open
-        set in >Y<text|, >f:U\<rightarrow\>Y<text| a function that is
-        >C<rsup|n><text| on >U<text|and >g:V\<rightarrow\>Z<text| a function
-        that is >C<rsup|n><text| on >V<text| such that
-        \ >f<around*|(|U|)>\<subseteq\>V<text| then >g\<circ\>f<text| is
-        >C<rsup|n><text| on >U|}>
-      </equation*>
-
-      then we have either:\ 
-
-      <\description>
-        <item*|<math|1\<in\>S>>As <math|f> is <math|C<rsup|1>> on <math|U>
-        <math|f> is <math|1>-times differentiable [hence Fréchet
-        differentiable] on <math|U>and the function\ 
+        \ <math|C<rsup|n>> , as further <math|D<rsup|<around*|[|1|]>>g> is of
+        class <math|C<rsup|n>> [see eq: <reference|eq 16.222.310>] and
+        <math|n\<in\>S<rsub|X,A>> it follows that
+        <math|D<rsup|<around*|[|n|]>>g\<circ\>f> is of class
+        <math|C<rsup|n>>. Using then [eq: <reference|eq 16.226.310>] it
+        follows that <math|\<pi\><rsub|1>\<circ\>h> is of class
+        <math|C<rsup|n>>. As by [eq: <reference|eq 16.221.310>]
+        <math|D<rsup|<around*|[|1|]>>f> is of class <math|C<rsup|n>> we have
+        also that <math|\<pi\><rsub|2>\<circ\>h> is of class
+        <math|C<rsup|n>>. Using now [lemma: <reference|diff higher order
+        differentiation classes>] it follows that
 
         <\equation>
-          <label|eq 16.244.300>D<rsup|<around*|[|1|]>><rsub|U>f:U\<rightarrow\>L<around*|(|X,Y|)><text|
-          defined by >D<rsup|<around*|[|1|]>><rsub|U>f<around*|(|x|)>=D<rsup|<around*|[|1|]>><rsub|x>f<text|
-          is continuous>
+          <label|eq 16.227.310>h<text| is of class >C<rsup|n>
         </equation>
 
-        As <math|g> is <math|C<rsup|1>> on <math|V> <math|g> is
-        <math|1>-times differentiable [hence Fréchet differentiable] on
-        <math|V> and the function\ 
-
-        <\equation>
-          <label|eq 16.245.300>D<rsup|<around*|[|1|]>><rsub|V>g:V\<rightarrow\><around*|(|Y,Z|)><text|
-          defined by >D<rsup|<around*|[|1|]>><rsub|V>g<around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y>g<text|
-          is continuous>
-        </equation>
-
-        Using [theorem: <reference|diff chain rule>] it follows that
-        <math|g\<circ\>f> is Fréchet differentiable [hence <math|1>-times
-        differentiable] on <math|U> with <math|\<forall\>x\<in\>U>
-        <math|D<rsup|<around*|[|1|]>><rsub|x><around*|(|g\<circ\>f|)>=D<rsub|x><around*|(|g\<circ\>f|)>=D<rsub|f<around*|(|x|)>>g\<circ\>D<rsub|x>f>.
-        So if we define\ 
-
-        <\equation>
-          <label|eq 16.246.300>D<rsup|<around*|[|1|]>><rsub|U><around*|(|g\<circ\>f|)>:U\<rightarrow\>L<around*|(|X,Z|)><text|
-          by >D<rsup|<around*|[|1|]>><rsub|U><around*|(|g\<circ\>f|)><around*|(|x|)>=D<rsup|<around*|[|1|]>><rsub|x><around*|(|g\<circ\>f|)>
-        </equation>
-
-        then we have\ 
-
-        <\equation>
-          <label|eq 16.247.300>\<forall\>x\<in\>U<text|
-          >D<rsup|<around*|[|1|]>><rsub|U><around*|(|g\<circ\>f|)><around*|(|x|)>=D<rsub|f<around*|(|x|)>>g\<circ\>D<rsub|x>f
-        </equation>
-
-        Define the function\ 
-
-        <\equation>
-          <label|eq 16.248.300>h:U\<rightarrow\>L<around*|(|Y,Z|)>\<cdot\>L<around*|(|X,Y|)><text|
-          by >h<around*|(|x|)>=<around*|(|D<rsup|<around*|[|1|]>><rsub|f<around*|(|x|)>>g,D<rsup|<around*|[|1|]>><rsub|x>f|)>
-        </equation>
-
-        then we have for <math|x\<in\>U> that\ 
+        Now <math|\<forall\>x\<in\>A> then we have\ 
 
         <\eqnarray*>
-          <tformat|<table|<row|<cell|<around*|(|\<pi\><rsub|1>\<circ\>h|)><around*|(|x|)>>|<cell|=>|<cell|\<pi\><rsub|1><around*|(|h<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsub|1><around*|(|D<rsup|<around*|[|1|]>><rsub|f<around*|(|x|)>>g,D<rsup|<around*|[|1|]>><rsub|x>f|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|1|]>><rsub|f<around*|(|x|)>>g>>|<row|<cell|>|<cell|<below|=|<text|[eq:
-          <reference|eq 16.245.300>]>\<wedge\>f<around*|(|x|)>\<in\>V>>|<cell|D<rsup|<around*|[|1|]>><rsub|V>g<around*|(|f<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|D<rsup|<around*|[|1|]>><rsub|V>g\<circ\>f|)><around*|(|x|)>>>|<row|<cell|<around*|(|\<pi\><rsub|2>\<circ\>h|)><around*|(|x|)>>|<cell|=>|<cell|\<pi\><rsub|2><around*|(|h<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsub|2><around*|(|D<rsup|<around*|[|1|]>><rsub|f<around*|(|x|)>>g,D<rsup|<around*|[|1|]>><rsub|x>f|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|1|]>><rsub|x>f>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
-          <reference|eq 16.244.300>]>>>|<cell|D<rsup|<around*|[|1|]>><rsub|U>f<around*|(|x|)>>>>>
+          <tformat|<table|<row|<cell|<around*|(|<around*|(|\<circ\>|)>\<circ\>h|)><around*|(|x|)>>|<cell|=>|<cell|<around*|(|\<circ\>|)><around*|(|h<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<circ\>|)><around*|(|D<rsup|<around*|[|1|]>><rsub|f<around*|(|x|)>>g,D<rsub|x><rsup|<around*|[|1|]>>f|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|1|]>><rsub|f<around*|(|x|)>>g\<circ\>D<rsup|<around*|[|1|]>><rsub|x>f>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+          <reference|eq 16.224.310>]>>>|<cell|D<rsup|<around*|[|1|]>><around*|(|g\<circ\>f|)><around*|(|x|)>>>>>
         </eqnarray*>
 
         proving that\ 
 
         <\equation*>
-          \<pi\><rsub|1>\<circ\>h=D<rsup|<around*|[|1|]>><rsub|V>g\<circ\>f<text|
-          and >\<pi\><rsub|2>\<circ\>h=D<rsup|<around*|[|1|]>><rsub|U>f
+          D<rsup|<around*|[|1|]>><around*|(|g\<circ\>f|)>=<around*|(|\<circ\>|)>\<circ\>h
         </equation*>
 
-        As <math|f> is <math|C<rsup|1>> on <math|U> it follows from [theorem:
-        <reference|diff C^n and C^m>] that <math|f> is <math|C<rsup|0>> on
-        <math|U> hence continuous, as further
-        <math|D<rsup|<around*|[|1|]>><rsub|V>g> is continuous it follows that
-        <math|D<rsup|<around*|[|1|]>><rsub|V>g\<circ\>f> is continuous which
-        proves that <math|\<pi\><rsub|1>\<circ\>h> is continuous. Further
-        from the continuity of <math|D<rsup|<around*|[|1|]>><rsub|U>f> it
-        follows that <math|\<pi\><rsub|2>\<circ\>h> is continuous. So using
-        [theorem: <reference|continuity product and continuous functions>] we
-        conclude that\ 
+        Now <math|L<around*|(|Y,Z|)>\<cdot\>L<around*|(|X,Y|)>> is open in
+        <math|L<around*|(|Y,Z|)>\<cdot\>L<around*|(|X,Y|)>> so that by
+        [theorem: <reference|diff tangential spanning set examples>]
+        <math|L<around*|(|Y,Z|)>\<cdot\>L<around*|(|X,Y|)>><math|> is a
+        tangential spanning set, <math|h<around*|(|A|)>\<subseteq\>L<around*|(|Y,Z|)>\<cdot\>L<around*|(|X,Y|)>>,
+        <math|<around*|(|\<circ\>|)>> is of class <math|C<rsup|n>> [see
+        lemma: <reference|lemma 16.101.194>], <math|h> is of class
+        <math|C<rsup|n>> [see eq: <reference|eq 16.227.310>] so, as
+        <math|n\<in\>S<rsub|X,A>>, it follows that
+        <math|<around*|(|\<circ\>|)>\<circ\>h> is of class <math|C<rsup|n>>.
+        Hence
 
-        <\equation>
-          <label|eq 16.249.300>h<text| is ontinuous>
-        </equation>
+        <\equation*>
+          D<rsup|<around*|[|1|]>><around*|(|g\<circ\>f|)><text| is of class
+          >C<rsup|n>
+        </equation*>
 
-        Let <math|x\<in\>U> then\ 
+        Using now \ [theorem: <reference|diff f is of class C^n if D^1f u=is
+        of class C^n-1 (1)>] it follows that\ 
 
-        <\eqnarray*>
-          <tformat|<table|<row|<cell|<around*|(|<around*|(|\<circ\>|)>\<circ\>h|)><around*|(|x|)>>|<cell|=>|<cell|<around*|(|\<circ\>|)><around*|(|h<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<circ\>|)><around*|(|D<rsup|<around*|[|1|]>><rsub|f<around*|(|u|)>>g,D<rsup|<around*|[|1|]>><rsub|U>f|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|1|]>><rsub|f<around*|(|x|)>>g\<circ\>D<rsup|<around*|[|1|]>><rsub|U>f>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
-          <reference|eq 16.247.300>]>>>|<cell|D<rsup|<around*|[|1|]>><rsub|U><around*|(|g\<circ\>f|)><around*|(|x|)>>>>>
-        </eqnarray*>
+        <\equation*>
+          g\<circ\>f<text| is of class >C<rsup|n+1>
+        </equation*>
 
         which proves that\ 
 
         <\equation*>
-          D<rsup|<around*|[|1|]>><rsub|U><around*|(|g\<circ\>f|)>=<around*|(|\<circ\>|)>\<circ\>h
-        </equation*>
-
-        As <math|h> is continuous [see eq: <reference|eq 16.249.300>] and
-        <math|<around*|(|\<circ\>|)>> is continuous by \ [lemma:
-        <reference|lemma 16.101.194>] it follows that
-        <math|<around*|(|\<circ\>|)>\<circ\>h> is continuous so that
-        <math|D<rsup|<around*|[|1|]>><rsub|U><around*|(|g\<circ\>f|)>> is
-        continuous. This proves that <math|g\<circ\>f> is of <math|C<rsup|1>>
-        on <math|U> which proves that\ 
-
-        <\equation*>
-          1\<in\>S
-        </equation*>
-
-        <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>As <math|f> is
-        <math|C<rsup|n+1>> on <math|U> it follows from [theorem:
-        <reference|diff f is of class C^n if D^1f u=is of class C^n-1 (1)>]
-        that <math|f> is <math|1>-times differentiable [hence Fréchet
-        differentiable] on <math|U> and\ 
-
-        <\equation>
-          <label|eq 16.250.300>D<rsup|<around*|[|1|]>><rsub|U>f:U\<rightarrow\>L<around*|(|X,Y|)><text|
-          defined by >D<rsup|<around*|[|1|]>><rsub|U>f<around*|(|x|)>=D<rsup|<around*|[|1|]>><rsub|x>f<text|
-          is >C<rsup|n><text| on >U
-        </equation>
-
-        As <math|g> is <math|C<rsup|n+1>> on <math|V> it follows from
-        [theorem: <reference|diff f is of class C^n if D^1f u=is of class
-        C^n-1 (1)>] that <math|g> is <math|1>-times differentiable [hence
-        Fréchet differentiable] on <math|V> and\ 
-
-        <\equation>
-          <label|eq 16.251.300>D<rsup|<around*|[|1|]>><rsub|V>g:V\<rightarrow\>L<around*|(|Y,Z|)><text|
-          defined by >D<rsup|<around*|[|1|]>><rsub|V><around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y>g<text|
-          is >C<rsup|n><text| on >V
-        </equation>
-
-        Using [theorem: <reference|diff chain rule>] it follows that
-        <math|g\<circ\>f> is Fréchet differentiable [hence <math|1>-times
-        differentiable] on <math|U> with <math|\<forall\>x\<in\>U>
-        <math|D<rsup|<around*|[|1|]>><rsub|x><around*|(|g\<circ\>f|)>=D<rsub|x><around*|(|g\<circ\>f|)>=D<rsub|f<around*|(|x|)>>g\<circ\>D<rsub|x>f>.
-        So if we define\ 
-
-        <\equation>
-          <label|eq 16.252.300>D<rsub|U><rsup|<around*|[|1|]>><around*|(|g\<circ\>f|)>:U\<rightarrow\>L<around*|(|X,Z|)><text|
-          defined by >D<rsup|<around*|[|1|]>><rsub|U><around*|(|g\<circ\>f|)><around*|(|x|)>=D<rsup|<around*|[|1|]>><rsub|x><around*|(|g\<circ\>f|)>
-        </equation>
-
-        then we have\ 
-
-        <\equation>
-          <label|eq 16.253.300>\<forall\>x\<in\>U<text|
-          >D<rsup|<around*|[|1|]>><rsub|U><around*|(|g\<circ\>f|)><around*|(|x|)>=D<rsub|f<around*|(|x|)>>g\<circ\>D<rsub|x>f
-        </equation>
-
-        Define now the function
-
-        <\equation>
-          <label|eq 16.254.300>h:U\<rightarrow\>L<around*|(|Y,Z|)>\<cdot\>L<around*|(|X,Y|)><text|
-          by >h<around*|(|x|)>=<around*|(|D<rsup|<around*|[|1|]>><rsub|f<around*|(|x|)>>g,D<rsup|<around*|[|1|]>><rsub|x>f|)>
-        </equation>
-
-        then we have <math|\<forall\>x\<in\>U> that\ 
-
-        <\eqnarray*>
-          <tformat|<table|<row|<cell|<around*|(|\<pi\><rsub|1>\<circ\>h|)><around*|(|x|)>>|<cell|=>|<cell|\<pi\><rsub|1><around*|(|h<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsub|1><around*|(|D<rsup|<around*|[|1|]>><rsub|f<around*|(|x|)>>g,D<rsup|<around*|[|1|]>><rsub|x>f|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|1|]>><rsub|f<around*|(|x|)>>g>>|<row|<cell|>|<cell|<below|=|<text|[eq:
-          <reference|eq 16.251.300>]>\<wedge\>f<around*|(|x|)>\<in\>V>>|<cell|D<rsup|<around*|[|1|]>><rsub|V>g<around*|(|f<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|D<rsup|<around*|[|1|]>><rsub|V>g\<circ\>f|)><around*|(|x|)>>>|<row|<cell|<around*|(|\<pi\><rsub|2>\<circ\>h|)><around*|(|x|)>>|<cell|=>|<cell|\<pi\><rsub|2><around*|(|h<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<pi\><rsub|2><around*|(|D<rsup|<around*|[|1|]>><rsub|f<around*|(|x|)>>g,D<rsup|<around*|[|1|]>><rsub|x>f|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|1|]>><rsub|x>f>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
-          <reference|eq 16.244.300>]>>>|<cell|D<rsup|<around*|[|1|]>><rsub|U>f<around*|(|x|)>>>>>
-        </eqnarray*>
-
-        proving that\ 
-
-        <\equation>
-          <label|eq 16.255.300>\<pi\><rsub|1>\<circ\>h=D<rsup|<around*|[|1|]>><rsub|V>g\<circ\>f<text|
-          and >\<pi\><rsub|2>\<circ\>h=D<rsup|<around*|[|1|]>><rsub|U>f
-        </equation>
-
-        As <math|f> is <math|C<rsup|n+1>> on <math|U> we have by [theorem:
-        <reference|diff C^n and C^m>] that <math|f> is <math|C<rsup|n>> on
-        <math|U>, as further <math|D<rsup|<around*|[|1|]>><rsub|V>g> is
-        <math|C<rsup|n>> on <math|V> [see eq: <reference|eq 16.251.300>] and
-        <math|n\<in\>S> it follows that <math|D<rsup|<around*|[|a|]>><rsub|V>g\<circ\>f>
-        is <math|C<rsup|n>> on <math|U>. Using then [eq: <reference|eq
-        16.255.300>] it follows that <math|\<pi\><rsub|1>\<circ\>h> is
-        <math|C<rsup|n>> on <math|U>. As by [eq: <reference|eq 16.250.300>]
-        <math|D<rsup|<around*|[|1|]>><rsub|U>f> is <math|C<rsup|n>> on
-        <math|U> we have also that <math|\<pi\><rsub|2>\<circ\>h> is
-        <math|C<rsup|n>> on <math|U>. Using now [lemma: <reference|diff
-        higher order differentiation classes>] it follows that\ 
-
-        <\equation>
-          <label|eq 16.256.300>h<text| is >C<rsup|n><text| on >U
-        </equation>
-
-        Let <math|x\<in\>U> then we have\ 
-
-        <\eqnarray*>
-          <tformat|<table|<row|<cell|<around*|(|<around*|(|\<circ\>|)>\<circ\>h|)><around*|(|x|)>>|<cell|=>|<cell|<around*|(|\<circ\>|)><around*|(|h<around*|(|x|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<circ\>|)><around*|(|<around*|(|D<rsub|f<around*|(|x|)>><rsup|<around*|[|1|]>>g,D<rsub|x><rsup|<around*|[|1|]>>f|)>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|f<around*|(|x|)>><rsup|<around*|[|1|]>>g<rsub|>\<circ\>D<rsub|x><rsup|<around*|[|1|]>>f>>|<row|<cell|>|<cell|=>|<cell|D<rsub|f<around*|(|x|)>>g<rsub|>\<circ\>D<rsub|x><rsup|>f>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
-          <reference|eq 16.253.300>]>>>|<cell|D<rsup|<around*|[|1|]>><rsub|U><around*|(|g\<circ\>f|)><around*|(|x|)>>>>>
-        </eqnarray*>
-
-        proving that\ 
-
-        <\equation*>
-          D<rsup|<around*|[|1|]>><rsub|U><around*|(|g\<circ\>f|)>=<around*|(|\<circ\>|)>\<circ\>h
-        </equation*>
-
-        Now using \ [lemma: <reference|lemma 16.101.194>]
-        <math|<around*|(|\<circ\>|)>> is <math|C<rsup|n>> on
-        <math|L<around*|(|Y,Z|)>\<cdot\>L<around*|(|X,Y|)>> and by [eq:
-        <reference|eq 16.256.300>] <math|h> is <math|C<rsup|n>> on <math|U>.
-        Using then the fact that <math|n\<in\>S> it follows that
-        <math|<around*|(|\<circ\>|)>\<circ\>h> is <math|C<rsup|n>> on
-        <math|U> from which it follows that
-        <math|D<rsup|<around*|[|1|]>><rsub|U><around*|(|g\<circ\>f|)>> is
-        <math|C<rsup|n>> on <math|U>. So by \ [theorem: <reference|diff f is
-        of class C^n if D^1f u=is of class C^n-1 (1)>] <math|g\<circ\>f> is
-        <math|C<rsup|n+1>> on <math|U> which proves that\ 
-
-        <\equation*>
-          n+1\<in\>S
+          n+1\<in\>S<rsub|X,A>
         </equation*>
       </description>
     </description>
   </proof>
 
-  As a application of the General Chain Rule we prove that the product of
-  functions that are <math|C<rsup|n>> is <math|C<rsup|n>>.
+  As a application of the above version of the General Chain Rule we prove
+  that the product of functions that are <math|C<rsup|n>> is
+  <math|C<rsup|n>>.
 
   <\theorem>
     <label|diff higher order differential of a product (1)>Let
-    <math|n\<in\>\<bbb-N\><rsub|0>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
     be a normed space, <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>>
-    be the normed space of real (complex) numbers, <math|U> a open set in
-    <math|X> and <math|f:U\<rightarrow\>X>, <math|g:U\<rightarrow\>X>
-    functions that are <math|C<rsup|n>> on <math|U> then\ 
+    be the normed space of real (complex) numbers, a tangential spanning set
+    <math|A\<subseteq\>X>, <math|f:A\<rightarrow\>\<bbb-K\>>,
+    <math|g:A\<rightarrow\>\<bbb-K\>> functions that are of class
+    <math|C<rsup|n>>\ 
 
     <\equation*>
-      f\<cdot\>g:U\<rightarrow\>\<bbb-K\>
+      f\<cdot\>g:A\<rightarrow\>\<bbb-K\>
     </equation*>
 
-    is <math|C<rsup|n>> on <math|U>.
+    is of class <math|C<rsup|n>>.
   </theorem>
 
   <\proof>
@@ -13497,7 +13310,7 @@
     <\description>
       <item*|<math|n=0>>Then <math|f>, <math|g> are continuous so that by
       [theorem: <reference|continuity product of continuous functions>]
-      <math|f\<cdot\>g> is continuous, hence <math|C<rsup|0>> at <math|x>.
+      <math|f\<cdot\>g> is continuous, hence of class <math|C<rsup|0>>.
 
       <item*|<math|n\<in\>\<bbb-N\>>>Define
 
@@ -13520,11 +13333,10 @@
       </equation*>
 
       Using \ [lemma: <reference|diff higher order differentiation classes>]
-      and the fact <math|f,g> are <math|C<rsup|n>> at <math|x> it follows
-      that\ 
+      and the fact <math|f,g> are of class <math|C<rsup|n>> it follows that\ 
 
       <\equation*>
-        \<varphi\><text| is >C<rsup|n><text| at >x
+        \<varphi\><text| is of class >C<rsup|n>
       </equation*>
 
       Consider the function
@@ -13564,8 +13376,7 @@
       differentiable>]
 
       <\equation*>
-        <around*|(|\<cdot\>|)><text| is >C<rsup|\<infty\>><text| on
-        >\<bbb-K\>
+        <around*|(|\<cdot\>|)><text| is of class >C<rsup|n><text|>
       </equation*>
 
       Let <math|x\<in\>U> then\ 
@@ -13579,7 +13390,7 @@
       order class>] it follows that\ 
 
       <\equation*>
-        f\<cdot\>g<text| is >C<rsup|n><text| at >x
+        f\<cdot\>g<text| is of class >C<rsup|n>
       </equation*>
     </description>
   </proof>
@@ -14006,9 +13817,7 @@
     <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b> such that
     <math|<around*|[|a,b|]>\<subseteq\>A> and
     <math|f:A\<rightarrow\>\<bbb-R\>> a function that has a derivative at
-    every <math|x\<in\><around*|[|a,b|]>> [or equivalently is Fréchet
-    differentiable at every <math|x\<in\><around*|[|a,b|]>> [see theorem:
-    <reference|diff derivate and frechet differential>]] then there exist a
+    every <math|x\<in\><around*|[|a,b|]>> then there exist a
     <math|\<xi\>\<in\><around*|]|a,b|[>> such that\ 
 
     <\equation*>
@@ -14035,7 +13844,7 @@
     <math|x>. By [theorem: <reference|diff differentiable function is
     continuous>] it follows that <math|f> is continuous at <math|x>, hence by
     [theorem: <reference|continuity and subspace topology (1)>] we have that
-    <math|f<rsub|\|<around*|[|A,b|]>>> is continuous at <math|x>. So we have
+    <math|f<rsub|\|<around*|[|a,b|]>>> is continuous at <math|x>. So we have
     proved that\ 
 
     <\equation>
@@ -14052,12 +13861,12 @@
 
     <\equation>
       <label|eq 16.263.12>\<forall\>x\<in\><around*|]|a,b|[><text|
-      >f<rsub|\|<around*|[|a,b|]>><text| has a derivative at >z<text| with
+      >f<rsub|\|<around*|[|a,b|]>><text| has a derivative at >x<text| with
       ><around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'><rsub|x>=f<rprime|'><rsub|x>
     </equation>
 
     The conditions for Lagrange's theorem [theorem: <reference|diff Lagrange
-    theorem>] are satisfiedl by [eqs: <reference|eq 16.262.12>, <reference|eq
+    theorem>] are satisfied by [eqs: <reference|eq 16.262.12>, <reference|eq
     16.263.12>] so that there exist a <math|\<zeta\>\<in\><around*|]|a,b|[>>
     such that\ 
 
@@ -14124,7 +13933,8 @@
   <\proof>
     \ Let <math|x,y\<in\>I> with <math|x\<less\>y> then as <math|I> is a
     generalized interval [see theorem: <reference|interval generalized
-    condition (1)>] it follows that <math|<around*|[|x,y|]>\<subseteq\>I\<subseteq\>A>,
+    condition (1)>] it follows from [definition: <reference|interval
+    generalized interval>] that <math|<around*|[|x,y|]>\<subseteq\>I\<subseteq\>A>,
     hence by the previous corollary [corollary: <reference|diff Lagrange
     theorem (1)>] there exist a <math|\<zeta\>\<in\><around*|]|x,y|[>> such
     that <math|f<around*|(|y|)>-f<around*|(|x|)>=f<rprime|'><rsub|\<zeta\>>\<cdot\><around*|(|x-y|)>>.
@@ -14209,8 +14019,6 @@
   <small-figure|<with|gr-mode|<tuple|edit|text-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.200045gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-dash-style-unit|2ln|gr-line-width|2ln|gr-color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|gr-auto-crop|true|<graphics||<with|arrow-end|\<gtr\>|line-width|2ln|dash-style-unit|2ln|<line|<point|-6|0>|<point|-1.0|0.0>>>|<with|arrow-end|\<gtr\>|line-width|2ln|dash-style-unit|2ln|<line|<point|-6|0>|<point|-6.0|5.0>>>|<with|arrow-end|\<gtr\>|line-width|2ln|dash-style-unit|2ln|<line|<point|1|0>|<point|6.0|0.0>>>|<with|arrow-end|\<gtr\>|line-width|2ln|dash-style-unit|2ln|<line|<point|1|0>|<point|1.0|5.0>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|line-width|2ln|dash-style-unit|2ln|<spline|<point|-5|1>|<point|-3.0|3.0>|<point|-1.0|2.0>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|line-width|2ln|dash-style-unit|2ln|<spline|<point|2|3>|<point|4.0|1.0>|<point|6.0|2.0>>>|<with|color|red|line-width|2ln|dash-style-unit|2ln|<line|<point|-5|1>|<point|-1.0|2.0>>>|<with|color|red|line-width|2ln|dash-style-unit|2ln|<line|<point|2|3>|<point|6.0|2.0>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|<text-at|<math|<around*|(|a,f<around*|(|a|)>|)>>|<point|-5|0.7>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|<text-at|<math|<around*|(|b,f<around*|(|b|)>|)>>|<point|-1|1.7>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|<text-at|<math|<around*|(|a,f<around*|(|a|)>|)>>|<point|2|3.3>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|<text-at|<math|<around*|(|b,f<around*|(|b|)>|)>>|<point|6|2.4>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|<text-at|concave
   function|<point|-4|4>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|<text-at|convex
   function|<point|3|4>>>>>|>
-
-  \;
 
   <\theorem>
     <label|diff convex/concave alternative>Let
@@ -14352,29 +14160,24 @@
     space of real numbers, <math|A\<subseteq\>\<bbb-R\>>,
     <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b> and
     <math|<around*|[|a,b|]>\<subseteq\>A>, <math|f:A\<rightarrow\>\<bbb-R\>>
-    a function such that <math|f> has a <math|2>-the derivative on
-    <math|<around*|[|a,b|]>> then
+    a function such that <math|f<rsub|\|<around*|[|a,b|]>>> has a
+    <math|2>-times derivative on <math|<around*|[|a,b|]>> then
 
     <\enumerate>
       <item>If <math|\<forall\>x\<in\><around*|]|a,b|[>>
-      <math|0\<leqslant\>f<rsup|<around*|(|2|)>><rsub|x>> then <math|f> is
-      convex on <math|<around*|[|a,b|]>>.
+      <math|0\<leqslant\><around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rsup|<around*|(|2|)>><rsub|x>>
+      then <math|f> is convex on <math|<around*|[|a,b|]>>.
 
       <item>If <math|\<forall\>x\<in\><around*|]|a,b|[>>
-      <math|f<rsup|<around*|(|2|)>><rsub|x>\<leqslant\>0> then <math|f> is
-      concave on <math|<around*|[|a,b|]>>.
+      <math|<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rsup|<around*|(|2|)>><rsub|x>\<leqslant\>0>
+      then <math|f> is concave on <math|<around*|[|a,b|]>>.
     </enumerate>
 
     <\note>
-      Let <math|x\<in\><around*|[|a,b|]>> then by [theorem:
-      <reference|topology every element of a generalized interval is a limit
-      point>] <math|x> is a limit point of <math|<around*|[|a,b|]>>, hence
-      <math|x\<in\><around*|[|a,b|]><rprime|'>>. As
-      <math|<around*|[|a,b|]>\<subseteq\>A> we have by [theorem:
-      <reference|topology limit points and subsets>] that
-      <math|<around*|[|a,b|]><rprime|'>\<subseteq\>A<rprime|'>> so that
-      <math|x> is a limit point of <math|A> which is needed for the
-      derivatieve at <math|x> to even exist.
+      Using [theorem: <reference|topology every element of a generalized
+      interval is a limit point>] <math|<around*|[|a,b|]>\<subseteq\><around*|[|a,b|]><rprime|'>>
+      which needed for the definition of the <math|2>-times derivative of
+      <math|f<rsub|\|<around*|[|a.b|]>>>.\ 
     </note>
   </theorem>
 
@@ -14384,24 +14187,26 @@
     <\description>
       <item*|<math|x=a>>Then <math|<frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>=f<around*|(|a|)>=f<around*|(|x|)>>.
       As this result is independent of the sign of
-      <math|f<rsup|<around*|(|2|)>><around*|(|x|)>> we have\ 
+      <math|<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rsub|x><rsup|<around*|(|2|)>>>
+      we have\ 
 
       <\equation*>
         <choice|<tformat|<table|<row|<cell|<frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>\<geqslant\>f<around*|(|x|)><text|
         if >\<forall\>x\<in\><around*|]|a,b|[>
-        f<rsup|<around*|(|2|)>>\<geqslant\>0>>|<row|<cell|<frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>\<leqslant\>f<around*|(|x|)><text|
+        <around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rsub|x><rsup|<around*|(|2|)>>\<geqslant\>0>>|<row|<cell|<frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>\<leqslant\>f<around*|(|x|)><text|
         if <math|\<forall\>x\<in\><around*|]|a,b|[>
-        >>f<rsup|<around*|(|2|)>><around*|(|x|)>\<leqslant\>0>>>>>
+        >><around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rsup|<around*|(|2|)>><rsub|x>\<leqslant\>0>>>>>
       </equation*>
 
       <item*|<math|x=b>>Then <math|<frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>=f<around*|(|b|)>=f<around*|(|x|)>>.
       As this result is independent of the sign of
-      <math|f<rsup|<around*|(|2|)>><around*|(|x|)>> we have\ 
+      <math|<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rsup|<around*|(|2|)>><around*|(|x|)>>
+      we have\ 
 
       <\equation*>
         <choice|<tformat|<table|<row|<cell|<frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>\<geqslant\>f<around*|(|x|)><text|
-        if >f<rsup|<around*|(|2|)>><around*|(|x|)>\<geqslant\>0>>|<row|<cell|<frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>\<leqslant\>f<around*|(|x|)><text|
-        if >f<rsup|<around*|(|2|)>><around*|(|x|)>\<leqslant\>0>>>>>
+        if >f<rsup|<around*|(|2|)>><rsub|x>\<geqslant\>0>>|<row|<cell|<frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>\<leqslant\>f<around*|(|x|)><text|
+        if >f<rsup|<around*|(|2|)>><rsub|x>\<leqslant\>0>>>>>
       </equation*>
 
       <item*|<math|x\<in\><around*|]|a,b|[>>>Then\ 
@@ -14415,70 +14220,107 @@
       so that
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>-f<around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>-<frac|x-a|b-a>\<cdot\>f<around*|(|x|)>-<frac|b-x|b-a>\<cdot\>f<around*|(|x|)>>|<cell|>|<cell|>>|<row|<cell|<frac|b-x|b-a>\<cdot\>f<around*|(|a|)>+<frac|x-a|b-a>\<cdot\>f<around*|(|b|)>-<frac|x-a|b-a>\<cdot\>f<around*|(|x|)>-<frac|b-x|b-a>\<cdot\>f<around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|<around*|(|x-a|)>|b-a>\<cdot\><around*|(|f<around*|(|b|)>-f<around*|(|x|)>|)>-<frac|b-x|b-a>\<cdot\><around*|(|f<around*|(|x|)>-f<around*|(|a|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|<around*|(|x-a|)>\<cdot\><around*|(|b-x|)>|b-a>\<cdot\><frac|f<around*|(|b|)>-f<around*|(|x|)>|b-x>-<frac|<around*|(|b-x|)>\<cdot\><around*|(|x-a|)>|b-a>\<cdot\><frac|f<around*|(|x|)>-f<around*|(|a|)>|x-a>>|<cell|=>|<cell|>>|<row|<cell|<frac|<around*|(|x-a|)>\<cdot\><around*|(|b-x|)>|b-a>\<cdot\><around*|(|<frac|f<around*|(|b|)>-f<around*|(|x|)>|b-x>-<frac|f<around*|(|x|)>-f<around*|(|a|)>|x-a>|)>>|<cell|>|<cell|<eq-number><label|eq
-        16.134.195>>>>>
+        <tformat|<table|<row|<cell|<frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>-f<around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>-<frac|x-a|b-a>\<cdot\>f<around*|(|x|)>-<frac|b-x|b-a>\<cdot\>f<around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|b-x|b-a>\<cdot\>f<around*|(|a|)>+<frac|x-a|b-a>\<cdot\>f<around*|(|b|)>-<frac|x-a|b-a>\<cdot\>f<around*|(|x|)>-<frac|b-x|b-a>\<cdot\>f<around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|<around*|(|x-a|)>|b-a>\<cdot\><around*|(|f<around*|(|b|)>-f<around*|(|x|)>|)>-<frac|b-x|b-a>\<cdot\><around*|(|f<around*|(|x|)>-f<around*|(|a|)>|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|<around*|(|x-a|)>\<cdot\><around*|(|b-x|)>|b-a>\<cdot\><frac|f<around*|(|b|)>-f<around*|(|x|)>|b-x>-<frac|<around*|(|b-x|)>\<cdot\><around*|(|x-a|)>|b-a>\<cdot\><frac|f<around*|(|x|)>-f<around*|(|a|)>|x-a>>|<cell|=>|<cell|>>|<row|<cell|<frac|<around*|(|x-a|)>\<cdot\><around*|(|b-x|)>|b-a>\<cdot\><around*|(|<frac|f<around*|(|b|)>-f<around*|(|x|)>|b-x>-<frac|f<around*|(|x|)>-f<around*|(|a|)>|x-a>|)>>|<cell|>|<cell|<eq-number><label|eq
+        16.242.310>>>>>
       </eqnarray*>
 
-      As <math|\<forall\>x\<in\>A<rsup|\<circ\>>> [a open set] <math|f> has a
-      <math|2>-the derivative it follows from [theorem: <reference|diff
-      higher order derivate on a open set (1)>] that <math|f> has a
-      derivative at every <math|x\<in\>A<rsup|\<circ\>>> and the function
+      As <math|f<rsub|\|<around*|[|a,b|]>>> has a <math|2>-times derivative
+      at <math|x> we have using the definition of higher order derivatives
+      that <math|\<forall\>y\<in\><around*|[|a,b|]>>
+      <math|f<rsub|\|<around*|[|a,b|]>>> has a derivative at <math|y> and the
+      function\ 
 
       <\equation>
-        <label|eq 16.143.200>f<rprime|'>:A<rsup|\<circ\>>\<rightarrow\>\<bbb-R\><text|
-        where >f<rprime|'><rsub|><around*|(|x|)>=f<rprime|'><rsub|x><text|
-        has >\<forall\>x\<in\>A<rsup|\<circ\>><text| a derivate at >x<text|
-        with <math|f<rsup|<around*|(|2|)>><rsub|x>=<around*|(|f<rprime|'>|)><rprime|'><rsub|x>>>
+        <label|eq 16.243.310><around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'>:<around*|[|a,b|]>\<rightarrow\>\<bbb-R\><text|
+        defined by ><around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'><around*|(|y|)>=<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'><rsub|y>
       </equation>
 
-      <math|>As <math|<around*|[|a,x|]>,<around*|[|x,b|]>\<subseteq\><around*|[|a,b|]>\<subseteq\>A<rsup|\<circ\>>>
-      we can apply Lagrange's theorem [corollary: <reference|diff Lagrange
-      theorem (1)>] on to find <math|y<rsub|1>\<in\><around*|]|a,x|[>>,
+      has a derivative at <math|x> with
+
+      <\equation>
+        <label|eq 16.244.310><around*|(|<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'>|)><rprime|'><rsub|x>=<around*|(|f<rsup|><rsub|\|<around*|[|a,b|]>>|)><rsup|<around*|(|2|)>><rsub|x>
+      </equation>
+
+      As <math|x\<in\><around*|[|a,b|]>> was choosen arbitrary we can define\ 
+
+      <\equation>
+        <label|eq 16.245.310.1><around*|(|f<rsub|><rsub|\|<around*|[|a,b|]>>|)><rsup|<around*|(|2|)>>:<around*|[|a,b|]>\<rightarrow\>\<bbb-R\><text|
+        where ><around*|(|f<rsub|><rsub|\|<around*|[|a,b|]>>|)><rsup|<around*|(|2|)>>*<around*|(|x|)>=<around*|(|f<rsub|><rsub|\|<around*|[|a,b|]>>|)><rsup|<around*|(|2|)>><rsub|x>
+      </equation>
+
+      and have\ 
+
+      <\equation>
+        <label|eq 16.246.310.1>\<forall\>x\<in\><around*|[|a,b|]><text| that
+        ><around*|(|f<rsub|><rsub|\|<around*|[|a,b|]>>|)><rsup|<around*|(|2|)>>*<around*|(|x|)>=<around*|(|f<rsub|><rsub|\|<around*|[|a,b|]>>|)><rsup|<around*|(|2|)>><rsub|x>\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.244.310>]>><around*|(|<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'>|)><rprime|'><rsub|x>
+      </equation>
+
+      Let <math|x\<in\><around*|[|a,b|]>>. As
+      <math|<around*|[|a,x|]>\<subseteq\><around*|[|a,b|]>>,
+      <math|<around*|[|x,b|]>\<subseteq\><around*|[|a,b|]>> we have by
+      Lagrange's theorem [theorem: <reference|diff Lagrange theorem (1)>]
+      that there exists <math|y<rsub|1>\<in\><around*|]|a,x|[>>,
       <math|y<rsub|2>\<in\><around*|]|x,b|[>> such that\ 
 
+      <\equation*>
+        f<rsub|\|<around*|[|a,b|]>><around*|(|x|)>-f<rsub|\|<around*|[|a,b|]>><around*|(|a|)>=<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'><rsub|y<rsub|1>>\<cdot\><around*|(|x-a|)><text|
+        and >f<rsub|\|<around*|[|a,b|]>><around*|(|b|)>-f<rsub|\|<around*|[|a,b|]>><around*|(|x|)>=<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'><rsub|y<rsub|2>>\<cdot\><around*|(|b-x|)>
+      </equation*>
+
+      which at <math|f<rsub|\|<around*|[|a,b|]>><around*|(|x|)>\<equallim\><rsub|x\<in\><around*|[|a,b|]>>f<around*|(|x|)>>,
+      <math|f<rsub|\|<around*|[|a,b|]>><around*|(|a|)>=a> and
+      <math|f<rsub|\|<around*|[|a,b|]>><around*|(|b|)>=f<around*|(|b|)>>
+      gives\ 
+
       <\equation>
-        <label|eq 16.135.195>f<around*|(|x|)>-f<around*|(|a|)>=f<rprime|'><rsub|y<rsub|1>>\<cdot\><around*|(|x-a|)><text|
-        and >f<around*|(|b|)>-f<around*|(|x|)>=f<rprime|'><rsub|y<rsub|2>>\<cdot\><around*|(|b-x|)>
+        <label|eq 16.245.310>f<around*|(|x|)>-f<around*|(|b|)>=<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'><rsub|y<rsub|1>>\<cdot\><around*|(|x-a|)><text|
+        and >f<around*|(|b|)>-f<around*|(|x|)>=<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'><rsub|y<rsub|2>>\<cdot\><around*|(|b-x|)>
       </equation>
 
-      Combining [eq: <reference|eq 16.134.195>] and [eq: <reference|eq
-      16.135.195>] gives\ 
+      Substituting [eq: <reference|eq 16.245.310>] in [eq: <reference|eq
+      16.242.310>] gives\ 
 
-      <\equation>
-        <label|eq 16.136.195><frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>-f<around*|(|x|)>=<frac|<around*|(|x-a|)>\<cdot\><around*|(|b-x|)>|b-a>\<cdot\><around*|(|f<rprime|'><around*|(|y<rsub|2>|)>-f<rprime|'><around*|(|y<rsub|1>|)>|)>
-      </equation>
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>-f<around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|<around*|(|x-a|)>\<cdot\><around*|(|b-x|)>|b-a>\<cdot\><around*|(|<frac|<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'><rsub|y<rsub|2>>\<cdot\><around*|(|b-x|)>|b-x>-<frac|<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'><rsub|y<rsub|1>>\<cdot\><around*|(|x-a|)>|x-a>|)>>|<cell|=>|<cell|>>|<row|<cell|<frac|<around*|(|x-a|)>\<cdot\><around*|(|b-x|)>|b-a>\<cdot\><around*|(|<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'><rsub|y<rsub|2>>-<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'><rsub|y<rsub|1>>|)>>|<cell|<below|=|<text|[eq:
+        <reference|eq 16.243.310>]>>>|<cell|>>|<row|<cell|<frac|<around*|(|x-a|)>\<cdot\><around*|(|b-x|)>|b-a>\<cdot\><around*|(|<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'><around*|(|y<rsub|2>|)>-<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'><rsub|><around*|(|y<rsub|1>|)>|)>>|<cell|>|<cell|<eq-number><label|eq
+        16.246.310>>>>>
+      </eqnarray*>
 
       As <math|y<rsub|1>\<in\><around*|]|a,x|[>>,
       <math|y<rsub|2>\<in\><around*|]|x,b|[>> we have
-      <math|a\<less\>y<rsub|1>\<less\>x\<less\>y<rsub|2>\<less\>b> so that
+      <math|a\<less\>y<rsub|1>\<less\>x> and
+      <math|x\<less\>y<rsub|2>\<less\>b> so that
       <math|y<rsub|1>\<less\>y<rsub|2>> and
-      <math|<around*|[|y<rsub|1>,y<rsub|2>|]>\<subseteq\><around*|[|a,b|]>\<subseteq\>A<rsup|\<circ\>>>.
-      Hence using [eq: <reference|eq 16.143.200>] we can apply Lagrange's
-      theorem [theorem: <reference|diff Lagrange theorem (1)>] on
-      <math|f<rprime|'>> to find a <math|z\<in\><around*|]|y<rsub|1>,y<rsub|2>|[>>
-      such that\ 
+      <math|<around*|[|y<rsub|1>,y<rsub|2>|]>\<subseteq\><around*|[|a,b|]>>
+      hence we can use Lagrange's theorem [theorem: <reference|diff Lagrange
+      theorem (1)>] using <math|<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'>>
+      to find a <math|z\<in\><around*|[|y<rsub|1>,y<rsub|2>|]>>\ 
 
       <\equation*>
-        f<rprime|'><around*|(|y<rsub|2>|)>-f<rprime|'><around*|(|y<rsub|1>|)>=<around*|(|f<rsup|<around*|(|1|)>>|)><rprime|'><rsub|z>\<cdot\><around*|(|y<rsub|2>-y<rsub|1>|)>=f<rsub|z><rsup|<around*|(|2|)>>\<cdot\><around*|(|y<rsub|2>-y<rsub|1>|)>
+        <around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'><around*|(|y<rsub|2>|)>-<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'><rsub|><around*|(|y<rsub|1>|)>=<around*|(|<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rprime|'>|)><rprime|'><rsub|z>\<cdot\><around*|(|y<rsub|2>-y<rsub|1>|)>\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.246.310.1>]>><around*|(|f<rsub|<around*|[|a,b|[>>|)><rsup|<around*|(|2|)>><rsub|z>
       </equation*>
 
-      substituting this in [eq: <reference|eq 16.136.195>] gives
+      Substituting the above in [eq: <reference|eq 16.246.310>] gives\ 
 
       <\equation*>
-        <frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>-f<around*|(|x|)>=<frac|<around*|(|x-a|)>\<cdot\><around*|(|b-x|)>|b-a>\<cdot\>f<rsup|<around*|(|2|)>><around*|(|z|)>
+        <frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>-f<around*|(|x|)>=<frac|<around*|(|x-a|)>\<cdot\><around*|(|b-x|)>|b-a>\<cdot\><around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rsup|<around*|(|2|)>><rsub|z>
       </equation*>
 
-      Now as <math|x\<in\><around*|[|a,b|]>> we have that
-      <math|<frac|<around*|(|x-a|)>\<cdot\><around*|(|b-x|)>|b-a>\<geqslant\>0>
+      As <math|x\<in\><around*|[|a,b|]>> we have that
+      <math|0\<leqslant\><frac|<around*|(|x-a|)>\<cdot\><around*|(|b-x|)>|b-a>>
       so that\ 
 
       <\equation*>
         <choice|<tformat|<table|<row|<cell|<frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>\<geqslant\>f<around*|(|x|)><text|
         if >\<forall\>x\<in\><around*|]|a,b|[>
-        f<rsup|<around*|(|2|)>><around*|(|x|)>\<geqslant\>0>>|<row|<cell|<frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>\<leqslant\>f<around*|(|x|)><text|
+        <around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rsup|<around*|(|2|)>><around*|(|x|)>\<geqslant\>0>>|<row|<cell|<frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>\<leqslant\>f<around*|(|x|)><text|
         if <math|\<forall\>x\<in\><around*|]|a,b|[>
-        >>f<rsup|<around*|(|2|)>><around*|(|x|)>\<leqslant\>0>>>>>
+        >><around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rsup|<around*|(|2|)>><around*|(|x|)>\<leqslant\>0>>>>>
       </equation*>
+
+      \;
     </description>
 
     So in all cases we have <math|<choice|<tformat|<table|<row|<cell|<frac|f<around*|(|a|)>\<cdot\><around*|(|b-x|)>+f<around*|(|b|)>\<cdot\><around*|(|x-a|)>|b-a>\<geqslant\>f<around*|(|x|)><text|
@@ -14489,12 +14331,12 @@
 
     <\enumerate>
       <item>If <math|\<forall\>x\<in\><around*|]|a,b|[>>
-      <math|0\<leqslant\>f<rsup|<around*|(|2|)>><rsup|><around*|(|x|)>> then
-      <math|f> is convex on <math|<around*|[|a,b|]>>
+      <math|0\<leqslant\><around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rsup|<around*|(|2|)>><rsup|><around*|(|x|)>>
+      then <math|f> is convex on <math|<around*|[|a,b|]>>
 
       <item>If <math|\<forall\>x\<in\><around*|]|a,b|[>>
-      <math|f<rsup|<around*|(|2|)>><around*|(|x|)>\<leqslant\>0> then
-      <math|f> is concave on <math|<around*|[|a,b|]>>
+      <math|<around*|(|f<rsub|\|<around*|[|a,b|]>>|)><rsup|<around*|(|2|)>><around*|(|x|)>\<leqslant\>0>
+      then <math|f> is concave on <math|<around*|[|a,b|]>>
     </enumerate>
   </proof>
 
@@ -14562,12 +14404,12 @@
       <item*|<math|0\<less\>h>>If <math|y\<in\><around*|[|x,x+h|]>> then
       <math|<around*|\||y-x|\|>=y-x\<leqslant\>x+h-x=h=<around*|\||h|\|>\<less\>\<delta\>>
       so that <math|<around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|x|)>|\<\|\|\>>\<less\><frac|\<varepsilon\>|2>>.
-      Hence, as <math|f<around*|(|y|)>-f<around*|(|x|)>=f<around*|(|y|)>-C<rsub|f<around*|(|x|)>><around*|(|y|)>=<around*|(|f-C<rsub|f<around*|(|x|)>><around*|(|y|)>|)>>
+      Hence, as <math|f<around*|(|y|)>-f<around*|(|x|)>=f<around*|(|y|)>-C<rsub|f<around*|(|x|)>><around*|(|y|)>=<around*|(|f-C<rsub|f<around*|(|x|)>>|)><around*|(|y|)>>
       it follows that\ 
 
       <\equation>
         <label|eq 16.272.12>\<forall\>y\<in\><around*|[|x,x+h|]><text| we
-        have ><around*|\<\|\|\>|<around*|(|f-C<rsub|f<around*|(|x|)>>|)><rsub|\|<around*|[|x,x+h|]>>|\<\|\|\>>=<around*|\<\|\|\>|<around*|(|f-C<rsub|f<around*|(|x|)>>|)><around*|(|y|)>|\<\|\|\>>\<less\><frac|\<varepsilon\>|2>
+        have ><around*|\<\|\|\>|<around*|(|f-C<rsub|f<around*|(|x|)>>|)><rsub|\|<around*|[|x,x+h|]>><around*|(|y|)>|\<\|\|\>>=<around*|\<\|\|\>|<around*|(|f-C<rsub|f<around*|(|x|)>>|)><around*|(|y|)>|\<\|\|\>>\<less\><frac|\<varepsilon\>|2>
       </equation>
 
       Next\ 
@@ -14585,14 +14427,14 @@
 
       <item*|<math|h\<less\>0>>Then <math|h=-<around*|\||h|\|>>. If
       <math|y\<in\><around*|[|x+h,x|]>=<around*|[|x-<around*|\||h|\|>,x|]>>
-      then <math|<around*|\||y-x|\|>=x-y\<leqslant\>x-<around*|(|x-<around*|\||h|\|>|)>\<less\>\<delta\>>
+      then <math|<around*|\||y-x|\|>=x-y\<leqslant\>x-<around*|(|x-<around*|\||h|\|>|)>=<around*|\||h|\|>\<less\>\<delta\>>
       and thus <math|<around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|x|)>|\<\|\|\>>\<less\><frac|\<varepsilon\>|2>>.
       Hence as <math|f<around*|(|y|)>-f<around*|(|x|)>=f<around*|(|y|)>-C<rsub|f<around*|(|x|)>><around*|(|y|)>=<around*|(|f-C<rsub|f<around*|(|x|)>>|)><around*|(|h|)>>
       it follows that\ 
 
       <\equation>
         <label|eq 16.273.12>\<forall\>y\<in\><around*|[|x+h,x|]><text| we
-        have ><around*|\<\|\|\>|<around*|(|f-C<rsub|f<around*|(|x|)>>|)><rsub|\|<around*|[|x,x+h|]>>|\<\|\|\>>=<around*|\<\|\|\>|<around*|(|f-C<rsub|f<around*|(|x|)>>|)><around*|(|y|)>|\<\|\|\>>\<less\><frac|\<varepsilon\>|2>
+        have ><around*|\<\|\|\>|<around*|(|f-C<rsub|f<around*|(|x|)>>|)><rsub|\|<around*|[|x,x+h|]>><around*|(|y|)>|\<\|\|\>>=<around*|\<\|\|\>|<around*|(|f-C<rsub|f<around*|(|x|)>>|)><around*|(|y|)>|\<\|\|\>>\<less\><frac|\<varepsilon\>|2>
       </equation>
 
       Next\ 
@@ -14600,16 +14442,16 @@
       <\eqnarray*>
         <tformat|<table|<row|<cell|<around*|\<\|\|\>|<frac|F<around*|(|x+h|)>-F<around*|(|x|)>|h>-f<around*|(|x|)>|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<frac|F<around*|(|x-<around*|\||h|\|>|)>-F<around*|(|x|)>|-<around*|\||h|\|>>-f<around*|(|x|)>|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<frac|<around*|(|<big|int><rsub|a><rsup|x-<around*|\||h|\|>>f<rsub|\|<around*|[|a,x-<around*|\||h|\|>|]>>|)>-<around*|(|<big|int><rsub|a><rsup|x>f<rsub|\|<around*|[|a,x|]>>|)>|-<around*|\||h|\|>>-f<around*|(|x|)>|\<\|\|\>>>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|riemann integral over [a,b] to [a,c]
-        [c,b]>]>>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<frac|<around*|(|<big|int><rsub|a><rsup|x-<around*|\||h|\|>>f<rsub|\|<around*|[|a,x-<around*|\||h|\|>|]>>|)>-<around*|(|<big|int><rsub|a><rsup|x-<around*|\||h|\|>>f<rsub|\|<around*|[|a,x-<around*|\||h|\|>|]>>|)>-<around*|(|<big|int><rsub|x-<around*|\||h|\|>><rsup|x>f<rsub|\|<around*|[|x-<around*|\||h|\|>,x|]>>|)>|-<around*|\||h|\|>>-f<around*|(|x|)>|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<frac|-<around*|(|<big|int><rsub|x-<around*|\||h|\|>><rsup|x>f<rsub|\|<around*|[|x-<around*|\||h|\|>,x|]>>|)>|-<around*|\||h|\|>>-f<around*|(|x|)>|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<frac|<around*|(|<big|int><rsub|x-<around*|\||h|\|>><rsup|x>f<rsub|\|<around*|[|x-<around*|\||h|\|>,x|]>>|)>-h\<cdot\>f<around*|(|x|)>|<around*|\||h|\|>>|\<\|\|\>>>|<cell|\<equallim\><rsub|<text|[example:
+        [c,b]>]>>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<frac|<around*|(|<big|int><rsub|a><rsup|x-<around*|\||h|\|>>f<rsub|\|<around*|[|a,x-<around*|\||h|\|>|]>>|)>-<around*|(|<big|int><rsub|a><rsup|x-<around*|\||h|\|>>f<rsub|\|<around*|[|a,x-<around*|\||h|\|>|]>>|)>-<around*|(|<big|int><rsub|x-<around*|\||h|\|>><rsup|x>f<rsub|\|<around*|[|x-<around*|\||h|\|>,x|]>>|)>|-<around*|\||h|\|>>-f<around*|(|x|)>|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<frac|-<around*|(|<big|int><rsub|x-<around*|\||h|\|>><rsup|x>f<rsub|\|<around*|[|x-<around*|\||h|\|>,x|]>>|)>|-<around*|\||h|\|>>-f<around*|(|x|)>|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<frac|<around*|(|<big|int><rsub|x-<around*|\||h|\|>><rsup|x>f<rsub|\|<around*|[|x-<around*|\||h|\|>,x|]>>|)>-<around*|\||h|\|>\<cdot\>f<around*|(|x|)>|<around*|\||h|\|>>|\<\|\|\>>>|<cell|\<equallim\><rsub|<text|[example:
         <reference|riemann constant function>]>>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<frac|<around*|(|<big|int><rsub|x-<around*|\||h|\|>><rsup|x>f<rsub|\|<around*|[|x-<around*|\||h|\|>,x|]>>|)>-<around*|(|<big|int><rsub|x-<around*|\||h|\|>><rsup|x><around*|(|C<rsub|f<around*|(|x|)>>|)><rsub|\|<around*|[|x-<around*|\||h|\|>,x|]>>|)>|<around*|\||h|\|>>|\<\|\|\>>>|<cell|\<equallim\><rsub|<text|[theorem:
         <reference|riemann riemann integral is
-        linear>]>>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<frac|<big|int><rsub|x-<around*|\||h|\|>><rsup|x><around*|(|f<rsub|\|<around*|[|x-<around*|\||h|\|>,x|]>>-<around*|(|C<rsub|f<around*|(|x|)>>|)><rsub|\|<around*|[|x-<around*|\||h|\|>,x|]>>|)>|<around*|\||h|\|>>|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<frac|<big|int><rsub|x-<around*|\||h|\|>><rsup|x><around*|(|f-C<rsub|f<around*|(|x|)>>|)><rsub|\|<around*|[|x-<around*|\||h|\|>,x|]>>|<around*|\||h|\|>>|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<frac|<around*|\<\|\|\>|<big|int><rsub|x-<around*|\||h|\|>><rsup|x><around*|(|f-C<rsub|f<around*|(|x|)>>|)><rsub|\|<around*|[|x-<around*|\||h|\|>,x|]>>|\<\|\|\>>|<around*|\||h|\|>>>|<cell|<below|\<leqslant\>|<text|[eq:
-        <reference|eq 16.273.12>]>\<wedge\><text|[theorem: <reference|rieman
+        linear>]>>>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<frac|<big|int><rsub|x-<around*|\||h|\|>><rsup|x><around*|(|f<rsub|\|<around*|[|x-<around*|\||h|\|>,x|]>>-<around*|(|C<rsub|f<around*|(|x|)>>|)><rsub|\|<around*|[|x-<around*|\||h|\|>,x|]>>|)>|<around*|\||h|\|>>|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<around*|\<\|\|\>|<frac|<big|int><rsub|x-<around*|\||h|\|>><rsup|x><around*|(|f-C<rsub|f<around*|(|x|)>>|)><rsub|\|<around*|[|x-<around*|\||h|\|>,x|]>>|<around*|\||h|\|>>|\<\|\|\>>>|<cell|=>|<cell|>>|<row|<cell|<frac|<around*|\<\|\|\>|<big|int><rsub|x-<around*|\||h|\|>><rsup|x><around*|(|f-C<rsub|f<around*|(|x|)>>|)><rsub|\|<around*|[|x-<around*|\||h|\|>,x|]>>|\<\|\|\>>|<around*|\||h|\|>>>|<cell|<below|<below|\<leqslant\>|<below|<text|>|><text|[eq:
+        <reference|eq 16.273.12>]>>|<text|><text|[theorem: <reference|rieman
         integral properties>]>>>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|2>\<cdot\><frac|<around*|(|x-<around*|(|x-<around*|\||h|\|>|)>|)>|<around*|\||h|\|>>>|<cell|=>|<cell|>>|<row|<cell|<frac|\<varepsilon\>|2>>|<cell|\<less\>>|<cell|>>|<row|<cell|\<varepsilon\>>|<cell|>|<cell|>>>>
       </eqnarray*>
     </description>
 
-    Hence we have in all cases that <math|<around*|\<\|\|\>|<frac|F<around*|(|x+h|)>-F<around*|(|x|)>|h>-f<around*|(|x|)>|\<\|\|\>>>
+    Hence we have in all cases that <math|<around*|\<\|\|\>|<frac|F<around*|(|x+h|)>-F<around*|(|x|)>|h>-f<around*|(|x|)>|\<\|\|\>>\<less\>\<varepsilon\>>
     which by definition [theorem: <reference|diff calculus derivate>] proves
     that <math|F> has a derivative at <math|x> with\ 
 
@@ -14687,14 +14529,14 @@
     and using [theorem: <reference|diff fundamental theorem of calculus (1)>]
     <math|F> has derivatives on <math|<around*|[|a,b|]>> with
     <math|F<rprime|'>=f<rprime|'>>. Using then the linearity of derivation
-    [see theorem: <reference|diff derivate operator is linear>] it follows
-    that <math|g> has derivatives on <math|<around*|[|a,b|]>> with\ 
+    [see theorem: <reference|diff (f+g)'=f'+g'>] it follows that <math|g> has
+    derivatives on <math|<around*|[|a,b|]>> with\ 
 
     <\equation>
       <label|eq 16.179.200>g<rprime|'>=<around*|(|C<rsub|f<around*|(|a|)>>|)><rprime|'>+F<rprime|'>=C<rsub|0>+f<rprime|'>=f<rprime|'>
     </equation>
 
-    Note also that <math|g<around*|(|a|)>=C<rsub|f<around*|(|a|)>>+F<around*|(|a|)>=f<around*|(|a|)>+<big|int><rsub|a><rsup|a>f<rprime|'>\<equallim\><rsub|<text|[definition:
+    Note also that <math|g<around*|(|a|)>=C<rsub|f<around*|(|a|)>><around*|(|a|)>+F<around*|(|a|)>=f<around*|(|a|)>+<big|int><rsub|a><rsup|a>f<rprime|'>\<equallim\><rsub|<text|[definition:
     <reference|riemann integral (1)>]>>f<around*|(|a|)>+0=f<around*|(|a|)>>
     or\ 
 
@@ -14709,14 +14551,13 @@
       >\<varphi\><around*|(|x|)>=<around*|\<\|\|\>|f<around*|(|x|)>-g<around*|(|x|)>|\<\|\|\>>
     </equation*>
 
-    Let <math|x\<in\><around*|[|a,b|]>> <math|f> and <math|g> has a
+    Let <math|x\<in\><around*|[|a,b|]>> then as <math|f> and <math|g> has a
     derivative at <math|x> we have that <math|f-g> has a derivative at
-    <math|x> [see theorem: <reference|diff derivate operator is linear>] so
-    that by [theorem: <reference|diff differentiable function is continuous>]
-    <math|f-g> is continuous at <math|x>. Hence
-    <math|f-g:<around*|[|a,b|]>\<rightarrow\>X> is a continuous function.
-    Further by [theorem: <reference|continuity norm is uniform continuous>]
-    <math|<around*|\<\|\|\>||\<\|\|\>>:X\<rightarrow\>\<bbb-R\><text|>>
+    <math|x> [see theorem: <reference|diff (f+g)'=f'+g'>] so that by
+    [theorem: <reference|diff derivatives and continuity>] <math|f-g> is
+    continuous at <math|x>. Hence <math|f-g:<around*|[|a,b|]>\<rightarrow\>X>
+    is a continuous function. Further by [theorem: <reference|continuity norm
+    is uniform continuous>] <math|<around*|\<\|\|\>||\<\|\|\>>:X\<rightarrow\>\<bbb-R\><text|>>
     defined by <math|<around*|\<\|\|\>||\<\|\|\>><around*|(|x|)>=<around*|\<\|\|\>||\<\|\|\>>>
     is a continuous function. Hence, using <reference|continuity
     composition>]\ 
@@ -14728,7 +14569,7 @@
 
     As <math|\<forall\>x\<in\><around*|[|a,b|]>>
     <math|<around*|(|<around*|\<\|\|\>||\<\|\|\>>\<circ\><around*|(|f-g|)>|)><around*|(|x|)>=<around*|\<\|\|\>||\<\|\|\>><around*|(|<around*|(|f-g|)><around*|(|x|)>|)>=<around*|\<\|\|\>|f<around*|(|x|)>-g<around*|(|x|)>|\<\|\|\>>=\<varphi\><around*|(|x|)>>
-    it follows that <math|\<varphi\>=<around*|\<\|\|\>||\<\|\|\>>\<circ\><around*|(|f-g|)>>,
+    it follows that <math|<rigid|\<varphi\>=<around*|\<\|\|\>||\<\|\|\>>\<circ\><around*|(|f-g|)>>>,
     hence we have
 
     <\equation*>
@@ -14746,7 +14587,7 @@
     <\eqnarray*>
       <tformat|<table|<row|<cell|<around*|\||<frac|\<varphi\><around*|(|x+h|)>-\<varphi\><around*|(|x|)>|h>|\|>>|<cell|=>|<cell|<around*|\||<frac|<around*|\<\|\|\>|f<around*|(|x+h|)>-g<around*|(|x+h|)>|\<\|\|\>>-<around*|\<\|\|\>|f<around*|(|x|)>-g<around*|(|x|)>|\<\|\|\>>|h>|\|>>>|<row|<cell|>|<cell|=>|<cell|<frac|<around*|\||<around*|\<\|\|\>|f<around*|(|x+h|)>-g<around*|(|x+h|)>|\<\|\|\>>-<around*|\<\|\|\>|f<around*|(|x|)>-g<around*|(|x|)>|\<\|\|\>>|\|>|<around*|\||h|\|>>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[theorem:
       <reference|normed absolute value norm
-      differences>]>>>|<cell|<frac|<around*|\<\|\|\>|f<around*|(|x+h|)>-g<around*|(|x+h|)>+<around*|(|g<around*|(|x|)>-f<around*|(|x|)>|)>|\<\|\|\>>|<around*|\||h|\|>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<\|\|\>|<frac|<around*|(|f<around*|(|x+h|)>|)>-f<around*|(|x|)>-<around*|(|g<around*|(|x+h|)>-g<around*|(|x|)>|)>|h>|\<\|\|\>>>>|<row|<cell|>|<cell|\<equallim\><rsub|
+      differences>]>>>|<cell|<frac|<around*|\<\|\|\>|f<around*|(|x+h|)>-g<around*|(|x+h|)>-<around*|(|f<around*|(|x|)>-g<around*|(|x|)>|)>|\<\|\|\>>|<around*|\||h|\|>>>>|<row|<cell|>|<cell|=>|<cell|<frac|<around*|\<\|\|\>|f<around*|(|x+h|)>-g<around*|(|x+h|)>+<around*|(|g<around*|(|x|)>-f<around*|(|x|)>|)>|\<\|\|\>>|<around*|\||h|\|>>>>|<row|<cell|>|<cell|\<equallim\><rsub|
       <around*|[|eq: <with|mode|text|<reference|eq
       16.179.200>>|]>\<Rightarrow\>f<rprime|'>=g<rprime|'>>>|<cell|<around*|\<\|\|\>|<frac|f<around*|(|x+h|)>-f<around*|(|x|)>|h>-f<rprime|'><around*|(|x|)>-<around*|(|<frac|g<around*|(|x+h|)>-g<around*|(|x|)>|h>-g<rprime|'><around*|(|x|)>|)>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|<frac|f<around*|(|x+h|)>-f<around*|(|x|)>|h>-f<rprime|'><around*|(|x|)>|\<\|\|\>>+<around*|\<\|\|\>|<frac|g<around*|(|x+h|)>-g<around*|(|x|)>|h>-g<rprime|'><around*|(|x|)>|\<\|\|\>>>>>>
     </eqnarray*>
@@ -14759,11 +14600,10 @@
     </equation>
 
     Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. As <math|f> has
-    derivatives on <math|<around*|[|a,b|]>> we have that <math|f> has a
-    derivative at <math|x>. Hence there exist a
-    <math|\<delta\><rsub|1>\<in\>\<bbb-R\><rsup|+>> such that if
-    <math|0\<less\><around*|\||h|\|>\<less\>\<delta\><rsub|1>> and
-    <math|h\<in\><around*|]|a,b|[><rsub|x>\<Rightarrow\>x,x+h\<in\><around*|]|a,b|[>>
+    derivatives on <math|<around*|[|a,b|]>> <math|f> has a derivative at
+    <math|x>. Hence there exist a <math|\<delta\><rsub|1>\<in\>\<bbb-R\><rsup|+>>
+    such that if <math|0\<less\><around*|\||h|\|>\<less\>\<delta\><rsub|1>>
+    and <math|h\<in\><around*|]|a,b|[><rsub|x>\<Rightarrow\>x,x+h\<in\><around*|]|a,b|[>>
     that
 
     <\equation*>
@@ -14786,7 +14626,7 @@
     [eq: <reference|eq 16.181.200>] that\ 
 
     <\equation*>
-      <around*|\||<frac|\<varphi\><around*|(|x+h|)>-\<varphi\><around*|(|x|)>|h>-0|\|>\<less\><frac|\<varepsilon\>|2>+<frac|\<varepsilon\>|2>=\<varepsilon\>
+      <around*|\||<frac|\<varphi\><around*|(|x+h|)>-\<varphi\><around*|(|x|)>|h>-0|\|>=<around*|\||<frac|\<varphi\><around*|(|x+h|)>-\<varphi\><around*|(|x|)>|h>|\|>\<less\><frac|\<varepsilon\>|2>+<frac|\<varepsilon\>|2>=\<varepsilon\>
     </equation*>
 
     Hence\ 
@@ -14796,18 +14636,19 @@
       derivative at >x<text| and <math|>>\<varphi\><rprime|'><rsub|x>=0
     </equation*>
 
-    Let <math|x,y\<in\><around*|[|a,b|]>> then we can use Lagrange's theorem
-    [see theorem: <reference|diff Lagrange theorem>] to find a
-    <math|\<zeta\>\<in\><around*|]|a,b|[>> with\ 
+    Let <math|x\<in\><around*|[|a,b|]>> then
+    <math|<around*|[|a,x|]>\<subseteq\><around*|[|a,b|]>> so that we can use
+    Lagrange's theorem [see theorem: <reference|diff Lagrange theorem (1)>]
+    to find a <math|\<zeta\>\<in\><around*|]|a,b|[>> with\ 
 
     <\equation*>
-      \<varphi\><around*|(|x|)>-\<varphi\><around*|(|y|)>=\<varphi\><rprime|'><rsub|\<zeta\>>\<cdot\><around*|(|x-y|)>=0\<cdot\><around*|(|x-y|)>=0
+      \<varphi\><around*|(|x|)>-\<varphi\><around*|(|a|)>=\<varphi\><rprime|'><rsub|\<zeta\>>\<cdot\><around*|(|x-y|)>=0\<cdot\><around*|(|x-y|)>=0
     </equation*>
 
     This prove that <math|\<forall\>x\<in\><around*|[|a,b|]>>
     <math|\<varphi\><around*|(|x|)>=\<varphi\><around*|(|a|)>=<around*|\<\|\|\>|f<around*|(|a|)>-g<around*|(|a|)>|\<\|\|\>>\<equallim\><rsub|<text|[eq:
     <reference|eq 16.180.200>]>>0>. Hence
-    <math|\<forall\>x\<in\><around*|[|a,b|]>> we have\ 
+    <math|\<forall\>x\<in\><around*|[|a,b|]>> that\ 
 
     <\equation*>
       <around*|\<\|\|\>|f<around*|(|x|)>-g<around*|(|x|)>|\<\|\|\>>=\<varphi\><around*|(|x|)>=0
@@ -14824,17 +14665,16 @@
 
   <subsection|Mean Value Theorems>
 
-  The mean value theorems shows how the function values varies based on the
+  The mean value theorems shows how function values varies based on the
   variation of the function arguments. In essence they specify for a function
   <math|f:X\<rightarrow\>Y> a relation between
-  <math|f<around*|(|x|)>-f<around*|(|y|)>> and <math|x-y>. A example that is
-  already proved is the Lagrange's Mean Value Theorem [see theorem:
-  <reference|diff Lagrange theorem>] that states that
+  <math|f<around*|(|x|)>-f<around*|(|y|)>> and <math|<rigid|x-y>>. A example
+  that is already proved is the Lagrange's Mean Value Theorem [see theorem:
+  <reference|diff Lagrange theorem>] which states that
   <math|f<around*|(|b|)>-f<around*|(|a|)>=f<rprime|'><rsub|\<zeta\>>\<cdot\><around*|(|b-a|)>>
   where <math|\<zeta\>\<in\><around*|[|a,b|]>>. For these new Mean Value
   Theorems we first need a little lemma that says that translating and
-  scaling is essential differentiable and that the differential function is
-  continuous.
+  scaling is essential continuous differentiable.
 
   <\lemma>
     <label|lemma 16.135.200>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
@@ -14847,14 +14687,8 @@
       >\<sigma\><around*|(|t|)>=x+t\<cdot\><around*|(|y-x|)>
     </equation*>
 
-    is Fréchet differentiable on <math|<around*|[|a,b|]>> and the function\ 
-
-    <\equation*>
-      D\<sigma\>:<around*|[|a,b|]>\<rightarrow\>L<around*|(|\<bbb-R\>,X|)><text|
-      defined by >D\<sigma\><around*|(|t|)>=D<rsub|t>\<sigma\><rsub|>
-    </equation*>
-
-    is continuous. Further <math|\<forall\>t\<in\><around*|[|a,b|]>>
+    is of class <math|C<rsup|1>>. Further
+    <math|\<forall\>t\<in\><around*|[|a,b|]>>
     <math|D<rsub|t>\<sigma\>\<in\>L<around*|(|\<bbb-R\>,X|)>> is defined by
 
     <\equation*>
@@ -14870,12 +14704,6 @@
       <reference|diff derivate and frechet
       differential>]>>D<rsub|t>\<sigma\><around*|(|1|)>=y-x
     </equation*>
-
-    <\note>
-      We can't say that <math|\<sigma\>> is <math|C<rsup|1>> on
-      <math|<around*|[|a,b|]>> because <math|C<rsup|1>> on a set is only
-      defined for open sets.\ 
-    </note>
   </lemma>
 
   <\proof>
@@ -14924,13 +14752,14 @@
 
     is equal to the constant function <math|C<rsub|L>>. As by [theorem:
     <reference|continuity constant function>] <math|C<rsub|L>> is continuous
-    it follows that <math|D<rsup|<around*|[|1|]>>\<sigma\>> is continuous.
+    it follows that <math|D<rsup|<around*|[|1|]>>\<sigma\>> is continuous
+    which proves that <math|\<sigma\>> is of class <math|C<rsup|1>>.
   </proof>
 
   <\theorem>
     <label|diff mean value theorem (1)><dueto|Mean Value Theorem (I>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
-    a normed vector space, <math|A\<subseteq\>X>,
+    a normed vector space,a tangential spanning set <math|A\<subseteq\>X>,
     <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>> the normed
     spaces of real numbers, <math|x,y\<in\>A> such that
     <math|<around*|{|<around*|(|1-t|)>\<cdot\>x+t\<cdot\>y\|t\<in\><around*|[|0,1|]>|}>\<subseteq\>A>
@@ -14968,8 +14797,8 @@
     Let <math|t\<in\><around*|[|0,1|]>> then <math|f> is Fréchet
     differentiable at <math|<around*|(|1-t|)>\<cdot\>x+t\<cdot\>y=\<sigma\><around*|(|t|)>>
     and by [lemma: <reference|lemma 16.135.200>] <math|\<sigma\>> is Fréchet
-    differentiable at <math|t>. So using [theorem: <reference|diff chain
-    rule>] we have that\ 
+    differentiable at <math|t>. So using the chain rule [see theorem:
+    <reference|diff chain rule>] we have that\ 
 
     <\equation>
       <label|eq 16.278.12>f\<circ\>\<sigma\><text| is Fréchet differentiable
@@ -15233,11 +15062,12 @@
       >\<pi\><rsub|2>\<circ\>h=D \<sigma\>
     </equation*>
 
-    As <math|D f> and <math|\<sigma\>> are continuous [because of theorem:
-    <reference|diff differentiable function is continuous>] it follows that
+    As <math|D f> is continuous and <math|\<sigma\>> is continuous [because
+    of theorem: <reference|diff differentiable function is continuous>] it
+    follows that <math|D f\<circ\>\<sigma\>> is continuous, hence
     <math|\<pi\><rsub|1>\<circ\>h> is continuous, further as <math|D
     \<sigma\>> is continuous it follows that <math|\<pi\><rsub|2>\<circ\>h>
-    is continuous, hence using [theorem: <reference|continuity product and
+    is continuous, so using [theorem: <reference|continuity product and
     continuous functions>] it follows that
 
     <\equation*>
@@ -15563,7 +15393,7 @@
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
     a normed space, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     a Banach space, <math|U> a open set in <math|X>,
-    <math|f:U\<rightarrow\>Y> a function that is <math|C<rsup|1>> on <math|U>
+    <math|f:U\<rightarrow\>Y> a function that is of class <math|C<rsup|1>>
     and <math|x,y\<in\>X> such that\ 
 
     <\enumerate>
@@ -15581,10 +15411,17 @@
       \<forall\>r,s\<in\>L<rsub|x,y><text| we have
       ><around*|\<\|\|\>|f<around*|(|s|)>-f<around*|(|r|)>|\<\|\|\>><rsub|Y>\<leqslant\>k\<cdot\><around*|\<\|\|\>|s-r|\<\|\|\>><rsub|X>
     </equation*>
+
+    <\note>
+      As <math|U> is open it follows from [theorem: <reference|diff
+      tangential spanning set examples>] that <math|U> is a tangential
+      spanning set which is needed in the definition of a function of class
+      <math|C<rsup|1>>.
+    </note>
   </corollary>
 
   <\proof>
-    As <math|f> is <math|C<rsup|1>> on <math|U> <math|f> is <math|1>-times
+    As <math|f> is of class <math|C<rsup|1>> <math|f> is <math|1>-times
     differentiable [hence Fréchet differentiable] on <math|U> and\ 
 
     <\equation*>
@@ -15618,7 +15455,7 @@
     be a normed space, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     a Banach space, <math|U> a open set in <math|X>. <math|x,y\<in\>X> such
     that <math|L<rsub|x,y>\<subseteq\>U> and <math|f:U\<rightarrow\>Y> a
-    function that is <math|C<rsup|1>> on <math|U>
+    function that is of class \ <math|C<rsup|1>>
 
     then\ 
 
@@ -15631,10 +15468,17 @@
     <\equation*>
       <around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|\<zeta\>>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\|\<zeta\>\<in\>L<rsub|x,y>|}>|)>\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>
     </equation*>
+
+    <\note>
+      As <math|U> is open it follows from [theorem: <reference|diff
+      tangential spanning set examples>] that <math|U> is a tangential
+      spanning set which is needed in the definition of a function of class
+      <math|C<rsup|1>>.
+    </note>
   </theorem>
 
   <\proof>
-    As <math|f> is <math|C<rsup|1>> on <math|U ><math|f> is <math|1>-times
+    As <math|f> is of class <math|C<rsup|1>> <math|f> is <math|1>-times
     differentiable [hence Fréchet differentiable] on <math|U> and\ 
 
     <\equation*>
@@ -15711,8 +15555,8 @@
     a Banach space, <math|U> a open set in <math|X>, \ <math|x\<in\>U>,
     <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
     <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\>|)>\<subseteq\>U>,
-    <math|f:A\<rightarrow\>Y> a function that is <math|C<rsup|1>> on <math|U>
-    then <math|\<forall\>y,z\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\>|)>>
+    <math|f:U\<rightarrow\>Y> a function that is of class <math|C<rsup|1>>
+    then <math|<rigid|\<forall\>y,z\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x,\<delta\>|)>>>
     we have that\ 
 
     <\equation*>
@@ -15724,6 +15568,13 @@
     <\equation*>
       <around*|\<\|\|\>|f<around*|(|z|)>-f<around*|(|y|)>|\<\|\|\>><rsub|Y>\<leqslant\>sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|y+t\<cdot\><around*|(|z-y|)>>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\|t\<in\><around*|[|0,1|]>|}>|)>\<cdot\><around*|\<\|\|\>|z-y|\<\|\|\>><rsub|X>
     </equation*>
+
+    <\note>
+      As <math|U> is open it follows from [theorem: <reference|diff
+      tangential spanning set examples>] that <math|U> is a tangential
+      spanning set which is needed in the definition of a function of class
+      <math|C<rsup|1>>.
+    </note>
   </corollary>
 
   <\proof>
@@ -15773,12 +15624,26 @@
     be a normed space, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     a Banach space, <math|U> a open set in <math|X>, <math|a,b\<in\>X> such
     that <math|L<rsub|a,b>\<subseteq\>U> and <math|f:U\<rightarrow\>Y> a
-    function that is <math|C<rsup|1>> on <math|U> then
-    <math|\<forall\>x\<in\>U> we have\ 
+    function that is of class <math|C<rsup|1>> then <math|\<forall\>x\<in\>U>
+    we have that\ 
+
+    <\equation*>
+      sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|\<zeta\>>f-D<rsub|x>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\|\<zeta\>\<in\>L<rsub|a,b>|}>|)><text|
+      exist>
+    </equation*>
+
+    and
 
     <\equation*>
       <around*|\<\|\|\>|f<around*|(|a|)>-f<around*|(|b|)>-D<rsub|x>f<around*|(|a-b|)>|\<\|\|\>><rsub|Y>\<leqslant\>sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|\<zeta\>>f-D<rsub|x>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\|\<zeta\>\<in\>L<rsub|a,b>|}>|)>\<cdot\><around*|\<\|\|\>|a-b|\<\|\|\>><rsub|X>
     </equation*>
+
+    <\note>
+      As <math|U> is open it follows from [theorem: <reference|diff
+      tangential spanning set examples>] that <math|U> is a tangential
+      spanning set which is needed in the definition of a function of class
+      <math|C<rsup|1>>.
+    </note>
   </theorem>
 
   <\proof>
@@ -15789,14 +15654,13 @@
       >g<around*|(|\<zeta\>|)>=f<around*|(|\<zeta\>|)>-D<rsub|x>f<around*|(|\<zeta\>|)>
     </equation>
 
-    Then, as <math|f> is <math|C<rsup|1>> on <math|U> [so Fréchet
-    differentiable on <math|U>] and <math|D<rsub|x>f\<in\>L<around*|(|X,Y|)>>
-    is <math|C<rsup|\<infty\>>> on <math|X> [see example: <reference|diff
-    linear mapping is infinite times differentiable>], it follows from
-    [theorem: <reference|diff higher order differential is linear>] that
-    <math|g> is <math|C<rsup|1>> on <math|U>. Hence we have
-    <math|\<forall\>\<zeta\>\<in\>U> that <math|g> is differentiable at
-    <math|\<zeta\>\<in\>U> with
+    Then, as <math|f> is of class <math|C<rsup|1>> [so Fréchet differentiable
+    on <math|U>] and <math|D<rsub|x>f\<in\>L<around*|(|X,Y|)>> is
+    <math|C<rsup|\<infty\>>> on <math|X> [see example: <reference|diff linear
+    mapping is infinite times differentiable>], it follows from [theorem:
+    <reference|diff higher order differential is linear>] that <math|g> is of
+    class <math|C<rsup|1>>. Hence we have <math|\<forall\>\<zeta\>\<in\>U>
+    that <math|g> is differentiable at <math|\<zeta\>\<in\>U> with
 
     <\equation>
       <label|eq 16.195.201>D<rsub|\<zeta\>>g=D<rsub|\<zeta\>>f-D<rsub|\<zeta\>><around*|(|D<rsub|x>f|)>\<equallim\><rsub|<text|[example:
@@ -15806,6 +15670,19 @@
 
     By the Mean Value Theorem (III) [theorem: <reference|diff mean value
     theorem (3)>] it follows that\ 
+
+    <\equation*>
+      sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|\<zeta\>>g|\<\|\|\>><rsub|\|L<around*|(|X,Y|)>><around*|\||\<zeta\>\<in\>L<rsub|a,b>|\|>|}>|)><text|
+      exist>
+    </equation*>
+
+    or using [eq: <reference|eq 16.195.201>]
+
+    <\equation*>
+      sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|\<zeta\>>f-D<rsub|x>f|\<\|\|\>><rsub|\|L<around*|(|X,Y|)>><around*|\||\<zeta\>\<in\>L<rsub|a,b>|\|>|}>|)>
+    </equation*>
+
+    and
 
     <\equation*>
       <around*|\<\|\|\>|g<around*|(|a|)>-g<around*|(|b|)>|\<\|\|\>><rsub|Y>\<leqslant\>sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|\<zeta\>>g|\<\|\|\>><rsub|\|L<around*|(|X,Y|)>><around*|\||\<zeta\>\<in\>L<rsub|a,b>|\|>|}>|)>\<cdot\><around*|\<\|\|\>|a-b|\<\|\|\>><rsub|X>
@@ -15853,7 +15730,7 @@
     and\ 
 
     <\equation*>
-      <around*|\||c-min<around*|(|c-a,<frac|\<delta\>|2>|)>|\|>=c-<around*|(|c-min<around*|(|c-a,<frac|\<delta\>|2>|)>|)>=min<around*|(|c-a,\<delta\>|)>\<leqslant\><frac|\<delta\>|2>\<less\>\<delta\>
+      <around*|\||c-<around*|(|c-min<around*|(|c-a,<frac|\<delta\>|2>|)>|)>|\|>=c-<around*|(|c-min<around*|(|c-a,<frac|\<delta\>|2>|)>|)>=min<around*|(|c-a,<frac|\<delta\>|2>|)>\<leqslant\><frac|\<delta\>|2>\<less\>\<delta\>
     </equation*>
 
     so
@@ -15871,7 +15748,7 @@
     </equation*>
 
     As by [eq: <reference|eq 16.306.302>]
-    <math|f<around*|(|c-min<around*|(|c-\<alpha\>,<frac|\<delta\>|2>|)>|)>\<in\><around*|[|a,c|[>>
+    <math|c-min<around*|(|c-\<alpha\>,<frac|\<delta\>|2>|)>\<in\><around*|[|a,c|[>>
     it follows that <math|f<around*|(|c-min<around*|(|c-\<alpha\>,<frac|\<delta\>|2>|)>|)>\<leqslant\>\<alpha\>>
     which contradicts the above. Hence the assumption is wrong and we must
     have that\ 
@@ -15900,6 +15777,13 @@
     <\equation*>
       <around*|\<\|\|\>|f<around*|(|b|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|b|)>-\<varphi\><around*|(|a|)>
     </equation*>
+
+    <\note>
+      Using [theorem: <reference|topology every element of a generalized
+      interval is a limit point>] we have that every element of
+      <math|<around*|[|a,b|]>> is a limit point of <math|<around*|[|a,b|]>>
+      which is needed for the existence of the derivatives.
+    </note>
   </theorem>
 
   <\proof>
@@ -15950,13 +15834,13 @@
         <item*|<math|y\<in\><around*|]|a,x|[>>>Then if
         <math|z\<in\><around*|[|a,y|[>> we have as
         <math|<around*|[|a,y|[><below|\<subseteq\>|y\<less\>x><around*|[|a,x|[>>
-        so that as <math|x\<in\>A> we have\ 
+        \ and <math|x\<in\>A> that
 
         <\equation*>
           <text| ><around*|\<\|\|\>|f<around*|(|z|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|z|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|z-a|)>
         </equation*>
 
-        which proves that <math|y\<in\>A>
+        which proves that <math|y\<in\>A>.
       </description>
 
       From the above we conclude that\ 
@@ -15974,8 +15858,8 @@
         \<gamma\>=sup<around*|(|A|)> exist
       </equation*>
 
-      Further we have as <math|a\<in\>A> and <math|b> is a upper bound of
-      <math|A> it follows that
+      Further we have, as <math|a\<in\>A> and <math|b> is a upper bound of
+      <math|A>, that
 
       <\equation>
         <label|eq 16.311.302>\<gamma\>\<in\><around*|[|a,b|]>
@@ -15990,8 +15874,8 @@
         <text| ><around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|y|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|y-a|)>
       </equation*>
 
-      which as <math|y\<in\><around*|[|a,y|[>> was chosen arbitrary proves
-      that\ 
+      which as <math|y\<in\><around*|[|a,\<gamma\>|[>> was chosen arbitrary
+      proves that\ 
 
       <\equation*>
         \<gamma\>\<in\>A
@@ -16081,7 +15965,7 @@
         ><around*|\||\<varphi\><around*|(|\<gamma\>+h|)>-\<varphi\><around*|(|\<gamma\>|)>-h\<cdot\>\<varphi\><rprime|'><rsub|\<gamma\>>|\|>\<leqslant\><frac|\<varepsilon\>|2>\<cdot\><around*|\||h|\|>
       </equation>
 
-      Let <math|\<delta\>=min<around*|(|\<delta\><rsub|1>,\<delta\><rsub|2>,b-\<gamma\>|)>\<in\>\<bbb-R\><rsup|+>>
+      Let <math|\<delta\>=min<around*|(|\<delta\><rsub|1>,\<delta\><rsub|2>,b-\<gamma\>|)><below|\<in\>|\<gamma\>\<less\>b\<Rightarrow\>0\<less\>b-\<gamma\>>\<bbb-R\><rsup|+>>
       and define
 
       <\equation>
@@ -16132,6 +16016,8 @@
         <label|eq 16.317.302><around*|(|y-\<gamma\>|)>\<cdot\>\<varphi\><rprime|'><rsub|\<gamma\>>\<leqslant\>\<varphi\><around*|(|y|)>-\<varphi\><around*|(|\<gamma\>|)>+<frac|\<varepsilon\>|2>\<cdot\><around*|(|y-\<gamma\>|)>
       </equation>
 
+      Further
+
       <\eqnarray*>
         <tformat|<table|<row|<cell|<around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|\<gamma\>|)>|\<\|\|\>>>|<cell|=>|<cell|<around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|\<gamma\>|)>-<around*|(|y-\<gamma\>|)>\<cdot\>f<rprime|'><rsub|\<gamma\>>+<around*|(|y-\<gamma\>|)>\<cdot\>f<rprime|'><rsub|\<gamma\>>|\<\|\|\>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|\<gamma\>|)>-<around*|(|y-\<gamma\>|)>\<cdot\>f<rprime|'><rsub|\<gamma\>>|\<\|\|\>>+<around*|\<\|\|\>|<around*|(|y-\<gamma\>|)>\<cdot\>f<rprime|'><rsub|\<gamma\>>|\<\|\|\>>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[eq:
         <reference|eq 16.316.302>>>>|<cell|<frac|\<varepsilon\>|2>\<cdot\><around*|(|y-\<gamma\>|)>+<around*|\<\|\|\>|<around*|(|y-\<gamma\>|)>\<cdot\>f<rprime|'><rsub|\<gamma\>>|\<\|\|\>>>>|<row|<cell|>|<cell|<below|=|0\<leqslant\>y-\<gamma\>>>|<cell|<frac|\<varepsilon\>|2>\<cdot\><around*|(|y-\<gamma\>|)>+<around*|(|y-\<gamma\>|)>\<cdot\><around*|\<\|\|\>|f<rprime|'><rsub|\<gamma\>>|\<\|\|\>>>>|<row|<cell|>|<cell|<below|\<leqslant\>|hypohesis>>|<cell|<frac|\<varepsilon\>|2>\<cdot\><around*|(|y-\<gamma\>|)>+<around*|(|y-\<gamma\>|)>\<cdot\>\<varphi\><rprime|'><rsub|\<gamma\>>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[eq:
@@ -16155,8 +16041,8 @@
       to summarize we have
 
       <\equation*>
-        \<forall\>y\<in\><around*|[|\<gamma\>,\<zeta\>|[><text| we have
-        ><around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|y|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|y-a|)>
+        \<forall\>y\<in\><around*|[|\<gamma\>,\<zeta\>|[><text|
+        \ ><around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|y|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|y-a|)>
       </equation*>
 
       As <math|\<gamma\><below|\<in\>|<text|[eq: <reference|eq
@@ -16174,10 +16060,10 @@
         ><around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|a|)>|\<\|\|\>>\<leqslant\>\<varphi\><around*|(|y|)>-\<varphi\><around*|(|a|)>+\<varepsilon\>\<cdot\><around*|(|y-a|)>
       </equation*>
 
-      which by definition of <math|A> that <math|\<zeta\>\<in\>A>. Hence
-      <math|\<zeta\>\<leqslant\>sup<around*|(|A|)>=\<gamma\>> which, as by
-      [eq: <reference|eq 16.316.303>] <math|\<gamma\>\<less\>\<zeta\>>, leads
-      to the contradiction <math|\<zeta\>\<less\>\<zeta\>>. Hence the
+      which by definition of <math|A> proves that <math|\<zeta\>\<in\>A>.
+      Hence <math|\<zeta\>\<leqslant\>sup<around*|(|A|)>=\<gamma\>> which, as
+      by [eq: <reference|eq 16.316.303>] <math|\<gamma\>\<less\>\<zeta\>>,
+      leads to the contradiction <math|\<zeta\>\<less\>\<zeta\>>. Hence the
       assumption <math|\<gamma\>\<less\>b> is wrong and we must have that\ 
 
       <\equation*>
@@ -16214,11 +16100,13 @@
   proof in different lemma'a. First we prove symmetry for the case
   <math|n=2>.
 
+  TODO
+
   <\lemma>
     <label|lemma 16.155.203>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
     be a normed space, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     a Banach space, <math|U> a open set in <math|X> and
-    <math|f:U\<rightarrow\>Y> a function that is <math|C<rsup|2>> on <math|U>
+    <math|f:U\<rightarrow\>Y> a function that is of class <math|C<rsup|2>>
     then <math|\<forall\>x\<in\>U> we have <math|\<forall\>u,v\<in\>X> that
 
     <\equation*>
@@ -16237,6 +16125,12 @@
     <\equation*>
       <around*|(|D<rsup|<around*|[|2|]>>f<around*|(|x|)>|)><around*|(|v|)><around*|(|w|)>=<around*|(|D<rsup|<around*|[|2|]>>f<around*|(|x|)>|)><around*|(|w|)><around*|(|v|)>
     </equation*>
+
+    <\note>
+      As <math|U> is open it follows from [theorem: <reference|diff
+      tangential spanning set examples>] <math|U> is a tangential spanning
+      set which is needed for the definition of class <math|C<rsup|2>>.
+    </note>
   </lemma>
 
   <\proof>
@@ -25731,7 +25625,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|15>
-    <associate|page-first|897>
+    <associate|page-first|881>
     <associate|par-first|0tab>
     <associate|par-mode|justify>
     <associate|preamble|false>
@@ -25817,17 +25711,15 @@
     <associate|auto-72|<tuple|implicit function theorem (1)|?>>
     <associate|auto-73|<tuple|implict function theorem (2)|?>>
     <associate|auto-74|<tuple|16.7|?>>
-    <associate|auto-75|<tuple|implict function theorem (2)|?>>
-    <associate|auto-76|<tuple|16.7|?>>
     <associate|auto-8|<tuple|16.1.3|?>>
     <associate|auto-9|<tuple|differentiability|?>>
-    <associate|conjecture 16.245.136|<tuple|16.334|?>>
-    <associate|conjecture 16.246.136|<tuple|16.335|?>>
-    <associate|conjecture 16.247.136|<tuple|16.336|?>>
-    <associate|conjecture 16.248.136|<tuple|16.337|?>>
-    <associate|conjecture 16.252|<tuple|16.339|?>>
+    <associate|conjecture 16.245.136|<tuple|16.340|?>>
+    <associate|conjecture 16.246.136|<tuple|16.341|?>>
+    <associate|conjecture 16.247.136|<tuple|16.342|?>>
+    <associate|conjecture 16.248.136|<tuple|16.343|?>>
+    <associate|conjecture 16.252|<tuple|16.345|?>>
     <associate|continuity limit of composition of linear
-    maps|<tuple|16.314|?>>
+    maps|<tuple|16.320|?>>
     <associate|convergence of a function to a point|<tuple|16.8|?>>
     <associate|corollary 16.50.192|<tuple|16.123|?>>
     <associate|diff (f+g)'=f'+g'|<tuple|16.36|?>>
@@ -25843,24 +25735,24 @@
     <associate|diff Frechet approximation|<tuple|16.37|?>>
     <associate|diff Frechet differentation implies partial differentiability
     |<tuple|16.96|?>>
-    <associate|diff GL(X) is a group|<tuple|16.313|?>>
-    <associate|diff H^n properties|<tuple|16.317|?>>
+    <associate|diff GL(X) is a group|<tuple|16.319|?>>
+    <associate|diff H^n properties|<tuple|16.323|?>>
     <associate|diff I+H has inverse if norm of H is less then
-    1|<tuple|16.321|?>>
+    1|<tuple|16.327|?>>
     <associate|diff Jacobian matrix|<tuple|16.113|?>>
-    <associate|diff L(x1:..:xn) (1)|<tuple|16.263|?>>
+    <associate|diff L(x1:..:xn) (1)|<tuple|16.269|?>>
     <associate|diff L(x1:..xn)|<tuple|16.124|?>>
     <associate|diff L(x1:..xn)=L(1:..:1). product|<tuple|16.128|?>>
     <associate|diff L_n(X;Y)|<tuple|16.120|?>>
-    <associate|diff L_n(x1,..,xn;Y)|<tuple|16.258|?>>
-    <associate|diff Lagrange theorem|<tuple|16.215|?>>
-    <associate|diff Lagrange theorem (1)|<tuple|16.217|?>>
-    <associate|diff Rolle's theorem|<tuple|16.213|?>>
+    <associate|diff L_n(x1,..,xn;Y)|<tuple|16.264|?>>
+    <associate|diff Lagrange theorem|<tuple|16.216|?>>
+    <associate|diff Lagrange theorem (1)|<tuple|16.218|?>>
+    <associate|diff Rolle's theorem|<tuple|16.214|?>>
     <associate|diff SA(a)|<tuple|16.48|?>>
     <associate|diff SA(a) definition|<tuple|16.47|?>>
-    <associate|diff Taylor I|<tuple|16.345|?>>
-    <associate|diff Taylor I.1|<tuple|16.347|?>>
-    <associate|diff Taylor I.2|<tuple|16.350|?>>
+    <associate|diff Taylor I|<tuple|16.351|?>>
+    <associate|diff Taylor I.1|<tuple|16.353|?>>
+    <associate|diff Taylor I.2|<tuple|16.356|?>>
     <associate|diff Ux|<tuple|16.4|?>>
     <associate|diff Ux=-x+U=U-x|<tuple|16.6|?>>
     <associate|diff balls are convex|<tuple|16.233|?>>
@@ -25874,11 +25766,9 @@
     <associate|diff chain rule and partial differential|<tuple|16.101|?>>
     <associate|diff chain rule calculus|<tuple|16.84|?>>
     <associate|diff chain rule higher order|<tuple|16.204|?>>
-    <associate|diff chain rule higher order (open set
-    version)|<tuple|16.206|?>>
     <associate|diff chain rule higher order class|<tuple|16.207|?>>
     <associate|diff class C^1 is equivalent with continuous partial
-    derivatest|<tuple|16.288|?>>
+    derivatest|<tuple|16.294|?>>
     <associate|diff class C^@@|<tuple|16.152|?>>
     <associate|diff class C^n|<tuple|16.150|?>>
     <associate|diff class C^n sub-sets|<tuple|16.151|?>>
@@ -25890,12 +25780,12 @@
     <associate|diff constant function is infinitely times
     differentiable|<tuple|16.185|?>>
     <associate|diff continuous partial differentials implies
-    differentiability|<tuple|16.287|?>>
-    <associate|diff convex concave|<tuple|16.221|?>>
+    differentiability|<tuple|16.293|?>>
+    <associate|diff convex concave|<tuple|16.222|?>>
     <associate|diff convex set|<tuple|16.232|?>>
-    <associate|diff convex/concave alternative|<tuple|16.222|?>>
+    <associate|diff convex/concave alternative|<tuple|16.223|?>>
     <associate|diff derivate and frechet differential|<tuple|16.73|?>>
-    <associate|diff derivate and local extremum|<tuple|16.211|?>>
+    <associate|diff derivate and local extremum|<tuple|16.212|?>>
     <associate|diff derivate of a product of functions|<tuple|16.116|?>>
     <associate|diff derivate of inverse function|<tuple|16.117|?>>
     <associate|diff derivate operator is linear|<tuple|16.79|?>>
@@ -25906,10 +25796,10 @@
     <associate|diff derivative of f/g|<tuple|16.119|?>>
     <associate|diff derivative of identity function|<tuple|16.27|?>>
     <associate|diff derivatives and continuity|<tuple|16.32|?>>
-    <associate|diff diffeomorphism|<tuple|16.323|?>>
-    <associate|diff diffeomorphism D(f@f^-1)|<tuple|16.328|?>>
-    <associate|diff diffeomorphism composition|<tuple|16.329|?>>
-    <associate|diff diffeomorphism condition|<tuple|16.327|?>>
+    <associate|diff diffeomorphism|<tuple|16.329|?>>
+    <associate|diff diffeomorphism D(f@f^-1)|<tuple|16.334|?>>
+    <associate|diff diffeomorphism composition|<tuple|16.335|?>>
+    <associate|diff diffeomorphism condition|<tuple|16.333|?>>
     <associate|diff differentiability|<tuple|16.49|?>>
     <associate|diff differentiability alternative
     definitions|<tuple|16.66|?>>
@@ -25926,80 +25816,80 @@
     <associate|diff differential of product of functions|<tuple|16.115|?>>
     <associate|diff e-mapping|<tuple|16.65|?>>
     <associate|diff equivalent norms|<tuple|16.60|?>>
-    <associate|diff evaluation operator|<tuple|16.248|?>>
+    <associate|diff evaluation operator|<tuple|16.254|?>>
     <associate|diff f is of class C^n if D^1f u=is of class C^n-1
     (1)|<tuple|16.182|?>>
     <associate|diff f(t)=a.x+y is infinite differentiable|<tuple|16.190|?>>
     <associate|diff f^(n+m)|<tuple|16.173|?>>
     <associate|diff f^(n+m) (1)|<tuple|16.174|?>>
-    <associate|diff fundamental theorem of calculus (1)|<tuple|16.225|?>>
-    <associate|diff fundamental theorem of calculus (2)|<tuple|16.227|?>>
+    <associate|diff fundamental theorem of calculus (1)|<tuple|16.226|?>>
+    <associate|diff fundamental theorem of calculus (2)|<tuple|16.228|?>>
     <associate|diff higher order continuous differential and higher order
-    continuous derivate|<tuple|16.301|?>>
+    continuous derivate|<tuple|16.307|?>>
     <associate|diff higher order derivate|<tuple|16.158|?>>
     <associate|diff higher order derivate and differential|<tuple|16.161|?>>
     <associate|diff higher order derivate is linear|<tuple|16.184|?>>
     <associate|diff higher order derivate on a open set|<tuple|16.165|?>>
-    <associate|diff higher order derivates|<tuple|16.289|?>>
+    <associate|diff higher order derivates|<tuple|16.295|?>>
     <associate|diff higher order derivativing is local|<tuple|16.164|?>>
     <associate|diff higher order differation implies higher order partial
-    differation|<tuple|16.279|?>>
+    differation|<tuple|16.285|?>>
     <associate|diff higher order differential is linear|<tuple|16.183|?>>
     <associate|diff higher order differential of a product|<tuple|16.206|?>>
     <associate|diff higher order differential of a product
-    (1)|<tuple|16.208|?>>
+    (1)|<tuple|16.209|?>>
     <associate|diff higher order differentials and
     restriction|<tuple|16.146|?>>
     <associate|diff higher order differentials are symmetric in there
-    arguments|<tuple|16.255|?>>
+    arguments|<tuple|16.261|?>>
     <associate|diff higher order differentiation|<tuple|16.141|?>>
     <associate|diff higher order differentiation (1)|<tuple|16.148|?>>
     <associate|diff higher order differentiation and vector
     functions|<tuple|16.201|?>>
     <associate|diff higher order differentiation classes|<tuple|16.202|?>>
     <associate|diff higher order differentiation implies higher order
-    derivates|<tuple|16.304|?>>
+    derivates|<tuple|16.310|?>>
     <associate|diff higher order differentiation implies higher order partial
-    differation (1)|<tuple|16.280|?>>
+    differation (1)|<tuple|16.286|?>>
     <associate|diff higher order differentiation on a open
     set|<tuple|16.145|?>>
-    <associate|diff higher order partial differentiation|<tuple|16.273|?>>
+    <associate|diff higher order partial differentiation|<tuple|16.279|?>>
     <associate|diff higher order partial differentiation is
-    symmetric|<tuple|16.281|?>>
+    symmetric|<tuple|16.287|?>>
     <associate|diff homeomorphism is a diffeomorphism of class
-    C^0|<tuple|16.324|?>>
+    C^0|<tuple|16.330|?>>
     <associate|diff identity function is differentiable|<tuple|16.58|?>>
     <associate|diff identity function is infinite times
     differentiable|<tuple|16.188|?>>
-    <associate|diff implicit function theorem|<tuple|16.343|?>>
-    <associate|diff implicit function theorem (1)|<tuple|16.344|?>>
-    <associate|diff increasing decreasing function|<tuple|16.219|?>>
+    <associate|diff implicit function theorem|<tuple|16.349|?>>
+    <associate|diff implicit function theorem (1)|<tuple|16.350|?>>
+    <associate|diff increasing decreasing function|<tuple|16.220|?>>
     <associate|diff inifint=ite differentiable|<tuple|16.147|?>>
-    <associate|diff inverse function theorem|<tuple|16.331|?>>
-    <associate|diff inverse function theorem and Jacobian|<tuple|16.340|?>>
-    <associate|diff inverse mapping on GL(X)|<tuple|16.322|?>>
+    <associate|diff inverse function theorem|<tuple|16.337|?>>
+    <associate|diff inverse function theorem and Jacobian|<tuple|16.346|?>>
+    <associate|diff inverse mapping on GL(X)|<tuple|16.328|?>>
     <associate|diff limit of a function|<tuple|16.11|?>>
     <associate|diff line segment [0,1]|<tuple|16.238|?>>
     <associate|diff linear isomorphism between Banach spaces are
-    diffeomorphisms|<tuple|16.325|?>>
+    diffeomorphisms|<tuple|16.331|?>>
     <associate|diff linear mapping is infinite times
     differentiable|<tuple|16.187|?>>
     <associate|diff linear mappings are differentiable|<tuple|16.57|?>>
     <associate|diff linear to multilinear|<tuple|16.136|?>>
-    <associate|diff linear to multilinear (1)|<tuple|16.271|?>>
+    <associate|diff linear to multilinear (1)|<tuple|16.277|?>>
     <associate|diff linesegement|<tuple|16.236|?>>
-    <associate|diff little o|<tuple|16.349|?>>
-    <associate|diff little o and limits|<tuple|16.351|?>>
-    <associate|diff local diffeomorphism|<tuple|16.330|?>>
+    <associate|diff little o|<tuple|16.355|?>>
+    <associate|diff little o and limits|<tuple|16.357|?>>
+    <associate|diff local diffeomorphism|<tuple|16.336|?>>
     <associate|diff mean value theorem (0)|<tuple|16.235|?>>
     <associate|diff mean value theorem (1)|<tuple|16.231|?>>
     <associate|diff mean value theorem (2)|<tuple|16.235|?>>
     <associate|diff mean value theorem (2.1)|<tuple|16.240|?>>
-    <associate|diff mean value theorem (3)|<tuple|16.241|?>>
-    <associate|diff mean value theorem (3.1)|<tuple|16.242|?>>
-    <associate|diff mean value theorem (4)|<tuple|16.243|?>>
-    <associate|diff mean value theorem (5)|<tuple|16.245|?>>
-    <associate|diff minimum maximum|<tuple|16.209|?>>
+    <associate|diff mean value theorem (3)|<tuple|16.242|?>>
+    <associate|diff mean value theorem (3.1)|<tuple|16.244|?>>
+    <associate|diff mean value theorem (4)|<tuple|16.246|?>>
+    <associate|diff mean value theorem (5)|<tuple|16.249|?>>
+    <associate|diff minimum maximum|<tuple|16.210|?>>
     <associate|diff multiparameter function to one parameter
     function|<tuple|16.88|?>>
     <associate|diff n+m differentiation|<tuple|16.171|?>>
@@ -26012,11 +25902,11 @@
     <associate|diff partial derivate and partial
     differential|<tuple|16.104|?>>
     <associate|diff partial derivate and partial differential of higher
-    order|<tuple|16.293|?>>
+    order|<tuple|16.299|?>>
     <associate|diff partial derivate and partial differential of higher order
-    (1)|<tuple|16.297|?>>
+    (1)|<tuple|16.303|?>>
     <associate|diff partial derivate and partial differential of higher order
-    (2)|<tuple|16.298|?>>
+    (2)|<tuple|16.304|?>>
     <associate|diff partial derivate definition|<tuple|16.102|?>>
     <associate|diff partial derivation is local|<tuple|16.105|?>>
     <associate|diff partial differentiability does not mean
@@ -26027,14 +25917,14 @@
     <associate|diff partial differentiation is local|<tuple|16.94|?>>
     <associate|diff partial differentiation is local (1)|<tuple|16.95|?>>
     <associate|diff power|<tuple|16.118|?>>
-    <associate|diff power of composition|<tuple|16.316|?>>
+    <associate|diff power of composition|<tuple|16.322|?>>
     <associate|diff projection functon is infinite times
     differentiable|<tuple|16.195|?>>
     <associate|diff restriction of a diffeomorphism is a
-    diffeomorphism|<tuple|16.326|?>>
+    diffeomorphism|<tuple|16.332|?>>
     <associate|diff scalar product function has a derivate|<tuple|16.29|?>>
-    <associate|diff second derivate convex concave|<tuple|16.223|?>>
-    <associate|diff space of toplinear isomorphism|<tuple|16.312|?>>
+    <associate|diff second derivate convex concave|<tuple|16.224|?>>
+    <associate|diff space of toplinear isomorphism|<tuple|16.318|?>>
     <associate|diff tangent cone|<tuple|16.39|?>>
     <associate|diff tangent cone and inclusion|<tuple|16.44|?>>
     <associate|diff tangent cone and limit point|<tuple|16.71|?>>
@@ -26045,7 +25935,7 @@
     <associate|diff tangential spanning set|<tuple|16.139|?>>
     <associate|diff tangential spanning set examples|<tuple|16.140|?>>
     <associate|diff toplinear isomorphism between Banach
-    spaces|<tuple|16.311|?>>
+    spaces|<tuple|16.317|?>>
     <associate|diff translation is infinite differentiable|<tuple|16.193|?>>
     <associate|diff uniqueness of the Frechet aproximation|<tuple|16.42|?>>
     <associate|diff unprojection|<tuple|16.86|?>>
@@ -26055,47 +25945,38 @@
     <associate|diff vector functions (1)|<tuple|16.110|?>>
     <associate|diff vector functions (2)|<tuple|16.112|?>>
     <associate|diff vector functions and linearity|<tuple|16.109|?>>
-    <associate|eq 14.411.143|<tuple|16.513|?>>
+    <associate|eq 14.411.143|<tuple|16.504|?>>
     <associate|eq 16.1.1|<tuple|16.1|?>>
     <associate|eq 16.1.177|<tuple|16.25|?>>
     <associate|eq 16.10.178|<tuple|16.76|?>>
     <associate|eq 16.100.6|<tuple|16.102|?>>
-    <associate|eq 16.101.194|<tuple|16.215|?>>
     <associate|eq 16.101.6|<tuple|16.103|?>>
-    <associate|eq 16.102.194|<tuple|16.216|?>>
     <associate|eq 16.102.6|<tuple|16.104|?>>
-    <associate|eq 16.103.194|<tuple|16.217|?>>
-    <associate|eq 16.104.194|<tuple|16.218|?>>
-    <associate|eq 16.105.194|<tuple|16.219|?>>
     <associate|eq 16.11.178|<tuple|16.77|?>>
     <associate|eq 16.12.178|<tuple|16.78|?>>
     <associate|eq 16.121.6|<tuple|16.123|?>>
-    <associate|eq 16.122.194|<tuple|16.322|?>>
-    <associate|eq 16.123.194|<tuple|16.323|?>>
-    <associate|eq 16.123.195|<tuple|16.240|?>>
-    <associate|eq 16.124.194|<tuple|16.324|?>>
-    <associate|eq 16.124.195|<tuple|16.241|?>>
-    <associate|eq 16.125.194|<tuple|16.325|?>>
-    <associate|eq 16.125.195|<tuple|16.242|?>>
-    <associate|eq 16.126.195|<tuple|16.243|?>>
-    <associate|eq 16.127.195|<tuple|16.244|?>>
-    <associate|eq 16.128.195|<tuple|16.245|?>>
-    <associate|eq 16.129.195|<tuple|16.246|?>>
+    <associate|eq 16.122.194|<tuple|16.313|?>>
+    <associate|eq 16.123.194|<tuple|16.314|?>>
+    <associate|eq 16.123.195|<tuple|16.228|?>>
+    <associate|eq 16.124.194|<tuple|16.315|?>>
+    <associate|eq 16.124.195|<tuple|16.229|?>>
+    <associate|eq 16.125.194|<tuple|16.316|?>>
+    <associate|eq 16.125.195|<tuple|16.230|?>>
+    <associate|eq 16.126.195|<tuple|16.231|?>>
+    <associate|eq 16.127.195|<tuple|16.232|?>>
+    <associate|eq 16.128.195|<tuple|16.233|?>>
+    <associate|eq 16.129.195|<tuple|16.234|?>>
     <associate|eq 16.13.178|<tuple|16.79|?>>
-    <associate|eq 16.130.195|<tuple|16.247|?>>
-    <associate|eq 16.131.195|<tuple|16.251|?>>
-    <associate|eq 16.134.195|<tuple|16.254|?>>
-    <associate|eq 16.135.195|<tuple|16.256|?>>
+    <associate|eq 16.130.195|<tuple|16.235|?>>
+    <associate|eq 16.131.195|<tuple|16.239|?>>
     <associate|eq 16.135.310|<tuple|16.135|?>>
-    <associate|eq 16.136.195|<tuple|16.257|?>>
     <associate|eq 16.14.178|<tuple|16.80|?>>
-    <associate|eq 16.143.200|<tuple|16.255|?>>
     <associate|eq 16.15.1|<tuple|16.19|?>>
     <associate|eq 16.15.178|<tuple|16.81|?>>
     <associate|eq 16.15.5|<tuple|16.8|?>>
-    <associate|eq 16.150.152|<tuple|16.252|?>>
+    <associate|eq 16.150.152|<tuple|16.240|?>>
     <associate|eq 16.150.7|<tuple|16.136|?>>
-    <associate|eq 16.151.152|<tuple|16.253|?>>
+    <associate|eq 16.151.152|<tuple|16.241|?>>
     <associate|eq 16.151.310|<tuple|16.151|?>>
     <associate|eq 16.152.310|<tuple|16.152|?>>
     <associate|eq 16.153.310|<tuple|16.153|?>>
@@ -26131,18 +26012,18 @@
     <associate|eq 16.17.1|<tuple|16.21|?>>
     <associate|eq 16.17.178|<tuple|16.90|?>>
     <associate|eq 16.17.180|<tuple|16.109|?>>
-    <associate|eq 16.176.211|<tuple|16.264|?>>
-    <associate|eq 16.179.200|<tuple|16.260|?>>
+    <associate|eq 16.176.211|<tuple|16.270|?>>
+    <associate|eq 16.179.200|<tuple|16.251|?>>
     <associate|eq 16.18.1|<tuple|16.22|?>>
     <associate|eq 16.18.179|<tuple|16.91|?>>
     <associate|eq 16.18.180|<tuple|16.110|?>>
     <associate|eq 16.18.212|<tuple|16.85|?>>
-    <associate|eq 16.180.200|<tuple|16.261|?>>
-    <associate|eq 16.181.200|<tuple|16.262|?>>
+    <associate|eq 16.180.200|<tuple|16.252|?>>
+    <associate|eq 16.181.200|<tuple|16.253|?>>
     <associate|eq 16.184.310|<tuple|16.184|?>>
     <associate|eq 16.185.310|<tuple|16.185|?>>
     <associate|eq 16.186.310|<tuple|16.186|?>>
-    <associate|eq 16.187.200|<tuple|16.269|?>>
+    <associate|eq 16.187.200|<tuple|16.260|?>>
     <associate|eq 16.187.310|<tuple|16.187|?>>
     <associate|eq 16.188.310|<tuple|16.188|?>>
     <associate|eq 16.189.310|<tuple|16.189|?>>
@@ -26154,9 +26035,9 @@
     <associate|eq 16.191.310|<tuple|16.191|?>>
     <associate|eq 16.192.310|<tuple|16.192|?>>
     <associate|eq 16.193.310|<tuple|16.193|?>>
-    <associate|eq 16.194.201|<tuple|16.282|?>>
+    <associate|eq 16.194.201|<tuple|16.273|?>>
     <associate|eq 16.194.310|<tuple|16.194|?>>
-    <associate|eq 16.195.201|<tuple|16.283|?>>
+    <associate|eq 16.195.201|<tuple|16.274|?>>
     <associate|eq 16.195.310|<tuple|16.195|?>>
     <associate|eq 16.196.310|<tuple|16.196|?>>
     <associate|eq 16.197.310|<tuple|16.197|?>>
@@ -26186,368 +26067,354 @@
     <associate|eq 16.210.310|<tuple|16.210|?>>
     <associate|eq 16.211.200|<tuple|16.178|?>>
     <associate|eq 16.211.310|<tuple|16.211|?>>
-    <associate|eq 16.212.203|<tuple|16.300|?>>
+    <associate|eq 16.212.203|<tuple|16.291|?>>
     <associate|eq 16.212.310|<tuple|16.212|?>>
-    <associate|eq 16.213.203|<tuple|16.301|?>>
+    <associate|eq 16.213.203|<tuple|16.292|?>>
     <associate|eq 16.213.310|<tuple|16.213|?>>
-    <associate|eq 16.214.203|<tuple|16.302|?>>
+    <associate|eq 16.214.203|<tuple|16.293|?>>
     <associate|eq 16.214.310|<tuple|16.214|?>>
-    <associate|eq 16.215.203|<tuple|16.303|?>>
+    <associate|eq 16.215.203|<tuple|16.294|?>>
     <associate|eq 16.215.310|<tuple|16.215|?>>
-    <associate|eq 16.216.203|<tuple|16.304|?>>
+    <associate|eq 16.216.203|<tuple|16.295|?>>
     <associate|eq 16.216.310|<tuple|16.216|?>>
-    <associate|eq 16.217.203|<tuple|16.306|?>>
-    <associate|eq 16.217.204|<tuple|16.305|?>>
+    <associate|eq 16.217.203|<tuple|16.297|?>>
+    <associate|eq 16.217.204|<tuple|16.296|?>>
     <associate|eq 16.217.310|<tuple|16.217|?>>
-    <associate|eq 16.218.203|<tuple|16.307|?>>
+    <associate|eq 16.218.203|<tuple|16.298|?>>
     <associate|eq 16.218.310|<tuple|16.218|?>>
-    <associate|eq 16.219.203|<tuple|16.308|?>>
+    <associate|eq 16.219.203|<tuple|16.299|?>>
     <associate|eq 16.219.310|<tuple|16.219|?>>
-    <associate|eq 16.220.203|<tuple|16.309|?>>
+    <associate|eq 16.220.203|<tuple|16.300|?>>
     <associate|eq 16.220.310|<tuple|16.220|?>>
-    <associate|eq 16.221.203|<tuple|16.310|?>>
+    <associate|eq 16.221.203|<tuple|16.301|?>>
     <associate|eq 16.221.310|<tuple|16.221|?>>
     <associate|eq 16.222.310|<tuple|16.222|?>>
-    <associate|eq 16.223.204|<tuple|16.311|?>>
+    <associate|eq 16.223.204|<tuple|16.302|?>>
     <associate|eq 16.223.310|<tuple|16.223|?>>
-    <associate|eq 16.224.204|<tuple|16.312|?>>
+    <associate|eq 16.224.204|<tuple|16.303|?>>
     <associate|eq 16.224.310|<tuple|16.224|?>>
-    <associate|eq 16.225.204|<tuple|16.314|?>>
-    <associate|eq 16.225.205|<tuple|16.313|?>>
+    <associate|eq 16.225.204|<tuple|16.305|?>>
+    <associate|eq 16.225.205|<tuple|16.304|?>>
     <associate|eq 16.225.310|<tuple|16.225|?>>
-    <associate|eq 16.226.141|<tuple|16.321|?>>
-    <associate|eq 16.226.204|<tuple|16.315|?>>
+    <associate|eq 16.226.141|<tuple|16.312|?>>
+    <associate|eq 16.226.204|<tuple|16.306|?>>
     <associate|eq 16.226.310|<tuple|16.226|?>>
-    <associate|eq 16.227.204|<tuple|16.316|?>>
-    <associate|eq 16.228.204|<tuple|16.317|?>>
+    <associate|eq 16.227.204|<tuple|16.307|?>>
+    <associate|eq 16.227.310|<tuple|16.227|?>>
+    <associate|eq 16.228.204|<tuple|16.308|?>>
     <associate|eq 16.23.1|<tuple|16.33|?>>
     <associate|eq 16.23.178|<tuple|16.105|?>>
-    <associate|eq 16.230.206|<tuple|16.319|?>>
-    <associate|eq 16.230.300|<tuple|16.207|?>>
-    <associate|eq 16.231.300|<tuple|16.208|?>>
-    <associate|eq 16.232.141|<tuple|16.327|?>>
-    <associate|eq 16.232.300|<tuple|16.209|?>>
-    <associate|eq 16.233.300|<tuple|16.210|?>>
-    <associate|eq 16.234.300|<tuple|16.211|?>>
-    <associate|eq 16.235.300|<tuple|16.212|?>>
-    <associate|eq 16.236.210|<tuple|16.326|?>>
-    <associate|eq 16.236.300|<tuple|16.213|?>>
-    <associate|eq 16.237.210|<tuple|16.328|?>>
-    <associate|eq 16.237.300|<tuple|16.214|?>>
-    <associate|eq 16.238.210|<tuple|16.329|?>>
-    <associate|eq 16.238.300|<tuple|16.215|?>>
-    <associate|eq 16.239.141|<tuple|16.334|?>>
+    <associate|eq 16.230.206|<tuple|16.310|?>>
+    <associate|eq 16.232.141|<tuple|16.318|?>>
+    <associate|eq 16.236.210|<tuple|16.317|?>>
+    <associate|eq 16.237.210|<tuple|16.319|?>>
+    <associate|eq 16.238.210|<tuple|16.320|?>>
+    <associate|eq 16.239.141|<tuple|16.325|?>>
     <associate|eq 16.24.1|<tuple|16.35|?>>
     <associate|eq 16.24.178|<tuple|16.106|?>>
     <associate|eq 16.24.2|<tuple|16.34|?>>
-    <associate|eq 16.244.300|<tuple|16.227|?>>
-    <associate|eq 16.245.210|<tuple|16.330|?>>
-    <associate|eq 16.245.300|<tuple|16.228|?>>
-    <associate|eq 16.246.210|<tuple|16.331|?>>
-    <associate|eq 16.246.300|<tuple|16.229|?>>
-    <associate|eq 16.247.210|<tuple|16.332|?>>
-    <associate|eq 16.247.300|<tuple|16.230|?>>
-    <associate|eq 16.248.210|<tuple|16.333|?>>
-    <associate|eq 16.248.300|<tuple|16.231|?>>
-    <associate|eq 16.249.210|<tuple|16.335|?>>
-    <associate|eq 16.249.300|<tuple|16.232|?>>
+    <associate|eq 16.242.310|<tuple|16.242|?>>
+    <associate|eq 16.243.310|<tuple|16.243|?>>
+    <associate|eq 16.244.310|<tuple|16.244|?>>
+    <associate|eq 16.245.210|<tuple|16.321|?>>
+    <associate|eq 16.245.310|<tuple|16.247|?>>
+    <associate|eq 16.245.310.1|<tuple|16.245|?>>
+    <associate|eq 16.246.210|<tuple|16.322|?>>
+    <associate|eq 16.246.310|<tuple|16.248|?>>
+    <associate|eq 16.246.310.1|<tuple|16.246|?>>
+    <associate|eq 16.247.210|<tuple|16.323|?>>
+    <associate|eq 16.248.210|<tuple|16.324|?>>
+    <associate|eq 16.249.210|<tuple|16.326|?>>
     <associate|eq 16.25.1|<tuple|16.36|?>>
     <associate|eq 16.25.178|<tuple|16.107|?>>
     <associate|eq 16.25.6|<tuple|16.27|?>>
-    <associate|eq 16.250.210|<tuple|16.336|?>>
-    <associate|eq 16.250.300|<tuple|16.233|?>>
-    <associate|eq 16.251.210|<tuple|16.337|?>>
-    <associate|eq 16.251.300|<tuple|16.234|?>>
-    <associate|eq 16.252.210|<tuple|16.338|?>>
-    <associate|eq 16.252.300|<tuple|16.235|?>>
-    <associate|eq 16.253.210|<tuple|16.339|?>>
-    <associate|eq 16.253.300|<tuple|16.236|?>>
-    <associate|eq 16.254.210|<tuple|16.340|?>>
-    <associate|eq 16.254.300|<tuple|16.237|?>>
-    <associate|eq 16.255.210|<tuple|16.341|?>>
-    <associate|eq 16.255.300|<tuple|16.238|?>>
-    <associate|eq 16.256.210|<tuple|16.342|?>>
-    <associate|eq 16.256.300|<tuple|16.239|?>>
-    <associate|eq 16.257.210|<tuple|16.343|?>>
-    <associate|eq 16.258.210|<tuple|16.344|?>>
-    <associate|eq 16.259.210|<tuple|16.345|?>>
+    <associate|eq 16.250.210|<tuple|16.327|?>>
+    <associate|eq 16.251.210|<tuple|16.328|?>>
+    <associate|eq 16.252.210|<tuple|16.329|?>>
+    <associate|eq 16.253.210|<tuple|16.330|?>>
+    <associate|eq 16.254.210|<tuple|16.331|?>>
+    <associate|eq 16.255.210|<tuple|16.332|?>>
+    <associate|eq 16.256.210|<tuple|16.333|?>>
+    <associate|eq 16.257.210|<tuple|16.334|?>>
+    <associate|eq 16.258.210|<tuple|16.335|?>>
+    <associate|eq 16.259.210|<tuple|16.336|?>>
     <associate|eq 16.26.1|<tuple|16.37|?>>
     <associate|eq 16.26.6|<tuple|16.28|?>>
-    <associate|eq 16.262.12|<tuple|16.248|?>>
-    <associate|eq 16.263.12|<tuple|16.249|?>>
-    <associate|eq 16.264.12|<tuple|16.250|?>>
+    <associate|eq 16.262.12|<tuple|16.236|?>>
+    <associate|eq 16.263.12|<tuple|16.237|?>>
+    <associate|eq 16.264.12|<tuple|16.238|?>>
     <associate|eq 16.27.1|<tuple|16.38|?>>
     <associate|eq 16.27.6|<tuple|16.29|?>>
-    <associate|eq 16.270.142|<tuple|16.366|?>>
-    <associate|eq 16.271.142|<tuple|16.367|?>>
-    <associate|eq 16.272.12|<tuple|16.258|?>>
-    <associate|eq 16.272.142|<tuple|16.370|?>>
-    <associate|eq 16.272.143|<tuple|16.369|?>>
-    <associate|eq 16.273.12|<tuple|16.259|?>>
-    <associate|eq 16.273.142|<tuple|16.371|?>>
-    <associate|eq 16.275.142|<tuple|16.373|?>>
-    <associate|eq 16.277.12|<tuple|16.263|?>>
-    <associate|eq 16.278.12|<tuple|16.264|?>>
-    <associate|eq 16.279.12|<tuple|16.265|?>>
-    <associate|eq 16.279.124|<tuple|16.346|?>>
+    <associate|eq 16.270.142|<tuple|16.357|?>>
+    <associate|eq 16.271.142|<tuple|16.358|?>>
+    <associate|eq 16.272.12|<tuple|16.249|?>>
+    <associate|eq 16.272.142|<tuple|16.361|?>>
+    <associate|eq 16.272.143|<tuple|16.360|?>>
+    <associate|eq 16.273.12|<tuple|16.250|?>>
+    <associate|eq 16.273.142|<tuple|16.362|?>>
+    <associate|eq 16.275.142|<tuple|16.364|?>>
+    <associate|eq 16.277.12|<tuple|16.254|?>>
+    <associate|eq 16.278.12|<tuple|16.255|?>>
+    <associate|eq 16.279.12|<tuple|16.256|?>>
+    <associate|eq 16.279.124|<tuple|16.337|?>>
     <associate|eq 16.28.1|<tuple|16.30|?>>
-    <associate|eq 16.280.12|<tuple|16.266|?>>
-    <associate|eq 16.280.124|<tuple|16.347|?>>
-    <associate|eq 16.280.125|<tuple|16.364|?>>
-    <associate|eq 16.281.12|<tuple|16.267|?>>
-    <associate|eq 16.281.124|<tuple|16.348|?>>
-    <associate|eq 16.282.12|<tuple|16.268|?>>
-    <associate|eq 16.282.124|<tuple|16.349|?>>
+    <associate|eq 16.280.12|<tuple|16.257|?>>
+    <associate|eq 16.280.124|<tuple|16.338|?>>
+    <associate|eq 16.280.125|<tuple|16.355|?>>
+    <associate|eq 16.281.12|<tuple|16.258|?>>
+    <associate|eq 16.281.124|<tuple|16.339|?>>
+    <associate|eq 16.282.12|<tuple|16.259|?>>
+    <associate|eq 16.282.124|<tuple|16.340|?>>
     <associate|eq 16.282.125|<tuple|<with|mode|<quote|math>|k\<in\><around*|{|i+1,\<ldots\>,n|}>>|?>>
-    <associate|eq 16.283.124|<tuple|16.350|?>>
-    <associate|eq 16.284.124|<tuple|16.351|?>>
-    <associate|eq 16.284.126|<tuple|16.374|?>>
-    <associate|eq 16.285.124|<tuple|16.352|?>>
-    <associate|eq 16.285.126|<tuple|16.375|?>>
-    <associate|eq 16.286.124|<tuple|16.353|?>>
-    <associate|eq 16.286.126|<tuple|16.376|?>>
-    <associate|eq 16.287.124|<tuple|16.354|?>>
-    <associate|eq 16.287.126|<tuple|16.377|?>>
-    <associate|eq 16.287.300|<tuple|16.270|?>>
-    <associate|eq 16.288.124|<tuple|16.355|?>>
-    <associate|eq 16.288.126|<tuple|16.378|?>>
-    <associate|eq 16.288.300|<tuple|16.272|?>>
-    <associate|eq 16.288.300.2|<tuple|16.271|?>>
-    <associate|eq 16.289.12|<tuple|16.281|?>>
-    <associate|eq 16.289.124|<tuple|16.356|?>>
-    <associate|eq 16.289.126|<tuple|16.379|?>>
-    <associate|eq 16.289.300|<tuple|16.273|?>>
+    <associate|eq 16.283.124|<tuple|16.341|?>>
+    <associate|eq 16.284.124|<tuple|16.342|?>>
+    <associate|eq 16.284.126|<tuple|16.365|?>>
+    <associate|eq 16.285.124|<tuple|16.343|?>>
+    <associate|eq 16.285.126|<tuple|16.366|?>>
+    <associate|eq 16.286.124|<tuple|16.344|?>>
+    <associate|eq 16.286.126|<tuple|16.367|?>>
+    <associate|eq 16.287.124|<tuple|16.345|?>>
+    <associate|eq 16.287.126|<tuple|16.368|?>>
+    <associate|eq 16.287.300|<tuple|16.261|?>>
+    <associate|eq 16.288.124|<tuple|16.346|?>>
+    <associate|eq 16.288.126|<tuple|16.369|?>>
+    <associate|eq 16.288.300|<tuple|16.263|?>>
+    <associate|eq 16.288.300.2|<tuple|16.262|?>>
+    <associate|eq 16.289.12|<tuple|16.272|?>>
+    <associate|eq 16.289.124|<tuple|16.347|?>>
+    <associate|eq 16.289.126|<tuple|16.370|?>>
+    <associate|eq 16.289.300|<tuple|16.264|?>>
     <associate|eq 16.29.1|<tuple|16.40|?>>
-    <associate|eq 16.290.124|<tuple|16.357|?>>
-    <associate|eq 16.290.126|<tuple|16.380|?>>
-    <associate|eq 16.290.300|<tuple|16.274|?>>
-    <associate|eq 16.291.124|<tuple|16.359|?>>
-    <associate|eq 16.291.125|<tuple|16.358|?>>
-    <associate|eq 16.291.126|<tuple|16.381|?>>
-    <associate|eq 16.291.300|<tuple|16.275|?>>
-    <associate|eq 16.292.124|<tuple|16.360|?>>
-    <associate|eq 16.292.126|<tuple|16.382|?>>
-    <associate|eq 16.292.300|<tuple|16.277|?>>
-    <associate|eq 16.292.300.1|<tuple|16.276|?>>
-    <associate|eq 16.293.124|<tuple|16.361|?>>
-    <associate|eq 16.293.126|<tuple|16.383|?>>
-    <associate|eq 16.293.128|<tuple|16.384|?>>
-    <associate|eq 16.293.300|<tuple|16.278|?>>
-    <associate|eq 16.294.124|<tuple|16.362|?>>
-    <associate|eq 16.295.126|<tuple|16.385|?>>
-    <associate|eq 16.295.128|<tuple|16.386|?>>
-    <associate|eq 16.296.125|<tuple|16.363|?>>
-    <associate|eq 16.296.301|<tuple|16.279|?>>
-    <associate|eq 16.297.126|<tuple|16.387|?>>
-    <associate|eq 16.297.301|<tuple|16.280|?>>
-    <associate|eq 16.298.126|<tuple|16.388|?>>
-    <associate|eq 16.299.126|<tuple|16.389|?>>
+    <associate|eq 16.290.124|<tuple|16.348|?>>
+    <associate|eq 16.290.126|<tuple|16.371|?>>
+    <associate|eq 16.290.300|<tuple|16.265|?>>
+    <associate|eq 16.291.124|<tuple|16.350|?>>
+    <associate|eq 16.291.125|<tuple|16.349|?>>
+    <associate|eq 16.291.126|<tuple|16.372|?>>
+    <associate|eq 16.291.300|<tuple|16.266|?>>
+    <associate|eq 16.292.124|<tuple|16.351|?>>
+    <associate|eq 16.292.126|<tuple|16.373|?>>
+    <associate|eq 16.292.300|<tuple|16.268|?>>
+    <associate|eq 16.292.300.1|<tuple|16.267|?>>
+    <associate|eq 16.293.124|<tuple|16.352|?>>
+    <associate|eq 16.293.126|<tuple|16.374|?>>
+    <associate|eq 16.293.128|<tuple|16.375|?>>
+    <associate|eq 16.293.300|<tuple|16.269|?>>
+    <associate|eq 16.294.124|<tuple|16.353|?>>
+    <associate|eq 16.295.126|<tuple|16.376|?>>
+    <associate|eq 16.295.128|<tuple|16.377|?>>
+    <associate|eq 16.296.125|<tuple|16.354|?>>
+    <associate|eq 16.296.301|<tuple|16.270|?>>
+    <associate|eq 16.297.126|<tuple|16.378|?>>
+    <associate|eq 16.297.301|<tuple|16.271|?>>
+    <associate|eq 16.298.126|<tuple|16.379|?>>
+    <associate|eq 16.299.126|<tuple|16.380|?>>
     <associate|eq 16.3.1|<tuple|16.3|?>>
     <associate|eq 16.3.177|<tuple|16.31|?>>
     <associate|eq 16.30.1|<tuple|16.41|?>>
-    <associate|eq 16.300.126|<tuple|16.390|?>>
-    <associate|eq 16.300.127|<tuple|16.391|?>>
-    <associate|eq 16.300.142|<tuple|16.483|?>>
-    <associate|eq 16.301.127|<tuple|16.392|?>>
-    <associate|eq 16.301.144|<tuple|16.403|?>>
-    <associate|eq 16.301.144.1|<tuple|16.402|?>>
-    <associate|eq 16.302.127|<tuple|16.395|?>>
-    <associate|eq 16.302.144|<tuple|16.404|?>>
-    <associate|eq 16.303.127|<tuple|16.396|?>>
-    <associate|eq 16.303.144|<tuple|16.405|?>>
-    <associate|eq 16.304.127|<tuple|16.398|?>>
-    <associate|eq 16.305.127|<tuple|16.399|?>>
-    <associate|eq 16.305.144|<tuple|16.406|?>>
-    <associate|eq 16.305.302|<tuple|16.284|?>>
-    <associate|eq 16.306.127|<tuple|16.400|?>>
-    <associate|eq 16.306.302|<tuple|16.285|?>>
-    <associate|eq 16.307.127|<tuple|16.401|?>>
-    <associate|eq 16.307.302|<tuple|16.286|?>>
-    <associate|eq 16.308.127|<tuple|16.408|?>>
-    <associate|eq 16.308.128|<tuple|16.407|?>>
-    <associate|eq 16.308.302|<tuple|16.288|?>>
-    <associate|eq 16.309.127|<tuple|16.409|?>>
-    <associate|eq 16.309.302|<tuple|16.289|?>>
+    <associate|eq 16.300.126|<tuple|16.381|?>>
+    <associate|eq 16.300.127|<tuple|16.382|?>>
+    <associate|eq 16.300.142|<tuple|16.474|?>>
+    <associate|eq 16.301.127|<tuple|16.383|?>>
+    <associate|eq 16.301.144|<tuple|16.394|?>>
+    <associate|eq 16.301.144.1|<tuple|16.393|?>>
+    <associate|eq 16.302.127|<tuple|16.386|?>>
+    <associate|eq 16.302.144|<tuple|16.395|?>>
+    <associate|eq 16.303.127|<tuple|16.387|?>>
+    <associate|eq 16.303.144|<tuple|16.396|?>>
+    <associate|eq 16.304.127|<tuple|16.389|?>>
+    <associate|eq 16.305.127|<tuple|16.390|?>>
+    <associate|eq 16.305.144|<tuple|16.397|?>>
+    <associate|eq 16.305.302|<tuple|16.275|?>>
+    <associate|eq 16.306.127|<tuple|16.391|?>>
+    <associate|eq 16.306.302|<tuple|16.276|?>>
+    <associate|eq 16.307.127|<tuple|16.392|?>>
+    <associate|eq 16.307.302|<tuple|16.277|?>>
+    <associate|eq 16.308.127|<tuple|16.399|?>>
+    <associate|eq 16.308.128|<tuple|16.398|?>>
+    <associate|eq 16.308.302|<tuple|16.279|?>>
+    <associate|eq 16.309.127|<tuple|16.400|?>>
+    <associate|eq 16.309.302|<tuple|16.280|?>>
     <associate|eq 16.31.1|<tuple|16.43|?>>
-    <associate|eq 16.310.127|<tuple|16.411|?>>
-    <associate|eq 16.310.128|<tuple|16.410|?>>
-    <associate|eq 16.310.302|<tuple|16.290|?>>
-    <associate|eq 16.310\<point\>200|<tuple|16.318|?>>
-    <associate|eq 16.311.127|<tuple|16.412|?>>
-    <associate|eq 16.311.302|<tuple|16.291|?>>
-    <associate|eq 16.312.127|<tuple|16.413|?>>
-    <associate|eq 16.312.301|<tuple|16.292|?>>
-    <associate|eq 16.313.302|<tuple|16.293|?>>
-    <associate|eq 16.314.128|<tuple|16.414|?>>
-    <associate|eq 16.314.302|<tuple|16.294|?>>
-    <associate|eq 16.315.128|<tuple|16.415|?>>
-    <associate|eq 16.315.302|<tuple|16.295|?>>
-    <associate|eq 16.316.302|<tuple|16.297|?>>
-    <associate|eq 16.316.303|<tuple|16.296|?>>
-    <associate|eq 16.317.128|<tuple|16.416|?>>
-    <associate|eq 16.317.302|<tuple|16.298|?>>
-    <associate|eq 16.318.128|<tuple|16.418|?>>
-    <associate|eq 16.318.129|<tuple|16.417|?>>
-    <associate|eq 16.318.302|<tuple|16.299|?>>
-    <associate|eq 16.319.128|<tuple|16.419|?>>
-    <associate|eq 16.319.129|<tuple|16.418|?>>
+    <associate|eq 16.310.127|<tuple|16.402|?>>
+    <associate|eq 16.310.128|<tuple|16.401|?>>
+    <associate|eq 16.310.302|<tuple|16.281|?>>
+    <associate|eq 16.310\<point\>200|<tuple|16.309|?>>
+    <associate|eq 16.311.127|<tuple|16.403|?>>
+    <associate|eq 16.311.302|<tuple|16.282|?>>
+    <associate|eq 16.312.127|<tuple|16.404|?>>
+    <associate|eq 16.312.301|<tuple|16.283|?>>
+    <associate|eq 16.313.302|<tuple|16.284|?>>
+    <associate|eq 16.314.128|<tuple|16.405|?>>
+    <associate|eq 16.314.302|<tuple|16.285|?>>
+    <associate|eq 16.315.128|<tuple|16.406|?>>
+    <associate|eq 16.315.302|<tuple|16.286|?>>
+    <associate|eq 16.316.302|<tuple|16.288|?>>
+    <associate|eq 16.316.303|<tuple|16.287|?>>
+    <associate|eq 16.317.128|<tuple|16.407|?>>
+    <associate|eq 16.317.302|<tuple|16.289|?>>
+    <associate|eq 16.318.128|<tuple|16.409|?>>
+    <associate|eq 16.318.129|<tuple|16.408|?>>
+    <associate|eq 16.318.302|<tuple|16.290|?>>
+    <associate|eq 16.319.128|<tuple|16.410|?>>
+    <associate|eq 16.319.129|<tuple|16.409|?>>
     <associate|eq 16.32.1|<tuple|16.44|?>>
     <associate|eq 16.32.2|<tuple|16.42|?>>
-    <associate|eq 16.320.128|<tuple|16.420|?>>
-    <associate|eq 16.321.128|<tuple|16.421|?>>
-    <associate|eq 16.322.128|<tuple|16.422|?>>
-    <associate|eq 16.325.129|<tuple|16.424|?>>
-    <associate|eq 16.325.131|<tuple|16.423|?>>
-    <associate|eq 16.327.130|<tuple|16.425|?>>
-    <associate|eq 16.327.134|<tuple|16.426|?>>
-    <associate|eq 16.329.131|<tuple|16.427|?>>
-    <associate|eq 16.329.133|<tuple|16.428|?>>
-    <associate|eq 16.329.506|<tuple|16.287|?>>
+    <associate|eq 16.320.128|<tuple|16.411|?>>
+    <associate|eq 16.321.128|<tuple|16.412|?>>
+    <associate|eq 16.322.128|<tuple|16.413|?>>
+    <associate|eq 16.325.129|<tuple|16.415|?>>
+    <associate|eq 16.325.131|<tuple|16.414|?>>
+    <associate|eq 16.327.130|<tuple|16.416|?>>
+    <associate|eq 16.327.134|<tuple|16.417|?>>
+    <associate|eq 16.329.131|<tuple|16.418|?>>
+    <associate|eq 16.329.133|<tuple|16.419|?>>
+    <associate|eq 16.329.506|<tuple|16.278|?>>
     <associate|eq 16.33.1|<tuple|16.45|?>>
     <associate|eq 16.33.181|<tuple|16.113|?>>
-    <associate|eq 16.330.130|<tuple|16.429|?>>
-    <associate|eq 16.330.131|<tuple|16.430|?>>
-    <associate|eq 16.331.131|<tuple|16.431|?>>
-    <associate|eq 16.334.133|<tuple|16.432|?>>
-    <associate|eq 16.335.133|<tuple|16.433|?>>
-    <associate|eq 16.336.133|<tuple|16.435|?>>
-    <associate|eq 16.336.134|<tuple|16.434|?>>
-    <associate|eq 16.337.133|<tuple|16.436|?>>
-    <associate|eq 16.338.133|<tuple|16.437|?>>
+    <associate|eq 16.330.130|<tuple|16.420|?>>
+    <associate|eq 16.330.131|<tuple|16.421|?>>
+    <associate|eq 16.331.131|<tuple|16.422|?>>
+    <associate|eq 16.334.133|<tuple|16.423|?>>
+    <associate|eq 16.335.133|<tuple|16.424|?>>
+    <associate|eq 16.336.133|<tuple|16.426|?>>
+    <associate|eq 16.336.134|<tuple|16.425|?>>
+    <associate|eq 16.337.133|<tuple|16.427|?>>
+    <associate|eq 16.338.133|<tuple|16.428|?>>
     <associate|eq 16.34.181|<tuple|16.114|?>>
-    <associate|eq 16.340.133|<tuple|16.439|?>>
-    <associate|eq 16.340.134|<tuple|16.438|?>>
-    <associate|eq 16.341.133|<tuple|16.440|?>>
-    <associate|eq 16.342.133|<tuple|16.441|?>>
-    <associate|eq 16.343.133|<tuple|16.442|?>>
-    <associate|eq 16.344.133|<tuple|16.443|?>>
-    <associate|eq 16.346.134|<tuple|16.445|?>>
-    <associate|eq 16.346.134.1|<tuple|16.444|?>>
-    <associate|eq 16.347.134|<tuple|16.448|?>>
-    <associate|eq 16.347.135|<tuple|16.447|?>>
-    <associate|eq 16.347.136|<tuple|16.446|?>>
-    <associate|eq 16.348.134|<tuple|16.449|?>>
-    <associate|eq 16.349.134|<tuple|16.450|?>>
+    <associate|eq 16.340.133|<tuple|16.430|?>>
+    <associate|eq 16.340.134|<tuple|16.429|?>>
+    <associate|eq 16.341.133|<tuple|16.431|?>>
+    <associate|eq 16.342.133|<tuple|16.432|?>>
+    <associate|eq 16.343.133|<tuple|16.433|?>>
+    <associate|eq 16.344.133|<tuple|16.434|?>>
+    <associate|eq 16.346.134|<tuple|16.436|?>>
+    <associate|eq 16.346.134.1|<tuple|16.435|?>>
+    <associate|eq 16.347.134|<tuple|16.439|?>>
+    <associate|eq 16.347.135|<tuple|16.438|?>>
+    <associate|eq 16.347.136|<tuple|16.437|?>>
+    <associate|eq 16.348.134|<tuple|16.440|?>>
+    <associate|eq 16.349.134|<tuple|16.441|?>>
     <associate|eq 16.35.1|<tuple|16.47|?>>
     <associate|eq 16.35.181|<tuple|16.115|?>>
-    <associate|eq 16.351.134|<tuple|16.453|?>>
-    <associate|eq 16.354.136|<tuple|16.455|?>>
-    <associate|eq 16.356.136|<tuple|16.456|?>>
-    <associate|eq 16.357.137|<tuple|16.457|?>>
-    <associate|eq 16.358.136|<tuple|16.458|?>>
-    <associate|eq 16.359.136|<tuple|16.460|?>>
+    <associate|eq 16.351.134|<tuple|16.444|?>>
+    <associate|eq 16.354.136|<tuple|16.446|?>>
+    <associate|eq 16.356.136|<tuple|16.447|?>>
+    <associate|eq 16.357.137|<tuple|16.448|?>>
+    <associate|eq 16.358.136|<tuple|16.449|?>>
+    <associate|eq 16.359.136|<tuple|16.451|?>>
     <associate|eq 16.36.1|<tuple|16.48|?>>
     <associate|eq 16.36.182|<tuple|16.117|?>>
-    <associate|eq 16.360.136|<tuple|16.461|?>>
-    <associate|eq 16.361.136|<tuple|16.462|?>>
-    <associate|eq 16.362.136|<tuple|16.463|?>>
-    <associate|eq 16.363.136|<tuple|16.464|?>>
-    <associate|eq 16.364.136|<tuple|16.465|?>>
-    <associate|eq 16.366.137|<tuple|16.467|?>>
-    <associate|eq 16.366.138|<tuple|16.466|?>>
-    <associate|eq 16.366.300|<tuple|16.365|?>>
-    <associate|eq 16.367.137|<tuple|16.468|?>>
-    <associate|eq 16.368.137|<tuple|16.469|?>>
-    <associate|eq 16.369.137|<tuple|16.470|?>>
-    <associate|eq 16.369.300|<tuple|16.368|?>>
+    <associate|eq 16.360.136|<tuple|16.452|?>>
+    <associate|eq 16.361.136|<tuple|16.453|?>>
+    <associate|eq 16.362.136|<tuple|16.454|?>>
+    <associate|eq 16.363.136|<tuple|16.455|?>>
+    <associate|eq 16.364.136|<tuple|16.456|?>>
+    <associate|eq 16.366.137|<tuple|16.458|?>>
+    <associate|eq 16.366.138|<tuple|16.457|?>>
+    <associate|eq 16.366.300|<tuple|16.356|?>>
+    <associate|eq 16.367.137|<tuple|16.459|?>>
+    <associate|eq 16.368.137|<tuple|16.460|?>>
+    <associate|eq 16.369.137|<tuple|16.461|?>>
+    <associate|eq 16.369.300|<tuple|16.359|?>>
     <associate|eq 16.37.1|<tuple|16.50|?>>
     <associate|eq 16.37.182|<tuple|16.118|?>>
-    <associate|eq 16.370.137|<tuple|16.471|?>>
-    <associate|eq 16.371.137|<tuple|16.472|?>>
-    <associate|eq 16.372.137|<tuple|16.473|?>>
-    <associate|eq 16.373.300|<tuple|16.372|?>>
-    <associate|eq 16.374.138|<tuple|16.474|?>>
-    <associate|eq 16.375\<point\>139|<tuple|16.476|?>>
-    <associate|eq 16.376.138|<tuple|16.477|?>>
-    <associate|eq 16.377.138|<tuple|16.478|?>>
-    <associate|eq 16.378.138|<tuple|16.479|?>>
-    <associate|eq 16.379.138|<tuple|16.480|?>>
+    <associate|eq 16.370.137|<tuple|16.462|?>>
+    <associate|eq 16.371.137|<tuple|16.463|?>>
+    <associate|eq 16.372.137|<tuple|16.464|?>>
+    <associate|eq 16.373.300|<tuple|16.363|?>>
+    <associate|eq 16.374.138|<tuple|16.465|?>>
+    <associate|eq 16.375\<point\>139|<tuple|16.467|?>>
+    <associate|eq 16.376.138|<tuple|16.468|?>>
+    <associate|eq 16.377.138|<tuple|16.469|?>>
+    <associate|eq 16.378.138|<tuple|16.470|?>>
+    <associate|eq 16.379.138|<tuple|16.471|?>>
     <associate|eq 16.38.1|<tuple|16.51|?>>
     <associate|eq 16.38.182|<tuple|16.119|?>>
-    <associate|eq 16.380.138|<tuple|16.481|?>>
-    <associate|eq 16.381.138|<tuple|16.482|?>>
-    <associate|eq 16.382.145|<tuple|16.486|?>>
+    <associate|eq 16.380.138|<tuple|16.472|?>>
+    <associate|eq 16.381.138|<tuple|16.473|?>>
+    <associate|eq 16.382.145|<tuple|16.477|?>>
     <associate|eq 16.39.1|<tuple|16.52|?>>
     <associate|eq 16.39.182|<tuple|16.120|?>>
     <associate|eq 16.39.2|<tuple|16.49|?>>
-    <associate|eq 16.391.142|<tuple|16.484|?>>
-    <associate|eq 16.392.142|<tuple|16.485|?>>
-    <associate|eq 16.393.142|<tuple|16.487|?>>
-    <associate|eq 16.394.142|<tuple|16.488|?>>
-    <associate|eq 16.394.300|<tuple|16.393|?>>
-    <associate|eq 16.395.142|<tuple|16.489|?>>
-    <associate|eq 16.395.300|<tuple|16.394|?>>
-    <associate|eq 16.396.142|<tuple|16.490|?>>
-    <associate|eq 16.397.142|<tuple|16.491|?>>
-    <associate|eq 16.398.142|<tuple|16.492|?>>
-    <associate|eq 16.398.300|<tuple|16.397|?>>
-    <associate|eq 16.399.142|<tuple|16.493|?>>
+    <associate|eq 16.391.142|<tuple|16.475|?>>
+    <associate|eq 16.392.142|<tuple|16.476|?>>
+    <associate|eq 16.393.142|<tuple|16.478|?>>
+    <associate|eq 16.394.142|<tuple|16.479|?>>
+    <associate|eq 16.394.300|<tuple|16.384|?>>
+    <associate|eq 16.395.142|<tuple|16.480|?>>
+    <associate|eq 16.395.300|<tuple|16.385|?>>
+    <associate|eq 16.396.142|<tuple|16.481|?>>
+    <associate|eq 16.397.142|<tuple|16.482|?>>
+    <associate|eq 16.398.142|<tuple|16.483|?>>
+    <associate|eq 16.398.300|<tuple|16.388|?>>
+    <associate|eq 16.399.142|<tuple|16.484|?>>
     <associate|eq 16.4.1|<tuple|16.4|?>>
     <associate|eq 16.4.177|<tuple|16.32|?>>
-    <associate|eq 16.400.142|<tuple|16.494|?>>
-    <associate|eq 16.401.142|<tuple|16.495|?>>
-    <associate|eq 16.402.142|<tuple|16.496|?>>
-    <associate|eq 16.402.143|<tuple|16.504|?>>
-    <associate|eq 16.403.142|<tuple|16.497|?>>
-    <associate|eq 16.403.143|<tuple|16.505|?>>
-    <associate|eq 16.404.142|<tuple|16.498|?>>
-    <associate|eq 16.404.143|<tuple|16.506|?>>
-    <associate|eq 16.405.142|<tuple|16.499|?>>
-    <associate|eq 16.405.143|<tuple|16.507|?>>
-    <associate|eq 16.406.142|<tuple|16.500|?>>
-    <associate|eq 16.406.143|<tuple|16.508|?>>
-    <associate|eq 16.407.142|<tuple|16.501|?>>
-    <associate|eq 16.407.143|<tuple|16.509|?>>
-    <associate|eq 16.408.142|<tuple|16.502|?>>
-    <associate|eq 16.408.143|<tuple|16.510|?>>
-    <associate|eq 16.409.142|<tuple|16.503|?>>
-    <associate|eq 16.409.143|<tuple|16.511|?>>
+    <associate|eq 16.400.142|<tuple|16.485|?>>
+    <associate|eq 16.401.142|<tuple|16.486|?>>
+    <associate|eq 16.402.142|<tuple|16.487|?>>
+    <associate|eq 16.402.143|<tuple|16.495|?>>
+    <associate|eq 16.403.142|<tuple|16.488|?>>
+    <associate|eq 16.403.143|<tuple|16.496|?>>
+    <associate|eq 16.404.142|<tuple|16.489|?>>
+    <associate|eq 16.404.143|<tuple|16.497|?>>
+    <associate|eq 16.405.142|<tuple|16.490|?>>
+    <associate|eq 16.405.143|<tuple|16.498|?>>
+    <associate|eq 16.406.142|<tuple|16.491|?>>
+    <associate|eq 16.406.143|<tuple|16.499|?>>
+    <associate|eq 16.407.142|<tuple|16.492|?>>
+    <associate|eq 16.407.143|<tuple|16.500|?>>
+    <associate|eq 16.408.142|<tuple|16.493|?>>
+    <associate|eq 16.408.143|<tuple|16.501|?>>
+    <associate|eq 16.409.142|<tuple|16.494|?>>
+    <associate|eq 16.409.143|<tuple|16.502|?>>
     <associate|eq 16.41.1|<tuple|16.54|?>>
     <associate|eq 16.41.182|<tuple|16.122|?>>
-    <associate|eq 16.410.143|<tuple|16.512|?>>
-    <associate|eq 16.413.143|<tuple|16.515|?>>
-    <associate|eq 16.414.144|<tuple|16.516|?>>
-    <associate|eq 16.415.143|<tuple|16.519|?>>
-    <associate|eq 16.415.144|<tuple|16.517|?>>
-    <associate|eq 16.417.143|<tuple|16.522|?>>
-    <associate|eq 16.417.145|<tuple|16.521|?>>
-    <associate|eq 16.418.143|<tuple|16.523|?>>
-    <associate|eq 16.419\<point\>143|<tuple|16.524|?>>
+    <associate|eq 16.410.143|<tuple|16.503|?>>
+    <associate|eq 16.413.143|<tuple|16.506|?>>
+    <associate|eq 16.414.144|<tuple|16.507|?>>
+    <associate|eq 16.415.143|<tuple|16.510|?>>
+    <associate|eq 16.415.144|<tuple|16.508|?>>
+    <associate|eq 16.417.143|<tuple|16.513|?>>
+    <associate|eq 16.417.145|<tuple|16.512|?>>
+    <associate|eq 16.418.143|<tuple|16.514|?>>
+    <associate|eq 16.419\<point\>143|<tuple|16.515|?>>
     <associate|eq 16.42.1|<tuple|16.55|?>>
     <associate|eq 16.42.187|<tuple|16.125|?>>
-    <associate|eq 16.422.143|<tuple|16.527|?>>
-    <associate|eq 16.422.143.1|<tuple|16.525|?>>
-    <associate|eq 16.422.145|<tuple|16.526|?>>
-    <associate|eq 16.423.143|<tuple|16.528|?>>
-    <associate|eq 16.424.143|<tuple|16.529|?>>
-    <associate|eq 16.427.144|<tuple|16.530|?>>
-    <associate|eq 16.428.144|<tuple|16.531|?>>
+    <associate|eq 16.422.143|<tuple|16.518|?>>
+    <associate|eq 16.422.143.1|<tuple|16.516|?>>
+    <associate|eq 16.422.145|<tuple|16.517|?>>
+    <associate|eq 16.423.143|<tuple|16.519|?>>
+    <associate|eq 16.424.143|<tuple|16.520|?>>
+    <associate|eq 16.427.144|<tuple|16.521|?>>
+    <associate|eq 16.428.144|<tuple|16.522|?>>
     <associate|eq 16.43.187|<tuple|16.126|?>>
-    <associate|eq 16.430.144|<tuple|16.532|?>>
-    <associate|eq 16.430.144.1|<tuple|16.533|?>>
-    <associate|eq 16.431.144|<tuple|16.534|?>>
-    <associate|eq 16.432.144|<tuple|16.535|?>>
-    <associate|eq 16.433.144|<tuple|16.536|?>>
-    <associate|eq 16.434.144|<tuple|16.537|?>>
-    <associate|eq 16.435.144|<tuple|16.538|?>>
-    <associate|eq 16.436.144|<tuple|16.539|?>>
-    <associate|eq 16.438.145|<tuple|16.541|?>>
-    <associate|eq 16.439.145|<tuple|16.542|?>>
+    <associate|eq 16.430.144|<tuple|16.523|?>>
+    <associate|eq 16.430.144.1|<tuple|16.524|?>>
+    <associate|eq 16.431.144|<tuple|16.525|?>>
+    <associate|eq 16.432.144|<tuple|16.526|?>>
+    <associate|eq 16.433.144|<tuple|16.527|?>>
+    <associate|eq 16.434.144|<tuple|16.528|?>>
+    <associate|eq 16.435.144|<tuple|16.529|?>>
+    <associate|eq 16.436.144|<tuple|16.530|?>>
+    <associate|eq 16.438.145|<tuple|16.532|?>>
+    <associate|eq 16.439.145|<tuple|16.533|?>>
     <associate|eq 16.44.188|<tuple|16.127|?>>
-    <associate|eq 16.440.145|<tuple|16.543|?>>
-    <associate|eq 16.442.145|<tuple|16.545|?>>
-    <associate|eq 16.443.145|<tuple|16.546|?>>
-    <associate|eq 16.444.145|<tuple|16.547|?>>
-    <associate|eq 16.445.145|<tuple|16.548|?>>
-    <associate|eq 16.446.145|<tuple|16.549|?>>
+    <associate|eq 16.440.145|<tuple|16.534|?>>
+    <associate|eq 16.442.145|<tuple|16.536|?>>
+    <associate|eq 16.443.145|<tuple|16.537|?>>
+    <associate|eq 16.444.145|<tuple|16.538|?>>
+    <associate|eq 16.445.145|<tuple|16.539|?>>
+    <associate|eq 16.446.145|<tuple|16.540|?>>
     <associate|eq 16.45.153|<tuple|16.124|?>>
     <associate|eq 16.45.188|<tuple|16.128|?>>
-    <associate|eq 16.454.300|<tuple|16.451|?>>
-    <associate|eq 16.455.300|<tuple|16.452|?>>
-    <associate|eq 16.457.300|<tuple|16.454|?>>
+    <associate|eq 16.454.300|<tuple|16.442|?>>
+    <associate|eq 16.455.300|<tuple|16.443|?>>
+    <associate|eq 16.457.300|<tuple|16.445|?>>
     <associate|eq 16.46.188|<tuple|16.129|?>>
     <associate|eq 16.46.3|<tuple|16.56|?>>
-    <associate|eq 16.462\<point\>300|<tuple|16.459|?>>
+    <associate|eq 16.462\<point\>300|<tuple|16.450|?>>
     <associate|eq 16.463.298|<tuple|16.10|?>>
     <associate|eq 16.464.298|<tuple|16.11|?>>
     <associate|eq 16.465.298|<tuple|16.12|?>>
@@ -26558,7 +26425,7 @@
     <associate|eq 16.47.3|<tuple|16.57|?>>
     <associate|eq 16.470.298|<tuple|16.17|?>>
     <associate|eq 16.471.298|<tuple|16.18|?>>
-    <associate|eq 16.478.300|<tuple|16.475|?>>
+    <associate|eq 16.478.300|<tuple|16.466|?>>
     <associate|eq 16.48.188|<tuple|16.131|?>>
     <associate|eq 16.48.3|<tuple|16.58|?>>
     <associate|eq 16.49.189|<tuple|16.132|?>>
@@ -26571,19 +26438,19 @@
     <associate|eq 16.51\<point\>189|<tuple|16.134|?>>
     <associate|eq 16.52.190|<tuple|16.137|?>>
     <associate|eq 16.59.6|<tuple|16.61|?>>
-    <associate|eq 16.591.305|<tuple|16.551|?>>
-    <associate|eq 16.592.505|<tuple|16.552|?>>
-    <associate|eq 16.593.505|<tuple|16.553|?>>
-    <associate|eq 16.594.305|<tuple|16.554|?>>
-    <associate|eq 16.595.408|<tuple|16.550|?>>
-    <associate|eq 16.596.505|<tuple|16.555|?>>
-    <associate|eq 16.597.505|<tuple|16.556|?>>
-    <associate|eq 16.598.505|<tuple|16.557|?>>
-    <associate|eq 16.599.305|<tuple|16.558|?>>
+    <associate|eq 16.591.305|<tuple|16.542|?>>
+    <associate|eq 16.592.505|<tuple|16.543|?>>
+    <associate|eq 16.593.505|<tuple|16.544|?>>
+    <associate|eq 16.594.305|<tuple|16.545|?>>
+    <associate|eq 16.595.408|<tuple|16.541|?>>
+    <associate|eq 16.596.505|<tuple|16.546|?>>
+    <associate|eq 16.597.505|<tuple|16.547|?>>
+    <associate|eq 16.598.505|<tuple|16.548|?>>
+    <associate|eq 16.599.305|<tuple|16.549|?>>
     <associate|eq 16.6.301|<tuple|16.6|?>>
     <associate|eq 16.60.189|<tuple|16.149|?>>
-    <associate|eq 16.600.505|<tuple|16.559|?>>
-    <associate|eq 16.605.307|<tuple|16.560|?>>
+    <associate|eq 16.600.505|<tuple|16.550|?>>
+    <associate|eq 16.605.307|<tuple|16.551|?>>
     <associate|eq 16.62.6|<tuple|16.64|?>>
     <associate|eq 16.63.6|<tuple|16.65|?>>
     <associate|eq 16.64.3|<tuple|16.83|?>>
@@ -26622,41 +26489,40 @@
     <associate|eq 16.99.4|<tuple|16.116|?>>
     <associate|eq 16.99.6|<tuple|16.101|?>>
     <associate|example 16.35.1|<tuple|16.55|?>>
-    <associate|inverse function and derivate|<tuple|16.341|?>>
+    <associate|inverse function and derivate|<tuple|16.347|?>>
     <associate|lemma 16.101.194|<tuple|16.203|?>>
-    <associate|lemma 16.104.194|<tuple|16.251|?>>
-    <associate|lemma 16.105.194|<tuple|16.252|?>>
+    <associate|lemma 16.104.194|<tuple|16.257|?>>
+    <associate|lemma 16.105.194|<tuple|16.258|?>>
     <associate|lemma 16.12.1|<tuple|16.16|?>>
-    <associate|lemma 16.135.200|<tuple|16.229|?>>
+    <associate|lemma 16.135.200|<tuple|16.230|?>>
     <associate|lemma 16.144.201|<tuple|16.239|?>>
-    <associate|lemma 16.155.203|<tuple|16.246|?>>
-    <associate|lemma 16.157.205|<tuple|16.247|?>>
-    <associate|lemma 16.159.206|<tuple|16.249|?>>
-    <associate|lemma 16.160.206|<tuple|16.250|?>>
-    <associate|lemma 16.166.210|<tuple|16.253|?>>
-    <associate|lemma 16.167.210|<tuple|16.254|?>>
-    <associate|lemma 16.173.211|<tuple|16.261|?>>
-    <associate|lemma 16.174.211|<tuple|16.262|?>>
-    <associate|lemma 16.177.211|<tuple|16.265|?>>
-    <associate|lemma 16.178.210|<tuple|16.266|?>>
-    <associate|lemma 16.179.210|<tuple|16.267|?>>
-    <associate|lemma 16.180.210|<tuple|16.268|?>>
-    <associate|lemma 16.181.210|<tuple|16.269|?>>
-    <associate|lemma 16.182.210|<tuple|16.270|?>>
-    <associate|lemma 16.192.122|<tuple|16.277|?>>
-    <associate|lemma 16.195.124|<tuple|16.278|?>>
-    <associate|lemma 16.200.126|<tuple|16.285|?>>
-    <associate|lemma 16.202.127|<tuple|16.286|?>>
-    <associate|lemma 16.204.310|<tuple|16.204|?>>
-    <associate|lemma 16.211.127|<tuple|16.296|?>>
-    <associate|lemma 16.216.144|<tuple|16.303|?>>
+    <associate|lemma 16.155.203|<tuple|16.251|?>>
+    <associate|lemma 16.157.205|<tuple|16.253|?>>
+    <associate|lemma 16.159.206|<tuple|16.255|?>>
+    <associate|lemma 16.160.206|<tuple|16.256|?>>
+    <associate|lemma 16.166.210|<tuple|16.259|?>>
+    <associate|lemma 16.167.210|<tuple|16.260|?>>
+    <associate|lemma 16.173.211|<tuple|16.267|?>>
+    <associate|lemma 16.174.211|<tuple|16.268|?>>
+    <associate|lemma 16.177.211|<tuple|16.271|?>>
+    <associate|lemma 16.178.210|<tuple|16.272|?>>
+    <associate|lemma 16.179.210|<tuple|16.273|?>>
+    <associate|lemma 16.180.210|<tuple|16.274|?>>
+    <associate|lemma 16.181.210|<tuple|16.275|?>>
+    <associate|lemma 16.182.210|<tuple|16.276|?>>
+    <associate|lemma 16.192.122|<tuple|16.283|?>>
+    <associate|lemma 16.195.124|<tuple|16.284|?>>
+    <associate|lemma 16.200.126|<tuple|16.291|?>>
+    <associate|lemma 16.202.127|<tuple|16.292|?>>
+    <associate|lemma 16.211.127|<tuple|16.302|?>>
+    <associate|lemma 16.216.144|<tuple|16.309|?>>
     <associate|lemma 16.216.300|<tuple|16.234|?>>
-    <associate|lemma 16.228.127|<tuple|16.318|?>>
-    <associate|lemma 16.229.127|<tuple|16.319|?>>
+    <associate|lemma 16.228.127|<tuple|16.324|?>>
+    <associate|lemma 16.229.127|<tuple|16.325|?>>
     <associate|lemma 16.23.181|<tuple|16.114|?>>
-    <associate|lemma 16.232.301|<tuple|16.244|?>>
+    <associate|lemma 16.232.301|<tuple|16.248|?>>
     <associate|lemma 16.24.178|<tuple|16.87|?>>
-    <associate|lemma 16.254.143|<tuple|16.342|?>>
+    <associate|lemma 16.254.143|<tuple|16.348|?>>
     <associate|lemma 16.37.1|<tuple|16.59|?>>
     <associate|lemma 16.50.1|<tuple|16.70|?>>
     <associate|lemma 16.51.186|<tuple|16.127|?>>
@@ -26677,13 +26543,13 @@
     <associate|lemma 16.97.193|<tuple|16.199|?>>
     <associate|lemma 16.98.194|<tuple|16.200|?>>
     <associate|normed space are assumed to be non trivial|<tuple|16.1|?>>
-    <associate|note 16.210.127|<tuple|16.295|?>>
+    <associate|note 16.210.127|<tuple|16.301|?>>
     <associate|note 16.44|<tuple|16.52|?>>
     <associate|note 16.84.200|<tuple|16.92|?>>
     <associate|note 16.89.200|<tuple|16.93|?>>
-    <associate|proposition 16.244.134|<tuple|16.333|?>>
-    <associate|proposition 16.249.138|<tuple|16.338|?>>
-    <associate|toplinear isomorphism|<tuple|16.308|?>>
+    <associate|proposition 16.244.134|<tuple|16.339|?>>
+    <associate|proposition 16.249.138|<tuple|16.344|?>>
+    <associate|toplinear isomorphism|<tuple|16.314|?>>
     <associate|topology every element of a generalized interval is a limit
     point|<tuple|16.15|?>>
     <associate|topology every element of a open or closed ball is a limit
@@ -26693,21 +26559,21 @@
     <associate|topology interior point is a limit point in a normed
     space|<tuple|16.13|?>>
     <associate|topology normed space is a topological vector
-    space|<tuple|16.307|?>>
+    space|<tuple|16.313|?>>
     <associate|topology toplinear isomorphism in a normed
-    space|<tuple|16.310|?>>
-    <associate|topology topological vector space|<tuple|16.305|?>>
+    space|<tuple|16.316|?>>
+    <associate|topology topological vector space|<tuple|16.311|?>>
   </collection>
 </references>
 
 <\auxiliary>
   <\collection>
     <\associate|figure>
-      <tuple|normal|<surround|<hidden-binding|<tuple>|16.1>||>|<pageref|auto-48>>
+      <tuple|normal|<surround|<hidden-binding|<tuple>|16.1>||>|<pageref|auto-46>>
 
-      <tuple|normal|<surround|<hidden-binding|<tuple>|16.2>||>|<pageref|auto-49>>
+      <tuple|normal|<surround|<hidden-binding|<tuple>|16.2>||>|<pageref|auto-47>>
 
-      <tuple|normal|<surround|<hidden-binding|<tuple>|16.3>||>|<pageref|auto-52>>
+      <tuple|normal|<surround|<hidden-binding|<tuple>|16.3>||>|<pageref|auto-50>>
     </associate>
     <\associate|idx>
       <tuple|<tuple|<with|mode|<quote|math>|U<rsub|x>>>|<pageref|auto-4>>
@@ -26756,47 +26622,41 @@
       <tuple|<tuple|higher order differentiation chain
       rule>|<pageref|auto-40>>
 
-      <tuple|<tuple|chain rule higher order
-      differentiation>|<pageref|auto-41>>
+      <tuple|<tuple|local weak minimum>|<pageref|auto-43>>
 
-      <tuple|<tuple|higher order differentiation chain
-      rule)>|<pageref|auto-42>>
+      <tuple|<tuple|local weak maximum>|<pageref|auto-44>>
 
-      <tuple|<tuple|local weak minimum>|<pageref|auto-45>>
+      <tuple|<tuple|local extremum>|<pageref|auto-45>>
 
-      <tuple|<tuple|local weak maximum>|<pageref|auto-46>>
+      <tuple|<tuple|concave function>|<pageref|auto-48>>
 
-      <tuple|<tuple|local extremum>|<pageref|auto-47>>
+      <tuple|<tuple|convex function>|<pageref|auto-49>>
 
-      <tuple|<tuple|concave function>|<pageref|auto-50>>
+      <tuple|<tuple|<with|mode|<quote|math>|ev<rsub|v<rsub|1>,\<ldots\>,v<rsub|n>>>>|<pageref|auto-54>>
 
-      <tuple|<tuple|convex function>|<pageref|auto-51>>
+      <tuple|<tuple|evaluation operator>|<pageref|auto-55>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|ev<rsub|v<rsub|1>,\<ldots\>,v<rsub|n>>>>|<pageref|auto-56>>
+      <tuple|<tuple|<with|mode|<quote|math>|L<rsub|n><around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>|<pageref|auto-58>>
 
-      <tuple|<tuple|evaluation operator>|<pageref|auto-57>>
+      <tuple|<tuple|higher order partial differential>|<pageref|auto-60>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|L<rsub|n><around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>;Y|)>>>|<pageref|auto-60>>
+      <tuple|<tuple|topological vector space>|<pageref|auto-64>>
 
-      <tuple|<tuple|higher order partial differential>|<pageref|auto-62>>
+      <tuple|<tuple|toplinear isomorphism>|<pageref|auto-65>>
 
-      <tuple|<tuple|topological vector space>|<pageref|auto-66>>
+      <tuple|<tuple|<with|mode|<quote|math>|\<cal-G\>L<around*|(|X|)>>>|<pageref|auto-66>>
 
-      <tuple|<tuple|toplinear isomorphism>|<pageref|auto-67>>
+      <tuple|<tuple|<with|mode|<quote|math>|H<rsup|n>>>|<pageref|auto-67>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|\<cal-G\>L<around*|(|X|)>>>|<pageref|auto-68>>
+      <tuple|<tuple|diff diffeomorphism>|<pageref|auto-68>>
 
-      <tuple|<tuple|<with|mode|<quote|math>|H<rsup|n>>>|<pageref|auto-69>>
+      <tuple|<tuple|local diffeomorphism>|<pageref|auto-69>>
 
-      <tuple|<tuple|diff diffeomorphism>|<pageref|auto-70>>
+      <tuple|<tuple|inverse function theorem>|<pageref|auto-70>>
 
-      <tuple|<tuple|local diffeomorphism>|<pageref|auto-71>>
+      <tuple|<tuple|implicit function theorem (1)>|<pageref|auto-72>>
 
-      <tuple|<tuple|inverse function theorem>|<pageref|auto-72>>
-
-      <tuple|<tuple|implicit function theorem (1)>|<pageref|auto-74>>
-
-      <tuple|<tuple|implict function theorem (2)>|<pageref|auto-75>>
+      <tuple|<tuple|implict function theorem (2)>|<pageref|auto-73>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|16<space|2spc>Differentiation
@@ -26881,54 +26741,54 @@
 
       16.3<space|2spc>Intermediate value and main value theorems
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-43>
+      <no-break><pageref|auto-41>
 
       <with|par-left|<quote|1tab>|16.3.1<space|2spc>Derivatives, extremums,
       concavity, and convexity <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-44>>
+      <no-break><pageref|auto-42>>
 
       <with|par-left|<quote|1tab>|16.3.2<space|2spc>Fundamental theorem of
       Calculus for the Riemann Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-53>>
+      <no-break><pageref|auto-51>>
 
       <with|par-left|<quote|1tab>|16.3.3<space|2spc>Mean Value Theorems
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-54>>
+      <no-break><pageref|auto-52>>
 
       16.4<space|2spc>Symmetry of Higher Order Differentials
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-55>
+      <no-break><pageref|auto-53>
 
       16.5<space|2spc>Higher Order Partial Differentiation
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-58>
+      <no-break><pageref|auto-56>
 
       <with|par-left|<quote|1tab>|16.5.1<space|2spc>Linear mappings and
       multilinear mappings <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-59>>
+      <no-break><pageref|auto-57>>
 
       <with|par-left|<quote|1tab>|16.5.2<space|2spc>Higher Order Partial
       Differentiation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-61>>
+      <no-break><pageref|auto-59>>
 
       <with|par-left|<quote|1tab>|16.5.3<space|2spc>Higher order derivatives
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-63>>
+      <no-break><pageref|auto-61>>
 
       16.6<space|2spc>Inverse Function Theorem
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-64>
+      <no-break><pageref|auto-62>
 
       <with|par-left|<quote|1tab>|16.6.1<space|2spc>Prerequisites
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-65>>
+      <no-break><pageref|auto-63>>
 
       <with|par-left|<quote|1tab>|16.6.2<space|2spc>Implicit Function Theorem
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-73>>
+      <no-break><pageref|auto-71>>
 
       16.7<space|2spc>Taylor expansion <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-76>
+      <no-break><pageref|auto-74>
     </associate>
   </collection>
 </auxiliary>
