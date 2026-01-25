@@ -13213,7 +13213,97 @@
 
   \;
 
-  \;
+  <\proof>
+    As <math|f> is of class <math|C<rsup|n+1>> it follows that <math|f> is
+    <math|<around*|(|n+1|)>>-times differentiable on <math|U> and the
+    function
+
+    <\equation*>
+      D<rsup|<around*|[|n+1|]>>f:U\<rightarrow\>L<rsub|n+1><around*|(|X;Y|)><text|
+      defined by >D<rsup|<around*|[|n+1|]>>f<around*|(|y|)>=D<rsup|<around*|[|n+1|]>><rsub|y>f<text|
+      is continuous>
+    </equation*>
+
+    Let <math|x\<in\>U> then as <math|f> is <math|<around*|(|n+1|)>>-times
+    differentiable at <math|x> we have by definition that <math|f> is
+    <math|n>-times differentiable on <math|U> and\ 
+
+    <\equation*>
+      D<rsup|<around*|[|n|]>>f:U\<rightarrow\>L<rsub|n><around*|(|X;Y|)><text|
+      defined by >D<rsup|<around*|[|n|]>>f<around*|(|y|)>=D<rsup|<around*|[|n|]>><rsub|y>f
+    </equation*>
+
+    is Fréchet differentiable [hence <math|1>-timese differentiable] at
+    <math|x> with <math|D<rsup|<around*|[|n+1|]>><rsub|x>f=D<rsub|x><around*|(|D<rsup|<around*|[|n|]>>f|)>>.
+    As <math|x\<in\>U> was choosen arbitrary it follows that
+    <math|D<rsup|<around*|[|n|]>>f> is <math|1>-times differentiable on
+    <math|U> and <math|\<forall\>x\<in\>U>
+    <math|<rigid|D<rsup|<around*|[|1|]>><rsub|x><around*|(|D<rsup|<around*|[|n|]>>f|)>=D<rsup|<around*|[|n+1|]>><rsub|x>f>>.
+    Define then\ 
+
+    <\equation*>
+      D<rsup|<around*|[|1|]>><around*|(|D<rsup|<around*|[|n|]>>f|)>:U\<rightarrow\>L<around*|(|X,L<rsub|n><around*|(|X;Y|)>|)>=L<rsub|n+1><around*|(|X;Y|)><text|
+      by >D<rsup|<around*|[|1|]>><around*|(|D<rsup|<around*|[|n|]>>f|)><around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y><around*|(|D<rsup|<around*|[|n|]>>f|)>
+    </equation*>
+
+    then <math|\<forall\>y\<in\>U> we have
+    <math|D<rsup|<around*|[|1|]>><around*|(|D<rsup|<around*|[|n|]>>f|)><around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y><around*|(|D<rsup|<around*|[|n|]>>f|)>=D<rsup|<around*|[|n+1|]>><rsub|y>f=D<rsup|<around*|[|n+1|]>>f<around*|(|y|)>>
+    which proves that <math|D<rsup|<around*|[|1|]>><around*|(|D<rsup|<around*|[|n|]>>f|)>=D<rsup|<around*|[|n+1|]>>f>.
+    \ As <math|D<rsup|<around*|[|n+1|]>>f> is continuous it follows that
+    <math|D<rsup|<around*|[|1|]>><around*|(|D<rsup|<around*|[|n|]>>f|)>> is
+    also continuous from which it follows that\ 
+
+    <\equation*>
+      D<rsup|<around*|[|n|]>>f<text| is of class >C<rsup|1>
+    </equation*>
+
+    Let <math|y\<in\>U> then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|g<around*|(|y|)>>|<cell|=>|<cell|D<rsup|<around*|[|n|]>><rsub|y>f<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|ev<rsub|x<rsub|1>,\<ldots\>x<rsub|n>><around*|(|D<rsup|<around*|[|n|]>><rsub|y>f|)>>>|<row|<cell|>|<cell|=>|<cell|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>><around*|(|D<rsup|<around*|[|n|]>>f<around*|(|y|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>>\<circ\>D<rsup|<around*|[|n|]>>f|)><around*|(|y|)>>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation*>
+      g=<around*|(|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>>\<circ\>D<rsup|<around*|[|n|]>>f|)>
+    </equation*>
+
+    By [lemma: <reference|lemma 16.159.206>]
+    <math|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>>> is <math|C<rsup|\<infty\>>>
+    on <math|L<rsub|n><around*|(|X;Y|)>> and as
+    <math|D<rsup|<around*|[|n|]>>f> is <math|C<rsup|1>> on <math|U>, it
+    follows from the chain rule [see theorem: <reference|diff chain rule
+    higher order class>] that\ 
+
+    <\equation>
+      <label|eq 16.230.206>g=ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>>\<circ\>D<rsup|<around*|[|n|]>>f<text|
+      is >C<rsup|1><text| on >U
+    </equation>
+
+    and <math|\<forall\>y\<in\>U> we have
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|D<rsub|y>g>|<cell|=>|<cell|D<rsub|y><around*|(|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>>\<circ\>D<rsup|<around*|[|n|]>>f|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|diff chain rule>]>>>|<cell|D<rsub|D<rsup|<around*|[|n|]>>f<around*|(|y|)>>ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>>\<circ\>D<rsub|y><around*|(|D<rsup|<around*|[|n|]>>f|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+      <reference|lemma 16.159.206>]>>>|<cell|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>>\<circ\>D<rsub|y><around*|(|D<rsup|<around*|[|n|]>>f|)>>>|<row|<cell|>|<cell|=>|<cell|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>>\<circ\>D<rsup|<around*|[|n+1|]>><rsub|y>f>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation*>
+      D<rsub|y>g=ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>>\<circ\>D<rsup|<around*|[|n+1|]>><rsub|y>f
+    </equation*>
+
+    Hence if <math|h\<in\>X> we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|D<rsub|y>g<around*|(|h|)>>|<cell|=>|<cell|<around*|(|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>>\<circ\>D<rsup|<around*|[|n+1|]>><rsub|y>f|)><around*|(|h|)>>>|<row|<cell|>|<cell|=>|<cell|ev<rsub|x<rsub|1>,\<ldots\>,x<rsub|n>><around*|(|D<rsup|<around*|[|n+1|]>><rsub|y>f<around*|(|h|)>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|n+1|]>><rsub|y>f<around*|(|h|)><around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|n+1|]>><rsub|y>f<around*|(|h:x<rsub|1>:\<ldots\>:x<rsub|n>|)>>>>>
+    </eqnarray*>
+
+    The lemma is then proved by the above and [eq: <reference|eq
+    16.230.206>].
+  </proof>
 
   \;
 
@@ -13449,6 +13539,7 @@
     <associate|eq 16.225.300|<tuple|427|?>>
     <associate|eq 16.226.141|<tuple|385|120>>
     <associate|eq 16.226.300|<tuple|428|?>>
+    <associate|eq 16.230.206|<tuple|475|?>>
     <associate|eq 16.230.300|<tuple|432|?>>
     <associate|eq 16.231.300|<tuple|433|?>>
     <associate|eq 16.232.300|<tuple|434|?>>
