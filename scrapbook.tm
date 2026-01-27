@@ -13307,6 +13307,190 @@
 
   \;
 
+  <\proof>
+    We prove this by induction, so let\ 
+
+    <\equation*>
+      S=<around*|{|m\<in\>\<bbb-N\>\|<text|If <math|U\<subseteq\>X> and
+      >f:U\<rightarrow\>Y<text| is a function that is >m<text|-times
+      differentiable at <math|<rigid|x\<in\>U>> then
+      >\<forall\><around*|{|i<rsub|j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\><around*|{|1,\<ldots\>,n|}>
+      f<text| has a partial differential >D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f<text|
+      of order <math|m> and ><rigid|\<forall\><around*|(|h<rsub|1>,\<ldots\>,h<rsub|m>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>X<rsub|i<rsub|m-j+1>><text|
+      \ >D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f<around*|(|h<rsub|1>:\<ldots\>:h<rsub|m>|)>=D<rsup|<around*|[|m|]>><rsub|x>f<around*|(|I<rsup|<around*|[|i<rsub|m>,0|]>><around*|(|h<rsub|1>|)>:\<ldots\>:I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|h<rsub|m>|)>|)>>|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|1\<in\>S>>Using [lemma: <reference|lemma 16.192.122>] it
+      follows that <math|D<rsup|<around*|[|1|]>><rsub|x,<wide*|i<rsub|1>\<ldots\>i<rsub|1>|\<wide-underbrace\>><rsub|1>>f>
+      exist and
+
+      <\equation>
+        <label|eq 16.287.124>D<rsup|<around*|[|1|]>><rsub|x,<wide*|i<rsub|1>\<ldots\>i<rsub|1>|\<wide-underbrace\>><rsub|1>>f=D<rsup|<around*|[|1|]>><rsub|x>f\<circ\>I<rsup|<around*|[|i,0|]>>
+      </equation>
+
+      If <math|h\<in\><big|prod><rsub|j\<in\><around*|{|1|}>>X<rsub|i<rsub|j>>>
+      then\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|D<rsup|<around*|[|1|]>><rsub|x,<wide*|i<rsub|1>\<ldots\>i<rsub|1>|\<wide-underbrace\>><rsub|1>>f<around*|(|<wide*|h<rsub|1>:\<ldots\>:h<rsub|1>|\<wide-underbrace\>><rsub|1>|)>>|<cell|=>|<cell|D<rsup|<around*|[|1|]>><rsub|x,<wide*|i<rsub|1>\<ldots\>i<rsub|1>|\<wide-underbrace\>><rsub|1>>f<around*|(|h<rsub|1>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.287.124>]>>>|<cell|<around*|(|D<rsup|<around*|[|1|]>><rsub|x>f\<circ\>I<rsup|<around*|[|i,0|]>>|)><around*|(|h<rsub|1>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|1|]>><rsub|x>f<around*|(|I<rsup|<around*|[|i,0|]>><around*|(|h<rsub|1>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|1|]>><rsub|x>f<around*|(|<wide*|I<rsup|<around*|[|i,0|]>><around*|(|h<rsub|1>|)>\<ldots\>I<rsup|<around*|[|i,0|]>><around*|(|h<rsub|1>|)>|\<wide-underbrace\>><rsub|1>|)>>>>>
+      </eqnarray*>
+
+      Hence\ 
+
+      <\equation*>
+        1\<in\>S
+      </equation*>
+
+      <item*|<math|m\<in\>S\<Rightarrow\>m+1\<in\>S>>Assume that <math|f> is
+      <math|<around*|(|m+1|)>>-times differentiable at <math|x> and take
+      <math|<around*|{|i<rsub|j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,m+1|}>>\<subseteq\><around*|{|1,\<ldots\>,n|}>>.
+      As <math|f> is <math|<around*|(|m+1|)>>-times differentiable at
+      <math|x> there exist a open set <math|V> with
+      <math|x\<in\>V\<subseteq\>A> such that <math|\<forall\>y\<in\>V>
+      <math|f> is <math|m>-times differentiable at <math|y> and the function\ 
+
+      <\equation*>
+        D<rsup|<around*|[|m|]>>f:V\<rightarrow\>L<rsub|m><around*|(|X;Y|)><text|
+        defined by >D<rsup|<around*|[|m|]>>f<around*|(|y|)>=D<rsup|<around*|[|m|]>><rsub|y>f
+      </equation*>
+
+      is Fréchet differentiable at <math|x> with by definition
+
+      <\equation>
+        <label|eq 16.288.124>D<rsup|<around*|[|m+1|]>><rsub|x>f=D<rsub|x><around*|(|D<rsup|<around*|[|m|]>>f|)>
+      </equation>
+
+      As <math|m\<in\>S> and <math|y\<in\>V<below|=|<text|[theorem:
+      <reference|topology open set and interior>]>>V<rsup|\<circ\>>> it
+      follows that for <math|y\<in\>V> <math|D<rsup|<around*|[|m|]>><rsub|y,i<rsub|m>\<ldots\>i<rsub|1>>f>
+      exists and for <math|<around*|(|h<rsub|1>,\<ldots\>,h<rsub|m>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>X<rsub|m-j+1>>
+      we have\ 
+
+      <\equation>
+        <label|eq 16.289.124>D<rsup|<around*|[|m|]>><rsub|y,i<rsub|m>\<ldots\>i<rsub|1>>f<around*|(|h<rsub|1>:\<ldots\>:h<rsub|m>|)>=D<rsup|<around*|[|m|]>><rsub|y>f<around*|(|I<rsup|<around*|[|i<rsub|m>,0|]>><around*|(|h<rsub|1>|)>:\<ldots\>:I<rsup|<around*|(|i<rsub|1>,0|)>><around*|(|h<rsub|1>|)>|)>
+      </equation>
+
+      As <math|\<forall\>y\<in\>V> <math|D<rsup|<around*|[|m|]>><rsub|y,i<rsub|m>\<ldots\>i<rsub|1>>f>
+      exist we can define
+
+      <\equation>
+        <label|eq 16.290.124>D<rsub|y,i<rsub|m>\<ldots\>i<rsub|1>><rsup|<around*|[|m|]>>f:V\<rightarrow\>L<rsub|m><around*|(|X<rsub|i<rsub|m>>\<ldots\>X<rsub|i<rsub|1>>;Y|)><text|
+        by <math|D<rsub|i<rsub|m>\<ldots\>i<rsub|1>><rsup|<around*|[|m|]>>f<around*|(|y|)>=D<rsub|y,i<rsub|m>\<ldots\>i<rsub|1>><rsup|<around*|[|m|]>>f>>
+      </equation>
+
+      Using [lemma: <reference|lemma 16.195.124>] there exist a
+      <math|\<Phi\>\<in\>L<around*|(|L<rsub|m><around*|(|X;Y|)>,L<rsub|m><around*|(|X<rsub|i<rsub|m>>\<ldots\>X<rsub|i<rsub|2>>;Y|)>|)>>
+      such that <math|<rigid|\<forall\>L\<in\>L<rsub|m><around*|(|X;Y|)>>>
+      and <math|<around*|(|h<rsub|1>,\<ldots\>,h<rsub|m>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|m-j+1>>
+      we have
+
+      <\equation>
+        <label|eq 16.291.125>\<Phi\><around*|(|L|)><around*|(|h<rsub|1>:\<ldots\>:h<rsub|m>|)>=L<around*|(|I<rsup|<around*|[|i<rsub|m>,0|]>><around*|(|h<rsub|1>|)>:\<ldots\>:I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|h<rsub|m>|)>|)>
+      </equation>
+
+      Let <math|y\<in\>V> and <math|<around*|(|h<rsub|1>,\<ldots\>,h<rsub|m>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|m-j+1>>
+      then as <math|D<rsup|<around*|[|m|]>>f<around*|(|y|)>=D<rsup|<around*|[|m|]>><rsub|y>f\<in\>L<rsub|m><around*|(|X;Y|)>>
+      we have that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|<around*|(|\<Phi\>\<circ\>D<rsup|<around*|[|m|]>>f|)><around*|(|y|)>|)><around*|(|h<rsub|1>,\<ldots\>,h<rsub|m>|)>>|<cell|=>|<cell|\<Phi\><around*|(|D<rsup|<around*|[|m|]>>f<around*|(|y|)>|)><around*|(|h<rsub|1>:\<ldots\>:h<rsub|m>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|D<rsup|<around*|[|m|]>>f<around*|(|y|)>|)><around*|(|I<rsup|<around*|[|i<rsub|m>,0|]>><around*|(|h<rsub|1>|)>:\<ldots\>:I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|h<rsub|m>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|m|]>><rsub|y>f<around*|(|I<rsup|<around*|[|i<rsub|m>,0|]>><around*|(|h<rsub|1>|)>:\<ldots\>:I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|h<rsub|m>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.289.124>]>>>|<cell|D<rsup|<around*|[|m|]>><rsub|y,i<rsub|m>\<ldots\>i<rsub|1>>f<around*|(|h<rsub|1>:\<ldots\>:h<rsub|m>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.290.124>]>>>|<cell|<around*|(|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f<around*|(|y|)>|)><around*|(|h<rsub|1>:\<ldots\>:h<rsub|m>|)>>>>>
+      </eqnarray*>
+
+      proving by [lemma: <reference|lemma 16.180.210>] that
+      <math|<around*|(|\<Phi\>\<circ\>D<rsup|<around*|[|m|]>>f|)><around*|(|y|)>=D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f<around*|(|y|)>>
+      so that\ 
+
+      <\equation>
+        <label|eq 16.291.124>\<Phi\>\<circ\>D<rsup|<around*|[|m|]>>f=D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f
+      </equation>
+
+      As <math|D<rsup|<around*|[|m|]>>f> is Fréchet differentiable at
+      <math|x> and <math|\<Phi\>\<in\>L<around*|(|L<rsub|m><around*|(|X;Y|)>,L<rsub|m><around*|(|X<rsub|i<rsub|m>>\<ldots\>X<rsub|i<rsub|2>>;Y|)>|)>>
+      hence <math|\<infty\>>-times differentiable on
+      <math|L<rsub|m><around*|(|X;Y|)>> [see <reference|diff linear mapping
+      is infinite times differentiable>] it follows from the chain rule [see
+      theorem: <reference|diff chain rule>] that
+      <math|\<Phi\>\<circ\>D<rsup|<around*|[|m|]>>f> is Fréchet
+      differentiable at <math|x>, hence <math|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f>
+      is Fréchet differentiable at <math|x>. Further
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|D<rsub|x><around*|(|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)>>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.291.124>]>>>|<cell|D<rsub|x><around*|(|\<Phi\>\<circ\>D<rsup|<around*|[|m|]>>f|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|diff chain rule>]>>>|<cell|D<rsub|D<rsup|<around*|[|m|]>>f<around*|(|x|)>>\<Phi\>\<circ\>D<rsub|x><around*|(|D<rsup|<around*|[|m|]>>f|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|><around*|[|<text|theorem:
+        <reference|diff linear mappings are
+        differentiable>>|]>>>|<cell|\<Phi\>\<circ\>D<rsub|x><around*|(|D<rsup|<around*|[|m|]>>f|)>>>|<row|<cell|>|<cell|=>|<cell|\<Phi\>\<circ\>D<rsup|<around*|[|m+1|]>>f>>>>
+      </eqnarray*>
+
+      proving that\ 
+
+      <\equation>
+        <label|eq 16.292.124>D<rsub|x><around*|(|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)>=\<Phi\>\<circ\>D<rsup|<around*|[|m+1|]>>f
+      </equation>
+
+      As by [theorem: <reference|diff Frechet differentation implies partial
+      differentiability >] Fréchet differentiability implies partial
+      differentiability it follows that <math|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f>
+      has a <math|i<rsub|m+1>>-partial differential at <math|x> and\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|D<rsub|x,i<rsub|m+1>><around*|(|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+        <reference|diff Frechet differentation implies partial
+        differentiability >]>>>|<cell|D<rsub|x><around*|(|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)>\<circ\>I<rsup|<around*|[|i<rsub|m+1>,0|]>>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.292.124>]>>>|<cell|<around*|(|\<Phi\>\<circ\>D<rsup|<around*|[|m+1|]>><rsub|x>f|)>\<circ\>I<rsup|<around*|[|i<rsub|m+1>,0|]>>>>>>
+      </eqnarray*>
+
+      Hence by definition\ 
+
+      <\equation>
+        <label|eq 16.293.124>f<text| has a partial differential
+        >D<rsup|<around*|[|m+1|]>><rsub|x,i<rsub|m+1>\<ldots\>i<rsub|1>>f<text|
+        of order >m+1<text| at >x
+      </equation>
+
+      and\ 
+
+      <\equation>
+        <label|eq 16.294.124>D<rsup|<around*|[|m+1|]>><rsub|x,i<rsub|m+1>\<ldots\>i<rsub|1>>f\<equallim\><rsub|def>D<rsub|x,i<rsub|m+1>><around*|(|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)>=<around*|(|\<Phi\>\<circ\>D<rsup|<around*|[|m+1|]>><rsub|x>f|)>\<circ\>I<rsup|<around*|[|i<rsub|m+1>,0|]>>
+      </equation>
+
+      Further, as <math|D<rsup|<around*|[|m+1|]>><rsub|x>f\<in\>L<rsub|m+1><around*|(|X<rsub|>;Y|)>=L<around*|(|X,L<rsub|m><around*|(|X;Y|)>|)>>,
+      it follows that
+
+      <\equation>
+        <label|eq 16.296.125>D<rsup|<around*|[|m+1|]>><rsub|x>f<around*|(|I<rsup|<around*|[|i<rsub|m+1>,0|]>><around*|(|h<rsub|1>|)>|)>\<in\>L<rsub|m><around*|(|X;Y|)>
+      </equation>
+
+      So for <math|<around*|(|h<rsub|1>,\<ldots\>,h<rsub|m+1>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,m+1|}>>X<rsub|i<rsub|<around*|(|m+1|)>-j+1>>>
+      we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|D<rsup|<around*|[|m+1|]>><rsub|x,i<rsub|m+1>\<ldots\>,i<rsub|1>>f<rsup|><around*|(|h<rsub|1>:\<ldots\>:h<rsub|m+1>|)>>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.294.124>]>>>|<cell|>>|<row|<cell|<around*|(|<around*|(|\<Phi\>\<circ\>D<rsup|<around*|[|m+1|]>><rsub|x>f|)>\<circ\>I<rsup|<around*|[|i<rsub|m+1>,0|]>>|)><around*|(|h<rsub|1>:\<ldots\>:h<rsub|m+1>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<around*|(|<around*|(|\<Phi\>\<circ\>D<rsup|<around*|[|m+1|]>><rsub|x>f|)>\<circ\>I<rsup|<around*|[|i<rsub|m+1>,0|]>>|)><around*|(|h<rsub|1>|)>|)><around*|(|h<rsub|2>:\<ldots\>:h<rsub|m+1>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|\<Phi\><around*|(|D<rsup|<around*|[|m+1|]>><rsub|x>f<around*|(|I<rsup|<around*|[|i<rsub|m+1>,0|]>><around*|(|h<rsub|1>|)>|)>|)>|)><around*|(|h<rsub|2>:\<ldots\>:h<rsub|m+1>|)>>|<cell|\<equallim\><rsub|<text|[eqs:
+        <reference|eq 16.291.125>, <reference|eq
+        16.296.125>]>>>|<cell|>>|<row|<cell|<around*|(|D<rsup|<around*|[|m+1|]>><rsub|x>f<around*|(|I<rsup|<around*|[|i<rsub|m+1>,0|]>><around*|(|h<rsub|1>|)>|)>|)><around*|(|I<rsup|<around*|[|i<rsub|m>,0|]>><around*|(|h<rsub|2>|)>:\<ldots\>:I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|h<rsub|m+1>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|D<rsup|<around*|[|m+1|]>><rsub|x>f<around*|(|I<rsup|<around*|[|m+1,0|]>><around*|(|h<rsub|1>|)>:I<rsup|<around*|[|i<rsub|m>,0|]>><around*|(|h<rsub|2>|)>:\<ldots\>:I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|h<rsub|m+1>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|D<rsup|<around*|[|m+1|]>><rsub|x>f<around*|(|I<rsup|<around*|[|m+1,0|]>><around*|(|h<rsub|1>|)>:\<ldots\>:I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|h<rsub|m+1>|)>|)>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      proving that\ 
+
+      <\equation*>
+        D<rsup|<around*|[|m+1|]>><rsub|x,i<rsub|m+1>\<ldots\>,i<rsub|1>>f<rsup|><around*|(|h<rsub|1>:\<ldots\>:h<rsub|m+1>|)>=D<rsup|<around*|[|m+1|]>><rsub|x>f<around*|(|I<rsup|<around*|[|m+1,0|]>><around*|(|h<rsub|1>|)>:\<ldots\>:I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|h<rsub|m+1>|)>|)>
+      </equation*>
+
+      which together with [eq: <reference|eq 16.293.124>] proves\ 
+
+      <\equation*>
+        m+1\<in\>S
+      </equation*>
+    </description>
+  </proof>
+
   \;
 
   \;
@@ -13586,17 +13770,24 @@
     <associate|eq 16.286.12|<tuple|380|118>>
     <associate|eq 16.286.124|<tuple|81|31>>
     <associate|eq 16.287.12|<tuple|381|118>>
+    <associate|eq 16.287.124|<tuple|476|?>>
     <associate|eq 16.288.12|<tuple|382|118>>
+    <associate|eq 16.288.124|<tuple|477|?>>
     <associate|eq 16.288.125|<tuple|83|31>>
     <associate|eq 16.289.12|<tuple|383|118>>
-    <associate|eq 16.289.124|<tuple|84|32>>
+    <associate|eq 16.289.124|<tuple|478|32>>
+    <associate|eq 16.290.124|<tuple|479|?>>
     <associate|eq 16.290.126|<tuple|85|32>>
-    <associate|eq 16.291.124|<tuple|87|33>>
+    <associate|eq 16.291.124|<tuple|481|33>>
+    <associate|eq 16.291.125|<tuple|480|?>>
+    <associate|eq 16.292.124|<tuple|482|?>>
     <associate|eq 16.292.125|<tuple|88|33>>
+    <associate|eq 16.293.124|<tuple|483|?>>
     <associate|eq 16.293.125|<tuple|89|33>>
+    <associate|eq 16.294.124|<tuple|484|?>>
     <associate|eq 16.294.125|<tuple|90|33>>
     <associate|eq 16.295.125|<tuple|91|33>>
-    <associate|eq 16.296.125|<tuple|92|33>>
+    <associate|eq 16.296.125|<tuple|485|33>>
     <associate|eq 16.297.125|<tuple|93|33>>
     <associate|eq 16.298.125|<tuple|94|33>>
     <associate|eq 16.300.126|<tuple|95|34>>

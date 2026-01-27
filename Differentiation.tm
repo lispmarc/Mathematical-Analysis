@@ -4784,7 +4784,7 @@
     <\equation*>
       f<rsup|<around*|[|i,x|]>>:<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|A|)>\<rightarrow\>Y<text|
       is Fréchet differentiable at >x<rsub|i><text| and
-      >D<rsub|x,i>f=D<rsub|x<rsub|i>>f<rsup|<around*|[|i,x|]>>\<in\>X<rsub|i>
+      >D<rsub|x,i>f=D<rsub|x<rsub|i>>f<rsup|<around*|[|i,x|]>>
     </equation*>
 
     where
@@ -4822,7 +4822,7 @@
 
       <\equation*>
         f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|A|)>>:<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|A|)>\<rightarrow\>Y<text|
-        is Fréchet differentiable at >x
+        is Fréchet differentiable at >x<rsub|i>
       </equation*>
 
       with\ 
@@ -4830,6 +4830,12 @@
       <\equation*>
         D<rsub|x,i>f=D<rsub|x<rsub|i>><around*|(|f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|A|)>>|)>
       </equation*>
+    </note>
+
+    <\note>
+      <label|note 16.92.310>Using [definition: <reference|diff
+      differentiability>] it follows that
+      <math|D<rsub|x,i>f\<in\>L<around*|(|S<rsub|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|A|)>><around*|(|x<rsub|i>|)>,Y|)>>
     </note>
 
     <\note>
@@ -5056,6 +5062,13 @@
     <\equation*>
       D<rsub|x>f<around*|(|h|)>=<big|sum><rsub|i=1><rsup|n>D<rsub|x,i>f<around*|(|h<rsub|i>|)>
     </equation*>
+
+    <\note>
+      If <math|A> is open then by [theorem: <reference|topology open set and
+      interior>] <math|A=A<rsup|\<circ\>>> so that <math|x\<in\>A> so the
+      condition <math|x\<in\>A<rsup|\<circ\>>> can be replaced by
+      <math|x\<in\>A>.
+    </note>
   </theorem>
 
   <\proof>
@@ -8098,11 +8111,11 @@
   <math|f:A\<rightarrow\>Y> a function. We say that <math|f> is
   <math|2>-times differentiable at <math|x> if <math|f> is Fréchet
   differentiable on every element of <math|A> and the function <math|D f>
-  defined by <math|D f:A\<rightarrow\>L<around*|(|X,Y|)>> where <math|D
-  f<around*|(|y|)>=D<rsub|y>f> is differentiable at <math|x> and define the
-  <math|2>-times differential <math|D<rsup|<around*|[|2|]>><rsub|x>f> to be
-  <math|D<rsub|x><around*|(|D f|)>>. Continuing in this way we can define
-  <math|n>-times differentiability and the <math|2>-times differential
+  defined on <math|A> where <math|D f<around*|(|y|)>=D<rsub|y>f> is
+  differentiable at <math|x> and define the <math|2>-times differential
+  <math|D<rsup|<around*|[|2|]>><rsub|x>f> to be <math|D<rsub|x><around*|(|D
+  f|)>>. Continuing in this way we can define <math|n>-times
+  differentiability and the <math|2>-times differential
   <math|D<rsup|<around*|[|n|]>><rsub|y>f>. There is however a problem what is
   the codomain of <math|D f>? If <math|y\<in\>A> then by definition [see
   definition: <reference|diff differentiability>] <math|D<rsub|y>f> we have
@@ -8120,26 +8133,26 @@
   leads to the following definition.
 
   <\definition>
-    <label|diff tangential spanning set><dueto|Tangential Spanning Set>Let
+    <label|diff differential domain><dueto|Differential domain>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
     a normed space and <math|A\<subseteq\>X> then <math|A> is
-    <with|font-series|bold|tangential spanning> if <math|\<forall\>x\<in\>A>
+    <with|font-series|bold|differential domain> if <math|\<forall\>x\<in\>A>
     <math|S<rsub|A><around*|(|x|)>=X>
   </definition>
 
-  The following theorem shows some examples of tangential spanning sets
+  The following theorem shows some examples of differential domain sets
 
   <\theorem>
-    <label|diff tangential spanning set examples>We have\ 
+    <label|diff differential domain examples>We have\ 
 
     <\enumerate>
       <item>If <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
-      is a normed set then every open set in <math|X> is tangential spanning.
+      is a normed set then every open set in <math|X> is differential domain.
 
       <item>For the normed space <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>>
       we have every set <math|A\<subseteq\>\<bbb-R\>> such that
       <math|A\<subseteq\>A<rprime|'>> [see defintion: <reference|topology
-      limit point>] is tangential spanning.
+      limit point>] is differential domain.
 
       <item>For the normed space <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>>
       we have that every set of the form\ 
@@ -8149,7 +8162,7 @@
         with >a\<leqslant\>b>|<cell|<around*|[|a,b|]>>|<cell|>>|<row|<cell|>|<cell|<around*|[|a,b|[>>|<cell|>>|<row|<cell|>|<cell|<around*|]|a,b|]>>|<cell|>>|<row|<cell|>|<cell|<around*|]|a,b|[>>|<cell|>>>>
       </eqnarray*>
 
-      is a tangential spanning.
+      is a differential domain.
     </enumerate>
   </theorem>
 
@@ -8185,8 +8198,8 @@
     differentiability><index|<math|D<rsup|<around*|[|n|]>>f*<around*|(|x|)>>>Let
     <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
     and <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    be normed spaces, <math|A\<subseteq\>X> where <math|A> is tangential
-    spanning, <math|x<rsub|0>\<in\>A> and <math|<rigid|f:A\<rightarrow\>Y>> a
+    be normed spaces, <math|A\<subseteq\>X> where <math|A> is differential
+    domain, <math|x<rsub|0>\<in\>A> and <math|<rigid|f:A\<rightarrow\>Y>> a
     function then <math|f> is <with|font-series|bold|<math|n>-times Fréchet
     differentiable at <math|x>> with <math|n>-times differential
     <math|<rigid|D<rsub|x<rsub|0>><rsup|<around*|[|n|]>>f\<in\>L<rsub|n><around*|(|X;Y|)>>>
@@ -8202,7 +8215,7 @@
       </equation*>
 
       <\note>
-        As <math|A> is tangential spanning we have that
+        As <math|A> is differential domain we have that
         <math|S<rsub|A><around*|(|x|)>=X> so that by [definition:
         <reference|diff differentiability>]
         <math|D<rsub|x<rsub|0>>f\<in\>L<around*|(|X,Y|)>> hence\ 
@@ -8230,7 +8243,7 @@
       </equation*>
 
       <\note>
-        As <math|A> is tangential spanning
+        As <math|A> is differential domain
         <math|S<rsub|A><around*|(|x<rsub|0>|)>=X> so that by the definition
         of Fréchet differentiability [see definition: <reference|diff
         differentiability>] that <math|D<rsub|x<rsub|0>><around*|(|D<rsup|<around*|[|n|]>>f|)>\<in\>L<around*|(|X,L<rsub|n-1><around*|(|X;Y|)>|)>=L<rsub|n><around*|(|X;Y|)>>
@@ -8248,15 +8261,15 @@
       <math|<around*|]|-\<infty\>,a|]>>, <math|<around*|]|-\<infty\>,a|[>>,
       <math|<around*|[|a,b|]>>, <math|<around*|]|a,b|]>>,
       <math|<around*|[|a,b|[>> or <math|<around*|]|a,b|[>> then by [theorem:
-      <reference|diff tangential spanning set examples>] <math|A> is a
-      tangential spanning set.
+      <reference|diff differential domain examples>] <math|A> is a
+      differential domain.
     </note>
   </definition>
 
   <\definition>
     <label|diff higher order differentiation on a open set>Let
     <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,<math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    be normed spaces, a tangential spanning set <math|A\<subseteq\>X>,
+    be normed spaces, a differential domain set <math|A\<subseteq\>X>,
     <math|B\<subseteq\>A> and <math|f:A\<rightarrow\>Y> a function then
     <math|f> is <with|font-series|bold|<math|n>-times differentiable on
     <math|B>> if <math|\<forall\>x\<in\>B> <math|f> is <math|n>-times
@@ -8268,9 +8281,9 @@
     <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     be normed spaces, <math|A,B\<subseteq\>X> such that <math|A> and <math|B>
-    are tangential sets with <math|A\<subseteq\>B>, <math|x<rsub|0>\<in\>A>
-    and <math|f:A\<rightarrow\>Y> a function that is <math|n>-times
-    differentiable at <math|x<rsub|0>> then
+    are differential domains with <math|A\<subseteq\>B>,
+    <math|x<rsub|0>\<in\>A> and <math|f:A\<rightarrow\>Y> a function that is
+    <math|n>-times differentiable at <math|x<rsub|0>> then
     <math|f<rsub|\|B>:B\<rightarrow\>Y> is <math|n>-times differentiable at
     <math|x<rsub|0>> and <math|D<rsup|<around*|[|n|]>><rsub|x<rsub|0>>f=D<rsup|<around*|[|n|]>>x<rsub|0>f<rsub|\|B>>.
   </theorem>
@@ -8362,7 +8375,7 @@
     <label|diff inifint=ite differentiable><index|<math|\<infty\>>-times
     differentibility>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    be normed spaces, a tangential spanning set <math|A\<subseteq\>X> and
+    be normed spaces, a differential domain set <math|A\<subseteq\>X> and
     <math|f:A\<rightarrow\>Y> a function then\ 
 
     <\equation*>
@@ -8400,7 +8413,7 @@
     (1)><index|<math|D<rsup|n>f<around*|(|x|)>>>Let <math|n\<in\>\<bbb-N\>>,
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
     and <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    be normed spaces, a tangential spanning set <math|A\<subseteq\>X>,
+    be normed spaces, a differential domain set <math|A\<subseteq\>X>,
     <math|x<rsub|0>\<in\>A> and <rigid|<math|f:A\<rightarrow\>Y>> a function
     that is <math|n>-times differentiable at <math|x<rsub|0>> then
 
@@ -8429,7 +8442,7 @@
     <label|diff class C^n><index|<math|C<rsup|n>>><index|<math|C<rsup|0>>>Let
     <math|n\<in\>\<bbb-N\><rsub|0>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    normed spaces, a tangential spanning set <math|A\<subseteq\>X> and
+    normed spaces, a differential domain set <math|A\<subseteq\>X> and
     <math|f:A\<rightarrow\>Y> a function then <math|f> is of class
     \ <math|C<rsup|n>> if\ 
 
@@ -8454,7 +8467,7 @@
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     be normed spaces, <math|A,B\<subseteq\>X> such that <math|A> and <math|B>
-    are tangential sets with <math|A\<subseteq\>B> then if
+    are differential domains with <math|A\<subseteq\>B> then if
     <math|f:A\<rightarrow\>Y> is of class <math|C<rsup|n>> then
     <math|f<rsub|\|B>:B\<rightarrow\>Y> is of class <math|C<rsup|n>>.
   </theorem>
@@ -8502,7 +8515,7 @@
     <label|diff class C^@@><index|<math|C<rsup|\<infty\>>>>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    normed spaces, a tangential spanning set <math|A\<subseteq\>X> and
+    normed spaces, a differential domain set <math|A\<subseteq\>X> and
     <math|f:A\<rightarrow\>Y> a function then <math|f> is of class
     \ <math|C<rsup|\<infty\>>> if <math|\<forall\>n\<in\>\<bbb-N\><rsub|0>>
     <math|f> is of class <math|C<rsup|n>>.
@@ -8688,8 +8701,8 @@
 
     <\note>
       As <math|A\<subseteq\>A<rprime|'>> it follows from [theorem:
-      <reference|diff tangential spanning set examples>] that <math|A> is a
-      tangential set which is necessary for the definition of
+      <reference|diff differential domain examples>] that <math|A> is a
+      differential domain which is necessary for the definition of
       <math|D<rsup|<around*|[|1|]>>f> and <math|C<rsup|1>> [see definitions:
       <reference|diff higher order differentiation>, <reference|diff class
       C^n>]
@@ -8948,8 +8961,8 @@
       The condition <math|A\<subseteq\>A<rprime|'>> is needed for the
       definition of <math|f<rsup|<around*|(|n|)>><rsub|x<rsub|0>>> [see
       definition: <reference|diff higher order derivate>]. Further from
-      [theorem: <reference|diff tangential spanning set examples>] it follows
-      that <math|A> is a tangential spanning set which is needed for the
+      [theorem: <reference|diff differential domain examples>] it follows
+      that <math|A> is a differential domain set which is needed for the
       definition of <math|D<rsup|<around*|[|n|]>><rsub|x<rsub|0>>f> [see
       definitions: <reference|diff higher order differentiation>].
     </note>
@@ -9318,7 +9331,7 @@
     <label|diff n-times and m-times differentiability>Let
     <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    normed spaces, a tangential spanning set <math|A\<subseteq\>X>,
+    normed spaces, a differential domain set <math|A\<subseteq\>X>,
     <math|x<rsub|0>\<in\>A> and <math|f:A\<rightarrow\>Y> a function that is
     <math|n>-times differentiable at <math|x<rsub|0>> then
     <math|\<forall\>m\<in\><around*|{|1,\<ldots\>,n|}>> we have that <math|f>
@@ -9367,7 +9380,7 @@
     <label|diff n-times and m-times differentiability (1)>Let
     <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    normed spaces, a tangential spanning set <math|A\<subseteq\>X>,
+    normed spaces, a differential domain set <math|A\<subseteq\>X>,
     <math|B\<subseteq\>A> and <math|f:A\<rightarrow\>L<rsub|n><around*|(|X;Y|)>>
     a function that is <math|n>-times differentiable on <math|B> then
     <math|\<forall\>m\<in\><around*|{|1,\<ldots\>,n|}>> is <math|m>-times
@@ -9455,7 +9468,7 @@
     <label|diff C^n and C^m>Let <math|n\<in\>\<bbb-N\><rsub|0>>,
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    be two normed spaces, a tangential spanning set <math|A\<subseteq\>X> and\ 
+    be two normed spaces, a differential domain set <math|A\<subseteq\>X> and\ 
 
     <\equation*>
       f:A\<rightarrow\>Y<text| a function that is of class >C<rsup|n>
@@ -9523,7 +9536,7 @@
     <label|diff n+m differentiation>Let <math|n,m\<in\>\<bbb-N\>>,
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    be normed spaces, a tangential spanning set <math|A\<subseteq\>X>,
+    be normed spaces, a differential domain set <math|A\<subseteq\>X>,
     <math|x<rsub|0>\<in\>A> and <math|f:A\<rightarrow\>Y> a function that is
     <math|<around*|(|n+m|)>>-times differentiable at <math|x<rsub|0>> then we
     have <math|\<forall\>x\<in\>A> that <math|f> is <math|n>-times
@@ -9658,7 +9671,7 @@
     <label|diff n+m differentiation (1)>Let <math|n,m\<in\>\<bbb-N\>>,
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    be normed spaces, a tangential spanning set <math|A\<subseteq\>X>, with
+    be normed spaces, a differential domain set <math|A\<subseteq\>X>, with
     <math|A\<neq\>\<varnothing\>> and <math|f:A\<rightarrow\>Y> a function
     that is <math|<around*|(|n+m|)>>-times differentiable on <math|A> then
     <math|f> is <math|n>-times differentiable on <math|A> and\ 
@@ -9952,7 +9965,7 @@
     <label|diff C^(n+m)>Let <math|n,m\<in\>\<bbb-N\>>,
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    be normed spaces, a tangential set <math|A\<subseteq\>X> and
+    be normed spaces, a differential domain <math|A\<subseteq\>X> and
     <math|<rigid|f:A\<rightarrow\>Y>> a function that is of class
     <math|C<rsup|n+m>> then <math|f> is of class <math|C<rsup|n>> [so that
     <math|\<forall\>x\<in\>A> <math|f> is <math|n>-times differentiable at
@@ -10021,7 +10034,7 @@
   <\theorem>
     <label|diff D^f=D^(n-1)D^1f>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    be two normed spaces, a tangential spanning set <math|A\<subseteq\>X>,
+    be two normed spaces, a differential domain set <math|A\<subseteq\>X>,
     <math|x<rsub|0>\<in\>A>, <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>> and
     <math|f:A\<rightarrow\>Y> a function then the following are equivalent:
 
@@ -10177,7 +10190,7 @@
   <\corollary>
     <label|diff D^f=D^(n-1)D^1f (1)>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    be two normed spaces, a tangential spanning set <math|A\<subseteq\>X>,
+    be two normed spaces, a differential domain set <math|A\<subseteq\>X>,
     <math|x<rsub|0>\<in\>A>, <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>> and
     <math|f:A\<rightarrow\>Y> a function then the following are equivalent:\ 
 
@@ -10497,7 +10510,7 @@
     <label|diff f is of class C^n if D^1f u=is of class C^n-1 (1)>Let
     <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    be two normed spaces, a tangential spanning set <math|A\<subseteq\>X> and
+    be two normed spaces, a differential domain set <math|A\<subseteq\>X> and
     <math|f:A\<rightarrow\>Y> a function then we have
 
     <\eqnarray*>
@@ -10606,7 +10619,7 @@
     <label|diff higher order differential is linear>Let
     <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    be normed spaces, a tangential spanning set <math|A\<subseteq\>X> then we
+    be normed spaces, a differential domain set <math|A\<subseteq\>X> then we
     have:
 
     <\enumerate>
@@ -11293,7 +11306,7 @@
     <label|diff constant function is infinitely times differentiable>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    be normed spaces, a tangential spanning set <math|A\<subseteq\>X> and
+    be normed spaces, a differential domain set <math|A\<subseteq\>X> and
     <math|y\<in\>Y> then the constant function
     <math|C<rsub|y>:A\<rightarrow\>Y> defined by
     <math|C<rsub|y><around*|(|x|)>=y> is <math|\<infty\>>-times
@@ -11311,8 +11324,8 @@
       <math|<around*|]|-\<infty\>,a|]>>, <math|<around*|]|-\<infty\>,a|[>>,
       <math|<around*|[|a,b|]>>, <math|<around*|]|a,b|]>>,
       <math|<around*|[|a,b|[>> or <math|<around*|]|a,b|[>> then by [theorem:
-      <reference|diff tangential spanning set examples>] <math|A> is a
-      tangential spanning set.
+      <reference|diff differential domain examples>] <math|A> is a
+      differential domain set.
     </note>
   </example>
 
@@ -11363,7 +11376,7 @@
 
       <\equation*>
         D<rsub|x><around*|(|D<rsup|<around*|[|n|]>>C<rsub|y>|)>=<around*|(|0<rsub|n+1>|)><rsub|\|S<rsub|A><around*|(|x|)>><below|=|<text|[A
-        is tangential spanning]>>0<rsub|n+1>
+        is differential domain]>>0<rsub|n+1>
       </equation*>
 
       Hence <math|f> is <math|<around*|(|n+1|)>>-times differentiable at
@@ -11469,7 +11482,7 @@
   <\example>
     <label|diff identity function is infinite times differentiable>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
-    a normed space, a tangential spanning set <math|A\<subseteq\>X> then
+    a normed space, a differential domain set <math|A\<subseteq\>X> then
     <math|Id<rsub|A>:A\<rightarrow\>X> is of class <math|C<rsup|\<infty\>>>
     on <math|X>. \ 
 
@@ -11479,8 +11492,8 @@
       <math|<around*|]|-\<infty\>,a|]>>, <math|<around*|]|-\<infty\>,a|[>>,
       <math|<around*|[|a,b|]>>, <math|<around*|]|a,b|]>>,
       <math|<around*|[|a,b|[>> or <math|<around*|]|a,b|[>> then by [theorem:
-      <reference|diff tangential spanning set examples>] <math|A> is a
-      tangential spanning set.
+      <reference|diff differential domain examples>] <math|A> is a
+      differential domain set.
     </note>
   </example>
 
@@ -11515,8 +11528,8 @@
     <math|\<varphi\><rprime|'><rsub|t>=D<rsup|<around*|[|1|]>><rsub|t><around*|(|1|)>=L<around*|(|1|)>=x>.
 
     <\note>
-      From [theorem: <reference|diff tangential spanning set examples>] it
-      follows that <math|A> is a tangential spanning set which is needed for
+      From [theorem: <reference|diff differential domain examples>] it
+      follows that <math|A> is a differential domain set which is needed for
       <math|C<rsup|\<infty\>>>.
     </note>
   </example>
@@ -11535,7 +11548,7 @@
 
     proving that <math|\<varphi\>> is Fréchet differentiable at <math|t> with
     <math|D<rsub|t>\<varphi\>=L<rsub|\|S<rsub|U><around*|(|t|)>><below|=|A<text|
-    is a tangential spanning set>>L>. Hence <math|\<varphi\>> is
+    is a differential domain set>>L>. Hence <math|\<varphi\>> is
     <math|1>-times differentiable on <math|A> with
     <math|D<rsup|<around*|[|1|]>><rsub|t>\<varphi\>=L>. So if we define\ 
 
@@ -11661,7 +11674,7 @@
     </enumerate>
 
     <\note>
-      If <math|A\<subseteq\>X> is a tangential spanning set then as
+      If <math|A\<subseteq\>X> is a differential domain set then as
       <math|\<tau\><rsub|x>> is of class <math|C<rsup|\<infty\>>> it follows
       from [theorem: <reference|diff class C^n sub-sets>] that
       <math|<around*|(|\<tau\><rsub|x>|)><rsub|\|A>> is of class
@@ -11963,7 +11976,7 @@
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>,
     <math|<around*|\<langle\>|Z,<around*|\<\|\|\>||\<\|\|\>><rsub|Z>|\<rangle\>>>
-    be normed spaces, a tangential spanning set <math|A\<subseteq\>X> and
+    be normed spaces, a differential domain set <math|A\<subseteq\>X> and
     <math|<rigid|f:A\<rightarrow\>Y>> is a function that is <math|n>-times
     differentiable at <math|x<rsub|0>> then <math|L\<circ\>f> is
     <math|n>-times differentiable at <math|x<rsub|0>>.
@@ -12067,7 +12080,7 @@
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>,
     <math|<around*|\<langle\>|Z,<around*|\<\|\|\>||\<\|\|\>><rsub|Z>|\<rangle\>>>
-    be normed spaces, <math|L\<in\>L<around*|(|Y,Z|)>>, a tangential spanning
+    be normed spaces, <math|L\<in\>L<around*|(|Y,Z|)>>, a differential domain
     set <math|A\<subseteq\>X> and <math|<rigid|f:A\<rightarrow\>Y>> ia
     function that is of class <math|C<rsup|n>> then <math|L\<circ\>f> is of
     class \ <math|C<rsup|n>>.
@@ -12273,7 +12286,7 @@
     <math|n\<in\>\<bbb-N\>>, <math|k\<in\>\<bbb-N\>>,
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
     normed space, <math|<around*|{|<around*|\<langle\>|Y<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>>
-    a finite family of normed spaces, a tangential spanned set
+    a finite family of normed spaces, a differential domain
     <math|A\<subseteq\>X>, <math|x<rsub|0>\<in\>A> and
     <math|f:A\<rightarrow\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>Y<rsub|i>>
     then we have\ 
@@ -12446,7 +12459,7 @@
     <math|n\<in\>\<bbb-N\><rsub|0>>, <math|k\<in\>\<bbb-N\>>,
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
     normed space, <math|<around*|{|<around*|\<langle\>|Y<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>>
-    a finite family of normed spaces, a tangential spanning set
+    a finite family of normed spaces, a differential domain set
     <math|A\<subseteq\>X> and <math|f:A\<rightarrow\><big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>Y<rsub|i>>
     a function then we have\ 
 
@@ -12718,8 +12731,8 @@
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>,
     <math|<around*|\<langle\>|Z,<around*|\<\|\|\>||\<\|\|\>><rsub|Z>|\<rangle\>>>
-    be normed spaces, <math|A\<subseteq\>X> a tangential spanning set,
-    <math|x<rsub|0>\<in\>A>, <math|B\<subseteq\>Y> a tangential spanning set
+    be normed spaces, <math|A\<subseteq\>X> a differential domain set,
+    <math|x<rsub|0>\<in\>A>, <math|B\<subseteq\>Y> a differential domain set
     and <math|f:A\<rightarrow\>Y>, <math|<rigid|g:B\<rightarrow\>Z>>
     functions such that <math|f<around*|(|A|)>\<subseteq\>B>, <math|f> is
     <math|n>-times differentiable on <math|x<rsub|0>> and <math|g> is
@@ -12736,9 +12749,9 @@
       <math|<around*|]|a,\<infty\>|[>>, <math|<around*|]|-\<infty\>,a|]>>,
       <math|<around*|]|-\<infty\>,a|[>>, <math|<around*|[|a,b|]>>,
       <math|<around*|]|a,b|]>>, <math|<around*|[|a,b|[>> or
-      <math|<around*|]|a,b|[>> then by [theorem: <reference|diff tangential
-      spanning set examples>] <math|A>, <math|B> are automatical tangential
-      spanning sets.
+      <math|<around*|]|a,b|[>> then by [theorem: <reference|diff differential
+      domain examples>] <math|A>, <math|B> are automatical differential
+      domain sets.
     </note>
   </theorem>
 
@@ -12748,7 +12761,7 @@
     <\equation*>
       S<rsub|X,A>=<around*|{|n\<in\>\<bbb-N\>\|Let
       <around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>><around*|\<langle\>|Z,<around*|\<\|\|\>||\<\|\|\>><rsub|Z>|\<rangle\>><text|
-      be normed spaces, <math|B\<subseteq\>Y> a tangential spanning set,
+      be normed spaces, <math|B\<subseteq\>Y> a differential domain set,
       <math|f:A\<rightarrow\>Y<text| a function that is >n<text|-times
       differentiable at >x<rsub|0><text| with
       >f<around*|(|A|)>\<subseteq\>B<text|, >g:B\<rightarrow\>Z<text| a
@@ -12884,9 +12897,9 @@
 
       Now <math|L<around*|(|Y,Z|)>\<cdot\>L<around*|(|X,Y|)>> is open in
       <math|L<around*|(|Y,Z|)>\<cdot\>L<around*|(|X,Y|)>> so that by
-      [theorem: <reference|diff tangential spanning set examples>]
+      [theorem: <reference|diff differential domain examples>]
       <math|<rigid|L<around*|(|Y,Z|)>\<cdot\>L<around*|(|X,Y|)>>><math|> is a
-      tangential spanning set, <math|h<around*|(|A|)>\<subseteq\>L<around*|(|Y,Z|)>\<cdot\>L<around*|(|X,Y|)>>,
+      differential domain set, <math|h<around*|(|A|)>\<subseteq\>L<around*|(|Y,Z|)>\<cdot\>L<around*|(|X,Y|)>>,
       <math|<around*|(|\<circ\>|)>> is <math|n>-times differentiable at
       <math|h<around*|(|x<rsub|0>|)>> [see lemma: <reference|lemma
       16.101.194>], <math|h> is <math|n>-times differentiable at
@@ -12924,7 +12937,7 @@
     <label|diff higher order differential of a product>Let
     <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
     be a normed space, <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>>
-    be the normed space of real (complex) numbers, a tangential spanning set
+    be the normed space of real (complex) numbers, a differential domain set
     <math|A\<subseteq\>X>, <math|x\<in\>A<rsup|>> and
     <math|f:A\<rightarrow\>\<bbb-K\>>, <math|g:A\<rightarrow\>\<bbb-K\>>
     functions that are <math|n>-times differentiable at <math|x> then\ 
@@ -13032,7 +13045,7 @@
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>,
     <math|<around*|\<langle\>|Z,<around*|\<\|\|\>||\<\|\|\>><rsub|Z>|\<rangle\>>>
-    be normed spaces, tangential spanning sets <math|A\<subseteq\>X>,
+    be normed spaces, differential domain sets <math|A\<subseteq\>X>,
     <math|B\<subseteq\>Y> and <math|f:A\<rightarrow\>Y>,
     <math|g:B\<rightarrow\>Z> functions such that
     <math|f<around*|(|A|)>\<subseteq\>B>. If <math|f> is of class
@@ -13045,9 +13058,9 @@
       <math|<around*|]|a,\<infty\>|[>>, <math|<around*|]|-\<infty\>,a|]>>,
       <math|<around*|]|-\<infty\>,a|[>>, <math|<around*|[|a,b|]>>,
       <math|<around*|]|a,b|]>>, <math|<around*|[|a,b|[>> or
-      <math|<around*|]|a,b|[>> then by [theorem: <reference|diff tangential
-      spanning set examples>] <math|A>, <math|B> are automatical tangential
-      spanning sets.
+      <math|<around*|]|a,b|[>> then by [theorem: <reference|diff differential
+      domain examples>] <math|A>, <math|B> are automatical differential
+      domain sets.
     </note>
   </theorem>
 
@@ -13067,7 +13080,7 @@
       <\equation*>
         S<rsub|X,A>=<around*|{|n\<in\>\<bbb-N\>\|<text|Let
         ><around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>,<around*|\<langle\>|Z,<around*|\<\|\|\>||\<\|\|\>><rsub|Z>|\<rangle\>><text|
-        be normed spaces, >B\<subseteq\>Y<text| a tangential spanning set,
+        be normed spaces, >B\<subseteq\>Y<text| a differential domain set,
         ><rigid|f:A\<rightarrow\>Y><text| a function of class
         >C<rsup|n><text| with >f<around*|(|A|)>\<subseteq\>B<text| and
         >g:B\<rightarrow\>Z<text| a function of class >C<rsup|n><text| then
@@ -13266,9 +13279,9 @@
 
         Now <math|L<around*|(|Y,Z|)>\<cdot\>L<around*|(|X,Y|)>> is open in
         <math|L<around*|(|Y,Z|)>\<cdot\>L<around*|(|X,Y|)>> so that by
-        [theorem: <reference|diff tangential spanning set examples>]
+        [theorem: <reference|diff differential domain examples>]
         <math|L<around*|(|Y,Z|)>\<cdot\>L<around*|(|X,Y|)>><math|> is a
-        tangential spanning set, <math|h<around*|(|A|)>\<subseteq\>L<around*|(|Y,Z|)>\<cdot\>L<around*|(|X,Y|)>>,
+        differential domain set, <math|h<around*|(|A|)>\<subseteq\>L<around*|(|Y,Z|)>\<cdot\>L<around*|(|X,Y|)>>,
         <math|<around*|(|\<circ\>|)>> is of class <math|C<rsup|n>> [see
         lemma: <reference|lemma 16.101.194>], <math|h> is of class
         <math|C<rsup|n>> [see eq: <reference|eq 16.227.310>] so, as
@@ -13305,7 +13318,7 @@
     <label|diff higher order differential of a product (1)>Let
     <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
     be a normed space, <math|<around*|\<langle\>|\<bbb-K\>,\<\|\|\>|\<rangle\>>>
-    be the normed space of real (complex) numbers, a tangential spanning set
+    be the normed space of real (complex) numbers, a differential domain set
     <math|A\<subseteq\>X>, <math|f:A\<rightarrow\>\<bbb-K\>>,
     <math|g:A\<rightarrow\>\<bbb-K\>> functions that are of class
     <math|C<rsup|n>>\ 
@@ -14772,7 +14785,7 @@
   <\theorem>
     <label|diff mean value theorem (1)><dueto|Mean Value Theorem (I>Let
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
-    a normed vector space,a tangential spanning set <math|A\<subseteq\>X>,
+    a normed vector space,a differential domain set <math|A\<subseteq\>X>,
     <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>> the normed
     spaces of real numbers, <math|x,y\<in\>A> such that
     <math|<around*|{|<around*|(|1-t|)>\<cdot\>x+t\<cdot\>y\|t\<in\><around*|[|0,1|]>|}>\<subseteq\>A>
@@ -15427,8 +15440,8 @@
 
     <\note>
       As <math|U> is open it follows from [theorem: <reference|diff
-      tangential spanning set examples>] that <math|U> is a tangential
-      spanning set which is needed in the definition of a function of class
+      differential domain examples>] that <math|U> is a differential domain
+      set which is needed in the definition of a function of class
       <math|C<rsup|1>>.
     </note>
   </corollary>
@@ -15484,8 +15497,8 @@
 
     <\note>
       As <math|U> is open it follows from [theorem: <reference|diff
-      tangential spanning set examples>] that <math|U> is a tangential
-      spanning set which is needed in the definition of a function of class
+      differential domain examples>] that <math|U> is a differential domain
+      set which is needed in the definition of a function of class
       <math|C<rsup|1>>.
     </note>
   </theorem>
@@ -15584,8 +15597,8 @@
 
     <\note>
       As <math|U> is open it follows from [theorem: <reference|diff
-      tangential spanning set examples>] that <math|U> is a tangential
-      spanning set which is needed in the definition of a function of class
+      differential domain examples>] that <math|U> is a differential domain
+      set which is needed in the definition of a function of class
       <math|C<rsup|1>>.
     </note>
   </corollary>
@@ -15653,8 +15666,8 @@
 
     <\note>
       As <math|U> is open it follows from [theorem: <reference|diff
-      tangential spanning set examples>] that <math|U> is a tangential
-      spanning set which is needed in the definition of a function of class
+      differential domain examples>] that <math|U> is a differential domain
+      set which is needed in the definition of a function of class
       <math|C<rsup|1>>.
     </note>
   </theorem>
@@ -16139,9 +16152,8 @@
 
     <\note>
       As <math|U> is open it follows from [theorem: <reference|diff
-      tangential spanning set examples>] that <math|U> is a tangential
-      spanning set which is needed for the definition of class
-      <math|C<rsup|2>>.
+      differential domain examples>] that <math|U> is a differential domain
+      set which is needed for the definition of class <math|C<rsup|2>>.
     </note>
   </lemma>
 
@@ -16635,9 +16647,8 @@
 
     <\note>
       As <math|U> is open it follows from [theorem: <reference|diff
-      tangential spanning set examples>] that <math|U> is a tangential
-      spanning set which is needed for the definition of class
-      <math|C<rsup|n+1>>.
+      differential domain examples>] that <math|U> is a differential domain
+      set which is needed for the definition of class <math|C<rsup|n+1>>.
     </note>
   </lemma>
 
@@ -16754,8 +16765,8 @@
 
     <\note>
       As <math|U> is open it follows from [theorem: <reference|diff
-      tangential spanning set examples>] that <math|U> is a tangential
-      spanning set.
+      differential domain examples>] that <math|U> is a differential domain
+      set.
     </note>
   </lemma>
 
@@ -16828,9 +16839,8 @@
 
     <\note>
       As <math|U> is open it follows from [theorem: <reference|diff
-      tangential spanning set examples>] that <math|U> is a tangential
-      spanning set which is needed for the definition of class
-      <math|C<rsup|n+1>>.
+      differential domain examples>] that <math|U> is a differential domain
+      set which is needed for the definition of class <math|C<rsup|n+1>>.
     </note>
   </lemma>
 
@@ -16994,9 +17004,8 @@
 
     <\note>
       As <math|U> is open it follows from [theorem: <reference|diff
-      tangential spanning set examples>] that <math|U> is a tangential
-      spanning set which is needed for the definition of class
-      <math|C<rsup|n+1>>.
+      differential domain examples>] that <math|U> is a differential domain
+      set which is needed for the definition of class <math|C<rsup|n+1>>.
     </note>
   </lemma>
 
@@ -17161,8 +17170,8 @@
 
     <\note>
       As <math|U> is open it follows from [theorem: <reference|diff
-      tangential spanning set examples>] that <math|U> is a tangential
-      spanning set.
+      differential domain examples>] that <math|U> is a differential domain
+      set.
     </note>
   </lemma>
 
@@ -17343,8 +17352,8 @@
 
       <\note>
         As <math|U> is open it follows from [theorem: <reference|diff
-        tangential spanning set examples>] that <math|U> is a tangential
-        spanning set which is needed for <math|C<rsup|n>>.
+        differential domain examples>] that <math|U> is a differential domain
+        set which is needed for <math|C<rsup|n>>.
       </note>
     </note>
   </theorem>
@@ -18458,7 +18467,222 @@
 
   <subsection|Higher Order Partial Differentiation>
 
-  TODO
+  If we want to define higher order partial differentiation we encounter a
+  similar problem as higher order differentiation. For example let
+  <math|<around*|\<langle\>|X<rsub|1>,<around*|\<\|\|\>||\<\|\|\>><rsub|1>|\<rangle\>>,<around*|\<langle\>|X<rsub|2>,<around*|\<\|\|\>||\<\|\|\>><rsub|2>|\<rangle\>>>,
+  <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+  be normed spaces, <math|A\<subseteq\><big|prod><rsub|i\<in\><around*|{|1,2|}>>X<rsub|i>>
+  and <math|x\<in\>A> then it seems logical to say that <math|f> has a
+  partial differential <math|D<rsup|<around*|[|2|]>><rsub|x,i,j>f<text| of
+  order 2>> if <math|\<forall\>y\<in\>A> <math|f<text|> is j>-partial
+  differentiable at <math|y> and define <math|D<rsup|<around*|[|2|]>><rsub|x,i,j>f>
+  to be the <math|i>-partial differential of the function
+  <math|D<rsup|<around*|[|1|]>><rsub|j>f> defined on <math|A> by
+  <math|D<rsup|<around*|[|1|]>><rsub|j>f<around*|(|y|)>=D<rsup|<around*|[|1|]>><rsub|y,j>f>.
+  What is however the co-domain of <math|D<rsup|<around*|[|1|]>><rsub|j>f>?
+  Using [definition: <reference|diff partial differential definition> note:
+  <reference|note 16.92.310>] <math|D<rsup|<around*|[|1|]>><rsub|y,j>f\<in\>L<around*|(|S<rsub|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|A|)>><around*|(|y<rsub|i>|)>,Y|)>>
+  which is dependent on <math|y>. We could use as co-domain
+  <math|<big|cup><rsub|y\<in\>A>L<around*|(|S<rsub|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|A|)>><around*|(|y<rsub|i>|)>,Y|)>>
+  but this is not a normed space so that partial differentiation of
+  <math|D<rsup|<around*|[|1|]>><rsub|j>f> is not well defined. To solve this
+  we require <math|A> to satisfies <math|S<rsub|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|A|)>><around*|(|y|)>=X<rsub|i>>
+  <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}> >and
+  <math|\<forall\>y\<in\>A>.\ 
+
+  <\definition>
+    <label|diff partial differential domain><dueto|Partial Differential
+    Domain>Let <math|n\<in\>\<bbb-N\>>, <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    be a finite family of normed spaces, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    the normed space based on the product
+    <math|X=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+    with the maximum norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|max>> [see
+    definition: <reference|normed maximum norm>] then <math|A\<subseteq\>X>
+    is a <with|font-series|bold|partial differential domain >if\ 
+
+    <\equation*>
+      \<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|,
+      >\<forall\>x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>A<text|
+      >S<rsub|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|A|)>><around*|(|x<rsub|i>|)>=X<rsub|i>
+    </equation*>
+  </definition>
+
+  We look now at some examples of partial differential domains. First we need
+  a lemma about rectangles and general intervals.
+
+  <\lemma>
+    <label|lemma 16.287.310>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <math|<around*|{|X<rsub|j>|}><rsub|j\<in\><around*|[|1,\<ldots\>,n|]>>> a
+    finite family of sets, <math|<around*|{|A<rsub|j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a family with <math|A<rsub|j>\<subseteq\>X<rsub|j>>
+    <math|\<forall\>j\<in\><around*|{|1,\<ldots\>,n|}>> and
+    <math|x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|j>>
+    then \ 
+
+    <\equation*>
+      \<forall\>i\<in\><around*|{|1,\<ldots\>,n|}><text|
+      >A<rsub|i>=<around*|(|I<rsup|<around*|[|x,i|]>>|)><rsup|-1><around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|j>|)>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    \ Let <math|i\<in\><around*|{|1,\<ldots\>,n|}>>,
+    <math|x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|j>>.
+    If <math|t\<in\><around*|(|I<rsup|<around*|[|x,i|]>>|)><rsup|-1><around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|j>|)>>
+    then <math|I<rsup|<around*|[|x,i|]>><around*|(|t|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|j>>
+    so that <math|t<below|=|<text|[definition: <reference|diff
+    unprojection>]>><around*|(|I<rsup|<around*|[|x,i|]>><around*|(|t|)>|)>\<in\>A<rsub|i>>
+    which proves that\ 
+
+    <\equation>
+      <label|eq 16.338.310><around*|(|I<rsup|<around*|[|x,i|]>>|)><rsup|-1><around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|j>|)>\<subseteq\>A<rsub|i>
+    </equation>
+
+    Let <math|t\<in\>A<rsub|i>> then we have
+    <math|\<forall\>j\<in\><around*|{|1,\<ldots\>,n|}>> either:\ 
+
+    <\description>
+      <item*|<math|j=i>>Then <math|<around*|(|I<rsup|<around*|[|i,x|]>><around*|(|t|)>|)><rsub|j>=<around*|(|I<rsup|<around*|[|i,x|]>><around*|(|t|)>|)><rsub|i><below|=|<text|[definition:
+      <reference|diff unprojection>]>>t\<in\>A<rsub|i>=A<rsub|j>>
+
+      <item*|<math|j\<in\><around*|{|1,\<ldots\>,n|}>\\<around*|{|i|}>>>Then
+      <math|<around*|(|I<rsup|<around*|[|i,x|]>><around*|(|t|)>|)><rsub|j><below|=|<text|[definition:
+      <reference|diff unprojection>]>>x<rsub|j>\<in\>A<rsub|j>>
+    </description>
+
+    so that <math|\<forall\>j\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|><math|<around*|(|I<rsup|<around*|[|i,x|]>><around*|(|t|)>|)><rsub|j>\<in\>A<rsub|j>>
+    which proves that <math|I<rsup|<around*|[|i,x|]>><around*|(|t|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|j>>
+    so that <math|<rigid|t\<in\><around*|(|I<rsup|<around*|[|x,i|]>>|)><rsup|-1><around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|j>|)>>>.
+    In other words <math|A<rsub|i>\<subseteq\><around*|(|I<rsup|<around*|[|x,i|]>>|)><rsup|-1><around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|j>|)>>
+    which combined with [eq: <reference|eq 16.338.310>] proves that\ 
+
+    <\equation*>
+      A<rsub|i>=<around*|(|I<rsup|<around*|[|x,i|]>>|)><rsup|-1><around*|(|<big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|j>|)>
+    </equation*>
+  </proof>
+
+  We have now the following examples of Partial Differential Domains\ 
+
+  <\theorem>
+    <label|diff partial differential domain examples>Let
+    <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>> then we have\ 
+
+    <\enumerate>
+      <item>If <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+      is a finite family of normed spaces and
+      <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+      the normed space based on the product
+      <math|X=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
+      with the maximum norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|max>>
+      [see definition: <reference|normed maximum norm>] then we have:\ 
+
+      <\enumerate>
+        <item>If <math|A\<subseteq\>X> is a open set then <math|A> is a
+        partial differential domain
+
+        <item>If <math|A=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>>
+        where <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+        <math|A<rsub|i>> is a differential domain then <math|A> is a partial
+        differential domain.
+      </enumerate>
+
+      <item>For the normed spaces <math|<around*|\<langle\>|\<bbb-R\>,\<\|\|\>|\<rangle\>>>,
+      <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,<around*|\<\|\|\>||\<\|\|\>><rsub|n>|\<rangle\>>>
+      [see example: <reference|normed maximum norm R^n>] we have:\ 
+
+      <\enumerate>
+        <item>If <math|A\<subseteq\>\<bbb-R\><rsup|n>> is open then <math|A>
+        is a partial differential domain.
+
+        <item>If <math|A=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>>
+        where <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have
+        <math|A<rsub|i>\<subseteq\><around*|(|A<rsub|i>|)><rprime|'>> then
+        <math|A> is a partial differential domain.
+
+        <item>If <math|A=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>A<rsub|i>>
+        where <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have
+        <math|A<rsub|i>> is of the form
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|>|<cell|A<rsub|i>=<around*|[|a<rsub|i>,\<infty\>|[>>|<cell|>>|<row|<cell|>|<cell|A<rsub|i>=<around*|]|a<rsub|i>,\<infty\>|[>>|<cell|>>|<row|<cell|>|<cell|A<rsub|i>=<around*|]|-\<infty\>,a<rsub|i>|]>>|<cell|>>|<row|<cell|>|<cell|A<rsub|i>=<around*|]|-\<infty\>,a<rsub|i>|[>>|<cell|>>|<row|<cell|>|<cell|A<rsub|i>=<around*|[|a<rsub|i>,b<rsub|i>|]>>|<cell|>>|<row|<cell|>|<cell|A<rsub|i>=<around*|[|a<rsub|i>,b<rsub|i>|[>>|<cell|>>|<row|<cell|>|<cell|A<rsub|i>=<around*|]|a<rsub|i>,b<rsub|i>|]>>|<cell|>>|<row|<cell|>|<cell|A<rsub|i>=<around*|]|a<rsub|i>,b<rsub|i>|[>>|<cell|>>>>
+        </eqnarray*>
+
+        where <math|a<rsub|i>,b<rsub|i>\<in\>\<bbb-R\>> then <math|A> is a
+        partial differential domain.
+      </enumerate>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item> First we have <math|I<rsup|<around*|[|i,x|]>><around*|(|x<rsub|i>|)><below|=|<text|[lemma:
+      <reference|lemma 16.24.178>]>>x\<in\>A> so that
+
+      <\equation>
+        <label|eq 16.339.310>x<rsub|i>\<in\><around*|(|I<rsup|<around*|[|<around*|[|i,x|]>|]>>|)><rsup|-1><around*|(|A|)>
+      </equation>
+
+      <\enumerate>
+        <item>Let <math|i\<in\><around*|{|1,\<ldots\>,n|}>> and
+        <math|x\<in\>A>. By [lemma: <reference|lemma 16.24.178>]
+        <math|I<rsup|<around*|[|i,x|]>>> is continuous so that, as <math|A>
+        is open, <math|<around*|(|I<rsup|<around*|[|<around*|[|i,x|]>|]>>|)><rsup|-1><around*|(|A|)>>
+        is a open set in <math|X<rsub|i>>, further we have
+        <math|I<rsup|<around*|[|i,x|]>><around*|(|x<rsub|i>|)><below|=|<text|[lemma:
+        <reference|lemma 16.24.178>]>>x\<in\>A> so that
+        <math|x<rsub|i>\<in\><around*|(|I<rsup|<around*|[|<around*|[|i,x|]>|]>>|)><rsup|-1><around*|(|A|)>>.
+        Hence, using [theorem: <reference|diff tangent cone of open sets>]
+        and [eq: <reference|eq 16.339.310>], it follows that
+        <math|S<rsub|<around*|(|I<rsup|<around*|[|<around*|[|i,x|]>|]>>|)><rsup|-1><around*|(|A|)>><around*|(|x<rsub|i>|)><rsub|>=X<rsub|i>>
+        which as <math|i\<in\><around*|{|1,\<ldots\>,n|}>> and
+        <math|x\<in\>A> where choosen arbitray proves that <math|A> is a
+        partial differential domain.
+
+        <item>Let <math|i\<in\><around*|{|1,\<ldots\>,n|}>> and
+        <math|x\<in\>A>. By [lemma: <reference|lemma 16.287.310>] we have
+        that <math|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|A|)>=A<rsub|i>>.
+        As <math|A<rsub|i>> is a differential domain it follows that
+        <math|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|A|)>>
+        is a differential domain which, as
+        <math|x<rsub|i>\<in\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|A|)>>
+        proves by [definition: <reference|diff differential domain>] that
+        <math|S<rsub|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|A|)>><around*|(|x<rsub|i>|)>=X<rsub|i><rsub|>>.
+        Which as <math|i\<in\><around*|{|1,\<ldots\>,n|}>> and
+        <math|x\<in\>A> where choosen arbitray proves that <math|A> is a
+        partial differential domain.
+      </enumerate>
+
+      <item>\ 
+
+      <\enumerate>
+        <item>This follows from (1.a).
+
+        <item>Let <math|i\<in\><around*|{|1,\<ldots\>,n|}>> and
+        <math|x\<in\>A>. As <math|A<rsub|i>\<subseteq\><around*|(|A<rsub|i>|)><rprime|'>>
+        it follows from [theorem: <reference|diff differential domain
+        examples>] that <math|A<rsub|i>> is a differential domain. Hence
+        using (1.b) it follows that <math|A> is a partial differentiabl
+        domain.
+
+        <item>Let <math|i\<in\><around*|{|1,\<ldots\>,n|}>> and
+        <math|x\<in\>A>. Then as <math|A<rsub|i>> is of the form
+        <math|<around*|[|a<rsub|i>,\<infty\>|[>>,
+        <math|<around*|[|a<rsub|i>,\<infty\>|]>>,
+        <math|<around*|]|-\<infty\>,a<rsub|i>|]>>,
+        <math|<around*|]|-\<infty\>,a<rsub|i>|[>>,
+        <math|<around*|[|a<rsub|i>,b<rsub|i>|]>>,
+        <math|<around*|[|a<rsub|i>,b<rsub|i>|[>>,
+        <math|<around*|]|a<rsub|i>,b<rsub|i>|]>> or
+        <math|<around*|]|a<rsub|i>,b<rsub|i>|[>> it follows from from
+        [theorem: <reference|diff differential domain examples>] that
+        <math|A<rsub|i>> is a differential domain. Hence using (1.b) it
+        follows that <math|A> is a partial differentiabl domain.
+      </enumerate>
+    </enumerate>
+  </proof>
 
   <\definition>
     <label|diff higher order partial differentiation><index|higher order
@@ -18469,15 +18693,16 @@
     the normed space based on the product
     <math|X=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
     with the maximum norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|max>> [see
-    definition: <reference|normed maximum norm>], a tangential spanning set
-    <math|A\<subseteq\>X>, <math|x<rsub|0>\<in\>A>, <math|m\<in\>\<bbb-N\>>,
+    definition: <reference|normed maximum norm>], <math|A\<subseteq\>X> such
+    that <math|A> is a <with|font-series|bold|partial differential
+    domain><with|font-series|bold|>, <math|m\<in\>\<bbb-N\>>,
     <math|<rigid|<around*|{|i<rsub|j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\><around*|{|1,\<ldots\>,n|}>>>
     and \ <math|f:A\<rightarrow\>Y> a function then\ 
 
     <\equation*>
       <with|font-series|bold|f<text| has a partial differential
       >D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f<text| of
-      order >m<text| at >x<rsub|0>>
+      order >m<text| at >x>
     </equation*>
 
     where
@@ -18498,74 +18723,50 @@
       </equation*>
 
       <\note>
-        As <math|x\<in\>A<rsup|\<circ\>>> it follows from [definition:
-        <reference|diff partial differential definition> note:
-        <reference|note 16.89.200>] that
-
-        <\equation*>
-          D<rsub|x,i<rsub|1>>f\<in\>L<around*|(|X<rsub|i>,Y|)>=L<rsub|1><around*|(|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|1>>;Y|)>
-        </equation*>
-
-        from which it follows that
+        As <math|A> is a partial differential domain we have that
+        <math|S<rsub|<around*|(|I<rsup|<around*|[|i<rsub|1>,x|]>>|)><rsup|-1><around*|(|A|)>><around*|(|x<rsub|i<rsub|1>>|)>=X<rsub|i<rsub|1>>>
+        so that by [definition: <reference|diff partial differential
+        definition>] <math|><math|D<rsub|x,i<rsub|1>>f\<in\>L<around*|(|S<rsub|<around*|(|I<rsup|<around*|[|i<rsub|1>,x|]>>|)><rsup|-1><around*|(|A|)>><around*|(|x<rsub|i<rsub|1>>|)>,Y|)>=L<around*|(|X<rsub|i<rsub|1>>,Y|)>=L<rsub|1><around*|(|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|1>>;Y|)>>.
+        Hence\ 
 
         <\equation*>
           D<rsup|<around*|[|1|]>><rsub|x,<wide*|i<rsub|1>\<ldots\>i<rsub|1>|\<wide-underbrace\>><rsub|1>>f\<in\>L<rsub|1><around*|(|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|1>>;Y|)>
         </equation*>
       </note>
 
-      <item*|<math|1\<less\>m>>Then there exist a open set <math|V> with
-      <math|x\<in\>V\<subseteq\>A> such that <math|\<forall\>y\<in\>V>
-      <math|f> has a partial derivative <math|D<rsup|<around*|[|m-1|]>><rsub|y,i<rsub|m-1>\<ldots\>i<rsub|1>>f>
+      <item*|<math|1\<less\>m>>Then <math|\<forall\>y\<in\>A> <math|f> has a
+      partial differential <math|D<rsup|<around*|[|m-1|]>><rsub|y,i<rsub|m-1>,\<ldots\>,i<rsub|1>>f\<in\>L<rsub|m-1><around*|(|X<rsub|i<rsub|m-1>,\<ldots\>,>X<rsub|1>;Y|)>>
       at <math|y> and the function\ 
 
       <\equation*>
-        D<rsup|<around*|[|m-1|]>><rsub|V,i<rsub|m-1>\<ldots\>i<rsub|1>>f:V\<rightarrow\>L<rsub|m-1><around*|(|X<rsub|i<rsub|m-1>>\<ldots\>X<rsub|1>;Y|)><text|
-        defined by >D<rsup|<around*|[|m|]>><rsub|V,i<rsub|m>\<ldots\>i<rsub|1>>f<around*|(|y|)>=D<rsup|<around*|[|m|]>><rsub|y,i<rsub|m>\<ldots\>i<rsub|1>>f
+        D<rsup|<around*|[|m-1|]>><rsub|i<rsub|m-1>,\<ldots\>,i<rsub|1>>f:A\<rightarrow\>L<rsub|m-1><around*|(|X<rsub|i<rsub|m-1>,\<ldots\>,>X<rsub|1>;Y|)><text|
+        defined by >D<rsup|<around*|[|m-1|]>><rsub|i<rsub|m-1>,\<ldots\>,i<rsub|1>>f<around*|(|y|)>=D<rsup|<around*|[|m-1|]>><rsub|y,i<rsub|m-1>,\<ldots\>,i<rsub|1>>f
       </equation*>
 
       is <math|i<rsub|m>>-partial differentiable at <math|x>.
-      <math|D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f> is
-      then be defined by\ 
+      <math|D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>,\<ldots\>,i<rsub|1>>f>
+      is then defined as\ 
 
       <\equation*>
-        D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f=D<rsub|x,i<rsub|m>><around*|(|D<rsup|m-1><rsub|V,i<rsub|m-1>\<ldots\>i<rsub|1>>|)>
+        D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>,\<ldots\>,i<rsub|1>>f=D<rsub|x,i<rsub|m>><around*|(|D<rsup|<around*|[|m-1|]>><rsub|i<rsub|m-1>,\<ldots\>,i<rsub|1>>f|)>
       </equation*>
 
       <\note>
-        As <math|x\<in\>V<below|=|<text|[theorem: <reference|topology open
-        set and interior>]>>V<rsup|\<circ\>>> it follows from [definition:
-        <reference|diff partial differential definition> note:
-        <reference|note 16.89.200>] that <math|<rigid|D<rsub|x,i<rsub|1>>f\<in\>L<around*|(|X<rsub|i>,Y|)>=L<rsub|1><around*|(|X<rsub|i<rsub|1>>\<ldots\>X<rsub|i<rsub|1>>;Y|)>>>
-        from which it follows that
+        As <math|A> is a partial differential domain we have that
+        <math|S<rsub|<around*|(|I<rsup|<around*|[|i<rsub|m>,x|]>>|)><rsup|-1><around*|(|A|)>><around*|(|x<rsub|i<rsub|m>>|)>=X<rsub|i<rsub|m>>>
+        so that by [definition: <reference|diff partial differential
+        definition>]
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|D<rsub|x,i<rsub|m>><around*|(|D<rsup|<around*|[|m-1|]>><rsub|i<rsub|m-1>,\<ldots\>,i<rsub|1>>f|)>>|<cell|\<in\>>|<cell|L<around*|(|S<rsub|<around*|(|I<rsup|<around*|[|i<rsub|m>,x|]>>|)><rsup|-1><around*|(|A|)>><around*|(|x<rsub|i<rsub|m>>|)>,L<rsub|m-1><around*|(|X<rsub|i<rsub|m-1>>,\<ldots\>,X<rsub|1>;Y|)>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|X<rsub|i<rsub|m>>,L<around*|(|X<rsub|i<rsub|m-1>>,\<ldots\>,X<rsub|i<rsub|1>>;Y|)>|)>>>|<row|<cell|>|<cell|<below|=|<text|[definition:
+          <reference|diff L_n(X;Y)>]>>>|<cell|L<around*|(|X<rsub|i<rsub|m>>,\<ldots\>,X<rsub|i<rsub|1>>;Y|)>>>>>
+        </eqnarray*>
+
+        which proves that\ 
 
         <\equation*>
-          D<rsub|x,i<rsub|m>><around*|(|D<rsup|m-1><rsub|V,i<rsub|m-1>\<ldots\>i<rsub|1>>|)>\<in\>L<around*|(|X<rsub|i<rsub|m>>,L<rsub|m-1><around*|(|X<rsub|m-1>\<ldots\>X<rsub|1>;Y|)>|)>=L<around*|(|X<rsub|i<rsub|m>>\<ldots\>X<rsub|i<rsub|1>>;Y<rsub|>|)>
+          D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>,\<ldots\>,i<rsub|1>>f\<in\>L<around*|(|X<rsub|i<rsub|m>>,\<ldots\>,X<rsub|i<rsub|1>>;Y|)>
         </equation*>
-
-        so that
-
-        <\equation*>
-          D<rsup|<around*|[|m-1|]>><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f\<in\>L<around*|(|X<rsub|i<rsub|m>>\<ldots\>X<rsub|i<rsub|1>>;Y<rsub|>|)>
-        </equation*>
-      </note>
-
-      <\note>
-        Of course we have to show that the definition of
-        <math|D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f>
-        is independent of the choice of <math|V>. So assume that there exist
-        another open set <math|W> with <math|x\<in\>W\<subseteq\>A> such that\ 
-
-        <\equation*>
-          D<rsup|<around*|[|m-1|]>><rsub|W,i<rsub|m-1>\<ldots\>i<rsub|1>>f:W\<rightarrow\>L<rsub|m-1><around*|(|X<rsub|i<rsub|m-1>>\<ldots\>X<rsub|1>;Y|)><text|
-          defined by >D<rsup|<around*|[|m|]>><rsub|W,i<rsub|m>\<ldots\>i<rsub|1>>f<around*|(|y|)>=D<rsup|<around*|[|m|]>><rsub|y,i<rsub|m>\<ldots\>i<rsub|1>>f
-        </equation*>
-
-        is <math|i<rsub|m>>-partial differentiable at <math|x>. As <math|W,V>
-        are open we have that <math|U=W<big|cap>V> is open,
-        <math|x\<in\>U=U<rsup|\<circ\>>> and <math|\<forall\>y\<in\>U>
-        <math|D<rsup|<around*|[|m-1|]>><rsub|W,i<rsub|m-1>\<ldots\>i<rsub|1>><around*|(|y|)>=D<rsup|<around*|[|m|]>><rsub|y,i<rsub|m-1>\<ldots\>i<rsub|1>>f=D<rsup|<around*|[|m-1|]>><rsub|V,i<rsub|m-1>\<ldots\>i<rsub|1>><around*|(|y|)>>.
-        Using [corollary: <reference|diff partial differentiation is local
-        (1)>] it follows then that <math|D<rsub|x,i<rsub|m>><around*|(|D<rsup|m-1><rsub|V,i<rsub|m-1>\<ldots\>i<rsub|1>>|)>=D<rsub|x,i<rsub|m>><around*|(|D<rsup|m-1><rsub|W,i<rsub|m-1>\<ldots\>i<rsub|1>>|)>>.
       </note>
     </description>
   </definition>
@@ -18573,6 +18774,8 @@
   Just as \ Fréchet differentiability implies partial differentiability,
   higher order differentiability implies higher order partial
   differentiability. To prove this we first need some lemmas.
+
+  TODO
 
   <\lemma>
     <label|lemma 16.192.122>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
@@ -18582,17 +18785,15 @@
     the normed space based on the product
     <math|X=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
     with the maximum norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|max>> [see
-    definition: <reference|normed maximum norm>], <math|A\<subseteq\>X>,
-    <math|x\<in\>A<rsup|\<circ\>>> and <math|f:A\<rightarrow\>Y> a function
-    that is <math|1>-times differentiable at <math|x> then
-    <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> <math|f> has a
-    partial derivative <math|D<rsub|x,<wide*|i\<ldots\>i|\<wide-underbrace\>><rsub|1>><rsup|<around*|[|1|]>>f>
+    definition: <reference|normed maximum norm>], a open set
+    <math|U\<subseteq\>X>, <math|x\<in\>U> and
+    <math|<rigid|f:U\<rightarrow\>Y>> a function that is <math|1>-times
+    differentiable at <math|x> then <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>>
+    <math|f> has a partial derivative <math|D<rsub|x,<wide*|i\<ldots\>i|\<wide-underbrace\>><rsub|1>><rsup|<around*|[|1|]>>f>
     at <math|x> of order <math|1>. Further\ 
 
     <\equation*>
-      D<rsup|<around*|[|1|]>><rsub|x,<wide*|i\<ldots\>i|\<wide-underbrace\>><rsub|1>>f=D<rsup|<around*|[|1|]>><rsub|x>f\<circ\>I<rsup|<around*|[|i,0|]>><text|
-      [see definition: <reference|diff unprojection> for the definition of
-      >I<rsup|<around*|[|i,0|]>><text|]>
+      D<rsup|<around*|[|1|]>><rsub|x,<wide*|i\<ldots\>i|\<wide-underbrace\>><rsub|1>>f=D<rsup|<around*|[|1|]>><rsub|x>f\<circ\>I<rsup|<around*|[|i,0|]>>
     </equation*>
 
     and\ 
@@ -18600,6 +18801,19 @@
     <\equation*>
       D<rsup|<around*|[|1|]>><rsub|x>f=<big|sum><rsub|i=1><rsup|n><around*|(|D<rsup|<around*|[|1|]>><rsub|x,<wide*|i\<ldots\>i|\<wide-underbrace\>><rsub|1>>f\<circ\>\<pi\><rsub|i>|)>
     </equation*>
+
+    <\note>
+      As <math|U> is open it follows from [theorem: <reference|diff
+      differential domain examples>] that <math|U> is a differential domain
+      ensuring that <math|D<rsup|<around*|[|1|]>><rsub|x>f> is well defined.
+      Further using [theorem: <reference|diff partial differential domain
+      examples>] <math|U> is also a partial differential domain so that
+      <math|D<rsup|<around*|[|1|]>><rsub|x,<wide*|i,\<ldots\>,i|\<wide-underbrace\>><rsub|1>>f>
+      is also well defined. The condition that <math|U> is open is essential
+      because a differential domain is not necessary a partial differential
+      domain and a partial differential domain is not necessary a
+      differential domain.
+    </note>
   </lemma>
 
   <\proof>
@@ -18648,11 +18862,8 @@
       \<Phi\>\<in\>L<around*|(|L<rsub|m><around*|(|X;Y|)>,L<rsub|m><around*|(|X<rsub|i<rsub|m>>\<ldots\>X<rsub|i<rsub|1>>;Y|)>|)>
     </equation*>
 
-    such that for every <math|L\<in\>L<rsub|m><around*|(|X;Y|)>>
-
-    <\equation*>
-      \<forall\><around*|(|h<rsub|1>,\<ldots\>,h<rsub|m>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>X<rsub|i<rsub|m-j+1>>
-    </equation*>
+    such that for every <math|L\<in\>L<rsub|m><around*|(|X;Y|)>> and
+    <math|\<forall\><around*|(|h<rsub|1>,\<ldots\>,h<rsub|m>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>X<rsub|i<rsub|m-j+1>>>
 
     we have\ 
 
@@ -18805,9 +19016,9 @@
     the normed space based on the product
     <math|X=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
     with the maximum norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|max>> [see
-    definition: <reference|normed maximum norm>], <math|A\<subseteq\>X>,
-    <math|x\<in\>A<rsup|\<circ\>>> and <math|f:A\<rightarrow\>Y> a function
-    that is <math|m>-times differentiable at <math|x> then
+    definition: <reference|normed maximum norm>], a open set
+    <math|U\<subseteq\>X>, <math|x\<in\>U> and <math|f:U\<rightarrow\>Y> a
+    function that is <math|m>-times differentiable at <math|x> then
     <math|\<forall\><around*|{|i<rsub|j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\><around*|{|1,\<ldots\>,n|}>>
     <math|f> has a partial derivative <math|D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>,\<ldots\>,i<rsub|1>>f>
     of order <math|m> at <math|x>. Further
@@ -18817,15 +19028,28 @@
     <\equation*>
       D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f<around*|(|h<rsub|1>:\<ldots\>:h<rsub|m>|)>=D<rsup|<around*|[|m|]>><rsub|x>f<around*|(|I<rsup|<around*|[|i<rsub|m>,0|]>><around*|(|h<rsub|1>|)>:\<ldots\>:I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|h<rsub|m>|)>|)>
     </equation*>
+
+    <\note>
+      As <math|U> is open it follows from [theorem: <reference|diff
+      differential domain examples>] that <math|U> is a differential domain
+      ensuring that <math|D<rsup|<around*|[|m|]>><rsub|x>f> is well defined.
+      Further using [theorem: <reference|diff partial differential domain
+      examples>] <math|U> is also a partial differential domain so that
+      <math|D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>,\<ldots\>,i<rsub|1>>f>
+      is also well defined. The condition that <math|U> is open is essential
+      because a differential domain is not necessary a partial differential
+      domain and a partial differential domain is not necessary a
+      differential domain.
+    </note>
   </theorem>
 
   <\proof>
     We prove this by induction, so let\ 
 
     <\equation*>
-      S=<around*|{|m\<in\>\<bbb-N\>\|<text|If <math|A\<subseteq\>X> and
-      >f:A\<rightarrow\>Y<text| is a function that is >m<text|-times
-      differentiable at <math|x\<in\>A<rsup|\<circ\>>> then
+      S=<around*|{|m\<in\>\<bbb-N\>\|<text|If <math|U\<subseteq\>X> and
+      >f:U\<rightarrow\>Y<text| is a function that is >m<text|-times
+      differentiable at <math|<rigid|x\<in\>U>> then
       >\<forall\><around*|{|i<rsub|j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\><around*|{|1,\<ldots\>,n|}>
       f<text| has a partial differential >D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f<text|
       of order <math|m> and ><rigid|\<forall\><around*|(|h<rsub|1>,\<ldots\>,h<rsub|m>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>X<rsub|i<rsub|m-j+1>><text|
@@ -18848,7 +19072,7 @@
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|D<rsup|<around*|[|1|]>><rsub|x,<wide*|i<rsub|1>\<ldots\>i<rsub|1>|\<wide-underbrace\>><rsub|1>>f<around*|(|<wide*|h<rsub|1>:\<ldots\>:h<rsub|1>|\<wide-underbrace\>><rsub|1>|)>>|<cell|=>|<cell|D<rsup|<around*|[|1|]>><rsub|x,<wide*|i<rsub|1>\<ldots\>i<rsub|1>|\<wide-underbrace\>><rsub|1>>f<around*|(|h<rsub|1>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
-        <reference|eq 16.287.124>]>>>|<cell|<around*|(|D<rsup|<around*|[|1|]>><rsub|x>f\<circ\>I<rsup|<around*|[|i,0|]>>|)><around*|(|h<rsub|1>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|1|]>><rsub|x>f<around*|(|I<rsup|<around*|[|i,0|]>><around*|(|h<rsub|1>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|1|]>><rsub|x>f<around*|(|<wide*|I<rsup|<around*|[|i,0|]>><around*|(|h<rsub|1>|)>\<ldots\>I<rsup|<around*|[|i,0|]>><around*|(|h<rsub|1>|)>|\<wide-underbrace\>><rsub|1>|)>>>>>
+        <reference|eq 16.287.124>]>>>|<cell|<around*|(|D<rsup|<around*|[|1|]>><rsub|x>f\<circ\>I<rsup|<around*|[|i,0|]>>|)><around*|(|h<rsub|1>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|1|]>><rsub|x>f<around*|(|I<rsup|<around*|[|i,0|]>><around*|(|h<rsub|1>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|1|]>><rsub|x>f<around*|(|<wide*|I<rsup|<around*|[|i,0|]>><around*|(|h<rsub|1>|)>:\<ldots\>:I<rsup|<around*|[|i,0|]>><around*|(|h<rsub|1>|)>|\<wide-underbrace\>><rsub|1>|)>>>>>
       </eqnarray*>
 
       Hence\ 
@@ -18861,12 +19085,11 @@
       <math|<around*|(|m+1|)>>-times differentiable at <math|x> and take
       <math|<around*|{|i<rsub|j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,m+1|}>>\<subseteq\><around*|{|1,\<ldots\>,n|}>>.
       As <math|f> is <math|<around*|(|m+1|)>>-times differentiable at
-      <math|x> there exist a open set <math|V> with
-      <math|x\<in\>V\<subseteq\>A> such that <math|\<forall\>y\<in\>V>
-      <math|f> is <math|m>-times differentiable at <math|y> and the function\ 
+      <math|x> we have that <math|<rigid|\<forall\>y\<in\>U>> <math|f> is
+      <math|m>-times differentiable at <math|y> and the function\ 
 
       <\equation*>
-        D<rsup|<around*|[|m|]>>f:V\<rightarrow\>L<rsub|m><around*|(|X;Y|)><text|
+        D<rsup|<around*|[|m|]>>f:U\<rightarrow\>L<rsub|m><around*|(|X;Y|)><text|
         defined by >D<rsup|<around*|[|m|]>>f<around*|(|y|)>=D<rsup|<around*|[|m|]>><rsub|y>f
       </equation*>
 
@@ -18876,35 +19099,33 @@
         <label|eq 16.288.124>D<rsup|<around*|[|m+1|]>><rsub|x>f=D<rsub|x><around*|(|D<rsup|<around*|[|m|]>>f|)>
       </equation>
 
-      As <math|m\<in\>S> and <math|y\<in\>V<below|=|<text|[theorem:
-      <reference|topology open set and interior>]>>V<rsup|\<circ\>>> it
-      follows that for <math|y\<in\>V> <math|D<rsup|<around*|[|m|]>><rsub|y,i<rsub|m>\<ldots\>i<rsub|1>>f>
-      exists and for <math|<around*|(|h<rsub|1>,\<ldots\>,h<rsub|m>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>X<rsub|m-j+1>>
+      As <math|m\<in\>S> and <math|y\<in\>U> it follows that for
+      <math|y\<in\>U> <math|D<rsup|<around*|[|m|]>><rsub|y,i<rsub|m>\<ldots\>i<rsub|1>>f>
+      exists and for <math|<around*|(|h<rsub|1>,\<ldots\>,h<rsub|m>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>X<rsub|i<rsub|m-j+1>>>
       we have\ 
 
       <\equation>
         <label|eq 16.289.124>D<rsup|<around*|[|m|]>><rsub|y,i<rsub|m>\<ldots\>i<rsub|1>>f<around*|(|h<rsub|1>:\<ldots\>:h<rsub|m>|)>=D<rsup|<around*|[|m|]>><rsub|y>f<around*|(|I<rsup|<around*|[|i<rsub|m>,0|]>><around*|(|h<rsub|1>|)>:\<ldots\>:I<rsup|<around*|(|i<rsub|1>,0|)>><around*|(|h<rsub|1>|)>|)>
       </equation>
 
-      As <math|\<forall\>y\<in\>V> <math|D<rsup|<around*|[|m|]>><rsub|y,i<rsub|m>\<ldots\>i<rsub|1>>f>
-      exist we can define
+      So we can define
 
       <\equation>
-        <label|eq 16.290.124>D<rsub|y,i<rsub|m>\<ldots\>i<rsub|1>><rsup|<around*|[|m|]>>f:V\<rightarrow\>L<rsub|m><around*|(|X<rsub|i<rsub|m>>\<ldots\>X<rsub|i<rsub|1>>;Y|)><text|
+        <label|eq 16.290.124>D<rsub|i<rsub|m>\<ldots\>i<rsub|1>><rsup|<around*|[|m|]>>f:U\<rightarrow\>L<rsub|m><around*|(|X<rsub|i<rsub|m>>\<ldots\>X<rsub|i<rsub|1>>;Y|)><text|
         by <math|D<rsub|i<rsub|m>\<ldots\>i<rsub|1>><rsup|<around*|[|m|]>>f<around*|(|y|)>=D<rsub|y,i<rsub|m>\<ldots\>i<rsub|1>><rsup|<around*|[|m|]>>f>>
       </equation>
 
       Using [lemma: <reference|lemma 16.195.124>] there exist a
       <math|\<Phi\>\<in\>L<around*|(|L<rsub|m><around*|(|X;Y|)>,L<rsub|m><around*|(|X<rsub|i<rsub|m>>\<ldots\>X<rsub|i<rsub|2>>;Y|)>|)>>
       such that <math|<rigid|\<forall\>L\<in\>L<rsub|m><around*|(|X;Y|)>>>
-      and <math|<around*|(|h<rsub|1>,\<ldots\>,h<rsub|m>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|m-j+1>>
+      and <math|<around*|(|h<rsub|1>,\<ldots\>,h<rsub|m>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i<rsub|m-j+1>>>
       we have
 
       <\equation>
         <label|eq 16.291.125>\<Phi\><around*|(|L|)><around*|(|h<rsub|1>:\<ldots\>:h<rsub|m>|)>=L<around*|(|I<rsup|<around*|[|i<rsub|m>,0|]>><around*|(|h<rsub|1>|)>:\<ldots\>:I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|h<rsub|m>|)>|)>
       </equation>
 
-      Let <math|y\<in\>V> and <math|<around*|(|h<rsub|1>,\<ldots\>,h<rsub|m>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|m-j+1>>
+      Let <math|y\<in\>U> and <math|<around*|(|h<rsub|1>,\<ldots\>,h<rsub|m>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>X<rsub|i<rsub|m-j+1>>>
       then as <math|D<rsup|<around*|[|m|]>>f<around*|(|y|)>=D<rsup|<around*|[|m|]>><rsub|y>f\<in\>L<rsub|m><around*|(|X;Y|)>>
       we have that\ 
 
@@ -18916,7 +19137,7 @@
 
       proving by [lemma: <reference|lemma 16.180.210>] that
       <math|<around*|(|\<Phi\>\<circ\>D<rsup|<around*|[|m|]>>f|)><around*|(|y|)>=D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f<around*|(|y|)>>
-      so that\ 
+      so that, as <math|y\<in\>U> was choosen arbitrary
 
       <\equation>
         <label|eq 16.291.124>\<Phi\>\<circ\>D<rsup|<around*|[|m|]>>f=D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f
@@ -18973,7 +19194,7 @@
       </equation>
 
       Further, as <math|D<rsup|<around*|[|m+1|]>><rsub|x>f\<in\>L<rsub|m+1><around*|(|X<rsub|>;Y|)>=L<around*|(|X,L<rsub|m><around*|(|X;Y|)>|)>>,
-      it follows that
+      it follows that for <math|h<rsub|1>\<in\>X<rsub|i<rsub|m+1>>>
 
       <\equation>
         <label|eq 16.296.125>D<rsup|<around*|[|m+1|]>><rsub|x>f<around*|(|I<rsup|<around*|[|i<rsub|m+1>,0|]>><around*|(|h<rsub|1>|)>|)>\<in\>L<rsub|m><around*|(|X;Y|)>
@@ -19016,7 +19237,7 @@
     <math|X> and\ 
 
     <\equation*>
-      f:U\<rightarrow\>Y<text| a function that is >C<rsup|m><text| on >U
+      f:U\<rightarrow\>Y<text| a function that is of class >C<rsup|m>
     </equation*>
 
     then <math|\<forall\><around*|{|i<rsub|j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\><around*|{|1,\<ldots\>,n|}>>
@@ -19035,31 +19256,44 @@
     </equation*>
 
     is continuous.
+
+    <\note>
+      As <math|U> is open it follows from [theorem: <reference|diff
+      differential domain examples>] that <math|U> is a differential domain
+      ensuring that class <math|C<rsup|m>> is well defined. Further using
+      [theorem: <reference|diff partial differential domain examples>]
+      <math|U> is also a partial differential domain so that
+      <math|D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>,\<ldots\>,i<rsub|1>>f>
+      is also well defined. The condition that <math|U> is open is essential
+      because a differential domain is not necessary a partial differential
+      domain and a partial differential domain is not necessary a
+      differential domain.
+    </note>
   </theorem>
 
   <\proof>
-    Let <math|x\<in\>U>, as <math|f> is <math|C<rsup|m>> on <math|U> <math|f>
-    is <math|m>-times differentiable at <math|x>. Hence, using the previous
-    theorem [theorem: <reference|diff higher order differation implies higher
-    order partial differation>] <math|f> has a partial derivative
-    <math|D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f> of
-    order <math|m> at <math|x> so we can define the function\ 
+    As <math|f> is of class <math|C<rsup|m>> <math|f> is <math|m>-times
+    differentiable at <math|x> <math|\<forall\>x\<in\>U> and\ 
+
+    <\equation*>
+      D<rsup|<around*|[|m|]>>f:U\<rightarrow\>L<rsub|m><around*|(|X;Y|)><text|
+      by >D<rsup|<around*|[|m|]>>f<around*|(|x|)>=D<rsup|<around*|[|m|]>><rsub|x>f<text|
+      is continuous>
+    </equation*>
+
+    <math|>Further using the previous theorem [theorem: <reference|diff
+    higher order differation implies higher order partial differation>]
+    <math|f> has a partial derivative <math|D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f>
+    of order <math|m> at <math|x> <math|\<forall\>x\<in\>U> so we can define
+    the function\ 
 
     <\equation*>
       D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f:U\<rightarrow\>L<rsub|m><around*|(|X<rsub|i<rsub|m>>\<ldots\>X<rsub|i<rsub|1>>;Y|)><text|
       by >D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f<around*|(|x|)>=D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f
     </equation*>
 
-    As <math|f> is <math|C<rsup|m>> on <math|U> we have that
-
-    <\equation*>
-      D<rsup|<around*|[|m|]>>f:U\<rightarrow\>L<rsub|m><around*|(|X;Y|)><text|
-      by >D<rsup|<around*|[|m|]>>f<around*|(|x|)>=D<rsup|<around*|[|m|]>><rsub|x>f<text|
-      is continuouss>
-    </equation*>
-
-    Further for every <math|<around*|(|h<rsub|1>,\<ldots\>,h<rsub|m>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>X<rsub|m-j+1>>
-    we have\ 
+    Let <math|<around*|(|h<rsub|1>,\<ldots\>,h<rsub|m>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>X<rsub|m-j+1>>
+    then we have
 
     <\equation*>
       D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f<around*|(|h<rsub|1>:\<ldots\>:h<rsub|m>|)><below|=|<text|[theorem:
@@ -19112,15 +19346,15 @@
     the normed space based on the product
     <math|X=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
     with the maximum norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|max>> [see
-    definition: <reference|normed maximum norm>], <math|A\<subseteq\>X>,
-    <math|x\<in\>A<rsup|\<circ\>>> and <math|f:F\<rightarrow\>Y> a function
-    that is <math|m>-times differentiable at <math|x>,
+    definition: <reference|normed maximum norm>], a open set <math|U> in
+    <math|X>, <math|<rigid|x\<in\>U>> and <math|f:U\<rightarrow\>Y> a
+    function that is <math|m>-times differentiable at <math|x>,
     <math|<around*|{|i<rsub|j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\><around*|{|1,\<ldots\>,n|}>>
     and <rigid|<math|<around*|(|h<rsub|1>,\<ldots\>,h<rsub|m>|)>\<in\><big|prod><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>X<rsub|m-j+1><rsub|>>>
     then <math|\<forall\>\<sigma\>\<in\>P<rsub|n>> we have\ 
 
     <\equation*>
-      D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>,\<ldots\>i<rsub|1>>f<around*|(|h<rsub|1>:\<ldots\>h<rsub|m>|)>=D<rsup|<around*|[|m|]>><rsub|i<rsub|\<sigma\><around*|(|m|)>>\<ldots\>i<rsub|\<sigma\><around*|(|1|)>>>f<around*|(|h<rsub|\<sigma\><around*|(|1|)>>,\<ldots\>,h<rsub|\<sigma\><around*|(|m|)>>|)>
+      D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>,\<ldots\>i<rsub|1>>f<around*|(|h<rsub|1>:\<ldots\>h<rsub|m>|)>=D<rsup|<around*|[|m|]>><rsub|i<rsub|\<sigma\><around*|(|m|)>>\<ldots\>i<rsub|\<sigma\><around*|(|1|)>>>f<around*|(|h<rsub|\<sigma\><around*|(|1|)>>:\<ldots\>:h<rsub|\<sigma\><around*|(|m|)>>|)>
     </equation*>
 
     <\note>
@@ -19136,7 +19370,7 @@
     <\eqnarray*>
       <tformat|<table|<row|<cell|D<rsup|<around*|[|m|]>><rsub|x,i<rsub|\<sigma\><around*|(|m|)>>,\<ldots\>i<rsub|\<sigma\><around*|(|1|)>>>f<around*|(|h<rsub|\<sigma\><around*|(|1|)>>:\<ldots\>h<rsub|\<sigma\><around*|(|m|)>>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
       <reference|diff higher order differation implies higher order partial
-      differation>]>>>|<cell|>>|<row|<cell|D<rsup|<around*|[|m|]>><rsub|x>f<around*|(|I<rsup|i<rsub|<around*|[|\<sigma\><around*|(|m|)>|]>,0>><around*|(|h<rsub|\<sigma\><around*|(|1|)>>|)>:\<ldots\>:I<rsup|<around*|[|i<rsub|\<sigma\><around*|(|1|)>>,0|]>><around*|(|h<rsub|\<sigma\><around*|(|m|)>>|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
+      differation>]>>>|<cell|>>|<row|<cell|D<rsup|<around*|[|m|]>><rsub|x>f<around*|(|I<rsup|<around*|[|i<rsub|\<sigma\><around*|(|m|)>>,0|]>><around*|(|h<rsub|\<sigma\><around*|(|1|)>>|)>:\<ldots\>:I<rsup|<around*|[|i<rsub|\<sigma\><around*|(|1|)>>,0|]>><around*|(|h<rsub|\<sigma\><around*|(|m|)>>|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
       <reference|diff higher order differentials are symmetric in there
       arguments>]>>>|<cell|>>|<row|<cell|D<rsup|<around*|[|m|]>><rsub|x><around*|(|I<rsup|<around*|[|i<rsub|m>,0|]>><around*|(|h<rsub|1>|)>:\<ldots\>:I<rsup|<around*|[|i<rsub|1>,0|]>><around*|(|h<rsub|1>|)>|)>>|<cell|\<equallim\><rsub|<text|[theorem:
       <reference|diff higher order differation implies higher order partial
@@ -19150,6 +19384,8 @@
   However if the partial derivatives exist on a open neighborhood of the
   point and are continuous then the function is differentiable at the point.
   To prove this we need first some lemma's and definitions.
+
+  TODO
 
   <\definition>
     Let <math|n\<in\>\<bbb-N\>>, <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
@@ -23733,8 +23969,8 @@
 
       As <math|\<cal-T\><rsub|1>> is <math|C<rsup|\<infty\>>> on <math|X>
       hence continuous, <math|W> is a open set, so applying [theorems:
-      <reference|diff higher order differentiation is local><reference|diff
-      class C^n sub-sets>] we have\ 
+      <reference|diff higher order differentials and
+      restriction>,<reference|diff class C^n sub-sets>] we have\ 
 
       <\equation>
         <label|eq 16.391.142><around*|(|\<cal-T\><rsub|1>|)><rsub|\|W>:W\<rightarrow\>X<text|
@@ -25762,218 +25998,222 @@
     <associate|auto-74|<tuple|16.7|?>>
     <associate|auto-8|<tuple|16.1.3|?>>
     <associate|auto-9|<tuple|differentiability|?>>
-    <associate|conjecture 16.245.136|<tuple|16.346|?>>
-    <associate|conjecture 16.246.136|<tuple|16.347|?>>
-    <associate|conjecture 16.247.136|<tuple|16.348|?>>
-    <associate|conjecture 16.248.136|<tuple|16.349|?>>
-    <associate|conjecture 16.252|<tuple|16.351|?>>
+    <associate|conjecture 16.245.136|<tuple|16.353|?>>
+    <associate|conjecture 16.246.136|<tuple|16.354|?>>
+    <associate|conjecture 16.247.136|<tuple|16.355|?>>
+    <associate|conjecture 16.248.136|<tuple|16.356|?>>
+    <associate|conjecture 16.252|<tuple|16.358|?>>
     <associate|continuity limit of composition of linear
-    maps|<tuple|16.326|?>>
+    maps|<tuple|16.333|?>>
     <associate|convergence of a function to a point|<tuple|16.8|?>>
-    <associate|corollary 16.50.192|<tuple|16.123|?>>
+    <associate|corollary 16.50.192|<tuple|16.125|?>>
     <associate|diff (f+g)'=f'+g'|<tuple|16.36|?>>
-    <associate|diff (f^n)'=((f^n-1)')'|<tuple|16.179|?>>
-    <associate|diff (f^n)'=((f^n-1)')' (1)|<tuple|16.181|?>>
+    <associate|diff (f^n)'=((f^n-1)')'|<tuple|16.181|?>>
+    <associate|diff (f^n)'=((f^n-1)')' (1)|<tuple|16.183|?>>
     <associate|diff Bx(x,d)|<tuple|16.7|?>>
-    <associate|diff C-infinity condition|<tuple|16.153|?>>
-    <associate|diff C^(n+m)|<tuple|16.175|?>>
-    <associate|diff C^1 and derivatives|<tuple|16.155|?>>
-    <associate|diff C^n and C^m|<tuple|16.170|?>>
-    <associate|diff D^f=D^(n-1)D^1f|<tuple|16.176|?>>
-    <associate|diff D^f=D^(n-1)D^1f (1)|<tuple|16.178|?>>
+    <associate|diff C-infinity condition|<tuple|16.155|?>>
+    <associate|diff C^(n+m)|<tuple|16.177|?>>
+    <associate|diff C^1 and derivatives|<tuple|16.157|?>>
+    <associate|diff C^n and C^m|<tuple|16.172|?>>
+    <associate|diff D^f=D^(n-1)D^1f|<tuple|16.178|?>>
+    <associate|diff D^f=D^(n-1)D^1f (1)|<tuple|16.180|?>>
     <associate|diff Frechet approximation|<tuple|16.37|?>>
     <associate|diff Frechet differentation implies partial differentiability
-    |<tuple|16.96|?>>
-    <associate|diff GL(X) is a group|<tuple|16.325|?>>
-    <associate|diff H^n properties|<tuple|16.329|?>>
+    |<tuple|16.97|?>>
+    <associate|diff GL(X) is a group|<tuple|16.332|?>>
+    <associate|diff H^n properties|<tuple|16.336|?>>
     <associate|diff I+H has inverse if norm of H is less then
-    1|<tuple|16.333|?>>
-    <associate|diff Jacobian matrix|<tuple|16.113|?>>
-    <associate|diff L(x1:..:xn) (1)|<tuple|16.275|?>>
-    <associate|diff L(x1:..xn)|<tuple|16.124|?>>
-    <associate|diff L(x1:..xn)=L(1:..:1). product|<tuple|16.128|?>>
-    <associate|diff L_n(X;Y)|<tuple|16.120|?>>
-    <associate|diff L_n(x1,..,xn;Y)|<tuple|16.270|?>>
-    <associate|diff Lagrange theorem|<tuple|16.216|?>>
-    <associate|diff Lagrange theorem (1)|<tuple|16.218|?>>
-    <associate|diff Rolle's theorem|<tuple|16.214|?>>
+    1|<tuple|16.340|?>>
+    <associate|diff Jacobian matrix|<tuple|16.115|?>>
+    <associate|diff L(x1:..:xn) (1)|<tuple|16.277|?>>
+    <associate|diff L(x1:..xn)|<tuple|16.126|?>>
+    <associate|diff L(x1:..xn)=L(1:..:1). product|<tuple|16.130|?>>
+    <associate|diff L_n(X;Y)|<tuple|16.122|?>>
+    <associate|diff L_n(x1,..,xn;Y)|<tuple|16.272|?>>
+    <associate|diff Lagrange theorem|<tuple|16.218|?>>
+    <associate|diff Lagrange theorem (1)|<tuple|16.220|?>>
+    <associate|diff Rolle's theorem|<tuple|16.216|?>>
     <associate|diff SA(a)|<tuple|16.48|?>>
     <associate|diff SA(a) definition|<tuple|16.47|?>>
-    <associate|diff Taylor I|<tuple|16.357|?>>
-    <associate|diff Taylor I.1|<tuple|16.359|?>>
-    <associate|diff Taylor I.2|<tuple|16.362|?>>
+    <associate|diff Taylor I|<tuple|16.364|?>>
+    <associate|diff Taylor I.1|<tuple|16.366|?>>
+    <associate|diff Taylor I.2|<tuple|16.369|?>>
     <associate|diff Ux|<tuple|16.4|?>>
     <associate|diff Ux=-x+U=U-x|<tuple|16.6|?>>
-    <associate|diff balls are convex|<tuple|16.233|?>>
+    <associate|diff balls are convex|<tuple|16.235|?>>
     <associate|diff bilinear mappings are infinite times
-    differentiable|<tuple|16.196|?>>
+    differentiable|<tuple|16.198|?>>
     <associate|diff calculus derivate|<tuple|16.21|?>>
     <associate|diff calculus derivate (1)|<tuple|16.17|?>>
     <associate|diff calculus derivate (2)|<tuple|16.25|?>>
     <associate|diff chain rule|<tuple|16.81|?>>
     <associate|diff chain rule (1)|<tuple|16.82|?>>
-    <associate|diff chain rule and partial differential|<tuple|16.101|?>>
+    <associate|diff chain rule and partial differential|<tuple|16.103|?>>
     <associate|diff chain rule calculus|<tuple|16.84|?>>
-    <associate|diff chain rule higher order|<tuple|16.204|?>>
-    <associate|diff chain rule higher order class|<tuple|16.207|?>>
+    <associate|diff chain rule higher order|<tuple|16.206|?>>
+    <associate|diff chain rule higher order class|<tuple|16.209|?>>
     <associate|diff class C^1 is equivalent with continuous partial
-    derivatest|<tuple|16.300|?>>
-    <associate|diff class C^@@|<tuple|16.152|?>>
-    <associate|diff class C^n|<tuple|16.150|?>>
-    <associate|diff class C^n sub-sets|<tuple|16.151|?>>
+    derivatest|<tuple|16.307|?>>
+    <associate|diff class C^@@|<tuple|16.154|?>>
+    <associate|diff class C^n|<tuple|16.152|?>>
+    <associate|diff class C^n sub-sets|<tuple|16.153|?>>
     <associate|diff composition with a linear mapping|<tuple|16.85|?>>
     <associate|diff cone|<tuple|16.40|?>>
     <associate|diff constant function and partial
-    differentiation|<tuple|16.97|?>>
+    differentiation|<tuple|16.99|?>>
     <associate|diff constant function is differentiable|<tuple|16.56|?>>
     <associate|diff constant function is infinitely times
-    differentiable|<tuple|16.185|?>>
+    differentiable|<tuple|16.187|?>>
     <associate|diff continuous partial differentials implies
-    differentiability|<tuple|16.299|?>>
-    <associate|diff convex concave|<tuple|16.222|?>>
-    <associate|diff convex set|<tuple|16.232|?>>
-    <associate|diff convex/concave alternative|<tuple|16.223|?>>
+    differentiability|<tuple|16.306|?>>
+    <associate|diff convex concave|<tuple|16.224|?>>
+    <associate|diff convex set|<tuple|16.234|?>>
+    <associate|diff convex/concave alternative|<tuple|16.225|?>>
     <associate|diff derivate and frechet differential|<tuple|16.73|?>>
-    <associate|diff derivate and local extremum|<tuple|16.212|?>>
-    <associate|diff derivate of a product of functions|<tuple|16.116|?>>
-    <associate|diff derivate of inverse function|<tuple|16.117|?>>
+    <associate|diff derivate and local extremum|<tuple|16.214|?>>
+    <associate|diff derivate of a product of functions|<tuple|16.118|?>>
+    <associate|diff derivate of inverse function|<tuple|16.119|?>>
     <associate|diff derivate operator is linear|<tuple|16.79|?>>
     <associate|diff derivative is local|<tuple|16.33|?>>
     <associate|diff derivative is local (0)|<tuple|16.75|?>>
     <associate|diff derivative is local (1)|<tuple|16.78|?>>
     <associate|diff derivative of constant|<tuple|16.26|?>>
-    <associate|diff derivative of f/g|<tuple|16.119|?>>
+    <associate|diff derivative of f/g|<tuple|16.121|?>>
     <associate|diff derivative of identity function|<tuple|16.27|?>>
     <associate|diff derivatives and continuity|<tuple|16.32|?>>
-    <associate|diff diffeomorphism|<tuple|16.335|?>>
-    <associate|diff diffeomorphism D(f@f^-1)|<tuple|16.340|?>>
-    <associate|diff diffeomorphism composition|<tuple|16.341|?>>
-    <associate|diff diffeomorphism condition|<tuple|16.339|?>>
+    <associate|diff diffeomorphism|<tuple|16.342|?>>
+    <associate|diff diffeomorphism D(f@f^-1)|<tuple|16.347|?>>
+    <associate|diff diffeomorphism composition|<tuple|16.348|?>>
+    <associate|diff diffeomorphism condition|<tuple|16.346|?>>
     <associate|diff differentiability|<tuple|16.49|?>>
     <associate|diff differentiability alternative
     definitions|<tuple|16.66|?>>
     <associate|diff differentiability alternative definitions
     (1)|<tuple|16.67|?>>
-    <associate|diff differentiability and K^n|<tuple|16.106|?>>
+    <associate|diff differentiability and K^n|<tuple|16.108|?>>
     <associate|diff differentiability is a local property|<tuple|16.61|?>>
     <associate|diff differentiability is a local property
     (1)|<tuple|16.63|?>>
     <associate|diff differentiability on a set|<tuple|16.53|?>>
     <associate|diff differentiable function is continuous|<tuple|16.68|?>>
+    <associate|diff differential domain|<tuple|16.141|?>>
+    <associate|diff differential domain examples|<tuple|16.142|?>>
     <associate|diff differential of a vector valued
-    function|<tuple|16.111|?>>
-    <associate|diff differential of product of functions|<tuple|16.115|?>>
+    function|<tuple|16.113|?>>
+    <associate|diff differential of product of functions|<tuple|16.117|?>>
     <associate|diff e-mapping|<tuple|16.65|?>>
     <associate|diff equivalent norms|<tuple|16.60|?>>
-    <associate|diff evaluation operator|<tuple|16.254|?>>
+    <associate|diff evaluation operator|<tuple|16.256|?>>
     <associate|diff f is of class C^n if D^1f u=is of class C^n-1
-    (1)|<tuple|16.182|?>>
-    <associate|diff f(t)=a.x+y is infinite differentiable|<tuple|16.190|?>>
-    <associate|diff f^(n+m)|<tuple|16.173|?>>
-    <associate|diff f^(n+m) (1)|<tuple|16.174|?>>
-    <associate|diff fundamental theorem of calculus (1)|<tuple|16.226|?>>
-    <associate|diff fundamental theorem of calculus (2)|<tuple|16.228|?>>
+    (1)|<tuple|16.184|?>>
+    <associate|diff f(t)=a.x+y is infinite differentiable|<tuple|16.192|?>>
+    <associate|diff f^(n+m)|<tuple|16.175|?>>
+    <associate|diff f^(n+m) (1)|<tuple|16.176|?>>
+    <associate|diff fundamental theorem of calculus (1)|<tuple|16.228|?>>
+    <associate|diff fundamental theorem of calculus (2)|<tuple|16.230|?>>
     <associate|diff higher order continuous differential and higher order
-    continuous derivate|<tuple|16.313|?>>
-    <associate|diff higher order derivate|<tuple|16.158|?>>
-    <associate|diff higher order derivate and differential|<tuple|16.161|?>>
-    <associate|diff higher order derivate is linear|<tuple|16.184|?>>
-    <associate|diff higher order derivate on a open set|<tuple|16.165|?>>
-    <associate|diff higher order derivates|<tuple|16.301|?>>
-    <associate|diff higher order derivativing is local|<tuple|16.164|?>>
+    continuous derivate|<tuple|16.320|?>>
+    <associate|diff higher order derivate|<tuple|16.160|?>>
+    <associate|diff higher order derivate and differential|<tuple|16.163|?>>
+    <associate|diff higher order derivate is linear|<tuple|16.186|?>>
+    <associate|diff higher order derivate on a open set|<tuple|16.167|?>>
+    <associate|diff higher order derivates|<tuple|16.308|?>>
+    <associate|diff higher order derivativing is local|<tuple|16.166|?>>
     <associate|diff higher order differation implies higher order partial
-    differation|<tuple|16.291|?>>
-    <associate|diff higher order differential is linear|<tuple|16.183|?>>
-    <associate|diff higher order differential of a product|<tuple|16.206|?>>
+    differation|<tuple|16.296|?>>
+    <associate|diff higher order differential is linear|<tuple|16.185|?>>
+    <associate|diff higher order differential of a product|<tuple|16.208|?>>
     <associate|diff higher order differential of a product
-    (1)|<tuple|16.209|?>>
+    (1)|<tuple|16.211|?>>
     <associate|diff higher order differentials and
-    restriction|<tuple|16.146|?>>
+    restriction|<tuple|16.148|?>>
     <associate|diff higher order differentials are symmetric in there
-    arguments|<tuple|16.266|?>>
-    <associate|diff higher order differentiation|<tuple|16.141|?>>
-    <associate|diff higher order differentiation (1)|<tuple|16.148|?>>
+    arguments|<tuple|16.268|?>>
+    <associate|diff higher order differentiation|<tuple|16.143|?>>
+    <associate|diff higher order differentiation (1)|<tuple|16.150|?>>
     <associate|diff higher order differentiation and vector
-    functions|<tuple|16.201|?>>
-    <associate|diff higher order differentiation classes|<tuple|16.202|?>>
+    functions|<tuple|16.203|?>>
+    <associate|diff higher order differentiation classes|<tuple|16.204|?>>
     <associate|diff higher order differentiation implies higher order
-    derivates|<tuple|16.316|?>>
+    derivates|<tuple|16.323|?>>
     <associate|diff higher order differentiation implies higher order partial
-    differation (1)|<tuple|16.292|?>>
+    differation (1)|<tuple|16.298|?>>
     <associate|diff higher order differentiation on a open
-    set|<tuple|16.145|?>>
-    <associate|diff higher order partial differentiation|<tuple|16.285|?>>
+    set|<tuple|16.147|?>>
+    <associate|diff higher order partial differentiation|<tuple|16.290|?>>
     <associate|diff higher order partial differentiation is
-    symmetric|<tuple|16.293|?>>
+    symmetric|<tuple|16.300|?>>
     <associate|diff homeomorphism is a diffeomorphism of class
-    C^0|<tuple|16.336|?>>
+    C^0|<tuple|16.343|?>>
     <associate|diff identity function is differentiable|<tuple|16.58|?>>
     <associate|diff identity function is infinite times
-    differentiable|<tuple|16.188|?>>
-    <associate|diff implicit function theorem|<tuple|16.355|?>>
-    <associate|diff implicit function theorem (1)|<tuple|16.356|?>>
-    <associate|diff increasing decreasing function|<tuple|16.220|?>>
-    <associate|diff inifint=ite differentiable|<tuple|16.147|?>>
-    <associate|diff inverse function theorem|<tuple|16.343|?>>
-    <associate|diff inverse function theorem and Jacobian|<tuple|16.352|?>>
-    <associate|diff inverse mapping on GL(X)|<tuple|16.334|?>>
+    differentiable|<tuple|16.190|?>>
+    <associate|diff implicit function theorem|<tuple|16.362|?>>
+    <associate|diff implicit function theorem (1)|<tuple|16.363|?>>
+    <associate|diff increasing decreasing function|<tuple|16.222|?>>
+    <associate|diff inifint=ite differentiable|<tuple|16.149|?>>
+    <associate|diff inverse function theorem|<tuple|16.350|?>>
+    <associate|diff inverse function theorem and Jacobian|<tuple|16.359|?>>
+    <associate|diff inverse mapping on GL(X)|<tuple|16.341|?>>
     <associate|diff limit of a function|<tuple|16.11|?>>
-    <associate|diff line segment [0,1]|<tuple|16.238|?>>
+    <associate|diff line segment [0,1]|<tuple|16.240|?>>
     <associate|diff linear isomorphism between Banach spaces are
-    diffeomorphisms|<tuple|16.337|?>>
+    diffeomorphisms|<tuple|16.344|?>>
     <associate|diff linear mapping is infinite times
-    differentiable|<tuple|16.187|?>>
+    differentiable|<tuple|16.189|?>>
     <associate|diff linear mappings are differentiable|<tuple|16.57|?>>
-    <associate|diff linear to multilinear|<tuple|16.136|?>>
-    <associate|diff linear to multilinear (1)|<tuple|16.283|?>>
-    <associate|diff linesegement|<tuple|16.236|?>>
-    <associate|diff little o|<tuple|16.361|?>>
-    <associate|diff little o and limits|<tuple|16.363|?>>
-    <associate|diff local diffeomorphism|<tuple|16.342|?>>
-    <associate|diff mean value theorem (0)|<tuple|16.235|?>>
-    <associate|diff mean value theorem (1)|<tuple|16.231|?>>
-    <associate|diff mean value theorem (2)|<tuple|16.235|?>>
-    <associate|diff mean value theorem (2.1)|<tuple|16.240|?>>
-    <associate|diff mean value theorem (3)|<tuple|16.242|?>>
-    <associate|diff mean value theorem (3.1)|<tuple|16.244|?>>
-    <associate|diff mean value theorem (4)|<tuple|16.246|?>>
-    <associate|diff mean value theorem (5)|<tuple|16.249|?>>
-    <associate|diff minimum maximum|<tuple|16.210|?>>
+    <associate|diff linear to multilinear|<tuple|16.138|?>>
+    <associate|diff linear to multilinear (1)|<tuple|16.285|?>>
+    <associate|diff linesegement|<tuple|16.238|?>>
+    <associate|diff little o|<tuple|16.368|?>>
+    <associate|diff little o and limits|<tuple|16.370|?>>
+    <associate|diff local diffeomorphism|<tuple|16.349|?>>
+    <associate|diff mean value theorem (0)|<tuple|16.237|?>>
+    <associate|diff mean value theorem (1)|<tuple|16.233|?>>
+    <associate|diff mean value theorem (2)|<tuple|16.237|?>>
+    <associate|diff mean value theorem (2.1)|<tuple|16.242|?>>
+    <associate|diff mean value theorem (3)|<tuple|16.244|?>>
+    <associate|diff mean value theorem (3.1)|<tuple|16.246|?>>
+    <associate|diff mean value theorem (4)|<tuple|16.248|?>>
+    <associate|diff mean value theorem (5)|<tuple|16.251|?>>
+    <associate|diff minimum maximum|<tuple|16.212|?>>
     <associate|diff multiparameter function to one parameter
     function|<tuple|16.88|?>>
-    <associate|diff n+m differentiation|<tuple|16.171|?>>
-    <associate|diff n+m differentiation (1)|<tuple|16.172|?>>
-    <associate|diff n-times and m-times derivating|<tuple|16.168|?>>
-    <associate|diff n-times and m-times derivating (1)|<tuple|16.169|?>>
-    <associate|diff n-times and m-times differentiability|<tuple|16.166|?>>
+    <associate|diff n+m differentiation|<tuple|16.173|?>>
+    <associate|diff n+m differentiation (1)|<tuple|16.174|?>>
+    <associate|diff n-times and m-times derivating|<tuple|16.170|?>>
+    <associate|diff n-times and m-times derivating (1)|<tuple|16.171|?>>
+    <associate|diff n-times and m-times differentiability|<tuple|16.168|?>>
     <associate|diff n-times and m-times differentiability
-    (1)|<tuple|16.167|?>>
+    (1)|<tuple|16.169|?>>
     <associate|diff partial derivate and partial
-    differential|<tuple|16.104|?>>
+    differential|<tuple|16.106|?>>
     <associate|diff partial derivate and partial differential of higher
-    order|<tuple|16.305|?>>
+    order|<tuple|16.312|?>>
     <associate|diff partial derivate and partial differential of higher order
-    (1)|<tuple|16.309|?>>
+    (1)|<tuple|16.316|?>>
     <associate|diff partial derivate and partial differential of higher order
-    (2)|<tuple|16.310|?>>
-    <associate|diff partial derivate definition|<tuple|16.102|?>>
-    <associate|diff partial derivation is local|<tuple|16.105|?>>
+    (2)|<tuple|16.317|?>>
+    <associate|diff partial derivate definition|<tuple|16.104|?>>
+    <associate|diff partial derivation is local|<tuple|16.107|?>>
     <associate|diff partial differentiability does not mean
-    differentiaility|<tuple|16.99|?>>
+    differentiaility|<tuple|16.101|?>>
     <associate|diff partial differential definition|<tuple|16.89|?>>
     <associate|diff partial differential definition (1)|<tuple|16.91|?>>
-    <associate|diff partial differential properties|<tuple|16.100|?>>
-    <associate|diff partial differentiation is local|<tuple|16.94|?>>
-    <associate|diff partial differentiation is local (1)|<tuple|16.95|?>>
-    <associate|diff power|<tuple|16.118|?>>
-    <associate|diff power of composition|<tuple|16.328|?>>
+    <associate|diff partial differential domain|<tuple|16.287|?>>
+    <associate|diff partial differential domain examples|<tuple|16.289|?>>
+    <associate|diff partial differential properties|<tuple|16.102|?>>
+    <associate|diff partial differentiation is local|<tuple|16.95|?>>
+    <associate|diff partial differentiation is local (1)|<tuple|16.96|?>>
+    <associate|diff power|<tuple|16.120|?>>
+    <associate|diff power of composition|<tuple|16.335|?>>
     <associate|diff projection functon is infinite times
-    differentiable|<tuple|16.195|?>>
+    differentiable|<tuple|16.197|?>>
     <associate|diff restriction of a diffeomorphism is a
-    diffeomorphism|<tuple|16.338|?>>
+    diffeomorphism|<tuple|16.345|?>>
     <associate|diff scalar product function has a derivate|<tuple|16.29|?>>
-    <associate|diff second derivate convex concave|<tuple|16.224|?>>
-    <associate|diff space of toplinear isomorphism|<tuple|16.324|?>>
+    <associate|diff second derivate convex concave|<tuple|16.226|?>>
+    <associate|diff space of toplinear isomorphism|<tuple|16.331|?>>
     <associate|diff tangent cone|<tuple|16.39|?>>
     <associate|diff tangent cone and inclusion|<tuple|16.44|?>>
     <associate|diff tangent cone and limit point|<tuple|16.71|?>>
@@ -25981,20 +26221,18 @@
     <associate|diff tangent cone is a cone|<tuple|16.41|?>>
     <associate|diff tangent cone of inner point|<tuple|16.46|?>>
     <associate|diff tangent cone of open sets|<tuple|16.45|?>>
-    <associate|diff tangential spanning set|<tuple|16.139|?>>
-    <associate|diff tangential spanning set examples|<tuple|16.140|?>>
     <associate|diff toplinear isomorphism between Banach
-    spaces|<tuple|16.323|?>>
-    <associate|diff translation is infinite differentiable|<tuple|16.193|?>>
+    spaces|<tuple|16.330|?>>
+    <associate|diff translation is infinite differentiable|<tuple|16.195|?>>
     <associate|diff uniqueness of the Frechet aproximation|<tuple|16.42|?>>
     <associate|diff unprojection|<tuple|16.86|?>>
     <associate|diff unprojection is infinite times
-    differentiable|<tuple|16.192|?>>
-    <associate|diff vector functions|<tuple|16.107|?>>
-    <associate|diff vector functions (1)|<tuple|16.110|?>>
-    <associate|diff vector functions (2)|<tuple|16.112|?>>
-    <associate|diff vector functions and linearity|<tuple|16.109|?>>
-    <associate|eq 14.411.143|<tuple|16.505|?>>
+    differentiable|<tuple|16.194|?>>
+    <associate|diff vector functions|<tuple|16.109|?>>
+    <associate|diff vector functions (1)|<tuple|16.112|?>>
+    <associate|diff vector functions (2)|<tuple|16.114|?>>
+    <associate|diff vector functions and linearity|<tuple|16.111|?>>
+    <associate|eq 14.411.143|<tuple|16.507|?>>
     <associate|eq 16.1.1|<tuple|16.1|?>>
     <associate|eq 16.1.177|<tuple|16.25|?>>
     <associate|eq 16.10.178|<tuple|16.76|?>>
@@ -26061,7 +26299,7 @@
     <associate|eq 16.17.1|<tuple|16.21|?>>
     <associate|eq 16.17.178|<tuple|16.90|?>>
     <associate|eq 16.17.180|<tuple|16.109|?>>
-    <associate|eq 16.176.211|<tuple|16.276|?>>
+    <associate|eq 16.176.211|<tuple|16.278|?>>
     <associate|eq 16.179.200|<tuple|16.251|?>>
     <associate|eq 16.18.1|<tuple|16.22|?>>
     <associate|eq 16.18.179|<tuple|16.91|?>>
@@ -26194,277 +26432,279 @@
     <associate|eq 16.264.12|<tuple|16.238|?>>
     <associate|eq 16.27.1|<tuple|16.38|?>>
     <associate|eq 16.27.6|<tuple|16.29|?>>
-    <associate|eq 16.270.142|<tuple|16.358|?>>
-    <associate|eq 16.271.142|<tuple|16.359|?>>
+    <associate|eq 16.270.142|<tuple|16.360|?>>
+    <associate|eq 16.271.142|<tuple|16.361|?>>
     <associate|eq 16.272.12|<tuple|16.249|?>>
-    <associate|eq 16.272.142|<tuple|16.362|?>>
-    <associate|eq 16.272.143|<tuple|16.361|?>>
+    <associate|eq 16.272.142|<tuple|16.364|?>>
+    <associate|eq 16.272.143|<tuple|16.363|?>>
     <associate|eq 16.273.12|<tuple|16.250|?>>
-    <associate|eq 16.273.142|<tuple|16.363|?>>
-    <associate|eq 16.275.142|<tuple|16.365|?>>
+    <associate|eq 16.273.142|<tuple|16.365|?>>
+    <associate|eq 16.275.142|<tuple|16.367|?>>
     <associate|eq 16.277.12|<tuple|16.254|?>>
     <associate|eq 16.278.12|<tuple|16.255|?>>
     <associate|eq 16.279.12|<tuple|16.256|?>>
-    <associate|eq 16.279.124|<tuple|16.338|?>>
+    <associate|eq 16.279.124|<tuple|16.340|?>>
     <associate|eq 16.28.1|<tuple|16.30|?>>
     <associate|eq 16.280.12|<tuple|16.257|?>>
-    <associate|eq 16.280.124|<tuple|16.339|?>>
-    <associate|eq 16.280.125|<tuple|16.356|?>>
+    <associate|eq 16.280.124|<tuple|16.341|?>>
+    <associate|eq 16.280.125|<tuple|16.358|?>>
     <associate|eq 16.281.12|<tuple|16.258|?>>
-    <associate|eq 16.281.124|<tuple|16.340|?>>
+    <associate|eq 16.281.124|<tuple|16.342|?>>
     <associate|eq 16.282.12|<tuple|16.259|?>>
-    <associate|eq 16.282.124|<tuple|16.341|?>>
+    <associate|eq 16.282.124|<tuple|16.343|?>>
     <associate|eq 16.282.125|<tuple|<with|mode|<quote|math>|k\<in\><around*|{|i+1,\<ldots\>,n|}>>|?>>
-    <associate|eq 16.283.124|<tuple|16.342|?>>
-    <associate|eq 16.284.124|<tuple|16.343|?>>
-    <associate|eq 16.284.126|<tuple|16.366|?>>
-    <associate|eq 16.285.124|<tuple|16.344|?>>
-    <associate|eq 16.285.126|<tuple|16.367|?>>
-    <associate|eq 16.286.124|<tuple|16.345|?>>
-    <associate|eq 16.286.126|<tuple|16.368|?>>
-    <associate|eq 16.287.124|<tuple|16.346|?>>
-    <associate|eq 16.287.126|<tuple|16.369|?>>
+    <associate|eq 16.283.124|<tuple|16.344|?>>
+    <associate|eq 16.284.124|<tuple|16.345|?>>
+    <associate|eq 16.284.126|<tuple|16.368|?>>
+    <associate|eq 16.285.124|<tuple|16.346|?>>
+    <associate|eq 16.285.126|<tuple|16.369|?>>
+    <associate|eq 16.286.124|<tuple|16.347|?>>
+    <associate|eq 16.286.126|<tuple|16.370|?>>
+    <associate|eq 16.287.124|<tuple|16.348|?>>
+    <associate|eq 16.287.126|<tuple|16.371|?>>
     <associate|eq 16.287.300|<tuple|16.261|?>>
-    <associate|eq 16.288.124|<tuple|16.347|?>>
-    <associate|eq 16.288.126|<tuple|16.370|?>>
+    <associate|eq 16.288.124|<tuple|16.349|?>>
+    <associate|eq 16.288.126|<tuple|16.372|?>>
     <associate|eq 16.288.300|<tuple|16.263|?>>
     <associate|eq 16.288.300.2|<tuple|16.262|?>>
     <associate|eq 16.289.12|<tuple|16.272|?>>
-    <associate|eq 16.289.124|<tuple|16.348|?>>
-    <associate|eq 16.289.126|<tuple|16.371|?>>
+    <associate|eq 16.289.124|<tuple|16.350|?>>
+    <associate|eq 16.289.126|<tuple|16.373|?>>
     <associate|eq 16.289.300|<tuple|16.264|?>>
     <associate|eq 16.29.1|<tuple|16.40|?>>
-    <associate|eq 16.290.124|<tuple|16.349|?>>
-    <associate|eq 16.290.126|<tuple|16.372|?>>
+    <associate|eq 16.290.124|<tuple|16.351|?>>
+    <associate|eq 16.290.126|<tuple|16.374|?>>
     <associate|eq 16.290.300|<tuple|16.265|?>>
-    <associate|eq 16.291.124|<tuple|16.351|?>>
-    <associate|eq 16.291.125|<tuple|16.350|?>>
-    <associate|eq 16.291.126|<tuple|16.373|?>>
+    <associate|eq 16.291.124|<tuple|16.353|?>>
+    <associate|eq 16.291.125|<tuple|16.352|?>>
+    <associate|eq 16.291.126|<tuple|16.375|?>>
     <associate|eq 16.291.300|<tuple|16.266|?>>
-    <associate|eq 16.292.124|<tuple|16.352|?>>
-    <associate|eq 16.292.126|<tuple|16.374|?>>
+    <associate|eq 16.292.124|<tuple|16.354|?>>
+    <associate|eq 16.292.126|<tuple|16.376|?>>
     <associate|eq 16.292.300|<tuple|16.268|?>>
     <associate|eq 16.292.300.1|<tuple|16.267|?>>
-    <associate|eq 16.293.124|<tuple|16.353|?>>
-    <associate|eq 16.293.126|<tuple|16.375|?>>
-    <associate|eq 16.293.128|<tuple|16.376|?>>
+    <associate|eq 16.293.124|<tuple|16.355|?>>
+    <associate|eq 16.293.126|<tuple|16.377|?>>
+    <associate|eq 16.293.128|<tuple|16.378|?>>
     <associate|eq 16.293.300|<tuple|16.269|?>>
-    <associate|eq 16.294.124|<tuple|16.354|?>>
-    <associate|eq 16.295.126|<tuple|16.377|?>>
-    <associate|eq 16.295.128|<tuple|16.378|?>>
-    <associate|eq 16.296.125|<tuple|16.355|?>>
+    <associate|eq 16.294.124|<tuple|16.356|?>>
+    <associate|eq 16.295.126|<tuple|16.379|?>>
+    <associate|eq 16.295.128|<tuple|16.380|?>>
+    <associate|eq 16.296.125|<tuple|16.357|?>>
     <associate|eq 16.296.301|<tuple|16.270|?>>
-    <associate|eq 16.297.126|<tuple|16.379|?>>
+    <associate|eq 16.297.126|<tuple|16.381|?>>
     <associate|eq 16.297.301|<tuple|16.271|?>>
-    <associate|eq 16.298.126|<tuple|16.380|?>>
+    <associate|eq 16.298.126|<tuple|16.382|?>>
     <associate|eq 16.298.310|<tuple|16.298|?>>
-    <associate|eq 16.299.126|<tuple|16.381|?>>
+    <associate|eq 16.299.126|<tuple|16.383|?>>
     <associate|eq 16.3.1|<tuple|16.3|?>>
     <associate|eq 16.3.177|<tuple|16.31|?>>
     <associate|eq 16.30.1|<tuple|16.41|?>>
-    <associate|eq 16.300.126|<tuple|16.382|?>>
-    <associate|eq 16.300.127|<tuple|16.383|?>>
-    <associate|eq 16.300.142|<tuple|16.475|?>>
-    <associate|eq 16.301.127|<tuple|16.384|?>>
-    <associate|eq 16.301.144|<tuple|16.395|?>>
-    <associate|eq 16.301.144.1|<tuple|16.394|?>>
-    <associate|eq 16.302.127|<tuple|16.387|?>>
-    <associate|eq 16.302.144|<tuple|16.396|?>>
-    <associate|eq 16.303.127|<tuple|16.388|?>>
-    <associate|eq 16.303.144|<tuple|16.397|?>>
-    <associate|eq 16.304.127|<tuple|16.390|?>>
-    <associate|eq 16.305.127|<tuple|16.391|?>>
-    <associate|eq 16.305.144|<tuple|16.398|?>>
+    <associate|eq 16.300.126|<tuple|16.384|?>>
+    <associate|eq 16.300.127|<tuple|16.385|?>>
+    <associate|eq 16.300.142|<tuple|16.477|?>>
+    <associate|eq 16.301.127|<tuple|16.386|?>>
+    <associate|eq 16.301.144|<tuple|16.397|?>>
+    <associate|eq 16.301.144.1|<tuple|16.396|?>>
+    <associate|eq 16.302.127|<tuple|16.389|?>>
+    <associate|eq 16.302.144|<tuple|16.398|?>>
+    <associate|eq 16.303.127|<tuple|16.390|?>>
+    <associate|eq 16.303.144|<tuple|16.399|?>>
+    <associate|eq 16.304.127|<tuple|16.392|?>>
+    <associate|eq 16.305.127|<tuple|16.393|?>>
+    <associate|eq 16.305.144|<tuple|16.400|?>>
     <associate|eq 16.305.302|<tuple|16.275|?>>
-    <associate|eq 16.306.127|<tuple|16.392|?>>
+    <associate|eq 16.306.127|<tuple|16.394|?>>
     <associate|eq 16.306.302|<tuple|16.276|?>>
-    <associate|eq 16.307.127|<tuple|16.393|?>>
+    <associate|eq 16.307.127|<tuple|16.395|?>>
     <associate|eq 16.307.302|<tuple|16.277|?>>
-    <associate|eq 16.308.127|<tuple|16.400|?>>
-    <associate|eq 16.308.128|<tuple|16.399|?>>
+    <associate|eq 16.308.127|<tuple|16.402|?>>
+    <associate|eq 16.308.128|<tuple|16.401|?>>
     <associate|eq 16.308.302|<tuple|16.279|?>>
-    <associate|eq 16.309.127|<tuple|16.401|?>>
+    <associate|eq 16.309.127|<tuple|16.403|?>>
     <associate|eq 16.309.302|<tuple|16.280|?>>
     <associate|eq 16.31.1|<tuple|16.43|?>>
-    <associate|eq 16.310.127|<tuple|16.403|?>>
-    <associate|eq 16.310.128|<tuple|16.402|?>>
+    <associate|eq 16.310.127|<tuple|16.405|?>>
+    <associate|eq 16.310.128|<tuple|16.404|?>>
     <associate|eq 16.310.302|<tuple|16.281|?>>
     <associate|eq 16.310\<point\>200|<tuple|16.310|?>>
-    <associate|eq 16.311.127|<tuple|16.404|?>>
+    <associate|eq 16.311.127|<tuple|16.406|?>>
     <associate|eq 16.311.302|<tuple|16.282|?>>
-    <associate|eq 16.312.127|<tuple|16.405|?>>
+    <associate|eq 16.312.127|<tuple|16.407|?>>
     <associate|eq 16.312.301|<tuple|16.283|?>>
     <associate|eq 16.313.302|<tuple|16.284|?>>
-    <associate|eq 16.314.128|<tuple|16.406|?>>
+    <associate|eq 16.314.128|<tuple|16.408|?>>
     <associate|eq 16.314.302|<tuple|16.285|?>>
-    <associate|eq 16.315.128|<tuple|16.407|?>>
+    <associate|eq 16.315.128|<tuple|16.409|?>>
     <associate|eq 16.315.302|<tuple|16.286|?>>
     <associate|eq 16.316.302|<tuple|16.288|?>>
     <associate|eq 16.316.303|<tuple|16.287|?>>
-    <associate|eq 16.317.128|<tuple|16.408|?>>
+    <associate|eq 16.317.128|<tuple|16.410|?>>
     <associate|eq 16.317.302|<tuple|16.289|?>>
-    <associate|eq 16.318.128|<tuple|16.410|?>>
-    <associate|eq 16.318.129|<tuple|16.409|?>>
+    <associate|eq 16.318.128|<tuple|16.412|?>>
+    <associate|eq 16.318.129|<tuple|16.411|?>>
     <associate|eq 16.318.302|<tuple|16.290|?>>
-    <associate|eq 16.319.128|<tuple|16.411|?>>
-    <associate|eq 16.319.129|<tuple|16.410|?>>
+    <associate|eq 16.319.128|<tuple|16.413|?>>
+    <associate|eq 16.319.129|<tuple|16.412|?>>
     <associate|eq 16.32.1|<tuple|16.44|?>>
     <associate|eq 16.32.2|<tuple|16.42|?>>
-    <associate|eq 16.320.128|<tuple|16.412|?>>
-    <associate|eq 16.321.128|<tuple|16.413|?>>
-    <associate|eq 16.322.128|<tuple|16.414|?>>
-    <associate|eq 16.325.129|<tuple|16.416|?>>
-    <associate|eq 16.325.131|<tuple|16.415|?>>
-    <associate|eq 16.327.130|<tuple|16.417|?>>
-    <associate|eq 16.327.134|<tuple|16.418|?>>
-    <associate|eq 16.329.131|<tuple|16.419|?>>
-    <associate|eq 16.329.133|<tuple|16.420|?>>
+    <associate|eq 16.320.128|<tuple|16.414|?>>
+    <associate|eq 16.321.128|<tuple|16.415|?>>
+    <associate|eq 16.322.128|<tuple|16.416|?>>
+    <associate|eq 16.325.129|<tuple|16.418|?>>
+    <associate|eq 16.325.131|<tuple|16.417|?>>
+    <associate|eq 16.327.130|<tuple|16.419|?>>
+    <associate|eq 16.327.134|<tuple|16.420|?>>
+    <associate|eq 16.329.131|<tuple|16.421|?>>
+    <associate|eq 16.329.133|<tuple|16.422|?>>
     <associate|eq 16.329.506|<tuple|16.278|?>>
     <associate|eq 16.33.1|<tuple|16.45|?>>
     <associate|eq 16.33.181|<tuple|16.113|?>>
-    <associate|eq 16.330.130|<tuple|16.421|?>>
-    <associate|eq 16.330.131|<tuple|16.422|?>>
-    <associate|eq 16.331.131|<tuple|16.423|?>>
-    <associate|eq 16.334.133|<tuple|16.424|?>>
-    <associate|eq 16.335.133|<tuple|16.425|?>>
-    <associate|eq 16.336.133|<tuple|16.427|?>>
-    <associate|eq 16.336.134|<tuple|16.426|?>>
-    <associate|eq 16.337.133|<tuple|16.428|?>>
-    <associate|eq 16.338.133|<tuple|16.429|?>>
+    <associate|eq 16.330.130|<tuple|16.423|?>>
+    <associate|eq 16.330.131|<tuple|16.424|?>>
+    <associate|eq 16.331.131|<tuple|16.425|?>>
+    <associate|eq 16.334.133|<tuple|16.426|?>>
+    <associate|eq 16.335.133|<tuple|16.427|?>>
+    <associate|eq 16.336.133|<tuple|16.429|?>>
+    <associate|eq 16.336.134|<tuple|16.428|?>>
+    <associate|eq 16.337.133|<tuple|16.430|?>>
+    <associate|eq 16.338.133|<tuple|16.431|?>>
+    <associate|eq 16.338.310|<tuple|16.338|?>>
+    <associate|eq 16.339.310|<tuple|16.339|?>>
     <associate|eq 16.34.181|<tuple|16.114|?>>
-    <associate|eq 16.340.133|<tuple|16.431|?>>
-    <associate|eq 16.340.134|<tuple|16.430|?>>
-    <associate|eq 16.341.133|<tuple|16.432|?>>
-    <associate|eq 16.342.133|<tuple|16.433|?>>
-    <associate|eq 16.343.133|<tuple|16.434|?>>
-    <associate|eq 16.344.133|<tuple|16.435|?>>
-    <associate|eq 16.346.134|<tuple|16.437|?>>
-    <associate|eq 16.346.134.1|<tuple|16.436|?>>
-    <associate|eq 16.347.134|<tuple|16.440|?>>
-    <associate|eq 16.347.135|<tuple|16.439|?>>
-    <associate|eq 16.347.136|<tuple|16.438|?>>
-    <associate|eq 16.348.134|<tuple|16.441|?>>
-    <associate|eq 16.349.134|<tuple|16.442|?>>
+    <associate|eq 16.340.133|<tuple|16.433|?>>
+    <associate|eq 16.340.134|<tuple|16.432|?>>
+    <associate|eq 16.341.133|<tuple|16.434|?>>
+    <associate|eq 16.342.133|<tuple|16.435|?>>
+    <associate|eq 16.343.133|<tuple|16.436|?>>
+    <associate|eq 16.344.133|<tuple|16.437|?>>
+    <associate|eq 16.346.134|<tuple|16.439|?>>
+    <associate|eq 16.346.134.1|<tuple|16.438|?>>
+    <associate|eq 16.347.134|<tuple|16.442|?>>
+    <associate|eq 16.347.135|<tuple|16.441|?>>
+    <associate|eq 16.347.136|<tuple|16.440|?>>
+    <associate|eq 16.348.134|<tuple|16.443|?>>
+    <associate|eq 16.349.134|<tuple|16.444|?>>
     <associate|eq 16.35.1|<tuple|16.47|?>>
     <associate|eq 16.35.181|<tuple|16.115|?>>
-    <associate|eq 16.351.134|<tuple|16.445|?>>
-    <associate|eq 16.354.136|<tuple|16.447|?>>
-    <associate|eq 16.356.136|<tuple|16.448|?>>
-    <associate|eq 16.357.137|<tuple|16.449|?>>
-    <associate|eq 16.358.136|<tuple|16.450|?>>
-    <associate|eq 16.359.136|<tuple|16.452|?>>
+    <associate|eq 16.351.134|<tuple|16.447|?>>
+    <associate|eq 16.354.136|<tuple|16.449|?>>
+    <associate|eq 16.356.136|<tuple|16.450|?>>
+    <associate|eq 16.357.137|<tuple|16.451|?>>
+    <associate|eq 16.358.136|<tuple|16.452|?>>
+    <associate|eq 16.359.136|<tuple|16.454|?>>
     <associate|eq 16.36.1|<tuple|16.48|?>>
     <associate|eq 16.36.182|<tuple|16.117|?>>
-    <associate|eq 16.360.136|<tuple|16.453|?>>
-    <associate|eq 16.361.136|<tuple|16.454|?>>
-    <associate|eq 16.362.136|<tuple|16.455|?>>
-    <associate|eq 16.363.136|<tuple|16.456|?>>
-    <associate|eq 16.364.136|<tuple|16.457|?>>
-    <associate|eq 16.366.137|<tuple|16.459|?>>
-    <associate|eq 16.366.138|<tuple|16.458|?>>
-    <associate|eq 16.366.300|<tuple|16.357|?>>
-    <associate|eq 16.367.137|<tuple|16.460|?>>
-    <associate|eq 16.368.137|<tuple|16.461|?>>
-    <associate|eq 16.369.137|<tuple|16.462|?>>
-    <associate|eq 16.369.300|<tuple|16.360|?>>
+    <associate|eq 16.360.136|<tuple|16.455|?>>
+    <associate|eq 16.361.136|<tuple|16.456|?>>
+    <associate|eq 16.362.136|<tuple|16.457|?>>
+    <associate|eq 16.363.136|<tuple|16.458|?>>
+    <associate|eq 16.364.136|<tuple|16.459|?>>
+    <associate|eq 16.366.137|<tuple|16.461|?>>
+    <associate|eq 16.366.138|<tuple|16.460|?>>
+    <associate|eq 16.366.300|<tuple|16.359|?>>
+    <associate|eq 16.367.137|<tuple|16.462|?>>
+    <associate|eq 16.368.137|<tuple|16.463|?>>
+    <associate|eq 16.369.137|<tuple|16.464|?>>
+    <associate|eq 16.369.300|<tuple|16.362|?>>
     <associate|eq 16.37.1|<tuple|16.50|?>>
     <associate|eq 16.37.182|<tuple|16.118|?>>
-    <associate|eq 16.370.137|<tuple|16.463|?>>
-    <associate|eq 16.371.137|<tuple|16.464|?>>
-    <associate|eq 16.372.137|<tuple|16.465|?>>
-    <associate|eq 16.373.300|<tuple|16.364|?>>
-    <associate|eq 16.374.138|<tuple|16.466|?>>
-    <associate|eq 16.375\<point\>139|<tuple|16.468|?>>
-    <associate|eq 16.376.138|<tuple|16.469|?>>
-    <associate|eq 16.377.138|<tuple|16.470|?>>
-    <associate|eq 16.378.138|<tuple|16.471|?>>
-    <associate|eq 16.379.138|<tuple|16.472|?>>
+    <associate|eq 16.370.137|<tuple|16.465|?>>
+    <associate|eq 16.371.137|<tuple|16.466|?>>
+    <associate|eq 16.372.137|<tuple|16.467|?>>
+    <associate|eq 16.373.300|<tuple|16.366|?>>
+    <associate|eq 16.374.138|<tuple|16.468|?>>
+    <associate|eq 16.375\<point\>139|<tuple|16.470|?>>
+    <associate|eq 16.376.138|<tuple|16.471|?>>
+    <associate|eq 16.377.138|<tuple|16.472|?>>
+    <associate|eq 16.378.138|<tuple|16.473|?>>
+    <associate|eq 16.379.138|<tuple|16.474|?>>
     <associate|eq 16.38.1|<tuple|16.51|?>>
     <associate|eq 16.38.182|<tuple|16.119|?>>
-    <associate|eq 16.380.138|<tuple|16.473|?>>
-    <associate|eq 16.381.138|<tuple|16.474|?>>
-    <associate|eq 16.382.145|<tuple|16.478|?>>
+    <associate|eq 16.380.138|<tuple|16.475|?>>
+    <associate|eq 16.381.138|<tuple|16.476|?>>
+    <associate|eq 16.382.145|<tuple|16.480|?>>
     <associate|eq 16.39.1|<tuple|16.52|?>>
     <associate|eq 16.39.182|<tuple|16.120|?>>
     <associate|eq 16.39.2|<tuple|16.49|?>>
-    <associate|eq 16.391.142|<tuple|16.476|?>>
-    <associate|eq 16.392.142|<tuple|16.477|?>>
-    <associate|eq 16.393.142|<tuple|16.479|?>>
-    <associate|eq 16.394.142|<tuple|16.480|?>>
-    <associate|eq 16.394.300|<tuple|16.385|?>>
-    <associate|eq 16.395.142|<tuple|16.481|?>>
-    <associate|eq 16.395.300|<tuple|16.386|?>>
-    <associate|eq 16.396.142|<tuple|16.482|?>>
-    <associate|eq 16.397.142|<tuple|16.483|?>>
-    <associate|eq 16.398.142|<tuple|16.484|?>>
-    <associate|eq 16.398.300|<tuple|16.389|?>>
-    <associate|eq 16.399.142|<tuple|16.485|?>>
+    <associate|eq 16.391.142|<tuple|16.478|?>>
+    <associate|eq 16.392.142|<tuple|16.479|?>>
+    <associate|eq 16.393.142|<tuple|16.481|?>>
+    <associate|eq 16.394.142|<tuple|16.482|?>>
+    <associate|eq 16.394.300|<tuple|16.387|?>>
+    <associate|eq 16.395.142|<tuple|16.483|?>>
+    <associate|eq 16.395.300|<tuple|16.388|?>>
+    <associate|eq 16.396.142|<tuple|16.484|?>>
+    <associate|eq 16.397.142|<tuple|16.485|?>>
+    <associate|eq 16.398.142|<tuple|16.486|?>>
+    <associate|eq 16.398.300|<tuple|16.391|?>>
+    <associate|eq 16.399.142|<tuple|16.487|?>>
     <associate|eq 16.4.1|<tuple|16.4|?>>
     <associate|eq 16.4.177|<tuple|16.32|?>>
-    <associate|eq 16.400.142|<tuple|16.486|?>>
-    <associate|eq 16.401.142|<tuple|16.487|?>>
-    <associate|eq 16.402.142|<tuple|16.488|?>>
-    <associate|eq 16.402.143|<tuple|16.496|?>>
-    <associate|eq 16.403.142|<tuple|16.489|?>>
-    <associate|eq 16.403.143|<tuple|16.497|?>>
-    <associate|eq 16.404.142|<tuple|16.490|?>>
-    <associate|eq 16.404.143|<tuple|16.498|?>>
-    <associate|eq 16.405.142|<tuple|16.491|?>>
-    <associate|eq 16.405.143|<tuple|16.499|?>>
-    <associate|eq 16.406.142|<tuple|16.492|?>>
-    <associate|eq 16.406.143|<tuple|16.500|?>>
-    <associate|eq 16.407.142|<tuple|16.493|?>>
-    <associate|eq 16.407.143|<tuple|16.501|?>>
-    <associate|eq 16.408.142|<tuple|16.494|?>>
-    <associate|eq 16.408.143|<tuple|16.502|?>>
-    <associate|eq 16.409.142|<tuple|16.495|?>>
-    <associate|eq 16.409.143|<tuple|16.503|?>>
+    <associate|eq 16.400.142|<tuple|16.488|?>>
+    <associate|eq 16.401.142|<tuple|16.489|?>>
+    <associate|eq 16.402.142|<tuple|16.490|?>>
+    <associate|eq 16.402.143|<tuple|16.498|?>>
+    <associate|eq 16.403.142|<tuple|16.491|?>>
+    <associate|eq 16.403.143|<tuple|16.499|?>>
+    <associate|eq 16.404.142|<tuple|16.492|?>>
+    <associate|eq 16.404.143|<tuple|16.500|?>>
+    <associate|eq 16.405.142|<tuple|16.493|?>>
+    <associate|eq 16.405.143|<tuple|16.501|?>>
+    <associate|eq 16.406.142|<tuple|16.494|?>>
+    <associate|eq 16.406.143|<tuple|16.502|?>>
+    <associate|eq 16.407.142|<tuple|16.495|?>>
+    <associate|eq 16.407.143|<tuple|16.503|?>>
+    <associate|eq 16.408.142|<tuple|16.496|?>>
+    <associate|eq 16.408.143|<tuple|16.504|?>>
+    <associate|eq 16.409.142|<tuple|16.497|?>>
+    <associate|eq 16.409.143|<tuple|16.505|?>>
     <associate|eq 16.41.1|<tuple|16.54|?>>
     <associate|eq 16.41.182|<tuple|16.122|?>>
-    <associate|eq 16.410.143|<tuple|16.504|?>>
-    <associate|eq 16.413.143|<tuple|16.507|?>>
-    <associate|eq 16.414.144|<tuple|16.508|?>>
-    <associate|eq 16.415.143|<tuple|16.511|?>>
-    <associate|eq 16.415.144|<tuple|16.509|?>>
-    <associate|eq 16.417.143|<tuple|16.514|?>>
-    <associate|eq 16.417.145|<tuple|16.513|?>>
-    <associate|eq 16.418.143|<tuple|16.515|?>>
-    <associate|eq 16.419\<point\>143|<tuple|16.516|?>>
+    <associate|eq 16.410.143|<tuple|16.506|?>>
+    <associate|eq 16.413.143|<tuple|16.509|?>>
+    <associate|eq 16.414.144|<tuple|16.510|?>>
+    <associate|eq 16.415.143|<tuple|16.513|?>>
+    <associate|eq 16.415.144|<tuple|16.511|?>>
+    <associate|eq 16.417.143|<tuple|16.516|?>>
+    <associate|eq 16.417.145|<tuple|16.515|?>>
+    <associate|eq 16.418.143|<tuple|16.517|?>>
+    <associate|eq 16.419\<point\>143|<tuple|16.518|?>>
     <associate|eq 16.42.1|<tuple|16.55|?>>
     <associate|eq 16.42.187|<tuple|16.125|?>>
-    <associate|eq 16.422.143|<tuple|16.519|?>>
-    <associate|eq 16.422.143.1|<tuple|16.517|?>>
-    <associate|eq 16.422.145|<tuple|16.518|?>>
-    <associate|eq 16.423.143|<tuple|16.520|?>>
-    <associate|eq 16.424.143|<tuple|16.521|?>>
-    <associate|eq 16.427.144|<tuple|16.522|?>>
-    <associate|eq 16.428.144|<tuple|16.523|?>>
+    <associate|eq 16.422.143|<tuple|16.521|?>>
+    <associate|eq 16.422.143.1|<tuple|16.519|?>>
+    <associate|eq 16.422.145|<tuple|16.520|?>>
+    <associate|eq 16.423.143|<tuple|16.522|?>>
+    <associate|eq 16.424.143|<tuple|16.523|?>>
+    <associate|eq 16.427.144|<tuple|16.524|?>>
+    <associate|eq 16.428.144|<tuple|16.525|?>>
     <associate|eq 16.43.187|<tuple|16.126|?>>
-    <associate|eq 16.430.144|<tuple|16.524|?>>
-    <associate|eq 16.430.144.1|<tuple|16.525|?>>
-    <associate|eq 16.431.144|<tuple|16.526|?>>
-    <associate|eq 16.432.144|<tuple|16.527|?>>
-    <associate|eq 16.433.144|<tuple|16.528|?>>
-    <associate|eq 16.434.144|<tuple|16.529|?>>
-    <associate|eq 16.435.144|<tuple|16.530|?>>
-    <associate|eq 16.436.144|<tuple|16.531|?>>
-    <associate|eq 16.438.145|<tuple|16.533|?>>
-    <associate|eq 16.439.145|<tuple|16.534|?>>
+    <associate|eq 16.430.144|<tuple|16.526|?>>
+    <associate|eq 16.430.144.1|<tuple|16.527|?>>
+    <associate|eq 16.431.144|<tuple|16.528|?>>
+    <associate|eq 16.432.144|<tuple|16.529|?>>
+    <associate|eq 16.433.144|<tuple|16.530|?>>
+    <associate|eq 16.434.144|<tuple|16.531|?>>
+    <associate|eq 16.435.144|<tuple|16.532|?>>
+    <associate|eq 16.436.144|<tuple|16.533|?>>
+    <associate|eq 16.438.145|<tuple|16.535|?>>
+    <associate|eq 16.439.145|<tuple|16.536|?>>
     <associate|eq 16.44.188|<tuple|16.127|?>>
-    <associate|eq 16.440.145|<tuple|16.535|?>>
-    <associate|eq 16.442.145|<tuple|16.537|?>>
-    <associate|eq 16.443.145|<tuple|16.538|?>>
-    <associate|eq 16.444.145|<tuple|16.539|?>>
-    <associate|eq 16.445.145|<tuple|16.540|?>>
-    <associate|eq 16.446.145|<tuple|16.541|?>>
+    <associate|eq 16.440.145|<tuple|16.537|?>>
+    <associate|eq 16.442.145|<tuple|16.539|?>>
+    <associate|eq 16.443.145|<tuple|16.540|?>>
+    <associate|eq 16.444.145|<tuple|16.541|?>>
+    <associate|eq 16.445.145|<tuple|16.542|?>>
+    <associate|eq 16.446.145|<tuple|16.543|?>>
     <associate|eq 16.45.153|<tuple|16.124|?>>
     <associate|eq 16.45.188|<tuple|16.128|?>>
-    <associate|eq 16.454.300|<tuple|16.443|?>>
-    <associate|eq 16.455.300|<tuple|16.444|?>>
-    <associate|eq 16.457.300|<tuple|16.446|?>>
+    <associate|eq 16.454.300|<tuple|16.445|?>>
+    <associate|eq 16.455.300|<tuple|16.446|?>>
+    <associate|eq 16.457.300|<tuple|16.448|?>>
     <associate|eq 16.46.188|<tuple|16.129|?>>
     <associate|eq 16.46.3|<tuple|16.56|?>>
-    <associate|eq 16.462\<point\>300|<tuple|16.451|?>>
+    <associate|eq 16.462\<point\>300|<tuple|16.453|?>>
     <associate|eq 16.463.298|<tuple|16.10|?>>
     <associate|eq 16.464.298|<tuple|16.11|?>>
     <associate|eq 16.465.298|<tuple|16.12|?>>
@@ -26475,7 +26715,7 @@
     <associate|eq 16.47.3|<tuple|16.57|?>>
     <associate|eq 16.470.298|<tuple|16.17|?>>
     <associate|eq 16.471.298|<tuple|16.18|?>>
-    <associate|eq 16.478.300|<tuple|16.467|?>>
+    <associate|eq 16.478.300|<tuple|16.469|?>>
     <associate|eq 16.48.188|<tuple|16.131|?>>
     <associate|eq 16.48.3|<tuple|16.58|?>>
     <associate|eq 16.49.189|<tuple|16.132|?>>
@@ -26488,19 +26728,19 @@
     <associate|eq 16.51\<point\>189|<tuple|16.134|?>>
     <associate|eq 16.52.190|<tuple|16.137|?>>
     <associate|eq 16.59.6|<tuple|16.61|?>>
-    <associate|eq 16.591.305|<tuple|16.543|?>>
-    <associate|eq 16.592.505|<tuple|16.544|?>>
-    <associate|eq 16.593.505|<tuple|16.545|?>>
-    <associate|eq 16.594.305|<tuple|16.546|?>>
-    <associate|eq 16.595.408|<tuple|16.542|?>>
-    <associate|eq 16.596.505|<tuple|16.547|?>>
-    <associate|eq 16.597.505|<tuple|16.548|?>>
-    <associate|eq 16.598.505|<tuple|16.549|?>>
-    <associate|eq 16.599.305|<tuple|16.550|?>>
+    <associate|eq 16.591.305|<tuple|16.545|?>>
+    <associate|eq 16.592.505|<tuple|16.546|?>>
+    <associate|eq 16.593.505|<tuple|16.547|?>>
+    <associate|eq 16.594.305|<tuple|16.548|?>>
+    <associate|eq 16.595.408|<tuple|16.544|?>>
+    <associate|eq 16.596.505|<tuple|16.549|?>>
+    <associate|eq 16.597.505|<tuple|16.550|?>>
+    <associate|eq 16.598.505|<tuple|16.551|?>>
+    <associate|eq 16.599.305|<tuple|16.552|?>>
     <associate|eq 16.6.301|<tuple|16.6|?>>
     <associate|eq 16.60.189|<tuple|16.149|?>>
-    <associate|eq 16.600.505|<tuple|16.551|?>>
-    <associate|eq 16.605.307|<tuple|16.552|?>>
+    <associate|eq 16.600.505|<tuple|16.553|?>>
+    <associate|eq 16.605.307|<tuple|16.554|?>>
     <associate|eq 16.62.6|<tuple|16.64|?>>
     <associate|eq 16.63.6|<tuple|16.65|?>>
     <associate|eq 16.64.3|<tuple|16.83|?>>
@@ -26539,67 +26779,69 @@
     <associate|eq 16.99.4|<tuple|16.116|?>>
     <associate|eq 16.99.6|<tuple|16.101|?>>
     <associate|example 16.35.1|<tuple|16.55|?>>
-    <associate|inverse function and derivate|<tuple|16.353|?>>
-    <associate|lemma 16.101.194|<tuple|16.203|?>>
-    <associate|lemma 16.104.194|<tuple|16.258|?>>
-    <associate|lemma 16.105.194|<tuple|16.260|?>>
+    <associate|inverse function and derivate|<tuple|16.360|?>>
+    <associate|lemma 16.101.194|<tuple|16.205|?>>
+    <associate|lemma 16.104.194|<tuple|16.260|?>>
+    <associate|lemma 16.105.194|<tuple|16.262|?>>
     <associate|lemma 16.12.1|<tuple|16.16|?>>
-    <associate|lemma 16.135.200|<tuple|16.230|?>>
-    <associate|lemma 16.144.201|<tuple|16.239|?>>
-    <associate|lemma 16.155.203|<tuple|16.251|?>>
-    <associate|lemma 16.157.205|<tuple|16.253|?>>
-    <associate|lemma 16.159.206|<tuple|16.255|?>>
-    <associate|lemma 16.160.206|<tuple|16.256|?>>
-    <associate|lemma 16.166.210|<tuple|16.262|?>>
-    <associate|lemma 16.167.210|<tuple|16.264|?>>
-    <associate|lemma 16.173.211|<tuple|16.273|?>>
-    <associate|lemma 16.174.211|<tuple|16.274|?>>
-    <associate|lemma 16.177.211|<tuple|16.277|?>>
-    <associate|lemma 16.178.210|<tuple|16.278|?>>
-    <associate|lemma 16.179.210|<tuple|16.279|?>>
-    <associate|lemma 16.180.210|<tuple|16.280|?>>
-    <associate|lemma 16.181.210|<tuple|16.281|?>>
-    <associate|lemma 16.182.210|<tuple|16.282|?>>
-    <associate|lemma 16.192.122|<tuple|16.289|?>>
-    <associate|lemma 16.195.124|<tuple|16.290|?>>
-    <associate|lemma 16.200.126|<tuple|16.297|?>>
-    <associate|lemma 16.202.127|<tuple|16.298|?>>
-    <associate|lemma 16.211.127|<tuple|16.308|?>>
-    <associate|lemma 16.216.144|<tuple|16.315|?>>
-    <associate|lemma 16.216.300|<tuple|16.234|?>>
-    <associate|lemma 16.228.127|<tuple|16.330|?>>
-    <associate|lemma 16.229.127|<tuple|16.331|?>>
-    <associate|lemma 16.23.181|<tuple|16.114|?>>
-    <associate|lemma 16.232.301|<tuple|16.248|?>>
+    <associate|lemma 16.135.200|<tuple|16.232|?>>
+    <associate|lemma 16.144.201|<tuple|16.241|?>>
+    <associate|lemma 16.155.203|<tuple|16.253|?>>
+    <associate|lemma 16.157.205|<tuple|16.255|?>>
+    <associate|lemma 16.159.206|<tuple|16.257|?>>
+    <associate|lemma 16.160.206|<tuple|16.258|?>>
+    <associate|lemma 16.166.210|<tuple|16.264|?>>
+    <associate|lemma 16.167.210|<tuple|16.266|?>>
+    <associate|lemma 16.173.211|<tuple|16.275|?>>
+    <associate|lemma 16.174.211|<tuple|16.276|?>>
+    <associate|lemma 16.177.211|<tuple|16.279|?>>
+    <associate|lemma 16.178.210|<tuple|16.280|?>>
+    <associate|lemma 16.179.210|<tuple|16.281|?>>
+    <associate|lemma 16.180.210|<tuple|16.282|?>>
+    <associate|lemma 16.181.210|<tuple|16.283|?>>
+    <associate|lemma 16.182.210|<tuple|16.284|?>>
+    <associate|lemma 16.192.122|<tuple|16.293|?>>
+    <associate|lemma 16.195.124|<tuple|16.295|?>>
+    <associate|lemma 16.200.126|<tuple|16.304|?>>
+    <associate|lemma 16.202.127|<tuple|16.305|?>>
+    <associate|lemma 16.211.127|<tuple|16.315|?>>
+    <associate|lemma 16.216.144|<tuple|16.322|?>>
+    <associate|lemma 16.216.300|<tuple|16.236|?>>
+    <associate|lemma 16.228.127|<tuple|16.337|?>>
+    <associate|lemma 16.229.127|<tuple|16.338|?>>
+    <associate|lemma 16.23.181|<tuple|16.116|?>>
+    <associate|lemma 16.232.301|<tuple|16.250|?>>
     <associate|lemma 16.24.178|<tuple|16.87|?>>
-    <associate|lemma 16.254.143|<tuple|16.354|?>>
+    <associate|lemma 16.254.143|<tuple|16.361|?>>
+    <associate|lemma 16.287.310|<tuple|16.288|?>>
     <associate|lemma 16.37.1|<tuple|16.59|?>>
     <associate|lemma 16.50.1|<tuple|16.70|?>>
-    <associate|lemma 16.51.186|<tuple|16.127|?>>
-    <associate|lemma 16.53.186|<tuple|16.129|?>>
-    <associate|lemma 16.54.187|<tuple|16.130|?>>
-    <associate|lemma 16.55.187|<tuple|16.131|?>>
-    <associate|lemma 16.56.187|<tuple|16.132|?>>
-    <associate|lemma 16.57.187|<tuple|16.133|?>>
-    <associate|lemma 16.58.188|<tuple|16.134|?>>
-    <associate|lemma 16.59.188|<tuple|16.135|?>>
-    <associate|lemma 16.61.207|<tuple|16.122|?>>
+    <associate|lemma 16.51.186|<tuple|16.129|?>>
+    <associate|lemma 16.53.186|<tuple|16.131|?>>
+    <associate|lemma 16.54.187|<tuple|16.132|?>>
+    <associate|lemma 16.55.187|<tuple|16.133|?>>
+    <associate|lemma 16.56.187|<tuple|16.134|?>>
+    <associate|lemma 16.57.187|<tuple|16.135|?>>
+    <associate|lemma 16.58.188|<tuple|16.136|?>>
+    <associate|lemma 16.59.188|<tuple|16.137|?>>
+    <associate|lemma 16.61.207|<tuple|16.124|?>>
     <associate|lemma 16.62.6|<tuple|16.80|?>>
     <associate|lemma 16.7.1|<tuple|16.10|?>>
-    <associate|lemma 16.72.189|<tuple|16.160|?>>
-    <associate|lemma 16.83.197|<tuple|16.154|?>>
-    <associate|lemma 16.93.193|<tuple|16.197|?>>
-    <associate|lemma 16.96.193|<tuple|16.198|?>>
-    <associate|lemma 16.97.193|<tuple|16.199|?>>
-    <associate|lemma 16.98.194|<tuple|16.200|?>>
+    <associate|lemma 16.72.189|<tuple|16.162|?>>
+    <associate|lemma 16.83.197|<tuple|16.156|?>>
+    <associate|lemma 16.93.193|<tuple|16.199|?>>
+    <associate|lemma 16.96.193|<tuple|16.200|?>>
+    <associate|lemma 16.97.193|<tuple|16.201|?>>
+    <associate|lemma 16.98.194|<tuple|16.202|?>>
     <associate|normed space are assumed to be non trivial|<tuple|16.1|?>>
-    <associate|note 16.210.127|<tuple|16.307|?>>
+    <associate|note 16.210.127|<tuple|16.314|?>>
     <associate|note 16.44|<tuple|16.52|?>>
-    <associate|note 16.84.200|<tuple|16.92|?>>
-    <associate|note 16.89.200|<tuple|16.93|?>>
-    <associate|proposition 16.244.134|<tuple|16.345|?>>
-    <associate|proposition 16.249.138|<tuple|16.350|?>>
-    <associate|toplinear isomorphism|<tuple|16.320|?>>
+    <associate|note 16.84.200|<tuple|16.93|?>>
+    <associate|note 16.89.200|<tuple|16.94|?>>
+    <associate|note 16.92.310|<tuple|16.92|?>>
+    <associate|proposition 16.244.134|<tuple|16.352|?>>
+    <associate|proposition 16.249.138|<tuple|16.357|?>>
+    <associate|toplinear isomorphism|<tuple|16.327|?>>
     <associate|topology every element of a generalized interval is a limit
     point|<tuple|16.15|?>>
     <associate|topology every element of a open or closed ball is a limit
@@ -26609,10 +26851,10 @@
     <associate|topology interior point is a limit point in a normed
     space|<tuple|16.13|?>>
     <associate|topology normed space is a topological vector
-    space|<tuple|16.319|?>>
+    space|<tuple|16.326|?>>
     <associate|topology toplinear isomorphism in a normed
-    space|<tuple|16.322|?>>
-    <associate|topology topological vector space|<tuple|16.317|?>>
+    space|<tuple|16.329|?>>
+    <associate|topology topological vector space|<tuple|16.324|?>>
   </collection>
 </references>
 
