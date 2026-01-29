@@ -13491,7 +13491,410 @@
     </description>
   </proof>
 
+  <\lemma>
+    <label|lemma 16.202.127>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <math|m\<in\>\<bbb-N\>>, <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+    a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    a <with|font-series|bold|Banach> space,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    the normed space based on the product
+    <math|<rigid|X=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>>
+    with the maximum norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|max>> [see
+    definition: <reference|normed maximum norm>], <math|U> a open set in
+    <math|X>, <math|x\<in\>U>, <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> with
+    <math|B<rsup|><rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|max>><around*|(|x,\<delta\>|)>\<subseteq\>U>
+    and a function
+
+    <\equation*>
+      f:U\<rightarrow\>Y
+    </equation*>
+
+    such that <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n|}>> we have
+    <math|\<forall\>y\<in\>U> \ <math|f> has a <math|i>-partial differential
+    <math|D<rsub|y,i>f> at <math|y> and the function
+
+    <\equation>
+      <label|eq 16.366.300>D<rsub|i>f:U\<rightarrow\>L<around*|(|X<rsub|i>;Y|)><text|
+      defined by >D<rsub|i>f<around*|(|y|)>=D<rsub|y,i>f
+    </equation>
+
+    is continuous. Then <math|\<forall\>u,v\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|i>><around*|(|x<rsub|i>,\<delta\>|)>>
+    we have that\ 
+
+    <\equation*>
+      sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|i>f<around*|(|I<rsup|<around*|[|i,x|]>><around*|(|u+t\<cdot\><around*|(|v-u|)>|)>|)>|\<\|\|\>><rsub|L<around*|(|X<rsub|i>,Y|)>>\|t\<in\><around*|[|0,1|]>|}>|)>
+    </equation*>
+
+    exists and
+
+    <\equation*>
+      <around*|\<\|\|\>|f<around*|(|I<rsup|<around*|[|i,x|]>><around*|(|u|)>|)>-f<around*|(|I<rsup|<around*|[|i,x|]>><around*|(|v|)>|)>|\<\|\|\>><rsub|Y>\<leqslant\><around*|\<\|\|\>|u-v|\<\|\|\>><rsub|i>\<cdot\>sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|i>f<around*|(|I<rsup|<around*|[|i,x|]>><around*|(|u+t\<cdot\><around*|(|v-u|)>|)>|)>|\<\|\|\>><rsub|L<around*|(|X<rsub|i>,Y|)>>\|t\<in\><around*|[|0,1|]>|}>|)>
+    </equation*>
+  </lemma>
+
+  <\proof>
+    As <math|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|U|)><big|cap>X<rsub|i>=<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|U|)>>
+    we can define by [theorem: <reference|function composition of functions
+    is a fucntion>] the function
+
+    <\equation*>
+      f\<circ\>I<rsup|<around*|[|i,x|]>>:<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|U|)>\<rightarrow\>Y
+    </equation*>
+
+    Let <math|t\<in\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|U|)>>
+    then <math|y=I<rsup|<around*|[|i,x|]>><around*|(|t|)>\<in\>U> so that by
+    the hypothesis <math|f> has a <math|i>-partial differential
+    <math|D<rsub|y,i>f> at <math|y>. By definition of the partial
+    differentials [see definition: <reference|diff partial differential
+    definition>] it follows that <math|f\<circ\>I<rsup|<around*|[|i,y|]>>> is
+    Fréchet differentiable at <math|y<rsub|i>=<around*|(|I<rsup|<around*|[|i,y|]>><around*|(|t|)>|)><rsub|i>=t>
+    and <math|D<rsub|I<rsup|<around*|[|i,y|]>><around*|(|t|)>,i>f=D<rsub|y,i>f=D<rsub|y<rsub|i>><around*|(|f\<circ\>I<rsup|<around*|[|i,y|]>>|)>=D<rsub|t><around*|(|f\<circ\>I<rsup|<around*|[|i,y|]>>|)>>.
+    Let <math|s\<in\>X<rsub|i>> then\ 
+
+    <\equation*>
+      I<rsup|<around*|[|i,y|]>><around*|(|s|)>=<around*|(|y<rsub|1>,\<ldots\><wide*|s|\<wide-underbrace\>><rsub|i>,\<ldots\>,y<rsub|n>|)>\<equallim\><rsub|y=I<rsup|<around*|[|i,x|]>><around*|(|t|)>><around*|(|x<rsub|1>,\<ldots\><wide*|s|\<wide-underbrace\>><rsub|i>\<ldots\>x<rsub|n>|)>=I<rsup|<around*|[|i,x|]>><around*|(|s|)>
+    </equation*>
+
+    so that
+
+    <\equation*>
+      I<rsup|<around*|[|i,y|]>>=I<rsup|<around*|[|i,x|]>>
+    </equation*>
+
+    Hence <math|f\<circ\>I<rsup|<around*|[|i,x|]>>> is Fréchet differentiable
+    at <math|t> and <math|D<rsub|I<rsup|<around*|[|i,x|]>><around*|(|t|)>,i>f=D<rsub|t><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>>.
+    Summarized\ 
+
+    <\equation>
+      <label|eq 16.270.142>f\<circ\>I<rsup|<around*|[|i,x|]>><text| is
+      Fréchet differentiable on ><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|U|)>
+    </equation>
+
+    <\equation>
+      <text| ><label|eq 16.271.142>\<forall\>t\<in\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|U|)><text|
+      >D<rsub|I<rsup|<around*|[|i,x|]>><around*|(|t|)>,i>f=D<rsub|t><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><below|\<in\>|U<text|
+      is open>>L<around*|(|X<rsub|i>,U|)>
+    </equation>
+
+    As <math|\<forall\>z\<in\>U> <math|D<rsub|z,i>f> exist we can define the
+    function\ 
+
+    <\equation*>
+      D<rsub|i>f:U\<rightarrow\>L<around*|(|X<rsub|i>,Y|)><text| by
+      >D<rsub|i>f<around*|(|z|)>=D<rsub|z,i>f
+    </equation*>
+
+    further by [eq: <reference|eq 16.270.142>] we can also define the
+    function
+
+    <\equation*>
+      D <around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>:<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|U|)>\<rightarrow\>L<around*|(|X<rsub|i>,Y|)><text|
+      by >D <around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><around*|(|t|)>=D<rsub|t><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>
+    </equation*>
+
+    Then we have for <math|t\<in\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|U|)>>
+    that
+
+    <\equation>
+      <label|eq 16.369.300>D<around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><around*|(|t|)>=D<rsub|t><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.271.142>]>>D<rsub|I<rsup|<around*|[|i,x|]>><around*|(|t|)>,i>f<below|=|<text|[eq:
+      <reference|eq 16.366.300>]>>D<rsub|i>f<around*|(|I<rsup|<around*|[|i,x|]>><around*|(|t|)>|)>=<around*|(|D<rsub|i>f\<circ\>I<rsup|<around*|[|i,x|]>>|)><around*|(|t|)>
+    </equation>
+
+    proving that <math|>
+
+    <\equation>
+      <label|eq 16.272.143>D<around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>=D<rsub|i>f\<circ\>I<rsup|<around*|[|i,x|]>>
+    </equation>
+
+    As by the hypothesis <math|D<rsub|i>f> is continuous and
+    <math|I<rsup|<around*|[|i,x|]>>> is continuous [by lemma:
+    <reference|lemma 16.24.178>] it follows that <math|D
+    <around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>> is continuous. Hence\ 
+
+    <\equation>
+      <label|eq 16.272.142>f\<circ\>I<rsup|<around*|[|i,x|]>><text| is
+      >C<rsup|1><text| on >X<rsub|i>
+    </equation>
+
+    Further we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|t\<in\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|max>><around*|(|x,\<delta\>|)>|)>>|<cell|\<Leftrightarrow\>>|<cell|I<rsup|<around*|[|i,x|]>><around*|(|t|)>\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|max>><around*|(|x,\<delta\>|)>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|\<\|\|\>|I<rsup|<around*|[|i,x|]>><around*|(|t|)>-x|\<\|\|\>><rsub|max>\<less\>\<delta\>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|\<\|\|\>|<around*|(|x<rsub|1>,\<ldots\><wide*|t|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>-<around*|(|x<rsub|1>,\<ldots\><wide*|x<rsub|i>|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>|\<\|\|\>><rsub|max>\<less\>\<delta\>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|\<\|\|\>|<around*|(|0,\<ldots\><wide*|t-x<rsub|i>|\<wide-underbrace\>><rsub|i>\<ldots\>,x<rsub|n>|)>|\<\|\|\>><rsub|max>\<less\>\<delta\>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|max<around*|(|<around*|{|<around*|\<\|\|\>|0|\<\|\|\>><rsub|1>,\<ldots\><wide*|<around*|\<\|\|\>|t-x<rsub|i>|\<\|\|\>><rsub|i>|\<wide-underbrace\>><rsub|i>\<ldots\><around*|\<\|\|\>|0|\<\|\|\>><rsub|n>\|i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>\<less\>\<delta\>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|<around*|\<\|\|\>|t-x<rsub|i>|\<\|\|\>><rsub|i>\<less\>\<delta\>>>|<row|<cell|>|<cell|\<Leftrightarrow\>>|<cell|t\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|i>><around*|(|x<rsub|i>,\<delta\>|)>>>>>
+    </eqnarray*>
+
+    so that\ 
+
+    <\equation>
+      <label|eq 16.273.142>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|i>><around*|(|x<rsub|i>,\<delta\>|)>=<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|max>><around*|(|x,\<delta\>|)>|)>\<subseteq\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|U|)>
+    </equation>
+
+    [Eqs: <reference|eq 16.272.142> and <reference|eq 16.273.142>] allows us
+    to apply the Mean Value Theorem \ [corollary: <reference|diff mean value
+    theorem (3.1)>]. Hence <math|\<forall\>u,v\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|i>><around*|(|x<rsub|i>,\<delta\>|)>>
+    we have that\ 
+
+    <\equation*>
+      sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|u+t\<cdot\><around*|(|v-u|)>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>|\<\|\|\>><rsub|L<around*|(|X<rsub|i>,Y|)>>\|t\<in\><around*|[|0,1|]>|}>|)>
+    </equation*>
+
+    exist and\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|<around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><around*|(|u|)>-<around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><around*|(|v|)>|\<\|\|\>><rsub|Y>\<leqslant\><around*|\<\|\|\>|u-v|\<\|\|\>><rsub|i>\<cdot\>sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|u+t\<cdot\><around*|(|v-u|)>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>|\<\|\|\>><rsub|L<around*|(|X<rsub|i>,Y|)>>\|t\<in\><around*|[|0,1|]>|}>|)>
+    </equation*>
+
+    AS
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|D<rsub|u+t\<cdot\><around*|(|v-u|)>><around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.369.300>]>>>|<cell|D<around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)><around*|(|u+t\<cdot\><around*|(|v-u|)>|)>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+      <reference|eq 16.272.143>]>>>|<cell|<around*|(|D<rsub|i>f\<circ\>I<rsup|<around*|[|i,x|]>>|)><around*|(|u+t\<cdot\><around*|(|v-u|)>|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|i>f<around*|(|I<rsup|<around*|[|i,x|]>><around*|(|u+t\<cdot\><around*|(|v-u|)>|)>|)>>>>>
+    </eqnarray*>
+
+    it follows that
+
+    <\equation*>
+      sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|i><around*|(|f<around*|(|I<rsup|<around*|[|i,x|]>><around*|(|<around*|\<nobracket\>|u+t\<cdot\><around*|(|v-u|)>|)>|)>|\<nobracket\>>|\<nobracket\>>|\<\|\|\>><rsub|L<around*|(|X<rsub|i>,Y|)>>\|t\<in\><around*|[|0,1|]>|}>|)>
+    </equation*>
+
+    exist and\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|f<around*|(|I<rsup|<around*|[|i,x|]>><around*|(|u|)>|)>-f<around*|(|I<rsup|<around*|[|i,x|]>><around*|(|v|)>|)>|\<\|\|\>><rsub|Y>\<leqslant\><around*|\<\|\|\>|u-v|\<\|\|\>><rsub|i>\<cdot\>sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|i><around*|(|f<around*|(|I<rsup|<around*|[|i,x|]>><around*|(|<around*|\<nobracket\>|u+t\<cdot\><around*|(|v-u|)>|)>|)>|\<nobracket\>>|\<nobracket\>>|\<\|\|\>><rsub|L<around*|(|X<rsub|i>,Y|)>>\|t\<in\><around*|[|0,1|]>|}>|)>
+    </equation*>
+  </proof>
+
+  Old definition
+
+  <\definition>
+    <label|diff higher order derivates>Let
+    <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>, <math|m\<in\>\<bbb-N\>>,
+    <math|<around*|\<langle\>|\<bbb-K\><rsup|n>,<around*|\<\|\|\>||\<\|\|\>><rsub|n>|\<rangle\>>>
+    the normed space with the maximum norm
+    <math|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
+    normed space, <math|A\<subseteq\>\<bbb-K\><rsup|n>>, <math|x\<in\>A> a
+    limit point of <math|A>, <math|<rigid|<around*|{|i<rsub|j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\><around*|{|1,\<ldots\>,n|}>>>
+    and <math|<rigid|f:A\<rightarrow\>X>> then <math|f> has a
+    <with|font-series|bold|partial derivative
+    ><math|\<partial\><rsup|m><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f\<in\>Y>
+    of <with|font-series|bold|order m> at <math|x> if for
+    <math|m\<in\>\<bbb-N\>> we have either:
+
+    <\description>
+      <item*|<math|m=1>>Then <math|f> has a <math|i<rsub|1>> partial
+      derivative <math|\<partial\><rsub|x,i<rsub|1>>f> at <math|x> [see
+      definition: <reference|diff partial derivate definition>] and
+      <math|><math|\<partial\><rsup|m><rsub|x,i<rsub|1>\<ldots\>i<rsub|1>>f>
+      is defined by
+
+      <\equation*>
+        \<partial\><rsup|m><rsub|x,i<rsub|1>,\<ldots\>,i<rsub|1>>f=\<partial\><rsub|x,i<rsub|1>>f
+      </equation*>
+
+      <\note>
+        From [definition: <reference|diff partial derivate definition>] it
+        follows that <math|\<partial\><rsub|x,i>f\<in\>X>
+      </note>
+
+      <item*|<math|1\<less\>m>>There exist a open set <math|V> with
+      <math|x\<in\>V\<subseteq\>A> such that <math|\<forall\>y\<in\>V>
+      <math|\<partial\><rsub|y,i<rsub|m-1>\<ldots\>i<rsub|1>>f> exist and the
+      function\ 
+
+      <\equation*>
+        \<partial\><rsub|V,i<rsub|m-1>\<ldots\>i<rsub|1>>f:V\<rightarrow\>X<text|
+        defined by >\<partial\><rsub|V,i<rsub|m-1>\<ldots\>i<rsub|1>>f<around*|(|y|)>=\<partial\><rsub|y,i<rsub|m-1>\<ldots\>i<rsub|1>>f
+      </equation*>
+
+      has a <math|i<rsub|m>>-partial derivative at <math|x> and
+
+      <\equation*>
+        \<partial\><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f=\<partial\><rsub|x,i<rsub|m>><around*|(|\<partial\><rsub|V,i<rsub|m-1>\<ldots\>i<rsub|1>>f|)>
+      </equation*>
+
+      <\note>
+        As <math|x\<in\>V> a open set it follows from [theorem:
+        <reference|topology every element of a open set in a normed space is
+        a limit point>] that <math|x> is a limit point of <math|V> which is a
+        requirement for the existence of the \ <math|i<rsub|m>>-partial
+        derivative of <math|><math|\<partial\><rsub|i<rsub|m-1>\<ldots\>i<rsub|1>>f>
+        at <math|x> [see definition: \ <reference|diff partial derivate
+        definition>]. Further from this [efinition: \ <reference|diff partial
+        derivate definition>]\ 
+      </note>
+
+      <\note>
+        Of course we must ensure that this definition is not dependent on the
+        choosen open set <math|V>. So assume that there exists a open set
+        <math|W> such that <math|x\<in\>W\<subseteq\>A> such that
+        <math|\<forall\>y\<in\>W> <math|\<partial\><rsub|y,i<rsub|m-1>\<ldots\>i<rsub|1>>f>
+        exist and that the function \ <math|\<partial\><rsub|W,i<rsub|m-1>\<ldots\>i<rsub|1>>f:W\<rightarrow\>X<text|
+        defined by >\<partial\><rsub|W,i<rsub|m-1>\<ldots\>i<rsub|1>>f<around*|(|y|)>=\<partial\><rsub|y,i<rsub|m-1>\<ldots\>i<rsub|1>>f>.
+        Then <math|\<forall\>y\<in\>V<big|cap>W>
+        <math|\<partial\><rsub|V,i<rsub|m-1>\<ldots\>i<rsub|1>>f<around*|(|y|)>=\<partial\><rsub|W,i<rsub|m-1>\<ldots\>i<rsub|1>>f<around*|(|y|)>>
+        so that by [theorem: <reference|diff partial derivation is local>] we
+        have that <math|\<partial\><rsub|x,i<rsub|m>><around*|(|\<partial\><rsub|V,i<rsub|m-1>\<ldots\>i<rsub|1>>f|)>=\<partial\><rsub|x,i<rsub|m>><around*|(|\<partial\><rsub|W,i<rsub|m-1>\<ldots\>i<rsub|1>>f|)>>.
+      </note>
+    </description>
+  </definition>
+
   \;
+
+  <\theorem>
+    <label|diff partial derivate and partial differential of higher order>Let
+    <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>, <math|m\<in\>\<bbb-N\>>,
+    <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,<around*|\<\|\|\>||\<\|\|\>><rsub|n>|\<rangle\>>>
+    the normed space with the maximum norm
+    <math|<around*|\<\|\|\>||\<\|\|\>><rsub|n>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
+    normed space,a open set <math|U\<subseteq\>\<bbb-K\><rsup|n>>,
+    <math|x\<in\>U>, <math|<around*|{|i<rsub|j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\><around*|{|1,\<ldots\>,n|}>>
+    and <math|f:U\<rightarrow\>X> a function that has a partial differential
+    <math|D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f> of
+    order <math|m> at <math|x> then <math|f> has a partial derivative
+    <math|\<partial\><rsup|m><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f> of order
+    <math|m> and <math|>
+
+    <\equation*>
+      \<partial\><rsup|m><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f=D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f<around*|(|<wide*|1:\<ldots\>:1|\<wide-underbrace\>><rsub|m>|)>
+    </equation*>
+  </theorem>
+
+  <\proof>
+    We prove this by induction so let\ 
+
+    <\equation*>
+      \<cal-S\>=<around*|{|m\<in\>\<bbb-N\>\|<text|If
+      ><around*|{|i<rsub|j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\><around*|{|1,\<ldots\>,n|}>,A\<subseteq\>\<bbb-R\><rsup|n><text|,
+      <math|x\<in\>A<rsup|\<circ\>>> and>f:A\<rightarrow\>X a function
+      <text|such that > D<rsup|m><rsub|x,i<rsub|m>,\<ldots\>,i<rsub|n>>f
+      exist \ then \<partial\><rsup|m><rsub|x,i<rsub|m>,\<ldots\>,i<rsub|1>>f
+      <text|exist> with \<partial\><rsup|m><rsub|x,i<rsub|m>,\<ldots\>,i<rsub|1>>f=D<rsup|m><rsub|x,i<rsub|m>,\<ldots\>,i<rsub|1>>f<around*|(|<wide*|1:\<ldots\>:1|\<wide-underbrace\>><rsub|m>|)>|}>
+    </equation*>
+
+    then we have:\ 
+
+    <\description>
+      <item*|<math|1\<in\>S>>Given <math|<around*|{|i<rsub|j>|}><rsub|j\<in\><around*|{|1|}>>\<subseteq\><around*|{|1,\<ldots\>,n|}>>,
+      let \ <math|x\<in\>A<rsup|\<circ\>>> and
+      <math|f:A\<rightarrow\>X<rsup|>> a function such that
+      <math|D<rsup|<around*|[|1|]>><rsub|x,i<rsub|1>\<ldots\>i<rsub|1>>f>
+      exist then by definition <math|D<rsub|x,i<rsub|1>>f> exist and
+      <math|D<rsub|x,i<rsub|1>>f=D<rsup|<around*|[|1|]>><rsub|x,i<rsub|1>\<ldots\>i<rsub|1>>f=D<rsub|x,i<rsub|1>\<ldots\>i<rsub|1>>f>.
+      Hence using [theorem: <reference|diff partial derivate and partial
+      differential>] <math|\<partial\><rsub|x,i<rsub|1>>f> exist and
+      <math|\<partial\><rsub|x,i<rsub|1>>f=D<rsub|x,i<rsub|1>>f<around*|(|1|)>>.
+      So by definition <math|<rigid|\<partial\><rsup|1><rsub|x,i<rsub|1>\<ldots\>i<rsub|1>>f\<equallim\><rsub|def>\<partial\><rsub|x,i<rsub|1>>f=D<rsup|<around*|[|1|]>><rsub|x,i<rsub|1>\<ldots\>i<rsub|1>>f<around*|(|1|)>>>
+      proving that <math|1\<in\>S>.
+
+      <item*|<math|m\<in\>S\<Rightarrow\>m+1\<in\>S>>Let
+      <math|<around*|{|i<rsub|j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,m+1|}>>\<subseteq\><around*|{|1,\<ldots\>,n|}>>,
+      <math|A\<subseteq\>X>, <math|x\<in\>A<rsup|\<circ\>>> and
+      <math|f:A\<rightarrow\>X> a function such that
+      <math|D<rsup|<around*|[|m+1|]>><rsub|x,i<rsub|m+1>\<ldots\>i<rsub|1>>f>
+      exist. Then there exist a open set <math|V> with
+      <math|x\<in\>V\<subseteq\>A> such that <math|\<forall\>y\<in\>A<text|
+      >><math|D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f>
+      exist and the function\ 
+
+      <\equation*>
+        D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f:V\<rightarrow\>L<rsub|m><around*|(|\<bbb-R\>;X|)><text|
+        defined by >D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f<around*|(|y|)>=D<rsup|<around*|[|m|]>><rsub|y,i<rsub|m>\<ldots\>i<rsub|1>>f
+      </equation*>
+
+      has a <math|i<rsub|m+1>>-partial derivative at <math|x> and
+      <math|D<rsup|<around*|[|m+1|]>><rsub|x,i<rsub|m+1>\<ldots\>i<rsub|i1>>f=D<rsub|x,i<rsub|m>><around*|(|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)>>.
+      As <math|m\<in\>S> and <math|\<forall\>y\<in\>V> by [theorem:
+      <reference|topology open set and interior>] <math|y\<in\>V<rsub|0>> it
+      follows that <math|\<partial\><rsup|m><rsub|y,i<rsub|m>\<ldots\>i<rsub|1>>f>
+      exist and
+
+      <\equation>
+        <label|eq 16.394.300>\<partial\><rsup|m><rsub|y,i<rsub|m>\<ldots\>i<rsub|1>>f=D<rsup|<around*|[|m|]>><rsub|y,i<rsub|m>\<ldots\>i<rsub|1>>f<around*|(|<wide*|1:\<ldots\>:1|\<wide-underbrace\>><rsub|m>|)>
+      </equation>
+
+      Define\ 
+
+      <\equation>
+        <label|eq 16.395.300>\<partial\><rsup|m><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f:V\<rightarrow\>X<text|
+        by >\<partial\><rsup|m><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f<around*|(|y|)>=\<partial\><rsup|m><rsub|y,i<rsub|m>\<ldots\>i<rsub|1>>f
+      </equation>
+
+      Consider the evaluation operator defined by [definition:
+      <reference|diff evaluation operator>]
+
+      <\equation*>
+        ev<rsub|<wide*|1\<ldots\>1|\<wide-underbrace\>><rsub|m>>:L<rsub|m><around*|(|\<bbb-K\>;X|)>\<rightarrow\>X<text|
+        where >ev<rsub|<wide*|1\<ldots\>1|\<wide-underbrace\>><rsub|m>><around*|(|L|)>=L<around*|(|<wide*|1:\<ldots\>:1|\<wide-underbrace\>><rsub|m>|)>
+      </equation*>
+
+      then
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|D<rsup|<around*|[|m|]>><rsub|y,i<rsub|m>\<ldots\>i<rsub|1>>f<around*|(|<wide*|1:\<ldots\>:1|\<wide-underbrace\>><rsub|m>|)>>|<cell|=>|<cell|ev<rsub|<wide*|1\<ldots\>1|\<wide-underbrace\>><rsub|m>><around*|(|D<rsup|<around*|[|m|]>><rsub|y,i<rsub|m>\<ldots\>i<rsub|1>>f|)>>>|<row|<cell|>|<cell|=>|<cell|ev<rsub|<wide*|1\<ldots\>1|\<wide-underbrace\>><rsub|m>><around*|(|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f<around*|(|y|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|ev<rsub|<wide*|1\<ldots\>1|\<wide-underbrace\>><rsub|m>>\<circ\>D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)><around*|(|y|)>>>>>
+      </eqnarray*>
+
+      So if <math|y\<in\>V> then\ 
+
+      <\equation*>
+        \<partial\><rsup|m><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f<around*|(|y|)><below|=|<text|[eq:
+        <reference|eq 16.395.300>]>>\<partial\><rsup|m><rsub|y,i<rsub|m>\<ldots\>i<rsub|1>>f<below|=|<text|[eq:
+        <reference|eq 16.394.300>]>>D<rsup|<around*|[|m|]>><rsub|y,i<rsub|m>\<ldots\>i<rsub|1>>f<around*|(|<wide*|1:\<ldots\>:1|\<wide-underbrace\>><rsub|n>|)>=<around*|(|ev<rsub|<wide*|1\<ldots\>1|\<wide-underbrace\>><rsub|m>>\<circ\>D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)><around*|(|y|)>
+      </equation*>
+
+      proving that\ 
+
+      <\equation>
+        <label|eq 16.302.127>\<partial\><rsup|m><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f=ev<rsub|<wide*|1\<ldots\>1|\<wide-underbrace\>><rsub|m>>\<circ\>D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f
+      </equation>
+
+      As <math|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f>
+      has a <math|i<rsub|m+1>>-partial differential at <math|x>, and by
+      [lemma: <reference|lemma 16.159.206>]
+      <math|ev<rsub|<wide*|1\<ldots\>1|\<wide-underbrace\>><rsub|m>>> is
+      differentiable on <math|L<rsub|m><around*|(|\<bbb-K\>;X|)>> it follows
+      from the chain rule for partial differentiation [theorem:
+      <reference|diff chain rule and partial differential>] that
+      <math|ev<rsub|<wide*|1\<ldots\>1|\<wide-underbrace\>><rsub|n>>\<circ\>D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f>
+      has a <math|i<rsub|m+1>>-partial derivative at <math|x> and
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|D<rsub|x,i<rsub|m+1>><around*|(|ev<rsub|<wide*|1\<ldots\>1|\<wide-underbrace\>><rsub|m>>\<circ\>D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)>>|<cell|=>|<cell|D<rsub|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>><around*|(|x|)>>ev<rsub|<wide*|1\<ldots\>1|\<wide-underbrace\>><rsub|m>>\<circ\>D<rsub|x,i<rsub|m+1>><around*|(|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+        <reference|lemma 16.159.206>]>>>|<cell|ev<rsub|<wide*|1\<ldots\>1|\<wide-underbrace\>><rsub|m>>\<circ\>D<rsub|x,i<rsub|m+1>><around*|(|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)>>>|<row|<cell|>|<cell|=>|<cell|ev<rsub|<wide*|1\<ldots\>1|\<wide-underbrace\>><rsub|m>>\<circ\>D<rsup|<around*|[|m+1|]>><rsub|x,i<rsub|m+1>\<ldots\>i<rsub|1>>f>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|m+1|]>><rsub|x,i<rsub|m+1>\<ldots\>i<rsub|1>>f<around*|(|<wide*|1:\<ldots\>:1|\<wide-underbrace\>><rsub|m>|)>>>>>
+      </eqnarray*>
+
+      combining this with [eq: <reference|eq 16.302.127>] proves that
+      <math|\<partial\><rsup|m><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f> has a
+      <math|i<rsub|m+1>>-partial differential at <math|x> and
+
+      <\equation>
+        <label|eq 16.303.127>D<rsub|x,i<rsub|m+1>><around*|(|\<partial\><rsup|m><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)>=D<rsup|<around*|[|m+1|]>><rsub|x,i<rsub|m+1>\<ldots\>i<rsub|1>>f<around*|(|<wide*|1:\<ldots\>:1|\<wide-underbrace\>><rsub|m>|)>
+      </equation>
+
+      Using [theorem: <reference|diff partial derivate and partial
+      differential>] it follows that <math|\<partial\><rsup|m><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f>
+      has a <math|i<rsub|m+1>> partial derivative at <math|x> so that by
+      [definition: <reference|diff higher order derivates>] <math|f> has a
+      partial derivative <math|\<partial\><rsup|m+1><rsub|x,i<rsub|m+1>\<ldots\>i<rsub|1>>f>
+      with
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<partial\><rsup|m+1><rsub|x,i<rsub|m+1>\<ldots\>i<rsub|1>>f>|<cell|=>|<cell|\<partial\><rsub|x,i<rsub|m+1>><around*|(|\<partial\><rsup|m><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+        <reference|diff partial derivate and partial
+        differential>]>>>|<cell|D<rsup|<around*|[|m+1|]>><rsub|x,i<rsub|m+1>><around*|(|\<partial\><rsup|m><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)><around*|(|1|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.303.127>]>>>|<cell|D<rsup|<around*|[|m+1|]>><rsub|x,i<rsub|m+1>\<ldots\>i<rsub|1>>f<around*|(|<wide*|1:\<ldots\>:1|\<wide-underbrace\>><rsub|m>|)><around*|(|1|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+        <reference|lemma 16.53.186>]>>>|<cell|D<rsup|<around*|[|m+1|]>><rsub|x,i<rsub|m+1>\<ldots\>i<rsub|1>>f<around*|(|<wide*|1:\<ldots\>:1|\<wide-underbrace\>><rsub|m+1>|\<nobracket\>>>>>>
+      </eqnarray*>
+
+      proving that\ 
+
+      <\equation*>
+        m+1\<in\>S
+      </equation*>
+    </description>
+  </proof>
 
   \;
 
@@ -13538,6 +13941,7 @@
     C^n-1|<tuple|85|108>>
     <associate|diff f is of class C^n if D^1f u=is of class C^n-1
     (1)|<tuple|86|108>>
+    <associate|diff higher order derivates|<tuple|101|?>>
     <associate|diff higher order differentiation and vector
     functions|<tuple|97|?>>
     <associate|diff higher order differentiation classes|<tuple|98|111>>
@@ -13546,6 +13950,8 @@
     <associate|diff mean value theorem (6)|<tuple|38|50>>
     <associate|diff mean value theorem (7)|<tuple|39|50>>
     <associate|diff mean value theorem (8)|<tuple|37|50>>
+    <associate|diff partial derivate and partial differential of higher
+    order|<tuple|105|?>>
     <associate|eq 12.10.131|<tuple|1|1>>
     <associate|eq 12.11.131|<tuple|2|1>>
     <associate|eq 12.12.131|<tuple|3|1>>
@@ -13752,6 +14158,11 @@
     <associate|eq 16.255.300|<tuple|465|?>>
     <associate|eq 16.256.300|<tuple|466|?>>
     <associate|eq 16.261.222|<tuple|74|29>>
+    <associate|eq 16.270.142|<tuple|487|?>>
+    <associate|eq 16.271.142|<tuple|488|?>>
+    <associate|eq 16.272.142|<tuple|491|?>>
+    <associate|eq 16.272.143|<tuple|490|?>>
+    <associate|eq 16.273.142|<tuple|492|?>>
     <associate|eq 16.277.12|<tuple|377|117>>
     <associate|eq 16.280.125.1|<tuple|75|30>>
     <associate|eq 16.280.126|<tuple|100|36>>
@@ -13791,6 +14202,8 @@
     <associate|eq 16.297.125|<tuple|93|33>>
     <associate|eq 16.298.125|<tuple|94|33>>
     <associate|eq 16.300.126|<tuple|95|34>>
+    <associate|eq 16.302.127|<tuple|495|?>>
+    <associate|eq 16.303.127|<tuple|496|?>>
     <associate|eq 16.353.135|<tuple|104|39>>
     <associate|eq 16.354.135|<tuple|105|39>>
     <associate|eq 16.355.135|<tuple|106|40>>
@@ -13798,10 +14211,14 @@
     <associate|eq 16.360.136|<tuple|108|40>>
     <associate|eq 16.361.136|<tuple|109|41>>
     <associate|eq 16.362.136|<tuple|110|41>>
+    <associate|eq 16.366.300|<tuple|486|?>>
+    <associate|eq 16.369.300|<tuple|489|?>>
     <associate|eq 16.382.139|<tuple|114|42>>
     <associate|eq 16.383.139|<tuple|115|42>>
     <associate|eq 16.384.139|<tuple|113|42>>
     <associate|eq 16.387.138|<tuple|116|42>>
+    <associate|eq 16.394.300|<tuple|493|?>>
+    <associate|eq 16.395.300|<tuple|494|?>>
     <associate|eq 16.45.185|<tuple|59|23>>
     <associate|eq 16.46.185|<tuple|60|23>>
     <associate|eq 16.47.185|<tuple|61|23>>
@@ -13988,7 +14405,7 @@
     <associate|lemma 16.148.201|<tuple|35|44>>
     <associate|lemma 16.190.122|<tuple|28|29>>
     <associate|lemma 16.201.126|<tuple|30|35>>
-    <associate|lemma 16.202.127|<tuple|40|50>>
+    <associate|lemma 16.202.127|<tuple|100|50>>
     <associate|lemma 16.24.178|<tuple|18|18>>
     <associate|lemma 16.25.178|<tuple|19|18>>
     <associate|lemma 16.97.193|<tuple|96|?>>
