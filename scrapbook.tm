@@ -13896,6 +13896,246 @@
     </description>
   </proof>
 
+  <\proof>
+    We prove this by induction, so define\ 
+
+    <\equation*>
+      S=<around*|{|m\<in\>\<bbb-N\>\|<text|If
+      ><around*|{|i<rsub|j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\><around*|{|1,\<ldots\>,n|}><text|,
+      >A\<subseteq\>\<bbb-R\><rsup|n><text|, <math|x\<in\>A<rsup|\<circ\>>>
+      and >f:A\<rightarrow\>X<text|a function such that
+      >\<partial\><rsup|m><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f<text| exists
+      then >D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f<text|
+      exist and >D<rsup|<around*|[|m|]>><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f=\<cal-P\><around*|[|m,\<partial\><rsup|1><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f|]>|}>
+    </equation*>
+
+    then we have:
+
+    <\description>
+      <item*|<math|1\<in\>S>>Given <math|<around*|{|i<rsub|j>|}><rsub|j\<in\><around*|{|1|}>>\<subseteq\><around*|{|1,\<ldots\>,n|}>>,
+      let <math|f:A\<rightarrow\>X<rsup|>> be a function such that
+      <math|\<partial\><rsup|1><rsub|x,i<rsub|1>\<ldots\>\<partial\><rsub|i1>>f>
+      exist, then by definition <math|\<partial\><rsub|x,i<rsub|1>>f> exist
+      and <math|\<partial\><rsub|x,i<rsub|1>>f=\<partial\><rsup|1><rsub|x,i<rsub|1>\<ldots\>i<rsub|1>>f>.
+      Hence using [theorem: <reference|diff partial derivate and partial
+      differential>] <math|D<rsub|x,i<rsub|1>>f> exist and is defined by\ 
+
+      <\equation*>
+        D<rsub|x,i<rsub|1>>f:\<bbb-R\>\<rightarrow\>X<text| where
+        >D<rsub|x,i<rsub|1>>f<around*|(|h|)>=h\<cdot\>\<partial\><rsub|x,i<rsub|1>>f=h\<cdot\>\<partial\><rsup|1><rsub|x,i<rsub|1>\<ldots\>i<rsub|1>>f
+      </equation*>
+
+      Further if <math|h<rsub|1>\<in\>\<bbb-R\>> then
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<cal-P\><around*|[|1,\<partial\><rsup|1><rsub|x,i<rsub|1>\<ldots\>i<rsub|1>>f|]><around*|(|<wide*|h<rsub|1>:\<ldots\>:h<rsub|1>|\<wide-underbrace\>><rsub|1>|)>>|<cell|\<equallim\><rsub|<text|[note:
+        <reference|note 16.210.127>]>>>|<cell|<around*|(|<big|prod><rsub|i=1><rsup|1>h<rsub|i>|)>\<cdot\>\<partial\><rsup|1><rsub|x,i<rsub|1>\<ldots\>i<rsub|1>>f>>|<row|<cell|>|<cell|=>|<cell|h<rsub|1>\<cdot\>\<partial\><rsup|1><rsub|x,i<rsub|1>\<ldots\>i<rsub|1>>f>>|<row|<cell|>|<cell|=>|<cell|D<rsub|x,i<rsub|1>>f>>|<row|<cell|>|<cell|=>|<cell|D<rsup|<around*|[|1|]>><rsub|x,i<rsub|1>\<ldots\>i<rsub|1>>f>>>>
+      </eqnarray*>
+
+      hence <math|1\<in\>S>.
+
+      <item*|<math|m\<in\>S\<Rightarrow\>m+1\<in\>S>>Let
+      <math|<around*|{|i<rsub|j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,m+1|}>>\<subseteq\><around*|{|1,\<ldots\>,n|}>>
+      and <math|f:A\<rightarrow\>X> a function such that
+      <math|\<partial\><rsup|m+1><rsub|x,i<rsub|m+1>\<ldots\>i<rsub|1>>f>
+      exist. Then by definition there exist a open set <math|V> with
+      <math|x\<in\>V\<subseteq\>A> such that <math|\<forall\>y\<in\>V>
+      <math|\<partial\><rsup|m><rsub|y,i<rsub|m>\<ldots\>i<rsub|1>>f> exist
+      and the function\ 
+
+      <\equation>
+        <label|eq 16.398.300>\<partial\><rsup|m><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f:V\<rightarrow\>X<text|
+        defined by >\<partial\><rsup|m><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f<around*|(|y|)>=\<partial\><rsup|m><rsub|y,i<rsub|m>\<ldots\>i<rsub|1>>f
+      </equation>
+
+      has a <math|i<rsub|m+1>>-derivative at <math|x> and
+
+      <\equation>
+        <label|eq 16.304.127>\<partial\><rsup|m+1><rsub|x,i<rsub|m+1>\<ldots\>i<rsub|1>>f=\<partial\><rsub|x,i<rsub|m+1>><around*|(|\<partial\><rsup|m><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f|)>
+      </equation>
+
+      As <math|m\<in\>S> and <math|y\<in\>V<below|=|<text|[theorem:
+      <reference|topology open set and interior>]>>V<rsup|\<circ\>>> we have
+      that <math|\<forall\>y\<in\>V> <math|D<rsup|<around*|[|m|]>><rsub|y,i<rsub|m>\<ldots\>i<rsub|1>>f>
+      exist and
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|D<rsup|<around*|[|m|]>><rsub|y,i<rsub|m>\<ldots\>i<rsub|1>>f>|<cell|=>|<cell|\<cal-P\><around*|[|m,\<partial\><rsub|y,i<rsub|m>\<ldots\>i<rsub|1>><rsup|<around*|[|m|]>>f|]>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+        <reference|eq 16.398.300>]>>>|<cell|\<cal-P\><around*|[|m,\<partial\><rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f<around*|(|y|)>|]>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+        <reference|lemma 16.211.127>]>>>|<cell|\<cal-P\><around*|[|m|]><around*|(|\<partial\><rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f<around*|(|y|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|\<cal-P\><around*|[|m|]>\<circ\>\<partial\><rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)><around*|(|y|)>>>>>
+      </eqnarray*>
+
+      So if we define\ 
+
+      <\equation*>
+        D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f:V\<rightarrow\>L<rsub|m><around*|(|\<bbb-R\>;X|)><text|
+        by >D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f<around*|(|y|)>=D<rsup|<around*|[|m|]>><rsub|y,i<rsub|m>\<ldots\>i<rsub|1>>f
+      </equation*>
+
+      then <math|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f<around*|(|y|)>=D<rsup|<around*|[|m|]>><rsub|y,i<rsub|m>\<ldots\>i<rsub|1>>f=<around*|(|\<cal-P\><around*|[|m|]>\<circ\>\<partial\><rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)><around*|(|y|)>>,
+      proving that
+
+      <\equation>
+        <label|eq 16.305.127>D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f=\<cal-P\><around*|[|m|]>\<circ\>\<partial\><rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f
+      </equation>
+
+      As <math|\<partial\><rsup|m><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f> has a
+      <math|i<rsub|m+1>>-partial derivative at <math|x> we can use [theorem:
+      <reference|diff partial derivate and partial differential>] to prove
+      that <math|\<partial\><rsup|m><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f> has
+      a <math|i<rsub|m+1>>-partial differential at <math|x> and that the
+      function <math|<rigid|D<rsub|x,i<rsub|m+1>><around*|(|\<partial\><rsup|m><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)>\<in\>L<around*|(|\<bbb-R\>,X|)>>>
+      is defined by
+
+      <\equation>
+        <label|eq 16.306.127>D<rsub|x,i<rsub|m+1>><around*|(|\<partial\><rsup|m><rsub|y<rsub|m>\<ldots\>y<rsub|1>>f|)>:\<bbb-R\>\<rightarrow\>X<text|
+        where >D<rsub|x,i<rsub|m+1>><around*|(|\<partial\><rsup|m><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)><around*|(|h|)>=h\<cdot\>\<partial\><rsub|x,i<rsub|m+1>><around*|(|\<partial\><rsup|m><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)>
+      </equation>
+
+      As <math|><math|\<cal-P\><around*|[|m|]>> is Fréchet differentiable on
+      <math|X> [see lemma: <reference|lemma 16.211.127>] and
+      <math|\<partial\><rsup|m><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f> has a
+      <math|i<rsub|m+1>>-partial differential at <math|x> we can apply the
+      chain rule for partial differentials [see theorem: <reference|diff
+      chain rule and partial differential>] resulting in the fact that
+      <math|\<cal-P\><around*|[|m|]>\<circ\>\<partial\><rsup|m><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f>
+      has a <math|i<rsub|m+1>>-partial differential at <math|x> and
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|D<rsub|x,i<rsub|m+1>><around*|(|\<cal-P\><around*|[|m|]>\<circ\>\<partial\><rsup|m><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)>>|<cell|=>|<cell|D<rsub|\<partial\><rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f<around*|(|x|)>>\<cal-P\><around*|[|m|]>\<circ\>D<rsub|x,i<rsub|m+1>>\<partial\><rsup|m><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[lemma:
+        <reference|lemma 16.211.127>]>>>|<cell|\<cal-P\><around*|[|m|]>\<circ\>D<rsub|x,i<rsub|m+1>>\<partial\><rsup|m><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f>>>>
+      </eqnarray*>
+
+      Using [eq: <reference|eq 16.305.127>] and the above we get that
+      <math|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f> has a
+      <math|i<rsub|m+1>>-partial differential at <math|x> and
+
+      <\equation*>
+        D<rsub|x,i<rsub|m+1>><around*|(|D<rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)>=\<cal-P\><around*|[|m|]>\<circ\>D<rsub|x,i<rsub|m+1>>\<partial\><rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f
+      </equation*>
+
+      Hence by definition <math|f> has a partial differential
+      <math|D<rsup|<around*|[|m+1|]>><rsub|x,i<rsub|m+>\<ldots\>i<rsub|1>>f>
+      and\ 
+
+      <\equation>
+        <label|eq 16.307.127>D<rsup|<around*|[|m+1|]>><rsub|x,i<rsub|m+1>\<ldots\>i<rsub|1>>f=\<cal-P\><around*|[|m|]>\<circ\>D<rsub|x,i<rsub|m+1>>\<partial\><rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f
+      </equation>
+
+      Now given <math|h\<in\>\<bbb-R\><rsup|m+1>> we have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|D<rsup|<around*|[|m+1|]>><rsub|x,i<rsub|m+1>\<ldots\>i<rsub|1>>f<around*|(|h<rsub|1>:\<ldots\>:h<rsub|m+1>|)>>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.307.127>]>>>|<cell|>>|<row|<cell|<around*|(|\<cal-P\><around*|[|m|]>\<circ\>D<rsub|x,i<rsub|m+1>>\<partial\><rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)><around*|(|h<rsub|1>:\<ldots\>:h<rsub|m+1>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<around*|(|\<cal-P\><around*|[|m|]>\<circ\>D<rsub|x,i<rsub|m+1>>\<partial\><rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)><around*|(|h<rsub|1>|)>|)><around*|(|h<rsub|2>:\<ldots\>:h<rsub|m+1>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|\<cal-P\><around*|[|m|]><around*|(|D<rsub|x,i<rsub|m+1>><around*|(|\<partial\><rsup|<around*|[|m|]>><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)><around*|(|h<rsub|1>|)>|)>|)><around*|(|h<rsub|2>:\<ldots\>:h<rsub|m+1>|)>>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.306.127>]>>>|<cell|>>|<row|<cell|<around*|(|\<cal-P\><around*|[|m|]><around*|(|h<rsub|1>\<cdot\>\<partial\><rsub|x,i<rsub|m+1>><around*|(|\<partial\><rsup|m><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)>|)>|)><around*|(|h<rsub|2>:\<ldots\>:h<rsub|m+1>|)>>|<cell|\<equallim\><rsub|\<cal-P\><around*|[|m|]>\<in\>L<around*|(|X;L<rsub|m><around*|(|\<bbb-R\>;X|)>|)>>>|<cell|>>|<row|<cell|h<rsub|1>\<cdot\><around*|(|\<cal-P\><around*|[|m|]><around*|(|\<partial\><rsub|x,i<rsub|m+1>><around*|(|\<partial\><rsup|m><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)>|)>|)><around*|(|h<rsub|2><rsub|>:\<ldots\>h<rsub|m+1>|)>>|<cell|=>|<cell|>>|<row|<cell|h<rsub|1>\<cdot\><around*|\<nobracket\>|\<cal-P\><around*|[|m|\<nobracket\>>,\<partial\><rsub|x,i<rsub|m+1>><around*|(|\<partial\><rsup|m><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)>|]><around*|(|h<rsub|2><rsub|>:\<ldots\>h<rsub|m+1>|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|h<rsub|1>\<cdot\><big|prod><rsub|i=1><rsup|m>h<rsub|i+1>|)>\<cdot\>\<partial\><rsub|x,i<rsub|m+1>><around*|(|\<partial\><rsup|m><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|<big|prod><rsub|i=1><rsup|m+1>h<rsub|i>|)>\<cdot\>\<partial\><rsub|x,i<rsub|m+1>><around*|(|\<partial\><rsup|m><rsub|i<rsub|m>\<ldots\>i<rsub|1>>f|)>>|<cell|\<equallim\><rsub|<text|[eq:
+        <reference|eq 16.304.127>]>>>|<cell|>>|<row|<cell|<around*|(|<big|prod><rsub|i=1><rsup|m+1>h<rsub|i>|)>\<cdot\>\<partial\><rsup|m+1><rsub|x,i<rsub|m+1>\<ldots\>i<rsub|1>>f>|<cell|=>|<cell|>>|<row|<cell|\<cal-P\><around*|[|m+1,\<partial\><rsub|x,i<rsub|m+1>\<ldots\>i<rsub|1>>f|]><around*|(|h<rsub|1>:\<ldots\>:h<rsub|m+1>|)>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      Hence by [lemma: <reference|lemma 16.57.187>] we have
+
+      <\equation*>
+        D<rsup|<around*|[|m+1|]>><rsub|x,i<rsub|m+1>\<ldots\>i<rsub|1>>f=\<cal-P\><around*|[|m+1,\<partial\><rsup|m+1><rsub|x,i<rsub|m+1>\<ldots\>i<rsub|1>>f|]>
+      </equation*>
+
+      proving\ 
+
+      <\equation*>
+        m+1\<in\>S
+      </equation*>
+    </description>
+  </proof>
+
+  To complete the proof of [proposition: <reference|proposition 16.244.134>]
+  we need to proof that <math|g> is <math|C<rsup|n>> on
+  <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<rho\>|4>|)>>.
+  Consider the inversion mapping:
+
+  <\equation*>
+    \<tau\>:GL<around*|(|X|)>\<rightarrow\>L<around*|(|X,X|)><text| defined
+    by >\<tau\><around*|(|L|)>=L<rsup|-1><text| [see theorem: <reference|diff
+    inverse mapping on GL(X)>]>
+  </equation*>
+
+  As <math|f:U\<rightarrow\>X> is of class <math|C<rsup|n>> and
+  <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<rho\>|)><below|\<subseteq\>|<text|[eq:
+  <reference|eq 16.454.300>]>>U> it follows from [theorem: <reference|diff
+  class C^n sub-sets>] that\ 
+
+  <\equation*>
+    f<rsub|\|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<rho\>|)>>:B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\>|)>\<rightarrow\>X<text|
+    is of class >C<rsup|n>
+  </equation*>
+
+  Further we have by [theorem: <reference|diff C^n and C^m>] that <math|f> is
+  of class <math|C<rsup|1>> and so that by [theorem: <reference|diff class
+  C^n sub-sets>] again <math|f<rsub|\|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<rho\>|)>>>
+  is of class <math|C<rsup|1>> and <math|\<forall\>x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<rho\>|)><below|\<subseteq\>|<text|[eq:
+  <reference|eq 16.454.300>]>>U> that <math|D<rsub|x>f<rsub|\|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<rho\>|)>>=D<rsup|<around*|[|1|]>><rsub|x>f<rsub|\|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<rho\>|)>>=D<rsup|<around*|[|1|]>><rsub|x>f=D<rsub|x>f>.
+  As by [eq: <reference|eq 16.455.300>] <math|D<rsub|x>f\<in\>\<cal-G\>L<around*|(|X|)>>
+  we have if we define\ 
+
+  <\equation*>
+    D f<rsub|\|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<rho\>|)>>:B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<rho\>|)>\<rightarrow\>L<around*|(|X,X|)><text|
+    by >D f<rsub|\|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<rho\>|)>><around*|(|x|)>=D
+    <rsub|x>f<rsub|\|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<rho\>|)>>
+  </equation*>
+
+  that\ 
+
+  <\equation*>
+    D f<rsub|\|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<rho\>|)>><around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<rho\>|)>|)>\<subseteq\>\<cal-G\>L<around*|(|X|)>
+  </equation*>
+
+  As <math|f:U\<rightarrow\>X> is <math|C<rsup|n>> on <math|U> hence
+  <math|C<rsup|1>> on <math|U>, <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<rho\>|)><below|\<subseteq\>|<text|[eq:
+  <reference|eq 16.454.300>]>>U> and by [eq: <reference|eq 16.455.300>]
+  <math|D<rsub|x>f\<in\>\<cal-G\>L<around*|(|X|)>> if
+  <math|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<rho\>|)>>,
+  As <math|f> is of class <math|C<rsup|m>> we have by
+
+  <\equation*>
+    D f:B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<rho\>|)>\<rightarrow\>L<around*|(|X,X|)><text|
+    by >D f<around*|(|x|)>=D<rsub|x>f<text|>
+  </equation*>
+
+  that satisfies\ 
+
+  <\equation*>
+    D f<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<rho\>|)>|)>\<subseteq\>\<cal-G\>L<around*|(|X|)>
+  </equation*>
+
+  Further by the previous conjecture [conjecture: <reference|conjecture
+  16.248.136>] we can define the function\ 
+
+  <\equation*>
+    D g:B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<rho\>|4>|)>\<rightarrow\>L<around*|(|X,X|)><text|
+    by >D g<around*|(|y|)>=D<rsub|y>g
+  </equation*>
+
+  As <math|g<around*|(|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<rho\>|4>|)>|)>\<equallim\><rsub|<text|[eq:
+  <reference|eq 16.362.136>]>>U<rsub|\<rho\>>\<subseteq\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<rho\>|2>|)>\<subseteq\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<rho\>|)>>
+  the following function is well defined
+
+  <\equation*>
+    \<tau\>\<circ\>D f\<circ\>g:B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<rho\>|4>|)>\<rightarrow\>L<around*|(|X,X|)>
+  </equation*>
+
+  is well defined. If <math|y\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,<frac|\<rho\>|4>|)>>
+  then we have
+
+  <\equation*>
+    <around*|(|\<tau\>\<circ\>D f\<circ\>g|)><around*|(|y|)>=\<tau\><around*|(|D
+    f<around*|(|g<around*|(|y|)>|)>|)>=<around*|(|D
+    f<around*|(|g<around*|(|y|)>|)>|)><rsup|-1>=<around*|(|D<rsub|g<around*|(|y|)>>f|)><rsup|-1>\<equallim\><rsub|<text|[conjecture:
+    <reference|conjecture 16.248.136>]>>D<rsub|y>g=D g<around*|(|y|)>
+  </equation*>
+
+  proving that\ 
+
+  \;
+
+  \;
+
   \;
 
   \;
@@ -14204,6 +14444,10 @@
     <associate|eq 16.300.126|<tuple|95|34>>
     <associate|eq 16.302.127|<tuple|495|?>>
     <associate|eq 16.303.127|<tuple|496|?>>
+    <associate|eq 16.304.127|<tuple|498|?>>
+    <associate|eq 16.305.127|<tuple|499|?>>
+    <associate|eq 16.306.127|<tuple|500|?>>
+    <associate|eq 16.307.127|<tuple|501|?>>
     <associate|eq 16.353.135|<tuple|104|39>>
     <associate|eq 16.354.135|<tuple|105|39>>
     <associate|eq 16.355.135|<tuple|106|40>>
@@ -14219,6 +14463,7 @@
     <associate|eq 16.387.138|<tuple|116|42>>
     <associate|eq 16.394.300|<tuple|493|?>>
     <associate|eq 16.395.300|<tuple|494|?>>
+    <associate|eq 16.398.300|<tuple|497|?>>
     <associate|eq 16.45.185|<tuple|59|23>>
     <associate|eq 16.46.185|<tuple|60|23>>
     <associate|eq 16.47.185|<tuple|61|23>>
