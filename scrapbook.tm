@@ -14136,6 +14136,44 @@
 
   \;
 
+  To illustrate the implicit function theorem consider the function\ 
+
+  <\equation*>
+    f:\<bbb-R\><rsup|2>\<rightarrow\>\<bbb-R\><text| defined by
+    >f<around*|(|x,y|)>=x<rsup|2>+y<rsup|2>
+  </equation*>
+
+  then we can consider the circle <math|C=<around*|{|<around*|(|x,y|)>\|f<around*|(|x,y|)>=1|}>=<around*|{|*<around*|(|x,y|)>\|x<rsup|2>+y<rsup|2>=1|}>>
+  and ask ourself given a point <math|<around*|(|x<rsub|0>,y<rsub|0>|)>\<in\>C>
+  [hence <math|1=f<around*|(|x<rsub|0>,y<rsub|0>|)>=x<rsub|9><rsup|2>+y<rsub|0><rsup|2>>]
+  can we find a open set <math|U> containing <math|x<rsub|0>> and a function
+  <math|g:U\<rightarrow\>\<bbb-R\>> such that it's graph
+  <math|<around*|{|<around*|(|x,g<around*|(|x|)>|)>\|x\<in\>U|}>> is equal to
+  the arc <math|<rigid|A=<around*|{|<around*|(|x,y|)>\<in\>C\|x\<in\>U|}>>>
+  [see figure: <reference|fig 4.311>]. In other words does <math|g> satisfies
+  <math|\<forall\>x\<in\>U> that <math|<around*|(|x,g<around*|(|x|)>|)>=f<around*|(|x,y|)>=1>.
+  If <math|2\<cdot\>y<rsub|0>=\<partial\><rsub|<around*|(|x<rsub|0>,y<rsub|0>|)>,2>f\<neq\>0>
+  [or equivalenly <math|D<rsub|<around*|(|x<rsub|0>,y<rsub|0>|)>,2>f> is a
+  bijection] like in [figure: <reference|fig 4.311>] the answer is clearly
+  yes. However if f <math|2\<cdot\>y<rsub|0>=\<partial\><rsub|<around*|(|x<rsub|0>,y<rsub|0>|)>,2>f=0>
+  [or equivalenly <math|D<rsub|<around*|(|x<rsub|0>,y<rsub|0>|)>,2>f> is a
+  not a bijection] like in [figure: <reference|fig 4.311>] the answer
+
+  <\big-figure|<with|gr-mode|<tuple|edit|text-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.44gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-point-size|2ln|gr-color|dark
+  green|gr-line-width|2ln|<graphics||<with|color|blue|<carc|<point|-4|0>|<point|4.0|0.0>|<point|3.4|2.6>>>|<with|color|red|line-width|5ln|<arc|<point|-3.1|3.01307>|<point|2.62165537839681|3.5>|<point|3.4|2.5>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-7|0>|<point|7.0|0.0>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|arrow-end|\<gtr\>|line-width|2ln|<line|<point|0|-3.8>|<point|0.0|5.0>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|dash-style|10|line-width|2ln|<line|<point|2|0>|<point|2.0|3.93886815660609>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|<text-at|(<math|x<rsub|9>,y<rsub|0>>)|<point|2|4.6>>>|<with|color|red|<text-at|A|<point|3|3.7>>>|<with|color|blue|<text-at|C|<point|4|1.6>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|<text-at|<math|x<rsub|0>>|<point|2|-0.4>>>|<with|color|blue|dash-style|10|line-width|5ln|<line|<point|-3.1|0>|<point|3.4|0.0>>>|<with|color|blue|<text-at|<with|font-series|bold|U>|<point|-0.8|-0.4>>>|<with|color|dark
+  green|line-width|2ln|<line|<point|-3.1|0>|<point|-3.1|3.01306897027421>>>|<with|color|dark
+  green|line-width|2ln|<line|<point|-2|0>|<point|-2.0|3.93886815660609>>>|<with|color|dark
+  green|line-width|2ln|<line|<point|-1|0>|<point|-1.0|4.34475016463026>>>|<with|color|dark
+  green|line-width|2ln|<line|<point|1|0>|<point|0.999999999999998|4.34475016463026>>>|<with|color|dark
+  green|line-width|2ln|<line|<point|3|0>|<point|3.0|3.0>>>|<with|color|dark
+  green|<text-at||<point|-3|1.6>>>>>>
+    <label|fig 4.311>
+  </big-figure>
+
+  <\big-figure|<with|gr-mode|<tuple|edit|text-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.44gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-point-size|2ln|gr-color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|gr-line-width|5ln|<graphics||<with|color|blue|<carc|<point|-4|0>|<point|4.0|0.0>|<point|3.4|2.6>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-7|0>|<point|7.0|0.0>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|arrow-end|\<gtr\>|line-width|2ln|<line|<point|0|-3.8>|<point|0.0|5.0>>>|<with|color|red|line-width|5ln|<arc|<point|3.11078|3>|<point|3.99913452175304|0.900000000000001>|<point|3.52300134282382|-1.5>>>|<with|color|blue|line-width|5ln|<line|<point|3.1|0>|<point|3.0|0.0>|<point|3.9|0.0>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|<text-at|<math|<around*|(|x<rsub|0>,y<rsub|0>|)>=<around*|(|x<rsub|0>,0|)>>|<point|4.3|-0.3>>>>>>
+    <label|fig 5.311>
+  </big-figure>
+
   \;
 
   \;
@@ -14157,6 +14195,8 @@
     <associate|Holder continuity implies continuity|<tuple|73|92>>
     <associate|auto-1|<tuple|open mapping theorem|5>>
     <associate|auto-10|<tuple|higher order differentiation chain rule|?>>
+    <associate|auto-11|<tuple|4|?>>
+    <associate|auto-12|<tuple|5|?>>
     <associate|auto-2|<tuple|sum over a countable set|8>>
     <associate|auto-3|<tuple|<with|mode|<quote|math>|<around*|(|i\<rightarrow\>x|)>>|18>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|\<Delta\><rsub|i,j>>|19>>
@@ -14638,6 +14678,8 @@
     <associate|eq 21.1229.300|<tuple|312|97>>
     <associate|eq 21.27.273|<tuple|220|74>>
     <associate|eq 21.30.273|<tuple|221|74>>
+    <associate|fig 4.311|<tuple|4|?>>
+    <associate|fig 5.311|<tuple|5|?>>
     <associate|figure 20.6.234|<tuple|3|72>>
     <associate|lemma 14.360.158|<tuple|10|10>>
     <associate|lemma 14.364.159|<tuple|14|13>>

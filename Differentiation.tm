@@ -15429,7 +15429,7 @@
   </proof>
 
   <\corollary>
-    <label|diff mean value theorem (2.1)>Let
+    <label|diff mean value theorem (2.2)>Let
     \ <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
     a normed space, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     a Banach space, <math|U> a open set in <math|X> and
@@ -23330,7 +23330,7 @@
       differentiable on <math|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<rho\>|)>|\<wide-bar\>>>
       we can use [eq: <reference|eq 16.454.300>] and the fact that <math|T>
       is of class <math|C<rsup|1>> to apply the mean value theorem
-      [corollary: <reference|diff mean value theorem (2.1)>] giving\ 
+      [corollary: <reference|diff mean value theorem (2.2)>] giving\ 
 
       <\equation>
         <label|eq 16.351.134>\<forall\>x\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<rho\>|)>|\<wide-bar\>><text|
@@ -23403,7 +23403,7 @@
         As <math|X> is a Banach space, <math|T<rsub|y>> is of class
         <math|C<rsup|1>> and <math|<wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<rho\><rprime|'>|)>|\<wide-bar\>>>
         is convex we can apply the mean value theorem [corollary:
-        <reference|diff mean value theorem (2.1)>] on the above to get
+        <reference|diff mean value theorem (2.2)>] on the above to get
 
         <\equation>
           <label|eq 16.357.137>\<forall\>x<rsub|1>,x<rsub|2>\<in\><wide|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<rho\><rprime|'>|)>|\<wide-bar\>><text|
@@ -23643,7 +23643,7 @@
         we have <math|<around*|\<\|\|\>|D
         <rsub|x>T|\<\|\|\>><rsub|L<around*|(|X,X|)>>\<less\><frac|1|2>> [see
         eq: <reference|eq 16.454.300>] we can apply the main value theorem
-        [corollary: <reference|diff mean value theorem (2.1)>] giving
+        [corollary: <reference|diff mean value theorem (2.2)>] giving
         <math|<around*|\<\|\|\>|T<around*|(|x<rsub|1>|)>-T<around*|(|x<rsub|2>|)>|\<\|\|\>><rsub|X>\<leqslant\><frac|1|2>\<cdot\><around*|\<\|\|\>|x<rsub|1>-x<rsub|2>|\<\|\|\>><rsub|X>>
         so that\ 
 
@@ -24493,22 +24493,16 @@
     Function Theorem.
   </proof>
 
-  TODO
-
-  \;
-
   Applying the Inverse Function Theorem on the case where
   <math|X=Y=\<bbb-R\><rsup|n>> results in the following corollary.
 
   <\corollary>
     <label|diff inverse function theorem and Jacobian>Let
-    <math|n,m\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,<around*|\<\|\|\>||\<\|\|\>><rsub|n>|\<rangle\>>>
-    be the normed space equipped with the maximum norm
-    <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|n>=max<around*|(|<around*|{|<around*|\||x<rsub|i>|\|>i\<in\><around*|{|1,\<ldots\>,n|}>|}>|)>>,
-    <math|U> a open set in <math|\<bbb-R\><rsup|n>>, <math|x<rsub|0>\<in\>U>
-    and <math|f:U\<rightarrow\>\<bbb-R\><rsup|n>> a function such that
-    <math|f> is <math|C<rsup|m>> on <math|U> and
-    <math|det<around*|(|<bmatrix|<tformat|<table|<row|<cell|<frac|\<partial\><around*|(|f<rsub|1>,\<ldots\>,f<rsub|m>|)>|\<partial\><around*|(|1,\<ldots\>,n|)>>>>>>><rsub|x<rsub|0>>|)>\<neq\>0>
+    <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,<around*|\<\|\|\>||\<\|\|\>><rsub|n>|\<rangle\>>>
+    be the normed space equipped with the maximum norm, <math|U> a open set
+    in <math|\<bbb-R\><rsup|n>>, <math|x<rsub|0>\<in\>U> and
+    <math|f:U\<rightarrow\>\<bbb-R\><rsup|n>> a function such that <math|f>
+    is of class <math|C<rsup|n>> and <math|det<around*|(|<bmatrix|<tformat|<table|<row|<cell|<frac|\<partial\><around*|(|f<rsub|1>,\<ldots\>,f<rsub|n>|)>|\<partial\><around*|(|1,\<ldots\>,n|)>>>>>>><rsub|x<rsub|0>>|)>\<neq\>0>
     [see theorem: <reference|matrix non singular and isomorphism>] then
     <math|f> is a local diffeomorphism of class <math|C<rsup|n>> at
     <math|x<rsub|0>>. In other words there exist a open set
@@ -24543,7 +24537,7 @@
 
   If <math|f> is a function between <math|\<bbb-R\>> and <math|\<bbb-R\>>
   then a consequence of the Inverse Function Theorem is the Inverse Function
-  Theorem now in calculus books.
+  Theorem now in most calculus books.
 
   <\corollary>
     <label|inverse function and derivate>Let
@@ -24617,10 +24611,10 @@
       ><around*|(|D<rsub|x<rsub|0>>f|)><rsup|-1>=g
     </equation>
 
-    So by the inverse function theorem [theorem: <reference|diff inverse
-    function theorem>] there exists open sets <math|U<rsub|x<rsub|0>>>,
-    <math|V<rsub|f<around*|(|x<rsub|0>|)>>> with
-    <math|x<rsub|0>\<in\>U<rsub|x<rsub|0>>\<subseteq\>U>,
+    So the conditions for the inverse function theorem [theorem:
+    <reference|diff inverse function theorem>] are fulfilled and there exists
+    open sets <math|U<rsub|x<rsub|0>>>, <math|V<rsub|f<around*|(|x<rsub|0>|)>>>
+    with <math|x<rsub|0>\<in\>U<rsub|x<rsub|0>>\<subseteq\>U>,
     <math|f<around*|(|x<rsub|0>|)>\<in\>V<rsub|f<around*|(|x<rsub|0>|)>>>
     such that\ 
 
@@ -24664,7 +24658,9 @@
     <\eqnarray*>
       <tformat|<table|<row|<cell|1>|<cell|=>|<cell|Id<rsub|V<rsub|f<around*|(|x<rsub|0>|)>>><around*|(|1|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|D<rsub|x>f<rsub|\|U<rsub|x<rsub|0>>>\<circ\>D<rsub|f<around*|(|x|)>><around*|(|<around*|(|f<rsub|\|U<rsub|x<rsub|0>>>|)><rsup|-1>|)>|)><around*|(|1|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|x>f<rsub|\|U<rsub|x<rsub|0>>><around*|(|D<rsub|f<around*|(|x|)>><around*|(|<around*|(|f<rsub|\|U<rsub|x<rsub|0>>>|)><rsup|-1>|)><around*|(|1|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
       <reference|diff derivate and frechet
-      differential>]>>>|<cell|D<rsub|x>f<rsub|\|U<rsub|x<rsub|0>>><around*|(|1\<cdot\><around*|(|<around*|(|f<rsub|\|U<rsub|x<rsub|0>><rsup|>>|)><rsup|-1>|)><rprime|'><rsub|f<around*|(|x|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|f<rsub|\|U<rsub|x<rsub|0>><rsup|>>|)><rsup|-1>|)><rprime|'><rsub|f<around*|(|x|)>>\<cdot\>D<rsub|x>f<rsub|\|U<rsub|x<rsub|0>>><around*|(|1|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|f<rsub|\|U<rsub|x<rsub|0>><rsup|>>|)><rsup|-1>|)><rprime|'><rsub|f<around*|(|x|)>>\<cdot\><around*|(|f<rsub|\|U<rsub|x<rsub|0>>>|)><rprime|'><rsub|x>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      differential>]>>>|<cell|D<rsub|x>f<rsub|\|U<rsub|x<rsub|0>>><around*|(|1\<cdot\><around*|(|<around*|(|f<rsub|\|U<rsub|x<rsub|0>><rsup|>>|)><rsup|-1>|)><rprime|'><rsub|f<around*|(|x|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<around*|(|f<rsub|\|U<rsub|x<rsub|0>><rsup|>>|)><rsup|-1>|)><rprime|'><rsub|f<around*|(|x|)>>\<cdot\>D<rsub|x>f<rsub|\|U<rsub|x<rsub|0>>><around*|(|1|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|diff derivate and frechet
+      differential>]>>>|<cell|<around*|(|<around*|(|f<rsub|\|U<rsub|x<rsub|0>><rsup|>>|)><rsup|-1>|)><rprime|'><rsub|f<around*|(|x|)>>\<cdot\><around*|(|f<rsub|\|U<rsub|x<rsub|0>>>|)><rprime|'><rsub|x>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
       <reference|diff derivative is local>]>>>|<cell|<around*|(|<around*|(|f<rsub|\|U<rsub|x<rsub|0>><rsup|>>|)><rsup|-1>|)><rprime|'><rsub|f<around*|(|x|)>>\<cdot\>f<rprime|'><rsub|x>>>>>
     </eqnarray*>
 
@@ -24679,7 +24675,53 @@
   <subsection|Implicit Function Theorem>
 
   The Inverse Function Theorem allows us to define a function implicit based
-  on a relation that should hold. First we need a little lemma.
+  on a relation that should hold. To illustrate the implicit function theorem
+  consider the function\ 
+
+  <\equation*>
+    f:\<bbb-R\><rsup|2>\<rightarrow\>\<bbb-R\><text| defined by
+    >f<around*|(|x,y|)>=x<rsup|2>+y<rsup|2>
+  </equation*>
+
+  then we can consider the circle <math|C=<around*|{|<around*|(|x,y|)>\|f<around*|(|x,y|)>=1|}>=<around*|{|*<around*|(|x,y|)>\|x<rsup|2>+y<rsup|2>=1|}>>
+  and ask ourself given a point <math|<around*|(|x<rsub|0>,y<rsub|0>|)>\<in\>C>
+  [hence <math|1=f<around*|(|x<rsub|0>,y<rsub|0>|)>=x<rsub|9><rsup|2>+y<rsub|0><rsup|2>>]
+  can we find a open set <math|U> containing <math|x<rsub|0>> and a function
+  <math|g:U\<rightarrow\>\<bbb-R\>> such that it's graph
+  <math|<around*|{|<around*|(|x,g<around*|(|x|)>|)>\|x\<in\>U|}>> is equal to
+  the arc <math|<rigid|A\<subseteq\><around*|{|<around*|(|x,y|)>\<in\>C\|x\<in\>U|}>>>
+  [see figure: <reference|fig 4.311>]. In other words does <math|g> satisfies
+  <math|\<forall\>x\<in\>U> that <math|<around*|(|x,g<around*|(|x|)>|)>=f<around*|(|x,y|)>=1>.
+  If <math|2\<cdot\>y<rsub|0>=\<partial\><rsub|<around*|(|x<rsub|0>,y<rsub|0>|)>,2>f\<neq\>0>
+  [or equivalenly <math|D<rsub|<around*|(|x<rsub|0>,y<rsub|0>|)>,2>f> is a
+  bijection] like in [figure: <reference|fig 4.311>] the answer is clearly
+  yes. However if f <math|2\<cdot\>y<rsub|0>=\<partial\><rsub|<around*|(|x<rsub|0>,y<rsub|0>|)>,2>f=0>
+  [or equivalenly <math|D<rsub|<around*|(|x<rsub|0>,y<rsub|0>|)>,2>f> is a
+  not a bijection] like in [figure: <reference|fig 5.311>] the answer is no.
+
+  <\big-figure|<with|gr-mode|<tuple|edit|text-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.44gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-point-size|2ln|gr-color|dark
+  green|gr-line-width|2ln|<graphics||<with|color|blue|<carc|<point|-4|0>|<point|4.0|0.0>|<point|3.4|2.6>>>|<with|color|red|line-width|5ln|<arc|<point|-3.1|3.01307>|<point|2.62165537839681|3.5>|<point|3.4|2.5>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-7|0>|<point|7.0|0.0>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|arrow-end|\<gtr\>|line-width|2ln|<line|<point|0|-3.8>|<point|0.0|5.0>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|dash-style|10|line-width|2ln|<line|<point|2|0>|<point|2.0|3.93886815660609>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|<text-at|(<math|x<rsub|9>,y<rsub|0>>)|<point|2|4.6>>>|<with|color|red|<text-at|A|<point|3|3.7>>>|<with|color|blue|<text-at|C|<point|4|1.6>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|<text-at|<math|x<rsub|0>>|<point|2|-0.4>>>|<with|color|blue|dash-style|10|line-width|5ln|<line|<point|-3.1|0>|<point|3.4|0.0>>>|<with|color|blue|<text-at|<with|font-series|bold|U>|<point|-0.8|-0.4>>>|<with|color|dark
+  green|line-width|2ln|<line|<point|-3.1|0>|<point|-3.1|3.01306897027421>>>|<with|color|dark
+  green|line-width|2ln|<line|<point|-2|0>|<point|-2.0|3.93886815660609>>>|<with|color|dark
+  green|line-width|2ln|<line|<point|-1|0>|<point|-1.0|4.34475016463026>>>|<with|color|dark
+  green|line-width|2ln|<line|<point|1|0>|<point|0.999999999999998|4.34475016463026>>>|<with|color|dark
+  green|line-width|2ln|<line|<point|3|0>|<point|3.0|3.0>>>|<with|color|dark
+  green|<text-at||<point|-3|1.6>>>>>>
+    <label|fig 4.311>
+  </big-figure>
+
+  <\big-figure|<with|gr-mode|<tuple|edit|text-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.44gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-point-size|2ln|gr-color|blue|gr-line-width|5ln|<graphics||<with|color|blue|<carc|<point|-4|0>|<point|4.0|0.0>|<point|3.4|2.6>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|arrow-end|\<gtr\>|line-width|2ln|<line|<point|-7|0>|<point|7.0|0.0>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|arrow-end|\<gtr\>|line-width|2ln|<line|<point|0|-3.8>|<point|0.0|5.0>>>|<with|color|red|line-width|5ln|<arc|<point|3.11078|3>|<point|3.99913452175304|0.900000000000001>|<point|3.52300134282382|-1.5>>>|<with|color|blue|line-width|5ln|<line|<point|3.1|0>|<point|3.0|0.0>|<point|3.9|0.0>>>|<with|color|<pattern|/usr/local/share/TeXmacs/misc/patterns/vintage/wood-xdark.png|1gu|>|<text-at|<math|<around*|(|x<rsub|0>,y<rsub|0>|)>=<around*|(|x<rsub|0>,0|)>>|<point|4.3|-0.3>>>|<with|color|blue|<text-at|<with|font-series|bold|U>|<point|3.35699|-0.326283>>>>>>
+    <label|fig 5.311>
+  </big-figure>
+
+  \;
+
+  The above discussion is about the implicit function theorem [theorem:
+  <reference|diff implicit function theorem (1)>] that is covered in most
+  textbooks, there is however a more general version [see theorem:
+  <reference|diff implicit function theorem>] that we will prove first and
+  then derives the more specific version from the general version. First we
+  need a little lemma.
 
   <\lemma>
     <label|lemma 16.254.143>Let <math|X,Y,Z> be vector spaces over the field
@@ -24716,7 +24758,7 @@
     Let <math|x\<in\>X>, <math|y\<in\>Y> and <math|z\<in\>Z> then\ 
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|<around*|(|T\<circ\>S|)><around*|(|x,z|)>>|<cell|=>|<cell|T<around*|(|S<around*|(|x,z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|T<around*|(|x,-H<rsup|-1><around*|(|L<around*|(|x|)>|)>+H<rsup|-1><around*|(|z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x,L<around*|(|x|)>+H<around*|(|-H<rsup|-1><around*|(|L<around*|(|x|)>|)>+H<rsup|-1><around*|(|z|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x,L<around*|(|x|)>-H<around*|(|H<rsup|-1><around*|(|L<around*|(|x|)>|)>|)>+H<around*|(|H<rsup|-1><around*|(|z|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x,L<around*|(|x|)>-L<around*|(|x|)>+z|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x,z|)>>>|<row|<cell|>|<cell|=>|<cell|Id<rsub|X\<cdot\>Z><around*|(|x,z|)>>>|<row|<cell|<around*|(|S\<circ\>T|)><around*|(|x,y|)>>|<cell|=>|<cell|S<around*|(|T<around*|(|x,z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|S<around*|(|x,L<around*|(|x|)>+H<around*|(|z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x,-H<rsup|-1><around*|(|L<around*|(|x|)>|)>+H<rsup|-1><around*|(|L<around*|(|x|)>+H<around*|(|z|)>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <tformat|<table|<row|<cell|<around*|(|T\<circ\>S|)><around*|(|x,z|)>>|<cell|=>|<cell|T<around*|(|S<around*|(|x,z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|T<around*|(|x,-H<rsup|-1><around*|(|L<around*|(|x|)>|)>+H<rsup|-1><around*|(|z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x,L<around*|(|x|)>+H<around*|(|-H<rsup|-1><around*|(|L<around*|(|x|)>|)>+H<rsup|-1><around*|(|z|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x,L<around*|(|x|)>-H<around*|(|H<rsup|-1><around*|(|L<around*|(|x|)>|)>|)>+H<around*|(|H<rsup|-1><around*|(|z|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x,L<around*|(|x|)>-L<around*|(|x|)>+z|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x,z|)>>>|<row|<cell|>|<cell|=>|<cell|Id<rsub|X\<cdot\>Z><around*|(|x,z|)>>>|<row|<cell|<around*|(|S\<circ\>T|)><around*|(|x,z|)>>|<cell|=>|<cell|S<around*|(|T<around*|(|x,z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|S<around*|(|x,L<around*|(|x|)>+H<around*|(|z|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x,-H<rsup|-1><around*|(|L<around*|(|x|)>|)>+H<rsup|-1><around*|(|L<around*|(|x|)>+H<around*|(|z|)>|)>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
       <reference|linear mapping inverse of a
       isomorphism>]>>>|<cell|<around*|(|x,-H<rsup|-1><around*|(|L<around*|(|x|)>|)>+H<rsup|-1><around*|(|L<around*|(|x|)>|)>+H<rsup|-1><around*|(|H<around*|(|z|)>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|x,z|)>>>|<row|<cell|>|<cell|=>|<cell|Id<rsub|X\<cdot\>Y><around*|(|x,z|)>>>>>
     </eqnarray*>
@@ -24740,9 +24782,9 @@
     be Banach spaces, U a open set in <math|X>, <math|V> a open set in
     <math|Y> and <math|f:U\<cdot\>V\<rightarrow\>Z> be a function that is
     <math|C<rsup|n>> on the open set <math|U\<cdot\>V>. So that using
-    [theorem: <reference|diff higher order differentiation implies higher
-    order partial differation (1)>] and [definition: <reference|diff higher
-    order partial differentiation>] \ \ 
+    [theorems: <reference|diff C^n and C^m>,<reference|diff higher order
+    differentiation implies higher order partial differation (1)>] and
+    [definition: <reference|diff higher order partial differentiation>] \ \ 
 
     <\equation*>
       D<rsub|1>f:U\<cdot\>V\<rightarrow\>L<around*|(|X,Z|)><text| defined by
@@ -24781,9 +24823,10 @@
       exist].\ 
 
       <item>As <math|g> is <math|C<rsup|n>> on <math|W<rsub|0>> we have by
-      [theorem: <reference|diff higher order differentiation implies higher
-      order partial differation (1)>] and [definition: <reference|diff higher
-      order partial differentiation>] that\ 
+      [theorem: <reference|diff C^n and C^m>,<reference|diff higher order
+      differentiation implies higher order partial differation (1)>] and
+      [definition: <reference|diff higher order partial differentiation>]
+      that\ 
 
       <\equation*>
         D<rsub|1>g:W<rsub|0>\<rightarrow\>L<around*|(|X,Y|)><text| defined by
@@ -24809,7 +24852,7 @@
   </theorem>
 
   <\proof>
-    First, as we have to deal with different products hence different
+    First, as we have to deal with different set products hence different
     projections, we introduce the following notations for the different
     projections:
 
@@ -24909,7 +24952,7 @@
 
     Take <math|L=D<rsub|1>f<around*|(|x<rsub|0>,y<rsub|0>|)>\<in\>L<around*|(|X,Z|)>\<subseteq\>Hom<around*|(|X,Y|)>>
     and <math|H=D<rsub|2>f<around*|(|x<rsub|0>,y<rsub|0>|)>\<in\>L<around*|(|Y,Z|)>\<subseteq\>Hom<around*|(|Y,Z|)>>
-    then by [theorem: <reference|eq 16.409.143>] we have\ 
+    then by [eq: <reference|eq 16.409.143>] we have\ 
 
     <\equation*>
       D<rsub|<around*|(|x<rsub|0>,y<rsub|0>|)>>\<varphi\><around*|(|r,s|)>=<around*|(|r,L<around*|(|r|)>+H<around*|(|s|)>|)>
@@ -24968,7 +25011,7 @@
     <\equation>
       <label|eq 16.413.143>\<varphi\><rsub|\|U<rsub|0>\<cdot\>V<rsub|0>>\<equallim\><rsub|<text|[theorem:
       <reference|function restricted function
-      properties>]>><around*|(|\<varphi\><rsub|\|W<rsub|1>>|)><rsub|\|U<rsub|0>\<cdot\>V<rsub|>>:U<rsub|0>\<cdot\>V<rsub|0>\<rightarrow\>W<rsub|0><text|
+      properties>]>><around*|(|\<varphi\><rsub|\|W<rsub|1>>|)><rsub|\|U<rsub|0>\<cdot\>V<rsub|0>>:U<rsub|0>\<cdot\>V<rsub|0>\<rightarrow\>W<rsub|0><text|
       is a diffeomorphism of class >C<rsup|n>
     </equation>
 
@@ -25009,7 +25052,7 @@
 
     <\equation>
       <label|eq 16.417.145><around*|(|\<varphi\><rsub|\|U<rsub|0>\<cdot\>V<rsub|0><rsub|>>|)><rsup|-1>:W<rsub|0>\<rightarrow\>U<rsub|0>\<cdot\>V<rsub|0><text|
-      exists and is >C<rsup|n><text| on >W<rsub|0>
+      exists and is of class >C<rsup|n>
     </equation>
 
     If <math|<around*|(|x,z|)>\<in\>W<rsub|0>> then
@@ -25068,11 +25111,11 @@
     As <math|\<pi\><rsup|X\<cdot\>Y><rsub|2>> is <math|C<rsup|\<infty\>>> on
     <math|X\<cdot\>Y> [see eq: <reference|eq 16.403.143>] and by [eq:
     <reference|eq 16.417.145>] <math|<around*|(|\<varphi\><rsub|\|U<rsub|0>\<cdot\>V<rsub|0>>|)><rsup|-1>>
-    is <math|C<rsup|n>> on <math|W<rsub|0>> it follows from the chain rule
-    [theorem: <reference|diff chain rule higher order class>] that\ 
+    is of class \ <math|C<rsup|n>> it follows from the chain rule [theorem:
+    <reference|diff chain rule higher order class>] that\ 
 
     <\equation>
-      <label|eq 16.422.143>g<text| is >C<rsup|n><text| on >W<rsub|0>
+      <label|eq 16.422.143>g<text| is of class >C<rsup|n>
     </equation>
 
     As <math|\<varphi\><rsub|\|U<rsub|0>\<cdot\>V<rsub|0>>:U<rsub|0>\<cdot\>V<rsub|0>\<rightarrow\>W<rsub|0>>
@@ -25088,9 +25131,9 @@
       is bijective>
     </equation>
 
-    So part (1) of the theorem is proved by [eqs: <reference|eq
-    16.419\<point\>143>, <reference|eq 16.422.143.1>, <reference|eq
-    16.422.145> and <reference|eq 16.422.143>].\ 
+    So <with|font-series|bold|part (1)> of the theorem is proved by [eqs:
+    <reference|eq 16.419\<point\>143>, <reference|eq 16.422.143.1>,
+    <reference|eq 16.422.145> and <reference|eq 16.422.143>].\ 
 
     \;
 
@@ -25105,7 +25148,8 @@
     </eqnarray*>
 
     so that by [eq: <reference|eq 16.423.143>]
-    <math|<around*|(|0,r|)>=<around*|(|0,s|)>> <math|r=s> proving that\ 
+    <math|<around*|(|0,r|)>=<around*|(|0,s|)>> from which it follows that
+    <math|r=s> proving that\ 
 
     <\equation>
       <label|eq 16.424.143>D<rsub|2>f<around*|(|x,y|)><text| is injective>
@@ -25119,7 +25163,12 @@
     <math|<around*|(|r,D<rsub|1>f<around*|(|x,y|)><around*|(|r|)>+D<rsub|2>f<around*|(|x,y|)><around*|(|s|)>|)>=<around*|(|0,z|)>>
     so that <math|r=0\<wedge\>D<rsub|1>f<around*|(|x,y|)><around*|(|r|)>+D<rsub|2>f<around*|(|x,y|)><around*|(|s|)>=z>.
     So we have <math|z<below|=|r=0>D<rsub|1>f<around*|(|x,y|)><around*|(|0|)>+D<rsub|2>f<around*|(|x,y|)><around*|(|s|)>=D<rsub|2>f<around*|(|x,y|)><around*|(|s|)>>
-    which proves that <math|D<rsub|2>f<around*|(|x,y|)>> is surjective.
+    which proves that
+
+    <\equation*>
+      D<rsub|2>f<around*|(|x,y|)><text| is surjective>
+    </equation*>
+
     Combining this with [eq: <reference|eq 16.424.143>] proves that\ 
 
     <\equation*>
@@ -25139,7 +25188,7 @@
       exist>
     </equation>
 
-    Which proves part (2) of the theorem.
+    Which proves <with|font-series|bold|part (2)> of the theorem.
 
     \;
 
@@ -25150,7 +25199,7 @@
       >\<psi\><around*|(|x,z|)>=<around*|(|x,g<around*|(|x,z|)>|)>
     </equation*>
 
-    Then we have that for <math|<around*|(|x,z|)>\<in\>W<rsub|0>> that\ 
+    Then we have for <math|<around*|(|x,z|)>\<in\>W<rsub|0>> that\ 
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|<around*|(|\<pi\><rsup|X\<cdot\>Y><rsub|1>\<circ\>\<psi\>|)><around*|(|x,z|)>>|<cell|=>|<cell|\<pi\><rsup|X\<cdot\>Y><rsub|1><around*|(|\<psi\><around*|(|x,z|)>|)>=\<pi\><rsub|1><rsup|X\<cdot\>Y><around*|(|x,g<around*|(|x,z|)>|)>=x=\<pi\><rsup|X\<cdot\>Y><rsub|1><around*|(|x,z|)>>>|<row|<cell|<around*|(|\<pi\><rsup|X\<cdot\>Y><rsub|2>\<circ\>\<psi\>|)><around*|(|x,z|)>>|<cell|=>|<cell|\<pi\><rsup|X\<cdot\>Y><rsub|2><around*|(|\<psi\><around*|(|x,z|)>|)>=\<pi\><rsub|2><rsup|X\<cdot\>Y><around*|(|x,g<around*|(|x,z|)>|)>=g<around*|(|x,z|)>>>>>
@@ -25164,11 +25213,10 @@
     </equation*>
 
     By [example: <reference|diff projection functon is infinite times
-    differentiable>] <math|\<pi\><rsup|X\<cdot\>Y><rsub|1>> is
-    <math|C<rsup|\<infty\>>> on <math|X\<cdot\>Y> and by [eq: <reference|eq
-    16.422.143>] <math|g> is <math|C<rsup|n>> on <math|W<rsub|0>>, so using
-    the above and [theorem: <reference|diff higher order differentiation
-    classes>] it follows that\ 
+    differentiable>] <math|\<pi\><rsup|X\<cdot\>Y><rsub|1>> is of class
+    <math|C<rsup|\<infty\>>> and by [eq: <reference|eq 16.422.143>] <math|g>
+    is of class <math|C<rsup|n>>, so using the above and [theorem:
+    <reference|diff higher order differentiation classes>] it follows that\ 
 
     <\equation>
       <label|eq 16.428.144>\<psi\><text| is >C<rsup|n><text| on
@@ -25208,7 +25256,7 @@
       <around*|(|f\<circ\>\<psi\>|)>\<circ\>I<rsup|<around*|[|1,<around*|(|x,z|)>|]>><rsup|>=C<rsub|z>
     </equation*>
 
-    so that by [example: <reference|diff constant function is
+    So that by [example: <reference|diff constant function is
     differentiable>] <math|<around*|(|f\<circ\>\<psi\>|)>\<circ\>I<rsup|<around*|[|1,<around*|(|x,z|)>|]>><rsup|>>
     is Fréchet differentiable at <math|t> which by [definition:
     <reference|diff partial differential definition>] proves that
@@ -25236,9 +25284,9 @@
       and ><around*|(|\<pi\><rsup|X\<cdot\>Z><rsub|2>\<circ\>\<psi\>|)>\<circ\>I<rsup|<around*|[|1,<around*|(|x,z|)>|]>>=g\<circ\>I<rsup|<around*|[|1,<around*|(|x,z|)>|]>>
     </equation>
 
-    As <math|g> is <math|C<rsup|n>> on <math|W<rsub|0>> [see eq:
-    <reference|eq 16.422.143>] <math|g> is Fréchet differentiable on
-    <math|W<rsub|0>> hence by [theorem: <reference|diff higher order
+    As <math|g> is of class <math|C<rsup|n>> [see eq: <reference|eq
+    16.422.143>] <math|g> is Fréchet differentiable on <math|W<rsub|0>> hence
+    by [theorems: <reference|diff C^n and C^m>,<reference|diff higher order
     differentiation implies higher order partial differation (1)>] and
     [definition: <reference|diff higher order partial differentiation>] that\ 
 
@@ -25293,7 +25341,7 @@
       >D<rsub|1>g<around*|(|x,z|)>=-<around*|(|D<rsub|2>f<around*|(|x,g<around*|(|x,z|)>|)>|)><rsup|-1>\<circ\>D<rsub|1>f<around*|(|x,g<around*|(|x,z|)>|)>
     </equation>
 
-    which proves part (3.a) of the theorem.\ 
+    which proves<with|font-series|bold| part (3.a)> of the theorem.\ 
 
     \;
 
@@ -25365,7 +25413,7 @@
       we have >D<rsub|2>g<around*|(|x,z|)>=<around*|(|D<rsub|2>f<around*|(|x,g<around*|(|x,z|)>|\<nobracket\>>|)><rsup|-1>
     </equation>
 
-    which proves part (3.b) of the theorem.
+    which proves <with|font-series|bold|part (3.b>) of the theorem.
   </proof>
 
   Next we have a simpler version of the Implicit Function Theorem that you
@@ -25377,11 +25425,11 @@
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     and <math|<around*|\<langle\>|Z,<around*|\<\|\|\>||\<\|\|\>><rsub|Z>|\<rangle\>>>
     be Banach spaces, <math|U> a open set in <math|X>, <math|V> a open set in
-    <math|Y> and <math|f:U\<cdot\>V\<rightarrow\>Z> a function that is
-    <math|C<rsup|n>> on <math|U\<cdot\>V>. Using [theorem: <reference|diff
-    higher order differentiation implies higher order partial differation
-    (1)>] and [definition: <reference|diff higher order partial
-    differentiation>] \ we have that\ 
+    <math|Y> and <math|f:U\<cdot\>V\<rightarrow\>Z> a function that is of
+    class <math|C<rsup|n>>. Using [theorems: <reference|diff C^n and
+    C^m>,<reference|diff higher order differentiation implies higher order
+    partial differation (1)>] and [definition: <reference|diff higher order
+    partial differentiation>] \ we have that\ 
 
     <\equation*>
       D<rsub|1>f:U\<cdot\>V\<rightarrow\>L<around*|(|X,Z|)><text| defined by
@@ -25457,7 +25505,7 @@
       by >D<rsub|2>h<around*|(|x,z|)>=D<rsub|<around*|(|x,z|)>,2>h
     </equation*>
 
-    Using the definition of the product topology on <math|X\<cdot\>Y> [see:
+    Using the definition of the product topology on <math|X\<cdot\>Z> [see:
     definition: <reference|topology box>] and [theorems: <reference|topology
     product topology and box topology are the same in the finite case>,
     <reference|normed maximum norm>] there exists a open set <math|W> in
@@ -25513,13 +25561,13 @@
     </equation*>
 
     Using the chain rule [see theorem: <reference|diff chain rule higher
-    order class>], the fact that <math|h> is <math|C<rsup|n>> on
-    <math|W<rsub|0>> and <math|I<rsup|<around*|[|1,<around*|(|x,f<around*|(|x<rsub|0>,y<rsub|0>|)>|)>|]>>>
-    is <math|C<rsup|\<infty\>>> on <math|W> [see example: <reference|diff
+    order class>], the fact that <math|h> is of class <math|C<rsup|n>> and
+    <math|I<rsup|<around*|[|1,<around*|(|x,f<around*|(|x<rsub|0>,y<rsub|0>|)>|)>|]>>>
+    is of class <math|C<rsup|\<infty\>>> [see example: <reference|diff
     unprojection is infinite times differentiable>] it follows that\ 
 
     <\equation>
-      <label|eq 16.445.145>g<text| is >C<rsup|n><text| on >W
+      <label|eq 16.445.145>g<text| is of class >C<rsup|n>
     </equation>
 
     so that
@@ -26235,9 +26283,11 @@
     <associate|auto-7|<tuple|16.1.2|?>>
     <associate|auto-70|<tuple|inverse function theorem|?>>
     <associate|auto-71|<tuple|16.6.2|?>>
-    <associate|auto-72|<tuple|implicit function theorem (1)|?>>
-    <associate|auto-73|<tuple|implict function theorem (2)|?>>
-    <associate|auto-74|<tuple|16.7|?>>
+    <associate|auto-72|<tuple|16.4|?>>
+    <associate|auto-73|<tuple|16.5|?>>
+    <associate|auto-74|<tuple|implicit function theorem (1)|?>>
+    <associate|auto-75|<tuple|implict function theorem (2)|?>>
+    <associate|auto-76|<tuple|16.7|?>>
     <associate|auto-8|<tuple|16.1.3|?>>
     <associate|auto-9|<tuple|differentiability|?>>
     <associate|conjecture 16.245.136|<tuple|16.356|?>>
@@ -26410,10 +26460,10 @@
     <associate|diff little o and limits|<tuple|16.373|?>>
     <associate|diff local diffeomorphism|<tuple|16.352|?>>
     <associate|diff mean value theorem (0)|<tuple|16.241|?>>
-    <associate|diff mean value theorem (0) alternative|<tuple|16.242|?>>
     <associate|diff mean value theorem (1)|<tuple|16.237|?>>
     <associate|diff mean value theorem (2)|<tuple|16.241|?>>
-    <associate|diff mean value theorem (2.1)|<tuple|16.242|?>>
+    <associate|diff mean value theorem (2.1)|<tuple|16.247|?>>
+    <associate|diff mean value theorem (2.2)|<tuple|16.242|?>>
     <associate|diff mean value theorem (3)|<tuple|16.249|?>>
     <associate|diff mean value theorem (3.1)|<tuple|16.251|?>>
     <associate|diff mean value theorem (4)|<tuple|16.253|?>>
@@ -27034,6 +27084,8 @@
     <associate|eq 16.99.4|<tuple|16.117|?>>
     <associate|eq 16.99.6|<tuple|16.102|?>>
     <associate|example 16.35.1|<tuple|16.55|?>>
+    <associate|fig 4.311|<tuple|16.4|?>>
+    <associate|fig 5.311|<tuple|16.5|?>>
     <associate|inverse function and derivate|<tuple|16.363|?>>
     <associate|lemma 16.101.194|<tuple|16.209|?>>
     <associate|lemma 16.104.194|<tuple|16.265|?>>
