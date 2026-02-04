@@ -344,9 +344,9 @@
   </proof>
 
   If we have two partitions of a interval then we can always find a partition
-  that is 'composed' than the two partitions. With finer we mean that the
-  boundary points of this partition is based on the boundary points of the
-  two given partitions.
+  that is 'composed' of the two partitions and is finer than the two
+  partitions. With finer we mean that the boundary points of this partition
+  is based on the boundary points of the two given partitions.
 
   \;
 
@@ -1089,7 +1089,8 @@
     <math|s<rsub|i>\<in\><around*|[|t<rsub|i>,t<rsub|i+1>|]>>.\ 
 
     A <with|font-series|bold|tagged partition >on <math|<around*|[|a,b|]>> is
-    a pair of a partition on the partition. So a tagged partition is a pair\ 
+    a pair of a partition and a tag on the partition. So a tagged partition
+    is a pair\ 
 
     <\equation*>
       <around*|\<langle\>|<around*|{|t<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>\<bbb-R\>,<around*|{|s<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n-1|}>>\<subseteq\>\<bbb-R\>|\<rangle\>>
@@ -1540,9 +1541,9 @@
   </definition>
 
   <\note>
-    Another notation that you find in the literature is
-    <math|<big|int><rsub|a><rsup|b>f<around*|(|x|)>dx> instead of
-    <math|<big|int><rsub|a><rsup|b>f>. One benefit of this notation is if
+    <label|rieman integral notation>Another notation that you find in the
+    literature is <math|<big|int><rsub|a><rsup|b>f<around*|(|x|)>dx> instead
+    of <math|<big|int><rsub|a><rsup|b>f>. One benefit of this notation is if
     there is a expression to calculate the value of a function based on a
     expression. For example instead of using\ 
 
@@ -2498,7 +2499,7 @@
 <\initial>
   <\collection>
     <associate|chapter-nr|14>
-    <associate|page-first|847>
+    <associate|page-first|873>
     <associate|par-first|0tab>
     <associate|section-nr|11>
     <associate|subsection-nr|0>
@@ -2567,6 +2568,7 @@
     <associate|lemma 15.6.175|<tuple|15.7|?>>
     <associate|lemma 15.8.175|<tuple|15.9|?>>
     <associate|lemma 15.9.175|<tuple|15.10|?>>
+    <associate|rieman integral notation|<tuple|15.21|?>>
     <associate|rieman integral properties|<tuple|15.29|?>>
     <associate|riemann combining two partitions|<tuple|15.8|?>>
     <associate|riemann constant function|<tuple|15.22|?>>
