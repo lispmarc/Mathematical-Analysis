@@ -26255,43 +26255,44 @@
     <label|diff Taylor II><dueto|Taylor' Theorem (II)>Let
     <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>, <math|a,b\<in\>\<bbb-R\>> with
     <math|a\<less\>b>, <math|x,x<rsub|0>\<in\>\<bbb-R\>> with
-    <math|x\<less\>x<rsub|0>> and <math|<around*|[|x<rsub|0>,x|]>\<subseteq\><around*|]|a,b|[>>
-    and <math|f:<around*|[|a,b|]>\<rightarrow\>\<bbb-R\>> a function such
-    that
+    <math|x\<neq\>x<rsub|0>> and <math|<around*|[|m,M|]>\<subseteq\><around*|]|a,b|[>>
+    where <math|m=min<around*|(|x<rsub|0>,x|)>>,
+    <math|M=max<around*|(|x<rsub|0>,x|)>> and
+    <math|f:<around*|[|a,b|]>\<rightarrow\>\<bbb-R\>> a function such that
 
     <\enumerate>
-      <item><math|\<forall\>y\<in\><around*|[|x<rsub|0>,x|]>> <math|f> has a
+      <item><math|\<forall\>y\<in\><around*|[|m,M|]>> <math|f> has a
       <math|<around*|(|n-1|)>>-times derivative at <math|y>
 
-      <item><math|f<rsup|<around*|(|n-1|)>>:<around*|[|x<rsub|0>,x|]>\<rightarrow\>\<bbb-R\>>
+      <item><math|f<rsup|<around*|(|n-1|)>>:<around*|[|m,M|]>\<rightarrow\>\<bbb-R\>>
       defined by <math|f<rsup|<around*|(|n-1|)>><around*|(|y|)>=f<rsup|<around*|(|n-1|)>><rsub|y>>
       is continuous
 
-      <item><math|\<forall\>y\<in\><around*|]|x<rsub|0>,x|[>> <math|f> has a
+      <item><math|\<forall\>y\<in\><around*|]|m,M|[>> <math|f> has a
       <math|n>-times derivative at <math|y>
     </enumerate>
 
     then <math|\<exists\>\<theta\>\<in\><around*|]|0,1|[>> such that\ 
 
     <\equation*>
-      f<around*|(|x|)>=f<around*|(|x<rsub|0>|)>+<big|sum><rsub|k=1><rsup|n-1><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>+<frac|<around*|(|x-x<rsub|0>|)><rsup|n>|n!>\<cdot\>f<rsup|<around*|(|n|)>><rsub|<around*|(|x<rsub|0>+\<theta\>\<cdot\><around*|(|x-x<rsub|0>|)>|)>>
+      f<around*|(|x|)>=f<around*|(|x<rsub|0>|)>+<big|sum><rsub|k=1><rsup|n-1><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>+<frac|<around*|(|x-x<rsub|0>|)><rsup|n>|n!>\<cdot\>f<rsup|<around*|(|n|)>><rsub|<around*|(|m+\<theta\>\<cdot\><around*|(|M-m|)>|)>>
     </equation*>
 
     <\note>
       As <math|0\<less\>\<theta\>\<less\>1> we have that
-      <math|x<rsub|0>\<less\>x<rsub|0>+\<theta\>\<cdot\><around*|(|x-x<rsub|0>|)>\<less\>x<rsub|0>+1\<cdot\><around*|(|x-x<rsub|0>|)>=x>
-      so that <math|x<rsub|0>+\<theta\>\<cdot\><around*|(|x-x<rsub|0>|)>\<in\><around*|]|x<rsub|0>,x|[>>
-      so that by (3) <math|f<rsup|<around*|(|n|)>><rsub|<around*|(|x<rsub|0>+\<theta\>\<cdot\><around*|(|x-x<rsub|0>|)>|)>>>
+      <math|m\<less\>m+\<theta\>\<cdot\><around*|(|M-m|)>\<less\>m+1\<cdot\><around*|(|M-m|)>=m>
+      so that <math|m+\<theta\>\<cdot\><around*|(|M-m|)>\<in\><around*|]|m,M|[>>
+      so that by (3) <math|f<rsup|<around*|(|n|)>><rsub|<around*|(|m+\<theta\>\<cdot\><around*|(|M-m|)>|)>>>
       exist.
     </note>
 
     <\note>
-      As <math|\<forall\>k\<in\><around*|{|1,\<ldots\>,n-1|}>> we have by (1)
+      <math|\<forall\>k\<in\><around*|{|1,\<ldots\>,n-1|}>> we have by (1)
       and [theorem: <reference|diff n-times and m-times derivating>] that
       <math|f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>> exist so that\ 
 
       <\equation*>
-        f<around*|(|x|)>=f<around*|(|x<rsub|0>|)>+<big|sum><rsub|k=1><rsup|n-1><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>+<frac|<around*|(|x-x<rsub|0>|)>|n!>\<cdot\>f<rsup|<around*|(|n|)>><rsub|<around*|(|x<rsub|0>+\<theta\>\<cdot\><around*|(|x-x<rsub|0>|)>|)>>
+        f<around*|(|x|)>=f<around*|(|x<rsub|0>|)>+<big|sum><rsub|k=1><rsup|n-1><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>+<frac|<around*|(|x-x<rsub|0>|)><rsup|n>|n!>\<cdot\>f<rsup|<around*|(|n|)>><rsub|<around*|(|x<rsub|0>+\<theta\>\<cdot\><around*|(|x-x<rsub|0>|)>|)>>
       </equation*>
 
       is well defined.
@@ -26300,14 +26301,14 @@
 
   <\proof>
     \ Let <math|k\<in\><around*|{|1,\<ldots\>,n-1|}>> then as
-    <math|\<forall\>y\<in\><around*|[|x<rsub|0>,x|]>>
+    <math|\<forall\>y\<in\><around*|[|m,M|]>>
     <math|f<rsup|<around*|(|n-1|)>><rsub|y>> exist it follows from [theorem:
     <reference|diff n-times and m-times derivating>] that
     <math|f<rsup|<around*|(|k+1|)>><rsub|y>> exist so that we can define\ 
 
     <\equation>
       <label|eq 16.570.311>\<forall\>k\<in\><around*|{|1,\<ldots\>.,n-1|}><text|
-      >f<rsup|<around*|(|k|)>>:<around*|[|x,x<rsub|0>|]>\<rightarrow\>\<bbb-R\><text|
+      >f<rsup|<around*|(|k|)>>:<around*|[|m,M|]>\<rightarrow\>\<bbb-R\><text|
       by >f<rsup|<around*|(|k|)>><around*|(|y|)>=f<rsup|<around*|(|k|)>><rsub|y>
     </equation>
 
@@ -26315,7 +26316,7 @@
     derivatives and continuity>] proves that\ 
 
     <\equation>
-      <label|eq 16.571.311>\<forall\>y\<in\><around*|[|0,1|]>
+      <label|eq 16.571.311>\<forall\>y\<in\><around*|[|m,M|]>
       f<rprime|'><rsub|y><text| exist and >f<text| is continuous at >y
     </equation>
 
@@ -26324,14 +26325,14 @@
     <\description>
       <item*|<math|k\<in\><around*|{|1,\<ldots\>,n-2|}>>>Then
       <math|k+1\<in\><around*|{|1,\<ldots\>,n-1|}>> so that
-      <math|\<forall\>y\<in\><around*|]|x<rsub|0>,x|[>\<subseteq\><around*|[|x<rsub|0>,x|]>>
+      <math|\<forall\>y\<in\><around*|]|m,M|[>\<subseteq\><around*|[|m,M|]>>
       we have that <math|f<rsup|<around*|(|k+1|)>><rsub|y>> exist so that by
       definition <math|<around*|(|f<rsup|<around*|(|k|)>>|)><rprime|'><rsub|x>>
       exist and <math|f<rsup|<around*|(|k+1|)>><around*|(|y|)>=f<rsup|<around*|(|k+1|)>><rsub|y>=<around*|(|f<rsup|<around*|(|k|)>>|)><rprime|'><rsub|x>>
       and by [theorem: <reference|diff derivatives and continuity>]
       <math|f<rsup|<around*|(|k|)>>> is continuous. <math|>
 
-      <item*|<math|k=n-1>>As <math|\<forall\>y\<in\><around*|]|x<rsub|0>,x|[>>
+      <item*|<math|k=n-1>>As <math|\<forall\>y\<in\><around*|]|m,M|[>>
       <math|f<rsup|<around*|(|n|)>><rsub|y>> exist it follows <math|>that
       <math|<around*|(|f<rsup|<around*|(|n-1|)>>|)><rprime|'><rsub|y>> exist
       <math|f<rsup|<around*|(|n|)>><rsub|y>=<around*|(|f<rsup|<around*|(|n-1|)>>|)><rprime|'><rsub|y>>,
@@ -26343,7 +26344,7 @@
     <\equation>
       <label|eq 16.572.311>\<forall\>k\<in\><around*|{|1,\<ldots\>,n-1|}><text|
       >f<rsup|<around*|(|k|)>><text| is continous and
-      >\<forall\>y\<in\><around*|]|x<rsub|0>,x|[><text|
+      >\<forall\>y\<in\><around*|]|m,M|[><text|
       ><around*|(|f<rsup|<around*|(|k|)>>|)><rprime|'><rsub|y><text| exist
       and >f<rsup|<around*|(|k+1|)>><rsub|y>=<around*|(|f<rsup|<around*|(|k|)>>|)><rprime|'><rsub|x>
     </equation>
@@ -26352,7 +26353,7 @@
     <math|\<lambda\>>] then by the above we can define the following function
 
     <\equation>
-      <label|eq 16.573.311>g:<around*|[|x<rsub|0>,x|]>\<rightarrow\>\<bbb-R\><text|
+      <label|eq 16.573.311>g:<around*|[|m,M|]>\<rightarrow\>\<bbb-R\><text|
       where >g<around*|(|t|)>=f<around*|(|t|)>+<big|sum><rsub|k=1><rsup|n-1><frac|<around*|(|x-t|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><around*|(|t|)>+\<lambda\>\<cdot\><frac|<around*|(|x-t|)><rsup|n>|n!>
     </equation>
 
@@ -26374,7 +26375,7 @@
     <reference|diff (f+g)'=f'+g'>, <reference|diff power>, <reference|diff
     chain rule calculus>, <reference|diff derivative is local>] and [eqs:
     <reference|eq 16.571.311>, <reference|eq 16.572.311>] it follows that
-    <math|\<forall\>t\<in\><around*|]|x<rsub|0>,x|[>> has a derivative
+    <math|\<forall\>t\<in\><around*|]|m\<less\>M|[>> has a derivative
     <math|g<rprime|'><rsub|t>> at <math|t> with
 
     <\eqnarray*>
@@ -26384,11 +26385,11 @@
     so that\ 
 
     <\equation>
-      <label|eq 16.574.311>\<forall\>t\<in\><around*|]|x<rsub|0>,x|[><text|
-      we have >g<rprime|'><rsub|t>=<frac|<around*|(|x-t|)><rsup|<around*|(|n-1|)>>|<around*|(|n-1|)>!>f<rsub|t><rsup|n>-\<lambda\>\<cdot\><frac|<around*|(|x-t|)><rsup|<around*|(|n-1|)>>|<around*|(|n-1|)>!>
+      <label|eq 16.574.311>\<forall\>t\<in\><around*|]|m,M|[><text| we have
+      >g<rprime|'><rsub|t>=<frac|<around*|(|x-t|)><rsup|<around*|(|n-1|)>>|<around*|(|n-1|)>!>f<rsub|t><rsup|n>-\<lambda\>\<cdot\><frac|<around*|(|x-t|)><rsup|<around*|(|n-1|)>>|<around*|(|n-1|)>!>
     </equation>
 
-    As <math|x<rsub|0>\<less\>x> we can choose <math|\<lambda\>> to be\ 
+    As <math|x<rsub|0>\<neq\>x> we can choose <math|\<lambda\>> to be\ 
 
     <\equation*>
       \<lambda\>=<frac|n!<rsub|>|<around*|(|x-x<rsub|0>|)>>\<cdot\><around*|(|-<big|sum><rsub|k=1><rsup|n-1><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><around*|(|x<rsub|0>|)>+f<around*|(|x|)>-f<around*|(|x<rsub|0>|)>|)>
@@ -26422,17 +26423,17 @@
 
     The above together with the fact that we have proved that <math|g> is
     continuous and have a derivative <math|g<rprime|'><rsub|t>> at
-    <math|t\<in\><around*|]|x<rsub|0>,x|[>> allows use to apply Rolle's
-    theorem [theorem: <reference|diff Rolle's theorem>] from which it follows
-    that there exist a <math|\<zeta\>\<in\><around*|]|x<rsub|0>,x|[>> such
-    that <math|g<rprime|'><around*|(|\<zeta\>|)>=0>. Combing this with [eq:
+    <math|t\<in\><around*|]|m,M|[>> allows use to apply Rolle's theorem
+    [theorem: <reference|diff Rolle's theorem>] from which it follows that
+    there exist a <math|\<zeta\>\<in\><around*|]|m,M|[>> such that
+    <math|g<rprime|'><around*|(|\<zeta\>|)>=0>. Combing this with [eq:
     <reference|eq 16.574.311>] gives\ 
 
     <\equation*>
       <frac|<around*|(|x-\<zeta\>|)><rsup|<around*|(|n-1|)>>|<around*|(|n-1|)>!>f<rsub|\<zeta\>><rsup|n>-\<lambda\>\<cdot\><frac|<around*|(|x-\<zeta\>|)><rsup|<around*|(|n-1|)>>|<around*|(|n-1|)>!>=0
     </equation*>
 
-    As <math|\<zeta\>\<in\><around*|]|x<rsub|0>,x|[>> we have that
+    As <math|\<zeta\>\<in\><around*|]|m,M|[>> we have that
     <math|<around*|(|x-\<zeta\>|)><rsup|<around*|(|n-1|)>>> so we can divide
     the above by <math|<frac|<around*|(|x-\<zeta\>|)><rsup|<around*|(|n-1|)>>|<around*|(|n-1|)>!>>
     which proves that
@@ -26451,18 +26452,18 @@
       16.577.311>>>>>
     </eqnarray*>
 
-    As <math|\<zeta\>\<in\><around*|[|x<rsub|0>,x|[>\<Rightarrow\>x<rsub|0>\<less\>\<zeta\>\<less\>x>
-    we have that <math|x\<less\>x<rsub|0>> so we can then define
-    <math|\<theta\>=<frac|\<zeta\>-x<rsub|0>|x-x<rsub|0>>> then we have as
-    <math|0\<less\><around*|(|\<zeta\>-x<rsub|0>|)>,0\<less\><around*|(|x-x<rsub|0>|)>>
-    that <math|0\<less\>\<theta\>=<frac|\<zeta\>-x<rsub|0>|x-x<rsub|0>>\<less\><frac|x-x<rsub|0>|x-x<rsub|0>>=1>
+    As <math|\<zeta\>\<in\><around*|[|m,M|[>\<Rightarrow\>m\<less\>\<zeta\>\<less\>M>
+    we have that <math|m\<less\>M> so we can then define
+    <math|\<theta\>=<frac|\<zeta\>-m|m-M>> then we have as
+    <math|0\<less\><around*|(|\<zeta\>-m|)>,0\<less\><around*|(|M-m|)>> that
+    <math|0\<less\>\<theta\>=<frac|\<zeta\>-m|M-m>\<less\><frac|M-m|M-m>=1>
     so that <math|\<theta\>\<in\><around*|]|0,1|[>>. Further
-    <math|x<rsub|0>+\<theta\>\<cdot\><around*|(|x-x<rsub|0>|)>=x<rsub|0>+<around*|(|\<zeta\>-x<rsub|0>|)>=\<theta\>>.
+    <math|m+\<theta\>\<cdot\><around*|(|M-m|)>=m+<around*|(|\<zeta\>-m|)>=\<zeta\>>.
     Substituting this result in [eq: <reference|eq 16.577.311>] proves
     finally that\ 
 
     <\equation*>
-      f<around*|(|x|)>=f<around*|(|x<rsub|0>|)>+<big|sum><rsub|k=1><rsup|n-1><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><around*|(|x<rsub|0>|)>+<frac|<around*|(|x-x<rsub|0>|)><rsup|n>|n!>\<cdot\>f<rsup|<around*|(|n|)>><rsub|<around*|(|x<rsub|o>+\<theta\>\<cdot\><around*|(|x-x<rsub|0>|)>|)>><text|
+      f<around*|(|x|)>=f<around*|(|x<rsub|0>|)>+<big|sum><rsub|k=1><rsup|n-1><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><around*|(|x<rsub|0>|)>+<frac|<around*|(|x-x<rsub|0>|)><rsup|n>|n!>\<cdot\>f<rsup|<around*|(|n|)>><rsub|<around*|(|m+\<theta\>\<cdot\><around*|(|M-m|)>|)>><text|
       where >\<theta\>\<in\><around*|]|0,1|[>
     </equation*>
   </proof>
@@ -26486,14 +26487,14 @@
     then for the the function\ 
 
     <\equation*>
-      R:<around*|[|a,b|]>\<rightarrow\>X<text| defined by
-      >R<around*|(|t|)>=<around*|(|b-t|)><rsup|n-1>\<cdot\>f<rsup|<around*|(|n|)>><around*|(|t|)>
+      R<rsub|n,f>:<around*|[|a,b|]>\<rightarrow\>X<text| defined by
+      >R<rsub|n,b,f><around*|(|t|)>=<around*|(|b-t|)><rsup|n-1>\<cdot\>f<rsup|<around*|(|n|)>><around*|(|t|)>
     </equation*>
 
     we have
 
     <\equation*>
-      f*<around*|(|b|)>=f<around*|(|a|)>+<big|sum><rsub|k=1><rsup|n-1><frac|<around*|(|b-a|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|a>+<frac|1|<around*|(|n-1|)>!>\<cdot\><big|int><rsub|x<rsub|0>><rsup|x>R
+      f*<around*|(|b|)>=f<around*|(|a|)>+<big|sum><rsub|k=1><rsup|n-1><frac|<around*|(|b-a|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|a>+<frac|1|<around*|(|n-1|)>!>\<cdot\><big|int><rsub|a><rsup|b>R<rsub|n,b,f>
     </equation*>
 
     <\note>
@@ -26513,9 +26514,9 @@
       >f<rsup|<around*|(|n|)>><rsub|y><text| exist and
       >f<rsup|<around*|(|n|)>>:<around*|[|a,b|]>\<rightarrow\>X<text| defined
       by <math|f<rsup|<around*|(|n|)>><around*|(|x|)>=f<rsup|n><rsub|x>> is
-      continuous then ><rigid|f<around*|(|a|)>+<big|sum><rsub|k=1><rsup|n-1><frac|<around*|(|b-a|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|a>+<frac|1|<around*|(|n-1|)>!>\<cdot\><big|int><rsub|x<rsub|0>><rsup|x>R<rsub|n>><text|
-      where >R<rsub|n>:<around*|[|a,b|]>\<rightarrow\>X<text| is defined by
-      ><rigid|R<rsub|n><around*|(|t|)>=<around*|(|b-t|)><rsup|n-1>\<cdot\>f<rsup|<around*|(|n|)>><around*|(|t|)>>|}>
+      continuous then ><rigid|f<around*|(|a|)>+<big|sum><rsub|k=1><rsup|n-1><frac|<around*|(|b-a|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|a>+<frac|1|<around*|(|n-1|)>!>\<cdot\><big|int><rsub|a><rsup|b>R<rsub|n,b,f>><text|
+      where >R<rsub|n,b,f>:<around*|[|a,b|]>\<rightarrow\>X<text| is defined
+      by ><rigid|R<rsub|n,b,f><around*|(|t|)>=<around*|(|b-t|)><rsup|n-1>\<cdot\>f<rsup|<around*|(|n|)>><around*|(|t|)>>|}>
     </equation*>
 
     then we have:\ 
@@ -26615,8 +26616,8 @@
       or if we define\ 
 
       <\equation*>
-        R<rsub|2>:<around*|[|a,.b|]>\<rightarrow\>X<text| by
-        >R<around*|(|t|)>=<around*|(|b-t|)><rsup|<around*|(|2-1|)>>\<cdot\>f<rsup|<around*|(|2|)>><around*|(|t|)>=<around*|(|h\<cdot\>f<rsup|<around*|(|2|)>>|)>
+        R<rsub|2,b,f>:<around*|[|a,.b|]>\<rightarrow\>X<text| by
+        >R<rsub|2,b,f><around*|(|t|)>=<around*|(|b-t|)><rsup|<around*|(|2-1|)>>\<cdot\>f<rsup|<around*|(|2|)>><around*|(|t|)>=<around*|(|h\<cdot\>f<rsup|<around*|(|2|)>>|)>
       </equation*>
 
       that\ 
@@ -26725,14 +26726,14 @@
       As <math|n\<in\>S> we have that\ 
 
       <\equation*>
-        f<around*|(|b|)>=f<around*|(|a|)>+<big|sum><rsub|k=1><rsup|n-1><frac|<around*|(|b-a|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|a>+<frac|1|<around*|(|n-1|)>!>\<cdot\><big|int><rsub|a><rsup|b>R<rsub|n>
+        f<around*|(|b|)>=f<around*|(|a|)>+<big|sum><rsub|k=1><rsup|n-1><frac|<around*|(|b-a|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|a>+<frac|1|<around*|(|n-1|)>!>\<cdot\><big|int><rsub|a><rsup|b>R<rsub|n,f>
       </equation*>
 
       where\ 
 
       <\equation*>
-        R<rsub|n>:<around*|[|a,b|]>\<rightarrow\>\<bbb-R\><text| is defined
-        by >R<rsub|n><around*|(|t|)>=<around*|(|b-t|)><rsup|n>\<cdot\>f<rsup|<around*|(|n|)>><around*|(|t|)>=<around*|(|g\<cdot\>f<rsup|<around*|(|n|)>>|)><around*|(|t|)>
+        R<rsub|n,b,f>:<around*|[|a,b|]>\<rightarrow\>\<bbb-R\><text| is
+        defined by >R<rsub|n,b,f><around*|(|t|)>=<around*|(|b-t|)><rsup|n>\<cdot\>f<rsup|<around*|(|n|)>><around*|(|t|)>=<around*|(|g\<cdot\>f<rsup|<around*|(|n|)>>|)><around*|(|t|)>
       </equation*>
 
       So\ 
@@ -26745,14 +26746,14 @@
       Define now\ 
 
       <\equation*>
-        R<rsub|n+1>:<around*|[|a,b|]>\<rightarrow\>X<text| by
-        >R<rsub|n+1><around*|(|t|)>=<around*|(|b-t|)><rsup|n>\<cdot\>f<rsup|<around*|(|n+1|)>>=<around*|(|h\<cdot\>f<rsup|<around*|(|n+1|)>>|)><around*|(|t|)>
+        R<rsub|n+1,b,f>:<around*|[|a,b|]>\<rightarrow\>X<text| by
+        >R<rsub|n+1,b,f><around*|(|t|)>=<around*|(|b-t|)><rsup|n>\<cdot\>f<rsup|<around*|(|n+1|)>>=<around*|(|h\<cdot\>f<rsup|<around*|(|n+1|)>>|)><around*|(|t|)>
       </equation*>
 
       then we have\ 
 
       <\equation*>
-        f<around*|(|b|)>=f<around*|(|a|)>+<big|sum><rsub|k=1><rsup|<around*|(|n+1|)>-1><frac|<around*|(|b-a|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|a>+<frac|1|<around*|(|<around*|(|n+1|)>-1|)>><big|int><rsub|a><rsup|b>R<rsub|n+1>
+        f<around*|(|b|)>=f<around*|(|a|)>+<big|sum><rsub|k=1><rsup|<around*|(|n+1|)>-1><frac|<around*|(|b-a|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|a>+<frac|1|<around*|(|<around*|(|n+1|)>-1|)>><big|int><rsub|a><rsup|b>R<rsub|n+1,b,f>
       </equation*>
 
       which proves that <math|n+1\<in\>S>.
@@ -26782,14 +26783,14 @@
     then for the function\ 
 
     <\equation*>
-      R:<around*|[|x<rsub|0>,x|]>\<rightarrow\>X<text| defined by
-      >R<around*|(|t|)>=<around*|(|x-t|)><rsup|n-1>\<cdot\>f<rsup|<around*|(|n|)>><around*|(|t|)>
+      R<rsub|n,x<rsub|0>,f>:<around*|[|x<rsub|0>,x|]>\<rightarrow\>X<text|
+      defined by >R<rsub|n,x,f><around*|(|t|)>=<around*|(|x-t|)><rsup|n-1>\<cdot\>f<rsup|<around*|(|n|)>><around*|(|t|)>
     </equation*>
 
     we have
 
     <\equation*>
-      f*<around*|(|x|)>=f<around*|(|x<rsub|0>|)>+<big|sum><rsub|k=1><rsup|n-1><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|a>+<frac|1|<around*|(|n-1|)>!>\<cdot\><big|int><rsub|x<rsub|0>><rsup|x>R
+      f*<around*|(|x|)>=f<around*|(|x<rsub|0>|)>+<big|sum><rsub|k=1><rsup|n-1><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|a>+<frac|1|<around*|(|n-1|)>!>\<cdot\><big|int><rsub|x<rsub|0>><rsup|x>R<rsub|n,x,f>
     </equation*>
 
     <\note>
@@ -26820,10 +26821,219 @@
   </theorem>
 
   <\proof>
-    TODO
+    As <math|\<forall\>y\<in\><around*|[|x<rsub|0>,x|]>>
+    <math|f<rsup|<around*|(|n|)>><rsub|y>> exist it follows from [theorems:
+    <reference|diff n-times and m-times derivating>, <reference|diff
+    derivative is local>] that <math|\<forall\>m\<in\><around*|{|1,\<ldots\>,n|}>>,
+    <math|\<forall\>y\<in\><around*|[|x<rsub|0>,x|]>> we have that
+    <math|f<rsub|\|<around*|[|x<rsub|0>,x|]>>> has a <math|m>-times
+    derivative <math|<around*|(|f<rsub|\|<around*|[|x<rsub|0>,x|]>>|)><rsup|<around*|(|m|)>><rsub|y>>
+    at <math|y> with <math|>
+
+    <\equation>
+      <label|eq 16.583.313><around*|(|f<rsub|\|<around*|[|x<rsub|0>,x|]>>|)><rsup|<around*|(|m|)>><rsub|y>=f<rsup|<around*|(|m|)>><rsub|y>.
+    </equation>
+
+    In particular if we define\ 
+
+    <\equation*>
+      f<rsup|<around*|(|n|)>>:<around*|[|x<rsub|0>,x|]>\<rightarrow\>X<text|
+      by >f<rsup|<around*|(|n|)>><around*|(|y|)>=f<rsup|<around*|(|n|)>><rsub|y>
+    </equation*>
+
+    <\equation*>
+      <around*|(|f<rsub|\|<around*|[|x<rsub|0>,x|]>>|)><rsup|<around*|(|n|)>>:<around*|[|x<rsub|0>,x|]>\<rightarrow\>X<text|
+      by ><around*|(|f<rsub|\|<around*|[|x<rsub|0>,x|]>>|)><rsup|<around*|(|n|)>><around*|(|y|)>=<around*|(|f<rsub|\|<around*|[|x<rsub|0>,x|]>>|)><rsup|<around*|(|n|)>><rsub|y>
+    </equation*>
+
+    so that
+
+    <\equation>
+      <label|eq 16.584.313>f<rsup|<around*|(|n|)>>=<around*|(|f<rsub|\|<around*|[|x<rsub|0>,x|]>>|)><rsup|<around*|(|n|)>>
+    </equation>
+
+    As <math|f<rsup|<around*|(|n|)>>> is continuous it follows that\ 
+
+    <\equation*>
+      <around*|(|f<rsub|\|<around*|[|x<rsub|0>,x|]>>|)><rsup|<around*|(|n|)>><text|
+      is continuous>
+    </equation*>
+
+    Hence we can apply [lemma: <reference|lemma 16.380.312>] for
+    <math|f<rsub|\|<around*|[|x<rsub|0>,x|]>>> to get\ 
+
+    <\equation*>
+      f<around*|(|x|)><below|=|x<rsub|0>\<in\><around*|[|x<rsub|0>,x|]>>f<rsub|\|<around*|[|x<rsub|0>,x|]>><around*|(|x|)>=f<rsub|\|x<rsub|0>,x><around*|(|x<rsub|0>|)>+<big|sum><rsub|k=1><rsup|n-1><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\><around*|(|f<rsub|\|<around*|[|x<rsub|0>,x|]>>|)><rsup|<around*|(|k|)>><rsub|x<rsub|0>>+<frac|1|<around*|(|n-1|)>!>\<cdot\><big|int><rsub|x<rsub|0>><rsup|x>R<rsub|n,f<rsub|\|<around*|[|x<rsub|0>,x|]>>>
+    </equation*>
+
+    where\ 
+
+    <\equation*>
+      R<rsub|n,x,f<rsub|\|<around*|[|x<rsub|0>,x|]>>>:<around*|[|x<rsub|0>,x|]>\<rightarrow\>X<text|
+      is defined by >R<rsub|n,x,f<rsub|\|<around*|[|x<rsub|0>,x|]>>><around*|(|t|)>=<around*|(|x<rsub|>-t|)><rsup|n>\<cdot\><around*|(|f<rsub|\|<around*|[|x<rsub|0>,x|]>>|)><rsup|n><around*|(|t|)>
+    </equation*>
+
+    \;
+
+    combining this with [eq: <reference|eq 16.583.313>] gives\ 
+
+    <\equation*>
+      f<around*|(|x|)>=f<around*|(|x<rsub|0>|)>+<big|sum><rsub|k=1><rsup|n-1><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>+<frac|1|<around*|(|n-1|)>!>\<cdot\><big|int><rsub|x<rsub|0>><rsup|x>R<rsub|n,x,f<rsub|\|<around*|[|x<rsub|0>,x|]>>>
+    </equation*>
+
+    Define now\ 
+
+    <\equation*>
+      R<rsub|n,x,f>:<around*|[|x<rsub|0>,x|]>\<rightarrow\>X<text| by
+      >R<rsub|n,x,f><around*|(|t|)>=<around*|(|x-t|)><rsup|n>\<cdot\>f<rsup|<around*|(|n|)>><around*|(|t|)>
+    </equation*>
+
+    then we have <math|\<forall\>t\<in\><around*|[|x<rsub|0>,x|]>> that
+
+    <\equation*>
+      R<rsub|n,x,f><around*|(|t|)>=<around*|(|x-t|)><rsup|n>\<cdot\>f<rsup|<around*|(|n|)>><around*|(|t|)><below|=|<text|[eq:
+      <reference|eq 16.584.313>]>>=<around*|(|x-t|)><rsup|n>\<cdot\><around*|(|f<rsub|\|<around*|[|x<rsub|0>,x|]>>|)><rsup|<around*|(|n|)>><around*|(|t|)>=R<rsub|n,x,f<rsub|\|<around*|[|x<rsub|0>,x|]>>><around*|(|t|)>
+    </equation*>
+
+    which proves that <math|R<rsub|n,x,f>=R<rsub|n,x,f<rsub|\|<around*|[|x<rsub|0>,x|]>>>>.
+    Hence we have\ 
+
+    <\equation*>
+      f<around*|(|x|)>=f<around*|(|x<rsub|0>|)>+<big|sum><rsub|k=1><rsup|n-1><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>+<frac|1|<around*|(|n-1|)>!>\<cdot\><big|int><rsub|x<rsub|0>><rsup|x>R<rsub|n,x,f>
+    </equation*>
   </proof>
 
+  The above form of Taylor's theorem allows us to write a function as a
+  taylor series
+
   \;
+
+  <\theorem>
+    <label|diff Taylor series>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
+    be a normed space, <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b>
+    <math|x<rsub|0>,x\<in\>\<bbb-R\>> with <math|x<rsub|0>\<less\>x>,
+    <math|<around*|[|x<rsub|0>,x|]>\<subseteq\><around*|[|a,b|]>> and
+    <math|f:<around*|[|a,b|]>\<rightarrow\>Y> a function such that
+    <math|\<forall\>n\<in\>\<bbb-N\>> <math|f> has a <math|n>-times
+    derivative <math|f<rsup|<around*|(|n|)>><rsub|y>> at <math|y>
+    <math|\<forall\>y\<in\><around*|[|x<rsub|0>,x|]>> the we have that\ 
+
+    <\enumerate>
+      <item><math|\<forall\>n\<in\>\<bbb-N\>\\<around*|{|1|}>>
+      <math|f<around*|(|x|)>=f<around*|(|x<rsub|0>|)>+<big|sum><rsub|k=1><rsup|n-1><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>+T<rsub|n><around*|(|x|)>>
+      where
+
+      <\equation*>
+        T<rsub|n><around*|(|x|)>=<frac|1|<around*|(|n-1|)>!>\<cdot\><big|int><rsub|x<rsub|0>><rsup|x>R<rsub|n,x,f><text|>
+      </equation*>
+
+      <\equation*>
+        R<rsub|n,x,f>:<around*|[|x<rsub|0>,x|]>\<rightarrow\>X<text| by
+        >R<rsub|n,x,f><around*|(|t|)>=<around*|(|x-t|)><rsup|n>\<cdot\>f<rsup|<around*|(|n|)>><around*|(|t|)>
+      </equation*>
+
+      <item>
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|>|<cell|<below|lim|n\<rightarrow\>\<infty\>>T<rsub|n><around*|(|x|)><text|
+        exist and ><below|lim|n\<rightarrow\>\<infty\>>T<rsub|n><around*|(|x|)>=0>|<cell|>>|<row|<cell|>|<cell|\<Updownarrow\>>|<cell|>>|<row|<cell|>|<cell|<big|sum><rsub|i=1><rsup|\<infty\>><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>><text|
+        exist and >f<around*|(|x|)>=f<around*|(|x<rsub|0>|)>+<big|sum><rsub|k=1><rsup|\<infty\>><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>>|<cell|>>>>
+      </eqnarray*>
+    </enumerate>
+  </theorem>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>> then by the
+      hypothesis we have <math|\<forall\>y\<in\><around*|[|x<rsub|0>,x|]>>
+      that <math|f<rsub|y><rsup|<around*|(|n+1|)>><rsub|>> so that by
+      definition\ 
+
+      <\equation*>
+        f<rsup|<around*|(|n|)>>:<around*|[|x<rsub|0>,x|]>\<rightarrow\>X<text|
+        defined by >f<rsup|<around*|(|n|)>><around*|(|y|)>=f<rsup|<around*|(|n|)>><rsub|y>
+      </equation*>
+
+      has a derivative at every <math|y>. Hence by [theorem: <reference|diff
+      derivatives and continuity>] we have that\ 
+
+      <\equation*>
+        f<rsup|<around*|(|n|)>><text| is continuous>
+      </equation*>
+
+      So we can use Taylor's Theorem III [see theorem: <reference|diff Taylor
+      III>] that\ 
+
+      <\equation*>
+        f<around*|(|x|)>=f<around*|(|x<rsub|0>|)>+<big|sum><rsub|k=1><rsup|n-1><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>+T<rsub|n><around*|(|x|)>
+      </equation*>
+
+      where\ 
+
+      <\equation*>
+        T<rsub|n><around*|(|x|)>=<frac|1|<around*|(|n-1|)>!>\<cdot\><big|int><rsub|x<rsub|0>><rsup|x>R<rsub|n,x,f><text|>
+      </equation*>
+
+      <\equation*>
+        R<rsub|n,x,f>:<around*|[|x<rsub|0>,x|]>\<rightarrow\>X<text| by
+        >R<rsub|n,x,f><around*|(|t|)>=<around*|(|x-t|)><rsup|n>\<cdot\>f<rsup|<around*|(|n|)>><around*|(|t|)>
+      </equation*>
+
+      <item> Using (1) we have that\ 
+
+      <\equation*>
+        T<rsub|n><around*|(|x|)>=f<around*|(|x|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n-1><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>
+      </equation*>
+
+      Define then <math|<around*|{|u<rsub|n>|}><rsub|n\<in\>\<bbb-N\>>> by
+      <math|u<rsub|1>=f<around*|(|x|)>-f<around*|(|x<rsub|0>|)>> and for
+      <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>
+      <math|u<rsub|n>=-<frac|<around*|(|x-x<rsub|0>|)><rsup|n-1>|<around*|(|n-1|)>!>\<cdot\>f<rsup|<around*|(|n-1|)>><rsub|x<rsub|0>>>
+      then for <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>> we have \ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|sum><rsub|k=1><rsup|n>u<rsub|k>>|<cell|=>|<cell|u<rsub|1>+<big|sum><rsub|k=2><rsup|n>u<rsub|k>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|x|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=2><rsup|n><frac|<around*|(|x-x<rsub|0>|)><rsup|k-1>|<around*|(|k-1|)>!>\<cdot\>f<rsup|<around*|(|k-1|)>><rsub|x<rsub|0>>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|x|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n-1><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>>>|<row|<cell|>|<cell|=>|<cell|T<rsub|n><around*|(|x|)>>>>>
+      </eqnarray*>
+
+      so that
+
+      <\equation>
+        <label|eq 16.585.313>\<forall\>n\<in\>\<bbb-N\>\\<around*|{|1|}><text|
+        >T<rsub|n><around*|(|x|)>=<big|sum><rsub|k=1><rsup|n>u<rsub|k>
+      </equation>
+
+      <\description>
+        <item*|<math|\<Rightarrow\>>>If <math|<below|lim|n\<rightarrow\>\<infty\>>T<rsub|n><around*|(|x|)>=0>
+        exist then by [eq: <reference|eq 16.585.313>]
+        <math|<big|sum><rsub|k=1><rsup|\<infty\>>u<rsub|k>=<below|lim|n=1><around*|(|<big|sum><rsub|k=1><rsup|n>u<rsub|k>|)>=0>
+        exist. Hence\ 
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|0>|<cell|=>|<cell|<big|sum><rsub|k=1><rsup|\<infty\>>u<rsub|k>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+          <reference|series partition series>]>>>|<cell|u<rsub|1>+<big|sum><rsub|k=2><rsup|\<infty\>>u<rsub|k>>>|<row|<cell|>|<cell|<below|=|<text|[theorem:
+          <reference|series translation start>]>>>|<cell|u<rsub|1>+<big|sum><rsub|k=1><rsup|\<infty\>>u<rsub|k+1>>>|<row|<cell|>|<cell|=>|<cell|f<around*|(|x|)>-f<around*|(|x<rsub|0>|)>+<big|sum><rsub|k=1><rsup|\<infty\>><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>>>>>
+        </eqnarray*>
+
+        so that <math|<big|sum><rsub|k=1><rsup|\<infty\>><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>>
+        exist and\ 
+
+        <\equation*>
+          f<around*|(|x|)>=f<around*|(|x<rsub|0>|)>+<big|sum><rsub|k=1><rsup|\<infty\>><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>
+        </equation*>
+
+        <item*|<math|\<Leftarrow\>>>If <math|><math|<big|sum><rsub|k=1><rsup|\<infty\>><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>>
+        and <math|f<around*|(|x|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|\<infty\>><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>>
+        exist then we have
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|0>|<cell|=>|<cell|>>|<row|<cell|f<around*|(|x|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|\<infty\>><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>>|<cell|=>|<cell|>>|<row|<cell|f<around*|(|x|)>-f<around*|(|x<rsub|0>|)>-<below|lim|n\<rightarrow\>\<infty\>><big|sum><rsub|k=1><rsup|n><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>>|<cell|<below|=|<text|[theorem:
+          <reference|limit x_n+a>]>>>|<cell|>>|<row|<cell|<below|lim|n\<rightarrow\>\<infty\>><around*|(|f<around*|(|x|)>-f<around*|(|x<rsub|o>|)>-<big|sum><rsub|k=1><rsup|n><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>|)>>|<cell|=>|<cell|>>|<row|<cell|<below|lim|n\<rightarrow\>\<infty\>>T<rsub|n><around*|(|x|)>>|<cell|>|<cell|>>>>
+        </eqnarray*>
+      </description>
+    </enumerate>
+  </proof>
 
   \;
 
@@ -26983,6 +27193,7 @@
     <associate|diff Taylor I.2|<tuple|16.373|?>>
     <associate|diff Taylor II|<tuple|16.378|?>>
     <associate|diff Taylor III|<tuple|16.383|?>>
+    <associate|diff Taylor series|<tuple|16.386|?>>
     <associate|diff Ux|<tuple|16.4|?>>
     <associate|diff Ux=-x+U=U-x|<tuple|16.6|?>>
     <associate|diff balls are convex|<tuple|16.240|?>>
@@ -27696,6 +27907,9 @@
     <associate|eq 16.576.311|<tuple|16.580|?>>
     <associate|eq 16.577.311|<tuple|16.581|?>>
     <associate|eq 16.582.313|<tuple|16.582|?>>
+    <associate|eq 16.583.313|<tuple|16.583|?>>
+    <associate|eq 16.584.313|<tuple|16.584|?>>
+    <associate|eq 16.585.313|<tuple|16.585|?>>
     <associate|eq 16.59.6|<tuple|16.61|?>>
     <associate|eq 16.591.305|<tuple|16.564|?>>
     <associate|eq 16.592.505|<tuple|16.565|?>>
