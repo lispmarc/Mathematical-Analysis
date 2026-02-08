@@ -26251,6 +26251,628 @@
     f<around*|(|x|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|<around*|(|x-x<rsub|0>|)><rsup|k>|k!>\<cdot\>f<rsup|<around*|(|k|)>><rsub|x<rsub|0>>
   </equation*>
 
+  <\definition>
+    Let <math|X> be a set, <math|n\<in\>\<bbb-N\>> then for <math|x\<in\>X>
+    and <math|y\<in\>X> we define for <math|p,q\<in\>\<bbb-N\><rsub|0>> such
+    that <math|p+q=n>
+
+    <\equation*>
+      x<rsup|p>h<rsup|q>\<in\>X<rsup|n><text| where
+      ><around*|(|x<rsup|p>h<rsup|q>|)><rsub|i><rsup|>=<choice|<tformat|<table|<row|<cell|x<text|
+      if >i\<in\><around*|{|1,\<ldots\>,p|}>>>|<row|<cell|h<text| if
+      >i\<in\><around*|{|p+1,\<ldots\>,q|}>>>>>><rsup|>
+    </equation*>
+  </definition>
+
+  <\example>
+    Let <math|n=3> then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|x<rsup|0>h<rsup|3>>|<cell|=>|<cell|<around*|(|h,h,h|)>>>|<row|<cell|x<rsup|1>h<rsup|2>>|<cell|=>|<cell|<around*|(|x,h,h|)>>>|<row|<cell|x<rsup|2>h<rsup|1>>|<cell|=>|<cell|<around*|(|x,x,h|)>>>|<row|<cell|x<rsup|3>h<rsup|0>>|<cell|=>|<cell|<around*|(|x,x,x|)>>>>>
+    </eqnarray*>
+  </example>
+
+  <\lemma>
+    <label|lemma 16.380.315>Let <math|X> be a set, <math|n\<in\>\<bbb-N\>>
+    and <math|x,h\<in\>X> then we have for <math|p,q> with <math|p+q=n>
+
+    <\enumerate>
+      <item>Then we have for
+
+      <\equation*>
+        y=<around*|(|y<rsub|1>,\<ldots\>,y<rsub|n+1>|)><text| defined by
+        >y<rsub|i>=<choice|<tformat|<table|<row|<cell|x<text| if
+        >i=1>>|<row|<cell|<around*|(|x<rsup|p>h<rsup|q>|)><rsub|i-1><text| if
+        >i\<in\><around*|{|2,\<ldots\>,n+1|}>>>>>>
+      </equation*>
+
+      that\ 
+
+      <\equation*>
+        y=x<rsup|p+1>h<rsup|q>
+      </equation*>
+
+      <item>There exist a <math|\<sigma\>\<in\>\<cal-P\><rsub|n+1>> such that
+      for\ 
+
+      <\equation*>
+        y=<around*|(|y<rsub|1>,\<ldots\>,y<rsub|n+1>|)><text| defined by
+        >y<rsub|i>=<choice|<tformat|<table|<row|<cell|x<text| if
+        >i=1>>|<row|<cell|<around*|(|x<rsup|p>h<rsup|q>|)><rsub|i-1><text| if
+        >i\<in\><around*|{|2,\<ldots\>,n+1|}>>>>>>
+      </equation*>
+
+      we have\ 
+
+      <\equation*>
+        <around*|(|y<rsub|\<sigma\><around*|(|1|)>>,\<ldots\>,y<rsub|\<sigma\><around*|(|n+1|)>>|)>=x<rsup|p>h<rsup|q+1>
+      </equation*>
+    </enumerate>
+  </lemma>
+
+  <\proof>
+    \ 
+
+    <\enumerate>
+      <item>Let <math|p,q\<in\>\<bbb-N\><rsub|0>> with <math|p+q=n> then for
+      <math|i\<in\><around*|{|1,\<ldots\>,n+1|}>> we have either:\ 
+
+      <\description>
+        <item*|<math|i\<in\><around*|{|1,\<ldots\>,p+1|}>>>Then for <math|i>
+        we have either:\ 
+
+        <\description>
+          <item*|<math|i=1>>Then <math|y<rsub|i>=x> and as
+          <math|i\<in\><around*|{|1,\<ldots\>,p+1|}>>
+          <math|<around*|(|x<rsup|p+1>q<rsup|q>|)><rsub|i>=x> it follows that\ 
+
+          <\equation*>
+            y<rsub|i>=<around*|(|x<rsup|p+1>h<rsup|q>|)><rsub|i>
+          </equation*>
+
+          <item*|<math|i\<in\><around*|{|2,\<ldots\>,p+1|}>>>Then
+          <math|i-1\<in\><around*|{|1,\<ldots\>,p|}>> so that
+          <math|y<rsub|i>=<around*|(|x<rsup|p>h<rsup|q>|)><rsub|i-1>=x>,
+          further as <math|i\<in\><around*|{|1,\<ldots\>,p+1|}>> we have that
+          <math|<around*|(|x<rsup|p+1>h<rsup|q>|)><rsub|i>=x>. Hence\ 
+
+          <\equation*>
+            y<rsub|i>=<around*|(|x<rsup|p+1>h<rsup|q>|)><rsub|i>
+          </equation*>
+        </description>
+
+        <item*|<math|i\<in\><around*|{|p+2,\<ldots\>,n+1|}>>>Then
+        <math|i-1\<in\><around*|{|p+1,\<ldots\>,n|}>> so that
+        <math|y<rsub|i>=<around*|(|x<rsup|p>h<rsup|q>|)><rsub|i-1>=h>,
+        further as <math|i\<in\><around*|{|<around*|(|p+1|)>+1,\<ldots\>,n+1|}>>
+        <math|<around*|(|x<rsup|p+1>h<rsup|q>|)><rsub|i>=h>. Hence\ 
+
+        <\equation*>
+          y<rsub|i>=<around*|(|x<rsup|p+1>h<rsup|q>|)><rsub|i>
+        </equation*>
+      </description>
+
+      As in all possible cases we have <math|y<rsub|i>=<around*|(|x<rsup|p+1>h<rsup|q>|)><rsub|i>>
+      it follows that\ 
+
+      <\equation*>
+        y=<around*|(|x<rsup|p+1>h<rsup|q>|)>
+      </equation*>
+
+      <item>Let <math|p,q\<in\>\<bbb-N\><rsub|0>> with <math|p+q=n> then for
+      <math|p> we have either:\ 
+
+      <\description>
+        <item*|<math|p=0>>Then for <math|i\<in\><around*|{|1,\<ldots\>,n+1|}>>
+        either:\ 
+
+        <\description>
+          <item*|<math|i=1>>Then <math|y<rsub|i>=h>, further as
+          <math|1\<in\><around*|{|1,\<ldots\>,n+1|}>=<around*|{|p+1,\<ldots\>,n+1|}>>
+          that <math|<rigid|<around*|(|x<rsup|p>h<rsup|q+1>|)><rsub|i>=h>>.
+          Hence\ 
+
+          <\equation*>
+            y<rsub|i>=<around*|(|x<rsup|p>h<rsup|q+1>|)><rsub|i>
+          </equation*>
+
+          <item*|<math|i\<in\><around*|{|2,\<ldots\>,n+1|}>>>Then
+          <math|i-1\<in\><around*|{|1,\<ldots\>,n|}>=<around*|{|p+1,\<ldots\>,n|}>>
+          so that<rigid| <math|y<rsub|i>=<around*|(|x<rsup|p>h<rsup|q>|)><rsub|i-1>=h>>.
+          Further as <rigid|<math|i\<in\><around*|{|2,\<ldots\>,n+1|}>=<around*|{|<around*|(|p+1|)>+1,\<ldots\>,n+1|}>>>
+          <math|<around*|(|x<rsup|p>h<rsup|q+1>|)><rsub|i>=h>. Hence\ 
+
+          <\equation*>
+            y<rsub|i>=<around*|(|x<rsup|p>h<rsup|q+1>|)><rsub|i>
+          </equation*>
+        </description>
+
+        So we have that <math|y=x<rsup|p>h<rsup|q+1>>, take now
+        <math|\<sigma\>=Id<rsub|<around*|{|1,\<ldots\>,n+1|}>>\<in\>P<rsub|n+1>>
+        then we have\ 
+
+        <\equation*>
+          <around*|(|y<rsub|\<sigma\><around*|(|1|)>>,\<ldots\>.,y<rsub|\<sigma\><around*|(|n|)>>|)>=<around*|(|y<rsub|1>,\<ldots\>,y<rsub|n>|)>=x<rsup|p>h<rsup|q+1>
+        </equation*>
+
+        <item*|<math|p\<neq\>0>>Define <math|\<sigma\>=<around*|(|1<below|\<leftrightarrow\>|n+1>p+1|)>\<in\>P<rsub|n+1>>
+        then we have for <math|i\<in\><around*|{|1,\<ldots\>,n+1|}>> either:\ 
+
+        <\description>
+          <item*|<math|i=1>>Then <math|y<rsub|\<sigma\><around*|(|i|)>>=y<rsub|\<sigma\><around*|(|1|)>>=y<rsub|p+1>\<equallim\><rsub|p+1\<in\><around*|{|p+1,\<ldots\>,n+1|}>><around*|(|x<rsup|p>h<rsup|q+1>|)><rsub|i>>,
+          hence\ 
+
+          <\equation*>
+            y<rsub|\<sigma\><around*|(|i|)>>=<around*|(|x<rsup|p>h<rsup|q+1>|)><rsub|i>
+          </equation*>
+
+          <item*|<math|i\<in\><around*|{|2,\<ldots\>,p-1|}>>>Then
+          <math|y<rsub|\<sigma\><around*|(|i|)>>=y<rsub|i>=<around*|(|x<rsup|p>h<rsup|q>|)><rsub|i-1>\<equallim\><rsub|i-1\<in\><around*|{|1,\<ldots\>,p-1|}>\<subseteq\><around*|{|1,\<ldots\>,p|}>>x>.
+          As <math|<around*|(|x<rsup|p>h<rsup|q>|)><rsub|i><below|=|i\<in\><around*|{|2,\<ldots\>,p|}>\<subseteq\><around*|{|1,\<ldots\>,p|}>>x>
+          it follows that\ 
+
+          <\equation*>
+            y<rsub|\<sigma\><around*|(|i|)>>=<around*|(|x<rsup|p>h<rsup|q+1>|)><rsub|i>
+          </equation*>
+
+          <item*|<math|i=p+1>>Then <math|y<rsub|\<sigma\><around*|(|i|)>>=y<rsub|\<sigma\><around*|(|p+1|)>>=y<rsub|1>=h>.
+          As <math|i=p+1\<in\><around*|{|p+1,\<ldots\>,n+1|}>>
+          <math|<rigid|<around*|(|x<rsup|p>h<rsup|q+1>|)><rsub|i>=h>> so that\ 
+
+          <\equation*>
+            y<rsub|\<sigma\><around*|(|i|)>>=<around*|(|x<rsup|p>h<rsup|q+1>|)><rsub|i>
+          </equation*>
+
+          <item*|<math|i\<in\><around*|{|p+2,\<ldots\>,n+1|}>>>Then
+          <math|y<rsub|\<sigma\><around*|(|i|)>>=y<rsub|i>=<around*|(|x<rsup|p>h<rsup|q>|)><rsub|i-1>\<equallim\><rsub|i-1\<in\><around*|{|p+1,\<ldots\>,n|}>>h>,
+          further as <math|<around*|{|p+2,\<ldots\>,n+1|}>\<subseteq\><around*|{|p+1,\<ldots\>,n+1|}>>
+          we have <math|<around*|(|x<rsup|p>h<rsup|q+1>|)><rsub|i>=h> which
+          proves that\ 
+
+          <\equation*>
+            y<rsub|\<sigma\><around*|(|i|)>>=<around*|(|x<rsup|p>h<rsup|q+1>|)>
+          </equation*>
+        </description>
+
+        Hence we have\ 
+
+        <\equation*>
+          <around*|(|y<rsub|\<sigma\><around*|(|1|)>>,\<ldots\>,y<rsub|\<sigma\><around*|(|n+1|)>>|)>=x<rsup|p>h<rsup|q+1>
+        </equation*>
+      </description>
+    </enumerate>
+
+    \;
+  </proof>
+
+  <\lemma>
+    <label|lemma 16.381.315>Let <math|n\<in\>\<bbb-N\>>,
+    <math|L\<in\>L<rsub|n+1><around*|(|X;Y|)>> such that
+    <math|\<forall\>\<sigma\>\<in\>P<rsub|n+1>> and
+    <math|\<forall\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n+1>|)>\<in\>X<rsup|n>>
+    that <math|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n+1>|)>=L<around*|(|x<rsub|\<sigma\><around*|(|1|)>>:\<ldots\>:x<rsub|\<sigma\><around*|(|n+1|)>>|)>>
+    then we have <math|\<forall\>x\<in\>X> that
+    <math|\<forall\>\<tau\>\<in\>P<rsub|n>> that
+    <math|\<forall\><around*|(|y<rsub|1>,\<ldots\>,y<rsub|n>|)>\<in\>X<rsup|n>>
+    <math|L<around*|(|x|)><around*|(|y<rsub|1>:\<ldots\>:y<rsub|n>|)>=L<around*|(|x|)><around*|(|y<rsub|\<tau\><around*|(|1|)>>:\<ldots\>:y<rsub|\<tau\><around*|(|n|)>>|)>>
+  </lemma>
+
+  <\proof>
+    Let <math|x\<in\>X>, <math|\<tau\>\<in\>P<rsub|n>> and
+    <math|<around*|(|y<rsub|1>,\<ldots\>,y<rsub|n>|)>>. Define now\ 
+
+    <\equation*>
+      <around*|(|x<rsub|1>,\<ldots\>,x<rsub|n+1>|)>\<in\>X<rsup|n+1><text| by
+      >x<rsub|i>=<choice|<tformat|<table|<row|<cell|x<text| if
+      >i=1>>|<row|<cell|y<rsub|i-1><text| if
+      >i\<in\><around*|{|2,\<ldots\>,n+1|}>>>>>>
+    </equation*>
+
+    <\equation*>
+      \<sigma\>:<around*|{|1,\<ldots\>,n+1|}>\<rightarrow\><around*|{|1,\<ldots\>,n+1|}><text|
+      by >\<sigma\><around*|(|i|)>=<choice|<tformat|<table|<row|<cell|1<text|
+      if i=1>>>|<row|<cell|\<tau\><around*|(|i-1|)>+1<text| if
+      >i\<in\><around*|{|2,\<ldots\>,n|}>>>>>>
+    </equation*>
+
+    then we have for <math|\<sigma\>>:\ 
+
+    <\description>
+      <item*|injectivity>Let <math|i,j\<in\><around*|{|1,\<ldots\>,n+1|}>>
+      such that <math|\<sigma\><around*|(|i|)>=\<sigma\><around*|(|j|)>> then
+      for <math|i,j> we have either:
+
+      <\description>
+        <item*|<math|i=1>>Assume that <math|j\<in\><around*|{|2,\<ldots\>,n+1|}>>
+        then
+
+        <\equation*>
+          \<sigma\><around*|(|j|)>=\<tau\><around*|(|j-1|)>+1<below|\<in\>|\<tau\>:<around*|{|1,\<ldots\>,n|}>\<rightarrow\><around*|{|1,\<ldots\>,n|}>><around*|{|2,\<ldots\>,n+1|}>
+        </equation*>
+
+        so that <math|\<sigma\><around*|(|j|)>\<neq\>1=\<sigma\><around*|(|1|)>=\<sigma\><around*|(|i|)>>
+        and we reach a contradiction. So we must have <math|i=1=j>.
+
+        <item*|<math|j=1>>Assume that <math|i\<in\><around*|{|2,\<ldots\>,n+1|}>>
+        then
+
+        <\equation*>
+          \<sigma\><around*|(|i|)>=\<tau\><around*|(|i-1|)>+1<below|\<in\>|\<tau\>:<around*|{|1,\<ldots\>,n|}>\<rightarrow\><around*|{|1,\<ldots\>,n|}>><around*|{|2,\<ldots\>,n+1|}>
+        </equation*>
+
+        so that <math|\<sigma\><around*|(|i|)>\<neq\>1=\<sigma\><around*|(|1|)>=\<sigma\><around*|(|j|)>>
+        and we reach a contradiction. So we must have <math|i=1=j>.
+
+        <item*|<math|i,j\<in\><around*|{|2,\<ldots\>,n+1|}>>>Then
+        <math|\<tau\><around*|(|i-1|)>+1=\<sigma\><around*|(|i|)>=\<sigma\><around*|(|j|)>=\<tau\><around*|(|i-1|)>+1>
+        so that <math|\<tau\><around*|(|i-1|)>=\<tau\><around*|(|j-1|)>>. As
+        <math|\<tau\>> is injective it follows that <math|i-1=j-1> hence
+        <math|i=j>.
+      </description>
+
+      <item*|surjectivity>Let <math|k\<in\><around*|{|1,\<ldots\>,n+1|}>>
+      then we have either:
+
+      <\description>
+        <item*|<math|k=1>>Then <math|k=\<sigma\><around*|(|1|)>>
+
+        <item*|<math|k\<in\><around*|{|2,\<ldots\>,n+1|}>>>Then
+        <math|k-1\<in\><around*|{|1,\<ldots\>,n|}>> and as <math|\<tau\>> is
+        surjection there exist a <math|<rigid|j\<in\><around*|{|1,\<ldots\>,n|}>>>
+        such that <math|\<tau\><around*|(|j|)>=k-1>. Hence for
+        <math|i=j+1\<in\><around*|{|1,\<ldots\>,n+1|}>> we have\ 
+
+        <\equation*>
+          \<sigma\><around*|(|i|)>=\<tau\><around*|(|i-1|)>+1=\<tau\><around*|(|j|)>+1=k
+        </equation*>
+      </description>
+    </description>
+
+    So it follows that\ 
+
+    <\equation*>
+      \<sigma\>\<in\>\<cal-P\><rsub|n+1>
+    </equation*>
+
+    Further\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|L<around*|(|x|)><around*|(|y<rsub|1>:\<ldots\>:y<rsub|n>|)>>|<cell|=>|<cell|L<around*|(|x<rsub|1>|)><around*|(|x<rsub|2>:\<ldots\>x<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|x<rsub|1>:\<ldots\>x<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|x<rsub|\<sigma\><around*|(|1|)>>:\<ldots\>:x<rsub|\<sigma\><around*|(|n+1|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|x<rsub|\<sigma\><around*|(|1|)>>|)><around*|(|x<rsub|\<sigma\><around*|(|2|)>>:\<ldots\>:x<rsub|\<sigma\><around*|(|n+1|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|x<rsub|1>|)><around*|(|x<rsub|\<sigma\><around*|(|2|)>>:\<ldots\>:x<rsub|\<sigma\><around*|(|n+1|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|x|)><around*|(|x<rsub|\<tau\><around*|(|1|)>+1>:\<ldots\>:x<rsub|\<tau\><around*|(|n|)>+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|x|)><around*|(|y<rsub|\<tau\><around*|(|1|)>>:\<ldots\>:y<rsub|\<tau\><around*|(||)>>|)>>>>>
+    </eqnarray*>
+
+    proving that\ 
+
+    <\equation*>
+      L<around*|(|x|)><around*|(|y<rsub|1>:\<ldots\>:y<rsub|n>|)>=L<around*|(|x|)><around*|(|y<rsub|\<tau\><around*|(|1|)>>:\<ldots\>:y<rsub|\<tau\><around*|(||)>>|)>
+    </equation*>
+  </proof>
+
+  TODO add coefficients <math|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>\<alpha\><rsub|i>\<cdot\>L<around*|(|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\><around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|n>|)>>
+
+  <\lemma>
+    <label|lemma 16.382.315>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|L\<in\>L<rsub|n><around*|(|X;Y|)>> such that
+    <math|\<forall\>\<sigma\>\<in\>P<rsub|n>> and
+    <math|\<forall\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|n>>
+    <math|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n>|)>=L<around*|(|x<rsub|\<sigma\><around*|(|1|)>>:\<ldots\>:x<rsub|\<sigma\><around*|(|n|)>>|)>>
+    then we have for <math|x,h\<in\>X> that there exist a
+    <math|<around*|{|<around*|(|p<rsub|i>,q<rsub|i>|)>|}><rsub|i\<in\>I>>
+    with <math|I=<around*|{|1,\<ldots\>,k|}>> <math|k\<in\>\<bbb-N\><rsub|0>>
+    and <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,k|}>>
+    <math|2\<leqslant\>q<rsub|i>> <math|n=p<rsub|i>+q<rsub|i>> such that\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|L<around*|(|<wide*|x+h:\<ldots\>:x+h|\<wide-underbrace\>><rsub|n>|)>>|<cell|=>|<cell|T<rsub|1>+T<rsub|2>+T<rsub|3>>>>>
+    </eqnarray*>
+
+    where
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|T<rsub|1>>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n>h<rsup|0>|)><rsub|n>|)>>>|<row|<cell|T<rsub|2>>|<cell|=>|<cell|n\<cdot\>L<around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|n>|)>>>|<row|<cell|T<rsub|3>>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\><around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|n>|)>>>>>
+    </eqnarray*>
+
+    \ 
+  </lemma>
+
+  <\proof>
+    We prove this by induction so let\ 
+
+    <\equation*>
+      S=<around*|{|n\<in\>\<bbb-N\>\|If L\<in\>L<rsub|n><around*|(|X;Y|)><text|
+      satisfies >\<forall\>\<sigma\>\<in\>P<rsub|n><text|,
+      >\<forall\>y\<in\>X<rsup|n><text| >L<around*|(|y<rsub|\<sigma\><around*|(|1|)>>:\<ldots\>:y<rsub|\<sigma\><around*|(|n|)>>|)>=L<around*|(|y<rsub|1>:\<ldots\>:y<rsub|n>|)><text|
+      then there exist a ><around*|{|<around*|(|p<rsub|i>,q<rsub|i>|)>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>><text|
+      with >k\<in\>\<bbb-N\><rsub|0><text| \ and >\<forall\>i\<in\>I<text|
+      >2\<leqslant\>q<rsub|i>\<wedge\>n=p<rsub|i>+q<rsub|i><text| such that
+      <math|L<around*|(|<wide*|x+h:\<ldots\>:x+h|\<wide-underbrace\>><rsub|n>|)>=T<rsub|1>+T<rsub|2>+T<rsub|3><text|
+      where >T<rsub|1>=L<around*|(|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n>h<rsup|0>|)><rsub|n>|)>>,
+      >T<rsub|2>=n\<cdot\>L<around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|n>|)><text|
+      and ><rigid|T<rsub|3>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\><around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|n>|)>>|}>
+    </equation*>
+
+    then we have:\ 
+
+    <\description>
+      <item*|<math|1\<in\>S>>Let <math|L\<in\>L<rsub|1><around*|(|X;Y|)>=L<around*|(|X,Y|)>>.
+      Take <math|k=0> then <math|<around*|{|1,\<ldots\>,k|}>=\<varnothing\>>
+      so that for <math|<around*|{|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|}><rsub|i\<in\>\<varnothing\>>>
+      we have vacuously that <math|\<forall\>i\<in\>\<varnothing\>>
+      <math|2\<leqslant\>q<rsub|i>*n=p<rsub|i>+q<rsub|i>>. Further
+
+      <\equation*>
+        <big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|<around*|(|x<rsup|p>h<rsup|q>|)><rsub|1>:\<ldots\><around*|(|x<rsup|p>h<rsup|q>|)><rsub|n>|)>=<big|sum><rsub|<around*|(|q,p|)>\<in\>\<varnothing\>>L<around*|(|<around*|(|x<rsup|p>h<rsup|q>|)><rsub|1>:\<ldots\><around*|(|x<rsup|p>h<rsup|q>|)><rsub|n>|)>=0
+      </equation*>
+
+      Further for <math|x,h\<in\>X> we have
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|L<around*|(|<wide*|x+h:\<ldots\>:x+h|\<wide-underbrace\>><rsub|1>|)>>|<cell|=>|<cell|L<around*|(|x+h|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|x|)>+L<around*|(|h|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|x|)>+L<around*|(|h|)>+0>>|<row|<cell|>|<cell|=>|<cell|T<rsub|1>+T<rsub|2>+T<rsub|3>>>>>
+      </eqnarray*>
+
+      where\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|T<rsub|1>>|<cell|=>|<cell|L<around*|(|x|)>=L<around*|(|<around*|(|x<rsup|1>h<rsup|0>|)><rsub|1>|)>=L<around*|(|<wide*|<around*|(|x<rsup|1>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|1>h<rsup|0>|)><rsub|1>|\<wide-underbrace\>><rsub|1>|)>>>|<row|<cell|T<rsub|2>>|<cell|=>|<cell|1\<cdot\>L<around*|(|h|)>=1\<cdot\>L<around*|(|<around*|(|x<rsup|0>h<rsup|1>|)><rsub|1>|)>=1\<cdot\>L<around*|(|<around*|(|x<rsup|0>h<rsup|1>|)><rsub|1>:\<ldots\>:L<around*|(|x<rsup|0>h<rsup|1>|)><rsub|1>|)>>>|<row|<cell|T<rsub|3>>|<cell|=>|<cell|0=<big|sum><rsub|<around*|(|q,p|)>\<in\>\<varnothing\>>L<around*|(|<around*|(|x<rsup|p>h<rsup|q>|)><rsub|1>:\<ldots\><around*|(|x<rsup|p>h<rsup|q>|)><rsub|n>|)>>>>>
+      </eqnarray*>
+
+      which proves that <math|1\<in\>S>.
+
+      <item*|<math|n\<in\>S\<Rightarrow\>n+1\<in\>S>>Let <math|x,h\<in\>X>
+      and <math|L\<in\>L<rsub|n+1><around*|(|X;Y|)>> such that
+      <math|\<forall\>\<sigma\>\<in\>P<rsub|n+1>> we have
+      <math|<rigid|\<forall\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|n>>>
+      we have <math|L<around*|(|x<rsub|1>:\<ldots\>:x<rsub|n+1>|)>=L<around*|(|x<rsub|\<sigma\><around*|(|1|)>>:\<ldots\>:x<rsub|\<sigma\><around*|(|n+1|)>>|)>>.
+      As <math|<rigid|L\<in\>L<rsub|n+1><around*|(|X,L<rsub|n><around*|(|X;Y|)>|)>>>
+      it follows from [lemma: <reference|lemma 16.381.315>] that
+      <math|\<forall\>\<sigma\>\<in\>P<rsub|n>>,
+      <math|\<forall\><around*|(|y<rsub|1>,\<ldots\>,y<rsub|n>|)>\<in\>X<rsup|n>>
+      <math|L<around*|(|x+h|)><around*|(|y<rsub|\<sigma\><around*|(|1|)>>,\<ldots\>,y<rsub|\<sigma\><around*|(|n|)>>|)>=L<around*|(|x+h|)><around*|(|y<rsub|1>,\<ldots\>,y<rsub|n>|)>>.
+      Hence as <math|n\<in\>S> it follows that there exist a
+
+      <\equation*>
+        <around*|{|<around*|(|p<rsub|i>,q<rsub|i>|)>|}><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>><text|
+        with >\<forall\>i\<in\><around*|{|1,\<ldots\>,k|}><text|
+        >2\<leqslant\>q<rsub|i>\<wedge\>n=p<rsub|i>+q<rsub|i>
+      </equation*>
+
+      such that\ 
+
+      <\equation>
+        <label|eq 16.574.315>L<around*|(|x+h|)><around*|(|<wide*|x+h:\<ldots\>:x+h|\<wide-underbrace\>><rsub|n>|)>=T<rsub|1>+T<rsub|2>+T<rsub|3>
+      </equation>
+
+      where\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|T<rsub|1>>|<cell|=>|<cell|L<around*|(|x+h|)><around*|(|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n>h<rsup|0>|)><rsub|n>|)>>>|<row|<cell|T<rsub|2>>|<cell|=>|<cell|n\<cdot\>L<around*|(|x+h|)><around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|n>|)>>>|<row|<cell|T<rsub|3>>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|x+h|)><around*|(|<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|n>|)>>>>>
+      </eqnarray*>
+
+      Define\ 
+
+      <\equation*>
+        u=<around*|(|u<rsub|1>,\<ldots\>,u<rsub|n+1>|)><text| by
+        >u<rsub|i>=<choice|<tformat|<table|<row|<cell|x<text| if
+        >i=1>>|<row|<cell|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|i-1><text| if
+        >i\<in\><around*|{|2,\<ldots\>,n+1|}>>>>>>
+      </equation*>
+
+      then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|L<around*|(|x|)><around*|(|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n>h<rsup|0>|)><rsub|n>|)>>|<cell|=>|<cell|L<around*|(|u<rsub|1>|)><around*|(|u<rsub|2>,\<ldots\>,u<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|u<rsub|1>:\<ldots\>:u<rsub|n+1>|)>>>|<row|<cell|>|<cell|<below|=|<text|[lemma:
+        <reference|lemma 16.380.315>]>>>|<cell|L<around*|(|<around*|(|x<rsup|p+1>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p+1>h<rsup|0>|)>|)><eq-number><label|eq
+        16.575.315>>>>>
+      </eqnarray*>
+
+      Define
+
+      <\equation*>
+        v=<around*|(|v<rsub|1>,\<ldots\>,v<rsub|n+1>|)><text| by
+        >v<rsub|i>=<choice|<tformat|<table|<row|<cell|h<text| if
+        >i=1>>|<row|<cell|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|i-1><text| if
+        >i\<in\><around*|{|2,\<ldots\>,n+1|}>>>>>>
+      </equation*>
+
+      then by [lemma: <reference|lemma 16.380.315>] there exist a
+      <math|\<sigma\>\<in\>P<rsub|n+1>> so that\ 
+
+      <\equation*>
+        <around*|(|v<rsub|\<sigma\><around*|(|1|)>>,\<ldots\>,v<rsub|\<sigma\><around*|(|n+1|)>>|)>=x<rsup|n>h<rsup|1>=x<rsup|<around*|(|n+1|)>-1>h<rsup|1>
+      </equation*>
+
+      hence\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|L<around*|(|h|)><around*|(|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n>h<rsup|0>|)><rsub|n>|)>>|<cell|=>|<cell|L<around*|(|v<rsub|1>|)><around*|(|v<rsub|2>:\<ldots\>:v<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|v<rsub|1>:\<ldots\>:v<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|v<rsub|\<sigma\><around*|(|1|)>>:\<ldots\>:v<rsub|\<sigma\><around*|(|n+1|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)><eq-number><label|eq
+        16.576.315>>>>>
+      </eqnarray*>
+
+      Define\ 
+
+      <\equation*>
+        w=<around*|(|w<rsub|1>,\<ldots\>,w<rsub|n>|)><text| by
+        >w<rsub|i>=<choice|<tformat|<table|<row|<cell|x<text| if
+        >i=1>>|<row|<cell|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|i-1><text|
+        if >i\<in\><around*|{|2,\<ldots\>,n+1|}>>>>>>
+      </equation*>
+
+      then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|L<around*|(|x|)><around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|w<rsub|1>:\<ldots\>:w<rsub|n+1>|)>>|<cell|<below|=|<text|[lemma:
+        <reference|lemma 16.380.315>]>>>|<cell|>>|<row|<cell|L<around*|(|<around*|(|x<rsup|n>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n>h<rsup|1>|)><rsub|n+1>|)>>|<cell|=>|<cell|>>|<row|<cell|L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)>>|<cell|>|<cell|<eq-number><label|eq
+        16.577.315>>>>>
+      </eqnarray*>
+
+      Define\ 
+
+      <\equation*>
+        y=<around*|(|y<rsub|1>,\<ldots\>,y<rsub|n+1>|)><text| by
+        >y<rsub|i>=<choice|<tformat|<table|<row|<cell|h<text| is
+        >i=1>>|<row|<cell|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|i-1><text|
+        if >i\<in\><around*|{|2,\<ldots\>,n+1|}>>>>>>
+      </equation*>
+
+      then by [lemma: <reference|lemma 16.380.315>] there exist a
+      <math|\<tau\>\<in\>P<rsub|n+1>> such that
+
+      <\equation*>
+        <around*|(|y<rsub|\<tau\><around*|(|1|)>>,\<ldots\>,y<rsub|\<tau\><around*|(|n+1|)>>|)>=x<rsup|n-1>h<rsup|2>
+      </equation*>
+
+      Then
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|L<around*|(|h|)><around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|n>|)>>|<cell|=>|<cell|L<around*|(|y<rsub|1>|)><around*|(|y<rsub|2>:\<ldots\>:y<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|y<rsub|1>:\<ldots\>:y<rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|y<rsub|\<tau\><around*|(|1|)>>:\<ldots\>:y<rsub|\<tau\><around*|(|n+1|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|n-1>h<rsup|2>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|2>|)><rsub|n+1>|)><eq-number><label|eq
+        16.578.315>>>>>
+      </eqnarray*>
+
+      Let <math|i\<in\><around*|{|1,\<ldots\>,k|}>> and define\ 
+
+      <\equation*>
+        r<rsup|i>=<around*|(|r<rsup|i><rsub|1>,\<ldots\>,r<rsup|i><rsub|n+1>|)><text|
+        by >r<rsup|i><rsub|j>=<choice|<tformat|<table|<row|<cell|x<text| if
+        >i=1>>|<row|<cell|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|i-1><text|
+        if >i\<in\><around*|{|2,\<ldots\>,n+1|}>>>>>>
+      </equation*>
+
+      then we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|L<around*|(|x|)><around*|(|<around*|(|<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|n>|)>|)>>|<cell|=>|<cell|L<around*|(|r<rsup|i><rsub|1>|)><around*|(|r<rsup|i><rsub|2>:\<ldots\>:r<rsup|i><rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|r<rsup|i><rsub|1>:\<ldots\>:r<rsup|i><rsub|n+1>|)>>>|<row|<cell|>|<cell|<below|=|<text|[lemma:<reference|lemma
+        16.380.315>]>>>|<cell|L<around*|(|<around*|(|x<rsup|p<rsub|i>+1>h<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>+1>h<rsup|q<rsub|i>>|)><rsub|n+1>|)><eq-number><label|eq
+        16.579.315>>>>>
+      </eqnarray*>
+
+      Define
+
+      <\equation*>
+        z<rsup|i>=<around*|(|z<rsup|i><rsub|1>,\<ldots\>,z<rsup|i><rsub|n+1>|)><text|
+        by >z<rsup|i><rsub|j>=<choice|<tformat|<table|<row|<cell|h<text| if
+        >i=1>>|<row|<cell|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|i-1><text|
+        if >i\<in\><around*|{|2,\<ldots\>,n+1|}>>>>>>
+      </equation*>
+
+      By [lemma:<reference|lemma 16.380.315>] there exist a
+      <math|\<rho\>\<in\>P<rsub|n+1>> such that\ 
+
+      <\equation*>
+        <around*|(|z<rsup|i><rsub|\<rho\><around*|(|1|)>>,\<ldots\>,z<rsup|i><rsub|\<rho\><around*|(|n+1|)>>|)>=<around*|(|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>+1>|)><rsub|1>,\<ldots\>,<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>+1>|)><rsub|n+1>|)>
+      </equation*>
+
+      hence\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|L<around*|(|h|)><around*|(|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>>|)><rsub|n+1>|)>>|<cell|=>|<cell|L<around*|(|z<rsup|i><rsub|1>|)><around*|(|z<rsup|i><rsub|2>:\<ldots\>:z<rsup|i><rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|z<rsup|i><rsub|1>:\<ldots\>:z<rsup|i><rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|z<rsup|i><rsub|\<rho\><around*|(|1|)>>:\<ldots\>:z<rsup|i><rsub|\<rho\><around*|(|n+1|)>>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>+1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>+1>|)><rsub|n+1>|)><eq-number><label|eq
+        16.580.315>>>>>
+      </eqnarray*>
+
+      Now
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|T<rsub|1>>|<cell|=>|<cell|L<around*|(|x+h|)><around*|(|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n>h<rsup|0>|)><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|x|)><around*|(|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n>h<rsup|0>|)><rsub|n>|)>+L<around*|(|h|)><around*|(|<around*|(|x<rsup|n>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n>h<rsup|0>|)><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|T<rsub|1,1>+T<rsub|1,2>>>>>
+      </eqnarray*>
+
+      where by [eqs: <reference|eq 16.575.315>, <reference|eq 16.576.315>]\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|T<rsub|1,1>>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|p+1>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p+1>h<rsup|0>|)>|)>>>|<row|<cell|T<rsub|1,2>>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)>>>>>
+      </eqnarray*>
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|T<rsub|2>>|<cell|=>|<cell|n\<cdot\>L<around*|(|x+h|)><around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|n\<cdot\>L<around*|(|x|)><around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|n>|)>+n\<cdot\>L<around*|(|h|)><around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|T<rsub|2,1>+T<rsub|2,2>>>>>
+      </eqnarray*>
+
+      where by [eqs: <reference|eq 16.577.315>, <reference|eq 16.578.315>] we
+      have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|T<rsub|2,1>>|<cell|=>|<cell|n\<cdot\>L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)>>>|<row|<cell|T<rsub|2,2>>|<cell|=>|<cell|n\<cdot\>L<around*|(|<around*|(|x<rsup|n-1>h<rsup|2>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|2>|)><rsub|n+1>|)>>>>>
+      </eqnarray*>
+
+      Further\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|T<rsub|3>>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|x+h|)><around*|(|<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|x|)><around*|(|<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|n>|)>+<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|h|)><around*|(|<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>>y<rsup|q<rsub|i>>|)><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|T<rsub|3,1>+T<rsub|3,2>>>>>
+      </eqnarray*>
+
+      where by [eqs: <reference|eq 16.579.315>, <reference|eq 16.580.315>]\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|T<rsub|3,1>>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|<around*|(|x<rsup|p<rsub|i>+1>h<rsup|q<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>+1>h<rsup|q<rsub|i>>|)><rsub|n+1>|)>>>|<row|<cell|T<rsub|3,2>>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>+1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>+1>|)><rsub|n+1>|)>>>>>
+      </eqnarray*>
+
+      Define now <math|<around*|{|<around*|(|P<rsub|i>,Q<rsub|i>|)>|}><rsub|i\<in\><around*|{|1,\<ldots\>,2\<cdot\>k+1|}>>>
+      by\ 
+
+      <\equation*>
+        <around*|(|P<rsub|i>,Q<rsub|i>|)>=<choice|<tformat|<table|<row|<cell|<around*|(|p<rsub|i>+1,q<rsub|i>|)><text|
+        if >i\<in\><around*|{|1,\<ldots\>,k|}>>>|<row|<cell|<around*|(|p<rsub|i-k>,q<rsub|i-k>+1|)><text|
+        if >i\<in\><around*|{|k+1,\<ldots\>,2\<cdot\>k|}>>>|<row|<cell|<around*|(|n-1,2|)><text|
+        if >i=2\<cdot\>k+1>>>>>
+      </equation*>
+
+      then we have <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,2\<cdot\>k+1|}>>
+      either:\ 
+
+      <\description>
+        <item*|<math|i\<in\><around*|{|1,\<ldots\>,k|}>>>Then
+        <math|><math|<around*|(|P<rsub|i>,Q<rsub|i>|)>=<around*|(|p<rsub|1>+1,q<rsub|i>|)>>
+        so that <math|2\<leqslant\>q<rsub|i>=Q<rsub|i><rsup|>> and
+        <rigid|<math|P<rsub|i>+Q<rsub|i>=p<rsub|i>+1+q<rsub|i>=n+1>>.
+
+        <item*|<math|i\<in\><around*|{|k+1,\<ldots\>,2\<cdot\>k|}>>>Then
+        <math|<around*|(|P<rsub|i>,Q<rsub|i>|)>=<around*|(|p<rsub|i-k>,q<rsub|i-k>+1|)>>
+        so that <math|2\<leqslant\>q<rsub|i-k>\<leqslant\>q<rsub|i-k>+1=Q<rsub|i>>
+        and <math|P<rsub|i>+Q<rsub|i>=p<rsub|i-k>+q<rsub|i-k>+1=n+1>.
+
+        <item*|<math|i=2\<cdot\>k+1>>Then
+        <math|<around*|(|P<rsub|i>,Q<rsub|i>|)>=<around*|(|n-1,2|)>> so that
+        <math|2\<leqslant\>Q<rsub|i>> and
+        <math|P<rsub|i>+Q<rsub|i>=n-1+2=n+1>
+      </description>
+
+      so that\ 
+
+      <\equation*>
+        \<forall\>i\<in\><around*|{|1,\<ldots\>,2\<cdot\>k+1|}><text| we have
+        >2\<leqslant\>Q<rsub|i>\<wedge\>P<rsub|i>+Q<rsub|i>=n+1
+      </equation*>
+
+      Further
+
+      <\equation*>
+        <big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,2\<cdot\>k+1|}>>L<around*|(|<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|n+1>|)>=S<rsub|1>+S<rsub|2>+S<rsub|3>
+      </equation*>
+
+      where\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|S<rsub|1>>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|<around*|(|x<rsup|q<rsub|i>>h<rsup|p<rsub|i>+1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|q<rsub|i>>h<rsup|p<rsub|i>+1>|)><rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|T<rsub|3,1>>>|<row|<cell|S<rsub|2>>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|k,\<ldots\>,2\<cdot\>k|}>>L<around*|(|<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|k,\<ldots\>,2\<cdot\>k|}>>L<around*|(|<around*|(|x<rsup|p<rsub|i-k>>h<rsup|q<rsub|i-k>+1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i-k>>h<rsup|q<rsub|i-k>+1>|)><rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,k|}>>L<around*|(|<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>+1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p<rsub|i>>h<rsup|q<rsub|i>+1>|)><rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|T<rsub|3,2>>>|<row|<cell|S<rsub|3>>|<cell|=>|<cell|<big|sum><rsub|i\<in\><around*|{|2\<cdot\>k+1|}>>L<around*|(|<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|Q<rsub|2\<cdot\>k+1>>h<rsup|P<rsub|2\<cdot\>k+1>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|Q<rsub|2\<cdot\>k+1>>h<rsup|P<rsub|2\<cdot\>k+1>>|)><rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|n-1>h<rsup|2>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|2>|)><rsub|n+1>|)>>>|<row|<cell|>|<cell|=>|<cell|T<rsub|2,2>>>>>
+      </eqnarray*>
+
+      Hence\ 
+
+      <\equation*>
+        T<rsub|2,2>+T<rsub|3,1>+T<rsub|3,2>=<big|sum><rsub|i\<in\><around*|{|1,\<ldots\>,2\<cdot\>k+1|}>>L<around*|(|<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|Q<rsub|i>>h<rsup|P<rsub|i>>|)><rsub|n+1>|)>
+      </equation*>
+
+      So
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|L<around*|(|<wide*|x+h:\<ldots\>:x+h|\<wide-underbrace\>><rsub|n+1>|)>>|<cell|=>|<cell|L<around*|(|x+h|)><around*|(|<wide*|x+h:\<ldots\>:x+h|\<wide-underbrace\>><rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|T<rsub|1>+T<rsub|2>+T<rsub|3>>>|<row|<cell|>|<cell|=>|<cell|T<rsub|1,1>+T<rsub|1,2>+T<rsub|2,1>+T<rsub|2,2>+T<rsub|3,1>+T<rsub|3,2>>>|<row|<cell|>|<cell|=>|<cell|L<around*|(|<around*|(|x<rsup|p+1>h<rsup|0>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|p+1>h<rsup|0>|)>|)>+>>|<row|<cell|>|<cell|>|<cell|L<around*|(|<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|<around*|(|n+1|)>-1>h<rsup|1>|)><rsub|n+1>|)>+>>|<row|<cell|>|<cell|>|<cell|>>|<row|<cell|>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|>|<cell|>|<cell|>>|<row|<cell|>|<cell|>|<cell|>>|<row|<cell|>|<cell|=>|<cell|>>>>
+      </eqnarray*>
+    </description>
+
+    \;
+  </proof>
+
   <\theorem>
     <label|diff Taylor II><dueto|Taylor' Theorem (II)>Let
     <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>, <math|a,b\<in\>\<bbb-R\>> with
@@ -27191,9 +27813,9 @@
     <associate|diff Taylor I|<tuple|16.368|?>>
     <associate|diff Taylor I.1|<tuple|16.370|?>>
     <associate|diff Taylor I.2|<tuple|16.373|?>>
-    <associate|diff Taylor II|<tuple|16.378|?>>
-    <associate|diff Taylor III|<tuple|16.383|?>>
-    <associate|diff Taylor series|<tuple|16.386|?>>
+    <associate|diff Taylor II|<tuple|16.383|?>>
+    <associate|diff Taylor III|<tuple|16.388|?>>
+    <associate|diff Taylor series|<tuple|16.391|?>>
     <associate|diff Ux|<tuple|16.4|?>>
     <associate|diff Ux=-x+U=U-x|<tuple|16.6|?>>
     <associate|diff balls are convex|<tuple|16.240|?>>
@@ -27786,6 +28408,7 @@
     <associate|eq 16.38.182|<tuple|16.121|?>>
     <associate|eq 16.380.138|<tuple|16.494|?>>
     <associate|eq 16.380.310|<tuple|16.385|?>>
+    <associate|eq 16.380.315|<tuple|16.380|?>>
     <associate|eq 16.381.138|<tuple|16.495|?>>
     <associate|eq 16.382.145|<tuple|16.499|?>>
     <associate|eq 16.389.310|<tuple|16.394|?>>
@@ -27898,18 +28521,25 @@
     <associate|eq 16.51.3|<tuple|16.63|?>>
     <associate|eq 16.51\<point\>189|<tuple|16.136|?>>
     <associate|eq 16.52.190|<tuple|16.139|?>>
-    <associate|eq 16.570.311|<tuple|16.574|?>>
-    <associate|eq 16.571.311|<tuple|16.575|?>>
-    <associate|eq 16.572.311|<tuple|16.576|?>>
-    <associate|eq 16.573.311|<tuple|16.577|?>>
-    <associate|eq 16.574.311|<tuple|16.578|?>>
-    <associate|eq 16.575.311|<tuple|16.579|?>>
-    <associate|eq 16.576.311|<tuple|16.580|?>>
-    <associate|eq 16.577.311|<tuple|16.581|?>>
-    <associate|eq 16.582.313|<tuple|16.582|?>>
-    <associate|eq 16.583.313|<tuple|16.583|?>>
-    <associate|eq 16.584.313|<tuple|16.584|?>>
-    <associate|eq 16.585.313|<tuple|16.585|?>>
+    <associate|eq 16.570.311|<tuple|16.581|?>>
+    <associate|eq 16.571.311|<tuple|16.582|?>>
+    <associate|eq 16.572.311|<tuple|16.583|?>>
+    <associate|eq 16.573.311|<tuple|16.584|?>>
+    <associate|eq 16.574.311|<tuple|16.585|?>>
+    <associate|eq 16.574.315|<tuple|16.574|?>>
+    <associate|eq 16.575.311|<tuple|16.586|?>>
+    <associate|eq 16.575.315|<tuple|16.575|?>>
+    <associate|eq 16.576.311|<tuple|16.587|?>>
+    <associate|eq 16.576.315|<tuple|16.576|?>>
+    <associate|eq 16.577.311|<tuple|16.588|?>>
+    <associate|eq 16.577.315|<tuple|16.577|?>>
+    <associate|eq 16.578.315|<tuple|16.578|?>>
+    <associate|eq 16.579.315|<tuple|16.579|?>>
+    <associate|eq 16.580.315|<tuple|16.580|?>>
+    <associate|eq 16.582.313|<tuple|16.589|?>>
+    <associate|eq 16.583.313|<tuple|16.590|?>>
+    <associate|eq 16.584.313|<tuple|16.591|?>>
+    <associate|eq 16.585.313|<tuple|16.592|?>>
     <associate|eq 16.59.6|<tuple|16.61|?>>
     <associate|eq 16.591.305|<tuple|16.564|?>>
     <associate|eq 16.592.505|<tuple|16.565|?>>
@@ -28002,7 +28632,11 @@
     <associate|lemma 16.254.143|<tuple|16.365|?>>
     <associate|lemma 16.287.310|<tuple|16.294|?>>
     <associate|lemma 16.37.1|<tuple|16.58|?>>
-    <associate|lemma 16.380.312|<tuple|16.381|?>>
+    <associate|lemma 16.378.314|<tuple|16.381|?>>
+    <associate|lemma 16.380.312|<tuple|16.386|?>>
+    <associate|lemma 16.380.315|<tuple|16.380|?>>
+    <associate|lemma 16.381.315|<tuple|16.381|?>>
+    <associate|lemma 16.382.315|<tuple|16.382|?>>
     <associate|lemma 16.50.1|<tuple|16.69|?>>
     <associate|lemma 16.51.186|<tuple|16.134|?>>
     <associate|lemma 16.53.186|<tuple|16.136|?>>
