@@ -3858,6 +3858,12 @@
         differential >D<rsub|x><around*|(|f+g|)>=D<rsub|x>f+D<rsub|x>g
       </equation*>
 
+      <item>If <math|n\<in\>\<bbb-N\>> and
+      <math|<around*|{|f<rsub|i>:A\<rightarrow\>Y|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
+      is a finite set of functions that are Fréchet differentiable at
+      <math|x> then <math|<big|sum><rsub|i=1><rsup|n>f<rsub|i>> is Fréchet
+      differentiable at <math|x> with <math|D<rsub|x><around*|(|<big|sum><rsub|i=1><rsup|n>f<rsub|i>|)>=<big|sum><rsub|i=1><rsup|n>D<rsub|x>f<rsub|i>>
+
       <item>If <math|f:A\<rightarrow\>Y> is Fréchet differentiable at
       <math|x> and <math|\<alpha\>\<in\>\<bbb-K\>> then
 
@@ -3914,6 +3920,57 @@
       <\equation*>
         D<rsub|x><around*|(|f+g|)>=<around*|(|L<rsub|1>+L<rsub|2>|)><rsub|\|S<rsub|A><around*|(|a|)>>=<around*|(|L<rsub|1>|)><rsub|\|S<rsub|A><around*|(|a|)>>+<around*|(|L<rsub|2>|)><rsub|\|S<rsub|A><around*|(|a|)>>=D<rsub|x>f+D<rsub|x>g
       </equation*>
+
+      <item>We prove this by induction, so let\ 
+
+      <\equation*>
+        S=<around*|{|n\<in\>\<bbb-N\>\|<text|If
+        ><around*|{|f<rsub|i>:A\<rightarrow\>Y|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>><text|
+        is a family of functions that are Fréchet differentiable at
+        <math|x<text| then ><big|sum><rsub|i=1><rsup|n>f<rsub|i><text| is
+        Fréchet differentiable at >x<text| with
+        >D<rsub|x><around*|(|<big|sum><rsub|i=1><rsup|n>f<rsub|i>|)>=<big|sum><rsub|i=1><rsup|n>D<rsub|x>f<rsub|i>>>|}>
+      </equation*>
+
+      then we have:\ 
+
+      <\description>
+        <item*|<math|1\<in\>S>>If <math|<around*|{|f<rsub|i>:A\<rightarrow\>Y|}><rsub|i\<in\><around*|{|1|}>>>
+        is a family of Fréchet differentiable functions then as
+        <math|<big|sum><rsub|i=1><rsup|1>f<rsub|i>=f<rsub|1>> it follows that
+        <math|><math|<big|sum><rsub|i=1><rsup|1>f<rsub|i>> is a Fréchet
+        differentiable at <math|x> with
+
+        <\equation*>
+          D<rsub|x><around*|(|<big|sum><rsub|i=1><rsup|1>f<rsub|i>|)>=D<rsub|x>f<rsub|1>=<big|sum><rsub|i=1><rsup|1>D<rsub|x>f<rsub|i>
+        </equation*>
+
+        which proves that <math|1\<in\>S>.
+
+        <item*|<math|n\<in\>S>>Assume that <math|<text|If
+        ><around*|{|f<rsub|i>:A\<rightarrow\>Y|}><rsub|i\<in\><around*|{|1,\<ldots\>,n+1|}>>>
+        is a family of functions that are Fréchet differentiable at <math|x>.
+        As <math|n\<in\>S> we have that <math|<big|sum><rsub|i=1><rsup|n>f<rsub|i>>
+        is Fréchet differentiable at <math|x> with
+
+        <\equation*>
+          D<rsub|x><around*|(|<big|sum><rsub|i=1><rsup|n>f<rsub|i>|)>=<big|sum><rsub|i=1><rsup|n>D<rsub|x>f<rsub|i>
+        </equation*>
+
+        As <math|<big|sum><rsub|i=1><rsup|n+1>f<rsub|i>=f<rsub|n+1>+<big|sum><rsub|i=1><rsup|n>f<rsub|i>>
+        it follows from (1) that <math|><math|<big|sum><rsub|i=1><rsup|n+1>f<rsub|i>>
+        is Fréchet differentiable at <math|x> with
+
+        <\equation*>
+          D<rsub|x><around*|(|<big|sum><rsub|i=1><rsup|n+1>f<rsub|i>|)>=D<rsub|x>f<rsub|n+1>+<big|sum><rsub|i=1><rsup|n>D<rsub|x>f<rsub|i>=<big|sum><rsub|i=1><rsup|n+1>D<rsub|x>f<rsub|i>
+        </equation*>
+
+        which proves that\ 
+
+        <\equation*>
+          n+1\<in\>S
+        </equation*>
+      </description>
 
       <item>As <math|f> is Fréchet differentiable at <math|x> there exist a
       <math|L\<in\>L<around*|(|X,Y|)>> such that
@@ -17207,9 +17264,9 @@
 
   <\lemma>
     <label|lemma 16.167.210>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
-    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
-    a normed space, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    a Banach space, <math|U> a open set in <math|X>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|U> a open set in <math|X>,
     <math|f:U\<rightarrow\>Y> a function that is of class <math|C<rsup|n>>
     then <math|\<forall\>x\<in\>U> and <math|\<forall\>i\<in\><around*|{|1,\<ldots\>,n-1|}>>
     we have for <math|<around*|(|u<rsub|1>,\<ldots\>,u<rsub|n>|)>\<in\>X<rsup|n>>
@@ -17366,9 +17423,9 @@
   <\theorem>
     <label|diff higher order differentials are symmetric in there
     arguments>Let <math|n\<in\>\<bbb-N\>>,
-    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
-    a normed space, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    a Banach space, <math|U> a open set and <math|f:U\<rightarrow\>Y> a
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|U> a open set and <math|f:U\<rightarrow\>Y> a
     function that is of class <math|C<rsup|n>> then
     <math|\<forall\>x\<in\>U>, <math|\<forall\>\<sigma\>\<in\>P<rsub|n>> and
     <math|\<forall\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>\<in\>X<rsup|n>>
@@ -19390,8 +19447,7 @@
     <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>, <math|m\<in\>\<bbb-N\>>,
     <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
     a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    a <with|font-series|bold|Banach> space,
-    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    a normed space, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
     the normed space based on the product
     <math|X=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
     with the maximum norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|max>> [see
@@ -19669,14 +19725,11 @@
     </enumerate>
   </proof>
 
-  TODO check if Banach is needed
-
   <\lemma>
     <label|lemma 16.202.127>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
     <math|m\<in\>\<bbb-N\>>, <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
     a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    a <with|font-series|bold|Banach> space,
-    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    a normed space, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
     the normed space based on the product
     <math|<rigid|X=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>>
     with the maximum norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|max>> [see
@@ -19842,7 +19895,7 @@
     is continuous, further by the hypothesis <math|D<rsub|i>f> is continuous.
     Hence <math|D<rsub|i>f\<circ\><around*|(|I<rsup|<around*|[|i,x|]>>|)><rsub|\|<around*|(|I<rsup|<around*|[|i,x|]>>|)><rsup|-1><around*|(|U|)>>>
     is continuous which proves that <math|D<around*|(|f\<circ\>I<rsup|<around*|[|i,x|]>>|)>>
-    is continuous. Combining this woth [eq: <reference|eq 16.368.310>] proves
+    is continuous. Combining this with [eq: <reference|eq 16.368.310>] proves
     that\ 
 
     <\equation>
@@ -19901,15 +19954,12 @@
   We are now ready to prove under which conditions the existence of partial
   differentials implies differentiability.\ 
 
-  TODO check if Banach is needed
-
   <\theorem>
     <label|diff continuous partial differentials implies
     differentiability>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
     <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
     a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    a <with|font-series|bold|Banach> space,
-    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    a normed space, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
     the normed space based on the product
     <math|X=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
     with the maximum norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|max>> [see
@@ -20323,8 +20373,7 @@
     derivatest>Let <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
     <math|<around*|{|<around*|\<langle\>|X<rsub|i>,<around*|\<\|\|\>||\<\|\|\>><rsub|i>|\<rangle\>>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>>
     a finite family of normed spaces, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    a <with|font-series|bold|Banach> space,
-    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
+    a normed space, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|max>|\<rangle\>>>
     the normed space based on the product
     <math|X=<big|prod><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>X<rsub|i>>
     with the maximum norm <math|<around*|\<\|\|\>||\<\|\|\>><rsub|max>> [see
@@ -21073,7 +21122,7 @@
     <math|<around*|\<langle\>|\<bbb-R\><rsup|n>,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
     be the vector space <math|\<bbb-R\><rsup|n>> with the maximum norm,
     <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> a
-    Banach space, a open set <math|U\<subseteq\>\<bbb-R\><rsup|n>>,
+    normed space, a open set <math|U\<subseteq\>\<bbb-R\><rsup|n>>,
     <math|f:U\<rightarrow\>X> a function that is of class <math|C<rsup|m>>
     then <math|\<forall\>x\<in\>U> and <math|\<forall\><around*|{|i<rsub|j>|}><rsub|j\<in\><around*|{|1,\<ldots\>,m|}>>\<subseteq\><around*|{|1,\<ldots\>,n|}>>
     <math|\<partial\><rsub|x,i<rsub|m>\<ldots\>i<rsub|1>>f> exist and the
@@ -26762,6 +26811,8 @@
     </equation*>
   </proof>
 
+  TODO check this
+
   <\theorem>
     <label|diff Taylor I.3><dueto|Tayrlor's Theorem (I.3)>Let
     <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
@@ -26801,7 +26852,9 @@
     We prove this by induction so let\ 
 
     <\equation*>
-      S=<around*|{|n\<in\>\<bbb-N\>\|<text|If >f<text|is >n<text|-times
+      S<rsub|X>=<around*|{|n\<in\>\<bbb-N\>\|<text|If
+      <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+      is a normed space and >f:U\<rightarrow\>Y<text| is >n<text|-times
       differentiable at >x<rsub|0><text| then
       >\<forall\>\<varepsilon\>\<in\>R<rsup|+><text|
       >\<exists\>\<delta\>\<in\>\<bbb-R\><rsup|+><text| such that
@@ -26837,13 +26890,13 @@
       As <math|f> is <math|<around*|(|n+1|)>>-times differentiable at
       <math|x<rsub|0>> then by [thoerem: <reference|diff n-times and m-times
       differentiability>] we have that <math|\<forall\>k\<in\><around*|{|1,\<ldots\>,n+1|}>>
-      <math|f> is differentiable at <math|x<rsub|0>> so that the following
-      function is well defined
+      <math|f> is <math|k>-times differentiable at <math|x<rsub|0>> so that
+      the following function is well defined
 
-      <\equation*>
-        \<varphi\>:B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\><rsub|1>|)>\<rightarrow\>Y<text|
-        where >\<varphi\><around*|(|x|)>=f<around*|(|x<rsub|0>+x|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|1>|)>
-      </equation*>
+      <\equation>
+        <label|eq 16.573.316>\<varphi\>:B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\><rsub|1>|)>\<rightarrow\>Y<text|
+        where >\<varphi\><around*|(|x|)>=f<around*|(|x<rsub|0>+x|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n+1><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k>|)>
+      </equation>
 
       is well defined. Let <math|k\<in\><around*|{|1,\<ldots\>,n|}>> and
       define\ 
@@ -26856,23 +26909,157 @@
       then it follows from [theorem: <reference|diff differentiability is a
       local property>] and [lemma: <reference|lemma 16.383.315>] that
       <math|\<forall\>x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\><rsub|1>|)>>
-      <math|\<Phi\><rsub|k>> is differentiable at <math|x> where
+      <math|\<Phi\><rsub|k>> is Fréchet differentiable at <math|x> where
       <math|D<rsub|x>\<Phi\><rsub|k>> is defined by\ 
 
       <\equation*>
         D<rsub|x>\<Phi\><rsub|k>:X\<rightarrow\>Y<text| where
-        >D<rsub|x>\<Phi\><rsub|k><around*|(|h|)>=D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k>:h|)>
+        >D<rsub|x>\<Phi\><rsub|k><around*|(|h|)>=k\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k-1>:h|)>
       </equation*>
 
-      Further\ 
+      So if we define
 
-      \ 
+      <\equation>
+        <label|eq 16.574.316>\<varphi\><rsub|2>:<rsub|>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\><rsub|1>|)>\<rightarrow\>Y<text|
+        by >\<varphi\><rsub|2><around*|(|x|)>=-<big|sum><rsub|k=1><rsup|n+1><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k>|)>
+      </equation>
+
+      then we have by [theorem: <reference|diff derivate operator is linear>]
+      that <math|\<varphi\><rsub|2>> is Fréchet differentiable at
+      <math|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\><rsub|1>|)>>
+      where <math|D<rsub|x>\<varphi\><rsub|2>\<in\>L<around*|(|X,Y|)>> is
+      defined by\ 
+
+      <\equation>
+        <label|eq 16.575.316>D<rsub|x>\<varphi\><rsub|2><around*|(|h|)>=-<big|sum><rsub|k=1><rsup|n+1><frac|1|k!>\<cdot\>k\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k-1>:h|)>=-<big|sum><rsub|k=1><rsup|n+1><frac|1|<around*|(|k-1|)>!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k-1>:h|)>
+      </equation>
+
+      Define\ 
+
+      <\equation>
+        <label|eq 16.576.316>\<varphi\><rsub|1>:B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\><rsub|1>|)>\<rightarrow\>Y<text|
+        by >\<varphi\><rsub|1><around*|(|x|)>=f<around*|(|x<rsub|0>+x|)>-f<around*|(|x<rsub|0>|)>=<around*|(|f\<circ\><around*|(|Id<rsub|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>>>+C<rsub|x<rsub|o>><rsub|>|)>+C<rsub|-f<around*|(|x<rsub|0>|)>>|)><around*|(|x|)>
+      </equation>
+
+      \ As <math|f> is <math|<around*|(|n+1|)>>-times differentiable at
+      <math|x<rsub|0>> we have by definition that <math|f> is <math|n>-times
+      differentiable on <math|U> hence <math|n>-times differentiable on
+      <math|B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|x<rsub|0>,h|)>>,
+      so that by [examples: <reference|diff constant function is
+      differentiable>, <reference|diff identity function is differentiable>]
+      and [theorems: <reference|diff chain rule>, <reference|diff derivate
+      operator is linear>] it follows that <math|\<varphi\><rsub|1>> is
+      Fréchet differentiable at <math|x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\><rsub|1>|)>>
+      with\ 
+
+      <\equation>
+        <label|eq 16.577.316>D<rsub|x>\<varphi\><rsub|1>=D<rsub|x<rsub|0>+x>f
+      </equation>
+
+      By [eqs: <reference|eq 16.573.316>, <reference|eq 16.574.316>,
+      <reference|eq 16.577.316>]\ 
+
+      <\equation*>
+        \<varphi\>=\<varphi\><rsub|1>+\<varphi\><rsub|2>
+      </equation*>
+
+      So that by [theorem: <reference|diff derivate operator is linear>] and
+      [eqs: <reference|eq 16.575.316>, <reference|eq 16.577.316>]
+      <math|\<forall\>x\<in\>B<rsub|<around*|\<\|\|\>||\<\|\|\>><rsub|X>><around*|(|0,\<delta\><rsub|1>|)>>
+      is Fréchet differentiable at <math|x> where\ 
+
+      <\equation*>
+        D<rsub|x>\<varphi\>\<in\>L<around*|(|X,Y|)>
+      </equation*>
+
+      is defined by\ 
+
+      <\equation>
+        <label|eq 16.578.316>D<rsub|x>\<varphi\><around*|(|h|)>=D<rsub|x<rsub|0>+x>f<around*|(|h|)>-<big|sum><rsub|k=1><rsup|n+1><frac|1|<around*|(|k-1|)>!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k-1>:h|)>
+      </equation>
+
+      As <math|f> is <math|<around*|(|n+1|)>> differentiable at
+      <math|x<rsub|0>> it follows from [theorem: <reference|diff
+      D^f=D^(n-1)D^1f>] that <math|f> is <math|1>-times differentiable on
+      <math|U> and the function\ 
+
+      <\equation*>
+        D<rsup|<around*|[|1|]>>f:U\<rightarrow\>L<around*|(|X,Y|)><text|
+        defined by >D<rsup|<around*|[|1|]>>f<around*|(|x|)>=D<rsup|<around*|[|1|]>><rsub|x>f
+      </equation*>
+
+      is <math|n>-times differentiable at <math|x<rsub|0>> with\ 
+
+      <\equation*>
+        D<rsup|<around*|[|n+1|]>><rsub|x<rsub|0>>f=D<rsup|<around*|[|n|]>><rsub|x<rsub|0>><around*|(|D<rsup|<around*|[|1|]>>f|)>
+      </equation*>
+
+      Let <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>. As <math|n\<in\>S>
+      there exist a <math|\<delta\><rsub|2>> such that
+      <math|\<forall\>x\<in\>U<rsub|x<rsub|0>>> with
+      <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>\<less\>\<delta\><rsub|2>>
+      we have that\ 
+
+      <\equation>
+        <label|eq 16.579.316><around*|\<\|\|\>|D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|o>+x|)>-D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>><around*|(|D<rsup|<around*|[|1|]>>f|)><around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k>|)>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsup|n><rsub|X>
+      </equation>
+
+      Let <math|\<delta\>=min<around*|(|\<delta\><rsub|1>,\<delta\><rsub|2>|)>>
+      and take <math|x\<in\>U<rsub|x<rsub|0>>> with
+      <math|<around*|\<\|\|\>|x|\<\|\|\>><rsub|X>\<less\>\<delta\>>. Given
+      <math|h\<in\>X> we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|0>|)>+<big|sum><rsub|k=1><rsup|n><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>><around*|(|D<rsup|<around*|[|1|]>>f|)><around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k>|)>|)><around*|(|h|)>>|<cell|<below|=|<text|[theorem:
+        <reference|diff n+m differentiation>]>>>|<cell|>>|<row|<cell|<around*|(|D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|0>|)>+<big|sum><rsub|k=2><rsup|n><frac|1|k!>\<cdot\>D<rsup|<around*|[|k+1|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k>|)>|)><around*|(|h|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|0>|)>+<big|sum><rsub|k=2><rsup|n+1><frac|1|<around*|(|k-1|)>!>\<cdot\>D<rsup|<around*|\<nobracket\>|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k-1>|)>|)><around*|(|h|)>>|<cell|=>|<cell|>>|<row|<cell|D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|0>|)><around*|(|h|)>+<big|sum><rsub|k=2><rsup|n+1><frac|1|<around*|(|k-1|)>!>\<cdot\>D<rsup|<around*|\<nobracket\>|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k-1>|)><around*|(|h|)>>|<cell|\<equallim\><rsub|<text|[lemma:
+        <reference|lemma 16.53.186>]>>>|<cell|>>|<row|<cell|<frac|1|<around*|(|1-1|)>!>\<cdot\>D<rsup|<around*|[|1|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|1-1>:h|)>+<big|sum><rsub|k=2><rsup|n+1><frac|1|<around*|(|k-1|)>!>\<cdot\>D<rsup|<around*|\<nobracket\>|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k-1>:h|)>>|<cell|=>|<cell|>>|<row|<cell|<big|sum><rsub|k=1><rsup|n+1><frac|1|<around*|(|k-1|)>!>\<cdot\>D<rsup|<around*|\<nobracket\>|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k-1>:h|)>>|<cell|<below|=|<text|[eq:
+        <reference|eq 16.578.316>]>>>|<cell|>>|<row|<cell|D<rsub|x<rsub|0>+x>f<around*|(|h|)>-D<rsub|x<rsub|0>>\<varphi\><around*|(|h|)>>|<cell|>|<cell|>>|<row|<cell|D<rsup|<around*|[|1|]>><rsub|x<rsub|0>+x>f<around*|(|h|)>-D<rsub|x<rsub|0>>\<varphi\><around*|(|h|)>>|<cell|>|<cell|<eq-number><label|eq
+        16.580.316>>>>>
+      </eqnarray*>
+
+      hence we have <math|\<forall\>h\<in\>X> that\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|(|D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|o>+x|)>-D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>><around*|(|D<rsup|<around*|[|1|]>>f|)><around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k>|)>|)><around*|(|h|)>>|<cell|<below|=|<text|[eq:
+        <reference|eq 16.580.316>]>>>|<cell|>>|<row|<cell|D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|o>+x|)>-D<rsup|<around*|[|1|]>><rsub|x<rsub|0>+x>f<around*|(|h|)>+D<rsub|x<rsub|0>>\<varphi\><around*|(|h|)>>|<cell|=>|<cell|>>|<row|<cell|D<rsup|<around*|[|1|]>><rsub|x<rsub|0>+x>f-D<rsup|<around*|[|1|]>><rsub|x<rsub|0>+x>f<around*|(|h|)>+D<rsub|x<rsub|0>>\<varphi\><around*|(|h|)>>|<cell|=>|<cell|>>|<row|<cell|D<rsub|x<rsub|0>>\<varphi\><around*|(|h|)>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      so that <math|\<forall\>h\<in\>X> we have\ 
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|\<\|\|\>|D<rsub|x<rsub|0>>\<varphi\><around*|(|h|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|<around*|\<\|\|\>|<around*|(|D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|o>+x|)>-D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>><around*|(|D<rsup|<around*|[|1|]>>f|)><around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k>|)>|)><around*|(|h|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|o>+x|)>-D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>><around*|(|D<rsup|<around*|[|1|]>>f|)><around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k>|)>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[eq:
+        <reference|eq 16.579.316>]>>>|<cell|\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsup|n><rsub|X>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsub|X>>>|<row|<cell|>|<cell|=>|<cell|\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsup|n+1><rsub|X>>>>>
+      </eqnarray*>
+
+      \ Hence using [theorem: <reference|continuity norm on L(X,Y)>] it
+      follows that
+
+      <\equation*>
+        <around*|\<\|\|\>|D<rsub|x<rsub|0>>\<varphi\>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsup|n+1><rsub|X>
+      </equation*>
+
+      Using now the Mean Value Theorem [theorem: <reference|diff mean value
+      theorem (4)>] it follows that\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|\<varphi\><around*|(|x|)>-\<varphi\><around*|(|0|)>|\<\|\|\>><rsub|Y>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsup|n+1><rsub|X>
+      </equation*>
+
+      As
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|\<varphi\><around*|(|x|)>-\<varphi\><around*|(|0|)>>|<cell|=>|<cell|>>|<row|<cell|\<varphi\><around*|(|x|)>-<around*|(|f<around*|(|x<rsub|0>|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n+1><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|0:\<ldots\>:0|\<wide-underbrace\>><rsub|k>|)>|)>>|<cell|=>|<cell|>>|<row|<cell|\<varphi\><around*|(|x|)>-0>|<cell|=>|<cell|>>|<row|<cell|\<varphi\><around*|(|x|)>>|<cell|=>|<cell|>>|<row|<cell|f<around*|(|x<rsub|0>+x|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n+1><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k>|)>>|<cell|>|<cell|>>>>
+      </eqnarray*>
+
+      it follows that\ 
+
+      <\equation*>
+        <around*|\<\|\|\>|f<around*|(|x<rsub|0>+x|)>-f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n+1><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k>|)>|\<\|\|\>><rsub|Y>\<leqslant\>\<varepsilon\>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsup|n+1><rsub|X>
+      </equation*>
+
+      which finally proves that <math|n+1\<in\>S>.
     </description>
-
-    \;
   </proof>
-
-  TODO\ 
 
   <\theorem>
     <label|diff Taylor II><dueto|Taylor' Theorem (II)>Let
@@ -27093,9 +27280,10 @@
 
   <\lemma>
     <label|lemma 16.380.312>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
-    be a normed space, <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
-    <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b> and
-    <math|f:<around*|[|a,b|]>\<rightarrow\>Y> a function such that
+    be a <with|font-series|bold|Banach> space,
+    <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>, <math|a,b\<in\>\<bbb-R\>> with
+    <math|a\<less\>b> and <math|f:<around*|[|a,b|]>\<rightarrow\>Y> a
+    function such that
 
     <\enumerate>
       <item><math|\<forall\>y\<in\><around*|[|a,b|]>> <math|f> has a
@@ -27949,22 +28137,12 @@
     <associate|diff little o|<tuple|16.371|?>>
     <associate|diff little o and limits|<tuple|16.373|?>>
     <associate|diff local diffeomorphism|<tuple|16.352|?>>
-    <associate|diff mean value (5.5))|<tuple|16.252|?>>
-    <associate|diff mean value (6))|<tuple|16.252|?>>
     <associate|diff mean value theorem (1)|<tuple|16.239|?>>
     <associate|diff mean value theorem (2)|<tuple|16.247|?>>
-    <associate|diff mean value theorem (2.1)|<tuple|16.246|?>>
-    <associate|diff mean value theorem (2.2)|<tuple|16.250|?>>
     <associate|diff mean value theorem (3)|<tuple|16.249|?>>
-    <associate|diff mean value theorem (3.1)|<tuple|16.254|?>>
     <associate|diff mean value theorem (4)|<tuple|16.250|?>>
     <associate|diff mean value theorem (5)|<tuple|16.251|?>>
-    <associate|diff mean value theorem (5.1)|<tuple|16.249|?>>
-    <associate|diff mean value theorem (5.3)|<tuple|16.254|?>>
-    <associate|diff mean value theorem (5.4)|<tuple|16.251|?>>
-    <associate|diff mean value theorem (5.5)|<tuple|16.251|?>>
     <associate|diff mean value theorem (6)|<tuple|16.252|?>>
-    <associate|diff mean value theorem (6))|<tuple|16.252|?>>
     <associate|diff mean value theorem (7)|<tuple|16.254|?>>
     <associate|diff mean value theorem (8)|<tuple|16.256|?>>
     <associate|diff minimum maximum|<tuple|16.217|?>>
@@ -28250,30 +28428,21 @@
     <associate|eq 16.286.126|<tuple|16.371|?>>
     <associate|eq 16.287.124|<tuple|16.340|?>>
     <associate|eq 16.287.126|<tuple|16.373|?>>
-    <associate|eq 16.287.300|<tuple|16.266|?>>
     <associate|eq 16.288.124|<tuple|16.341|?>>
     <associate|eq 16.288.126|<tuple|16.374|?>>
-    <associate|eq 16.288.300|<tuple|16.268|?>>
-    <associate|eq 16.288.300.2|<tuple|16.267|?>>
     <associate|eq 16.289.124|<tuple|16.342|?>>
     <associate|eq 16.289.126|<tuple|16.375|?>>
-    <associate|eq 16.289.300|<tuple|16.269|?>>
     <associate|eq 16.29.1|<tuple|16.40|?>>
     <associate|eq 16.290.124|<tuple|16.343|?>>
     <associate|eq 16.290.126|<tuple|16.376|?>>
-    <associate|eq 16.290.300|<tuple|16.270|?>>
     <associate|eq 16.291.124|<tuple|16.345|?>>
     <associate|eq 16.291.125|<tuple|16.344|?>>
     <associate|eq 16.291.126|<tuple|16.377|?>>
-    <associate|eq 16.291.300|<tuple|16.271|?>>
     <associate|eq 16.292.124|<tuple|16.346|?>>
     <associate|eq 16.292.126|<tuple|16.378|?>>
-    <associate|eq 16.292.300|<tuple|16.273|?>>
-    <associate|eq 16.292.300.1|<tuple|16.272|?>>
     <associate|eq 16.293.124|<tuple|16.347|?>>
     <associate|eq 16.293.126|<tuple|16.379|?>>
     <associate|eq 16.293.128|<tuple|16.380|?>>
-    <associate|eq 16.293.300|<tuple|16.274|?>>
     <associate|eq 16.294.124|<tuple|16.348|?>>
     <associate|eq 16.295.128|<tuple|16.382|?>>
     <associate|eq 16.296.125|<tuple|16.349|?>>
@@ -28528,29 +28697,38 @@
     <associate|eq 16.51.3|<tuple|16.63|?>>
     <associate|eq 16.51\<point\>189|<tuple|16.136|?>>
     <associate|eq 16.52.190|<tuple|16.139|?>>
-    <associate|eq 16.570.311|<tuple|16.573|?>>
-    <associate|eq 16.571.311|<tuple|16.574|?>>
-    <associate|eq 16.572.311|<tuple|16.575|?>>
-    <associate|eq 16.573.311|<tuple|16.576|?>>
-    <associate|eq 16.574.311|<tuple|16.577|?>>
+    <associate|eq 16.570.311|<tuple|16.581|?>>
+    <associate|eq 16.571.311|<tuple|16.582|?>>
+    <associate|eq 16.572.311|<tuple|16.583|?>>
+    <associate|eq 16.573.311|<tuple|16.584|?>>
+    <associate|eq 16.573.315|<tuple|16.573|?>>
+    <associate|eq 16.573.316|<tuple|16.573|?>>
+    <associate|eq 16.574.311|<tuple|16.585|?>>
     <associate|eq 16.574.315|<tuple|16.561|?>>
-    <associate|eq 16.575.311|<tuple|16.578|?>>
+    <associate|eq 16.574.316|<tuple|16.574|?>>
+    <associate|eq 16.575.311|<tuple|16.586|?>>
     <associate|eq 16.575.315|<tuple|16.562|?>>
-    <associate|eq 16.576.311|<tuple|16.579|?>>
+    <associate|eq 16.575.316|<tuple|16.575|?>>
+    <associate|eq 16.576.311|<tuple|16.587|?>>
     <associate|eq 16.576.315|<tuple|16.563|?>>
-    <associate|eq 16.577.311|<tuple|16.580|?>>
+    <associate|eq 16.576.316|<tuple|16.576|?>>
+    <associate|eq 16.577.311|<tuple|16.588|?>>
     <associate|eq 16.577.315|<tuple|16.564|?>>
+    <associate|eq 16.577.316|<tuple|16.577|?>>
     <associate|eq 16.578.315|<tuple|16.565|?>>
+    <associate|eq 16.578.316|<tuple|16.578|?>>
     <associate|eq 16.579.315|<tuple|16.566|?>>
+    <associate|eq 16.579.316|<tuple|16.579|?>>
     <associate|eq 16.580.315|<tuple|16.567|?>>
+    <associate|eq 16.580.316|<tuple|16.580|?>>
     <associate|eq 16.581.315|<tuple|16.568|?>>
-    <associate|eq 16.582.313|<tuple|16.581|?>>
+    <associate|eq 16.582.313|<tuple|16.589|?>>
     <associate|eq 16.582.315|<tuple|16.569|?>>
-    <associate|eq 16.583.313|<tuple|16.582|?>>
+    <associate|eq 16.583.313|<tuple|16.590|?>>
     <associate|eq 16.583.315|<tuple|16.570|?>>
-    <associate|eq 16.584.313|<tuple|16.583|?>>
+    <associate|eq 16.584.313|<tuple|16.591|?>>
     <associate|eq 16.584.315.1|<tuple|16.571|?>>
-    <associate|eq 16.585.313|<tuple|16.584|?>>
+    <associate|eq 16.585.313|<tuple|16.592|?>>
     <associate|eq 16.585.315|<tuple|16.572|?>>
     <associate|eq 16.59.6|<tuple|16.61|?>>
     <associate|eq 16.591.305|<tuple|16.551|?>>
@@ -28635,14 +28813,12 @@
     <associate|lemma 16.202.127|<tuple|16.311|?>>
     <associate|lemma 16.211.127|<tuple|16.320|?>>
     <associate|lemma 16.216.144|<tuple|16.326|?>>
-    <associate|lemma 16.216.300|<tuple|16.242|?>>
     <associate|lemma 16.228.127|<tuple|16.341|?>>
     <associate|lemma 16.229.127|<tuple|16.342|?>>
     <associate|lemma 16.23.181|<tuple|16.120|?>>
     <associate|lemma 16.232.301|<tuple|16.246|?>>
     <associate|lemma 16.24.178|<tuple|16.88|?>>
     <associate|lemma 16.254.143|<tuple|16.364|?>>
-    <associate|lemma 16.263.315|<tuple|16.260|?>>
     <associate|lemma 16.287.310|<tuple|16.293|?>>
     <associate|lemma 16.37.1|<tuple|16.59|?>>
     <associate|lemma 16.380.312|<tuple|16.389|?>>

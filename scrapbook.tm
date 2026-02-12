@@ -14394,6 +14394,113 @@
 
   \;
 
+  <\theorem>
+    <label|diff mean value theorem (3)><dueto|Mean Value Theorem (III)>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>
+    be a normed space, <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    a Banach space, <math|U> a open set in <math|X>. <math|x,y\<in\>X> such
+    that <math|L<rsub|x,y>\<subseteq\>U> and <math|f:U\<rightarrow\>Y> a
+    function that is of class \ <math|C<rsup|1>>
+
+    then\ 
+
+    <\equation*>
+      sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|\<zeta\>>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\|\<zeta\>\<in\>L<rsub|x,y>|}>|)><text|>
+    </equation*>
+
+    exists and
+
+    <\equation*>
+      <around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|x|)>|\<\|\|\>><rsub|Y>\<leqslant\>sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|\<zeta\>>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\|\<zeta\>\<in\>L<rsub|x,y>|}>|)>\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>
+    </equation*>
+
+    <\note>
+      As <math|U> is open it follows from [theorem: <reference|diff
+      differential domain examples>] that <math|U> is a differential domain
+      set which is needed in the definition of a function of class
+      <math|C<rsup|1>>.
+    </note>
+  </theorem>
+
+  <\proof>
+    As <math|f> is of class <math|C<rsup|1>> <math|f> is <math|1>-times
+    differentiable [hence Fréchet differentiable] on <math|U> and\ 
+
+    <\equation*>
+      D f:U\<rightarrow\>L<around*|(|X,Y|)><text| where >D
+      f<around*|(|x|)>=D<rsub|x>f<text| is continuous>
+    </equation*>
+
+    As <math|L<rsub|x,y>\<subseteq\>U> it follows that <math|f> is Fréchet
+    differentiable on <math|U> and by [theorem: <reference|continuity and
+    subspace topology (1)>] that\ 
+
+    <\equation*>
+      <around*|(|D f|)><rsub|\|L<rsub|x,y>>:L<rsub|x,y>\<rightarrow\>L<around*|(|X,Y|)><text|
+      where ><around*|(|D f|)><rsub|\|L<rsub|x,y>><around*|(|z|)>=D
+      f<around*|(|x|)>=D<rsub|x>f<text| is continuous>
+    </equation*>
+
+    By [lemma: <reference|lemma 16.144.201>] <math|L<rsub|x,y>> is compact so
+    that by [theorem: <reference|compact and continuous functions>] and the
+    fact that <math|D f> is continuous <math|D f<around*|(|L<rsub|x,y>|)>> is
+    compact. Applying then [theorem: <reference|compact and bounded>] proves
+    that <math|D f<around*|(|L<rsub|x,y>|)>> is bounded, hence there exist a
+    <math|M\<in\>\<bbb-R\><rsup|+>> such that
+    <math|\<forall\>L<rsub|1>,L<rsub|2>\<in\>D f<around*|(|L<rsub|x,y>|)>> we
+    have \ <math|<around*|\<\|\|\>|L<rsub|1>-L<rsub|2>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<leqslant\>M>.
+    Let <math|\<zeta\>\<in\>L<rsub|x,y>\<subseteq\>U> then we have\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|D
+      f<around*|(|\<zeta\>|)>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>>|<cell|=>|<cell|<around*|\<\|\|\>|D
+      f<around*|(|\<zeta\>|)>-D f<around*|(|x|)>+D
+      f<around*|(|x|)>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<around*|\<\|\|\>|D
+      f<around*|(|\<zeta\>|)>-D f<around*|(|x|)>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>+<around*|\<\|\|\>|D
+      f<around*|(|x|)>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>>>|<row|<cell|>|<cell|<below|\<leqslant\>|\<zeta\>,x\<in\>L<rsub|x,y>\<Rightarrow\>D
+      f<around*|(|x|)>,D f<around*|(|\<zeta\>|)>\<in\>D
+      f<around*|(|L<rsub|x,y>|)>>>|<cell|M+<around*|\<\|\|\>|D
+      f<around*|(|x|)>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>>>>>
+    </eqnarray*>
+
+    proving that <math|<around*|{|<around*|\<\|\|\>|D<rsub|\<zeta\>>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\|\<zeta\>\<in\>L<rsub|x,y>|}>=<around*|{|<around*|\<\|\|\>|D
+    f<around*|(|\<zeta\>|)>|\<\|\|\>>\|\<zeta\>\<in\>L<rsub|x,y>|}>> is
+    bounded above by <math|><math|<rigid|M+<around*|\<\|\|\>|D
+    f<around*|(|x|)>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>>>. As
+    <math|\<bbb-R\>> is conditionally complete [see theorem:
+    <reference|complex RC is conditional complete>] and
+    <math|<rigid|<around*|{|<around*|\<\|\|\>|D<rsub|\<zeta\>>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\|\<zeta\>\<in\>L<rsub|x,y>|}>\<neq\>\<varnothing\>>>
+    [because <math|x\<in\>L<rsub|x,y>\<Rightarrow\>L<rsub|x,y>\<neq\>\<varnothing\>>]
+    it follows that\ 
+
+    <\equation*>
+      sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|\<zeta\>>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\|\<zeta\>\<in\>L<rsub|x,y>|}>|)><text|
+      exist>
+    </equation*>
+
+    As <math|L<rsub|x,y>> is convex [see lemma: <reference|lemma
+    16.144.201>], <math|x,y\<in\>L<rsub|x,y>>,
+    <math|L<rsub|x,y>\<subseteq\>U> and <math|\<forall\>\<zeta\>\<in\>L<rsub|x,y>>
+
+    <\equation*>
+      <around*|\<\|\|\>|D<rsub|\<zeta\>>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<leqslant\>sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|\<zeta\>>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\|\<zeta\>\<in\>L<rsub|x,y>|}>|)><rsub|>
+    </equation*>
+
+    it follows from [theorem: <reference|diff mean value theorem (2)>] that\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|f<around*|(|y|)>-f<around*|(|x|)>|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\<leqslant\>sup<around*|(|<around*|{|<around*|\<\|\|\>|D<rsub|\<zeta\>>f|\<\|\|\>><rsub|L<around*|(|X,Y|)>>\|\<zeta\>\<in\>L<rsub|x,y>|}>|)>\<cdot\><around*|\<\|\|\>|y-x|\<\|\|\>><rsub|X>
+    </equation*>
+  </proof>
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
   \;
 
   \;
@@ -14452,7 +14559,7 @@
     <associate|diff higher order differentiation and vector
     functions|<tuple|97|?>>
     <associate|diff higher order differentiation classes|<tuple|98|111>>
-    <associate|diff mean value theorem (3)|<tuple|90|119>>
+    <associate|diff mean value theorem (3)|<tuple|109|119>>
     <associate|diff mean value theorem (5)|<tuple|36|45>>
     <associate|diff mean value theorem (6)|<tuple|38|50>>
     <associate|diff mean value theorem (7)|<tuple|39|50>>
