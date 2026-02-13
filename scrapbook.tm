@@ -14495,6 +14495,15 @@
 
   \;
 
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|<around*|(|D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|o>+x|)>-D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|1|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>><around*|(|D<rsup|<around*|[|1|]>>f|)><around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k>|)>|)><around*|(|h|)>>|<cell|<below|=|<text|[theorem:
+    <reference|diff n+m differentiation>]>>>|<cell|>>|<row|<cell|<around*|(|D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|o>+x|)>-D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=1><rsup|n><frac|1|k!>\<cdot\>D<rsup|<around*|[|k+1|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k>|)>|)><around*|(|h|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|o>+x|)>-D<rsup|<around*|[|1|]>>f<around*|(|x<rsub|0>|)>-<big|sum><rsub|k=2><rsup|n+1><frac|1|<around*|(|k-1|)>!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k-1>|)>|)><around*|(|h|)>>|<cell|=>|<cell|>>|<row|<cell|<around*|(|D<rsup|<around*|[|1|]>><rsub|x<rsub|0>+x>f-D<rsup|<around*|[|1|]>><rsub|x<rsub|0>>f-<big|sum><rsub|k=2><rsup|n+1><frac|1|<around*|(|k-1|)>!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k-1>|)>|)><around*|(|h|)>>|<cell|=>|<cell|>>|<row|<cell|D<rsup|<around*|[|1|]>><rsub|x<rsub|0>+h>f<around*|(|h|)>-D<rsup|<around*|[|1|]>><rsub|x<rsub|0>>f<around*|(|h|)>-<big|sum><rsub|k=2><rsup|n+1><frac|1|<around*|(|k-1|)>!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k-1>|)><around*|(|h|)>>|<cell|\<equallim\><rsub|<text|[lemma:
+    <reference|lemma 16.53.186>]>>>|<cell|>>|<row|<cell|D<rsup|<around*|[|1|]>><rsub|x<rsub|0>+h>f<around*|(|h|)>-D<rsup|<around*|[|1|]>><rsub|x<rsub|0>>f<around*|(|h|)>-<big|sum><rsub|k=2><rsup|n+1><frac|1|<around*|(|k-1|)>!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|k-1>:h|)>>|<cell|=>|<cell|>>|<row|<cell|>|<cell|=>|<cell|>>|<row|<cell|D<rsup|<around*|[|1|]>><rsub|x<rsub|0>+h>f<around*|(|h|)>-<big|sum><rsub|k=1><rsup|n+1><frac|1|<around*|(|k-1|)>!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|k>|)>>|<cell|=>|<cell|>>|<row|<cell|D<rsup|<around*|[|1|]>><rsub|x<rsub|0>+h>f<around*|(|h|)>-<big|sum><rsub|k=1><rsup|n><frac|1|<around*|(|k-1|)>!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>>f<around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|k>|)>-<frac|1|n!>\<cdot\>D<rsup|<around*|[|n+1|]>><rsub|x<rsub|0>>f<around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|n+1>|)>>|<cell|<below|=|<text|[eq:
+    <reference|eq 16.578.316>]>>>|<cell|>>|<row|<cell|>|<cell|>|<cell|>>>>
+  </eqnarray*>
+
+  \;
+
   \;
 
   \;

@@ -8779,7 +8779,7 @@
   <\theorem>
     <label|diff C-infinity condition>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
-    be normed spaces, a tengential spanning set <math|A\<subseteq\>X> and
+    be normed spaces, a tangential spanning set <math|A\<subseteq\>X> and
     <math|f<rigid|:A\<rightarrow\>Y>> a function \ 
 
     <\equation*>
@@ -26805,16 +26805,12 @@
     <\equation*>
       D<rsub|x>\<Phi\>=K<around*|(|h|)>=n\<cdot\>L<around*|(|<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|1>:\<ldots\>:<around*|(|x<rsup|n-1>h<rsup|1>|)><rsub|n>|)>=n\<cdot\>L<around*|(|<wide*|x:\<ldots\>:x|\<wide-underbrace\>><rsub|n-1>:h|)>
     </equation*>
-
-    <\equation*>
-      \;
-    </equation*>
   </proof>
 
   TODO check this
 
   <\theorem>
-    <label|diff Taylor I.3><dueto|Tayrlor's Theorem (I.3)>Let
+    <label|diff Taylor I.3><dueto|Taylor's Theorem (I.3)>Let
     <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
     <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
     be normed spaces, <math|U> a open set in <math|X>, <math|x\<in\>U> and
@@ -27062,7 +27058,7 @@
   </proof>
 
   <\theorem>
-    <label|diff Taylor II><dueto|Taylor' Theorem (II)>Let
+    <label|diff Taylor II><dueto|Taylor' Theorem (II.1)>Let
     <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>, <math|a,b\<in\>\<bbb-R\>> with
     <math|a\<less\>b>, <math|x,x<rsub|0>\<in\>\<bbb-R\>> with
     <math|x\<neq\>x<rsub|0>> and <math|<around*|[|m,M|]>\<subseteq\><around*|]|a,b|[>>
@@ -27277,6 +27273,279 @@
       where >\<theta\>\<in\><around*|]|0,1|[>
     </equation*>
   </proof>
+
+  For the following version of Taylor's theorem we need two lemma's.\ 
+
+  <\lemma>
+    <label|lemma 16.389.316>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces <math|U> a open set in <math|X>,
+    <math|x<rsub|0>\<in\>U>, <math|f:U\<rightarrow\>Y> a function that is
+    <math|<around*|(|n+1|)>>-times differentiable at <math|x<rsub|0>>,
+    <math|<around*|{|h<rsub|i>|}><rsub|i\<in\><around*|{|1,\<ldots\>,n|}>>\<subseteq\>X>
+    then the function\ 
+
+    <\equation*>
+      \<varphi\><rsub|h<rsub|1>\<ldots\>h<rsub|n>>:U\<rightarrow\>Y<text|
+      defined by >\<varphi\><rsub|h<rsub|1>\<ldots\>h<rsub|n>><around*|(|x|)>=D<rsup|<around*|[|n|]>><rsub|x>f<around*|(|h<rsub|1>:\<ldots\>:h<rsub|n>|)>
+    </equation*>
+
+    is Fréchet differentiable at <math|x<rsub|0>> with\ 
+
+    <\equation*>
+      D<rsub|x<rsub|0>>\<varphi\><rsub|h<rsub|1>\<ldots\>h<rsub|n>>:X\<rightarrow\>Y<text|
+      is defined by >D<rsub|x<rsub|0>>\<varphi\><rsub|h<rsub|1>\<ldots\>h<rsub|n>><around*|(|k|)>=D<rsup|<around*|[|k+1|]>><rsub|x<rsub|0>>f<around*|(|k|)><around*|(|h<rsub|1>:\<ldots\>:h<rsub|n>|)>=D<rsup|<around*|[|k+1|]>><rsub|x<rsub|0>>f<around*|(|k:h<rsub|1>:\<ldots\>:h<rsub|n>|)>
+    </equation*>
+  </lemma>
+
+  <\note>
+    As <math|f> is <math|<around*|(|n+1|)>>-times differentiable we have by
+    definition that <math|f> is <math|n>-times differentiable on <math|U> so
+    that <math|\<varphi\><rsub|h<rsub|1>\<ldots\>h<rsub|n>>> is well defined.
+  </note>
+
+  <\proof>
+    Define\ 
+
+    <\equation*>
+      \<psi\>:L<rsub|n><around*|(|X;Y|)>\<rightarrow\>Y<text| by
+      >\<psi\><around*|(|L|)>=L<around*|(|h<rsub|1>:\<ldots\>:h<rsub|n>|)>
+    </equation*>
+
+    then we have for <math|L<rsub|1>,L<rsub|2>\<in\>L<rsub|n><around*|(|X;Y|)>>
+    and <math|\<alpha\>\<in\>\<bbb-K\>> that
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<psi\><around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)>>|<cell|=>|<cell|<around*|(|L<rsub|1>+\<alpha\>\<cdot\>L<rsub|2>|)><around*|(|h<rsub|1>:\<ldots\>:h<rsub|n>|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[theorem:
+      <reference|lemma 16.54.187>]>>>|<cell|L<rsub|1><around*|(|h<rsub|1>:\<ldots\>:h<rsub|n>|)>+\<alpha\>\<cdot\>L<rsub|2><around*|(|h<rsub|1>:\<ldots\>:h<rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|\<psi\><around*|(|L<rsub|1>|)>+\<alpha\>\<cdot\>\<psi\><around*|(|L<rsub|2>|)>>>>>
+    </eqnarray*>
+
+    which proves that\ 
+
+    <\equation*>
+      \<psi\>\<in\>Hom<around*|(|L<rsub|n><around*|(|X;Y|)>,Y|)>
+    </equation*>
+
+    Further we have\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|\<psi\><around*|(|L|)>|\<\|\|\>><rsub|Y>=<around*|\<\|\|\>|L<around*|(|h<rsub|1>:\<ldots\>:h<rsub|n>|)>|\<\|\|\>><rsub|Y><below|\<leqslant\>|<text|[lemma:
+      <reference|lemma 16.56.187>]>><around*|(|<big|prod><rsub|i=1><rsup|n><around*|\<\|\|\>|h<rsub|i>|\<\|\|\>><rsub|X>|)>\<cdot\><around*|\<\|\|\>|L|\<\|\|\>><rsub|L<rsub|n><around*|(|X;Y|)>><text|>
+    </equation*>
+
+    which proves by [theorem: <reference|continuity linear mapping (1)>] that
+
+    <\equation*>
+      \<psi\>\<in\>L<around*|(|L<rsub|n><around*|(|X;Y|)>,Y|)>
+    </equation*>
+
+    Hence using [example: <reference|diff linear mappings are
+    differentiable>] that <math|\<psi\>> is differentiable on
+    <math|L<rsub|n><around*|(|X;Y|)>> with\ 
+
+    <\equation>
+      <label|eq 16.589.316>\<forall\>L\<in\>L<rsub|n><around*|(|X;Y|)><text|
+      >D<rsub|L>\<psi\>=\<psi\>
+    </equation>
+
+    As <math|f> is <math|<around*|(|n+1|)>>-times differentiable at
+    <math|x<rsub|0>> we have by definition that <math|f> is <math|n>-times
+    differentiable on <math|U> and the function\ 
+
+    <\equation*>
+      D<rsup|<around*|[|n|]>>f:U\<rightarrow\>L<rsub|n><around*|(|X;Y|)><text|
+      defined by >D<rsup|<around*|[|n|]>>f<around*|(|x|)>=D<rsup|<around*|[|n|]>><rsub|x>f
+    </equation*>
+
+    is Fréchet differentiable at <math|x<rsub|0>> with\ 
+
+    <\equation>
+      <label|eq 16.590.316>D<rsup|<around*|[|n+1|]>><rsub|x<rsub|0>>f=D<rsub|x<rsub|0>><around*|(|D<rsup|<around*|[|n|]>>f|)>
+    </equation>
+
+    Now for <math|x\<in\>U> we have that\ 
+
+    <\equation*>
+      <around*|(|\<psi\>\<circ\>D<rsup|<around*|[|n|]>>f|)><around*|(|x|)>=\<psi\><around*|(|D<rsup|<around*|[|n|]>>f<around*|(|x|)>|)>=\<psi\><around*|(|D<rsup|<around*|[|n|]>><rsub|x>f|)>=D<rsub|x><rsup|<around*|[|n|]>>f<around*|(|h<rsub|1>:\<ldots\>:h<rsub|n>|)>=\<varphi\><rsub|h<rsub|1>\<ldots\>h<rsub|n>><around*|(|x|)>
+    </equation*>
+
+    which proves that\ 
+
+    <\equation*>
+      \<varphi\><rsub|h<rsub|1>\<ldots\>h<rsub|n>>=\<psi\>\<circ\>D<rsup|<around*|[|n|]>>f
+    </equation*>
+
+    Using now the chain rule [see theorem: <reference|diff chain rule>] it
+    follows that <math|\<varphi\><rsub|h<rsub|1>\<ldots\>h<rsub|n>>> is
+    Fréchet differentiable at <math|x<rsub|0>> with\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|D<rsub|x<rsub|0>>\<varphi\><rsub|h<rsub|1>,\<ldots\>,h<rsub|n>>>|<cell|=>|<cell|D<rsub|x<rsub|0>><around*|(|\<psi\>\<circ\>D<rsup|<around*|[|n|]>>f|)>>>|<row|<cell|>|<cell|=>|<cell|D<rsub|D<rsup|<around*|[|n|]>>f<around*|(|x<rsub|0>|)>>\<psi\>\<circ\>D<rsub|x<rsub|0>><around*|(|D<rsup|<around*|[|n|]>>f|)>>>|<row|<cell|>|<cell|<below|=|<text|[eq:
+      <reference|eq 16.589.316>]>>>|<cell|\<psi\>\<circ\>D<rsub|x<rsub|0>><around*|(|D<rsup|<around*|[|n|]>>f|)>>>|<row|<cell|>|<cell|\<equallim\><rsub|<text|[eq:
+      <reference|eq 16.590.316>]>>>|<cell|\<psi\>\<circ\>D<rsup|<around*|[|n+1|]>><rsub|x<rsub|0>>f>>>>
+    </eqnarray*>
+
+    Hence we have <math|\<forall\>k\<in\>X> that\ 
+
+    <\equation*>
+      D<rsub|x<rsub|0>>\<varphi\><rsub|h<rsub|1>\<ldots\>h<rsub|n>><around*|(|x|)>=<around*|(|\<psi\>\<circ\>D<rsup|<around*|[|n+1|]>><rsub|x<rsub|0>>f|)><around*|(|k|)>=\<psi\><around*|(|D<rsup|<around*|[|n+1|]>><rsub|x<rsub|0>>f<around*|(|k|)>|)>=D<rsup|<around*|[|n+1|]>><rsub|x<rsub|0>>f<around*|(|k|)><around*|(|h<rsub|1>:\<ldots\>:h<rsub|n>|)>
+    </equation*>
+  </proof>
+
+  <\lemma>
+    Let <math|n\<in\>\<bbb-N\>>, <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normes spaces, <math|A\<subseteq\>X> and
+    <math|f:A\<rightarrow\>L<rsub|n><around*|(|X;Y|)>> a continuous function
+    then for <math|h\<in\>X> we have that
+
+    <\equation*>
+      \<Theta\>:A\<rightarrow\>Y<text| defined by
+      >\<Theta\><around*|(|x|)>=f<around*|(|x|)><around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|n>|)>
+    </equation*>
+
+    is continuous.
+  </lemma>
+
+  <\proof>
+    Let <math|x\<in\>A> and take <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|+>>
+    then as <math|f> is continuous [hence continuous at <math|x>] there exist
+    a <math|\<delta\>\<in\>\<bbb-R\><rsup|+>> such that
+    <math|\<forall\>y\<in\>A> with <math|<around*|\<\|\|\>|x-y|\<\|\|\>><rsub|X>\<less\>\<delta\>>
+    we have\ 
+
+    <\equation*>
+      <around*|\<\|\|\>|f<around*|(|x|)>-f<around*|(|x<rsub|n>|)>|\<\|\|\>><rsub|L<rsub|n><around*|(|X;Y|)>>\<less\><frac|\<varepsilon\>|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X><rsup|n>+1>
+    </equation*>
+
+    Now\ 
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|\<\|\|\>|\<Theta\><around*|(|x|)>-\<Theta\><around*|(|y|)>|\<\|\|\>><rsub|Y>>|<cell|=>|<cell|<around*|\<\|\|\>|f<around*|(|x|)><around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|n>|)>-f<around*|(|y|)><around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|n>|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|<below|=|<text|[lemma:
+      <reference|lemma 16.54.187>]>>>|<cell|<around*|\<\|\|\>|<around*|(|f<around*|(|x|)>-f<around*|(|y|)>|)><around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|n>|)>|\<\|\|\>><rsub|Y>>>|<row|<cell|>|<cell|<below|\<leqslant\>|<text|[lemma:
+      <reference|lemma 16.56.187>>>>|<cell|<around*|\<\|\|\>|f<around*|(|x|)>-f<around*|(|y|)>|\<\|\|\>><rsub|L<rsub|n><around*|(|X;Y|)>>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsup|n><rsub|X>>>|<row|<cell|>|<cell|\<leqslant\>>|<cell|<frac|\<varepsilon\>|<around*|\<\|\|\>|h|\<\|\|\>><rsub|X><rsup|n>+1>\<cdot\><around*|\<\|\|\>|h|\<\|\|\>><rsup|n><rsub|X>>>|<row|<cell|>|<cell|\<less\>\<varepsilon\>>|<cell|>>>>
+    </eqnarray*>
+
+    which proves that <math|\<Theta\>> is continuous at <math|x>. Hence as
+    <math|x\<in\>A> was choosen arbitrary it follows that\ 
+
+    <\equation*>
+      \<Theta\><text| is continuous>
+    </equation*>
+  </proof>
+
+  <\lemma>
+    <label|lemma 16.391.316>Let <math|n\<in\>\<bbb-N\>>,
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>><rsub|X>|\<rangle\>>>,
+    <math|<around*|\<langle\>|Y,<around*|\<\|\|\>||\<\|\|\>><rsub|Y>|\<rangle\>>>
+    be normed spaces, <math|U> a open set in <math|X>,
+    <math|x<rsub|0>\<in\>U>, <math|h\<in\>X> such that the line segment
+    <math|L<rsub|x<rsub|0>,x<rsub|0>+h>\<subseteq\>U> and
+    <math|f:U\<rightarrow\>Y> a function that is
+    <math|<around*|(|n+1|)>>-differentiable on <math|U> then the function\ 
+
+    <\equation*>
+      \<varphi\>:<around*|[|0,1|]>\<rightarrow\>Y<text| defined by
+      >\<varphi\><around*|(|t|)>=f<around*|(|x<rsub|0>+t\<cdot\>h|)>+<big|sum><rsub|k=1><rsup|n><frac|<around*|(|1-t|)><rsup|k>|k!>\<cdot\>D<rsup|<around*|[|k|]>><rsub|x<rsub|0>+t\<cdot\>h>f<around*|(|<wide*|h:\<ldots\>:h|\<wide-underbrace\>><rsub|k>|)>
+    </equation*>
+
+    is continuous on <math|<around*|[|0,1|]>> and Fréchet differentiable on
+    <math|<around*|]|0,1|[>>
+
+    <\note>
+      By [definition: <reference|diff linesegement>]
+
+      <\equation*>
+        L<rsub|x<rsub|0>,x<rsub|0>+h>=<around*|{|x<rsub|0>+t\<cdot\><around*|(|<around*|(|x<rsub|0>+h|)>-x<rsub|0>|)>\|t\<in\><around*|[|0,1|]>|}>=<around*|{|x<rsub|0>+t\<cdot\>h\|t\<in\><around*|[|0,1|]>|}>
+      </equation*>
+
+      so that <math|\<varphi\>> is well defined.
+    </note>
+  </lemma>
+
+  <\proof>
+    Consider the following function:\ 
+
+    <\equation*>
+      \<tau\>:<around*|[|0,1|]>\<rightarrow\>X<text| defined by
+      >\<tau\><around*|(|t|)>=x<rsub|0>+t\<cdot\>h
+    </equation*>
+
+    then by [examples: <reference|continuity scalar product (1)>,
+    <reference|continuity constant function>] and [theorems:
+    <reference|continuity and subspace topology (2)><reference|continuity of
+    sum of continuous functions>]\ 
+
+    <\equation*>
+      \<tau\><text| is continuous>
+    </equation*>
+
+    As <math|f> is <math|<around*|(|n+1|)>>-times differentiable on <math|U>
+    we have by [theorem: <reference|diff n-times and m-times
+    differentiability>] that <math|f> is <math|1>-times [hence Fréchet]
+    differentiable on <math|U> so that by [theorem: <reference|diff
+    differentiable function is continuous>]\ 
+
+    <\equation*>
+      f<text| is continuous>
+    </equation*>
+
+    Using now [theorem: <reference|continuity composition (1)>] proves that
+
+    <\equation*>
+      f\<circ\>\<tau\><text| is continuous>
+    </equation*>
+
+    \;
+
+    Further using [examples: <reference|continuity identity function>,
+    <reference|continuity constant function>], [theorem:
+    <reference|continuity of sum of continuous functions>] and [corollary:
+    <reference|continuity power of continuous functions>[ it follows that
+    <math|\<forall\>k\<in\><around*|{|1,\<ldots\>,n|}>> the function\ 
+
+    <\equation*>
+      \<gamma\><rsub|k>:\<bbb-R\>\<rightarrow\>\<bbb-R\><text| defined
+      >\<gamma\><rsub|k><around*|(|t|)>=<around*|(|1-t|)><rsup|k><text| is
+      continuous>
+    </equation*>
+
+    Let <math|k\<in\><around*|{|1,\<ldots\>,n|}>> and take <math|x\<in\>U>
+    then as <math|f> is <math|<around*|(|n+1|)>>-times differentiable on
+    <math|U> and <math|k+1\<in\><around*|{|1,\<ldots\>,n+1|}>> it follows
+    that <math|f> is <math|<around*|(|k+1|)>>-times differentiable at
+    <math|x>. Hence <math|f> is <math|k>-times differentiable on <math|U> and\ 
+
+    <\equation*>
+      D<rsup|<around*|[|k|]>>f:U\<rightarrow\>L<rsub|k><around*|(|X;Y|)><text|
+      defined by >D<rsup|<around*|[|k|]>>f<around*|(|y|)>=D<rsup|<around*|[|k|]>><rsub|y>f
+    </equation*>
+
+    is Fréchet differentiable at <math|x>, hence using [theorem:
+    <reference|diff differentiable function is continuous>]
+    <math|D<rsup|<around*|[|k|]>>f> is continuous. Hence as <math|x\<in\>U>
+    was choosen arbitrary if follows that\ 
+
+    <\equation*>
+      D<rsup|<around*|[|k|]>>f<text| is continuous>
+    </equation*>
+
+    \ \ <math|>
+
+    \ 
+
+    \ <math|>
+
+    TODO
+  </proof>
+
+  <\theorem>
+    <label|diff Taylor II.1><dueto|Taylor's Theorem II.2 (Lagrange's
+    remainder>TODO
+  </theorem>
+
+  \;
 
   <\lemma>
     <label|lemma 16.380.312>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
@@ -27574,8 +27843,9 @@
   We can now state and proof the third form of Taylor's theorem.
 
   <\theorem>
-    <label|diff Taylor III>Let <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>>
-    be a normed space, <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
+    <label|diff Taylor III><dueto|Taylor's Theorem III>Let
+    <math|<around*|\<langle\>|X,<around*|\<\|\|\>||\<\|\|\>>|\<rangle\>>> be
+    a normed space, <math|n\<in\>\<bbb-N\>\\<around*|{|1|}>>,
     <math|a,b\<in\>\<bbb-R\>> with <math|a\<less\>b>
     <math|x<rsub|0>,x\<in\>\<bbb-R\>> with <math|x<rsub|0>\<less\>x>,
     <math|<around*|[|x<rsub|0>,x|]>\<subseteq\><around*|[|a,b|]>> and
@@ -28004,8 +28274,9 @@
     <associate|diff Taylor I.2|<tuple|16.372|?>>
     <associate|diff Taylor I.3|<tuple|16.383|?>>
     <associate|diff Taylor II|<tuple|16.386|?>>
-    <associate|diff Taylor III|<tuple|16.391|?>>
-    <associate|diff Taylor series|<tuple|16.394|?>>
+    <associate|diff Taylor II.1|<tuple|16.394|?>>
+    <associate|diff Taylor III|<tuple|16.397|?>>
+    <associate|diff Taylor series|<tuple|16.400|?>>
     <associate|diff Ux|<tuple|16.4|?>>
     <associate|diff Ux is open if U is open|<tuple|16.7|?>>
     <associate|diff Ux=-x+U=U-x|<tuple|16.6|?>>
@@ -28059,6 +28330,7 @@
     <associate|diff differentiability alternative definitions
     (1)|<tuple|16.67|?>>
     <associate|diff differentiability and K^n|<tuple|16.112|?>>
+    <associate|diff differentiability and class|<tuple|16.161|?>>
     <associate|diff differentiability is a local property|<tuple|16.61|?>>
     <associate|diff differentiability is a local property
     (1)|<tuple|16.63|?>>
@@ -28701,7 +28973,6 @@
     <associate|eq 16.571.311|<tuple|16.582|?>>
     <associate|eq 16.572.311|<tuple|16.583|?>>
     <associate|eq 16.573.311|<tuple|16.584|?>>
-    <associate|eq 16.573.315|<tuple|16.573|?>>
     <associate|eq 16.573.316|<tuple|16.573|?>>
     <associate|eq 16.574.311|<tuple|16.585|?>>
     <associate|eq 16.574.315|<tuple|16.561|?>>
@@ -28722,15 +28993,17 @@
     <associate|eq 16.580.315|<tuple|16.567|?>>
     <associate|eq 16.580.316|<tuple|16.580|?>>
     <associate|eq 16.581.315|<tuple|16.568|?>>
-    <associate|eq 16.582.313|<tuple|16.589|?>>
+    <associate|eq 16.582.313|<tuple|16.591|?>>
     <associate|eq 16.582.315|<tuple|16.569|?>>
-    <associate|eq 16.583.313|<tuple|16.590|?>>
+    <associate|eq 16.583.313|<tuple|16.592|?>>
     <associate|eq 16.583.315|<tuple|16.570|?>>
-    <associate|eq 16.584.313|<tuple|16.591|?>>
+    <associate|eq 16.584.313|<tuple|16.593|?>>
     <associate|eq 16.584.315.1|<tuple|16.571|?>>
-    <associate|eq 16.585.313|<tuple|16.592|?>>
+    <associate|eq 16.585.313|<tuple|16.594|?>>
     <associate|eq 16.585.315|<tuple|16.572|?>>
+    <associate|eq 16.589.316|<tuple|16.589|?>>
     <associate|eq 16.59.6|<tuple|16.61|?>>
+    <associate|eq 16.590.316|<tuple|16.590|?>>
     <associate|eq 16.591.305|<tuple|16.551|?>>
     <associate|eq 16.592.505|<tuple|16.552|?>>
     <associate|eq 16.593.505|<tuple|16.553|?>>
@@ -28821,11 +29094,13 @@
     <associate|lemma 16.254.143|<tuple|16.364|?>>
     <associate|lemma 16.287.310|<tuple|16.293|?>>
     <associate|lemma 16.37.1|<tuple|16.59|?>>
-    <associate|lemma 16.380.312|<tuple|16.389|?>>
+    <associate|lemma 16.380.312|<tuple|16.395|?>>
     <associate|lemma 16.380.315|<tuple|16.379|?>>
     <associate|lemma 16.381.315|<tuple|16.380|?>>
     <associate|lemma 16.382.315|<tuple|16.381|?>>
     <associate|lemma 16.383.315|<tuple|16.382|?>>
+    <associate|lemma 16.389.316|<tuple|16.389|?>>
+    <associate|lemma 16.391.316|<tuple|16.392|?>>
     <associate|lemma 16.50.1|<tuple|16.70|?>>
     <associate|lemma 16.51.186|<tuple|16.135|?>>
     <associate|lemma 16.53.186|<tuple|16.137|?>>
